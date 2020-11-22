@@ -1,6 +1,5 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,13 +11,6 @@ trait AxisConfiguration extends js.Object {
     * Show the axis inside of the chart.
     */
   var inner: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * Set label on axis.
-    * Valid horizontal axis positions: inner-right (default), inner-center, inner-left, outer-right, outer-center, outer-left
-    * Valid vertical axis positions: inner-top, inner-middle, inner-bottom, outer-top, outer-middle, outer-bottom
-    */
-  var label: js.UndefOr[String | Position] = js.native
   
   /**
     * Set max value of the axis.
@@ -70,12 +62,6 @@ object AxisConfiguration {
     
     @scala.inline
     def deleteInner: Self = this.set("inner", js.undefined)
-    
-    @scala.inline
-    def setLabel(value: String | Position): Self = this.set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLabel: Self = this.set("label", js.undefined)
     
     @scala.inline
     def setMaxDate(value: js.Date): Self = this.set("max", value.asInstanceOf[js.Any])

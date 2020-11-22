@@ -1,5 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin
 
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.issueIssueMod.Issue
 import typingsSlinky.typescript.mod.Diagnostic
 import scala.scalajs.js
@@ -10,5 +11,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object typeScriptIssueFactoryMod extends js.Object {
   
-  def createIssuesFromTsDiagnostics(diagnostics: js.Array[Diagnostic]): js.Array[Issue] = js.native
+  def createIssuesFromTsDiagnostics(typescript: Typeofts, diagnostics: js.Array[Diagnostic]): js.Array[Issue] = js.native
 }

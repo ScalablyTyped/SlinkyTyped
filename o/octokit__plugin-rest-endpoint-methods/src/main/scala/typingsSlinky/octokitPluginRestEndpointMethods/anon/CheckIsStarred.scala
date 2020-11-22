@@ -24,7 +24,7 @@ trait CheckIsStarred extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /gists/:gist_id/star']['response'] */ js.Any
   ] = js.native
   @JSName("checkIsStarred")
-  var checkIsStarred_Original: `121` = js.native
+  var checkIsStarred_Original: `124` = js.native
   
   /**
     * Allows you to add a new gist with one or more files.
@@ -55,7 +55,7 @@ trait CheckIsStarred extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /gists/:gist_id/comments']['response'] */ js.Any
   ] = js.native
   @JSName("createComment")
-  var createComment_Original: `123` = js.native
+  var createComment_Original: `126` = js.native
   
   /**
     * Allows you to add a new gist with one or more files.
@@ -63,7 +63,7 @@ trait CheckIsStarred extends js.Object {
     * **Note:** Don't name your files "gistfile" with a numerical suffix. This is the format of the automatic naming scheme that Gist uses internally.
     */
   @JSName("create")
-  var create_Original: `122` = js.native
+  var create_Original: `125` = js.native
   
   def delete(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /gists/:gist_id']['response'] */ js.Any
@@ -89,10 +89,10 @@ trait CheckIsStarred extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /gists/:gist_id/comments/:comment_id']['response'] */ js.Any
   ] = js.native
   @JSName("deleteComment")
-  var deleteComment_Original: `125` = js.native
+  var deleteComment_Original: `128` = js.native
   
   @JSName("delete")
-  var delete_Original: `124` = js.native
+  var delete_Original: `127` = js.native
   
   /**
     * **Note**: This was previously `/gists/:gist_id/fork`.
@@ -112,7 +112,7 @@ trait CheckIsStarred extends js.Object {
     * **Note**: This was previously `/gists/:gist_id/fork`.
     */
   @JSName("fork")
-  var fork_Original: `126` = js.native
+  var fork_Original: `129` = js.native
   
   def get(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /gists/:gist_id']['response'] */ js.Any
@@ -138,7 +138,7 @@ trait CheckIsStarred extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /gists/:gist_id/comments/:comment_id']['response'] */ js.Any
   ] = js.native
   @JSName("getComment")
-  var getComment_Original: `128` = js.native
+  var getComment_Original: `131` = js.native
   
   def getRevision(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /gists/:gist_id/:sha']['response'] */ js.Any
@@ -152,10 +152,10 @@ trait CheckIsStarred extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /gists/:gist_id/:sha']['response'] */ js.Any
   ] = js.native
   @JSName("getRevision")
-  var getRevision_Original: `129` = js.native
+  var getRevision_Original: `132` = js.native
   
   @JSName("get")
-  var get_Original: `127` = js.native
+  var get_Original: `130` = js.native
   
   /**
     * Lists the authenticated user's gists or if called anonymously, this endpoint returns all public gists:
@@ -184,7 +184,7 @@ trait CheckIsStarred extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /gists/:gist_id/comments']['response'] */ js.Any
   ] = js.native
   @JSName("listComments")
-  var listComments_Original: `131` = js.native
+  var listComments_Original: `134` = js.native
   
   def listCommits(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /gists/:gist_id/commits']['response'] */ js.Any
@@ -198,7 +198,7 @@ trait CheckIsStarred extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /gists/:gist_id/commits']['response'] */ js.Any
   ] = js.native
   @JSName("listCommits")
-  var listCommits_Original: `132` = js.native
+  var listCommits_Original: `135` = js.native
   
   /**
     * Lists public gists for the specified user:
@@ -218,7 +218,7 @@ trait CheckIsStarred extends js.Object {
     * Lists public gists for the specified user:
     */
   @JSName("listForUser")
-  var listForUser_Original: `133` = js.native
+  var listForUser_Original: `136` = js.native
   
   def listForks(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /gists/:gist_id/forks']['response'] */ js.Any
@@ -232,7 +232,7 @@ trait CheckIsStarred extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /gists/:gist_id/forks']['response'] */ js.Any
   ] = js.native
   @JSName("listForks")
-  var listForks_Original: `134` = js.native
+  var listForks_Original: `137` = js.native
   
   /**
     * List public gists sorted by most recently updated to least recently updated.
@@ -256,7 +256,7 @@ trait CheckIsStarred extends js.Object {
     * Note: With [pagination](https://developer.github.com/v3/#pagination), you can fetch up to 3000 gists. For example, you can fetch 100 pages with 30 gists per page or 30 pages with 100 gists per page.
     */
   @JSName("listPublic")
-  var listPublic_Original: `135` = js.native
+  var listPublic_Original: `138` = js.native
   
   /**
     * List the authenticated user's starred gists:
@@ -276,13 +276,13 @@ trait CheckIsStarred extends js.Object {
     * List the authenticated user's starred gists:
     */
   @JSName("listStarred")
-  var listStarred_Original: `136` = js.native
+  var listStarred_Original: `139` = js.native
   
   /**
     * Lists the authenticated user's gists or if called anonymously, this endpoint returns all public gists:
     */
   @JSName("list")
-  var list_Original: `130` = js.native
+  var list_Original: `133` = js.native
   
   /**
     * Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
@@ -302,7 +302,7 @@ trait CheckIsStarred extends js.Object {
     * Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
     */
   @JSName("star")
-  var star_Original: `137` = js.native
+  var star_Original: `140` = js.native
   
   def unstar(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /gists/:gist_id/star']['response'] */ js.Any
@@ -316,7 +316,7 @@ trait CheckIsStarred extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /gists/:gist_id/star']['response'] */ js.Any
   ] = js.native
   @JSName("unstar")
-  var unstar_Original: `138` = js.native
+  var unstar_Original: `141` = js.native
   
   /**
     * Allows you to update or delete a gist file and rename gist files. Files from the previous version of the gist that aren't explicitly changed during an edit are unchanged.
@@ -345,11 +345,11 @@ trait CheckIsStarred extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /gists/:gist_id/comments/:comment_id']['response'] */ js.Any
   ] = js.native
   @JSName("updateComment")
-  var updateComment_Original: `140` = js.native
+  var updateComment_Original: `143` = js.native
   
   /**
     * Allows you to update or delete a gist file and rename gist files. Files from the previous version of the gist that aren't explicitly changed during an edit are unchanged.
     */
   @JSName("update")
-  var update_Original: `139` = js.native
+  var update_Original: `142` = js.native
 }

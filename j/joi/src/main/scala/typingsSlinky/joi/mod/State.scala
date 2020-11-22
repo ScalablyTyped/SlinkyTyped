@@ -7,7 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait State extends js.Object {
   
+  var ancestors: js.UndefOr[js.Any] = js.native
+  
   var key: js.UndefOr[String] = js.native
+  
+  var localize: js.UndefOr[js.Function1[/* repeated */ js.Any, this.type]] = js.native
   
   var parent: js.UndefOr[js.Any] = js.native
   
@@ -39,10 +43,22 @@ object State {
     }
     
     @scala.inline
+    def setAncestors(value: js.Any): Self = this.set("ancestors", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAncestors: Self = this.set("ancestors", js.undefined)
+    
+    @scala.inline
     def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setLocalize(value: /* repeated */ js.Any => State): Self = this.set("localize", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteLocalize: Self = this.set("localize", js.undefined)
     
     @scala.inline
     def setParent(value: js.Any): Self = this.set("parent", value.asInstanceOf[js.Any])

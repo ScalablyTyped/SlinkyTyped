@@ -22,6 +22,6 @@ object commentMod extends js.Object {
   
   @js.native
   class default protected () extends CommentNode {
-    def this(value: String) = this()
+    def this(rawText: String) = this()
   }
 }

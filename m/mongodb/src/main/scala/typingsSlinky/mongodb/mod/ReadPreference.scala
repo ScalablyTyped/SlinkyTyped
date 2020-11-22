@@ -1,6 +1,5 @@
 package typingsSlinky.mongodb.mod
 
-import typingsSlinky.mongodb.anon.MaxStalenessSeconds
 import typingsSlinky.mongodb.mongodbStrings.nearest
 import typingsSlinky.mongodb.mongodbStrings.primary
 import typingsSlinky.mongodb.mongodbStrings.primaryPreferred
@@ -14,12 +13,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ReadPreference protected () extends ReadPreferenceOrMode {
   def this(mode: ReadPreferenceMode, tags: js.Object) = this()
+  def this(mode: ReadPreferenceMode, tags: js.Object, options: ReadPreferenceOptions) = this()
   
   def isValid(mode: String): Boolean = js.native
   
   var mode: ReadPreferenceMode = js.native
-  
-  var options: MaxStalenessSeconds = js.native
   
   var tags: js.Any = js.native
 }

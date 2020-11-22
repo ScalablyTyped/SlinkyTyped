@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.esMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -414,6 +414,20 @@ trait ES extends Service {
   ): Request[GetCompatibleElasticsearchVersionsResponse, AWSError] = js.native
   
   /**
+    * Returns a list of versions of the package, along with their creation time and commit message.
+    */
+  def getPackageVersionHistory(): Request[GetPackageVersionHistoryResponse, AWSError] = js.native
+  def getPackageVersionHistory(callback: js.Function2[/* err */ AWSError, /* data */ GetPackageVersionHistoryResponse, Unit]): Request[GetPackageVersionHistoryResponse, AWSError] = js.native
+  /**
+    * Returns a list of versions of the package, along with their creation time and commit message.
+    */
+  def getPackageVersionHistory(params: GetPackageVersionHistoryRequest): Request[GetPackageVersionHistoryResponse, AWSError] = js.native
+  def getPackageVersionHistory(
+    params: GetPackageVersionHistoryRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetPackageVersionHistoryResponse, Unit]
+  ): Request[GetPackageVersionHistoryResponse, AWSError] = js.native
+  
+  /**
     * Retrieves the complete history of the last 10 upgrades that were performed on the domain.
     */
   def getUpgradeHistory(): Request[GetUpgradeHistoryResponse, AWSError] = js.native
@@ -609,6 +623,20 @@ trait ES extends Service {
     params: UpdateElasticsearchDomainConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateElasticsearchDomainConfigResponse, Unit]
   ): Request[UpdateElasticsearchDomainConfigResponse, AWSError] = js.native
+  
+  /**
+    * Updates a package for use with Amazon ES domains.
+    */
+  def updatePackage(): Request[UpdatePackageResponse, AWSError] = js.native
+  def updatePackage(callback: js.Function2[/* err */ AWSError, /* data */ UpdatePackageResponse, Unit]): Request[UpdatePackageResponse, AWSError] = js.native
+  /**
+    * Updates a package for use with Amazon ES domains.
+    */
+  def updatePackage(params: UpdatePackageRequest): Request[UpdatePackageResponse, AWSError] = js.native
+  def updatePackage(
+    params: UpdatePackageRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdatePackageResponse, Unit]
+  ): Request[UpdatePackageResponse, AWSError] = js.native
   
   /**
     * Allows you to either upgrade your domain or perform an Upgrade eligibility check to a compatible Elasticsearch version.

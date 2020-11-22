@@ -18,7 +18,7 @@ trait ExecutePolicyType extends js.Object {
   var BreachThreshold: js.UndefOr[MetricScale] = js.native
   
   /**
-    * Indicates whether Amazon EC2 Auto Scaling waits for the cooldown period to complete before executing the policy. Valid only if the policy type is SimpleScaling. For more information, see Scaling Cooldowns for Amazon EC2 Auto Scaling in the Amazon EC2 Auto Scaling User Guide.
+    * Indicates whether Amazon EC2 Auto Scaling waits for the cooldown period to complete before executing the policy. Valid only if the policy type is SimpleScaling. For more information, see Scaling cooldowns for Amazon EC2 Auto Scaling in the Amazon EC2 Auto Scaling User Guide.
     */
   var HonorCooldown: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.HonorCooldown] = js.native
   

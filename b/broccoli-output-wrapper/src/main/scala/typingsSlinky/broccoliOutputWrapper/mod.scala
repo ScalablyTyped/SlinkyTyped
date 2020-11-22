@@ -1,6 +1,7 @@
 package typingsSlinky.broccoliOutputWrapper
 
 import typingsSlinky.broccoliOutputWrapper.anon.Fn0
+import typingsSlinky.broccoliOutputWrapper.anon.Fn1
 import typingsSlinky.broccoliOutputWrapper.anon.FnCall
 import typingsSlinky.broccoliOutputWrapper.anon.FnCallFileDataOptions
 import typingsSlinky.broccoliOutputWrapper.anon.FnCallPathAtimeMtime
@@ -21,10 +22,13 @@ import typingsSlinky.node.anon.MakeDirectoryOptionsrecur
 import typingsSlinky.node.anon.MakeDirectoryOptionsrecurMode
 import typingsSlinky.node.anon.WithFileTypes
 import typingsSlinky.node.anon.`3`
+import typingsSlinky.node.fsMod.BigIntOptions
+import typingsSlinky.node.fsMod.BigIntStats
 import typingsSlinky.node.fsMod.Dirent
 import typingsSlinky.node.fsMod.MakeDirectoryOptions
 import typingsSlinky.node.fsMod.Mode
 import typingsSlinky.node.fsMod.PathLike
+import typingsSlinky.node.fsMod.StatOptions
 import typingsSlinky.node.fsMod.Stats
 import typingsSlinky.node.fsMod.WriteFileOptions
 import typingsSlinky.node.fsMod.symlink.Type
@@ -66,7 +70,7 @@ object mod extends js.Object {
     def mkdirSync(path: PathLike, options: MakeDirectoryOptions): js.UndefOr[String] = js.native
     def mkdirSync(path: PathLike, options: Mode): js.UndefOr[String] = js.native
     @JSName("mkdirSync")
-    var mkdirSync_Original: Fn0 = js.native
+    var mkdirSync_Original: Fn1 = js.native
     @JSName("mkdirSync")
     def mkdirSync_Unit(path: PathLike): Unit = js.native
     @JSName("mkdirSync")
@@ -108,8 +112,10 @@ object mod extends js.Object {
     def rmdirSync(path: String, options: Recursive): Unit = js.native
     
     def statSync(path: PathLike): Stats = js.native
+    def statSync(path: PathLike, options: BigIntOptions): BigIntStats = js.native
+    def statSync(path: PathLike, options: StatOptions): Stats | BigIntStats = js.native
     @JSName("statSync")
-    var statSync_Original: js.Function1[/* path */ PathLike, Stats] = js.native
+    var statSync_Original: Fn0 = js.native
     
     def symlinkOrCopySync(srcPath: String, destPath: String): Unit = js.native
     

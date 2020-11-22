@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UpdateFlowEntitlementResponse extends js.Object {
   
+  /**
+    * The new configuration of the entitlement that you updated.
+    */
   var Entitlement: js.UndefOr[typingsSlinky.awsSdk.mediaconnectMod.Entitlement] = js.native
   
   /**

@@ -1,5 +1,6 @@
 package typingsSlinky.ecmarkup.biblioMod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.ecmarkup.ecmarkupStrings.example
 import typingsSlinky.ecmarkup.ecmarkupStrings.figure
 import typingsSlinky.ecmarkup.ecmarkupStrings.note
@@ -16,6 +17,8 @@ trait FigureBiblioEntry
   @JSName("id")
   var id_FigureBiblioEntry: String = js.native
   
+  var node: HTMLElement = js.native
+  
   @JSName("number")
   var number_FigureBiblioEntry: String | Double = js.native
   
@@ -27,11 +30,12 @@ object FigureBiblioEntry {
   @scala.inline
   def apply(
     id: String,
+    node: HTMLElement,
     number: String | Double,
     referencingIds: js.Array[String],
     `type`: table | figure | example | note
   ): FigureBiblioEntry = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], referencingIds = referencingIds.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], referencingIds = referencingIds.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[FigureBiblioEntry]
   }
@@ -53,6 +57,9 @@ object FigureBiblioEntry {
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNode(value: HTMLElement): Self = this.set("node", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNumber(value: String | Double): Self = this.set("number", value.asInstanceOf[js.Any])

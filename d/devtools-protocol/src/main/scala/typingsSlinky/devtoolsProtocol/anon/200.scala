@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.WebAuthn.AddCredentialRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Tracing.RecordClockSyncMarkerRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `200` extends js.Object {
   
-  var paramsType: js.Array[AddCredentialRequest] = js.native
+  var paramsType: js.Array[RecordClockSyncMarkerRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `200` {
   
   @scala.inline
-  def apply(paramsType: js.Array[AddCredentialRequest], returnType: Unit): `200` = {
+  def apply(paramsType: js.Array[RecordClockSyncMarkerRequest], returnType: Unit): `200` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`200`]
   }
@@ -36,10 +36,10 @@ object `200` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: AddCredentialRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: RecordClockSyncMarkerRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[AddCredentialRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[RecordClockSyncMarkerRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

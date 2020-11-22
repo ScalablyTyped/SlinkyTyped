@@ -12,14 +12,14 @@ trait ParametersActionsListSelfHostedRunnersForOrgEndpoint extends js.Object {
   
   var parameters: ActionsListSelfHostedRunnersForOrgEndpoint = js.native
   
-  var response: OctokitResponse[ActionsListSelfHostedRunnersForOrgResponseData] with DataArray = js.native
+  var response: OctokitResponse[ActionsListSelfHostedRunnersForOrgResponseData] with `0` = js.native
 }
 object ParametersActionsListSelfHostedRunnersForOrgEndpoint {
   
   @scala.inline
   def apply(
     parameters: ActionsListSelfHostedRunnersForOrgEndpoint,
-    response: OctokitResponse[ActionsListSelfHostedRunnersForOrgResponseData] with DataArray
+    response: OctokitResponse[ActionsListSelfHostedRunnersForOrgResponseData] with `0`
   ): ParametersActionsListSelfHostedRunnersForOrgEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersActionsListSelfHostedRunnersForOrgEndpoint]
@@ -44,6 +44,6 @@ object ParametersActionsListSelfHostedRunnersForOrgEndpoint {
     def setParameters(value: ActionsListSelfHostedRunnersForOrgEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ActionsListSelfHostedRunnersForOrgResponseData] with DataArray): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ActionsListSelfHostedRunnersForOrgResponseData] with `0`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

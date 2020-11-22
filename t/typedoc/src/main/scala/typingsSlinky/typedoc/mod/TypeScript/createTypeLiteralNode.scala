@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createTypeLiteralNode extends js.Object {
   
+  /** @deprecated Use `factory.createTypeLiteralNode` or the factory supplied by your transformation context instead. */
   def apply(): TypeLiteralNode = js.native
   def apply(members: js.Array[TypeElement]): TypeLiteralNode = js.native
 }

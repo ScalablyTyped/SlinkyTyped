@@ -1,7 +1,7 @@
 package typingsSlinky.firebase.anon
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebase.mod.analytics.Item
+import typingsSlinky.firebase.mod.firebase.analytics.Item
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,9 +18,9 @@ trait Affiliation
   
   var items: js.UndefOr[js.Array[Item]] = js.native
   
-  var shipping: js.UndefOr[typingsSlinky.firebase.mod.analytics.Currency] = js.native
+  var shipping: js.UndefOr[typingsSlinky.firebase.mod.firebase.analytics.Currency] = js.native
   
-  var tax: js.UndefOr[typingsSlinky.firebase.mod.analytics.Currency] = js.native
+  var tax: js.UndefOr[typingsSlinky.firebase.mod.firebase.analytics.Currency] = js.native
   
   var transaction_id: js.UndefOr[String] = js.native
   
@@ -77,13 +77,13 @@ object Affiliation {
     def deleteItems: Self = this.set("items", js.undefined)
     
     @scala.inline
-    def setShipping(value: typingsSlinky.firebase.mod.analytics.Currency): Self = this.set("shipping", value.asInstanceOf[js.Any])
+    def setShipping(value: typingsSlinky.firebase.mod.firebase.analytics.Currency): Self = this.set("shipping", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShipping: Self = this.set("shipping", js.undefined)
     
     @scala.inline
-    def setTax(value: typingsSlinky.firebase.mod.analytics.Currency): Self = this.set("tax", value.asInstanceOf[js.Any])
+    def setTax(value: typingsSlinky.firebase.mod.firebase.analytics.Currency): Self = this.set("tax", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTax: Self = this.set("tax", js.undefined)

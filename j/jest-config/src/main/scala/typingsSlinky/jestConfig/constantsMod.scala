@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object constantsMod extends js.Object {
   
-  val DEFAULT_JS_PATTERN: /* "^.+\\.[jt]sx?$" */ String = js.native
+  val DEFAULT_JS_PATTERN: /* "\\.[jt]sx?$" */ String = js.native
   
   val DEFAULT_REPORTER_LABEL: /* "default" */ String = js.native
   
@@ -23,6 +23,8 @@ object constantsMod extends js.Object {
   val JEST_CONFIG_EXT_MJS: /* ".mjs" */ String = js.native
   
   val JEST_CONFIG_EXT_ORDER: js.Array[String] = js.native
+  
+  val JEST_CONFIG_EXT_TS: /* ".ts" */ String = js.native
   
   val NODE_MODULES: String = js.native
   

@@ -18,7 +18,7 @@ trait ContainerDetails extends js.Object {
   var ImageName: js.UndefOr[NonEmptyString] = js.native
   
   /**
-    * The date and time when the container started.
+    * Indicates when the container started. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var LaunchedAt: js.UndefOr[NonEmptyString] = js.native
   

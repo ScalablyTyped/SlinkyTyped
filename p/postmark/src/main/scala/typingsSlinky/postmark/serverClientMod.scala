@@ -12,14 +12,20 @@ import typingsSlinky.postmark.inboundMessageMod.InboundMessages
 import typingsSlinky.postmark.inboundRuleMod.InboundRule
 import typingsSlinky.postmark.inboundRuleMod.InboundRules
 import typingsSlinky.postmark.messageMod.MessageSendingResponse
+import typingsSlinky.postmark.messageStreamMod.MessageStream
+import typingsSlinky.postmark.messageStreamMod.MessageStreamArchiveResponse
+import typingsSlinky.postmark.messageStreamMod.MessageStreamUnarchiveResponse
+import typingsSlinky.postmark.messageStreamMod.MessageStreams
 import typingsSlinky.postmark.modelsMod.BounceFilteringParameters
 import typingsSlinky.postmark.modelsMod.ClientOptions.Configuration
 import typingsSlinky.postmark.modelsMod.CreateInboundRuleRequest
+import typingsSlinky.postmark.modelsMod.CreateMessageStreamRequest
 import typingsSlinky.postmark.modelsMod.CreateTemplateRequest
 import typingsSlinky.postmark.modelsMod.CreateWebhookRequest
 import typingsSlinky.postmark.modelsMod.FilteringParameters
 import typingsSlinky.postmark.modelsMod.InboundMessagesFilteringParameters
 import typingsSlinky.postmark.modelsMod.Message
+import typingsSlinky.postmark.modelsMod.MessageStreamsFilteringParameters
 import typingsSlinky.postmark.modelsMod.OutboundMessageClicksFilteringParameters
 import typingsSlinky.postmark.modelsMod.OutboundMessageOpensFilteringParameters
 import typingsSlinky.postmark.modelsMod.OutboundMessagesFilteringParameters
@@ -27,6 +33,7 @@ import typingsSlinky.postmark.modelsMod.StatisticsFilteringParameters
 import typingsSlinky.postmark.modelsMod.TemplateFilteringParameters
 import typingsSlinky.postmark.modelsMod.TemplateValidationOptions
 import typingsSlinky.postmark.modelsMod.TemplatedMessage
+import typingsSlinky.postmark.modelsMod.UpdateMessageStreamRequest
 import typingsSlinky.postmark.modelsMod.UpdateServerRequest
 import typingsSlinky.postmark.modelsMod.UpdateTemplateRequest
 import typingsSlinky.postmark.modelsMod.UpdateWebhookRequest
@@ -82,6 +89,16 @@ object serverClientMod extends js.Object {
     def activateBounce(id: Double, callback: Callback[BounceActivationResponse]): js.Promise[BounceActivationResponse] = js.native
     
     /**
+      * Archive a message stream on the associated server.
+      *
+      * @param options - Configuration options to be used when creating message stream on the server.
+      * @param callback - If the callback is provided, it will be passed to the resulting promise as a continuation.
+      * @returns A promise that will complete when the API responds (or an error occurs).
+      */
+    def archiveMessageStream(id: String): js.Promise[MessageStreamArchiveResponse] = js.native
+    def archiveMessageStream(id: String, callback: Callback[MessageStreamArchiveResponse]): js.Promise[MessageStreamArchiveResponse] = js.native
+    
+    /**
       * Cause an Inbound Message to bypass filtering rules defined on this Client's associated Server.
       *
       * @param messageId - The ID of the Inbound Message for which you wish to bypass the filtering rules.
@@ -100,6 +117,16 @@ object serverClientMod extends js.Object {
       */
     def createInboundRuleTrigger(options: CreateInboundRuleRequest): js.Promise[InboundRule] = js.native
     def createInboundRuleTrigger(options: CreateInboundRuleRequest, callback: Callback[InboundRule]): js.Promise[InboundRule] = js.native
+    
+    /**
+      * Create a message stream on the associated server.
+      *
+      * @param options - Configuration options to be used when creating message stream on the server.
+      * @param callback - If the callback is provided, it will be passed to the resulting promise as a continuation.
+      * @returns A promise that will complete when the API responds (or an error occurs).
+      */
+    def createMessageStream(options: CreateMessageStreamRequest): js.Promise[MessageStream] = js.native
+    def createMessageStream(options: CreateMessageStreamRequest, callback: Callback[MessageStream]): js.Promise[MessageStream] = js.native
     
     /**
       * Add email addresses to a suppressions list on a message stream on a server.
@@ -174,6 +201,17 @@ object serverClientMod extends js.Object {
       */
     def deleteWebhook(id: Double): js.Promise[DefaultResponse] = js.native
     def deleteWebhook(id: Double, callback: Callback[DefaultResponse]): js.Promise[DefaultResponse] = js.native
+    
+    /**
+      * Update message stream on the associated server.
+      *
+      * @param id - Id of the webhook you wish to update.
+      * @param options - Webhook options you wish to update.
+      * @param callback If the callback is provided, it will be passed to the resulting promise as a continuation.
+      * @returns A promise that will complete when the API responds (or an error occurs).
+      */
+    def editMessageStream(id: String, options: UpdateMessageStreamRequest): js.Promise[MessageStream] = js.native
+    def editMessageStream(id: String, options: UpdateMessageStreamRequest, callback: Callback[MessageStream]): js.Promise[MessageStream] = js.native
     
     /**
       * Modify the Server associated with this Client.
@@ -449,6 +487,27 @@ object serverClientMod extends js.Object {
     ): js.Promise[OutboundMessageOpens] = js.native
     
     /**
+      * Get details for a specific message stream on a server.
+      *
+      * @param id - The ID of the message stream you wish to retrieve.
+      * @param callback - If the callback is provided, it will be passed to the resulting promise as a continuation.
+      * @returns A promise that will complete when the API responds (or an error occurs).
+      */
+    def getMessageStream(id: String): js.Promise[MessageStream] = js.native
+    def getMessageStream(id: String, callback: Callback[MessageStream]): js.Promise[MessageStream] = js.native
+    
+    /**
+      * Get the list of message streams on a server.
+      *
+      * @param callback - If the callback is provided, it will be passed to the resulting promise as a continuation.
+      * @returns A promise that will complete when the API responds (or an error occurs).
+      */
+    def getMessageStreams(): js.Promise[MessageStreams] = js.native
+    def getMessageStreams(filter: js.UndefOr[scala.Nothing], callback: Callback[MessageStreams]): js.Promise[MessageStreams] = js.native
+    def getMessageStreams(filter: MessageStreamsFilteringParameters): js.Promise[MessageStreams] = js.native
+    def getMessageStreams(filter: MessageStreamsFilteringParameters, callback: Callback[MessageStreams]): js.Promise[MessageStreams] = js.native
+    
+    /**
       * Get details for a specific Outbound Message.
       *
       * @param messageId - The ID of the OutboundMessage you wish to retrieve.
@@ -641,6 +700,16 @@ object serverClientMod extends js.Object {
       */
     def sendEmailWithTemplate(template: TemplatedMessage): js.Promise[MessageSendingResponse] = js.native
     def sendEmailWithTemplate(template: TemplatedMessage, callback: Callback[MessageSendingResponse]): js.Promise[MessageSendingResponse] = js.native
+    
+    /**
+      * Unrchive a message stream on the associated server.
+      *
+      * @param options - Configuration options to be used when creating message stream on the server.
+      * @param callback - If the callback is provided, it will be passed to the resulting promise as a continuation.
+      * @returns A promise that will complete when the API responds (or an error occurs).
+      */
+    def unarchiveMessageStream(id: String): js.Promise[MessageStreamUnarchiveResponse] = js.native
+    def unarchiveMessageStream(id: String, callback: Callback[MessageStreamUnarchiveResponse]): js.Promise[MessageStreamUnarchiveResponse] = js.native
     
     /**
       * Validate template markup to verify that it will be parsed. Also provides a recommended template

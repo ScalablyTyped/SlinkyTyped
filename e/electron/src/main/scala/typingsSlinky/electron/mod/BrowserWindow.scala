@@ -65,7 +65,7 @@ object BrowserWindow extends js.Object {
   /**
     * The window with the given `id`.
     */
-  def fromId(id: Double): typingsSlinky.electron.Electron.BrowserWindow = js.native
+  def fromId(id: Double): typingsSlinky.electron.Electron.BrowserWindow | Null = js.native
   
   /**
     * The window that owns the given `webContents` or `null` if the contents are not

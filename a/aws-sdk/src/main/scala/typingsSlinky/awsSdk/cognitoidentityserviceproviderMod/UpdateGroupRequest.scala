@@ -18,7 +18,7 @@ trait UpdateGroupRequest extends js.Object {
   var GroupName: GroupNameType = js.native
   
   /**
-    * The new precedence value for the group. For more information about this parameter, see .
+    * The new precedence value for the group. For more information about this parameter, see CreateGroup.
     */
   var Precedence: js.UndefOr[PrecedenceType] = js.native
   

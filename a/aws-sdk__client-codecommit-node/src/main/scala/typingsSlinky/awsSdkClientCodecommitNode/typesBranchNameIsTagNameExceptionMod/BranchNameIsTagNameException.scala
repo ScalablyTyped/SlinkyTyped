@@ -2,31 +2,25 @@ package typingsSlinky.awsSdkClientCodecommitNode.typesBranchNameIsTagNameExcepti
 
 import typingsSlinky.awsSdkClientCodecommitNode.deleteFileExceptionsUnionMod.DeleteFileExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.putFileExceptionsUnionMod.PutFileExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_BranchNameIsTagNameExceptionDetails> * / any */ @js.native
 trait BranchNameIsTagNameException
-  extends ServiceException[BranchNameIsTagNameExceptionDetails]
-     with DeleteFileExceptionsUnion
+  extends DeleteFileExceptionsUnion
      with PutFileExceptionsUnion {
   
-  @JSName("name")
-  var name_BranchNameIsTagNameException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.BranchNameIsTagNameException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.BranchNameIsTagNameException = js.native
 }
 object BranchNameIsTagNameException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: BranchNameIsTagNameExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.BranchNameIsTagNameException
   ): BranchNameIsTagNameException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[BranchNameIsTagNameException]
   }
   

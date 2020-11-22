@@ -10,6 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TreeView[T] extends Disposable {
   
   /**
+    * An optional human-readable description which is rendered less prominently in the title of the view.
+    * Setting the title description to null, undefined, or empty string will remove the description from the view.
+    */
+  var description: js.UndefOr[String] = js.native
+  
+  /**
     * An optional human-readable message that will be rendered in the view.
     * Setting the message to null, undefined, or empty string will remove the message from the view.
     */

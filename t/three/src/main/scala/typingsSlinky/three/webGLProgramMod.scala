@@ -42,6 +42,9 @@ object webGLProgramMod extends js.Object {
     var uniforms: js.Any = js.native
     
      // unique identifier for this program, used for looking up compiled programs from cache.
+    /**
+    	 * @default 1
+    	 */
     var usedTimes: Double = js.native
     
     var vertexShader: WebGLShader = js.native

@@ -11,7 +11,7 @@ trait DomainDnsMxRecord extends DomainDnsRecord {
   var mailExchange: js.UndefOr[String] = js.native
   
   // Value used when configuring the Preference/Priority property of the MX record at the DNS host.
-  var preference: js.UndefOr[Double] = js.native
+  var preference: js.UndefOr[NullableOption[Double]] = js.native
 }
 object DomainDnsMxRecord {
   
@@ -43,9 +43,12 @@ object DomainDnsMxRecord {
     def deleteMailExchange: Self = this.set("mailExchange", js.undefined)
     
     @scala.inline
-    def setPreference(value: Double): Self = this.set("preference", value.asInstanceOf[js.Any])
+    def setPreference(value: NullableOption[Double]): Self = this.set("preference", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePreference: Self = this.set("preference", js.undefined)
+    
+    @scala.inline
+    def setPreferenceNull: Self = this.set("preference", null)
   }
 }

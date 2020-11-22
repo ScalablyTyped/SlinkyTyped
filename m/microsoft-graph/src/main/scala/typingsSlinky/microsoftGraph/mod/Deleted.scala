@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Deleted extends js.Object {
   
   // Represents the state of the deleted item.
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[NullableOption[String]] = js.native
 }
 object Deleted {
   
@@ -34,9 +34,12 @@ object Deleted {
     }
     
     @scala.inline
-    def setState(value: String): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setState(value: NullableOption[String]): Self = this.set("state", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteState: Self = this.set("state", js.undefined)
+    
+    @scala.inline
+    def setStateNull: Self = this.set("state", null)
   }
 }

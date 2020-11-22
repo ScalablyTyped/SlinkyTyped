@@ -158,7 +158,7 @@ object geometryEditor extends js.Object {
     @js.native
     class Edge () extends js.Object {
       
-      def getPlacemark(): GeoObject_ = js.native
+      def getPlacemark(): GeoObject_[IGeometry, js.Object] = js.native
     }
     
     @js.native
@@ -186,7 +186,7 @@ object geometryEditor extends js.Object {
     @js.native
     class Vertex () extends js.Object {
       
-      def getPlacemark(): GeoObject_ = js.native
+      def getPlacemark(): GeoObject_[IGeometry, js.Object] = js.native
     }
   }
 }

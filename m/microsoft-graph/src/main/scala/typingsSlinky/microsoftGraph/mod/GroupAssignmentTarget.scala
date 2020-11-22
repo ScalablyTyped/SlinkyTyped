@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget {
   
   // The group Id that is the target of the assignment.
-  var groupId: js.UndefOr[String] = js.native
+  var groupId: js.UndefOr[NullableOption[String]] = js.native
 }
 object GroupAssignmentTarget {
   
@@ -34,9 +34,12 @@ object GroupAssignmentTarget {
     }
     
     @scala.inline
-    def setGroupId(value: String): Self = this.set("groupId", value.asInstanceOf[js.Any])
+    def setGroupId(value: NullableOption[String]): Self = this.set("groupId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGroupId: Self = this.set("groupId", js.undefined)
+    
+    @scala.inline
+    def setGroupIdNull: Self = this.set("groupId", null)
   }
 }

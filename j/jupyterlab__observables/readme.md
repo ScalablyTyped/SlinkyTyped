@@ -1,7 +1,7 @@
 
 # Scala.js typings for jupyterlab__observables
 
-Typings are for version 3.2.0
+Typings are for version 3.2.5
 
 ## Library description:
 Data structures which may be observed for changes.

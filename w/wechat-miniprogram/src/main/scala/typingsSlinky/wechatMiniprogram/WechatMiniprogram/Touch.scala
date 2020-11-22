@@ -4,31 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** 触摸事件 */
 @js.native
-trait Touch extends js.Object {
+trait Touch[Detail /* <: IAnyObject */, T /* <: TouchDetail | TouchCanvasDetail */, Mark /* <: IAnyObject */, CurrentTargetDataset /* <: IAnyObject */, TargetDataset /* <: IAnyObject */] extends CustomEvent[Detail, Mark, CurrentTargetDataset, TargetDataset] {
   
-  var clientX: Double = js.native
+  /** 触摸事件，当前变化的触摸点信息的数组 */
+  var changedTouches: js.Array[T] = js.native
   
-  var clientY: Double = js.native
-  
-  var force: Double = js.native
-  
-  var identifier: Double = js.native
-  
-  var pageX: Double = js.native
-  
-  var pageY: Double = js.native
+  /** 触摸事件，当前停留在屏幕中的触摸点信息的数组 */
+  var touches: js.Array[T] = js.native
 }
 object Touch {
   
   @scala.inline
-  def apply(clientX: Double, clientY: Double, force: Double, identifier: Double, pageX: Double, pageY: Double): Touch = {
-    val __obj = js.Dynamic.literal(clientX = clientX.asInstanceOf[js.Any], clientY = clientY.asInstanceOf[js.Any], force = force.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], pageX = pageX.asInstanceOf[js.Any], pageY = pageY.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Touch]
+  def apply[Detail /* <: IAnyObject */, T /* <: TouchDetail | TouchCanvasDetail */, Mark /* <: IAnyObject */, CurrentTargetDataset /* <: IAnyObject */, TargetDataset /* <: IAnyObject */](
+    changedTouches: js.Array[T],
+    currentTarget: Target[CurrentTargetDataset],
+    detail: Detail,
+    target: Target[TargetDataset],
+    timeStamp: Double,
+    touches: js.Array[T],
+    `type`: String
+  ): Touch[Detail, T, Mark, CurrentTargetDataset, TargetDataset] = {
+    val __obj = js.Dynamic.literal(changedTouches = changedTouches.asInstanceOf[js.Any], currentTarget = currentTarget.asInstanceOf[js.Any], detail = detail.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any], touches = touches.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Touch[Detail, T, Mark, CurrentTargetDataset, TargetDataset]]
   }
   
   @scala.inline
-  implicit class TouchOps[Self <: Touch] (val x: Self) extends AnyVal {
+  implicit class TouchOps[Self <: Touch[_, _, _, _, _], Detail /* <: IAnyObject */, T /* <: TouchDetail | TouchCanvasDetail */, Mark /* <: IAnyObject */, CurrentTargetDataset /* <: IAnyObject */, TargetDataset /* <: IAnyObject */] (val x: Self with (Touch[Detail, T, Mark, CurrentTargetDataset, TargetDataset])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -43,21 +47,15 @@ object Touch {
     }
     
     @scala.inline
-    def setClientX(value: Double): Self = this.set("clientX", value.asInstanceOf[js.Any])
+    def setChangedTouchesVarargs(value: T*): Self = this.set("changedTouches", js.Array(value :_*))
     
     @scala.inline
-    def setClientY(value: Double): Self = this.set("clientY", value.asInstanceOf[js.Any])
+    def setChangedTouches(value: js.Array[T]): Self = this.set("changedTouches", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setForce(value: Double): Self = this.set("force", value.asInstanceOf[js.Any])
+    def setTouchesVarargs(value: T*): Self = this.set("touches", js.Array(value :_*))
     
     @scala.inline
-    def setIdentifier(value: Double): Self = this.set("identifier", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPageX(value: Double): Self = this.set("pageX", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPageY(value: Double): Self = this.set("pageY", value.asInstanceOf[js.Any])
+    def setTouches(value: js.Array[T]): Self = this.set("touches", value.asInstanceOf[js.Any])
   }
 }

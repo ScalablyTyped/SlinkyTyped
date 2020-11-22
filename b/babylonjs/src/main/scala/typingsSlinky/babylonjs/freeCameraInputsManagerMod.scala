@@ -4,6 +4,7 @@ import typingsSlinky.babylonjs.cameraInputsManagerMod.CameraInputsManager
 import typingsSlinky.babylonjs.freeCameraDeviceOrientationInputMod.FreeCameraDeviceOrientationInput
 import typingsSlinky.babylonjs.freeCameraMod.FreeCamera
 import typingsSlinky.babylonjs.freeCameraMouseInputMod.FreeCameraMouseInput
+import typingsSlinky.babylonjs.freeCameraMouseWheelInputMod.FreeCameraMouseWheelInput
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -35,6 +36,11 @@ object freeCameraInputsManagerMod extends js.Object {
     var _mouseInput: Nullable[FreeCameraMouseInput] = js.native
     
     /**
+      * @hidden
+      */
+    var _mouseWheelInput: Nullable[FreeCameraMouseWheelInput] = js.native
+    
+    /**
       * Add orientation input support to the input manager.
       * @returns the current input manager
       */
@@ -61,6 +67,12 @@ object freeCameraInputsManagerMod extends js.Object {
     def addMouse(touchEnabled: Boolean): FreeCameraInputsManager = js.native
     
     /**
+      * Add mouse wheel input support to the input manager.
+      * @returns the current input manager
+      */
+    def addMouseWheel(): FreeCameraInputsManager = js.native
+    
+    /**
       * Add touch input support to the input manager.
       * @returns the current input manager
       */
@@ -77,5 +89,11 @@ object freeCameraInputsManagerMod extends js.Object {
       * @returns the current input manager
       */
     def removeMouse(): FreeCameraInputsManager = js.native
+    
+    /**
+      * Removes the mouse wheel input support from the manager
+      * @returns the current input manager
+      */
+    def removeMouseWheel(): FreeCameraInputsManager = js.native
   }
 }

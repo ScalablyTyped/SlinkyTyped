@@ -1,7 +1,7 @@
 
 # Scala.js typings for highlightjs
 
-Typings are for version 9.12
+Typings are for version 10.1
 
 ## Library description:
 Syntax highlighting for the Web

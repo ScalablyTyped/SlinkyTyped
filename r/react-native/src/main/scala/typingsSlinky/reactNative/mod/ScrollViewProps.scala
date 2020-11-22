@@ -4,13 +4,12 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.reactNativeStrings.`on-drag`
 import typingsSlinky.reactNative.reactNativeStrings.always
-import typingsSlinky.reactNative.reactNativeStrings.center
-import typingsSlinky.reactNative.reactNativeStrings.end
+import typingsSlinky.reactNative.reactNativeStrings.fast
 import typingsSlinky.reactNative.reactNativeStrings.handled
 import typingsSlinky.reactNative.reactNativeStrings.interactive
 import typingsSlinky.reactNative.reactNativeStrings.never
 import typingsSlinky.reactNative.reactNativeStrings.none
-import typingsSlinky.reactNative.reactNativeStrings.start
+import typingsSlinky.reactNative.reactNativeStrings.normal_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,6 +36,18 @@ trait ScrollViewProps
     *   });
     */
   var contentContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
+  
+  /**
+    * A floating-point number that determines how quickly the scroll view
+    * decelerates after the user lifts their finger. You may also use string
+    * shortcuts `"normal"` and `"fast"` which match the underlying iOS settings
+    * for `UIScrollViewDecelerationRateNormal` and
+    * `UIScrollViewDecelerationRateFast` respectively.
+    *
+    *  - `'normal'`: 0.998 on iOS, 0.985 on Android (the default)
+    *  - `'fast'`: 0.99 on iOS, 0.9 on Android
+    */
+  var decelerationRate: js.UndefOr[fast | normal_ | Double] = js.native
   
   /**
     * When true, the scroll view stops on the next index (in relation to scroll position at release)
@@ -149,15 +160,7 @@ trait ScrollViewProps
   var showsVerticalScrollIndicator: js.UndefOr[Boolean] = js.native
   
   /**
-    * When `snapToInterval` is set, `snapToAlignment` will define the relationship of the the snapping to the scroll view.
-    *      - `start` (the default) will align the snap at the left (horizontal) or top (vertical)
-    *      - `center` will align the snap in the center
-    *      - `end` will align the snap at the right (horizontal) or bottom (vertical)
-    */
-  var snapToAlignment: js.UndefOr[start | center | end] = js.native
-  
-  /**
-    * Use in conjuction with `snapToOffsets`. By default, the end of the list counts as a snap
+    * Use in conjunction with `snapToOffsets`. By default, the end of the list counts as a snap
     * offset. Set `snapToEnd` to false to disable this behavior and allow the list to scroll freely
     * between its end and the last `snapToOffsets` offset. The default value is true.
     */
@@ -180,11 +183,20 @@ trait ScrollViewProps
   var snapToOffsets: js.UndefOr[js.Array[Double]] = js.native
   
   /**
-    * Use in conjuction with `snapToOffsets`. By default, the beginning of the list counts as a
+    * Use in conjunction with `snapToOffsets`. By default, the beginning of the list counts as a
     * snap offset. Set `snapToStart` to false to disable this behavior and allow the list to scroll
     * freely between its start and the first `snapToOffsets` offset. The default value is true.
     */
   var snapToStart: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * An array of child indices determining which children get docked to the
+    * top of the screen when scrolling. For example passing
+    * `stickyHeaderIndices={[0]}` will cause the first child to be fixed to the
+    * top of the scroll view. This property is not supported in conjunction
+    * with `horizontal={true}`.
+    */
+  var stickyHeaderIndices: js.UndefOr[js.Array[Double]] = js.native
 }
 object ScrollViewProps {
   
@@ -217,6 +229,12 @@ object ScrollViewProps {
     
     @scala.inline
     def setContentContainerStyleNull: Self = this.set("contentContainerStyle", null)
+    
+    @scala.inline
+    def setDecelerationRate(value: fast | normal_ | Double): Self = this.set("decelerationRate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDecelerationRate: Self = this.set("decelerationRate", js.undefined)
     
     @scala.inline
     def setDisableIntervalMomentum(value: Boolean): Self = this.set("disableIntervalMomentum", value.asInstanceOf[js.Any])
@@ -324,12 +342,6 @@ object ScrollViewProps {
     def deleteShowsVerticalScrollIndicator: Self = this.set("showsVerticalScrollIndicator", js.undefined)
     
     @scala.inline
-    def setSnapToAlignment(value: start | center | end): Self = this.set("snapToAlignment", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSnapToAlignment: Self = this.set("snapToAlignment", js.undefined)
-    
-    @scala.inline
     def setSnapToEnd(value: Boolean): Self = this.set("snapToEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -355,5 +367,14 @@ object ScrollViewProps {
     
     @scala.inline
     def deleteSnapToStart: Self = this.set("snapToStart", js.undefined)
+    
+    @scala.inline
+    def setStickyHeaderIndicesVarargs(value: Double*): Self = this.set("stickyHeaderIndices", js.Array(value :_*))
+    
+    @scala.inline
+    def setStickyHeaderIndices(value: js.Array[Double]): Self = this.set("stickyHeaderIndices", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStickyHeaderIndices: Self = this.set("stickyHeaderIndices", js.undefined)
   }
 }

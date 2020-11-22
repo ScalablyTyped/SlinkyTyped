@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AttributeRef
@@ -19,6 +20,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.IPage
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.Icon
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.PageVariable
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.Widget
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,14 +28,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/gen/customwidgets", "customwidgets.WidgetValue")
 @js.native
-class WidgetValue protected () extends Element {
+class WidgetValue protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -103,9 +105,6 @@ class WidgetValue protected () extends Element {
   def microflowQualifiedName: String | Null = js.native
   
   def microflow_=(newValue: IMicroflow | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FWidgetValue: IModel = js.native
   
   /**
     * In version 7.13.0: introduced

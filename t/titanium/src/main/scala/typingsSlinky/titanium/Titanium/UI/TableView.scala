@@ -426,13 +426,13 @@ trait TableView extends View {
     * Gets the value of the <Titanium.UI.TableView.resultsBackgroundColor> property.
     * @deprecated Access <Titanium.UI.TableView.resultsBackgroundColor> instead.
     */
-  def getResultsBackgroundColor(): String = js.native
+  def getResultsBackgroundColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TableView.resultsSeparatorColor> property.
     * @deprecated Access <Titanium.UI.TableView.resultsSeparatorColor> instead.
     */
-  def getResultsSeparatorColor(): String = js.native
+  def getResultsSeparatorColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TableView.resultsSeparatorInsets> property.
@@ -510,7 +510,7 @@ trait TableView extends View {
     * Gets the value of the <Titanium.UI.TableView.separatorColor> property.
     * @deprecated Access <Titanium.UI.TableView.separatorColor> instead.
     */
-  def getSeparatorColor(): String = js.native
+  def getSeparatorColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TableView.separatorInsets> property.
@@ -688,13 +688,13 @@ trait TableView extends View {
   /**
     * The background color of the search results (iOS-only).
     */
-  var resultsBackgroundColor: String = js.native
+  var resultsBackgroundColor: String | Color = js.native
   
   /**
     * Separator line color between rows inside search results,
     * as a color name or hex triplet (iOS-only).
     */
-  var resultsSeparatorColor: String = js.native
+  var resultsSeparatorColor: String | Color = js.native
   
   /**
     * The insets for search results separators (applies to all cells & iOS-only).
@@ -779,7 +779,7 @@ trait TableView extends View {
   /**
     * Separator line color between rows, as a color name or hex triplet.
     */
-  var separatorColor: String = js.native
+  var separatorColor: String | Color = js.native
   
   /**
     * The insets for table view separators (applies to all cells).
@@ -973,12 +973,14 @@ trait TableView extends View {
     * @deprecated Set the value using <Titanium.UI.TableView.resultsBackgroundColor> instead.
     */
   def setResultsBackgroundColor(resultsBackgroundColor: String): Unit = js.native
+  def setResultsBackgroundColor(resultsBackgroundColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TableView.resultsSeparatorColor> property.
     * @deprecated Set the value using <Titanium.UI.TableView.resultsSeparatorColor> instead.
     */
   def setResultsSeparatorColor(resultsSeparatorColor: String): Unit = js.native
+  def setResultsSeparatorColor(resultsSeparatorColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TableView.resultsSeparatorInsets> property.
@@ -1052,6 +1054,7 @@ trait TableView extends View {
     * @deprecated Set the value using <Titanium.UI.TableView.separatorColor> instead.
     */
   def setSeparatorColor(separatorColor: String): Unit = js.native
+  def setSeparatorColor(separatorColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TableView.separatorInsets> property.

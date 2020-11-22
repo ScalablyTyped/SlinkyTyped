@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.mergeMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.LayerArgs
 import scala.scalajs.js

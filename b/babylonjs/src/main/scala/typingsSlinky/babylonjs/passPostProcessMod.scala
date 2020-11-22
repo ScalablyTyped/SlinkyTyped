@@ -4,6 +4,7 @@ import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -51,6 +52,13 @@ object passPostProcessMod extends js.Object {
     def face: Double = js.native
     def face_=(value: Double): Unit = js.native
   }
+  /* static members */
+  @js.native
+  object PassCubePostProcess extends js.Object {
+    
+    /** @hidden */
+    def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): PassCubePostProcess = js.native
+  }
   
   @js.native
   class PassPostProcess protected () extends PostProcess {
@@ -75,5 +83,12 @@ object passPostProcessMod extends js.Object {
       textureType: js.UndefOr[Double],
       blockCompilation: js.UndefOr[Boolean]
     ) = this()
+  }
+  /* static members */
+  @js.native
+  object PassPostProcess extends js.Object {
+    
+    /** @hidden */
+    def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): PassPostProcess = js.native
   }
 }

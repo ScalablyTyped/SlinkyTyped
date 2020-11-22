@@ -1,10 +1,9 @@
 package typingsSlinky.typedoc.mod.TypeScript
 
+import typingsSlinky.typescript.mod.ColonToken
 import typingsSlinky.typescript.mod.ConditionalExpression
 import typingsSlinky.typescript.mod.Expression
-import typingsSlinky.typescript.mod.SyntaxKind.ColonToken
-import typingsSlinky.typescript.mod.SyntaxKind.QuestionToken
-import typingsSlinky.typescript.mod.Token
+import typingsSlinky.typescript.mod.QuestionToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,12 +12,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateConditional extends js.Object {
   
+  /** @deprecated Use `factory.updateConditional` or the factory supplied by your transformation context instead. */
   def apply(
     node: ConditionalExpression,
     condition: Expression,
-    questionToken: Token[QuestionToken],
+    questionToken: QuestionToken,
     whenTrue: Expression,
-    colonToken: Token[ColonToken],
+    colonToken: ColonToken,
     whenFalse: Expression
   ): ConditionalExpression = js.native
 }

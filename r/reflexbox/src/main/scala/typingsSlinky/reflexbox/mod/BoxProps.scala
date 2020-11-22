@@ -53,36 +53,36 @@ trait BoxProps
   extends SpaceProps[RequiredTheme, ThemeValue[space, RequiredTheme, js.Any]]
      with WidthProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ js.Any
     ]
      with HeightProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ js.Any
     ]
      with MinWidthProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ js.Any
     ]
      with MinHeightProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ js.Any
     ]
      with MaxWidthProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ js.Any
     ]
      with MaxHeightProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ js.Any
     ]
      with DisplayProps[RequiredTheme]
      with VerticalAlignProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ js.Any
     ]
      with SizeProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ js.Any
     ]
      with OverflowProps[RequiredTheme]
      with FontFamilyProps[RequiredTheme]
@@ -103,13 +103,13 @@ trait BoxProps
      with FlexDirectionProps[RequiredTheme]
      with FlexProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ js.Any
     ]
      with FlexGrowProps[RequiredTheme]
      with FlexShrinkProps[RequiredTheme]
      with FlexBasisProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexBasisProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexBasis<TLengthStyledSystem> */ js.Any
     ]
      with JustifySelfProps[RequiredTheme]
      with AlignSelfProps[RequiredTheme]

@@ -1,5 +1,6 @@
 package typingsSlinky.babelPluginMacros.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.babelCore.mod.PluginPass
 import typingsSlinky.babelPluginMacros.anon.TypeofBabel
 import typingsSlinky.babelPluginMacros.anon.defaultArrayNodePathNodeR
@@ -11,6 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MacroParams extends js.Object {
   
   var babel: TypeofBabel = js.native
+  
+  var config: js.UndefOr[StringDictionary[js.Any]] = js.native
   
   var references: defaultArrayNodePathNodeR = js.native
   
@@ -47,5 +50,11 @@ object MacroParams {
     
     @scala.inline
     def setState(value: PluginPass): Self = this.set("state", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setConfig(value: StringDictionary[js.Any]): Self = this.set("config", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConfig: Self = this.set("config", js.undefined)
   }
 }

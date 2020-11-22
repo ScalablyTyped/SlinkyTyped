@@ -38,9 +38,11 @@ trait CreateDomainNameRequest extends js.Object {
   var domainName: String = js.native
   
   /**
-    * The endpoint configuration of this DomainName showing the endpoint types of the domain name. 
+    * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
     */
   var endpointConfiguration: js.UndefOr[EndpointConfiguration] = js.native
+  
+  var mutualTlsAuthentication: js.UndefOr[MutualTlsAuthenticationInput] = js.native
   
   /**
     * The reference to an AWS-managed certificate that will be used by regional endpoint for this domain name. AWS Certificate Manager is the only supported source.
@@ -123,6 +125,12 @@ object CreateDomainNameRequest {
     
     @scala.inline
     def deleteEndpointConfiguration: Self = this.set("endpointConfiguration", js.undefined)
+    
+    @scala.inline
+    def setMutualTlsAuthentication(value: MutualTlsAuthenticationInput): Self = this.set("mutualTlsAuthentication", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMutualTlsAuthentication: Self = this.set("mutualTlsAuthentication", js.undefined)
     
     @scala.inline
     def setRegionalCertificateArn(value: String): Self = this.set("regionalCertificateArn", value.asInstanceOf[js.Any])

@@ -9,8 +9,9 @@ trait AppRole extends js.Object {
   
   /**
     * Specifies whether this app role can be assigned to users and groups (by setting to ['User']), to other application's
-    * (by setting to ['Application'], or both (by setting to ['User', 'Application']). App roles supporting assignment of
-    * other applications' service principals are also known as application permissions.
+    * (by setting to ['Application'], or both (by setting to ['User', 'Application']). App roles supporting assignment to
+    * other applications' service principals are also known as application permissions. The 'Application' value is only
+    * supported for app roles defined on application entities.
     */
   var allowedMemberTypes: js.UndefOr[js.Array[String]] = js.native
   
@@ -18,10 +19,10 @@ trait AppRole extends js.Object {
     * The description for the app role. This is displayed when the app role is being assigned and, if the app role functions
     * as an application permission, during consent experiences.
     */
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[NullableOption[String]] = js.native
   
   // Display name for the permission that appears in the app role assignment and consent experiences.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Unique role identifier inside the appRoles collection. When creating a new app role, a new Guid identifier must be
@@ -39,7 +40,7 @@ trait AppRole extends js.Object {
     * Specifies if the app role is defined on the application object or on the servicePrincipal entity. Must not be included
     * in any POST or PATCH requests. Read-only.
     */
-  var origin: js.UndefOr[String] = js.native
+  var origin: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or
@@ -47,7 +48,7 @@ trait AppRole extends js.Object {
     * ; = ? @ [ ] ^ + _ { } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space
     * character, are not allowed.
     */
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[NullableOption[String]] = js.native
 }
 object AppRole {
   
@@ -82,16 +83,22 @@ object AppRole {
     def deleteAllowedMemberTypes: Self = this.set("allowedMemberTypes", js.undefined)
     
     @scala.inline
-    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: NullableOption[String]): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDescriptionNull: Self = this.set("description", null)
+    
+    @scala.inline
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
@@ -106,15 +113,21 @@ object AppRole {
     def deleteIsEnabled: Self = this.set("isEnabled", js.undefined)
     
     @scala.inline
-    def setOrigin(value: String): Self = this.set("origin", value.asInstanceOf[js.Any])
+    def setOrigin(value: NullableOption[String]): Self = this.set("origin", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrigin: Self = this.set("origin", js.undefined)
     
     @scala.inline
-    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setOriginNull: Self = this.set("origin", null)
+    
+    @scala.inline
+    def setValue(value: NullableOption[String]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

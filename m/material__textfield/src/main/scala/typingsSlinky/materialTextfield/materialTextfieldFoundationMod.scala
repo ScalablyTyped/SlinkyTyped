@@ -43,6 +43,12 @@ object materialTextfieldFoundationMod extends js.Object {
       */
     def deactivateFocus(): Unit = js.native
     
+    /**
+      * @return Whether or not validity should be updated on value change. `true`
+      *     by default.
+      */
+    def getValidateOnValueChange(): Boolean = js.native
+    
     def getValue(): String = js.native
     
     /**
@@ -63,7 +69,8 @@ object materialTextfieldFoundationMod extends js.Object {
     def isDisabled(): Boolean = js.native
     
     /**
-      * @return The custom validity state, if set; otherwise, the result of a native validity check.
+      * @return The custom validity state, if set; otherwise, the result of a
+      *     native validity check.
       */
     def isValid(): Boolean = js.native
     
@@ -110,8 +117,10 @@ object materialTextfieldFoundationMod extends js.Object {
     def setTransformOrigin(evt: TouchEvent): Unit = js.native
     
     /**
-      * Enables or disables the use of native validation. Use this for custom validation.
-      * @param useNativeValidation Set this to false to ignore native input validation.
+      * Enables or disables the use of native validation. Use this for custom
+      * validation.
+      * @param useNativeValidation Set this to false to ignore native input
+      *     validation.
       */
     def setUseNativeValidation(useNativeValidation: Boolean): Unit = js.native
     
@@ -119,6 +128,12 @@ object materialTextfieldFoundationMod extends js.Object {
       * @param isValid Sets the custom validity state of the Text Field.
       */
     def setValid(isValid: Boolean): Unit = js.native
+    
+    /**
+      * @param shouldValidate Whether or not validity should be updated on
+      *     value change.
+      */
+    def setValidateOnValueChange(shouldValidate: Boolean): Unit = js.native
     
     /**
       * @param value The value to set on the input Element.
@@ -136,7 +151,8 @@ object materialTextfieldFoundationMod extends js.Object {
     def cssClasses: DISABLED = js.native
     
     /**
-      * See {@link MDCTextFieldAdapter} for typing information on parameters and return types.
+      * See {@link MDCTextFieldAdapter} for typing information on parameters and
+      * return types.
       */
     def defaultAdapter: MDCTextFieldAdapter = js.native
     
@@ -162,7 +178,8 @@ object materialTextfieldFoundationMod extends js.Object {
     def cssClasses: DISABLED = js.native
     
     /**
-      * See {@link MDCTextFieldAdapter} for typing information on parameters and return types.
+      * See {@link MDCTextFieldAdapter} for typing information on parameters and
+      * return types.
       */
     def defaultAdapter: MDCTextFieldAdapter = js.native
     

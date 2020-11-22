@@ -62,7 +62,6 @@ trait Sensitivity extends js.Object {
   ): Unit = js.native
   
   def setAsync(sensitivity: String): Unit = js.native
-  def setAsync(sensitivity: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def setAsync(
     sensitivity: String,
     options: js.UndefOr[scala.Nothing],
@@ -94,10 +93,6 @@ trait Sensitivity extends js.Object {
     * @beta
     */
   def setAsync(sensitivity: AppointmentSensitivityType): Unit = js.native
-  def setAsync(
-    sensitivity: AppointmentSensitivityType,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
   def setAsync(
     sensitivity: AppointmentSensitivityType,
     options: js.UndefOr[scala.Nothing],

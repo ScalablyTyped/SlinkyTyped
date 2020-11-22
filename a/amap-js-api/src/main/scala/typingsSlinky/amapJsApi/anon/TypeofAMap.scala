@@ -42,7 +42,6 @@ trait TypeofAMap extends js.Object {
     typingsSlinky.amapJsApi.AMap.Circle[js.Object]
   ] = js.native
   
-  // tslint:disable-next-line;
   /**
     * 圆点标记
     */

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.reportsMod.reports
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,14 +16,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/gen/reports", "reports.BasicReportAggregate")
 @js.native
-class BasicReportAggregate protected () extends Element {
+class BasicReportAggregate protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def aggregateFunction: AggregateFunctionEnum = js.native
@@ -33,9 +35,6 @@ class BasicReportAggregate protected () extends Element {
   def caption_=(newValue: Text): Unit = js.native
   
   def containerAsBasicReport: BasicReport = js.native
-  
-  @JSName("model")
-  var model_FBasicReportAggregate: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/reports", "reports.BasicReportAggregate")

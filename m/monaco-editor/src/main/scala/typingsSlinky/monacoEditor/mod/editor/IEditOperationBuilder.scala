@@ -1,6 +1,6 @@
 package typingsSlinky.monacoEditor.mod.editor
 
-import typingsSlinky.monacoEditor.mod.Range
+import typingsSlinky.monacoEditor.mod.IRange
 import typingsSlinky.monacoEditor.mod.Selection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,10 +14,10 @@ trait IEditOperationBuilder extends js.Object {
     * @param range The range to replace (delete). May be empty to represent a simple insert.
     * @param text The text to replace with. May be null to represent a simple delete.
     */
-  def addEditOperation(range: Range): Unit = js.native
-  def addEditOperation(range: Range, text: String): Unit = js.native
-  def addEditOperation(range: Range, text: String, forceMoveMarkers: Boolean): Unit = js.native
-  def addEditOperation(range: Range, text: Null, forceMoveMarkers: Boolean): Unit = js.native
+  def addEditOperation(range: IRange): Unit = js.native
+  def addEditOperation(range: IRange, text: String): Unit = js.native
+  def addEditOperation(range: IRange, text: String, forceMoveMarkers: Boolean): Unit = js.native
+  def addEditOperation(range: IRange, text: Null, forceMoveMarkers: Boolean): Unit = js.native
   
   /**
     * Add a new edit operation (a replace operation).
@@ -25,10 +25,10 @@ trait IEditOperationBuilder extends js.Object {
     * @param range The range to replace (delete). May be empty to represent a simple insert.
     * @param text The text to replace with. May be null to represent a simple delete.
     */
-  def addTrackedEditOperation(range: Range): Unit = js.native
-  def addTrackedEditOperation(range: Range, text: String): Unit = js.native
-  def addTrackedEditOperation(range: Range, text: String, forceMoveMarkers: Boolean): Unit = js.native
-  def addTrackedEditOperation(range: Range, text: Null, forceMoveMarkers: Boolean): Unit = js.native
+  def addTrackedEditOperation(range: IRange): Unit = js.native
+  def addTrackedEditOperation(range: IRange, text: String): Unit = js.native
+  def addTrackedEditOperation(range: IRange, text: String, forceMoveMarkers: Boolean): Unit = js.native
+  def addTrackedEditOperation(range: IRange, text: Null, forceMoveMarkers: Boolean): Unit = js.native
   
   /**
     * Track `selection` when applying edit operations.

@@ -1,6 +1,7 @@
 package typingsSlinky.grammarkdown.parserMod
 
-import typingsSlinky.grammarkdown.coreMod.Range
+import typingsSlinky.grammarkdown.anon.Text
+import typingsSlinky.grammarkdown.typesMod.Range
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,9 +19,9 @@ object TextChange extends js.Object {
   
   def applyChange(originalText: String, change: TextChange): String = js.native
   
-  def clone(change: TextChange): typingsSlinky.grammarkdown.anon.Range = js.native
+  def clone(change: TextChange): Text = js.native
   
-  def create(text: String, range: Range): typingsSlinky.grammarkdown.anon.Range = js.native
+  def create(text: String, range: Range): Text = js.native
   
   def isUnchanged(change: TextChange): Boolean = js.native
 }

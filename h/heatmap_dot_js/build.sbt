@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "heatmap_dot_js"
-version := "2.0-dt-20200515Z-436e96"
+version := "2.0-dt-20200515Z-75675a"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20200515Z-638879",
-  "org.scalablytyped.slinky" %%% "leaflet" % "1.5-dt-20200720Z-609e8f",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "geojson" % "7946.0-dt-20201002Z-de1c1d",
+  "org.scalablytyped.slinky" %%% "leaflet" % "1.5-dt-20201012Z-bca55d",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

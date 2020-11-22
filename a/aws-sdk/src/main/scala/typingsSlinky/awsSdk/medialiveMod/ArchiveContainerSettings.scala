@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ArchiveContainerSettings extends js.Object {
   
   var M2tsSettings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.M2tsSettings] = js.native
+  
+  var RawSettings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.RawSettings] = js.native
 }
 object ArchiveContainerSettings {
   
@@ -37,5 +39,11 @@ object ArchiveContainerSettings {
     
     @scala.inline
     def deleteM2tsSettings: Self = this.set("M2tsSettings", js.undefined)
+    
+    @scala.inline
+    def setRawSettings(value: RawSettings): Self = this.set("RawSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRawSettings: Self = this.set("RawSettings", js.undefined)
   }
 }

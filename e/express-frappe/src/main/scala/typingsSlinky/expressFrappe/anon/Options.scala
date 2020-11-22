@@ -1,5 +1,6 @@
 package typingsSlinky.expressFrappe.anon
 
+import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Options extends js.Object {
   
-  var options: js.UndefOr[ServeStaticOptions] = js.native
+  var options: js.UndefOr[ServeStaticOptions[ServerResponse]] = js.native
   
   var root: String = js.native
 }
@@ -39,7 +40,7 @@ object Options {
     def setRoot(value: String): Self = this.set("root", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: ServeStaticOptions): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: ServeStaticOptions[ServerResponse]): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

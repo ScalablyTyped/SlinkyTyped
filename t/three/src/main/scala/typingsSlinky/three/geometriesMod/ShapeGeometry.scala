@@ -10,6 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ShapeGeometry protected ()
   extends typingsSlinky.three.shapeGeometryMod.ShapeGeometry {
   def this(shapes: js.Array[Shape]) = this()
+  /**
+  	 * @param shapes
+  	 * @param [curveSegments=12]
+  	 */
   def this(shapes: Shape) = this()
   def this(shapes: js.Array[Shape], curveSegments: Double) = this()
   def this(shapes: Shape, curveSegments: Double) = this()

@@ -3,8 +3,9 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposDeleteEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposDeleteResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposCreateOrUpdateFileContentsEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposCreateOrUpdateFileContentsResponse201Data
+import typingsSlinky.octokitTypes.endpointsMod.ReposCreateOrUpdateFileContentsResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +16,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `911` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposDeleteEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposCreateOrUpdateFileContentsEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposDeleteResponseData] = js.native
+  var response: OctokitResponse[
+    ReposCreateOrUpdateFileContentsResponseData | ReposCreateOrUpdateFileContentsResponse201Data
+  ] = js.native
 }
 object `911` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposDeleteEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposDeleteResponseData]
+    parameters: RequestParameters with (Omit[ReposCreateOrUpdateFileContentsEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[
+      ReposCreateOrUpdateFileContentsResponseData | ReposCreateOrUpdateFileContentsResponse201Data
+    ]
   ): `911` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`911`]
@@ -46,9 +51,15 @@ object `911` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ReposDeleteEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(
+      value: RequestParameters with (Omit[ReposCreateOrUpdateFileContentsEndpoint, baseUrl | headers | mediaType])
+    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposDeleteResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(
+      value: OctokitResponse[
+          ReposCreateOrUpdateFileContentsResponseData | ReposCreateOrUpdateFileContentsResponse201Data
+        ]
+    ): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

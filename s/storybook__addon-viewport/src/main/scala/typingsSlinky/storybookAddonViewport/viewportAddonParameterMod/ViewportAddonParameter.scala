@@ -12,8 +12,6 @@ trait ViewportAddonParameter extends js.Object {
   
   var disable: js.UndefOr[Boolean] = js.native
   
-  var onViewportChange: js.UndefOr[scala.Nothing] = js.native
-  
   var viewports: js.UndefOr[ViewportMap] = js.native
 }
 object ViewportAddonParameter {

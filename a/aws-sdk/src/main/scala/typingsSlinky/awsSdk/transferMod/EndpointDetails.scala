@@ -8,22 +8,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EndpointDetails extends js.Object {
   
   /**
-    * A list of address allocation IDs that are required to attach an Elastic IP address to your file transfer protocol-enabled server's endpoint. This is only valid in the UpdateServer API.  This property can only be use when EndpointType is set to VPC. 
+    * A list of address allocation IDs that are required to attach an Elastic IP address to your server's endpoint.  This property can only be set when EndpointType is set to VPC and it is only valid in the UpdateServer API. 
     */
   var AddressAllocationIds: js.UndefOr[typingsSlinky.awsSdk.transferMod.AddressAllocationIds] = js.native
   
   /**
-    * A list of subnet IDs that are required to host your file transfer protocol-enabled server endpoint in your VPC.  This property can only be used when EndpointType is set to VPC. 
+    * A list of security groups IDs that are available to attach to your server's endpoint.  This property can only be set when EndpointType is set to VPC. You can only edit the SecurityGroupIds property in the UpdateServer API and only if you are changing the EndpointType from PUBLIC or VPC_ENDPOINT to VPC. 
+    */
+  var SecurityGroupIds: js.UndefOr[typingsSlinky.awsSdk.transferMod.SecurityGroupIds] = js.native
+  
+  /**
+    * A list of subnet IDs that are required to host your server endpoint in your VPC.  This property can only be set when EndpointType is set to VPC. 
     */
   var SubnetIds: js.UndefOr[typingsSlinky.awsSdk.transferMod.SubnetIds] = js.native
   
   /**
-    * The ID of the VPC endpoint.  This property can only be used when EndpointType is set to VPC_ENDPOINT. 
+    * The ID of the VPC endpoint.  This property can only be set when EndpointType is set to VPC_ENDPOINT. 
     */
   var VpcEndpointId: js.UndefOr[typingsSlinky.awsSdk.transferMod.VpcEndpointId] = js.native
   
   /**
-    * The VPC ID of the VPC in which a file transfer protocol-enabled server's endpoint will be hosted.  This property can only be used when EndpointType is set to VPC. 
+    * The VPC ID of the VPC in which a server's endpoint will be hosted.  This property can only be set when EndpointType is set to VPC. 
     */
   var VpcId: js.UndefOr[typingsSlinky.awsSdk.transferMod.VpcId] = js.native
 }
@@ -58,6 +63,15 @@ object EndpointDetails {
     
     @scala.inline
     def deleteAddressAllocationIds: Self = this.set("AddressAllocationIds", js.undefined)
+    
+    @scala.inline
+    def setSecurityGroupIdsVarargs(value: SecurityGroupId*): Self = this.set("SecurityGroupIds", js.Array(value :_*))
+    
+    @scala.inline
+    def setSecurityGroupIds(value: SecurityGroupIds): Self = this.set("SecurityGroupIds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSecurityGroupIds: Self = this.set("SecurityGroupIds", js.undefined)
     
     @scala.inline
     def setSubnetIdsVarargs(value: SubnetId*): Self = this.set("SubnetIds", js.Array(value :_*))

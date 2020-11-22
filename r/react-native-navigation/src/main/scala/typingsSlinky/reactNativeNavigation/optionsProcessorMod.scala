@@ -45,9 +45,13 @@ object optionsProcessorMod extends js.Object {
     
     var processImage: js.Any = js.native
     
+    var processInterpolation: js.Any = js.native
+    
     var processObject: js.Any = js.native
     
     def processOptions(options: Options, commandName: CommandName): Unit = js.native
+    
+    var processSearchBar: js.Any = js.native
     
     var processWithRegisteredProcessor: js.Any = js.native
     

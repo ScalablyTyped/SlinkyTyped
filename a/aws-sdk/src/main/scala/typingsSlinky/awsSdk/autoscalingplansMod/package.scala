@@ -165,7 +165,7 @@ package object autoscalingplansMod {
   type ScheduledActionBufferTime = scala.Double
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.autoscaling
+    - typingsSlinky.awsSdk.awsSdkStrings.autoscaling_
     - typingsSlinky.awsSdk.awsSdkStrings.ecs_
     - typingsSlinky.awsSdk.awsSdkStrings.ec2_
     - typingsSlinky.awsSdk.awsSdkStrings.rds_

@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.DayOfWeek
 import typingsSlinky.fluentuiDateTimeUtilities.dateValuesMod.FirstWeekOfYear
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarFormatDateCallbacks
 import typingsSlinky.officeUiFabricReact.calendarTypesMod.ICalendarProps
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
@@ -11,7 +12,6 @@ import typingsSlinky.officeUiFabricReact.textFieldTypesMod.ITextFieldProps
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps

@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "Spinner")
+@JSImport("reactstrap/es", "Spinner")
 @js.native
-class Spinner[T] ()
+class Spinner ()
   extends Component[SpinnerProps, js.Object, js.Any]

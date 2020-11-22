@@ -8,15 +8,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDropDownEditor extends dxTextEditor {
   
-  /** @name dxDropDownEditor.close() */
+  /**
+    * [descr:dxDropDownEditor.close()]
+    */
   def close(): Unit = js.native
   
-  /** @name dxDropDownEditor.content() */
+  /**
+    * [descr:dxDropDownEditor.content()]
+    */
   def content(): dxElement = js.native
   
-  /** @name dxDropDownEditor.field() */
+  /**
+    * [descr:dxDropDownEditor.field()]
+    */
   def field(): dxElement = js.native
   
-  /** @name dxDropDownEditor.open() */
+  /**
+    * [descr:dxDropDownEditor.open()]
+    */
   def open(): Unit = js.native
 }

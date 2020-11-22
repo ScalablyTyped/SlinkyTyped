@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DotDensityRendererLegendOptions extends Object {
   
   /**
-    * Indicates the unit of the data being visualized. this will display next to the dot value in the title of the [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html).
+    * Indicates the unit of the data being visualized.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html#legendOptions)
     */

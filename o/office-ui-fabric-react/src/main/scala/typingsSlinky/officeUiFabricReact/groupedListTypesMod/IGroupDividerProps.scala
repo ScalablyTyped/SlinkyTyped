@@ -1,12 +1,14 @@
 package typingsSlinky.officeUiFabricReact.groupedListTypesMod
 
 import org.scalajs.dom.raw.HTMLButtonElement
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
+import slinky.web.SyntheticKeyboardEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderProps
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
@@ -16,6 +18,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait IGroupDividerProps extends js.Object {
+  
+  /** Defines the number of columns a group header needs to span in the case of a grid or treegrid */
+  var ariaColSpan: js.UndefOr[Double] = js.native
   
   /** Custom className */
   var className: js.UndefOr[String] = js.native
@@ -69,6 +74,11 @@ trait IGroupDividerProps extends js.Object {
   /** Callback for when the group header is clicked. */
   var onGroupHeaderClick: js.UndefOr[js.Function1[/* group */ IGroup, Unit]] = js.native
   
+  /** Callback for when the "keyup" event is fired on the group header . */
+  var onGroupHeaderKeyUp: js.UndefOr[
+    js.Function2[/* ev */ SyntheticKeyboardEvent[HTMLElement], /* group */ IGroup, Unit]
+  ] = js.native
+  
   /** Override which allows the caller to provider a custom renderer for the GroupHeader title. */
   var onRenderTitle: js.UndefOr[IRenderFunction[IGroupHeaderProps]] = js.native
   
@@ -118,6 +128,12 @@ object IGroupDividerProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAriaColSpan(value: Double): Self = this.set("ariaColSpan", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAriaColSpan: Self = this.set("ariaColSpan", js.undefined)
     
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
@@ -217,6 +233,12 @@ object IGroupDividerProps {
     
     @scala.inline
     def deleteOnGroupHeaderClick: Self = this.set("onGroupHeaderClick", js.undefined)
+    
+    @scala.inline
+    def setOnGroupHeaderKeyUp(value: (/* ev */ SyntheticKeyboardEvent[HTMLElement], /* group */ IGroup) => Unit): Self = this.set("onGroupHeaderKeyUp", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteOnGroupHeaderKeyUp: Self = this.set("onGroupHeaderKeyUp", js.undefined)
     
     @scala.inline
     def setOnRenderTitle(

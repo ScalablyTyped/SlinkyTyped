@@ -10,6 +10,8 @@ package object mod {
   
   type ArrayOrString = typingsSlinky.c3.mod.ArrayOrSingle[java.lang.String]
   
+  type AxisName = typingsSlinky.c3.mod.XAxisName | typingsSlinky.c3.mod.YAxisName
+  
   type Domain = js.Tuple2[scala.Double, scala.Double]
   
   type ExpandOptions = scala.Boolean | typingsSlinky.c3.anon.`0`
@@ -29,4 +31,6 @@ package object mod {
   type RedrawOptions = org.scalablytyped.runtime.StringDictionary[scala.Boolean]
   
   type UpdateAndRedrawOptions = org.scalablytyped.runtime.StringDictionary[scala.Boolean]
+  
+  type XAxisName = typingsSlinky.c3.c3Strings.x
 }

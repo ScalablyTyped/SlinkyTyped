@@ -1,6 +1,6 @@
 package typingsSlinky.xstate
 
-import typingsSlinky.xstate.anon.Context
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateMod.State
 import typingsSlinky.xstate.typesMod.EventObject
 import typingsSlinky.xstate.typesMod.StateValue
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object matchMod extends js.Object {
   
   def matchState[T, TContext, TEvent /* <: EventObject */](
-    state: State[TContext, TEvent, _, Context[TContext]],
+    state: State[TContext, TEvent, _, ContextTContext[TContext]],
     patterns: js.Array[StatePatternTuple[T, TContext, TEvent]],
     defaultValue: ValueFromStateGetter[T, TContext, TEvent]
   ): T = js.native
@@ -25,5 +25,5 @@ object matchMod extends js.Object {
   
   type StatePatternTuple[T, TContext, TEvent /* <: EventObject */] = js.Tuple2[StateValue, ValueFromStateGetter[T, TContext, TEvent]]
   
-  type ValueFromStateGetter[T, TContext, TEvent /* <: EventObject */] = js.Function1[/* state */ State[TContext, TEvent, js.Any, Context[TContext]], T]
+  type ValueFromStateGetter[T, TContext, TEvent /* <: EventObject */] = js.Function1[/* state */ State[TContext, TEvent, js.Any, ContextTContext[TContext]], T]
 }

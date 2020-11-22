@@ -8,6 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListThingPrincipalsRequest extends js.Object {
   
   /**
+    * The maximum number of results to return in this operation.
+    */
+  var maxResults: js.UndefOr[RegistryMaxResults] = js.native
+  
+  /**
+    * To retrieve the next set of results, the nextToken value from a previous response; otherwise null to receive the first set of results.
+    */
+  var nextToken: js.UndefOr[NextToken] = js.native
+  
+  /**
     * The name of the thing.
     */
   var thingName: ThingName = js.native
@@ -37,5 +47,17 @@ object ListThingPrincipalsRequest {
     
     @scala.inline
     def setThingName(value: ThingName): Self = this.set("thingName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMaxResults(value: RegistryMaxResults): Self = this.set("maxResults", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxResults: Self = this.set("maxResults", js.undefined)
+    
+    @scala.inline
+    def setNextToken(value: NextToken): Self = this.set("nextToken", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNextToken: Self = this.set("nextToken", js.undefined)
   }
 }

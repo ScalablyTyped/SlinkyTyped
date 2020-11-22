@@ -5,13 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CounterConfiguration extends js.Object {
+trait CounterConfiguration[T /* <: String */] extends js.Object {
   
   var aggregator: js.UndefOr[Aggregator] = js.native
   
   var help: String = js.native
   
-  var labelNames: js.UndefOr[js.Array[String]] = js.native
+  var labelNames: js.UndefOr[js.Array[T]] = js.native
   
   var name: String = js.native
   
@@ -20,13 +20,13 @@ trait CounterConfiguration extends js.Object {
 object CounterConfiguration {
   
   @scala.inline
-  def apply(help: String, name: String): CounterConfiguration = {
+  def apply[T /* <: String */](help: String, name: String): CounterConfiguration[T] = {
     val __obj = js.Dynamic.literal(help = help.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[CounterConfiguration]
+    __obj.asInstanceOf[CounterConfiguration[T]]
   }
   
   @scala.inline
-  implicit class CounterConfigurationOps[Self <: CounterConfiguration] (val x: Self) extends AnyVal {
+  implicit class CounterConfigurationOps[Self <: CounterConfiguration[_], T /* <: String */] (val x: Self with CounterConfiguration[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -53,10 +53,10 @@ object CounterConfiguration {
     def deleteAggregator: Self = this.set("aggregator", js.undefined)
     
     @scala.inline
-    def setLabelNamesVarargs(value: String*): Self = this.set("labelNames", js.Array(value :_*))
+    def setLabelNamesVarargs(value: T*): Self = this.set("labelNames", js.Array(value :_*))
     
     @scala.inline
-    def setLabelNames(value: js.Array[String]): Self = this.set("labelNames", value.asInstanceOf[js.Any])
+    def setLabelNames(value: js.Array[T]): Self = this.set("labelNames", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLabelNames: Self = this.set("labelNames", js.undefined)

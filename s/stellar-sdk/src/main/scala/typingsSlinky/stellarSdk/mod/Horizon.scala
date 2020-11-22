@@ -18,13 +18,21 @@ object Horizon extends js.Object {
     
     /* "allow_trust" */ val allowTrust: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.allowTrust with String = js.native
     
+    /* "begin_sponsoring_future_reserves" */ val beginSponsoringFutureReserves: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.beginSponsoringFutureReserves with String = js.native
+    
     /* "bump_sequence" */ val bumpSequence: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.bumpSequence with String = js.native
     
     /* "change_trust" */ val changeTrust: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.changeTrust with String = js.native
     
+    /* "claim_claimable_balance" */ val claimClaimableBalance: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.claimClaimableBalance with String = js.native
+    
     /* "create_account" */ val createAccount: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.createAccount with String = js.native
     
+    /* "create_claimable_balance" */ val createClaimableBalance: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.createClaimableBalance with String = js.native
+    
     /* "create_passive_sell_offer" */ val createPassiveOffer: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.createPassiveOffer with String = js.native
+    
+    /* "end_sponsoring_future_reserves" */ val endSponsoringFutureReserves: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.endSponsoringFutureReserves with String = js.native
     
     /* "inflation" */ val inflation: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.inflation with String = js.native
     
@@ -39,6 +47,8 @@ object Horizon extends js.Object {
     /* "path_payment_strict_send" */ val pathPaymentStrictSend: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.pathPaymentStrictSend with String = js.native
     
     /* "payment" */ val payment: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.payment with String = js.native
+    
+    /* "revoke_sponsorship" */ val revokeSponsorship: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.revokeSponsorship with String = js.native
     
     /* "set_options" */ val setOptions: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseType.setOptions with String = js.native
   }
@@ -55,13 +65,21 @@ object Horizon extends js.Object {
     
     /* 7 */ val allowTrust: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.allowTrust with Double = js.native
     
+    /* 16 */ val beginSponsoringFutureReserves: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.beginSponsoringFutureReserves with Double = js.native
+    
     /* 11 */ val bumpSequence: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.bumpSequence with Double = js.native
     
     /* 6 */ val changeTrust: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.changeTrust with Double = js.native
     
+    /* 15 */ val claimClaimableBalance: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.claimClaimableBalance with Double = js.native
+    
     /* 0 */ val createAccount: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.createAccount with Double = js.native
     
+    /* 14 */ val createClaimableBalance: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.createClaimableBalance with Double = js.native
+    
     /* 3 */ val createPassiveOffer: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.createPassiveOffer with Double = js.native
+    
+    /* 17 */ val endSponsoringFutureReserves: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.endSponsoringFutureReserves with Double = js.native
     
     /* 9 */ val inflation: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.inflation with Double = js.native
     
@@ -76,6 +94,8 @@ object Horizon extends js.Object {
     /* 13 */ val pathPaymentStrictSend: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.pathPaymentStrictSend with Double = js.native
     
     /* 1 */ val payment: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.payment with Double = js.native
+    
+    /* 18 */ val revokeSponsorship: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.revokeSponsorship with Double = js.native
     
     /* 5 */ val setOptions: typingsSlinky.stellarSdk.horizonApiMod.Horizon.OperationResponseTypeI.setOptions with Double = js.native
   }

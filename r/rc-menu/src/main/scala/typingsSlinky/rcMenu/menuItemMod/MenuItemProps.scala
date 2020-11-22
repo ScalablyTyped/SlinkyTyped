@@ -29,8 +29,13 @@ import typingsSlinky.rcMenu.interfaceMod.MenuMode
 import typingsSlinky.rcMenu.interfaceMod.RenderIconType
 import typingsSlinky.rcMenu.interfaceMod.SelectEventHandler
 import typingsSlinky.rcMenu.interfaceMod.SelectInfo
+import typingsSlinky.rcMenu.rcMenuStrings.`additions removals`
 import typingsSlinky.rcMenu.rcMenuStrings.`additions text`
 import typingsSlinky.rcMenu.rcMenuStrings.`inline`
+import typingsSlinky.rcMenu.rcMenuStrings.`removals additions`
+import typingsSlinky.rcMenu.rcMenuStrings.`removals text`
+import typingsSlinky.rcMenu.rcMenuStrings.`text additions`
+import typingsSlinky.rcMenu.rcMenuStrings.`text removals`
 import typingsSlinky.rcMenu.rcMenuStrings.additions
 import typingsSlinky.rcMenu.rcMenuStrings.all
 import typingsSlinky.rcMenu.rcMenuStrings.ascending
@@ -181,7 +186,9 @@ trait MenuItemProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -740,7 +747,9 @@ object MenuItemProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

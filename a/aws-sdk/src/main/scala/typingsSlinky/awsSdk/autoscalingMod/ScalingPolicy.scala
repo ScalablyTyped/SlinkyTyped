@@ -63,7 +63,7 @@ trait ScalingPolicy extends js.Object {
   var PolicyName: js.UndefOr[XmlStringMaxLen255] = js.native
   
   /**
-    * One of the following policy types:     TargetTrackingScaling     StepScaling     SimpleScaling (default)   For more information, see Target Tracking Scaling Policies and Step and Simple Scaling Policies in the Amazon EC2 Auto Scaling User Guide.
+    * One of the following policy types:     TargetTrackingScaling     StepScaling     SimpleScaling (default)   For more information, see Target tracking scaling policies and Step and simple scaling policies in the Amazon EC2 Auto Scaling User Guide.
     */
   var PolicyType: js.UndefOr[XmlStringMaxLen64] = js.native
   

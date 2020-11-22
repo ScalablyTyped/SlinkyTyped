@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DefaultColumnValue extends js.Object {
   
   // The formula used to compute the default value for this column.
-  var formula: js.UndefOr[String] = js.native
+  var formula: js.UndefOr[NullableOption[String]] = js.native
   
   // The direct value to use as the default value for this column.
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[NullableOption[String]] = js.native
 }
 object DefaultColumnValue {
   
@@ -37,15 +37,21 @@ object DefaultColumnValue {
     }
     
     @scala.inline
-    def setFormula(value: String): Self = this.set("formula", value.asInstanceOf[js.Any])
+    def setFormula(value: NullableOption[String]): Self = this.set("formula", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormula: Self = this.set("formula", js.undefined)
     
     @scala.inline
-    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setFormulaNull: Self = this.set("formula", null)
+    
+    @scala.inline
+    def setValue(value: NullableOption[String]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

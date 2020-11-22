@@ -1,7 +1,7 @@
 package typingsSlinky.muiDatatables.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.muiDatatables.anon.PartialTableBodyReactNode
+import typingsSlinky.muiDatatables.anon.PartialExpandButtonRender
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ trait MUIDataTableProps extends js.Object {
   
   var columns: js.Array[MUIDataTableColumnDef] = js.native
   
-  var components: js.UndefOr[PartialTableBodyReactNode] = js.native
+  var components: js.UndefOr[PartialExpandButtonRender] = js.native
   
   var data: js.Array[js.Object | (js.Array[Double | String])] = js.native
   
@@ -55,7 +55,7 @@ object MUIDataTableProps {
     def setData(value: js.Array[js.Object | (js.Array[Double | String])]): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setComponents(value: PartialTableBodyReactNode): Self = this.set("components", value.asInstanceOf[js.Any])
+    def setComponents(value: PartialExpandButtonRender): Self = this.set("components", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponents: Self = this.set("components", js.undefined)

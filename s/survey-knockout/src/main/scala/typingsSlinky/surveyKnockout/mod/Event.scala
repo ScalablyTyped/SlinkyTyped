@@ -20,5 +20,7 @@ class Event[T /* <: js.Function */, Options] () extends js.Object {
   
   val isEmpty: Boolean = js.native
   
+  def onCallbacksChanged(): Unit = js.native
+  
   def remove(func: T): Unit = js.native
 }

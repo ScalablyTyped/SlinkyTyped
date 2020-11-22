@@ -17,14 +17,14 @@ trait WebSceneUpdateFromOptions extends Object {
   var environmentExcluded: js.UndefOr[Boolean] = js.native
   
   /**
-    * Do not update the thumbnail from the view. Defaults to true, unless viewpointExcluded is set to true.
+    * Do not update the thumbnail from the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html#updateFrom)
     */
   var thumbnailExcluded: js.UndefOr[Boolean] = js.native
   
   /**
-    * The size of the thumbnail. Defaults to 600x400 (ratio 1.5:1). Note that the thumbnail size may currently not be larger than the size of the view.
+    * The size of the thumbnail.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html#updateFrom)
     */

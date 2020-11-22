@@ -18,7 +18,7 @@ trait SearchProvisionedProductsInput extends js.Object {
   var AccessLevelFilter: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.AccessLevelFilter] = js.native
   
   /**
-    * The search filters. When the key is SearchQuery, the searchable fields are arn, createdTime, id, lastRecordId, idempotencyToken, name, physicalId, productId, provisioningArtifact, type, status, tags, userArn, and userArnSession. Example: "SearchQuery":["status:AVAILABLE"] 
+    * The search filters. When the key is SearchQuery, the searchable fields are arn, createdTime, id, lastRecordId, idempotencyToken, name, physicalId, productId, provisioningArtifact, type, status, tags, userArn, userArnSession, lastProvisioningRecordId, lastSuccessfulProvisioningRecordId, productName, and provisioningArtifactName. Example: "SearchQuery":["status:AVAILABLE"] 
     */
   var Filters: js.UndefOr[ProvisionedProductFilters] = js.native
   

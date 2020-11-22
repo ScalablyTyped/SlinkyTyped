@@ -28,7 +28,7 @@ trait ReplicationInstance extends js.Object {
   var DnsNameServers: js.UndefOr[String] = js.native
   
   /**
-    * The engine version number of the replication instance.
+    * The engine version number of the replication instance. If an engine version number is not specified when a replication instance is created, the default is the latest engine version available. When modifying a major engine version of an instance, also set AllowMajorVersionUpgrade to true.
     */
   var EngineVersion: js.UndefOr[String] = js.native
   
@@ -58,7 +58,7 @@ trait ReplicationInstance extends js.Object {
   var PendingModifiedValues: js.UndefOr[ReplicationPendingModifiedValues] = js.native
   
   /**
-    * The maintenance window times for the replication instance.
+    * The maintenance window times for the replication instance. Any pending upgrades to the replication instance are performed during this time.
     */
   var PreferredMaintenanceWindow: js.UndefOr[String] = js.native
   
@@ -73,12 +73,12 @@ trait ReplicationInstance extends js.Object {
   var ReplicationInstanceArn: js.UndefOr[String] = js.native
   
   /**
-    * The compute and memory capacity of the replication instance as defined for the specified replication instance class. For more information on the settings and capacities for the available replication instance classes, see  Selecting the right AWS DMS replication instance for your migration. 
+    * The compute and memory capacity of the replication instance as defined for the specified replication instance class. It is a required parameter, although a defualt value is pre-selected in the DMS console. For more information on the settings and capacities for the available replication instance classes, see  Selecting the right AWS DMS replication instance for your migration. 
     */
   var ReplicationInstanceClass: js.UndefOr[String] = js.native
   
   /**
-    * The replication instance identifier. This parameter is stored as a lowercase string. Constraints:   Must contain 1-63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: myrepinstance 
+    * The replication instance identifier is a required parameter. This parameter is stored as a lowercase string. Constraints:   Must contain 1-63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: myrepinstance 
     */
   var ReplicationInstanceIdentifier: js.UndefOr[String] = js.native
   

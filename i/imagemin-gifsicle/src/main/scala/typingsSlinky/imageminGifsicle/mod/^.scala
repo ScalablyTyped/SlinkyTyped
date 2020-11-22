@@ -9,6 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
+  /**
+    * Imagemin plugin for {@link https://www.lcdf.org/gifsicle/|Gifsicle}
+    */
   def apply(): Plugin = js.native
   def apply(options: Options): Plugin = js.native
 }

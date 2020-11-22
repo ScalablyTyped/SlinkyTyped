@@ -33,7 +33,7 @@ trait AnalyticsApplicationInputs extends js.Object {
     * The number of Parallel in-application streams to create.
     * See Parallelism below for more details.
     */
-  var parallelism: js.UndefOr[AnalyticsApplicationInputsParallelism] = js.native
+  var parallelism: AnalyticsApplicationInputsParallelism = js.native
   
   /**
     * The Processing Configuration to transform records as they are received from the stream.
@@ -56,11 +56,12 @@ object AnalyticsApplicationInputs {
   def apply(
     id: String,
     namePrefix: String,
+    parallelism: AnalyticsApplicationInputsParallelism,
     schema: AnalyticsApplicationInputsSchema,
     startingPositionConfigurations: js.Array[AnalyticsApplicationInputsStartingPositionConfiguration],
     streamNames: js.Array[String]
   ): AnalyticsApplicationInputs = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], namePrefix = namePrefix.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], startingPositionConfigurations = startingPositionConfigurations.asInstanceOf[js.Any], streamNames = streamNames.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], namePrefix = namePrefix.asInstanceOf[js.Any], parallelism = parallelism.asInstanceOf[js.Any], schema = schema.asInstanceOf[js.Any], startingPositionConfigurations = startingPositionConfigurations.asInstanceOf[js.Any], streamNames = streamNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnalyticsApplicationInputs]
   }
   
@@ -84,6 +85,9 @@ object AnalyticsApplicationInputs {
     
     @scala.inline
     def setNamePrefix(value: String): Self = this.set("namePrefix", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setParallelism(value: AnalyticsApplicationInputsParallelism): Self = this.set("parallelism", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSchema(value: AnalyticsApplicationInputsSchema): Self = this.set("schema", value.asInstanceOf[js.Any])
@@ -111,12 +115,6 @@ object AnalyticsApplicationInputs {
     
     @scala.inline
     def deleteKinesisStream: Self = this.set("kinesisStream", js.undefined)
-    
-    @scala.inline
-    def setParallelism(value: AnalyticsApplicationInputsParallelism): Self = this.set("parallelism", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteParallelism: Self = this.set("parallelism", js.undefined)
     
     @scala.inline
     def setProcessingConfiguration(value: AnalyticsApplicationInputsProcessingConfiguration): Self = this.set("processingConfiguration", value.asInstanceOf[js.Any])

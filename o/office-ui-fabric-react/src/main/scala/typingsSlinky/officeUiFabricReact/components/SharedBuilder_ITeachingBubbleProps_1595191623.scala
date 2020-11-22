@@ -7,9 +7,9 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
-import typingsSlinky.officeUiFabricReact.calloutTypesMod.Target
 import typingsSlinky.officeUiFabricReact.focusTrapZoneTypesMod.IFocusTrapZoneProps
 import typingsSlinky.officeUiFabricReact.imageTypesMod.IImageProps
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubble
@@ -17,7 +17,7 @@ import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleS
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.uifabricReactHooks.useTargetMod.Target
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

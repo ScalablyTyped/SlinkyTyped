@@ -32,7 +32,7 @@ trait NavigatorHandlesOptions extends js.Object {
     * (Highstock, Gantt) The width for the handle border and the stripes
     * inside.
     */
-  var lineWidth: js.UndefOr[Double] = js.native
+  var lineWidth: js.UndefOr[js.Object] = js.native
   
   /**
     * (Highstock, Gantt) Array to define shapes of handles. 0-index for left,
@@ -101,7 +101,7 @@ object NavigatorHandlesOptions {
     def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
-    def setLineWidth(value: Double): Self = this.set("lineWidth", value.asInstanceOf[js.Any])
+    def setLineWidth(value: js.Object): Self = this.set("lineWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLineWidth: Self = this.set("lineWidth", js.undefined)

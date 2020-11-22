@@ -47,6 +47,7 @@ trait Avatar extends js.Object {
   def ipv6(): String = js.native
   
   def mac(): String = js.native
+  def mac(sep: String): String = js.native
   
   def password(): String = js.native
   def password(

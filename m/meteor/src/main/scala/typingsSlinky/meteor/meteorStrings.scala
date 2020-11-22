@@ -66,6 +66,9 @@ object meteorStrings {
   def javascriptWithScope: javascriptWithScope = "javascriptWithScope".asInstanceOf[javascriptWithScope]
   
   @scala.inline
+  def limit: limit = "limit".asInstanceOf[limit]
+  
+  @scala.inline
   def long: long = "long".asInstanceOf[long]
   
   @scala.inline
@@ -192,6 +195,9 @@ object meteorStrings {
   sealed trait javascriptWithScope
     extends BsonType
        with typingsSlinky.meteor.mongoMod.Mongo.BsonType
+  
+  @js.native
+  sealed trait limit extends js.Object
   
   @js.native
   sealed trait long

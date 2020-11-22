@@ -17,6 +17,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ToastProps extends js.Object {
   
+  var autoFocus: js.UndefOr[Boolean] = js.native
+  
   var autoHideDuration: js.UndefOr[Double] = js.native
   
   var children: js.UndefOr[(js.Function1[/* args */ Dismiss, ReactElement]) | ReactElement] = js.native
@@ -65,6 +67,12 @@ object ToastProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAutoFocus(value: Boolean): Self = this.set("autoFocus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
     
     @scala.inline
     def setAutoHideDuration(value: Double): Self = this.set("autoHideDuration", value.asInstanceOf[js.Any])

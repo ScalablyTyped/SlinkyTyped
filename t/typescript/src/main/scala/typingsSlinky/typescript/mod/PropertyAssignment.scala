@@ -9,21 +9,23 @@ trait PropertyAssignment
   extends ObjectLiteralElement
      with JSDocContainer
      with HasExpressionInitializer
+     with ObjectBindingOrAssignmentElement
      with ObjectLiteralElementLike
      with VariableLikeDeclaration
-     with _BindingOrAssignmentElement
      with _HasJSDoc {
   
-  var initializer: Expression = js.native
+  val exclamationToken: js.UndefOr[ExclamationToken] = js.native
+  
+  val initializer: Expression = js.native
   
   @JSName("kind")
-  var kind_PropertyAssignment: typingsSlinky.typescript.mod.SyntaxKind.PropertyAssignment = js.native
+  val kind_PropertyAssignment: typingsSlinky.typescript.mod.SyntaxKind.PropertyAssignment = js.native
   
   @JSName("name")
-  var name_PropertyAssignment: PropertyName = js.native
+  val name_PropertyAssignment: PropertyName = js.native
   
   @JSName("parent")
-  var parent_PropertyAssignment: ObjectLiteralExpression = js.native
+  val parent_PropertyAssignment: ObjectLiteralExpression = js.native
   
-  var questionToken: js.UndefOr[QuestionToken] = js.native
+  val questionToken: js.UndefOr[QuestionToken] = js.native
 }

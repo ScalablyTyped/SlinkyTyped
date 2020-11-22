@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.JSXNamespacedName
+import typingsSlinky.babelTraverse.babelTraverseStrings.JSXFragment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `147` extends js.Object {
   
-  var `type`: JSXNamespacedName = js.native
+  var `type`: JSXFragment = js.native
 }
 object `147` {
   
   @scala.inline
-  def apply(`type`: JSXNamespacedName): `147` = {
+  def apply(`type`: JSXFragment): `147` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`147`]
@@ -35,6 +35,6 @@ object `147` {
     }
     
     @scala.inline
-    def setType(value: JSXNamespacedName): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: JSXFragment): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

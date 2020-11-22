@@ -16,6 +16,8 @@ trait ImportDeclaration_
      with ModuleDeclaration
      with Statement {
   
+  var assertions: ImportAttribute_ | Null = js.native
+  
   var importKind: `type` | typeof | value | Null = js.native
   
   var source: StringLiteral_ = js.native
@@ -64,6 +66,12 @@ object ImportDeclaration_ {
     
     @scala.inline
     def setType(value: ImportDeclaration): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAssertions(value: ImportAttribute_): Self = this.set("assertions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAssertionsNull: Self = this.set("assertions", null)
     
     @scala.inline
     def setImportKind(value: `type` | typeof | value): Self = this.set("importKind", value.asInstanceOf[js.Any])

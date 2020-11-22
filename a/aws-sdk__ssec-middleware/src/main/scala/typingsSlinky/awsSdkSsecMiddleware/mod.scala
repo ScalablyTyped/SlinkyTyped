@@ -2,7 +2,6 @@ package typingsSlinky.awsSdkSsecMiddleware
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.awsSdkSsecMiddleware.anon.Instantiable
-import typingsSlinky.awsSdkTypes.middlewareMod.Middleware
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
@@ -13,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def ssecMiddleware[Input /* <: js.Object */](hasUtf8DecoderBase64EncoderHashConstructorSsecProperties: SsecMiddlewareConfiguration[Input]): Middleware[Input, _] = js.native
+  def ssecMiddleware[Input /* <: js.Object */](hasUtf8DecoderBase64EncoderHashConstructorSsecProperties: SsecMiddlewareConfiguration[Input]): js.Any = js.native
   
   @js.native
   trait SsecMiddlewareConfiguration[Input /* <: js.Object */] extends js.Object {

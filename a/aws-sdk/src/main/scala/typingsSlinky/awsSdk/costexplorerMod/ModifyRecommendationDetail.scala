@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ModifyRecommendationDetail extends js.Object {
   
   /**
-    * Identifies whether this instance type is the Amazon Web Services default recommendation.
+    * Identifies whether this instance type is the AWS default recommendation.
     */
   var TargetInstances: js.UndefOr[TargetInstancesList] = js.native
 }

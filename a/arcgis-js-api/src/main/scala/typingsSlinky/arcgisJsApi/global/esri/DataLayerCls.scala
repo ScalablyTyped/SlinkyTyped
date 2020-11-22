@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("__esri.DataLayer")
 @js.native
 /**
-  * Input for properties of ClosestFacilityParameters, RouteParameters or ServiceAreaParameters. The DataLayer can be used to define the following for each parameter type:
+  * Input for properties of ClosestFacilityParameters, RouteParameters or ServiceAreaParameters.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-DataLayer.html)
   */

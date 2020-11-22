@@ -16,6 +16,11 @@ trait DeleteJobRequest extends js.Object {
     * The ID of the job to be deleted. After a job deletion is completed, you may reuse this jobId when you create a new job. However, this is not recommended, and you must ensure that your devices are not using the jobId to refer to the deleted job.
     */
   var jobId: JobId = js.native
+  
+  /**
+    * The namespace used to indicate that a job is a customer-managed job. When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.  $aws/things/THING_NAME/jobs/JOB_ID/notify-namespace-NAMESPACE_ID/   The namespaceId feature is in public preview. 
+    */
+  var namespaceId: js.UndefOr[NamespaceId] = js.native
 }
 object DeleteJobRequest {
   
@@ -48,5 +53,11 @@ object DeleteJobRequest {
     
     @scala.inline
     def deleteForce: Self = this.set("force", js.undefined)
+    
+    @scala.inline
+    def setNamespaceId(value: NamespaceId): Self = this.set("namespaceId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNamespaceId: Self = this.set("namespaceId", js.undefined)
   }
 }

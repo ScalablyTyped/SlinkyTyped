@@ -1,8 +1,10 @@
 package typingsSlinky.reactNativeSvg.mod
 
+import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.mod.AccessibilityProps
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.Touchable
 import typingsSlinky.reactNative.mod.ViewPropsAndroid
@@ -48,7 +50,7 @@ trait SvgProps
     *
     * {nativeEvent: { layout: {x, y, width, height}}}.
     */
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   var preserveAspectRatio: js.UndefOr[String] = js.native
   
@@ -124,7 +126,7 @@ object SvgProps {
     def deleteNativeID: Self = this.set("nativeID", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)

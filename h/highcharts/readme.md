@@ -1,7 +1,7 @@
 
 # Scala.js typings for highcharts
 
-Typings are for version 8.1.2
+Typings are for version 8.2.2
 
 ## Library description:
 JavaScript charting framework

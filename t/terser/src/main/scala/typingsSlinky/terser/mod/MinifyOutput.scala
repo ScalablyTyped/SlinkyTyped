@@ -8,10 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MinifyOutput extends js.Object {
   
-  var ast: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AST_Node */ js.Any
-  ] = js.native
-  
   var code: js.UndefOr[String] = js.native
   
   var map: js.UndefOr[RawSourceMap | String] = js.native
@@ -38,14 +34,6 @@ object MinifyOutput {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setAst(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AST_Node */ js.Any
-    ): Self = this.set("ast", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAst: Self = this.set("ast", js.undefined)
     
     @scala.inline
     def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])

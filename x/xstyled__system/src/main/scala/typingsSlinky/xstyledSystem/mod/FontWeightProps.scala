@@ -9,7 +9,7 @@ trait FontWeightProps extends js.Object {
   
   val fontWeight: js.UndefOr[
     ResponsiveValue[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontWeightProperty */ _) | AliasKey
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontWeight */ _) | AliasKey
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object FontWeightProps {
     }
     
     @scala.inline
+    def setFontWeightVarargs(value: (js.Any | AliasKey)*): Self = this.set("fontWeight", js.Array(value :_*))
+    
+    @scala.inline
     def setFontWeight(
       value: ResponsiveValue[
-          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontWeightProperty */ _) | AliasKey
+          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontWeight */ _) | AliasKey
         ]
     ): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
     

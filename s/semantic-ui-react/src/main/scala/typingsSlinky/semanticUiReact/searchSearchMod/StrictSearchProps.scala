@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.inputInputMod.InputProps
 import typingsSlinky.semanticUiReact.searchCategoryMod.SearchCategoryProps
@@ -271,7 +270,7 @@ object StrictSearchProps {
     
     @scala.inline
     def setInputFunction3(
-      value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, InputProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("input", js.Any.fromFunction3(value))
     
     @scala.inline

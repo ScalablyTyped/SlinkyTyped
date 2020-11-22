@@ -11,7 +11,7 @@ trait MacOSCustomConfiguration extends DeviceConfiguration {
   var payload: js.UndefOr[Double] = js.native
   
   // Payload file name (.mobileconfig
-  var payloadFileName: js.UndefOr[String] = js.native
+  var payloadFileName: js.UndefOr[NullableOption[String]] = js.native
   
   // Name that is displayed to the user.
   var payloadName: js.UndefOr[String] = js.native
@@ -46,10 +46,13 @@ object MacOSCustomConfiguration {
     def deletePayload: Self = this.set("payload", js.undefined)
     
     @scala.inline
-    def setPayloadFileName(value: String): Self = this.set("payloadFileName", value.asInstanceOf[js.Any])
+    def setPayloadFileName(value: NullableOption[String]): Self = this.set("payloadFileName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePayloadFileName: Self = this.set("payloadFileName", js.undefined)
+    
+    @scala.inline
+    def setPayloadFileNameNull: Self = this.set("payloadFileName", null)
     
     @scala.inline
     def setPayloadName(value: String): Self = this.set("payloadName", value.asInstanceOf[js.Any])

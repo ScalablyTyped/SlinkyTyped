@@ -294,6 +294,14 @@ class Query_[T /* <: Object[Attributes] */] protected () extends js.Object {
   @JSName("equalTo")
   def equalTo_attributes[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](key: K, value: Pointer): this.type = js.native
   
+  def exclude[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](keys: K*): this.type = js.native
+  @JSName("exclude")
+  def exclude_createdAt(keys: createdAt*): this.type = js.native
+  @JSName("exclude")
+  def exclude_objectId(keys: objectId*): this.type = js.native
+  @JSName("exclude")
+  def exclude_updatedAt(keys: updatedAt*): this.type = js.native
+  
   def exists[K /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any */](key: K): this.type = js.native
   @JSName("exists")
   def exists_createdAt(key: createdAt): this.type = js.native
@@ -324,6 +332,9 @@ class Query_[T /* <: Object[Attributes] */] protected () extends js.Object {
   
   def find(): js.Promise[js.Array[T]] = js.native
   def find(options: FindOptions): js.Promise[js.Array[T]] = js.native
+  
+  def findAll(): js.Promise[js.Array[T]] = js.native
+  def findAll(options: BatchOptions): js.Promise[js.Array[T]] = js.native
   
   def first(): js.Promise[js.UndefOr[T]] = js.native
   def first(options: FirstOptions): js.Promise[js.UndefOr[T]] = js.native

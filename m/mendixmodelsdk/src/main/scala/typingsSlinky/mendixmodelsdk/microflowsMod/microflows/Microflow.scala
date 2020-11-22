@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.IMicroflowActionInfo
 import typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.MicroflowActionInfo
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -15,7 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/microflows relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/microflows relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -79,9 +78,6 @@ class Microflow protected () extends ServerSideMicroflow {
     */
   @JSName("microflowActionInfo")
   val microflowActionInfo_FMicroflow: IMicroflowActionInfo | Null = js.native
-  
-  @JSName("model")
-  var model_FMicroflow: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.Microflow")

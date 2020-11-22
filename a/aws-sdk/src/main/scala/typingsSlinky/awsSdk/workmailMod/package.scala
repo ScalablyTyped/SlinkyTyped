@@ -33,6 +33,14 @@ package object workmailMod {
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.workmailMod.ClientApiVersions
   
+  type Description = java.lang.String
+  
+  type DirectoryId = java.lang.String
+  
+  type DomainName = java.lang.String
+  
+  type Domains = js.Array[typingsSlinky.awsSdk.workmailMod.Domain]
+  
   type EmailAddress = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
@@ -59,11 +67,32 @@ package object workmailMod {
   
   type Groups = js.Array[typingsSlinky.awsSdk.workmailMod.Group]
   
+  type HostedZoneId = java.lang.String
+  
+  type IdempotencyClientToken = java.lang.String
+  
   type IpAddress = java.lang.String
   
   type IpRange = java.lang.String
   
   type IpRangeList = js.Array[typingsSlinky.awsSdk.workmailMod.IpRange]
+  
+  type Jobs = js.Array[typingsSlinky.awsSdk.workmailMod.MailboxExportJob]
+  
+  type KmsKeyArn = java.lang.String
+  
+  type MailboxExportErrorInfo = java.lang.String
+  
+  type MailboxExportJobId = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.CANCELLED
+    - java.lang.String
+  */
+  type MailboxExportJobState = typingsSlinky.awsSdk.workmailMod._MailboxExportJobState | java.lang.String
   
   type MailboxQuota = scala.Double
   
@@ -89,6 +118,8 @@ package object workmailMod {
   type OrganizationSummaries = js.Array[typingsSlinky.awsSdk.workmailMod.OrganizationSummary]
   
   type Password = java.lang.String
+  
+  type Percentage = scala.Double
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.FULL_ACCESS
@@ -128,6 +159,12 @@ package object workmailMod {
   type RetentionAction = typingsSlinky.awsSdk.workmailMod._RetentionAction | java.lang.String
   
   type RetentionPeriod = scala.Double
+  
+  type RoleArn = java.lang.String
+  
+  type S3BucketName = java.lang.String
+  
+  type S3ObjectKey = java.lang.String
   
   type ShortString = java.lang.String
   

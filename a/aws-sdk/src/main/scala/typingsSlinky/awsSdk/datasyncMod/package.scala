@@ -56,11 +56,15 @@ package object datasyncMod {
   */
   type EndpointType = typingsSlinky.awsSdk.datasyncMod._EndpointType | java.lang.String
   
+  type FilterAttributeValue = java.lang.String
+  
   type FilterList = js.Array[typingsSlinky.awsSdk.datasyncMod.FilterRule]
   
   type FilterType = typingsSlinky.awsSdk.awsSdkStrings.SIMPLE_PATTERN | java.lang.String
   
   type FilterValue = java.lang.String
+  
+  type FilterValues = js.Array[typingsSlinky.awsSdk.datasyncMod.FilterAttributeValue]
   
   type FsxFilesystemArn = java.lang.String
   
@@ -80,6 +84,16 @@ package object datasyncMod {
   type InputTagList = js.Array[typingsSlinky.awsSdk.datasyncMod.TagListEntry]
   
   type LocationArn = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.LocationUri
+    - typingsSlinky.awsSdk.awsSdkStrings.LocationType
+    - typingsSlinky.awsSdk.awsSdkStrings.CreationTime
+    - java.lang.String
+  */
+  type LocationFilterName = typingsSlinky.awsSdk.datasyncMod._LocationFilterName | java.lang.String
+  
+  type LocationFilters = js.Array[typingsSlinky.awsSdk.datasyncMod.LocationFilter]
   
   type LocationList = js.Array[typingsSlinky.awsSdk.datasyncMod.LocationListEntry]
   
@@ -134,6 +148,21 @@ package object datasyncMod {
   */
   type ObjectStorageServerProtocol = typingsSlinky.awsSdk.datasyncMod._ObjectStorageServerProtocol | java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Equals_
+    - typingsSlinky.awsSdk.awsSdkStrings.NotEquals
+    - typingsSlinky.awsSdk.awsSdkStrings.In_
+    - typingsSlinky.awsSdk.awsSdkStrings.LessThanOrEqual
+    - typingsSlinky.awsSdk.awsSdkStrings.LessThan
+    - typingsSlinky.awsSdk.awsSdkStrings.GreaterThanOrEqual
+    - typingsSlinky.awsSdk.awsSdkStrings.GreaterThan
+    - typingsSlinky.awsSdk.awsSdkStrings.Contains_
+    - typingsSlinky.awsSdk.awsSdkStrings.NotContains
+    - typingsSlinky.awsSdk.awsSdkStrings.BeginsWith
+    - java.lang.String
+  */
+  type Operator = typingsSlinky.awsSdk.datasyncMod._Operator | java.lang.String
+  
   type OutputTagList = js.Array[typingsSlinky.awsSdk.datasyncMod.TagListEntry]
   
   /* Rewritten from type alias, can be one of: 
@@ -185,6 +214,7 @@ package object datasyncMod {
     - typingsSlinky.awsSdk.awsSdkStrings.INTELLIGENT_TIERING
     - typingsSlinky.awsSdk.awsSdkStrings.GLACIER
     - typingsSlinky.awsSdk.awsSdkStrings.DEEP_ARCHIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.OUTPOSTS
     - java.lang.String
   */
   type S3StorageClass = typingsSlinky.awsSdk.datasyncMod._S3StorageClass | java.lang.String
@@ -238,6 +268,15 @@ package object datasyncMod {
     - java.lang.String
   */
   type TaskExecutionStatus = typingsSlinky.awsSdk.datasyncMod._TaskExecutionStatus | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.LocationId
+    - typingsSlinky.awsSdk.awsSdkStrings.CreationTime
+    - java.lang.String
+  */
+  type TaskFilterName = typingsSlinky.awsSdk.datasyncMod._TaskFilterName | java.lang.String
+  
+  type TaskFilters = js.Array[typingsSlinky.awsSdk.datasyncMod.TaskFilter]
   
   type TaskList = js.Array[typingsSlinky.awsSdk.datasyncMod.TaskListEntry]
   

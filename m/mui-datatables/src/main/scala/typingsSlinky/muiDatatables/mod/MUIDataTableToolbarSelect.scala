@@ -1,5 +1,6 @@
 package typingsSlinky.muiDatatables.mod
 
+import typingsSlinky.muiDatatables.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,11 +10,11 @@ trait MUIDataTableToolbarSelect extends js.Object {
   
   var classes: js.UndefOr[js.Object] = js.native
   
-  var displayData: js.UndefOr[js.Any] = js.native
+  var displayData: js.UndefOr[DisplayData] = js.native
   
   var onRowsDelete: js.UndefOr[js.Function1[/* args */ js.Any, _]] = js.native
   
-  var options: js.Object = js.native
+  var options: MUIDataTableOptions = js.native
   
   var rowSelected: js.UndefOr[Boolean] = js.native
   
@@ -22,7 +23,7 @@ trait MUIDataTableToolbarSelect extends js.Object {
 object MUIDataTableToolbarSelect {
   
   @scala.inline
-  def apply(options: js.Object): MUIDataTableToolbarSelect = {
+  def apply(options: MUIDataTableOptions): MUIDataTableToolbarSelect = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableToolbarSelect]
   }
@@ -43,7 +44,7 @@ object MUIDataTableToolbarSelect {
     }
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: MUIDataTableOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setClasses(value: js.Object): Self = this.set("classes", value.asInstanceOf[js.Any])
@@ -52,7 +53,10 @@ object MUIDataTableToolbarSelect {
     def deleteClasses: Self = this.set("classes", js.undefined)
     
     @scala.inline
-    def setDisplayData(value: js.Any): Self = this.set("displayData", value.asInstanceOf[js.Any])
+    def setDisplayDataVarargs(value: Data*): Self = this.set("displayData", js.Array(value :_*))
+    
+    @scala.inline
+    def setDisplayData(value: DisplayData): Self = this.set("displayData", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayData: Self = this.set("displayData", js.undefined)

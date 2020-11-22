@@ -9,6 +9,8 @@ trait Diagnostic extends DiagnosticRelatedInformation {
   
   var relatedInformation: js.UndefOr[js.Array[DiagnosticRelatedInformation]] = js.native
   
+  var reportsDeprecated: js.UndefOr[js.Object] = js.native
+  
   /** May store more in future. For now, this will simply be `true` to indicate when a diagnostic is an unused-identifier diagnostic. */
   var reportsUnnecessary: js.UndefOr[js.Object] = js.native
   
@@ -45,6 +47,12 @@ object Diagnostic {
     
     @scala.inline
     def deleteRelatedInformation: Self = this.set("relatedInformation", js.undefined)
+    
+    @scala.inline
+    def setReportsDeprecated(value: js.Object): Self = this.set("reportsDeprecated", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReportsDeprecated: Self = this.set("reportsDeprecated", js.undefined)
     
     @scala.inline
     def setReportsUnnecessary(value: js.Object): Self = this.set("reportsUnnecessary", value.asInstanceOf[js.Any])

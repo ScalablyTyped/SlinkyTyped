@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ClassificationDetails extends js.Object {
   
   /**
-    * The Amazon Resource Name (ARN) of the file that contains the detailed record, including offsets, for the finding.
+    * The path to the folder or file (in Amazon S3) that contains the corresponding sensitive data discovery result for the finding. If a finding applies to a large archive or compressed file, this value is the path to a folder. Otherwise, this value is the path to a file.
     */
   var detailedResultsLocation: js.UndefOr[string] = js.native
   
@@ -23,7 +23,7 @@ trait ClassificationDetails extends js.Object {
   var jobId: js.UndefOr[string] = js.native
   
   /**
-    * The status and detailed results of the finding.
+    * The status and other details for the finding.
     */
   var result: js.UndefOr[ClassificationResult] = js.native
 }

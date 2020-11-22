@@ -23,7 +23,7 @@ trait ListAuditTasksRequest extends js.Object {
   var nextToken: js.UndefOr[NextToken] = js.native
   
   /**
-    * The beginning of the time period. Audit information is retained for a limited time (180 days). Requesting a start time prior to what is retained results in an "InvalidRequestException".
+    * The beginning of the time period. Audit information is retained for a limited time (90 days). Requesting a start time prior to what is retained results in an "InvalidRequestException".
     */
   var startTime: js.Date = js.native
   

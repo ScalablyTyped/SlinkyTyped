@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact.mod
 
 import typingsSlinky.officeUiFabricReact.anon.Compact
+import typingsSlinky.officeUiFabricReact.groupedListBaseMod.IGroupedListState
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupedListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,4 +19,6 @@ class GroupedListBase protected ()
 object GroupedListBase extends js.Object {
   
   var defaultProps: Compact = js.native
+  
+  def getDerivedStateFromProps(nextProps: IGroupedListProps, previousState: IGroupedListState): IGroupedListState = js.native
 }

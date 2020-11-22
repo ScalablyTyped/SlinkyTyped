@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object tabContentMod {
   
-  type TabContent[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.tabContentMod.TabContentProps]
+  type TabContent = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.tabContentMod.TabContentProps]
 }

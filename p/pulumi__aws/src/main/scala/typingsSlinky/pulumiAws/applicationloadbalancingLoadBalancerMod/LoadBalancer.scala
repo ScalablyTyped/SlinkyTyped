@@ -1,8 +1,8 @@
 package typingsSlinky.pulumiAws.applicationloadbalancingLoadBalancerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.ipAddressTypeMod.IpAddressType
-import typingsSlinky.pulumiAws.loadBalancerTypeMod.LoadBalancerType
+import typingsSlinky.pulumiAws.enumsAlbMod.IpAddressType
+import typingsSlinky.pulumiAws.enumsAlbMod.LoadBalancerType
 import typingsSlinky.pulumiAws.outputMod.applicationloadbalancing.LoadBalancerAccessLogs
 import typingsSlinky.pulumiAws.outputMod.applicationloadbalancing.LoadBalancerSubnetMapping
 import typingsSlinky.pulumiPulumi.mod.CustomResource
@@ -44,6 +44,11 @@ class LoadBalancer protected () extends CustomResource {
     * The ARN suffix for use with CloudWatch Metrics.
     */
   val arnSuffix: Output_[String] = js.native
+  
+  /**
+    * The ID of the customer owned ipv4 pool to use for this load balancer.
+    */
+  val customerOwnedIpv4Pool: Output_[js.UndefOr[String]] = js.native
   
   /**
     * The DNS name of the load balancer.
@@ -88,7 +93,7 @@ class LoadBalancer protected () extends CustomResource {
   val ipAddressType: Output_[IpAddressType] = js.native
   
   /**
-    * The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    * The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
     */
   val loadBalancerType: Output_[js.UndefOr[LoadBalancerType]] = js.native
   
@@ -130,6 +135,7 @@ class LoadBalancer protected () extends CustomResource {
   
   /**
     * The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
+    * * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
     */
   val zoneId: Output_[String] = js.native
 }

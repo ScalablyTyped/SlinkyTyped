@@ -54,6 +54,8 @@ class QueryList[T] protected ()
   
   var handlePaste: js.Any = js.native
   
+  var isCreateItemFirst: js.Any = js.native
+  
   var isCreateItemRendered: js.Any = js.native
   
   /**
@@ -118,5 +120,5 @@ object QueryList extends js.Object {
   
   var displayName: String = js.native
   
-  def ofType[T](): Instantiable1[/* props */ IQueryListProps[T], QueryList[T]] = js.native
+  def ofType[U](): Instantiable1[/* props */ IQueryListProps[U], QueryList[U]] = js.native
 }

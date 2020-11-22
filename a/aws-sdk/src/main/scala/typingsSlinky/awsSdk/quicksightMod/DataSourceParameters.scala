@@ -48,6 +48,11 @@ trait DataSourceParameters extends js.Object {
   var MySqlParameters: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.MySqlParameters] = js.native
   
   /**
+    * Oracle parameters.
+    */
+  var OracleParameters: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.OracleParameters] = js.native
+  
+  /**
     * PostgreSQL parameters.
     */
   var PostgreSqlParameters: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.PostgreSqlParameters] = js.native
@@ -172,6 +177,12 @@ object DataSourceParameters {
     
     @scala.inline
     def deleteMySqlParameters: Self = this.set("MySqlParameters", js.undefined)
+    
+    @scala.inline
+    def setOracleParameters(value: OracleParameters): Self = this.set("OracleParameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOracleParameters: Self = this.set("OracleParameters", js.undefined)
     
     @scala.inline
     def setPostgreSqlParameters(value: PostgreSqlParameters): Self = this.set("PostgreSqlParameters", value.asInstanceOf[js.Any])

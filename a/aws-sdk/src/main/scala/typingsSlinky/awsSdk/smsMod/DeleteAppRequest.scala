@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteAppRequest extends js.Object {
   
   /**
-    * ID of the application to delete.
+    * The ID of the application.
     */
   var appId: js.UndefOr[AppId] = js.native
   
   /**
-    * While deleting the application, stop all replication jobs corresponding to the servers in the application.
+    * Indicates whether to stop all replication jobs corresponding to the servers in the application while deleting the application.
     */
   var forceStopAppReplication: js.UndefOr[ForceStopAppReplication] = js.native
   
   /**
-    * While deleting the application, terminate the stack corresponding to the application.
+    * Indicates whether to terminate the stack corresponding to the application while deleting the application.
     */
   var forceTerminateApp: js.UndefOr[ForceTerminateApp] = js.native
 }

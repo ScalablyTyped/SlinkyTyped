@@ -2,8 +2,12 @@ package typingsSlinky.pulumiAws.mod
 
 import typingsSlinky.pulumiAws.emrClusterMod.ClusterArgs
 import typingsSlinky.pulumiAws.emrClusterMod.ClusterState
+import typingsSlinky.pulumiAws.instanceFleetMod.InstanceFleetArgs
+import typingsSlinky.pulumiAws.instanceFleetMod.InstanceFleetState
 import typingsSlinky.pulumiAws.instanceGroupMod.InstanceGroupArgs
 import typingsSlinky.pulumiAws.instanceGroupMod.InstanceGroupState
+import typingsSlinky.pulumiAws.managedScalingPolicyMod.ManagedScalingPolicyArgs
+import typingsSlinky.pulumiAws.managedScalingPolicyMod.ManagedScalingPolicyState
 import typingsSlinky.pulumiAws.securityConfigurationMod.SecurityConfigurationArgs
 import typingsSlinky.pulumiAws.securityConfigurationMod.SecurityConfigurationState
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -56,6 +60,44 @@ object emr extends js.Object {
   }
   
   @js.native
+  class InstanceFleet protected ()
+    extends typingsSlinky.pulumiAws.emrMod.InstanceFleet {
+    /**
+      * Create a InstanceFleet resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: InstanceFleetArgs) = this()
+    def this(name: String, args: InstanceFleetArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object InstanceFleet extends js.Object {
+    
+    /**
+      * Get an existing InstanceFleet resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.instanceFleetMod.InstanceFleet = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.instanceFleetMod.InstanceFleet = js.native
+    def get(name: String, id: Input[ID], state: InstanceFleetState): typingsSlinky.pulumiAws.instanceFleetMod.InstanceFleet = js.native
+    def get(name: String, id: Input[ID], state: InstanceFleetState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.instanceFleetMod.InstanceFleet = js.native
+    
+    /**
+      * Returns true if the given object is an instance of InstanceFleet.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/emr/instanceFleet.InstanceFleet */ Boolean = js.native
+  }
+  
+  @js.native
   class InstanceGroup protected ()
     extends typingsSlinky.pulumiAws.emrMod.InstanceGroup {
     /**
@@ -91,6 +133,44 @@ object emr extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/emr/instanceGroup.InstanceGroup */ Boolean = js.native
+  }
+  
+  @js.native
+  class ManagedScalingPolicy protected ()
+    extends typingsSlinky.pulumiAws.emrMod.ManagedScalingPolicy {
+    /**
+      * Create a ManagedScalingPolicy resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: ManagedScalingPolicyArgs) = this()
+    def this(name: String, args: ManagedScalingPolicyArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object ManagedScalingPolicy extends js.Object {
+    
+    /**
+      * Get an existing ManagedScalingPolicy resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.managedScalingPolicyMod.ManagedScalingPolicy = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.managedScalingPolicyMod.ManagedScalingPolicy = js.native
+    def get(name: String, id: Input[ID], state: ManagedScalingPolicyState): typingsSlinky.pulumiAws.managedScalingPolicyMod.ManagedScalingPolicy = js.native
+    def get(name: String, id: Input[ID], state: ManagedScalingPolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.managedScalingPolicyMod.ManagedScalingPolicy = js.native
+    
+    /**
+      * Returns true if the given object is an instance of ManagedScalingPolicy.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/emr/managedScalingPolicy.ManagedScalingPolicy */ Boolean = js.native
   }
   
   @js.native

@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__progress
 
-Typings are for version 2.1.2
+Typings are for version 2.4.2
 
 ## Library description:
 Create horizontal, vertical, and circular progress indicators

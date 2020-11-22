@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`8`
+import typingsSlinky.octokitTypes.anon.`7`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProjectsDeleteEndpoint extends js.Object {
   
-  var mediaType: `8` = js.native
+  var mediaType: `7` = js.native
   
   var project_id: Double = js.native
 }
 object ProjectsDeleteEndpoint {
   
   @scala.inline
-  def apply(mediaType: `8`, project_id: Double): ProjectsDeleteEndpoint = {
+  def apply(mediaType: `7`, project_id: Double): ProjectsDeleteEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], project_id = project_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsDeleteEndpoint]
   }
@@ -37,7 +37,7 @@ object ProjectsDeleteEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setProject_id(value: Double): Self = this.set("project_id", value.asInstanceOf[js.Any])

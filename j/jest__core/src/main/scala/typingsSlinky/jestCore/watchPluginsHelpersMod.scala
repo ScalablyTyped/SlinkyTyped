@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/core/build/lib/watch_plugins_helpers", JSImport.Namespace)
+@JSImport("@jest/core/build/lib/watchPluginsHelpers", JSImport.Namespace)
 @js.native
 object watchPluginsHelpersMod extends js.Object {
   

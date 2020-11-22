@@ -3,6 +3,7 @@ package typingsSlinky.webpackDevServer.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.connectHistoryApiFallback.mod.Options
 import typingsSlinky.express.mod.Application_
+import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.httpsMod.ServerOptions
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import typingsSlinky.webpackDevServer.anon.Client
@@ -324,7 +325,7 @@ trait Configuration extends js.Object {
     *
     * This only works when using devServer.contentBase as a string.
     */
-  var staticOptions: js.UndefOr[ServeStaticOptions] = js.native
+  var staticOptions: js.UndefOr[ServeStaticOptions[ServerResponse]] = js.native
   
   /**
     * This option lets you precisely control what bundle information gets
@@ -332,7 +333,7 @@ trait Configuration extends js.Object {
     * information, but not all of it.
     */
   var stats: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.Options.Stats */ js.Any
+    /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.Configuration * / any['stats'] */ js.Any
   ] = js.native
   
   /**
@@ -369,7 +370,7 @@ trait Configuration extends js.Object {
   
   /** Control options related to watching the files. */
   var watchOptions: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.WatchOptions */ js.Any
+    /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.Configuration * / any['watchOptions'] */ js.Any
   ] = js.native
   
   /** Tells devServer to write generated assets to the disk. */
@@ -690,14 +691,14 @@ object Configuration {
     def deleteSocket: Self = this.set("socket", js.undefined)
     
     @scala.inline
-    def setStaticOptions(value: ServeStaticOptions): Self = this.set("staticOptions", value.asInstanceOf[js.Any])
+    def setStaticOptions(value: ServeStaticOptions[ServerResponse]): Self = this.set("staticOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStaticOptions: Self = this.set("staticOptions", js.undefined)
     
     @scala.inline
     def setStats(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.Options.Stats */ js.Any
+      value: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.Configuration * / any['stats'] */ js.Any
     ): Self = this.set("stats", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -723,7 +724,7 @@ object Configuration {
     
     @scala.inline
     def setWatchOptions(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.WatchOptions */ js.Any
+      value: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.Configuration * / any['watchOptions'] */ js.Any
     ): Self = this.set("watchOptions", value.asInstanceOf[js.Any])
     
     @scala.inline

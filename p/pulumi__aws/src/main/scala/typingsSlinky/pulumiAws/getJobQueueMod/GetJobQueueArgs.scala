@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.getJobQueueMod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +12,11 @@ trait GetJobQueueArgs extends js.Object {
     * The name of the job queue.
     */
   val name: String = js.native
+  
+  /**
+    * Key-value map of resource tags
+    */
+  val tags: js.UndefOr[StringDictionary[String]] = js.native
 }
 object GetJobQueueArgs {
   
@@ -37,5 +43,11 @@ object GetJobQueueArgs {
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTags(value: StringDictionary[String]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
   }
 }

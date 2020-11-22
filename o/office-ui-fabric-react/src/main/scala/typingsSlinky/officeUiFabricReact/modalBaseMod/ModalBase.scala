@@ -27,6 +27,15 @@ class ModalBase protected ()
   
   var _focusTrapZone: js.Any = js.native
   
+  /**
+    * Clamps the position coordinates to the maximum/minimum value specified in props
+    */
+  var _getClampedPosition: js.Any = js.native
+  
+  var _getClampedPositionX: js.Any = js.native
+  
+  var _getClampedPositionY: js.Any = js.native
+  
   var _getMoveDelta: js.Any = js.native
   
   var _hasRegisteredKeyUp: js.Any = js.native
@@ -34,6 +43,10 @@ class ModalBase protected ()
   var _lastSetX: js.Any = js.native
   
   var _lastSetY: js.Any = js.native
+  
+  var _maxClampedPosition: js.Any = js.native
+  
+  var _minClampedPosition: js.Any = js.native
   
   var _onDrag: js.Any = js.native
   
@@ -56,6 +69,8 @@ class ModalBase protected ()
   var _onModalContextMenuClose: js.Any = js.native
   
   var _registerForKeyUp: js.Any = js.native
+  
+  var _registerInitialModalPosition: js.Any = js.native
   
   var _scrollableContent: js.Any = js.native
   

@@ -16,6 +16,11 @@ trait LabelingJobOutputConfig extends js.Object {
     * The Amazon S3 location to write output data.
     */
   var S3OutputPath: S3Uri = js.native
+  
+  /**
+    * An Amazon Simple Notification Service (Amazon SNS) output topic ARN. When workers complete labeling tasks, Ground Truth will send labeling task output data to the SNS output topic you specify here. You must provide a value for this parameter if you provide an Amazon SNS input topic in SnsDataSource in InputConfig.
+    */
+  var SnsTopicArn: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.SnsTopicArn] = js.native
 }
 object LabelingJobOutputConfig {
   
@@ -48,5 +53,11 @@ object LabelingJobOutputConfig {
     
     @scala.inline
     def deleteKmsKeyId: Self = this.set("KmsKeyId", js.undefined)
+    
+    @scala.inline
+    def setSnsTopicArn(value: SnsTopicArn): Self = this.set("SnsTopicArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSnsTopicArn: Self = this.set("SnsTopicArn", js.undefined)
   }
 }

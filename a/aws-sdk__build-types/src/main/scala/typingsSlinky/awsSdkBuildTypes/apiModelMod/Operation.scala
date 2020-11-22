@@ -1,7 +1,5 @@
 package typingsSlinky.awsSdkBuildTypes.apiModelMod
 
-import typingsSlinky.awsSdkTypes.protocolMod.HttpTrait
-import typingsSlinky.awsSdkTypes.protocolMod.SupportedSignatureVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Operation extends js.Object {
   
-  var authtype: js.UndefOr[SupportedSignatureVersion] = js.native
+  var authtype: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SupportedSignatureVersion */ js.Any
+  ] = js.native
   
   var deprecated: js.UndefOr[scala.Boolean] = js.native
   
@@ -19,7 +19,7 @@ trait Operation extends js.Object {
   
   var errors: js.UndefOr[js.Array[StructureMember]] = js.native
   
-  var http: HttpTrait = js.native
+  var http: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpTrait */ js.Any = js.native
   
   var input: js.UndefOr[StructureMember] = js.native
   
@@ -30,7 +30,10 @@ trait Operation extends js.Object {
 object Operation {
   
   @scala.inline
-  def apply(http: HttpTrait, name: java.lang.String): Operation = {
+  def apply(
+    http: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpTrait */ js.Any,
+    name: java.lang.String
+  ): Operation = {
     val __obj = js.Dynamic.literal(http = http.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Operation]
   }
@@ -51,13 +54,17 @@ object Operation {
     }
     
     @scala.inline
-    def setHttp(value: HttpTrait): Self = this.set("http", value.asInstanceOf[js.Any])
+    def setHttp(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpTrait */ js.Any
+    ): Self = this.set("http", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: java.lang.String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAuthtype(value: SupportedSignatureVersion): Self = this.set("authtype", value.asInstanceOf[js.Any])
+    def setAuthtype(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SupportedSignatureVersion */ js.Any
+    ): Self = this.set("authtype", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAuthtype: Self = this.set("authtype", js.undefined)

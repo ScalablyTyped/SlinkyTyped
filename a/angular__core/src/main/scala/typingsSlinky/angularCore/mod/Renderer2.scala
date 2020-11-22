@@ -73,8 +73,14 @@ abstract class Renderer2 () extends js.Object {
     * @param parent The parent node.
     * @param newChild The new child nodes.
     * @param refChild The existing child node before which `newChild` is inserted.
+    * @param isMove Optional argument which signifies if the current `insertBefore` is a result of a
+    *     move. Animation uses this information to trigger move animations. In the past the Animation
+    *     would always assume that any `insertBefore` is a move. This is not strictly true because
+    *     with runtime i18n it is possible to invoke `insertBefore` as a result of i18n and it should
+    *     not trigger an animation move.
     */
   def insertBefore(parent: js.Any, newChild: js.Any, refChild: js.Any): Unit = js.native
+  def insertBefore(parent: js.Any, newChild: js.Any, refChild: js.Any, isMove: Boolean): Unit = js.native
   
   def listen(target: js.Any, eventName: String, callback: js.Function1[/* event */ js.Any, Boolean | Unit]): js.Function0[Unit] = js.native
   @JSName("listen")

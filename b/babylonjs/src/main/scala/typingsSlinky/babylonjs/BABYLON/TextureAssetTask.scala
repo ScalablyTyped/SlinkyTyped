@@ -10,9 +10,9 @@ trait TextureAssetTask
      with ITextureAssetTask[Texture] {
   
   /**
-    * Defines if texture must be inverted on Y axis (default is false)
+    * Defines if texture must be inverted on Y axis (default is true)
     */
-  var invertY: js.UndefOr[Boolean] = js.native
+  var invertY: Boolean = js.native
   
   /**
     * Defines if mipmap should not be generated (default is false)

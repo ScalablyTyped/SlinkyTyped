@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ActivityActionObject[TContext, TEvent /* <: EventObject */] extends ActionObject[TContext, TEvent] {
   
-  var activity: ActivityDefinition[TContext, TEvent] = js.native
+  var activity: js.UndefOr[ActivityDefinition[TContext, TEvent]] = js.native
   
   @JSName("type")
   var type_ActivityActionObject: Start | Stop = js.native
@@ -17,8 +17,8 @@ trait ActivityActionObject[TContext, TEvent /* <: EventObject */] extends Action
 object ActivityActionObject {
   
   @scala.inline
-  def apply[TContext, TEvent /* <: EventObject */](activity: ActivityDefinition[TContext, TEvent], `type`: Start | Stop): ActivityActionObject[TContext, TEvent] = {
-    val __obj = js.Dynamic.literal(activity = activity.asInstanceOf[js.Any])
+  def apply[TContext, TEvent /* <: EventObject */](`type`: Start | Stop): ActivityActionObject[TContext, TEvent] = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActivityActionObject[TContext, TEvent]]
   }
@@ -39,9 +39,12 @@ object ActivityActionObject {
     }
     
     @scala.inline
+    def setType(value: Start | Stop): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setActivity(value: ActivityDefinition[TContext, TEvent]): Self = this.set("activity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: Start | Stop): Self = this.set("type", value.asInstanceOf[js.Any])
+    def deleteActivity: Self = this.set("activity", js.undefined)
   }
 }

@@ -8,11 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TreeItem extends js.Object {
   
-  val collapsibleState: TreeItemCollapsibleState = js.native
+  var collapsibleState: TreeItemCollapsibleState = js.native
+  
+   // https://dev.panic.com/panic/nova-issues/-/issues/909
+  var color: js.UndefOr[Color] = js.native
   
   var command: js.UndefOr[js.Any] = js.native
   
-   // https://dev.panic.com/panic/nova-issues/-/issues/909
   var contextValue: js.UndefOr[String] = js.native
   
   var descriptiveText: js.UndefOr[String] = js.native
@@ -21,7 +23,7 @@ trait TreeItem extends js.Object {
   
   var image: js.UndefOr[String] = js.native
   
-  val name: String = js.native
+  var name: String = js.native
   
   var path: js.UndefOr[String] = js.native
   
@@ -55,6 +57,12 @@ object TreeItem {
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
     def setCommand(value: js.Any): Self = this.set("command", value.asInstanceOf[js.Any])

@@ -3,10 +3,12 @@ package typingsSlinky.rcTree.treeNodeMod
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcTree.anon.DragNodeHighlight
 import typingsSlinky.rcTree.rcTreeStrings.close
 import typingsSlinky.rcTree.rcTreeStrings.open
 import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -35,33 +37,33 @@ class InternalTreeNode ()
   
   def isSelectable(): Boolean = js.native
   
-  def onCheck(e: js.Any): Unit = js.native
+  def onCheck(e: SyntheticMouseEvent[HTMLSpanElement]): Unit = js.native
   
-  def onContextMenu(e: js.Any): Unit = js.native
+  def onContextMenu(e: SyntheticMouseEvent[HTMLSpanElement]): Unit = js.native
   
-  def onDragEnd(e: js.Any): Unit = js.native
+  def onDragEnd(e: DragEvent[HTMLDivElement]): Unit = js.native
   
-  def onDragEnter(e: js.Any): Unit = js.native
+  def onDragEnter(e: DragEvent[HTMLDivElement]): Unit = js.native
   
-  def onDragLeave(e: js.Any): Unit = js.native
+  def onDragLeave(e: DragEvent[HTMLDivElement]): Unit = js.native
   
-  def onDragOver(e: js.Any): Unit = js.native
+  def onDragOver(e: DragEvent[HTMLDivElement]): Unit = js.native
   
-  def onDragStart(e: js.Any): Unit = js.native
+  def onDragStart(e: DragEvent[HTMLDivElement]): Unit = js.native
   
-  def onDrop(e: js.Any): Unit = js.native
+  def onDrop(e: DragEvent[HTMLDivElement]): Unit = js.native
   
   var onExpand: MouseEventHandler[HTMLDivElement] = js.native
   
-  def onMouseEnter(e: js.Any): Unit = js.native
+  def onMouseEnter(e: SyntheticMouseEvent[HTMLSpanElement]): Unit = js.native
   
-  def onMouseLeave(e: js.Any): Unit = js.native
+  def onMouseLeave(e: SyntheticMouseEvent[HTMLSpanElement]): Unit = js.native
   
-  def onSelect(e: js.Any): Unit = js.native
+  def onSelect(e: SyntheticMouseEvent[HTMLSpanElement]): Unit = js.native
   
-  def onSelectorClick(e: js.Any): Unit = js.native
+  def onSelectorClick(e: SyntheticMouseEvent[HTMLSpanElement]): Unit = js.native
   
-  def onSelectorDoubleClick(e: js.Any): Unit = js.native
+  def onSelectorDoubleClick(e: SyntheticMouseEvent[HTMLSpanElement]): Unit = js.native
   
   def renderCheckbox(): ReactElement = js.native
   

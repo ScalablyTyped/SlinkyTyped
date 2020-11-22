@@ -1,5 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -35,7 +36,7 @@ object TargetTransitionConfig {
     }
     
     @scala.inline
-    def setTargetVarargs(value: (String | (StateNode[TContext, js.Any, TEvent, js.Any]))*): Self = this.set("target", js.Array(value :_*))
+    def setTargetVarargs(value: (String | (StateNode[TContext, js.Any, TEvent, ContextTContext[TContext]]))*): Self = this.set("target", js.Array(value :_*))
     
     @scala.inline
     def setTarget(value: TransitionTarget[TContext, TEvent]): Self = this.set("target", value.asInstanceOf[js.Any])

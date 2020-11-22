@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OpenShiftChangeRequest extends ScheduleChangeRequest {
   
   // ID for the open shift.
-  var openShiftId: js.UndefOr[String] = js.native
+  var openShiftId: js.UndefOr[NullableOption[String]] = js.native
 }
 object OpenShiftChangeRequest {
   
@@ -34,9 +34,12 @@ object OpenShiftChangeRequest {
     }
     
     @scala.inline
-    def setOpenShiftId(value: String): Self = this.set("openShiftId", value.asInstanceOf[js.Any])
+    def setOpenShiftId(value: NullableOption[String]): Self = this.set("openShiftId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOpenShiftId: Self = this.set("openShiftId", js.undefined)
+    
+    @scala.inline
+    def setOpenShiftIdNull: Self = this.set("openShiftId", null)
   }
 }

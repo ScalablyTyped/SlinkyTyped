@@ -1,11 +1,16 @@
 package typingsSlinky.antd.uploadInterfaceMod
 
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ShowUploadListInterface extends js.Object {
+  
+  var downloadIcon: js.UndefOr[ReactElement | (js.Function1[/* file */ UploadFile[_], ReactElement])] = js.native
+  
+  var removeIcon: js.UndefOr[ReactElement | (js.Function1[/* file */ UploadFile[_], ReactElement])] = js.native
   
   var showDownloadIcon: js.UndefOr[Boolean] = js.native
   
@@ -35,6 +40,30 @@ object ShowUploadListInterface {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDownloadIconReactElement(value: ReactElement): Self = this.set("downloadIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDownloadIconFunction1(value: /* file */ UploadFile[_] => ReactElement): Self = this.set("downloadIcon", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setDownloadIcon(value: ReactElement | (js.Function1[/* file */ UploadFile[_], ReactElement])): Self = this.set("downloadIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDownloadIcon: Self = this.set("downloadIcon", js.undefined)
+    
+    @scala.inline
+    def setRemoveIconReactElement(value: ReactElement): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRemoveIconFunction1(value: /* file */ UploadFile[_] => ReactElement): Self = this.set("removeIcon", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setRemoveIcon(value: ReactElement | (js.Function1[/* file */ UploadFile[_], ReactElement])): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRemoveIcon: Self = this.set("removeIcon", js.undefined)
     
     @scala.inline
     def setShowDownloadIcon(value: Boolean): Self = this.set("showDownloadIcon", value.asInstanceOf[js.Any])

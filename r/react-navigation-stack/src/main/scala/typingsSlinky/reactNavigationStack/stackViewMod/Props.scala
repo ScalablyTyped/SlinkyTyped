@@ -15,6 +15,13 @@ trait Props extends js.Object {
   
   var descriptors: StackDescriptorMap = js.native
   
+  /**
+    * Whether inactive screens should be detached from the view hierarchy to save memory.
+    * Make sure to call `enableScreens` from `react-native-screens` to make it work.
+    * Defaults to `true` on Android, depends on the version of `react-native-screens` on iOS.
+    */
+  var detachInactiveScreens: js.UndefOr[Boolean] = js.native
+  
   var headerMode: js.UndefOr[StackHeaderMode] = js.native
   
   /**
@@ -70,6 +77,12 @@ object Props {
     
     @scala.inline
     def setState(value: NavigationState): Self = this.set("state", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDetachInactiveScreens(value: Boolean): Self = this.set("detachInactiveScreens", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDetachInactiveScreens: Self = this.set("detachInactiveScreens", js.undefined)
     
     @scala.inline
     def setHeaderMode(value: StackHeaderMode): Self = this.set("headerMode", value.asInstanceOf[js.Any])

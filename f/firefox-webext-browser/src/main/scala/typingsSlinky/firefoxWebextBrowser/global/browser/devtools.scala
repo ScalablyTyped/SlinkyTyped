@@ -2,15 +2,15 @@ package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.ContextSecurityOrigin
-import typingsSlinky.firefoxWebextBrowser.anon.IgnoreCache
+import typingsSlinky.firefoxWebextBrowser.browser.devtools.inspectedWindow.EvalOptions
+import typingsSlinky.firefoxWebextBrowser.browser.devtools.inspectedWindow.ReloadReloadOptions
 import typingsSlinky.firefoxWebextBrowser.browser.devtools.inspectedWindow.Resource
 import typingsSlinky.firefoxWebextBrowser.browser.devtools.network.Request
-import typingsSlinky.firefoxWebextBrowser.browser.devtools.panels.Create
 import typingsSlinky.firefoxWebextBrowser.browser.devtools.panels.ElementsPanel
 import typingsSlinky.firefoxWebextBrowser.browser.devtools.panels.ExtensionPanel
 import typingsSlinky.firefoxWebextBrowser.browser.devtools.panels.SourcesPanel
 import typingsSlinky.firefoxWebextBrowser.browser.manifest.ExtensionURL
+import typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,9 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object devtools extends js.Object {
   
   /**
-    * Use the `browser.devtools.inspectedWindow` API to interact with the inspected window: obtain the tab ID for the
-    * inspected page, evaluate the code in the context of the inspected window, reload the page, or obtain the list of
-    * resources within the page.
+    * Use the `browser.devtools.inspectedWindow` API to interact with the inspected window: obtain the tab ID for the inspected page, evaluate the code in the context of the inspected window, reload the page, or obtain the list of resources within the page.
     *
     * Allowed in: Devtools pages only
     */
@@ -36,17 +34,12 @@ object devtools extends js.Object {
     
     /* devtools.inspectedWindow functions */
     /**
-      * Evaluates a JavaScript expression in the context of the main frame of the inspected page. The expression must
-      * evaluate to a JSON-compliant object, otherwise an exception is thrown. The eval function can report either a
-      * DevTools-side error or a JavaScript exception that occurs during evaluation. In either case, the `result`
-      * parameter of the callback is `undefined`. In the case of a DevTools-side error, the `isException` parameter is
-      * non-null and has `isError` set to true and `code` set to an error code. In the case of a JavaScript error,
-      * `isException` is set to true and `value` is set to the string value of thrown object.
+      * Evaluates a JavaScript expression in the context of the main frame of the inspected page. The expression must evaluate to a JSON-compliant object, otherwise an exception is thrown. The eval function can report either a DevTools-side error or a JavaScript exception that occurs during evaluation. In either case, the `result` parameter of the callback is `undefined`. In the case of a DevTools-side error, the `isException` parameter is non-null and has `isError` set to true and `code` set to an error code. In the case of a JavaScript error, `isException` is set to true and `value` is set to the string value of thrown object.
       * @param expression An expression to evaluate.
       * @param [options] The options parameter can contain one or more options.
       */
     def eval(expression: String): js.Promise[js.Object] = js.native
-    def eval(expression: String, options: ContextSecurityOrigin): js.Promise[js.Object] = js.native
+    def eval(expression: String, options: EvalOptions): js.Promise[js.Object] = js.native
     
     /**
       * Retrieves the list of resources from the inspected page.
@@ -62,8 +55,7 @@ object devtools extends js.Object {
     val onResourceAdded: js.UndefOr[WebExtEvent[js.Function1[/* resource */ Resource, Unit]]] = js.native
     
     /**
-      * Fired when a new revision of the resource is committed (e.g. user saves an edited version of the resource in the
-      * Developer Tools).
+      * Fired when a new revision of the resource is committed (e.g. user saves an edited version of the resource in the Developer Tools).
       * @param content New content of the resource.
       * @deprecated Unsupported on Firefox at this time.
       */
@@ -71,7 +63,7 @@ object devtools extends js.Object {
     
     /** Reloads the inspected page. */
     def reload(): Unit = js.native
-    def reload(reloadOptions: IgnoreCache): Unit = js.native
+    def reload(reloadOptions: ReloadReloadOptions): Unit = js.native
     
     /* devtools.inspectedWindow properties */
     /** The ID of the tab being inspected. This ID may be used with browser.tabs.* API. */
@@ -79,8 +71,7 @@ object devtools extends js.Object {
   }
   
   /**
-    * Use the `browser.devtools.network` API to retrieve the information about network requests displayed by the Developer
-    * Tools in the Network panel.
+    * Use the `browser.devtools.network` API to retrieve the information about network requests displayed by the Developer Tools in the Network panel.
     *
     * Allowed in: Devtools pages only
     */
@@ -106,24 +97,22 @@ object devtools extends js.Object {
   }
   
   /**
-    * Use the `browser.devtools.panels` API to integrate your extension into Developer Tools window UI: create your own
-    * panels, access existing panels, and add sidebars.
+    * Use the `browser.devtools.panels` API to integrate your extension into Developer Tools window UI: create your own panels, access existing panels, and add sidebars.
     *
     * Allowed in: Devtools pages only
     */
   @js.native
   object panels extends js.Object {
     
-    def create(title: String, iconPath: Create, pagePath: ExtensionURL): js.Promise[ExtensionPanel] = js.native
     /* devtools.panels functions */
     /**
       * Creates an extension panel.
       * @param title Title that is displayed next to the extension icon in the Developer Tools toolbar.
-      * @param iconPath Path of the panel's icon relative to the extension directory, or an empty string to use the
-      *     default extension icon as the panel icon.
+      * @param iconPath Path of the panel's icon relative to the extension directory, or an empty string to use the default extension icon as the panel icon.
       * @param pagePath Path of the panel's HTML page relative to the extension directory.
       */
     def create(title: String, iconPath: ExtensionURL, pagePath: ExtensionURL): js.Promise[ExtensionPanel] = js.native
+    def create(title: String, iconPath: _empty, pagePath: ExtensionURL): js.Promise[ExtensionPanel] = js.native
     
     /* devtools.panels properties */
     /** Elements panel. */
@@ -145,8 +134,7 @@ object devtools extends js.Object {
     def openResource(url: String, lineNumber: Double): js.Promise[Unit] = js.native
     
     /**
-      * Specifies the function to be called when the user clicks a resource link in the Developer Tools window. To unset
-      * the handler, either call the method with no parameters or pass null as the parameter.
+      * Specifies the function to be called when the user clicks a resource link in the Developer Tools window. To unset the handler, either call the method with no parameters or pass null as the parameter.
       * @deprecated Unsupported on Firefox at this time.
       */
     def setOpenResourceHandler(): js.Promise[Resource] = js.native

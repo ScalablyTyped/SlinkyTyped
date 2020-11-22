@@ -21,6 +21,6 @@ object ^ extends js.Object {
     /** Height of the images. Note that all three images need to have the same dimensions. */
   height: Double,
     /** Options. */
-  options: js.UndefOr[Options]
+  options: js.UndefOr[PixelmatchOptions]
   ): Double = js.native
 }

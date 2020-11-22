@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidSourceCommitSpecifierExceptionMod
 
 import typingsSlinky.awsSdkClientCodecommitNode.getMergeConflictsExceptionsUnionMod.GetMergeConflictsExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait InvalidSourceCommitSpecifierException
-  extends ServiceException[InvalidSourceCommitSpecifierExceptionDetails]
-     with GetMergeConflictsExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidSourceCommitSpecifierExceptionDetails> * / any */ @js.native
+trait InvalidSourceCommitSpecifierException extends GetMergeConflictsExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidSourceCommitSpecifierException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidSourceCommitSpecifierException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidSourceCommitSpecifierException = js.native
 }
 object InvalidSourceCommitSpecifierException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidSourceCommitSpecifierExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidSourceCommitSpecifierException
   ): InvalidSourceCommitSpecifierException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidSourceCommitSpecifierException]
   }
   

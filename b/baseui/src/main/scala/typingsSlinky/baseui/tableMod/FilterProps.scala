@@ -1,7 +1,6 @@
 package typingsSlinky.baseui.tableMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.anon.Content
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +18,7 @@ trait FilterProps extends js.Object {
   
   var onSelectAll: js.UndefOr[js.Function0[_]] = js.native
   
-  var overrides: js.UndefOr[Content] = js.native
+  var overrides: js.UndefOr[FilterOverrides] = js.native
 }
 object FilterProps {
   
@@ -75,7 +74,7 @@ object FilterProps {
     def deleteOnSelectAll: Self = this.set("onSelectAll", js.undefined)
     
     @scala.inline
-    def setOverrides(value: Content): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: FilterOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)

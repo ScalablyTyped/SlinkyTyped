@@ -180,6 +180,11 @@ object ListFormat extends js.Object {
   object MultiLineFunctionBodyStatements extends TopLevel[MultiLineFunctionBodyStatements with Double]
   
   @js.native
+  sealed trait MultiLineTupleTypeElements extends ListFormat
+  /* 657 */ @js.native
+  object MultiLineTupleTypeElements extends TopLevel[MultiLineTupleTypeElements with Double]
+  
+  @js.native
   sealed trait MultiLineTypeLiteralMembers extends ListFormat
   /* 32897 */ @js.native
   object MultiLineTypeLiteralMembers extends TopLevel[MultiLineTypeLiteralMembers with Double]
@@ -285,6 +290,11 @@ object ListFormat extends js.Object {
   object SingleLineFunctionBodyStatements extends TopLevel[SingleLineFunctionBodyStatements with Double]
   
   @js.native
+  sealed trait SingleLineTupleTypeElements extends ListFormat
+  /* 528 */ @js.native
+  object SingleLineTupleTypeElements extends TopLevel[SingleLineTupleTypeElements with Double]
+  
+  @js.native
   sealed trait SingleLineTypeLiteralMembers extends ListFormat
   /* 768 */ @js.native
   object SingleLineTypeLiteralMembers extends TopLevel[SingleLineTypeLiteralMembers with Double]
@@ -318,11 +328,6 @@ object ListFormat extends js.Object {
   sealed trait TemplateExpressionSpans extends ListFormat
   /* 262144 */ @js.native
   object TemplateExpressionSpans extends TopLevel[TemplateExpressionSpans with Double]
-  
-  @js.native
-  sealed trait TupleTypeElements extends ListFormat
-  /* 528 */ @js.native
-  object TupleTypeElements extends TopLevel[TupleTypeElements with Double]
   
   @js.native
   sealed trait TypeArguments extends ListFormat

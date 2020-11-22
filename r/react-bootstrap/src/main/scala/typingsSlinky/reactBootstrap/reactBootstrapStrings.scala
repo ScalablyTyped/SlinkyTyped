@@ -11,6 +11,9 @@ object reactBootstrapStrings {
   def checkbox: checkbox = "checkbox".asInstanceOf[checkbox]
   
   @scala.inline
+  def click: click = "click".asInstanceOf[click]
+  
+  @scala.inline
   def defaultValue: defaultValue = "defaultValue".asInstanceOf[defaultValue]
   
   @scala.inline
@@ -18,6 +21,9 @@ object reactBootstrapStrings {
   
   @scala.inline
   def height: height = "height".asInstanceOf[height]
+  
+  @scala.inline
+  def keydown: keydown = "keydown".asInstanceOf[keydown]
   
   @scala.inline
   def large: large = "large".asInstanceOf[large]
@@ -33,6 +39,12 @@ object reactBootstrapStrings {
   
   @scala.inline
   def radio: radio = "radio".asInstanceOf[radio]
+  
+  @scala.inline
+  def rootClose: rootClose = "rootClose".asInstanceOf[rootClose]
+  
+  @scala.inline
+  def select: select = "select".asInstanceOf[select]
   
   @scala.inline
   def sm: sm = "sm".asInstanceOf[sm]
@@ -71,6 +83,9 @@ object reactBootstrapStrings {
   sealed trait checkbox extends js.Object
   
   @js.native
+  sealed trait click extends js.Object
+  
+  @js.native
   sealed trait defaultValue extends js.Object
   
   @js.native
@@ -78,6 +93,9 @@ object reactBootstrapStrings {
   
   @js.native
   sealed trait height extends js.Object
+  
+  @js.native
+  sealed trait keydown extends js.Object
   
   @js.native
   sealed trait large extends Sizes
@@ -93,6 +111,12 @@ object reactBootstrapStrings {
   
   @js.native
   sealed trait radio extends js.Object
+  
+  @js.native
+  sealed trait rootClose extends js.Object
+  
+  @js.native
+  sealed trait select extends js.Object
   
   @js.native
   sealed trait sm extends Sizes

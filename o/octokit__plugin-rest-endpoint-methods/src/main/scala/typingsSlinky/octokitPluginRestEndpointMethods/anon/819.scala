@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ProjectsCreateForRepoEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ProjectsCreateForRepoResponseData
+import typingsSlinky.octokitTypes.endpointsMod.OrgsUpdateWebhookEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.OrgsUpdateWebhookResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `819` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ProjectsCreateForRepoEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[OrgsUpdateWebhookEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ProjectsCreateForRepoResponseData] = js.native
+  var response: OctokitResponse[OrgsUpdateWebhookResponseData] = js.native
 }
 object `819` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ProjectsCreateForRepoEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ProjectsCreateForRepoResponseData]
+    parameters: RequestParameters with (Omit[OrgsUpdateWebhookEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[OrgsUpdateWebhookResponseData]
   ): `819` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`819`]
@@ -46,9 +46,9 @@ object `819` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ProjectsCreateForRepoEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[OrgsUpdateWebhookEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ProjectsCreateForRepoResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[OrgsUpdateWebhookResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

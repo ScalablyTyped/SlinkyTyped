@@ -17,7 +17,7 @@ class Service protected ()
     * @throws {TypeError} If arguments are invalid
     */
   def this(name: String) = this()
-  def this(name: String, options: StringDictionary[js.Any]) = this()
+  def this(name: String, options: StringDictionary[js.UndefOr[js.Any]]) = this()
 }
 /* static members */
 @JSImport("@apollo/protobufjs/minimal", "Service")

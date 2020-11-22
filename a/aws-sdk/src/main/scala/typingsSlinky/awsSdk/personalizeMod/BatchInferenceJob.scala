@@ -13,6 +13,11 @@ trait BatchInferenceJob extends js.Object {
   var batchInferenceJobArn: js.UndefOr[Arn] = js.native
   
   /**
+    * A string to string map of the configuration details of a batch inference job.
+    */
+  var batchInferenceJobConfig: js.UndefOr[BatchInferenceJobConfig] = js.native
+  
+  /**
     * The time at which the batch inference job was created.
     */
   var creationDateTime: js.UndefOr[js.Date] = js.native
@@ -95,6 +100,12 @@ object BatchInferenceJob {
     
     @scala.inline
     def deleteBatchInferenceJobArn: Self = this.set("batchInferenceJobArn", js.undefined)
+    
+    @scala.inline
+    def setBatchInferenceJobConfig(value: BatchInferenceJobConfig): Self = this.set("batchInferenceJobConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBatchInferenceJobConfig: Self = this.set("batchInferenceJobConfig", js.undefined)
     
     @scala.inline
     def setCreationDateTime(value: js.Date): Self = this.set("creationDateTime", value.asInstanceOf[js.Any])

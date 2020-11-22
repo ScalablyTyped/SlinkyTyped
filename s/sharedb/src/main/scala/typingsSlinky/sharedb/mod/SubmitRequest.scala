@@ -18,7 +18,7 @@ trait SubmitRequest extends js.Object {
   
   var maxRetries: Double | Null = js.native
   
-  var op: Op = js.native
+  var op: CreateOp | DeleteOp | EditOp = js.native
   
   var ops: js.Array[typingsSlinky.sharedb.sharedbMod.Op] = js.native
   
@@ -43,7 +43,7 @@ object SubmitRequest {
     collection: String,
     id: String,
     index: String,
-    op: Op,
+    op: CreateOp | DeleteOp | EditOp,
     ops: js.Array[typingsSlinky.sharedb.sharedbMod.Op],
     options: js.Any,
     retries: Double,
@@ -78,7 +78,7 @@ object SubmitRequest {
     def setIndex(value: String): Self = this.set("index", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOp(value: Op): Self = this.set("op", value.asInstanceOf[js.Any])
+    def setOp(value: CreateOp | DeleteOp | EditOp): Self = this.set("op", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOpsVarargs(value: typingsSlinky.sharedb.sharedbMod.Op*): Self = this.set("ops", js.Array(value :_*))

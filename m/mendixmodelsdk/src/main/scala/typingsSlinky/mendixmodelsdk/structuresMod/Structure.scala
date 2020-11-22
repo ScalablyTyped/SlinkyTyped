@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/sdk/internal/structures", "Structure")
 @js.native
-abstract class Structure protected () extends IStructure {
+abstract class Structure[TModel /* <: IAbstractModel */, TContainer /* <: IContainer | Null */] protected () extends IStructure {
   def this(_model: AbstractModel, structureTypeName: String, id: String) = this()
   def this(_model: AbstractModel, structureTypeName: String, id: String, _isPartial: Boolean) = this()
   def this(
@@ -29,7 +29,7 @@ abstract class Structure protected () extends IStructure {
   ) = this()
   
   @JSName("container")
-  def container_MStructure: IContainer | Null = js.native
+  def container_MStructure: TContainer = js.native
   
   /**
     * Deletes a model from the model.
@@ -44,7 +44,7 @@ abstract class Structure protected () extends IStructure {
   def isLoaded_MStructure: Boolean = js.native
   
   @JSName("model")
-  def model_MStructure: IAbstractModel = js.native
+  def model_MStructure: TModel = js.native
   
   @JSName("unit")
   def unit_MStructure: IAbstractUnit = js.native

@@ -11,7 +11,7 @@ trait WindowsInformationProtectionNetworkLearningSummary extends Entity {
   var deviceCount: js.UndefOr[Double] = js.native
   
   // Website url
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[NullableOption[String]] = js.native
 }
 object WindowsInformationProtectionNetworkLearningSummary {
   
@@ -43,9 +43,12 @@ object WindowsInformationProtectionNetworkLearningSummary {
     def deleteDeviceCount: Self = this.set("deviceCount", js.undefined)
     
     @scala.inline
-    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrl(value: NullableOption[String]): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUrl: Self = this.set("url", js.undefined)
+    
+    @scala.inline
+    def setUrlNull: Self = this.set("url", null)
   }
 }

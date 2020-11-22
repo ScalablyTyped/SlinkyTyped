@@ -25,7 +25,7 @@ object credentialProviderChainMod extends js.Object {
     /**
       * Resolves the provider chain by searching for the first set of credentials in providers.
       */
-    def resolve(callback: js.Function2[/* err */ AWSError, /* credentials */ Credentials, Unit]): CredentialProviderChain = js.native
+    def resolve(callback: js.Function2[/* err */ AWSError | Null, /* credentials */ js.UndefOr[Credentials], Unit]): CredentialProviderChain = js.native
     
     /**
       * Return a Promise on resolve() function

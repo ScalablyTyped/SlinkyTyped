@@ -46,9 +46,21 @@ object settings extends js.Object {
   var executeCompleteTriggerOnValueChanged: Boolean = js.native
   
   /**
+    * Set this property to false to execute the skip trigger on next page instead of on value change.
+    */
+  var executeSkipTriggerOnValueChanged: Boolean = js.native
+  
+  /**
     * separator that can allow to set value and text of ItemValue object in one string as: "value|text"
     */
   var itemValueSeparator: String = js.native
+  
+  /**
+    * By default all rows are rendered no matters whwther they are visible.
+    * Set it true, and survey markup rows will be rendered only if they are visible in viewport.
+    * This feature is experimantal and might do not support all the use cases.
+    */
+  var lazyRowsRendering: Boolean = js.native
   
   /**
     * Default cell type for dropdown and dynamic matrices
@@ -59,6 +71,11 @@ object settings extends js.Object {
     * Default row name for matrix (single choice)
     */
   var matrixDefaultRowName: String = js.native
+  
+  /**
+    * Maximum rowCount that returns in addConditionObjectsByContext function
+    */
+  var matrixMaxRowCountInCondition: Double = js.native
   
   /**
     * Maximum row count in dynamic matrix
@@ -74,6 +91,11 @@ object settings extends js.Object {
     * Set this property to change the default value of the minWidth constraint
     */
   var maxWidth: String = js.native
+  
+  /**
+    * This property tells how many times survey re-run expressions on value changes during condition running. We need it to avoid recursions in the expressions
+    */
+  var maximumConditionRunCountOnValueChanged: Double = js.native
   
   /**
     * Set this property to change the default value of the minWidth constraint
@@ -101,9 +123,26 @@ object settings extends js.Object {
   var serializeLocalizableStringAsObject: Boolean = js.native
   
   /**
+    * By default visibleIndex for question with hideNumber = true is -1, and survey doesn't count these questions when set questions numbers.
+    * Set it true, and a question next to a question with hidden title number will increase it's number.
+    */
+  var setQuestionVisibleIndexForHiddenNumber: Boolean = js.native
+  
+  /**
+    * By default visibleIndex for question with titleLocation = "hidden" is -1, and survey doesn't count these questions when set questions numbers.
+    * Set it true, and a question next to a question with hidden title will increase it's number.
+    */
+  var setQuestionVisibleIndexForHiddenTitle: Boolean = js.native
+  
+  /**
     * SurveyJS web service API url
     */
   var surveyServiceUrl: String = js.native
+  
+  /**
+    * Cache the result for choices getting from web services. Set this property to false, to disable the caching.
+    */
+  var useCachingForChoicesRestfull: Boolean = js.native
   
   /**
     * Encode parameter on calling restfull web API

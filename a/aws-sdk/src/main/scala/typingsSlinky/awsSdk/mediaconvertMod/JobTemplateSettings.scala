@@ -38,6 +38,11 @@ trait JobTemplateSettings extends js.Object {
   var NielsenConfiguration: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.NielsenConfiguration] = js.native
   
   /**
+    * Ignore these settings unless you are using Nielsen non-linear watermarking. Specify the values that  MediaConvert uses to generate and place Nielsen watermarks in your output audio. In addition to  specifying these values, you also need to set up your cloud TIC server. These settings apply to  every output in your job. The MediaConvert implementation is currently with the following Nielsen versions: Nielsen Watermark SDK Version 5.2.1 Nielsen NLM Watermark Engine Version 1.2.7 Nielsen Watermark Authenticator [SID_TIC] Version [5.0.0]
+    */
+  var NielsenNonLinearWatermark: js.UndefOr[NielsenNonLinearWatermarkSettings] = js.native
+  
+  /**
     * (OutputGroups) contains one group of settings for each set of outputs that share a common package type. All unpackaged files (MPEG-4, MPEG-2 TS, Quicktime, MXF, and no container) are grouped in a single output group as well. Required in (OutputGroups) is a group of settings that apply to the whole group. This required object depends on the value you set for (Type) under (OutputGroups)>(OutputGroupSettings). Type, settings object pairs are as follows. * FILE_GROUP_SETTINGS, FileGroupSettings * HLS_GROUP_SETTINGS, HlsGroupSettings * DASH_ISO_GROUP_SETTINGS, DashIsoGroupSettings * MS_SMOOTH_GROUP_SETTINGS, MsSmoothGroupSettings * CMAF_GROUP_SETTINGS, CmafGroupSettings
     */
   var OutputGroups: js.UndefOr[listOfOutputGroup] = js.native
@@ -48,7 +53,7 @@ trait JobTemplateSettings extends js.Object {
   var TimecodeConfig: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.TimecodeConfig] = js.native
   
   /**
-    * Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in your job. To include timed metadata, you must enable it here, enable it in each output container, and specify tags and timecodes in ID3 insertion (Id3Insertion) objects.
+    * Enable Timed metadata insertion (TimedMetadataInsertion) to include ID3 tags in any HLS outputs. To include timed metadata, you must enable it here, enable it in each output container, and specify tags and timecodes in ID3 insertion (Id3Insertion) objects.
     */
   var TimedMetadataInsertion: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.TimedMetadataInsertion] = js.native
 }
@@ -113,6 +118,12 @@ object JobTemplateSettings {
     
     @scala.inline
     def deleteNielsenConfiguration: Self = this.set("NielsenConfiguration", js.undefined)
+    
+    @scala.inline
+    def setNielsenNonLinearWatermark(value: NielsenNonLinearWatermarkSettings): Self = this.set("NielsenNonLinearWatermark", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNielsenNonLinearWatermark: Self = this.set("NielsenNonLinearWatermark", js.undefined)
     
     @scala.inline
     def setOutputGroupsVarargs(value: OutputGroup*): Self = this.set("OutputGroups", js.Array(value :_*))

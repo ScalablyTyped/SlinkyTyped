@@ -1,7 +1,6 @@
 package typingsSlinky.awsSdk.coreMod
 
 import typingsSlinky.awsSdk.configMod.APIVersions
-import typingsSlinky.awsSdk.configMod.ConfigurationOptions
 import typingsSlinky.awsSdk.configServicePlaceholdersMod.ConfigurationServicePlaceholders
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,5 +14,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 class Config ()
   extends typingsSlinky.awsSdk.configMod.Config {
-  def this(options: ConfigurationOptions with ConfigurationServicePlaceholders with APIVersions) = this()
+  def this(options: typingsSlinky.awsSdk.configBaseMod.ConfigurationOptions with ConfigurationServicePlaceholders with APIVersions) = this()
 }

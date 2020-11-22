@@ -10,6 +10,8 @@ import typingsSlinky.antd.carouselMod.CarouselEffect
 import typingsSlinky.antd.carouselMod.DotPosition
 import typingsSlinky.antd.cascaderMod.CascaderExpandTrigger
 import typingsSlinky.antd.collapseCollapseMod._ExpandIconPosition
+import typingsSlinky.antd.configProviderContextMod._DirectionType
+import typingsSlinky.antd.configProviderSizeContextMod._SizeType
 import typingsSlinky.antd.directoryTreeMod.ExpandAction
 import typingsSlinky.antd.drawerMod.placementType
 import typingsSlinky.antd.dropdownButtonMod.DropdownButtonType
@@ -23,6 +25,7 @@ import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import typingsSlinky.antd.listMod.ColumnType
 import typingsSlinky.antd.listMod.ListItemLayout
 import typingsSlinky.antd.listMod.ListSize
+import typingsSlinky.antd.localeReceiverMod.LocaleComponent
 import typingsSlinky.antd.mentionsMod.MentionPlacement
 import typingsSlinky.antd.menuContextMod.MenuTheme
 import typingsSlinky.antd.menuMod.MenuMode
@@ -40,7 +43,7 @@ import typingsSlinky.antd.resultMod.ResultStatusType
 import typingsSlinky.antd.ribbonMod.RibbonPlacement
 import typingsSlinky.antd.siderMod.CollapseType
 import typingsSlinky.antd.siderMod.SiderTheme
-import typingsSlinky.antd.sizeContextMod._SizeType
+import typingsSlinky.antd.sizeContextMod._AvatarSize
 import typingsSlinky.antd.spinMod.SpinSize
 import typingsSlinky.antd.statisticUtilsMod._Formatter
 import typingsSlinky.antd.switchMod.SwitchSize
@@ -70,10 +73,28 @@ object antdStrings {
   def `404`: `404` = "404".asInstanceOf[`404`]
   
   @scala.inline
-  def `4Dot5Dot1`: `4Dot5Dot1` = "4.5.1".asInstanceOf[`4Dot5Dot1`]
+  def `4Dot8Dot4`: `4Dot8Dot4` = "4.8.4".asInstanceOf[`4Dot8Dot4`]
   
   @scala.inline
   def `500`: `500` = "500".asInstanceOf[`500`]
+  
+  @scala.inline
+  def Calendar: Calendar = "Calendar".asInstanceOf[Calendar]
+  
+  @scala.inline
+  def DatePicker: DatePicker = "DatePicker".asInstanceOf[DatePicker]
+  
+  @scala.inline
+  def Empty: Empty = "Empty".asInstanceOf[Empty]
+  
+  @scala.inline
+  def Form: Form = "Form".asInstanceOf[Form]
+  
+  @scala.inline
+  def Icon: Icon = "Icon".asInstanceOf[Icon]
+  
+  @scala.inline
+  def Modal: Modal = "Modal".asInstanceOf[Modal]
   
   @scala.inline
   def PATCH: PATCH = "PATCH".asInstanceOf[PATCH]
@@ -85,6 +106,15 @@ object antdStrings {
   def PUT: PUT = "PUT".asInstanceOf[PUT]
   
   @scala.inline
+  def PageHeader: PageHeader = "PageHeader".asInstanceOf[PageHeader]
+  
+  @scala.inline
+  def Pagination: Pagination = "Pagination".asInstanceOf[Pagination]
+  
+  @scala.inline
+  def Popconfirm: Popconfirm = "Popconfirm".asInstanceOf[Popconfirm]
+  
+  @scala.inline
   def SECRET_COMBOBOX_MODE_DO_NOT_USE: SECRET_COMBOBOX_MODE_DO_NOT_USE = "SECRET_COMBOBOX_MODE_DO_NOT_USE".asInstanceOf[SECRET_COMBOBOX_MODE_DO_NOT_USE]
   
   @scala.inline
@@ -92,6 +122,24 @@ object antdStrings {
   
   @scala.inline
   def SELECT_INVERT: SELECT_INVERT = "SELECT_INVERT".asInstanceOf[SELECT_INVERT]
+  
+  @scala.inline
+  def Select: Select = "Select".asInstanceOf[Select]
+  
+  @scala.inline
+  def Table: Table = "Table".asInstanceOf[Table]
+  
+  @scala.inline
+  def Text: Text = "Text".asInstanceOf[Text]
+  
+  @scala.inline
+  def TimePicker: TimePicker = "TimePicker".asInstanceOf[TimePicker]
+  
+  @scala.inline
+  def Transfer: Transfer = "Transfer".asInstanceOf[Transfer]
+  
+  @scala.inline
+  def Upload: Upload = "Upload".asInstanceOf[Upload]
   
   @scala.inline
   def _empty: _empty = "".asInstanceOf[_empty]
@@ -104,6 +152,9 @@ object antdStrings {
   
   @scala.inline
   def additions: additions = "additions".asInstanceOf[additions]
+  
+  @scala.inline
+  def `additions removals`: `additions removals` = ("additions removals").asInstanceOf[`additions removals`]
   
   @scala.inline
   def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
@@ -331,9 +382,6 @@ object antdStrings {
   def circle: circle = "circle".asInstanceOf[circle]
   
   @scala.inline
-  def `circle-outline`: `circle-outline` = "circle-outline".asInstanceOf[`circle-outline`]
-  
-  @scala.inline
   def className: className = "className".asInstanceOf[className]
   
   @scala.inline
@@ -350,9 +398,6 @@ object antdStrings {
   
   @scala.inline
   def column: column = "column".asInstanceOf[column]
-  
-  @scala.inline
-  def combobox: combobox = "combobox".asInstanceOf[combobox]
   
   @scala.inline
   def components: components = "components".asInstanceOf[components]
@@ -445,6 +490,9 @@ object antdStrings {
   def doubleClick: doubleClick = "doubleClick".asInstanceOf[doubleClick]
   
   @scala.inline
+  def down: down = "down".asInstanceOf[down]
+  
+  @scala.inline
   def drag: drag = "drag".asInstanceOf[drag]
   
   @scala.inline
@@ -461,6 +509,9 @@ object antdStrings {
   
   @scala.inline
   def end: end = "end".asInstanceOf[end]
+  
+  @scala.inline
+  def enter: enter = "enter".asInstanceOf[enter]
   
   @scala.inline
   def error: error = "error".asInstanceOf[error]
@@ -503,6 +554,12 @@ object antdStrings {
   
   @scala.inline
   def ghost: ghost = "ghost".asInstanceOf[ghost]
+  
+  @scala.inline
+  def global: global = "global".asInstanceOf[global]
+  
+  @scala.inline
+  def go: go = "go".asInstanceOf[go]
   
   @scala.inline
   def gold: gold = "gold".asInstanceOf[gold]
@@ -628,6 +685,12 @@ object antdStrings {
   def main: main = "main".asInstanceOf[main]
   
   @scala.inline
+  def marginLeft: marginLeft = "marginLeft".asInstanceOf[marginLeft]
+  
+  @scala.inline
+  def marginRight: marginRight = "marginRight".asInstanceOf[marginRight]
+  
+  @scala.inline
   def md: md = "md".asInstanceOf[md]
   
   @scala.inline
@@ -739,6 +802,9 @@ object antdStrings {
   def open: open = "open".asInstanceOf[open]
   
   @scala.inline
+  def optional: optional = "optional".asInstanceOf[optional]
+  
+  @scala.inline
   def orange: orange = "orange".asInstanceOf[orange]
   
   @scala.inline
@@ -808,6 +874,9 @@ object antdStrings {
   def prevIcon: prevIcon = "prevIcon".asInstanceOf[prevIcon]
   
   @scala.inline
+  def previous: previous = "previous".asInstanceOf[previous]
+  
+  @scala.inline
   def primary: primary = "primary".asInstanceOf[primary]
   
   @scala.inline
@@ -833,6 +902,12 @@ object antdStrings {
   
   @scala.inline
   def removals: removals = "removals".asInstanceOf[removals]
+  
+  @scala.inline
+  def `removals additions`: `removals additions` = ("removals additions").asInstanceOf[`removals additions`]
+  
+  @scala.inline
+  def `removals text`: `removals text` = ("removals text").asInstanceOf[`removals text`]
   
   @scala.inline
   def remove: remove = "remove".asInstanceOf[remove]
@@ -886,7 +961,10 @@ object antdStrings {
   def section: section = "section".asInstanceOf[section]
   
   @scala.inline
-  def select: select = "select".asInstanceOf[select]
+  def select_ : select_ = "select".asInstanceOf[select_]
+  
+  @scala.inline
+  def send: send = "send".asInstanceOf[send]
   
   @scala.inline
   def showHour: showHour = "showHour".asInstanceOf[showHour]
@@ -970,7 +1048,13 @@ object antdStrings {
   def tel: tel = "tel".asInstanceOf[tel]
   
   @scala.inline
-  def text: text = "text".asInstanceOf[text]
+  def `text additions`: `text additions` = ("text additions").asInstanceOf[`text additions`]
+  
+  @scala.inline
+  def `text removals`: `text removals` = ("text removals").asInstanceOf[`text removals`]
+  
+  @scala.inline
+  def text_ : text_ = "text".asInstanceOf[text_]
   
   @scala.inline
   def time: time = "time".asInstanceOf[time]
@@ -992,6 +1076,9 @@ object antdStrings {
   
   @scala.inline
   def tree: tree = "tree".asInstanceOf[tree]
+  
+  @scala.inline
+  def up: up = "up".asInstanceOf[up]
   
   @scala.inline
   def uploading: uploading = "uploading".asInstanceOf[uploading]
@@ -1051,10 +1138,28 @@ object antdStrings {
   sealed trait `404` extends ExceptionStatusType
   
   @js.native
-  sealed trait `4Dot5Dot1` extends js.Object
+  sealed trait `4Dot8Dot4` extends js.Object
   
   @js.native
   sealed trait `500` extends ExceptionStatusType
+  
+  @js.native
+  sealed trait Calendar extends LocaleComponent
+  
+  @js.native
+  sealed trait DatePicker extends LocaleComponent
+  
+  @js.native
+  sealed trait Empty extends LocaleComponent
+  
+  @js.native
+  sealed trait Form extends LocaleComponent
+  
+  @js.native
+  sealed trait Icon extends LocaleComponent
+  
+  @js.native
+  sealed trait Modal extends LocaleComponent
   
   @js.native
   sealed trait PATCH extends js.Object
@@ -1066,6 +1171,15 @@ object antdStrings {
   sealed trait PUT extends js.Object
   
   @js.native
+  sealed trait PageHeader extends LocaleComponent
+  
+  @js.native
+  sealed trait Pagination extends LocaleComponent
+  
+  @js.native
+  sealed trait Popconfirm extends LocaleComponent
+  
+  @js.native
   sealed trait SECRET_COMBOBOX_MODE_DO_NOT_USE extends js.Object
   
   @js.native
@@ -1073,6 +1187,24 @@ object antdStrings {
   
   @js.native
   sealed trait SELECT_INVERT extends INTERNAL_SELECTION_ITEM
+  
+  @js.native
+  sealed trait Select extends LocaleComponent
+  
+  @js.native
+  sealed trait Table extends LocaleComponent
+  
+  @js.native
+  sealed trait Text extends LocaleComponent
+  
+  @js.native
+  sealed trait TimePicker extends LocaleComponent
+  
+  @js.native
+  sealed trait Transfer extends LocaleComponent
+  
+  @js.native
+  sealed trait Upload extends LocaleComponent
   
   @js.native
   sealed trait _empty extends ValidateStatus
@@ -1085,6 +1217,9 @@ object antdStrings {
   
   @js.native
   sealed trait additions extends js.Object
+  
+  @js.native
+  sealed trait `additions removals` extends js.Object
   
   @js.native
   sealed trait `additions text` extends js.Object
@@ -1332,9 +1467,6 @@ object antdStrings {
        with ProgressType
   
   @js.native
-  sealed trait `circle-outline` extends ButtonShape
-  
-  @js.native
   sealed trait className extends js.Object
   
   @js.native
@@ -1353,9 +1485,6 @@ object antdStrings {
   
   @js.native
   sealed trait column extends ColumnType
-  
-  @js.native
-  sealed trait combobox extends js.Object
   
   @js.native
   sealed trait components extends js.Object
@@ -1411,6 +1540,7 @@ object antdStrings {
        with RadioGroupOptionType
        with SpinSize
        with SwitchSize
+       with _AvatarSize
   
   @js.native
   sealed trait defaultOpen extends js.Object
@@ -1461,6 +1591,9 @@ object antdStrings {
   sealed trait doubleClick extends ExpandAction
   
   @js.native
+  sealed trait down extends js.Object
+  
+  @js.native
   sealed trait drag extends UploadType
   
   @js.native
@@ -1477,6 +1610,9 @@ object antdStrings {
   
   @js.native
   sealed trait end extends RibbonPlacement
+  
+  @js.native
+  sealed trait enter extends js.Object
   
   @js.native
   sealed trait error
@@ -1526,6 +1662,12 @@ object antdStrings {
   sealed trait ghost
     extends ButtonType
        with DropdownButtonType
+  
+  @js.native
+  sealed trait global extends LocaleComponent
+  
+  @js.native
+  sealed trait go extends js.Object
   
   @js.native
   sealed trait gold extends js.Object
@@ -1611,6 +1753,7 @@ object antdStrings {
   sealed trait large
     extends ListSize
        with SpinSize
+       with _AvatarSize
        with _SizeType
   
   @js.native
@@ -1660,19 +1803,25 @@ object antdStrings {
   sealed trait loading extends NoticeType
   
   @js.native
-  sealed trait locale extends js.Object
+  sealed trait locale extends LocaleComponent
   
   @js.native
   sealed trait location extends js.Object
   
   @js.native
-  sealed trait ltr extends js.Object
+  sealed trait ltr extends _DirectionType
   
   @js.native
   sealed trait magenta extends js.Object
   
   @js.native
   sealed trait main extends js.Object
+  
+  @js.native
+  sealed trait marginLeft extends js.Object
+  
+  @js.native
+  sealed trait marginRight extends js.Object
   
   @js.native
   sealed trait md
@@ -1788,6 +1937,9 @@ object antdStrings {
   sealed trait open extends js.Object
   
   @js.native
+  sealed trait optional extends js.Object
+  
+  @js.native
   sealed trait orange extends js.Object
   
   @js.native
@@ -1857,6 +2009,9 @@ object antdStrings {
   sealed trait prevIcon extends js.Object
   
   @js.native
+  sealed trait previous extends js.Object
+  
+  @js.native
   sealed trait primary
     extends ButtonType
        with DropdownButtonType
@@ -1884,6 +2039,12 @@ object antdStrings {
   
   @js.native
   sealed trait removals extends js.Object
+  
+  @js.native
+  sealed trait `removals additions` extends js.Object
+  
+  @js.native
+  sealed trait `removals text` extends js.Object
   
   @js.native
   sealed trait remove extends js.Object
@@ -1926,7 +2087,7 @@ object antdStrings {
   sealed trait row extends _ExpandType
   
   @js.native
-  sealed trait rtl extends js.Object
+  sealed trait rtl extends _DirectionType
   
   @js.native
   sealed trait scrollx extends CarouselEffect
@@ -1944,7 +2105,10 @@ object antdStrings {
   sealed trait section extends js.Object
   
   @js.native
-  sealed trait select extends UploadType
+  sealed trait select_ extends UploadType
+  
+  @js.native
+  sealed trait send extends js.Object
   
   @js.native
   sealed trait showHour extends js.Object
@@ -1979,6 +2143,7 @@ object antdStrings {
        with ProgressSize
        with SpinSize
        with SwitchSize
+       with _AvatarSize
        with _SizeType
   
   @js.native
@@ -2016,7 +2181,8 @@ object antdStrings {
   
   @js.native
   sealed trait success
-    extends IconType
+    extends BaseType
+       with IconType
        with NoticeType
        with ResultStatusType
        with UploadFileStatus
@@ -2041,7 +2207,13 @@ object antdStrings {
   sealed trait tel extends js.Object
   
   @js.native
-  sealed trait text
+  sealed trait `text additions` extends js.Object
+  
+  @js.native
+  sealed trait `text removals` extends js.Object
+  
+  @js.native
+  sealed trait text_
     extends ButtonType
        with UploadListType
   
@@ -2081,6 +2253,9 @@ object antdStrings {
   
   @js.native
   sealed trait tree extends js.Object
+  
+  @js.native
+  sealed trait up extends js.Object
   
   @js.native
   sealed trait uploading extends UploadFileStatus

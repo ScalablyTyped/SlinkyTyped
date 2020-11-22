@@ -10,6 +10,8 @@ trait SlotRenderEndedEvent extends Event {
   
   var advertiserId: js.UndefOr[Double] = js.native
   
+  var campaignId: js.UndefOr[Double] = js.native
+  
   var creativeId: js.UndefOr[Double] = js.native
   
   var isEmpty: Boolean = js.native
@@ -59,6 +61,12 @@ object SlotRenderEndedEvent {
     
     @scala.inline
     def deleteAdvertiserId: Self = this.set("advertiserId", js.undefined)
+    
+    @scala.inline
+    def setCampaignId(value: Double): Self = this.set("campaignId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCampaignId: Self = this.set("campaignId", js.undefined)
     
     @scala.inline
     def setCreativeId(value: Double): Self = this.set("creativeId", value.asInstanceOf[js.Any])

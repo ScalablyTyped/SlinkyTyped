@@ -2,8 +2,10 @@ package typingsSlinky.reactResizeDetector.components
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactResizeDetector.anon.Leading
 import typingsSlinky.reactResizeDetector.mod.ReactResizeDetectorDimensions
 import typingsSlinky.reactResizeDetector.mod.ReactResizeDetectorProps
@@ -57,6 +59,18 @@ object ReactResizeDetector {
     
     @scala.inline
     def targetDomEl(value: HTMLElement): this.type = set("targetDomEl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def targetRefRefObject(value: ReactRef[HTMLElement]): this.type = set("targetRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def targetRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("targetRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def targetRef(value: Ref[HTMLElement]): this.type = set("targetRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def targetRefNull: this.type = set("targetRef", null)
   }
   
   def withProps(p: ReactResizeDetectorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -33,7 +33,7 @@ trait DescribedUser extends js.Object {
   var Policy: js.UndefOr[typingsSlinky.awsSdk.transferMod.Policy] = js.native
   
   /**
-    * Specifies the IAM role that controls your users' access to your Amazon S3 bucket. The policies attached to this role will determine the level of access you want to provide your users when transferring files into and out of your Amazon S3 bucket or buckets. The IAM role should also contain a trust relationship that allows a file transfer protocol-enabled server to access your resources when servicing your users' transfer requests.
+    * Specifies the IAM role that controls your users' access to your Amazon S3 bucket. The policies attached to this role will determine the level of access you want to provide your users when transferring files into and out of your Amazon S3 bucket or buckets. The IAM role should also contain a trust relationship that allows a server to access your resources when servicing your users' transfer requests.
     */
   var Role: js.UndefOr[typingsSlinky.awsSdk.transferMod.Role] = js.native
   
@@ -48,7 +48,7 @@ trait DescribedUser extends js.Object {
   var Tags: js.UndefOr[typingsSlinky.awsSdk.transferMod.Tags] = js.native
   
   /**
-    * Specifies the name of the user that was requested to be described. User names are used for authentication purposes. This is the string that will be used by your user when they log in to your file transfer protocol-enabled server.
+    * Specifies the name of the user that was requested to be described. User names are used for authentication purposes. This is the string that will be used by your user when they log in to your server.
     */
   var UserName: js.UndefOr[typingsSlinky.awsSdk.transferMod.UserName] = js.native
 }

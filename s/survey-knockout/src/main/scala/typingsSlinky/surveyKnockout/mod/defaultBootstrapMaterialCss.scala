@@ -3,24 +3,24 @@ package typingsSlinky.surveyKnockout.mod
 import typingsSlinky.surveyKnockout.anon.Body
 import typingsSlinky.surveyKnockout.anon.ButtonNext
 import typingsSlinky.surveyKnockout.anon.CellText
+import typingsSlinky.surveyKnockout.anon.CheckedPath
 import typingsSlinky.surveyKnockout.anon.ClearButton
 import typingsSlinky.surveyKnockout.anon.Complete
 import typingsSlinky.surveyKnockout.anon.Container
 import typingsSlinky.surveyKnockout.anon.Content
-import typingsSlinky.surveyKnockout.anon.Control
-import typingsSlinky.surveyKnockout.anon.ControlOther
 import typingsSlinky.surveyKnockout.anon.Controls
 import typingsSlinky.surveyKnockout.anon.Description
+import typingsSlinky.surveyKnockout.anon.DetailButton
+import typingsSlinky.surveyKnockout.anon.DetailButtonExpanded
 import typingsSlinky.surveyKnockout.anon.Disabled
 import typingsSlinky.surveyKnockout.anon.Error
 import typingsSlinky.surveyKnockout.anon.FileDecorator
-import typingsSlinky.surveyKnockout.anon.FlowRoot
 import typingsSlinky.surveyKnockout.anon.Icon
 import typingsSlinky.surveyKnockout.anon.Image
 import typingsSlinky.surveyKnockout.anon.ItemControl
 import typingsSlinky.surveyKnockout.anon.ItemDecorator
 import typingsSlinky.surveyKnockout.anon.ItemTitle
-import typingsSlinky.surveyKnockout.anon.ItemValueRoot
+import typingsSlinky.surveyKnockout.anon.Other
 import typingsSlinky.surveyKnockout.anon.Root
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,7 +34,7 @@ object defaultBootstrapMaterialCss extends js.Object {
   
   var bodyEmpty: String = js.native
   
-  var boolean: Control = js.native
+  var boolean: CheckedPath = js.native
   
   var checkbox: ItemDecorator = js.native
   
@@ -46,7 +46,7 @@ object defaultBootstrapMaterialCss extends js.Object {
   
   var description: String = js.native
   
-  var dropdown: ControlOther = js.native
+  var dropdown: Other = js.native
   
   var error: Icon = js.native
   
@@ -72,9 +72,9 @@ object defaultBootstrapMaterialCss extends js.Object {
   
   var matrix: CellText = js.native
   
-  var matrixdropdown: ItemValueRoot = js.native
+  var matrixdropdown: DetailButton = js.native
   
-  var matrixdynamic: FlowRoot = js.native
+  var matrixdynamic: DetailButtonExpanded = js.native
   
   var multipletext: ItemTitle = js.native
   

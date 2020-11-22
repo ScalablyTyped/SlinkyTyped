@@ -13,6 +13,7 @@ package object mod {
     - typingsSlinky.sparqljs.mod.FunctionCallExpression
     - typingsSlinky.sparqljs.mod.AggregateExpression
     - typingsSlinky.sparqljs.mod.BgpPattern
+    - typingsSlinky.sparqljs.mod.GraphPattern
     - typingsSlinky.sparqljs.mod.GroupPattern
     - typingsSlinky.sparqljs.mod.Tuple
     - typingsSlinky.sparqljs.mod.Term
@@ -23,7 +24,9 @@ package object mod {
   
   type LiteralTerm = typingsSlinky.rdfJs.mod.Literal
   
-  type Term = typingsSlinky.sparqljs.mod.VariableTerm | typingsSlinky.sparqljs.mod.IriTerm | typingsSlinky.sparqljs.mod.LiteralTerm | typingsSlinky.sparqljs.mod.BlankTerm
+  type QuadTerm = typingsSlinky.rdfJs.mod.Quad
+  
+  type Term = typingsSlinky.sparqljs.mod.VariableTerm | typingsSlinky.sparqljs.mod.IriTerm | typingsSlinky.sparqljs.mod.LiteralTerm | typingsSlinky.sparqljs.mod.BlankTerm | typingsSlinky.sparqljs.mod.QuadTerm
   
   type ValuePatternRow = org.scalablytyped.runtime.StringDictionary[
     js.UndefOr[

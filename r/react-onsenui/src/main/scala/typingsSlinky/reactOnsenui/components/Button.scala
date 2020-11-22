@@ -28,6 +28,9 @@ object Button {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def icon(value: String): this.type = set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline

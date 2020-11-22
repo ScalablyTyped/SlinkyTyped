@@ -2,6 +2,7 @@ package typingsSlinky.googlepay
 
 import typingsSlinky.googlepay.google.payments.api.BillingAddressFormat
 import typingsSlinky.googlepay.google.payments.api.ButtonColor
+import typingsSlinky.googlepay.google.payments.api.ButtonSizeMode
 import typingsSlinky.googlepay.google.payments.api.ButtonType
 import typingsSlinky.googlepay.google.payments.api.CallbackIntent
 import typingsSlinky.googlepay.google.payments.api.CallbackTrigger
@@ -168,13 +169,28 @@ object googlepayStrings {
   def black: black = "black".asInstanceOf[black]
   
   @scala.inline
+  def buy: buy = "buy".asInstanceOf[buy]
+  
+  @scala.inline
   def default_ : default_ = "default".asInstanceOf[default_]
+  
+  @scala.inline
+  def donate: donate = "donate".asInstanceOf[donate]
+  
+  @scala.inline
+  def fill: fill = "fill".asInstanceOf[fill]
   
   @scala.inline
   def long: long = "long".asInstanceOf[long]
   
   @scala.inline
+  def plain: plain = "plain".asInstanceOf[plain]
+  
+  @scala.inline
   def short: short = "short".asInstanceOf[short]
+  
+  @scala.inline
+  def static: static = "static".asInstanceOf[static]
   
   @scala.inline
   def white: white = "white".asInstanceOf[white]
@@ -331,13 +347,28 @@ object googlepayStrings {
   sealed trait black extends ButtonColor
   
   @js.native
+  sealed trait buy extends ButtonType
+  
+  @js.native
   sealed trait default_ extends ButtonColor
+  
+  @js.native
+  sealed trait donate extends ButtonType
+  
+  @js.native
+  sealed trait fill extends ButtonSizeMode
   
   @js.native
   sealed trait long extends ButtonType
   
   @js.native
+  sealed trait plain extends ButtonType
+  
+  @js.native
   sealed trait short extends ButtonType
+  
+  @js.native
+  sealed trait static extends ButtonSizeMode
   
   @js.native
   sealed trait white extends ButtonColor

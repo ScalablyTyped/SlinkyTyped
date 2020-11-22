@@ -18,7 +18,7 @@ trait DashboardVersion extends js.Object {
   var CreatedTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The Amazon Resource Numbers (ARNs) for the datasets that are associated with a version of the dashboard.
+    * The Amazon Resource Numbers (ARNs) for the datasets that are associated with this version of the dashboard.
     */
   var DataSetArns: js.UndefOr[DataSetArnsList] = js.native
   
@@ -28,9 +28,14 @@ trait DashboardVersion extends js.Object {
   var Description: js.UndefOr[VersionDescription] = js.native
   
   /**
-    * Errors.
+    * Errors associated with this dashboard version.
     */
   var Errors: js.UndefOr[DashboardErrorList] = js.native
+  
+  /**
+    * A list of the associated sheets with the unique identifier and name of each sheet.
+    */
+  var Sheets: js.UndefOr[SheetList] = js.native
   
   /**
     * Source entity ARN.
@@ -43,7 +48,12 @@ trait DashboardVersion extends js.Object {
   var Status: js.UndefOr[ResourceStatus] = js.native
   
   /**
-    * Version number.
+    * The ARN of the theme associated with a version of the dashboard.
+    */
+  var ThemeArn: js.UndefOr[Arn] = js.native
+  
+  /**
+    * Version number for this version of the dashboard.
     */
   var VersionNumber: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.VersionNumber] = js.native
 }
@@ -107,6 +117,15 @@ object DashboardVersion {
     def deleteErrors: Self = this.set("Errors", js.undefined)
     
     @scala.inline
+    def setSheetsVarargs(value: Sheet*): Self = this.set("Sheets", js.Array(value :_*))
+    
+    @scala.inline
+    def setSheets(value: SheetList): Self = this.set("Sheets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSheets: Self = this.set("Sheets", js.undefined)
+    
+    @scala.inline
     def setSourceEntityArn(value: Arn): Self = this.set("SourceEntityArn", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -117,6 +136,12 @@ object DashboardVersion {
     
     @scala.inline
     def deleteStatus: Self = this.set("Status", js.undefined)
+    
+    @scala.inline
+    def setThemeArn(value: Arn): Self = this.set("ThemeArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThemeArn: Self = this.set("ThemeArn", js.undefined)
     
     @scala.inline
     def setVersionNumber(value: VersionNumber): Self = this.set("VersionNumber", value.asInstanceOf[js.Any])

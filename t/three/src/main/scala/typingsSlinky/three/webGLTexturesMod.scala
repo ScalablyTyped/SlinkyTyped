@@ -43,8 +43,6 @@ object webGLTexturesMod extends js.Object {
     
     def setTextureCube(texture: js.Any, slot: Double): Unit = js.native
     
-    def setTextureCubeDynamic(texture: js.Any, slot: Double): Unit = js.native
-    
     def setupRenderTarget(renderTarget: js.Any): Unit = js.native
     
     def updateMultisampleRenderTarget(renderTarget: js.Any): Unit = js.native

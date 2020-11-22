@@ -26,8 +26,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactInlinesvg.mod.default
+import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`additions removals`
 import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`additions text`
 import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`inline`
+import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`removals additions`
+import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`removals text`
+import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`text additions`
+import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`text removals`
 import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.additions
 import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.all
 import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.ascending
@@ -218,7 +223,9 @@ object ReactInlinesvg {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

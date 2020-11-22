@@ -10,6 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait OptionsPolicyId extends js.Object {
   
+  var digestValue: js.UndefOr[String] = js.native
+  
   var hash: AlgorithmIdentifier = js.native
   
   var identifier: OptionsPolicyIdentifier = js.native
@@ -49,6 +51,12 @@ object OptionsPolicyId {
     
     @scala.inline
     def setIdentifier(value: OptionsPolicyIdentifier): Self = this.set("identifier", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDigestValue(value: String): Self = this.set("digestValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDigestValue: Self = this.set("digestValue", js.undefined)
     
     @scala.inline
     def setQualifiersVarargs(value: (OptionsPolicyUserNotice | String)*): Self = this.set("qualifiers", js.Array(value :_*))

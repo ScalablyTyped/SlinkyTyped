@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createHeritageClause extends js.Object {
   
+  /** @deprecated Use `factory.createHeritageClause` or the factory supplied by your transformation context instead. */
   def apply(token: ExtendsKeyword, types: js.Array[ExpressionWithTypeArguments]): HeritageClause = js.native
   def apply(token: ImplementsKeyword, types: js.Array[ExpressionWithTypeArguments]): HeritageClause = js.native
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeGameServerGroupOutput extends js.Object {
   
   /**
-    * An object that describes the requested game server group resource. 
+    * An object with the property settings for the requested game server group resource. 
     */
   var GameServerGroup: js.UndefOr[typingsSlinky.awsSdk.gameliftMod.GameServerGroup] = js.native
 }

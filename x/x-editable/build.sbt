@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "x-editable"
-version := "v1.5.1-dt-20200515Z-9ee9f6"
+version := "v1.5.1-dt-20201002Z-9ee9f6"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

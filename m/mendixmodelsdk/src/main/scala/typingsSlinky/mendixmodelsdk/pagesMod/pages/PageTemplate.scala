@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
@@ -10,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/page-templates relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/page-templates relevant section in reference guide}
   *
   * In version 7.7.0: introduced
   */
@@ -25,7 +24,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument because Already inherited
 - typingsSlinky.mendixmodelsdk.pagesMod.pages.IFormBase because Already inherited
 - typingsSlinky.mendixmodelsdk.pagesMod.pages.ITemplateFormBase because Already inherited
-- typingsSlinky.mendixmodelsdk.pagesMod.pages.IPageTemplate because var conflicts: containerAsFolderBase, displayName, documentationUrl, id, isLoaded, model, structureTypeName, unit. Inlined `type`, layoutCall */ @JSImport("mendixmodelsdk/dist/gen/pages", "pages.PageTemplate")
+- typingsSlinky.mendixmodelsdk.pagesMod.pages.IPageTemplate because var conflicts: containerAsFolderBase, displayName, documentationUrl, id, isLoaded, model, structureTypeName, unit. Inlined `type`, layoutCall, templateType */ @JSImport("mendixmodelsdk/dist/gen/pages", "pages.PageTemplate")
 @js.native
 class PageTemplate protected () extends TemplateFormBase {
   def this(
@@ -64,9 +63,6 @@ class PageTemplate protected () extends TemplateFormBase {
   @JSName("layoutCall")
   val layoutCall_FPageTemplate: ILayoutCall = js.native
   
-  @JSName("model")
-  var model_FPageTemplate: IModel = js.native
-  
   /**
     * In version 8.0.0: deleted
     */
@@ -74,11 +70,26 @@ class PageTemplate protected () extends TemplateFormBase {
   def style_=(newValue: String): Unit = js.native
   
   /**
+    * In version 8.13.0: introduced
+    */
+  def templateType: TemplateType = js.native
+  def templateType_=(newValue: TemplateType): Unit = js.native
+  /**
+    * This property is required and cannot be set to null.
+    *
+    * In version 8.13.0: introduced
+    */
+  @JSName("templateType")
+  val templateType_FPageTemplate: ITemplateType = js.native
+  
+  /**
+    * In version 8.13.0: deleted
     * In version 7.17.0: added public
     */
   def `type`: PageTemplateType = js.native
   def type_=(newValue: PageTemplateType): Unit = js.native
   /**
+    * In version 8.13.0: deleted
     * In version 7.17.0: added public
     */
   @JSName("type")

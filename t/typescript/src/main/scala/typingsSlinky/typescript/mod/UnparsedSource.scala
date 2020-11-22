@@ -14,11 +14,11 @@ trait UnparsedSource extends Node {
   var helpers: js.UndefOr[js.Array[UnscopedEmitHelper]] = js.native
   
   @JSName("kind")
-  var kind_UnparsedSource: typingsSlinky.typescript.mod.SyntaxKind.UnparsedSource = js.native
+  val kind_UnparsedSource: typingsSlinky.typescript.mod.SyntaxKind.UnparsedSource = js.native
   
   var libReferenceDirectives: js.Array[FileReference] = js.native
   
-  var prologues: js.Array[UnparsedPrologue] = js.native
+  val prologues: js.Array[UnparsedPrologue] = js.native
   
   var referencedFiles: js.Array[FileReference] = js.native
   
@@ -26,11 +26,11 @@ trait UnparsedSource extends Node {
   
   var sourceMapText: js.UndefOr[java.lang.String] = js.native
   
-  var syntheticReferences: js.UndefOr[js.Array[UnparsedSyntheticReference]] = js.native
+  val syntheticReferences: js.UndefOr[js.Array[UnparsedSyntheticReference]] = js.native
   
   var text: java.lang.String = js.native
   
-  var texts: js.Array[UnparsedSourceText] = js.native
+  val texts: js.Array[UnparsedSourceText] = js.native
   
   var typeReferenceDirectives: js.UndefOr[js.Array[java.lang.String]] = js.native
 }

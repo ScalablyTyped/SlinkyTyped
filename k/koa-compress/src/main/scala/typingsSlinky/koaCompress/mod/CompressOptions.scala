@@ -16,6 +16,12 @@ trait CompressOptions extends js.Object {
   var br: js.UndefOr[BrotliOptions | `false`] = js.native
   
   /**
+    * An optional string, which specifies what encoders to use for requests
+    * without Accept-Encoding. Default: 'idenity'.
+    */
+  var defaultEncoding: js.UndefOr[String] = js.native
+  
+  /**
     * Options for deflate compression.
     */
   var deflate: js.UndefOr[ZlibOptions | `false`] = js.native
@@ -63,6 +69,12 @@ object CompressOptions {
     
     @scala.inline
     def deleteBr: Self = this.set("br", js.undefined)
+    
+    @scala.inline
+    def setDefaultEncoding(value: String): Self = this.set("defaultEncoding", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultEncoding: Self = this.set("defaultEncoding", js.undefined)
     
     @scala.inline
     def setDeflate(value: ZlibOptions | `false`): Self = this.set("deflate", value.asInstanceOf[js.Any])

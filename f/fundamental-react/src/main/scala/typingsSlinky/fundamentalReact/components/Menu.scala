@@ -2,6 +2,7 @@ package typingsSlinky.fundamentalReact.components
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLLIElement
@@ -25,8 +26,13 @@ import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`3`
 import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`4`
 import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`5`
 import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`6`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals text`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.all
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.ascending
@@ -78,6 +84,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.PropsWithChildren
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -209,7 +216,9 @@ object Menu {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -642,7 +651,10 @@ object Menu {
       def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def addon(value: String): this.type = set("addon", value.asInstanceOf[js.Any])
+      def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def addonAfter(value: String): this.type = set("addonAfter", value.asInstanceOf[js.Any])
       
       @scala.inline
       def addonBefore(value: String): this.type = set("addonBefore", value.asInstanceOf[js.Any])
@@ -756,7 +768,9 @@ object Menu {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -834,6 +848,9 @@ object Menu {
       def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
       
       @scala.inline
+      def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+      
+      @scala.inline
       def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
       
       @scala.inline
@@ -901,9 +918,6 @@ object Menu {
       
       @scala.inline
       def onChange(value: SyntheticEvent[EventTarget with HTMLLIElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
-      
-      @scala.inline
-      def onClick(value: SyntheticMouseEvent[HTMLLIElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
       
       @scala.inline
       def onCompositionEnd(value: SyntheticCompositionEvent[HTMLLIElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
@@ -1134,6 +1148,12 @@ object Menu {
       def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
       
       @scala.inline
+      def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def separator(value: Boolean): this.type = set("separator", value.asInstanceOf[js.Any])
+      
+      @scala.inline
       def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
       
       @scala.inline
@@ -1175,7 +1195,13 @@ object Menu {
     
     def withProps(p: PropsWithChildren[MenuItemProps]): typingsSlinky.fundamentalReact.components.Menu.Item.Builder = new typingsSlinky.fundamentalReact.components.Menu.Item.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
-    implicit def make(companion: Item.type): typingsSlinky.fundamentalReact.components.Menu.Item.Builder = new typingsSlinky.fundamentalReact.components.Menu.Item.Builder(js.Array(this.component, js.Dictionary.empty))()
+    @scala.inline
+    def apply(
+      onClick: (js.UndefOr[js.Function1[/* event */ SyntheticMouseEvent[HTMLButtonElement], Unit]]) with js.UndefOr[MouseEventHandler[HTMLLIElement]]
+    ): typingsSlinky.fundamentalReact.components.Menu.Item.Builder = {
+      val __props = js.Dynamic.literal(onClick = onClick.asInstanceOf[js.Any])
+      new typingsSlinky.fundamentalReact.components.Menu.Item.Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[MenuItemProps]]))
+    }
   }
   
   object List {
@@ -1304,7 +1330,9 @@ object Menu {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -1843,7 +1871,9 @@ object Menu {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

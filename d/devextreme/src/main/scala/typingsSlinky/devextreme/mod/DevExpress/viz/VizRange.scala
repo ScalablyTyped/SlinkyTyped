@@ -16,15 +16,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait VizRange extends js.Object {
   
-  /** @name VizRange.endValue */
+  /**
+    * [descr:VizRange.endValue]
+    */
   var endValue: js.UndefOr[Double | js.Date | String] = js.native
   
-  /** @name VizRange.length */
+  /**
+    * [descr:VizRange.length]
+    */
   var length: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name VizRange.startValue */
+  /**
+    * [descr:VizRange.startValue]
+    */
   var startValue: js.UndefOr[Double | js.Date | String] = js.native
 }
 object VizRange {

@@ -1,7 +1,7 @@
 
 # Scala.js typings for imagemin-svgo
 
-Typings are for version 7.0
+Typings are for version 8.0
 
 ## Library description:
 SVGO imagemin plugin

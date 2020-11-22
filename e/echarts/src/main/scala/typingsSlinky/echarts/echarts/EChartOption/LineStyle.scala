@@ -13,13 +13,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LineStyle extends js.Object {
   
-  var color: js.UndefOr[String | js.Array[String]] = js.native
+  var color: js.UndefOr[Color] = js.native
   
   var opacity: js.UndefOr[Double] = js.native
   
   var shadowBlur: js.UndefOr[Double] = js.native
   
-  var shadowColor: js.UndefOr[String] = js.native
+  var shadowColor: js.UndefOr[Color] = js.native
   
   var shadowOffsetX: js.UndefOr[Double] = js.native
   
@@ -53,10 +53,7 @@ object LineStyle {
     }
     
     @scala.inline
-    def setColorVarargs(value: String*): Self = this.set("color", js.Array(value :_*))
-    
-    @scala.inline
-    def setColor(value: String | js.Array[String]): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
@@ -74,7 +71,7 @@ object LineStyle {
     def deleteShadowBlur: Self = this.set("shadowBlur", js.undefined)
     
     @scala.inline
-    def setShadowColor(value: String): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
+    def setShadowColor(value: Color): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShadowColor: Self = this.set("shadowColor", js.undefined)

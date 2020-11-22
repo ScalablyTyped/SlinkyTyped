@@ -140,11 +140,11 @@ object ammoJSPluginMod extends js.Object {
     
     var _tmpContactCallbackResult: js.Any = js.native
     
+    var _tmpContactPoint: js.Any = js.native
+    
     var _tmpMatrix: js.Any = js.native
     
     var _tmpQuaternion: js.Any = js.native
-    
-    var _tmpVector: js.Any = js.native
     
     var _useDeltaForWorldStep: js.Any = js.native
     

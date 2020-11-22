@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LineSymbolMarkerConstructor
   extends /**
-  * LineSymbolMarker is used for rendering a simple marker graphic on a [SimpleLineSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleLineSymbol.html). Markers can enhance the cartographic information of a line by providing additional visual cues about the associated feature.
+  * LineSymbolMarker is used for rendering a simple marker graphic on a [SimpleLineSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-SimpleLineSymbol.html).
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-LineSymbolMarker.html)
   */

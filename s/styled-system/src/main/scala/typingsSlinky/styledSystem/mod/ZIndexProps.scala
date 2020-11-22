@@ -15,7 +15,7 @@ trait ZIndexProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Obje
     */
   var zIndex: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object ZIndexProps {
     @scala.inline
     def setZIndex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
           ThemeType
         ]
     ): Self = this.set("zIndex", value.asInstanceOf[js.Any])

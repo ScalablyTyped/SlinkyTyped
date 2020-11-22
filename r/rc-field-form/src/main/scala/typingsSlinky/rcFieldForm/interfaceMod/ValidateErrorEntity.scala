@@ -6,24 +6,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ValidateErrorEntity extends js.Object {
+trait ValidateErrorEntity[Values] extends js.Object {
   
   var errorFields: js.Array[Errors] = js.native
   
   var outOfDate: Boolean = js.native
   
-  var values: Store = js.native
+  var values: Values = js.native
 }
 object ValidateErrorEntity {
   
   @scala.inline
-  def apply(errorFields: js.Array[Errors], outOfDate: Boolean, values: Store): ValidateErrorEntity = {
+  def apply[Values](errorFields: js.Array[Errors], outOfDate: Boolean, values: Values): ValidateErrorEntity[Values] = {
     val __obj = js.Dynamic.literal(errorFields = errorFields.asInstanceOf[js.Any], outOfDate = outOfDate.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ValidateErrorEntity]
+    __obj.asInstanceOf[ValidateErrorEntity[Values]]
   }
   
   @scala.inline
-  implicit class ValidateErrorEntityOps[Self <: ValidateErrorEntity] (val x: Self) extends AnyVal {
+  implicit class ValidateErrorEntityOps[Self <: ValidateErrorEntity[_], Values] (val x: Self with ValidateErrorEntity[Values]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -47,6 +47,6 @@ object ValidateErrorEntity {
     def setOutOfDate(value: Boolean): Self = this.set("outOfDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValues(value: Store): Self = this.set("values", value.asInstanceOf[js.Any])
+    def setValues(value: Values): Self = this.set("values", value.asInstanceOf[js.Any])
   }
 }

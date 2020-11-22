@@ -1,7 +1,7 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.groupMod.Options
-import typingsSlinky.ol.groupMod.default
+import typingsSlinky.ol.graticuleMod.Options
+import typingsSlinky.ol.graticuleMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,8 +11,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object layerMod extends js.Object {
   
   @js.native
-  class Group () extends default {
+  class Graticule () extends default {
     def this(opt_options: Options) = this()
+  }
+  
+  @js.native
+  class Group ()
+    extends typingsSlinky.ol.groupMod.default {
+    def this(opt_options: typingsSlinky.ol.groupMod.Options) = this()
   }
   
   @js.native
@@ -31,6 +37,12 @@ object layerMod extends js.Object {
   class Layer[SourceType /* <: typingsSlinky.ol.sourceSourceMod.default */] protected ()
     extends typingsSlinky.ol.layerLayerMod.default[SourceType] {
     def this(options: typingsSlinky.ol.layerLayerMod.Options) = this()
+  }
+  
+  @js.native
+  class MapboxVector protected ()
+    extends typingsSlinky.ol.mapboxVectorMod.default {
+    def this(options: typingsSlinky.ol.mapboxVectorMod.Options) = this()
   }
   
   @js.native
@@ -55,5 +67,11 @@ object layerMod extends js.Object {
   class VectorTile ()
     extends typingsSlinky.ol.vectorTileMod.default {
     def this(opt_options: typingsSlinky.ol.vectorTileMod.Options) = this()
+  }
+  
+  @js.native
+  class WebGLPoints protected ()
+    extends typingsSlinky.ol.webGLPointsMod.default {
+    def this(options: typingsSlinky.ol.webGLPointsMod.Options) = this()
   }
 }

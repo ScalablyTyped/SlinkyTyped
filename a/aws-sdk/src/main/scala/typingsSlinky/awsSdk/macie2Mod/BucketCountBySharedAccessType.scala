@@ -18,9 +18,14 @@ trait BucketCountBySharedAccessType extends js.Object {
   var internal: js.UndefOr[long] = js.native
   
   /**
-    * The total number of buckets that aren't shared with any other AWS accounts.
+    * The total number of buckets that aren't shared with other AWS accounts.
     */
   var notShared: js.UndefOr[long] = js.native
+  
+  /**
+    * The total number of buckets that Amazon Macie wasn't able to evaluate shared access settings for. Macie can't determine whether these buckets are shared with other AWS accounts.
+    */
+  var unknown: js.UndefOr[long] = js.native
 }
 object BucketCountBySharedAccessType {
   
@@ -62,5 +67,11 @@ object BucketCountBySharedAccessType {
     
     @scala.inline
     def deleteNotShared: Self = this.set("notShared", js.undefined)
+    
+    @scala.inline
+    def setUnknown(value: long): Self = this.set("unknown", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnknown: Self = this.set("unknown", js.undefined)
   }
 }

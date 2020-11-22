@@ -8,21 +8,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxCircularGaugeOptions extends BaseGaugeOptions[dxCircularGauge] {
   
-  /** @name dxCircularGauge.Options.geometry */
+  /**
+    * [descr:dxCircularGauge.Options.geometry]
+    */
   var geometry: js.UndefOr[EndAngle] = js.native
   
-  /** @name dxCircularGauge.Options.rangeContainer */
+  /**
+    * [descr:dxCircularGauge.Options.rangeContainer]
+    */
   @JSName("rangeContainer")
   var rangeContainer_dxCircularGaugeOptions: js.UndefOr[dxCircularGaugeRangeContainer] = js.native
   
-  /** @name dxCircularGauge.Options.scale */
+  /**
+    * [descr:dxCircularGauge.Options.scale]
+    */
   @JSName("scale")
   var scale_dxCircularGaugeOptions: js.UndefOr[dxCircularGaugeScale] = js.native
   
-  /** @name dxCircularGauge.Options.subvalueIndicator */
+  /**
+    * [descr:dxCircularGauge.Options.subvalueIndicator]
+    */
   var subvalueIndicator: js.UndefOr[GaugeIndicator] = js.native
   
-  /** @name dxCircularGauge.Options.valueIndicator */
+  /**
+    * [descr:dxCircularGauge.Options.valueIndicator]
+    */
   var valueIndicator: js.UndefOr[GaugeIndicator] = js.native
 }
 object dxCircularGaugeOptions {

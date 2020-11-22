@@ -7,8 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StringRegexOptions extends js.Object {
   
+  /**
+    * when true, the provided pattern will be disallowed instead of required.
+    *
+    * @default false
+    */
   var invert: js.UndefOr[Boolean] = js.native
   
+  /**
+    * optional pattern name.
+    */
   var name: js.UndefOr[String] = js.native
 }
 object StringRegexOptions {

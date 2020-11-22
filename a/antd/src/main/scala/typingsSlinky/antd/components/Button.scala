@@ -19,8 +19,13 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.Delay
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -58,7 +63,7 @@ import typingsSlinky.antd.antdStrings.search
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.tel
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
@@ -69,11 +74,12 @@ import typingsSlinky.antd.buttonButtonMod.ButtonProps
 import typingsSlinky.antd.buttonButtonMod.ButtonShape
 import typingsSlinky.antd.buttonButtonMod.ButtonType
 import typingsSlinky.antd.buttonGroupMod.ButtonGroupProps
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -202,7 +208,9 @@ object Button {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -343,7 +351,7 @@ object Button {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
+    def inputMode(value: none | text_ | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -631,7 +639,7 @@ object Button {
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def referrerPolicy(value: String): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
+    def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])

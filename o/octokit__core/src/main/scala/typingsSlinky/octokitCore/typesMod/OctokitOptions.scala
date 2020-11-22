@@ -1,6 +1,7 @@
 package typingsSlinky.octokitCore.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.octokitCore.anon.Debug
 import typingsSlinky.octokitTypes.requestRequestOptionsMod.RequestRequestOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,9 +15,17 @@ trait OctokitOptions
   
   var authStrategy: js.UndefOr[js.Any] = js.native
   
+  var baseUrl: js.UndefOr[String] = js.native
+  
+  var log: js.UndefOr[Debug] = js.native
+  
+  var previews: js.UndefOr[js.Array[String]] = js.native
+  
   var request: js.UndefOr[RequestRequestOptions] = js.native
   
   var timeZone: js.UndefOr[String] = js.native
+  
+  var userAgent: js.UndefOr[String] = js.native
 }
 object OctokitOptions {
   
@@ -54,6 +63,27 @@ object OctokitOptions {
     def deleteAuthStrategy: Self = this.set("authStrategy", js.undefined)
     
     @scala.inline
+    def setBaseUrl(value: String): Self = this.set("baseUrl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBaseUrl: Self = this.set("baseUrl", js.undefined)
+    
+    @scala.inline
+    def setLog(value: Debug): Self = this.set("log", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLog: Self = this.set("log", js.undefined)
+    
+    @scala.inline
+    def setPreviewsVarargs(value: String*): Self = this.set("previews", js.Array(value :_*))
+    
+    @scala.inline
+    def setPreviews(value: js.Array[String]): Self = this.set("previews", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreviews: Self = this.set("previews", js.undefined)
+    
+    @scala.inline
     def setRequest(value: RequestRequestOptions): Self = this.set("request", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -64,5 +94,11 @@ object OctokitOptions {
     
     @scala.inline
     def deleteTimeZone: Self = this.set("timeZone", js.undefined)
+    
+    @scala.inline
+    def setUserAgent(value: String): Self = this.set("userAgent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserAgent: Self = this.set("userAgent", js.undefined)
   }
 }

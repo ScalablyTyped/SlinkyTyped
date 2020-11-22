@@ -43,6 +43,9 @@ object PieChart {
     def curve(value: /* context */ CanvasRenderingContext2D | Path_ => CurveGenerator): this.type = set("curve", js.Any.fromFunction1(value))
     
     @scala.inline
+    def endAngle(value: Double): this.type = set("endAngle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def gridMax(value: Double): this.type = set("gridMax", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -71,6 +74,9 @@ object PieChart {
     
     @scala.inline
     def sort(value: (T, T) => Double): this.type = set("sort", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def startAngle(value: Double): this.type = set("startAngle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])

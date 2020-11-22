@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Connect_ extends js.Object {
+trait Connect_[DefaultState] extends js.Object {
   
   // tslint:disable:no-unnecessary-generics
   def apply(): InferableComponentEnhancer[DispatchProp[AnyAction]] = js.native

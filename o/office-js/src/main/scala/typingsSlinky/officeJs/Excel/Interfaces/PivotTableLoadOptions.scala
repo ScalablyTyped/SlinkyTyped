@@ -22,6 +22,14 @@ trait PivotTableLoadOptions extends js.Object {
   
   /**
     *
+    * Specifies if the PivotTable allows the application of multiple PivotFilters on a given PivotField in the table.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var allowMultipleFiltersPerField: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
     * Specifies if the PivotTable allows values in the data body to be edited by the user.
     *
     * [Api set: ExcelApi 1.9]
@@ -96,6 +104,12 @@ object PivotTableLoadOptions {
     
     @scala.inline
     def delete$all: Self = this.set("$all", js.undefined)
+    
+    @scala.inline
+    def setAllowMultipleFiltersPerField(value: Boolean): Self = this.set("allowMultipleFiltersPerField", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowMultipleFiltersPerField: Self = this.set("allowMultipleFiltersPerField", js.undefined)
     
     @scala.inline
     def setEnableDataValueEditing(value: Boolean): Self = this.set("enableDataValueEditing", value.asInstanceOf[js.Any])

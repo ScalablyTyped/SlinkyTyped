@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SetDataSizeLimitsForTestRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SetBlockedURLsRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `116` extends js.Object {
   
-  var paramsType: js.Array[SetDataSizeLimitsForTestRequest] = js.native
+  var paramsType: js.Array[SetBlockedURLsRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `116` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetDataSizeLimitsForTestRequest], returnType: Unit): `116` = {
+  def apply(paramsType: js.Array[SetBlockedURLsRequest], returnType: Unit): `116` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`116`]
   }
@@ -36,10 +36,10 @@ object `116` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetDataSizeLimitsForTestRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetBlockedURLsRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetDataSizeLimitsForTestRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetBlockedURLsRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

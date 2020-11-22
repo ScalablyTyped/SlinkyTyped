@@ -1,10 +1,11 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,12 +18,9 @@ abstract class GridBaseSource protected () extends SortableEntityPathSource {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
-  
-  @JSName("model")
-  var model_FGridBaseSource: IModel = js.native
   
   def searchBar: SearchBar = js.native
   def searchBar_=(newValue: SearchBar): Unit = js.native

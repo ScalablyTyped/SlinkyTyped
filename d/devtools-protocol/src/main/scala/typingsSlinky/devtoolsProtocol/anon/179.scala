@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.TrackIndexedDBForOriginRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.ServiceWorker.UnregisterRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `179` extends js.Object {
   
-  var paramsType: js.Array[TrackIndexedDBForOriginRequest] = js.native
+  var paramsType: js.Array[UnregisterRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `179` {
   
   @scala.inline
-  def apply(paramsType: js.Array[TrackIndexedDBForOriginRequest], returnType: Unit): `179` = {
+  def apply(paramsType: js.Array[UnregisterRequest], returnType: Unit): `179` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`179`]
   }
@@ -36,10 +36,10 @@ object `179` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: TrackIndexedDBForOriginRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: UnregisterRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[TrackIndexedDBForOriginRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[UnregisterRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

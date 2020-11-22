@@ -3,7 +3,6 @@ package typingsSlinky.redisMock
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.redis.mod.ClientOpts
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,7 +43,8 @@ object mod extends js.Object {
     extends typingsSlinky.redis.mod.ParserError
   
   @js.native
-  class RedisError () extends Error
+  class RedisError ()
+    extends typingsSlinky.redis.mod.RedisError
   
   @js.native
   class ReplyError ()

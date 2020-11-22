@@ -45,20 +45,19 @@ trait StageState extends js.Object {
   val defaultRouteSettings: js.UndefOr[Input[StageDefaultRouteSettings]] = js.native
   
   /**
-    * The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
+    * The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
     */
   val deploymentId: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The description for the stage.
+    * The description for the stage. Must be less than or equal to 1024 characters in length.
     */
   val description: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The ARN prefix to be used in an `aws.lambda.Permission`'s `sourceArn` attribute
-    * or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
+    * The ARN prefix to be used in an `aws.lambda.Permission` `sourceArn` attribute.
+    * For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy` to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
     * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
-    * Set only for WebSocket APIs.
     */
   val executionArn: js.UndefOr[Input[String]] = js.native
   
@@ -69,7 +68,7 @@ trait StageState extends js.Object {
   val invokeUrl: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The name of the stage.
+    * The name of the stage. Must be between 1 and 128 characters in length.
     */
   val name: js.UndefOr[Input[String]] = js.native
   

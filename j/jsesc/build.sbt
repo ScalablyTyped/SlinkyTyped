@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jsesc"
-version := "2.5.2-dt-20200520Z-b67720"
+version := "2.5.2-dt-20201002Z-b67720"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

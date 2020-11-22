@@ -15,7 +15,7 @@ trait UpdateCanaryRequest extends js.Object {
   /**
     * The ARN of the IAM role to be used to run the canary. This role must already exist, and must include lambda.amazonaws.com as a principal in the trust policy. The role must also have the following permissions:    s3:PutObject     s3:GetBucketLocation     s3:ListAllMyBuckets     cloudwatch:PutMetricData     logs:CreateLogGroup     logs:CreateLogStream     logs:CreateLogStream   
     */
-  var ExecutionRoleArn: js.UndefOr[Arn] = js.native
+  var ExecutionRoleArn: js.UndefOr[RoleArn] = js.native
   
   /**
     * The number of days to retain data about failed runs of this canary.
@@ -33,7 +33,7 @@ trait UpdateCanaryRequest extends js.Object {
   var RunConfig: js.UndefOr[CanaryRunConfigInput] = js.native
   
   /**
-    * Specifies the runtime version to use for the canary. Currently, the only valid value is syn-1.0. For more information about runtime versions, see  Canary Runtime Versions.
+    * Specifies the runtime version to use for the canary. For a list of valid runtime versions and for more information about runtime versions, see  Canary Runtime Versions.
     */
   var RuntimeVersion: js.UndefOr[String] = js.native
   
@@ -85,7 +85,7 @@ object UpdateCanaryRequest {
     def deleteCode: Self = this.set("Code", js.undefined)
     
     @scala.inline
-    def setExecutionRoleArn(value: Arn): Self = this.set("ExecutionRoleArn", value.asInstanceOf[js.Any])
+    def setExecutionRoleArn(value: RoleArn): Self = this.set("ExecutionRoleArn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExecutionRoleArn: Self = this.set("ExecutionRoleArn", js.undefined)

@@ -1,7 +1,7 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
 import typingsSlinky.octokitTypes.octokitTypesStrings.GET
-import typingsSlinky.octokitTypes.octokitTypesStrings.`SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`
+import typingsSlinky.octokitTypes.octokitTypesStrings.`SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`
 import typingsSlinky.octokitTypes.requestHeadersMod.RequestHeaders
 import typingsSlinky.octokitTypes.requestRequestOptionsMod.RequestRequestOptions
 import scala.scalajs.js
@@ -17,7 +17,7 @@ trait CodeScanningGetAlertRequestOptions extends js.Object {
   
   var request: RequestRequestOptions = js.native
   
-  var url: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id` = js.native
+  var url: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number` = js.native
 }
 object CodeScanningGetAlertRequestOptions {
   
@@ -26,7 +26,7 @@ object CodeScanningGetAlertRequestOptions {
     headers: RequestHeaders,
     method: GET,
     request: RequestRequestOptions,
-    url: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`
+    url: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`
   ): CodeScanningGetAlertRequestOptions = {
     val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeScanningGetAlertRequestOptions]
@@ -57,6 +57,8 @@ object CodeScanningGetAlertRequestOptions {
     def setRequest(value: RequestRequestOptions): Self = this.set("request", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUrl(value: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrl(
+      value: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`
+    ): Self = this.set("url", value.asInstanceOf[js.Any])
   }
 }

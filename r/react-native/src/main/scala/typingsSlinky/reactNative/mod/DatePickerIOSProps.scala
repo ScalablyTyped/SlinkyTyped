@@ -24,7 +24,17 @@ trait DatePickerIOSProps extends ViewProps {
   /**
     * The currently selected date.
     */
-  var date: js.Date = js.native
+  var date: js.UndefOr[js.Date | Null] = js.native
+  
+  /**
+    * Provides an initial value that will change when the user starts selecting
+    * a date. It is useful for simple use-cases where you do not want to deal
+    * with listening to events and updating the date prop to keep the
+    * controlled state in sync. The controlled state has known bugs which
+    * causes it to go out of sync with native. The initialDate prop is intended
+    * to allow you to have native be source of truth.
+    */
+  var initialDate: js.UndefOr[js.Date | Null] = js.native
   
   /**
     * The date picker locale.
@@ -72,8 +82,8 @@ trait DatePickerIOSProps extends ViewProps {
 object DatePickerIOSProps {
   
   @scala.inline
-  def apply(date: js.Date, onDateChange: js.Date => Unit): DatePickerIOSProps = {
-    val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], onDateChange = js.Any.fromFunction1(onDateChange))
+  def apply(onDateChange: js.Date => Unit): DatePickerIOSProps = {
+    val __obj = js.Dynamic.literal(onDateChange = js.Any.fromFunction1(onDateChange))
     __obj.asInstanceOf[DatePickerIOSProps]
   }
   
@@ -93,10 +103,25 @@ object DatePickerIOSProps {
     }
     
     @scala.inline
+    def setOnDateChange(value: js.Date => Unit): Self = this.set("onDateChange", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def setDate(value: js.Date): Self = this.set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnDateChange(value: js.Date => Unit): Self = this.set("onDateChange", js.Any.fromFunction1(value))
+    def deleteDate: Self = this.set("date", js.undefined)
+    
+    @scala.inline
+    def setDateNull: Self = this.set("date", null)
+    
+    @scala.inline
+    def setInitialDate(value: js.Date): Self = this.set("initialDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInitialDate: Self = this.set("initialDate", js.undefined)
+    
+    @scala.inline
+    def setInitialDateNull: Self = this.set("initialDate", null)
     
     @scala.inline
     def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])

@@ -2,14 +2,19 @@ package typingsSlinky.jupyterlabInspector
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.jupyterlabInspector.handlerMod.InspectionHandler.IOptions
-import typingsSlinky.phosphorCoreutils.mod.Token
+import typingsSlinky.luminoCoreutils.mod.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/inspector", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  @js.native
+  object IInspector
+    extends TopLevel[Token[typingsSlinky.jupyterlabInspector.tokensMod.IInspector]]
+  
   @js.native
   class InspectionHandler protected ()
     extends typingsSlinky.jupyterlabInspector.handlerMod.InspectionHandler {
@@ -27,6 +32,15 @@ object mod extends js.Object {
     extends typingsSlinky.jupyterlabInspector.inspectorMod.InspectorPanel {
     def this(options: typingsSlinky.jupyterlabInspector.inspectorMod.InspectorPanel.IOptions) = this()
   }
+  /* static members */
+  @js.native
+  object InspectorPanel extends js.Object {
+    
+    /**
+      * Generate content widget from string
+      */
+    var _generateContentWidget: js.Any = js.native
+  }
   
   @js.native
   class KernelConnector protected ()
@@ -38,19 +52,4 @@ object mod extends js.Object {
       */
     def this(options: typingsSlinky.jupyterlabInspector.kernelconnectorMod.KernelConnector.IOptions) = this()
   }
-  
-  @js.native
-  object IInspector
-    extends TopLevel[Token[typingsSlinky.jupyterlabInspector.tokensMod.IInspector]]
-  
-  /* static members */
-  @js.native
-  object InspectorPanel extends js.Object {
-    /**
-      * Generate content widget from string
-      */
-    var _generateContentWidget: js.Any = js.native
-  }
-  
 }
-

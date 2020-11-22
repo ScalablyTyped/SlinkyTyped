@@ -13,7 +13,7 @@ trait Ec2AmiResource extends js.Object {
   var AmiId: typingsSlinky.awsSdk.snowballMod.AmiId = js.native
   
   /**
-    * The ID of the AMI on the Snowball Edge device.
+    * The ID of the AMI on the Snow device.
     */
   var SnowballAmiId: js.UndefOr[String] = js.native
 }

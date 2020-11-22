@@ -14,16 +14,16 @@ trait TeleconferenceDeviceQuality extends js.Object {
   var callChainId: js.UndefOr[String] = js.native
   
   // A geo-region where the service is deployed, such as ProdNoam.
-  var cloudServiceDeploymentEnvironment: js.UndefOr[String] = js.native
+  var cloudServiceDeploymentEnvironment: js.UndefOr[NullableOption[String]] = js.native
   
   // A unique deployment identifier assigned by Azure.
-  var cloudServiceDeploymentId: js.UndefOr[String] = js.native
+  var cloudServiceDeploymentId: js.UndefOr[NullableOption[String]] = js.native
   
   // The Azure deployed cloud service instance name, such as FrontEnd_IN_3.
-  var cloudServiceInstanceName: js.UndefOr[String] = js.native
+  var cloudServiceInstanceName: js.UndefOr[NullableOption[String]] = js.native
   
   // The Azure deployed cloud service name, such as contoso.cloudapp.net.
-  var cloudServiceName: js.UndefOr[String] = js.native
+  var cloudServiceName: js.UndefOr[NullableOption[String]] = js.native
   
   // Any additional description, such as VTC Bldg 30/21.
   var deviceDescription: js.UndefOr[String] = js.native
@@ -79,28 +79,40 @@ object TeleconferenceDeviceQuality {
     def deleteCallChainId: Self = this.set("callChainId", js.undefined)
     
     @scala.inline
-    def setCloudServiceDeploymentEnvironment(value: String): Self = this.set("cloudServiceDeploymentEnvironment", value.asInstanceOf[js.Any])
+    def setCloudServiceDeploymentEnvironment(value: NullableOption[String]): Self = this.set("cloudServiceDeploymentEnvironment", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCloudServiceDeploymentEnvironment: Self = this.set("cloudServiceDeploymentEnvironment", js.undefined)
     
     @scala.inline
-    def setCloudServiceDeploymentId(value: String): Self = this.set("cloudServiceDeploymentId", value.asInstanceOf[js.Any])
+    def setCloudServiceDeploymentEnvironmentNull: Self = this.set("cloudServiceDeploymentEnvironment", null)
+    
+    @scala.inline
+    def setCloudServiceDeploymentId(value: NullableOption[String]): Self = this.set("cloudServiceDeploymentId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCloudServiceDeploymentId: Self = this.set("cloudServiceDeploymentId", js.undefined)
     
     @scala.inline
-    def setCloudServiceInstanceName(value: String): Self = this.set("cloudServiceInstanceName", value.asInstanceOf[js.Any])
+    def setCloudServiceDeploymentIdNull: Self = this.set("cloudServiceDeploymentId", null)
+    
+    @scala.inline
+    def setCloudServiceInstanceName(value: NullableOption[String]): Self = this.set("cloudServiceInstanceName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCloudServiceInstanceName: Self = this.set("cloudServiceInstanceName", js.undefined)
     
     @scala.inline
-    def setCloudServiceName(value: String): Self = this.set("cloudServiceName", value.asInstanceOf[js.Any])
+    def setCloudServiceInstanceNameNull: Self = this.set("cloudServiceInstanceName", null)
+    
+    @scala.inline
+    def setCloudServiceName(value: NullableOption[String]): Self = this.set("cloudServiceName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCloudServiceName: Self = this.set("cloudServiceName", js.undefined)
+    
+    @scala.inline
+    def setCloudServiceNameNull: Self = this.set("cloudServiceName", null)
     
     @scala.inline
     def setDeviceDescription(value: String): Self = this.set("deviceDescription", value.asInstanceOf[js.Any])

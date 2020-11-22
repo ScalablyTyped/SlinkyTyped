@@ -36,8 +36,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`additions removals`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`additions text`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`inline`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`removals additions`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`removals text`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`text additions`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`text removals`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.additions
 import typingsSlinky.storybookComponents.storybookComponentsStrings.all
 import typingsSlinky.storybookComponents.storybookComponentsStrings.ascending
@@ -165,7 +170,9 @@ trait SelectProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -226,6 +233,8 @@ trait SelectProps extends js.Object {
   var draggable: js.UndefOr[Booleanish] = js.native
   
   var form: js.UndefOr[String] = js.native
+  
+  var height: js.UndefOr[Double] = js.native
   
   var hidden: js.UndefOr[Boolean] = js.native
   
@@ -709,7 +718,9 @@ object SelectProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -899,6 +910,12 @@ object SelectProps {
     
     @scala.inline
     def deleteForm: Self = this.set("form", js.undefined)
+    
+    @scala.inline
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
     def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])

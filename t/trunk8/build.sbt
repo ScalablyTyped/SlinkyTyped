@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "trunk8"
-version := "0.0-unknown-dt-20200515Z-fd0232"
+version := "0.0-unknown-dt-20201002Z-fd0232"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

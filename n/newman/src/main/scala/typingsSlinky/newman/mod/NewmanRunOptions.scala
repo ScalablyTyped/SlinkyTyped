@@ -53,6 +53,15 @@ trait NewmanRunOptions extends js.Object {
   /** An environment JSON / file path for the current collection run. */
   var environment: js.UndefOr[VariableScope | VariableScopeDefinition | String] = js.native
   
+  /** The relative path to export the collection from the current run to */
+  var exportCollection: js.UndefOr[String] = js.native
+  
+  /** The relative path to export the environment file from the current run to */
+  var exportEnvironment: js.UndefOr[String] = js.native
+  
+  /** The relative path to export the globals file from the current run to  */
+  var exportGlobals: js.UndefOr[String] = js.native
+  
   /**
     * The name or ID of the folder (ItemGroup) in the collection which would
     * be run instead of the entire collection.
@@ -212,6 +221,24 @@ object NewmanRunOptions {
     
     @scala.inline
     def deleteEnvironment: Self = this.set("environment", js.undefined)
+    
+    @scala.inline
+    def setExportCollection(value: String): Self = this.set("exportCollection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExportCollection: Self = this.set("exportCollection", js.undefined)
+    
+    @scala.inline
+    def setExportEnvironment(value: String): Self = this.set("exportEnvironment", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExportEnvironment: Self = this.set("exportEnvironment", js.undefined)
+    
+    @scala.inline
+    def setExportGlobals(value: String): Self = this.set("exportGlobals", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExportGlobals: Self = this.set("exportGlobals", js.undefined)
     
     @scala.inline
     def setFolderVarargs(value: String*): Self = this.set("folder", js.Array(value :_*))

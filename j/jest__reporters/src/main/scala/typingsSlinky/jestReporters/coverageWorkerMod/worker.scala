@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/reporters/build/coverage_worker", "worker")
+@JSImport("@jest/reporters/build/CoverageWorker", "worker")
 @js.native
 object worker extends js.Object {
   

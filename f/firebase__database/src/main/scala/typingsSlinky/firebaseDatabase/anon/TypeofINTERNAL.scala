@@ -14,6 +14,8 @@ trait TypeofINTERNAL extends js.Object {
   
   def forceWebSockets(): Unit = js.native
   
+  def initStandalone[T](hasAppUrlVersionCustomAuthImplNamespaceNodeAdmin: App[T]): Instance[T] = js.native
+  
   def interceptServerData(ref: Reference, callback: js.Function2[/* a */ String, /* b */ js.Any, Unit]): Unit = js.native
   
   def isWebSocketsAvailable(): Boolean = js.native

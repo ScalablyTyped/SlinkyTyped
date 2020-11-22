@@ -14,6 +14,12 @@ class QuestionMatrixDropdownRenderedCell () extends js.Object {
   
   val choiceValue: js.Any = js.native
   
+  var className: String = js.native
+  
+  var colSpans: Double = js.native
+  
+  val hasPanel: Boolean = js.native
+  
   val hasQuestion: Boolean = js.native
   
   val hasTitle: Boolean = js.native
@@ -24,9 +30,13 @@ class QuestionMatrixDropdownRenderedCell () extends js.Object {
   
   val isChoice: Boolean = js.native
   
+  var isEmpty: Boolean = js.native
+  
   val isFirstChoice: Boolean = js.native
   
   var isRemoveRow: Boolean = js.native
+  
+  var isShowHideDetail: Boolean = js.native
   
   var item: ItemValue = js.native
   
@@ -36,7 +46,11 @@ class QuestionMatrixDropdownRenderedCell () extends js.Object {
   
   var minWidth: String = js.native
   
+  var panel: PanelModel = js.native
+  
   var question: Question = js.native
+  
+  var requiredText: String = js.native
   
   var row: MatrixDropdownRowModelBase = js.native
   

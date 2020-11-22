@@ -12,22 +12,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFormEmptyItem extends js.Object {
   
-  /** @name dxFormEmptyItem.colSpan */
+  /**
+    * [descr:dxFormEmptyItem.colSpan]
+    */
   var colSpan: js.UndefOr[Double] = js.native
   
-  /** @name dxFormEmptyItem.cssClass */
+  /**
+    * [descr:dxFormEmptyItem.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name dxFormEmptyItem.itemType */
+  /**
+    * [descr:dxFormEmptyItem.itemType]
+    */
   var itemType: js.UndefOr[empty | group | simple | tabbed | button] = js.native
   
-  /** @name dxFormEmptyItem.name */
+  /**
+    * [descr:dxFormEmptyItem.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxFormEmptyItem.visible */
+  /**
+    * [descr:dxFormEmptyItem.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFormEmptyItem.visibleIndex */
+  /**
+    * [descr:dxFormEmptyItem.visibleIndex]
+    */
   var visibleIndex: js.UndefOr[Double] = js.native
 }
 object dxFormEmptyItem {

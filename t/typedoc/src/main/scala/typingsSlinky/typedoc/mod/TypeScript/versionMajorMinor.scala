@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("typedoc", "TypeScript.versionMajorMinor")
 @js.native
 object versionMajorMinor
-  extends TopLevel[/* "3.9" */ String]
+  extends TopLevel[/* "4.1" */ String]

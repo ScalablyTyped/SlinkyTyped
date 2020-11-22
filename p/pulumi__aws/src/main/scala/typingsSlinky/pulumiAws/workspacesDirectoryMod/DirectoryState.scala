@@ -2,6 +2,7 @@ package typingsSlinky.pulumiAws.workspacesDirectoryMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.inputMod.workspaces.DirectorySelfServicePermissions
+import typingsSlinky.pulumiAws.inputMod.workspaces.DirectoryWorkspaceCreationProperties
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -56,12 +57,12 @@ trait DirectoryState extends js.Object {
   val registrationCode: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The permissions to enable or disable self-service capabilities.
+    * Permissions to enable or disable self-service capabilities. Defined below.
     */
   val selfServicePermissions: js.UndefOr[Input[DirectorySelfServicePermissions]] = js.native
   
   /**
-    * The identifiers of the subnets where the directory resides.
+    * The subnets identifiers where the workspaces are created.
     */
   val subnetIds: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
@@ -69,6 +70,11 @@ trait DirectoryState extends js.Object {
     * A map of tags assigned to the WorkSpaces directory.
     */
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
+  
+  /**
+    * Default properties that are used for creating WorkSpaces. Defined below.
+    */
+  val workspaceCreationProperties: js.UndefOr[Input[DirectoryWorkspaceCreationProperties]] = js.native
   
   /**
     * The identifier of the security group that is assigned to new WorkSpaces.
@@ -178,6 +184,12 @@ object DirectoryState {
     
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)
+    
+    @scala.inline
+    def setWorkspaceCreationProperties(value: Input[DirectoryWorkspaceCreationProperties]): Self = this.set("workspaceCreationProperties", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWorkspaceCreationProperties: Self = this.set("workspaceCreationProperties", js.undefined)
     
     @scala.inline
     def setWorkspaceSecurityGroupId(value: Input[String]): Self = this.set("workspaceSecurityGroupId", value.asInstanceOf[js.Any])

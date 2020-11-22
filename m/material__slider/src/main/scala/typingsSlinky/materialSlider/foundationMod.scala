@@ -1,11 +1,15 @@
 package typingsSlinky.materialSlider
 
+import org.scalajs.dom.raw.FocusEvent
+import org.scalajs.dom.raw.KeyboardEvent
+import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.PointerEvent
+import org.scalajs.dom.raw.TouchEvent
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialSlider.adapterMod.MDCSliderAdapter
-import typingsSlinky.materialSlider.anon.ACTIVE
-import typingsSlinky.materialSlider.anon.ARIADISABLED
-import typingsSlinky.materialSlider.anon.PAGEFACTOR
 import typingsSlinky.materialSlider.anon.PartialMDCSliderAdapter
+import typingsSlinky.materialSlider.anon.SkipUpdateUI
+import typingsSlinky.materialSlider.typesMod.Thumb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,57 +22,110 @@ object foundationMod extends js.Object {
   class MDCSliderFoundation () extends MDCFoundation[MDCSliderAdapter] {
     def this(adapter: PartialMDCSliderAdapter) = this()
     
+    def getBigStep(): Double = js.native
+    
+    def getDisabled(): Boolean = js.native
+    
+    /** @return Whether the slider is a range slider. */
+    def getIsRange(): Boolean = js.native
+    
     def getMax(): Double = js.native
     
     def getMin(): Double = js.native
     
     def getStep(): Double = js.native
     
+    /**
+      * - For single point sliders, returns the thumb value.
+      * - For range (two-thumb) sliders, returns the end thumb's value.
+      */
     def getValue(): Double = js.native
     
-    def isDisabled(): Boolean = js.native
+    /**
+      * Only applicable for range sliders.
+      * @return The start thumb's value.
+      */
+    def getValueStart(): Double = js.native
     
+    def handleDown(event: MouseEvent): Unit = js.native
+    /**
+      * Handles pointer down events on the slider root element.
+      */
+    def handleDown(event: PointerEvent): Unit = js.native
+    def handleDown(event: TouchEvent): Unit = js.native
+    
+    def handleMousedownOrTouchstart(event: MouseEvent): Unit = js.native
+    def handleMousedownOrTouchstart(event: TouchEvent): Unit = js.native
+    
+    def handleMove(event: MouseEvent): Unit = js.native
+    /**
+      * Handles pointer move events on the slider root element.
+      */
+    def handleMove(event: PointerEvent): Unit = js.native
+    def handleMove(event: TouchEvent): Unit = js.native
+    
+    def handlePointerdown(event: PointerEvent): Unit = js.native
+    
+    /** Handles resize events on the window. */
+    def handleResize(): Unit = js.native
+    
+    /**
+      * Hides the value indicator, as follows:
+      * - Range slider: Hides value indicator on both thumbs, on either blur
+      *   or mouseleave, provided there is no thumb already focused.
+      * - Single point slider: Hides value indicator on thumb, on blur.
+      */
+    def handleThumbBlurOrMouseleave(event: FocusEvent): Unit = js.native
+    def handleThumbBlurOrMouseleave(event: MouseEvent): Unit = js.native
+    
+    /**
+      * Shows the value indicator, as follows:
+      * - Range slider: Shows value indicator on both thumbs, on either hover or
+      *   focus.
+      * - Single point slider: Shows value indicator on thumb, only on focus.
+      */
+    def handleThumbFocusOrMouseenter(event: FocusEvent): Unit = js.native
+    def handleThumbFocusOrMouseenter(event: MouseEvent): Unit = js.native
+    
+    /**
+      * Handles keydown events on the slider thumbs.
+      */
+    def handleThumbKeydown(event: KeyboardEvent, thumb: Thumb): Unit = js.native
+    
+    /**
+      * Handles pointer up events on the slider root element.
+      */
+    def handleUp(): Unit = js.native
+    
+    /**
+      * - Syncs slider boundingClientRect with the current DOM.
+      * - Updates UI based on internal state.
+      */
     def layout(): Unit = js.native
+    def layout(hasSkipUpdateUI: SkipUpdateUI): Unit = js.native
     
+    /**
+      * Sets disabled state, including updating styles and thumb tabindex.
+      */
     def setDisabled(disabled: Boolean): Unit = js.native
     
-    def setMax(max: Double): Unit = js.native
-    
-    def setMin(min: Double): Unit = js.native
-    
-    def setStep(step: Double): Unit = js.native
-    
+    /**
+      * - For single point sliders, sets the thumb value.
+      * - For range (two-thumb) sliders, sets the end thumb's value.
+      */
     def setValue(value: Double): Unit = js.native
     
-    def setupTrackMarker(): Unit = js.native
+    /**
+      * Only applicable for range sliders. Sets the start thumb's value.
+      */
+    def setValueStart(valueStart: Double): Unit = js.native
   }
   /* static members */
   @js.native
   object MDCSliderFoundation extends js.Object {
     
-    def cssClasses: ACTIVE = js.native
+    var SUPPORTS_POINTER_EVENTS: Boolean = js.native
     
     def defaultAdapter: MDCSliderAdapter = js.native
-    
-    def numbers: PAGEFACTOR = js.native
-    
-    def strings: ARIADISABLED = js.native
-  }
-  
-  @js.native
-  class default () extends MDCSliderFoundation {
-    def this(adapter: PartialMDCSliderAdapter) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    def cssClasses: ACTIVE = js.native
-    
-    def defaultAdapter: MDCSliderAdapter = js.native
-    
-    def numbers: PAGEFACTOR = js.native
-    
-    def strings: ARIADISABLED = js.native
   }
 }

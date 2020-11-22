@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("rappid", "ui.SelectionView")
 @js.native
 class SelectionView protected ()
-  extends Model[js.Any, ModelSetOptions] {
+  extends Model[js.Any, ModelSetOptions, js.Object] {
   def this(opt: Graph) = this()
   
   def addHandle(handle: Handle): Unit = js.native

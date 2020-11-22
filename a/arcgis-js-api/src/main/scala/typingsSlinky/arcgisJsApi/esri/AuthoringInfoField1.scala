@@ -31,7 +31,7 @@ trait AuthoringInfoField1 extends Object {
   var label: js.UndefOr[String] = js.native
   
   /**
-    * The name of a numeric field used to normalize the given `field`. In choropleth visualizations it is best practice to normalize your data values if they haven't already been normalized.
+    * The name of a numeric field used to normalize the given `field`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-support-AuthoringInfo.html#field1)
     */

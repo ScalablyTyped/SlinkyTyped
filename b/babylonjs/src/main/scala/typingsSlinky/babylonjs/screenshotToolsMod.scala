@@ -40,7 +40,7 @@ object screenshotToolsMod extends js.Object {
     ): Unit = js.native
     /**
       * Captures a screenshot of the current rendering
-      * @see http://doc.babylonjs.com/how_to/render_scene_on_a_png
+      * @see https://doc.babylonjs.com/how_to/render_scene_on_a_png
       * @param engine defines the rendering engine
       * @param camera defines the source camera
       * @param size This parameter can be set to a single number or to an object with the
@@ -78,7 +78,7 @@ object screenshotToolsMod extends js.Object {
     
     /**
       * Captures a screenshot of the current rendering
-      * @see http://doc.babylonjs.com/how_to/render_scene_on_a_png
+      * @see https://doc.babylonjs.com/how_to/render_scene_on_a_png
       * @param engine defines the rendering engine
       * @param camera defines the source camera
       * @param size This parameter can be set to a single number or to an object with the
@@ -96,7 +96,7 @@ object screenshotToolsMod extends js.Object {
     
     /**
       * Generates an image screenshot from the specified camera.
-      * @see http://doc.babylonjs.com/how_to/render_scene_on_a_png
+      * @see https://doc.babylonjs.com/how_to/render_scene_on_a_png
       * @param engine The engine to use for rendering
       * @param camera The camera to use for rendering
       * @param size This parameter can be set to a single number or to an object with the
@@ -113,6 +113,7 @@ object screenshotToolsMod extends js.Object {
       * @param antialiasing Whether antialiasing should be turned on or not (default: false)
       * @param fileName A name for for the downloaded file.
       * @param renderSprites Whether the sprites should be rendered or not (default: false)
+      * @param enableStencilBuffer Whether the stencil buffer should be enabled or not (default: false)
       */
     def CreateScreenshotUsingRenderTarget(
       engine: Engine,
@@ -123,12 +124,13 @@ object screenshotToolsMod extends js.Object {
       samples: js.UndefOr[Double],
       antialiasing: js.UndefOr[Boolean],
       fileName: js.UndefOr[String],
-      renderSprites: js.UndefOr[Boolean]
+      renderSprites: js.UndefOr[Boolean],
+      enableStencilBuffer: js.UndefOr[Boolean]
     ): Unit = js.native
     
     /**
       * Generates an image screenshot from the specified camera.
-      * @see http://doc.babylonjs.com/how_to/render_scene_on_a_png
+      * @see https://doc.babylonjs.com/how_to/render_scene_on_a_png
       * @param engine The engine to use for rendering
       * @param camera The camera to use for rendering
       * @param size This parameter can be set to a single number or to an object with the

@@ -13,7 +13,7 @@ trait PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificatio
   var predefinedMetricType: String = js.native
   
   /**
-    * Reserved for future use.
+    * Reserved for future use. Must be less than or equal to 1023 characters in length.
     */
   var resourceLabel: js.UndefOr[String] = js.native
 }

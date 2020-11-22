@@ -21,7 +21,7 @@ trait ConnectionArgs extends js.Object {
   val connectionProperties: Input[StringDictionary[Input[String]]] = js.native
   
   /**
-    * The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`. Defaults to `JBDC`.
+    * The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`, and `NETWORK`. Defaults to `JBDC`.
     */
   val connectionType: js.UndefOr[Input[String]] = js.native
   

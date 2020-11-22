@@ -1,5 +1,6 @@
 package typingsSlinky.ansiStyles
 
+import typingsSlinky.ansiStyles.mod.CSSColor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -451,446 +452,446 @@ object ansiStylesStrings {
   def yellowgreen: yellowgreen = "yellowgreen".asInstanceOf[yellowgreen]
   
   @js.native
-  sealed trait aliceblue extends js.Object
+  sealed trait aliceblue extends CSSColor
   
   @js.native
-  sealed trait antiquewhite extends js.Object
+  sealed trait antiquewhite extends CSSColor
   
   @js.native
-  sealed trait aqua extends js.Object
+  sealed trait aqua extends CSSColor
   
   @js.native
-  sealed trait aquamarine extends js.Object
+  sealed trait aquamarine extends CSSColor
   
   @js.native
-  sealed trait azure extends js.Object
+  sealed trait azure extends CSSColor
   
   @js.native
-  sealed trait beige extends js.Object
+  sealed trait beige extends CSSColor
   
   @js.native
-  sealed trait bisque extends js.Object
+  sealed trait bisque extends CSSColor
   
   @js.native
-  sealed trait black extends js.Object
+  sealed trait black extends CSSColor
   
   @js.native
-  sealed trait blanchedalmond extends js.Object
+  sealed trait blanchedalmond extends CSSColor
   
   @js.native
-  sealed trait blue extends js.Object
+  sealed trait blue extends CSSColor
   
   @js.native
-  sealed trait blueviolet extends js.Object
+  sealed trait blueviolet extends CSSColor
   
   @js.native
-  sealed trait brown extends js.Object
+  sealed trait brown extends CSSColor
   
   @js.native
-  sealed trait burlywood extends js.Object
+  sealed trait burlywood extends CSSColor
   
   @js.native
-  sealed trait cadetblue extends js.Object
+  sealed trait cadetblue extends CSSColor
   
   @js.native
-  sealed trait chartreuse extends js.Object
+  sealed trait chartreuse extends CSSColor
   
   @js.native
-  sealed trait chocolate extends js.Object
+  sealed trait chocolate extends CSSColor
   
   @js.native
-  sealed trait coral extends js.Object
+  sealed trait coral extends CSSColor
   
   @js.native
-  sealed trait cornflowerblue extends js.Object
+  sealed trait cornflowerblue extends CSSColor
   
   @js.native
-  sealed trait cornsilk extends js.Object
+  sealed trait cornsilk extends CSSColor
   
   @js.native
-  sealed trait crimson extends js.Object
+  sealed trait crimson extends CSSColor
   
   @js.native
-  sealed trait cyan extends js.Object
+  sealed trait cyan extends CSSColor
   
   @js.native
-  sealed trait darkblue extends js.Object
+  sealed trait darkblue extends CSSColor
   
   @js.native
-  sealed trait darkcyan extends js.Object
+  sealed trait darkcyan extends CSSColor
   
   @js.native
-  sealed trait darkgoldenrod extends js.Object
+  sealed trait darkgoldenrod extends CSSColor
   
   @js.native
-  sealed trait darkgray extends js.Object
+  sealed trait darkgray extends CSSColor
   
   @js.native
-  sealed trait darkgreen extends js.Object
+  sealed trait darkgreen extends CSSColor
   
   @js.native
-  sealed trait darkgrey extends js.Object
+  sealed trait darkgrey extends CSSColor
   
   @js.native
-  sealed trait darkkhaki extends js.Object
+  sealed trait darkkhaki extends CSSColor
   
   @js.native
-  sealed trait darkmagenta extends js.Object
+  sealed trait darkmagenta extends CSSColor
   
   @js.native
-  sealed trait darkolivegreen extends js.Object
+  sealed trait darkolivegreen extends CSSColor
   
   @js.native
-  sealed trait darkorange extends js.Object
+  sealed trait darkorange extends CSSColor
   
   @js.native
-  sealed trait darkorchid extends js.Object
+  sealed trait darkorchid extends CSSColor
   
   @js.native
-  sealed trait darkred extends js.Object
+  sealed trait darkred extends CSSColor
   
   @js.native
-  sealed trait darksalmon extends js.Object
+  sealed trait darksalmon extends CSSColor
   
   @js.native
-  sealed trait darkseagreen extends js.Object
+  sealed trait darkseagreen extends CSSColor
   
   @js.native
-  sealed trait darkslateblue extends js.Object
+  sealed trait darkslateblue extends CSSColor
   
   @js.native
-  sealed trait darkslategray extends js.Object
+  sealed trait darkslategray extends CSSColor
   
   @js.native
-  sealed trait darkslategrey extends js.Object
+  sealed trait darkslategrey extends CSSColor
   
   @js.native
-  sealed trait darkturquoise extends js.Object
+  sealed trait darkturquoise extends CSSColor
   
   @js.native
-  sealed trait darkviolet extends js.Object
+  sealed trait darkviolet extends CSSColor
   
   @js.native
-  sealed trait deeppink extends js.Object
+  sealed trait deeppink extends CSSColor
   
   @js.native
-  sealed trait deepskyblue extends js.Object
+  sealed trait deepskyblue extends CSSColor
   
   @js.native
-  sealed trait dimgray extends js.Object
+  sealed trait dimgray extends CSSColor
   
   @js.native
-  sealed trait dimgrey extends js.Object
+  sealed trait dimgrey extends CSSColor
   
   @js.native
-  sealed trait dodgerblue extends js.Object
+  sealed trait dodgerblue extends CSSColor
   
   @js.native
-  sealed trait firebrick extends js.Object
+  sealed trait firebrick extends CSSColor
   
   @js.native
-  sealed trait floralwhite extends js.Object
+  sealed trait floralwhite extends CSSColor
   
   @js.native
-  sealed trait forestgreen extends js.Object
+  sealed trait forestgreen extends CSSColor
   
   @js.native
-  sealed trait fuchsia extends js.Object
+  sealed trait fuchsia extends CSSColor
   
   @js.native
-  sealed trait gainsboro extends js.Object
+  sealed trait gainsboro extends CSSColor
   
   @js.native
-  sealed trait ghostwhite extends js.Object
+  sealed trait ghostwhite extends CSSColor
   
   @js.native
-  sealed trait gold extends js.Object
+  sealed trait gold extends CSSColor
   
   @js.native
-  sealed trait goldenrod extends js.Object
+  sealed trait goldenrod extends CSSColor
   
   @js.native
-  sealed trait gray extends js.Object
+  sealed trait gray extends CSSColor
   
   @js.native
-  sealed trait green extends js.Object
+  sealed trait green extends CSSColor
   
   @js.native
-  sealed trait greenyellow extends js.Object
+  sealed trait greenyellow extends CSSColor
   
   @js.native
-  sealed trait grey extends js.Object
+  sealed trait grey extends CSSColor
   
   @js.native
-  sealed trait honeydew extends js.Object
+  sealed trait honeydew extends CSSColor
   
   @js.native
-  sealed trait hotpink extends js.Object
+  sealed trait hotpink extends CSSColor
   
   @js.native
-  sealed trait indianred extends js.Object
+  sealed trait indianred extends CSSColor
   
   @js.native
-  sealed trait indigo extends js.Object
+  sealed trait indigo extends CSSColor
   
   @js.native
-  sealed trait ivory extends js.Object
+  sealed trait ivory extends CSSColor
   
   @js.native
-  sealed trait khaki extends js.Object
+  sealed trait khaki extends CSSColor
   
   @js.native
-  sealed trait lavender extends js.Object
+  sealed trait lavender extends CSSColor
   
   @js.native
-  sealed trait lavenderblush extends js.Object
+  sealed trait lavenderblush extends CSSColor
   
   @js.native
-  sealed trait lawngreen extends js.Object
+  sealed trait lawngreen extends CSSColor
   
   @js.native
-  sealed trait lemonchiffon extends js.Object
+  sealed trait lemonchiffon extends CSSColor
   
   @js.native
-  sealed trait lightblue extends js.Object
+  sealed trait lightblue extends CSSColor
   
   @js.native
-  sealed trait lightcoral extends js.Object
+  sealed trait lightcoral extends CSSColor
   
   @js.native
-  sealed trait lightcyan extends js.Object
+  sealed trait lightcyan extends CSSColor
   
   @js.native
-  sealed trait lightgoldenrodyellow extends js.Object
+  sealed trait lightgoldenrodyellow extends CSSColor
   
   @js.native
-  sealed trait lightgray extends js.Object
+  sealed trait lightgray extends CSSColor
   
   @js.native
-  sealed trait lightgreen extends js.Object
+  sealed trait lightgreen extends CSSColor
   
   @js.native
-  sealed trait lightgrey extends js.Object
+  sealed trait lightgrey extends CSSColor
   
   @js.native
-  sealed trait lightpink extends js.Object
+  sealed trait lightpink extends CSSColor
   
   @js.native
-  sealed trait lightsalmon extends js.Object
+  sealed trait lightsalmon extends CSSColor
   
   @js.native
-  sealed trait lightseagreen extends js.Object
+  sealed trait lightseagreen extends CSSColor
   
   @js.native
-  sealed trait lightskyblue extends js.Object
+  sealed trait lightskyblue extends CSSColor
   
   @js.native
-  sealed trait lightslategray extends js.Object
+  sealed trait lightslategray extends CSSColor
   
   @js.native
-  sealed trait lightslategrey extends js.Object
+  sealed trait lightslategrey extends CSSColor
   
   @js.native
-  sealed trait lightsteelblue extends js.Object
+  sealed trait lightsteelblue extends CSSColor
   
   @js.native
-  sealed trait lightyellow extends js.Object
+  sealed trait lightyellow extends CSSColor
   
   @js.native
-  sealed trait lime extends js.Object
+  sealed trait lime extends CSSColor
   
   @js.native
-  sealed trait limegreen extends js.Object
+  sealed trait limegreen extends CSSColor
   
   @js.native
-  sealed trait linen extends js.Object
+  sealed trait linen extends CSSColor
   
   @js.native
-  sealed trait magenta extends js.Object
+  sealed trait magenta extends CSSColor
   
   @js.native
-  sealed trait maroon extends js.Object
+  sealed trait maroon extends CSSColor
   
   @js.native
-  sealed trait mediumaquamarine extends js.Object
+  sealed trait mediumaquamarine extends CSSColor
   
   @js.native
-  sealed trait mediumblue extends js.Object
+  sealed trait mediumblue extends CSSColor
   
   @js.native
-  sealed trait mediumorchid extends js.Object
+  sealed trait mediumorchid extends CSSColor
   
   @js.native
-  sealed trait mediumpurple extends js.Object
+  sealed trait mediumpurple extends CSSColor
   
   @js.native
-  sealed trait mediumseagreen extends js.Object
+  sealed trait mediumseagreen extends CSSColor
   
   @js.native
-  sealed trait mediumslateblue extends js.Object
+  sealed trait mediumslateblue extends CSSColor
   
   @js.native
-  sealed trait mediumspringgreen extends js.Object
+  sealed trait mediumspringgreen extends CSSColor
   
   @js.native
-  sealed trait mediumturquoise extends js.Object
+  sealed trait mediumturquoise extends CSSColor
   
   @js.native
-  sealed trait mediumvioletred extends js.Object
+  sealed trait mediumvioletred extends CSSColor
   
   @js.native
-  sealed trait midnightblue extends js.Object
+  sealed trait midnightblue extends CSSColor
   
   @js.native
-  sealed trait mintcream extends js.Object
+  sealed trait mintcream extends CSSColor
   
   @js.native
-  sealed trait mistyrose extends js.Object
+  sealed trait mistyrose extends CSSColor
   
   @js.native
-  sealed trait moccasin extends js.Object
+  sealed trait moccasin extends CSSColor
   
   @js.native
-  sealed trait navajowhite extends js.Object
+  sealed trait navajowhite extends CSSColor
   
   @js.native
-  sealed trait navy extends js.Object
+  sealed trait navy extends CSSColor
   
   @js.native
-  sealed trait oldlace extends js.Object
+  sealed trait oldlace extends CSSColor
   
   @js.native
-  sealed trait olive extends js.Object
+  sealed trait olive extends CSSColor
   
   @js.native
-  sealed trait olivedrab extends js.Object
+  sealed trait olivedrab extends CSSColor
   
   @js.native
-  sealed trait orange extends js.Object
+  sealed trait orange extends CSSColor
   
   @js.native
-  sealed trait orangered extends js.Object
+  sealed trait orangered extends CSSColor
   
   @js.native
-  sealed trait orchid extends js.Object
+  sealed trait orchid extends CSSColor
   
   @js.native
-  sealed trait palegoldenrod extends js.Object
+  sealed trait palegoldenrod extends CSSColor
   
   @js.native
-  sealed trait palegreen extends js.Object
+  sealed trait palegreen extends CSSColor
   
   @js.native
-  sealed trait paleturquoise extends js.Object
+  sealed trait paleturquoise extends CSSColor
   
   @js.native
-  sealed trait palevioletred extends js.Object
+  sealed trait palevioletred extends CSSColor
   
   @js.native
-  sealed trait papayawhip extends js.Object
+  sealed trait papayawhip extends CSSColor
   
   @js.native
-  sealed trait peachpuff extends js.Object
+  sealed trait peachpuff extends CSSColor
   
   @js.native
-  sealed trait peru extends js.Object
+  sealed trait peru extends CSSColor
   
   @js.native
-  sealed trait pink extends js.Object
+  sealed trait pink extends CSSColor
   
   @js.native
-  sealed trait plum extends js.Object
+  sealed trait plum extends CSSColor
   
   @js.native
-  sealed trait powderblue extends js.Object
+  sealed trait powderblue extends CSSColor
   
   @js.native
-  sealed trait purple extends js.Object
+  sealed trait purple extends CSSColor
   
   @js.native
-  sealed trait rebeccapurple extends js.Object
+  sealed trait rebeccapurple extends CSSColor
   
   @js.native
-  sealed trait red extends js.Object
+  sealed trait red extends CSSColor
   
   @js.native
-  sealed trait rosybrown extends js.Object
+  sealed trait rosybrown extends CSSColor
   
   @js.native
-  sealed trait royalblue extends js.Object
+  sealed trait royalblue extends CSSColor
   
   @js.native
-  sealed trait saddlebrown extends js.Object
+  sealed trait saddlebrown extends CSSColor
   
   @js.native
-  sealed trait salmon extends js.Object
+  sealed trait salmon extends CSSColor
   
   @js.native
-  sealed trait sandybrown extends js.Object
+  sealed trait sandybrown extends CSSColor
   
   @js.native
-  sealed trait seagreen extends js.Object
+  sealed trait seagreen extends CSSColor
   
   @js.native
-  sealed trait seashell extends js.Object
+  sealed trait seashell extends CSSColor
   
   @js.native
-  sealed trait sienna extends js.Object
+  sealed trait sienna extends CSSColor
   
   @js.native
-  sealed trait silver extends js.Object
+  sealed trait silver extends CSSColor
   
   @js.native
-  sealed trait skyblue extends js.Object
+  sealed trait skyblue extends CSSColor
   
   @js.native
-  sealed trait slateblue extends js.Object
+  sealed trait slateblue extends CSSColor
   
   @js.native
-  sealed trait slategray extends js.Object
+  sealed trait slategray extends CSSColor
   
   @js.native
-  sealed trait slategrey extends js.Object
+  sealed trait slategrey extends CSSColor
   
   @js.native
-  sealed trait snow extends js.Object
+  sealed trait snow extends CSSColor
   
   @js.native
-  sealed trait springgreen extends js.Object
+  sealed trait springgreen extends CSSColor
   
   @js.native
-  sealed trait steelblue extends js.Object
+  sealed trait steelblue extends CSSColor
   
   @js.native
-  sealed trait tan extends js.Object
+  sealed trait tan extends CSSColor
   
   @js.native
-  sealed trait teal extends js.Object
+  sealed trait teal extends CSSColor
   
   @js.native
-  sealed trait thistle extends js.Object
+  sealed trait thistle extends CSSColor
   
   @js.native
-  sealed trait tomato extends js.Object
+  sealed trait tomato extends CSSColor
   
   @js.native
-  sealed trait turquoise extends js.Object
+  sealed trait turquoise extends CSSColor
   
   @js.native
-  sealed trait violet extends js.Object
+  sealed trait violet extends CSSColor
   
   @js.native
-  sealed trait wheat extends js.Object
+  sealed trait wheat extends CSSColor
   
   @js.native
-  sealed trait white extends js.Object
+  sealed trait white extends CSSColor
   
   @js.native
-  sealed trait whitesmoke extends js.Object
+  sealed trait whitesmoke extends CSSColor
   
   @js.native
-  sealed trait yellow extends js.Object
+  sealed trait yellow extends CSSColor
   
   @js.native
-  sealed trait yellowgreen extends js.Object
+  sealed trait yellowgreen extends CSSColor
 }

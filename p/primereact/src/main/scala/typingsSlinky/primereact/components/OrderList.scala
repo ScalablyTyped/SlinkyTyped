@@ -42,9 +42,6 @@ object OrderList {
     def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline

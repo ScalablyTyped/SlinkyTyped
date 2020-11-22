@@ -1,6 +1,6 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.utilsMod.ColorType
+import typingsSlinky.grommet.utilsMod.BackgroundType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `6` extends js.Object {
   
-  var background: js.UndefOr[`5`] = js.native
+  var background: js.UndefOr[BackgroundType] = js.native
   
-  var color: js.UndefOr[ColorType] = js.native
+  var border: js.UndefOr[`3`] = js.native
 }
 object `6` {
   
@@ -36,15 +36,15 @@ object `6` {
     }
     
     @scala.inline
-    def setBackground(value: `5`): Self = this.set("background", value.asInstanceOf[js.Any])
+    def setBackground(value: BackgroundType): Self = this.set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackground: Self = this.set("background", js.undefined)
     
     @scala.inline
-    def setColor(value: ColorType): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setBorder(value: `3`): Self = this.set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteColor: Self = this.set("color", js.undefined)
+    def deleteBorder: Self = this.set("border", js.undefined)
   }
 }

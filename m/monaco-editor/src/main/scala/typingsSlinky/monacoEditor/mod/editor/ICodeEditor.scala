@@ -42,6 +42,7 @@ trait ICodeEditor extends IEditor {
     */
   def deltaDecorations(oldDecorations: js.Array[String], newDecorations: js.Array[IModelDeltaDecoration]): js.Array[String] = js.native
   
+  def executeCommand(source: js.UndefOr[scala.Nothing], command: ICommand): Unit = js.native
   /**
     * Execute a command on the editor.
     * The edits will land on the undo-redo stack, but no "undo stop" will be pushed.
@@ -49,14 +50,28 @@ trait ICodeEditor extends IEditor {
     * @param command The command to execute
     */
   def executeCommand(source: String, command: ICommand): Unit = js.native
+  def executeCommand(source: Null, command: ICommand): Unit = js.native
   
+  def executeCommands(source: js.UndefOr[scala.Nothing], commands: js.Array[ICommand | Null]): Unit = js.native
   /**
     * Execute multiple (concomitant) commands on the editor.
     * @param source The source of the call.
     * @param command The commands to execute
     */
   def executeCommands(source: String, commands: js.Array[ICommand | Null]): Unit = js.native
+  def executeCommands(source: Null, commands: js.Array[ICommand | Null]): Unit = js.native
   
+  def executeEdits(source: js.UndefOr[scala.Nothing], edits: js.Array[IIdentifiedSingleEditOperation]): Boolean = js.native
+  def executeEdits(
+    source: js.UndefOr[scala.Nothing],
+    edits: js.Array[IIdentifiedSingleEditOperation],
+    endCursorState: js.Array[Selection]
+  ): Boolean = js.native
+  def executeEdits(
+    source: js.UndefOr[scala.Nothing],
+    edits: js.Array[IIdentifiedSingleEditOperation],
+    endCursorState: ICursorStateComputer
+  ): Boolean = js.native
   /**
     * Execute edits on the editor.
     * The edits will land on the undo-redo stack, but no "undo stop" will be pushed.
@@ -72,6 +87,13 @@ trait ICodeEditor extends IEditor {
   ): Boolean = js.native
   def executeEdits(
     source: String,
+    edits: js.Array[IIdentifiedSingleEditOperation],
+    endCursorState: ICursorStateComputer
+  ): Boolean = js.native
+  def executeEdits(source: Null, edits: js.Array[IIdentifiedSingleEditOperation]): Boolean = js.native
+  def executeEdits(source: Null, edits: js.Array[IIdentifiedSingleEditOperation], endCursorState: js.Array[Selection]): Boolean = js.native
+  def executeEdits(
+    source: Null,
     edits: js.Array[IIdentifiedSingleEditOperation],
     endCursorState: ICursorStateComputer
   ): Boolean = js.native
@@ -226,6 +248,12 @@ trait ICodeEditor extends IEditor {
     * @event
     */
   def onContextMenu(listener: js.Function1[/* e */ IEditorMouseEvent, Unit]): IDisposable = js.native
+  
+  /**
+    * An event emitted when editing failed because the editor is read-only.
+    * @event
+    */
+  def onDidAttemptReadOnlyEdit(listener: js.Function0[Unit]): IDisposable = js.native
   
   /**
     * An event emitted when the text inside this editor lost focus (i.e. cursor stops blinking).
@@ -407,16 +435,19 @@ trait ICodeEditor extends IEditor {
     * Change the scrollLeft of the editor's viewport.
     */
   def setScrollLeft(newScrollLeft: Double): Unit = js.native
+  def setScrollLeft(newScrollLeft: Double, scrollType: ScrollType): Unit = js.native
   
   /**
     * Change the scroll position of the editor's viewport.
     */
   def setScrollPosition(position: INewScrollPosition): Unit = js.native
+  def setScrollPosition(position: INewScrollPosition, scrollType: ScrollType): Unit = js.native
   
   /**
     * Change the scrollTop of the editor's viewport.
     */
   def setScrollTop(newScrollTop: Double): Unit = js.native
+  def setScrollTop(newScrollTop: Double, scrollType: ScrollType): Unit = js.native
   
   /**
     * Set the value of the current model attached to this editor.

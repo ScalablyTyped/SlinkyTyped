@@ -33,6 +33,11 @@ trait Subscription extends js.Object {
   var StartTime: js.UndefOr[js.Date] = js.native
   
   /**
+    * Limits settings for your subscription. 
+    */
+  var SubscriptionLimits: typingsSlinky.awsSdk.shieldMod.SubscriptionLimits = js.native
+  
+  /**
     * The length, in seconds, of the AWS Shield Advanced subscription for the account.
     */
   var TimeCommitmentInSeconds: js.UndefOr[DurationInSeconds] = js.native
@@ -40,8 +45,8 @@ trait Subscription extends js.Object {
 object Subscription {
   
   @scala.inline
-  def apply(): Subscription = {
-    val __obj = js.Dynamic.literal()
+  def apply(SubscriptionLimits: SubscriptionLimits): Subscription = {
+    val __obj = js.Dynamic.literal(SubscriptionLimits = SubscriptionLimits.asInstanceOf[js.Any])
     __obj.asInstanceOf[Subscription]
   }
   
@@ -59,6 +64,9 @@ object Subscription {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setSubscriptionLimits(value: SubscriptionLimits): Self = this.set("SubscriptionLimits", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAutoRenew(value: AutoRenew): Self = this.set("AutoRenew", value.asInstanceOf[js.Any])

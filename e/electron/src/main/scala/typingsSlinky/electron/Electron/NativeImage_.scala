@@ -22,8 +22,12 @@ trait NativeImage_ extends js.Object {
   
   /**
     * The image's aspect ratio.
+    *
+    * If `scaleFactor` is passed, this will return the aspect ratio corresponding to
+    * the image representation most closely matching the passed value.
     */
   def getAspectRatio(): Double = js.native
+  def getAspectRatio(scaleFactor: Double): Double = js.native
   
   /**
     * A Buffer that contains the image's raw bitmap pixel data.
@@ -47,7 +51,18 @@ trait NativeImage_ extends js.Object {
     */
   def getNativeHandle(): Buffer = js.native
   
+  /**
+    * An array of all scale factors corresponding to representations for a given
+    * nativeImage.
+    */
+  def getScaleFactors(): js.Array[Double] = js.native
+  
+  /**
+    * If `scaleFactor` is passed, this will return the size corresponding to the image
+    * representation most closely matching the passed value.
+    */
   def getSize(): Size = js.native
+  def getSize(scaleFactor: Double): Size = js.native
   
   /**
     * Whether the image is empty.

@@ -1,6 +1,6 @@
 package typingsSlinky.datastoreCore.mod
 
-import typingsSlinky.interfaceDatastore.mod.Datastore
+import typingsSlinky.interfaceDatastore.mod.Adapter
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ object shard extends js.Object {
   
   def parseShardFun(str: String): Shard = js.native
   
-  def readShardFun(path: String, store: Datastore[Buffer]): js.Promise[Shard] = js.native
+  def readShardFun(path: String, store: Adapter[Buffer]): js.Promise[Shard] = js.native
   
   val readme: String = js.native
   

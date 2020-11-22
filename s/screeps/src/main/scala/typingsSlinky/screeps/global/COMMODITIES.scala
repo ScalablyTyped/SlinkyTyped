@@ -45,6 +45,8 @@ object COMMODITIES extends js.Object {
   
   var emanation: Components = js.native
   
+  var energy: Components = js.native
+  
   var essence: Components = js.native
   
   var extract: Components = js.native

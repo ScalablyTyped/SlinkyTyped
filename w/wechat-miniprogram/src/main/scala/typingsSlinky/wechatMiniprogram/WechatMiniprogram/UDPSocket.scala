@@ -24,24 +24,28 @@ trait UDPSocket extends js.Object {
   /** [UDPSocket.offClose(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/udp/UDPSocket.offClose.html)
     *
     * 取消监听关闭事件 */
+  def offClose(): Unit = js.native
   def offClose(/** 关闭事件的回调函数 */
-  callback: OffCloseCallback): Unit = js.native
+  callback: UDPSocketOffCloseCallback): Unit = js.native
   
   /** [UDPSocket.offError(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/udp/UDPSocket.offError.html)
     *
     * 取消监听错误事件 */
+  def offError(): Unit = js.native
   def offError(/** 错误事件的回调函数 */
-  callback: OffErrorCallback): Unit = js.native
+  callback: UDPSocketOffErrorCallback): Unit = js.native
   
   /** [UDPSocket.offListening(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/udp/UDPSocket.offListening.html)
     *
     * 取消监听开始监听数据包消息的事件 */
+  def offListening(): Unit = js.native
   def offListening(/** 开始监听数据包消息的事件的回调函数 */
   callback: OffListeningCallback): Unit = js.native
   
   /** [UDPSocket.offMessage(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/network/udp/UDPSocket.offMessage.html)
     *
     * 取消监听收到消息的事件 */
+  def offMessage(): Unit = js.native
   def offMessage(/** 收到消息的事件的回调函数 */
   callback: OffMessageCallback): Unit = js.native
   

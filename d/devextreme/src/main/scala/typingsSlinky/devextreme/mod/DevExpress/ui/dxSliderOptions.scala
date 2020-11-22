@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSliderOptions extends dxSliderBaseOptions[dxSlider] {
   
-  /** @name dxSlider.Options.value */
+  /**
+    * [descr:dxSlider.Options.value]
+    */
   @JSName("value")
   var value_dxSliderOptions: js.UndefOr[Double] = js.native
 }

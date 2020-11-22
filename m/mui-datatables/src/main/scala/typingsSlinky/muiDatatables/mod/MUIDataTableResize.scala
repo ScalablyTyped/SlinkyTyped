@@ -9,7 +9,7 @@ trait MUIDataTableResize extends js.Object {
   
   var classes: js.UndefOr[js.Object] = js.native
   
-  var options: js.UndefOr[js.Object] = js.native
+  var options: js.UndefOr[MUIDataTableOptions] = js.native
   
   var rowSelected: js.UndefOr[Boolean] = js.native
   
@@ -47,7 +47,7 @@ object MUIDataTableResize {
     def deleteClasses: Self = this.set("classes", js.undefined)
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: MUIDataTableOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

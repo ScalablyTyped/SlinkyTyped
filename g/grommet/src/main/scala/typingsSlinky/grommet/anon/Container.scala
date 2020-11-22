@@ -1,5 +1,6 @@
 package typingsSlinky.grommet.anon
 
+import typingsSlinky.grommet.boxMod.BoxProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,9 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Container extends js.Object {
   
-  var container: js.UndefOr[Align] = js.native
-  
-  var text: js.UndefOr[`11`] = js.native
+  var container: js.UndefOr[BoxProps] = js.native
 }
 object Container {
   
@@ -35,15 +34,9 @@ object Container {
     }
     
     @scala.inline
-    def setContainer(value: Align): Self = this.set("container", value.asInstanceOf[js.Any])
+    def setContainer(value: BoxProps): Self = this.set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContainer: Self = this.set("container", js.undefined)
-    
-    @scala.inline
-    def setText(value: `11`): Self = this.set("text", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteText: Self = this.set("text", js.undefined)
   }
 }

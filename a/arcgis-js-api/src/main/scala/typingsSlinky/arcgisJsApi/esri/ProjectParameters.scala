@@ -29,23 +29,21 @@ trait ProjectParameters extends Accessor {
   var outSpatialReference: SpatialReference = js.native
   
   /**
-    * Converts an instance of  [this class]() to its ArcGIS portal JSON representation. See the [Using fromJSON()](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#using-fromjson) topic in the Guide for more information.
+    * Converts an instance of  [this class]() to its ArcGIS portal JSON representation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ProjectParameters.html#toJSON)
-    *
-    *
     */
   def toJSON(): js.Any = js.native
   
   /**
-    * Indicates whether to transform forward or not. The forward or reverse direction of transformation is implied in the name of the transformation.
+    * Indicates whether to transform forward or not.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ProjectParameters.html#transformForward)
     */
   var transformForward: Boolean = js.native
   
   /**
-    * The well-known id {wkid:number} or well-known text {wkt:string} of the datum transformation to be applied to the projected geometries. See [Datum transformations](https://developers.arcgis.com/rest/services-reference/datum-transformations.htm) for a list of valid datum transformations that may be used here.  If a transformation is specified, a value must also be specified in the [transformForward](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ProjectParameters.html#transformForward) property.
+    * The well-known id {wkid:number} or well-known text {wkt:string} of the datum transformation to be applied to the projected geometries.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ProjectParameters.html#transformation)
     */

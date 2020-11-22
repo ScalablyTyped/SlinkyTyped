@@ -10,14 +10,20 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.Components
+import typingsSlinky.rcPicker.interfaceMod.CustomFormat
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.Locale
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.interfaceMod.PickerMode
 import typingsSlinky.rcPicker.mod.default
 import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
+import typingsSlinky.rcPicker.rcPickerStrings.`additions removals`
 import typingsSlinky.rcPicker.rcPickerStrings.`additions text`
 import typingsSlinky.rcPicker.rcPickerStrings.`inline`
+import typingsSlinky.rcPicker.rcPickerStrings.`removals additions`
+import typingsSlinky.rcPicker.rcPickerStrings.`removals text`
+import typingsSlinky.rcPicker.rcPickerStrings.`text additions`
+import typingsSlinky.rcPicker.rcPickerStrings.`text removals`
 import typingsSlinky.rcPicker.rcPickerStrings.additions
 import typingsSlinky.rcPicker.rcPickerStrings.all
 import typingsSlinky.rcPicker.rcPickerStrings.ascending
@@ -184,7 +190,9 @@ object RcPicker {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -268,10 +276,13 @@ object RcPicker {
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
+      def formatVarargs(value: (String | CustomFormat[DateType])*): this.type = set("format", js.Array(value :_*))
       
       @scala.inline
-      def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
+      def formatFunction1(value: DateType => String): this.type = set("format", js.Any.fromFunction1(value))
+      
+      @scala.inline
+      def format(value: String | CustomFormat[DateType] | (js.Array[String | CustomFormat[DateType]])): this.type = set("format", value.asInstanceOf[js.Any])
       
       @scala.inline
       def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
@@ -529,7 +540,9 @@ object RcPicker {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -616,10 +629,13 @@ object RcPicker {
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
+      def formatVarargs(value: (String | CustomFormat[DateType])*): this.type = set("format", js.Array(value :_*))
       
       @scala.inline
-      def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
+      def formatFunction1(value: DateType => String): this.type = set("format", js.Any.fromFunction1(value))
+      
+      @scala.inline
+      def format(value: String | CustomFormat[DateType] | (js.Array[String | CustomFormat[DateType]])): this.type = set("format", value.asInstanceOf[js.Any])
       
       @scala.inline
       def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
@@ -889,7 +905,9 @@ object RcPicker {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -985,10 +1003,13 @@ object RcPicker {
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
+      def formatVarargs(value: (String | CustomFormat[DateType])*): this.type = set("format", js.Array(value :_*))
       
       @scala.inline
-      def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
+      def formatFunction1(value: DateType => String): this.type = set("format", js.Any.fromFunction1(value))
+      
+      @scala.inline
+      def format(value: String | CustomFormat[DateType] | (js.Array[String | CustomFormat[DateType]])): this.type = set("format", value.asInstanceOf[js.Any])
       
       @scala.inline
       def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))

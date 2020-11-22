@@ -1,7 +1,7 @@
 
 # Scala.js typings for clownface
 
-Typings are for version 0.12
+Typings are for version 1.0
 
 ## Library description:
 Simple but powerful graph traversing library

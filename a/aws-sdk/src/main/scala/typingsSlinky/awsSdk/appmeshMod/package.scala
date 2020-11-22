@@ -27,8 +27,8 @@ package object appmeshMod {
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.appmeshMod.ClientApiVersions
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.ms_
     - typingsSlinky.awsSdk.awsSdkStrings.s_
+    - typingsSlinky.awsSdk.awsSdkStrings.ms_
     - java.lang.String
   */
   type DurationUnit = typingsSlinky.awsSdk.appmeshMod._DurationUnit | java.lang.String
@@ -48,8 +48,8 @@ package object appmeshMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - java.lang.String
   */
   type GatewayRouteStatusCode = typingsSlinky.awsSdk.appmeshMod._GatewayRouteStatusCode | java.lang.String
@@ -81,15 +81,15 @@ package object appmeshMod {
   type Hostname = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.CONNECT
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETE
     - typingsSlinky.awsSdk.awsSdkStrings.GET
     - typingsSlinky.awsSdk.awsSdkStrings.HEAD
-    - typingsSlinky.awsSdk.awsSdkStrings.OPTIONS
-    - typingsSlinky.awsSdk.awsSdkStrings.PATCH
     - typingsSlinky.awsSdk.awsSdkStrings.POST
     - typingsSlinky.awsSdk.awsSdkStrings.PUT
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE
+    - typingsSlinky.awsSdk.awsSdkStrings.CONNECT
+    - typingsSlinky.awsSdk.awsSdkStrings.OPTIONS
     - typingsSlinky.awsSdk.awsSdkStrings.TRACE
+    - typingsSlinky.awsSdk.awsSdkStrings.PATCH
     - java.lang.String
   */
   type HttpMethod = typingsSlinky.awsSdk.appmeshMod._HttpMethod | java.lang.String
@@ -122,9 +122,9 @@ package object appmeshMod {
   type ListVirtualServicesLimit = scala.Double
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
-    - typingsSlinky.awsSdk.awsSdkStrings.PERMISSIVE
     - typingsSlinky.awsSdk.awsSdkStrings.STRICT
+    - typingsSlinky.awsSdk.awsSdkStrings.PERMISSIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
     - java.lang.String
   */
   type ListenerTlsMode = typingsSlinky.awsSdk.appmeshMod._ListenerTlsMode | java.lang.String
@@ -133,29 +133,39 @@ package object appmeshMod {
   
   type Long = scala.Double
   
+  type MaxConnections = scala.Double
+  
+  type MaxPendingRequests = scala.Double
+  
+  type MaxRequests = scala.Double
+  
   type MaxRetries = scala.Double
   
   type MeshList = js.Array[typingsSlinky.awsSdk.appmeshMod.MeshRef]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - java.lang.String
   */
   type MeshStatusCode = typingsSlinky.awsSdk.appmeshMod._MeshStatusCode | java.lang.String
   
   type MethodName = java.lang.String
   
+  type OutlierDetectionMaxEjectionPercent = scala.Double
+  
+  type OutlierDetectionMaxServerErrors = scala.Double
+  
   type PercentInt = scala.Double
   
   type PortNumber = scala.Double
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.grpc
     - typingsSlinky.awsSdk.awsSdkStrings.http_
-    - typingsSlinky.awsSdk.awsSdkStrings.http2
     - typingsSlinky.awsSdk.awsSdkStrings.tcp_
+    - typingsSlinky.awsSdk.awsSdkStrings.http2
+    - typingsSlinky.awsSdk.awsSdkStrings.grpc
     - java.lang.String
   */
   type PortProtocol = typingsSlinky.awsSdk.appmeshMod._PortProtocol | java.lang.String
@@ -170,8 +180,8 @@ package object appmeshMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - java.lang.String
   */
   type RouteStatusCode = typingsSlinky.awsSdk.appmeshMod._RouteStatusCode | java.lang.String
@@ -207,9 +217,9 @@ package object appmeshMod {
   type VirtualGatewayList = js.Array[typingsSlinky.awsSdk.appmeshMod.VirtualGatewayRef]
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
-    - typingsSlinky.awsSdk.awsSdkStrings.PERMISSIVE
     - typingsSlinky.awsSdk.awsSdkStrings.STRICT
+    - typingsSlinky.awsSdk.awsSdkStrings.PERMISSIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
     - java.lang.String
   */
   type VirtualGatewayListenerTlsMode = typingsSlinky.awsSdk.appmeshMod._VirtualGatewayListenerTlsMode | java.lang.String
@@ -217,17 +227,17 @@ package object appmeshMod {
   type VirtualGatewayListeners = js.Array[typingsSlinky.awsSdk.appmeshMod.VirtualGatewayListener]
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.grpc
     - typingsSlinky.awsSdk.awsSdkStrings.http_
     - typingsSlinky.awsSdk.awsSdkStrings.http2
+    - typingsSlinky.awsSdk.awsSdkStrings.grpc
     - java.lang.String
   */
   type VirtualGatewayPortProtocol = typingsSlinky.awsSdk.appmeshMod._VirtualGatewayPortProtocol | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - java.lang.String
   */
   type VirtualGatewayStatusCode = typingsSlinky.awsSdk.appmeshMod._VirtualGatewayStatusCode | java.lang.String
@@ -236,8 +246,8 @@ package object appmeshMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - java.lang.String
   */
   type VirtualNodeStatusCode = typingsSlinky.awsSdk.appmeshMod._VirtualNodeStatusCode | java.lang.String
@@ -248,8 +258,8 @@ package object appmeshMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - java.lang.String
   */
   type VirtualRouterStatusCode = typingsSlinky.awsSdk.appmeshMod._VirtualRouterStatusCode | java.lang.String
@@ -258,8 +268,8 @@ package object appmeshMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
-    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - java.lang.String
   */
   type VirtualServiceStatusCode = typingsSlinky.awsSdk.appmeshMod._VirtualServiceStatusCode | java.lang.String

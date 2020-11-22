@@ -14,13 +14,13 @@ trait TermsAndConditionsAcceptanceStatus extends Entity {
   var acceptedVersion: js.UndefOr[Double] = js.native
   
   // Navigation link to the terms and conditions that are assigned.
-  var termsAndConditions: js.UndefOr[TermsAndConditions] = js.native
+  var termsAndConditions: js.UndefOr[NullableOption[TermsAndConditions]] = js.native
   
   // Display name of the user whose acceptance the entity represents.
-  var userDisplayName: js.UndefOr[String] = js.native
+  var userDisplayName: js.UndefOr[NullableOption[String]] = js.native
   
   // The userPrincipalName of the User that accepted the term.
-  var userPrincipalName: js.UndefOr[String] = js.native
+  var userPrincipalName: js.UndefOr[NullableOption[String]] = js.native
 }
 object TermsAndConditionsAcceptanceStatus {
   
@@ -58,21 +58,30 @@ object TermsAndConditionsAcceptanceStatus {
     def deleteAcceptedVersion: Self = this.set("acceptedVersion", js.undefined)
     
     @scala.inline
-    def setTermsAndConditions(value: TermsAndConditions): Self = this.set("termsAndConditions", value.asInstanceOf[js.Any])
+    def setTermsAndConditions(value: NullableOption[TermsAndConditions]): Self = this.set("termsAndConditions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTermsAndConditions: Self = this.set("termsAndConditions", js.undefined)
     
     @scala.inline
-    def setUserDisplayName(value: String): Self = this.set("userDisplayName", value.asInstanceOf[js.Any])
+    def setTermsAndConditionsNull: Self = this.set("termsAndConditions", null)
+    
+    @scala.inline
+    def setUserDisplayName(value: NullableOption[String]): Self = this.set("userDisplayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserDisplayName: Self = this.set("userDisplayName", js.undefined)
     
     @scala.inline
-    def setUserPrincipalName(value: String): Self = this.set("userPrincipalName", value.asInstanceOf[js.Any])
+    def setUserDisplayNameNull: Self = this.set("userDisplayName", null)
+    
+    @scala.inline
+    def setUserPrincipalName(value: NullableOption[String]): Self = this.set("userPrincipalName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserPrincipalName: Self = this.set("userPrincipalName", js.undefined)
+    
+    @scala.inline
+    def setUserPrincipalNameNull: Self = this.set("userPrincipalName", null)
   }
 }

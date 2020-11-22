@@ -14,34 +14,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DraggableBaseOptions[T] extends DOMComponentOptions[T] {
   
-  /** @name DraggableBase.Options.autoScroll */
+  /**
+    * [descr:DraggableBase.Options.autoScroll]
+    */
   var autoScroll: js.UndefOr[Boolean] = js.native
   
-  /** @name DraggableBase.Options.boundary */
+  /**
+    * [descr:DraggableBase.Options.boundary]
+    */
   var boundary: js.UndefOr[String | Element | JQuery] = js.native
   
-  /** @name DraggableBase.Options.container */
+  /**
+    * [descr:DraggableBase.Options.container]
+    */
   var container: js.UndefOr[String | Element | JQuery] = js.native
   
-  /** @name DraggableBase.Options.cursorOffset */
+  /**
+    * [descr:DraggableBase.Options.cursorOffset]
+    */
   var cursorOffset: js.UndefOr[String | Y] = js.native
   
-  /** @name DraggableBase.Options.data */
+  /**
+    * [descr:DraggableBase.Options.data]
+    */
   var data: js.UndefOr[js.Any] = js.native
   
-  /** @name DraggableBase.Options.dragDirection */
+  /**
+    * [descr:DraggableBase.Options.dragDirection]
+    */
   var dragDirection: js.UndefOr[both | horizontal | vertical] = js.native
   
-  /** @name DraggableBase.Options.group */
+  /**
+    * [descr:DraggableBase.Options.group]
+    */
   var group: js.UndefOr[String] = js.native
   
-  /** @name DraggableBase.Options.handle */
+  /**
+    * [descr:DraggableBase.Options.handle]
+    */
   var handle: js.UndefOr[String] = js.native
   
-  /** @name DraggableBase.Options.scrollSensitivity */
+  /**
+    * [descr:DraggableBase.Options.scrollSensitivity]
+    */
   var scrollSensitivity: js.UndefOr[Double] = js.native
   
-  /** @name DraggableBase.Options.scrollSpeed */
+  /**
+    * [descr:DraggableBase.Options.scrollSpeed]
+    */
   var scrollSpeed: js.UndefOr[Double] = js.native
 }
 object DraggableBaseOptions {

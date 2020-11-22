@@ -16,7 +16,6 @@ trait GraphicProperties extends js.Object {
   
   /**
     * The geometry that defines the graphic's location.
-    * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html#geometry)
     */
@@ -30,14 +29,14 @@ trait GraphicProperties extends js.Object {
   var layer: js.UndefOr[LayerProperties] = js.native
   
   /**
-    * The template for displaying content in a [Popup](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html) when the graphic is selected. The [PopupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) may be used to access a graphic's [attributes](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html#attributes) and display their values in the view's default popup. See the documentation for [PopupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) for details on how to display attribute values in the popup.  As of 4.8 to get the actual `popupTemplate` of the graphic, see the [getEffectivePopupTemplate()](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html#getEffectivePopupTemplate) method that either returns this value or the `popupTemplate` of the graphic's layer.
+    * The template for displaying content in a [Popup](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html) when the graphic is selected.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html#popupTemplate)
     */
   var popupTemplate: js.UndefOr[PopupTemplateProperties] = js.native
   
   /**
-    * The [Symbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-Symbol.html) for the graphic. Choosing a symbol for a graphic depends on the [View](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html) type (SceneView or MapView), and the [geometry type](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Geometry.html#type) of the graphic.  Each graphic may have its own symbol specified when the parent layer is a [GraphicsLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GraphicsLayer.html). For a [FeatureLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html) the symbol of each graphic should not be set by the developer since the graphics' rendering properties are determined by the layer's [renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html).
+    * The [Symbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-Symbol.html) for the graphic.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html#symbol)
     */
@@ -47,8 +46,6 @@ trait GraphicProperties extends js.Object {
     * Indicates the visibility of the graphic.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html#visible)
-    *
-    * @default true
     */
   var visible: js.UndefOr[Boolean] = js.native
 }

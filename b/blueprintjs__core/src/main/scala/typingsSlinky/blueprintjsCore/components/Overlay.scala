@@ -51,7 +51,7 @@ object Overlay {
     def `lazy`(value: Boolean): this.type = set("lazy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def onClosed(value: /* node */ HTMLElement => Unit): this.type = set("onClosed", js.Any.fromFunction1(value))

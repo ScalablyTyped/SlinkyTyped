@@ -3,7 +3,7 @@ package typingsSlinky.tensorflowModelsUniversalSentenceEncoder
 import typingsSlinky.tensorflowModelsUniversalSentenceEncoder.tokenizerMod.Vocabulary
 import typingsSlinky.tensorflowModelsUniversalSentenceEncoder.useQnaMod.UniversalSentenceEncoderQnA
 import typingsSlinky.tensorflowTfjsConverter.mod.GraphModel
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor2D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +16,7 @@ object mod extends js.Object {
   
   def loadQnA(): js.Promise[UniversalSentenceEncoderQnA] = js.native
   
-  val version: /* "1.3.0" */ String = js.native
+  val version: /* "1.3.2" */ String = js.native
   
   @js.native
   class Tokenizer protected ()

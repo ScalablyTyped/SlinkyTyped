@@ -9,7 +9,7 @@ trait PaddingXProps[TLength] extends js.Object {
   
   val px: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingLeftProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingLeft<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object PaddingXProps {
     }
     
     @scala.inline
+    def setPxVarargs(value: js.Any*): Self = this.set("px", js.Array(value :_*))
+    
+    @scala.inline
     def setPx(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingLeftProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingLeft<TLength> */ _
         ]
     ): Self = this.set("px", value.asInstanceOf[js.Any])
     

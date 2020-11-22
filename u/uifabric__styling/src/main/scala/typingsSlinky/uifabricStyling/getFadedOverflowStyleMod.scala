@@ -1,7 +1,7 @@
 package typingsSlinky.uifabricStyling
 
-import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
+import typingsSlinky.uifabricMergeStyles.irawstyleMod.IRawStyle
 import typingsSlinky.uifabricStyling.uifabricStylingStrings.horizontal
 import typingsSlinky.uifabricStyling.uifabricStylingStrings.vertical
 import scala.scalajs.js

@@ -17,7 +17,7 @@ trait IRouterMatcher[T, Method /* <: all | get | post | put | delete | patch | o
   
   def apply(path: PathParams, subApplication: Application): T = js.native
   // tslint:disable-next-line no-unnecessary-generics (This generic is meant to be passed explicitly.)
-  def apply[P /* <: Params */, ResBody, ReqBody, ReqQuery](
+  def apply[P, ResBody, ReqBody, ReqQuery](
     path: PathParams,
     handlers: ((RequestHandler[P, ResBody, ReqBody, ReqQuery]) | (RequestHandlerParams[P, ResBody, ReqBody, ReqQuery]))*
   ): T = js.native

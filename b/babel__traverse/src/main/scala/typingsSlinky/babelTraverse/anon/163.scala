@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ConditionalExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.Placeholder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `163` extends js.Object {
   
-  var `type`: ConditionalExpression = js.native
+  var `type`: Placeholder = js.native
 }
 object `163` {
   
   @scala.inline
-  def apply(`type`: ConditionalExpression): `163` = {
+  def apply(`type`: Placeholder): `163` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`163`]
@@ -35,6 +35,6 @@ object `163` {
     }
     
     @scala.inline
-    def setType(value: ConditionalExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: Placeholder): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

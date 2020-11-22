@@ -21,6 +21,8 @@ trait TooltipProps extends js.Object {
   var link: js.UndefOr[ReactElement] = js.native
   
   var text: String = js.native
+  
+  var zIndex: js.UndefOr[Indexable] = js.native
 }
 object TooltipProps {
   
@@ -74,5 +76,11 @@ object TooltipProps {
     
     @scala.inline
     def deleteLink: Self = this.set("link", js.undefined)
+    
+    @scala.inline
+    def setZIndex(value: Indexable): Self = this.set("zIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteZIndex: Self = this.set("zIndex", js.undefined)
   }
 }

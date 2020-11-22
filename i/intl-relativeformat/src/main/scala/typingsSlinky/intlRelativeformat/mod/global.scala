@@ -1,9 +1,9 @@
 package typingsSlinky.intlRelativeformat.mod
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.formatjsEcma402Abstract.typesRelativeTimeMod.LocaleFieldsData
+import typingsSlinky.formatjsEcma402Abstract.typesRelativeTimeMod.RelativeTimeLocaleData
 import typingsSlinky.formatjsIntlRelativetimeformat.anon.PickIntlRelativeTimeForma
-import typingsSlinky.formatjsIntlRelativetimeformat.mod.LocaleFieldsData
-import typingsSlinky.formatjsIntlRelativetimeformat.mod.RelativeTimeLocaleData
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,8 +22,6 @@ object global extends js.Object {
     @js.native
     object RelativeTimeFormat
       extends Instantiable0[typingsSlinky.formatjsIntlRelativetimeformat.mod.default] {
-      
-      val __INTERNAL_SLOT_MAP__ : js.Any = js.native
       
       def __addLocaleData(data: RelativeTimeLocaleData*): Unit = js.native
       

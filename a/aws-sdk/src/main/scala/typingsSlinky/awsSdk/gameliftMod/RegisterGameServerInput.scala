@@ -8,39 +8,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RegisterGameServerInput extends js.Object {
   
   /**
-    * Information needed to make inbound client connections to the game server. This might include IP address and port, DNS name, etc.
+    * Information that is needed to make inbound client connections to the game server. This might include the IP address and port, DNS name, and other information.
     */
   var ConnectionInfo: js.UndefOr[GameServerConnectionInfo] = js.native
   
   /**
-    * A game server tag that can be used to request sorted lists of game servers using ListGameServers. Custom sort keys are developer-defined based on how you want to organize the retrieved game server information.
-    */
-  var CustomSortKey: js.UndefOr[GameServerSortKey] = js.native
-  
-  /**
-    * A set of custom game server properties, formatted as a single string value. This data is passed to a game client or service when it requests information on a game servers using ListGameServers or ClaimGameServer. 
+    * A set of custom game server properties, formatted as a single string value. This data is passed to a game client or service when it requests information on game servers using ListGameServers or ClaimGameServer. 
     */
   var GameServerData: js.UndefOr[typingsSlinky.awsSdk.gameliftMod.GameServerData] = js.native
   
   /**
-    * An identifier for the game server group where the game server is running. You can use either the GameServerGroup name or ARN value.
+    * A unique identifier for the game server group where the game server is running. Use either the GameServerGroup name or ARN value.
     */
   var GameServerGroupName: GameServerGroupNameOrArn = js.native
   
   /**
-    * A custom string that uniquely identifies the new game server. Game server IDs are developer-defined and must be unique across all game server groups in your AWS account.
+    * A custom string that uniquely identifies the game server to register. Game server IDs are developer-defined and must be unique across all game server groups in your AWS account.
     */
   var GameServerId: typingsSlinky.awsSdk.gameliftMod.GameServerId = js.native
   
   /**
-    * The unique identifier for the instance where the game server is running. This ID is available in the instance metadata.
+    * The unique identifier for the instance where the game server is running. This ID is available in the instance metadata. EC2 instance IDs use a 17-character format, for example: i-1234567890abcdef0.
     */
   var InstanceId: GameServerInstanceId = js.native
-  
-  /**
-    * A list of labels to assign to the new game server resource. Tags are developer-defined key-value pairs. Tagging AWS resources are useful for resource management, access management, and cost allocation. For more information, see  Tagging AWS Resources in the AWS General Reference. Once the resource is created, you can use TagResource, UntagResource, and ListTagsForResource to add, remove, and view tags. The maximum tag limit may be lower than stated. See the AWS General Reference for actual tagging limits.
-    */
-  var Tags: js.UndefOr[TagList] = js.native
 }
 object RegisterGameServerInput {
   
@@ -85,24 +75,9 @@ object RegisterGameServerInput {
     def deleteConnectionInfo: Self = this.set("ConnectionInfo", js.undefined)
     
     @scala.inline
-    def setCustomSortKey(value: GameServerSortKey): Self = this.set("CustomSortKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCustomSortKey: Self = this.set("CustomSortKey", js.undefined)
-    
-    @scala.inline
     def setGameServerData(value: GameServerData): Self = this.set("GameServerData", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGameServerData: Self = this.set("GameServerData", js.undefined)
-    
-    @scala.inline
-    def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))
-    
-    @scala.inline
-    def setTags(value: TagList): Self = this.set("Tags", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTags: Self = this.set("Tags", js.undefined)
   }
 }

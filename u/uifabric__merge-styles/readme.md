@@ -1,7 +1,7 @@
 
 # Scala.js typings for uifabric__merge-styles
 
-Typings are for version 7.16.3
+Typings are for version 7.19.1
 
 ## Library description:
 Style loading utilities.

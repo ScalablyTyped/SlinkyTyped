@@ -1,30 +1,21 @@
 package typingsSlinky.awsSdkClientKmsBrowser.typesInvalidAliasNameExceptionMod
 
 import typingsSlinky.awsSdkClientKmsBrowser.createAliasExceptionsUnionMod.CreateAliasExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait InvalidAliasNameException
-  extends ServiceException[InvalidAliasNameExceptionDetails]
-     with CreateAliasExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidAliasNameExceptionDetails> * / any */ @js.native
+trait InvalidAliasNameException extends CreateAliasExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidAliasNameException: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidAliasNameException = js.native
+  var name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidAliasNameException = js.native
 }
 object InvalidAliasNameException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidAliasNameExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidAliasNameException
-  ): InvalidAliasNameException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidAliasNameException): InvalidAliasNameException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidAliasNameException]
   }
   

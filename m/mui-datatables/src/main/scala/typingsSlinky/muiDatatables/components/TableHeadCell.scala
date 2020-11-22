@@ -3,6 +3,7 @@ package typingsSlinky.muiDatatables.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableHeadCell
+import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
 import typingsSlinky.muiDatatables.mod.MUISortOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,7 +33,7 @@ object TableHeadCell {
   def withProps(p: MUIDataTableHeadCell): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(hint: String, options: js.Object, sort: Boolean, toggleSort: js.Any => js.Any): Builder = {
+  def apply(hint: String, options: MUIDataTableOptions, sort: Boolean, toggleSort: js.Any => js.Any): Builder = {
     val __props = js.Dynamic.literal(hint = hint.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], sort = sort.asInstanceOf[js.Any], toggleSort = js.Any.fromFunction1(toggleSort))
     new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableHeadCell]))
   }

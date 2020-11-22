@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,25 +10,35 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object signal extends js.Object {
   
-  val frame: js.Function5[
-    /* signal */ Tensor1D, 
-    /* frameLength */ Double, 
-    /* frameStep */ Double, 
-    /* padEnd */ js.UndefOr[Boolean], 
-    /* padValue */ js.UndefOr[Double], 
-    Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
-  ] = js.native
+  def frame(signal: Tensor[R1], frameLength: Double, frameStep: Double): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
+  def frame(
+    signal: Tensor[R1],
+    frameLength: Double,
+    frameStep: Double,
+    padEnd: js.UndefOr[scala.Nothing],
+    padValue: Double
+  ): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
+  def frame(signal: Tensor[R1], frameLength: Double, frameStep: Double, padEnd: Boolean): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
+  def frame(signal: Tensor[R1], frameLength: Double, frameStep: Double, padEnd: Boolean, padValue: Double): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
   
-  val hammingWindow: js.Function1[/* windowLength */ Double, Tensor1D] = js.native
+  def hammingWindow(windowLength: Double): Tensor[R1] = js.native
   
-  val hannWindow: js.Function1[/* windowLength */ Double, Tensor1D] = js.native
+  def hannWindow(windowLength: Double): Tensor[R1] = js.native
   
-  val stft: js.Function5[
-    /* signal */ Tensor1D, 
-    /* frameLength */ Double, 
-    /* frameStep */ Double, 
-    /* fftLength */ js.UndefOr[Double], 
-    /* windowFn */ js.UndefOr[js.Function1[/* length */ Double, Tensor1D]], 
-    Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
-  ] = js.native
+  def stft(signal: Tensor[R1], frameLength: Double, frameStep: Double): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
+  def stft(
+    signal: Tensor[R1],
+    frameLength: Double,
+    frameStep: Double,
+    fftLength: js.UndefOr[scala.Nothing],
+    windowFn: js.Function1[/* length */ Double, Tensor[R1]]
+  ): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
+  def stft(signal: Tensor[R1], frameLength: Double, frameStep: Double, fftLength: Double): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
+  def stft(
+    signal: Tensor[R1],
+    frameLength: Double,
+    frameStep: Double,
+    fftLength: Double,
+    windowFn: js.Function1[/* length */ Double, Tensor[R1]]
+  ): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
 }

@@ -25,9 +25,9 @@ object textureMod extends js.Object {
     /**
       * Instantiates a new texture.
       * This represents a texture in babylon. It can be easily loaded from a network, base64 or html input.
-      * @see http://doc.babylonjs.com/babylon101/materials#texture
+      * @see https://doc.babylonjs.com/babylon101/materials#texture
       * @param url defines the url of the picture to load as a texture
-      * @param scene defines the scene or engine the texture will belong to
+      * @param sceneOrEngine defines the scene or engine the texture will belong to
       * @param noMipmap defines if the texture will require mip maps or not
       * @param invertY defines if the texture needs to be inverted on the y axis during loading
       * @param samplingMode defines the sampling mode we want for the texture while fectching from it (Texture.NEAREST_SAMPLINGMODE...)
@@ -37,6 +37,7 @@ object textureMod extends js.Object {
       * @param deleteBuffer defines if the buffer we are loading the texture from should be deleted after load
       * @param format defines the format of the texture we are trying to load (Engine.TEXTUREFORMAT_RGBA...)
       * @param mimeType defines an optional mime type information
+      * @param loaderOptions options to be passed to the loader
       */
     def this(
       url: Nullable[String],
@@ -57,7 +58,8 @@ object textureMod extends js.Object {
           ],
       deleteBuffer: js.UndefOr[Boolean],
       format: js.UndefOr[Double],
-      mimeType: js.UndefOr[String]
+      mimeType: js.UndefOr[String],
+      loaderOptions: js.UndefOr[js.Any]
     ) = this()
     
     /** @hidden */
@@ -67,6 +69,8 @@ object textureMod extends js.Object {
     
     var _cachedCoordinatesMode: js.Any = js.native
     
+    var _cachedHomogeneousRotationInUVTransform: js.Any = js.native
+    
     var _cachedProjectionMatrixId: js.Any = js.native
     
     var _cachedTextureMatrix: js.Any = js.native
@@ -75,15 +79,21 @@ object textureMod extends js.Object {
     
     var _cachedUOffset: js.Any = js.native
     
+    var _cachedURotationCenter: js.Any = js.native
+    
     var _cachedUScale: js.Any = js.native
     
     var _cachedVAng: js.Any = js.native
     
     var _cachedVOffset: js.Any = js.native
     
+    var _cachedVRotationCenter: js.Any = js.native
+    
     var _cachedVScale: js.Any = js.native
     
     var _cachedWAng: js.Any = js.native
+    
+    var _cachedWRotationCenter: js.Any = js.native
     
     var _delayedOnError: js.Any = js.native
     
@@ -100,6 +110,8 @@ object textureMod extends js.Object {
     var _invertY: Boolean = js.native
     
     var _isBlocking: Boolean = js.native
+    
+    var _loaderOptions: js.Any = js.native
     
     var _mimeType: js.Any = js.native
     
@@ -120,6 +132,11 @@ object textureMod extends js.Object {
     def getTextureMatrix(uBase: Double): Matrix = js.native
     
     /**
+      * Sets this property to true to avoid deformations when rotating the texture with non-uniform scaling
+      */
+    var homogeneousRotationInUVTransform: Boolean = js.native
+    
+    /**
       * List of inspectable custom properties (used by the Inspector)
       * @see https://doc.babylonjs.com/how_to/debug_layer#extensibility
       */
@@ -136,6 +153,9 @@ object textureMod extends js.Object {
       */
     def isBlocking_=(value: Boolean): Unit = js.native
     
+    /** Returns the texture mime type if it was defined by a loader (undefined else) */
+    def mimeType: js.UndefOr[String] = js.native
+    
     /**
       * Observable triggered once the texture has been loaded.
       */
@@ -148,13 +168,13 @@ object textureMod extends js.Object {
     
     /**
       * Define an offset on the texture to rotate around the u coordinates of the UVs
-      * @see http://doc.babylonjs.com/how_to/more_materials
+      * @see https://doc.babylonjs.com/how_to/more_materials
       */
     var uAng: Double = js.native
     
     /**
       * Define an offset on the texture to offset the u coordinates of the UVs
-      * @see http://doc.babylonjs.com/how_to/more_materials#offsetting
+      * @see https://doc.babylonjs.com/how_to/more_materials#offsetting
       */
     var uOffset: Double = js.native
     
@@ -165,7 +185,7 @@ object textureMod extends js.Object {
     
     /**
       * Define an offset on the texture to scale the u coordinates of the UVs
-      * @see http://doc.babylonjs.com/how_to/more_materials#tiling
+      * @see https://doc.babylonjs.com/how_to/more_materials#tiling
       */
     var uScale: Double = js.native
     
@@ -199,13 +219,13 @@ object textureMod extends js.Object {
     
     /**
       * Define an offset on the texture to rotate around the v coordinates of the UVs
-      * @see http://doc.babylonjs.com/how_to/more_materials
+      * @see https://doc.babylonjs.com/how_to/more_materials
       */
     var vAng: Double = js.native
     
     /**
       * Define an offset on the texture to offset the v coordinates of the UVs
-      * @see http://doc.babylonjs.com/how_to/more_materials#offsetting
+      * @see https://doc.babylonjs.com/how_to/more_materials#offsetting
       */
     var vOffset: Double = js.native
     
@@ -216,13 +236,13 @@ object textureMod extends js.Object {
     
     /**
       * Define an offset on the texture to scale the v coordinates of the UVs
-      * @see http://doc.babylonjs.com/how_to/more_materials#tiling
+      * @see https://doc.babylonjs.com/how_to/more_materials#tiling
       */
     var vScale: Double = js.native
     
     /**
       * Define an offset on the texture to rotate around the w coordinates of the UVs (in case of 3d texture)
-      * @see http://doc.babylonjs.com/how_to/more_materials
+      * @see https://doc.babylonjs.com/how_to/more_materials
       */
     var wAng: Double = js.native
     
@@ -280,6 +300,12 @@ object textureMod extends js.Object {
     
     /** Equirectangular Fixed coordinates mode */
     val FIXED_EQUIRECTANGULAR_MODE: Double = js.native
+    
+    /**
+      * Gets or sets a general boolean used to indicate that texture buffers must be saved as part of the serialization process.
+      * If no buffer exists, one will be created as base64 string from the internal webgl data.
+      */
+    var ForceSerializeBuffers: Boolean = js.native
     
     /** Inverse Cubic coordinates mode */
     val INVCUBIC_MODE: Double = js.native

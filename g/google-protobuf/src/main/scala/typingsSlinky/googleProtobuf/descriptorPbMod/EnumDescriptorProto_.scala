@@ -23,15 +23,15 @@ class EnumDescriptorProto_ () extends Message {
   def addValue(value: EnumValueDescriptorProto): EnumValueDescriptorProto = js.native
   def addValue(value: EnumValueDescriptorProto, index: Double): EnumValueDescriptorProto = js.native
   
-  def clearName(): Unit = js.native
+  def clearName(): EnumDescriptorProto = js.native
   
-  def clearOptions(): Unit = js.native
+  def clearOptions(): EnumDescriptorProto = js.native
   
-  def clearReservedNameList(): Unit = js.native
+  def clearReservedNameList(): EnumDescriptorProto = js.native
   
-  def clearReservedRangeList(): Unit = js.native
+  def clearReservedRangeList(): EnumDescriptorProto = js.native
   
-  def clearValueList(): Unit = js.native
+  def clearValueList(): EnumDescriptorProto = js.native
   
   def getName(): js.UndefOr[String] = js.native
   
@@ -47,14 +47,14 @@ class EnumDescriptorProto_ () extends Message {
   
   def hasOptions(): Boolean = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): EnumDescriptorProto = js.native
   
-  def setOptions(): Unit = js.native
-  def setOptions(value: EnumOptions): Unit = js.native
+  def setOptions(): EnumDescriptorProto = js.native
+  def setOptions(value: EnumOptions): EnumDescriptorProto = js.native
   
-  def setReservedNameList(value: js.Array[String]): Unit = js.native
+  def setReservedNameList(value: js.Array[String]): EnumDescriptorProto = js.native
   
-  def setReservedRangeList(value: js.Array[EnumReservedRange]): Unit = js.native
+  def setReservedRangeList(value: js.Array[EnumReservedRange]): EnumDescriptorProto = js.native
   
-  def setValueList(value: js.Array[EnumValueDescriptorProto]): Unit = js.native
+  def setValueList(value: js.Array[EnumValueDescriptorProto]): EnumDescriptorProto = js.native
 }

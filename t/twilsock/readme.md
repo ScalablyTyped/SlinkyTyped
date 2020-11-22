@@ -1,7 +1,7 @@
 
 # Scala.js typings for twilsock
 
-Typings are for version 0.5.12
+Typings are for version 0.5.14
 
 ## Library description:
 Client library for TwilSock service

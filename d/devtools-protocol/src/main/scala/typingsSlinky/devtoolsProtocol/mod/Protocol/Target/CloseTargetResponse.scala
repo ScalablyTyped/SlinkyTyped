@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CloseTargetResponse extends js.Object {
   
+  /**
+    * Always set to true. If an error occurs, the response indicates protocol error.
+    */
   var success: Boolean = js.native
 }
 object CloseTargetResponse {

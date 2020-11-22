@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.appservicesMod.appservices
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.DataType
@@ -10,6 +11,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,15 +24,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.appservicesMod.appservices.IAppServiceAction because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsConsumedAppService, name, parameters */ @JSImport("mendixmodelsdk/dist/gen/appservices", "appservices.AppServiceAction")
 @js.native
 class AppServiceAction protected ()
-  extends Element
+  extends Element[IModel]
      with IByNameReferrable {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -57,9 +59,6 @@ class AppServiceAction protected ()
   def microflowQualifiedName: String | Null = js.native
   
   def microflow_=(newValue: IMicroflow | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FAppServiceAction: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

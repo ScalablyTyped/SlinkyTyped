@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StringSchemaConstructor
   extends AnySchemaConstructor
-     with Instantiable0[StringSchema[js.UndefOr[String]]] {
+     with // tslint:disable-next-line:no-unnecessary-generics
+Instantiable0[StringSchema[js.UndefOr[String | Null], js.Object]] {
   
-  def apply(): StringSchema[js.UndefOr[String]] = js.native
+  // tslint:disable-next-line:no-unnecessary-generics
+  def apply[T /* <: js.UndefOr[String | Null] */, C](): StringSchema[T, C] = js.native
 }

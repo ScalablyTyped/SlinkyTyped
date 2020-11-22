@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-native-iphone-x-helper
 
-Typings are for version 1.2.1
+Typings are for version 1.3.1
 
 ## Library description:
 A library to help you design your react-native app for the iPhone X

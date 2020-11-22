@@ -14,25 +14,39 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GridBaseScrolling extends js.Object {
   
-  /** @name GridBase.Options.scrolling.columnRenderingMode */
+  /**
+    * [descr:GridBase.Options.scrolling.columnRenderingMode]
+    */
   var columnRenderingMode: js.UndefOr[standard | virtual] = js.native
   
-  /** @name GridBase.Options.scrolling.preloadEnabled */
+  /**
+    * [descr:GridBase.Options.scrolling.preloadEnabled]
+    */
   var preloadEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.scrolling.rowRenderingMode */
+  /**
+    * [descr:GridBase.Options.scrolling.rowRenderingMode]
+    */
   var rowRenderingMode: js.UndefOr[standard | virtual] = js.native
   
-  /** @name GridBase.Options.scrolling.scrollByContent */
+  /**
+    * [descr:GridBase.Options.scrolling.scrollByContent]
+    */
   var scrollByContent: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.scrolling.scrollByThumb */
+  /**
+    * [descr:GridBase.Options.scrolling.scrollByThumb]
+    */
   var scrollByThumb: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.scrolling.showScrollbar */
+  /**
+    * [descr:GridBase.Options.scrolling.showScrollbar]
+    */
   var showScrollbar: js.UndefOr[always | never | onHover | onScroll] = js.native
   
-  /** @name GridBase.Options.scrolling.useNative */
+  /**
+    * [descr:GridBase.Options.scrolling.useNative]
+    */
   var useNative: js.UndefOr[Boolean | auto] = js.native
 }
 object GridBaseScrolling {

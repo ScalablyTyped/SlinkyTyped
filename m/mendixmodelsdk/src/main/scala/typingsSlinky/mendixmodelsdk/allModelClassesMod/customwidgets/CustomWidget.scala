@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod.customwidgets
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -29,6 +30,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.VerticalFlow
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.WebLayoutContent
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -45,8 +47,8 @@ class CustomWidget protected ()
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
 /* static members */

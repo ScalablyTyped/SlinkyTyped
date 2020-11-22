@@ -80,6 +80,11 @@ object CompletionItemKind extends js.Object {
   object Interface extends TopLevel[Interface with Double]
   
   @js.native
+  sealed trait Issue extends CompletionItemKind
+  /* 26 */ @js.native
+  object Issue extends TopLevel[Issue with Double]
+  
+  @js.native
   sealed trait Keyword extends CompletionItemKind
   /* 17 */ @js.native
   object Keyword extends TopLevel[Keyword with Double]
@@ -111,7 +116,7 @@ object CompletionItemKind extends js.Object {
   
   @js.native
   sealed trait Snippet extends CompletionItemKind
-  /* 25 */ @js.native
+  /* 27 */ @js.native
   object Snippet extends TopLevel[Snippet with Double]
   
   @js.native
@@ -133,6 +138,11 @@ object CompletionItemKind extends js.Object {
   sealed trait Unit extends CompletionItemKind
   /* 12 */ @js.native
   object Unit extends TopLevel[Unit with Double]
+  
+  @js.native
+  sealed trait User extends CompletionItemKind
+  /* 25 */ @js.native
+  object User extends TopLevel[User with Double]
   
   @js.native
   sealed trait Value extends CompletionItemKind

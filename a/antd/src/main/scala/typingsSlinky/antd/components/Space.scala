@@ -1,5 +1,6 @@
 package typingsSlinky.antd.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.baseline
@@ -8,7 +9,7 @@ import typingsSlinky.antd.antdStrings.end
 import typingsSlinky.antd.antdStrings.horizontal
 import typingsSlinky.antd.antdStrings.start
 import typingsSlinky.antd.antdStrings.vertical
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.spaceMod.SpaceProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -40,6 +41,12 @@ object Space {
     
     @scala.inline
     def size(value: SizeType | Double): this.type = set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def splitReactElement(value: ReactElement): this.type = set("split", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def split(value: ReactElement): this.type = set("split", value.asInstanceOf[js.Any])
     
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])

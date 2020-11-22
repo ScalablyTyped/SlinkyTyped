@@ -2,31 +2,23 @@ package typingsSlinky.awsSdkClientSqsNode.typesReceiptHandleIsInvalidMod
 
 import typingsSlinky.awsSdkClientSqsNode.changeMessageVisibilityExceptionsUnionMod.ChangeMessageVisibilityExceptionsUnion
 import typingsSlinky.awsSdkClientSqsNode.deleteMessageExceptionsUnionMod.DeleteMessageExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ReceiptHandleIsInvalidDetails> * / any */ @js.native
 trait ReceiptHandleIsInvalid
-  extends ServiceException[ReceiptHandleIsInvalidDetails]
-     with ChangeMessageVisibilityExceptionsUnion
+  extends ChangeMessageVisibilityExceptionsUnion
      with DeleteMessageExceptionsUnion {
   
-  @JSName("name")
-  var name_ReceiptHandleIsInvalid: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.ReceiptHandleIsInvalid = js.native
+  var name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.ReceiptHandleIsInvalid = js.native
 }
 object ReceiptHandleIsInvalid {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: ReceiptHandleIsInvalidDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.ReceiptHandleIsInvalid
-  ): ReceiptHandleIsInvalid = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.ReceiptHandleIsInvalid): ReceiptHandleIsInvalid = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReceiptHandleIsInvalid]
   }
   

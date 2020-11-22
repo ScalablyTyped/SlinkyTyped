@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ScaleBreak extends js.Object {
   
-  /** @name ScaleBreak.endValue */
+  /**
+    * [descr:ScaleBreak.endValue]
+    */
   var endValue: js.UndefOr[Double | js.Date | String] = js.native
   
-  /** @name ScaleBreak.startValue */
+  /**
+    * [descr:ScaleBreak.startValue]
+    */
   var startValue: js.UndefOr[Double | js.Date | String] = js.native
 }
 object ScaleBreak {

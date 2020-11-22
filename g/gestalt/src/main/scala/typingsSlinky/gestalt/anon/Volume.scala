@@ -1,6 +1,5 @@
 package typingsSlinky.gestalt.anon
 
-import org.scalajs.dom.raw.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,15 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Volume extends js.Object {
   
-  var event: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLDivElement] = js.native
-  
   var volume: Double = js.native
 }
 object Volume {
   
   @scala.inline
-  def apply(event: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLDivElement], volume: Double): Volume = {
-    val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], volume = volume.asInstanceOf[js.Any])
+  def apply(volume: Double): Volume = {
+    val __obj = js.Dynamic.literal(volume = volume.asInstanceOf[js.Any])
     __obj.asInstanceOf[Volume]
   }
   
@@ -34,9 +31,6 @@ object Volume {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setEvent(value: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLDivElement]): Self = this.set("event", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVolume(value: Double): Self = this.set("volume", value.asInstanceOf[js.Any])

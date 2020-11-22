@@ -7,19 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Logger extends js.Object {
   
-  def error(content: String): Unit = js.native
+  def debug(content: js.Object): Unit = js.native
   
-  def info(content: String): Unit = js.native
+  def error(content: js.Object): Unit = js.native
   
-  def log(content: String): Unit = js.native
+  def info(content: js.Object): Unit = js.native
   
-  def warn(content: String): Unit = js.native
+  def warn(content: js.Object): Unit = js.native
 }
 object Logger {
   
   @scala.inline
-  def apply(error: String => Unit, info: String => Unit, log: String => Unit, warn: String => Unit): Logger = {
-    val __obj = js.Dynamic.literal(error = js.Any.fromFunction1(error), info = js.Any.fromFunction1(info), log = js.Any.fromFunction1(log), warn = js.Any.fromFunction1(warn))
+  def apply(
+    debug: js.Object => Unit,
+    error: js.Object => Unit,
+    info: js.Object => Unit,
+    warn: js.Object => Unit
+  ): Logger = {
+    val __obj = js.Dynamic.literal(debug = js.Any.fromFunction1(debug), error = js.Any.fromFunction1(error), info = js.Any.fromFunction1(info), warn = js.Any.fromFunction1(warn))
     __obj.asInstanceOf[Logger]
   }
   
@@ -39,15 +44,15 @@ object Logger {
     }
     
     @scala.inline
-    def setError(value: String => Unit): Self = this.set("error", js.Any.fromFunction1(value))
+    def setDebug(value: js.Object => Unit): Self = this.set("debug", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setInfo(value: String => Unit): Self = this.set("info", js.Any.fromFunction1(value))
+    def setError(value: js.Object => Unit): Self = this.set("error", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setLog(value: String => Unit): Self = this.set("log", js.Any.fromFunction1(value))
+    def setInfo(value: js.Object => Unit): Self = this.set("info", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setWarn(value: String => Unit): Self = this.set("warn", js.Any.fromFunction1(value))
+    def setWarn(value: js.Object => Unit): Self = this.set("warn", js.Any.fromFunction1(value))
   }
 }

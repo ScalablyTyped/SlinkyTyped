@@ -33,7 +33,7 @@ object scheduledevents extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/scheduled-events relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/scheduled-events relevant section in reference guide}
     */
   @js.native
   class ScheduledEvent protected ()

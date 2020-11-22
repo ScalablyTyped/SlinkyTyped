@@ -1,7 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.anon
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firefoxWebextBrowser.browser.manifest.ExtensionURL
+import typingsSlinky.firefoxWebextBrowser.browser.manifest.UndefinedChromeResources
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Chromeresources extends js.Object {
   
-  var chrome_resources: StringDictionary[ExtensionURL | StringDictionary[ExtensionURL]] = js.native
+  var chrome_resources: UndefinedChromeResources = js.native
   
   var version: String = js.native
 }
 object Chromeresources {
   
   @scala.inline
-  def apply(chrome_resources: StringDictionary[ExtensionURL | StringDictionary[ExtensionURL]], version: String): Chromeresources = {
+  def apply(chrome_resources: UndefinedChromeResources, version: String): Chromeresources = {
     val __obj = js.Dynamic.literal(chrome_resources = chrome_resources.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Chromeresources]
   }
@@ -37,7 +36,7 @@ object Chromeresources {
     }
     
     @scala.inline
-    def setChrome_resources(value: StringDictionary[ExtensionURL | StringDictionary[ExtensionURL]]): Self = this.set("chrome_resources", value.asInstanceOf[js.Any])
+    def setChrome_resources(value: UndefinedChromeResources): Self = this.set("chrome_resources", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])

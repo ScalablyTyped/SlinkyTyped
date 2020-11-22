@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeviceAndAppManagementRoleAssignment extends RoleAssignment {
   
   // The list of ids of role member security groups. These are IDs from Azure Active Directory.
-  var members: js.UndefOr[js.Array[String]] = js.native
+  var members: js.UndefOr[NullableOption[js.Array[String]]] = js.native
 }
 object DeviceAndAppManagementRoleAssignment {
   
@@ -37,9 +37,12 @@ object DeviceAndAppManagementRoleAssignment {
     def setMembersVarargs(value: String*): Self = this.set("members", js.Array(value :_*))
     
     @scala.inline
-    def setMembers(value: js.Array[String]): Self = this.set("members", value.asInstanceOf[js.Any])
+    def setMembers(value: NullableOption[js.Array[String]]): Self = this.set("members", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMembers: Self = this.set("members", js.undefined)
+    
+    @scala.inline
+    def setMembersNull: Self = this.set("members", null)
   }
 }

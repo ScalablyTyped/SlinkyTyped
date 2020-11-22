@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsCore.anon
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +12,7 @@ trait A[T /* <: Tensor[Rank] */] extends js.Object {
   
   var a: T | TensorLike = js.native
   
-  var activation: js.UndefOr[typingsSlinky.tensorflowTfjsCore.fusedUtilMod.Activation] = js.native
+  var activation: js.UndefOr[typingsSlinky.tensorflowTfjsCore.fusedTypesMod.Activation] = js.native
   
   var b: T | TensorLike = js.native
   
@@ -78,7 +78,7 @@ object A {
     def setBUint8Array(value: js.typedarray.Uint8Array): Self = this.set("b", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setActivation(value: typingsSlinky.tensorflowTfjsCore.fusedUtilMod.Activation): Self = this.set("activation", value.asInstanceOf[js.Any])
+    def setActivation(value: typingsSlinky.tensorflowTfjsCore.fusedTypesMod.Activation): Self = this.set("activation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteActivation: Self = this.set("activation", js.undefined)

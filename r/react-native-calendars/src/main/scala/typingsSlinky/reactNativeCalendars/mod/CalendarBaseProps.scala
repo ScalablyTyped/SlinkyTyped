@@ -124,6 +124,11 @@ trait CalendarBaseProps extends js.Object {
     */
   var renderArrow: js.UndefOr[js.Function1[/* direction */ left | right, ReactElement]] = js.native
   
+  /*
+    *  Replace default month and year title with custom one. the function receive a date as parameter.
+    */
+  var renderHeader: js.UndefOr[js.Function1[/* date */ js.Date, ReactElement]] = js.native
+  
   /**
     *  Show week numbers to the left. Default = false
     */
@@ -316,6 +321,12 @@ object CalendarBaseProps {
     
     @scala.inline
     def deleteRenderArrow: Self = this.set("renderArrow", js.undefined)
+    
+    @scala.inline
+    def setRenderHeader(value: /* date */ js.Date => ReactElement): Self = this.set("renderHeader", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteRenderHeader: Self = this.set("renderHeader", js.undefined)
     
     @scala.inline
     def setShowWeekNumbers(value: Boolean): Self = this.set("showWeekNumbers", value.asInstanceOf[js.Any])

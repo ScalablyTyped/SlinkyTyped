@@ -18,21 +18,21 @@ trait SharedPCAccountManagerPolicy extends js.Object {
     * applies when AccountDeletionPolicy is DiskSpaceThreshold or DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to
     * 100
     */
-  var cacheAccountsAboveDiskFreePercentage: js.UndefOr[Double] = js.native
+  var cacheAccountsAboveDiskFreePercentage: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * Specifies when the accounts will start being deleted when they have not been logged on during the specified period,
     * given as number of days. Only applies when AccountDeletionPolicy is DiskSpaceThreshold or
     * DiskSpaceThresholdOrInactiveThreshold.
     */
-  var inactiveThresholdDays: js.UndefOr[Double] = js.native
+  var inactiveThresholdDays: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * Sets the percentage of disk space remaining on a PC before cached accounts will be deleted to free disk space. Accounts
     * that have been inactive the longest will be deleted first. Only applies when AccountDeletionPolicy is
     * DiskSpaceThresholdOrInactiveThreshold. Valid values 0 to 100
     */
-  var removeAccountsBelowDiskFreePercentage: js.UndefOr[Double] = js.native
+  var removeAccountsBelowDiskFreePercentage: js.UndefOr[NullableOption[Double]] = js.native
 }
 object SharedPCAccountManagerPolicy {
   
@@ -64,21 +64,30 @@ object SharedPCAccountManagerPolicy {
     def deleteAccountDeletionPolicy: Self = this.set("accountDeletionPolicy", js.undefined)
     
     @scala.inline
-    def setCacheAccountsAboveDiskFreePercentage(value: Double): Self = this.set("cacheAccountsAboveDiskFreePercentage", value.asInstanceOf[js.Any])
+    def setCacheAccountsAboveDiskFreePercentage(value: NullableOption[Double]): Self = this.set("cacheAccountsAboveDiskFreePercentage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCacheAccountsAboveDiskFreePercentage: Self = this.set("cacheAccountsAboveDiskFreePercentage", js.undefined)
     
     @scala.inline
-    def setInactiveThresholdDays(value: Double): Self = this.set("inactiveThresholdDays", value.asInstanceOf[js.Any])
+    def setCacheAccountsAboveDiskFreePercentageNull: Self = this.set("cacheAccountsAboveDiskFreePercentage", null)
+    
+    @scala.inline
+    def setInactiveThresholdDays(value: NullableOption[Double]): Self = this.set("inactiveThresholdDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInactiveThresholdDays: Self = this.set("inactiveThresholdDays", js.undefined)
     
     @scala.inline
-    def setRemoveAccountsBelowDiskFreePercentage(value: Double): Self = this.set("removeAccountsBelowDiskFreePercentage", value.asInstanceOf[js.Any])
+    def setInactiveThresholdDaysNull: Self = this.set("inactiveThresholdDays", null)
+    
+    @scala.inline
+    def setRemoveAccountsBelowDiskFreePercentage(value: NullableOption[Double]): Self = this.set("removeAccountsBelowDiskFreePercentage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRemoveAccountsBelowDiskFreePercentage: Self = this.set("removeAccountsBelowDiskFreePercentage", js.undefined)
+    
+    @scala.inline
+    def setRemoveAccountsBelowDiskFreePercentageNull: Self = this.set("removeAccountsBelowDiskFreePercentage", null)
   }
 }

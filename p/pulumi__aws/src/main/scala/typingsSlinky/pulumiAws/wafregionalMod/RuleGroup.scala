@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.wafregionalMod
 
-import typingsSlinky.pulumiAws.ruleGroupMod.RuleGroupArgs
-import typingsSlinky.pulumiAws.ruleGroupMod.RuleGroupState
+import typingsSlinky.pulumiAws.wafregionalRuleGroupMod.RuleGroupArgs
+import typingsSlinky.pulumiAws.wafregionalRuleGroupMod.RuleGroupState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@pulumi/aws/wafregional", "RuleGroup")
 @js.native
 class RuleGroup protected ()
-  extends typingsSlinky.pulumiAws.ruleGroupMod.RuleGroup {
+  extends typingsSlinky.pulumiAws.wafregionalRuleGroupMod.RuleGroup {
   /**
     * Create a RuleGroup resource with the given unique name, arguments, and options.
     *
@@ -37,10 +37,10 @@ object RuleGroup extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
-  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.ruleGroupMod.RuleGroup = js.native
-  def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.ruleGroupMod.RuleGroup = js.native
-  def get(name: String, id: Input[ID], state: RuleGroupState): typingsSlinky.pulumiAws.ruleGroupMod.RuleGroup = js.native
-  def get(name: String, id: Input[ID], state: RuleGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.ruleGroupMod.RuleGroup = js.native
+  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.wafregionalRuleGroupMod.RuleGroup = js.native
+  def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.wafregionalRuleGroupMod.RuleGroup = js.native
+  def get(name: String, id: Input[ID], state: RuleGroupState): typingsSlinky.pulumiAws.wafregionalRuleGroupMod.RuleGroup = js.native
+  def get(name: String, id: Input[ID], state: RuleGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.wafregionalRuleGroupMod.RuleGroup = js.native
   
   /**
     * Returns true if the given object is an instance of RuleGroup.  This is designed to work even

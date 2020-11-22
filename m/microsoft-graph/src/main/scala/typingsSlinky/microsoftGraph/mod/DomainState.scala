@@ -11,16 +11,16 @@ trait DomainState extends js.Object {
     * Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous
     * task starts, and when the operation completes.
     */
-  var lastActionDateTime: js.UndefOr[String] = js.native
+  var lastActionDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // Type of asynchronous operation. The values can be ForceDelete or Verification
-  var operation: js.UndefOr[String] = js.native
+  var operation: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Current status of the operation. Scheduled - Operation has been scheduled but has not started. InProgress - Task has
     * started and is in progress. Failed - Operation has failed.
     */
-  var status: js.UndefOr[String] = js.native
+  var status: js.UndefOr[NullableOption[String]] = js.native
 }
 object DomainState {
   
@@ -46,21 +46,30 @@ object DomainState {
     }
     
     @scala.inline
-    def setLastActionDateTime(value: String): Self = this.set("lastActionDateTime", value.asInstanceOf[js.Any])
+    def setLastActionDateTime(value: NullableOption[String]): Self = this.set("lastActionDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastActionDateTime: Self = this.set("lastActionDateTime", js.undefined)
     
     @scala.inline
-    def setOperation(value: String): Self = this.set("operation", value.asInstanceOf[js.Any])
+    def setLastActionDateTimeNull: Self = this.set("lastActionDateTime", null)
+    
+    @scala.inline
+    def setOperation(value: NullableOption[String]): Self = this.set("operation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOperation: Self = this.set("operation", js.undefined)
     
     @scala.inline
-    def setStatus(value: String): Self = this.set("status", value.asInstanceOf[js.Any])
+    def setOperationNull: Self = this.set("operation", null)
+    
+    @scala.inline
+    def setStatus(value: NullableOption[String]): Self = this.set("status", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStatus: Self = this.set("status", js.undefined)
+    
+    @scala.inline
+    def setStatusNull: Self = this.set("status", null)
   }
 }

@@ -10,6 +10,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object loadBalancing extends js.Object {
   
   @js.native
+  class AllowListPolicy protected ()
+    extends typingsSlinky.cassandraDriver.policiesMod.policies.loadBalancing.AllowListPolicy {
+    def this(
+      childPolicy: typingsSlinky.cassandraDriver.policiesMod.policies.loadBalancing.LoadBalancingPolicy,
+      allowList: js.Array[String]
+    ) = this()
+  }
+  
+  @js.native
   class DCAwareRoundRobinPolicy protected ()
     extends typingsSlinky.cassandraDriver.policiesMod.policies.loadBalancing.DCAwareRoundRobinPolicy {
     def this(localDc: String) = this()
@@ -36,11 +45,6 @@ object loadBalancing extends js.Object {
   }
   
   @js.native
-  class WhiteListPolicy protected ()
-    extends typingsSlinky.cassandraDriver.policiesMod.policies.loadBalancing.WhiteListPolicy {
-    def this(
-      childPolicy: typingsSlinky.cassandraDriver.policiesMod.policies.loadBalancing.LoadBalancingPolicy,
-      whiteList: js.Array[String]
-    ) = this()
-  }
+  class WhiteListPolicy ()
+    extends typingsSlinky.cassandraDriver.policiesMod.policies.loadBalancing.AllowListPolicy
 }

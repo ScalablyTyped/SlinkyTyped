@@ -22,6 +22,11 @@ trait IDragOptions extends js.Object {
   var dragHandleSelector: js.UndefOr[String] = js.native
   
   /**
+    * Whether the draggable content should be prevented from going off-screen
+    */
+  var keepInBounds: js.UndefOr[Boolean] = js.native
+  
+  /**
     * IconProps for the icon used to indicate that the dialog is in keyboard move mode
     */
   var keyboardMoveIconProps: js.UndefOr[IIconProps] = js.native
@@ -77,6 +82,12 @@ object IDragOptions {
     
     @scala.inline
     def deleteDragHandleSelector: Self = this.set("dragHandleSelector", js.undefined)
+    
+    @scala.inline
+    def setKeepInBounds(value: Boolean): Self = this.set("keepInBounds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKeepInBounds: Self = this.set("keepInBounds", js.undefined)
     
     @scala.inline
     def setKeyboardMoveIconProps(value: IIconProps): Self = this.set("keyboardMoveIconProps", value.asInstanceOf[js.Any])

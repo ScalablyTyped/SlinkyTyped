@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "ember__routing"
-version := "3.0-dt-20200512Z-7a5726"
-scalaVersion := "2.13.2"
+version := "3.16-dt-20201106Z-ea44a7"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "ember__component" % "3.0-dt-20200515Z-30ddb9",
-  "org.scalablytyped.slinky" %%% "ember__controller" % "3.0-dt-20200328Z-028efd",
-  "org.scalablytyped.slinky" %%% "ember__object" % "3.1-dt-20200515Z-9c117d",
-  "org.scalablytyped.slinky" %%% "jquery" % "3.3-dt-20200515Z-fefef8",
-  "org.scalablytyped.slinky" %%% "rsvp" % "4.0-dt-20200515Z-348428",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20200515Z-0b0d10",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "ember__component" % "3.16-dt-20201103Z-33fb4e",
+  "org.scalablytyped.slinky" %%% "ember__controller" % "3.16-dt-20201118Z-240fe3",
+  "org.scalablytyped.slinky" %%% "ember__object" % "3.12-dt-20201028Z-b758bf",
+  "org.scalablytyped.slinky" %%% "jquery" % "3.5-dt-20201028Z-467d08",
+  "org.scalablytyped.slinky" %%% "rsvp" % "4.0-dt-20201028Z-bac857",
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20201002Z-017d7b",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

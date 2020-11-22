@@ -32,11 +32,24 @@ trait RoomVisual extends js.Object {
   def clear(): RoomVisual = js.native
   
   /**
+    * Returns a compact representation of all visuals added in the room in the current tick.
+    * @returns A string with visuals data. There's not much you can do with the string besides store them for later.
+    */
+  def export(): String = js.native
+  
+  /**
     * Get the stored size of all visuals added in the room in the current tick.
     * It must not exceed 512,000 (500 KB).
     * @returns The size of the visuals in bytes.
     */
   def getSize(): Double = js.native
+  
+  /**
+    * Add previously exported (with `RoomVisual.export`) room visuals to the room visual data of the current tick.
+    * @param data The string returned from `RoomVisual.export`.
+    * @returns The RoomVisual object itself, so that you can chain calls.
+    */
+  def `import`(data: String): RoomVisual = js.native
   
   /**
     * Draw a line.

@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.unitsMod
 
 import typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.structuresMod.Structure
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because var conflicts: container, id, isLoaded, model, structureTypeName, unit. Inlined isLoadable, isReadOnly */ @JSImport("mendixmodelsdk/dist/sdk/internal/units", "AbstractUnit")
 @js.native
-abstract class AbstractUnit protected () extends Structure {
+abstract class AbstractUnit[TModel /* <: IAbstractModel */] protected () extends Structure[TModel, StructuralUnit[IAbstractModel]] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
@@ -19,10 +20,7 @@ abstract class AbstractUnit protected () extends Structure {
     container: IStructuralUnit
   ) = this()
   
-  @JSName("container")
-  val container_FAbstractUnit: StructuralUnit = js.native
-  
-  def deepCopyInto(newParent: IStructuralUnit): AbstractUnit = js.native
+  def deepCopyInto(newParent: IStructuralUnit): AbstractUnit[IAbstractModel] = js.native
   
   def isLoadable: Boolean = js.native
   /**

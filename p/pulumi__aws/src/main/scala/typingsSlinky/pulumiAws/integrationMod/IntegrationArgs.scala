@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.integrationMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.inputMod.apigatewayv2.IntegrationTlsConfig
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +16,7 @@ trait IntegrationArgs extends js.Object {
   val apiId: Input[String] = js.native
   
   /**
-    * The ID of the VPC link for a private integration. Supported only for HTTP APIs.
+    * The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
     */
   val connectionId: js.UndefOr[Input[String]] = js.native
   
@@ -45,6 +46,11 @@ trait IntegrationArgs extends js.Object {
   val integrationMethod: js.UndefOr[Input[String]] = js.native
   
   /**
+    * Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integrationType` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
+    */
+  val integrationSubtype: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * The integration type of an integration.
     * Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
     */
@@ -68,6 +74,12 @@ trait IntegrationArgs extends js.Object {
   val payloadFormatVersion: js.UndefOr[Input[String]] = js.native
   
   /**
+    * A key-value map specifying request parameters that are passed from the method request to the backend.
+    * Supported only for WebSocket APIs.
+    */
+  val requestParameters: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
+  
+  /**
     * A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
     */
   val requestTemplates: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
@@ -77,10 +89,12 @@ trait IntegrationArgs extends js.Object {
     */
   val templateSelectionExpression: js.UndefOr[Input[String]] = js.native
   
-  /**
-    * Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.
-    */
   val timeoutMilliseconds: js.UndefOr[Input[Double]] = js.native
+  
+  /**
+    * The TLS configuration for a private integration. Supported only for HTTP APIs.
+    */
+  val tlsConfig: js.UndefOr[Input[IntegrationTlsConfig]] = js.native
 }
 object IntegrationArgs {
   
@@ -148,6 +162,12 @@ object IntegrationArgs {
     def deleteIntegrationMethod: Self = this.set("integrationMethod", js.undefined)
     
     @scala.inline
+    def setIntegrationSubtype(value: Input[String]): Self = this.set("integrationSubtype", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIntegrationSubtype: Self = this.set("integrationSubtype", js.undefined)
+    
+    @scala.inline
     def setIntegrationUri(value: Input[String]): Self = this.set("integrationUri", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -166,6 +186,12 @@ object IntegrationArgs {
     def deletePayloadFormatVersion: Self = this.set("payloadFormatVersion", js.undefined)
     
     @scala.inline
+    def setRequestParameters(value: Input[StringDictionary[Input[String]]]): Self = this.set("requestParameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequestParameters: Self = this.set("requestParameters", js.undefined)
+    
+    @scala.inline
     def setRequestTemplates(value: Input[StringDictionary[Input[String]]]): Self = this.set("requestTemplates", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -182,5 +208,11 @@ object IntegrationArgs {
     
     @scala.inline
     def deleteTimeoutMilliseconds: Self = this.set("timeoutMilliseconds", js.undefined)
+    
+    @scala.inline
+    def setTlsConfig(value: Input[IntegrationTlsConfig]): Self = this.set("tlsConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTlsConfig: Self = this.set("tlsConfig", js.undefined)
   }
 }

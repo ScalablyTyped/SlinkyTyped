@@ -1,7 +1,7 @@
 
 # Scala.js typings for xlsx
 
-Typings are for version 0.16.5
+Typings are for version 0.16.9
 
 ## Library description:
 SheetJS Spreadsheet data parser and writer

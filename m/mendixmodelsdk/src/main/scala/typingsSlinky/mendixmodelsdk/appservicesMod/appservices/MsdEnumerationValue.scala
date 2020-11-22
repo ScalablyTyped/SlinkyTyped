@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.appservicesMod.appservices
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -7,20 +8,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/appservices", "appservices.MsdEnumerationValue")
 @js.native
-class MsdEnumerationValue protected () extends Element {
+class MsdEnumerationValue protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsMsdEnumeration: MsdEnumeration = js.native
@@ -30,9 +32,6 @@ class MsdEnumerationValue protected () extends Element {
   
   def image: String = js.native
   def image_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FMsdEnumerationValue: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

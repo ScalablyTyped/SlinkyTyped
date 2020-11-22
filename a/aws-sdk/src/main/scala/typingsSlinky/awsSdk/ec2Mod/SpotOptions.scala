@@ -23,6 +23,11 @@ trait SpotOptions extends js.Object {
   var InstancePoolsToUseCount: js.UndefOr[Integer] = js.native
   
   /**
+    * The strategies for managing your workloads on your Spot Instances that will be interrupted. Currently only the capacity rebalance strategy is available.
+    */
+  var MaintenanceStrategies: js.UndefOr[FleetSpotMaintenanceStrategies] = js.native
+  
+  /**
     * The maximum amount per hour for Spot Instances that you're willing to pay.
     */
   var MaxTotalPrice: js.UndefOr[String] = js.native
@@ -82,6 +87,12 @@ object SpotOptions {
     
     @scala.inline
     def deleteInstancePoolsToUseCount: Self = this.set("InstancePoolsToUseCount", js.undefined)
+    
+    @scala.inline
+    def setMaintenanceStrategies(value: FleetSpotMaintenanceStrategies): Self = this.set("MaintenanceStrategies", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaintenanceStrategies: Self = this.set("MaintenanceStrategies", js.undefined)
     
     @scala.inline
     def setMaxTotalPrice(value: String): Self = this.set("MaxTotalPrice", value.asInstanceOf[js.Any])

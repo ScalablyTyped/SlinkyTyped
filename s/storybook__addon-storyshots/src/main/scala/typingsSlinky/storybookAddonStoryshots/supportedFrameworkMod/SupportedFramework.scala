@@ -13,6 +13,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.`react-native`
   - typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.svelte
   - typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.vue
+  - typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.`web-components`
+  - typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.rax
 */
 trait SupportedFramework extends js.Object
 object SupportedFramework {
@@ -25,6 +27,9 @@ object SupportedFramework {
   
   @scala.inline
   def preact: typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.preact = "preact".asInstanceOf[typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.preact]
+  
+  @scala.inline
+  def rax: typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.rax = "rax".asInstanceOf[typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.rax]
   
   @scala.inline
   def react: typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.react = "react".asInstanceOf[typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.react]
@@ -40,4 +45,7 @@ object SupportedFramework {
   
   @scala.inline
   def vue: typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.vue = "vue".asInstanceOf[typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.vue]
+  
+  @scala.inline
+  def `web-components`: typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.`web-components` = "web-components".asInstanceOf[typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsStrings.`web-components`]
 }

@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SectionListProps[ItemT] extends VirtualizedListWithoutRenderItemProps[ItemT] {
+trait SectionListProps[ItemT, SectionT] extends VirtualizedListWithoutRenderItemProps[ItemT] {
   
   /**
     * Rendered in between adjacent Items within each section.
@@ -33,7 +33,11 @@ trait SectionListProps[ItemT] extends VirtualizedListWithoutRenderItemProps[Item
     */
   @JSName("getItemLayout")
   var getItemLayout_SectionListProps: js.UndefOr[
-    js.Function2[/* data */ js.Array[SectionListData[ItemT]] | Null, /* index */ Double, Index]
+    js.Function2[
+      /* data */ (js.Array[SectionListData[ItemT, SectionT]]) | Null, 
+      /* index */ Double, 
+      Index
+    ]
   ] = js.native
   
   /**
@@ -44,22 +48,22 @@ trait SectionListProps[ItemT] extends VirtualizedListWithoutRenderItemProps[Item
   /**
     * Default renderer for every item in every section. Can be over-ridden on a per-section basis.
     */
-  var renderItem: js.UndefOr[SectionListRenderItem[ItemT]] = js.native
+  var renderItem: js.UndefOr[SectionListRenderItem[ItemT, SectionT]] = js.native
   
   /**
     * Rendered at the bottom of each section.
     */
-  var renderSectionFooter: js.UndefOr[js.Function1[/* info */ Section[ItemT], ReactElement | Null]] = js.native
+  var renderSectionFooter: js.UndefOr[js.Function1[/* info */ Section[ItemT, SectionT], ReactElement | Null]] = js.native
   
   /**
     * Rendered at the top of each section. Sticky headers are not yet supported.
     */
-  var renderSectionHeader: js.UndefOr[js.Function1[/* info */ Section[ItemT], ReactElement | Null]] = js.native
+  var renderSectionHeader: js.UndefOr[js.Function1[/* info */ Section[ItemT, SectionT], ReactElement | Null]] = js.native
   
   /**
     * An array of objects with data for each section.
     */
-  var sections: js.Array[SectionListData[ItemT]] = js.native
+  var sections: js.Array[SectionListData[ItemT, SectionT]] = js.native
   
   /**
     * Makes section headers stick to the top of the screen until the next one pushes it off.
@@ -70,13 +74,13 @@ trait SectionListProps[ItemT] extends VirtualizedListWithoutRenderItemProps[Item
 object SectionListProps {
   
   @scala.inline
-  def apply[ItemT](sections: js.Array[SectionListData[ItemT]]): SectionListProps[ItemT] = {
+  def apply[ItemT, SectionT](sections: js.Array[SectionListData[ItemT, SectionT]]): SectionListProps[ItemT, SectionT] = {
     val __obj = js.Dynamic.literal(sections = sections.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SectionListProps[ItemT]]
+    __obj.asInstanceOf[SectionListProps[ItemT, SectionT]]
   }
   
   @scala.inline
-  implicit class SectionListPropsOps[Self <: SectionListProps[_], ItemT] (val x: Self with SectionListProps[ItemT]) extends AnyVal {
+  implicit class SectionListPropsOps[Self <: SectionListProps[_, _], ItemT, SectionT] (val x: Self with (SectionListProps[ItemT, SectionT])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -91,10 +95,10 @@ object SectionListProps {
     }
     
     @scala.inline
-    def setSectionsVarargs(value: SectionListData[ItemT]*): Self = this.set("sections", js.Array(value :_*))
+    def setSectionsVarargs(value: (SectionListData[ItemT, SectionT])*): Self = this.set("sections", js.Array(value :_*))
     
     @scala.inline
-    def setSections(value: js.Array[SectionListData[ItemT]]): Self = this.set("sections", value.asInstanceOf[js.Any])
+    def setSections(value: js.Array[SectionListData[ItemT, SectionT]]): Self = this.set("sections", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setItemSeparatorComponentFunctionComponent(value: ReactComponentClass[_]): Self = this.set("ItemSeparatorComponent", value.asInstanceOf[js.Any])
@@ -130,7 +134,9 @@ object SectionListProps {
     def setSectionSeparatorComponentNull: Self = this.set("SectionSeparatorComponent", null)
     
     @scala.inline
-    def setGetItemLayout(value: (/* data */ js.Array[SectionListData[ItemT]] | Null, /* index */ Double) => Index): Self = this.set("getItemLayout", js.Any.fromFunction2(value))
+    def setGetItemLayout(
+      value: (/* data */ (js.Array[SectionListData[ItemT, SectionT]]) | Null, /* index */ Double) => Index
+    ): Self = this.set("getItemLayout", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteGetItemLayout: Self = this.set("getItemLayout", js.undefined)
@@ -142,19 +148,19 @@ object SectionListProps {
     def deleteLegacyImplementation: Self = this.set("legacyImplementation", js.undefined)
     
     @scala.inline
-    def setRenderItem(value: /* info */ SectionListRenderItemInfo[ItemT] => ReactElement | Null): Self = this.set("renderItem", js.Any.fromFunction1(value))
+    def setRenderItem(value: /* info */ SectionListRenderItemInfo[ItemT, SectionT] => ReactElement | Null): Self = this.set("renderItem", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRenderItem: Self = this.set("renderItem", js.undefined)
     
     @scala.inline
-    def setRenderSectionFooter(value: /* info */ Section[ItemT] => ReactElement | Null): Self = this.set("renderSectionFooter", js.Any.fromFunction1(value))
+    def setRenderSectionFooter(value: /* info */ Section[ItemT, SectionT] => ReactElement | Null): Self = this.set("renderSectionFooter", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRenderSectionFooter: Self = this.set("renderSectionFooter", js.undefined)
     
     @scala.inline
-    def setRenderSectionHeader(value: /* info */ Section[ItemT] => ReactElement | Null): Self = this.set("renderSectionHeader", js.Any.fromFunction1(value))
+    def setRenderSectionHeader(value: /* info */ Section[ItemT, SectionT] => ReactElement | Null): Self = this.set("renderSectionHeader", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRenderSectionHeader: Self = this.set("renderSectionHeader", js.undefined)

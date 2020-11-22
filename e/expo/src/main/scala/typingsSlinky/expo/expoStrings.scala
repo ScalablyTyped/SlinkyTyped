@@ -14,15 +14,6 @@ object expoStrings {
   def debug: debug = "debug".asInstanceOf[debug]
   
   @scala.inline
-  def downloadFinished: downloadFinished = "downloadFinished".asInstanceOf[downloadFinished]
-  
-  @scala.inline
-  def downloadProgress: downloadProgress = "downloadProgress".asInstanceOf[downloadProgress]
-  
-  @scala.inline
-  def downloadStart: downloadStart = "downloadStart".asInstanceOf[downloadStart]
-  
-  @scala.inline
   def error: error = "error".asInstanceOf[error]
   
   @scala.inline
@@ -36,9 +27,6 @@ object expoStrings {
   
   @scala.inline
   def month: month = "month".asInstanceOf[month]
-  
-  @scala.inline
-  def noUpdateAvailable: noUpdateAvailable = "noUpdateAvailable".asInstanceOf[noUpdateAvailable]
   
   @scala.inline
   def received: received = "received".asInstanceOf[received]
@@ -62,15 +50,6 @@ object expoStrings {
   sealed trait debug extends LogLevel
   
   @js.native
-  sealed trait downloadFinished extends js.Object
-  
-  @js.native
-  sealed trait downloadProgress extends js.Object
-  
-  @js.native
-  sealed trait downloadStart extends js.Object
-  
-  @js.native
   sealed trait error extends LogLevel
   
   @js.native
@@ -84,9 +63,6 @@ object expoStrings {
   
   @js.native
   sealed trait month extends js.Object
-  
-  @js.native
-  sealed trait noUpdateAvailable extends js.Object
   
   @js.native
   sealed trait received extends js.Object

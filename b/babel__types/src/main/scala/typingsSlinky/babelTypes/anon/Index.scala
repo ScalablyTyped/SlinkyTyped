@@ -1,6 +1,6 @@
 package typingsSlinky.babelTypes.anon
 
-import typingsSlinky.babelTypes.mod.Node
+import typingsSlinky.babelTypes.indexTs37Mod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkTypes.middlewareMod
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,16 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait HandlerOptions extends js.Object {
   
   /**
-    * A number that specifies how early in a given step of the middleware stack
-    * a handler should be executed. Higher numeric priorities will be executed
-    * earlier.
-    *
-    * Middleware registered at the same step and with the same priority may be
-    * executed in any order.
-    *
-    * @default 0
+    * A unique name to refer to a middleware
     */
-  var priority: js.UndefOr[Double] = js.native
+  var name: js.UndefOr[String] = js.native
   
   /**
     * Handlers are ordered using a "step" that describes the stage of command
@@ -35,25 +27,27 @@ trait HandlerOptions extends js.Object {
     *      will be applied to all retries. Examples of typical build tasks
     *      include injecting HTTP headers that describe a stable aspect of the
     *      request, such as `Content-Length` or a body checksum.
-    * - finalize: The request is being prepared to be sent over the wire. The
+    * - finalizeRequest: The request is being prepared to be sent over the wire. The
     *      request in this stage should already be semantically complete and
     *      should therefore only be altered as match the recipient's
     *      expectations. Examples of typical finalization tasks include request
     *      signing and injecting hop-by-hop headers.
+    * - deserialize: The response has arrived, the middleware here will deserialize
+    *      the raw response object to structured response
     *
     *      Unlike initialization and build handlers, which are executed once
-    *      per operation execution, finalization handlers will be executed for
-    *      each HTTP request sent.
+    *      per operation execution, finalization and deserialize handlers will be
+    *      executed foreach HTTP request sent.
     *
     * @default 'initialize'
     */
   var step: js.UndefOr[Step] = js.native
   
   /**
-    * A map of strings to any that identify the general purpose or important
+    * A list of strings to any that identify the general purpose or important
     * characteristics of a given handler.
     */
-  var tags: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var tags: js.UndefOr[js.Array[String]] = js.native
 }
 object HandlerOptions {
   
@@ -79,10 +73,10 @@ object HandlerOptions {
     }
     
     @scala.inline
-    def setPriority(value: Double): Self = this.set("priority", value.asInstanceOf[js.Any])
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deletePriority: Self = this.set("priority", js.undefined)
+    def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
     def setStep(value: Step): Self = this.set("step", value.asInstanceOf[js.Any])
@@ -91,7 +85,10 @@ object HandlerOptions {
     def deleteStep: Self = this.set("step", js.undefined)
     
     @scala.inline
-    def setTags(value: StringDictionary[js.Any]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    def setTagsVarargs(value: String*): Self = this.set("tags", js.Array(value :_*))
+    
+    @scala.inline
+    def setTags(value: js.Array[String]): Self = this.set("tags", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)

@@ -20,8 +20,8 @@ trait Static extends Utils {
   
   def collectionObservable(): CollectionObservable = js.native
   def collectionObservable(model: js.UndefOr[scala.Nothing], options: CollectionOptions): CollectionObservable = js.native
-  def collectionObservable(model: Collection[Model[_, ModelSetOptions]]): CollectionObservable = js.native
-  def collectionObservable(model: Collection[Model[_, ModelSetOptions]], options: CollectionOptions): CollectionObservable = js.native
+  def collectionObservable(model: Collection[Model[_, ModelSetOptions, js.Object]]): CollectionObservable = js.native
+  def collectionObservable(model: Collection[Model[_, ModelSetOptions, js.Object]], options: CollectionOptions): CollectionObservable = js.native
   
   def defaultObservable(
     targetObservable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any,
@@ -38,13 +38,13 @@ trait Static extends Utils {
   
   def observable(
     /** the model to observe (can be null) */
-  model: Model[_, ModelSetOptions],
+  model: Model[_, ModelSetOptions, js.Object],
     /** the create options. String is a single attribute name, Array is an array of attribute names. */
   options_attributeName: String
   ): js.Any = js.native
   def observable(
     /** the model to observe (can be null) */
-  model: Model[_, ModelSetOptions],
+  model: Model[_, ModelSetOptions, js.Object],
     /** the create options. String is a single attribute name, Array is an array of attribute names. */
   options_attributeName: String,
     /** the viewModel */
@@ -53,13 +53,13 @@ trait Static extends Utils {
   /** Base class for observing model attributes. */
   def observable(
     /** the model to observe (can be null) */
-  model: Model[_, ModelSetOptions],
+  model: Model[_, ModelSetOptions, js.Object],
     /** the create options. String is a single attribute name, Array is an array of attribute names. */
   options: IObservableOptions
   ): js.Any = js.native
   def observable(
     /** the model to observe (can be null) */
-  model: Model[_, ModelSetOptions],
+  model: Model[_, ModelSetOptions, js.Object],
     /** the create options. String is a single attribute name, Array is an array of attribute names. */
   options: IObservableOptions,
     /** the viewModel */
@@ -79,6 +79,6 @@ trait Static extends Utils {
   
   def viewModel(): js.Any = js.native
   def viewModel(model: js.UndefOr[scala.Nothing], options: js.Any): js.Any = js.native
-  def viewModel(model: Model[_, ModelSetOptions]): js.Any = js.native
-  def viewModel(model: Model[_, ModelSetOptions], options: js.Any): js.Any = js.native
+  def viewModel(model: Model[_, ModelSetOptions, js.Object]): js.Any = js.native
+  def viewModel(model: Model[_, ModelSetOptions, js.Object], options: js.Any): js.Any = js.native
 }

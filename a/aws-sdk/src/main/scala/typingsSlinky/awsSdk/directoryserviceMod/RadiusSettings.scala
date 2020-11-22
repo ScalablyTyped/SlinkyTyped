@@ -28,7 +28,7 @@ trait RadiusSettings extends js.Object {
   var RadiusRetries: js.UndefOr[typingsSlinky.awsSdk.directoryserviceMod.RadiusRetries] = js.native
   
   /**
-    * An array of strings that contains the IP addresses of the RADIUS server endpoints, or the IP addresses of your RADIUS server load balancer.
+    * An array of strings that contains the fully qualified domain name (FQDN) or IP addresses of the RADIUS server endpoints, or the FQDN or IP addresses of your RADIUS server load balancer.
     */
   var RadiusServers: js.UndefOr[Servers] = js.native
   

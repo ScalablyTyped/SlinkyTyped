@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk
 
 import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.anon.ToRawChangeValue
 import typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.elementsMod.Element
@@ -11,6 +12,8 @@ import typingsSlinky.mendixmodelsdk.localByNameReferencePropertyMod.INamedElemen
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructure
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
 import typingsSlinky.mendixmodelsdk.structuresMod.Structure
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import typingsSlinky.mendixmodelsdk.transportInterfacesMod.IAbstractElementJson
 import typingsSlinky.mendixmodelsdk.unitsMod.IModelUnit
 import typingsSlinky.mendixmodelsdk.unitsMod.IStructuralUnit
@@ -26,8 +29,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object propertiesMod extends js.Object {
   
-  def instantiateChildElement(parent: AbstractElement): Element | Null = js.native
-  def instantiateChildElement(parent: AbstractElement, value: IAbstractElementJson): Element | Null = js.native
+  def instantiateChildElement(parent: AbstractElement[IAbstractModel, Container]): Element[IAbstractModel] | Null = js.native
+  def instantiateChildElement(parent: AbstractElement[IAbstractModel, Container], value: IAbstractElementJson): Element[IAbstractModel] | Null = js.native
   
   def isNamedElement(element: IStructure): /* is mendixmodelsdk.mendixmodelsdk/dist/sdk/internal/properties/LocalByNameReferenceProperty.INamedElement */ Boolean = js.native
   
@@ -51,11 +54,17 @@ object propertiesMod extends js.Object {
       * initialValue is default value except parts and GUID-typed primitives.
       * (by-id/name references do not have default values.)
       */
-    def this(declaredOn: IStructureClass, parent: Structure, name: String, initialValue: T, moreArgs: js.Any*) = this()
+    def this(
+      declaredOn: IStructureClass,
+      parent: Structure[IAbstractModel, IContainer | Null],
+      name: String,
+      initialValue: T,
+      moreArgs: js.Any*
+    ) = this()
   }
   
   @js.native
-  class ByIdReferenceProperty[T /* <: AbstractElement */] ()
+  class ByIdReferenceProperty[T /* <: AbstractElement[IAbstractModel, Container] */] ()
     extends typingsSlinky.mendixmodelsdk.byIdReferencePropertyMod.ByIdReferenceProperty[T]
   
   @js.native
@@ -63,7 +72,7 @@ object propertiesMod extends js.Object {
     extends typingsSlinky.mendixmodelsdk.byNameReferencePropertyMod.ByNameReferenceListProperty[T] {
     def this(
       declaredOn: IStructureClass,
-      parent: AbstractElement,
+      parent: AbstractElement[IAbstractModel, Container],
       name: String,
       value: js.Array[T],
       _targetType: String
@@ -75,14 +84,14 @@ object propertiesMod extends js.Object {
     extends typingsSlinky.mendixmodelsdk.byNameReferencePropertyMod.ByNameReferenceProperty[T] {
     def this(
       declaredOn: IStructureClass,
-      parent: AbstractElement,
+      parent: AbstractElement[IAbstractModel, Container],
       name: String,
       initialValue: T,
       _targetType: String
     ) = this()
     def this(
       declaredOn: IStructureClass,
-      parent: AbstractElement,
+      parent: AbstractElement[IAbstractModel, Container],
       name: String,
       initialValue: Null,
       _targetType: String
@@ -94,7 +103,7 @@ object propertiesMod extends js.Object {
     extends typingsSlinky.mendixmodelsdk.enumListPropertyMod.EnumListProperty[T] {
     def this(
       declaredOn: IStructureClass,
-      parent: Structure,
+      parent: Structure[IAbstractModel, IContainer | Null],
       name: String,
       initialValue: js.Array[T],
       enumType: Instantiable2[/* key */ String, /* lifeCycle */ ILifeCycle, AbstractEnum]
@@ -106,7 +115,7 @@ object propertiesMod extends js.Object {
     extends typingsSlinky.mendixmodelsdk.enumPropertyMod.EnumProperty[T] {
     def this(
       declaredOn: IStructureClass,
-      parent: Structure,
+      parent: Structure[IAbstractModel, IContainer | Null],
       name: String,
       initialValue: T,
       enumType: Instantiable2[/* key */ String, /* lifeCycle */ ILifeCycle, AbstractEnum]
@@ -118,14 +127,14 @@ object propertiesMod extends js.Object {
     extends typingsSlinky.mendixmodelsdk.localByNameReferencePropertyMod.LocalByNameReferenceProperty[T] {
     def this(
       declaredOn: IStructureClass,
-      parent: AbstractElement,
+      parent: AbstractElement[IAbstractModel, Container],
       name: String,
       initialValue: T,
       _targetType: String
     ) = this()
     def this(
       declaredOn: IStructureClass,
-      parent: AbstractElement,
+      parent: AbstractElement[IAbstractModel, Container],
       name: String,
       initialValue: Null,
       _targetType: String
@@ -133,11 +142,11 @@ object propertiesMod extends js.Object {
   }
   
   @js.native
-  class PartListProperty[T /* <: Element */] ()
+  class PartListProperty[T /* <: Element[IAbstractModel] */] ()
     extends typingsSlinky.mendixmodelsdk.partListPropertyMod.PartListProperty[T]
   
   @js.native
-  class PartProperty[T /* <: Element */] ()
+  class PartProperty[T /* <: Element[IAbstractModel] */] ()
     extends typingsSlinky.mendixmodelsdk.partPropertyMod.PartProperty[T]
   
   @js.native
@@ -180,10 +189,15 @@ object propertiesMod extends js.Object {
   @js.native
   class StructuralChildListProperty[T /* <: IStructuralUnit | IModelUnit */] protected ()
     extends typingsSlinky.mendixmodelsdk.structuralMod.StructuralChildListProperty[T] {
-    def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String, value: js.Array[T]) = this()
     def this(
       declaredOn: IStructureClass,
-      parent: StructuralUnit,
+      parent: StructuralUnit[IAbstractModel],
+      name: String,
+      value: js.Array[T]
+    ) = this()
+    def this(
+      declaredOn: IStructureClass,
+      parent: StructuralUnit[IAbstractModel],
       name: String,
       value: js.Array[T],
       targetRefType: String
@@ -193,12 +207,18 @@ object propertiesMod extends js.Object {
   @js.native
   class StructuralChildProperty[T /* <: IStructuralUnit | IModelUnit */] protected ()
     extends typingsSlinky.mendixmodelsdk.structuralMod.StructuralChildProperty[T] {
-    def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String) = this()
-    def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String, value: T) = this()
-    def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String, value: T, targetRefType: String) = this()
+    def this(declaredOn: IStructureClass, parent: StructuralUnit[IAbstractModel], name: String) = this()
+    def this(declaredOn: IStructureClass, parent: StructuralUnit[IAbstractModel], name: String, value: T) = this()
     def this(
       declaredOn: IStructureClass,
-      parent: StructuralUnit,
+      parent: StructuralUnit[IAbstractModel],
+      name: String,
+      value: T,
+      targetRefType: String
+    ) = this()
+    def this(
+      declaredOn: IStructureClass,
+      parent: StructuralUnit[IAbstractModel],
       name: String,
       value: Null,
       targetRefType: String

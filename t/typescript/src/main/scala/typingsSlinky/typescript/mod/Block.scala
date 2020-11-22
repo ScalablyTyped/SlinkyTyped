@@ -10,7 +10,7 @@ trait Block
      with BlockLike {
   
   @JSName("kind")
-  var kind_Block: typingsSlinky.typescript.mod.SyntaxKind.Block = js.native
+  val kind_Block: typingsSlinky.typescript.mod.SyntaxKind.Block = js.native
   
-  var statements: NodeArray[Statement] = js.native
+  val statements: NodeArray[Statement] = js.native
 }

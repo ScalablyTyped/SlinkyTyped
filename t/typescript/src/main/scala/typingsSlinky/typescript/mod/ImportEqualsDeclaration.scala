@@ -11,13 +11,13 @@ trait ImportEqualsDeclaration
      with _HasJSDoc {
   
   @JSName("kind")
-  var kind_ImportEqualsDeclaration: typingsSlinky.typescript.mod.SyntaxKind.ImportEqualsDeclaration = js.native
+  val kind_ImportEqualsDeclaration: typingsSlinky.typescript.mod.SyntaxKind.ImportEqualsDeclaration = js.native
   
-  var moduleReference: ModuleReference = js.native
+  val moduleReference: ModuleReference = js.native
   
   @JSName("name")
-  var name_ImportEqualsDeclaration: Identifier = js.native
+  val name_ImportEqualsDeclaration: Identifier = js.native
   
   @JSName("parent")
-  var parent_ImportEqualsDeclaration: SourceFile | ModuleBlock = js.native
+  val parent_ImportEqualsDeclaration: SourceFile | ModuleBlock = js.native
 }

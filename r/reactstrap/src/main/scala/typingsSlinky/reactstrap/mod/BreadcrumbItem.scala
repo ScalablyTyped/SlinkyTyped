@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "BreadcrumbItem")
+@JSImport("reactstrap/es", "BreadcrumbItem")
 @js.native
-class BreadcrumbItem[T] ()
+class BreadcrumbItem ()
   extends Component[BreadcrumbItemProps, js.Object, js.Any]

@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Layout extends js.Object {
   
+  var initialActive: ActiveTabsType = js.native
+  
   var isFullscreen: Boolean = js.native
   
   var isToolshown: Boolean = js.native
@@ -21,13 +23,14 @@ object Layout {
   
   @scala.inline
   def apply(
+    initialActive: ActiveTabsType,
     isFullscreen: Boolean,
     isToolshown: Boolean,
     panelPosition: PanelPositions,
     showNav: Boolean,
     showPanel: Boolean
   ): Layout = {
-    val __obj = js.Dynamic.literal(isFullscreen = isFullscreen.asInstanceOf[js.Any], isToolshown = isToolshown.asInstanceOf[js.Any], panelPosition = panelPosition.asInstanceOf[js.Any], showNav = showNav.asInstanceOf[js.Any], showPanel = showPanel.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(initialActive = initialActive.asInstanceOf[js.Any], isFullscreen = isFullscreen.asInstanceOf[js.Any], isToolshown = isToolshown.asInstanceOf[js.Any], panelPosition = panelPosition.asInstanceOf[js.Any], showNav = showNav.asInstanceOf[js.Any], showPanel = showPanel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Layout]
   }
   
@@ -45,6 +48,9 @@ object Layout {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setInitialActive(value: ActiveTabsType): Self = this.set("initialActive", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIsFullscreen(value: Boolean): Self = this.set("isFullscreen", value.asInstanceOf[js.Any])

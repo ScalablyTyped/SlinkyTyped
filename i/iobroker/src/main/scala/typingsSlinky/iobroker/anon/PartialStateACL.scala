@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<iobroker.iobroker.<global>.ioBroker.StateACL> */
+/* Inlined std.Partial<iobroker.iobroker/objects.<global>.ioBroker.StateACL> */
 @js.native
 trait PartialStateACL extends js.Object {
   

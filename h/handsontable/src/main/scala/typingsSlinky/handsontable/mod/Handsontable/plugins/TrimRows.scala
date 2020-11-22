@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TrimRows extends Base {
   
+  def getTrimmedRows(): js.Array[Double] = js.native
+  
   def isTrimmed(row: Double): Boolean = js.native
   
   var removedRows: js.Array[_] = js.native
-  
-  var rowsMapper: TrimRowsMapper = js.native
   
   def trimRow(row: Double): Unit = js.native
   
@@ -37,6 +37,7 @@ object TrimRows {
     disablePlugin: () => Unit,
     enablePlugin: () => Unit,
     enabled: Boolean,
+    getTrimmedRows: () => js.Array[Double],
     hot: Core,
     init: () => Unit,
     initialized: Boolean,
@@ -46,8 +47,6 @@ object TrimRows {
     pluginsInitializedCallback: js.Array[_],
     removeHooks: String => Unit,
     removedRows: js.Array[_],
-    rowsMapper: TrimRowsMapper,
-    t: RecordTranslator,
     trimRow: Double => Unit,
     trimRows: js.Array[Double] => Unit,
     trimmedRows: js.Array[_],
@@ -56,7 +55,7 @@ object TrimRows {
     untrimRows: js.Array[Double] => Unit,
     updatePlugin: () => Unit
   ): TrimRows = {
-    val __obj = js.Dynamic.literal(addHook = js.Any.fromFunction2(addHook), callOnPluginsReady = js.Any.fromFunction1(callOnPluginsReady), clearHooks = js.Any.fromFunction0(clearHooks), destroy = js.Any.fromFunction0(destroy), disablePlugin = js.Any.fromFunction0(disablePlugin), enablePlugin = js.Any.fromFunction0(enablePlugin), enabled = enabled.asInstanceOf[js.Any], hot = hot.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), initialized = initialized.asInstanceOf[js.Any], isPluginsReady = isPluginsReady.asInstanceOf[js.Any], isTrimmed = js.Any.fromFunction1(isTrimmed), pluginName = pluginName.asInstanceOf[js.Any], pluginsInitializedCallback = pluginsInitializedCallback.asInstanceOf[js.Any], removeHooks = js.Any.fromFunction1(removeHooks), removedRows = removedRows.asInstanceOf[js.Any], rowsMapper = rowsMapper.asInstanceOf[js.Any], t = t.asInstanceOf[js.Any], trimRow = js.Any.fromFunction1(trimRow), trimRows = js.Any.fromFunction1(trimRows), trimmedRows = trimmedRows.asInstanceOf[js.Any], untrimAll = js.Any.fromFunction0(untrimAll), untrimRow = js.Any.fromFunction1(untrimRow), untrimRows = js.Any.fromFunction1(untrimRows), updatePlugin = js.Any.fromFunction0(updatePlugin))
+    val __obj = js.Dynamic.literal(addHook = js.Any.fromFunction2(addHook), callOnPluginsReady = js.Any.fromFunction1(callOnPluginsReady), clearHooks = js.Any.fromFunction0(clearHooks), destroy = js.Any.fromFunction0(destroy), disablePlugin = js.Any.fromFunction0(disablePlugin), enablePlugin = js.Any.fromFunction0(enablePlugin), enabled = enabled.asInstanceOf[js.Any], getTrimmedRows = js.Any.fromFunction0(getTrimmedRows), hot = hot.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), initialized = initialized.asInstanceOf[js.Any], isPluginsReady = isPluginsReady.asInstanceOf[js.Any], isTrimmed = js.Any.fromFunction1(isTrimmed), pluginName = pluginName.asInstanceOf[js.Any], pluginsInitializedCallback = pluginsInitializedCallback.asInstanceOf[js.Any], removeHooks = js.Any.fromFunction1(removeHooks), removedRows = removedRows.asInstanceOf[js.Any], trimRow = js.Any.fromFunction1(trimRow), trimRows = js.Any.fromFunction1(trimRows), trimmedRows = trimmedRows.asInstanceOf[js.Any], untrimAll = js.Any.fromFunction0(untrimAll), untrimRow = js.Any.fromFunction1(untrimRow), untrimRows = js.Any.fromFunction1(untrimRows), updatePlugin = js.Any.fromFunction0(updatePlugin))
     __obj.asInstanceOf[TrimRows]
   }
   
@@ -76,6 +75,9 @@ object TrimRows {
     }
     
     @scala.inline
+    def setGetTrimmedRows(value: () => js.Array[Double]): Self = this.set("getTrimmedRows", js.Any.fromFunction0(value))
+    
+    @scala.inline
     def setIsTrimmed(value: Double => Boolean): Self = this.set("isTrimmed", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -83,9 +85,6 @@ object TrimRows {
     
     @scala.inline
     def setRemovedRows(value: js.Array[_]): Self = this.set("removedRows", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRowsMapper(value: TrimRowsMapper): Self = this.set("rowsMapper", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTrimRow(value: Double => Unit): Self = this.set("trimRow", js.Any.fromFunction1(value))

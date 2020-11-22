@@ -10,28 +10,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait HistogramProperties extends WidgetProperties {
   
   /**
-    * The statistical average of the data in the histogram. You would typically get this value from the `avg` property of SummaryStatisticsResult, which is the result of the [summaryStatistics](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-summaryStatistics.html) function.  When set, this value will render on the histogram with a symbol indicating it is the average.
+    * The statistical average of the data in the histogram.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#average)
     */
   var average: js.UndefOr[Double] = js.native
   
   /**
-    * Function for styling bars representing histogram bins. This can be used to color bins with the same color of features in the view that fall into bins representing the same range of data.
+    * Function for styling bars representing histogram bins.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#barCreatedFunction)
     */
   var barCreatedFunction: js.UndefOr[BarCreatedFunction] = js.native
   
   /**
-    * An array of objects representing each bin in the histogram. This information is typically returned from the [histogram](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-histogram.html) function.
+    * An array of objects representing each bin in the histogram.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#bins)
     */
   var bins: js.UndefOr[js.Array[Bin]] = js.native
   
   /**
-    * Function that fires each time a data line is created. You can use this to style individual [dataLines](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#dataLines) on the data axis.
+    * Function that fires each time a data line is created.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#dataLineCreatedFunction)
     */
@@ -45,7 +45,7 @@ trait HistogramProperties extends WidgetProperties {
   var dataLines: js.UndefOr[js.Array[HistogramDataLines]] = js.native
   
   /**
-    * A function used to format labels on the histogram. Overrides the default label formatter.
+    * A function used to format labels on the histogram.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#labelFormatFunction)
     */
@@ -55,27 +55,25 @@ trait HistogramProperties extends WidgetProperties {
     * Determines the orientation of the Histogram widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#layout)
-    *
-    * @default horizontal
     */
   var layout: js.UndefOr[vertical | horizontal] = js.native
   
   /**
-    * The maximum value or bound of the entire histogram. This should match the maximum bound of the last [bin](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#bins).
+    * The maximum value or bound of the entire histogram.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#max)
     */
   var max: js.UndefOr[Double] = js.native
   
   /**
-    * The minimum value or bound of the entire histogram. This should match the minimum bound of the first [bin](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#bins).
+    * The minimum value or bound of the entire histogram.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#min)
     */
   var min: js.UndefOr[Double] = js.native
   
   /**
-    * The view model for the Histogram widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [HistogramViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram-HistogramViewModel.html) class to access all properties and methods on the Histogram widget.
+    * The view model for the Histogram widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Histogram.html#viewModel)
     */

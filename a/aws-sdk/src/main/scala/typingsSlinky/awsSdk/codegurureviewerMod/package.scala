@@ -8,11 +8,17 @@ package object codegurureviewerMod {
   
   type Arn = java.lang.String
   
+  type AssociationArn = java.lang.String
+  
   type AssociationId = java.lang.String
+  
+  type BranchName = java.lang.String
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.codegurureviewerMod.ClientApiVersions
   
   type ClientRequestToken = java.lang.String
+  
+  type CodeReviewName = java.lang.String
   
   type CodeReviewSummaries = js.Array[typingsSlinky.awsSdk.codegurureviewerMod.CodeReviewSummary]
   
@@ -88,6 +94,7 @@ package object codegurureviewerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.Associating_
     - typingsSlinky.awsSdk.awsSdkStrings.Failed_
     - typingsSlinky.awsSdk.awsSdkStrings.Disassociating_
+    - typingsSlinky.awsSdk.awsSdkStrings.Disassociated_
     - java.lang.String
   */
   type RepositoryAssociationState = typingsSlinky.awsSdk.codegurureviewerMod._RepositoryAssociationState | java.lang.String
@@ -100,11 +107,24 @@ package object codegurureviewerMod {
   
   type StateReason = java.lang.String
   
+  type TagKey = java.lang.String
+  
+  type TagKeyList = js.Array[typingsSlinky.awsSdk.codegurureviewerMod.TagKey]
+  
+  type TagMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.codegurureviewerMod.TagValue]
+  
+  type TagValue = java.lang.String
+  
   type Text = java.lang.String
   
   type TimeStamp = js.Date
   
-  type Type = typingsSlinky.awsSdk.awsSdkStrings.PullRequest | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PullRequest
+    - typingsSlinky.awsSdk.awsSdkStrings.RepositoryAnalysis
+    - java.lang.String
+  */
+  type Type = typingsSlinky.awsSdk.codegurureviewerMod._Type | java.lang.String
   
   type UserId = java.lang.String
   

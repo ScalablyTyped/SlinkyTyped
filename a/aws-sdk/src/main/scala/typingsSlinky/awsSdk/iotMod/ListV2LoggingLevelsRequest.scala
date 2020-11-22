@@ -13,7 +13,7 @@ trait ListV2LoggingLevelsRequest extends js.Object {
   var maxResults: js.UndefOr[SkyfallMaxResults] = js.native
   
   /**
-    * The token used to get the next set of results, or null if there are no additional results.
+    * To retrieve the next set of results, the nextToken value from a previous response; otherwise null to receive the first set of results.
     */
   var nextToken: js.UndefOr[NextToken] = js.native
   

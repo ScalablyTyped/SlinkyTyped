@@ -40,8 +40,13 @@ import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon
 import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
 import typingsSlinky.wordpressComponents.shortcutMod.Shortcut.ShortcutType
+import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`additions removals`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`additions text`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`inline`
+import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`removals additions`
+import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`removals text`
+import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`text additions`
+import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`text removals`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.additions
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.all
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.ascending
@@ -179,7 +184,9 @@ trait Props extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -365,7 +372,7 @@ trait Props extends js.Object {
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyParams: js.UndefOr[String] = js.native
   
@@ -971,7 +978,9 @@ object Props {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1527,6 +1536,9 @@ object Props {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyParams(value: String): Self = this.set("keyParams", value.asInstanceOf[js.Any])

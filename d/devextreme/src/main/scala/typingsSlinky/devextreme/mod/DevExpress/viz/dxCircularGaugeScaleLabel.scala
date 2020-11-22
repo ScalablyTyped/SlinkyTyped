@@ -9,10 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxCircularGaugeScaleLabel extends BaseGaugeScaleLabel {
   
-  /** @name dxCircularGauge.Options.scale.label.hideFirstOrLast */
+  /**
+    * [descr:dxCircularGauge.Options.scale.label.hideFirstOrLast]
+    */
   var hideFirstOrLast: js.UndefOr[first | last] = js.native
   
-  /** @name dxCircularGauge.Options.scale.label.indentFromTick */
+  /**
+    * [descr:dxCircularGauge.Options.scale.label.indentFromTick]
+    */
   var indentFromTick: js.UndefOr[Double] = js.native
 }
 object dxCircularGaugeScaleLabel {

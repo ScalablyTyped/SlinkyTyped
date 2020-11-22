@@ -9,6 +9,7 @@ import typingsSlinky.stellarBase.mod.Transaction
 import typingsSlinky.stellarSdk.accountCallBuilderMod.AccountCallBuilder
 import typingsSlinky.stellarSdk.accountResponseMod.AccountResponse
 import typingsSlinky.stellarSdk.assetsCallBuilderMod.AssetsCallBuilder
+import typingsSlinky.stellarSdk.claimableBalancesCallBuilderMod.ClaimableBalanceCallBuilder
 import typingsSlinky.stellarSdk.effectCallBuilderMod.EffectCallBuilder
 import typingsSlinky.stellarSdk.friendbotBuilderMod.FriendbotBuilder
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.FeeStatsResponse
@@ -42,6 +43,8 @@ class Server_ protected () extends js.Object {
   
   def checkMemoRequired(transaction: FeeBumpTransaction): js.Promise[Unit] = js.native
   def checkMemoRequired(transaction: Transaction[Memo[MemoType], js.Array[Operation]]): js.Promise[Unit] = js.native
+  
+  def claimableBalances(): ClaimableBalanceCallBuilder = js.native
   
   def effects(): EffectCallBuilder = js.native
   

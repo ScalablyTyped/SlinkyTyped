@@ -19,8 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Configurable template for a label filter to apply to a PivotField.
   The `condition` defines what criteria need to be set in order for the filter to operate.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait PivotLabelFilter extends js.Object {
@@ -30,8 +29,7 @@ trait PivotLabelFilter extends js.Object {
     * The comparator is the static value to which other values are compared. The type of comparison is defined by the condition.
     Note: A numeric string is treated as a number when being compared against other numeric strings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var comparator: js.UndefOr[String] = js.native
   
@@ -39,8 +37,7 @@ trait PivotLabelFilter extends js.Object {
     *
     * Specifies the condition for the filter, which defines the necessary filtering criteria.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var condition: LabelFilterCondition | Unknown_ | Equals | BeginsWith | EndsWith | Contains | GreaterThan | GreaterThanOrEqualTo | LessThan | LessThanOrEqualTo | Between = js.native
   
@@ -48,8 +45,7 @@ trait PivotLabelFilter extends js.Object {
     *
     * If true, filter *excludes* items that meet criteria. The default is false (filter to include items that meet criteria).
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var exclusive: js.UndefOr[Boolean] = js.native
   
@@ -58,8 +54,7 @@ trait PivotLabelFilter extends js.Object {
     * The lower-bound of the range for the Between filter condition.
     Note: A numeric string is treated as a number when being compared against other numeric strings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var lowerBound: js.UndefOr[String] = js.native
   
@@ -67,8 +62,7 @@ trait PivotLabelFilter extends js.Object {
     *
     * The substring used for `BeginsWith`, `EndsWith`, and `Contains` filter conditions.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var substring: js.UndefOr[String] = js.native
   
@@ -77,8 +71,7 @@ trait PivotLabelFilter extends js.Object {
     * The upper-bound of the range for the Between filter condition.
     Note: A numeric string is treated as a number when being compared against other numeric strings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var upperBound: js.UndefOr[String] = js.native
 }

@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Represents the dimensions when getting values from chart series.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @JSGlobal("Excel.ChartSeriesDimension")
 @js.native
@@ -17,6 +16,8 @@ object ChartSeriesDimension extends js.Object {
   
   @JSBracketAccess
   def apply(value: String): js.UndefOr[typingsSlinky.officeJsPreview.Excel.ChartSeriesDimension with String] = js.native
+  
+  /* "BubbleSizes" */ val bubbleSizes: typingsSlinky.officeJsPreview.Excel.ChartSeriesDimension.bubbleSizes with String = js.native
   
   /* "Categories" */ val categories: typingsSlinky.officeJsPreview.Excel.ChartSeriesDimension.categories with String = js.native
   

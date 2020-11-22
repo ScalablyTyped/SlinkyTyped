@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.imagesMod.images.IImage
@@ -10,12 +11,13 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayout
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallArgument
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/image relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/image relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.StaticImageViewer")
 @js.native
@@ -25,8 +27,8 @@ class StaticImageViewer protected () extends ConditionallyVisibleWidget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -50,9 +52,6 @@ class StaticImageViewer protected () extends ConditionallyVisibleWidget {
   def imageQualifiedName: String | Null = js.native
   
   def image_=(newValue: IImage | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FStaticImageViewer: IModel = js.native
   
   def responsive: Boolean = js.native
   def responsive_=(newValue: Boolean): Unit = js.native

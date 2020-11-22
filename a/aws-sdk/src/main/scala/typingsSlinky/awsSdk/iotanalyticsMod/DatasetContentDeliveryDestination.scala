@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DatasetContentDeliveryDestination extends js.Object {
   
   /**
-    * Configuration information for delivery of data set contents to AWS IoT Events.
+    * Configuration information for delivery of dataset contents to AWS IoT Events.
     */
   var iotEventsDestinationConfiguration: js.UndefOr[IotEventsDestinationConfiguration] = js.native
   
   /**
-    * Configuration information for delivery of data set contents to Amazon S3.
+    * Configuration information for delivery of dataset contents to Amazon S3.
     */
   var s3DestinationConfiguration: js.UndefOr[S3DestinationConfiguration] = js.native
 }

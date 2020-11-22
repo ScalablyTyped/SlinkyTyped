@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdatePublicKeyRequest extends js.Object {
   
   /**
-    * ID of the public key to be updated.
+    * The identifier of the public key that you are updating.
     */
   var Id: String = js.native
   
@@ -18,7 +18,7 @@ trait UpdatePublicKeyRequest extends js.Object {
   var IfMatch: js.UndefOr[String] = js.native
   
   /**
-    * Request to update public key information.
+    * A public key configuration.
     */
   var PublicKeyConfig: typingsSlinky.awsSdk.cloudfrontMod.PublicKeyConfig = js.native
 }

@@ -1,5 +1,8 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
+import typingsSlinky.octokitTypes.octokitTypesStrings.dismissed
+import typingsSlinky.octokitTypes.octokitTypesStrings.fixed
+import typingsSlinky.octokitTypes.octokitTypesStrings.open
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,16 +13,16 @@ trait CodeScanningListAlertsForRepoEndpoint extends js.Object {
   var owner: String = js.native
   
   /**
-    * Returns a list of code scanning alerts for a specific brach reference. The `ref` must be formatted as `heads/<branch name>`.
+    * Set a full Git reference to list alerts for a specific branch. The `ref` must be formatted as `refs/heads/<branch name>`.
     */
   var ref: js.UndefOr[String] = js.native
   
   var repo: String = js.native
   
   /**
-    * Set to `closed` to list only closed code scanning alerts.
+    * Set to `open`, `fixed`, or `dismissed` to list code scanning alerts in a specific state.
     */
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[open | dismissed | fixed] = js.native
 }
 object CodeScanningListAlertsForRepoEndpoint {
   
@@ -57,7 +60,7 @@ object CodeScanningListAlertsForRepoEndpoint {
     def deleteRef: Self = this.set("ref", js.undefined)
     
     @scala.inline
-    def setState(value: String): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setState(value: open | dismissed | fixed): Self = this.set("state", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteState: Self = this.set("state", js.undefined)

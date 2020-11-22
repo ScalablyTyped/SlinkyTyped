@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsNode.mod
 
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

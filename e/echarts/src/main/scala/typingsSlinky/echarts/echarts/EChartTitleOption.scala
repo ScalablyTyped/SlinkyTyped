@@ -24,7 +24,12 @@ trait EChartTitleOption extends js.Object {
   
   var link: js.UndefOr[String] = js.native
   
-  var padding: js.UndefOr[Double] = js.native
+  /**
+    * Title space around content. The unit is `px`.
+    * Default values for each position are 5.
+    * And they can be set to different values with left, right, top, and bottom.
+    */
+  var padding: js.UndefOr[Double | js.Array[Double]] = js.native
   
   var right: js.UndefOr[String | Double] = js.native
   
@@ -139,7 +144,10 @@ object EChartTitleOption {
     def deleteLink: Self = this.set("link", js.undefined)
     
     @scala.inline
-    def setPadding(value: Double): Self = this.set("padding", value.asInstanceOf[js.Any])
+    def setPaddingVarargs(value: Double*): Self = this.set("padding", js.Array(value :_*))
+    
+    @scala.inline
+    def setPadding(value: Double | js.Array[Double]): Self = this.set("padding", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePadding: Self = this.set("padding", js.undefined)

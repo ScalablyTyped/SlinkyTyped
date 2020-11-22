@@ -17,6 +17,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SliderProps extends js.Object {
   
   /**
+    * Allow touch on track to move the thumb.
+    */
+  var allowTouchTrack: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Set to true if you want to use the default 'spring' animation
     *
     * @default false
@@ -114,6 +119,11 @@ trait SliderProps extends js.Object {
   var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
   /**
+    * The props applied to the thumb
+    */
+  var thumbProps: js.UndefOr[js.Any] = js.native
+  
+  /**
     * The style applied to the thumb
     */
   var thumbStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
@@ -167,6 +177,12 @@ object SliderProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAllowTouchTrack(value: Boolean): Self = this.set("allowTouchTrack", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowTouchTrack: Self = this.set("allowTouchTrack", js.undefined)
     
     @scala.inline
     def setAnimateTransitions(value: Boolean): Self = this.set("animateTransitions", value.asInstanceOf[js.Any])
@@ -260,6 +276,12 @@ object SliderProps {
     
     @scala.inline
     def setStyleNull: Self = this.set("style", null)
+    
+    @scala.inline
+    def setThumbProps(value: js.Any): Self = this.set("thumbProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThumbProps: Self = this.set("thumbProps", js.undefined)
     
     @scala.inline
     def setThumbStyle(value: StyleProp[ViewStyle]): Self = this.set("thumbStyle", value.asInstanceOf[js.Any])

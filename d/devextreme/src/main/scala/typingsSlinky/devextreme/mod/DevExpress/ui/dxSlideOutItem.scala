@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSlideOutItem extends CollectionWidgetItem {
   
-  /** @name dxSlideOutItem.menuTemplate */
+  /**
+    * [descr:dxSlideOutItem.menuTemplate]
+    */
   var menuTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function0[String | Element | JQuery])
   ] = js.native

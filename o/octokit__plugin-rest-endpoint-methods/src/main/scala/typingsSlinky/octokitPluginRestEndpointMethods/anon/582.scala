@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ActionsListWorkflowRunsForRepoEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ActionsListWorkflowRunsForRepoResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ActionsListSelfHostedRunnersForRepoEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ActionsListSelfHostedRunnersForRepoResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `582` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ActionsListWorkflowRunsForRepoEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ActionsListSelfHostedRunnersForRepoEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ActionsListWorkflowRunsForRepoResponseData] = js.native
+  var response: OctokitResponse[ActionsListSelfHostedRunnersForRepoResponseData] = js.native
 }
 object `582` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ActionsListWorkflowRunsForRepoEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ActionsListWorkflowRunsForRepoResponseData]
+    parameters: RequestParameters with (Omit[ActionsListSelfHostedRunnersForRepoEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ActionsListSelfHostedRunnersForRepoResponseData]
   ): `582` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`582`]
@@ -47,10 +47,10 @@ object `582` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[ActionsListWorkflowRunsForRepoEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ActionsListSelfHostedRunnersForRepoEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ActionsListWorkflowRunsForRepoResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ActionsListSelfHostedRunnersForRepoResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

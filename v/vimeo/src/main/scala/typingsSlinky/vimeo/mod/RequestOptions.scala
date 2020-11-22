@@ -13,7 +13,7 @@ trait RequestOptions extends js.Object {
   
   var path: String = js.native
   
-  var query: js.UndefOr[String] = js.native
+  var query: js.UndefOr[js.Object] = js.native
 }
 object RequestOptions {
   
@@ -51,7 +51,7 @@ object RequestOptions {
     def deleteHeaders: Self = this.set("headers", js.undefined)
     
     @scala.inline
-    def setQuery(value: String): Self = this.set("query", value.asInstanceOf[js.Any])
+    def setQuery(value: js.Object): Self = this.set("query", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteQuery: Self = this.set("query", js.undefined)

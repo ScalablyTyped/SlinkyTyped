@@ -2,6 +2,7 @@ package typingsSlinky.primereact.inputNumberMod
 
 import org.scalajs.dom.raw.Event
 import typingsSlinky.primereact.anon.Target
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -60,9 +61,11 @@ trait InputNumberProps extends js.Object {
   
   var onBlur: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   
-  var onChange: js.UndefOr[js.Function1[/* e */ Target, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
   
   var onFocus: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
+  
+  var onValueChange: js.UndefOr[js.Function1[/* e */ Target, Unit]] = js.native
   
   var pattern: js.UndefOr[String] = js.native
   
@@ -270,7 +273,7 @@ object InputNumberProps {
     def deleteOnBlur: Self = this.set("onBlur", js.undefined)
     
     @scala.inline
-    def setOnChange(value: /* e */ Target => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    def setOnChange(value: /* e */ Value => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
@@ -280,6 +283,12 @@ object InputNumberProps {
     
     @scala.inline
     def deleteOnFocus: Self = this.set("onFocus", js.undefined)
+    
+    @scala.inline
+    def setOnValueChange(value: /* e */ Target => Unit): Self = this.set("onValueChange", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnValueChange: Self = this.set("onValueChange", js.undefined)
     
     @scala.inline
     def setPattern(value: String): Self = this.set("pattern", value.asInstanceOf[js.Any])

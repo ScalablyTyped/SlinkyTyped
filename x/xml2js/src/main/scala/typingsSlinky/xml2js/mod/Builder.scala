@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("xml2js", "Builder")
 @js.native
 class Builder () extends js.Object {
-  def this(options: OptionsV2) = this()
+  def this(options: BuilderOptions) = this()
   
   def buildObject(rootObj: js.Any): String = js.native
 }

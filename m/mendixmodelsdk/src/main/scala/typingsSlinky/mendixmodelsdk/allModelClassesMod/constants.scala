@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object constants extends js.Object {
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/constants relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/constants relevant section in reference guide}
     */
   @js.native
   class Constant protected ()

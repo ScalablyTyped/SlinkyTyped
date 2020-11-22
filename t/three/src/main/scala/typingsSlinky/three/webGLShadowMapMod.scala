@@ -18,19 +18,31 @@ object webGLShadowMapMod extends js.Object {
   class WebGLShadowMap protected () extends js.Object {
     def this(_renderer: WebGLRenderer, _objects: WebGLObjects, maxTextureSize: Double) = this()
     
+    /**
+    	 * @default true
+    	 */
     var autoUpdate: Boolean = js.native
     
     /**
-    	 * @deprecated Use {@link WebGLShadowMap#renderReverseSided .shadowMap.renderReverseSided} instead.
+    	 * @deprecated Use {@link Material#shadowSide} instead.
     	 */
     var cullFace: js.Any = js.native
     
+    /**
+    	 * @default false
+    	 */
     var enabled: Boolean = js.native
     
+    /**
+    	 * @default false
+    	 */
     var needsUpdate: Boolean = js.native
     
     def render(shadowsArray: js.Array[Light], scene: Scene, camera: Camera): Unit = js.native
     
+    /**
+    	 * @default THREE.PCFShadowMap
+    	 */
     var `type`: ShadowMapType = js.native
   }
 }

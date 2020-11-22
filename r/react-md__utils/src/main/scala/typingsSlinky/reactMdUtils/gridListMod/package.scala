@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object gridListMod {
   
   type RenderGridListChildren = js.Function1[
-    /* size */ typingsSlinky.reactMdUtils.gridListMod.GridListSize, 
+    /* size */ typingsSlinky.reactMdUtils.useGridListMod.GridListSize, 
     slinky.core.facade.ReactElement
   ]
 }

@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EducationOrganization extends Entity {
   
   // Organization description.
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[NullableOption[String]] = js.native
   
   // Organization display name.
   var displayName: js.UndefOr[String] = js.native
   
   // Source where this organization was created from. The possible values are: sis, manual, unknownFutureValue.
-  var externalSource: js.UndefOr[EducationExternalSource] = js.native
+  var externalSource: js.UndefOr[NullableOption[EducationExternalSource]] = js.native
 }
 object EducationOrganization {
   
@@ -40,10 +40,13 @@ object EducationOrganization {
     }
     
     @scala.inline
-    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: NullableOption[String]): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
+    
+    @scala.inline
+    def setDescriptionNull: Self = this.set("description", null)
     
     @scala.inline
     def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
@@ -52,9 +55,12 @@ object EducationOrganization {
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
-    def setExternalSource(value: EducationExternalSource): Self = this.set("externalSource", value.asInstanceOf[js.Any])
+    def setExternalSource(value: NullableOption[EducationExternalSource]): Self = this.set("externalSource", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExternalSource: Self = this.set("externalSource", js.undefined)
+    
+    @scala.inline
+    def setExternalSourceNull: Self = this.set("externalSource", null)
   }
 }

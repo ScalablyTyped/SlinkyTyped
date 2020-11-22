@@ -9,9 +9,10 @@ trait ObjectLiteralExpression
   extends ObjectLiteralExpressionBase[ObjectLiteralElementLike]
      with AssignmentPattern
      with DestructuringPattern
+     with JsonObjectExpression
      with ObjectBindingOrAssignmentPattern
-     with _BindingOrAssignmentElement {
+     with _ArrayBindingOrAssignmentElement {
   
   @JSName("kind")
-  var kind_ObjectLiteralExpression: typingsSlinky.typescript.mod.SyntaxKind.ObjectLiteralExpression = js.native
+  val kind_ObjectLiteralExpression: typingsSlinky.typescript.mod.SyntaxKind.ObjectLiteralExpression = js.native
 }

@@ -100,10 +100,16 @@ trait SVGSVGElement
   
   def getElementById(elementId: java.lang.String): org.scalajs.dom.raw.Element = js.native
   
+  def getEnclosureList(rect: org.scalajs.dom.raw.SVGRect): org.scalajs.dom.raw.NodeListOf[
+    (org.scalajs.dom.raw.SVGCircleElement | org.scalajs.dom.raw.SVGEllipseElement | org.scalajs.dom.raw.SVGImageElement | org.scalajs.dom.raw.SVGLineElement | org.scalajs.dom.raw.SVGPathElement | org.scalajs.dom.raw.SVGPolygonElement | org.scalajs.dom.raw.SVGPolylineElement | org.scalajs.dom.raw.SVGRectElement | org.scalajs.dom.raw.SVGTextElement | org.scalajs.dom.raw.SVGUseElement) with org.scalajs.dom.raw.Node
+  ] = js.native
   def getEnclosureList(rect: org.scalajs.dom.raw.SVGRect, referenceElement: org.scalajs.dom.raw.SVGElement): org.scalajs.dom.raw.NodeListOf[
     (org.scalajs.dom.raw.SVGCircleElement | org.scalajs.dom.raw.SVGEllipseElement | org.scalajs.dom.raw.SVGImageElement | org.scalajs.dom.raw.SVGLineElement | org.scalajs.dom.raw.SVGPathElement | org.scalajs.dom.raw.SVGPolygonElement | org.scalajs.dom.raw.SVGPolylineElement | org.scalajs.dom.raw.SVGRectElement | org.scalajs.dom.raw.SVGTextElement | org.scalajs.dom.raw.SVGUseElement) with org.scalajs.dom.raw.Node
   ] = js.native
   
+  def getIntersectionList(rect: org.scalajs.dom.raw.SVGRect): org.scalajs.dom.raw.NodeListOf[
+    (org.scalajs.dom.raw.SVGCircleElement | org.scalajs.dom.raw.SVGEllipseElement | org.scalajs.dom.raw.SVGImageElement | org.scalajs.dom.raw.SVGLineElement | org.scalajs.dom.raw.SVGPathElement | org.scalajs.dom.raw.SVGPolygonElement | org.scalajs.dom.raw.SVGPolylineElement | org.scalajs.dom.raw.SVGRectElement | org.scalajs.dom.raw.SVGTextElement | org.scalajs.dom.raw.SVGUseElement) with org.scalajs.dom.raw.Node
+  ] = js.native
   def getIntersectionList(rect: org.scalajs.dom.raw.SVGRect, referenceElement: org.scalajs.dom.raw.SVGElement): org.scalajs.dom.raw.NodeListOf[
     (org.scalajs.dom.raw.SVGCircleElement | org.scalajs.dom.raw.SVGEllipseElement | org.scalajs.dom.raw.SVGImageElement | org.scalajs.dom.raw.SVGLineElement | org.scalajs.dom.raw.SVGPathElement | org.scalajs.dom.raw.SVGPolygonElement | org.scalajs.dom.raw.SVGPolylineElement | org.scalajs.dom.raw.SVGRectElement | org.scalajs.dom.raw.SVGTextElement | org.scalajs.dom.raw.SVGUseElement) with org.scalajs.dom.raw.Node
   ] = js.native

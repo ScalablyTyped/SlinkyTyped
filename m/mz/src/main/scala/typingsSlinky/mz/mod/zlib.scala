@@ -22,154 +22,99 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object zlib extends js.Object {
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated */
   val Z_ASCII: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_BEST_COMPRESSION` */
   val Z_BEST_COMPRESSION: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_BEST_SPEED` */
   val Z_BEST_SPEED: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated */
   val Z_BINARY: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_BLOCK` */
   val Z_BLOCK: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_BUF_ERROR` */
   val Z_BUF_ERROR: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_DATA_ERROR` */
   val Z_DATA_ERROR: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_DEFAULT_COMPRESSION` */
   val Z_DEFAULT_COMPRESSION: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_DEFAULT_STRATEGY` */
   val Z_DEFAULT_STRATEGY: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated */
   val Z_DEFLATED: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_ERRNO` */
   val Z_ERRNO: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  // Compression strategy.
+  /** @deprecated Use `constants.Z_FILTERED` */
   val Z_FILTERED: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_FINISH` */
   val Z_FINISH: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_FIXED` */
   val Z_FIXED: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_FULL_FLUSH` */
   val Z_FULL_FLUSH: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_HUFFMAN_ONLY` */
   val Z_HUFFMAN_ONLY: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_MEM_ERROR` */
   val Z_MEM_ERROR: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_NEED_DICT` */
   val Z_NEED_DICT: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  // Compression levels.
+  /** @deprecated Use `constants.Z_NO_COMPRESSION` */
   val Z_NO_COMPRESSION: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  // Allowed flush values.
+  /** @deprecated Use `constants.Z_NO_FLUSH` */
   val Z_NO_FLUSH: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  // Return codes for the compression/decompression functions.
+  // Negative values are errors, positive values are used for special but normal events.
+  /** @deprecated Use `constants.Z_OK` */
   val Z_OK: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_PARTIAL_FLUSH` */
   val Z_PARTIAL_FLUSH: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_RLE` */
   val Z_RLE: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_STREAM_END` */
   val Z_STREAM_END: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_STREAM_ERROR` */
   val Z_STREAM_ERROR: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_SYNC_FLUSH` */
   val Z_SYNC_FLUSH: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated */
   val Z_TEXT: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_TREES` */
   val Z_TREES: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated  */
   val Z_UNKNOWN: Double = js.native
   
-  /**
-    * @deprecated
-    */
+  /** @deprecated Use `constants.Z_VERSION_ERROR` */
   val Z_VERSION_ERROR: Double = js.native
   
   def brotliCompress(buf: InputType): js.Promise[Buffer] = js.native
@@ -440,6 +385,7 @@ object zlib extends js.Object {
     
     val Z_ERRNO: Double = js.native
     
+    // Compression strategy.
     val Z_FILTERED: Double = js.native
     
     val Z_FINISH: Double = js.native
@@ -470,10 +416,14 @@ object zlib extends js.Object {
     
     val Z_NEED_DICT: Double = js.native
     
+    // Compression levels.
     val Z_NO_COMPRESSION: Double = js.native
     
+    // Allowed flush values.
     val Z_NO_FLUSH: Double = js.native
     
+    // Return codes for the compression/decompression functions.
+    // Negative values are errors, positive values are used for special but normal events.
     val Z_OK: Double = js.native
     
     val Z_PARTIAL_FLUSH: Double = js.native
@@ -485,6 +435,8 @@ object zlib extends js.Object {
     val Z_STREAM_ERROR: Double = js.native
     
     val Z_SYNC_FLUSH: Double = js.native
+    
+    val Z_TREES: Double = js.native
     
     val Z_VERSION_ERROR: Double = js.native
   }

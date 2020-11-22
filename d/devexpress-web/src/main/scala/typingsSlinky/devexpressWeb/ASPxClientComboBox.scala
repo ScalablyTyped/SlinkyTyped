@@ -172,6 +172,12 @@ trait ASPxClientComboBox extends ASPxClientDropDownEditBase {
     */
   var SelectedIndexChanged: ASPxClientEvent[ASPxClientProcessingModeEventHandler[ASPxClientComboBox]] = js.native
   
+  /**
+    * Adds a custom attribute to a combo box item.
+    * @param index The item index.
+    * @param attributeName The attribute name.
+    * @param attributeValue The attribute value.
+    */
   def SetItemAttribute(index: Double, attributeName: String, attributeValue: String): Unit = js.native
   
   /**
@@ -181,6 +187,13 @@ trait ASPxClientComboBox extends ASPxClientDropDownEditBase {
     */
   def SetItemHtml(index: Double, html: String): Unit = js.native
   
+  /**
+    * Adds a custom attribute to a combo box item's text cell.
+    * @param itemIndex The item's index.
+    * @param textCellIndex The text cell's index.
+    * @param attributeName The attribute name.
+    * @param attributeValue The attribute value.
+    */
   def SetItemTextCellAttribute(itemIndex: Double, textCellIndex: Double, attributeName: String, attributeValue: String): Unit = js.native
   
   /**

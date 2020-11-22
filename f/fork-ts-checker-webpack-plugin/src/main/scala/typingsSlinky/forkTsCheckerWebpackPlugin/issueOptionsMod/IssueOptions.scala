@@ -1,7 +1,5 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.issueOptionsMod
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.all
-import typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.webpack
 import typingsSlinky.forkTsCheckerWebpackPlugin.issueIssueMod.Issue
 import typingsSlinky.forkTsCheckerWebpackPlugin.issueMatchMod.IssueMatch
 import typingsSlinky.forkTsCheckerWebpackPlugin.issuePredicateMod.IssuePredicate
@@ -15,8 +13,6 @@ trait IssueOptions extends js.Object {
   var exclude: js.UndefOr[IssuePredicateOption] = js.native
   
   var include: js.UndefOr[IssuePredicateOption] = js.native
-  
-  var scope: js.UndefOr[all | webpack] = js.native
 }
 object IssueOptions {
   
@@ -64,11 +60,5 @@ object IssueOptions {
     
     @scala.inline
     def deleteInclude: Self = this.set("include", js.undefined)
-    
-    @scala.inline
-    def setScope(value: all | webpack): Self = this.set("scope", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteScope: Self = this.set("scope", js.undefined)
   }
 }

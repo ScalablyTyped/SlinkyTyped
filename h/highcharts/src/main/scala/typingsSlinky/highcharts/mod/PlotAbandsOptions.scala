@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,6 +32,8 @@ trait PlotAbandsOptions extends js.Object {
     * animation parameter under the API methods. The following properties are
     * supported:
     *
+    * - `defer`: The animation delay time in milliseconds.
+    *
     * - `duration`: The duration of the animation in milliseconds.
     *
     * - `easing`: Can be a string reference to an easing function set on the
@@ -39,7 +42,7 @@ trait PlotAbandsOptions extends js.Object {
     * Due to poor performance, animation is disabled in old IE browsers for
     * several chart types.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | PlotAbandsAnimationOptions | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highstock) For some series, there is a limit that shuts down initial
@@ -580,7 +583,7 @@ object PlotAbandsOptions {
     def deleteAllowPointSelect: Self = this.set("allowPointSelect", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PlotAbandsAnimationOptions | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)

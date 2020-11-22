@@ -45,7 +45,7 @@ trait PresetVideo extends js.Object {
   /**
     * If you specify auto for FrameRate, Elastic Transcoder uses the frame rate of the input video for the frame rate of the output video, up to the maximum frame rate. If you do not specify a MaxFrameRate, Elastic Transcoder will use a default of 30.
     */
-  var maxFrameRate: js.UndefOr[String] = js.native
+  var maxFrameRate: String = js.native
   
   /**
     * The maximum height of the output video in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 96 and 3072, inclusive.
@@ -75,8 +75,8 @@ trait PresetVideo extends js.Object {
 object PresetVideo {
   
   @scala.inline
-  def apply(): PresetVideo = {
-    val __obj = js.Dynamic.literal()
+  def apply(maxFrameRate: String): PresetVideo = {
+    val __obj = js.Dynamic.literal(maxFrameRate = maxFrameRate.asInstanceOf[js.Any])
     __obj.asInstanceOf[PresetVideo]
   }
   
@@ -94,6 +94,9 @@ object PresetVideo {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setMaxFrameRate(value: String): Self = this.set("maxFrameRate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAspectRatio(value: String): Self = this.set("aspectRatio", value.asInstanceOf[js.Any])
@@ -136,12 +139,6 @@ object PresetVideo {
     
     @scala.inline
     def deleteKeyframesMaxDist: Self = this.set("keyframesMaxDist", js.undefined)
-    
-    @scala.inline
-    def setMaxFrameRate(value: String): Self = this.set("maxFrameRate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMaxFrameRate: Self = this.set("maxFrameRate", js.undefined)
     
     @scala.inline
     def setMaxHeight(value: String): Self = this.set("maxHeight", value.asInstanceOf[js.Any])

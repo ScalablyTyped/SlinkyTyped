@@ -67,7 +67,7 @@ object ^ extends TopLevel[
   
   def parseHost(url: String, parts: Port): String = js.native
   
-  def parseQuery(url: String): js.Object = js.native
+  def parseQuery(url: String): QueryDataMap = js.native
   
   def parseUserinfo(url: String, parts: Password): String = js.native
   

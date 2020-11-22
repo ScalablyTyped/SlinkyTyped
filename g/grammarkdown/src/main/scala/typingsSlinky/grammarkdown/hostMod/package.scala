@@ -7,21 +7,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object hostMod {
   
   type LegacyReadFileCallback = js.ThisFunction2[
-    /* this */ scala.Nothing, 
+    /* this */ scala.Unit, 
     /* file */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.prex.mod.CancellationToken], 
     js.Thenable[java.lang.String] | java.lang.String
   ]
   
   type LegacyReadFileSyncCallback = js.ThisFunction2[
-    /* this */ scala.Nothing, 
+    /* this */ scala.Unit, 
     /* file */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.prex.mod.CancellationToken], 
-    java.lang.String
+    js.UndefOr[java.lang.String]
   ]
   
   type LegacyWriteFileCallback = js.ThisFunction3[
-    /* this */ scala.Nothing, 
+    /* this */ scala.Unit, 
     /* file */ java.lang.String, 
     /* content */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.prex.mod.CancellationToken], 
@@ -29,7 +29,7 @@ package object hostMod {
   ]
   
   type LegacyWriteFileSyncCallback = js.ThisFunction3[
-    /* this */ scala.Nothing, 
+    /* this */ scala.Unit, 
     /* file */ java.lang.String, 
     /* content */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.prex.mod.CancellationToken], 
@@ -37,21 +37,21 @@ package object hostMod {
   ]
   
   type ReadFileCallback = js.ThisFunction2[
-    /* this */ scala.Nothing, 
+    /* this */ scala.Unit, 
     /* file */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.esfxAsyncCanceltoken.mod.CancelToken], 
-    js.Thenable[java.lang.String] | java.lang.String
+    js.UndefOr[js.Thenable[js.UndefOr[java.lang.String]] | java.lang.String]
   ]
   
   type ReadFileSyncCallback = js.ThisFunction2[
-    /* this */ scala.Nothing, 
+    /* this */ scala.Unit, 
     /* file */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.esfxAsyncCanceltoken.mod.CancelToken], 
-    java.lang.String
+    js.UndefOr[java.lang.String]
   ]
   
   type WriteFileCallback = js.ThisFunction3[
-    /* this */ scala.Nothing, 
+    /* this */ scala.Unit, 
     /* file */ java.lang.String, 
     /* content */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.esfxAsyncCanceltoken.mod.CancelToken], 
@@ -59,7 +59,7 @@ package object hostMod {
   ]
   
   type WriteFileSyncCallback = js.ThisFunction3[
-    /* this */ scala.Nothing, 
+    /* this */ scala.Unit, 
     /* file */ java.lang.String, 
     /* content */ java.lang.String, 
     /* cancelToken */ js.UndefOr[typingsSlinky.esfxAsyncCanceltoken.mod.CancelToken], 

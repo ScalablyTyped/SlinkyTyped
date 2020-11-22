@@ -1,5 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import typingsSlinky.xstate.xstateStrings.Asterisk
 import scala.scalajs.js
@@ -17,10 +18,10 @@ trait TransitionDefinition[TContext, TEvent /* <: EventObject */] extends Transi
   
   var eventType: (/* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any) | typingsSlinky.xstate.typesMod.ActionTypes.NullEvent | Asterisk = js.native
   
-  var source: StateNode[TContext, _, TEvent, _] = js.native
+  var source: StateNode[TContext, _, TEvent, ContextTContext[TContext]] = js.native
   
   @JSName("target")
-  var target_TransitionDefinition: js.UndefOr[js.Array[StateNode[TContext, _, TEvent, _]]] = js.native
+  var target_TransitionDefinition: js.UndefOr[js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]]] = js.native
   
   def toJSON(): typingsSlinky.xstate.anon.Actions[TContext, TEvent] = js.native
 }
@@ -30,7 +31,7 @@ object TransitionDefinition {
   def apply[TContext, TEvent /* <: EventObject */](
     actions: js.Array[ActionObject[TContext, TEvent]],
     eventType: (/* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any) | typingsSlinky.xstate.typesMod.ActionTypes.NullEvent | Asterisk,
-    source: StateNode[TContext, _, TEvent, _],
+    source: StateNode[TContext, _, TEvent, ContextTContext[TContext]],
     toJSON: () => typingsSlinky.xstate.anon.Actions[TContext, TEvent]
   ): TransitionDefinition[TContext, TEvent] = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], eventType = eventType.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
@@ -64,7 +65,7 @@ object TransitionDefinition {
     ): Self = this.set("eventType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSource(value: StateNode[TContext, _, TEvent, _]): Self = this.set("source", value.asInstanceOf[js.Any])
+    def setSource(value: StateNode[TContext, _, TEvent, ContextTContext[TContext]]): Self = this.set("source", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setToJSON(value: () => typingsSlinky.xstate.anon.Actions[TContext, TEvent]): Self = this.set("toJSON", js.Any.fromFunction0(value))
@@ -76,10 +77,10 @@ object TransitionDefinition {
     def deleteCond: Self = this.set("cond", js.undefined)
     
     @scala.inline
-    def setTargetVarargs(value: (StateNode[TContext, js.Any, TEvent, js.Any])*): Self = this.set("target", js.Array(value :_*))
+    def setTargetVarargs(value: (StateNode[TContext, js.Any, TEvent, ContextTContext[TContext]])*): Self = this.set("target", js.Array(value :_*))
     
     @scala.inline
-    def setTarget(value: js.Array[StateNode[TContext, _, TEvent, _]]): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setTarget(value: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]]): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)

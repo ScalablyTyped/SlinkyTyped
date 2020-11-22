@@ -3,6 +3,7 @@ package typingsSlinky.baseui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.layoutGridMod.ALIGNMENT
+import typingsSlinky.baseui.layoutGridMod.CellOverrides
 import typingsSlinky.baseui.layoutGridMod.CellProps
 import typingsSlinky.baseui.layoutGridMod.Responsive
 import scala.scalajs.js
@@ -33,7 +34,7 @@ object Cell {
     def order(value: Responsive[Double]): this.type = set("order", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overrides(value: typingsSlinky.baseui.anon.Cell): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: CellOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def skipVarargs(value: Double*): this.type = set("skip", js.Array(value :_*))

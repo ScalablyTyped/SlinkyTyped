@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("is-my-json-valid", JSImport.Namespace)
 @js.native
-object ^ extends TopLevel[Validator]
+object ^ extends TopLevel[Factory]

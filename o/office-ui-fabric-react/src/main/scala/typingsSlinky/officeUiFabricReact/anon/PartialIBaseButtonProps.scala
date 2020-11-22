@@ -22,6 +22,7 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.baseButtonClassNamesMod.IButtonClassNames
 import typingsSlinky.officeUiFabricReact.baseButtonMod.BaseButton
 import typingsSlinky.officeUiFabricReact.buttonButtonMod.Button
@@ -32,8 +33,13 @@ import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonStyles
 import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenuProps
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions text`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`inline`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals text`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.additions
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.all
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.ascending
@@ -94,12 +100,12 @@ import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.PointerEventHandler
 import typingsSlinky.react.mod.ReactEventHandler
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.uifabricMergeStyles.istyleMod.IStyle
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps
@@ -201,7 +207,9 @@ trait PartialIBaseButtonProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -320,6 +328,8 @@ trait PartialIBaseButtonProps extends js.Object {
   var download: js.UndefOr[js.Any] = js.native
   
   var draggable: js.UndefOr[Booleanish] = js.native
+  
+  var elementRef: js.UndefOr[Ref[HTMLElement]] = js.native
   
   var encType: js.UndefOr[String] = js.native
   
@@ -1390,7 +1400,9 @@ object PartialIBaseButtonProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1763,6 +1775,21 @@ object PartialIBaseButtonProps {
     
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    
+    @scala.inline
+    def setElementRefRefObject(value: ReactRef[HTMLElement]): Self = this.set("elementRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setElementRefFunction1(value: /* instance */ HTMLElement | Null => scala.Unit): Self = this.set("elementRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setElementRef(value: Ref[HTMLElement]): Self = this.set("elementRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteElementRef: Self = this.set("elementRef", js.undefined)
+    
+    @scala.inline
+    def setElementRefNull: Self = this.set("elementRef", null)
     
     @scala.inline
     def setEncType(value: String): Self = this.set("encType", value.asInstanceOf[js.Any])

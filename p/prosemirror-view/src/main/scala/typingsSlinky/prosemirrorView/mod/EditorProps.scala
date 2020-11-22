@@ -167,11 +167,7 @@ trait EditorProps[ThisT, S /* <: Schema[_, _] */] extends js.Object {
     * `preventDefault` yourself (or not, if you want to allow the
     * default behavior).
     */
-  var handleDOMEvents: js.UndefOr[
-    (StringDictionary[
-      js.ThisFunction2[/* this */ ThisT, /* view */ EditorView[S], /* event */ Event, Boolean]
-    ]) | Null
-  ] = js.native
+  var handleDOMEvents: js.UndefOr[(HandleDOMEventsProp[ThisT, S]) | Null] = js.native
   
   /**
     * Called when the editor is double-clicked, after `handleDoubleClickOn`.
@@ -537,11 +533,7 @@ object EditorProps {
     def setHandleClickOnNull: Self = this.set("handleClickOn", null)
     
     @scala.inline
-    def setHandleDOMEvents(
-      value: StringDictionary[
-          js.ThisFunction2[/* this */ ThisT, /* view */ EditorView[S], /* event */ Event, Boolean]
-        ]
-    ): Self = this.set("handleDOMEvents", value.asInstanceOf[js.Any])
+    def setHandleDOMEvents(value: HandleDOMEventsProp[ThisT, S]): Self = this.set("handleDOMEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHandleDOMEvents: Self = this.set("handleDOMEvents", js.undefined)

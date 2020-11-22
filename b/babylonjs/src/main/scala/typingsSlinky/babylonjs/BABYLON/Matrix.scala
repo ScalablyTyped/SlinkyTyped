@@ -63,10 +63,10 @@ trait Matrix extends js.Object {
   def addTranslationFromFloats(x: Double, y: Double, z: Double): Matrix = js.native
   
   /**
-    * Returns the matrix as a Float32Array
+    * Returns the matrix as a Float32Array or Array<number>
     * @returns the matrix underlying array.
     */
-  def asArray(): DeepImmutable[js.typedarray.Float32Array] = js.native
+  def asArray(): DeepImmutable[js.typedarray.Float32Array | js.Array[Double]] = js.native
   
   /**
     * Copy the current matrix from the given one
@@ -75,6 +75,8 @@ trait Matrix extends js.Object {
     */
   def copyFrom(other: DeepImmutable[Matrix]): Matrix = js.native
   
+  def copyToArray(array: js.Array[Double]): Matrix = js.native
+  def copyToArray(array: js.Array[Double], offset: Double): Matrix = js.native
   /**
     * Populates the given array from the starting index with the current matrix values
     * @param array defines the target array
@@ -186,7 +188,7 @@ trait Matrix extends js.Object {
   /**
     * Gets the internal data of the matrix
     */
-  def m: DeepImmutable[js.typedarray.Float32Array] = js.native
+  def m: DeepImmutable[js.typedarray.Float32Array | js.Array[Double]] = js.native
   
   /**
     * Multiply two matrices
@@ -203,6 +205,7 @@ trait Matrix extends js.Object {
     */
   def multiplyAtIndex(index: Double, value: Double): Matrix = js.native
   
+  def multiplyToArray(other: DeepImmutable[Matrix], result: js.Array[Double], offset: Double): Matrix = js.native
   /**
     * Sets the Float32Array "result" from the given index "offset" with the multiplication of the current matrix and the given one
     * @param other defines the second operand
@@ -291,10 +294,10 @@ trait Matrix extends js.Object {
   def setTranslationFromFloats(x: Double, y: Double, z: Double): Matrix = js.native
   
   /**
-    * Returns the matrix as a Float32Array
+    * Returns the matrix as a Float32Array or Array<number>
     * @returns the matrix underlying array
     */
-  def toArray(): DeepImmutable[js.typedarray.Float32Array] = js.native
+  def toArray(): DeepImmutable[js.typedarray.Float32Array | js.Array[Double]] = js.native
   
   /**
     * Writes to the given matrix a normal matrix, computed from this one (using values from identity matrix for fourth row and column).

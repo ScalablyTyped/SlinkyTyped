@@ -1,10 +1,10 @@
 package typingsSlinky.officeUiFabricReact.imageTypesMod
 
 import org.scalajs.dom.raw.HTMLImageElement
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.react.mod.ImgHTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

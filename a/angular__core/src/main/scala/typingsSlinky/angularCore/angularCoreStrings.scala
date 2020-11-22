@@ -32,6 +32,21 @@ object angularCoreStrings {
   def HTML: HTML = "HTML".asInstanceOf[HTML]
   
   @scala.inline
+  def HostBindingOpCodes: HostBindingOpCodes = "HostBindingOpCodes".asInstanceOf[HostBindingOpCodes]
+  
+  @scala.inline
+  def I18nCreateOpCodes: I18nCreateOpCodes = "I18nCreateOpCodes".asInstanceOf[I18nCreateOpCodes]
+  
+  @scala.inline
+  def I18nRemoveOpCodes: I18nRemoveOpCodes = "I18nRemoveOpCodes".asInstanceOf[I18nRemoveOpCodes]
+  
+  @scala.inline
+  def I18nUpdateOpCodes: I18nUpdateOpCodes = "I18nUpdateOpCodes".asInstanceOf[I18nUpdateOpCodes]
+  
+  @scala.inline
+  def ICU: ICU = "ICU".asInstanceOf[ICU]
+  
+  @scala.inline
   def NO_CHANGE: NO_CHANGE = "NO_CHANGE".asInstanceOf[NO_CHANGE]
   
   @scala.inline
@@ -45,6 +60,15 @@ object angularCoreStrings {
   
   @scala.inline
   def TStylingRange: TStylingRange = "TStylingRange".asInstanceOf[TStylingRange]
+  
+  @scala.inline
+  def TrustedHTML: TrustedHTML = "TrustedHTML".asInstanceOf[TrustedHTML]
+  
+  @scala.inline
+  def TrustedScript: TrustedScript = "TrustedScript".asInstanceOf[TrustedScript]
+  
+  @scala.inline
+  def TrustedScriptURL: TrustedScriptURL = "TrustedScriptURL".asInstanceOf[TrustedScriptURL]
   
   @scala.inline
   def URL: URL = "URL".asInstanceOf[URL]
@@ -87,9 +111,6 @@ object angularCoreStrings {
   
   @scala.inline
   def body: body = "body".asInstanceOf[body]
-  
-  @scala.inline
-  def comment: comment = "comment".asInstanceOf[comment]
   
   @scala.inline
   def component: component = "component".asInstanceOf[component]
@@ -152,6 +173,21 @@ object angularCoreStrings {
   sealed trait HTML extends ɵBypassType
   
   @js.native
+  sealed trait HostBindingOpCodes extends js.Object
+  
+  @js.native
+  sealed trait I18nCreateOpCodes extends js.Object
+  
+  @js.native
+  sealed trait I18nRemoveOpCodes extends js.Object
+  
+  @js.native
+  sealed trait I18nUpdateOpCodes extends js.Object
+  
+  @js.native
+  sealed trait ICU extends js.Object
+  
+  @js.native
   sealed trait NO_CHANGE extends js.Object
   
   @js.native
@@ -165,6 +201,15 @@ object angularCoreStrings {
   
   @js.native
   sealed trait TStylingRange extends js.Object
+  
+  @js.native
+  sealed trait TrustedHTML extends js.Object
+  
+  @js.native
+  sealed trait TrustedScript extends js.Object
+  
+  @js.native
+  sealed trait TrustedScriptURL extends js.Object
   
   @js.native
   sealed trait URL extends ɵBypassType
@@ -207,9 +252,6 @@ object angularCoreStrings {
   
   @js.native
   sealed trait body extends GlobalTargetName
-  
-  @js.native
-  sealed trait comment extends js.Object
   
   @js.native
   sealed trait component extends js.Object

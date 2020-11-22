@@ -2,8 +2,7 @@ package typingsSlinky.rcMenu.legacyUtilMod
 
 import typingsSlinky.rcMenu.anon.PartialkeyinMenuModeother
 import typingsSlinky.rcMenu.interfaceMod.OpenAnimation
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
-import typingsSlinky.rcTrigger.interfaceMod.TransitionNameType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,11 +12,11 @@ trait GetMotionProps extends js.Object {
   
   var defaultMotions: js.UndefOr[PartialkeyinMenuModeother] = js.native
   
-  var motion: js.UndefOr[MotionType] = js.native
+  var motion: js.UndefOr[CSSMotionProps] = js.native
   
   var openAnimation: js.UndefOr[OpenAnimation] = js.native
   
-  var openTransitionName: js.UndefOr[TransitionNameType] = js.native
+  var openTransitionName: js.UndefOr[String] = js.native
   
   var prefixCls: js.UndefOr[String] = js.native
 }
@@ -51,7 +50,7 @@ object GetMotionProps {
     def deleteDefaultMotions: Self = this.set("defaultMotions", js.undefined)
     
     @scala.inline
-    def setMotion(value: MotionType): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: CSSMotionProps): Self = this.set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMotion: Self = this.set("motion", js.undefined)
@@ -63,7 +62,7 @@ object GetMotionProps {
     def deleteOpenAnimation: Self = this.set("openAnimation", js.undefined)
     
     @scala.inline
-    def setOpenTransitionName(value: TransitionNameType): Self = this.set("openTransitionName", value.asInstanceOf[js.Any])
+    def setOpenTransitionName(value: String): Self = this.set("openTransitionName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOpenTransitionName: Self = this.set("openTransitionName", js.undefined)

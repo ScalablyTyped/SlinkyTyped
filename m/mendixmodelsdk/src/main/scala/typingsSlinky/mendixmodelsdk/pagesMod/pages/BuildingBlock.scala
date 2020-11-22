@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
@@ -11,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/building-block relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/building-block relevant section in reference guide}
   *
   * In version 7.7.0: introduced
   */
@@ -39,9 +38,6 @@ class BuildingBlock protected () extends TemplateFormBase {
   
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MBuildingBlock: FolderBase = js.native
-  
-  @JSName("model")
-  var model_FBuildingBlock: IModel = js.native
   
   /**
     * In version 8.4.0: added public

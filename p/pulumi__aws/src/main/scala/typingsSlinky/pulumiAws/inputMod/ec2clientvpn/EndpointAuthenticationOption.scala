@@ -19,7 +19,12 @@ trait EndpointAuthenticationOption extends js.Object {
   var rootCertificateChainArn: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, or `directory-service-authentication` to use Active Directory authentication.
+    * The ARN of the IAM SAML identity provider if type is `federated-authentication`.
+    */
+  var samlProviderArn: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The type of client authentication to be used. Specify `certificate-authentication` to use certificate-based authentication, `directory-service-authentication` to use Active Directory authentication, or `federated-authentication` to use Federated Authentication via SAML 2.0.
     */
   var `type`: Input[String] = js.native
 }
@@ -61,5 +66,11 @@ object EndpointAuthenticationOption {
     
     @scala.inline
     def deleteRootCertificateChainArn: Self = this.set("rootCertificateChainArn", js.undefined)
+    
+    @scala.inline
+    def setSamlProviderArn(value: Input[String]): Self = this.set("samlProviderArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSamlProviderArn: Self = this.set("samlProviderArn", js.undefined)
   }
 }

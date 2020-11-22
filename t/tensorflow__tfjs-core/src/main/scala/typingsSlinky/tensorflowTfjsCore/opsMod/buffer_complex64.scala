@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore.opsMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.TensorBuffer
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.TensorBuffer
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.complex64
 import scala.scalajs.js
 import scala.scalajs.js.`|`

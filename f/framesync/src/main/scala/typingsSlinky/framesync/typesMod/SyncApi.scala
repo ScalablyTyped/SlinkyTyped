@@ -1,6 +1,8 @@
 package typingsSlinky.framesync.typesMod
 
-import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.framesync.anon.keyinStepIdStep
+import typingsSlinky.framesync.anon.keyinStepIdprocessProcess
+import typingsSlinky.framesync.anon.keyinStepIdprocessProcessPostRender
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,31 +10,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SyncApi extends js.Object {
   
-  var cancelSync: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ key in framesync.framesync/lib/types.StepId ]: (process : framesync.framesync/lib/types.Process): void}
-    */ typingsSlinky.framesync.framesyncStrings.SyncApi with TopLevel[js.Any] = js.native
+  var cancelSync: keyinStepIdprocessProcessPostRender = js.native
   
-  var steps: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ key in framesync.framesync/lib/types.StepId ]: framesync.framesync/lib/types.Step}
-    */ typingsSlinky.framesync.framesyncStrings.SyncApi with TopLevel[js.Any] = js.native
+  var steps: keyinStepIdStep = js.native
   
-  var sync: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ key in framesync.framesync/lib/types.StepId ]: (process : framesync.framesync/lib/types.Process, keepAlive : boolean | undefined, immediate : boolean | undefined): framesync.framesync/lib/types.Process}
-    */ typingsSlinky.framesync.framesyncStrings.SyncApi with TopLevel[js.Any] = js.native
+  var sync: keyinStepIdprocessProcess = js.native
 }
 object SyncApi {
   
   @scala.inline
   def apply(
-    cancelSync: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ key in framesync.framesync/lib/types.StepId ]: (process : framesync.framesync/lib/types.Process): void}
-    */ typingsSlinky.framesync.framesyncStrings.SyncApi with TopLevel[js.Any],
-    steps: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ key in framesync.framesync/lib/types.StepId ]: framesync.framesync/lib/types.Step}
-    */ typingsSlinky.framesync.framesyncStrings.SyncApi with TopLevel[js.Any],
-    sync: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ key in framesync.framesync/lib/types.StepId ]: (process : framesync.framesync/lib/types.Process, keepAlive : boolean | undefined, immediate : boolean | undefined): framesync.framesync/lib/types.Process}
-    */ typingsSlinky.framesync.framesyncStrings.SyncApi with TopLevel[js.Any]
+    cancelSync: keyinStepIdprocessProcessPostRender,
+    steps: keyinStepIdStep,
+    sync: keyinStepIdprocessProcess
   ): SyncApi = {
     val __obj = js.Dynamic.literal(cancelSync = cancelSync.asInstanceOf[js.Any], steps = steps.asInstanceOf[js.Any], sync = sync.asInstanceOf[js.Any])
     __obj.asInstanceOf[SyncApi]
@@ -54,24 +44,12 @@ object SyncApi {
     }
     
     @scala.inline
-    def setCancelSync(
-      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-    {[ key in framesync.framesync/lib/types.StepId ]: (process : framesync.framesync/lib/types.Process): void}
-      */ typingsSlinky.framesync.framesyncStrings.SyncApi with TopLevel[js.Any]
-    ): Self = this.set("cancelSync", value.asInstanceOf[js.Any])
+    def setCancelSync(value: keyinStepIdprocessProcessPostRender): Self = this.set("cancelSync", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSteps(
-      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-    {[ key in framesync.framesync/lib/types.StepId ]: framesync.framesync/lib/types.Step}
-      */ typingsSlinky.framesync.framesyncStrings.SyncApi with TopLevel[js.Any]
-    ): Self = this.set("steps", value.asInstanceOf[js.Any])
+    def setSteps(value: keyinStepIdStep): Self = this.set("steps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSync(
-      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-    {[ key in framesync.framesync/lib/types.StepId ]: (process : framesync.framesync/lib/types.Process, keepAlive : boolean | undefined, immediate : boolean | undefined): framesync.framesync/lib/types.Process}
-      */ typingsSlinky.framesync.framesyncStrings.SyncApi with TopLevel[js.Any]
-    ): Self = this.set("sync", value.asInstanceOf[js.Any])
+    def setSync(value: keyinStepIdprocessProcess): Self = this.set("sync", value.asInstanceOf[js.Any])
   }
 }

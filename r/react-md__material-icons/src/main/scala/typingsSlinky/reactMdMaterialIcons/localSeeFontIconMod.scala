@@ -12,5 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object localSeeFontIconMod extends js.Object {
   
-  val default: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
+  val LocalSeeFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

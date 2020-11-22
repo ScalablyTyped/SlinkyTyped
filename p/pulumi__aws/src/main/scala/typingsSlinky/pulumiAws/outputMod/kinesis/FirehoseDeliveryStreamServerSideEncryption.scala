@@ -11,6 +11,16 @@ trait FirehoseDeliveryStreamServerSideEncryption extends js.Object {
     * Whether to enable encryption at rest. Default is `false`.
     */
   var enabled: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Amazon Resource Name (ARN) of the encryption key. Required when `keyType` is `CUSTOMER_MANAGED_CMK`.
+    */
+  var keyArn: js.UndefOr[String] = js.native
+  
+  /**
+    * Type of encryption key. Default is `AWS_OWNED_CMK`. Valid values are `AWS_OWNED_CMK` and `CUSTOMER_MANAGED_CMK`
+    */
+  var keyType: js.UndefOr[String] = js.native
 }
 object FirehoseDeliveryStreamServerSideEncryption {
   
@@ -40,5 +50,17 @@ object FirehoseDeliveryStreamServerSideEncryption {
     
     @scala.inline
     def deleteEnabled: Self = this.set("enabled", js.undefined)
+    
+    @scala.inline
+    def setKeyArn(value: String): Self = this.set("keyArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKeyArn: Self = this.set("keyArn", js.undefined)
+    
+    @scala.inline
+    def setKeyType(value: String): Self = this.set("keyType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKeyType: Self = this.set("keyType", js.undefined)
   }
 }

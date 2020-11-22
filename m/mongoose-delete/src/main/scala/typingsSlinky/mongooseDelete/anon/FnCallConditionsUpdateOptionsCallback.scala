@@ -30,7 +30,7 @@ trait FnCallConditionsUpdateOptionsCallback extends js.Object {
     options: leantrueOmitQueryFindOneA,
     callback: js.Function3[/* err */ js.Any, /* doc */ DocumentDefinition[_], /* res */ js.Any, Unit]
   ): QueryDocumentDefinitionanAll = js.native
-  def apply(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOpBatchSize = js.native
+  def apply(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOpAsyncIterator = js.native
   def apply(
     conditions: FilterQuery[_],
     update: UpdateQuery[_],
@@ -41,7 +41,7 @@ trait FnCallConditionsUpdateOptionsCallback extends js.Object {
       /* res */ js.Any, 
       Unit
     ]
-  ): QueryFindAndModifyWriteOpBatchSize = js.native
+  ): QueryFindAndModifyWriteOpAsyncIterator = js.native
   def apply(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueupserttruene): QueryFindAndModifyWriteOpAnd = js.native
   def apply(
     conditions: FilterQuery[_],

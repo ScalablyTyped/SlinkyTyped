@@ -1,9 +1,9 @@
 package typingsSlinky.next.anon
 
-import typingsSlinky.next.utilsMod.AppType
-import typingsSlinky.next.utilsMod.Enhancer
-import typingsSlinky.next.utilsMod.NextComponentType
-import typingsSlinky.next.utilsMod.NextPageContext
+import typingsSlinky.next.libUtilsMod.AppType
+import typingsSlinky.next.libUtilsMod.Enhancer
+import typingsSlinky.next.libUtilsMod.NextComponentType
+import typingsSlinky.next.libUtilsMod.NextPageContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

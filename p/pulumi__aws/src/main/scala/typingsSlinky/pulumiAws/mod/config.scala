@@ -3,7 +3,6 @@ package typingsSlinky.pulumiAws.mod
 import typingsSlinky.pulumiAws.outputMod.config.AssumeRole
 import typingsSlinky.pulumiAws.outputMod.config.Endpoints
 import typingsSlinky.pulumiAws.outputMod.config.IgnoreTags
-import typingsSlinky.pulumiAws.regionMod.Region
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,9 +29,9 @@ object config extends js.Object {
   
   var profile: js.UndefOr[String] = js.native
   
-  var region: js.UndefOr[Region] = js.native
+  var region: js.UndefOr[typingsSlinky.pulumiAws.enumsMod.Region] = js.native
   
-  def requireRegion(): Region = js.native
+  def requireRegion(): typingsSlinky.pulumiAws.enumsMod.Region = js.native
   
   var s3ForcePathStyle: js.UndefOr[Boolean] = js.native
   

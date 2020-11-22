@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientPinpointBrowser
 
-import typingsSlinky.awsSdkTypes.protocolMod.List
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object listOfSegmentDimensionsMod extends js.Object {
   
   @JSName("_ListOfSegmentDimensions")
-  val ListOfSegmentDimensions: List = js.native
+  val ListOfSegmentDimensions: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _List_ */ js.Any = js.native
 }

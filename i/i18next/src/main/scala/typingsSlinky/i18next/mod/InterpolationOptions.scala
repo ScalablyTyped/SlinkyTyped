@@ -1,6 +1,7 @@
 package typingsSlinky.i18next.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.i18next.anon.InterpolationOptionskeyst
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -165,8 +166,8 @@ object InterpolationOptions {
     
     @scala.inline
     def setFormat(
-      value: (/* value */ js.Any, /* format */ js.UndefOr[String], /* lng */ js.UndefOr[String]) => String
-    ): Self = this.set("format", js.Any.fromFunction3(value))
+      value: (/* value */ js.Any, /* format */ js.UndefOr[String], /* lng */ js.UndefOr[String], /* options */ js.UndefOr[InterpolationOptionskeyst]) => String
+    ): Self = this.set("format", js.Any.fromFunction4(value))
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)

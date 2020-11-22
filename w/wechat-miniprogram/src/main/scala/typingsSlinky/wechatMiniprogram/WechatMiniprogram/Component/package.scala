@@ -17,7 +17,8 @@ package object Component {
       typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.DataOption, 
       typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.PropertyOption, 
       typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.MethodOption, 
-      js.Object
+      js.Object, 
+      typingsSlinky.wechatMiniprogram.wechatMiniprogramBooleans.`false`
     ], 
     java.lang.String
   ]
@@ -38,7 +39,7 @@ package object Component {
     /* import warning: importer.ImportType#apply Failed type conversion: T['type'] */ js.Any
   ]
   
-  type Instance[TData /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.DataOption */, TProperty /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.PropertyOption */, TMethod /* <: typingsSlinky.std.Partial[typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.MethodOption] */, TCustomInstanceProperty /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject */] = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.InstanceProperties with typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.InstanceMethods[TData] with TMethod with TCustomInstanceProperty with (typingsSlinky.wechatMiniprogram.anon.Data[TData, TProperty])
+  type Instance[TData /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.DataOption */, TProperty /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.PropertyOption */, TMethod /* <: typingsSlinky.std.Partial[typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.MethodOption] */, TCustomInstanceProperty /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject */, TIsPage /* <: scala.Boolean */] = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.InstanceProperties with typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.InstanceMethods[TData] with TMethod with (js.Object | typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.ILifetime) with TCustomInstanceProperty with (typingsSlinky.wechatMiniprogram.anon.Data[TData, TProperty])
   
   type MethodOption = typingsSlinky.std.Record[java.lang.String, js.Function1[/* repeated */ js.Any, js.Any]]
   
@@ -63,7 +64,8 @@ package object Component {
     typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject, 
     typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject, 
     typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject, 
-    typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject
+    typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject, 
+    typingsSlinky.wechatMiniprogram.wechatMiniprogramBooleans.`false`
   ]
   
   type ValueType[T /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.PropertyType */] = typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject | js.Array[js.Any] | scala.Boolean | scala.Double | java.lang.String

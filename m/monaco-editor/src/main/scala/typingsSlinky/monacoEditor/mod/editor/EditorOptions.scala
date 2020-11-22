@@ -27,6 +27,7 @@ import typingsSlinky.monacoEditor.monacoEditorStrings.none
 import typingsSlinky.monacoEditor.monacoEditorStrings.off
 import typingsSlinky.monacoEditor.monacoEditorStrings.on
 import typingsSlinky.monacoEditor.monacoEditorStrings.onlySnippets
+import typingsSlinky.monacoEditor.monacoEditorStrings.prompt
 import typingsSlinky.monacoEditor.monacoEditorStrings.recentlyUsed
 import typingsSlinky.monacoEditor.monacoEditorStrings.recentlyUsedByPrefix
 import typingsSlinky.monacoEditor.monacoEditorStrings.selection
@@ -35,6 +36,7 @@ import typingsSlinky.monacoEditor.monacoEditorStrings.smart
 import typingsSlinky.monacoEditor.monacoEditorStrings.spread
 import typingsSlinky.monacoEditor.monacoEditorStrings.text
 import typingsSlinky.monacoEditor.monacoEditorStrings.top
+import typingsSlinky.monacoEditor.monacoEditorStrings.trailing
 import typingsSlinky.monacoEditor.monacoEditorStrings.tree
 import typingsSlinky.monacoEditor.monacoEditorStrings.wordWrapColumn
 import scala.scalajs.js
@@ -95,6 +97,8 @@ object EditorOptions extends js.Object {
   
   var colorDecorators: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.colorDecorators, Boolean] = js.native
   
+  var columnSelection: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.columnSelection, Boolean] = js.native
+  
   var comments: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.comments, EditorCommentsOptions] = js.native
   
   var contextmenu: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.contextmenu, Boolean] = js.native
@@ -127,6 +131,11 @@ object EditorOptions extends js.Object {
   ] = js.native
   
   var cursorWidth: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.cursorWidth, Double] = js.native
+  
+  var definitionLinkOpensInPeek: IEditorOption[
+    typingsSlinky.monacoEditor.mod.editor.EditorOption.definitionLinkOpensInPeek, 
+    Boolean
+  ] = js.native
   
   var disableLayerHinting: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.disableLayerHinting, Boolean] = js.native
   
@@ -258,6 +267,11 @@ object EditorOptions extends js.Object {
   
   var overviewRulerLanes: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.overviewRulerLanes, Double] = js.native
   
+  var padding: IEditorOption[
+    typingsSlinky.monacoEditor.mod.editor.EditorOption.padding, 
+    InternalEditorPaddingOptions
+  ] = js.native
+  
   var parameterHints: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.parameterHints, 
     InternalParameterHintOptions
@@ -279,6 +293,8 @@ object EditorOptions extends js.Object {
   
   var readOnly: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.readOnly, Boolean] = js.native
   
+  var renameOnType: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.renameOnType, Boolean] = js.native
+  
   var renderControlCharacters: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.renderControlCharacters, 
     Boolean
@@ -293,6 +309,11 @@ object EditorOptions extends js.Object {
     all | line | none | gutter
   ] = js.native
   
+  var renderLineHighlightOnlyWhenFocus: IEditorOption[
+    typingsSlinky.monacoEditor.mod.editor.EditorOption.renderLineHighlightOnlyWhenFocus, 
+    Boolean
+  ] = js.native
+  
   var renderValidationDecorations: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.renderValidationDecorations, 
     on | off | editable
@@ -300,7 +321,7 @@ object EditorOptions extends js.Object {
   
   var renderWhitespace: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.renderWhitespace, 
-    all | none | boundary | selection
+    all | none | boundary | selection | trailing
   ] = js.native
   
   var revealHorizontalRightPadding: IEditorOption[
@@ -316,6 +337,8 @@ object EditorOptions extends js.Object {
   
   var scrollBeyondLastLine: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.scrollBeyondLastLine, Boolean] = js.native
   
+  var scrollPredominantAxis: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.scrollPredominantAxis, Boolean] = js.native
+  
   var scrollbar: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.scrollbar, 
     InternalEditorScrollbarOptions
@@ -326,6 +349,8 @@ object EditorOptions extends js.Object {
   var selectionClipboard: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.selectionClipboard, Boolean] = js.native
   
   var selectionHighlight: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.selectionHighlight, Boolean] = js.native
+  
+  var showDeprecated: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.showDeprecated, Boolean] = js.native
   
   var showFoldingControls: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.showFoldingControls, 
@@ -365,6 +390,18 @@ object EditorOptions extends js.Object {
   ] = js.native
   
   var tabFocusMode: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.tabFocusMode, Boolean] = js.native
+  
+  var tabIndex: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.tabIndex, Double] = js.native
+  
+  var unfoldOnClickAfterEndOfLine: IEditorOption[
+    typingsSlinky.monacoEditor.mod.editor.EditorOption.unfoldOnClickAfterEndOfLine, 
+    Boolean
+  ] = js.native
+  
+  var unusualLineTerminators: IEditorOption[
+    typingsSlinky.monacoEditor.mod.editor.EditorOption.unusualLineTerminators, 
+    off | prompt | auto
+  ] = js.native
   
   var useTabStops: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.useTabStops, Boolean] = js.native
   

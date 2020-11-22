@@ -1,6 +1,7 @@
 package typingsSlinky.elasticElasticsearch.mod
 
 import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
+import typingsSlinky.elasticElasticsearch.transportMod.Context
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +20,7 @@ object errors extends js.Object {
   @js.native
   class ConnectionError[TResponse, TContext] protected ()
     extends typingsSlinky.elasticElasticsearch.errorsMod.ConnectionError[TResponse, TContext] {
-    def this(message: String, meta: ApiResponse[Record[String, _], _]) = this()
+    def this(message: String, meta: ApiResponse[Record[String, _], Context]) = this()
   }
   
   @js.native
@@ -35,19 +36,19 @@ object errors extends js.Object {
   @js.native
   class NoLivingConnectionsError[TResponse, TContext] protected ()
     extends typingsSlinky.elasticElasticsearch.errorsMod.NoLivingConnectionsError[TResponse, TContext] {
-    def this(message: String, meta: ApiResponse[Record[String, _], _]) = this()
+    def this(message: String, meta: ApiResponse[Record[String, _], Context]) = this()
   }
   
   @js.native
   class RequestAbortedError[TResponse, TContext] protected ()
     extends typingsSlinky.elasticElasticsearch.errorsMod.RequestAbortedError[TResponse, TContext] {
-    def this(message: String, meta: ApiResponse[Record[String, _], _]) = this()
+    def this(message: String, meta: ApiResponse[Record[String, _], Context]) = this()
   }
   
   @js.native
   class ResponseError[TResponse, TContext] protected ()
     extends typingsSlinky.elasticElasticsearch.errorsMod.ResponseError[TResponse, TContext] {
-    def this(meta: ApiResponse[Record[String, _], _]) = this()
+    def this(meta: ApiResponse[Record[String, _], Context]) = this()
   }
   
   @js.native
@@ -59,6 +60,6 @@ object errors extends js.Object {
   @js.native
   class TimeoutError[TResponse, TContext] protected ()
     extends typingsSlinky.elasticElasticsearch.errorsMod.TimeoutError[TResponse, TContext] {
-    def this(message: String, meta: ApiResponse[Record[String, _], _]) = this()
+    def this(message: String, meta: ApiResponse[Record[String, _], Context]) = this()
   }
 }

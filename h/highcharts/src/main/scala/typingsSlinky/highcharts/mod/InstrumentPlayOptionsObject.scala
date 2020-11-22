@@ -26,6 +26,12 @@ trait InstrumentPlayOptionsObject extends js.Object {
   var frequency: Double | js.Function = js.native
   
   /**
+    * The master volume multiplier to apply to the instrument, regardless
+    * of other volume changes. Defaults to 1.
+    */
+  var masterVolume: js.UndefOr[Double] = js.native
+  
+  /**
     * The maximum frequency to allow. If the instrument has a set of
     * allowed frequencies, the closest frequency is used by default. Use
     * this option to stop too high frequencies from being used.
@@ -92,6 +98,12 @@ object InstrumentPlayOptionsObject {
     
     @scala.inline
     def setFrequency(value: Double | js.Function): Self = this.set("frequency", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMasterVolume(value: Double): Self = this.set("masterVolume", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMasterVolume: Self = this.set("masterVolume", js.undefined)
     
     @scala.inline
     def setMaxFrequency(value: Double): Self = this.set("maxFrequency", value.asInstanceOf[js.Any])

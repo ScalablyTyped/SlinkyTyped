@@ -1,5 +1,10 @@
 package typingsSlinky.expressBrute.mod
 
+import typingsSlinky.express.mod.NextFunction
+import typingsSlinky.express.mod.Request_
+import typingsSlinky.express.mod.Response_
+import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +14,9 @@ trait Middleware extends js.Object {
   
   /**
     * @summary Allows you to override the value of failCallback for this middleware.
-    * @type {Function}
+    * @type {FailCallback}
     */
-  var failCallback: js.UndefOr[js.Function] = js.native
+  var failCallback: js.UndefOr[FailCallback] = js.native
   
   /**
     * @summary Disregard IP address when matching requests if set to true. Defaults to false.
@@ -21,9 +26,16 @@ trait Middleware extends js.Object {
   
   /**
     * @summary Key.
-    * @type {any}
+    * @type {Function}
     */
-  var key: js.UndefOr[js.Any] = js.native
+  var key: js.UndefOr[
+    js.Function3[
+      /* req */ Request_[ParamsDictionary, _, _, Query], 
+      /* res */ Response_[_], 
+      /* next */ NextFunction, 
+      _
+    ]
+  ] = js.native
 }
 object Middleware {
   
@@ -49,7 +61,9 @@ object Middleware {
     }
     
     @scala.inline
-    def setFailCallback(value: js.Function): Self = this.set("failCallback", value.asInstanceOf[js.Any])
+    def setFailCallback(
+      value: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any], /* next */ NextFunction, /* nextValidRequestDate */ js.Date) => Unit
+    ): Self = this.set("failCallback", js.Any.fromFunction4(value))
     
     @scala.inline
     def deleteFailCallback: Self = this.set("failCallback", js.undefined)
@@ -61,7 +75,9 @@ object Middleware {
     def deleteIgnoreIP: Self = this.set("ignoreIP", js.undefined)
     
     @scala.inline
-    def setKey(value: js.Any): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setKey(
+      value: (/* req */ Request_[ParamsDictionary, _, _, Query], /* res */ Response_[_], /* next */ NextFunction) => _
+    ): Self = this.set("key", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)

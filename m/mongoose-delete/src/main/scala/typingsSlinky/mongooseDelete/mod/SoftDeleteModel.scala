@@ -29,7 +29,7 @@ import typingsSlinky.mongooseDelete.anon.FnCallConditionsUpdateOptionsCallback
 import typingsSlinky.mongooseDelete.anon.QueryArrayDocumentDefinit
 import typingsSlinky.mongooseDelete.anon.QueryDocumentDefinitionanAll
 import typingsSlinky.mongooseDelete.anon.QueryFindAndModifyWriteOpAnd
-import typingsSlinky.mongooseDelete.anon.QueryFindAndModifyWriteOpBatchSize
+import typingsSlinky.mongooseDelete.anon.QueryFindAndModifyWriteOpAsyncIterator
 import typingsSlinky.mongooseDelete.anon.Queryany
 import typingsSlinky.mongooseDelete.anon.Querynumber
 import scala.scalajs.js
@@ -276,7 +276,7 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     callback: js.Function3[/* err */ js.Any, /* doc */ DocumentDefinition[_], /* res */ js.Any, Unit]
   ): QueryDocumentDefinitionanAll = js.native
   /** Find One And Update only deleted documents */
-  def findOneAndUpdateDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOpBatchSize = js.native
+  def findOneAndUpdateDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOpAsyncIterator = js.native
   /** Find One And Update only deleted documents */
   def findOneAndUpdateDeleted(
     conditions: FilterQuery[_],
@@ -288,7 +288,7 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
       /* res */ js.Any, 
       Unit
     ]
-  ): QueryFindAndModifyWriteOpBatchSize = js.native
+  ): QueryFindAndModifyWriteOpAsyncIterator = js.native
   /** Find One And Update only deleted documents */
   def findOneAndUpdateDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueupserttruene): QueryFindAndModifyWriteOpAnd = js.native
   /** Find One And Update only deleted documents */
@@ -345,7 +345,7 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
     callback: js.Function3[/* err */ js.Any, /* doc */ DocumentDefinition[_], /* res */ js.Any, Unit]
   ): QueryDocumentDefinitionanAll = js.native
   /** Find One And Update all documents including deleted */
-  def findOneAndUpdateWithDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOpBatchSize = js.native
+  def findOneAndUpdateWithDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueQueryFindOneArrayFilters): QueryFindAndModifyWriteOpAsyncIterator = js.native
   /** Find One And Update all documents including deleted */
   def findOneAndUpdateWithDeleted(
     conditions: FilterQuery[_],
@@ -357,7 +357,7 @@ trait SoftDeleteModel[T /* <: Document */, QueryHelpers] extends Model_[T, Query
       /* res */ js.Any, 
       Unit
     ]
-  ): QueryFindAndModifyWriteOpBatchSize = js.native
+  ): QueryFindAndModifyWriteOpAsyncIterator = js.native
   /** Find One And Update all documents including deleted */
   def findOneAndUpdateWithDeleted(conditions: FilterQuery[_], update: UpdateQuery[_], options: rawResulttrueupserttruene): QueryFindAndModifyWriteOpAnd = js.native
   /** Find One And Update all documents including deleted */

@@ -349,7 +349,7 @@ trait AnySchema
   var `type`: js.UndefOr[Types | String] = js.native
   
   /**
-    * Annotates the key with an unit name.
+    * Annotates the key with a unit name.
     */
   def unit(name: String): this.type = js.native
   

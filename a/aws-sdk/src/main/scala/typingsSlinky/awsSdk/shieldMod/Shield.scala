@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.shieldMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -95,6 +95,20 @@ trait Shield extends Service {
   ): Request[CreateProtectionResponse, AWSError] = js.native
   
   /**
+    * Creates a grouping of protected resources so they can be handled as a collective. This resource grouping improves the accuracy of detection and reduces false positives. 
+    */
+  def createProtectionGroup(): Request[CreateProtectionGroupResponse, AWSError] = js.native
+  def createProtectionGroup(callback: js.Function2[/* err */ AWSError, /* data */ CreateProtectionGroupResponse, scala.Unit]): Request[CreateProtectionGroupResponse, AWSError] = js.native
+  /**
+    * Creates a grouping of protected resources so they can be handled as a collective. This resource grouping improves the accuracy of detection and reduces false positives. 
+    */
+  def createProtectionGroup(params: CreateProtectionGroupRequest): Request[CreateProtectionGroupResponse, AWSError] = js.native
+  def createProtectionGroup(
+    params: CreateProtectionGroupRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateProtectionGroupResponse, scala.Unit]
+  ): Request[CreateProtectionGroupResponse, AWSError] = js.native
+  
+  /**
     * Activates AWS Shield Advanced for an account. When you initally create a subscription, your subscription is set to be automatically renewed at the end of the existing subscription period. You can change this by submitting an UpdateSubscription request. 
     */
   def createSubscription(): Request[CreateSubscriptionResponse, AWSError] = js.native
@@ -123,6 +137,20 @@ trait Shield extends Service {
   ): Request[DeleteProtectionResponse, AWSError] = js.native
   
   /**
+    * Removes the specified protection group.
+    */
+  def deleteProtectionGroup(): Request[DeleteProtectionGroupResponse, AWSError] = js.native
+  def deleteProtectionGroup(callback: js.Function2[/* err */ AWSError, /* data */ DeleteProtectionGroupResponse, scala.Unit]): Request[DeleteProtectionGroupResponse, AWSError] = js.native
+  /**
+    * Removes the specified protection group.
+    */
+  def deleteProtectionGroup(params: DeleteProtectionGroupRequest): Request[DeleteProtectionGroupResponse, AWSError] = js.native
+  def deleteProtectionGroup(
+    params: DeleteProtectionGroupRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteProtectionGroupResponse, scala.Unit]
+  ): Request[DeleteProtectionGroupResponse, AWSError] = js.native
+  
+  /**
     * Removes AWS Shield Advanced from an account. AWS Shield Advanced requires a 1-year subscription commitment. You cannot delete a subscription prior to the completion of that commitment. 
     */
   def deleteSubscription(): Request[DeleteSubscriptionResponse, AWSError] = js.native
@@ -149,6 +177,22 @@ trait Shield extends Service {
     params: DescribeAttackRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeAttackResponse, scala.Unit]
   ): Request[DescribeAttackResponse, AWSError] = js.native
+  
+  /**
+    * Provides information about the number and type of attacks AWS Shield has detected in the last year for all resources that belong to your account, regardless of whether you've defined Shield protections for them. This operation is available to Shield customers as well as to Shield Advanced customers. The operation returns data for the time range of midnight UTC, one year ago, to midnight UTC, today. For example, if the current time is 2020-10-26 15:39:32 PDT, equal to 2020-10-26 22:39:32 UTC, then the time range for the attack data returned is from 2019-10-26 00:00:00 UTC to 2020-10-26 00:00:00 UTC.  The time range indicates the period covered by the attack statistics data items.
+    */
+  def describeAttackStatistics(): Request[DescribeAttackStatisticsResponse, AWSError] = js.native
+  def describeAttackStatistics(
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeAttackStatisticsResponse, scala.Unit]
+  ): Request[DescribeAttackStatisticsResponse, AWSError] = js.native
+  /**
+    * Provides information about the number and type of attacks AWS Shield has detected in the last year for all resources that belong to your account, regardless of whether you've defined Shield protections for them. This operation is available to Shield customers as well as to Shield Advanced customers. The operation returns data for the time range of midnight UTC, one year ago, to midnight UTC, today. For example, if the current time is 2020-10-26 15:39:32 PDT, equal to 2020-10-26 22:39:32 UTC, then the time range for the attack data returned is from 2019-10-26 00:00:00 UTC to 2020-10-26 00:00:00 UTC.  The time range indicates the period covered by the attack statistics data items.
+    */
+  def describeAttackStatistics(params: DescribeAttackStatisticsRequest): Request[DescribeAttackStatisticsResponse, AWSError] = js.native
+  def describeAttackStatistics(
+    params: DescribeAttackStatisticsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeAttackStatisticsResponse, scala.Unit]
+  ): Request[DescribeAttackStatisticsResponse, AWSError] = js.native
   
   /**
     * Returns the current role and list of Amazon S3 log buckets used by the DDoS Response Team (DRT) to access your AWS account while assisting with attack mitigation.
@@ -193,6 +237,20 @@ trait Shield extends Service {
     params: DescribeProtectionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeProtectionResponse, scala.Unit]
   ): Request[DescribeProtectionResponse, AWSError] = js.native
+  
+  /**
+    * Returns the specification for the specified protection group.
+    */
+  def describeProtectionGroup(): Request[DescribeProtectionGroupResponse, AWSError] = js.native
+  def describeProtectionGroup(callback: js.Function2[/* err */ AWSError, /* data */ DescribeProtectionGroupResponse, scala.Unit]): Request[DescribeProtectionGroupResponse, AWSError] = js.native
+  /**
+    * Returns the specification for the specified protection group.
+    */
+  def describeProtectionGroup(params: DescribeProtectionGroupRequest): Request[DescribeProtectionGroupResponse, AWSError] = js.native
+  def describeProtectionGroup(
+    params: DescribeProtectionGroupRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeProtectionGroupResponse, scala.Unit]
+  ): Request[DescribeProtectionGroupResponse, AWSError] = js.native
   
   /**
     * Provides details about the AWS Shield Advanced subscription for an account.
@@ -313,6 +371,20 @@ trait Shield extends Service {
   ): Request[ListAttacksResponse, AWSError] = js.native
   
   /**
+    * Retrieves the ProtectionGroup objects for the account.
+    */
+  def listProtectionGroups(): Request[ListProtectionGroupsResponse, AWSError] = js.native
+  def listProtectionGroups(callback: js.Function2[/* err */ AWSError, /* data */ ListProtectionGroupsResponse, scala.Unit]): Request[ListProtectionGroupsResponse, AWSError] = js.native
+  /**
+    * Retrieves the ProtectionGroup objects for the account.
+    */
+  def listProtectionGroups(params: ListProtectionGroupsRequest): Request[ListProtectionGroupsResponse, AWSError] = js.native
+  def listProtectionGroups(
+    params: ListProtectionGroupsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListProtectionGroupsResponse, scala.Unit]
+  ): Request[ListProtectionGroupsResponse, AWSError] = js.native
+  
+  /**
     * Lists all Protection objects for the account.
     */
   def listProtections(): Request[ListProtectionsResponse, AWSError] = js.native
@@ -325,6 +397,22 @@ trait Shield extends Service {
     params: ListProtectionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListProtectionsResponse, scala.Unit]
   ): Request[ListProtectionsResponse, AWSError] = js.native
+  
+  /**
+    * Retrieves the resources that are included in the protection group. 
+    */
+  def listResourcesInProtectionGroup(): Request[ListResourcesInProtectionGroupResponse, AWSError] = js.native
+  def listResourcesInProtectionGroup(
+    callback: js.Function2[/* err */ AWSError, /* data */ ListResourcesInProtectionGroupResponse, scala.Unit]
+  ): Request[ListResourcesInProtectionGroupResponse, AWSError] = js.native
+  /**
+    * Retrieves the resources that are included in the protection group. 
+    */
+  def listResourcesInProtectionGroup(params: ListResourcesInProtectionGroupRequest): Request[ListResourcesInProtectionGroupResponse, AWSError] = js.native
+  def listResourcesInProtectionGroup(
+    params: ListResourcesInProtectionGroupRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListResourcesInProtectionGroupResponse, scala.Unit]
+  ): Request[ListResourcesInProtectionGroupResponse, AWSError] = js.native
   
   /**
     * Updates the details of the list of email addresses and phone numbers that the DDoS Response Team (DRT) can use to contact you if you have proactive engagement enabled, for escalations to the DRT and to initiate proactive customer support.
@@ -341,6 +429,20 @@ trait Shield extends Service {
     params: UpdateEmergencyContactSettingsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateEmergencyContactSettingsResponse, scala.Unit]
   ): Request[UpdateEmergencyContactSettingsResponse, AWSError] = js.native
+  
+  /**
+    * Updates an existing protection group. A protection group is a grouping of protected resources so they can be handled as a collective. This resource grouping improves the accuracy of detection and reduces false positives. 
+    */
+  def updateProtectionGroup(): Request[UpdateProtectionGroupResponse, AWSError] = js.native
+  def updateProtectionGroup(callback: js.Function2[/* err */ AWSError, /* data */ UpdateProtectionGroupResponse, scala.Unit]): Request[UpdateProtectionGroupResponse, AWSError] = js.native
+  /**
+    * Updates an existing protection group. A protection group is a grouping of protected resources so they can be handled as a collective. This resource grouping improves the accuracy of detection and reduces false positives. 
+    */
+  def updateProtectionGroup(params: UpdateProtectionGroupRequest): Request[UpdateProtectionGroupResponse, AWSError] = js.native
+  def updateProtectionGroup(
+    params: UpdateProtectionGroupRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateProtectionGroupResponse, scala.Unit]
+  ): Request[UpdateProtectionGroupResponse, AWSError] = js.native
   
   /**
     * Updates the details of an existing subscription. Only enter values for parameters you want to change. Empty parameters are not updated.

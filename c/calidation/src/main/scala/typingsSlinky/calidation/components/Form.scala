@@ -17,8 +17,13 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.calidation.calidationStrings.`additions removals`
 import typingsSlinky.calidation.calidationStrings.`additions text`
 import typingsSlinky.calidation.calidationStrings.`inline`
+import typingsSlinky.calidation.calidationStrings.`removals additions`
+import typingsSlinky.calidation.calidationStrings.`removals text`
+import typingsSlinky.calidation.calidationStrings.`text additions`
+import typingsSlinky.calidation.calidationStrings.`text removals`
 import typingsSlinky.calidation.calidationStrings.additions
 import typingsSlinky.calidation.calidationStrings.all
 import typingsSlinky.calidation.calidationStrings.ascending
@@ -202,7 +207,9 @@ object Form {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

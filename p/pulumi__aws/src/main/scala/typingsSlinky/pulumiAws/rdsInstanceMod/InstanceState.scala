@@ -1,9 +1,10 @@
 package typingsSlinky.pulumiAws.rdsInstanceMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
+import typingsSlinky.pulumiAws.enumsRdsMod.StorageType
+import typingsSlinky.pulumiAws.inputMod.rds.InstanceRestoreToPointInTime
 import typingsSlinky.pulumiAws.inputMod.rds.InstanceS3Import
-import typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
-import typingsSlinky.pulumiAws.storageTypeMod.StorageType
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -117,7 +118,7 @@ trait InstanceState extends js.Object {
   val domainIamRoleName: js.UndefOr[Input[String]] = js.native
   
   /**
-    * List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
+    * Set of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
     */
   val enabledCloudwatchLogsExports: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
@@ -193,6 +194,11 @@ trait InstanceState extends js.Object {
     * encrypted replica, set this to the destination KMS ARN.
     */
   val kmsKeyId: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The latest time, in UTC [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), to which a database can be restored with point-in-time restore.
+    */
+  val latestRestorableTime: js.UndefOr[Input[String]] = js.native
   
   /**
     * (Optional, but required for some DB engines, i.e. Oracle
@@ -304,6 +310,11 @@ trait InstanceState extends js.Object {
     * The RDS Resource ID of this instance.
     */
   val resourceId: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * A configuration block for restoring a DB instance to an arbitrary point in time. Requires the `identifier` argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
+    */
+  val restoreToPointInTime: js.UndefOr[Input[InstanceRestoreToPointInTime]] = js.native
   
   /**
     * Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)
@@ -580,6 +591,12 @@ object InstanceState {
     def deleteKmsKeyId: Self = this.set("kmsKeyId", js.undefined)
     
     @scala.inline
+    def setLatestRestorableTime(value: Input[String]): Self = this.set("latestRestorableTime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLatestRestorableTime: Self = this.set("latestRestorableTime", js.undefined)
+    
+    @scala.inline
     def setLicenseModel(value: Input[String]): Self = this.set("licenseModel", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -689,6 +706,12 @@ object InstanceState {
     
     @scala.inline
     def deleteResourceId: Self = this.set("resourceId", js.undefined)
+    
+    @scala.inline
+    def setRestoreToPointInTime(value: Input[InstanceRestoreToPointInTime]): Self = this.set("restoreToPointInTime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRestoreToPointInTime: Self = this.set("restoreToPointInTime", js.undefined)
     
     @scala.inline
     def setS3Import(value: Input[InstanceS3Import]): Self = this.set("s3Import", value.asInstanceOf[js.Any])

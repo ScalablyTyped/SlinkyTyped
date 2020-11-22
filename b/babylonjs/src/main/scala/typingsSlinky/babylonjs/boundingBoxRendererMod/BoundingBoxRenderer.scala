@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.boundingBoxRendererMod
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.boundingBoxMod.BoundingBox
 import typingsSlinky.babylonjs.mathColorMod.Color3
+import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.sceneComponentMod.ISceneComponent
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.smartArrayMod.SmartArray
@@ -19,8 +20,6 @@ class BoundingBoxRenderer protected () extends ISceneComponent {
     */
   def this(scene: Scene) = this()
   
-  var _activeMesh: js.Any = js.native
-  
   var _colorShader: js.Any = js.native
   
   var _createIndexBuffer: js.Any = js.native
@@ -33,7 +32,9 @@ class BoundingBoxRenderer protected () extends ISceneComponent {
   
   var _indexBuffer: js.Any = js.native
   
-  var _prepareRessources: js.Any = js.native
+  var _preActiveMesh: js.Any = js.native
+  
+  var _prepareResources: js.Any = js.native
   
   var _vertexBuffers: js.Any = js.native
   
@@ -43,9 +44,29 @@ class BoundingBoxRenderer protected () extends ISceneComponent {
   var backColor: Color3 = js.native
   
   /**
+    * When false, no bounding boxes will be rendered
+    */
+  var enabled: Boolean = js.native
+  
+  /**
     * Color of the bounding box lines placed in front of an object
     */
   var frontColor: Color3 = js.native
+  
+  /**
+    * Observable raised after rendering a bounding box
+    */
+  var onAfterBoxRenderingObservable: Observable[BoundingBox] = js.native
+  
+  /**
+    * Observable raised before rendering a bounding box
+    */
+  var onBeforeBoxRenderingObservable: Observable[BoundingBox] = js.native
+  
+  /**
+    * Observable raised after resources are created
+    */
+  var onResourcesReadyObservable: Observable[BoundingBoxRenderer] = js.native
   
   /**
     * Render the bounding boxes of a specific rendering group

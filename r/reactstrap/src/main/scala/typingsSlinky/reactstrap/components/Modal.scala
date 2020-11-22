@@ -23,8 +23,14 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -78,14 +84,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object Modal {
   
-  @JSImport("reactstrap", "Modal")
+  @JSImport("reactstrap/es", "Modal")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.Modal[T]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.Modal] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -199,7 +205,9 @@ object Modal {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -326,6 +334,18 @@ object Modal {
     
     @scala.inline
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def innerRef(value: Ref[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -694,13 +714,7 @@ object Modal {
     def zIndex(value: Double | String): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: ModalProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply[T](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ModalProps]))
-  }
-  
-  implicit def make[T](companion: Modal.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: Modal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

@@ -15,6 +15,9 @@ object firebaseFirestoreTypesStrings {
   def EqualssignEqualssign: EqualssignEqualssign = "==".asInstanceOf[EqualssignEqualssign]
   
   @scala.inline
+  def ExclamationmarkEqualssign: ExclamationmarkEqualssign = "!=".asInstanceOf[ExclamationmarkEqualssign]
+  
+  @scala.inline
   def Greaterthansign: Greaterthansign = ">".asInstanceOf[Greaterthansign]
   
   @scala.inline
@@ -96,6 +99,9 @@ object firebaseFirestoreTypesStrings {
   def `not-found`: `not-found` = "not-found".asInstanceOf[`not-found`]
   
   @scala.inline
+  def `not-in`: `not-in` = "not-in".asInstanceOf[`not-in`]
+  
+  @scala.inline
   def `out-of-range`: `out-of-range` = "out-of-range".asInstanceOf[`out-of-range`]
   
   @scala.inline
@@ -136,6 +142,9 @@ object firebaseFirestoreTypesStrings {
   
   @js.native
   sealed trait EqualssignEqualssign extends WhereFilterOp
+  
+  @js.native
+  sealed trait ExclamationmarkEqualssign extends WhereFilterOp
   
   @js.native
   sealed trait Greaterthansign extends WhereFilterOp
@@ -217,6 +226,9 @@ object firebaseFirestoreTypesStrings {
   
   @js.native
   sealed trait `not-found` extends FirestoreErrorCode
+  
+  @js.native
+  sealed trait `not-in` extends WhereFilterOp
   
   @js.native
   sealed trait `out-of-range` extends FirestoreErrorCode

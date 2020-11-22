@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.legacyMod
 
-import typingsSlinky.babylonjs.soundMod.ISoundOptions
+import typingsSlinky.babylonjs.isoundoptionsMod.ISoundOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

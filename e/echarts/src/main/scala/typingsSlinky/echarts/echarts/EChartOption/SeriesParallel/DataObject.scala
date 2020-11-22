@@ -1,6 +1,7 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesParallel
 
-import typingsSlinky.echarts.anon.`17`
+import typingsSlinky.echarts.anon.`16`
+import typingsSlinky.echarts.echarts.EChartOption.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,12 +27,12 @@ trait DataObject extends js.Object {
     * "#000"
     * @see https://echarts.apache.org/en/option.html#series-parallel.data.color
     */
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[Color] = js.native
   
   /**
     * @see https://echarts.apache.org/en/option.html#series-parallel.data.emphasis
     */
-  var emphasis: js.UndefOr[`17`] = js.native
+  var emphasis: js.UndefOr[`16`] = js.native
   
   /**
     * Line style.
@@ -81,7 +82,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-parallel.data.shadowColor
     */
-  var shadowColor: js.UndefOr[String] = js.native
+  var shadowColor: js.UndefOr[Color] = js.native
   
   /**
     * Offset distance on the horizontal direction of shadow.
@@ -157,13 +158,13 @@ object DataObject {
     }
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setEmphasis(value: `17`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
+    def setEmphasis(value: `16`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEmphasis: Self = this.set("emphasis", js.undefined)
@@ -193,7 +194,7 @@ object DataObject {
     def deleteShadowBlur: Self = this.set("shadowBlur", js.undefined)
     
     @scala.inline
-    def setShadowColor(value: String): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
+    def setShadowColor(value: Color): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShadowColor: Self = this.set("shadowColor", js.undefined)

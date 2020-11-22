@@ -24,4 +24,9 @@ class RevokeTokenRequest () extends js.Object {
     * Do not provide a value for access_token if you provide this parameter.
     */
   var merchant_id: js.UndefOr[String] = js.native
+  
+  /**
+    * If `true`, terminate the given single access token, but do not terminate the entire authorization. Default: `false`
+    */
+  var revoke_only_access_token: js.UndefOr[Boolean] = js.native
 }

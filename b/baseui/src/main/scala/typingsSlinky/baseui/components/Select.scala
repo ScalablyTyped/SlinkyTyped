@@ -57,6 +57,9 @@ object Select {
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def backspaceClearsInputValue(value: Boolean): this.type = set("backspaceClearsInputValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def backspaceRemoves(value: Boolean): this.type = set("backspaceRemoves", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -8,8 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@angular/compiler/src/render3/r3_ast", "Variable")
 @js.native
 class Variable protected () extends Node {
-  def this(name: String, value: String, sourceSpan: ParseSourceSpan) = this()
-  def this(name: String, value: String, sourceSpan: ParseSourceSpan, valueSpan: ParseSourceSpan) = this()
+  def this(name: String, value: String, sourceSpan: ParseSourceSpan, keySpan: ParseSourceSpan) = this()
+  def this(
+    name: String,
+    value: String,
+    sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan,
+    valueSpan: ParseSourceSpan
+  ) = this()
+  
+  val keySpan: ParseSourceSpan = js.native
   
   var name: String = js.native
   

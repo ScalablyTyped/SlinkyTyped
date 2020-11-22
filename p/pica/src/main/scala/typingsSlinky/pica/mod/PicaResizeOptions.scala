@@ -11,7 +11,7 @@ trait PicaResizeOptions extends js.Object {
   var alpha: js.UndefOr[Boolean] = js.native
   
   // Promise instance. If defined, current operation will be terminated on rejection.
-  var cancelToken: js.UndefOr[String] = js.native
+  var cancelToken: js.UndefOr[js.Promise[_]] = js.native
   
   // 0..3. Default = 3 (lanczos, win=3).
   var quality: js.UndefOr[Double] = js.native
@@ -56,7 +56,7 @@ object PicaResizeOptions {
     def deleteAlpha: Self = this.set("alpha", js.undefined)
     
     @scala.inline
-    def setCancelToken(value: String): Self = this.set("cancelToken", value.asInstanceOf[js.Any])
+    def setCancelToken(value: js.Promise[_]): Self = this.set("cancelToken", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCancelToken: Self = this.set("cancelToken", js.undefined)

@@ -7,6 +7,7 @@ import typingsSlinky.elasticElasticsearch.anon.TypeofConnectionPool
 import typingsSlinky.elasticElasticsearch.anon.TypeofTransport
 import typingsSlinky.elasticElasticsearch.connectionMod.AgentOptions
 import typingsSlinky.elasticElasticsearch.connectionMod.agentFn
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchBooleans.`false`
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.gzip
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.none
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.optimistic
@@ -14,12 +15,14 @@ import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.ping
 import typingsSlinky.elasticElasticsearch.poolMod.ApiKeyAuth
 import typingsSlinky.elasticElasticsearch.poolMod.BasicAuth
 import typingsSlinky.elasticElasticsearch.serializerMod.default
+import typingsSlinky.elasticElasticsearch.transportMod.Context
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestParams
 import typingsSlinky.elasticElasticsearch.transportMod.generateRequestIdFn
 import typingsSlinky.elasticElasticsearch.transportMod.nodeFilterFn
 import typingsSlinky.elasticElasticsearch.transportMod.nodeSelectorFn
 import typingsSlinky.node.tlsMod.ConnectionOptions
+import typingsSlinky.node.urlMod.URL_
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -36,7 +39,7 @@ trait ClientOptions extends js.Object {
   
   var Transport: js.UndefOr[TypeofTransport] = js.native
   
-  var agent: js.UndefOr[AgentOptions | agentFn] = js.native
+  var agent: js.UndefOr[AgentOptions | agentFn | `false`] = js.native
   
   var auth: js.UndefOr[BasicAuth | ApiKeyAuth] = js.native
   
@@ -44,13 +47,15 @@ trait ClientOptions extends js.Object {
   
   var compression: js.UndefOr[gzip] = js.native
   
+  var context: js.UndefOr[Context] = js.native
+  
   var generateRequestId: js.UndefOr[generateRequestIdFn] = js.native
   
   var headers: js.UndefOr[Record[String, _]] = js.native
   
   var maxRetries: js.UndefOr[Double] = js.native
   
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String | js.Symbol] = js.native
   
   var node: js.UndefOr[String | (js.Array[NodeOptions | String]) | NodeOptions] = js.native
   
@@ -63,6 +68,8 @@ trait ClientOptions extends js.Object {
   var opaqueIdPrefix: js.UndefOr[String] = js.native
   
   var pingTimeout: js.UndefOr[Double] = js.native
+  
+  var proxy: js.UndefOr[String | URL_] = js.native
   
   var requestTimeout: js.UndefOr[Double] = js.native
   
@@ -128,10 +135,10 @@ object ClientOptions {
     def deleteTransport: Self = this.set("Transport", js.undefined)
     
     @scala.inline
-    def setAgentFunction0(value: () => js.Any): Self = this.set("agent", js.Any.fromFunction0(value))
+    def setAgentFunction1(value: /* opts */ typingsSlinky.elasticElasticsearch.connectionMod.ConnectionOptions => js.Any): Self = this.set("agent", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setAgent(value: AgentOptions | agentFn): Self = this.set("agent", value.asInstanceOf[js.Any])
+    def setAgent(value: AgentOptions | agentFn | `false`): Self = this.set("agent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAgent: Self = this.set("agent", js.undefined)
@@ -155,6 +162,15 @@ object ClientOptions {
     def deleteCompression: Self = this.set("compression", js.undefined)
     
     @scala.inline
+    def setContext(value: Context): Self = this.set("context", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContext: Self = this.set("context", js.undefined)
+    
+    @scala.inline
+    def setContextNull: Self = this.set("context", null)
+    
+    @scala.inline
     def setGenerateRequestId(value: (/* params */ TransportRequestParams, /* options */ TransportRequestOptions) => js.Any): Self = this.set("generateRequestId", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -173,7 +189,7 @@ object ClientOptions {
     def deleteMaxRetries: Self = this.set("maxRetries", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: String | js.Symbol): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
@@ -224,6 +240,12 @@ object ClientOptions {
     
     @scala.inline
     def deletePingTimeout: Self = this.set("pingTimeout", js.undefined)
+    
+    @scala.inline
+    def setProxy(value: String | URL_): Self = this.set("proxy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProxy: Self = this.set("proxy", js.undefined)
     
     @scala.inline
     def setRequestTimeout(value: Double): Self = this.set("requestTimeout", value.asInstanceOf[js.Any])

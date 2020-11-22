@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CurrentInstance extends js.Object {
   
   /**
-    *  The currency code that Amazon Web Services used to calculate the costs for this instance.
+    *  The currency code that AWS used to calculate the costs for this instance.
     */
   var CurrencyCode: js.UndefOr[GenericString] = js.native
   
@@ -18,12 +18,12 @@ trait CurrentInstance extends js.Object {
   var InstanceName: js.UndefOr[GenericString] = js.native
   
   /**
-    *  Current On Demand cost of operating this instance on a monthly basis.
+    *  Current On-Demand cost of operating this instance on a monthly basis.
     */
   var MonthlyCost: js.UndefOr[GenericString] = js.native
   
   /**
-    *  Number of hours during the lookback period billed at On Demand rates.
+    *  Number of hours during the lookback period billed at On-Demand rates.
     */
   var OnDemandHoursInLookbackPeriod: js.UndefOr[GenericString] = js.native
   

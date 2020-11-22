@@ -1,17 +1,14 @@
 package typingsSlinky.leveldown.mod
 
+import typingsSlinky.abstractLeveldown.mod.AbstractIteratorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LevelDownIteratorOptions extends js.Object {
+trait LevelDownIteratorOptions extends AbstractIteratorOptions[Bytes] {
   
   var fillCache: js.UndefOr[Boolean] = js.native
-  
-  var keyAsBuffer: js.UndefOr[Boolean] = js.native
-  
-  var valueAsBuffer: js.UndefOr[Boolean] = js.native
 }
 object LevelDownIteratorOptions {
   
@@ -41,17 +38,5 @@ object LevelDownIteratorOptions {
     
     @scala.inline
     def deleteFillCache: Self = this.set("fillCache", js.undefined)
-    
-    @scala.inline
-    def setKeyAsBuffer(value: Boolean): Self = this.set("keyAsBuffer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteKeyAsBuffer: Self = this.set("keyAsBuffer", js.undefined)
-    
-    @scala.inline
-    def setValueAsBuffer(value: Boolean): Self = this.set("valueAsBuffer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValueAsBuffer: Self = this.set("valueAsBuffer", js.undefined)
   }
 }

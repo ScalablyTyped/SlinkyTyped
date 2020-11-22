@@ -13,7 +13,7 @@ trait AttemptDetail extends js.Object {
   var container: js.UndefOr[AttemptContainerDetail] = js.native
   
   /**
-    * The Unix timestamp (in seconds and milliseconds) for when the attempt was started (when the attempt transitioned from the STARTING state to the RUNNING state).
+    * The Unix timestamp (in milliseconds) for when the attempt was started (when the attempt transitioned from the STARTING state to the RUNNING state).
     */
   var startedAt: js.UndefOr[Long] = js.native
   
@@ -23,7 +23,7 @@ trait AttemptDetail extends js.Object {
   var statusReason: js.UndefOr[String] = js.native
   
   /**
-    * The Unix timestamp (in seconds and milliseconds) for when the attempt was stopped (when the attempt transitioned from the RUNNING state to a terminal state, such as SUCCEEDED or FAILED).
+    * The Unix timestamp (in milliseconds) for when the attempt was stopped (when the attempt transitioned from the RUNNING state to a terminal state, such as SUCCEEDED or FAILED).
     */
   var stoppedAt: js.UndefOr[Long] = js.native
 }

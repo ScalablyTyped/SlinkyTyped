@@ -13,6 +13,8 @@ trait Header extends js.Object {
   
   var headers: js.Array[Key] = js.native
   
+  var locale: js.UndefOr[`false`] = js.native
+  
   var source: String = js.native
 }
 object Header {
@@ -52,5 +54,11 @@ object Header {
     
     @scala.inline
     def deleteBasePath: Self = this.set("basePath", js.undefined)
+    
+    @scala.inline
+    def setLocale(value: `false`): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
   }
 }

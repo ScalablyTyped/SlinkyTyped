@@ -12,6 +12,8 @@ trait PrerenderManifest extends js.Object {
   
   var dynamicRoutes: StringDictionary[DynamicSsgRoute] = js.native
   
+  var notFoundRoutes: js.Array[String] = js.native
+  
   var preview: ApiPreviewProps = js.native
   
   var routes: StringDictionary[SsgRoute] = js.native
@@ -23,11 +25,12 @@ object PrerenderManifest {
   @scala.inline
   def apply(
     dynamicRoutes: StringDictionary[DynamicSsgRoute],
+    notFoundRoutes: js.Array[String],
     preview: ApiPreviewProps,
     routes: StringDictionary[SsgRoute],
     version: `2`
   ): PrerenderManifest = {
-    val __obj = js.Dynamic.literal(dynamicRoutes = dynamicRoutes.asInstanceOf[js.Any], preview = preview.asInstanceOf[js.Any], routes = routes.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(dynamicRoutes = dynamicRoutes.asInstanceOf[js.Any], notFoundRoutes = notFoundRoutes.asInstanceOf[js.Any], preview = preview.asInstanceOf[js.Any], routes = routes.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[PrerenderManifest]
   }
   
@@ -48,6 +51,12 @@ object PrerenderManifest {
     
     @scala.inline
     def setDynamicRoutes(value: StringDictionary[DynamicSsgRoute]): Self = this.set("dynamicRoutes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNotFoundRoutesVarargs(value: String*): Self = this.set("notFoundRoutes", js.Array(value :_*))
+    
+    @scala.inline
+    def setNotFoundRoutes(value: js.Array[String]): Self = this.set("notFoundRoutes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPreview(value: ApiPreviewProps): Self = this.set("preview", value.asInstanceOf[js.Any])

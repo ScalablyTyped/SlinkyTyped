@@ -265,7 +265,7 @@ trait VRExperienceHelper extends js.Object {
   /**
     * The mesh used to display where the user is selecting, this mesh will be cloned and set as the gazeTracker for the left and right controller
     * when set bakeCurrentTransformIntoVertices will be called on the mesh.
-    * See http://doc.babylonjs.com/resources/baking_transformations
+    * See https://doc.babylonjs.com/resources/baking_transformations
     */
   def gazeTrackerMesh: Mesh = js.native
   def gazeTrackerMesh_=(value: Mesh): Unit = js.native

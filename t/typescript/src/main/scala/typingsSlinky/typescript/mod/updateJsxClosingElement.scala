@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateJsxClosingElement extends js.Object {
   
+  /** @deprecated Use `factory.updateJsxClosingElement` or the factory supplied by your transformation context instead. */
   def apply(node: JsxClosingElement, tagName: JsxTagNameExpression): JsxClosingElement = js.native
 }

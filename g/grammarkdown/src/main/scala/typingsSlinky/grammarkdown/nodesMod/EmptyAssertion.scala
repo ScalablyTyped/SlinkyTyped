@@ -10,7 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "EmptyAssertion")
 @js.native
 class EmptyAssertion protected ()
-  extends AssertionBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.EmptyAssertion, OpenBracketToken] {
+  extends AssertionBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.EmptyAssertion, OpenBracketToken]
+     with Assertion {
   def this(openBracketToken: Token[OpenBracketToken], emptyKeyword: Token[EmptyKeyword]) = this()
   def this(
     openBracketToken: Token[OpenBracketToken],

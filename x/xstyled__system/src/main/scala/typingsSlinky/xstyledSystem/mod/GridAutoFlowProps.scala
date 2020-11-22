@@ -9,7 +9,7 @@ trait GridAutoFlowProps extends js.Object {
   
   val gridAutoFlow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoFlowProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoFlow */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object GridAutoFlowProps {
     }
     
     @scala.inline
+    def setGridAutoFlowVarargs(value: js.Any*): Self = this.set("gridAutoFlow", js.Array(value :_*))
+    
+    @scala.inline
     def setGridAutoFlow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoFlowProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoFlow */ _
         ]
     ): Self = this.set("gridAutoFlow", value.asInstanceOf[js.Any])
     

@@ -47,6 +47,8 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.GetNodeForLocationRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.GetNodeForLocationResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.GetNodeStackTracesRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.GetNodeStackTracesResponse
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.GetNodesForSubtreeByStyleRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.GetNodesForSubtreeByStyleResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.GetOuterHTMLRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.GetOuterHTMLResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.GetRelayoutBoundaryRequest
@@ -162,6 +164,8 @@ trait DOMApi extends js.Object {
   
   /**
     * Returns the root DOM node (and optionally the subtree) to the caller.
+    * Deprecated, as it is not designed to work well with the rest of the DOM agent.
+    * Use DOMSnapshot.captureSnapshot instead.
     */
   def getFlattenedDocument(params: GetFlattenedDocumentRequest): js.Promise[GetFlattenedDocumentResponse] = js.native
   
@@ -180,6 +184,11 @@ trait DOMApi extends js.Object {
     * Gets stack traces associated with a Node. As of now, only provides stack trace for Node creation.
     */
   def getNodeStackTraces(params: GetNodeStackTracesRequest): js.Promise[GetNodeStackTracesResponse] = js.native
+  
+  /**
+    * Finds nodes with a given computed style in a subtree.
+    */
+  def getNodesForSubtreeByStyle(params: GetNodesForSubtreeByStyleRequest): js.Promise[GetNodesForSubtreeByStyleResponse] = js.native
   
   /**
     * Returns node's HTML markup.

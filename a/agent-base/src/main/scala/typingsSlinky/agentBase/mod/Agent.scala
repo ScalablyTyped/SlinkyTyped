@@ -46,9 +46,13 @@ class Agent () extends EventEmitter {
   
   def freeSocket(socket: Socket, opts: AgentOptions): Unit = js.native
   
+  var freeSockets: StringDictionary[js.Array[Socket]] = js.native
+  
   var maxFreeSockets: Double = js.native
   
   var maxSockets: Double = js.native
+  
+  var maxTotalSockets: Double = js.native
   
   var options: typingsSlinky.node.httpsMod.AgentOptions = js.native
   

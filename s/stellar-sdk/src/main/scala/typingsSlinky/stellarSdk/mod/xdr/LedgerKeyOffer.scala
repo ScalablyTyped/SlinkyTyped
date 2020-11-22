@@ -1,7 +1,7 @@
 package typingsSlinky.stellarSdk.mod.xdr
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.stellarBase.anon.OfferId
+import typingsSlinky.stellarBase.anon.SellerId
 import typingsSlinky.stellarSdk.stellarSdkStrings.base64
 import typingsSlinky.stellarSdk.stellarSdkStrings.hex
 import typingsSlinky.stellarSdk.stellarSdkStrings.raw
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class LedgerKeyOffer protected ()
   extends typingsSlinky.stellarBase.mod.xdr.LedgerKeyOffer {
-  def this(attributes: OfferId) = this()
+  def this(attributes: SellerId) = this()
 }
 /* static members */
 @JSImport("stellar-sdk", "xdr.LedgerKeyOffer")
@@ -33,6 +33,14 @@ object LedgerKeyOffer extends js.Object {
   def read(io: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.LedgerKeyOffer = js.native
   
   def toXDR(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerKeyOffer): Buffer = js.native
+  
+  def validateXDR(input: Buffer): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_base64(input: String, format: base64): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_hex(input: String, format: hex): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_raw(input: Buffer, format: raw): Boolean = js.native
   
   def write(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerKeyOffer, io: Buffer): Unit = js.native
 }

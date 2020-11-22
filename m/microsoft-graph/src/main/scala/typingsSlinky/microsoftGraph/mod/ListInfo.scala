@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListInfo extends js.Object {
   
   // If true, indicates that content types are enabled for this list.
-  var contentTypesEnabled: js.UndefOr[Boolean] = js.native
+  var contentTypesEnabled: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // If true, indicates that the list is not normally visible in the SharePoint user experience.
-  var hidden: js.UndefOr[Boolean] = js.native
+  var hidden: js.UndefOr[NullableOption[Boolean]] = js.native
   
   /**
     * An enumerated value that represents the base list template used in creating the list. Possible values include
     * documentLibrary, genericList, task, survey, announcements, contacts, and more.
     */
-  var template: js.UndefOr[String] = js.native
+  var template: js.UndefOr[NullableOption[String]] = js.native
 }
 object ListInfo {
   
@@ -43,21 +43,30 @@ object ListInfo {
     }
     
     @scala.inline
-    def setContentTypesEnabled(value: Boolean): Self = this.set("contentTypesEnabled", value.asInstanceOf[js.Any])
+    def setContentTypesEnabled(value: NullableOption[Boolean]): Self = this.set("contentTypesEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContentTypesEnabled: Self = this.set("contentTypesEnabled", js.undefined)
     
     @scala.inline
-    def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
+    def setContentTypesEnabledNull: Self = this.set("contentTypesEnabled", null)
+    
+    @scala.inline
+    def setHidden(value: NullableOption[Boolean]): Self = this.set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHidden: Self = this.set("hidden", js.undefined)
     
     @scala.inline
-    def setTemplate(value: String): Self = this.set("template", value.asInstanceOf[js.Any])
+    def setHiddenNull: Self = this.set("hidden", null)
+    
+    @scala.inline
+    def setTemplate(value: NullableOption[String]): Self = this.set("template", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTemplate: Self = this.set("template", js.undefined)
+    
+    @scala.inline
+    def setTemplateNull: Self = this.set("template", null)
   }
 }

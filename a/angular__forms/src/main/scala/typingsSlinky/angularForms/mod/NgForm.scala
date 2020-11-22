@@ -15,7 +15,10 @@ class NgForm protected ()
   extends ControlContainer
      with Form
      with AfterViewInit {
-  def this(validators: js.Array[_], asyncValidators: js.Array[_]) = this()
+  def this(
+    validators: js.Array[Validator | ValidatorFn],
+    asyncValidators: js.Array[AsyncValidator | AsyncValidatorFn]
+  ) = this()
   
   var _directives: js.Any = js.native
   

@@ -40,7 +40,7 @@ trait Graph2dOptions extends js.Object {
   
   var locale: js.UndefOr[String] = js.native
   
-  var locales: js.UndefOr[js.Any] = js.native
+  var locales: js.UndefOr[Locales] = js.native
   
   var max: js.UndefOr[DateType] = js.native
   
@@ -52,7 +52,6 @@ trait Graph2dOptions extends js.Object {
   
   var minHeight: js.UndefOr[HeightWidthType] = js.native
   
-   // TODO
   var moment: js.UndefOr[MomentConstructor] = js.native
   
   var moveable: js.UndefOr[Boolean] = js.native
@@ -209,7 +208,7 @@ object Graph2dOptions {
     def deleteLocale: Self = this.set("locale", js.undefined)
     
     @scala.inline
-    def setLocales(value: js.Any): Self = this.set("locales", value.asInstanceOf[js.Any])
+    def setLocales(value: Locales): Self = this.set("locales", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLocales: Self = this.set("locales", js.undefined)

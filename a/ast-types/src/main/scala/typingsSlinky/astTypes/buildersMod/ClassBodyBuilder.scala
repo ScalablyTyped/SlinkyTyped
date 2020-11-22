@@ -1,6 +1,6 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.anon.BodyCommentsLoc
+import typingsSlinky.astTypes.anon.BodyComments
 import typingsSlinky.astTypes.kindsMod.ClassMethodKind
 import typingsSlinky.astTypes.kindsMod.ClassPrivateMethodKind
 import typingsSlinky.astTypes.kindsMod.ClassPrivatePropertyKind
@@ -17,15 +17,16 @@ import typingsSlinky.astTypes.kindsMod.VariableDeclaratorKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassBody
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ClassBodyBuilder extends js.Object {
+  
   def apply(
     body: js.Array[
       MethodDefinitionKind | VariableDeclaratorKind | ClassPropertyDefinitionKind | ClassPropertyKind | ClassPrivatePropertyKind | ClassMethodKind | ClassPrivateMethodKind | TSDeclareMethodKind | TSCallSignatureDeclarationKind | TSConstructSignatureDeclarationKind | TSIndexSignatureKind | TSMethodSignatureKind | TSPropertySignatureKind
     ]
   ): ClassBody = js.native
-  def from(params: BodyCommentsLoc): ClassBody = js.native
+  
+  def from(params: BodyComments): ClassBody = js.native
 }
-

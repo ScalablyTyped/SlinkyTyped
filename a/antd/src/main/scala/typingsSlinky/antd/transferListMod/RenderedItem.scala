@@ -1,15 +1,14 @@
 package typingsSlinky.antd.transferListMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.transferMod.TransferItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RenderedItem extends js.Object {
+trait RenderedItem[RecordType] extends js.Object {
   
-  var item: TransferItem = js.native
+  var item: RecordType = js.native
   
   var renderedEl: ReactElement = js.native
   
@@ -18,13 +17,13 @@ trait RenderedItem extends js.Object {
 object RenderedItem {
   
   @scala.inline
-  def apply(item: TransferItem, renderedText: String): RenderedItem = {
+  def apply[RecordType](item: RecordType, renderedText: String): RenderedItem[RecordType] = {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], renderedText = renderedText.asInstanceOf[js.Any])
-    __obj.asInstanceOf[RenderedItem]
+    __obj.asInstanceOf[RenderedItem[RecordType]]
   }
   
   @scala.inline
-  implicit class RenderedItemOps[Self <: RenderedItem] (val x: Self) extends AnyVal {
+  implicit class RenderedItemOps[Self <: RenderedItem[_], RecordType] (val x: Self with RenderedItem[RecordType]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -39,7 +38,7 @@ object RenderedItem {
     }
     
     @scala.inline
-    def setItem(value: TransferItem): Self = this.set("item", value.asInstanceOf[js.Any])
+    def setItem(value: RecordType): Self = this.set("item", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRenderedText(value: String): Self = this.set("renderedText", value.asInstanceOf[js.Any])

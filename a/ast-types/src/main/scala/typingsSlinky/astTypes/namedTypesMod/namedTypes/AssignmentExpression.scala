@@ -2,6 +2,7 @@ package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.astTypes.astTypesStrings.AmpersandEqualssign
+import typingsSlinky.astTypes.astTypesStrings.AsteriskAsteriskEqualssign
 import typingsSlinky.astTypes.astTypesStrings.AsteriskEqualssign
 import typingsSlinky.astTypes.astTypesStrings.Equalssign
 import typingsSlinky.astTypes.astTypesStrings.GreaterthansignGreaterthansignEqualssign
@@ -23,23 +24,28 @@ import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
+@js.native
 trait AssignmentExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var left: PatternKind | MemberExpressionKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var operator: Equalssign | PlussignEqualssign | `-Equalssign` | AsteriskEqualssign | SlashEqualssign | PercentsignEqualssign | LessthansignLessthansignEqualssign | GreaterthansignGreaterthansignEqualssign | GreaterthansignGreaterthansignGreaterthansignEqualssign | VerticallineEqualssign | `^Equalssign` | AmpersandEqualssign
-  var right: ExpressionKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.AssignmentExpression
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var left: PatternKind | MemberExpressionKind = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var operator: Equalssign | PlussignEqualssign | `-Equalssign` | AsteriskEqualssign | SlashEqualssign | PercentsignEqualssign | LessthansignLessthansignEqualssign | GreaterthansignGreaterthansignEqualssign | GreaterthansignGreaterthansignGreaterthansignEqualssign | VerticallineEqualssign | `^Equalssign` | AmpersandEqualssign | AsteriskAsteriskEqualssign = js.native
+  
+  var right: ExpressionKind = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.AssignmentExpression = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.AssignmentExpression")
 @js.native
 object AssignmentExpression extends TopLevel[Type[AssignmentExpression]]
-

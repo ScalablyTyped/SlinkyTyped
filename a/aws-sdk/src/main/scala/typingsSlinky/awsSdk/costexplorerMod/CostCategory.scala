@@ -24,6 +24,11 @@ trait CostCategory extends js.Object {
   
   var Name: CostCategoryName = js.native
   
+  /**
+    *  The list of processing statuses for Cost Management products for a specific cost category. 
+    */
+  var ProcessingStatus: js.UndefOr[CostCategoryProcessingStatusList] = js.native
+  
   var RuleVersion: CostCategoryRuleVersion = js.native
   
   /**
@@ -83,5 +88,14 @@ object CostCategory {
     
     @scala.inline
     def deleteEffectiveEnd: Self = this.set("EffectiveEnd", js.undefined)
+    
+    @scala.inline
+    def setProcessingStatusVarargs(value: CostCategoryProcessingStatus*): Self = this.set("ProcessingStatus", js.Array(value :_*))
+    
+    @scala.inline
+    def setProcessingStatus(value: CostCategoryProcessingStatusList): Self = this.set("ProcessingStatus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProcessingStatus: Self = this.set("ProcessingStatus", js.undefined)
   }
 }

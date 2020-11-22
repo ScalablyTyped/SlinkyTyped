@@ -10,7 +10,7 @@ trait IpOptions extends js.Object {
   /**
     * Used to determine if a CIDR is allowed or not. Valid values: optional, required, forbidden
     */
-  var cidr: js.UndefOr[String] = js.native
+  var cidr: js.UndefOr[PresenceMode] = js.native
   
   /**
     * One or more IP address versions to validate against. Valid values: ipv4, ipv6, ipvfuture
@@ -41,7 +41,7 @@ object IpOptions {
     }
     
     @scala.inline
-    def setCidr(value: String): Self = this.set("cidr", value.asInstanceOf[js.Any])
+    def setCidr(value: PresenceMode): Self = this.set("cidr", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCidr: Self = this.set("cidr", js.undefined)

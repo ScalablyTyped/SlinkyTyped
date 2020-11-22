@@ -11,7 +11,7 @@ trait Heading extends js.Object {
   var color: js.UndefOr[ColorType] = js.native
   
    // deprecated
-  var heading: js.UndefOr[`0`] = js.native
+  var heading: js.UndefOr[`3`] = js.native
 }
 object Heading {
   
@@ -43,7 +43,7 @@ object Heading {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setHeading(value: `0`): Self = this.set("heading", value.asInstanceOf[js.Any])
+    def setHeading(value: `3`): Self = this.set("heading", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHeading: Self = this.set("heading", js.undefined)

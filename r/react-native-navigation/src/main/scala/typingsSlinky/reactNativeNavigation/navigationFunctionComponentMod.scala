@@ -14,6 +14,8 @@ object navigationFunctionComponentMod extends js.Object {
   @js.native
   trait NavigationFunctionComponent[Props] extends FunctionComponent[Props with NavigationComponentProps] {
     
-    var options: js.UndefOr[(js.Function1[/* props */ Props, Options]) | Options] = js.native
+    var options: js.UndefOr[
+        (js.Function1[/* props */ Props with NavigationComponentProps, Options]) | Options
+      ] = js.native
   }
 }

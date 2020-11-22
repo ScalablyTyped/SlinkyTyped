@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateFileSystemWindowsConfiguration extends js.Object {
   
   /**
-    * The number of days to retain automatic daily backups. Setting this to zero (0) disables automatic daily backups. You can retain automatic daily backups for a maximum of 35 days. For more information, see Working with Automatic Daily Backups.
+    * The number of days to retain automatic daily backups. Setting this to zero (0) disables automatic daily backups. You can retain automatic daily backups for a maximum of 90 days. For more information, see Working with Automatic Daily Backups.
     */
   var AutomaticBackupRetentionDays: js.UndefOr[typingsSlinky.awsSdk.fsxMod.AutomaticBackupRetentionDays] = js.native
   

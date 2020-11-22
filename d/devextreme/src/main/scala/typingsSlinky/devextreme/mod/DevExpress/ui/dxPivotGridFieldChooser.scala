@@ -8,15 +8,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPivotGridFieldChooser extends Widget {
   
-  /** @name dxPivotGridFieldChooser.applyChanges() */
+  /**
+    * [descr:dxPivotGridFieldChooser.applyChanges()]
+    */
   def applyChanges(): Unit = js.native
   
-  /** @name dxPivotGridFieldChooser.cancelChanges() */
+  /**
+    * [descr:dxPivotGridFieldChooser.cancelChanges()]
+    */
   def cancelChanges(): Unit = js.native
   
-  /** @name dxPivotGridFieldChooser.getDataSource() */
+  /**
+    * [descr:dxPivotGridFieldChooser.getDataSource()]
+    */
   def getDataSource(): PivotGridDataSource = js.native
   
-  /** @name dxPivotGridFieldChooser.updateDimensions() */
+  /**
+    * [descr:dxPivotGridFieldChooser.updateDimensions()]
+    */
   def updateDimensions(): Unit = js.native
 }

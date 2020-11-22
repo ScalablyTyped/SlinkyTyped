@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait JSDocThisTag extends JSDocTag {
   
   @JSName("kind")
-  var kind_JSDocThisTag: typingsSlinky.typescript.mod.SyntaxKind.JSDocThisTag = js.native
+  val kind_JSDocThisTag: typingsSlinky.typescript.mod.SyntaxKind.JSDocThisTag = js.native
   
-  var typeExpression: js.UndefOr[JSDocTypeExpression] = js.native
+  val typeExpression: JSDocTypeExpression = js.native
 }

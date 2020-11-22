@@ -18,7 +18,7 @@ trait LaunchTemplateSpecification extends js.Object {
   var LaunchTemplateName: js.UndefOr[typingsSlinky.awsSdk.gameliftMod.LaunchTemplateName] = js.native
   
   /**
-    * The version of the EC2 launch template to use. If no version is specified, the default version will be used. EC2 allows you to specify a default version for a launch template, if none is set, the default is the first version created.
+    * The version of the EC2 launch template to use. If no version is specified, the default version will be used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the default is the first version created.
     */
   var Version: js.UndefOr[LaunchTemplateVersion] = js.native
 }

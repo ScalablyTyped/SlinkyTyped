@@ -14,8 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Contains the collection of cross-worksheets level Ranges.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait RangeAreasCollection extends ClientObject {
@@ -27,16 +26,14 @@ trait RangeAreasCollection extends ClientObject {
   /**
     * Gets the number of RangeAreas objects in this collection.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   def getCount(): ClientResult[Double] = js.native
   
   /**
     * Returns the RangeAreas object based on position in the collection.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     *
     * @param index Index value of the range object to be retrieved. Zero-indexed.
     */

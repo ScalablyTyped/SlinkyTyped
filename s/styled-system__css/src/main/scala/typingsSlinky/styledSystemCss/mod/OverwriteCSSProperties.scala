@@ -21,7 +21,7 @@ trait OverwriteCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/box-shadow
     */
   var boxShadow: js.UndefOr[
-    (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ js.Any) | Double
+    (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ js.Any) | Double
   ] = js.native
   
   /**
@@ -37,7 +37,7 @@ trait OverwriteCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/font-weight
     */
   var fontWeight: js.UndefOr[
-    (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontWeightProperty */ js.Any) | String
+    (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontWeight */ js.Any) | String
   ] = js.native
   
   /**
@@ -52,7 +52,7 @@ trait OverwriteCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/z-index
     */
   var zIndex: js.UndefOr[
-    (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ js.Any) | String
+    (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ js.Any) | String
   ] = js.native
 }
 object OverwriteCSSProperties {
@@ -80,7 +80,7 @@ object OverwriteCSSProperties {
     
     @scala.inline
     def setBoxShadow(
-      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ js.Any) | Double
+      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ js.Any) | Double
     ): Self = this.set("boxShadow", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -88,7 +88,7 @@ object OverwriteCSSProperties {
     
     @scala.inline
     def setFontWeight(
-      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontWeightProperty */ js.Any) | String
+      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontWeight */ js.Any) | String
     ): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -96,7 +96,7 @@ object OverwriteCSSProperties {
     
     @scala.inline
     def setZIndex(
-      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ js.Any) | String
+      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ js.Any) | String
     ): Self = this.set("zIndex", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -3,6 +3,7 @@ package typingsSlinky.antDesignProLayout.pageContainerMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antDesignProLayout.anon.TabPanePropskeyReactTextu
 import typingsSlinky.antd.tabsMod.TabsProps
+import typingsSlinky.rcTabs.interfaceMod.TabBarExtraContent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,14 +11,40 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PageHeaderTabConfig extends js.Object {
   
+  /**
+    * @name 固定 PageHeader 到页面顶部
+    * @deprecated 请使用 fixedHeader
+    */
+  var fixHeader: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * @name 固定 PageHeader 到页面顶部
+    */
+  var fixedHeader: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * @name tab 修改时触发
+    */
   var onTabChange: js.UndefOr[js.Function1[/* activeKey */ String, Unit]] = js.native
   
+  /**
+    * @name 当前选中 tab 的 key
+    */
   var tabActiveKey: js.UndefOr[String] = js.native
   
-  var tabBarExtraContent: js.UndefOr[ReactElement] = js.native
+  /**
+    * @name tab 上多余的区域
+    */
+  var tabBarExtraContent: js.UndefOr[TabBarExtraContent] = js.native
   
+  /**
+    * @name tabs 的列表
+    */
   var tabList: js.UndefOr[js.Array[TabPanePropskeyReactTextu]] = js.native
   
+  /**
+    * @name tabs 的其他配置
+    */
   var tabProps: js.UndefOr[TabsProps] = js.native
 }
 object PageHeaderTabConfig {
@@ -44,6 +71,18 @@ object PageHeaderTabConfig {
     }
     
     @scala.inline
+    def setFixHeader(value: Boolean): Self = this.set("fixHeader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFixHeader: Self = this.set("fixHeader", js.undefined)
+    
+    @scala.inline
+    def setFixedHeader(value: Boolean): Self = this.set("fixedHeader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFixedHeader: Self = this.set("fixedHeader", js.undefined)
+    
+    @scala.inline
     def setOnTabChange(value: /* activeKey */ String => Unit): Self = this.set("onTabChange", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -59,7 +98,7 @@ object PageHeaderTabConfig {
     def setTabBarExtraContentReactElement(value: ReactElement): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTabBarExtraContent(value: ReactElement): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
+    def setTabBarExtraContent(value: TabBarExtraContent): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTabBarExtraContent: Self = this.set("tabBarExtraContent", js.undefined)

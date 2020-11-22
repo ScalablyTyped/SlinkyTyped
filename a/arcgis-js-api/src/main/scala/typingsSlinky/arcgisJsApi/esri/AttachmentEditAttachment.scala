@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AttachmentEditAttachment extends Object {
   
   /**
-    * The content type of the attachment. For example, `'image/jpeg'`. See the [ArcGIS REST API documentation](https://developers.arcgis.com/rest/services-reference/query-attachments-feature-service-layer-.htm) for more information on supported attachment types.
+    * The content type of the attachment.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#AttachmentEdit)
     */
@@ -32,7 +32,7 @@ trait AttachmentEditAttachment extends Object {
   var globalId: String = js.native
   
   /**
-    * The name of the attachment. This parameter must be set if the attachment type is `Blob`.
+    * The name of the attachment.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#AttachmentEdit)
     */

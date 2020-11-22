@@ -10,12 +10,12 @@ trait MultipleQueriesResponse[TObject] extends js.Object {
   /**
     * The list of results.
     */
-  var results: js.Array[SearchResponse[TObject with ObjectWithObjectID]] = js.native
+  var results: js.Array[SearchResponse[TObject]] = js.native
 }
 object MultipleQueriesResponse {
   
   @scala.inline
-  def apply[TObject](results: js.Array[SearchResponse[TObject with ObjectWithObjectID]]): MultipleQueriesResponse[TObject] = {
+  def apply[TObject](results: js.Array[SearchResponse[TObject]]): MultipleQueriesResponse[TObject] = {
     val __obj = js.Dynamic.literal(results = results.asInstanceOf[js.Any])
     __obj.asInstanceOf[MultipleQueriesResponse[TObject]]
   }
@@ -36,9 +36,9 @@ object MultipleQueriesResponse {
     }
     
     @scala.inline
-    def setResultsVarargs(value: (SearchResponse[TObject with ObjectWithObjectID])*): Self = this.set("results", js.Array(value :_*))
+    def setResultsVarargs(value: SearchResponse[TObject]*): Self = this.set("results", js.Array(value :_*))
     
     @scala.inline
-    def setResults(value: js.Array[SearchResponse[TObject with ObjectWithObjectID]]): Self = this.set("results", value.asInstanceOf[js.Any])
+    def setResults(value: js.Array[SearchResponse[TObject]]): Self = this.set("results", value.asInstanceOf[js.Any])
   }
 }

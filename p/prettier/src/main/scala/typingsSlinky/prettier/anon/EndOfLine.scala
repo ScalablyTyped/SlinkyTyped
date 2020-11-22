@@ -6,14 +6,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait EndOfLine extends js.Object {
+trait EndOfLine[T] extends js.Object {
   
   var endOfLine: js.UndefOr[
     js.Function5[
       /* commentNode */ js.Any, 
       /* text */ String, 
-      /* options */ ParserOptions, 
-      /* ast */ js.Any, 
+      /* options */ ParserOptions[T], 
+      /* ast */ T, 
       /* isLastComment */ Boolean, 
       Boolean
     ]
@@ -23,8 +23,8 @@ trait EndOfLine extends js.Object {
     js.Function5[
       /* commentNode */ js.Any, 
       /* text */ String, 
-      /* options */ ParserOptions, 
-      /* ast */ js.Any, 
+      /* options */ ParserOptions[T], 
+      /* ast */ T, 
       /* isLastComment */ Boolean, 
       Boolean
     ]
@@ -34,8 +34,8 @@ trait EndOfLine extends js.Object {
     js.Function5[
       /* commentNode */ js.Any, 
       /* text */ String, 
-      /* options */ ParserOptions, 
-      /* ast */ js.Any, 
+      /* options */ ParserOptions[T], 
+      /* ast */ T, 
       /* isLastComment */ Boolean, 
       Boolean
     ]
@@ -44,13 +44,13 @@ trait EndOfLine extends js.Object {
 object EndOfLine {
   
   @scala.inline
-  def apply(): EndOfLine = {
+  def apply[T](): EndOfLine[T] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[EndOfLine]
+    __obj.asInstanceOf[EndOfLine[T]]
   }
   
   @scala.inline
-  implicit class EndOfLineOps[Self <: EndOfLine] (val x: Self) extends AnyVal {
+  implicit class EndOfLineOps[Self <: EndOfLine[_], T] (val x: Self with EndOfLine[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -66,7 +66,7 @@ object EndOfLine {
     
     @scala.inline
     def setEndOfLine(
-      value: (/* commentNode */ js.Any, /* text */ String, /* options */ ParserOptions, /* ast */ js.Any, /* isLastComment */ Boolean) => Boolean
+      value: (/* commentNode */ js.Any, /* text */ String, /* options */ ParserOptions[T], /* ast */ T, /* isLastComment */ Boolean) => Boolean
     ): Self = this.set("endOfLine", js.Any.fromFunction5(value))
     
     @scala.inline
@@ -74,7 +74,7 @@ object EndOfLine {
     
     @scala.inline
     def setOwnLine(
-      value: (/* commentNode */ js.Any, /* text */ String, /* options */ ParserOptions, /* ast */ js.Any, /* isLastComment */ Boolean) => Boolean
+      value: (/* commentNode */ js.Any, /* text */ String, /* options */ ParserOptions[T], /* ast */ T, /* isLastComment */ Boolean) => Boolean
     ): Self = this.set("ownLine", js.Any.fromFunction5(value))
     
     @scala.inline
@@ -82,7 +82,7 @@ object EndOfLine {
     
     @scala.inline
     def setRemaining(
-      value: (/* commentNode */ js.Any, /* text */ String, /* options */ ParserOptions, /* ast */ js.Any, /* isLastComment */ Boolean) => Boolean
+      value: (/* commentNode */ js.Any, /* text */ String, /* options */ ParserOptions[T], /* ast */ T, /* isLastComment */ Boolean) => Boolean
     ): Self = this.set("remaining", js.Any.fromFunction5(value))
     
     @scala.inline

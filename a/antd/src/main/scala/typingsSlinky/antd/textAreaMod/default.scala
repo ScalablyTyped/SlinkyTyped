@@ -1,6 +1,6 @@
 package typingsSlinky.antd.textAreaMod
 
-import typingsSlinky.antd.anon.`0`
+import typingsSlinky.antd.anon.PartialTextAreaState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,5 +15,5 @@ class default protected () extends TextArea {
 @js.native
 object default extends js.Object {
   
-  def getDerivedStateFromProps(nextProps: TextAreaProps): `0` | Null = js.native
+  def getDerivedStateFromProps(nextProps: TextAreaProps, hasPrevValue: TextAreaState): PartialTextAreaState = js.native
 }

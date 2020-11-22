@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProcessMetric extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/process-metric
+  // Docs: https://electronjs.org/docs/api/structures/process-metric
   /**
     * CPU usage of the process.
     */
@@ -46,6 +46,13 @@ trait ProcessMetric extends js.Object {
     * Memory information for the process.
     */
   var memory: MemoryInfo = js.native
+  
+  /**
+    * The name of the process. i.e. for plugins it might be Flash. Examples for
+    * utility: `Audio Service`, `Content Decryption Module Service`, `Network
+    * Service`, `Video Capture`, etc.
+    */
+  var name: js.UndefOr[String] = js.native
   
   /**
     * Process id of the process.
@@ -116,6 +123,12 @@ object ProcessMetric {
     
     @scala.inline
     def deleteIntegrityLevel: Self = this.set("integrityLevel", js.undefined)
+    
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
     def setSandboxed(value: Boolean): Self = this.set("sandboxed", value.asInstanceOf[js.Any])

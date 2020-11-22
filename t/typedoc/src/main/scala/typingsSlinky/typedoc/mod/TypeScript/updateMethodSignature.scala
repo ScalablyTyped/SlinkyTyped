@@ -60,6 +60,7 @@ object updateMethodSignature extends js.Object {
     name: PropertyName,
     questionToken: QuestionToken
   ): MethodSignature = js.native
+  /** @deprecated Use `factory.updateMethodSignature` or the factory supplied by your transformation context instead. */
   def apply(
     node: MethodSignature,
     typeParameters: NodeArray[TypeParameterDeclaration],

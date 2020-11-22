@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeregisterGameServerInput extends js.Object {
   
   /**
-    * An identifier for the game server group where the game server to be de-registered is running. Use either the GameServerGroup name or ARN value.
+    * A unique identifier for the game server group where the game server is running. Use either the GameServerGroup name or ARN value.
     */
   var GameServerGroupName: GameServerGroupNameOrArn = js.native
   
   /**
-    * The identifier for the game server to be de-registered.
+    * A custom string that uniquely identifies the game server to deregister.
     */
   var GameServerId: typingsSlinky.awsSdk.gameliftMod.GameServerId = js.native
 }

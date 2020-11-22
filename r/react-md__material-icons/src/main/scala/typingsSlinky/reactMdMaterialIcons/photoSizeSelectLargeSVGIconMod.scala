@@ -12,5 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object photoSizeSelectLargeSVGIconMod extends js.Object {
   
-  val default: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
+  val PhotoSizeSelectLargeSVGIcon: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
 }

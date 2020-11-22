@@ -12,5 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object checkRole extends js.Object {
   
   def apply(role: String): RequestHandler[ParamsDictionary, _, _, Query] = js.native
-  def apply(role: String, errorCallback: js.Function): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def apply(role: String, errorCallback: js.Function1[/* err */ js.UndefOr[js.Any], Unit]): RequestHandler[ParamsDictionary, _, _, Query] = js.native
 }

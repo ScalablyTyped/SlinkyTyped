@@ -28,6 +28,11 @@ trait LocalGatewayVirtualInterface extends js.Object {
   var LocalGatewayVirtualInterfaceId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.LocalGatewayVirtualInterfaceId] = js.native
   
   /**
+    * The AWS account ID that owns the local gateway virtual interface.
+    */
+  var OwnerId: js.UndefOr[String] = js.native
+  
+  /**
     * The peer address.
     */
   var PeerAddress: js.UndefOr[String] = js.native
@@ -93,6 +98,12 @@ object LocalGatewayVirtualInterface {
     
     @scala.inline
     def deleteLocalGatewayVirtualInterfaceId: Self = this.set("LocalGatewayVirtualInterfaceId", js.undefined)
+    
+    @scala.inline
+    def setOwnerId(value: String): Self = this.set("OwnerId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOwnerId: Self = this.set("OwnerId", js.undefined)
     
     @scala.inline
     def setPeerAddress(value: String): Self = this.set("PeerAddress", value.asInstanceOf[js.Any])

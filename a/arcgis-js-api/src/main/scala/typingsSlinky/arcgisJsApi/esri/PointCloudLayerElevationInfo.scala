@@ -16,12 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PointCloudLayerElevationInfo extends Object {
   
   /**
-    * Defines how the points are placed on the vertical axis (z). Currently only `absolute-height` mode is supported.
-    *
-    * Mode | Description
-    * ------|------------
-    * absolute-height | Points are placed at an absolute elevation (z-value) above sea level. This z-value is determined by summing up the `offset` value and the point's z-value. It doesn't take the elevation of the terrain into account. This is the only supported elevation mode for a [PointCloudLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-PointCloudLayer.html).
-    *
+    * Defines how the points are placed on the vertical axis (z).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-PointCloudLayer.html#elevationInfo)
     */
@@ -31,8 +26,6 @@ trait PointCloudLayerElevationInfo extends Object {
     * An elevation offset, which is added to the vertical position of each point.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-PointCloudLayer.html#elevationInfo)
-    *
-    * @default 0
     */
   var offset: js.UndefOr[Double] = js.native
   
@@ -40,8 +33,6 @@ trait PointCloudLayerElevationInfo extends Object {
     * The unit for `offset` values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-PointCloudLayer.html#elevationInfo)
-    *
-    * @default meters
     */
   var unit: js.UndefOr[feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards] = js.native
 }

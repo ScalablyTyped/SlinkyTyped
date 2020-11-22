@@ -17,7 +17,8 @@ trait IDisplayResult extends ICellOutput {
   /**
     * Optional metadata, also a mime bundle
     */
-  var metadata: js.UndefOr[js.Object] = js.native
+  @JSName("metadata")
+  var metadata_IDisplayResult: js.UndefOr[js.Object] = js.native
 }
 object IDisplayResult {
   

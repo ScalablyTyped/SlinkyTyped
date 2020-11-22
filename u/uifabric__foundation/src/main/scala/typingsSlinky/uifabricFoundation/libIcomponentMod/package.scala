@@ -16,7 +16,7 @@ package object libIcomponentMod {
   
   type IStylesFunction[TViewProps, TTokens, TStyleSet /* <: typingsSlinky.uifabricMergeStyles.istylesetMod.IStyleSet[TStyleSet] */] = js.Function3[
     /* props */ TViewProps, 
-    /* theme */ typingsSlinky.uifabricStyling.ithemeMod.ITheme, 
+    /* theme */ typingsSlinky.fluentuiTheme.ithemeMod.ITheme, 
     /* tokens */ TTokens, 
     TStyleSet
   ]

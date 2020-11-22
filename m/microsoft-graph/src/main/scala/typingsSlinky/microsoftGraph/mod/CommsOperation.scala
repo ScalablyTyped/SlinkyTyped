@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CommsOperation extends Entity {
   
   // Unique Client Context string. Max limit is 256 chars.
-  var clientContext: js.UndefOr[String] = js.native
+  var clientContext: js.UndefOr[NullableOption[String]] = js.native
   
   // The result information. Read-only.
-  var resultInfo: js.UndefOr[ResultInfo] = js.native
+  var resultInfo: js.UndefOr[NullableOption[ResultInfo]] = js.native
   
   // Possible values are: notStarted, running, completed, failed. Read-only.
   var status: js.UndefOr[OperationStatus] = js.native
@@ -40,16 +40,22 @@ object CommsOperation {
     }
     
     @scala.inline
-    def setClientContext(value: String): Self = this.set("clientContext", value.asInstanceOf[js.Any])
+    def setClientContext(value: NullableOption[String]): Self = this.set("clientContext", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClientContext: Self = this.set("clientContext", js.undefined)
     
     @scala.inline
-    def setResultInfo(value: ResultInfo): Self = this.set("resultInfo", value.asInstanceOf[js.Any])
+    def setClientContextNull: Self = this.set("clientContext", null)
+    
+    @scala.inline
+    def setResultInfo(value: NullableOption[ResultInfo]): Self = this.set("resultInfo", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResultInfo: Self = this.set("resultInfo", js.undefined)
+    
+    @scala.inline
+    def setResultInfoNull: Self = this.set("resultInfo", null)
     
     @scala.inline
     def setStatus(value: OperationStatus): Self = this.set("status", value.asInstanceOf[js.Any])

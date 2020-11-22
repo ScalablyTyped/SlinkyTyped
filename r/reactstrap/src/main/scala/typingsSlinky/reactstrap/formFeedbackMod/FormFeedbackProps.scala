@@ -17,6 +17,8 @@ trait FormFeedbackProps
   
   var tag: js.UndefOr[String] = js.native
   
+  var tooltip: js.UndefOr[Boolean] = js.native
+  
   var valid: js.UndefOr[Boolean] = js.native
 }
 object FormFeedbackProps {
@@ -53,6 +55,12 @@ object FormFeedbackProps {
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)
+    
+    @scala.inline
+    def setTooltip(value: Boolean): Self = this.set("tooltip", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTooltip: Self = this.set("tooltip", js.undefined)
     
     @scala.inline
     def setValid(value: Boolean): Self = this.set("valid", value.asInstanceOf[js.Any])

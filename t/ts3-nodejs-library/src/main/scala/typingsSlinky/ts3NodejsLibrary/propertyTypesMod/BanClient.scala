@@ -11,7 +11,10 @@ trait BanClient extends ResponseEntry {
   /** ban reason */
   var banreason: String = js.native
   
-  var clid: String = js.native
+  var clid: String | js.Array[String] = js.native
+  
+  /** ignore errors  */
+  var continueOnError: js.UndefOr[Boolean] = js.native
   
   /** myteamspeak id, use "empty" to ban all clients without connected myteamspeak */
   var mytsid: js.UndefOr[String] = js.native
@@ -22,7 +25,7 @@ trait BanClient extends ResponseEntry {
 object BanClient {
   
   @scala.inline
-  def apply(banreason: String, clid: String): BanClient = {
+  def apply(banreason: String, clid: String | js.Array[String]): BanClient = {
     val __obj = js.Dynamic.literal(banreason = banreason.asInstanceOf[js.Any], clid = clid.asInstanceOf[js.Any])
     __obj.asInstanceOf[BanClient]
   }
@@ -46,7 +49,16 @@ object BanClient {
     def setBanreason(value: String): Self = this.set("banreason", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClid(value: String): Self = this.set("clid", value.asInstanceOf[js.Any])
+    def setClidVarargs(value: String*): Self = this.set("clid", js.Array(value :_*))
+    
+    @scala.inline
+    def setClid(value: String | js.Array[String]): Self = this.set("clid", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setContinueOnError(value: Boolean): Self = this.set("continueOnError", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContinueOnError: Self = this.set("continueOnError", js.undefined)
     
     @scala.inline
     def setMytsid(value: String): Self = this.set("mytsid", value.asInstanceOf[js.Any])

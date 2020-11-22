@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type Managers = org.scalablytyped.runtime.NumberDictionary[org.scalajs.dom.raw.StyleSheet]
+  type GetProps[C] = js.Any
   
-  type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
+  type Managers = org.scalablytyped.runtime.NumberDictionary[org.scalajs.dom.raw.StyleSheet]
   
   /**
     * @deprecated Please use `WithStylesProps` instead

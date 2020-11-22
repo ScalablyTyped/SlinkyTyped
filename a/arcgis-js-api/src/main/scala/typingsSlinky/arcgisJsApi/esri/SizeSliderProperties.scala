@@ -22,7 +22,7 @@ trait SizeSliderProperties extends SmartMappingSliderBaseProperties {
   var style: js.UndefOr[SizeSliderStyleProperties] = js.native
   
   /**
-    * The view model for the SizeSlider widget. This class contains all the logic (properties and methods) that controls this widget's behavior. See the [SizeSliderViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-SizeSlider-SizeSliderViewModel.html) class to access all properties and methods on the SizeSlider widget.
+    * The view model for the SizeSlider widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-SizeSlider.html#viewModel)
     */

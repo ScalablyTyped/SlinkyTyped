@@ -3,7 +3,6 @@ package typingsSlinky.reactMdIcon
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import org.scalajs.dom.raw.SVGSVGElement
-import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
@@ -32,39 +31,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  /**
-    * The `FontIcon` component is used for rendering a font-icon library's icon.
-    * The default is to use the `material-icons` library, but others can be used as
-    * well.
-    *
-    * If you are using another font icon library that does not always create icons
-    * with a perfect 1:1 scale (such as font awesome), it is recommended to use the
-    * `forceSize` and `forceFontSize` props to fix the sizing issues.
-    */
   val FontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
   
-  /**
-    * The `IconProvider` component is used to override all the default icons within
-    * `react-md` with a newly defined set of icons. This is super nice since you
-    * won't need to create new component wrappers for all the components within
-    * `react-md` if you want to switch to SVG icons instead of the default font
-    * icons.
-    */
-  val IconProvider: ReactComponentClass[IconProviderProps] = js.native
-  
-  /**
-    * The `IconRotator` is a simple component that is used to rotate an icon from a
-    * one degrees to another.
-    */
   val IconRotator: ForwardRefExoticComponent[IconRotatorProps with RefAttributes[HTMLSpanElement]] = js.native
   
-  /**
-    * The `SVGIcon` component is used to render inline SVG icons or SVG icons in a
-    * sprite map as an icon.
-    */
   val SVGIcon: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
-  
-  val TextIconSpacing: ReactComponentClass[TextIconSpacingProps] = js.native
   
   @JSName("useIcon")
   def useIcon_back(name: back): ReactElement = js.native
@@ -114,4 +85,74 @@ object mod extends js.Object {
   def useIcon_sort(name: sort): ReactElement = js.native
   @JSName("useIcon")
   def useIcon_sort(name: sort, `override`: ReactElement): ReactElement = js.native
+  
+  @js.native
+  object IconProvider extends js.Object {
+    
+    def apply(
+      hasChildrenBackCheckboxDownloadDropdownExpanderForwardMenuNotificationPasswordRadioSelectedSort: IconProviderProps
+    ): ReactElement = js.native
+    
+    @js.native
+    object propTypes extends js.Object {
+      
+      var back: js.Any = js.native
+      
+      var checkbox: js.Any = js.native
+      
+      var children: js.Any = js.native
+      
+      var download: js.Any = js.native
+      
+      var dropdown: js.Any = js.native
+      
+      var expander: js.Any = js.native
+      
+      var forward: js.Any = js.native
+      
+      var menu: js.Any = js.native
+      
+      var notification: js.Any = js.native
+      
+      var password: js.Any = js.native
+      
+      var radio: js.Any = js.native
+      
+      var selected: js.Any = js.native
+      
+      var sort: js.Any = js.native
+    }
+  }
+  
+  @js.native
+  object TextIconSpacing extends js.Object {
+    
+    def apply(
+      hasClassNameIconChildrenStackedIconAfterForceIconWrapBeforeClassNameAfterClassNameAboveClassNameBelowClassName: TextIconSpacingProps
+    ): ReactElement = js.native
+    
+    @js.native
+    object propTypes extends js.Object {
+      
+      var aboveClassName: js.Any = js.native
+      
+      var afterClassName: js.Any = js.native
+      
+      var beforeClassName: js.Any = js.native
+      
+      var belowClassName: js.Any = js.native
+      
+      var children: js.Any = js.native
+      
+      var className: js.Any = js.native
+      
+      var forceIconWrap: js.Any = js.native
+      
+      var icon: js.Any = js.native
+      
+      var iconAfter: js.Any = js.native
+      
+      var stacked: js.Any = js.native
+    }
+  }
 }

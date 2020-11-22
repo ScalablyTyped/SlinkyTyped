@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,23 +25,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.ITypeParameter because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsJavaAction, name */ @JSImport("mendixmodelsdk/dist/gen/javaactions", "javaactions.TypeParameter")
 @js.native
 class TypeParameter protected ()
-  extends Element
+  extends Element[IModel]
      with IByNameReferrable {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsJavaAction: JavaAction = js.native
   @JSName("containerAsJavaAction")
   val containerAsJavaAction_FTypeParameter: IJavaAction = js.native
-  
-  @JSName("model")
-  var model_FTypeParameter: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

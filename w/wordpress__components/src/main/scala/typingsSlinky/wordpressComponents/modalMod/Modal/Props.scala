@@ -1,7 +1,6 @@
 package typingsSlinky.wordpressComponents.modalMod.Modal
 
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.ClassAttributes
@@ -42,7 +41,7 @@ trait Props
   /**
     * Icon component to render before the title.
     */
-  var icon: js.UndefOr[ReactComponentClass[js.Object]] = js.native
+  var icon: js.UndefOr[ReactElement] = js.native
   
   /**
     * If this property is set to false, the modal will not display a close
@@ -152,13 +151,10 @@ object Props {
     def deleteFocusOnMount: Self = this.set("focusOnMount", js.undefined)
     
     @scala.inline
-    def setIconFunctionComponent(value: ReactComponentClass[js.Object]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIconComponentClass(value: ReactComponentClass[js.Object]): Self = this.set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIcon(value: ReactComponentClass[js.Object]): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)

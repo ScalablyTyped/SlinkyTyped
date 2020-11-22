@@ -28,17 +28,24 @@ object StatusBar extends js.Object {
   val ANIMATION_STYLE_SLIDE: Double = js.native
   
   /**
+    * Status bar style to use with light backgrounds.
+    */
+  val DARK_CONTENT: Double = js.native
+  
+  /**
     * Default status bar style.
     */
   val DEFAULT: Double = js.native
   
   /**
     * Gray-colored status bar style.
+    * @deprecated Use [Titanium.UI.iOS.StatusBar.DEFAULT](Titanium.UI.iOS.StatusBar.DEFAULT) instead.
     */
   val GRAY: Double = js.native
   
   /**
     * Gray-colored status bar style.
+    * @deprecated Use [Titanium.UI.iOS.StatusBar.DEFAULT](Titanium.UI.iOS.StatusBar.DEFAULT) instead.
     */
   val GREY: Double = js.native
   

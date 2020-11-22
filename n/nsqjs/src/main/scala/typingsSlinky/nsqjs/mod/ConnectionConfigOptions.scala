@@ -17,6 +17,8 @@ trait ConnectionConfigOptions extends js.Object {
   
   var heartbeatInterval: js.UndefOr[Double] = js.native
   
+  var idleTimeout: js.UndefOr[Double] = js.native
+  
   var maxInFlight: js.UndefOr[Double] = js.native
   
   var messageTimeout: js.UndefOr[Double] = js.native
@@ -87,6 +89,12 @@ object ConnectionConfigOptions {
     
     @scala.inline
     def deleteHeartbeatInterval: Self = this.set("heartbeatInterval", js.undefined)
+    
+    @scala.inline
+    def setIdleTimeout(value: Double): Self = this.set("idleTimeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIdleTimeout: Self = this.set("idleTimeout", js.undefined)
     
     @scala.inline
     def setMaxInFlight(value: Double): Self = this.set("maxInFlight", value.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.ol.pointerMod
 
+import org.scalajs.dom.raw.UIEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,17 +9,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Options extends js.Object {
   
   var handleDownEvent: js.UndefOr[
-    js.Function1[/* p0 */ typingsSlinky.ol.mapBrowserPointerEventMod.default, Boolean]
+    js.Function1[/* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent], Boolean]
   ] = js.native
   
-  var handleDragEvent: js.UndefOr[js.Function1[/* p0 */ typingsSlinky.ol.mapBrowserPointerEventMod.default, Unit]] = js.native
+  var handleDragEvent: js.UndefOr[
+    js.Function1[/* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent], Unit]
+  ] = js.native
   
-  var handleEvent: js.UndefOr[js.Function1[/* p0 */ typingsSlinky.ol.mapBrowserEventMod.default, Boolean]] = js.native
+  var handleEvent: js.UndefOr[
+    js.Function1[/* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent], Boolean]
+  ] = js.native
   
-  var handleMoveEvent: js.UndefOr[js.Function1[/* p0 */ typingsSlinky.ol.mapBrowserPointerEventMod.default, Unit]] = js.native
+  var handleMoveEvent: js.UndefOr[
+    js.Function1[/* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent], Unit]
+  ] = js.native
   
   var handleUpEvent: js.UndefOr[
-    js.Function1[/* p0 */ typingsSlinky.ol.mapBrowserPointerEventMod.default, Boolean]
+    js.Function1[/* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent], Boolean]
   ] = js.native
   
   var stopDown: js.UndefOr[js.Function1[/* p0 */ Boolean, Boolean]] = js.native
@@ -47,31 +54,31 @@ object Options {
     }
     
     @scala.inline
-    def setHandleDownEvent(value: /* p0 */ typingsSlinky.ol.mapBrowserPointerEventMod.default => Boolean): Self = this.set("handleDownEvent", js.Any.fromFunction1(value))
+    def setHandleDownEvent(value: /* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent] => Boolean): Self = this.set("handleDownEvent", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteHandleDownEvent: Self = this.set("handleDownEvent", js.undefined)
     
     @scala.inline
-    def setHandleDragEvent(value: /* p0 */ typingsSlinky.ol.mapBrowserPointerEventMod.default => Unit): Self = this.set("handleDragEvent", js.Any.fromFunction1(value))
+    def setHandleDragEvent(value: /* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent] => Unit): Self = this.set("handleDragEvent", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteHandleDragEvent: Self = this.set("handleDragEvent", js.undefined)
     
     @scala.inline
-    def setHandleEvent(value: /* p0 */ typingsSlinky.ol.mapBrowserEventMod.default => Boolean): Self = this.set("handleEvent", js.Any.fromFunction1(value))
+    def setHandleEvent(value: /* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent] => Boolean): Self = this.set("handleEvent", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteHandleEvent: Self = this.set("handleEvent", js.undefined)
     
     @scala.inline
-    def setHandleMoveEvent(value: /* p0 */ typingsSlinky.ol.mapBrowserPointerEventMod.default => Unit): Self = this.set("handleMoveEvent", js.Any.fromFunction1(value))
+    def setHandleMoveEvent(value: /* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent] => Unit): Self = this.set("handleMoveEvent", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteHandleMoveEvent: Self = this.set("handleMoveEvent", js.undefined)
     
     @scala.inline
-    def setHandleUpEvent(value: /* p0 */ typingsSlinky.ol.mapBrowserPointerEventMod.default => Boolean): Self = this.set("handleUpEvent", js.Any.fromFunction1(value))
+    def setHandleUpEvent(value: /* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent] => Boolean): Self = this.set("handleUpEvent", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteHandleUpEvent: Self = this.set("handleUpEvent", js.undefined)

@@ -1,13 +1,7 @@
 package typingsSlinky.awsSdkJsonBuilder
 
-import typingsSlinky.awsSdkTypes.protocolMod.Blob
-import typingsSlinky.awsSdkTypes.protocolMod.Boolean
-import typingsSlinky.awsSdkTypes.protocolMod.Float
-import typingsSlinky.awsSdkTypes.protocolMod.Integer
-import typingsSlinky.awsSdkTypes.protocolMod.List
-import typingsSlinky.awsSdkTypes.protocolMod.Map
-import typingsSlinky.awsSdkTypes.protocolMod.String
-import typingsSlinky.awsSdkTypes.protocolMod.Timestamp
+import org.scalajs.dom.raw.Blob
+import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,15 +14,18 @@ object shapesFixturesMod extends js.Object {
   
   val booleanShape: Boolean = js.native
   
-  val floatShape: Float = js.native
+  val floatShape: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Float */ js.Any = js.native
   
-  val integerShape: Integer = js.native
+  val integerShape: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Integer */ js.Any = js.native
   
-  val listOfStringsShape: List = js.native
+  val listOfStringsShape: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify List */ js.Any = js.native
   
-  val mapOfStringsToIntegersShape: Map = js.native
+  val mapOfStringsToIntegersShape: Map[
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for K */ js.Any, 
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for V */ js.Any
+  ] = js.native
   
   val stringShape: String = js.native
   
-  val timestampShape: Timestamp = js.native
+  val timestampShape: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Timestamp */ js.Any = js.native
 }

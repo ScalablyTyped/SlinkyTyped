@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResourceConfiguration extends js.Object {
   
   /**
-    * The type of the compute resource used to execute the "containerAction". Possible values are: ACU_1 (vCPU=4, memory=16GiB) or ACU_2 (vCPU=8, memory=32GiB).
+    * The type of the compute resource used to execute the containerAction. Possible values are: ACU_1 (vCPU=4, memory=16 GiB) or ACU_2 (vCPU=8, memory=32 GiB).
     */
   var computeType: ComputeType = js.native
   
   /**
-    * The size (in GB) of the persistent storage available to the resource instance used to execute the "containerAction" (min: 1, max: 50).
+    * The size, in GB, of the persistent storage available to the resource instance used to execute the containerAction (min: 1, max: 50).
     */
   var volumeSizeInGB: VolumeSizeInGB = js.native
 }

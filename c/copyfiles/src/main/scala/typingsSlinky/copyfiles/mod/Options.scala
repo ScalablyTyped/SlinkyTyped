@@ -15,7 +15,7 @@ trait Options extends js.Object {
   var error: js.UndefOr[Boolean] = js.native
   
   /** pattern or glob to exclude */
-  var exclude: js.UndefOr[String] = js.native
+  var exclude: js.UndefOr[String | js.Array[String]] = js.native
   
   /** flatten the output */
   var flat: js.UndefOr[Boolean] = js.native
@@ -74,7 +74,10 @@ object Options {
     def deleteError: Self = this.set("error", js.undefined)
     
     @scala.inline
-    def setExclude(value: String): Self = this.set("exclude", value.asInstanceOf[js.Any])
+    def setExcludeVarargs(value: String*): Self = this.set("exclude", js.Array(value :_*))
+    
+    @scala.inline
+    def setExclude(value: String | js.Array[String]): Self = this.set("exclude", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExclude: Self = this.set("exclude", js.undefined)

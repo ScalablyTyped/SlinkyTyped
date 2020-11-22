@@ -9,7 +9,7 @@ trait Feature extends js.Object {
   
   var geometry: Geometry = js.native
   
-  var properties: js.UndefOr[Station | Stop] = js.native
+  var properties: js.UndefOr[Station | Stop | js.Object] = js.native
   
   var `type`: typingsSlinky.hafasClient.hafasClientStrings.Feature = js.native
 }
@@ -44,7 +44,7 @@ object Feature {
     def setType(value: typingsSlinky.hafasClient.hafasClientStrings.Feature): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setProperties(value: Station | Stop): Self = this.set("properties", value.asInstanceOf[js.Any])
+    def setProperties(value: Station | Stop | js.Object): Self = this.set("properties", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProperties: Self = this.set("properties", js.undefined)

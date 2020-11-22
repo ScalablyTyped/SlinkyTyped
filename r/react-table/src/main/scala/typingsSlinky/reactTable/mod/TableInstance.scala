@@ -72,10 +72,11 @@ trait TableInstance[D /* <: js.Object */] extends js.Object {
   var state: TableState[D] = js.native
   
   var stateReducer: js.UndefOr[
-    js.Function3[
+    js.Function4[
       /* newState */ TableState[D], 
       /* action */ ActionType, 
       /* previousState */ TableState[D], 
+      /* instance */ js.UndefOr[TableInstance[D]], 
       TableState[D]
     ]
   ] = js.native

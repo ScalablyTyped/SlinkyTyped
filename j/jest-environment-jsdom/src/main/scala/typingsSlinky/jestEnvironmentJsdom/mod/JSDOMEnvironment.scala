@@ -2,7 +2,6 @@ package typingsSlinky.jestEnvironmentJsdom.mod
 
 import typingsSlinky.jestEnvironment.mod.JestEnvironment
 import typingsSlinky.jestEnvironmentJsdom.anon.EventerrorError
-import typingsSlinky.jsdom.mod.JSDOM
 import typingsSlinky.node.vmMod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait JSDOMEnvironment extends JestEnvironment {
   
-  var dom: JSDOM | Null = js.native
+  var dom: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify JSDOM */ js.Any) | Null = js.native
   
   var errorEventListener: (js.Function1[/* event */ EventerrorError, Unit]) | Null = js.native
   

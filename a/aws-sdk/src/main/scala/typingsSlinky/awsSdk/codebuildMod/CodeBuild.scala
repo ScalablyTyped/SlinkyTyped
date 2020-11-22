@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.codebuildMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -183,12 +183,12 @@ trait CodeBuild extends Service {
   ): Request[DeleteReportOutput, AWSError] = js.native
   
   /**
-    *  DeleteReportGroup: Deletes a report group. Before you delete a report group, you must delete its reports. Use ListReportsForReportGroup to get the reports in a report group. Use DeleteReport to delete the reports. If you call DeleteReportGroup for a report group that contains one or more reports, an exception is thrown. 
+    * Deletes a report group. Before you delete a report group, you must delete its reports. 
     */
   def deleteReportGroup(): Request[DeleteReportGroupOutput, AWSError] = js.native
   def deleteReportGroup(callback: js.Function2[/* err */ AWSError, /* data */ DeleteReportGroupOutput, Unit]): Request[DeleteReportGroupOutput, AWSError] = js.native
   /**
-    *  DeleteReportGroup: Deletes a report group. Before you delete a report group, you must delete its reports. Use ListReportsForReportGroup to get the reports in a report group. Use DeleteReport to delete the reports. If you call DeleteReportGroup for a report group that contains one or more reports, an exception is thrown. 
+    * Deletes a report group. Before you delete a report group, you must delete its reports. 
     */
   def deleteReportGroup(params: DeleteReportGroupInput): Request[DeleteReportGroupOutput, AWSError] = js.native
   def deleteReportGroup(
@@ -505,12 +505,12 @@ trait CodeBuild extends Service {
   ): Request[RetryBuildOutput, AWSError] = js.native
   
   /**
-    * Restarts a batch build.
+    * Restarts a failed batch build. Only batch builds that have failed can be retried.
     */
   def retryBuildBatch(): Request[RetryBuildBatchOutput, AWSError] = js.native
   def retryBuildBatch(callback: js.Function2[/* err */ AWSError, /* data */ RetryBuildBatchOutput, Unit]): Request[RetryBuildBatchOutput, AWSError] = js.native
   /**
-    * Restarts a batch build.
+    * Restarts a failed batch build. Only batch builds that have failed can be retried.
     */
   def retryBuildBatch(params: RetryBuildBatchInput): Request[RetryBuildBatchOutput, AWSError] = js.native
   def retryBuildBatch(

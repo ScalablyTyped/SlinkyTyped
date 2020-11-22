@@ -1,6 +1,5 @@
 package typingsSlinky.reactNative.mod
 
-import typingsSlinky.reactNative.anon.NativeEvent
 import typingsSlinky.reactNative.reactNativeStrings.large_
 import typingsSlinky.reactNative.reactNativeStrings.small_
 import scala.scalajs.js
@@ -24,12 +23,6 @@ trait ActivityIndicatorIOSProps extends ViewProps {
     * Whether the indicator should hide when not animating (true by default).
     */
   var hidesWhenStopped: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * Invoked on mount and layout changes with
-    */
-  @JSName("onLayout")
-  var onLayout_ActivityIndicatorIOSProps: js.UndefOr[js.Function1[/* event */ NativeEvent, Unit]] = js.native
   
   /**
     * Size of the indicator.
@@ -79,12 +72,6 @@ object ActivityIndicatorIOSProps {
     
     @scala.inline
     def deleteHidesWhenStopped: Self = this.set("hidesWhenStopped", js.undefined)
-    
-    @scala.inline
-    def setOnLayout(value: /* event */ NativeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnLayout: Self = this.set("onLayout", js.undefined)
     
     @scala.inline
     def setSize(value: small_ | large_): Self = this.set("size", value.asInstanceOf[js.Any])

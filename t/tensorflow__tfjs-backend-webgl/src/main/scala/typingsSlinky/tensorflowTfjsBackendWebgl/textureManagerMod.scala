@@ -1,7 +1,10 @@
 package typingsSlinky.tensorflowTfjsBackendWebgl
 
+import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLTexture
 import typingsSlinky.tensorflowTfjsBackendWebgl.gpgpuContextMod.GPGPUContext
+import typingsSlinky.tensorflowTfjsBackendWebgl.texUtilMod.PhysicalTextureType
+import typingsSlinky.tensorflowTfjsBackendWebgl.texUtilMod.TextureConfig
 import typingsSlinky.tensorflowTfjsBackendWebgl.texUtilMod.TextureUsage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,9 +14,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object textureManagerMod extends js.Object {
   
+  def computeBytes(
+    shape: js.Tuple2[Double, Double],
+    physicalTexType: PhysicalTextureType,
+    gl: WebGLRenderingContext,
+    textureConfig: TextureConfig,
+    isPacked: Boolean
+  ): Double = js.native
+  
   @js.native
   class TextureManager protected () extends js.Object {
     def this(gpgpu: GPGPUContext) = this()
+    
+    var _numBytesAllocated: js.Any = js.native
+    
+    var _numBytesFree: js.Any = js.native
     
     def acquireTexture(shapeRC: js.Tuple2[Double, Double], usage: TextureUsage, isPacked: Boolean): WebGLTexture = js.native
     
@@ -30,6 +45,10 @@ object textureManagerMod extends js.Object {
     var log: js.Any = js.native
     
     var logEnabled: js.Any = js.native
+    
+    val numBytesAllocated: Double = js.native
+    
+    val numBytesFree: Double = js.native
     
     var numFreeTextures: js.Any = js.native
     

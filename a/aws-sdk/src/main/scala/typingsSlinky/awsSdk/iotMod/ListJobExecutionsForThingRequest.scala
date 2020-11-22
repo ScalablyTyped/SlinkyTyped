@@ -13,6 +13,11 @@ trait ListJobExecutionsForThingRequest extends js.Object {
   var maxResults: js.UndefOr[LaserMaxResults] = js.native
   
   /**
+    * The namespace used to indicate that a job is a customer-managed job. When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.  $aws/things/THING_NAME/jobs/JOB_ID/notify-namespace-NAMESPACE_ID/   The namespaceId feature is in public preview. 
+    */
+  var namespaceId: js.UndefOr[NamespaceId] = js.native
+  
+  /**
     * The token to retrieve the next set of results.
     */
   var nextToken: js.UndefOr[NextToken] = js.native
@@ -58,6 +63,12 @@ object ListJobExecutionsForThingRequest {
     
     @scala.inline
     def deleteMaxResults: Self = this.set("maxResults", js.undefined)
+    
+    @scala.inline
+    def setNamespaceId(value: NamespaceId): Self = this.set("namespaceId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNamespaceId: Self = this.set("namespaceId", js.undefined)
     
     @scala.inline
     def setNextToken(value: NextToken): Self = this.set("nextToken", value.asInstanceOf[js.Any])

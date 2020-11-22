@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("BABYLON.DisplayPassPostProcess")
 @js.native
 class DisplayPassPostProcess protected ()
-  extends typingsSlinky.babylonjs.BABYLON.PostProcess {
+  extends typingsSlinky.babylonjs.BABYLON.DisplayPassPostProcess {
   /**
     * Creates the DisplayPassPostProcess
     * @param name The name of the effect.
@@ -129,4 +129,17 @@ class DisplayPassPostProcess protected ()
     engine: typingsSlinky.babylonjs.BABYLON.Engine,
     reusable: Boolean
   ) = this()
+}
+/* static members */
+@JSGlobal("BABYLON.DisplayPassPostProcess")
+@js.native
+object DisplayPassPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(
+    parsedPostProcess: js.Any,
+    targetCamera: typingsSlinky.babylonjs.BABYLON.Camera,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    rootUrl: String
+  ): Nullable[typingsSlinky.babylonjs.BABYLON.DisplayPassPostProcess] = js.native
 }

@@ -70,10 +70,10 @@ class Async () extends js.Object {
     * @param options - The options object.
     * @returns The new debounced function.
     */
-  def debounce[T /* <: js.Function */](func: T): ICancelable[T] with js.Function0[Unit] = js.native
-  def debounce[T /* <: js.Function */](func: T, wait: js.UndefOr[scala.Nothing], options: MaxWait): ICancelable[T] with js.Function0[Unit] = js.native
-  def debounce[T /* <: js.Function */](func: T, wait: Double): ICancelable[T] with js.Function0[Unit] = js.native
-  def debounce[T /* <: js.Function */](func: T, wait: Double, options: MaxWait): ICancelable[T] with js.Function0[Unit] = js.native
+  def debounce[T /* <: js.Function1[/* repeated */ js.Any, _] */](func: T): ICancelable[T] with T = js.native
+  def debounce[T /* <: js.Function1[/* repeated */ js.Any, _] */](func: T, wait: js.UndefOr[scala.Nothing], options: MaxWait): ICancelable[T] with T = js.native
+  def debounce[T /* <: js.Function1[/* repeated */ js.Any, _] */](func: T, wait: Double): ICancelable[T] with T = js.native
+  def debounce[T /* <: js.Function1[/* repeated */ js.Any, _] */](func: T, wait: Double, options: MaxWait): ICancelable[T] with T = js.native
   
   /**
     * Dispose function, clears all async operations.
@@ -122,8 +122,8 @@ class Async () extends js.Object {
     * @param options - The options object.
     * @returns The new throttled function.
     */
-  def throttle[T /* <: js.Function */](func: T): T | js.Function0[Unit] = js.native
-  def throttle[T /* <: js.Function */](func: T, wait: js.UndefOr[scala.Nothing], options: Leading): T | js.Function0[Unit] = js.native
-  def throttle[T /* <: js.Function */](func: T, wait: Double): T | js.Function0[Unit] = js.native
-  def throttle[T /* <: js.Function */](func: T, wait: Double, options: Leading): T | js.Function0[Unit] = js.native
+  def throttle[T /* <: js.Function1[/* repeated */ js.Any, _] */](func: T): T = js.native
+  def throttle[T /* <: js.Function1[/* repeated */ js.Any, _] */](func: T, wait: js.UndefOr[scala.Nothing], options: Leading): T = js.native
+  def throttle[T /* <: js.Function1[/* repeated */ js.Any, _] */](func: T, wait: Double): T = js.native
+  def throttle[T /* <: js.Function1[/* repeated */ js.Any, _] */](func: T, wait: Double, options: Leading): T = js.native
 }

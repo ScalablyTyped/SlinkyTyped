@@ -12,5 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object tuneFontIconMod extends js.Object {
   
-  val default: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
+  val TuneFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

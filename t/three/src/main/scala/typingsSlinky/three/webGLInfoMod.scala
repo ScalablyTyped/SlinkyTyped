@@ -1,7 +1,6 @@
 package typingsSlinky.three
 
 import org.scalajs.dom.raw.WebGLRenderingContext
-import typingsSlinky.std.GLenum
 import typingsSlinky.three.anon.Calls
 import typingsSlinky.three.anon.Textures
 import typingsSlinky.three.webGLProgramMod.WebGLProgram
@@ -17,16 +16,28 @@ object webGLInfoMod extends js.Object {
   class WebGLInfo protected () extends js.Object {
     def this(gl: WebGLRenderingContext) = this()
     
+    /**
+    	 * @default true
+    	 */
     var autoReset: Boolean = js.native
     
+    /**
+    	 * @default { geometries: 0, textures: 0 }
+    	 */
     var memory: Textures = js.native
     
+    /**
+    	 * @default null
+    	 */
     var programs: js.Array[WebGLProgram] | Null = js.native
     
+    /**
+    	 * @default { frame: 0, calls: 0, triangles: 0, points: 0, lines: 0 }
+    	 */
     var render: Calls = js.native
     
     def reset(): Unit = js.native
     
-    def update(count: Double, mode: GLenum, instanceCount: Double): Unit = js.native
+    def update(count: Double, mode: Double, instanceCount: Double): Unit = js.native
   }
 }

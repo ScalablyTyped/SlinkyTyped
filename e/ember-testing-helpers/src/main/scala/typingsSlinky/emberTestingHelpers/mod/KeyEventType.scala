@@ -2,7 +2,7 @@ package typingsSlinky.emberTestingHelpers.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.emberTestingHelpers.emberTestingHelpersStrings.keydown
@@ -10,13 +10,14 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.emberTestingHelpers.emberTestingHelpersStrings.keypress
 */
 trait KeyEventType extends js.Object
-
 object KeyEventType {
+  
   @scala.inline
   def keydown: typingsSlinky.emberTestingHelpers.emberTestingHelpersStrings.keydown = "keydown".asInstanceOf[typingsSlinky.emberTestingHelpers.emberTestingHelpersStrings.keydown]
+  
   @scala.inline
   def keypress: typingsSlinky.emberTestingHelpers.emberTestingHelpersStrings.keypress = "keypress".asInstanceOf[typingsSlinky.emberTestingHelpers.emberTestingHelpersStrings.keypress]
+  
   @scala.inline
   def keyup: typingsSlinky.emberTestingHelpers.emberTestingHelpersStrings.keyup = "keyup".asInstanceOf[typingsSlinky.emberTestingHelpers.emberTestingHelpersStrings.keyup]
 }
-

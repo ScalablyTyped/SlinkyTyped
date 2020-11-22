@@ -12,13 +12,13 @@ class Annotation_ () extends Message {
   def addPath(value: Double): Double = js.native
   def addPath(value: Double, index: Double): Double = js.native
   
-  def clearBegin(): Unit = js.native
+  def clearBegin(): Annotation = js.native
   
-  def clearEnd(): Unit = js.native
+  def clearEnd(): Annotation = js.native
   
-  def clearPathList(): Unit = js.native
+  def clearPathList(): Annotation = js.native
   
-  def clearSourceFile(): Unit = js.native
+  def clearSourceFile(): Annotation = js.native
   
   def getBegin(): js.UndefOr[Double] = js.native
   
@@ -34,11 +34,11 @@ class Annotation_ () extends Message {
   
   def hasSourceFile(): Boolean = js.native
   
-  def setBegin(value: Double): Unit = js.native
+  def setBegin(value: Double): Annotation = js.native
   
-  def setEnd(value: Double): Unit = js.native
+  def setEnd(value: Double): Annotation = js.native
   
-  def setPathList(value: js.Array[Double]): Unit = js.native
+  def setPathList(value: js.Array[Double]): Annotation = js.native
   
-  def setSourceFile(value: String): Unit = js.native
+  def setSourceFile(value: String): Annotation = js.native
 }

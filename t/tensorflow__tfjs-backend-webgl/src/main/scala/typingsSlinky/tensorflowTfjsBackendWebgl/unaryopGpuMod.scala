@@ -27,8 +27,6 @@ object unaryopGpuMod extends js.Object {
   
   val CLONE: /* "return x;" */ String = js.native
   
-  val COS: String = js.native
-  
   val COSH: /* "\n  float e2x = exp(-x);\n  return (e2x + 1.0 / e2x) / 2.0;\n" */ String = js.native
   
   val ELU: /* "return (x >= 0.0) ? x : (exp(x) - 1.0);" */ String = js.native
@@ -73,24 +71,16 @@ object unaryopGpuMod extends js.Object {
   
   val SIGN: /* "\n  if (isnan(x)) { return 0.0; }\n  return sign(x);\n" */ String = js.native
   
-  val SIN: String = js.native
-  
   val SINH: /* "\n  float e2x = exp(x);\n  return (e2x - 1.0 / e2x) / 2.0;\n" */ String = js.native
   
   val SOFTPLUS: /* "\n  float epsilon = 1.1920928955078125e-7;\n  float threshold = log(epsilon) + 2.0;\n\n  bool too_large = x > -threshold;\n  bool too_small = x < threshold;\n\n  float result;\n  float exp_x = exp(x);\n\n  if (too_large){\n    result = x;\n  }\n  else if (too_small){\n    result = exp_x;\n  }\n  else{\n    result = log(exp_x + 1.0);\n  }\n  return result;\n" */ String = js.native
   
   val SQRT: /* "return sqrt(x);" */ String = js.native
   
-  val SQUARE: /* "return x * x;" */ String = js.native
-  
   def STEP(): String = js.native
   def STEP(alpha: Double): String = js.native
   
-  val TAN: /* "return tan(x);" */ String = js.native
-  
   val TANH: /* "\n  float e2x = exp(-2.0 * abs(x));\n  return sign(x) * (1.0 - e2x) / (1.0 + e2x);\n" */ String = js.native
-  
-  val TO_INT: /* "return float(int(x));" */ String = js.native
   
   @js.native
   class UnaryOpProgram protected () extends GPGPUProgram {

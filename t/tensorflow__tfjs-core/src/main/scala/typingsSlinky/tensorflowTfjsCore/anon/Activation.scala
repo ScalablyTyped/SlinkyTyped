@@ -1,11 +1,11 @@
 package typingsSlinky.tensorflowTfjsCore.anon
 
 import typingsSlinky.tensorflowTfjsCore.convUtilMod.ExplicitPadding
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor3D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCHW
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NHWC
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.ceil
@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Activation[T /* <: Tensor3D | Tensor4D */] extends js.Object {
   
-  var activation: js.UndefOr[typingsSlinky.tensorflowTfjsCore.fusedUtilMod.Activation] = js.native
+  var activation: js.UndefOr[typingsSlinky.tensorflowTfjsCore.fusedTypesMod.Activation] = js.native
   
   var bias: js.UndefOr[Tensor[Rank] | TensorLike] = js.native
   
@@ -105,7 +105,7 @@ object Activation {
     def setXFloat32Array(value: js.typedarray.Float32Array): Self = this.set("x", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setActivation(value: typingsSlinky.tensorflowTfjsCore.fusedUtilMod.Activation): Self = this.set("activation", value.asInstanceOf[js.Any])
+    def setActivation(value: typingsSlinky.tensorflowTfjsCore.fusedTypesMod.Activation): Self = this.set("activation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteActivation: Self = this.set("activation", js.undefined)

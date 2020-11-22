@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-steps
 
-Typings are for version 4.1.2
+Typings are for version 4.1.3
 
 ## Library description:
 steps ui component for react

@@ -1,6 +1,6 @@
 package typingsSlinky.xstate.anon
 
-import typingsSlinky.xstate.xstateStrings.Asterisk
+import typingsSlinky.xstate.xstateStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `0` extends js.Object {
   
-  var event: Asterisk = js.native
+  var event: _empty = js.native
 }
 object `0` {
   
   @scala.inline
-  def apply(event: Asterisk): `0` = {
+  def apply(event: _empty): `0` = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any])
     __obj.asInstanceOf[`0`]
   }
@@ -34,6 +34,6 @@ object `0` {
     }
     
     @scala.inline
-    def setEvent(value: Asterisk): Self = this.set("event", value.asInstanceOf[js.Any])
+    def setEvent(value: _empty): Self = this.set("event", value.asInstanceOf[js.Any])
   }
 }

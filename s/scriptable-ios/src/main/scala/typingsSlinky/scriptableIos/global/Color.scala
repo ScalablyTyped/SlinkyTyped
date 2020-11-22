@@ -68,6 +68,18 @@ object Color extends js.Object {
   def darkGray(): typingsSlinky.scriptableIos.Color = js.native
   
   /**
+    * _Creates a dynamic color._
+    *
+    * The dynamic color will use either its light or dark variant depending on the appearance of the system.
+    *
+    * Dynamic colors are not supported when used with `DrawContext`.
+    * @param lightColor - Color used in light appearance.
+    * @param darkColor - Color used in dark appearance.
+    * @see https://docs.scriptable.app/color/#dynamic
+    */
+  def dynamic(lightColor: typingsSlinky.scriptableIos.Color, darkColor: typingsSlinky.scriptableIos.Color): typingsSlinky.scriptableIos.Color = js.native
+  
+  /**
     * _Constructs a gray color._
     * @see https://docs.scriptable.app/color/#gray
     */

@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.BABYLON
 
 import typingsSlinky.babylonjs.XRReferenceSpaceType
+import typingsSlinky.babylonjs.XRSessionInit
 import typingsSlinky.babylonjs.XRSessionMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,13 +30,26 @@ trait WebXRExperienceHelper extends IDisposable {
     * @param sessionMode options for the XR session
     * @param referenceSpaceType frame of reference of the XR session
     * @param renderTarget the output canvas that will be used to enter XR mode
+    * @param sessionCreationOptions optional XRSessionInit object to init the session with
     * @returns promise that resolves after xr mode has entered
     */
   def enterXRAsync(sessionMode: XRSessionMode, referenceSpaceType: XRReferenceSpaceType): js.Promise[WebXRSessionManager] = js.native
   def enterXRAsync(
     sessionMode: XRSessionMode,
     referenceSpaceType: XRReferenceSpaceType,
+    renderTarget: js.UndefOr[scala.Nothing],
+    sessionCreationOptions: XRSessionInit
+  ): js.Promise[WebXRSessionManager] = js.native
+  def enterXRAsync(
+    sessionMode: XRSessionMode,
+    referenceSpaceType: XRReferenceSpaceType,
     renderTarget: WebXRRenderTarget
+  ): js.Promise[WebXRSessionManager] = js.native
+  def enterXRAsync(
+    sessionMode: XRSessionMode,
+    referenceSpaceType: XRReferenceSpaceType,
+    renderTarget: WebXRRenderTarget,
+    sessionCreationOptions: XRSessionInit
   ): js.Promise[WebXRSessionManager] = js.native
   
   /**

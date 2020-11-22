@@ -2,7 +2,6 @@ package typingsSlinky.dexie.mod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.dexie.anon.PinkeyofDexieExceptionCla
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,7 +36,7 @@ trait DexieConstructor
   
   var dependencies: DexieDOMDependencies = js.native
   
-  var errnames: PinkeyofDexieExceptionCla = js.native
+  var errnames: DexieErrors = js.native
   
   def exists(dbName: String): js.Promise[Boolean] = js.native
   

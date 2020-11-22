@@ -68,6 +68,11 @@ trait ReplicationGroup extends js.Object {
   var MemberClusters: js.UndefOr[ClusterIdList] = js.native
   
   /**
+    * The outpost ARNs of the replication group's member clusters.
+    */
+  var MemberClustersOutpostArns: js.UndefOr[ReplicationGroupOutpostArnList] = js.native
+  
+  /**
     * A flag indicating if you have Multi-AZ enabled to enhance fault tolerance. For more information, see Minimizing Downtime: Multi-AZ 
     */
   var MultiAZ: js.UndefOr[MultiAZStatus] = js.native
@@ -111,6 +116,11 @@ trait ReplicationGroup extends js.Object {
     * A flag that enables in-transit encryption when set to true. You cannot modify the value of TransitEncryptionEnabled after the cluster is created. To enable in-transit encryption on a cluster you must set TransitEncryptionEnabled to true when you create a cluster.  Required: Only available when creating a replication group in an Amazon VPC using redis version 3.2.6, 4.x or later. Default: false 
     */
   var TransitEncryptionEnabled: js.UndefOr[BooleanOptional] = js.native
+  
+  /**
+    * The list of user group IDs that have access to the replication group.
+    */
+  var UserGroupIds: js.UndefOr[UserGroupIdList] = js.native
 }
 object ReplicationGroup {
   
@@ -211,6 +221,15 @@ object ReplicationGroup {
     def deleteMemberClusters: Self = this.set("MemberClusters", js.undefined)
     
     @scala.inline
+    def setMemberClustersOutpostArnsVarargs(value: String*): Self = this.set("MemberClustersOutpostArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setMemberClustersOutpostArns(value: ReplicationGroupOutpostArnList): Self = this.set("MemberClustersOutpostArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMemberClustersOutpostArns: Self = this.set("MemberClustersOutpostArns", js.undefined)
+    
+    @scala.inline
     def setMultiAZ(value: MultiAZStatus): Self = this.set("MultiAZ", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -266,5 +285,14 @@ object ReplicationGroup {
     
     @scala.inline
     def deleteTransitEncryptionEnabled: Self = this.set("TransitEncryptionEnabled", js.undefined)
+    
+    @scala.inline
+    def setUserGroupIdsVarargs(value: UserGroupId*): Self = this.set("UserGroupIds", js.Array(value :_*))
+    
+    @scala.inline
+    def setUserGroupIds(value: UserGroupIdList): Self = this.set("UserGroupIds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserGroupIds: Self = this.set("UserGroupIds", js.undefined)
   }
 }

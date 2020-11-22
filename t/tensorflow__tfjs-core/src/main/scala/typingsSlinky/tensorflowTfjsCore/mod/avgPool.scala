@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsCore.mod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor3D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js

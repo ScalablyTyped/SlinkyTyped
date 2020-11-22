@@ -1,17 +1,20 @@
 package typingsSlinky.antDesignProLayout.components
 
+import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
-import slinky.web.html.`*`.tag
+import slinky.web.SyntheticMouseEvent
+import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
+import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.mix
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.side
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.top
 import typingsSlinky.antDesignProLayout.defaultSettingsMod.ContentWidth
 import typingsSlinky.antDesignProLayout.globalHeaderMod.GlobalHeaderProps
-import typingsSlinky.antDesignProLayout.globalHeaderMod.default
 import typingsSlinky.antDesignProLayout.headerMod.HeaderViewProps
+import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.PrivateSiderMenuProps
 import typingsSlinky.antDesignProLayout.typingsMod.MenuDataItem
 import typingsSlinky.antDesignProLayout.typingsMod.WithFalse
 import typingsSlinky.antd.menuContextMod.MenuTheme
@@ -29,7 +32,7 @@ object GlobalHeader {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -57,6 +60,9 @@ object GlobalHeader {
     
     @scala.inline
     def headerHeight(value: Double): this.type = set("headerHeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def headerTheme(value: MenuTheme): this.type = set("headerTheme", value.asInstanceOf[js.Any])
     
     @scala.inline
     def iconfontUrl(value: String): this.type = set("iconfontUrl", value.asInstanceOf[js.Any])
@@ -116,6 +122,9 @@ object GlobalHeader {
     def onCollapse(value: /* collapsed */ Boolean => Unit): this.type = set("onCollapse", js.Any.fromFunction1(value))
     
     @scala.inline
+    def onMenuHeaderClick(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onMenuHeaderClick", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -134,10 +143,14 @@ object GlobalHeader {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: String | `false`): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: GlobalHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: GlobalHeaderProps with PrivateSiderMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make(companion: GlobalHeader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(matchMenuKeys: js.Array[String]): Builder = {
+    val __props = js.Dynamic.literal(matchMenuKeys = matchMenuKeys.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[GlobalHeaderProps with PrivateSiderMenuProps]))
+  }
 }

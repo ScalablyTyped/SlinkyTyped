@@ -1,7 +1,8 @@
 package typingsSlinky.jestDevServer.anon
 
 import typingsSlinky.std.Record
-import typingsSlinky.waitOn.mod.HttpSignature
+import typingsSlinky.waitOn.mod.AxiosProxyConfig
+import typingsSlinky.waitOn.mod.ValidateStatus
 import typingsSlinky.waitOn.mod.WaitOnAuth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,19 +16,17 @@ trait PartialWaitOnOptions extends js.Object {
   
   var delay: js.UndefOr[Double] = js.native
   
-  var followAllRedirects: js.UndefOr[Boolean] = js.native
-  
   var followRedirect: js.UndefOr[Boolean] = js.native
   
   var headers: js.UndefOr[Record[String, _]] = js.native
-  
-  var httpSignature: js.UndefOr[HttpSignature] = js.native
   
   var httpTimeout: js.UndefOr[Double] = js.native
   
   var interval: js.UndefOr[Double] = js.native
   
   var log: js.UndefOr[Boolean] = js.native
+  
+  var proxy: js.UndefOr[AxiosProxyConfig] = js.native
   
   var resources: js.UndefOr[js.Array[String]] = js.native
   
@@ -40,6 +39,8 @@ trait PartialWaitOnOptions extends js.Object {
   var tcpTimeout: js.UndefOr[Double] = js.native
   
   var timeout: js.UndefOr[Double] = js.native
+  
+  var validateStatus: js.UndefOr[ValidateStatus] = js.native
   
   var verbose: js.UndefOr[Boolean] = js.native
   
@@ -81,12 +82,6 @@ object PartialWaitOnOptions {
     def deleteDelay: Self = this.set("delay", js.undefined)
     
     @scala.inline
-    def setFollowAllRedirects(value: Boolean): Self = this.set("followAllRedirects", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteFollowAllRedirects: Self = this.set("followAllRedirects", js.undefined)
-    
-    @scala.inline
     def setFollowRedirect(value: Boolean): Self = this.set("followRedirect", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -97,12 +92,6 @@ object PartialWaitOnOptions {
     
     @scala.inline
     def deleteHeaders: Self = this.set("headers", js.undefined)
-    
-    @scala.inline
-    def setHttpSignature(value: HttpSignature): Self = this.set("httpSignature", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHttpSignature: Self = this.set("httpSignature", js.undefined)
     
     @scala.inline
     def setHttpTimeout(value: Double): Self = this.set("httpTimeout", value.asInstanceOf[js.Any])
@@ -121,6 +110,12 @@ object PartialWaitOnOptions {
     
     @scala.inline
     def deleteLog: Self = this.set("log", js.undefined)
+    
+    @scala.inline
+    def setProxy(value: AxiosProxyConfig): Self = this.set("proxy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProxy: Self = this.set("proxy", js.undefined)
     
     @scala.inline
     def setResourcesVarargs(value: String*): Self = this.set("resources", js.Array(value :_*))
@@ -160,6 +155,12 @@ object PartialWaitOnOptions {
     
     @scala.inline
     def deleteTimeout: Self = this.set("timeout", js.undefined)
+    
+    @scala.inline
+    def setValidateStatus(value: /* status */ Double => Boolean): Self = this.set("validateStatus", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteValidateStatus: Self = this.set("validateStatus", js.undefined)
     
     @scala.inline
     def setVerbose(value: Boolean): Self = this.set("verbose", value.asInstanceOf[js.Any])

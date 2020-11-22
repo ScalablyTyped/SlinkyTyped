@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ICalendarYearStrings extends js.Object {
   
+  var headerAriaLabelFormatString: js.UndefOr[String] = js.native
+  
   var nextRangeAriaLabel: js.UndefOr[String | ICalendarYearRangeToString] = js.native
   
   var prevRangeAriaLabel: js.UndefOr[String | ICalendarYearRangeToString] = js.native
@@ -35,6 +37,12 @@ object ICalendarYearStrings {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setHeaderAriaLabelFormatString(value: String): Self = this.set("headerAriaLabelFormatString", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderAriaLabelFormatString: Self = this.set("headerAriaLabelFormatString", js.undefined)
     
     @scala.inline
     def setNextRangeAriaLabelFunction1(value: /* range */ ICalendarYearRange => String): Self = this.set("nextRangeAriaLabel", js.Any.fromFunction1(value))

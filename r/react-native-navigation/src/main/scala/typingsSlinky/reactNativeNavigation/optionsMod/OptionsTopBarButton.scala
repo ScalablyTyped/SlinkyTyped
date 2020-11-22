@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
-import typingsSlinky.reactNative.mod.ImageRequireSource
 import typingsSlinky.reactNativeNavigation.anon.Height
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.always
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.ifRoom
@@ -50,9 +49,9 @@ trait OptionsTopBarButton extends js.Object {
   var enabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * Set the button font family
+    * Set the font family for the button's text
     */
-  var fontFamily: js.UndefOr[String] = js.native
+  var fontFamily: js.UndefOr[FontFamily] = js.native
   
   /**
     * Set the font size in dp
@@ -60,15 +59,21 @@ trait OptionsTopBarButton extends js.Object {
   var fontSize: js.UndefOr[Double] = js.native
   
   /**
-    * Set the font weight, ignore fontFamily and use the iOS system fonts instead
-    * #### (iOS specific)
+    * Set the font style for the button's text
+    */
+  var fontStyle: js.UndefOr[FontStyle] = js.native
+  
+  /**
+    * Specifies font weight. The values 'normal' and 'bold' are supported
+    * for most fonts. Not all fonts have a variant for each of the numeric
+    * values, in that case the closest one is chosen.
     */
   var fontWeight: js.UndefOr[FontWeight] = js.native
   
   /**
     * Set the button icon
     */
-  var icon: js.UndefOr[ImageRequireSource] = js.native
+  var icon: js.UndefOr[ImageResource] = js.native
   
   /**
     * Set the button icon insets
@@ -170,7 +175,7 @@ object OptionsTopBarButton {
     def deleteEnabled: Self = this.set("enabled", js.undefined)
     
     @scala.inline
-    def setFontFamily(value: String): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
+    def setFontFamily(value: FontFamily): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontFamily: Self = this.set("fontFamily", js.undefined)
@@ -182,13 +187,19 @@ object OptionsTopBarButton {
     def deleteFontSize: Self = this.set("fontSize", js.undefined)
     
     @scala.inline
+    def setFontStyle(value: FontStyle): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
+    
+    @scala.inline
     def setFontWeight(value: FontWeight): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontWeight: Self = this.set("fontWeight", js.undefined)
     
     @scala.inline
-    def setIcon(value: ImageRequireSource): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ImageResource): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)

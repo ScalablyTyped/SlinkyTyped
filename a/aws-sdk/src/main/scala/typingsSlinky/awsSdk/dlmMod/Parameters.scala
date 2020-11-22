@@ -11,6 +11,11 @@ trait Parameters extends js.Object {
     * [EBS Snapshot Management – Instance policies only] Indicates whether to exclude the root volume from snapshots created using CreateSnapshots. The default is false.
     */
   var ExcludeBootVolume: js.UndefOr[typingsSlinky.awsSdk.dlmMod.ExcludeBootVolume] = js.native
+  
+  /**
+    * Applies to AMI lifecycle policies only. Indicates whether targeted instances are rebooted when the lifecycle policy runs. true indicates that targeted instances are not rebooted when the policy runs. false indicates that target instances are rebooted when the policy runs. The default is true (instance are not rebooted).
+    */
+  var NoReboot: js.UndefOr[typingsSlinky.awsSdk.dlmMod.NoReboot] = js.native
 }
 object Parameters {
   
@@ -40,5 +45,11 @@ object Parameters {
     
     @scala.inline
     def deleteExcludeBootVolume: Self = this.set("ExcludeBootVolume", js.undefined)
+    
+    @scala.inline
+    def setNoReboot(value: NoReboot): Self = this.set("NoReboot", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNoReboot: Self = this.set("NoReboot", js.undefined)
   }
 }

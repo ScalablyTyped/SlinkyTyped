@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "metric-suffix"
-version := "0.0.3-dt-20200515Z-be24c0"
+version := "0.0.3-dt-20201002Z-be24c0"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

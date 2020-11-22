@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.BABYLON.IMinimalMotionControllerObject
-import typingsSlinky.babylonjs.BABYLON.MotionControllerHandness
+import typingsSlinky.babylonjs.BABYLON.MotionControllerHandedness
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +13,7 @@ class WebXRGenericTriggerMotionController protected ()
   def this(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     gamepadObject: IMinimalMotionControllerObject,
-    handness: MotionControllerHandness
+    handedness: MotionControllerHandedness
   ) = this()
 }
 /* static members */

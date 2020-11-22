@@ -9,7 +9,7 @@ trait LineHeightProps[TLength] extends js.Object {
   
   val lineHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LineHeightProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LineHeight<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object LineHeightProps {
     }
     
     @scala.inline
+    def setLineHeightVarargs(value: js.Any*): Self = this.set("lineHeight", js.Array(value :_*))
+    
+    @scala.inline
     def setLineHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LineHeightProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LineHeight<TLength> */ _
         ]
     ): Self = this.set("lineHeight", value.asInstanceOf[js.Any])
     

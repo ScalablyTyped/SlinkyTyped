@@ -27,6 +27,8 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   
   var appconfig: js.UndefOr[typingsSlinky.awsSdk.appconfigMod.ClientConfiguration] = js.native
   
+  var appflow: js.UndefOr[typingsSlinky.awsSdk.appflowMod.ClientConfiguration] = js.native
+  
   var applicationautoscaling: js.UndefOr[typingsSlinky.awsSdk.applicationautoscalingMod.ClientConfiguration] = js.native
   
   var applicationinsights: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.ClientConfiguration] = js.native
@@ -48,6 +50,8 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var backup: js.UndefOr[typingsSlinky.awsSdk.backupMod.ClientConfiguration] = js.native
   
   var batch: js.UndefOr[typingsSlinky.awsSdk.batchMod.ClientConfiguration] = js.native
+  
+  var braket: js.UndefOr[typingsSlinky.awsSdk.braketMod.ClientConfiguration] = js.native
   
   var budgets: js.UndefOr[typingsSlinky.awsSdk.budgetsMod.ClientConfiguration] = js.native
   
@@ -118,6 +122,8 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var costexplorer: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.ClientConfiguration] = js.native
   
   var cur: js.UndefOr[typingsSlinky.awsSdk.curMod.ClientConfiguration] = js.native
+  
+  var databrew: js.UndefOr[typingsSlinky.awsSdk.databrewMod.ClientConfiguration] = js.native
   
   var dataexchange: js.UndefOr[typingsSlinky.awsSdk.dataexchangeMod.ClientConfiguration] = js.native
   
@@ -210,6 +216,8 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var honeycode: js.UndefOr[typingsSlinky.awsSdk.honeycodeMod.ClientConfiguration] = js.native
   
   var iam: js.UndefOr[typingsSlinky.awsSdk.iamMod.ClientConfiguration] = js.native
+  
+  var identitystore: js.UndefOr[typingsSlinky.awsSdk.identitystoreMod.ClientConfiguration] = js.native
   
   var imagebuilder: js.UndefOr[typingsSlinky.awsSdk.imagebuilderMod.ClientConfiguration] = js.native
   
@@ -319,6 +327,8 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   
   var neptune: js.UndefOr[typingsSlinky.awsSdk.neptuneMod.ClientConfiguration] = js.native
   
+  var networkfirewall: js.UndefOr[typingsSlinky.awsSdk.networkfirewallMod.ClientConfiguration] = js.native
+  
   var networkmanager: js.UndefOr[typingsSlinky.awsSdk.networkmanagerMod.ClientConfiguration] = js.native
   
   var opsworks: js.UndefOr[typingsSlinky.awsSdk.opsworksMod.ClientConfiguration] = js.native
@@ -361,6 +371,8 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   
   var redshift: js.UndefOr[typingsSlinky.awsSdk.redshiftMod.ClientConfiguration] = js.native
   
+  var redshiftdata: js.UndefOr[typingsSlinky.awsSdk.redshiftdataMod.ClientConfiguration] = js.native
+  
   var rekognition: js.UndefOr[typingsSlinky.awsSdk.rekognitionMod.ClientConfiguration] = js.native
   
   var resourcegroups: js.UndefOr[typingsSlinky.awsSdk.resourcegroupsMod.ClientConfiguration] = js.native
@@ -379,6 +391,8 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   
   var s3control: js.UndefOr[typingsSlinky.awsSdk.s3controlMod.ClientConfiguration] = js.native
   
+  var s3outposts: js.UndefOr[typingsSlinky.awsSdk.s3outpostsMod.ClientConfiguration] = js.native
+  
   var sagemaker: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.ClientConfiguration] = js.native
   
   var sagemakerruntime: js.UndefOr[typingsSlinky.awsSdk.sagemakerruntimeMod.ClientConfiguration] = js.native
@@ -394,6 +408,8 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var serverlessapplicationrepository: js.UndefOr[typingsSlinky.awsSdk.serverlessapplicationrepositoryMod.ClientConfiguration] = js.native
   
   var servicecatalog: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.ClientConfiguration] = js.native
+  
+  var servicecatalogappregistry: js.UndefOr[typingsSlinky.awsSdk.servicecatalogappregistryMod.ClientConfiguration] = js.native
   
   var servicediscovery: js.UndefOr[typingsSlinky.awsSdk.servicediscoveryMod.ClientConfiguration] = js.native
   
@@ -421,6 +437,8 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   
   var sso: js.UndefOr[typingsSlinky.awsSdk.ssoMod.ClientConfiguration] = js.native
   
+  var ssoadmin: js.UndefOr[typingsSlinky.awsSdk.ssoadminMod.ClientConfiguration] = js.native
+  
   var ssooidc: js.UndefOr[typingsSlinky.awsSdk.ssooidcMod.ClientConfiguration] = js.native
   
   var stepfunctions: js.UndefOr[typingsSlinky.awsSdk.stepfunctionsMod.ClientConfiguration] = js.native
@@ -436,6 +454,10 @@ abstract class ConfigurationServicePlaceholders () extends js.Object {
   var synthetics: js.UndefOr[typingsSlinky.awsSdk.syntheticsMod.ClientConfiguration] = js.native
   
   var textract: js.UndefOr[typingsSlinky.awsSdk.textractMod.ClientConfiguration] = js.native
+  
+  var timestreamquery: js.UndefOr[typingsSlinky.awsSdk.timestreamqueryMod.ClientConfiguration] = js.native
+  
+  var timestreamwrite: js.UndefOr[typingsSlinky.awsSdk.timestreamwriteMod.ClientConfiguration] = js.native
   
   var transcribeservice: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.ClientConfiguration] = js.native
   

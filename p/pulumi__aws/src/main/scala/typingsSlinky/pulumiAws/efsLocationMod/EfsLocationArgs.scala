@@ -34,12 +34,6 @@ trait EfsLocationArgs extends js.Object {
 object EfsLocationArgs {
   
   @scala.inline
-  def apply(ec2Config: Input[EfsLocationEc2Config], efsFileSystemArn: Input[ARN]): EfsLocationArgs = {
-    val __obj = js.Dynamic.literal(ec2Config = ec2Config.asInstanceOf[js.Any], efsFileSystemArn = efsFileSystemArn.asInstanceOf[js.Any])
-    __obj.asInstanceOf[EfsLocationArgs]
-  }
-  
-  @scala.inline
   implicit class EfsLocationArgsOps[Self <: EfsLocationArgs] (val x: Self) extends AnyVal {
     
     @scala.inline

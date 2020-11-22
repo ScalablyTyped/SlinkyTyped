@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IonIcon extends js.Object {
   
   /**
+    * Set the icon to hidden, respectively `true`, to remove it from the accessibility tree.
+    */
+  var ariaHidden: js.UndefOr[String] = js.native
+  
+  /**
     * Specifies the label to use for accessibility. Defaults to the icon name.
     */
   var ariaLabel: js.UndefOr[String] = js.native
@@ -53,6 +58,12 @@ trait IonIcon extends js.Object {
   var name: js.UndefOr[String] = js.native
   
   /**
+    * When set to `false`, SVG content that is HTTP fetched will not be checked if the response SVG content has any `<script>` elements, or any attributes that start with `on`, such as `onclick`.
+    * @default true
+    */
+  var sanitize: Boolean = js.native
+  
+  /**
     * The size of the icon. Available options are: `"small"` and `"large"`.
     */
   var size: js.UndefOr[String] = js.native
@@ -65,8 +76,8 @@ trait IonIcon extends js.Object {
 object IonIcon {
   
   @scala.inline
-  def apply(`lazy`: Boolean, mode: String): IonIcon = {
-    val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any])
+  def apply(`lazy`: Boolean, mode: String, sanitize: Boolean): IonIcon = {
+    val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any], sanitize = sanitize.asInstanceOf[js.Any])
     __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonIcon]
   }
@@ -91,6 +102,15 @@ object IonIcon {
     
     @scala.inline
     def setMode(value: String): Self = this.set("mode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSanitize(value: Boolean): Self = this.set("sanitize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAriaHidden(value: String): Self = this.set("ariaHidden", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAriaHidden: Self = this.set("ariaHidden", js.undefined)
     
     @scala.inline
     def setAriaLabel(value: String): Self = this.set("ariaLabel", value.asInstanceOf[js.Any])

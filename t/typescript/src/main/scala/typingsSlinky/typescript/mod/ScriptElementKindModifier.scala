@@ -27,6 +27,12 @@ object ScriptElementKindModifier extends js.Object {
     extends TopLevel[ambientModifier with java.lang.String]
   
   @js.native
+  sealed trait deprecatedModifier extends ScriptElementKindModifier
+  /* "deprecated" */ @js.native
+  object deprecatedModifier
+    extends TopLevel[deprecatedModifier with java.lang.String]
+  
+  @js.native
   sealed trait dtsModifier extends ScriptElementKindModifier
   /* ".d.ts" */ @js.native
   object dtsModifier

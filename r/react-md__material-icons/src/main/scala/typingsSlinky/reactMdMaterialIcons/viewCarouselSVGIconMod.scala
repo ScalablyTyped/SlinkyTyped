@@ -12,5 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object viewCarouselSVGIconMod extends js.Object {
   
-  val default: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
+  val ViewCarouselSVGIcon: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
 }

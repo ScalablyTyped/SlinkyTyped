@@ -1,8 +1,8 @@
 package typingsSlinky.xterm
 
-import typingsSlinky.xterm.mod.FontWeight
 import typingsSlinky.xterm.mod.LogLevel
 import typingsSlinky.xterm.mod.RendererType
+import typingsSlinky.xterm.mod._FontWeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -181,31 +181,31 @@ object xtermStrings {
   def wordSeparator: wordSeparator = "wordSeparator".asInstanceOf[wordSeparator]
   
   @js.native
-  sealed trait `100` extends FontWeight
+  sealed trait `100` extends _FontWeight
   
   @js.native
-  sealed trait `200` extends FontWeight
+  sealed trait `200` extends _FontWeight
   
   @js.native
-  sealed trait `300` extends FontWeight
+  sealed trait `300` extends _FontWeight
   
   @js.native
-  sealed trait `400` extends FontWeight
+  sealed trait `400` extends _FontWeight
   
   @js.native
-  sealed trait `500` extends FontWeight
+  sealed trait `500` extends _FontWeight
   
   @js.native
-  sealed trait `600` extends FontWeight
+  sealed trait `600` extends _FontWeight
   
   @js.native
-  sealed trait `700` extends FontWeight
+  sealed trait `700` extends _FontWeight
   
   @js.native
-  sealed trait `800` extends FontWeight
+  sealed trait `800` extends _FontWeight
   
   @js.native
-  sealed trait `900` extends FontWeight
+  sealed trait `900` extends _FontWeight
   
   @js.native
   sealed trait allowTransparency extends js.Object
@@ -229,7 +229,7 @@ object xtermStrings {
   sealed trait block extends js.Object
   
   @js.native
-  sealed trait bold extends FontWeight
+  sealed trait bold extends _FontWeight
   
   @js.native
   sealed trait both extends js.Object
@@ -298,7 +298,7 @@ object xtermStrings {
   sealed trait none extends js.Object
   
   @js.native
-  sealed trait normal extends FontWeight
+  sealed trait normal extends _FontWeight
   
   @js.native
   sealed trait off extends LogLevel

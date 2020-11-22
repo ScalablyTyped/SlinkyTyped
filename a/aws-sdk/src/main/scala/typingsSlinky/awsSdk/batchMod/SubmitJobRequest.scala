@@ -53,6 +53,11 @@ trait SubmitJobRequest extends js.Object {
   var retryStrategy: js.UndefOr[RetryStrategy] = js.native
   
   /**
+    * The tags that you apply to the job request to help you categorize and organize your resources. Each tag consists of a key and an optional value. For more information, see Tagging AWS Resources in AWS General Reference.
+    */
+  var tags: js.UndefOr[TagrisTagsMap] = js.native
+  
+  /**
     * The timeout configuration for this SubmitJob operation. You can specify a timeout duration after which AWS Batch terminates your jobs if they have not finished. If a job is terminated due to a timeout, it is not retried. The minimum value for the timeout is 60 seconds. This configuration overrides any timeout configuration specified in the job definition. For array jobs, child jobs have the same timeout configuration as the parent job. For more information, see Job Timeouts in the Amazon Elastic Container Service Developer Guide.
     */
   var timeout: js.UndefOr[JobTimeout] = js.native
@@ -127,6 +132,12 @@ object SubmitJobRequest {
     
     @scala.inline
     def deleteRetryStrategy: Self = this.set("retryStrategy", js.undefined)
+    
+    @scala.inline
+    def setTags(value: TagrisTagsMap): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
     
     @scala.inline
     def setTimeout(value: JobTimeout): Self = this.set("timeout", value.asInstanceOf[js.Any])

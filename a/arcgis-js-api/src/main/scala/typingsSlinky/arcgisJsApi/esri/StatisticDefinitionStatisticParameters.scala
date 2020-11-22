@@ -12,14 +12,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StatisticDefinitionStatisticParameters extends Object {
   
   /**
-    * Specify `ASC` (ascending) or `DESC` (descending) to control the order of the data. For example, in a data set of 10 values from 1 to 10, the percentile value for 0.9 with `orderBy` set to ascending (`ASC`) is 9, but when `ordenBy` is set to descending (`DESC`) the result is 2. The default is `ASC`.
+    * Specify `ASC` (ascending) or `DESC` (descending) to control the order of the data.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#statisticParameters)
     */
   var orderBy: js.UndefOr[ASC | DESC] = js.native
   
   /**
-    * Percentile value. This should be a decimal value between 0 and 1.
+    * Percentile value.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-StatisticDefinition.html#statisticParameters)
     */

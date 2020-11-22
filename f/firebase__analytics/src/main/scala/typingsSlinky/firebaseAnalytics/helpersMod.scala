@@ -4,9 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLScriptElement
 import typingsSlinky.firebaseAnalytics.anon.GtagCore
 import typingsSlinky.firebaseAnalyticsTypes.mod.DataLayer
-import typingsSlinky.firebaseAnalyticsTypes.mod.Gtag
-import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
-import typingsSlinky.firebaseInstallationsTypes.mod.FirebaseInstallations
+import typingsSlinky.firebaseAnalyticsTypes.mod.DynamicConfig
+import typingsSlinky.firebaseAnalyticsTypes.mod.MinimalDynamicConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,12 +18,12 @@ object helpersMod extends js.Object {
   
   def getOrCreateDataLayer(dataLayerName: String): DataLayer = js.native
   
-  def initializeGAId(app: FirebaseApp, installations: FirebaseInstallations, gtagCore: Gtag): js.Promise[Unit] = js.native
-  
   def insertScriptTag(dataLayerName: String): Unit = js.native
   
   def wrapOrCreateGtag(
-    initializedIdPromisesMap: StringDictionary[js.Promise[Unit]],
+    initializationPromisesMap: StringDictionary[js.Promise[String]],
+    dynamicConfigPromisesList: js.Array[js.Promise[DynamicConfig | MinimalDynamicConfig]],
+    measurementIdToAppId: StringDictionary[String],
     dataLayerName: String,
     gtagFunctionName: String
   ): GtagCore = js.native

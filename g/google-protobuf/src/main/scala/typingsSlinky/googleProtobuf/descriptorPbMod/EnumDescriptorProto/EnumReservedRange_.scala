@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class EnumReservedRange_ () extends Message {
   
-  def clearEnd(): Unit = js.native
+  def clearEnd(): EnumReservedRange = js.native
   
-  def clearStart(): Unit = js.native
+  def clearStart(): EnumReservedRange = js.native
   
   def getEnd(): js.UndefOr[Double] = js.native
   
@@ -21,7 +21,7 @@ class EnumReservedRange_ () extends Message {
   
   def hasStart(): Boolean = js.native
   
-  def setEnd(value: Double): Unit = js.native
+  def setEnd(value: Double): EnumReservedRange = js.native
   
-  def setStart(value: Double): Unit = js.native
+  def setStart(value: Double): EnumReservedRange = js.native
 }

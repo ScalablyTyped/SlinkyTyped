@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkUtilFormatUrl
 
-import typingsSlinky.awsSdkTypes.httpMod.HttpRequest
+import typingsSlinky.awsSdkUtilFormatUrl.anon.OmitHttpRequestheadersmet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def formatUrl(request: HttpRequest[js.typedarray.Uint8Array]): String = js.native
+  def formatUrl(request: OmitHttpRequestheadersmet): String = js.native
 }

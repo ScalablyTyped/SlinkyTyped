@@ -1,6 +1,5 @@
 package typingsSlinky.nodegit.mod
 
-import typingsSlinky.nodegit.fetchOptionsMod.FetchOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,5 +13,5 @@ class Fetch ()
 @js.native
 object Fetch extends js.Object {
   
-  def initOptions(opts: FetchOptions, version: Double): Double = js.native
+  def initOptions(opts: typingsSlinky.nodegit.fetchOptionsMod.FetchOptions, version: Double): Double = js.native
 }

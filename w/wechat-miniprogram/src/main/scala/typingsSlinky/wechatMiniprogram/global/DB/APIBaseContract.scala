@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("DB.APIBaseContract")
 @js.native
-class APIBaseContract[PROMISE_RETURN, CALLBACK_RETURN, PARAM /* <: IAPIParam[_] */, CONTEXT] ()
-  extends typingsSlinky.wechatMiniprogram.DB.APIBaseContract[PROMISE_RETURN, CALLBACK_RETURN, PARAM, CONTEXT]
+class APIBaseContract[PromiseReturn, CallbackReturn, Param /* <: IAPIParam[_] */, Context] ()
+  extends typingsSlinky.wechatMiniprogram.DB.APIBaseContract[PromiseReturn, CallbackReturn, Param, Context]

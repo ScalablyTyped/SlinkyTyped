@@ -18,17 +18,6 @@ class Template protected () extends Node {
     children: js.Array[Node],
     references: js.Array[Reference],
     variables: js.Array[Variable],
-    sourceSpan: ParseSourceSpan
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
     sourceSpan: ParseSourceSpan,
     startSourceSpan: ParseSourceSpan
   ) = this()
@@ -42,77 +31,8 @@ class Template protected () extends Node {
     references: js.Array[Reference],
     variables: js.Array[Variable],
     sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: ParseSourceSpan
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
-    sourceSpan: ParseSourceSpan,
     startSourceSpan: ParseSourceSpan,
     endSourceSpan: ParseSourceSpan
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: Null,
-    i18n: Message
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: Null,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: ParseSourceSpan,
-    i18n: Message
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: ParseSourceSpan,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
   ) = this()
   def this(
     tagName: String,
@@ -185,7 +105,7 @@ class Template protected () extends Node {
   
   var references: js.Array[Reference] = js.native
   
-  var startSourceSpan: ParseSourceSpan | Null = js.native
+  var startSourceSpan: ParseSourceSpan = js.native
   
   var tagName: String = js.native
   

@@ -13,6 +13,7 @@ import typingsSlinky.monacoEditor.mod.editor.EditorOption.autoSurround
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.automaticLayout
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.codeLens
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.colorDecorators
+import typingsSlinky.monacoEditor.mod.editor.EditorOption.columnSelection
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.comments
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.contextmenu
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.copyWithSyntaxHighlighting
@@ -22,6 +23,7 @@ import typingsSlinky.monacoEditor.mod.editor.EditorOption.cursorStyle
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.cursorSurroundingLines
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.cursorSurroundingLinesStyle
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.cursorWidth
+import typingsSlinky.monacoEditor.mod.editor.EditorOption.definitionLinkOpensInPeek
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.disableLayerHinting
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.disableMonospaceOptimizations
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.dragAndDrop
@@ -66,16 +68,19 @@ import typingsSlinky.monacoEditor.mod.editor.EditorOption.multiCursorPaste
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.occurrencesHighlight
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.overviewRulerBorder
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.overviewRulerLanes
+import typingsSlinky.monacoEditor.mod.editor.EditorOption.padding
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.parameterHints
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.peekWidgetDefaultFocus
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.pixelRatio
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.quickSuggestions
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.quickSuggestionsDelay
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.readOnly
+import typingsSlinky.monacoEditor.mod.editor.EditorOption.renameOnType
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.renderControlCharacters
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.renderFinalNewline
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.renderIndentGuides
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.renderLineHighlight
+import typingsSlinky.monacoEditor.mod.editor.EditorOption.renderLineHighlightOnlyWhenFocus
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.renderValidationDecorations
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.renderWhitespace
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.revealHorizontalRightPadding
@@ -83,10 +88,12 @@ import typingsSlinky.monacoEditor.mod.editor.EditorOption.roundedSelection
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.rulers
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.scrollBeyondLastColumn
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.scrollBeyondLastLine
+import typingsSlinky.monacoEditor.mod.editor.EditorOption.scrollPredominantAxis
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.scrollbar
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.selectOnLineNumbers
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.selectionClipboard
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.selectionHighlight
+import typingsSlinky.monacoEditor.mod.editor.EditorOption.showDeprecated
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.showFoldingControls
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.showUnused
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.smoothScrolling
@@ -99,6 +106,9 @@ import typingsSlinky.monacoEditor.mod.editor.EditorOption.suggestOnTriggerCharac
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.suggestSelection
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.tabCompletion
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.tabFocusMode
+import typingsSlinky.monacoEditor.mod.editor.EditorOption.tabIndex
+import typingsSlinky.monacoEditor.mod.editor.EditorOption.unfoldOnClickAfterEndOfLine
+import typingsSlinky.monacoEditor.mod.editor.EditorOption.unusualLineTerminators
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.useTabStops
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.wordSeparators
 import typingsSlinky.monacoEditor.mod.editor.EditorOption.wordWrap
@@ -134,6 +144,7 @@ import typingsSlinky.monacoEditor.monacoEditorStrings.none
 import typingsSlinky.monacoEditor.monacoEditorStrings.off
 import typingsSlinky.monacoEditor.monacoEditorStrings.on
 import typingsSlinky.monacoEditor.monacoEditorStrings.onlySnippets
+import typingsSlinky.monacoEditor.monacoEditorStrings.prompt
 import typingsSlinky.monacoEditor.monacoEditorStrings.recentlyUsed
 import typingsSlinky.monacoEditor.monacoEditorStrings.recentlyUsedByPrefix
 import typingsSlinky.monacoEditor.monacoEditorStrings.selection
@@ -142,6 +153,7 @@ import typingsSlinky.monacoEditor.monacoEditorStrings.smart
 import typingsSlinky.monacoEditor.monacoEditorStrings.spread
 import typingsSlinky.monacoEditor.monacoEditorStrings.text
 import typingsSlinky.monacoEditor.monacoEditorStrings.top
+import typingsSlinky.monacoEditor.monacoEditorStrings.trailing
 import typingsSlinky.monacoEditor.monacoEditorStrings.tree
 import typingsSlinky.monacoEditor.monacoEditorStrings.wordWrapColumn
 import scala.scalajs.js
@@ -201,6 +213,8 @@ trait EditorOptionsType extends js.Object {
   
   var colorDecorators: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.colorDecorators, Boolean] = js.native
   
+  var columnSelection: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.columnSelection, Boolean] = js.native
+  
   var comments: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.comments, EditorCommentsOptions] = js.native
   
   var contextmenu: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.contextmenu, Boolean] = js.native
@@ -233,6 +247,11 @@ trait EditorOptionsType extends js.Object {
   ] = js.native
   
   var cursorWidth: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.cursorWidth, Double] = js.native
+  
+  var definitionLinkOpensInPeek: IEditorOption[
+    typingsSlinky.monacoEditor.mod.editor.EditorOption.definitionLinkOpensInPeek, 
+    Boolean
+  ] = js.native
   
   var disableLayerHinting: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.disableLayerHinting, Boolean] = js.native
   
@@ -364,6 +383,11 @@ trait EditorOptionsType extends js.Object {
   
   var overviewRulerLanes: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.overviewRulerLanes, Double] = js.native
   
+  var padding: IEditorOption[
+    typingsSlinky.monacoEditor.mod.editor.EditorOption.padding, 
+    InternalEditorPaddingOptions
+  ] = js.native
+  
   var parameterHints: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.parameterHints, 
     InternalParameterHintOptions
@@ -385,6 +409,8 @@ trait EditorOptionsType extends js.Object {
   
   var readOnly: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.readOnly, Boolean] = js.native
   
+  var renameOnType: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.renameOnType, Boolean] = js.native
+  
   var renderControlCharacters: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.renderControlCharacters, 
     Boolean
@@ -399,6 +425,11 @@ trait EditorOptionsType extends js.Object {
     all | line | none | gutter
   ] = js.native
   
+  var renderLineHighlightOnlyWhenFocus: IEditorOption[
+    typingsSlinky.monacoEditor.mod.editor.EditorOption.renderLineHighlightOnlyWhenFocus, 
+    Boolean
+  ] = js.native
+  
   var renderValidationDecorations: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.renderValidationDecorations, 
     on | off | editable
@@ -406,7 +437,7 @@ trait EditorOptionsType extends js.Object {
   
   var renderWhitespace: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.renderWhitespace, 
-    all | none | boundary | selection
+    all | none | boundary | selection | trailing
   ] = js.native
   
   var revealHorizontalRightPadding: IEditorOption[
@@ -422,6 +453,8 @@ trait EditorOptionsType extends js.Object {
   
   var scrollBeyondLastLine: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.scrollBeyondLastLine, Boolean] = js.native
   
+  var scrollPredominantAxis: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.scrollPredominantAxis, Boolean] = js.native
+  
   var scrollbar: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.scrollbar, 
     InternalEditorScrollbarOptions
@@ -432,6 +465,8 @@ trait EditorOptionsType extends js.Object {
   var selectionClipboard: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.selectionClipboard, Boolean] = js.native
   
   var selectionHighlight: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.selectionHighlight, Boolean] = js.native
+  
+  var showDeprecated: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.showDeprecated, Boolean] = js.native
   
   var showFoldingControls: IEditorOption[
     typingsSlinky.monacoEditor.mod.editor.EditorOption.showFoldingControls, 
@@ -471,6 +506,18 @@ trait EditorOptionsType extends js.Object {
   ] = js.native
   
   var tabFocusMode: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.tabFocusMode, Boolean] = js.native
+  
+  var tabIndex: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.tabIndex, Double] = js.native
+  
+  var unfoldOnClickAfterEndOfLine: IEditorOption[
+    typingsSlinky.monacoEditor.mod.editor.EditorOption.unfoldOnClickAfterEndOfLine, 
+    Boolean
+  ] = js.native
+  
+  var unusualLineTerminators: IEditorOption[
+    typingsSlinky.monacoEditor.mod.editor.EditorOption.unusualLineTerminators, 
+    off | prompt | auto
+  ] = js.native
   
   var useTabStops: IEditorOption[typingsSlinky.monacoEditor.mod.editor.EditorOption.useTabStops, Boolean] = js.native
   
@@ -524,6 +571,7 @@ object EditorOptionsType {
     automaticLayout: IEditorOption[automaticLayout, Boolean],
     codeLens: IEditorOption[codeLens, Boolean],
     colorDecorators: IEditorOption[colorDecorators, Boolean],
+    columnSelection: IEditorOption[columnSelection, Boolean],
     comments: IEditorOption[comments, EditorCommentsOptions],
     contextmenu: IEditorOption[contextmenu, Boolean],
     copyWithSyntaxHighlighting: IEditorOption[copyWithSyntaxHighlighting, Boolean],
@@ -533,6 +581,7 @@ object EditorOptionsType {
     cursorSurroundingLines: IEditorOption[cursorSurroundingLines, Double],
     cursorSurroundingLinesStyle: IEditorOption[cursorSurroundingLinesStyle, default | all],
     cursorWidth: IEditorOption[cursorWidth, Double],
+    definitionLinkOpensInPeek: IEditorOption[definitionLinkOpensInPeek, Boolean],
     disableLayerHinting: IEditorOption[disableLayerHinting, Boolean],
     disableMonospaceOptimizations: IEditorOption[disableMonospaceOptimizations, Boolean],
     dragAndDrop: IEditorOption[dragAndDrop, Boolean],
@@ -577,6 +626,7 @@ object EditorOptionsType {
     occurrencesHighlight: IEditorOption[occurrencesHighlight, Boolean],
     overviewRulerBorder: IEditorOption[overviewRulerBorder, Boolean],
     overviewRulerLanes: IEditorOption[overviewRulerLanes, Double],
+    padding: IEditorOption[padding, InternalEditorPaddingOptions],
     parameterHints: IEditorOption[parameterHints, InternalParameterHintOptions],
     peekWidgetDefaultFocus: IEditorOption[
       peekWidgetDefaultFocus, 
@@ -586,21 +636,25 @@ object EditorOptionsType {
     quickSuggestions: IEditorOption[quickSuggestions, ValidQuickSuggestionsOptions],
     quickSuggestionsDelay: IEditorOption[quickSuggestionsDelay, Double],
     readOnly: IEditorOption[readOnly, Boolean],
+    renameOnType: IEditorOption[renameOnType, Boolean],
     renderControlCharacters: IEditorOption[renderControlCharacters, Boolean],
     renderFinalNewline: IEditorOption[renderFinalNewline, Boolean],
     renderIndentGuides: IEditorOption[renderIndentGuides, Boolean],
     renderLineHighlight: IEditorOption[renderLineHighlight, all | line | none | gutter],
+    renderLineHighlightOnlyWhenFocus: IEditorOption[renderLineHighlightOnlyWhenFocus, Boolean],
     renderValidationDecorations: IEditorOption[renderValidationDecorations, on | off | editable],
-    renderWhitespace: IEditorOption[renderWhitespace, all | none | boundary | selection],
+    renderWhitespace: IEditorOption[renderWhitespace, all | none | boundary | selection | trailing],
     revealHorizontalRightPadding: IEditorOption[revealHorizontalRightPadding, Double],
     roundedSelection: IEditorOption[roundedSelection, Boolean],
     rulers: IEditorOption[rulers, js.Object],
     scrollBeyondLastColumn: IEditorOption[scrollBeyondLastColumn, Double],
     scrollBeyondLastLine: IEditorOption[scrollBeyondLastLine, Boolean],
+    scrollPredominantAxis: IEditorOption[scrollPredominantAxis, Boolean],
     scrollbar: IEditorOption[scrollbar, InternalEditorScrollbarOptions],
     selectOnLineNumbers: IEditorOption[selectOnLineNumbers, Boolean],
     selectionClipboard: IEditorOption[selectionClipboard, Boolean],
     selectionHighlight: IEditorOption[selectionHighlight, Boolean],
+    showDeprecated: IEditorOption[showDeprecated, Boolean],
     showFoldingControls: IEditorOption[showFoldingControls, always | mouseover],
     showUnused: IEditorOption[showUnused, Boolean],
     smoothScrolling: IEditorOption[smoothScrolling, Boolean],
@@ -613,6 +667,9 @@ object EditorOptionsType {
     suggestSelection: IEditorOption[suggestSelection, first | recentlyUsed | recentlyUsedByPrefix],
     tabCompletion: IEditorOption[tabCompletion, on | off | onlySnippets],
     tabFocusMode: IEditorOption[tabFocusMode, Boolean],
+    tabIndex: IEditorOption[tabIndex, Double],
+    unfoldOnClickAfterEndOfLine: IEditorOption[unfoldOnClickAfterEndOfLine, Boolean],
+    unusualLineTerminators: IEditorOption[unusualLineTerminators, off | prompt | auto],
     useTabStops: IEditorOption[useTabStops, Boolean],
     wordSeparators: IEditorOption[wordSeparators, String],
     wordWrap: IEditorOption[wordWrap, on | off | wordWrapColumn | bounded],
@@ -624,7 +681,7 @@ object EditorOptionsType {
     wrappingInfo: IEditorOption[wrappingInfo, EditorWrappingInfo],
     wrappingStrategy: IEditorOption[wrappingStrategy, simple | advanced]
   ): EditorOptionsType = {
-    val __obj = js.Dynamic.literal(acceptSuggestionOnCommitCharacter = acceptSuggestionOnCommitCharacter.asInstanceOf[js.Any], acceptSuggestionOnEnter = acceptSuggestionOnEnter.asInstanceOf[js.Any], accessibilityPageSize = accessibilityPageSize.asInstanceOf[js.Any], accessibilitySupport = accessibilitySupport.asInstanceOf[js.Any], ariaLabel = ariaLabel.asInstanceOf[js.Any], autoClosingBrackets = autoClosingBrackets.asInstanceOf[js.Any], autoClosingOvertype = autoClosingOvertype.asInstanceOf[js.Any], autoClosingQuotes = autoClosingQuotes.asInstanceOf[js.Any], autoIndent = autoIndent.asInstanceOf[js.Any], autoSurround = autoSurround.asInstanceOf[js.Any], automaticLayout = automaticLayout.asInstanceOf[js.Any], codeLens = codeLens.asInstanceOf[js.Any], colorDecorators = colorDecorators.asInstanceOf[js.Any], comments = comments.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], copyWithSyntaxHighlighting = copyWithSyntaxHighlighting.asInstanceOf[js.Any], cursorBlinking = cursorBlinking.asInstanceOf[js.Any], cursorSmoothCaretAnimation = cursorSmoothCaretAnimation.asInstanceOf[js.Any], cursorStyle = cursorStyle.asInstanceOf[js.Any], cursorSurroundingLines = cursorSurroundingLines.asInstanceOf[js.Any], cursorSurroundingLinesStyle = cursorSurroundingLinesStyle.asInstanceOf[js.Any], cursorWidth = cursorWidth.asInstanceOf[js.Any], disableLayerHinting = disableLayerHinting.asInstanceOf[js.Any], disableMonospaceOptimizations = disableMonospaceOptimizations.asInstanceOf[js.Any], dragAndDrop = dragAndDrop.asInstanceOf[js.Any], editorClassName = editorClassName.asInstanceOf[js.Any], emptySelectionClipboard = emptySelectionClipboard.asInstanceOf[js.Any], extraEditorClassName = extraEditorClassName.asInstanceOf[js.Any], fastScrollSensitivity = fastScrollSensitivity.asInstanceOf[js.Any], find = find.asInstanceOf[js.Any], fixedOverflowWidgets = fixedOverflowWidgets.asInstanceOf[js.Any], folding = folding.asInstanceOf[js.Any], foldingHighlight = foldingHighlight.asInstanceOf[js.Any], foldingStrategy = foldingStrategy.asInstanceOf[js.Any], fontFamily = fontFamily.asInstanceOf[js.Any], fontInfo = fontInfo.asInstanceOf[js.Any], fontLigatures2 = fontLigatures2.asInstanceOf[js.Any], fontSize = fontSize.asInstanceOf[js.Any], fontWeight = fontWeight.asInstanceOf[js.Any], formatOnPaste = formatOnPaste.asInstanceOf[js.Any], formatOnType = formatOnType.asInstanceOf[js.Any], glyphMargin = glyphMargin.asInstanceOf[js.Any], gotoLocation = gotoLocation.asInstanceOf[js.Any], hideCursorInOverviewRuler = hideCursorInOverviewRuler.asInstanceOf[js.Any], highlightActiveIndentGuide = highlightActiveIndentGuide.asInstanceOf[js.Any], hover = hover.asInstanceOf[js.Any], inDiffEditor = inDiffEditor.asInstanceOf[js.Any], layoutInfo = layoutInfo.asInstanceOf[js.Any], letterSpacing = letterSpacing.asInstanceOf[js.Any], lightbulb = lightbulb.asInstanceOf[js.Any], lineDecorationsWidth = lineDecorationsWidth.asInstanceOf[js.Any], lineHeight = lineHeight.asInstanceOf[js.Any], lineNumbers = lineNumbers.asInstanceOf[js.Any], lineNumbersMinChars = lineNumbersMinChars.asInstanceOf[js.Any], links = links.asInstanceOf[js.Any], matchBrackets = matchBrackets.asInstanceOf[js.Any], minimap = minimap.asInstanceOf[js.Any], mouseStyle = mouseStyle.asInstanceOf[js.Any], mouseWheelScrollSensitivity = mouseWheelScrollSensitivity.asInstanceOf[js.Any], mouseWheelZoom = mouseWheelZoom.asInstanceOf[js.Any], multiCursorMergeOverlapping = multiCursorMergeOverlapping.asInstanceOf[js.Any], multiCursorModifier = multiCursorModifier.asInstanceOf[js.Any], multiCursorPaste = multiCursorPaste.asInstanceOf[js.Any], occurrencesHighlight = occurrencesHighlight.asInstanceOf[js.Any], overviewRulerBorder = overviewRulerBorder.asInstanceOf[js.Any], overviewRulerLanes = overviewRulerLanes.asInstanceOf[js.Any], parameterHints = parameterHints.asInstanceOf[js.Any], peekWidgetDefaultFocus = peekWidgetDefaultFocus.asInstanceOf[js.Any], pixelRatio = pixelRatio.asInstanceOf[js.Any], quickSuggestions = quickSuggestions.asInstanceOf[js.Any], quickSuggestionsDelay = quickSuggestionsDelay.asInstanceOf[js.Any], readOnly = readOnly.asInstanceOf[js.Any], renderControlCharacters = renderControlCharacters.asInstanceOf[js.Any], renderFinalNewline = renderFinalNewline.asInstanceOf[js.Any], renderIndentGuides = renderIndentGuides.asInstanceOf[js.Any], renderLineHighlight = renderLineHighlight.asInstanceOf[js.Any], renderValidationDecorations = renderValidationDecorations.asInstanceOf[js.Any], renderWhitespace = renderWhitespace.asInstanceOf[js.Any], revealHorizontalRightPadding = revealHorizontalRightPadding.asInstanceOf[js.Any], roundedSelection = roundedSelection.asInstanceOf[js.Any], rulers = rulers.asInstanceOf[js.Any], scrollBeyondLastColumn = scrollBeyondLastColumn.asInstanceOf[js.Any], scrollBeyondLastLine = scrollBeyondLastLine.asInstanceOf[js.Any], scrollbar = scrollbar.asInstanceOf[js.Any], selectOnLineNumbers = selectOnLineNumbers.asInstanceOf[js.Any], selectionClipboard = selectionClipboard.asInstanceOf[js.Any], selectionHighlight = selectionHighlight.asInstanceOf[js.Any], showFoldingControls = showFoldingControls.asInstanceOf[js.Any], showUnused = showUnused.asInstanceOf[js.Any], smoothScrolling = smoothScrolling.asInstanceOf[js.Any], snippetSuggestions = snippetSuggestions.asInstanceOf[js.Any], stopRenderingLineAfter = stopRenderingLineAfter.asInstanceOf[js.Any], suggest = suggest.asInstanceOf[js.Any], suggestFontSize = suggestFontSize.asInstanceOf[js.Any], suggestLineHeight = suggestLineHeight.asInstanceOf[js.Any], suggestOnTriggerCharacters = suggestOnTriggerCharacters.asInstanceOf[js.Any], suggestSelection = suggestSelection.asInstanceOf[js.Any], tabCompletion = tabCompletion.asInstanceOf[js.Any], tabFocusMode = tabFocusMode.asInstanceOf[js.Any], useTabStops = useTabStops.asInstanceOf[js.Any], wordSeparators = wordSeparators.asInstanceOf[js.Any], wordWrap = wordWrap.asInstanceOf[js.Any], wordWrapBreakAfterCharacters = wordWrapBreakAfterCharacters.asInstanceOf[js.Any], wordWrapBreakBeforeCharacters = wordWrapBreakBeforeCharacters.asInstanceOf[js.Any], wordWrapColumn = wordWrapColumn.asInstanceOf[js.Any], wordWrapMinified = wordWrapMinified.asInstanceOf[js.Any], wrappingIndent = wrappingIndent.asInstanceOf[js.Any], wrappingInfo = wrappingInfo.asInstanceOf[js.Any], wrappingStrategy = wrappingStrategy.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(acceptSuggestionOnCommitCharacter = acceptSuggestionOnCommitCharacter.asInstanceOf[js.Any], acceptSuggestionOnEnter = acceptSuggestionOnEnter.asInstanceOf[js.Any], accessibilityPageSize = accessibilityPageSize.asInstanceOf[js.Any], accessibilitySupport = accessibilitySupport.asInstanceOf[js.Any], ariaLabel = ariaLabel.asInstanceOf[js.Any], autoClosingBrackets = autoClosingBrackets.asInstanceOf[js.Any], autoClosingOvertype = autoClosingOvertype.asInstanceOf[js.Any], autoClosingQuotes = autoClosingQuotes.asInstanceOf[js.Any], autoIndent = autoIndent.asInstanceOf[js.Any], autoSurround = autoSurround.asInstanceOf[js.Any], automaticLayout = automaticLayout.asInstanceOf[js.Any], codeLens = codeLens.asInstanceOf[js.Any], colorDecorators = colorDecorators.asInstanceOf[js.Any], columnSelection = columnSelection.asInstanceOf[js.Any], comments = comments.asInstanceOf[js.Any], contextmenu = contextmenu.asInstanceOf[js.Any], copyWithSyntaxHighlighting = copyWithSyntaxHighlighting.asInstanceOf[js.Any], cursorBlinking = cursorBlinking.asInstanceOf[js.Any], cursorSmoothCaretAnimation = cursorSmoothCaretAnimation.asInstanceOf[js.Any], cursorStyle = cursorStyle.asInstanceOf[js.Any], cursorSurroundingLines = cursorSurroundingLines.asInstanceOf[js.Any], cursorSurroundingLinesStyle = cursorSurroundingLinesStyle.asInstanceOf[js.Any], cursorWidth = cursorWidth.asInstanceOf[js.Any], definitionLinkOpensInPeek = definitionLinkOpensInPeek.asInstanceOf[js.Any], disableLayerHinting = disableLayerHinting.asInstanceOf[js.Any], disableMonospaceOptimizations = disableMonospaceOptimizations.asInstanceOf[js.Any], dragAndDrop = dragAndDrop.asInstanceOf[js.Any], editorClassName = editorClassName.asInstanceOf[js.Any], emptySelectionClipboard = emptySelectionClipboard.asInstanceOf[js.Any], extraEditorClassName = extraEditorClassName.asInstanceOf[js.Any], fastScrollSensitivity = fastScrollSensitivity.asInstanceOf[js.Any], find = find.asInstanceOf[js.Any], fixedOverflowWidgets = fixedOverflowWidgets.asInstanceOf[js.Any], folding = folding.asInstanceOf[js.Any], foldingHighlight = foldingHighlight.asInstanceOf[js.Any], foldingStrategy = foldingStrategy.asInstanceOf[js.Any], fontFamily = fontFamily.asInstanceOf[js.Any], fontInfo = fontInfo.asInstanceOf[js.Any], fontLigatures2 = fontLigatures2.asInstanceOf[js.Any], fontSize = fontSize.asInstanceOf[js.Any], fontWeight = fontWeight.asInstanceOf[js.Any], formatOnPaste = formatOnPaste.asInstanceOf[js.Any], formatOnType = formatOnType.asInstanceOf[js.Any], glyphMargin = glyphMargin.asInstanceOf[js.Any], gotoLocation = gotoLocation.asInstanceOf[js.Any], hideCursorInOverviewRuler = hideCursorInOverviewRuler.asInstanceOf[js.Any], highlightActiveIndentGuide = highlightActiveIndentGuide.asInstanceOf[js.Any], hover = hover.asInstanceOf[js.Any], inDiffEditor = inDiffEditor.asInstanceOf[js.Any], layoutInfo = layoutInfo.asInstanceOf[js.Any], letterSpacing = letterSpacing.asInstanceOf[js.Any], lightbulb = lightbulb.asInstanceOf[js.Any], lineDecorationsWidth = lineDecorationsWidth.asInstanceOf[js.Any], lineHeight = lineHeight.asInstanceOf[js.Any], lineNumbers = lineNumbers.asInstanceOf[js.Any], lineNumbersMinChars = lineNumbersMinChars.asInstanceOf[js.Any], links = links.asInstanceOf[js.Any], matchBrackets = matchBrackets.asInstanceOf[js.Any], minimap = minimap.asInstanceOf[js.Any], mouseStyle = mouseStyle.asInstanceOf[js.Any], mouseWheelScrollSensitivity = mouseWheelScrollSensitivity.asInstanceOf[js.Any], mouseWheelZoom = mouseWheelZoom.asInstanceOf[js.Any], multiCursorMergeOverlapping = multiCursorMergeOverlapping.asInstanceOf[js.Any], multiCursorModifier = multiCursorModifier.asInstanceOf[js.Any], multiCursorPaste = multiCursorPaste.asInstanceOf[js.Any], occurrencesHighlight = occurrencesHighlight.asInstanceOf[js.Any], overviewRulerBorder = overviewRulerBorder.asInstanceOf[js.Any], overviewRulerLanes = overviewRulerLanes.asInstanceOf[js.Any], padding = padding.asInstanceOf[js.Any], parameterHints = parameterHints.asInstanceOf[js.Any], peekWidgetDefaultFocus = peekWidgetDefaultFocus.asInstanceOf[js.Any], pixelRatio = pixelRatio.asInstanceOf[js.Any], quickSuggestions = quickSuggestions.asInstanceOf[js.Any], quickSuggestionsDelay = quickSuggestionsDelay.asInstanceOf[js.Any], readOnly = readOnly.asInstanceOf[js.Any], renameOnType = renameOnType.asInstanceOf[js.Any], renderControlCharacters = renderControlCharacters.asInstanceOf[js.Any], renderFinalNewline = renderFinalNewline.asInstanceOf[js.Any], renderIndentGuides = renderIndentGuides.asInstanceOf[js.Any], renderLineHighlight = renderLineHighlight.asInstanceOf[js.Any], renderLineHighlightOnlyWhenFocus = renderLineHighlightOnlyWhenFocus.asInstanceOf[js.Any], renderValidationDecorations = renderValidationDecorations.asInstanceOf[js.Any], renderWhitespace = renderWhitespace.asInstanceOf[js.Any], revealHorizontalRightPadding = revealHorizontalRightPadding.asInstanceOf[js.Any], roundedSelection = roundedSelection.asInstanceOf[js.Any], rulers = rulers.asInstanceOf[js.Any], scrollBeyondLastColumn = scrollBeyondLastColumn.asInstanceOf[js.Any], scrollBeyondLastLine = scrollBeyondLastLine.asInstanceOf[js.Any], scrollPredominantAxis = scrollPredominantAxis.asInstanceOf[js.Any], scrollbar = scrollbar.asInstanceOf[js.Any], selectOnLineNumbers = selectOnLineNumbers.asInstanceOf[js.Any], selectionClipboard = selectionClipboard.asInstanceOf[js.Any], selectionHighlight = selectionHighlight.asInstanceOf[js.Any], showDeprecated = showDeprecated.asInstanceOf[js.Any], showFoldingControls = showFoldingControls.asInstanceOf[js.Any], showUnused = showUnused.asInstanceOf[js.Any], smoothScrolling = smoothScrolling.asInstanceOf[js.Any], snippetSuggestions = snippetSuggestions.asInstanceOf[js.Any], stopRenderingLineAfter = stopRenderingLineAfter.asInstanceOf[js.Any], suggest = suggest.asInstanceOf[js.Any], suggestFontSize = suggestFontSize.asInstanceOf[js.Any], suggestLineHeight = suggestLineHeight.asInstanceOf[js.Any], suggestOnTriggerCharacters = suggestOnTriggerCharacters.asInstanceOf[js.Any], suggestSelection = suggestSelection.asInstanceOf[js.Any], tabCompletion = tabCompletion.asInstanceOf[js.Any], tabFocusMode = tabFocusMode.asInstanceOf[js.Any], tabIndex = tabIndex.asInstanceOf[js.Any], unfoldOnClickAfterEndOfLine = unfoldOnClickAfterEndOfLine.asInstanceOf[js.Any], unusualLineTerminators = unusualLineTerminators.asInstanceOf[js.Any], useTabStops = useTabStops.asInstanceOf[js.Any], wordSeparators = wordSeparators.asInstanceOf[js.Any], wordWrap = wordWrap.asInstanceOf[js.Any], wordWrapBreakAfterCharacters = wordWrapBreakAfterCharacters.asInstanceOf[js.Any], wordWrapBreakBeforeCharacters = wordWrapBreakBeforeCharacters.asInstanceOf[js.Any], wordWrapColumn = wordWrapColumn.asInstanceOf[js.Any], wordWrapMinified = wordWrapMinified.asInstanceOf[js.Any], wrappingIndent = wrappingIndent.asInstanceOf[js.Any], wrappingInfo = wrappingInfo.asInstanceOf[js.Any], wrappingStrategy = wrappingStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorOptionsType]
   }
   
@@ -683,6 +740,9 @@ object EditorOptionsType {
     def setColorDecorators(value: IEditorOption[colorDecorators, Boolean]): Self = this.set("colorDecorators", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setColumnSelection(value: IEditorOption[columnSelection, Boolean]): Self = this.set("columnSelection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setComments(value: IEditorOption[comments, EditorCommentsOptions]): Self = this.set("comments", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -708,6 +768,9 @@ object EditorOptionsType {
     
     @scala.inline
     def setCursorWidth(value: IEditorOption[cursorWidth, Double]): Self = this.set("cursorWidth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDefinitionLinkOpensInPeek(value: IEditorOption[definitionLinkOpensInPeek, Boolean]): Self = this.set("definitionLinkOpensInPeek", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDisableLayerHinting(value: IEditorOption[disableLayerHinting, Boolean]): Self = this.set("disableLayerHinting", value.asInstanceOf[js.Any])
@@ -842,6 +905,9 @@ object EditorOptionsType {
     def setOverviewRulerLanes(value: IEditorOption[overviewRulerLanes, Double]): Self = this.set("overviewRulerLanes", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setPadding(value: IEditorOption[padding, InternalEditorPaddingOptions]): Self = this.set("padding", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setParameterHints(value: IEditorOption[parameterHints, InternalParameterHintOptions]): Self = this.set("parameterHints", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -865,6 +931,9 @@ object EditorOptionsType {
     def setReadOnly(value: IEditorOption[readOnly, Boolean]): Self = this.set("readOnly", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setRenameOnType(value: IEditorOption[renameOnType, Boolean]): Self = this.set("renameOnType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setRenderControlCharacters(value: IEditorOption[renderControlCharacters, Boolean]): Self = this.set("renderControlCharacters", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -877,10 +946,13 @@ object EditorOptionsType {
     def setRenderLineHighlight(value: IEditorOption[renderLineHighlight, all | line | none | gutter]): Self = this.set("renderLineHighlight", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setRenderLineHighlightOnlyWhenFocus(value: IEditorOption[renderLineHighlightOnlyWhenFocus, Boolean]): Self = this.set("renderLineHighlightOnlyWhenFocus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setRenderValidationDecorations(value: IEditorOption[renderValidationDecorations, on | off | editable]): Self = this.set("renderValidationDecorations", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRenderWhitespace(value: IEditorOption[renderWhitespace, all | none | boundary | selection]): Self = this.set("renderWhitespace", value.asInstanceOf[js.Any])
+    def setRenderWhitespace(value: IEditorOption[renderWhitespace, all | none | boundary | selection | trailing]): Self = this.set("renderWhitespace", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRevealHorizontalRightPadding(value: IEditorOption[revealHorizontalRightPadding, Double]): Self = this.set("revealHorizontalRightPadding", value.asInstanceOf[js.Any])
@@ -898,6 +970,9 @@ object EditorOptionsType {
     def setScrollBeyondLastLine(value: IEditorOption[scrollBeyondLastLine, Boolean]): Self = this.set("scrollBeyondLastLine", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setScrollPredominantAxis(value: IEditorOption[scrollPredominantAxis, Boolean]): Self = this.set("scrollPredominantAxis", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setScrollbar(value: IEditorOption[scrollbar, InternalEditorScrollbarOptions]): Self = this.set("scrollbar", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -908,6 +983,9 @@ object EditorOptionsType {
     
     @scala.inline
     def setSelectionHighlight(value: IEditorOption[selectionHighlight, Boolean]): Self = this.set("selectionHighlight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setShowDeprecated(value: IEditorOption[showDeprecated, Boolean]): Self = this.set("showDeprecated", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setShowFoldingControls(value: IEditorOption[showFoldingControls, always | mouseover]): Self = this.set("showFoldingControls", value.asInstanceOf[js.Any])
@@ -944,6 +1022,15 @@ object EditorOptionsType {
     
     @scala.inline
     def setTabFocusMode(value: IEditorOption[tabFocusMode, Boolean]): Self = this.set("tabFocusMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTabIndex(value: IEditorOption[tabIndex, Double]): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUnfoldOnClickAfterEndOfLine(value: IEditorOption[unfoldOnClickAfterEndOfLine, Boolean]): Self = this.set("unfoldOnClickAfterEndOfLine", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUnusualLineTerminators(value: IEditorOption[unusualLineTerminators, off | prompt | auto]): Self = this.set("unusualLineTerminators", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUseTabStops(value: IEditorOption[useTabStops, Boolean]): Self = this.set("useTabStops", value.asInstanceOf[js.Any])

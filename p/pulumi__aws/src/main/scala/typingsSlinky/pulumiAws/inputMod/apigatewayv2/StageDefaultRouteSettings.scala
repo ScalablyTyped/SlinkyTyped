@@ -21,7 +21,7 @@ trait StageDefaultRouteSettings extends js.Object {
   
   /**
     * The logging level for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
-    * Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs.
+    * Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
     */
   var loggingLevel: js.UndefOr[Input[String]] = js.native
   

@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object tabsMod {
   
-  type FuncChilden = js.Function0[scala.Unit]
+  type FuncChildren = js.Function0[scala.Unit]
 }

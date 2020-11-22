@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BaseRule extends RuleObject {
+trait BaseRule extends js.Object {
   
   var enum: js.UndefOr[js.Array[StoreValue]] = js.native
   
@@ -28,8 +28,6 @@ trait BaseRule extends RuleObject {
   
   /** Customize rule level `validateTrigger`. Must be subset of Field `validateTrigger` */
   var validateTrigger: js.UndefOr[String | js.Array[String]] = js.native
-  
-  var validator: js.UndefOr[Validator] = js.native
   
   var whitespace: js.UndefOr[Boolean] = js.native
 }
@@ -124,14 +122,6 @@ object BaseRule {
     
     @scala.inline
     def deleteValidateTrigger: Self = this.set("validateTrigger", js.undefined)
-    
-    @scala.inline
-    def setValidator(
-      value: (/* rule */ RuleObject, /* value */ StoreValue, /* callback */ js.Function1[/* error */ js.UndefOr[String], Unit]) => js.Promise[Unit] | Unit
-    ): Self = this.set("validator", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def deleteValidator: Self = this.set("validator", js.undefined)
     
     @scala.inline
     def setWhitespace(value: Boolean): Self = this.set("whitespace", value.asInstanceOf[js.Any])

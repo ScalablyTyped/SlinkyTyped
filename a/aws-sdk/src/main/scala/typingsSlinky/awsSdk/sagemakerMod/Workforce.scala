@@ -28,7 +28,7 @@ trait Workforce extends js.Object {
   var OidcConfig: js.UndefOr[OidcConfigForResponse] = js.native
   
   /**
-    * A list of one to ten IP address ranges (CIDRs) to be added to the workforce allow list.
+    * A list of one to ten IP address ranges (CIDRs) to be added to the workforce allow list. By default, a workforce isn't restricted to specific IP addresses.
     */
   var SourceIpConfig: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.SourceIpConfig] = js.native
   

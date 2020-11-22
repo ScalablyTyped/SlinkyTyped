@@ -15,6 +15,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GetSignedUrlConfig extends js.Object {
   
+  var accessibleAt: js.UndefOr[String | Double | js.Date] = js.native
+  
   var action: read | write | delete_ | resumable = js.native
   
   var cname: js.UndefOr[String] = js.native
@@ -70,6 +72,15 @@ object GetSignedUrlConfig {
     
     @scala.inline
     def setExpires(value: String | Double | js.Date): Self = this.set("expires", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAccessibleAtDate(value: js.Date): Self = this.set("accessibleAt", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAccessibleAt(value: String | Double | js.Date): Self = this.set("accessibleAt", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccessibleAt: Self = this.set("accessibleAt", js.undefined)
     
     @scala.inline
     def setCname(value: String): Self = this.set("cname", value.asInstanceOf[js.Any])

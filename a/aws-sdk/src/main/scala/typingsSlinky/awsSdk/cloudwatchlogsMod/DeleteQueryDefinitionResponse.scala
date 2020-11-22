@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DeleteQueryDefinitionResponse extends js.Object {
   
+  /**
+    * A value of TRUE indicates that the operation succeeded. FALSE indicates that the operation failed.
+    */
   var success: js.UndefOr[Success] = js.native
 }
 object DeleteQueryDefinitionResponse {

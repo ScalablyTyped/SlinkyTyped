@@ -49,7 +49,7 @@ trait PowerMonitor extends EventEmitter {
     */
   def getSystemIdleTime(): Double = js.native
   
-  // Docs: http://electronjs.org/docs/api/power-monitor
+  // Docs: https://electronjs.org/docs/api/power-monitor
   /**
     * Emitted when the system is about to lock the screen.
     *
@@ -60,21 +60,21 @@ trait PowerMonitor extends EventEmitter {
   /**
     * Emitted when the system changes to AC power.
     *
-    * @platform win32
+    * @platform darwin,win32
     */
   @JSName("on")
   def on_onac(event: `on-ac`, listener: js.Function): this.type = js.native
   /**
     * Emitted when system changes to battery power.
     *
-    * @platform win32
+    * @platform darwin
     */
   @JSName("on")
   def on_onbattery(event: `on-battery`, listener: js.Function): this.type = js.native
   /**
     * Emitted when system is resuming.
     *
-    * @platform linux,win32
+    * @platform darwin,win32
     */
   @JSName("on")
   def on_resume(event: resume, listener: js.Function): this.type = js.native
@@ -91,7 +91,7 @@ trait PowerMonitor extends EventEmitter {
   /**
     * Emitted when the system is suspending.
     *
-    * @platform linux,win32
+    * @platform darwin,win32
     */
   @JSName("on")
   def on_suspend(event: suspend, listener: js.Function): this.type = js.native

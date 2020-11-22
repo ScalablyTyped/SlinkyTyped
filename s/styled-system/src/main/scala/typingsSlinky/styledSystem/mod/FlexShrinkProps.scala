@@ -15,7 +15,7 @@ trait FlexShrinkProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.
     */
   var flexShrink: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexShrink */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object FlexShrinkProps {
     @scala.inline
     def setFlexShrink(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexShrink */ _, 
           ThemeType
         ]
     ): Self = this.set("flexShrink", value.asInstanceOf[js.Any])

@@ -18,7 +18,23 @@ object visitLexicalEnvironment extends js.Object {
     visitor: Visitor,
     context: TransformationContext,
     start: js.UndefOr[scala.Nothing],
+    ensureUseStrict: js.UndefOr[scala.Nothing],
+    nodesVisitor: NodesVisitor
+  ): NodeArray[Statement] = js.native
+  def apply(
+    statements: NodeArray[Statement],
+    visitor: Visitor,
+    context: TransformationContext,
+    start: js.UndefOr[scala.Nothing],
     ensureUseStrict: Boolean
+  ): NodeArray[Statement] = js.native
+  def apply(
+    statements: NodeArray[Statement],
+    visitor: Visitor,
+    context: TransformationContext,
+    start: js.UndefOr[scala.Nothing],
+    ensureUseStrict: Boolean,
+    nodesVisitor: NodesVisitor
   ): NodeArray[Statement] = js.native
   def apply(statements: NodeArray[Statement], visitor: Visitor, context: TransformationContext, start: Double): NodeArray[Statement] = js.native
   def apply(
@@ -26,6 +42,22 @@ object visitLexicalEnvironment extends js.Object {
     visitor: Visitor,
     context: TransformationContext,
     start: Double,
+    ensureUseStrict: js.UndefOr[scala.Nothing],
+    nodesVisitor: NodesVisitor
+  ): NodeArray[Statement] = js.native
+  def apply(
+    statements: NodeArray[Statement],
+    visitor: Visitor,
+    context: TransformationContext,
+    start: Double,
     ensureUseStrict: Boolean
+  ): NodeArray[Statement] = js.native
+  def apply(
+    statements: NodeArray[Statement],
+    visitor: Visitor,
+    context: TransformationContext,
+    start: Double,
+    ensureUseStrict: Boolean,
+    nodesVisitor: NodesVisitor
   ): NodeArray[Statement] = js.native
 }

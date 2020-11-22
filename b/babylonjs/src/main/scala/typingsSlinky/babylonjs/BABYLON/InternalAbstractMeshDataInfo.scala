@@ -16,6 +16,10 @@ trait InternalAbstractMeshDataInfo extends js.Object {
   
   var _computeBonesUsingShaders: Boolean = js.native
   
+  var _currentLOD: Nullable[AbstractMesh] = js.native
+  
+  var _currentLODIsUpToDate: Boolean = js.native
+  
   var _facetData: FacetDataStorage = js.native
   
   var _hasVertexAlpha: Boolean = js.native
@@ -47,6 +51,7 @@ object InternalAbstractMeshDataInfo {
     _actAsRegularMesh: Boolean,
     _applyFog: Boolean,
     _computeBonesUsingShaders: Boolean,
+    _currentLODIsUpToDate: Boolean,
     _facetData: FacetDataStorage,
     _hasVertexAlpha: Boolean,
     _isActive: Boolean,
@@ -59,7 +64,7 @@ object InternalAbstractMeshDataInfo {
     _useVertexColors: Boolean,
     _visibility: Double
   ): InternalAbstractMeshDataInfo = {
-    val __obj = js.Dynamic.literal(_actAsRegularMesh = _actAsRegularMesh.asInstanceOf[js.Any], _applyFog = _applyFog.asInstanceOf[js.Any], _computeBonesUsingShaders = _computeBonesUsingShaders.asInstanceOf[js.Any], _facetData = _facetData.asInstanceOf[js.Any], _hasVertexAlpha = _hasVertexAlpha.asInstanceOf[js.Any], _isActive = _isActive.asInstanceOf[js.Any], _isActiveIntermediate = _isActiveIntermediate.asInstanceOf[js.Any], _layerMask = _layerMask.asInstanceOf[js.Any], _numBoneInfluencers = _numBoneInfluencers.asInstanceOf[js.Any], _onlyForInstances = _onlyForInstances.asInstanceOf[js.Any], _onlyForInstancesIntermediate = _onlyForInstancesIntermediate.asInstanceOf[js.Any], _receiveShadows = _receiveShadows.asInstanceOf[js.Any], _useVertexColors = _useVertexColors.asInstanceOf[js.Any], _visibility = _visibility.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(_actAsRegularMesh = _actAsRegularMesh.asInstanceOf[js.Any], _applyFog = _applyFog.asInstanceOf[js.Any], _computeBonesUsingShaders = _computeBonesUsingShaders.asInstanceOf[js.Any], _currentLODIsUpToDate = _currentLODIsUpToDate.asInstanceOf[js.Any], _facetData = _facetData.asInstanceOf[js.Any], _hasVertexAlpha = _hasVertexAlpha.asInstanceOf[js.Any], _isActive = _isActive.asInstanceOf[js.Any], _isActiveIntermediate = _isActiveIntermediate.asInstanceOf[js.Any], _layerMask = _layerMask.asInstanceOf[js.Any], _numBoneInfluencers = _numBoneInfluencers.asInstanceOf[js.Any], _onlyForInstances = _onlyForInstances.asInstanceOf[js.Any], _onlyForInstancesIntermediate = _onlyForInstancesIntermediate.asInstanceOf[js.Any], _receiveShadows = _receiveShadows.asInstanceOf[js.Any], _useVertexColors = _useVertexColors.asInstanceOf[js.Any], _visibility = _visibility.asInstanceOf[js.Any])
     __obj.asInstanceOf[InternalAbstractMeshDataInfo]
   }
   
@@ -86,6 +91,9 @@ object InternalAbstractMeshDataInfo {
     
     @scala.inline
     def set_computeBonesUsingShaders(value: Boolean): Self = this.set("_computeBonesUsingShaders", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def set_currentLODIsUpToDate(value: Boolean): Self = this.set("_currentLODIsUpToDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def set_facetData(value: FacetDataStorage): Self = this.set("_facetData", value.asInstanceOf[js.Any])
@@ -119,6 +127,12 @@ object InternalAbstractMeshDataInfo {
     
     @scala.inline
     def set_visibility(value: Double): Self = this.set("_visibility", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def set_currentLOD(value: Nullable[AbstractMesh]): Self = this.set("_currentLOD", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def set_currentLODNull: Self = this.set("_currentLOD", null)
     
     @scala.inline
     def set_skeleton(value: Nullable[Skeleton]): Self = this.set("_skeleton", value.asInstanceOf[js.Any])

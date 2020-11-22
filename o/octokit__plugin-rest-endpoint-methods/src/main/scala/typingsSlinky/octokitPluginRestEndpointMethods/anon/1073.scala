@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.UsersGetAuthenticatedEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.UsersGetAuthenticatedResponseData
+import typingsSlinky.octokitTypes.endpointsMod.UsersCreateGpgKeyForAuthenticatedEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.UsersCreateGpgKeyForAuthenticatedResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `1073` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[UsersGetAuthenticatedEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[UsersCreateGpgKeyForAuthenticatedEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[UsersGetAuthenticatedResponseData] = js.native
+  var response: OctokitResponse[UsersCreateGpgKeyForAuthenticatedResponseData] = js.native
 }
 object `1073` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[UsersGetAuthenticatedEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[UsersGetAuthenticatedResponseData]
+    parameters: RequestParameters with (Omit[UsersCreateGpgKeyForAuthenticatedEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[UsersCreateGpgKeyForAuthenticatedResponseData]
   ): `1073` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1073`]
@@ -46,9 +46,11 @@ object `1073` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[UsersGetAuthenticatedEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(
+      value: RequestParameters with (Omit[UsersCreateGpgKeyForAuthenticatedEndpoint, baseUrl | headers | mediaType])
+    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[UsersGetAuthenticatedResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[UsersCreateGpgKeyForAuthenticatedResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

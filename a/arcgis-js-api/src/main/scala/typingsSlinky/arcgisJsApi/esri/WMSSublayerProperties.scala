@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WMSSublayerProperties extends js.Object {
   
   /**
-    * Description for the WMS sublayer. This defaults to the value of the Abstract property from the WMS GetCapabilities request.
+    * Description for the WMS sublayer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMSSublayer.html#description)
     */
@@ -36,11 +36,9 @@ trait WMSSublayerProperties extends js.Object {
   var layer: js.UndefOr[WMSLayerProperties] = js.native
   
   /**
-    * Indicates whether the layer will be included in the legend. When `false`, the layer will be excluded from the legend.
+    * Indicates whether the layer will be included in the legend.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMSSublayer.html#legendEnabled)
-    *
-    * @default true
     */
   var legendEnabled: js.UndefOr[Boolean] = js.native
   
@@ -52,25 +50,21 @@ trait WMSSublayerProperties extends js.Object {
   var legendUrl: js.UndefOr[String] = js.native
   
   /**
-    * The maximum scale (most zoomed in) at which the layer is visible in the view. If the map is zoomed in beyond this scale, the layer will not be visible. A value of zero means the layer does not have a maximum scale.
+    * The maximum scale (most zoomed in) at which the layer is visible in the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMSSublayer.html#maxScale)
-    *
-    * @default 0
     */
   var maxScale: js.UndefOr[Double] = js.native
   
   /**
-    * The minimum scale (most zoomed out) at which the layer is visible in the view. If the map is zoomed out beyond this scale, the layer will not be visible. A value of zero means the layer does not have a minimum scale.
+    * The minimum scale (most zoomed out) at which the layer is visible in the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMSSublayer.html#minScale)
-    *
-    * @default 0
     */
   var minScale: js.UndefOr[Double] = js.native
   
   /**
-    * Name of the WMS sublayer. This defaults to the value of the Name property from the WMS GetCapabilities request.
+    * Name of the WMS sublayer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMSSublayer.html#name)
     */
@@ -80,17 +74,13 @@ trait WMSSublayerProperties extends js.Object {
     * Indicates whether to display popups when features in the layer are clicked.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMSSublayer.html#popupEnabled)
-    *
-    * @default false
     */
   var popupEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * Indicates if the layer can be queried, i.e. the service supports GetFeatureInfo with either text/html or text/plain formats.
+    * Indicates if the layer can be queried, i.e.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMSSublayer.html#queryable)
-    *
-    * @default false
     */
   var queryable: js.UndefOr[Boolean] = js.native
   
@@ -109,7 +99,7 @@ trait WMSSublayerProperties extends js.Object {
   var sublayers: js.UndefOr[CollectionProperties[WMSSublayerProperties]] = js.native
   
   /**
-    * The title of the WMS sublayer used to identify it in places such as the [LayerList](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html) and [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) widgets. This defaults to the value of the Title property from the WMS GetCapabilities request.
+    * The title of the WMS sublayer used to identify it in places such as the [LayerList](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html) and [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) widgets.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMSSublayer.html#title)
     */

@@ -10,9 +10,9 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.WheelEvent
 import typingsSlinky.mapboxGl.anon.Data
 import typingsSlinky.mapboxGl.anon.Diff
-import typingsSlinky.mapboxGl.anon.Filter
 import typingsSlinky.mapboxGl.anon.PixelRatio
-import typingsSlinky.mapboxGl.anon.SourceLayer
+import typingsSlinky.mapboxGl.anon.layersArraystringundefine
+import typingsSlinky.mapboxGl.anon.sourceLayerstringundefine
 import typingsSlinky.mapboxGl.mapboxGlStrings.`bottom-left`
 import typingsSlinky.mapboxGl.mapboxGlStrings.`bottom-right`
 import typingsSlinky.mapboxGl.mapboxGlStrings.`top-left`
@@ -29,6 +29,7 @@ import typingsSlinky.mapboxGl.mapboxGlStrings.drag
 import typingsSlinky.mapboxGl.mapboxGlStrings.dragend
 import typingsSlinky.mapboxGl.mapboxGlStrings.dragstart
 import typingsSlinky.mapboxGl.mapboxGlStrings.error
+import typingsSlinky.mapboxGl.mapboxGlStrings.idle
 import typingsSlinky.mapboxGl.mapboxGlStrings.load
 import typingsSlinky.mapboxGl.mapboxGlStrings.mousedown
 import typingsSlinky.mapboxGl.mapboxGlStrings.mouseenter
@@ -64,6 +65,7 @@ import typingsSlinky.mapboxGl.mapboxGlStrings.wheel
 import typingsSlinky.mapboxGl.mapboxGlStrings.zoom
 import typingsSlinky.mapboxGl.mapboxGlStrings.zoomend
 import typingsSlinky.mapboxGl.mapboxGlStrings.zoomstart
+import typingsSlinky.std.ImageBitmap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -98,6 +100,8 @@ class Map () extends Evented {
   def addImage(name: String, image: js.typedarray.ArrayBufferView, options: PixelRatio): this.type = js.native
   def addImage(name: String, image: HTMLImageElement): this.type = js.native
   def addImage(name: String, image: HTMLImageElement, options: PixelRatio): this.type = js.native
+  def addImage(name: String, image: ImageBitmap): this.type = js.native
+  def addImage(name: String, image: ImageBitmap, options: PixelRatio): this.type = js.native
   def addImage(name: String, image: ImageData): this.type = js.native
   def addImage(name: String, image: ImageData, options: PixelRatio): this.type = js.native
   
@@ -282,6 +286,11 @@ class Map () extends Evented {
   ): this.type = js.native
   @JSName("off")
   def off_error(`type`: error, listener: js.Function1[/* ev */ ErrorEvent with EventData, Unit]): this.type = js.native
+  @JSName("off")
+  def off_idle(
+    `type`: idle,
+    listener: js.Function1[/* ev */ MapboxEvent[js.UndefOr[scala.Nothing]] with EventData, Unit]
+  ): this.type = js.native
   @JSName("off")
   def off_load(
     `type`: load,
@@ -534,6 +543,11 @@ class Map () extends Evented {
   @JSName("on")
   def on_error(`type`: error, listener: js.Function1[/* ev */ ErrorEvent with EventData, Unit]): this.type = js.native
   @JSName("on")
+  def on_idle(
+    `type`: idle,
+    listener: js.Function1[/* ev */ MapboxEvent[js.UndefOr[scala.Nothing]] with EventData, Unit]
+  ): this.type = js.native
+  @JSName("on")
   def on_load(
     `type`: load,
     listener: js.Function1[/* ev */ MapboxEvent[js.UndefOr[scala.Nothing]] with EventData, Unit]
@@ -785,6 +799,11 @@ class Map () extends Evented {
   @JSName("once")
   def once_error(`type`: error, listener: js.Function1[/* ev */ ErrorEvent with EventData, Unit]): this.type = js.native
   @JSName("once")
+  def once_idle(
+    `type`: idle,
+    listener: js.Function1[/* ev */ MapboxEvent[js.UndefOr[scala.Nothing]] with EventData, Unit]
+  ): this.type = js.native
+  @JSName("once")
   def once_load(
     `type`: load,
     listener: js.Function1[/* ev */ MapboxEvent[js.UndefOr[scala.Nothing]] with EventData, Unit]
@@ -1018,9 +1037,9 @@ class Map () extends Evented {
     * @param options
     */
   def queryRenderedFeatures(): js.Array[MapboxGeoJSONFeature] = js.native
-  def queryRenderedFeatures(pointOrBox: js.UndefOr[PointLike], options: Filter): js.Array[MapboxGeoJSONFeature] = js.native
+  def queryRenderedFeatures(pointOrBox: js.UndefOr[PointLike], options: layersArraystringundefine): js.Array[MapboxGeoJSONFeature] = js.native
   def queryRenderedFeatures(pointOrBox: js.Tuple2[PointLike, PointLike]): js.Array[MapboxGeoJSONFeature] = js.native
-  def queryRenderedFeatures(pointOrBox: js.Tuple2[PointLike, PointLike], options: Filter): js.Array[MapboxGeoJSONFeature] = js.native
+  def queryRenderedFeatures(pointOrBox: js.Tuple2[PointLike, PointLike], options: layersArraystringundefine): js.Array[MapboxGeoJSONFeature] = js.native
   def queryRenderedFeatures(pointOrBox: PointLike): js.Array[MapboxGeoJSONFeature] = js.native
   
   /**
@@ -1034,7 +1053,7 @@ class Map () extends Evented {
     * @param parameters
     */
   def querySourceFeatures(sourceID: String): js.Array[MapboxGeoJSONFeature] = js.native
-  def querySourceFeatures(sourceID: String, parameters: SourceLayer): js.Array[MapboxGeoJSONFeature] = js.native
+  def querySourceFeatures(sourceID: String, parameters: sourceLayerstringundefine): js.Array[MapboxGeoJSONFeature] = js.native
   
   def remove(): Unit = js.native
   
@@ -1059,6 +1078,12 @@ class Map () extends Evented {
   def resetNorth(options: AnimationOptions): this.type = js.native
   def resetNorth(options: AnimationOptions, eventData: EventData): this.type = js.native
   
+  def resetNorthPitch(): this.type = js.native
+  def resetNorthPitch(options: js.UndefOr[scala.Nothing], eventData: EventData): this.type = js.native
+  def resetNorthPitch(options: Null, eventData: EventData): this.type = js.native
+  def resetNorthPitch(options: AnimationOptions): this.type = js.native
+  def resetNorthPitch(options: AnimationOptions, eventData: EventData): this.type = js.native
+  
   def resize(): this.type = js.native
   def resize(eventData: EventData): this.type = js.native
   
@@ -1079,8 +1104,12 @@ class Map () extends Evented {
   def setFeatureState(feature: MapboxGeoJSONFeature, state: StringDictionary[js.Any]): Unit = js.native
   
   def setFilter(layer: String): this.type = js.native
+  def setFilter(layer: String, filter: js.UndefOr[scala.Nothing], options: FilterOptions): this.type = js.native
   def setFilter(layer: String, filter: js.Array[_]): this.type = js.native
+  def setFilter(layer: String, filter: js.Array[_], options: FilterOptions): this.type = js.native
   def setFilter(layer: String, filter: Boolean): this.type = js.native
+  def setFilter(layer: String, filter: Boolean, options: FilterOptions): this.type = js.native
+  def setFilter(layer: String, filter: Null, options: FilterOptions): this.type = js.native
   
   def setLayerZoomRange(layerId: String, minzoom: Double, maxzoom: Double): this.type = js.native
   

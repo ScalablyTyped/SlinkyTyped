@@ -1,8 +1,6 @@
 package typingsSlinky.c3.mod
 
-import typingsSlinky.c3.c3Strings.category
-import typingsSlinky.c3.c3Strings.indexed
-import typingsSlinky.c3.c3Strings.timeseries
+import typingsSlinky.c3.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,6 +26,11 @@ trait XAxisConfiguration extends AxisConfiguration {
   var height: js.UndefOr[Double] = js.native
   
   /**
+    * Set label on X axis.
+    */
+  var label: js.UndefOr[String | Position] = js.native
+  
+  /**
     * Set how to treat the timezone of x values.
     * If `true` (default), treat x value as localtime. If `false`, convert to UTC internally.
     */
@@ -41,7 +44,7 @@ trait XAxisConfiguration extends AxisConfiguration {
     * Set type of x axis.
     * Defaults to `"indexed"`.
     */
-  var `type`: js.UndefOr[timeseries | category | indexed] = js.native
+  var `type`: js.UndefOr[XAxisType] = js.native
 }
 object XAxisConfiguration {
   
@@ -94,6 +97,12 @@ object XAxisConfiguration {
     def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
+    def setLabel(value: String | Position): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
+    
+    @scala.inline
     def setLocaltime(value: Boolean): Self = this.set("localtime", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -112,7 +121,7 @@ object XAxisConfiguration {
     def deleteTick: Self = this.set("tick", js.undefined)
     
     @scala.inline
-    def setType(value: timeseries | category | indexed): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: XAxisType): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)

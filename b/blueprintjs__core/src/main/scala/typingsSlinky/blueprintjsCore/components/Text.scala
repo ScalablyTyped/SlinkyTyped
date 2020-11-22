@@ -26,6 +26,9 @@ object Text {
     
     @scala.inline
     def tagName(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any): this.type = set("tagName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ITextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

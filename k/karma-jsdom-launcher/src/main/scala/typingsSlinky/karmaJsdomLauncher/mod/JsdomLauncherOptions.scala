@@ -1,6 +1,5 @@
 package typingsSlinky.karmaJsdomLauncher.mod
 
-import typingsSlinky.jsdom.mod.ConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,12 +11,14 @@ trait JsdomLauncherOptions extends js.Object {
     * You can pass options directly to jsdom as shown below.
     * See jsdom's own documentation for all supported options.
     */
-  var jsdom: ConstructorOptions = js.native
+  var jsdom: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify jsdom.ConstructorOptions */ js.Any = js.native
 }
 object JsdomLauncherOptions {
   
   @scala.inline
-  def apply(jsdom: ConstructorOptions): JsdomLauncherOptions = {
+  def apply(
+    jsdom: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify jsdom.ConstructorOptions */ js.Any
+  ): JsdomLauncherOptions = {
     val __obj = js.Dynamic.literal(jsdom = jsdom.asInstanceOf[js.Any])
     __obj.asInstanceOf[JsdomLauncherOptions]
   }
@@ -38,6 +39,8 @@ object JsdomLauncherOptions {
     }
     
     @scala.inline
-    def setJsdom(value: ConstructorOptions): Self = this.set("jsdom", value.asInstanceOf[js.Any])
+    def setJsdom(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify jsdom.ConstructorOptions */ js.Any
+    ): Self = this.set("jsdom", value.asInstanceOf[js.Any])
   }
 }

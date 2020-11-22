@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.expressionsMod.expressions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.expressionsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -35,6 +36,7 @@ import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.WebServiceOperation
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.ConditionalSettings
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.WidgetValidation
 import typingsSlinky.mendixmodelsdk.restMod.rest.ConsumedODataService
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -43,22 +45,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Interfaces and instance classes for types from the Mendix sub meta model `Expressions`.
   */
 /**
-  * See: {@link https://docs.mendix.com/refguide7/expressions relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/expressions relevant section in reference guide}
   *
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
+  *
+  * @ignore
   *
   * In version 7.9.0: introduced
   */
 @JSImport("mendixmodelsdk/dist/gen/expressions", "expressions.Expression")
 @js.native
-abstract class Expression protected () extends Element {
+abstract class Expression protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsAppServiceCallParameterMapping: AppServiceCallParameterMapping = js.native
@@ -128,9 +132,6 @@ abstract class Expression protected () extends Element {
   def containerAsWebServiceOperationParameterMapping: WebServiceOperationParameterMapping = js.native
   
   def containerAsWidgetValidation: WidgetValidation = js.native
-  
-  @JSName("model")
-  var model_FExpression: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/expressions", "expressions.Expression")

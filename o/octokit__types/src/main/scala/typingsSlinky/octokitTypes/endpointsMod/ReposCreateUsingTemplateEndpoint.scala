@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`14`
+import typingsSlinky.octokitTypes.anon.`13`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +14,7 @@ trait ReposCreateUsingTemplateEndpoint extends js.Object {
     */
   var description: js.UndefOr[String] = js.native
   
-  var mediaType: `14` = js.native
+  var mediaType: `13` = js.native
   
   /**
     * The name of the new repository.
@@ -38,7 +38,7 @@ trait ReposCreateUsingTemplateEndpoint extends js.Object {
 object ReposCreateUsingTemplateEndpoint {
   
   @scala.inline
-  def apply(mediaType: `14`, name: String, template_owner: String, template_repo: String): ReposCreateUsingTemplateEndpoint = {
+  def apply(mediaType: `13`, name: String, template_owner: String, template_repo: String): ReposCreateUsingTemplateEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], template_owner = template_owner.asInstanceOf[js.Any], template_repo = template_repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposCreateUsingTemplateEndpoint]
   }
@@ -59,7 +59,7 @@ object ReposCreateUsingTemplateEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `14`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `13`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

@@ -14,5 +14,5 @@ object ^ extends js.Object {
     * @return A promise that is resolved with the result when
     * the query completes.
     */
-  def all(): js.Promise[js.Array[typingsSlinky.parse.mod.global.Parse.Schema]] = js.native
+  def all(): js.Promise[js.Array[typingsSlinky.parse.mod.global.Parse.Schema[_]]] = js.native
 }

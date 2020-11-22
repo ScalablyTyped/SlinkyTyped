@@ -1,6 +1,5 @@
 package typingsSlinky.vscodeNotebookRenderer.mod
 
-import typingsSlinky.vscodeNotebookRenderer.anon.Element
 import typingsSlinky.vscodeNotebookRenderer.anon.OutputId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,21 +15,25 @@ trait NotebookRendererApi[T] extends js.Object {
     * as the one given in `NotebookOutputRenderer.render` in the extension
     * API, and `onWillDestroyOutput`.
     */
-  def onDidCreateOutput(listener: js.Function1[/* e */ Element, _]): Disposable = js.native
+  def onDidCreateOutput(listener: js.Function1[/* e */ NotebookOutputEventParams, _]): Disposable = js.native
   def onDidCreateOutput(
-    listener: js.Function1[/* e */ Element, _],
+    listener: js.Function1[/* e */ NotebookOutputEventParams, _],
     thisArgs: js.UndefOr[scala.Nothing],
     disposables: js.Array[Disposable]
   ): Disposable = js.native
-  def onDidCreateOutput(listener: js.Function1[/* e */ Element, _], thisArgs: js.Any): Disposable = js.native
-  def onDidCreateOutput(listener: js.Function1[/* e */ Element, _], thisArgs: js.Any, disposables: js.Array[Disposable]): Disposable = js.native
+  def onDidCreateOutput(listener: js.Function1[/* e */ NotebookOutputEventParams, _], thisArgs: js.Any): Disposable = js.native
+  def onDidCreateOutput(
+    listener: js.Function1[/* e */ NotebookOutputEventParams, _],
+    thisArgs: js.Any,
+    disposables: js.Array[Disposable]
+  ): Disposable = js.native
   /**
     * Fired when an output is rendered. The `outputId` provided is the same
     * as the one given in `NotebookOutputRenderer.render` in the extension
     * API, and `onWillDestroyOutput`.
     */
   @JSName("onDidCreateOutput")
-  var onDidCreateOutput_Original: VSCodeEvent[Element] = js.native
+  var onDidCreateOutput_Original: VSCodeEvent[NotebookOutputEventParams] = js.native
   
   /**
     * Called when the renderer uses `postMessage` on the NotebookCommunication

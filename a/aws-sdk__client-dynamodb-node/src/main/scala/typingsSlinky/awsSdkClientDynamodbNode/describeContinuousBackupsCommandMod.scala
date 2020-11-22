@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientDynamodbNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbNode.typesDescribeContinuousBackupsInputMod.DescribeContinuousBackupsInput
 import typingsSlinky.awsSdkClientDynamodbNode.typesDescribeContinuousBackupsOutputMod.DescribeContinuousBackupsOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object describeContinuousBackupsCommandMod extends js.Object {
           DescribeContinuousBackupsInput, 
           OutputTypesUnion, 
           DescribeContinuousBackupsOutput, 
-          DynamoDBResolvedConfiguration, 
-          Readable
+          DynamoDBResolvedConfiguration
         ] {
     def this(input: DescribeContinuousBackupsInput) = this()
     
-    val middlewareStack: MiddlewareStack[DescribeContinuousBackupsInput, DescribeContinuousBackupsOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DescribeContinuousBackupsInput, DescribeContinuousBackupsOutput] = js.native
   }

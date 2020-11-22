@@ -10,7 +10,7 @@ trait AnimationOptions extends js.Object {
   /**
     * Configure what animates when modal is dismissed
     */
-  var dismissModal: js.UndefOr[ViewAnimationOptions] = js.native
+  var dismissModal: js.UndefOr[ModalAnimationOptions] = js.native
   
   /**
     * Configure what animates when a screen is popped
@@ -35,7 +35,7 @@ trait AnimationOptions extends js.Object {
   /**
     * Configure what animates when modal is shown
     */
-  var showModal: js.UndefOr[ViewAnimationOptions] = js.native
+  var showModal: js.UndefOr[ModalAnimationOptions] = js.native
 }
 object AnimationOptions {
   
@@ -61,7 +61,7 @@ object AnimationOptions {
     }
     
     @scala.inline
-    def setDismissModal(value: ViewAnimationOptions): Self = this.set("dismissModal", value.asInstanceOf[js.Any])
+    def setDismissModal(value: ModalAnimationOptions): Self = this.set("dismissModal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDismissModal: Self = this.set("dismissModal", js.undefined)
@@ -91,7 +91,7 @@ object AnimationOptions {
     def deleteSetStackRoot: Self = this.set("setStackRoot", js.undefined)
     
     @scala.inline
-    def setShowModal(value: ViewAnimationOptions): Self = this.set("showModal", value.asInstanceOf[js.Any])
+    def setShowModal(value: ModalAnimationOptions): Self = this.set("showModal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShowModal: Self = this.set("showModal", js.undefined)

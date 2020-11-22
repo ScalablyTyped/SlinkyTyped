@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TargetedManagedAppConfiguration extends ManagedAppConfiguration {
   
   // List of apps to which the policy is deployed.
-  var apps: js.UndefOr[js.Array[ManagedMobileApp]] = js.native
+  var apps: js.UndefOr[NullableOption[js.Array[ManagedMobileApp]]] = js.native
   
   // Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-  var assignments: js.UndefOr[js.Array[TargetedManagedAppPolicyAssignment]] = js.native
+  var assignments: js.UndefOr[NullableOption[js.Array[TargetedManagedAppPolicyAssignment]]] = js.native
   
   // Count of apps to which the current policy is deployed.
   var deployedAppCount: js.UndefOr[Double] = js.native
   
   // Navigation property to deployment summary of the configuration.
-  var deploymentSummary: js.UndefOr[ManagedAppPolicyDeploymentSummary] = js.native
+  var deploymentSummary: js.UndefOr[NullableOption[ManagedAppPolicyDeploymentSummary]] = js.native
   
   // Indicates if the policy is deployed to any inclusion groups or not.
   var isAssigned: js.UndefOr[Boolean] = js.native
@@ -49,19 +49,25 @@ object TargetedManagedAppConfiguration {
     def setAppsVarargs(value: ManagedMobileApp*): Self = this.set("apps", js.Array(value :_*))
     
     @scala.inline
-    def setApps(value: js.Array[ManagedMobileApp]): Self = this.set("apps", value.asInstanceOf[js.Any])
+    def setApps(value: NullableOption[js.Array[ManagedMobileApp]]): Self = this.set("apps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteApps: Self = this.set("apps", js.undefined)
     
     @scala.inline
+    def setAppsNull: Self = this.set("apps", null)
+    
+    @scala.inline
     def setAssignmentsVarargs(value: TargetedManagedAppPolicyAssignment*): Self = this.set("assignments", js.Array(value :_*))
     
     @scala.inline
-    def setAssignments(value: js.Array[TargetedManagedAppPolicyAssignment]): Self = this.set("assignments", value.asInstanceOf[js.Any])
+    def setAssignments(value: NullableOption[js.Array[TargetedManagedAppPolicyAssignment]]): Self = this.set("assignments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAssignments: Self = this.set("assignments", js.undefined)
+    
+    @scala.inline
+    def setAssignmentsNull: Self = this.set("assignments", null)
     
     @scala.inline
     def setDeployedAppCount(value: Double): Self = this.set("deployedAppCount", value.asInstanceOf[js.Any])
@@ -70,10 +76,13 @@ object TargetedManagedAppConfiguration {
     def deleteDeployedAppCount: Self = this.set("deployedAppCount", js.undefined)
     
     @scala.inline
-    def setDeploymentSummary(value: ManagedAppPolicyDeploymentSummary): Self = this.set("deploymentSummary", value.asInstanceOf[js.Any])
+    def setDeploymentSummary(value: NullableOption[ManagedAppPolicyDeploymentSummary]): Self = this.set("deploymentSummary", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeploymentSummary: Self = this.set("deploymentSummary", js.undefined)
+    
+    @scala.inline
+    def setDeploymentSummaryNull: Self = this.set("deploymentSummary", null)
     
     @scala.inline
     def setIsAssigned(value: Boolean): Self = this.set("isAssigned", value.asInstanceOf[js.Any])

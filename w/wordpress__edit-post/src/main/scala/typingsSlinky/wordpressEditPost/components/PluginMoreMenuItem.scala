@@ -26,8 +26,13 @@ import typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon
 import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
 import typingsSlinky.wordpressComponents.shortcutMod.Shortcut.ShortcutType
 import typingsSlinky.wordpressEditPost.pluginMoreMenuItemMod.PluginMoreMenuItem.Props
+import typingsSlinky.wordpressEditPost.wordpressEditPostStrings.`additions removals`
 import typingsSlinky.wordpressEditPost.wordpressEditPostStrings.`additions text`
 import typingsSlinky.wordpressEditPost.wordpressEditPostStrings.`inline`
+import typingsSlinky.wordpressEditPost.wordpressEditPostStrings.`removals additions`
+import typingsSlinky.wordpressEditPost.wordpressEditPostStrings.`removals text`
+import typingsSlinky.wordpressEditPost.wordpressEditPostStrings.`text additions`
+import typingsSlinky.wordpressEditPost.wordpressEditPostStrings.`text removals`
 import typingsSlinky.wordpressEditPost.wordpressEditPostStrings.additions
 import typingsSlinky.wordpressEditPost.wordpressEditPostStrings.all
 import typingsSlinky.wordpressEditPost.wordpressEditPostStrings.ascending
@@ -216,7 +221,9 @@ object PluginMoreMenuItem {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

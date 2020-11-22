@@ -12,5 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object grainFontIconMod extends js.Object {
   
-  val default: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
+  val GrainFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

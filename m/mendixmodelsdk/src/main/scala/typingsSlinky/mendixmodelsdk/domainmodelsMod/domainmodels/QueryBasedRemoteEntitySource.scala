@@ -1,10 +1,11 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,15 +28,12 @@ abstract class QueryBasedRemoteEntitySource protected () extends RemoteEntitySou
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsEntity")
   def containerAsEntity_MQueryBasedRemoteEntitySource: Entity = js.native
-  
-  @JSName("model")
-  var model_FQueryBasedRemoteEntitySource: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.QueryBasedRemoteEntitySource")

@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/core/build/plugins/test_name_pattern", JSImport.Namespace)
+@JSImport("@jest/core/build/plugins/TestNamePattern", JSImport.Namespace)
 @js.native
 object testNamePatternMod extends js.Object {
   

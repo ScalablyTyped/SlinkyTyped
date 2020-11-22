@@ -25,9 +25,7 @@ import typingsSlinky.gestalt.gestaltStrings.pine
 import typingsSlinky.gestalt.gestaltStrings.purple
 import typingsSlinky.gestalt.gestaltStrings.red
 import typingsSlinky.gestalt.gestaltStrings.right
-import typingsSlinky.gestalt.gestaltStrings.short
 import typingsSlinky.gestalt.gestaltStrings.sm
-import typingsSlinky.gestalt.gestaltStrings.tall
 import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
 import scala.scalajs.js
@@ -48,8 +46,6 @@ trait TextProps extends js.Object {
   var `inline`: js.UndefOr[Boolean] = js.native
   
   var italic: js.UndefOr[Boolean] = js.native
-  
-  var leading: js.UndefOr[short | tall] = js.native
   
   var overflow: js.UndefOr[normal | breakWord] = js.native
   
@@ -116,12 +112,6 @@ object TextProps {
     
     @scala.inline
     def deleteItalic: Self = this.set("italic", js.undefined)
-    
-    @scala.inline
-    def setLeading(value: short | tall): Self = this.set("leading", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLeading: Self = this.set("leading", js.undefined)
     
     @scala.inline
     def setOverflow(value: normal | breakWord): Self = this.set("overflow", value.asInstanceOf[js.Any])

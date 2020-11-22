@@ -17,4 +17,6 @@ object Utils extends js.Object {
   def extendTo(`type`: js.Any): Unit = js.native
   
   def hasNativeIteratorSupport(): Boolean = js.native
+  
+  def recallFrom(`type`: js.Any): Unit = js.native
 }

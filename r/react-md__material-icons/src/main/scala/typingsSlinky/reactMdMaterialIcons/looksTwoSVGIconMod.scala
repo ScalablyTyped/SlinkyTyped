@@ -12,5 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object looksTwoSVGIconMod extends js.Object {
   
-  val default: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
+  val LooksTwoSVGIcon: ForwardRefExoticComponent[SVGIconProps with RefAttributes[SVGSVGElement]] = js.native
 }

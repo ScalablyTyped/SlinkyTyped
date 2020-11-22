@@ -2,6 +2,7 @@ package typingsSlinky.twilioVideo.mod
 
 import org.scalajs.dom.raw.HTMLMediaElement
 import org.scalajs.dom.raw.HTMLVideoElement
+import typingsSlinky.twilioVideo.mod.Track.Priority
 import typingsSlinky.twilioVideo.mod.Track.SID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,6 +27,10 @@ class RemoteVideoTrack ()
   override def detach(element: String): js.Array[HTMLMediaElement] = js.native
   /* InferMemberOverrides */
   override def detach(element: HTMLMediaElement): js.Array[HTMLMediaElement] = js.native
+  
+  var isSwitchedOff: Boolean = js.native
+  
+  var priority: Priority | Null = js.native
   
   var sid: SID = js.native
 }

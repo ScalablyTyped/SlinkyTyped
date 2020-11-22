@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AutomaticTapeCreationRule extends js.Object {
   
   /**
-    * The minimum number of available virtual tapes that the gateway maintains at all times. If the number of tapes on the gateway goes below this value, the gateway creates as many new tapes as are needed to have MinimumNumTapes on the gateway.
+    * The minimum number of available virtual tapes that the gateway maintains at all times. If the number of tapes on the gateway goes below this value, the gateway creates as many new tapes as are needed to have MinimumNumTapes on the gateway. For more information about automatic tape creation, see Creating Tapes Automatically.
     */
   var MinimumNumTapes: typingsSlinky.awsSdk.storagegatewayMod.MinimumNumTapes = js.native
   
@@ -26,6 +26,11 @@ trait AutomaticTapeCreationRule extends js.Object {
     * The size, in bytes, of the virtual tape capacity.
     */
   var TapeSizeInBytes: TapeSize = js.native
+  
+  /**
+    * Set to true to indicate that tapes are to be archived as write-once-read-many (WORM). Set to false when WORM is not enabled for tapes.
+    */
+  var Worm: js.UndefOr[scala.Boolean] = js.native
 }
 object AutomaticTapeCreationRule {
   
@@ -66,5 +71,11 @@ object AutomaticTapeCreationRule {
     
     @scala.inline
     def setTapeSizeInBytes(value: TapeSize): Self = this.set("TapeSizeInBytes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setWorm(value: scala.Boolean): Self = this.set("Worm", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWorm: Self = this.set("Worm", js.undefined)
   }
 }

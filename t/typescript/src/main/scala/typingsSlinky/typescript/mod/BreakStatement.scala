@@ -10,7 +10,7 @@ trait BreakStatement
      with BreakOrContinueStatement {
   
   @JSName("kind")
-  var kind_BreakStatement: typingsSlinky.typescript.mod.SyntaxKind.BreakStatement = js.native
+  val kind_BreakStatement: typingsSlinky.typescript.mod.SyntaxKind.BreakStatement = js.native
   
-  var label: js.UndefOr[Identifier] = js.native
+  val label: js.UndefOr[Identifier] = js.native
 }

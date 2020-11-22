@@ -3,6 +3,7 @@ package typingsSlinky.storybookClientApi
 import typingsSlinky.storybookAddons.anon.Current
 import typingsSlinky.storybookAddons.hooksMod.Decorator
 import typingsSlinky.storybookAddons.hooksMod.EventMap
+import typingsSlinky.storybookAddons.typesMod.Args
 import typingsSlinky.storybookAddons.typesMod.StoryContext
 import typingsSlinky.storybookAddons.typesMod.StoryGetter
 import scala.scalajs.js
@@ -21,6 +22,15 @@ object hooksMod extends js.Object {
     js.Function1[/* context */ StoryContext, _]
   ] = js.native
   
+  def useAddonState[S](addonId: String): js.Tuple2[S, js.Function1[/* s */ S, Unit]] = js.native
+  def useAddonState[S](addonId: String, defaultState: S): js.Tuple2[S, js.Function1[/* s */ S, Unit]] = js.native
+  
+  def useArgs(): js.Tuple3[
+    Args, 
+    js.Function1[/* newArgs */ Args, Unit], 
+    js.Function1[/* argNames */ js.UndefOr[js.Array[String]], Unit]
+  ] = js.native
+  
   def useCallback[T](callback: T): T = js.native
   def useCallback[T](callback: T, deps: js.Array[_]): T = js.native
   
@@ -29,6 +39,8 @@ object hooksMod extends js.Object {
   
   def useEffect(create: js.Function0[js.Function0[Unit] | Unit]): Unit = js.native
   def useEffect(create: js.Function0[js.Function0[Unit] | Unit], deps: js.Array[_]): Unit = js.native
+  
+  def useGlobals(): js.Tuple2[Args, js.Function1[/* newGlobals */ Args, Unit]] = js.native
   
   def useMemo[T](nextCreate: js.Function0[T]): T = js.native
   def useMemo[T](nextCreate: js.Function0[T], deps: js.Array[_]): T = js.native
@@ -44,6 +56,9 @@ object hooksMod extends js.Object {
   ): js.Tuple2[S, js.Function1[/* action */ A, Unit]] = js.native
   
   def useRef[T](initialValue: T): Current[T] = js.native
+  
+  def useSharedState[S](sharedId: String): js.Tuple2[S, js.Function1[/* s */ S, Unit]] = js.native
+  def useSharedState[S](sharedId: String, defaultState: S): js.Tuple2[S, js.Function1[/* s */ S, Unit]] = js.native
   
   def useState[S](initialState: S): js.Tuple2[S, js.Function1[/* update */ (js.Function1[/* prevState */ S, S]) | S, Unit]] = js.native
   def useState[S](initialState: js.Function0[S]): js.Tuple2[S, js.Function1[/* update */ (js.Function1[/* prevState */ S, S]) | S, Unit]] = js.native

@@ -62,8 +62,6 @@ object noiseProceduralTextureMod extends js.Object {
       generateMipMaps: Boolean
     ) = this()
     
-    var _time: js.Any = js.native
-    
     var _updateShaderUniforms: js.Any = js.native
     
     /** Gets or sets animation speed factor (default is 1) */
@@ -77,6 +75,9 @@ object noiseProceduralTextureMod extends js.Object {
     
     /** Defines the level of persistence (0.8 by default) */
     var persistence: Double = js.native
+    
+    /** Gets or sets the start time (default is 0) */
+    var time: Double = js.native
   }
   /* static members */
   @js.native

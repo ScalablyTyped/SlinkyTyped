@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`datetime-picker`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-area`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-box`
 import scala.scalajs.js
@@ -16,5 +17,5 @@ trait Input
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-inputs-Input.html#type)
     */
-  val `type`: `text-area` | `text-box` = js.native
+  val `type`: `text-area` | `text-box` | `datetime-picker` = js.native
 }

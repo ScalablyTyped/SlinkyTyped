@@ -11,7 +11,7 @@ trait IosVppAppAssignmentSettings extends MobileAppAssignmentSettings {
   var useDeviceLicensing: js.UndefOr[Boolean] = js.native
   
   // The VPN Configuration Id to apply for this app.
-  var vpnConfigurationId: js.UndefOr[String] = js.native
+  var vpnConfigurationId: js.UndefOr[NullableOption[String]] = js.native
 }
 object IosVppAppAssignmentSettings {
   
@@ -43,9 +43,12 @@ object IosVppAppAssignmentSettings {
     def deleteUseDeviceLicensing: Self = this.set("useDeviceLicensing", js.undefined)
     
     @scala.inline
-    def setVpnConfigurationId(value: String): Self = this.set("vpnConfigurationId", value.asInstanceOf[js.Any])
+    def setVpnConfigurationId(value: NullableOption[String]): Self = this.set("vpnConfigurationId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVpnConfigurationId: Self = this.set("vpnConfigurationId", js.undefined)
+    
+    @scala.inline
+    def setVpnConfigurationIdNull: Self = this.set("vpnConfigurationId", null)
   }
 }

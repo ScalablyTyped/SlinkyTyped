@@ -1,7 +1,7 @@
 package typingsSlinky.grammarkdown.nodesMod
 
-import typingsSlinky.grammarkdown.coreMod.TextRange
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind
+import typingsSlinky.grammarkdown.typesMod.TextRange
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`

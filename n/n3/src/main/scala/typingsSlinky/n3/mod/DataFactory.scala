@@ -20,7 +20,7 @@ object DataFactory extends js.Object {
   def literal(value: Double, languageOrDatatype: String): Literal = js.native
   def literal(value: Double, languageOrDatatype: typingsSlinky.rdfJs.mod.NamedNode[String]): Literal = js.native
   
-  def namedNode(value: String): NamedNode = js.native
+  def namedNode[Iri /* <: String */](value: Iri): NamedNode[Iri] = js.native
   
   def quad(
     subject: typingsSlinky.rdfJs.mod.QuadSubject,

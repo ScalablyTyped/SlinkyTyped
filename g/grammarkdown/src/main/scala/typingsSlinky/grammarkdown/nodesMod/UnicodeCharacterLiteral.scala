@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class UnicodeCharacterLiteral ()
   extends OptionalSymbolBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.UnicodeCharacterLiteral]
-     with TextContent {
+     with TextContent
+     with OptionalSymbol {
   def this(text: String) = this()
   def this(text: js.UndefOr[scala.Nothing], questionToken: Token[QuestionToken]) = this()
   def this(text: String, questionToken: Token[QuestionToken]) = this()

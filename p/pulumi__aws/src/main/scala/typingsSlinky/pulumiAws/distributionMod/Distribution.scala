@@ -8,6 +8,7 @@ import typingsSlinky.pulumiAws.outputMod.cloudfront.DistributionOrderedCacheBeha
 import typingsSlinky.pulumiAws.outputMod.cloudfront.DistributionOrigin
 import typingsSlinky.pulumiAws.outputMod.cloudfront.DistributionOriginGroup
 import typingsSlinky.pulumiAws.outputMod.cloudfront.DistributionRestrictions
+import typingsSlinky.pulumiAws.outputMod.cloudfront.DistributionTrustedSigner
 import typingsSlinky.pulumiAws.outputMod.cloudfront.DistributionViewerCertificate
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -30,13 +31,6 @@ class Distribution protected () extends CustomResource {
     */
   def this(name: String, args: DistributionArgs) = this()
   def this(name: String, args: DistributionArgs, opts: CustomResourceOptions) = this()
-  
-  /**
-    * The key pair IDs that CloudFront is aware of for
-    * each trusted signer, if the distribution is set up to serve private content
-    * with signed URLs.
-    */
-  val activeTrustedSigners: Output_[StringDictionary[String]] = js.native
   
   /**
     * Extra CNAMEs (alternate domain names), if any, for
@@ -184,6 +178,12 @@ class Distribution protected () extends CustomResource {
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
   /**
+    * List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
+    * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+    */
+  val trustedSigners: Output_[js.Array[DistributionTrustedSigner]] = js.native
+  
+  /**
     * The SSL
     * configuration for this distribution (maximum
     * one).
@@ -198,11 +198,13 @@ class Distribution protected () extends CustomResource {
   val waitForDeployment: Output_[js.UndefOr[Boolean]] = js.native
   
   /**
-    * If you're using AWS WAF to filter CloudFront
-    * requests, the Id of the AWS WAF web ACL that is associated with the
-    * distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
-    * region and the credentials configuring this argument must have
-    * `waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
+    * A unique identifier that specifies the AWS WAF web ACL,
+    * if any, to associate with this distribution.
+    * To specify a web ACL created using the latest version of AWS WAF (WAFv2), use the ACL ARN,
+    * for example `aws_wafv2_web_acl.example.arn`. To specify a web
+    * ACL created using AWS WAF Classic, use the ACL ID, for example `aws_waf_web_acl.example.id`.
+    * The WAF Web ACL must exist in the WAF Global (CloudFront) region and the
+    * credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
     */
   val webAclId: Output_[js.UndefOr[String]] = js.native
 }

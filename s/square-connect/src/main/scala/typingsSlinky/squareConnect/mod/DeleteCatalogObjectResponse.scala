@@ -22,7 +22,7 @@ class DeleteCatalogObjectResponse () extends js.Object {
   var deleted_object_ids: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * Information on any errors encountered.
+    * Any errors that occurred during the request.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
 }

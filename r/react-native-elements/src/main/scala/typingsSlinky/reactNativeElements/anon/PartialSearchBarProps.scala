@@ -1,7 +1,9 @@
 package typingsSlinky.reactNativeElements.anon
 
+import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.anon.Start
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
@@ -15,7 +17,6 @@ import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.DocumentSelectionState
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.KeyboardTypeOptions
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ReturnKeyTypeOptions
@@ -32,6 +33,7 @@ import typingsSlinky.reactNative.mod.TextInputTextInputEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.mod.IconNode
+import typingsSlinky.reactNativeElements.mod.TextProps
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.URL
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.`box-none`
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.`box-only`
@@ -109,6 +111,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PartialSearchBarProps extends js.Object {
   
+  var InputComponent: js.UndefOr[ReactComponentClass[_]] = js.native
+  
   var accessibilityActions: js.UndefOr[js.Array[AccessibilityActionInfo]] = js.native
   
   var accessibilityComponentType: js.UndefOr[none | button | radiobutton_checked | radiobutton_unchecked] = js.native
@@ -175,9 +179,19 @@ trait PartialSearchBarProps extends js.Object {
   
   var disableFullscreenUI: js.UndefOr[Boolean] = js.native
   
+  var disabled: js.UndefOr[Boolean] = js.native
+  
+  var disabledInputStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  
   var editable: js.UndefOr[Boolean] = js.native
   
   var enablesReturnKeyAutomatically: js.UndefOr[Boolean] = js.native
+  
+  var errorMessage: js.UndefOr[String] = js.native
+  
+  var errorProps: js.UndefOr[TextProps] = js.native
+  
+  var errorStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
   
   var focusable: js.UndefOr[Boolean] = js.native
   
@@ -204,6 +218,14 @@ trait PartialSearchBarProps extends js.Object {
   var keyboardAppearance: js.UndefOr[default | light | dark] = js.native
   
   var keyboardType: js.UndefOr[KeyboardTypeOptions] = js.native
+  
+  var label: js.UndefOr[String | ReactElement] = js.native
+  
+  var labelProps: js.UndefOr[TextProps] = js.native
+  
+  var labelStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
+  
+  var leftIcon: js.UndefOr[IconNode] = js.native
   
   var leftIconContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
@@ -249,7 +271,7 @@ trait PartialSearchBarProps extends js.Object {
   
   var onKeyPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextInputKeyPressEventData], Unit]] = js.native
   
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   var onMagicTap: js.UndefOr[js.Function0[Unit]] = js.native
   
@@ -311,11 +333,15 @@ trait PartialSearchBarProps extends js.Object {
   
   var removeClippedSubviews: js.UndefOr[Boolean] = js.native
   
+  var renderErrorMessage: js.UndefOr[Boolean] = js.native
+  
   var renderToHardwareTextureAndroid: js.UndefOr[Boolean] = js.native
   
   var returnKeyLabel: js.UndefOr[String] = js.native
   
   var returnKeyType: js.UndefOr[ReturnKeyTypeOptions] = js.native
+  
+  var rightIcon: js.UndefOr[IconNode] = js.native
   
   var rightIconContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
@@ -393,6 +419,18 @@ object PartialSearchBarProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setInputComponentFunctionComponent(value: ReactComponentClass[_]): Self = this.set("InputComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInputComponentComponentClass(value: ReactComponentClass[_]): Self = this.set("InputComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInputComponent(value: ReactComponentClass[_]): Self = this.set("InputComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputComponent: Self = this.set("InputComponent", js.undefined)
     
     @scala.inline
     def setAccessibilityActionsVarargs(value: AccessibilityActionInfo*): Self = this.set("accessibilityActions", js.Array(value :_*))
@@ -607,6 +645,21 @@ object PartialSearchBarProps {
     def deleteDisableFullscreenUI: Self = this.set("disableFullscreenUI", js.undefined)
     
     @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setDisabledInputStyle(value: StyleProp[TextStyle]): Self = this.set("disabledInputStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisabledInputStyle: Self = this.set("disabledInputStyle", js.undefined)
+    
+    @scala.inline
+    def setDisabledInputStyleNull: Self = this.set("disabledInputStyle", null)
+    
+    @scala.inline
     def setEditable(value: Boolean): Self = this.set("editable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -617,6 +670,27 @@ object PartialSearchBarProps {
     
     @scala.inline
     def deleteEnablesReturnKeyAutomatically: Self = this.set("enablesReturnKeyAutomatically", js.undefined)
+    
+    @scala.inline
+    def setErrorMessage(value: String): Self = this.set("errorMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorMessage: Self = this.set("errorMessage", js.undefined)
+    
+    @scala.inline
+    def setErrorProps(value: TextProps): Self = this.set("errorProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorProps: Self = this.set("errorProps", js.undefined)
+    
+    @scala.inline
+    def setErrorStyle(value: StyleProp[TextStyle]): Self = this.set("errorStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorStyle: Self = this.set("errorStyle", js.undefined)
+    
+    @scala.inline
+    def setErrorStyleNull: Self = this.set("errorStyle", null)
     
     @scala.inline
     def setFocusable(value: Boolean): Self = this.set("focusable", value.asInstanceOf[js.Any])
@@ -701,6 +775,39 @@ object PartialSearchBarProps {
     
     @scala.inline
     def deleteKeyboardType: Self = this.set("keyboardType", js.undefined)
+    
+    @scala.inline
+    def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLabel(value: String | ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
+    
+    @scala.inline
+    def setLabelProps(value: TextProps): Self = this.set("labelProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabelProps: Self = this.set("labelProps", js.undefined)
+    
+    @scala.inline
+    def setLabelStyle(value: StyleProp[TextStyle]): Self = this.set("labelStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabelStyle: Self = this.set("labelStyle", js.undefined)
+    
+    @scala.inline
+    def setLabelStyleNull: Self = this.set("labelStyle", null)
+    
+    @scala.inline
+    def setLeftIconReactElement(value: ReactElement): Self = this.set("leftIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLeftIcon(value: IconNode): Self = this.set("leftIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLeftIcon: Self = this.set("leftIcon", js.undefined)
     
     @scala.inline
     def setLeftIconContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("leftIconContainerStyle", value.asInstanceOf[js.Any])
@@ -835,7 +942,7 @@ object PartialSearchBarProps {
     def deleteOnKeyPress: Self = this.set("onKeyPress", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -1021,6 +1128,12 @@ object PartialSearchBarProps {
     def deleteRemoveClippedSubviews: Self = this.set("removeClippedSubviews", js.undefined)
     
     @scala.inline
+    def setRenderErrorMessage(value: Boolean): Self = this.set("renderErrorMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRenderErrorMessage: Self = this.set("renderErrorMessage", js.undefined)
+    
+    @scala.inline
     def setRenderToHardwareTextureAndroid(value: Boolean): Self = this.set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1037,6 +1150,15 @@ object PartialSearchBarProps {
     
     @scala.inline
     def deleteReturnKeyType: Self = this.set("returnKeyType", js.undefined)
+    
+    @scala.inline
+    def setRightIconReactElement(value: ReactElement): Self = this.set("rightIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRightIcon(value: IconNode): Self = this.set("rightIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRightIcon: Self = this.set("rightIcon", js.undefined)
     
     @scala.inline
     def setRightIconContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("rightIconContainerStyle", value.asInstanceOf[js.Any])

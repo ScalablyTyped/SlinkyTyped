@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`8`
+import typingsSlinky.octokitTypes.anon.`7`
 import typingsSlinky.octokitTypes.octokitTypesStrings.all
 import typingsSlinky.octokitTypes.octokitTypesStrings.direct
 import typingsSlinky.octokitTypes.octokitTypesStrings.outside
@@ -20,7 +20,7 @@ trait ProjectsListCollaboratorsEndpoint extends js.Object {
     */
   var affiliation: js.UndefOr[outside | direct | all] = js.native
   
-  var mediaType: `8` = js.native
+  var mediaType: `7` = js.native
   
   /**
     * Page number of the results to fetch.
@@ -37,7 +37,7 @@ trait ProjectsListCollaboratorsEndpoint extends js.Object {
 object ProjectsListCollaboratorsEndpoint {
   
   @scala.inline
-  def apply(mediaType: `8`, project_id: Double): ProjectsListCollaboratorsEndpoint = {
+  def apply(mediaType: `7`, project_id: Double): ProjectsListCollaboratorsEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], project_id = project_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsListCollaboratorsEndpoint]
   }
@@ -58,7 +58,7 @@ object ProjectsListCollaboratorsEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setProject_id(value: Double): Self = this.set("project_id", value.asInstanceOf[js.Any])

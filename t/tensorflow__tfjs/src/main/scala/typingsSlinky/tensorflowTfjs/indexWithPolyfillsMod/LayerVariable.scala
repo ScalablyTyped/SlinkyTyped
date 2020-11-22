@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.constraintsMod.Constraint
 import scala.scalajs.js
 import scala.scalajs.js.`|`

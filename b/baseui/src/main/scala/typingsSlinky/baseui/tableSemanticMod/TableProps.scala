@@ -12,9 +12,15 @@ trait TableProps extends js.Object {
   
   var data: js.Array[js.Array[ReactElement]] = js.native
   
+  var emptyMessage: js.UndefOr[ReactElement | js.Function0[ReactElement]] = js.native
+  
   var horizontalScrollWidth: js.UndefOr[String] = js.native
   
-  var overrides: js.UndefOr[Overrides] = js.native
+  var isLoading: js.UndefOr[Boolean] = js.native
+  
+  var loadingMessage: js.UndefOr[ReactElement | js.Function0[ReactElement]] = js.native
+  
+  var overrides: js.UndefOr[TableOverrides] = js.native
 }
 object TableProps {
   
@@ -52,13 +58,43 @@ object TableProps {
     def setData(value: js.Array[js.Array[ReactElement]]): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setEmptyMessageReactElement(value: ReactElement): Self = this.set("emptyMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEmptyMessageFunction0(value: () => ReactElement): Self = this.set("emptyMessage", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setEmptyMessage(value: ReactElement | js.Function0[ReactElement]): Self = this.set("emptyMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEmptyMessage: Self = this.set("emptyMessage", js.undefined)
+    
+    @scala.inline
     def setHorizontalScrollWidth(value: String): Self = this.set("horizontalScrollWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHorizontalScrollWidth: Self = this.set("horizontalScrollWidth", js.undefined)
     
     @scala.inline
-    def setOverrides(value: Overrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setIsLoading(value: Boolean): Self = this.set("isLoading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsLoading: Self = this.set("isLoading", js.undefined)
+    
+    @scala.inline
+    def setLoadingMessageReactElement(value: ReactElement): Self = this.set("loadingMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLoadingMessageFunction0(value: () => ReactElement): Self = this.set("loadingMessage", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setLoadingMessage(value: ReactElement | js.Function0[ReactElement]): Self = this.set("loadingMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoadingMessage: Self = this.set("loadingMessage", js.undefined)
+    
+    @scala.inline
+    def setOverrides(value: TableOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)

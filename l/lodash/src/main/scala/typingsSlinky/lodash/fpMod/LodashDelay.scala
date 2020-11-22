@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashDelay extends LodashConvertible {
+trait LodashDelay extends js.Object {
   
   def apply(wait: Double): LodashDelay1x1 = js.native
   def apply(wait: Double, func: js.Function1[/* repeated */ js.Any, _]): Double = js.native

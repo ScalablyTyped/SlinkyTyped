@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "stylelint-webpack-plugin"
-version := "2.1.0-f0a7d4"
+version := "2.1.1-d5c0bf"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "postcss" % "7.0.32-e1635a",
-  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-92df5a",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
-  "org.scalablytyped.slinky" %%% "stylelint" % "9.10-dt-20200515Z-bc0d36")
+  "org.scalablytyped.slinky" %%% "postcss" % "7.0.35-f6dc1d",
+  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-07892e",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "stylelint" % "9.10-dt-20200515Z-a0efcf")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

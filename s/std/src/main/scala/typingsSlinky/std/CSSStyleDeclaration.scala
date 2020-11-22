@@ -465,6 +465,16 @@ trait CSSStyleDeclaration
   
   var overflowY: java.lang.String = js.native
   
+  var overscrollBehavior: java.lang.String = js.native
+  
+  var overscrollBehaviorBlock: java.lang.String = js.native
+  
+  var overscrollBehaviorInline: java.lang.String = js.native
+  
+  var overscrollBehaviorX: java.lang.String = js.native
+  
+  var overscrollBehaviorY: java.lang.String = js.native
+  
   var padding: java.lang.String = js.native
   
   var paddingBlockEnd: java.lang.String = js.native

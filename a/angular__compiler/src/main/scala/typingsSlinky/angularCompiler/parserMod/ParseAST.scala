@@ -42,6 +42,8 @@ class ParseAST protected () extends js.Object {
     */
   var consumeStatementTerminator: js.Any = js.native
   
+  var context: js.Any = js.native
+  
   /**
     * Returns the absolute offset of the start of the current token.
     */
@@ -53,11 +55,21 @@ class ParseAST protected () extends js.Object {
     */
   def currentEndIndex: Double = js.native
   
+  /**
+    * Records an error and skips over the token stream until reaching a recoverable point. See
+    * `this.skip` for more details on token skipping.
+    */
   def error(message: String): Unit = js.native
   def error(message: String, index: Double): Unit = js.native
   
   var errors: js.Any = js.native
   
+  /**
+    * Consumes an expected character, otherwise emits an error about the missing expected character
+    * and skips over the token stream until reaching a recoverable point.
+    *
+    * See `this.error` and `this.skip` for more details.
+    */
   def expectCharacter(code: Double): Unit = js.native
   
   def expectIdentifierOrKeyword(): String = js.native
@@ -212,12 +224,33 @@ class ParseAST protected () extends js.Object {
   
   def peekKeywordLet(): Boolean = js.native
   
+  def prettyPrintToken(tok: Token): String = js.native
+  
   var rbracesExpected: js.Any = js.native
   
   var rbracketsExpected: js.Any = js.native
   
   var rparensExpected: js.Any = js.native
   
+  /**
+    * Error recovery should skip tokens until it encounters a recovery point. skip() treats
+    * the end of input and a ';' as unconditionally a recovery point. It also treats ')',
+    * '}' and ']' as conditional recovery points if one of calling productions is expecting
+    * one of these symbols. This allows skip() to recover from errors such as '(a.) + 1' allowing
+    * more of the AST to be retained (it doesn't skip any tokens as the ')' is retained because
+    * of the '(' begins an '(' <expr> ')' production). The recovery points of grouping symbols
+    * must be conditional as they must be skipped if none of the calling productions are not
+    * expecting the closing token else we will never make progress in the case of an
+    * extraneous group closing symbol (such as a stray ')'). This is not the case for ';' because
+    * parseChain() is always the root production and it expects a ';'.
+    *
+    * Furthermore, the presence of a stateful context can add more recovery points.
+    *   - in a `Writable` context, we are able to recover after seeing the `=` operator, which
+    *     signals the presence of an independent rvalue expression following the `=` operator.
+    *
+    * If a production expects one of these token it increments the corresponding nesting count,
+    * and then decrements it just prior to checking if the token is in the input.
+    */
   var skip: js.Any = js.native
   
   def sourceSpan(start: Double): AbsoluteSourceSpan = js.native
@@ -227,4 +260,9 @@ class ParseAST protected () extends js.Object {
   def span(start: Double): ParseSpan = js.native
   
   var tokens: js.Array[Token] = js.native
+  
+  /**
+    * Executes a callback in the provided context.
+    */
+  var withContext: js.Any = js.native
 }

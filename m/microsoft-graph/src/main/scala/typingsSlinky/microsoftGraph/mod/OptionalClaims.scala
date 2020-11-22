@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OptionalClaims extends js.Object {
   
   // The optional claims returned in the JWT access token.
-  var accessToken: js.UndefOr[js.Array[OptionalClaim]] = js.native
+  var accessToken: js.UndefOr[NullableOption[js.Array[OptionalClaim]]] = js.native
   
   // The optional claims returned in the JWT ID token.
-  var idToken: js.UndefOr[js.Array[OptionalClaim]] = js.native
+  var idToken: js.UndefOr[NullableOption[js.Array[OptionalClaim]]] = js.native
   
   // The optional claims returned in the SAML token.
-  var saml2Token: js.UndefOr[js.Array[OptionalClaim]] = js.native
+  var saml2Token: js.UndefOr[NullableOption[js.Array[OptionalClaim]]] = js.native
 }
 object OptionalClaims {
   
@@ -43,27 +43,36 @@ object OptionalClaims {
     def setAccessTokenVarargs(value: OptionalClaim*): Self = this.set("accessToken", js.Array(value :_*))
     
     @scala.inline
-    def setAccessToken(value: js.Array[OptionalClaim]): Self = this.set("accessToken", value.asInstanceOf[js.Any])
+    def setAccessToken(value: NullableOption[js.Array[OptionalClaim]]): Self = this.set("accessToken", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAccessToken: Self = this.set("accessToken", js.undefined)
     
     @scala.inline
+    def setAccessTokenNull: Self = this.set("accessToken", null)
+    
+    @scala.inline
     def setIdTokenVarargs(value: OptionalClaim*): Self = this.set("idToken", js.Array(value :_*))
     
     @scala.inline
-    def setIdToken(value: js.Array[OptionalClaim]): Self = this.set("idToken", value.asInstanceOf[js.Any])
+    def setIdToken(value: NullableOption[js.Array[OptionalClaim]]): Self = this.set("idToken", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIdToken: Self = this.set("idToken", js.undefined)
     
     @scala.inline
+    def setIdTokenNull: Self = this.set("idToken", null)
+    
+    @scala.inline
     def setSaml2TokenVarargs(value: OptionalClaim*): Self = this.set("saml2Token", js.Array(value :_*))
     
     @scala.inline
-    def setSaml2Token(value: js.Array[OptionalClaim]): Self = this.set("saml2Token", value.asInstanceOf[js.Any])
+    def setSaml2Token(value: NullableOption[js.Array[OptionalClaim]]): Self = this.set("saml2Token", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSaml2Token: Self = this.set("saml2Token", js.undefined)
+    
+    @scala.inline
+    def setSaml2TokenNull: Self = this.set("saml2Token", null)
   }
 }

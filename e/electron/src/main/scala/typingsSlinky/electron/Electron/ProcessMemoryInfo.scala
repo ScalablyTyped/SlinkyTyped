@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProcessMemoryInfo extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/process-memory-info
+  // Docs: https://electronjs.org/docs/api/structures/process-memory-info
   /**
     * The amount of memory not shared by other processes, such as JS heap or HTML
     * content in Kilobytes.

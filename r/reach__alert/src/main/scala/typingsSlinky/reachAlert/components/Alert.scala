@@ -18,8 +18,13 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reachAlert.mod.AlertProps
+import typingsSlinky.reachAlert.reachAlertStrings.`additions removals`
 import typingsSlinky.reachAlert.reachAlertStrings.`additions text`
 import typingsSlinky.reachAlert.reachAlertStrings.`inline`
+import typingsSlinky.reachAlert.reachAlertStrings.`removals additions`
+import typingsSlinky.reachAlert.reachAlertStrings.`removals text`
+import typingsSlinky.reachAlert.reachAlertStrings.`text additions`
+import typingsSlinky.reachAlert.reachAlertStrings.`text removals`
 import typingsSlinky.reachAlert.reachAlertStrings.additions
 import typingsSlinky.reachAlert.reachAlertStrings.all
 import typingsSlinky.reachAlert.reachAlertStrings.ascending
@@ -212,7 +217,9 @@ object Alert {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

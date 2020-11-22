@@ -1,7 +1,7 @@
 package typingsSlinky.mjmlReact.mod
 
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.VerticalAlign
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.VerticalAlignProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MjmlGroupProps extends js.Object {
   
-  var backgroundColor: js.UndefOr[BackgroundColor] = js.native
+  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
   
-  var verticalAlign: js.UndefOr[VerticalAlign[String | Double]] = js.native
+  var verticalAlign: js.UndefOr[VerticalAlignProperty[String | Double]] = js.native
   
   var width: js.UndefOr[String | Double] = js.native
 }
@@ -39,13 +39,13 @@ object MjmlGroupProps {
     }
     
     @scala.inline
-    def setBackgroundColor(value: BackgroundColor): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColor(value: BackgroundColorProperty): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
     
     @scala.inline
-    def setVerticalAlign(value: VerticalAlign[String | Double]): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
+    def setVerticalAlign(value: VerticalAlignProperty[String | Double]): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVerticalAlign: Self = this.set("verticalAlign", js.undefined)

@@ -13,7 +13,7 @@ trait AddApplicationReferenceDataSourceResponse extends js.Object {
   var ApplicationARN: js.UndefOr[ResourceARN] = js.native
   
   /**
-    * The updated application version ID. Amazon Kinesis Data Analytics increments this ID when the application is updated.
+    * The updated application version ID. Kinesis Data Analytics increments this ID when the application is updated.
     */
   var ApplicationVersionId: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.ApplicationVersionId] = js.native
   

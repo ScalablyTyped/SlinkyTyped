@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "material__tab-bar"
-version := "7.0.0-7aa8b4"
+version := "8.0.0-b95188"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "material__base" % "7.0.0-7a21fc",
-  "org.scalablytyped.slinky" %%% "material__ripple" % "7.0.0-a8ae6d",
-  "org.scalablytyped.slinky" %%% "material__tab" % "7.0.0-f02608",
-  "org.scalablytyped.slinky" %%% "material__tab-indicator" % "7.0.0-53c732",
-  "org.scalablytyped.slinky" %%% "material__tab-scroller" % "7.0.0-c6716e",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "material__base" % "8.0.0-6c4191",
+  "org.scalablytyped.slinky" %%% "material__ripple" % "8.0.0-8be78a",
+  "org.scalablytyped.slinky" %%% "material__tab" % "8.0.0-0a14b1",
+  "org.scalablytyped.slinky" %%% "material__tab-indicator" % "8.0.0-96ad0b",
+  "org.scalablytyped.slinky" %%% "material__tab-scroller" % "8.0.0-65d842",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

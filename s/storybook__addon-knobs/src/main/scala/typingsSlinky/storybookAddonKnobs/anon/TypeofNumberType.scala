@@ -1,6 +1,7 @@
 package typingsSlinky.storybookAddonKnobs.anon
 
 import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.storybookAddonKnobs.numberMod.NumberTypeKnobValue
 import typingsSlinky.storybookAddonKnobs.numberMod.NumberTypeProps
 import typingsSlinky.storybookAddonKnobs.numberMod.default
 import scala.scalajs.js
@@ -17,5 +18,5 @@ trait TypeofNumberType extends Instantiable0[default] {
   var propTypes: KnobValidator = js.native
   
   def serialize(): String = js.native
-  def serialize(value: Double): String = js.native
+  def serialize(value: NumberTypeKnobValue): String = js.native
 }

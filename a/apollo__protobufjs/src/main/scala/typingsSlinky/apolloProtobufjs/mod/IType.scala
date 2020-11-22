@@ -13,13 +13,13 @@ trait IType extends INamespace {
   var extensions: js.UndefOr[js.Array[js.Array[Double]]] = js.native
   
   /** Field descriptors */
-  var fields: StringDictionary[IField] = js.native
+  var fields: StringDictionary[js.UndefOr[IField]] = js.native
   
   /** Whether a legacy group or not */
   var group: js.UndefOr[Boolean] = js.native
   
   /** Oneof descriptors */
-  var oneofs: js.UndefOr[StringDictionary[IOneOf]] = js.native
+  var oneofs: js.UndefOr[StringDictionary[js.UndefOr[IOneOf]]] = js.native
   
   /** Reserved ranges */
   var reserved: js.UndefOr[js.Array[js.Array[Double]]] = js.native
@@ -27,7 +27,7 @@ trait IType extends INamespace {
 object IType {
   
   @scala.inline
-  def apply(fields: StringDictionary[IField]): IType = {
+  def apply(fields: StringDictionary[js.UndefOr[IField]]): IType = {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any])
     __obj.asInstanceOf[IType]
   }
@@ -48,7 +48,7 @@ object IType {
     }
     
     @scala.inline
-    def setFields(value: StringDictionary[IField]): Self = this.set("fields", value.asInstanceOf[js.Any])
+    def setFields(value: StringDictionary[js.UndefOr[IField]]): Self = this.set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setExtensionsVarargs(value: js.Array[Double]*): Self = this.set("extensions", js.Array(value :_*))
@@ -66,7 +66,7 @@ object IType {
     def deleteGroup: Self = this.set("group", js.undefined)
     
     @scala.inline
-    def setOneofs(value: StringDictionary[IOneOf]): Self = this.set("oneofs", value.asInstanceOf[js.Any])
+    def setOneofs(value: StringDictionary[js.UndefOr[IOneOf]]): Self = this.set("oneofs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOneofs: Self = this.set("oneofs", js.undefined)

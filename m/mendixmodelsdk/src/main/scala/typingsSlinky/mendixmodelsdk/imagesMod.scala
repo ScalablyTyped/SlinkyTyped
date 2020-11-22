@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable
 import typingsSlinky.mendixmodelsdk.elementsMod.IElement
@@ -12,6 +13,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.Document
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import scala.scalajs.js
@@ -48,7 +50,7 @@ object imagesMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/images relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/images relevant section in reference guide}
       */
     @js.native
     trait IImageCollection extends IDocument {
@@ -63,15 +65,15 @@ object imagesMod extends js.Object {
     - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
     - typingsSlinky.mendixmodelsdk.imagesMod.images.IImage because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsImageCollection, name */ @js.native
     class Image protected ()
-      extends Element
+      extends Element[IModel]
          with IByNameReferrable {
       def this(
         model: AbstractModel,
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       def containerAsImageCollection: ImageCollection = js.native
@@ -80,9 +82,6 @@ object imagesMod extends js.Object {
       
       def imageData: String | Null = js.native
       def imageData_=(newValue: String | Null): Unit = js.native
-      
-      @JSName("model")
-      var model_FImage: IModel = js.native
       
       def name: String = js.native
       def name_=(newValue: String): Unit = js.native
@@ -116,7 +115,7 @@ object imagesMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/images relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/images relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -143,9 +142,6 @@ object imagesMod extends js.Object {
       def images: IList[Image] = js.native
       @JSName("images")
       val images_FImageCollection: IList[IImage] = js.native
-      
-      @JSName("model")
-      var model_FImageCollection: IModel = js.native
     }
     /* static members */
     @js.native

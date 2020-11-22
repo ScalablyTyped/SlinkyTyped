@@ -1,9 +1,11 @@
 package typingsSlinky.grommet
 
 import typingsSlinky.grommet.announceContextMod.AnnounceMode
+import typingsSlinky.grommet.dataChartMod.GranularityType
 import typingsSlinky.grommet.dataTableMod.ColumnSizeType
 import typingsSlinky.grommet.diagramMod.DiagramConnectionAnchor
 import typingsSlinky.grommet.diagramMod.DiagramConnectionType
+import typingsSlinky.grommet.layerMod.LayerPositionType
 import typingsSlinky.grommet.listMod.SideType
 import typingsSlinky.grommet.listMod._PadSizeType
 import typingsSlinky.grommet.listMod._SizeType
@@ -23,6 +25,7 @@ import typingsSlinky.grommet.utilsMod._GapType
 import typingsSlinky.grommet.utilsMod._OpacityType
 import typingsSlinky.grommet.utilsMod._PolymorphicType
 import typingsSlinky.grommet.utilsMod._RoundType
+import typingsSlinky.grommet.utilsMod._ThicknessType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -114,7 +117,19 @@ object grommetStrings {
   def abbr: abbr = "abbr".asInstanceOf[abbr]
   
   @scala.inline
+  def additions: additions = "additions".asInstanceOf[additions]
+  
+  @scala.inline
+  def `additions removals`: `additions removals` = ("additions removals").asInstanceOf[`additions removals`]
+  
+  @scala.inline
+  def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
+  
+  @scala.inline
   def address: address = "address".asInstanceOf[address]
+  
+  @scala.inline
+  def align: align = "align".asInstanceOf[align]
   
   @scala.inline
   def all: all = "all".asInstanceOf[all]
@@ -147,6 +162,9 @@ object grommetStrings {
   def asc: asc = "asc".asInstanceOf[asc]
   
   @scala.inline
+  def ascending: ascending = "ascending".asInstanceOf[ascending]
+  
+  @scala.inline
   def aside: aside = "aside".asInstanceOf[aside]
   
   @scala.inline
@@ -169,6 +187,9 @@ object grommetStrings {
   
   @scala.inline
   def bar: bar = "bar".asInstanceOf[bar]
+  
+  @scala.inline
+  def bars: bars = "bars".asInstanceOf[bars]
   
   @scala.inline
   def base: base = "base".asInstanceOf[base]
@@ -202,6 +223,9 @@ object grommetStrings {
   
   @scala.inline
   def bold: bold = "bold".asInstanceOf[bold]
+  
+  @scala.inline
+  def both: both = "both".asInstanceOf[both]
   
   @scala.inline
   def bottom: bottom = "bottom".asInstanceOf[bottom]
@@ -246,6 +270,9 @@ object grommetStrings {
   def clipPath: clipPath = "clipPath".asInstanceOf[clipPath]
   
   @scala.inline
+  def coarse: coarse = "coarse".asInstanceOf[coarse]
+  
+  @scala.inline
   def code: code = "code".asInstanceOf[code]
   
   @scala.inline
@@ -273,6 +300,9 @@ object grommetStrings {
   def controls: controls = "controls".asInstanceOf[controls]
   
   @scala.inline
+  def copy: copy = "copy".asInstanceOf[copy]
+  
+  @scala.inline
   def cover: cover = "cover".asInstanceOf[cover]
   
   @scala.inline
@@ -291,7 +321,13 @@ object grommetStrings {
   def datalist: datalist = "datalist".asInstanceOf[datalist]
   
   @scala.inline
+  def date: date = "date".asInstanceOf[date]
+  
+  @scala.inline
   def dd: dd = "dd".asInstanceOf[dd]
+  
+  @scala.inline
+  def decimal: decimal = "decimal".asInstanceOf[decimal]
   
   @scala.inline
   def defs: defs = "defs".asInstanceOf[defs]
@@ -303,6 +339,9 @@ object grommetStrings {
   def desc: desc = "desc".asInstanceOf[desc]
   
   @scala.inline
+  def descending: descending = "descending".asInstanceOf[descending]
+  
+  @scala.inline
   def details: details = "details".asInstanceOf[details]
   
   @scala.inline
@@ -310,6 +349,9 @@ object grommetStrings {
   
   @scala.inline
   def dialog: dialog = "dialog".asInstanceOf[dialog]
+  
+  @scala.inline
+  def diamond: diamond = "diamond".asInstanceOf[diamond]
   
   @scala.inline
   def digital: digital = "digital".asInstanceOf[digital]
@@ -342,6 +384,9 @@ object grommetStrings {
   def em: em = "em".asInstanceOf[em]
   
   @scala.inline
+  def email: email = "email".asInstanceOf[email]
+  
+  @scala.inline
   def embed: embed = "embed".asInstanceOf[embed]
   
   @scala.inline
@@ -352,6 +397,9 @@ object grommetStrings {
   
   @scala.inline
   def evenly: evenly = "evenly".asInstanceOf[evenly]
+  
+  @scala.inline
+  def execute: execute = "execute".asInstanceOf[execute]
   
   @scala.inline
   def fadeIn: fadeIn = "fadeIn".asInstanceOf[fadeIn]
@@ -453,6 +501,9 @@ object grommetStrings {
   def filter: filter = "filter".asInstanceOf[filter]
   
   @scala.inline
+  def fine: fine = "fine".asInstanceOf[fine]
+  
+  @scala.inline
   def first: first = "first".asInstanceOf[first]
   
   @scala.inline
@@ -478,6 +529,12 @@ object grommetStrings {
   
   @scala.inline
   def g: g = "g".asInstanceOf[g]
+  
+  @scala.inline
+  def grammar: grammar = "grammar".asInstanceOf[grammar]
+  
+  @scala.inline
+  def grid: grid = "grid".asInstanceOf[grid]
   
   @scala.inline
   def groove: groove = "groove".asInstanceOf[groove]
@@ -552,6 +609,12 @@ object grommetStrings {
   def info: info = "info".asInstanceOf[info]
   
   @scala.inline
+  def inherit: inherit = "inherit".asInstanceOf[inherit]
+  
+  @scala.inline
+  def `inline`: `inline` = "inline".asInstanceOf[`inline`]
+  
+  @scala.inline
   def input: input = "input".asInstanceOf[input]
   
   @scala.inline
@@ -606,6 +669,15 @@ object grommetStrings {
   def link: link = "link".asInstanceOf[link]
   
   @scala.inline
+  def list: list = "list".asInstanceOf[list]
+  
+  @scala.inline
+  def listbox: listbox = "listbox".asInstanceOf[listbox]
+  
+  @scala.inline
+  def location: location = "location".asInstanceOf[location]
+  
+  @scala.inline
   def main: main = "main".asInstanceOf[main]
   
   @scala.inline
@@ -651,6 +723,12 @@ object grommetStrings {
   def minutes: minutes = "minutes".asInstanceOf[minutes]
   
   @scala.inline
+  def mixed: mixed = "mixed".asInstanceOf[mixed]
+  
+  @scala.inline
+  def move: move = "move".asInstanceOf[move]
+  
+  @scala.inline
   def mpath: mpath = "mpath".asInstanceOf[mpath]
   
   @scala.inline
@@ -658,6 +736,9 @@ object grommetStrings {
   
   @scala.inline
   def nav: nav = "nav".asInstanceOf[nav]
+  
+  @scala.inline
+  def no: no = "no".asInstanceOf[no]
   
   @scala.inline
   def `no-repeat`: `no-repeat` = "no-repeat".asInstanceOf[`no-repeat`]
@@ -675,6 +756,9 @@ object grommetStrings {
   def noscript: noscript = "noscript".asInstanceOf[noscript]
   
   @scala.inline
+  def numeric: numeric = "numeric".asInstanceOf[numeric]
+  
+  @scala.inline
   def `object`: `object` = "object".asInstanceOf[`object`]
   
   @scala.inline
@@ -682,6 +766,9 @@ object grommetStrings {
   
   @scala.inline
   def ol: ol = "ol".asInstanceOf[ol]
+  
+  @scala.inline
+  def on: on = "on".asInstanceOf[on]
   
   @scala.inline
   def onBlur: onBlur = "onBlur".asInstanceOf[onBlur]
@@ -693,10 +780,16 @@ object grommetStrings {
   def onSelect: onSelect = "onSelect".asInstanceOf[onSelect]
   
   @scala.inline
+  def onSubmit: onSubmit = "onSubmit".asInstanceOf[onSubmit]
+  
+  @scala.inline
   def optgroup: optgroup = "optgroup".asInstanceOf[optgroup]
   
   @scala.inline
   def option: option = "option".asInstanceOf[option]
+  
+  @scala.inline
+  def other: other = "other".asInstanceOf[other]
   
   @scala.inline
   def output: output = "output".asInstanceOf[output]
@@ -709,6 +802,9 @@ object grommetStrings {
   
   @scala.inline
   def p: p = "p".asInstanceOf[p]
+  
+  @scala.inline
+  def page: page = "page".asInstanceOf[page]
   
   @scala.inline
   def param: param = "param".asInstanceOf[param]
@@ -741,6 +837,9 @@ object grommetStrings {
   def polyline: polyline = "polyline".asInstanceOf[polyline]
   
   @scala.inline
+  def popup: popup = "popup".asInstanceOf[popup]
+  
+  @scala.inline
   def pre: pre = "pre".asInstanceOf[pre]
   
   @scala.inline
@@ -766,6 +865,15 @@ object grommetStrings {
   
   @scala.inline
   def ref: ref = "ref".asInstanceOf[ref]
+  
+  @scala.inline
+  def removals: removals = "removals".asInstanceOf[removals]
+  
+  @scala.inline
+  def `removals additions`: `removals additions` = ("removals additions").asInstanceOf[`removals additions`]
+  
+  @scala.inline
+  def `removals text`: `removals text` = ("removals text").asInstanceOf[`removals text`]
   
   @scala.inline
   def repeat: repeat = "repeat".asInstanceOf[repeat]
@@ -825,6 +933,9 @@ object grommetStrings {
   def scroll: scroll = "scroll".asInstanceOf[scroll]
   
   @scala.inline
+  def search: search = "search".asInstanceOf[search]
+  
+  @scala.inline
   def seconds: seconds = "seconds".asInstanceOf[seconds]
   
   @scala.inline
@@ -873,7 +984,19 @@ object grommetStrings {
   def span: span = "span".asInstanceOf[span]
   
   @scala.inline
+  def spelling: spelling = "spelling".asInstanceOf[spelling]
+  
+  @scala.inline
+  def square: square = "square".asInstanceOf[square]
+  
+  @scala.inline
+  def star: star = "star".asInstanceOf[star]
+  
+  @scala.inline
   def start: start = "start".asInstanceOf[start]
+  
+  @scala.inline
+  def step: step = "step".asInstanceOf[step]
   
   @scala.inline
   def stop: stop = "stop".asInstanceOf[stop]
@@ -921,10 +1044,19 @@ object grommetStrings {
   def td: td = "td".asInstanceOf[td]
   
   @scala.inline
+  def tel: tel = "tel".asInstanceOf[tel]
+  
+  @scala.inline
   def template: template = "template".asInstanceOf[template]
   
   @scala.inline
   def text: text = "text".asInstanceOf[text]
+  
+  @scala.inline
+  def `text additions`: `text additions` = ("text additions").asInstanceOf[`text additions`]
+  
+  @scala.inline
+  def `text removals`: `text removals` = ("text removals").asInstanceOf[`text removals`]
   
   @scala.inline
   def textPath: textPath = "textPath".asInstanceOf[textPath]
@@ -963,6 +1095,15 @@ object grommetStrings {
   def track: track = "track".asInstanceOf[track]
   
   @scala.inline
+  def tree: tree = "tree".asInstanceOf[tree]
+  
+  @scala.inline
+  def triangle: triangle = "triangle".asInstanceOf[triangle]
+  
+  @scala.inline
+  def triangleDown: triangleDown = "triangleDown".asInstanceOf[triangleDown]
+  
+  @scala.inline
   def tspan: tspan = "tspan".asInstanceOf[tspan]
   
   @scala.inline
@@ -970,6 +1111,9 @@ object grommetStrings {
   
   @scala.inline
   def ul: ul = "ul".asInstanceOf[ul]
+  
+  @scala.inline
+  def url: url = "url".asInstanceOf[url]
   
   @scala.inline
   def use: use = "use".asInstanceOf[use]
@@ -1015,6 +1159,9 @@ object grommetStrings {
   
   @scala.inline
   def xxsmall: xxsmall = "xxsmall".asInstanceOf[xxsmall]
+  
+  @scala.inline
+  def yes: yes = "yes".asInstanceOf[yes]
   
   @scala.inline
   def zoomIn: zoomIn = "zoomIn".asInstanceOf[zoomIn]
@@ -1119,7 +1266,19 @@ object grommetStrings {
   sealed trait abbr extends _PolymorphicType
   
   @js.native
+  sealed trait additions extends js.Object
+  
+  @js.native
+  sealed trait `additions removals` extends js.Object
+  
+  @js.native
+  sealed trait `additions text` extends js.Object
+  
+  @js.native
   sealed trait address extends _PolymorphicType
+  
+  @js.native
+  sealed trait align extends js.Object
   
   @js.native
   sealed trait all
@@ -1156,6 +1315,9 @@ object grommetStrings {
   sealed trait asc extends js.Object
   
   @js.native
+  sealed trait ascending extends js.Object
+  
+  @js.native
   sealed trait aside extends _PolymorphicType
   
   @js.native
@@ -1178,6 +1340,9 @@ object grommetStrings {
   
   @js.native
   sealed trait bar extends js.Object
+  
+  @js.native
+  sealed trait bars extends js.Object
   
   @js.native
   sealed trait base extends _PolymorphicType
@@ -1216,15 +1381,19 @@ object grommetStrings {
   sealed trait bold extends js.Object
   
   @js.native
+  sealed trait both extends js.Object
+  
+  @js.native
   sealed trait bottom
     extends BoxSideType
+       with LayerPositionType
        with SideType
   
   @js.native
-  sealed trait `bottom-left` extends js.Object
+  sealed trait `bottom-left` extends LayerPositionType
   
   @js.native
-  sealed trait `bottom-right` extends js.Object
+  sealed trait `bottom-right` extends LayerPositionType
   
   @js.native
   sealed trait br extends _PolymorphicType
@@ -1250,6 +1419,7 @@ object grommetStrings {
        with AlignSelfType
        with DiagramConnectionAnchor
        with JustifyContentType
+       with LayerPositionType
        with TextAlignType
   
   @js.native
@@ -1263,6 +1433,9 @@ object grommetStrings {
   
   @js.native
   sealed trait clipPath extends _PolymorphicType
+  
+  @js.native
+  sealed trait coarse extends GranularityType
   
   @js.native
   sealed trait code extends _PolymorphicType
@@ -1292,6 +1465,9 @@ object grommetStrings {
   sealed trait controls extends js.Object
   
   @js.native
+  sealed trait copy extends js.Object
+  
+  @js.native
   sealed trait cover extends js.Object
   
   @js.native
@@ -1310,7 +1486,13 @@ object grommetStrings {
   sealed trait datalist extends _PolymorphicType
   
   @js.native
+  sealed trait date extends js.Object
+  
+  @js.native
   sealed trait dd extends _PolymorphicType
+  
+  @js.native
+  sealed trait decimal extends js.Object
   
   @js.native
   sealed trait defs extends _PolymorphicType
@@ -1322,6 +1504,9 @@ object grommetStrings {
   sealed trait desc extends _PolymorphicType
   
   @js.native
+  sealed trait descending extends js.Object
+  
+  @js.native
   sealed trait details extends _PolymorphicType
   
   @js.native
@@ -1329,6 +1514,9 @@ object grommetStrings {
   
   @js.native
   sealed trait dialog extends _PolymorphicType
+  
+  @js.native
+  sealed trait diamond extends js.Object
   
   @js.native
   sealed trait digital extends js.Object
@@ -1361,6 +1549,9 @@ object grommetStrings {
   sealed trait em extends _PolymorphicType
   
   @js.native
+  sealed trait email extends js.Object
+  
+  @js.native
   sealed trait embed extends _PolymorphicType
   
   @js.native
@@ -1376,6 +1567,9 @@ object grommetStrings {
   
   @js.native
   sealed trait evenly extends js.Object
+  
+  @js.native
+  sealed trait execute extends js.Object
   
   @js.native
   sealed trait fadeIn extends js.Object
@@ -1477,6 +1671,9 @@ object grommetStrings {
   sealed trait filter extends _PolymorphicType
   
   @js.native
+  sealed trait fine extends GranularityType
+  
+  @js.native
   sealed trait first extends js.Object
   
   @js.native
@@ -1506,6 +1703,12 @@ object grommetStrings {
   sealed trait g extends _PolymorphicType
   
   @js.native
+  sealed trait grammar extends js.Object
+  
+  @js.native
+  sealed trait grid extends js.Object
+  
+  @js.native
   sealed trait groove extends BoxStyleType
   
   @js.native
@@ -1530,7 +1733,7 @@ object grommetStrings {
   sealed trait h6 extends _PolymorphicType
   
   @js.native
-  sealed trait hair extends js.Object
+  sealed trait hair extends _ThicknessType
   
   @js.native
   sealed trait head extends _PolymorphicType
@@ -1542,7 +1745,9 @@ object grommetStrings {
   sealed trait hgroup extends _PolymorphicType
   
   @js.native
-  sealed trait hidden extends BoxStyleType
+  sealed trait hidden
+    extends BoxStyleType
+       with LayerPositionType
   
   @js.native
   sealed trait horizontal
@@ -1582,6 +1787,12 @@ object grommetStrings {
   sealed trait info extends js.Object
   
   @js.native
+  sealed trait inherit extends js.Object
+  
+  @js.native
+  sealed trait `inline` extends js.Object
+  
+  @js.native
   sealed trait input extends _PolymorphicType
   
   @js.native
@@ -1618,6 +1829,7 @@ object grommetStrings {
        with _PadSizeType
        with _RoundType
        with _SizeType
+       with _ThicknessType
   
   @js.native
   sealed trait last extends js.Object
@@ -1625,6 +1837,7 @@ object grommetStrings {
   @js.native
   sealed trait left
     extends BoxSideType
+       with LayerPositionType
        with SideType
   
   @js.native
@@ -1644,6 +1857,15 @@ object grommetStrings {
   
   @js.native
   sealed trait link extends _PolymorphicType
+  
+  @js.native
+  sealed trait list extends js.Object
+  
+  @js.native
+  sealed trait listbox extends js.Object
+  
+  @js.native
+  sealed trait location extends js.Object
   
   @js.native
   sealed trait main extends _PolymorphicType
@@ -1667,6 +1889,7 @@ object grommetStrings {
   sealed trait medium
     extends EdgeSizeType
        with ColumnSizeType
+       with GranularityType
        with _BasisType
        with _BoxSizeType
        with _ElevationType
@@ -1674,6 +1897,7 @@ object grommetStrings {
        with _PadSizeType
        with _RoundType
        with _SizeType
+       with _ThicknessType
   
   @js.native
   sealed trait menu extends _PolymorphicType
@@ -1700,6 +1924,12 @@ object grommetStrings {
   sealed trait minutes extends js.Object
   
   @js.native
+  sealed trait mixed extends js.Object
+  
+  @js.native
+  sealed trait move extends js.Object
+  
+  @js.native
   sealed trait mpath extends _PolymorphicType
   
   @js.native
@@ -1707,6 +1937,9 @@ object grommetStrings {
   
   @js.native
   sealed trait nav extends _PolymorphicType
+  
+  @js.native
+  sealed trait no extends js.Object
   
   @js.native
   sealed trait `no-repeat` extends js.Object
@@ -1720,12 +1953,16 @@ object grommetStrings {
        with _EdgeType
        with _ElevationType
        with _GapType
+       with _ThicknessType
   
   @js.native
   sealed trait normal extends js.Object
   
   @js.native
   sealed trait noscript extends _PolymorphicType
+  
+  @js.native
+  sealed trait numeric extends js.Object
   
   @js.native
   sealed trait `object` extends _PolymorphicType
@@ -1737,6 +1974,9 @@ object grommetStrings {
   sealed trait ol extends _PolymorphicType
   
   @js.native
+  sealed trait on extends js.Object
+  
+  @js.native
   sealed trait onBlur extends js.Object
   
   @js.native
@@ -1746,10 +1986,16 @@ object grommetStrings {
   sealed trait onSelect extends js.Object
   
   @js.native
+  sealed trait onSubmit extends js.Object
+  
+  @js.native
   sealed trait optgroup extends _PolymorphicType
   
   @js.native
   sealed trait option extends _PolymorphicType
+  
+  @js.native
+  sealed trait other extends js.Object
   
   @js.native
   sealed trait output extends _PolymorphicType
@@ -1762,6 +2008,9 @@ object grommetStrings {
   
   @js.native
   sealed trait p extends _PolymorphicType
+  
+  @js.native
+  sealed trait page extends js.Object
   
   @js.native
   sealed trait param extends _PolymorphicType
@@ -1794,6 +2043,9 @@ object grommetStrings {
   sealed trait polyline extends _PolymorphicType
   
   @js.native
+  sealed trait popup extends js.Object
+  
+  @js.native
   sealed trait pre extends _PolymorphicType
   
   @js.native
@@ -1821,6 +2073,15 @@ object grommetStrings {
   sealed trait ref extends js.Object
   
   @js.native
+  sealed trait removals extends js.Object
+  
+  @js.native
+  sealed trait `removals additions` extends js.Object
+  
+  @js.native
+  sealed trait `removals text` extends js.Object
+  
+  @js.native
   sealed trait repeat extends js.Object
   
   @js.native
@@ -1838,6 +2099,7 @@ object grommetStrings {
   @js.native
   sealed trait right
     extends BoxSideType
+       with LayerPositionType
        with SideType
   
   @js.native
@@ -1878,6 +2140,9 @@ object grommetStrings {
   
   @js.native
   sealed trait scroll extends js.Object
+  
+  @js.native
+  sealed trait search extends js.Object
   
   @js.native
   sealed trait seconds extends js.Object
@@ -1926,6 +2191,7 @@ object grommetStrings {
        with _PolymorphicType
        with _RoundType
        with _SizeType
+       with _ThicknessType
   
   @js.native
   sealed trait solid extends BoxStyleType
@@ -1937,12 +2203,24 @@ object grommetStrings {
   sealed trait span extends _PolymorphicType
   
   @js.native
+  sealed trait spelling extends js.Object
+  
+  @js.native
+  sealed trait square extends js.Object
+  
+  @js.native
+  sealed trait star extends js.Object
+  
+  @js.native
   sealed trait start
     extends BoxSideType
        with AlignContentType
        with AlignSelfType
        with JustifyContentType
        with TextAlignType
+  
+  @js.native
+  sealed trait step extends js.Object
   
   @js.native
   sealed trait stop extends _PolymorphicType
@@ -1995,10 +2273,19 @@ object grommetStrings {
   sealed trait td extends _PolymorphicType
   
   @js.native
+  sealed trait tel extends js.Object
+  
+  @js.native
   sealed trait template extends _PolymorphicType
   
   @js.native
   sealed trait text extends _PolymorphicType
+  
+  @js.native
+  sealed trait `text additions` extends js.Object
+  
+  @js.native
+  sealed trait `text removals` extends js.Object
   
   @js.native
   sealed trait textPath extends _PolymorphicType
@@ -2024,19 +2311,29 @@ object grommetStrings {
   @js.native
   sealed trait top
     extends BoxSideType
+       with LayerPositionType
        with SideType
   
   @js.native
-  sealed trait `top-left` extends js.Object
+  sealed trait `top-left` extends LayerPositionType
   
   @js.native
-  sealed trait `top-right` extends js.Object
+  sealed trait `top-right` extends LayerPositionType
   
   @js.native
   sealed trait tr extends _PolymorphicType
   
   @js.native
   sealed trait track extends _PolymorphicType
+  
+  @js.native
+  sealed trait tree extends js.Object
+  
+  @js.native
+  sealed trait triangle extends js.Object
+  
+  @js.native
+  sealed trait triangleDown extends js.Object
   
   @js.native
   sealed trait tspan extends _PolymorphicType
@@ -2046,6 +2343,9 @@ object grommetStrings {
   
   @js.native
   sealed trait ul extends _PolymorphicType
+  
+  @js.native
+  sealed trait url extends js.Object
   
   @js.native
   sealed trait use extends _PolymorphicType
@@ -2094,6 +2394,7 @@ object grommetStrings {
        with _PadSizeType
        with _RoundType
        with _SizeType
+       with _ThicknessType
   
   @js.native
   sealed trait xsmall
@@ -2104,6 +2405,7 @@ object grommetStrings {
        with _PadSizeType
        with _RoundType
        with _SizeType
+       with _ThicknessType
   
   @js.native
   sealed trait xxlarge extends _BasisType
@@ -2114,6 +2416,9 @@ object grommetStrings {
        with _BasisType
        with _PadSizeType
        with _SizeType
+  
+  @js.native
+  sealed trait yes extends js.Object
   
   @js.native
   sealed trait zoomIn extends js.Object

@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DatetimeData extends js.Object {
   
+  var ampm: js.UndefOr[String] = js.native
+  
   var day: js.UndefOr[Double] = js.native
   
   var hour: js.UndefOr[Double] = js.native
@@ -45,6 +47,12 @@ object DatetimeData {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAmpm(value: String): Self = this.set("ampm", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAmpm: Self = this.set("ampm", js.undefined)
     
     @scala.inline
     def setDay(value: Double): Self = this.set("day", value.asInstanceOf[js.Any])

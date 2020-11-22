@@ -13,7 +13,7 @@ trait DescribeInstanceTypeOfferingsRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * One or more filters. Filter names and values are case-sensitive.    location - This depends on the location type. For example, if the location type is region (default), the location is the Region code (for example, us-east-2.)    instance-type - The instance type.  
+    * One or more filters. Filter names and values are case-sensitive.    location - This depends on the location type. For example, if the location type is region (default), the location is the Region code (for example, us-east-2.)    instance-type - The instance type. For example, c5.2xlarge.  
     */
   var Filters: js.UndefOr[FilterList] = js.native
   

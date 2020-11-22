@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StringParameter extends js.Object {
   
   /**
-    * A display name for the dataset.
+    * A display name for a string parameter.
     */
   var Name: NonEmptyString = js.native
   
   /**
-    * Values.
+    * The values of a string parameter.
     */
   var Values: StringList = js.native
 }

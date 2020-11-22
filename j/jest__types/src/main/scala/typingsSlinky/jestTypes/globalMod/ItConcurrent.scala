@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ItConcurrent extends It {
   
-  var concurrent: ItConcurrentExtended = js.native
+  def concurrent(testName: String, testFn: ConcurrentTestFn): Unit = js.native
+  def concurrent(testName: String, testFn: ConcurrentTestFn, timeout: Double): Unit = js.native
+  @JSName("concurrent")
+  var concurrent_Original: ItConcurrentExtended = js.native
 }

@@ -1,12 +1,10 @@
 package typingsSlinky.awsSdkClientKmsBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientKmsBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientKmsBrowser.kmsconfigurationMod.KMSResolvedConfiguration
 import typingsSlinky.awsSdkClientKmsBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientKmsBrowser.typesGetKeyPolicyInputMod.GetKeyPolicyInput
 import typingsSlinky.awsSdkClientKmsBrowser.typesGetKeyPolicyOutputMod.GetKeyPolicyOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
@@ -23,15 +21,12 @@ object getKeyPolicyCommandMod extends js.Object {
           GetKeyPolicyInput, 
           OutputTypesUnion, 
           GetKeyPolicyOutput, 
-          KMSResolvedConfiguration, 
-          Blob
+          KMSResolvedConfiguration
         ] {
     def this(input: GetKeyPolicyInput) = this()
     
-    val middlewareStack: MiddlewareStack[GetKeyPolicyInput, GetKeyPolicyOutput, Blob] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any,
       configuration: KMSResolvedConfiguration
     ): Handler[GetKeyPolicyInput, GetKeyPolicyOutput] = js.native
   }

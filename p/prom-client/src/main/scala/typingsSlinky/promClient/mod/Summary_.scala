@@ -1,6 +1,5 @@
 package typingsSlinky.promClient.mod
 
-import typingsSlinky.promClient.mod.Summary.Config
 import typingsSlinky.promClient.mod.Summary.Internal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,42 +7,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("prom-client", "Summary")
 @js.native
-class Summary_ protected () extends js.Object {
+class Summary_[T /* <: String */] protected () extends js.Object {
   /**
   	 * @param configuration Configuration when creating Summary metric. Name and Help is mandatory
   	 */
-  def this(configuration: SummaryConfiguration) = this()
-  /**
-  	 * @param name The name of the metric
-  	 * @param help Help description
-  	 * @param labels Label keys
-  	 * @param config Configuration object
-  	 */
-  def this(name: String, help: String) = this()
-  /**
-  	 * @param name The name of the metric
-  	 * @param help Help description
-  	 * @param config Configuration object
-  	 * @deprecated
-  	 */
-  def this(name: String, help: String, config: Config) = this()
-  def this(name: String, help: String, labels: js.Array[String]) = this()
-  def this(name: String, help: String, labels: js.UndefOr[scala.Nothing], config: Config) = this()
-  def this(name: String, help: String, labels: js.Array[String], config: Config) = this()
+  def this(configuration: SummaryConfiguration[T]) = this()
   
   /**
   	 * Return the child for given labels
   	 * @param values Label values
   	 * @return Configured summary with given labels
   	 */
-  def labels(values: String*): Internal = js.native
+  def labels(values: String*): Internal[T] = js.native
   
   /**
   	 * Observe value for given labels
   	 * @param labels Object with label keys and values
   	 * @param value Value to observe
   	 */
-  def observe(labels: labelValues, value: Double): Unit = js.native
+  def observe(labels: LabelValues[T], value: Double): Unit = js.native
   /**
   	 * Observe value in summary
   	 * @param value The value to observe
@@ -66,6 +48,6 @@ class Summary_ protected () extends js.Object {
   	 * @param labels Object with label keys and values
   	 * @return Function to invoke when timer should be stopped
   	 */
-  def startTimer(): js.Function1[/* labels */ js.UndefOr[labelValues], Unit] = js.native
-  def startTimer(labels: labelValues): js.Function1[/* labels */ js.UndefOr[labelValues], Unit] = js.native
+  def startTimer(): js.Function1[/* labels */ js.UndefOr[LabelValues[T]], Unit] = js.native
+  def startTimer(labels: LabelValues[T]): js.Function1[/* labels */ js.UndefOr[LabelValues[T]], Unit] = js.native
 }

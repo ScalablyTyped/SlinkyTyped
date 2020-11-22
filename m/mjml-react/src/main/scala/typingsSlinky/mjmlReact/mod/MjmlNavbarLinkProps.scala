@@ -1,6 +1,6 @@
 package typingsSlinky.mjmlReact.mod
 
-import typingsSlinky.csstype.mod.Property.Color
+import typingsSlinky.csstype.mod.ColorProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MjmlNavbarLinkProps extends js.Object {
   
-  var color: js.UndefOr[Color] = js.native
+  var color: js.UndefOr[ColorProperty] = js.native
   
   var fontFamily: js.UndefOr[String] = js.native
   
@@ -48,7 +48,7 @@ object MjmlNavbarLinkProps {
     }
     
     @scala.inline
-    def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: ColorProperty): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)

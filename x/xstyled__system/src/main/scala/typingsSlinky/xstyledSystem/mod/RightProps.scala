@@ -9,7 +9,7 @@ trait RightProps[TLength] extends js.Object {
   
   val right: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object RightProps {
     }
     
     @scala.inline
+    def setRightVarargs(value: js.Any*): Self = this.set("right", js.Array(value :_*))
+    
+    @scala.inline
     def setRight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLength> */ _
         ]
     ): Self = this.set("right", value.asInstanceOf[js.Any])
     

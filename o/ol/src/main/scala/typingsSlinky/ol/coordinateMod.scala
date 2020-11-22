@@ -28,6 +28,13 @@ object coordinateMod extends js.Object {
   def format(coordinate: Coordinate, template: String): String = js.native
   def format(coordinate: Coordinate, template: String, opt_fractionDigits: Double): String = js.native
   
+  def getWorldsAway(coordinate: Coordinate, projection: typingsSlinky.ol.projectionMod.default): Double = js.native
+  def getWorldsAway(
+    coordinate: Coordinate,
+    projection: typingsSlinky.ol.projectionMod.default,
+    opt_sourceExtentWidth: Double
+  ): Double = js.native
+  
   def rotate(coordinate: Coordinate, angle: Double): Coordinate = js.native
   
   def scale(coordinate: Coordinate, scale: Double): Coordinate = js.native

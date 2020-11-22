@@ -12,6 +12,9 @@ trait EnterpriseAdminSetInformationForProvisionedEnterpriseGroupEndpoint extends
     */
   var displayName: String = js.native
   
+  /**
+    * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+    */
   var enterprise: String = js.native
   
   var members: js.UndefOr[

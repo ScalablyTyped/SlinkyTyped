@@ -10,5 +10,5 @@ trait ObjectDestructuringAssignment
      with DestructuringAssignment {
   
   @JSName("left")
-  var left_ObjectDestructuringAssignment: ObjectLiteralExpression = js.native
+  val left_ObjectDestructuringAssignment: ObjectLiteralExpression = js.native
 }

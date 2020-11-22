@@ -15,18 +15,16 @@ trait LayerListProperties extends WidgetProperties {
   var iconClass: js.UndefOr[String] = js.native
   
   /**
-    * Specifies a function that accesses each [ListItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html). Each list item can be modified according to its modifiable properties. Actions can be added to list items using the [actionsSections](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#actionsSections) property of the ListItem.
+    * Specifies a function that accesses each [ListItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#listItemCreatedFunction)
     */
-  var listItemCreatedFunction: js.UndefOr[ListItemCreatedHandler] = js.native
+  var listItemCreatedFunction: js.UndefOr[LayerListListItemCreatedHandler] = js.native
   
   /**
-    * Indicates whether more than one list item may be selected by the user at a single time. You must first set [selectionEnabled](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#selectionEnabled) to `true` for this property to have an effect on the widget.  Selected items are available in the [selectedItems](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#selectedItems) property.
+    * Indicates whether more than one list item may be selected by the user at a single time.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#multipleSelectionEnabled)
-    *
-    * @default false
     */
   var multipleSelectionEnabled: js.UndefOr[Boolean] = js.native
   
@@ -35,14 +33,12 @@ trait LayerListProperties extends WidgetProperties {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#selectedItems)
     */
-  var selectedItems: js.UndefOr[CollectionProperties[ListItem]] = js.native
+  var selectedItems: js.UndefOr[CollectionProperties[ListItemProperties]] = js.native
   
   /**
-    * Indicates whether list items may be selected by the user. Selected items may be reordered in the list by dragging gestures with the mouse or touch screen, or with arrow keys on the keyboard.  Selected items are available in the [selectedItems](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#selectedItems) property.
+    * Indicates whether list items may be selected by the user.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#selectionEnabled)
-    *
-    * @default false
     */
   var selectionEnabled: js.UndefOr[Boolean] = js.native
   
@@ -50,27 +46,25 @@ trait LayerListProperties extends WidgetProperties {
     * Option for enabling status indicators, which indicate whether or not each layer is loading resources.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#statusIndicatorsVisible)
-    *
-    * @default true
     */
   var statusIndicatorsVisible: js.UndefOr[Boolean] = js.native
   
   /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the widget to a specific view.
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#view)
     */
   var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.native
   
   /**
-    * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [LayerListViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-LayerListViewModel.html) class to access all properties and methods on the widget.
+    * The view model for this widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#viewModel)
     */
   var viewModel: js.UndefOr[LayerListViewModelProperties] = js.native
   
   /**
-    * The visible elements that are displayed within the widget. This property provides the ability to turn individual elements of the widget's display on/off.
+    * The visible elements that are displayed within the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#visibleElements)
     */
@@ -118,10 +112,10 @@ object LayerListProperties {
     def deleteMultipleSelectionEnabled: Self = this.set("multipleSelectionEnabled", js.undefined)
     
     @scala.inline
-    def setSelectedItemsVarargs(value: ListItem*): Self = this.set("selectedItems", js.Array(value :_*))
+    def setSelectedItemsVarargs(value: ListItemProperties*): Self = this.set("selectedItems", js.Array(value :_*))
     
     @scala.inline
-    def setSelectedItems(value: CollectionProperties[ListItem]): Self = this.set("selectedItems", value.asInstanceOf[js.Any])
+    def setSelectedItems(value: CollectionProperties[ListItemProperties]): Self = this.set("selectedItems", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSelectedItems: Self = this.set("selectedItems", js.undefined)

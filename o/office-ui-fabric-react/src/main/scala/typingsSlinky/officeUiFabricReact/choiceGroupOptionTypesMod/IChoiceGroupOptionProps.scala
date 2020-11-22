@@ -7,8 +7,8 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.choiceGroupTypesMod.IChoiceGroupOption
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

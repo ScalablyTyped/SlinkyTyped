@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait TypeofView
-  extends Instantiable0[View[Model[js.Any, ModelSetOptions]]] {
+  extends Instantiable0[View[Model[js.Any, ModelSetOptions, js.Object]]] {
   
   /**
     * Do not use, prefer TypeScript's extend functionality.

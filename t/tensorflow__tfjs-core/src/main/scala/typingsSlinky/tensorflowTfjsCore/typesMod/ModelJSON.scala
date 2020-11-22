@@ -32,6 +32,11 @@ trait ModelJSON extends js.Object {
     */
   var generatedBy: js.UndefOr[String] = js.native
   
+  /**
+    * Initializer for the model.
+    */
+  var modelInitializer: js.UndefOr[js.Object] = js.native
+  
   /** Model training configuration. */
   var trainingConfig: js.UndefOr[TrainingConfig] = js.native
   
@@ -99,6 +104,12 @@ object ModelJSON {
     
     @scala.inline
     def deleteGeneratedBy: Self = this.set("generatedBy", js.undefined)
+    
+    @scala.inline
+    def setModelInitializer(value: js.Object): Self = this.set("modelInitializer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModelInitializer: Self = this.set("modelInitializer", js.undefined)
     
     @scala.inline
     def setTrainingConfig(value: TrainingConfig): Self = this.set("trainingConfig", value.asInstanceOf[js.Any])

@@ -1,35 +1,35 @@
 package typingsSlinky.reactRelay.entryPointTypesMod
 
+import typingsSlinky.relayRuntime.relayConcreteNodeMod.ConcreteRequest
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.VariablesOf
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Readonly<{  environmentProviderOptions :TEnvironmentProviderOptions | null | undefined,   options :react-relay.react-relay/lib/relay-experimental/EntryPointTypes.PreloadOptions | null | undefined,   parameters :react-relay.react-relay/lib/relay-experimental/EntryPointTypes.PreloadableConcreteRequest<TQuery>,   variables :TQuery['variables']}> */
+/* Inlined parent std.Readonly<{  parameters :relay-runtime.relay-runtime.ConcreteRequest | react-relay.react-relay/lib/relay-experimental/EntryPointTypes.PreloadableConcreteRequest<TQuery>,   variables :relay-runtime.relay-runtime.VariablesOf<TQuery>,   options :react-relay.react-relay/lib/relay-experimental/EntryPointTypes.PreloadOptions | null | undefined,   environmentProviderOptions :TEnvironmentProviderOptions | null | undefined}> */
 @js.native
-trait ThinQueryParams[TQuery /* <: OperationType */, TEnvironmentProviderOptions] extends js.Object {
+trait ThinQueryParams[TQuery /* <: OperationType */, TEnvironmentProviderOptions /* <: EnvironmentProviderOptions[Record[String, _]] */] extends js.Object {
   
   val environmentProviderOptions: js.UndefOr[TEnvironmentProviderOptions | Null] = js.native
   
   val options: js.UndefOr[PreloadOptions | Null] = js.native
   
-  val parameters: PreloadableConcreteRequest[TQuery] = js.native
+  val parameters: ConcreteRequest | PreloadableConcreteRequest[TQuery] = js.native
   
-  val variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any = js.native
+  val variables: VariablesOf[TQuery] = js.native
 }
 object ThinQueryParams {
   
   @scala.inline
-  def apply[TQuery /* <: OperationType */, TEnvironmentProviderOptions](
-    parameters: PreloadableConcreteRequest[TQuery],
-    variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any
-  ): ThinQueryParams[TQuery, TEnvironmentProviderOptions] = {
+  def apply[TQuery /* <: OperationType */, TEnvironmentProviderOptions /* <: EnvironmentProviderOptions[Record[String, _]] */](parameters: ConcreteRequest | PreloadableConcreteRequest[TQuery], variables: VariablesOf[TQuery]): ThinQueryParams[TQuery, TEnvironmentProviderOptions] = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[ThinQueryParams[TQuery, TEnvironmentProviderOptions]]
   }
   
   @scala.inline
-  implicit class ThinQueryParamsOps[Self <: ThinQueryParams[_, _], TQuery /* <: OperationType */, TEnvironmentProviderOptions] (val x: Self with (ThinQueryParams[TQuery, TEnvironmentProviderOptions])) extends AnyVal {
+  implicit class ThinQueryParamsOps[Self <: ThinQueryParams[_, _], TQuery /* <: OperationType */, TEnvironmentProviderOptions /* <: EnvironmentProviderOptions[Record[String, _]] */] (val x: Self with (ThinQueryParams[TQuery, TEnvironmentProviderOptions])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -44,12 +44,10 @@ object ThinQueryParams {
     }
     
     @scala.inline
-    def setParameters(value: PreloadableConcreteRequest[TQuery]): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: ConcreteRequest | PreloadableConcreteRequest[TQuery]): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setVariables(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any
-    ): Self = this.set("variables", value.asInstanceOf[js.Any])
+    def setVariables(value: VariablesOf[TQuery]): Self = this.set("variables", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setEnvironmentProviderOptions(value: TEnvironmentProviderOptions): Self = this.set("environmentProviderOptions", value.asInstanceOf[js.Any])

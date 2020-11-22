@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookSessionInfo extends js.Object {
   
   // Id of the workbook session.
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[NullableOption[String]] = js.native
   
   // true for persistent session. false for non-persistent session (view mode)
-  var persistChanges: js.UndefOr[Boolean] = js.native
+  var persistChanges: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object WorkbookSessionInfo {
   
@@ -37,15 +37,21 @@ object WorkbookSessionInfo {
     }
     
     @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setId(value: NullableOption[String]): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
-    def setPersistChanges(value: Boolean): Self = this.set("persistChanges", value.asInstanceOf[js.Any])
+    def setIdNull: Self = this.set("id", null)
+    
+    @scala.inline
+    def setPersistChanges(value: NullableOption[Boolean]): Self = this.set("persistChanges", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePersistChanges: Self = this.set("persistChanges", js.undefined)
+    
+    @scala.inline
+    def setPersistChangesNull: Self = this.set("persistChanges", null)
   }
 }

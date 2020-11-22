@@ -1,7 +1,7 @@
 
 # Scala.js typings for next__react-dev-overlay
 
-Typings are for version 9.5.1
+Typings are for version 10.0.2
 
 ## Library description:
 A development-only overlay for developing React applications.

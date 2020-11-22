@@ -8,5 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CircleStyle
   extends typingsSlinky.ol.regularShapeMod.default {
   
+  /**
+    * Set the circle radius.
+    */
   def setRadius(radius: Double): Unit = js.native
 }

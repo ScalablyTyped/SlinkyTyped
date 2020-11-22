@@ -29,6 +29,9 @@ object Tooltip {
     def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def closeOnlyOnBackdropPress(value: Boolean): this.type = set("closeOnlyOnBackdropPress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def containerStyle(value: StyleProp[ViewStyle]): this.type = set("containerStyle", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -7,18 +7,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDiagramCustomCommand extends js.Object {
   
-  /** @name dxDiagramCustomCommand.icon */
+  /**
+    * [descr:dxDiagramCustomCommand.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxDiagramCustomCommand.items */
+  /**
+    * [descr:dxDiagramCustomCommand.items]
+    */
   var items: js.UndefOr[js.Array[dxDiagramCustomCommand]] = js.native
   
-  /** @name dxDiagramCustomCommand.name */
+  /**
+    * [descr:dxDiagramCustomCommand.name]
+    */
   var name: js.UndefOr[
     /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 51 */ js.Any
   ] = js.native
   
-  /** @name dxDiagramCustomCommand.text */
+  /**
+    * [descr:dxDiagramCustomCommand.text]
+    */
   var text: js.UndefOr[String] = js.native
 }
 object dxDiagramCustomCommand {

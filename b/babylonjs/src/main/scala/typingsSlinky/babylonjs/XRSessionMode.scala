@@ -4,6 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Available session modes
+  */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babylonjs.babylonjsStrings.`inline`
   - typingsSlinky.babylonjs.babylonjsStrings.`immersive-vr`

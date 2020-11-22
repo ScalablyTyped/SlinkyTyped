@@ -13,7 +13,7 @@ package object treeModelMod {
   type TreeModelOperationMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdkBuildTypes.treeModelMod.TreeModelOperation]
   
   type TreeModelShape = typingsSlinky.awsSdkBuildTypes.treeModelMod.NamedAndDocumented[
-    typingsSlinky.awsSdkTypes.protocolMod.Blob | typingsSlinky.awsSdkTypes.protocolMod.Boolean | typingsSlinky.awsSdkTypes.protocolMod.Float | typingsSlinky.awsSdkTypes.protocolMod.Integer | typingsSlinky.awsSdkTypes.protocolMod.Timestamp | typingsSlinky.awsSdkBuildTypes.treeModelMod.TreeModelString | typingsSlinky.awsSdkBuildTypes.treeModelMod.TreeModelList | typingsSlinky.awsSdkBuildTypes.treeModelMod.TreeModelMap | typingsSlinky.awsSdkBuildTypes.treeModelMod.TreeModelStructure
+    org.scalajs.dom.raw.Blob | scala.Boolean | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Float */ js.Any) | typingsSlinky.awsSdkBuildTypes.treeModelMod.TreeModelString | typingsSlinky.awsSdkBuildTypes.treeModelMod.TreeModelList | typingsSlinky.awsSdkBuildTypes.treeModelMod.TreeModelMap | typingsSlinky.awsSdkBuildTypes.treeModelMod.TreeModelStructure
   ]
   
   type TreeModelShapeMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdkBuildTypes.treeModelMod.TreeModelShape]

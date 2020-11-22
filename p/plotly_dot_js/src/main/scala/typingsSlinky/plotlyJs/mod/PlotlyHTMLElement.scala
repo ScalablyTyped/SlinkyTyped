@@ -26,6 +26,7 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_selecting
 import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_sliderchange
 import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_sliderend
 import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_sliderstart
+import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_sunburstclick
 import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_transitioning
 import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_transitioninterrupted
 import typingsSlinky.plotlyJs.plotlyJsStrings.plotly_unhover
@@ -89,6 +90,8 @@ trait PlotlyHTMLElement extends HTMLElement {
   def on_plotlysliderend(event: plotly_sliderend, callback: js.Function1[/* event */ SliderEndEvent, Unit]): Unit = js.native
   @JSName("on")
   def on_plotlysliderstart(event: plotly_sliderstart, callback: js.Function1[/* event */ SliderStartEvent, Unit]): Unit = js.native
+  @JSName("on")
+  def on_plotlysunburstclick(event: plotly_sunburstclick, callback: js.Function1[/* event */ SunburstClickEvent, Unit]): Unit = js.native
   @JSName("on")
   def on_plotlytransitioning(event: plotly_transitioning, callback: js.Function0[Unit]): Unit = js.native
   @JSName("on")

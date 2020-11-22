@@ -2,7 +2,6 @@ package typingsSlinky.rcNotification.anon
 
 import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.rcNotification.notificationMod.HolderReadyCallback
-import typingsSlinky.rcNotification.notificationMod.NoticeContent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,12 +11,12 @@ trait HolderCallback extends js.Object {
   
   var holderCallback: js.UndefOr[HolderReadyCallback] = js.native
   
-  var notice: NoticeContent = js.native
+  var notice: NoticeContentuserPassKeyK = js.native
 }
 object HolderCallback {
   
   @scala.inline
-  def apply(notice: NoticeContent): HolderCallback = {
+  def apply(notice: NoticeContentuserPassKeyK): HolderCallback = {
     val __obj = js.Dynamic.literal(notice = notice.asInstanceOf[js.Any])
     __obj.asInstanceOf[HolderCallback]
   }
@@ -38,7 +37,7 @@ object HolderCallback {
     }
     
     @scala.inline
-    def setNotice(value: NoticeContent): Self = this.set("notice", value.asInstanceOf[js.Any])
+    def setNotice(value: NoticeContentuserPassKeyK): Self = this.set("notice", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHolderCallback(value: (/* div */ HTMLDivElement, /* noticeProps */ NoticePropskeyKey) => Unit): Self = this.set("holderCallback", js.Any.fromFunction2(value))

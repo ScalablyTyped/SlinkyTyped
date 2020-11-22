@@ -1,7 +1,7 @@
 
 # Scala.js typings for vega-schema-url-parser
 
-Typings are for version 1.1.0
+Typings are for version 2.1.0
 
 ## Library description:
 A parser to get the library and version from Vega and Vega-Lite schema URLs.

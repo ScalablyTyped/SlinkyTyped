@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Security.SetIgnoreCertificateErrorsRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetWebLifecycleStateRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `161` extends js.Object {
   
-  var paramsType: js.Array[SetIgnoreCertificateErrorsRequest] = js.native
+  var paramsType: js.Array[SetWebLifecycleStateRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `161` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetIgnoreCertificateErrorsRequest], returnType: Unit): `161` = {
+  def apply(paramsType: js.Array[SetWebLifecycleStateRequest], returnType: Unit): `161` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`161`]
   }
@@ -36,10 +36,10 @@ object `161` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetIgnoreCertificateErrorsRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetWebLifecycleStateRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetIgnoreCertificateErrorsRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetWebLifecycleStateRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

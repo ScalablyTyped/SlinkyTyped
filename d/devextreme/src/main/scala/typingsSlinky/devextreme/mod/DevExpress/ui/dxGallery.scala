@@ -9,12 +9,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxGallery extends CollectionWidget {
   
-  /** @name dxGallery.goToItem(itemIndex, animation) */
+  /**
+    * [descr:dxGallery.goToItem(itemIndex, animation)]
+    */
   def goToItem(itemIndex: Double, animation: Boolean): Promise[Unit] with JQueryPromise[Unit] = js.native
   
-  /** @name dxGallery.nextItem(animation) */
+  /**
+    * [descr:dxGallery.nextItem(animation)]
+    */
   def nextItem(animation: Boolean): Promise[Unit] with JQueryPromise[Unit] = js.native
   
-  /** @name dxGallery.prevItem(animation) */
+  /**
+    * [descr:dxGallery.prevItem(animation)]
+    */
   def prevItem(animation: Boolean): Promise[Unit] with JQueryPromise[Unit] = js.native
 }

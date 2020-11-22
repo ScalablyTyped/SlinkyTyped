@@ -1,6 +1,7 @@
 package typingsSlinky.reactNativeElements.anon
 
 import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -8,22 +9,26 @@ import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.ColorValue
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TextLayoutEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.`no-hide-descendants`
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.all
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.assertive
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.auto
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.balanced
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.button
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.clip
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.email
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.head
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.highQuality
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.link
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.middle
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.no
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.none
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.phoneNumber
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.polite
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.radiobutton_checked
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.radiobutton_unchecked
@@ -68,6 +73,8 @@ trait PartialTextProperties extends js.Object {
   
   var allowFontScaling: js.UndefOr[Boolean] = js.native
   
+  var dataDetectorType: js.UndefOr[Null | phoneNumber | link | email | none | all] = js.native
+  
   var ellipsizeMode: js.UndefOr[head | middle | tail | clip] = js.native
   
   var importantForAccessibility: js.UndefOr[auto | yes | no | `no-hide-descendants`] = js.native
@@ -88,13 +95,15 @@ trait PartialTextProperties extends js.Object {
   
   var onAccessibilityTap: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   var onLongPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
   
   var onMagicTap: js.UndefOr[js.Function0[Unit]] = js.native
   
   var onPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
+  
+  var onTextLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextLayoutEventData], Unit]] = js.native
   
   var selectable: js.UndefOr[Boolean] = js.native
   
@@ -228,6 +237,15 @@ object PartialTextProperties {
     def deleteAllowFontScaling: Self = this.set("allowFontScaling", js.undefined)
     
     @scala.inline
+    def setDataDetectorType(value: phoneNumber | link | email | none | all): Self = this.set("dataDetectorType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataDetectorType: Self = this.set("dataDetectorType", js.undefined)
+    
+    @scala.inline
+    def setDataDetectorTypeNull: Self = this.set("dataDetectorType", null)
+    
+    @scala.inline
     def setEllipsizeMode(value: head | middle | tail | clip): Self = this.set("ellipsizeMode", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -291,7 +309,7 @@ object PartialTextProperties {
     def deleteOnAccessibilityTap: Self = this.set("onAccessibilityTap", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -313,6 +331,12 @@ object PartialTextProperties {
     
     @scala.inline
     def deleteOnPress: Self = this.set("onPress", js.undefined)
+    
+    @scala.inline
+    def setOnTextLayout(value: SyntheticEvent[NodeHandle, TextLayoutEventData] => Unit): Self = this.set("onTextLayout", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnTextLayout: Self = this.set("onTextLayout", js.undefined)
     
     @scala.inline
     def setSelectable(value: Boolean): Self = this.set("selectable", value.asInstanceOf[js.Any])

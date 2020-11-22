@@ -1,5 +1,7 @@
 package typingsSlinky.babylonjs
 
+import typingsSlinky.babylonjs.observableMod.Observable
+import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.webXRSessionManagerMod.WebXRSessionManager
 import typingsSlinky.babylonjs.webXRTypesMod.WebXRRenderTarget
 import scala.scalajs.js
@@ -28,9 +30,18 @@ object webXRManagedOutputCanvasMod extends js.Object {
     
     var _options: js.Any = js.native
     
+    var _originalCanvasSize: js.Any = js.native
+    
     var _removeCanvas: js.Any = js.native
     
+    var _setCanvasSize: js.Any = js.native
+    
     var _setManagedOutputCanvas: js.Any = js.native
+    
+    /**
+      * Obseervers registered here will be triggered when the xr layer was initialized
+      */
+    var onXRLayerInitObservable: Observable[XRWebGLLayer] = js.native
   }
   
   @js.native
@@ -45,7 +56,7 @@ object webXRManagedOutputCanvasMod extends js.Object {
     /**
       * Options for this XR Layer output
       */
-    var canvasOptions: js.UndefOr[XRWebGLLayerOptions] = js.native
+    var canvasOptions: js.UndefOr[XRWebGLLayerInit] = js.native
     
     /**
       * CSS styling for a newly created canvas (if not provided)
@@ -58,8 +69,10 @@ object webXRManagedOutputCanvasMod extends js.Object {
     
     /**
       * Get the default values of the configuration object
+      * @param engine defines the engine to use (can be null)
       * @returns default values of this configuration object
       */
     def GetDefaults(): WebXRManagedOutputCanvasOptions = js.native
+    def GetDefaults(engine: ThinEngine): WebXRManagedOutputCanvasOptions = js.native
   }
 }

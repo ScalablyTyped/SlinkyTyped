@@ -9,7 +9,7 @@ trait FontFamilyProps extends js.Object {
   
   val fontFamily: js.UndefOr[
     ResponsiveValue[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _) | Double
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _) | Double
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object FontFamilyProps {
     }
     
     @scala.inline
+    def setFontFamilyVarargs(value: (js.Any | Double)*): Self = this.set("fontFamily", js.Array(value :_*))
+    
+    @scala.inline
     def setFontFamily(
       value: ResponsiveValue[
-          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _) | Double
+          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _) | Double
         ]
     ): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
     

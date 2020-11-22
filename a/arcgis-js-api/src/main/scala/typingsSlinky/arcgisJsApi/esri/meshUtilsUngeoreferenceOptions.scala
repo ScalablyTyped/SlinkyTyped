@@ -28,7 +28,7 @@ trait meshUtilsUngeoreferenceOptions extends Object {
   var geographic: js.UndefOr[Boolean] = js.native
   
   /**
-    * Indicates the unit of the resulting data. A linear scale will be applied to the position attributes to convert the source data to the specified unit. By default the unit of the resulting data will be the same as the source spatial reference.
+    * Indicates the unit of the resulting data.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-meshUtils.html#ungeoreference)
     */

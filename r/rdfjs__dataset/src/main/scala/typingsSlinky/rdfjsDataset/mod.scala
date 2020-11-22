@@ -37,7 +37,7 @@ object mod extends js.Object {
   @JSName("literal")
   var literal_Original: js.Function1[/* value */ String, Literal] = js.native
   
-  def namedNode(value: String): NamedNode[String] = js.native
+  def namedNode[Iri /* <: String */](value: Iri): NamedNode[Iri] = js.native
   @JSName("namedNode")
   var namedNode_Original: js.Function1[/* value */ String, NamedNode[String]] = js.native
   

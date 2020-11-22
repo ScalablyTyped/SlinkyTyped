@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CellAddress extends js.Object {
   
-  /** @name CellAddress.column */
+  /**
+    * [descr:CellAddress.column]
+    */
   var column: js.UndefOr[Double] = js.native
   
-  /** @name CellAddress.row */
+  /**
+    * [descr:CellAddress.row]
+    */
   var row: js.UndefOr[Double] = js.native
 }
 object CellAddress {

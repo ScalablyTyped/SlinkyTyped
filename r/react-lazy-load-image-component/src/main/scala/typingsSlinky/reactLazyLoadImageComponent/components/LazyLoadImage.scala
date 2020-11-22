@@ -23,17 +23,21 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactLazyLoadImageComponent.mod.DelayMethod
 import typingsSlinky.reactLazyLoadImageComponent.mod.Effect
 import typingsSlinky.reactLazyLoadImageComponent.mod.LazyLoadImageProps
 import typingsSlinky.reactLazyLoadImageComponent.mod.ScrollPosition
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings._empty
+import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`additions removals`
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`additions text`
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`inline`
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`lazy`
-import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`no-referrer`
-import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`unsafe-url`
+import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`removals additions`
+import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`removals text`
+import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`text additions`
+import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`text removals`
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`use-credentials`
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.additions
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.all
@@ -67,7 +71,6 @@ import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStri
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.numeric
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.off
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.on
-import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.origin
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.other
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.page
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.polite
@@ -217,7 +220,9 @@ object LazyLoadImage {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -610,7 +615,7 @@ object LazyLoadImage {
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def referrerPolicy(value: `no-referrer` | origin | `unsafe-url`): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
+    def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])

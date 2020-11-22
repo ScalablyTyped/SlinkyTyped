@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.anon
 
-import typingsSlinky.octokitTypes.octokitTypesStrings.`squirrel-girl`
+import typingsSlinky.octokitTypes.octokitTypesStrings.dorian
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `10` extends js.Object {
   
-  var previews: Array[`squirrel-girl` | String] = js.native
+  var previews: Array[dorian | String] = js.native
 }
 object `10` {
   
   @scala.inline
-  def apply(previews: Array[`squirrel-girl` | String]): `10` = {
+  def apply(previews: Array[dorian | String]): `10` = {
     val __obj = js.Dynamic.literal(previews = previews.asInstanceOf[js.Any])
     __obj.asInstanceOf[`10`]
   }
@@ -34,6 +34,6 @@ object `10` {
     }
     
     @scala.inline
-    def setPreviews(value: Array[`squirrel-girl` | String]): Self = this.set("previews", value.asInstanceOf[js.Any])
+    def setPreviews(value: Array[dorian | String]): Self = this.set("previews", value.asInstanceOf[js.Any])
   }
 }

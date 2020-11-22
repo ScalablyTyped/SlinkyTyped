@@ -14,6 +14,26 @@ trait SourceControlResourceState extends js.Object {
   val command: js.UndefOr[Command] = js.native
   
   /**
+    * Context value of the resource state. This can be used to contribute resource specific actions.
+    * For example, if a resource is given a context value as `diffable`. When contributing actions to `scm/resourceState/context`
+    * using `menus` extension point, you can specify context value for key `scmResourceState` in `when` expressions, like `scmResourceState == diffable`.
+    * ```
+    *    "contributes": {
+    *        "menus": {
+    *            "scm/resourceState/context": [
+    *                {
+    *                    "command": "extension.diff",
+    *                    "when": "scmResourceState == diffable"
+    *                }
+    *            ]
+    *        }
+    *    }
+    * ```
+    * This will show action `extension.diff` only for resources with `contextValue` is `diffable`.
+    */
+  val contextValue: js.UndefOr[String] = js.native
+  
+  /**
     * The [decorations](#SourceControlResourceDecorations) for this source control
     * resource state.
     */
@@ -55,6 +75,12 @@ object SourceControlResourceState {
     
     @scala.inline
     def deleteCommand: Self = this.set("command", js.undefined)
+    
+    @scala.inline
+    def setContextValue(value: String): Self = this.set("contextValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContextValue: Self = this.set("contextValue", js.undefined)
     
     @scala.inline
     def setDecorations(value: SourceControlResourceDecorations): Self = this.set("decorations", value.asInstanceOf[js.Any])

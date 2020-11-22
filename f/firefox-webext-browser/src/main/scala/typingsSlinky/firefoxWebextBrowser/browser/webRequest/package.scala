@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object webRequest {
   
   /**
-    * An array of HTTP headers. Each header is represented as a dictionary containing the keys `name` and either
-    * `value` or `binaryValue`.
+    * An array of HTTP headers. Each header is represented as a dictionary containing the keys `name` and either `value` or `binaryValue`.
     */
-  type HttpHeaders = js.Array[typingsSlinky.firefoxWebextBrowser.anon.BinaryValue]
+  type HttpHeaders = js.Array[typingsSlinky.firefoxWebextBrowser.browser.webRequest._HttpHeaders]
   
   type OnBeforeRedirectOptions = typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.responseHeaders
   

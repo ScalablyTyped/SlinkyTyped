@@ -5,11 +5,12 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.jupyterlabApputils.mod.ReactWidget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/cells/lib/placeholder", JSImport.Namespace)
 @js.native
 object placeholderMod extends js.Object {
+  
   @js.native
   class InputPlaceholder protected () extends Placeholder {
     /**
@@ -32,12 +33,12 @@ object placeholderMod extends js.Object {
       * Construct a new placeholder.
       */
     def this(callback: js.Function1[/* e */ SyntheticMouseEvent[HTMLDivElement], Unit]) = this()
+    
     var _callback: js.Any = js.native
+    
     /**
       * Handle the click event.
       */
     /* protected */ def handleClick(e: SyntheticMouseEvent[HTMLDivElement]): Unit = js.native
   }
-  
 }
-

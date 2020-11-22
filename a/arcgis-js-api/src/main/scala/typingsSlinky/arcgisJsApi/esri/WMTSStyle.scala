@@ -10,7 +10,7 @@ trait WMTSStyle
      with JSONSupport {
   
   /**
-    * Description for the WMTS style. This defaults to the value of the Abstract property from the WMTS GetCapabilities request.
+    * Description for the WMTS style.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMTSStyle.html#description)
     */
@@ -24,7 +24,7 @@ trait WMTSStyle
   var id: String = js.native
   
   /**
-    * The URL to the legend which gets used in [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) widget. This defaults to the value of the LegendURL property from the WMTS GetCapabilities request.
+    * The URL to the legend which gets used in [Legend](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html) widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMTSStyle.html#legendUrl)
     */

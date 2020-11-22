@@ -83,6 +83,11 @@ trait SpotFleetRequestConfigData extends js.Object {
   var ReplaceUnhealthyInstances: js.UndefOr[Boolean] = js.native
   
   /**
+    * The strategies for managing your Spot Instances that are at an elevated risk of being interrupted.
+    */
+  var SpotMaintenanceStrategies: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.SpotMaintenanceStrategies] = js.native
+  
+  /**
     * The maximum amount per hour for Spot Instances that you're willing to pay. You can use the spotdMaxTotalPrice parameter, the onDemandMaxTotalPrice parameter, or both parameters to ensure that your fleet cost does not exceed your budget. If you set a maximum price per hour for the On-Demand Instances and Spot Instances in your request, Spot Fleet will launch instances until it reaches the maximum amount you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
     */
   var SpotMaxTotalPrice: js.UndefOr[String] = js.native
@@ -240,6 +245,12 @@ object SpotFleetRequestConfigData {
     
     @scala.inline
     def deleteReplaceUnhealthyInstances: Self = this.set("ReplaceUnhealthyInstances", js.undefined)
+    
+    @scala.inline
+    def setSpotMaintenanceStrategies(value: SpotMaintenanceStrategies): Self = this.set("SpotMaintenanceStrategies", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSpotMaintenanceStrategies: Self = this.set("SpotMaintenanceStrategies", js.undefined)
     
     @scala.inline
     def setSpotMaxTotalPrice(value: String): Self = this.set("SpotMaxTotalPrice", value.asInstanceOf[js.Any])

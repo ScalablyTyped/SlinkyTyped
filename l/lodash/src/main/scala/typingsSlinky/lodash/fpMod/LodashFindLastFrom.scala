@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashFindLastFrom extends LodashConvertible {
+trait LodashFindLastFrom extends js.Object {
   
   def apply(predicate: __, fromIndex: Double): LodashFindLastFrom1x2 = js.native
   def apply[T](predicate: ValueIterateeCustom[T, Boolean]): LodashFindLastFrom2x1[T] = js.native

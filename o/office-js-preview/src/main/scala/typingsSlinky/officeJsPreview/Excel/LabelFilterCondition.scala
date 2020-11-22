@@ -12,8 +12,7 @@ sealed trait LabelFilterCondition extends js.Object
   Used to configure the type of PivotFilter that is applied to the field.
   `PivotFilter.criteria.exclusive` can be set to true to invert many of these conditions.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @JSGlobal("Excel.LabelFilterCondition")
 @js.native

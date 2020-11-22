@@ -1,29 +1,28 @@
 organization := "org.scalablytyped.slinky"
 name := "storybook__addon-info"
-version := "5.2-dt-20191122Z-f462e3"
+version := "5.2-dt-20201016Z-90f236"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-fce754",
-  "org.scalablytyped.slinky" %%% "emotion-theming" % "10.0.27-ac1388",
-  "org.scalablytyped.slinky" %%% "emotion__core" % "10.0.28-f55723",
-  "org.scalablytyped.slinky" %%% "emotion__serialize" % "0.11.16-e1b0d7",
-  "org.scalablytyped.slinky" %%% "emotion__styled" % "10.0.27-fa2c85",
-  "org.scalablytyped.slinky" %%% "emotion__styled-base" % "10.0.31-bdeb17",
-  "org.scalablytyped.slinky" %%% "emotion__utils" % "0.11.3-07d215",
-  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20200518Z-8944d8",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ce652f",
-  "org.scalablytyped.slinky" %%% "reach__router" % "1.3-dt-20200426Z-c5224b",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a9854",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
-  "org.scalablytyped.slinky" %%% "storybook__addons" % "5.3.19-128d31",
-  "org.scalablytyped.slinky" %%% "storybook__api" % "5.3.19-b5fbf5",
-  "org.scalablytyped.slinky" %%% "storybook__channels" % "5.3.19-84ffe6",
-  "org.scalablytyped.slinky" %%% "storybook__router" % "5.3.19-3d4d4b",
-  "org.scalablytyped.slinky" %%% "storybook__theming" % "5.3.19-76fbf6")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.14-23cf0c",
+  "org.scalablytyped.slinky" %%% "emotion__core" % "10.1.1-2ca4da",
+  "org.scalablytyped.slinky" %%% "emotion__serialize" % "0.11.16-2d2c8d",
+  "org.scalablytyped.slinky" %%% "emotion__styled" % "10.0.27-077112",
+  "org.scalablytyped.slinky" %%% "emotion__styled-base" % "10.0.31-cf2e23",
+  "org.scalablytyped.slinky" %%% "emotion__utils" % "0.11.3-323f0f",
+  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20201002Z-12959c",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ed7fbd",
+  "org.scalablytyped.slinky" %%% "reach__router" % "1.3-dt-20200925Z-c9138f",
+  "org.scalablytyped.slinky" %%% "react" % "17.0-dt-20201121Z-8f0b52",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "storybook__addons" % "6.1.2-1b9428",
+  "org.scalablytyped.slinky" %%% "storybook__api" % "6.1.2-5cc761",
+  "org.scalablytyped.slinky" %%% "storybook__channels" % "6.1.2-454725",
+  "org.scalablytyped.slinky" %%% "storybook__router" % "6.1.2-163f46",
+  "org.scalablytyped.slinky" %%% "storybook__theming" % "6.1.2-a16b70")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

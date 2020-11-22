@@ -1,6 +1,5 @@
 package typingsSlinky.ytSearch.mod
 
-import typingsSlinky.ytSearch.anon.PickAuthornameurl
 import typingsSlinky.ytSearch.ytSearchStrings.video
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +10,7 @@ trait VideoSearchResult extends js.Object {
   
   var ago: String = js.native
   
-  var author: PickAuthornameurl = js.native
+  var author: Author = js.native
   
   var description: String = js.native
   
@@ -21,7 +20,6 @@ trait VideoSearchResult extends js.Object {
   
   var seconds: Double = js.native
   
-  /** @deprecated */
   var thumbnail: String = js.native
   
   var timestamp: String = js.native
@@ -41,7 +39,7 @@ object VideoSearchResult {
   @scala.inline
   def apply(
     ago: String,
-    author: PickAuthornameurl,
+    author: Author,
     description: String,
     duration: Duration,
     image: String,
@@ -78,7 +76,7 @@ object VideoSearchResult {
     def setAgo(value: String): Self = this.set("ago", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAuthor(value: PickAuthornameurl): Self = this.set("author", value.asInstanceOf[js.Any])
+    def setAuthor(value: Author): Self = this.set("author", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])

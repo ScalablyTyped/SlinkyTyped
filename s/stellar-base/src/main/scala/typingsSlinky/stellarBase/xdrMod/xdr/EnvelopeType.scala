@@ -6,7 +6,9 @@ import typingsSlinky.stellarBase.stellarBaseNumbers.`2`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`3`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`4`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`5`
+import typingsSlinky.stellarBase.stellarBaseNumbers.`6`
 import typingsSlinky.stellarBase.stellarBaseStrings.envelopeTypeAuth
+import typingsSlinky.stellarBase.stellarBaseStrings.envelopeTypeOpId
 import typingsSlinky.stellarBase.stellarBaseStrings.envelopeTypeScp
 import typingsSlinky.stellarBase.stellarBaseStrings.envelopeTypeScpvalue
 import typingsSlinky.stellarBase.stellarBaseStrings.envelopeTypeTx
@@ -19,16 +21,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EnvelopeType extends js.Object {
   
-  val name: envelopeTypeTxV0 | envelopeTypeScp | envelopeTypeTx | envelopeTypeAuth | envelopeTypeScpvalue | envelopeTypeTxFeeBump = js.native
+  val name: envelopeTypeTxV0 | envelopeTypeScp | envelopeTypeTx | envelopeTypeAuth | envelopeTypeScpvalue | envelopeTypeTxFeeBump | envelopeTypeOpId = js.native
   
-  val value: `0` | `1` | `2` | `3` | `4` | `5` = js.native
+  val value: `0` | `1` | `2` | `3` | `4` | `5` | `6` = js.native
 }
 object EnvelopeType {
   
   @scala.inline
   def apply(
-    name: envelopeTypeTxV0 | envelopeTypeScp | envelopeTypeTx | envelopeTypeAuth | envelopeTypeScpvalue | envelopeTypeTxFeeBump,
-    value: `0` | `1` | `2` | `3` | `4` | `5`
+    name: envelopeTypeTxV0 | envelopeTypeScp | envelopeTypeTx | envelopeTypeAuth | envelopeTypeScpvalue | envelopeTypeTxFeeBump | envelopeTypeOpId,
+    value: `0` | `1` | `2` | `3` | `4` | `5` | `6`
   ): EnvelopeType = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[EnvelopeType]
@@ -51,10 +53,10 @@ object EnvelopeType {
     
     @scala.inline
     def setName(
-      value: envelopeTypeTxV0 | envelopeTypeScp | envelopeTypeTx | envelopeTypeAuth | envelopeTypeScpvalue | envelopeTypeTxFeeBump
+      value: envelopeTypeTxV0 | envelopeTypeScp | envelopeTypeTx | envelopeTypeAuth | envelopeTypeScpvalue | envelopeTypeTxFeeBump | envelopeTypeOpId
     ): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: `0` | `1` | `2` | `3` | `4` | `5`): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: `0` | `1` | `2` | `3` | `4` | `5` | `6`): Self = this.set("value", value.asInstanceOf[js.Any])
   }
 }

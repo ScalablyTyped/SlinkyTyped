@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type Node = typingsSlinky.babelTypes.mod.Node
+  type Node = typingsSlinky.babelTypes.ts36Mod.Node
   
   type VisitNode[T, P] = (typingsSlinky.babelTraverse.mod.VisitNodeFunction[T, P]) | typingsSlinky.babelTraverse.mod.VisitNodeObject[T]
   

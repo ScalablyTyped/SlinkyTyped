@@ -1,20 +1,20 @@
 package typingsSlinky.jestTypes.anon
 
-import typingsSlinky.jestTypes.circusMod.Event
-import typingsSlinky.jestTypes.jestTypesStrings.teardown
+import typingsSlinky.jestTypes.circusMod.AsyncEvent
+import typingsSlinky.jestTypes.jestTypesStrings.run_start
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `5` extends Event {
+trait `5` extends AsyncEvent {
   
-  var name: teardown = js.native
+  var name: run_start = js.native
 }
 object `5` {
   
   @scala.inline
-  def apply(name: teardown): `5` = {
+  def apply(name: run_start): `5` = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[`5`]
   }
@@ -35,6 +35,6 @@ object `5` {
     }
     
     @scala.inline
-    def setName(value: teardown): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: run_start): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

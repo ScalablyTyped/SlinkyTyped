@@ -29,6 +29,8 @@ class MultiSlider ()
   
   var getHandlerForIndex: js.Any = js.native
   
+  var getLabelValues: js.Any = js.native
+  
   var getNewHandleValues: js.Any = js.native
   
   var getOffsetRatio: js.Any = js.native

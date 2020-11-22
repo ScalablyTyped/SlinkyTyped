@@ -26,6 +26,15 @@ object reprojImageMod extends js.Object {
       pixelRatio: Double,
       getImageFunction: FunctionType
     ) = this()
+    def this(
+      sourceProj: typingsSlinky.ol.projectionMod.default,
+      targetProj: typingsSlinky.ol.projectionMod.default,
+      targetExtent: Extent,
+      targetResolution: Double,
+      pixelRatio: Double,
+      getImageFunction: FunctionType,
+      opt_contextOptions: js.Any
+    ) = this()
   }
   
   type FunctionType = js.Function3[

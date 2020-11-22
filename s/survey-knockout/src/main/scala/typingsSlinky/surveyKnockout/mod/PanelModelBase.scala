@@ -324,6 +324,13 @@ class PanelModelBase ()
   var requiredErrorText: String = js.native
   
   /**
+    * An expression that returns true or false. If it returns true the Panel/Page becomes required.
+    * The library runs the expression on survey start and on changing a question value. If the property is empty then isRequired property is used.
+    * @see isRequired
+    */
+  var requiredIf: String = js.native
+  
+  /**
     * Returns the char/string for a required panel.
     * @see SurveyModel.requiredText
     */

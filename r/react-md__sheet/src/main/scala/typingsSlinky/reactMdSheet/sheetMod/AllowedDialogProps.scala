@@ -36,8 +36,13 @@ import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.reactMdPortal.getContainerMod.PortalInto
+import typingsSlinky.reactMdSheet.reactMdSheetStrings.`additions removals`
 import typingsSlinky.reactMdSheet.reactMdSheetStrings.`additions text`
 import typingsSlinky.reactMdSheet.reactMdSheetStrings.`inline`
+import typingsSlinky.reactMdSheet.reactMdSheetStrings.`removals additions`
+import typingsSlinky.reactMdSheet.reactMdSheetStrings.`removals text`
+import typingsSlinky.reactMdSheet.reactMdSheetStrings.`text additions`
+import typingsSlinky.reactMdSheet.reactMdSheetStrings.`text removals`
 import typingsSlinky.reactMdSheet.reactMdSheetStrings.additions
 import typingsSlinky.reactMdSheet.reactMdSheetStrings.all
 import typingsSlinky.reactMdSheet.reactMdSheetStrings.ascending
@@ -91,7 +96,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Omit<@react-md/dialog.@react-md/dialog.DialogProps, 'role' | 'type' | 'modal' | 'forceContainer'> */
+/* Inlined std.Omit<@react-md/dialog.@react-md/dialog.BaseDialogProps, 'role' | 'type' | 'modal' | 'forceContainer'> */
 @js.native
 trait AllowedDialogProps extends js.Object {
   
@@ -171,7 +176,9 @@ trait AllowedDialogProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -776,7 +783,9 @@ object AllowedDialogProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

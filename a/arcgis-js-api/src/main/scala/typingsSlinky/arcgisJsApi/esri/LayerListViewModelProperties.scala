@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LayerListViewModelProperties extends js.Object {
   
   /**
-    * Specifies a function that accesses each [ListItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html). Each list item can be modified according to its modifiable propeties. Actions can be added to list items using the [actionsSections](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#actionsSections) property of the ListItem.
+    * Specifies a function that accesses each [ListItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-LayerListViewModel.html#listItemCreatedFunction)
     */
-  var listItemCreatedFunction: js.UndefOr[js.Function] = js.native
+  var listItemCreatedFunction: js.UndefOr[LayerListListItemCreatedHandler] = js.native
   
   /**
     * The view from which the widget will operate.
@@ -45,7 +45,7 @@ object LayerListViewModelProperties {
     }
     
     @scala.inline
-    def setListItemCreatedFunction(value: js.Function): Self = this.set("listItemCreatedFunction", value.asInstanceOf[js.Any])
+    def setListItemCreatedFunction(value: /* event */ js.Any => Unit): Self = this.set("listItemCreatedFunction", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteListItemCreatedFunction: Self = this.set("listItemCreatedFunction", js.undefined)

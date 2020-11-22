@@ -1,5 +1,8 @@
 package typingsSlinky.fundamentalReact.anon
 
+import org.scalajs.dom.raw.HTMLButtonElement
+import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.s
 import typingsSlinky.react.mod.Validator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,21 +12,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WeakValidationMapTileProp extends js.Object {
   
-  var active: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  
-  var backgroundImage: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
-  
   var className: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
   
-  var disableStyles: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
+  var isDouble: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
-  var disabled: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
+  var onClick: js.UndefOr[
+    Validator[
+      js.UndefOr[(js.Function1[/* event */ SyntheticMouseEvent[HTMLButtonElement], Unit]) | Null]
+    ]
+  ] = js.native
   
-  var onClick: js.UndefOr[Validator[js.UndefOr[(js.Function1[/* repeated */ _, _]) | Null]]] = js.native
-  
-  var productTile: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
-  
-  var tabIndex: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
+  var size: js.UndefOr[Validator[js.UndefOr[s | Null]]] = js.native
 }
 object WeakValidationMapTileProp {
   
@@ -49,51 +48,31 @@ object WeakValidationMapTileProp {
     }
     
     @scala.inline
-    def setActive(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("active", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteActive: Self = this.set("active", js.undefined)
-    
-    @scala.inline
-    def setBackgroundImage(value: Validator[js.UndefOr[Null | String]]): Self = this.set("backgroundImage", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBackgroundImage: Self = this.set("backgroundImage", js.undefined)
-    
-    @scala.inline
     def setClassName(value: Validator[js.UndefOr[Null | String]]): Self = this.set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
-    def setDisableStyles(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("disableStyles", value.asInstanceOf[js.Any])
+    def setIsDouble(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("isDouble", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDisableStyles: Self = this.set("disableStyles", js.undefined)
+    def deleteIsDouble: Self = this.set("isDouble", js.undefined)
     
     @scala.inline
-    def setDisabled(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("disabled", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDisabled: Self = this.set("disabled", js.undefined)
-    
-    @scala.inline
-    def setOnClick(value: Validator[js.UndefOr[(js.Function1[/* repeated */ _, _]) | Null]]): Self = this.set("onClick", value.asInstanceOf[js.Any])
+    def setOnClick(
+      value: Validator[
+          js.UndefOr[(js.Function1[/* event */ SyntheticMouseEvent[HTMLButtonElement], Unit]) | Null]
+        ]
+    ): Self = this.set("onClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
-    def setProductTile(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("productTile", value.asInstanceOf[js.Any])
+    def setSize(value: Validator[js.UndefOr[s | Null]]): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteProductTile: Self = this.set("productTile", js.undefined)
-    
-    @scala.inline
-    def setTabIndex(value: Validator[js.UndefOr[Double | Null]]): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTabIndex: Self = this.set("tabIndex", js.undefined)
+    def deleteSize: Self = this.set("size", js.undefined)
   }
 }

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait OnScroll extends js.Object {
   
-  def onScroll(info: CurrentTarget): Unit = js.native
+  def onScroll(info: CurrentTargetScrollLeft): Unit = js.native
   
   var ref: Ref[ScrollLeft] = js.native
   
@@ -18,7 +18,7 @@ trait OnScroll extends js.Object {
 object OnScroll {
   
   @scala.inline
-  def apply(onScroll: CurrentTarget => Unit, scrollbarSize: Double): OnScroll = {
+  def apply(onScroll: CurrentTargetScrollLeft => Unit, scrollbarSize: Double): OnScroll = {
     val __obj = js.Dynamic.literal(onScroll = js.Any.fromFunction1(onScroll), scrollbarSize = scrollbarSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[OnScroll]
   }
@@ -39,7 +39,7 @@ object OnScroll {
     }
     
     @scala.inline
-    def setOnScroll(value: CurrentTarget => Unit): Self = this.set("onScroll", js.Any.fromFunction1(value))
+    def setOnScroll(value: CurrentTargetScrollLeft => Unit): Self = this.set("onScroll", js.Any.fromFunction1(value))
     
     @scala.inline
     def setScrollbarSize(value: Double): Self = this.set("scrollbarSize", value.asInstanceOf[js.Any])

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OutputColumn extends js.Object {
   
   /**
+    * A description for a column.
+    */
+  var Description: js.UndefOr[ColumnDescriptiveText] = js.native
+  
+  /**
     * A display name for the dataset.
     */
   var Name: js.UndefOr[ColumnName] = js.native
@@ -39,6 +44,12 @@ object OutputColumn {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDescription(value: ColumnDescriptiveText): Self = this.set("Description", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDescription: Self = this.set("Description", js.undefined)
     
     @scala.inline
     def setName(value: ColumnName): Self = this.set("Name", value.asInstanceOf[js.Any])

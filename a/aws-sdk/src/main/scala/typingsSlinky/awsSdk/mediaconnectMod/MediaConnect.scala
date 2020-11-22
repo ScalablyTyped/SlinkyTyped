@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.mediaconnectMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -99,6 +99,34 @@ trait MediaConnect extends Service {
   ): Request[DescribeFlowResponse, AWSError] = js.native
   
   /**
+    * Displays the details of an offering. The response includes the offering description, duration, outbound bandwidth, price, and Amazon Resource Name (ARN).
+    */
+  def describeOffering(): Request[DescribeOfferingResponse, AWSError] = js.native
+  def describeOffering(callback: js.Function2[/* err */ AWSError, /* data */ DescribeOfferingResponse, Unit]): Request[DescribeOfferingResponse, AWSError] = js.native
+  /**
+    * Displays the details of an offering. The response includes the offering description, duration, outbound bandwidth, price, and Amazon Resource Name (ARN).
+    */
+  def describeOffering(params: DescribeOfferingRequest): Request[DescribeOfferingResponse, AWSError] = js.native
+  def describeOffering(
+    params: DescribeOfferingRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeOfferingResponse, Unit]
+  ): Request[DescribeOfferingResponse, AWSError] = js.native
+  
+  /**
+    * Displays the details of a reservation. The response includes the reservation name, state, start date and time, and the details of the offering that make up the rest of the reservation (such as price, duration, and outbound bandwidth).
+    */
+  def describeReservation(): Request[DescribeReservationResponse, AWSError] = js.native
+  def describeReservation(callback: js.Function2[/* err */ AWSError, /* data */ DescribeReservationResponse, Unit]): Request[DescribeReservationResponse, AWSError] = js.native
+  /**
+    * Displays the details of a reservation. The response includes the reservation name, state, start date and time, and the details of the offering that make up the rest of the reservation (such as price, duration, and outbound bandwidth).
+    */
+  def describeReservation(params: DescribeReservationRequest): Request[DescribeReservationResponse, AWSError] = js.native
+  def describeReservation(
+    params: DescribeReservationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeReservationResponse, Unit]
+  ): Request[DescribeReservationResponse, AWSError] = js.native
+  
+  /**
     * Grants entitlements to an existing flow.
     */
   def grantFlowEntitlements(): Request[GrantFlowEntitlementsResponse, AWSError] = js.native
@@ -141,6 +169,34 @@ trait MediaConnect extends Service {
   ): Request[ListFlowsResponse, AWSError] = js.native
   
   /**
+    * Displays a list of all offerings that are available to this account in the current AWS Region. If you have an active reservation (which means you've purchased an offering that has already started and hasn't expired yet), your account isn't eligible for other offerings.
+    */
+  def listOfferings(): Request[ListOfferingsResponse, AWSError] = js.native
+  def listOfferings(callback: js.Function2[/* err */ AWSError, /* data */ ListOfferingsResponse, Unit]): Request[ListOfferingsResponse, AWSError] = js.native
+  /**
+    * Displays a list of all offerings that are available to this account in the current AWS Region. If you have an active reservation (which means you've purchased an offering that has already started and hasn't expired yet), your account isn't eligible for other offerings.
+    */
+  def listOfferings(params: ListOfferingsRequest): Request[ListOfferingsResponse, AWSError] = js.native
+  def listOfferings(
+    params: ListOfferingsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListOfferingsResponse, Unit]
+  ): Request[ListOfferingsResponse, AWSError] = js.native
+  
+  /**
+    * Displays a list of all reservations that have been purchased by this account in the current AWS Region. This list includes all reservations in all states (such as active and expired).
+    */
+  def listReservations(): Request[ListReservationsResponse, AWSError] = js.native
+  def listReservations(callback: js.Function2[/* err */ AWSError, /* data */ ListReservationsResponse, Unit]): Request[ListReservationsResponse, AWSError] = js.native
+  /**
+    * Displays a list of all reservations that have been purchased by this account in the current AWS Region. This list includes all reservations in all states (such as active and expired).
+    */
+  def listReservations(params: ListReservationsRequest): Request[ListReservationsResponse, AWSError] = js.native
+  def listReservations(
+    params: ListReservationsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListReservationsResponse, Unit]
+  ): Request[ListReservationsResponse, AWSError] = js.native
+  
+  /**
     * List all tags on an AWS Elemental MediaConnect resource
     */
   def listTagsForResource(): Request[ListTagsForResourceResponse, AWSError] = js.native
@@ -153,6 +209,20 @@ trait MediaConnect extends Service {
     params: ListTagsForResourceRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
+  /**
+    * Submits a request to purchase an offering. If you already have an active reservation, you can't purchase another offering.
+    */
+  def purchaseOffering(): Request[PurchaseOfferingResponse, AWSError] = js.native
+  def purchaseOffering(callback: js.Function2[/* err */ AWSError, /* data */ PurchaseOfferingResponse, Unit]): Request[PurchaseOfferingResponse, AWSError] = js.native
+  /**
+    * Submits a request to purchase an offering. If you already have an active reservation, you can't purchase another offering.
+    */
+  def purchaseOffering(params: PurchaseOfferingRequest): Request[PurchaseOfferingResponse, AWSError] = js.native
+  def purchaseOffering(
+    params: PurchaseOfferingRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ PurchaseOfferingResponse, Unit]
+  ): Request[PurchaseOfferingResponse, AWSError] = js.native
   
   /**
     * Removes an output from an existing flow. This request can be made only on an output that does not have an entitlement associated with it. If the output has an entitlement, you must revoke the entitlement instead. When an entitlement is revoked from a flow, the service automatically removes the associated output.

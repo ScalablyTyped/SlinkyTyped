@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMinimalMotionControllerObject
-import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandness
+import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandedness
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.WebXRAbstractMotionController
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,9 +18,13 @@ object webXRHTCViveMotionControllerMod extends js.Object {
       * Create a new Vive motion controller object
       * @param scene the scene to use to create this controller
       * @param gamepadObject the corresponding gamepad object
-      * @param handness the handness of the controller
+      * @param handedness the handedness of the controller
       */
-    def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
+    def this(
+      scene: Scene,
+      gamepadObject: IMinimalMotionControllerObject,
+      handedness: MotionControllerHandedness
+    ) = this()
     
     var _modelRootNode: js.Any = js.native
     

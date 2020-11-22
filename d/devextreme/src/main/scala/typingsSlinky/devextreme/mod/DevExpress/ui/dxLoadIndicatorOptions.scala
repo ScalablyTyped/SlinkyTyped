@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxLoadIndicatorOptions extends WidgetOptions[dxLoadIndicator] {
   
-  /** @name dxLoadIndicator.Options.indicatorSrc */
+  /**
+    * [descr:dxLoadIndicator.Options.indicatorSrc]
+    */
   var indicatorSrc: js.UndefOr[String] = js.native
 }
 object dxLoadIndicatorOptions {

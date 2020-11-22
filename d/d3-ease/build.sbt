@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "d3-ease"
-version := "1.0-dt-20200515Z-c9b86f"
+version := "2.0-dt-20200930Z-c9b86f"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -1,6 +1,8 @@
 package typingsSlinky.officeUiFabricReact.groupedListTypesMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.IFocusZoneProps
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.Callback
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropEvents
 import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
@@ -9,7 +11,6 @@ import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
@@ -41,6 +42,9 @@ trait IGroupedListProps extends ClassAttributes[GroupedListBase] {
   
   /** Event names and corresponding callbacks that will be registered to groups and rendered elements */
   var eventsToRegister: js.UndefOr[js.Array[Callback]] = js.native
+  
+  /** Optional properties to pass through to the FocusZone. */
+  var focusZoneProps: js.UndefOr[IFocusZoneProps] = js.native
   
   /**
     * Optional function to override default group height calculation used by list virtualization.
@@ -80,6 +84,9 @@ trait IGroupedListProps extends ClassAttributes[GroupedListBase] {
     * The default implementation will virtualize when this callback is not provided.
     */
   var onShouldVirtualize: js.UndefOr[js.Function1[/* props */ IListProps[_], Boolean]] = js.native
+  
+  /** Override the default role for GroupedList.  */
+  var role: js.UndefOr[String] = js.native
   
   /** Optional selection model to track selection state.  */
   var selection: js.UndefOr[ISelection[IObjectWithKey]] = js.native

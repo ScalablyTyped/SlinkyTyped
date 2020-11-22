@@ -14,6 +14,12 @@ trait IMapOptions extends js.Object {
   
   var avoidFractionalZoom: js.UndefOr[Boolean] = js.native
   
+  var copyrightLogoVisible: js.UndefOr[Boolean] = js.native
+  
+  var copyrightProvidersVisible: js.UndefOr[Boolean] = js.native
+  
+  var copyrightUaVisible: js.UndefOr[Boolean] = js.native
+  
   var exitFullscreenByEsc: js.UndefOr[Boolean] = js.native
   
   var fullscreenZIndex: js.UndefOr[Double] = js.native
@@ -74,6 +80,24 @@ object IMapOptions {
     
     @scala.inline
     def deleteAvoidFractionalZoom: Self = this.set("avoidFractionalZoom", js.undefined)
+    
+    @scala.inline
+    def setCopyrightLogoVisible(value: Boolean): Self = this.set("copyrightLogoVisible", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCopyrightLogoVisible: Self = this.set("copyrightLogoVisible", js.undefined)
+    
+    @scala.inline
+    def setCopyrightProvidersVisible(value: Boolean): Self = this.set("copyrightProvidersVisible", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCopyrightProvidersVisible: Self = this.set("copyrightProvidersVisible", js.undefined)
+    
+    @scala.inline
+    def setCopyrightUaVisible(value: Boolean): Self = this.set("copyrightUaVisible", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCopyrightUaVisible: Self = this.set("copyrightUaVisible", js.undefined)
     
     @scala.inline
     def setExitFullscreenByEsc(value: Boolean): Self = this.set("exitFullscreenByEsc", value.asInstanceOf[js.Any])

@@ -10,7 +10,11 @@ object mathMod extends js.Object {
   
   def clamp(value: Double, min: Double, max: Double): Double = js.native
   
+  def cosh(x: Double): Double = js.native
+  
   def lerp(a: Double, b: Double, x: Double): Double = js.native
+  
+  def log2(x: Double): Double = js.native
   
   def modulo(a: Double, b: Double): Double = js.native
   

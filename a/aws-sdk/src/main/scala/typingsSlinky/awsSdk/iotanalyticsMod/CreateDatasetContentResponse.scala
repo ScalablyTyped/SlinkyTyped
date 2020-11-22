@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateDatasetContentResponse extends js.Object {
   
   /**
-    * The version ID of the data set contents which are being created.
+    * The version ID of the dataset contents that are being created.
     */
   var versionId: js.UndefOr[DatasetContentVersion] = js.native
 }

@@ -11,6 +11,8 @@ import typingsSlinky.mongodb.mod.CollectionReduceFunction
 import typingsSlinky.mongodb.mod.DeleteWriteOpResultObject
 import typingsSlinky.mongodb.mod.FilterQuery
 import typingsSlinky.mongodb.mod.FindOneAndDeleteOption
+import typingsSlinky.mongodb.mod.FindOneAndReplaceOption
+import typingsSlinky.mongodb.mod.FindOneAndUpdateOption
 import typingsSlinky.mongodb.mod.FindOneOptions
 import typingsSlinky.mongodb.mod.GeoHaystackSearchOptions
 import typingsSlinky.mongodb.mod.IndexOptions
@@ -20,10 +22,9 @@ import typingsSlinky.mongodb.mod.MongoDistinctPreferences
 import typingsSlinky.mongodb.mod.UpdateOneOptions
 import typingsSlinky.mongodb.mod.UpdateQuery
 import typingsSlinky.mongodb.mod.UpdateWriteOpResult
-import typingsSlinky.monk.anon.FindOneAndReplaceOptionre
-import typingsSlinky.monk.anon.FindOneAndUpdateOptionrep
-import typingsSlinky.monk.anon.FindOneOptionsrawCursortr
-import typingsSlinky.monk.anon.FindOptionsrawCursortrue
+import typingsSlinky.monk.anon.RawCursor
+import typingsSlinky.monk.anon.ReplaceOne
+import typingsSlinky.monk.anon.`0`
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -106,70 +107,72 @@ class ICollection[T /* <: StringDictionary[js.Any] */] () extends js.Object {
   
   // Normal
   def find(): js.Promise[FindResult[T]] = js.native
-  def find(query: js.UndefOr[scala.Nothing], options: FindOptions): js.Promise[FindResult[T]] = js.native
+  def find(query: js.UndefOr[scala.Nothing], options: FindOptions[T]): js.Promise[FindResult[T]] = js.native
   // Raw
   def find(query: FilterQuery[T]): js.Promise[FindRawResult[T]] = js.native
-  def find(query: FilterQuery[T], options: FindOneOptions, callback: Callback[FindResult[T]]): Unit = js.native
-  def find(query: FilterQuery[T], options: FindOneOptionsrawCursortr, callback: Callback[FindRawResult[T]]): Unit = js.native
-  def find(query: FilterQuery[T], options: FindOptionsrawCursortrue): js.Promise[FindRawResult[T]] = js.native
-  def find(query: FilterQuery[T], options: FindOptions): js.Promise[FindResult[T]] = js.native
+  def find(query: FilterQuery[T], options: (FindOptions[T] with RawCursor) | FindOptions[T]): js.Promise[FindRawResult[T]] = js.native
+  def find(
+    query: FilterQuery[T],
+    options: (FindOneOptions[T] with RawCursor) | FindOneOptions[T],
+    callback: Callback[FindRawResult[T] | FindResult[T]]
+  ): Unit = js.native
   
   def findOne(): js.Promise[FindOneResult[T]] = js.native
-  def findOne(query: js.UndefOr[scala.Nothing], options: FindOneOptions): js.Promise[FindOneResult[T]] = js.native
+  def findOne(query: js.UndefOr[scala.Nothing], options: FindOneOptions[T]): js.Promise[FindOneResult[T]] = js.native
   def findOne(query: FilterQuery[T]): js.Promise[FindOneResult[T]] = js.native
-  def findOne(query: FilterQuery[T], options: FindOneOptions): js.Promise[FindOneResult[T]] = js.native
-  def findOne(query: FilterQuery[T], options: FindOneOptions, callback: Callback[FindOneResult[T]]): Unit = js.native
+  def findOne(query: FilterQuery[T], options: FindOneOptions[T]): js.Promise[FindOneResult[T]] = js.native
+  def findOne(query: FilterQuery[T], options: FindOneOptions[T], callback: Callback[FindOneResult[T]]): Unit = js.native
   
   def findOneAndDelete(query: FilterQuery[T]): js.Promise[FindOneResult[T]] = js.native
-  def findOneAndDelete(query: FilterQuery[T], options: FindOneAndDeleteOption): js.Promise[FindOneResult[T]] = js.native
-  def findOneAndDelete(query: FilterQuery[T], options: FindOneAndDeleteOption, callback: Callback[FindOneResult[T]]): Unit = js.native
+  def findOneAndDelete(query: FilterQuery[T], options: FindOneAndDeleteOption[T]): js.Promise[FindOneResult[T]] = js.native
+  def findOneAndDelete(query: FilterQuery[T], options: FindOneAndDeleteOption[T], callback: Callback[FindOneResult[T]]): Unit = js.native
   
   // Replace
   def findOneAndUpdate(query: FilterQuery[T], update: T): js.Promise[FindOneResult[T]] = js.native
-  def findOneAndUpdate(query: FilterQuery[T], update: T, options: FindOneAndReplaceOptionre): js.Promise[FindOneResult[T]] = js.native
+  def findOneAndUpdate(query: FilterQuery[T], update: T, options: FindOneAndReplaceOption[T] with `0`): js.Promise[FindOneResult[T]] = js.native
   def findOneAndUpdate(
     query: FilterQuery[T],
     update: T,
-    options: FindOneAndReplaceOptionre,
+    options: FindOneAndReplaceOption[T] with `0`,
     callback: Callback[FindOneResult[T]]
   ): Unit = js.native
   def findOneAndUpdate(query: FilterQuery[T], update: UpdateQuery[T]): Unit = js.native
+  def findOneAndUpdate(query: FilterQuery[T], update: UpdateQuery[T], options: FindOneAndUpdateOption[T] with ReplaceOne): Unit = js.native
+  def findOneAndUpdate(
+    query: FilterQuery[T],
+    update: UpdateQuery[T],
+    options: FindOneAndUpdateOption[T] with ReplaceOne,
+    callback: Callback[FindOneResult[T]]
+  ): Unit = js.native
   def findOneAndUpdate(
     query: FilterQuery[T],
     update: UpdateQuery[T],
     options: js.UndefOr[scala.Nothing],
-    callback: Callback[FindOneResult[T]]
-  ): Unit = js.native
-  def findOneAndUpdate(query: FilterQuery[T], update: UpdateQuery[T], options: FindOneAndUpdateOptionrep): Unit = js.native
-  def findOneAndUpdate(
-    query: FilterQuery[T],
-    update: UpdateQuery[T],
-    options: FindOneAndUpdateOptionrep,
     callback: Callback[FindOneResult[T]]
   ): Unit = js.native
   def findOneAndUpdate(query: FilterQuery[T], update: Partial[T]): Unit = js.native
+  def findOneAndUpdate(query: FilterQuery[T], update: Partial[T], options: FindOneAndUpdateOption[T] with ReplaceOne): Unit = js.native
+  def findOneAndUpdate(
+    query: FilterQuery[T],
+    update: Partial[T],
+    options: FindOneAndUpdateOption[T] with ReplaceOne,
+    callback: Callback[FindOneResult[T]]
+  ): Unit = js.native
   def findOneAndUpdate(
     query: FilterQuery[T],
     update: Partial[T],
     options: js.UndefOr[scala.Nothing],
-    callback: Callback[FindOneResult[T]]
-  ): Unit = js.native
-  def findOneAndUpdate(query: FilterQuery[T], update: Partial[T], options: FindOneAndUpdateOptionrep): Unit = js.native
-  def findOneAndUpdate(
-    query: FilterQuery[T],
-    update: Partial[T],
-    options: FindOneAndUpdateOptionrep,
     callback: Callback[FindOneResult[T]]
   ): Unit = js.native
   // Update
   @JSName("findOneAndUpdate")
   def findOneAndUpdate_Promise(query: FilterQuery[T], update: UpdateQuery[T]): js.Promise[FindOneResult[T]] = js.native
   @JSName("findOneAndUpdate")
-  def findOneAndUpdate_Promise(query: FilterQuery[T], update: UpdateQuery[T], options: FindOneAndUpdateOptionrep): js.Promise[FindOneResult[T]] = js.native
+  def findOneAndUpdate_Promise(query: FilterQuery[T], update: UpdateQuery[T], options: FindOneAndUpdateOption[T] with ReplaceOne): js.Promise[FindOneResult[T]] = js.native
   @JSName("findOneAndUpdate")
   def findOneAndUpdate_Promise(query: FilterQuery[T], update: Partial[T]): js.Promise[FindOneResult[T]] = js.native
   @JSName("findOneAndUpdate")
-  def findOneAndUpdate_Promise(query: FilterQuery[T], update: Partial[T], options: FindOneAndUpdateOptionrep): js.Promise[FindOneResult[T]] = js.native
+  def findOneAndUpdate_Promise(query: FilterQuery[T], update: Partial[T], options: FindOneAndUpdateOption[T] with ReplaceOne): js.Promise[FindOneResult[T]] = js.native
   
   def geoHaystackSearch(x: Double, y: Double): js.Promise[GeoHaystackSearchResult[T]] = js.native
   def geoHaystackSearch(x: Double, y: Double, options: GeoHaystackSearchOptions): js.Promise[GeoHaystackSearchResult[T]] = js.native

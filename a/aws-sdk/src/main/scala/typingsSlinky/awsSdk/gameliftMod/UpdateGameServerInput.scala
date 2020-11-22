@@ -8,27 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateGameServerInput extends js.Object {
   
   /**
-    * A game server tag that can be used to request sorted lists of game servers using ListGameServers. Custom sort keys are developer-defined based on how you want to organize the retrieved game server information.
-    */
-  var CustomSortKey: js.UndefOr[GameServerSortKey] = js.native
-  
-  /**
-    * A set of custom game server properties, formatted as a single string value. This data is passed to a game client or service when it requests information on a game servers using DescribeGameServer or ClaimGameServer. 
+    * A set of custom game server properties, formatted as a single string value. This data is passed to a game client or service when it requests information on game servers using ListGameServers or ClaimGameServer. 
     */
   var GameServerData: js.UndefOr[typingsSlinky.awsSdk.gameliftMod.GameServerData] = js.native
   
   /**
-    * An identifier for the game server group where the game server is running. Use either the GameServerGroup name or ARN value.
+    * A unique identifier for the game server group where the game server is running. Use either the GameServerGroup name or ARN value.
     */
   var GameServerGroupName: GameServerGroupNameOrArn = js.native
   
   /**
-    * The identifier for the game server to be updated.
+    * A custom string that uniquely identifies the game server to update.
     */
   var GameServerId: typingsSlinky.awsSdk.gameliftMod.GameServerId = js.native
   
   /**
-    * Indicates health status of the game server. An update that explicitly includes this parameter updates the game server's LastHealthCheckTime time stamp. 
+    * Indicates health status of the game server. A request that includes this parameter updates the game server's LastHealthCheckTime timestamp. 
     */
   var HealthCheck: js.UndefOr[GameServerHealthCheck] = js.native
   
@@ -65,12 +60,6 @@ object UpdateGameServerInput {
     
     @scala.inline
     def setGameServerId(value: GameServerId): Self = this.set("GameServerId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setCustomSortKey(value: GameServerSortKey): Self = this.set("CustomSortKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCustomSortKey: Self = this.set("CustomSortKey", js.undefined)
     
     @scala.inline
     def setGameServerData(value: GameServerData): Self = this.set("GameServerData", value.asInstanceOf[js.Any])

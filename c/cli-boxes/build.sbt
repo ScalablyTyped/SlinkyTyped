@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "cli-boxes"
-version := "2.2.0-a77e48"
+version := "2.2.1-405c36"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

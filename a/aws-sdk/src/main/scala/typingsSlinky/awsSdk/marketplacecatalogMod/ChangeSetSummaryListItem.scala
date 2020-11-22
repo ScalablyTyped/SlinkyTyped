@@ -33,6 +33,11 @@ trait ChangeSetSummaryListItem extends js.Object {
   var EntityIdList: js.UndefOr[ResourceIdList] = js.native
   
   /**
+    * Returned if the change set is in FAILED status. Can be either CLIENT_ERROR, which means that there are issues with the request (see the ErrorDetailList of DescribeChangeSet), or SERVER_FAULT, which means that there is a problem in the system, and you should retry your request.
+    */
+  var FailureCode: js.UndefOr[typingsSlinky.awsSdk.marketplacecatalogMod.FailureCode] = js.native
+  
+  /**
     * The time, in ISO 8601 format (2018-02-27T13:45:22Z), when the change set was started.
     */
   var StartTime: js.UndefOr[DateTimeISO8601] = js.native
@@ -97,6 +102,12 @@ object ChangeSetSummaryListItem {
     
     @scala.inline
     def deleteEntityIdList: Self = this.set("EntityIdList", js.undefined)
+    
+    @scala.inline
+    def setFailureCode(value: FailureCode): Self = this.set("FailureCode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFailureCode: Self = this.set("FailureCode", js.undefined)
     
     @scala.inline
     def setStartTime(value: DateTimeISO8601): Self = this.set("StartTime", value.asInstanceOf[js.Any])

@@ -105,6 +105,11 @@ object NodeBuilderFlags extends js.Object {
   object NoTypeReduction extends TopLevel[NoTypeReduction with Double]
   
   @js.native
+  sealed trait NoUndefinedOptionalParameterType extends NodeBuilderFlags
+  /* 1073741824 */ @js.native
+  object NoUndefinedOptionalParameterType extends TopLevel[NoUndefinedOptionalParameterType with Double]
+  
+  @js.native
   sealed trait None extends NodeBuilderFlags
   /* 0 */ @js.native
   object None extends TopLevel[None with Double]

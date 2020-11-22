@@ -160,12 +160,24 @@ object quaternionMod extends js.Object {
     def toArray(array: ArrayLike[Double]): ArrayLike[Double] = js.native
     def toArray(array: ArrayLike[Double], offset: Double): ArrayLike[Double] = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var w: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var x: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var y: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var z: Double = js.native
   }
   /* static members */

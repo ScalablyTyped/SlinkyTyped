@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateIAMPolicyAssignmentRequest extends js.Object {
   
   /**
-    * The name of the assignment. It must be unique within an AWS account.
+    * The name of the assignment, also called a rule. It must be unique within an AWS account.
     */
   var AssignmentName: IAMPolicyAssignmentName = js.native
   

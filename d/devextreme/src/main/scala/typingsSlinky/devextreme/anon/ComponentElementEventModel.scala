@@ -2,8 +2,7 @@ package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
-import typingsSlinky.devextreme.mod.DevExpress.viz.dxSankey
-import typingsSlinky.devextreme.mod.DevExpress.viz.dxSankeyNode
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxProgressBar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,15 +10,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ComponentElementEventModel extends js.Object {
   
-  var component: js.UndefOr[dxSankey] = js.native
+  var component: js.UndefOr[dxProgressBar] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
   var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
-  
-  var target: js.UndefOr[dxSankeyNode] = js.native
 }
 object ComponentElementEventModel {
   
@@ -45,7 +42,7 @@ object ComponentElementEventModel {
     }
     
     @scala.inline
-    def setComponent(value: dxSankey): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxProgressBar): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -67,11 +64,5 @@ object ComponentElementEventModel {
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)
-    
-    @scala.inline
-    def setTarget(value: dxSankeyNode): Self = this.set("target", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTarget: Self = this.set("target", js.undefined)
   }
 }

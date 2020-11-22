@@ -1,11 +1,22 @@
 package typingsSlinky.dayjs.durationMod
 
+import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.Instantiable2
+import org.scalablytyped.runtime.Instantiable3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Duration extends js.Object {
+trait Duration
+  extends Instantiable1[/* input */ DurationInputType, Duration]
+     with Instantiable2[/* input */ DurationInputType, /* unit */ String, Duration]
+     with Instantiable3[
+      /* input */ DurationInputType, 
+      js.UndefOr[/* unit */ String], 
+      /* locale */ String, 
+      Duration
+    ] {
   
   def add(input: DurationAddType): Duration = js.native
   def add(input: DurationAddType, unit: String): Duration = js.native
@@ -34,6 +45,7 @@ trait Duration extends js.Object {
   
   def hours(): Double = js.native
   
+  def humanize(): String = js.native
   def humanize(withSuffix: Boolean): String = js.native
   
   def locale(locale: String): Duration = js.native

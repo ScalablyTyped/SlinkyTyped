@@ -11,7 +11,7 @@ trait Label extends js.Object {
   
   var container: js.UndefOr[ViewStyle] = js.native
   
-  var icon: js.UndefOr[ViewStyle] = js.native
+  var icon: js.UndefOr[TextStyle] = js.native
   
   var label: js.UndefOr[TextStyle] = js.native
 }
@@ -48,7 +48,7 @@ object Label {
     def setContainerNull: Self = this.set("container", null)
     
     @scala.inline
-    def setIcon(value: ViewStyle): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: TextStyle): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)

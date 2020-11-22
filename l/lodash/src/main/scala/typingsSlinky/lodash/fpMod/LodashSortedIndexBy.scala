@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashSortedIndexBy extends LodashConvertible {
+trait LodashSortedIndexBy extends js.Object {
   
   def apply[T](iteratee: ValueIteratee[T]): LodashSortedIndexBy1x1[T] = js.native
   def apply[T](iteratee: ValueIteratee[T], value: T): Double = js.native

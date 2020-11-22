@@ -7,6 +7,8 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
+import typingsSlinky.blueprintjsSelect.blueprintjsSelectStrings.first
+import typingsSlinky.blueprintjsSelect.blueprintjsSelectStrings.last
 import typingsSlinky.blueprintjsSelect.itemListRendererMod.IItemListRendererProps
 import typingsSlinky.blueprintjsSelect.itemListRendererMod.ItemListRenderer
 import typingsSlinky.blueprintjsSelect.itemRendererMod.IItemRendererProps
@@ -32,6 +34,8 @@ trait PartialISuggestPropsany extends js.Object {
   var closeOnSelect: js.UndefOr[Boolean] = js.native
   
   var createNewItemFromQuery: js.UndefOr[js.Function1[/* query */ String, _]] = js.native
+  
+  var createNewItemPosition: js.UndefOr[first | last] = js.native
   
   var createNewItemRenderer: js.UndefOr[
     js.Function3[
@@ -151,6 +155,12 @@ object PartialISuggestPropsany {
     
     @scala.inline
     def deleteCreateNewItemFromQuery: Self = this.set("createNewItemFromQuery", js.undefined)
+    
+    @scala.inline
+    def setCreateNewItemPosition(value: first | last): Self = this.set("createNewItemPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCreateNewItemPosition: Self = this.set("createNewItemPosition", js.undefined)
     
     @scala.inline
     def setCreateNewItemRenderer(

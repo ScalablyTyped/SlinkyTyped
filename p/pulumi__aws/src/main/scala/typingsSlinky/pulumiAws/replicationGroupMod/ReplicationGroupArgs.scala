@@ -147,7 +147,7 @@ trait ReplicationGroupArgs extends js.Object {
   val subnetGroupName: js.UndefOr[Input[String]] = js.native
   
   /**
-    * A map of tags to assign to the resource
+    * A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
     */
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   

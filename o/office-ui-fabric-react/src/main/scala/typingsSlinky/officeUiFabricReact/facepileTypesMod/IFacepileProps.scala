@@ -2,6 +2,7 @@ package typingsSlinky.officeUiFabricReact.facepileTypesMod
 
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.facepileBaseMod.FacepileBase
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaSharedProps
@@ -9,7 +10,6 @@ import typingsSlinky.officeUiFabricReact.personaTypesMod.PersonaSize
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js

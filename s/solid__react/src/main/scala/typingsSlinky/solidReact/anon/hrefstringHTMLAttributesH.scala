@@ -34,8 +34,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.solidReact.solidReactStrings.`additions removals`
 import typingsSlinky.solidReact.solidReactStrings.`additions text`
 import typingsSlinky.solidReact.solidReactStrings.`inline`
+import typingsSlinky.solidReact.solidReactStrings.`removals additions`
+import typingsSlinky.solidReact.solidReactStrings.`removals text`
+import typingsSlinky.solidReact.solidReactStrings.`text additions`
+import typingsSlinky.solidReact.solidReactStrings.`text removals`
 import typingsSlinky.solidReact.solidReactStrings.additions
 import typingsSlinky.solidReact.solidReactStrings.all
 import typingsSlinky.solidReact.solidReactStrings.ascending
@@ -269,7 +274,9 @@ trait hrefstringHTMLAttributesH extends js.Object {
     * Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
     * @see aria-atomic.
     */
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   /** Indicates that user input is required on the element before a form may be submitted. */
   var `aria-required`: js.UndefOr[Boolean] = js.native
@@ -852,7 +859,9 @@ object hrefstringHTMLAttributesH {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

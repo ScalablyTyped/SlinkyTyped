@@ -56,7 +56,7 @@ trait Archiver extends Transform {
   @JSName("on")
   def on_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")
-  def on_data(event: data, listener: js.Function1[/* data */ EntryData, Unit]): this.type = js.native
+  def on_data(event: data, listener: js.Function1[/* data */ Buffer, Unit]): this.type = js.native
   @JSName("on")
   def on_drain(event: drain, listener: js.Function0[Unit]): this.type = js.native
   @JSName("on")

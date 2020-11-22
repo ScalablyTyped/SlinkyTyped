@@ -1,6 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
-import typingsSlinky.xstate.anon.Context
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateMod.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +13,7 @@ trait AssignMeta[TContext, TEvent /* <: EventObject */] extends js.Object {
   
   var action: AssignAction[TContext, TEvent] = js.native
   
-  var state: js.UndefOr[State[TContext, TEvent, _, Context[TContext]]] = js.native
+  var state: js.UndefOr[State[TContext, TEvent, _, ContextTContext[TContext]]] = js.native
 }
 object AssignMeta {
   
@@ -45,7 +45,7 @@ object AssignMeta {
     def setAction(value: AssignAction[TContext, TEvent]): Self = this.set("action", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setState(value: State[TContext, TEvent, _, Context[TContext]]): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setState(value: State[TContext, TEvent, _, ContextTContext[TContext]]): Self = this.set("state", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteState: Self = this.set("state", js.undefined)

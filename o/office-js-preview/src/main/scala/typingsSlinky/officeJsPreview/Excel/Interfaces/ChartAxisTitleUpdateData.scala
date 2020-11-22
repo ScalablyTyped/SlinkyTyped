@@ -28,7 +28,7 @@ trait ChartAxisTitleUpdateData extends js.Object {
     *
     * Specifies the angle to which the text is oriented for the chart axis title. The value should either be an integer from -90 to 90 or the integer 180 for vertically-oriented text.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.12]
     */
   var textOrientation: js.UndefOr[Double] = js.native
   

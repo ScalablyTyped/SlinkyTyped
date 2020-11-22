@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLAnchorElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.paginationItemMod.PaginationItemProps
 import scala.scalajs.js
@@ -124,7 +123,7 @@ object StrictPaginationProps {
     
     @scala.inline
     def setEllipsisItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("ellipsisItem", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -138,7 +137,7 @@ object StrictPaginationProps {
     
     @scala.inline
     def setFirstItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("firstItem", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -152,7 +151,7 @@ object StrictPaginationProps {
     
     @scala.inline
     def setLastItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("lastItem", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -166,7 +165,7 @@ object StrictPaginationProps {
     
     @scala.inline
     def setNextItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("nextItem", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -186,7 +185,7 @@ object StrictPaginationProps {
     
     @scala.inline
     def setPageItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("pageItem", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -200,7 +199,7 @@ object StrictPaginationProps {
     
     @scala.inline
     def setPrevItemFunction3(
-      value: (/* component */ ReactType[PaginationItemProps], PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, PaginationItemProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("prevItem", js.Any.fromFunction3(value))
     
     @scala.inline

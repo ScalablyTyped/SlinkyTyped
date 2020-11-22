@@ -9,7 +9,9 @@ import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.colliderMod.Collider
 import typingsSlinky.babylonjs.edgesRendererMod.EdgesRenderer
 import typingsSlinky.babylonjs.edgesRendererMod.IEdgesRenderer
+import typingsSlinky.babylonjs.edgesRendererMod.IEdgesRendererOptions
 import typingsSlinky.babylonjs.engineOcclusionQueryMod.OcclusionDataStorage
+import typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem
 import typingsSlinky.babylonjs.lightMod.Light
 import typingsSlinky.babylonjs.materialMod.Material
 import typingsSlinky.babylonjs.mathColorMod.Color3
@@ -182,6 +184,8 @@ class AbstractMesh protected ()
   /** @hidden */
   var _renderingGroup: Nullable[RenderingGroup] = js.native
   
+  var _renderingGroupId: js.Any = js.native
+  
   /** @hidden */
   def _resyncLightSource(light: Light): Unit = js.native
   
@@ -220,7 +224,7 @@ class AbstractMesh protected ()
   
   /**
     * Gets or sets the current action manager
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions
     */
   var actionManager: Nullable[AbstractActionManager] = js.native
   
@@ -241,7 +245,7 @@ class AbstractMesh protected ()
   def alignWithNormal(normal: Vector3, upDirection: Vector3): AbstractMesh = js.native
   
   /** Gets or sets the alpha index used to sort transparent meshes
-    * @see http://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered#alpha-index
+    * @see https://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered#alpha-index
     */
   var alphaIndex: Double = js.native
   
@@ -258,7 +262,7 @@ class AbstractMesh protected ()
     * @param force defines the force to apply
     * @param contactPoint defines where to apply the force
     * @returns the current mesh
-    * @see http://doc.babylonjs.com/how_to/using_the_physics_engine
+    * @see https://doc.babylonjs.com/how_to/using_the_physics_engine
     */
   def applyImpulse(force: Vector3, contactPoint: Vector3): typingsSlinky.babylonjs.physicsEngineComponentMod.babylonjsMeshesAbstractMeshAugmentingMod.AbstractMesh = js.native
   
@@ -285,14 +289,14 @@ class AbstractMesh protected ()
   
   /**
     * Gets or sets a boolean indicating that this mesh can be used in the collision engine
-    * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
+    * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
     */
   def checkCollisions: Boolean = js.native
   def checkCollisions_=(collisionEnabled: Boolean): Unit = js.native
   
   /**
     * Gets Collider object used to compute collisions (not physics)
-    * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
+    * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
     */
   def collider: Nullable[Collider] = js.native
   
@@ -309,6 +313,15 @@ class AbstractMesh protected ()
     */
   def collisionMask: Double = js.native
   def collisionMask_=(mask: Double): Unit = js.native
+  
+  /**
+    * Gets or sets a collision response flag (default is true).
+    * when collisionResponse is false, events are still triggered but colliding entity has no response
+    * This helps creating trigger volume when user wants collision feedback events but not position/velocity
+    * to respond to the collision.
+    */
+  def collisionResponse: Boolean = js.native
+  def collisionResponse_=(response: Boolean): Unit = js.native
   
   /**
     * Gets or sets a boolean indicating that bone animations must be computed by the CPU (false by default)
@@ -330,7 +343,7 @@ class AbstractMesh protected ()
     * @param maxDepth defines the maximum depth to use (no more than 2 levels by default)
     * @returns the new octree
     * @see https://www.babylonjs-playground.com/#NA4OQ#12
-    * @see http://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
+    * @see https://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
     */
   def createOrUpdateSubmeshesOctree(): Octree[SubMesh] = js.native
   def createOrUpdateSubmeshesOctree(maxCapacity: js.UndefOr[scala.Nothing], maxDepth: Double): Octree[SubMesh] = js.native
@@ -363,7 +376,7 @@ class AbstractMesh protected ()
   /**
     * Disables the feature FacetData and frees the related memory
     * @returns the current mesh
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def disableFacetData(): AbstractMesh = js.native
   
@@ -399,13 +412,13 @@ class AbstractMesh protected ()
   
   /**
     * Gets or sets the ellipsoid used to impersonate this mesh when using collision engine (default is (0.5, 1, 0.5))
-    * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
+    * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
     */
   var ellipsoid: Vector3 = js.native
   
   /**
     * Gets or sets the ellipsoid offset used to impersonate this mesh when using collision engine (default is (0, 0, 0))
-    * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
+    * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
     */
   var ellipsoidOffset: Vector3 = js.native
   
@@ -414,13 +427,30 @@ class AbstractMesh protected ()
     * This mode makes the mesh edges visible
     * @param epsilon defines the maximal distance between two angles to detect a face
     * @param checkVerticesInsteadOfIndices indicates that we should check vertex list directly instead of faces
+    * @param options options to the edge renderer
     * @returns the currentAbstractMesh
     * @see https://www.babylonjs-playground.com/#19O9TU#0
     */
   def enableEdgesRendering(): AbstractMesh = js.native
+  def enableEdgesRendering(
+    epsilon: js.UndefOr[scala.Nothing],
+    checkVerticesInsteadOfIndices: js.UndefOr[scala.Nothing],
+    options: IEdgesRendererOptions
+  ): AbstractMesh = js.native
   def enableEdgesRendering(epsilon: js.UndefOr[scala.Nothing], checkVerticesInsteadOfIndices: Boolean): AbstractMesh = js.native
+  def enableEdgesRendering(
+    epsilon: js.UndefOr[scala.Nothing],
+    checkVerticesInsteadOfIndices: Boolean,
+    options: IEdgesRendererOptions
+  ): AbstractMesh = js.native
   def enableEdgesRendering(epsilon: Double): AbstractMesh = js.native
+  def enableEdgesRendering(
+    epsilon: Double,
+    checkVerticesInsteadOfIndices: js.UndefOr[scala.Nothing],
+    options: IEdgesRendererOptions
+  ): AbstractMesh = js.native
   def enableEdgesRendering(epsilon: Double, checkVerticesInsteadOfIndices: Boolean): AbstractMesh = js.native
+  def enableEdgesRendering(epsilon: Double, checkVerticesInsteadOfIndices: Boolean, options: IEdgesRendererOptions): AbstractMesh = js.native
   
   /**
     * Gets or sets a boolean indicating that pointer move events must be supported on this mesh (false by default)
@@ -431,14 +461,14 @@ class AbstractMesh protected ()
     * The location (Vector3) where the facet depth sort must be computed from.
     * By default, the active camera position.
     * Used only when facet depth sort is enabled
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata#facet-depth-sort
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata#facet-depth-sort
     */
   def facetDepthSortFrom: Vector3 = js.native
   def facetDepthSortFrom_=(location: Vector3): Unit = js.native
   
   /**
     * Gets the number of facets in the mesh
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata#what-is-a-mesh-facet
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata#what-is-a-mesh-facet
     */
   def facetNb: Double = js.native
   
@@ -459,7 +489,7 @@ class AbstractMesh protected ()
     * @param y defines y coordinate
     * @param z defines z coordinate
     * @returns the face index if found (or null instead)
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getClosestFacetAtCoordinates(x: Double, y: Double, z: Double): Nullable[Double] = js.native
   def getClosestFacetAtCoordinates(
@@ -500,7 +530,7 @@ class AbstractMesh protected ()
     * @param y defines y coordinate
     * @param z defines z coordinate
     * @returns the face index if found (or null instead)
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getClosestFacetAtLocalCoordinates(x: Double, y: Double, z: Double): Nullable[Double] = js.native
   def getClosestFacetAtLocalCoordinates(
@@ -533,9 +563,15 @@ class AbstractMesh protected ()
   def getClosestFacetAtLocalCoordinates(x: Double, y: Double, z: Double, projected: Vector3, checkFace: Boolean, facing: Boolean): Nullable[Double] = js.native
   
   /**
+    * This function returns all of the particle systems in the scene that use the mesh as an emitter.
+    * @returns an array of particle systems in the scene that use the mesh as an emitter
+    */
+  def getConnectedParticleSystems(): js.Array[IParticleSystem] = js.native
+  
+  /**
     * Returns the object "parameter" set with all the expected parameters for facetData computation by ComputeNormals()
     * @returns the parameters
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getFacetDataParameters(): js.Any = js.native
   
@@ -543,14 +579,14 @@ class AbstractMesh protected ()
     * Returns the facetLocalNormals array.
     * The normals are expressed in the mesh local spac
     * @returns an array of Vector3
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getFacetLocalNormals(): js.Array[Vector3] = js.native
   
   /**
     * Returns the facetLocalPartioning array
     * @returns an array of array of numbers
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getFacetLocalPartitioning(): js.Array[js.Array[Double]] = js.native
   
@@ -558,7 +594,7 @@ class AbstractMesh protected ()
     * Returns the facetLocalPositions array.
     * The facet positions are expressed in the mesh local space
     * @returns an array of Vector3
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getFacetLocalPositions(): js.Array[Vector3] = js.native
   
@@ -567,7 +603,7 @@ class AbstractMesh protected ()
     * This method allocates a new Vector3 per call
     * @param i defines the facet index
     * @returns a new Vector3
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getFacetNormal(i: Double): Vector3 = js.native
   
@@ -576,7 +612,7 @@ class AbstractMesh protected ()
     * @param i defines the facet index
     * @param ref defines the target vector
     * @returns the current mesh
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getFacetNormalToRef(i: Double, ref: Vector3): this.type = js.native
   
@@ -585,7 +621,7 @@ class AbstractMesh protected ()
     * This method allocates a new Vector3 per call
     * @param i defines the facet index
     * @returns a new Vector3
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getFacetPosition(i: Double): Vector3 = js.native
   
@@ -594,7 +630,7 @@ class AbstractMesh protected ()
     * @param i defines the facet index
     * @param ref defines the target vector
     * @returns the current mesh
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getFacetPositionToRef(i: Double, ref: Vector3): AbstractMesh = js.native
   
@@ -604,7 +640,7 @@ class AbstractMesh protected ()
     * @param y defines y coordinate
     * @param z defines z coordinate
     * @returns the array of facet indexes
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def getFacetsAtLocalCoordinates(x: Double, y: Double, z: Double): Nullable[js.Array[Double]] = js.native
   
@@ -617,7 +653,7 @@ class AbstractMesh protected ()
   
   /**
     * Gets the current physics impostor
-    * @see http://doc.babylonjs.com/features/physics_engine
+    * @see https://doc.babylonjs.com/features/physics_engine
     * @returns a physics impostor or null
     */
   def getPhysicsImpostor(): Nullable[PhysicsImpostor] = js.native
@@ -639,6 +675,11 @@ class AbstractMesh protected ()
     */
   def hasInstances: Boolean = js.native
   
+  /**
+    * Gets a boolean indicating if this mesh has thin instances
+    */
+  def hasThinInstances: Boolean = js.native
+  
   /** Gets or sets a boolean indicating that this mesh contains vertex color data with alpha values */
   def hasVertexAlpha: Boolean = js.native
   def hasVertexAlpha_=(value: Boolean): Unit = js.native
@@ -654,13 +695,224 @@ class AbstractMesh protected ()
     * @param ray defines the ray to use
     * @param fastCheck defines if fast mode (but less precise) must be used (false by default)
     * @param trianglePredicate defines an optional predicate used to select faces when a mesh intersection is detected
+    * @param onlyBoundingInfo defines a boolean indicating if picking should only happen using bounding info (false by default)
+    * @param worldToUse defines the world matrix to use to get the world coordinate of the intersection point
+    * @param skipBoundingInfo a boolean indicating if we should skip the bounding info check
     * @returns the picking info
-    * @see http://doc.babylonjs.com/babylon101/intersect_collisions_-_mesh
+    * @see https://doc.babylonjs.com/babylon101/intersect_collisions_-_mesh
     */
   def intersects(ray: Ray): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: Matrix
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: Matrix,
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
+    worldToUse: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
+    worldToUse: Matrix
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
+    worldToUse: Matrix,
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
   def intersects(ray: Ray, fastCheck: js.UndefOr[scala.Nothing], trianglePredicate: TrianglePickingPredicate): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: Matrix
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: Matrix,
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: Boolean,
+    worldToUse: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: Boolean,
+    worldToUse: Matrix
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: Boolean,
+    worldToUse: Matrix,
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
   def intersects(ray: Ray, fastCheck: Boolean): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: Matrix
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: Matrix,
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
+    worldToUse: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
+    worldToUse: Matrix
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
+    worldToUse: Matrix,
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
   def intersects(ray: Ray, fastCheck: Boolean, trianglePredicate: TrianglePickingPredicate): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: Matrix
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    worldToUse: Matrix,
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: Boolean,
+    worldToUse: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: Boolean,
+    worldToUse: Matrix
+  ): PickingInfo = js.native
+  def intersects(
+    ray: Ray,
+    fastCheck: Boolean,
+    trianglePredicate: TrianglePickingPredicate,
+    onlyBoundingInfo: Boolean,
+    worldToUse: Matrix,
+    skipBoundingInfo: Boolean
+  ): PickingInfo = js.native
   
   /**
     * True if the mesh intersects another mesh or a SolidParticle object
@@ -696,25 +948,25 @@ class AbstractMesh protected ()
   def isBlocked: Boolean = js.native
   
   /** Gets or sets a boolean indicating if the mesh must be considered as a ray blocker for lens flares (false by default)
-    * @see http://doc.babylonjs.com/how_to/how_to_use_lens_flares
+    * @see https://doc.babylonjs.com/how_to/how_to_use_lens_flares
     */
   var isBlocker: Boolean = js.native
   
   /**
     * gets a boolean indicating if facetData is enabled
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata#what-is-a-mesh-facet
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata#what-is-a-mesh-facet
     */
   def isFacetDataEnabled: Boolean = js.native
   
   /**
     * Gets or sets whether the mesh is occluded or not, it is used also to set the intial state of the mesh to be occluded or not
-    * @see http://doc.babylonjs.com/features/occlusionquery
+    * @see https://doc.babylonjs.com/features/occlusionquery
     */
   var isOccluded: Boolean = js.native
   
   /**
     * Flag to check the progress status of the query
-    * @see http://doc.babylonjs.com/features/occlusionquery
+    * @see https://doc.babylonjs.com/features/occlusionquery
     */
   var isOcclusionQueryInProgress: Boolean = js.native
   
@@ -730,7 +982,7 @@ class AbstractMesh protected ()
   
   /**
     * Gets or sets the current layer mask (default is 0x0FFFFFFF)
-    * @see http://doc.babylonjs.com/how_to/layermasks_and_multi-cam_textures
+    * @see https://doc.babylonjs.com/how_to/layermasks_and_multi-cam_textures
     */
   def layerMask: Double = js.native
   def layerMask_=(value: Double): Unit = js.native
@@ -755,7 +1007,7 @@ class AbstractMesh protected ()
   
   /**
     * Move the mesh using collision engine
-    * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
+    * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
     * @param displacement defines the requested displacement vector
     * @returns the current mesh
     */
@@ -765,7 +1017,7 @@ class AbstractMesh protected ()
     * Gets or sets a boolean indicating that the facets must be depth sorted on next call to `updateFacetData()`.
     * Works only for updatable meshes.
     * Doesn't work with multi-materials
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata#facet-depth-sort
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata#facet-depth-sort
     */
   def mustDepthSortFacets: Boolean = js.native
   def mustDepthSortFacets_=(sort: Boolean): Unit = js.native
@@ -778,14 +1030,14 @@ class AbstractMesh protected ()
     * This property determines the type of occlusion query algorithm to run in WebGl, you can use:
     * * AbstractMesh.OCCLUSION_ALGORITHM_TYPE_ACCURATE which is mapped to GL_ANY_SAMPLES_PASSED.
     * * AbstractMesh.OCCLUSION_ALGORITHM_TYPE_CONSERVATIVE (Default Value) which is mapped to GL_ANY_SAMPLES_PASSED_CONSERVATIVE which is a false positive algorithm that is faster than GL_ANY_SAMPLES_PASSED but less accurate.
-    * @see http://doc.babylonjs.com/features/occlusionquery
+    * @see https://doc.babylonjs.com/features/occlusionquery
     */
   var occlusionQueryAlgorithmType: Double = js.native
   
   /**
     * This number indicates the number of allowed retries before stop the occlusion query, this is useful if the occlusion query is taking long time before to the query result is retireved, the query result indicates if the object is visible within the scene or not and based on that Babylon.Js engine decideds to show or hide the object.
     * The default value is -1 which means don't break the query and wait till the result
-    * @see http://doc.babylonjs.com/features/occlusionquery
+    * @see https://doc.babylonjs.com/features/occlusionquery
     */
   var occlusionRetryCount: Double = js.native
   
@@ -794,7 +1046,7 @@ class AbstractMesh protected ()
     * * OCCLUSION_TYPE_NONE (Default Value): this option means no occlusion query whith the Mesh.
     * * OCCLUSION_TYPE_OPTIMISTIC: this option is means use occlusion query and if occlusionRetryCount is reached and the query is broken show the mesh.
     * * OCCLUSION_TYPE_STRICT: this option is means use occlusion query and if occlusionRetryCount is reached and the query is broken restore the last state of the mesh occlusion if the mesh was visible then show the mesh if was hidden then hide don't show.
-    * @see http://doc.babylonjs.com/features/occlusionquery
+    * @see https://doc.babylonjs.com/features/occlusionquery
     */
   var occlusionType: Double = js.native
   
@@ -839,27 +1091,27 @@ class AbstractMesh protected ()
   /**
     * The ratio (float) to apply to the bouding box size to set to the partioning space.
     * Ex : 1.01 (default) the partioning space is 1% bigger than the bounding box
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata#tweaking-the-partitioning
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata#tweaking-the-partitioning
     */
   def partitioningBBoxRatio: Double = js.native
   def partitioningBBoxRatio_=(ratio: Double): Unit = js.native
   
   /**
     * Gets or set the number (integer) of subdivisions per axis in the partioning space
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata#tweaking-the-partitioning
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata#tweaking-the-partitioning
     */
   def partitioningSubdivisions: Double = js.native
   def partitioningSubdivisions_=(nb: Double): Unit = js.native
   
   /**
     * Gets or sets impostor used for physic simulation
-    * @see http://doc.babylonjs.com/features/physics_engine
+    * @see https://doc.babylonjs.com/features/physics_engine
     */
   var physicsImpostor: Nullable[PhysicsImpostor] = js.native
   
   /**
     * Gets or sets a boolean indicating that this mesh can receive realtime shadows
-    * @see http://doc.babylonjs.com/babylon101/shadows
+    * @see https://doc.babylonjs.com/babylon101/shadows
     */
   def receiveShadows: Boolean = js.native
   def receiveShadows_=(value: Boolean): Unit = js.native
@@ -900,9 +1152,10 @@ class AbstractMesh protected ()
   
   /**
     * Specifies the rendering group id for this mesh (0 by default)
-    * @see http://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered#rendering-groups
+    * @see https://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered#rendering-groups
     */
-  var renderingGroupId: Double = js.native
+  def renderingGroupId: Double = js.native
+  def renderingGroupId_=(value: Double): Unit = js.native
   
   /**
     * Perform relative rotation change from the point of view of behind the front of the mesh.
@@ -971,15 +1224,27 @@ class AbstractMesh protected ()
   def skeleton: Nullable[Skeleton] = js.native
   /**
     * Gets or sets a skeleton to apply skining transformations
-    * @see http://doc.babylonjs.com/how_to/how_to_use_bones_and_skeletons
+    * @see https://doc.babylonjs.com/how_to/how_to_use_bones_and_skeletons
     */
   def skeleton_=(value: Nullable[Skeleton]): Unit = js.native
   
   /**
     * Gets or sets the list of subMeshes
-    * @see http://doc.babylonjs.com/how_to/multi_materials
+    * @see https://doc.babylonjs.com/how_to/multi_materials
     */
   var subMeshes: js.Array[SubMesh] = js.native
+  
+  /**
+    * Gets or sets current surrounding meshes (null by default).
+    *
+    * By default collision detection is tested against every mesh in the scene.
+    * It is possible to set surroundingMeshes to a defined list of meshes and then only these specified
+    * meshes will be tested for the collision.
+    *
+    * Note: if set to an empty array no collision will happen when this mesh is moved.
+    */
+  def surroundingMeshes: Nullable[js.Array[AbstractMesh]] = js.native
+  def surroundingMeshes_=(meshes: Nullable[js.Array[AbstractMesh]]): Unit = js.native
   
   def toString(fullDetails: Boolean): String = js.native
   
@@ -988,7 +1253,7 @@ class AbstractMesh protected ()
     * This method can be called within the render loop.
     * You don't need to call this method by yourself in the render loop when you update/morph a mesh with the methods CreateXXX() as they automatically manage this computation
     * @returns the current mesh
-    * @see http://doc.babylonjs.com/how_to/how_to_use_facetdata
+    * @see https://doc.babylonjs.com/how_to/how_to_use_facetdata
     */
   def updateFacetData(): AbstractMesh = js.native
   

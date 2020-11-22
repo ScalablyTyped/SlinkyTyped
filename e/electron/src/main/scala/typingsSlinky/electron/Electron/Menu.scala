@@ -28,7 +28,7 @@ trait Menu extends js.Object {
   /**
     * the item with the specified `id`
     */
-  def getMenuItemById(id: String): MenuItem = js.native
+  def getMenuItemById(id: String): MenuItem | Null = js.native
   
   /**
     * Inserts the `menuItem` to the `pos` position of the menu.
@@ -37,7 +37,7 @@ trait Menu extends js.Object {
   
   var items: js.Array[MenuItem] = js.native
   
-  // Docs: http://electronjs.org/docs/api/menu
+  // Docs: https://electronjs.org/docs/api/menu
   /**
     * Emitted when a popup is closed either manually or with `menu.closePopup()`.
     */

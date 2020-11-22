@@ -1,6 +1,7 @@
 package typingsSlinky.docxTemplates
 
 import typingsSlinky.docxTemplates.typesMod.BuiltInCommand
+import typingsSlinky.docxTemplates.typesMod.ImageExtension
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,6 +13,21 @@ object docxTemplatesStrings {
   
   @scala.inline
   def CMD_NODE: CMD_NODE = "CMD_NODE".asInstanceOf[CMD_NODE]
+  
+  @scala.inline
+  def Dotgif: Dotgif = ".gif".asInstanceOf[Dotgif]
+  
+  @scala.inline
+  def Dotjpeg: Dotjpeg = ".jpeg".asInstanceOf[Dotjpeg]
+  
+  @scala.inline
+  def Dotjpg: Dotjpg = ".jpg".asInstanceOf[Dotjpg]
+  
+  @scala.inline
+  def Dotpng: Dotpng = ".png".asInstanceOf[Dotpng]
+  
+  @scala.inline
+  def Dotsvg: Dotsvg = ".svg".asInstanceOf[Dotsvg]
   
   @scala.inline
   def `END-FOR`: `END-FOR` = "END-FOR".asInstanceOf[`END-FOR`]
@@ -60,6 +76,21 @@ object docxTemplatesStrings {
   
   @js.native
   sealed trait CMD_NODE extends BuiltInCommand
+  
+  @js.native
+  sealed trait Dotgif extends ImageExtension
+  
+  @js.native
+  sealed trait Dotjpeg extends ImageExtension
+  
+  @js.native
+  sealed trait Dotjpg extends ImageExtension
+  
+  @js.native
+  sealed trait Dotpng extends ImageExtension
+  
+  @js.native
+  sealed trait Dotsvg extends ImageExtension
   
   @js.native
   sealed trait `END-FOR` extends BuiltInCommand

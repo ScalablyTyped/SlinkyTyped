@@ -4,9 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/**
-  * Most of the options are disabled by default
-  */
 @js.native
 trait Options extends js.Object {
   

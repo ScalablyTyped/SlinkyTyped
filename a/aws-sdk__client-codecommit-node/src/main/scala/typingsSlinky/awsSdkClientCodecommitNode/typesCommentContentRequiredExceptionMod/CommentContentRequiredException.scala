@@ -4,33 +4,27 @@ import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExce
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentReplyExceptionsUnionMod.PostCommentReplyExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updateCommentExceptionsUnionMod.UpdateCommentExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_CommentContentRequiredExceptionDetails> * / any */ @js.native
 trait CommentContentRequiredException
-  extends ServiceException[CommentContentRequiredExceptionDetails]
-     with PostCommentForComparedCommitExceptionsUnion
+  extends PostCommentForComparedCommitExceptionsUnion
      with PostCommentForPullRequestExceptionsUnion
      with PostCommentReplyExceptionsUnion
      with UpdateCommentExceptionsUnion {
   
-  @JSName("name")
-  var name_CommentContentRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommentContentRequiredException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommentContentRequiredException = js.native
 }
 object CommentContentRequiredException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: CommentContentRequiredExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommentContentRequiredException
   ): CommentContentRequiredException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommentContentRequiredException]
   }
   

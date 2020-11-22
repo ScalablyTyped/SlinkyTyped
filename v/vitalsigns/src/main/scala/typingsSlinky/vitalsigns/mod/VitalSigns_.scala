@@ -36,7 +36,7 @@ trait VitalSigns_ extends js.Object {
     * Gets a request handler.
     * @type {RequestHandler}
     */
-  def express(req: Request[ParamsDictionary, _, _, Query], res: Response[_], next: NextFunction): js.Any = js.native
+  def express(req: Request[ParamsDictionary, _, _, Query], res: Response[_, Double], next: NextFunction): js.Any = js.native
   /**
     * Gets a request handler.
     * @type {RequestHandler}

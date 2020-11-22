@@ -32,12 +32,12 @@ trait InvokeDefinition[TContext, TEvent /* <: EventObject */] extends ActivityDe
   /**
     * The source of the machine to be invoked, or the machine itself.
     */
-  var src: String = js.native
+  var src: String | InvokeSourceDefinition = js.native
 }
 object InvokeDefinition {
   
   @scala.inline
-  def apply[TContext, TEvent /* <: EventObject */](id: String, src: String, `type`: String): InvokeDefinition[TContext, TEvent] = {
+  def apply[TContext, TEvent /* <: EventObject */](id: String, src: String | InvokeSourceDefinition, `type`: String): InvokeDefinition[TContext, TEvent] = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvokeDefinition[TContext, TEvent]]
@@ -59,7 +59,7 @@ object InvokeDefinition {
     }
     
     @scala.inline
-    def setSrc(value: String): Self = this.set("src", value.asInstanceOf[js.Any])
+    def setSrc(value: String | InvokeSourceDefinition): Self = this.set("src", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAutoForward(value: Boolean): Self = this.set("autoForward", value.asInstanceOf[js.Any])

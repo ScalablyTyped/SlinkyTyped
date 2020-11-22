@@ -1,7 +1,7 @@
 
 # Scala.js typings for p-locate
 
-Typings are for version 4.1.0
+Typings are for version 5.0.0
 
 ## Library description:
 Get the first fulfilled promise that satisfies the provided testing function

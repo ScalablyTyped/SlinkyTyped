@@ -24,8 +24,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdChip.chipMod.ChipProps
+import typingsSlinky.reactMdChip.reactMdChipStrings.`additions removals`
 import typingsSlinky.reactMdChip.reactMdChipStrings.`additions text`
 import typingsSlinky.reactMdChip.reactMdChipStrings.`inline`
+import typingsSlinky.reactMdChip.reactMdChipStrings.`removals additions`
+import typingsSlinky.reactMdChip.reactMdChipStrings.`removals text`
+import typingsSlinky.reactMdChip.reactMdChipStrings.`text additions`
+import typingsSlinky.reactMdChip.reactMdChipStrings.`text removals`
 import typingsSlinky.reactMdChip.reactMdChipStrings.additions
 import typingsSlinky.reactMdChip.reactMdChipStrings.all
 import typingsSlinky.reactMdChip.reactMdChipStrings.ascending
@@ -198,7 +203,9 @@ object Chip {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

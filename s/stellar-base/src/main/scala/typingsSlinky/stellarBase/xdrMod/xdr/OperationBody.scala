@@ -14,14 +14,23 @@ trait OperationBody extends js.Object {
   def allowTrustOp(): AllowTrustOp = js.native
   def allowTrustOp(value: AllowTrustOp): AllowTrustOp = js.native
   
+  def beginSponsoringFutureReservesOp(): BeginSponsoringFutureReservesOp = js.native
+  def beginSponsoringFutureReservesOp(value: BeginSponsoringFutureReservesOp): BeginSponsoringFutureReservesOp = js.native
+  
   def bumpSequenceOp(): BumpSequenceOp = js.native
   def bumpSequenceOp(value: BumpSequenceOp): BumpSequenceOp = js.native
   
   def changeTrustOp(): ChangeTrustOp = js.native
   def changeTrustOp(value: ChangeTrustOp): ChangeTrustOp = js.native
   
+  def claimClaimableBalanceOp(): ClaimClaimableBalanceOp = js.native
+  def claimClaimableBalanceOp(value: ClaimClaimableBalanceOp): ClaimClaimableBalanceOp = js.native
+  
   def createAccountOp(): CreateAccountOp = js.native
   def createAccountOp(value: CreateAccountOp): CreateAccountOp = js.native
+  
+  def createClaimableBalanceOp(): CreateClaimableBalanceOp = js.native
+  def createClaimableBalanceOp(value: CreateClaimableBalanceOp): CreateClaimableBalanceOp = js.native
   
   def createPassiveSellOfferOp(): CreatePassiveSellOfferOp = js.native
   def createPassiveSellOfferOp(value: CreatePassiveSellOfferOp): CreatePassiveSellOfferOp = js.native
@@ -47,6 +56,9 @@ trait OperationBody extends js.Object {
   def paymentOp(): PaymentOp = js.native
   def paymentOp(value: PaymentOp): PaymentOp = js.native
   
+  def revokeSponsorshipOp(): RevokeSponsorshipOp = js.native
+  def revokeSponsorshipOp(value: RevokeSponsorshipOp): RevokeSponsorshipOp = js.native
+  
   def setOptionsOp(): SetOptionsOp = js.native
   def setOptionsOp(value: SetOptionsOp): SetOptionsOp = js.native
   
@@ -60,5 +72,5 @@ trait OperationBody extends js.Object {
   @JSName("toXDR")
   def toXDR_raw(format: raw): Buffer = js.native
   
-  def value(): CreateAccountOp | PaymentOp | PathPaymentStrictReceiveOp | ManageSellOfferOp | CreatePassiveSellOfferOp | SetOptionsOp | ChangeTrustOp | AllowTrustOp | MuxedAccount | ManageDataOp | BumpSequenceOp | ManageBuyOfferOp | PathPaymentStrictSendOp | Unit = js.native
+  def value(): CreateAccountOp | PaymentOp | PathPaymentStrictReceiveOp | ManageSellOfferOp | CreatePassiveSellOfferOp | SetOptionsOp | ChangeTrustOp | AllowTrustOp | MuxedAccount | ManageDataOp | BumpSequenceOp | ManageBuyOfferOp | PathPaymentStrictSendOp | CreateClaimableBalanceOp | ClaimClaimableBalanceOp | BeginSponsoringFutureReservesOp | RevokeSponsorshipOp | Unit = js.native
 }

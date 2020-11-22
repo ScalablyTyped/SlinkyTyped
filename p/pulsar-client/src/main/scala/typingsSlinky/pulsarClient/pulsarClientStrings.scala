@@ -26,6 +26,9 @@ object pulsarClientStrings {
   def JavaStringHash: JavaStringHash = "JavaStringHash".asInstanceOf[JavaStringHash]
   
   @scala.inline
+  def KeyShared: KeyShared = "KeyShared".asInstanceOf[KeyShared]
+  
+  @scala.inline
   def LZ4: LZ4 = "LZ4".asInstanceOf[LZ4]
   
   @scala.inline
@@ -57,6 +60,9 @@ object pulsarClientStrings {
   
   @js.native
   sealed trait JavaStringHash extends HashingScheme
+  
+  @js.native
+  sealed trait KeyShared extends SubscriptionType
   
   @js.native
   sealed trait LZ4 extends CompressionType

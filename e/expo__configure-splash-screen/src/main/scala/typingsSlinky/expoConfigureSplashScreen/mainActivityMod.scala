@@ -1,6 +1,6 @@
 package typingsSlinky.expoConfigureSplashScreen
 
-import typingsSlinky.expoConfigureSplashScreen.constantsMod.ResizeMode
+import typingsSlinky.expoConfigureSplashScreen.anon.ImageResizeModeStatusBar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mainActivityMod extends js.Object {
   
-  def default(projectRootPath: String, resizeMode: ResizeMode): js.Promise[Unit] = js.native
-  def default(projectRootPath: String, resizeMode: ResizeMode, statusBarTranslucent: Boolean): js.Promise[Unit] = js.native
+  def default(projectRootPath: String): js.Promise[Unit] = js.native
+  def default(projectRootPath: String, config: ImageResizeModeStatusBar): js.Promise[Unit] = js.native
 }

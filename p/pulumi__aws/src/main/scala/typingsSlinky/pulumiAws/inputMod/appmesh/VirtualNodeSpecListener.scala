@@ -17,6 +17,16 @@ trait VirtualNodeSpecListener extends js.Object {
     * The port mapping information for the listener.
     */
   var portMapping: Input[VirtualNodeSpecListenerPortMapping] = js.native
+  
+  /**
+    * Timeouts for different protocols.
+    */
+  var timeout: js.UndefOr[Input[VirtualNodeSpecListenerTimeout]] = js.native
+  
+  /**
+    * The Transport Layer Security (TLS) properties for the listener
+    */
+  var tls: js.UndefOr[Input[VirtualNodeSpecListenerTls]] = js.native
 }
 object VirtualNodeSpecListener {
   
@@ -49,5 +59,17 @@ object VirtualNodeSpecListener {
     
     @scala.inline
     def deleteHealthCheck: Self = this.set("healthCheck", js.undefined)
+    
+    @scala.inline
+    def setTimeout(value: Input[VirtualNodeSpecListenerTimeout]): Self = this.set("timeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimeout: Self = this.set("timeout", js.undefined)
+    
+    @scala.inline
+    def setTls(value: Input[VirtualNodeSpecListenerTls]): Self = this.set("tls", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTls: Self = this.set("tls", js.undefined)
   }
 }

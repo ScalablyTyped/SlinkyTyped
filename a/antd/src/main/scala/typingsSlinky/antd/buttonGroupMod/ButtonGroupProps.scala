@@ -1,6 +1,6 @@
 package typingsSlinky.antd.buttonGroupMod
 
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`

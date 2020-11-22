@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/credential-provider-imds/build/remoteProvider", JSImport.Namespace)
+@JSImport("@aws-sdk/credential-provider-imds/dist/cjs/remoteProvider", JSImport.Namespace)
 @js.native
 object remoteProviderMod extends js.Object {
   
@@ -18,7 +18,7 @@ object remoteProviderMod extends js.Object {
   
   def fromImdsCredentials(creds: ImdsCredentials): Credentials = js.native
   
-  def isImdsCredentials(arg: js.Any): /* is @aws-sdk/credential-provider-imds.@aws-sdk/credential-provider-imds/build/remoteProvider/ImdsCredentials.ImdsCredentials */ Boolean = js.native
+  def isImdsCredentials(arg: js.Any): /* is @aws-sdk/credential-provider-imds.@aws-sdk/credential-provider-imds/dist/cjs/remoteProvider/ImdsCredentials.ImdsCredentials */ Boolean = js.native
   
-  def providerConfigFromInit(init: RemoteProviderInit): RemoteProviderConfig = js.native
+  def providerConfigFromInit(hasMaxRetriesTimeout: RemoteProviderInit): RemoteProviderConfig = js.native
 }

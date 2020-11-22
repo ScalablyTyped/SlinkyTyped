@@ -7,15 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ManagerProvider
-  extends Component[Props, State, js.Any] {
+  extends Component[ManagerProviderProps, State, js.Any] {
   
   var api: API = js.native
   
-  @JSName("componentDidMount")
-  def componentDidMount_MManagerProvider(): Unit = js.native
+  def initModules(): Unit = js.native
   
-  var modules: js.Array[_] = js.native
+  var modules: js.Array[Module] = js.native
   
   @JSName("shouldComponentUpdate")
-  def shouldComponentUpdate_MManagerProvider(nextProps: Props, nextState: State): Boolean = js.native
+  def shouldComponentUpdate_MManagerProvider(nextProps: ManagerProviderProps, nextState: State): Boolean = js.native
 }

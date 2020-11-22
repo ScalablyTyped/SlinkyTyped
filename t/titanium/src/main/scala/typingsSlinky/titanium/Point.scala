@@ -13,12 +13,12 @@ trait Point extends js.Object {
   /**
     * The x-axis coordinate of this point.
     */
-  var x: js.UndefOr[Double | java.lang.String] = js.native
+  var x: js.UndefOr[Double | String] = js.native
   
   /**
     * The y-axis coordinate of this point.
     */
-  var y: js.UndefOr[Double | java.lang.String] = js.native
+  var y: js.UndefOr[Double | String] = js.native
 }
 object Point {
   
@@ -38,19 +38,19 @@ object Point {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setX(value: Double | java.lang.String): Self = this.set("x", value.asInstanceOf[js.Any])
+    def setX(value: Double | String): Self = this.set("x", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteX: Self = this.set("x", js.undefined)
     
     @scala.inline
-    def setY(value: Double | java.lang.String): Self = this.set("y", value.asInstanceOf[js.Any])
+    def setY(value: Double | String): Self = this.set("y", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteY: Self = this.set("y", js.undefined)

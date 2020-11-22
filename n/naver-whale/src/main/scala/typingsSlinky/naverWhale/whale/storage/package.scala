@@ -9,7 +9,7 @@ package object storage {
   type StorageChangedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* changes */ org.scalablytyped.runtime.StringDictionary[typingsSlinky.chrome.chrome.storage.StorageChange], 
-      /* areaName */ java.lang.String, 
+      /* areaName */ typingsSlinky.chrome.chrome.storage.AreaName, 
       scala.Unit
     ]
   ]

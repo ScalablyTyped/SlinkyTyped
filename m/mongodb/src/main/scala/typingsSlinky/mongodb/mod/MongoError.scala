@@ -12,7 +12,7 @@ class MongoError protected () extends Error {
   def this(message: js.Object) = this()
   def this(message: js.Error) = this()
   
-  var code: js.UndefOr[scala.Double] = js.native
+  var code: js.UndefOr[scala.Double | String] = js.native
   
   /**
     * While not documented, the 'errmsg' prop is AFAIK the only way to find out

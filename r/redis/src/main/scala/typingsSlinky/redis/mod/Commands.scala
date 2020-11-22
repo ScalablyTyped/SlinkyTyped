@@ -1513,10 +1513,10 @@ trait Commands[R] extends js.Object {
   def HEXISTS(key: String, field: String, cb: Callback[Double]): R = js.native
   
   def HGET(key: String, field: String): R = js.native
-  def HGET(key: String, field: String, cb: Callback[String | Null]): R = js.native
+  def HGET(key: String, field: String, cb: Callback[String]): R = js.native
   
   def HGETALL(key: String): R = js.native
-  def HGETALL(key: String, cb: Callback[StringDictionary[String] | Null]): R = js.native
+  def HGETALL(key: String, cb: Callback[StringDictionary[String]]): R = js.native
   
   def HINCRBY(key: String, field: String, increment: Double): R = js.native
   def HINCRBY(key: String, field: String, increment: Double, cb: Callback[Double]): R = js.native
@@ -1573,6 +1573,7 @@ trait Commands[R] extends js.Object {
   @JSName("HMGET")
   var HMGET_Original: OverloadedKeyCommand[String, js.Array[String], R] = js.native
   
+  def HMSET(args: Array[String | Double]): R = js.native
   def HMSET(key: String, arg1: String | Double): R = js.native
   def HMSET(key: String, arg1: String, arg2: String): R = js.native
   def HMSET(key: String, arg1: String, arg2: String, arg3: String): R = js.native
@@ -1604,6 +1605,8 @@ trait Commands[R] extends js.Object {
   def HMSET(key: String, arg1: Double, arg2: Double, arg3: Double): R = js.native
   def HMSET(key: String, arg1: Double, arg2: Double, arg3: Double, arg4: String): R = js.native
   def HMSET(key: String, arg1: Double, arg2: Double, arg3: Double, arg4: Double): R = js.native
+  @JSName("HMSET")
+  def HMSET_OK(args: Array[String | Double], cb: Callback[OK]): R = js.native
   @JSName("HMSET")
   def HMSET_OK(
     key: String,
@@ -1741,6 +1744,8 @@ trait Commands[R] extends js.Object {
   @JSName("HSCAN")
   var HSCAN_Original: OverloadedKeyCommand[String, js.Tuple2[String, js.Array[String]], R] = js.native
   
+  def HSET(args: Array[String]): R = js.native
+  def HSET(args: Array[String], cb: Callback[Double]): R = js.native
   def HSET(key: String, arg1: String): R = js.native
   def HSET(key: String, arg1: String, arg2: String): R = js.native
   def HSET(key: String, arg1: String, arg2: String, arg3: String): R = js.native
@@ -2497,6 +2502,7 @@ trait Commands[R] extends js.Object {
   
   def SET(key: String, value: String): R = js.native
   def SET(key: String, value: String, flag: String): R = js.native
+  def SET(key: String, value: String, flag: String, mode: String, duration: Double): R = js.native
   def SET(key: String, value: String, mode: String, duration: Double): R = js.native
   def SET(key: String, value: String, mode: String, duration: Double, flag: String): R = js.native
   
@@ -2516,6 +2522,15 @@ trait Commands[R] extends js.Object {
   def SET_OK(key: String, value: String, cb: Callback[OK]): R = js.native
   @JSName("SET")
   def SET_OK(key: String, value: String, flag: String, cb: Callback[OK]): R = js.native
+  @JSName("SET")
+  def SET_OK(
+    key: String,
+    value: String,
+    flag: String,
+    mode: String,
+    duration: Double,
+    cb: Callback[js.UndefOr[OK]]
+  ): R = js.native
   @JSName("SET")
   def SET_OK(key: String, value: String, mode: String, duration: Double, cb: Callback[js.UndefOr[OK]]): R = js.native
   @JSName("SET")
@@ -5989,13 +6004,13 @@ trait Commands[R] extends js.Object {
     * Get the value of a hash field.
     */
   def hget(key: String, field: String): R = js.native
-  def hget(key: String, field: String, cb: Callback[String | Null]): R = js.native
+  def hget(key: String, field: String, cb: Callback[String]): R = js.native
   
   /**
     * Get all fields and values in a hash.
     */
   def hgetall(key: String): R = js.native
-  def hgetall(key: String, cb: Callback[StringDictionary[String] | Null]): R = js.native
+  def hgetall(key: String, cb: Callback[StringDictionary[String]]): R = js.native
   
   /**
     * Increment the integer value of a hash field by the given number.
@@ -6094,6 +6109,10 @@ trait Commands[R] extends js.Object {
   /**
     * Set multiple hash fields to multiple values.
     */
+  def hmset(args: Array[String | Double]): R = js.native
+  /**
+    * Set multiple hash fields to multiple values.
+    */
   def hmset(key: String, arg1: String | Double): R = js.native
   /**
     * Set multiple hash fields to multiple values.
@@ -6134,6 +6153,8 @@ trait Commands[R] extends js.Object {
   def hmset(key: String, arg1: Double, arg2: Double, arg3: Double): R = js.native
   def hmset(key: String, arg1: Double, arg2: Double, arg3: Double, arg4: String): R = js.native
   def hmset(key: String, arg1: Double, arg2: Double, arg3: Double, arg4: Double): R = js.native
+  @JSName("hmset")
+  def hmset_OK(args: Array[String | Double], cb: Callback[OK]): R = js.native
   /**
     * Set multiple hash fields to multiple values.
     */
@@ -6310,6 +6331,11 @@ trait Commands[R] extends js.Object {
   @JSName("hscan")
   var hscan_Original: OverloadedKeyCommand[String, js.Tuple2[String, js.Array[String]], R] = js.native
   
+  /**
+    * Set the string value of a hash field.
+    */
+  def hset(args: Array[String]): R = js.native
+  def hset(args: Array[String], cb: Callback[Double]): R = js.native
   /**
     * Set the string value of a hash field.
     */
@@ -7689,12 +7715,22 @@ trait Commands[R] extends js.Object {
     */
   def set(key: String, value: String): R = js.native
   def set(key: String, value: String, flag: String): R = js.native
+  def set(key: String, value: String, flag: String, mode: String, duration: Double): R = js.native
   def set(key: String, value: String, mode: String, duration: Double): R = js.native
   def set(key: String, value: String, mode: String, duration: Double, flag: String): R = js.native
   @JSName("set")
   def set_OK(key: String, value: String, cb: Callback[OK]): R = js.native
   @JSName("set")
   def set_OK(key: String, value: String, flag: String, cb: Callback[OK]): R = js.native
+  @JSName("set")
+  def set_OK(
+    key: String,
+    value: String,
+    flag: String,
+    mode: String,
+    duration: Double,
+    cb: Callback[js.UndefOr[OK]]
+  ): R = js.native
   @JSName("set")
   def set_OK(key: String, value: String, mode: String, duration: Double, cb: Callback[js.UndefOr[OK]]): R = js.native
   @JSName("set")

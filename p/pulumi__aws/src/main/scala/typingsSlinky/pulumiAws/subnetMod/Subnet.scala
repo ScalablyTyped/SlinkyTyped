@@ -54,7 +54,7 @@ class Subnet protected () extends CustomResource {
     * The IPv6 network range for the subnet,
     * in CIDR notation. The subnet size must use a /64 prefix length.
     */
-  val ipv6CidrBlock: Output_[String] = js.native
+  val ipv6CidrBlock: Output_[js.UndefOr[String]] = js.native
   
   /**
     * The association ID for the IPv6 CIDR block.

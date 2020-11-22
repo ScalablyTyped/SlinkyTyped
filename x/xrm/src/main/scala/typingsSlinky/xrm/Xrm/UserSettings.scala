@@ -14,7 +14,7 @@ trait UserSettings extends js.Object {
   /**
     * Returns the date formatting information for the current user.
     */
-  def dateFormattingInfo(): DateFormattingInfo = js.native
+  var dateFormattingInfo: DateFormattingInfo = js.native
   
   /**
     * Returns the ID of the default dashboard for the current user.
@@ -88,7 +88,7 @@ object UserSettings {
   
   @scala.inline
   def apply(
-    dateFormattingInfo: () => DateFormattingInfo,
+    dateFormattingInfo: DateFormattingInfo,
     defaultDashboardId: String,
     getTimeZoneOffsetMinutes: () => Double,
     isGuidedHelpEnabled: Boolean,
@@ -103,7 +103,7 @@ object UserSettings {
     userId: String,
     userName: String
   ): UserSettings = {
-    val __obj = js.Dynamic.literal(dateFormattingInfo = js.Any.fromFunction0(dateFormattingInfo), defaultDashboardId = defaultDashboardId.asInstanceOf[js.Any], getTimeZoneOffsetMinutes = js.Any.fromFunction0(getTimeZoneOffsetMinutes), isGuidedHelpEnabled = isGuidedHelpEnabled.asInstanceOf[js.Any], isHighContrastEnabled = isHighContrastEnabled.asInstanceOf[js.Any], isRTL = isRTL.asInstanceOf[js.Any], languageId = languageId.asInstanceOf[js.Any], roles = roles.asInstanceOf[js.Any], securityRolePrivileges = securityRolePrivileges.asInstanceOf[js.Any], securityRoles = securityRoles.asInstanceOf[js.Any], transactionCurrency = transactionCurrency.asInstanceOf[js.Any], transactionCurrencyId = transactionCurrencyId.asInstanceOf[js.Any], userId = userId.asInstanceOf[js.Any], userName = userName.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(dateFormattingInfo = dateFormattingInfo.asInstanceOf[js.Any], defaultDashboardId = defaultDashboardId.asInstanceOf[js.Any], getTimeZoneOffsetMinutes = js.Any.fromFunction0(getTimeZoneOffsetMinutes), isGuidedHelpEnabled = isGuidedHelpEnabled.asInstanceOf[js.Any], isHighContrastEnabled = isHighContrastEnabled.asInstanceOf[js.Any], isRTL = isRTL.asInstanceOf[js.Any], languageId = languageId.asInstanceOf[js.Any], roles = roles.asInstanceOf[js.Any], securityRolePrivileges = securityRolePrivileges.asInstanceOf[js.Any], securityRoles = securityRoles.asInstanceOf[js.Any], transactionCurrency = transactionCurrency.asInstanceOf[js.Any], transactionCurrencyId = transactionCurrencyId.asInstanceOf[js.Any], userId = userId.asInstanceOf[js.Any], userName = userName.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserSettings]
   }
   
@@ -123,7 +123,7 @@ object UserSettings {
     }
     
     @scala.inline
-    def setDateFormattingInfo(value: () => DateFormattingInfo): Self = this.set("dateFormattingInfo", js.Any.fromFunction0(value))
+    def setDateFormattingInfo(value: DateFormattingInfo): Self = this.set("dateFormattingInfo", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDefaultDashboardId(value: String): Self = this.set("defaultDashboardId", value.asInstanceOf[js.Any])

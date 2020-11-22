@@ -14,9 +14,10 @@ class Customer () extends js.Object {
   var address: js.UndefOr[Address] = js.native
   
   /**
-    * The birthday associated with the customer profile, in RFC-3339 format. Year is optional, timezone and times are not allowed.
-    * For example: `0000-09-01T00:00:00-00:00` indicates a birthday on September 1st. `1998-09-01T00:00:00-00:00`
-    * indications a birthday on September 1st 1998.
+    * The birthday associated with the customer profile, in RFC 3339 format. Year is optional, timezone and times are not allowed.
+    * For example:
+    *  * `0000-09-01T00:00:00-00:00` indicates a birthday on September 1st.
+    *  * `1998-09-01T00:00:00-00:00` indications a birthday on September 1st __1998__.
     */
   var birthday: js.UndefOr[String] = js.native
   
@@ -31,9 +32,9 @@ class Customer () extends js.Object {
   var company_name: js.UndefOr[String] = js.native
   
   /**
-    * The time when the customer profile was created, in RFC 3339 format.
+    * The timestamp when the customer profile was created, in RFC 3339 format.
     */
-  var created_at: String = js.native
+  var created_at: js.UndefOr[String] = js.native
   
   /**
     * A creation source represents the method used to create the customer profile.
@@ -57,14 +58,22 @@ class Customer () extends js.Object {
   var given_name: js.UndefOr[String] = js.native
   
   /**
-    * The groups the customer belongs to.
+    * The IDs of customer groups the customer belongs to.
+    */
+  var group_ids: js.UndefOr[js.Array[String]] = js.native
+  
+  /**
+    * The customer groups and segments the customer belongs to.
+    * This deprecated field has been replaced with the dedicated `group_ids` for customer groups and the dedicated
+    * `segment_ids` field for customer segments. You can retrieve information about a given customer group and segment
+    * respectively using the Customer Groups API and Customer Segments API.
     */
   var groups: js.UndefOr[js.Array[CustomerGroupInfo]] = js.native
   
   /**
-    * A unique, Square-assigned object ID.
+    * A unique Square-assigned ID for the customer profile.
     */
-  var id: String = js.native
+  var id: js.UndefOr[String] = js.native
   
   /**
     * A nickname for the customer profile.
@@ -92,7 +101,12 @@ class Customer () extends js.Object {
   var reference_id: js.UndefOr[String] = js.native
   
   /**
-    * The time when the customer profile was last updated, in RFC 3339 format.
+    * The IDs of segments the customer belongs to.
     */
-  var updated_at: String = js.native
+  var segment_ids: js.UndefOr[js.Array[String]] = js.native
+  
+  /**
+    * The timestamp when the customer profile was last updated, in RFC 3339 format.
+    */
+  var updated_at: js.UndefOr[String] = js.native
 }

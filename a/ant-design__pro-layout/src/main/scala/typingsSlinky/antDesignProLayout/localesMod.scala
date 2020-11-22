@@ -1,10 +1,6 @@
 package typingsSlinky.antDesignProLayout
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`en-US`
-import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`it-IT`
-import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`zh-CN`
-import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`zh-TW`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,14 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object localesMod extends js.Object {
   
   def default(): StringDictionary[String] = js.native
-  @JSName("default")
-  def default_enUS(locale: `en-US`): StringDictionary[String] = js.native
-  @JSName("default")
-  def default_itIT(locale: `it-IT`): StringDictionary[String] = js.native
-  @JSName("default")
-  def default_zhCN(locale: `zh-CN`): StringDictionary[String] = js.native
-  @JSName("default")
-  def default_zhTW(locale: `zh-TW`): StringDictionary[String] = js.native
   
   def getLanguage(): String = js.native
   

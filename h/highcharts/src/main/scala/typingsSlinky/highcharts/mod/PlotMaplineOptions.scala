@@ -40,6 +40,8 @@ trait PlotMaplineOptions extends js.Object {
     * animation parameter under the API methods. The following properties are
     * supported:
     *
+    * - `defer`: The animation delay time in milliseconds.
+    *
     * - `duration`: The duration of the animation in milliseconds.
     *
     * - `easing`: Can be a string reference to an easing function set on the
@@ -48,7 +50,7 @@ trait PlotMaplineOptions extends js.Object {
     * Due to poor performance, animation is disabled in old IE browsers for
     * several chart types.
     */
-  var animation: js.UndefOr[Boolean] = js.native
+  var animation: js.UndefOr[Boolean | PlotMaplineAnimationOptions] = js.native
   
   /**
     * (Highmaps) For some series, there is a limit that shuts down initial
@@ -87,7 +89,7 @@ trait PlotMaplineOptions extends js.Object {
     * In styled mode, the border stroke is given in the `.highcharts-point`
     * class.
     */
-  var borderColor: js.UndefOr[String] = js.native
+  var borderColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
   
   /**
     * (Highmaps) The border width of each map area.
@@ -208,18 +210,6 @@ trait PlotMaplineOptions extends js.Object {
     * column is rendered blurry.
     */
   var crisp: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * (Highcharts, Highstock) When the series contains less points than the
-    * crop threshold, all points are drawn, even if the points fall outside the
-    * visible plot area at the current zoom. The advantage of drawing all
-    * points (including markers and columns), is that animation is performed on
-    * updates. On the other hand, when the series contains more points than the
-    * crop threshold, the series data is cropped to only contain points that
-    * fall within the plot area. The advantage of cropping away invisible
-    * points is to increase performance on large series.
-    */
-  var cropThreshold: js.UndefOr[Double] = js.native
   
   /**
     * (Highmaps) You can set the cursor to "pointer" if you have click events
@@ -406,7 +396,7 @@ trait PlotMaplineOptions extends js.Object {
     * points and have a backend that can preprocess the data into a parallel
     * array of the mapData.
     */
-  var joinBy: js.UndefOr[String] = js.native
+  var joinBy: js.UndefOr[String | js.Array[String]] = js.native
   
   /**
     * (Highmaps) An array specifying which option maps to which key in the data
@@ -731,7 +721,7 @@ object PlotMaplineOptions {
     def deleteAllowPointSelect: Self = this.set("allowPointSelect", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PlotMaplineAnimationOptions): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)
@@ -755,7 +745,7 @@ object PlotMaplineOptions {
     def deleteBoostThreshold: Self = this.set("boostThreshold", js.undefined)
     
     @scala.inline
-    def setBorderColor(value: String): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    def setBorderColor(value: ColorString | GradientColorObject | PatternObject): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBorderColor: Self = this.set("borderColor", js.undefined)
@@ -843,12 +833,6 @@ object PlotMaplineOptions {
     
     @scala.inline
     def deleteCrisp: Self = this.set("crisp", js.undefined)
-    
-    @scala.inline
-    def setCropThreshold(value: Double): Self = this.set("cropThreshold", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCropThreshold: Self = this.set("cropThreshold", js.undefined)
     
     @scala.inline
     def setCursor(value: String | CursorValue): Self = this.set("cursor", value.asInstanceOf[js.Any])
@@ -956,7 +940,10 @@ object PlotMaplineOptions {
     def deleteJitter: Self = this.set("jitter", js.undefined)
     
     @scala.inline
-    def setJoinBy(value: String): Self = this.set("joinBy", value.asInstanceOf[js.Any])
+    def setJoinByVarargs(value: String*): Self = this.set("joinBy", js.Array(value :_*))
+    
+    @scala.inline
+    def setJoinBy(value: String | js.Array[String]): Self = this.set("joinBy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteJoinBy: Self = this.set("joinBy", js.undefined)

@@ -1,7 +1,7 @@
 package typingsSlinky.rollupPluginutils.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.estreeWalker.mod.Node
+import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

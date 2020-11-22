@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.JSXEmptyExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.ImportAttribute
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `120` extends js.Object {
   
-  var `type`: JSXEmptyExpression = js.native
+  var `type`: ImportAttribute = js.native
 }
 object `120` {
   
   @scala.inline
-  def apply(`type`: JSXEmptyExpression): `120` = {
+  def apply(`type`: ImportAttribute): `120` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`120`]
@@ -35,6 +35,6 @@ object `120` {
     }
     
     @scala.inline
-    def setType(value: JSXEmptyExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ImportAttribute): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

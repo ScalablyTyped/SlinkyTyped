@@ -1,6 +1,6 @@
 package typingsSlinky.octokitPluginPaginateRest.anon
 
-import typingsSlinky.octokitTypes.anon.Archivedownloadurl
+import typingsSlinky.octokitTypes.anon.Createdat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `4` extends js.Object {
   
-  var data: js.Array[Archivedownloadurl] = js.native
+  var data: js.Array[Createdat] = js.native
 }
 object `4` {
   
   @scala.inline
-  def apply(data: js.Array[Archivedownloadurl]): `4` = {
+  def apply(data: js.Array[Createdat]): `4` = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[`4`]
   }
@@ -34,9 +34,9 @@ object `4` {
     }
     
     @scala.inline
-    def setDataVarargs(value: Archivedownloadurl*): Self = this.set("data", js.Array(value :_*))
+    def setDataVarargs(value: Createdat*): Self = this.set("data", js.Array(value :_*))
     
     @scala.inline
-    def setData(value: js.Array[Archivedownloadurl]): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: js.Array[Createdat]): Self = this.set("data", value.asInstanceOf[js.Any])
   }
 }

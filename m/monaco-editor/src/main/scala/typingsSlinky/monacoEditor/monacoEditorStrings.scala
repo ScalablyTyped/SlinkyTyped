@@ -55,6 +55,9 @@ object monacoEditorStrings {
   def brackets: brackets = "brackets".asInstanceOf[brackets]
   
   @scala.inline
+  def configuredByTheme: configuredByTheme = "configuredByTheme".asInstanceOf[configuredByTheme]
+  
+  @scala.inline
   def copy: copy = "copy".asInstanceOf[copy]
   
   @scala.inline
@@ -82,7 +85,13 @@ object monacoEditorStrings {
   def expand: expand = "expand".asInstanceOf[expand]
   
   @scala.inline
+  def fill: fill = "fill".asInstanceOf[fill]
+  
+  @scala.inline
   def first: first = "first".asInstanceOf[first]
+  
+  @scala.inline
+  def fit: fit = "fit".asInstanceOf[fit]
   
   @scala.inline
   def force: force = "force".asInstanceOf[force]
@@ -178,6 +187,12 @@ object monacoEditorStrings {
   def phase: phase = "phase".asInstanceOf[phase]
   
   @scala.inline
+  def prompt: prompt = "prompt".asInstanceOf[prompt]
+  
+  @scala.inline
+  def proportional: proportional = "proportional".asInstanceOf[proportional]
+  
+  @scala.inline
   def quotes: quotes = "quotes".asInstanceOf[quotes]
   
   @scala.inline
@@ -221,6 +236,9 @@ object monacoEditorStrings {
   
   @scala.inline
   def top: top = "top".asInstanceOf[top]
+  
+  @scala.inline
+  def trailing: trailing = "trailing".asInstanceOf[trailing]
   
   @scala.inline
   def tree: tree = "tree".asInstanceOf[tree]
@@ -291,6 +309,9 @@ object monacoEditorStrings {
   sealed trait brackets extends EditorAutoSurroundStrategy
   
   @js.native
+  sealed trait configuredByTheme extends js.Object
+  
+  @js.native
   sealed trait copy extends js.Object
   
   @js.native
@@ -318,7 +339,13 @@ object monacoEditorStrings {
   sealed trait expand extends js.Object
   
   @js.native
+  sealed trait fill extends js.Object
+  
+  @js.native
   sealed trait first extends js.Object
+  
+  @js.native
+  sealed trait fit extends js.Object
   
   @js.native
   sealed trait force extends js.Object
@@ -419,6 +446,12 @@ object monacoEditorStrings {
   sealed trait phase extends js.Object
   
   @js.native
+  sealed trait prompt extends js.Object
+  
+  @js.native
+  sealed trait proportional extends js.Object
+  
+  @js.native
   sealed trait quotes extends EditorAutoSurroundStrategy
   
   @js.native
@@ -462,6 +495,9 @@ object monacoEditorStrings {
   
   @js.native
   sealed trait top extends js.Object
+  
+  @js.native
+  sealed trait trailing extends js.Object
   
   @js.native
   sealed trait tree extends js.Object

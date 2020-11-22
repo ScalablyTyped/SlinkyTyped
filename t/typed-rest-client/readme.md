@@ -1,7 +1,7 @@
 
 # Scala.js typings for typed-rest-client
 
-Typings are for version 1.7.3
+Typings are for version 1.8.0
 
 ## Library description:
 Node Rest and Http Clients for use with TypeScript

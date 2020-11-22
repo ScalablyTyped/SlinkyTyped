@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SectionRowProps extends js.Object {
   
-  var section: String = js.native
+  var colSpan: Double = js.native
+  
+  var initialExpanded: js.UndefOr[Boolean] = js.native
+  
+  var label: String = js.native
+  
+  var level: Level = js.native
 }
 object SectionRowProps {
   
   @scala.inline
-  def apply(section: String): SectionRowProps = {
-    val __obj = js.Dynamic.literal(section = section.asInstanceOf[js.Any])
+  def apply(colSpan: Double, label: String, level: Level): SectionRowProps = {
+    val __obj = js.Dynamic.literal(colSpan = colSpan.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any])
     __obj.asInstanceOf[SectionRowProps]
   }
   
@@ -33,6 +39,18 @@ object SectionRowProps {
     }
     
     @scala.inline
-    def setSection(value: String): Self = this.set("section", value.asInstanceOf[js.Any])
+    def setColSpan(value: Double): Self = this.set("colSpan", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLevel(value: Level): Self = this.set("level", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInitialExpanded(value: Boolean): Self = this.set("initialExpanded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInitialExpanded: Self = this.set("initialExpanded", js.undefined)
   }
 }

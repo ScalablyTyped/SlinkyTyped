@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GridAreaProps extends js.Object {
   
   // Number allowed here but is converted into px value, which is invalid.
-  // readonly gridArea?: ResponsiveValue<CSS.GridAreaProperty>;
+  // readonly gridArea?: ResponsiveValue<CSS.Property.GridArea>;
   val gridArea: js.UndefOr[ResponsiveValue[String]] = js.native
 }
 object GridAreaProps {
@@ -33,6 +33,9 @@ object GridAreaProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setGridAreaVarargs(value: String*): Self = this.set("gridArea", js.Array(value :_*))
     
     @scala.inline
     def setGridArea(value: ResponsiveValue[String]): Self = this.set("gridArea", value.asInstanceOf[js.Any])

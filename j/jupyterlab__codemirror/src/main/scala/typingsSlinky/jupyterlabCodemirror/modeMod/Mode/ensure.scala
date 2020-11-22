@@ -2,11 +2,12 @@ package typingsSlinky.jupyterlabCodemirror.modeMod.Mode
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/codemirror/lib/mode", "Mode.ensure")
 @js.native
 object ensure extends js.Object {
+  
   /**
     * Ensure a codemirror mode is available by name or Codemirror spec.
     *
@@ -15,7 +16,6 @@ object ensure extends js.Object {
     *
     * @returns A promise that resolves when the mode is available.
     */
-  def apply(mode: String): js.Promise[ISpec] = js.native
-  def apply(mode: ISpec): js.Promise[ISpec] = js.native
+  def apply(mode: String): js.Promise[ISpec | Null] = js.native
+  def apply(mode: ISpec): js.Promise[ISpec | Null] = js.native
 }
-

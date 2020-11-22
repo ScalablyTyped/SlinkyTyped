@@ -4,8 +4,11 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.PopStateEvent
 import slinky.core.ReactComponentClass
 import typingsSlinky.next.anon.Errorcodeanycancelledbool
+import typingsSlinky.next.libUtilsMod.NextPageContext
 import typingsSlinky.next.mittMod.MittEmitter
-import typingsSlinky.next.utilsMod.NextPageContext
+import typingsSlinky.next.pageLoaderMod.GoodPageCache
+import typingsSlinky.node.querystringMod.ParsedUrlQuery
+import typingsSlinky.node.urlMod.UrlObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +26,12 @@ trait Router extends BaseRouter {
   
   var _inFlightRoute: js.UndefOr[String] = js.native
   
-  def _wrapApp(App: ReactComponentClass[js.Object]): js.Any = js.native
+  def _resolveHref(parsedHref: UrlObject, pages: js.Array[String]): UrlObject = js.native
+  def _resolveHref(parsedHref: UrlObject, pages: js.Array[String], applyBasePath: Boolean): UrlObject = js.native
+  
+  var _shallow: js.UndefOr[Boolean] = js.native
+  
+  def _wrapApp(App: AppComponent): js.Any = js.native
   
   def abortComponentLoad(as: String): Unit = js.native
   
@@ -38,41 +46,41 @@ trait Router extends BaseRouter {
     */
   def beforePopState(cb: BeforePopStateCallback): Unit = js.native
   
-  def change(method: HistoryMethod, url: String, as: String, options: js.Any): js.Promise[Boolean] = js.native
+  def change(method: HistoryMethod, url: String, as: String, options: TransitionOptions): js.Promise[Boolean] = js.native
   
   def changeState(method: HistoryMethod, url: String, as: String): Unit = js.native
-  def changeState(method: HistoryMethod, url: String, as: String, options: js.Object): Unit = js.native
+  def changeState(method: HistoryMethod, url: String, as: String, options: TransitionOptions): Unit = js.native
   
   var clc: ComponentLoadCancel = js.native
   
   /**
     * Map of all components loaded in `Router`
     */
-  var components: StringDictionary[RouteInfo] = js.native
+  var components: StringDictionary[PrivateRouteInfo] = js.native
   
   var events: MittEmitter = js.native
   
-  def fetchComponent(route: String): js.Promise[ComponentRes] = js.native
+  def fetchComponent(route: String): js.Promise[GoodPageCache] = js.native
   
   def getInitialProps(Component: ReactComponentClass[js.Object], ctx: NextPageContext): js.Promise[_] = js.native
   
-  def getRouteInfo(route: String, pathname: String, query: js.Any, as: String): js.Promise[RouteInfo] = js.native
-  def getRouteInfo(route: String, pathname: String, query: js.Any, as: String, shallow: Boolean): js.Promise[RouteInfo] = js.native
+  def getRouteInfo(route: String, pathname: String, query: js.Any, as: String): js.Promise[PrivateRouteInfo] = js.native
+  def getRouteInfo(route: String, pathname: String, query: js.Any, as: String, shallow: Boolean): js.Promise[PrivateRouteInfo] = js.native
   
-  def handleRouteInfoError(err: Errorcodeanycancelledbool, pathname: String, query: js.Any, as: String): js.Promise[RouteInfo] = js.native
+  def handleRouteInfoError(err: Errorcodeanycancelledbool, pathname: String, query: ParsedUrlQuery, as: String): js.Promise[CompletePrivateRouteInfo] = js.native
   def handleRouteInfoError(
     err: Errorcodeanycancelledbool,
     pathname: String,
-    query: js.Any,
+    query: ParsedUrlQuery,
     as: String,
     loadErrorFail: Boolean
-  ): js.Promise[RouteInfo] = js.native
+  ): js.Promise[CompletePrivateRouteInfo] = js.native
   
   var isFallback: Boolean = js.native
   
   var isSsr: Boolean = js.native
   
-  def notify(data: RouteInfo): js.Promise[Unit] = js.native
+  def notify(data: PrivateRouteInfo): js.Promise[Unit] = js.native
   
   def onPopState(e: PopStateEvent): Unit = js.native
   
@@ -98,7 +106,7 @@ trait Router extends BaseRouter {
     * @param options object you can define `shallow` and other options
     */
   def push(url: Url): js.Promise[Boolean] = js.native
-  def push(url: Url, as: js.UndefOr[Url], options: js.Object): js.Promise[Boolean] = js.native
+  def push(url: Url, as: js.UndefOr[Url], options: TransitionOptions): js.Promise[Boolean] = js.native
   def push(url: Url, as: Url): js.Promise[Boolean] = js.native
   
   def reload(): Unit = js.native
@@ -110,18 +118,16 @@ trait Router extends BaseRouter {
     * @param options object you can define `shallow` and other options
     */
   def replace(url: Url): js.Promise[Boolean] = js.native
-  def replace(url: Url, as: js.UndefOr[Url], options: js.Object): js.Promise[Boolean] = js.native
+  def replace(url: Url, as: js.UndefOr[Url], options: TransitionOptions): js.Promise[Boolean] = js.native
   def replace(url: Url, as: Url): js.Promise[Boolean] = js.native
   
   def scrollToHash(as: String): Unit = js.native
   
   var sdc: StringDictionary[js.Object] = js.native
   
-  def set(route: String, pathname: String, query: js.Any, as: String, data: RouteInfo): js.Promise[Unit] = js.native
+  def set(route: String, pathname: String, query: ParsedUrlQuery, as: String, data: PrivateRouteInfo): js.Promise[Unit] = js.native
   
   var sub: Subscription = js.native
-  
-  def update(route: String, mod: js.Any): Unit = js.native
   
   def urlIsNew(asPath: String): Boolean = js.native
 }

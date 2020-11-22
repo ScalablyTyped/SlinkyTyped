@@ -1,5 +1,21 @@
 package typingsSlinky.unsplashJs.anon
 
+import typingsSlinky.unsplashJs.mod.CollectionIds
+import typingsSlinky.unsplashJs.mod.ContentSafety
+import typingsSlinky.unsplashJs.mod.Languages
+import typingsSlinky.unsplashJs.unsplashJsStrings.black
+import typingsSlinky.unsplashJs.unsplashJsStrings.black_and_white
+import typingsSlinky.unsplashJs.unsplashJsStrings.blue
+import typingsSlinky.unsplashJs.unsplashJsStrings.green
+import typingsSlinky.unsplashJs.unsplashJsStrings.latest
+import typingsSlinky.unsplashJs.unsplashJsStrings.magenta
+import typingsSlinky.unsplashJs.unsplashJsStrings.orange
+import typingsSlinky.unsplashJs.unsplashJsStrings.purple
+import typingsSlinky.unsplashJs.unsplashJsStrings.red
+import typingsSlinky.unsplashJs.unsplashJsStrings.relevant
+import typingsSlinky.unsplashJs.unsplashJsStrings.teal
+import typingsSlinky.unsplashJs.unsplashJsStrings.white
+import typingsSlinky.unsplashJs.unsplashJsStrings.yellow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,17 +23,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Collections extends js.Object {
   
-  var collections: js.UndefOr[js.Array[String]] = js.native
+  var collections: js.UndefOr[CollectionIds] = js.native
   
-  var count: js.UndefOr[Double] = js.native
+  var color: js.UndefOr[
+    black_and_white | black | white | yellow | orange | red | purple | magenta | green | teal | blue
+  ] = js.native
   
-  var featured: js.UndefOr[Boolean] = js.native
+  var contentFilter: js.UndefOr[ContentSafety] = js.native
   
-  var orientation: js.UndefOr[String] = js.native
+  var lang: js.UndefOr[Languages] = js.native
   
-  var query: js.UndefOr[String] = js.native
+  var orderBy: js.UndefOr[latest | relevant] = js.native
   
-  var username: js.UndefOr[String] = js.native
+  var orientation: js.UndefOr[typingsSlinky.unsplashJs.mod.Orientation] = js.native
 }
 object Collections {
   
@@ -43,42 +61,44 @@ object Collections {
     }
     
     @scala.inline
-    def setCollectionsVarargs(value: String*): Self = this.set("collections", js.Array(value :_*))
+    def setCollectionsVarargs(value: (Double | String)*): Self = this.set("collections", js.Array(value :_*))
     
     @scala.inline
-    def setCollections(value: js.Array[String]): Self = this.set("collections", value.asInstanceOf[js.Any])
+    def setCollections(value: CollectionIds): Self = this.set("collections", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCollections: Self = this.set("collections", js.undefined)
     
     @scala.inline
-    def setCount(value: Double): Self = this.set("count", value.asInstanceOf[js.Any])
+    def setColor(
+      value: black_and_white | black | white | yellow | orange | red | purple | magenta | green | teal | blue
+    ): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteCount: Self = this.set("count", js.undefined)
+    def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setFeatured(value: Boolean): Self = this.set("featured", value.asInstanceOf[js.Any])
+    def setContentFilter(value: ContentSafety): Self = this.set("contentFilter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteFeatured: Self = this.set("featured", js.undefined)
+    def deleteContentFilter: Self = this.set("contentFilter", js.undefined)
     
     @scala.inline
-    def setOrientation(value: String): Self = this.set("orientation", value.asInstanceOf[js.Any])
+    def setLang(value: Languages): Self = this.set("lang", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLang: Self = this.set("lang", js.undefined)
+    
+    @scala.inline
+    def setOrderBy(value: latest | relevant): Self = this.set("orderBy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOrderBy: Self = this.set("orderBy", js.undefined)
+    
+    @scala.inline
+    def setOrientation(value: typingsSlinky.unsplashJs.mod.Orientation): Self = this.set("orientation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrientation: Self = this.set("orientation", js.undefined)
-    
-    @scala.inline
-    def setQuery(value: String): Self = this.set("query", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteQuery: Self = this.set("query", js.undefined)
-    
-    @scala.inline
-    def setUsername(value: String): Self = this.set("username", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUsername: Self = this.set("username", js.undefined)
   }
 }

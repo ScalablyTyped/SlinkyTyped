@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CSVLayerCapabilitiesData extends Object {
   
   /**
-    * Indicates if the attachment is enabled on the layer. At this current time, the CSVLayer doesn’t support attachments.
+    * Indicates if the attachment is enabled on the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
@@ -24,7 +24,7 @@ trait CSVLayerCapabilitiesData extends Object {
   var supportsM: Boolean = js.native
   
   /**
-    * Indicates if the features in the layer support z-values. See [elevationInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#elevationInfo) for details regarding placement and rendering of features with z-values in 3D [SceneViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
+    * Indicates if the features in the layer support z-values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */

@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LocaleInfo extends js.Object {
   
   // A name representing the user's locale in natural language, for example, 'English (United States)'.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * A locale representation for the user, which includes the user's preferred language and country/region. For example,
     * 'en-us'. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows
     * 2-letter codes as defined in ISO 3166-1 alpha-2.
     */
-  var locale: js.UndefOr[String] = js.native
+  var locale: js.UndefOr[NullableOption[String]] = js.native
 }
 object LocaleInfo {
   
@@ -41,15 +41,21 @@ object LocaleInfo {
     }
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
-    def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    def setDisplayNameNull: Self = this.set("displayName", null)
+    
+    @scala.inline
+    def setLocale(value: NullableOption[String]): Self = this.set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLocale: Self = this.set("locale", js.undefined)
+    
+    @scala.inline
+    def setLocaleNull: Self = this.set("locale", null)
   }
 }

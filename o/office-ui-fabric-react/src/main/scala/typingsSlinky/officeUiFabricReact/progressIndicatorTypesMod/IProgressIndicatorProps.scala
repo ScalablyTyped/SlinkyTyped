@@ -1,11 +1,11 @@
 package typingsSlinky.officeUiFabricReact.progressIndicatorTypesMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.progressIndicatorBaseMod.ProgressIndicatorBase
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`

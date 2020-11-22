@@ -16,6 +16,11 @@ trait UpdateDomainNameRequest extends js.Object {
     * The domain name configurations.
     */
   var DomainNameConfigurations: js.UndefOr[typingsSlinky.awsSdk.apigatewayv2Mod.DomainNameConfigurations] = js.native
+  
+  /**
+    * The mutual TLS authentication configuration for a custom domain name.
+    */
+  var MutualTlsAuthentication: js.UndefOr[MutualTlsAuthenticationInput] = js.native
 }
 object UpdateDomainNameRequest {
   
@@ -51,5 +56,11 @@ object UpdateDomainNameRequest {
     
     @scala.inline
     def deleteDomainNameConfigurations: Self = this.set("DomainNameConfigurations", js.undefined)
+    
+    @scala.inline
+    def setMutualTlsAuthentication(value: MutualTlsAuthenticationInput): Self = this.set("MutualTlsAuthentication", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMutualTlsAuthentication: Self = this.set("MutualTlsAuthentication", js.undefined)
   }
 }

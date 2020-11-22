@@ -1,7 +1,7 @@
 
 # Scala.js typings for tlds
 
-Typings are for version 1.207.0
+Typings are for version 1.212.0
 
 ## Library description:
 List of TLDs

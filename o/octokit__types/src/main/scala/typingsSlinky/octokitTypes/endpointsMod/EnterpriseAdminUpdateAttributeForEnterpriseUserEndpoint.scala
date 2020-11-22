@@ -12,6 +12,9 @@ trait EnterpriseAdminUpdateAttributeForEnterpriseUserEndpoint extends js.Object 
     */
   var Operations: js.Array[EnterpriseAdminUpdateAttributeForEnterpriseUserParamsOperations] = js.native
   
+  /**
+    * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+    */
   var enterprise: String = js.native
   
   /**

@@ -12,6 +12,9 @@ trait ApplePayInstance extends Emitter[ApplePayEvent] {
   def begin(): Unit = js.native
   def begin(cb: VoidFunction): Unit = js.native
   
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-applepayready|ApplePay.ready}
+    */
   def ready(): Unit = js.native
   def ready(cb: VoidFunction): Unit = js.native
 }

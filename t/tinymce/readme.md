@@ -1,7 +1,7 @@
 
 # Scala.js typings for tinymce
 
-Typings are for version 4.5
+Typings are for version 4.6
 
 ## Library description:
 Web based JavaScript HTML WYSIWYG editor control.

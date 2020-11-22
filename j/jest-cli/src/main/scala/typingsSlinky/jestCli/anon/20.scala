@@ -1,7 +1,8 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliStrings.`This option sets the default timeouts of test casesDot`
-import typingsSlinky.jestCli.jestCliStrings.number
+import typingsSlinky.jestCli.jestCliBooleans.`true`
+import typingsSlinky.jestCli.jestCliStrings.`A string or array of string regexp patterns that Jest uses to detect test filesDot`
+import typingsSlinky.jestCli.jestCliStrings.array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,15 +10,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `20` extends js.Object {
   
-  val description: `This option sets the default timeouts of test casesDot` = js.native
+  val description: `A string or array of string regexp patterns that Jest uses to detect test filesDot` = js.native
   
-  val `type`: number = js.native
+  val string: `true` = js.native
+  
+  val `type`: array = js.native
 }
 object `20` {
   
   @scala.inline
-  def apply(description: `This option sets the default timeouts of test casesDot`, `type`: number): `20` = {
-    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
+  def apply(
+    description: `A string or array of string regexp patterns that Jest uses to detect test filesDot`,
+    string: `true`,
+    `type`: array
+  ): `20` = {
+    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], string = string.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`20`]
   }
@@ -38,9 +45,12 @@ object `20` {
     }
     
     @scala.inline
-    def setDescription(value: `This option sets the default timeouts of test casesDot`): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: `A string or array of string regexp patterns that Jest uses to detect test filesDot`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: number): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setString(value: `true`): Self = this.set("string", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setType(value: array): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

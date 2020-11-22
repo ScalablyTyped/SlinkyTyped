@@ -12,13 +12,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PolarChartSeries extends dxPolarChartSeriesTypesCommonPolarChartSeries {
   
-  /** @name PolarChartSeries.name */
+  /**
+    * [descr:PolarChartSeries.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name PolarChartSeries.tag */
+  /**
+    * [descr:PolarChartSeries.tag]
+    */
   var tag: js.UndefOr[js.Any] = js.native
   
-  /** @name PolarChartSeries.type */
+  /**
+    * [descr:PolarChartSeries.type]
+    */
   var `type`: js.UndefOr[area | bar | line | scatter | stackedbar] = js.native
 }
 object PolarChartSeries {

@@ -11,13 +11,13 @@ trait ManageData_ extends BaseOperation[ManageData] {
   
   var name: String = js.native
   
-  var value: Buffer = js.native
+  var value: js.UndefOr[Buffer] = js.native
 }
 object ManageData_ {
   
   @scala.inline
-  def apply(name: String, `type`: ManageData, value: Buffer): ManageData_ = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(name: String, `type`: ManageData): ManageData_ = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ManageData_]
   }
@@ -42,5 +42,8 @@ object ManageData_ {
     
     @scala.inline
     def setValue(value: Buffer): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
   }
 }

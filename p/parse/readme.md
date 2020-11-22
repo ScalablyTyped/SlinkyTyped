@@ -1,7 +1,7 @@
 
 # Scala.js typings for parse
 
-Typings are for version 2.12
+Typings are for version 2.18
 
 ## Library description:
 The Parse JavaScript SDK

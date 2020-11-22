@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.flatpickr.flatpickrStrings.bg
   - typingsSlinky.flatpickr.flatpickrStrings.bn
   - typingsSlinky.flatpickr.flatpickrStrings.bs
+  - typingsSlinky.flatpickr.flatpickrStrings.ca
   - typingsSlinky.flatpickr.flatpickrStrings.cat
   - typingsSlinky.flatpickr.flatpickrStrings.cs
   - typingsSlinky.flatpickr.flatpickrStrings.cy
@@ -63,6 +64,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.flatpickr.flatpickrStrings.uk
   - typingsSlinky.flatpickr.flatpickrStrings.vn
   - typingsSlinky.flatpickr.flatpickrStrings.zh
+  - typingsSlinky.flatpickr.flatpickrStrings.uz
+  - typingsSlinky.flatpickr.flatpickrStrings.uz_latn
   - typingsSlinky.flatpickr.flatpickrStrings.zh_tw
 */
 trait key extends js.Object
@@ -88,6 +91,9 @@ object key {
   
   @scala.inline
   def bs: typingsSlinky.flatpickr.flatpickrStrings.bs = "bs".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.bs]
+  
+  @scala.inline
+  def ca: typingsSlinky.flatpickr.flatpickrStrings.ca = "ca".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.ca]
   
   @scala.inline
   def cat: typingsSlinky.flatpickr.flatpickrStrings.cat = "cat".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.cat]
@@ -235,6 +241,12 @@ object key {
   
   @scala.inline
   def uk: typingsSlinky.flatpickr.flatpickrStrings.uk = "uk".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.uk]
+  
+  @scala.inline
+  def uz: typingsSlinky.flatpickr.flatpickrStrings.uz = "uz".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.uz]
+  
+  @scala.inline
+  def uz_latn: typingsSlinky.flatpickr.flatpickrStrings.uz_latn = "uz_latn".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.uz_latn]
   
   @scala.inline
   def vn: typingsSlinky.flatpickr.flatpickrStrings.vn = "vn".asInstanceOf[typingsSlinky.flatpickr.flatpickrStrings.vn]

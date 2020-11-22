@@ -2,21 +2,18 @@ package typingsSlinky.jestTypes.configMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.jestTypes.anon.Global
-import typingsSlinky.jestTypes.jestTypesStrings.fake
-import typingsSlinky.jestTypes.jestTypesStrings.real
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined std.Partial<{  automock :boolean,   bail :boolean | number,   cache :boolean,   cacheDirectory :@jest/types.@jest/types/build/Config.Path,   clearMocks :boolean,   changedFilesWithAncestor :boolean,   changedSince :string,   collectCoverage :boolean,   collectCoverageFrom :std.Array<@jest/types.@jest/types/build/Config.Glob>,   collectCoverageOnlyFrom :{[key: string] : boolean},   coverageDirectory :string,   coveragePathIgnorePatterns :std.Array<string>,   coverageProvider :@jest/types.@jest/types/build/Config.CoverageProvider,   coverageReporters :@jest/types.@jest/types/build/Config.CoverageReporters,   coverageThreshold :{  global :{[key: string] : number}},   dependencyExtractor :string,   detectLeaks :boolean,   detectOpenHandles :boolean,   displayName :string | @jest/types.@jest/types/build/Config.DisplayName,   expand :boolean,   extraGlobals :std.Array<string>,   filter :@jest/types.@jest/types/build/Config.Path,   findRelatedTests :boolean,   forceCoverageMatch :std.Array<@jest/types.@jest/types/build/Config.Glob>,   forceExit :boolean,   json :boolean,   globals :@jest/types.@jest/types/build/Config.ConfigGlobals,   globalSetup :string | null | undefined,   globalTeardown :string | null | undefined,   haste :@jest/types.@jest/types/build/Config.HasteConfig,   injectGlobals :boolean,   reporters :std.Array<string | @jest/types.@jest/types/build/Config.ReporterConfig>,   logHeapUsage :boolean,   lastCommit :boolean,   listTests :boolean,   mapCoverage :boolean,   maxConcurrency :number,   maxWorkers :number | string,   moduleDirectories :std.Array<string>,   moduleFileExtensions :std.Array<string>,   moduleLoader :@jest/types.@jest/types/build/Config.Path,   moduleNameMapper :{[key: string] : string | std.Array<string>},   modulePathIgnorePatterns :std.Array<string>,   modulePaths :std.Array<string>,   name :string,   noStackTrace :boolean,   notify :boolean,   notifyMode :string,   onlyChanged :boolean,   onlyFailures :boolean,   outputFile :@jest/types.@jest/types/build/Config.Path,   passWithNoTests :boolean,   preprocessorIgnorePatterns :std.Array<@jest/types.@jest/types/build/Config.Glob>,   preset :string | null | undefined,   prettierPath :string | null | undefined,   projects :std.Array<@jest/types.@jest/types/build/Config.Glob>,   replname :string | null | undefined,   resetMocks :boolean,   resetModules :boolean,   resolver :@jest/types.@jest/types/build/Config.Path | null | undefined,   restoreMocks :boolean,   rootDir :@jest/types.@jest/types/build/Config.Path,   roots :std.Array<@jest/types.@jest/types/build/Config.Path>,   runner :string,   runTestsByPath :boolean,   scriptPreprocessor :string,   setupFiles :std.Array<@jest/types.@jest/types/build/Config.Path>,   setupTestFrameworkScriptFile :@jest/types.@jest/types/build/Config.Path,   setupFilesAfterEnv :std.Array<@jest/types.@jest/types/build/Config.Path>,   silent :boolean,   skipFilter :boolean,   skipNodeResolution :boolean,   slowTestThreshold :number,   snapshotResolver :@jest/types.@jest/types/build/Config.Path,   snapshotSerializers :std.Array<@jest/types.@jest/types/build/Config.Path>,   errorOnDeprecated :boolean,   testEnvironment :string,   testEnvironmentOptions :std.Record<string, unknown>,   testFailureExitCode :string | number,   testLocationInResults :boolean,   testMatch :std.Array<@jest/types.@jest/types/build/Config.Glob>,   testNamePattern :string,   testPathDirs :std.Array<@jest/types.@jest/types/build/Config.Path>,   testPathIgnorePatterns :std.Array<string>,   testRegex :string | std.Array<string>,   testResultsProcessor :string,   testRunner :string,   testSequencer :string,   testURL :string,   testTimeout :number,   timers :@jest/types.@jest/types/build/Config.Timers,   transform :{[regex: string] : @jest/types.@jest/types/build/Config.Path | @jest/types.@jest/types/build/Config.TransformerConfig},   transformIgnorePatterns :std.Array<@jest/types.@jest/types/build/Config.Glob>,   watchPathIgnorePatterns :std.Array<string>,   unmockedModulePathPatterns :std.Array<string>,   updateSnapshot :boolean,   useStderr :boolean,   verbose :boolean | undefined,   watch :boolean,   watchAll :boolean,   watchman :boolean,   watchPlugins :std.Array<string | [string, std.Record<string, unknown>]>}> */
 @js.native
 trait InitialOptions extends js.Object {
   
   var automock: js.UndefOr[Boolean] = js.native
   
   var bail: js.UndefOr[Boolean | Double] = js.native
-  
-  var browser: js.UndefOr[Boolean] = js.native
   
   var cache: js.UndefOr[Boolean] = js.native
   
@@ -38,7 +35,9 @@ trait InitialOptions extends js.Object {
   
   var coveragePathIgnorePatterns: js.UndefOr[js.Array[String]] = js.native
   
-  var coverageReporters: js.UndefOr[js.Array[String]] = js.native
+  var coverageProvider: js.UndefOr[CoverageProvider] = js.native
+  
+  var coverageReporters: js.UndefOr[CoverageReporters] = js.native
   
   var coverageThreshold: js.UndefOr[Global] = js.native
   
@@ -48,7 +47,7 @@ trait InitialOptions extends js.Object {
   
   var detectOpenHandles: js.UndefOr[Boolean] = js.native
   
-  var displayName: js.UndefOr[DisplayName] = js.native
+  var displayName: js.UndefOr[String | DisplayName] = js.native
   
   var errorOnDeprecated: js.UndefOr[Boolean] = js.native
   
@@ -72,6 +71,8 @@ trait InitialOptions extends js.Object {
   
   var haste: js.UndefOr[HasteConfig] = js.native
   
+  var injectGlobals: js.UndefOr[Boolean] = js.native
+  
   var json: js.UndefOr[Boolean] = js.native
   
   var lastCommit: js.UndefOr[Boolean] = js.native
@@ -84,7 +85,7 @@ trait InitialOptions extends js.Object {
   
   var maxConcurrency: js.UndefOr[Double] = js.native
   
-  var maxWorkers: Double | String = js.native
+  var maxWorkers: js.UndefOr[Double | String] = js.native
   
   var moduleDirectories: js.UndefOr[js.Array[String]] = js.native
   
@@ -92,7 +93,7 @@ trait InitialOptions extends js.Object {
   
   var moduleLoader: js.UndefOr[Path] = js.native
   
-  var moduleNameMapper: js.UndefOr[StringDictionary[String]] = js.native
+  var moduleNameMapper: js.UndefOr[StringDictionary[String | js.Array[String]]] = js.native
   
   var modulePathIgnorePatterns: js.UndefOr[js.Array[String]] = js.native
   
@@ -108,6 +109,8 @@ trait InitialOptions extends js.Object {
   var notify_FInitialOptions: js.UndefOr[Boolean] = js.native
   
   var onlyChanged: js.UndefOr[Boolean] = js.native
+  
+  var onlyFailures: js.UndefOr[Boolean] = js.native
   
   var outputFile: js.UndefOr[Path] = js.native
   
@@ -133,7 +136,7 @@ trait InitialOptions extends js.Object {
   
   var restoreMocks: js.UndefOr[Boolean] = js.native
   
-  var rootDir: Path = js.native
+  var rootDir: js.UndefOr[Path] = js.native
   
   var roots: js.UndefOr[js.Array[Path]] = js.native
   
@@ -154,6 +157,8 @@ trait InitialOptions extends js.Object {
   var skipFilter: js.UndefOr[Boolean] = js.native
   
   var skipNodeResolution: js.UndefOr[Boolean] = js.native
+  
+  var slowTestThreshold: js.UndefOr[Double] = js.native
   
   var snapshotResolver: js.UndefOr[Path] = js.native
   
@@ -177,7 +182,7 @@ trait InitialOptions extends js.Object {
   
   var testRegex: js.UndefOr[String | js.Array[String]] = js.native
   
-  var testResultsProcessor: js.UndefOr[String | Null] = js.native
+  var testResultsProcessor: js.UndefOr[String] = js.native
   
   var testRunner: js.UndefOr[String] = js.native
   
@@ -187,7 +192,7 @@ trait InitialOptions extends js.Object {
   
   var testURL: js.UndefOr[String] = js.native
   
-  var timers: js.UndefOr[real | fake] = js.native
+  var timers: js.UndefOr[Timers] = js.native
   
   var transform: js.UndefOr[StringDictionary[Path | TransformerConfig]] = js.native
   
@@ -199,7 +204,7 @@ trait InitialOptions extends js.Object {
   
   var useStderr: js.UndefOr[Boolean] = js.native
   
-  var verbose: js.UndefOr[Boolean | Null] = js.native
+  var verbose: js.UndefOr[Boolean] = js.native
   
   var watch: js.UndefOr[Boolean] = js.native
   
@@ -214,8 +219,8 @@ trait InitialOptions extends js.Object {
 object InitialOptions {
   
   @scala.inline
-  def apply(maxWorkers: Double | String, rootDir: Path): InitialOptions = {
-    val __obj = js.Dynamic.literal(maxWorkers = maxWorkers.asInstanceOf[js.Any], rootDir = rootDir.asInstanceOf[js.Any])
+  def apply(): InitialOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[InitialOptions]
   }
   
@@ -235,12 +240,6 @@ object InitialOptions {
     }
     
     @scala.inline
-    def setMaxWorkers(value: Double | String): Self = this.set("maxWorkers", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRootDir(value: Path): Self = this.set("rootDir", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setAutomock(value: Boolean): Self = this.set("automock", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -251,12 +250,6 @@ object InitialOptions {
     
     @scala.inline
     def deleteBail: Self = this.set("bail", js.undefined)
-    
-    @scala.inline
-    def setBrowser(value: Boolean): Self = this.set("browser", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBrowser: Self = this.set("browser", js.undefined)
     
     @scala.inline
     def setCache(value: Boolean): Self = this.set("cache", value.asInstanceOf[js.Any])
@@ -325,10 +318,16 @@ object InitialOptions {
     def deleteCoveragePathIgnorePatterns: Self = this.set("coveragePathIgnorePatterns", js.undefined)
     
     @scala.inline
-    def setCoverageReportersVarargs(value: String*): Self = this.set("coverageReporters", js.Array(value :_*))
+    def setCoverageProvider(value: CoverageProvider): Self = this.set("coverageProvider", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCoverageReporters(value: js.Array[String]): Self = this.set("coverageReporters", value.asInstanceOf[js.Any])
+    def deleteCoverageProvider: Self = this.set("coverageProvider", js.undefined)
+    
+    @scala.inline
+    def setCoverageReportersVarargs(value: (CoverageReporterName | CoverageReporterWithOptions[CoverageReporterName])*): Self = this.set("coverageReporters", js.Array(value :_*))
+    
+    @scala.inline
+    def setCoverageReporters(value: CoverageReporters): Self = this.set("coverageReporters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCoverageReporters: Self = this.set("coverageReporters", js.undefined)
@@ -358,7 +357,7 @@ object InitialOptions {
     def deleteDetectOpenHandles: Self = this.set("detectOpenHandles", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: DisplayName): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: String | DisplayName): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
@@ -442,6 +441,12 @@ object InitialOptions {
     def deleteHaste: Self = this.set("haste", js.undefined)
     
     @scala.inline
+    def setInjectGlobals(value: Boolean): Self = this.set("injectGlobals", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInjectGlobals: Self = this.set("injectGlobals", js.undefined)
+    
+    @scala.inline
     def setJson(value: Boolean): Self = this.set("json", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -478,6 +483,12 @@ object InitialOptions {
     def deleteMaxConcurrency: Self = this.set("maxConcurrency", js.undefined)
     
     @scala.inline
+    def setMaxWorkers(value: Double | String): Self = this.set("maxWorkers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxWorkers: Self = this.set("maxWorkers", js.undefined)
+    
+    @scala.inline
     def setModuleDirectoriesVarargs(value: String*): Self = this.set("moduleDirectories", js.Array(value :_*))
     
     @scala.inline
@@ -502,7 +513,7 @@ object InitialOptions {
     def deleteModuleLoader: Self = this.set("moduleLoader", js.undefined)
     
     @scala.inline
-    def setModuleNameMapper(value: StringDictionary[String]): Self = this.set("moduleNameMapper", value.asInstanceOf[js.Any])
+    def setModuleNameMapper(value: StringDictionary[String | js.Array[String]]): Self = this.set("moduleNameMapper", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModuleNameMapper: Self = this.set("moduleNameMapper", js.undefined)
@@ -554,6 +565,12 @@ object InitialOptions {
     
     @scala.inline
     def deleteOnlyChanged: Self = this.set("onlyChanged", js.undefined)
+    
+    @scala.inline
+    def setOnlyFailures(value: Boolean): Self = this.set("onlyFailures", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOnlyFailures: Self = this.set("onlyFailures", js.undefined)
     
     @scala.inline
     def setOutputFile(value: Path): Self = this.set("outputFile", value.asInstanceOf[js.Any])
@@ -649,6 +666,12 @@ object InitialOptions {
     def deleteRestoreMocks: Self = this.set("restoreMocks", js.undefined)
     
     @scala.inline
+    def setRootDir(value: Path): Self = this.set("rootDir", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRootDir: Self = this.set("rootDir", js.undefined)
+    
+    @scala.inline
     def setRootsVarargs(value: Path*): Self = this.set("roots", js.Array(value :_*))
     
     @scala.inline
@@ -716,6 +739,12 @@ object InitialOptions {
     
     @scala.inline
     def deleteSkipNodeResolution: Self = this.set("skipNodeResolution", js.undefined)
+    
+    @scala.inline
+    def setSlowTestThreshold(value: Double): Self = this.set("slowTestThreshold", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSlowTestThreshold: Self = this.set("slowTestThreshold", js.undefined)
     
     @scala.inline
     def setSnapshotResolver(value: Path): Self = this.set("snapshotResolver", value.asInstanceOf[js.Any])
@@ -805,9 +834,6 @@ object InitialOptions {
     def deleteTestResultsProcessor: Self = this.set("testResultsProcessor", js.undefined)
     
     @scala.inline
-    def setTestResultsProcessorNull: Self = this.set("testResultsProcessor", null)
-    
-    @scala.inline
     def setTestRunner(value: String): Self = this.set("testRunner", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -832,7 +858,7 @@ object InitialOptions {
     def deleteTestURL: Self = this.set("testURL", js.undefined)
     
     @scala.inline
-    def setTimers(value: real | fake): Self = this.set("timers", value.asInstanceOf[js.Any])
+    def setTimers(value: Timers): Self = this.set("timers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTimers: Self = this.set("timers", js.undefined)
@@ -878,9 +904,6 @@ object InitialOptions {
     
     @scala.inline
     def deleteVerbose: Self = this.set("verbose", js.undefined)
-    
-    @scala.inline
-    def setVerboseNull: Self = this.set("verbose", null)
     
     @scala.inline
     def setWatch(value: Boolean): Self = this.set("watch", value.asInstanceOf[js.Any])

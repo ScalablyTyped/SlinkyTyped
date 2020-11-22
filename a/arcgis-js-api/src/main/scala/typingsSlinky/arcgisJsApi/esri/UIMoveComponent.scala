@@ -20,21 +20,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UIMoveComponent extends Object {
   
   /**
-    * The component to move. This can be a widget instance, HTML element, a string value representing a DOM node ID.
+    * The component to move.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#move)
     */
   var component: Widget_ | HTMLElement | String = js.native
   
   /**
-    * The placement index of the component. This index shows where to place the component relative to other components. For example a value of 0 would place it topmost when position is top-*, leftmost for bottom-left and right most for bottom-right.
+    * The placement index of the component.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#move)
     */
   var index: js.UndefOr[Double] = js.native
   
   /**
-    * The destination position. The component will be placed in the UI [container](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#container) when not provided. If not specified, `manual` is used by default. Using `manual` allows you to place the component in a container where you can position it anywhere using CSS.
+    * The destination position.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#move)
     */

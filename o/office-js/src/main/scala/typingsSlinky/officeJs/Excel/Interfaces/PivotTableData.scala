@@ -10,6 +10,14 @@ trait PivotTableData extends js.Object {
   
   /**
     *
+    * Specifies if the PivotTable allows the application of multiple PivotFilters on a given PivotField in the table.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var allowMultipleFiltersPerField: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
     * The Column Pivot Hierarchies of the PivotTable.
     *
     * [Api set: ExcelApi 1.8]
@@ -102,6 +110,12 @@ object PivotTableData {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAllowMultipleFiltersPerField(value: Boolean): Self = this.set("allowMultipleFiltersPerField", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowMultipleFiltersPerField: Self = this.set("allowMultipleFiltersPerField", js.undefined)
     
     @scala.inline
     def setColumnHierarchiesVarargs(value: RowColumnPivotHierarchyData*): Self = this.set("columnHierarchies", js.Array(value :_*))

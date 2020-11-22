@@ -29,7 +29,7 @@ trait TypeofuiActionSheet extends js.Object {
   
   var ListView: TypeofListViewInstantiable = js.native
   
-  var Loader: TypeofLoader = js.native
+  var Loader: TypeofLoaderInstantiable = js.native
   
   var ModalView: TypeofModalView = js.native
   
@@ -67,7 +67,7 @@ object TypeofuiActionSheet {
     Drawer: TypeofDrawerInstantiable,
     Layout: TypeofLayout,
     ListView: TypeofListViewInstantiable,
-    Loader: TypeofLoader,
+    Loader: TypeofLoaderInstantiable,
     ModalView: TypeofModalView,
     NavBar: TypeofNavBar,
     Pane: TypeofPane,
@@ -130,7 +130,7 @@ object TypeofuiActionSheet {
     def setListView(value: TypeofListViewInstantiable): Self = this.set("ListView", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLoader(value: TypeofLoader): Self = this.set("Loader", value.asInstanceOf[js.Any])
+    def setLoader(value: TypeofLoaderInstantiable): Self = this.set("Loader", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setModalView(value: TypeofModalView): Self = this.set("ModalView", value.asInstanceOf[js.Any])

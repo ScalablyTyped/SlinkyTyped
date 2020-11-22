@@ -10,5 +10,5 @@ trait UnparsedSyntheticReference
      with UnparsedNode {
   
   @JSName("kind")
-  var kind_UnparsedSyntheticReference: typingsSlinky.typescript.mod.SyntaxKind.UnparsedSyntheticReference = js.native
+  val kind_UnparsedSyntheticReference: typingsSlinky.typescript.mod.SyntaxKind.UnparsedSyntheticReference = js.native
 }

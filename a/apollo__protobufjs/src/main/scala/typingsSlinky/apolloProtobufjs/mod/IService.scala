@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IService extends INamespace {
   
   /** Method descriptors */
-  var methods: StringDictionary[IMethod] = js.native
+  var methods: StringDictionary[js.UndefOr[IMethod]] = js.native
 }
 object IService {
   
   @scala.inline
-  def apply(methods: StringDictionary[IMethod]): IService = {
+  def apply(methods: StringDictionary[js.UndefOr[IMethod]]): IService = {
     val __obj = js.Dynamic.literal(methods = methods.asInstanceOf[js.Any])
     __obj.asInstanceOf[IService]
   }
@@ -36,6 +36,6 @@ object IService {
     }
     
     @scala.inline
-    def setMethods(value: StringDictionary[IMethod]): Self = this.set("methods", value.asInstanceOf[js.Any])
+    def setMethods(value: StringDictionary[js.UndefOr[IMethod]]): Self = this.set("methods", value.asInstanceOf[js.Any])
   }
 }

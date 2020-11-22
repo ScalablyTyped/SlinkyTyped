@@ -1,8 +1,6 @@
 package typingsSlinky.playcanvas.anon
 
-import typingsSlinky.playcanvas.pc.Ray
-import typingsSlinky.playcanvas.pc.XrHitTestSource
-import typingsSlinky.playcanvas.pc.callbacks.XrHitTestStart
+import typingsSlinky.playcanvas.pc.callbacks.XrError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,15 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Callback extends js.Object {
   
-  var callback: js.UndefOr[XrHitTestStart] = js.native
+  var callback: js.UndefOr[XrError] = js.native
   
-  var entityTypes: js.UndefOr[js.Array[String]] = js.native
-  
-  var offsetRay: js.UndefOr[Ray] = js.native
-  
-  var profile: js.UndefOr[String] = js.native
-  
-  var spaceType: js.UndefOr[String] = js.native
+  var optionalFeatures: js.UndefOr[js.Array[String]] = js.native
 }
 object Callback {
   
@@ -44,36 +36,18 @@ object Callback {
     }
     
     @scala.inline
-    def setCallback(value: (/* err */ js.Error | Null, /* hitTestSource */ XrHitTestSource | Null) => Unit): Self = this.set("callback", js.Any.fromFunction2(value))
+    def setCallback(value: /* err */ js.Error | Null => Unit): Self = this.set("callback", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCallback: Self = this.set("callback", js.undefined)
     
     @scala.inline
-    def setEntityTypesVarargs(value: String*): Self = this.set("entityTypes", js.Array(value :_*))
+    def setOptionalFeaturesVarargs(value: String*): Self = this.set("optionalFeatures", js.Array(value :_*))
     
     @scala.inline
-    def setEntityTypes(value: js.Array[String]): Self = this.set("entityTypes", value.asInstanceOf[js.Any])
+    def setOptionalFeatures(value: js.Array[String]): Self = this.set("optionalFeatures", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteEntityTypes: Self = this.set("entityTypes", js.undefined)
-    
-    @scala.inline
-    def setOffsetRay(value: Ray): Self = this.set("offsetRay", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOffsetRay: Self = this.set("offsetRay", js.undefined)
-    
-    @scala.inline
-    def setProfile(value: String): Self = this.set("profile", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteProfile: Self = this.set("profile", js.undefined)
-    
-    @scala.inline
-    def setSpaceType(value: String): Self = this.set("spaceType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSpaceType: Self = this.set("spaceType", js.undefined)
+    def deleteOptionalFeatures: Self = this.set("optionalFeatures", js.undefined)
   }
 }

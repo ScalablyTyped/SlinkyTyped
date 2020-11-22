@@ -32,116 +32,170 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartArgumentAxis extends dxChartCommonAxisSettings {
   
-  /** @name dxChart.Options.argumentAxis.aggregateByCategory */
+  /**
+    * [descr:dxChart.Options.argumentAxis.aggregateByCategory]
+    */
   var aggregateByCategory: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.argumentAxis.aggregationGroupWidth */
+  /**
+    * [descr:dxChart.Options.argumentAxis.aggregationGroupWidth]
+    */
   var aggregationGroupWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.argumentAxis.aggregationInterval */
+  /**
+    * [descr:dxChart.Options.argumentAxis.aggregationInterval]
+    */
   var aggregationInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxChart.Options.argumentAxis.argumentType */
+  /**
+    * [descr:dxChart.Options.argumentAxis.argumentType]
+    */
   var argumentType: js.UndefOr[datetime | numeric | string_] = js.native
   
-  /** @name dxChart.Options.argumentAxis.axisDivisionFactor */
+  /**
+    * [descr:dxChart.Options.argumentAxis.axisDivisionFactor]
+    */
   var axisDivisionFactor: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.argumentAxis.breaks */
+  /**
+    * [descr:dxChart.Options.argumentAxis.breaks]
+    */
   var breaks: js.UndefOr[js.Array[ScaleBreak]] = js.native
   
-  /** @name dxChart.Options.argumentAxis.categories */
+  /**
+    * [descr:dxChart.Options.argumentAxis.categories]
+    */
   var categories: js.UndefOr[js.Array[Double | String | js.Date]] = js.native
   
-  /** @name dxChart.Options.argumentAxis.constantLineStyle */
+  /**
+    * [descr:dxChart.Options.argumentAxis.constantLineStyle]
+    */
   @JSName("constantLineStyle")
   var constantLineStyle_dxChartArgumentAxis: js.UndefOr[dxChartArgumentAxisConstantLineStyle] = js.native
   
-  /** @name dxChart.Options.argumentAxis.constantLines */
+  /**
+    * [descr:dxChart.Options.argumentAxis.constantLines]
+    */
   var constantLines: js.UndefOr[js.Array[dxChartArgumentAxisConstantLines]] = js.native
   
-  /** @name dxChart.Options.argumentAxis.customPosition */
+  /**
+    * [descr:dxChart.Options.argumentAxis.customPosition]
+    */
   var customPosition: js.UndefOr[Double | js.Date | String] = js.native
   
-  /** @name dxChart.Options.argumentAxis.customPositionAxis */
+  /**
+    * [descr:dxChart.Options.argumentAxis.customPositionAxis]
+    */
   var customPositionAxis: js.UndefOr[String] = js.native
   
-  /** @name dxChart.Options.argumentAxis.holidays */
+  /**
+    * [descr:dxChart.Options.argumentAxis.holidays]
+    */
   var holidays: js.UndefOr[js.Array[js.Date | Double | String]] = js.native
   
-  /** @name dxChart.Options.argumentAxis.hoverMode */
+  /**
+    * [descr:dxChart.Options.argumentAxis.hoverMode]
+    */
   var hoverMode: js.UndefOr[allArgumentPoints | none] = js.native
   
-  /** @name dxChart.Options.argumentAxis.label */
+  /**
+    * [descr:dxChart.Options.argumentAxis.label]
+    */
   @JSName("label")
   var label_dxChartArgumentAxis: js.UndefOr[dxChartArgumentAxisLabel] = js.native
   
-  /** @name dxChart.Options.argumentAxis.linearThreshold */
+  /**
+    * [descr:dxChart.Options.argumentAxis.linearThreshold]
+    */
   var linearThreshold: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.argumentAxis.logarithmBase */
+  /**
+    * [descr:dxChart.Options.argumentAxis.logarithmBase]
+    */
   var logarithmBase: js.UndefOr[Double] = js.native
   
-  /** @deprecated */
-  /** @name dxChart.Options.argumentAxis.max */
-  var max: js.UndefOr[Double | js.Date | String] = js.native
-  
-  /** @deprecated */
-  /** @name dxChart.Options.argumentAxis.min */
-  var min: js.UndefOr[Double | js.Date | String] = js.native
-  
-  /** @name dxChart.Options.argumentAxis.minVisualRangeLength */
+  /**
+    * [descr:dxChart.Options.argumentAxis.minVisualRangeLength]
+    */
   var minVisualRangeLength: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxChart.Options.argumentAxis.minorTickCount */
+  /**
+    * [descr:dxChart.Options.argumentAxis.minorTickCount]
+    */
   var minorTickCount: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.argumentAxis.minorTickInterval */
+  /**
+    * [descr:dxChart.Options.argumentAxis.minorTickInterval]
+    */
   var minorTickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxChart.Options.argumentAxis.offset */
+  /**
+    * [descr:dxChart.Options.argumentAxis.offset]
+    */
   var offset: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.argumentAxis.position */
+  /**
+    * [descr:dxChart.Options.argumentAxis.position]
+    */
   var position: js.UndefOr[bottom | left | right | top] = js.native
   
-  /** @name dxChart.Options.argumentAxis.singleWorkdays */
+  /**
+    * [descr:dxChart.Options.argumentAxis.singleWorkdays]
+    */
   var singleWorkdays: js.UndefOr[js.Array[js.Date | Double | String]] = js.native
   
-  /** @name dxChart.Options.argumentAxis.strips */
+  /**
+    * [descr:dxChart.Options.argumentAxis.strips]
+    */
   var strips: js.UndefOr[js.Array[dxChartArgumentAxisStrips]] = js.native
   
-  /** @name dxChart.Options.argumentAxis.tickInterval */
+  /**
+    * [descr:dxChart.Options.argumentAxis.tickInterval]
+    */
   var tickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxChart.Options.argumentAxis.title */
+  /**
+    * [descr:dxChart.Options.argumentAxis.title]
+    */
   @JSName("title")
   var title_dxChartArgumentAxis: js.UndefOr[dxChartArgumentAxisTitle] = js.native
   
-  /** @name dxChart.Options.argumentAxis.type */
+  /**
+    * [descr:dxChart.Options.argumentAxis.type]
+    */
   var `type`: js.UndefOr[continuous | discrete | logarithmic] = js.native
   
-  /** @name dxChart.Options.argumentAxis.visualRange */
+  /**
+    * [descr:dxChart.Options.argumentAxis.visualRange]
+    */
   var visualRange: js.UndefOr[VizRange | (js.Array[Double | String | js.Date])] = js.native
   
-  /** @name dxChart.Options.argumentAxis.visualRangeUpdateMode */
+  /**
+    * [descr:dxChart.Options.argumentAxis.visualRangeUpdateMode]
+    */
   var visualRangeUpdateMode: js.UndefOr[auto | keep | reset | shift] = js.native
   
-  /** @name dxChart.Options.argumentAxis.wholeRange */
+  /**
+    * [descr:dxChart.Options.argumentAxis.wholeRange]
+    */
   var wholeRange: js.UndefOr[VizRange | (js.Array[Double | String | js.Date])] = js.native
   
-  /** @name dxChart.Options.argumentAxis.workWeek */
+  /**
+    * [descr:dxChart.Options.argumentAxis.workWeek]
+    */
   var workWeek: js.UndefOr[js.Array[Double]] = js.native
   
-  /** @name dxChart.Options.argumentAxis.workdaysOnly */
+  /**
+    * [descr:dxChart.Options.argumentAxis.workdaysOnly]
+    */
   var workdaysOnly: js.UndefOr[Boolean] = js.native
 }
 object dxChartArgumentAxis {
@@ -279,24 +333,6 @@ object dxChartArgumentAxis {
     
     @scala.inline
     def deleteLogarithmBase: Self = this.set("logarithmBase", js.undefined)
-    
-    @scala.inline
-    def setMaxDate(value: js.Date): Self = this.set("max", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMax(value: Double | js.Date | String): Self = this.set("max", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMax: Self = this.set("max", js.undefined)
-    
-    @scala.inline
-    def setMinDate(value: js.Date): Self = this.set("min", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMin(value: Double | js.Date | String): Self = this.set("min", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMin: Self = this.set("min", js.undefined)
     
     @scala.inline
     def setMinVisualRangeLength(

@@ -1,7 +1,7 @@
 
 # Scala.js typings for stopword
 
-Typings are for version 0.3
+Typings are for version 1.0
 
 ## Library description:
 A module for node.js and the browser that takes in text and returns text that is stripped of stopwords. Has pre-defined stopword lists for 32 languages and also takes lists with custom stopwords as input.

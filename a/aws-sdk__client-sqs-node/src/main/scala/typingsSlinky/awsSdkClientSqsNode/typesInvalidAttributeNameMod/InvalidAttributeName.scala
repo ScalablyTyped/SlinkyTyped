@@ -1,27 +1,20 @@
 package typingsSlinky.awsSdkClientSqsNode.typesInvalidAttributeNameMod
 
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait InvalidAttributeName extends ServiceException[InvalidAttributeNameDetails] {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidAttributeNameDetails> * / any */ @js.native
+trait InvalidAttributeName extends js.Object {
   
-  @JSName("name")
-  var name_InvalidAttributeName: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.InvalidAttributeName = js.native
+  var name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.InvalidAttributeName = js.native
 }
 object InvalidAttributeName {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidAttributeNameDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.InvalidAttributeName
-  ): InvalidAttributeName = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.InvalidAttributeName): InvalidAttributeName = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidAttributeName]
   }
   

@@ -14,7 +14,7 @@ trait ContentType extends js.Object {
   
   var messageExpiryInterval: js.UndefOr[Double] = js.native
   
-  var payloadFormatIndicator: js.UndefOr[Double] = js.native
+  var payloadFormatIndicator: js.UndefOr[Boolean] = js.native
   
   var responseTopic: js.UndefOr[String] = js.native
   
@@ -64,7 +64,7 @@ object ContentType {
     def deleteMessageExpiryInterval: Self = this.set("messageExpiryInterval", js.undefined)
     
     @scala.inline
-    def setPayloadFormatIndicator(value: Double): Self = this.set("payloadFormatIndicator", value.asInstanceOf[js.Any])
+    def setPayloadFormatIndicator(value: Boolean): Self = this.set("payloadFormatIndicator", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePayloadFormatIndicator: Self = this.set("payloadFormatIndicator", js.undefined)

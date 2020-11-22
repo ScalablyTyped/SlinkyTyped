@@ -22,17 +22,18 @@ object updateTypePredicateNodeWithModifier extends js.Object {
     parameterName: ThisTypeNode,
     `type`: TypeNode
   ): TypePredicateNode = js.native
-  def apply(node: TypePredicateNode, assertsModifier: AssertsToken, parameterName: Identifier): TypePredicateNode = js.native
+  /** @deprecated Use `factory.updateTypePredicateNode` or the factory supplied by your transformation context instead. */
+  def apply(node: TypePredicateNode, assertsModifier: AssertsKeyword, parameterName: Identifier): TypePredicateNode = js.native
   def apply(
     node: TypePredicateNode,
-    assertsModifier: AssertsToken,
+    assertsModifier: AssertsKeyword,
     parameterName: Identifier,
     `type`: TypeNode
   ): TypePredicateNode = js.native
-  def apply(node: TypePredicateNode, assertsModifier: AssertsToken, parameterName: ThisTypeNode): TypePredicateNode = js.native
+  def apply(node: TypePredicateNode, assertsModifier: AssertsKeyword, parameterName: ThisTypeNode): TypePredicateNode = js.native
   def apply(
     node: TypePredicateNode,
-    assertsModifier: AssertsToken,
+    assertsModifier: AssertsKeyword,
     parameterName: ThisTypeNode,
     `type`: TypeNode
   ): TypePredicateNode = js.native

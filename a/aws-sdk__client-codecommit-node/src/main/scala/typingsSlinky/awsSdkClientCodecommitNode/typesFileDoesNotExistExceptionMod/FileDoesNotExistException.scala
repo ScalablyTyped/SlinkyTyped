@@ -2,31 +2,25 @@ package typingsSlinky.awsSdkClientCodecommitNode.typesFileDoesNotExistExceptionM
 
 import typingsSlinky.awsSdkClientCodecommitNode.deleteFileExceptionsUnionMod.DeleteFileExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.getFileExceptionsUnionMod.GetFileExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_FileDoesNotExistExceptionDetails> * / any */ @js.native
 trait FileDoesNotExistException
-  extends ServiceException[FileDoesNotExistExceptionDetails]
-     with DeleteFileExceptionsUnion
+  extends DeleteFileExceptionsUnion
      with GetFileExceptionsUnion {
   
-  @JSName("name")
-  var name_FileDoesNotExistException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.FileDoesNotExistException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.FileDoesNotExistException = js.native
 }
 object FileDoesNotExistException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: FileDoesNotExistExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.FileDoesNotExistException
   ): FileDoesNotExistException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileDoesNotExistException]
   }
   

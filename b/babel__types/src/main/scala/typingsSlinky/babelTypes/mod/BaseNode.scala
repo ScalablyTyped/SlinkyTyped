@@ -1,5 +1,6 @@
 package typingsSlinky.babelTypes.mod
 
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BaseNode extends js.Object {
   
   var end: Double | Null = js.native
+  
+  var extra: js.UndefOr[Record[String, _]] = js.native
   
   var innerComments: js.Array[Comment] | Null = js.native
   
@@ -19,12 +22,12 @@ trait BaseNode extends js.Object {
   
   var trailingComments: js.Array[Comment] | Null = js.native
   
-  var `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 240 */ js.Any = js.native
+  var `type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 242 */ js.Any = js.native
 }
 object BaseNode {
   
   @scala.inline
-  def apply(`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 240 */ js.Any): BaseNode = {
+  def apply(`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 242 */ js.Any): BaseNode = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BaseNode]
@@ -46,13 +49,19 @@ object BaseNode {
     }
     
     @scala.inline
-    def setType(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 240 */ js.Any): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 242 */ js.Any): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setEnd(value: Double): Self = this.set("end", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setEndNull: Self = this.set("end", null)
+    
+    @scala.inline
+    def setExtra(value: Record[String, _]): Self = this.set("extra", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExtra: Self = this.set("extra", js.undefined)
     
     @scala.inline
     def setInnerCommentsVarargs(value: Comment*): Self = this.set("innerComments", js.Array(value :_*))

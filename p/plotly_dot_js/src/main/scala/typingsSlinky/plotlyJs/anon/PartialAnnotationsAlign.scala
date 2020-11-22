@@ -1,5 +1,7 @@
 package typingsSlinky.plotlyJs.anon
 
+import typingsSlinky.plotlyJs.mod.XAxisName
+import typingsSlinky.plotlyJs.mod.YAxisName
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
 import typingsSlinky.plotlyJs.plotlyJsStrings.auto
 import typingsSlinky.plotlyJs.plotlyJsStrings.bottom
@@ -14,8 +16,6 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.pixel
 import typingsSlinky.plotlyJs.plotlyJsStrings.right
 import typingsSlinky.plotlyJs.plotlyJsStrings.start
 import typingsSlinky.plotlyJs.plotlyJsStrings.top
-import typingsSlinky.plotlyJs.plotlyJsStrings.x
-import typingsSlinky.plotlyJs.plotlyJsStrings.y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,11 +38,11 @@ trait PartialAnnotationsAlign extends js.Object {
   
   var ax: js.UndefOr[Double] = js.native
   
-  var axref: js.UndefOr[pixel] = js.native
+  var axref: js.UndefOr[pixel | XAxisName] = js.native
   
   var ay: js.UndefOr[Double] = js.native
   
-  var ayref: js.UndefOr[pixel] = js.native
+  var ayref: js.UndefOr[pixel | YAxisName] = js.native
   
   var bgcolor: js.UndefOr[String] = js.native
   
@@ -92,7 +92,7 @@ trait PartialAnnotationsAlign extends js.Object {
   
   var xclick: js.UndefOr[js.Any] = js.native
   
-  var xref: js.UndefOr[paper | x] = js.native
+  var xref: js.UndefOr[paper | XAxisName] = js.native
   
   var xshift: js.UndefOr[Double] = js.native
   
@@ -102,7 +102,7 @@ trait PartialAnnotationsAlign extends js.Object {
   
   var yclick: js.UndefOr[js.Any] = js.native
   
-  var yref: js.UndefOr[paper | y] = js.native
+  var yref: js.UndefOr[paper | YAxisName] = js.native
   
   var yshift: js.UndefOr[Double] = js.native
 }
@@ -172,7 +172,7 @@ object PartialAnnotationsAlign {
     def deleteAx: Self = this.set("ax", js.undefined)
     
     @scala.inline
-    def setAxref(value: pixel): Self = this.set("axref", value.asInstanceOf[js.Any])
+    def setAxref(value: pixel | XAxisName): Self = this.set("axref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAxref: Self = this.set("axref", js.undefined)
@@ -184,7 +184,7 @@ object PartialAnnotationsAlign {
     def deleteAy: Self = this.set("ay", js.undefined)
     
     @scala.inline
-    def setAyref(value: pixel): Self = this.set("ayref", value.asInstanceOf[js.Any])
+    def setAyref(value: pixel | YAxisName): Self = this.set("ayref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAyref: Self = this.set("ayref", js.undefined)
@@ -334,7 +334,7 @@ object PartialAnnotationsAlign {
     def deleteXclick: Self = this.set("xclick", js.undefined)
     
     @scala.inline
-    def setXref(value: paper | typingsSlinky.plotlyJs.plotlyJsStrings.x): Self = this.set("xref", value.asInstanceOf[js.Any])
+    def setXref(value: paper | XAxisName): Self = this.set("xref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteXref: Self = this.set("xref", js.undefined)
@@ -364,7 +364,7 @@ object PartialAnnotationsAlign {
     def deleteYclick: Self = this.set("yclick", js.undefined)
     
     @scala.inline
-    def setYref(value: paper | y): Self = this.set("yref", value.asInstanceOf[js.Any])
+    def setYref(value: paper | YAxisName): Self = this.set("yref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteYref: Self = this.set("yref", js.undefined)

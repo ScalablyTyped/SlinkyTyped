@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object lookup extends js.Object {
   
   def apply(ip: String): Null | Lookup_ = js.native
+  def apply(ip: Double): Null | Lookup_ = js.native
 }

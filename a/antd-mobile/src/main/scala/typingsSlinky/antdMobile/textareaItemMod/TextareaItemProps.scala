@@ -16,8 +16,13 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.antdMobile.antdMobileStrings.`additions removals`
 import typingsSlinky.antdMobile.antdMobileStrings.`additions text`
 import typingsSlinky.antdMobile.antdMobileStrings.`inline`
+import typingsSlinky.antdMobile.antdMobileStrings.`removals additions`
+import typingsSlinky.antdMobile.antdMobileStrings.`removals text`
+import typingsSlinky.antdMobile.antdMobileStrings.`text additions`
+import typingsSlinky.antdMobile.antdMobileStrings.`text removals`
 import typingsSlinky.antdMobile.antdMobileStrings.additions
 import typingsSlinky.antdMobile.antdMobileStrings.all
 import typingsSlinky.antdMobile.antdMobileStrings.ascending
@@ -175,7 +180,9 @@ trait TextareaItemProps extends TextAreaItemPropsType {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -327,7 +334,7 @@ trait TextareaItemProps extends TextAreaItemPropsType {
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyParams: js.UndefOr[String] = js.native
   
@@ -911,7 +918,9 @@ object TextareaItemProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1374,6 +1383,9 @@ object TextareaItemProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyParams(value: String): Self = this.set("keyParams", value.asInstanceOf[js.Any])

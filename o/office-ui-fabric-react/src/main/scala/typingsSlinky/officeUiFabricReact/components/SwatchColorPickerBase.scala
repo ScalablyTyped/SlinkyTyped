@@ -1,7 +1,9 @@
 package typingsSlinky.officeUiFabricReact.components
 
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorCellProps
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorPickerGridCellStyleProps
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorPickerGridCellStyles
@@ -12,7 +14,6 @@ import typingsSlinky.officeUiFabricReact.swatchColorPickerTypesMod.ISwatchColorP
 import typingsSlinky.officeUiFabricReact.swatchColorPickerTypesMod.ISwatchColorPickerStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -84,6 +85,11 @@ object SwatchColorPickerBase {
     
     @scala.inline
     def onColorChanged(value: (/* id */ js.UndefOr[String], /* color */ js.UndefOr[String]) => Unit): this.type = set("onColorChanged", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def onRenderColorCell(
+      value: (/* props */ js.UndefOr[IColorCellProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IColorCellProps], ReactElement | Null]]) => ReactElement | Null
+    ): this.type = set("onRenderColorCell", js.Any.fromFunction2(value))
     
     @scala.inline
     def positionInSet(value: Double): this.type = set("positionInSet", value.asInstanceOf[js.Any])

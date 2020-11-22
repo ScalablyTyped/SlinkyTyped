@@ -3,7 +3,6 @@ package typingsSlinky.gestalt.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.anon.ActiveTabIndex
-import typingsSlinky.gestalt.anon.Href
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.mod.TabsProps
@@ -32,7 +31,11 @@ object Tabs {
   def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(activeTabIndex: Double, onChange: ActiveTabIndex => Unit, tabs: js.Array[Href]): Builder = {
+  def apply(
+    activeTabIndex: Double,
+    onChange: ActiveTabIndex => Unit,
+    tabs: js.Array[typingsSlinky.gestalt.anon.Text]
+  ): Builder = {
     val __props = js.Dynamic.literal(activeTabIndex = activeTabIndex.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), tabs = tabs.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[TabsProps]))
   }

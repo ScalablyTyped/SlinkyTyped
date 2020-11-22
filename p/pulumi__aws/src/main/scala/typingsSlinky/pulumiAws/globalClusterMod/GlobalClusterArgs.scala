@@ -18,9 +18,6 @@ trait GlobalClusterArgs extends js.Object {
     */
   val deletionProtection: js.UndefOr[Input[Boolean]] = js.native
   
-  /**
-    * Name of the database engine to be used for this DB cluster. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`.
-    */
   val engine: js.UndefOr[Input[String]] = js.native
   
   /**
@@ -30,13 +27,17 @@ trait GlobalClusterArgs extends js.Object {
   val engineVersion: js.UndefOr[Input[String]] = js.native
   
   /**
+    * Enable to remove DB Cluster members from Global Cluster on destroy. Required with `sourceDbClusterIdentifier`.
+    */
+  val forceDestroy: js.UndefOr[Input[Boolean]] = js.native
+  
+  /**
     * The global cluster identifier.
     */
   val globalClusterIdentifier: Input[String] = js.native
   
-  /**
-    * Specifies whether the DB cluster is encrypted. The default is `false`.
-    */
+  val sourceDbClusterIdentifier: js.UndefOr[Input[String]] = js.native
+  
   val storageEncrypted: js.UndefOr[Input[Boolean]] = js.native
 }
 object GlobalClusterArgs {
@@ -88,6 +89,18 @@ object GlobalClusterArgs {
     
     @scala.inline
     def deleteEngineVersion: Self = this.set("engineVersion", js.undefined)
+    
+    @scala.inline
+    def setForceDestroy(value: Input[Boolean]): Self = this.set("forceDestroy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteForceDestroy: Self = this.set("forceDestroy", js.undefined)
+    
+    @scala.inline
+    def setSourceDbClusterIdentifier(value: Input[String]): Self = this.set("sourceDbClusterIdentifier", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSourceDbClusterIdentifier: Self = this.set("sourceDbClusterIdentifier", js.undefined)
     
     @scala.inline
     def setStorageEncrypted(value: Input[Boolean]): Self = this.set("storageEncrypted", value.asInstanceOf[js.Any])

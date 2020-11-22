@@ -1,6 +1,7 @@
 package typingsSlinky.xstate.typesMod
 
 import typingsSlinky.std.Record
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -84,7 +85,7 @@ object TransitionConfig {
     def deleteMeta: Self = this.set("meta", js.undefined)
     
     @scala.inline
-    def setTargetVarargs(value: (String | (StateNode[TContext, js.Any, TEvent, js.Any]))*): Self = this.set("target", js.Array(value :_*))
+    def setTargetVarargs(value: (String | (StateNode[TContext, js.Any, TEvent, ContextTContext[TContext]]))*): Self = this.set("target", js.Array(value :_*))
     
     @scala.inline
     def setTarget(value: TransitionTarget[TContext, TEvent]): Self = this.set("target", value.asInstanceOf[js.Any])

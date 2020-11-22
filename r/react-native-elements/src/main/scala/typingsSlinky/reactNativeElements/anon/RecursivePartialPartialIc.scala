@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeElements.anon
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -18,27 +19,31 @@ import typingsSlinky.reactNative.mod.ImageResizeMode
 import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.TargetedEvent
+import typingsSlinky.reactNative.mod.TextLayoutEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.mod.IconType
 import typingsSlinky.reactNativeElements.mod.RecursivePartial
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.`no-hide-descendants`
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.all
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.assertive
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.auto
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.balanced
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.button
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.clip
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.email
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.head
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.highQuality
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.link
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.middle
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.no
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.none
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.phoneNumber
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.polite
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.radiobutton_checked
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.radiobutton_unchecked
@@ -47,6 +52,7 @@ import typingsSlinky.reactNativeElements.reactNativeElementsStrings.scale
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.simple
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.tail
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.yes
+import typingsSlinky.reactNativeVectorIcons.iconMod.IconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -119,6 +125,8 @@ trait RecursivePartialPartialIc extends js.Object {
   
   var containerStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.native
   
+  var dataDetectorType: js.UndefOr[RecursivePartial[js.UndefOr[Null | phoneNumber | link | email | none | all]]] = js.native
+  
   var defaultSource: js.UndefOr[RecursivePartial[js.UndefOr[ImageURISource | Double]]] = js.native
   
   var delayLongPress: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
@@ -140,6 +148,8 @@ trait RecursivePartialPartialIc extends js.Object {
   var height: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
   
   var hitSlop: js.UndefOr[RecursivePartial[js.UndefOr[Insets]]] = js.native
+  
+  var iconProps: js.UndefOr[RecursivePartial[js.UndefOr[IconProps]]] = js.native
   
   var iconStyle: js.UndefOr[RecursivePartial[js.UndefOr[TextStyle]]] = js.native
   
@@ -183,7 +193,9 @@ trait RecursivePartialPartialIc extends js.Object {
   
   var onHideUnderlay: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
   
-  var onLayout: js.UndefOr[RecursivePartial[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]] = js.native
+  var onLayout: js.UndefOr[
+    RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]]]
+  ] = js.native
   
   var onLoad: js.UndefOr[
     RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ImageLoadEventData], Unit]]]
@@ -220,6 +232,10 @@ trait RecursivePartialPartialIc extends js.Object {
   ] = js.native
   
   var onShowUnderlay: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
+  
+  var onTextLayout: js.UndefOr[
+    RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextLayoutEventData], Unit]]]
+  ] = js.native
   
   var placeholderStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.native
   
@@ -258,6 +274,8 @@ trait RecursivePartialPartialIc extends js.Object {
   var touchSoundDisabled: js.UndefOr[RecursivePartial[js.UndefOr[Boolean | Null]]] = js.native
   
   var transition: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  
+  var transitionDuration: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
   
   var tvParallaxProperties: js.UndefOr[RecursivePartial[js.UndefOr[TVParallaxProperties]]] = js.native
   
@@ -479,6 +497,12 @@ object RecursivePartialPartialIc {
     def deleteContainerStyle: Self = this.set("containerStyle", js.undefined)
     
     @scala.inline
+    def setDataDetectorType(value: RecursivePartial[js.UndefOr[Null | phoneNumber | link | email | none | all]]): Self = this.set("dataDetectorType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataDetectorType: Self = this.set("dataDetectorType", js.undefined)
+    
+    @scala.inline
     def setDefaultSource(value: RecursivePartial[js.UndefOr[ImageURISource | Double]]): Self = this.set("defaultSource", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -543,6 +567,12 @@ object RecursivePartialPartialIc {
     
     @scala.inline
     def deleteHitSlop: Self = this.set("hitSlop", js.undefined)
+    
+    @scala.inline
+    def setIconProps(value: RecursivePartial[js.UndefOr[IconProps]]): Self = this.set("iconProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIconProps: Self = this.set("iconProps", js.undefined)
     
     @scala.inline
     def setIconStyle(value: RecursivePartial[js.UndefOr[TextStyle]]): Self = this.set("iconStyle", value.asInstanceOf[js.Any])
@@ -647,7 +677,7 @@ object RecursivePartialPartialIc {
     def deleteOnHideUnderlay: Self = this.set("onHideUnderlay", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: RecursivePartial[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]): Self = this.set("onLayout", value.asInstanceOf[js.Any])
+    def setOnLayout(value: RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]]]): Self = this.set("onLayout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -731,6 +761,14 @@ object RecursivePartialPartialIc {
     
     @scala.inline
     def deleteOnShowUnderlay: Self = this.set("onShowUnderlay", js.undefined)
+    
+    @scala.inline
+    def setOnTextLayout(
+      value: RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextLayoutEventData], Unit]]]
+    ): Self = this.set("onTextLayout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOnTextLayout: Self = this.set("onTextLayout", js.undefined)
     
     @scala.inline
     def setPlaceholderStyle(value: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]): Self = this.set("placeholderStyle", value.asInstanceOf[js.Any])
@@ -845,6 +883,12 @@ object RecursivePartialPartialIc {
     
     @scala.inline
     def deleteTransition: Self = this.set("transition", js.undefined)
+    
+    @scala.inline
+    def setTransitionDuration(value: RecursivePartial[js.UndefOr[Double]]): Self = this.set("transitionDuration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTransitionDuration: Self = this.set("transitionDuration", js.undefined)
     
     @scala.inline
     def setTvParallaxProperties(value: RecursivePartial[js.UndefOr[TVParallaxProperties]]): Self = this.set("tvParallaxProperties", value.asInstanceOf[js.Any])

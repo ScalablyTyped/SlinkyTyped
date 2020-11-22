@@ -11,4 +11,8 @@ trait Debug extends js.Object {
   
   def error(err: String): Unit = js.native
   def error(err: js.Error): Unit = js.native
+  
+  def info(message: String): Unit = js.native
+  
+  def warn(message: String): Unit = js.native
 }

@@ -80,5 +80,8 @@ object Result {
     
     @scala.inline
     def deleteImpact: Self = this.set("impact", js.undefined)
+    
+    @scala.inline
+    def setImpactNull: Self = this.set("impact", null)
   }
 }

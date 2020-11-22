@@ -20,6 +20,9 @@ trait Assert extends js.Object {
   def beforeTime(`val`: Date, exp: Date): Unit = js.native
   def beforeTime(`val`: Date, exp: Date, msg: String): Unit = js.native
   
+  def closeToTime(`val`: Date, exp: Date, deltaInSeconds: Double): Unit = js.native
+  def closeToTime(`val`: Date, exp: Date, deltaInSeconds: Double, msg: String): Unit = js.native
+  
   def equalDate(`val`: Date, exp: Date): Unit = js.native
   def equalDate(`val`: Date, exp: Date, msg: String): Unit = js.native
   

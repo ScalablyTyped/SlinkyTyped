@@ -16,6 +16,11 @@ trait ListBucketMetricsConfigurationsRequest extends js.Object {
     * The marker that is used to continue a metrics configuration listing that has been truncated. Use the NextContinuationToken from a previously truncated list response to continue the listing. The continuation token is an opaque value that Amazon S3 understands.
     */
   var ContinuationToken: js.UndefOr[Token] = js.native
+  
+  /**
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
 }
 object ListBucketMetricsConfigurationsRequest {
   
@@ -48,5 +53,11 @@ object ListBucketMetricsConfigurationsRequest {
     
     @scala.inline
     def deleteContinuationToken: Self = this.set("ContinuationToken", js.undefined)
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
   }
 }

@@ -13,11 +13,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *         .setSwitch(CardService.newSwitch()
   *             .setFieldName("form_input_switch_key")
   *             .setValue("form_input_switch_value")
+  *             .setControlType(CardService.SwitchControlType.SWITCH)
   *             .setOnChangeAction(CardService.newAction()
   *                 .setFunctionName("handleSwitchChange")));
   */
 @js.native
 trait Switch extends js.Object {
+  
+  def setControlType(`type`: SwitchControlType): Switch = js.native
   
   def setFieldName(fieldName: String): Switch = js.native
   
@@ -31,12 +34,13 @@ object Switch {
   
   @scala.inline
   def apply(
+    setControlType: SwitchControlType => Switch,
     setFieldName: String => Switch,
     setOnChangeAction: Action => Switch,
     setSelected: Boolean => Switch,
     setValue: String => Switch
   ): Switch = {
-    val __obj = js.Dynamic.literal(setFieldName = js.Any.fromFunction1(setFieldName), setOnChangeAction = js.Any.fromFunction1(setOnChangeAction), setSelected = js.Any.fromFunction1(setSelected), setValue = js.Any.fromFunction1(setValue))
+    val __obj = js.Dynamic.literal(setControlType = js.Any.fromFunction1(setControlType), setFieldName = js.Any.fromFunction1(setFieldName), setOnChangeAction = js.Any.fromFunction1(setOnChangeAction), setSelected = js.Any.fromFunction1(setSelected), setValue = js.Any.fromFunction1(setValue))
     __obj.asInstanceOf[Switch]
   }
   
@@ -54,6 +58,9 @@ object Switch {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setSetControlType(value: SwitchControlType => Switch): Self = this.set("setControlType", js.Any.fromFunction1(value))
     
     @scala.inline
     def setSetFieldName(value: String => Switch): Self = this.set("setFieldName", js.Any.fromFunction1(value))

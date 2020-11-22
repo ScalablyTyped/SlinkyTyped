@@ -2,12 +2,17 @@ package typingsSlinky.chartJs.mod
 
 import org.scalajs.dom.raw.CanvasGradient
 import org.scalajs.dom.raw.CanvasPattern
+import typingsSlinky.chartJs.chartJsStrings.x
+import typingsSlinky.chartJs.chartJsStrings.xy
+import typingsSlinky.chartJs.chartJsStrings.y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ChartTooltipOptions extends js.Object {
+  
+  var axis: js.UndefOr[x | y | xy] = js.native
   
   var backgroundColor: js.UndefOr[ChartColor] = js.native
   
@@ -74,6 +79,10 @@ trait ChartTooltipOptions extends js.Object {
   
   var position: js.UndefOr[String] = js.native
   
+  var rtl: js.UndefOr[Boolean] = js.native
+  
+  var textDirection: js.UndefOr[String] = js.native
+  
   var titleAlign: js.UndefOr[TextAlignment] = js.native
   
   var titleFontColor: js.UndefOr[ChartColor] = js.native
@@ -114,6 +123,12 @@ object ChartTooltipOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAxis(value: typingsSlinky.chartJs.chartJsStrings.x | y | xy): Self = this.set("axis", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAxis: Self = this.set("axis", js.undefined)
     
     @scala.inline
     def setBackgroundColorVarargs(value: String*): Self = this.set("backgroundColor", js.Array(value :_*))
@@ -326,6 +341,18 @@ object ChartTooltipOptions {
     
     @scala.inline
     def deletePosition: Self = this.set("position", js.undefined)
+    
+    @scala.inline
+    def setRtl(value: Boolean): Self = this.set("rtl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRtl: Self = this.set("rtl", js.undefined)
+    
+    @scala.inline
+    def setTextDirection(value: String): Self = this.set("textDirection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTextDirection: Self = this.set("textDirection", js.undefined)
     
     @scala.inline
     def setTitleAlign(value: TextAlignment): Self = this.set("titleAlign", value.asInstanceOf[js.Any])

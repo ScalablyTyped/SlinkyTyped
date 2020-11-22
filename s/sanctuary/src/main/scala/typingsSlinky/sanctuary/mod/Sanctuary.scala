@@ -154,9 +154,13 @@ object Sanctuary extends js.Object {
     
     def fromEither[B](p: B): js.Function1[/* q */ Either[_, B], B] = js.native
     
+    def fromLeft[A](p: A): js.Function1[/* q */ Either[A, _], A] = js.native
+    
     def fromMaybe[A](p: A): js.Function1[/* q */ Maybe[A], A] = js.native
     
     def fromMaybe_[A](p: Thunk[A]): js.Function1[/* q */ Maybe[A], A] = js.native
+    
+    def fromRight[B](p: B): js.Function1[/* q */ Either[_, B], B] = js.native
     
     def fst[A, B](p: Pair[A, B]): A = js.native
     

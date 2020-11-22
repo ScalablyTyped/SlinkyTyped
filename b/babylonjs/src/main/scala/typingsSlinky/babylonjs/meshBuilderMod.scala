@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.anon.Angle
-import typingsSlinky.babylonjs.anon.BackUVsDepth
+import typingsSlinky.babylonjs.anon.BottomBaseAt
 import typingsSlinky.babylonjs.anon.Cap
 import typingsSlinky.babylonjs.anon.Clip
 import typingsSlinky.babylonjs.anon.CloseArray
@@ -17,14 +17,16 @@ import typingsSlinky.babylonjs.anon.Path
 import typingsSlinky.babylonjs.anon.Points
 import typingsSlinky.babylonjs.anon.Q
 import typingsSlinky.babylonjs.anon.RadiusFunction
-import typingsSlinky.babylonjs.anon.RadiusX
+import typingsSlinky.babylonjs.anon.RadiusY
+import typingsSlinky.babylonjs.anon.Shape
 import typingsSlinky.babylonjs.anon.Size
 import typingsSlinky.babylonjs.anon.SubdivisionsX
 import typingsSlinky.babylonjs.anon.Tessellation
 import typingsSlinky.babylonjs.anon.Thickness
 import typingsSlinky.babylonjs.anon.TileHeight
 import typingsSlinky.babylonjs.anon.TileSize
-import typingsSlinky.babylonjs.anon.Xmax
+import typingsSlinky.babylonjs.anon.Updatable
+import typingsSlinky.babylonjs.capsuleBuilderMod.ICreateCapsuleOptions
 import typingsSlinky.babylonjs.groundMeshMod.GroundMesh
 import typingsSlinky.babylonjs.linesMeshMod.LinesMesh
 import typingsSlinky.babylonjs.meshMod.Mesh
@@ -59,8 +61,21 @@ object meshBuilderMod extends js.Object {
       * @param scene defines the hosting scene
       * @returns the box mesh
       */
-    def CreateBox(name: String, options: BackUVsDepth): Mesh = js.native
-    def CreateBox(name: String, options: BackUVsDepth, scene: Nullable[Scene]): Mesh = js.native
+    def CreateBox(name: String, options: BottomBaseAt): Mesh = js.native
+    def CreateBox(name: String, options: BottomBaseAt, scene: Nullable[Scene]): Mesh = js.native
+    
+    /**
+      * Creates a Capsule Mesh
+      * @param name defines the name of the mesh.
+      * @param options the constructors options used to shape the mesh.
+      * @param scene defines the scene the mesh is scoped to.
+      * @returns the capsule mesh
+      * @see https://doc.babylonjs.com/how_to/capsule_shape
+      */
+    def CreateCapsule(name: String): Mesh = js.native
+    def CreateCapsule(name: String, options: js.UndefOr[scala.Nothing], scene: Nullable[Scene]): Mesh = js.native
+    def CreateCapsule(name: String, options: ICreateCapsuleOptions): Mesh = js.native
+    def CreateCapsule(name: String, options: ICreateCapsuleOptions, scene: Nullable[Scene]): Mesh = js.native
     
     /**
       * Creates a cylinder or a cone mesh
@@ -197,8 +212,8 @@ object meshBuilderMod extends js.Object {
       * @returns the icosahedron mesh
       * @see https://doc.babylonjs.com/how_to/polyhedra_shapes#icosphere
       */
-    def CreateIcoSphere(name: String, options: RadiusX): Mesh = js.native
-    def CreateIcoSphere(name: String, options: RadiusX, scene: Nullable[Scene]): Mesh = js.native
+    def CreateIcoSphere(name: String, options: RadiusY): Mesh = js.native
+    def CreateIcoSphere(name: String, options: RadiusY, scene: Nullable[Scene]): Mesh = js.native
     
     /**
       * Creates lathe mesh.
@@ -292,9 +307,9 @@ object meshBuilderMod extends js.Object {
       * @param earcutInjection can be used to inject your own earcut reference
       * @returns the polygon mesh
       */
-    def CreatePolygon(name: String, options: Holes): Mesh = js.native
-    def CreatePolygon(name: String, options: Holes, scene: js.UndefOr[Nullable[Scene]], earcutInjection: js.Any): Mesh = js.native
-    def CreatePolygon(name: String, options: Holes, scene: Nullable[Scene]): Mesh = js.native
+    def CreatePolygon(name: String, options: Shape): Mesh = js.native
+    def CreatePolygon(name: String, options: Shape, scene: js.UndefOr[Nullable[Scene]], earcutInjection: js.Any): Mesh = js.native
+    def CreatePolygon(name: String, options: Shape, scene: Nullable[Scene]): Mesh = js.native
     
     /**
       * Creates a polyhedron mesh
@@ -388,8 +403,8 @@ object meshBuilderMod extends js.Object {
       * @returns the tiled ground mesh
       * @see https://doc.babylonjs.com/how_to/set_shapes#tiled-ground
       */
-    def CreateTiledGround(name: String, options: Xmax): Mesh = js.native
-    def CreateTiledGround(name: String, options: Xmax, scene: Nullable[Scene]): Mesh = js.native
+    def CreateTiledGround(name: String, options: Updatable): Mesh = js.native
+    def CreateTiledGround(name: String, options: Updatable, scene: Nullable[Scene]): Mesh = js.native
     
     /**
       * Creates a tiled plane mesh

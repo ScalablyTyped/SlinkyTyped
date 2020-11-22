@@ -11,7 +11,7 @@ class Asset protected () extends js.Object {
   
   var _downloadCallbacks: js.Array[DownloadPromiseCallbacks] = js.native
   
-  def downloadAsync(): js.Promise[Unit] = js.native
+  def downloadAsync(): js.Promise[this.type] = js.native
   
   var downloaded: Boolean = js.native
   
@@ -43,6 +43,7 @@ object Asset extends js.Object {
   
   def fromURI(uri: String): Asset = js.native
   
-  def loadAsync(moduleId: js.Array[Double]): js.Promise[js.Array[Unit]] = js.native
-  def loadAsync(moduleId: Double): js.Promise[js.Array[Unit]] = js.native
+  def loadAsync(moduleId: String): js.Promise[js.Array[Asset]] = js.native
+  def loadAsync(moduleId: js.Array[Double | String]): js.Promise[js.Array[Asset]] = js.native
+  def loadAsync(moduleId: Double): js.Promise[js.Array[Asset]] = js.native
 }

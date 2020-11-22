@@ -1,6 +1,5 @@
 package typingsSlinky.popmotionPose.typesMod
 
-import typingsSlinky.popmotion.mod.ValueReaction
 import typingsSlinky.styleValueTypes.typesMod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,14 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Value extends js.Object {
   
-  var raw: ValueReaction = js.native
+  var raw: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ValueReaction */ js.Any = js.native
   
   var `type`: js.UndefOr[ValueType] = js.native
 }
 object Value {
   
   @scala.inline
-  def apply(raw: ValueReaction): Value = {
+  def apply(
+    raw: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ValueReaction */ js.Any
+  ): Value = {
     val __obj = js.Dynamic.literal(raw = raw.asInstanceOf[js.Any])
     __obj.asInstanceOf[Value]
   }
@@ -37,7 +38,9 @@ object Value {
     }
     
     @scala.inline
-    def setRaw(value: ValueReaction): Self = this.set("raw", value.asInstanceOf[js.Any])
+    def setRaw(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ValueReaction */ js.Any
+    ): Self = this.set("raw", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: ValueType): Self = this.set("type", value.asInstanceOf[js.Any])

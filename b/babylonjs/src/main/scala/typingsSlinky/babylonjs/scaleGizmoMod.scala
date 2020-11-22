@@ -1,7 +1,10 @@
 package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.axisScaleGizmoMod.AxisScaleGizmo
+import typingsSlinky.babylonjs.gizmoManagerMod.GizmoManager
 import typingsSlinky.babylonjs.gizmoMod.Gizmo
+import typingsSlinky.babylonjs.gizmoMod.GizmoAxisCache
+import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer
 import scala.scalajs.js
@@ -16,15 +19,40 @@ object scaleGizmoMod extends js.Object {
   /**
     * Creates a ScaleGizmo
     * @param gizmoLayer The utility layer the gizmo will be added to
+    * @param thickness display gizmo axis thickness
     */
   class ScaleGizmo () extends Gizmo {
     def this(gizmoLayer: UtilityLayerRenderer) = this()
+    def this(gizmoLayer: js.UndefOr[scala.Nothing], thickness: Double) = this()
+    def this(gizmoLayer: UtilityLayerRenderer, thickness: Double) = this()
+    def this(
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      thickness: js.UndefOr[scala.Nothing],
+      gizmoManager: GizmoManager
+    ) = this()
+    def this(gizmoLayer: js.UndefOr[scala.Nothing], thickness: Double, gizmoManager: GizmoManager) = this()
+    def this(gizmoLayer: UtilityLayerRenderer, thickness: js.UndefOr[scala.Nothing], gizmoManager: GizmoManager) = this()
+    def this(gizmoLayer: UtilityLayerRenderer, thickness: Double, gizmoManager: GizmoManager) = this()
+    
+    var _coloredMaterial: js.Any = js.native
+    
+    /** Create Geometry for Gizmo */
+    var _createUniformScaleMesh: js.Any = js.native
+    
+    var _disableMaterial: js.Any = js.native
+    
+    /** Node Caching for quick lookup */
+    var _gizmoAxisCache: js.Any = js.native
+    
+    var _hoverMaterial: js.Any = js.native
     
     var _meshAttached: js.Any = js.native
     
-    var _octahedron: js.Any = js.native
+    var _nodeAttached: js.Any = js.native
     
-    var _scaleRatio: js.Any = js.native
+    var _observables: js.Any = js.native
+    
+    var _octahedron: js.Any = js.native
     
     var _sensitivity: js.Any = js.native
     
@@ -32,16 +60,18 @@ object scaleGizmoMod extends js.Object {
     
     var _uniformScalingMesh: js.Any = js.native
     
-    var _updateGizmoRotationToMatchAttachedMesh: js.Any = js.native
+    /**
+      * Builds Gizmo Axis Cache to enable features such as hover state preservation and graying out other axis during manipulation
+      * @param mesh Axis gizmo mesh
+      * @param cache Gizmo axis definition used for reactive gizmo UI
+      */
+    def addToAxisCache(mesh: Mesh, cache: GizmoAxisCache): Unit = js.native
     
     /** Fires an event when any of it's sub gizmos are released from dragging */
     var onDragEndObservable: Observable[_] = js.native
     
     /** Fires an event when any of it's sub gizmos are dragged */
     var onDragStartObservable: Observable[_] = js.native
-    
-    @JSName("scaleRatio")
-    def scaleRatio_MScaleGizmo: Double = js.native
     
     def sensitivity: Double = js.native
     /**
@@ -59,9 +89,6 @@ object scaleGizmoMod extends js.Object {
       * Internal gizmo used to scale all axis equally
       */
     var uniformScaleGizmo: AxisScaleGizmo = js.native
-    
-    @JSName("updateGizmoRotationToMatchAttachedMesh")
-    def updateGizmoRotationToMatchAttachedMesh_MScaleGizmo: Boolean = js.native
     
     /**
       * Internal gizmo used for interactions on the x axis

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AssignTapePoolInput extends js.Object {
   
   /**
+    * Set permissions to bypass governance retention. If the lock type of the archived tape is Governance, the tape's archived age is not older than RetentionLockInDays, and the user does not already have BypassGovernanceRetention, setting this to TRUE enables the user to bypass the retention lock. This parameter is set to true by default for calls from the console. Valid values: TRUE | FALSE 
+    */
+  var BypassGovernanceRetention: js.UndefOr[scala.Boolean] = js.native
+  
+  /**
     * The ID of the pool that you want to add your tape to for archiving. The tape in this pool is archived in the S3 storage class that is associated with the pool. When you use your backup application to eject the tape, the tape is archived directly into the storage class (S3 Glacier or S3 Glacier Deep Archive) that corresponds to the pool. Valid Values: GLACIER | DEEP_ARCHIVE 
     */
   var PoolId: typingsSlinky.awsSdk.storagegatewayMod.PoolId = js.native
@@ -45,5 +50,11 @@ object AssignTapePoolInput {
     
     @scala.inline
     def setTapeARN(value: TapeARN): Self = this.set("TapeARN", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBypassGovernanceRetention(value: scala.Boolean): Self = this.set("BypassGovernanceRetention", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBypassGovernanceRetention: Self = this.set("BypassGovernanceRetention", js.undefined)
   }
 }

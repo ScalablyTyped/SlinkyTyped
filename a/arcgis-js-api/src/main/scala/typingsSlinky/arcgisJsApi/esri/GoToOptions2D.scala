@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GoToOptions2D extends Object {
   
   /**
-    * Indicates if the transition to the new view should be animated. If set to false, `duration` and `easing` properties are ignored.
+    * Indicates if the transition to the new view should be animated.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#GoToOptions2D)
     */
@@ -30,14 +30,14 @@ trait GoToOptions2D extends Object {
   var duration: js.UndefOr[Double] = js.native
   
   /**
-    * The easing function used for the animation. See [easing functions](https://easings.net/) for graphical representations of these functions.
+    * The easing function used for the animation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#GoToOptions2D)
     */
   var easing: js.UndefOr[linear | ease | `ease-in` | `ease-out` | `ease-in-out` | js.Function] = js.native
   
   /**
-    * An [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) to abort the animation. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+    * An [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) to abort the animation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#GoToOptions2D)
     */

@@ -19,7 +19,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.`[baseProfile]`
   - typingsSlinky.csstype.csstypeStrings.`[baseline-shift]`
   - typingsSlinky.csstype.csstypeStrings.`[bbox]`
-  - typingsSlinky.csstype.csstypeStrings.`[begin]`
   - typingsSlinky.csstype.csstypeStrings.`[bias]`
   - typingsSlinky.csstype.csstypeStrings.`[by]`
   - typingsSlinky.csstype.csstypeStrings.`[calcMode]`
@@ -297,9 +296,6 @@ object SvgAttributes {
   
   @scala.inline
   def `[bbox]`: typingsSlinky.csstype.csstypeStrings.`[bbox]` = "[bbox]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[bbox]`]
-  
-  @scala.inline
-  def `[begin]`: typingsSlinky.csstype.csstypeStrings.`[begin]` = "[begin]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[begin]`]
   
   @scala.inline
   def `[bias]`: typingsSlinky.csstype.csstypeStrings.`[bias]` = "[bias]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[bias]`]

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SharedWorkerInfo extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/shared-worker-info
+  // Docs: https://electronjs.org/docs/api/structures/shared-worker-info
   /**
     * The unique id of the shared worker.
     */

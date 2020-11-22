@@ -3,6 +3,7 @@ package typingsSlinky.muiDatatables.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableFilter
+import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,7 +29,7 @@ object TableFilter {
     def filterList(value: js.Array[js.Array[String]]): this.type = set("filterList", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onFilterRest(value: /* args */ js.Any => _): this.type = set("onFilterRest", js.Any.fromFunction1(value))
+    def onFilterReset(value: /* args */ js.Any => _): this.type = set("onFilterReset", js.Any.fromFunction1(value))
     
     @scala.inline
     def onFilterUpdate(value: /* args */ js.Any => _): this.type = set("onFilterUpdate", js.Any.fromFunction1(value))
@@ -37,7 +38,7 @@ object TableFilter {
   def withProps(p: MUIDataTableFilter): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(filterData: js.Array[_], options: js.Object): Builder = {
+  def apply(filterData: js.Array[_], options: MUIDataTableOptions): Builder = {
     val __props = js.Dynamic.literal(filterData = filterData.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[MUIDataTableFilter]))
   }

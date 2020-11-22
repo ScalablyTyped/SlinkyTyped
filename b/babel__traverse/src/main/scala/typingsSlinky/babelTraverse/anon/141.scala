@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ArrowFunctionExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.ObjectProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `141` extends js.Object {
   
-  var `type`: ArrowFunctionExpression = js.native
+  var `type`: ObjectProperty = js.native
 }
 object `141` {
   
   @scala.inline
-  def apply(`type`: ArrowFunctionExpression): `141` = {
+  def apply(`type`: ObjectProperty): `141` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`141`]
@@ -35,6 +35,6 @@ object `141` {
     }
     
     @scala.inline
-    def setType(value: ArrowFunctionExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ObjectProperty): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

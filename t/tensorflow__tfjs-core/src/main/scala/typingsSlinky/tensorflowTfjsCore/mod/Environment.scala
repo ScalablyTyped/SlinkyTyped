@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@tensorflow/tfjs-core", "Environment")
 @js.native
 class Environment protected ()
-  extends typingsSlinky.tensorflowTfjsCore.environmentMod.Environment {
+  extends typingsSlinky.tensorflowTfjsCore.baseMod.Environment {
   def this(global: js.Any) = this()
 }

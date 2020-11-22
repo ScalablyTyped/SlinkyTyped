@@ -16,11 +16,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object testAccessMod extends js.Object {
   
-  val ConnectionTarget: Instantiable6[
+  val ConnectionTarget: Instantiable7[
     /* host */ String, 
     /* secure */ Boolean, 
     /* namespace */ String, 
     /* webSocketOnly */ Boolean, 
+    /* nodeAdmin */ js.UndefOr[Boolean], 
     /* persistenceKey */ js.UndefOr[String], 
     /* includeNamespaceInQueryParams */ js.UndefOr[Boolean], 
     RepoInfo

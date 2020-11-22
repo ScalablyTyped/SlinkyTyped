@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashDifference extends LodashConvertible {
+trait LodashDifference extends js.Object {
   
   def apply[T](): LodashDifference1x1[T] = js.native
   def apply[T](array: js.UndefOr[scala.Nothing], values: List[T]): js.Array[T] = js.native

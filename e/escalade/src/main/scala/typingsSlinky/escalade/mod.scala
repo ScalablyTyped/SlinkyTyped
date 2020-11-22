@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def apply(directory: String, callback: Callback): js.Promise[String | Unit] = js.native
+  def default(directory: String, callback: Callback): js.Promise[String | Unit] = js.native
   
   type Callback = js.Function2[
     /* directory */ String, 

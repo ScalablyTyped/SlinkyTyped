@@ -13,7 +13,7 @@ trait RemoveAttributesActivity extends js.Object {
   var attributes: AttributeNames = js.native
   
   /**
-    * The name of the 'removeAttributes' activity.
+    * The name of the removeAttributes activity.
     */
   var name: ActivityName = js.native
   

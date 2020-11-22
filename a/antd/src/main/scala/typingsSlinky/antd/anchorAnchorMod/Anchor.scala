@@ -57,4 +57,6 @@ trait Anchor extends Component[AnchorProps, AnchorState, ConfigConsumerProps] {
   def unregisterLink(link: String): Unit = js.native
   
   def updateInk(): Unit = js.native
+  
+  var wrapperRef: js.Any = js.native
 }

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FoldingRangeProvider extends js.Object {
   
   /**
-    * Provides the color ranges for a specific model.
+    * Provides the folding ranges for a specific model.
     */
   def provideFoldingRanges(model: ITextModel, context: FoldingContext, token: CancellationToken): ProviderResult[js.Array[FoldingRange]] = js.native
 }

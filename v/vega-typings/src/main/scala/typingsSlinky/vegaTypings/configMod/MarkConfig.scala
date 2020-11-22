@@ -1,6 +1,7 @@
 package typingsSlinky.vegaTypings.configMod
 
 import typingsSlinky.vegaTypings.colorMod.Color
+import typingsSlinky.vegaTypings.dataMod.URI
 import typingsSlinky.vegaTypings.encodeMod.Align
 import typingsSlinky.vegaTypings.encodeMod.Blend
 import typingsSlinky.vegaTypings.encodeMod.FontStyle
@@ -57,7 +58,7 @@ trait MarkConfig extends js.Object {
   /**
     * Whether to keep aspect ratio of image marks.
     */
-  var aspect: js.UndefOr[Boolean] = js.native
+  var aspect: js.UndefOr[Boolean | SignalRef] = js.native
   
   /**
     * The vertical alignment of the text. One of `"top"`, `"bottom"`, `"middle"`, `"alphabetic"`.
@@ -201,10 +202,8 @@ trait MarkConfig extends js.Object {
   
   /**
     * A URL to load upon mouse click. If defined, the mark acts as a hyperlink.
-    *
-    * @format uri
     */
-  var href: js.UndefOr[String | SignalRef] = js.native
+  var href: js.UndefOr[URI | SignalRef] = js.native
   
   /**
     * The inner radius in pixels of arc marks.
@@ -305,6 +304,11 @@ trait MarkConfig extends js.Object {
   var size: js.UndefOr[Double | SignalRef] = js.native
   
   /**
+    * A boolean flag (default true) indicating if the image should be smoothed when resized. If false, individual pixels should be scaled directly rather than interpolated with smoothing. For SVG rendering, this option may not work in some browsers due to lack of standardization.
+    */
+  var smooth: js.UndefOr[Boolean | SignalRef] = js.native
+  
+  /**
     * The start angle in radians for arc marks.
     * A value of `0` indicates up (north), increasing values proceed clockwise.
     */
@@ -393,6 +397,11 @@ trait MarkConfig extends js.Object {
   var tooltip: js.UndefOr[String | SignalRef] = js.native
   
   /**
+    * The URL of the image file for image marks.
+    */
+  var url: js.UndefOr[URI | SignalRef] = js.native
+  
+  /**
     * Width of the marks.
     */
   var width: js.UndefOr[Double | SignalRef] = js.native
@@ -451,7 +460,7 @@ object MarkConfig {
     def deleteAriaRoleDescription: Self = this.set("ariaRoleDescription", js.undefined)
     
     @scala.inline
-    def setAspect(value: Boolean): Self = this.set("aspect", value.asInstanceOf[js.Any])
+    def setAspect(value: Boolean | SignalRef): Self = this.set("aspect", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAspect: Self = this.set("aspect", js.undefined)
@@ -589,7 +598,7 @@ object MarkConfig {
     def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
-    def setHref(value: String | SignalRef): Self = this.set("href", value.asInstanceOf[js.Any])
+    def setHref(value: URI | SignalRef): Self = this.set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHref: Self = this.set("href", js.undefined)
@@ -665,6 +674,12 @@ object MarkConfig {
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)
+    
+    @scala.inline
+    def setSmooth(value: Boolean | SignalRef): Self = this.set("smooth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSmooth: Self = this.set("smooth", js.undefined)
     
     @scala.inline
     def setStartAngle(value: Double | SignalRef): Self = this.set("startAngle", value.asInstanceOf[js.Any])
@@ -758,6 +773,12 @@ object MarkConfig {
     
     @scala.inline
     def deleteTooltip: Self = this.set("tooltip", js.undefined)
+    
+    @scala.inline
+    def setUrl(value: URI | SignalRef): Self = this.set("url", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUrl: Self = this.set("url", js.undefined)
     
     @scala.inline
     def setWidth(value: Double | SignalRef): Self = this.set("width", value.asInstanceOf[js.Any])

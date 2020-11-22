@@ -7,12 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AdyenOptions extends js.Object {
   
+  /**
+    * 2 Digit Country Code
+    */
   var countryCode: js.UndefOr[String] = js.native
   
+  /**
+    * Invoice Uuid from PendingPurchase
+    */
   var invoiceUuid: String = js.native
   
+  /**
+    * Shopper locale for Payment Modal
+    */
   var shopperLocale: js.UndefOr[String] = js.native
   
+  /**
+    * Skin code provided by Adyen
+    */
   var skinCode: js.UndefOr[String] = js.native
 }
 object AdyenOptions {

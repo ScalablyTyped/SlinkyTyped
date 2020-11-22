@@ -16,6 +16,9 @@ object curvePathMod extends js.Object {
     
     def add(curve: Curve[T]): Unit = js.native
     
+    /**
+    	 * @default false
+    	 */
     var autoClose: Boolean = js.native
     
     def closePath(): Unit = js.native
@@ -35,6 +38,9 @@ object curvePathMod extends js.Object {
     	 */
     def createSpacedPointsGeometry(divisions: Double): Geometry = js.native
     
+    /**
+    	 * @default []
+    	 */
     var curves: js.Array[Curve[T]] = js.native
     
     def getCurveLengths(): js.Array[Double] = js.native

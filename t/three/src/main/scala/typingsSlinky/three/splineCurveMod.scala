@@ -14,6 +14,9 @@ object splineCurveMod extends js.Object {
   class SplineCurve () extends Curve[Vector2] {
     def this(points: js.Array[Vector2]) = this()
     
+    /**
+    	 * @default []
+    	 */
     var points: js.Array[Vector2] = js.native
   }
 }

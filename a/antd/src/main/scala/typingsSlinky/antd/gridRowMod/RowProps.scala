@@ -25,6 +25,8 @@ trait RowProps extends HTMLAttributes[HTMLDivElement] {
   var justify: js.UndefOr[start | end | center | `space-around` | `space-between`] = js.native
   
   var prefixCls: js.UndefOr[String] = js.native
+  
+  var wrap: js.UndefOr[Boolean] = js.native
 }
 object RowProps {
   
@@ -72,5 +74,11 @@ object RowProps {
     
     @scala.inline
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    
+    @scala.inline
+    def setWrap(value: Boolean): Self = this.set("wrap", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWrap: Self = this.set("wrap", js.undefined)
   }
 }

@@ -76,12 +76,12 @@ object RcTable {
     @js.native
     object component extends js.Object
     
-    def withProps(p: /* hasClassNameIndexChildrenColSpanRowSpan */ SummaryCellProps): SharedBuilder_SummaryCellProps1018071789 = new SharedBuilder_SummaryCellProps1018071789(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: /* hasClassNameIndexChildrenColSpanRowSpanAlign */ SummaryCellProps): SharedBuilder_SummaryCellProps1018071789 = new SharedBuilder_SummaryCellProps1018071789(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
     def apply(index: Double): SharedBuilder_SummaryCellProps1018071789 = {
       val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
-      new SharedBuilder_SummaryCellProps1018071789(js.Array(this.component, __props.asInstanceOf[/* hasClassNameIndexChildrenColSpanRowSpan */ SummaryCellProps]))
+      new SharedBuilder_SummaryCellProps1018071789(js.Array(this.component, __props.asInstanceOf[/* hasClassNameIndexChildrenColSpanRowSpanAlign */ SummaryCellProps]))
     }
   }
 }

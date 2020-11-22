@@ -12,14 +12,14 @@ trait ParametersChecksListForRefEndpoint extends js.Object {
   
   var parameters: ChecksListForRefEndpoint = js.native
   
-  var response: OctokitResponse[ChecksListForRefResponseData] with `9` = js.native
+  var response: OctokitResponse[ChecksListForRefResponseData] with `13` = js.native
 }
 object ParametersChecksListForRefEndpoint {
   
   @scala.inline
   def apply(
     parameters: ChecksListForRefEndpoint,
-    response: OctokitResponse[ChecksListForRefResponseData] with `9`
+    response: OctokitResponse[ChecksListForRefResponseData] with `13`
   ): ParametersChecksListForRefEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersChecksListForRefEndpoint]
@@ -44,6 +44,6 @@ object ParametersChecksListForRefEndpoint {
     def setParameters(value: ChecksListForRefEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ChecksListForRefResponseData] with `9`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ChecksListForRefResponseData] with `13`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

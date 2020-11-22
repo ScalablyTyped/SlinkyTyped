@@ -1,7 +1,9 @@
 package typingsSlinky.cassandraStore.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.cassandraDriver.mod.Client
 import typingsSlinky.cassandraDriver.mod.ClientOptions
+import typingsSlinky.expressSession.mod.SessionData
 import typingsSlinky.expressSession.mod.Store
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +16,20 @@ trait CassandraStore extends Store {
   
   var _clientOptions: ClientOptions = js.native
   
+  @JSName("all")
+  def all_MCassandraStore(
+    callback: js.Function2[
+      /* err */ js.Any, 
+      /* obj */ js.UndefOr[js.Array[SessionData] | StringDictionary[SessionData] | Null], 
+      Unit
+    ]
+  ): Unit = js.native
+  
+  @JSName("clear")
+  def clear_MCassandraStore(): Unit = js.native
+  @JSName("clear")
+  def clear_MCassandraStore(callback: js.Function1[/* err */ js.UndefOr[js.Any], Unit]): Unit = js.native
+  
   def client: Client = js.native
   
   def clientOptions: ClientOptions = js.native
@@ -21,6 +37,14 @@ trait CassandraStore extends Store {
   
   def client_=(value: Client): Unit = js.native
   
+  @JSName("length")
+  def length_MCassandraStore(callback: js.Function2[/* err */ js.Any, /* length */ Double, Unit]): Unit = js.native
+  
   def table: String = js.native
   def table_=(value: String): Unit = js.native
+  
+  @JSName("touch")
+  def touch_MCassandraStore(sid: String, session: SessionData): Unit = js.native
+  @JSName("touch")
+  def touch_MCassandraStore(sid: String, session: SessionData, callback: js.Function0[Unit]): Unit = js.native
 }

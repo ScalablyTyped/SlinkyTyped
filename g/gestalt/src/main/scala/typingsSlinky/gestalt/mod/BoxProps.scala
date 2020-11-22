@@ -61,6 +61,7 @@ import typingsSlinky.gestalt.gestaltStrings.row
 import typingsSlinky.gestalt.gestaltStrings.scroll
 import typingsSlinky.gestalt.gestaltStrings.scrollX
 import typingsSlinky.gestalt.gestaltStrings.scrollY
+import typingsSlinky.gestalt.gestaltStrings.shadow
 import typingsSlinky.gestalt.gestaltStrings.shrink
 import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.gestaltStrings.start
@@ -85,7 +86,7 @@ trait BoxProps extends js.Object {
   
   var alignSelf: js.UndefOr[auto | start | end | center | baseline | stretch] = js.native
   
-  var borderSize: js.UndefOr[sm | lg | none] = js.native
+  var borderStyle: js.UndefOr[sm | lg | shadow | none] = js.native
   
   var bottom: js.UndefOr[Boolean] = js.native
   
@@ -203,6 +204,8 @@ trait BoxProps extends js.Object {
   
   var right: js.UndefOr[Boolean] = js.native
   
+  var role: js.UndefOr[String] = js.native
+  
   var rounding: js.UndefOr[pill | circle | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8`] = js.native
   
   var smColumn: js.UndefOr[UnsignedUpTo12] = js.native
@@ -233,9 +236,13 @@ trait BoxProps extends js.Object {
   
   var top: js.UndefOr[Boolean] = js.native
   
+  var userSelect: js.UndefOr[auto | none] = js.native
+  
   var width: js.UndefOr[Double | String] = js.native
   
   var wrap: js.UndefOr[Boolean] = js.native
+  
+  var zIndex: js.UndefOr[Indexable] = js.native
 }
 object BoxProps {
   
@@ -279,10 +286,10 @@ object BoxProps {
     def deleteAlignSelf: Self = this.set("alignSelf", js.undefined)
     
     @scala.inline
-    def setBorderSize(value: sm | lg | none): Self = this.set("borderSize", value.asInstanceOf[js.Any])
+    def setBorderStyle(value: sm | lg | shadow | none): Self = this.set("borderStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBorderSize: Self = this.set("borderSize", js.undefined)
+    def deleteBorderStyle: Self = this.set("borderStyle", js.undefined)
     
     @scala.inline
     def setBottom(value: Boolean): Self = this.set("bottom", value.asInstanceOf[js.Any])
@@ -626,6 +633,12 @@ object BoxProps {
     def deleteRight: Self = this.set("right", js.undefined)
     
     @scala.inline
+    def setRole(value: String): Self = this.set("role", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRole: Self = this.set("role", js.undefined)
+    
+    @scala.inline
     def setRounding(value: pill | circle | `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8`): Self = this.set("rounding", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -716,6 +729,12 @@ object BoxProps {
     def deleteTop: Self = this.set("top", js.undefined)
     
     @scala.inline
+    def setUserSelect(value: auto | none): Self = this.set("userSelect", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserSelect: Self = this.set("userSelect", js.undefined)
+    
+    @scala.inline
     def setWidth(value: Double | String): Self = this.set("width", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -726,5 +745,11 @@ object BoxProps {
     
     @scala.inline
     def deleteWrap: Self = this.set("wrap", js.undefined)
+    
+    @scala.inline
+    def setZIndex(value: Indexable): Self = this.set("zIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteZIndex: Self = this.set("zIndex", js.undefined)
   }
 }

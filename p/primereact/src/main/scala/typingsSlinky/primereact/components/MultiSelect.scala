@@ -39,6 +39,9 @@ object MultiSelect {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def emptyFilterMessage(value: js.Any): this.type = set("emptyFilterMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def filter(value: Boolean): this.type = set("filter", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -93,10 +96,19 @@ object MultiSelect {
     def options(value: js.Array[_]): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def panelClassName(value: String): this.type = set("panelClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def panelStyle(value: js.Object): this.type = set("panelStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def resetFilterOnHide(value: Boolean): this.type = set("resetFilterOnHide", value.asInstanceOf[js.Any])
     
     @scala.inline
     def scrollHeight(value: String): this.type = set("scrollHeight", value.asInstanceOf[js.Any])

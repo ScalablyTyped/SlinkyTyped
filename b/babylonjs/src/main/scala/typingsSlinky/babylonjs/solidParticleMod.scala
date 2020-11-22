@@ -6,6 +6,7 @@ import typingsSlinky.babylonjs.mathColorMod.Color4
 import typingsSlinky.babylonjs.mathPlaneMod.Plane
 import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.mathVectorMod.Quaternion
+import typingsSlinky.babylonjs.mathVectorMod.Vector2
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.mathVectorMod.Vector4
 import typingsSlinky.babylonjs.meshMod.Mesh
@@ -25,7 +26,12 @@ object solidParticleMod extends js.Object {
       * Creates a new sorted particle
       * @param materialIndex
       */
-    def this(ind: Double, indLength: Double, materialIndex: Double) = this()
+    def this(idx: Double, ind: Double, indLength: Double, materialIndex: Double) = this()
+    
+    /**
+      * Particle index
+      */
+    var idx: Double = js.native
     
     /**
       * Index of the particle in the "indices" array
@@ -322,6 +328,11 @@ object solidParticleMod extends js.Object {
     var position: Vector3 = js.native
     
     /**
+      * Custom object or properties.
+      */
+    var props: Nullable[_] = js.native
+    
+    /**
       * Legacy support, changed quaternion to rotationQuaternion
       */
     def quaternion: Nullable[Quaternion] = js.native
@@ -375,5 +386,39 @@ object solidParticleMod extends js.Object {
       * The current speed of the particle.
       */
     var velocity: Vector3 = js.native
+  }
+  
+  @js.native
+  /**
+    * Creates a new solid particle vertex
+    */
+  class SolidParticleVertex () extends js.Object {
+    
+    /**
+      * Vertex color
+      */
+    var color: Color4 = js.native
+    
+    /**
+      * Vertex position
+      */
+    var position: Vector3 = js.native
+    
+    /**
+      * Vertex UV
+      */
+    var uv: Vector2 = js.native
+    
+    /** Vertex x coordinate */
+    def x: Double = js.native
+    def x_=(`val`: Double): Unit = js.native
+    
+    /** Vertex y coordinate */
+    def y: Double = js.native
+    def y_=(`val`: Double): Unit = js.native
+    
+    /** Vertex z coordinate */
+    def z: Double = js.native
+    def z_=(`val`: Double): Unit = js.native
   }
 }

@@ -28,7 +28,7 @@ class Route protected () extends CustomResource {
   val blackhole: Output_[js.UndefOr[Boolean]] = js.native
   
   /**
-    * IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
+    * IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
     */
   val destinationCidrBlock: Output_[String] = js.native
   

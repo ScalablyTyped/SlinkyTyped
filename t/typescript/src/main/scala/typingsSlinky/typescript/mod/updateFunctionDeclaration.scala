@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateFunctionDeclaration extends js.Object {
   
+  /** @deprecated Use `factory.updateFunctionDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     node: FunctionDeclaration,
     decorators: js.UndefOr[js.Array[Decorator]],

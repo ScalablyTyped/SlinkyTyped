@@ -13,12 +13,12 @@ trait CodeContent extends js.Object {
   var S3ContentLocation: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.S3ContentLocation] = js.native
   
   /**
-    * The text-format code for a Java-based Kinesis Data Analytics application.
+    * The text-format code for a Flink-based Kinesis Data Analytics application.
     */
   var TextContent: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.TextContent] = js.native
   
   /**
-    * The zip-format code for a Java-based Kinesis Data Analytics application.
+    * The zip-format code for a Flink-based Kinesis Data Analytics application.
     */
   var ZipFileContent: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.ZipFileContent] = js.native
 }

@@ -8,15 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ChannelSearchResult extends js.Object {
   
-  var description: String = js.native
-  
-  var id: String = js.native
-  
   var image: String = js.native
   
   var name: String = js.native
   
-  /** @deprecated */
+  var subCount: Double = js.native
+  
+  var subCountLabel: String = js.native
+  
   var thumbnail: String = js.native
   
   var title: String = js.native
@@ -33,10 +32,10 @@ object ChannelSearchResult {
   
   @scala.inline
   def apply(
-    description: String,
-    id: String,
     image: String,
     name: String,
+    subCount: Double,
+    subCountLabel: String,
     thumbnail: String,
     title: String,
     `type`: channel,
@@ -44,7 +43,7 @@ object ChannelSearchResult {
     videoCount: Double,
     videoCountLabel: String
   ): ChannelSearchResult = {
-    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], thumbnail = thumbnail.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], videoCount = videoCount.asInstanceOf[js.Any], videoCountLabel = videoCountLabel.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(image = image.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], subCount = subCount.asInstanceOf[js.Any], subCountLabel = subCountLabel.asInstanceOf[js.Any], thumbnail = thumbnail.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], videoCount = videoCount.asInstanceOf[js.Any], videoCountLabel = videoCountLabel.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChannelSearchResult]
   }
@@ -65,16 +64,16 @@ object ChannelSearchResult {
     }
     
     @scala.inline
-    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setImage(value: String): Self = this.set("image", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSubCount(value: Double): Self = this.set("subCount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSubCountLabel(value: String): Self = this.set("subCountLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setThumbnail(value: String): Self = this.set("thumbnail", value.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 package typingsSlinky.carbonComponents
 
 import typingsSlinky.carbonComponents.anon.ClassComplete
-import typingsSlinky.carbonComponents.anon.Index
+import typingsSlinky.carbonComponents.anon.Element
 import typingsSlinky.std.WeakMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,9 +25,9 @@ object progressIndicatorMod extends js.Object {
     
     def addOverflowTooltip(): Unit = js.native
     
-    def getCurrent(): Index = js.native
+    def getCurrent(): Element = js.native
     
-    def getSteps(): js.Array[Index] = js.native
+    def getSteps(): js.Array[Element] = js.native
     
     def setCurrent(): Unit = js.native
     def setCurrent(newCurrentStep: js.Any): Unit = js.native

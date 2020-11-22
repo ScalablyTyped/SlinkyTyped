@@ -6,7 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type Code = scala.Double
-  
-  type Size = scala.Double
+  type MultiaddrInput = java.lang.String | js.typedarray.Uint8Array | typingsSlinky.multiaddr.mod.Multiaddr | scala.Null
 }

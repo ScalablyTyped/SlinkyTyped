@@ -47,6 +47,8 @@ object projMod extends js.Object {
   def createProjection(projection: String, defaultCode: String): default = js.native
   def createProjection(projection: default, defaultCode: String): default = js.native
   
+  def createSafeCoordinateTransform(sourceProj: default, destProj: default, transform: js.Function1[/* p0 */ Coordinate, Coordinate]): js.Function1[/* p0 */ Coordinate, Coordinate] = js.native
+  
   def createTransformFromCoordinateTransform(coordTransform: js.Function1[/* p0 */ Coordinate, Coordinate]): TransformFunction = js.native
   
   def equivalent(projection1: default, projection2: default): Boolean = js.native

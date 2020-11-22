@@ -8,6 +8,8 @@ package object kinesisMod {
   
   type BooleanObject = scala.Boolean
   
+  type ChildShardList = js.Array[typingsSlinky.awsSdk.kinesisMod.ChildShard]
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.kinesisMod.ClientApiVersions
   
   type ConsumerARN = java.lang.String
@@ -94,7 +96,20 @@ package object kinesisMod {
   
   type ShardCountObject = scala.Double
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AFTER_SHARD_ID
+    - typingsSlinky.awsSdk.awsSdkStrings.AT_TRIM_HORIZON
+    - typingsSlinky.awsSdk.awsSdkStrings.FROM_TRIM_HORIZON
+    - typingsSlinky.awsSdk.awsSdkStrings.AT_LATEST
+    - typingsSlinky.awsSdk.awsSdkStrings.AT_TIMESTAMP
+    - typingsSlinky.awsSdk.awsSdkStrings.FROM_TIMESTAMP
+    - java.lang.String
+  */
+  type ShardFilterType = typingsSlinky.awsSdk.kinesisMod._ShardFilterType | java.lang.String
+  
   type ShardId = java.lang.String
+  
+  type ShardIdList = js.Array[typingsSlinky.awsSdk.kinesisMod.ShardId]
   
   type ShardIterator = java.lang.String
   

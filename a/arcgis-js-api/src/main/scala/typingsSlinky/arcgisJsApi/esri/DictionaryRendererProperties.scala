@@ -12,35 +12,42 @@ trait DictionaryRendererProperties
      with VisualVariablesMixinProperties {
   
   /**
-    * This property allows you to set display options that can be configured on the dictionary symbol style. For example, if the dictionary symbol style provides a display option to turn on/off a symbol/text, you could set it here.
+    * This property allows you to set display options that can be configured on the dictionary symbol style.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DictionaryRenderer.html#config)
     */
   var config: js.UndefOr[js.Any] = js.native
   
   /**
-    * Defines a field mapping that maps input fields from the feature to the dictionary symbol style's expected fields for symbols and text. Each key identifies an expected field (defined in the dictionary's symbol and text properties). The value identifies the corresponding mapped field from the dataset. Field names are case sensitive.
+    * Defines a field mapping that maps input fields from the feature to the dictionary symbol style's expected fields for symbols and text.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DictionaryRenderer.html#fieldMap)
     */
   var fieldMap: js.UndefOr[HashMap[String]] = js.native
   
   /**
-    * A scaling expression can be set to increase or decrease the size of the dictionary symbols. The scaling expression can be a constant value for all symbols or an Arcade expression.
+    * A scaling expression can be set to increase or decrease the size of the dictionary symbols.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DictionaryRenderer.html#scaleExpression)
     */
   var scaleExpression: js.UndefOr[String] = js.native
   
   /**
-    * The type of renderer. For this renderer the type is always `dictionary`.
+    * The title identifying and describing the associated [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression as defined in the [scaleExpression](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DictionaryRenderer.html#scaleExpression) property.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DictionaryRenderer.html#scaleExpressionTitle)
+    */
+  var scaleExpressionTitle: js.UndefOr[String] = js.native
+  
+  /**
+    * The type of renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DictionaryRenderer.html#type)
     */
   var `type`: js.UndefOr[dictionary] = js.native
   
   /**
-    * The URL to the dictionary style, e.g. https://jsapi.maps.arcgis.com/sharing/rest/content/items/30cfbf36efd64ccf92136201d9e852af.
+    * The URL to the dictionary style, e.g.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DictionaryRenderer.html#url)
     */
@@ -86,6 +93,12 @@ object DictionaryRendererProperties {
     
     @scala.inline
     def deleteScaleExpression: Self = this.set("scaleExpression", js.undefined)
+    
+    @scala.inline
+    def setScaleExpressionTitle(value: String): Self = this.set("scaleExpressionTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScaleExpressionTitle: Self = this.set("scaleExpressionTitle", js.undefined)
     
     @scala.inline
     def setType(value: dictionary): Self = this.set("type", value.asInstanceOf[js.Any])

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-syntax-highlighter/dist/esm/languages/prism/visualBasic", JSImport.Namespace)
+@JSImport("react-syntax-highlighter/dist/esm/languages/prism/visual-basic", JSImport.Namespace)
 @js.native
 object prismVisualBasicMod extends js.Object {
   

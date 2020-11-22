@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BrowserWindowProxy extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/browser-window-proxy
+  // Docs: https://electronjs.org/docs/api/browser-window-proxy
   /**
     * Removes focus from the child window.
     */

@@ -1,13 +1,16 @@
 package typingsSlinky.nodePgMigrate.pgLiteralMod
 
+import typingsSlinky.nodePgMigrate.generalTypesMod._Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("node-pg-migrate/dist/operations/PgLiteral", JSImport.Default)
 @js.native
-class default protected () extends PgLiteral {
-  def this(str: String) = this()
+class default protected ()
+  extends PgLiteral
+     with _Value {
+  def this(value: String) = this()
 }
 /* static members */
 @JSImport("node-pg-migrate/dist/operations/PgLiteral", JSImport.Default)

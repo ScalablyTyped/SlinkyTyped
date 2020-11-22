@@ -45,6 +45,8 @@ package object mod {
   
   type FormatInput = scala.Double | java.lang.String | js.Date
   
+  type Omit[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
+  
   type SlotGroupPropGetter = js.Function0[typingsSlinky.react.mod.HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement]]
   
   type SlotPropGetter = js.Function2[
@@ -53,7 +55,7 @@ package object mod {
     typingsSlinky.react.mod.HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement]
   ]
   
-  type ViewsProps = js.Array[typingsSlinky.reactBigCalendar.mod.View] | typingsSlinky.reactBigCalendar.anon.Agenda
+  type ViewsProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] = js.Array[typingsSlinky.reactBigCalendar.mod.View] | typingsSlinky.reactBigCalendar.anon.Agenda
   
   type stringOrDate = java.lang.String | js.Date
 }

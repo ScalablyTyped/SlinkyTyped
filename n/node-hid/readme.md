@@ -1,7 +1,7 @@
 
 # Scala.js typings for node-hid
 
-Typings are for version 1.2
+Typings are for version 1.3
 
 ## Library description:
 USB HID device access library

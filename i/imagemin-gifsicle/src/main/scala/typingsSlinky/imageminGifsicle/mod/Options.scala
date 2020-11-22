@@ -7,10 +7,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Options extends js.Object {
   
+  /**
+    * Reduce the number of distinct colors in each output GIF to num or less.
+    * Num must be between 2 and 256.
+    */
   var colors: js.UndefOr[Double] = js.native
   
+  /**
+    * Interlace gif for progressive rendering.
+    * @default false
+    */
   var interlaced: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Select an optimization level between 1 and 3.
+    * @see {@link https://github.com/imagemin/imagemin-gifsicle#optimizationlevel}
+    * @default 1
+    */
   var optimizationLevel: js.UndefOr[Double] = js.native
 }
 object Options {

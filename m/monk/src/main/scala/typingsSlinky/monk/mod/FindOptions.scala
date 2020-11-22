@@ -1,15 +1,21 @@
 package typingsSlinky.monk.mod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.mongodb.mod.ClientSession
 import typingsSlinky.mongodb.mod.CollationDocument
+import typingsSlinky.mongodb.mod.ProjectionOperators
 import typingsSlinky.mongodb.mod.ReadPreferenceOrMode
+import typingsSlinky.mongodb.mod.SchemaMember
+import typingsSlinky.mongodb.mod.SortOptionObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined mongodb.mongodb.FindOneOptions & {  rawCursor :boolean | undefined} */
+/* Inlined mongodb.mongodb.FindOneOptions<T> & {  rawCursor :boolean | undefined} */
 @js.native
-trait FindOptions extends js.Object {
+trait FindOptions[T] extends js.Object {
+  
+  var awaitData: js.UndefOr[Boolean] = js.native
   
   var batchSize: js.UndefOr[Double] = js.native
   
@@ -22,7 +28,11 @@ trait FindOptions extends js.Object {
   /**
     * @deprecated Use options.projection instead
     */
-  var fields: js.UndefOr[js.Object] = js.native
+  var fields: js.UndefOr[
+    /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof T ]: boolean | number}
+    */ typingsSlinky.monk.monkStrings.FindOptions with TopLevel[js.Any]
+  ] = js.native
   
   var hint: js.UndefOr[js.Object] = js.native
   
@@ -38,7 +48,7 @@ trait FindOptions extends js.Object {
   
   var partial: js.UndefOr[Boolean] = js.native
   
-  var projection: js.UndefOr[js.Object] = js.native
+  var projection: js.UndefOr[SchemaMember[T, ProjectionOperators | Double | Boolean | _]] = js.native
   
   var promoteBuffers: js.UndefOr[Boolean] = js.native
   
@@ -62,7 +72,7 @@ trait FindOptions extends js.Object {
   
   var snapshot: js.UndefOr[Boolean] = js.native
   
-  var sort: js.UndefOr[js.Array[_] | js.Object] = js.native
+  var sort: js.UndefOr[(js.Array[js.Tuple2[String, Double]]) | SortOptionObject[T]] = js.native
   
   var tailable: js.UndefOr[Boolean] = js.native
   
@@ -71,13 +81,13 @@ trait FindOptions extends js.Object {
 object FindOptions {
   
   @scala.inline
-  def apply(): FindOptions = {
+  def apply[T](): FindOptions[T] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[FindOptions]
+    __obj.asInstanceOf[FindOptions[T]]
   }
   
   @scala.inline
-  implicit class FindOptionsOps[Self <: FindOptions] (val x: Self) extends AnyVal {
+  implicit class FindOptionsOps[Self <: FindOptions[_], T] (val x: Self with FindOptions[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -90,6 +100,12 @@ object FindOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAwaitData(value: Boolean): Self = this.set("awaitData", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwaitData: Self = this.set("awaitData", js.undefined)
     
     @scala.inline
     def setBatchSize(value: Double): Self = this.set("batchSize", value.asInstanceOf[js.Any])
@@ -116,7 +132,11 @@ object FindOptions {
     def deleteExplain: Self = this.set("explain", js.undefined)
     
     @scala.inline
-    def setFields(value: js.Object): Self = this.set("fields", value.asInstanceOf[js.Any])
+    def setFields(
+      value: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+    {[ P in keyof T ]: boolean | number}
+      */ typingsSlinky.monk.monkStrings.FindOptions with TopLevel[js.Any]
+    ): Self = this.set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFields: Self = this.set("fields", js.undefined)
@@ -164,7 +184,7 @@ object FindOptions {
     def deletePartial: Self = this.set("partial", js.undefined)
     
     @scala.inline
-    def setProjection(value: js.Object): Self = this.set("projection", value.asInstanceOf[js.Any])
+    def setProjection(value: SchemaMember[T, ProjectionOperators | Double | Boolean | _]): Self = this.set("projection", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProjection: Self = this.set("projection", js.undefined)
@@ -236,10 +256,10 @@ object FindOptions {
     def deleteSnapshot: Self = this.set("snapshot", js.undefined)
     
     @scala.inline
-    def setSortVarargs(value: js.Any*): Self = this.set("sort", js.Array(value :_*))
+    def setSortVarargs(value: (js.Tuple2[String, Double])*): Self = this.set("sort", js.Array(value :_*))
     
     @scala.inline
-    def setSort(value: js.Array[_] | js.Object): Self = this.set("sort", value.asInstanceOf[js.Any])
+    def setSort(value: (js.Array[js.Tuple2[String, Double]]) | SortOptionObject[T]): Self = this.set("sort", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSort: Self = this.set("sort", js.undefined)

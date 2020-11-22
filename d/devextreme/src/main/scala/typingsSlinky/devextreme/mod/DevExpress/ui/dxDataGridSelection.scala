@@ -13,13 +13,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDataGridSelection extends GridBaseSelection {
   
-  /** @name dxDataGrid.Options.selection.deferred */
+  /**
+    * [descr:dxDataGrid.Options.selection.deferred]
+    */
   var deferred: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDataGrid.Options.selection.selectAllMode */
+  /**
+    * [descr:dxDataGrid.Options.selection.selectAllMode]
+    */
   var selectAllMode: js.UndefOr[allPages | page] = js.native
   
-  /** @name dxDataGrid.Options.selection.showCheckBoxesMode */
+  /**
+    * [descr:dxDataGrid.Options.selection.showCheckBoxesMode]
+    */
   var showCheckBoxesMode: js.UndefOr[always | none | onClick | onLongTap] = js.native
 }
 object dxDataGridSelection {

@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "InputGroup")
+@JSImport("reactstrap/es", "InputGroup")
 @js.native
-class InputGroup[T] ()
+class InputGroup ()
   extends Component[InputGroupProps, js.Object, js.Any]

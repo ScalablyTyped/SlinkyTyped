@@ -2,20 +2,10 @@ package typingsSlinky.grommet.layerMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
-import typingsSlinky.grommet.grommetStrings.`bottom-left`
-import typingsSlinky.grommet.grommetStrings.`bottom-right`
-import typingsSlinky.grommet.grommetStrings.`top-left`
-import typingsSlinky.grommet.grommetStrings.`top-right`
-import typingsSlinky.grommet.grommetStrings.bottom
-import typingsSlinky.grommet.grommetStrings.center
 import typingsSlinky.grommet.grommetStrings.fadeIn
-import typingsSlinky.grommet.grommetStrings.hidden
 import typingsSlinky.grommet.grommetStrings.horizontal
-import typingsSlinky.grommet.grommetStrings.left
 import typingsSlinky.grommet.grommetStrings.none
-import typingsSlinky.grommet.grommetStrings.right
 import typingsSlinky.grommet.grommetStrings.slide
-import typingsSlinky.grommet.grommetStrings.top
 import typingsSlinky.grommet.grommetStrings.vertical
 import typingsSlinky.grommet.utilsMod.AnimateType
 import typingsSlinky.grommet.utilsMod.KeyboardType
@@ -43,9 +33,7 @@ trait LayerProps extends js.Object {
   
   var plain: js.UndefOr[Boolean] = js.native
   
-  var position: js.UndefOr[
-    bottom | `bottom-left` | `bottom-right` | center | hidden | left | right | top | `top-left` | `top-right`
-  ] = js.native
+  var position: js.UndefOr[LayerPositionType] = js.native
   
   var responsive: js.UndefOr[Boolean] = js.native
   
@@ -123,9 +111,7 @@ object LayerProps {
     def deletePlain: Self = this.set("plain", js.undefined)
     
     @scala.inline
-    def setPosition(
-      value: bottom | `bottom-left` | `bottom-right` | center | hidden | left | right | top | `top-left` | `top-right`
-    ): Self = this.set("position", value.asInstanceOf[js.Any])
+    def setPosition(value: LayerPositionType): Self = this.set("position", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePosition: Self = this.set("position", js.undefined)

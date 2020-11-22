@@ -4,6 +4,8 @@ import org.scalajs.dom.raw.HTMLDivElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdOverlay.overlayMod.OverlayProps
+import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
+import typingsSlinky.reactTransitionGroup.csstransitionMod.CSSTransitionClassNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,11 +14,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  /**
-    * The `Overlay` component is a simple component used to render a full page
-    * overlay in the page with an enter and exit animation. If there are overflow
-    * issues or you need to portal the overlay to a different area within your app,
-    * you should use the `OverlayPortal` component instead.
-    */
+  val DEFAULT_OVERLAY_CLASSNAMES: CSSTransitionClassNames = js.native
+  
+  val DEFAULT_OVERLAY_TIMEOUT: TransitionTimeout = js.native
+  
   val Overlay: ForwardRefExoticComponent[OverlayProps with RefAttributes[HTMLDivElement]] = js.native
 }

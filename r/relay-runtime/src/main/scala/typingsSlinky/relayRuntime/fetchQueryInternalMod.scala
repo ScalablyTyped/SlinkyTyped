@@ -1,6 +1,5 @@
 package typingsSlinky.relayRuntime
 
-import typingsSlinky.relayRuntime.anon.NetworkCacheConfig
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponse
 import typingsSlinky.relayRuntime.relayObservableMod.RelayObservable
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Environment
@@ -15,7 +14,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object fetchQueryInternalMod extends js.Object {
   
   def fetchQuery(environment: Environment, operation: OperationDescriptor): RelayObservable[GraphQLResponse] = js.native
-  def fetchQuery(environment: Environment, operation: OperationDescriptor, options: NetworkCacheConfig): RelayObservable[GraphQLResponse] = js.native
   
   def fetchQueryDeduped(
     environment: Environment,

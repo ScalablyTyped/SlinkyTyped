@@ -31,7 +31,7 @@ trait RendererResult extends Object {
   var dotDensityScheme: DotDensityScheme = js.native
   
   /**
-    * The object representing the dot density visualization. Set this on a layer's `renderer` property to update its visualization.
+    * The object representing the dot density visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#RendererResult)
     */

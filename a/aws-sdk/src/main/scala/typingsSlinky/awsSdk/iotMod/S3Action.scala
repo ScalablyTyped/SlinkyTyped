@@ -18,7 +18,7 @@ trait S3Action extends js.Object {
   var cannedAcl: js.UndefOr[CannedAccessControlList] = js.native
   
   /**
-    * The object key.
+    * The object key. For more information, see Actions, resources, and condition keys for Amazon S3.
     */
   var key: Key = js.native
   

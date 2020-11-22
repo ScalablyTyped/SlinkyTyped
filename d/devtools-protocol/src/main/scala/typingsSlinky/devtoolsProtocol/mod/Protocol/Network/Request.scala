@@ -52,9 +52,20 @@ trait Request extends js.Object {
   var postData: js.UndefOr[String] = js.native
   
   /**
+    * Request body elements. This will be converted from base64 to binary
+    */
+  var postDataEntries: js.UndefOr[js.Array[PostDataEntry]] = js.native
+  
+  /**
     * The referrer policy of the request, as defined in https://www.w3.org/TR/referrer-policy/ (RequestReferrerPolicy enum)
     */
   var referrerPolicy: `unsafe-url` | `no-referrer-when-downgrade` | `no-referrer` | origin | `origin-when-cross-origin` | `same-origin` | `strict-origin` | `strict-origin-when-cross-origin` = js.native
+  
+  /**
+    * Set for requests when the TrustToken API is used. Contains the parameters
+    * passed by the developer (e.g. via "fetch") as understood by the backend.
+    */
+  var trustTokenParams: js.UndefOr[TrustTokenParams] = js.native
   
   /**
     * Request URL (without fragment).
@@ -135,6 +146,21 @@ object Request {
     
     @scala.inline
     def deletePostData: Self = this.set("postData", js.undefined)
+    
+    @scala.inline
+    def setPostDataEntriesVarargs(value: PostDataEntry*): Self = this.set("postDataEntries", js.Array(value :_*))
+    
+    @scala.inline
+    def setPostDataEntries(value: js.Array[PostDataEntry]): Self = this.set("postDataEntries", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePostDataEntries: Self = this.set("postDataEntries", js.undefined)
+    
+    @scala.inline
+    def setTrustTokenParams(value: TrustTokenParams): Self = this.set("trustTokenParams", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTrustTokenParams: Self = this.set("trustTokenParams", js.undefined)
     
     @scala.inline
     def setUrlFragment(value: String): Self = this.set("urlFragment", value.asInstanceOf[js.Any])

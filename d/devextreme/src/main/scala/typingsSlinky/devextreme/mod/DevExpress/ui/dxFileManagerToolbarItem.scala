@@ -19,7 +19,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFileManagerToolbarItem extends dxToolbarItem {
   
-  /** @name dxFileManagerToolbarItem.name */
+  /**
+    * [descr:dxFileManagerToolbarItem.icon]
+    */
+  var icon: js.UndefOr[String] = js.native
+  
+  /**
+    * [descr:dxFileManagerToolbarItem.name]
+    */
   var name: js.UndefOr[
     showNavPane | create | upload | refresh | switchView | download | move | copy | rename | delete | clearSelection | separator | String
   ] = js.native
@@ -46,6 +53,12 @@ object dxFileManagerToolbarItem {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setIcon(value: String): Self = this.set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
     
     @scala.inline
     def setName(

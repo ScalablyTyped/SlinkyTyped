@@ -8,19 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CalendarGroup extends Entity {
   
   // The calendars in the calendar group. Navigation property. Read-only. Nullable.
-  var calendars: js.UndefOr[js.Array[Calendar]] = js.native
+  var calendars: js.UndefOr[NullableOption[js.Array[Calendar]]] = js.native
   
   /**
     * Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This
     * allows Exchange to apply changes to the correct version of the object. Read-only.
     */
-  var changeKey: js.UndefOr[String] = js.native
+  var changeKey: js.UndefOr[NullableOption[String]] = js.native
   
   // The class identifier. Read-only.
-  var classId: js.UndefOr[String] = js.native
+  var classId: js.UndefOr[NullableOption[String]] = js.native
   
   // The group name.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
 }
 object CalendarGroup {
   
@@ -49,27 +49,39 @@ object CalendarGroup {
     def setCalendarsVarargs(value: Calendar*): Self = this.set("calendars", js.Array(value :_*))
     
     @scala.inline
-    def setCalendars(value: js.Array[Calendar]): Self = this.set("calendars", value.asInstanceOf[js.Any])
+    def setCalendars(value: NullableOption[js.Array[Calendar]]): Self = this.set("calendars", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCalendars: Self = this.set("calendars", js.undefined)
     
     @scala.inline
-    def setChangeKey(value: String): Self = this.set("changeKey", value.asInstanceOf[js.Any])
+    def setCalendarsNull: Self = this.set("calendars", null)
+    
+    @scala.inline
+    def setChangeKey(value: NullableOption[String]): Self = this.set("changeKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteChangeKey: Self = this.set("changeKey", js.undefined)
     
     @scala.inline
-    def setClassId(value: String): Self = this.set("classId", value.asInstanceOf[js.Any])
+    def setChangeKeyNull: Self = this.set("changeKey", null)
+    
+    @scala.inline
+    def setClassId(value: NullableOption[String]): Self = this.set("classId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClassId: Self = this.set("classId", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setClassIdNull: Self = this.set("classId", null)
+    
+    @scala.inline
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setNameNull: Self = this.set("name", null)
   }
 }

@@ -1,6 +1,7 @@
 
 # Scala.js typings for asn1js
 
+Typings are for version 2.0
 
 ## Library description:
 asn1js is a pure JavaScript library implementing this standard. ASN.1 is the basis of all X.509 related data structures and numerous other protocols used on the web

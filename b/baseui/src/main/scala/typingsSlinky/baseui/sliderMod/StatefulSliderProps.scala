@@ -9,6 +9,8 @@ trait StatefulSliderProps extends js.Object {
   
   var initialState: js.UndefOr[State] = js.native
   
+  var marks: js.UndefOr[Boolean] = js.native
+  
   var max: js.UndefOr[Double] = js.native
   
   var min: js.UndefOr[Double] = js.native
@@ -49,6 +51,12 @@ object StatefulSliderProps {
     
     @scala.inline
     def deleteInitialState: Self = this.set("initialState", js.undefined)
+    
+    @scala.inline
+    def setMarks(value: Boolean): Self = this.set("marks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMarks: Self = this.set("marks", js.undefined)
     
     @scala.inline
     def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])

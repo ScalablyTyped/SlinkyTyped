@@ -16,40 +16,62 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDropDownEditorOptions[T] extends dxTextBoxOptions[T] {
   
-  /** @name dxDropDownEditor.Options.acceptCustomValue */
+  /**
+    * [descr:dxDropDownEditor.Options.acceptCustomValue]
+    */
   var acceptCustomValue: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDropDownEditor.Options.applyValueMode */
+  /**
+    * [descr:dxDropDownEditor.Options.applyValueMode]
+    */
   var applyValueMode: js.UndefOr[instantly | useButtons] = js.native
   
-  /** @name dxDropDownEditor.Options.buttons */
+  /**
+    * [descr:dxDropDownEditor.Options.buttons]
+    */
   @JSName("buttons")
   var buttons_dxDropDownEditorOptions: js.UndefOr[js.Array[clear | dropDown | dxTextEditorButton]] = js.native
   
-  /** @name dxDropDownEditor.Options.deferRendering */
+  /**
+    * [descr:dxDropDownEditor.Options.deferRendering]
+    */
   var deferRendering: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDropDownEditor.Options.dropDownButtonTemplate */
+  /**
+    * [descr:dxDropDownEditor.Options.dropDownButtonTemplate]
+    */
   var dropDownButtonTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ Icon, /* contentElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxDropDownEditor.Options.dropDownOptions */
+  /**
+    * [descr:dxDropDownEditor.Options.dropDownOptions]
+    */
   var dropDownOptions: js.UndefOr[dxPopupOptions[dxPopup]] = js.native
   
-  /** @name dxDropDownEditor.Options.onClosed */
+  /**
+    * [descr:dxDropDownEditor.Options.onClosed]
+    */
   var onClosed: js.UndefOr[js.Function1[/* e */ `2`[T], _]] = js.native
   
-  /** @name dxDropDownEditor.Options.onOpened */
+  /**
+    * [descr:dxDropDownEditor.Options.onOpened]
+    */
   var onOpened: js.UndefOr[js.Function1[/* e */ `2`[T], _]] = js.native
   
-  /** @name dxDropDownEditor.Options.openOnFieldClick */
+  /**
+    * [descr:dxDropDownEditor.Options.openOnFieldClick]
+    */
   var openOnFieldClick: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDropDownEditor.Options.opened */
+  /**
+    * [descr:dxDropDownEditor.Options.opened]
+    */
   var opened: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDropDownEditor.Options.showDropDownButton */
+  /**
+    * [descr:dxDropDownEditor.Options.showDropDownButton]
+    */
   var showDropDownButton: js.UndefOr[Boolean] = js.native
 }
 object dxDropDownEditorOptions {

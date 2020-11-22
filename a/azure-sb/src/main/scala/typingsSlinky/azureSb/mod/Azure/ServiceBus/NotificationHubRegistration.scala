@@ -1,5 +1,6 @@
 package typingsSlinky.azureSb.mod.Azure.ServiceBus
 
+import typingsSlinky.azureSb.anon.ContentRootElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,6 +16,8 @@ trait NotificationHubRegistration extends js.Object {
   
   var Expiry: js.UndefOr[js.Date] = js.native
   
+  var GcmRegistrationId: js.UndefOr[String] = js.native
+  
   var MpnsHeaders: js.UndefOr[js.Any] = js.native
   
   var RegistrationId: String = js.native
@@ -23,13 +26,15 @@ trait NotificationHubRegistration extends js.Object {
   
   var WnsHeaders: js.UndefOr[js.Any] = js.native
   
-  var gcmRegistrationId: js.UndefOr[String] = js.native
+  @JSName("_")
+  var _underscore: ContentRootElement = js.native
 }
 object NotificationHubRegistration {
   
   @scala.inline
-  def apply(RegistrationId: String): NotificationHubRegistration = {
+  def apply(RegistrationId: String, _underscore: ContentRootElement): NotificationHubRegistration = {
     val __obj = js.Dynamic.literal(RegistrationId = RegistrationId.asInstanceOf[js.Any])
+    __obj.updateDynamic("_")(_underscore.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotificationHubRegistration]
   }
   
@@ -50,6 +55,9 @@ object NotificationHubRegistration {
     
     @scala.inline
     def setRegistrationId(value: String): Self = this.set("RegistrationId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def set_underscore(value: ContentRootElement): Self = this.set("_", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBodyTemplate(value: js.Any): Self = this.set("BodyTemplate", value.asInstanceOf[js.Any])
@@ -76,6 +84,12 @@ object NotificationHubRegistration {
     def deleteExpiry: Self = this.set("Expiry", js.undefined)
     
     @scala.inline
+    def setGcmRegistrationId(value: String): Self = this.set("GcmRegistrationId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGcmRegistrationId: Self = this.set("GcmRegistrationId", js.undefined)
+    
+    @scala.inline
     def setMpnsHeaders(value: js.Any): Self = this.set("MpnsHeaders", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -92,11 +106,5 @@ object NotificationHubRegistration {
     
     @scala.inline
     def deleteWnsHeaders: Self = this.set("WnsHeaders", js.undefined)
-    
-    @scala.inline
-    def setGcmRegistrationId(value: String): Self = this.set("gcmRegistrationId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteGcmRegistrationId: Self = this.set("gcmRegistrationId", js.undefined)
   }
 }

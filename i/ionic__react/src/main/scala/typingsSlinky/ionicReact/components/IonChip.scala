@@ -19,8 +19,13 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonChipElement
 import typingsSlinky.ionicCore.mod.Color
 import typingsSlinky.ionicReact.anon.IonChipPickHTMLAttributes
+import typingsSlinky.ionicReact.ionicReactStrings.`additions removals`
 import typingsSlinky.ionicReact.ionicReactStrings.`additions text`
 import typingsSlinky.ionicReact.ionicReactStrings.`inline`
+import typingsSlinky.ionicReact.ionicReactStrings.`removals additions`
+import typingsSlinky.ionicReact.ionicReactStrings.`removals text`
+import typingsSlinky.ionicReact.ionicReactStrings.`text additions`
+import typingsSlinky.ionicReact.ionicReactStrings.`text removals`
 import typingsSlinky.ionicReact.ionicReactStrings.additions
 import typingsSlinky.ionicReact.ionicReactStrings.all
 import typingsSlinky.ionicReact.ionicReactStrings.ascending
@@ -196,7 +201,9 @@ object IonChip {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -272,6 +279,9 @@ object IonChip {
     
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])

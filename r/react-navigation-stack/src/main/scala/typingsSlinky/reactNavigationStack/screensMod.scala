@@ -14,4 +14,6 @@ object screensMod extends js.Object {
   def MaybeScreen(hasEnabledActiveRest: ViewPropsenabledbooleanac): ReactElement = js.native
   
   def MaybeScreenContainer(hasEnabledRest: ViewPropsenabledbooleanch): ReactElement = js.native
+  
+  val shouldUseActivityState: js.Any = js.native
 }

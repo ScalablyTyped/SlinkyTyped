@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkEc2ErrorUnmarshaller
 
-import typingsSlinky.awsSdkTypes.unmarshallerMod.ServiceExceptionParser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  val ec2ErrorUnmarshaller: ServiceExceptionParser = js.native
+  val ec2ErrorUnmarshaller: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceExceptionParser */ js.Any = js.native
 }

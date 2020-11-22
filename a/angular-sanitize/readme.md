@@ -1,7 +1,7 @@
 
 # Scala.js typings for angular-sanitize
 
-Typings are for version 1.7
+Typings are for version 1.8
 
 ## Library description:
 AngularJS module for sanitizing HTML

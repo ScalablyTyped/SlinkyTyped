@@ -115,9 +115,9 @@ trait DataTableProps extends js.Object {
   
   var onRowEditCancel: js.UndefOr[js.Function1[/* e */ DataIndex, Unit]] = js.native
   
-  var onRowEditInit: js.UndefOr[js.Function1[/* e */ DataOriginalEvent, Unit]] = js.native
+  var onRowEditInit: js.UndefOr[js.Function1[/* e */ DataIndex, Unit]] = js.native
   
-  var onRowEditSave: js.UndefOr[js.Function1[/* e */ DataOriginalEvent, Unit]] = js.native
+  var onRowEditSave: js.UndefOr[js.Function1[/* e */ DataIndex, Unit]] = js.native
   
   var onRowExpand: js.UndefOr[js.Function1[/* e */ DataOriginalEvent, Unit]] = js.native
   
@@ -145,6 +145,8 @@ trait DataTableProps extends js.Object {
   
   var paginator: js.UndefOr[Boolean] = js.native
   
+  var paginatorDropdownAppendTo: js.UndefOr[js.Any] = js.native
+  
   var paginatorLeft: js.UndefOr[js.Any] = js.native
   
   var paginatorPosition: js.UndefOr[String] = js.native
@@ -158,8 +160,6 @@ trait DataTableProps extends js.Object {
   var reorderableColumns: js.UndefOr[Boolean] = js.native
   
   var resizableColumns: js.UndefOr[Boolean] = js.native
-  
-  var responsive: js.UndefOr[Boolean] = js.native
   
   var rowClassName: js.UndefOr[js.Function1[/* rowData */ js.Any, js.Object]] = js.native
   
@@ -534,13 +534,13 @@ object DataTableProps {
     def deleteOnRowEditCancel: Self = this.set("onRowEditCancel", js.undefined)
     
     @scala.inline
-    def setOnRowEditInit(value: /* e */ DataOriginalEvent => Unit): Self = this.set("onRowEditInit", js.Any.fromFunction1(value))
+    def setOnRowEditInit(value: /* e */ DataIndex => Unit): Self = this.set("onRowEditInit", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnRowEditInit: Self = this.set("onRowEditInit", js.undefined)
     
     @scala.inline
-    def setOnRowEditSave(value: /* e */ DataOriginalEvent => Unit): Self = this.set("onRowEditSave", js.Any.fromFunction1(value))
+    def setOnRowEditSave(value: /* e */ DataIndex => Unit): Self = this.set("onRowEditSave", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnRowEditSave: Self = this.set("onRowEditSave", js.undefined)
@@ -624,6 +624,12 @@ object DataTableProps {
     def deletePaginator: Self = this.set("paginator", js.undefined)
     
     @scala.inline
+    def setPaginatorDropdownAppendTo(value: js.Any): Self = this.set("paginatorDropdownAppendTo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePaginatorDropdownAppendTo: Self = this.set("paginatorDropdownAppendTo", js.undefined)
+    
+    @scala.inline
     def setPaginatorLeft(value: js.Any): Self = this.set("paginatorLeft", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -664,12 +670,6 @@ object DataTableProps {
     
     @scala.inline
     def deleteResizableColumns: Self = this.set("resizableColumns", js.undefined)
-    
-    @scala.inline
-    def setResponsive(value: Boolean): Self = this.set("responsive", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteResponsive: Self = this.set("responsive", js.undefined)
     
     @scala.inline
     def setRowClassName(value: /* rowData */ js.Any => js.Object): Self = this.set("rowClassName", js.Any.fromFunction1(value))

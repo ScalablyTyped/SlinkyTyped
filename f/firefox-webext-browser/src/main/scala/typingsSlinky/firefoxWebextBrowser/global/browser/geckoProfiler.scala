@@ -1,7 +1,7 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.BufferSize
+import typingsSlinky.firefoxWebextBrowser.browser.geckoProfiler.StartSettings
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,8 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object geckoProfiler extends js.Object {
   
   /**
-    * Gathers the profile data from the current profiling session, and writes it to disk. The returned promise
-    * resolves to a path that locates the created file.
+    * Gathers the profile data from the current profiling session, and writes it to disk. The returned promise resolves to a path that locates the created file.
     * @param fileName The name of the file inside the profile/profiler directory
     */
   def dumpProfileToFile(fileName: String): js.Promise[_] = js.native
@@ -28,14 +27,12 @@ object geckoProfiler extends js.Object {
   def getProfile(): js.Promise[_] = js.native
   
   /**
-    * Gathers the profile data from the current profiling session. The returned promise resolves to an array buffer
-    * that contains a JSON string.
+    * Gathers the profile data from the current profiling session. The returned promise resolves to an array buffer that contains a JSON string.
     */
   def getProfileAsArrayBuffer(): js.Promise[_] = js.native
   
   /**
-    * Gathers the profile data from the current profiling session. The returned promise resolves to an array buffer
-    * that contains a gzipped JSON string.
+    * Gathers the profile data from the current profiling session. The returned promise resolves to an array buffer that contains a gzipped JSON string.
     */
   def getProfileAsGzippedArrayBuffer(): js.Promise[_] = js.native
   
@@ -61,7 +58,7 @@ object geckoProfiler extends js.Object {
   
   /* geckoProfiler functions */
   /** Starts the profiler with the specified settings. */
-  def start(settings: BufferSize): js.Promise[_] = js.native
+  def start(settings: StartSettings): js.Promise[_] = js.native
   
   /** Stops the profiler and discards any captured profile data. */
   def stop(): js.Promise[_] = js.native

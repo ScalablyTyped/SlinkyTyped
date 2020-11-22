@@ -63,6 +63,10 @@ trait PartialMDCTextFieldAdapte extends js.Object {
   
   var removeClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
   
+  var removeInputAttr: js.UndefOr[js.Function1[/* attr */ String, Unit]] = js.native
+  
+  var setInputAttr: js.UndefOr[js.Function2[/* attr */ String, /* value */ String, Unit]] = js.native
+  
   var setLabelRequired: js.UndefOr[js.Function1[/* isRequired */ Boolean, Unit]] = js.native
   
   var setLineRippleTransformOrigin: js.UndefOr[js.Function1[/* normalizedX */ Double, Unit]] = js.native
@@ -205,6 +209,18 @@ object PartialMDCTextFieldAdapte {
     
     @scala.inline
     def deleteRemoveClass: Self = this.set("removeClass", js.undefined)
+    
+    @scala.inline
+    def setRemoveInputAttr(value: /* attr */ String => Unit): Self = this.set("removeInputAttr", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteRemoveInputAttr: Self = this.set("removeInputAttr", js.undefined)
+    
+    @scala.inline
+    def setSetInputAttr(value: (/* attr */ String, /* value */ String) => Unit): Self = this.set("setInputAttr", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteSetInputAttr: Self = this.set("setInputAttr", js.undefined)
     
     @scala.inline
     def setSetLabelRequired(value: /* isRequired */ Boolean => Unit): Self = this.set("setLabelRequired", js.Any.fromFunction1(value))

@@ -40,7 +40,7 @@ object ReactImageGallery {
     def autoPlay(value: Boolean): this.type = set("autoPlay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disableArrowKeys(value: Boolean): this.type = set("disableArrowKeys", value.asInstanceOf[js.Any])
+    def disableKeyDown(value: Boolean): this.type = set("disableKeyDown", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disableSwipe(value: Boolean): this.type = set("disableSwipe", value.asInstanceOf[js.Any])
@@ -62,6 +62,9 @@ object ReactImageGallery {
     
     @scala.inline
     def lazyLoad(value: Boolean): this.type = set("lazyLoad", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def onBeforeSlide(value: /* currentIndex */ Double => Unit): this.type = set("onBeforeSlide", js.Any.fromFunction1(value))
     
     @scala.inline
     def onClick(value: /* event */ MouseEventHandler[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
@@ -121,13 +124,13 @@ object ReactImageGallery {
     def renderItem(value: /* item */ ReactImageGalleryItem => ReactElement): this.type = set("renderItem", js.Any.fromFunction1(value))
     
     @scala.inline
-    def renderLeftNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isDisabled */ Boolean) => ReactElement): this.type = set("renderLeftNav", js.Any.fromFunction2(value))
+    def renderLeftNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* disabled */ Boolean) => ReactElement): this.type = set("renderLeftNav", js.Any.fromFunction2(value))
     
     @scala.inline
     def renderPlayPauseButton(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isPlaying */ Boolean) => ReactElement): this.type = set("renderPlayPauseButton", js.Any.fromFunction2(value))
     
     @scala.inline
-    def renderRightNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isDisabled */ Boolean) => ReactElement): this.type = set("renderRightNav", js.Any.fromFunction2(value))
+    def renderRightNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* disabled */ Boolean) => ReactElement): this.type = set("renderRightNav", js.Any.fromFunction2(value))
     
     @scala.inline
     def renderThumbInner(value: /* item */ ReactImageGalleryItem => ReactElement): this.type = set("renderThumbInner", js.Any.fromFunction1(value))

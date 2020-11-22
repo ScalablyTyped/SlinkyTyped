@@ -4,10 +4,13 @@ import typingsSlinky.officeJs.Excel.Interfaces.ChartSeriesData
 import typingsSlinky.officeJs.Excel.Interfaces.ChartSeriesLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.ChartSeriesUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
+import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Automatic
 import typingsSlinky.officeJs.officeJsStrings.Banner
+import typingsSlinky.officeJs.officeJsStrings.BubbleSizes
+import typingsSlinky.officeJs.officeJsStrings.Categories
 import typingsSlinky.officeJs.officeJsStrings.Circle
 import typingsSlinky.officeJs.officeJsStrings.Dash
 import typingsSlinky.officeJs.officeJsStrings.Diamond
@@ -31,7 +34,10 @@ import typingsSlinky.officeJs.officeJsStrings.Star
 import typingsSlinky.officeJs.officeJsStrings.ThreePhaseColor
 import typingsSlinky.officeJs.officeJsStrings.Triangle
 import typingsSlinky.officeJs.officeJsStrings.TwoPhaseColor
+import typingsSlinky.officeJs.officeJsStrings.Values
 import typingsSlinky.officeJs.officeJsStrings.X
+import typingsSlinky.officeJs.officeJsStrings.XValues
+import typingsSlinky.officeJs.officeJsStrings.YValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -153,6 +159,32 @@ trait ChartSeries extends ClientObject {
     * [Api set: ExcelApi 1.7]
     */
   var gapWidth: Double = js.native
+  
+  /**
+    * Gets the values from a single dimension of the chart series. These could be either category values or data values, depending on the dimension specified and how the data is mapped for the chart series.
+    *
+    * [Api set: ExcelApi 1.12]
+    *
+    * @param dimension the dimension of axis where the data from
+    */
+  def getDimensionValues(dimension: ChartSeriesDimension): ClientResult[js.Array[String]] = js.native
+  @JSName("getDimensionValues")
+  def getDimensionValues_BubbleSizes(dimension: BubbleSizes): ClientResult[js.Array[String]] = js.native
+  /**
+    * Gets the values from a single dimension of the chart series. These could be either category values or data values, depending on the dimension specified and how the data is mapped for the chart series.
+    *
+    * [Api set: ExcelApi 1.12]
+    *
+    * @param dimension the dimension of axis where the data from
+    */
+  @JSName("getDimensionValues")
+  def getDimensionValues_Categories(dimension: Categories): ClientResult[js.Array[String]] = js.native
+  @JSName("getDimensionValues")
+  def getDimensionValues_Values(dimension: Values): ClientResult[js.Array[String]] = js.native
+  @JSName("getDimensionValues")
+  def getDimensionValues_XValues(dimension: XValues): ClientResult[js.Array[String]] = js.native
+  @JSName("getDimensionValues")
+  def getDimensionValues_YValues(dimension: YValues): ClientResult[js.Array[String]] = js.native
   
   /**
     *
@@ -311,7 +343,7 @@ trait ChartSeries extends ClientObject {
   
   /**
     *
-    * Specifies the name of a series in a chart.
+    * Specifies the name of a series in a chart. The name's length should not be greater than 255 characters.
     *
     * [Api set: ExcelApi 1.1]
     */

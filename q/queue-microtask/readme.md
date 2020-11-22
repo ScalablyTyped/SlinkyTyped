@@ -1,7 +1,7 @@
 
 # Scala.js typings for queue-microtask
 
-Typings are for version 1.1.4
+Typings are for version 1.2.1
 
 ## Library description:
 fast, tiny `queueMicrotask` shim for modern engines

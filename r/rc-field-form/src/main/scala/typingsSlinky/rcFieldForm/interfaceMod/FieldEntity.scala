@@ -20,6 +20,10 @@ trait FieldEntity extends js.Object {
   
   def isFieldValidating(): Boolean = js.native
   
+  def isList(): Boolean = js.native
+  
+  def isListField(): Boolean = js.native
+  
   def onStoreChange(store: Store, namePathList: js.Array[InternalNamePath], info: ValuedNotifyInfo): Unit = js.native
   def onStoreChange(store: Store, namePathList: Null, info: ValuedNotifyInfo): Unit = js.native
   

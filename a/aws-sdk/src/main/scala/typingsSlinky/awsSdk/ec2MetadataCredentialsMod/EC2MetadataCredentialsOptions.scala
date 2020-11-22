@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.ec2MetadataCredentialsMod
 
-import typingsSlinky.awsSdk.anon.Timeout
+import typingsSlinky.awsSdk.anon.ConnectTimeout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EC2MetadataCredentialsOptions extends js.Object {
   
-  var httpOptions: js.UndefOr[Timeout] = js.native
+  var httpOptions: js.UndefOr[ConnectTimeout] = js.native
   
   var maxRetries: js.UndefOr[Double] = js.native
 }
@@ -36,7 +36,7 @@ object EC2MetadataCredentialsOptions {
     }
     
     @scala.inline
-    def setHttpOptions(value: Timeout): Self = this.set("httpOptions", value.asInstanceOf[js.Any])
+    def setHttpOptions(value: ConnectTimeout): Self = this.set("httpOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHttpOptions: Self = this.set("httpOptions", js.undefined)

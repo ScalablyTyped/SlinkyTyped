@@ -29,6 +29,8 @@ object fiMod extends js.Object {
     
     var bs: js.UndefOr[CustomLocale] = js.native
     
+    var ca: js.UndefOr[CustomLocale] = js.native
+    
     var cat: js.UndefOr[CustomLocale] = js.native
     
     var cs: js.UndefOr[CustomLocale] = js.native
@@ -126,6 +128,10 @@ object fiMod extends js.Object {
     var tr: js.UndefOr[CustomLocale] = js.native
     
     var uk: js.UndefOr[CustomLocale] = js.native
+    
+    var uz: js.UndefOr[CustomLocale] = js.native
+    
+    var uz_latn: js.UndefOr[CustomLocale] = js.native
     
     var vn: js.UndefOr[CustomLocale] = js.native
     

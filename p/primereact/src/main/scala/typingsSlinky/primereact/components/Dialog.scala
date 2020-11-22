@@ -42,6 +42,9 @@ object Dialog {
     def closeOnEscape(value: Boolean): this.type = set("closeOnEscape", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def contentClassName(value: String): this.type = set("contentClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def contentStyle(value: js.Object): this.type = set("contentStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -57,7 +60,7 @@ object Dialog {
     def header(value: js.Any): this.type = set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconsTemplate(value: js.Any): this.type = set("iconsTemplate", value.asInstanceOf[js.Any])
+    def icons(value: /* props */ js.Object => _): this.type = set("icons", js.Any.fromFunction1(value))
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])

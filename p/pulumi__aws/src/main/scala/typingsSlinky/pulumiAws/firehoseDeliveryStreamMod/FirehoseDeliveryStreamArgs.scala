@@ -3,6 +3,7 @@ package typingsSlinky.pulumiAws.firehoseDeliveryStreamMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.inputMod.kinesis.FirehoseDeliveryStreamElasticsearchConfiguration
 import typingsSlinky.pulumiAws.inputMod.kinesis.FirehoseDeliveryStreamExtendedS3Configuration
+import typingsSlinky.pulumiAws.inputMod.kinesis.FirehoseDeliveryStreamHttpEndpointConfiguration
 import typingsSlinky.pulumiAws.inputMod.kinesis.FirehoseDeliveryStreamKinesisSourceConfiguration
 import typingsSlinky.pulumiAws.inputMod.kinesis.FirehoseDeliveryStreamRedshiftConfiguration
 import typingsSlinky.pulumiAws.inputMod.kinesis.FirehoseDeliveryStreamS3Configuration
@@ -22,7 +23,7 @@ trait FirehoseDeliveryStreamArgs extends js.Object {
   val arn: js.UndefOr[Input[String]] = js.native
   
   /**
-    * This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extendedS3` instead), `extendedS3`, `redshift`, `elasticsearch`, and `splunk`.
+    * This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extendedS3` instead), `extendedS3`, `redshift`, `elasticsearch`, `splunk`, and `httpEndpoint`.
     */
   val destination: Input[String] = js.native
   
@@ -37,6 +38,11 @@ trait FirehoseDeliveryStreamArgs extends js.Object {
     * Enhanced configuration options for the s3 destination. More details are given below.
     */
   val extendedS3Configuration: js.UndefOr[Input[FirehoseDeliveryStreamExtendedS3Configuration]] = js.native
+  
+  /**
+    * Configuration options if httpEndpoint is the destination. requires the user to also specify a `s3Configuration` block.  More details are given below.
+    */
+  val httpEndpointConfiguration: js.UndefOr[Input[FirehoseDeliveryStreamHttpEndpointConfiguration]] = js.native
   
   /**
     * Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
@@ -68,6 +74,9 @@ trait FirehoseDeliveryStreamArgs extends js.Object {
     */
   val serverSideEncryption: js.UndefOr[Input[FirehoseDeliveryStreamServerSideEncryption]] = js.native
   
+  /**
+    * Configuration options if splunk is the destination. More details are given below.
+    */
   val splunkConfiguration: js.UndefOr[Input[FirehoseDeliveryStreamSplunkConfiguration]] = js.native
   
   /**
@@ -129,6 +138,12 @@ object FirehoseDeliveryStreamArgs {
     
     @scala.inline
     def deleteExtendedS3Configuration: Self = this.set("extendedS3Configuration", js.undefined)
+    
+    @scala.inline
+    def setHttpEndpointConfiguration(value: Input[FirehoseDeliveryStreamHttpEndpointConfiguration]): Self = this.set("httpEndpointConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHttpEndpointConfiguration: Self = this.set("httpEndpointConfiguration", js.undefined)
     
     @scala.inline
     def setKinesisSourceConfiguration(value: Input[FirehoseDeliveryStreamKinesisSourceConfiguration]): Self = this.set("kinesisSourceConfiguration", value.asInstanceOf[js.Any])

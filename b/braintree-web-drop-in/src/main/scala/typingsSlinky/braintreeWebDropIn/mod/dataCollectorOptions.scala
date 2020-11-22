@@ -8,8 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait dataCollectorOptions extends js.Object {
   
   var kount: js.UndefOr[Boolean] = js.native
-  
-  var paypal: js.UndefOr[Boolean] = js.native
 }
 object dataCollectorOptions {
   
@@ -39,11 +37,5 @@ object dataCollectorOptions {
     
     @scala.inline
     def deleteKount: Self = this.set("kount", js.undefined)
-    
-    @scala.inline
-    def setPaypal(value: Boolean): Self = this.set("paypal", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePaypal: Self = this.set("paypal", js.undefined)
   }
 }

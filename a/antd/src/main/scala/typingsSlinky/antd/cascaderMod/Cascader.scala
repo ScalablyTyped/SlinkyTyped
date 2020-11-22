@@ -6,6 +6,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderContextMod.DirectionType
 import typingsSlinky.antd.renderEmptyMod.RenderEmptyHandler
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
@@ -23,6 +24,11 @@ trait Cascader
   
   def clearSelection(e: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   
+  var clearSelectionTimeout: js.Any = js.native
+  
+  @JSName("componentWillUnmount")
+  def componentWillUnmount_MCascader(): Unit = js.native
+  
   def focus(): Unit = js.native
   
   def generateFilteredOptions(prefixCls: js.UndefOr[scala.Nothing], renderEmpty: RenderEmptyHandler): js.Array[CascaderOptionType] = js.native
@@ -31,7 +37,7 @@ trait Cascader
   def getLabel(): js.Any = js.native
   
   def getPopupPlacement(): String = js.native
-  def getPopupPlacement(direction: String): String = js.native
+  def getPopupPlacement(direction: DirectionType): String = js.native
   
   def handleChange(value: js.Any, selectedOptions: js.Array[CascaderOptionType]): Unit = js.native
   

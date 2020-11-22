@@ -142,7 +142,7 @@ object mod extends js.Object {
       * @param cookieName string to be parsed into a Cookie
       * @param accessInfo CookieAccessInfo
       */
-    def getCookie(cookieName: String, accessInfo: CookieAccessInfo): Cookie = js.native
+    def getCookie(cookieName: String, accessInfo: CookieAccessInfo): js.UndefOr[Cookie] = js.native
     
     /**
       * grab all cookies matching this access_info
@@ -172,13 +172,13 @@ object mod extends js.Object {
       * @param requestDomain string argument is used to default the domain if it is not explicit in the cookie string
       * @param requestPath string argument is used to set the path if it is not explicit in a cookie String
       */
-    def setCookies(cookie: String): js.Array[Cookie] | `false` = js.native
-    def setCookies(cookie: String, requestDomain: js.UndefOr[scala.Nothing], requestPath: String): js.Array[Cookie] | `false` = js.native
-    def setCookies(cookie: String, requestDomain: String): js.Array[Cookie] | `false` = js.native
-    def setCookies(cookie: String, requestDomain: String, requestPath: String): js.Array[Cookie] | `false` = js.native
-    def setCookies(cookie: js.Array[String]): js.Array[Cookie] | `false` = js.native
-    def setCookies(cookie: js.Array[String], requestDomain: js.UndefOr[scala.Nothing], requestPath: String): js.Array[Cookie] | `false` = js.native
-    def setCookies(cookie: js.Array[String], requestDomain: String): js.Array[Cookie] | `false` = js.native
-    def setCookies(cookie: js.Array[String], requestDomain: String, requestPath: String): js.Array[Cookie] | `false` = js.native
+    def setCookies(cookie: String): js.Array[Cookie] = js.native
+    def setCookies(cookie: String, requestDomain: js.UndefOr[scala.Nothing], requestPath: String): js.Array[Cookie] = js.native
+    def setCookies(cookie: String, requestDomain: String): js.Array[Cookie] = js.native
+    def setCookies(cookie: String, requestDomain: String, requestPath: String): js.Array[Cookie] = js.native
+    def setCookies(cookie: js.Array[String]): js.Array[Cookie] = js.native
+    def setCookies(cookie: js.Array[String], requestDomain: js.UndefOr[scala.Nothing], requestPath: String): js.Array[Cookie] = js.native
+    def setCookies(cookie: js.Array[String], requestDomain: String): js.Array[Cookie] = js.native
+    def setCookies(cookie: js.Array[String], requestDomain: String, requestPath: String): js.Array[Cookie] = js.native
   }
 }

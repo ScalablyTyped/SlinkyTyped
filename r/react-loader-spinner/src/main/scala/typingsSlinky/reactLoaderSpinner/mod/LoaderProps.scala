@@ -1,5 +1,6 @@
 package typingsSlinky.reactLoaderSpinner.mod
 
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,13 +8,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LoaderProps extends js.Object {
   
+  var className: js.UndefOr[String] = js.native
+  
   var color: js.UndefOr[String] = js.native
   
-   // in milliseconds
   var height: js.UndefOr[Double] = js.native
+  
+  var radius: js.UndefOr[Double] = js.native
+  
+  var secondaryColor: js.UndefOr[String] = js.native
+  
+  var style: js.UndefOr[CSSProperties] = js.native
   
   var timeout: js.UndefOr[Double] = js.native
   
+   // in milliseconds
   var `type`: js.UndefOr[Types] = js.native
   
   var visible: js.UndefOr[Boolean | String] = js.native
@@ -44,6 +53,12 @@ object LoaderProps {
     }
     
     @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
     def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -54,6 +69,24 @@ object LoaderProps {
     
     @scala.inline
     def deleteHeight: Self = this.set("height", js.undefined)
+    
+    @scala.inline
+    def setRadius(value: Double): Self = this.set("radius", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRadius: Self = this.set("radius", js.undefined)
+    
+    @scala.inline
+    def setSecondaryColor(value: String): Self = this.set("secondaryColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSecondaryColor: Self = this.set("secondaryColor", js.undefined)
+    
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
     
     @scala.inline
     def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])

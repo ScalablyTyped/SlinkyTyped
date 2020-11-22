@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PutAppReplicationConfigurationRequest extends js.Object {
   
   /**
-    * ID of the application tassociated with the replication configuration.
+    * The ID of the application.
     */
   var appId: js.UndefOr[AppId] = js.native
   
   /**
-    * Replication configurations for server groups in the application.
+    * Information about the replication configurations for server groups in the application.
     */
   var serverGroupReplicationConfigurations: js.UndefOr[ServerGroupReplicationConfigurations] = js.native
 }

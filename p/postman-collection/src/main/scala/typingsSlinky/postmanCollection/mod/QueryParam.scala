@@ -1,7 +1,7 @@
 package typingsSlinky.postmanCollection.mod
 
 import typingsSlinky.postmanCollection.anon.Encode
-import typingsSlinky.postmanCollection.anon.KeyValue
+import typingsSlinky.postmanCollection.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +20,7 @@ class QueryParam protected () extends Property[QueryParamDefinition] {
   var system: js.UndefOr[Boolean] = js.native
   
   def update(param: String): Unit = js.native
-  def update(param: KeyValue): Unit = js.native
+  def update(param: Value): Unit = js.native
   
   var value: Null | String = js.native
 }

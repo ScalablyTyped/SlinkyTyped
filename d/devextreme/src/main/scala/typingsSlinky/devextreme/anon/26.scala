@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `26` extends js.Object {
   
-  var border: js.UndefOr[ColorWidth] = js.native
+  var value: js.UndefOr[js.Date | Double] = js.native
   
-  var color: js.UndefOr[String] = js.native
+  var valueText: js.UndefOr[String] = js.native
 }
 object `26` {
   
@@ -35,15 +35,18 @@ object `26` {
     }
     
     @scala.inline
-    def setBorder(value: ColorWidth): Self = this.set("border", value.asInstanceOf[js.Any])
+    def setValueDate(value: js.Date): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBorder: Self = this.set("border", js.undefined)
+    def setValue(value: js.Date | Double): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def deleteValue: Self = this.set("value", js.undefined)
     
     @scala.inline
-    def deleteColor: Self = this.set("color", js.undefined)
+    def setValueText(value: String): Self = this.set("valueText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValueText: Self = this.set("valueText", js.undefined)
   }
 }

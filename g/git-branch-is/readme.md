@@ -1,7 +1,7 @@
 
 # Scala.js typings for git-branch-is
 
-Typings are for version 3.1
+Typings are for version 4.0
 
 ## Library description:
 Assert that the name of the current branch of a git repository has a particular value.

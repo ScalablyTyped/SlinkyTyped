@@ -13,7 +13,7 @@ trait ColumnStatisticsError extends js.Object {
   var ColumnStatistics: js.UndefOr[typingsSlinky.awsSdk.glueMod.ColumnStatistics] = js.native
   
   /**
-    * The error message occurred during operation.
+    * An error message with the reason for the failure of an operation.
     */
   var Error: js.UndefOr[ErrorDetail] = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.atomically
 
+import typingsSlinky.atomically.anon.Fn0
 import typingsSlinky.atomically.anon.FnCall
 import typingsSlinky.atomically.anon.FnCallFdBufferOffsetLengthPosition
 import typingsSlinky.atomically.anon.FnCallPathFlagsMode
@@ -8,9 +9,12 @@ import typingsSlinky.atomically.anon.TypeofrealpathSync
 import typingsSlinky.atomically.typesMod.FN
 import typingsSlinky.node.anon.MakeDirectoryOptionsrecur
 import typingsSlinky.node.anon.MakeDirectoryOptionsrecurMode
+import typingsSlinky.node.fsMod.BigIntOptions
+import typingsSlinky.node.fsMod.BigIntStats
 import typingsSlinky.node.fsMod.MakeDirectoryOptions
 import typingsSlinky.node.fsMod.Mode
 import typingsSlinky.node.fsMod.PathLike
+import typingsSlinky.node.fsMod.StatOptions
 import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -113,9 +117,9 @@ object fsMod extends js.Object {
     
     def readFileSyncRetry(
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Arguments is not an array type */ args: js.Array[Double]
-    ): FnCallPathOptions = js.native
+    ): Fn0 = js.native
     @JSName("readFileSyncRetry")
-    var readFileSyncRetry_Original: FN[js.Array[Double], FnCallPathOptions] = js.native
+    var readFileSyncRetry_Original: FN[js.Array[Double], Fn0] = js.native
     
     var realpathAttempt: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof fs.realpath.__promisify__ */ js.Any = js.native
     
@@ -141,9 +145,26 @@ object fsMod extends js.Object {
     
     var statAttempt: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof fs.stat.__promisify__ */ js.Any = js.native
     
+    def statRetry(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Arguments is not an array type */ args: js.Array[Double]
+    ): js.Any = js.native
+    @JSName("statRetry")
+    var statRetry_Original: FN[
+        js.Array[Double], 
+        /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof fs.stat.__promisify__ */ _
+      ] = js.native
+    
     def statSyncAttempt(path: PathLike): Stats = js.native
+    def statSyncAttempt(path: PathLike, options: BigIntOptions): BigIntStats = js.native
+    def statSyncAttempt(path: PathLike, options: StatOptions): Stats | BigIntStats = js.native
     @JSName("statSyncAttempt")
-    var statSyncAttempt_Original: js.Function1[/* path */ PathLike, Stats] = js.native
+    var statSyncAttempt_Original: FnCallPathOptions = js.native
+    
+    def statSyncRetry(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Arguments is not an array type */ args: js.Array[Double]
+    ): FnCallPathOptions = js.native
+    @JSName("statSyncRetry")
+    var statSyncRetry_Original: FN[js.Array[Double], FnCallPathOptions] = js.native
     
     var unlinkAttempt: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof fs.unlink.__promisify__ */ js.Any = js.native
     

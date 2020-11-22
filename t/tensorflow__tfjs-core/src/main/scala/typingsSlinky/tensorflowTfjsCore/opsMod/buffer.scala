@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore.opsMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.TensorBuffer
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.TensorBuffer
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.bool
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.float32
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.int32

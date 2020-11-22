@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "material__circular-progress"
-version := "7.0.0-ec7e4d"
+version := "8.0.0-a267d3"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "material__base" % "7.0.0-7a21fc",
-  "org.scalablytyped.slinky" %%% "material__progress-indicator" % "7.0.0-62eea0",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "material__base" % "8.0.0-6c4191",
+  "org.scalablytyped.slinky" %%% "material__progress-indicator" % "8.0.0-4e916f",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

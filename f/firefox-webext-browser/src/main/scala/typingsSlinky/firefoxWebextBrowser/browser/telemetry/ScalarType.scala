@@ -6,8 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* telemetry types */
 /**
-  * Type of scalar: 'count' for numeric values, 'string' for string values, 'boolean' for boolean values. Maps to
-  * `nsITelemetry.SCALAR_TYPE_*`.
+  * Type of scalar: 'count' for numeric values, 'string' for string values, 'boolean' for boolean values. Maps to `nsITelemetry.SCALAR_TYPE_*`.
   */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.count

@@ -18,7 +18,7 @@ trait MathActivity extends js.Object {
   var math: MathExpression = js.native
   
   /**
-    * The name of the 'math' activity.
+    * The name of the math activity.
     */
   var name: ActivityName = js.native
   

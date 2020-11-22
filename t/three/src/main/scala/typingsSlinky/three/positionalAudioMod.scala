@@ -1,7 +1,6 @@
 package typingsSlinky.three
 
 import org.scalajs.dom.raw.PannerNode
-import typingsSlinky.std.DistanceModelType
 import typingsSlinky.three.audioListenerMod.AudioListener
 import typingsSlinky.three.audioMod.Audio
 import scala.scalajs.js
@@ -16,7 +15,7 @@ object positionalAudioMod extends js.Object {
   class PositionalAudio protected () extends Audio[PannerNode] {
     def this(listener: AudioListener) = this()
     
-    def getDistanceModel(): DistanceModelType = js.native
+    def getDistanceModel(): String = js.native
     
     def getMaxDistance(): Double = js.native
     
@@ -28,7 +27,7 @@ object positionalAudioMod extends js.Object {
     
     def setDirectionalCone(coneInnerAngle: Double, coneOuterAngle: Double, coneOuterGain: Double): this.type = js.native
     
-    def setDistanceModel(value: DistanceModelType): this.type = js.native
+    def setDistanceModel(value: String): this.type = js.native
     
     def setMaxDistance(value: Double): this.type = js.native
     

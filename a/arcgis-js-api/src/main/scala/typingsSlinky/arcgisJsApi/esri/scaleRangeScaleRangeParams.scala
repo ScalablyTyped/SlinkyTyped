@@ -18,16 +18,14 @@ trait scaleRangeScaleRangeParams extends Object {
   var layer: FeatureLayer | SceneLayer | CSVLayer | PointCloudLayer | GeoJSONLayer = js.native
   
   /**
-    * The number of features in the `layer` to sample for spatial statistics. A higher sample size will yield more precise results. However, higher sample sizes also require more time for the function to process the result.
+    * The number of features in the `layer` to sample for spatial statistics.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-heuristics-scaleRange.html#scaleRange)
-    *
-    * @default 500
     */
   var sampleSize: js.UndefOr[Double] = js.native
   
   /**
-    * Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+    * Allows for cancelable requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-heuristics-scaleRange.html#scaleRange)
     */

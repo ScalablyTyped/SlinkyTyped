@@ -1,7 +1,9 @@
 package typingsSlinky.grpcGrpcJs.loadBalancingConfigMod
 
+import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.cds
 import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.eds
 import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.grpclb
+import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.lrs
 import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.pick_first
 import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.priority
 import typingsSlinky.grpcGrpcJs.grpcGrpcJsStrings.round_robin
@@ -19,6 +21,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.grpcGrpcJs.loadBalancingConfigMod.PriorityLoadBalancingConfig
   - typingsSlinky.grpcGrpcJs.loadBalancingConfigMod.WeightedTargetLoadBalancingConfig
   - typingsSlinky.grpcGrpcJs.loadBalancingConfigMod.EdsLoadBalancingConfig
+  - typingsSlinky.grpcGrpcJs.loadBalancingConfigMod.CdsLoadBalancingConfig
+  - typingsSlinky.grpcGrpcJs.loadBalancingConfigMod.LrsLoadBalancingConfig
 */
 trait LoadBalancingConfig extends js.Object
 object LoadBalancingConfig {
@@ -32,6 +36,12 @@ object LoadBalancingConfig {
   @scala.inline
   def RoundRobinLoadBalancingConfig(name: round_robin, round_robin: RoundRobinConfig): LoadBalancingConfig = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], round_robin = round_robin.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LoadBalancingConfig]
+  }
+  
+  @scala.inline
+  def LrsLoadBalancingConfig(lrs: LrsLbConfig, name: lrs): LoadBalancingConfig = {
+    val __obj = js.Dynamic.literal(lrs = lrs.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancingConfig]
   }
   
@@ -62,6 +72,12 @@ object LoadBalancingConfig {
   @scala.inline
   def GrpcLbLoadBalancingConfig(grpclb: GrpcLbConfig, name: grpclb): LoadBalancingConfig = {
     val __obj = js.Dynamic.literal(grpclb = grpclb.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LoadBalancingConfig]
+  }
+  
+  @scala.inline
+  def CdsLoadBalancingConfig(cds: CdsLbConfig, name: cds): LoadBalancingConfig = {
+    val __obj = js.Dynamic.literal(cds = cds.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancingConfig]
   }
 }

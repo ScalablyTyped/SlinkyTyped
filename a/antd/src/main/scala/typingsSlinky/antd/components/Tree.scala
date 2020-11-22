@@ -1,6 +1,7 @@
 package typingsSlinky.antd.components
 
 import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
@@ -15,12 +16,14 @@ import typingsSlinky.antd.directoryTreeMod.DirectoryTreeProps
 import typingsSlinky.antd.treeTreeMod.AntTreeNodeProps
 import typingsSlinky.antd.treeTreeMod.AntdTreeNodeAttribute
 import typingsSlinky.antd.treeTreeMod.TreeProps
-import typingsSlinky.rcTree.anon.DragNode
 import typingsSlinky.rcTree.anon.Event
 import typingsSlinky.rcTree.anon.EventNode
 import typingsSlinky.rcTree.anon.Expanded
-import typingsSlinky.rcTree.anon.ExpandedKeys
 import typingsSlinky.rcTree.anon.Node
+import typingsSlinky.rcTree.anon.NodeDragEventParamsHTMLDi
+import typingsSlinky.rcTree.anon.NodeDragEventParamsHTMLDiDragNode
+import typingsSlinky.rcTree.contextTypesMod.NodeDragEventParams
+import typingsSlinky.rcTree.contextTypesMod.NodeMouseEventParams
 import typingsSlinky.rcTree.interfaceMod.DataNode
 import typingsSlinky.rcTree.interfaceMod.EventDataNode
 import typingsSlinky.rcTree.interfaceMod.IconType
@@ -154,32 +157,31 @@ object Tree {
     ): this.type = set("onCheck", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onClick(
-      value: (/* e */ SyntheticMouseEvent[org.scalajs.dom.raw.Element], /* treeNode */ EventDataNode) => Unit
-    ): this.type = set("onClick", js.Any.fromFunction2(value))
+    def onClick(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): this.type = set("onClick", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onDoubleClick(
-      value: (/* e */ SyntheticMouseEvent[org.scalajs.dom.raw.Element], /* treeNode */ EventDataNode) => Unit
-    ): this.type = set("onDoubleClick", js.Any.fromFunction2(value))
+    def onContextMenu(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDragEnd(value: /* info */ EventNode => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
+    def onDoubleClick(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): this.type = set("onDoubleClick", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onDragEnter(value: /* info */ ExpandedKeys => Unit): this.type = set("onDragEnter", js.Any.fromFunction1(value))
+    def onDragEnd(value: /* info */ NodeDragEventParams[HTMLDivElement] => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDragLeave(value: /* info */ EventNode => Unit): this.type = set("onDragLeave", js.Any.fromFunction1(value))
+    def onDragEnter(value: /* info */ NodeDragEventParamsHTMLDi => Unit): this.type = set("onDragEnter", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDragOver(value: /* info */ EventNode => Unit): this.type = set("onDragOver", js.Any.fromFunction1(value))
+    def onDragLeave(value: /* info */ NodeDragEventParams[HTMLDivElement] => Unit): this.type = set("onDragLeave", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDragStart(value: /* info */ EventNode => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
+    def onDragOver(value: /* info */ NodeDragEventParams[HTMLDivElement] => Unit): this.type = set("onDragOver", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDrop(value: /* info */ DragNode => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
+    def onDragStart(value: /* info */ NodeDragEventParams[HTMLDivElement] => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onDrop(value: /* info */ NodeDragEventParamsHTMLDiDragNode => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
     
     @scala.inline
     def onExpand(value: (/* expandedKeys */ js.Array[Key], /* info */ Expanded) => Unit): this.type = set("onExpand", js.Any.fromFunction2(value))
@@ -194,10 +196,10 @@ object Tree {
     def onLoad(value: (/* loadedKeys */ js.Array[Key], /* info */ Node) => Unit): this.type = set("onLoad", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onMouseEnter(value: /* info */ EventNode => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    def onMouseEnter(value: /* info */ NodeMouseEventParams[HTMLSpanElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onMouseLeave(value: /* info */ EventNode => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    def onMouseLeave(value: /* info */ NodeMouseEventParams[HTMLSpanElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
     
     @scala.inline
     def onRightClick(value: /* info */ EventNode => Unit): this.type = set("onRightClick", js.Any.fromFunction1(value))
@@ -255,9 +257,9 @@ object Tree {
     @js.native
     object component extends js.Object
     
-    def withProps(p: DirectoryTreeProps): SharedBuilder_DirectoryTreeProps934662521 = new SharedBuilder_DirectoryTreeProps934662521(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: DirectoryTreeProps with RefAttributes[default]): SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[default] = new SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[default](js.Array(this.component, p.asInstanceOf[js.Any]))
     
-    implicit def make(companion: DirectoryTree.type): SharedBuilder_DirectoryTreeProps934662521 = new SharedBuilder_DirectoryTreeProps934662521(js.Array(this.component, js.Dictionary.empty))()
+    implicit def make(companion: DirectoryTree.type): SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[default] = new SharedBuilder_DirectoryTreePropsRefAttributes_1564941547[default](js.Array(this.component, js.Dictionary.empty))()
   }
   
   object TreeNode {

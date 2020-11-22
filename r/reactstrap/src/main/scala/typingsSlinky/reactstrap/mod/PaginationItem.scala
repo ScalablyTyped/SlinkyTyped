@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "PaginationItem")
+@JSImport("reactstrap/es", "PaginationItem")
 @js.native
-class PaginationItem[T] ()
+class PaginationItem ()
   extends Component[PaginationItemProps, js.Object, js.Any]

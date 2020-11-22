@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DatasetEntry extends js.Object {
   
   /**
-    * The pre-signed URI of the data set item.
+    * The presigned URI of the data set item.
     */
   var dataURI: js.UndefOr[PresignedURI] = js.native
   

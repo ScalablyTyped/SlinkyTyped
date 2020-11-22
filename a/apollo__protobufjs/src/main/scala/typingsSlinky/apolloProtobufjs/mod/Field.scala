@@ -38,24 +38,36 @@ class Field protected () extends FieldBase {
     */
   def this(name: String, id: Double, `type`: String) = this()
   def this(name: String, id: Double, `type`: String, rule: String) = this()
-  def this(name: String, id: Double, `type`: String, rule: StringDictionary[js.Any]) = this()
+  def this(name: String, id: Double, `type`: String, rule: StringDictionary[js.UndefOr[js.Any]]) = this()
   def this(name: String, id: Double, `type`: String, rule: js.UndefOr[scala.Nothing], extend: String) = this()
   def this(
     name: String,
     id: Double,
     `type`: String,
     rule: js.UndefOr[scala.Nothing],
-    extend: StringDictionary[js.Any]
+    extend: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   def this(name: String, id: Double, `type`: String, rule: String, extend: String) = this()
-  def this(name: String, id: Double, `type`: String, rule: String, extend: StringDictionary[js.Any]) = this()
-  def this(name: String, id: Double, `type`: String, rule: StringDictionary[js.Any], extend: String) = this()
   def this(
     name: String,
     id: Double,
     `type`: String,
-    rule: StringDictionary[js.Any],
-    extend: StringDictionary[js.Any]
+    rule: String,
+    extend: StringDictionary[js.UndefOr[js.Any]]
+  ) = this()
+  def this(
+    name: String,
+    id: Double,
+    `type`: String,
+    rule: StringDictionary[js.UndefOr[js.Any]],
+    extend: String
+  ) = this()
+  def this(
+    name: String,
+    id: Double,
+    `type`: String,
+    rule: StringDictionary[js.UndefOr[js.Any]],
+    extend: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   def this(
     name: String,
@@ -63,7 +75,7 @@ class Field protected () extends FieldBase {
     `type`: String,
     rule: js.UndefOr[scala.Nothing],
     extend: js.UndefOr[scala.Nothing],
-    options: StringDictionary[js.Any]
+    options: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   def this(
     name: String,
@@ -71,15 +83,15 @@ class Field protected () extends FieldBase {
     `type`: String,
     rule: js.UndefOr[scala.Nothing],
     extend: String,
-    options: StringDictionary[js.Any]
+    options: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   def this(
     name: String,
     id: Double,
     `type`: String,
     rule: js.UndefOr[scala.Nothing],
-    extend: StringDictionary[js.Any],
-    options: StringDictionary[js.Any]
+    extend: StringDictionary[js.UndefOr[js.Any]],
+    options: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   def this(
     name: String,
@@ -87,7 +99,7 @@ class Field protected () extends FieldBase {
     `type`: String,
     rule: String,
     extend: js.UndefOr[scala.Nothing],
-    options: StringDictionary[js.Any]
+    options: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   def this(
     name: String,
@@ -95,39 +107,39 @@ class Field protected () extends FieldBase {
     `type`: String,
     rule: String,
     extend: String,
-    options: StringDictionary[js.Any]
+    options: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   def this(
     name: String,
     id: Double,
     `type`: String,
     rule: String,
-    extend: StringDictionary[js.Any],
-    options: StringDictionary[js.Any]
+    extend: StringDictionary[js.UndefOr[js.Any]],
+    options: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   def this(
     name: String,
     id: Double,
     `type`: String,
-    rule: StringDictionary[js.Any],
+    rule: StringDictionary[js.UndefOr[js.Any]],
     extend: js.UndefOr[scala.Nothing],
-    options: StringDictionary[js.Any]
+    options: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   def this(
     name: String,
     id: Double,
     `type`: String,
-    rule: StringDictionary[js.Any],
+    rule: StringDictionary[js.UndefOr[js.Any]],
     extend: String,
-    options: StringDictionary[js.Any]
+    options: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   def this(
     name: String,
     id: Double,
     `type`: String,
-    rule: StringDictionary[js.Any],
-    extend: StringDictionary[js.Any],
-    options: StringDictionary[js.Any]
+    rule: StringDictionary[js.UndefOr[js.Any]],
+    extend: StringDictionary[js.UndefOr[js.Any]],
+    options: StringDictionary[js.UndefOr[js.Any]]
   ) = this()
   
   /** Determines whether this field is packed. Only relevant when repeated and working with proto2. */

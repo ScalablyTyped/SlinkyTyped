@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,8 +26,8 @@ class CrossAssociation protected () extends AssociationBase {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def child: IEntity = js.native
@@ -43,9 +45,6 @@ class CrossAssociation protected () extends AssociationBase {
   
   @JSName("containerAsDomainModel")
   def containerAsDomainModel_MCrossAssociation: DomainModel = js.native
-  
-  @JSName("model")
-  var model_FCrossAssociation: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.CrossAssociation")

@@ -24,7 +24,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /user/repository_invitations/:invitation_id']['response'] */ js.Any
   ] = js.native
   @JSName("acceptInvitation")
-  var acceptInvitation_Original: `336` = js.native
+  var acceptInvitation_Original: `339` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -56,7 +56,7 @@ trait AcceptInvitation extends js.Object {
     * | `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
     */
   @JSName("addAppAccessRestrictions")
-  var addAppAccessRestrictions_Original: `337` = js.native
+  var addAppAccessRestrictions_Original: `340` = js.native
   
   /**
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
@@ -96,7 +96,7 @@ trait AcceptInvitation extends js.Object {
     * To prevent abuse, you are limited to sending 50 invitations to a repository per 24 hour period. Note there is no limit if you are inviting organization members to an organization repository.
     */
   @JSName("addCollaborator")
-  var addCollaborator_Original: `338` = js.native
+  var addCollaborator_Original: `341` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -116,7 +116,7 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("addStatusCheckContexts")
-  var addStatusCheckContexts_Original: `339` = js.native
+  var addStatusCheckContexts_Original: `342` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -148,7 +148,7 @@ trait AcceptInvitation extends js.Object {
     * | `array` | The teams that can have push access. Use the team's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
     */
   @JSName("addTeamAccessRestrictions")
-  var addTeamAccessRestrictions_Original: `340` = js.native
+  var addTeamAccessRestrictions_Original: `343` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -180,7 +180,7 @@ trait AcceptInvitation extends js.Object {
     * | `array` | Usernames for people who can have push access. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
     */
   @JSName("addUserAccessRestrictions")
-  var addUserAccessRestrictions_Original: `341` = js.native
+  var addUserAccessRestrictions_Original: `344` = js.native
   
   /**
     * For organization-owned repositories, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners.
@@ -204,7 +204,7 @@ trait AcceptInvitation extends js.Object {
     * Team members will include the members of child teams.
     */
   @JSName("checkCollaborator")
-  var checkCollaborator_Original: `342` = js.native
+  var checkCollaborator_Original: `345` = js.native
   
   /**
     * Shows whether dependency alerts are enabled or disabled for a repository. The authenticated user must have admin access to the repository. For more information, see "[About security alerts for vulnerable dependencies](https://docs.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)".
@@ -224,7 +224,7 @@ trait AcceptInvitation extends js.Object {
     * Shows whether dependency alerts are enabled or disabled for a repository. The authenticated user must have admin access to the repository. For more information, see "[About security alerts for vulnerable dependencies](https://docs.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)".
     */
   @JSName("checkVulnerabilityAlerts")
-  var checkVulnerabilityAlerts_Original: `343` = js.native
+  var checkVulnerabilityAlerts_Original: `346` = js.native
   
   /**
     * Both `:base` and `:head` must be branch names in `:repo`. To compare branches across other repositories in the same network as `:repo`, use the format `<USERNAME>:branch`.
@@ -237,29 +237,37 @@ trait AcceptInvitation extends js.Object {
     *
     * The response will include a comparison of up to 250 commits. If you are working with a larger commit range, you can use the [List commits](https://developer.github.com/v3/repos/commits/#list-commits) to enumerate all commits in the range.
     *
-    * For comparisons with extremely large diffs, you may receive an error response indicating that the diff took too long to generate. You can typically resolve this error by using a smaller commit range.
+    * For comparisons with extremely large diffs, you may receive an error response indicating that the diff took too long
+    * to generate. You can typically resolve this error by using a smaller commit range.
     *
     * **Signature verification object**
     *
     * The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
     *
+    * | Name | Type | Description |
+    * | ---- | ---- | ----------- |
+    * | `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+    * | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+    * | `signature` | `string` | The signature that was extracted from the commit. |
+    * | `payload` | `string` | The value that was signed. |
+    *
     * These are the possible values for `reason` in the `verification` object:
     *
-    * | Value                    | Description                                                                                                                       |
-    * | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-    * | `expired_key`            | The key that made the signature is expired.                                                                                       |
-    * | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-    * | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-    * | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-    * | `unsigned`               | The object does not include a signature.                                                                                          |
-    * | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-    * | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-    * | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-    * | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-    * | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-    * | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-    * | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-    * | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    * | Value | Description |
+    * | ----- | ----------- |
+    * | `expired_key` | The key that made the signature is expired. |
+    * | `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+    * | `gpgverify_error` | There was an error communicating with the signature verification service. |
+    * | `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+    * | `unsigned` | The object does not include a signature. |
+    * | `unknown_signature_type` | A non-PGP signature was found in the commit. |
+    * | `no_user` | No user was associated with the `committer` email address in the commit. |
+    * | `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    * | `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+    * | `unknown_key` | The key that made the signature has not been registered with any user's account. |
+    * | `malformed_signature` | There was an error parsing the signature. |
+    * | `invalid` | The signature could not be cryptographically verified using the key whose key-id was found in the signature. |
+    * | `valid` | None of the above errors applied, so the signature is considered to be verified. |
     */
   def compareCommits(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/compare/:base...:head']['response'] */ js.Any
@@ -283,32 +291,40 @@ trait AcceptInvitation extends js.Object {
     *
     * The response will include a comparison of up to 250 commits. If you are working with a larger commit range, you can use the [List commits](https://developer.github.com/v3/repos/commits/#list-commits) to enumerate all commits in the range.
     *
-    * For comparisons with extremely large diffs, you may receive an error response indicating that the diff took too long to generate. You can typically resolve this error by using a smaller commit range.
+    * For comparisons with extremely large diffs, you may receive an error response indicating that the diff took too long
+    * to generate. You can typically resolve this error by using a smaller commit range.
     *
     * **Signature verification object**
     *
     * The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
     *
+    * | Name | Type | Description |
+    * | ---- | ---- | ----------- |
+    * | `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+    * | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+    * | `signature` | `string` | The signature that was extracted from the commit. |
+    * | `payload` | `string` | The value that was signed. |
+    *
     * These are the possible values for `reason` in the `verification` object:
     *
-    * | Value                    | Description                                                                                                                       |
-    * | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-    * | `expired_key`            | The key that made the signature is expired.                                                                                       |
-    * | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-    * | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-    * | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-    * | `unsigned`               | The object does not include a signature.                                                                                          |
-    * | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-    * | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-    * | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-    * | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-    * | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-    * | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-    * | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-    * | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    * | Value | Description |
+    * | ----- | ----------- |
+    * | `expired_key` | The key that made the signature is expired. |
+    * | `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+    * | `gpgverify_error` | There was an error communicating with the signature verification service. |
+    * | `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+    * | `unsigned` | The object does not include a signature. |
+    * | `unknown_signature_type` | A non-PGP signature was found in the commit. |
+    * | `no_user` | No user was associated with the `committer` email address in the commit. |
+    * | `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    * | `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+    * | `unknown_key` | The key that made the signature has not been registered with any user's account. |
+    * | `malformed_signature` | There was an error parsing the signature. |
+    * | `invalid` | The signature could not be cryptographically verified using the key whose key-id was found in the signature. |
+    * | `valid` | None of the above errors applied, so the signature is considered to be verified. |
     */
   @JSName("compareCommits")
-  var compareCommits_Original: `344` = js.native
+  var compareCommits_Original: `347` = js.native
   
   /**
     * Create a comment for a commit using its `:commit_sha`.
@@ -332,7 +348,7 @@ trait AcceptInvitation extends js.Object {
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
     */
   @JSName("createCommitComment")
-  var createCommitComment_Original: `345` = js.native
+  var createCommitComment_Original: `348` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -356,7 +372,7 @@ trait AcceptInvitation extends js.Object {
     * When authenticated with admin or owner permissions to the repository, you can use this endpoint to require signed commits on a branch. You must enable branch protection to require signed commits.
     */
   @JSName("createCommitSignatureProtection")
-  var createCommitSignatureProtection_Original: `346` = js.native
+  var createCommitSignatureProtection_Original: `349` = js.native
   
   /**
     * Users with push access in a repository can create commit statuses for a given SHA.
@@ -380,7 +396,7 @@ trait AcceptInvitation extends js.Object {
     * Note: there is a limit of 1000 statuses per `sha` and `context` within a repository. Attempts to create more than 1000 statuses will result in a validation error.
     */
   @JSName("createCommitStatus")
-  var createCommitStatus_Original: `347` = js.native
+  var createCommitStatus_Original: `350` = js.native
   
   /**
     * You can create a read-only deploy key.
@@ -400,7 +416,7 @@ trait AcceptInvitation extends js.Object {
     * You can create a read-only deploy key.
     */
   @JSName("createDeployKey")
-  var createDeployKey_Original: `348` = js.native
+  var createDeployKey_Original: `351` = js.native
   
   /**
     * Deployments offer a few configurable parameters with certain defaults.
@@ -483,7 +499,7 @@ trait AcceptInvitation extends js.Object {
     * GitHub Apps require `read & write` access to "Deployments" and `read-only` access to "Repo contents" (for private repos). OAuth Apps require the `repo_deployment` scope.
     */
   @JSName("createDeploymentStatus")
-  var createDeploymentStatus_Original: `350` = js.native
+  var createDeploymentStatus_Original: `353` = js.native
   
   /**
     * Deployments offer a few configurable parameters with certain defaults.
@@ -533,7 +549,7 @@ trait AcceptInvitation extends js.Object {
     * status for the commit to be deployed, but one or more of the required contexts do not have a state of `success`.
     */
   @JSName("createDeployment")
-  var createDeployment_Original: `349` = js.native
+  var createDeployment_Original: `352` = js.native
   
   /**
     * You can use this endpoint to trigger a webhook event called `repository_dispatch` when you want activity that happens outside of GitHub to trigger a GitHub Actions workflow or GitHub App webhook. You must configure your GitHub Actions workflow or GitHub App to run when the `repository_dispatch` event occurs. For an example `repository_dispatch` webhook payload, see "[RepositoryDispatchEvent](https://developer.github.com/webhooks/event-payloads/#repository_dispatch)."
@@ -565,7 +581,7 @@ trait AcceptInvitation extends js.Object {
     * This input example shows how you can use the `client_payload` as a test to debug your workflow.
     */
   @JSName("createDispatchEvent")
-  var createDispatchEvent_Original: `351` = js.native
+  var createDispatchEvent_Original: `354` = js.native
   
   /**
     * Creates a new repository for the authenticated user.
@@ -599,7 +615,7 @@ trait AcceptInvitation extends js.Object {
     * *   `repo` scope to create a private repository
     */
   @JSName("createForAuthenticatedUser")
-  var createForAuthenticatedUser_Original: `352` = js.native
+  var createForAuthenticatedUser_Original: `355` = js.native
   
   /**
     * Create a fork for the authenticated user.
@@ -623,7 +639,7 @@ trait AcceptInvitation extends js.Object {
     * **Note**: Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://github.com/contact) or [GitHub Premium Support](https://premium.githubsupport.com).
     */
   @JSName("createFork")
-  var createFork_Original: `353` = js.native
+  var createFork_Original: `356` = js.native
   
   /**
     * Creates a new repository in the specified organization. The authenticated user must be a member of the organization.
@@ -657,7 +673,7 @@ trait AcceptInvitation extends js.Object {
     * *   `repo` scope to create a private repository
     */
   @JSName("createInOrg")
-  var createInOrg_Original: `354` = js.native
+  var createInOrg_Original: `357` = js.native
   
   /**
     * Creates a new file or replaces an existing file in a repository.
@@ -677,8 +693,11 @@ trait AcceptInvitation extends js.Object {
     * Creates a new file or replaces an existing file in a repository.
     */
   @JSName("createOrUpdateFileContents")
-  var createOrUpdateFileContents_Original: `355` = js.native
+  var createOrUpdateFileContents_Original: `358` = js.native
   
+  /**
+    * Configures a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages)."
+    */
   def createPagesSite(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /repos/:owner/:repo/pages']['response'] */ js.Any
   ] = js.native
@@ -690,8 +709,11 @@ trait AcceptInvitation extends js.Object {
   ): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /repos/:owner/:repo/pages']['response'] */ js.Any
   ] = js.native
+  /**
+    * Configures a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages)."
+    */
   @JSName("createPagesSite")
-  var createPagesSite_Original: `356` = js.native
+  var createPagesSite_Original: `359` = js.native
   
   /**
     * Users with push access to the repository can create a release.
@@ -715,7 +737,7 @@ trait AcceptInvitation extends js.Object {
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
     */
   @JSName("createRelease")
-  var createRelease_Original: `357` = js.native
+  var createRelease_Original: `360` = js.native
   
   /**
     * Creates a new repository using a repository template. Use the `template_owner` and `template_repo` route parameters to specify the repository to use as the template. The authenticated user must own or be a member of an organization that owns the repository. To check if a repository is available to use as a template, get the repository's information using the [Get a repository](https://developer.github.com/v3/repos/#get-a-repository) endpoint and check that the `is_template` key is `true`.
@@ -749,7 +771,7 @@ trait AcceptInvitation extends js.Object {
     * *   `repo` scope to create a private repository
     */
   @JSName("createUsingTemplate")
-  var createUsingTemplate_Original: `358` = js.native
+  var createUsingTemplate_Original: `361` = js.native
   
   /**
     * Repositories can have multiple webhooks installed. Each webhook should have a unique `config`. Multiple webhooks can
@@ -771,7 +793,7 @@ trait AcceptInvitation extends js.Object {
     * share the same `config` as long as those webhooks do not have any `events` that overlap.
     */
   @JSName("createWebhook")
-  var createWebhook_Original: `359` = js.native
+  var createWebhook_Original: `362` = js.native
   
   def declineInvitation(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /user/repository_invitations/:invitation_id']['response'] */ js.Any
@@ -785,7 +807,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /user/repository_invitations/:invitation_id']['response'] */ js.Any
   ] = js.native
   @JSName("declineInvitation")
-  var declineInvitation_Original: `360` = js.native
+  var declineInvitation_Original: `363` = js.native
   
   /**
     * Deleting a repository requires admin access. If OAuth is used, the `delete_repo` scope is required.
@@ -827,7 +849,7 @@ trait AcceptInvitation extends js.Object {
     * Disables the ability to restrict who can push to this branch.
     */
   @JSName("deleteAccessRestrictions")
-  var deleteAccessRestrictions_Original: `362` = js.native
+  var deleteAccessRestrictions_Original: `365` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -851,7 +873,7 @@ trait AcceptInvitation extends js.Object {
     * Removing admin enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
     */
   @JSName("deleteAdminBranchProtection")
-  var deleteAdminBranchProtection_Original: `363` = js.native
+  var deleteAdminBranchProtection_Original: `366` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -871,7 +893,7 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("deleteBranchProtection")
-  var deleteBranchProtection_Original: `364` = js.native
+  var deleteBranchProtection_Original: `367` = js.native
   
   def deleteCommitComment(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/comments/:comment_id']['response'] */ js.Any
@@ -885,7 +907,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/comments/:comment_id']['response'] */ js.Any
   ] = js.native
   @JSName("deleteCommitComment")
-  var deleteCommitComment_Original: `365` = js.native
+  var deleteCommitComment_Original: `368` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -909,7 +931,7 @@ trait AcceptInvitation extends js.Object {
     * When authenticated with admin or owner permissions to the repository, you can use this endpoint to disable required signed commits on a branch. You must enable branch protection to require signed commits.
     */
   @JSName("deleteCommitSignatureProtection")
-  var deleteCommitSignatureProtection_Original: `366` = js.native
+  var deleteCommitSignatureProtection_Original: `369` = js.native
   
   /**
     * Deploy keys are immutable. If you need to update a key, remove the key and create a new one instead.
@@ -929,7 +951,7 @@ trait AcceptInvitation extends js.Object {
     * Deploy keys are immutable. If you need to update a key, remove the key and create a new one instead.
     */
   @JSName("deleteDeployKey")
-  var deleteDeployKey_Original: `367` = js.native
+  var deleteDeployKey_Original: `370` = js.native
   
   /**
     * To ensure there can always be an active deployment, you can only delete an _inactive_ deployment. Anyone with `repo` or `repo_deployment` scopes can delete an inactive deployment.
@@ -963,7 +985,7 @@ trait AcceptInvitation extends js.Object {
     * For more information, see "[Create a deployment](https://developer.github.com/v3/repos/deployments/#create-a-deployment)" and "[Create a deployment status](https://developer.github.com/v3/repos/deployments/#create-a-deployment-status)."
     */
   @JSName("deleteDeployment")
-  var deleteDeployment_Original: `368` = js.native
+  var deleteDeployment_Original: `371` = js.native
   
   /**
     * Deletes a file in a repository.
@@ -995,7 +1017,7 @@ trait AcceptInvitation extends js.Object {
     * You must provide values for both `name` and `email`, whether you choose to use `author` or `committer`. Otherwise, you'll receive a `422` status code.
     */
   @JSName("deleteFile")
-  var deleteFile_Original: `369` = js.native
+  var deleteFile_Original: `372` = js.native
   
   def deleteInvitation(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/invitations/:invitation_id']['response'] */ js.Any
@@ -1009,7 +1031,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/invitations/:invitation_id']['response'] */ js.Any
   ] = js.native
   @JSName("deleteInvitation")
-  var deleteInvitation_Original: `370` = js.native
+  var deleteInvitation_Original: `373` = js.native
   
   def deletePagesSite(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/pages']['response'] */ js.Any
@@ -1023,7 +1045,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/pages']['response'] */ js.Any
   ] = js.native
   @JSName("deletePagesSite")
-  var deletePagesSite_Original: `371` = js.native
+  var deletePagesSite_Original: `374` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -1043,7 +1065,7 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("deletePullRequestReviewProtection")
-  var deletePullRequestReviewProtection_Original: `372` = js.native
+  var deletePullRequestReviewProtection_Original: `375` = js.native
   
   /**
     * Users with push access to the repository can delete a release.
@@ -1072,13 +1094,13 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/releases/assets/:asset_id']['response'] */ js.Any
   ] = js.native
   @JSName("deleteReleaseAsset")
-  var deleteReleaseAsset_Original: `374` = js.native
+  var deleteReleaseAsset_Original: `377` = js.native
   
   /**
     * Users with push access to the repository can delete a release.
     */
   @JSName("deleteRelease")
-  var deleteRelease_Original: `373` = js.native
+  var deleteRelease_Original: `376` = js.native
   
   def deleteWebhook(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/hooks/:hook_id']['response'] */ js.Any
@@ -1092,7 +1114,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/hooks/:hook_id']['response'] */ js.Any
   ] = js.native
   @JSName("deleteWebhook")
-  var deleteWebhook_Original: `375` = js.native
+  var deleteWebhook_Original: `378` = js.native
   
   /**
     * Deleting a repository requires admin access. If OAuth is used, the `delete_repo` scope is required.
@@ -1101,7 +1123,7 @@ trait AcceptInvitation extends js.Object {
     * repositories, you will get a `403 Forbidden` response.
     */
   @JSName("delete")
-  var delete_Original: `361` = js.native
+  var delete_Original: `364` = js.native
   
   /**
     * Disables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see "[Configuring automated security fixes](https://docs.github.com/en/articles/configuring-automated-security-fixes)".
@@ -1121,7 +1143,7 @@ trait AcceptInvitation extends js.Object {
     * Disables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see "[Configuring automated security fixes](https://docs.github.com/en/articles/configuring-automated-security-fixes)".
     */
   @JSName("disableAutomatedSecurityFixes")
-  var disableAutomatedSecurityFixes_Original: `376` = js.native
+  var disableAutomatedSecurityFixes_Original: `379` = js.native
   
   /**
     * Disables dependency alerts and the dependency graph for a repository. The authenticated user must have admin access to the repository. For more information, see "[About security alerts for vulnerable dependencies](https://docs.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)".
@@ -1141,7 +1163,7 @@ trait AcceptInvitation extends js.Object {
     * Disables dependency alerts and the dependency graph for a repository. The authenticated user must have admin access to the repository. For more information, see "[About security alerts for vulnerable dependencies](https://docs.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)".
     */
   @JSName("disableVulnerabilityAlerts")
-  var disableVulnerabilityAlerts_Original: `377` = js.native
+  var disableVulnerabilityAlerts_Original: `380` = js.native
   
   /**
     * Gets a redirect URL to download an archive for a repository. The `:archive_format` can be either `tarball` or
@@ -1171,7 +1193,7 @@ trait AcceptInvitation extends js.Object {
     * **Note**: For private repositories, these links are temporary and expire after five minutes.
     */
   @JSName("downloadArchive")
-  var downloadArchive_Original: `378` = js.native
+  var downloadArchive_Original: `381` = js.native
   
   /**
     * Enables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see "[Configuring automated security fixes](https://docs.github.com/en/articles/configuring-automated-security-fixes)".
@@ -1191,7 +1213,7 @@ trait AcceptInvitation extends js.Object {
     * Enables automated security fixes for a repository. The authenticated user must have admin access to the repository. For more information, see "[Configuring automated security fixes](https://docs.github.com/en/articles/configuring-automated-security-fixes)".
     */
   @JSName("enableAutomatedSecurityFixes")
-  var enableAutomatedSecurityFixes_Original: `379` = js.native
+  var enableAutomatedSecurityFixes_Original: `382` = js.native
   
   /**
     * Enables dependency alerts and the dependency graph for a repository. The authenticated user must have admin access to the repository. For more information, see "[About security alerts for vulnerable dependencies](https://docs.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)".
@@ -1211,7 +1233,7 @@ trait AcceptInvitation extends js.Object {
     * Enables dependency alerts and the dependency graph for a repository. The authenticated user must have admin access to the repository. For more information, see "[About security alerts for vulnerable dependencies](https://docs.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)".
     */
   @JSName("enableVulnerabilityAlerts")
-  var enableVulnerabilityAlerts_Original: `380` = js.native
+  var enableVulnerabilityAlerts_Original: `383` = js.native
   
   /**
     * When you pass the `scarlet-witch-preview` media type, requests to get a repository will also return the repository's code of conduct if it can be detected from the repository's code of conduct file.
@@ -1256,7 +1278,7 @@ trait AcceptInvitation extends js.Object {
     * **Note**: Users, apps, and teams `restrictions` are only available for organization-owned repositories.
     */
   @JSName("getAccessRestrictions")
-  var getAccessRestrictions_Original: `382` = js.native
+  var getAccessRestrictions_Original: `385` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -1276,7 +1298,7 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("getAdminBranchProtection")
-  var getAdminBranchProtection_Original: `383` = js.native
+  var getAdminBranchProtection_Original: `386` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -1296,7 +1318,7 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("getAllStatusCheckContexts")
-  var getAllStatusCheckContexts_Original: `384` = js.native
+  var getAllStatusCheckContexts_Original: `387` = js.native
   
   def getAllTopics(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/topics']['response'] */ js.Any
@@ -1310,7 +1332,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/topics']['response'] */ js.Any
   ] = js.native
   @JSName("getAllTopics")
-  var getAllTopics_Original: `385` = js.native
+  var getAllTopics_Original: `388` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -1334,7 +1356,7 @@ trait AcceptInvitation extends js.Object {
     * Lists the GitHub Apps that have push access to this branch. Only installed GitHub Apps with `write` access to the `contents` permission can be added as authorized actors on a protected branch.
     */
   @JSName("getAppsWithAccessToProtectedBranch")
-  var getAppsWithAccessToProtectedBranch_Original: `386` = js.native
+  var getAppsWithAccessToProtectedBranch_Original: `389` = js.native
   
   def getBranch(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/branches/:branch']['response'] */ js.Any
@@ -1366,10 +1388,10 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("getBranchProtection")
-  var getBranchProtection_Original: `388` = js.native
+  var getBranchProtection_Original: `391` = js.native
   
   @JSName("getBranch")
-  var getBranch_Original: `387` = js.native
+  var getBranch_Original: `390` = js.native
   
   /**
     * Get the total number of clones and breakdown per day or week for the last 14 days. Timestamps are aligned to UTC midnight of the beginning of the day or week. Week begins on Monday.
@@ -1389,7 +1411,7 @@ trait AcceptInvitation extends js.Object {
     * Get the total number of clones and breakdown per day or week for the last 14 days. Timestamps are aligned to UTC midnight of the beginning of the day or week. Week begins on Monday.
     */
   @JSName("getClones")
-  var getClones_Original: `389` = js.native
+  var getClones_Original: `392` = js.native
   
   /**
     * Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
@@ -1409,7 +1431,7 @@ trait AcceptInvitation extends js.Object {
     * Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
     */
   @JSName("getCodeFrequencyStats")
-  var getCodeFrequencyStats_Original: `390` = js.native
+  var getCodeFrequencyStats_Original: `393` = js.native
   
   /**
     * Checks the repository permission of a collaborator. The possible repository permissions are `admin`, `write`, `read`, and `none`.
@@ -1429,7 +1451,7 @@ trait AcceptInvitation extends js.Object {
     * Checks the repository permission of a collaborator. The possible repository permissions are `admin`, `write`, `read`, and `none`.
     */
   @JSName("getCollaboratorPermissionLevel")
-  var getCollaboratorPermissionLevel_Original: `391` = js.native
+  var getCollaboratorPermissionLevel_Original: `394` = js.native
   
   /**
     * Users with pull access in a repository can access a combined view of commit statuses for a given ref. The ref can be a SHA, a branch name, or a tag name.
@@ -1465,12 +1487,14 @@ trait AcceptInvitation extends js.Object {
     * *   **success** if the latest status for all contexts is `success`
     */
   @JSName("getCombinedStatusForRef")
-  var getCombinedStatusForRef_Original: `392` = js.native
+  var getCombinedStatusForRef_Original: `395` = js.native
   
   /**
     * Returns the contents of a single commit reference. You must have `read` access for the repository to use this endpoint.
     *
-    * You can pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to fetch `diff` and `patch` formats. Diffs with binary data will have no `patch` property.
+    * **Note:** If there are more than 300 files in the commit diff, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
+    *
+    * You can pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to  fetch `diff` and `patch` formats. Diffs with binary data will have no `patch` property.
     *
     * To return only the SHA-1 hash of the commit reference, you can provide the `sha` custom [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) in the `Accept` header. You can use this endpoint to check if a remote reference's SHA-1 hash is the same as your local reference's SHA-1 hash by providing the local SHA-1 reference as the ETag.
     *
@@ -1478,23 +1502,30 @@ trait AcceptInvitation extends js.Object {
     *
     * The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
     *
+    * | Name | Type | Description |
+    * | ---- | ---- | ----------- |
+    * | `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+    * | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+    * | `signature` | `string` | The signature that was extracted from the commit. |
+    * | `payload` | `string` | The value that was signed. |
+    *
     * These are the possible values for `reason` in the `verification` object:
     *
-    * | Value                    | Description                                                                                                                       |
-    * | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-    * | `expired_key`            | The key that made the signature is expired.                                                                                       |
-    * | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-    * | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-    * | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-    * | `unsigned`               | The object does not include a signature.                                                                                          |
-    * | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-    * | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-    * | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-    * | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-    * | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-    * | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-    * | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-    * | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    * | Value | Description |
+    * | ----- | ----------- |
+    * | `expired_key` | The key that made the signature is expired. |
+    * | `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+    * | `gpgverify_error` | There was an error communicating with the signature verification service. |
+    * | `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+    * | `unsigned` | The object does not include a signature. |
+    * | `unknown_signature_type` | A non-PGP signature was found in the commit. |
+    * | `no_user` | No user was associated with the `committer` email address in the commit. |
+    * | `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    * | `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+    * | `unknown_key` | The key that made the signature has not been registered with any user's account. |
+    * | `malformed_signature` | There was an error parsing the signature. |
+    * | `invalid` | The signature could not be cryptographically verified using the key whose key-id was found in the signature. |
+    * | `valid` | None of the above errors applied, so the signature is considered to be verified. |
     */
   def getCommit(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/commits/:ref']['response'] */ js.Any
@@ -1526,7 +1557,7 @@ trait AcceptInvitation extends js.Object {
     * Returns the last year of commit activity grouped by week. The `days` array is a group of commits per day, starting on `Sunday`.
     */
   @JSName("getCommitActivityStats")
-  var getCommitActivityStats_Original: `394` = js.native
+  var getCommitActivityStats_Original: `397` = js.native
   
   def getCommitComment(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/comments/:comment_id']['response'] */ js.Any
@@ -1540,7 +1571,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/comments/:comment_id']['response'] */ js.Any
   ] = js.native
   @JSName("getCommitComment")
-  var getCommitComment_Original: `395` = js.native
+  var getCommitComment_Original: `398` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -1568,12 +1599,14 @@ trait AcceptInvitation extends js.Object {
     * **Note**: You must enable branch protection to require signed commits.
     */
   @JSName("getCommitSignatureProtection")
-  var getCommitSignatureProtection_Original: `396` = js.native
+  var getCommitSignatureProtection_Original: `399` = js.native
   
   /**
     * Returns the contents of a single commit reference. You must have `read` access for the repository to use this endpoint.
     *
-    * You can pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to fetch `diff` and `patch` formats. Diffs with binary data will have no `patch` property.
+    * **Note:** If there are more than 300 files in the commit diff, the response will include pagination link headers for the remaining files, up to a limit of 3000 files. Each page contains the static commit information, and the only changes are to the file listing.
+    *
+    * You can pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to  fetch `diff` and `patch` formats. Diffs with binary data will have no `patch` property.
     *
     * To return only the SHA-1 hash of the commit reference, you can provide the `sha` custom [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) in the `Accept` header. You can use this endpoint to check if a remote reference's SHA-1 hash is the same as your local reference's SHA-1 hash by providing the local SHA-1 reference as the ETag.
     *
@@ -1581,26 +1614,33 @@ trait AcceptInvitation extends js.Object {
     *
     * The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
     *
+    * | Name | Type | Description |
+    * | ---- | ---- | ----------- |
+    * | `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+    * | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+    * | `signature` | `string` | The signature that was extracted from the commit. |
+    * | `payload` | `string` | The value that was signed. |
+    *
     * These are the possible values for `reason` in the `verification` object:
     *
-    * | Value                    | Description                                                                                                                       |
-    * | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-    * | `expired_key`            | The key that made the signature is expired.                                                                                       |
-    * | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-    * | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-    * | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-    * | `unsigned`               | The object does not include a signature.                                                                                          |
-    * | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-    * | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-    * | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-    * | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-    * | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-    * | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-    * | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-    * | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    * | Value | Description |
+    * | ----- | ----------- |
+    * | `expired_key` | The key that made the signature is expired. |
+    * | `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+    * | `gpgverify_error` | There was an error communicating with the signature verification service. |
+    * | `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+    * | `unsigned` | The object does not include a signature. |
+    * | `unknown_signature_type` | A non-PGP signature was found in the commit. |
+    * | `no_user` | No user was associated with the `committer` email address in the commit. |
+    * | `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    * | `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+    * | `unknown_key` | The key that made the signature has not been registered with any user's account. |
+    * | `malformed_signature` | There was an error parsing the signature. |
+    * | `invalid` | The signature could not be cryptographically verified using the key whose key-id was found in the signature. |
+    * | `valid` | None of the above errors applied, so the signature is considered to be verified. |
     */
   @JSName("getCommit")
-  var getCommit_Original: `393` = js.native
+  var getCommit_Original: `396` = js.native
   
   /**
     * This endpoint will return all community profile metrics, including an overall health score, repository description, the presence of documentation, detected code of conduct, detected license, and the presence of ISSUE\_TEMPLATE, PULL\_REQUEST\_TEMPLATE, README, and CONTRIBUTING files.
@@ -1620,7 +1660,7 @@ trait AcceptInvitation extends js.Object {
     * This endpoint will return all community profile metrics, including an overall health score, repository description, the presence of documentation, detected code of conduct, detected license, and the presence of ISSUE\_TEMPLATE, PULL\_REQUEST\_TEMPLATE, README, and CONTRIBUTING files.
     */
   @JSName("getCommunityProfileMetrics")
-  var getCommunityProfileMetrics_Original: `397` = js.native
+  var getCommunityProfileMetrics_Original: `400` = js.native
   
   /**
     * Gets the contents of a file or directory in a repository. Specify the file path or directory in `:path`. If you omit
@@ -1702,7 +1742,7 @@ trait AcceptInvitation extends js.Object {
     * github.com URLs (`html_url` and `_links["html"]`) will have null values.
     */
   @JSName("getContent")
-  var getContent_Original: `398` = js.native
+  var getContent_Original: `401` = js.native
   
   /**
     * Returns the `total` number of commits authored by the contributor. In addition, the response includes a Weekly Hash (`weeks` array) with the following information:
@@ -1732,7 +1772,7 @@ trait AcceptInvitation extends js.Object {
     * *   `c` - Number of commits
     */
   @JSName("getContributorsStats")
-  var getContributorsStats_Original: `399` = js.native
+  var getContributorsStats_Original: `402` = js.native
   
   def getDeployKey(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/keys/:key_id']['response'] */ js.Any
@@ -1746,7 +1786,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/keys/:key_id']['response'] */ js.Any
   ] = js.native
   @JSName("getDeployKey")
-  var getDeployKey_Original: `400` = js.native
+  var getDeployKey_Original: `403` = js.native
   
   def getDeployment(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/deployments/:deployment_id']['response'] */ js.Any
@@ -1778,10 +1818,10 @@ trait AcceptInvitation extends js.Object {
     * Users with pull access can view a deployment status for a deployment:
     */
   @JSName("getDeploymentStatus")
-  var getDeploymentStatus_Original: `402` = js.native
+  var getDeploymentStatus_Original: `405` = js.native
   
   @JSName("getDeployment")
-  var getDeployment_Original: `401` = js.native
+  var getDeployment_Original: `404` = js.native
   
   def getLatestPagesBuild(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/pages/builds/latest']['response'] */ js.Any
@@ -1795,7 +1835,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/pages/builds/latest']['response'] */ js.Any
   ] = js.native
   @JSName("getLatestPagesBuild")
-  var getLatestPagesBuild_Original: `403` = js.native
+  var getLatestPagesBuild_Original: `406` = js.native
   
   /**
     * View the latest published full release for the repository.
@@ -1819,7 +1859,7 @@ trait AcceptInvitation extends js.Object {
     * The latest release is the most recent non-prerelease, non-draft release, sorted by the `created_at` attribute. The `created_at` attribute is the date of the commit used for the release, and not the date when the release was drafted or published.
     */
   @JSName("getLatestRelease")
-  var getLatestRelease_Original: `404` = js.native
+  var getLatestRelease_Original: `407` = js.native
   
   def getPages(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/pages']['response'] */ js.Any
@@ -1845,10 +1885,10 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/pages/builds/:build_id']['response'] */ js.Any
   ] = js.native
   @JSName("getPagesBuild")
-  var getPagesBuild_Original: `406` = js.native
+  var getPagesBuild_Original: `409` = js.native
   
   @JSName("getPages")
-  var getPages_Original: `405` = js.native
+  var getPages_Original: `408` = js.native
   
   /**
     * Returns the total commit counts for the `owner` and total commit counts in `all`. `all` is everyone combined, including the `owner` in the last 52 weeks. If you'd like to get the commit counts for non-owners, you can subtract `owner` from `all`.
@@ -1872,7 +1912,7 @@ trait AcceptInvitation extends js.Object {
     * The array order is oldest week (index 0) to most recent week.
     */
   @JSName("getParticipationStats")
-  var getParticipationStats_Original: `407` = js.native
+  var getParticipationStats_Original: `410` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -1892,7 +1932,7 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("getPullRequestReviewProtection")
-  var getPullRequestReviewProtection_Original: `408` = js.native
+  var getPullRequestReviewProtection_Original: `411` = js.native
   
   /**
     * Each array contains the day number, hour number, and number of commits:
@@ -1924,7 +1964,7 @@ trait AcceptInvitation extends js.Object {
     * For example, `[2, 14, 25]` indicates that there were 25 total commits, during the 2:00pm hour on Tuesdays. All times are based on the time zone of individual commits.
     */
   @JSName("getPunchCardStats")
-  var getPunchCardStats_Original: `409` = js.native
+  var getPunchCardStats_Original: `412` = js.native
   
   /**
     * Gets the preferred README for a repository.
@@ -1948,7 +1988,7 @@ trait AcceptInvitation extends js.Object {
     * READMEs support [custom media types](https://developer.github.com/v3/repos/contents/#custom-media-types) for retrieving the raw content or rendered HTML.
     */
   @JSName("getReadme")
-  var getReadme_Original: `410` = js.native
+  var getReadme_Original: `413` = js.native
   
   /**
     * **Note:** This returns an `upload_url` key corresponding to the endpoint for uploading release assets. This key is a [hypermedia resource](https://developer.github.com/v3/#hypermedia).
@@ -1983,7 +2023,7 @@ trait AcceptInvitation extends js.Object {
     * To download the asset's binary content, set the `Accept` header of the request to [`application/octet-stream`](https://developer.github.com/v3/media/#media-types). The API will either redirect the client to the location, or stream it directly if possible. API clients should handle both a `200` or `302` response.
     */
   @JSName("getReleaseAsset")
-  var getReleaseAsset_Original: `412` = js.native
+  var getReleaseAsset_Original: `415` = js.native
   
   /**
     * Get a published release with the specified tag.
@@ -2003,13 +2043,13 @@ trait AcceptInvitation extends js.Object {
     * Get a published release with the specified tag.
     */
   @JSName("getReleaseByTag")
-  var getReleaseByTag_Original: `413` = js.native
+  var getReleaseByTag_Original: `416` = js.native
   
   /**
     * **Note:** This returns an `upload_url` key corresponding to the endpoint for uploading release assets. This key is a [hypermedia resource](https://developer.github.com/v3/#hypermedia).
     */
   @JSName("getRelease")
-  var getRelease_Original: `411` = js.native
+  var getRelease_Original: `414` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -2029,7 +2069,7 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("getStatusChecksProtection")
-  var getStatusChecksProtection_Original: `414` = js.native
+  var getStatusChecksProtection_Original: `417` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -2053,7 +2093,7 @@ trait AcceptInvitation extends js.Object {
     * Lists the teams who have push access to this branch. The list includes child teams.
     */
   @JSName("getTeamsWithAccessToProtectedBranch")
-  var getTeamsWithAccessToProtectedBranch_Original: `415` = js.native
+  var getTeamsWithAccessToProtectedBranch_Original: `418` = js.native
   
   /**
     * Get the top 10 popular contents over the last 14 days.
@@ -2073,7 +2113,7 @@ trait AcceptInvitation extends js.Object {
     * Get the top 10 popular contents over the last 14 days.
     */
   @JSName("getTopPaths")
-  var getTopPaths_Original: `416` = js.native
+  var getTopPaths_Original: `419` = js.native
   
   /**
     * Get the top 10 referrers over the last 14 days.
@@ -2093,7 +2133,7 @@ trait AcceptInvitation extends js.Object {
     * Get the top 10 referrers over the last 14 days.
     */
   @JSName("getTopReferrers")
-  var getTopReferrers_Original: `417` = js.native
+  var getTopReferrers_Original: `420` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -2117,7 +2157,7 @@ trait AcceptInvitation extends js.Object {
     * Lists the people who have push access to this branch.
     */
   @JSName("getUsersWithAccessToProtectedBranch")
-  var getUsersWithAccessToProtectedBranch_Original: `418` = js.native
+  var getUsersWithAccessToProtectedBranch_Original: `421` = js.native
   
   /**
     * Get the total number of views and breakdown per day or week for the last 14 days. Timestamps are aligned to UTC midnight of the beginning of the day or week. Week begins on Monday.
@@ -2137,7 +2177,7 @@ trait AcceptInvitation extends js.Object {
     * Get the total number of views and breakdown per day or week for the last 14 days. Timestamps are aligned to UTC midnight of the beginning of the day or week. Week begins on Monday.
     */
   @JSName("getViews")
-  var getViews_Original: `419` = js.native
+  var getViews_Original: `422` = js.native
   
   def getWebhook(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/hooks/:hook_id']['response'] */ js.Any
@@ -2151,7 +2191,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/hooks/:hook_id']['response'] */ js.Any
   ] = js.native
   @JSName("getWebhook")
-  var getWebhook_Original: `420` = js.native
+  var getWebhook_Original: `423` = js.native
   
   /**
     * When you pass the `scarlet-witch-preview` media type, requests to get a repository will also return the repository's code of conduct if it can be detected from the repository's code of conduct file.
@@ -2159,7 +2199,7 @@ trait AcceptInvitation extends js.Object {
     * The `parent` and `source` objects are present when the repository is a fork. `parent` is the repository this repository was forked from, `source` is the ultimate source for the network.
     */
   @JSName("get")
-  var get_Original: `381` = js.native
+  var get_Original: `384` = js.native
   
   def listBranches(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/branches']['response'] */ js.Any
@@ -2195,10 +2235,10 @@ trait AcceptInvitation extends js.Object {
     * Returns all branches where the given commit SHA is the HEAD, or latest commit for the branch.
     */
   @JSName("listBranchesForHeadCommit")
-  var listBranchesForHeadCommit_Original: `422` = js.native
+  var listBranchesForHeadCommit_Original: `425` = js.native
   
   @JSName("listBranches")
-  var listBranches_Original: `421` = js.native
+  var listBranches_Original: `424` = js.native
   
   /**
     * For organization-owned repositories, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners.
@@ -2222,7 +2262,7 @@ trait AcceptInvitation extends js.Object {
     * Team members will include the members of child teams.
     */
   @JSName("listCollaborators")
-  var listCollaborators_Original: `423` = js.native
+  var listCollaborators_Original: `426` = js.native
   
   /**
     * Use the `:commit_sha` to specify the commit that will have its comments listed.
@@ -2242,7 +2282,7 @@ trait AcceptInvitation extends js.Object {
     * Use the `:commit_sha` to specify the commit that will have its comments listed.
     */
   @JSName("listCommentsForCommit")
-  var listCommentsForCommit_Original: `424` = js.native
+  var listCommentsForCommit_Original: `427` = js.native
   
   /**
     * Commit Comments use [these custom media types](https://developer.github.com/v3/repos/comments/#custom-media-types). You can read more about the use of media types in the API [here](https://developer.github.com/v3/media/).
@@ -2266,7 +2306,7 @@ trait AcceptInvitation extends js.Object {
     * Comments are ordered by ascending ID.
     */
   @JSName("listCommitCommentsForRepo")
-  var listCommitCommentsForRepo_Original: `425` = js.native
+  var listCommitCommentsForRepo_Original: `428` = js.native
   
   /**
     * Users with pull access in a repository can view commit statuses for a given ref. The ref can be a SHA, a branch name, or a tag name. Statuses are returned in reverse chronological order. The first status in the list will be the latest one.
@@ -2290,30 +2330,37 @@ trait AcceptInvitation extends js.Object {
     * This resource is also available via a legacy route: `GET /repos/:owner/:repo/statuses/:ref`.
     */
   @JSName("listCommitStatusesForRef")
-  var listCommitStatusesForRef_Original: `426` = js.native
+  var listCommitStatusesForRef_Original: `429` = js.native
   
   /**
     * **Signature verification object**
     *
     * The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
     *
+    * | Name | Type | Description |
+    * | ---- | ---- | ----------- |
+    * | `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+    * | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+    * | `signature` | `string` | The signature that was extracted from the commit. |
+    * | `payload` | `string` | The value that was signed. |
+    *
     * These are the possible values for `reason` in the `verification` object:
     *
-    * | Value                    | Description                                                                                                                       |
-    * | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-    * | `expired_key`            | The key that made the signature is expired.                                                                                       |
-    * | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-    * | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-    * | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-    * | `unsigned`               | The object does not include a signature.                                                                                          |
-    * | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-    * | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-    * | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-    * | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-    * | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-    * | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-    * | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-    * | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    * | Value | Description |
+    * | ----- | ----------- |
+    * | `expired_key` | The key that made the signature is expired. |
+    * | `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+    * | `gpgverify_error` | There was an error communicating with the signature verification service. |
+    * | `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+    * | `unsigned` | The object does not include a signature. |
+    * | `unknown_signature_type` | A non-PGP signature was found in the commit. |
+    * | `no_user` | No user was associated with the `committer` email address in the commit. |
+    * | `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    * | `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+    * | `unknown_key` | The key that made the signature has not been registered with any user's account. |
+    * | `malformed_signature` | There was an error parsing the signature. |
+    * | `invalid` | The signature could not be cryptographically verified using the key whose key-id was found in the signature. |
+    * | `valid` | None of the above errors applied, so the signature is considered to be verified. |
     */
   def listCommits(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/commits']['response'] */ js.Any
@@ -2331,26 +2378,33 @@ trait AcceptInvitation extends js.Object {
     *
     * The response will include a `verification` object that describes the result of verifying the commit's signature. The following fields are included in the `verification` object:
     *
+    * | Name | Type | Description |
+    * | ---- | ---- | ----------- |
+    * | `verified` | `boolean` | Indicates whether GitHub considers the signature in this commit to be verified. |
+    * | `reason` | `string` | The reason for verified value. Possible values and their meanings are enumerated in table below. |
+    * | `signature` | `string` | The signature that was extracted from the commit. |
+    * | `payload` | `string` | The value that was signed. |
+    *
     * These are the possible values for `reason` in the `verification` object:
     *
-    * | Value                    | Description                                                                                                                       |
-    * | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-    * | `expired_key`            | The key that made the signature is expired.                                                                                       |
-    * | `not_signing_key`        | The "signing" flag is not among the usage flags in the GPG key that made the signature.                                           |
-    * | `gpgverify_error`        | There was an error communicating with the signature verification service.                                                         |
-    * | `gpgverify_unavailable`  | The signature verification service is currently unavailable.                                                                      |
-    * | `unsigned`               | The object does not include a signature.                                                                                          |
-    * | `unknown_signature_type` | A non-PGP signature was found in the commit.                                                                                      |
-    * | `no_user`                | No user was associated with the `committer` email address in the commit.                                                          |
-    * | `unverified_email`       | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
-    * | `bad_email`              | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature.             |
-    * | `unknown_key`            | The key that made the signature has not been registered with any user's account.                                                  |
-    * | `malformed_signature`    | There was an error parsing the signature.                                                                                         |
-    * | `invalid`                | The signature could not be cryptographically verified using the key whose key-id was found in the signature.                      |
-    * | `valid`                  | None of the above errors applied, so the signature is considered to be verified.                                                  |
+    * | Value | Description |
+    * | ----- | ----------- |
+    * | `expired_key` | The key that made the signature is expired. |
+    * | `not_signing_key` | The "signing" flag is not among the usage flags in the GPG key that made the signature. |
+    * | `gpgverify_error` | There was an error communicating with the signature verification service. |
+    * | `gpgverify_unavailable` | The signature verification service is currently unavailable. |
+    * | `unsigned` | The object does not include a signature. |
+    * | `unknown_signature_type` | A non-PGP signature was found in the commit. |
+    * | `no_user` | No user was associated with the `committer` email address in the commit. |
+    * | `unverified_email` | The `committer` email address in the commit was associated with a user, but the email address is not verified on her/his account. |
+    * | `bad_email` | The `committer` email address in the commit is not included in the identities of the PGP key that made the signature. |
+    * | `unknown_key` | The key that made the signature has not been registered with any user's account. |
+    * | `malformed_signature` | There was an error parsing the signature. |
+    * | `invalid` | The signature could not be cryptographically verified using the key whose key-id was found in the signature. |
+    * | `valid` | None of the above errors applied, so the signature is considered to be verified. |
     */
   @JSName("listCommits")
-  var listCommits_Original: `427` = js.native
+  var listCommits_Original: `430` = js.native
   
   /**
     * Lists contributors to the specified repository and sorts them by the number of commits per contributor in descending order. This endpoint may return information that is a few hours old because the GitHub REST API v3 caches contributor data to improve performance.
@@ -2374,7 +2428,7 @@ trait AcceptInvitation extends js.Object {
     * GitHub identifies contributors by author email address. This endpoint groups contribution counts by GitHub user, which includes all associated email addresses. To improve performance, only the first 500 author email addresses in the repository link to GitHub users. The rest will appear as anonymous contributors without associated GitHub user information.
     */
   @JSName("listContributors")
-  var listContributors_Original: `428` = js.native
+  var listContributors_Original: `431` = js.native
   
   def listDeployKeys(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/keys']['response'] */ js.Any
@@ -2388,7 +2442,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/keys']['response'] */ js.Any
   ] = js.native
   @JSName("listDeployKeys")
-  var listDeployKeys_Original: `429` = js.native
+  var listDeployKeys_Original: `432` = js.native
   
   /**
     * Users with pull access can view deployment statuses for a deployment:
@@ -2408,7 +2462,7 @@ trait AcceptInvitation extends js.Object {
     * Users with pull access can view deployment statuses for a deployment:
     */
   @JSName("listDeploymentStatuses")
-  var listDeploymentStatuses_Original: `430` = js.native
+  var listDeploymentStatuses_Original: `433` = js.native
   
   /**
     * Simple filtering of deployments is available via query parameters:
@@ -2428,7 +2482,7 @@ trait AcceptInvitation extends js.Object {
     * Simple filtering of deployments is available via query parameters:
     */
   @JSName("listDeployments")
-  var listDeployments_Original: `431` = js.native
+  var listDeployments_Original: `434` = js.native
   
   /**
     * Lists repositories that the authenticated user has explicit permission (`:read`, `:write`, or `:admin`) to access.
@@ -2452,7 +2506,7 @@ trait AcceptInvitation extends js.Object {
     * The authenticated user has explicit permission to access repositories they own, repositories where they are a collaborator, and repositories that they can access through an organization membership.
     */
   @JSName("listForAuthenticatedUser")
-  var listForAuthenticatedUser_Original: `432` = js.native
+  var listForAuthenticatedUser_Original: `435` = js.native
   
   /**
     * Lists repositories for the specified organization.
@@ -2472,7 +2526,7 @@ trait AcceptInvitation extends js.Object {
     * Lists repositories for the specified organization.
     */
   @JSName("listForOrg")
-  var listForOrg_Original: `433` = js.native
+  var listForOrg_Original: `436` = js.native
   
   /**
     * Lists public repositories for the specified user.
@@ -2492,7 +2546,7 @@ trait AcceptInvitation extends js.Object {
     * Lists public repositories for the specified user.
     */
   @JSName("listForUser")
-  var listForUser_Original: `434` = js.native
+  var listForUser_Original: `437` = js.native
   
   def listForks(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/forks']['response'] */ js.Any
@@ -2506,7 +2560,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/forks']['response'] */ js.Any
   ] = js.native
   @JSName("listForks")
-  var listForks_Original: `435` = js.native
+  var listForks_Original: `438` = js.native
   
   /**
     * When authenticating as a user with admin rights to a repository, this endpoint will list all currently open repository invitations.
@@ -2541,13 +2595,13 @@ trait AcceptInvitation extends js.Object {
     * When authenticating as a user, this endpoint will list all currently open repository invitations for that user.
     */
   @JSName("listInvitationsForAuthenticatedUser")
-  var listInvitationsForAuthenticatedUser_Original: `437` = js.native
+  var listInvitationsForAuthenticatedUser_Original: `440` = js.native
   
   /**
     * When authenticating as a user with admin rights to a repository, this endpoint will list all currently open repository invitations.
     */
   @JSName("listInvitations")
-  var listInvitations_Original: `436` = js.native
+  var listInvitations_Original: `439` = js.native
   
   /**
     * Lists languages for the specified repository. The value shown for each language is the number of bytes of code written in that language.
@@ -2567,7 +2621,7 @@ trait AcceptInvitation extends js.Object {
     * Lists languages for the specified repository. The value shown for each language is the number of bytes of code written in that language.
     */
   @JSName("listLanguages")
-  var listLanguages_Original: `438` = js.native
+  var listLanguages_Original: `441` = js.native
   
   def listPagesBuilds(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/pages/builds']['response'] */ js.Any
@@ -2581,7 +2635,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/pages/builds']['response'] */ js.Any
   ] = js.native
   @JSName("listPagesBuilds")
-  var listPagesBuilds_Original: `439` = js.native
+  var listPagesBuilds_Original: `442` = js.native
   
   /**
     * Lists all public repositories in the order that they were created.
@@ -2605,7 +2659,7 @@ trait AcceptInvitation extends js.Object {
     * Note: Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://developer.github.com/v3/#link-header) to get the URL for the next page of repositories.
     */
   @JSName("listPublic")
-  var listPublic_Original: `440` = js.native
+  var listPublic_Original: `443` = js.native
   
   /**
     * Lists all pull requests containing the provided commit SHA, which can be from any point in the commit history. The results will include open and closed pull requests. Additional preview headers may be required to see certain details for associated pull requests, such as whether a pull request is in a draft state. For more information about previews that might affect this endpoint, see the [List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests) endpoint.
@@ -2625,7 +2679,7 @@ trait AcceptInvitation extends js.Object {
     * Lists all pull requests containing the provided commit SHA, which can be from any point in the commit history. The results will include open and closed pull requests. Additional preview headers may be required to see certain details for associated pull requests, such as whether a pull request is in a draft state. For more information about previews that might affect this endpoint, see the [List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests) endpoint.
     */
   @JSName("listPullRequestsAssociatedWithCommit")
-  var listPullRequestsAssociatedWithCommit_Original: `441` = js.native
+  var listPullRequestsAssociatedWithCommit_Original: `444` = js.native
   
   def listReleaseAssets(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/releases/:release_id/assets']['response'] */ js.Any
@@ -2639,7 +2693,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/releases/:release_id/assets']['response'] */ js.Any
   ] = js.native
   @JSName("listReleaseAssets")
-  var listReleaseAssets_Original: `442` = js.native
+  var listReleaseAssets_Original: `445` = js.native
   
   /**
     * This returns a list of releases, which does not include regular Git tags that have not been associated with a release. To get a list of Git tags, use the [Repository Tags API](https://developer.github.com/v3/repos/#list-repository-tags).
@@ -2663,7 +2717,7 @@ trait AcceptInvitation extends js.Object {
     * Information about published releases are available to everyone. Only users with push access will receive listings for draft releases.
     */
   @JSName("listReleases")
-  var listReleases_Original: `443` = js.native
+  var listReleases_Original: `446` = js.native
   
   def listTags(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/tags']['response'] */ js.Any
@@ -2677,7 +2731,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/tags']['response'] */ js.Any
   ] = js.native
   @JSName("listTags")
-  var listTags_Original: `444` = js.native
+  var listTags_Original: `447` = js.native
   
   def listTeams(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/teams']['response'] */ js.Any
@@ -2691,7 +2745,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/teams']['response'] */ js.Any
   ] = js.native
   @JSName("listTeams")
-  var listTeams_Original: `445` = js.native
+  var listTeams_Original: `448` = js.native
   
   def listWebhooks(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/hooks']['response'] */ js.Any
@@ -2705,7 +2759,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/hooks']['response'] */ js.Any
   ] = js.native
   @JSName("listWebhooks")
-  var listWebhooks_Original: `446` = js.native
+  var listWebhooks_Original: `449` = js.native
   
   def merge(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /repos/:owner/:repo/merges']['response'] */ js.Any
@@ -2719,7 +2773,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /repos/:owner/:repo/merges']['response'] */ js.Any
   ] = js.native
   @JSName("merge")
-  var merge_Original: `447` = js.native
+  var merge_Original: `450` = js.native
   
   /**
     * This will trigger a [ping event](https://developer.github.com/webhooks/#ping-event) to be sent to the hook.
@@ -2739,7 +2793,7 @@ trait AcceptInvitation extends js.Object {
     * This will trigger a [ping event](https://developer.github.com/webhooks/#ping-event) to be sent to the hook.
     */
   @JSName("pingWebhook")
-  var pingWebhook_Original: `448` = js.native
+  var pingWebhook_Original: `451` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -2771,7 +2825,7 @@ trait AcceptInvitation extends js.Object {
     * | `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
     */
   @JSName("removeAppAccessRestrictions")
-  var removeAppAccessRestrictions_Original: `449` = js.native
+  var removeAppAccessRestrictions_Original: `452` = js.native
   
   def removeCollaborator(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/collaborators/:username']['response'] */ js.Any
@@ -2785,7 +2839,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/collaborators/:username']['response'] */ js.Any
   ] = js.native
   @JSName("removeCollaborator")
-  var removeCollaborator_Original: `450` = js.native
+  var removeCollaborator_Original: `453` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -2805,7 +2859,7 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("removeStatusCheckContexts")
-  var removeStatusCheckContexts_Original: `451` = js.native
+  var removeStatusCheckContexts_Original: `454` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -2825,7 +2879,7 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("removeStatusCheckProtection")
-  var removeStatusCheckProtection_Original: `452` = js.native
+  var removeStatusCheckProtection_Original: `455` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -2857,7 +2911,7 @@ trait AcceptInvitation extends js.Object {
     * | `array` | Teams that should no longer have push access. Use the team's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
     */
   @JSName("removeTeamAccessRestrictions")
-  var removeTeamAccessRestrictions_Original: `453` = js.native
+  var removeTeamAccessRestrictions_Original: `456` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -2889,7 +2943,7 @@ trait AcceptInvitation extends js.Object {
     * | `array` | Usernames of the people who should no longer have push access. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
     */
   @JSName("removeUserAccessRestrictions")
-  var removeUserAccessRestrictions_Original: `454` = js.native
+  var removeUserAccessRestrictions_Original: `457` = js.native
   
   def replaceAllTopics(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PUT /repos/:owner/:repo/topics']['response'] */ js.Any
@@ -2903,7 +2957,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PUT /repos/:owner/:repo/topics']['response'] */ js.Any
   ] = js.native
   @JSName("replaceAllTopics")
-  var replaceAllTopics_Original: `455` = js.native
+  var replaceAllTopics_Original: `458` = js.native
   
   /**
     * You can request that your site be built from the latest revision on the default branch. This has the same effect as pushing a commit to your default branch, but does not require an additional commit. Manually triggering page builds can be helpful when diagnosing build warnings and failures.
@@ -2927,7 +2981,7 @@ trait AcceptInvitation extends js.Object {
     * Build requests are limited to one concurrent build per repository and one concurrent build per requester. If you request a build while another is still in progress, the second request will be queued until the first completes.
     */
   @JSName("requestPagesBuild")
-  var requestPagesBuild_Original: `456` = js.native
+  var requestPagesBuild_Original: `459` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -2951,7 +3005,7 @@ trait AcceptInvitation extends js.Object {
     * Adding admin enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
     */
   @JSName("setAdminBranchProtection")
-  var setAdminBranchProtection_Original: `457` = js.native
+  var setAdminBranchProtection_Original: `460` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -2983,7 +3037,7 @@ trait AcceptInvitation extends js.Object {
     * | `array` | The GitHub Apps that have push access to this branch. Use the app's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
     */
   @JSName("setAppAccessRestrictions")
-  var setAppAccessRestrictions_Original: `458` = js.native
+  var setAppAccessRestrictions_Original: `461` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -3003,7 +3057,7 @@ trait AcceptInvitation extends js.Object {
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("setStatusCheckContexts")
-  var setStatusCheckContexts_Original: `459` = js.native
+  var setStatusCheckContexts_Original: `462` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -3035,7 +3089,7 @@ trait AcceptInvitation extends js.Object {
     * | `array` | The teams that can have push access. Use the team's `slug`. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
     */
   @JSName("setTeamAccessRestrictions")
-  var setTeamAccessRestrictions_Original: `460` = js.native
+  var setTeamAccessRestrictions_Original: `463` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -3067,7 +3121,7 @@ trait AcceptInvitation extends js.Object {
     * | `array` | Usernames for people who can have push access. **Note**: The list of users, apps, and teams in total is limited to 100 items. |
     */
   @JSName("setUserAccessRestrictions")
-  var setUserAccessRestrictions_Original: `461` = js.native
+  var setUserAccessRestrictions_Original: `464` = js.native
   
   /**
     * This will trigger the hook with the latest push to the current repository if the hook is subscribed to `push` events. If the hook is not subscribed to `push` events, the server will respond with 204 but no test POST will be generated.
@@ -3091,7 +3145,7 @@ trait AcceptInvitation extends js.Object {
     * **Note**: Previously `/repos/:owner/:repo/hooks/:hook_id/test`
     */
   @JSName("testPushWebhook")
-  var testPushWebhook_Original: `462` = js.native
+  var testPushWebhook_Original: `465` = js.native
   
   /**
     * A transfer request will need to be accepted by the new owner when transferring a personal repository to another user. The response will contain the original `owner`, and the transfer will continue asynchronously. For more details on the requirements to transfer personal and organization-owned repositories, see [about repository transfers](https://docs.github.com/articles/about-repository-transfers/).
@@ -3111,7 +3165,7 @@ trait AcceptInvitation extends js.Object {
     * A transfer request will need to be accepted by the new owner when transferring a personal repository to another user. The response will contain the original `owner`, and the transfer will continue asynchronously. For more details on the requirements to transfer personal and organization-owned repositories, see [about repository transfers](https://docs.github.com/articles/about-repository-transfers/).
     */
   @JSName("transfer")
-  var transfer_Original: `463` = js.native
+  var transfer_Original: `466` = js.native
   
   /**
     * **Note**: To edit a repository's topics, use the [Replace all repository topics](https://developer.github.com/v3/repos/#replace-all-repository-topics) endpoint.
@@ -3158,7 +3212,7 @@ trait AcceptInvitation extends js.Object {
     * **Note**: The list of users, apps, and teams in total is limited to 100 items.
     */
   @JSName("updateBranchProtection")
-  var updateBranchProtection_Original: `465` = js.native
+  var updateBranchProtection_Original: `468` = js.native
   
   def updateCommitComment(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /repos/:owner/:repo/comments/:comment_id']['response'] */ js.Any
@@ -3172,8 +3226,11 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /repos/:owner/:repo/comments/:comment_id']['response'] */ js.Any
   ] = js.native
   @JSName("updateCommitComment")
-  var updateCommitComment_Original: `466` = js.native
+  var updateCommitComment_Original: `469` = js.native
   
+  /**
+    * Updates information for a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages).
+    */
   def updateInformationAboutPagesSite(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PUT /repos/:owner/:repo/pages']['response'] */ js.Any
   ] = js.native
@@ -3185,8 +3242,11 @@ trait AcceptInvitation extends js.Object {
   ): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PUT /repos/:owner/:repo/pages']['response'] */ js.Any
   ] = js.native
+  /**
+    * Updates information for a GitHub Pages site. For more information, see "[About GitHub Pages](/github/working-with-github-pages/about-github-pages).
+    */
   @JSName("updateInformationAboutPagesSite")
-  var updateInformationAboutPagesSite_Original: `467` = js.native
+  var updateInformationAboutPagesSite_Original: `470` = js.native
   
   def updateInvitation(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /repos/:owner/:repo/invitations/:invitation_id']['response'] */ js.Any
@@ -3200,7 +3260,7 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /repos/:owner/:repo/invitations/:invitation_id']['response'] */ js.Any
   ] = js.native
   @JSName("updateInvitation")
-  var updateInvitation_Original: `468` = js.native
+  var updateInvitation_Original: `471` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -3228,7 +3288,7 @@ trait AcceptInvitation extends js.Object {
     * **Note**: Passing new arrays of `users` and `teams` replaces their previous values.
     */
   @JSName("updatePullRequestReviewProtection")
-  var updatePullRequestReviewProtection_Original: `469` = js.native
+  var updatePullRequestReviewProtection_Original: `472` = js.native
   
   /**
     * Users with push access to the repository can edit a release.
@@ -3263,13 +3323,13 @@ trait AcceptInvitation extends js.Object {
     * Users with push access to the repository can edit a release asset.
     */
   @JSName("updateReleaseAsset")
-  var updateReleaseAsset_Original: `471` = js.native
+  var updateReleaseAsset_Original: `474` = js.native
   
   /**
     * Users with push access to the repository can edit a release.
     */
   @JSName("updateRelease")
-  var updateRelease_Original: `470` = js.native
+  var updateRelease_Original: `473` = js.native
   
   /**
     * Protected branches are available in public repositories with GitHub Free and GitHub Free for organizations, and in public and private repositories with GitHub Pro, GitHub Team, GitHub Enterprise Cloud, and GitHub Enterprise Server. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -3293,7 +3353,7 @@ trait AcceptInvitation extends js.Object {
     * Updating required status checks requires admin or owner permissions to the repository and branch protection to be enabled.
     */
   @JSName("updateStatusCheckPotection")
-  var updateStatusCheckPotection_Original: `472` = js.native
+  var updateStatusCheckPotection_Original: `475` = js.native
   
   def updateWebhook(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /repos/:owner/:repo/hooks/:hook_id']['response'] */ js.Any
@@ -3307,13 +3367,13 @@ trait AcceptInvitation extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /repos/:owner/:repo/hooks/:hook_id']['response'] */ js.Any
   ] = js.native
   @JSName("updateWebhook")
-  var updateWebhook_Original: `473` = js.native
+  var updateWebhook_Original: `476` = js.native
   
   /**
     * **Note**: To edit a repository's topics, use the [Replace all repository topics](https://developer.github.com/v3/repos/#replace-all-repository-topics) endpoint.
     */
   @JSName("update")
-  var update_Original: `464` = js.native
+  var update_Original: `467` = js.native
   
   /**
     * This endpoint makes use of [a Hypermedia relation](https://developer.github.com/v3/#hypermedia) to determine which URL to access. The endpoint you call to upload release assets is specific to your release. Use the `upload_url` returned in
@@ -3367,5 +3427,5 @@ trait AcceptInvitation extends js.Object {
     * *   If you upload an asset with the same filename as another uploaded asset, you'll receive an error and must delete the old file before you can re-upload the new asset.
     */
   @JSName("uploadReleaseAsset")
-  var uploadReleaseAsset_Original: `474` = js.native
+  var uploadReleaseAsset_Original: `477` = js.native
 }

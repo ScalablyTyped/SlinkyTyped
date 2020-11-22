@@ -13,6 +13,11 @@ trait PutBucketMetricsConfigurationRequest extends js.Object {
   var Bucket: BucketName = js.native
   
   /**
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
+  
+  /**
     * The ID used to identify the metrics configuration.
     */
   var Id: MetricsId = js.native
@@ -53,5 +58,11 @@ object PutBucketMetricsConfigurationRequest {
     
     @scala.inline
     def setMetricsConfiguration(value: MetricsConfiguration): Self = this.set("MetricsConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
   }
 }

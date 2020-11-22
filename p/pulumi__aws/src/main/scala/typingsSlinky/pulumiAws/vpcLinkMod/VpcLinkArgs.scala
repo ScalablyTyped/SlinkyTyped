@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VpcLinkArgs extends js.Object {
   
   /**
-    * The name of the VPC Link.
+    * The name of the VPC Link. Must be between 1 and 128 characters in length.
     */
   val name: js.UndefOr[Input[String]] = js.native
   

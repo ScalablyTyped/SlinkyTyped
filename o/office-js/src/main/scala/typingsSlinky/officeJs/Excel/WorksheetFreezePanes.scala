@@ -28,7 +28,7 @@ trait WorksheetFreezePanes extends ClientObject {
   def freezeAt(frozenRange: Range): Unit = js.native
   
   /**
-    * Freeze the first column(s) of the worksheet in place.
+    * Freeze the first column or columns of the worksheet in place.
     *
     * [Api set: ExcelApi 1.7]
     *
@@ -38,7 +38,7 @@ trait WorksheetFreezePanes extends ClientObject {
   def freezeColumns(count: Double): Unit = js.native
   
   /**
-    * Freeze the top row(s) of the worksheet in place.
+    * Freeze the top row or rows of the worksheet in place.
     *
     * [Api set: ExcelApi 1.7]
     *

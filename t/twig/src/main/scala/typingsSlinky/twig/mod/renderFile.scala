@@ -8,9 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object renderFile extends js.Object {
   
+  def apply(path: String, fn: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]): Unit = js.native
   def apply(
     path: String,
-    options: CompileOptions,
+    options: RenderOptions,
     fn: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]
   ): Unit = js.native
 }

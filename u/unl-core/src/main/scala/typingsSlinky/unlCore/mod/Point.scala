@@ -7,10 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Point extends js.Object {
   
-  var elevation: Double = js.native
-  
-  var elevationType: ElevationType = js.native
-  
   var lat: Double = js.native
   
   var lon: Double = js.native
@@ -18,8 +14,8 @@ trait Point extends js.Object {
 object Point {
   
   @scala.inline
-  def apply(elevation: Double, elevationType: ElevationType, lat: Double, lon: Double): Point = {
-    val __obj = js.Dynamic.literal(elevation = elevation.asInstanceOf[js.Any], elevationType = elevationType.asInstanceOf[js.Any], lat = lat.asInstanceOf[js.Any], lon = lon.asInstanceOf[js.Any])
+  def apply(lat: Double, lon: Double): Point = {
+    val __obj = js.Dynamic.literal(lat = lat.asInstanceOf[js.Any], lon = lon.asInstanceOf[js.Any])
     __obj.asInstanceOf[Point]
   }
   
@@ -37,12 +33,6 @@ object Point {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setElevation(value: Double): Self = this.set("elevation", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setElevationType(value: ElevationType): Self = this.set("elevationType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLat(value: Double): Self = this.set("lat", value.asInstanceOf[js.Any])

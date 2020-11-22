@@ -1,5 +1,6 @@
 package typingsSlinky.nodeHtmlParser.htmlMod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,21 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Options extends js.Object {
   
-  var comment: js.UndefOr[Boolean] = js.native
+  var blockTextElements: StringDictionary[Boolean] = js.native
   
-  var lowerCaseTagName: js.UndefOr[Boolean] = js.native
+  var comment: Boolean = js.native
   
-  var pre: js.UndefOr[Boolean] = js.native
-  
-  var script: js.UndefOr[Boolean] = js.native
-  
-  var style: js.UndefOr[Boolean] = js.native
+  var lowerCaseTagName: Boolean = js.native
 }
 object Options {
   
   @scala.inline
-  def apply(): Options = {
-    val __obj = js.Dynamic.literal()
+  def apply(blockTextElements: StringDictionary[Boolean], comment: Boolean, lowerCaseTagName: Boolean): Options = {
+    val __obj = js.Dynamic.literal(blockTextElements = blockTextElements.asInstanceOf[js.Any], comment = comment.asInstanceOf[js.Any], lowerCaseTagName = lowerCaseTagName.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
   
@@ -41,33 +38,12 @@ object Options {
     }
     
     @scala.inline
+    def setBlockTextElements(value: StringDictionary[Boolean]): Self = this.set("blockTextElements", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setComment(value: Boolean): Self = this.set("comment", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteComment: Self = this.set("comment", js.undefined)
-    
-    @scala.inline
     def setLowerCaseTagName(value: Boolean): Self = this.set("lowerCaseTagName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLowerCaseTagName: Self = this.set("lowerCaseTagName", js.undefined)
-    
-    @scala.inline
-    def setPre(value: Boolean): Self = this.set("pre", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePre: Self = this.set("pre", js.undefined)
-    
-    @scala.inline
-    def setScript(value: Boolean): Self = this.set("script", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteScript: Self = this.set("script", js.undefined)
-    
-    @scala.inline
-    def setStyle(value: Boolean): Self = this.set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStyle: Self = this.set("style", js.undefined)
   }
 }

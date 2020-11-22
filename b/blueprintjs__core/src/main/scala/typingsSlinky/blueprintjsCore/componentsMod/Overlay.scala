@@ -9,11 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@blueprintjs/core/lib/esm/components", "Overlay")
 @js.native
 class Overlay ()
-  extends typingsSlinky.blueprintjsCore.overlayMod.Overlay {
-  def this(props: IOverlayProps) = this()
-  def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
-  def this(props: IOverlayProps, context: js.Any) = this()
-}
+  extends typingsSlinky.blueprintjsCore.overlayMod.Overlay
 /* static members */
 @JSImport("@blueprintjs/core/lib/esm/components", "Overlay")
 @js.native
@@ -23,7 +19,7 @@ object Overlay extends js.Object {
   
   var displayName: String = js.native
   
-  def getDerivedStateFromProps(hasIsOpen: IOverlayProps): HasEverOpened = js.native
+  def getDerivedStateFromProps(hasIsOpen: IOverlayProps): HasEverOpened | Null = js.native
   
   var getLastOpened: js.Any = js.native
   

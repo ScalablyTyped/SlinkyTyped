@@ -1,8 +1,9 @@
 package typingsSlinky.reactNativeNavigation
 
 import typingsSlinky.reactNativeNavigation.componentEventsMod.ComponentType
+import typingsSlinky.reactNativeNavigation.optionsMod.FontStyle
 import typingsSlinky.reactNativeNavigation.optionsMod.FontWeight
-import typingsSlinky.reactNativeNavigation.optionsMod.Interpolation
+import typingsSlinky.reactNativeNavigation.optionsMod.FontWeightIOS
 import typingsSlinky.reactNativeNavigation.optionsMod.LayoutOrientation
 import typingsSlinky.reactNativeNavigation.optionsMod.SystemItemIcon
 import scala.scalajs.js
@@ -10,6 +11,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object reactNativeNavigationStrings {
+  
+  @scala.inline
+  def `100`: `100` = "100".asInstanceOf[`100`]
+  
+  @scala.inline
+  def `200`: `200` = "200".asInstanceOf[`200`]
+  
+  @scala.inline
+  def `300`: `300` = "300".asInstanceOf[`300`]
+  
+  @scala.inline
+  def `400`: `400` = "400".asInstanceOf[`400`]
+  
+  @scala.inline
+  def `500`: `500` = "500".asInstanceOf[`500`]
+  
+  @scala.inline
+  def `600`: `600` = "600".asInstanceOf[`600`]
+  
+  @scala.inline
+  def `700`: `700` = "700".asInstanceOf[`700`]
+  
+  @scala.inline
+  def `800`: `800` = "800".asInstanceOf[`800`]
+  
+  @scala.inline
+  def `900`: `900` = "900".asInstanceOf[`900`]
   
   @scala.inline
   def Component: Component = "Component".asInstanceOf[Component]
@@ -87,6 +115,9 @@ object reactNativeNavigationStrings {
   def default: default = "default".asInstanceOf[default]
   
   @scala.inline
+  def demibold: demibold = "demibold".asInstanceOf[demibold]
+  
+  @scala.inline
   def destructive: destructive = "destructive".asInstanceOf[destructive]
   
   @scala.inline
@@ -97,6 +128,9 @@ object reactNativeNavigationStrings {
   
   @scala.inline
   def entireScreen: entireScreen = "entireScreen".asInstanceOf[entireScreen]
+  
+  @scala.inline
+  def extrabold: extrabold = "extrabold".asInstanceOf[extrabold]
   
   @scala.inline
   def fastForward: fastForward = "fastForward".asInstanceOf[fastForward]
@@ -118,6 +152,9 @@ object reactNativeNavigationStrings {
   
   @scala.inline
   def ifRoom: ifRoom = "ifRoom".asInstanceOf[ifRoom]
+  
+  @scala.inline
+  def italic: italic = "italic".asInstanceOf[italic]
   
   @scala.inline
   def landscape: landscape = "landscape".asInstanceOf[landscape]
@@ -153,6 +190,9 @@ object reactNativeNavigationStrings {
   def none: none = "none".asInstanceOf[none]
   
   @scala.inline
+  def normal: normal = "normal".asInstanceOf[normal]
+  
+  @scala.inline
   def onSwitchToTab: onSwitchToTab = "onSwitchToTab".asInstanceOf[onSwitchToTab]
   
   @scala.inline
@@ -160,6 +200,9 @@ object reactNativeNavigationStrings {
   
   @scala.inline
   def overlay: overlay = "overlay".asInstanceOf[overlay]
+  
+  @scala.inline
+  def overshoot: overshoot = "overshoot".asInstanceOf[overshoot]
   
   @scala.inline
   def pause: pause = "pause".asInstanceOf[pause]
@@ -213,6 +256,9 @@ object reactNativeNavigationStrings {
   def sidebar: sidebar = "sidebar".asInstanceOf[sidebar]
   
   @scala.inline
+  def spring: spring = "spring".asInstanceOf[spring]
+  
+  @scala.inline
   def stop: stop = "stop".asInstanceOf[stop]
   
   @scala.inline
@@ -228,7 +274,10 @@ object reactNativeNavigationStrings {
   def trash: trash = "trash".asInstanceOf[trash]
   
   @scala.inline
-  def ultraLight: ultraLight = "ultraLight".asInstanceOf[ultraLight]
+  def ultrabold: ultrabold = "ultrabold".asInstanceOf[ultrabold]
+  
+  @scala.inline
+  def ultralight: ultralight = "ultralight".asInstanceOf[ultralight]
   
   @scala.inline
   def undo: undo = "undo".asInstanceOf[undo]
@@ -238,6 +287,33 @@ object reactNativeNavigationStrings {
   
   @scala.inline
   def withText: withText = "withText".asInstanceOf[withText]
+  
+  @js.native
+  sealed trait `100` extends FontWeight
+  
+  @js.native
+  sealed trait `200` extends FontWeight
+  
+  @js.native
+  sealed trait `300` extends FontWeight
+  
+  @js.native
+  sealed trait `400` extends FontWeight
+  
+  @js.native
+  sealed trait `500` extends FontWeight
+  
+  @js.native
+  sealed trait `600` extends FontWeight
+  
+  @js.native
+  sealed trait `700` extends FontWeight
+  
+  @js.native
+  sealed trait `800` extends FontWeight
+  
+  @js.native
+  sealed trait `900` extends FontWeight
   
   @js.native
   sealed trait Component extends ComponentType
@@ -252,10 +328,10 @@ object reactNativeNavigationStrings {
   sealed trait TopBarTitle extends ComponentType
   
   @js.native
-  sealed trait accelerate extends Interpolation
+  sealed trait accelerate extends js.Object
   
   @js.native
-  sealed trait accelerateDecelerate extends Interpolation
+  sealed trait accelerateDecelerate extends js.Object
   
   @js.native
   sealed trait action extends SystemItemIcon
@@ -282,10 +358,14 @@ object reactNativeNavigationStrings {
   sealed trait bezel extends js.Object
   
   @js.native
-  sealed trait black extends FontWeight
+  sealed trait black
+    extends FontWeight
+       with FontWeightIOS
   
   @js.native
-  sealed trait bold extends FontWeight
+  sealed trait bold
+    extends FontWeight
+       with FontWeightIOS
   
   @js.native
   sealed trait bookmarks extends SystemItemIcon
@@ -306,13 +386,18 @@ object reactNativeNavigationStrings {
   sealed trait dark extends js.Object
   
   @js.native
-  sealed trait decelerate extends Interpolation
+  sealed trait decelerate extends js.Object
   
   @js.native
-  sealed trait decelerateAccelerate extends Interpolation
+  sealed trait decelerateAccelerate extends js.Object
   
   @js.native
   sealed trait default extends js.Object
+  
+  @js.native
+  sealed trait demibold
+    extends FontWeight
+       with FontWeightIOS
   
   @js.native
   sealed trait destructive extends js.Object
@@ -327,6 +412,11 @@ object reactNativeNavigationStrings {
   sealed trait entireScreen extends js.Object
   
   @js.native
+  sealed trait extrabold
+    extends FontWeight
+       with FontWeightIOS
+  
+  @js.native
   sealed trait fastForward extends SystemItemIcon
   
   @js.native
@@ -339,13 +429,18 @@ object reactNativeNavigationStrings {
   sealed trait flexibleSpace extends SystemItemIcon
   
   @js.native
-  sealed trait heavy extends FontWeight
+  sealed trait heavy
+    extends FontWeight
+       with FontWeightIOS
   
   @js.native
   sealed trait hidden extends js.Object
   
   @js.native
   sealed trait ifRoom extends js.Object
+  
+  @js.native
+  sealed trait italic extends FontStyle
   
   @js.native
   sealed trait landscape extends LayoutOrientation
@@ -357,10 +452,12 @@ object reactNativeNavigationStrings {
   sealed trait left extends js.Object
   
   @js.native
-  sealed trait light extends FontWeight
+  sealed trait light
+    extends FontWeight
+       with FontWeightIOS
   
   @js.native
-  sealed trait linear extends Interpolation
+  sealed trait linear extends js.Object
   
   @js.native
   sealed trait locale extends js.Object
@@ -369,7 +466,9 @@ object reactNativeNavigationStrings {
   sealed trait ltr extends js.Object
   
   @js.native
-  sealed trait medium extends FontWeight
+  sealed trait medium
+    extends FontWeight
+       with FontWeightIOS
   
   @js.native
   sealed trait mini extends js.Object
@@ -381,6 +480,12 @@ object reactNativeNavigationStrings {
   sealed trait none extends js.Object
   
   @js.native
+  sealed trait normal
+    extends FontStyle
+       with FontWeight
+       with FontWeightIOS
+  
+  @js.native
   sealed trait onSwitchToTab extends js.Object
   
   @js.native
@@ -388,6 +493,9 @@ object reactNativeNavigationStrings {
   
   @js.native
   sealed trait overlay extends js.Object
+  
+  @js.native
+  sealed trait overshoot extends js.Object
   
   @js.native
   sealed trait pause extends SystemItemIcon
@@ -405,7 +513,9 @@ object reactNativeNavigationStrings {
   sealed trait refresh extends SystemItemIcon
   
   @js.native
-  sealed trait regular extends FontWeight
+  sealed trait regular
+    extends FontWeight
+       with FontWeightIOS
   
   @js.native
   sealed trait reply extends SystemItemIcon
@@ -429,7 +539,9 @@ object reactNativeNavigationStrings {
   sealed trait selected extends js.Object
   
   @js.native
-  sealed trait semibold extends FontWeight
+  sealed trait semibold
+    extends FontWeight
+       with FontWeightIOS
   
   @js.native
   sealed trait showWhenActive extends js.Object
@@ -441,10 +553,15 @@ object reactNativeNavigationStrings {
   sealed trait sidebar extends js.Object
   
   @js.native
+  sealed trait spring extends js.Object
+  
+  @js.native
   sealed trait stop extends SystemItemIcon
   
   @js.native
-  sealed trait thin extends FontWeight
+  sealed trait thin
+    extends FontWeight
+       with FontWeightIOS
   
   @js.native
   sealed trait together extends js.Object
@@ -456,7 +573,14 @@ object reactNativeNavigationStrings {
   sealed trait trash extends SystemItemIcon
   
   @js.native
-  sealed trait ultraLight extends FontWeight
+  sealed trait ultrabold
+    extends FontWeight
+       with FontWeightIOS
+  
+  @js.native
+  sealed trait ultralight
+    extends FontWeight
+       with FontWeightIOS
   
   @js.native
   sealed trait undo extends SystemItemIcon

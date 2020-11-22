@@ -20,11 +20,11 @@ class Enum_ () extends Message {
   def addOptions(value: Option): Option = js.native
   def addOptions(value: Option, index: Double): Option = js.native
   
-  def clearEnumvalueList(): Unit = js.native
+  def clearEnumvalueList(): Enum = js.native
   
-  def clearOptionsList(): Unit = js.native
+  def clearOptionsList(): Enum = js.native
   
-  def clearSourceContext(): Unit = js.native
+  def clearSourceContext(): Enum = js.native
   
   def getEnumvalueList(): js.Array[EnumValue] = js.native
   
@@ -38,14 +38,14 @@ class Enum_ () extends Message {
   
   def hasSourceContext(): Boolean = js.native
   
-  def setEnumvalueList(value: js.Array[EnumValue]): Unit = js.native
+  def setEnumvalueList(value: js.Array[EnumValue]): Enum = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): Enum = js.native
   
-  def setOptionsList(value: js.Array[Option]): Unit = js.native
+  def setOptionsList(value: js.Array[Option]): Enum = js.native
   
-  def setSourceContext(): Unit = js.native
-  def setSourceContext(value: SourceContext): Unit = js.native
+  def setSourceContext(): Enum = js.native
+  def setSourceContext(value: SourceContext): Enum = js.native
   
-  def setSyntax(value: Syntax): Unit = js.native
+  def setSyntax(value: Syntax): Enum = js.native
 }

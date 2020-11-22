@@ -18,37 +18,59 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFileManagerDetailsColumn extends js.Object {
   
-  /** @name dxFileManagerDetailsColumn.alignment */
+  /**
+    * [descr:dxFileManagerDetailsColumn.alignment]
+    */
   var alignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name dxFileManagerDetailsColumn.caption */
+  /**
+    * [descr:dxFileManagerDetailsColumn.caption]
+    */
   var caption: js.UndefOr[String] = js.native
   
-  /** @name dxFileManagerDetailsColumn.cssClass */
+  /**
+    * [descr:dxFileManagerDetailsColumn.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name dxFileManagerDetailsColumn.dataField */
+  /**
+    * [descr:dxFileManagerDetailsColumn.dataField]
+    */
   var dataField: js.UndefOr[String] = js.native
   
-  /** @name dxFileManagerDetailsColumn.dataType */
+  /**
+    * [descr:dxFileManagerDetailsColumn.dataType]
+    */
   var dataType: js.UndefOr[string_ | number | date | boolean_ | `object` | datetime] = js.native
   
-  /** @name dxFileManagerDetailsColumn.hidingPriority */
+  /**
+    * [descr:dxFileManagerDetailsColumn.hidingPriority]
+    */
   var hidingPriority: js.UndefOr[Double] = js.native
   
-  /** @name dxFileManagerDetailsColumn.sortIndex */
+  /**
+    * [descr:dxFileManagerDetailsColumn.sortIndex]
+    */
   var sortIndex: js.UndefOr[Double] = js.native
   
-  /** @name dxFileManagerDetailsColumn.sortOrder */
+  /**
+    * [descr:dxFileManagerDetailsColumn.sortOrder]
+    */
   var sortOrder: js.UndefOr[asc | desc] = js.native
   
-  /** @name dxFileManagerDetailsColumn.visible */
+  /**
+    * [descr:dxFileManagerDetailsColumn.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFileManagerDetailsColumn.visibleIndex */
+  /**
+    * [descr:dxFileManagerDetailsColumn.visibleIndex]
+    */
   var visibleIndex: js.UndefOr[Double] = js.native
   
-  /** @name dxFileManagerDetailsColumn.width */
+  /**
+    * [descr:dxFileManagerDetailsColumn.width]
+    */
   var width: js.UndefOr[Double | String] = js.native
 }
 object dxFileManagerDetailsColumn {

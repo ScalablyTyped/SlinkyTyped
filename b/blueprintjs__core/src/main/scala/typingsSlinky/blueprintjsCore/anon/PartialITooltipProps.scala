@@ -51,9 +51,11 @@ trait PartialITooltipProps extends js.Object {
   
   var `lazy`: js.UndefOr[Boolean] = js.native
   
+  var minimal: js.UndefOr[Boolean] = js.native
+  
   var modifiers: js.UndefOr[Modifiers] = js.native
   
-  var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.native
   
   var onClosed: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.native
   
@@ -220,13 +222,19 @@ object PartialITooltipProps {
     def deleteLazy: Self = this.set("lazy", js.undefined)
     
     @scala.inline
+    def setMinimal(value: Boolean): Self = this.set("minimal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMinimal: Self = this.set("minimal", js.undefined)
+    
+    @scala.inline
     def setModifiers(value: Modifiers): Self = this.set("modifiers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModifiers: Self = this.set("modifiers", js.undefined)
     
     @scala.inline
-    def setOnClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
+    def setOnClose(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClose: Self = this.set("onClose", js.undefined)

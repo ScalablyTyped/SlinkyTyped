@@ -28,7 +28,7 @@ trait PipelineActivity extends js.Object {
   var deviceRegistryEnrich: js.UndefOr[DeviceRegistryEnrichActivity] = js.native
   
   /**
-    * Adds information from the AWS IoT Device Shadows service to a message.
+    * Adds information from the AWS IoT Device Shadow service to a message.
     */
   var deviceShadowEnrich: js.UndefOr[DeviceShadowEnrichActivity] = js.native
   

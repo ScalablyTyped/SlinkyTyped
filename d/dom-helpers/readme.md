@@ -1,7 +1,7 @@
 
 # Scala.js typings for dom-helpers
 
-Typings are for version 5.1.4
+Typings are for version 5.2.0
 
 ## Library description:
 tiny modular DOM lib for ie9+

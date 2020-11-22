@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IpcMainInvokeEvent extends Event {
   
-  // Docs: http://electronjs.org/docs/api/structures/ipc-main-invoke-event
+  // Docs: https://electronjs.org/docs/api/structures/ipc-main-invoke-event
   /**
     * The ID of the renderer frame that sent this message
     */

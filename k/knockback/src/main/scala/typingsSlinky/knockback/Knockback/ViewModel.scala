@@ -11,7 +11,7 @@ trait ViewModel extends Destroyable {
   
   def extend(source: js.Any): js.Any = js.native
   
-  def model(): Model[_, ModelSetOptions] = js.native
+  def model(): Model[_, ModelSetOptions, js.Object] = js.native
   
   def shareOptions(): ViewModelOptions = js.native
 }
@@ -21,7 +21,7 @@ object ViewModel {
   def apply(
     destroy: () => js.Any,
     extend: js.Any => js.Any,
-    model: () => Model[_, ModelSetOptions],
+    model: () => Model[_, ModelSetOptions, js.Object],
     shareOptions: () => ViewModelOptions
   ): ViewModel = {
     val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), extend = js.Any.fromFunction1(extend), model = js.Any.fromFunction0(model), shareOptions = js.Any.fromFunction0(shareOptions))
@@ -47,7 +47,7 @@ object ViewModel {
     def setExtend(value: js.Any => js.Any): Self = this.set("extend", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setModel(value: () => Model[_, ModelSetOptions]): Self = this.set("model", js.Any.fromFunction0(value))
+    def setModel(value: () => Model[_, ModelSetOptions, js.Object]): Self = this.set("model", js.Any.fromFunction0(value))
     
     @scala.inline
     def setShareOptions(value: () => ViewModelOptions): Self = this.set("shareOptions", js.Any.fromFunction0(value))

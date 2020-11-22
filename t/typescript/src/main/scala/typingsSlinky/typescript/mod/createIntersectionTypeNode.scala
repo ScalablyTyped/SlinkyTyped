@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createIntersectionTypeNode extends js.Object {
   
+  /** @deprecated Use `factory.createIntersectionTypeNode` or the factory supplied by your transformation context instead. */
   def apply(types: js.Array[TypeNode]): IntersectionTypeNode = js.native
 }

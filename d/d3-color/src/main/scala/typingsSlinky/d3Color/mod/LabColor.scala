@@ -1,5 +1,6 @@
 package typingsSlinky.d3Color.mod
 
+import typingsSlinky.d3Color.anon.A
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,6 +28,14 @@ trait LabColor
     */
   def brighter(): this.type = js.native
   def brighter(k: Double): this.type = js.native
+  
+  /**
+    * Returns a copy of this color.
+    *
+    * @param values If values is specified, any enumerable own properties of values are assigned to the new returned color.
+    */
+  def copy(): this.type = js.native
+  def copy(values: A): this.type = js.native
   
   /**
     * Returns a darker copy of this color. If k is specified, it controls how much darker the returned color should be.

@@ -22,7 +22,7 @@ trait WorkerOptions extends js.Object {
   
   var execArgv: js.UndefOr[js.Array[String]] = js.native
   
-  var resourceLimits: js.UndefOr[ResourceLimits] = js.native
+  var resourceLimits: js.UndefOr[ResourceLimits_] = js.native
   
   var stderr: js.UndefOr[Boolean] = js.native
   
@@ -30,10 +30,12 @@ trait WorkerOptions extends js.Object {
   
   var stdout: js.UndefOr[Boolean] = js.native
   
+  var trackUnmanagedFds: js.UndefOr[Boolean] = js.native
+  
   /**
     * Additional data to send in the first worker message.
     */
-  var transferList: js.UndefOr[js.Array[js.typedarray.ArrayBuffer | MessagePort]] = js.native
+  var transferList: js.UndefOr[js.Array[TransferListItem]] = js.native
   
   var workerData: js.UndefOr[js.Any] = js.native
 }
@@ -91,7 +93,7 @@ object WorkerOptions {
     def deleteExecArgv: Self = this.set("execArgv", js.undefined)
     
     @scala.inline
-    def setResourceLimits(value: ResourceLimits): Self = this.set("resourceLimits", value.asInstanceOf[js.Any])
+    def setResourceLimits(value: ResourceLimits_): Self = this.set("resourceLimits", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResourceLimits: Self = this.set("resourceLimits", js.undefined)
@@ -115,10 +117,16 @@ object WorkerOptions {
     def deleteStdout: Self = this.set("stdout", js.undefined)
     
     @scala.inline
-    def setTransferListVarargs(value: (js.typedarray.ArrayBuffer | MessagePort)*): Self = this.set("transferList", js.Array(value :_*))
+    def setTrackUnmanagedFds(value: Boolean): Self = this.set("trackUnmanagedFds", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTransferList(value: js.Array[js.typedarray.ArrayBuffer | MessagePort]): Self = this.set("transferList", value.asInstanceOf[js.Any])
+    def deleteTrackUnmanagedFds: Self = this.set("trackUnmanagedFds", js.undefined)
+    
+    @scala.inline
+    def setTransferListVarargs(value: TransferListItem*): Self = this.set("transferList", js.Array(value :_*))
+    
+    @scala.inline
+    def setTransferList(value: js.Array[TransferListItem]): Self = this.set("transferList", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTransferList: Self = this.set("transferList", js.undefined)

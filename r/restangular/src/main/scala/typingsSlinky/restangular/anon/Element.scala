@@ -1,5 +1,6 @@
 package typingsSlinky.restangular.anon
 
+import typingsSlinky.angular.mod.IRequestShortcutConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,13 +12,15 @@ trait Element extends js.Object {
   
   var headers: js.Any = js.native
   
+  var httpConfig: IRequestShortcutConfig = js.native
+  
   var params: js.Any = js.native
 }
 object Element {
   
   @scala.inline
-  def apply(element: js.Any, headers: js.Any, params: js.Any): Element = {
-    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
+  def apply(element: js.Any, headers: js.Any, httpConfig: IRequestShortcutConfig, params: js.Any): Element = {
+    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], httpConfig = httpConfig.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
     __obj.asInstanceOf[Element]
   }
   
@@ -41,6 +44,9 @@ object Element {
     
     @scala.inline
     def setHeaders(value: js.Any): Self = this.set("headers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHttpConfig(value: IRequestShortcutConfig): Self = this.set("httpConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParams(value: js.Any): Self = this.set("params", value.asInstanceOf[js.Any])

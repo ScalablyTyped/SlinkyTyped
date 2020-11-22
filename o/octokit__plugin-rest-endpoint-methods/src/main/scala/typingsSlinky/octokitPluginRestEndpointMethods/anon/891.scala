@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposAddUserAccessRestrictionsEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposAddUserAccessRestrictionsResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReactionsListForTeamDiscussionInOrgEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReactionsListForTeamDiscussionInOrgResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `891` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposAddUserAccessRestrictionsEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReactionsListForTeamDiscussionInOrgEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposAddUserAccessRestrictionsResponseData] = js.native
+  var response: OctokitResponse[ReactionsListForTeamDiscussionInOrgResponseData] = js.native
 }
 object `891` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposAddUserAccessRestrictionsEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposAddUserAccessRestrictionsResponseData]
+    parameters: RequestParameters with (Omit[ReactionsListForTeamDiscussionInOrgEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReactionsListForTeamDiscussionInOrgResponseData]
   ): `891` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`891`]
@@ -47,10 +47,10 @@ object `891` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[ReposAddUserAccessRestrictionsEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ReactionsListForTeamDiscussionInOrgEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposAddUserAccessRestrictionsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReactionsListForTeamDiscussionInOrgResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -55,6 +55,8 @@ object mod extends js.Object {
   
   val Apps: Icon = js.native
   
+  val AppsRounded: Icon = js.native
+  
   val Archive: Icon = js.native
   
   val Archlinux: Icon = js.native
@@ -64,6 +66,8 @@ object mod extends js.Object {
   val Aruba: Icon = js.native
   
   val Ascend: Icon = js.native
+  
+  val Ascending: Icon = js.native
   
   val AssistListening: Icon = js.native
   
@@ -83,9 +87,15 @@ object mod extends js.Object {
   
   val Basket: Icon = js.native
   
+  val Beacon: Icon = js.native
+  
   val Bike: Icon = js.native
   
   val Bitcoin: Icon = js.native
+  
+  val BladesHorizontal: Icon = js.native
+  
+  val BladesVertical: Icon = js.native
   
   val Blank: Icon = js.native
   
@@ -131,11 +141,15 @@ object mod extends js.Object {
   
   val CaretDown: Icon = js.native
   
+  val CaretDownFill: Icon = js.native
+  
   val CaretNext: Icon = js.native
   
   val CaretPrevious: Icon = js.native
   
   val CaretUp: Icon = js.native
+  
+  val CaretUpFill: Icon = js.native
   
   val Cart: Icon = js.native
   
@@ -144,6 +158,8 @@ object mod extends js.Object {
   val CatalogOption: Icon = js.native
   
   val Centos: Icon = js.native
+  
+  val Certificate: Icon = js.native
   
   val Channel: Icon = js.native
   
@@ -164,6 +180,8 @@ object mod extends js.Object {
   val Checkmark: Icon = js.native
   
   val Chrome: Icon = js.native
+  
+  val CircleAlert: Icon = js.native
   
   val CircleInformation: Icon = js.native
   
@@ -227,6 +245,8 @@ object mod extends js.Object {
   
   val Connectivity: Icon = js.native
   
+  val Console: Icon = js.native
+  
   val Contact: Icon = js.native
   
   val ContactInfo: Icon = js.native
@@ -234,6 +254,8 @@ object mod extends js.Object {
   val Contract: Icon = js.native
   
   val Copy: Icon = js.native
+  
+  val Cpu: Icon = js.native
   
   val CreativeCommons: Icon = js.native
   
@@ -265,6 +287,8 @@ object mod extends js.Object {
   
   val Descend: Icon = js.native
   
+  val Descending: Icon = js.native
+  
   val Desktop: Icon = js.native
   
   val Detach: Icon = js.native
@@ -274,6 +298,8 @@ object mod extends js.Object {
   val Diamond: Icon = js.native
   
   val Directions: Icon = js.native
+  
+  val DisabledOutline: Icon = js.native
   
   val Disc: Icon = js.native
   
@@ -351,9 +377,13 @@ object mod extends js.Object {
   
   val Download: Icon = js.native
   
+  val DownloadOption: Icon = js.native
+  
   val Drag: Icon = js.native
   
   val Drawer: Icon = js.native
+  
+  val Dribbble: Icon = js.native
   
   val DriveCage: Icon = js.native
   
@@ -362,6 +392,8 @@ object mod extends js.Object {
   val Duplicate: Icon = js.native
   
   val Dxc: Icon = js.native
+  
+  val Ebay: Icon = js.native
   
   val Edge: Icon = js.native
   
@@ -383,17 +415,23 @@ object mod extends js.Object {
   
   val Expand: Icon = js.native
   
+  val Ezmeral: Icon = js.native
+  
   val Facebook: Icon = js.native
   
   val FacebookOption: Icon = js.native
   
   val Fan: Icon = js.native
   
+  val FanOption: Icon = js.native
+  
   val FastForward: Icon = js.native
   
   val Favorite: Icon = js.native
   
   val Fedora: Icon = js.native
+  
+  val Figma: Icon = js.native
   
   val Filter: Icon = js.native
   
@@ -403,9 +441,13 @@ object mod extends js.Object {
   
   val Firefox: Icon = js.native
   
+  val Firewall: Icon = js.native
+  
   val Flag: Icon = js.native
   
   val FlagFill: Icon = js.native
+  
+  val Flows: Icon = js.native
   
   val Folder: Icon = js.native
   
@@ -473,7 +515,11 @@ object mod extends js.Object {
   
   val Gamepad: Icon = js.native
   
+  val Gateway: Icon = js.native
+  
   val Gatsbyjs: Icon = js.native
+  
+  val Gem: Icon = js.native
   
   val Gift: Icon = js.native
   
@@ -509,6 +555,8 @@ object mod extends js.Object {
   
   val Help: Icon = js.native
   
+  val HelpOption: Icon = js.native
+  
   val Heroku: Icon = js.native
   
   val Hide: Icon = js.native
@@ -516,6 +564,8 @@ object mod extends js.Object {
   val History: Icon = js.native
   
   val Home: Icon = js.native
+  
+  val HomeOption: Icon = js.native
   
   val Horton: Icon = js.native
   
@@ -569,9 +619,13 @@ object mod extends js.Object {
   
   val Js: Icon = js.native
   
+  val Key: Icon = js.native
+  
   val Keyboard: Icon = js.native
   
   val Language: Icon = js.native
+  
+  val Lastfm: Icon = js.native
   
   val Launch: Icon = js.native
   
@@ -635,6 +689,8 @@ object mod extends js.Object {
   
   val Medium: Icon = js.native
   
+  val Memory: Icon = js.native
+  
   val Menu: Icon = js.native
   
   val Microfocus: Icon = js.native
@@ -647,9 +703,13 @@ object mod extends js.Object {
   
   val Monospace: Icon = js.native
   
+  val Moon: Icon = js.native
+  
   val More: Icon = js.native
   
   val MoreVertical: Icon = js.native
+  
+  val Mouse: Icon = js.native
   
   val Multimedia: Icon = js.native
   
@@ -662,6 +722,8 @@ object mod extends js.Object {
   val Navigate: Icon = js.native
   
   val Network: Icon = js.native
+  
+  val NetworkDrive: Icon = js.native
   
   val New: Icon = js.native
   
@@ -703,6 +765,8 @@ object mod extends js.Object {
   
   val Overview: Icon = js.native
   
+  val Package: Icon = js.native
+  
   val Paint: Icon = js.native
   
   val Pan: Icon = js.native
@@ -719,6 +783,12 @@ object mod extends js.Object {
   
   val Phone: Icon = js.native
   
+  val PhoneFlip: Icon = js.native
+  
+  val PhoneHorizontal: Icon = js.native
+  
+  val PhoneVertical: Icon = js.native
+  
   val PieChart: Icon = js.native
   
   val PiedPiper: Icon = js.native
@@ -732,6 +802,10 @@ object mod extends js.Object {
   val Play: Icon = js.native
   
   val PlayFill: Icon = js.native
+  
+  val Plug: Icon = js.native
+  
+  val Pocket: Icon = js.native
   
   val Power: Icon = js.native
   
@@ -801,6 +875,8 @@ object mod extends js.Object {
   
   val SafariOption: Icon = js.native
   
+  val Sans: Icon = js.native
+  
   val Satellite: Icon = js.native
   
   val Save: Icon = js.native
@@ -818,6 +894,10 @@ object mod extends js.Object {
   val Sco: Icon = js.native
   
   val Scorecard: Icon = js.native
+  
+  val Script: Icon = js.native
+  
+  val Sd: Icon = js.native
   
   val Search: Icon = js.native
   
@@ -848,6 +928,8 @@ object mod extends js.Object {
   val Share: Icon = js.native
   
   val ShareOption: Icon = js.native
+  
+  val ShareRounded: Icon = js.native
   
   val Shield: Icon = js.native
   
@@ -943,6 +1025,8 @@ object mod extends js.Object {
   
   val SubtractCircle: Icon = js.native
   
+  val Sun: Icon = js.native
+  
   val Superscript: Icon = js.native
   
   val Support: Icon = js.native
@@ -952,6 +1036,8 @@ object mod extends js.Object {
   val Swift: Icon = js.native
   
   val Swim: Icon = js.native
+  
+  val Switch: Icon = js.native
   
   val Sync: Icon = js.native
   
@@ -1001,6 +1087,10 @@ object mod extends js.Object {
   
   val Ticket: Icon = js.native
   
+  val Tictok: Icon = js.native
+  
+  val Time: Icon = js.native
+  
   val Tip: Icon = js.native
   
   val Toast: Icon = js.native
@@ -1047,6 +1137,8 @@ object mod extends js.Object {
   
   val UnorderedList: Icon = js.native
   
+  val Unsorted: Icon = js.native
+  
   val Up: Icon = js.native
   
   val Update: Icon = js.native
@@ -1054,6 +1146,10 @@ object mod extends js.Object {
   val Upgrade: Icon = js.native
   
   val Upload: Icon = js.native
+  
+  val UploadOption: Icon = js.native
+  
+  val UsbKey: Icon = js.native
   
   val User: Icon = js.native
   
@@ -1107,6 +1203,8 @@ object mod extends js.Object {
   
   val Waypoint: Icon = js.native
   
+  val Webcam: Icon = js.native
+  
   val Wheelchair: Icon = js.native
   
   val WheelchairActive: Icon = js.native
@@ -1130,6 +1228,8 @@ object mod extends js.Object {
   val Yoga: Icon = js.native
   
   val Youtube: Icon = js.native
+  
+  val Zoom: Icon = js.native
   
   val ZoomIn: Icon = js.native
   

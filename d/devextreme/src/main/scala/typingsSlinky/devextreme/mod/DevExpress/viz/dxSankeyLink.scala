@@ -7,19 +7,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSankeyLink extends js.Object {
   
-  /** @name dxSankeyLink.connection */
+  /**
+    * [descr:dxSankeyLink.connection]
+    */
   var connection: js.UndefOr[dxSankeyConnectionInfoObject] = js.native
   
-  /** @name dxSankeyLink.hideTooltip() */
+  /**
+    * [descr:dxSankeyLink.hideTooltip()]
+    */
   def hideTooltip(): Unit = js.native
   
-  /** @name dxSankeyLink.hover(state) */
+  /**
+    * [descr:dxSankeyLink.hover(state)]
+    */
   def hover(state: Boolean): Unit = js.native
   
-  /** @name dxSankeyLink.isHovered() */
+  /**
+    * [descr:dxSankeyLink.isHovered()]
+    */
   def isHovered(): Boolean = js.native
   
-  /** @name dxSankeyLink.showTooltip() */
+  /**
+    * [descr:dxSankeyLink.showTooltip()]
+    */
   def showTooltip(): Unit = js.native
 }
 object dxSankeyLink {

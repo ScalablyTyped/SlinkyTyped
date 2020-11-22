@@ -69,7 +69,4 @@ object ^ extends js.Object {
   	*/
   def buffer(stream: Stream): js.Promise[Buffer] = js.native
   def buffer(stream: Stream, options: OptionsWithEncoding[BufferEncoding]): js.Promise[Buffer] = js.native
-  
-  // TODO: Remove this for the next major release
-  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof getStream */ js.Any = js.native
 }

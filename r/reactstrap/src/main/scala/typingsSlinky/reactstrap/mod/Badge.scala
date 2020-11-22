@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "Badge")
+@JSImport("reactstrap/es", "Badge")
 @js.native
-class Badge[T] ()
+class Badge ()
   extends Component[BadgeProps, js.Object, js.Any]

@@ -29,7 +29,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.handsontable.handsontableStrings.ObserveChangesDotchange
   - typingsSlinky.handsontable.handsontableStrings.UndoRedoDotredo
   - typingsSlinky.handsontable.handsontableStrings.UndoRedoDotundo
-  - typingsSlinky.handsontable.handsontableStrings.GantChartDotloadData
   - typingsSlinky.handsontable.handsontableStrings.ColumnSummaryDotset
   - typingsSlinky.handsontable.handsontableStrings.ColumnSummaryDotreset
 */
@@ -68,9 +67,6 @@ object ChangeSource {
   
   @scala.inline
   def CopyPasteDotpaste: typingsSlinky.handsontable.handsontableStrings.CopyPasteDotpaste = "CopyPaste.paste".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.CopyPasteDotpaste]
-  
-  @scala.inline
-  def GantChartDotloadData: typingsSlinky.handsontable.handsontableStrings.GantChartDotloadData = "GantChart.loadData".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.GantChartDotloadData]
   
   @scala.inline
   def ObserveChangesDotchange: typingsSlinky.handsontable.handsontableStrings.ObserveChangesDotchange = "ObserveChanges.change".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.ObserveChangesDotchange]

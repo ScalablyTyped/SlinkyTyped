@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait OnenotePagePreviewLinks extends js.Object {
   
-  var previewImageUrl: js.UndefOr[ExternalLink] = js.native
+  var previewImageUrl: js.UndefOr[NullableOption[ExternalLink]] = js.native
 }
 object OnenotePagePreviewLinks {
   
@@ -33,9 +33,12 @@ object OnenotePagePreviewLinks {
     }
     
     @scala.inline
-    def setPreviewImageUrl(value: ExternalLink): Self = this.set("previewImageUrl", value.asInstanceOf[js.Any])
+    def setPreviewImageUrl(value: NullableOption[ExternalLink]): Self = this.set("previewImageUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePreviewImageUrl: Self = this.set("previewImageUrl", js.undefined)
+    
+    @scala.inline
+    def setPreviewImageUrlNull: Self = this.set("previewImageUrl", null)
   }
 }

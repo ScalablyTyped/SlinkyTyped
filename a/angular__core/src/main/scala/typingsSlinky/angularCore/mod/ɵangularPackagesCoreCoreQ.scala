@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ɵangularPackagesCoreCoreQ extends js.Object {
   
-  def apply(): KeyValueDiffers = js.native
+  def apply(): ChangeDetectorRef = js.native
+  def apply(isPipe: Boolean): ChangeDetectorRef = js.native
 }

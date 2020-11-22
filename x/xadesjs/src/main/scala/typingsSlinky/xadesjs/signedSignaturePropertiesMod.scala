@@ -23,6 +23,8 @@ object signedSignaturePropertiesMod extends js.Object {
     
     var SigningCertificate: typingsSlinky.xadesjs.signingCertificateMod.SigningCertificate = js.native
     
+    var SigningCertificateV2: typingsSlinky.xadesjs.signingCertificateV2Mod.SigningCertificateV2 = js.native
+    
     var SigningTime: XadesDateTime = js.native
   }
 }

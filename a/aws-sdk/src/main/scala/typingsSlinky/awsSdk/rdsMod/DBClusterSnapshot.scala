@@ -102,6 +102,8 @@ trait DBClusterSnapshot extends js.Object {
     */
   var StorageEncrypted: js.UndefOr[Boolean] = js.native
   
+  var TagList: js.UndefOr[typingsSlinky.awsSdk.rdsMod.TagList] = js.native
+  
   /**
     * Provides the VPC ID associated with the DB cluster snapshot.
     */
@@ -246,6 +248,15 @@ object DBClusterSnapshot {
     
     @scala.inline
     def deleteStorageEncrypted: Self = this.set("StorageEncrypted", js.undefined)
+    
+    @scala.inline
+    def setTagListVarargs(value: Tag*): Self = this.set("TagList", js.Array(value :_*))
+    
+    @scala.inline
+    def setTagList(value: TagList): Self = this.set("TagList", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTagList: Self = this.set("TagList", js.undefined)
     
     @scala.inline
     def setVpcId(value: String): Self = this.set("VpcId", value.asInstanceOf[js.Any])

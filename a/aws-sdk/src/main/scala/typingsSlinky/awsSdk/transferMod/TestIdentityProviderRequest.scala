@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TestIdentityProviderRequest extends js.Object {
   
   /**
-    * A system-assigned identifier for a specific file transfer protocol-enabled server. That server's user authentication method is tested with a user name and password.
+    * A system-assigned identifier for a specific server. That server's user authentication method is tested with a user name and password.
     */
   var ServerId: typingsSlinky.awsSdk.transferMod.ServerId = js.native
   

@@ -24,8 +24,7 @@ trait PivotTable extends ClientObject {
     *
     * Specifies if the PivotTable allows the application of multiple PivotFilters on a given PivotField in the table.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var allowMultipleFiltersPerField: Boolean = js.native
   
@@ -121,6 +120,15 @@ trait PivotTable extends ClientObject {
     * [Api set: ExcelApi 1.3]
     */
   def refresh(): Unit = js.native
+  
+  /**
+    *
+    * Specifies whether the PivotTable refreshes when the workbook opens. Corresponds to "Refresh on load" setting in the UI.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var refreshOnOpen: Boolean = js.native
   
   /**
     *

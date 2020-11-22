@@ -49,6 +49,7 @@ object createImportEqualsDeclaration extends js.Object {
     name: Identifier,
     moduleReference: ModuleReference
   ): ImportEqualsDeclaration = js.native
+  /** @deprecated Use `factory.createImportEqualsDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     decorators: js.Array[Decorator],
     modifiers: js.Array[Modifier],

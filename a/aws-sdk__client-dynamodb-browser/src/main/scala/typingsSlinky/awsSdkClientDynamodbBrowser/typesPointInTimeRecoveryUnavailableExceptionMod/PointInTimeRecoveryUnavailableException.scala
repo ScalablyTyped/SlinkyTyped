@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientDynamodbBrowser.typesPointInTimeRecoveryUnavailableExceptionMod
 
 import typingsSlinky.awsSdkClientDynamodbBrowser.restoreTableToPointInTimeExceptionsUnionMod.RestoreTableToPointInTimeExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait PointInTimeRecoveryUnavailableException
-  extends ServiceException[PointInTimeRecoveryUnavailableExceptionDetails]
-     with RestoreTableToPointInTimeExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_PointInTimeRecoveryUnavailableExceptionDetails> * / any */ @js.native
+trait PointInTimeRecoveryUnavailableException extends RestoreTableToPointInTimeExceptionsUnion {
   
-  @JSName("name")
-  var name_PointInTimeRecoveryUnavailableException: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.PointInTimeRecoveryUnavailableException = js.native
+  var name: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.PointInTimeRecoveryUnavailableException = js.native
 }
 object PointInTimeRecoveryUnavailableException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: PointInTimeRecoveryUnavailableExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.PointInTimeRecoveryUnavailableException
   ): PointInTimeRecoveryUnavailableException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[PointInTimeRecoveryUnavailableException]
   }
   

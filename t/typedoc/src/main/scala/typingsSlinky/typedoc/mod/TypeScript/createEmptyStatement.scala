@@ -9,5 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createEmptyStatement extends js.Object {
   
+  /** @deprecated Use `factory.createEmptyStatement` or the factory supplied by your transformation context instead. */
   def apply(): EmptyStatement = js.native
 }

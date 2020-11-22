@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DriveItemVersion extends BaseItemVersion {
   
   // The content stream for this version of the item.
-  var content: js.UndefOr[js.Any] = js.native
+  var content: js.UndefOr[NullableOption[_]] = js.native
   
   // Indicates the size of the content stream for this version of the item.
-  var size: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[NullableOption[Double]] = js.native
 }
 object DriveItemVersion {
   
@@ -37,15 +37,21 @@ object DriveItemVersion {
     }
     
     @scala.inline
-    def setContent(value: js.Any): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: NullableOption[_]): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     
     @scala.inline
-    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setContentNull: Self = this.set("content", null)
+    
+    @scala.inline
+    def setSize(value: NullableOption[Double]): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)
+    
+    @scala.inline
+    def setSizeNull: Self = this.set("size", null)
   }
 }

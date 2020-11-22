@@ -65,7 +65,7 @@ trait EmailDialog extends View {
   /**
     * Bar color of the email dialog window, as a color name or hex triplet.
     */
-  var barColor: String = js.native
+  var barColor: String | Color = js.native
   
   /**
     * Recipients of the email included via the `BCC` (Blind Carbon Copy) field.
@@ -118,7 +118,7 @@ trait EmailDialog extends View {
     * Gets the value of the <Titanium.UI.EmailDialog.barColor> property.
     * @deprecated Access <Titanium.UI.EmailDialog.barColor> instead.
     */
-  def getBarColor(): String = js.native
+  def getBarColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.EmailDialog.bccRecipients> property.
@@ -190,6 +190,7 @@ trait EmailDialog extends View {
     * @deprecated Set the value using <Titanium.UI.EmailDialog.barColor> instead.
     */
   def setBarColor(barColor: String): Unit = js.native
+  def setBarColor(barColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.EmailDialog.bccRecipients> property.

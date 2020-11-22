@@ -7,28 +7,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GetGithubActionsBillingUser extends js.Object {
   
-  var getGithubActionsBillingOrg: `648` = js.native
+  var getGithubActionsBillingOrg: `651` = js.native
   
-  var getGithubActionsBillingUser: `649` = js.native
+  var getGithubActionsBillingUser: `652` = js.native
   
-  var getGithubPackagesBillingOrg: `650` = js.native
+  var getGithubPackagesBillingOrg: `653` = js.native
   
-  var getGithubPackagesBillingUser: `651` = js.native
+  var getGithubPackagesBillingUser: `654` = js.native
   
-  var getSharedStorageBillingOrg: `652` = js.native
+  var getSharedStorageBillingOrg: `655` = js.native
   
-  var getSharedStorageBillingUser: `653` = js.native
+  var getSharedStorageBillingUser: `656` = js.native
 }
 object GetGithubActionsBillingUser {
   
   @scala.inline
   def apply(
-    getGithubActionsBillingOrg: `648`,
-    getGithubActionsBillingUser: `649`,
-    getGithubPackagesBillingOrg: `650`,
-    getGithubPackagesBillingUser: `651`,
-    getSharedStorageBillingOrg: `652`,
-    getSharedStorageBillingUser: `653`
+    getGithubActionsBillingOrg: `651`,
+    getGithubActionsBillingUser: `652`,
+    getGithubPackagesBillingOrg: `653`,
+    getGithubPackagesBillingUser: `654`,
+    getSharedStorageBillingOrg: `655`,
+    getSharedStorageBillingUser: `656`
   ): GetGithubActionsBillingUser = {
     val __obj = js.Dynamic.literal(getGithubActionsBillingOrg = getGithubActionsBillingOrg.asInstanceOf[js.Any], getGithubActionsBillingUser = getGithubActionsBillingUser.asInstanceOf[js.Any], getGithubPackagesBillingOrg = getGithubPackagesBillingOrg.asInstanceOf[js.Any], getGithubPackagesBillingUser = getGithubPackagesBillingUser.asInstanceOf[js.Any], getSharedStorageBillingOrg = getSharedStorageBillingOrg.asInstanceOf[js.Any], getSharedStorageBillingUser = getSharedStorageBillingUser.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetGithubActionsBillingUser]
@@ -50,21 +50,21 @@ object GetGithubActionsBillingUser {
     }
     
     @scala.inline
-    def setGetGithubActionsBillingOrg(value: `648`): Self = this.set("getGithubActionsBillingOrg", value.asInstanceOf[js.Any])
+    def setGetGithubActionsBillingOrg(value: `651`): Self = this.set("getGithubActionsBillingOrg", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetGithubActionsBillingUser(value: `649`): Self = this.set("getGithubActionsBillingUser", value.asInstanceOf[js.Any])
+    def setGetGithubActionsBillingUser(value: `652`): Self = this.set("getGithubActionsBillingUser", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetGithubPackagesBillingOrg(value: `650`): Self = this.set("getGithubPackagesBillingOrg", value.asInstanceOf[js.Any])
+    def setGetGithubPackagesBillingOrg(value: `653`): Self = this.set("getGithubPackagesBillingOrg", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetGithubPackagesBillingUser(value: `651`): Self = this.set("getGithubPackagesBillingUser", value.asInstanceOf[js.Any])
+    def setGetGithubPackagesBillingUser(value: `654`): Self = this.set("getGithubPackagesBillingUser", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetSharedStorageBillingOrg(value: `652`): Self = this.set("getSharedStorageBillingOrg", value.asInstanceOf[js.Any])
+    def setGetSharedStorageBillingOrg(value: `655`): Self = this.set("getSharedStorageBillingOrg", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetSharedStorageBillingUser(value: `653`): Self = this.set("getSharedStorageBillingUser", value.asInstanceOf[js.Any])
+    def setGetSharedStorageBillingUser(value: `656`): Self = this.set("getSharedStorageBillingUser", value.asInstanceOf[js.Any])
   }
 }

@@ -44,6 +44,8 @@ package object dlmMod {
   
   type LifecyclePolicySummaryList = js.Array[typingsSlinky.awsSdk.dlmMod.LifecyclePolicySummary]
   
+  type NoReboot = scala.Boolean
+  
   type PolicyArn = java.lang.String
   
   type PolicyDescription = java.lang.String
@@ -52,7 +54,12 @@ package object dlmMod {
   
   type PolicyIdList = js.Array[typingsSlinky.awsSdk.dlmMod.PolicyId]
   
-  type PolicyTypeValues = typingsSlinky.awsSdk.awsSdkStrings.EBS_SNAPSHOT_MANAGEMENT | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.EBS_SNAPSHOT_MANAGEMENT
+    - typingsSlinky.awsSdk.awsSdkStrings.IMAGE_MANAGEMENT
+    - java.lang.String
+  */
+  type PolicyTypeValues = typingsSlinky.awsSdk.dlmMod._PolicyTypeValues | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.VOLUME

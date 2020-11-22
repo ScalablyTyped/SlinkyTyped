@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object editingItemScssMod extends js.Object {
   
-  val editingContainer: /* "editingContainer_a6ea566a" */ String = js.native
+  val editingContainer: /* "editingContainer_436df1d9" */ String = js.native
   
-  val editingInput: /* "editingInput_a6ea566a" */ String = js.native
+  val editingInput: /* "editingInput_436df1d9" */ String = js.native
 }

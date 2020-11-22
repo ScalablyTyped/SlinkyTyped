@@ -29,6 +29,16 @@ object fragmentIndexMod extends js.Object {
   }
   
   @js.native
+  class FragCoordBlock protected ()
+    extends typingsSlinky.babylonjs.fragCoordBlockMod.FragCoordBlock {
+    /**
+      * Creates a new FragCoordBlock
+      * @param name defines the block name
+      */
+    def this(name: String) = this()
+  }
+  
+  @js.native
   class FragmentOutputBlock protected ()
     extends typingsSlinky.babylonjs.fragmentOutputBlockMod.FragmentOutputBlock {
     /**
@@ -63,6 +73,16 @@ object fragmentIndexMod extends js.Object {
     extends typingsSlinky.babylonjs.perturbNormalBlockMod.PerturbNormalBlock {
     /**
       * Create a new PerturbNormalBlock
+      * @param name defines the block name
+      */
+    def this(name: String) = this()
+  }
+  
+  @js.native
+  class ScreenSizeBlock protected ()
+    extends typingsSlinky.babylonjs.screenSizeBlockMod.ScreenSizeBlock {
+    /**
+      * Creates a new ScreenSizeBlock
       * @param name defines the block name
       */
     def this(name: String) = this()

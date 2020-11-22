@@ -18,8 +18,13 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.rcDrawer.anon.Target
 import typingsSlinky.rcDrawer.rcDrawerBooleans.`false`
+import typingsSlinky.rcDrawer.rcDrawerStrings.`additions removals`
 import typingsSlinky.rcDrawer.rcDrawerStrings.`additions text`
 import typingsSlinky.rcDrawer.rcDrawerStrings.`inline`
+import typingsSlinky.rcDrawer.rcDrawerStrings.`removals additions`
+import typingsSlinky.rcDrawer.rcDrawerStrings.`removals text`
+import typingsSlinky.rcDrawer.rcDrawerStrings.`text additions`
+import typingsSlinky.rcDrawer.rcDrawerStrings.`text removals`
 import typingsSlinky.rcDrawer.rcDrawerStrings.additions
 import typingsSlinky.rcDrawer.rcDrawerStrings.all
 import typingsSlinky.rcDrawer.rcDrawerStrings.ascending
@@ -165,7 +170,9 @@ trait IProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -727,7 +734,9 @@ object IProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

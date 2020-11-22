@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LicenseUnitsDetail extends js.Object {
   
   // The number of units that are enabled.
-  var enabled: js.UndefOr[Double] = js.native
+  var enabled: js.UndefOr[NullableOption[Double]] = js.native
   
   // The number of units that are suspended.
-  var suspended: js.UndefOr[Double] = js.native
+  var suspended: js.UndefOr[NullableOption[Double]] = js.native
   
   // The number of units that are in warning status.
-  var warning: js.UndefOr[Double] = js.native
+  var warning: js.UndefOr[NullableOption[Double]] = js.native
 }
 object LicenseUnitsDetail {
   
@@ -40,21 +40,30 @@ object LicenseUnitsDetail {
     }
     
     @scala.inline
-    def setEnabled(value: Double): Self = this.set("enabled", value.asInstanceOf[js.Any])
+    def setEnabled(value: NullableOption[Double]): Self = this.set("enabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnabled: Self = this.set("enabled", js.undefined)
     
     @scala.inline
-    def setSuspended(value: Double): Self = this.set("suspended", value.asInstanceOf[js.Any])
+    def setEnabledNull: Self = this.set("enabled", null)
+    
+    @scala.inline
+    def setSuspended(value: NullableOption[Double]): Self = this.set("suspended", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSuspended: Self = this.set("suspended", js.undefined)
     
     @scala.inline
-    def setWarning(value: Double): Self = this.set("warning", value.asInstanceOf[js.Any])
+    def setSuspendedNull: Self = this.set("suspended", null)
+    
+    @scala.inline
+    def setWarning(value: NullableOption[Double]): Self = this.set("warning", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWarning: Self = this.set("warning", js.undefined)
+    
+    @scala.inline
+    def setWarningNull: Self = this.set("warning", null)
   }
 }

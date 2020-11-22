@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsNode.mod
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.euclidean
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.fro
 import scala.scalajs.js

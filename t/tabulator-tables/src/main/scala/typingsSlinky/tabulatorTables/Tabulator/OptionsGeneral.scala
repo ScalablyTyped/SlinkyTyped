@@ -18,8 +18,8 @@ trait OptionsGeneral extends js.Object {
   /** Tabulator will automatically attempt to redraw the data contained in the table if the containing element for the table is resized. To disable this functionality, set the autoResize property to false */
   var autoResize: js.UndefOr[Boolean] = js.native
   
-  /** The dataEdited callback is triggered whenever the table data is changed by the user. Triggers for this include editing any cell in the table, adding a row and deleting a row. */
-  var dataEdited: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.native
+  /** The dataChanged callback is triggered whenever the table data is changed by the user. Triggers for this include editing any cell in the table, adding a row and deleting a row. */
+  var dataChanged: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.native
   
   /** The dataLoaded callback is triggered when a new set of data is loaded into the table. */
   var dataLoaded: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.native
@@ -96,6 +96,8 @@ trait OptionsGeneral extends js.Object {
   /** When a the tabulator constructor is called and the table has finished being rendered, the tableBuilt callback will triggered: */
   var tableBuilt: js.UndefOr[js.Function0[Unit]] = js.native
   
+  var textDirection: js.UndefOr[TextDirection] = js.native
+  
   /** When to regenerate cell tooltip value     */
   var tooltipGenerationMode: js.UndefOr[load | hover] = js.native
   
@@ -115,6 +117,8 @@ trait OptionsGeneral extends js.Object {
   
   /** Manually set the size of the virtual DOM buffer     */
   var virtualDomBuffer: js.UndefOr[Boolean | Double] = js.native
+  
+  var virtualDomHoz: js.UndefOr[Boolean] = js.native
 }
 object OptionsGeneral {
   
@@ -146,10 +150,10 @@ object OptionsGeneral {
     def deleteAutoResize: Self = this.set("autoResize", js.undefined)
     
     @scala.inline
-    def setDataEdited(value: /* data */ js.Any => Unit): Self = this.set("dataEdited", js.Any.fromFunction1(value))
+    def setDataChanged(value: /* data */ js.Any => Unit): Self = this.set("dataChanged", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteDataEdited: Self = this.set("dataEdited", js.undefined)
+    def deleteDataChanged: Self = this.set("dataChanged", js.undefined)
     
     @scala.inline
     def setDataLoaded(value: /* data */ js.Any => Unit): Self = this.set("dataLoaded", js.Any.fromFunction1(value))
@@ -284,6 +288,12 @@ object OptionsGeneral {
     def deleteTableBuilt: Self = this.set("tableBuilt", js.undefined)
     
     @scala.inline
+    def setTextDirection(value: TextDirection): Self = this.set("textDirection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTextDirection: Self = this.set("textDirection", js.undefined)
+    
+    @scala.inline
     def setTooltipGenerationMode(value: load | hover): Self = this.set("tooltipGenerationMode", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -315,5 +325,11 @@ object OptionsGeneral {
     
     @scala.inline
     def deleteVirtualDomBuffer: Self = this.set("virtualDomBuffer", js.undefined)
+    
+    @scala.inline
+    def setVirtualDomHoz(value: Boolean): Self = this.set("virtualDomHoz", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVirtualDomHoz: Self = this.set("virtualDomHoz", js.undefined)
   }
 }

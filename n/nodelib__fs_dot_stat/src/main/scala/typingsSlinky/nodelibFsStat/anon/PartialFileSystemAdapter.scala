@@ -16,7 +16,7 @@ trait PartialFileSystemAdapter extends js.Object {
   
   var stat: js.UndefOr[Typeofstat] = js.native
   
-  var statSync: js.UndefOr[js.Function1[/* path */ PathLike, Stats]] = js.native
+  var statSync: js.UndefOr[FnCall] = js.native
 }
 object PartialFileSystemAdapter {
   
@@ -60,7 +60,7 @@ object PartialFileSystemAdapter {
     def deleteStat: Self = this.set("stat", js.undefined)
     
     @scala.inline
-    def setStatSync(value: /* path */ PathLike => Stats): Self = this.set("statSync", js.Any.fromFunction1(value))
+    def setStatSync(value: FnCall): Self = this.set("statSync", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStatSync: Self = this.set("statSync", js.undefined)

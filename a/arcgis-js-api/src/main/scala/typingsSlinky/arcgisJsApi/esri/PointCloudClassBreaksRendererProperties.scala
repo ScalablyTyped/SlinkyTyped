@@ -13,14 +13,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PointCloudClassBreaksRendererProperties extends PointCloudRendererProperties {
   
   /**
-    * Each element in the array is an object that provides information about a class break associated with the renderer. Each object has the following specification:
+    * Each element in the array is an object that provides information about a class break associated with the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudClassBreaksRenderer.html#colorClassBreakInfos)
     */
   var colorClassBreakInfos: js.UndefOr[js.Array[PointCloudClassBreaksRendererColorClassBreakInfos]] = js.native
   
   /**
-    * The name of the field that is used to drive the color visualization for the renderer. The value of this field determines which class break each point is assigned.
+    * The name of the field that is used to drive the color visualization for the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudClassBreaksRenderer.html#field)
     */
@@ -30,8 +30,6 @@ trait PointCloudClassBreaksRendererProperties extends PointCloudRendererProperti
     * A transform that is applied to the field value before evaluating the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudClassBreaksRenderer.html#fieldTransformType)
-    *
-    * @default null
     */
   var fieldTransformType: js.UndefOr[none | `low-four-bit` | `high-four-bit` | `absolute-value` | `modulo-ten`] = js.native
   

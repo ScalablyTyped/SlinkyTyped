@@ -25,7 +25,7 @@ trait ClusterStepHadoopJarStep extends js.Object {
   var mainClass: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
+    * A map of properties specified within a configuration classification
     */
   var properties: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
 }

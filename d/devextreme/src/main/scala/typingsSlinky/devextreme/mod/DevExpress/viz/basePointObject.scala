@@ -7,52 +7,84 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait basePointObject extends js.Object {
   
-  /** @name basePointObject.clearHover() */
+  /**
+    * [descr:basePointObject.clearHover()]
+    */
   def clearHover(): Unit = js.native
   
-  /** @name basePointObject.clearSelection() */
+  /**
+    * [descr:basePointObject.clearSelection()]
+    */
   def clearSelection(): Unit = js.native
   
-  /** @name basePointObject.data */
+  /**
+    * [descr:basePointObject.data]
+    */
   var data: js.UndefOr[js.Any] = js.native
   
-  /** @name basePointObject.fullState */
+  /**
+    * [descr:basePointObject.fullState]
+    */
   var fullState: js.UndefOr[Double] = js.native
   
-  /** @name basePointObject.getColor() */
+  /**
+    * [descr:basePointObject.getColor()]
+    */
   def getColor(): String = js.native
   
-  /** @name basePointObject.getLabel() */
+  /**
+    * [descr:basePointObject.getLabel()]
+    */
   def getLabel(): baseLabelObject with js.Array[baseLabelObject] = js.native
   
-  /** @name basePointObject.hideTooltip() */
+  /**
+    * [descr:basePointObject.hideTooltip()]
+    */
   def hideTooltip(): Unit = js.native
   
-  /** @name basePointObject.hover() */
+  /**
+    * [descr:basePointObject.hover()]
+    */
   def hover(): Unit = js.native
   
-  /** @name basePointObject.isHovered() */
+  /**
+    * [descr:basePointObject.isHovered()]
+    */
   def isHovered(): Boolean = js.native
   
-  /** @name basePointObject.isSelected() */
+  /**
+    * [descr:basePointObject.isSelected()]
+    */
   def isSelected(): Boolean = js.native
   
-  /** @name basePointObject.originalArgument */
+  /**
+    * [descr:basePointObject.originalArgument]
+    */
   var originalArgument: js.UndefOr[String | Double | js.Date] = js.native
   
-  /** @name basePointObject.originalValue */
+  /**
+    * [descr:basePointObject.originalValue]
+    */
   var originalValue: js.UndefOr[String | Double | js.Date] = js.native
   
-  /** @name basePointObject.select() */
+  /**
+    * [descr:basePointObject.select()]
+    */
   def select(): Unit = js.native
   
-  /** @name basePointObject.series */
+  /**
+    * [descr:basePointObject.series]
+    */
   var series: js.UndefOr[js.Any] = js.native
   
-  /** @name basePointObject.showTooltip() */
+  /**
+    * [descr:basePointObject.showTooltip()]
+    */
   def showTooltip(): Unit = js.native
   
-  /** @name basePointObject.tag */
+  /**
+    * [descr:basePointObject.tag]
+    */
   var tag: js.UndefOr[js.Any] = js.native
 }
 object basePointObject {

@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LongColumnStatisticsData extends js.Object {
   
   /**
-    * Maximum value of the column.
+    * The highest value in the column.
     */
   var MaximumValue: js.UndefOr[Long] = js.native
   
   /**
-    * Minimum value of the column.
+    * The lowest value in the column.
     */
   var MinimumValue: js.UndefOr[Long] = js.native
   
   /**
-    * Number of distinct values.
+    * The number of distinct values in a column.
     */
   var NumberOfDistinctValues: NonNegativeLong = js.native
   
   /**
-    * Number of nulls.
+    * The number of null values in the column.
     */
   var NumberOfNulls: NonNegativeLong = js.native
 }

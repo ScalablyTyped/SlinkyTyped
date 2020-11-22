@@ -15,7 +15,7 @@ trait BrowserslistUseragentOptions extends js.Object {
   
   var ignoreMinor: js.UndefOr[Boolean] = js.native
   
-  var ignorePath: js.UndefOr[Boolean] = js.native
+  var ignorePatch: js.UndefOr[Boolean] = js.native
 }
 object BrowserslistUseragentOptions {
   
@@ -68,9 +68,9 @@ object BrowserslistUseragentOptions {
     def deleteIgnoreMinor: Self = this.set("ignoreMinor", js.undefined)
     
     @scala.inline
-    def setIgnorePath(value: Boolean): Self = this.set("ignorePath", value.asInstanceOf[js.Any])
+    def setIgnorePatch(value: Boolean): Self = this.set("ignorePatch", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteIgnorePath: Self = this.set("ignorePath", js.undefined)
+    def deleteIgnorePatch: Self = this.set("ignorePatch", js.undefined)
   }
 }

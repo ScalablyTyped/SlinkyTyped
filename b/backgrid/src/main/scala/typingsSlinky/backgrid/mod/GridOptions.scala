@@ -12,7 +12,7 @@ trait GridOptions extends js.Object {
   
   var body: js.UndefOr[Body] = js.native
   
-  var collection: Collection[Model[_, ModelSetOptions]] = js.native
+  var collection: Collection[Model[_, ModelSetOptions, js.Object]] = js.native
   
   var columns: js.Array[Column] = js.native
   
@@ -25,7 +25,7 @@ trait GridOptions extends js.Object {
 object GridOptions {
   
   @scala.inline
-  def apply(collection: Collection[Model[_, ModelSetOptions]], columns: js.Array[Column]): GridOptions = {
+  def apply(collection: Collection[Model[_, ModelSetOptions, js.Object]], columns: js.Array[Column]): GridOptions = {
     val __obj = js.Dynamic.literal(collection = collection.asInstanceOf[js.Any], columns = columns.asInstanceOf[js.Any])
     __obj.asInstanceOf[GridOptions]
   }
@@ -46,7 +46,7 @@ object GridOptions {
     }
     
     @scala.inline
-    def setCollection(value: Collection[Model[_, ModelSetOptions]]): Self = this.set("collection", value.asInstanceOf[js.Any])
+    def setCollection(value: Collection[Model[_, ModelSetOptions, js.Object]]): Self = this.set("collection", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setColumnsVarargs(value: Column*): Self = this.set("columns", js.Array(value :_*))

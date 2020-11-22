@@ -1,7 +1,7 @@
 
 # Scala.js typings for d3-interpolate
 
-Typings are for version 1.3
+Typings are for version 2.0
 
 ## Library description:
 Interpolate numbers, colors, strings, arrays, objects, whatever!

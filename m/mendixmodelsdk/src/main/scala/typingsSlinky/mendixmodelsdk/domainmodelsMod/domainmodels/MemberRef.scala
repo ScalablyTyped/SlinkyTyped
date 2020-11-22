@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates.AttributeWidget
@@ -19,6 +20,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.MemberWidget
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.RangeSearchField
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.SingleSearchField
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.StaticOrDynamicString
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,14 +30,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.MemberRef")
 @js.native
-abstract class MemberRef protected () extends Element {
+abstract class MemberRef protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsAttributeWidget: AttributeWidget = js.native
@@ -68,9 +70,6 @@ abstract class MemberRef protected () extends Element {
   
   def entityRef: IndirectEntityRef | Null = js.native
   def entityRef_=(newValue: IndirectEntityRef | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FMemberRef: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.MemberRef")

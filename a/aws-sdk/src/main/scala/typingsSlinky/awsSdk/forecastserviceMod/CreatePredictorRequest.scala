@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreatePredictorRequest extends js.Object {
   
   /**
-    * The Amazon Resource Name (ARN) of the algorithm to use for model training. Required if PerformAutoML is not set to true.  Supported algorithms:     arn:aws:forecast:::algorithm/ARIMA     arn:aws:forecast:::algorithm/Deep_AR_Plus  Supports hyperparameter optimization (HPO)    arn:aws:forecast:::algorithm/ETS     arn:aws:forecast:::algorithm/NPTS     arn:aws:forecast:::algorithm/Prophet   
+    * The Amazon Resource Name (ARN) of the algorithm to use for model training. Required if PerformAutoML is not set to true.  Supported algorithms:     arn:aws:forecast:::algorithm/ARIMA     arn:aws:forecast:::algorithm/CNN-QR     arn:aws:forecast:::algorithm/Deep_AR_Plus     arn:aws:forecast:::algorithm/ETS     arn:aws:forecast:::algorithm/NPTS     arn:aws:forecast:::algorithm/Prophet   
     */
   var AlgorithmArn: js.UndefOr[Arn] = js.native
   
@@ -33,6 +33,11 @@ trait CreatePredictorRequest extends js.Object {
   var ForecastHorizon: Integer = js.native
   
   /**
+    * Specifies the forecast types used to train a predictor. You can specify up to five forecast types. Forecast types can be quantiles from 0.01 to 0.99, by increments of 0.01 or higher. You can also specify the mean forecast with mean.  The default value is ["0.10", "0.50", "0.9"].
+    */
+  var ForecastTypes: js.UndefOr[typingsSlinky.awsSdk.forecastserviceMod.ForecastTypes] = js.native
+  
+  /**
     * Provides hyperparameter override values for the algorithm. If you don't provide this parameter, Amazon Forecast uses default values. The individual algorithms specify which hyperparameters support hyperparameter optimization (HPO). For more information, see aws-forecast-choosing-recipes. If you included the HPOConfig object, you must set PerformHPO to true.
     */
   var HPOConfig: js.UndefOr[HyperParameterTuningJobConfig] = js.native
@@ -48,7 +53,7 @@ trait CreatePredictorRequest extends js.Object {
   var PerformAutoML: js.UndefOr[Boolean] = js.native
   
   /**
-    * Whether to perform hyperparameter optimization (HPO). HPO finds optimal hyperparameter values for your training data. The process of performing HPO is known as running a hyperparameter tuning job. The default value is false. In this case, Amazon Forecast uses default hyperparameter values from the chosen algorithm. To override the default values, set PerformHPO to true and, optionally, supply the HyperParameterTuningJobConfig object. The tuning job specifies a metric to optimize, which hyperparameters participate in tuning, and the valid range for each tunable hyperparameter. In this case, you are required to specify an algorithm and PerformAutoML must be false. The following algorithm supports HPO:   DeepAR+  
+    * Whether to perform hyperparameter optimization (HPO). HPO finds optimal hyperparameter values for your training data. The process of performing HPO is known as running a hyperparameter tuning job. The default value is false. In this case, Amazon Forecast uses default hyperparameter values from the chosen algorithm. To override the default values, set PerformHPO to true and, optionally, supply the HyperParameterTuningJobConfig object. The tuning job specifies a metric to optimize, which hyperparameters participate in tuning, and the valid range for each tunable hyperparameter. In this case, you are required to specify an algorithm and PerformAutoML must be false. The following algorithms support HPO:   DeepAR+   CNN-QR  
     */
   var PerformHPO: js.UndefOr[Boolean] = js.native
   
@@ -124,6 +129,15 @@ object CreatePredictorRequest {
     
     @scala.inline
     def deleteEvaluationParameters: Self = this.set("EvaluationParameters", js.undefined)
+    
+    @scala.inline
+    def setForecastTypesVarargs(value: ForecastType*): Self = this.set("ForecastTypes", js.Array(value :_*))
+    
+    @scala.inline
+    def setForecastTypes(value: ForecastTypes): Self = this.set("ForecastTypes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteForecastTypes: Self = this.set("ForecastTypes", js.undefined)
     
     @scala.inline
     def setHPOConfig(value: HyperParameterTuningJobConfig): Self = this.set("HPOConfig", value.asInstanceOf[js.Any])

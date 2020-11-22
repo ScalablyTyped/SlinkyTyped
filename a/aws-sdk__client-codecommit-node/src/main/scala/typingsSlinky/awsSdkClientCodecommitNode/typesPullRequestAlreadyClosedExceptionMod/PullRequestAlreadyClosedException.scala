@@ -3,32 +3,26 @@ package typingsSlinky.awsSdkClientCodecommitNode.typesPullRequestAlreadyClosedEx
 import typingsSlinky.awsSdkClientCodecommitNode.mergePullRequestByFastForwardExceptionsUnionMod.MergePullRequestByFastForwardExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestDescriptionExceptionsUnionMod.UpdatePullRequestDescriptionExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestTitleExceptionsUnionMod.UpdatePullRequestTitleExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_PullRequestAlreadyClosedExceptionDetails> * / any */ @js.native
 trait PullRequestAlreadyClosedException
-  extends ServiceException[PullRequestAlreadyClosedExceptionDetails]
-     with MergePullRequestByFastForwardExceptionsUnion
+  extends MergePullRequestByFastForwardExceptionsUnion
      with UpdatePullRequestDescriptionExceptionsUnion
      with UpdatePullRequestTitleExceptionsUnion {
   
-  @JSName("name")
-  var name_PullRequestAlreadyClosedException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.PullRequestAlreadyClosedException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.PullRequestAlreadyClosedException = js.native
 }
 object PullRequestAlreadyClosedException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: PullRequestAlreadyClosedExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.PullRequestAlreadyClosedException
   ): PullRequestAlreadyClosedException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullRequestAlreadyClosedException]
   }
   

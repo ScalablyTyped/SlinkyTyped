@@ -8,16 +8,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.getDifferencesExceptionsUnionMod
 import typingsSlinky.awsSdkClientCodecommitNode.mergePullRequestByFastForwardExceptionsUnionMod.MergePullRequestByFastForwardExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidCommitIdExceptionDetails> * / any */ @js.native
 trait InvalidCommitIdException
-  extends ServiceException[InvalidCommitIdExceptionDetails]
-     with CreateBranchExceptionsUnion
+  extends CreateBranchExceptionsUnion
      with GetCommentsForComparedCommitExceptionsUnion
      with GetCommentsForPullRequestExceptionsUnion
      with GetCommitExceptionsUnion
@@ -26,19 +24,15 @@ trait InvalidCommitIdException
      with PostCommentForComparedCommitExceptionsUnion
      with PostCommentForPullRequestExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidCommitIdException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidCommitIdException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidCommitIdException = js.native
 }
 object InvalidCommitIdException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidCommitIdExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidCommitIdException
   ): InvalidCommitIdException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidCommitIdException]
   }
   

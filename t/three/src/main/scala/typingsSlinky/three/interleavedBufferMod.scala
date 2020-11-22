@@ -25,6 +25,9 @@ object interleavedBufferMod extends js.Object {
     
     def copyAt(index1: Double, attribute: InterleavedBufferAttribute, index2: Double): InterleavedBuffer = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var count: Double = js.native
     
     var length: Double = js.native
@@ -39,12 +42,21 @@ object interleavedBufferMod extends js.Object {
     
     def toJSON(data: js.Object): Buffer = js.native
     
+    /**
+    	 * @default { offset: number; count: number }
+    	 */
     var updateRange: Count = js.native
     
+    /**
+    	 * @default THREE.StaticDrawUsage
+    	 */
     var usage: Usage = js.native
     
     var uuid: String = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var version: Double = js.native
   }
 }

@@ -12,6 +12,9 @@ trait LanguageClient extends js.Object {
   
   val name: String = js.native
   
+  def onDidStop[T](callback: js.ThisFunction1[/* this */ T, /* err */ js.UndefOr[js.Error], Unit]): Disposable = js.native
+  def onDidStop[T](callback: js.ThisFunction1[/* this */ T, /* err */ js.UndefOr[js.Error], Unit], thisValue: T): Disposable = js.native
+  
   def onNotification(method: String, callback: js.Function1[/* parameters */ js.Any, Unit]): Unit = js.native
   
   def onRequest(method: String, callback: js.Function1[/* parameters */ js.Any, _ | js.Promise[_]]): Unit = js.native

@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.reportsMod.reports
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,14 +15,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/gen/reports", "reports.ReportChartSeries")
 @js.native
-class ReportChartSeries protected () extends Element {
+class ReportChartSeries protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def caption: Text = js.native
@@ -30,9 +32,6 @@ class ReportChartSeries protected () extends Element {
   
   def dataSetColumn: String = js.native
   def dataSetColumn_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FReportChartSeries: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/reports", "reports.ReportChartSeries")

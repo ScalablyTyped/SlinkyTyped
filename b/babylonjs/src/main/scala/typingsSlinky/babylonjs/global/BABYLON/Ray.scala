@@ -64,17 +64,12 @@ object Ray extends js.Object {
     * @param world a matrix to transform the ray to. Default is the identity matrix.
     * @returns the new ray
     */
+  def CreateNewFromTo(origin: typingsSlinky.babylonjs.BABYLON.Vector3, end: typingsSlinky.babylonjs.BABYLON.Vector3): typingsSlinky.babylonjs.BABYLON.Ray = js.native
   def CreateNewFromTo(
-    origin: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3],
-    end: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3]
-  ): typingsSlinky.babylonjs.BABYLON.Ray = js.native
-  def CreateNewFromTo(
-    origin: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3],
-    end: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3],
+    origin: typingsSlinky.babylonjs.BABYLON.Vector3,
+    end: typingsSlinky.babylonjs.BABYLON.Vector3,
     world: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Matrix]
   ): typingsSlinky.babylonjs.BABYLON.Ray = js.native
-  
-  val TmpVector3: js.Any = js.native
   
   /**
     * Transforms a ray by a matrix
@@ -104,6 +99,8 @@ object Ray extends js.Object {
     * @returns the new ray
     */
   def Zero(): typingsSlinky.babylonjs.BABYLON.Ray = js.native
+  
+  val _TmpVector3: js.Any = js.native
   
   var rayl: js.Any = js.native
   

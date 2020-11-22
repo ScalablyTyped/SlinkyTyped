@@ -13,8 +13,6 @@ trait Handle extends Object {
     * Removes the handle.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Handles.html#Handle)
-    *
-    *
     */
   def remove(): Unit = js.native
 }

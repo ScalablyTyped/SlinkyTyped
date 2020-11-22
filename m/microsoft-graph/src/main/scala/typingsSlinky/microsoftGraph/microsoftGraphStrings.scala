@@ -27,17 +27,34 @@ import typingsSlinky.microsoftGraph.mod.CalendarRoleType
 import typingsSlinky.microsoftGraph.mod.CalendarSharingAction
 import typingsSlinky.microsoftGraph.mod.CalendarSharingActionImportance
 import typingsSlinky.microsoftGraph.mod.CallDirection
+import typingsSlinky.microsoftGraph.mod.CallRecords.CallType
+import typingsSlinky.microsoftGraph.mod.CallRecords.ClientPlatform
+import typingsSlinky.microsoftGraph.mod.CallRecords.FailureStage
+import typingsSlinky.microsoftGraph.mod.CallRecords.MediaStreamDirection
+import typingsSlinky.microsoftGraph.mod.CallRecords.NetworkConnectionType
+import typingsSlinky.microsoftGraph.mod.CallRecords.ProductFamily
+import typingsSlinky.microsoftGraph.mod.CallRecords.ServiceRole
+import typingsSlinky.microsoftGraph.mod.CallRecords.UserFeedbackRating
+import typingsSlinky.microsoftGraph.mod.CallRecords.WifiBand
+import typingsSlinky.microsoftGraph.mod.CallRecords.WifiRadioType
 import typingsSlinky.microsoftGraph.mod.CallState
+import typingsSlinky.microsoftGraph.mod.CallTranscriptionState
 import typingsSlinky.microsoftGraph.mod.CategoryColor
 import typingsSlinky.microsoftGraph.mod.ChangeType
+import typingsSlinky.microsoftGraph.mod.ChannelMembershipType
 import typingsSlinky.microsoftGraph.mod.ChatMessageImportance
 import typingsSlinky.microsoftGraph.mod.ChatMessagePolicyViolationDlpActionTypes
 import typingsSlinky.microsoftGraph.mod.ChatMessagePolicyViolationUserActionTypes
 import typingsSlinky.microsoftGraph.mod.ChatMessagePolicyViolationVerdictDetailsTypes
 import typingsSlinky.microsoftGraph.mod.ChatMessageType
 import typingsSlinky.microsoftGraph.mod.ClonableTeamParts
+import typingsSlinky.microsoftGraph.mod.CloudAppSecuritySessionControlType
 import typingsSlinky.microsoftGraph.mod.ComplianceState
 import typingsSlinky.microsoftGraph.mod.ComplianceStatus
+import typingsSlinky.microsoftGraph.mod.ConditionalAccessClientApp
+import typingsSlinky.microsoftGraph.mod.ConditionalAccessDevicePlatform
+import typingsSlinky.microsoftGraph.mod.ConditionalAccessGrantControl
+import typingsSlinky.microsoftGraph.mod.ConditionalAccessPolicyState
 import typingsSlinky.microsoftGraph.mod.ConditionalAccessStatus
 import typingsSlinky.microsoftGraph.mod.ConnectionDirection
 import typingsSlinky.microsoftGraph.mod.ConnectionStatus
@@ -72,6 +89,7 @@ import typingsSlinky.microsoftGraph.mod.EducationUserRole
 import typingsSlinky.microsoftGraph.mod.EmailRole
 import typingsSlinky.microsoftGraph.mod.Enablement
 import typingsSlinky.microsoftGraph.mod.EndpointType
+import typingsSlinky.microsoftGraph.mod.EntityType
 import typingsSlinky.microsoftGraph.mod.EventType
 import typingsSlinky.microsoftGraph.mod.ExchangeIdFormat
 import typingsSlinky.microsoftGraph.mod.ExternalAudienceScope
@@ -90,6 +108,8 @@ import typingsSlinky.microsoftGraph.mod.InstallState
 import typingsSlinky.microsoftGraph.mod.InternetSiteSecurityLevel
 import typingsSlinky.microsoftGraph.mod.IosNotificationAlertType
 import typingsSlinky.microsoftGraph.mod.IosUpdatesInstallStatus
+import typingsSlinky.microsoftGraph.mod.LifecycleEventType
+import typingsSlinky.microsoftGraph.mod.LobbyBypassScope
 import typingsSlinky.microsoftGraph.mod.LocationType
 import typingsSlinky.microsoftGraph.mod.LocationUniqueIdType
 import typingsSlinky.microsoftGraph.mod.LogonType
@@ -124,9 +144,14 @@ import typingsSlinky.microsoftGraph.mod.OnenotePatchActionType
 import typingsSlinky.microsoftGraph.mod.OnenotePatchInsertPosition
 import typingsSlinky.microsoftGraph.mod.OnenoteSourceService
 import typingsSlinky.microsoftGraph.mod.OnenoteUserRole
+import typingsSlinky.microsoftGraph.mod.OnlineMeetingPresenters
 import typingsSlinky.microsoftGraph.mod.OnlineMeetingProviderType
+import typingsSlinky.microsoftGraph.mod.OnlineMeetingRole
 import typingsSlinky.microsoftGraph.mod.OperationResult
 import typingsSlinky.microsoftGraph.mod.OperationStatus
+import typingsSlinky.microsoftGraph.mod.PermissionClassificationType
+import typingsSlinky.microsoftGraph.mod.PermissionType
+import typingsSlinky.microsoftGraph.mod.PersistentBrowserSessionMode
 import typingsSlinky.microsoftGraph.mod.PhoneType
 import typingsSlinky.microsoftGraph.mod.PhysicalAddressType
 import typingsSlinky.microsoftGraph.mod.PlannerPreviewType
@@ -168,6 +193,7 @@ import typingsSlinky.microsoftGraph.mod.RiskEventType
 import typingsSlinky.microsoftGraph.mod.RiskLevel
 import typingsSlinky.microsoftGraph.mod.RiskState
 import typingsSlinky.microsoftGraph.mod.RoutingType
+import typingsSlinky.microsoftGraph.mod.RunAsAccountType
 import typingsSlinky.microsoftGraph.mod.SafeSearchFilterType
 import typingsSlinky.microsoftGraph.mod.ScheduleChangeRequestActor
 import typingsSlinky.microsoftGraph.mod.ScheduleChangeState
@@ -179,9 +205,12 @@ import typingsSlinky.microsoftGraph.mod.SelectionLikelihoodInfo
 import typingsSlinky.microsoftGraph.mod.Sensitivity
 import typingsSlinky.microsoftGraph.mod.SharedPCAccountDeletionPolicyType
 import typingsSlinky.microsoftGraph.mod.SharedPCAllowedAccountType
+import typingsSlinky.microsoftGraph.mod.SigninFrequencyType
 import typingsSlinky.microsoftGraph.mod.SiteSecurityLevel
 import typingsSlinky.microsoftGraph.mod.StateManagementSetting
 import typingsSlinky.microsoftGraph.mod.Status
+import typingsSlinky.microsoftGraph.mod.TaskStatus
+import typingsSlinky.microsoftGraph.mod.TeamSpecialization
 import typingsSlinky.microsoftGraph.mod.TeamVisibilityType
 import typingsSlinky.microsoftGraph.mod.TeamsAppDistributionMethod
 import typingsSlinky.microsoftGraph.mod.TeamsAsyncOperationStatus
@@ -205,6 +234,16 @@ import typingsSlinky.microsoftGraph.mod.WebsiteType
 import typingsSlinky.microsoftGraph.mod.WeekIndex
 import typingsSlinky.microsoftGraph.mod.WeeklySchedule
 import typingsSlinky.microsoftGraph.mod.WelcomeScreenMeetingInformation
+import typingsSlinky.microsoftGraph.mod.WellknownListName
+import typingsSlinky.microsoftGraph.mod.Win32LobAppFileSystemOperationType
+import typingsSlinky.microsoftGraph.mod.Win32LobAppMsiPackageType
+import typingsSlinky.microsoftGraph.mod.Win32LobAppNotification
+import typingsSlinky.microsoftGraph.mod.Win32LobAppPowerShellScriptRuleOperationType
+import typingsSlinky.microsoftGraph.mod.Win32LobAppRegistryRuleOperationType
+import typingsSlinky.microsoftGraph.mod.Win32LobAppRestartBehavior
+import typingsSlinky.microsoftGraph.mod.Win32LobAppReturnCodeType
+import typingsSlinky.microsoftGraph.mod.Win32LobAppRuleOperator
+import typingsSlinky.microsoftGraph.mod.Win32LobAppRuleType
 import typingsSlinky.microsoftGraph.mod.Windows10EditionType
 import typingsSlinky.microsoftGraph.mod.WindowsArchitecture
 import typingsSlinky.microsoftGraph.mod.WindowsDeliveryOptimizationMode
@@ -217,6 +256,7 @@ import typingsSlinky.microsoftGraph.mod.WindowsStartMenuAppListVisibilityType
 import typingsSlinky.microsoftGraph.mod.WindowsStartMenuModeType
 import typingsSlinky.microsoftGraph.mod.WindowsUpdateType
 import typingsSlinky.microsoftGraph.mod.WindowsUserAccountControlSettings
+import typingsSlinky.microsoftGraph.mod.WorkbookOperationStatus
 import typingsSlinky.microsoftGraph.mod.WorkforceIntegrationEncryptionProtocol
 import typingsSlinky.microsoftGraph.mod.WorkforceIntegrationSupportedEntities
 import scala.scalajs.js
@@ -445,6 +485,9 @@ object microsoftGraphStrings {
   def alphanumericWithSymbols: alphanumericWithSymbols = "alphanumericWithSymbols".asInstanceOf[alphanumericWithSymbols]
   
   @scala.inline
+  def always: always = "always".asInstanceOf[always]
+  
+  @scala.inline
   def alwaysEnabled: alwaysEnabled = "alwaysEnabled".asInstanceOf[alwaysEnabled]
   
   @scala.inline
@@ -472,10 +515,16 @@ object microsoftGraphStrings {
   def appleBulkWithoutUser: appleBulkWithoutUser = "appleBulkWithoutUser".asInstanceOf[appleBulkWithoutUser]
   
   @scala.inline
+  def application: application = "application".asInstanceOf[application]
+  
+  @scala.inline
   def approvalPending: approvalPending = "approvalPending".asInstanceOf[approvalPending]
   
   @scala.inline
   def approved: approved = "approved".asInstanceOf[approved]
+  
+  @scala.inline
+  def approvedApplication: approvedApplication = "approvedApplication".asInstanceOf[approvedApplication]
   
   @scala.inline
   def apps: apps = "apps".asInstanceOf[apps]
@@ -520,7 +569,13 @@ object microsoftGraphStrings {
   def attempted: attempted = "attempted".asInstanceOf[attempted]
   
   @scala.inline
+  def attendee: attendee = "attendee".asInstanceOf[attendee]
+  
+  @scala.inline
   def audio: audio = "audio".asInstanceOf[audio]
+  
+  @scala.inline
+  def audioTeleconferencerController: audioTeleconferencerController = "audioTeleconferencerController".asInstanceOf[audioTeleconferencerController]
   
   @scala.inline
   def auditComponentsAndStoreApps: auditComponentsAndStoreApps = "auditComponentsAndStoreApps".asInstanceOf[auditComponentsAndStoreApps]
@@ -613,10 +668,16 @@ object microsoftGraphStrings {
   def b: b = "b".asInstanceOf[b]
   
   @scala.inline
+  def bad: bad = "bad".asInstanceOf[bad]
+  
+  @scala.inline
   def badRequest: badRequest = "badRequest".asInstanceOf[badRequest]
   
   @scala.inline
   def banner: banner = "banner".asInstanceOf[banner]
+  
+  @scala.inline
+  def basedOnReturnCode: basedOnReturnCode = "basedOnReturnCode".asInstanceOf[basedOnReturnCode]
   
   @scala.inline
   def basic: basic = "basic".asInstanceOf[basic]
@@ -655,6 +716,9 @@ object microsoftGraphStrings {
   def blockContainerToHost: blockContainerToHost = "blockContainerToHost".asInstanceOf[blockContainerToHost]
   
   @scala.inline
+  def blockDownloads: blockDownloads = "blockDownloads".asInstanceOf[blockDownloads]
+  
+  @scala.inline
   def blockHostToContainer: blockHostToContainer = "blockHostToContainer".asInstanceOf[blockHostToContainer]
   
   @scala.inline
@@ -685,7 +749,13 @@ object microsoftGraphStrings {
   def blue: blue = "blue".asInstanceOf[blue]
   
   @scala.inline
+  def boolean: boolean = "boolean".asInstanceOf[boolean]
+  
+  @scala.inline
   def booleanType: booleanType = "booleanType".asInstanceOf[booleanType]
+  
+  @scala.inline
+  def browser: browser = "browser".asInstanceOf[browser]
   
   @scala.inline
   def browserDefault: browserDefault = "browserDefault".asInstanceOf[browserDefault]
@@ -719,6 +789,15 @@ object microsoftGraphStrings {
   
   @scala.inline
   def call: call = "call".asInstanceOf[call]
+  
+  @scala.inline
+  def callSetup: callSetup = "callSetup".asInstanceOf[callSetup]
+  
+  @scala.inline
+  def calleeToCaller: calleeToCaller = "calleeToCaller".asInstanceOf[calleeToCaller]
+  
+  @scala.inline
+  def callerToCallee: callerToCallee = "callerToCallee".asInstanceOf[callerToCallee]
   
   @scala.inline
   def canceled: canceled = "canceled".asInstanceOf[canceled]
@@ -799,6 +878,12 @@ object microsoftGraphStrings {
   def compliant: compliant = "compliant".asInstanceOf[compliant]
   
   @scala.inline
+  def compliantApplication: compliantApplication = "compliantApplication".asInstanceOf[compliantApplication]
+  
+  @scala.inline
+  def compliantDevice: compliantDevice = "compliantDevice".asInstanceOf[compliantDevice]
+  
+  @scala.inline
   def compromised: compromised = "compromised".asInstanceOf[compromised]
   
   @scala.inline
@@ -806,6 +891,12 @@ object microsoftGraphStrings {
   
   @scala.inline
   def conferenceRoom: conferenceRoom = "conferenceRoom".asInstanceOf[conferenceRoom]
+  
+  @scala.inline
+  def conferencingAnnouncementService: conferencingAnnouncementService = "conferencingAnnouncementService".asInstanceOf[conferencingAnnouncementService]
+  
+  @scala.inline
+  def conferencingAttendant: conferencingAttendant = "conferencingAttendant".asInstanceOf[conferencingAttendant]
   
   @scala.inline
   def confidential: confidential = "confidential".asInstanceOf[confidential]
@@ -850,6 +941,9 @@ object microsoftGraphStrings {
   def created: created = "created".asInstanceOf[created]
   
   @scala.inline
+  def createdDate: createdDate = "createdDate".asInstanceOf[createdDate]
+  
+  @scala.inline
   def ctph: ctph = "ctph".asInstanceOf[ctph]
   
   @scala.inline
@@ -863,6 +957,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def custom: custom = "custom".asInstanceOf[custom]
+  
+  @scala.inline
+  def customBot: customBot = "customBot".asInstanceOf[customBot]
   
   @scala.inline
   def customMailTip: customMailTip = "customMailTip".asInstanceOf[customMailTip]
@@ -892,6 +989,12 @@ object microsoftGraphStrings {
   def data: data = "data".asInstanceOf[data]
   
   @scala.inline
+  def dateTime: dateTime = "dateTime".asInstanceOf[dateTime]
+  
+  @scala.inline
+  def days: days = "days".asInstanceOf[days]
+  
+  @scala.inline
   def deactivated: deactivated = "deactivated".asInstanceOf[deactivated]
   
   @scala.inline
@@ -904,10 +1007,22 @@ object microsoftGraphStrings {
   def default: default = "default".asInstanceOf[default]
   
   @scala.inline
+  def defaultList: defaultList = "defaultList".asInstanceOf[defaultList]
+  
+  @scala.inline
+  def deferred: deferred = "deferred".asInstanceOf[deferred]
+  
+  @scala.inline
   def delegateWithPrivateEventAccess: delegateWithPrivateEventAccess = "delegateWithPrivateEventAccess".asInstanceOf[delegateWithPrivateEventAccess]
   
   @scala.inline
   def delegateWithoutPrivateEventAccess: delegateWithoutPrivateEventAccess = "delegateWithoutPrivateEventAccess".asInstanceOf[delegateWithoutPrivateEventAccess]
+  
+  @scala.inline
+  def delegated: delegated = "delegated".asInstanceOf[delegated]
+  
+  @scala.inline
+  def delegatedUserConsentable: delegatedUserConsentable = "delegatedUserConsentable".asInstanceOf[delegatedUserConsentable]
   
   @scala.inline
   def delete_ : delete_ = "delete".asInstanceOf[delete_]
@@ -926,6 +1041,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def desktop: desktop = "desktop".asInstanceOf[desktop]
+  
+  @scala.inline
+  def detection: detection = "detection".asInstanceOf[detection]
   
   @scala.inline
   def deviceDefault: deviceDefault = "deviceDefault".asInstanceOf[deviceDefault]
@@ -976,6 +1094,9 @@ object microsoftGraphStrings {
   def doctor: doctor = "doctor".asInstanceOf[doctor]
   
   @scala.inline
+  def doesNotExist: doesNotExist = "doesNotExist".asInstanceOf[doesNotExist]
+  
+  @scala.inline
   def dog: dog = "dog".asInstanceOf[dog]
   
   @scala.inline
@@ -986,6 +1107,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def domainBlockList: domainBlockList = "domainBlockList".asInstanceOf[domainBlockList]
+  
+  @scala.inline
+  def domainJoinedDevice: domainJoinedDevice = "domainJoinedDevice".asInstanceOf[domainJoinedDevice]
   
   @scala.inline
   def done: done = "done".asInstanceOf[done]
@@ -1009,6 +1133,15 @@ object microsoftGraphStrings {
   def downloading: downloading = "downloading".asInstanceOf[downloading]
   
   @scala.inline
+  def drive: drive = "drive".asInstanceOf[drive]
+  
+  @scala.inline
+  def driveItem: driveItem = "driveItem".asInstanceOf[driveItem]
+  
+  @scala.inline
+  def dualPurpose: dualPurpose = "dualPurpose".asInstanceOf[dualPurpose]
+  
+  @scala.inline
   def dword: dword = "dword".asInstanceOf[dword]
   
   @scala.inline
@@ -1027,7 +1160,22 @@ object microsoftGraphStrings {
   def easMdm: easMdm = "easMdm".asInstanceOf[easMdm]
   
   @scala.inline
+  def easSupported: easSupported = "easSupported".asInstanceOf[easSupported]
+  
+  @scala.inline
   def education: education = "education".asInstanceOf[education]
+  
+  @scala.inline
+  def educationClass: educationClass = "educationClass".asInstanceOf[educationClass]
+  
+  @scala.inline
+  def educationProfessionalLearningCommunity: educationProfessionalLearningCommunity = "educationProfessionalLearningCommunity".asInstanceOf[educationProfessionalLearningCommunity]
+  
+  @scala.inline
+  def educationStaff: educationStaff = "educationStaff".asInstanceOf[educationStaff]
+  
+  @scala.inline
+  def educationStandard: educationStandard = "educationStandard".asInstanceOf[educationStandard]
   
   @scala.inline
   def eight: eight = "eight".asInstanceOf[eight]
@@ -1037,6 +1185,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def enabled: enabled = "enabled".asInstanceOf[enabled]
+  
+  @scala.inline
+  def enabledForReportingButNotEnforced: enabledForReportingButNotEnforced = "enabledForReportingButNotEnforced".asInstanceOf[enabledForReportingButNotEnforced]
   
   @scala.inline
   def encryptAndAuditOnly: encryptAndAuditOnly = "encryptAndAuditOnly".asInstanceOf[encryptAndAuditOnly]
@@ -1066,6 +1217,9 @@ object microsoftGraphStrings {
   def entryId: entryId = "entryId".asInstanceOf[entryId]
   
   @scala.inline
+  def equal: equal = "equal".asInstanceOf[equal]
+  
+  @scala.inline
   def error: error = "error".asInstanceOf[error]
   
   @scala.inline
@@ -1075,13 +1229,25 @@ object microsoftGraphStrings {
   def establishing: establishing = "establishing".asInstanceOf[establishing]
   
   @scala.inline
+  def event: event = "event".asInstanceOf[event]
+  
+  @scala.inline
   def everyday: everyday = "everyday".asInstanceOf[everyday]
+  
+  @scala.inline
+  def everyone: everyone = "everyone".asInstanceOf[everyone]
   
   @scala.inline
   def ewsId: ewsId = "ewsId".asInstanceOf[ewsId]
   
   @scala.inline
+  def excellent: excellent = "excellent".asInstanceOf[excellent]
+  
+  @scala.inline
   def exception: exception = "exception".asInstanceOf[exception]
+  
+  @scala.inline
+  def exchangeActiveSync: exchangeActiveSync = "exchangeActiveSync".asInstanceOf[exchangeActiveSync]
   
   @scala.inline
   def exchangeDeviceRule: exchangeDeviceRule = "exchangeDeviceRule".asInstanceOf[exchangeDeviceRule]
@@ -1096,7 +1262,13 @@ object microsoftGraphStrings {
   def exchangeMailboxPolicy: exchangeMailboxPolicy = "exchangeMailboxPolicy".asInstanceOf[exchangeMailboxPolicy]
   
   @scala.inline
+  def exchangeUnifiedMessagingService: exchangeUnifiedMessagingService = "exchangeUnifiedMessagingService".asInstanceOf[exchangeUnifiedMessagingService]
+  
+  @scala.inline
   def exchangeUpgrade: exchangeUpgrade = "exchangeUpgrade".asInstanceOf[exchangeUpgrade]
+  
+  @scala.inline
+  def exists: exists = "exists".asInstanceOf[exists]
   
   @scala.inline
   def expandSz: expandSz = "expandSz".asInstanceOf[expandSz]
@@ -1109,6 +1281,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def external: external = "external".asInstanceOf[external]
+  
+  @scala.inline
+  def externalItem: externalItem = "externalItem".asInstanceOf[externalItem]
   
   @scala.inline
   def externalMemberCount: externalMemberCount = "externalMemberCount".asInstanceOf[externalMemberCount]
@@ -1124,6 +1299,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def failure: failure = "failure".asInstanceOf[failure]
+  
+  @scala.inline
+  def fair: fair = "fair".asInstanceOf[fair]
   
   @scala.inline
   def falsePositive: falsePositive = "falsePositive".asInstanceOf[falsePositive]
@@ -1153,7 +1331,13 @@ object microsoftGraphStrings {
   def flagged: flagged = "flagged".asInstanceOf[flagged]
   
   @scala.inline
+  def flaggedEmails: flaggedEmails = "flaggedEmails".asInstanceOf[flaggedEmails]
+  
+  @scala.inline
   def flash: flash = "flash".asInstanceOf[flash]
+  
+  @scala.inline
+  def float: float = "float".asInstanceOf[float]
   
   @scala.inline
   def focused: focused = "focused".asInstanceOf[focused]
@@ -1163,6 +1347,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def forbidden: forbidden = "forbidden".asInstanceOf[forbidden]
+  
+  @scala.inline
+  def force: force = "force".asInstanceOf[force]
   
   @scala.inline
   def forty: forty = "forty".asInstanceOf[forty]
@@ -1192,6 +1379,15 @@ object microsoftGraphStrings {
   def freeBusyRead: freeBusyRead = "freeBusyRead".asInstanceOf[freeBusyRead]
   
   @scala.inline
+  def frequency24GHz: frequency24GHz = "frequency24GHz".asInstanceOf[frequency24GHz]
+  
+  @scala.inline
+  def frequency50GHz: frequency50GHz = "frequency50GHz".asInstanceOf[frequency50GHz]
+  
+  @scala.inline
+  def frequency60GHz: frequency60GHz = "frequency60GHz".asInstanceOf[frequency60GHz]
+  
+  @scala.inline
   def friday: friday = "friday".asInstanceOf[friday]
   
   @scala.inline
@@ -1208,6 +1404,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def fyi: fyi = "fyi".asInstanceOf[fyi]
+  
+  @scala.inline
+  def gateway: gateway = "gateway".asInstanceOf[gateway]
   
   @scala.inline
   def general: general = "general".asInstanceOf[general]
@@ -1228,16 +1427,37 @@ object microsoftGraphStrings {
   def globe: globe = "globe".asInstanceOf[globe]
   
   @scala.inline
+  def good: good = "good".asInstanceOf[good]
+  
+  @scala.inline
   def googleCloudDevicePolicyController: googleCloudDevicePolicyController = "googleCloudDevicePolicyController".asInstanceOf[googleCloudDevicePolicyController]
   
   @scala.inline
   def gray: gray = "gray".asInstanceOf[gray]
   
   @scala.inline
+  def greaterThan: greaterThan = "greaterThan".asInstanceOf[greaterThan]
+  
+  @scala.inline
+  def greaterThanOrEqual: greaterThanOrEqual = "greaterThanOrEqual".asInstanceOf[greaterThanOrEqual]
+  
+  @scala.inline
   def green: green = "green".asInstanceOf[green]
   
   @scala.inline
+  def groupCall: groupCall = "groupCall".asInstanceOf[groupCall]
+  
+  @scala.inline
   def guest: guest = "guest".asInstanceOf[guest]
+  
+  @scala.inline
+  def hardReboot: hardReboot = "hardReboot".asInstanceOf[hardReboot]
+  
+  @scala.inline
+  def healthcareCareCoordination: healthcareCareCoordination = "healthcareCareCoordination".asInstanceOf[healthcareCareCoordination]
+  
+  @scala.inline
+  def healthcareStandard: healthcareStandard = "healthcareStandard".asInstanceOf[healthcareStandard]
   
   @scala.inline
   def hidden: hidden = "hidden".asInstanceOf[hidden]
@@ -1247,6 +1467,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def hide: hide = "hide".asInstanceOf[hide]
+  
+  @scala.inline
+  def hideAll: hideAll = "hideAll".asInstanceOf[hideAll]
   
   @scala.inline
   def high: high = "high".asInstanceOf[high]
@@ -1259,6 +1482,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def hold: hold = "hold".asInstanceOf[hold]
+  
+  @scala.inline
+  def holoLens: holoLens = "holoLens".asInstanceOf[holoLens]
   
   @scala.inline
   def holographic: holographic = "holographic".asInstanceOf[holographic]
@@ -1277,6 +1503,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def hotel: hotel = "hotel".asInstanceOf[hotel]
+  
+  @scala.inline
+  def hours: hours = "hours".asInstanceOf[hours]
   
   @scala.inline
   def html: html = "html".asInstanceOf[html]
@@ -1375,6 +1604,9 @@ object microsoftGraphStrings {
   def installing: installing = "installing".asInstanceOf[installing]
   
   @scala.inline
+  def integer: integer = "integer".asInstanceOf[integer]
+  
+  @scala.inline
   def integerType: integerType = "integerType".asInstanceOf[integerType]
   
   @scala.inline
@@ -1400,6 +1632,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def ip: ip = "ip".asInstanceOf[ip]
+  
+  @scala.inline
+  def ipPhone: ipPhone = "ipPhone".asInstanceOf[ipPhone]
   
   @scala.inline
   def ipSecAuthenticationHeader: ipSecAuthenticationHeader = "ipSecAuthenticationHeader".asInstanceOf[ipSecAuthenticationHeader]
@@ -1450,6 +1685,12 @@ object microsoftGraphStrings {
   def leakedCredentials: leakedCredentials = "leakedCredentials".asInstanceOf[leakedCredentials]
   
   @scala.inline
+  def lessThan: lessThan = "lessThan".asInstanceOf[lessThan]
+  
+  @scala.inline
+  def lessThanOrEqual: lessThanOrEqual = "lessThanOrEqual".asInstanceOf[lessThanOrEqual]
+  
+  @scala.inline
   def licenseFile: licenseFile = "licenseFile".asInstanceOf[licenseFile]
   
   @scala.inline
@@ -1489,6 +1730,12 @@ object microsoftGraphStrings {
   def link: link = "link".asInstanceOf[link]
   
   @scala.inline
+  def list: list = "list".asInstanceOf[list]
+  
+  @scala.inline
+  def listItem: listItem = "listItem".asInstanceOf[listItem]
+  
+  @scala.inline
   def localBusiness: localBusiness = "localBusiness".asInstanceOf[localBusiness]
   
   @scala.inline
@@ -1526,6 +1773,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def lsHash: lsHash = "lsHash".asInstanceOf[lsHash]
+  
+  @scala.inline
+  def lync: lync = "lync".asInstanceOf[lync]
   
   @scala.inline
   def macOS: macOS = "macOS".asInstanceOf[macOS]
@@ -1576,6 +1826,9 @@ object microsoftGraphStrings {
   def maxMessageSize: maxMessageSize = "maxMessageSize".asInstanceOf[maxMessageSize]
   
   @scala.inline
+  def mcasConfigured: mcasConfigured = "mcasConfigured".asInstanceOf[mcasConfigured]
+  
+  @scala.inline
   def mcasImpossibleTravel: mcasImpossibleTravel = "mcasImpossibleTravel".asInstanceOf[mcasImpossibleTravel]
   
   @scala.inline
@@ -1586,6 +1839,15 @@ object microsoftGraphStrings {
   
   @scala.inline
   def mdm: mdm = "mdm".asInstanceOf[mdm]
+  
+  @scala.inline
+  def mediaController: mediaController = "mediaController".asInstanceOf[mediaController]
+  
+  @scala.inline
+  def mediationServer: mediationServer = "mediationServer".asInstanceOf[mediationServer]
+  
+  @scala.inline
+  def mediationServerCloudConnectorEdition: mediationServerCloudConnectorEdition = "mediationServerCloudConnectorEdition".asInstanceOf[mediationServerCloudConnectorEdition]
   
   @scala.inline
   def medium: medium = "medium".asInstanceOf[medium]
@@ -1621,16 +1883,28 @@ object microsoftGraphStrings {
   def message: message = "message".asInstanceOf[message]
   
   @scala.inline
+  def mfa: mfa = "mfa".asInstanceOf[mfa]
+  
+  @scala.inline
   def mfaRequired: mfaRequired = "mfaRequired".asInstanceOf[mfaRequired]
   
   @scala.inline
   def microsoftEdge: microsoftEdge = "microsoftEdge".asInstanceOf[microsoftEdge]
   
   @scala.inline
+  def midcall: midcall = "midcall".asInstanceOf[midcall]
+  
+  @scala.inline
   def misconfigured: misconfigured = "misconfigured".asInstanceOf[misconfigured]
   
   @scala.inline
+  def missed: missed = "missed".asInstanceOf[missed]
+  
+  @scala.inline
   def mobile: mobile = "mobile".asInstanceOf[mobile]
+  
+  @scala.inline
+  def mobileAppsAndDesktopClients: mobileAppsAndDesktopClients = "mobileAppsAndDesktopClients".asInstanceOf[mobileAppsAndDesktopClients]
   
   @scala.inline
   def modal: modal = "modal".asInstanceOf[modal]
@@ -1640,6 +1914,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def moderationStatus: moderationStatus = "moderationStatus".asInstanceOf[moderationStatus]
+  
+  @scala.inline
+  def modifiedDate: modifiedDate = "modifiedDate".asInstanceOf[modifiedDate]
   
   @scala.inline
   def modify: modify = "modify".asInstanceOf[modify]
@@ -1652,6 +1929,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def monitorIncomingFilesOnly: monitorIncomingFilesOnly = "monitorIncomingFilesOnly".asInstanceOf[monitorIncomingFilesOnly]
+  
+  @scala.inline
+  def monitorOnly: monitorOnly = "monitorOnly".asInstanceOf[monitorOnly]
   
   @scala.inline
   def monitorOutgoingFilesOnly: monitorOutgoingFilesOnly = "monitorOutgoingFilesOnly".asInstanceOf[monitorOutgoingFilesOnly]
@@ -1670,6 +1950,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def neutral: neutral = "neutral".asInstanceOf[neutral]
+  
+  @scala.inline
+  def never: never = "never".asInstanceOf[never]
   
   @scala.inline
   def neverNotify: neverNotify = "neverNotify".asInstanceOf[neverNotify]
@@ -1747,6 +2030,9 @@ object microsoftGraphStrings {
   def notEnrolled: notEnrolled = "notEnrolled".asInstanceOf[notEnrolled]
   
   @scala.inline
+  def notEqual: notEqual = "notEqual".asInstanceOf[notEqual]
+  
+  @scala.inline
   def notFlagged: notFlagged = "notFlagged".asInstanceOf[notFlagged]
   
   @scala.inline
@@ -1763,6 +2049,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def notPublished: notPublished = "notPublished".asInstanceOf[notPublished]
+  
+  @scala.inline
+  def notRated: notRated = "notRated".asInstanceOf[notRated]
   
   @scala.inline
   def notRecording: notRecording = "notRecording".asInstanceOf[notRecording]
@@ -1879,6 +2168,9 @@ object microsoftGraphStrings {
   def organization: organization = "organization".asInstanceOf[organization]
   
   @scala.inline
+  def organizationAndFederated: organizationAndFederated = "organizationAndFederated".asInstanceOf[organizationAndFederated]
+  
+  @scala.inline
   def organizer: organizer = "organizer".asInstanceOf[organizer]
   
   @scala.inline
@@ -1912,7 +2204,16 @@ object microsoftGraphStrings {
   def parentalSupervision: parentalSupervision = "parentalSupervision".asInstanceOf[parentalSupervision]
   
   @scala.inline
+  def peerToPeer: peerToPeer = "peerToPeer".asInstanceOf[peerToPeer]
+  
+  @scala.inline
   def pending: pending = "pending".asInstanceOf[pending]
+  
+  @scala.inline
+  def perMachine: perMachine = "perMachine".asInstanceOf[perMachine]
+  
+  @scala.inline
+  def perUser: perUser = "perUser".asInstanceOf[perUser]
   
   @scala.inline
   def personal: personal = "personal".asInstanceOf[personal]
@@ -1936,6 +2237,9 @@ object microsoftGraphStrings {
   def plane: plane = "plane".asInstanceOf[plane]
   
   @scala.inline
+  def poor: poor = "poor".asInstanceOf[poor]
+  
+  @scala.inline
   def postalAddress: postalAddress = "postalAddress".asInstanceOf[postalAddress]
   
   @scala.inline
@@ -1946,6 +2250,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def preschoolers: preschoolers = "preschoolers".asInstanceOf[preschoolers]
+  
+  @scala.inline
+  def presenter: presenter = "presenter".asInstanceOf[presenter]
   
   @scala.inline
   def preset0: preset0 = "preset0".asInstanceOf[preset0]
@@ -2101,6 +2408,9 @@ object microsoftGraphStrings {
   def realType: realType = "realType".asInstanceOf[realType]
   
   @scala.inline
+  def reauthorizationRequired: reauthorizationRequired = "reauthorizationRequired".asInstanceOf[reauthorizationRequired]
+  
+  @scala.inline
   def receiveOnly: receiveOnly = "receiveOnly".asInstanceOf[receiveOnly]
   
   @scala.inline
@@ -2167,6 +2477,9 @@ object microsoftGraphStrings {
   def required: required = "required".asInstanceOf[required]
   
   @scala.inline
+  def requirement: requirement = "requirement".asInstanceOf[requirement]
+  
+  @scala.inline
   def rescan: rescan = "rescan".asInstanceOf[rescan]
   
   @scala.inline
@@ -2177,6 +2490,12 @@ object microsoftGraphStrings {
   
   @scala.inline
   def resource: resource = "resource".asInstanceOf[resource]
+  
+  @scala.inline
+  def responseGroupService: responseGroupService = "responseGroupService".asInstanceOf[responseGroupService]
+  
+  @scala.inline
+  def responseGroupServiceAnnouncementService: responseGroupServiceAnnouncementService = "responseGroupServiceAnnouncementService".asInstanceOf[responseGroupServiceAnnouncementService]
   
   @scala.inline
   def restId: restId = "restId".asInstanceOf[restId]
@@ -2194,10 +2513,19 @@ object microsoftGraphStrings {
   def retire: retire = "retire".asInstanceOf[retire]
   
   @scala.inline
+  def retry: retry = "retry".asInstanceOf[retry]
+  
+  @scala.inline
   def review: review = "review".asInstanceOf[review]
   
   @scala.inline
   def revoked: revoked = "revoked".asInstanceOf[revoked]
+  
+  @scala.inline
+  def roleIsPresenter: roleIsPresenter = "roleIsPresenter".asInstanceOf[roleIsPresenter]
+  
+  @scala.inline
+  def roomSystem: roomSystem = "roomSystem".asInstanceOf[roomSystem]
   
   @scala.inline
   def rootedDevice: rootedDevice = "rootedDevice".asInstanceOf[rootedDevice]
@@ -2216,6 +2544,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def scheduled: scheduled = "scheduled".asInstanceOf[scheduled]
+  
+  @scala.inline
+  def screenSharing: screenSharing = "screenSharing".asInstanceOf[screenSharing]
   
   @scala.inline
   def second: second = "second".asInstanceOf[second]
@@ -2296,10 +2627,16 @@ object microsoftGraphStrings {
   def show: show = "show".asInstanceOf[show]
   
   @scala.inline
+  def showAll: showAll = "showAll".asInstanceOf[showAll]
+  
+  @scala.inline
   def showOrganizerAndTimeAndSubject: showOrganizerAndTimeAndSubject = "showOrganizerAndTimeAndSubject".asInstanceOf[showOrganizerAndTimeAndSubject]
   
   @scala.inline
   def showOrganizerAndTimeOnly: showOrganizerAndTimeOnly = "showOrganizerAndTimeOnly".asInstanceOf[showOrganizerAndTimeOnly]
+  
+  @scala.inline
+  def showReboot: showReboot = "showReboot".asInstanceOf[showReboot]
   
   @scala.inline
   def sideloaded: sideloaded = "sideloaded".asInstanceOf[sideloaded]
@@ -2320,16 +2657,49 @@ object microsoftGraphStrings {
   def sis: sis = "sis".asInstanceOf[sis]
   
   @scala.inline
+  def site: site = "site".asInstanceOf[site]
+  
+  @scala.inline
   def six: six = "six".asInstanceOf[six]
   
   @scala.inline
+  def sizeInMB: sizeInMB = "sizeInMB".asInstanceOf[sizeInMB]
+  
+  @scala.inline
   def skypeForBusiness: skypeForBusiness = "skypeForBusiness".asInstanceOf[skypeForBusiness]
+  
+  @scala.inline
+  def skypeForBusinessApplicationSharingMcu: skypeForBusinessApplicationSharingMcu = "skypeForBusinessApplicationSharingMcu".asInstanceOf[skypeForBusinessApplicationSharingMcu]
+  
+  @scala.inline
+  def skypeForBusinessAttendant: skypeForBusinessAttendant = "skypeForBusinessAttendant".asInstanceOf[skypeForBusinessAttendant]
+  
+  @scala.inline
+  def skypeForBusinessAudioVideoMcu: skypeForBusinessAudioVideoMcu = "skypeForBusinessAudioVideoMcu".asInstanceOf[skypeForBusinessAudioVideoMcu]
+  
+  @scala.inline
+  def skypeForBusinessAutoAttendant: skypeForBusinessAutoAttendant = "skypeForBusinessAutoAttendant".asInstanceOf[skypeForBusinessAutoAttendant]
+  
+  @scala.inline
+  def skypeForBusinessCallQueues: skypeForBusinessCallQueues = "skypeForBusinessCallQueues".asInstanceOf[skypeForBusinessCallQueues]
+  
+  @scala.inline
+  def skypeForBusinessMicrosoftTeamsGateway: skypeForBusinessMicrosoftTeamsGateway = "skypeForBusinessMicrosoftTeamsGateway".asInstanceOf[skypeForBusinessMicrosoftTeamsGateway]
+  
+  @scala.inline
+  def skypeForBusinessUnifiedCommunicationApplicationPlatform: skypeForBusinessUnifiedCommunicationApplicationPlatform = "skypeForBusinessUnifiedCommunicationApplicationPlatform".asInstanceOf[skypeForBusinessUnifiedCommunicationApplicationPlatform]
   
   @scala.inline
   def skypeForBusinessVoipPhone: skypeForBusinessVoipPhone = "skypeForBusinessVoipPhone".asInstanceOf[skypeForBusinessVoipPhone]
   
   @scala.inline
   def skypeForConsumer: skypeForConsumer = "skypeForConsumer".asInstanceOf[skypeForConsumer]
+  
+  @scala.inline
+  def skypeTranslator: skypeTranslator = "skypeTranslator".asInstanceOf[skypeTranslator]
+  
+  @scala.inline
+  def softReboot: softReboot = "softReboot".asInstanceOf[softReboot]
   
   @scala.inline
   def spam: spam = "spam".asInstanceOf[spam]
@@ -2356,10 +2726,16 @@ object microsoftGraphStrings {
   def strict: strict = "strict".asInstanceOf[strict]
   
   @scala.inline
+  def string: string = "string".asInstanceOf[string]
+  
+  @scala.inline
   def stringType: stringType = "stringType".asInstanceOf[stringType]
   
   @scala.inline
   def student: student = "student".asInstanceOf[student]
+  
+  @scala.inline
+  def subscriptionRemoved: subscriptionRemoved = "subscriptionRemoved".asInstanceOf[subscriptionRemoved]
   
   @scala.inline
   def succeeded: succeeded = "succeeded".asInstanceOf[succeeded]
@@ -2372,6 +2748,12 @@ object microsoftGraphStrings {
   
   @scala.inline
   def sunny: sunny = "sunny".asInstanceOf[sunny]
+  
+  @scala.inline
+  def suppress: suppress = "suppress".asInstanceOf[suppress]
+  
+  @scala.inline
+  def surfaceHub: surfaceHub = "surfaceHub".asInstanceOf[surfaceHub]
   
   @scala.inline
   def suspiciousIPAddress: suspiciousIPAddress = "suspiciousIPAddress".asInstanceOf[suspiciousIPAddress]
@@ -2396,6 +2778,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def team: team = "team".asInstanceOf[team]
+  
+  @scala.inline
+  def teams: teams = "teams".asInstanceOf[teams]
   
   @scala.inline
   def teamsForBusiness: teamsForBusiness = "teamsForBusiness".asInstanceOf[teamsForBusiness]
@@ -2488,6 +2873,9 @@ object microsoftGraphStrings {
   def tuesday: tuesday = "tuesday".asInstanceOf[tuesday]
   
   @scala.inline
+  def tunnel: tunnel = "tunnel".asInstanceOf[tunnel]
+  
+  @scala.inline
   def two: two = "two".asInstanceOf[two]
   
   @scala.inline
@@ -2537,6 +2925,9 @@ object microsoftGraphStrings {
   
   @scala.inline
   def unknown_ : unknown_ = "unknown".asInstanceOf[unknown_]
+  
+  @scala.inline
+  def unknownfuturevalue_ : unknownfuturevalue_ = "unknownfuturevalue".asInstanceOf[unknownfuturevalue_]
   
   @scala.inline
   def unlikelyTravel: unlikelyTravel = "unlikelyTravel".asInstanceOf[unlikelyTravel]
@@ -2599,6 +2990,9 @@ object microsoftGraphStrings {
   def valid: valid = "valid".asInstanceOf[valid]
   
   @scala.inline
+  def version: version = "version".asInstanceOf[version]
+  
+  @scala.inline
   def video: video = "video".asInstanceOf[video]
   
   @scala.inline
@@ -2614,10 +3008,16 @@ object microsoftGraphStrings {
   def voicemail: voicemail = "voicemail".asInstanceOf[voicemail]
   
   @scala.inline
+  def waitingOnOthers: waitingOnOthers = "waitingOnOthers".asInstanceOf[waitingOnOthers]
+  
+  @scala.inline
   def warning: warning = "warning".asInstanceOf[warning]
   
   @scala.inline
   def weather: weather = "weather".asInstanceOf[weather]
+  
+  @scala.inline
+  def web: web = "web".asInstanceOf[web]
   
   @scala.inline
   def wednesday: wednesday = "wednesday".asInstanceOf[wednesday]
@@ -2633,6 +3033,27 @@ object microsoftGraphStrings {
   
   @scala.inline
   def white: white = "white".asInstanceOf[white]
+  
+  @scala.inline
+  def wifi: wifi = "wifi".asInstanceOf[wifi]
+  
+  @scala.inline
+  def wifi80211a: wifi80211a = "wifi80211a".asInstanceOf[wifi80211a]
+  
+  @scala.inline
+  def wifi80211ac: wifi80211ac = "wifi80211ac".asInstanceOf[wifi80211ac]
+  
+  @scala.inline
+  def wifi80211ax: wifi80211ax = "wifi80211ax".asInstanceOf[wifi80211ax]
+  
+  @scala.inline
+  def wifi80211b: wifi80211b = "wifi80211b".asInstanceOf[wifi80211b]
+  
+  @scala.inline
+  def wifi80211g: wifi80211g = "wifi80211g".asInstanceOf[wifi80211g]
+  
+  @scala.inline
+  def wifi80211n: wifi80211n = "wifi80211n".asInstanceOf[wifi80211n]
   
   @scala.inline
   def windows: windows = "windows".asInstanceOf[windows]
@@ -2704,10 +3125,16 @@ object microsoftGraphStrings {
   def windowsInsiderBuildSlow: windowsInsiderBuildSlow = "windowsInsiderBuildSlow".asInstanceOf[windowsInsiderBuildSlow]
   
   @scala.inline
+  def windowsPhone: windowsPhone = "windowsPhone".asInstanceOf[windowsPhone]
+  
+  @scala.inline
   def windowsPhone81: windowsPhone81 = "windowsPhone81".asInstanceOf[windowsPhone81]
   
   @scala.inline
   def wipe: wipe = "wipe".asInstanceOf[wipe]
+  
+  @scala.inline
+  def wired: wired = "wired".asInstanceOf[wired]
   
   @scala.inline
   def work: work = "work".asInstanceOf[work]
@@ -2823,6 +3250,7 @@ object microsoftGraphStrings {
   @js.native
   sealed trait active
     extends ActionState
+       with CallTranscriptionState
        with DeviceManagementSubscriptionState
        with MediaState
        with Status
@@ -2955,7 +3383,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait all
-    extends ExternalAudienceScope
+    extends ConditionalAccessClientApp
+       with ConditionalAccessDevicePlatform
+       with ExternalAudienceScope
        with PolicyPlatformType
        with WindowsUpdateType
   
@@ -3012,6 +3442,7 @@ object microsoftGraphStrings {
   sealed trait allow
     extends DefenderThreatAction
        with EdgeCookiePolicy
+       with Win32LobAppRestartBehavior
        with WindowsInformationProtectionPinCharacterRequirements
   
   @js.native
@@ -3058,6 +3489,9 @@ object microsoftGraphStrings {
        with AndroidWorkProfileRequiredPasswordType
   
   @js.native
+  sealed trait always extends PersistentBrowserSessionMode
+  
+  @js.native
   sealed trait alwaysEnabled extends AutomaticRepliesStatus
   
   @js.native
@@ -3067,7 +3501,10 @@ object microsoftGraphStrings {
   sealed trait alwaysPrompt extends DefenderPromptForSampleSubmission
   
   @js.native
-  sealed trait android extends PolicyPlatformType
+  sealed trait android
+    extends ClientPlatform
+       with ConditionalAccessDevicePlatform
+       with PolicyPlatformType
   
   @js.native
   sealed trait androidWorkProfile extends PolicyPlatformType
@@ -3087,10 +3524,16 @@ object microsoftGraphStrings {
   sealed trait appleBulkWithoutUser extends DeviceEnrollmentType
   
   @js.native
+  sealed trait application extends PermissionType
+  
+  @js.native
   sealed trait approvalPending extends DeviceRegistrationState
   
   @js.native
   sealed trait approved extends ScheduleChangeState
+  
+  @js.native
+  sealed trait approvedApplication extends ConditionalAccessGrantControl
   
   @js.native
   sealed trait apps extends ClonableTeamParts
@@ -3135,7 +3578,15 @@ object microsoftGraphStrings {
   sealed trait attempted extends ConnectionStatus
   
   @js.native
-  sealed trait audio extends Modality
+  sealed trait attendee extends OnlineMeetingRole
+  
+  @js.native
+  sealed trait audio
+    extends Modality
+       with typingsSlinky.microsoftGraph.mod.CallRecords.Modality
+  
+  @js.native
+  sealed trait audioTeleconferencerController extends ServiceRole
   
   @js.native
   sealed trait auditComponentsAndStoreApps extends AppLockerApplicationControlType
@@ -3231,10 +3682,16 @@ object microsoftGraphStrings {
   sealed trait b extends Tone
   
   @js.native
+  sealed trait bad extends UserFeedbackRating
+  
+  @js.native
   sealed trait badRequest extends DeviceEnrollmentFailureReason
   
   @js.native
   sealed trait banner extends IosNotificationAlertType
+  
+  @js.native
+  sealed trait basedOnReturnCode extends Win32LobAppRestartBehavior
   
   @js.native
   sealed trait basic extends DiagnosticDataSubmissionMode
@@ -3255,7 +3712,8 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait block
-    extends DefenderThreatAction
+    extends ConditionalAccessGrantControl
+       with DefenderThreatAction
        with DeviceComplianceActionType
        with ThreatExpectedAssessment
   
@@ -3276,6 +3734,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait blockContainerToHost extends ApplicationGuardBlockClipboardSharingType
+  
+  @js.native
+  sealed trait blockDownloads extends CloudAppSecuritySessionControlType
   
   @js.native
   sealed trait blockHostToContainer extends ApplicationGuardBlockClipboardSharingType
@@ -3315,7 +3776,13 @@ object microsoftGraphStrings {
   sealed trait blue extends ScheduleEntityTheme
   
   @js.native
+  sealed trait boolean extends Win32LobAppPowerShellScriptRuleOperationType
+  
+  @js.native
   sealed trait booleanType extends MdmAppConfigKeyType
+  
+  @js.native
+  sealed trait browser extends ConditionalAccessClientApp
   
   @js.native
   sealed trait browserDefault extends WebBrowserCookieSettings
@@ -3354,6 +3821,15 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait call extends MessageActionFlag
+  
+  @js.native
+  sealed trait callSetup extends FailureStage
+  
+  @js.native
+  sealed trait calleeToCaller extends MediaStreamDirection
+  
+  @js.native
+  sealed trait callerToCallee extends MediaStreamDirection
   
   @js.native
   sealed trait canceled extends ActionState
@@ -3434,7 +3910,8 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait completed_
-    extends ThreatAssessmentStatus
+    extends TaskStatus
+       with ThreatAssessmentStatus
        with VppTokenSyncStatus
   
   @js.native
@@ -3444,6 +3921,12 @@ object microsoftGraphStrings {
        with DeviceManagementExchangeAccessStateReason
   
   @js.native
+  sealed trait compliantApplication extends ConditionalAccessGrantControl
+  
+  @js.native
+  sealed trait compliantDevice extends ConditionalAccessGrantControl
+  
+  @js.native
   sealed trait compromised extends ManagedDevicePartnerReportedHealthState
   
   @js.native
@@ -3451,6 +3934,12 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait conferenceRoom extends LocationType
+  
+  @js.native
+  sealed trait conferencingAnnouncementService extends ServiceRole
+  
+  @js.native
+  sealed trait conferencingAttendant extends ServiceRole
   
   @js.native
   sealed trait confidential extends Sensitivity
@@ -3497,6 +3986,9 @@ object microsoftGraphStrings {
   sealed trait created extends ChangeType
   
   @js.native
+  sealed trait createdDate extends Win32LobAppFileSystemOperationType
+  
+  @js.native
   sealed trait ctph extends FileHashType
   
   @js.native
@@ -3510,6 +4002,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait custom extends CalendarRoleType
+  
+  @js.native
+  sealed trait customBot extends ServiceRole
   
   @js.native
   sealed trait customMailTip extends MailTipsType
@@ -3536,7 +4031,15 @@ object microsoftGraphStrings {
   sealed trait darkYellow extends ScheduleEntityTheme
   
   @js.native
-  sealed trait data extends Modality
+  sealed trait data
+    extends Modality
+       with typingsSlinky.microsoftGraph.mod.CallRecords.Modality
+  
+  @js.native
+  sealed trait dateTime extends Win32LobAppPowerShellScriptRuleOperationType
+  
+  @js.native
+  sealed trait days extends SigninFrequencyType
   
   @js.native
   sealed trait deactivated extends ManagedDevicePartnerReportedHealthState
@@ -3556,10 +4059,22 @@ object microsoftGraphStrings {
        with LocationType
   
   @js.native
+  sealed trait defaultList extends WellknownListName
+  
+  @js.native
+  sealed trait deferred extends TaskStatus
+  
+  @js.native
   sealed trait delegateWithPrivateEventAccess extends CalendarRoleType
   
   @js.native
   sealed trait delegateWithoutPrivateEventAccess extends CalendarRoleType
+  
+  @js.native
+  sealed trait delegated extends PermissionType
+  
+  @js.native
+  sealed trait delegatedUserConsentable extends PermissionType
   
   @js.native
   sealed trait delete_ extends RegistryOperation
@@ -3583,6 +4098,9 @@ object microsoftGraphStrings {
   sealed trait desktop
     extends ApplicationType
        with WindowsDeviceType
+  
+  @js.native
+  sealed trait detection extends Win32LobAppRuleType
   
   @js.native
   sealed trait deviceDefault
@@ -3621,6 +4139,7 @@ object microsoftGraphStrings {
   @js.native
   sealed trait disabled
     extends AutomaticRepliesStatus
+       with ConditionalAccessPolicyState
        with DefenderScanType
        with DeviceManagementSubscriptionState
        with Enablement
@@ -3651,6 +4170,9 @@ object microsoftGraphStrings {
   sealed trait doctor extends TimeOffReasonIconType
   
   @js.native
+  sealed trait doesNotExist extends Win32LobAppRegistryRuleOperationType
+  
+  @js.native
   sealed trait dog extends TimeOffReasonIconType
   
   @js.native
@@ -3661,6 +4183,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait domainBlockList extends MailDestinationRoutingReason
+  
+  @js.native
+  sealed trait domainJoinedDevice extends ConditionalAccessGrantControl
   
   @js.native
   sealed trait done extends ActionState
@@ -3684,6 +4209,15 @@ object microsoftGraphStrings {
   sealed trait downloading extends IosUpdatesInstallStatus
   
   @js.native
+  sealed trait drive extends EntityType
+  
+  @js.native
+  sealed trait driveItem extends EntityType
+  
+  @js.native
+  sealed trait dualPurpose extends Win32LobAppMsiPackageType
+  
+  @js.native
   sealed trait dword extends RegistryValueType
   
   @js.native
@@ -3702,7 +4236,22 @@ object microsoftGraphStrings {
   sealed trait easMdm extends ManagementAgentType
   
   @js.native
+  sealed trait easSupported extends ConditionalAccessClientApp
+  
+  @js.native
   sealed trait education extends VppTokenAccountType
+  
+  @js.native
+  sealed trait educationClass extends TeamSpecialization
+  
+  @js.native
+  sealed trait educationProfessionalLearningCommunity extends TeamSpecialization
+  
+  @js.native
+  sealed trait educationStaff extends TeamSpecialization
+  
+  @js.native
+  sealed trait educationStandard extends TeamSpecialization
   
   @js.native
   sealed trait eight extends MiracastChannel
@@ -3712,10 +4261,14 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait enabled
-    extends DeviceManagementPartnerTenantState
+    extends ConditionalAccessPolicyState
+       with DeviceManagementPartnerTenantState
        with Enablement
        with MobileThreatPartnerTenantState
        with WindowsSpotlightEnablementSettings
+  
+  @js.native
+  sealed trait enabledForReportingButNotEnforced extends ConditionalAccessPolicyState
   
   @js.native
   sealed trait encryptAndAuditOnly extends WindowsInformationProtectionEnforcementLevel
@@ -3745,6 +4298,9 @@ object microsoftGraphStrings {
   sealed trait entryId extends ExchangeIdFormat
   
   @js.native
+  sealed trait equal extends Win32LobAppRuleOperator
+  
+  @js.native
   sealed trait error
     extends ComplianceState
        with ComplianceStatus
@@ -3757,13 +4313,27 @@ object microsoftGraphStrings {
   sealed trait establishing extends CallState
   
   @js.native
+  sealed trait event extends EntityType
+  
+  @js.native
   sealed trait everyday extends WeeklySchedule
+  
+  @js.native
+  sealed trait everyone
+    extends LobbyBypassScope
+       with OnlineMeetingPresenters
   
   @js.native
   sealed trait ewsId extends ExchangeIdFormat
   
   @js.native
+  sealed trait excellent extends UserFeedbackRating
+  
+  @js.native
   sealed trait exception extends EventType
+  
+  @js.native
+  sealed trait exchangeActiveSync extends ConditionalAccessClientApp
   
   @js.native
   sealed trait exchangeDeviceRule extends DeviceManagementExchangeAccessStateReason
@@ -3778,7 +4348,15 @@ object microsoftGraphStrings {
   sealed trait exchangeMailboxPolicy extends DeviceManagementExchangeAccessStateReason
   
   @js.native
+  sealed trait exchangeUnifiedMessagingService extends ServiceRole
+  
+  @js.native
   sealed trait exchangeUpgrade extends DeviceManagementExchangeAccessStateReason
+  
+  @js.native
+  sealed trait exists
+    extends Win32LobAppFileSystemOperationType
+       with Win32LobAppRegistryRuleOperationType
   
   @js.native
   sealed trait expandSz extends RegistryValueType
@@ -3791,6 +4369,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait external extends RecipientScopeType
+  
+  @js.native
+  sealed trait externalItem extends EntityType
   
   @js.native
   sealed trait externalMemberCount extends MailTipsType
@@ -3810,12 +4391,17 @@ object microsoftGraphStrings {
        with RecordingStatus
        with TeamsAsyncOperationStatus
        with VppTokenSyncStatus
+       with Win32LobAppReturnCodeType
+       with WorkbookOperationStatus
   
   @js.native
   sealed trait failure
     extends AppliedConditionalAccessPolicyResult
        with ConditionalAccessStatus
        with OperationResult
+  
+  @js.native
+  sealed trait fair extends UserFeedbackRating
   
   @js.native
   sealed trait falsePositive extends AlertFeedback
@@ -3847,7 +4433,13 @@ object microsoftGraphStrings {
   sealed trait flagged extends FollowupFlagStatus
   
   @js.native
+  sealed trait flaggedEmails extends WellknownListName
+  
+  @js.native
   sealed trait flash extends Tone
+  
+  @js.native
+  sealed trait float extends Win32LobAppPowerShellScriptRuleOperationType
   
   @js.native
   sealed trait focused extends InferenceClassificationType
@@ -3857,6 +4449,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait forbidden extends RejectReason
+  
+  @js.native
+  sealed trait force extends Win32LobAppRestartBehavior
   
   @js.native
   sealed trait forty extends MiracastChannel
@@ -3886,6 +4481,15 @@ object microsoftGraphStrings {
   sealed trait freeBusyRead extends CalendarRoleType
   
   @js.native
+  sealed trait frequency24GHz extends WifiBand
+  
+  @js.native
+  sealed trait frequency50GHz extends WifiBand
+  
+  @js.native
+  sealed trait frequency60GHz extends WifiBand
+  
+  @js.native
   sealed trait friday
     extends DayOfWeek
        with WeeklySchedule
@@ -3906,6 +4510,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait fyi extends MessageActionFlag
+  
+  @js.native
+  sealed trait gateway extends ServiceRole
   
   @js.native
   sealed trait general
@@ -3940,16 +4547,37 @@ object microsoftGraphStrings {
   sealed trait globe extends TimeOffReasonIconType
   
   @js.native
+  sealed trait good extends UserFeedbackRating
+  
+  @js.native
   sealed trait googleCloudDevicePolicyController extends ManagementAgentType
   
   @js.native
   sealed trait gray extends ScheduleEntityTheme
   
   @js.native
+  sealed trait greaterThan extends Win32LobAppRuleOperator
+  
+  @js.native
+  sealed trait greaterThanOrEqual extends Win32LobAppRuleOperator
+  
+  @js.native
   sealed trait green extends ScheduleEntityTheme
   
   @js.native
+  sealed trait groupCall extends CallType
+  
+  @js.native
   sealed trait guest extends SharedPCAllowedAccountType
+  
+  @js.native
+  sealed trait hardReboot extends Win32LobAppReturnCodeType
+  
+  @js.native
+  sealed trait healthcareCareCoordination extends TeamSpecialization
+  
+  @js.native
+  sealed trait healthcareStandard extends TeamSpecialization
   
   @js.native
   sealed trait hidden
@@ -3963,6 +4591,9 @@ object microsoftGraphStrings {
   sealed trait hide extends VisibilitySetting
   
   @js.native
+  sealed trait hideAll extends Win32LobAppNotification
+  
+  @js.native
   sealed trait high
     extends AlertSeverity
        with ChatMessageImportance
@@ -3970,6 +4601,7 @@ object microsoftGraphStrings {
        with DeviceThreatProtectionLevel
        with Importance
        with InternetSiteSecurityLevel
+       with PermissionClassificationType
        with ProcessIntegrityLevel
        with RiskLevel
        with SelectionLikelihoodInfo
@@ -3983,6 +4615,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait hold extends CallState
+  
+  @js.native
+  sealed trait holoLens extends ClientPlatform
   
   @js.native
   sealed trait holographic extends WindowsDeviceType
@@ -4006,6 +4641,9 @@ object microsoftGraphStrings {
   sealed trait hotel extends LocationType
   
   @js.native
+  sealed trait hours extends SigninFrequencyType
+  
+  @js.native
   sealed trait html extends BodyType
   
   @js.native
@@ -4021,7 +4659,10 @@ object microsoftGraphStrings {
   sealed trait httpWithPeeringPrivateGroup extends WindowsDeliveryOptimizationMode
   
   @js.native
-  sealed trait iOS extends PolicyPlatformType
+  sealed trait iOS
+    extends ClientPlatform
+       with ConditionalAccessDevicePlatform
+       with PolicyPlatformType
   
   @js.native
   sealed trait iana extends TimeZoneStandard
@@ -4059,12 +4700,14 @@ object microsoftGraphStrings {
   @js.native
   sealed trait inProgress
     extends AlertStatus
+       with TaskStatus
        with TeamsAsyncOperationStatus
        with VppTokenSyncStatus
   
   @js.native
   sealed trait inactive
-    extends MediaDirection
+    extends CallTranscriptionState
+       with MediaDirection
        with MediaState
   
   @js.native
@@ -4109,6 +4752,11 @@ object microsoftGraphStrings {
   sealed trait installing extends IosUpdatesInstallStatus
   
   @js.native
+  sealed trait integer
+    extends Win32LobAppPowerShellScriptRuleOperationType
+       with Win32LobAppRegistryRuleOperationType
+  
+  @js.native
   sealed trait integerType extends MdmAppConfigKeyType
   
   @js.native
@@ -4137,6 +4785,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait ip extends SecurityNetworkProtocol
+  
+  @js.native
+  sealed trait ipPhone extends ClientPlatform
   
   @js.native
   sealed trait ipSecAuthenticationHeader extends SecurityNetworkProtocol
@@ -4187,6 +4838,12 @@ object microsoftGraphStrings {
   sealed trait leakedCredentials extends RiskEventType
   
   @js.native
+  sealed trait lessThan extends Win32LobAppRuleOperator
+  
+  @js.native
+  sealed trait lessThanOrEqual extends Win32LobAppRuleOperator
+  
+  @js.native
   sealed trait licenseFile extends EditionUpgradeLicenseType
   
   @js.native
@@ -4226,6 +4883,12 @@ object microsoftGraphStrings {
   sealed trait link extends RegistryValueType
   
   @js.native
+  sealed trait list extends EntityType
+  
+  @js.native
+  sealed trait listItem extends EntityType
+  
+  @js.native
   sealed trait localBusiness extends LocationType
   
   @js.native
@@ -4257,6 +4920,7 @@ object microsoftGraphStrings {
     extends AlertSeverity
        with DeviceThreatProtectionLevel
        with Importance
+       with PermissionClassificationType
        with ProcessIntegrityLevel
        with RiskLevel
        with SiteSecurityLevel
@@ -4273,7 +4937,13 @@ object microsoftGraphStrings {
   sealed trait lsHash extends FileHashType
   
   @js.native
-  sealed trait macOS extends PolicyPlatformType
+  sealed trait lync extends ProductFamily
+  
+  @js.native
+  sealed trait macOS
+    extends ClientPlatform
+       with ConditionalAccessDevicePlatform
+       with PolicyPlatformType
   
   @js.native
   sealed trait mail extends ThreatAssessmentContentType
@@ -4327,6 +4997,9 @@ object microsoftGraphStrings {
   sealed trait maxMessageSize extends MailTipsType
   
   @js.native
+  sealed trait mcasConfigured extends CloudAppSecuritySessionControlType
+  
+  @js.native
   sealed trait mcasImpossibleTravel extends RiskEventType
   
   @js.native
@@ -4339,10 +5012,20 @@ object microsoftGraphStrings {
   sealed trait mdm extends ManagementAgentType
   
   @js.native
+  sealed trait mediaController extends ServiceRole
+  
+  @js.native
+  sealed trait mediationServer extends ServiceRole
+  
+  @js.native
+  sealed trait mediationServerCloudConnectorEdition extends ServiceRole
+  
+  @js.native
   sealed trait medium
     extends AlertSeverity
        with DeviceThreatProtectionLevel
        with InternetSiteSecurityLevel
+       with PermissionClassificationType
        with ProcessIntegrityLevel
        with RiskLevel
        with SiteSecurityLevel
@@ -4377,7 +5060,12 @@ object microsoftGraphStrings {
   sealed trait members extends ClonableTeamParts
   
   @js.native
-  sealed trait message extends ChatMessageType
+  sealed trait message
+    extends ChatMessageType
+       with EntityType
+  
+  @js.native
+  sealed trait mfa extends ConditionalAccessGrantControl
   
   @js.native
   sealed trait mfaRequired extends DeviceManagementExchangeAccessStateReason
@@ -4386,12 +5074,22 @@ object microsoftGraphStrings {
   sealed trait microsoftEdge extends ManagedBrowserType
   
   @js.native
+  sealed trait midcall extends FailureStage
+  
+  @js.native
   sealed trait misconfigured extends ManagedDevicePartnerReportedHealthState
   
   @js.native
+  sealed trait missed extends LifecycleEventType
+  
+  @js.native
   sealed trait mobile
-    extends PhoneType
+    extends NetworkConnectionType
+       with PhoneType
        with WindowsDeviceType
+  
+  @js.native
+  sealed trait mobileAppsAndDesktopClients extends ConditionalAccessClientApp
   
   @js.native
   sealed trait modal extends IosNotificationAlertType
@@ -4403,6 +5101,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait moderationStatus extends MailTipsType
+  
+  @js.native
+  sealed trait modifiedDate extends Win32LobAppFileSystemOperationType
   
   @js.native
   sealed trait modify extends RegistryOperation
@@ -4417,6 +5118,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait monitorIncomingFilesOnly extends DefenderMonitorFileActivity
+  
+  @js.native
+  sealed trait monitorOnly extends CloudAppSecuritySessionControlType
   
   @js.native
   sealed trait monitorOutgoingFilesOnly extends DefenderMonitorFileActivity
@@ -4435,6 +5139,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait neutral extends WindowsArchitecture
+  
+  @js.native
+  sealed trait never extends PersistentBrowserSessionMode
   
   @js.native
   sealed trait neverNotify extends WindowsUserAccountControlSettings
@@ -4509,8 +5216,10 @@ object microsoftGraphStrings {
        with RiskDetail
        with RiskLevel
        with RiskState
+       with TeamSpecialization
        with TimeOffReasonIconType
        with VppTokenSyncStatus
+       with WellknownListName
        with WindowsArchitecture
        with WindowsDeviceType
        with WorkforceIntegrationSupportedEntities
@@ -4553,6 +5262,10 @@ object microsoftGraphStrings {
        with ManagedBrowserType
        with StateManagementSetting
        with VisibilitySetting
+       with Win32LobAppFileSystemOperationType
+       with Win32LobAppPowerShellScriptRuleOperationType
+       with Win32LobAppRegistryRuleOperationType
+       with Win32LobAppRuleOperator
        with WindowsSpotlightEnablementSettings
   
   @js.native
@@ -4560,6 +5273,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait notEnrolled extends DeviceManagementExchangeAccessStateReason
+  
+  @js.native
+  sealed trait notEqual extends Win32LobAppRuleOperator
   
   @js.native
   sealed trait notFlagged extends FollowupFlagStatus
@@ -4578,6 +5294,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait notPublished extends MobileAppPublishingState
+  
+  @js.native
+  sealed trait notRated extends UserFeedbackRating
   
   @js.native
   sealed trait notRecording extends RecordingStatus
@@ -4599,8 +5318,11 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait notStarted_
-    extends DataPolicyOperationStatus
+    extends CallTranscriptionState
+       with DataPolicyOperationStatus
+       with TaskStatus
        with TeamsAsyncOperationStatus
+       with WorkbookOperationStatus
   
   @js.native
   sealed trait notSupported extends ActionState
@@ -4698,14 +5420,24 @@ object microsoftGraphStrings {
   sealed trait optional extends AttendeeType
   
   @js.native
-  sealed trait organization extends TeamsAppDistributionMethod
+  sealed trait organization
+    extends LobbyBypassScope
+       with OnlineMeetingPresenters
+       with TeamsAppDistributionMethod
   
   @js.native
-  sealed trait organizer extends ResponseType
+  sealed trait organizationAndFederated extends LobbyBypassScope
+  
+  @js.native
+  sealed trait organizer
+    extends LobbyBypassScope
+       with OnlineMeetingPresenters
+       with ResponseType
   
   @js.native
   sealed trait other
-    extends DeviceManagementExchangeAccessStateReason
+    extends ConditionalAccessClientApp
+       with DeviceManagementExchangeAccessStateReason
        with EducationGender
        with InferenceClassificationType
        with PhoneType
@@ -4753,11 +5485,20 @@ object microsoftGraphStrings {
   sealed trait parentalSupervision extends RatingIrelandTelevisionType
   
   @js.native
+  sealed trait peerToPeer extends CallType
+  
+  @js.native
   sealed trait pending
     extends ActionState
        with DeviceManagementSubscriptionState
        with ScheduleChangeState
        with ThreatAssessmentStatus
+  
+  @js.native
+  sealed trait perMachine extends Win32LobAppMsiPackageType
+  
+  @js.native
+  sealed trait perUser extends Win32LobAppMsiPackageType
   
   @js.native
   sealed trait personal
@@ -4784,6 +5525,9 @@ object microsoftGraphStrings {
   sealed trait plane extends TimeOffReasonIconType
   
   @js.native
+  sealed trait poor extends UserFeedbackRating
+  
+  @js.native
   sealed trait postalAddress extends LocationType
   
   @js.native
@@ -4794,6 +5538,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait preschoolers extends RatingAustraliaTelevisionType
+  
+  @js.native
+  sealed trait presenter extends OnlineMeetingRole
   
   @js.native
   sealed trait preset0 extends CategoryColor
@@ -4881,7 +5628,8 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait `private`
-    extends LocationUniqueIdType
+    extends ChannelMembershipType
+       with LocationUniqueIdType
        with Sensitivity
        with TeamVisibilityType
   
@@ -4952,6 +5700,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait realType extends MdmAppConfigKeyType
+  
+  @js.native
+  sealed trait reauthorizationRequired extends LifecycleEventType
   
   @js.native
   sealed trait receiveOnly extends MediaDirection
@@ -5032,6 +5783,9 @@ object microsoftGraphStrings {
        with WindowsHelloForBusinessPinUsage
   
   @js.native
+  sealed trait requirement extends Win32LobAppRuleType
+  
+  @js.native
   sealed trait rescan extends ThreatAssessmentResultType
   
   @js.native
@@ -5042,6 +5796,12 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait resource extends AttendeeType
+  
+  @js.native
+  sealed trait responseGroupService extends ServiceRole
+  
+  @js.native
+  sealed trait responseGroupServiceAnnouncementService extends ServiceRole
   
   @js.native
   sealed trait restId extends ExchangeIdFormat
@@ -5062,10 +5822,19 @@ object microsoftGraphStrings {
   sealed trait retire extends DeviceComplianceActionType
   
   @js.native
+  sealed trait retry extends Win32LobAppReturnCodeType
+  
+  @js.native
   sealed trait review extends MessageActionFlag
   
   @js.native
   sealed trait revoked extends DeviceRegistrationState
+  
+  @js.native
+  sealed trait roleIsPresenter extends OnlineMeetingPresenters
+  
+  @js.native
+  sealed trait roomSystem extends ClientPlatform
   
   @js.native
   sealed trait rootedDevice extends ManagedAppFlaggedReason
@@ -5074,6 +5843,7 @@ object microsoftGraphStrings {
   sealed trait running_
     extends DataPolicyOperationStatus
        with TimeOffReasonIconType
+       with WorkbookOperationStatus
   
   @js.native
   sealed trait safeSender extends MailDestinationRoutingReason
@@ -5088,6 +5858,10 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait scheduled extends AutomaticRepliesStatus
+  
+  @js.native
+  sealed trait screenSharing
+    extends typingsSlinky.microsoftGraph.mod.CallRecords.Modality
   
   @js.native
   sealed trait second extends WeekIndex
@@ -5172,10 +5946,16 @@ object microsoftGraphStrings {
   sealed trait show extends VisibilitySetting
   
   @js.native
+  sealed trait showAll extends Win32LobAppNotification
+  
+  @js.native
   sealed trait showOrganizerAndTimeAndSubject extends WelcomeScreenMeetingInformation
   
   @js.native
   sealed trait showOrganizerAndTimeOnly extends WelcomeScreenMeetingInformation
+  
+  @js.native
+  sealed trait showReboot extends Win32LobAppNotification
   
   @js.native
   sealed trait sideloaded extends TeamsAppDistributionMethod
@@ -5196,18 +5976,52 @@ object microsoftGraphStrings {
   sealed trait sis extends EducationExternalSource
   
   @js.native
+  sealed trait site extends EntityType
+  
+  @js.native
   sealed trait six extends MiracastChannel
+  
+  @js.native
+  sealed trait sizeInMB extends Win32LobAppFileSystemOperationType
   
   @js.native
   sealed trait skypeForBusiness
     extends EndpointType
        with OnlineMeetingProviderType
+       with ProductFamily
+  
+  @js.native
+  sealed trait skypeForBusinessApplicationSharingMcu extends ServiceRole
+  
+  @js.native
+  sealed trait skypeForBusinessAttendant extends ServiceRole
+  
+  @js.native
+  sealed trait skypeForBusinessAudioVideoMcu extends ServiceRole
+  
+  @js.native
+  sealed trait skypeForBusinessAutoAttendant extends ServiceRole
+  
+  @js.native
+  sealed trait skypeForBusinessCallQueues extends ServiceRole
+  
+  @js.native
+  sealed trait skypeForBusinessMicrosoftTeamsGateway extends ServiceRole
+  
+  @js.native
+  sealed trait skypeForBusinessUnifiedCommunicationApplicationPlatform extends ServiceRole
   
   @js.native
   sealed trait skypeForBusinessVoipPhone extends EndpointType
   
   @js.native
   sealed trait skypeForConsumer extends OnlineMeetingProviderType
+  
+  @js.native
+  sealed trait skypeTranslator extends ServiceRole
+  
+  @js.native
+  sealed trait softReboot extends Win32LobAppReturnCodeType
   
   @js.native
   sealed trait spam extends ThreatCategory
@@ -5221,6 +6035,7 @@ object microsoftGraphStrings {
   @js.native
   sealed trait standard
     extends BookingType
+       with ChannelMembershipType
        with UserAccountSecurityType
   
   @js.native
@@ -5238,15 +6053,24 @@ object microsoftGraphStrings {
        with SafeSearchFilterType
   
   @js.native
+  sealed trait string
+    extends Win32LobAppPowerShellScriptRuleOperationType
+       with Win32LobAppRegistryRuleOperationType
+  
+  @js.native
   sealed trait stringType extends MdmAppConfigKeyType
   
   @js.native
   sealed trait student extends EducationUserRole
   
   @js.native
+  sealed trait subscriptionRemoved extends LifecycleEventType
+  
+  @js.native
   sealed trait succeeded
     extends ConnectionStatus
        with TeamsAsyncOperationStatus
+       with WorkbookOperationStatus
   
   @js.native
   sealed trait success
@@ -5255,6 +6079,7 @@ object microsoftGraphStrings {
        with IosUpdatesInstallStatus
        with MobileAppContentFileUploadState
        with OperationResult
+       with Win32LobAppReturnCodeType
   
   @js.native
   sealed trait sunday
@@ -5265,6 +6090,12 @@ object microsoftGraphStrings {
   sealed trait sunny extends TimeOffReasonIconType
   
   @js.native
+  sealed trait suppress extends Win32LobAppRestartBehavior
+  
+  @js.native
+  sealed trait surfaceHub extends ClientPlatform
+  
+  @js.native
   sealed trait suspiciousIPAddress extends RiskEventType
   
   @js.native
@@ -5273,6 +6104,7 @@ object microsoftGraphStrings {
   @js.native
   sealed trait system
     extends ProcessIntegrityLevel
+       with RunAsAccountType
        with ScheduleChangeRequestActor
   
   @js.native
@@ -5289,6 +6121,9 @@ object microsoftGraphStrings {
   
   @js.native
   sealed trait team extends WindowsDeviceType
+  
+  @js.native
+  sealed trait teams extends ProductFamily
   
   @js.native
   sealed trait teamsForBusiness extends OnlineMeetingProviderType
@@ -5387,6 +6222,9 @@ object microsoftGraphStrings {
        with WeeklySchedule
   
   @js.native
+  sealed trait tunnel extends NetworkConnectionType
+  
+  @js.native
   sealed trait two extends MiracastChannel
   
   @js.native
@@ -5440,8 +6278,16 @@ object microsoftGraphStrings {
        with AlertStatus
        with AppliedConditionalAccessPolicyResult
        with CallState
+       with CallTranscriptionState
+       with CallType
+       with ChannelMembershipType
        with ChatMessageImportance
        with ChatMessageType
+       with ClientPlatform
+       with CloudAppSecuritySessionControlType
+       with ConditionalAccessClientApp
+       with ConditionalAccessDevicePlatform
+       with ConditionalAccessGrantControl
        with ConditionalAccessStatus
        with ConnectionDirection
        with ConnectionStatus
@@ -5451,15 +6297,23 @@ object microsoftGraphStrings {
        with EducationUserRole
        with EmailRole
        with EndpointType
+       with FailureStage
        with FileHashType
        with GiphyRatingType
        with GroupType
+       with LobbyBypassScope
        with LogonType
        with MailDestinationRoutingReason
        with MediaState
        with Modality
+       with typingsSlinky.microsoftGraph.mod.CallRecords.Modality
+       with NetworkConnectionType
+       with OnlineMeetingPresenters
+       with OnlineMeetingRole
        with OperationResult
+       with PermissionClassificationType
        with ProcessIntegrityLevel
+       with ProductFamily
        with RecordingStatus
        with RegistryHive
        with RegistryOperation
@@ -5475,7 +6329,9 @@ object microsoftGraphStrings {
        with ScheduleEntityTheme
        with SecurityNetworkProtocol
        with SecurityResourceType
+       with ServiceRole
        with Status
+       with TeamSpecialization
        with TeamVisibilityType
        with TeamsAppDistributionMethod
        with TeamsAsyncOperationStatus
@@ -5484,6 +6340,10 @@ object microsoftGraphStrings {
        with ThreatCategory
        with TimeOffReasonIconType
        with UserAccountSecurityType
+       with UserFeedbackRating
+       with WellknownListName
+       with WifiBand
+       with WifiRadioType
        with WorkforceIntegrationEncryptionProtocol
        with WorkforceIntegrationSupportedEntities
   
@@ -5498,6 +6358,8 @@ object microsoftGraphStrings {
        with AlertStatus
        with AppliedConditionalAccessPolicyResult
        with BookingType
+       with CallType
+       with ClientPlatform
        with ComplianceState
        with ComplianceStatus
        with ConnectionDirection
@@ -5510,6 +6372,7 @@ object microsoftGraphStrings {
        with DeviceManagementPartnerTenantState
        with DeviceRegistrationState
        with EmailRole
+       with FailureStage
        with FileHashType
        with FreeBusyStatus
        with InstallState
@@ -5521,17 +6384,25 @@ object microsoftGraphStrings {
        with ManagementAgentType
        with MdmAuthority
        with MobileAppContentFileUploadState
+       with NetworkConnectionType
        with OnlineMeetingProviderType
        with PhysicalAddressType
        with ProcessIntegrityLevel
+       with ProductFamily
        with RecordingStatus
        with RegistryHive
        with RegistryOperation
        with RegistryValueType
        with SecurityNetworkProtocol
        with SecurityResourceType
+       with ServiceRole
        with UserAccountSecurityType
        with VppTokenState
+       with WifiBand
+       with WifiRadioType
+  
+  @js.native
+  sealed trait unknownfuturevalue_ extends EntityType
   
   @js.native
   sealed trait unlikelyTravel extends RiskEventType
@@ -5563,7 +6434,9 @@ object microsoftGraphStrings {
   sealed trait useDeviceSettings extends ManagedAppDataEncryptionType
   
   @js.native
-  sealed trait user extends ThreatAssessmentRequestSource
+  sealed trait user
+    extends RunAsAccountType
+       with ThreatAssessmentRequestSource
   
   @js.native
   sealed trait userAbandonment extends DeviceEnrollmentFailureReason
@@ -5618,10 +6491,20 @@ object microsoftGraphStrings {
   sealed trait valid extends VppTokenState
   
   @js.native
-  sealed trait video extends Modality
+  sealed trait version
+    extends Win32LobAppFileSystemOperationType
+       with Win32LobAppPowerShellScriptRuleOperationType
+       with Win32LobAppRegistryRuleOperationType
   
   @js.native
-  sealed trait videoBasedScreenSharing extends Modality
+  sealed trait video
+    extends Modality
+       with typingsSlinky.microsoftGraph.mod.CallRecords.Modality
+  
+  @js.native
+  sealed trait videoBasedScreenSharing
+    extends Modality
+       with typingsSlinky.microsoftGraph.mod.CallRecords.Modality
   
   @js.native
   sealed trait viewCalendar extends CalendarSharingAction
@@ -5630,13 +6513,21 @@ object microsoftGraphStrings {
   sealed trait viewer extends ScreenSharingRole
   
   @js.native
-  sealed trait voicemail extends EndpointType
+  sealed trait voicemail
+    extends EndpointType
+       with ServiceRole
+  
+  @js.native
+  sealed trait waitingOnOthers extends TaskStatus
   
   @js.native
   sealed trait warning extends DeviceManagementSubscriptionState
   
   @js.native
   sealed trait weather extends TimeOffReasonIconType
+  
+  @js.native
+  sealed trait web extends ClientPlatform
   
   @js.native
   sealed trait wednesday
@@ -5656,7 +6547,31 @@ object microsoftGraphStrings {
   sealed trait white extends ScheduleEntityTheme
   
   @js.native
-  sealed trait windows extends TimeZoneStandard
+  sealed trait wifi extends NetworkConnectionType
+  
+  @js.native
+  sealed trait wifi80211a extends WifiRadioType
+  
+  @js.native
+  sealed trait wifi80211ac extends WifiRadioType
+  
+  @js.native
+  sealed trait wifi80211ax extends WifiRadioType
+  
+  @js.native
+  sealed trait wifi80211b extends WifiRadioType
+  
+  @js.native
+  sealed trait wifi80211g extends WifiRadioType
+  
+  @js.native
+  sealed trait wifi80211n extends WifiRadioType
+  
+  @js.native
+  sealed trait windows
+    extends ClientPlatform
+       with ConditionalAccessDevicePlatform
+       with TimeZoneStandard
   
   @js.native
   sealed trait windows10AndLater extends PolicyPlatformType
@@ -5725,10 +6640,16 @@ object microsoftGraphStrings {
   sealed trait windowsInsiderBuildSlow extends WindowsUpdateType
   
   @js.native
+  sealed trait windowsPhone extends ConditionalAccessDevicePlatform
+  
+  @js.native
   sealed trait windowsPhone81 extends PolicyPlatformType
   
   @js.native
   sealed trait wipe extends DeviceComplianceActionType
+  
+  @js.native
+  sealed trait wired extends NetworkConnectionType
   
   @js.native
   sealed trait work

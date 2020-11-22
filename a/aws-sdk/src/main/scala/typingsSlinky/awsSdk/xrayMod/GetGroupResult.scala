@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetGroupResult extends js.Object {
   
   /**
-    * The group that was requested. Contains the name of the group, the ARN of the group, and the filter expression that assigned to the group.
+    * The group that was requested. Contains the name of the group, the ARN of the group, the filter expression, and the insight configuration assigned to the group.
     */
   var Group: js.UndefOr[typingsSlinky.awsSdk.xrayMod.Group] = js.native
 }

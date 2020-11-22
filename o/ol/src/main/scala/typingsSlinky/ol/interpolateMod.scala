@@ -16,7 +16,25 @@ object interpolateMod extends js.Object {
     end: Double,
     stride: Double,
     fraction: Double,
+    opt_dest: js.UndefOr[scala.Nothing],
+    opt_dimension: Double
+  ): js.Array[Double] = js.native
+  def interpolatePoint(
+    flatCoordinates: js.Array[Double],
+    offset: Double,
+    end: Double,
+    stride: Double,
+    fraction: Double,
     opt_dest: js.Array[Double]
+  ): js.Array[Double] = js.native
+  def interpolatePoint(
+    flatCoordinates: js.Array[Double],
+    offset: Double,
+    end: Double,
+    stride: Double,
+    fraction: Double,
+    opt_dest: js.Array[Double],
+    opt_dimension: Double
   ): js.Array[Double] = js.native
   
   def lineStringCoordinateAtM(

@@ -49,7 +49,7 @@ trait Group_ extends Object {
     * Method returns the bounding rectangle for the group. The rectangle is the smallest rectangle that covers all objects. If group doesn't contains objects method returns null.
     * @returns {H.geo.Rect} - geo ractangle that covers all objects in the group
     */
-  def getBounds(): typingsSlinky.heremaps.H.geo.Rect = js.native
+  def getBoundingBox(): typingsSlinky.heremaps.H.geo.Rect = js.native
   
   /**
     * To get a list of all objects of this group. On groups with many chilren this method can cause a higher memory and CPU consumption. Alternatively you case use H.map.Group#forEach

@@ -3,10 +3,8 @@ package typingsSlinky.reactstrap.dropdownItemMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
-import slinky.web.SyntheticMouseEvent
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,10 +27,9 @@ trait DropdownItemProps
   
   var href: js.UndefOr[String] = js.native
   
-  @JSName("onClick")
-  var onClick_DropdownItemProps: js.UndefOr[MouseEventHandler[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var text: js.UndefOr[Boolean] = js.native
   
   var toggle: js.UndefOr[Boolean] = js.native
 }
@@ -96,22 +93,22 @@ object DropdownItemProps {
     def deleteHref: Self = this.set("href", js.undefined)
     
     @scala.inline
-    def setOnClick(value: SyntheticMouseEvent[_] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnClick: Self = this.set("onClick", js.undefined)
-    
-    @scala.inline
     def setTagFunctionComponent(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)
+    
+    @scala.inline
+    def setText(value: Boolean): Self = this.set("text", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteText: Self = this.set("text", js.undefined)
     
     @scala.inline
     def setToggle(value: Boolean): Self = this.set("toggle", value.asInstanceOf[js.Any])

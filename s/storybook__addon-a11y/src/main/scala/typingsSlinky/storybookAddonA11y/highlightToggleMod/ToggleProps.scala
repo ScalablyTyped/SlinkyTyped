@@ -1,9 +1,6 @@
 package typingsSlinky.storybookAddonA11y.highlightToggleMod
 
-import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.axeCore.mod.NodeResult
-import typingsSlinky.std.Map
-import typingsSlinky.storybookAddonA11y.a11YPanelMod.RuleType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,26 +8,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ToggleProps extends js.Object {
   
-  var addElement: js.UndefOr[js.Function1[/* data */ js.Any, Unit]] = js.native
-  
   var elementsToHighlight: js.Array[NodeResult] = js.native
   
-  var highlightedElementsMap: js.UndefOr[Map[HTMLElement, HighlightedElementData]] = js.native
-  
-  var indeterminate: js.UndefOr[Boolean] = js.native
-  
-  var isToggledOn: js.UndefOr[Boolean] = js.native
-  
   var toggleId: js.UndefOr[String] = js.native
-  
-  var `type`: RuleType = js.native
 }
 object ToggleProps {
   
   @scala.inline
-  def apply(elementsToHighlight: js.Array[NodeResult], `type`: RuleType): ToggleProps = {
+  def apply(elementsToHighlight: js.Array[NodeResult]): ToggleProps = {
     val __obj = js.Dynamic.literal(elementsToHighlight = elementsToHighlight.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ToggleProps]
   }
   
@@ -54,33 +40,6 @@ object ToggleProps {
     
     @scala.inline
     def setElementsToHighlight(value: js.Array[NodeResult]): Self = this.set("elementsToHighlight", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setType(value: RuleType): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAddElement(value: /* data */ js.Any => Unit): Self = this.set("addElement", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteAddElement: Self = this.set("addElement", js.undefined)
-    
-    @scala.inline
-    def setHighlightedElementsMap(value: Map[HTMLElement, HighlightedElementData]): Self = this.set("highlightedElementsMap", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHighlightedElementsMap: Self = this.set("highlightedElementsMap", js.undefined)
-    
-    @scala.inline
-    def setIndeterminate(value: Boolean): Self = this.set("indeterminate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteIndeterminate: Self = this.set("indeterminate", js.undefined)
-    
-    @scala.inline
-    def setIsToggledOn(value: Boolean): Self = this.set("isToggledOn", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteIsToggledOn: Self = this.set("isToggledOn", js.undefined)
     
     @scala.inline
     def setToggleId(value: String): Self = this.set("toggleId", value.asInstanceOf[js.Any])

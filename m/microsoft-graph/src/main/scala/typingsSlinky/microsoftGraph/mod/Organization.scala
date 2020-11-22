@@ -20,29 +20,29 @@ trait Organization extends DirectoryObject {
     * Navigation property to manage certificate-based authentication configuration. Only a single instance of
     * certificateBasedAuthConfiguration can be created in the collection.
     */
-  var certificateBasedAuthConfiguration: js.UndefOr[js.Array[CertificateBasedAuthConfiguration]] = js.native
+  var certificateBasedAuthConfiguration: js.UndefOr[NullableOption[js.Array[CertificateBasedAuthConfiguration]]] = js.native
   
   // City name of the address for the organization.
-  var city: js.UndefOr[String] = js.native
+  var city: js.UndefOr[NullableOption[String]] = js.native
   
   // Country/region name of the address for the organization.
-  var country: js.UndefOr[String] = js.native
+  var country: js.UndefOr[NullableOption[String]] = js.native
   
   // Country/region abbreviation for the organization.
-  var countryLetterCode: js.UndefOr[String] = js.native
+  var countryLetterCode: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the
     * organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in
     * UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Read-only.
     */
-  var createdDateTime: js.UndefOr[String] = js.native
+  var createdDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // The display name for the tenant.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // The collection of open extensions defined for the organization. Read-only. Nullable.
-  var extensions: js.UndefOr[js.Array[Extension]] = js.native
+  var extensions: js.UndefOr[NullableOption[js.Array[Extension]]] = js.native
   
   // Not nullable.
   var marketingNotificationEmails: js.UndefOr[js.Array[String]] = js.native
@@ -55,23 +55,23 @@ trait Organization extends DirectoryObject {
     * and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would
     * look like this: '2014-01-01T00:00:00Z'. Read-only.
     */
-  var onPremisesLastSyncDateTime: js.UndefOr[String] = js.native
+  var onPremisesLastSyncDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * true if this object is synced from an on-premises directory; false if this object was originally synced from an
     * on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory
     * (default).
     */
-  var onPremisesSyncEnabled: js.UndefOr[Boolean] = js.native
+  var onPremisesSyncEnabled: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // Postal code of the address for the organization.
-  var postalCode: js.UndefOr[String] = js.native
+  var postalCode: js.UndefOr[NullableOption[String]] = js.native
   
   // The preferred language for the organization. Should follow ISO 639-1 Code; for example 'en'.
-  var preferredLanguage: js.UndefOr[String] = js.native
+  var preferredLanguage: js.UndefOr[NullableOption[String]] = js.native
   
   // The privacy profile of an organization.
-  var privacyProfile: js.UndefOr[PrivacyProfile] = js.native
+  var privacyProfile: js.UndefOr[NullableOption[PrivacyProfile]] = js.native
   
   // Not nullable.
   var provisionedPlans: js.UndefOr[js.Array[ProvisionedPlan]] = js.native
@@ -81,13 +81,15 @@ trait Organization extends DirectoryObject {
   var securityComplianceNotificationPhones: js.UndefOr[js.Array[String]] = js.native
   
   // State name of the address for the organization.
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[NullableOption[String]] = js.native
   
   // Street name of the address for organization.
-  var street: js.UndefOr[String] = js.native
+  var street: js.UndefOr[NullableOption[String]] = js.native
   
   // Not nullable.
   var technicalNotificationMails: js.UndefOr[js.Array[String]] = js.native
+  
+  var tenantType: js.UndefOr[NullableOption[String]] = js.native
   
   // The collection of domains associated with this tenant. Not nullable.
   var verifiedDomains: js.UndefOr[js.Array[VerifiedDomain]] = js.native
@@ -137,49 +139,70 @@ object Organization {
     def setCertificateBasedAuthConfigurationVarargs(value: CertificateBasedAuthConfiguration*): Self = this.set("certificateBasedAuthConfiguration", js.Array(value :_*))
     
     @scala.inline
-    def setCertificateBasedAuthConfiguration(value: js.Array[CertificateBasedAuthConfiguration]): Self = this.set("certificateBasedAuthConfiguration", value.asInstanceOf[js.Any])
+    def setCertificateBasedAuthConfiguration(value: NullableOption[js.Array[CertificateBasedAuthConfiguration]]): Self = this.set("certificateBasedAuthConfiguration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCertificateBasedAuthConfiguration: Self = this.set("certificateBasedAuthConfiguration", js.undefined)
     
     @scala.inline
-    def setCity(value: String): Self = this.set("city", value.asInstanceOf[js.Any])
+    def setCertificateBasedAuthConfigurationNull: Self = this.set("certificateBasedAuthConfiguration", null)
+    
+    @scala.inline
+    def setCity(value: NullableOption[String]): Self = this.set("city", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCity: Self = this.set("city", js.undefined)
     
     @scala.inline
-    def setCountry(value: String): Self = this.set("country", value.asInstanceOf[js.Any])
+    def setCityNull: Self = this.set("city", null)
+    
+    @scala.inline
+    def setCountry(value: NullableOption[String]): Self = this.set("country", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCountry: Self = this.set("country", js.undefined)
     
     @scala.inline
-    def setCountryLetterCode(value: String): Self = this.set("countryLetterCode", value.asInstanceOf[js.Any])
+    def setCountryNull: Self = this.set("country", null)
+    
+    @scala.inline
+    def setCountryLetterCode(value: NullableOption[String]): Self = this.set("countryLetterCode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCountryLetterCode: Self = this.set("countryLetterCode", js.undefined)
     
     @scala.inline
-    def setCreatedDateTime(value: String): Self = this.set("createdDateTime", value.asInstanceOf[js.Any])
+    def setCountryLetterCodeNull: Self = this.set("countryLetterCode", null)
+    
+    @scala.inline
+    def setCreatedDateTime(value: NullableOption[String]): Self = this.set("createdDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCreatedDateTime: Self = this.set("createdDateTime", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setCreatedDateTimeNull: Self = this.set("createdDateTime", null)
+    
+    @scala.inline
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
+    
+    @scala.inline
     def setExtensionsVarargs(value: Extension*): Self = this.set("extensions", js.Array(value :_*))
     
     @scala.inline
-    def setExtensions(value: js.Array[Extension]): Self = this.set("extensions", value.asInstanceOf[js.Any])
+    def setExtensions(value: NullableOption[js.Array[Extension]]): Self = this.set("extensions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExtensions: Self = this.set("extensions", js.undefined)
+    
+    @scala.inline
+    def setExtensionsNull: Self = this.set("extensions", null)
     
     @scala.inline
     def setMarketingNotificationEmailsVarargs(value: String*): Self = this.set("marketingNotificationEmails", js.Array(value :_*))
@@ -197,34 +220,49 @@ object Organization {
     def deleteMobileDeviceManagementAuthority: Self = this.set("mobileDeviceManagementAuthority", js.undefined)
     
     @scala.inline
-    def setOnPremisesLastSyncDateTime(value: String): Self = this.set("onPremisesLastSyncDateTime", value.asInstanceOf[js.Any])
+    def setOnPremisesLastSyncDateTime(value: NullableOption[String]): Self = this.set("onPremisesLastSyncDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnPremisesLastSyncDateTime: Self = this.set("onPremisesLastSyncDateTime", js.undefined)
     
     @scala.inline
-    def setOnPremisesSyncEnabled(value: Boolean): Self = this.set("onPremisesSyncEnabled", value.asInstanceOf[js.Any])
+    def setOnPremisesLastSyncDateTimeNull: Self = this.set("onPremisesLastSyncDateTime", null)
+    
+    @scala.inline
+    def setOnPremisesSyncEnabled(value: NullableOption[Boolean]): Self = this.set("onPremisesSyncEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnPremisesSyncEnabled: Self = this.set("onPremisesSyncEnabled", js.undefined)
     
     @scala.inline
-    def setPostalCode(value: String): Self = this.set("postalCode", value.asInstanceOf[js.Any])
+    def setOnPremisesSyncEnabledNull: Self = this.set("onPremisesSyncEnabled", null)
+    
+    @scala.inline
+    def setPostalCode(value: NullableOption[String]): Self = this.set("postalCode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePostalCode: Self = this.set("postalCode", js.undefined)
     
     @scala.inline
-    def setPreferredLanguage(value: String): Self = this.set("preferredLanguage", value.asInstanceOf[js.Any])
+    def setPostalCodeNull: Self = this.set("postalCode", null)
+    
+    @scala.inline
+    def setPreferredLanguage(value: NullableOption[String]): Self = this.set("preferredLanguage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePreferredLanguage: Self = this.set("preferredLanguage", js.undefined)
     
     @scala.inline
-    def setPrivacyProfile(value: PrivacyProfile): Self = this.set("privacyProfile", value.asInstanceOf[js.Any])
+    def setPreferredLanguageNull: Self = this.set("preferredLanguage", null)
+    
+    @scala.inline
+    def setPrivacyProfile(value: NullableOption[PrivacyProfile]): Self = this.set("privacyProfile", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePrivacyProfile: Self = this.set("privacyProfile", js.undefined)
+    
+    @scala.inline
+    def setPrivacyProfileNull: Self = this.set("privacyProfile", null)
     
     @scala.inline
     def setProvisionedPlansVarargs(value: ProvisionedPlan*): Self = this.set("provisionedPlans", js.Array(value :_*))
@@ -254,16 +292,22 @@ object Organization {
     def deleteSecurityComplianceNotificationPhones: Self = this.set("securityComplianceNotificationPhones", js.undefined)
     
     @scala.inline
-    def setState(value: String): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setState(value: NullableOption[String]): Self = this.set("state", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteState: Self = this.set("state", js.undefined)
     
     @scala.inline
-    def setStreet(value: String): Self = this.set("street", value.asInstanceOf[js.Any])
+    def setStateNull: Self = this.set("state", null)
+    
+    @scala.inline
+    def setStreet(value: NullableOption[String]): Self = this.set("street", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStreet: Self = this.set("street", js.undefined)
+    
+    @scala.inline
+    def setStreetNull: Self = this.set("street", null)
     
     @scala.inline
     def setTechnicalNotificationMailsVarargs(value: String*): Self = this.set("technicalNotificationMails", js.Array(value :_*))
@@ -273,6 +317,15 @@ object Organization {
     
     @scala.inline
     def deleteTechnicalNotificationMails: Self = this.set("technicalNotificationMails", js.undefined)
+    
+    @scala.inline
+    def setTenantType(value: NullableOption[String]): Self = this.set("tenantType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTenantType: Self = this.set("tenantType", js.undefined)
+    
+    @scala.inline
+    def setTenantTypeNull: Self = this.set("tenantType", null)
     
     @scala.inline
     def setVerifiedDomainsVarargs(value: VerifiedDomain*): Self = this.set("verifiedDomains", js.Array(value :_*))

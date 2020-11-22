@@ -39,6 +39,8 @@ class MongoClient protected () extends EventEmitter {
   def logout(options: DbName): js.Promise[_] = js.native
   def logout(options: DbName, callback: MongoCallback[_]): Unit = js.native
   
+  var readPreference: ReadPreference = js.native
+  
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/MongoClient.html#startSession */
   def startSession(): ClientSession = js.native
   def startSession(options: SessionOptions): ClientSession = js.native
@@ -53,6 +55,8 @@ class MongoClient protected () extends EventEmitter {
   def withSession(operation: js.Function1[/* session */ ClientSession, js.Promise[_]]): js.Promise[Unit] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/MongoClient.html#withSession */
   def withSession(options: SessionOptions, operation: js.Function1[/* session */ ClientSession, js.Promise[_]]): js.Promise[Unit] = js.native
+  
+  var writeConcern: WriteConcern = js.native
 }
 /* static members */
 @JSImport("mongodb", "MongoClient")

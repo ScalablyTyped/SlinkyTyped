@@ -15,17 +15,13 @@ trait symbolUtilsRenderColorRampPreviewHTMLOptions extends Object {
     * Specifies the alignment of the color ramp.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-support-symbolUtils.html#renderColorRampPreviewHTML)
-    *
-    * @default vertical
     */
   var align: js.UndefOr[horizontal | vertical] = js.native
   
   /**
-    * Indicates whether to render the color ramp with a continuous gradient. When `false`, distinct colors will appear in the ramp without a gradient.
+    * Indicates whether to render the color ramp with a continuous gradient.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-support-symbolUtils.html#renderColorRampPreviewHTML)
-    *
-    * @default true
     */
   var gradient: js.UndefOr[Boolean] = js.native
   

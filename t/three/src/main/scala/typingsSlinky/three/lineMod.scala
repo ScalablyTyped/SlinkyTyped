@@ -39,7 +39,7 @@ object lineMod extends js.Object {
     var morphTargetInfluences: js.UndefOr[js.Array[Double]] = js.native
     
     @JSName("type")
-    var type_Line: typingsSlinky.three.threeStrings.Line | LineLoop | LineSegments = js.native
+    var type_Line: typingsSlinky.three.threeStrings.Line | LineLoop | LineSegments | String = js.native
     
     def updateMorphTargets(): Unit = js.native
   }

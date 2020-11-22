@@ -17,7 +17,7 @@ trait AlignSelfProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.O
     */
   var alignSelf: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
       ThemeType
     ]
   ] = js.native
@@ -51,7 +51,7 @@ object AlignSelfProps {
     @scala.inline
     def setAlignSelf(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
           ThemeType
         ]
     ): Self = this.set("alignSelf", value.asInstanceOf[js.Any])

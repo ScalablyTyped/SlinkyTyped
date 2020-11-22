@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createPropertyAssignment extends js.Object {
   
+  /** @deprecated Use `factory.createPropertyAssignment` or the factory supplied by your transformation context instead. */
   def apply(name: java.lang.String, initializer: Expression): PropertyAssignment = js.native
-  def apply(name: PropertyName, initializer: Expression): PropertyAssignment = js.native
+  def apply(name: ComputedPropertyName, initializer: Expression): PropertyAssignment = js.native
+  def apply(name: Identifier, initializer: Expression): PropertyAssignment = js.native
+  def apply(name: NumericLiteral, initializer: Expression): PropertyAssignment = js.native
+  def apply(name: PrivateIdentifier, initializer: Expression): PropertyAssignment = js.native
+  def apply(name: StringLiteral, initializer: Expression): PropertyAssignment = js.native
 }

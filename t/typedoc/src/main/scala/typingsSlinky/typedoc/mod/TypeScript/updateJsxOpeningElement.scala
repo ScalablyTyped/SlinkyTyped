@@ -18,6 +18,7 @@ object updateJsxOpeningElement extends js.Object {
     typeArguments: js.UndefOr[scala.Nothing],
     attributes: JsxAttributes
   ): JsxOpeningElement = js.native
+  /** @deprecated Use `factory.updateJsxOpeningElement` or the factory supplied by your transformation context instead. */
   def apply(
     node: JsxOpeningElement,
     tagName: JsxTagNameExpression,

@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.Default
+import typingsSlinky.octokitTypes.anon.Score
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,14 +10,14 @@ trait SearchLabelsResponseData extends js.Object {
   
   var incomplete_results: Boolean = js.native
   
-  var items: js.Array[Default] = js.native
+  var items: js.Array[Score] = js.native
   
   var total_count: Double = js.native
 }
 object SearchLabelsResponseData {
   
   @scala.inline
-  def apply(incomplete_results: Boolean, items: js.Array[Default], total_count: Double): SearchLabelsResponseData = {
+  def apply(incomplete_results: Boolean, items: js.Array[Score], total_count: Double): SearchLabelsResponseData = {
     val __obj = js.Dynamic.literal(incomplete_results = incomplete_results.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], total_count = total_count.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchLabelsResponseData]
   }
@@ -41,10 +41,10 @@ object SearchLabelsResponseData {
     def setIncomplete_results(value: Boolean): Self = this.set("incomplete_results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setItemsVarargs(value: Default*): Self = this.set("items", js.Array(value :_*))
+    def setItemsVarargs(value: Score*): Self = this.set("items", js.Array(value :_*))
     
     @scala.inline
-    def setItems(value: js.Array[Default]): Self = this.set("items", value.asInstanceOf[js.Any])
+    def setItems(value: js.Array[Score]): Self = this.set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTotal_count(value: Double): Self = this.set("total_count", value.asInstanceOf[js.Any])

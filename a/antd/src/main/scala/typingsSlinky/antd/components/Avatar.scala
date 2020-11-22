@@ -6,13 +6,11 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.bottom
 import typingsSlinky.antd.antdStrings.circle
-import typingsSlinky.antd.antdStrings.default
-import typingsSlinky.antd.antdStrings.large
-import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.antdStrings.square
 import typingsSlinky.antd.antdStrings.top
 import typingsSlinky.antd.avatarAvatarMod.AvatarProps
 import typingsSlinky.antd.groupMod.GroupProps
+import typingsSlinky.antd.sizeContextMod.AvatarSize
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
@@ -58,10 +56,13 @@ object Avatar {
     def shape(value: circle | square): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def size(value: large | small | default | Double): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: AvatarSize): this.type = set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def src(value: String): this.type = set("src", value.asInstanceOf[js.Any])
+    def srcReactElement(value: ReactElement): this.type = set("src", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def src(value: ReactElement): this.type = set("src", value.asInstanceOf[js.Any])
     
     @scala.inline
     def srcSet(value: String): this.type = set("srcSet", value.asInstanceOf[js.Any])
@@ -99,6 +100,9 @@ object Avatar {
       
       @scala.inline
       def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def size(value: AvatarSize): this.type = set("size", value.asInstanceOf[js.Any])
       
       @scala.inline
       def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])

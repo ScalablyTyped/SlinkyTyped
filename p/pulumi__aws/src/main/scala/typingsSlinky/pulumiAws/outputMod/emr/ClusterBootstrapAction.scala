@@ -13,7 +13,7 @@ trait ClusterBootstrapAction extends js.Object {
   var args: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * The name of the step.
+    * Friendly name given to the instance fleet.
     */
   var name: String = js.native
   

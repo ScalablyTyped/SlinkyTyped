@@ -18,7 +18,7 @@ trait SMSMessage extends js.Object {
   var Keyword: js.UndefOr[string] = js.native
   
   /**
-    * The URL of an image or video to display in the SMS message.
+    * This field is reserved for future use.
     */
   var MediaUrl: js.UndefOr[string] = js.native
   

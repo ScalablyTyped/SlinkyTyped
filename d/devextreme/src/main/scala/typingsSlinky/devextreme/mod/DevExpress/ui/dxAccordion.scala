@@ -9,12 +9,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxAccordion extends CollectionWidget {
   
-  /** @name dxAccordion.collapseItem(index) */
+  /**
+    * [descr:dxAccordion.collapseItem(index)]
+    */
   def collapseItem(index: Double): Promise[Unit] with JQueryPromise[Unit] = js.native
   
-  /** @name dxAccordion.expandItem(index) */
+  /**
+    * [descr:dxAccordion.expandItem(index)]
+    */
   def expandItem(index: Double): Promise[Unit] with JQueryPromise[Unit] = js.native
   
-  /** @name dxAccordion.updateDimensions() */
+  /**
+    * [descr:dxAccordion.updateDimensions()]
+    */
   def updateDimensions(): Promise[Unit] with JQueryPromise[Unit] = js.native
 }

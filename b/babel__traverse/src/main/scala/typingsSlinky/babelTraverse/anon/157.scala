@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.NumberTypeAnnotation
+import typingsSlinky.babelTraverse.babelTraverseStrings.PipelineBareFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `157` extends js.Object {
   
-  var `type`: NumberTypeAnnotation = js.native
+  var `type`: PipelineBareFunction = js.native
 }
 object `157` {
   
   @scala.inline
-  def apply(`type`: NumberTypeAnnotation): `157` = {
+  def apply(`type`: PipelineBareFunction): `157` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`157`]
@@ -35,6 +35,6 @@ object `157` {
     }
     
     @scala.inline
-    def setType(value: NumberTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: PipelineBareFunction): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

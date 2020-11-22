@@ -13,7 +13,7 @@ trait SourceAlgorithm extends js.Object {
   var AlgorithmName: ArnOrName = js.native
   
   /**
-    * The Amazon S3 path where the model artifacts, which result from model training, are stored. This path must point to a single gzip compressed tar archive (.tar.gz suffix).
+    * The Amazon S3 path where the model artifacts, which result from model training, are stored. This path must point to a single gzip compressed tar archive (.tar.gz suffix).  The model artifacts must be in an S3 bucket that is in the same region as the algorithm. 
     */
   var ModelDataUrl: js.UndefOr[Url] = js.native
 }

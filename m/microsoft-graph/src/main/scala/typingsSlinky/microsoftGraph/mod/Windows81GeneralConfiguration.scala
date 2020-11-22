@@ -41,7 +41,7 @@ trait Windows81GeneralConfiguration extends DeviceConfiguration {
   var browserBlockSingleWordEntryOnIntranetSites: js.UndefOr[Boolean] = js.native
   
   // The enterprise mode site list location. Could be a local file, local network or http location.
-  var browserEnterpriseModeSiteListLocation: js.UndefOr[String] = js.native
+  var browserEnterpriseModeSiteListLocation: js.UndefOr[NullableOption[String]] = js.native
   
   // The internet security level. Possible values are: userDefined, medium, mediumHigh, high.
   var browserInternetSecurityLevel: js.UndefOr[InternetSiteSecurityLevel] = js.native
@@ -50,7 +50,7 @@ trait Windows81GeneralConfiguration extends DeviceConfiguration {
   var browserIntranetSecurityLevel: js.UndefOr[SiteSecurityLevel] = js.native
   
   // The logging report location.
-  var browserLoggingReportLocation: js.UndefOr[String] = js.native
+  var browserLoggingReportLocation: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates whether or not to require a firewall.
   var browserRequireFirewall: js.UndefOr[Boolean] = js.native
@@ -77,25 +77,25 @@ trait Windows81GeneralConfiguration extends DeviceConfiguration {
   var passwordBlockPicturePasswordAndPin: js.UndefOr[Boolean] = js.native
   
   // Password expiration in days.
-  var passwordExpirationDays: js.UndefOr[Double] = js.native
+  var passwordExpirationDays: js.UndefOr[NullableOption[Double]] = js.native
   
   // The number of character sets required in the password.
-  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.native
+  var passwordMinimumCharacterSetCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // The minimum password length.
-  var passwordMinimumLength: js.UndefOr[Double] = js.native
+  var passwordMinimumLength: js.UndefOr[NullableOption[Double]] = js.native
   
   // The minutes of inactivity before the screen times out.
-  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.native
+  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[NullableOption[Double]] = js.native
   
   // The number of previous passwords to prevent re-use of. Valid values 0 to 24
-  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var passwordPreviousPasswordBlockCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // The required password type. Possible values are: deviceDefault, alphanumeric, numeric.
   var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.native
   
   // The number of sign in failures before factory reset.
-  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.native
+  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[NullableOption[Double]] = js.native
   
   // Indicates whether or not to require encryption on a mobile device.
   var storageRequireDeviceEncryption: js.UndefOr[Boolean] = js.native
@@ -110,7 +110,7 @@ trait Windows81GeneralConfiguration extends DeviceConfiguration {
   var userAccountControlSettings: js.UndefOr[WindowsUserAccountControlSettings] = js.native
   
   // The work folders url.
-  var workFoldersUrl: js.UndefOr[String] = js.native
+  var workFoldersUrl: js.UndefOr[NullableOption[String]] = js.native
 }
 object Windows81GeneralConfiguration {
   
@@ -196,10 +196,13 @@ object Windows81GeneralConfiguration {
     def deleteBrowserBlockSingleWordEntryOnIntranetSites: Self = this.set("browserBlockSingleWordEntryOnIntranetSites", js.undefined)
     
     @scala.inline
-    def setBrowserEnterpriseModeSiteListLocation(value: String): Self = this.set("browserEnterpriseModeSiteListLocation", value.asInstanceOf[js.Any])
+    def setBrowserEnterpriseModeSiteListLocation(value: NullableOption[String]): Self = this.set("browserEnterpriseModeSiteListLocation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBrowserEnterpriseModeSiteListLocation: Self = this.set("browserEnterpriseModeSiteListLocation", js.undefined)
+    
+    @scala.inline
+    def setBrowserEnterpriseModeSiteListLocationNull: Self = this.set("browserEnterpriseModeSiteListLocation", null)
     
     @scala.inline
     def setBrowserInternetSecurityLevel(value: InternetSiteSecurityLevel): Self = this.set("browserInternetSecurityLevel", value.asInstanceOf[js.Any])
@@ -214,10 +217,13 @@ object Windows81GeneralConfiguration {
     def deleteBrowserIntranetSecurityLevel: Self = this.set("browserIntranetSecurityLevel", js.undefined)
     
     @scala.inline
-    def setBrowserLoggingReportLocation(value: String): Self = this.set("browserLoggingReportLocation", value.asInstanceOf[js.Any])
+    def setBrowserLoggingReportLocation(value: NullableOption[String]): Self = this.set("browserLoggingReportLocation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBrowserLoggingReportLocation: Self = this.set("browserLoggingReportLocation", js.undefined)
+    
+    @scala.inline
+    def setBrowserLoggingReportLocationNull: Self = this.set("browserLoggingReportLocation", null)
     
     @scala.inline
     def setBrowserRequireFirewall(value: Boolean): Self = this.set("browserRequireFirewall", value.asInstanceOf[js.Any])
@@ -268,34 +274,49 @@ object Windows81GeneralConfiguration {
     def deletePasswordBlockPicturePasswordAndPin: Self = this.set("passwordBlockPicturePasswordAndPin", js.undefined)
     
     @scala.inline
-    def setPasswordExpirationDays(value: Double): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDays(value: NullableOption[Double]): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordExpirationDays: Self = this.set("passwordExpirationDays", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumCharacterSetCount(value: Double): Self = this.set("passwordMinimumCharacterSetCount", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDaysNull: Self = this.set("passwordExpirationDays", null)
+    
+    @scala.inline
+    def setPasswordMinimumCharacterSetCount(value: NullableOption[Double]): Self = this.set("passwordMinimumCharacterSetCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumCharacterSetCount: Self = this.set("passwordMinimumCharacterSetCount", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumLength(value: Double): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
+    def setPasswordMinimumCharacterSetCountNull: Self = this.set("passwordMinimumCharacterSetCount", null)
+    
+    @scala.inline
+    def setPasswordMinimumLength(value: NullableOption[Double]): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumLength: Self = this.set("passwordMinimumLength", js.undefined)
     
     @scala.inline
-    def setPasswordMinutesOfInactivityBeforeScreenTimeout(value: Double): Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
+    def setPasswordMinimumLengthNull: Self = this.set("passwordMinimumLength", null)
+    
+    @scala.inline
+    def setPasswordMinutesOfInactivityBeforeScreenTimeout(value: NullableOption[Double]): Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinutesOfInactivityBeforeScreenTimeout: Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", js.undefined)
     
     @scala.inline
-    def setPasswordPreviousPasswordBlockCount(value: Double): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
+    def setPasswordMinutesOfInactivityBeforeScreenTimeoutNull: Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", null)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCount(value: NullableOption[Double]): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordPreviousPasswordBlockCount: Self = this.set("passwordPreviousPasswordBlockCount", js.undefined)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCountNull: Self = this.set("passwordPreviousPasswordBlockCount", null)
     
     @scala.inline
     def setPasswordRequiredType(value: RequiredPasswordType): Self = this.set("passwordRequiredType", value.asInstanceOf[js.Any])
@@ -304,10 +325,13 @@ object Windows81GeneralConfiguration {
     def deletePasswordRequiredType: Self = this.set("passwordRequiredType", js.undefined)
     
     @scala.inline
-    def setPasswordSignInFailureCountBeforeFactoryReset(value: Double): Self = this.set("passwordSignInFailureCountBeforeFactoryReset", value.asInstanceOf[js.Any])
+    def setPasswordSignInFailureCountBeforeFactoryReset(value: NullableOption[Double]): Self = this.set("passwordSignInFailureCountBeforeFactoryReset", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordSignInFailureCountBeforeFactoryReset: Self = this.set("passwordSignInFailureCountBeforeFactoryReset", js.undefined)
+    
+    @scala.inline
+    def setPasswordSignInFailureCountBeforeFactoryResetNull: Self = this.set("passwordSignInFailureCountBeforeFactoryReset", null)
     
     @scala.inline
     def setStorageRequireDeviceEncryption(value: Boolean): Self = this.set("storageRequireDeviceEncryption", value.asInstanceOf[js.Any])
@@ -328,9 +352,12 @@ object Windows81GeneralConfiguration {
     def deleteUserAccountControlSettings: Self = this.set("userAccountControlSettings", js.undefined)
     
     @scala.inline
-    def setWorkFoldersUrl(value: String): Self = this.set("workFoldersUrl", value.asInstanceOf[js.Any])
+    def setWorkFoldersUrl(value: NullableOption[String]): Self = this.set("workFoldersUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkFoldersUrl: Self = this.set("workFoldersUrl", js.undefined)
+    
+    @scala.inline
+    def setWorkFoldersUrlNull: Self = this.set("workFoldersUrl", null)
   }
 }

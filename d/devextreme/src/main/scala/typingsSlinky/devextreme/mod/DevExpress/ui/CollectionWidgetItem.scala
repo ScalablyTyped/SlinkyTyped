@@ -9,21 +9,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CollectionWidgetItem extends js.Object {
   
-  /** @name CollectionWidgetItem.disabled */
+  /**
+    * [descr:CollectionWidgetItem.disabled]
+    */
   var disabled: js.UndefOr[Boolean] = js.native
   
-  /** @name CollectionWidgetItem.html */
+  /**
+    * [descr:CollectionWidgetItem.html]
+    */
   var html: js.UndefOr[String] = js.native
   
-  /** @name CollectionWidgetItem.template */
+  /**
+    * [descr:CollectionWidgetItem.template]
+    */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function0[String | Element | JQuery])
   ] = js.native
   
-  /** @name CollectionWidgetItem.text */
+  /**
+    * [descr:CollectionWidgetItem.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name CollectionWidgetItem.visible */
+  /**
+    * [descr:CollectionWidgetItem.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object CollectionWidgetItem {

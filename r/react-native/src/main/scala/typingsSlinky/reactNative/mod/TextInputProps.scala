@@ -29,7 +29,7 @@ trait TextInputProps
     *      sentences: first letter of each sentence (default)
     *      none: don't auto capitalize anything
     *
-    * https://facebook.github.io/react-native/docs/textinput.html#autocapitalize
+    * https://reactnative.dev/docs/textinput#autocapitalize
     */
   var autoCapitalize: js.UndefOr[none | sentences | words | characters] = js.native
   
@@ -76,7 +76,7 @@ trait TextInputProps
   /**
     * Used to connect to an InputAccessoryView. Not part of react-natives documentation, but present in examples and
     * code.
-    * See https://facebook.github.io/react-native/docs/inputaccessoryview.html for more information.
+    * See https://reactnative.dev/docs/inputaccessoryview for more information.
     */
   var inputAccessoryViewID: js.UndefOr[String] = js.native
   

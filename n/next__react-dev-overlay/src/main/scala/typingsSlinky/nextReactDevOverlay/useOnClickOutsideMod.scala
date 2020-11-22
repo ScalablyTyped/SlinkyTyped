@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useOnClickOutsideMod extends js.Object {
   
+  def useOnClickOutside(): Unit = js.native
   def useOnClickOutside(el: Null, handler: js.Function1[/* e */ MouseEvent | TouchEvent, Unit]): Unit = js.native
+  def useOnClickOutside(el: Node): Unit = js.native
   def useOnClickOutside(el: Node, handler: js.Function1[/* e */ MouseEvent | TouchEvent, Unit]): Unit = js.native
 }

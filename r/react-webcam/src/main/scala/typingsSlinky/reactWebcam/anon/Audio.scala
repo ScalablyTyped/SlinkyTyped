@@ -15,9 +15,9 @@ trait Audio extends js.Object {
   
   var mirrored: Boolean = js.native
   
-  def onUserMedia(): Unit = js.native
+  def onUserMedia(): js.UndefOr[scala.Nothing] = js.native
   
-  def onUserMediaError(): Unit = js.native
+  def onUserMediaError(): js.UndefOr[scala.Nothing] = js.native
   
   var screenshotFormat: String = js.native
   
@@ -31,8 +31,8 @@ object Audio {
     forceScreenshotSourceSize: Boolean,
     imageSmoothing: Boolean,
     mirrored: Boolean,
-    onUserMedia: () => Unit,
-    onUserMediaError: () => Unit,
+    onUserMedia: () => js.UndefOr[scala.Nothing],
+    onUserMediaError: () => js.UndefOr[scala.Nothing],
     screenshotFormat: String,
     screenshotQuality: Double
   ): Audio = {
@@ -68,10 +68,10 @@ object Audio {
     def setMirrored(value: Boolean): Self = this.set("mirrored", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnUserMedia(value: () => Unit): Self = this.set("onUserMedia", js.Any.fromFunction0(value))
+    def setOnUserMedia(value: () => js.UndefOr[scala.Nothing]): Self = this.set("onUserMedia", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setOnUserMediaError(value: () => Unit): Self = this.set("onUserMediaError", js.Any.fromFunction0(value))
+    def setOnUserMediaError(value: () => js.UndefOr[scala.Nothing]): Self = this.set("onUserMediaError", js.Any.fromFunction0(value))
     
     @scala.inline
     def setScreenshotFormat(value: String): Self = this.set("screenshotFormat", value.asInstanceOf[js.Any])

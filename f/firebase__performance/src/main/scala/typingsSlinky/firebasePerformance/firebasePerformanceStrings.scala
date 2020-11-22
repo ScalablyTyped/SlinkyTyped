@@ -54,6 +54,12 @@ object firebasePerformanceStrings {
   def `no window`: `no window` = ("no window").asInstanceOf[`no window`]
   
   @scala.inline
+  def `nonpositive trace duration`: `nonpositive trace duration` = ("nonpositive trace duration").asInstanceOf[`nonpositive trace duration`]
+  
+  @scala.inline
+  def `nonpositive trace startTime`: `nonpositive trace startTime` = ("nonpositive trace startTime").asInstanceOf[`nonpositive trace startTime`]
+  
+  @scala.inline
   def paint: paint = "paint".asInstanceOf[paint]
   
   @scala.inline
@@ -109,6 +115,12 @@ object firebasePerformanceStrings {
   
   @js.native
   sealed trait `no window` extends ErrorCode
+  
+  @js.native
+  sealed trait `nonpositive trace duration` extends ErrorCode
+  
+  @js.native
+  sealed trait `nonpositive trace startTime` extends ErrorCode
   
   @js.native
   sealed trait paint extends EntryType

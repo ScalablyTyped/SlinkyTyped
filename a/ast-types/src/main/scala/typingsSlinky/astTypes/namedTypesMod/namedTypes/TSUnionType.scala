@@ -9,21 +9,24 @@ import typingsSlinky.astTypes.kindsMod.TSTypeKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.TSType, 'type'> */
+@js.native
 trait TSUnionType
   extends ASTNode
      with NodeKind
      with PrintableKind
      with TSTypeKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSUnionType
-  var types: js.Array[TSTypeKind]
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSUnionType = js.native
+  
+  var types: js.Array[TSTypeKind] = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSUnionType")
 @js.native
 object TSUnionType extends TopLevel[Type[TSUnionType]]
-

@@ -1,6 +1,5 @@
 package typingsSlinky.rcPicker.anon
 
-import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.PickerMode
 import typingsSlinky.rcPicker.interfaceMod.RangeValue
 import scala.scalajs.js
@@ -12,7 +11,7 @@ trait DefaultDates[DateType] extends js.Object {
   
   var defaultDates: js.UndefOr[RangeValue[DateType]] = js.native
   
-  var generateConfig: GenerateConfig[DateType] = js.native
+  var generateConfig: typingsSlinky.rcPicker.generateMod.GenerateConfig[DateType] = js.native
   
   var picker: PickerMode = js.native
   
@@ -21,7 +20,7 @@ trait DefaultDates[DateType] extends js.Object {
 object DefaultDates {
   
   @scala.inline
-  def apply[DateType](generateConfig: GenerateConfig[DateType], picker: PickerMode): DefaultDates[DateType] = {
+  def apply[DateType](generateConfig: typingsSlinky.rcPicker.generateMod.GenerateConfig[DateType], picker: PickerMode): DefaultDates[DateType] = {
     val __obj = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], picker = picker.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultDates[DateType]]
   }
@@ -42,7 +41,7 @@ object DefaultDates {
     }
     
     @scala.inline
-    def setGenerateConfig(value: GenerateConfig[DateType]): Self = this.set("generateConfig", value.asInstanceOf[js.Any])
+    def setGenerateConfig(value: typingsSlinky.rcPicker.generateMod.GenerateConfig[DateType]): Self = this.set("generateConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPicker(value: PickerMode): Self = this.set("picker", value.asInstanceOf[js.Any])

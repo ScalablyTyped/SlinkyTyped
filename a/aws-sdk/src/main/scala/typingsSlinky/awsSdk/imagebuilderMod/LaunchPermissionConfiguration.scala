@@ -50,7 +50,7 @@ object LaunchPermissionConfiguration {
     def deleteUserGroups: Self = this.set("userGroups", js.undefined)
     
     @scala.inline
-    def setUserIdsVarargs(value: NonEmptyString*): Self = this.set("userIds", js.Array(value :_*))
+    def setUserIdsVarargs(value: AccountId*): Self = this.set("userIds", js.Array(value :_*))
     
     @scala.inline
     def setUserIds(value: AccountList): Self = this.set("userIds", value.asInstanceOf[js.Any])

@@ -14,15 +14,31 @@ object circleMod extends js.Object {
   trait Circle
     extends typingsSlinky.ol.simpleGeometryMod.default {
     
+    /**
+      * Return the center of the circle as {@link module:ol/coordinate~Coordinate coordinate}.
+      */
     def getCenter(): Coordinate = js.native
     
+    /**
+      * Return the radius of the circle.
+      */
     def getRadius(): Double = js.native
     
+    /**
+      * Set the center of the circle as {@link module:ol/coordinate~Coordinate coordinate}.
+      */
     def setCenter(center: Coordinate): Unit = js.native
     
+    /**
+      * Set the center (as {@link module:ol/coordinate~Coordinate coordinate}) and the radius (as
+      * number) of the circle.
+      */
     def setCenterAndRadius(center: Coordinate, radius: Double): Unit = js.native
     def setCenterAndRadius(center: Coordinate, radius: Double, opt_layout: GeometryLayout): Unit = js.native
     
+    /**
+      * Set the radius of the circle. The radius is in the units of the projection.
+      */
     def setRadius(radius: Double): Unit = js.native
   }
   

@@ -7,10 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object sizeContextMod {
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.antd.antdStrings.small
-    - typingsSlinky.antd.antdStrings.middle
     - typingsSlinky.antd.antdStrings.large
-    - js.UndefOr[scala.Nothing]
+    - typingsSlinky.antd.antdStrings.small
+    - typingsSlinky.antd.antdStrings.default
+    - scala.Double
+    - typingsSlinky.antd.responsiveObserveMod.ScreenSizeMap
   */
-  type SizeType = js.UndefOr[typingsSlinky.antd.sizeContextMod._SizeType]
+  type AvatarSize = typingsSlinky.antd.sizeContextMod._AvatarSize | scala.Double
 }

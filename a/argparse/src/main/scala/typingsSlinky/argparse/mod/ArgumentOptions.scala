@@ -13,9 +13,9 @@ trait ArgumentOptions extends js.Object {
    // tslint:disable-line:ban-types
   var choices: js.UndefOr[String | js.Array[String]] = js.native
   
-  var constant: js.UndefOr[js.Any] = js.native
+  var const: js.UndefOr[js.Any] = js.native
   
-  var defaultValue: js.UndefOr[js.Any] = js.native
+  var default: js.UndefOr[js.Any] = js.native
   
   var dest: js.UndefOr[String] = js.native
   
@@ -25,12 +25,14 @@ trait ArgumentOptions extends js.Object {
   
   var nargs: js.UndefOr[String | Double] = js.native
   
-  var optionStrings: js.UndefOr[js.Array[String]] = js.native
+  var option_strings: js.UndefOr[js.Array[String]] = js.native
   
   var required: js.UndefOr[Boolean] = js.native
   
   // type may be a string (primitive) or a Function (constructor)
   var `type`: js.UndefOr[String | js.Function] = js.native
+  
+  var version: js.UndefOr[String] = js.native
 }
 object ArgumentOptions {
   
@@ -71,16 +73,16 @@ object ArgumentOptions {
     def deleteChoices: Self = this.set("choices", js.undefined)
     
     @scala.inline
-    def setConstant(value: js.Any): Self = this.set("constant", value.asInstanceOf[js.Any])
+    def setConst(value: js.Any): Self = this.set("const", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteConstant: Self = this.set("constant", js.undefined)
+    def deleteConst: Self = this.set("const", js.undefined)
     
     @scala.inline
-    def setDefaultValue(value: js.Any): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    def setDefault(value: js.Any): Self = this.set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    def deleteDefault: Self = this.set("default", js.undefined)
     
     @scala.inline
     def setDest(value: String): Self = this.set("dest", value.asInstanceOf[js.Any])
@@ -110,13 +112,13 @@ object ArgumentOptions {
     def deleteNargs: Self = this.set("nargs", js.undefined)
     
     @scala.inline
-    def setOptionStringsVarargs(value: String*): Self = this.set("optionStrings", js.Array(value :_*))
+    def setOption_stringsVarargs(value: String*): Self = this.set("option_strings", js.Array(value :_*))
     
     @scala.inline
-    def setOptionStrings(value: js.Array[String]): Self = this.set("optionStrings", value.asInstanceOf[js.Any])
+    def setOption_strings(value: js.Array[String]): Self = this.set("option_strings", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteOptionStrings: Self = this.set("optionStrings", js.undefined)
+    def deleteOption_strings: Self = this.set("option_strings", js.undefined)
     
     @scala.inline
     def setRequired(value: Boolean): Self = this.set("required", value.asInstanceOf[js.Any])
@@ -129,5 +131,11 @@ object ArgumentOptions {
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    
+    @scala.inline
+    def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVersion: Self = this.set("version", js.undefined)
   }
 }

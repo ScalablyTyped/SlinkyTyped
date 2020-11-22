@@ -6,7 +6,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
@@ -53,7 +52,7 @@ object Step {
     
     @scala.inline
     def descriptionFunction3(
-      value: (/* component */ ReactType[StepDescriptionProps], StepDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, StepDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("description", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -70,7 +69,7 @@ object Step {
     
     @scala.inline
     def iconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -90,7 +89,7 @@ object Step {
     
     @scala.inline
     def titleFunction3(
-      value: (/* component */ ReactType[StepTitleProps], StepTitleProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, StepTitleProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("title", js.Any.fromFunction3(value))
     
     @scala.inline

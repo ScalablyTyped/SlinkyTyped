@@ -1,6 +1,7 @@
 package typingsSlinky.reactNativeVectorIcons.anon
 
 import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -8,22 +9,26 @@ import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.ColorValue
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TextLayoutEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.`no-hide-descendants`
+import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.all
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.assertive
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.auto
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.balanced
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.button
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.clip
+import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.email
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.head
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.highQuality
+import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.link
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.middle
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.no
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.none
+import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.phoneNumber
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.polite
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.radiobutton_checked
 import typingsSlinky.reactNativeVectorIcons.reactNativeVectorIconsStrings.radiobutton_unchecked
@@ -65,7 +70,7 @@ trait KinFontAwesome5IconVarian extends js.Object {
   var accessibilityHint: js.UndefOr[String] = js.native
   
   /**
-    * https://facebook.github.io/react-native/docs/accessibility#accessibilityignoresinvertcolorsios
+    * https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
     * @platform ios
     */
   var accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.native
@@ -137,6 +142,12 @@ trait KinFontAwesome5IconVarian extends js.Object {
     *
     */
   var color: js.UndefOr[String] = js.native
+  
+  /**
+    * Determines the types of data converted to clickable URLs in the text element.
+    * By default no data types are detected.
+    */
+  var dataDetectorType: js.UndefOr[Null | phoneNumber | link | email | none | all] = js.native
   
   /**
     * This can be one of the following values:
@@ -235,7 +246,7 @@ trait KinFontAwesome5IconVarian extends js.Object {
     *
     * {nativeEvent: { layout: {x, y, width, height}}}.
     */
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   /**
     * This function is called on long press.
@@ -254,6 +265,11 @@ trait KinFontAwesome5IconVarian extends js.Object {
     * Text intrinsically supports press handling with a default highlight state (which can be disabled with suppressHighlighting).
     */
   var onPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
+  
+  /**
+    * Invoked on Text layout
+    */
+  var onTextLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextLayoutEventData], Unit]] = js.native
   
   /**
     * Lets the user select text, to use the native copy and paste functionality.
@@ -275,7 +291,7 @@ trait KinFontAwesome5IconVarian extends js.Object {
   var solid: js.UndefOr[Boolean] = js.native
   
   /**
-    * @see https://facebook.github.io/react-native/docs/text.html#style
+    * @see https://reactnative.dev/docs/text#style
     */
   var style: js.UndefOr[StyleProp[TextStyle]] = js.native
   
@@ -431,6 +447,15 @@ object KinFontAwesome5IconVarian {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
+    def setDataDetectorType(value: phoneNumber | link | email | none | all): Self = this.set("dataDetectorType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataDetectorType: Self = this.set("dataDetectorType", js.undefined)
+    
+    @scala.inline
+    def setDataDetectorTypeNull: Self = this.set("dataDetectorType", null)
+    
+    @scala.inline
     def setEllipsizeMode(value: head | middle | tail | clip): Self = this.set("ellipsizeMode", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -500,7 +525,7 @@ object KinFontAwesome5IconVarian {
     def deleteOnAccessibilityTap: Self = this.set("onAccessibilityTap", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -522,6 +547,12 @@ object KinFontAwesome5IconVarian {
     
     @scala.inline
     def deleteOnPress: Self = this.set("onPress", js.undefined)
+    
+    @scala.inline
+    def setOnTextLayout(value: SyntheticEvent[NodeHandle, TextLayoutEventData] => Unit): Self = this.set("onTextLayout", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnTextLayout: Self = this.set("onTextLayout", js.undefined)
     
     @scala.inline
     def setSelectable(value: Boolean): Self = this.set("selectable", value.asInstanceOf[js.Any])

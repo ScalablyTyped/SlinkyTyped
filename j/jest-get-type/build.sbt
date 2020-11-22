@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jest-get-type"
-version := "26.0.0-234db6"
+version := "26.3.0-8deb69"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

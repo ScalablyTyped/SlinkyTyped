@@ -23,17 +23,12 @@ package object useRefetchableFragmentNodeMod {
     typingsSlinky.relayRuntime.relayRuntimeTypesMod.Disposable
   ]
   
-  type RefetchFnDynamic[TQuery /* <: typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType */, TKey /* <: org.scalablytyped.runtime.StringDictionary[js.Any] | scala.Null */, TOptions] = (typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.RefetchInexactDynamicResponse[TQuery, TOptions]) with (typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.RefetchExactDynamicResponse[TQuery, TOptions])
+  type RefetchFnDynamic[TQuery /* <: typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType */, TKey /* <: typingsSlinky.reactRelay.helpersMod.KeyType[_] | scala.Null */, TOptions] = (typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.RefetchInexactDynamicResponse[TQuery, TOptions]) with (typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.RefetchExactDynamicResponse[TQuery, TOptions])
   
-  type RefetchFnExact[TQuery /* <: typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType */, TOptions] = typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.RefetchFnBase[
-    /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any, 
-    TOptions
-  ]
+  type RefetchFnExact[TQuery /* <: typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType */, TOptions] = typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.RefetchFnBase[typingsSlinky.relayRuntime.relayRuntimeTypesMod.VariablesOf[TQuery], TOptions]
   
   type RefetchFnInexact[TQuery /* <: typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType */, TOptions] = typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.RefetchFnBase[
-    typingsSlinky.std.Partial[
-      /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any
-    ], 
+    typingsSlinky.std.Partial[typingsSlinky.relayRuntime.relayRuntimeTypesMod.VariablesOf[TQuery]], 
     TOptions
   ]
   

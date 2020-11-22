@@ -9,7 +9,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ThreeDSecure extends js.Object {
   
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-recurlythreedsecure|ThreeDSecure}
+    */
   def ThreeDSecure(riskOptions: RiskOptions): ThreeDSecureEmitter = js.native
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-recurlythreedsecure|ThreeDSecure}
+    */
   @JSName("ThreeDSecure")
   var ThreeDSecure_Original: typingsSlinky.recurlyRecurlyJs.`3dSecureMod`.ThreeDSecure = js.native
 }

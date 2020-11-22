@@ -28,6 +28,11 @@ trait FontFace extends js.Object {
   var fontVariant: String = js.native
   
   /**
+    * Available variation settings (a.k.a. "axes").
+    */
+  var fontVariationAxes: js.UndefOr[js.Array[FontVariationAxis]] = js.native
+  
+  /**
     * The font-weight.
     */
   var fontWeight: String = js.native
@@ -102,5 +107,14 @@ object FontFace {
     
     @scala.inline
     def setUnicodeRange(value: String): Self = this.set("unicodeRange", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFontVariationAxesVarargs(value: FontVariationAxis*): Self = this.set("fontVariationAxes", js.Array(value :_*))
+    
+    @scala.inline
+    def setFontVariationAxes(value: js.Array[FontVariationAxis]): Self = this.set("fontVariationAxes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontVariationAxes: Self = this.set("fontVariationAxes", js.undefined)
   }
 }

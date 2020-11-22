@@ -1,7 +1,7 @@
 package typingsSlinky.isOnline.mod
 
-import typingsSlinky.isOnline.isOnlineStrings.v4
-import typingsSlinky.isOnline.isOnlineStrings.v6
+import typingsSlinky.isOnline.isOnlineNumbers.`4`
+import typingsSlinky.isOnline.isOnlineNumbers.`6`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Options extends js.Object {
   
   /**
+  		Internet Protocol version to use. This is an advanced option that is usually not necessary to be set, but it can prove useful to specifically assert IPv6 connectivity.
+  		@default 4
+  		*/
+  val ipVersion: js.UndefOr[`4` | `6`] = js.native
+  
+  /**
   		Milliseconds to wait for a server to respond.
   		@default 5000
   		*/
   val timeout: js.UndefOr[Double] = js.native
-  
-  /**
-  		Internet Protocol version to use. This is an advanced option that is usually not necessary to be set, but it can prove useful to specifically assert IPv6 connectivity.
-  		@default 'v4'
-  		*/
-  val version: js.UndefOr[v4 | v6] = js.native
 }
 object Options {
   
@@ -45,15 +45,15 @@ object Options {
     }
     
     @scala.inline
+    def setIpVersion(value: `4` | `6`): Self = this.set("ipVersion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIpVersion: Self = this.set("ipVersion", js.undefined)
+    
+    @scala.inline
     def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTimeout: Self = this.set("timeout", js.undefined)
-    
-    @scala.inline
-    def setVersion(value: v4 | v6): Self = this.set("version", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteVersion: Self = this.set("version", js.undefined)
   }
 }

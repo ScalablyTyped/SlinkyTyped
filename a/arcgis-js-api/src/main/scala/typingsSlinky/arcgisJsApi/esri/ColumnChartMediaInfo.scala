@@ -14,8 +14,6 @@ trait ColumnChartMediaInfo
     * Indicates the type of chart.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-content-ColumnChartMediaInfo.html#type)
-    *
-    * @default column-chart
     */
   val `type`: String = js.native
 }

@@ -28,6 +28,11 @@ trait Resource extends js.Object {
   var Region: js.UndefOr[NonEmptyString] = js.native
   
   /**
+    * 
+    */
+  var ResourceRole: js.UndefOr[NonEmptyString] = js.native
+  
+  /**
     * A list of AWS tags associated with a resource at the time the finding was processed.
     */
   var Tags: js.UndefOr[FieldMap] = js.native
@@ -83,6 +88,12 @@ object Resource {
     
     @scala.inline
     def deleteRegion: Self = this.set("Region", js.undefined)
+    
+    @scala.inline
+    def setResourceRole(value: NonEmptyString): Self = this.set("ResourceRole", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResourceRole: Self = this.set("ResourceRole", js.undefined)
     
     @scala.inline
     def setTags(value: FieldMap): Self = this.set("Tags", value.asInstanceOf[js.Any])

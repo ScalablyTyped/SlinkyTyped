@@ -28,7 +28,7 @@ class ClientRequest protected () extends OutgoingMessage {
   
   def abort(): Unit = js.native
   
-  var aborted: Double = js.native
+  var aborted: Boolean = js.native
   
   @JSName("addListener")
   def addListener_abort(event: abort, listener: js.Function0[Unit]): this.type = js.native
@@ -52,6 +52,8 @@ class ClientRequest protected () extends OutgoingMessage {
     event: upgrade,
     listener: js.Function3[/* response */ IncomingMessage, /* socket */ Socket, /* head */ Buffer, Unit]
   ): this.type = js.native
+  
+  var host: String = js.native
   
   var method: String = js.native
   
@@ -150,6 +152,8 @@ class ClientRequest protected () extends OutgoingMessage {
     event: upgrade,
     listener: js.Function3[/* response */ IncomingMessage, /* socket */ Socket, /* head */ Buffer, Unit]
   ): this.type = js.native
+  
+  var protocol: String = js.native
   
   def setNoDelay(): Unit = js.native
   def setNoDelay(noDelay: Boolean): Unit = js.native

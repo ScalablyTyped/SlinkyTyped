@@ -5,8 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Represents a cookie store in the browser. An incognito mode window, for instance, uses a separate cookie store
-  * from a non-incognito window.
+  * Represents a cookie store in the browser. An incognito mode window, for instance, uses a separate cookie store from a non-incognito window.
   */
 @js.native
 trait CookieStore extends js.Object {

@@ -1,11 +1,12 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,8 +19,8 @@ abstract class Grid protected () extends EntityWidget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def cellPadding: Double = js.native
@@ -33,9 +34,6 @@ abstract class Grid protected () extends EntityWidget {
   def microflowQualifiedName: String | Null = js.native
   
   def microflow_=(newValue: IMicroflow | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FGrid: IModel = js.native
   
   def sortBar: GridSortBar = js.native
   def sortBar_=(newValue: GridSortBar): Unit = js.native

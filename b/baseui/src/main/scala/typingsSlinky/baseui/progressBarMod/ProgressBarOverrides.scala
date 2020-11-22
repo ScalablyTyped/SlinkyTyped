@@ -11,6 +11,10 @@ trait ProgressBarOverrides extends js.Object {
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
   ] = js.native
   
+  var BarContainer: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+  ] = js.native
+  
   var BarProgress: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
   ] = js.native
@@ -53,6 +57,14 @@ object ProgressBarOverrides {
     
     @scala.inline
     def deleteBar: Self = this.set("Bar", js.undefined)
+    
+    @scala.inline
+    def setBarContainer(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = this.set("BarContainer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBarContainer: Self = this.set("BarContainer", js.undefined)
     
     @scala.inline
     def setBarProgress(

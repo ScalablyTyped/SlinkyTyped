@@ -13,16 +13,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartLegend extends BaseChartLegend {
   
-  /** @name dxChart.Options.legend.customizeHint */
+  /**
+    * [descr:dxChart.Options.legend.customizeHint]
+    */
   var customizeHint: js.UndefOr[js.Function1[/* seriesInfo */ SeriesColor, String]] = js.native
   
-  /** @name dxChart.Options.legend.customizeText */
+  /**
+    * [descr:dxChart.Options.legend.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* seriesInfo */ SeriesColor, String]] = js.native
   
-  /** @name dxChart.Options.legend.hoverMode */
+  /**
+    * [descr:dxChart.Options.legend.hoverMode]
+    */
   var hoverMode: js.UndefOr[excludePoints | includePoints | none] = js.native
   
-  /** @name dxChart.Options.legend.position */
+  /**
+    * [descr:dxChart.Options.legend.position]
+    */
   var position: js.UndefOr[inside | outside] = js.native
 }
 object dxChartLegend {

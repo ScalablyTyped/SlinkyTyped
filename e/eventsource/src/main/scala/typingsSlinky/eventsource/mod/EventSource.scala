@@ -22,11 +22,11 @@ trait EventSource extends js.Object {
   
   def dispatchEvent(evt: Event): Boolean = js.native
   
-  def onerror(evt: MessageEvent): js.Any = js.native
+  def onerror(evt: MessageEvent[_]): js.Any = js.native
   
-  def onmessage(evt: MessageEvent): js.Any = js.native
+  def onmessage(evt: MessageEvent[_]): js.Any = js.native
   
-  def onopen(evt: MessageEvent): js.Any = js.native
+  def onopen(evt: MessageEvent[_]): js.Any = js.native
   
   val readyState: Double = js.native
   

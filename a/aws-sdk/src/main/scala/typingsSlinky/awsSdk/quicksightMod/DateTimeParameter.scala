@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DateTimeParameter extends js.Object {
   
   /**
-    * A display name for the dataset.
+    * A display name for the date-time parameter.
     */
   var Name: NonEmptyString = js.native
   
   /**
-    * Values.
+    * The values for the date-time parameter.
     */
   var Values: TimestampList = js.native
 }

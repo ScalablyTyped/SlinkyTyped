@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object xcodeMod extends js.Object {
   
   def addStoryboardFileToProject(
-    pbxProject: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PBXProject */ js.Any,
+    pbxProject: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify XcodeProject */ js.Any,
     filePath: String,
     hasTargetGroup: Group
   ): Unit = js.native

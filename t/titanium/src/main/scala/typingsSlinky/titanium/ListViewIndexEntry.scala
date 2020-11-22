@@ -18,7 +18,7 @@ trait ListViewIndexEntry extends js.Object {
   /**
     * Title to display in the index bar.
     */
-  var title: js.UndefOr[java.lang.String] = js.native
+  var title: js.UndefOr[String] = js.native
 }
 object ListViewIndexEntry {
   
@@ -38,7 +38,7 @@ object ListViewIndexEntry {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -50,7 +50,7 @@ object ListViewIndexEntry {
     def deleteIndex: Self = this.set("index", js.undefined)
     
     @scala.inline
-    def setTitle(value: java.lang.String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)

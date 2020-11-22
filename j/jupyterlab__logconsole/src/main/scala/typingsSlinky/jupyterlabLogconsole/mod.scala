@@ -1,15 +1,18 @@
 package typingsSlinky.jupyterlabLogconsole
 
 import typingsSlinky.jupyterlabLogconsole.loggerMod.LogOutputModel.IOptions
-import typingsSlinky.phosphorCoreutils.mod.Token
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.luminoCoreutils.mod.Token
+import typingsSlinky.luminoWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/logconsole", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val ILoggerRegistry: Token[typingsSlinky.jupyterlabLogconsole.tokensMod.ILoggerRegistry] = js.native
+  
   @js.native
   class LogConsolePanel protected ()
     extends typingsSlinky.jupyterlabLogconsole.widgetMod.LogConsolePanel {
@@ -32,6 +35,11 @@ object mod extends js.Object {
       */
     def this(options: IOptions) = this()
   }
+  /**
+    * Log Output Model namespace that defines initialization options.
+    */
+  @js.native
+  object LogOutputModel extends js.Object
   
   @js.native
   class Logger protected ()
@@ -67,13 +75,4 @@ object mod extends js.Object {
     extends typingsSlinky.jupyterlabLogconsole.widgetMod.ScrollingWidget[T] {
     def this(hasContentOptions: typingsSlinky.jupyterlabLogconsole.widgetMod.ScrollingWidget.IOptions[T]) = this()
   }
-  
-  val ILoggerRegistry: Token[typingsSlinky.jupyterlabLogconsole.tokensMod.ILoggerRegistry] = js.native
-  /**
-    * Log Output Model namespace that defines initialization options.
-    */
-  @js.native
-  object LogOutputModel extends js.Object
-  
 }
-

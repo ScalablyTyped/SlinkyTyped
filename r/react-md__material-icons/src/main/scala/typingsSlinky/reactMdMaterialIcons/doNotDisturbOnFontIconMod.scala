@@ -12,5 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object doNotDisturbOnFontIconMod extends js.Object {
   
-  val default: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
+  val DoNotDisturbOnFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

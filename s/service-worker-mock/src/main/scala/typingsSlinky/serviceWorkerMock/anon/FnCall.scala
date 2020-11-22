@@ -17,7 +17,7 @@ trait FnCall extends js.Object {
   
   def apply(name: fetch, request: String): js.Promise[Unit] = js.native
   def apply(name: fetch, request: Request): js.Promise[Unit] = js.native
-  def apply(name: message, args: PartialMessageEvent): js.Promise[Unit] = js.native
+  def apply(name: message, args: PartialMessageEventany): js.Promise[Unit] = js.native
   def apply(name: notificationclick, args: Notification): js.Promise[Unit] = js.native
   def apply(name: notificationclose, args: Notification): js.Promise[Unit] = js.native
   def apply(

@@ -11,8 +11,6 @@ trait CompassViewModelProperties extends GoToProperties {
     * The orientation axes (x, y, z).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Compass-CompassViewModel.html#orientation)
-    *
-    * @default { x: 0, y: 0, z: 0 }
     */
   var orientation: js.UndefOr[js.Any] = js.native
   

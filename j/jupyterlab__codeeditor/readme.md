@@ -1,7 +1,7 @@
 
 # Scala.js typings for jupyterlab__codeeditor
 
-Typings are for version 1.2.0
+Typings are for version 2.2.5
 
 ## Library description:
 JupyterLab - Abstract Code Editor

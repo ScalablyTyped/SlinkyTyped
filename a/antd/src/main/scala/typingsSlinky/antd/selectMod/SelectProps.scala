@@ -9,8 +9,13 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticUIEvent
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -44,11 +49,11 @@ import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.tags
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.rcSelect.anon.Mark
 import typingsSlinky.rcSelect.generatorMod.CustomTagProps
 import typingsSlinky.rcSelect.generatorMod.FilterFunc
@@ -147,7 +152,9 @@ trait SelectProps[VT] extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -579,7 +586,9 @@ object SelectProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

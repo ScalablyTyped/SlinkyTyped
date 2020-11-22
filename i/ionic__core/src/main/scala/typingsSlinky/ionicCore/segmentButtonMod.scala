@@ -43,6 +43,8 @@ object segmentButtonMod extends js.Object {
     
     var updateState: js.Any = js.native
     
+    var updateStyle: js.Any = js.native
+    
     /**
       * The value of the segment button.
       */

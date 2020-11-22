@@ -35,7 +35,7 @@ trait ConformancePackDetail extends js.Object {
   /**
     * Conformance pack template that is used to create a pack. The delivery bucket name should start with awsconfigconforms. For example: "Resource": "arn:aws:s3:::your_bucket_name/ *".
     */
-  var DeliveryS3Bucket: typingsSlinky.awsSdk.configserviceMod.DeliveryS3Bucket = js.native
+  var DeliveryS3Bucket: js.UndefOr[typingsSlinky.awsSdk.configserviceMod.DeliveryS3Bucket] = js.native
   
   /**
     * The prefix for the Amazon S3 bucket.
@@ -53,10 +53,9 @@ object ConformancePackDetail {
   def apply(
     ConformancePackArn: ConformancePackArn,
     ConformancePackId: ConformancePackId,
-    ConformancePackName: ConformancePackName,
-    DeliveryS3Bucket: DeliveryS3Bucket
+    ConformancePackName: ConformancePackName
   ): ConformancePackDetail = {
-    val __obj = js.Dynamic.literal(ConformancePackArn = ConformancePackArn.asInstanceOf[js.Any], ConformancePackId = ConformancePackId.asInstanceOf[js.Any], ConformancePackName = ConformancePackName.asInstanceOf[js.Any], DeliveryS3Bucket = DeliveryS3Bucket.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(ConformancePackArn = ConformancePackArn.asInstanceOf[js.Any], ConformancePackId = ConformancePackId.asInstanceOf[js.Any], ConformancePackName = ConformancePackName.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConformancePackDetail]
   }
   
@@ -85,9 +84,6 @@ object ConformancePackDetail {
     def setConformancePackName(value: ConformancePackName): Self = this.set("ConformancePackName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDeliveryS3Bucket(value: DeliveryS3Bucket): Self = this.set("DeliveryS3Bucket", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setConformancePackInputParametersVarargs(value: ConformancePackInputParameter*): Self = this.set("ConformancePackInputParameters", js.Array(value :_*))
     
     @scala.inline
@@ -101,6 +97,12 @@ object ConformancePackDetail {
     
     @scala.inline
     def deleteCreatedBy: Self = this.set("CreatedBy", js.undefined)
+    
+    @scala.inline
+    def setDeliveryS3Bucket(value: DeliveryS3Bucket): Self = this.set("DeliveryS3Bucket", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeliveryS3Bucket: Self = this.set("DeliveryS3Bucket", js.undefined)
     
     @scala.inline
     def setDeliveryS3KeyPrefix(value: DeliveryS3KeyPrefix): Self = this.set("DeliveryS3KeyPrefix", value.asInstanceOf[js.Any])

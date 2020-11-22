@@ -23,7 +23,6 @@ object global extends js.Object {
     
     /**
       * Contains authorization related APIs.
-      * @beta
       */
     val auth: Auth = js.native
     

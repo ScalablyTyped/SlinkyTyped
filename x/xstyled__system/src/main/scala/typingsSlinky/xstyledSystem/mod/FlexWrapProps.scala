@@ -9,7 +9,7 @@ trait FlexWrapProps extends js.Object {
   
   val flexWrap: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexWrapProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexWrap */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object FlexWrapProps {
     }
     
     @scala.inline
+    def setFlexWrapVarargs(value: js.Any*): Self = this.set("flexWrap", js.Array(value :_*))
+    
+    @scala.inline
     def setFlexWrap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexWrapProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexWrap */ _
         ]
     ): Self = this.set("flexWrap", value.asInstanceOf[js.Any])
     

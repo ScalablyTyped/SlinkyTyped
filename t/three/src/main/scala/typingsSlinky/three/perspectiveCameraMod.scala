@@ -13,10 +13,10 @@ object perspectiveCameraMod extends js.Object {
   
   @js.native
   /**
-  	 * @param fov Camera frustum vertical field of view. Default value is 50.
-  	 * @param aspect Camera frustum aspect ratio. Default value is 1.
-  	 * @param near Camera frustum near plane. Default value is 0.1.
-  	 * @param far Camera frustum far plane. Default value is 2000.
+  	 * @param [fov=50] Camera frustum vertical field of view. Default value is 50.
+  	 * @param [aspect=1] Camera frustum aspect ratio. Default value is 1.
+  	 * @param [near=0.1] Camera frustum near plane. Default value is 0.1.
+  	 * @param [far=2000] Camera frustum far plane. Default value is 2000.
   	 */
   class PerspectiveCamera () extends Camera {
     def this(fov: Double) = this()
@@ -42,6 +42,7 @@ object perspectiveCameraMod extends js.Object {
     
     /**
     	 * Camera frustum aspect ratio, window width divided by window height.
+    	 * @default 1
     	 */
     var aspect: Double = js.native
     
@@ -49,17 +50,28 @@ object perspectiveCameraMod extends js.Object {
     
     /**
     	 * Camera frustum far plane.
+    	 * @default 2000
     	 */
     var far: Double = js.native
     
+    /**
+    	 * @default 35
+    	 */
     var filmGauge: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var filmOffset: Double = js.native
     
+    /**
+    	 * @default 10
+    	 */
     var focus: Double = js.native
     
     /**
     	 * Camera frustum vertical field of view, from bottom to top of view, in degrees.
+    	 * @default 50
     	 */
     var fov: Double = js.native
     
@@ -75,6 +87,7 @@ object perspectiveCameraMod extends js.Object {
     
     /**
     	 * Camera frustum near plane.
+    	 * @default 0.1
     	 */
     var near: Double = js.native
     
@@ -135,8 +148,14 @@ object perspectiveCameraMod extends js.Object {
     	 */
     def updateProjectionMatrix(): Unit = js.native
     
+    /**
+    	 * @default null
+    	 */
     var view: Null | Enabled = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var zoom: Double = js.native
   }
 }

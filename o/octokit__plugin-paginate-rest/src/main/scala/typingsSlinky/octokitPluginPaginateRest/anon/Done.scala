@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Done extends js.Object {
   
   var done: Boolean = js.native
+  
+  var value: js.UndefOr[scala.Nothing] = js.native
 }
 object Done {
   

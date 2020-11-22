@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MimeContent extends js.Object {
   
   // Indicates the content mime type.
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[NullableOption[String]] = js.native
   
   // The byte array that contains the actual content.
-  var value: js.UndefOr[Double] = js.native
+  var value: js.UndefOr[NullableOption[Double]] = js.native
 }
 object MimeContent {
   
@@ -37,15 +37,21 @@ object MimeContent {
     }
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: NullableOption[String]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
     
     @scala.inline
-    def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setTypeNull: Self = this.set("type", null)
+    
+    @scala.inline
+    def setValue(value: NullableOption[Double]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

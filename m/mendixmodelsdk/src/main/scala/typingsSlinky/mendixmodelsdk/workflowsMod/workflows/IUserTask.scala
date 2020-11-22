@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.workflowsMod.workflows
 
+import typingsSlinky.mendixmodelsdk.pagesMod.pages.IPage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
   *
-  * In version 8.10.0: introduced
+  * @ignore
+  *
+  * In version 8.15.0: introduced
   */
 @js.native
-trait IUserTask extends IWorkflowTask
+trait IUserTask extends IWorkflowTask {
+  
+  val page: IPage | Null = js.native
+  
+  val pageQualifiedName: String | Null = js.native
+}

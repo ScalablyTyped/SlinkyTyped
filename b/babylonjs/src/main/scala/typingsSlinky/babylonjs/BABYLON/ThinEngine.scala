@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.NumberDictionary
 import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLImageElement
+import org.scalajs.dom.raw.ImageData
 import org.scalajs.dom.raw.WebGLBuffer
 import org.scalajs.dom.raw.WebGLFramebuffer
 import org.scalajs.dom.raw.WebGLRenderbuffer
@@ -165,8 +166,7 @@ trait ThinEngine extends js.Object {
   def _createDepthStencilCubeTexture(size: Double, options: DepthTextureCreationOptions): InternalTexture = js.native
   
   /** @hidden */
-  def _createDepthStencilTexture(size: Double, options: DepthTextureCreationOptions): InternalTexture = js.native
-  def _createDepthStencilTexture(size: Height, options: DepthTextureCreationOptions): InternalTexture = js.native
+  def _createDepthStencilTexture(size: RenderTargetTextureSize, options: DepthTextureCreationOptions): InternalTexture = js.native
   
   /* protected */ def _createShaderProgram(
     pipelineContext: WebGLPipelineContext,
@@ -226,6 +226,9 @@ trait ThinEngine extends js.Object {
   
   var _drawMode: js.Any = js.native
   
+  /** @hidden */
+  var _dummyFramebuffer: Nullable[WebGLFramebuffer] = js.native
+  
   var _emptyCubeTexture: js.Any = js.native
   
   var _emptyTexture: js.Any = js.native
@@ -259,6 +262,9 @@ trait ThinEngine extends js.Object {
   /** @hidden */
   def _getSamplingParameters(samplingMode: Double, generateMipMaps: Boolean): Mag = js.native
   
+  /** @hidden */
+  def _getShaderSource(shader: WebGLShader): Nullable[String] = js.native
+  
   var _getTextureTarget: js.Any = js.native
   
   var _getTextureWrapMode: js.Any = js.native
@@ -282,7 +288,7 @@ trait ThinEngine extends js.Object {
   
   var _highPrecisionShadersAllowed: Boolean = js.native
   
-  var _initGLContext: js.Any = js.native
+  /* protected */ def _initGLContext(): Unit = js.native
   
   /** @hidden */
   var _internalTexturesCache: js.Array[InternalTexture] = js.native
@@ -548,6 +554,50 @@ trait ThinEngine extends js.Object {
   /* protected */ def _queueNewFrame(bindedRenderFunction: js.Any): Double = js.native
   /* protected */ def _queueNewFrame(bindedRenderFunction: js.Any, requester: js.Any): Double = js.native
   
+  /** @hidden */
+  def _readTexturePixels(texture: InternalTexture, width: Double, height: Double): js.typedarray.ArrayBufferView = js.native
+  def _readTexturePixels(
+    texture: InternalTexture,
+    width: Double,
+    height: Double,
+    faceIndex: js.UndefOr[scala.Nothing],
+    level: js.UndefOr[scala.Nothing],
+    buffer: Nullable[js.typedarray.ArrayBufferView]
+  ): js.typedarray.ArrayBufferView = js.native
+  def _readTexturePixels(
+    texture: InternalTexture,
+    width: Double,
+    height: Double,
+    faceIndex: js.UndefOr[scala.Nothing],
+    level: Double
+  ): js.typedarray.ArrayBufferView = js.native
+  def _readTexturePixels(
+    texture: InternalTexture,
+    width: Double,
+    height: Double,
+    faceIndex: js.UndefOr[scala.Nothing],
+    level: Double,
+    buffer: Nullable[js.typedarray.ArrayBufferView]
+  ): js.typedarray.ArrayBufferView = js.native
+  def _readTexturePixels(texture: InternalTexture, width: Double, height: Double, faceIndex: Double): js.typedarray.ArrayBufferView = js.native
+  def _readTexturePixels(
+    texture: InternalTexture,
+    width: Double,
+    height: Double,
+    faceIndex: Double,
+    level: js.UndefOr[scala.Nothing],
+    buffer: Nullable[js.typedarray.ArrayBufferView]
+  ): js.typedarray.ArrayBufferView = js.native
+  def _readTexturePixels(texture: InternalTexture, width: Double, height: Double, faceIndex: Double, level: Double): js.typedarray.ArrayBufferView = js.native
+  def _readTexturePixels(
+    texture: InternalTexture,
+    width: Double,
+    height: Double,
+    faceIndex: Double,
+    level: Double,
+    buffer: Nullable[js.typedarray.ArrayBufferView]
+  ): js.typedarray.ArrayBufferView = js.native
+  
   /* protected */ def _rebuildBuffers(): Unit = js.native
   
   var _rebuildEffects: js.Any = js.native
@@ -598,21 +648,21 @@ trait ThinEngine extends js.Object {
   /**
     * @hidden
     */
-  def _setCubeMapTextureParams(loadMipmap: Boolean): Unit = js.native
+  def _setCubeMapTextureParams(texture: InternalTexture, loadMipmap: Boolean): Unit = js.native
   
   /* protected */ def _setProgram(program: WebGLProgram): Unit = js.native
   
-  /* protected */ def _setTexture(channel: Double, texture: Nullable[BaseTexture]): Boolean = js.native
+  /* protected */ def _setTexture(channel: Double, texture: Nullable[ThinTexture]): Boolean = js.native
   /* protected */ def _setTexture(
     channel: Double,
-    texture: Nullable[BaseTexture],
+    texture: Nullable[ThinTexture],
     isPartOfTextureArray: js.UndefOr[scala.Nothing],
     depthStencilTexture: Boolean
   ): Boolean = js.native
-  /* protected */ def _setTexture(channel: Double, texture: Nullable[BaseTexture], isPartOfTextureArray: Boolean): Boolean = js.native
+  /* protected */ def _setTexture(channel: Double, texture: Nullable[ThinTexture], isPartOfTextureArray: Boolean): Boolean = js.native
   /* protected */ def _setTexture(
     channel: Double,
-    texture: Nullable[BaseTexture],
+    texture: Nullable[ThinTexture],
     isPartOfTextureArray: Boolean,
     depthStencilTexture: Boolean
   ): Boolean = js.native
@@ -658,12 +708,10 @@ trait ThinEngine extends js.Object {
   
   /* protected */ def _supportsHardwareTextureRescaling: Boolean = js.native
   
-  /** @hidden */
-  var _textureFormatInUse: Nullable[String] = js.native
-  
   var _textureUnits: js.Any = js.native
   
-  var _texturesSupported: js.Array[String] = js.native
+  /** @hidden */
+  var _transformTextureUrl: Nullable[js.Function1[/* url */ String, String]] = js.native
   
   var _uintIndicesCurrentlySet: js.Any = js.native
   
@@ -890,6 +938,12 @@ trait ThinEngine extends js.Object {
     */
   def bindArrayBuffer(buffer: Nullable[DataBuffer]): Unit = js.native
   
+  /**
+    * Select a subsets of attachments to draw to.
+    * @param attachments gl attachments
+    */
+  def bindAttachments(attachments: js.Array[Double]): Unit = js.native
+  
   var bindBuffer: js.Any = js.native
   
   /**
@@ -984,11 +1038,18 @@ trait ThinEngine extends js.Object {
   
   /**
     * Bind a specific vertex array object
-    * @see http://doc.babylonjs.com/features/webgl2#vertex-array-objects
+    * @see https://doc.babylonjs.com/features/webgl2#vertex-array-objects
     * @param vertexArrayObject defines the vertex array object to bind
     * @param indexBuffer defines the index buffer to bind
     */
   def bindVertexArrayObject(vertexArrayObject: WebGLVertexArrayObject, indexBuffer: Nullable[DataBuffer]): Unit = js.native
+  
+  /**
+    * Creates a layout object to draw/clear on specific textures in a MRT
+    * @param textureStatus textureStatus[i] indicates if the i-th is active
+    * @returns A layout to be fed to the engine, calling `bindAttachments`.
+    */
+  def buildTextureLayout(textureStatus: js.Array[Boolean]): js.Array[Double] = js.native
   
   /**
     * Clear the current render buffer or the current render target (if any is set up)
@@ -1020,7 +1081,8 @@ trait ThinEngine extends js.Object {
     createPolynomials: Boolean,
     lodScale: Double,
     lodOffset: Double,
-    fallback: Nullable[InternalTexture]
+    fallback: Nullable[InternalTexture],
+    loaderOptions: js.Any
   ): InternalTexture = js.native
   def createCubeTexture(
     rootUrl: String,
@@ -1036,7 +1098,8 @@ trait ThinEngine extends js.Object {
     createPolynomials: Boolean,
     lodScale: Double,
     lodOffset: Double,
-    fallback: Nullable[InternalTexture]
+    fallback: Nullable[InternalTexture],
+    loaderOptions: js.Any
   ): InternalTexture = js.native
   def createCubeTexture(
     rootUrl: String,
@@ -1079,7 +1142,8 @@ trait ThinEngine extends js.Object {
     createPolynomials: Boolean,
     lodScale: Double,
     lodOffset: Double,
-    fallback: Nullable[InternalTexture]
+    fallback: Nullable[InternalTexture],
+    loaderOptions: js.Any
   ): InternalTexture = js.native
   /**
     * Creates a cube texture
@@ -1149,6 +1213,7 @@ trait ThinEngine extends js.Object {
     * @param lodScale defines the scale applied to environment texture. This manages the range of LOD level used for IBL according to the roughness
     * @param lodOffset defines the offset applied to environment texture. This manages first LOD level used for IBL according to the roughness
     * @param fallback defines texture to use while falling back when (compressed) texture file not found.
+    * @param loaderOptions options to be passed to the loader
     * @returns the cube texture as an InternalTexture
     */
   def createCubeTexture(
@@ -1165,7 +1230,8 @@ trait ThinEngine extends js.Object {
     createPolynomials: Boolean,
     lodScale: Double,
     lodOffset: Double,
-    fallback: Nullable[InternalTexture]
+    fallback: Nullable[InternalTexture],
+    loaderOptions: js.Any
   ): InternalTexture = js.native
   
   /**
@@ -1175,8 +1241,7 @@ trait ThinEngine extends js.Object {
     * @param options The options defining the texture.
     * @returns The texture
     */
-  def createDepthStencilTexture(size: Double, options: DepthTextureCreationOptions): InternalTexture = js.native
-  def createDepthStencilTexture(size: Height, options: DepthTextureCreationOptions): InternalTexture = js.native
+  def createDepthStencilTexture(size: RenderTargetTextureSize, options: DepthTextureCreationOptions): InternalTexture = js.native
   
   /**
     * Creates a dynamic texture
@@ -1190,7 +1255,7 @@ trait ThinEngine extends js.Object {
   
   /**
     * Create a dynamic uniform buffer
-    * @see http://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
+    * @see https://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
     * @param elements defines the content of the uniform buffer
     * @returns the webGL uniform buffer
     */
@@ -1239,7 +1304,7 @@ trait ThinEngine extends js.Object {
   
   /**
     * Create a multi render target texture
-    * @see http://doc.babylonjs.com/features/webgl2#multiple-render-target
+    * @see https://doc.babylonjs.com/features/webgl2#multiple-render-target
     * @param size defines the size of the texture
     * @param options defines the creation options
     * @returns the cube texture as an InternalTexture
@@ -1374,17 +1439,85 @@ trait ThinEngine extends js.Object {
     `type`: Double,
     generateMipMaps: Boolean,
     invertY: Boolean,
-    samplingMode: Double
+    samplingMode: Double,
+    compression: Nullable[String]
   ): InternalTexture = js.native
-  def createRawCubeTexture(
-    data: Nullable[js.Array[js.typedarray.ArrayBufferView]],
+  
+  /**
+    * Creates a new raw cube texture from a specified url
+    * @param url defines the url where the data is located
+    * @param scene defines the current scene
+    * @param size defines the size of the textures
+    * @param format defines the format of the data
+    * @param type defines the type fo the data (like Engine.TEXTURETYPE_UNSIGNED_INT)
+    * @param noMipmap defines if the engine should avoid generating the mip levels
+    * @param callback defines a callback used to extract texture data from loaded data
+    * @param mipmapGenerator defines to provide an optional tool to generate mip levels
+    * @param onLoad defines a callback called when texture is loaded
+    * @param onError defines a callback called if there is an error
+    * @returns the cube texture as an InternalTexture
+    */
+  def createRawCubeTextureFromUrl(
+    url: String,
+    scene: Nullable[Scene],
     size: Double,
     format: Double,
     `type`: Double,
-    generateMipMaps: Boolean,
-    invertY: Boolean,
+    noMipmap: Boolean,
+    callback: js.Function1[
+      /* ArrayBuffer */ js.typedarray.ArrayBuffer, 
+      Nullable[js.Array[js.typedarray.ArrayBufferView]]
+    ],
+    mipmapGenerator: Nullable[
+      js.Function1[
+        /* faces */ js.Array[js.typedarray.ArrayBufferView], 
+        js.Array[js.Array[js.typedarray.ArrayBufferView]]
+      ]
+    ],
+    onLoad: Nullable[js.Function0[Unit]],
+    onError: Nullable[
+      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
+    ]
+  ): InternalTexture = js.native
+  /**
+    * Creates a new raw cube texture from a specified url
+    * @param url defines the url where the data is located
+    * @param scene defines the current scene
+    * @param size defines the size of the textures
+    * @param format defines the format of the data
+    * @param type defines the type fo the data (like Engine.TEXTURETYPE_UNSIGNED_INT)
+    * @param noMipmap defines if the engine should avoid generating the mip levels
+    * @param callback defines a callback used to extract texture data from loaded data
+    * @param mipmapGenerator defines to provide an optional tool to generate mip levels
+    * @param onLoad defines a callback called when texture is loaded
+    * @param onError defines a callback called if there is an error
+    * @param samplingMode defines the required sampling mode (like Texture.NEAREST_SAMPLINGMODE)
+    * @param invertY defines if data must be stored with Y axis inverted
+    * @returns the cube texture as an InternalTexture
+    */
+  def createRawCubeTextureFromUrl(
+    url: String,
+    scene: Nullable[Scene],
+    size: Double,
+    format: Double,
+    `type`: Double,
+    noMipmap: Boolean,
+    callback: js.Function1[
+      /* ArrayBuffer */ js.typedarray.ArrayBuffer, 
+      Nullable[js.Array[js.typedarray.ArrayBufferView]]
+    ],
+    mipmapGenerator: Nullable[
+      js.Function1[
+        /* faces */ js.Array[js.typedarray.ArrayBufferView], 
+        js.Array[js.Array[js.typedarray.ArrayBufferView]]
+      ]
+    ],
+    onLoad: Nullable[js.Function0[Unit]],
+    onError: Nullable[
+      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
+    ],
     samplingMode: Double,
-    compression: Nullable[String]
+    invertY: Boolean
   ): InternalTexture = js.native
   
   /**
@@ -1438,28 +1571,9 @@ trait ThinEngine extends js.Object {
     format: Double,
     generateMipMaps: Boolean,
     invertY: Boolean,
-    samplingMode: Double
-  ): InternalTexture = js.native
-  def createRawTexture(
-    data: Nullable[js.typedarray.ArrayBufferView],
-    width: Double,
-    height: Double,
-    format: Double,
-    generateMipMaps: Boolean,
-    invertY: Boolean,
     samplingMode: Double,
-    compression: js.UndefOr[Nullable[String]],
+    compression: Nullable[String],
     `type`: Double
-  ): InternalTexture = js.native
-  def createRawTexture(
-    data: Nullable[js.typedarray.ArrayBufferView],
-    width: Double,
-    height: Double,
-    format: Double,
-    generateMipMaps: Boolean,
-    invertY: Boolean,
-    samplingMode: Double,
-    compression: Nullable[String]
   ): InternalTexture = js.native
   
   /**
@@ -1484,30 +1598,9 @@ trait ThinEngine extends js.Object {
     format: Double,
     generateMipMaps: Boolean,
     invertY: Boolean,
-    samplingMode: Double
-  ): InternalTexture = js.native
-  def createRawTexture2DArray(
-    data: Nullable[js.typedarray.ArrayBufferView],
-    width: Double,
-    height: Double,
-    depth: Double,
-    format: Double,
-    generateMipMaps: Boolean,
-    invertY: Boolean,
     samplingMode: Double,
-    compression: js.UndefOr[Nullable[String]],
+    compression: Nullable[String],
     textureType: Double
-  ): InternalTexture = js.native
-  def createRawTexture2DArray(
-    data: Nullable[js.typedarray.ArrayBufferView],
-    width: Double,
-    height: Double,
-    depth: Double,
-    format: Double,
-    generateMipMaps: Boolean,
-    invertY: Boolean,
-    samplingMode: Double,
-    compression: Nullable[String]
   ): InternalTexture = js.native
   
   /**
@@ -1532,30 +1625,9 @@ trait ThinEngine extends js.Object {
     format: Double,
     generateMipMaps: Boolean,
     invertY: Boolean,
-    samplingMode: Double
-  ): InternalTexture = js.native
-  def createRawTexture3D(
-    data: Nullable[js.typedarray.ArrayBufferView],
-    width: Double,
-    height: Double,
-    depth: Double,
-    format: Double,
-    generateMipMaps: Boolean,
-    invertY: Boolean,
     samplingMode: Double,
-    compression: js.UndefOr[Nullable[String]],
+    compression: Nullable[String],
     textureType: Double
-  ): InternalTexture = js.native
-  def createRawTexture3D(
-    data: Nullable[js.typedarray.ArrayBufferView],
-    width: Double,
-    height: Double,
-    depth: Double,
-    format: Double,
-    generateMipMaps: Boolean,
-    invertY: Boolean,
-    samplingMode: Double,
-    compression: Nullable[String]
   ): InternalTexture = js.native
   
   /**
@@ -1573,10 +1645,8 @@ trait ThinEngine extends js.Object {
     * @param options defines the options used to create the texture
     * @returns a new render target texture stored in an InternalTexture
     */
-  def createRenderTargetTexture(size: Double, options: Boolean): InternalTexture = js.native
-  def createRenderTargetTexture(size: Double, options: RenderTargetCreationOptions): InternalTexture = js.native
-  def createRenderTargetTexture(size: Height, options: Boolean): InternalTexture = js.native
-  def createRenderTargetTexture(size: Height, options: RenderTargetCreationOptions): InternalTexture = js.native
+  def createRenderTargetTexture(size: RenderTargetTextureSize, options: Boolean): InternalTexture = js.native
+  def createRenderTargetTexture(size: RenderTargetTextureSize, options: RenderTargetCreationOptions): InternalTexture = js.native
   
   /**
     * Creates a webGL program
@@ -1621,7 +1691,7 @@ trait ThinEngine extends js.Object {
   /**
     * Usually called from Texture.ts.
     * Passed information to create a WebGLTexture
-    * @param urlArg defines a value which contains one of the following:
+    * @param url defines a value which contains one of the following:
     * * A conventional http URL, e.g. 'http://...' or 'file://...'
     * * A base64 string of in-line texture data, e.g. 'data:image/jpg;base64,/...'
     * * An indicator that data being passed using the buffer parameter, e.g. 'data:mytexture.jpg'
@@ -1636,10 +1706,11 @@ trait ThinEngine extends js.Object {
     * @param format internal format.  Default: RGB when extension is '.jpg' else RGBA.  Ignored for compressed textures
     * @param forcedExtension defines the extension to use to pick the right loader
     * @param mimeType defines an optional mime type
+    * @param loaderOptions options to be passed to the loader
     * @returns a InternalTexture for assignment back into BABYLON.Texture
     */
   def createTexture(
-    urlArg: Nullable[String],
+    url: Nullable[String],
     noMipmap: Boolean,
     invertY: Boolean,
     scene: Nullable[ISceneLike],
@@ -1654,12 +1725,13 @@ trait ThinEngine extends js.Object {
     fallback: js.UndefOr[Nullable[InternalTexture]],
     format: js.UndefOr[Nullable[Double]],
     forcedExtension: js.UndefOr[Nullable[String]],
-    mimeType: js.UndefOr[String]
+    mimeType: js.UndefOr[String],
+    loaderOptions: js.UndefOr[js.Any]
   ): InternalTexture = js.native
   
   /**
     * Create an uniform buffer
-    * @see http://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
+    * @see https://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
     * @param elements defines the content of the uniform buffer
     * @returns the webGL uniform buffer
     */
@@ -1727,7 +1799,7 @@ trait ThinEngine extends js.Object {
   
   /**
     * Gets or sets a boolean indicating if resources should be retained to be able to handle context lost events
-    * @see http://doc.babylonjs.com/how_to/optimizing_your_scene#handling-webgl-context-lost
+    * @see https://doc.babylonjs.com/how_to/optimizing_your_scene#handling-webgl-context-lost
     */
   def doNotHandleContextLost: Boolean = js.native
   def doNotHandleContextLost_=(value: Boolean): Unit = js.native
@@ -1844,7 +1916,7 @@ trait ThinEngine extends js.Object {
   
   /**
     * Gets the current alpha mode
-    * @see http://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered
+    * @see https://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered
     * @returns the current alpha mode
     */
   def getAlphaMode(): Double = js.native
@@ -1864,7 +1936,7 @@ trait ThinEngine extends js.Object {
   def getCaps(): EngineCapabilities = js.native
   
   /**
-    * Gets a string idenfifying the name of the class
+    * Gets a string identifying the name of the class
     * @returns "Engine" string
     */
   def getClassName(): String = js.native
@@ -1945,6 +2017,11 @@ trait ThinEngine extends js.Object {
   def getUniforms(pipelineContext: IPipelineContext, uniformsNames: js.Array[String]): js.Array[Nullable[WebGLUniformLocation]] = js.native
   
   /**
+    * Gets information about the current host
+    */
+  var hostInformation: HostInformation = js.native
+  
+  /**
     * Gets a boolean indicating if the engine is currently rendering in fullscreen mode
     */
   var isFullscreen: Boolean = js.native
@@ -1999,7 +2076,7 @@ trait ThinEngine extends js.Object {
   
   /**
     * Records a vertex array object
-    * @see http://doc.babylonjs.com/features/webgl2#vertex-array-objects
+    * @see https://doc.babylonjs.com/features/webgl2#vertex-array-objects
     * @param vertexBuffers defines the list of vertex buffers to store
     * @param indexBuffer defines the index buffer to store
     * @param effect defines the effect to store
@@ -2043,6 +2120,11 @@ trait ThinEngine extends js.Object {
   def restoreDefaultFramebuffer(): Unit = js.native
   
   /**
+    * Restores the webgl state to only draw on the main color attachment
+    */
+  def restoreSingleAttachment(): Unit = js.native
+  
+  /**
     * Register and execute a render loop. The engine can have more than one render function
     * @param renderFunction defines the function to continuously execute
     */
@@ -2067,7 +2149,7 @@ trait ThinEngine extends js.Object {
     * Sets the current alpha mode
     * @param mode defines the mode to use (one of the Engine.ALPHA_XXX)
     * @param noDepthWriteChange defines if depth writing state should remains unchanged (false by default)
-    * @see http://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered
+    * @see https://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered
     */
   def setAlphaMode(mode: Double): Unit = js.native
   def setAlphaMode(mode: Double, noDepthWriteChange: Boolean): Unit = js.native
@@ -2076,33 +2158,37 @@ trait ThinEngine extends js.Object {
     * Set the value of an uniform to an array of number
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of number to store
+    * @returns true if the value was set
     */
-  def setArray(uniform: Nullable[WebGLUniformLocation], array: js.Array[Double]): Unit = js.native
-  def setArray(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Float32Array): Unit = js.native
+  def setArray(uniform: Nullable[WebGLUniformLocation], array: js.Array[Double]): Boolean = js.native
+  def setArray(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of number (stored as vec2)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of number to store
+    * @returns true if the value was set
     */
-  def setArray2(uniform: Nullable[WebGLUniformLocation], array: js.Array[Double]): Unit = js.native
-  def setArray2(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Float32Array): Unit = js.native
+  def setArray2(uniform: Nullable[WebGLUniformLocation], array: js.Array[Double]): Boolean = js.native
+  def setArray2(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of number (stored as vec3)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of number to store
+    * @returns true if the value was set
     */
-  def setArray3(uniform: Nullable[WebGLUniformLocation], array: js.Array[Double]): Unit = js.native
-  def setArray3(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Float32Array): Unit = js.native
+  def setArray3(uniform: Nullable[WebGLUniformLocation], array: js.Array[Double]): Boolean = js.native
+  def setArray3(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of number (stored as vec4)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of number to store
+    * @returns true if the value was set
     */
-  def setArray4(uniform: Nullable[WebGLUniformLocation], array: js.Array[Double]): Unit = js.native
-  def setArray4(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Float32Array): Unit = js.native
+  def setArray4(uniform: Nullable[WebGLUniformLocation], array: js.Array[Double]): Boolean = js.native
+  def setArray4(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Enable or disable color writing
@@ -2114,16 +2200,18 @@ trait ThinEngine extends js.Object {
     * Set the value of an uniform to a number (float)
     * @param uniform defines the webGL uniform location where to store the value
     * @param value defines the float number to store
+    * @returns true if the value was transfered
     */
-  def setFloat(uniform: Nullable[WebGLUniformLocation], value: Double): Unit = js.native
+  def setFloat(uniform: Nullable[WebGLUniformLocation], value: Double): Boolean = js.native
   
   /**
     * Set the value of an uniform to a vec2
     * @param uniform defines the webGL uniform location where to store the value
     * @param x defines the 1st component of the value
     * @param y defines the 2nd component of the value
+    * @returns true if the value was set
     */
-  def setFloat2(uniform: Nullable[WebGLUniformLocation], x: Double, y: Double): Unit = js.native
+  def setFloat2(uniform: Nullable[WebGLUniformLocation], x: Double, y: Double): Boolean = js.native
   
   /**
     * Set the value of an uniform to a vec3
@@ -2131,8 +2219,9 @@ trait ThinEngine extends js.Object {
     * @param x defines the 1st component of the value
     * @param y defines the 2nd component of the value
     * @param z defines the 3rd component of the value
+    * @returns true if the value was set
     */
-  def setFloat3(uniform: Nullable[WebGLUniformLocation], x: Double, y: Double, z: Double): Unit = js.native
+  def setFloat3(uniform: Nullable[WebGLUniformLocation], x: Double, y: Double, z: Double): Boolean = js.native
   
   /**
     * Set the value of an uniform to a vec4
@@ -2141,8 +2230,9 @@ trait ThinEngine extends js.Object {
     * @param y defines the 2nd component of the value
     * @param z defines the 3rd component of the value
     * @param w defines the 4th component of the value
+    * @returns true if the value was set
     */
-  def setFloat4(uniform: Nullable[WebGLUniformLocation], x: Double, y: Double, z: Double, w: Double): Unit = js.native
+  def setFloat4(uniform: Nullable[WebGLUniformLocation], x: Double, y: Double, z: Double, w: Double): Boolean = js.native
   
   /**
     * Defines the hardware scaling level.
@@ -2156,64 +2246,73 @@ trait ThinEngine extends js.Object {
     * Set the value of an uniform to a number (int)
     * @param uniform defines the webGL uniform location where to store the value
     * @param value defines the int number to store
+    * @returns true if the value was set
     */
-  def setInt(uniform: Nullable[WebGLUniformLocation], value: Double): Unit = js.native
+  def setInt(uniform: Nullable[WebGLUniformLocation], value: Double): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of int32
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of int32 to store
+    * @returns true if the value was set
     */
-  def setIntArray(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Int32Array): Unit = js.native
+  def setIntArray(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Int32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of int32 (stored as vec2)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of int32 to store
+    * @returns true if the value was set
     */
-  def setIntArray2(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Int32Array): Unit = js.native
+  def setIntArray2(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Int32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of int32 (stored as vec3)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of int32 to store
+    * @returns true if the value was set
     */
-  def setIntArray3(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Int32Array): Unit = js.native
+  def setIntArray3(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Int32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of int32 (stored as vec4)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of int32 to store
+    * @returns true if the value was set
     */
-  def setIntArray4(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Int32Array): Unit = js.native
+  def setIntArray4(uniform: Nullable[WebGLUniformLocation], array: js.typedarray.Int32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of float32 (stored as matrices)
     * @param uniform defines the webGL uniform location where to store the value
     * @param matrices defines the array of float32 to store
+    * @returns true if the value was set
     */
-  def setMatrices(uniform: Nullable[WebGLUniformLocation], matrices: js.typedarray.Float32Array): Unit = js.native
+  def setMatrices(uniform: Nullable[WebGLUniformLocation], matrices: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to a matrix (2x2)
     * @param uniform defines the webGL uniform location where to store the value
     * @param matrix defines the Float32Array representing the 2x2 matrix to store
+    * @returns true if the value was set
     */
-  def setMatrix2x2(uniform: Nullable[WebGLUniformLocation], matrix: js.typedarray.Float32Array): Unit = js.native
+  def setMatrix2x2(uniform: Nullable[WebGLUniformLocation], matrix: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to a matrix (3x3)
     * @param uniform defines the webGL uniform location where to store the value
     * @param matrix defines the Float32Array representing the 3x3 matrix to store
+    * @returns true if the value was set
     */
-  def setMatrix3x3(uniform: Nullable[WebGLUniformLocation], matrix: js.typedarray.Float32Array): Unit = js.native
+  def setMatrix3x3(uniform: Nullable[WebGLUniformLocation], matrix: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Force a specific size of the canvas
     * @param width defines the new canvas' width
     * @param height defines the new canvas' height
+    * @returns true if the size was changed
     */
-  def setSize(width: Double, height: Double): Unit = js.native
+  def setSize(width: Double, height: Double): Boolean = js.native
   
   /**
     * Sets a texture to the according uniform.
@@ -2221,7 +2320,7 @@ trait ThinEngine extends js.Object {
     * @param uniform The uniform to set
     * @param texture The texture to apply
     */
-  def setTexture(channel: Double, uniform: Nullable[WebGLUniformLocation], texture: Nullable[BaseTexture]): Unit = js.native
+  def setTexture(channel: Double, uniform: Nullable[WebGLUniformLocation], texture: Nullable[ThinTexture]): Unit = js.native
   
   /**
     * Sets an array of texture to the webGL context
@@ -2229,7 +2328,7 @@ trait ThinEngine extends js.Object {
     * @param uniform defines the associated uniform location
     * @param textures defines the array of textures to bind
     */
-  def setTextureArray(channel: Double, uniform: Nullable[WebGLUniformLocation], textures: js.Array[BaseTexture]): Unit = js.native
+  def setTextureArray(channel: Double, uniform: Nullable[WebGLUniformLocation], textures: js.Array[ThinTexture]): Unit = js.native
   
   /**
     * Set the WebGL's viewport
@@ -2256,19 +2355,9 @@ trait ThinEngine extends js.Object {
   
   /**
     * Gets a boolean indicating that the engine supports uniform buffers
-    * @see http://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
+    * @see https://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
     */
   def supportsUniformBuffers: Boolean = js.native
-  
-  /**
-    * Gets the list of texture formats in use
-    */
-  def textureFormatInUse: Nullable[String] = js.native
-  
-  /**
-    * Gets the list of texture formats supported
-    */
-  def texturesSupported: js.Array[String] = js.native
   
   /**
     * Unbind the current render target texture from the webGL context
@@ -2333,129 +2422,202 @@ trait ThinEngine extends js.Object {
   def updateArrayBuffer(data: js.typedarray.Float32Array): Unit = js.native
   
   /**
+    * Update a dynamic index buffer
+    * @param indexBuffer defines the target index buffer
+    * @param indices defines the data to update
+    * @param offset defines the offset in the target index buffer where update should start
+    */
+  def updateDynamicIndexBuffer(indexBuffer: DataBuffer, indices: IndicesArray): Unit = js.native
+  def updateDynamicIndexBuffer(indexBuffer: DataBuffer, indices: IndicesArray, offset: Double): Unit = js.native
+  
+  /**
     * Update the content of a dynamic texture
     * @param texture defines the texture to update
-    * @param canvas defines the canvas containing the source
+    * @param source defines the source containing the data
     * @param invertY defines if data must be stored with Y axis inverted
     * @param premulAlpha defines if alpha is stored as premultiplied
     * @param format defines the format of the data
     * @param forceBindTexture if the texture should be forced to be bound eg. after a graphics context loss (Default: false)
     */
-  def updateDynamicTexture(texture: Nullable[InternalTexture], canvas: HTMLCanvasElement, invertY: Boolean): Unit = js.native
   def updateDynamicTexture(
     texture: Nullable[InternalTexture],
-    canvas: HTMLCanvasElement,
-    invertY: Boolean,
-    premulAlpha: js.UndefOr[scala.Nothing],
-    format: js.UndefOr[scala.Nothing],
-    forceBindTexture: Boolean
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: HTMLCanvasElement,
-    invertY: Boolean,
-    premulAlpha: js.UndefOr[scala.Nothing],
-    format: Double
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: HTMLCanvasElement,
-    invertY: Boolean,
-    premulAlpha: js.UndefOr[scala.Nothing],
-    format: Double,
-    forceBindTexture: Boolean
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: HTMLCanvasElement,
-    invertY: Boolean,
-    premulAlpha: Boolean
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: HTMLCanvasElement,
-    invertY: Boolean,
-    premulAlpha: Boolean,
-    format: js.UndefOr[scala.Nothing],
-    forceBindTexture: Boolean
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: HTMLCanvasElement,
-    invertY: Boolean,
-    premulAlpha: Boolean,
-    format: Double
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: HTMLCanvasElement,
-    invertY: Boolean,
-    premulAlpha: Boolean,
-    format: Double,
-    forceBindTexture: Boolean
-  ): Unit = js.native
-  def updateDynamicTexture(texture: Nullable[InternalTexture], canvas: OffscreenCanvas, invertY: Boolean): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: OffscreenCanvas,
-    invertY: Boolean,
-    premulAlpha: js.UndefOr[scala.Nothing],
-    format: js.UndefOr[scala.Nothing],
-    forceBindTexture: Boolean
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: OffscreenCanvas,
-    invertY: Boolean,
-    premulAlpha: js.UndefOr[scala.Nothing],
-    format: Double
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: OffscreenCanvas,
-    invertY: Boolean,
-    premulAlpha: js.UndefOr[scala.Nothing],
-    format: Double,
-    forceBindTexture: Boolean
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: OffscreenCanvas,
-    invertY: Boolean,
-    premulAlpha: Boolean
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: OffscreenCanvas,
-    invertY: Boolean,
-    premulAlpha: Boolean,
-    format: js.UndefOr[scala.Nothing],
-    forceBindTexture: Boolean
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: OffscreenCanvas,
-    invertY: Boolean,
-    premulAlpha: Boolean,
-    format: Double
-  ): Unit = js.native
-  def updateDynamicTexture(
-    texture: Nullable[InternalTexture],
-    canvas: OffscreenCanvas,
-    invertY: Boolean,
-    premulAlpha: Boolean,
-    format: Double,
-    forceBindTexture: Boolean
+    source: ImageBitmap | ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | OffscreenCanvas,
+    invertY: js.UndefOr[Boolean],
+    premulAlpha: js.UndefOr[Boolean],
+    format: js.UndefOr[Double],
+    forceBindTexture: js.UndefOr[Boolean]
   ): Unit = js.native
   
   /**
+    * Updates a dynamic vertex buffer.
+    * @param vertexBuffer the vertex buffer to update
+    * @param data the data used to update the vertex buffer
+    * @param byteOffset the byte offset of the data
+    * @param byteLength the byte length of the data
+    */
+  def updateDynamicVertexBuffer(vertexBuffer: DataBuffer, data: DataArray): Unit = js.native
+  def updateDynamicVertexBuffer(
+    vertexBuffer: DataBuffer,
+    data: DataArray,
+    byteOffset: js.UndefOr[scala.Nothing],
+    byteLength: Double
+  ): Unit = js.native
+  def updateDynamicVertexBuffer(vertexBuffer: DataBuffer, data: DataArray, byteOffset: Double): Unit = js.native
+  def updateDynamicVertexBuffer(vertexBuffer: DataBuffer, data: DataArray, byteOffset: Double, byteLength: Double): Unit = js.native
+  
+  /**
     * Update the sample count for a given multiple render target texture
-    * @see http://doc.babylonjs.com/features/webgl2#multisample-render-targets
+    * @see https://doc.babylonjs.com/features/webgl2#multisample-render-targets
     * @param textures defines the textures to update
     * @param samples defines the sample count to set
     * @returns the effective sample count (could be 0 if multisample render targets are not supported)
     */
   def updateMultipleRenderTargetTextureSampleCount(textures: Nullable[js.Array[InternalTexture]], samples: Double): Double = js.native
+  
+  /**
+    * Update a raw cube texture
+    * @param texture defines the texture to udpdate
+    * @param data defines the data to store
+    * @param format defines the data format
+    * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
+    * @param invertY defines if data must be stored with Y axis inverted
+    */
+  def updateRawCubeTexture(
+    texture: InternalTexture,
+    data: js.Array[js.typedarray.ArrayBufferView],
+    format: Double,
+    `type`: Double,
+    invertY: Boolean
+  ): Unit = js.native
+  /**
+    * Update a raw cube texture
+    * @param texture defines the texture to udpdate
+    * @param data defines the data to store
+    * @param format defines the data format
+    * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
+    * @param invertY defines if data must be stored with Y axis inverted
+    * @param compression defines the compression used (null by default)
+    */
+  def updateRawCubeTexture(
+    texture: InternalTexture,
+    data: js.Array[js.typedarray.ArrayBufferView],
+    format: Double,
+    `type`: Double,
+    invertY: Boolean,
+    compression: Nullable[String]
+  ): Unit = js.native
+  /**
+    * Update a raw cube texture
+    * @param texture defines the texture to udpdate
+    * @param data defines the data to store
+    * @param format defines the data format
+    * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
+    * @param invertY defines if data must be stored with Y axis inverted
+    * @param compression defines the compression used (null by default)
+    * @param level defines which level of the texture to update
+    */
+  def updateRawCubeTexture(
+    texture: InternalTexture,
+    data: js.Array[js.typedarray.ArrayBufferView],
+    format: Double,
+    `type`: Double,
+    invertY: Boolean,
+    compression: Nullable[String],
+    level: Double
+  ): Unit = js.native
+  
+  /**
+    * Update a raw texture
+    * @param texture defines the texture to update
+    * @param data defines the data to store in the texture
+    * @param format defines the format of the data
+    * @param invertY defines if data must be stored with Y axis inverted
+    */
+  def updateRawTexture(
+    texture: Nullable[InternalTexture],
+    data: Nullable[js.typedarray.ArrayBufferView],
+    format: Double,
+    invertY: Boolean
+  ): Unit = js.native
+  /**
+    * Update a raw texture
+    * @param texture defines the texture to update
+    * @param data defines the data to store in the texture
+    * @param format defines the format of the data
+    * @param invertY defines if data must be stored with Y axis inverted
+    * @param compression defines the compression used (null by default)
+    * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
+    */
+  def updateRawTexture(
+    texture: Nullable[InternalTexture],
+    data: Nullable[js.typedarray.ArrayBufferView],
+    format: Double,
+    invertY: Boolean,
+    compression: Nullable[String],
+    `type`: Double
+  ): Unit = js.native
+  
+  /**
+    * Update a raw 2D array texture
+    * @param texture defines the texture to update
+    * @param data defines the data to store
+    * @param format defines the data format
+    * @param invertY defines if data must be stored with Y axis inverted
+    */
+  def updateRawTexture2DArray(
+    texture: InternalTexture,
+    data: Nullable[js.typedarray.ArrayBufferView],
+    format: Double,
+    invertY: Boolean
+  ): Unit = js.native
+  /**
+    * Update a raw 2D array texture
+    * @param texture defines the texture to update
+    * @param data defines the data to store
+    * @param format defines the data format
+    * @param invertY defines if data must be stored with Y axis inverted
+    * @param compression defines the used compression (can be null)
+    * @param textureType defines the texture Type (Engine.TEXTURETYPE_UNSIGNED_INT, Engine.TEXTURETYPE_FLOAT...)
+    */
+  def updateRawTexture2DArray(
+    texture: InternalTexture,
+    data: Nullable[js.typedarray.ArrayBufferView],
+    format: Double,
+    invertY: Boolean,
+    compression: Nullable[String],
+    textureType: Double
+  ): Unit = js.native
+  
+  /**
+    * Update a raw 3D texture
+    * @param texture defines the texture to update
+    * @param data defines the data to store
+    * @param format defines the data format
+    * @param invertY defines if data must be stored with Y axis inverted
+    */
+  def updateRawTexture3D(
+    texture: InternalTexture,
+    data: Nullable[js.typedarray.ArrayBufferView],
+    format: Double,
+    invertY: Boolean
+  ): Unit = js.native
+  /**
+    * Update a raw 3D texture
+    * @param texture defines the texture to update
+    * @param data defines the data to store
+    * @param format defines the data format
+    * @param invertY defines if data must be stored with Y axis inverted
+    * @param compression defines the used compression (can be null)
+    * @param textureType defines the texture Type (Engine.TEXTURETYPE_UNSIGNED_INT, Engine.TEXTURETYPE_FLOAT...)
+    */
+  def updateRawTexture3D(
+    texture: InternalTexture,
+    data: Nullable[js.typedarray.ArrayBufferView],
+    format: Double,
+    invertY: Boolean,
+    compression: Nullable[String],
+    textureType: Double
+  ): Unit = js.native
   
   /**
     * Update a portion of an internal texture
@@ -2533,7 +2695,7 @@ trait ThinEngine extends js.Object {
   
   /**
     * Update an existing uniform buffer
-    * @see http://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
+    * @see https://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
     * @param uniformBuffer defines the target uniform buffer
     * @param elements defines the content to update
     * @param offset defines the offset in the uniform buffer where update should start

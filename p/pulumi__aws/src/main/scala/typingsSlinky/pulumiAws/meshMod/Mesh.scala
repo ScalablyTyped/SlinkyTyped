@@ -42,9 +42,19 @@ class Mesh protected () extends CustomResource {
   val lastUpdatedDate: Output_[String] = js.native
   
   /**
-    * The name to use for the service mesh.
+    * The AWS account ID of the service mesh's owner.
+    */
+  val meshOwner: Output_[String] = js.native
+  
+  /**
+    * The name to use for the service mesh. Must be between 1 and 255 characters in length.
     */
   val name: Output_[String] = js.native
+  
+  /**
+    * The resource owner's AWS account ID.
+    */
+  val resourceOwner: Output_[String] = js.native
   
   /**
     * The service mesh specification to apply.

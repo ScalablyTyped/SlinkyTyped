@@ -8,6 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object expoPermissionsStrings {
   
   @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  
+  @scala.inline
   def always: always = "always".asInstanceOf[always]
   
   @scala.inline
@@ -30,6 +33,9 @@ object expoPermissionsStrings {
   
   @scala.inline
   def fine: fine = "fine".asInstanceOf[fine]
+  
+  @scala.inline
+  def limited: limited = "limited".asInstanceOf[limited]
   
   @scala.inline
   def location: location = "location".asInstanceOf[location]
@@ -56,6 +62,9 @@ object expoPermissionsStrings {
   def whenInUse: whenInUse = "whenInUse".asInstanceOf[whenInUse]
   
   @js.native
+  sealed trait all extends js.Object
+  
+  @js.native
   sealed trait always extends js.Object
   
   @js.native
@@ -78,6 +87,9 @@ object expoPermissionsStrings {
   
   @js.native
   sealed trait fine extends js.Object
+  
+  @js.native
+  sealed trait limited extends js.Object
   
   @js.native
   sealed trait location extends PermissionType

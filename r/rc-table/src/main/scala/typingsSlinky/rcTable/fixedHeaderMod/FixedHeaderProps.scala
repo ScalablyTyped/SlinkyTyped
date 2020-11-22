@@ -1,6 +1,7 @@
 package typingsSlinky.rcTable.fixedHeaderMod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.rcTable.anon.CurrentTarget
 import typingsSlinky.rcTable.headerMod.HeaderProps
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
@@ -20,6 +21,16 @@ trait FixedHeaderProps[RecordType] extends HeaderProps[RecordType] {
   var columCount: Double = js.native
   
   var direction: ltr | rtl = js.native
+  
+  var fixHeader: Boolean = js.native
+  
+  var noData: Boolean = js.native
+  
+  var offsetHeader: Double = js.native
+  
+  def onScroll(info: CurrentTarget): Unit = js.native
+  
+  var stickyClassName: js.UndefOr[String] = js.native
 }
 object FixedHeaderProps {
   
@@ -29,11 +40,15 @@ object FixedHeaderProps {
     columCount: Double,
     columns: ColumnsType[RecordType],
     direction: ltr | rtl,
+    fixHeader: Boolean,
     flattenColumns: js.Array[ColumnType[RecordType]],
+    noData: Boolean,
+    offsetHeader: Double,
     onHeaderRow: (js.Array[ColumnType[RecordType]], /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement],
+    onScroll: CurrentTarget => Unit,
     stickyOffsets: StickyOffsets
   ): FixedHeaderProps[RecordType] = {
-    val __obj = js.Dynamic.literal(colWidths = colWidths.asInstanceOf[js.Any], columCount = columCount.asInstanceOf[js.Any], columns = columns.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], flattenColumns = flattenColumns.asInstanceOf[js.Any], onHeaderRow = js.Any.fromFunction2(onHeaderRow), stickyOffsets = stickyOffsets.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(colWidths = colWidths.asInstanceOf[js.Any], columCount = columCount.asInstanceOf[js.Any], columns = columns.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], fixHeader = fixHeader.asInstanceOf[js.Any], flattenColumns = flattenColumns.asInstanceOf[js.Any], noData = noData.asInstanceOf[js.Any], offsetHeader = offsetHeader.asInstanceOf[js.Any], onHeaderRow = js.Any.fromFunction2(onHeaderRow), onScroll = js.Any.fromFunction1(onScroll), stickyOffsets = stickyOffsets.asInstanceOf[js.Any])
     __obj.asInstanceOf[FixedHeaderProps[RecordType]]
   }
   
@@ -63,5 +78,23 @@ object FixedHeaderProps {
     
     @scala.inline
     def setDirection(value: ltr | rtl): Self = this.set("direction", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFixHeader(value: Boolean): Self = this.set("fixHeader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNoData(value: Boolean): Self = this.set("noData", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOffsetHeader(value: Double): Self = this.set("offsetHeader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOnScroll(value: CurrentTarget => Unit): Self = this.set("onScroll", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setStickyClassName(value: String): Self = this.set("stickyClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStickyClassName: Self = this.set("stickyClassName", js.undefined)
   }
 }

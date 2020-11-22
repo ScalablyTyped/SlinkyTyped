@@ -3,16 +3,17 @@ package typingsSlinky.grammarkdown
 import typingsSlinky.esfxAsyncCanceltoken.mod.CancelToken
 import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.grammarkdown.checkerMod.Resolver
-import typingsSlinky.grammarkdown.coreMod.TextRange
 import typingsSlinky.grammarkdown.diagnosticsMod.DiagnosticMessages
 import typingsSlinky.grammarkdown.nodesMod.Argument
 import typingsSlinky.grammarkdown.nodesMod.ArgumentList
 import typingsSlinky.grammarkdown.nodesMod.ButNotSymbol
 import typingsSlinky.grammarkdown.nodesMod.Constraints
+import typingsSlinky.grammarkdown.nodesMod.Define
 import typingsSlinky.grammarkdown.nodesMod.EmptyAssertion
 import typingsSlinky.grammarkdown.nodesMod.Identifier
 import typingsSlinky.grammarkdown.nodesMod.Import
 import typingsSlinky.grammarkdown.nodesMod.LexicalGoalAssertion
+import typingsSlinky.grammarkdown.nodesMod.Line
 import typingsSlinky.grammarkdown.nodesMod.LookaheadAssertion
 import typingsSlinky.grammarkdown.nodesMod.NoSymbolHereAssertion
 import typingsSlinky.grammarkdown.nodesMod.Node
@@ -39,6 +40,7 @@ import typingsSlinky.grammarkdown.optionsMod.CompilerOptions
 import typingsSlinky.grammarkdown.stringwriterMod.StringWriter
 import typingsSlinky.grammarkdown.tokensMod.ProseFragmentLiteralKind
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind
+import typingsSlinky.grammarkdown.typesMod.TextRange
 import typingsSlinky.prex.mod.CancellationToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -107,6 +109,8 @@ object emitterEmitterMod extends js.Object {
     
     /* protected */ def emitConstraints(node: Constraints): Unit = js.native
     
+    /* protected */ def emitDefine(node: Define): Unit = js.native
+    
     /* protected */ def emitEmptyAssertion(node: EmptyAssertion): Unit = js.native
     
     /* protected */ def emitHtmlTrivia(range: TextRange): Unit = js.native
@@ -120,6 +124,8 @@ object emitterEmitterMod extends js.Object {
     /* protected */ def emitLeadingHtmlTriviaOfNode(node: Node[SyntaxKind]): Unit = js.native
     
     /* protected */ def emitLexicalGoalAssertion(node: LexicalGoalAssertion): Unit = js.native
+    
+    /* protected */ def emitLine(node: Line): Unit = js.native
     
     /* protected */ def emitLookaheadAssertion(node: LookaheadAssertion): Unit = js.native
     

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NodeGroupResourceAutoscalingGroup extends js.Object {
   
   /**
-    * Name of the AutoScaling Group.
+    * Name of the EC2 Launch Template. Conflicts with `id`.
     */
   var name: String = js.native
 }

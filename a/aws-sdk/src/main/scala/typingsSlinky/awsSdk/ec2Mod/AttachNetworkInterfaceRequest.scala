@@ -23,6 +23,11 @@ trait AttachNetworkInterfaceRequest extends js.Object {
   var InstanceId: typingsSlinky.awsSdk.ec2Mod.InstanceId = js.native
   
   /**
+    * The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
+    */
+  var NetworkCardIndex: js.UndefOr[Integer] = js.native
+  
+  /**
     * The ID of the network interface.
     */
   var NetworkInterfaceId: typingsSlinky.awsSdk.ec2Mod.NetworkInterfaceId = js.native
@@ -64,5 +69,11 @@ object AttachNetworkInterfaceRequest {
     
     @scala.inline
     def deleteDryRun: Self = this.set("DryRun", js.undefined)
+    
+    @scala.inline
+    def setNetworkCardIndex(value: Integer): Self = this.set("NetworkCardIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkCardIndex: Self = this.set("NetworkCardIndex", js.undefined)
   }
 }

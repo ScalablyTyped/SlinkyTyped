@@ -11,6 +11,8 @@ trait InitializationFailedResponse extends TypingInstallerResponse {
   val kind_InitializationFailedResponse: EventInitializationFailed = js.native
   
   val message: String = js.native
+  
+  val stack: js.UndefOr[String] = js.native
 }
 object InitializationFailedResponse {
   
@@ -40,5 +42,11 @@ object InitializationFailedResponse {
     
     @scala.inline
     def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStack(value: String): Self = this.set("stack", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStack: Self = this.set("stack", js.undefined)
   }
 }

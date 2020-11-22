@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DirectoryObject extends Entity {
   
-  var deletedDateTime: js.UndefOr[String] = js.native
+  var deletedDateTime: js.UndefOr[NullableOption[String]] = js.native
 }
 object DirectoryObject {
   
@@ -33,9 +33,12 @@ object DirectoryObject {
     }
     
     @scala.inline
-    def setDeletedDateTime(value: String): Self = this.set("deletedDateTime", value.asInstanceOf[js.Any])
+    def setDeletedDateTime(value: NullableOption[String]): Self = this.set("deletedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeletedDateTime: Self = this.set("deletedDateTime", js.undefined)
+    
+    @scala.inline
+    def setDeletedDateTimeNull: Self = this.set("deletedDateTime", null)
   }
 }

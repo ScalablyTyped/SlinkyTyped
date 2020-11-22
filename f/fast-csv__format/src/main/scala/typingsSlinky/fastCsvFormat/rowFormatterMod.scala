@@ -52,7 +52,9 @@ object rowFormatterMod extends js.Object {
     
     var gatherHeaders: js.Any = js.native
     
-    var isHashArray: js.Any = js.native
+    var isRowArray: js.Any = js.native
+    
+    var isRowHashArray: js.Any = js.native
   }
   
   type RowFormatterCallback = js.Function2[/* error */ js.Error | Null, /* data */ js.UndefOr[RowArray], Unit]

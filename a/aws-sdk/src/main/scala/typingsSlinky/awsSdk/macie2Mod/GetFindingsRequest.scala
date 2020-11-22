@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetFindingsRequest extends js.Object {
   
   /**
-    * An array of strings that lists the unique identifiers for the findings to retrieve information about.
+    * An array of strings that lists the unique identifiers for the findings to retrieve.
     */
   var findingIds: listOfString = js.native
   

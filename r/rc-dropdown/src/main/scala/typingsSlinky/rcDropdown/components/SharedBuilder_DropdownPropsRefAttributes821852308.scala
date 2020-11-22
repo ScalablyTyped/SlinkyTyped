@@ -44,6 +44,12 @@ class SharedBuilder_DropdownPropsRefAttributes821852308[R <: js.Object] (val arg
   def minOverlayWidthMatchTrigger(value: Boolean): this.type = set("minOverlayWidthMatchTrigger", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def mouseEnterDelay(value: Double): this.type = set("mouseEnterDelay", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def mouseLeaveDelay(value: Double): this.type = set("mouseLeaveDelay", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def onOverlayClick(value: /* e */ Event => Unit): this.type = set("onOverlayClick", js.Any.fromFunction1(value))
   
   @scala.inline

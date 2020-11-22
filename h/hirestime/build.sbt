@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "hirestime"
-version := "4.0-dt-20191029Z-c22d4d"
+version := "6.1.0-ded11d"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

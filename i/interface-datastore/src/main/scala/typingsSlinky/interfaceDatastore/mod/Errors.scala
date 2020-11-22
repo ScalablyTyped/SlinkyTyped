@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object Errors extends js.Object {
   
+  def abortedError(error: js.Error): ErrCode = js.native
+  
   def dbDeleteFailedError(error: js.Error): ErrCode = js.native
   
   def dbOpenFailedError(error: js.Error): ErrCode = js.native

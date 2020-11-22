@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Width extends js.Object {
   
+  var animated: js.UndefOr[Boolean] = js.native
+  
   var height: Double = js.native
   
   var width: Double = js.native
@@ -49,5 +51,11 @@ object Width {
     
     @scala.inline
     def setY(value: Double): Self = this.set("y", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAnimated(value: Boolean): Self = this.set("animated", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnimated: Self = this.set("animated", js.undefined)
   }
 }

@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LocalStoreOptions extends ArrayStoreOptions[LocalStore] {
   
-  /** @name LocalStore.Options.flushInterval */
+  /**
+    * [descr:LocalStore.Options.flushInterval]
+    */
   var flushInterval: js.UndefOr[Double] = js.native
   
-  /** @name LocalStore.Options.immediate */
+  /**
+    * [descr:LocalStore.Options.immediate]
+    */
   var immediate: js.UndefOr[Boolean] = js.native
   
-  /** @name LocalStore.Options.name */
+  /**
+    * [descr:LocalStore.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
 }
 object LocalStoreOptions {

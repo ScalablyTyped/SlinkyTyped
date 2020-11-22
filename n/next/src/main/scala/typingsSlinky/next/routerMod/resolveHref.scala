@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object resolveHref extends js.Object {
   
   def apply(currentPath: String, href: Url): String = js.native
+  def apply(currentPath: String, href: Url, resolveAs: Boolean): String = js.native
 }

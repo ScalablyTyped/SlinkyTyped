@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object toastBodyMod {
   
-  type ToastBody[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.toastBodyMod.ToastBodyProps]
+  type ToastBody = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.toastBodyMod.ToastBodyProps]
 }

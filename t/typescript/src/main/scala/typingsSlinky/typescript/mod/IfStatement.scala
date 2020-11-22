@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IfStatement extends Statement {
   
-  var elseStatement: js.UndefOr[Statement] = js.native
+  val elseStatement: js.UndefOr[Statement] = js.native
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_IfStatement: typingsSlinky.typescript.mod.SyntaxKind.IfStatement = js.native
+  val kind_IfStatement: typingsSlinky.typescript.mod.SyntaxKind.IfStatement = js.native
   
-  var thenStatement: Statement = js.native
+  val thenStatement: Statement = js.native
 }

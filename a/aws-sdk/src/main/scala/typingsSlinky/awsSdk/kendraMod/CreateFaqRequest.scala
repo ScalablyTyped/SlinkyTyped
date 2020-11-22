@@ -8,9 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateFaqRequest extends js.Object {
   
   /**
+    * A token that you provide to identify the request to create a FAQ. Multiple calls to the CreateFaqRequest operation with the same client token will create only one FAQ. 
+    */
+  var ClientToken: js.UndefOr[ClientTokenName] = js.native
+  
+  /**
     * A description of the FAQ.
     */
   var Description: js.UndefOr[typingsSlinky.awsSdk.kendraMod.Description] = js.native
+  
+  /**
+    * The format of the input file. You can choose between a basic CSV format, a CSV format that includes customs attributes in a header, and a JSON format that includes custom attributes. The format must match the format of the file stored in the S3 bucket identified in the S3Path parameter. For more information, see Adding questions and answers.
+    */
+  var FileFormat: js.UndefOr[FaqFileFormat] = js.native
   
   /**
     * The identifier of the index that contains the FAQ.
@@ -73,10 +83,22 @@ object CreateFaqRequest {
     def setS3Path(value: S3Path): Self = this.set("S3Path", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setClientToken(value: ClientTokenName): Self = this.set("ClientToken", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClientToken: Self = this.set("ClientToken", js.undefined)
+    
+    @scala.inline
     def setDescription(value: Description): Self = this.set("Description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("Description", js.undefined)
+    
+    @scala.inline
+    def setFileFormat(value: FaqFileFormat): Self = this.set("FileFormat", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFileFormat: Self = this.set("FileFormat", js.undefined)
     
     @scala.inline
     def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))

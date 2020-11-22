@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait JsonObjectExpressionStatement extends ExpressionStatement {
   
   @JSName("expression")
-  var expression_JsonObjectExpressionStatement: ObjectLiteralExpression | ArrayLiteralExpression | JsonMinusNumericLiteral | NumericLiteral | StringLiteral | BooleanLiteral | NullLiteral = js.native
+  val expression_JsonObjectExpressionStatement: JsonObjectExpression = js.native
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.grammarkdown.diagnosticsMod
 
-import typingsSlinky.grammarkdown.coreMod.Position
+import typingsSlinky.grammarkdown.typesMod.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

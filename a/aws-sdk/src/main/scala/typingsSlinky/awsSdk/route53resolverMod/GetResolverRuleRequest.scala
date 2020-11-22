@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetResolverRuleRequest extends js.Object {
   
   /**
-    * The ID of the resolver rule that you want to get information about.
+    * The ID of the Resolver rule that you want to get information about.
     */
   var ResolverRuleId: ResourceId = js.native
 }

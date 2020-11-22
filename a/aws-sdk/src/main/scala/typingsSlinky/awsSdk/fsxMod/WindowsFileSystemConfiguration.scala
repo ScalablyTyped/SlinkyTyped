@@ -12,8 +12,10 @@ trait WindowsFileSystemConfiguration extends js.Object {
     */
   var ActiveDirectoryId: js.UndefOr[DirectoryId] = js.native
   
+  var Aliases: js.UndefOr[typingsSlinky.awsSdk.fsxMod.Aliases] = js.native
+  
   /**
-    * The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 35 days.
+    * The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days.
     */
   var AutomaticBackupRetentionDays: js.UndefOr[typingsSlinky.awsSdk.fsxMod.AutomaticBackupRetentionDays] = js.native
   
@@ -92,6 +94,15 @@ object WindowsFileSystemConfiguration {
     
     @scala.inline
     def deleteActiveDirectoryId: Self = this.set("ActiveDirectoryId", js.undefined)
+    
+    @scala.inline
+    def setAliasesVarargs(value: Alias*): Self = this.set("Aliases", js.Array(value :_*))
+    
+    @scala.inline
+    def setAliases(value: Aliases): Self = this.set("Aliases", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAliases: Self = this.set("Aliases", js.undefined)
     
     @scala.inline
     def setAutomaticBackupRetentionDays(value: AutomaticBackupRetentionDays): Self = this.set("AutomaticBackupRetentionDays", value.asInstanceOf[js.Any])

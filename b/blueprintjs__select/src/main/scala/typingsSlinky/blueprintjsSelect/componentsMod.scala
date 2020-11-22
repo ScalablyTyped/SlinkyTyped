@@ -66,9 +66,9 @@ object componentsMod extends js.Object {
     
     var displayName: String = js.native
     
-    def ofType[T](): Instantiable1[
-        /* props */ IMultiSelectProps[T], 
-        typingsSlinky.blueprintjsSelect.multiSelectMod.MultiSelect[T]
+    def ofType[U](): Instantiable1[
+        /* props */ IMultiSelectProps[U], 
+        typingsSlinky.blueprintjsSelect.multiSelectMod.MultiSelect[U]
       ] = js.native
   }
   
@@ -81,9 +81,9 @@ object componentsMod extends js.Object {
     
     var displayName: String = js.native
     
-    def ofType[T](): Instantiable1[
-        /* props */ IOmnibarProps[T], 
-        typingsSlinky.blueprintjsSelect.omnibarMod.Omnibar[T]
+    def ofType[U](): Instantiable1[
+        /* props */ IOmnibarProps[U], 
+        typingsSlinky.blueprintjsSelect.omnibarMod.Omnibar[U]
       ] = js.native
   }
   
@@ -101,9 +101,9 @@ object componentsMod extends js.Object {
     
     var displayName: String = js.native
     
-    def ofType[T](): Instantiable1[
-        /* props */ IQueryListProps[T], 
-        typingsSlinky.blueprintjsSelect.queryListMod.QueryList[T]
+    def ofType[U](): Instantiable1[
+        /* props */ IQueryListProps[U], 
+        typingsSlinky.blueprintjsSelect.queryListMod.QueryList[U]
       ] = js.native
   }
   
@@ -116,7 +116,7 @@ object componentsMod extends js.Object {
     
     var displayName: String = js.native
     
-    def ofType[T](): Instantiable1[/* props */ ISelectProps[T], typingsSlinky.blueprintjsSelect.selectMod.Select[T]] = js.native
+    def ofType[U](): Instantiable1[/* props */ ISelectProps[U], typingsSlinky.blueprintjsSelect.selectMod.Select[U]] = js.native
   }
   
   @js.native
@@ -130,9 +130,9 @@ object componentsMod extends js.Object {
     
     var displayName: String = js.native
     
-    def ofType[T](): Instantiable1[
-        /* props */ ISuggestProps[T], 
-        typingsSlinky.blueprintjsSelect.suggestMod.Suggest[T]
+    def ofType[U](): Instantiable1[
+        /* props */ ISuggestProps[U], 
+        typingsSlinky.blueprintjsSelect.suggestMod.Suggest[U]
       ] = js.native
   }
 }

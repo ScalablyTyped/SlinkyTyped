@@ -63,11 +63,11 @@ trait IMeteorService extends js.Object {
     * @param [autoClientSave=true] - By default, changes in the Angular collection will automatically update the Meteor collection.
     *                              - However if set to false, changes in the client won't be automatically propagated back to the Meteor collection.
     */
-  def collection[T](collection: Collection[T]): AngularMeteorCollection[T] = js.native
-  def collection[T](collection: Collection[T], autoClientSave: Boolean): AngularMeteorCollection[T] = js.native
-  def collection[T, U](collection: js.Function0[T], autoClientSave: Boolean, updateCollection: Collection[U]): AngularMeteorCollection2[T, U] = js.native
-  def collection[T, U](collection: Function, autoClientSave: Boolean, updateCollection: Collection[U]): AngularMeteorCollection2[T, U] = js.native
-  def collection[T, U](collection: ReactiveResult, autoClientSave: Boolean, updateCollection: Collection[U]): AngularMeteorCollection2[T, U] = js.native
+  def collection[T](collection: Collection[T, T]): AngularMeteorCollection[T] = js.native
+  def collection[T](collection: Collection[T, T], autoClientSave: Boolean): AngularMeteorCollection[T] = js.native
+  def collection[T, U](collection: js.Function0[T], autoClientSave: Boolean, updateCollection: Collection[U, U]): AngularMeteorCollection2[T, U] = js.native
+  def collection[T, U](collection: Function, autoClientSave: Boolean, updateCollection: Collection[U, U]): AngularMeteorCollection2[T, U] = js.native
+  def collection[T, U](collection: ReactiveResult, autoClientSave: Boolean, updateCollection: Collection[U, U]): AngularMeteorCollection2[T, U] = js.native
   /**
     * A service that wraps the Meteor collections to enable reactivity within AngularJS.
     *
@@ -77,7 +77,7 @@ trait IMeteorService extends js.Object {
     *                              - However if set to false, changes in the client won't be automatically propagated back to the Meteor collection.
     * @param [updateCollection] - A collection object which will be used for updates (insert, update, delete).
     */
-  def collection[T, U](collection: Collection[T], autoClientSave: Boolean, updateCollection: Collection[U]): AngularMeteorCollection2[T, U] = js.native
+  def collection[T, U](collection: Collection[T, T], autoClientSave: Boolean, updateCollection: Collection[U, U]): AngularMeteorCollection2[T, U] = js.native
   
   /**
     * Create a new user. More information: http://docs.meteor.com/#/full/accounts_createuser
@@ -99,7 +99,7 @@ trait IMeteorService extends js.Object {
   /**
     * @param collectionName - The name of the collection you want to get back
     */
-  def getCollectionByName[T](collectionName: String): Collection[T] = js.native
+  def getCollectionByName[T](collectionName: String): Collection[T, T] = js.native
   
   // <- $meteorUtils END
   // $meteorCamera BEGIN ->
@@ -156,10 +156,10 @@ trait IMeteorService extends js.Object {
     */
   def logoutOtherClients(): IPromise[Unit] = js.native
   
-  def `object`[T](collection: Collection[T], selector: String): AngularMeteorObject[T] = js.native
-  def `object`[T](collection: Collection[T], selector: String, autoClientSave: Boolean): AngularMeteorObject[T] = js.native
-  def `object`[T](collection: Collection[T], selector: ObjectID): AngularMeteorObject[T] = js.native
-  def `object`[T](collection: Collection[T], selector: ObjectID, autoClientSave: Boolean): AngularMeteorObject[T] = js.native
+  def `object`[T](collection: Collection[T, T], selector: String): AngularMeteorObject[T] = js.native
+  def `object`[T](collection: Collection[T, T], selector: String, autoClientSave: Boolean): AngularMeteorObject[T] = js.native
+  def `object`[T](collection: Collection[T, T], selector: ObjectID): AngularMeteorObject[T] = js.native
+  def `object`[T](collection: Collection[T, T], selector: ObjectID, autoClientSave: Boolean): AngularMeteorObject[T] = js.native
   /**
     * A service that wraps a Meteor object to enable reactivity within AngularJS.
     * Finds the first document that matches the selector, as ordered by sort and skip options. Wraps collection.findOne
@@ -171,8 +171,8 @@ trait IMeteorService extends js.Object {
     * @param [autoClientSave=true] - By default, changes in the Angular object will automatically update the Meteor object.
     *                              - However if set to false, changes in the client won't be automatically propagated back to the Meteor object.
     */
-  def `object`[T](collection: Collection[T], selector: Selector[T]): AngularMeteorObject[T] = js.native
-  def `object`[T](collection: Collection[T], selector: Selector[T], autoClientSave: Boolean): AngularMeteorObject[T] = js.native
+  def `object`[T](collection: Collection[T, T], selector: Selector[T]): AngularMeteorObject[T] = js.native
+  def `object`[T](collection: Collection[T, T], selector: Selector[T], autoClientSave: Boolean): AngularMeteorObject[T] = js.native
   
   /**
     * Resolves the promise successfully if a user is authenticated and rejects otherwise.

@@ -17,8 +17,13 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.reachAlert.reachAlertStrings.`additions removals`
 import typingsSlinky.reachAlert.reachAlertStrings.`additions text`
 import typingsSlinky.reachAlert.reachAlertStrings.`inline`
+import typingsSlinky.reachAlert.reachAlertStrings.`removals additions`
+import typingsSlinky.reachAlert.reachAlertStrings.`removals text`
+import typingsSlinky.reachAlert.reachAlertStrings.`text additions`
+import typingsSlinky.reachAlert.reachAlertStrings.`text removals`
 import typingsSlinky.reachAlert.reachAlertStrings.additions
 import typingsSlinky.reachAlert.reachAlertStrings.all
 import typingsSlinky.reachAlert.reachAlertStrings.ascending
@@ -285,7 +290,9 @@ trait AlertProps extends js.Object {
     * Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
     * @see aria-atomic.
     */
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   /** Indicates that user input is required on the element before a form may be submitted. */
   var `aria-required`: js.UndefOr[Boolean] = js.native
@@ -482,7 +489,7 @@ trait AlertProps extends js.Object {
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyParams: js.UndefOr[String] = js.native
   
@@ -1105,7 +1112,9 @@ object AlertProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1583,6 +1592,9 @@ object AlertProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyParams(value: String): Self = this.set("keyParams", value.asInstanceOf[js.Any])

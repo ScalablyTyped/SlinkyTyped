@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Pick<@formatjs/intl-relativetimeformat.@formatjs/intl-relativetimeformat.IntlRelativeTimeFormatOptions, 'localeMatcher'> */
+/* Inlined std.Pick<@formatjs/ecma402-abstract.@formatjs/ecma402-abstract.IntlRelativeTimeFormatOptions, 'localeMatcher'> */
 @js.native
 trait PickIntlRelativeTimeForma extends js.Object {
   

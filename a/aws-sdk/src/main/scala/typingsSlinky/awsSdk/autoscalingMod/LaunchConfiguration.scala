@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LaunchConfiguration extends js.Object {
   
   /**
-    * For Auto Scaling groups that are running in a VPC, specifies whether to assign a public IP address to the group's instances. For more information, see Launching Auto Scaling Instances in a VPC in the Amazon EC2 Auto Scaling User Guide.
+    * For Auto Scaling groups that are running in a VPC, specifies whether to assign a public IP address to the group's instances. For more information, see Launching Auto Scaling instances in a VPC in the Amazon EC2 Auto Scaling User Guide.
     */
   var AssociatePublicIpAddress: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.AssociatePublicIpAddress] = js.native
   
@@ -18,12 +18,12 @@ trait LaunchConfiguration extends js.Object {
   var BlockDeviceMappings: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.BlockDeviceMappings] = js.native
   
   /**
-    * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see ClassicLink in the Amazon EC2 User Guide for Linux Instances and Linking EC2-Classic Instances to a VPC in the Amazon EC2 Auto Scaling User Guide.
+    * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see ClassicLink in the Amazon EC2 User Guide for Linux Instances and Linking EC2-Classic instances to a VPC in the Amazon EC2 Auto Scaling User Guide.
     */
   var ClassicLinkVPCId: js.UndefOr[XmlStringMaxLen255] = js.native
   
   /**
-    * The IDs of one or more security groups for the VPC specified in ClassicLinkVPCId. For more information, see ClassicLink in the Amazon EC2 User Guide for Linux Instances and Linking EC2-Classic Instances to a VPC in the Amazon EC2 Auto Scaling User Guide.
+    * The IDs of one or more security groups for the VPC specified in ClassicLinkVPCId. For more information, see ClassicLink in the Amazon EC2 User Guide for Linux Instances and Linking EC2-Classic instances to a VPC in the Amazon EC2 Auto Scaling User Guide.
     */
   var ClassicLinkVPCSecurityGroups: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.ClassicLinkVPCSecurityGroups] = js.native
   
@@ -38,7 +38,7 @@ trait LaunchConfiguration extends js.Object {
   var EbsOptimized: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.EbsOptimized] = js.native
   
   /**
-    * The name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role. For more information, see IAM Role for Applications That Run on Amazon EC2 Instances in the Amazon EC2 Auto Scaling User Guide.
+    * The name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role. For more information, see IAM role for applications that run on Amazon EC2 instances in the Amazon EC2 Auto Scaling User Guide.
     */
   var IamInstanceProfile: js.UndefOr[XmlStringMaxLen1600] = js.native
   
@@ -78,12 +78,12 @@ trait LaunchConfiguration extends js.Object {
   var LaunchConfigurationName: XmlStringMaxLen255 = js.native
   
   /**
-    * The metadata options for the instances. For more information, see Instance Metadata and User Data in the Amazon EC2 User Guide for Linux Instances.
+    * The metadata options for the instances. For more information, see Configuring the Instance Metadata Options in the Amazon EC2 Auto Scaling User Guide.
     */
   var MetadataOptions: js.UndefOr[InstanceMetadataOptions] = js.native
   
   /**
-    * The tenancy of the instance, either default or dedicated. An instance with dedicated tenancy runs on isolated, single-tenant hardware and can only be launched into a VPC. For more information, see Instance Placement Tenancy in the Amazon EC2 Auto Scaling User Guide.
+    * The tenancy of the instance, either default or dedicated. An instance with dedicated tenancy runs on isolated, single-tenant hardware and can only be launched into a VPC. For more information, see Configuring instance tenancy with Amazon EC2 Auto Scaling in the Amazon EC2 Auto Scaling User Guide.
     */
   var PlacementTenancy: js.UndefOr[XmlStringMaxLen64] = js.native
   
@@ -98,12 +98,12 @@ trait LaunchConfiguration extends js.Object {
   var SecurityGroups: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.SecurityGroups] = js.native
   
   /**
-    * The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances are launched when the price you specify exceeds the current Spot price. For more information, see Launching Spot Instances in Your Auto Scaling Group in the Amazon EC2 Auto Scaling User Guide.
+    * The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances are launched when the price you specify exceeds the current Spot price. For more information, see Requesting Spot Instances in the Amazon EC2 Auto Scaling User Guide.
     */
   var SpotPrice: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.SpotPrice] = js.native
   
   /**
-    * The Base64-encoded user data to make available to the launched EC2 instances. For more information, see Instance Metadata and User Data in the Amazon EC2 User Guide for Linux Instances.
+    * The Base64-encoded user data to make available to the launched EC2 instances. For more information, see Instance metadata and user data in the Amazon EC2 User Guide for Linux Instances.
     */
   var UserData: js.UndefOr[XmlStringUserData] = js.native
 }

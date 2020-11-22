@@ -14,6 +14,13 @@ package object cloud9Mod {
   
   type ClientRequestToken = java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CONNECT_SSH
+    - typingsSlinky.awsSdk.awsSdkStrings.CONNECT_SSM
+    - java.lang.String
+  */
+  type ConnectionType = typingsSlinky.awsSdk.cloud9Mod._ConnectionType | java.lang.String
+  
   type EnvironmentArn = java.lang.String
   
   type EnvironmentDescription = java.lang.String

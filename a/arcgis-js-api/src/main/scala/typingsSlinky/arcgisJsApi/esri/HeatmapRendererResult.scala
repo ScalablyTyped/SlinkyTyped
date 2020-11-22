@@ -24,14 +24,14 @@ trait HeatmapRendererResult extends Object {
   var basemapTheme: String = js.native
   
   /**
-    * Indicates whether default values are used in the absence of sufficient data and/or statistics from the layer. Default values are typically used when all features have the same field value or no value at all.
+    * Indicates whether default values are used in the absence of sufficient data and/or statistics from the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-heatmap.html#HeatmapRendererResult)
     */
   var defaultValuesUsed: Boolean = js.native
   
   /**
-    * The renderer object configured to best match the given basemap and the spread of the data. Set this on a layer's `renderer` property to update its visualization.
+    * The renderer object configured to best match the given basemap and the spread of the data.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-heatmap.html#HeatmapRendererResult)
     */

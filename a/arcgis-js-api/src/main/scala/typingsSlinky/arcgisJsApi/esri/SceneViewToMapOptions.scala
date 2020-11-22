@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SceneViewToMapOptions extends Object {
   
   /**
-    * A list of layers and graphics to include for intersection testing. No layers or graphics will be excluded if exclude is not specified.
+    * A list of layers and graphics to include for intersection testing.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#toMap)
     */
@@ -19,7 +19,7 @@ trait SceneViewToMapOptions extends Object {
   ] = js.native
   
   /**
-    * A list of layers and graphics to include for intersection testing. All layers and graphics will be included if include is not specified.
+    * A list of layers and graphics to include for intersection testing.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#toMap)
     */

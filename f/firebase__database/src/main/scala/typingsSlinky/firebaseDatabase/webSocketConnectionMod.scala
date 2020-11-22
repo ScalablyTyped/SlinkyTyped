@@ -100,6 +100,8 @@ object webSocketConnectionMod extends js.Object {
     
     var mySock: WebSocket | Null = js.native
     
+    var nodeAdmin: js.Any = js.native
+    
     var onClosed_ : js.Any = js.native
     
     def onDisconnect(): Unit = js.native

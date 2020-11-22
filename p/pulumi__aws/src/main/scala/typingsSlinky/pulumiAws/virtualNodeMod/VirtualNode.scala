@@ -40,14 +40,24 @@ class VirtualNode protected () extends CustomResource {
   val lastUpdatedDate: Output_[String] = js.native
   
   /**
-    * The name of the service mesh in which to create the virtual node.
+    * The name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
     */
   val meshName: Output_[String] = js.native
   
   /**
-    * The name to use for the virtual node.
+    * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    */
+  val meshOwner: Output_[String] = js.native
+  
+  /**
+    * The name to use for the virtual node. Must be between 1 and 255 characters in length.
     */
   val name: Output_[String] = js.native
+  
+  /**
+    * The resource owner's AWS account ID.
+    */
+  val resourceOwner: Output_[String] = js.native
   
   /**
     * The virtual node specification to apply.

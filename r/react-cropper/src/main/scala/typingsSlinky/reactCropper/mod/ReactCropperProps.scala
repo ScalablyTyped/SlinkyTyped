@@ -20,9 +20,14 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.cropperjs.Cropper.CropEndEvent
+import typingsSlinky.cropperjs.Cropper.CropEvent
+import typingsSlinky.cropperjs.Cropper.CropMoveEvent
+import typingsSlinky.cropperjs.Cropper.CropStartEvent
 import typingsSlinky.cropperjs.Cropper.Data
 import typingsSlinky.cropperjs.Cropper.DragMode
 import typingsSlinky.cropperjs.Cropper.ViewMode
+import typingsSlinky.cropperjs.Cropper.ZoomEvent
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
@@ -43,8 +48,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactCropper.reactCropperStrings.`additions removals`
 import typingsSlinky.reactCropper.reactCropperStrings.`additions text`
 import typingsSlinky.reactCropper.reactCropperStrings.`inline`
+import typingsSlinky.reactCropper.reactCropperStrings.`removals additions`
+import typingsSlinky.reactCropper.reactCropperStrings.`removals text`
+import typingsSlinky.reactCropper.reactCropperStrings.`text additions`
+import typingsSlinky.reactCropper.reactCropperStrings.`text removals`
 import typingsSlinky.reactCropper.reactCropperStrings.additions
 import typingsSlinky.reactCropper.reactCropperStrings.all
 import typingsSlinky.reactCropper.reactCropperStrings.ascending
@@ -183,7 +193,9 @@ trait ReactCropperProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -275,17 +287,17 @@ trait ReactCropperProps extends js.Object {
   
   var coords: js.UndefOr[String] = js.native
   
-  var crop: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var crop: js.UndefOr[js.Function1[/* event */ CropEvent, Unit]] = js.native
   
   var cropBoxMovable: js.UndefOr[Boolean] = js.native
   
   var cropBoxResizable: js.UndefOr[Boolean] = js.native
   
-  var cropend: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var cropend: js.UndefOr[js.Function1[/* event */ CropEndEvent, Unit]] = js.native
   
-  var cropmove: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var cropmove: js.UndefOr[js.Function1[/* event */ CropMoveEvent, Unit]] = js.native
   
-  var cropstart: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var cropstart: js.UndefOr[js.Function1[/* event */ CropStartEvent, Unit]] = js.native
   
   var crossOrigin: js.UndefOr[String] = js.native
   
@@ -373,7 +385,7 @@ trait ReactCropperProps extends js.Object {
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyParams: js.UndefOr[String] = js.native
   
@@ -619,7 +631,7 @@ trait ReactCropperProps extends js.Object {
   
   var readOnly: js.UndefOr[Boolean] = js.native
   
-  var ready: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var ready: js.UndefOr[js.Function1[CustomEvent, Unit]] = js.native
   
   var ref: js.UndefOr[LegacyRef[ReactCropper]] = js.native
   
@@ -725,7 +737,7 @@ trait ReactCropperProps extends js.Object {
   
   var wrap: js.UndefOr[String] = js.native
   
-  var zoom: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var zoom: js.UndefOr[js.Function1[/* event */ ZoomEvent, Unit]] = js.native
   
   var zoomOnTouch: js.UndefOr[Boolean] = js.native
   
@@ -1015,7 +1027,9 @@ object ReactCropperProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1294,7 +1308,7 @@ object ReactCropperProps {
     def deleteCoords: Self = this.set("coords", js.undefined)
     
     @scala.inline
-    def setCrop(value: /* event */ CustomEvent => Unit): Self = this.set("crop", js.Any.fromFunction1(value))
+    def setCrop(value: /* event */ CropEvent => Unit): Self = this.set("crop", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCrop: Self = this.set("crop", js.undefined)
@@ -1312,19 +1326,19 @@ object ReactCropperProps {
     def deleteCropBoxResizable: Self = this.set("cropBoxResizable", js.undefined)
     
     @scala.inline
-    def setCropend(value: /* event */ CustomEvent => Unit): Self = this.set("cropend", js.Any.fromFunction1(value))
+    def setCropend(value: /* event */ CropEndEvent => Unit): Self = this.set("cropend", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCropend: Self = this.set("cropend", js.undefined)
     
     @scala.inline
-    def setCropmove(value: /* event */ CustomEvent => Unit): Self = this.set("cropmove", js.Any.fromFunction1(value))
+    def setCropmove(value: /* event */ CropMoveEvent => Unit): Self = this.set("cropmove", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCropmove: Self = this.set("cropmove", js.undefined)
     
     @scala.inline
-    def setCropstart(value: /* event */ CustomEvent => Unit): Self = this.set("cropstart", js.Any.fromFunction1(value))
+    def setCropstart(value: /* event */ CropStartEvent => Unit): Self = this.set("cropstart", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCropstart: Self = this.set("cropstart", js.undefined)
@@ -1595,6 +1609,9 @@ object ReactCropperProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyParams(value: String): Self = this.set("keyParams", value.asInstanceOf[js.Any])
@@ -2338,7 +2355,7 @@ object ReactCropperProps {
     def deleteReadOnly: Self = this.set("readOnly", js.undefined)
     
     @scala.inline
-    def setReady(value: /* event */ CustomEvent => Unit): Self = this.set("ready", js.Any.fromFunction1(value))
+    def setReady(value: CustomEvent => Unit): Self = this.set("ready", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteReady: Self = this.set("ready", js.undefined)
@@ -2668,7 +2685,7 @@ object ReactCropperProps {
     def deleteWrap: Self = this.set("wrap", js.undefined)
     
     @scala.inline
-    def setZoom(value: /* event */ CustomEvent => Unit): Self = this.set("zoom", js.Any.fromFunction1(value))
+    def setZoom(value: /* event */ ZoomEvent => Unit): Self = this.set("zoom", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteZoom: Self = this.set("zoom", js.undefined)

@@ -98,6 +98,8 @@ trait CanvasRenderingContext2D extends js.Object {
   
   def isPointInStroke(x: Double, y: Double, path: Path2D): Boolean = js.native
   
+  var lineCap: String = js.native
+  
   var lineDashOffset: Double = js.native
   
   var lineJoin: String = js.native
@@ -105,8 +107,6 @@ trait CanvasRenderingContext2D extends js.Object {
   def lineTo(x: Double, y: Double): Unit = js.native
   
   var lineWidth: Double = js.native
-  
-  var linecap: String = js.native
   
   def measureText(text: String): js.Any = js.native
   

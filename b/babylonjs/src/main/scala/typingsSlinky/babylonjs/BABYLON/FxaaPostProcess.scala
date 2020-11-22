@@ -8,10 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FxaaPostProcess extends PostProcess {
   
   var _getDefines: js.Any = js.native
-  
-  /** @hidden */
-  var texelHeight: Double = js.native
-  
-  /** @hidden */
-  var texelWidth: Double = js.native
 }

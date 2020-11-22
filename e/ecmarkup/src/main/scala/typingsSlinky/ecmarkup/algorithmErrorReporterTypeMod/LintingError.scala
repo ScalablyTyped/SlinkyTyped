@@ -13,15 +13,13 @@ trait LintingError extends js.Object {
   
   var message: String = js.native
   
-  var nodeType: String = js.native
-  
   var ruleId: String = js.native
 }
 object LintingError {
   
   @scala.inline
-  def apply(column: Double, line: Double, message: String, nodeType: String, ruleId: String): LintingError = {
-    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], nodeType = nodeType.asInstanceOf[js.Any], ruleId = ruleId.asInstanceOf[js.Any])
+  def apply(column: Double, line: Double, message: String, ruleId: String): LintingError = {
+    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], ruleId = ruleId.asInstanceOf[js.Any])
     __obj.asInstanceOf[LintingError]
   }
   
@@ -48,9 +46,6 @@ object LintingError {
     
     @scala.inline
     def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setNodeType(value: String): Self = this.set("nodeType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRuleId(value: String): Self = this.set("ruleId", value.asInstanceOf[js.Any])

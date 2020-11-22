@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -72,6 +73,15 @@ trait Color4 extends js.Object {
     * @returns true if the rgba values are equal to the given ones
     */
   def equals(otherColor: DeepImmutable[Color4]): Boolean = js.native
+  
+  /**
+    * Update the current color with values stored in an array from the starting index of the given array
+    * @param array defines the source array
+    * @param offset defines an offset in the source array
+    * @returns the current Color4 object
+    */
+  def fromArray(array: DeepImmutable[ArrayLike[Double]]): Color4 = js.native
+  def fromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): Color4 = js.native
   
   /**
     * Defines the green component (between 0 and 1, default is 0)
@@ -182,9 +192,11 @@ trait Color4 extends js.Object {
   
   /**
     * Compute the Color4 hexadecimal code as a string
+    * @param returnAsColor3 defines if the string should only contains RGB values (off by default)
     * @returns a string containing the hexadecimal representation of the Color4 object
     */
   def toHexString(): String = js.native
+  def toHexString(returnAsColor3: Boolean): String = js.native
   
   /**
     * Computes a new Color4 converted from the current one to linear space

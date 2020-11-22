@@ -24,8 +24,13 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.rebassGrid.mod.BoxProps
+import typingsSlinky.rebassGrid.rebassGridStrings.`additions removals`
 import typingsSlinky.rebassGrid.rebassGridStrings.`additions text`
 import typingsSlinky.rebassGrid.rebassGridStrings.`inline`
+import typingsSlinky.rebassGrid.rebassGridStrings.`removals additions`
+import typingsSlinky.rebassGrid.rebassGridStrings.`removals text`
+import typingsSlinky.rebassGrid.rebassGridStrings.`text additions`
+import typingsSlinky.rebassGrid.rebassGridStrings.`text removals`
 import typingsSlinky.rebassGrid.rebassGridStrings.additions
 import typingsSlinky.rebassGrid.rebassGridStrings.all
 import typingsSlinky.rebassGrid.rebassGridStrings.ascending
@@ -111,7 +116,7 @@ object Box {
     @scala.inline
     def alignSelf(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
           RequiredTheme
         ]
     ): this.type = set("alignSelf", value.asInstanceOf[js.Any])
@@ -234,7 +239,9 @@ object Box {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -428,7 +435,7 @@ object Box {
     @scala.inline
     def flex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("flex", value.asInstanceOf[js.Any])
@@ -958,7 +965,7 @@ object Box {
     @scala.inline
     def opacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): this.type = set("opacity", value.asInstanceOf[js.Any])
@@ -978,7 +985,7 @@ object Box {
     @scala.inline
     def order(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
           RequiredTheme
         ]
     ): this.type = set("order", value.asInstanceOf[js.Any])
@@ -1271,7 +1278,7 @@ object Box {
     @scala.inline
     def width(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("width", value.asInstanceOf[js.Any])

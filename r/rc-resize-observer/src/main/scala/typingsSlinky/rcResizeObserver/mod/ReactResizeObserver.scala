@@ -1,7 +1,7 @@
 package typingsSlinky.rcResizeObserver.mod
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.rcResizeObserver.anon.Width
+import typingsSlinky.rcResizeObserver.anon.OffsetHeight
 import typingsSlinky.react.mod.Component
 import typingsSlinky.resizeObserverPolyfill.mod.ResizeObserver
 import typingsSlinky.resizeObserverPolyfill.mod.global.ResizeObserverCallback
@@ -37,5 +37,5 @@ trait ReactResizeObserver
   def setChildNode(node: RefNode): Unit = js.native
   
   @JSName("state")
-  var state_ReactResizeObserver: Width = js.native
+  var state_ReactResizeObserver: OffsetHeight = js.native
 }

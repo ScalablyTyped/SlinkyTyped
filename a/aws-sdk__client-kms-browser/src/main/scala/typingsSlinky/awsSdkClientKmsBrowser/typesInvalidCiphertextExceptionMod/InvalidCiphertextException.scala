@@ -3,32 +3,26 @@ package typingsSlinky.awsSdkClientKmsBrowser.typesInvalidCiphertextExceptionMod
 import typingsSlinky.awsSdkClientKmsBrowser.decryptExceptionsUnionMod.DecryptExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.importKeyMaterialExceptionsUnionMod.ImportKeyMaterialExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.reEncryptExceptionsUnionMod.ReEncryptExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidCiphertextExceptionDetails> * / any */ @js.native
 trait InvalidCiphertextException
-  extends ServiceException[InvalidCiphertextExceptionDetails]
-     with DecryptExceptionsUnion
+  extends DecryptExceptionsUnion
      with ImportKeyMaterialExceptionsUnion
      with ReEncryptExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidCiphertextException: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidCiphertextException = js.native
+  var name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidCiphertextException = js.native
 }
 object InvalidCiphertextException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidCiphertextExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidCiphertextException
   ): InvalidCiphertextException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidCiphertextException]
   }
   

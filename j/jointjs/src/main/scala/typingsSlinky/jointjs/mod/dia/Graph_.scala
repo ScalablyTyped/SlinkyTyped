@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("jointjs", "dia.Graph")
 @js.native
 class Graph_ ()
-  extends Model[js.Any, ModelSetOptions] {
+  extends Model[js.Any, ModelSetOptions, js.Object] {
   def this(attributes: js.Any) = this()
   def this(attributes: js.UndefOr[scala.Nothing], opt: CellModel) = this()
   def this(attributes: js.Any, opt: CellModel) = this()

@@ -11,6 +11,10 @@ trait Features extends js.Object {
   
   val preview: js.UndefOr[Boolean] = js.native
   
+  val stockImages: js.UndefOr[Boolean] = js.native
+  
+  val textEditor: js.UndefOr[TextEditor] = js.native
+  
   val undoRedo: js.UndefOr[Boolean] = js.native
 }
 object Features {
@@ -47,6 +51,18 @@ object Features {
     
     @scala.inline
     def deletePreview: Self = this.set("preview", js.undefined)
+    
+    @scala.inline
+    def setStockImages(value: Boolean): Self = this.set("stockImages", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStockImages: Self = this.set("stockImages", js.undefined)
+    
+    @scala.inline
+    def setTextEditor(value: TextEditor): Self = this.set("textEditor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTextEditor: Self = this.set("textEditor", js.undefined)
     
     @scala.inline
     def setUndoRedo(value: Boolean): Self = this.set("undoRedo", value.asInstanceOf[js.Any])

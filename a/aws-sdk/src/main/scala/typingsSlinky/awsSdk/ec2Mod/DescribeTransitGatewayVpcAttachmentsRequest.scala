@@ -13,7 +13,7 @@ trait DescribeTransitGatewayVpcAttachmentsRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * One or more filters. The possible values are:    state - The state of the attachment (available | deleted | deleting | failed | modifying | pendingAcceptance | pending | rollingBack | rejected | rejecting).    transit-gateway-attachment-id - The ID of the attachment.    transit-gateway-id - The ID of the transit gateway.    vpc-id - The ID of the VPC.  
+    * One or more filters. The possible values are:    state - The state of the attachment. Valid values are available | deleted | deleting | failed | failing | initiatingRequest | modifying | pendingAcceptance | pending | rollingBack | rejected | rejecting.    transit-gateway-attachment-id - The ID of the attachment.    transit-gateway-id - The ID of the transit gateway.    vpc-id - The ID of the VPC.  
     */
   var Filters: js.UndefOr[FilterList] = js.native
   

@@ -9,7 +9,7 @@ trait GridTemplateRowsProps[TLength] extends js.Object {
   
   val gridTemplateRows: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateRowsProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateRows<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object GridTemplateRowsProps {
     }
     
     @scala.inline
+    def setGridTemplateRowsVarargs(value: js.Any*): Self = this.set("gridTemplateRows", js.Array(value :_*))
+    
+    @scala.inline
     def setGridTemplateRows(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateRowsProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateRows<TLength> */ _
         ]
     ): Self = this.set("gridTemplateRows", value.asInstanceOf[js.Any])
     

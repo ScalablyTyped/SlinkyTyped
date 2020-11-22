@@ -16,7 +16,7 @@ trait ParseMeta extends js.Object {
   var delimiter: String = js.native
   
    // Whether process was aborted
-  var fields: js.Array[String] = js.native
+  var fields: js.UndefOr[js.Array[String]] = js.native
   
    // Delimiter used
   var linebreak: String = js.native
@@ -27,15 +27,8 @@ trait ParseMeta extends js.Object {
 object ParseMeta {
   
   @scala.inline
-  def apply(
-    aborted: Boolean,
-    cursor: Double,
-    delimiter: String,
-    fields: js.Array[String],
-    linebreak: String,
-    truncated: Boolean
-  ): ParseMeta = {
-    val __obj = js.Dynamic.literal(aborted = aborted.asInstanceOf[js.Any], cursor = cursor.asInstanceOf[js.Any], delimiter = delimiter.asInstanceOf[js.Any], fields = fields.asInstanceOf[js.Any], linebreak = linebreak.asInstanceOf[js.Any], truncated = truncated.asInstanceOf[js.Any])
+  def apply(aborted: Boolean, cursor: Double, delimiter: String, linebreak: String, truncated: Boolean): ParseMeta = {
+    val __obj = js.Dynamic.literal(aborted = aborted.asInstanceOf[js.Any], cursor = cursor.asInstanceOf[js.Any], delimiter = delimiter.asInstanceOf[js.Any], linebreak = linebreak.asInstanceOf[js.Any], truncated = truncated.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseMeta]
   }
   
@@ -64,15 +57,18 @@ object ParseMeta {
     def setDelimiter(value: String): Self = this.set("delimiter", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setLinebreak(value: String): Self = this.set("linebreak", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTruncated(value: Boolean): Self = this.set("truncated", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setFieldsVarargs(value: String*): Self = this.set("fields", js.Array(value :_*))
     
     @scala.inline
     def setFields(value: js.Array[String]): Self = this.set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLinebreak(value: String): Self = this.set("linebreak", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTruncated(value: Boolean): Self = this.set("truncated", value.asInstanceOf[js.Any])
+    def deleteFields: Self = this.set("fields", js.undefined)
   }
 }

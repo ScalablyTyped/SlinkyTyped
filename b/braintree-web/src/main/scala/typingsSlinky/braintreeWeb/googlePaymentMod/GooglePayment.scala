@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GooglePayment extends js.Object {
   
   def create(options: GoogleMerchantId): Unit = js.native
-  def create(options: GoogleMerchantId, callback: callback): Unit = js.native
+  def create(options: GoogleMerchantId, callback: callback[_]): Unit = js.native
   
   /**
     * Create a configuration object for use in the `loadPaymentData` method.
@@ -196,7 +196,7 @@ trait GooglePayment extends js.Object {
   def create_Promise(options: GoogleMerchantId): js.Promise[GooglePayment] = js.native
   
   def parseResponse(response: js.Any): Unit = js.native
-  def parseResponse(response: js.Any, callback: callback): Unit = js.native
+  def parseResponse(response: js.Any, callback: callback[_]): Unit = js.native
   /**
     * Parse the response from the tokenization.
     * @example with callback

@@ -1,11 +1,14 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty
 import typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.elementsMod.IElement
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructure
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
 import typingsSlinky.mendixmodelsdk.structuresMod.Structure
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import typingsSlinky.mendixmodelsdk.utilsMod.utils.IMap
 import typingsSlinky.mobx.observablevalueMod.IObservableValue
 import scala.scalajs.js
@@ -28,31 +31,36 @@ object localByNameReferencePropertyMod extends js.Object {
   class LocalByNameReferenceProperty[T /* <: INamedElement */] protected () extends AbstractProperty[T | Null, IObservableValue[String | Null]] {
     def this(
       declaredOn: IStructureClass,
-      parent: AbstractElement,
+      parent: AbstractElement[IAbstractModel, Container],
       name: String,
       initialValue: T,
       _targetType: String
     ) = this()
     def this(
       declaredOn: IStructureClass,
-      parent: AbstractElement,
+      parent: AbstractElement[IAbstractModel, Container],
       name: String,
       initialValue: Null,
       _targetType: String
     ) = this()
     
-    def deepCopyInto(clone: Structure): Unit = js.native
+    def deepCopyInto(clone: Structure[IAbstractModel, IContainer | Null]): Unit = js.native
     def deepCopyInto(
-      clone: Structure,
+      clone: Structure[IAbstractModel, IContainer | Null],
       idMap: js.UndefOr[scala.Nothing],
-      unresolvedIdentifierFixers: js.Array[js.Function1[/* idMap */ IMap[Structure], Unit]]
+      unresolvedIdentifierFixers: js.Array[
+          js.Function1[/* idMap */ IMap[Structure[IAbstractModel, IContainer | Null]], Unit]
+        ]
     ): Unit = js.native
-    def deepCopyInto(clone: Structure, idMap: IMap[Structure]): Unit = js.native
+    def deepCopyInto(
+      clone: Structure[IAbstractModel, IContainer | Null],
+      idMap: IMap[Structure[IAbstractModel, IContainer | Null]]
+    ): Unit = js.native
     
     def localName(): String | Null = js.native
     
     @JSName("parent")
-    var parent_LocalByNameReferenceProperty: AbstractElement = js.native
+    var parent_LocalByNameReferenceProperty: AbstractElement[IAbstractModel, Container] = js.native
     
     def set(): Unit = js.native
     def set(newValue: T): Unit = js.native

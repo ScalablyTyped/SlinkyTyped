@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "formatjs__intl-datetimeformat"
-version := "2.3.0-98e863"
+version := "3.0.0-13d1f7"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "formatjs__intl-utils" % "3.8.2-4ab4ad",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-88d6d8")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "formatjs__ecma402-abstract" % "1.5.0-37d0d0",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

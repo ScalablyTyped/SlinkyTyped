@@ -13,7 +13,7 @@ trait UpdateDashboardRequest extends js.Object {
   var clientToken: js.UndefOr[ClientToken] = js.native
   
   /**
-    * The new dashboard definition, as specified in a JSON literal. For detailed information, see Creating Dashboards (CLI) in the AWS IoT SiteWise User Guide.
+    * The new dashboard definition, as specified in a JSON literal. For detailed information, see Creating dashboards (CLI) in the AWS IoT SiteWise User Guide.
     */
   var dashboardDefinition: DashboardDefinition = js.native
   

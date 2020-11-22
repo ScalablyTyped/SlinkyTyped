@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RecognizeCelebritiesResponse extends js.Object {
   
   /**
-    * Details about each celebrity found in the image. Amazon Rekognition can detect a maximum of 15 celebrities in an image.
+    * Details about each celebrity found in the image. Amazon Rekognition can detect a maximum of 64 celebrities in an image.
     */
   var CelebrityFaces: js.UndefOr[CelebrityList] = js.native
   

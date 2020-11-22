@@ -10,21 +10,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PrintTemplateExportOptions extends Object {
   
   /**
-    * Resolution in dots per inch. If modified when `layout = 'map-only'`, the `width` and `height` will also need to be modified proportional to the `dpi` change. Default value is 96.
+    * Resolution in dots per inch.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-PrintTemplate.html#exportOptions)
     */
   var dpi: js.UndefOr[Double] = js.native
   
   /**
-    * Map height. Default value is 1100.
+    * Map height.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-PrintTemplate.html#exportOptions)
     */
   var height: js.UndefOr[Double] = js.native
   
   /**
-    * Map width. Default value is 800.
+    * Map width.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-PrintTemplate.html#exportOptions)
     */

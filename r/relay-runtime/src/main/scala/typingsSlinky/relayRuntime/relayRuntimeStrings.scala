@@ -3,6 +3,9 @@ package typingsSlinky.relayRuntime
 import typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod.MutationTypes
 import typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod.RangeOperations
 import typingsSlinky.relayRuntime.relayRecordStateMod.RecordState
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.FetchPolicy
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.FetchQueryFetchPolicy
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.RenderPolicy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -145,6 +148,9 @@ object relayRuntimeStrings {
   def endCursor: endCursor = "endCursor".asInstanceOf[endCursor]
   
   @scala.inline
+  def entrypointDotrootDotconsume: entrypointDotrootDotconsume = "entrypoint.root.consume".asInstanceOf[entrypointDotrootDotconsume]
+  
+  @scala.inline
   def error_ : error_ = "error".asInstanceOf[error_]
   
   @scala.inline
@@ -166,6 +172,9 @@ object relayRuntimeStrings {
   def executeDotunsubscribe: executeDotunsubscribe = "execute.unsubscribe".asInstanceOf[executeDotunsubscribe]
   
   @scala.inline
+  def full: full = "full".asInstanceOf[full]
+  
+  @scala.inline
   def hasNextPage: hasNextPage = "hasNextPage".asInstanceOf[hasNextPage]
   
   @scala.inline
@@ -178,10 +187,22 @@ object relayRuntimeStrings {
   def missing: missing = "missing".asInstanceOf[missing]
   
   @scala.inline
+  def missing_fieldDotlog: missing_fieldDotlog = "missing_field.log".asInstanceOf[missing_fieldDotlog]
+  
+  @scala.inline
+  def missing_fieldDotthrow: missing_fieldDotthrow = "missing_field.throw".asInstanceOf[missing_fieldDotthrow]
+  
+  @scala.inline
+  def `network-only`: `network-only` = "network-only".asInstanceOf[`network-only`]
+  
+  @scala.inline
   def node: node = "node".asInstanceOf[node]
   
   @scala.inline
   def pageInfo_ : pageInfo_ = "pageInfo".asInstanceOf[pageInfo_]
+  
+  @scala.inline
+  def partial: partial = "partial".asInstanceOf[partial]
   
   @scala.inline
   def pluralLinked: pluralLinked = "pluralLinked".asInstanceOf[pluralLinked]
@@ -193,6 +214,9 @@ object relayRuntimeStrings {
   def queryresourceDotfetch: queryresourceDotfetch = "queryresource.fetch".asInstanceOf[queryresourceDotfetch]
   
   @scala.inline
+  def queryresourceDotretain: queryresourceDotretain = "queryresource.retain".asInstanceOf[queryresourceDotretain]
+  
+  @scala.inline
   def scalar: scalar = "scalar".asInstanceOf[scalar]
   
   @scala.inline
@@ -200,6 +224,33 @@ object relayRuntimeStrings {
   
   @scala.inline
   def startCursor: startCursor = "startCursor".asInstanceOf[startCursor]
+  
+  @scala.inline
+  def `store-and-network`: `store-and-network` = "store-and-network".asInstanceOf[`store-and-network`]
+  
+  @scala.inline
+  def `store-only`: `store-only` = "store-only".asInstanceOf[`store-only`]
+  
+  @scala.inline
+  def `store-or-network`: `store-or-network` = "store-or-network".asInstanceOf[`store-or-network`]
+  
+  @scala.inline
+  def storeDotgc: storeDotgc = "store.gc".asInstanceOf[storeDotgc]
+  
+  @scala.inline
+  def storeDotnotifyDotcomplete: storeDotnotifyDotcomplete = "store.notify.complete".asInstanceOf[storeDotnotifyDotcomplete]
+  
+  @scala.inline
+  def storeDotnotifyDotstart: storeDotnotifyDotstart = "store.notify.start".asInstanceOf[storeDotnotifyDotstart]
+  
+  @scala.inline
+  def storeDotpublish: storeDotpublish = "store.publish".asInstanceOf[storeDotpublish]
+  
+  @scala.inline
+  def storeDotrestore: storeDotrestore = "store.restore".asInstanceOf[storeDotrestore]
+  
+  @scala.inline
+  def storeDotsnapshot: storeDotsnapshot = "store.snapshot".asInstanceOf[storeDotsnapshot]
   
   @scala.inline
   def stream_ : stream_ = "stream".asInstanceOf[stream_]
@@ -340,6 +391,9 @@ object relayRuntimeStrings {
   sealed trait endCursor extends js.Object
   
   @js.native
+  sealed trait entrypointDotrootDotconsume extends js.Object
+  
+  @js.native
   sealed trait error_ extends js.Object
   
   @js.native
@@ -361,6 +415,9 @@ object relayRuntimeStrings {
   sealed trait executeDotunsubscribe extends js.Object
   
   @js.native
+  sealed trait full extends RenderPolicy
+  
+  @js.native
   sealed trait hasNextPage extends js.Object
   
   @js.native
@@ -373,10 +430,24 @@ object relayRuntimeStrings {
   sealed trait missing extends js.Object
   
   @js.native
+  sealed trait missing_fieldDotlog extends js.Object
+  
+  @js.native
+  sealed trait missing_fieldDotthrow extends js.Object
+  
+  @js.native
+  sealed trait `network-only`
+    extends FetchPolicy
+       with FetchQueryFetchPolicy
+  
+  @js.native
   sealed trait node extends js.Object
   
   @js.native
   sealed trait pageInfo_ extends js.Object
+  
+  @js.native
+  sealed trait partial extends RenderPolicy
   
   @js.native
   sealed trait pluralLinked extends js.Object
@@ -388,6 +459,9 @@ object relayRuntimeStrings {
   sealed trait queryresourceDotfetch extends js.Object
   
   @js.native
+  sealed trait queryresourceDotretain extends js.Object
+  
+  @js.native
   sealed trait scalar extends js.Object
   
   @js.native
@@ -395,6 +469,35 @@ object relayRuntimeStrings {
   
   @js.native
   sealed trait startCursor extends js.Object
+  
+  @js.native
+  sealed trait `store-and-network` extends FetchPolicy
+  
+  @js.native
+  sealed trait `store-only` extends FetchPolicy
+  
+  @js.native
+  sealed trait `store-or-network`
+    extends FetchPolicy
+       with FetchQueryFetchPolicy
+  
+  @js.native
+  sealed trait storeDotgc extends js.Object
+  
+  @js.native
+  sealed trait storeDotnotifyDotcomplete extends js.Object
+  
+  @js.native
+  sealed trait storeDotnotifyDotstart extends js.Object
+  
+  @js.native
+  sealed trait storeDotpublish extends js.Object
+  
+  @js.native
+  sealed trait storeDotrestore extends js.Object
+  
+  @js.native
+  sealed trait storeDotsnapshot extends js.Object
   
   @js.native
   sealed trait stream_ extends js.Object

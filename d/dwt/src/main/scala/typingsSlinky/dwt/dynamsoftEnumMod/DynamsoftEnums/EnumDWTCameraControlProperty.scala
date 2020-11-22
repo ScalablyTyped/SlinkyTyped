@@ -17,7 +17,7 @@ object EnumDWTCameraControlProperty extends js.Object {
   
   /**
     * Specifies the exposure setting, in log base 2 seconds. In other words, for values less than zero, the exposure time is 1/2^n seconds,
-    * and for values zero or above, the exposure time is 2^n seconds. For example:
+    * and for values zero or above, the exposure time is 2^n seconds. For example=
     * Value    Seconds
     * -3    1/8
     * -2    1/4

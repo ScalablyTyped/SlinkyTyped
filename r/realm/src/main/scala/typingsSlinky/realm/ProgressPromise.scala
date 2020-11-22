@@ -1,6 +1,6 @@
 package typingsSlinky.realm
 
-import typingsSlinky.realm.Realm.Sync.ProgressNotificationCallback
+import typingsSlinky.realm.Realm.ProgressNotificationCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

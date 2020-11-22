@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VirtualRouterSpec extends js.Object {
   
   /**
-    * The listeners that the virtual router is expected to receive inbound traffic from. You
-    can specify one listener.
+    * The listeners that the virtual router is expected to receive inbound traffic from. You can specify one listener.
     */
   var listeners: js.UndefOr[VirtualRouterListeners] = js.native
 }

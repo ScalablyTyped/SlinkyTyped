@@ -11,11 +11,11 @@ trait TaggedTemplateExpression
      with HasTypeArguments {
   
   @JSName("kind")
-  var kind_TaggedTemplateExpression: typingsSlinky.typescript.mod.SyntaxKind.TaggedTemplateExpression = js.native
+  val kind_TaggedTemplateExpression: typingsSlinky.typescript.mod.SyntaxKind.TaggedTemplateExpression = js.native
   
-  var tag: LeftHandSideExpression = js.native
+  val tag: LeftHandSideExpression = js.native
   
-  var template: TemplateLiteral = js.native
+  val template: TemplateLiteral = js.native
   
-  var typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
+  val typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
 }

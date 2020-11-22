@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RolePermission extends js.Object {
   
   // Actions
-  var resourceActions: js.UndefOr[js.Array[ResourceAction]] = js.native
+  var resourceActions: js.UndefOr[NullableOption[js.Array[ResourceAction]]] = js.native
 }
 object RolePermission {
   
@@ -37,9 +37,12 @@ object RolePermission {
     def setResourceActionsVarargs(value: ResourceAction*): Self = this.set("resourceActions", js.Array(value :_*))
     
     @scala.inline
-    def setResourceActions(value: js.Array[ResourceAction]): Self = this.set("resourceActions", value.asInstanceOf[js.Any])
+    def setResourceActions(value: NullableOption[js.Array[ResourceAction]]): Self = this.set("resourceActions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResourceActions: Self = this.set("resourceActions", js.undefined)
+    
+    @scala.inline
+    def setResourceActionsNull: Self = this.set("resourceActions", null)
   }
 }

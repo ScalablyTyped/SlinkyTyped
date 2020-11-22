@@ -1,5 +1,6 @@
 package typingsSlinky.styledComponents
 
+import typingsSlinky.styledComponents.styledComponentsMod.IntrinsicElementsKeys
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -547,115 +548,115 @@ object styledComponentsStrings {
   def webview: webview = "webview".asInstanceOf[webview]
   
   @js.native
-  sealed trait a extends js.Object
+  sealed trait a extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait abbr extends js.Object
+  sealed trait abbr extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait address extends js.Object
+  sealed trait address extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait animate extends js.Object
+  sealed trait animate extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait animateMotion extends js.Object
+  sealed trait animateMotion extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait animateTransform extends js.Object
+  sealed trait animateTransform extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait area extends js.Object
+  sealed trait area extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait article extends js.Object
+  sealed trait article extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait aside extends js.Object
+  sealed trait aside extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait audio extends js.Object
+  sealed trait audio extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait b extends js.Object
+  sealed trait b extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait base extends js.Object
+  sealed trait base extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait bdi extends js.Object
+  sealed trait bdi extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait bdo extends js.Object
+  sealed trait bdo extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait big extends js.Object
+  sealed trait big extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait blockquote extends js.Object
+  sealed trait blockquote extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait body extends js.Object
+  sealed trait body extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait br extends js.Object
+  sealed trait br extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait button extends js.Object
+  sealed trait button extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait canvas extends js.Object
+  sealed trait canvas extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait caption extends js.Object
+  sealed trait caption extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait circle extends js.Object
+  sealed trait circle extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait cite extends js.Object
+  sealed trait cite extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait clipPath extends js.Object
+  sealed trait clipPath extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait code extends js.Object
+  sealed trait code extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait col extends js.Object
+  sealed trait col extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait colgroup extends js.Object
+  sealed trait colgroup extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait data extends js.Object
+  sealed trait data extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait datalist extends js.Object
+  sealed trait datalist extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait dd extends js.Object
+  sealed trait dd extends IntrinsicElementsKeys
   
   @js.native
   sealed trait defaultProps extends js.Object
   
   @js.native
-  sealed trait defs extends js.Object
+  sealed trait defs extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait del extends js.Object
+  sealed trait del extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait desc extends js.Object
+  sealed trait desc extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait details extends js.Object
+  sealed trait details extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait dfn extends js.Object
+  sealed trait dfn extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait dialog extends js.Object
+  sealed trait dialog extends IntrinsicElementsKeys
   
   @js.native
   sealed trait disk extends js.Object
@@ -664,425 +665,425 @@ object styledComponentsStrings {
   sealed trait diskSlashmemory extends js.Object
   
   @js.native
-  sealed trait div extends js.Object
+  sealed trait div extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait dl extends js.Object
+  sealed trait dl extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait dt extends js.Object
+  sealed trait dt extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait ellipse extends js.Object
+  sealed trait ellipse extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait em extends js.Object
+  sealed trait em extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait embed extends js.Object
+  sealed trait embed extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feBlend extends js.Object
+  sealed trait feBlend extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feColorMatrix extends js.Object
+  sealed trait feColorMatrix extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feComponentTransfer extends js.Object
+  sealed trait feComponentTransfer extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feComposite extends js.Object
+  sealed trait feComposite extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feConvolveMatrix extends js.Object
+  sealed trait feConvolveMatrix extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feDiffuseLighting extends js.Object
+  sealed trait feDiffuseLighting extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feDisplacementMap extends js.Object
+  sealed trait feDisplacementMap extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feDistantLight extends js.Object
+  sealed trait feDistantLight extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feDropShadow extends js.Object
+  sealed trait feDropShadow extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feFlood extends js.Object
+  sealed trait feFlood extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feFuncA extends js.Object
+  sealed trait feFuncA extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feFuncB extends js.Object
+  sealed trait feFuncB extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feFuncG extends js.Object
+  sealed trait feFuncG extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feFuncR extends js.Object
+  sealed trait feFuncR extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feGaussianBlur extends js.Object
+  sealed trait feGaussianBlur extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feImage extends js.Object
+  sealed trait feImage extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feMerge extends js.Object
+  sealed trait feMerge extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feMergeNode extends js.Object
+  sealed trait feMergeNode extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feMorphology extends js.Object
+  sealed trait feMorphology extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feOffset extends js.Object
+  sealed trait feOffset extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait fePointLight extends js.Object
+  sealed trait fePointLight extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feSpecularLighting extends js.Object
+  sealed trait feSpecularLighting extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feSpotLight extends js.Object
+  sealed trait feSpotLight extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feTile extends js.Object
+  sealed trait feTile extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait feTurbulence extends js.Object
+  sealed trait feTurbulence extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait fieldset extends js.Object
+  sealed trait fieldset extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait figcaption extends js.Object
+  sealed trait figcaption extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait figure extends js.Object
+  sealed trait figure extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait filter extends js.Object
+  sealed trait filter extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait footer extends js.Object
+  sealed trait footer extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait foreignObject extends js.Object
+  sealed trait foreignObject extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait form extends js.Object
+  sealed trait form extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait g extends js.Object
+  sealed trait g extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait h1 extends js.Object
+  sealed trait h1 extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait h2 extends js.Object
+  sealed trait h2 extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait h3 extends js.Object
+  sealed trait h3 extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait h4 extends js.Object
+  sealed trait h4 extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait h5 extends js.Object
+  sealed trait h5 extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait h6 extends js.Object
+  sealed trait h6 extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait head extends js.Object
+  sealed trait head extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait header extends js.Object
+  sealed trait header extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait hgroup extends js.Object
+  sealed trait hgroup extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait hr extends js.Object
+  sealed trait hr extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait html extends js.Object
+  sealed trait html extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait i extends js.Object
+  sealed trait i extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait iframe extends js.Object
+  sealed trait iframe extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait image extends js.Object
+  sealed trait image extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait img extends js.Object
+  sealed trait img extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait input extends js.Object
+  sealed trait input extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait ins extends js.Object
+  sealed trait ins extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait kbd extends js.Object
+  sealed trait kbd extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait keygen extends js.Object
+  sealed trait keygen extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait label extends js.Object
+  sealed trait label extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait legend extends js.Object
+  sealed trait legend extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait li extends js.Object
+  sealed trait li extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait line extends js.Object
+  sealed trait line extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait linearGradient extends js.Object
+  sealed trait linearGradient extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait link extends js.Object
+  sealed trait link extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait main extends js.Object
+  sealed trait main extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait map extends js.Object
+  sealed trait map extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait mark extends js.Object
+  sealed trait mark extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait marker extends js.Object
+  sealed trait marker extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait mask extends js.Object
+  sealed trait mask extends IntrinsicElementsKeys
   
   @js.native
   sealed trait memory extends js.Object
   
   @js.native
-  sealed trait menu extends js.Object
+  sealed trait menu extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait menuitem extends js.Object
+  sealed trait menuitem extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait meta extends js.Object
+  sealed trait meta extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait metadata extends js.Object
+  sealed trait metadata extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait meter extends js.Object
+  sealed trait meter extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait mpath extends js.Object
+  sealed trait mpath extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait nav extends js.Object
+  sealed trait nav extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait noindex extends js.Object
+  sealed trait noindex extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait noscript extends js.Object
+  sealed trait noscript extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait `object` extends js.Object
+  sealed trait `object` extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait ol extends js.Object
+  sealed trait ol extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait optgroup extends js.Object
+  sealed trait optgroup extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait option extends js.Object
+  sealed trait option extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait output extends js.Object
+  sealed trait output extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait p extends js.Object
+  sealed trait p extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait param extends js.Object
+  sealed trait param extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait path extends js.Object
+  sealed trait path extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait pattern extends js.Object
+  sealed trait pattern extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait picture extends js.Object
+  sealed trait picture extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait polygon extends js.Object
+  sealed trait polygon extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait polyline extends js.Object
+  sealed trait polyline extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait pre extends js.Object
+  sealed trait pre extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait progress extends js.Object
+  sealed trait progress extends IntrinsicElementsKeys
   
   @js.native
   sealed trait propTypes extends js.Object
   
   @js.native
-  sealed trait q extends js.Object
+  sealed trait q extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait radialGradient extends js.Object
+  sealed trait radialGradient extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait rect extends js.Object
+  sealed trait rect extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait rp extends js.Object
+  sealed trait rp extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait rt extends js.Object
+  sealed trait rt extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait ruby extends js.Object
+  sealed trait ruby extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait s extends js.Object
+  sealed trait s extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait samp extends js.Object
+  sealed trait samp extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait script extends js.Object
+  sealed trait script extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait section extends js.Object
+  sealed trait section extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait select extends js.Object
+  sealed trait select extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait slot extends js.Object
+  sealed trait slot extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait small extends js.Object
+  sealed trait small extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait source extends js.Object
+  sealed trait source extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait span extends js.Object
+  sealed trait span extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait stop extends js.Object
+  sealed trait stop extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait strong extends js.Object
+  sealed trait strong extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait style extends js.Object
+  sealed trait style extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait sub extends js.Object
+  sealed trait sub extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait summary extends js.Object
+  sealed trait summary extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait sup extends js.Object
+  sealed trait sup extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait svg extends js.Object
+  sealed trait svg extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait switch extends js.Object
+  sealed trait switch extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait symbol extends js.Object
+  sealed trait symbol extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait table extends js.Object
+  sealed trait table extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait tbody extends js.Object
+  sealed trait tbody extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait td extends js.Object
+  sealed trait td extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait template extends js.Object
+  sealed trait template extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait text extends js.Object
+  sealed trait text extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait textPath extends js.Object
+  sealed trait textPath extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait textarea extends js.Object
+  sealed trait textarea extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait tfoot extends js.Object
+  sealed trait tfoot extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait th extends js.Object
+  sealed trait th extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait thead extends js.Object
+  sealed trait thead extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait time extends js.Object
+  sealed trait time extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait title extends js.Object
+  sealed trait title extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait tr extends js.Object
+  sealed trait tr extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait track extends js.Object
+  sealed trait track extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait tspan extends js.Object
+  sealed trait tspan extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait u extends js.Object
+  sealed trait u extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait ul extends js.Object
+  sealed trait ul extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait use extends js.Object
+  sealed trait use extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait `var` extends js.Object
+  sealed trait `var` extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait video extends js.Object
+  sealed trait video extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait view extends js.Object
+  sealed trait view extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait wbr extends js.Object
+  sealed trait wbr extends IntrinsicElementsKeys
   
   @js.native
-  sealed trait webview extends js.Object
+  sealed trait webview extends IntrinsicElementsKeys
 }

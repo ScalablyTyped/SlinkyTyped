@@ -1,8 +1,6 @@
 package typingsSlinky.mendixmodelsdk.workflowsMod.workflows
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
-import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.IPage
@@ -17,7 +15,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
   *
-  * In version 8.10.0: introduced
+  * @ignore
+  *
+  * In version 8.15.0: introduced
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -28,7 +28,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IModuleDocument because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument because Already inherited
-- typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IWorkflow because var conflicts: containerAsFolderBase, id, isLoaded, model, name, qualifiedName, structureTypeName, unit. Inlined contextEntity, contextEntityQualifiedName, activities */ @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.Workflow")
+- typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IWorkflow because var conflicts: containerAsFolderBase, id, isLoaded, model, name, qualifiedName, structureTypeName, unit. Inlined title, contextEntity, contextEntityQualifiedName, overviewPage, overviewPageQualifiedName, flow */ @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.Workflow")
 @js.native
 class Workflow protected () extends Document {
   def this(
@@ -38,16 +38,6 @@ class Workflow protected () extends Document {
     isPartial: Boolean,
     container: IFolderBase
   ) = this()
-  
-  /**
-    * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
-    */
-  def activities: IList[WorkflowActivity] = js.native
-  /**
-    * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
-    */
-  @JSName("activities")
-  val activities_FWorkflow: IList[IWorkflowActivity] = js.native
   
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MWorkflow: FolderBase = js.native
@@ -66,30 +56,45 @@ class Workflow protected () extends Document {
   def description_=(newValue: String): Unit = js.native
   
   /**
-    * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    * The value of this property is conceptually of type microflowExpressions.MicroflowExpression.
     */
-  def flows: IList[Flow] = js.native
-  
-  @JSName("model")
-  var model_FWorkflow: IModel = js.native
+  def dueDate: String = js.native
+  def dueDate_=(newValue: String): Unit = js.native
   
   /**
-    * In version 8.11.0: introduced
+    * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
+  def flow: Flow = js.native
+  def flow_=(newValue: Flow): Unit = js.native
+  /**
+    * This property is required and cannot be set to null.
+    *
+    * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
+    */
+  @JSName("flow")
+  val flow_FWorkflow: IFlow = js.native
+  
   def overviewPage: IPage | Null = js.native
   
   def overviewPageQualifiedName: String | Null = js.native
+  @JSName("overviewPageQualifiedName")
+  val overviewPageQualifiedName_FWorkflow: String | Null = js.native
   
   def overviewPage_=(newValue: IPage | Null): Unit = js.native
+  @JSName("overviewPage")
+  val overviewPage_FWorkflow: IPage | Null = js.native
   
-  /**
-    * In version 8.11.0: introduced
-    */
   def subject: StringTemplate = js.native
   def subject_=(newValue: StringTemplate): Unit = js.native
   
   def title: String = js.native
   def title_=(newValue: String): Unit = js.native
+  @JSName("title")
+  val title_FWorkflow: String = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.Workflow")

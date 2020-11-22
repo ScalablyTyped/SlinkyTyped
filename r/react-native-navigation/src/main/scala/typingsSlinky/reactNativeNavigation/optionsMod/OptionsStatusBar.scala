@@ -10,16 +10,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OptionsStatusBar extends js.Object {
   
   /**
+    * Animate StatusBar style changes.
+    * #### (iOS specific)
+    */
+  var animated: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Set the background color of the status bar
     * #### (Android specific)
     */
   var backgroundColor: js.UndefOr[Color] = js.native
   
   /**
+    * Blur content beneath the StatusBar.
+    * #### (iOS specific)
+    */
+  var blur: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Draw screen behind the status bar
     * #### (Android specific)
     */
   var drawBehind: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Automatically hide the StatusBar when the TopBar hides.
+    * #### (iOS specific)
+    */
+  var hideWithTopBar: js.UndefOr[Boolean] = js.native
   
   /**
     * Set the text color of the status bar
@@ -63,16 +81,34 @@ object OptionsStatusBar {
     }
     
     @scala.inline
+    def setAnimated(value: Boolean): Self = this.set("animated", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnimated: Self = this.set("animated", js.undefined)
+    
+    @scala.inline
     def setBackgroundColor(value: Color): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
     
     @scala.inline
+    def setBlur(value: Boolean): Self = this.set("blur", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBlur: Self = this.set("blur", js.undefined)
+    
+    @scala.inline
     def setDrawBehind(value: Boolean): Self = this.set("drawBehind", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDrawBehind: Self = this.set("drawBehind", js.undefined)
+    
+    @scala.inline
+    def setHideWithTopBar(value: Boolean): Self = this.set("hideWithTopBar", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHideWithTopBar: Self = this.set("hideWithTopBar", js.undefined)
     
     @scala.inline
     def setStyle(value: light | dark): Self = this.set("style", value.asInstanceOf[js.Any])

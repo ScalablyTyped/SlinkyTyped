@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.integrationMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.outputMod.apigatewayv2.IntegrationTlsConfig
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -29,7 +30,7 @@ class Integration protected () extends CustomResource {
   val apiId: Output_[String] = js.native
   
   /**
-    * The ID of the VPC link for a private integration. Supported only for HTTP APIs.
+    * The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
     */
   val connectionId: Output_[js.UndefOr[String]] = js.native
   
@@ -64,6 +65,11 @@ class Integration protected () extends CustomResource {
   val integrationResponseSelectionExpression: Output_[String] = js.native
   
   /**
+    * Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integrationType` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
+    */
+  val integrationSubtype: Output_[js.UndefOr[String]] = js.native
+  
+  /**
     * The integration type of an integration.
     * Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
     */
@@ -87,6 +93,12 @@ class Integration protected () extends CustomResource {
   val payloadFormatVersion: Output_[js.UndefOr[String]] = js.native
   
   /**
+    * A key-value map specifying request parameters that are passed from the method request to the backend.
+    * Supported only for WebSocket APIs.
+    */
+  val requestParameters: Output_[js.UndefOr[StringDictionary[String]]] = js.native
+  
+  /**
     * A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
     */
   val requestTemplates: Output_[js.UndefOr[StringDictionary[String]]] = js.native
@@ -96,10 +108,12 @@ class Integration protected () extends CustomResource {
     */
   val templateSelectionExpression: Output_[js.UndefOr[String]] = js.native
   
+  val timeoutMilliseconds: Output_[Double] = js.native
+  
   /**
-    * Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds or 29 seconds.
+    * The TLS configuration for a private integration. Supported only for HTTP APIs.
     */
-  val timeoutMilliseconds: Output_[js.UndefOr[Double]] = js.native
+  val tlsConfig: Output_[js.UndefOr[IntegrationTlsConfig]] = js.native
 }
 /* static members */
 @JSImport("@pulumi/aws/apigatewayv2/integration", "Integration")

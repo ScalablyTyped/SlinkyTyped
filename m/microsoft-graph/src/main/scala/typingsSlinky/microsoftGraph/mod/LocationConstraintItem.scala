@@ -12,7 +12,7 @@ trait LocationConstraintItem extends Location {
     * false and the specified resource is busy, findMeetingTimes returns the resource best ranked in the user's cache without
     * checking if it's free. Default is true.
     */
-  var resolveAvailability: js.UndefOr[Boolean] = js.native
+  var resolveAvailability: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object LocationConstraintItem {
   
@@ -38,9 +38,12 @@ object LocationConstraintItem {
     }
     
     @scala.inline
-    def setResolveAvailability(value: Boolean): Self = this.set("resolveAvailability", value.asInstanceOf[js.Any])
+    def setResolveAvailability(value: NullableOption[Boolean]): Self = this.set("resolveAvailability", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResolveAvailability: Self = this.set("resolveAvailability", js.undefined)
+    
+    @scala.inline
+    def setResolveAvailabilityNull: Self = this.set("resolveAvailability", null)
   }
 }

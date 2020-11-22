@@ -1,6 +1,5 @@
 package typingsSlinky.officeUiFabricReact.anon
 
-import typingsSlinky.officeUiFabricReact.imageTypesMod.ImageFit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,15 +9,13 @@ trait Height extends js.Object {
   
   var height: Double = js.native
   
-  var imageFit: ImageFit = js.native
-  
   var width: Double = js.native
 }
 object Height {
   
   @scala.inline
-  def apply(height: Double, imageFit: ImageFit, width: Double): Height = {
-    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], imageFit = imageFit.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+  def apply(height: Double, width: Double): Height = {
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[Height]
   }
   
@@ -39,9 +36,6 @@ object Height {
     
     @scala.inline
     def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setImageFit(value: ImageFit): Self = this.set("imageFit", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])

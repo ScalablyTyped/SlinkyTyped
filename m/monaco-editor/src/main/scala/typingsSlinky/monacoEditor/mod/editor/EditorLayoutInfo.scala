@@ -47,6 +47,10 @@ trait EditorLayoutInfo extends js.Object {
     */
   val horizontalScrollbarHeight: Double = js.native
   
+  val isViewportWrapping: Boolean = js.native
+  
+  val isWordWrapMinified: Boolean = js.native
+  
   /**
     * Left position for the line numbers.
     */
@@ -58,24 +62,14 @@ trait EditorLayoutInfo extends js.Object {
   val lineNumbersWidth: Double = js.native
   
   /**
-    * The position for the minimap
+    * Layout information for the minimap
     */
-  val minimapLeft: Double = js.native
-  
-  /**
-    * The width of the minimap
-    */
-  val minimapWidth: Double = js.native
+  val minimap: EditorMinimapLayoutInfo = js.native
   
   /**
     * The position of the overview ruler.
     */
   val overviewRuler: OverviewRulerPosition = js.native
-  
-  /**
-    * Minimap render type
-    */
-  val renderMinimap: RenderMinimap = js.native
   
   /**
     * The width of the vertical scrollbar.
@@ -91,6 +85,8 @@ trait EditorLayoutInfo extends js.Object {
     * Full editor width.
     */
   val width: Double = js.native
+  
+  val wrappingColumn: Double = js.native
 }
 object EditorLayoutInfo {
   
@@ -104,17 +100,18 @@ object EditorLayoutInfo {
     glyphMarginWidth: Double,
     height: Double,
     horizontalScrollbarHeight: Double,
+    isViewportWrapping: Boolean,
+    isWordWrapMinified: Boolean,
     lineNumbersLeft: Double,
     lineNumbersWidth: Double,
-    minimapLeft: Double,
-    minimapWidth: Double,
+    minimap: EditorMinimapLayoutInfo,
     overviewRuler: OverviewRulerPosition,
-    renderMinimap: RenderMinimap,
     verticalScrollbarWidth: Double,
     viewportColumn: Double,
-    width: Double
+    width: Double,
+    wrappingColumn: Double
   ): EditorLayoutInfo = {
-    val __obj = js.Dynamic.literal(contentLeft = contentLeft.asInstanceOf[js.Any], contentWidth = contentWidth.asInstanceOf[js.Any], decorationsLeft = decorationsLeft.asInstanceOf[js.Any], decorationsWidth = decorationsWidth.asInstanceOf[js.Any], glyphMarginLeft = glyphMarginLeft.asInstanceOf[js.Any], glyphMarginWidth = glyphMarginWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], horizontalScrollbarHeight = horizontalScrollbarHeight.asInstanceOf[js.Any], lineNumbersLeft = lineNumbersLeft.asInstanceOf[js.Any], lineNumbersWidth = lineNumbersWidth.asInstanceOf[js.Any], minimapLeft = minimapLeft.asInstanceOf[js.Any], minimapWidth = minimapWidth.asInstanceOf[js.Any], overviewRuler = overviewRuler.asInstanceOf[js.Any], renderMinimap = renderMinimap.asInstanceOf[js.Any], verticalScrollbarWidth = verticalScrollbarWidth.asInstanceOf[js.Any], viewportColumn = viewportColumn.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(contentLeft = contentLeft.asInstanceOf[js.Any], contentWidth = contentWidth.asInstanceOf[js.Any], decorationsLeft = decorationsLeft.asInstanceOf[js.Any], decorationsWidth = decorationsWidth.asInstanceOf[js.Any], glyphMarginLeft = glyphMarginLeft.asInstanceOf[js.Any], glyphMarginWidth = glyphMarginWidth.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], horizontalScrollbarHeight = horizontalScrollbarHeight.asInstanceOf[js.Any], isViewportWrapping = isViewportWrapping.asInstanceOf[js.Any], isWordWrapMinified = isWordWrapMinified.asInstanceOf[js.Any], lineNumbersLeft = lineNumbersLeft.asInstanceOf[js.Any], lineNumbersWidth = lineNumbersWidth.asInstanceOf[js.Any], minimap = minimap.asInstanceOf[js.Any], overviewRuler = overviewRuler.asInstanceOf[js.Any], verticalScrollbarWidth = verticalScrollbarWidth.asInstanceOf[js.Any], viewportColumn = viewportColumn.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], wrappingColumn = wrappingColumn.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorLayoutInfo]
   }
   
@@ -158,22 +155,22 @@ object EditorLayoutInfo {
     def setHorizontalScrollbarHeight(value: Double): Self = this.set("horizontalScrollbarHeight", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setIsViewportWrapping(value: Boolean): Self = this.set("isViewportWrapping", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIsWordWrapMinified(value: Boolean): Self = this.set("isWordWrapMinified", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setLineNumbersLeft(value: Double): Self = this.set("lineNumbersLeft", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLineNumbersWidth(value: Double): Self = this.set("lineNumbersWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMinimapLeft(value: Double): Self = this.set("minimapLeft", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMinimapWidth(value: Double): Self = this.set("minimapWidth", value.asInstanceOf[js.Any])
+    def setMinimap(value: EditorMinimapLayoutInfo): Self = this.set("minimap", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOverviewRuler(value: OverviewRulerPosition): Self = this.set("overviewRuler", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRenderMinimap(value: RenderMinimap): Self = this.set("renderMinimap", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVerticalScrollbarWidth(value: Double): Self = this.set("verticalScrollbarWidth", value.asInstanceOf[js.Any])
@@ -183,5 +180,8 @@ object EditorLayoutInfo {
     
     @scala.inline
     def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setWrappingColumn(value: Double): Self = this.set("wrappingColumn", value.asInstanceOf[js.Any])
   }
 }

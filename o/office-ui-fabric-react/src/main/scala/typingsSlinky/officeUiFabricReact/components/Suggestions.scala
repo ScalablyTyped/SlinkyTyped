@@ -6,6 +6,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaProps
 import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionItemProps
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
@@ -13,7 +14,6 @@ import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestions
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionsProps
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.keyCodesMod.KeyCodes
 import scala.scalajs.js

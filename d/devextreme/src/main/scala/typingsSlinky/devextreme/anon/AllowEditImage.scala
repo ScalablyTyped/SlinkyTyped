@@ -93,6 +93,8 @@ trait AllowEditImage extends js.Object {
   
   var imageWidth: js.UndefOr[Double] = js.native
   
+  var keepRatioOnAutoSize: js.UndefOr[Boolean] = js.native
+  
   var maxHeight: js.UndefOr[Double] = js.native
   
   var maxWidth: js.UndefOr[Double] = js.native
@@ -122,6 +124,10 @@ trait AllowEditImage extends js.Object {
   var textWidth: js.UndefOr[Double] = js.native
   
   var title: js.UndefOr[String] = js.native
+  
+  var toolboxTemplate: js.UndefOr[template | (js.Function2[/* container */ dxSVGElement, /* data */ Item, _])] = js.native
+  
+  var toolboxWidthToHeightRatio: js.UndefOr[Double] = js.native
   
   var `type`: js.UndefOr[String] = js.native
 }
@@ -274,6 +280,12 @@ object AllowEditImage {
     def deleteImageWidth: Self = this.set("imageWidth", js.undefined)
     
     @scala.inline
+    def setKeepRatioOnAutoSize(value: Boolean): Self = this.set("keepRatioOnAutoSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKeepRatioOnAutoSize: Self = this.set("keepRatioOnAutoSize", js.undefined)
+    
+    @scala.inline
     def setMaxHeight(value: Double): Self = this.set("maxHeight", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -362,6 +374,24 @@ object AllowEditImage {
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
+    
+    @scala.inline
+    def setToolboxTemplateFunction2(value: (/* container */ dxSVGElement, /* data */ Item) => _): Self = this.set("toolboxTemplate", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setToolboxTemplateElement(value: org.scalajs.dom.raw.Element): Self = this.set("toolboxTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setToolboxTemplate(value: template | (js.Function2[/* container */ dxSVGElement, /* data */ Item, _])): Self = this.set("toolboxTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteToolboxTemplate: Self = this.set("toolboxTemplate", js.undefined)
+    
+    @scala.inline
+    def setToolboxWidthToHeightRatio(value: Double): Self = this.set("toolboxWidthToHeightRatio", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteToolboxWidthToHeightRatio: Self = this.set("toolboxWidthToHeightRatio", js.undefined)
     
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])

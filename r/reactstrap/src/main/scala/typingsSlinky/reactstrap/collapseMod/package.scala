@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object collapseMod {
   
-  type Collapse[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.collapseMod.CollapseProps]
+  type Collapse = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.collapseMod.CollapseProps]
 }

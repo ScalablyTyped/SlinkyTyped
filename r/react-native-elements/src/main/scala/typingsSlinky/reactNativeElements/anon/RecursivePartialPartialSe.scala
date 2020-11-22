@@ -1,6 +1,9 @@
 package typingsSlinky.reactNativeElements.anon
 
+import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.anon.Start
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
@@ -14,7 +17,6 @@ import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.DocumentSelectionState
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.KeyboardTypeOptions
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ReturnKeyTypeOptions
@@ -32,6 +34,7 @@ import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.mod.IconNode
 import typingsSlinky.reactNativeElements.mod.RecursivePartial
+import typingsSlinky.reactNativeElements.mod.TextProps
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.URL
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.`box-none`
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.`box-only`
@@ -109,6 +112,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RecursivePartialPartialSe extends js.Object {
   
+  var InputComponent: js.UndefOr[RecursivePartial[js.UndefOr[ReactComponentClass[_]]]] = js.native
+  
   var accessibilityActions: js.UndefOr[RecursivePartial[js.UndefOr[js.Array[AccessibilityActionInfo]]]] = js.native
   
   var accessibilityComponentType: js.UndefOr[
@@ -183,9 +188,19 @@ trait RecursivePartialPartialSe extends js.Object {
   
   var disableFullscreenUI: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
   
+  var disabled: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  
+  var disabledInputStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[TextStyle]]]] = js.native
+  
   var editable: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
   
   var enablesReturnKeyAutomatically: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  
+  var errorMessage: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
+  
+  var errorProps: js.UndefOr[RecursivePartial[js.UndefOr[TextProps]]] = js.native
+  
+  var errorStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[TextStyle]]]] = js.native
   
   var focusable: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
   
@@ -214,6 +229,14 @@ trait RecursivePartialPartialSe extends js.Object {
   var keyboardAppearance: js.UndefOr[RecursivePartial[js.UndefOr[default | light | dark]]] = js.native
   
   var keyboardType: js.UndefOr[RecursivePartial[js.UndefOr[KeyboardTypeOptions]]] = js.native
+  
+  var label: js.UndefOr[RecursivePartial[js.UndefOr[String | ReactElement]]] = js.native
+  
+  var labelProps: js.UndefOr[RecursivePartial[js.UndefOr[TextProps]]] = js.native
+  
+  var labelStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[TextStyle]]]] = js.native
+  
+  var leftIcon: js.UndefOr[RecursivePartial[js.UndefOr[IconNode]]] = js.native
   
   var leftIconContainerStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.native
   
@@ -279,7 +302,9 @@ trait RecursivePartialPartialSe extends js.Object {
     ]
   ] = js.native
   
-  var onLayout: js.UndefOr[RecursivePartial[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]] = js.native
+  var onLayout: js.UndefOr[
+    RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]]]
+  ] = js.native
   
   var onMagicTap: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
   
@@ -391,11 +416,15 @@ trait RecursivePartialPartialSe extends js.Object {
   
   var removeClippedSubviews: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
   
+  var renderErrorMessage: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  
   var renderToHardwareTextureAndroid: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
   
   var returnKeyLabel: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
   
   var returnKeyType: js.UndefOr[RecursivePartial[js.UndefOr[ReturnKeyTypeOptions]]] = js.native
+  
+  var rightIcon: js.UndefOr[RecursivePartial[js.UndefOr[IconNode]]] = js.native
   
   var rightIconContainerStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.native
   
@@ -477,6 +506,12 @@ object RecursivePartialPartialSe {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setInputComponent(value: RecursivePartial[js.UndefOr[ReactComponentClass[_]]]): Self = this.set("InputComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputComponent: Self = this.set("InputComponent", js.undefined)
     
     @scala.inline
     def setAccessibilityActions(value: RecursivePartial[js.UndefOr[js.Array[AccessibilityActionInfo]]]): Self = this.set("accessibilityActions", value.asInstanceOf[js.Any])
@@ -677,6 +712,18 @@ object RecursivePartialPartialSe {
     def deleteDisableFullscreenUI: Self = this.set("disableFullscreenUI", js.undefined)
     
     @scala.inline
+    def setDisabled(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setDisabledInputStyle(value: RecursivePartial[js.UndefOr[StyleProp[TextStyle]]]): Self = this.set("disabledInputStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisabledInputStyle: Self = this.set("disabledInputStyle", js.undefined)
+    
+    @scala.inline
     def setEditable(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("editable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -687,6 +734,24 @@ object RecursivePartialPartialSe {
     
     @scala.inline
     def deleteEnablesReturnKeyAutomatically: Self = this.set("enablesReturnKeyAutomatically", js.undefined)
+    
+    @scala.inline
+    def setErrorMessage(value: RecursivePartial[js.UndefOr[String]]): Self = this.set("errorMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorMessage: Self = this.set("errorMessage", js.undefined)
+    
+    @scala.inline
+    def setErrorProps(value: RecursivePartial[js.UndefOr[TextProps]]): Self = this.set("errorProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorProps: Self = this.set("errorProps", js.undefined)
+    
+    @scala.inline
+    def setErrorStyle(value: RecursivePartial[js.UndefOr[StyleProp[TextStyle]]]): Self = this.set("errorStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorStyle: Self = this.set("errorStyle", js.undefined)
     
     @scala.inline
     def setFocusable(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("focusable", value.asInstanceOf[js.Any])
@@ -767,6 +832,30 @@ object RecursivePartialPartialSe {
     
     @scala.inline
     def deleteKeyboardType: Self = this.set("keyboardType", js.undefined)
+    
+    @scala.inline
+    def setLabel(value: RecursivePartial[js.UndefOr[String | ReactElement]]): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
+    
+    @scala.inline
+    def setLabelProps(value: RecursivePartial[js.UndefOr[TextProps]]): Self = this.set("labelProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabelProps: Self = this.set("labelProps", js.undefined)
+    
+    @scala.inline
+    def setLabelStyle(value: RecursivePartial[js.UndefOr[StyleProp[TextStyle]]]): Self = this.set("labelStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabelStyle: Self = this.set("labelStyle", js.undefined)
+    
+    @scala.inline
+    def setLeftIcon(value: RecursivePartial[js.UndefOr[IconNode]]): Self = this.set("leftIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLeftIcon: Self = this.set("leftIcon", js.undefined)
     
     @scala.inline
     def setLeftIconContainerStyle(value: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]): Self = this.set("leftIconContainerStyle", value.asInstanceOf[js.Any])
@@ -917,7 +1006,7 @@ object RecursivePartialPartialSe {
     def deleteOnKeyPress: Self = this.set("onKeyPress", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: RecursivePartial[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]): Self = this.set("onLayout", value.asInstanceOf[js.Any])
+    def setOnLayout(value: RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]]]): Self = this.set("onLayout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -1149,6 +1238,12 @@ object RecursivePartialPartialSe {
     def deleteRemoveClippedSubviews: Self = this.set("removeClippedSubviews", js.undefined)
     
     @scala.inline
+    def setRenderErrorMessage(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("renderErrorMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRenderErrorMessage: Self = this.set("renderErrorMessage", js.undefined)
+    
+    @scala.inline
     def setRenderToHardwareTextureAndroid(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1165,6 +1260,12 @@ object RecursivePartialPartialSe {
     
     @scala.inline
     def deleteReturnKeyType: Self = this.set("returnKeyType", js.undefined)
+    
+    @scala.inline
+    def setRightIcon(value: RecursivePartial[js.UndefOr[IconNode]]): Self = this.set("rightIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRightIcon: Self = this.set("rightIcon", js.undefined)
     
     @scala.inline
     def setRightIconContainerStyle(value: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]): Self = this.set("rightIconContainerStyle", value.asInstanceOf[js.Any])

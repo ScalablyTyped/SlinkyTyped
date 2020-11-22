@@ -12,5 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object cloudQueueFontIconMod extends js.Object {
   
-  val default: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
+  val CloudQueueFontIcon: ForwardRefExoticComponent[FontIconProps with RefAttributes[HTMLElement]] = js.native
 }

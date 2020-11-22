@@ -1,7 +1,7 @@
 
 # Scala.js typings for date-io__core
 
-Typings are for version 2.8.0
+Typings are for version 2.10.6
 
 ## Library description:
 Abstraction over common javascript date management libraries

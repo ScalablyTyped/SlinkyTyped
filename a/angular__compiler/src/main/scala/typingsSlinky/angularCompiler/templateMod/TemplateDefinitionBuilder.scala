@@ -38,7 +38,7 @@ class TemplateDefinitionBuilder protected ()
     _namespace: ExternalReference,
     relativeContextFilePath: String,
     i18nUseExternalIds: Boolean,
-    _constants: js.UndefOr[js.Array[Expression]]
+    _constants: js.UndefOr[ComponentDefConsts]
   ) = this()
   
   var _bindingContext: js.Any = js.native
@@ -173,7 +173,7 @@ class TemplateDefinitionBuilder protected ()
   
   def getConstCount(): Double = js.native
   
-  def getConsts(): js.Array[Expression] = js.native
+  def getConsts(): ComponentDefConsts = js.native
   
   /**
     * Gets an expression that refers to the implicit receiver. The implicit
@@ -208,6 +208,8 @@ class TemplateDefinitionBuilder protected ()
   var i18nEnd: js.Any = js.native
   
   var i18nGenerateClosureVar: js.Any = js.native
+  
+  var i18nGenerateMainBlockVar: js.Any = js.native
   
   var i18nStart: js.Any = js.native
   

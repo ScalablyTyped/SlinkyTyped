@@ -1,7 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
 import org.scalajs.dom.raw.File
-import org.scalajs.dom.raw.ProgressEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,7 +48,7 @@ trait ISceneLoaderPluginBase extends js.Object {
       /* scene */ Scene, 
       /* file */ File, 
       /* onSuccess */ js.Function1[/* data */ js.Any, Unit], 
-      /* onProgress */ js.UndefOr[js.Function1[/* ev */ ProgressEvent, _]], 
+      /* onProgress */ js.UndefOr[js.Function1[/* ev */ ISceneLoaderProgressEvent, _]], 
       /* useArrayBuffer */ js.UndefOr[Boolean], 
       /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]], 
       IFileRequest
@@ -71,7 +70,7 @@ trait ISceneLoaderPluginBase extends js.Object {
       /* scene */ Scene, 
       /* url */ String, 
       /* onSuccess */ js.Function2[/* data */ js.Any, /* request */ js.UndefOr[WebRequest], Unit], 
-      /* onProgress */ js.UndefOr[js.Function1[/* ev */ ProgressEvent, Unit]], 
+      /* onProgress */ js.UndefOr[js.Function1[/* ev */ ISceneLoaderProgressEvent, Unit]], 
       /* useArrayBuffer */ js.UndefOr[Boolean], 
       /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]], 
       IFileRequest
@@ -129,7 +128,7 @@ object ISceneLoaderPluginBase {
     
     @scala.inline
     def setReadFile(
-      value: (/* scene */ Scene, /* file */ File, /* onSuccess */ js.Function1[/* data */ js.Any, Unit], /* onProgress */ js.UndefOr[js.Function1[/* ev */ ProgressEvent, _]], /* useArrayBuffer */ js.UndefOr[Boolean], /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]]) => IFileRequest
+      value: (/* scene */ Scene, /* file */ File, /* onSuccess */ js.Function1[/* data */ js.Any, Unit], /* onProgress */ js.UndefOr[js.Function1[/* ev */ ISceneLoaderProgressEvent, _]], /* useArrayBuffer */ js.UndefOr[Boolean], /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]]) => IFileRequest
     ): Self = this.set("readFile", js.Any.fromFunction6(value))
     
     @scala.inline
@@ -137,7 +136,7 @@ object ISceneLoaderPluginBase {
     
     @scala.inline
     def setRequestFile(
-      value: (/* scene */ Scene, /* url */ String, /* onSuccess */ js.Function2[/* data */ js.Any, /* request */ js.UndefOr[WebRequest], Unit], /* onProgress */ js.UndefOr[js.Function1[/* ev */ ProgressEvent, Unit]], /* useArrayBuffer */ js.UndefOr[Boolean], /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]]) => IFileRequest
+      value: (/* scene */ Scene, /* url */ String, /* onSuccess */ js.Function2[/* data */ js.Any, /* request */ js.UndefOr[WebRequest], Unit], /* onProgress */ js.UndefOr[js.Function1[/* ev */ ISceneLoaderProgressEvent, Unit]], /* useArrayBuffer */ js.UndefOr[Boolean], /* onError */ js.UndefOr[js.Function1[/* error */ js.Any, Unit]]) => IFileRequest
     ): Self = this.set("requestFile", js.Any.fromFunction6(value))
     
     @scala.inline

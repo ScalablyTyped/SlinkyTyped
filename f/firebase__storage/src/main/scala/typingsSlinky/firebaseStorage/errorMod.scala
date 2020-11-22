@@ -1,6 +1,7 @@
 package typingsSlinky.firebaseStorage
 
-import typingsSlinky.std.Error
+import typingsSlinky.firebaseStorage.anon.ServerResponse
+import typingsSlinky.firebaseUtil.mod.FirebaseError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +20,7 @@ object errorMod extends js.Object {
   
   def internalError(message: String): FirebaseStorageError = js.native
   
-  def invalidArgument(index: Double, fnName: String, message: String): FirebaseStorageError = js.native
+  def invalidArgument(message: String): FirebaseStorageError = js.native
   
   def invalidArgumentCount(argMin: Double, argMax: Double, fnName: String, real: Double): FirebaseStorageError = js.native
   
@@ -105,38 +106,24 @@ object errorMod extends js.Object {
     var UNAUTHORIZED: String = js.native
     
     var UNKNOWN: String = js.native
+    
+    var UNSUPPORTED_ENVIRONMENT: String = js.native
   }
   
   @js.native
-  class FirebaseStorageError protected () extends Error {
+  class FirebaseStorageError protected () extends FirebaseError {
     def this(code: Code, message: String) = this()
-    
-    def code: String = js.native
     
     def codeEquals(code: Code): Boolean = js.native
     
-    def codeProp(): String = js.native
-    
-    var code_ : js.Any = js.native
-    
-    var message_ : js.Any = js.native
+    @JSName("customData")
+    var customData_FirebaseStorageError: ServerResponse = js.native
     
     @JSName("message")
     def message_MFirebaseStorageError: String = js.native
     
-    var name_ : js.Any = js.native
-    
-    @JSName("name")
-    def name_MFirebaseStorageError: String = js.native
-    
     def serverResponse: Null | String = js.native
-    
-    def serverResponseProp(): String | Null = js.native
-    
-    var serverResponse_ : js.Any = js.native
-    
-    def setServerResponseProp(): Unit = js.native
-    def setServerResponseProp(serverResponse: String): Unit = js.native
+    def serverResponse_=(serverResponse: String | Null): Unit = js.native
   }
   
   type Code = String

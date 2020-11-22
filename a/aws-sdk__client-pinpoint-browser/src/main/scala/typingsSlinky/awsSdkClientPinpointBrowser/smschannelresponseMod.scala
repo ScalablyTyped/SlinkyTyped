@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientPinpointBrowser
 
-import typingsSlinky.awsSdkTypes.protocolMod.Structure
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object smschannelresponseMod extends js.Object {
   
   @JSName("_SMSChannelResponse")
-  val SMSChannelResponse: Structure = js.native
+  val SMSChannelResponse: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _Structure_ */ js.Any = js.native
 }

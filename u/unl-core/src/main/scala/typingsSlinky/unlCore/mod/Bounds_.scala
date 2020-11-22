@@ -7,10 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Bounds_ extends js.Object {
   
-  var elevation: Double = js.native
-  
-  var elevationType: ElevationType = js.native
-  
   @JSName("ne")
   var ne_FBounds_ : Point = js.native
   
@@ -19,8 +15,8 @@ trait Bounds_ extends js.Object {
 object Bounds_ {
   
   @scala.inline
-  def apply(elevation: Double, elevationType: ElevationType, ne: Point, sw: Point): Bounds_ = {
-    val __obj = js.Dynamic.literal(elevation = elevation.asInstanceOf[js.Any], elevationType = elevationType.asInstanceOf[js.Any], ne = ne.asInstanceOf[js.Any], sw = sw.asInstanceOf[js.Any])
+  def apply(ne: Point, sw: Point): Bounds_ = {
+    val __obj = js.Dynamic.literal(ne = ne.asInstanceOf[js.Any], sw = sw.asInstanceOf[js.Any])
     __obj.asInstanceOf[Bounds_]
   }
   
@@ -38,12 +34,6 @@ object Bounds_ {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setElevation(value: Double): Self = this.set("elevation", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setElevationType(value: ElevationType): Self = this.set("elevationType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNe(value: Point): Self = this.set("ne", value.asInstanceOf[js.Any])

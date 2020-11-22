@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object CSVExport extends js.Object {
   
-  def ToggleList(props: ExportCSVButtonProps): ReactElement | Null = js.native
+  def ExportCSVButton(props: ExportCSVButtonProps): ReactElement | Null = js.native
 }

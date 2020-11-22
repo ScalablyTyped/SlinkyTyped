@@ -1,7 +1,7 @@
 
 # Scala.js typings for webix
 
-Typings are for version 7.4.0
+Typings are for version 8.0.1
 
 ## Library description:
 Webix UI

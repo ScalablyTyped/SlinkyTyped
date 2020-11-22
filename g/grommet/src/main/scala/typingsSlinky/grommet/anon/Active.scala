@@ -8,9 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Active extends js.Object {
   
-  var active: js.UndefOr[`0`] = js.native
+  var active: js.UndefOr[`3`] = js.native
   
   var color: js.UndefOr[ColorType] = js.native
+  
+  var disabled: js.UndefOr[`3`] = js.native
   
   var hover: js.UndefOr[ColorExtend] = js.native
   
@@ -42,7 +44,7 @@ object Active {
     }
     
     @scala.inline
-    def setActive(value: `0`): Self = this.set("active", value.asInstanceOf[js.Any])
+    def setActive(value: `3`): Self = this.set("active", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteActive: Self = this.set("active", js.undefined)
@@ -52,6 +54,12 @@ object Active {
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
+    
+    @scala.inline
+    def setDisabled(value: `3`): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
     
     @scala.inline
     def setHover(value: ColorExtend): Self = this.set("hover", value.asInstanceOf[js.Any])

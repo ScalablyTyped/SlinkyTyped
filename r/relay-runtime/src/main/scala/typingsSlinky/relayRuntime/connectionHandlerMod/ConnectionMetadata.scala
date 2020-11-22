@@ -15,6 +15,8 @@ trait ConnectionMetadata extends js.Object {
   var direction: js.UndefOr[String | Null] = js.native
   
   var path: js.UndefOr[js.Array[String] | Null] = js.native
+  
+  var stream: js.UndefOr[Boolean | Null] = js.native
 }
 object ConnectionMetadata {
   
@@ -77,5 +79,14 @@ object ConnectionMetadata {
     
     @scala.inline
     def setPathNull: Self = this.set("path", null)
+    
+    @scala.inline
+    def setStream(value: Boolean): Self = this.set("stream", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStream: Self = this.set("stream", js.undefined)
+    
+    @scala.inline
+    def setStreamNull: Self = this.set("stream", null)
   }
 }

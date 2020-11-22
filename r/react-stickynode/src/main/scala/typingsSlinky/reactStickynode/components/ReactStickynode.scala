@@ -37,6 +37,9 @@ object ReactStickynode {
     def children(value: ReactElement | (js.Function1[/* status */ Status, ReactElement])): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def enableTransforms(value: Boolean): this.type = set("enableTransforms", value.asInstanceOf[js.Any])
     
     @scala.inline

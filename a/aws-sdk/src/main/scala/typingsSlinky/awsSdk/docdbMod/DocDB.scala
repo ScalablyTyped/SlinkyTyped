@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.docdbMod
 import typingsSlinky.awsSdk.anon.DescribeDBInstancesMessag
 import typingsSlinky.awsSdk.awsSdkStrings.dBInstanceAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.dBInstanceDeleted
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -29,12 +29,12 @@ trait DocDB extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
-    * Applies a pending maintenance action to a resource (for example, to a DB instance).
+    * Applies a pending maintenance action to a resource (for example, to an Amazon DocumentDB instance).
     */
   def applyPendingMaintenanceAction(): Request[ApplyPendingMaintenanceActionResult, AWSError] = js.native
   def applyPendingMaintenanceAction(callback: js.Function2[/* err */ AWSError, /* data */ ApplyPendingMaintenanceActionResult, Unit]): Request[ApplyPendingMaintenanceActionResult, AWSError] = js.native
   /**
-    * Applies a pending maintenance action to a resource (for example, to a DB instance).
+    * Applies a pending maintenance action to a resource (for example, to an Amazon DocumentDB instance).
     */
   def applyPendingMaintenanceAction(params: ApplyPendingMaintenanceActionMessage): Request[ApplyPendingMaintenanceActionResult, AWSError] = js.native
   def applyPendingMaintenanceAction(
@@ -60,12 +60,12 @@ trait DocDB extends Service {
   ): Request[CopyDBClusterParameterGroupResult, AWSError] = js.native
   
   /**
-    * Copies a snapshot of a cluster. To copy a cluster snapshot from a shared manual cluster snapshot, SourceDBClusterSnapshotIdentifier must be the Amazon Resource Name (ARN) of the shared cluster snapshot. To cancel the copy operation after it is in progress, delete the target cluster snapshot identified by TargetDBClusterSnapshotIdentifier while that DB cluster snapshot is in the copying status.
+    * Copies a snapshot of a cluster. To copy a cluster snapshot from a shared manual cluster snapshot, SourceDBClusterSnapshotIdentifier must be the Amazon Resource Name (ARN) of the shared cluster snapshot. You can only copy a shared DB cluster snapshot, whether encrypted or not, in the same AWS Region. To cancel the copy operation after it is in progress, delete the target cluster snapshot identified by TargetDBClusterSnapshotIdentifier while that cluster snapshot is in the copying status.
     */
   def copyDBClusterSnapshot(): Request[CopyDBClusterSnapshotResult, AWSError] = js.native
   def copyDBClusterSnapshot(callback: js.Function2[/* err */ AWSError, /* data */ CopyDBClusterSnapshotResult, Unit]): Request[CopyDBClusterSnapshotResult, AWSError] = js.native
   /**
-    * Copies a snapshot of a cluster. To copy a cluster snapshot from a shared manual cluster snapshot, SourceDBClusterSnapshotIdentifier must be the Amazon Resource Name (ARN) of the shared cluster snapshot. To cancel the copy operation after it is in progress, delete the target cluster snapshot identified by TargetDBClusterSnapshotIdentifier while that DB cluster snapshot is in the copying status.
+    * Copies a snapshot of a cluster. To copy a cluster snapshot from a shared manual cluster snapshot, SourceDBClusterSnapshotIdentifier must be the Amazon Resource Name (ARN) of the shared cluster snapshot. You can only copy a shared DB cluster snapshot, whether encrypted or not, in the same AWS Region. To cancel the copy operation after it is in progress, delete the target cluster snapshot identified by TargetDBClusterSnapshotIdentifier while that cluster snapshot is in the copying status.
     */
   def copyDBClusterSnapshot(params: CopyDBClusterSnapshotMessage): Request[CopyDBClusterSnapshotResult, AWSError] = js.native
   def copyDBClusterSnapshot(
@@ -88,12 +88,12 @@ trait DocDB extends Service {
   ): Request[CreateDBClusterResult, AWSError] = js.native
   
   /**
-    * Creates a new cluster parameter group. Parameters in a cluster parameter group apply to all of the instances in a DB cluster. A cluster parameter group is initially created with the default parameters for the database engine used by instances in the cluster. To provide custom values for any of the parameters, you must modify the group after you create it. After you create a DB cluster parameter group, you must associate it with your cluster. For the new DB cluster parameter group and associated settings to take effect, you must then reboot the instances in the cluster without failover.  After you create a cluster parameter group, you should wait at least 5 minutes before creating your first cluster that uses that cluster parameter group as the default parameter group. This allows Amazon DocumentDB to fully complete the create action before the cluster parameter group is used as the default for a new cluster. This step is especially important for parameters that are critical when creating the default database for a cluster, such as the character set for the default database defined by the character_set_database parameter. 
+    * Creates a new cluster parameter group. Parameters in a cluster parameter group apply to all of the instances in a cluster. A cluster parameter group is initially created with the default parameters for the database engine used by instances in the cluster. In Amazon DocumentDB, you cannot make modifications directly to the default.docdb3.6 cluster parameter group. If your Amazon DocumentDB cluster is using the default cluster parameter group and you want to modify a value in it, you must first  create a new parameter group or  copy an existing parameter group, modify it, and then apply the modified parameter group to your cluster. For the new cluster parameter group and associated settings to take effect, you must then reboot the instances in the cluster without failover. For more information, see  Modifying Amazon DocumentDB Cluster Parameter Groups. 
     */
   def createDBClusterParameterGroup(): Request[CreateDBClusterParameterGroupResult, AWSError] = js.native
   def createDBClusterParameterGroup(callback: js.Function2[/* err */ AWSError, /* data */ CreateDBClusterParameterGroupResult, Unit]): Request[CreateDBClusterParameterGroupResult, AWSError] = js.native
   /**
-    * Creates a new cluster parameter group. Parameters in a cluster parameter group apply to all of the instances in a DB cluster. A cluster parameter group is initially created with the default parameters for the database engine used by instances in the cluster. To provide custom values for any of the parameters, you must modify the group after you create it. After you create a DB cluster parameter group, you must associate it with your cluster. For the new DB cluster parameter group and associated settings to take effect, you must then reboot the instances in the cluster without failover.  After you create a cluster parameter group, you should wait at least 5 minutes before creating your first cluster that uses that cluster parameter group as the default parameter group. This allows Amazon DocumentDB to fully complete the create action before the cluster parameter group is used as the default for a new cluster. This step is especially important for parameters that are critical when creating the default database for a cluster, such as the character set for the default database defined by the character_set_database parameter. 
+    * Creates a new cluster parameter group. Parameters in a cluster parameter group apply to all of the instances in a cluster. A cluster parameter group is initially created with the default parameters for the database engine used by instances in the cluster. In Amazon DocumentDB, you cannot make modifications directly to the default.docdb3.6 cluster parameter group. If your Amazon DocumentDB cluster is using the default cluster parameter group and you want to modify a value in it, you must first  create a new parameter group or  copy an existing parameter group, modify it, and then apply the modified parameter group to your cluster. For the new cluster parameter group and associated settings to take effect, you must then reboot the instances in the cluster without failover. For more information, see  Modifying Amazon DocumentDB Cluster Parameter Groups. 
     */
   def createDBClusterParameterGroup(params: CreateDBClusterParameterGroupMessage): Request[CreateDBClusterParameterGroupResult, AWSError] = js.native
   def createDBClusterParameterGroup(

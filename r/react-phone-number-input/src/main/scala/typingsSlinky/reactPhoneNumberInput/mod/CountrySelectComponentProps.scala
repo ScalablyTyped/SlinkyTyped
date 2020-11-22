@@ -1,5 +1,6 @@
 package typingsSlinky.reactPhoneNumberInput.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.reactPhoneNumberInput.anon.Icon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,6 +12,11 @@ trait CountrySelectComponentProps extends js.Object {
   var className: js.UndefOr[String] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Language translations
+    */
+  var labels: js.UndefOr[StringDictionary[String]] = js.native
   
   var name: js.UndefOr[String] = js.native
   
@@ -25,7 +31,7 @@ trait CountrySelectComponentProps extends js.Object {
     */
   var options: js.UndefOr[js.Array[Icon]] = js.native
   
-  var tabIndex: js.UndefOr[Double | String] = js.native
+  var tabIndex: js.UndefOr[Double] = js.native
   
   /**
     * The currently selected country code
@@ -68,6 +74,12 @@ object CountrySelectComponentProps {
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     
     @scala.inline
+    def setLabels(value: StringDictionary[String]): Self = this.set("labels", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabels: Self = this.set("labels", js.undefined)
+    
+    @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -101,7 +113,7 @@ object CountrySelectComponentProps {
     def deleteOptions: Self = this.set("options", js.undefined)
     
     @scala.inline
-    def setTabIndex(value: Double | String): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
+    def setTabIndex(value: Double): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTabIndex: Self = this.set("tabIndex", js.undefined)

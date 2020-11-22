@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Children extends js.Object {
   
-  var children: js.UndefOr[js.Array[IGeoObject]] = js.native
+  var children: js.UndefOr[js.Array[IGeoObject[IGeometry]]] = js.native
   
   var geometry: js.UndefOr[IGeometry | js.Object] = js.native
   
@@ -40,10 +40,10 @@ object Children {
     }
     
     @scala.inline
-    def setChildrenVarargs(value: IGeoObject*): Self = this.set("children", js.Array(value :_*))
+    def setChildrenVarargs(value: IGeoObject[IGeometry]*): Self = this.set("children", js.Array(value :_*))
     
     @scala.inline
-    def setChildren(value: js.Array[IGeoObject]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: js.Array[IGeoObject[IGeometry]]): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

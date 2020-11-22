@@ -10,36 +10,35 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LayerInfo extends Object {
   
   /**
-    * Indicates whether to enable `Add feature` functionality. Defaults to `true` if service supports it.
+    * Indicates whether to enable `Add feature` functionality.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#LayerInfo)
     */
   var addEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * Indicates whether to display the attachments widget in the Editor's UI. By default, this is `true`, if the service [supportsAttachment](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#capabilities).
+    * Indicates whether to display the attachments widget in the Editor's UI.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#LayerInfo)
     */
   var allowAttachments: js.UndefOr[Boolean] = js.native
   
   /**
-    * Indicates whether to enable the ability to delete features. Defaults to `true` if service supports it.
+    * Indicates whether to enable the ability to delete features.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#LayerInfo)
     */
   var deleteEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * Indicates whether to enable editing on the layer. Defaults to `true` if service supports it.
+    * Indicates whether to enable editing on the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#LayerInfo)
     */
   var enabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * The configuration options for displaying an array of fields within the widget. Take note that all fields except for `editor`, `globalID`, `objectID`, and system maintained area and length fields will be included. Otherwise, it is up to the developer to set the right field(s) to override and display.
-    * > If this is set, in addition to overrides in the [supportingWidgetDefaults](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#supportingWidgetDefaults), the overrides specified in the [supportingWidgetDefaults](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#supportingWidgetDefaults) property take precedence.
+    * The configuration options for displaying an array of fields within the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#LayerInfo)
     */
@@ -53,7 +52,7 @@ trait LayerInfo extends Object {
   var layer: FeatureLayer = js.native
   
   /**
-    * Indicates whether to enable `Update feature` functionality. Defaults to `true` if service supports it.
+    * Indicates whether to enable `Update feature` functionality.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#LayerInfo)
     */

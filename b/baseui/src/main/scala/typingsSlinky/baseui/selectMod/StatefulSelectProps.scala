@@ -38,6 +38,8 @@ trait StatefulSelectProps extends js.Object {
   
   var autoFocus: js.UndefOr[Boolean] = js.native
   
+  var backspaceClearsInputValue: js.UndefOr[Boolean] = js.native
+  
   var backspaceRemoves: js.UndefOr[Boolean] = js.native
   
   var clearable: js.UndefOr[Boolean] = js.native
@@ -184,6 +186,12 @@ object StatefulSelectProps {
     
     @scala.inline
     def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
+    
+    @scala.inline
+    def setBackspaceClearsInputValue(value: Boolean): Self = this.set("backspaceClearsInputValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBackspaceClearsInputValue: Self = this.set("backspaceClearsInputValue", js.undefined)
     
     @scala.inline
     def setBackspaceRemoves(value: Boolean): Self = this.set("backspaceRemoves", value.asInstanceOf[js.Any])

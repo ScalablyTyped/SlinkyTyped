@@ -5,13 +5,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Take any SVG and make the animation
+  * to give give the impression of live drawing
+  */
 @JSImport("vivus", JSImport.Namespace)
 @js.native
 class ^ protected () extends Vivus {
   /**
-    * @param element The DOM element, or the ID of a DOM element, to interact with.
-    * @param options
-    * @param callback Callback to call at the end of the animation
+    * @param element Dom element of the SVG or id of it
+    * @param options Options about the animation
+    * @param callback Callback for the end of the animation
     */
   def this(element: String) = this()
   def this(element: HTMLElement) = this()

@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PostfixUnaryExpression extends UpdateExpression {
   
   @JSName("kind")
-  var kind_PostfixUnaryExpression: typingsSlinky.typescript.mod.SyntaxKind.PostfixUnaryExpression = js.native
+  val kind_PostfixUnaryExpression: typingsSlinky.typescript.mod.SyntaxKind.PostfixUnaryExpression = js.native
   
-  var operand: LeftHandSideExpression = js.native
+  val operand: LeftHandSideExpression = js.native
   
-  var operator: PostfixUnaryOperator = js.native
+  val operator: PostfixUnaryOperator = js.native
 }

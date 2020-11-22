@@ -1,7 +1,7 @@
 
 # Scala.js typings for keycloak-js
 
-Typings are for version 11.0.0
+Typings are for version 11.0.3
 
 ## Library description:
 Keycloak Adapter

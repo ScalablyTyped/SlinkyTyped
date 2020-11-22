@@ -1,6 +1,7 @@
 package typingsSlinky.mongoosePaginateV2.mod.mongooseAugmentingMod
 
 import typingsSlinky.mongoose.mod.CollationOptions
+import typingsSlinky.mongoose.mod.QueryFindOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,6 +21,8 @@ trait PaginateOptions extends js.Object {
   
   var offset: js.UndefOr[Double] = js.native
   
+  var options: js.UndefOr[QueryFindOptions] = js.native
+  
   var page: js.UndefOr[Double] = js.native
   
   /* If pagination is set to `false`, it will return all docs without adding limit condition. (Default: `true`) */
@@ -27,6 +30,8 @@ trait PaginateOptions extends js.Object {
   
   /* tslint:disable-next-line: ban-types */
   var populate: js.UndefOr[(js.Array[js.Object | String]) | js.Object | String | QueryPopulateOptions] = js.native
+  
+  var projection: js.UndefOr[js.Any] = js.native
   
   var read: js.UndefOr[ReadOptions] = js.native
   
@@ -96,6 +101,12 @@ object PaginateOptions {
     def deleteOffset: Self = this.set("offset", js.undefined)
     
     @scala.inline
+    def setOptions(value: QueryFindOptions): Self = this.set("options", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOptions: Self = this.set("options", js.undefined)
+    
+    @scala.inline
     def setPage(value: Double): Self = this.set("page", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -115,6 +126,12 @@ object PaginateOptions {
     
     @scala.inline
     def deletePopulate: Self = this.set("populate", js.undefined)
+    
+    @scala.inline
+    def setProjection(value: js.Any): Self = this.set("projection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProjection: Self = this.set("projection", js.undefined)
     
     @scala.inline
     def setRead(value: ReadOptions): Self = this.set("read", value.asInstanceOf[js.Any])

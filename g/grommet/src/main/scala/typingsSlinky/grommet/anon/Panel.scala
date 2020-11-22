@@ -16,7 +16,7 @@ trait Panel extends js.Object {
   
   var icons: js.UndefOr[Collapse] = js.native
   
-  var panel: js.UndefOr[`2`] = js.native
+  var panel: js.UndefOr[`4`] = js.native
 }
 object Panel {
   
@@ -42,7 +42,7 @@ object Panel {
     }
     
     @scala.inline
-    def setBorderVarargs(value: SizeStyle*): Self = this.set("border", js.Array(value :_*))
+    def setBorderVarargs(value: Error*): Self = this.set("border", js.Array(value :_*))
     
     @scala.inline
     def setBorder(value: BorderType): Self = this.set("border", value.asInstanceOf[js.Any])
@@ -69,7 +69,7 @@ object Panel {
     def deleteIcons: Self = this.set("icons", js.undefined)
     
     @scala.inline
-    def setPanel(value: `2`): Self = this.set("panel", value.asInstanceOf[js.Any])
+    def setPanel(value: `4`): Self = this.set("panel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePanel: Self = this.set("panel", js.undefined)

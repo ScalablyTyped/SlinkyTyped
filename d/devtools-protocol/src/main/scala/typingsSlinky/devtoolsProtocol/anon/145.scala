@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetDeviceOrientationOverrideRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.ReloadRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `145` extends js.Object {
   
-  var paramsType: js.Array[SetDeviceOrientationOverrideRequest] = js.native
+  var paramsType: js.Array[js.UndefOr[ReloadRequest]] = js.native
   
   var returnType: Unit = js.native
 }
 object `145` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetDeviceOrientationOverrideRequest], returnType: Unit): `145` = {
+  def apply(paramsType: js.Array[js.UndefOr[ReloadRequest]], returnType: Unit): `145` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`145`]
   }
@@ -36,10 +36,10 @@ object `145` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetDeviceOrientationOverrideRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: js.UndefOr[ReloadRequest]*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetDeviceOrientationOverrideRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[js.UndefOr[ReloadRequest]]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

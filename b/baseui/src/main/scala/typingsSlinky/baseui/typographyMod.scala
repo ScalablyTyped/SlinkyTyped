@@ -72,6 +72,42 @@ object typographyMod extends js.Object {
   
   val LabelXSmall: ReactComponentClass[BlockProps] = js.native
   
+  val MonoDisplayLarge: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoDisplayMedium: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoDisplaySmall: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoDisplayXSmall: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoHeadingLarge: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoHeadingMedium: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoHeadingSmall: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoHeadingXLarge: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoHeadingXSmall: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoHeadingXXLarge: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoLabelLarge: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoLabelMedium: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoLabelSmall: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoLabelXSmall: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoParagraphLarge: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoParagraphMedium: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoParagraphSmall: ReactComponentClass[BlockProps] = js.native
+  
+  val MonoParagraphXSmall: ReactComponentClass[BlockProps] = js.native
+  
   val Paragraph1: ReactComponentClass[BlockProps] = js.native
   
   val Paragraph2: ReactComponentClass[BlockProps] = js.native

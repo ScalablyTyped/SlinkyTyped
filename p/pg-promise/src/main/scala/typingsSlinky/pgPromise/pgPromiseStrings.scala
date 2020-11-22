@@ -1,6 +1,7 @@
 package typingsSlinky.pgPromise
 
 import typingsSlinky.pgPromise.mod.FormattingFilter
+import typingsSlinky.pgPromise.pgSubsetMod.ParserFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -45,6 +46,12 @@ object pgPromiseStrings {
   @scala.inline
   def array: array = "array".asInstanceOf[array]
   
+  @scala.inline
+  def binary: binary = "binary".asInstanceOf[binary]
+  
+  @scala.inline
+  def text: text = "text".asInstanceOf[text]
+  
   @js.native
   sealed trait Colonalias extends FormattingFilter
   
@@ -77,4 +84,10 @@ object pgPromiseStrings {
   
   @js.native
   sealed trait array extends js.Object
+  
+  @js.native
+  sealed trait binary extends ParserFormat
+  
+  @js.native
+  sealed trait text extends ParserFormat
 }

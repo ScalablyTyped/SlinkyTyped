@@ -23,8 +23,6 @@ class HtmlElementTexture protected () extends BaseTexture {
   
   var _createInternalTexture: js.Any = js.native
   
-  var _engine: js.Any = js.native
-  
   var _generateMipMaps: js.Any = js.native
   
   var _isVideo: js.Any = js.native

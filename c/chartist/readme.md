@@ -1,7 +1,7 @@
 
 # Scala.js typings for chartist
 
-Typings are for version v0.9.81
+Typings are for version v0.11.4
 
 ## Library description:
 Simple, responsive charts

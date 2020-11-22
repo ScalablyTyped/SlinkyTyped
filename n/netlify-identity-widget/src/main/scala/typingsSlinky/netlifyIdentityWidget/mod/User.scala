@@ -26,6 +26,10 @@ trait User extends js.Object {
   
   var id: String = js.native
   
+  var invited_at: String = js.native
+  
+  var recovery_sent_at: String = js.native
+  
   var role: String = js.native
   
   var token: js.UndefOr[Token] = js.native
@@ -47,12 +51,14 @@ object User {
     created_at: String,
     email: String,
     id: String,
+    invited_at: String,
+    recovery_sent_at: String,
     role: String,
     updated_at: String,
     url: String,
     user_metadata: Avatarurl
   ): User = {
-    val __obj = js.Dynamic.literal(api = api.asInstanceOf[js.Any], app_metadata = app_metadata.asInstanceOf[js.Any], aud = aud.asInstanceOf[js.Any], confirmed_at = confirmed_at.asInstanceOf[js.Any], created_at = created_at.asInstanceOf[js.Any], email = email.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any], updated_at = updated_at.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], user_metadata = user_metadata.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(api = api.asInstanceOf[js.Any], app_metadata = app_metadata.asInstanceOf[js.Any], aud = aud.asInstanceOf[js.Any], confirmed_at = confirmed_at.asInstanceOf[js.Any], created_at = created_at.asInstanceOf[js.Any], email = email.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], invited_at = invited_at.asInstanceOf[js.Any], recovery_sent_at = recovery_sent_at.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any], updated_at = updated_at.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], user_metadata = user_metadata.asInstanceOf[js.Any])
     __obj.asInstanceOf[User]
   }
   
@@ -91,6 +97,12 @@ object User {
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInvited_at(value: String): Self = this.set("invited_at", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRecovery_sent_at(value: String): Self = this.set("recovery_sent_at", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRole(value: String): Self = this.set("role", value.asInstanceOf[js.Any])

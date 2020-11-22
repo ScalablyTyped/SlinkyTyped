@@ -22,6 +22,9 @@ object ReactLazyload {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
+    def classNamePrefix(value: String): this.type = set("classNamePrefix", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def debounce(value: Double | Boolean): this.type = set("debounce", value.asInstanceOf[js.Any])
     
     @scala.inline

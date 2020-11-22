@@ -30,6 +30,8 @@ trait AutoColumnSize extends Base {
   def calculateColumnsWidth(colRange: Double, rowRange: Double): Unit = js.native
   def calculateColumnsWidth(colRange: Double, rowRange: Double, force: Boolean): Unit = js.native
   
+  def calculateVisibleColumnsWidth(): Unit = js.native
+  
   def clearCache(): Unit = js.native
   def clearCache(columns: js.Array[_]): Unit = js.native
   
@@ -54,9 +56,9 @@ trait AutoColumnSize extends Base {
   
   def isNeedRecalculate(): Boolean = js.native
   
+  var measuredRows: Double = js.native
+  
   def recalculateAllColumnsWidth(): Unit = js.native
   
   var samplesGenerator: SamplesGenerator = js.native
-  
-  var widths: js.Array[_] = js.native
 }

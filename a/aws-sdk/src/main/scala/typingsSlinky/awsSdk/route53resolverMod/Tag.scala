@@ -10,18 +10,18 @@ trait Tag extends js.Object {
   /**
     * The name for the tag. For example, if you want to associate Resolver resources with the account IDs of your customers for billing purposes, the value of Key might be account-id.
     */
-  var Key: js.UndefOr[TagKey] = js.native
+  var Key: TagKey = js.native
   
   /**
     * The value for the tag. For example, if Key is account-id, then Value might be the ID of the customer account that you're creating the resource for.
     */
-  var Value: js.UndefOr[TagValue] = js.native
+  var Value: TagValue = js.native
 }
 object Tag {
   
   @scala.inline
-  def apply(): Tag = {
-    val __obj = js.Dynamic.literal()
+  def apply(Key: TagKey, Value: TagValue): Tag = {
+    val __obj = js.Dynamic.literal(Key = Key.asInstanceOf[js.Any], Value = Value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tag]
   }
   
@@ -44,12 +44,6 @@ object Tag {
     def setKey(value: TagKey): Self = this.set("Key", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteKey: Self = this.set("Key", js.undefined)
-    
-    @scala.inline
     def setValue(value: TagValue): Self = this.set("Value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValue: Self = this.set("Value", js.undefined)
   }
 }

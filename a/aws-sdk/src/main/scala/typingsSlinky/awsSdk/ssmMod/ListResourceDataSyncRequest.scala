@@ -18,7 +18,7 @@ trait ListResourceDataSyncRequest extends js.Object {
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.ssmMod.NextToken] = js.native
   
   /**
-    * View a list of resource data syncs according to the sync type. Specify SyncToDestination to view resource data syncs that synchronize data to an Amazon S3 buckets. Specify SyncFromSource to view resource data syncs from AWS Organizations or from multiple AWS Regions. 
+    * View a list of resource data syncs according to the sync type. Specify SyncToDestination to view resource data syncs that synchronize data to an Amazon S3 bucket. Specify SyncFromSource to view resource data syncs from AWS Organizations or from multiple AWS Regions.
     */
   var SyncType: js.UndefOr[ResourceDataSyncType] = js.native
 }

@@ -93,7 +93,7 @@ object Popover {
     def modifiers(value: Modifiers): this.type = set("modifiers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def onClosed(value: /* node */ HTMLElement => Unit): this.type = set("onClosed", js.Any.fromFunction1(value))
@@ -119,7 +119,7 @@ object Popover {
     def popoverClassName(value: String): this.type = set("popoverClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def popoverRef(value: /* ref */ HTMLDivElement | Null => Unit): this.type = set("popoverRef", js.Any.fromFunction1(value))
+    def popoverRef(value: /* ref */ HTMLElement | Null => Unit): this.type = set("popoverRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def portalClassName(value: String): this.type = set("portalClassName", value.asInstanceOf[js.Any])

@@ -41,4 +41,6 @@ trait Labels extends js.Object {
     */
   def range(): MaxMin = js.native
   def range(range: `4`): Unit = js.native
+  
+  def types(types: keyinAxisNameXAxisTypeYAx): Unit = js.native
 }

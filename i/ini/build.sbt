@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "ini"
-version := "v1.3.3-dt-20200515Z-b6a3c5"
+version := "v1.3.3-dt-20201002Z-b6a3c5"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("__esri.ImageryTileLayer")
 @js.native
 /**
-  * ImageryTileLayer presents raster data from a tiled image service. Binary raster tiles are projected, processed, and rendered on the client-side.
+  * ImageryTileLayer presents raster data from a tiled image service.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryTileLayer.html)
   */

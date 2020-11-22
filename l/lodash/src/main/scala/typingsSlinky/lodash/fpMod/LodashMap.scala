@@ -9,15 +9,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashMap extends LodashConvertible {
+trait LodashMap extends js.Object {
   
   def apply(iteratee: String): LodashMap5x1 = js.native
   def apply(iteratee: js.Object): LodashMap6x1 = js.native
   def apply[T](iteratee: String, collection: Dictionary[T]): js.Array[_] = js.native
-  def apply[T](iteratee: String, collection: List[T]): js.Array[_] = js.native
   def apply[T](iteratee: String, collection: NumericDictionary[T]): js.Array[_] = js.native
   def apply[T](iteratee: js.Object, collection: Dictionary[T]): js.Array[Boolean] = js.native
-  def apply[T](iteratee: js.Object, collection: List[T]): js.Array[Boolean] = js.native
   def apply[T](iteratee: js.Object, collection: NumericDictionary[T]): js.Array[Boolean] = js.native
   def apply[T](iteratee: __): LodashMap2x2[T] = js.native
   def apply[T /* <: js.Object */](iteratee: __, collection: T): LodashMap3x2[T] = js.native
@@ -29,9 +27,6 @@ trait LodashMap extends LodashConvertible {
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
   ] = js.native
   def apply[T, K /* <: /* keyof T */ String */](iteratee: K, collection: Dictionary[T]): js.Array[
-    /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
-  ] = js.native
-  def apply[T, K /* <: /* keyof T */ String */](iteratee: K, collection: List[T]): js.Array[
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
   ] = js.native
   def apply[T, K /* <: /* keyof T */ String */](iteratee: K, collection: NumericDictionary[T]): js.Array[

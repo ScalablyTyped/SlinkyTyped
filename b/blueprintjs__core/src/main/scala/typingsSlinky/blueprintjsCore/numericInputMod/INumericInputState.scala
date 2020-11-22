@@ -13,8 +13,6 @@ trait INumericInputState extends js.Object {
   
   var prevMinProp: js.UndefOr[Double] = js.native
   
-  var prevValueProp: js.UndefOr[Double | String] = js.native
-  
   var shouldSelectAfterUpdate: Boolean = js.native
   
   var stepMaxPrecision: Double = js.native
@@ -72,11 +70,5 @@ object INumericInputState {
     
     @scala.inline
     def deletePrevMinProp: Self = this.set("prevMinProp", js.undefined)
-    
-    @scala.inline
-    def setPrevValueProp(value: Double | String): Self = this.set("prevValueProp", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePrevValueProp: Self = this.set("prevValueProp", js.undefined)
   }
 }

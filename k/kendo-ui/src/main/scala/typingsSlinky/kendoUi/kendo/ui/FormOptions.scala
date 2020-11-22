@@ -1,5 +1,6 @@
 package typingsSlinky.kendoUi.kendo.ui
 
+import typingsSlinky.kendoUi.kendoUiStrings.grid
 import typingsSlinky.kendoUi.kendoUiStrings.horizontal
 import typingsSlinky.kendoUi.kendoUiStrings.vertical
 import scala.scalajs.js
@@ -13,9 +14,19 @@ trait FormOptions extends js.Object {
   
   var change: js.UndefOr[js.Function1[/* e */ FormChangeEvent, Unit]] = js.native
   
+  var clear: js.UndefOr[js.Function1[/* e */ FormClearEvent, Unit]] = js.native
+  
+  var focusFirst: js.UndefOr[Boolean] = js.native
+  
   var formData: js.UndefOr[FormData] = js.native
   
+  var formatLabel: js.UndefOr[js.Function] = js.native
+  
+  var grid: js.UndefOr[FormGridOptions] = js.native
+  
   var items: js.UndefOr[js.Array[FormItem]] = js.native
+  
+  var layout: js.UndefOr[String | grid] = js.native
   
   var name: js.UndefOr[String] = js.native
   
@@ -65,10 +76,34 @@ object FormOptions {
     def deleteChange: Self = this.set("change", js.undefined)
     
     @scala.inline
+    def setClear(value: /* e */ FormClearEvent => Unit): Self = this.set("clear", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteClear: Self = this.set("clear", js.undefined)
+    
+    @scala.inline
+    def setFocusFirst(value: Boolean): Self = this.set("focusFirst", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFocusFirst: Self = this.set("focusFirst", js.undefined)
+    
+    @scala.inline
     def setFormData(value: FormData): Self = this.set("formData", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormData: Self = this.set("formData", js.undefined)
+    
+    @scala.inline
+    def setFormatLabel(value: js.Function): Self = this.set("formatLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFormatLabel: Self = this.set("formatLabel", js.undefined)
+    
+    @scala.inline
+    def setGrid(value: FormGridOptions): Self = this.set("grid", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGrid: Self = this.set("grid", js.undefined)
     
     @scala.inline
     def setItemsVarargs(value: FormItem*): Self = this.set("items", js.Array(value :_*))
@@ -78,6 +113,12 @@ object FormOptions {
     
     @scala.inline
     def deleteItems: Self = this.set("items", js.undefined)
+    
+    @scala.inline
+    def setLayout(value: String | grid): Self = this.set("layout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLayout: Self = this.set("layout", js.undefined)
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

@@ -1,12 +1,10 @@
 package typingsSlinky.awsSdkClientPinpointBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientPinpointBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientPinpointBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientPinpointBrowser.pinpointConfigurationMod.PinpointResolvedConfiguration
 import typingsSlinky.awsSdkClientPinpointBrowser.typesGetSegmentImportJobsInputMod.GetSegmentImportJobsInput
 import typingsSlinky.awsSdkClientPinpointBrowser.typesGetSegmentImportJobsOutputMod.GetSegmentImportJobsOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
@@ -23,15 +21,12 @@ object getSegmentImportJobsCommandMod extends js.Object {
           GetSegmentImportJobsInput, 
           OutputTypesUnion, 
           GetSegmentImportJobsOutput, 
-          PinpointResolvedConfiguration, 
-          Blob
+          PinpointResolvedConfiguration
         ] {
     def this(input: GetSegmentImportJobsInput) = this()
     
-    val middlewareStack: MiddlewareStack[GetSegmentImportJobsInput, GetSegmentImportJobsOutput, Blob] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any,
       configuration: PinpointResolvedConfiguration
     ): Handler[GetSegmentImportJobsInput, GetSegmentImportJobsOutput] = js.native
   }

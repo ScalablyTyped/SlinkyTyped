@@ -184,7 +184,7 @@ object AutosuggestPropsBase {
     def deleteRenderSuggestionsContainer: Self = this.set("renderSuggestionsContainer", js.undefined)
     
     @scala.inline
-    def setShouldRenderSuggestions(value: /* value */ String => Boolean): Self = this.set("shouldRenderSuggestions", js.Any.fromFunction1(value))
+    def setShouldRenderSuggestions(value: (/* value */ String, /* reason */ ShouldRenderReasons) => Boolean): Self = this.set("shouldRenderSuggestions", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteShouldRenderSuggestions: Self = this.set("shouldRenderSuggestions", js.undefined)

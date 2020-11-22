@@ -5,6 +5,7 @@ import typingsSlinky.jestEach.bindMod.GlobalCallback
 import typingsSlinky.jestTypes.globalMod.EachTable
 import typingsSlinky.jestTypes.globalMod.EachTestFn
 import typingsSlinky.jestTypes.globalMod.TemplateData
+import typingsSlinky.jestTypes.globalMod.TestCallback
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,15 +15,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def bind(cb: GlobalCallback): js.Function2[
+  def bind[EachCallback /* <: TestCallback */](cb: GlobalCallback): js.Function2[
     /* table */ EachTable, 
     /* taggedTemplateData */ TemplateData, 
-    js.Function3[/* title */ String, /* test */ EachTestFn, /* timeout */ js.UndefOr[Double], Unit]
+    js.Function3[
+      /* title */ String, 
+      /* test */ EachTestFn[EachCallback], 
+      /* timeout */ js.UndefOr[Double], 
+      Unit
+    ]
   ] = js.native
-  def bind(cb: GlobalCallback, supportsDone: Boolean): js.Function2[
+  def bind[EachCallback /* <: TestCallback */](cb: GlobalCallback, supportsDone: Boolean): js.Function2[
     /* table */ EachTable, 
     /* taggedTemplateData */ TemplateData, 
-    js.Function3[/* title */ String, /* test */ EachTestFn, /* timeout */ js.UndefOr[Double], Unit]
+    js.Function3[
+      /* title */ String, 
+      /* test */ EachTestFn[EachCallback], 
+      /* timeout */ js.UndefOr[Double], 
+      Unit
+    ]
   ] = js.native
   
   @js.native

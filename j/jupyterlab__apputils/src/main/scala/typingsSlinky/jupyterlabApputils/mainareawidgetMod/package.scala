@@ -2,8 +2,9 @@ package typingsSlinky.jupyterlabApputils
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 package object mainareawidgetMod {
-  type MainAreaWidget[T /* <: typingsSlinky.phosphorWidgets.mod.Widget */] = typingsSlinky.jupyterlabApputils.mainareawidgetMod.MainAreaWidget_[T]
+  
+  type MainAreaWidget[T /* <: typingsSlinky.luminoWidgets.mod.Widget */] = typingsSlinky.jupyterlabApputils.mainareawidgetMod.MainAreaWidget_[T]
 }

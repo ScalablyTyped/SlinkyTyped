@@ -1,6 +1,7 @@
 package typingsSlinky.openidClient.anon
 
 import typingsSlinky.node.Buffer
+import typingsSlinky.openidClient.mod.DPoPInput
 import typingsSlinky.openidClient.openidClientStrings.DELETE
 import typingsSlinky.openidClient.openidClientStrings.GET
 import typingsSlinky.openidClient.openidClientStrings.HEAD
@@ -15,7 +16,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Body extends js.Object {
   
-  var body: String | Buffer = js.native
+  var DPoP: js.UndefOr[DPoPInput] = js.native
+  
+  var body: js.UndefOr[String | Buffer] = js.native
   
   var headers: js.UndefOr[js.Object] = js.native
   
@@ -26,8 +29,8 @@ trait Body extends js.Object {
 object Body {
   
   @scala.inline
-  def apply(body: String | Buffer): Body = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
+  def apply(): Body = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Body]
   }
   
@@ -47,7 +50,16 @@ object Body {
     }
     
     @scala.inline
+    def setDPoP(value: DPoPInput): Self = this.set("DPoP", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDPoP: Self = this.set("DPoP", js.undefined)
+    
+    @scala.inline
     def setBody(value: String | Buffer): Self = this.set("body", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBody: Self = this.set("body", js.undefined)
     
     @scala.inline
     def setHeaders(value: js.Object): Self = this.set("headers", value.asInstanceOf[js.Any])

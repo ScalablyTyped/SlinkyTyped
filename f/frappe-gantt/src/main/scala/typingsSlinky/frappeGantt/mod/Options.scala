@@ -21,6 +21,8 @@ trait Options extends js.Object {
   
   var header_height: js.UndefOr[Double] = js.native
   
+  var language: js.UndefOr[String] = js.native
+  
   var on_click: js.UndefOr[js.Function1[/* task */ EnrichedTask, Unit]] = js.native
   
   var on_date_change: js.UndefOr[
@@ -106,6 +108,12 @@ object Options {
     
     @scala.inline
     def deleteHeader_height: Self = this.set("header_height", js.undefined)
+    
+    @scala.inline
+    def setLanguage(value: String): Self = this.set("language", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLanguage: Self = this.set("language", js.undefined)
     
     @scala.inline
     def setOn_click(value: /* task */ EnrichedTask => Unit): Self = this.set("on_click", js.Any.fromFunction1(value))

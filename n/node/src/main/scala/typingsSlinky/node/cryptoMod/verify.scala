@@ -18,7 +18,13 @@ object verify extends js.Object {
   def apply(
     algorithm: js.UndefOr[scala.Nothing],
     data: ArrayBufferView,
-    key: VerifyKeyWithOptions,
+    key: VerifyKeyObjectInput,
+    signature: ArrayBufferView
+  ): Boolean = js.native
+  def apply(
+    algorithm: js.UndefOr[scala.Nothing],
+    data: ArrayBufferView,
+    key: VerifyPublicKeyInput,
     signature: ArrayBufferView
   ): Boolean = js.native
   /**
@@ -30,7 +36,9 @@ object verify extends js.Object {
     * passed to [`crypto.createPublicKey()`][].
     */
   def apply(algorithm: String, data: ArrayBufferView, key: KeyLike, signature: ArrayBufferView): Boolean = js.native
-  def apply(algorithm: String, data: ArrayBufferView, key: VerifyKeyWithOptions, signature: ArrayBufferView): Boolean = js.native
+  def apply(algorithm: String, data: ArrayBufferView, key: VerifyKeyObjectInput, signature: ArrayBufferView): Boolean = js.native
+  def apply(algorithm: String, data: ArrayBufferView, key: VerifyPublicKeyInput, signature: ArrayBufferView): Boolean = js.native
   def apply(algorithm: Null, data: ArrayBufferView, key: KeyLike, signature: ArrayBufferView): Boolean = js.native
-  def apply(algorithm: Null, data: ArrayBufferView, key: VerifyKeyWithOptions, signature: ArrayBufferView): Boolean = js.native
+  def apply(algorithm: Null, data: ArrayBufferView, key: VerifyKeyObjectInput, signature: ArrayBufferView): Boolean = js.native
+  def apply(algorithm: Null, data: ArrayBufferView, key: VerifyPublicKeyInput, signature: ArrayBufferView): Boolean = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin
 
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.controlledTypeScriptSystemMod.ControlledTypeScriptSystem
 import typingsSlinky.forkTsCheckerWebpackPlugin.typeScriptExtensionMod.TypeScriptHostExtension
 import typingsSlinky.typescript.mod.BuilderProgram
@@ -16,8 +17,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object controlledWatchCompilerHostMod extends js.Object {
   
-  def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](parsedCommandLine: ParsedCommandLine, system: ControlledTypeScriptSystem): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
+  def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](typescript: Typeofts, parsedCommandLine: ParsedCommandLine, system: ControlledTypeScriptSystem): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -27,6 +29,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -35,6 +38,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     afterProgramCreate: js.Function1[/* program */ TProgram, Unit]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -44,6 +48,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -51,6 +56,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     reportWatchStatus: WatchStatusReporter
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -60,6 +66,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -68,6 +75,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     afterProgramCreate: js.Function1[/* program */ TProgram, Unit]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -77,12 +85,14 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
     reportDiagnostic: DiagnosticReporter
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -92,6 +102,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -100,6 +111,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     afterProgramCreate: js.Function1[/* program */ TProgram, Unit]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -109,6 +121,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -116,6 +129,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     reportWatchStatus: WatchStatusReporter
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -125,6 +139,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -133,6 +148,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     afterProgramCreate: js.Function1[/* program */ TProgram, Unit]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[scala.Nothing],
@@ -142,11 +158,13 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -156,6 +174,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -164,6 +183,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     afterProgramCreate: js.Function1[/* program */ TProgram, Unit]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -173,6 +193,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -180,6 +201,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     reportWatchStatus: WatchStatusReporter
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -189,6 +211,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -197,6 +220,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     afterProgramCreate: js.Function1[/* program */ TProgram, Unit]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -206,12 +230,14 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
     reportDiagnostic: DiagnosticReporter
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -221,6 +247,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -229,6 +256,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     afterProgramCreate: js.Function1[/* program */ TProgram, Unit]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -238,6 +266,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -245,6 +274,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     reportWatchStatus: WatchStatusReporter
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -254,6 +284,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     hostExtensions: js.Array[TypeScriptHostExtension]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],
@@ -262,6 +293,7 @@ object controlledWatchCompilerHostMod extends js.Object {
     afterProgramCreate: js.Function1[/* program */ TProgram, Unit]
   ): WatchCompilerHostOfFilesAndCompilerOptions[TProgram] = js.native
   def createControlledWatchCompilerHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: CreateProgram_[TProgram],

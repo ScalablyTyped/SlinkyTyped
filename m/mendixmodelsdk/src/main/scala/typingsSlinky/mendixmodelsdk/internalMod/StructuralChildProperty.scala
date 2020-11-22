@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.internalMod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
 import typingsSlinky.mendixmodelsdk.unitsMod.IModelUnit
 import typingsSlinky.mendixmodelsdk.unitsMod.IStructuralUnit
@@ -13,25 +14,25 @@ class StructuralChildProperty[T /* <: IStructuralUnit | IModelUnit */] protected
   extends typingsSlinky.mendixmodelsdk.propertiesMod.StructuralChildProperty[T] {
   def this(
     declaredOn: IStructureClass,
-    parent: typingsSlinky.mendixmodelsdk.unitsMod.StructuralUnit,
+    parent: typingsSlinky.mendixmodelsdk.unitsMod.StructuralUnit[IAbstractModel],
     name: String
   ) = this()
   def this(
     declaredOn: IStructureClass,
-    parent: typingsSlinky.mendixmodelsdk.unitsMod.StructuralUnit,
+    parent: typingsSlinky.mendixmodelsdk.unitsMod.StructuralUnit[IAbstractModel],
     name: String,
     value: T
   ) = this()
   def this(
     declaredOn: IStructureClass,
-    parent: typingsSlinky.mendixmodelsdk.unitsMod.StructuralUnit,
+    parent: typingsSlinky.mendixmodelsdk.unitsMod.StructuralUnit[IAbstractModel],
     name: String,
     value: T,
     targetRefType: String
   ) = this()
   def this(
     declaredOn: IStructureClass,
-    parent: typingsSlinky.mendixmodelsdk.unitsMod.StructuralUnit,
+    parent: typingsSlinky.mendixmodelsdk.unitsMod.StructuralUnit[IAbstractModel],
     name: String,
     value: Null,
     targetRefType: String

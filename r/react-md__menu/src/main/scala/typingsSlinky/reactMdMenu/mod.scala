@@ -9,8 +9,8 @@ import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdDivider.dividerMod.DividerElement
 import typingsSlinky.reactMdList.listItemLinkMod.ListItemLinkWithComponentProps
-import typingsSlinky.reactMdMenu.anon.MenuPropsPickMenuPropshid
-import typingsSlinky.reactMdMenu.anon.MenuPropsPickMenuPropshidAbout
+import typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenvi
+import typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenviAbout
 import typingsSlinky.reactMdMenu.defaultMenuItemRendererMod.ValidMenuItem
 import typingsSlinky.reactMdMenu.defaultMenuRendererMod.AllInjectedMenuProps
 import typingsSlinky.reactMdMenu.dropdownMenuItemMod.DropdownMenuItemProps
@@ -32,23 +32,10 @@ object mod extends js.Object {
   
   val DropdownMenu: ForwardRefExoticComponent[DropdownMenuProps with RefAttributes[HTMLButtonElement]] = js.native
   
-  /**
-    * The `DropdownMenuItem` component is used to be able to render nested dropdown menus.
-    */
   val DropdownMenuItem: ForwardRefExoticComponent[DropdownMenuItemProps with RefAttributes[HTMLLIElement]] = js.native
   
-  /**
-    * The `Menu` component is a fully controlled component that will animate in and
-    * out based on the `visible` prop as well as handle keyboard focus, closing
-    * when needed, etc.
-    */
-  val Menu: ForwardRefExoticComponent[MenuPropsPickMenuPropshid | MenuPropsPickMenuPropshidAbout] = js.native
+  val Menu: ForwardRefExoticComponent[PickBaseMenuPropshiddenvi | PickBaseMenuPropshiddenviAbout] = js.native
   
-  /**
-    * This component is an extension of the `Button` component that will:
-    * - apply the required a11y prosp for a menu button
-    * - dynamically add a dropdown icon after the button contents
-    */
   val MenuButton: ForwardRefExoticComponent[MenuButtonProps with RefAttributes[HTMLButtonElement]] = js.native
   
   val MenuItem: ForwardRefExoticComponent[MenuItemProps with RefAttributes[HTMLLIElement]] = js.native

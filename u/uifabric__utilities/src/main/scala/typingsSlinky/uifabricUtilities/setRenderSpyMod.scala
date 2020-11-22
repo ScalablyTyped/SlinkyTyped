@@ -11,5 +11,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object setRenderSpyMod extends js.Object {
   
-  def setRenderSpy(wrapper: ReactWrapper[js.Object, js.Object, ReactComponentClass[js.Object]]): SinonSpy = js.native
+  def setRenderSpy(wrapper: ReactWrapper[js.Object, js.Object, ReactComponentClass[js.Object]]): SinonSpy[js.Array[_], _] = js.native
 }

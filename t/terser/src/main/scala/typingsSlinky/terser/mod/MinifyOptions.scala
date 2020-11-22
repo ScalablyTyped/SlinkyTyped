@@ -25,6 +25,9 @@ trait MinifyOptions extends js.Object {
   
   var nameCache: js.UndefOr[js.Object] = js.native
   
+  /** @deprecated */
+  var output: js.UndefOr[FormatOptions] = js.native
+  
   var parse: js.UndefOr[ParseOptions] = js.native
   
   var safari10: js.UndefOr[Boolean] = js.native
@@ -115,6 +118,12 @@ object MinifyOptions {
     
     @scala.inline
     def deleteNameCache: Self = this.set("nameCache", js.undefined)
+    
+    @scala.inline
+    def setOutput(value: FormatOptions): Self = this.set("output", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutput: Self = this.set("output", js.undefined)
     
     @scala.inline
     def setParse(value: ParseOptions): Self = this.set("parse", value.asInstanceOf[js.Any])

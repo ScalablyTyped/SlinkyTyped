@@ -159,6 +159,9 @@ object TreeTable {
     def paginator(value: Boolean): this.type = set("paginator", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def paginatorDropdownAppendTo(value: js.Any): this.type = set("paginatorDropdownAppendTo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def paginatorLeft(value: js.Any): this.type = set("paginatorLeft", value.asInstanceOf[js.Any])
     
     @scala.inline

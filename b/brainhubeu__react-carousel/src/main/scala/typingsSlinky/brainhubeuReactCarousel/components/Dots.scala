@@ -20,6 +20,9 @@ object Dots {
        with StBuildingComponent[tag.type, typingsSlinky.brainhubeuReactCarousel.mod.Dots] {
     
     @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def number(value: Double): this.type = set("number", value.asInstanceOf[js.Any])
     
     @scala.inline

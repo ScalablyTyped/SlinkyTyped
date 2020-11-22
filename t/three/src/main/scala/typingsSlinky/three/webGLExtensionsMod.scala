@@ -14,5 +14,7 @@ object webGLExtensionsMod extends js.Object {
     def this(gl: WebGLRenderingContext) = this()
     
     def get(name: String): js.Any = js.native
+    
+    def has(name: String): Boolean = js.native
   }
 }

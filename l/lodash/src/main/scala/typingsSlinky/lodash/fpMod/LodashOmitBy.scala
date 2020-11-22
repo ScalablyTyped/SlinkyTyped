@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashOmitBy extends LodashConvertible {
+trait LodashOmitBy extends js.Object {
   
   def apply[T](predicate: ValueKeyIteratee[T]): NumericDictionary[T] = js.native
   def apply[T /* <: js.Object */](

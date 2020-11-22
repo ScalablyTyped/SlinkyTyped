@@ -55,6 +55,8 @@ object mod extends js.Object {
     
     val DATEPICKER_NAVBAR: String = js.native
     
+    val DATEPICKER_NAVBUTTON: /* "DayPicker-NavButton" */ String = js.native
+    
     val DATEPICKER_TIMEPICKER_WRAPPER: String = js.native
     
     val DATEPICKER_YEAR_SELECT: String = js.native
@@ -228,6 +230,8 @@ object mod extends js.Object {
     def isTimeInRange(date: js.Date, minDate: js.Date, maxDate: js.Date): Boolean = js.native
     
     def isTimeSameOrAfter(date: js.Date, dateToCompare: js.Date): Boolean = js.native
+    
+    def isToday(date: js.Date): Boolean = js.native
   }
   
   @js.native

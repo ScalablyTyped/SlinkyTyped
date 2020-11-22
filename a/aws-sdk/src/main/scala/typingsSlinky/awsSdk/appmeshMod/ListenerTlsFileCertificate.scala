@@ -13,8 +13,7 @@ trait ListenerTlsFileCertificate extends js.Object {
   var certificateChain: FilePath = js.native
   
   /**
-    * The private key for a certificate stored on the file system of the virtual node that the
-    proxy is running on.
+    * The private key for a certificate stored on the file system of the virtual node that the proxy is running on.
     */
   var privateKey: FilePath = js.native
 }

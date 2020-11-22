@@ -1,8 +1,10 @@
 package typingsSlinky.twilsock
 
+import typingsSlinky.std.Set
 import typingsSlinky.twilsock.initReplyMod.ContinuationTokenStatus
 import typingsSlinky.twilsock.initregistrationMod.InitRegistration
 import typingsSlinky.twilsock.protocolMod.Protocol.Request
+import typingsSlinky.twilsock.telemetryMod.TelemetryEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -50,7 +52,8 @@ object messagesMod extends js.Object {
       continuationTokenStatus: ContinuationTokenStatus,
       offlineStorage: js.Any,
       initRegistrations: js.Any,
-      debugInfo: js.Any
+      debugInfo: js.Any,
+      confirmedCapabilities: Set[String]
     ) = this()
   }
   
@@ -64,6 +67,12 @@ object messagesMod extends js.Object {
   class Reply protected ()
     extends typingsSlinky.twilsock.replyMod.Reply {
     def this(id: String) = this()
+  }
+  
+  @js.native
+  class Telemetry protected ()
+    extends typingsSlinky.twilsock.telemetryMod.Telemetry {
+    def this(events: js.Array[TelemetryEvent]) = this()
   }
   
   @js.native

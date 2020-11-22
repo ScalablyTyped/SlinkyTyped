@@ -1,7 +1,7 @@
 
 # Scala.js typings for umzug
 
-Typings are for version v2.2.0
+Typings are for version v2.3.0
 
 ## Library description:
 Framework agnostic migration tool for Node.JS

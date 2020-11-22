@@ -11,7 +11,7 @@ trait ElevationLayerProperties
      with PortalLayerProperties {
   
   /**
-    * The [image service's metadata JSON](https://developers.arcgis.com/rest/services-reference/image-service.htm) exposed by the ArcGIS REST API. While most commonly used [properties](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#properties-summary) are exposed on the ElevationLayer class directly, this property gives access to all information returned by the elevation image service. This property is useful if working in an application built using an older version of the API which requires access to elevation image service properties from a more recent version.
+    * The [image service's metadata JSON](https://developers.arcgis.com/rest/services-reference/image-service.htm) exposed by the ArcGIS REST API.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#sourceJSON)
     */

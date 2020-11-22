@@ -30,108 +30,158 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartValueAxis extends dxChartCommonAxisSettings {
   
-  /** @name dxChart.Options.valueAxis.autoBreaksEnabled */
+  /**
+    * [descr:dxChart.Options.valueAxis.autoBreaksEnabled]
+    */
   var autoBreaksEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.valueAxis.axisDivisionFactor */
+  /**
+    * [descr:dxChart.Options.valueAxis.axisDivisionFactor]
+    */
   var axisDivisionFactor: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.valueAxis.breaks */
+  /**
+    * [descr:dxChart.Options.valueAxis.breaks]
+    */
   var breaks: js.UndefOr[js.Array[ScaleBreak]] = js.native
   
-  /** @name dxChart.Options.valueAxis.categories */
+  /**
+    * [descr:dxChart.Options.valueAxis.categories]
+    */
   var categories: js.UndefOr[js.Array[Double | String | js.Date]] = js.native
   
-  /** @name dxChart.Options.valueAxis.constantLineStyle */
+  /**
+    * [descr:dxChart.Options.valueAxis.constantLineStyle]
+    */
   @JSName("constantLineStyle")
   var constantLineStyle_dxChartValueAxis: js.UndefOr[dxChartValueAxisConstantLineStyle] = js.native
   
-  /** @name dxChart.Options.valueAxis.constantLines */
+  /**
+    * [descr:dxChart.Options.valueAxis.constantLines]
+    */
   var constantLines: js.UndefOr[js.Array[dxChartValueAxisConstantLines]] = js.native
   
-  /** @name dxChart.Options.valueAxis.customPosition */
+  /**
+    * [descr:dxChart.Options.valueAxis.customPosition]
+    */
   var customPosition: js.UndefOr[Double | js.Date | String] = js.native
   
-  /** @name dxChart.Options.valueAxis.label */
+  /**
+    * [descr:dxChart.Options.valueAxis.label]
+    */
   @JSName("label")
   var label_dxChartValueAxis: js.UndefOr[dxChartValueAxisLabel] = js.native
   
-  /** @name dxChart.Options.valueAxis.linearThreshold */
+  /**
+    * [descr:dxChart.Options.valueAxis.linearThreshold]
+    */
   var linearThreshold: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.valueAxis.logarithmBase */
+  /**
+    * [descr:dxChart.Options.valueAxis.logarithmBase]
+    */
   var logarithmBase: js.UndefOr[Double] = js.native
   
-  /** @deprecated */
-  /** @name dxChart.Options.valueAxis.max */
-  var max: js.UndefOr[Double | js.Date | String] = js.native
-  
-  /** @name dxChart.Options.valueAxis.maxAutoBreakCount */
+  /**
+    * [descr:dxChart.Options.valueAxis.maxAutoBreakCount]
+    */
   var maxAutoBreakCount: js.UndefOr[Double] = js.native
   
-  /** @deprecated */
-  /** @name dxChart.Options.valueAxis.min */
-  var min: js.UndefOr[Double | js.Date | String] = js.native
-  
-  /** @name dxChart.Options.valueAxis.minVisualRangeLength */
+  /**
+    * [descr:dxChart.Options.valueAxis.minVisualRangeLength]
+    */
   var minVisualRangeLength: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxChart.Options.valueAxis.minorTickCount */
+  /**
+    * [descr:dxChart.Options.valueAxis.minorTickCount]
+    */
   var minorTickCount: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.valueAxis.minorTickInterval */
+  /**
+    * [descr:dxChart.Options.valueAxis.minorTickInterval]
+    */
   var minorTickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxChart.Options.valueAxis.multipleAxesSpacing */
+  /**
+    * [descr:dxChart.Options.valueAxis.multipleAxesSpacing]
+    */
   var multipleAxesSpacing: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.valueAxis.name */
+  /**
+    * [descr:dxChart.Options.valueAxis.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxChart.Options.valueAxis.offset */
+  /**
+    * [descr:dxChart.Options.valueAxis.offset]
+    */
   var offset: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.valueAxis.pane */
+  /**
+    * [descr:dxChart.Options.valueAxis.pane]
+    */
   var pane: js.UndefOr[String] = js.native
   
-  /** @name dxChart.Options.valueAxis.position */
+  /**
+    * [descr:dxChart.Options.valueAxis.position]
+    */
   var position: js.UndefOr[bottom | left | right | top] = js.native
   
-  /** @name dxChart.Options.valueAxis.showZero */
+  /**
+    * [descr:dxChart.Options.valueAxis.showZero]
+    */
   var showZero: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.valueAxis.strips */
+  /**
+    * [descr:dxChart.Options.valueAxis.strips]
+    */
   var strips: js.UndefOr[js.Array[dxChartValueAxisStrips]] = js.native
   
-  /** @name dxChart.Options.valueAxis.synchronizedValue */
+  /**
+    * [descr:dxChart.Options.valueAxis.synchronizedValue]
+    */
   var synchronizedValue: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.valueAxis.tickInterval */
+  /**
+    * [descr:dxChart.Options.valueAxis.tickInterval]
+    */
   var tickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxChart.Options.valueAxis.title */
+  /**
+    * [descr:dxChart.Options.valueAxis.title]
+    */
   @JSName("title")
   var title_dxChartValueAxis: js.UndefOr[dxChartValueAxisTitle] = js.native
   
-  /** @name dxChart.Options.valueAxis.type */
+  /**
+    * [descr:dxChart.Options.valueAxis.type]
+    */
   var `type`: js.UndefOr[continuous | discrete | logarithmic] = js.native
   
-  /** @name dxChart.Options.valueAxis.valueType */
+  /**
+    * [descr:dxChart.Options.valueAxis.valueType]
+    */
   var valueType: js.UndefOr[datetime | numeric | string_] = js.native
   
-  /** @name dxChart.Options.valueAxis.visualRange */
+  /**
+    * [descr:dxChart.Options.valueAxis.visualRange]
+    */
   var visualRange: js.UndefOr[VizRange | (js.Array[Double | String | js.Date])] = js.native
   
-  /** @name dxChart.Options.valueAxis.visualRangeUpdateMode */
+  /**
+    * [descr:dxChart.Options.valueAxis.visualRangeUpdateMode]
+    */
   var visualRangeUpdateMode: js.UndefOr[auto | keep | reset | shift] = js.native
   
-  /** @name dxChart.Options.valueAxis.wholeRange */
+  /**
+    * [descr:dxChart.Options.valueAxis.wholeRange]
+    */
   var wholeRange: js.UndefOr[VizRange | (js.Array[Double | String | js.Date])] = js.native
 }
 object dxChartValueAxis {
@@ -230,28 +280,10 @@ object dxChartValueAxis {
     def deleteLogarithmBase: Self = this.set("logarithmBase", js.undefined)
     
     @scala.inline
-    def setMaxDate(value: js.Date): Self = this.set("max", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMax(value: Double | js.Date | String): Self = this.set("max", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMax: Self = this.set("max", js.undefined)
-    
-    @scala.inline
     def setMaxAutoBreakCount(value: Double): Self = this.set("maxAutoBreakCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaxAutoBreakCount: Self = this.set("maxAutoBreakCount", js.undefined)
-    
-    @scala.inline
-    def setMinDate(value: js.Date): Self = this.set("min", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMin(value: Double | js.Date | String): Self = this.set("min", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMin: Self = this.set("min", js.undefined)
     
     @scala.inline
     def setMinVisualRangeLength(

@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("next/dist/next-server/server/router", JSImport.Default)
 @js.native
 class default protected () extends Router {
-  def this(hasBasePathHeadersFsRoutesRewritesRedirectsCatchAllRouteDynamicRoutesPageCheckerUseFileSystemPublicRoutes: CatchAllRoute) = this()
+  def this(hasBasePathHeadersFsRoutesRewritesRedirectsCatchAllRouteDynamicRoutesPageCheckerUseFileSystemPublicRoutesLocales: CatchAllRoute) = this()
 }

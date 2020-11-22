@@ -32,6 +32,9 @@ object shapeMod extends js.Object {
     
     def getPointsHoles(divisions: Double): js.Array[js.Array[Vector2]] = js.native
     
+    /**
+    	 * @default []
+    	 */
     var holes: js.Array[Path] = js.native
     
     /**

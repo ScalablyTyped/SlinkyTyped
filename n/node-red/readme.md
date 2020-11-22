@@ -1,7 +1,7 @@
 
 # Scala.js typings for node-red
 
-Typings are for version 0.20
+Typings are for version 1.1
 
 ## Library description:
 Low-code programming for event-driven applications

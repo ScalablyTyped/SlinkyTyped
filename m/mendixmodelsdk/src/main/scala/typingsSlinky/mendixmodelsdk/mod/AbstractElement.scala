@@ -1,5 +1,7 @@
 package typingsSlinky.mendixmodelsdk.mod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -7,8 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk", "AbstractElement")
 @js.native
-abstract class AbstractElement protected ()
-  extends typingsSlinky.mendixmodelsdk.internalMod.AbstractElement {
+abstract class AbstractElement[TModel /* <: IAbstractModel */, TContainer /* <: Container */] protected ()
+  extends typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[TModel, TContainer] {
   def this(
     model: typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel,
     structureTypeName: String,

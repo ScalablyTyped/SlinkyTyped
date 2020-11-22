@@ -18,6 +18,9 @@ object sphericalHarmonics3Mod extends js.Object {
     
     def addScaledSH(sh: SphericalHarmonics3, s: Double): SphericalHarmonics3 = js.native
     
+    /**
+    	 * @default [new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]
+    	 */
     var coefficients: js.Array[Vector3] = js.native
     
     def copy(sh: SphericalHarmonics3): SphericalHarmonics3 = js.native

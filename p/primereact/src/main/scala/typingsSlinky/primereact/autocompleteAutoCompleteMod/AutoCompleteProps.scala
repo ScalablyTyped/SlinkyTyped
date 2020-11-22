@@ -1,7 +1,6 @@
 package typingsSlinky.primereact.autocompleteAutoCompleteMod
 
 import org.scalajs.dom.raw.Event
-import slinky.core.facade.ReactElement
 import typingsSlinky.primereact.anon.OriginalEvent
 import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.anon.Value
@@ -41,7 +40,7 @@ trait AutoCompleteProps extends js.Object {
   
   var inputStyle: js.UndefOr[js.Object] = js.native
   
-  var itemTemplate: js.UndefOr[js.Function1[/* data */ js.Any, js.UndefOr[ReactElement]]] = js.native
+  var itemTemplate: js.UndefOr[js.Function1[/* data */ js.Any, _]] = js.native
   
   var maxlength: js.UndefOr[Double] = js.native
   
@@ -77,13 +76,17 @@ trait AutoCompleteProps extends js.Object {
   
   var onUnselect: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
   
+  var panelClassName: js.UndefOr[String] = js.native
+  
+  var panelStyle: js.UndefOr[js.Object] = js.native
+  
   var placeholder: js.UndefOr[String] = js.native
   
   var readonly: js.UndefOr[Boolean] = js.native
   
   var scrollHeight: js.UndefOr[String] = js.native
   
-  var selectedItemTemplate: js.UndefOr[js.Function1[/* data */ js.Any, String]] = js.native
+  var selectedItemTemplate: js.UndefOr[js.Function1[/* data */ js.Any, _]] = js.native
   
   var size: js.UndefOr[Double] = js.native
   
@@ -209,7 +212,7 @@ object AutoCompleteProps {
     def deleteInputStyle: Self = this.set("inputStyle", js.undefined)
     
     @scala.inline
-    def setItemTemplate(value: /* data */ js.Any => js.UndefOr[ReactElement]): Self = this.set("itemTemplate", js.Any.fromFunction1(value))
+    def setItemTemplate(value: /* data */ js.Any => _): Self = this.set("itemTemplate", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteItemTemplate: Self = this.set("itemTemplate", js.undefined)
@@ -317,6 +320,18 @@ object AutoCompleteProps {
     def deleteOnUnselect: Self = this.set("onUnselect", js.undefined)
     
     @scala.inline
+    def setPanelClassName(value: String): Self = this.set("panelClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePanelClassName: Self = this.set("panelClassName", js.undefined)
+    
+    @scala.inline
+    def setPanelStyle(value: js.Object): Self = this.set("panelStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePanelStyle: Self = this.set("panelStyle", js.undefined)
+    
+    @scala.inline
     def setPlaceholder(value: String): Self = this.set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -335,7 +350,7 @@ object AutoCompleteProps {
     def deleteScrollHeight: Self = this.set("scrollHeight", js.undefined)
     
     @scala.inline
-    def setSelectedItemTemplate(value: /* data */ js.Any => String): Self = this.set("selectedItemTemplate", js.Any.fromFunction1(value))
+    def setSelectedItemTemplate(value: /* data */ js.Any => _): Self = this.set("selectedItemTemplate", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteSelectedItemTemplate: Self = this.set("selectedItemTemplate", js.undefined)

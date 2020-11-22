@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WebApplication extends js.Object {
   
   // Home page or landing page of the application.
-  var homePageUrl: js.UndefOr[String] = js.native
+  var homePageUrl: js.UndefOr[NullableOption[String]] = js.native
   
   // Specifies whether this web application can request tokens using the OAuth 2.0 implicit flow.
-  var implicitGrantSettings: js.UndefOr[ImplicitGrantSettings] = js.native
+  var implicitGrantSettings: js.UndefOr[NullableOption[ImplicitGrantSettings]] = js.native
   
   /**
     * Specifies the URL that will be used by Microsoft's authorization service to logout an user using front-channel,
     * back-channel or SAML logout protocols.
     */
-  var logoutUrl: js.UndefOr[String] = js.native
+  var logoutUrl: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and
@@ -49,22 +49,31 @@ object WebApplication {
     }
     
     @scala.inline
-    def setHomePageUrl(value: String): Self = this.set("homePageUrl", value.asInstanceOf[js.Any])
+    def setHomePageUrl(value: NullableOption[String]): Self = this.set("homePageUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHomePageUrl: Self = this.set("homePageUrl", js.undefined)
     
     @scala.inline
-    def setImplicitGrantSettings(value: ImplicitGrantSettings): Self = this.set("implicitGrantSettings", value.asInstanceOf[js.Any])
+    def setHomePageUrlNull: Self = this.set("homePageUrl", null)
+    
+    @scala.inline
+    def setImplicitGrantSettings(value: NullableOption[ImplicitGrantSettings]): Self = this.set("implicitGrantSettings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteImplicitGrantSettings: Self = this.set("implicitGrantSettings", js.undefined)
     
     @scala.inline
-    def setLogoutUrl(value: String): Self = this.set("logoutUrl", value.asInstanceOf[js.Any])
+    def setImplicitGrantSettingsNull: Self = this.set("implicitGrantSettings", null)
+    
+    @scala.inline
+    def setLogoutUrl(value: NullableOption[String]): Self = this.set("logoutUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLogoutUrl: Self = this.set("logoutUrl", js.undefined)
+    
+    @scala.inline
+    def setLogoutUrlNull: Self = this.set("logoutUrl", null)
     
     @scala.inline
     def setRedirectUrisVarargs(value: String*): Self = this.set("redirectUris", js.Array(value :_*))

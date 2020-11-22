@@ -22,9 +22,14 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapMenuIt
 import typingsSlinky.materialUiCore.buttonBaseButtonBaseMod.ButtonBaseActions
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions removals`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-start`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`removals additions`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`removals text`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`text additions`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`text removals`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
 import typingsSlinky.materialUiCore.materialUiCoreStrings.all
 import typingsSlinky.materialUiCore.materialUiCoreStrings.ascending
@@ -74,6 +79,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
@@ -226,7 +232,9 @@ object MenuItem {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -697,7 +705,7 @@ object MenuItem {
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def referrerPolicy(value: String): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
+    def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])

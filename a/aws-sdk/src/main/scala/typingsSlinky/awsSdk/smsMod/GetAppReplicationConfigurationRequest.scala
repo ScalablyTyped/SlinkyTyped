@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetAppReplicationConfigurationRequest extends js.Object {
   
   /**
-    * ID of the application associated with the replication configuration.
+    * The ID of the application.
     */
   var appId: js.UndefOr[AppId] = js.native
 }

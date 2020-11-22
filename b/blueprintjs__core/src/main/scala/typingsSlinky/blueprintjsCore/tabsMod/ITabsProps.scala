@@ -44,7 +44,7 @@ trait ITabsProps extends IProps {
   var onChange: js.UndefOr[
     js.Function3[
       /* newTabId */ TabId, 
-      /* prevTabId */ TabId, 
+      /* prevTabId */ js.UndefOr[TabId], 
       /* event */ SyntheticMouseEvent[HTMLElement], 
       Unit
     ]
@@ -117,7 +117,7 @@ object ITabsProps {
     
     @scala.inline
     def setOnChange(
-      value: (/* newTabId */ TabId, /* prevTabId */ TabId, /* event */ SyntheticMouseEvent[HTMLElement]) => Unit
+      value: (/* newTabId */ TabId, /* prevTabId */ js.UndefOr[TabId], /* event */ SyntheticMouseEvent[HTMLElement]) => Unit
     ): Self = this.set("onChange", js.Any.fromFunction3(value))
     
     @scala.inline

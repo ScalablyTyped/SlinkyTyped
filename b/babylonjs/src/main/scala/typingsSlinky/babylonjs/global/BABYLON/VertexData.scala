@@ -1,21 +1,22 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.BABYLON.FloatArray
+import typingsSlinky.babylonjs.BABYLON.ICreateCapsuleOptions
 import typingsSlinky.babylonjs.anon.AlignHorizontalAlignVertical
 import typingsSlinky.babylonjs.anon.ArcBackUVs
+import typingsSlinky.babylonjs.anon.BackUVsDepth
 import typingsSlinky.babylonjs.anon.BackUVsDiameter
 import typingsSlinky.babylonjs.anon.BackUVsFrontUVs
 import typingsSlinky.babylonjs.anon.BbSize
 import typingsSlinky.babylonjs.anon.ClosePath
 import typingsSlinky.babylonjs.anon.DashNbDashSize
-import typingsSlinky.babylonjs.anon.DepthFaceColors
 import typingsSlinky.babylonjs.anon.DiameterBottom
 import typingsSlinky.babylonjs.anon.DiameterY
 import typingsSlinky.babylonjs.anon.Lines
 import typingsSlinky.babylonjs.anon.Precision
 import typingsSlinky.babylonjs.anon.RadialSegments
-import typingsSlinky.babylonjs.anon.RadiusY
-import typingsSlinky.babylonjs.anon.SizeX
+import typingsSlinky.babylonjs.anon.RadiusZ
+import typingsSlinky.babylonjs.anon.SizeY
 import typingsSlinky.babylonjs.anon.Subdivisions
 import typingsSlinky.babylonjs.anon.TileWidth
 import scala.scalajs.js
@@ -71,7 +72,15 @@ object VertexData extends js.Object {
     * * backUVs only usable when you create a double-sided mesh, used to choose what parts of the texture image to crop and apply on the back side, optional, default vector4 (0, 0, 1, 1)
     * @returns the VertexData of the box
     */
-  def CreateBox(options: DepthFaceColors): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreateBox(options: BackUVsDepth): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  
+  /**
+    * Creates the VertexData for a Capsule, inspired from https://github.com/maximeq/three-js-capsule-geometry/blob/master/src/CapsuleBufferGeometry.js
+    * @param options an object used to set the following optional parameters for the capsule, required but can be empty
+    * @returns the VertexData of the Capsule
+    */
+  def CreateCapsule(): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreateCapsule(options: ICreateCapsuleOptions): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   
   /**
     * Creates the VertexData for a cylinder, cone or prism
@@ -159,7 +168,7 @@ object VertexData extends js.Object {
     * * backUVs only usable when you create a double-sided mesh, used to choose what parts of the texture image to crop and apply on the back side, optional, default vector4 (0, 0, 1, 1)
     * @returns the VertexData of the IcoSphere
     */
-  def CreateIcoSphere(options: RadiusY): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreateIcoSphere(options: RadiusZ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   
   /**
     * Creates the VertexData of the LineSystem
@@ -192,6 +201,7 @@ object VertexData extends js.Object {
     * @param fColors an array of Color3 elements used to set different colors to the top, rings and bottom respectively
     * @param frontUVs only usable when you create a double-sided mesh, used to choose what parts of the texture image to crop and apply on the front side, optional, default vector4 (0, 0, 1, 1)
     * @param backUVs only usable when you create a double-sided mesh, used to choose what parts of the texture image to crop and apply on the back side, optional, default vector4 (0, 0, 1, 1)
+    * @param wrap a boolean, default false, when true and fUVs used texture is wrapped around all sides, when false texture is applied side
     * @returns the VertexData of the Polygon
     */
   def CreatePolygon(polygon: typingsSlinky.babylonjs.BABYLON.Mesh, sideOrientation: Double): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
@@ -201,7 +211,25 @@ object VertexData extends js.Object {
     fUV: js.UndefOr[scala.Nothing],
     fColors: js.UndefOr[scala.Nothing],
     frontUVs: js.UndefOr[scala.Nothing],
+    backUVs: js.UndefOr[scala.Nothing],
+    wrap: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.UndefOr[scala.Nothing],
+    fColors: js.UndefOr[scala.Nothing],
+    frontUVs: js.UndefOr[scala.Nothing],
     backUVs: typingsSlinky.babylonjs.BABYLON.Vector4
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.UndefOr[scala.Nothing],
+    fColors: js.UndefOr[scala.Nothing],
+    frontUVs: js.UndefOr[scala.Nothing],
+    backUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    wrap: Boolean
   ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   def CreatePolygon(
     polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
@@ -216,7 +244,25 @@ object VertexData extends js.Object {
     fUV: js.UndefOr[scala.Nothing],
     fColors: js.UndefOr[scala.Nothing],
     frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    backUVs: js.UndefOr[scala.Nothing],
+    wrap: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.UndefOr[scala.Nothing],
+    fColors: js.UndefOr[scala.Nothing],
+    frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
     backUVs: typingsSlinky.babylonjs.BABYLON.Vector4
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.UndefOr[scala.Nothing],
+    fColors: js.UndefOr[scala.Nothing],
+    frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    backUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    wrap: Boolean
   ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   def CreatePolygon(
     polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
@@ -230,7 +276,25 @@ object VertexData extends js.Object {
     fUV: js.UndefOr[scala.Nothing],
     fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
     frontUVs: js.UndefOr[scala.Nothing],
+    backUVs: js.UndefOr[scala.Nothing],
+    wrap: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.UndefOr[scala.Nothing],
+    fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
+    frontUVs: js.UndefOr[scala.Nothing],
     backUVs: typingsSlinky.babylonjs.BABYLON.Vector4
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.UndefOr[scala.Nothing],
+    fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
+    frontUVs: js.UndefOr[scala.Nothing],
+    backUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    wrap: Boolean
   ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   def CreatePolygon(
     polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
@@ -245,7 +309,25 @@ object VertexData extends js.Object {
     fUV: js.UndefOr[scala.Nothing],
     fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
     frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    backUVs: js.UndefOr[scala.Nothing],
+    wrap: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.UndefOr[scala.Nothing],
+    fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
+    frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
     backUVs: typingsSlinky.babylonjs.BABYLON.Vector4
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.UndefOr[scala.Nothing],
+    fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
+    frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    backUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    wrap: Boolean
   ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   def CreatePolygon(
     polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
@@ -258,7 +340,25 @@ object VertexData extends js.Object {
     fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
     fColors: js.UndefOr[scala.Nothing],
     frontUVs: js.UndefOr[scala.Nothing],
+    backUVs: js.UndefOr[scala.Nothing],
+    wrap: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
+    fColors: js.UndefOr[scala.Nothing],
+    frontUVs: js.UndefOr[scala.Nothing],
     backUVs: typingsSlinky.babylonjs.BABYLON.Vector4
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
+    fColors: js.UndefOr[scala.Nothing],
+    frontUVs: js.UndefOr[scala.Nothing],
+    backUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    wrap: Boolean
   ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   def CreatePolygon(
     polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
@@ -273,13 +373,40 @@ object VertexData extends js.Object {
     fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
     fColors: js.UndefOr[scala.Nothing],
     frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    backUVs: js.UndefOr[scala.Nothing],
+    wrap: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
+    fColors: js.UndefOr[scala.Nothing],
+    frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
     backUVs: typingsSlinky.babylonjs.BABYLON.Vector4
   ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   def CreatePolygon(
     polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
     sideOrientation: Double,
     fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
+    fColors: js.UndefOr[scala.Nothing],
+    frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    backUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    wrap: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
     fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4]
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
+    fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
+    frontUVs: js.UndefOr[scala.Nothing],
+    backUVs: js.UndefOr[scala.Nothing],
+    wrap: Boolean
   ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   def CreatePolygon(
     polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
@@ -294,6 +421,15 @@ object VertexData extends js.Object {
     sideOrientation: Double,
     fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
     fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
+    frontUVs: js.UndefOr[scala.Nothing],
+    backUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    wrap: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
+    fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
     frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4
   ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   def CreatePolygon(
@@ -302,7 +438,25 @@ object VertexData extends js.Object {
     fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
     fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
     frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    backUVs: js.UndefOr[scala.Nothing],
+    wrap: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
+    fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
+    frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
     backUVs: typingsSlinky.babylonjs.BABYLON.Vector4
+  ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolygon(
+    polygon: typingsSlinky.babylonjs.BABYLON.Mesh,
+    sideOrientation: Double,
+    fUV: js.Array[typingsSlinky.babylonjs.BABYLON.Vector4],
+    fColors: js.Array[typingsSlinky.babylonjs.BABYLON.Color4],
+    frontUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    backUVs: typingsSlinky.babylonjs.BABYLON.Vector4,
+    wrap: Boolean
   ): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   
   /**
@@ -325,7 +479,7 @@ object VertexData extends js.Object {
     * * backUVs only usable when you create a double-sided mesh, used to choose what parts of the texture image to crop and apply on the back side, optional, default vector4 (0, 0, 1, 1)
     * @returns the VertexData of the Polyhedron
     */
-  def CreatePolyhedron(options: SizeX): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
+  def CreatePolyhedron(options: SizeY): typingsSlinky.babylonjs.BABYLON.VertexData = js.native
   
   /**
     * Creates the VertexData for a Ribbon

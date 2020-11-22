@@ -1,10 +1,10 @@
 package typingsSlinky.officeUiFabricReact
 
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.PartialIButtonStyles
 import typingsSlinky.officeUiFabricReact.anon.PartialIComboBoxOptionSty
 import typingsSlinky.officeUiFabricReact.anon.PartialIComboBoxStyles
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonStyles
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

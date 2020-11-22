@@ -52,7 +52,7 @@ object NgIf extends js.Object {
     * The presence of this method is a signal to the Ivy template type-check compiler that the
     * `NgIf` structural directive renders its template with a specific context type.
     */
-  def ngTemplateContextGuard[T](dir: NgIf[T], ctx: js.Any): /* is @angular/common.@angular/common.NgIfContext<std.NonNullable<T>> */ Boolean = js.native
+  def ngTemplateContextGuard[T](dir: NgIf[T], ctx: js.Any): /* is @angular/common.@angular/common.NgIfContext<std.Exclude<T, false | 0 | '' | null | undefined>> */ Boolean = js.native
   
   /**
     * Assert the correct type of the expression bound to the `ngIf` input within the template.

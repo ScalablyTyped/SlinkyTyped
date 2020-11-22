@@ -70,6 +70,12 @@ package object fmsMod {
   
   type MemberAccounts = js.Array[typingsSlinky.awsSdk.fmsMod.AWSAccountId]
   
+  type NetworkFirewallAction = java.lang.String
+  
+  type NetworkFirewallActionList = js.Array[typingsSlinky.awsSdk.fmsMod.NetworkFirewallAction]
+  
+  type NetworkFirewallResourceName = java.lang.String
+  
   type PaginationMaxResults = scala.Double
   
   type PaginationToken = java.lang.String
@@ -147,9 +153,16 @@ package object fmsMod {
     - typingsSlinky.awsSdk.awsSdkStrings.SECURITY_GROUPS_COMMON
     - typingsSlinky.awsSdk.awsSdkStrings.SECURITY_GROUPS_CONTENT_AUDIT
     - typingsSlinky.awsSdk.awsSdkStrings.SECURITY_GROUPS_USAGE_AUDIT
+    - typingsSlinky.awsSdk.awsSdkStrings.NETWORK_FIREWALL
     - java.lang.String
   */
   type SecurityServiceType = typingsSlinky.awsSdk.fmsMod._SecurityServiceType | java.lang.String
+  
+  type StatefulRuleGroupList = js.Array[typingsSlinky.awsSdk.fmsMod.StatefulRuleGroup]
+  
+  type StatelessRuleGroupList = js.Array[typingsSlinky.awsSdk.fmsMod.StatelessRuleGroup]
+  
+  type StatelessRuleGroupPriority = scala.Double
   
   type TagKey = java.lang.String
   
@@ -177,6 +190,10 @@ package object fmsMod {
     - typingsSlinky.awsSdk.awsSdkStrings.RESOURCE_VIOLATES_AUDIT_SECURITY_GROUP
     - typingsSlinky.awsSdk.awsSdkStrings.SECURITY_GROUP_UNUSED
     - typingsSlinky.awsSdk.awsSdkStrings.SECURITY_GROUP_REDUNDANT
+    - typingsSlinky.awsSdk.awsSdkStrings.MISSING_FIREWALL
+    - typingsSlinky.awsSdk.awsSdkStrings.MISSING_FIREWALL_SUBNET_IN_AZ
+    - typingsSlinky.awsSdk.awsSdkStrings.MISSING_EXPECTED_ROUTE_TABLE
+    - typingsSlinky.awsSdk.awsSdkStrings.NETWORK_FIREWALL_POLICY_MODIFIED
     - java.lang.String
   */
   type ViolationReason = typingsSlinky.awsSdk.fmsMod._ViolationReason | java.lang.String

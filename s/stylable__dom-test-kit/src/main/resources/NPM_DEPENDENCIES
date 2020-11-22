@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@stylable/dom-test-kit" : "3.11.5"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@stylable/dom-test-kit" : "3.11.5"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

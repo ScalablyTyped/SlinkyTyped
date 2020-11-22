@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Security.HandleCertificateErrorRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetProduceCompilationCacheRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `162` extends js.Object {
   
-  var paramsType: js.Array[HandleCertificateErrorRequest] = js.native
+  var paramsType: js.Array[SetProduceCompilationCacheRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `162` {
   
   @scala.inline
-  def apply(paramsType: js.Array[HandleCertificateErrorRequest], returnType: Unit): `162` = {
+  def apply(paramsType: js.Array[SetProduceCompilationCacheRequest], returnType: Unit): `162` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`162`]
   }
@@ -36,10 +36,10 @@ object `162` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: HandleCertificateErrorRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetProduceCompilationCacheRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[HandleCertificateErrorRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetProduceCompilationCacheRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

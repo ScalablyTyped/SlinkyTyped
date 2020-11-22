@@ -5,20 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DecodeOptions[komplet] extends js.Object {
+trait DecodeOptions extends js.Object {
   
-  var complete: js.UndefOr[komplet] = js.native
+  var complete: js.UndefOr[Boolean] = js.native
 }
 object DecodeOptions {
   
   @scala.inline
-  def apply[komplet](): DecodeOptions[komplet] = {
+  def apply(): DecodeOptions = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[DecodeOptions[komplet]]
+    __obj.asInstanceOf[DecodeOptions]
   }
   
   @scala.inline
-  implicit class DecodeOptionsOps[Self <: DecodeOptions[_], komplet] (val x: Self with DecodeOptions[komplet]) extends AnyVal {
+  implicit class DecodeOptionsOps[Self <: DecodeOptions] (val x: Self) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -33,7 +33,7 @@ object DecodeOptions {
     }
     
     @scala.inline
-    def setComplete(value: komplet): Self = this.set("complete", value.asInstanceOf[js.Any])
+    def setComplete(value: Boolean): Self = this.set("complete", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComplete: Self = this.set("complete", js.undefined)

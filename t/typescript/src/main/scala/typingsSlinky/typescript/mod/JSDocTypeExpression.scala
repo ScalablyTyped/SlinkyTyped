@@ -10,7 +10,7 @@ trait JSDocTypeExpression
      with HasType {
   
   @JSName("kind")
-  var kind_JSDocTypeExpression: typingsSlinky.typescript.mod.SyntaxKind.JSDocTypeExpression = js.native
+  val kind_JSDocTypeExpression: typingsSlinky.typescript.mod.SyntaxKind.JSDocTypeExpression = js.native
   
-  var `type`: TypeNode = js.native
+  val `type`: TypeNode = js.native
 }

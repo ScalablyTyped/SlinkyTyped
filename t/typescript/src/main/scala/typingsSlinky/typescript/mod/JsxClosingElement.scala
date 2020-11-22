@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait JsxClosingElement extends Node {
   
   @JSName("kind")
-  var kind_JsxClosingElement: typingsSlinky.typescript.mod.SyntaxKind.JsxClosingElement = js.native
+  val kind_JsxClosingElement: typingsSlinky.typescript.mod.SyntaxKind.JsxClosingElement = js.native
   
   @JSName("parent")
-  var parent_JsxClosingElement: JsxElement = js.native
+  val parent_JsxClosingElement: JsxElement = js.native
   
-  var tagName: JsxTagNameExpression = js.native
+  val tagName: JsxTagNameExpression = js.native
 }

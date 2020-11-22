@@ -6,9 +6,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
+  type CustomError = js.Error
+  
   type EvaluateFn[T] = java.lang.String | (js.Function2[/* arg1 */ T, /* repeated */ js.Any, js.Any])
   
   type EvaluateFnReturnType[T /* <: typingsSlinky.puppeteer.mod.EvaluateFn[_] */] = js.Any
+  
+  type EventType = java.lang.String | js.Symbol
+  
+  type Handler[T] = js.Function1[/* event */ js.UndefOr[T], scala.Unit]
   
   type Headers = typingsSlinky.std.Record[java.lang.String, java.lang.String]
   
@@ -25,6 +31,14 @@ package object mod {
   type Serializable = typingsSlinky.puppeteer.mod._Serializable | scala.Double | java.lang.String | scala.Boolean | scala.Null
   
   type SerializableOrJSHandle = typingsSlinky.puppeteer.mod.Serializable | typingsSlinky.puppeteer.mod.JSHandle[js.Any]
+  
+  /**
+    * TimeoutError is emitted whenever certain operations are terminated due to timeout.
+    *
+    * Example operations are {@link Page.waitForSelector | page.waitForSelector}
+    * or {@link PuppeteerNode.launch | puppeteer.launch}.
+    */
+  type TimeoutError = js.Error
   
   type UnwrapElementHandle[X] = X
   

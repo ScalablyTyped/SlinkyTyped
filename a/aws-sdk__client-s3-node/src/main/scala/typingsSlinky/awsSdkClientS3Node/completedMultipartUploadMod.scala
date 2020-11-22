@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientS3Node
 
-import typingsSlinky.awsSdkTypes.protocolMod.Structure
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object completedMultipartUploadMod extends js.Object {
   
   @JSName("_CompletedMultipartUpload")
-  val CompletedMultipartUpload: Structure = js.native
+  val CompletedMultipartUpload: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _Structure_ */ js.Any = js.native
 }

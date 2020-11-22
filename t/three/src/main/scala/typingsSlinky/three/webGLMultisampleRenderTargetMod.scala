@@ -20,6 +20,7 @@ object webGLMultisampleRenderTargetMod extends js.Object {
     
     /**
     	 * Specifies the number of samples to be used for the renderbuffer storage.However, the maximum supported size for multisampling is platform dependent and defined via gl.MAX_SAMPLES.
+    	 * @default 4
     	 */
     var samples: Double = js.native
   }

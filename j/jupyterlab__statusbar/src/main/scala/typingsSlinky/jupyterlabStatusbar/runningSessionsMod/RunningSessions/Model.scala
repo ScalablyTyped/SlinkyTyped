@@ -3,7 +3,7 @@ package typingsSlinky.jupyterlabStatusbar.runningSessionsMod.RunningSessions
 import typingsSlinky.jupyterlabApputils.vdomMod.VDomModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A VDomModel for the RunninSessions status item.
@@ -11,15 +11,20 @@ import scala.scalajs.js.annotation._
 @JSImport("@jupyterlab/statusbar/lib/defaults/runningSessions", "RunningSessions.Model")
 @js.native
 class Model () extends VDomModel {
-  var _kernels: js.Any = js.native
+  
+  var _sessions: js.Any = js.native
+  
   var _terminals: js.Any = js.native
+  
   /**
-    * The number of active kernels.
+    * The number of active kernel sessions.
     */
-  var kernels: Double = js.native
+  def sessions: Double = js.native
+  def sessions_=(sessions: Double): Unit = js.native
+  
   /**
     * The number of active terminal sessions.
     */
-  var terminals: Double = js.native
+  def terminals: Double = js.native
+  def terminals_=(terminals: Double): Unit = js.native
 }
-

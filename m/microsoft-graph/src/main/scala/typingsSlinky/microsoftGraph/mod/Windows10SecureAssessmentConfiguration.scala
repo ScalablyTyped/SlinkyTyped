@@ -20,13 +20,13 @@ trait Windows10SecureAssessmentConfiguration extends DeviceConfiguration {
     * The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user),
     * an AAD account (username@tenant.com) or a local account (username).
     */
-  var configurationAccount: js.UndefOr[String] = js.native
+  var configurationAccount: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a
     * valid Url (http[s]://msdn.microsoft.com/).
     */
-  var launchUri: js.UndefOr[String] = js.native
+  var launchUri: js.UndefOr[NullableOption[String]] = js.native
 }
 object Windows10SecureAssessmentConfiguration {
   
@@ -70,15 +70,21 @@ object Windows10SecureAssessmentConfiguration {
     def deleteAllowTextSuggestion: Self = this.set("allowTextSuggestion", js.undefined)
     
     @scala.inline
-    def setConfigurationAccount(value: String): Self = this.set("configurationAccount", value.asInstanceOf[js.Any])
+    def setConfigurationAccount(value: NullableOption[String]): Self = this.set("configurationAccount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteConfigurationAccount: Self = this.set("configurationAccount", js.undefined)
     
     @scala.inline
-    def setLaunchUri(value: String): Self = this.set("launchUri", value.asInstanceOf[js.Any])
+    def setConfigurationAccountNull: Self = this.set("configurationAccount", null)
+    
+    @scala.inline
+    def setLaunchUri(value: NullableOption[String]): Self = this.set("launchUri", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLaunchUri: Self = this.set("launchUri", js.undefined)
+    
+    @scala.inline
+    def setLaunchUriNull: Self = this.set("launchUri", null)
   }
 }

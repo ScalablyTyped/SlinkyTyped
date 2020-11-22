@@ -13,17 +13,17 @@ trait ListMedicalVocabulariesRequest extends js.Object {
   var MaxResults: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.MaxResults] = js.native
   
   /**
-    * Returns vocabularies in the list whose name contains the specified string. The search is case-insensitive, ListMedicalVocabularies returns both "vocabularyname" and "VocabularyName" in the response list.
+    * Returns vocabularies whose names contain the specified string. The search is not case sensitive. ListMedicalVocabularies returns both "vocabularyname" and "VocabularyName".
     */
   var NameContains: js.UndefOr[VocabularyName] = js.native
   
   /**
-    * If the result of your previous request to ListMedicalVocabularies was truncated, include the NextToken to fetch the next set of jobs.
+    * If the result of your previous request to ListMedicalVocabularies was truncated, include the NextToken to fetch the next set of vocabularies.
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.NextToken] = js.native
   
   /**
-    * When specified, only returns vocabularies with the VocabularyState equal to the specified vocabulary state.
+    * When specified, returns only vocabularies with the VocabularyState equal to the specified vocabulary state. Use this field to see which vocabularies are ready for your medical transcription jobs.
     */
   var StateEquals: js.UndefOr[VocabularyState] = js.native
 }

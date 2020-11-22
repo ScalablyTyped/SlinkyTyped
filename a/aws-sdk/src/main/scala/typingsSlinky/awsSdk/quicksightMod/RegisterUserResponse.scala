@@ -18,7 +18,7 @@ trait RegisterUserResponse extends js.Object {
   var Status: js.UndefOr[StatusCode] = js.native
   
   /**
-    * The user name.
+    * The user's user name.
     */
   var User: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.User] = js.native
   

@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientDynamodbBrowser
 
-import typingsSlinky.awsSdkTypes.protocolMod.List
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object globalSecondaryIndexesMod extends js.Object {
   
   @JSName("_GlobalSecondaryIndexes")
-  val GlobalSecondaryIndexes: List = js.native
+  val GlobalSecondaryIndexes: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _List_ */ js.Any = js.native
 }

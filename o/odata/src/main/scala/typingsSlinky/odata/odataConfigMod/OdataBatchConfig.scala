@@ -17,12 +17,17 @@ trait OdataBatchConfig extends js.Object {
   var headers: js.UndefOr[Headers] = js.native
   
   var useChangset: Boolean = js.native
+  
+  /**
+    * When truthy, relative URL's will be used in batch elements
+    */
+  var useRelativeURLs: Boolean = js.native
 }
 object OdataBatchConfig {
   
   @scala.inline
-  def apply(useChangset: Boolean): OdataBatchConfig = {
-    val __obj = js.Dynamic.literal(useChangset = useChangset.asInstanceOf[js.Any])
+  def apply(useChangset: Boolean, useRelativeURLs: Boolean): OdataBatchConfig = {
+    val __obj = js.Dynamic.literal(useChangset = useChangset.asInstanceOf[js.Any], useRelativeURLs = useRelativeURLs.asInstanceOf[js.Any])
     __obj.asInstanceOf[OdataBatchConfig]
   }
   
@@ -43,6 +48,9 @@ object OdataBatchConfig {
     
     @scala.inline
     def setUseChangset(value: Boolean): Self = this.set("useChangset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUseRelativeURLs(value: Boolean): Self = this.set("useRelativeURLs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBoundaryPrefix(value: String): Self = this.set("boundaryPrefix", value.asInstanceOf[js.Any])

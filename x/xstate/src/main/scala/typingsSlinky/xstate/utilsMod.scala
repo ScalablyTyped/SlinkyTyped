@@ -3,8 +3,8 @@ package typingsSlinky.xstate
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
-import typingsSlinky.xstate.anon.Context
-import typingsSlinky.xstate.anon.`3`
+import typingsSlinky.xstate.anon.ContextTContext
+import typingsSlinky.xstate.anon.`4`
 import typingsSlinky.xstate.mod.State
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import typingsSlinky.xstate.typesMod.Action
@@ -18,6 +18,7 @@ import typingsSlinky.xstate.typesMod.EventObject
 import typingsSlinky.xstate.typesMod.EventType
 import typingsSlinky.xstate.typesMod.Guard
 import typingsSlinky.xstate.typesMod.HistoryValue
+import typingsSlinky.xstate.typesMod.InvokeSourceDefinition
 import typingsSlinky.xstate.typesMod.Mapper
 import typingsSlinky.xstate.typesMod.PropertyMapper
 import typingsSlinky.xstate.typesMod.SCXML.Event
@@ -36,11 +37,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object utilsMod extends js.Object {
   
   def evaluateGuard[TContext, TEvent /* <: EventObject */](
-    machine: StateNode[TContext, _, TEvent, _],
+    machine: StateNode[TContext, _, TEvent, ContextTContext[TContext]],
     guard: Guard[TContext, TEvent],
     context: TContext,
     _event: Event[TEvent],
-    state: State[TContext, TEvent, _, Context[TContext]]
+    state: State[TContext, TEvent, _, ContextTContext[TContext]]
   ): Boolean = js.native
   
   def flatten[T](array: js.Array[T | js.Array[T]]): js.Array[T] = js.native
@@ -57,7 +58,7 @@ object utilsMod extends js.Object {
   
   def isFunction(value: js.Any): /* is std.Function */ Boolean = js.native
   
-  def isMachine(value: js.Any): /* is xstate.xstate/lib/types.StateMachine<any, any, any, any> */ Boolean = js.native
+  def isMachine(value: js.Any): /* is xstate.xstate/lib/types.StateMachine<any, any, any, xstate.anon.ContextAny> */ Boolean = js.native
   
   def isObservable[T](value: js.Any): /* is xstate.xstate/lib/types.Subscribable<T> */ Boolean = js.native
   
@@ -88,8 +89,8 @@ object utilsMod extends js.Object {
   
   def nestedPath[T /* <: Record[String, _] */](props: js.Array[String], accessorProp: /* keyof T */ String): js.Function1[/* object */ T, T] = js.native
   
-  def normalizeTarget[TContext, TEvent /* <: EventObject */](): js.UndefOr[js.Array[String | (StateNode[TContext, _, TEvent, _])]] = js.native
-  def normalizeTarget[TContext, TEvent /* <: EventObject */](target: SingleOrArray[String | (StateNode[TContext, _, TEvent, _])]): js.UndefOr[js.Array[String | (StateNode[TContext, _, TEvent, _])]] = js.native
+  def normalizeTarget[TContext, TEvent /* <: EventObject */](): js.UndefOr[js.Array[String | (StateNode[TContext, _, TEvent, ContextTContext[TContext]])]] = js.native
+  def normalizeTarget[TContext, TEvent /* <: EventObject */](target: SingleOrArray[String | (StateNode[TContext, _, TEvent, ContextTContext[TContext]])]): js.UndefOr[js.Array[String | (StateNode[TContext, _, TEvent, ContextTContext[TContext]])]] = js.native
   
   def partition[T, A /* <: T */, B /* <: T */](items: js.Array[T], predicate: js.Function1[/* item */ T, /* is A */ Boolean]): js.Tuple2[js.Array[A], js.Array[B]] = js.native
   
@@ -120,6 +121,9 @@ object utilsMod extends js.Object {
   ): js.UndefOr[Guard[TContext, TEvent]] = js.native
   def toGuard[TContext, TEvent /* <: EventObject */](condition: Condition[TContext, TEvent]): js.UndefOr[Guard[TContext, TEvent]] = js.native
   
+  def toInvokeSource(src: String): InvokeSourceDefinition = js.native
+  def toInvokeSource(src: InvokeSourceDefinition): InvokeSourceDefinition = js.native
+  
   def toSCXMLEvent[TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent]): Event[TEvent] = js.native
   def toSCXMLEvent[TEvent /* <: EventObject */](event: typingsSlinky.xstate.typesMod.Event[TEvent], scxmlEvent: Partial[Event[TEvent]]): Event[TEvent] = js.native
   def toSCXMLEvent[TEvent /* <: EventObject */](event: Event[TEvent]): Event[TEvent] = js.native
@@ -140,20 +144,20 @@ object utilsMod extends js.Object {
     configLike: SingleOrArray[
       (TransitionConfig[TContext, TEvent]) | (TransitionConfigTarget[TContext, TEvent])
     ]
-  ): js.Array[(TransitionConfig[TContext, TEvent]) with `3`[TEvent]] = js.native
+  ): js.Array[(TransitionConfig[TContext, TEvent]) with `4`[TEvent]] = js.native
   def toTransitionConfigArray[TContext, TEvent /* <: EventObject */](
     event: Asterisk,
     configLike: SingleOrArray[
       (TransitionConfig[TContext, TEvent]) | (TransitionConfigTarget[TContext, TEvent])
     ]
-  ): js.Array[(TransitionConfig[TContext, TEvent]) with `3`[TEvent]] = js.native
+  ): js.Array[(TransitionConfig[TContext, TEvent]) with `4`[TEvent]] = js.native
   @JSName("toTransitionConfigArray")
   def toTransitionConfigArray_type[TContext, TEvent /* <: EventObject */](
     event: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any,
     configLike: SingleOrArray[
       (TransitionConfig[TContext, TEvent]) | (TransitionConfigTarget[TContext, TEvent])
     ]
-  ): js.Array[(TransitionConfig[TContext, TEvent]) with `3`[TEvent]] = js.native
+  ): js.Array[(TransitionConfig[TContext, TEvent]) with `4`[TEvent]] = js.native
   
   def uniqueId(): String = js.native
   
@@ -162,7 +166,7 @@ object utilsMod extends js.Object {
     context: TContext,
     _event: Event[TEvent],
     assignActions: js.Array[AssignAction[TContext, TEvent]],
-    state: State[TContext, TEvent, _, Context[TContext]]
+    state: State[TContext, TEvent, _, ContextTContext[TContext]]
   ): TContext = js.native
   
   def updateHistoryStates(hist: HistoryValue, stateValue: StateValue): Record[String, js.UndefOr[HistoryValue]] = js.native

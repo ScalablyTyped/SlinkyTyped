@@ -11,9 +11,6 @@ object dexieStrings {
   def AbortError: AbortError = "AbortError".asInstanceOf[AbortError]
   
   @scala.inline
-  def BulkError: BulkError = "BulkError".asInstanceOf[BulkError]
-  
-  @scala.inline
   def ConstraintError: ConstraintError = "ConstraintError".asInstanceOf[ConstraintError]
   
   @scala.inline
@@ -24,9 +21,6 @@ object dexieStrings {
   
   @scala.inline
   def DatabaseClosedError: DatabaseClosedError = "DatabaseClosedError".asInstanceOf[DatabaseClosedError]
-  
-  @scala.inline
-  def DexieError: DexieError = "DexieError".asInstanceOf[DexieError]
   
   @scala.inline
   def ForeignAwaitError: ForeignAwaitError = "ForeignAwaitError".asInstanceOf[ForeignAwaitError]
@@ -48,9 +42,6 @@ object dexieStrings {
   
   @scala.inline
   def MissingAPIError: MissingAPIError = "MissingAPIError".asInstanceOf[MissingAPIError]
-  
-  @scala.inline
-  def ModifyError: ModifyError = "ModifyError".asInstanceOf[ModifyError]
   
   @scala.inline
   def NoSuchDatabaseError: NoSuchDatabaseError = "NoSuchDatabaseError".asInstanceOf[NoSuchDatabaseError]
@@ -176,9 +167,6 @@ object dexieStrings {
   sealed trait AbortError extends js.Object
   
   @js.native
-  sealed trait BulkError extends js.Object
-  
-  @js.native
   sealed trait ConstraintError extends js.Object
   
   @js.native
@@ -189,9 +177,6 @@ object dexieStrings {
   
   @js.native
   sealed trait DatabaseClosedError extends js.Object
-  
-  @js.native
-  sealed trait DexieError extends js.Object
   
   @js.native
   sealed trait ForeignAwaitError extends js.Object
@@ -213,9 +198,6 @@ object dexieStrings {
   
   @js.native
   sealed trait MissingAPIError extends js.Object
-  
-  @js.native
-  sealed trait ModifyError extends js.Object
   
   @js.native
   sealed trait NoSuchDatabaseError extends js.Object

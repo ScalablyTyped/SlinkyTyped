@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createSpreadAssignment extends js.Object {
   
+  /** @deprecated Use `factory.createSpreadAssignment` or the factory supplied by your transformation context instead. */
   def apply(expression: Expression): SpreadAssignment = js.native
 }

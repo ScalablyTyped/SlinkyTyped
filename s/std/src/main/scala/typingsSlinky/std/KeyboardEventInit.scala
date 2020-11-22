@@ -13,6 +13,9 @@ trait KeyboardEventInit extends EventModifierInit {
   
   var key: js.UndefOr[java.lang.String] = js.native
   
+  /** @deprecated */
+  var keyCode: js.UndefOr[Double] = js.native
+  
   var location: js.UndefOr[Double] = js.native
   
   var repeat: js.UndefOr[scala.Boolean] = js.native
@@ -57,6 +60,12 @@ object KeyboardEventInit {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyCode(value: Double): Self = this.set("keyCode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKeyCode: Self = this.set("keyCode", js.undefined)
     
     @scala.inline
     def setLocation(value: Double): Self = this.set("location", value.asInstanceOf[js.Any])

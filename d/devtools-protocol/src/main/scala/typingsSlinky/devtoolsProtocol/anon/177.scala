@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.ClearCookiesRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.ServiceWorker.StartWorkerRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `177` extends js.Object {
   
-  var paramsType: js.Array[js.UndefOr[ClearCookiesRequest]] = js.native
+  var paramsType: js.Array[StartWorkerRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `177` {
   
   @scala.inline
-  def apply(paramsType: js.Array[js.UndefOr[ClearCookiesRequest]], returnType: Unit): `177` = {
+  def apply(paramsType: js.Array[StartWorkerRequest], returnType: Unit): `177` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`177`]
   }
@@ -36,10 +36,10 @@ object `177` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: js.UndefOr[ClearCookiesRequest]*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: StartWorkerRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[js.UndefOr[ClearCookiesRequest]]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[StartWorkerRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

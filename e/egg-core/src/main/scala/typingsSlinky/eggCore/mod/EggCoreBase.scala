@@ -71,7 +71,7 @@ trait EggCoreBase[Config] extends ^[DefaultState, DefaultContext] {
     * @member {EggLoader} EggCore#loader
     * @since 1.0.0
     */
-  var loader: EggLoader[this.type, Config] = js.native
+  var loader: EggLoader[this.type, Config, EggLoaderOptions] = js.native
   
   /**
     * The name of application

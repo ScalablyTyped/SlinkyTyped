@@ -11,6 +11,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ASPxClientGridToolbarItemClickEventArgs extends ASPxClientProcessingModeEventArgs {
   
   /**
+    * Specifies whether the toolbar item click is handled manually, so no default processing is required.
+    */
+  var handled: Boolean = js.native
+  
+  /**
     * Gets the clicked menu item
     */
   var item: ASPxClientMenuItem = js.native
@@ -34,13 +39,14 @@ object ASPxClientGridToolbarItemClickEventArgs {
   
   @scala.inline
   def apply(
+    handled: Boolean,
     item: ASPxClientMenuItem,
     processOnServer: Boolean,
     toolbarIndex: Double,
     toolbarName: String,
     usePostBack: Boolean
   ): ASPxClientGridToolbarItemClickEventArgs = {
-    val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any], toolbarIndex = toolbarIndex.asInstanceOf[js.Any], toolbarName = toolbarName.asInstanceOf[js.Any], usePostBack = usePostBack.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(handled = handled.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any], toolbarIndex = toolbarIndex.asInstanceOf[js.Any], toolbarName = toolbarName.asInstanceOf[js.Any], usePostBack = usePostBack.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientGridToolbarItemClickEventArgs]
   }
   
@@ -58,6 +64,9 @@ object ASPxClientGridToolbarItemClickEventArgs {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setHandled(value: Boolean): Self = this.set("handled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setItem(value: ASPxClientMenuItem): Self = this.set("item", value.asInstanceOf[js.Any])

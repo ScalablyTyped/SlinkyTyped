@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsNode.mod.backendUtil
 
-import typingsSlinky.tensorflowTfjsCore.fusedUtilMod.Activation
+import typingsSlinky.tensorflowTfjsCore.fusedTypesMod.Activation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

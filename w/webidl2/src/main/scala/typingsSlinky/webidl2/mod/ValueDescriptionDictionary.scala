@@ -6,15 +6,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ValueDescriptionDictionary extends ValueDescription {
+trait ValueDescriptionDictionary
+  extends AbstractValueDescription
+     with ValueDescription {
   
-  var `type`: dictionary = js.native
+  @JSName("type")
+  var type_ValueDescriptionDictionary: dictionary = js.native
 }
 object ValueDescriptionDictionary {
   
   @scala.inline
-  def apply(`type`: dictionary): ValueDescriptionDictionary = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    extAttrs: js.Array[ExtendedAttribute],
+    parent: Argument | ConstantMemberType | FieldType,
+    `type`: dictionary
+  ): ValueDescriptionDictionary = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueDescriptionDictionary]
   }

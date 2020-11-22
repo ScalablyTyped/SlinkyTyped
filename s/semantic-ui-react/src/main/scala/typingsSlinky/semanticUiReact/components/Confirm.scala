@@ -9,12 +9,12 @@ import slinky.web.html.a.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.buttonButtonMod.ButtonProps
 import typingsSlinky.semanticUiReact.confirmConfirmMod.ConfirmProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.modalActionsMod.ModalActionsProps
 import typingsSlinky.semanticUiReact.modalContentMod.ModalContentProps
+import typingsSlinky.semanticUiReact.modalDimmerMod.ModalDimmerProps
 import typingsSlinky.semanticUiReact.modalHeaderMod.ModalHeaderProps
 import typingsSlinky.semanticUiReact.modalModalMod.ModalProps
 import typingsSlinky.semanticUiReact.semanticUiReactBooleans.`true`
@@ -45,7 +45,7 @@ object Confirm {
     
     @scala.inline
     def actionsFunction3(
-      value: (/* component */ ReactType[ModalActionsProps], ModalActionsProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ModalActionsProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("actions", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -62,7 +62,7 @@ object Confirm {
     
     @scala.inline
     def cancelButtonFunction3(
-      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("cancelButton", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -103,7 +103,7 @@ object Confirm {
     
     @scala.inline
     def confirmButtonFunction3(
-      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("confirmButton", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -114,7 +114,7 @@ object Confirm {
     
     @scala.inline
     def contentFunction3(
-      value: (/* component */ ReactType[ModalContentProps], ModalContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ModalContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("content", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -124,7 +124,15 @@ object Confirm {
     def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dimmer(value: `true` | blurring | inverted): this.type = set("dimmer", value.asInstanceOf[js.Any])
+    def dimmerReactElement(value: ReactElement): this.type = set("dimmer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dimmerFunction3(
+      value: (/* component */ ReactElement, ModalDimmerProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("dimmer", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def dimmer(value: `true` | blurring | inverted | SemanticShorthandItem[ModalDimmerProps]): this.type = set("dimmer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def eventPool(value: String): this.type = set("eventPool", value.asInstanceOf[js.Any])
@@ -134,7 +142,7 @@ object Confirm {
     
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactType[ModalHeaderProps], ModalHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ModalHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     
     @scala.inline

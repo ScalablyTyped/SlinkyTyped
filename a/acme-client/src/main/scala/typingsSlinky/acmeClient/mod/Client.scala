@@ -34,8 +34,11 @@ class Client protected () extends js.Object {
   def getAuthorizations(order: Order): js.Promise[js.Array[Authorization]] = js.native
   
   def getCertificate(order: Order): js.Promise[String] = js.native
+  def getCertificate(order: Order, preferredChain: String): js.Promise[String] = js.native
   
   def getChallengeKeyAuthorization(challenge: Challenge): js.Promise[String] = js.native
+  
+  def getOrder(order: Order): js.Promise[Order] = js.native
   
   def getTermsOfServiceUrl(): js.Promise[String] = js.native
   

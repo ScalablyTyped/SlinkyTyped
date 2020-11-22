@@ -33,7 +33,17 @@ object EnumDWTDriver extends js.Object {
   object TWAIN extends TopLevel[TWAIN with Double]
   
   @js.native
+  sealed trait TWAIN64 extends EnumDWTDriver
+  /* 5 */ @js.native
+  object TWAIN64 extends TopLevel[TWAIN64 with Double]
+  
+  @js.native
   sealed trait TWAIN_AND_ICA extends EnumDWTDriver
   /* 4 */ @js.native
   object TWAIN_AND_ICA extends TopLevel[TWAIN_AND_ICA with Double]
+  
+  @js.native
+  sealed trait TWAIN_AND_TWAIN64 extends EnumDWTDriver
+  /* 4 */ @js.native
+  object TWAIN_AND_TWAIN64 extends TopLevel[TWAIN_AND_TWAIN64 with Double]
 }

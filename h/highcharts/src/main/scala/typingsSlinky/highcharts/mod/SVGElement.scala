@@ -1,6 +1,7 @@
 package typingsSlinky.highcharts.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -90,8 +91,8 @@ class SVGElement () extends js.Object {
   def animate(params: SVGAttributes, options: js.UndefOr[scala.Nothing], complete: js.Function): SVGElement = js.native
   def animate(params: SVGAttributes, options: Boolean): SVGElement = js.native
   def animate(params: SVGAttributes, options: Boolean, complete: js.Function): SVGElement = js.native
-  def animate(params: SVGAttributes, options: AnimationOptionsObject): SVGElement = js.native
-  def animate(params: SVGAttributes, options: AnimationOptionsObject, complete: js.Function): SVGElement = js.native
+  def animate(params: SVGAttributes, options: PartialAnimationOptionsOb): SVGElement = js.native
+  def animate(params: SVGAttributes, options: PartialAnimationOptionsOb, complete: js.Function): SVGElement = js.native
   
   /**
     * Apply native and custom attributes to the SVG elements.
@@ -297,7 +298,7 @@ class SVGElement () extends js.Object {
     */
   def fadeIn(): Unit = js.native
   def fadeIn(animation: Boolean): Unit = js.native
-  def fadeIn(animation: AnimationOptionsObject): Unit = js.native
+  def fadeIn(animation: PartialAnimationOptionsOb): Unit = js.native
   
   /**
     * Fade out an element by animating its opacity down to 0, and hide it on

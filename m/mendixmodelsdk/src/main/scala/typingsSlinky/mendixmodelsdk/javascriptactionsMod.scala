@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.CodeAction
 import typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.CodeActionParameter
@@ -12,6 +13,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import scala.scalajs.js
@@ -35,7 +37,7 @@ object javascriptactionsMod extends js.Object {
       * Interfaces and instance classes for types from the Mendix sub meta model `JavaScriptActions`.
       */
     /**
-      * See: {@link https://docs.mendix.com/refguide7/javascript-actions relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/javascript-actions relevant section in reference guide}
       *
       * In version 8.0.0: removed experimental
       * In version 7.21.0: introduced
@@ -57,7 +59,7 @@ object javascriptactionsMod extends js.Object {
     trait INanoflowJavaScriptActionParameterType extends IParameterType
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/javascript-actions relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/javascript-actions relevant section in reference guide}
       *
       * In version 8.0.0: removed experimental
       * In version 7.21.0: introduced
@@ -84,9 +86,6 @@ object javascriptactionsMod extends js.Object {
       
       @JSName("containerAsFolderBase")
       def containerAsFolderBase_MJavaScriptAction: FolderBase = js.native
-      
-      @JSName("model")
-      var model_FJavaScriptAction: IModel = js.native
     }
     /* static members */
     @js.native
@@ -121,15 +120,12 @@ object javascriptactionsMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       @JSName("containerAsCodeAction")
       def containerAsCodeAction_MJavaScriptActionParameter: CodeAction = js.native
-      
-      @JSName("model")
-      var model_FJavaScriptActionParameter: IModel = js.native
     }
     /* static members */
     @js.native
@@ -163,15 +159,12 @@ object javascriptactionsMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       @JSName("containerAsCodeActionParameter")
       def containerAsCodeActionParameter_MNanoflowJavaScriptActionParameterType: CodeActionParameter = js.native
-      
-      @JSName("model")
-      var model_FNanoflowJavaScriptActionParameterType: IModel = js.native
     }
     /* static members */
     @js.native

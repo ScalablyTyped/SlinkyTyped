@@ -36,12 +36,14 @@ object executorGroupMod extends js.Object {
     
     def execute(
       context: CanvasRenderingContext2D,
+      contextScale: Double,
       transform: Transform,
       viewRotation: Double,
       snapToPixel: Boolean
     ): Unit = js.native
     def execute(
       context: CanvasRenderingContext2D,
+      contextScale: Double,
       transform: Transform,
       viewRotation: Double,
       snapToPixel: Boolean,
@@ -50,6 +52,7 @@ object executorGroupMod extends js.Object {
     ): Unit = js.native
     def execute(
       context: CanvasRenderingContext2D,
+      contextScale: Double,
       transform: Transform,
       viewRotation: Double,
       snapToPixel: Boolean,
@@ -57,6 +60,7 @@ object executorGroupMod extends js.Object {
     ): Unit = js.native
     def execute(
       context: CanvasRenderingContext2D,
+      contextScale: Double,
       transform: Transform,
       viewRotation: Double,
       snapToPixel: Boolean,
@@ -71,7 +75,7 @@ object executorGroupMod extends js.Object {
       hitTolerance: Double,
       callback: js.Function1[/* p0 */ FeatureLike, T],
       declutteredFeatures: js.Array[FeatureLike]
-    ): T = js.native
+    ): js.UndefOr[T] = js.native
     
     def getClipCoords(transform: Transform): js.Array[Double] = js.native
     

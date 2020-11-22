@@ -8,6 +8,8 @@ package object cognitoidentityserviceproviderMod {
   
   type AWSAccountIdType = java.lang.String
   
+  type AccessTokenValidityType = scala.Double
+  
   type AccountTakeoverActionNotifyType = scala.Boolean
   
   /* Rewritten from type alias, can be one of: 
@@ -283,6 +285,8 @@ package object cognitoidentityserviceproviderMod {
   
   type HttpHeaderList = js.Array[typingsSlinky.awsSdk.cognitoidentityserviceproviderMod.HttpHeader]
   
+  type IdTokenValidityType = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SAML
     - typingsSlinky.awsSdk.awsSdkStrings.Facebook
@@ -452,6 +456,15 @@ package object cognitoidentityserviceproviderMod {
   type TagValueType = java.lang.String
   
   type TemporaryPasswordValidityDaysType = scala.Double
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.seconds__
+    - typingsSlinky.awsSdk.awsSdkStrings.minutes
+    - typingsSlinky.awsSdk.awsSdkStrings.hours_
+    - typingsSlinky.awsSdk.awsSdkStrings.days_
+    - java.lang.String
+  */
+  type TimeUnitsType = typingsSlinky.awsSdk.cognitoidentityserviceproviderMod._TimeUnitsType | java.lang.String
   
   type TokenModelType = java.lang.String
   

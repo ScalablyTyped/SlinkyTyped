@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CloudAppSecurityState extends js.Object {
   
   // Destination IP Address of the connection to the cloud application/service.
-  var destinationServiceIp: js.UndefOr[String] = js.native
+  var destinationServiceIp: js.UndefOr[NullableOption[String]] = js.native
   
   // Cloud application/service name (for example 'Salesforce', 'DropBox', etc.).
-  var destinationServiceName: js.UndefOr[String] = js.native
+  var destinationServiceName: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Provider-generated/calculated risk score of the Cloud Application/Service. Recommended value range of 0-1, which
     * equates to a percentage.
     */
-  var riskScore: js.UndefOr[String] = js.native
+  var riskScore: js.UndefOr[NullableOption[String]] = js.native
 }
 object CloudAppSecurityState {
   
@@ -43,21 +43,30 @@ object CloudAppSecurityState {
     }
     
     @scala.inline
-    def setDestinationServiceIp(value: String): Self = this.set("destinationServiceIp", value.asInstanceOf[js.Any])
+    def setDestinationServiceIp(value: NullableOption[String]): Self = this.set("destinationServiceIp", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDestinationServiceIp: Self = this.set("destinationServiceIp", js.undefined)
     
     @scala.inline
-    def setDestinationServiceName(value: String): Self = this.set("destinationServiceName", value.asInstanceOf[js.Any])
+    def setDestinationServiceIpNull: Self = this.set("destinationServiceIp", null)
+    
+    @scala.inline
+    def setDestinationServiceName(value: NullableOption[String]): Self = this.set("destinationServiceName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDestinationServiceName: Self = this.set("destinationServiceName", js.undefined)
     
     @scala.inline
-    def setRiskScore(value: String): Self = this.set("riskScore", value.asInstanceOf[js.Any])
+    def setDestinationServiceNameNull: Self = this.set("destinationServiceName", null)
+    
+    @scala.inline
+    def setRiskScore(value: NullableOption[String]): Self = this.set("riskScore", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRiskScore: Self = this.set("riskScore", js.undefined)
+    
+    @scala.inline
+    def setRiskScoreNull: Self = this.set("riskScore", null)
   }
 }

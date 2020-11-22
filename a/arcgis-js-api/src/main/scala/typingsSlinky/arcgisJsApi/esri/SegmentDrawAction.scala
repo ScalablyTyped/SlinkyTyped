@@ -17,32 +17,20 @@ trait SegmentDrawAction extends DrawAction {
     * Completes drawing the polygon geometry and fires the [draw-complete](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#event-draw-complete) event.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#complete)
-    *
-    *
     */
   def complete(): Unit = js.native
   
   /**
-    * Returns the actual z value to be used when drawing geometry. NB: this.defaultZ is the value which was passed to the constructor of the DrawAction the actual defaultZ value may differ, depending on derived draw action implementation.
+    * Returns the actual z value to be used when drawing geometry.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#getGeometryZValue)
-    *
-    *
     */
   def getGeometryZValue(): Unit = js.native
   
   /**
-    * The drawing mode. It is only relevant when the action is first created. Its value cannot be changed during the action lifecycle.  **Possible Values**
-    *
-    * Value | Description |
-    * ----- | ----------- |
-    * freehand | Vertices are added while the pointer is dragged.
-    * click | Vertices are added when the pointer is clicked. SegmentDrawActions are created from 2 vertices.
-    *
+    * The drawing mode.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-SegmentDrawAction.html#mode)
-    *
-    * @default freehand
     */
   var mode: freehand | click = js.native
   

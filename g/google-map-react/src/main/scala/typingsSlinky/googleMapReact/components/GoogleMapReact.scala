@@ -13,7 +13,7 @@ import typingsSlinky.googleMapReact.mod.MapOptions
 import typingsSlinky.googleMapReact.mod.Maps
 import typingsSlinky.googleMapReact.mod.Point
 import typingsSlinky.googleMapReact.mod.Props
-import typingsSlinky.googleMapReact.mod.default
+import typingsSlinky.googleMapReact.mod.^
 import typingsSlinky.react.mod.HTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,14 +21,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object GoogleMapReact {
   
-  @JSImport("google-map-react", JSImport.Default)
+  @JSImport("google-map-react", JSImport.Namespace)
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, ^] {
     
     @scala.inline
     def bootstrapURLKeys(value: BootstrapURLKeys): this.type = set("bootstrapURLKeys", value.asInstanceOf[js.Any])

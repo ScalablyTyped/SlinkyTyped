@@ -31,14 +31,15 @@ object headerMod extends js.Object {
     @JSName("componentDidLoad")
     def componentDidLoad_MHeader(): js.Promise[Unit] = js.native
     
-    def componentDidUnload(): Unit = js.native
-    
     @JSName("componentDidUpdate")
     def componentDidUpdate_MHeader(): js.Promise[Unit] = js.native
     
     var contentScrollCallback: js.Any = js.native
     
     var destroyCollapsibleHeader: js.Any = js.native
+    
+    @JSName("disconnectedCallback")
+    def disconnectedCallback_MHeader(): Unit = js.native
     
     var el: HTMLElement = js.native
     

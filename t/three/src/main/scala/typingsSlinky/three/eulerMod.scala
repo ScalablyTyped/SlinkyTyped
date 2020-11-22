@@ -47,6 +47,9 @@ object eulerMod extends js.Object {
     
     val isEuler: `true` = js.native
     
+    /**
+    	 * @default THREE.Euler.DefaultOrder
+    	 */
     var order: String = js.native
     
     def reorder(newOrder: String): Euler = js.native
@@ -71,10 +74,19 @@ object eulerMod extends js.Object {
     def toVector3(): Vector3 = js.native
     def toVector3(optionalResult: Vector3): Vector3 = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var x: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var y: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var z: Double = js.native
   }
   /* static members */

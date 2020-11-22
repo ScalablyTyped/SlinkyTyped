@@ -13,7 +13,7 @@ trait ListTopicRuleDestinationsResponse extends js.Object {
   var destinationSummaries: js.UndefOr[TopicRuleDestinationSummaries] = js.native
   
   /**
-    * The token to retrieve the next set of results.
+    * The token to use to get the next set of results, or null if there are no additional results.
     */
   var nextToken: js.UndefOr[NextToken] = js.native
 }

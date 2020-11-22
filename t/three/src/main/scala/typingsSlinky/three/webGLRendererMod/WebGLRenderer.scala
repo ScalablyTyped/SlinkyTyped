@@ -27,6 +27,7 @@ import typingsSlinky.three.webGLRenderTargetMod.WebGLRenderTarget
 import typingsSlinky.three.webGLShadowMapMod.WebGLShadowMap
 import typingsSlinky.three.webGLStateMod.WebGLState
 import typingsSlinky.three.webXRManagerMod.WebXRManager
+import typingsSlinky.three.webXRMod.XRAnimationLoopCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -46,21 +47,25 @@ class WebGLRenderer () extends Renderer {
   
   /**
   	 * Defines whether the renderer should automatically clear its output before rendering.
+  	 * @default true
   	 */
   var autoClear: Boolean = js.native
   
   /**
   	 * If autoClear is true, defines whether the renderer should clear the color buffer. Default is true.
+  	 * @default true
   	 */
   var autoClearColor: Boolean = js.native
   
   /**
   	 * If autoClear is true, defines whether the renderer should clear the depth buffer. Default is true.
+  	 * @default true
   	 */
   var autoClearDepth: Boolean = js.native
   
   /**
   	 * If autoClear is true, defines whether the renderer should clear the stencil buffer. Default is true.
+  	 * @default true
   	 */
   var autoClearStencil: Boolean = js.native
   
@@ -87,6 +92,9 @@ class WebGLRenderer () extends Renderer {
   
   def clearTarget(renderTarget: WebGLRenderTarget, color: Boolean, depth: Boolean, stencil: Boolean): Unit = js.native
   
+  /**
+  	 * @default []
+  	 */
   var clippingPlanes: js.Array[_] = js.native
   
   /**
@@ -123,6 +131,7 @@ class WebGLRenderer () extends Renderer {
   
   /**
   	 * Debug configurations.
+  	 * @default { checkShaderErrors: true }
   	 */
   var debug: WebGLDebug = js.native
   
@@ -221,23 +230,30 @@ class WebGLRenderer () extends Renderer {
   	 */
   def initTexture(texture: Texture): Unit = js.native
   
+  /**
+  	 * @default false
+  	 */
   var localClippingEnabled: Boolean = js.native
   
   /**
-  	 * Default is 4.
+  	 * @default 4
   	 */
   var maxMorphNormals: Double = js.native
   
   /**
-  	 * Default is 8.
+  	 * @default 8
   	 */
   var maxMorphTargets: Double = js.native
   
   /**
   	 * Default is LinearEncoding.
+  	 * @default THREE.LinearEncoding
   	 */
   var outputEncoding: TextureEncoding = js.native
   
+  /**
+  	 * @default false
+  	 */
   var physicallyCorrectLights: Boolean = js.native
   
   var pixelRatio: Double = js.native
@@ -286,7 +302,7 @@ class WebGLRenderer () extends Renderer {
   	 * @param callback The function will be called every available frame. If `null` is passed it will stop any already ongoing animation.
   	 */
   def setAnimationLoop(): Unit = js.native
-  def setAnimationLoop(callback: js.Function): Unit = js.native
+  def setAnimationLoop(callback: XRAnimationLoopCallback): Unit = js.native
   
   def setClearAlpha(alpha: Double): Unit = js.native
   
@@ -392,7 +408,7 @@ class WebGLRenderer () extends Renderer {
   var shadowMapCullFace: CullFace = js.native
   
   /**
-  	 * Default is false.
+  	 * @default false
   	 */
   var shadowMapDebug: Boolean = js.native
   
@@ -408,6 +424,7 @@ class WebGLRenderer () extends Renderer {
   
   /**
   	 * Defines whether the renderer should sort objects. Default is true.
+  	 * @default true
   	 */
   var sortObjects: Boolean = js.native
   
@@ -453,8 +470,14 @@ class WebGLRenderer () extends Renderer {
   	 */
   def supportsVertexTextures(): js.Any = js.native
   
+  /**
+  	 * @default THREE.NoToneMapping
+  	 */
   var toneMapping: ToneMapping = js.native
   
+  /**
+  	 * @default 1
+  	 */
   var toneMappingExposure: Double = js.native
   
   /**

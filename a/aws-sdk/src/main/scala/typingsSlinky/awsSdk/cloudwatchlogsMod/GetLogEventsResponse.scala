@@ -13,12 +13,12 @@ trait GetLogEventsResponse extends js.Object {
   var events: js.UndefOr[OutputLogEvents] = js.native
   
   /**
-    * The token for the next set of items in the backward direction. The token expires after 24 hours. This token will never be null. If you have reached the end of the stream, it will return the same token you passed in.
+    * The token for the next set of items in the backward direction. The token expires after 24 hours. This token is never null. If you have reached the end of the stream, it returns the same token you passed in.
     */
   var nextBackwardToken: js.UndefOr[NextToken] = js.native
   
   /**
-    * The token for the next set of items in the forward direction. The token expires after 24 hours. If you have reached the end of the stream, it will return the same token you passed in.
+    * The token for the next set of items in the forward direction. The token expires after 24 hours. If you have reached the end of the stream, it returns the same token you passed in.
     */
   var nextForwardToken: js.UndefOr[NextToken] = js.native
 }

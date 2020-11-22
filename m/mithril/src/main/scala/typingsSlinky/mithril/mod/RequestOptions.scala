@@ -3,6 +3,12 @@ package typingsSlinky.mithril.mod
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.XMLHttpRequest
+import typingsSlinky.mithril.mithrilStrings._empty
+import typingsSlinky.mithril.mithrilStrings.arraybuffer
+import typingsSlinky.mithril.mithrilStrings.blob
+import typingsSlinky.mithril.mithrilStrings.document
+import typingsSlinky.mithril.mithrilStrings.json
+import typingsSlinky.mithril.mithrilStrings.text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,6 +47,9 @@ trait RequestOptions[T] extends js.Object {
   
   /** A password for HTTP authorization. */
   var password: js.UndefOr[String] = js.native
+  
+  /** The expected type of the response, as a legal value of XMLHttpRequest.responseType. */
+  var responseType: js.UndefOr[_empty | arraybuffer | blob | document | json | text] = js.native
   
   /** A serialization method to be applied to data. Defaults to JSON.stringify, or if options.data is an instance of FormData, defaults to the identity function. */
   var serialize: js.UndefOr[js.Function1[/* data */ js.Any, _]] = js.native
@@ -146,6 +155,12 @@ object RequestOptions {
     
     @scala.inline
     def deletePassword: Self = this.set("password", js.undefined)
+    
+    @scala.inline
+    def setResponseType(value: _empty | arraybuffer | blob | document | json | text): Self = this.set("responseType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResponseType: Self = this.set("responseType", js.undefined)
     
     @scala.inline
     def setSerialize(value: /* data */ js.Any => _): Self = this.set("serialize", js.Any.fromFunction1(value))

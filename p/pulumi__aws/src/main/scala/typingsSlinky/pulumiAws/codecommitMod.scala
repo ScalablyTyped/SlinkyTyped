@@ -1,9 +1,9 @@
 package typingsSlinky.pulumiAws
 
+import typingsSlinky.pulumiAws.codecommitRepositoryMod.RepositoryArgs
+import typingsSlinky.pulumiAws.codecommitRepositoryMod.RepositoryState
 import typingsSlinky.pulumiAws.getRepositoryMod.GetRepositoryArgs
 import typingsSlinky.pulumiAws.getRepositoryMod.GetRepositoryResult
-import typingsSlinky.pulumiAws.repositoryMod.RepositoryArgs
-import typingsSlinky.pulumiAws.repositoryMod.RepositoryState
 import typingsSlinky.pulumiAws.triggerMod.TriggerArgs
 import typingsSlinky.pulumiAws.triggerMod.TriggerState
 import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
@@ -23,7 +23,7 @@ object codecommitMod extends js.Object {
   
   @js.native
   class Repository protected ()
-    extends typingsSlinky.pulumiAws.repositoryMod.Repository {
+    extends typingsSlinky.pulumiAws.codecommitRepositoryMod.Repository {
     /**
       * Create a Repository resource with the given unique name, arguments, and options.
       *
@@ -47,10 +47,10 @@ object codecommitMod extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.repositoryMod.Repository = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.repositoryMod.Repository = js.native
-    def get(name: String, id: Input[ID], state: RepositoryState): typingsSlinky.pulumiAws.repositoryMod.Repository = js.native
-    def get(name: String, id: Input[ID], state: RepositoryState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.repositoryMod.Repository = js.native
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.codecommitRepositoryMod.Repository = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.codecommitRepositoryMod.Repository = js.native
+    def get(name: String, id: Input[ID], state: RepositoryState): typingsSlinky.pulumiAws.codecommitRepositoryMod.Repository = js.native
+    def get(name: String, id: Input[ID], state: RepositoryState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.codecommitRepositoryMod.Repository = js.native
     
     /**
       * Returns true if the given object is an instance of Repository.  This is designed to work even

@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetDownloadBehaviorRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetAdBlockingEnabledRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `149` extends js.Object {
   
-  var paramsType: js.Array[SetDownloadBehaviorRequest] = js.native
+  var paramsType: js.Array[SetAdBlockingEnabledRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `149` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetDownloadBehaviorRequest], returnType: Unit): `149` = {
+  def apply(paramsType: js.Array[SetAdBlockingEnabledRequest], returnType: Unit): `149` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`149`]
   }
@@ -36,10 +36,10 @@ object `149` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetDownloadBehaviorRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetAdBlockingEnabledRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetDownloadBehaviorRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetAdBlockingEnabledRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

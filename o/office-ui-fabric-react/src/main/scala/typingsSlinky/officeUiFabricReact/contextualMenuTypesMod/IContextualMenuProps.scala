@@ -10,14 +10,15 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.IFocusZoneProps
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
+import typingsSlinky.officeUiFabricReact.anon.ContainsFocus
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
-import typingsSlinky.officeUiFabricReact.calloutTypesMod.Target
 import typingsSlinky.officeUiFabricReact.contextualMenuClassNamesMod.IContextualMenuClassNames
 import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuItemProps
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.IWithResponsiveModeState
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.uifabricReactHooks.useTargetMod.Target
 import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
@@ -211,6 +212,15 @@ trait IContextualMenuProps
   
   /** Custom render function for a submenu. */
   var onRenderSubMenu: js.UndefOr[IRenderFunction[IContextualMenuProps]] = js.native
+  
+  /**
+    * Called when the component is unmounting, and focus needs to be restored.
+    * Argument passed down contains two variables, the element that the underlying
+    * popup believes focus should go to and whether or not the popup currently
+    * contains focus. If this prop is provided, focus will not be restored automatically,
+    * you'll need to call originalElement.focus()
+    */
+  var onRestoreFocus: js.UndefOr[js.Function1[/* options */ ContainsFocus, Unit]] = js.native
   
   /**
     * Whether to focus on the contextual menu container (as opposed to the first menu item).
@@ -486,6 +496,12 @@ object IContextualMenuProps {
     
     @scala.inline
     def deleteOnRenderSubMenu: Self = this.set("onRenderSubMenu", js.undefined)
+    
+    @scala.inline
+    def setOnRestoreFocus(value: /* options */ ContainsFocus => Unit): Self = this.set("onRestoreFocus", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnRestoreFocus: Self = this.set("onRestoreFocus", js.undefined)
     
     @scala.inline
     def setShouldFocusOnContainer(value: Boolean): Self = this.set("shouldFocusOnContainer", value.asInstanceOf[js.Any])

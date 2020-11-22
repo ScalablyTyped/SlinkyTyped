@@ -13,7 +13,7 @@ trait ListAccessPointsResult extends js.Object {
   var AccessPointList: js.UndefOr[typingsSlinky.awsSdk.s3controlMod.AccessPointList] = js.native
   
   /**
-    * If the specified bucket has more access points than can be returned in one call to this API, then this field contains a continuation token that you can provide in subsequent calls to this API to retrieve additional access points.
+    * If the specified bucket has more access points than can be returned in one call to this API, this field contains a continuation token that you can provide in subsequent calls to this API to retrieve additional access points.
     */
   var NextToken: js.UndefOr[NonEmptyMaxLength1024String] = js.native
 }

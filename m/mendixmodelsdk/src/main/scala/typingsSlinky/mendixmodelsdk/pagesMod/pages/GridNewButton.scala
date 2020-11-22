@@ -1,17 +1,19 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/control-bar relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/control-bar relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.GridNewButton")
 @js.native
@@ -21,8 +23,8 @@ class GridNewButton protected () extends GridControlBarButton {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def editLocation: NewButtonEditLocation = js.native
@@ -40,9 +42,6 @@ class GridNewButton protected () extends GridControlBarButton {
     */
   def isPersistent: Boolean = js.native
   def isPersistent_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FGridNewButton: IModel = js.native
   
   def pageSettings: PageSettings = js.native
   def pageSettings_=(newValue: PageSettings): Unit = js.native

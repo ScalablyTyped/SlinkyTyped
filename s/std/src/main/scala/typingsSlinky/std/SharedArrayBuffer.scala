@@ -12,11 +12,6 @@ trait SharedArrayBuffer extends js.Object {
     */
   val byteLength: Double = js.native
   
-  /*
-    * The SharedArrayBuffer constructor's length property whose value is 1.
-    */
-  var length: Double = js.native
-  
   /**
     * Returns a section of an SharedArrayBuffer.
     */

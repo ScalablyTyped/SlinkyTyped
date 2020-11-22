@@ -1,8 +1,6 @@
 package typingsSlinky.jestTypes.anon
 
 import typingsSlinky.jestTypes.globalMod.Each
-import typingsSlinky.jestTypes.globalMod.EachTable
-import typingsSlinky.jestTypes.globalMod.EachTestFn
 import typingsSlinky.jestTypes.globalMod.ItConcurrentBase
 import typingsSlinky.jestTypes.globalMod.TestFn
 import typingsSlinky.jestTypes.globalMod.TestName
@@ -19,7 +17,5 @@ trait ItBaseconcurrentItConcurr extends js.Object {
   
   var concurrent: js.UndefOr[ItConcurrentBase] = js.native
   
-  def each(table: EachTable, taggedTemplateData: js.Any*): js.Function3[/* title */ String, /* test */ EachTestFn, /* timeout */ js.UndefOr[Double], Unit] = js.native
-  @JSName("each")
-  var each_Original: Each = js.native
+  var each: Each[TestFn] = js.native
 }

@@ -13,12 +13,12 @@ trait Output extends js.Object {
   var DestinationSchema: typingsSlinky.awsSdk.kinesisanalyticsv2Mod.DestinationSchema = js.native
   
   /**
-    * Identifies an Amazon Kinesis Data Firehose delivery stream as the destination.
+    * Identifies a Kinesis Data Firehose delivery stream as the destination.
     */
   var KinesisFirehoseOutput: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.KinesisFirehoseOutput] = js.native
   
   /**
-    * Identifies an Amazon Kinesis data stream as the destination.
+    * Identifies a Kinesis data stream as the destination.
     */
   var KinesisStreamsOutput: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.KinesisStreamsOutput] = js.native
   

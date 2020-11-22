@@ -3,8 +3,8 @@ package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.NCHW
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.NHWC
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike4D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

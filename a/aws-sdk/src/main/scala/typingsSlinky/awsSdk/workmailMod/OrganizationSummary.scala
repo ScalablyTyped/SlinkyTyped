@@ -13,6 +13,11 @@ trait OrganizationSummary extends js.Object {
   var Alias: js.UndefOr[OrganizationName] = js.native
   
   /**
+    * The default email domain associated with the organization.
+    */
+  var DefaultMailDomain: js.UndefOr[DomainName] = js.native
+  
+  /**
     * The error message associated with the organization. It is only present if unexpected behavior has occurred with regards to the organization. It provides insight or solutions regarding unexpected behavior.
     */
   var ErrorMessage: js.UndefOr[String] = js.native
@@ -55,6 +60,12 @@ object OrganizationSummary {
     
     @scala.inline
     def deleteAlias: Self = this.set("Alias", js.undefined)
+    
+    @scala.inline
+    def setDefaultMailDomain(value: DomainName): Self = this.set("DefaultMailDomain", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultMailDomain: Self = this.set("DefaultMailDomain", js.undefined)
     
     @scala.inline
     def setErrorMessage(value: String): Self = this.set("ErrorMessage", value.asInstanceOf[js.Any])

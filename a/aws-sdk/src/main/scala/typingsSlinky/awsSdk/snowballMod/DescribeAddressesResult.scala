@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeAddressesResult extends js.Object {
   
   /**
-    * The Snowball shipping addresses that were created for this account.
+    * The Snow device shipping addresses that were created for this account.
     */
   var Addresses: js.UndefOr[AddressList] = js.native
   

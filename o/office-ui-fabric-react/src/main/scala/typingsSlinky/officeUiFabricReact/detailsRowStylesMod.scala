@@ -13,7 +13,7 @@ object detailsRowStylesMod extends js.Object {
   
   val DEFAULT_CELL_STYLE_PROPS: ICellStyleProps = js.native
   
-  def getStyles(props: IDetailsRowStyleProps): IDetailsRowStyles = js.native
+  def getDetailsRowStyles(props: IDetailsRowStyleProps): IDetailsRowStyles = js.native
   
   @js.native
   object DEFAULT_ROW_HEIGHTS extends js.Object {

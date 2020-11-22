@@ -18,6 +18,16 @@ object helperTextFoundationMod extends js.Object {
     def this(adapter: PartialMDCSelectHelperTex) = this()
     
     /**
+      * @return The ID of the helper text, or null if none is set.
+      */
+    def getId(): String | Null = js.native
+    
+    /**
+      * @return Whether the helper text is currently visible.
+      */
+    def isVisible(): Boolean = js.native
+    
+    /**
       * Sets the content of the helper text field.
       */
     def setContent(content: String): Unit = js.native
@@ -44,11 +54,6 @@ object helperTextFoundationMod extends js.Object {
       * triggers alerts as necessary based on the select's validity.
       */
     def setValidity(selectIsValid: Boolean): Unit = js.native
-    
-    /**
-      * Makes the helper text visible to screen readers.
-      */
-    def showToScreenReader(): Unit = js.native
   }
   /* static members */
   @js.native

@@ -38,7 +38,7 @@ trait GraphicsDevice extends EventHandler {
     * // Clear color buffer to yellow and depth to 1.0
     * device.clear({
     *     color: [1, 1, 0, 1],
-    *     depth: 1.0,
+    *     depth: 1,
     *     flags: pc.CLEARFLAG_COLOR | pc.CLEARFLAG_DEPTH
     * });
     * @param options - Optional options object that controls the behavior of the clear operation defined as follows:

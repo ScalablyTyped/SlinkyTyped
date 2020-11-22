@@ -18,7 +18,7 @@ trait SampleChannelDataRequest extends js.Object {
   var endTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The number of sample messages to be retrieved. The limit is 10, the default is also 10.
+    * The number of sample messages to be retrieved. The limit is 10. The default is also 10.
     */
   var maxMessages: js.UndefOr[MaxMessages] = js.native
   

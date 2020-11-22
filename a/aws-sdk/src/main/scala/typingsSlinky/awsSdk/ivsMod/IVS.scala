@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.ivsMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -85,6 +85,20 @@ trait IVS extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
+    * Deletes a specified authorization key pair. This invalidates future viewer tokens generated using the key pair’s privateKey.
+    */
+  def deletePlaybackKeyPair(): Request[DeletePlaybackKeyPairResponse, AWSError] = js.native
+  def deletePlaybackKeyPair(callback: js.Function2[/* err */ AWSError, /* data */ DeletePlaybackKeyPairResponse, Unit]): Request[DeletePlaybackKeyPairResponse, AWSError] = js.native
+  /**
+    * Deletes a specified authorization key pair. This invalidates future viewer tokens generated using the key pair’s privateKey.
+    */
+  def deletePlaybackKeyPair(params: DeletePlaybackKeyPairRequest): Request[DeletePlaybackKeyPairResponse, AWSError] = js.native
+  def deletePlaybackKeyPair(
+    params: DeletePlaybackKeyPairRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeletePlaybackKeyPairResponse, Unit]
+  ): Request[DeletePlaybackKeyPairResponse, AWSError] = js.native
+  
+  /**
     * Deletes the stream key for the specified ARN, so it can no longer be used to stream.
     */
   def deleteStreamKey(): Request[js.Object, AWSError] = js.native
@@ -111,6 +125,20 @@ trait IVS extends Service {
     params: GetChannelRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetChannelResponse, Unit]
   ): Request[GetChannelResponse, AWSError] = js.native
+  
+  /**
+    * Gets a specified playback authorization key pair and returns the arn and fingerprint. The privateKey held by the caller can be used to generate viewer authorization tokens, to grant viewers access to authorized channels.
+    */
+  def getPlaybackKeyPair(): Request[GetPlaybackKeyPairResponse, AWSError] = js.native
+  def getPlaybackKeyPair(callback: js.Function2[/* err */ AWSError, /* data */ GetPlaybackKeyPairResponse, Unit]): Request[GetPlaybackKeyPairResponse, AWSError] = js.native
+  /**
+    * Gets a specified playback authorization key pair and returns the arn and fingerprint. The privateKey held by the caller can be used to generate viewer authorization tokens, to grant viewers access to authorized channels.
+    */
+  def getPlaybackKeyPair(params: GetPlaybackKeyPairRequest): Request[GetPlaybackKeyPairResponse, AWSError] = js.native
+  def getPlaybackKeyPair(
+    params: GetPlaybackKeyPairRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetPlaybackKeyPairResponse, Unit]
+  ): Request[GetPlaybackKeyPairResponse, AWSError] = js.native
   
   /**
     * Gets information about the active (live) stream on a specified channel.
@@ -141,6 +169,20 @@ trait IVS extends Service {
   ): Request[GetStreamKeyResponse, AWSError] = js.native
   
   /**
+    * Imports the public portion of a new key pair and returns its arn and fingerprint. The privateKey can then be used to generate viewer authorization tokens, to grant viewers access to authorized channels.
+    */
+  def importPlaybackKeyPair(): Request[ImportPlaybackKeyPairResponse, AWSError] = js.native
+  def importPlaybackKeyPair(callback: js.Function2[/* err */ AWSError, /* data */ ImportPlaybackKeyPairResponse, Unit]): Request[ImportPlaybackKeyPairResponse, AWSError] = js.native
+  /**
+    * Imports the public portion of a new key pair and returns its arn and fingerprint. The privateKey can then be used to generate viewer authorization tokens, to grant viewers access to authorized channels.
+    */
+  def importPlaybackKeyPair(params: ImportPlaybackKeyPairRequest): Request[ImportPlaybackKeyPairResponse, AWSError] = js.native
+  def importPlaybackKeyPair(
+    params: ImportPlaybackKeyPairRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ImportPlaybackKeyPairResponse, Unit]
+  ): Request[ImportPlaybackKeyPairResponse, AWSError] = js.native
+  
+  /**
     * Gets summary information about all channels in your account, in the AWS region where the API request is processed. This list can be filtered to match a specified string.
     */
   def listChannels(): Request[ListChannelsResponse, AWSError] = js.native
@@ -153,6 +195,20 @@ trait IVS extends Service {
     params: ListChannelsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListChannelsResponse, Unit]
   ): Request[ListChannelsResponse, AWSError] = js.native
+  
+  /**
+    * Gets summary information about playback key pairs.
+    */
+  def listPlaybackKeyPairs(): Request[ListPlaybackKeyPairsResponse, AWSError] = js.native
+  def listPlaybackKeyPairs(callback: js.Function2[/* err */ AWSError, /* data */ ListPlaybackKeyPairsResponse, Unit]): Request[ListPlaybackKeyPairsResponse, AWSError] = js.native
+  /**
+    * Gets summary information about playback key pairs.
+    */
+  def listPlaybackKeyPairs(params: ListPlaybackKeyPairsRequest): Request[ListPlaybackKeyPairsResponse, AWSError] = js.native
+  def listPlaybackKeyPairs(
+    params: ListPlaybackKeyPairsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListPlaybackKeyPairsResponse, Unit]
+  ): Request[ListPlaybackKeyPairsResponse, AWSError] = js.native
   
   /**
     * Gets summary information about stream keys for the specified channel.

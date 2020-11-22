@@ -2,31 +2,25 @@ package typingsSlinky.awsSdkClientKmsBrowser.typesMalformedPolicyDocumentExcepti
 
 import typingsSlinky.awsSdkClientKmsBrowser.createKeyExceptionsUnionMod.CreateKeyExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.putKeyPolicyExceptionsUnionMod.PutKeyPolicyExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_MalformedPolicyDocumentExceptionDetails> * / any */ @js.native
 trait MalformedPolicyDocumentException
-  extends ServiceException[MalformedPolicyDocumentExceptionDetails]
-     with CreateKeyExceptionsUnion
+  extends CreateKeyExceptionsUnion
      with PutKeyPolicyExceptionsUnion {
   
-  @JSName("name")
-  var name_MalformedPolicyDocumentException: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.MalformedPolicyDocumentException = js.native
+  var name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.MalformedPolicyDocumentException = js.native
 }
 object MalformedPolicyDocumentException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: MalformedPolicyDocumentExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.MalformedPolicyDocumentException
   ): MalformedPolicyDocumentException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[MalformedPolicyDocumentException]
   }
   

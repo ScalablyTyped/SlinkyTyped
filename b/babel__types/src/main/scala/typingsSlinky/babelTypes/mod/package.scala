@@ -192,6 +192,7 @@ package object mod {
     - typingsSlinky.babelTypes.mod.SpreadElement_
     - typingsSlinky.babelTypes.mod.SpreadProperty
     - typingsSlinky.babelTypes.mod.Statement
+    - typingsSlinky.babelTypes.mod.StaticBlock_
     - typingsSlinky.babelTypes.mod.StringLiteral_
     - typingsSlinky.babelTypes.mod.StringLiteralTypeAnnotation_
     - typingsSlinky.babelTypes.mod.StringTypeAnnotation_
@@ -226,6 +227,7 @@ package object mod {
     - typingsSlinky.babelTypes.mod.TSInterfaceBody_
     - typingsSlinky.babelTypes.mod.TSInterfaceDeclaration_
     - typingsSlinky.babelTypes.mod.TSIntersectionType_
+    - typingsSlinky.babelTypes.mod.TSIntrinsicKeyword_
     - typingsSlinky.babelTypes.mod.TSLiteralType_
     - typingsSlinky.babelTypes.mod.TSMappedType_
     - typingsSlinky.babelTypes.mod.TSMethodSignature_
@@ -307,7 +309,7 @@ package object mod {
   
   type SpreadProperty = typingsSlinky.babelTypes.mod.SpreadElement_
   
-  type TraversalAncestors = js.Array[typingsSlinky.babelTypes.anon.Index]
+  type TraversalAncestors = js.Array[typingsSlinky.babelTypes.anon.Key]
   
   type TraversalHandler[T] = js.ThisFunction3[
     /* this */ js.UndefOr[scala.Nothing], 

@@ -1,8 +1,8 @@
 package typingsSlinky.pulumiAws.rdsClusterInstanceMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.engineTypeMod.EngineType
-import typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+import typingsSlinky.pulumiAws.enumsRdsMod.EngineType
+import typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -61,7 +61,7 @@ trait ClusterInstanceArgs extends js.Object {
   val engine: js.UndefOr[Input[EngineType]] = js.native
   
   /**
-    * The database engine version.
+    * The database engine version
     */
   val engineVersion: js.UndefOr[Input[String]] = js.native
   

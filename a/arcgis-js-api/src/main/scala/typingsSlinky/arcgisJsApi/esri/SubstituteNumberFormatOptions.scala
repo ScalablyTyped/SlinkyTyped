@@ -19,7 +19,7 @@ trait SubstituteNumberFormatOptions extends Object {
   var intlOptions: NumberFormatOptions = js.native
   
   /**
-    * The type of this format. The value is always `"number"`.
+    * The type of this format.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-intl.html#SubstituteNumberFormatOptions)
     */

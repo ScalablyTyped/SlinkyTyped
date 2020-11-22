@@ -18,7 +18,7 @@ trait StreamKeySummary extends js.Object {
   var channelArn: js.UndefOr[ChannelArn] = js.native
   
   /**
-    * Array of 1-50 maps, each of the form string:string (key:value) 
+    * Array of 1-50 maps, each of the form string:string (key:value).
     */
   var tags: js.UndefOr[Tags] = js.native
 }

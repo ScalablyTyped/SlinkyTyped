@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.restMod.rest
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.Attribute
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.MappedValue
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,18 +31,21 @@ class ODataMappedValue protected () extends MappedValue {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsAttribute")
   def containerAsAttribute_MODataMappedValue: Attribute = js.native
   
-  @JSName("model")
-  var model_FODataMappedValue: IModel = js.native
-  
   def remoteName: String = js.native
   def remoteName_=(newValue: String): Unit = js.native
+  
+  /**
+    * In version 8.15.0: introduced
+    */
+  def remoteType: String = js.native
+  def remoteType_=(newValue: String): Unit = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/rest", "rest.ODataMappedValue")

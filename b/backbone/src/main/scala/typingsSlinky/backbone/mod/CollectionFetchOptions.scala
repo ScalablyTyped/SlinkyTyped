@@ -7,8 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CollectionFetchOptions
   extends CollectionSetOptions
-     with PersistenceOptions
-     with Parseable {
+     with PersistenceOptions {
   
   var reset: js.UndefOr[Boolean] = js.native
 }

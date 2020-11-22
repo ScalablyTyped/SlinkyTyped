@@ -11,10 +11,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object reactNavigationStackStrings {
   
   @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  
+  @scala.inline
   def assertive: assertive = "assertive".asInstanceOf[assertive]
   
   @scala.inline
   def auto: auto = "auto".asInstanceOf[auto]
+  
+  @scala.inline
+  def balanced: balanced = "balanced".asInstanceOf[balanced]
   
   @scala.inline
   def `box-none`: `box-none` = "box-none".asInstanceOf[`box-none`]
@@ -32,13 +38,25 @@ object reactNavigationStackStrings {
   def center: center = "center".asInstanceOf[center]
   
   @scala.inline
+  def clip: clip = "clip".asInstanceOf[clip]
+  
+  @scala.inline
   def didBlur: didBlur = "didBlur".asInstanceOf[didBlur]
   
   @scala.inline
   def didFocus: didFocus = "didFocus".asInstanceOf[didFocus]
   
   @scala.inline
+  def email: email = "email".asInstanceOf[email]
+  
+  @scala.inline
   def float: float = "float".asInstanceOf[float]
+  
+  @scala.inline
+  def head: head = "head".asInstanceOf[head]
+  
+  @scala.inline
+  def highQuality: highQuality = "highQuality".asInstanceOf[highQuality]
   
   @scala.inline
   def horizontal: horizontal = "horizontal".asInstanceOf[horizontal]
@@ -47,10 +65,13 @@ object reactNavigationStackStrings {
   def `horizontal-inverted`: `horizontal-inverted` = "horizontal-inverted".asInstanceOf[`horizontal-inverted`]
   
   @scala.inline
-  def key: key = "key".asInstanceOf[key]
+  def left: left = "left".asInstanceOf[left]
   
   @scala.inline
-  def left: left = "left".asInstanceOf[left]
+  def link: link = "link".asInstanceOf[link]
+  
+  @scala.inline
+  def middle: middle = "middle".asInstanceOf[middle]
   
   @scala.inline
   def modal: modal = "modal".asInstanceOf[modal]
@@ -63,6 +84,9 @@ object reactNavigationStackStrings {
   
   @scala.inline
   def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def phoneNumber: phoneNumber = "phoneNumber".asInstanceOf[phoneNumber]
   
   @scala.inline
   def polite: polite = "polite".asInstanceOf[polite]
@@ -86,7 +110,13 @@ object reactNavigationStackStrings {
   def screen: screen = "screen".asInstanceOf[screen]
   
   @scala.inline
+  def simple: simple = "simple".asInstanceOf[simple]
+  
+  @scala.inline
   def spring: spring = "spring".asInstanceOf[spring]
+  
+  @scala.inline
+  def tail: tail = "tail".asInstanceOf[tail]
   
   @scala.inline
   def timing: timing = "timing".asInstanceOf[timing]
@@ -107,10 +137,16 @@ object reactNavigationStackStrings {
   def yes: yes = "yes".asInstanceOf[yes]
   
   @js.native
+  sealed trait all extends js.Object
+  
+  @js.native
   sealed trait assertive extends js.Object
   
   @js.native
   sealed trait auto extends js.Object
+  
+  @js.native
+  sealed trait balanced extends js.Object
   
   @js.native
   sealed trait `box-none` extends js.Object
@@ -128,13 +164,25 @@ object reactNavigationStackStrings {
   sealed trait center extends js.Object
   
   @js.native
+  sealed trait clip extends js.Object
+  
+  @js.native
   sealed trait didBlur extends NavigationStackEventName
   
   @js.native
   sealed trait didFocus extends NavigationStackEventName
   
   @js.native
+  sealed trait email extends js.Object
+  
+  @js.native
   sealed trait float extends StackHeaderMode
+  
+  @js.native
+  sealed trait head extends js.Object
+  
+  @js.native
+  sealed trait highQuality extends js.Object
   
   @js.native
   sealed trait horizontal extends GestureDirection
@@ -143,10 +191,13 @@ object reactNavigationStackStrings {
   sealed trait `horizontal-inverted` extends GestureDirection
   
   @js.native
-  sealed trait key extends js.Object
+  sealed trait left extends js.Object
   
   @js.native
-  sealed trait left extends js.Object
+  sealed trait link extends js.Object
+  
+  @js.native
+  sealed trait middle extends js.Object
   
   @js.native
   sealed trait modal extends StackCardMode
@@ -159,6 +210,9 @@ object reactNavigationStackStrings {
   
   @js.native
   sealed trait none extends StackHeaderMode
+  
+  @js.native
+  sealed trait phoneNumber extends js.Object
   
   @js.native
   sealed trait polite extends js.Object
@@ -182,7 +236,13 @@ object reactNavigationStackStrings {
   sealed trait screen extends StackHeaderMode
   
   @js.native
+  sealed trait simple extends js.Object
+  
+  @js.native
   sealed trait spring extends js.Object
+  
+  @js.native
+  sealed trait tail extends js.Object
   
   @js.native
   sealed trait timing extends js.Object

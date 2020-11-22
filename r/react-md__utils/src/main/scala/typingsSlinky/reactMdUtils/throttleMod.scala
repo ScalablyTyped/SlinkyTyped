@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object throttleMod extends js.Object {
   
-  def default[F /* <: ThrottleableFunction */](fn: F, wait: Double): ThrottledFunction[F] = js.native
+  def throttle[F /* <: ThrottleableFunction */](fn: F, wait: Double): ThrottledFunction[F] = js.native
   
   type ThrottleableFunction = js.Function1[/* repeated */ js.Any, js.Any]
   

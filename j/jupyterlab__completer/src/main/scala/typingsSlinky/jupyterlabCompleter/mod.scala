@@ -1,16 +1,18 @@
 package typingsSlinky.jupyterlabCompleter
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.jupyterlabCompleter.jupyterlabCompleterStrings.ICompletionItemsReply
 import typingsSlinky.jupyterlabCompleter.widgetMod.Completer.IOptions
-import typingsSlinky.phosphorCoreutils.mod.Token
-import typingsSlinky.phosphorMessaging.mod.Message
+import typingsSlinky.luminoCoreutils.mod.Token
+import typingsSlinky.luminoMessaging.mod.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/completer", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   @js.native
   class Completer protected ()
     extends typingsSlinky.jupyterlabCompleter.widgetMod.Completer {
@@ -18,6 +20,21 @@ object mod extends js.Object {
       * Construct a text completer menu widget.
       */
     def this(options: IOptions) = this()
+  }
+  @js.native
+  object Completer extends js.Object {
+    
+    /**
+      * The default `IRenderer` instance.
+      */
+    val defaultRenderer: typingsSlinky.jupyterlabCompleter.widgetMod.Completer.Renderer = js.native
+    
+    /**
+      * The default implementation of an `IRenderer`.
+      */
+    @js.native
+    class Renderer ()
+      extends typingsSlinky.jupyterlabCompleter.widgetMod.Completer.Renderer
   }
   
   @js.native
@@ -43,6 +60,23 @@ object mod extends js.Object {
       */
     def this(options: typingsSlinky.jupyterlabCompleter.handlerMod.CompletionHandler.IOptions) = this()
   }
+  @js.native
+  object CompletionHandler extends js.Object {
+    
+    val ICompletionItemsResponseType: ICompletionItemsReply = js.native
+    
+    /**
+      * A namespace for completion handler messages.
+      */
+    @js.native
+    object Msg extends js.Object {
+      
+      /**
+        * A singleton `'invoke-request'` message.
+        */
+      val InvokeRequest: Message = js.native
+    }
+  }
   
   @js.native
   class ContextConnector protected ()
@@ -56,49 +90,17 @@ object mod extends js.Object {
   }
   
   @js.native
+  object ICompletionManager
+    extends TopLevel[Token[typingsSlinky.jupyterlabCompleter.tokensMod.ICompletionManager]]
+  
+  @js.native
   class KernelConnector protected ()
     extends typingsSlinky.jupyterlabCompleter.kernelconnectorMod.KernelConnector {
     /**
       * Create a new kernel connector for completion requests.
       *
-      * @param options - The instatiation options for the kernel connector.
+      * @param options - The instantiation options for the kernel connector.
       */
     def this(options: typingsSlinky.jupyterlabCompleter.kernelconnectorMod.KernelConnector.IOptions) = this()
   }
-  
-  @js.native
-  object Completer extends js.Object {
-    /**
-      * The default implementation of an `IRenderer`.
-      */
-    @js.native
-    class Renderer ()
-      extends typingsSlinky.jupyterlabCompleter.widgetMod.Completer.Renderer
-    
-    /**
-      * The default `IRenderer` instance.
-      */
-    val defaultRenderer: typingsSlinky.jupyterlabCompleter.widgetMod.Completer.Renderer = js.native
-  }
-  
-  @js.native
-  object CompletionHandler extends js.Object {
-    /**
-      * A namespace for completion handler messages.
-      */
-    @js.native
-    object Msg extends js.Object {
-      /**
-        * A singleton `'invoke-request'` message.
-        */
-      val InvokeRequest: Message = js.native
-    }
-    
-  }
-  
-  @js.native
-  object ICompletionManager
-    extends TopLevel[Token[typingsSlinky.jupyterlabCompleter.tokensMod.ICompletionManager]]
-  
 }
-

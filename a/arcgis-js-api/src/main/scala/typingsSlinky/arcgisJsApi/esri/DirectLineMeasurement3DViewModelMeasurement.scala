@@ -26,7 +26,7 @@ trait DirectLineMeasurement3DViewModelMeasurement extends Object {
   var horizontalDistance: DirectLineMeasurement3DViewModelMeasurementValue = js.native
   
   /**
-    * Describes the mode in which the measurement was taken. In `euclidean` mode, the distances are measured as straight lines in the [ECEF](https://en.wikipedia.org/wiki/ECEF) coordinate system. In `geodesic` mode, the distances are measured as geodesic lines on the WGS84 ellipsoid.
+    * Describes the mode in which the measurement was taken.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DirectLineMeasurement3D-DirectLineMeasurement3DViewModel.html#measurement)
     */

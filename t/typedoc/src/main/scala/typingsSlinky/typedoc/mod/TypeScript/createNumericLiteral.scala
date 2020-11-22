@@ -9,6 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createNumericLiteral extends js.Object {
   
+  /** @deprecated Use `factory.createNumericLiteral` or the factory supplied by your transformation context instead. */
   def apply(value: String): NumericLiteral = js.native
   def apply(value: String, numericLiteralFlags: typingsSlinky.typescript.mod.TokenFlags): NumericLiteral = js.native
+  def apply(value: Double): NumericLiteral = js.native
+  def apply(value: Double, numericLiteralFlags: typingsSlinky.typescript.mod.TokenFlags): NumericLiteral = js.native
 }

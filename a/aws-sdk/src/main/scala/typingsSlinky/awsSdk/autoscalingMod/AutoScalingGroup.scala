@@ -23,6 +23,11 @@ trait AutoScalingGroup extends js.Object {
   var AvailabilityZones: typingsSlinky.awsSdk.autoscalingMod.AvailabilityZones = js.native
   
   /**
+    * Indicates whether Capacity Rebalancing is enabled.
+    */
+  var CapacityRebalance: js.UndefOr[CapacityRebalanceEnabled] = js.native
+  
+  /**
     * The date and time the group was created.
     */
   var CreatedTime: js.Date = js.native
@@ -201,6 +206,12 @@ object AutoScalingGroup {
     
     @scala.inline
     def deleteAutoScalingGroupARN: Self = this.set("AutoScalingGroupARN", js.undefined)
+    
+    @scala.inline
+    def setCapacityRebalance(value: CapacityRebalanceEnabled): Self = this.set("CapacityRebalance", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCapacityRebalance: Self = this.set("CapacityRebalance", js.undefined)
     
     @scala.inline
     def setEnabledMetricsVarargs(value: EnabledMetric*): Self = this.set("EnabledMetrics", js.Array(value :_*))

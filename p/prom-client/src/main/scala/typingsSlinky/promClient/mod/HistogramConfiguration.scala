@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HistogramConfiguration extends js.Object {
+trait HistogramConfiguration[T /* <: String */] extends js.Object {
   
   var aggregator: js.UndefOr[Aggregator] = js.native
   
@@ -13,7 +13,7 @@ trait HistogramConfiguration extends js.Object {
   
   var help: String = js.native
   
-  var labelNames: js.UndefOr[js.Array[String]] = js.native
+  var labelNames: js.UndefOr[js.Array[T]] = js.native
   
   var name: String = js.native
   
@@ -22,13 +22,13 @@ trait HistogramConfiguration extends js.Object {
 object HistogramConfiguration {
   
   @scala.inline
-  def apply(help: String, name: String): HistogramConfiguration = {
+  def apply[T /* <: String */](help: String, name: String): HistogramConfiguration[T] = {
     val __obj = js.Dynamic.literal(help = help.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[HistogramConfiguration]
+    __obj.asInstanceOf[HistogramConfiguration[T]]
   }
   
   @scala.inline
-  implicit class HistogramConfigurationOps[Self <: HistogramConfiguration] (val x: Self) extends AnyVal {
+  implicit class HistogramConfigurationOps[Self <: HistogramConfiguration[_], T /* <: String */] (val x: Self with HistogramConfiguration[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -64,10 +64,10 @@ object HistogramConfiguration {
     def deleteBuckets: Self = this.set("buckets", js.undefined)
     
     @scala.inline
-    def setLabelNamesVarargs(value: String*): Self = this.set("labelNames", js.Array(value :_*))
+    def setLabelNamesVarargs(value: T*): Self = this.set("labelNames", js.Array(value :_*))
     
     @scala.inline
-    def setLabelNames(value: js.Array[String]): Self = this.set("labelNames", value.asInstanceOf[js.Any])
+    def setLabelNames(value: js.Array[T]): Self = this.set("labelNames", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLabelNames: Self = this.set("labelNames", js.undefined)

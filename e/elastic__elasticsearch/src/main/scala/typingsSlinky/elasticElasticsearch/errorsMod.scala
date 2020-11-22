@@ -1,6 +1,7 @@
 package typingsSlinky.elasticElasticsearch
 
 import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
+import typingsSlinky.elasticElasticsearch.transportMod.Context
 import typingsSlinky.elasticElasticsearch.transportMod._ApiError
 import typingsSlinky.std.Error
 import typingsSlinky.std.Record
@@ -21,7 +22,7 @@ object errorsMod extends js.Object {
   
   @js.native
   class ConnectionError[TResponse, TContext] protected () extends ElasticsearchClientError {
-    def this(message: String, meta: ApiResponse[Record[String, _], _]) = this()
+    def this(message: String, meta: ApiResponse[Record[String, _], Context]) = this()
     
     var meta: ApiResponse[TResponse, TContext] = js.native
   }
@@ -40,21 +41,21 @@ object errorsMod extends js.Object {
   
   @js.native
   class NoLivingConnectionsError[TResponse, TContext] protected () extends ElasticsearchClientError {
-    def this(message: String, meta: ApiResponse[Record[String, _], _]) = this()
+    def this(message: String, meta: ApiResponse[Record[String, _], Context]) = this()
     
     var meta: ApiResponse[TResponse, TContext] = js.native
   }
   
   @js.native
   class RequestAbortedError[TResponse, TContext] protected () extends ElasticsearchClientError {
-    def this(message: String, meta: ApiResponse[Record[String, _], _]) = this()
+    def this(message: String, meta: ApiResponse[Record[String, _], Context]) = this()
     
     var meta: ApiResponse[TResponse, TContext] = js.native
   }
   
   @js.native
   class ResponseError[TResponse, TContext] protected () extends ElasticsearchClientError {
-    def this(meta: ApiResponse[Record[String, _], _]) = this()
+    def this(meta: ApiResponse[Record[String, _], Context]) = this()
     
     var body: TResponse = js.native
     
@@ -76,7 +77,7 @@ object errorsMod extends js.Object {
   
   @js.native
   class TimeoutError[TResponse, TContext] protected () extends ElasticsearchClientError {
-    def this(message: String, meta: ApiResponse[Record[String, _], _]) = this()
+    def this(message: String, meta: ApiResponse[Record[String, _], Context]) = this()
     
     var meta: ApiResponse[TResponse, TContext] = js.native
   }

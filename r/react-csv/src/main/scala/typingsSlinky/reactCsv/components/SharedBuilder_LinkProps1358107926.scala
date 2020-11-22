@@ -21,13 +21,19 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.reactCsv.commonPropTypesMod.AsyncClickHandler
 import typingsSlinky.reactCsv.commonPropTypesMod.Headers
 import typingsSlinky.reactCsv.commonPropTypesMod.LabelKeyObject
 import typingsSlinky.reactCsv.commonPropTypesMod.SyncClickHandler
+import typingsSlinky.reactCsv.reactCsvStrings.`additions removals`
 import typingsSlinky.reactCsv.reactCsvStrings.`additions text`
 import typingsSlinky.reactCsv.reactCsvStrings.`inline`
+import typingsSlinky.reactCsv.reactCsvStrings.`removals additions`
+import typingsSlinky.reactCsv.reactCsvStrings.`removals text`
+import typingsSlinky.reactCsv.reactCsvStrings.`text additions`
+import typingsSlinky.reactCsv.reactCsvStrings.`text removals`
 import typingsSlinky.reactCsv.reactCsvStrings.additions
 import typingsSlinky.reactCsv.reactCsvStrings.all
 import typingsSlinky.reactCsv.reactCsvStrings.ascending
@@ -192,7 +198,9 @@ class SharedBuilder_LinkProps1358107926[R <: js.Object] (val args: js.Array[js.A
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -593,7 +601,7 @@ class SharedBuilder_LinkProps1358107926[R <: js.Object] (val args: js.Array[js.A
   def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def referrerPolicy(value: String): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
+  def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
   
   @scala.inline
   def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])

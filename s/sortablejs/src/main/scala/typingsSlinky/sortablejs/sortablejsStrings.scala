@@ -803,6 +803,21 @@ object sortablejsStrings {
   def overflowY: overflowY = "overflowY".asInstanceOf[overflowY]
   
   @scala.inline
+  def overscrollBehavior: overscrollBehavior = "overscrollBehavior".asInstanceOf[overscrollBehavior]
+  
+  @scala.inline
+  def overscrollBehaviorBlock: overscrollBehaviorBlock = "overscrollBehaviorBlock".asInstanceOf[overscrollBehaviorBlock]
+  
+  @scala.inline
+  def overscrollBehaviorInline: overscrollBehaviorInline = "overscrollBehaviorInline".asInstanceOf[overscrollBehaviorInline]
+  
+  @scala.inline
+  def overscrollBehaviorX: overscrollBehaviorX = "overscrollBehaviorX".asInstanceOf[overscrollBehaviorX]
+  
+  @scala.inline
+  def overscrollBehaviorY: overscrollBehaviorY = "overscrollBehaviorY".asInstanceOf[overscrollBehaviorY]
+  
+  @scala.inline
   def padding: padding = "padding".asInstanceOf[padding]
   
   @scala.inline
@@ -2130,6 +2145,21 @@ object sortablejsStrings {
   
   @js.native
   sealed trait overflowY extends js.Object
+  
+  @js.native
+  sealed trait overscrollBehavior extends js.Object
+  
+  @js.native
+  sealed trait overscrollBehaviorBlock extends js.Object
+  
+  @js.native
+  sealed trait overscrollBehaviorInline extends js.Object
+  
+  @js.native
+  sealed trait overscrollBehaviorX extends js.Object
+  
+  @js.native
+  sealed trait overscrollBehaviorY extends js.Object
   
   @js.native
   sealed trait padding extends js.Object

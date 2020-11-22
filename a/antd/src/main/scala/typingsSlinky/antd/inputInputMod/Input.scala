@@ -7,7 +7,8 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.anon.AutoComplete
 import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderContextMod.DirectionType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.FocusEventHandler
@@ -34,7 +35,7 @@ trait Input
   @JSName("componentWillUnmount")
   def componentWillUnmount_MInput(): Unit = js.native
   
-  var direction: js.Any = js.native
+  var direction: DirectionType = js.native
   
   def focus(): Unit = js.native
   

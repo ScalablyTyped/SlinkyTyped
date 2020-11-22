@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object decode extends js.Object {
   
+  def apply(string: String): WIFReturn = js.native
   def apply(string: String, version: Double): WIFReturn = js.native
 }

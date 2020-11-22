@@ -6,8 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* windows types */
 /**
-  * The type of browser window this is. Under some circumstances a Window may not be assigned type property, for
-  * example when querying closed windows from the `sessions` API.
+  * The type of browser window this is. Under some circumstances a Window may not be assigned type property, for example when querying closed windows from the `sessions` API.
   */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal

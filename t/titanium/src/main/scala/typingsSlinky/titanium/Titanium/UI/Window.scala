@@ -153,7 +153,7 @@ trait Window extends View {
   /**
     * Background color for the nav bar, as a color name or hex triplet.
     */
-  var barColor: String = js.native
+  var barColor: String | Color = js.native
   
   /**
     * Background image for the nav bar, specified as a URL to a local image.
@@ -167,6 +167,11 @@ trait Window extends View {
   def close(params: Dictionary[Animation]): Unit = js.native
   def close(params: Animation): Unit = js.native
   def close(params: closeWindowParams): Unit = js.native
+  
+  /**
+    * Determines whether this Window is closed.
+    */
+  val closed: Boolean = js.native
   
   /**
     * Boolean value indicating if the application should exit when the Android
@@ -263,6 +268,11 @@ trait Window extends View {
   var flagSecure: Boolean = js.native
   
   /**
+    * Determines whether this TextArea has focus.
+    */
+  val focused: Boolean = js.native
+  
+  /**
     * Boolean value indicating if the window is fullscreen.
     */
   var fullscreen: Boolean = js.native
@@ -343,13 +353,19 @@ trait Window extends View {
     * Gets the value of the <Titanium.UI.Window.barColor> property.
     * @deprecated Access <Titanium.UI.Window.barColor> instead.
     */
-  def getBarColor(): String = js.native
+  def getBarColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Window.barImage> property.
     * @deprecated Access <Titanium.UI.Window.barImage> instead.
     */
   def getBarImage(): String = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.Window.closed> property.
+    * @deprecated Access <Titanium.UI.Window.closed> instead.
+    */
+  def getClosed(): Boolean = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Window.exitOnClose> property.
@@ -374,6 +390,12 @@ trait Window extends View {
     * @deprecated Access <Titanium.UI.Window.flagSecure> instead.
     */
   def getFlagSecure(): Boolean = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.Window.focused> property.
+    * @deprecated Access <Titanium.UI.Window.focused> instead.
+    */
+  def getFocused(): Boolean = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Window.fullscreen> property.
@@ -469,7 +491,7 @@ trait Window extends View {
     * Gets the value of the <Titanium.UI.Window.navTintColor> property.
     * @deprecated Access <Titanium.UI.Window.navTintColor> instead.
     */
-  def getNavTintColor(): String = js.native
+  def getNavTintColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Window.navigationWindow> property.
@@ -723,7 +745,7 @@ trait Window extends View {
   /**
     * The tintColor to apply to the navigation bar.
     */
-  var navTintColor: String = js.native
+  var navTintColor: String | Color = js.native
   
   /**
     * The <Titanium.UI.NavigationWindow> instance hosting this window.
@@ -885,6 +907,7 @@ trait Window extends View {
     * @deprecated Set the value using <Titanium.UI.Window.barColor> instead.
     */
   def setBarColor(barColor: String): Unit = js.native
+  def setBarColor(barColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Window.barImage> property.
@@ -1011,6 +1034,7 @@ trait Window extends View {
     * @deprecated Set the value using <Titanium.UI.Window.navTintColor> instead.
     */
   def setNavTintColor(navTintColor: String): Unit = js.native
+  def setNavTintColor(navTintColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Window.onBack> property.

@@ -16,7 +16,7 @@ trait PodSecurityPolicySpec extends js.Object {
   var allowPrivilegeEscalation: Boolean = js.native
   
   /**
-    * AllowedCSIDrivers is a whitelist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is an alpha field, and is only honored if the API server enables the CSIInlineVolume feature gate.
+    * AllowedCSIDrivers is an allowlist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is a beta field, and is only honored if the API server enables the CSIInlineVolume feature gate.
     */
   var allowedCSIDrivers: js.Array[AllowedCSIDriver] = js.native
   
@@ -26,22 +26,22 @@ trait PodSecurityPolicySpec extends js.Object {
   var allowedCapabilities: js.Array[String] = js.native
   
   /**
-    * allowedFlexVolumes is a whitelist of allowed Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.
+    * allowedFlexVolumes is an allowlist of Flexvolumes.  Empty or nil indicates that all Flexvolumes may be used.  This parameter is effective only when the usage of the Flexvolumes is allowed in the "volumes" field.
     */
   var allowedFlexVolumes: js.Array[AllowedFlexVolume] = js.native
   
   /**
-    * allowedHostPaths is a white list of allowed host paths. Empty indicates that all host paths may be used.
+    * allowedHostPaths is an allowlist of host paths. Empty indicates that all host paths may be used.
     */
   var allowedHostPaths: js.Array[AllowedHostPath] = js.native
   
   /**
-    * AllowedProcMountTypes is a whitelist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
+    * AllowedProcMountTypes is an allowlist of allowed ProcMountTypes. Empty or nil indicates that only the DefaultProcMountType may be used. This requires the ProcMountType feature flag to be enabled.
     */
   var allowedProcMountTypes: js.Array[String] = js.native
   
   /**
-    * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to whitelist all allowed unsafe sysctls explicitly to avoid rejection.
+    * allowedUnsafeSysctls is a list of explicitly allowed unsafe sysctls, defaults to none. Each entry is either a plain sysctl name or ends in "*" in which case it is considered as a prefix of allowed sysctls. Single * means all unsafe sysctls are allowed. Kubelet has to allowlist all allowed unsafe sysctls explicitly to avoid rejection.
     *
     * Examples: e.g. "foo/ *" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "foo.bar", "foo.baz", etc.
     */
@@ -130,7 +130,7 @@ trait PodSecurityPolicySpec extends js.Object {
   var supplementalGroups: SupplementalGroupsStrategyOptions = js.native
   
   /**
-    * volumes is a white list of allowed volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.
+    * volumes is an allowlist of volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.
     */
   var volumes: js.Array[String] = js.native
 }

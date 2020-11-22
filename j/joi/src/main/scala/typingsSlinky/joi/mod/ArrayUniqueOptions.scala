@@ -5,8 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ArrayUniqueOptions extends js.Object {
+trait ArrayUniqueOptions extends HierarchySeparatorOptions {
   
+  /**
+    * if true, undefined values for the dot notation string comparator will not cause the array to fail on uniqueness.
+    *
+    * @default false
+    */
   var ignoreUndefined: js.UndefOr[Boolean] = js.native
 }
 object ArrayUniqueOptions {

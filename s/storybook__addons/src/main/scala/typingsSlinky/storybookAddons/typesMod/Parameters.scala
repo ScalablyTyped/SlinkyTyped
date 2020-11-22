@@ -1,6 +1,10 @@
 package typingsSlinky.storybookAddons.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.storybookAddons.storybookAddonsStrings.centered
+import typingsSlinky.storybookAddons.storybookAddonsStrings.fullscreen
+import typingsSlinky.storybookAddons.storybookAddonsStrings.none_
+import typingsSlinky.storybookAddons.storybookAddonsStrings.padded
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +13,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Parameters
   extends /* key */ StringDictionary[js.Any] {
   
+  var docsOnly: js.UndefOr[Boolean] = js.native
+  
   var fileName: js.UndefOr[String] = js.native
+  
+  /** The layout property defines basic styles added to the preview body where the story is rendered. If you pass 'none', no styles are applied. */
+  var layout: js.UndefOr[centered | fullscreen | padded | none_] = js.native
   
   var options: js.UndefOr[OptionsParameter] = js.native
 }
@@ -37,10 +46,22 @@ object Parameters {
     }
     
     @scala.inline
+    def setDocsOnly(value: Boolean): Self = this.set("docsOnly", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDocsOnly: Self = this.set("docsOnly", js.undefined)
+    
+    @scala.inline
     def setFileName(value: String): Self = this.set("fileName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFileName: Self = this.set("fileName", js.undefined)
+    
+    @scala.inline
+    def setLayout(value: centered | fullscreen | padded | none_): Self = this.set("layout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLayout: Self = this.set("layout", js.undefined)
     
     @scala.inline
     def setOptions(value: OptionsParameter): Self = this.set("options", value.asInstanceOf[js.Any])

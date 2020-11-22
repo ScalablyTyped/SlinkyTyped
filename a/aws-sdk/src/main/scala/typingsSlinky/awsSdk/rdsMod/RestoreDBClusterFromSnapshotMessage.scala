@@ -48,7 +48,7 @@ trait RestoreDBClusterFromSnapshotMessage extends js.Object {
   var DeletionProtection: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this operation. 
+    * Specify the Active Directory directory ID to restore the DB cluster in. The domain must be created prior to this operation. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an Active Directory Domain. For more information, see  Kerberos Authentication in the Amazon RDS User Guide. 
     */
   var Domain: js.UndefOr[String] = js.native
   
@@ -73,7 +73,7 @@ trait RestoreDBClusterFromSnapshotMessage extends js.Object {
   var Engine: String = js.native
   
   /**
-    * The DB engine mode of the DB cluster, either provisioned, serverless, parallelquery, global, or multimaster.
+    * The DB engine mode of the DB cluster, either provisioned, serverless, parallelquery, global, or multimaster. For more information, see  CreateDBCluster.
     */
   var EngineMode: js.UndefOr[String] = js.native
   

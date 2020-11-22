@@ -8,9 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LambdaFunctionSucceededEventDetails extends js.Object {
   
   /**
-    * The JSON data output by the lambda function.
+    * The JSON data output by the lambda function. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
     */
   var output: js.UndefOr[SensitiveData] = js.native
+  
+  /**
+    * Contains details about the output of an execution history event.
+    */
+  var outputDetails: js.UndefOr[HistoryEventExecutionDataDetails] = js.native
 }
 object LambdaFunctionSucceededEventDetails {
   
@@ -40,5 +45,11 @@ object LambdaFunctionSucceededEventDetails {
     
     @scala.inline
     def deleteOutput: Self = this.set("output", js.undefined)
+    
+    @scala.inline
+    def setOutputDetails(value: HistoryEventExecutionDataDetails): Self = this.set("outputDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutputDetails: Self = this.set("outputDetails", js.undefined)
   }
 }

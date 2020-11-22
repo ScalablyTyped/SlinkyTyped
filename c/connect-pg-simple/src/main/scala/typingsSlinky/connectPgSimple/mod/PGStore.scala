@@ -1,5 +1,6 @@
 package typingsSlinky.connectPgSimple.mod
 
+import typingsSlinky.expressSession.mod.SessionData
 import typingsSlinky.expressSession.mod.Store
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,4 +15,9 @@ class PGStore () extends Store {
   
   def pruneSessions(): Unit = js.native
   def pruneSessions(callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
+  @JSName("touch")
+  def touch_MPGStore(sid: String, session: SessionData): Unit = js.native
+  @JSName("touch")
+  def touch_MPGStore(sid: String, session: SessionData, callback: js.Function0[Unit]): Unit = js.native
 }

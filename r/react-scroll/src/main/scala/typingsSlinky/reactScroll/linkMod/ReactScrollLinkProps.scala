@@ -15,7 +15,7 @@ trait ReactScrollLinkProps extends js.Object {
   
   var delay: js.UndefOr[Double] = js.native
   
-  var duration: js.UndefOr[Double | String] = js.native
+  var duration: js.UndefOr[Double | String | (js.Function1[/* distance */ Double, Double])] = js.native
   
   var hashSpy: js.UndefOr[Boolean] = js.native
   
@@ -30,6 +30,8 @@ trait ReactScrollLinkProps extends js.Object {
   var onSetActive: js.UndefOr[js.Function1[/* to */ String, Unit]] = js.native
   
   var onSetInactive: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  var saveHashHistory: js.UndefOr[Boolean] = js.native
   
   var smooth: js.UndefOr[Boolean | String] = js.native
   
@@ -88,7 +90,10 @@ object ReactScrollLinkProps {
     def deleteDelay: Self = this.set("delay", js.undefined)
     
     @scala.inline
-    def setDuration(value: Double | String): Self = this.set("duration", value.asInstanceOf[js.Any])
+    def setDurationFunction1(value: /* distance */ Double => Double): Self = this.set("duration", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setDuration(value: Double | String | (js.Function1[/* distance */ Double, Double])): Self = this.set("duration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDuration: Self = this.set("duration", js.undefined)
@@ -134,6 +139,12 @@ object ReactScrollLinkProps {
     
     @scala.inline
     def deleteOnSetInactive: Self = this.set("onSetInactive", js.undefined)
+    
+    @scala.inline
+    def setSaveHashHistory(value: Boolean): Self = this.set("saveHashHistory", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSaveHashHistory: Self = this.set("saveHashHistory", js.undefined)
     
     @scala.inline
     def setSmooth(value: Boolean | String): Self = this.set("smooth", value.asInstanceOf[js.Any])

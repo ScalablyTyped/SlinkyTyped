@@ -2,41 +2,17 @@ package typingsSlinky.reactNativeElements.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.ActivityIndicatorProperties
-import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.TextInputProps
-import typingsSlinky.reactNative.mod.TextStyle
-import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SearchBarBase extends TextInputProps {
+trait SearchBarBase extends InputProps {
   
   /**
     * Override the clear Icon props or use a custom component. Use null or false to hide the icon.
     */
   var clearIcon: js.UndefOr[IconNode] = js.native
-  
-  /**
-    * Styling for the searchbar container
-    */
-  var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  
-  /**
-    * Optional styling for the TextInput's container
-    */
-  var inputContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  
-  /**
-    * TextInput styling
-    */
-  var inputStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
-  
-  /**
-    * Container style for the left icon
-    */
-  var leftIconContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
   /**
     * Optional props to pass to the ActivityIndicator
@@ -59,11 +35,6 @@ trait SearchBarBase extends TextInputProps {
     */
   @JSName("onFocus")
   var onFocus_SearchBarBase: js.UndefOr[js.Function0[Unit]] = js.native
-  
-  /**
-    * Container style for the right icon
-    */
-  var rightIconContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
   /**
     * Override the search Icon props or use a custom component. Use null or false to hide the icon.
@@ -110,42 +81,6 @@ object SearchBarBase {
     def deleteClearIcon: Self = this.set("clearIcon", js.undefined)
     
     @scala.inline
-    def setContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("containerStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteContainerStyle: Self = this.set("containerStyle", js.undefined)
-    
-    @scala.inline
-    def setContainerStyleNull: Self = this.set("containerStyle", null)
-    
-    @scala.inline
-    def setInputContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("inputContainerStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteInputContainerStyle: Self = this.set("inputContainerStyle", js.undefined)
-    
-    @scala.inline
-    def setInputContainerStyleNull: Self = this.set("inputContainerStyle", null)
-    
-    @scala.inline
-    def setInputStyle(value: StyleProp[TextStyle]): Self = this.set("inputStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteInputStyle: Self = this.set("inputStyle", js.undefined)
-    
-    @scala.inline
-    def setInputStyleNull: Self = this.set("inputStyle", null)
-    
-    @scala.inline
-    def setLeftIconContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("leftIconContainerStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLeftIconContainerStyle: Self = this.set("leftIconContainerStyle", js.undefined)
-    
-    @scala.inline
-    def setLeftIconContainerStyleNull: Self = this.set("leftIconContainerStyle", null)
-    
-    @scala.inline
     def setLoadingProps(value: ActivityIndicatorProperties): Self = this.set("loadingProps", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -168,15 +103,6 @@ object SearchBarBase {
     
     @scala.inline
     def deleteOnFocus: Self = this.set("onFocus", js.undefined)
-    
-    @scala.inline
-    def setRightIconContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("rightIconContainerStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRightIconContainerStyle: Self = this.set("rightIconContainerStyle", js.undefined)
-    
-    @scala.inline
-    def setRightIconContainerStyleNull: Self = this.set("rightIconContainerStyle", null)
     
     @scala.inline
     def setSearchIconReactElement(value: ReactElement): Self = this.set("searchIcon", value.asInstanceOf[js.Any])

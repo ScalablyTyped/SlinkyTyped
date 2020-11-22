@@ -6,10 +6,10 @@ import typingsSlinky.jupyterlabOutputarea.modelMod.IOutputAreaModel.ChangedArgs
 import typingsSlinky.jupyterlabOutputarea.modelMod.IOutputAreaModel.IContentFactory
 import typingsSlinky.jupyterlabOutputarea.modelMod.IOutputAreaModel.IOptions
 import typingsSlinky.jupyterlabRendermime.outputmodelMod.IOutputModel
-import typingsSlinky.phosphorSignaling.mod.ISignal
+import typingsSlinky.luminoSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/outputarea/lib/model", "OutputAreaModel")
 @js.native
@@ -18,64 +18,69 @@ import scala.scalajs.js.annotation._
   */
 class OutputAreaModel () extends IOutputAreaModel {
   def this(options: IOptions) = this()
+  
   /**
     * Add a copy of the item to the list.
     */
   var _add: js.Any = js.native
+  
   var _changed: js.Any = js.native
+  
   /**
     * Create an output item and hook up its signals.
     */
   var _createItem: js.Any = js.native
+  
   var _isDisposed: js.Any = js.native
+  
   var _lastName: js.Any = js.native
+  
   var _lastStream: js.Any = js.native
+  
   /**
     * Handle a change to an item.
     */
   var _onGenericChange: js.Any = js.native
+  
   /**
     * Handle a change to the list.
     */
   var _onListChanged: js.Any = js.native
+  
   var _stateChanged: js.Any = js.native
+  
   var _trusted: js.Any = js.native
+  
   /**
     * A signal emitted when the model changes.
     */
   @JSName("changed")
-  val changed_OutputAreaModel: ISignal[this.type, ChangedArgs] = js.native
+  def changed_MOutputAreaModel: ISignal[this.type, ChangedArgs] = js.native
+  
   /**
     * A flag that is set when we want to clear the output area
     * *after* the next addition to it.
     */
   var clearNext: Boolean = js.native
+  
   /**
-    * Test whether the object has been disposed.
-    *
-    * #### Notes
-    * This property is always safe to access.
+    * Test whether the model is disposed.
     */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
+  @JSName("isDisposed")
+  def isDisposed_MOutputAreaModel: Boolean = js.native
+  
+  /**
+    * Get the length of the items in the model.
+    */
+  @JSName("length")
+  def length_MOutputAreaModel: Double = js.native
+  
   /**
     * An observable list containing the output models
     * for this output area.
     */
   var list: IObservableList[IOutputModel] = js.native
-  /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
+  
   /**
     * Whether a new value should be consolidated with the previous output.
     *
@@ -83,26 +88,31 @@ class OutputAreaModel () extends IOutputAreaModel {
     * messages of the same type.
     */
   /* protected */ def shouldCombine(options: LastModel): Boolean = js.native
+  
+  /**
+    * A signal emitted when the model state changes.
+    */
+  @JSName("stateChanged")
+  def stateChanged_MOutputAreaModel: ISignal[IOutputAreaModel, Unit] = js.native
+  
+  /**
+    * Get whether the model is trusted.
+    */
+  @JSName("trusted")
+  def trusted_MOutputAreaModel: Boolean = js.native
 }
-
 @JSImport("@jupyterlab/outputarea/lib/model", "OutputAreaModel")
 @js.native
 object OutputAreaModel extends js.Object {
-  /**
-    * The default implementation of a `IModelOutputFactory`.
-    */
-  @js.native
-  class ContentFactory () extends IContentFactory {
-    /**
-      * Create an output model.
-      */
-    /* CompleteClass */
-    override def createOutputModel(options: typingsSlinky.jupyterlabRendermime.outputmodelMod.IOutputModel.IOptions): IOutputModel = js.native
-  }
   
   /**
     * The default output model factory.
     */
   val defaultContentFactory: ContentFactory = js.native
+  
+  /**
+    * The default implementation of a `IModelOutputFactory`.
+    */
+  @js.native
+  class ContentFactory () extends IContentFactory
 }
-

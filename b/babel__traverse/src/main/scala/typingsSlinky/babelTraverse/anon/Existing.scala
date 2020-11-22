@@ -4,10 +4,10 @@ import typingsSlinky.babelTraverse.babelTraverseStrings.`var`
 import typingsSlinky.babelTraverse.babelTraverseStrings.const
 import typingsSlinky.babelTraverse.babelTraverseStrings.let
 import typingsSlinky.babelTraverse.mod.Binding
-import typingsSlinky.babelTraverse.mod.Node
 import typingsSlinky.babelTraverse.mod.NodePath
 import typingsSlinky.babelTraverse.mod.Scope
 import typingsSlinky.babelTypes.mod.Identifier_
+import typingsSlinky.babelTypes.mod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

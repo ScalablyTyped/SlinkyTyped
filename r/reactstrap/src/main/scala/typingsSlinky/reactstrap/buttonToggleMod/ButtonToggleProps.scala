@@ -35,8 +35,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactstrap.reactstrapStrings.`additions removals`
 import typingsSlinky.reactstrap.reactstrapStrings.`additions text`
 import typingsSlinky.reactstrap.reactstrapStrings.`inline`
+import typingsSlinky.reactstrap.reactstrapStrings.`removals additions`
+import typingsSlinky.reactstrap.reactstrapStrings.`removals text`
+import typingsSlinky.reactstrap.reactstrapStrings.`text additions`
+import typingsSlinky.reactstrap.reactstrapStrings.`text removals`
 import typingsSlinky.reactstrap.reactstrapStrings.additions
 import typingsSlinky.reactstrap.reactstrapStrings.all
 import typingsSlinky.reactstrap.reactstrapStrings.ascending
@@ -87,7 +92,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined parent reactstrap.reactstrap/lib/ButtonToggle.Omit<react.react.ButtonHTMLAttributes<std.HTMLButtonElement>, 'defaultValue'> */
+/* Inlined parent reactstrap.reactstrap/es/ButtonToggle.Omit<react.react.ButtonHTMLAttributes<std.HTMLButtonElement>, 'defaultValue'> */
 @js.native
 trait ButtonToggleProps
   extends /* key */ StringDictionary[js.Any] {
@@ -166,7 +171,9 @@ trait ButtonToggleProps
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -272,7 +279,7 @@ trait ButtonToggleProps
   
   var onBeforeInput: js.UndefOr[FormEventHandler[HTMLButtonElement]] = js.native
   
-  var onBlur: js.UndefOr[FocusEventHandler[_]] = js.native
+  var onBlur: js.UndefOr[FocusEventHandler[HTMLButtonElement]] = js.native
   
   var onCanPlay: js.UndefOr[ReactEventHandler[HTMLButtonElement]] = js.native
   
@@ -280,7 +287,7 @@ trait ButtonToggleProps
   
   var onChange: js.UndefOr[FormEventHandler[HTMLButtonElement]] = js.native
   
-  var onClick: js.UndefOr[MouseEventHandler[_]] = js.native
+  var onClick: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.native
   
   var onCompositionEnd: js.UndefOr[CompositionEventHandler[HTMLButtonElement]] = js.native
   
@@ -322,7 +329,7 @@ trait ButtonToggleProps
   
   var onError: js.UndefOr[ReactEventHandler[HTMLButtonElement]] = js.native
   
-  var onFocus: js.UndefOr[FocusEventHandler[_]] = js.native
+  var onFocus: js.UndefOr[FocusEventHandler[HTMLButtonElement]] = js.native
   
   var onInput: js.UndefOr[FormEventHandler[HTMLButtonElement]] = js.native
   
@@ -706,7 +713,9 @@ object ButtonToggleProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1027,7 +1036,7 @@ object ButtonToggleProps {
     def deleteOnBeforeInput: Self = this.set("onBeforeInput", js.undefined)
     
     @scala.inline
-    def setOnBlur(value: SyntheticFocusEvent[_] => Unit): Self = this.set("onBlur", js.Any.fromFunction1(value))
+    def setOnBlur(value: SyntheticFocusEvent[HTMLButtonElement] => Unit): Self = this.set("onBlur", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnBlur: Self = this.set("onBlur", js.undefined)
@@ -1051,7 +1060,7 @@ object ButtonToggleProps {
     def deleteOnChange: Self = this.set("onChange", js.undefined)
     
     @scala.inline
-    def setOnClick(value: SyntheticMouseEvent[_] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
+    def setOnClick(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClick: Self = this.set("onClick", js.undefined)
@@ -1177,7 +1186,7 @@ object ButtonToggleProps {
     def deleteOnError: Self = this.set("onError", js.undefined)
     
     @scala.inline
-    def setOnFocus(value: SyntheticFocusEvent[_] => Unit): Self = this.set("onFocus", js.Any.fromFunction1(value))
+    def setOnFocus(value: SyntheticFocusEvent[HTMLButtonElement] => Unit): Self = this.set("onFocus", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnFocus: Self = this.set("onFocus", js.undefined)

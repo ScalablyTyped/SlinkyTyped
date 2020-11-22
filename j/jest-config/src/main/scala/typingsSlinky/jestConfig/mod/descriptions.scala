@@ -12,8 +12,6 @@ object descriptions extends js.Object {
   
   var bail: js.UndefOr[String] = js.native
   
-  var browser: js.UndefOr[String] = js.native
-  
   var cache: js.UndefOr[String] = js.native
   
   var cacheDirectory: js.UndefOr[String] = js.native
@@ -33,6 +31,8 @@ object descriptions extends js.Object {
   var coverageDirectory: js.UndefOr[String] = js.native
   
   var coveragePathIgnorePatterns: js.UndefOr[String] = js.native
+  
+  var coverageProvider: js.UndefOr[String] = js.native
   
   var coverageReporters: js.UndefOr[String] = js.native
   
@@ -68,6 +68,8 @@ object descriptions extends js.Object {
   
   var haste: js.UndefOr[String] = js.native
   
+  var injectGlobals: js.UndefOr[String] = js.native
+  
   var json: js.UndefOr[String] = js.native
   
   var lastCommit: js.UndefOr[String] = js.native
@@ -80,7 +82,7 @@ object descriptions extends js.Object {
   
   var maxConcurrency: js.UndefOr[String] = js.native
   
-  var maxWorkers: String = js.native
+  var maxWorkers: js.UndefOr[String] = js.native
   
   var moduleDirectories: js.UndefOr[String] = js.native
   
@@ -104,6 +106,8 @@ object descriptions extends js.Object {
   var notify_Fdescriptions: js.UndefOr[String] = js.native
   
   var onlyChanged: js.UndefOr[String] = js.native
+  
+  var onlyFailures: js.UndefOr[String] = js.native
   
   var outputFile: js.UndefOr[String] = js.native
   
@@ -129,7 +133,7 @@ object descriptions extends js.Object {
   
   var restoreMocks: js.UndefOr[String] = js.native
   
-  var rootDir: String = js.native
+  var rootDir: js.UndefOr[String] = js.native
   
   var roots: js.UndefOr[String] = js.native
   
@@ -150,6 +154,8 @@ object descriptions extends js.Object {
   var skipFilter: js.UndefOr[String] = js.native
   
   var skipNodeResolution: js.UndefOr[String] = js.native
+  
+  var slowTestThreshold: js.UndefOr[String] = js.native
   
   var snapshotResolver: js.UndefOr[String] = js.native
   

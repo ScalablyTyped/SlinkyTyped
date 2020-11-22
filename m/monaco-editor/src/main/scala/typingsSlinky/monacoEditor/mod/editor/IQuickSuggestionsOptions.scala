@@ -7,17 +7,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IQuickSuggestionsOptions extends js.Object {
   
-  var comments: Boolean = js.native
+  var comments: js.UndefOr[Boolean] = js.native
   
-  var other: Boolean = js.native
+  var other: js.UndefOr[Boolean] = js.native
   
-  var strings: Boolean = js.native
+  var strings: js.UndefOr[Boolean] = js.native
 }
 object IQuickSuggestionsOptions {
   
   @scala.inline
-  def apply(comments: Boolean, other: Boolean, strings: Boolean): IQuickSuggestionsOptions = {
-    val __obj = js.Dynamic.literal(comments = comments.asInstanceOf[js.Any], other = other.asInstanceOf[js.Any], strings = strings.asInstanceOf[js.Any])
+  def apply(): IQuickSuggestionsOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[IQuickSuggestionsOptions]
   }
   
@@ -40,9 +40,18 @@ object IQuickSuggestionsOptions {
     def setComments(value: Boolean): Self = this.set("comments", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def deleteComments: Self = this.set("comments", js.undefined)
+    
+    @scala.inline
     def setOther(value: Boolean): Self = this.set("other", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def deleteOther: Self = this.set("other", js.undefined)
+    
+    @scala.inline
     def setStrings(value: Boolean): Self = this.set("strings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStrings: Self = this.set("strings", js.undefined)
   }
 }

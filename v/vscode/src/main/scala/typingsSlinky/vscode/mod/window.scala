@@ -101,11 +101,16 @@ object window extends js.Object {
   def registerCustomEditorProvider(viewType: String, provider: CustomTextEditorProvider): Disposable = js.native
   def registerCustomEditorProvider(viewType: String, provider: CustomTextEditorProvider, options: SupportsMultipleEditorsPerDocument): Disposable = js.native
   
+  def registerTerminalLinkProvider(provider: TerminalLinkProvider[TerminalLink]): Disposable = js.native
+  
   def registerTreeDataProvider[T](viewId: String, treeDataProvider: TreeDataProvider[T]): Disposable = js.native
   
   def registerUriHandler(handler: UriHandler): Disposable = js.native
   
-  def registerWebviewPanelSerializer(viewType: String, serializer: WebviewPanelSerializer): Disposable = js.native
+  def registerWebviewPanelSerializer(viewType: String, serializer: WebviewPanelSerializer[_]): Disposable = js.native
+  
+  def registerWebviewViewProvider(viewId: String, provider: WebviewViewProvider): Disposable = js.native
+  def registerWebviewViewProvider(viewId: String, provider: WebviewViewProvider, options: typingsSlinky.vscode.anon.WebviewOptions): Disposable = js.native
   
   def setStatusBarMessage(text: String): Disposable = js.native
   def setStatusBarMessage(text: String, hideAfterTimeout: Double): Disposable = js.native
@@ -130,6 +135,7 @@ object window extends js.Object {
   def showInputBox(options: InputBoxOptions): Thenable[js.UndefOr[String]] = js.native
   def showInputBox(options: InputBoxOptions, token: CancellationToken): Thenable[js.UndefOr[String]] = js.native
   
+  def showOpenDialog(): Thenable[js.UndefOr[js.Array[Uri]]] = js.native
   def showOpenDialog(options: OpenDialogOptions): Thenable[js.UndefOr[js.Array[Uri]]] = js.native
   
   def showQuickPick(items: js.Array[String]): Thenable[js.UndefOr[String]] = js.native
@@ -169,6 +175,7 @@ object window extends js.Object {
   @JSName("showQuickPick")
   def showQuickPick_T_QuickPickItem[T /* <: QuickPickItem */](items: Thenable[js.Array[T]], options: QuickPickOptions, token: CancellationToken): Thenable[js.UndefOr[T]] = js.native
   
+  def showSaveDialog(): Thenable[js.UndefOr[Uri]] = js.native
   def showSaveDialog(options: SaveDialogOptions): Thenable[js.UndefOr[Uri]] = js.native
   
   def showTextDocument(document: TextDocument): Thenable[TextEditor] = js.native

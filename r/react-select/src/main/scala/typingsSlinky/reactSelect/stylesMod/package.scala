@@ -14,9 +14,9 @@ package object stylesMod {
   
   type Props = org.scalablytyped.runtime.StringDictionary[js.Any]
   
-  type styleFn = js.Function2[
+  type StylesConfigFunction[Props] = js.Function2[
     /* base */ typingsSlinky.react.mod.CSSProperties, 
-    /* state */ js.Any, 
+    /* props */ Props, 
     typingsSlinky.react.mod.CSSProperties
   ]
 }

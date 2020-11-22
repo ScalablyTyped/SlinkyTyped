@@ -102,6 +102,8 @@ trait PlainSearchParameters extends js.Object {
   
   var optionalFilters: js.UndefOr[js.Array[String | js.Array[String]]] = js.native
   
+  var queryLanguages: js.UndefOr[js.Array[String]] = js.native
+  
   // types missing in @types/algoliasearch, so duplicated from v4
   var ruleContexts: js.UndefOr[js.Array[String]] = js.native
   
@@ -198,6 +200,15 @@ object PlainSearchParameters {
     
     @scala.inline
     def deleteOptionalFilters: Self = this.set("optionalFilters", js.undefined)
+    
+    @scala.inline
+    def setQueryLanguagesVarargs(value: String*): Self = this.set("queryLanguages", js.Array(value :_*))
+    
+    @scala.inline
+    def setQueryLanguages(value: js.Array[String]): Self = this.set("queryLanguages", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteQueryLanguages: Self = this.set("queryLanguages", js.undefined)
     
     @scala.inline
     def setRuleContextsVarargs(value: String*): Self = this.set("ruleContexts", js.Array(value :_*))

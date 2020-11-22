@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ImageServiceIdentifyParametersProperties extends js.Object {
   
   /**
-    * Input geometry that defines the location to be identified. The location can be a point or a polygon.
+    * Input geometry that defines the location to be identified.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ImageServiceIdentifyParameters.html#geometry)
     */
@@ -22,14 +22,14 @@ trait ImageServiceIdentifyParametersProperties extends js.Object {
   var maxItemCount: js.UndefOr[Double] = js.native
   
   /**
-    * Specifies the mosaic rules defining the image sorting order. When a mosaic rule is not specified, `center` is used.
+    * Specifies the mosaic rules defining the image sorting order.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ImageServiceIdentifyParameters.html#mosaicRule)
     */
   var mosaicRule: js.UndefOr[MosaicRuleProperties] = js.native
   
   /**
-    * Specifies the pixel level being identified on the x and y axis. Defaults to the base resolution of the dataset when not specified.
+    * Specifies the pixel level being identified on the x and y axis.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ImageServiceIdentifyParameters.html#pixelSize)
     */
@@ -50,30 +50,28 @@ trait ImageServiceIdentifyParametersProperties extends js.Object {
   var renderingRules: js.UndefOr[RasterFunctionProperties] = js.native
   
   /**
-    * If `true`, returns both geometry and attributes of the catalog items. Set to `false` when catalog items are not needed to significantly improve identify operation's performance.
+    * If `true`, returns both geometry and attributes of the catalog items.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ImageServiceIdentifyParameters.html#returnCatalogItems)
     */
   var returnCatalogItems: js.UndefOr[Boolean] = js.native
   
   /**
-    * When `true`, each feature in the catalog items includes the geometry. Set to `false` to not display the features on the map.
+    * When `true`, each feature in the catalog items includes the geometry.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ImageServiceIdentifyParameters.html#returnGeometry)
-    *
-    * @default false
     */
   var returnGeometry: js.UndefOr[Boolean] = js.native
   
   /**
-    * If `true`, the pixel values of all raster catalog items under the requested geometry. Set to `false` when catalog item values are not needed to significantly improve identify operation's performance.
+    * If `true`, the pixel values of all raster catalog items under the requested geometry.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ImageServiceIdentifyParameters.html#returnPixelValues)
     */
   var returnPixelValues: js.UndefOr[Boolean] = js.native
   
   /**
-    * A time extent for a temporal data against [time-aware imagery layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html#timeInfo). For example, it can be used to discover land cover changes by decade.
+    * A time extent for a temporal data against [time-aware imagery layer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html#timeInfo).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ImageServiceIdentifyParameters.html#timeExtent)
     */

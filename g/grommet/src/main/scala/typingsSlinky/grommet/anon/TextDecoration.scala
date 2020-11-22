@@ -1,6 +1,16 @@
 package typingsSlinky.grommet.anon
 
+import org.scalajs.dom.raw.HTMLAnchorElement
+import slinky.core.ReactComponentClass
+import typingsSlinky.grommet.anchorMod.AnchorProps
+import typingsSlinky.grommet.baseMod.ExtendProps
 import typingsSlinky.grommet.baseMod.ExtendType
+import typingsSlinky.grommet.baseMod.ExtendValue
+import typingsSlinky.grommet.grommetStrings.color
+import typingsSlinky.grommet.utilsMod.Omit
+import typingsSlinky.grommet.utilsMod.PropsOf
+import typingsSlinky.react.mod.AnchorHTMLAttributes
+import typingsSlinky.react.mod.DetailedHTMLProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +18,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TextDecoration extends js.Object {
   
-  var extend: js.UndefOr[ExtendType] = js.native
+  var extend: js.UndefOr[
+    ExtendType[
+      PropsOf[
+        ReactComponentClass[
+          AnchorProps with (Omit[
+            DetailedHTMLProps[AnchorHTMLAttributes[HTMLAnchorElement], HTMLAnchorElement], 
+            color
+          ])
+        ]
+      ]
+    ]
+  ] = js.native
   
   var textDecoration: js.UndefOr[String] = js.native
 }
@@ -36,10 +57,41 @@ object TextDecoration {
     }
     
     @scala.inline
-    def setExtendFunction1(value: /* args */ js.Any => Unit): Self = this.set("extend", js.Any.fromFunction1(value))
+    def setExtendFunction1(
+      value: /* props */ ExtendProps[
+          PropsOf[
+            ReactComponentClass[
+              AnchorProps with (Omit[
+                DetailedHTMLProps[AnchorHTMLAttributes[HTMLAnchorElement], HTMLAnchorElement], 
+                color
+              ])
+            ]
+          ]
+        ] => ExtendValue[
+          PropsOf[
+            ReactComponentClass[
+              AnchorProps with (Omit[
+                DetailedHTMLProps[AnchorHTMLAttributes[HTMLAnchorElement], HTMLAnchorElement], 
+                color
+              ])
+            ]
+          ]
+        ]
+    ): Self = this.set("extend", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setExtend(value: ExtendType): Self = this.set("extend", value.asInstanceOf[js.Any])
+    def setExtend(
+      value: ExtendType[
+          PropsOf[
+            ReactComponentClass[
+              AnchorProps with (Omit[
+                DetailedHTMLProps[AnchorHTMLAttributes[HTMLAnchorElement], HTMLAnchorElement], 
+                color
+              ])
+            ]
+          ]
+        ]
+    ): Self = this.set("extend", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExtend: Self = this.set("extend", js.undefined)

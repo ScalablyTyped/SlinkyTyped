@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/reporters/build/verbose_reporter", JSImport.Namespace)
+@JSImport("@jest/reporters/build/VerboseReporter", JSImport.Namespace)
 @js.native
 object verboseReporterMod extends js.Object {
   

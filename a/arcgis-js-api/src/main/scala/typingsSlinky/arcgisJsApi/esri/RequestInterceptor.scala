@@ -17,42 +17,42 @@ trait RequestInterceptor extends Object {
   var after: js.UndefOr[AfterInterceptorCallback] = js.native
   
   /**
-    * Make changes to the request URL or options before the request is sent. A returned value will be used as the response data, which would prevent the request from being sent.
+    * Make changes to the request URL or options before the request is sent.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#RequestInterceptor)
     */
   var before: js.UndefOr[BeforeInterceptorCallback] = js.native
   
   /**
-    * When an error occurs during the request processing, this function is called with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) object giving the details about what happened. For example, this could be used to log specific errors occurring with layers or services.
+    * When an error occurs during the request processing, this function is called with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) object giving the details about what happened.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#RequestInterceptor)
     */
   var error: js.UndefOr[ErrorCallback] = js.native
   
   /**
-    * Sets or adds headers into `requestOptions.headers`. See also: [requestOptions](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions).
+    * Sets or adds headers into `requestOptions.headers`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#RequestInterceptor)
     */
   var headers: js.UndefOr[js.Any] = js.native
   
   /**
-    * Sets or adds query parameters into `requestOptions.query`. See also: [requestOptions](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions).
+    * Sets or adds query parameters into `requestOptions.query`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#RequestInterceptor)
     */
   var query: js.UndefOr[js.Any] = js.native
   
   /**
-    * Hardcodes the [response](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestResponse). The request will not be sent. This is resolved as the response `data`.
+    * Hardcodes the [response](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestResponse).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#RequestInterceptor)
     */
   var responseData: js.UndefOr[js.Any] = js.native
   
   /**
-    * Specifies the URL(s) to apply to the interceptors. If the value is type `String`, then it matches if the request URL starts with that string. If null or undefined, the interceptor will apply to all relevant requests.
+    * Specifies the URL(s) to apply to the interceptors.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#RequestInterceptor)
     */

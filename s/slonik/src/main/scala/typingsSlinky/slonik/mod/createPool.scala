@@ -8,9 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createPool extends js.Object {
   
-  def apply(connectionConfiguration: DatabaseConfigurationType): DatabasePoolType = js.native
-  def apply(
-    connectionConfiguration: DatabaseConfigurationType,
-    clientUserConfiguration: ClientConfigurationInputType
-  ): DatabasePoolType = js.native
+  def apply(connectionUri: String): DatabasePoolType = js.native
+  def apply(connectionUri: String, clientUserConfiguration: ClientConfigurationInputType): DatabasePoolType = js.native
 }

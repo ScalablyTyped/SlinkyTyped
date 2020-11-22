@@ -12,6 +12,11 @@ trait Mesh extends js.Object {
   var _userInstancedBuffersStorage: Data = js.native
   
   /**
+    * true to use the edge renderer for all instances of this mesh
+    */
+  var edgesShareWithInstances: Boolean = js.native
+  
+  /**
     * Register a custom buffer that will be instanced
     * @see https://doc.babylonjs.com/how_to/how_to_use_instances#custom-buffers
     * @param kind defines the buffer kind
@@ -22,8 +27,12 @@ trait Mesh extends js.Object {
 object Mesh {
   
   @scala.inline
-  def apply(_userInstancedBuffersStorage: Data, registerInstancedBuffer: (String, Double) => Unit): Mesh = {
-    val __obj = js.Dynamic.literal(_userInstancedBuffersStorage = _userInstancedBuffersStorage.asInstanceOf[js.Any], registerInstancedBuffer = js.Any.fromFunction2(registerInstancedBuffer))
+  def apply(
+    _userInstancedBuffersStorage: Data,
+    edgesShareWithInstances: Boolean,
+    registerInstancedBuffer: (String, Double) => Unit
+  ): Mesh = {
+    val __obj = js.Dynamic.literal(_userInstancedBuffersStorage = _userInstancedBuffersStorage.asInstanceOf[js.Any], edgesShareWithInstances = edgesShareWithInstances.asInstanceOf[js.Any], registerInstancedBuffer = js.Any.fromFunction2(registerInstancedBuffer))
     __obj.asInstanceOf[Mesh]
   }
   
@@ -44,6 +53,9 @@ object Mesh {
     
     @scala.inline
     def set_userInstancedBuffersStorage(value: Data): Self = this.set("_userInstancedBuffersStorage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEdgesShareWithInstances(value: Boolean): Self = this.set("edgesShareWithInstances", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRegisterInstancedBuffer(value: (String, Double) => Unit): Self = this.set("registerInstancedBuffer", js.Any.fromFunction2(value))

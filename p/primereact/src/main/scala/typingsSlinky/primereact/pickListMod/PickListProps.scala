@@ -32,8 +32,6 @@ trait PickListProps extends js.Object {
   
   var onTargetSelect: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
   
-  var responsive: js.UndefOr[Boolean] = js.native
-  
   var showSourceControls: js.UndefOr[Boolean] = js.native
   
   var showTargetControls: js.UndefOr[Boolean] = js.native
@@ -142,12 +140,6 @@ object PickListProps {
     
     @scala.inline
     def deleteOnTargetSelect: Self = this.set("onTargetSelect", js.undefined)
-    
-    @scala.inline
-    def setResponsive(value: Boolean): Self = this.set("responsive", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteResponsive: Self = this.set("responsive", js.undefined)
     
     @scala.inline
     def setShowSourceControls(value: Boolean): Self = this.set("showSourceControls", value.asInstanceOf[js.Any])

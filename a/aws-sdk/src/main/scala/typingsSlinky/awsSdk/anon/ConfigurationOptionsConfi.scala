@@ -8,10 +8,10 @@ import typingsSlinky.awsSdk.awsSdkStrings.regional_
 import typingsSlinky.awsSdk.awsSdkStrings.v2_
 import typingsSlinky.awsSdk.awsSdkStrings.v3
 import typingsSlinky.awsSdk.awsSdkStrings.v4
-import typingsSlinky.awsSdk.configMod.HTTPOptions
-import typingsSlinky.awsSdk.configMod.Logger
-import typingsSlinky.awsSdk.configMod.ParamValidation
-import typingsSlinky.awsSdk.configMod.RetryDelayOptions
+import typingsSlinky.awsSdk.configBaseMod.HTTPOptions
+import typingsSlinky.awsSdk.configBaseMod.Logger
+import typingsSlinky.awsSdk.configBaseMod.ParamValidation
+import typingsSlinky.awsSdk.configBaseMod.RetryDelayOptions
 import typingsSlinky.awsSdk.configServicePlaceholdersMod.ConfigurationServiceApiVersions
 import typingsSlinky.awsSdk.credentialProviderChainMod.CredentialProviderChain
 import typingsSlinky.awsSdk.credentialsMod.Credentials
@@ -20,7 +20,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined aws-sdk.aws-sdk/lib/config.ConfigurationOptions & aws-sdk.aws-sdk/lib/config_service_placeholders.ConfigurationServicePlaceholders & aws-sdk.aws-sdk/lib/config.APIVersions & {[key: string] : any} */
+/* Inlined aws-sdk.aws-sdk/lib/config-base.ConfigurationOptions & aws-sdk.aws-sdk/lib/config_service_placeholders.ConfigurationServicePlaceholders & aws-sdk.aws-sdk/lib/config.APIVersions & {[key: string] : any} */
 @js.native
 trait ConfigurationOptionsConfi
   extends /* key */ StringDictionary[js.Any] {
@@ -60,6 +60,8 @@ trait ConfigurationOptionsConfi
   
   var appconfig: js.UndefOr[typingsSlinky.awsSdk.appconfigMod.ClientConfiguration] = js.native
   
+  var appflow: js.UndefOr[typingsSlinky.awsSdk.appflowMod.ClientConfiguration] = js.native
+  
   var applicationautoscaling: js.UndefOr[typingsSlinky.awsSdk.applicationautoscalingMod.ClientConfiguration] = js.native
   
   var applicationinsights: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.ClientConfiguration] = js.native
@@ -81,6 +83,8 @@ trait ConfigurationOptionsConfi
   var backup: js.UndefOr[typingsSlinky.awsSdk.backupMod.ClientConfiguration] = js.native
   
   var batch: js.UndefOr[typingsSlinky.awsSdk.batchMod.ClientConfiguration] = js.native
+  
+  var braket: js.UndefOr[typingsSlinky.awsSdk.braketMod.ClientConfiguration] = js.native
   
   var budgets: js.UndefOr[typingsSlinky.awsSdk.budgetsMod.ClientConfiguration] = js.native
   
@@ -184,6 +188,8 @@ trait ConfigurationOptionsConfi
     * browser environments this will set the X-Amz-User-Agent header.
     */
   var customUserAgent: js.UndefOr[String] = js.native
+  
+  var databrew: js.UndefOr[typingsSlinky.awsSdk.databrewMod.ClientConfiguration] = js.native
   
   var dataexchange: js.UndefOr[typingsSlinky.awsSdk.dataexchangeMod.ClientConfiguration] = js.native
   
@@ -305,6 +311,8 @@ trait ConfigurationOptionsConfi
   var httpOptions: js.UndefOr[HTTPOptions] = js.native
   
   var iam: js.UndefOr[typingsSlinky.awsSdk.iamMod.ClientConfiguration] = js.native
+  
+  var identitystore: js.UndefOr[typingsSlinky.awsSdk.identitystoreMod.ClientConfiguration] = js.native
   
   var imagebuilder: js.UndefOr[typingsSlinky.awsSdk.imagebuilderMod.ClientConfiguration] = js.native
   
@@ -429,6 +437,8 @@ trait ConfigurationOptionsConfi
   
   var neptune: js.UndefOr[typingsSlinky.awsSdk.neptuneMod.ClientConfiguration] = js.native
   
+  var networkfirewall: js.UndefOr[typingsSlinky.awsSdk.networkfirewallMod.ClientConfiguration] = js.native
+  
   var networkmanager: js.UndefOr[typingsSlinky.awsSdk.networkmanagerMod.ClientConfiguration] = js.native
   
   var opsworks: js.UndefOr[typingsSlinky.awsSdk.opsworksMod.ClientConfiguration] = js.native
@@ -477,6 +487,8 @@ trait ConfigurationOptionsConfi
   var rdsdataservice: js.UndefOr[typingsSlinky.awsSdk.rdsdataserviceMod.ClientConfiguration] = js.native
   
   var redshift: js.UndefOr[typingsSlinky.awsSdk.redshiftMod.ClientConfiguration] = js.native
+  
+  var redshiftdata: js.UndefOr[typingsSlinky.awsSdk.redshiftdataMod.ClientConfiguration] = js.native
   
   /**
     * The region to send service requests to.
@@ -536,6 +548,8 @@ trait ConfigurationOptionsConfi
   
   var s3control: js.UndefOr[typingsSlinky.awsSdk.s3controlMod.ClientConfiguration] = js.native
   
+  var s3outposts: js.UndefOr[typingsSlinky.awsSdk.s3outpostsMod.ClientConfiguration] = js.native
+  
   var sagemaker: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.ClientConfiguration] = js.native
   
   var sagemakerruntime: js.UndefOr[typingsSlinky.awsSdk.sagemakerruntimeMod.ClientConfiguration] = js.native
@@ -558,6 +572,8 @@ trait ConfigurationOptionsConfi
   var serverlessapplicationrepository: js.UndefOr[typingsSlinky.awsSdk.serverlessapplicationrepositoryMod.ClientConfiguration] = js.native
   
   var servicecatalog: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.ClientConfiguration] = js.native
+  
+  var servicecatalogappregistry: js.UndefOr[typingsSlinky.awsSdk.servicecatalogappregistryMod.ClientConfiguration] = js.native
   
   var servicediscovery: js.UndefOr[typingsSlinky.awsSdk.servicediscoveryMod.ClientConfiguration] = js.native
   
@@ -608,6 +624,8 @@ trait ConfigurationOptionsConfi
   
   var sso: js.UndefOr[typingsSlinky.awsSdk.ssoMod.ClientConfiguration] = js.native
   
+  var ssoadmin: js.UndefOr[typingsSlinky.awsSdk.ssoadminMod.ClientConfiguration] = js.native
+  
   var ssooidc: js.UndefOr[typingsSlinky.awsSdk.ssooidcMod.ClientConfiguration] = js.native
   
   var stepfunctions: js.UndefOr[typingsSlinky.awsSdk.stepfunctionsMod.ClientConfiguration] = js.native
@@ -634,6 +652,10 @@ trait ConfigurationOptionsConfi
   var systemClockOffset: js.UndefOr[Double] = js.native
   
   var textract: js.UndefOr[typingsSlinky.awsSdk.textractMod.ClientConfiguration] = js.native
+  
+  var timestreamquery: js.UndefOr[typingsSlinky.awsSdk.timestreamqueryMod.ClientConfiguration] = js.native
+  
+  var timestreamwrite: js.UndefOr[typingsSlinky.awsSdk.timestreamwriteMod.ClientConfiguration] = js.native
   
   var transcribeservice: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.ClientConfiguration] = js.native
   
@@ -760,6 +782,12 @@ object ConfigurationOptionsConfi {
     def deleteAppconfig: Self = this.set("appconfig", js.undefined)
     
     @scala.inline
+    def setAppflow(value: typingsSlinky.awsSdk.appflowMod.ClientConfiguration): Self = this.set("appflow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAppflow: Self = this.set("appflow", js.undefined)
+    
+    @scala.inline
     def setApplicationautoscaling(value: typingsSlinky.awsSdk.applicationautoscalingMod.ClientConfiguration): Self = this.set("applicationautoscaling", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -824,6 +852,12 @@ object ConfigurationOptionsConfi {
     
     @scala.inline
     def deleteBatch: Self = this.set("batch", js.undefined)
+    
+    @scala.inline
+    def setBraket(value: typingsSlinky.awsSdk.braketMod.ClientConfiguration): Self = this.set("braket", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBraket: Self = this.set("braket", js.undefined)
     
     @scala.inline
     def setBudgets(value: typingsSlinky.awsSdk.budgetsMod.ClientConfiguration): Self = this.set("budgets", value.asInstanceOf[js.Any])
@@ -1073,6 +1107,12 @@ object ConfigurationOptionsConfi {
     
     @scala.inline
     def deleteCustomUserAgent: Self = this.set("customUserAgent", js.undefined)
+    
+    @scala.inline
+    def setDatabrew(value: typingsSlinky.awsSdk.databrewMod.ClientConfiguration): Self = this.set("databrew", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDatabrew: Self = this.set("databrew", js.undefined)
     
     @scala.inline
     def setDataexchange(value: typingsSlinky.awsSdk.dataexchangeMod.ClientConfiguration): Self = this.set("dataexchange", value.asInstanceOf[js.Any])
@@ -1379,6 +1419,12 @@ object ConfigurationOptionsConfi {
     
     @scala.inline
     def deleteIam: Self = this.set("iam", js.undefined)
+    
+    @scala.inline
+    def setIdentitystore(value: typingsSlinky.awsSdk.identitystoreMod.ClientConfiguration): Self = this.set("identitystore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIdentitystore: Self = this.set("identitystore", js.undefined)
     
     @scala.inline
     def setImagebuilder(value: typingsSlinky.awsSdk.imagebuilderMod.ClientConfiguration): Self = this.set("imagebuilder", value.asInstanceOf[js.Any])
@@ -1723,6 +1769,12 @@ object ConfigurationOptionsConfi {
     def deleteNeptune: Self = this.set("neptune", js.undefined)
     
     @scala.inline
+    def setNetworkfirewall(value: typingsSlinky.awsSdk.networkfirewallMod.ClientConfiguration): Self = this.set("networkfirewall", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkfirewall: Self = this.set("networkfirewall", js.undefined)
+    
+    @scala.inline
     def setNetworkmanager(value: typingsSlinky.awsSdk.networkmanagerMod.ClientConfiguration): Self = this.set("networkmanager", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1855,6 +1907,12 @@ object ConfigurationOptionsConfi {
     def deleteRedshift: Self = this.set("redshift", js.undefined)
     
     @scala.inline
+    def setRedshiftdata(value: typingsSlinky.awsSdk.redshiftdataMod.ClientConfiguration): Self = this.set("redshiftdata", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRedshiftdata: Self = this.set("redshiftdata", js.undefined)
+    
+    @scala.inline
     def setRegion(value: String): Self = this.set("region", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1951,6 +2009,12 @@ object ConfigurationOptionsConfi {
     def deleteS3control: Self = this.set("s3control", js.undefined)
     
     @scala.inline
+    def setS3outposts(value: typingsSlinky.awsSdk.s3outpostsMod.ClientConfiguration): Self = this.set("s3outposts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteS3outposts: Self = this.set("s3outposts", js.undefined)
+    
+    @scala.inline
     def setSagemaker(value: typingsSlinky.awsSdk.sagemakerMod.ClientConfiguration): Self = this.set("sagemaker", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -2003,6 +2067,12 @@ object ConfigurationOptionsConfi {
     
     @scala.inline
     def deleteServicecatalog: Self = this.set("servicecatalog", js.undefined)
+    
+    @scala.inline
+    def setServicecatalogappregistry(value: typingsSlinky.awsSdk.servicecatalogappregistryMod.ClientConfiguration): Self = this.set("servicecatalogappregistry", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteServicecatalogappregistry: Self = this.set("servicecatalogappregistry", js.undefined)
     
     @scala.inline
     def setServicediscovery(value: typingsSlinky.awsSdk.servicediscoveryMod.ClientConfiguration): Self = this.set("servicediscovery", value.asInstanceOf[js.Any])
@@ -2107,6 +2177,12 @@ object ConfigurationOptionsConfi {
     def deleteSso: Self = this.set("sso", js.undefined)
     
     @scala.inline
+    def setSsoadmin(value: typingsSlinky.awsSdk.ssoadminMod.ClientConfiguration): Self = this.set("ssoadmin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSsoadmin: Self = this.set("ssoadmin", js.undefined)
+    
+    @scala.inline
     def setSsooidc(value: typingsSlinky.awsSdk.ssooidcMod.ClientConfiguration): Self = this.set("ssooidc", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -2165,6 +2241,18 @@ object ConfigurationOptionsConfi {
     
     @scala.inline
     def deleteTextract: Self = this.set("textract", js.undefined)
+    
+    @scala.inline
+    def setTimestreamquery(value: typingsSlinky.awsSdk.timestreamqueryMod.ClientConfiguration): Self = this.set("timestreamquery", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimestreamquery: Self = this.set("timestreamquery", js.undefined)
+    
+    @scala.inline
+    def setTimestreamwrite(value: typingsSlinky.awsSdk.timestreamwriteMod.ClientConfiguration): Self = this.set("timestreamwrite", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimestreamwrite: Self = this.set("timestreamwrite", js.undefined)
     
     @scala.inline
     def setTranscribeservice(value: typingsSlinky.awsSdk.transcribeserviceMod.ClientConfiguration): Self = this.set("transcribeservice", value.asInstanceOf[js.Any])

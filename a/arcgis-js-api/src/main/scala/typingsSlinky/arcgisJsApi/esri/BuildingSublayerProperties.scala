@@ -11,8 +11,6 @@ trait BuildingSublayerProperties extends js.Object {
     * Opacity of the sublayer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-buildingSublayers-BuildingSublayer.html#opacity)
-    *
-    * @default 1
     */
   var opacity: js.UndefOr[Double] = js.native
   
@@ -27,8 +25,6 @@ trait BuildingSublayerProperties extends js.Object {
     * Indicates if the sublayer is visible in the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-buildingSublayers-BuildingSublayer.html#visible)
-    *
-    * @default true
     */
   var visible: js.UndefOr[Boolean] = js.native
 }

@@ -28,7 +28,7 @@ trait Options extends js.Object {
     */
   var deletedByType: js.Any = js.native
   
-  var indexFields: Boolean | all | deleted | deleteAt | deletedBy = js.native
+  var indexFields: Boolean | all | (js.Array[deleted | deleteAt | deletedBy]) = js.native
   
   var overrideMethods: Boolean | all | js.Array[overridableMethods] = js.native
   
@@ -41,7 +41,7 @@ object Options {
     deletedAt: Boolean,
     deletedBy: Boolean,
     deletedByType: js.Any,
-    indexFields: Boolean | all | deleted | deleteAt | deletedBy,
+    indexFields: Boolean | all | (js.Array[deleted | deleteAt | deletedBy]),
     overrideMethods: Boolean | all | js.Array[overridableMethods],
     validateBeforeDelete: Boolean
   ): Options = {
@@ -74,7 +74,10 @@ object Options {
     def setDeletedByType(value: js.Any): Self = this.set("deletedByType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIndexFields(value: Boolean | all | deleted | deleteAt | deletedBy): Self = this.set("indexFields", value.asInstanceOf[js.Any])
+    def setIndexFieldsVarargs(value: (deleted | deleteAt | deletedBy)*): Self = this.set("indexFields", js.Array(value :_*))
+    
+    @scala.inline
+    def setIndexFields(value: Boolean | all | (js.Array[deleted | deleteAt | deletedBy])): Self = this.set("indexFields", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOverrideMethodsVarargs(value: overridableMethods*): Self = this.set("overrideMethods", js.Array(value :_*))

@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OptionsTransliterate extends Options {
   
   /**
+    * Fix Chinese spacing. For example, `你好` is transliterated to `Ni Hao` instead of `NiHao`. If you don't need to transliterate Chinese characters, set it to false to false to improve performance.
+    * @default true
+    */
+  var fixChineseSpacing: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Ignore a list of strings untouched
     * @example tr('你好，世界', { ignore: ['你'] }) // 你 Hao , Shi Jie
     */
@@ -61,6 +67,12 @@ object OptionsTransliterate {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setFixChineseSpacing(value: Boolean): Self = this.set("fixChineseSpacing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFixChineseSpacing: Self = this.set("fixChineseSpacing", js.undefined)
     
     @scala.inline
     def setIgnoreVarargs(value: String*): Self = this.set("ignore", js.Array(value :_*))

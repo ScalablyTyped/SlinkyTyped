@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "eseb__request-state"
-version := "2.0-dt-20200721Z-df9178"
+version := "2.0-dt-20200925Z-df9178"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

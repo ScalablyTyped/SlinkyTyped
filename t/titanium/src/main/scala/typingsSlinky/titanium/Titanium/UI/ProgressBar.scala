@@ -30,7 +30,7 @@ trait ProgressBar extends View {
   /**
     * Color of the progress bar message, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   @JSName("fireEvent")
   def fireEvent_click(name: click, event: ProgressBarClickEvent): Unit = js.native
@@ -74,7 +74,7 @@ trait ProgressBar extends View {
     * Gets the value of the <Titanium.UI.ProgressBar.color> property.
     * @deprecated Access <Titanium.UI.ProgressBar.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ProgressBar.font> property.
@@ -110,7 +110,7 @@ trait ProgressBar extends View {
     * Gets the value of the <Titanium.UI.ProgressBar.trackTintColor> property.
     * @deprecated Access <Titanium.UI.ProgressBar.trackTintColor> instead.
     */
-  def getTrackTintColor(): String = js.native
+  def getTrackTintColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ProgressBar.value> property.
@@ -138,6 +138,7 @@ trait ProgressBar extends View {
     * @deprecated Set the value using <Titanium.UI.ProgressBar.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ProgressBar.font> property.
@@ -174,6 +175,7 @@ trait ProgressBar extends View {
     * @deprecated Set the value using <Titanium.UI.ProgressBar.trackTintColor> instead.
     */
   def setTrackTintColor(trackTintColor: String): Unit = js.native
+  def setTrackTintColor(trackTintColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ProgressBar.value> property.
@@ -189,7 +191,7 @@ trait ProgressBar extends View {
   /**
     * The color shown for the portion of the progress bar that is not filled.
     */
-  var trackTintColor: String = js.native
+  var trackTintColor: String | Color = js.native
   
   /**
     * Current value of the progress bar.

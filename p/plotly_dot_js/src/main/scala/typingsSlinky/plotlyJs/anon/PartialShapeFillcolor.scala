@@ -2,6 +2,8 @@ package typingsSlinky.plotlyJs.anon
 
 import typingsSlinky.plotlyJs.mod.Datum
 import typingsSlinky.plotlyJs.mod.ShapeLine
+import typingsSlinky.plotlyJs.mod.XAxisName
+import typingsSlinky.plotlyJs.mod.YAxisName
 import typingsSlinky.plotlyJs.plotlyJsStrings.above
 import typingsSlinky.plotlyJs.plotlyJsStrings.below
 import typingsSlinky.plotlyJs.plotlyJsStrings.circle
@@ -11,8 +13,6 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.path
 import typingsSlinky.plotlyJs.plotlyJsStrings.pixel
 import typingsSlinky.plotlyJs.plotlyJsStrings.rect
 import typingsSlinky.plotlyJs.plotlyJsStrings.scaled
-import typingsSlinky.plotlyJs.plotlyJsStrings.x
-import typingsSlinky.plotlyJs.plotlyJsStrings.y
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -46,7 +46,7 @@ trait PartialShapeFillcolor extends js.Object {
   
   var xanchor: js.UndefOr[Double | String] = js.native
   
-  var xref: js.UndefOr[x | paper] = js.native
+  var xref: js.UndefOr[paper | XAxisName] = js.native
   
   var xsizemode: js.UndefOr[scaled | pixel] = js.native
   
@@ -56,7 +56,7 @@ trait PartialShapeFillcolor extends js.Object {
   
   var yanchor: js.UndefOr[Double | String] = js.native
   
-  var yref: js.UndefOr[paper | y] = js.native
+  var yref: js.UndefOr[paper | YAxisName] = js.native
   
   var ysizemode: js.UndefOr[scaled | pixel] = js.native
 }
@@ -168,7 +168,7 @@ object PartialShapeFillcolor {
     def deleteXanchor: Self = this.set("xanchor", js.undefined)
     
     @scala.inline
-    def setXref(value: typingsSlinky.plotlyJs.plotlyJsStrings.x | paper): Self = this.set("xref", value.asInstanceOf[js.Any])
+    def setXref(value: paper | XAxisName): Self = this.set("xref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteXref: Self = this.set("xref", js.undefined)
@@ -210,7 +210,7 @@ object PartialShapeFillcolor {
     def deleteYanchor: Self = this.set("yanchor", js.undefined)
     
     @scala.inline
-    def setYref(value: paper | y): Self = this.set("yref", value.asInstanceOf[js.Any])
+    def setYref(value: paper | YAxisName): Self = this.set("yref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteYref: Self = this.set("yref", js.undefined)

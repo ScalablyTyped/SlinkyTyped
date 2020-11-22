@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.restMod.rest
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.constantsMod.constants.IConstant
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,25 +8,26 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/cors-settings relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/cors-settings relevant section in reference guide}
   *
   * In version 7.18.0: introduced
   */
 @JSImport("mendixmodelsdk/dist/gen/rest", "rest.CorsConfiguration")
 @js.native
-class CorsConfiguration protected () extends Element {
+class CorsConfiguration protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def allowAuthentication: Boolean = js.native
@@ -44,9 +46,6 @@ class CorsConfiguration protected () extends Element {
   def maxAgeQualifiedName: String | Null = js.native
   
   def maxAge_=(newValue: IConstant | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FCorsConfiguration: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/rest", "rest.CorsConfiguration")

@@ -20,4 +20,6 @@ package object dataMod {
   type FormatTopoJSON = typingsSlinky.vegaTypings.anon.Property with (typingsSlinky.vegaTypings.anon.Feature | typingsSlinky.vegaTypings.anon.Filter)
   
   type Parse = typingsSlinky.vegaTypings.vegaTypingsStrings.auto | (org.scalablytyped.runtime.StringDictionary[typingsSlinky.vegaTypings.dataMod.DataType | java.lang.String])
+  
+  type URI = java.lang.String
 }

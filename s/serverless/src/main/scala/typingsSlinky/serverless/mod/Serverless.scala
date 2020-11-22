@@ -1,6 +1,8 @@
 package typingsSlinky.serverless.mod
 
 import typingsSlinky.serverless.anon.Log
+import typingsSlinky.serverless.anon.PopulateService
+import typingsSlinky.serverless.awsProviderMod.Resources
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,6 +22,8 @@ trait Serverless extends js.Object {
   
   var pluginManager: typingsSlinky.serverless.pluginManagerMod.^ = js.native
   
+  var resources: Resources = js.native
+  
   def run(): js.Promise[_] = js.native
   
   var serverlessDirPath: String = js.native
@@ -29,6 +33,8 @@ trait Serverless extends js.Object {
   def setProvider(name: String, provider: typingsSlinky.serverless.awsProviderMod.^): Null = js.native
   
   var utils: typingsSlinky.serverless.utilsMod.^ = js.native
+  
+  var variables: PopulateService = js.native
   
   var version: String = js.native
   
@@ -44,15 +50,17 @@ object Serverless {
     getVersion: () => String,
     init: () => js.Promise[_],
     pluginManager: typingsSlinky.serverless.pluginManagerMod.^,
+    resources: Resources,
     run: () => js.Promise[_],
     serverlessDirPath: String,
     service: typingsSlinky.serverless.serviceMod.^,
     setProvider: (String, typingsSlinky.serverless.awsProviderMod.^) => Null,
     utils: typingsSlinky.serverless.utilsMod.^,
+    variables: PopulateService,
     version: String,
     yamlParser: typingsSlinky.serverless.yamlParserMod.^
   ): Serverless = {
-    val __obj = js.Dynamic.literal(cli = cli.asInstanceOf[js.Any], config = config.asInstanceOf[js.Any], getProvider = js.Any.fromFunction1(getProvider), getVersion = js.Any.fromFunction0(getVersion), init = js.Any.fromFunction0(init), pluginManager = pluginManager.asInstanceOf[js.Any], run = js.Any.fromFunction0(run), serverlessDirPath = serverlessDirPath.asInstanceOf[js.Any], service = service.asInstanceOf[js.Any], setProvider = js.Any.fromFunction2(setProvider), utils = utils.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any], yamlParser = yamlParser.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(cli = cli.asInstanceOf[js.Any], config = config.asInstanceOf[js.Any], getProvider = js.Any.fromFunction1(getProvider), getVersion = js.Any.fromFunction0(getVersion), init = js.Any.fromFunction0(init), pluginManager = pluginManager.asInstanceOf[js.Any], resources = resources.asInstanceOf[js.Any], run = js.Any.fromFunction0(run), serverlessDirPath = serverlessDirPath.asInstanceOf[js.Any], service = service.asInstanceOf[js.Any], setProvider = js.Any.fromFunction2(setProvider), utils = utils.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any], yamlParser = yamlParser.asInstanceOf[js.Any])
     __obj.asInstanceOf[Serverless]
   }
   
@@ -90,6 +98,9 @@ object Serverless {
     def setPluginManager(value: typingsSlinky.serverless.pluginManagerMod.^): Self = this.set("pluginManager", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setResources(value: Resources): Self = this.set("resources", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setRun(value: () => js.Promise[_]): Self = this.set("run", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -103,6 +114,9 @@ object Serverless {
     
     @scala.inline
     def setUtils(value: typingsSlinky.serverless.utilsMod.^): Self = this.set("utils", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setVariables(value: PopulateService): Self = this.set("variables", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])

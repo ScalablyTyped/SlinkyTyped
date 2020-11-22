@@ -4,9 +4,9 @@ import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ArrayBufferView
-import typingsSlinky.node.SharedArrayBuffer
 import typingsSlinky.node.anon.ToPrimitive
 import typingsSlinky.node.anon.ValueOf
+import typingsSlinky.std.SharedArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -75,10 +75,10 @@ object Buffer
   def byteLength(string: String, encoding: BufferEncoding): Double = js.native
   def byteLength(string: ArrayBufferView): Double = js.native
   def byteLength(string: ArrayBufferView, encoding: BufferEncoding): Double = js.native
-  def byteLength(string: SharedArrayBuffer): Double = js.native
-  def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
   def byteLength(string: js.typedarray.ArrayBuffer): Double = js.native
   def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = js.native
+  def byteLength(string: SharedArrayBuffer): Double = js.native
+  def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
   
   /**
     * The same as buf1.compare(buf2).
@@ -99,10 +99,6 @@ object Buffer
   def concat(list: js.Array[js.typedarray.Uint8Array]): typingsSlinky.node.Buffer = js.native
   def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): typingsSlinky.node.Buffer = js.native
   
-  def from(arrayBuffer: SharedArrayBuffer): typingsSlinky.node.Buffer = js.native
-  def from(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
-  def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
-  def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
   /**
     * When passed a reference to the .buffer property of a TypedArray instance,
     * the newly created Buffer will share the same allocated memory as the TypedArray.
@@ -115,6 +111,10 @@ object Buffer
   def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
   def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
   def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
+  def from(arrayBuffer: SharedArrayBuffer): typingsSlinky.node.Buffer = js.native
+  def from(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
+  def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
+  def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
   /**
     * Creates a new Buffer using the passed {data}
     * @param data data to create a new Buffer

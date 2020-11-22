@@ -1,8 +1,7 @@
 package typingsSlinky.antd.components
 
 import slinky.core.facade.ReactElement
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.antd.anon.Errors
 import typingsSlinky.antd.formListMod.FormListFieldData
 import typingsSlinky.antd.formListMod.FormListOperation
 import typingsSlinky.antd.formListMod.FormListProps
@@ -16,14 +15,14 @@ object FormList {
   @js.native
   object component extends js.Object
   
-  def withProps(p: FormListProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: FormListProps): SharedBuilder_FormListProps458563791 = new SharedBuilder_FormListProps458563791(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
-    children: (js.Array[FormListFieldData], FormListOperation) => ReactElement,
+    children: (js.Array[FormListFieldData], FormListOperation, Errors) => ReactElement,
     name: String | Double | (js.Array[String | Double])
-  ): Default[tag.type, js.Object] = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children), name = name.asInstanceOf[js.Any])
-    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[FormListProps]))
+  ): SharedBuilder_FormListProps458563791 = {
+    val __props = js.Dynamic.literal(children = js.Any.fromFunction3(children), name = name.asInstanceOf[js.Any])
+    new SharedBuilder_FormListProps458563791(js.Array(this.component, __props.asInstanceOf[FormListProps]))
   }
 }

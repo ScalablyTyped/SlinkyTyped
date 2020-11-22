@@ -17,10 +17,10 @@ trait Participant extends Entity {
   var isMuted: js.UndefOr[Boolean] = js.native
   
   // The list of media streams.
-  var mediaStreams: js.UndefOr[js.Array[MediaStream]] = js.native
+  var mediaStreams: js.UndefOr[NullableOption[js.Array[MediaStream]]] = js.native
   
   // Information about whether the participant has recording capability.
-  var recordingInfo: js.UndefOr[RecordingInfo] = js.native
+  var recordingInfo: js.UndefOr[NullableOption[RecordingInfo]] = js.native
 }
 object Participant {
   
@@ -67,15 +67,21 @@ object Participant {
     def setMediaStreamsVarargs(value: MediaStream*): Self = this.set("mediaStreams", js.Array(value :_*))
     
     @scala.inline
-    def setMediaStreams(value: js.Array[MediaStream]): Self = this.set("mediaStreams", value.asInstanceOf[js.Any])
+    def setMediaStreams(value: NullableOption[js.Array[MediaStream]]): Self = this.set("mediaStreams", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaStreams: Self = this.set("mediaStreams", js.undefined)
     
     @scala.inline
-    def setRecordingInfo(value: RecordingInfo): Self = this.set("recordingInfo", value.asInstanceOf[js.Any])
+    def setMediaStreamsNull: Self = this.set("mediaStreams", null)
+    
+    @scala.inline
+    def setRecordingInfo(value: NullableOption[RecordingInfo]): Self = this.set("recordingInfo", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRecordingInfo: Self = this.set("recordingInfo", js.undefined)
+    
+    @scala.inline
+    def setRecordingInfoNull: Self = this.set("recordingInfo", null)
   }
 }

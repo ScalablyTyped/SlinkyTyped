@@ -44,7 +44,7 @@ trait CreateClusterRequest extends js.Object {
   
   /**
     * 
-    Specifies the level of monitoring for the MSK cluster. The possible values are DEFAULT, PER_BROKER, and PER_TOPIC_PER_BROKER.
+    Specifies the level of monitoring for the MSK cluster. The possible values are DEFAULT, PER_BROKER, PER_TOPIC_PER_BROKER, and PER_TOPIC_PER_PARTITION.
     
     */
   var EnhancedMonitoring: js.UndefOr[typingsSlinky.awsSdk.kafkaMod.EnhancedMonitoring] = js.native

@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object spinnerMod {
   
-  type Spinner[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.spinnerMod.SpinnerProps]
+  type Spinner = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.spinnerMod.SpinnerProps]
 }

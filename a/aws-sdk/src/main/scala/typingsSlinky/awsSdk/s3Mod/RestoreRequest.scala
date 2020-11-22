@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RestoreRequest extends js.Object {
   
   /**
-    * Lifetime of the active copy in days. Do not use with restores that specify OutputLocation.
+    * Lifetime of the active copy in days. Do not use with restores that specify OutputLocation. The Days element is required for regular restores, and must not be provided for select requests.
     */
   var Days: js.UndefOr[typingsSlinky.awsSdk.s3Mod.Days] = js.native
   
@@ -33,7 +33,7 @@ trait RestoreRequest extends js.Object {
   var SelectParameters: js.UndefOr[typingsSlinky.awsSdk.s3Mod.SelectParameters] = js.native
   
   /**
-    * S3 Glacier retrieval tier at which the restore will be processed.
+    * Retrieval tier at which the restore will be processed.
     */
   var Tier: js.UndefOr[typingsSlinky.awsSdk.s3Mod.Tier] = js.native
   

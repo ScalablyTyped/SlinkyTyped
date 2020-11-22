@@ -24,5 +24,6 @@ object utc extends js.Object {
   ): Moment = js.native
   def apply(inp: js.UndefOr[MomentInput], format: js.UndefOr[MomentFormatSpecification], strict: Boolean): Moment = js.native
   def apply(inp: js.UndefOr[MomentInput], format: MomentFormatSpecification): Moment = js.native
+  def apply(inp: js.UndefOr[MomentInput], strict: Boolean): Moment = js.native
   def apply(inp: MomentInput): Moment = js.native
 }

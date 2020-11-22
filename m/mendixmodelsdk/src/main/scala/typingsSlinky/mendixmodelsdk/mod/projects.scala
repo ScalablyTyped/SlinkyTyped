@@ -1,9 +1,11 @@
 package typingsSlinky.mendixmodelsdk.mod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IModule
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IProject
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.unitsMod.IStructuralUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,7 +36,7 @@ object projects extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/resources relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/resources relevant section in reference guide}
     */
   @js.native
   class Folder protected ()
@@ -90,7 +92,7 @@ object projects extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/modules relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/modules relevant section in reference guide}
     */
   @js.native
   class Module protected ()
@@ -153,8 +155,8 @@ object projects extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -181,7 +183,7 @@ object projects extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/project relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/project relevant section in reference guide}
     */
   @js.native
   class Project protected ()
@@ -230,7 +232,7 @@ object projects extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/project relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/project relevant section in reference guide}
     */
   @js.native
   abstract class ProjectDocument protected ()

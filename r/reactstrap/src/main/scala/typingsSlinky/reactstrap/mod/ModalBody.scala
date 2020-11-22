@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "ModalBody")
+@JSImport("reactstrap/es", "ModalBody")
 @js.native
-class ModalBody[T] ()
+class ModalBody ()
   extends Component[ModalBodyProps, js.Object, js.Any]

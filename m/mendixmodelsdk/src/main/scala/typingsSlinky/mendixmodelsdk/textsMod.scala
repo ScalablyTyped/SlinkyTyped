@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates.DataGridColumn
@@ -52,6 +53,7 @@ import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportChart
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportChartSeries
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeField
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import scala.scalajs.js
@@ -72,7 +74,7 @@ object textsMod extends js.Object {
   object texts extends js.Object {
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/system-texts relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/system-texts relevant section in reference guide}
       */
     @js.native
     trait ISystemTextCollection extends IProjectDocument
@@ -81,23 +83,20 @@ object textsMod extends js.Object {
       * Interfaces and instance classes for types from the Mendix sub meta model `Texts`.
       */
     @js.native
-    class SystemText protected () extends Element {
+    class SystemText protected () extends Element[IModel] {
       def this(
         model: AbstractModel,
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       def containerAsSystemTextCollection: SystemTextCollection = js.native
       
       def key: String = js.native
       def key_=(newValue: String): Unit = js.native
-      
-      @JSName("model")
-      var model_FSystemText: IModel = js.native
       
       def text: Text = js.native
       def text_=(newValue: Text): Unit = js.native
@@ -126,7 +125,7 @@ object textsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/system-texts relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/system-texts relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -148,9 +147,6 @@ object textsMod extends js.Object {
       @JSName("containerAsProject")
       def containerAsProject_MSystemTextCollection: Project = js.native
       
-      @JSName("model")
-      var model_FSystemTextCollection: IModel = js.native
-      
       def systemTexts: IList[SystemText] = js.native
     }
     /* static members */
@@ -169,17 +165,17 @@ object textsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/translatable-texts relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/translatable-texts relevant section in reference guide}
       */
     @js.native
-    class Text protected () extends Element {
+    class Text protected () extends Element[IModel] {
       def this(
         model: AbstractModel,
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       def containerAsAssociationDeleteBehavior: AssociationDeleteBehavior = js.native
@@ -267,9 +263,6 @@ object textsMod extends js.Object {
       def containerAsWidgetValidation: WidgetValidation = js.native
       
       def containerAsWidgetValue: WidgetValue = js.native
-      
-      @JSName("model")
-      var model_FText: IModel = js.native
       
       def translations: IList[Translation] = js.native
     }
@@ -723,23 +716,20 @@ object textsMod extends js.Object {
     }
     
     @js.native
-    class Translation protected () extends Element {
+    class Translation protected () extends Element[IModel] {
       def this(
         model: AbstractModel,
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       def containerAsText: Text = js.native
       
       def languageCode: String = js.native
       def languageCode_=(newValue: String): Unit = js.native
-      
-      @JSName("model")
-      var model_FTranslation: IModel = js.native
       
       def text: String = js.native
       def text_=(newValue: String): Unit = js.native

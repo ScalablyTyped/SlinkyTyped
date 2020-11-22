@@ -9,6 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RequestSigningArguments extends SigningArguments {
   
   /**
+    * A set of strings whose members represents headers that should be signed.
+    * Any values passed here will override those provided via unsignableHeaders,
+    * allowing them to be signed.
+    *
+    * All headers in the provided request will have their names converted to
+    * lower case before signing.
+    */
+  var signableHeaders: js.UndefOr[Set[String]] = js.native
+  
+  /**
     * A set of strings whose members represents headers that cannot be signed.
     * All headers in the provided request will have their names converted to
     * lower case and then checked for existence in the unsignableHeaders set.
@@ -37,6 +47,12 @@ object RequestSigningArguments {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setSignableHeaders(value: Set[String]): Self = this.set("signableHeaders", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSignableHeaders: Self = this.set("signableHeaders", js.undefined)
     
     @scala.inline
     def setUnsignableHeaders(value: Set[String]): Self = this.set("unsignableHeaders", value.asInstanceOf[js.Any])

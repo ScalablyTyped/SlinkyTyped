@@ -144,6 +144,14 @@ package object codeartifactMod {
   
   type SuccessfulPackageVersionInfoMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.codeartifactMod.SuccessfulPackageVersionInfo]
   
+  type TagKey = java.lang.String
+  
+  type TagKeyList = js.Array[typingsSlinky.awsSdk.codeartifactMod.TagKey]
+  
+  type TagList = js.Array[typingsSlinky.awsSdk.codeartifactMod.Tag]
+  
+  type TagValue = java.lang.String
+  
   type Timestamp = js.Date
   
   type UpstreamRepositoryInfoList = js.Array[typingsSlinky.awsSdk.codeartifactMod.UpstreamRepositoryInfo]

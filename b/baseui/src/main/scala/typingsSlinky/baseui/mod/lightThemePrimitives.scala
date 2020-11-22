@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object lightThemePrimitives
   extends TopLevel[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Theme */ js.Any
+      /* import warning: ResolveTypeQueries.resolve Loop while resolving typeof DURATION */ js.Any
     ]

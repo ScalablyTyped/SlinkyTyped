@@ -14,7 +14,11 @@ trait IBaseGeometry extends IEventEmitter {
 object IBaseGeometry {
   
   @scala.inline
-  def apply(events: IEventManager, getBounds: () => js.Array[js.Array[Double]] | Null, getType: () => String): IBaseGeometry = {
+  def apply(
+    events: IEventManager[js.Object],
+    getBounds: () => js.Array[js.Array[Double]] | Null,
+    getType: () => String
+  ): IBaseGeometry = {
     val __obj = js.Dynamic.literal(events = events.asInstanceOf[js.Any], getBounds = js.Any.fromFunction0(getBounds), getType = js.Any.fromFunction0(getType))
     __obj.asInstanceOf[IBaseGeometry]
   }

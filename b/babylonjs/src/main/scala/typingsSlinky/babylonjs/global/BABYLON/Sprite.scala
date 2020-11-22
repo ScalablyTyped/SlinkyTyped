@@ -17,3 +17,16 @@ class Sprite protected ()
   def this(/** defines the name */
   name: String, manager: ISpriteManager) = this()
 }
+/* static members */
+@JSGlobal("BABYLON.Sprite")
+@js.native
+object Sprite extends js.Object {
+  
+  /**
+    * Parses a JSON object to create a new sprite
+    * @param parsedSprite The JSON object to parse
+    * @param manager defines the hosting manager
+    * @returns the new sprite
+    */
+  def Parse(parsedSprite: js.Any, manager: typingsSlinky.babylonjs.BABYLON.SpriteManager): typingsSlinky.babylonjs.BABYLON.Sprite = js.native
+}

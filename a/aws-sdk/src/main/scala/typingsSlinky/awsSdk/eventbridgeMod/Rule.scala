@@ -18,7 +18,7 @@ trait Rule extends js.Object {
   var Description: js.UndefOr[RuleDescription] = js.native
   
   /**
-    * The event bus associated with the rule.
+    * The name or ARN of the event bus associated with the rule. If you omit this, the default event bus is used.
     */
   var EventBusName: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.EventBusName] = js.native
   

@@ -22,7 +22,7 @@ class Store_ () extends EventsMixin {
   
   def checkId(model: Model, id: js.Any): Unit = js.native
   
-  def getCollection(`type`: Model, create: Boolean): Collection[typingsSlinky.backbone.mod.Model[_, ModelSetOptions]] = js.native
+  def getCollection(`type`: Model, create: Boolean): Collection[typingsSlinky.backbone.mod.Model[_, ModelSetOptions, js.Object]] = js.native
   
   def getObjectByName(name: String): js.Any = js.native
   
@@ -38,7 +38,7 @@ class Store_ () extends EventsMixin {
   
   def resolveIdForItem(`type`: js.Any, item: js.Any): js.Any = js.native
   
-  def retroFitRelation(relation: Model, create: Boolean): Collection[typingsSlinky.backbone.mod.Model[_, ModelSetOptions]] = js.native
+  def retroFitRelation(relation: Model, create: Boolean): Collection[typingsSlinky.backbone.mod.Model[_, ModelSetOptions, js.Object]] = js.native
   
   def setupSuperModel(modelType: Model): Unit = js.native
   

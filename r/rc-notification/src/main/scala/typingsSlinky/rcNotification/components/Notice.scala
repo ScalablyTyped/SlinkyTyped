@@ -9,6 +9,7 @@ import typingsSlinky.rcNotification.noticeMod.DivProps
 import typingsSlinky.rcNotification.noticeMod.NoticeProps
 import typingsSlinky.rcNotification.noticeMod.default
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,7 +50,7 @@ object Notice {
     def onClick(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+    def onClose(value: /* key */ Key => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def props(value: DivProps): this.type = set("props", value.asInstanceOf[js.Any])
@@ -58,14 +59,14 @@ object Notice {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def update(value: Boolean): this.type = set("update", value.asInstanceOf[js.Any])
+    def updateMark(value: String): this.type = set("updateMark", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: NoticeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(prefixCls: String): Builder = {
-    val __props = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
+  def apply(noticeKey: Key, prefixCls: String): Builder = {
+    val __props = js.Dynamic.literal(noticeKey = noticeKey.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[NoticeProps]))
   }
 }

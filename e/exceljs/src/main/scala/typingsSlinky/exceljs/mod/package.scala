@@ -16,13 +16,16 @@ package object mod {
     - java.lang.String
     - scala.Boolean
     - typingsSlinky.std.Date
+    - js.UndefOr[scala.Nothing]
     - typingsSlinky.exceljs.mod.CellErrorValue
     - typingsSlinky.exceljs.mod.CellRichTextValue
     - typingsSlinky.exceljs.mod.CellHyperlinkValue
     - typingsSlinky.exceljs.mod.CellFormulaValue
     - typingsSlinky.exceljs.mod.CellSharedFormulaValue
   */
-  type CellValue = typingsSlinky.exceljs.mod._CellValue | scala.Null | scala.Double | java.lang.String | scala.Boolean | js.Date
+  type CellValue = js.UndefOr[
+    typingsSlinky.exceljs.mod._CellValue | scala.Null | scala.Double | java.lang.String | scala.Boolean | js.Date
+  ]
   
   type DefinedNamesModel = js.Array[typingsSlinky.exceljs.mod.DefinedNamesRanges]
   
@@ -48,6 +51,10 @@ package object mod {
     /* error */ js.UndefOr[js.Error | scala.Null], 
     /* row */ js.UndefOr[typingsSlinky.exceljs.mod.Rows], 
     scala.Unit
+  ]
+  
+  type RowValues = js.UndefOr[
+    js.Array[typingsSlinky.exceljs.mod.CellValue] | org.scalablytyped.runtime.StringDictionary[typingsSlinky.exceljs.mod.CellValue] | scala.Null
   ]
   
   type Rows = typingsSlinky.exceljs.mod.RowArray | typingsSlinky.exceljs.mod.RowMap | typingsSlinky.exceljs.mod.RowHashArray

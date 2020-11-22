@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeMetricFiltersRequest extends js.Object {
   
   /**
-    * The prefix to match.
+    * The prefix to match. CloudWatch Logs uses the value you set here only if you also include the logGroupName parameter in your request.
     */
   var filterNamePrefix: js.UndefOr[FilterName] = js.native
   

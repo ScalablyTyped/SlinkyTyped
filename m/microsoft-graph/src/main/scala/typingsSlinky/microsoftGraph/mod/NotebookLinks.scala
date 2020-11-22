@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NotebookLinks extends js.Object {
   
   // Opens the notebook in the OneNote native client if it's installed.
-  var oneNoteClientUrl: js.UndefOr[ExternalLink] = js.native
+  var oneNoteClientUrl: js.UndefOr[NullableOption[ExternalLink]] = js.native
   
   // Opens the notebook in OneNote on the web.
-  var oneNoteWebUrl: js.UndefOr[ExternalLink] = js.native
+  var oneNoteWebUrl: js.UndefOr[NullableOption[ExternalLink]] = js.native
 }
 object NotebookLinks {
   
@@ -37,15 +37,21 @@ object NotebookLinks {
     }
     
     @scala.inline
-    def setOneNoteClientUrl(value: ExternalLink): Self = this.set("oneNoteClientUrl", value.asInstanceOf[js.Any])
+    def setOneNoteClientUrl(value: NullableOption[ExternalLink]): Self = this.set("oneNoteClientUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOneNoteClientUrl: Self = this.set("oneNoteClientUrl", js.undefined)
     
     @scala.inline
-    def setOneNoteWebUrl(value: ExternalLink): Self = this.set("oneNoteWebUrl", value.asInstanceOf[js.Any])
+    def setOneNoteClientUrlNull: Self = this.set("oneNoteClientUrl", null)
+    
+    @scala.inline
+    def setOneNoteWebUrl(value: NullableOption[ExternalLink]): Self = this.set("oneNoteWebUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOneNoteWebUrl: Self = this.set("oneNoteWebUrl", js.undefined)
+    
+    @scala.inline
+    def setOneNoteWebUrlNull: Self = this.set("oneNoteWebUrl", null)
   }
 }

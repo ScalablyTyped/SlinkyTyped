@@ -1,15 +1,24 @@
 package typingsSlinky.gestalt.mod
 
-import slinky.core.facade.ReactElement
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLVideoElement
+import org.scalajs.dom.raw.Node
+import slinky.core.SyntheticEvent
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.gestalt.anon.Duration
 import typingsSlinky.gestalt.anon.Fullscreen
 import typingsSlinky.gestalt.anon.Loaded
 import typingsSlinky.gestalt.anon.Src
 import typingsSlinky.gestalt.anon.Time
 import typingsSlinky.gestalt.anon.Volume
-import typingsSlinky.gestalt.anon.`4`
-import typingsSlinky.gestalt.anon.`5`
+import typingsSlinky.gestalt.gestaltStrings.`scale-down`
+import typingsSlinky.gestalt.gestaltStrings.`use-credentials`
+import typingsSlinky.gestalt.gestaltStrings.anonymous
 import typingsSlinky.gestalt.gestaltStrings.auto
+import typingsSlinky.gestalt.gestaltStrings.contain
+import typingsSlinky.gestalt.gestaltStrings.cover
+import typingsSlinky.gestalt.gestaltStrings.fill
 import typingsSlinky.gestalt.gestaltStrings.metadata
 import typingsSlinky.gestalt.gestaltStrings.none
 import scala.scalajs.js
@@ -35,31 +44,39 @@ trait VideoProps extends js.Object {
   
   var captions: String = js.native
   
-  var children: js.UndefOr[ReactElement] = js.native
+  var children: js.UndefOr[Node] = js.native
   
   var controls: js.UndefOr[Boolean] = js.native
   
+  var crossOrigin: js.UndefOr[anonymous | `use-credentials`] = js.native
+  
   var loop: js.UndefOr[Boolean] = js.native
+  
+  var objectFit: js.UndefOr[fill | contain | cover | none | `scale-down`] = js.native
   
   var onDurationChange: js.UndefOr[js.Function1[/* args */ Duration, Unit]] = js.native
   
-  var onEnded: js.UndefOr[js.Function1[/* args */ `4`, Unit]] = js.native
+  var onEnded: js.UndefOr[AbstractEventHandler[SyntheticEvent[Event, HTMLVideoElement], js.Object]] = js.native
   
-  var onFullscreenChange: js.UndefOr[js.Function1[/* args */ Fullscreen, Unit]] = js.native
+  var onFullscreenChange: js.UndefOr[AbstractEventHandler[SyntheticEvent[Event, HTMLVideoElement], Fullscreen]] = js.native
   
-  var onLoadedChange: js.UndefOr[js.Function1[/* args */ Loaded, Unit]] = js.native
+  var onLoadedChange: js.UndefOr[AbstractEventHandler[SyntheticEvent[Event, HTMLVideoElement], Loaded]] = js.native
   
-  var onPause: js.UndefOr[js.Function1[/* args */ `5`, Unit]] = js.native
+  var onPause: js.UndefOr[AbstractEventHandler[SyntheticEvent[Event, HTMLDivElement], js.Object]] = js.native
   
-  var onPlay: js.UndefOr[js.Function1[/* args */ `5`, Unit]] = js.native
+  var onPlay: js.UndefOr[AbstractEventHandler[SyntheticEvent[Event, HTMLDivElement], js.Object]] = js.native
   
-  var onReady: js.UndefOr[js.Function1[/* args */ `4`, Unit]] = js.native
+  var onPlayheadDown: js.UndefOr[AbstractEventHandler[SyntheticMouseEvent[HTMLDivElement], js.Object]] = js.native
   
-  var onSeek: js.UndefOr[js.Function1[/* args */ `4`, Unit]] = js.native
+  var onPlayheadUp: js.UndefOr[AbstractEventHandler[SyntheticMouseEvent[HTMLDivElement], js.Object]] = js.native
   
-  var onTimeChange: js.UndefOr[js.Function1[/* args */ Time, Unit]] = js.native
+  var onReady: js.UndefOr[AbstractEventHandler[SyntheticEvent[Event, HTMLVideoElement], js.Object]] = js.native
   
-  var onVolumeChange: js.UndefOr[js.Function1[/* args */ Volume, Unit]] = js.native
+  var onSeek: js.UndefOr[AbstractEventHandler[SyntheticEvent[Event, HTMLVideoElement], js.Object]] = js.native
+  
+  var onTimeChange: js.UndefOr[AbstractEventHandler[SyntheticEvent[Event, HTMLVideoElement], Time]] = js.native
+  
+  var onVolumeChange: js.UndefOr[AbstractEventHandler[SyntheticEvent[Event, HTMLDivElement], Volume]] = js.native
   
   var playbackRate: js.UndefOr[Double] = js.native
   
@@ -147,10 +164,7 @@ object VideoProps {
     def deleteAccessibilityUnmuteLabel: Self = this.set("accessibilityUnmuteLabel", js.undefined)
     
     @scala.inline
-    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: Node): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
@@ -162,10 +176,22 @@ object VideoProps {
     def deleteControls: Self = this.set("controls", js.undefined)
     
     @scala.inline
+    def setCrossOrigin(value: anonymous | `use-credentials`): Self = this.set("crossOrigin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCrossOrigin: Self = this.set("crossOrigin", js.undefined)
+    
+    @scala.inline
     def setLoop(value: Boolean): Self = this.set("loop", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLoop: Self = this.set("loop", js.undefined)
+    
+    @scala.inline
+    def setObjectFit(value: fill | contain | cover | none | `scale-down`): Self = this.set("objectFit", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteObjectFit: Self = this.set("objectFit", js.undefined)
     
     @scala.inline
     def setOnDurationChange(value: /* args */ Duration => Unit): Self = this.set("onDurationChange", js.Any.fromFunction1(value))
@@ -174,55 +200,89 @@ object VideoProps {
     def deleteOnDurationChange: Self = this.set("onDurationChange", js.undefined)
     
     @scala.inline
-    def setOnEnded(value: /* args */ `4` => Unit): Self = this.set("onEnded", js.Any.fromFunction1(value))
+    def setOnEnded(
+      value: /* arg */ js.Object with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): Self = this.set("onEnded", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnEnded: Self = this.set("onEnded", js.undefined)
     
     @scala.inline
-    def setOnFullscreenChange(value: /* args */ Fullscreen => Unit): Self = this.set("onFullscreenChange", js.Any.fromFunction1(value))
+    def setOnFullscreenChange(
+      value: /* arg */ Fullscreen with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): Self = this.set("onFullscreenChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnFullscreenChange: Self = this.set("onFullscreenChange", js.undefined)
     
     @scala.inline
-    def setOnLoadedChange(value: /* args */ Loaded => Unit): Self = this.set("onLoadedChange", js.Any.fromFunction1(value))
+    def setOnLoadedChange(
+      value: /* arg */ Loaded with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): Self = this.set("onLoadedChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLoadedChange: Self = this.set("onLoadedChange", js.undefined)
     
     @scala.inline
-    def setOnPause(value: /* args */ `5` => Unit): Self = this.set("onPause", js.Any.fromFunction1(value))
+    def setOnPause(
+      value: /* arg */ js.Object with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLDivElement]]) => Unit
+    ): Self = this.set("onPause", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnPause: Self = this.set("onPause", js.undefined)
     
     @scala.inline
-    def setOnPlay(value: /* args */ `5` => Unit): Self = this.set("onPlay", js.Any.fromFunction1(value))
+    def setOnPlay(
+      value: /* arg */ js.Object with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLDivElement]]) => Unit
+    ): Self = this.set("onPlay", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnPlay: Self = this.set("onPlay", js.undefined)
     
     @scala.inline
-    def setOnReady(value: /* args */ `4` => Unit): Self = this.set("onReady", js.Any.fromFunction1(value))
+    def setOnPlayheadDown(
+      value: /* arg */ js.Object with typingsSlinky.gestalt.anon.Event[SyntheticMouseEvent[HTMLDivElement]] => Unit
+    ): Self = this.set("onPlayheadDown", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnPlayheadDown: Self = this.set("onPlayheadDown", js.undefined)
+    
+    @scala.inline
+    def setOnPlayheadUp(
+      value: /* arg */ js.Object with typingsSlinky.gestalt.anon.Event[SyntheticMouseEvent[HTMLDivElement]] => Unit
+    ): Self = this.set("onPlayheadUp", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnPlayheadUp: Self = this.set("onPlayheadUp", js.undefined)
+    
+    @scala.inline
+    def setOnReady(
+      value: /* arg */ js.Object with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): Self = this.set("onReady", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnReady: Self = this.set("onReady", js.undefined)
     
     @scala.inline
-    def setOnSeek(value: /* args */ `4` => Unit): Self = this.set("onSeek", js.Any.fromFunction1(value))
+    def setOnSeek(
+      value: /* arg */ js.Object with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): Self = this.set("onSeek", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSeek: Self = this.set("onSeek", js.undefined)
     
     @scala.inline
-    def setOnTimeChange(value: /* args */ Time => Unit): Self = this.set("onTimeChange", js.Any.fromFunction1(value))
+    def setOnTimeChange(
+      value: /* arg */ Time with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): Self = this.set("onTimeChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnTimeChange: Self = this.set("onTimeChange", js.undefined)
     
     @scala.inline
-    def setOnVolumeChange(value: /* args */ Volume => Unit): Self = this.set("onVolumeChange", js.Any.fromFunction1(value))
+    def setOnVolumeChange(
+      value: /* arg */ Volume with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLDivElement]]) => Unit
+    ): Self = this.set("onVolumeChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnVolumeChange: Self = this.set("onVolumeChange", js.undefined)

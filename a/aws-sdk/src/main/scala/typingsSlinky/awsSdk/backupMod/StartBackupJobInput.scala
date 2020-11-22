@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StartBackupJobInput extends js.Object {
   
   /**
+    * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Valid values: Set to "WindowsVSS”:“enabled" to enable WindowsVSS backup option and create a VSS Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. The WindowsVSS option is not enabled by default.
+    */
+  var BackupOptions: js.UndefOr[typingsSlinky.awsSdk.backupMod.BackupOptions] = js.native
+  
+  /**
     * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique to the account used to create them and the AWS Region where they are created. They consist of lowercase letters, numbers, and hyphens.
     */
   var BackupVaultName: typingsSlinky.awsSdk.backupMod.BackupVaultName = js.native
@@ -78,6 +83,12 @@ object StartBackupJobInput {
     
     @scala.inline
     def setResourceArn(value: ARN): Self = this.set("ResourceArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBackupOptions(value: BackupOptions): Self = this.set("BackupOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBackupOptions: Self = this.set("BackupOptions", js.undefined)
     
     @scala.inline
     def setCompleteWindowMinutes(value: WindowMinutes): Self = this.set("CompleteWindowMinutes", value.asInstanceOf[js.Any])

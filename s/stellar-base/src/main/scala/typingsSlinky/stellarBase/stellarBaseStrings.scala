@@ -16,10 +16,13 @@ object stellarBaseStrings {
   def accountMergeDestFull: accountMergeDestFull = "accountMergeDestFull".asInstanceOf[accountMergeDestFull]
   
   @scala.inline
-  def accountMergeHasSubEntry: accountMergeHasSubEntry = "accountMergeHasSubEntry".asInstanceOf[accountMergeHasSubEntry]
+  def accountMergeHasSubEntries: accountMergeHasSubEntries = "accountMergeHasSubEntries".asInstanceOf[accountMergeHasSubEntries]
   
   @scala.inline
   def accountMergeImmutableSet: accountMergeImmutableSet = "accountMergeImmutableSet".asInstanceOf[accountMergeImmutableSet]
+  
+  @scala.inline
+  def accountMergeIsSponsor: accountMergeIsSponsor = "accountMergeIsSponsor".asInstanceOf[accountMergeIsSponsor]
   
   @scala.inline
   def accountMergeMalformed: accountMergeMalformed = "accountMergeMalformed".asInstanceOf[accountMergeMalformed]
@@ -85,6 +88,21 @@ object stellarBaseStrings {
   def base64: base64 = "base64".asInstanceOf[base64]
   
   @scala.inline
+  def beginSponsoringFutureReserves: beginSponsoringFutureReserves = "beginSponsoringFutureReserves".asInstanceOf[beginSponsoringFutureReserves]
+  
+  @scala.inline
+  def beginSponsoringFutureReservesAlreadySponsored: beginSponsoringFutureReservesAlreadySponsored = "beginSponsoringFutureReservesAlreadySponsored".asInstanceOf[beginSponsoringFutureReservesAlreadySponsored]
+  
+  @scala.inline
+  def beginSponsoringFutureReservesMalformed: beginSponsoringFutureReservesMalformed = "beginSponsoringFutureReservesMalformed".asInstanceOf[beginSponsoringFutureReservesMalformed]
+  
+  @scala.inline
+  def beginSponsoringFutureReservesRecursive: beginSponsoringFutureReservesRecursive = "beginSponsoringFutureReservesRecursive".asInstanceOf[beginSponsoringFutureReservesRecursive]
+  
+  @scala.inline
+  def beginSponsoringFutureReservesSuccess: beginSponsoringFutureReservesSuccess = "beginSponsoringFutureReservesSuccess".asInstanceOf[beginSponsoringFutureReservesSuccess]
+  
+  @scala.inline
   def bumpSequence: bumpSequence = "bumpSequence".asInstanceOf[bumpSequence]
   
   @scala.inline
@@ -115,6 +133,54 @@ object stellarBaseStrings {
   def changeTrustSuccess: changeTrustSuccess = "changeTrustSuccess".asInstanceOf[changeTrustSuccess]
   
   @scala.inline
+  def claimClaimableBalance: claimClaimableBalance = "claimClaimableBalance".asInstanceOf[claimClaimableBalance]
+  
+  @scala.inline
+  def claimClaimableBalanceCannotClaim: claimClaimableBalanceCannotClaim = "claimClaimableBalanceCannotClaim".asInstanceOf[claimClaimableBalanceCannotClaim]
+  
+  @scala.inline
+  def claimClaimableBalanceDoesNotExist: claimClaimableBalanceDoesNotExist = "claimClaimableBalanceDoesNotExist".asInstanceOf[claimClaimableBalanceDoesNotExist]
+  
+  @scala.inline
+  def claimClaimableBalanceLineFull: claimClaimableBalanceLineFull = "claimClaimableBalanceLineFull".asInstanceOf[claimClaimableBalanceLineFull]
+  
+  @scala.inline
+  def claimClaimableBalanceNoTrust: claimClaimableBalanceNoTrust = "claimClaimableBalanceNoTrust".asInstanceOf[claimClaimableBalanceNoTrust]
+  
+  @scala.inline
+  def claimClaimableBalanceNotAuthorized: claimClaimableBalanceNotAuthorized = "claimClaimableBalanceNotAuthorized".asInstanceOf[claimClaimableBalanceNotAuthorized]
+  
+  @scala.inline
+  def claimClaimableBalanceSuccess: claimClaimableBalanceSuccess = "claimClaimableBalanceSuccess".asInstanceOf[claimClaimableBalanceSuccess]
+  
+  @scala.inline
+  def claimPredicateAnd: claimPredicateAnd = "claimPredicateAnd".asInstanceOf[claimPredicateAnd]
+  
+  @scala.inline
+  def claimPredicateBeforeAbsoluteTime: claimPredicateBeforeAbsoluteTime = "claimPredicateBeforeAbsoluteTime".asInstanceOf[claimPredicateBeforeAbsoluteTime]
+  
+  @scala.inline
+  def claimPredicateBeforeRelativeTime: claimPredicateBeforeRelativeTime = "claimPredicateBeforeRelativeTime".asInstanceOf[claimPredicateBeforeRelativeTime]
+  
+  @scala.inline
+  def claimPredicateNot: claimPredicateNot = "claimPredicateNot".asInstanceOf[claimPredicateNot]
+  
+  @scala.inline
+  def claimPredicateOr: claimPredicateOr = "claimPredicateOr".asInstanceOf[claimPredicateOr]
+  
+  @scala.inline
+  def claimPredicateUnconditional: claimPredicateUnconditional = "claimPredicateUnconditional".asInstanceOf[claimPredicateUnconditional]
+  
+  @scala.inline
+  def claimableBalance: claimableBalance = "claimableBalance".asInstanceOf[claimableBalance]
+  
+  @scala.inline
+  def claimableBalanceIdTypeV0: claimableBalanceIdTypeV0 = "claimableBalanceIdTypeV0".asInstanceOf[claimableBalanceIdTypeV0]
+  
+  @scala.inline
+  def claimantTypeV0: claimantTypeV0 = "claimantTypeV0".asInstanceOf[claimantTypeV0]
+  
+  @scala.inline
   def createAccount: createAccount = "createAccount".asInstanceOf[createAccount]
   
   @scala.inline
@@ -133,6 +199,27 @@ object stellarBaseStrings {
   def createAccountUnderfunded: createAccountUnderfunded = "createAccountUnderfunded".asInstanceOf[createAccountUnderfunded]
   
   @scala.inline
+  def createClaimableBalance: createClaimableBalance = "createClaimableBalance".asInstanceOf[createClaimableBalance]
+  
+  @scala.inline
+  def createClaimableBalanceLowReserve: createClaimableBalanceLowReserve = "createClaimableBalanceLowReserve".asInstanceOf[createClaimableBalanceLowReserve]
+  
+  @scala.inline
+  def createClaimableBalanceMalformed: createClaimableBalanceMalformed = "createClaimableBalanceMalformed".asInstanceOf[createClaimableBalanceMalformed]
+  
+  @scala.inline
+  def createClaimableBalanceNoTrust: createClaimableBalanceNoTrust = "createClaimableBalanceNoTrust".asInstanceOf[createClaimableBalanceNoTrust]
+  
+  @scala.inline
+  def createClaimableBalanceNotAuthorized: createClaimableBalanceNotAuthorized = "createClaimableBalanceNotAuthorized".asInstanceOf[createClaimableBalanceNotAuthorized]
+  
+  @scala.inline
+  def createClaimableBalanceSuccess: createClaimableBalanceSuccess = "createClaimableBalanceSuccess".asInstanceOf[createClaimableBalanceSuccess]
+  
+  @scala.inline
+  def createClaimableBalanceUnderfunded: createClaimableBalanceUnderfunded = "createClaimableBalanceUnderfunded".asInstanceOf[createClaimableBalanceUnderfunded]
+  
+  @scala.inline
   def createPassiveSellOffer: createPassiveSellOffer = "createPassiveSellOffer".asInstanceOf[createPassiveSellOffer]
   
   @scala.inline
@@ -142,7 +229,7 @@ object stellarBaseStrings {
   def credit_alphanum4: credit_alphanum4 = "credit_alphanum4".asInstanceOf[credit_alphanum4]
   
   @scala.inline
-  def datum: datum = "datum".asInstanceOf[datum]
+  def data: data = "data".asInstanceOf[data]
   
   @scala.inline
   def deadentry: deadentry = "deadentry".asInstanceOf[deadentry]
@@ -154,7 +241,19 @@ object stellarBaseStrings {
   def ed25519: ed25519 = "ed25519".asInstanceOf[ed25519]
   
   @scala.inline
+  def endSponsoringFutureReserves: endSponsoringFutureReserves = "endSponsoringFutureReserves".asInstanceOf[endSponsoringFutureReserves]
+  
+  @scala.inline
+  def endSponsoringFutureReservesNotSponsored: endSponsoringFutureReservesNotSponsored = "endSponsoringFutureReservesNotSponsored".asInstanceOf[endSponsoringFutureReservesNotSponsored]
+  
+  @scala.inline
+  def endSponsoringFutureReservesSuccess: endSponsoringFutureReservesSuccess = "endSponsoringFutureReservesSuccess".asInstanceOf[endSponsoringFutureReservesSuccess]
+  
+  @scala.inline
   def envelopeTypeAuth: envelopeTypeAuth = "envelopeTypeAuth".asInstanceOf[envelopeTypeAuth]
+  
+  @scala.inline
+  def envelopeTypeOpId: envelopeTypeOpId = "envelopeTypeOpId".asInstanceOf[envelopeTypeOpId]
   
   @scala.inline
   def envelopeTypeScp: envelopeTypeScp = "envelopeTypeScp".asInstanceOf[envelopeTypeScp]
@@ -178,7 +277,7 @@ object stellarBaseStrings {
   def errConf: errConf = "errConf".asInstanceOf[errConf]
   
   @scala.inline
-  def errDatum: errDatum = "errDatum".asInstanceOf[errDatum]
+  def errData: errData = "errData".asInstanceOf[errData]
   
   @scala.inline
   def errLoad: errLoad = "errLoad".asInstanceOf[errLoad]
@@ -190,7 +289,7 @@ object stellarBaseStrings {
   def errorMsg: errorMsg = "errorMsg".asInstanceOf[errorMsg]
   
   @scala.inline
-  def getPeer: getPeer = "getPeer".asInstanceOf[getPeer]
+  def getPeers: getPeers = "getPeers".asInstanceOf[getPeers]
   
   @scala.inline
   def getScpQuorumset: getScpQuorumset = "getScpQuorumset".asInstanceOf[getScpQuorumset]
@@ -325,9 +424,6 @@ object stellarBaseStrings {
   def manageDataSuccess: manageDataSuccess = "manageDataSuccess".asInstanceOf[manageDataSuccess]
   
   @scala.inline
-  def manageDatum: manageDatum = "manageDatum".asInstanceOf[manageDatum]
-  
-  @scala.inline
   def manageOfferCreated: manageOfferCreated = "manageOfferCreated".asInstanceOf[manageOfferCreated]
   
   @scala.inline
@@ -418,7 +514,10 @@ object stellarBaseStrings {
   def opNotSupported: opNotSupported = "opNotSupported".asInstanceOf[opNotSupported]
   
   @scala.inline
-  def opTooManySubentry: opTooManySubentry = "opTooManySubentry".asInstanceOf[opTooManySubentry]
+  def opTooManySponsoring: opTooManySponsoring = "opTooManySponsoring".asInstanceOf[opTooManySponsoring]
+  
+  @scala.inline
+  def opTooManySubentries: opTooManySubentries = "opTooManySubentries".asInstanceOf[opTooManySubentries]
   
   @scala.inline
   def passiveFlag: passiveFlag = "passiveFlag".asInstanceOf[passiveFlag]
@@ -460,7 +559,7 @@ object stellarBaseStrings {
   def pathPaymentStrictReceiveSuccess: pathPaymentStrictReceiveSuccess = "pathPaymentStrictReceiveSuccess".asInstanceOf[pathPaymentStrictReceiveSuccess]
   
   @scala.inline
-  def pathPaymentStrictReceiveTooFewOffer: pathPaymentStrictReceiveTooFewOffer = "pathPaymentStrictReceiveTooFewOffer".asInstanceOf[pathPaymentStrictReceiveTooFewOffer]
+  def pathPaymentStrictReceiveTooFewOffers: pathPaymentStrictReceiveTooFewOffers = "pathPaymentStrictReceiveTooFewOffers".asInstanceOf[pathPaymentStrictReceiveTooFewOffers]
   
   @scala.inline
   def pathPaymentStrictReceiveUnderfunded: pathPaymentStrictReceiveUnderfunded = "pathPaymentStrictReceiveUnderfunded".asInstanceOf[pathPaymentStrictReceiveUnderfunded]
@@ -499,7 +598,7 @@ object stellarBaseStrings {
   def pathPaymentStrictSendSuccess: pathPaymentStrictSendSuccess = "pathPaymentStrictSendSuccess".asInstanceOf[pathPaymentStrictSendSuccess]
   
   @scala.inline
-  def pathPaymentStrictSendTooFewOffer: pathPaymentStrictSendTooFewOffer = "pathPaymentStrictSendTooFewOffer".asInstanceOf[pathPaymentStrictSendTooFewOffer]
+  def pathPaymentStrictSendTooFewOffers: pathPaymentStrictSendTooFewOffers = "pathPaymentStrictSendTooFewOffers".asInstanceOf[pathPaymentStrictSendTooFewOffers]
   
   @scala.inline
   def pathPaymentStrictSendUnderDestmin: pathPaymentStrictSendUnderDestmin = "pathPaymentStrictSendUnderDestmin".asInstanceOf[pathPaymentStrictSendUnderDestmin]
@@ -541,13 +640,37 @@ object stellarBaseStrings {
   def paymentUnderfunded: paymentUnderfunded = "paymentUnderfunded".asInstanceOf[paymentUnderfunded]
   
   @scala.inline
-  def peer: peer = "peer".asInstanceOf[peer]
+  def peers: peers = "peers".asInstanceOf[peers]
   
   @scala.inline
   def publicKeyTypeEd25519: publicKeyTypeEd25519 = "publicKeyTypeEd25519".asInstanceOf[publicKeyTypeEd25519]
   
   @scala.inline
   def raw: raw = "raw".asInstanceOf[raw]
+  
+  @scala.inline
+  def revokeSponsorship: revokeSponsorship = "revokeSponsorship".asInstanceOf[revokeSponsorship]
+  
+  @scala.inline
+  def revokeSponsorshipDoesNotExist: revokeSponsorshipDoesNotExist = "revokeSponsorshipDoesNotExist".asInstanceOf[revokeSponsorshipDoesNotExist]
+  
+  @scala.inline
+  def revokeSponsorshipLedgerEntry: revokeSponsorshipLedgerEntry = "revokeSponsorshipLedgerEntry".asInstanceOf[revokeSponsorshipLedgerEntry]
+  
+  @scala.inline
+  def revokeSponsorshipLowReserve: revokeSponsorshipLowReserve = "revokeSponsorshipLowReserve".asInstanceOf[revokeSponsorshipLowReserve]
+  
+  @scala.inline
+  def revokeSponsorshipNotSponsor: revokeSponsorshipNotSponsor = "revokeSponsorshipNotSponsor".asInstanceOf[revokeSponsorshipNotSponsor]
+  
+  @scala.inline
+  def revokeSponsorshipOnlyTransferable: revokeSponsorshipOnlyTransferable = "revokeSponsorshipOnlyTransferable".asInstanceOf[revokeSponsorshipOnlyTransferable]
+  
+  @scala.inline
+  def revokeSponsorshipSigner: revokeSponsorshipSigner = "revokeSponsorshipSigner".asInstanceOf[revokeSponsorshipSigner]
+  
+  @scala.inline
+  def revokeSponsorshipSuccess: revokeSponsorshipSuccess = "revokeSponsorshipSuccess".asInstanceOf[revokeSponsorshipSuccess]
   
   @scala.inline
   def scpMessage: scpMessage = "scpMessage".asInstanceOf[scpMessage]
@@ -568,13 +691,10 @@ object stellarBaseStrings {
   def scpStPrepare: scpStPrepare = "scpStPrepare".asInstanceOf[scpStPrepare]
   
   @scala.inline
-  def setOption: setOption = "setOption".asInstanceOf[setOption]
-  
-  @scala.inline
   def setOptions: setOptions = "setOptions".asInstanceOf[setOptions]
   
   @scala.inline
-  def setOptionsBadFlag: setOptionsBadFlag = "setOptionsBadFlag".asInstanceOf[setOptionsBadFlag]
+  def setOptionsBadFlags: setOptionsBadFlags = "setOptionsBadFlags".asInstanceOf[setOptionsBadFlags]
   
   @scala.inline
   def setOptionsBadSigner: setOptionsBadSigner = "setOptionsBadSigner".asInstanceOf[setOptionsBadSigner]
@@ -598,7 +718,7 @@ object stellarBaseStrings {
   def setOptionsThresholdOutOfRange: setOptionsThresholdOutOfRange = "setOptionsThresholdOutOfRange".asInstanceOf[setOptionsThresholdOutOfRange]
   
   @scala.inline
-  def setOptionsTooManySigner: setOptionsTooManySigner = "setOptionsTooManySigner".asInstanceOf[setOptionsTooManySigner]
+  def setOptionsTooManySigners: setOptionsTooManySigners = "setOptionsTooManySigners".asInstanceOf[setOptionsTooManySigners]
   
   @scala.inline
   def setOptionsUnknownFlag: setOptionsUnknownFlag = "setOptionsUnknownFlag".asInstanceOf[setOptionsUnknownFlag]
@@ -655,6 +775,9 @@ object stellarBaseStrings {
   def txBadSeq: txBadSeq = "txBadSeq".asInstanceOf[txBadSeq]
   
   @scala.inline
+  def txBadSponsorship: txBadSponsorship = "txBadSponsorship".asInstanceOf[txBadSponsorship]
+  
+  @scala.inline
   def txFailed: txFailed = "txFailed".asInstanceOf[txFailed]
   
   @scala.inline
@@ -703,10 +826,13 @@ object stellarBaseStrings {
   sealed trait accountMergeDestFull extends js.Object
   
   @js.native
-  sealed trait accountMergeHasSubEntry extends js.Object
+  sealed trait accountMergeHasSubEntries extends js.Object
   
   @js.native
   sealed trait accountMergeImmutableSet extends js.Object
+  
+  @js.native
+  sealed trait accountMergeIsSponsor extends js.Object
   
   @js.native
   sealed trait accountMergeMalformed extends js.Object
@@ -772,6 +898,21 @@ object stellarBaseStrings {
   sealed trait base64 extends js.Object
   
   @js.native
+  sealed trait beginSponsoringFutureReserves extends js.Object
+  
+  @js.native
+  sealed trait beginSponsoringFutureReservesAlreadySponsored extends js.Object
+  
+  @js.native
+  sealed trait beginSponsoringFutureReservesMalformed extends js.Object
+  
+  @js.native
+  sealed trait beginSponsoringFutureReservesRecursive extends js.Object
+  
+  @js.native
+  sealed trait beginSponsoringFutureReservesSuccess extends js.Object
+  
+  @js.native
   sealed trait bumpSequence extends js.Object
   
   @js.native
@@ -802,6 +943,54 @@ object stellarBaseStrings {
   sealed trait changeTrustSuccess extends js.Object
   
   @js.native
+  sealed trait claimClaimableBalance extends js.Object
+  
+  @js.native
+  sealed trait claimClaimableBalanceCannotClaim extends js.Object
+  
+  @js.native
+  sealed trait claimClaimableBalanceDoesNotExist extends js.Object
+  
+  @js.native
+  sealed trait claimClaimableBalanceLineFull extends js.Object
+  
+  @js.native
+  sealed trait claimClaimableBalanceNoTrust extends js.Object
+  
+  @js.native
+  sealed trait claimClaimableBalanceNotAuthorized extends js.Object
+  
+  @js.native
+  sealed trait claimClaimableBalanceSuccess extends js.Object
+  
+  @js.native
+  sealed trait claimPredicateAnd extends js.Object
+  
+  @js.native
+  sealed trait claimPredicateBeforeAbsoluteTime extends js.Object
+  
+  @js.native
+  sealed trait claimPredicateBeforeRelativeTime extends js.Object
+  
+  @js.native
+  sealed trait claimPredicateNot extends js.Object
+  
+  @js.native
+  sealed trait claimPredicateOr extends js.Object
+  
+  @js.native
+  sealed trait claimPredicateUnconditional extends js.Object
+  
+  @js.native
+  sealed trait claimableBalance extends js.Object
+  
+  @js.native
+  sealed trait claimableBalanceIdTypeV0 extends js.Object
+  
+  @js.native
+  sealed trait claimantTypeV0 extends js.Object
+  
+  @js.native
   sealed trait createAccount extends js.Object
   
   @js.native
@@ -820,6 +1009,27 @@ object stellarBaseStrings {
   sealed trait createAccountUnderfunded extends js.Object
   
   @js.native
+  sealed trait createClaimableBalance extends js.Object
+  
+  @js.native
+  sealed trait createClaimableBalanceLowReserve extends js.Object
+  
+  @js.native
+  sealed trait createClaimableBalanceMalformed extends js.Object
+  
+  @js.native
+  sealed trait createClaimableBalanceNoTrust extends js.Object
+  
+  @js.native
+  sealed trait createClaimableBalanceNotAuthorized extends js.Object
+  
+  @js.native
+  sealed trait createClaimableBalanceSuccess extends js.Object
+  
+  @js.native
+  sealed trait createClaimableBalanceUnderfunded extends js.Object
+  
+  @js.native
   sealed trait createPassiveSellOffer extends js.Object
   
   @js.native
@@ -829,7 +1039,7 @@ object stellarBaseStrings {
   sealed trait credit_alphanum4 extends js.Object
   
   @js.native
-  sealed trait datum extends js.Object
+  sealed trait data extends js.Object
   
   @js.native
   sealed trait deadentry extends js.Object
@@ -841,7 +1051,19 @@ object stellarBaseStrings {
   sealed trait ed25519 extends js.Object
   
   @js.native
+  sealed trait endSponsoringFutureReserves extends js.Object
+  
+  @js.native
+  sealed trait endSponsoringFutureReservesNotSponsored extends js.Object
+  
+  @js.native
+  sealed trait endSponsoringFutureReservesSuccess extends js.Object
+  
+  @js.native
   sealed trait envelopeTypeAuth extends js.Object
+  
+  @js.native
+  sealed trait envelopeTypeOpId extends js.Object
   
   @js.native
   sealed trait envelopeTypeScp extends js.Object
@@ -865,7 +1087,7 @@ object stellarBaseStrings {
   sealed trait errConf extends js.Object
   
   @js.native
-  sealed trait errDatum extends js.Object
+  sealed trait errData extends js.Object
   
   @js.native
   sealed trait errLoad extends js.Object
@@ -877,7 +1099,7 @@ object stellarBaseStrings {
   sealed trait errorMsg extends js.Object
   
   @js.native
-  sealed trait getPeer extends js.Object
+  sealed trait getPeers extends js.Object
   
   @js.native
   sealed trait getScpQuorumset extends js.Object
@@ -1012,9 +1234,6 @@ object stellarBaseStrings {
   sealed trait manageDataSuccess extends js.Object
   
   @js.native
-  sealed trait manageDatum extends js.Object
-  
-  @js.native
   sealed trait manageOfferCreated extends js.Object
   
   @js.native
@@ -1105,7 +1324,10 @@ object stellarBaseStrings {
   sealed trait opNotSupported extends js.Object
   
   @js.native
-  sealed trait opTooManySubentry extends js.Object
+  sealed trait opTooManySponsoring extends js.Object
+  
+  @js.native
+  sealed trait opTooManySubentries extends js.Object
   
   @js.native
   sealed trait passiveFlag extends js.Object
@@ -1147,7 +1369,7 @@ object stellarBaseStrings {
   sealed trait pathPaymentStrictReceiveSuccess extends js.Object
   
   @js.native
-  sealed trait pathPaymentStrictReceiveTooFewOffer extends js.Object
+  sealed trait pathPaymentStrictReceiveTooFewOffers extends js.Object
   
   @js.native
   sealed trait pathPaymentStrictReceiveUnderfunded extends js.Object
@@ -1186,7 +1408,7 @@ object stellarBaseStrings {
   sealed trait pathPaymentStrictSendSuccess extends js.Object
   
   @js.native
-  sealed trait pathPaymentStrictSendTooFewOffer extends js.Object
+  sealed trait pathPaymentStrictSendTooFewOffers extends js.Object
   
   @js.native
   sealed trait pathPaymentStrictSendUnderDestmin extends js.Object
@@ -1228,13 +1450,37 @@ object stellarBaseStrings {
   sealed trait paymentUnderfunded extends js.Object
   
   @js.native
-  sealed trait peer extends js.Object
+  sealed trait peers extends js.Object
   
   @js.native
   sealed trait publicKeyTypeEd25519 extends js.Object
   
   @js.native
   sealed trait raw extends js.Object
+  
+  @js.native
+  sealed trait revokeSponsorship extends js.Object
+  
+  @js.native
+  sealed trait revokeSponsorshipDoesNotExist extends js.Object
+  
+  @js.native
+  sealed trait revokeSponsorshipLedgerEntry extends js.Object
+  
+  @js.native
+  sealed trait revokeSponsorshipLowReserve extends js.Object
+  
+  @js.native
+  sealed trait revokeSponsorshipNotSponsor extends js.Object
+  
+  @js.native
+  sealed trait revokeSponsorshipOnlyTransferable extends js.Object
+  
+  @js.native
+  sealed trait revokeSponsorshipSigner extends js.Object
+  
+  @js.native
+  sealed trait revokeSponsorshipSuccess extends js.Object
   
   @js.native
   sealed trait scpMessage extends js.Object
@@ -1255,13 +1501,10 @@ object stellarBaseStrings {
   sealed trait scpStPrepare extends js.Object
   
   @js.native
-  sealed trait setOption extends js.Object
-  
-  @js.native
   sealed trait setOptions extends js.Object
   
   @js.native
-  sealed trait setOptionsBadFlag extends js.Object
+  sealed trait setOptionsBadFlags extends js.Object
   
   @js.native
   sealed trait setOptionsBadSigner extends js.Object
@@ -1285,7 +1528,7 @@ object stellarBaseStrings {
   sealed trait setOptionsThresholdOutOfRange extends js.Object
   
   @js.native
-  sealed trait setOptionsTooManySigner extends js.Object
+  sealed trait setOptionsTooManySigners extends js.Object
   
   @js.native
   sealed trait setOptionsUnknownFlag extends js.Object
@@ -1340,6 +1583,9 @@ object stellarBaseStrings {
   
   @js.native
   sealed trait txBadSeq extends js.Object
+  
+  @js.native
+  sealed trait txBadSponsorship extends js.Object
   
   @js.native
   sealed trait txFailed extends js.Object

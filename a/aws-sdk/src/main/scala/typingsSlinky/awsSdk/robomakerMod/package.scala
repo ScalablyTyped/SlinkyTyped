@@ -107,6 +107,8 @@ package object robomakerMod {
   
   type Fleets = js.Array[typingsSlinky.awsSdk.robomakerMod.Fleet]
   
+  type FloorplanCount = scala.Double
+  
   type GenericInteger = scala.Double
   
   type GenericString = java.lang.String
@@ -117,7 +119,11 @@ package object robomakerMod {
   
   type Integer = scala.Double
   
+  type InteriorCountPerFloorplan = scala.Double
+  
   type JobDuration = scala.Double
+  
+  type Json = java.lang.String
   
   type LastStartedAt = js.Date
   
@@ -314,9 +320,68 @@ package object robomakerMod {
   
   type TagValue = java.lang.String
   
+  type TemplateName = java.lang.String
+  
+  type TemplateSummaries = js.Array[typingsSlinky.awsSdk.robomakerMod.TemplateSummary]
+  
   type Version = java.lang.String
   
   type VersionQualifier = java.lang.String
+  
+  type WorldConfigs = js.Array[typingsSlinky.awsSdk.robomakerMod.WorldConfig]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.InternalServiceError
+    - typingsSlinky.awsSdk.awsSdkStrings.LimitExceeded
+    - typingsSlinky.awsSdk.awsSdkStrings.ResourceNotFound
+    - typingsSlinky.awsSdk.awsSdkStrings.RequestThrottled
+    - typingsSlinky.awsSdk.awsSdkStrings.InvalidInput
+    - typingsSlinky.awsSdk.awsSdkStrings.AccessDenied
+    - java.lang.String
+  */
+  type WorldExportJobErrorCode = typingsSlinky.awsSdk.robomakerMod._WorldExportJobErrorCode | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Pending_
+    - typingsSlinky.awsSdk.awsSdkStrings.Running_
+    - typingsSlinky.awsSdk.awsSdkStrings.Completed_
+    - typingsSlinky.awsSdk.awsSdkStrings.Failed_
+    - typingsSlinky.awsSdk.awsSdkStrings.Canceling_
+    - typingsSlinky.awsSdk.awsSdkStrings.Canceled_
+    - java.lang.String
+  */
+  type WorldExportJobStatus = typingsSlinky.awsSdk.robomakerMod._WorldExportJobStatus | java.lang.String
+  
+  type WorldExportJobSummaries = js.Array[typingsSlinky.awsSdk.robomakerMod.WorldExportJobSummary]
+  
+  type WorldFailures = js.Array[typingsSlinky.awsSdk.robomakerMod.WorldFailure]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.InternalServiceError
+    - typingsSlinky.awsSdk.awsSdkStrings.LimitExceeded
+    - typingsSlinky.awsSdk.awsSdkStrings.ResourceNotFound
+    - typingsSlinky.awsSdk.awsSdkStrings.RequestThrottled
+    - typingsSlinky.awsSdk.awsSdkStrings.InvalidInput
+    - typingsSlinky.awsSdk.awsSdkStrings.AllWorldGenerationFailed
+    - java.lang.String
+  */
+  type WorldGenerationJobErrorCode = typingsSlinky.awsSdk.robomakerMod._WorldGenerationJobErrorCode | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Pending_
+    - typingsSlinky.awsSdk.awsSdkStrings.Running_
+    - typingsSlinky.awsSdk.awsSdkStrings.Completed_
+    - typingsSlinky.awsSdk.awsSdkStrings.Failed_
+    - typingsSlinky.awsSdk.awsSdkStrings.PartialFailed
+    - typingsSlinky.awsSdk.awsSdkStrings.Canceling_
+    - typingsSlinky.awsSdk.awsSdkStrings.Canceled_
+    - java.lang.String
+  */
+  type WorldGenerationJobStatus = typingsSlinky.awsSdk.robomakerMod._WorldGenerationJobStatus | java.lang.String
+  
+  type WorldGenerationJobSummaries = js.Array[typingsSlinky.awsSdk.robomakerMod.WorldGenerationJobSummary]
+  
+  type WorldSummaries = js.Array[typingsSlinky.awsSdk.robomakerMod.WorldSummary]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2018-06-29`

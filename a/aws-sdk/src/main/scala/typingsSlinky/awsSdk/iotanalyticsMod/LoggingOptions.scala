@@ -13,7 +13,7 @@ trait LoggingOptions extends js.Object {
   var enabled: LoggingEnabled = js.native
   
   /**
-    * The logging level. Currently, only "ERROR" is supported.
+    * The logging level. Currently, only ERROR is supported.
     */
   var level: LoggingLevel = js.native
   

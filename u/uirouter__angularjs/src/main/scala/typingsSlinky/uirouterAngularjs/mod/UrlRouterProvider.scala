@@ -1,5 +1,6 @@
 package typingsSlinky.uirouterAngularjs.mod
 
+import typingsSlinky.uirouterCore.commonCommonMod.IInjectable
 import typingsSlinky.uirouterCore.urlInterfaceMod.UrlRuleHandlerFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,5 +18,5 @@ class UrlRouterProvider protected ()
 @js.native
 object UrlRouterProvider extends js.Object {
   
-  def injectableHandler(router: typingsSlinky.uirouterCore.mod.UIRouter, handler: js.Any): UrlRuleHandlerFn = js.native
+  def injectableHandler(router: typingsSlinky.uirouterCore.mod.UIRouter, handler: IInjectable): UrlRuleHandlerFn = js.native
 }

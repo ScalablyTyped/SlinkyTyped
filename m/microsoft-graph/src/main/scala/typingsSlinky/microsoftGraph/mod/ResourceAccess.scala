@@ -14,7 +14,7 @@ trait ResourceAccess extends js.Object {
     * Specifies whether the id property references an oauth2PermissionScopes or an appRole. Possible values are Scope or
     * Role.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[NullableOption[String]] = js.native
 }
 object ResourceAccess {
   
@@ -46,9 +46,12 @@ object ResourceAccess {
     def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: NullableOption[String]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    
+    @scala.inline
+    def setTypeNull: Self = this.set("type", null)
   }
 }

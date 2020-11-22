@@ -7,7 +7,7 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigationStack.anon.Close
 import typingsSlinky.reactNavigationStack.anon.Height
 import typingsSlinky.reactNavigationStack.anon.Horizontal
-import typingsSlinky.reactNavigationStack.anon.Style
+import typingsSlinky.reactNavigationStack.anon.StyleWithAnimatedValue
 import typingsSlinky.reactNavigationStack.vendorTypesMod.GestureDirection
 import typingsSlinky.reactNavigationStack.vendorTypesMod.Layout
 import typingsSlinky.reactNavigationStack.vendorTypesMod.Route
@@ -24,13 +24,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.TransitionPreset & {  index :number,   active :boolean,   focused :boolean,   closing :boolean,   layout :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Layout,   gesture :react-native.react-native.Animated.Value,   scene :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Scene<react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>>,   safeAreaInsetTop :number,   safeAreaInsetRight :number,   safeAreaInsetBottom :number,   safeAreaInsetLeft :number,   cardOverlay :(props : {  style :react-native.react-native.StyleProp<react-native.react-native.ViewStyle>}): react.react.ReactNode | undefined,   cardOverlayEnabled :boolean | undefined,   cardShadowEnabled :boolean | undefined,   cardStyle :react-native.react-native.StyleProp<react-native.react-native.ViewStyle> | undefined, getPreviousScene (props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Scene<react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>> | undefined, getFocusedRoute (): react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>, renderHeader (props : react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/views/Header/HeaderContainer.Props): react.react.ReactNode, renderScene (props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): react.react.ReactNode, onOpenRoute (props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): void, onCloseRoute (props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): void,   onTransitionStart :(props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}, closing : boolean): void | undefined,   onTransitionEnd :(props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}, closing : boolean): void | undefined,   onPageChangeStart :(): void | undefined,   onPageChangeConfirm :(): void | undefined,   onPageChangeCancel :(): void | undefined,   gestureEnabled :boolean | undefined,   gestureResponseDistance :{  vertical :number | undefined,   horizontal :number | undefined} | undefined,   gestureVelocityImpact :number | undefined,   mode :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.StackCardMode,   headerMode :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.StackHeaderMode,   headerShown :boolean,   hasAbsoluteHeader :boolean,   headerHeight :number, onHeaderHeightChange (props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>,   height :number}): void} */
+/* Inlined react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.TransitionPreset & {  index :number,   active :boolean,   focused :boolean,   closing :boolean,   layout :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Layout,   gesture :react-native.react-native.Animated.Value,   scene :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Scene<react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>>,   safeAreaInsetTop :number,   safeAreaInsetRight :number,   safeAreaInsetBottom :number,   safeAreaInsetLeft :number,   cardOverlay :(props : {  style :react-native.react-native.Animated.WithAnimatedValue<react-native.react-native.StyleProp<react-native.react-native.ViewStyle>>}): react.react.ReactNode | undefined,   cardOverlayEnabled :boolean | undefined,   cardShadowEnabled :boolean | undefined,   cardStyle :react-native.react-native.StyleProp<react-native.react-native.ViewStyle> | undefined, getPreviousScene (props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Scene<react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>> | undefined, getFocusedRoute (): react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>, renderHeader (props : react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/views/Header/HeaderContainer.Props): react.react.ReactNode, renderScene (props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): react.react.ReactNode, onOpenRoute (props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): void, onCloseRoute (props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): void,   onTransitionStart :(props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}, closing : boolean): void | undefined,   onTransitionEnd :(props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}, closing : boolean): void | undefined,   onPageChangeStart :(): void | undefined,   onPageChangeConfirm :(): void | undefined,   onPageChangeCancel :(): void | undefined,   onGestureStart :(props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): void | undefined,   onGestureEnd :(props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): void | undefined,   onGestureCancel :(props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>}): void | undefined,   gestureEnabled :boolean | undefined,   gestureResponseDistance :{  vertical :number | undefined,   horizontal :number | undefined} | undefined,   gestureVelocityImpact :number | undefined,   mode :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.StackCardMode,   headerMode :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.StackHeaderMode,   headerShown :boolean,   hasAbsoluteHeader :boolean,   headerHeight :number, onHeaderHeightChange (props : {  route :react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.Route<string>,   height :number}): void,   isParentHeaderShown :boolean} */
 @js.native
 trait Props extends js.Object {
   
   var active: Boolean = js.native
   
-  var cardOverlay: js.UndefOr[js.Function1[/* props */ Style, ReactElement]] = js.native
+  var cardOverlay: js.UndefOr[js.Function1[/* props */ StyleWithAnimatedValue, ReactElement]] = js.native
   
   var cardOverlayEnabled: js.UndefOr[Boolean] = js.native
   
@@ -79,11 +79,19 @@ trait Props extends js.Object {
   
   var index: Double = js.native
   
+  var isParentHeaderShown: Boolean = js.native
+  
   var layout: Layout = js.native
   
   var mode: StackCardMode = js.native
   
   def onCloseRoute(props: typingsSlinky.reactNavigationStack.anon.Route): Unit = js.native
+  
+  var onGestureCancel: js.UndefOr[js.Function1[/* props */ typingsSlinky.reactNavigationStack.anon.Route, Unit]] = js.native
+  
+  var onGestureEnd: js.UndefOr[js.Function1[/* props */ typingsSlinky.reactNavigationStack.anon.Route, Unit]] = js.native
+  
+  var onGestureStart: js.UndefOr[js.Function1[/* props */ typingsSlinky.reactNavigationStack.anon.Route, Unit]] = js.native
   
   def onHeaderHeightChange(props: Height): Unit = js.native
   
@@ -148,6 +156,7 @@ object Props {
     headerShown: Boolean,
     headerStyleInterpolator: /* props */ StackHeaderInterpolationProps => StackHeaderInterpolatedStyle,
     index: Double,
+    isParentHeaderShown: Boolean,
     layout: Layout,
     mode: StackCardMode,
     onCloseRoute: typingsSlinky.reactNavigationStack.anon.Route => Unit,
@@ -162,7 +171,7 @@ object Props {
     scene: Scene[Route[String]],
     transitionSpec: Close
   ): Props = {
-    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], cardStyleInterpolator = js.Any.fromFunction1(cardStyleInterpolator), closing = closing.asInstanceOf[js.Any], focused = focused.asInstanceOf[js.Any], gesture = gesture.asInstanceOf[js.Any], gestureDirection = gestureDirection.asInstanceOf[js.Any], getFocusedRoute = js.Any.fromFunction0(getFocusedRoute), getPreviousScene = js.Any.fromFunction1(getPreviousScene), hasAbsoluteHeader = hasAbsoluteHeader.asInstanceOf[js.Any], headerHeight = headerHeight.asInstanceOf[js.Any], headerMode = headerMode.asInstanceOf[js.Any], headerShown = headerShown.asInstanceOf[js.Any], headerStyleInterpolator = js.Any.fromFunction1(headerStyleInterpolator), index = index.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], onCloseRoute = js.Any.fromFunction1(onCloseRoute), onHeaderHeightChange = js.Any.fromFunction1(onHeaderHeightChange), onOpenRoute = js.Any.fromFunction1(onOpenRoute), renderHeader = js.Any.fromFunction1(renderHeader), renderScene = js.Any.fromFunction1(renderScene), safeAreaInsetBottom = safeAreaInsetBottom.asInstanceOf[js.Any], safeAreaInsetLeft = safeAreaInsetLeft.asInstanceOf[js.Any], safeAreaInsetRight = safeAreaInsetRight.asInstanceOf[js.Any], safeAreaInsetTop = safeAreaInsetTop.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any], transitionSpec = transitionSpec.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], cardStyleInterpolator = js.Any.fromFunction1(cardStyleInterpolator), closing = closing.asInstanceOf[js.Any], focused = focused.asInstanceOf[js.Any], gesture = gesture.asInstanceOf[js.Any], gestureDirection = gestureDirection.asInstanceOf[js.Any], getFocusedRoute = js.Any.fromFunction0(getFocusedRoute), getPreviousScene = js.Any.fromFunction1(getPreviousScene), hasAbsoluteHeader = hasAbsoluteHeader.asInstanceOf[js.Any], headerHeight = headerHeight.asInstanceOf[js.Any], headerMode = headerMode.asInstanceOf[js.Any], headerShown = headerShown.asInstanceOf[js.Any], headerStyleInterpolator = js.Any.fromFunction1(headerStyleInterpolator), index = index.asInstanceOf[js.Any], isParentHeaderShown = isParentHeaderShown.asInstanceOf[js.Any], layout = layout.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], onCloseRoute = js.Any.fromFunction1(onCloseRoute), onHeaderHeightChange = js.Any.fromFunction1(onHeaderHeightChange), onOpenRoute = js.Any.fromFunction1(onOpenRoute), renderHeader = js.Any.fromFunction1(renderHeader), renderScene = js.Any.fromFunction1(renderScene), safeAreaInsetBottom = safeAreaInsetBottom.asInstanceOf[js.Any], safeAreaInsetLeft = safeAreaInsetLeft.asInstanceOf[js.Any], safeAreaInsetRight = safeAreaInsetRight.asInstanceOf[js.Any], safeAreaInsetTop = safeAreaInsetTop.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any], transitionSpec = transitionSpec.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
   
@@ -224,6 +233,9 @@ object Props {
     def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setIsParentHeaderShown(value: Boolean): Self = this.set("isParentHeaderShown", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setLayout(value: Layout): Self = this.set("layout", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -263,7 +275,7 @@ object Props {
     def setTransitionSpec(value: Close): Self = this.set("transitionSpec", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCardOverlay(value: /* props */ Style => ReactElement): Self = this.set("cardOverlay", js.Any.fromFunction1(value))
+    def setCardOverlay(value: /* props */ StyleWithAnimatedValue => ReactElement): Self = this.set("cardOverlay", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCardOverlay: Self = this.set("cardOverlay", js.undefined)
@@ -306,6 +318,24 @@ object Props {
     
     @scala.inline
     def deleteGestureVelocityImpact: Self = this.set("gestureVelocityImpact", js.undefined)
+    
+    @scala.inline
+    def setOnGestureCancel(value: /* props */ typingsSlinky.reactNavigationStack.anon.Route => Unit): Self = this.set("onGestureCancel", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnGestureCancel: Self = this.set("onGestureCancel", js.undefined)
+    
+    @scala.inline
+    def setOnGestureEnd(value: /* props */ typingsSlinky.reactNavigationStack.anon.Route => Unit): Self = this.set("onGestureEnd", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnGestureEnd: Self = this.set("onGestureEnd", js.undefined)
+    
+    @scala.inline
+    def setOnGestureStart(value: /* props */ typingsSlinky.reactNavigationStack.anon.Route => Unit): Self = this.set("onGestureStart", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnGestureStart: Self = this.set("onGestureStart", js.undefined)
     
     @scala.inline
     def setOnPageChangeCancel(value: () => Unit): Self = this.set("onPageChangeCancel", js.Any.fromFunction0(value))

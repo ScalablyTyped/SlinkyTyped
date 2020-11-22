@@ -14,7 +14,7 @@ trait DefaultManagedAppProtection extends ManagedAppProtection {
   var appDataEncryptionType: js.UndefOr[ManagedAppDataEncryptionType] = js.native
   
   // List of apps to which the policy is deployed.
-  var apps: js.UndefOr[js.Array[ManagedMobileApp]] = js.native
+  var apps: js.UndefOr[NullableOption[js.Array[ManagedMobileApp]]] = js.native
   
   // A set of string key and string value pairs to be sent to the affected users, unalterned by this service
   var customSettings: js.UndefOr[js.Array[KeyValuePair]] = js.native
@@ -23,7 +23,7 @@ trait DefaultManagedAppProtection extends ManagedAppProtection {
   var deployedAppCount: js.UndefOr[Double] = js.native
   
   // Navigation property to deployment summary of the configuration.
-  var deploymentSummary: js.UndefOr[ManagedAppPolicyDeploymentSummary] = js.native
+  var deploymentSummary: js.UndefOr[NullableOption[ManagedAppPolicyDeploymentSummary]] = js.native
   
   // When this setting is enabled, app level encryption is disabled if device level encryption is enabled. (Android only)
   var disableAppEncryptionIfDeviceEncryptionIsEnabled: js.UndefOr[Boolean] = js.native
@@ -38,13 +38,13 @@ trait DefaultManagedAppProtection extends ManagedAppProtection {
     * Define the oldest required Android security patch level a user can have to gain secure access to the app. (Android
     * only)
     */
-  var minimumRequiredPatchVersion: js.UndefOr[String] = js.native
+  var minimumRequiredPatchVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Versions less than the specified version will block the managed app from accessing company data. (iOS Only)
-  var minimumRequiredSdkVersion: js.UndefOr[String] = js.native
+  var minimumRequiredSdkVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Define the oldest recommended Android security patch level a user can have for secure access to the app. (Android only)
-  var minimumWarningPatchVersion: js.UndefOr[String] = js.native
+  var minimumWarningPatchVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates whether screen capture is blocked. (Android only)
   var screenCaptureBlocked: js.UndefOr[Boolean] = js.native
@@ -82,10 +82,13 @@ object DefaultManagedAppProtection {
     def setAppsVarargs(value: ManagedMobileApp*): Self = this.set("apps", js.Array(value :_*))
     
     @scala.inline
-    def setApps(value: js.Array[ManagedMobileApp]): Self = this.set("apps", value.asInstanceOf[js.Any])
+    def setApps(value: NullableOption[js.Array[ManagedMobileApp]]): Self = this.set("apps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteApps: Self = this.set("apps", js.undefined)
+    
+    @scala.inline
+    def setAppsNull: Self = this.set("apps", null)
     
     @scala.inline
     def setCustomSettingsVarargs(value: KeyValuePair*): Self = this.set("customSettings", js.Array(value :_*))
@@ -103,10 +106,13 @@ object DefaultManagedAppProtection {
     def deleteDeployedAppCount: Self = this.set("deployedAppCount", js.undefined)
     
     @scala.inline
-    def setDeploymentSummary(value: ManagedAppPolicyDeploymentSummary): Self = this.set("deploymentSummary", value.asInstanceOf[js.Any])
+    def setDeploymentSummary(value: NullableOption[ManagedAppPolicyDeploymentSummary]): Self = this.set("deploymentSummary", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeploymentSummary: Self = this.set("deploymentSummary", js.undefined)
+    
+    @scala.inline
+    def setDeploymentSummaryNull: Self = this.set("deploymentSummary", null)
     
     @scala.inline
     def setDisableAppEncryptionIfDeviceEncryptionIsEnabled(value: Boolean): Self = this.set("disableAppEncryptionIfDeviceEncryptionIsEnabled", value.asInstanceOf[js.Any])
@@ -127,22 +133,31 @@ object DefaultManagedAppProtection {
     def deleteFaceIdBlocked: Self = this.set("faceIdBlocked", js.undefined)
     
     @scala.inline
-    def setMinimumRequiredPatchVersion(value: String): Self = this.set("minimumRequiredPatchVersion", value.asInstanceOf[js.Any])
+    def setMinimumRequiredPatchVersion(value: NullableOption[String]): Self = this.set("minimumRequiredPatchVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumRequiredPatchVersion: Self = this.set("minimumRequiredPatchVersion", js.undefined)
     
     @scala.inline
-    def setMinimumRequiredSdkVersion(value: String): Self = this.set("minimumRequiredSdkVersion", value.asInstanceOf[js.Any])
+    def setMinimumRequiredPatchVersionNull: Self = this.set("minimumRequiredPatchVersion", null)
+    
+    @scala.inline
+    def setMinimumRequiredSdkVersion(value: NullableOption[String]): Self = this.set("minimumRequiredSdkVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumRequiredSdkVersion: Self = this.set("minimumRequiredSdkVersion", js.undefined)
     
     @scala.inline
-    def setMinimumWarningPatchVersion(value: String): Self = this.set("minimumWarningPatchVersion", value.asInstanceOf[js.Any])
+    def setMinimumRequiredSdkVersionNull: Self = this.set("minimumRequiredSdkVersion", null)
+    
+    @scala.inline
+    def setMinimumWarningPatchVersion(value: NullableOption[String]): Self = this.set("minimumWarningPatchVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumWarningPatchVersion: Self = this.set("minimumWarningPatchVersion", js.undefined)
+    
+    @scala.inline
+    def setMinimumWarningPatchVersionNull: Self = this.set("minimumWarningPatchVersion", null)
     
     @scala.inline
     def setScreenCaptureBlocked(value: Boolean): Self = this.set("screenCaptureBlocked", value.asInstanceOf[js.Any])

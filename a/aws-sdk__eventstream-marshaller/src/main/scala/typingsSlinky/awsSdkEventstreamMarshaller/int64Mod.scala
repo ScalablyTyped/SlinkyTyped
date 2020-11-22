@@ -4,15 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/eventstream-marshaller/build/Int64", JSImport.Namespace)
+@JSImport("@aws-sdk/eventstream-marshaller/dist/cjs/Int64", JSImport.Namespace)
 @js.native
 object int64Mod extends js.Object {
   
   @js.native
-  class Int64 protected () extends js.Object {
+  class Int64 protected ()
+    extends typingsSlinky.awsSdkTypes.eventStreamMod.Int64 {
     def this(bytes: js.typedarray.Uint8Array) = this()
-    
-    val bytes: js.typedarray.Uint8Array = js.native
   }
   /* static members */
   @js.native

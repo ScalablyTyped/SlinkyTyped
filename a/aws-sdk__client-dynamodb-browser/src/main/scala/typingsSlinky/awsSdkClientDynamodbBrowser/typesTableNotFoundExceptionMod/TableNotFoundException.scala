@@ -6,35 +6,29 @@ import typingsSlinky.awsSdkClientDynamodbBrowser.describeContinuousBackupsExcept
 import typingsSlinky.awsSdkClientDynamodbBrowser.restoreTableToPointInTimeExceptionsUnionMod.RestoreTableToPointInTimeExceptionsUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.updateContinuousBackupsExceptionsUnionMod.UpdateContinuousBackupsExceptionsUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.updateGlobalTableExceptionsUnionMod.UpdateGlobalTableExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_TableNotFoundExceptionDetails> * / any */ @js.native
 trait TableNotFoundException
-  extends ServiceException[TableNotFoundExceptionDetails]
-     with CreateBackupExceptionsUnion
+  extends CreateBackupExceptionsUnion
      with CreateGlobalTableExceptionsUnion
      with DescribeContinuousBackupsExceptionsUnion
      with RestoreTableToPointInTimeExceptionsUnion
      with UpdateContinuousBackupsExceptionsUnion
      with UpdateGlobalTableExceptionsUnion {
   
-  @JSName("name")
-  var name_TableNotFoundException: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.TableNotFoundException = js.native
+  var name: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.TableNotFoundException = js.native
 }
 object TableNotFoundException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: TableNotFoundExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.TableNotFoundException
   ): TableNotFoundException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableNotFoundException]
   }
   

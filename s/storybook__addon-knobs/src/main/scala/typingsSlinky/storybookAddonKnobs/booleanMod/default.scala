@@ -26,5 +26,5 @@ object default extends js.Object {
   
   var propTypes: js.UndefOr[WeakValidationMapBooleanT] = js.native
   
-  var serialize: js.Function1[/* value */ Boolean, String | Null] = js.native
+  var serialize: js.Function1[/* value */ BooleanTypeKnobValue, String | Null] = js.native
 }

@@ -11,26 +11,20 @@ trait LightingProperties extends js.Object {
     * The time and date for which the sun position and light direction is computed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Lighting.html#date)
-    *
-    * @default null
     */
   var date: js.UndefOr[DateProperties] = js.native
   
   /**
-    * Indicates whether to show shadows cast by the sun. Shadows are only displayed for real world 3D objects. Terrain doesn't cast shadows. In local scenes at small zoom levels, shadows are not displayed.
+    * Indicates whether to show shadows cast by the sun.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Lighting.html#directShadowsEnabled)
-    *
-    * @default false
     */
   var directShadowsEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * The UTC time zone offset in hours that should be displayed in the UI to represent the date. This value does not have an impact on the actual lighting of the scene.
+    * The UTC time zone offset in hours that should be displayed in the UI to represent the date.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Lighting.html#displayUTCOffset)
-    *
-    * @default null
     */
   var displayUTCOffset: js.UndefOr[Double] = js.native
 }

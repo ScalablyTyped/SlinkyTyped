@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RemoteLockActionResult extends DeviceActionResult {
   
   // Pin to unlock the client
-  var unlockPin: js.UndefOr[String] = js.native
+  var unlockPin: js.UndefOr[NullableOption[String]] = js.native
 }
 object RemoteLockActionResult {
   
@@ -34,9 +34,12 @@ object RemoteLockActionResult {
     }
     
     @scala.inline
-    def setUnlockPin(value: String): Self = this.set("unlockPin", value.asInstanceOf[js.Any])
+    def setUnlockPin(value: NullableOption[String]): Self = this.set("unlockPin", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUnlockPin: Self = this.set("unlockPin", js.undefined)
+    
+    @scala.inline
+    def setUnlockPinNull: Self = this.set("unlockPin", null)
   }
 }

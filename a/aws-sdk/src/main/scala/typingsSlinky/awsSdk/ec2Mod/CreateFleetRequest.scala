@@ -43,7 +43,7 @@ trait CreateFleetRequest extends js.Object {
   var SpotOptions: js.UndefOr[SpotOptionsRequest] = js.native
   
   /**
-    * The key-value pair for tagging the EC2 Fleet request on creation. The value for ResourceType must be fleet, otherwise the fleet request fails. To tag instances at launch, specify the tags in the launch template. For information about tagging after launch, see Tagging Your Resources. 
+    * The key-value pair for tagging the EC2 Fleet request on creation. The value for ResourceType must be fleet, otherwise the fleet request fails. To tag instances at launch, specify the tags in the launch template. For information about tagging after launch, see Tagging your resources.
     */
   var TagSpecifications: js.UndefOr[TagSpecificationList] = js.native
   
@@ -58,7 +58,7 @@ trait CreateFleetRequest extends js.Object {
   var TerminateInstancesWithExpiration: js.UndefOr[Boolean] = js.native
   
   /**
-    * The type of the request. By default, the EC2 Fleet places an asynchronous request for your desired capacity, and maintains it by replenishing interrupted Spot Instances (maintain). A value of instant places a synchronous one-time request, and returns errors for any instances that could not be launched. A value of request places an asynchronous one-time request without maintaining capacity or submitting requests in alternative capacity pools if capacity is unavailable. For more information, see EC2 Fleet Request Types in the Amazon Elastic Compute Cloud User Guide.
+    * The type of request. The default value is maintain.    maintain - The EC2 Fleet plaees an asynchronous request for your desired capacity, and continues to maintain your desired Spot capacity by replenishing interrupted Spot Instances.    request - The EC2 Fleet places an asynchronous one-time request for your desired capacity, but does submit Spot requests in alternative capacity pools if Spot capacity is unavailable, and does not maintain Spot capacity if Spot Instances are interrupted.    instant - The EC2 Fleet places a synchronous one-time request for your desired capacity, and returns errors for any instances that could not be launched.   For more information, see EC2 Fleet request types in the Amazon Elastic Compute Cloud User Guide.
     */
   var Type: js.UndefOr[FleetType] = js.native
   

@@ -35,9 +35,6 @@ object Carousel {
     def contentClassName(value: String): this.type = set("contentClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dotsContainerClassName(value: String): this.type = set("dotsContainerClassName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def footer(value: js.Any): this.type = set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -45,6 +42,9 @@ object Carousel {
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def indicatorsContentClassName(value: String): this.type = set("indicatorsContentClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def itemTemplate(value: js.Any): this.type = set("itemTemplate", value.asInstanceOf[js.Any])

@@ -10,6 +10,7 @@ import typingsSlinky.antdMobileRn.antdMobileRnStrings.primary
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.small
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.warning
 import typingsSlinky.antdMobileRn.buttonIndexNativeMod.ButtonProps
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -18,7 +19,6 @@ import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -153,7 +153,7 @@ object Button {
     def onHideUnderlay(value: () => Unit): this.type = set("onHideUnderlay", js.Any.fromFunction0(value))
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onLongPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onLongPress", js.Any.fromFunction1(value))

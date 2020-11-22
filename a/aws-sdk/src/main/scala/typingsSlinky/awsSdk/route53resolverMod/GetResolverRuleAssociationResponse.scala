@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetResolverRuleAssociationResponse extends js.Object {
   
   /**
-    * Information about the resolver rule association that you specified in a GetResolverRuleAssociation request.
+    * Information about the Resolver rule association that you specified in a GetResolverRuleAssociation request.
     */
   var ResolverRuleAssociation: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.ResolverRuleAssociation] = js.native
 }

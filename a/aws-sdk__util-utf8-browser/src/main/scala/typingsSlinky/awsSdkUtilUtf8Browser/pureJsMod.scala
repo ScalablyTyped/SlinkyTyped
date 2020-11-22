@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/util-utf8-browser/build/pureJs", JSImport.Namespace)
+@JSImport("@aws-sdk/util-utf8-browser/dist/cjs/pureJs", JSImport.Namespace)
 @js.native
 object pureJsMod extends js.Object {
   

@@ -38,8 +38,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.rebass.rebassStrings.`additions removals`
 import typingsSlinky.rebass.rebassStrings.`additions text`
 import typingsSlinky.rebass.rebassStrings.`inline`
+import typingsSlinky.rebass.rebassStrings.`removals additions`
+import typingsSlinky.rebass.rebassStrings.`removals text`
+import typingsSlinky.rebass.rebassStrings.`text additions`
+import typingsSlinky.rebass.rebassStrings.`text removals`
 import typingsSlinky.rebass.rebassStrings.additions
 import typingsSlinky.rebass.rebassStrings.all
 import typingsSlinky.rebass.rebassStrings.ascending
@@ -123,7 +128,7 @@ trait ButtonProps extends js.Object {
     */
   var alignSelf: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -204,7 +209,9 @@ trait ButtonProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -337,7 +344,7 @@ trait ButtonProps extends js.Object {
     */
   var display: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -356,7 +363,7 @@ trait ButtonProps extends js.Object {
     */
   var flex: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -405,7 +412,7 @@ trait ButtonProps extends js.Object {
     */
   var height: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -442,7 +449,7 @@ trait ButtonProps extends js.Object {
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyParams: js.UndefOr[String] = js.native
   
@@ -500,7 +507,7 @@ trait ButtonProps extends js.Object {
     */
   var maxHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -515,7 +522,7 @@ trait ButtonProps extends js.Object {
     */
   var maxWidth: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -539,7 +546,7 @@ trait ButtonProps extends js.Object {
     */
   var minHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -554,7 +561,7 @@ trait ButtonProps extends js.Object {
     */
   var minWidth: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -750,7 +757,7 @@ trait ButtonProps extends js.Object {
     */
   var opacity: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -767,7 +774,7 @@ trait ButtonProps extends js.Object {
     */
   var order: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -780,7 +787,7 @@ trait ButtonProps extends js.Object {
     */
   var overflow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -793,7 +800,7 @@ trait ButtonProps extends js.Object {
     */
   var overflowX: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -806,7 +813,7 @@ trait ButtonProps extends js.Object {
     */
   var overflowY: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -907,7 +914,7 @@ trait ButtonProps extends js.Object {
   
   var size: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -974,7 +981,7 @@ trait ButtonProps extends js.Object {
     */
   var verticalAlign: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -991,7 +998,7 @@ trait ButtonProps extends js.Object {
     */
   var width: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -1059,7 +1066,7 @@ object ButtonProps {
     @scala.inline
     def setAlignSelf(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
           RequiredTheme
         ]
     ): Self = this.set("alignSelf", value.asInstanceOf[js.Any])
@@ -1299,7 +1306,9 @@ object ButtonProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1652,7 +1661,7 @@ object ButtonProps {
     @scala.inline
     def setDisplay(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
           RequiredTheme
         ]
     ): Self = this.set("display", value.asInstanceOf[js.Any])
@@ -1687,7 +1696,7 @@ object ButtonProps {
     @scala.inline
     def setFlex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("flex", value.asInstanceOf[js.Any])
@@ -1776,7 +1785,7 @@ object ButtonProps {
     @scala.inline
     def setHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("height", value.asInstanceOf[js.Any])
@@ -1888,6 +1897,9 @@ object ButtonProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyParams(value: String): Self = this.set("keyParams", value.asInstanceOf[js.Any])
@@ -2063,7 +2075,7 @@ object ButtonProps {
     @scala.inline
     def setMaxHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("maxHeight", value.asInstanceOf[js.Any])
@@ -2086,7 +2098,7 @@ object ButtonProps {
     @scala.inline
     def setMaxWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
@@ -2139,7 +2151,7 @@ object ButtonProps {
     @scala.inline
     def setMinHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("minHeight", value.asInstanceOf[js.Any])
@@ -2162,7 +2174,7 @@ object ButtonProps {
     @scala.inline
     def setMinWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("minWidth", value.asInstanceOf[js.Any])
@@ -2743,7 +2755,7 @@ object ButtonProps {
     @scala.inline
     def setOpacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): Self = this.set("opacity", value.asInstanceOf[js.Any])
@@ -2772,7 +2784,7 @@ object ButtonProps {
     @scala.inline
     def setOrder(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
           RequiredTheme
         ]
     ): Self = this.set("order", value.asInstanceOf[js.Any])
@@ -2789,7 +2801,7 @@ object ButtonProps {
     @scala.inline
     def setOverflow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflow", value.asInstanceOf[js.Any])
@@ -2806,7 +2818,7 @@ object ButtonProps {
     @scala.inline
     def setOverflowX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflowX", value.asInstanceOf[js.Any])
@@ -2823,7 +2835,7 @@ object ButtonProps {
     @scala.inline
     def setOverflowY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflowY", value.asInstanceOf[js.Any])
@@ -3173,7 +3185,7 @@ object ButtonProps {
     @scala.inline
     def setSize(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("size", value.asInstanceOf[js.Any])
@@ -3358,7 +3370,7 @@ object ButtonProps {
     @scala.inline
     def setVerticalAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
@@ -3381,7 +3393,7 @@ object ButtonProps {
     @scala.inline
     def setWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("width", value.asInstanceOf[js.Any])

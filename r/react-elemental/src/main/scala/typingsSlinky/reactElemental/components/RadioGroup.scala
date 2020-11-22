@@ -25,8 +25,13 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.FormEventHandler
 import typingsSlinky.reactElemental.anon.Disabled
 import typingsSlinky.reactElemental.mod.RadioGroupProps
+import typingsSlinky.reactElemental.reactElementalStrings.`additions removals`
 import typingsSlinky.reactElemental.reactElementalStrings.`additions text`
 import typingsSlinky.reactElemental.reactElementalStrings.`inline`
+import typingsSlinky.reactElemental.reactElementalStrings.`removals additions`
+import typingsSlinky.reactElemental.reactElementalStrings.`removals text`
+import typingsSlinky.reactElemental.reactElementalStrings.`text additions`
+import typingsSlinky.reactElemental.reactElementalStrings.`text removals`
 import typingsSlinky.reactElemental.reactElementalStrings.additions
 import typingsSlinky.reactElemental.reactElementalStrings.all
 import typingsSlinky.reactElemental.reactElementalStrings.ascending
@@ -200,7 +205,9 @@ object RadioGroup {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

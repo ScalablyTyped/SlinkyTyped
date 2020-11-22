@@ -17,6 +17,11 @@ object spotLightShadowMod extends js.Object {
     @JSName("camera")
     var camera_SpotLightShadow: PerspectiveCamera = js.native
     
+    /**
+    	 * @default 1
+    	 */
+    var focus: Double = js.native
+    
     val isSpotLightShadow: `true` = js.native
   }
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`17`
+import typingsSlinky.octokitTypes.anon.`16`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ReposGetCommunityProfileMetricsEndpoint extends js.Object {
   
-  var mediaType: `17` = js.native
+  var mediaType: `16` = js.native
   
   var owner: String = js.native
   
@@ -18,7 +18,7 @@ trait ReposGetCommunityProfileMetricsEndpoint extends js.Object {
 object ReposGetCommunityProfileMetricsEndpoint {
   
   @scala.inline
-  def apply(mediaType: `17`, owner: String, repo: String): ReposGetCommunityProfileMetricsEndpoint = {
+  def apply(mediaType: `16`, owner: String, repo: String): ReposGetCommunityProfileMetricsEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposGetCommunityProfileMetricsEndpoint]
   }
@@ -39,7 +39,7 @@ object ReposGetCommunityProfileMetricsEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `17`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `16`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

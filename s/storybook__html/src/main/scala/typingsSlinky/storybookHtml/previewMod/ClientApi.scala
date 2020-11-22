@@ -6,6 +6,7 @@ import typingsSlinky.storybookAddons.typesMod.DecoratorFunction
 import typingsSlinky.storybookAddons.typesMod.Loadable
 import typingsSlinky.storybookAddons.typesMod.Parameters
 import typingsSlinky.storybookAddons.typesMod.StoryApi
+import typingsSlinky.storybookAddons.typesMod.StoryKind
 import typingsSlinky.storybookHtml.typesMod.IStorybookSection
 import typingsSlinky.storybookHtml.typesMod.StoryFnHtmlReturnType
 import scala.scalajs.js
@@ -39,7 +40,7 @@ object ClientApi {
     getStorybook: () => js.Array[IStorybookSection],
     raw: () => js.Any,
     setAddon: js.Any => Unit,
-    storiesOf: (String, NodeModule) => StoryApi[StoryFnHtmlReturnType]
+    storiesOf: (StoryKind, NodeModule) => StoryApi[StoryFnHtmlReturnType]
   ): ClientApi = {
     val __obj = js.Dynamic.literal(addDecorator = js.Any.fromFunction1(addDecorator), addParameters = js.Any.fromFunction1(addParameters), clearDecorators = js.Any.fromFunction0(clearDecorators), configure = js.Any.fromFunction2(configure), forceReRender = js.Any.fromFunction0(forceReRender), getStorybook = js.Any.fromFunction0(getStorybook), raw = js.Any.fromFunction0(raw), setAddon = js.Any.fromFunction1(setAddon), storiesOf = js.Any.fromFunction2(storiesOf))
     __obj.asInstanceOf[ClientApi]

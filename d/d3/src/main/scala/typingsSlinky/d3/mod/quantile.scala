@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object quantile extends js.Object {
   
-  def apply[T /* <: Numeric */](array: js.Iterable[js.UndefOr[T | Null]], p: Double): js.UndefOr[Double] = js.native
+  def apply[T /* <: Numeric */](iterable: js.Iterable[js.UndefOr[T | Null]], p: Double): js.UndefOr[Double] = js.native
   def apply[T](
-    array: js.Iterable[T],
+    iterable: js.Iterable[T],
     p: Double,
     accessor: js.Function3[/* element */ T, /* i */ Double, /* array */ js.Iterable[T], js.UndefOr[Double | Null]]
   ): js.UndefOr[Double] = js.native

@@ -5,15 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SubMesh
-  extends BaseSubMesh
-     with ICullable {
+trait SubMesh extends ICullable {
   
   /**
     * Returns true if this submesh covers the entire parent mesh
     * @ignorenaming
     */
   def IsGlobal: Boolean = js.native
+  
+  var _IsMultiMaterial: js.Any = js.native
   
   /** @hidden */
   var _alphaIndex: Double = js.native
@@ -27,6 +27,9 @@ trait SubMesh
   
   /** @hidden */
   var _distanceToCamera: Double = js.native
+  
+  /** @hidden */
+  var _effectOverride: Nullable[Effect] = js.native
   
   /**
     * @hidden
@@ -58,6 +61,12 @@ trait SubMesh
   
   /** @hidden */
   var _linesIndexCount: Double = js.native
+  
+  /** @hidden */
+  var _materialDefines: Nullable[MaterialDefines] = js.native
+  
+  /** @hidden */
+  var _materialEffect: Nullable[Effect] = js.native
   
   var _mesh: js.Any = js.native
   
@@ -94,6 +103,11 @@ trait SubMesh
   def dispose(): Unit = js.native
   
   /**
+    * Gets associated effect
+    */
+  def effect: Nullable[Effect] = js.native
+  
+  /**
     * Returns the submesh BoudingInfo object
     * @returns current bounding info (or mesh's one if the submesh is global)
     */
@@ -104,6 +118,12 @@ trait SubMesh
     * @returns the string "SubMesh".
     */
   def getClassName(): String = js.native
+  
+  /**
+    * Returns the effective mesh of the submesh
+    * @returns the effective mesh (could be different from parent mesh)
+    */
+  def getEffectiveMesh(): AbstractMesh = js.native
   
   /**
     * Returns the submesh material
@@ -123,6 +143,12 @@ trait SubMesh
     */
   def getRenderingMesh(): Mesh = js.native
   
+  /**
+    * Returns the replacement mesh of the submesh
+    * @returns the replacement mesh (could be different from parent mesh)
+    */
+  def getReplacementMesh(): Nullable[AbstractMesh] = js.native
+  
   /** indices count */
   var indexCount: Double = js.native
   
@@ -134,7 +160,7 @@ trait SubMesh
     * @param ray defines the ray to test
     * @param positions defines mesh's positions array
     * @param indices defines mesh's indices array
-    * @param fastCheck defines if only bounding info should be used
+    * @param fastCheck defines if the first intersection will be used (and not the closest)
     * @param trianglePredicate defines an optional predicate used to select faces when a mesh intersection is detected
     * @returns intersection info or null if no intersection
     */
@@ -154,6 +180,15 @@ trait SubMesh
     fastCheck: Boolean,
     trianglePredicate: TrianglePickingPredicate
   ): Nullable[IntersectionInfo] = js.native
+  
+  /**
+    * Gets material defines used by the effect associated to the sub mesh
+    */
+  def materialDefines: Nullable[MaterialDefines] = js.native
+  /**
+    * Sets material defines used by the effect associated to the sub mesh
+    */
+  def materialDefines_=(defines: Nullable[MaterialDefines]): Unit = js.native
   
   /** the material index to use */
   var materialIndex: Double = js.native
@@ -179,6 +214,14 @@ trait SubMesh
     * @returns the SubMesh
     */
   def setBoundingInfo(boundingInfo: BoundingInfo): SubMesh = js.native
+  
+  /**
+    * Sets associated effect (effect used to render this submesh)
+    * @param effect defines the effect to associate with
+    * @param defines defines the set of defines used to compile this effect
+    */
+  def setEffect(effect: Nullable[Effect]): Unit = js.native
+  def setEffect(effect: Nullable[Effect], defines: Nullable[MaterialDefines]): Unit = js.native
   
   /**
     * Updates the submesh BoundingInfo

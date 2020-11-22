@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__tree
 
-Typings are for version 2.1.2
+Typings are for version 2.4.3
 
 ## Library description:
 A package for creating an accessible tree component following the tree role.

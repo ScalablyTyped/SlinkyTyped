@@ -1,6 +1,7 @@
 package typingsSlinky.ol.canvasMod
 
 import typingsSlinky.ol.fillMod.default
+import typingsSlinky.ol.sizeMod.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ trait TextState extends js.Object {
   
   var placement: js.UndefOr[String] = js.native
   
-  var scale: js.UndefOr[Double] = js.native
+  var scale: js.UndefOr[Size] = js.native
   
   var textAlign: js.UndefOr[String] = js.native
   
@@ -97,7 +98,7 @@ object TextState {
     def deletePlacement: Self = this.set("placement", js.undefined)
     
     @scala.inline
-    def setScale(value: Double): Self = this.set("scale", value.asInstanceOf[js.Any])
+    def setScale(value: Size): Self = this.set("scale", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteScale: Self = this.set("scale", js.undefined)

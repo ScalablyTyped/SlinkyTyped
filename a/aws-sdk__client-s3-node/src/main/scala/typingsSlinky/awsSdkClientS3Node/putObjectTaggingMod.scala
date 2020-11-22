@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientS3Node
 
-import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object putObjectTaggingMod extends js.Object {
   
-  val PutObjectTagging: OperationModel = js.native
+  val PutObjectTagging: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _Operation_ */ js.Any = js.native
 }

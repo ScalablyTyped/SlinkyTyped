@@ -18,6 +18,11 @@ trait Datastore extends js.Object {
   var creationTime: js.UndefOr[js.Date] = js.native
   
   /**
+    * The last time when a new message arrived in the data store. AWS IoT Analytics updates this value at most once per minute for one data store. Hence, the lastMessageArrivalTime value is an approximation. This feature only applies to messages that arrived in the data store after October 23, 2020. 
+    */
+  var lastMessageArrivalTime: js.UndefOr[js.Date] = js.native
+  
+  /**
     * The last time the data store was updated.
     */
   var lastUpdateTime: js.UndefOr[js.Date] = js.native
@@ -28,7 +33,7 @@ trait Datastore extends js.Object {
   var name: js.UndefOr[DatastoreName] = js.native
   
   /**
-    * How long, in days, message data is kept for the data store. When "customerManagedS3" storage is selected, this parameter is ignored.
+    * How long, in days, message data is kept for the data store. When customerManagedS3 storage is selected, this parameter is ignored.
     */
   var retentionPeriod: js.UndefOr[RetentionPeriod] = js.native
   
@@ -38,7 +43,7 @@ trait Datastore extends js.Object {
   var status: js.UndefOr[DatastoreStatus] = js.native
   
   /**
-    * Where data store data is stored. You may choose one of "serviceManagedS3" or "customerManagedS3" storage. If not specified, the default is "serviceManagedS3". This cannot be changed after the data store is created.
+    * Where data store data is stored. You can choose one of serviceManagedS3 or customerManagedS3 storage. If not specified, the default is serviceManagedS3. You cannot change this storage option after the data store is created.
     */
   var storage: js.UndefOr[DatastoreStorage] = js.native
 }
@@ -76,6 +81,12 @@ object Datastore {
     
     @scala.inline
     def deleteCreationTime: Self = this.set("creationTime", js.undefined)
+    
+    @scala.inline
+    def setLastMessageArrivalTime(value: js.Date): Self = this.set("lastMessageArrivalTime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLastMessageArrivalTime: Self = this.set("lastMessageArrivalTime", js.undefined)
     
     @scala.inline
     def setLastUpdateTime(value: js.Date): Self = this.set("lastUpdateTime", value.asInstanceOf[js.Any])

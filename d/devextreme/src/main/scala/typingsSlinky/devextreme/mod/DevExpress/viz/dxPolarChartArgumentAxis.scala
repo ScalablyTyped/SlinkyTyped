@@ -24,68 +24,106 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartArgumentAxis extends dxPolarChartCommonAxisSettings {
   
-  /** @name dxPolarChart.Options.argumentAxis.argumentType */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.argumentType]
+    */
   var argumentType: js.UndefOr[datetime | numeric | string_] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.axisDivisionFactor */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.axisDivisionFactor]
+    */
   var axisDivisionFactor: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.categories */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.categories]
+    */
   var categories: js.UndefOr[js.Array[Double | String | js.Date]] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.constantLines */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.constantLines]
+    */
   var constantLines: js.UndefOr[js.Array[dxPolarChartArgumentAxisConstantLines]] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.firstPointOnStartAngle */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.firstPointOnStartAngle]
+    */
   var firstPointOnStartAngle: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.hoverMode */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.hoverMode]
+    */
   var hoverMode: js.UndefOr[allArgumentPoints | none] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.label */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.label]
+    */
   @JSName("label")
   var label_dxPolarChartArgumentAxis: js.UndefOr[dxPolarChartArgumentAxisLabel] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.linearThreshold */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.linearThreshold]
+    */
   var linearThreshold: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.logarithmBase */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.logarithmBase]
+    */
   var logarithmBase: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.minorTickCount */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.minorTickCount]
+    */
   var minorTickCount: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.minorTickInterval */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.minorTickInterval]
+    */
   var minorTickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.minorTick */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.minorTick]
+    */
   @JSName("minorTick")
   var minorTick_dxPolarChartArgumentAxis: js.UndefOr[dxPolarChartArgumentAxisMinorTick] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.originValue */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.originValue]
+    */
   var originValue: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.period */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.period]
+    */
   var period: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.startAngle */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.startAngle]
+    */
   var startAngle: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.strips */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.strips]
+    */
   var strips: js.UndefOr[js.Array[dxPolarChartArgumentAxisStrips]] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.tickInterval */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.tickInterval]
+    */
   var tickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.tick */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.tick]
+    */
   @JSName("tick")
   var tick_dxPolarChartArgumentAxis: js.UndefOr[dxPolarChartArgumentAxisTick] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.type */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.type]
+    */
   var `type`: js.UndefOr[continuous | discrete | logarithmic] = js.native
 }
 object dxPolarChartArgumentAxis {

@@ -4,7 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CandleStickSeries.hoverStyle.hatching */
+/**
+  * [descr:dxChartSeriesTypes.CandleStickSeries.hoverStyle.hatching]
+  */
 @js.native
 trait dxChartSeriesTypesCandleStickSeriesHoverStyleHatching extends dxChartSeriesTypesCommonSeriesHoverStyleHatching
 object dxChartSeriesTypesCandleStickSeriesHoverStyleHatching {

@@ -1,7 +1,7 @@
 
 # Scala.js typings for koa-pino-logger
 
-Typings are for version 2.1
+Typings are for version 3.0
 
 ## Library description:
 pino logging koa middleware

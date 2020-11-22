@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.getJobQueueMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.outputMod.batch.GetJobQueueComputeEnvironmentOrder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -49,6 +50,11 @@ trait GetJobQueueResult extends js.Object {
     * of the job queue.
     */
   val statusReason: String = js.native
+  
+  /**
+    * Key-value map of resource tags
+    */
+  val tags: StringDictionary[String] = js.native
 }
 object GetJobQueueResult {
   
@@ -61,9 +67,10 @@ object GetJobQueueResult {
     priority: Double,
     state: String,
     status: String,
-    statusReason: String
+    statusReason: String,
+    tags: StringDictionary[String]
   ): GetJobQueueResult = {
-    val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], computeEnvironmentOrders = computeEnvironmentOrders.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], priority = priority.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], statusReason = statusReason.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], computeEnvironmentOrders = computeEnvironmentOrders.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], priority = priority.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], statusReason = statusReason.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetJobQueueResult]
   }
   
@@ -108,5 +115,8 @@ object GetJobQueueResult {
     
     @scala.inline
     def setStatusReason(value: String): Self = this.set("statusReason", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTags(value: StringDictionary[String]): Self = this.set("tags", value.asInstanceOf[js.Any])
   }
 }

@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object popoverHeaderMod {
   
-  type PopoverHeader[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.popoverHeaderMod.PopoverHeaderProps]
+  type PopoverHeader = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.popoverHeaderMod.PopoverHeaderProps]
 }

@@ -11,8 +11,8 @@ import org.scalajs.dom.raw.HTMLOptionElement
 import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import org.scalajs.dom.raw.NodeList
-import org.scalajs.dom.raw.Position
 import typingsSlinky.videoJs.mod.videojs.Dom.Coordinates
+import typingsSlinky.videoJs.mod.videojs.Dom.Position
 import typingsSlinky.videoJs.mod.videojs.Dom.Predicate
 import typingsSlinky.videoJs.videoJsStrings.canvas
 import typingsSlinky.videoJs.videoJsStrings.form

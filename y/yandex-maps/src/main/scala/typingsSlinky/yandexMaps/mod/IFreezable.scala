@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IFreezable extends js.Object {
   
-  var events: IEventManager = js.native
+  var events: IEventManager[js.Object] = js.native
   
   def freeze(): IFreezable = js.native
   
@@ -19,7 +19,7 @@ object IFreezable {
   
   @scala.inline
   def apply(
-    events: IEventManager,
+    events: IEventManager[js.Object],
     freeze: () => IFreezable,
     isFrozen: () => Boolean,
     unfreeze: () => IFreezable
@@ -44,7 +44,7 @@ object IFreezable {
     }
     
     @scala.inline
-    def setEvents(value: IEventManager): Self = this.set("events", value.asInstanceOf[js.Any])
+    def setEvents(value: IEventManager[js.Object]): Self = this.set("events", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFreeze(value: () => IFreezable): Self = this.set("freeze", js.Any.fromFunction0(value))

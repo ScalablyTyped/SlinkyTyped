@@ -1,24 +1,30 @@
 package typingsSlinky.meteor.anon
 
+import typingsSlinky.meteor.mongoMod.Mongo.DispatchTransform
+import typingsSlinky.meteor.mongoMod.Mongo.Transform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Fetch[T] extends js.Object {
+trait Fetch[Fn /* <: Transform[T] */, T, U] extends js.Object {
   
   var fetch: js.UndefOr[js.Array[String]] = js.native
   
-  var insert: js.UndefOr[js.Function2[/* userId */ String, /* doc */ T, Boolean]] = js.native
+  var insert: js.UndefOr[
+    js.Function2[/* userId */ String, /* doc */ DispatchTransform[Fn, T, U], Boolean]
+  ] = js.native
   
-  var remove: js.UndefOr[js.Function2[/* userId */ String, /* doc */ T, Boolean]] = js.native
+  var remove: js.UndefOr[
+    js.Function2[/* userId */ String, /* doc */ DispatchTransform[Fn, T, U], Boolean]
+  ] = js.native
   
-  var transform: js.UndefOr[js.Function | Null] = js.native
+  var transform: js.UndefOr[Fn] = js.native
   
   var update: js.UndefOr[
     js.Function4[
       /* userId */ String, 
-      /* doc */ T, 
+      /* doc */ DispatchTransform[Fn, T, U], 
       /* fieldNames */ js.Array[String], 
       /* modifier */ js.Any, 
       Boolean
@@ -28,13 +34,13 @@ trait Fetch[T] extends js.Object {
 object Fetch {
   
   @scala.inline
-  def apply[T](): Fetch[T] = {
+  def apply[Fn /* <: Transform[T] */, T, U](): Fetch[Fn, T, U] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Fetch[T]]
+    __obj.asInstanceOf[Fetch[Fn, T, U]]
   }
   
   @scala.inline
-  implicit class FetchOps[Self <: Fetch[_], T] (val x: Self with Fetch[T]) extends AnyVal {
+  implicit class FetchOps[Self <: Fetch[_, _, _], Fn /* <: Transform[T] */, T, U] (val x: Self with (Fetch[Fn, T, U])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -58,29 +64,26 @@ object Fetch {
     def deleteFetch: Self = this.set("fetch", js.undefined)
     
     @scala.inline
-    def setInsert(value: (/* userId */ String, /* doc */ T) => Boolean): Self = this.set("insert", js.Any.fromFunction2(value))
+    def setInsert(value: (/* userId */ String, /* doc */ DispatchTransform[Fn, T, U]) => Boolean): Self = this.set("insert", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteInsert: Self = this.set("insert", js.undefined)
     
     @scala.inline
-    def setRemove(value: (/* userId */ String, /* doc */ T) => Boolean): Self = this.set("remove", js.Any.fromFunction2(value))
+    def setRemove(value: (/* userId */ String, /* doc */ DispatchTransform[Fn, T, U]) => Boolean): Self = this.set("remove", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteRemove: Self = this.set("remove", js.undefined)
     
     @scala.inline
-    def setTransform(value: js.Function): Self = this.set("transform", value.asInstanceOf[js.Any])
+    def setTransform(value: Fn): Self = this.set("transform", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTransform: Self = this.set("transform", js.undefined)
     
     @scala.inline
-    def setTransformNull: Self = this.set("transform", null)
-    
-    @scala.inline
     def setUpdate(
-      value: (/* userId */ String, /* doc */ T, /* fieldNames */ js.Array[String], /* modifier */ js.Any) => Boolean
+      value: (/* userId */ String, /* doc */ DispatchTransform[Fn, T, U], /* fieldNames */ js.Array[String], /* modifier */ js.Any) => Boolean
     ): Self = this.set("update", js.Any.fromFunction4(value))
     
     @scala.inline

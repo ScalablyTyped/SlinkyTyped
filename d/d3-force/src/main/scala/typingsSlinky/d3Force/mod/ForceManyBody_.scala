@@ -40,13 +40,13 @@ trait ForceManyBody_[NodeDatum /* <: SimulationNodeDatum */]
   def distanceMin(distance: Double): this.type = js.native
   
   /**
-    * Assign the array of nodes to this force. This method is called when a force is bound to a simulation via simulation.force
+    * Supplies the array of nodes and random source to this force. This method is called when a force is bound to a simulation via simulation.force
     * and when the simulation’s nodes change via simulation.nodes.
     *
     * A force may perform necessary work during initialization, such as evaluating per-node parameters, to avoid repeatedly performing work during each application of the force.
     */
   @JSName("initialize")
-  def initialize_MForceManyBody_(nodes: js.Array[NodeDatum]): Unit = js.native
+  def initialize_MForceManyBody_(nodes: js.Array[NodeDatum], random: js.Function0[Double]): Unit = js.native
   
   /**
     * Return the current strength accessor.

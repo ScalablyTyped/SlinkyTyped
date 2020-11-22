@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MapViewHitTestOptions extends Object {
   
   /**
-    * A list of layers and graphics to exclude from the hitTest. No layers or graphics will be excluded if exclude is not specified.
+    * A list of layers and graphics to exclude from the hitTest.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#hitTest)
     */
   var exclude: js.UndefOr[js.Array[HitTestItem] | Collection[HitTestItem] | Layer | Graphic] = js.native
   
   /**
-    * A list of layers and graphics to include in the hitTest. All layers and graphics will be included if include is not specified.
+    * A list of layers and graphics to include in the hitTest.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#hitTest)
     */

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.navigationMod.navigation
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -8,6 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.navigationMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.IPage
 import typingsSlinky.mendixmodelsdk.securityMod.security.IUserRole
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,20 +19,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("mendixmodelsdk/dist/gen/navigation", "navigation.RoleBasedNativeHomePage")
 @js.native
-class RoleBasedNativeHomePage protected () extends Element {
+class RoleBasedNativeHomePage protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsNativeNavigationProfile: NativeNavigationProfile = js.native
-  
-  @JSName("model")
-  var model_FRoleBasedNativeHomePage: IModel = js.native
   
   def page: IPage | Null = js.native
   

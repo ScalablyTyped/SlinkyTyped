@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientLambdaNode.typesSubnetIPAddressLimitReachedExceptionMod
 
 import typingsSlinky.awsSdkClientLambdaNode.invokeExceptionsUnionMod.InvokeExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait SubnetIPAddressLimitReachedException
-  extends ServiceException[SubnetIPAddressLimitReachedExceptionDetails]
-     with InvokeExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_SubnetIPAddressLimitReachedExceptionDetails> * / any */ @js.native
+trait SubnetIPAddressLimitReachedException extends InvokeExceptionsUnion {
   
-  @JSName("name")
-  var name_SubnetIPAddressLimitReachedException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.SubnetIPAddressLimitReachedException = js.native
+  var name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.SubnetIPAddressLimitReachedException = js.native
 }
 object SubnetIPAddressLimitReachedException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: SubnetIPAddressLimitReachedExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.SubnetIPAddressLimitReachedException
   ): SubnetIPAddressLimitReachedException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[SubnetIPAddressLimitReachedException]
   }
   

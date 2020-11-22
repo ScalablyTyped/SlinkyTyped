@@ -2,6 +2,7 @@ package typingsSlinky.reactLoaderSpinner.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactLoaderSpinner.mod.LoaderProps
 import typingsSlinky.reactLoaderSpinner.mod.Types
 import scala.scalajs.js
@@ -20,10 +21,22 @@ object ReactLoaderSpinner {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def radius(value: Double): this.type = set("radius", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def secondaryColor(value: String): this.type = set("secondaryColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def timeout(value: Double): this.type = set("timeout", value.asInstanceOf[js.Any])

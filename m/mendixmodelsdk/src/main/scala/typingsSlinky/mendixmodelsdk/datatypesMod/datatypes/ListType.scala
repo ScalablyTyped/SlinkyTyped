@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.datatypesMod.datatypes
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.AppServiceAction
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.AppServiceActionParameter
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
@@ -19,6 +20,7 @@ import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.MicroflowParameterB
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.MicroflowParameterObject
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.ResultHandling
 import typingsSlinky.mendixmodelsdk.restMod.rest.RestOperationParameter
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedOperation
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedParameter
 import scala.scalajs.js
@@ -43,8 +45,8 @@ class ListType protected () extends EntityType {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsAppServiceActionParameter")
@@ -70,9 +72,6 @@ class ListType protected () extends EntityType {
   
   @JSName("containerAsMicroflowParameterBase")
   def containerAsMicroflowParameterBase_MListType: MicroflowParameterBase = js.native
-  
-  @JSName("model")
-  var model_FListType: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/datatypes", "datatypes.ListType")

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "css-modules"
-version := "1.0-dt-20200515Z-57bd90"
+version := "1.0-dt-20201015Z-5084b7"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

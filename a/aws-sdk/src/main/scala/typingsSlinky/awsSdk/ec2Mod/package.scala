@@ -67,11 +67,18 @@ package object ec2Mod {
   type AllowedPrincipalSet = js.Array[typingsSlinky.awsSdk.ec2Mod.AllowedPrincipal]
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.on_
+    - typingsSlinky.awsSdk.awsSdkStrings.on__
     - typingsSlinky.awsSdk.awsSdkStrings.off__
     - java.lang.String
   */
   type AllowsMultipleInstanceTypes = typingsSlinky.awsSdk.ec2Mod._AllowsMultipleInstanceTypes | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.enable_
+    - typingsSlinky.awsSdk.awsSdkStrings.disable_
+    - java.lang.String
+  */
+  type ApplianceModeSupportValue = typingsSlinky.awsSdk.ec2Mod._ApplianceModeSupportValue | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.i386
@@ -93,7 +100,9 @@ package object ec2Mod {
   
   type AssignedPrivateIpAddressList = js.Array[typingsSlinky.awsSdk.ec2Mod.AssignedPrivateIpAddress]
   
-  type AssociatedNetworkType = typingsSlinky.awsSdk.awsSdkStrings.vpc_ | java.lang.String
+  type AssociatedNetworkType = typingsSlinky.awsSdk.awsSdkStrings.vpc__ | java.lang.String
+  
+  type AssociatedRolesList = js.Array[typingsSlinky.awsSdk.ec2Mod.AssociatedRole]
   
   type AssociatedTargetNetworkSet = js.Array[typingsSlinky.awsSdk.ec2Mod.AssociatedTargetNetwork]
   
@@ -104,7 +113,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.associated__
     - typingsSlinky.awsSdk.awsSdkStrings.`association-failed`
     - typingsSlinky.awsSdk.awsSdkStrings.disassociating__
-    - typingsSlinky.awsSdk.awsSdkStrings.disassociated_
+    - typingsSlinky.awsSdk.awsSdkStrings.disassociated__
     - java.lang.String
   */
   type AssociationStatusCode = typingsSlinky.awsSdk.ec2Mod._AssociationStatusCode | java.lang.String
@@ -128,7 +137,7 @@ package object ec2Mod {
   type AutoAcceptSharedAttachmentsValue = typingsSlinky.awsSdk.ec2Mod._AutoAcceptSharedAttachmentsValue | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.on_
+    - typingsSlinky.awsSdk.awsSdkStrings.on__
     - typingsSlinky.awsSdk.awsSdkStrings.off__
     - java.lang.String
   */
@@ -267,7 +276,6 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.`Linux with SQL Server Standard`
     - typingsSlinky.awsSdk.awsSdkStrings.`Linux with SQL Server Web`
     - typingsSlinky.awsSdk.awsSdkStrings.`Linux with SQL Server Enterprise`
-    - typingsSlinky.awsSdk.awsSdkStrings.`Windows BYOL`
     - java.lang.String
   */
   type CapacityReservationInstancePlatform = typingsSlinky.awsSdk.ec2Mod._CapacityReservationInstancePlatform | java.lang.String
@@ -297,6 +305,23 @@ package object ec2Mod {
     - java.lang.String
   */
   type CapacityReservationTenancy = typingsSlinky.awsSdk.ec2Mod._CapacityReservationTenancy | java.lang.String
+  
+  type CarrierGatewayId = java.lang.String
+  
+  type CarrierGatewayIdSet = js.Array[typingsSlinky.awsSdk.ec2Mod.CarrierGatewayId]
+  
+  type CarrierGatewayMaxResults = scala.Double
+  
+  type CarrierGatewaySet = js.Array[typingsSlinky.awsSdk.ec2Mod.CarrierGateway]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.pending__
+    - typingsSlinky.awsSdk.awsSdkStrings.available__
+    - typingsSlinky.awsSdk.awsSdkStrings.deleting__
+    - typingsSlinky.awsSdk.awsSdkStrings.deleted__
+    - java.lang.String
+  */
+  type CarrierGatewayState = typingsSlinky.awsSdk.ec2Mod._CarrierGatewayState | java.lang.String
   
   type CidrBlockSet = js.Array[typingsSlinky.awsSdk.ec2Mod.CidrBlock]
   
@@ -348,6 +373,13 @@ package object ec2Mod {
     - java.lang.String
   */
   type ClientVpnConnectionStatusCode = typingsSlinky.awsSdk.ec2Mod._ClientVpnConnectionStatusCode | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.applying_
+    - typingsSlinky.awsSdk.awsSdkStrings.applied_
+    - java.lang.String
+  */
+  type ClientVpnEndpointAttributeStatusCode = typingsSlinky.awsSdk.ec2Mod._ClientVpnEndpointAttributeStatusCode | java.lang.String
   
   type ClientVpnEndpointId = java.lang.String
   
@@ -453,6 +485,8 @@ package object ec2Mod {
   type DedicatedHostFlag = scala.Boolean
   
   type DedicatedHostId = java.lang.String
+  
+  type DefaultNetworkCardIndex = scala.Double
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.enable_
@@ -650,7 +684,7 @@ package object ec2Mod {
   type DnsSupportValue = typingsSlinky.awsSdk.ec2Mod._DnsSupportValue | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.vpc_
+    - typingsSlinky.awsSdk.awsSdkStrings.vpc__
     - typingsSlinky.awsSdk.awsSdkStrings.standard__
     - java.lang.String
   */
@@ -742,6 +776,14 @@ package object ec2Mod {
   type EndDateType = typingsSlinky.awsSdk.ec2Mod._EndDateType | java.lang.String
   
   type EndpointSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ClientVpnEndpoint]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.unsupported
+    - typingsSlinky.awsSdk.awsSdkStrings.supported
+    - typingsSlinky.awsSdk.awsSdkStrings.required__
+    - java.lang.String
+  */
+  type EphemeralNvmeSupport = typingsSlinky.awsSdk.ec2Mod._EphemeralNvmeSupport | java.lang.String
   
   type ErrorSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ValidationError]
   
@@ -863,6 +905,8 @@ package object ec2Mod {
   */
   type FleetOnDemandAllocationStrategy = typingsSlinky.awsSdk.ec2Mod._FleetOnDemandAllocationStrategy | java.lang.String
   
+  type FleetReplacementStrategy = typingsSlinky.awsSdk.awsSdkStrings.launch | java.lang.String
+  
   type FleetSet = js.Array[typingsSlinky.awsSdk.ec2Mod.FleetData]
   
   /* Rewritten from type alias, can be one of: 
@@ -980,7 +1024,7 @@ package object ec2Mod {
   type HostOfferingSet = js.Array[typingsSlinky.awsSdk.ec2Mod.HostOffering]
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.on_
+    - typingsSlinky.awsSdk.awsSdkStrings.on__
     - typingsSlinky.awsSdk.awsSdkStrings.off__
     - java.lang.String
   */
@@ -1025,7 +1069,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.associating__
     - typingsSlinky.awsSdk.awsSdkStrings.associated__
     - typingsSlinky.awsSdk.awsSdkStrings.disassociating__
-    - typingsSlinky.awsSdk.awsSdkStrings.disassociated_
+    - typingsSlinky.awsSdk.awsSdkStrings.disassociated__
     - java.lang.String
   */
   type IamInstanceProfileAssociationState = typingsSlinky.awsSdk.ec2Mod._IamInstanceProfileAssociationState | java.lang.String
@@ -1104,7 +1148,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.instanceType_
     - typingsSlinky.awsSdk.awsSdkStrings.kernel
     - typingsSlinky.awsSdk.awsSdkStrings.ramdisk
-    - typingsSlinky.awsSdk.awsSdkStrings.userData
+    - typingsSlinky.awsSdk.awsSdkStrings.userData_
     - typingsSlinky.awsSdk.awsSdkStrings.disableApiTermination
     - typingsSlinky.awsSdk.awsSdkStrings.instanceInitiatedShutdownBehavior
     - typingsSlinky.awsSdk.awsSdkStrings.rootDeviceName
@@ -1115,6 +1159,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.ebsOptimized
     - typingsSlinky.awsSdk.awsSdkStrings.sriovNetSupport
     - typingsSlinky.awsSdk.awsSdkStrings.enaSupport
+    - typingsSlinky.awsSdk.awsSdkStrings.enclaveOptions
     - java.lang.String
   */
   type InstanceAttributeName = typingsSlinky.awsSdk.ec2Mod._InstanceAttributeName | java.lang.String
@@ -1190,7 +1235,7 @@ package object ec2Mod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.pending__
-    - typingsSlinky.awsSdk.awsSdkStrings.applied
+    - typingsSlinky.awsSdk.awsSdkStrings.applied_
     - java.lang.String
   */
   type InstanceMetadataOptionsState = typingsSlinky.awsSdk.ec2Mod._InstanceMetadataOptionsState | java.lang.String
@@ -1249,6 +1294,13 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.t3aDotlarge
     - typingsSlinky.awsSdk.awsSdkStrings.t3aDotxlarge
     - typingsSlinky.awsSdk.awsSdkStrings.t3aDot2xlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.t4gDotnano
+    - typingsSlinky.awsSdk.awsSdkStrings.t4gDotmicro
+    - typingsSlinky.awsSdk.awsSdkStrings.t4gDotsmall
+    - typingsSlinky.awsSdk.awsSdkStrings.t4gDotmedium
+    - typingsSlinky.awsSdk.awsSdkStrings.t4gDotlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.t4gDotxlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.t4gDot2xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.m1Dotsmall
     - typingsSlinky.awsSdk.awsSdkStrings.m1Dotmedium
     - typingsSlinky.awsSdk.awsSdkStrings.m1Dotlarge
@@ -1388,6 +1440,14 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.c5aDot12xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.c5aDot16xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.c5aDot24xlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.c5adDotlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.c5adDotxlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.c5adDot2xlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.c5adDot4xlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.c5adDot8xlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.c5adDot12xlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.c5adDot16xlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.c5adDot24xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.c5dDotlarge
     - typingsSlinky.awsSdk.awsSdkStrings.c5dDotxlarge
     - typingsSlinky.awsSdk.awsSdkStrings.c5dDot2xlarge
@@ -1444,6 +1504,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.p3Dot8xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.p3Dot16xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.p3dnDot24xlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.p4dDot24xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.d2Dotxlarge
     - typingsSlinky.awsSdk.awsSdkStrings.d2Dot2xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.d2Dot4xlarge
@@ -1693,7 +1754,7 @@ package object ec2Mod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.pending__
-    - typingsSlinky.awsSdk.awsSdkStrings.applied
+    - typingsSlinky.awsSdk.awsSdkStrings.applied_
     - java.lang.String
   */
   type LaunchTemplateInstanceMetadataOptionsState = typingsSlinky.awsSdk.ec2Mod._LaunchTemplateInstanceMetadataOptionsState | java.lang.String
@@ -1844,6 +1905,8 @@ package object ec2Mod {
   
   type MaximumIops = scala.Double
   
+  type MaximumNetworkCards = scala.Double
+  
   type MaximumThroughputInMBps = scala.Double
   
   /* Rewritten from type alias, can be one of: 
@@ -1918,6 +1981,10 @@ package object ec2Mod {
   type NetworkAclIdStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkAclId]
   
   type NetworkAclList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkAcl]
+  
+  type NetworkCardIndex = scala.Double
+  
+  type NetworkCardInfoList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkCardInfo]
   
   type NetworkInterfaceAttachmentId = java.lang.String
   
@@ -2074,8 +2141,8 @@ package object ec2Mod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.cluster_
-    - typingsSlinky.awsSdk.awsSdkStrings.partition
-    - typingsSlinky.awsSdk.awsSdkStrings.spread
+    - typingsSlinky.awsSdk.awsSdkStrings.partition_
+    - typingsSlinky.awsSdk.awsSdkStrings.spread_
     - java.lang.String
   */
   type PlacementGroupStrategy = typingsSlinky.awsSdk.ec2Mod._PlacementGroupStrategy | java.lang.String
@@ -2086,8 +2153,8 @@ package object ec2Mod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.cluster_
-    - typingsSlinky.awsSdk.awsSdkStrings.spread
-    - typingsSlinky.awsSdk.awsSdkStrings.partition
+    - typingsSlinky.awsSdk.awsSdkStrings.spread_
+    - typingsSlinky.awsSdk.awsSdkStrings.partition_
     - java.lang.String
   */
   type PlacementStrategy = typingsSlinky.awsSdk.ec2Mod._PlacementStrategy | java.lang.String
@@ -2212,6 +2279,8 @@ package object ec2Mod {
   
   type RemovePrefixListEntries = js.Array[typingsSlinky.awsSdk.ec2Mod.RemovePrefixListEntry]
   
+  type ReplacementStrategy = typingsSlinky.awsSdk.awsSdkStrings.launch | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`instance-stuck-in-state`
     - typingsSlinky.awsSdk.awsSdkStrings.unresponsive
@@ -2312,6 +2381,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.`customer-gateway`
     - typingsSlinky.awsSdk.awsSdkStrings.`dedicated-host`
     - typingsSlinky.awsSdk.awsSdkStrings.`dhcp-options`
+    - typingsSlinky.awsSdk.awsSdkStrings.`egress-only-internet-gateway`
     - typingsSlinky.awsSdk.awsSdkStrings.`elastic-ip`
     - typingsSlinky.awsSdk.awsSdkStrings.`elastic-gpu`
     - typingsSlinky.awsSdk.awsSdkStrings.`export-image-task`
@@ -2346,7 +2416,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.`transit-gateway-multicast-domain`
     - typingsSlinky.awsSdk.awsSdkStrings.`transit-gateway-route-table`
     - typingsSlinky.awsSdk.awsSdkStrings.volume_
-    - typingsSlinky.awsSdk.awsSdkStrings.vpc_
+    - typingsSlinky.awsSdk.awsSdkStrings.vpc__
     - typingsSlinky.awsSdk.awsSdkStrings.`vpc-peering-connection`
     - typingsSlinky.awsSdk.awsSdkStrings.`vpn-connection`
     - typingsSlinky.awsSdk.awsSdkStrings.`vpn-gateway`
@@ -2397,7 +2467,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.associating__
     - typingsSlinky.awsSdk.awsSdkStrings.associated__
     - typingsSlinky.awsSdk.awsSdkStrings.disassociating__
-    - typingsSlinky.awsSdk.awsSdkStrings.disassociated_
+    - typingsSlinky.awsSdk.awsSdkStrings.disassociated__
     - typingsSlinky.awsSdk.awsSdkStrings.failed__
     - java.lang.String
   */
@@ -2444,6 +2514,13 @@ package object ec2Mod {
   
   type SecurityGroupStringList = js.Array[typingsSlinky.awsSdk.ec2Mod.SecurityGroupName]
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.enabled__
+    - typingsSlinky.awsSdk.awsSdkStrings.disabled__
+    - java.lang.String
+  */
+  type SelfServicePortal = typingsSlinky.awsSdk.ec2Mod._SelfServicePortal | java.lang.String
+  
   type SensitiveUserData = java.lang.String
   
   type ServiceConfigurationSet = js.Array[typingsSlinky.awsSdk.ec2Mod.ServiceConfiguration]
@@ -2463,6 +2540,7 @@ package object ec2Mod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Interface
     - typingsSlinky.awsSdk.awsSdkStrings.Gateway
+    - typingsSlinky.awsSdk.awsSdkStrings.GatewayLoadBalancer
     - java.lang.String
   */
   type ServiceType = typingsSlinky.awsSdk.ec2Mod._ServiceType | java.lang.String
@@ -2543,7 +2621,7 @@ package object ec2Mod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`one-time`
-    - typingsSlinky.awsSdk.awsSdkStrings.persistent
+    - typingsSlinky.awsSdk.awsSdkStrings.persistent_
     - java.lang.String
   */
   type SpotInstanceType = typingsSlinky.awsSdk.ec2Mod._SpotInstanceType | java.lang.String
@@ -2596,7 +2674,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.associating__
     - typingsSlinky.awsSdk.awsSdkStrings.associated__
     - typingsSlinky.awsSdk.awsSdkStrings.disassociating__
-    - typingsSlinky.awsSdk.awsSdkStrings.disassociated_
+    - typingsSlinky.awsSdk.awsSdkStrings.disassociated__
     - typingsSlinky.awsSdk.awsSdkStrings.failing__
     - typingsSlinky.awsSdk.awsSdkStrings.failed__
     - java.lang.String
@@ -2753,7 +2831,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.associating__
     - typingsSlinky.awsSdk.awsSdkStrings.associated__
     - typingsSlinky.awsSdk.awsSdkStrings.disassociating__
-    - typingsSlinky.awsSdk.awsSdkStrings.disassociated_
+    - typingsSlinky.awsSdk.awsSdkStrings.disassociated__
     - java.lang.String
   */
   type TransitGatewayAssociationState = typingsSlinky.awsSdk.ec2Mod._TransitGatewayAssociationState | java.lang.String
@@ -2767,9 +2845,10 @@ package object ec2Mod {
   type TransitGatewayAttachmentPropagationList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayAttachmentPropagation]
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.vpc_
+    - typingsSlinky.awsSdk.awsSdkStrings.vpc__
     - typingsSlinky.awsSdk.awsSdkStrings.vpn
     - typingsSlinky.awsSdk.awsSdkStrings.`direct-connect-gateway`
+    - typingsSlinky.awsSdk.awsSdkStrings.peering
     - typingsSlinky.awsSdk.awsSdkStrings.`tgw-peering`
     - java.lang.String
   */
@@ -2777,6 +2856,7 @@ package object ec2Mod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.initiating
+    - typingsSlinky.awsSdk.awsSdkStrings.initiatingRequest
     - typingsSlinky.awsSdk.awsSdkStrings.pendingAcceptance_
     - typingsSlinky.awsSdk.awsSdkStrings.rollingBack_
     - typingsSlinky.awsSdk.awsSdkStrings.pending__
@@ -2804,7 +2884,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.associating__
     - typingsSlinky.awsSdk.awsSdkStrings.associated__
     - typingsSlinky.awsSdk.awsSdkStrings.disassociating__
-    - typingsSlinky.awsSdk.awsSdkStrings.disassociated_
+    - typingsSlinky.awsSdk.awsSdkStrings.disassociated__
     - java.lang.String
   */
   type TransitGatewayMulitcastDomainAssociationState = typingsSlinky.awsSdk.ec2Mod._TransitGatewayMulitcastDomainAssociationState | java.lang.String
@@ -2831,6 +2911,17 @@ package object ec2Mod {
   type TransitGatewayNetworkInterfaceIdList = js.Array[typingsSlinky.awsSdk.ec2Mod.NetworkInterfaceId]
   
   type TransitGatewayPeeringAttachmentList = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayPeeringAttachment]
+  
+  type TransitGatewayPrefixListReferenceSet = js.Array[typingsSlinky.awsSdk.ec2Mod.TransitGatewayPrefixListReference]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.pending__
+    - typingsSlinky.awsSdk.awsSdkStrings.available__
+    - typingsSlinky.awsSdk.awsSdkStrings.modifying_
+    - typingsSlinky.awsSdk.awsSdkStrings.deleting__
+    - java.lang.String
+  */
+  type TransitGatewayPrefixListReferenceState = typingsSlinky.awsSdk.ec2Mod._TransitGatewayPrefixListReferenceState | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.enabling__
@@ -2902,12 +2993,20 @@ package object ec2Mod {
   */
   type TransportProtocol = typingsSlinky.awsSdk.ec2Mod._TransportProtocol | java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ipv4_
+    - typingsSlinky.awsSdk.awsSdkStrings.ipv6_
+    - java.lang.String
+  */
+  type TunnelInsideIpVersion = typingsSlinky.awsSdk.ec2Mod._TunnelInsideIpVersion | java.lang.String
+  
   type TunnelOptionsList = js.Array[typingsSlinky.awsSdk.ec2Mod.TunnelOption]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.t2
     - typingsSlinky.awsSdk.awsSdkStrings.t3
     - typingsSlinky.awsSdk.awsSdkStrings.t3a
+    - typingsSlinky.awsSdk.awsSdkStrings.t4g
     - java.lang.String
   */
   type UnlimitedSupportedInstanceFamily = typingsSlinky.awsSdk.ec2Mod._UnlimitedSupportedInstanceFamily | java.lang.String
@@ -3038,6 +3137,7 @@ package object ec2Mod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.standard__
     - typingsSlinky.awsSdk.awsSdkStrings.io1
+    - typingsSlinky.awsSdk.awsSdkStrings.io2
     - typingsSlinky.awsSdk.awsSdkStrings.gp2
     - typingsSlinky.awsSdk.awsSdkStrings.sc1
     - typingsSlinky.awsSdk.awsSdkStrings.st1
@@ -3062,7 +3162,7 @@ package object ec2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.associating__
     - typingsSlinky.awsSdk.awsSdkStrings.associated__
     - typingsSlinky.awsSdk.awsSdkStrings.disassociating__
-    - typingsSlinky.awsSdk.awsSdkStrings.disassociated_
+    - typingsSlinky.awsSdk.awsSdkStrings.disassociated__
     - typingsSlinky.awsSdk.awsSdkStrings.failing__
     - typingsSlinky.awsSdk.awsSdkStrings.failed__
     - java.lang.String
@@ -3094,6 +3194,7 @@ package object ec2Mod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Interface
     - typingsSlinky.awsSdk.awsSdkStrings.Gateway
+    - typingsSlinky.awsSdk.awsSdkStrings.GatewayLoadBalancer
     - java.lang.String
   */
   type VpcEndpointType = typingsSlinky.awsSdk.ec2Mod._VpcEndpointType | java.lang.String

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PlannerGroup extends Entity {
   
   // Read-only. Nullable. Returns the plannerPlans owned by the group.
-  var plans: js.UndefOr[js.Array[PlannerPlan]] = js.native
+  var plans: js.UndefOr[NullableOption[js.Array[PlannerPlan]]] = js.native
 }
 object PlannerGroup {
   
@@ -37,9 +37,12 @@ object PlannerGroup {
     def setPlansVarargs(value: PlannerPlan*): Self = this.set("plans", js.Array(value :_*))
     
     @scala.inline
-    def setPlans(value: js.Array[PlannerPlan]): Self = this.set("plans", value.asInstanceOf[js.Any])
+    def setPlans(value: NullableOption[js.Array[PlannerPlan]]): Self = this.set("plans", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePlans: Self = this.set("plans", js.undefined)
+    
+    @scala.inline
+    def setPlansNull: Self = this.set("plans", null)
   }
 }

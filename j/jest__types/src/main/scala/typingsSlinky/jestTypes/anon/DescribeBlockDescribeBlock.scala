@@ -1,13 +1,13 @@
 package typingsSlinky.jestTypes.anon
 
-import typingsSlinky.jestTypes.circusMod.Event
+import typingsSlinky.jestTypes.circusMod.AsyncEvent
 import typingsSlinky.jestTypes.jestTypesStrings.run_describe_finish
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait DescribeBlockDescribeBlock extends Event {
+trait DescribeBlockDescribeBlock extends AsyncEvent {
   
   var describeBlock: typingsSlinky.jestTypes.circusMod.DescribeBlock = js.native
   

@@ -63,7 +63,7 @@ trait graphql extends js.Object {
   /**
     * Octokit endpoint API, see {@link https://github.com/octokit/endpoint.js|@octokit/endpoint}
     */
-  def endpoint[R /* <: Route */, P /* <: typingsSlinky.octokitTypes.requestParametersMod.RequestParameters */](route: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 631 */ js.Any): (RequestOptions | (/* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints[R]['request'] */ js.Any)) with (Pick[
+  def endpoint[R /* <: Route */, P /* <: typingsSlinky.octokitTypes.requestParametersMod.RequestParameters */](route: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 670 */ js.Any): (RequestOptions | (/* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints[R]['request'] */ js.Any)) with (Pick[
     P, 
     /* keyof @octokit/types.@octokit/types/dist-types/RequestOptions.RequestOptions */ method | url | headers | body | request
   ]) = js.native
@@ -71,7 +71,7 @@ trait graphql extends js.Object {
     * Octokit endpoint API, see {@link https://github.com/octokit/endpoint.js|@octokit/endpoint}
     */
   def endpoint[R /* <: Route */, P /* <: typingsSlinky.octokitTypes.requestParametersMod.RequestParameters */](
-    route: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 631 */ js.Any,
+    route: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 670 */ js.Any,
     parameters: P
   ): (RequestOptions | (/* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints[R]['request'] */ js.Any)) with (Pick[
     P, 

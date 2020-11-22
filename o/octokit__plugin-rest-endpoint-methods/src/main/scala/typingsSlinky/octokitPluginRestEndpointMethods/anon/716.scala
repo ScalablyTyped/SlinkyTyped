@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.IssuesCreateCommentEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.IssuesCreateCommentResponseData
+import typingsSlinky.octokitTypes.endpointsMod.InteractionsSetRestrictionsForOrgEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.InteractionsSetRestrictionsForOrgResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `716` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[IssuesCreateCommentEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[InteractionsSetRestrictionsForOrgEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[IssuesCreateCommentResponseData] = js.native
+  var response: OctokitResponse[InteractionsSetRestrictionsForOrgResponseData] = js.native
 }
 object `716` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[IssuesCreateCommentEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[IssuesCreateCommentResponseData]
+    parameters: RequestParameters with (Omit[InteractionsSetRestrictionsForOrgEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[InteractionsSetRestrictionsForOrgResponseData]
   ): `716` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`716`]
@@ -46,9 +46,11 @@ object `716` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[IssuesCreateCommentEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(
+      value: RequestParameters with (Omit[InteractionsSetRestrictionsForOrgEndpoint, baseUrl | headers | mediaType])
+    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[IssuesCreateCommentResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[InteractionsSetRestrictionsForOrgResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

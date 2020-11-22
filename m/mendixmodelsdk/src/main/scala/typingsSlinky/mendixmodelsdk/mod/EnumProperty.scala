@@ -1,7 +1,9 @@
 package typingsSlinky.mendixmodelsdk.mod
 
 import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import typingsSlinky.mendixmodelsdk.versionChecksMod.ILifeCycle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +15,7 @@ class EnumProperty[T /* <: typingsSlinky.mendixmodelsdk.instancesMod.AbstractEnu
   extends typingsSlinky.mendixmodelsdk.propertiesMod.EnumProperty[T] {
   def this(
     declaredOn: IStructureClass,
-    parent: typingsSlinky.mendixmodelsdk.structuresMod.Structure,
+    parent: typingsSlinky.mendixmodelsdk.structuresMod.Structure[IAbstractModel, IContainer | Null],
     name: String,
     initialValue: T,
     enumType: Instantiable2[

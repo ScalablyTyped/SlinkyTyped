@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetUsageAndQuotaResponse extends js.Object {
   
   /**
+    * Whether or not the origin has an active storage quota override
+    */
+  var overrideActive: Boolean = js.native
+  
+  /**
     * Storage quota (bytes).
     */
   var quota: Double = js.native
@@ -25,8 +30,8 @@ trait GetUsageAndQuotaResponse extends js.Object {
 object GetUsageAndQuotaResponse {
   
   @scala.inline
-  def apply(quota: Double, usage: Double, usageBreakdown: js.Array[UsageForType]): GetUsageAndQuotaResponse = {
-    val __obj = js.Dynamic.literal(quota = quota.asInstanceOf[js.Any], usage = usage.asInstanceOf[js.Any], usageBreakdown = usageBreakdown.asInstanceOf[js.Any])
+  def apply(overrideActive: Boolean, quota: Double, usage: Double, usageBreakdown: js.Array[UsageForType]): GetUsageAndQuotaResponse = {
+    val __obj = js.Dynamic.literal(overrideActive = overrideActive.asInstanceOf[js.Any], quota = quota.asInstanceOf[js.Any], usage = usage.asInstanceOf[js.Any], usageBreakdown = usageBreakdown.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetUsageAndQuotaResponse]
   }
   
@@ -44,6 +49,9 @@ object GetUsageAndQuotaResponse {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setOverrideActive(value: Boolean): Self = this.set("overrideActive", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setQuota(value: Double): Self = this.set("quota", value.asInstanceOf[js.Any])

@@ -13,6 +13,11 @@ trait LocalGatewayRouteTable extends js.Object {
   var LocalGatewayId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.LocalGatewayId] = js.native
   
   /**
+    * The Amazon Resource Name (ARN) of the local gateway route table.
+    */
+  var LocalGatewayRouteTableArn: js.UndefOr[ResourceArn] = js.native
+  
+  /**
     * The ID of the local gateway route table.
     */
   var LocalGatewayRouteTableId: js.UndefOr[String] = js.native
@@ -21,6 +26,11 @@ trait LocalGatewayRouteTable extends js.Object {
     * The Amazon Resource Name (ARN) of the Outpost.
     */
   var OutpostArn: js.UndefOr[String] = js.native
+  
+  /**
+    * The AWS account ID that owns the local gateway route table.
+    */
+  var OwnerId: js.UndefOr[String] = js.native
   
   /**
     * The state of the local gateway route table.
@@ -62,6 +72,12 @@ object LocalGatewayRouteTable {
     def deleteLocalGatewayId: Self = this.set("LocalGatewayId", js.undefined)
     
     @scala.inline
+    def setLocalGatewayRouteTableArn(value: ResourceArn): Self = this.set("LocalGatewayRouteTableArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocalGatewayRouteTableArn: Self = this.set("LocalGatewayRouteTableArn", js.undefined)
+    
+    @scala.inline
     def setLocalGatewayRouteTableId(value: String): Self = this.set("LocalGatewayRouteTableId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -72,6 +88,12 @@ object LocalGatewayRouteTable {
     
     @scala.inline
     def deleteOutpostArn: Self = this.set("OutpostArn", js.undefined)
+    
+    @scala.inline
+    def setOwnerId(value: String): Self = this.set("OwnerId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOwnerId: Self = this.set("OwnerId", js.undefined)
     
     @scala.inline
     def setState(value: String): Self = this.set("State", value.asInstanceOf[js.Any])

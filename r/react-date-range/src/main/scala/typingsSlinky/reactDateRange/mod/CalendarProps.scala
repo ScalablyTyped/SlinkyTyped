@@ -1,6 +1,5 @@
 package typingsSlinky.reactDateRange.mod
 
-import typingsSlinky.moment.mod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +34,10 @@ object CalendarProps {
     }
     
     @scala.inline
-    def setDateFunction1(value: /* now */ Moment => AnyDate): Self = this.set("date", js.Any.fromFunction1(value))
+    def setDateDate(value: js.Date): Self = this.set("date", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDateFunction1(value: /* now */ js.Date => AnyDate): Self = this.set("date", js.Any.fromFunction1(value))
     
     @scala.inline
     def setDate(value: DateInputType): Self = this.set("date", value.asInstanceOf[js.Any])

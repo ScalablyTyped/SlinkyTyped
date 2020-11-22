@@ -16,22 +16,18 @@ object gridHelperMod extends js.Object {
   @js.native
   class GridHelper protected ()
     extends LineSegments[Geometry | BufferGeometry, Material | js.Array[Material]] {
-    def this(size: Double, divisions: Double) = this()
-    def this(size: Double, divisions: Double, color1: String) = this()
-    def this(size: Double, divisions: Double, color1: Double) = this()
-    def this(size: Double, divisions: Double, color1: Color) = this()
-    def this(size: Double, divisions: Double, color1: js.UndefOr[scala.Nothing], color2: String) = this()
-    def this(size: Double, divisions: Double, color1: js.UndefOr[scala.Nothing], color2: Double) = this()
-    def this(size: Double, divisions: Double, color1: js.UndefOr[scala.Nothing], color2: Color) = this()
-    def this(size: Double, divisions: Double, color1: String, color2: String) = this()
-    def this(size: Double, divisions: Double, color1: String, color2: Double) = this()
-    def this(size: Double, divisions: Double, color1: String, color2: Color) = this()
-    def this(size: Double, divisions: Double, color1: Double, color2: String) = this()
-    def this(size: Double, divisions: Double, color1: Double, color2: Double) = this()
-    def this(size: Double, divisions: Double, color1: Double, color2: Color) = this()
-    def this(size: Double, divisions: Double, color1: Color, color2: String) = this()
-    def this(size: Double, divisions: Double, color1: Color, color2: Double) = this()
-    def this(size: Double, divisions: Double, color1: Color, color2: Color) = this()
+    /**
+    	 * @param [size=10]
+    	 * @param [divisions=10]
+    	 * @param [color1=0x444444]
+    	 * @param [color2=0x888888]
+    	 */
+    def this(
+      size: js.UndefOr[Double],
+      divisions: js.UndefOr[Double],
+      color1: js.UndefOr[Color | String | Double],
+      color2: js.UndefOr[Color | String | Double]
+    ) = this()
     
     /**
     	 * @deprecated Colors should be specified in the constructor.

@@ -16,6 +16,8 @@ trait FormControlProps extends js.Object {
   
   var error: js.UndefOr[Boolean | ReactElement] = js.native
   
+  var htmlFor: js.UndefOr[String] = js.native
+  
   var label: js.UndefOr[ReactElement] = js.native
   
   var overrides: js.UndefOr[FormControlOverrides] = js.native
@@ -74,6 +76,12 @@ object FormControlProps {
     
     @scala.inline
     def deleteError: Self = this.set("error", js.undefined)
+    
+    @scala.inline
+    def setHtmlFor(value: String): Self = this.set("htmlFor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHtmlFor: Self = this.set("htmlFor", js.undefined)
     
     @scala.inline
     def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TupleExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSIndexSignature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `202` extends js.Object {
   
-  var `type`: TupleExpression = js.native
+  var `type`: TSIndexSignature = js.native
 }
 object `202` {
   
   @scala.inline
-  def apply(`type`: TupleExpression): `202` = {
+  def apply(`type`: TSIndexSignature): `202` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`202`]
@@ -35,6 +35,6 @@ object `202` {
     }
     
     @scala.inline
-    def setType(value: TupleExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSIndexSignature): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

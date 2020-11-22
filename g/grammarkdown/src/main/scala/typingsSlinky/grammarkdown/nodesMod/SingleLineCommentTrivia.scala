@@ -8,3 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class SingleLineCommentTrivia ()
   extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.SingleLineCommentTrivia]
+     with CommentTrivia

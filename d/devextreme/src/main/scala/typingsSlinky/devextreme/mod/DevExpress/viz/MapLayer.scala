@@ -8,25 +8,39 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MapLayer extends js.Object {
   
-  /** @name MapLayer.clearSelection() */
+  /**
+    * [descr:MapLayer.clearSelection()]
+    */
   def clearSelection(): Unit = js.native
   
-  /** @name MapLayer.elementType */
+  /**
+    * [descr:MapLayer.elementType]
+    */
   var elementType: js.UndefOr[String] = js.native
   
-  /** @name MapLayer.getDataSource() */
+  /**
+    * [descr:MapLayer.getDataSource()]
+    */
   def getDataSource(): DataSource = js.native
   
-  /** @name MapLayer.getElements() */
+  /**
+    * [descr:MapLayer.getElements()]
+    */
   def getElements(): js.Array[MapLayerElement] = js.native
   
-  /** @name MapLayer.index */
+  /**
+    * [descr:MapLayer.index]
+    */
   var index: js.UndefOr[Double] = js.native
   
-  /** @name MapLayer.name */
+  /**
+    * [descr:MapLayer.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name MapLayer.type */
+  /**
+    * [descr:MapLayer.type]
+    */
   var `type`: js.UndefOr[String] = js.native
 }
 object MapLayer {

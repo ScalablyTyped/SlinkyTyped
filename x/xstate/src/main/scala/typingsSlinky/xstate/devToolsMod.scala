@@ -1,5 +1,6 @@
 package typingsSlinky.xstate
 
+import typingsSlinky.xstate.anon.ContextAny
 import typingsSlinky.xstate.mod.Interpreter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,5 +12,5 @@ object devToolsMod extends js.Object {
   
   def registerService(service: AnyInterpreter): Unit = js.native
   
-  type AnyInterpreter = Interpreter[js.Any, js.Any, js.Any, js.Any]
+  type AnyInterpreter = Interpreter[js.Any, js.Any, js.Any, ContextAny]
 }

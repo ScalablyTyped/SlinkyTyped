@@ -7,5 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object lodash {
   
   // tslint:disable-next-line:strict-export-declare-modifiers
+  type GlobalFunction = js.Function
+  
+  // tslint:disable-next-line:strict-export-declare-modifiers
   type GlobalPartial[T] = typingsSlinky.std.Partial[T]
 }

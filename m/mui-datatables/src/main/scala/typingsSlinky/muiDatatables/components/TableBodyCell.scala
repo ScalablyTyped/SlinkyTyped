@@ -3,6 +3,7 @@ package typingsSlinky.muiDatatables.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableBodyCell
+import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,7 +38,7 @@ object TableBodyCell {
     def dataIndex(value: Double): this.type = set("dataIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
+    def options(value: MUIDataTableOptions): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def otherProps(value: js.Any): this.type = set("otherProps", value.asInstanceOf[js.Any])

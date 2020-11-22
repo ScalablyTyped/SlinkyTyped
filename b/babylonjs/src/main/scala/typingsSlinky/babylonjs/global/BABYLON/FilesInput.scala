@@ -1,6 +1,8 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
 import org.scalajs.dom.raw.File
+import typingsSlinky.babylonjs.BABYLON.ISceneLoaderProgressEvent
+import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,18 +25,22 @@ class FilesInput protected ()
     */
   def this(
     engine: typingsSlinky.babylonjs.BABYLON.Engine,
-    scene: typingsSlinky.babylonjs.BABYLON.Scene,
-    sceneLoadedCallback: js.Function2[/* sceneFile */ File, /* scene */ typingsSlinky.babylonjs.BABYLON.Scene, Unit],
-    progressCallback: js.Function1[/* progress */ typingsSlinky.babylonjs.BABYLON.SceneLoaderProgressEvent, Unit],
-    additionalRenderLoopLogicCallback: js.Function0[Unit],
-    textureLoadingCallback: js.Function1[/* remaining */ Double, Unit],
-    startingProcessingFilesCallback: js.Function1[/* files */ js.UndefOr[js.Array[File]], Unit],
-    onReloadCallback: js.Function1[/* sceneFile */ File, Unit],
-    errorCallback: js.Function3[
-        /* sceneFile */ File, 
-        /* scene */ typingsSlinky.babylonjs.BABYLON.Scene, 
-        /* message */ String, 
-        Unit
+    scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene],
+    sceneLoadedCallback: Nullable[
+        js.Function2[/* sceneFile */ File, /* scene */ typingsSlinky.babylonjs.BABYLON.Scene, Unit]
+      ],
+    progressCallback: Nullable[js.Function1[/* progress */ ISceneLoaderProgressEvent, Unit]],
+    additionalRenderLoopLogicCallback: Nullable[js.Function0[Unit]],
+    textureLoadingCallback: Nullable[js.Function1[/* remaining */ Double, Unit]],
+    startingProcessingFilesCallback: Nullable[js.Function1[/* files */ js.UndefOr[js.Array[File]], Unit]],
+    onReloadCallback: Nullable[js.Function1[/* sceneFile */ File, Unit]],
+    errorCallback: Nullable[
+        js.Function3[
+          /* sceneFile */ File, 
+          /* scene */ Nullable[typingsSlinky.babylonjs.BABYLON.Scene], 
+          /* message */ String, 
+          Unit
+        ]
       ]
   ) = this()
 }

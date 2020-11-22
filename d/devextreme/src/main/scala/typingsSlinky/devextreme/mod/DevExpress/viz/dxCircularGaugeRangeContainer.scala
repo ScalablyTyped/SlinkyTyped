@@ -10,10 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxCircularGaugeRangeContainer extends BaseGaugeRangeContainer {
   
-  /** @name dxCircularGauge.Options.rangeContainer.orientation */
+  /**
+    * [descr:dxCircularGauge.Options.rangeContainer.orientation]
+    */
   var orientation: js.UndefOr[center | inside | outside] = js.native
   
-  /** @name dxCircularGauge.Options.rangeContainer.width */
+  /**
+    * [descr:dxCircularGauge.Options.rangeContainer.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxCircularGaugeRangeContainer {

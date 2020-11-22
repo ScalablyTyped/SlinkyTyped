@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import typingsSlinky.highcharts.highchartsStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -202,10 +203,10 @@ class Point () extends js.Object {
     */
   def remove(): Unit = js.native
   def remove(redraw: js.UndefOr[scala.Nothing], animation: Boolean): Unit = js.native
-  def remove(redraw: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject): Unit = js.native
+  def remove(redraw: js.UndefOr[scala.Nothing], animation: PartialAnimationOptionsOb): Unit = js.native
   def remove(redraw: Boolean): Unit = js.native
   def remove(redraw: Boolean, animation: Boolean): Unit = js.native
-  def remove(redraw: Boolean, animation: AnimationOptionsObject): Unit = js.native
+  def remove(redraw: Boolean, animation: PartialAnimationOptionsOb): Unit = js.native
   
   /**
     * Toggle the selection status of a point.
@@ -331,10 +332,10 @@ class Point () extends js.Object {
     */
   def update(options: PointOptionsType): Unit = js.native
   def update(options: PointOptionsType, redraw: js.UndefOr[scala.Nothing], animation: Boolean): Unit = js.native
-  def update(options: PointOptionsType, redraw: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject): Unit = js.native
+  def update(options: PointOptionsType, redraw: js.UndefOr[scala.Nothing], animation: PartialAnimationOptionsOb): Unit = js.native
   def update(options: PointOptionsType, redraw: Boolean): Unit = js.native
   def update(options: PointOptionsType, redraw: Boolean, animation: Boolean): Unit = js.native
-  def update(options: PointOptionsType, redraw: Boolean, animation: AnimationOptionsObject): Unit = js.native
+  def update(options: PointOptionsType, redraw: Boolean, animation: PartialAnimationOptionsOb): Unit = js.native
   
   /**
     * Heatmap series only. The value of the point, resulting in a color

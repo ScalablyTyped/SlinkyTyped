@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/core/build/plugins/test_path_pattern", JSImport.Namespace)
+@JSImport("@jest/core/build/plugins/TestPathPattern", JSImport.Namespace)
 @js.native
 object testPathPatternMod extends js.Object {
   

@@ -16,7 +16,7 @@ trait EnvVarSource extends js.Object {
   var configMapKeyRef: ConfigMapKeySelector = js.native
   
   /**
-    * Selects a field of the pod: supports metadata.name, metadata.namespace, metadata.labels, metadata.annotations, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
+    * Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`, spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
     */
   var fieldRef: ObjectFieldSelector = js.native
   

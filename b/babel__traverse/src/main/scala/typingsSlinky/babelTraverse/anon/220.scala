@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.DeclareOpaqueType
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSParenthesizedType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `220` extends js.Object {
   
-  var `type`: DeclareOpaqueType = js.native
+  var `type`: TSParenthesizedType = js.native
 }
 object `220` {
   
   @scala.inline
-  def apply(`type`: DeclareOpaqueType): `220` = {
+  def apply(`type`: TSParenthesizedType): `220` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`220`]
@@ -35,6 +35,6 @@ object `220` {
     }
     
     @scala.inline
-    def setType(value: DeclareOpaqueType): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSParenthesizedType): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

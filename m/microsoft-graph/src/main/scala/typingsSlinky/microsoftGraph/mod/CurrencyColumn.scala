@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CurrencyColumn extends js.Object {
   
   // Specifies the locale from which to infer the currency symbol.
-  var locale: js.UndefOr[String] = js.native
+  var locale: js.UndefOr[NullableOption[String]] = js.native
 }
 object CurrencyColumn {
   
@@ -34,9 +34,12 @@ object CurrencyColumn {
     }
     
     @scala.inline
-    def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    def setLocale(value: NullableOption[String]): Self = this.set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLocale: Self = this.set("locale", js.undefined)
+    
+    @scala.inline
+    def setLocaleNull: Self = this.set("locale", null)
   }
 }

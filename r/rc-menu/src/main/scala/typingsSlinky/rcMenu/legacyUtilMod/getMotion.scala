@@ -1,7 +1,7 @@
 package typingsSlinky.rcMenu.legacyUtilMod
 
 import typingsSlinky.rcMenu.interfaceMod.MenuMode
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,5 +14,5 @@ object getMotion extends js.Object {
     hasPrefixClsMotionDefaultMotionsOpenAnimationOpenTransitionName: GetMotionProps,
     hasSwitchingModeFromInline: GetMotionState,
     menuMode: MenuMode
-  ): MotionType = js.native
+  ): CSSMotionProps = js.native
 }

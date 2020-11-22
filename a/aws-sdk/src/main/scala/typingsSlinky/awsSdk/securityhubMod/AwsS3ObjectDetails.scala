@@ -18,7 +18,7 @@ trait AwsS3ObjectDetails extends js.Object {
   var ETag: js.UndefOr[NonEmptyString] = js.native
   
   /**
-    * The date and time when the object was last modified.
+    * Indicates when the object was last modified. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var LastModified: js.UndefOr[NonEmptyString] = js.native
   

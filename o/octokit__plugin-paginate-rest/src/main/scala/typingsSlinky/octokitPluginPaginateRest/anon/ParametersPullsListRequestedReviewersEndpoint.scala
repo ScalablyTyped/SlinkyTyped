@@ -12,14 +12,14 @@ trait ParametersPullsListRequestedReviewersEndpoint extends js.Object {
   
   var parameters: PullsListRequestedReviewersEndpoint = js.native
   
-  var response: OctokitResponse[PullsListRequestedReviewersResponseData] with `11` = js.native
+  var response: OctokitResponse[PullsListRequestedReviewersResponseData] with `15` = js.native
 }
 object ParametersPullsListRequestedReviewersEndpoint {
   
   @scala.inline
   def apply(
     parameters: PullsListRequestedReviewersEndpoint,
-    response: OctokitResponse[PullsListRequestedReviewersResponseData] with `11`
+    response: OctokitResponse[PullsListRequestedReviewersResponseData] with `15`
   ): ParametersPullsListRequestedReviewersEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersPullsListRequestedReviewersEndpoint]
@@ -44,6 +44,6 @@ object ParametersPullsListRequestedReviewersEndpoint {
     def setParameters(value: PullsListRequestedReviewersEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[PullsListRequestedReviewersResponseData] with `11`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[PullsListRequestedReviewersResponseData] with `15`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -21,30 +21,42 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeListColumn extends GridBaseColumn {
   
-  /** @name dxTreeListColumn.buttons */
+  /**
+    * [descr:dxTreeListColumn.buttons]
+    */
   var buttons: js.UndefOr[
     js.Array[add | cancel | delete | edit | save | undelete | dxTreeListColumnButton]
   ] = js.native
   
-  /** @name dxTreeListColumn.cellTemplate */
+  /**
+    * [descr:dxTreeListColumn.cellTemplate]
+    */
   var cellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ DisplayValueOldValue, _])
   ] = js.native
   
-  /** @name dxTreeListColumn.columns */
+  /**
+    * [descr:dxTreeListColumn.columns]
+    */
   var columns: js.UndefOr[js.Array[dxTreeListColumn | String]] = js.native
   
-  /** @name dxTreeListColumn.editCellTemplate */
+  /**
+    * [descr:dxTreeListColumn.editCellTemplate]
+    */
   var editCellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ DisplayValueRow, _])
   ] = js.native
   
-  /** @name dxTreeListColumn.headerCellTemplate */
+  /**
+    * [descr:dxTreeListColumn.headerCellTemplate]
+    */
   var headerCellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* columnHeader */ dxElement, /* headerInfo */ ColumnColumnIndexComponent, _])
   ] = js.native
   
-  /** @name dxTreeListColumn.type */
+  /**
+    * [descr:dxTreeListColumn.type]
+    */
   var `type`: js.UndefOr[adaptive | buttons | drag] = js.native
 }
 object dxTreeListColumn {

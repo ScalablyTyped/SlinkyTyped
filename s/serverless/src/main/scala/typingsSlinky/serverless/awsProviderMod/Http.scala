@@ -1,5 +1,7 @@
 package typingsSlinky.serverless.awsProviderMod
 
+import typingsSlinky.serverless.serverlessStrings.lambda
+import typingsSlinky.serverless.serverlessStrings.mock
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,6 +14,8 @@ trait Http extends js.Object {
   var authorizer: js.UndefOr[HttpAuthorizer] = js.native
   
   var cors: js.UndefOr[Boolean | HttpCors] = js.native
+  
+  var integration: js.UndefOr[lambda | mock] = js.native
   
   var method: String = js.native
   
@@ -67,6 +71,12 @@ object Http {
     
     @scala.inline
     def deleteCors: Self = this.set("cors", js.undefined)
+    
+    @scala.inline
+    def setIntegration(value: lambda | mock): Self = this.set("integration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIntegration: Self = this.set("integration", js.undefined)
     
     @scala.inline
     def setPrivate(value: Boolean): Self = this.set("private", value.asInstanceOf[js.Any])

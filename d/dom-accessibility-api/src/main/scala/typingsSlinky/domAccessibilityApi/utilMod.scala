@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object utilMod extends js.Object {
   
+  def getLocalName(element: Element): String = js.native
+  
   def hasAnyConcreteRoles(node: Node, roles: js.Array[String | Null]): /* is std.Element */ Boolean = js.native
   
   def isElement(): /* is std.Element */ Boolean = js.native
@@ -27,6 +29,9 @@ object utilMod extends js.Object {
   
   def isHTMLSelectElement(): /* is std.HTMLSelectElement */ Boolean = js.native
   def isHTMLSelectElement(node: Node): /* is std.HTMLSelectElement */ Boolean = js.native
+  
+  def isHTMLSlotElement(): /* is std.HTMLSlotElement */ Boolean = js.native
+  def isHTMLSlotElement(node: Node): /* is std.HTMLSlotElement */ Boolean = js.native
   
   def isHTMLTableCaptionElement(): /* is std.HTMLTableCaptionElement */ Boolean = js.native
   def isHTMLTableCaptionElement(node: Node): /* is std.HTMLTableCaptionElement */ Boolean = js.native

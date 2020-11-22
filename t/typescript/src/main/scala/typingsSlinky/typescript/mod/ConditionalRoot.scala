@@ -15,8 +15,6 @@ trait ConditionalRoot extends js.Object {
   
   var extendsType: Type = js.native
   
-  var falseType: Type = js.native
-  
   var inferTypeParameters: js.UndefOr[js.Array[TypeParameter]] = js.native
   
   var instantiations: js.UndefOr[Map[Type]] = js.native
@@ -26,21 +24,12 @@ trait ConditionalRoot extends js.Object {
   var node: ConditionalTypeNode = js.native
   
   var outerTypeParameters: js.UndefOr[js.Array[TypeParameter]] = js.native
-  
-  var trueType: Type = js.native
 }
 object ConditionalRoot {
   
   @scala.inline
-  def apply(
-    checkType: Type,
-    extendsType: Type,
-    falseType: Type,
-    isDistributive: Boolean,
-    node: ConditionalTypeNode,
-    trueType: Type
-  ): ConditionalRoot = {
-    val __obj = js.Dynamic.literal(checkType = checkType.asInstanceOf[js.Any], extendsType = extendsType.asInstanceOf[js.Any], falseType = falseType.asInstanceOf[js.Any], isDistributive = isDistributive.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any], trueType = trueType.asInstanceOf[js.Any])
+  def apply(checkType: Type, extendsType: Type, isDistributive: Boolean, node: ConditionalTypeNode): ConditionalRoot = {
+    val __obj = js.Dynamic.literal(checkType = checkType.asInstanceOf[js.Any], extendsType = extendsType.asInstanceOf[js.Any], isDistributive = isDistributive.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConditionalRoot]
   }
   
@@ -66,16 +55,10 @@ object ConditionalRoot {
     def setExtendsType(value: Type): Self = this.set("extendsType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFalseType(value: Type): Self = this.set("falseType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setIsDistributive(value: Boolean): Self = this.set("isDistributive", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNode(value: ConditionalTypeNode): Self = this.set("node", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTrueType(value: Type): Self = this.set("trueType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAliasSymbol(value: Symbol): Self = this.set("aliasSymbol", value.asInstanceOf[js.Any])

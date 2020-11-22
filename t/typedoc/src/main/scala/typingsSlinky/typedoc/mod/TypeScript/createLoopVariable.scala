@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createLoopVariable extends js.Object {
   
-  /** Create a unique temporary variable for use in a loop. */
+  /** @deprecated Use `factory.createLoopVariable` or the factory supplied by your transformation context instead. */
   def apply(): Identifier = js.native
 }

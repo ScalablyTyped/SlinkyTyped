@@ -8,7 +8,9 @@ import typingsSlinky.reactNative.reactNativeStrings.Settling
 import typingsSlinky.reactNative.reactNativeStrings.`locked-closed`
 import typingsSlinky.reactNative.reactNativeStrings.`locked-open`
 import typingsSlinky.reactNative.reactNativeStrings.`on-drag`
+import typingsSlinky.reactNative.reactNativeStrings.left
 import typingsSlinky.reactNative.reactNativeStrings.none
+import typingsSlinky.reactNative.reactNativeStrings.right
 import typingsSlinky.reactNative.reactNativeStrings.unlocked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -46,9 +48,10 @@ trait DrawerLayoutAndroidProps extends ViewProps {
   
   /**
     * Specifies the side of the screen from which the drawer will slide in.
-    * enum(DrawerLayoutAndroid.positions.Left, DrawerLayoutAndroid.positions.Right)
+    * - 'left' (the default)
+    * - 'right'
     */
-  var drawerPosition: js.UndefOr[Double] = js.native
+  var drawerPosition: js.UndefOr[left | right] = js.native
   
   /**
     * Specifies the width of the drawer, more precisely the width of the
@@ -143,7 +146,7 @@ object DrawerLayoutAndroidProps {
     def deleteDrawerLockMode: Self = this.set("drawerLockMode", js.undefined)
     
     @scala.inline
-    def setDrawerPosition(value: Double): Self = this.set("drawerPosition", value.asInstanceOf[js.Any])
+    def setDrawerPosition(value: left | right): Self = this.set("drawerPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDrawerPosition: Self = this.set("drawerPosition", js.undefined)

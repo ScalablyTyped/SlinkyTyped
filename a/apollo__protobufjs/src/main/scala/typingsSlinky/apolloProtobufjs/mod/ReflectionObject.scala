@@ -41,7 +41,7 @@ abstract class ReflectionObject () extends js.Object {
   def onRemove(parent: ReflectionObject): Unit = js.native
   
   /** Options. */
-  var options: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var options: js.UndefOr[StringDictionary[js.UndefOr[js.Any]]] = js.native
   
   /** Parent namespace. */
   var parent: Namespace | Null = js.native
@@ -74,12 +74,12 @@ abstract class ReflectionObject () extends js.Object {
     * @param [ifNotSet] Sets an option only if it isn't currently set
     * @returns `this`
     */
-  def setOptions(options: StringDictionary[js.Any]): ReflectionObject = js.native
-  def setOptions(options: StringDictionary[js.Any], ifNotSet: Boolean): ReflectionObject = js.native
+  def setOptions(options: StringDictionary[js.UndefOr[js.Any]]): ReflectionObject = js.native
+  def setOptions(options: StringDictionary[js.UndefOr[js.Any]], ifNotSet: Boolean): ReflectionObject = js.native
   
   /**
     * Converts this reflection object to its descriptor representation.
     * @returns Descriptor
     */
-  def toJSON(): StringDictionary[js.Any] = js.native
+  def toJSON(): StringDictionary[js.UndefOr[js.Any]] = js.native
 }

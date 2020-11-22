@@ -1,7 +1,7 @@
 
 # Scala.js typings for actions-on-google
 
-Typings are for version 2.12.0
+Typings are for version 2.13.0
 
 ## Library description:
 Actions on Google Client Library for Node.js

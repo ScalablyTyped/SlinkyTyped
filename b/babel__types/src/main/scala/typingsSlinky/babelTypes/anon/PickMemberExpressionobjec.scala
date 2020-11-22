@@ -1,13 +1,13 @@
 package typingsSlinky.babelTypes.anon
 
-import typingsSlinky.babelTypes.mod.Expression
-import typingsSlinky.babelTypes.mod.Identifier_
-import typingsSlinky.babelTypes.mod.PrivateName_
+import typingsSlinky.babelTypes.indexTs37Mod.Expression
+import typingsSlinky.babelTypes.indexTs37Mod.Identifier_
+import typingsSlinky.babelTypes.indexTs37Mod.PrivateName_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Pick<@babel/types.@babel/types.MemberExpression, 'object' | 'property'> */
+/* Inlined std.Pick<@babel/types.@babel/types/lib/index-ts3.7.MemberExpression, 'object' | 'property'> */
 @js.native
 trait PickMemberExpressionobjec extends js.Object {
   

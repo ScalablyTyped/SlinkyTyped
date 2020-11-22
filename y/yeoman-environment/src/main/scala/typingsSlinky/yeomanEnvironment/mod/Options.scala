@@ -5,10 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Represents options for an `Environment`.
+  */
 @js.native
 trait Options
-  extends /* key */ StringDictionary[js.Any] {
+  extends /**
+  * Additional options.
+  */
+/* key */ StringDictionary[js.Any] {
   
+  /**
+    * The working-directory of the environment.
+    */
   var cwd: js.UndefOr[String] = js.native
 }
 object Options {

@@ -1,11 +1,5 @@
 package typingsSlinky.webidl2.mod
 
-import typingsSlinky.webidl2.webidl2Strings.decimal
-import typingsSlinky.webidl2.webidl2Strings.identifier
-import typingsSlinky.webidl2.webidl2Strings.integer
-import typingsSlinky.webidl2.webidl2Strings.other
-import typingsSlinky.webidl2.webidl2Strings.string
-import typingsSlinky.webidl2.webidl2Strings.whitespace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,15 +7,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Token extends js.Object {
   
-  var `type`: decimal | integer | identifier | string | whitespace | other = js.native
+  var index: Double = js.native
+  
+  var line: Double = js.native
+  
+  var trivia: String = js.native
+  
+  var `type`: String = js.native
   
   var value: String = js.native
 }
 object Token {
   
   @scala.inline
-  def apply(`type`: decimal | integer | identifier | string | whitespace | other, value: String): Token = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+  def apply(index: Double, line: Double, trivia: String, `type`: String, value: String): Token = {
+    val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], trivia = trivia.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Token]
   }
@@ -42,7 +42,16 @@ object Token {
     }
     
     @scala.inline
-    def setType(value: decimal | integer | identifier | string | whitespace | other): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLine(value: Double): Self = this.set("line", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTrivia(value: String): Self = this.set("trivia", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])

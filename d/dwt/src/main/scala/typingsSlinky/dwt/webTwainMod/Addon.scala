@@ -1,6 +1,7 @@
 package typingsSlinky.dwt.webTwainMod
 
 import typingsSlinky.dwt.addonBarcodeReaderMod.BarcodeReader
+import typingsSlinky.dwt.addonCameraMod.Camera
 import typingsSlinky.dwt.addonOCRMod.OCR
 import typingsSlinky.dwt.addonOCRProMod.OCRPro
 import typingsSlinky.dwt.addonPDFMod.PDF
@@ -14,6 +15,8 @@ trait Addon extends js.Object {
   
   var BarcodeReader: typingsSlinky.dwt.addonBarcodeReaderMod.BarcodeReader = js.native
   
+  var Camera: typingsSlinky.dwt.addonCameraMod.Camera = js.native
+  
   var OCR: typingsSlinky.dwt.addonOCRMod.OCR = js.native
   
   var OCRPro: typingsSlinky.dwt.addonOCRProMod.OCRPro = js.native
@@ -25,8 +28,8 @@ trait Addon extends js.Object {
 object Addon {
   
   @scala.inline
-  def apply(BarcodeReader: BarcodeReader, OCR: OCR, OCRPro: OCRPro, PDF: PDF, Webcam: Webcam): Addon = {
-    val __obj = js.Dynamic.literal(BarcodeReader = BarcodeReader.asInstanceOf[js.Any], OCR = OCR.asInstanceOf[js.Any], OCRPro = OCRPro.asInstanceOf[js.Any], PDF = PDF.asInstanceOf[js.Any], Webcam = Webcam.asInstanceOf[js.Any])
+  def apply(BarcodeReader: BarcodeReader, Camera: Camera, OCR: OCR, OCRPro: OCRPro, PDF: PDF, Webcam: Webcam): Addon = {
+    val __obj = js.Dynamic.literal(BarcodeReader = BarcodeReader.asInstanceOf[js.Any], Camera = Camera.asInstanceOf[js.Any], OCR = OCR.asInstanceOf[js.Any], OCRPro = OCRPro.asInstanceOf[js.Any], PDF = PDF.asInstanceOf[js.Any], Webcam = Webcam.asInstanceOf[js.Any])
     __obj.asInstanceOf[Addon]
   }
   
@@ -47,6 +50,9 @@ object Addon {
     
     @scala.inline
     def setBarcodeReader(value: BarcodeReader): Self = this.set("BarcodeReader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCamera(value: Camera): Self = this.set("Camera", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOCR(value: OCR): Self = this.set("OCR", value.asInstanceOf[js.Any])

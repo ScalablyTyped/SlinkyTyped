@@ -9,12 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NetworkAssociationState extends js.Object {
   
   /**
+    * The unique ID of the target network association.
+    */
+  val associationId: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * The ID of the Client VPN endpoint.
     */
   val clientVpnEndpointId: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The IDs of the security groups applied to the target network association.
+    * A list of up to five custom security groups to apply to the target network. If not specified, the VPC's default security group is assigned.
     */
   val securityGroups: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
@@ -29,7 +34,7 @@ trait NetworkAssociationState extends js.Object {
   val subnetId: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The ID of the VPC in which the target network (subnet) is located.
+    * The ID of the VPC in which the target subnet is located.
     */
   val vpcId: js.UndefOr[Input[String]] = js.native
 }
@@ -55,6 +60,12 @@ object NetworkAssociationState {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAssociationId(value: Input[String]): Self = this.set("associationId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAssociationId: Self = this.set("associationId", js.undefined)
     
     @scala.inline
     def setClientVpnEndpointId(value: Input[String]): Self = this.set("clientVpnEndpointId", value.asInstanceOf[js.Any])

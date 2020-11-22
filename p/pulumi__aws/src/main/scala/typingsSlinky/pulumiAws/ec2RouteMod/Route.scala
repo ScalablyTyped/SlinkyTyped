@@ -52,6 +52,11 @@ class Route protected () extends CustomResource {
   val instanceOwnerId: Output_[String] = js.native
   
   /**
+    * Identifier of a Outpost local gateway.
+    */
+  val localGatewayId: Output_[String] = js.native
+  
+  /**
     * Identifier of a VPC NAT gateway.
     */
   val natGatewayId: Output_[String] = js.native
@@ -74,6 +79,11 @@ class Route protected () extends CustomResource {
     * Identifier of an EC2 Transit Gateway.
     */
   val transitGatewayId: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * Identifier of a VPC Endpoint.
+    */
+  val vpcEndpointId: Output_[js.UndefOr[String]] = js.native
   
   /**
     * Identifier of a VPC peering connection.

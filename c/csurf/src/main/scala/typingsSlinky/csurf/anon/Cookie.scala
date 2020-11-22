@@ -11,6 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Cookie extends js.Object {
   
+  /**
+    * @default false
+    */
   var cookie: js.UndefOr[CookieOptions | Boolean] = js.native
   
   var ignoreMethods: js.UndefOr[js.Array[String]] = js.native

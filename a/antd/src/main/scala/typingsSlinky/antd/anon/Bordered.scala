@@ -1,7 +1,7 @@
 package typingsSlinky.antd.anon
 
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.generatePickerMod.PickerLocale
-import typingsSlinky.antd.sizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

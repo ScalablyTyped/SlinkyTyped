@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object useLoadMoreFunctionMod {
   
-  type LoadMoreFn = js.Function2[
+  type LoadMoreFn[TQuery /* <: typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType */] = js.Function2[
     /* count */ scala.Double, 
-    /* options */ js.UndefOr[typingsSlinky.reactRelay.anon.OnComplete], 
+    /* options */ js.UndefOr[typingsSlinky.reactRelay.anon.OnComplete[TQuery]], 
     typingsSlinky.relayRuntime.relayRuntimeTypesMod.Disposable
   ]
 }

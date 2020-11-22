@@ -16,8 +16,6 @@ object cubeCameraMod extends js.Object {
   class CubeCamera protected () extends Object3D {
     def this(near: Double, far: Double, renderTarget: WebGLCubeRenderTarget) = this()
     
-    def clear(renderer: WebGLRenderer, color: Boolean, depth: Boolean, stencil: Boolean): Unit = js.native
-    
     var renderTarget: WebGLCubeRenderTarget = js.native
     
     @JSName("type")

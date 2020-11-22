@@ -1,5 +1,6 @@
 package typingsSlinky.trustedTypes
 
+import typingsSlinky.trustedTypes.mod.FnNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,22 +17,16 @@ object trustedTypesStrings {
   def createScriptURL: createScriptURL = "createScriptURL".asInstanceOf[createScriptURL]
   
   @scala.inline
-  def createURL: createURL = "createURL".asInstanceOf[createURL]
-  
-  @scala.inline
   def name: name = "name".asInstanceOf[name]
   
   @js.native
-  sealed trait createHTML extends js.Object
+  sealed trait createHTML extends FnNames
   
   @js.native
-  sealed trait createScript extends js.Object
+  sealed trait createScript extends FnNames
   
   @js.native
-  sealed trait createScriptURL extends js.Object
-  
-  @js.native
-  sealed trait createURL extends js.Object
+  sealed trait createScriptURL extends FnNames
   
   @js.native
   sealed trait name extends js.Object

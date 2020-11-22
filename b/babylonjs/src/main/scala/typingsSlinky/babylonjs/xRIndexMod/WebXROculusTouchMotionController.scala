@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs.xRIndexMod
 
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMinimalMotionControllerObject
-import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandness
+import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandedness
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,24 +11,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class WebXROculusTouchMotionController protected ()
   extends typingsSlinky.babylonjs.motionControllerIndexMod.WebXROculusTouchMotionController {
-  def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
   def this(
     scene: Scene,
     gamepadObject: IMinimalMotionControllerObject,
-    handness: MotionControllerHandness,
+    handedness: MotionControllerHandedness
+  ) = this()
+  def this(
+    scene: Scene,
+    gamepadObject: IMinimalMotionControllerObject,
+    handedness: MotionControllerHandedness,
     legacyMapping: Boolean
   ) = this()
   def this(
     scene: Scene,
     gamepadObject: IMinimalMotionControllerObject,
-    handness: MotionControllerHandness,
+    handedness: MotionControllerHandedness,
     legacyMapping: js.UndefOr[scala.Nothing],
     _forceLegacyControllers: Boolean
   ) = this()
   def this(
     scene: Scene,
     gamepadObject: IMinimalMotionControllerObject,
-    handness: MotionControllerHandness,
+    handedness: MotionControllerHandedness,
     legacyMapping: Boolean,
     _forceLegacyControllers: Boolean
   ) = this()

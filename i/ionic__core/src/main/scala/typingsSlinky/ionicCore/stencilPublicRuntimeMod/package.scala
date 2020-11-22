@@ -20,6 +20,12 @@ package object stencilPublicRuntimeMod {
   
   type ElementDecorator = js.Function0[typingsSlinky.std.PropertyDecorator]
   
+  type ErrorHandler = js.Function2[
+    /* err */ js.Any, 
+    /* element */ js.UndefOr[org.scalajs.dom.raw.HTMLElement], 
+    scala.Unit
+  ]
+  
   type EventDecorator = js.Function1[
     /* opts */ js.UndefOr[typingsSlinky.ionicCore.stencilPublicRuntimeMod.EventOptions], 
     typingsSlinky.std.PropertyDecorator

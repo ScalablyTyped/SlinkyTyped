@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("@testing-library/dom/types/events", "createEvent")
 @js.native
-object createEvent extends TopLevel[CreateObject]
+object createEvent extends TopLevel[CreateObject with CreateFunction]

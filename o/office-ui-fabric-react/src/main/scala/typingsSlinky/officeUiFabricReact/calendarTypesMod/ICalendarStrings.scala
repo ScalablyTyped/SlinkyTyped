@@ -24,6 +24,13 @@ trait ICalendarStrings extends js.Object {
   var goToToday: String = js.native
   
   /**
+    * Aria-label format string for the header button in the month picker. Should have 1 string param, e.g. "`{0}`,
+    * select to change the year". This aria-label will only be applied if the year picker is enabled; otherwise
+    * the label will default to the header string, e.g. "2019".
+    */
+  var monthPickerHeaderAriaLabel: js.UndefOr[String] = js.native
+  
+  /**
     * An array of strings for the full names of months.
     * The array is 0-based, so months[0] should be the full name of January.
     */
@@ -75,6 +82,12 @@ trait ICalendarStrings extends js.Object {
     * Aria-label format string for the week number header. Should have 1 string param e.g. "week number \{0\}"
     */
   var weekNumberFormatString: js.UndefOr[String] = js.native
+  
+  /**
+    * Aria-label format string for the header button in the year picker.
+    * Should have 1 string param, e.g. "`{0}`, select to change the month"
+    */
+  var yearPickerHeaderAriaLabel: js.UndefOr[String] = js.native
 }
 object ICalendarStrings {
   
@@ -139,6 +152,12 @@ object ICalendarStrings {
     def deleteCloseButtonAriaLabel: Self = this.set("closeButtonAriaLabel", js.undefined)
     
     @scala.inline
+    def setMonthPickerHeaderAriaLabel(value: String): Self = this.set("monthPickerHeaderAriaLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMonthPickerHeaderAriaLabel: Self = this.set("monthPickerHeaderAriaLabel", js.undefined)
+    
+    @scala.inline
     def setNextMonthAriaLabel(value: String): Self = this.set("nextMonthAriaLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -179,5 +198,11 @@ object ICalendarStrings {
     
     @scala.inline
     def deleteWeekNumberFormatString: Self = this.set("weekNumberFormatString", js.undefined)
+    
+    @scala.inline
+    def setYearPickerHeaderAriaLabel(value: String): Self = this.set("yearPickerHeaderAriaLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteYearPickerHeaderAriaLabel: Self = this.set("yearPickerHeaderAriaLabel", js.undefined)
   }
 }

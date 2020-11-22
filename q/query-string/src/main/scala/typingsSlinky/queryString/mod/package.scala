@@ -6,5 +6,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type ParsedQuery[T] = org.scalablytyped.runtime.StringDictionary[js.UndefOr[T | js.Array[T] | scala.Null]]
+  type ParsedQuery[T] = org.scalablytyped.runtime.StringDictionary[T | js.Array[T] | scala.Null]
+  
+  type Stringifiable = js.UndefOr[java.lang.String | scala.Boolean | scala.Double | scala.Null]
+  
+  type StringifiableRecord = typingsSlinky.std.Record[
+    java.lang.String, 
+    typingsSlinky.queryString.mod.Stringifiable | js.Array[typingsSlinky.queryString.mod.Stringifiable]
+  ]
 }

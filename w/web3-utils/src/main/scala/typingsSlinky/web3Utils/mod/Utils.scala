@@ -17,6 +17,8 @@ trait Utils extends js.Object {
   def checkAddressChecksum(address: String): Boolean = js.native
   def checkAddressChecksum(address: String, chainId: Double): Boolean = js.native
   
+  def encodePacked(`val`: Mixed*): String | Null = js.native
+  
   def fromAscii(string: String): String = js.native
   
   def fromDecimal(value: String): String = js.native

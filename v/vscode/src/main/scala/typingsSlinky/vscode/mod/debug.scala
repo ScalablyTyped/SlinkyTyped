@@ -79,4 +79,7 @@ object debug extends js.Object {
     nameOrConfiguration: DebugConfiguration,
     parentSessionOrOptions: DebugSessionOptions
   ): Thenable[Boolean] = js.native
+  
+  def stopDebugging(): Thenable[Unit] = js.native
+  def stopDebugging(session: DebugSession): Thenable[Unit] = js.native
 }

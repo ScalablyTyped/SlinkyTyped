@@ -26,7 +26,13 @@ object tensorflowTfjsBackendWebglStrings {
   def bilinear: bilinear = "bilinear".asInstanceOf[bilinear]
   
   @scala.inline
+  def imag: imag = "imag".asInstanceOf[imag]
+  
+  @scala.inline
   def max: max = "max".asInstanceOf[max]
+  
+  @scala.inline
+  def mean: mean = "mean".asInstanceOf[mean]
   
   @scala.inline
   def min: min = "min".asInstanceOf[min]
@@ -38,7 +44,16 @@ object tensorflowTfjsBackendWebglStrings {
   def prod: prod = "prod".asInstanceOf[prod]
   
   @scala.inline
+  def real: real = "real".asInstanceOf[real]
+  
+  @scala.inline
+  def reflect: reflect = "reflect".asInstanceOf[reflect]
+  
+  @scala.inline
   def sum: sum = "sum".asInstanceOf[sum]
+  
+  @scala.inline
+  def symmetric: symmetric = "symmetric".asInstanceOf[symmetric]
   
   @scala.inline
   def unsortedSegmentSum: unsortedSegmentSum = "unsortedSegmentSum".asInstanceOf[unsortedSegmentSum]
@@ -62,7 +77,13 @@ object tensorflowTfjsBackendWebglStrings {
   sealed trait bilinear extends js.Object
   
   @js.native
+  sealed trait imag extends js.Object
+  
+  @js.native
   sealed trait max extends ReduceTypes
+  
+  @js.native
+  sealed trait mean extends ReduceTypes
   
   @js.native
   sealed trait min extends ReduceTypes
@@ -74,7 +95,16 @@ object tensorflowTfjsBackendWebglStrings {
   sealed trait prod extends ReduceTypes
   
   @js.native
+  sealed trait real extends js.Object
+  
+  @js.native
+  sealed trait reflect extends js.Object
+  
+  @js.native
   sealed trait sum extends ReduceTypes
+  
+  @js.native
+  sealed trait symmetric extends js.Object
   
   @js.native
   sealed trait unsortedSegmentSum extends js.Object

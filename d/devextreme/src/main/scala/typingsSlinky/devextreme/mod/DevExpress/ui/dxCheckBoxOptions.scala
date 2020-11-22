@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxCheckBoxOptions extends EditorOptions[dxCheckBox] {
   
-  /** @name dxCheckBox.Options.name */
+  /**
+    * [descr:dxCheckBox.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxCheckBox.Options.text */
+  /**
+    * [descr:dxCheckBox.Options.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name dxCheckBox.Options.value */
+  /**
+    * [descr:dxCheckBox.Options.value]
+    */
   @JSName("value")
   var value_dxCheckBoxOptions: js.UndefOr[Boolean] = js.native
 }

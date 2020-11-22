@@ -54,9 +54,15 @@ object fixednumberMod extends js.Object {
     
     def addUnsafe(other: FixedNumber): FixedNumber = js.native
     
+    def ceiling(): FixedNumber = js.native
+    
     def divUnsafe(other: FixedNumber): FixedNumber = js.native
     
+    def floor(): FixedNumber = js.native
+    
     val format: FixedFormat = js.native
+    
+    def isNegative(): Boolean = js.native
     
     def isZero(): Boolean = js.native
     

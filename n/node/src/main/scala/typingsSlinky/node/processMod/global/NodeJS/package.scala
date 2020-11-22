@@ -12,11 +12,6 @@ package object NodeJS {
   
   type ExitListener = js.Function1[/* code */ scala.Double, scala.Unit]
   
-  type HRTime = js.Function1[
-    /* time */ js.UndefOr[js.Tuple2[scala.Double, scala.Double]], 
-    js.Tuple2[scala.Double, scala.Double]
-  ]
-  
   type MessageListener = js.Function2[/* message */ js.Any, /* sendHandle */ js.Any, scala.Unit]
   
   type MultipleResolveListener = js.Function3[

@@ -14,7 +14,7 @@ trait CopyConfig extends js.Object {
   
   var text: js.UndefOr[String] = js.native
   
-  var tooltips: js.UndefOr[js.Tuple2[ReactElement, ReactElement]] = js.native
+  var tooltips: js.UndefOr[Boolean | ReactElement] = js.native
 }
 object CopyConfig {
   
@@ -61,7 +61,10 @@ object CopyConfig {
     def deleteText: Self = this.set("text", js.undefined)
     
     @scala.inline
-    def setTooltips(value: js.Tuple2[ReactElement, ReactElement]): Self = this.set("tooltips", value.asInstanceOf[js.Any])
+    def setTooltipsReactElement(value: ReactElement): Self = this.set("tooltips", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTooltips(value: Boolean | ReactElement): Self = this.set("tooltips", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTooltips: Self = this.set("tooltips", js.undefined)

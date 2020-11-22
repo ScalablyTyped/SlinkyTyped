@@ -10,25 +10,25 @@ trait EngineOptions extends WebGLContextAttributes {
   
   /**
     * Defines if webaudio should be initialized as well
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     */
   var audioEngine: js.UndefOr[Boolean] = js.native
   
   /**
     * Defines if webvr should be enabled automatically
-    * @see http://doc.babylonjs.com/how_to/webvr_camera
+    * @see https://doc.babylonjs.com/how_to/webvr_camera
     */
   var autoEnableWebVR: js.UndefOr[Boolean] = js.native
   
   /**
     * Defines if animations should run using a deterministic lock step
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+    * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
     */
   var deterministicLockstep: js.UndefOr[Boolean] = js.native
   
   /**
     * Defines if webgl2 should be turned off even if supported
-    * @see http://doc.babylonjs.com/features/webgl2
+    * @see https://doc.babylonjs.com/features/webgl2
     */
   var disableWebGL2Support: js.UndefOr[Boolean] = js.native
   
@@ -60,6 +60,16 @@ trait EngineOptions extends WebGLContextAttributes {
     * Defines that engine should compile shaders with high precision floats (if supported). True by default
     */
   var useHighPrecisionFloats: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Make the matrix computations to be performed in 64 bits instead of 32 bits. False by default
+    */
+  var useHighPrecisionMatrix: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Make the canvas XR Compatible for XR sessions
+    */
+  var xrCompatible: js.UndefOr[Boolean] = js.native
 }
 object EngineOptions {
   
@@ -143,5 +153,17 @@ object EngineOptions {
     
     @scala.inline
     def deleteUseHighPrecisionFloats: Self = this.set("useHighPrecisionFloats", js.undefined)
+    
+    @scala.inline
+    def setUseHighPrecisionMatrix(value: Boolean): Self = this.set("useHighPrecisionMatrix", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUseHighPrecisionMatrix: Self = this.set("useHighPrecisionMatrix", js.undefined)
+    
+    @scala.inline
+    def setXrCompatible(value: Boolean): Self = this.set("xrCompatible", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteXrCompatible: Self = this.set("xrCompatible", js.undefined)
   }
 }

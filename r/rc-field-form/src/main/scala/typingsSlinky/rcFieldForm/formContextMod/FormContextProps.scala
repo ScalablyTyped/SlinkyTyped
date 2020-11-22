@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FormContextProps extends FormProviderProps {
   
-  def registerForm(name: String, form: FormInstance): Unit = js.native
+  def registerForm(name: String, form: FormInstance[_]): Unit = js.native
   
   def triggerFormChange(name: String, changedFields: js.Array[FieldData]): Unit = js.native
   
@@ -22,7 +22,7 @@ object FormContextProps {
   
   @scala.inline
   def apply(
-    registerForm: (String, FormInstance) => Unit,
+    registerForm: (String, FormInstance[_]) => Unit,
     triggerFormChange: (String, js.Array[FieldData]) => Unit,
     triggerFormFinish: (String, Store) => Unit,
     unregisterForm: String => Unit
@@ -47,7 +47,7 @@ object FormContextProps {
     }
     
     @scala.inline
-    def setRegisterForm(value: (String, FormInstance) => Unit): Self = this.set("registerForm", js.Any.fromFunction2(value))
+    def setRegisterForm(value: (String, FormInstance[_]) => Unit): Self = this.set("registerForm", js.Any.fromFunction2(value))
     
     @scala.inline
     def setTriggerFormChange(value: (String, js.Array[FieldData]) => Unit): Self = this.set("triggerFormChange", js.Any.fromFunction2(value))

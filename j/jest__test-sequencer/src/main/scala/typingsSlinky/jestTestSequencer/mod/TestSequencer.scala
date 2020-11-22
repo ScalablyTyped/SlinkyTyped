@@ -17,6 +17,14 @@ trait TestSequencer extends js.Object {
   
   def _getCachePath(context: Context): String = js.native
   
+  def allFailedTests(
+    tests: js.Array[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
+    ]
+  ): js.Array[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
+  ] = js.native
+  
   def cacheResults(
     tests: js.Array[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
@@ -57,6 +65,11 @@ object TestSequencer {
     _cache: js.Any,
     _getCache: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ js.Any => Cache,
     _getCachePath: Context => String,
+    allFailedTests: js.Array[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
+    ] => js.Array[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
+    ],
     cacheResults: (js.Array[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
     ], AggregatedResult) => Unit,
@@ -66,7 +79,7 @@ object TestSequencer {
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
     ]
   ): TestSequencer = {
-    val __obj = js.Dynamic.literal(_cache = _cache.asInstanceOf[js.Any], _getCache = js.Any.fromFunction1(_getCache), _getCachePath = js.Any.fromFunction1(_getCachePath), cacheResults = js.Any.fromFunction2(cacheResults), sort = js.Any.fromFunction1(sort))
+    val __obj = js.Dynamic.literal(_cache = _cache.asInstanceOf[js.Any], _getCache = js.Any.fromFunction1(_getCache), _getCachePath = js.Any.fromFunction1(_getCachePath), allFailedTests = js.Any.fromFunction1(allFailedTests), cacheResults = js.Any.fromFunction2(cacheResults), sort = js.Any.fromFunction1(sort))
     __obj.asInstanceOf[TestSequencer]
   }
   
@@ -95,6 +108,15 @@ object TestSequencer {
     
     @scala.inline
     def set_getCachePath(value: Context => String): Self = this.set("_getCachePath", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setAllFailedTests(
+      value: js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
+        ] => js.Array[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Test */ _
+        ]
+    ): Self = this.set("allFailedTests", js.Any.fromFunction1(value))
     
     @scala.inline
     def setCacheResults(

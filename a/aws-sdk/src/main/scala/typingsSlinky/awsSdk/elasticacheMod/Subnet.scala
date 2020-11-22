@@ -16,6 +16,11 @@ trait Subnet extends js.Object {
     * The unique identifier for the subnet.
     */
   var SubnetIdentifier: js.UndefOr[String] = js.native
+  
+  /**
+    * The outpost ARN of the subnet.
+    */
+  var SubnetOutpost: js.UndefOr[typingsSlinky.awsSdk.elasticacheMod.SubnetOutpost] = js.native
 }
 object Subnet {
   
@@ -51,5 +56,11 @@ object Subnet {
     
     @scala.inline
     def deleteSubnetIdentifier: Self = this.set("SubnetIdentifier", js.undefined)
+    
+    @scala.inline
+    def setSubnetOutpost(value: SubnetOutpost): Self = this.set("SubnetOutpost", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSubnetOutpost: Self = this.set("SubnetOutpost", js.undefined)
   }
 }

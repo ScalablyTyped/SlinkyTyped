@@ -11,8 +11,5 @@ object pattern extends js.Object {
   /**
     * Refine a string struct to match a specific regexp pattern.
     */
-  /**
-    * Refine a string struct to match a specific regexp pattern.
-    */
   def apply[T /* <: String */](S: Struct_[T, _], regexp: js.RegExp): Struct_[T, _] = js.native
 }

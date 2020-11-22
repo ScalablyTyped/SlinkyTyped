@@ -10,11 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ExtrudeSymbol3DLayerMaterial extends AnonymousAccessor {
   
   /**
-    * The fill color of the extrusion. This can be autocast with an array of rgb(a) values, named string, hex string or an hsl(a) string, an object with `r`, `g`, `b`, and `a` properties, or a [Color](https://developers.arcgis.com/javascript/latest/api-reference/esri-Color.html) object.
+    * The fill color of the extrusion.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ExtrudeSymbol3DLayer.html#material)
-    *
-    * @default white
     */
   var color: js.UndefOr[Color_] = js.native
 }

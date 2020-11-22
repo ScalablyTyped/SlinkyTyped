@@ -29,8 +29,8 @@ object BlockCheckbox {
   def withProps(p: BlockCheckboxProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(onChange: String => Unit, prefixCls: String, value: String): Builder = {
-    val __props = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), prefixCls = prefixCls.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(configType: String, onChange: String => Unit, prefixCls: String, value: String): Builder = {
+    val __props = js.Dynamic.literal(configType = configType.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), prefixCls = prefixCls.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[BlockCheckboxProps]))
   }
 }

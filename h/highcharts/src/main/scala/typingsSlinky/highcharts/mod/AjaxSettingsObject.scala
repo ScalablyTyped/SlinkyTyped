@@ -1,9 +1,5 @@
 package typingsSlinky.highcharts.mod
 
-import typingsSlinky.highcharts.highchartsStrings.DELETE
-import typingsSlinky.highcharts.highchartsStrings.GET
-import typingsSlinky.highcharts.highchartsStrings.POST
-import typingsSlinky.highcharts.highchartsStrings.UPDATE
 import typingsSlinky.highcharts.highchartsStrings.json
 import typingsSlinky.highcharts.highchartsStrings.octet
 import typingsSlinky.highcharts.highchartsStrings.text
@@ -41,9 +37,9 @@ trait AjaxSettingsObject extends js.Object {
   var success: js.Function = js.native
   
   /**
-    * The verb to use.
+    * The HTTP method to use. For example GET or POST.
     */
-  var `type`: DELETE | GET | POST | UPDATE = js.native
+  var `type`: String = js.native
   
   /**
     * The URL to call.
@@ -59,7 +55,7 @@ object AjaxSettingsObject {
     error: js.Function,
     headers: Dictionary[String],
     success: js.Function,
-    `type`: DELETE | GET | POST | UPDATE,
+    `type`: String,
     url: String
   ): AjaxSettingsObject = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], dataType = dataType.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
@@ -98,7 +94,7 @@ object AjaxSettingsObject {
     def setSuccess(value: js.Function): Self = this.set("success", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: DELETE | GET | POST | UPDATE): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])

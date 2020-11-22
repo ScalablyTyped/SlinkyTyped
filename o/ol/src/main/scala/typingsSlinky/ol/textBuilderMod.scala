@@ -11,6 +11,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object textBuilderMod extends js.Object {
   
   @js.native
+  trait CanvasTextBuilder
+    extends typingsSlinky.ol.builderMod.default
+  
+  @js.native
   sealed trait TEXT_ALIGN extends js.Object
   @js.native
   object TEXT_ALIGN extends js.Object {
@@ -75,10 +79,7 @@ object textBuilderMod extends js.Object {
   }
   
   @js.native
-  class default protected ()
-    extends typingsSlinky.ol.builderMod.default {
+  class default protected () extends CanvasTextBuilder {
     def this(tolerance: Double, maxExtent: Extent, resolution: Double, pixelRatio: Double) = this()
   }
-  
-  type CanvasTextBuilder = typingsSlinky.ol.builderMod.default
 }

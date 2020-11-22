@@ -45,9 +45,13 @@ import typingsSlinky.reactMdMenu.defaultMenuItemRendererMod.MenuItemRenderer
 import typingsSlinky.reactMdMenu.defaultMenuItemRendererMod.ValidMenuItem
 import typingsSlinky.reactMdMenu.defaultMenuRendererMod.InjectedMenuProps
 import typingsSlinky.reactMdMenu.defaultMenuRendererMod.MenuRenderer
-import typingsSlinky.reactMdMenu.menuMod.MenuPositionOptions
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`additions removals`
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.`additions text`
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.`inline`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`removals additions`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`removals text`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`text additions`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`text removals`
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.additions
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.all
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.ascending
@@ -92,7 +96,6 @@ import typingsSlinky.reactMdMenu.reactMdMenuStrings.yes
 import typingsSlinky.reactMdPortal.getContainerMod.PortalInto
 import typingsSlinky.reactMdStates.typesMod.MergableRippleHandlers
 import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
-import typingsSlinky.reactMdUtils.typesMod.PositionAnchor
 import typingsSlinky.reactMdUtils.typesTypesMod.PropsWithRef
 import typingsSlinky.reactTransitionGroup.csstransitionMod.CSSTransitionClassNames
 import scala.scalajs.js
@@ -108,7 +111,7 @@ trait DropdownMenuProps extends js.Object {
   
   var accessKey: js.UndefOr[String] = js.native
   
-  var anchor: js.UndefOr[PositionAnchor] = js.native
+  var anchor: js.UndefOr[js.Any] = js.native
   
   var `aria-activedescendant`: js.UndefOr[String] = js.native
   
@@ -178,7 +181,9 @@ trait DropdownMenuProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -220,9 +225,9 @@ trait DropdownMenuProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
-  var closeOnResize: js.UndefOr[Boolean] = js.native
+  var closeOnResize: js.UndefOr[js.Any] = js.native
   
-  var closeOnScroll: js.UndefOr[Boolean] = js.native
+  var closeOnScroll: js.UndefOr[js.Any] = js.native
   
   var color: js.UndefOr[String] = js.native
   
@@ -286,7 +291,7 @@ trait DropdownMenuProps extends js.Object {
   
   var hidden: js.UndefOr[Boolean] = js.native
   
-  var horizontal: js.UndefOr[Boolean] = js.native
+  var horizontal: js.UndefOr[js.Any] = js.native
   
   /**
     * The id to use for the menu button and used to create the id for the menu.
@@ -329,6 +334,11 @@ trait DropdownMenuProps extends js.Object {
   var last: js.UndefOr[Boolean] = js.native
   
   /**
+    * An optional className to pass to the `menuRenderer`/`Menu` component.
+    */
+  var menuClassName: js.UndefOr[String] = js.native
+  
+  /**
     * The label to use for the menu. Either this or the `menuLabelledBy` props
     * are required for a11y.
     */
@@ -348,6 +358,11 @@ trait DropdownMenuProps extends js.Object {
     * id.
     */
   var menuRenderer: js.UndefOr[MenuRenderer] = js.native
+  
+  /**
+    * An optional style object to pass to the `menuRenderer`/`Menu` component.
+    */
+  var menuStyle: js.UndefOr[CSSProperties] = js.native
   
   var name: js.UndefOr[String] = js.native
   
@@ -531,7 +546,7 @@ trait DropdownMenuProps extends js.Object {
     */
   var portalIntoId: js.UndefOr[String] = js.native
   
-  var positionOptions: js.UndefOr[MenuPositionOptions] = js.native
+  var positionOptions: js.UndefOr[js.Any] = js.native
   
   var prefix: js.UndefOr[String] = js.native
   
@@ -630,7 +645,7 @@ object DropdownMenuProps {
     def deleteAccessKey: Self = this.set("accessKey", js.undefined)
     
     @scala.inline
-    def setAnchor(value: PositionAnchor): Self = this.set("anchor", value.asInstanceOf[js.Any])
+    def setAnchor(value: js.Any): Self = this.set("anchor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnchor: Self = this.set("anchor", js.undefined)
@@ -840,7 +855,9 @@ object DropdownMenuProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -969,13 +986,13 @@ object DropdownMenuProps {
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
-    def setCloseOnResize(value: Boolean): Self = this.set("closeOnResize", value.asInstanceOf[js.Any])
+    def setCloseOnResize(value: js.Any): Self = this.set("closeOnResize", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCloseOnResize: Self = this.set("closeOnResize", js.undefined)
     
     @scala.inline
-    def setCloseOnScroll(value: Boolean): Self = this.set("closeOnScroll", value.asInstanceOf[js.Any])
+    def setCloseOnScroll(value: js.Any): Self = this.set("closeOnScroll", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCloseOnScroll: Self = this.set("closeOnScroll", js.undefined)
@@ -1164,7 +1181,7 @@ object DropdownMenuProps {
     def deleteHidden: Self = this.set("hidden", js.undefined)
     
     @scala.inline
-    def setHorizontal(value: Boolean): Self = this.set("horizontal", value.asInstanceOf[js.Any])
+    def setHorizontal(value: js.Any): Self = this.set("horizontal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHorizontal: Self = this.set("horizontal", js.undefined)
@@ -1242,6 +1259,12 @@ object DropdownMenuProps {
     def deleteLast: Self = this.set("last", js.undefined)
     
     @scala.inline
+    def setMenuClassName(value: String): Self = this.set("menuClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMenuClassName: Self = this.set("menuClassName", js.undefined)
+    
+    @scala.inline
     def setMenuLabel(value: String): Self = this.set("menuLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1258,6 +1281,12 @@ object DropdownMenuProps {
     
     @scala.inline
     def deleteMenuRenderer: Self = this.set("menuRenderer", js.undefined)
+    
+    @scala.inline
+    def setMenuStyle(value: CSSProperties): Self = this.set("menuStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMenuStyle: Self = this.set("menuStyle", js.undefined)
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
@@ -1779,7 +1808,7 @@ object DropdownMenuProps {
     def deletePortalIntoId: Self = this.set("portalIntoId", js.undefined)
     
     @scala.inline
-    def setPositionOptions(value: MenuPositionOptions): Self = this.set("positionOptions", value.asInstanceOf[js.Any])
+    def setPositionOptions(value: js.Any): Self = this.set("positionOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePositionOptions: Self = this.set("positionOptions", js.undefined)

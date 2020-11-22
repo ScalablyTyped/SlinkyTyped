@@ -9,6 +9,8 @@ trait RunOptions extends js.Object {
   
   var absolutePaths: js.UndefOr[Boolean] = js.native
   
+  var ancestry: js.UndefOr[Boolean] = js.native
+  
   var elementRef: js.UndefOr[Boolean] = js.native
   
   var frameWaitTime: js.UndefOr[Double] = js.native
@@ -21,11 +23,9 @@ trait RunOptions extends js.Object {
   
   var reporter: js.UndefOr[ReporterVersion] = js.native
   
-  var restoreScroll: js.UndefOr[Boolean] = js.native
-  
   var resultTypes: js.UndefOr[js.Array[resultGroups]] = js.native
   
-  var rules: js.UndefOr[js.Object] = js.native
+  var rules: js.UndefOr[RuleObject] = js.native
   
   var runOnly: js.UndefOr[RunOnly | (js.Array[String | TagValue])] = js.native
   
@@ -61,6 +61,12 @@ object RunOptions {
     
     @scala.inline
     def deleteAbsolutePaths: Self = this.set("absolutePaths", js.undefined)
+    
+    @scala.inline
+    def setAncestry(value: Boolean): Self = this.set("ancestry", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAncestry: Self = this.set("ancestry", js.undefined)
     
     @scala.inline
     def setElementRef(value: Boolean): Self = this.set("elementRef", value.asInstanceOf[js.Any])
@@ -99,12 +105,6 @@ object RunOptions {
     def deleteReporter: Self = this.set("reporter", js.undefined)
     
     @scala.inline
-    def setRestoreScroll(value: Boolean): Self = this.set("restoreScroll", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRestoreScroll: Self = this.set("restoreScroll", js.undefined)
-    
-    @scala.inline
     def setResultTypesVarargs(value: resultGroups*): Self = this.set("resultTypes", js.Array(value :_*))
     
     @scala.inline
@@ -114,7 +114,7 @@ object RunOptions {
     def deleteResultTypes: Self = this.set("resultTypes", js.undefined)
     
     @scala.inline
-    def setRules(value: js.Object): Self = this.set("rules", value.asInstanceOf[js.Any])
+    def setRules(value: RuleObject): Self = this.set("rules", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRules: Self = this.set("rules", js.undefined)

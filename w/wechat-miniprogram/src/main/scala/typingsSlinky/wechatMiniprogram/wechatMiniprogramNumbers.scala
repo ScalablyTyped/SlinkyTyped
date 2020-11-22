@@ -272,7 +272,13 @@ object wechatMiniprogramNumbers {
   def `24000`: `24000` = 24000.asInstanceOf[`24000`]
   
   @scala.inline
+  def `3`: `3` = 3.asInstanceOf[`3`]
+  
+  @scala.inline
   def `32000`: `32000` = 32000.asInstanceOf[`32000`]
+  
+  @scala.inline
+  def `4`: `4` = 4.asInstanceOf[`4`]
   
   @scala.inline
   def `44100`: `44100` = 44100.asInstanceOf[`44100`]
@@ -554,7 +560,13 @@ object wechatMiniprogramNumbers {
   sealed trait `24000` extends js.Object
   
   @js.native
+  sealed trait `3` extends js.Object
+  
+  @js.native
   sealed trait `32000` extends js.Object
+  
+  @js.native
+  sealed trait `4` extends js.Object
   
   @js.native
   sealed trait `44100` extends js.Object

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object bemMod extends js.Object {
   
-  def default(base: Block): BEMResult = js.native
+  def bem(base: Block): BEMResult = js.native
   
   type BEMResult = js.Function2[
     /* elementOrModifier */ js.UndefOr[Element | Modifier], 

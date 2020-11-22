@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * A structure for the comment ID and IDs of its related replies.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait CommentDetail extends js.Object {
@@ -18,8 +17,7 @@ trait CommentDetail extends js.Object {
     *
     * Represents the ID of comment.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var commentId: String = js.native
   
@@ -27,8 +25,7 @@ trait CommentDetail extends js.Object {
     *
     * Represents the IDs of the related replies belong to comment.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var replyIds: js.Array[String] = js.native
 }

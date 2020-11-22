@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object parserFlowMod extends js.Object {
   
-  var parsers: StringDictionary[Parser] = js.native
+  var parsers: StringDictionary[Parser[_]] = js.native
 }

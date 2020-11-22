@@ -64,16 +64,6 @@ class ClassStmt protected () extends Statement {
   ) = this()
   def this(
     name: String,
-    parent: Null,
-    fields: js.Array[ClassField],
-    getters: js.Array[ClassGetter],
-    constructorMethod: ClassMethod,
-    methods: js.Array[ClassMethod],
-    modifiers: Null,
-    sourceSpan: ParseSourceSpan
-  ) = this()
-  def this(
-    name: String,
     parent: Expression,
     fields: js.Array[ClassField],
     getters: js.Array[ClassGetter],
@@ -94,13 +84,135 @@ class ClassStmt protected () extends Statement {
   ) = this()
   def this(
     name: String,
+    parent: Null,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    parent: Null,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: Null,
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    parent: Null,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: ParseSourceSpan,
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    parent: Null,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.Array[StmtModifier],
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    parent: Null,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.Array[StmtModifier],
+    sourceSpan: Null,
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    parent: Null,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.Array[StmtModifier],
+    sourceSpan: ParseSourceSpan,
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
     parent: Expression,
     fields: js.Array[ClassField],
     getters: js.Array[ClassGetter],
     constructorMethod: ClassMethod,
     methods: js.Array[ClassMethod],
-    modifiers: Null,
-    sourceSpan: ParseSourceSpan
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    parent: Expression,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: Null,
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    parent: Expression,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: ParseSourceSpan,
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    parent: Expression,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.Array[StmtModifier],
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    parent: Expression,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.Array[StmtModifier],
+    sourceSpan: Null,
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    parent: Expression,
+    fields: js.Array[ClassField],
+    getters: js.Array[ClassGetter],
+    constructorMethod: ClassMethod,
+    methods: js.Array[ClassMethod],
+    modifiers: js.Array[StmtModifier],
+    sourceSpan: ParseSourceSpan,
+    leadingComments: js.Array[LeadingComment_]
   ) = this()
   
   var constructorMethod: ClassMethod = js.native

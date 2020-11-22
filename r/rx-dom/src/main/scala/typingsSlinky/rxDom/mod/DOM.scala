@@ -10,7 +10,6 @@ import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.MutationObserverInit
 import org.scalajs.dom.raw.Node
 import org.scalajs.dom.raw.PointerEvent
-import org.scalajs.dom.raw.Position
 import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.UIEvent
 import typingsSlinky.rxDom.mod.rxAugmentingMod.DOM.AjaxSettings
@@ -18,6 +17,7 @@ import typingsSlinky.rxDom.mod.rxAugmentingMod.DOM.AjaxSuccessResponse
 import typingsSlinky.rxDom.mod.rxAugmentingMod.DOM.GeolocationOptions
 import typingsSlinky.rxDom.mod.rxAugmentingMod.DOM.JsonpSettings
 import typingsSlinky.rxDom.mod.rxAugmentingMod.DOM.JsonpSuccessResponse
+import typingsSlinky.std.GeolocationPosition
 import typingsSlinky.std.MutationEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -259,10 +259,10 @@ object DOM extends js.Object {
   @js.native
   object geolocation extends js.Object {
     
-    def getCurrentPosition(): typingsSlinky.rx.Rx.Observable[Position] = js.native
-    def getCurrentPosition(geolocationOptions: GeolocationOptions): typingsSlinky.rx.Rx.Observable[Position] = js.native
+    def getCurrentPosition(): typingsSlinky.rx.Rx.Observable[GeolocationPosition] = js.native
+    def getCurrentPosition(geolocationOptions: GeolocationOptions): typingsSlinky.rx.Rx.Observable[GeolocationPosition] = js.native
     
-    def watchPosition(): typingsSlinky.rx.Rx.Observable[Position] = js.native
-    def watchPosition(geolocationOptions: GeolocationOptions): typingsSlinky.rx.Rx.Observable[Position] = js.native
+    def watchPosition(): typingsSlinky.rx.Rx.Observable[GeolocationPosition] = js.native
+    def watchPosition(geolocationOptions: GeolocationOptions): typingsSlinky.rx.Rx.Observable[GeolocationPosition] = js.native
   }
 }

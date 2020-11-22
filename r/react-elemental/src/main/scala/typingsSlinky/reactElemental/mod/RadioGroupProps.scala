@@ -35,8 +35,13 @@ import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.reactElemental.anon.Disabled
+import typingsSlinky.reactElemental.reactElementalStrings.`additions removals`
 import typingsSlinky.reactElemental.reactElementalStrings.`additions text`
 import typingsSlinky.reactElemental.reactElementalStrings.`inline`
+import typingsSlinky.reactElemental.reactElementalStrings.`removals additions`
+import typingsSlinky.reactElemental.reactElementalStrings.`removals text`
+import typingsSlinky.reactElemental.reactElementalStrings.`text additions`
+import typingsSlinky.reactElemental.reactElementalStrings.`text removals`
 import typingsSlinky.reactElemental.reactElementalStrings.additions
 import typingsSlinky.reactElemental.reactElementalStrings.all
 import typingsSlinky.reactElemental.reactElementalStrings.ascending
@@ -272,7 +277,9 @@ trait RadioGroupProps extends js.Object {
     * Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
     * @see aria-atomic.
     */
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   /** Indicates that user input is required on the element before a form may be submitted. */
   var `aria-required`: js.UndefOr[Boolean] = js.native
@@ -878,7 +885,9 @@ object RadioGroupProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

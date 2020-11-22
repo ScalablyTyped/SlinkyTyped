@@ -3,6 +3,7 @@ package typingsSlinky.ledgerhqHwAppBtc.mod
 import typingsSlinky.ledgerhqHwAppBtc.anon.BitcoinAddress
 import typingsSlinky.ledgerhqHwAppBtc.anon.Format
 import typingsSlinky.ledgerhqHwAppBtc.anon.R
+import typingsSlinky.ledgerhqHwAppBtc.anon.TrustedInput
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -108,4 +109,100 @@ trait AppBtc extends js.Object {
     hasExtraData: Boolean,
     additionals: js.Array[String]
   ): Transaction = js.native
+  
+  def startUntrustedHashTransactionInput(
+    newTransaction: Boolean,
+    transaction: Transaction,
+    inputs: js.Array[TrustedInput],
+    additionals: js.Array[String]
+  ): js.Promise[Unit] = js.native
+  def startUntrustedHashTransactionInput(
+    newTransaction: Boolean,
+    transaction: Transaction,
+    inputs: js.Array[TrustedInput],
+    additionals: js.Array[String],
+    bip143: js.UndefOr[scala.Nothing],
+    overwinter: js.UndefOr[scala.Nothing],
+    useTrustedInputForSegwit: Boolean
+  ): js.Promise[Unit] = js.native
+  def startUntrustedHashTransactionInput(
+    newTransaction: Boolean,
+    transaction: Transaction,
+    inputs: js.Array[TrustedInput],
+    additionals: js.Array[String],
+    bip143: js.UndefOr[scala.Nothing],
+    overwinter: Boolean
+  ): js.Promise[Unit] = js.native
+  def startUntrustedHashTransactionInput(
+    newTransaction: Boolean,
+    transaction: Transaction,
+    inputs: js.Array[TrustedInput],
+    additionals: js.Array[String],
+    bip143: js.UndefOr[scala.Nothing],
+    overwinter: Boolean,
+    useTrustedInputForSegwit: Boolean
+  ): js.Promise[Unit] = js.native
+  def startUntrustedHashTransactionInput(
+    newTransaction: Boolean,
+    transaction: Transaction,
+    inputs: js.Array[TrustedInput],
+    additionals: js.Array[String],
+    bip143: Boolean
+  ): js.Promise[Unit] = js.native
+  def startUntrustedHashTransactionInput(
+    newTransaction: Boolean,
+    transaction: Transaction,
+    inputs: js.Array[TrustedInput],
+    additionals: js.Array[String],
+    bip143: Boolean,
+    overwinter: js.UndefOr[scala.Nothing],
+    useTrustedInputForSegwit: Boolean
+  ): js.Promise[Unit] = js.native
+  def startUntrustedHashTransactionInput(
+    newTransaction: Boolean,
+    transaction: Transaction,
+    inputs: js.Array[TrustedInput],
+    additionals: js.Array[String],
+    bip143: Boolean,
+    overwinter: Boolean
+  ): js.Promise[Unit] = js.native
+  def startUntrustedHashTransactionInput(
+    newTransaction: Boolean,
+    transaction: Transaction,
+    inputs: js.Array[TrustedInput],
+    additionals: js.Array[String],
+    bip143: Boolean,
+    overwinter: Boolean,
+    useTrustedInputForSegwit: Boolean
+  ): js.Promise[Unit] = js.native
+  
+  def startUntrustedHashTransactionInputRaw(
+    newTransaction: Boolean,
+    firstRound: Boolean,
+    transactionData: Buffer,
+    additionals: js.Array[String]
+  ): js.Promise[Buffer] = js.native
+  def startUntrustedHashTransactionInputRaw(
+    newTransaction: Boolean,
+    firstRound: Boolean,
+    transactionData: Buffer,
+    additionals: js.Array[String],
+    bip143: js.UndefOr[scala.Nothing],
+    overwinter: Boolean
+  ): js.Promise[Buffer] = js.native
+  def startUntrustedHashTransactionInputRaw(
+    newTransaction: Boolean,
+    firstRound: Boolean,
+    transactionData: Buffer,
+    additionals: js.Array[String],
+    bip143: Boolean
+  ): js.Promise[Buffer] = js.native
+  def startUntrustedHashTransactionInputRaw(
+    newTransaction: Boolean,
+    firstRound: Boolean,
+    transactionData: Buffer,
+    additionals: js.Array[String],
+    bip143: Boolean,
+    overwinter: Boolean
+  ): js.Promise[Buffer] = js.native
 }

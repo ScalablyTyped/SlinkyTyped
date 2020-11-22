@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("__esri.LineCallout3D")
 @js.native
 /**
-  * This type of callout displays a line to connect a symbol or a label with its actual location in the scene. For example when displaying points of interest in a city, visualizing them with a callout line helps to understand where the points are actually located:
+  * This type of callout displays a line to connect a symbol or a label with its actual location in the scene.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-callouts-LineCallout3D.html)
   */

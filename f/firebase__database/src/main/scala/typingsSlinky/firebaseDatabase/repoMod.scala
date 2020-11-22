@@ -23,9 +23,9 @@ object repoMod extends js.Object {
   class Repo protected () extends js.Object {
     def this(
       repoInfo_ : RepoInfo,
-      forceRestClient: Boolean,
+      forceRestClient_ : Boolean,
       app: FirebaseApp,
-      authTokenProvider: AuthTokenProvider
+      authTokenProvider_ : AuthTokenProvider
     ) = this()
     
     var __database: js.Any = js.native
@@ -35,6 +35,8 @@ object repoMod extends js.Object {
     def addEventCallbackForQuery(query: Query, eventRegistration: EventRegistration): Unit = js.native
     
     var app: FirebaseApp = js.native
+    
+    var authTokenProvider_ : AuthTokenProvider = js.native
     
     def callOnCompleteCallback(
       callback: js.Function2[/* status */ js.Error | Null, /* errorReason */ js.UndefOr[String], Unit],
@@ -54,12 +56,42 @@ object repoMod extends js.Object {
     
     var eventQueue_ : js.Any = js.native
     
+    var forceRestClient_ : js.Any = js.native
+    
     /**
       * Generate ServerValues using some variables from the repo object.
       */
     def generateServerValues(): Indexable = js.native
     
     var getNextWriteId_ : js.Any = js.native
+    
+    /**
+      * The purpose of `getValue` is to return the latest known value
+      * satisfying `query`.
+      *
+      * If the client is connected, this method will send a request
+      * to the server. If the client is not connected, then either:
+      *
+      * 1. The client was once connected, but not anymore.
+      * 2. The client has never connected, this is the first operation
+      *    this repo is handling.
+      *
+      * In case (1), it's possible that the client still has an active
+      * listener, with cached data. Since this is the latest known
+      * value satisfying the query, that's what getValue will return.
+      * If there is no cached data, `getValue` surfaces an "offline"
+      * error.
+      *
+      * In case (2), `getValue` will trigger a time-limited connection
+      * attempt. If the client is unable to connect to the server, it
+      * will surface an "offline" error because there cannot be any
+      * cached data. On the other hand, if the client is able to connect,
+      * `getValue` will return the server's value for the query, if one
+      * exists.
+      *
+      * @param query - The query to surface a value for.
+      */
+    def getValue(query: Query): js.Promise[DataSnapshot] = js.native
     
     var infoData_ : js.Any = js.native
     
@@ -71,6 +103,9 @@ object repoMod extends js.Object {
     def interceptServerData_(callback: js.Function2[/* a */ String, /* b */ js.Any, _]): Unit = js.native
     
     def interrupt(): Unit = js.native
+    
+    /** Key for uniquely identifying this repo, used in RepoManager */
+    val key: String = js.native
     
     var log_ : js.Any = js.native
     
@@ -166,6 +201,8 @@ object repoMod extends js.Object {
       newPriority: Null,
       onComplete: js.Function2[/* status */ js.Error | Null, /* errorReason */ js.UndefOr[String], Unit]
     ): Unit = js.native
+    
+    def start(): Unit = js.native
     
     def startTransaction(
       path: Path,

@@ -1,25 +1,43 @@
 package typingsSlinky.officeUiFabricReact
 
+import org.scalablytyped.runtime.Instantiable0
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.anon.Disabled
-import typingsSlinky.officeUiFabricReact.gridCellTypesMod.IGridCellProps
-import typingsSlinky.officeUiFabricReact.gridTypesMod.IGridProps
+import typingsSlinky.officeUiFabricReact.buttonGridCellTypesMod.IButtonGridCellProps
+import typingsSlinky.officeUiFabricReact.buttonGridTypesMod.IButtonGridProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("office-ui-fabric-react/lib/utilities/grid", JSImport.Namespace)
+@JSImport("office-ui-fabric-react/lib/Grid", JSImport.Namespace)
 @js.native
 object gridMod extends js.Object {
   
-  val Grid: ReactComponentClass[IGridProps] = js.native
+  val ButtonGrid: ReactComponentClass[IButtonGridProps] = js.native
+  
+  val Grid: ReactComponentClass[IButtonGridProps] = js.native
   
   @js.native
-  class GridCell[T, P /* <: IGridCellProps[T] */] ()
-    extends typingsSlinky.officeUiFabricReact.gridCellMod.GridCell[T, P]
+  class ButtonGridCell[T, P /* <: IButtonGridCellProps[T] */] ()
+    extends typingsSlinky.officeUiFabricReact.buttonGridMod.ButtonGridCell[T, P]
   /* static members */
   @js.native
-  object GridCell extends js.Object {
+  object ButtonGridCell extends js.Object {
+    
+    var defaultProps: Disabled = js.native
+  }
+  
+  @js.native
+  class GridCell[T, P /* <: IButtonGridCellProps[/* import warning: RewrittenClass.unapply cls was tparam T */ _] */] ()
+    extends typingsSlinky.officeUiFabricReact.buttonGridCellMod.ButtonGridCell[T, P]
+  @js.native
+  object GridCell
+    extends Instantiable0[
+          typingsSlinky.officeUiFabricReact.buttonGridCellMod.ButtonGridCell[
+            js.Object, 
+            IButtonGridCellProps[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]
+          ]
+        ] {
     
     var defaultProps: Disabled = js.native
   }

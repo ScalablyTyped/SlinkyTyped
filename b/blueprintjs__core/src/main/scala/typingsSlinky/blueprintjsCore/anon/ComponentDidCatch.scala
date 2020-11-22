@@ -58,19 +58,29 @@ trait ComponentDidCatch extends js.Object {
   
   var refs: StringDictionary[ReactInstance] = js.native
   
-  def render(): ReactElement = js.native
+  def render(): js.UndefOr[ReactElement | Null] = js.native
   
-  def renderContextMenu(e: SyntheticMouseEvent[HTMLElement]): ReactElement = js.native
+  def renderContextMenu(e: SyntheticMouseEvent[HTMLElement]): js.UndefOr[ReactElement] = js.native
   
+  def setState[K /* <: scala.Nothing */](): Unit = js.native
   def setState[K /* <: scala.Nothing */](
-    state: js.Function2[/* prevState */ js.Object, /* props */ js.Object, js.Object | (Pick[js.Object, K])]
+    state: js.Function2[
+      /* prevState */ js.Object, 
+      /* props */ js.Object, 
+      js.Object | (Pick[js.Object, K]) | Null
+    ]
   ): Unit = js.native
   def setState[K /* <: scala.Nothing */](
-    state: js.Function2[/* prevState */ js.Object, /* props */ js.Object, js.Object | (Pick[js.Object, K])],
+    state: js.Function2[
+      /* prevState */ js.Object, 
+      /* props */ js.Object, 
+      js.Object | (Pick[js.Object, K]) | Null
+    ],
     callback: js.Function0[Unit]
   ): Unit = js.native
   def setState[K /* <: scala.Nothing */](state: js.Object): Unit = js.native
   def setState[K /* <: scala.Nothing */](state: js.Object, callback: js.Function0[Unit]): Unit = js.native
+  def setState[K /* <: scala.Nothing */](state: Null, callback: js.Function0[Unit]): Unit = js.native
   def setState[K /* <: scala.Nothing */](state: Pick[js.Object, K]): Unit = js.native
   def setState[K /* <: scala.Nothing */](state: Pick[js.Object, K], callback: js.Function0[Unit]): Unit = js.native
   

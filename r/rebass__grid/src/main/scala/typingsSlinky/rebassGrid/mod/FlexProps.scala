@@ -38,8 +38,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.rebassGrid.rebassGridStrings.`additions removals`
 import typingsSlinky.rebassGrid.rebassGridStrings.`additions text`
 import typingsSlinky.rebassGrid.rebassGridStrings.`inline`
+import typingsSlinky.rebassGrid.rebassGridStrings.`removals additions`
+import typingsSlinky.rebassGrid.rebassGridStrings.`removals text`
+import typingsSlinky.rebassGrid.rebassGridStrings.`text additions`
+import typingsSlinky.rebassGrid.rebassGridStrings.`text removals`
 import typingsSlinky.rebassGrid.rebassGridStrings.additions
 import typingsSlinky.rebassGrid.rebassGridStrings.all
 import typingsSlinky.rebassGrid.rebassGridStrings.ascending
@@ -95,12 +100,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* Inlined parent @rebass/grid.@rebass/grid.BaseProps */
 /* Inlined parent styled-system.styled-system.SpaceProps<styled-system.styled-system.RequiredTheme, styled-system.styled-system.ThemeValue<'space', styled-system.styled-system.RequiredTheme, any>> */
-/* Inlined parent styled-system.styled-system.WidthProps<styled-system.styled-system.RequiredTheme, / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> * / any> */
+/* Inlined parent styled-system.styled-system.WidthProps<styled-system.styled-system.RequiredTheme, / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> * / any> */
 /* Inlined parent styled-system.styled-system.FontSizeProps<styled-system.styled-system.RequiredTheme, styled-system.styled-system.ThemeValue<'fontSizes', styled-system.styled-system.RequiredTheme, any>> */
 /* Inlined parent styled-system.styled-system.TextColorProps<styled-system.styled-system.RequiredTheme, styled-system.styled-system.ThemeValue<'colors', styled-system.styled-system.RequiredTheme, any>> */
 /* Inlined parent styled-system.styled-system.BackgroundColorProps<styled-system.styled-system.RequiredTheme, styled-system.styled-system.ThemeValue<'colors', styled-system.styled-system.RequiredTheme, any>> */
 /* Inlined parent styled-system.styled-system.OpacityProps<styled-system.styled-system.RequiredTheme> */
-/* Inlined parent styled-system.styled-system.FlexProps<styled-system.styled-system.RequiredTheme, / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> * / any> */
+/* Inlined parent styled-system.styled-system.FlexProps<styled-system.styled-system.RequiredTheme, / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> * / any> */
 /* Inlined parent styled-system.styled-system.OrderProps<styled-system.styled-system.RequiredTheme> */
 /* Inlined parent styled-system.styled-system.AlignSelfProps<styled-system.styled-system.RequiredTheme> */
 /* Inlined parent styled-system.styled-system.FlexWrapProps<styled-system.styled-system.RequiredTheme> */
@@ -132,7 +137,7 @@ trait FlexProps extends js.Object {
     */
   var alignItems: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignItemsProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignItems */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -147,7 +152,7 @@ trait FlexProps extends js.Object {
     */
   var alignSelf: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -228,7 +233,9 @@ trait FlexProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -364,7 +371,7 @@ trait FlexProps extends js.Object {
     */
   var flex: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -377,7 +384,7 @@ trait FlexProps extends js.Object {
     */
   var flexDirection: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexDirectionProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexDirection */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -390,7 +397,7 @@ trait FlexProps extends js.Object {
     */
   var flexWrap: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexWrapProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexWrap */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -464,7 +471,7 @@ trait FlexProps extends js.Object {
     */
   var justifyContent: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.JustifyContentProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.JustifyContent */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -725,7 +732,7 @@ trait FlexProps extends js.Object {
     */
   var opacity: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -742,7 +749,7 @@ trait FlexProps extends js.Object {
     */
   var order: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -901,7 +908,7 @@ trait FlexProps extends js.Object {
     */
   var width: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -969,7 +976,7 @@ object FlexProps {
     @scala.inline
     def setAlignItems(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignItemsProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignItems */ _, 
           RequiredTheme
         ]
     ): Self = this.set("alignItems", value.asInstanceOf[js.Any])
@@ -986,7 +993,7 @@ object FlexProps {
     @scala.inline
     def setAlignSelf(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
           RequiredTheme
         ]
     ): Self = this.set("alignSelf", value.asInstanceOf[js.Any])
@@ -1226,7 +1233,9 @@ object FlexProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1591,7 +1600,7 @@ object FlexProps {
     @scala.inline
     def setFlex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("flex", value.asInstanceOf[js.Any])
@@ -1608,7 +1617,7 @@ object FlexProps {
     @scala.inline
     def setFlexDirection(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexDirectionProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexDirection */ _, 
           RequiredTheme
         ]
     ): Self = this.set("flexDirection", value.asInstanceOf[js.Any])
@@ -1625,7 +1634,7 @@ object FlexProps {
     @scala.inline
     def setFlexWrap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexWrapProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexWrap */ _, 
           RequiredTheme
         ]
     ): Self = this.set("flexWrap", value.asInstanceOf[js.Any])
@@ -1804,7 +1813,7 @@ object FlexProps {
     @scala.inline
     def setJustifyContent(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.JustifyContentProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.JustifyContent */ _, 
           RequiredTheme
         ]
     ): Self = this.set("justifyContent", value.asInstanceOf[js.Any])
@@ -2607,7 +2616,7 @@ object FlexProps {
     @scala.inline
     def setOpacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): Self = this.set("opacity", value.asInstanceOf[js.Any])
@@ -2636,7 +2645,7 @@ object FlexProps {
     @scala.inline
     def setOrder(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
           RequiredTheme
         ]
     ): Self = this.set("order", value.asInstanceOf[js.Any])
@@ -3139,7 +3148,7 @@ object FlexProps {
     @scala.inline
     def setWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("width", value.asInstanceOf[js.Any])

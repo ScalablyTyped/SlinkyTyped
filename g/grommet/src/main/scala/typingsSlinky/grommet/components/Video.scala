@@ -17,6 +17,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.video.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.grommet.anon.FullScreen
 import typingsSlinky.grommet.grommetStrings.`false`
 import typingsSlinky.grommet.grommetStrings.below
 import typingsSlinky.grommet.grommetStrings.contain
@@ -35,8 +36,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.VideoHTMLAttributes
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -213,7 +219,9 @@ object Video {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -306,6 +314,9 @@ object Video {
     def disablePictureInPicture(value: Boolean): this.type = set("disablePictureInPicture", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def disableRemotePlayback(value: Boolean): this.type = set("disableRemotePlayback", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -358,6 +369,9 @@ object Video {
     
     @scala.inline
     def mediaGroup(value: String): this.type = set("mediaGroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def messages(value: FullScreen): this.type = set("messages", value.asInstanceOf[js.Any])
     
     @scala.inline
     def mute(value: Boolean): this.type = set("mute", value.asInstanceOf[js.Any])

@@ -10,4 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object multistream extends js.Object {
   
   def apply(streams: Streams): Writable = js.native
+  def apply(streams: Streams, opts: MultiStreamOptions): Writable = js.native
 }

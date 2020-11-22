@@ -28,7 +28,7 @@ trait ApplicationSummary extends js.Object {
   var ApplicationVersionId: typingsSlinky.awsSdk.kinesisanalyticsv2Mod.ApplicationVersionId = js.native
   
   /**
-    * The runtime environment for the application (SQL-1.0 or FLINK-1_6).
+    * The runtime environment for the application (SQL-1.0, FLINK-1_6, or FLINK-1_8).
     */
   var RuntimeEnvironment: typingsSlinky.awsSdk.kinesisanalyticsv2Mod.RuntimeEnvironment = js.native
 }

@@ -1,10 +1,10 @@
 package typingsSlinky.officeUiFabricReact.peoplePickerItemTypesMod
 
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.IPersonaPropsValidationSt
 import typingsSlinky.officeUiFabricReact.pickerItemTypesMod.IPickerItemProps
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

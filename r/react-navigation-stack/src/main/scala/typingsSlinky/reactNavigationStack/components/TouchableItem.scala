@@ -3,6 +3,7 @@ package typingsSlinky.reactNavigationStack.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -10,7 +11,6 @@ import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -28,21 +28,21 @@ import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.polite
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.radiobutton_checked
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.radiobutton_unchecked
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.yes
-import typingsSlinky.reactNavigationStack.touchableItemNativeMod.Props
+import typingsSlinky.reactNavigationStack.touchableItemMod.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object TouchableItem {
   
-  @JSImport("react-navigation-stack/lib/typescript/src/vendor/views/TouchableItem", "TouchableItem")
+  @JSImport("react-navigation-stack/lib/typescript/src/vendor/views/TouchableItem", JSImport.Default)
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNavigationStack.touchableItemMod.TouchableItem] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
     def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
@@ -132,7 +132,7 @@ object TouchableItem {
     def onAccessibilityTap(value: () => Unit): this.type = set("onAccessibilityTap", js.Any.fromFunction0(value))
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))
@@ -195,6 +195,9 @@ object TouchableItem {
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def pressColor(value: String): this.type = set("pressColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -230,9 +233,5 @@ object TouchableItem {
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply(pressColor: String): Builder = {
-    val __props = js.Dynamic.literal(pressColor = pressColor.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
-  }
+  implicit def make(companion: TouchableItem.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

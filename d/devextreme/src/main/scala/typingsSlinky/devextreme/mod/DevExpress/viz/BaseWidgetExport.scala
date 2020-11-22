@@ -13,33 +13,51 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseWidget.Options.export */
+/**
+  * [descr:BaseWidget.Options.export]
+  */
 @js.native
 trait BaseWidgetExport extends js.Object {
   
-  /** @name BaseWidget.Options.export.backgroundColor */
+  /**
+    * [descr:BaseWidget.Options.export.backgroundColor]
+    */
   var backgroundColor: js.UndefOr[String] = js.native
   
-  /** @name BaseWidget.Options.export.enabled */
+  /**
+    * [descr:BaseWidget.Options.export.enabled]
+    */
   var enabled: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseWidget.Options.export.fileName */
+  /**
+    * [descr:BaseWidget.Options.export.fileName]
+    */
   var fileName: js.UndefOr[String] = js.native
   
-  /** @name BaseWidget.Options.export.formats */
+  /**
+    * [descr:BaseWidget.Options.export.formats]
+    */
   var formats: js.UndefOr[js.Array[GIF | JPEG | PDF | PNG | SVG]] = js.native
   
-  /** @name BaseWidget.Options.export.margin */
+  /**
+    * [descr:BaseWidget.Options.export.margin]
+    */
   var margin: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.export.printingEnabled */
+  /**
+    * [descr:BaseWidget.Options.export.printingEnabled]
+    */
   var printingEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @deprecated */
-  /** @name BaseWidget.Options.export.proxyUrl */
+  /**
+    * [descr:BaseWidget.Options.export.proxyUrl]
+    * @deprecated [depNote:BaseWidget.Options.export.proxyUrl]
+    */
   var proxyUrl: js.UndefOr[String] = js.native
   
-  /** @name BaseWidget.Options.export.svgToCanvas */
+  /**
+    * [descr:BaseWidget.Options.export.svgToCanvas]
+    */
   var svgToCanvas: js.UndefOr[
     js.Function2[
       /* svg */ SVGElement, 

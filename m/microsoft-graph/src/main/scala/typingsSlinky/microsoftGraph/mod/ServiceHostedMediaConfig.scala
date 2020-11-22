@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ServiceHostedMediaConfig extends MediaConfig {
   
   // The list of media to pre-fetch.
-  var preFetchMedia: js.UndefOr[js.Array[MediaInfo]] = js.native
+  var preFetchMedia: js.UndefOr[NullableOption[js.Array[MediaInfo]]] = js.native
 }
 object ServiceHostedMediaConfig {
   
@@ -37,9 +37,12 @@ object ServiceHostedMediaConfig {
     def setPreFetchMediaVarargs(value: MediaInfo*): Self = this.set("preFetchMedia", js.Array(value :_*))
     
     @scala.inline
-    def setPreFetchMedia(value: js.Array[MediaInfo]): Self = this.set("preFetchMedia", value.asInstanceOf[js.Any])
+    def setPreFetchMedia(value: NullableOption[js.Array[MediaInfo]]): Self = this.set("preFetchMedia", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePreFetchMedia: Self = this.set("preFetchMedia", js.undefined)
+    
+    @scala.inline
+    def setPreFetchMediaNull: Self = this.set("preFetchMedia", null)
   }
 }

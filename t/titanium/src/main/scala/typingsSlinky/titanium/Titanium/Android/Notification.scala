@@ -29,6 +29,11 @@ trait Notification extends Proxy {
   var category: String = js.native
   
   /**
+    * The channel id specified for the notification.
+    */
+  var channelId: String = js.native
+  
+  /**
     * Accent color used behind icon.
     */
   var color: String = js.native
@@ -79,6 +84,12 @@ trait Notification extends Proxy {
     * @deprecated Access <Titanium.Android.Notification.category> instead.
     */
   def getCategory(): String = js.native
+  
+  /**
+    * Gets the value of the <Titanium.Android.Notification.channelId> property.
+    * @deprecated Access <Titanium.Android.Notification.channelId> instead.
+    */
+  def getChannelId(): String = js.native
   
   /**
     * Gets the value of the <Titanium.Android.Notification.color> property.
@@ -270,6 +281,12 @@ trait Notification extends Proxy {
   def setCategory(category: String): Unit = js.native
   
   /**
+    * Sets the value of the <Titanium.Android.Notification.channelId> property.
+    * @deprecated Set the value using <Titanium.Android.Notification.channelId> instead.
+    */
+  def setChannelId(channelId: String): Unit = js.native
+  
+  /**
     * Sets the value of the <Titanium.Android.Notification.color> property.
     * @deprecated Set the value using <Titanium.Android.Notification.color> instead.
     */
@@ -445,13 +462,15 @@ trait Notification extends Proxy {
     * Will wake up the device for the given time (in milliseconds) when the notification is shown.
     * The application needs to also set the `android.permission.WAKE_LOCK` permission
     * in the Android manifest section of the `tiapp.xml` file.
-    *     <ti:app>
-    *         <android>
-    *             <manifest>
-    *                 <uses-permission android:name="android.permission.WAKE_LOCK" />
-    *             </manifest>
-    *         </android>
-    *     </ti:app>
+    * ``` xml
+    * <ti:app>
+    *     <android>
+    *         <manifest>
+    *             <uses-permission android:name="android.permission.WAKE_LOCK" />
+    *         </manifest>
+    *     </android>
+    * </ti:app>
+    * ```
     */
   var wakeLock: wakeLockOptions = js.native
   

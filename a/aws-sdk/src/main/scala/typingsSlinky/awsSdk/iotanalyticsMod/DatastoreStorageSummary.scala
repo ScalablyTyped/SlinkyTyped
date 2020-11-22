@@ -13,7 +13,7 @@ trait DatastoreStorageSummary extends js.Object {
   var customerManagedS3: js.UndefOr[CustomerManagedDatastoreS3StorageSummary] = js.native
   
   /**
-    * Used to store data store data in an S3 bucket managed by the AWS IoT Analytics service.
+    * Used to store data store data in an S3 bucket managed by AWS IoT Analytics.
     */
   var serviceManagedS3: js.UndefOr[ServiceManagedDatastoreS3StorageSummary] = js.native
 }

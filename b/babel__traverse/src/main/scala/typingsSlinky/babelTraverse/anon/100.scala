@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSInferType
+import typingsSlinky.babelTraverse.babelTraverseStrings.JSXAttribute
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `100` extends js.Object {
   
-  var `type`: TSInferType = js.native
+  var `type`: JSXAttribute = js.native
 }
 object `100` {
   
   @scala.inline
-  def apply(`type`: TSInferType): `100` = {
+  def apply(`type`: JSXAttribute): `100` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`100`]
@@ -35,6 +35,6 @@ object `100` {
     }
     
     @scala.inline
-    def setType(value: TSInferType): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: JSXAttribute): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

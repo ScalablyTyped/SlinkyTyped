@@ -10,6 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("react-native", "Animated.View")
 @js.native
-object View extends TopLevel[
-      ReactComponentClass[ComponentProps[TypeofView] | AnimatedProps[ComponentPropsWithRef[TypeofView]]]
-    ]
+object View extends TopLevel[ReactComponentClass[AnimatedProps[ComponentPropsWithRef[TypeofView]]]]

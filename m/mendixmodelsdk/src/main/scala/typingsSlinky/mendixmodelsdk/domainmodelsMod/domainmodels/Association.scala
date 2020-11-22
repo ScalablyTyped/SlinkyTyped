@@ -1,17 +1,19 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.commonMod.common.IPoint
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/associations relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/associations relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -28,8 +30,8 @@ class Association protected () extends AssociationBase {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def child: Entity = js.native
@@ -46,9 +48,6 @@ class Association protected () extends AssociationBase {
   
   @JSName("containerAsDomainModel")
   def containerAsDomainModel_MAssociation: DomainModel = js.native
-  
-  @JSName("model")
-  var model_FAssociation: IModel = js.native
   
   def parentConnection: IPoint = js.native
   def parentConnection_=(newValue: IPoint): Unit = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.expoConfigureSplashScreen
 
-import typingsSlinky.colorString.mod.ColorDescriptor
+import typingsSlinky.expoConfigureSplashScreen.anon.BackgroundColorDarkMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,6 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object backgroundAssetMod extends js.Object {
   
-  def default(iosProjectPath: String, color: ColorDescriptor): js.Promise[Unit] = js.native
-  def default(iosProjectPath: String, color: ColorDescriptor, darkModeColor: ColorDescriptor): js.Promise[Unit] = js.native
+  def default(iosProjectPath: String, config: BackgroundColorDarkMode): js.Promise[Unit] = js.native
 }

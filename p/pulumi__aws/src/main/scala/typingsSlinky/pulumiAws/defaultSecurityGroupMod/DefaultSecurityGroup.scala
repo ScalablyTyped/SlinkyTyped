@@ -27,24 +27,25 @@ class DefaultSecurityGroup protected () extends CustomResource {
   def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
   def this(name: String, args: DefaultSecurityGroupArgs, opts: CustomResourceOptions) = this()
   
+  /**
+    * The ARN of the security group
+    */
   val arn: Output_[String] = js.native
   
   /**
-    * The description of the security group
+    * Description of this egress rule.
     */
   val description: Output_[String] = js.native
   
   /**
-    * Can be specified multiple times for each
-    * egress rule. Each egress block supports fields documented below.
+    * Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
     */
-  val egress: Output_[js.UndefOr[js.Array[DefaultSecurityGroupEgress]]] = js.native
+  val egress: Output_[js.Array[DefaultSecurityGroupEgress]] = js.native
   
   /**
-    * Can be specified multiple times for each
-    * ingress rule. Each ingress block supports fields documented below.
+    * Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
     */
-  val ingress: Output_[js.UndefOr[js.Array[DefaultSecurityGroupIngress]]] = js.native
+  val ingress: Output_[js.Array[DefaultSecurityGroupIngress]] = js.native
   
   /**
     * The name of the security group
@@ -64,9 +65,7 @@ class DefaultSecurityGroup protected () extends CustomResource {
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
   /**
-    * The VPC ID. **Note that changing
-    * the `vpcId` will _not_ restore any default security group rules that were
-    * modified, added, or removed.** It will be left in its current state
+    * The VPC ID. **Note that changing the `vpcId` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state
     */
   val vpcId: Output_[String] = js.native
 }

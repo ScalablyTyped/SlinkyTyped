@@ -1,8 +1,7 @@
 package typingsSlinky.pollyjsCore.mod
 
-import typingsSlinky.pollyjsAdapter.mod.default
-import typingsSlinky.pollyjsCore.anon.TypeofAdapter
 import typingsSlinky.pollyjsCore.anon.TypeofPersister
+import typingsSlinky.pollyjsPersister.mod.default
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,19 +13,22 @@ class Polly protected () extends js.Object {
   def this(recordingName: String) = this()
   def this(recordingName: String, options: PollyConfig) = this()
   
-  var adapters: Map[String, default] = js.native
+  var adapters: Map[
+    String, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Adapter */ _
+  ] = js.native
   
   var config: PollyConfig = js.native
   
   def configure(config: PollyConfig): Unit = js.native
   
   def connectTo(name: String): Unit = js.native
-  def connectTo(name: TypeofAdapter): Unit = js.native
+  def connectTo(name: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Adapter */ js.Any): Unit = js.native
   
   def disconnect(): Unit = js.native
   
   def disconnectFrom(name: String): Unit = js.native
-  def disconnectFrom(name: TypeofAdapter): Unit = js.native
+  def disconnectFrom(name: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Adapter */ js.Any): Unit = js.native
   
   def flush(): js.Promise[Unit] = js.native
   
@@ -36,7 +38,7 @@ class Polly protected () extends js.Object {
   
   def pause(): Unit = js.native
   
-  var persister: typingsSlinky.pollyjsPersister.mod.default | Null = js.native
+  var persister: default | Null = js.native
   
   def play(): Unit = js.native
   
@@ -65,9 +67,9 @@ object Polly extends js.Object {
   
   def once(event: PollyEvent, listener: PollyEventListener): Unit = js.native
   
-  def register(Factory: TypeofAdapter): Unit = js.native
+  def register(Factory: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Adapter */ js.Any): Unit = js.native
   def register(Factory: TypeofPersister): Unit = js.native
   
-  def unregister(Factory: TypeofAdapter): Unit = js.native
+  def unregister(Factory: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Adapter */ js.Any): Unit = js.native
   def unregister(Factory: TypeofPersister): Unit = js.native
 }

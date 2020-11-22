@@ -72,6 +72,15 @@ trait WorkbookLoadOptions extends js.Object {
   
   /**
     *
+    * Returns a collection of linked data types that are part of the workbook.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var linkedDataTypes: js.UndefOr[LinkedDataTypeCollectionLoadOptions] = js.native
+  
+  /**
+    *
     * Gets the workbook name.
     *
     * [Api set: ExcelApi 1.7]
@@ -209,6 +218,12 @@ object WorkbookLoadOptions {
     
     @scala.inline
     def deleteIsDirty: Self = this.set("isDirty", js.undefined)
+    
+    @scala.inline
+    def setLinkedDataTypes(value: LinkedDataTypeCollectionLoadOptions): Self = this.set("linkedDataTypes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLinkedDataTypes: Self = this.set("linkedDataTypes", js.undefined)
     
     @scala.inline
     def setName(value: Boolean): Self = this.set("name", value.asInstanceOf[js.Any])

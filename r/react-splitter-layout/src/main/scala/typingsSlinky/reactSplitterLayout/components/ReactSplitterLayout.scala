@@ -21,6 +21,9 @@ object ReactSplitterLayout {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
+    def children(value: js.Any): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def customClassName(value: String): this.type = set("customClassName", value.asInstanceOf[js.Any])
     
     @scala.inline

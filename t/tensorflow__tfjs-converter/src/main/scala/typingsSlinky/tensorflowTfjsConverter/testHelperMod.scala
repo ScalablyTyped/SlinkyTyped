@@ -24,6 +24,8 @@ object testHelperMod extends js.Object {
   
   def createNumericArrayAttrFromIndex(inputIndex: Double): InputParamValue = js.native
   
+  def createShapeAttrFromIndex(inputIndex: Double): InputParamValue = js.native
+  
   def createStrArrayAttr(strs: js.Array[String]): ParamValue = js.native
   
   def createStrAttr(str: String): ParamValue = js.native

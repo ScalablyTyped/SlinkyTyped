@@ -33,6 +33,9 @@ object line3Mod extends js.Object {
     
     def distanceSq(): Double = js.native
     
+    /**
+    	 * @default new THREE.Vector3()
+    	 */
     var end: Vector3 = js.native
     
     def equals(line: Line3): Boolean = js.native
@@ -44,6 +47,9 @@ object line3Mod extends js.Object {
     def set(start: Vector3): Line3 = js.native
     def set(start: Vector3, end: Vector3): Line3 = js.native
     
+    /**
+    	 * @default new THREE.Vector3()
+    	 */
     var start: Vector3 = js.native
   }
 }

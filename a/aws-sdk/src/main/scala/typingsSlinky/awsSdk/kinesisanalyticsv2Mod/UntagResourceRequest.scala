@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UntagResourceRequest extends js.Object {
   
   /**
-    * The ARN of the Kinesis Analytics application from which to remove the tags.
+    * The ARN of the Kinesis Data Analytics application from which to remove the tags.
     */
   var ResourceARN: KinesisAnalyticsARN = js.native
   

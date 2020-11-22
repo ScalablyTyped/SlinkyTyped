@@ -21,14 +21,12 @@ class Shift () extends js.Object {
   var created_at: js.UndefOr[String] = js.native
   
   /**
-    * The ID of the employee this shift belongs to.
+    * The ID of the employee this shift belongs to. DEPRECATED at version 2020-08-26. Use `team_member_id` instead
     */
-  var employee_id: String = js.native
+  var employee_id: js.UndefOr[String] = js.native
   
   /**
-    * RFC 3339; shifted to timezone + offset. Precision up to the minute is respected; seconds are truncated. The
-    * `end_at` minute is not counted when the shift length is calculated. For example, a shift from `00:00` to `08:01`
-    * is considered an 8 hour shift (midnight to 8am).
+    * RFC 3339; shifted to timezone + offset. Precision up to the minute is respected; seconds are truncated.
     */
   var end_at: js.UndefOr[String] = js.native
   
@@ -51,6 +49,11 @@ class Shift () extends js.Object {
     * Describes working state of the current `Shift`. See [ShiftStatus](#type-shiftstatus) for possible values.
     */
   var status: js.UndefOr[OPEN | CLOSED] = js.native
+  
+  /**
+    * The ID of the team member this shift belongs to. Replaced `employee_id` at version \"2020-08-26\"
+    */
+  var team_member_id: js.UndefOr[String] = js.native
   
   /**
     * Read-only convenience value that is calculated from the location based on `location_id`. Format: the IANA

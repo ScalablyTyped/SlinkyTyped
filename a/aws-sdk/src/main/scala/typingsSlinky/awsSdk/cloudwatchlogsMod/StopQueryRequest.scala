@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StopQueryRequest extends js.Object {
   
   /**
-    * The ID number of the query to stop. If necessary, you can use DescribeQueries to find this ID number.
+    * The ID number of the query to stop. To find this ID number, use DescribeQueries.
     */
   var queryId: QueryId = js.native
 }

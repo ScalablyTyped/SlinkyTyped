@@ -6,14 +6,15 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.focusTrapZoneTypesMod.IFocusTrapZoneProps
 import typingsSlinky.officeUiFabricReact.layerTypesMod.ILayerProps
 import typingsSlinky.officeUiFabricReact.overlayTypesMod.IOverlayProps
 import typingsSlinky.officeUiFabricReact.panelBaseMod.PanelBase
+import typingsSlinky.officeUiFabricReact.popupTypesMod.IPopupProps
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
@@ -212,6 +213,11 @@ trait IPanelProps extends HTMLAttributes[PanelBase] {
     * Optional props to pass to the Overlay component that the panel uses.
     */
   var overlayProps: js.UndefOr[IOverlayProps] = js.native
+  
+  /**
+    * Optional props to pass the Popup component that the panel uses.
+    */
+  var popupProps: js.UndefOr[IPopupProps] = js.native
   
   /**
     * Call to provide customized styling that will layer on top of the variant rules.
@@ -465,6 +471,12 @@ object IPanelProps {
     
     @scala.inline
     def deleteOverlayProps: Self = this.set("overlayProps", js.undefined)
+    
+    @scala.inline
+    def setPopupProps(value: IPopupProps): Self = this.set("popupProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePopupProps: Self = this.set("popupProps", js.undefined)
     
     @scala.inline
     def setStylesFunction1(value: IPanelStyleProps => DeepPartial[IPanelStyles]): Self = this.set("styles", js.Any.fromFunction1(value))

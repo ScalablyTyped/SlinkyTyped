@@ -1,6 +1,8 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.anon.BeakWidth
+import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import typingsSlinky.officeUiFabricReact.focusTrapCalloutTypesMod.IFocusTrapCalloutProps
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`0`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`10`
@@ -24,11 +26,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object libCalloutMod extends js.Object {
   
+  val CalloutContent: ReactComponentClass[ICalloutProps] = js.native
+  
   val FocusTrapCallout: ReactComponentClass[IFocusTrapCalloutProps] = js.native
   
   @js.native
   class Callout ()
     extends typingsSlinky.officeUiFabricReact.calloutCalloutMod.Callout
+  
+  @js.native
+  class CalloutContentBase protected ()
+    extends typingsSlinky.officeUiFabricReact.calloutMod.CalloutContentBase {
+    def this(props: ICalloutProps) = this()
+  }
+  /* static members */
+  @js.native
+  object CalloutContentBase extends js.Object {
+    
+    var defaultProps: BeakWidth = js.native
+  }
   
   @js.native
   object DirectionalHint extends js.Object {

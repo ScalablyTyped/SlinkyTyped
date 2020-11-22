@@ -17,132 +17,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 class Quaternion ()
   extends typingsSlinky.babylonjs.BABYLON.Quaternion {
-  def this(/** defines the first component (0 by default) */
-  x: Double) = this()
+  def this(x: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
+  def this(x: Double, y: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], z: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: Double, z: Double) = this()
+  def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double) = this()
+  def this(x: Double, y: Double, z: Double) = this()
   def this(
-    /** defines the first component (0 by default) */
-  x: js.UndefOr[scala.Nothing],
-    /** defines the second component (0 by default) */
-  y: Double
+    x: js.UndefOr[scala.Nothing],
+    y: js.UndefOr[scala.Nothing],
+    z: js.UndefOr[scala.Nothing],
+    w: Double
   ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: Double,
-    /** defines the second component (0 by default) */
-  y: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: js.UndefOr[scala.Nothing],
-    /** defines the second component (0 by default) */
-  y: js.UndefOr[scala.Nothing],
-    /** defines the third component (0 by default) */
-  z: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: js.UndefOr[scala.Nothing],
-    /** defines the second component (0 by default) */
-  y: Double,
-    /** defines the third component (0 by default) */
-  z: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: Double,
-    /** defines the second component (0 by default) */
-  y: js.UndefOr[scala.Nothing],
-    /** defines the third component (0 by default) */
-  z: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: Double,
-    /** defines the second component (0 by default) */
-  y: Double,
-    /** defines the third component (0 by default) */
-  z: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: js.UndefOr[scala.Nothing],
-    /** defines the second component (0 by default) */
-  y: js.UndefOr[scala.Nothing],
-    /** defines the third component (0 by default) */
-  z: js.UndefOr[scala.Nothing],
-    /** defines the fourth component (1.0 by default) */
-  w: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: js.UndefOr[scala.Nothing],
-    /** defines the second component (0 by default) */
-  y: js.UndefOr[scala.Nothing],
-    /** defines the third component (0 by default) */
-  z: Double,
-    /** defines the fourth component (1.0 by default) */
-  w: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: js.UndefOr[scala.Nothing],
-    /** defines the second component (0 by default) */
-  y: Double,
-    /** defines the third component (0 by default) */
-  z: js.UndefOr[scala.Nothing],
-    /** defines the fourth component (1.0 by default) */
-  w: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: js.UndefOr[scala.Nothing],
-    /** defines the second component (0 by default) */
-  y: Double,
-    /** defines the third component (0 by default) */
-  z: Double,
-    /** defines the fourth component (1.0 by default) */
-  w: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: Double,
-    /** defines the second component (0 by default) */
-  y: js.UndefOr[scala.Nothing],
-    /** defines the third component (0 by default) */
-  z: js.UndefOr[scala.Nothing],
-    /** defines the fourth component (1.0 by default) */
-  w: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: Double,
-    /** defines the second component (0 by default) */
-  y: js.UndefOr[scala.Nothing],
-    /** defines the third component (0 by default) */
-  z: Double,
-    /** defines the fourth component (1.0 by default) */
-  w: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: Double,
-    /** defines the second component (0 by default) */
-  y: Double,
-    /** defines the third component (0 by default) */
-  z: js.UndefOr[scala.Nothing],
-    /** defines the fourth component (1.0 by default) */
-  w: Double
-  ) = this()
-  def this(
-    /** defines the first component (0 by default) */
-  x: Double,
-    /** defines the second component (0 by default) */
-  y: Double,
-    /** defines the third component (0 by default) */
-  z: Double,
-    /** defines the fourth component (1.0 by default) */
-  w: Double
-  ) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], z: Double, w: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: Double, z: js.UndefOr[scala.Nothing], w: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: Double, z: Double, w: Double) = this()
+  def this(x: Double, y: js.UndefOr[scala.Nothing], z: js.UndefOr[scala.Nothing], w: Double) = this()
+  def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double, w: Double) = this()
+  def this(x: Double, y: Double, z: js.UndefOr[scala.Nothing], w: Double) = this()
+  def this(x: Double, y: Double, z: Double, w: Double) = this()
 }
 /* static members */
 @JSGlobal("BABYLON.Quaternion")
@@ -179,6 +73,18 @@ object Quaternion extends js.Object {
     */
   def FromArray(array: DeepImmutable[ArrayLike[Double]]): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): typingsSlinky.babylonjs.BABYLON.Quaternion = js.native
+  
+  /**
+    * Updates the given quaternion "result" from the starting index of the given array.
+    * @param array the array to pull values from
+    * @param offset the offset into the array to start at
+    * @param result the quaternion to store the result in
+    */
+  def FromArrayToRef(
+    array: DeepImmutable[ArrayLike[Double]],
+    offset: Double,
+    result: typingsSlinky.babylonjs.BABYLON.Quaternion
+  ): Unit = js.native
   
   /**
     * Create a quaternion from Euler rotation angles

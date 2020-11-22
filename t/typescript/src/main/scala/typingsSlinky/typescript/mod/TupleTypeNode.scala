@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TupleTypeNode extends TypeNode {
   
-  var elementTypes: NodeArray[TypeNode] = js.native
+  val elements: NodeArray[TypeNode | NamedTupleMember] = js.native
   
   @JSName("kind")
-  var kind_TupleTypeNode: typingsSlinky.typescript.mod.SyntaxKind.TupleType = js.native
+  val kind_TupleTypeNode: typingsSlinky.typescript.mod.SyntaxKind.TupleType = js.native
 }

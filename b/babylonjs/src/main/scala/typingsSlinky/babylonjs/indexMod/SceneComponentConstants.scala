@@ -39,6 +39,8 @@ object SceneComponentConstants extends js.Object {
   
   val NAME_POSTPROCESSRENDERPIPELINEMANAGER: String = js.native
   
+  val NAME_PREPASSRENDERER: String = js.native
+  
   val NAME_PROCEDURALTEXTURE: String = js.native
   
   val NAME_SHADOWGENERATOR: String = js.native
@@ -47,7 +49,7 @@ object SceneComponentConstants extends js.Object {
   
   val NAME_SPRITE: String = js.native
   
-  val STEP_ACTIVEMESH_BOUNDINGBOXRENDERER: Double = js.native
+  val NAME_SUBSURFACE: String = js.native
   
   val STEP_AFTERCAMERADRAW_EFFECTLAYER: Double = js.native
   
@@ -57,11 +59,15 @@ object SceneComponentConstants extends js.Object {
   
   val STEP_AFTERCAMERADRAW_LENSFLARESYSTEM: Double = js.native
   
+  val STEP_AFTERCAMERADRAW_PREPASS: Double = js.native
+  
   val STEP_AFTERRENDERINGGROUPDRAW_BOUNDINGBOXRENDERER: Double = js.native
   
   val STEP_AFTERRENDERINGGROUPDRAW_EFFECTLAYER_DRAW: Double = js.native
   
   val STEP_AFTERRENDERINGMESH_OUTLINE: Double = js.native
+  
+  val STEP_AFTERRENDERINGMESH_PREPASS: Double = js.native
   
   val STEP_AFTERRENDERTARGETDRAW_LAYER: Double = js.native
   
@@ -71,15 +77,21 @@ object SceneComponentConstants extends js.Object {
   
   val STEP_BEFORECAMERADRAW_LAYER: Double = js.native
   
+  val STEP_BEFORECAMERADRAW_PREPASS: Double = js.native
+  
   val STEP_BEFORECAMERAUPDATE_GAMEPAD: Double = js.native
   
   val STEP_BEFORECAMERAUPDATE_SIMPLIFICATIONQUEUE: Double = js.native
+  
+  val STEP_BEFORECLEARSTAGE_PREPASS: Double = js.native
   
   val STEP_BEFORECLEAR_PROCEDURALTEXTURE: Double = js.native
   
   val STEP_BEFOREEVALUATEACTIVEMESH_BOUNDINGBOXRENDERER: Double = js.native
   
   val STEP_BEFORERENDERINGMESH_OUTLINE: Double = js.native
+  
+  val STEP_BEFORERENDERINGMESH_PREPASS: Double = js.native
   
   val STEP_BEFORERENDERTARGETDRAW_LAYER: Double = js.native
   
@@ -104,4 +116,6 @@ object SceneComponentConstants extends js.Object {
   val STEP_POINTERMOVE_SPRITE: Double = js.native
   
   val STEP_POINTERUP_SPRITE: Double = js.native
+  
+  val STEP_PREACTIVEMESH_BOUNDINGBOXRENDERER: Double = js.native
 }

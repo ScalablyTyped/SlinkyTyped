@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ServerGroup extends js.Object {
   
   /**
-    * Name of a server group.
+    * The name of a server group.
     */
   var name: js.UndefOr[ServerGroupName] = js.native
   
   /**
-    * Identifier of a server group.
+    * The ID of a server group.
     */
   var serverGroupId: js.UndefOr[ServerGroupId] = js.native
   
   /**
-    * List of servers belonging to a server group.
+    * The servers that belong to a server group.
     */
   var serverList: js.UndefOr[ServerList] = js.native
 }

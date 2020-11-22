@@ -1,6 +1,5 @@
 package typingsSlinky.puppeteer.mod
 
-import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.puppeteer.puppeteerStrings.targetchanged
 import typingsSlinky.puppeteer.puppeteerStrings.targetcreated
 import typingsSlinky.puppeteer.puppeteerStrings.targetdestroyed

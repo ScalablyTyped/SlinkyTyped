@@ -128,6 +128,23 @@ object Color3 extends js.Object {
   def FromArray(array: DeepImmutable[ArrayLike[Double]]): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): typingsSlinky.babylonjs.BABYLON.Color3 = js.native
   
+  def FromArrayToRef(
+    array: DeepImmutable[ArrayLike[Double]],
+    offset: js.UndefOr[scala.Nothing],
+    result: typingsSlinky.babylonjs.BABYLON.Color3
+  ): Unit = js.native
+  /**
+    * Creates a new Color3 from the starting index element of the given array
+    * @param array defines the source array to read from
+    * @param offset defines the offset in the source array
+    * @param result defines the target Color3 object
+    */
+  def FromArrayToRef(
+    array: DeepImmutable[ArrayLike[Double]],
+    offset: Double,
+    result: typingsSlinky.babylonjs.BABYLON.Color3
+  ): Unit = js.native
+  
   /**
     * Creates a new Color3 from the string containing valid hexadecimal values
     * @param hex defines a string containing valid hexadecimal values

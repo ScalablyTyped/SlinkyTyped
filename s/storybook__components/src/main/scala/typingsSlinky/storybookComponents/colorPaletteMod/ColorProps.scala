@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ColorProps extends js.Object {
   
-  var colors: js.Array[String] = js.native
+  var colors: Colors = js.native
   
   var subtitle: String = js.native
   
@@ -16,7 +16,7 @@ trait ColorProps extends js.Object {
 object ColorProps {
   
   @scala.inline
-  def apply(colors: js.Array[String], subtitle: String, title: String): ColorProps = {
+  def apply(colors: Colors, subtitle: String, title: String): ColorProps = {
     val __obj = js.Dynamic.literal(colors = colors.asInstanceOf[js.Any], subtitle = subtitle.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColorProps]
   }
@@ -40,7 +40,7 @@ object ColorProps {
     def setColorsVarargs(value: String*): Self = this.set("colors", js.Array(value :_*))
     
     @scala.inline
-    def setColors(value: js.Array[String]): Self = this.set("colors", value.asInstanceOf[js.Any])
+    def setColors(value: Colors): Self = this.set("colors", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSubtitle(value: String): Self = this.set("subtitle", value.asInstanceOf[js.Any])

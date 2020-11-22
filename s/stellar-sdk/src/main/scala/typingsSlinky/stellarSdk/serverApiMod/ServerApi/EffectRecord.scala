@@ -2,6 +2,7 @@ package typingsSlinky.stellarSdk.serverApiMod.ServerApi
 
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.stellarSdk.horizonApiMod.Horizon.BaseResponse
+import typingsSlinky.stellarSdk.horizonApiMod.Horizon.Predicate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,6 +15,8 @@ trait EffectRecord
   
   var amount: js.UndefOr[js.Any] = js.native
   
+  var asset: js.UndefOr[String] = js.native
+  
   var asset_code: js.UndefOr[String] = js.native
   
   var asset_issuer: js.UndefOr[String] = js.native
@@ -24,6 +27,8 @@ trait EffectRecord
   
   var auth_revokable_flag: js.UndefOr[Boolean] = js.native
   
+  var balance_id: js.UndefOr[String] = js.native
+  
   var bought_amount: js.UndefOr[String] = js.native
   
   var bought_asset_code: js.UndefOr[String] = js.native
@@ -33,6 +38,10 @@ trait EffectRecord
   var bought_asset_type: js.UndefOr[String] = js.native
   
   var created_at: String = js.native
+  
+  var data_name: js.UndefOr[String] = js.native
+  
+  var former_sponsor: js.UndefOr[String] = js.native
   
   var high_threshold: js.UndefOr[Double] = js.native
   
@@ -50,6 +59,8 @@ trait EffectRecord
   
   var new_seq: js.UndefOr[Double | String] = js.native
   
+  var new_sponsor: js.UndefOr[String] = js.native
+  
   var offer_id: js.UndefOr[Double | String] = js.native
   
   var operation: js.UndefOr[CallFunction[OperationRecord]] = js.native
@@ -58,7 +69,11 @@ trait EffectRecord
   
   var precedes: js.UndefOr[CallFunction[EffectRecord]] = js.native
   
+  var predicate: js.UndefOr[Predicate] = js.native
+  
   var public_key: js.UndefOr[String] = js.native
+  
+  var signer: js.UndefOr[String] = js.native
   
   var sold_amount: js.UndefOr[String] = js.native
   
@@ -67,6 +82,8 @@ trait EffectRecord
   var sold_asset_issuer: js.UndefOr[String] = js.native
   
   var sold_asset_type: js.UndefOr[String] = js.native
+  
+  var sponsor: js.UndefOr[String] = js.native
   
   var starting_balance: js.UndefOr[String] = js.native
   
@@ -139,6 +156,12 @@ object EffectRecord {
     def deleteAmount: Self = this.set("amount", js.undefined)
     
     @scala.inline
+    def setAsset(value: String): Self = this.set("asset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAsset: Self = this.set("asset", js.undefined)
+    
+    @scala.inline
     def setAsset_code(value: String): Self = this.set("asset_code", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -169,6 +192,12 @@ object EffectRecord {
     def deleteAuth_revokable_flag: Self = this.set("auth_revokable_flag", js.undefined)
     
     @scala.inline
+    def setBalance_id(value: String): Self = this.set("balance_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBalance_id: Self = this.set("balance_id", js.undefined)
+    
+    @scala.inline
     def setBought_amount(value: String): Self = this.set("bought_amount", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -191,6 +220,18 @@ object EffectRecord {
     
     @scala.inline
     def deleteBought_asset_type: Self = this.set("bought_asset_type", js.undefined)
+    
+    @scala.inline
+    def setData_name(value: String): Self = this.set("data_name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteData_name: Self = this.set("data_name", js.undefined)
+    
+    @scala.inline
+    def setFormer_sponsor(value: String): Self = this.set("former_sponsor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFormer_sponsor: Self = this.set("former_sponsor", js.undefined)
     
     @scala.inline
     def setHigh_threshold(value: Double): Self = this.set("high_threshold", value.asInstanceOf[js.Any])
@@ -235,6 +276,12 @@ object EffectRecord {
     def deleteNew_seq: Self = this.set("new_seq", js.undefined)
     
     @scala.inline
+    def setNew_sponsor(value: String): Self = this.set("new_sponsor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNew_sponsor: Self = this.set("new_sponsor", js.undefined)
+    
+    @scala.inline
     def setOffer_id(value: Double | String): Self = this.set("offer_id", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -253,10 +300,22 @@ object EffectRecord {
     def deletePrecedes: Self = this.set("precedes", js.undefined)
     
     @scala.inline
+    def setPredicate(value: Predicate): Self = this.set("predicate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePredicate: Self = this.set("predicate", js.undefined)
+    
+    @scala.inline
     def setPublic_key(value: String): Self = this.set("public_key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePublic_key: Self = this.set("public_key", js.undefined)
+    
+    @scala.inline
+    def setSigner(value: String): Self = this.set("signer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSigner: Self = this.set("signer", js.undefined)
     
     @scala.inline
     def setSold_amount(value: String): Self = this.set("sold_amount", value.asInstanceOf[js.Any])
@@ -281,6 +340,12 @@ object EffectRecord {
     
     @scala.inline
     def deleteSold_asset_type: Self = this.set("sold_asset_type", js.undefined)
+    
+    @scala.inline
+    def setSponsor(value: String): Self = this.set("sponsor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSponsor: Self = this.set("sponsor", js.undefined)
     
     @scala.inline
     def setStarting_balance(value: String): Self = this.set("starting_balance", value.asInstanceOf[js.Any])

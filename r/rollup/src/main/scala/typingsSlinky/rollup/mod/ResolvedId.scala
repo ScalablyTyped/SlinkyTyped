@@ -6,15 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ResolvedId extends js.Object {
+trait ResolvedId extends ModuleOptions {
   
   var external: Boolean = js.native
   
   var id: String = js.native
-  
-  var moduleSideEffects: Boolean | `no-treeshake` = js.native
-  
-  var syntheticNamedExports: Boolean | String = js.native
 }
 object ResolvedId {
   
@@ -22,10 +18,11 @@ object ResolvedId {
   def apply(
     external: Boolean,
     id: String,
+    meta: CustomPluginOptions,
     moduleSideEffects: Boolean | `no-treeshake`,
     syntheticNamedExports: Boolean | String
   ): ResolvedId = {
-    val __obj = js.Dynamic.literal(external = external.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], moduleSideEffects = moduleSideEffects.asInstanceOf[js.Any], syntheticNamedExports = syntheticNamedExports.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(external = external.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], moduleSideEffects = moduleSideEffects.asInstanceOf[js.Any], syntheticNamedExports = syntheticNamedExports.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolvedId]
   }
   
@@ -49,11 +46,5 @@ object ResolvedId {
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setModuleSideEffects(value: Boolean | `no-treeshake`): Self = this.set("moduleSideEffects", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSyntheticNamedExports(value: Boolean | String): Self = this.set("syntheticNamedExports", value.asInstanceOf[js.Any])
   }
 }

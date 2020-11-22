@@ -7,20 +7,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CommonSeries.hoverStyle.hatching */
+/**
+  * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle.hatching]
+  */
 @js.native
 trait dxChartSeriesTypesCommonSeriesHoverStyleHatching extends js.Object {
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverStyle.hatching.direction */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle.hatching.direction]
+    */
   var direction: js.UndefOr[left | none | right] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverStyle.hatching.opacity */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle.hatching.opacity]
+    */
   var opacity: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverStyle.hatching.step */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle.hatching.step]
+    */
   var step: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverStyle.hatching.width */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle.hatching.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxChartSeriesTypesCommonSeriesHoverStyleHatching {

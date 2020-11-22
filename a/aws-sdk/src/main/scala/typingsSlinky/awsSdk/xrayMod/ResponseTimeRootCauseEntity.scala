@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResponseTimeRootCauseEntity extends js.Object {
   
   /**
-    * The types and messages of the exceptions.
+    * The type and messages of the exceptions.
     */
   var Coverage: js.UndefOr[NullableDouble] = js.native
   

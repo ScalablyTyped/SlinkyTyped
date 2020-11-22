@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.expressionsMod.expressions.Expression
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,14 +18,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.ProxyConfiguration")
 @js.native
-class ProxyConfiguration protected () extends Element {
+class ProxyConfiguration protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsRestCallAction: RestCallAction = js.native
@@ -37,14 +39,13 @@ class ProxyConfiguration protected () extends Element {
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
   def hostExpressionModel: Expression | Null = js.native
   def hostExpressionModel_=(newValue: Expression | Null): Unit = js.native
   
   def hostExpression_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FProxyConfiguration: IModel = js.native
   
   /**
     * The value of this property is conceptually of type microflowExpressions.MicroflowExpression.
@@ -53,6 +54,8 @@ class ProxyConfiguration protected () extends Element {
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
   def passwordExpressionModel: Expression | Null = js.native
   def passwordExpressionModel_=(newValue: Expression | Null): Unit = js.native
@@ -66,6 +69,8 @@ class ProxyConfiguration protected () extends Element {
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
   def portExpressionModel: Expression | Null = js.native
   def portExpressionModel_=(newValue: Expression | Null): Unit = js.native
@@ -79,6 +84,8 @@ class ProxyConfiguration protected () extends Element {
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
   def useConfigurationExpressionModel: Expression | Null = js.native
   def useConfigurationExpressionModel_=(newValue: Expression | Null): Unit = js.native
@@ -92,6 +99,8 @@ class ProxyConfiguration protected () extends Element {
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
   def usernameExpressionModel: Expression | Null = js.native
   def usernameExpressionModel_=(newValue: Expression | Null): Unit = js.native

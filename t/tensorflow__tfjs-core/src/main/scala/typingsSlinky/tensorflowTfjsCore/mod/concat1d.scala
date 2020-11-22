@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsCore.mod
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

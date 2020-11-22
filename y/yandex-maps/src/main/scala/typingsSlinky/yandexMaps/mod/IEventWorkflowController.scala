@@ -8,11 +8,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IEventWorkflowController extends IEventController {
   
   var onAfterEventFiring: js.UndefOr[
-    js.Function3[/* events */ IEventManager, /* type */ String, /* event */ js.UndefOr[IEvent], Unit]
+    js.Function3[
+      /* events */ IEventManager[js.Object], 
+      /* type */ String, 
+      /* event */ js.UndefOr[IEvent[js.Object, js.Object]], 
+      Unit
+    ]
   ] = js.native
   
   var onBeforeEventFiring: js.UndefOr[
-    js.Function3[/* events */ IEventManager, /* type */ String, /* event */ js.UndefOr[IEvent], Unit]
+    js.Function3[
+      /* events */ IEventManager[js.Object], 
+      /* type */ String, 
+      /* event */ js.UndefOr[IEvent[js.Object, js.Object]], 
+      Unit
+    ]
   ] = js.native
 }
 object IEventWorkflowController {
@@ -39,13 +49,17 @@ object IEventWorkflowController {
     }
     
     @scala.inline
-    def setOnAfterEventFiring(value: (/* events */ IEventManager, /* type */ String, /* event */ js.UndefOr[IEvent]) => Unit): Self = this.set("onAfterEventFiring", js.Any.fromFunction3(value))
+    def setOnAfterEventFiring(
+      value: (/* events */ IEventManager[js.Object], /* type */ String, /* event */ js.UndefOr[IEvent[js.Object, js.Object]]) => Unit
+    ): Self = this.set("onAfterEventFiring", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteOnAfterEventFiring: Self = this.set("onAfterEventFiring", js.undefined)
     
     @scala.inline
-    def setOnBeforeEventFiring(value: (/* events */ IEventManager, /* type */ String, /* event */ js.UndefOr[IEvent]) => Unit): Self = this.set("onBeforeEventFiring", js.Any.fromFunction3(value))
+    def setOnBeforeEventFiring(
+      value: (/* events */ IEventManager[js.Object], /* type */ String, /* event */ js.UndefOr[IEvent[js.Object, js.Object]]) => Unit
+    ): Self = this.set("onBeforeEventFiring", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteOnBeforeEventFiring: Self = this.set("onBeforeEventFiring", js.undefined)

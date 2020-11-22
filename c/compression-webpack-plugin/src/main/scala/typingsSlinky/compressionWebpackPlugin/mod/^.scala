@@ -1,6 +1,5 @@
 package typingsSlinky.compressionWebpackPlugin.mod
 
-import typingsSlinky.std.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("compression-webpack-plugin", JSImport.Namespace)
 @js.native
-class ^[O] () extends Plugin {
+class ^[O] () extends CompressionPlugin[O] {
   def this(options: Options[O]) = this()
 }
 @JSImport("compression-webpack-plugin", JSImport.Namespace)

@@ -17,7 +17,7 @@ trait ReplyFileHandlerOptions extends js.Object {
     * confine - serve file relative to this directory and returns 403 Forbidden if the path resolves outside the confine directory.
     * Defaults to true which uses the relativeTo route option as the confine. Set to false to disable this security feature.
     */
-  var confine: js.UndefOr[Boolean] = js.native
+  var confine: js.UndefOr[Boolean | String] = js.native
   
   /**
     * end - offset in file to stop reading from. If not set, will read to end of file.
@@ -84,7 +84,7 @@ object ReplyFileHandlerOptions {
     }
     
     @scala.inline
-    def setConfine(value: Boolean): Self = this.set("confine", value.asInstanceOf[js.Any])
+    def setConfine(value: Boolean | String): Self = this.set("confine", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteConfine: Self = this.set("confine", js.undefined)

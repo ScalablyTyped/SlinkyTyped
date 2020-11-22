@@ -1,13 +1,12 @@
 package typingsSlinky.reactOnsenui.anon
 
-import slinky.web.SyntheticFocusEvent
+import org.scalajs.dom.raw.Event
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.ChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-onsenui.react-onsenui.HTMLAttributes<'id' | 'className' | 'style'> & react-onsenui.react-onsenui.InputHTMLAttributes<'min' | 'max' | 'step'> & {  modifier :string | undefined,   disabled :boolean | undefined,   readOnly :boolean | undefined,   onChange :(e : react.react.ChangeEvent<any>): void | undefined,   onBlur :(e : react.react.FocusEvent<any>): void | undefined,   onFocus :(e : react.react.FocusEvent<any>): void | undefined,   value :string | undefined,   defaultValue :string | undefined,   checked :boolean | undefined,   placeholder :string | undefined,   type :string | undefined,   inputId :string | undefined,   float :boolean | undefined,   name :string | undefined} */
+/* Inlined react-onsenui.react-onsenui.HTMLAttributes<'id' | 'className' | 'style'> & {  modifier :string | undefined,   disabled :boolean | undefined,   onChange :(e : std.Event): void | undefined,   value :string | undefined,   checked :boolean | undefined,   defaultChecked :boolean | undefined,   inputId :string | undefined,   name :string | undefined} */
 @js.native
 trait HTMLAttributesidclassNameChecked extends js.Object {
   
@@ -15,39 +14,21 @@ trait HTMLAttributesidclassNameChecked extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
-  var defaultValue: js.UndefOr[String] = js.native
+  var defaultChecked: js.UndefOr[Boolean] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
-  
-  var float: js.UndefOr[Boolean] = js.native
   
   var id: js.UndefOr[String] = js.native
   
   var inputId: js.UndefOr[String] = js.native
   
-  var max: js.UndefOr[Double | String] = js.native
-  
-  var min: js.UndefOr[Double | String] = js.native
-  
   var modifier: js.UndefOr[String] = js.native
   
   var name: js.UndefOr[String] = js.native
   
-  var onBlur: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[_], Unit]] = js.native
-  
-  var onChange: js.UndefOr[js.Function1[/* e */ ChangeEvent[_], Unit]] = js.native
-  
-  var onFocus: js.UndefOr[js.Function1[/* e */ SyntheticFocusEvent[_], Unit]] = js.native
-  
-  var placeholder: js.UndefOr[String] = js.native
-  
-  var readOnly: js.UndefOr[Boolean] = js.native
-  
-  var step: js.UndefOr[Double | String] = js.native
+  var onChange: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   
   var style: js.UndefOr[CSSProperties] = js.native
-  
-  var `type`: js.UndefOr[String] = js.native
   
   var value: js.UndefOr[String] = js.native
 }
@@ -87,22 +68,16 @@ object HTMLAttributesidclassNameChecked {
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
-    def setDefaultValue(value: String): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    def setDefaultChecked(value: Boolean): Self = this.set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    def deleteDefaultChecked: Self = this.set("defaultChecked", js.undefined)
     
     @scala.inline
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
-    
-    @scala.inline
-    def setFloat(value: Boolean): Self = this.set("float", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteFloat: Self = this.set("float", js.undefined)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
@@ -117,18 +92,6 @@ object HTMLAttributesidclassNameChecked {
     def deleteInputId: Self = this.set("inputId", js.undefined)
     
     @scala.inline
-    def setMax(value: Double | String): Self = this.set("max", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMax: Self = this.set("max", js.undefined)
-    
-    @scala.inline
-    def setMin(value: Double | String): Self = this.set("min", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMin: Self = this.set("min", js.undefined)
-    
-    @scala.inline
     def setModifier(value: String): Self = this.set("modifier", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -141,52 +104,16 @@ object HTMLAttributesidclassNameChecked {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setOnBlur(value: /* e */ SyntheticFocusEvent[_] => Unit): Self = this.set("onBlur", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnBlur: Self = this.set("onBlur", js.undefined)
-    
-    @scala.inline
-    def setOnChange(value: /* e */ ChangeEvent[_] => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    def setOnChange(value: /* e */ Event => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
-    
-    @scala.inline
-    def setOnFocus(value: /* e */ SyntheticFocusEvent[_] => Unit): Self = this.set("onFocus", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnFocus: Self = this.set("onFocus", js.undefined)
-    
-    @scala.inline
-    def setPlaceholder(value: String): Self = this.set("placeholder", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePlaceholder: Self = this.set("placeholder", js.undefined)
-    
-    @scala.inline
-    def setReadOnly(value: Boolean): Self = this.set("readOnly", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteReadOnly: Self = this.set("readOnly", js.undefined)
-    
-    @scala.inline
-    def setStep(value: Double | String): Self = this.set("step", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStep: Self = this.set("step", js.undefined)
     
     @scala.inline
     def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
-    
-    @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteType: Self = this.set("type", js.undefined)
     
     @scala.inline
     def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])

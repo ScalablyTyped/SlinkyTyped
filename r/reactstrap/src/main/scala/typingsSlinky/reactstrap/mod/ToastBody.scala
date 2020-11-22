@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "ToastBody")
+@JSImport("reactstrap/es", "ToastBody")
 @js.native
-class ToastBody[T] ()
+class ToastBody ()
   extends Component[ToastBodyProps, js.Object, js.Any]

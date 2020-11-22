@@ -75,6 +75,15 @@ object Uri extends js.Object {
   def isUri(thing: js.Any): /* is monaco-editor.monaco-editor.Uri */ Boolean = js.native
   
   /**
+    * Join a Uri path with path fragments and normalizes the resulting path.
+    *
+    * @param uri The input Uri.
+    * @param pathFragment The path fragment to add to the Uri path.
+    * @returns The resulting Uri.
+    */
+  def joinPath(uri: Uri, pathFragment: String*): Uri = js.native
+  
+  /**
     * Creates a new Uri from a string, e.g. `http://www.msft.com/some/path`,
     * `file:///usr/home`, or `scheme:with/path`.
     *

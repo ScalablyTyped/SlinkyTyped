@@ -19,7 +19,7 @@ trait ClusterStep extends js.Object {
   var hadoopJarStep: Input[ClusterStepHadoopJarStep] = js.native
   
   /**
-    * The name of the step.
+    * Friendly name given to the instance fleet.
     */
   var name: Input[String] = js.native
 }

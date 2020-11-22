@@ -8,7 +8,11 @@ package object mod {
   
   type Callback[T] = js.Function2[/* error */ js.UndefOr[js.Any], /* result */ js.UndefOr[T], scala.Unit]
   
+  type Duration = scala.Double
+  
   type EndpointsConfig = org.scalablytyped.runtime.StringDictionary[typingsSlinky.dockerode.mod.EndpointSettings]
+  
+  type ExternalCAProtocol = typingsSlinky.dockerode.dockerodeStrings.cfssl | java.lang.String
   
   type MountConfig = js.Array[typingsSlinky.dockerode.mod.MountSettings]
   

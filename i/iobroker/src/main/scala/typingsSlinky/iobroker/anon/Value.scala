@@ -1,6 +1,6 @@
 package typingsSlinky.iobroker.anon
 
-import typingsSlinky.iobroker.mod.global.ioBroker.Object
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

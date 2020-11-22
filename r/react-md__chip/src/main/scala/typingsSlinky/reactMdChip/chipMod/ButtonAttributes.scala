@@ -34,8 +34,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactMdChip.reactMdChipStrings.`additions removals`
 import typingsSlinky.reactMdChip.reactMdChipStrings.`additions text`
 import typingsSlinky.reactMdChip.reactMdChipStrings.`inline`
+import typingsSlinky.reactMdChip.reactMdChipStrings.`removals additions`
+import typingsSlinky.reactMdChip.reactMdChipStrings.`removals text`
+import typingsSlinky.reactMdChip.reactMdChipStrings.`text additions`
+import typingsSlinky.reactMdChip.reactMdChipStrings.`text removals`
 import typingsSlinky.reactMdChip.reactMdChipStrings.additions
 import typingsSlinky.reactMdChip.reactMdChipStrings.all
 import typingsSlinky.reactMdChip.reactMdChipStrings.ascending
@@ -161,7 +166,9 @@ trait ButtonAttributes extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -699,7 +706,9 @@ object ButtonAttributes {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

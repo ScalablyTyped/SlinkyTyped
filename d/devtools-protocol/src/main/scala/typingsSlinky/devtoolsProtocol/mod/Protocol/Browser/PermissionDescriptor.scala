@@ -19,14 +19,14 @@ trait PermissionDescriptor extends js.Object {
   var name: String = js.native
   
   /**
+    * For "camera" permission, may specify panTiltZoom.
+    */
+  var panTiltZoom: js.UndefOr[Boolean] = js.native
+  
+  /**
     * For "midi" permission, may also specify sysex control.
     */
   var sysex: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * For "wake-lock" permission, must specify type as either "screen" or "system".
-    */
-  var `type`: js.UndefOr[String] = js.native
   
   /**
     * For "push" permission, may specify userVisibleOnly.
@@ -67,16 +67,16 @@ object PermissionDescriptor {
     def deleteAllowWithoutSanitization: Self = this.set("allowWithoutSanitization", js.undefined)
     
     @scala.inline
+    def setPanTiltZoom(value: Boolean): Self = this.set("panTiltZoom", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePanTiltZoom: Self = this.set("panTiltZoom", js.undefined)
+    
+    @scala.inline
     def setSysex(value: Boolean): Self = this.set("sysex", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSysex: Self = this.set("sysex", js.undefined)
-    
-    @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteType: Self = this.set("type", js.undefined)
     
     @scala.inline
     def setUserVisibleOnly(value: Boolean): Self = this.set("userVisibleOnly", value.asInstanceOf[js.Any])

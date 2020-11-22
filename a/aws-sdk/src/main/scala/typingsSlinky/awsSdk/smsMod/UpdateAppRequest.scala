@@ -8,32 +8,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateAppRequest extends js.Object {
   
   /**
-    * ID of the application to update.
+    * The ID of the application.
     */
   var appId: js.UndefOr[AppId] = js.native
   
   /**
-    * New description of the application.
+    * The new description of the application.
     */
   var description: js.UndefOr[AppDescription] = js.native
   
   /**
-    * New name of the application.
+    * The new name of the application.
     */
   var name: js.UndefOr[AppName] = js.native
   
   /**
-    * Name of the service role in the customer's account used by AWS SMS.
+    * The name of the service role in the customer's account used by AWS SMS.
     */
   var roleName: js.UndefOr[RoleName] = js.native
   
   /**
-    * List of server groups in the application to update.
+    * The server groups in the application to update.
     */
   var serverGroups: js.UndefOr[ServerGroups] = js.native
   
   /**
-    * List of tags to associate with the application.
+    * The tags to associate with the application.
     */
   var tags: js.UndefOr[Tags] = js.native
 }

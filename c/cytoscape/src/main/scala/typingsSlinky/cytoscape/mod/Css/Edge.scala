@@ -16,6 +16,7 @@ import typingsSlinky.cytoscape.cytoscapeStrings.center
 import typingsSlinky.cytoscape.cytoscapeStrings.displayed
 import typingsSlinky.cytoscape.cytoscapeStrings.ellipsis
 import typingsSlinky.cytoscape.cytoscapeStrings.haystack
+import typingsSlinky.cytoscape.cytoscapeStrings.hidden
 import typingsSlinky.cytoscape.cytoscapeStrings.intersection
 import typingsSlinky.cytoscape.cytoscapeStrings.left
 import typingsSlinky.cytoscape.cytoscapeStrings.no
@@ -177,6 +178,11 @@ trait Edge extends js.Object {
   /** The shape of the edge’s source arrow. */
   var `source-arrow-shape`: js.UndefOr[PropertyValueEdge[ArrowShape]] = js.native
   
+  /**
+    * The distance the edge ends from its source.
+    */
+  var `source-distance-from-node`: js.UndefOr[PropertyValueEdge[Double]] = js.native
+  
   var `source-endpoint`: js.UndefOr[
     PropertyValue[
       EdgeSingular, 
@@ -285,7 +291,7 @@ trait Edge extends js.Object {
   
   var `transition-timing-function`: js.UndefOr[TransitionTimingFunction] = js.native
   
-  var visibility: js.UndefOr[PropertyValue[EdgeSingular, none | visible]] = js.native
+  var visibility: js.UndefOr[PropertyValue[EdgeSingular, hidden | visible]] = js.native
   
   /**
     * The width of an edge’s line.
@@ -685,6 +691,15 @@ object Edge {
     
     @scala.inline
     def `deleteSource-arrow-shape`: Self = this.set("source-arrow-shape", js.undefined)
+    
+    @scala.inline
+    def `setSource-distance-from-nodeFunction1`(value: EdgeSingular => Double): Self = this.set("source-distance-from-node", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def `setSource-distance-from-node`(value: PropertyValueEdge[Double]): Self = this.set("source-distance-from-node", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteSource-distance-from-node`: Self = this.set("source-distance-from-node", js.undefined)
     
     @scala.inline
     def `setSource-endpointFunction1`(
@@ -1103,10 +1118,10 @@ object Edge {
     def `deleteTransition-timing-function`: Self = this.set("transition-timing-function", js.undefined)
     
     @scala.inline
-    def setVisibilityFunction1(value: EdgeSingular => none | visible): Self = this.set("visibility", js.Any.fromFunction1(value))
+    def setVisibilityFunction1(value: EdgeSingular => hidden | visible): Self = this.set("visibility", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setVisibility(value: PropertyValue[EdgeSingular, none | visible]): Self = this.set("visibility", value.asInstanceOf[js.Any])
+    def setVisibility(value: PropertyValue[EdgeSingular, hidden | visible]): Self = this.set("visibility", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVisibility: Self = this.set("visibility", js.undefined)

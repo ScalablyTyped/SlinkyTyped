@@ -28,6 +28,8 @@ trait PartialClientEntry extends js.Object {
   
   var clientDatabaseId: js.UndefOr[String] = js.native
   
+  var clientEstimatedLocation: js.UndefOr[String] = js.native
+  
   var clientFlagTalking: js.UndefOr[Boolean] = js.native
   
   var clientIdleTime: js.UndefOr[Double] = js.native
@@ -148,6 +150,12 @@ object PartialClientEntry {
     
     @scala.inline
     def deleteClientDatabaseId: Self = this.set("clientDatabaseId", js.undefined)
+    
+    @scala.inline
+    def setClientEstimatedLocation(value: String): Self = this.set("clientEstimatedLocation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClientEstimatedLocation: Self = this.set("clientEstimatedLocation", js.undefined)
     
     @scala.inline
     def setClientFlagTalking(value: Boolean): Self = this.set("clientFlagTalking", value.asInstanceOf[js.Any])

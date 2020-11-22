@@ -13,9 +13,19 @@ trait TapeInfo extends js.Object {
   var GatewayARN: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.GatewayARN] = js.native
   
   /**
+    * The date that the tape entered the custom tape pool with tape retention lock enabled.
+    */
+  var PoolEntryDate: js.UndefOr[js.Date] = js.native
+  
+  /**
     * The ID of the pool that you want to add your tape to for archiving. The tape in this pool is archived in the S3 storage class that is associated with the pool. When you use your backup application to eject the tape, the tape is archived directly into the storage class (S3 Glacier or S3 Glacier Deep Archive) that corresponds to the pool. Valid Values: GLACIER | DEEP_ARCHIVE 
     */
   var PoolId: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.PoolId] = js.native
+  
+  /**
+    * The date that the tape became subject to tape retention lock.
+    */
+  var RetentionStartDate: js.UndefOr[js.Date] = js.native
   
   /**
     * The Amazon Resource Name (ARN) of a virtual tape.
@@ -67,10 +77,22 @@ object TapeInfo {
     def deleteGatewayARN: Self = this.set("GatewayARN", js.undefined)
     
     @scala.inline
+    def setPoolEntryDate(value: js.Date): Self = this.set("PoolEntryDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePoolEntryDate: Self = this.set("PoolEntryDate", js.undefined)
+    
+    @scala.inline
     def setPoolId(value: PoolId): Self = this.set("PoolId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePoolId: Self = this.set("PoolId", js.undefined)
+    
+    @scala.inline
+    def setRetentionStartDate(value: js.Date): Self = this.set("RetentionStartDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRetentionStartDate: Self = this.set("RetentionStartDate", js.undefined)
     
     @scala.inline
     def setTapeARN(value: TapeARN): Self = this.set("TapeARN", value.asInstanceOf[js.Any])

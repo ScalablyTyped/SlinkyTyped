@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BasemapLayerListViewModelProperties extends js.Object {
   
   /**
-    * Specifies a function that accesses each [ListItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html). Each list item can be modified according to its modifiable properties. Actions can be added to list items using the [actionsSections](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#actionsSections) property of the ListItem.
+    * Specifies a function that accesses each [ListItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#baseListItemCreatedFunction)
     */
-  var baseListItemCreatedFunction: js.UndefOr[js.Function] = js.native
+  var baseListItemCreatedFunction: js.UndefOr[ListItemCreatedHandler] = js.native
   
   /**
     * The current basemap's title.
@@ -26,10 +26,10 @@ trait BasemapLayerListViewModelProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#referenceListItemCreatedFunction)
     */
-  var referenceListItemCreatedFunction: js.UndefOr[js.Function] = js.native
+  var referenceListItemCreatedFunction: js.UndefOr[ListItemCreatedHandler] = js.native
   
   /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the widget to a specific view.
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#view)
     */
@@ -59,7 +59,7 @@ object BasemapLayerListViewModelProperties {
     }
     
     @scala.inline
-    def setBaseListItemCreatedFunction(value: js.Function): Self = this.set("baseListItemCreatedFunction", value.asInstanceOf[js.Any])
+    def setBaseListItemCreatedFunction(value: /* event */ js.Any => Unit): Self = this.set("baseListItemCreatedFunction", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteBaseListItemCreatedFunction: Self = this.set("baseListItemCreatedFunction", js.undefined)
@@ -71,7 +71,7 @@ object BasemapLayerListViewModelProperties {
     def deleteBasemapTitle: Self = this.set("basemapTitle", js.undefined)
     
     @scala.inline
-    def setReferenceListItemCreatedFunction(value: js.Function): Self = this.set("referenceListItemCreatedFunction", value.asInstanceOf[js.Any])
+    def setReferenceListItemCreatedFunction(value: /* event */ js.Any => Unit): Self = this.set("referenceListItemCreatedFunction", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteReferenceListItemCreatedFunction: Self = this.set("referenceListItemCreatedFunction", js.undefined)

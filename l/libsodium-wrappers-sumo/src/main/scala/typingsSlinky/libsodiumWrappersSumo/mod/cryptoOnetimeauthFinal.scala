@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object cryptoOnetimeauthFinal extends js.Object {
   
-  def apply(state_address: StateAddress): js.typedarray.Uint8Array = js.native
-  def apply(state_address: StateAddress, outputFormat: StringOutputFormat): String = js.native
-  def apply(state_address: StateAddress, outputFormat: Uint8ArrayOutputFormat): js.typedarray.Uint8Array = js.native
+  def apply(stateAddress: StateAddress): js.typedarray.Uint8Array = js.native
+  def apply(stateAddress: StateAddress, outputFormat: StringOutputFormat): String = js.native
+  def apply(stateAddress: StateAddress, outputFormat: Uint8ArrayOutputFormat): js.typedarray.Uint8Array = js.native
 }

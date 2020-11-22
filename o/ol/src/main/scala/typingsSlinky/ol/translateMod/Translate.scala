@@ -12,6 +12,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Translate
   extends typingsSlinky.ol.pointerMod.default {
   
+  /**
+    * Returns the Hit-detection tolerance.
+    */
   def getHitTolerance(): Double = js.native
   
   @JSName("on")
@@ -28,6 +31,10 @@ trait Translate
   @JSName("once")
   def once_translating(`type`: translating, listener: js.Function1[/* evt */ TranslateEvent, Unit]): EventsKey = js.native
   
+  /**
+    * Hit-detection tolerance. Pixels inside the radius around the given position
+    * will be checked for features.
+    */
   def setHitTolerance(hitTolerance: Double): Unit = js.native
   
   @JSName("un")

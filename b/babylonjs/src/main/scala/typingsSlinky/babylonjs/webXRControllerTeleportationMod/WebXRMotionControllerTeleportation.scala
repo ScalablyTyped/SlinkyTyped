@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs.webXRControllerTeleportationMod
 
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
+import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.webXRAbstractFeatureMod.WebXRAbstractFeature
 import typingsSlinky.babylonjs.webXRFeaturesManagerMod.IWebXRFeature
 import typingsSlinky.babylonjs.webXRSessionManagerMod.WebXRSessionManager
@@ -37,6 +38,8 @@ class WebXRMotionControllerTeleportation protected () extends WebXRAbstractFeatu
   
   var _quadraticBezierCurve: js.Any = js.native
   
+  var _rotationEnabled: js.Any = js.native
+  
   var _selectionFeature: js.Any = js.native
   
   var _setTargetMeshPosition: js.Any = js.native
@@ -52,6 +55,8 @@ class WebXRMotionControllerTeleportation protected () extends WebXRAbstractFeatu
   var _teleportForward: js.Any = js.native
   
   var _teleportationRingMaterial: js.Any = js.native
+  
+  var _tmpQuaternion: js.Any = js.native
   
   var _tmpRay: js.Any = js.native
   
@@ -121,7 +126,12 @@ class WebXRMotionControllerTeleportation protected () extends WebXRAbstractFeatu
     * Is rotation enabled when moving forward?
     * Disabling this feature will prevent the user from deciding the direction when teleporting
     */
-  var rotationEnabled: Boolean = js.native
+  def rotationEnabled: Boolean = js.native
+  /**
+    * Sets wether rotation is enabled or not
+    * @param enabled is rotation enabled when teleportation is shown
+    */
+  def rotationEnabled_=(enabled: Boolean): Unit = js.native
   
   /**
     * This function sets a selection feature that will be disabled when
@@ -129,7 +139,7 @@ class WebXRMotionControllerTeleportation protected () extends WebXRAbstractFeatu
     * This is used to remove the selection rays when moving.
     * @param selectionFeature the feature to disable when forward movement is enabled
     */
-  def setSelectionFeature(selectionFeature: IWebXRFeature): Unit = js.native
+  def setSelectionFeature(selectionFeature: Nullable[IWebXRFeature]): Unit = js.native
   
   /**
     * Get the snapPointsOnly flag
@@ -140,6 +150,17 @@ class WebXRMotionControllerTeleportation protected () extends WebXRAbstractFeatu
     * @param snapToPoints should teleportation be exclusively to snap points
     */
   def snapPointsOnly_=(snapToPoints: Boolean): Unit = js.native
+  
+  /**
+    * The second type of ray - straight line.
+    * Should it be enabled or should the parabolic line be the only one.
+    */
+  var straightRayEnabled: Boolean = js.native
+  
+  /**
+    * Exposes the currently set teleportation target mesh.
+    */
+  def teleportationTargetMesh: Nullable[AbstractMesh] = js.native
 }
 /* static members */
 @JSImport("babylonjs/XR/features/WebXRControllerTeleportation", "WebXRMotionControllerTeleportation")

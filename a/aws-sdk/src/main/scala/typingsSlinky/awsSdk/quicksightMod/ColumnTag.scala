@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ColumnTag extends js.Object {
   
   /**
+    * A description for a column.
+    */
+  var ColumnDescription: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.ColumnDescription] = js.native
+  
+  /**
     * A geospatial role for a column.
     */
   var ColumnGeographicRole: js.UndefOr[GeoSpatialDataRole] = js.native
@@ -34,6 +39,12 @@ object ColumnTag {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setColumnDescription(value: ColumnDescription): Self = this.set("ColumnDescription", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnDescription: Self = this.set("ColumnDescription", js.undefined)
     
     @scala.inline
     def setColumnGeographicRole(value: GeoSpatialDataRole): Self = this.set("ColumnGeographicRole", value.asInstanceOf[js.Any])

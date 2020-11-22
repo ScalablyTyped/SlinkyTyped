@@ -53,6 +53,8 @@ class TransformIterator[S, D] () extends BufferedIterator[D] {
   
   var _source: js.UndefOr[InternalSource[S]] = js.native
   
+  var _sourceStarted: Boolean = js.native
+  
   /**
     Generates items based on the item from the source.
     Implementers should add items through {@link BufferedIterator#_push}.

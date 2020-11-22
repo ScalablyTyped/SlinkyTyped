@@ -16,6 +16,9 @@ object audioListenerMod extends js.Object {
     
     var context: AudioContext = js.native
     
+    /**
+    	 * @default null
+    	 */
     var filter: Null | js.Any = js.native
     
     var gain: GainNode = js.native
@@ -32,6 +35,9 @@ object audioListenerMod extends js.Object {
     
     def setMasterVolume(value: Double): this.type = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var timeDelta: Double = js.native
     
     @JSName("type")

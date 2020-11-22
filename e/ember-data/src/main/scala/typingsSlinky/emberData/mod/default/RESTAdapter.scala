@@ -2,7 +2,7 @@ package typingsSlinky.emberData.mod.default
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The REST adapter allows your store to communicate with an HTTP server by
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class RESTAdapter ()
   extends typingsSlinky.emberData.mod.DS.RESTAdapter
-

@@ -79,7 +79,6 @@ abstract class Selection () extends js.Object {
     * @returns Selected elements.
     */
   def filter(selector: String): Selection = js.native
-   // tslint:disable:unified-signatures
   /**
     * Reduce the set of matched elements to those that match the selector
     * or pass the function's test.
@@ -98,7 +97,6 @@ abstract class Selection () extends js.Object {
     */
   def filter(selector: Tester): Selection = js.native
   
-   // tslint:disable:unified-signatures
   /**
     * Find the selection descendants, filtered by a selector.
     * https://k6.io/docs/javascript-api/k6-html/selection/selection-find-selector
@@ -147,7 +145,6 @@ abstract class Selection () extends js.Object {
     * @returns Whether selector matched at least one element.
     */
   def is(selector: String): Boolean = js.native
-   // tslint:disable:unified-signatures
   /**
     * Check the current matched set of elements against a selector or element
     * and return true if at least one of these elements matches the given
@@ -157,7 +154,6 @@ abstract class Selection () extends js.Object {
     * @returns Whether selector matched at least one element.
     */
   def is(selector: Selection): Boolean = js.native
-   // tslint:disable:unified-signatures
   /**
     * Check the current matched set of elements against a selector or element
     * and return true if at least one of these elements matches the given
@@ -168,7 +164,6 @@ abstract class Selection () extends js.Object {
     */
   def is(selector: Tester): Boolean = js.native
   
-   // tslint:disable:unified-signatures
   /**
     * Reduce the set of matched elements to the final one.
     * https://k6.io/docs/javascript-api/k6-html/selection/selection-last
@@ -221,7 +216,6 @@ abstract class Selection () extends js.Object {
     * @returns Selection with matched elements removed.
     */
   def not(selector: String): Selection = js.native
-   // tslint:disable:unified-signatures
   /**
     * Remove elements.
     * https://k6.io/docs/javascript-api/k6-html/selection/selection-not-selector
@@ -230,7 +224,6 @@ abstract class Selection () extends js.Object {
     */
   def not(selector: Tester): Selection = js.native
   
-   // tslint:disable:unified-signatures
   /**
     * Get the parent of each element, optionally filtered by a selector.
     * https://k6.io/docs/javascript-api/k6-html/selection/selection-parent-selector

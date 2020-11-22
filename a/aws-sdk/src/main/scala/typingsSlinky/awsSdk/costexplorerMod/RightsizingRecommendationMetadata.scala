@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RightsizingRecommendationMetadata extends js.Object {
   
   /**
-    *  The timestamp for when Amazon Web Services made this recommendation.
+    *  The timestamp for when AWS made this recommendation.
     */
   var GenerationTimestamp: js.UndefOr[GenericString] = js.native
   
   /**
-    *  How many days of previous usage that Amazon Web Services considers when making this recommendation.
+    *  How many days of previous usage that AWS considers when making this recommendation.
     */
   var LookbackPeriodInDays: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.LookbackPeriodInDays] = js.native
   

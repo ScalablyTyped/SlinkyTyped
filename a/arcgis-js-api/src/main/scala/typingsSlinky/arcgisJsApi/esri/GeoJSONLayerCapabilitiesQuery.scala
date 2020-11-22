@@ -17,7 +17,7 @@ trait GeoJSONLayerCapabilitiesQuery extends Object {
   var supportsCentroid: Boolean = js.native
   
   /**
-    * Indicates if the query operation supports `disjoint` [spatial relationship](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html#spatialRelationship). This is valid only for [hosted feature services](http://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm).
+    * Indicates if the query operation supports `disjoint` [spatial relationship](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html#spatialRelationship).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoJSONLayer.html#capabilities)
     */
@@ -122,7 +122,7 @@ trait GeoJSONLayerCapabilitiesQuery extends Object {
   var supportsSqlExpression: Boolean = js.native
   
   /**
-    * Indicates if the query operation supports using standardized queries. Learn more about [standardized queries here](http://server.arcgis.com/en/server/latest/administer/linux/about-standardized-queries.htm).
+    * Indicates if the query operation supports using standardized queries.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoJSONLayer.html#capabilities)
     */

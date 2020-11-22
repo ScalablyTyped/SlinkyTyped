@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.licensemanagerMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -15,12 +15,12 @@ trait LicenseManager extends Service {
   var config_LicenseManager: ConfigBase with ClientConfiguration = js.native
   
   /**
-    * Creates a license configuration. A license configuration is an abstraction of a customer license agreement that can be consumed and enforced by License Manager. Components include specifications for the license type (licensing by instance, socket, CPU, or vCPU), allowed tenancy (shared tenancy, Dedicated Instance, Dedicated Host, or all of these), host affinity (how long a VM must be associated with a host), and the number of licenses purchased and used.
+    * Creates a license configuration. A license configuration is an abstraction of a customer license agreement that can be consumed and enforced by License Manager. Components include specifications for the license type (licensing by instance, socket, CPU, or vCPU), allowed tenancy (shared tenancy, Dedicated Instance, Dedicated Host, or all of these), license affinity to host (how long a license must be associated with a host), and the number of licenses purchased and used.
     */
   def createLicenseConfiguration(): Request[CreateLicenseConfigurationResponse, AWSError] = js.native
   def createLicenseConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ CreateLicenseConfigurationResponse, Unit]): Request[CreateLicenseConfigurationResponse, AWSError] = js.native
   /**
-    * Creates a license configuration. A license configuration is an abstraction of a customer license agreement that can be consumed and enforced by License Manager. Components include specifications for the license type (licensing by instance, socket, CPU, or vCPU), allowed tenancy (shared tenancy, Dedicated Instance, Dedicated Host, or all of these), host affinity (how long a VM must be associated with a host), and the number of licenses purchased and used.
+    * Creates a license configuration. A license configuration is an abstraction of a customer license agreement that can be consumed and enforced by License Manager. Components include specifications for the license type (licensing by instance, socket, CPU, or vCPU), allowed tenancy (shared tenancy, Dedicated Instance, Dedicated Host, or all of these), license affinity to host (how long a license must be associated with a host), and the number of licenses purchased and used.
     */
   def createLicenseConfiguration(params: CreateLicenseConfigurationRequest): Request[CreateLicenseConfigurationResponse, AWSError] = js.native
   def createLicenseConfiguration(
@@ -213,12 +213,12 @@ trait LicenseManager extends Service {
   ): Request[UntagResourceResponse, AWSError] = js.native
   
   /**
-    * Modifies the attributes of an existing license configuration. A license configuration is an abstraction of a customer license agreement that can be consumed and enforced by License Manager. Components include specifications for the license type (licensing by instance, socket, CPU, or vCPU), allowed tenancy (shared tenancy, Dedicated Instance, Dedicated Host, or all of these), host affinity (how long a VM must be associated with a host), and the number of licenses purchased and used.
+    * Modifies the attributes of an existing license configuration.
     */
   def updateLicenseConfiguration(): Request[UpdateLicenseConfigurationResponse, AWSError] = js.native
   def updateLicenseConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ UpdateLicenseConfigurationResponse, Unit]): Request[UpdateLicenseConfigurationResponse, AWSError] = js.native
   /**
-    * Modifies the attributes of an existing license configuration. A license configuration is an abstraction of a customer license agreement that can be consumed and enforced by License Manager. Components include specifications for the license type (licensing by instance, socket, CPU, or vCPU), allowed tenancy (shared tenancy, Dedicated Instance, Dedicated Host, or all of these), host affinity (how long a VM must be associated with a host), and the number of licenses purchased and used.
+    * Modifies the attributes of an existing license configuration.
     */
   def updateLicenseConfiguration(params: UpdateLicenseConfigurationRequest): Request[UpdateLicenseConfigurationResponse, AWSError] = js.native
   def updateLicenseConfiguration(

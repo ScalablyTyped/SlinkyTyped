@@ -31,17 +31,17 @@ trait Transport extends js.Object {
   
   var opaqueIdPrefix: String | Null = js.native
   
-  def request(params: TransportRequestParams): js.Promise[ApiResponse[Record[String, _], _]] = js.native
+  def request(params: TransportRequestParams): TransportRequestPromise[ApiResponse[Record[String, _], Context]] = js.native
   def request(
     params: TransportRequestParams,
     options: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* err */ ApiError, /* result */ ApiResponse[Record[String, _], _], Unit]
+    callback: js.Function2[/* err */ ApiError, /* result */ ApiResponse[Record[String, _], Context], Unit]
   ): TransportRequestCallback = js.native
-  def request(params: TransportRequestParams, options: TransportRequestOptions): js.Promise[ApiResponse[Record[String, _], _]] = js.native
+  def request(params: TransportRequestParams, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[Record[String, _], Context]] = js.native
   def request(
     params: TransportRequestParams,
     options: TransportRequestOptions,
-    callback: js.Function2[/* err */ ApiError, /* result */ ApiResponse[Record[String, _], _], Unit]
+    callback: js.Function2[/* err */ ApiError, /* result */ ApiResponse[Record[String, _], Context], Unit]
   ): TransportRequestCallback = js.native
   
   var requestTimeout: Double = js.native

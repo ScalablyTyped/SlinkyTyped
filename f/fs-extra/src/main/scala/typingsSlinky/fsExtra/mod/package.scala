@@ -6,7 +6,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
+  type ArrayBufferView = typingsSlinky.node.NodeJS.TypedArray | js.typedarray.DataView
+  
   type CopyFilterAsync = js.Function2[/* src */ java.lang.String, /* dest */ java.lang.String, js.Promise[scala.Boolean]]
   
   type CopyFilterSync = js.Function2[/* src */ java.lang.String, /* dest */ java.lang.String, scala.Boolean]
+  
+  type Mode = java.lang.String | scala.Double
 }

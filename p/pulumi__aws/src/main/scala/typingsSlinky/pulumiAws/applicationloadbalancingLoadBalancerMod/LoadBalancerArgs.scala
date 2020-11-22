@@ -1,10 +1,10 @@
 package typingsSlinky.pulumiAws.applicationloadbalancingLoadBalancerMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.enumsAlbMod.IpAddressType
+import typingsSlinky.pulumiAws.enumsAlbMod.LoadBalancerType
 import typingsSlinky.pulumiAws.inputMod.applicationloadbalancing.LoadBalancerAccessLogs
 import typingsSlinky.pulumiAws.inputMod.applicationloadbalancing.LoadBalancerSubnetMapping
-import typingsSlinky.pulumiAws.ipAddressTypeMod.IpAddressType
-import typingsSlinky.pulumiAws.loadBalancerTypeMod.LoadBalancerType
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +17,11 @@ trait LoadBalancerArgs extends js.Object {
     * An Access Logs block. Access Logs documented below.
     */
   val accessLogs: js.UndefOr[Input[LoadBalancerAccessLogs]] = js.native
+  
+  /**
+    * The ID of the customer owned ipv4 pool to use for this load balancer.
+    */
+  val customerOwnedIpv4Pool: js.UndefOr[Input[String]] = js.native
   
   /**
     * Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
@@ -56,7 +61,7 @@ trait LoadBalancerArgs extends js.Object {
   val ipAddressType: js.UndefOr[Input[IpAddressType]] = js.native
   
   /**
-    * The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    * The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
     */
   val loadBalancerType: js.UndefOr[Input[LoadBalancerType]] = js.native
   
@@ -122,6 +127,12 @@ object LoadBalancerArgs {
     
     @scala.inline
     def deleteAccessLogs: Self = this.set("accessLogs", js.undefined)
+    
+    @scala.inline
+    def setCustomerOwnedIpv4Pool(value: Input[String]): Self = this.set("customerOwnedIpv4Pool", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomerOwnedIpv4Pool: Self = this.set("customerOwnedIpv4Pool", js.undefined)
     
     @scala.inline
     def setDropInvalidHeaderFields(value: Input[Boolean]): Self = this.set("dropInvalidHeaderFields", value.asInstanceOf[js.Any])

@@ -18,18 +18,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDataGridColumnButton extends GridBaseColumnButton {
   
-  /** @name dxDataGridColumnButton.name */
+  /**
+    * [descr:dxDataGridColumnButton.name]
+    */
   var name: js.UndefOr[cancel | delete | edit | save | undelete | String] = js.native
   
-  /** @name dxDataGridColumnButton.onClick */
+  /**
+    * [descr:dxDataGridColumnButton.onClick]
+    */
   var onClick: js.UndefOr[(js.Function1[/* e */ ColumnComponent, _]) | String] = js.native
   
-  /** @name dxDataGridColumnButton.template */
+  /**
+    * [descr:dxDataGridColumnButton.template]
+    */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ RowType, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxDataGridColumnButton.visible */
+  /**
+    * [descr:dxDataGridColumnButton.visible]
+    */
   var visible: js.UndefOr[Boolean | (js.Function1[/* options */ ColumnComponentRow, Boolean])] = js.native
 }
 object dxDataGridColumnButton {

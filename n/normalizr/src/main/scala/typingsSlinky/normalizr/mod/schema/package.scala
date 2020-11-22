@@ -6,6 +6,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object schema {
   
+  type FallbackFunction[T] = js.Function2[
+    /* key */ java.lang.String, 
+    /* schema */ typingsSlinky.normalizr.mod.schema.Entity[T], 
+    T
+  ]
+  
   type MergeFunction = js.Function2[/* entityA */ js.Any, /* entityB */ js.Any, js.Any]
   
   type SchemaFunction = js.Function3[/* value */ js.Any, /* parent */ js.Any, /* key */ java.lang.String, java.lang.String]

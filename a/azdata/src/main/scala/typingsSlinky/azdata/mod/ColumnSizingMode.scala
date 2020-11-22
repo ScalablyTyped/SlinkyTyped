@@ -25,7 +25,7 @@ object ColumnSizingMode extends js.Object {
   /* 2 */ @js.native
   object DataFit extends TopLevel[DataFit with Double]
   
-      // all columns will be sized to fit in viewable space, no horiz scroll bar
+     // all columns will be sized to fit in viewable space, no horiz scroll bar
   @js.native
   sealed trait ForceFit extends ColumnSizingMode
   /* 0 */ @js.native

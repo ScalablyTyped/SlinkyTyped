@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EntityAggregate extends js.Object {
   
   /**
-    * The number entities that match the criteria for the specified events.
+    * The number of entities that match the criteria for the specified events.
     */
   var count: js.UndefOr[typingsSlinky.awsSdk.healthMod.count] = js.native
   

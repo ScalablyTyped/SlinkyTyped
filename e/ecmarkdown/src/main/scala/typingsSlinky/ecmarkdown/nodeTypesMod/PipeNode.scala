@@ -12,7 +12,7 @@ trait PipeNode
   
   var contents: Null = js.native
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: pipe = js.native
   
@@ -25,8 +25,15 @@ trait PipeNode
 object PipeNode {
   
   @scala.inline
-  def apply(contents: Null, name: pipe, nonTerminal: String, optional: Boolean, params: String): PipeNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nonTerminal = nonTerminal.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
+  def apply(
+    contents: Null,
+    location: LocationRange,
+    name: pipe,
+    nonTerminal: String,
+    optional: Boolean,
+    params: String
+  ): PipeNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nonTerminal = nonTerminal.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
     __obj.asInstanceOf[PipeNode]
   }
   
@@ -49,6 +56,9 @@ object PipeNode {
     def setContents(value: Null): Self = this.set("contents", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setName(value: pipe): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -59,11 +69,5 @@ object PipeNode {
     
     @scala.inline
     def setParams(value: String): Self = this.set("params", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
   }
 }

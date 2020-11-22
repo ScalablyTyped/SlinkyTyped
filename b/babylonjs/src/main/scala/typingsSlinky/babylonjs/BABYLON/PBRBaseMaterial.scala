@@ -64,11 +64,6 @@ trait PBRBaseMaterial extends PushMaterial {
   var _directIntensity: Double = js.native
   
   /**
-    * Returns true if alpha blending should be disabled.
-    */
-  /* private */ def _disableAlphaBlending: js.Any = js.native
-  
-  /**
     * Debug Control allowing disabling the bump map on this material.
     */
   var _disableBumpMap: Boolean = js.native
@@ -115,11 +110,6 @@ trait PBRBaseMaterial extends PushMaterial {
   var _environmentIntensity: Double = js.native
   
   /**
-    * Enforces alpha test in opaque or blend mode in order to improve the performances of some situations.
-    */
-  var _forceAlphaTest: Boolean = js.native
-  
-  /**
     * Force the shader to compute irradiance in the fragment shader in order to take bump in account.
     */
   var _forceIrradianceInFragment: Boolean = js.native
@@ -139,6 +129,11 @@ trait PBRBaseMaterial extends PushMaterial {
     * Sets the global ambient color for the material used in lighting calculations.
     */
   var _globalAmbientColor: js.Any = js.native
+  
+  /**
+    * Specifies whether or not there is a usable alpha channel for transparency.
+    */
+  /* protected */ def _hasAlphaChannel(): Boolean = js.native
   
   /**
     * Default configuration related to image processing available in the PBR Material.
@@ -188,12 +183,32 @@ trait PBRBaseMaterial extends PushMaterial {
   var _metallic: Nullable[Double] = js.native
   
   /**
-    * Specifies the an F0 factor to help configuring the material F0.
-    * Instead of the default 4%, 8% * factor will be used. As the factor is defaulting
-    * to 0.5 the previously hard coded value stays the same.
-    * Can also be used to scale the F0 values of the metallic texture.
+    * In metallic workflow, specifies an F0 factor to help configuring the material F0.
+    * By default the indexOfrefraction is used to compute F0;
+    *
+    * This is used as a factor against the default reflectance at normal incidence to tweak it.
+    *
+    * F0 = defaultF0 * metallicF0Factor * metallicReflectanceColor;
+    * F90 = metallicReflectanceColor;
     */
   var _metallicF0Factor: Double = js.native
+  
+  /**
+    * In metallic workflow, specifies an F90 color to help configuring the material F90.
+    * By default the F90 is always 1;
+    *
+    * Please note that this factor is also used as a factor against the default reflectance at normal incidence.
+    *
+    * F0 = defaultF0 * metallicF0Factor * metallicReflectanceColor
+    * F90 = metallicReflectanceColor;
+    */
+  var _metallicReflectanceColor: Color3 = js.native
+  
+  /**
+    * Defines to store metallicReflectanceColor in RGB and metallicF0Factor in A
+    * This is multiply against the scalar values defined in the material.
+    */
+  var _metallicReflectanceTexture: Nullable[BaseTexture] = js.native
   
   /**
     * Used to switch from specular/glossiness to metallic/roughness workflow.
@@ -224,6 +239,10 @@ trait PBRBaseMaterial extends PushMaterial {
   var _prepareDefines: js.Any = js.native
   
   var _prepareEffect: js.Any = js.native
+  
+  var _realTimeFiltering: js.Any = js.native
+  
+  var _realTimeFilteringQuality: js.Any = js.native
   
   var _rebuildInParallel: Boolean = js.native
   
@@ -268,11 +287,6 @@ trait PBRBaseMaterial extends PushMaterial {
     * four lights of the scene. Those highlights may not be needed in full environment lighting.
     */
   var _specularIntensity: Double = js.native
-  
-  /**
-    * The transparency mode of the material.
-    */
-  var _transparencyMode: Nullable[Double] = js.native
   
   /**
     * If sets to true and backfaceCulling is false, normals will be flipped on the backside.
@@ -332,13 +346,6 @@ trait PBRBaseMaterial extends PushMaterial {
     * Enables the use of logarithmic depth buffers, which is good for wide depth buffers.
     */
   var _useLogarithmicDepth: js.Any = js.native
-  
-  /**
-    * Specifies whether the F0 factor can be fetched from the mettalic texture.
-    * If set to true, please adapt the metallicF0Factor to ensure it fits with
-    * your expectation as it multiplies with the texture data.
-    */
-  var _useMetallicF0FactorFromMetallicTexture: Boolean = js.native
   
   /**
     * Specifies if the metallic texture contains the metallness information in its blue channel.
@@ -414,17 +421,6 @@ trait PBRBaseMaterial extends PushMaterial {
   val clearCoat: PBRClearCoatConfiguration = js.native
   
   /**
-    * Custom callback helping to override the default shader used in the material.
-    */
-  def customShaderNameResolve(
-    shaderName: String,
-    uniforms: js.Array[String],
-    uniformBuffers: js.Array[String],
-    samplers: js.Array[String],
-    defines: PBRMaterialDefines
-  ): String = js.native
-  
-  /**
     * @hidden
     * This is reserved for the inspector.
     * As the default viewing range might not be enough (if the ambient is really small for instance)
@@ -451,6 +447,11 @@ trait PBRBaseMaterial extends PushMaterial {
   var debugMode: Double = js.native
   
   /**
+    * Defines the detail map parameters for the material.
+    */
+  val detailMap: DetailMapConfiguration = js.native
+  
+  /**
     * Returns the animatable textures.
     * @returns - Array of animatable textures.
     */
@@ -463,14 +464,22 @@ trait PBRBaseMaterial extends PushMaterial {
   def isMetallicWorkflow(): Boolean = js.native
   
   /**
-    * Specifies that the submesh is ready to be used.
-    * @param mesh - BJS mesh.
-    * @param subMesh - A submesh of the BJS mesh.  Used to check if it is ready.
-    * @param useInstances - Specifies that instances should be used.
-    * @returns - boolean indicating that the submesh is ready or not.
+    * Defines additionnal PrePass parameters for the material.
     */
-  def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh): Boolean = js.native
-  def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh, useInstances: Boolean): Boolean = js.native
+  val prePassConfiguration: PrePassConfiguration = js.native
+  
+  /**
+    * Enables realtime filtering on the texture.
+    */
+  def realTimeFiltering: Boolean = js.native
+  
+  /**
+    * Quality switch for realtime filtering
+    */
+  def realTimeFilteringQuality: Double = js.native
+  def realTimeFilteringQuality_=(n: Double): Unit = js.native
+  
+  def realTimeFiltering_=(b: Boolean): Unit = js.native
   
   /**
     * Defines the Sheen parameters for the material.
@@ -481,23 +490,6 @@ trait PBRBaseMaterial extends PushMaterial {
     * Defines the SubSurface parameters for the material.
     */
   val subSurface: PBRSubSurfaceConfiguration = js.native
-  
-  /**
-    * Gets the current transparency mode.
-    */
-  def transparencyMode: Nullable[Double] = js.native
-  /**
-    * Sets the transparency mode of the material.
-    *
-    * | Value | Type                                | Description |
-    * | ----- | ----------------------------------- | ----------- |
-    * | 0     | OPAQUE                              |             |
-    * | 1     | ALPHATEST                           |             |
-    * | 2     | ALPHABLEND                          |             |
-    * | 3     | ALPHATESTANDBLEND                   |             |
-    *
-    */
-  def transparencyMode_=(value: Nullable[Double]): Unit = js.native
   
   /**
     * Enabled the use of logarithmic depth buffers, which is good for wide depth buffers.

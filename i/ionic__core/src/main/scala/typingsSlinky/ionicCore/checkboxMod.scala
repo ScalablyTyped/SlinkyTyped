@@ -17,8 +17,6 @@ object checkboxMod extends js.Object {
   @js.native
   class Checkbox () extends ComponentInterface {
     
-    var buttonEl: js.Any = js.native
-    
     /**
       * If `true`, the checkbox is selected.
       */
@@ -47,6 +45,8 @@ object checkboxMod extends js.Object {
     
     var emitStyle: js.Any = js.native
     
+    var focusEl: js.Any = js.native
+    
     /**
       * If `true`, the checkbox will visually appear as indeterminate.
       */
@@ -55,7 +55,7 @@ object checkboxMod extends js.Object {
     var inputId: js.Any = js.native
     
     /**
-      * Emitted when the toggle loses focus.
+      * Emitted when the checkbox loses focus.
       */
     var ionBlur: EventEmitter[Unit] = js.native
     
@@ -65,7 +65,7 @@ object checkboxMod extends js.Object {
     var ionChange: EventEmitter[CheckboxChangeEventDetail] = js.native
     
     /**
-      * Emitted when the toggle has focus.
+      * Emitted when the checkbox has focus.
       */
     var ionFocus: EventEmitter[Unit] = js.native
     
@@ -92,11 +92,11 @@ object checkboxMod extends js.Object {
     var setFocus: js.Any = js.native
     
     /**
-      * The value of the toggle does not mean if it's checked or not, use the `checked`
+      * The value of the checkbox does not mean if it's checked or not, use the `checked`
       * property for that.
       *
-      * The value of a toggle is analogous to the value of a `<input type="checkbox">`,
-      * it's only used when the toggle participates in a native `<form>`.
+      * The value of a checkbox is analogous to the value of an `<input type="checkbox">`,
+      * it's only used when the checkbox participates in a native `<form>`.
       */
     var value: String = js.native
   }

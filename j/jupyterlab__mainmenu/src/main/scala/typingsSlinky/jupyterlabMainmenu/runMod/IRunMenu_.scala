@@ -2,14 +2,15 @@ package typingsSlinky.jupyterlabMainmenu.runMod
 
 import typingsSlinky.jupyterlabMainmenu.labmenuMod.IJupyterLabMenu
 import typingsSlinky.jupyterlabMainmenu.runMod.IRunMenu.ICodeRunner
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.luminoWidgets.mod.Widget
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IRunMenu_ extends IJupyterLabMenu {
+  
   /**
     * A set storing ICodeRunner for the Run menu.
     *
@@ -18,4 +19,3 @@ trait IRunMenu_ extends IJupyterLabMenu {
     */
   val codeRunners: Set[ICodeRunner[Widget]] = js.native
 }
-

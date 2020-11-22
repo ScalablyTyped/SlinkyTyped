@@ -13,6 +13,11 @@ trait Environment extends js.Object {
   var arn: js.UndefOr[String] = js.native
   
   /**
+    * The connection type used for connecting to an Amazon EC2 environment.
+    */
+  var connectionType: js.UndefOr[ConnectionType] = js.native
+  
+  /**
     * The description for the environment.
     */
   var description: js.UndefOr[EnvironmentDescription] = js.native
@@ -70,6 +75,12 @@ object Environment {
     
     @scala.inline
     def deleteArn: Self = this.set("arn", js.undefined)
+    
+    @scala.inline
+    def setConnectionType(value: ConnectionType): Self = this.set("connectionType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConnectionType: Self = this.set("connectionType", js.undefined)
     
     @scala.inline
     def setDescription(value: EnvironmentDescription): Self = this.set("description", value.asInstanceOf[js.Any])

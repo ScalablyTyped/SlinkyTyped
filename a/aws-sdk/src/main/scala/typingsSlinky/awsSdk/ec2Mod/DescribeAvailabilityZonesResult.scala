@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeAvailabilityZonesResult extends js.Object {
   
   /**
-    * Information about the Zones.
+    * Information about the Availability Zones, Local Zones, and Wavelength Zones.
     */
   var AvailabilityZones: js.UndefOr[AvailabilityZoneList] = js.native
 }

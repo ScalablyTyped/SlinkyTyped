@@ -14,7 +14,7 @@ trait RouteState extends js.Object {
   val blackhole: js.UndefOr[Input[Boolean]] = js.native
   
   /**
-    * IPv4 CIDR range used for destination matches. Routing decisions are based on the most specific match.
+    * IPv4 or IPv6 RFC1924 CIDR used for destination matches. Routing decisions are based on the most specific match.
     */
   val destinationCidrBlock: js.UndefOr[Input[String]] = js.native
   

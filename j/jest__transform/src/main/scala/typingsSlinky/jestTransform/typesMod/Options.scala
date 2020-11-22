@@ -1,6 +1,7 @@
 package typingsSlinky.jestTransform.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.jestTypes.configMod.CoverageProvider
 import typingsSlinky.jestTypes.configMod.Glob
 import typingsSlinky.jestTypes.configMod.Path
 import typingsSlinky.std.Set
@@ -8,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined @jest/transform.@jest/transform/build/types.ShouldInstrumentOptions & std.Pick<@jest/types.@jest/types.Config.GlobalConfig, 'extraGlobals'> & {  isCoreModule :boolean | undefined,   isInternalModule :boolean | undefined} */
+/* Inlined @jest/transform.@jest/transform/build/types.ShouldInstrumentOptions & std.Partial<{  isCoreModule :boolean,   isInternalModule :boolean}> & @jest/transform.@jest/transform/build/types.CallerTransformOptions */
 @js.native
 trait Options extends js.Object {
   
@@ -18,19 +19,29 @@ trait Options extends js.Object {
   
   var collectCoverageFrom: js.Array[Glob] = js.native
   
-  var collectCoverageOnlyFrom: js.UndefOr[StringDictionary[Boolean] | Null] = js.native
+  var collectCoverageOnlyFrom: js.UndefOr[StringDictionary[Boolean]] = js.native
   
-  var extraGlobals: js.Array[String] = js.native
+  var coverageProvider: CoverageProvider = js.native
   
   var isCoreModule: js.UndefOr[Boolean] = js.native
   
   var isInternalModule: js.UndefOr[Boolean] = js.native
+  
+  var sourcesRelatedToTestsInChangedFiles: js.UndefOr[Set[Path]] = js.native
+  
+  var supportsDynamicImport: js.UndefOr[Boolean] = js.native
+  
+  var supportsExportNamespaceFrom: js.UndefOr[Boolean] = js.native
+  
+  var supportsStaticESM: js.UndefOr[Boolean] = js.native
+  
+  var supportsTopLevelAwait: js.UndefOr[Boolean] = js.native
 }
 object Options {
   
   @scala.inline
-  def apply(collectCoverage: Boolean, collectCoverageFrom: js.Array[Glob], extraGlobals: js.Array[String]): Options = {
-    val __obj = js.Dynamic.literal(collectCoverage = collectCoverage.asInstanceOf[js.Any], collectCoverageFrom = collectCoverageFrom.asInstanceOf[js.Any], extraGlobals = extraGlobals.asInstanceOf[js.Any])
+  def apply(collectCoverage: Boolean, collectCoverageFrom: js.Array[Glob], coverageProvider: CoverageProvider): Options = {
+    val __obj = js.Dynamic.literal(collectCoverage = collectCoverage.asInstanceOf[js.Any], collectCoverageFrom = collectCoverageFrom.asInstanceOf[js.Any], coverageProvider = coverageProvider.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
   
@@ -59,10 +70,7 @@ object Options {
     def setCollectCoverageFrom(value: js.Array[Glob]): Self = this.set("collectCoverageFrom", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExtraGlobalsVarargs(value: String*): Self = this.set("extraGlobals", js.Array(value :_*))
-    
-    @scala.inline
-    def setExtraGlobals(value: js.Array[String]): Self = this.set("extraGlobals", value.asInstanceOf[js.Any])
+    def setCoverageProvider(value: CoverageProvider): Self = this.set("coverageProvider", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setChangedFiles(value: Set[Path]): Self = this.set("changedFiles", value.asInstanceOf[js.Any])
@@ -77,9 +85,6 @@ object Options {
     def deleteCollectCoverageOnlyFrom: Self = this.set("collectCoverageOnlyFrom", js.undefined)
     
     @scala.inline
-    def setCollectCoverageOnlyFromNull: Self = this.set("collectCoverageOnlyFrom", null)
-    
-    @scala.inline
     def setIsCoreModule(value: Boolean): Self = this.set("isCoreModule", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -90,5 +95,35 @@ object Options {
     
     @scala.inline
     def deleteIsInternalModule: Self = this.set("isInternalModule", js.undefined)
+    
+    @scala.inline
+    def setSourcesRelatedToTestsInChangedFiles(value: Set[Path]): Self = this.set("sourcesRelatedToTestsInChangedFiles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSourcesRelatedToTestsInChangedFiles: Self = this.set("sourcesRelatedToTestsInChangedFiles", js.undefined)
+    
+    @scala.inline
+    def setSupportsDynamicImport(value: Boolean): Self = this.set("supportsDynamicImport", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSupportsDynamicImport: Self = this.set("supportsDynamicImport", js.undefined)
+    
+    @scala.inline
+    def setSupportsExportNamespaceFrom(value: Boolean): Self = this.set("supportsExportNamespaceFrom", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSupportsExportNamespaceFrom: Self = this.set("supportsExportNamespaceFrom", js.undefined)
+    
+    @scala.inline
+    def setSupportsStaticESM(value: Boolean): Self = this.set("supportsStaticESM", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSupportsStaticESM: Self = this.set("supportsStaticESM", js.undefined)
+    
+    @scala.inline
+    def setSupportsTopLevelAwait(value: Boolean): Self = this.set("supportsTopLevelAwait", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSupportsTopLevelAwait: Self = this.set("supportsTopLevelAwait", js.undefined)
   }
 }

@@ -1,7 +1,5 @@
 package typingsSlinky.popmotionPose
 
-import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
-import typingsSlinky.popmotion.mod.Action_
 import typingsSlinky.popmotionPose.libTypesMod.PoserConfig
 import typingsSlinky.popmotionPose.typesMod.PopmotionPoserFactoryConfig
 import typingsSlinky.popmotionPose.typesMod.TransitionDefinition
@@ -19,6 +17,11 @@ object factoriesPoseMod extends js.Object {
     hasTransformPoseAddListenerToValueExtendAPIReadValueFromSourcePosePrioritySetValueNative: PopmotionPoserFactoryConfig[P, TransitionDefinition]
   ): js.Function1[
     /* config */ PoserConfig[Value], 
-    Poser[Value, Action_[ColdSubscription], ColdSubscription, P]
+    Poser[
+      Value, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Action */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ColdSubscription */ _, 
+      P
+    ]
   ] = js.native
 }

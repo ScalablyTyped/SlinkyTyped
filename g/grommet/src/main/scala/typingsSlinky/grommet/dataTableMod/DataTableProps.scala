@@ -3,11 +3,16 @@ package typingsSlinky.grommet.dataTableMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.grommet.anon.Background
 import typingsSlinky.grommet.anon.Direction
+import typingsSlinky.grommet.anon.DirectionProperty
+import typingsSlinky.grommet.anon.Error
 import typingsSlinky.grommet.anon.Expand
-import typingsSlinky.grommet.anon.SizeStyle
+import typingsSlinky.grommet.grommetStrings.footer
+import typingsSlinky.grommet.grommetStrings.header
+import typingsSlinky.grommet.grommetStrings.horizontal
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.small
+import typingsSlinky.grommet.grommetStrings.vertical
 import typingsSlinky.grommet.grommetStrings.xlarge
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
@@ -29,15 +34,22 @@ trait DataTableProps[TRowType] extends js.Object {
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
   
   var background: js.UndefOr[
-    BackgroundType | (Sections[BackgroundType | js.Array[String], BackgroundType, BackgroundType])
+    BackgroundType | (Sections[
+      BackgroundType | js.Array[String], 
+      BackgroundType, 
+      BackgroundType, 
+      BackgroundType | js.Array[String]
+    ])
   ] = js.native
   
-  var border: js.UndefOr[BorderType | (Sections[BorderType, BorderType, BorderType])] = js.native
+  var border: js.UndefOr[BorderType | (Sections[BorderType, BorderType, BorderType, BorderType])] = js.native
   
   var columns: js.UndefOr[js.Array[ColumnConfig[TRowType]]] = js.native
   
   // Data
   var data: js.UndefOr[js.Array[TRowType]] = js.native
+  
+  var fill: js.UndefOr[Boolean | vertical | horizontal] = js.native
   
   var gridArea: js.UndefOr[GridAreaType] = js.native
   
@@ -52,9 +64,13 @@ trait DataTableProps[TRowType] extends js.Object {
   
   var onSearch: js.UndefOr[js.Function1[/* search */ String, Unit]] = js.native
   
-  var onSort: js.UndefOr[js.Function1[/* sort */ Direction, Unit]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* select */ js.Array[String | Double], Unit]] = js.native
   
-  var pad: js.UndefOr[PadType | (Sections[PadType, PadType, PadType])] = js.native
+  var onSort: js.UndefOr[js.Function1[/* sort */ DirectionProperty, Unit]] = js.native
+  
+  var pad: js.UndefOr[PadType | (Sections[PadType, PadType, PadType, PadType])] = js.native
+  
+  var pin: js.UndefOr[Boolean | header | footer] = js.native
   
   var primaryKey: js.UndefOr[String | Boolean] = js.native
   
@@ -63,6 +79,8 @@ trait DataTableProps[TRowType] extends js.Object {
   var resizeable: js.UndefOr[Boolean] = js.native
   
   var rowProps: js.UndefOr[StringDictionary[Background]] = js.native
+  
+  var select: js.UndefOr[js.Array[String | Double]] = js.native
   
   var size: js.UndefOr[small | medium | large | xlarge | String] = js.native
   
@@ -109,17 +127,22 @@ object DataTableProps {
     
     @scala.inline
     def setBackground(
-      value: BackgroundType | (Sections[BackgroundType | js.Array[String], BackgroundType, BackgroundType])
+      value: BackgroundType | (Sections[
+          BackgroundType | js.Array[String], 
+          BackgroundType, 
+          BackgroundType, 
+          BackgroundType | js.Array[String]
+        ])
     ): Self = this.set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackground: Self = this.set("background", js.undefined)
     
     @scala.inline
-    def setBorderVarargs(value: SizeStyle*): Self = this.set("border", js.Array(value :_*))
+    def setBorderVarargs(value: Error*): Self = this.set("border", js.Array(value :_*))
     
     @scala.inline
-    def setBorder(value: BorderType | (Sections[BorderType, BorderType, BorderType])): Self = this.set("border", value.asInstanceOf[js.Any])
+    def setBorder(value: BorderType | (Sections[BorderType, BorderType, BorderType, BorderType])): Self = this.set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBorder: Self = this.set("border", js.undefined)
@@ -141,6 +164,12 @@ object DataTableProps {
     
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)
+    
+    @scala.inline
+    def setFill(value: Boolean | vertical | horizontal): Self = this.set("fill", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFill: Self = this.set("fill", js.undefined)
     
     @scala.inline
     def setGridArea(value: GridAreaType): Self = this.set("gridArea", value.asInstanceOf[js.Any])
@@ -179,16 +208,28 @@ object DataTableProps {
     def deleteOnSearch: Self = this.set("onSearch", js.undefined)
     
     @scala.inline
-    def setOnSort(value: /* sort */ Direction => Unit): Self = this.set("onSort", js.Any.fromFunction1(value))
+    def setOnSelect(value: /* select */ js.Array[String | Double] => Unit): Self = this.set("onSelect", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnSelect: Self = this.set("onSelect", js.undefined)
+    
+    @scala.inline
+    def setOnSort(value: /* sort */ DirectionProperty => Unit): Self = this.set("onSort", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSort: Self = this.set("onSort", js.undefined)
     
     @scala.inline
-    def setPad(value: PadType | (Sections[PadType, PadType, PadType])): Self = this.set("pad", value.asInstanceOf[js.Any])
+    def setPad(value: PadType | (Sections[PadType, PadType, PadType, PadType])): Self = this.set("pad", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePad: Self = this.set("pad", js.undefined)
+    
+    @scala.inline
+    def setPin(value: Boolean | header | footer): Self = this.set("pin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePin: Self = this.set("pin", js.undefined)
     
     @scala.inline
     def setPrimaryKey(value: String | Boolean): Self = this.set("primaryKey", value.asInstanceOf[js.Any])
@@ -213,6 +254,15 @@ object DataTableProps {
     
     @scala.inline
     def deleteRowProps: Self = this.set("rowProps", js.undefined)
+    
+    @scala.inline
+    def setSelectVarargs(value: (String | Double)*): Self = this.set("select", js.Array(value :_*))
+    
+    @scala.inline
+    def setSelect(value: js.Array[String | Double]): Self = this.set("select", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelect: Self = this.set("select", js.undefined)
     
     @scala.inline
     def setSize(value: small | medium | large | xlarge | String): Self = this.set("size", value.asInstanceOf[js.Any])

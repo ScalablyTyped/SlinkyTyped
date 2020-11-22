@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ExportDefaultDeclaration
+import typingsSlinky.babelTraverse.babelTraverseStrings.BindExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `77` extends js.Object {
   
-  var `type`: ExportDefaultDeclaration = js.native
+  var `type`: BindExpression = js.native
 }
 object `77` {
   
   @scala.inline
-  def apply(`type`: ExportDefaultDeclaration): `77` = {
+  def apply(`type`: BindExpression): `77` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`77`]
@@ -35,6 +35,6 @@ object `77` {
     }
     
     @scala.inline
-    def setType(value: ExportDefaultDeclaration): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: BindExpression): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

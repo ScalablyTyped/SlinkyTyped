@@ -8,32 +8,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateAppRequest extends js.Object {
   
   /**
-    * A unique, case-sensitive identifier you provide to ensure idempotency of application creation.
+    * A unique, case-sensitive identifier that you provide to ensure the idempotency of application creation.
     */
   var clientToken: js.UndefOr[ClientToken] = js.native
   
   /**
-    * Description of the new application
+    * The description of the new application
     */
   var description: js.UndefOr[AppDescription] = js.native
   
   /**
-    * Name of the new application.
+    * The name of the new application.
     */
   var name: js.UndefOr[AppName] = js.native
   
   /**
-    * Name of service role in customer's account to be used by AWS SMS.
+    * The name of the service role in the customer's account to be used by AWS SMS.
     */
   var roleName: js.UndefOr[RoleName] = js.native
   
   /**
-    * List of server groups to include in the application.
+    * The server groups to include in the application.
     */
   var serverGroups: js.UndefOr[ServerGroups] = js.native
   
   /**
-    * List of tags to be associated with the application.
+    * The tags to be associated with the application.
     */
   var tags: js.UndefOr[Tags] = js.native
 }

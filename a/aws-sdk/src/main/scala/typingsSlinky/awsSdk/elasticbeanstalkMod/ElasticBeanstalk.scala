@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.anon.DescribeEnvironmentsMessa
 import typingsSlinky.awsSdk.awsSdkStrings.environmentExists
 import typingsSlinky.awsSdk.awsSdkStrings.environmentTerminated
 import typingsSlinky.awsSdk.awsSdkStrings.environmentUpdated
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service

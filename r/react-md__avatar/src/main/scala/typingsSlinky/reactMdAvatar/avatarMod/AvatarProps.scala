@@ -1,7 +1,10 @@
 package typingsSlinky.reactMdAvatar.avatarMod
 
+import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLSpanElement
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.reactMdUtils.typesTypesMod.PropsWithRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,6 +22,29 @@ trait AvatarProps extends HTMLAttributes[HTMLSpanElement] {
     * noise for screen readers.
     */
   var alt: js.UndefOr[String] = js.native
+  
+  /**
+    * An optional object of image props and ref that can be used to create an
+    * image within the `Avatar`. This can be useful to add a custom `style`
+    * or`className` to the `<img>` element if that additional customization is
+    * needed.
+    *
+    * Note: The values in this object will override the `src`, `alt`, and
+    * `referrerPolicy` root level avatar props if they exist on this object.
+    *
+    * @since 2.2.0
+    */
+  var imgProps: js.UndefOr[PropsWithRef[ImgAttributes, HTMLImageElement]] = js.native
+  
+  /**
+    * An optional `referrerPolicy` to provide to the `<img>` element if the `src`
+    * or `imgProps` props are provided.
+    *
+    * @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-referrerpolicy
+    *
+    * @since 2.2.0
+    */
+  var referrerPolicy: js.UndefOr[HTMLAttributeReferrerPolicy] = js.native
   
   /**
     * This should be an image `src` attribute to create an avatar from. When this
@@ -55,6 +81,18 @@ object AvatarProps {
     
     @scala.inline
     def deleteAlt: Self = this.set("alt", js.undefined)
+    
+    @scala.inline
+    def setImgProps(value: PropsWithRef[ImgAttributes, HTMLImageElement]): Self = this.set("imgProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImgProps: Self = this.set("imgProps", js.undefined)
+    
+    @scala.inline
+    def setReferrerPolicy(value: HTMLAttributeReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)
     
     @scala.inline
     def setSrc(value: String): Self = this.set("src", value.asInstanceOf[js.Any])

@@ -18,6 +18,15 @@ package object Page {
   
   type DataOption = typingsSlinky.std.Record[java.lang.String, js.Any]
   
+  type GetCurrentPages = js.Function0[
+    js.Array[
+      typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.Instance[
+        typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject, 
+        typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject
+      ]
+    ]
+  ]
+  
   type Instance[TData /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.DataOption */, TCustom /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.CustomOption */] = typingsSlinky.wechatMiniprogram.anon.OptionalInterfaceILifetim with typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.InstanceProperties with typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.InstanceMethods[TData] with typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.Data[TData] with TCustom
   
   type InstanceMethods[D /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.DataOption */] = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.InstanceMethods[D]
@@ -27,14 +36,5 @@ package object Page {
   type TrivialInstance = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.Instance[
     typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject, 
     typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject
-  ]
-  
-  type getCurrentPages = js.Function0[
-    js.Array[
-      typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.Instance[
-        typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject, 
-        typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject
-      ]
-    ]
   ]
 }

@@ -1,32 +1,29 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.viz.dxBarGauge
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `18` extends js.Object {
+trait `18`[T] extends js.Object {
   
-  var component: js.UndefOr[dxBarGauge] = js.native
+  var component: js.UndefOr[T] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
-  
-  var target: js.UndefOr[js.Any] = js.native
 }
 object `18` {
   
   @scala.inline
-  def apply(): `18` = {
+  def apply[T](): `18`[T] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[`18`]
+    __obj.asInstanceOf[`18`[T]]
   }
   
   @scala.inline
-  implicit class `18Ops`[Self <: `18`] (val x: Self) extends AnyVal {
+  implicit class `18Ops`[Self <: `18`[_], T] (val x: Self with `18`[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -41,7 +38,7 @@ object `18` {
     }
     
     @scala.inline
-    def setComponent(value: dxBarGauge): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: T): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -57,11 +54,5 @@ object `18` {
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)
-    
-    @scala.inline
-    def setTarget(value: js.Any): Self = this.set("target", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTarget: Self = this.set("target", js.undefined)
   }
 }

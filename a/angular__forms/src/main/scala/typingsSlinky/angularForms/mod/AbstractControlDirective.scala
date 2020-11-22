@@ -10,6 +10,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 abstract class AbstractControlDirective () extends js.Object {
   
   /**
+    * Contains the result of merging asynchronous validators into a single validator function
+    * (combined using `Validators.composeAsync`).
+    */
+  var _composedAsyncValidatorFn: js.Any = js.native
+  
+  /**
+    * Contains the result of merging synchronous validators into a single validator function
+    * (combined using `Validators.compose`).
+    */
+  var _composedValidatorFn: js.Any = js.native
+  
+  var _onDestroyCallbacks: js.Any = js.native
+  
+  /**
+    * @description
+    * Asynchronous validator function composed of all the asynchronous validators registered with
+    * this directive.
+    */
+  def asyncValidator: AsyncValidatorFn | Null = js.native
+  
+  /**
     * @description
     * A reference to the underlying control.
     *
@@ -182,6 +203,13 @@ abstract class AbstractControlDirective () extends js.Object {
     * If the control is not present, null is returned.
     */
   def valid: Boolean | Null = js.native
+  
+  /**
+    * @description
+    * Synchronous validator function composed of all the synchronous validators registered with this
+    * directive.
+    */
+  def validator: ValidatorFn | Null = js.native
   
   /**
     * @description

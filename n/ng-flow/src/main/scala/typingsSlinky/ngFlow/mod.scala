@@ -1,7 +1,7 @@
 package typingsSlinky.ngFlow
 
-import typingsSlinky.flowjs.mod.IFlow
-import typingsSlinky.flowjs.mod.IFlowOptions
+import typingsSlinky.flowjs.mod.Flow
+import typingsSlinky.flowjs.mod.FlowOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,10 +15,10 @@ object mod extends js.Object {
   object flow extends js.Object {
     
     @js.native
-    trait IFlowFactory extends js.Object {
+    trait FlowFactory extends js.Object {
       
-      def create(): IFlow = js.native
-      def create(options: IFlowOptions): IFlow = js.native
+      def create(): Flow = js.native
+      def create(options: FlowOptions): Flow = js.native
     }
   }
 }

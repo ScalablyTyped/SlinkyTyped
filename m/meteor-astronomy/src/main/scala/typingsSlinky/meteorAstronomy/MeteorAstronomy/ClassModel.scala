@@ -12,7 +12,7 @@ trait ClassModel[T] extends js.Object {
   
   var behaviors: js.UndefOr[js.Object] = js.native
   
-  var collection: js.UndefOr[Collection[T]] = js.native
+  var collection: js.UndefOr[Collection[T, T]] = js.native
   
   var events: js.UndefOr[js.Object] = js.native
   
@@ -64,7 +64,7 @@ object ClassModel {
     def deleteBehaviors: Self = this.set("behaviors", js.undefined)
     
     @scala.inline
-    def setCollection(value: Collection[T]): Self = this.set("collection", value.asInstanceOf[js.Any])
+    def setCollection(value: Collection[T, T]): Self = this.set("collection", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCollection: Self = this.set("collection", js.undefined)

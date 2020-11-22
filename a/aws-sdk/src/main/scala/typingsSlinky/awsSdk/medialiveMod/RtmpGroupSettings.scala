@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RtmpGroupSettings extends js.Object {
   
   /**
+    * Choose the ad marker type for this output group. MediaLive will create a message based on the content of each SCTE-35 message, format it for that marker type, and insert it in the datastream.
+    */
+  var AdMarkers: js.UndefOr[listOfRtmpAdMarkers] = js.native
+  
+  /**
     * Authentication scheme to use when connecting with CDN
     */
   var AuthenticationScheme: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.AuthenticationScheme] = js.native
@@ -61,6 +66,15 @@ object RtmpGroupSettings {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAdMarkersVarargs(value: RtmpAdMarkers*): Self = this.set("AdMarkers", js.Array(value :_*))
+    
+    @scala.inline
+    def setAdMarkers(value: listOfRtmpAdMarkers): Self = this.set("AdMarkers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdMarkers: Self = this.set("AdMarkers", js.undefined)
     
     @scala.inline
     def setAuthenticationScheme(value: AuthenticationScheme): Self = this.set("AuthenticationScheme", value.asInstanceOf[js.Any])

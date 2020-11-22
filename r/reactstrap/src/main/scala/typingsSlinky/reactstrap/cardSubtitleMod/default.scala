@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/CardSubtitle", JSImport.Default)
+@JSImport("reactstrap/es/CardSubtitle", JSImport.Default)
 @js.native
-class default[T] ()
+class default ()
   extends Component[CardSubtitleProps, js.Object, js.Any]

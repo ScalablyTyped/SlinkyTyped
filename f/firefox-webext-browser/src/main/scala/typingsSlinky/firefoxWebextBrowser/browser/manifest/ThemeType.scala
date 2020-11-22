@@ -1,8 +1,5 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
-import typingsSlinky.firefoxWebextBrowser.anon.Accentcolor
-import typingsSlinky.firefoxWebextBrowser.anon.Additionalbackgrounds
-import typingsSlinky.firefoxWebextBrowser.anon.Additionalbackgroundsalignment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,11 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ThemeType extends js.Object {
   
-  var colors: js.UndefOr[Accentcolor] = js.native
+  var colors: js.UndefOr[ThemeTypeColors] = js.native
   
-  var images: js.UndefOr[Additionalbackgrounds] = js.native
+  var images: js.UndefOr[ThemeTypeImages] = js.native
   
-  var properties: js.UndefOr[Additionalbackgroundsalignment] = js.native
+  var properties: js.UndefOr[_ThemeType] = js.native
 }
 object ThemeType {
   
@@ -40,19 +37,19 @@ object ThemeType {
     }
     
     @scala.inline
-    def setColors(value: Accentcolor): Self = this.set("colors", value.asInstanceOf[js.Any])
+    def setColors(value: ThemeTypeColors): Self = this.set("colors", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColors: Self = this.set("colors", js.undefined)
     
     @scala.inline
-    def setImages(value: Additionalbackgrounds): Self = this.set("images", value.asInstanceOf[js.Any])
+    def setImages(value: ThemeTypeImages): Self = this.set("images", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteImages: Self = this.set("images", js.undefined)
     
     @scala.inline
-    def setProperties(value: Additionalbackgroundsalignment): Self = this.set("properties", value.asInstanceOf[js.Any])
+    def setProperties(value: _ThemeType): Self = this.set("properties", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProperties: Self = this.set("properties", js.undefined)

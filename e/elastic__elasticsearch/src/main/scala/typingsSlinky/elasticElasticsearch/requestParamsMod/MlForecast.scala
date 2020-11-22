@@ -12,6 +12,8 @@ trait MlForecast extends Generic {
   var expires_in: js.UndefOr[String] = js.native
   
   var job_id: String = js.native
+  
+  var max_model_memory: js.UndefOr[String] = js.native
 }
 object MlForecast {
   
@@ -50,5 +52,11 @@ object MlForecast {
     
     @scala.inline
     def deleteExpires_in: Self = this.set("expires_in", js.undefined)
+    
+    @scala.inline
+    def setMax_model_memory(value: String): Self = this.set("max_model_memory", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMax_model_memory: Self = this.set("max_model_memory", js.undefined)
   }
 }

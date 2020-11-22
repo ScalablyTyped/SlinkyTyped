@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.gizmoMod.Gizmo
 import typingsSlinky.babylonjs.lightMod.Light
+import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.standardMaterialMod.StandardMaterial
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer
@@ -33,6 +34,8 @@ object lightGizmoMod extends js.Object {
     
     var _material: js.Any = js.native
     
+    var _pointerObserver: js.Any = js.native
+    
     def light: Nullable[Light] = js.native
     /**
       * The light that the gizmo is attached to
@@ -43,6 +46,11 @@ object lightGizmoMod extends js.Object {
       * Gets the material used to render the light gizmo
       */
     def material: StandardMaterial = js.native
+    
+    /**
+      * Event that fires each time the gizmo is clicked
+      */
+    var onClickedObservable: Observable[Light] = js.native
   }
   /* static members */
   @js.native

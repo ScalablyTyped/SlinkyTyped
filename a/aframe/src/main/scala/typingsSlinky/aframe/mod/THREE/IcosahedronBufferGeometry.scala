@@ -6,5 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("aframe", "THREE.IcosahedronBufferGeometry")
 @js.native
+/**
+	 * @param [radius=1]
+	 * @param [detail=0]
+	 */
 class IcosahedronBufferGeometry ()
   extends typingsSlinky.three.mod.IcosahedronBufferGeometry

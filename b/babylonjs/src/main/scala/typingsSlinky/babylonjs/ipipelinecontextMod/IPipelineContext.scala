@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IPipelineContext extends js.Object {
   
   /** @hidden */
+  def _getFragmentShaderCode(): String | Null = js.native
+  
+  /** @hidden */
+  def _getVertexShaderCode(): String | Null = js.native
+  
+  /** @hidden */
   def _handlesSpectorRebuildCallback(onCompiled: js.Function1[/* compiledObject */ js.Any, Unit]): Unit = js.native
   
   /**
@@ -24,11 +30,13 @@ object IPipelineContext {
   
   @scala.inline
   def apply(
+    _getFragmentShaderCode: () => String | Null,
+    _getVertexShaderCode: () => String | Null,
     _handlesSpectorRebuildCallback: js.Function1[/* compiledObject */ js.Any, Unit] => Unit,
     isAsync: Boolean,
     isReady: Boolean
   ): IPipelineContext = {
-    val __obj = js.Dynamic.literal(_handlesSpectorRebuildCallback = js.Any.fromFunction1(_handlesSpectorRebuildCallback), isAsync = isAsync.asInstanceOf[js.Any], isReady = isReady.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(_getFragmentShaderCode = js.Any.fromFunction0(_getFragmentShaderCode), _getVertexShaderCode = js.Any.fromFunction0(_getVertexShaderCode), _handlesSpectorRebuildCallback = js.Any.fromFunction1(_handlesSpectorRebuildCallback), isAsync = isAsync.asInstanceOf[js.Any], isReady = isReady.asInstanceOf[js.Any])
     __obj.asInstanceOf[IPipelineContext]
   }
   
@@ -46,6 +54,12 @@ object IPipelineContext {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def set_getFragmentShaderCode(value: () => String | Null): Self = this.set("_getFragmentShaderCode", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def set_getVertexShaderCode(value: () => String | Null): Self = this.set("_getVertexShaderCode", js.Any.fromFunction0(value))
     
     @scala.inline
     def set_handlesSpectorRebuildCallback(value: js.Function1[/* compiledObject */ js.Any, Unit] => Unit): Self = this.set("_handlesSpectorRebuildCallback", js.Any.fromFunction1(value))

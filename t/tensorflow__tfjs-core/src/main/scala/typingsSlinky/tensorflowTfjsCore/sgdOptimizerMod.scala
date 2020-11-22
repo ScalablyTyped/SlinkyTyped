@@ -1,10 +1,10 @@
 package typingsSlinky.tensorflowTfjsCore
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
 import typingsSlinky.tensorflowTfjsCore.optimizerMod.Optimizer
 import typingsSlinky.tensorflowTfjsCore.serializationMod.ConfigDict
 import typingsSlinky.tensorflowTfjsCore.serializationMod.Serializable
 import typingsSlinky.tensorflowTfjsCore.serializationMod.SerializableConstructor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

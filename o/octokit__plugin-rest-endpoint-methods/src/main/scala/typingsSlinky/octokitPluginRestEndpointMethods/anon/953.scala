@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposGetLatestPagesBuildEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposGetLatestPagesBuildResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposGetCommunityProfileMetricsEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposGetCommunityProfileMetricsResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `953` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposGetLatestPagesBuildEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposGetCommunityProfileMetricsEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposGetLatestPagesBuildResponseData] = js.native
+  var response: OctokitResponse[ReposGetCommunityProfileMetricsResponseData] = js.native
 }
 object `953` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposGetLatestPagesBuildEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposGetLatestPagesBuildResponseData]
+    parameters: RequestParameters with (Omit[ReposGetCommunityProfileMetricsEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposGetCommunityProfileMetricsResponseData]
   ): `953` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`953`]
@@ -47,10 +47,10 @@ object `953` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[ReposGetLatestPagesBuildEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ReposGetCommunityProfileMetricsEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposGetLatestPagesBuildResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReposGetCommunityProfileMetricsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

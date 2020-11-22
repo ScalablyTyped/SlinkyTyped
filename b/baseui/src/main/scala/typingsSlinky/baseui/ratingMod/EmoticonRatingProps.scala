@@ -12,6 +12,8 @@ trait EmoticonRatingProps extends js.Object {
   
   var overrides: js.UndefOr[RatingOverrides] = js.native
   
+  var readOnly: js.UndefOr[Boolean] = js.native
+  
   var size: js.UndefOr[Double] = js.native
   
   var value: js.UndefOr[Double] = js.native
@@ -50,6 +52,12 @@ object EmoticonRatingProps {
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)
+    
+    @scala.inline
+    def setReadOnly(value: Boolean): Self = this.set("readOnly", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReadOnly: Self = this.set("readOnly", js.undefined)
     
     @scala.inline
     def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])

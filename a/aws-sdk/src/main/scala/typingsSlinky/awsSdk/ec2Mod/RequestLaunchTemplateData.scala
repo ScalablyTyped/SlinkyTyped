@@ -48,6 +48,11 @@ trait RequestLaunchTemplateData extends js.Object {
   var ElasticInferenceAccelerators: js.UndefOr[LaunchTemplateElasticInferenceAcceleratorList] = js.native
   
   /**
+    * Indicates whether the instance is enabled for AWS Nitro Enclaves. For more information, see  What is AWS Nitro Enclaves? in the AWS Nitro Enclaves User Guide. You can't enable AWS Nitro Enclaves and hibernation on the same instance.
+    */
+  var EnclaveOptions: js.UndefOr[LaunchTemplateEnclaveOptionsRequest] = js.native
+  
+  /**
     * Indicates whether an instance is enabled for hibernation. This parameter is valid only if the instance meets the hibernation prerequisites. For more information, see Hibernate Your Instance in the Amazon Elastic Compute Cloud User Guide.
     */
   var HibernationOptions: js.UndefOr[LaunchTemplateHibernationOptionsRequest] = js.native
@@ -216,6 +221,12 @@ object RequestLaunchTemplateData {
     
     @scala.inline
     def deleteElasticInferenceAccelerators: Self = this.set("ElasticInferenceAccelerators", js.undefined)
+    
+    @scala.inline
+    def setEnclaveOptions(value: LaunchTemplateEnclaveOptionsRequest): Self = this.set("EnclaveOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnclaveOptions: Self = this.set("EnclaveOptions", js.undefined)
     
     @scala.inline
     def setHibernationOptions(value: LaunchTemplateHibernationOptionsRequest): Self = this.set("HibernationOptions", value.asInstanceOf[js.Any])

@@ -1,6 +1,8 @@
 package typingsSlinky.relayRuntime
 
 import typingsSlinky.relayRuntime.relayConcreteNodeMod.ConcreteRequest
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.CacheConfig
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.DataID
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Variables
 import typingsSlinky.relayRuntime.relayStoreTypesMod.OperationDescriptor
 import typingsSlinky.relayRuntime.relayStoreTypesMod.RequestDescriptor
@@ -13,6 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object relayModernOperationDescriptorMod extends js.Object {
   
   def createOperationDescriptor(request: ConcreteRequest, variables: Variables): OperationDescriptor = js.native
+  def createOperationDescriptor(
+    request: ConcreteRequest,
+    variables: Variables,
+    cacheConfig: js.UndefOr[scala.Nothing],
+    dataID: DataID
+  ): OperationDescriptor = js.native
+  def createOperationDescriptor(request: ConcreteRequest, variables: Variables, cacheConfig: Null, dataID: DataID): OperationDescriptor = js.native
+  def createOperationDescriptor(request: ConcreteRequest, variables: Variables, cacheConfig: CacheConfig): OperationDescriptor = js.native
+  def createOperationDescriptor(request: ConcreteRequest, variables: Variables, cacheConfig: CacheConfig, dataID: DataID): OperationDescriptor = js.native
   
   def createRequestDescriptor(request: ConcreteRequest, variables: Variables): RequestDescriptor = js.native
+  def createRequestDescriptor(request: ConcreteRequest, variables: Variables, cacheConfig: CacheConfig): RequestDescriptor = js.native
 }

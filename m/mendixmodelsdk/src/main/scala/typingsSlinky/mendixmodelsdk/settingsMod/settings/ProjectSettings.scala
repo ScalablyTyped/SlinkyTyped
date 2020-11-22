@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.settingsMod.settings
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IProject
@@ -12,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/project-settings relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/project-settings relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -34,9 +33,6 @@ class ProjectSettings protected () extends ProjectDocument {
   
   @JSName("containerAsProject")
   def containerAsProject_MProjectSettings: Project = js.native
-  
-  @JSName("model")
-  var model_FProjectSettings: IModel = js.native
   
   def settingsParts: IList[ProjectSettingsPart] = js.native
 }

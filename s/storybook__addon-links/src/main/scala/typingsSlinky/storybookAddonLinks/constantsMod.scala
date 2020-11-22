@@ -10,6 +10,8 @@ object constantsMod extends js.Object {
   
   val ADDON_ID: /* "storybook/links" */ String = js.native
   
+  val PARAM_KEY: /* "links" */ String = js.native
+  
   @js.native
   object default extends js.Object {
     

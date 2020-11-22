@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UseTableRowProps[D /* <: js.Object */] extends js.Object {
   
+  var allCells: js.Array[Cell[D, _]] = js.native
+  
   var cells: js.Array[Cell[D, _]] = js.native
   
   def getRowProps(): TableRowProps = js.native

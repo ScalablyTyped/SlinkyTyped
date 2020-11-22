@@ -18,6 +18,11 @@ trait CreateClientVpnEndpointRequest extends js.Object {
   var ClientCidrBlock: String = js.native
   
   /**
+    * The options for managing connection authorization for new client connections.
+    */
+  var ClientConnectOptions: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.ClientConnectOptions] = js.native
+  
+  /**
     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see How to Ensure Idempotency.
     */
   var ClientToken: js.UndefOr[String] = js.native
@@ -46,6 +51,11 @@ trait CreateClientVpnEndpointRequest extends js.Object {
     * The IDs of one or more security groups to apply to the target network. You must also specify the ID of the VPC that contains the security groups.
     */
   var SecurityGroupIds: js.UndefOr[ClientVpnSecurityGroupIdSet] = js.native
+  
+  /**
+    * Specify whether to enable the self-service portal for the Client VPN endpoint. Default Value: enabled 
+    */
+  var SelfServicePortal: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.SelfServicePortal] = js.native
   
   /**
     * The ARN of the server certificate. For more information, see the AWS Certificate Manager User Guide.
@@ -121,6 +131,12 @@ object CreateClientVpnEndpointRequest {
     def setServerCertificateArn(value: String): Self = this.set("ServerCertificateArn", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setClientConnectOptions(value: ClientConnectOptions): Self = this.set("ClientConnectOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClientConnectOptions: Self = this.set("ClientConnectOptions", js.undefined)
+    
+    @scala.inline
     def setClientToken(value: String): Self = this.set("ClientToken", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -155,6 +171,12 @@ object CreateClientVpnEndpointRequest {
     
     @scala.inline
     def deleteSecurityGroupIds: Self = this.set("SecurityGroupIds", js.undefined)
+    
+    @scala.inline
+    def setSelfServicePortal(value: SelfServicePortal): Self = this.set("SelfServicePortal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelfServicePortal: Self = this.set("SelfServicePortal", js.undefined)
     
     @scala.inline
     def setSplitTunnel(value: Boolean): Self = this.set("SplitTunnel", value.asInstanceOf[js.Any])

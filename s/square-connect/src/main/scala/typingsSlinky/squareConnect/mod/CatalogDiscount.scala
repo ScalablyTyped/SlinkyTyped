@@ -10,7 +10,7 @@ class CatalogDiscount () extends js.Object {
   
   /**
     * The amount of the discount. Specify an amount of `0` if `discount_type` is `VARIABLE_AMOUNT`.
-    * Do not include this field for percentage-based or variable discounts.
+    * Do not use this field for percentage-based or variable discounts.
     */
   var amount_money: js.UndefOr[Money] = js.native
   
@@ -37,14 +37,14 @@ class CatalogDiscount () extends js.Object {
   var modify_tax_basis: js.UndefOr[String] = js.native
   
   /**
-    * The discount name. Searchable. This field has max length of 255 Unicode code points.
+    * The discount name. This is a searchable attribute for use in applicable query filters, and its value length is of Unicode code points.
     */
   var name: js.UndefOr[String] = js.native
   
   /**
-    * The percentage of the discount as a string representation of a decimal number, using a `.` as the decimal
-    * separator and without a `%` sign. A value of `7.5` corresponds to `7.5%`. Specify a percentage of `0` if
-    * `discount_type` is `VARIABLE_PERCENTAGE`. Do not include this field for amount-based or variable discounts.
+    * The percentage of the discount as a string representation of a decimal number, using a `.` as the decimal separator and without a `%` sign.
+    * A value of `7.5` corresponds to `7.5%`. Specify a percentage of `0` if `discount_type` is `VARIABLE_PERCENTAGE`.
+    * Do not use this field for amount-based or variable discounts.
     */
   var percentage: js.UndefOr[String] = js.native
   

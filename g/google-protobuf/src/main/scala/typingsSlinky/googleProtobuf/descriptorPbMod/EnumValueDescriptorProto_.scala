@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class EnumValueDescriptorProto_ () extends Message {
   
-  def clearName(): Unit = js.native
+  def clearName(): EnumValueDescriptorProto = js.native
   
-  def clearNumber(): Unit = js.native
+  def clearNumber(): EnumValueDescriptorProto = js.native
   
-  def clearOptions(): Unit = js.native
+  def clearOptions(): EnumValueDescriptorProto = js.native
   
   def getName(): js.UndefOr[String] = js.native
   
@@ -27,10 +27,10 @@ class EnumValueDescriptorProto_ () extends Message {
   
   def hasOptions(): Boolean = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): EnumValueDescriptorProto = js.native
   
-  def setNumber(value: Double): Unit = js.native
+  def setNumber(value: Double): EnumValueDescriptorProto = js.native
   
-  def setOptions(): Unit = js.native
-  def setOptions(value: EnumValueOptions): Unit = js.native
+  def setOptions(): EnumValueDescriptorProto = js.native
+  def setOptions(value: EnumValueOptions): EnumValueDescriptorProto = js.native
 }

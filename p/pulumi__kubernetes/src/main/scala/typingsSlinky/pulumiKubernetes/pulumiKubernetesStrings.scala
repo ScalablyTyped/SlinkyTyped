@@ -52,12 +52,6 @@ object pulumiKubernetesStrings {
   def ClusterRoleList: ClusterRoleList = "ClusterRoleList".asInstanceOf[ClusterRoleList]
   
   @scala.inline
-  def ComponentStatus: ComponentStatus = "ComponentStatus".asInstanceOf[ComponentStatus]
-  
-  @scala.inline
-  def ComponentStatusList: ComponentStatusList = "ComponentStatusList".asInstanceOf[ComponentStatusList]
-  
-  @scala.inline
   def ConfigMap: ConfigMap = "ConfigMap".asInstanceOf[ConfigMap]
   
   @scala.inline
@@ -616,6 +610,15 @@ object pulumiKubernetesStrings {
   def binaryData: binaryData = "binaryData".asInstanceOf[binaryData]
   
   @scala.inline
+  def certificatesDotk8sDotioSlashv1: certificatesDotk8sDotioSlashv1 = "certificates.k8s.io/v1".asInstanceOf[certificatesDotk8sDotioSlashv1]
+  
+  @scala.inline
+  def certificatesDotk8sDotioSlashv1SlashCertificateSigningRequest: certificatesDotk8sDotioSlashv1SlashCertificateSigningRequest = "certificates.k8s.io/v1/CertificateSigningRequest".asInstanceOf[certificatesDotk8sDotioSlashv1SlashCertificateSigningRequest]
+  
+  @scala.inline
+  def certificatesDotk8sDotioSlashv1SlashCertificateSigningRequestList: certificatesDotk8sDotioSlashv1SlashCertificateSigningRequestList = "certificates.k8s.io/v1/CertificateSigningRequestList".asInstanceOf[certificatesDotk8sDotioSlashv1SlashCertificateSigningRequestList]
+  
+  @scala.inline
   def certificatesDotk8sDotioSlashv1beta1: certificatesDotk8sDotioSlashv1beta1 = "certificates.k8s.io/v1beta1".asInstanceOf[certificatesDotk8sDotioSlashv1beta1]
   
   @scala.inline
@@ -626,9 +629,6 @@ object pulumiKubernetesStrings {
   
   @scala.inline
   def code: code = "code".asInstanceOf[code]
-  
-  @scala.inline
-  def conditions: conditions = "conditions".asInstanceOf[conditions]
   
   @scala.inline
   def coordinationDotk8sDotioSlashv1: coordinationDotk8sDotioSlashv1 = "coordination.k8s.io/v1".asInstanceOf[coordinationDotk8sDotioSlashv1]
@@ -686,6 +686,15 @@ object pulumiKubernetesStrings {
   
   @scala.inline
   def eventTime: eventTime = "eventTime".asInstanceOf[eventTime]
+  
+  @scala.inline
+  def eventsDotk8sDotioSlashv1: eventsDotk8sDotioSlashv1 = "events.k8s.io/v1".asInstanceOf[eventsDotk8sDotioSlashv1]
+  
+  @scala.inline
+  def eventsDotk8sDotioSlashv1SlashEvent: eventsDotk8sDotioSlashv1SlashEvent = "events.k8s.io/v1/Event".asInstanceOf[eventsDotk8sDotioSlashv1SlashEvent]
+  
+  @scala.inline
+  def eventsDotk8sDotioSlashv1SlashEventList: eventsDotk8sDotioSlashv1SlashEventList = "events.k8s.io/v1/EventList".asInstanceOf[eventsDotk8sDotioSlashv1SlashEventList]
   
   @scala.inline
   def eventsDotk8sDotioSlashv1beta1: eventsDotk8sDotioSlashv1beta1 = "events.k8s.io/v1beta1".asInstanceOf[eventsDotk8sDotioSlashv1beta1]
@@ -791,6 +800,18 @@ object pulumiKubernetesStrings {
   
   @scala.inline
   def networkingDotk8sDotioSlashv1: networkingDotk8sDotioSlashv1 = "networking.k8s.io/v1".asInstanceOf[networkingDotk8sDotioSlashv1]
+  
+  @scala.inline
+  def networkingDotk8sDotioSlashv1SlashIngress: networkingDotk8sDotioSlashv1SlashIngress = "networking.k8s.io/v1/Ingress".asInstanceOf[networkingDotk8sDotioSlashv1SlashIngress]
+  
+  @scala.inline
+  def networkingDotk8sDotioSlashv1SlashIngressClass: networkingDotk8sDotioSlashv1SlashIngressClass = "networking.k8s.io/v1/IngressClass".asInstanceOf[networkingDotk8sDotioSlashv1SlashIngressClass]
+  
+  @scala.inline
+  def networkingDotk8sDotioSlashv1SlashIngressClassList: networkingDotk8sDotioSlashv1SlashIngressClassList = "networking.k8s.io/v1/IngressClassList".asInstanceOf[networkingDotk8sDotioSlashv1SlashIngressClassList]
+  
+  @scala.inline
+  def networkingDotk8sDotioSlashv1SlashIngressList: networkingDotk8sDotioSlashv1SlashIngressList = "networking.k8s.io/v1/IngressList".asInstanceOf[networkingDotk8sDotioSlashv1SlashIngressList]
   
   @scala.inline
   def networkingDotk8sDotioSlashv1SlashNetworkPolicy: networkingDotk8sDotioSlashv1SlashNetworkPolicy = "networking.k8s.io/v1/NetworkPolicy".asInstanceOf[networkingDotk8sDotioSlashv1SlashNetworkPolicy]
@@ -1117,12 +1138,6 @@ object pulumiKubernetesStrings {
   def v1SlashBinding: v1SlashBinding = "v1/Binding".asInstanceOf[v1SlashBinding]
   
   @scala.inline
-  def v1SlashComponentStatus: v1SlashComponentStatus = "v1/ComponentStatus".asInstanceOf[v1SlashComponentStatus]
-  
-  @scala.inline
-  def v1SlashComponentStatusList: v1SlashComponentStatusList = "v1/ComponentStatusList".asInstanceOf[v1SlashComponentStatusList]
-  
-  @scala.inline
   def v1SlashConfigMap: v1SlashConfigMap = "v1/ConfigMap".asInstanceOf[v1SlashConfigMap]
   
   @scala.inline
@@ -1265,12 +1280,6 @@ object pulumiKubernetesStrings {
   
   @js.native
   sealed trait ClusterRoleList extends js.Object
-  
-  @js.native
-  sealed trait ComponentStatus extends js.Object
-  
-  @js.native
-  sealed trait ComponentStatusList extends js.Object
   
   @js.native
   sealed trait ConfigMap extends js.Object
@@ -1831,6 +1840,15 @@ object pulumiKubernetesStrings {
   sealed trait binaryData extends js.Object
   
   @js.native
+  sealed trait certificatesDotk8sDotioSlashv1 extends js.Object
+  
+  @js.native
+  sealed trait certificatesDotk8sDotioSlashv1SlashCertificateSigningRequest extends js.Object
+  
+  @js.native
+  sealed trait certificatesDotk8sDotioSlashv1SlashCertificateSigningRequestList extends js.Object
+  
+  @js.native
   sealed trait certificatesDotk8sDotioSlashv1beta1 extends js.Object
   
   @js.native
@@ -1841,9 +1859,6 @@ object pulumiKubernetesStrings {
   
   @js.native
   sealed trait code extends js.Object
-  
-  @js.native
-  sealed trait conditions extends js.Object
   
   @js.native
   sealed trait coordinationDotk8sDotioSlashv1 extends js.Object
@@ -1901,6 +1916,15 @@ object pulumiKubernetesStrings {
   
   @js.native
   sealed trait eventTime extends js.Object
+  
+  @js.native
+  sealed trait eventsDotk8sDotioSlashv1 extends js.Object
+  
+  @js.native
+  sealed trait eventsDotk8sDotioSlashv1SlashEvent extends js.Object
+  
+  @js.native
+  sealed trait eventsDotk8sDotioSlashv1SlashEventList extends js.Object
   
   @js.native
   sealed trait eventsDotk8sDotioSlashv1beta1 extends js.Object
@@ -2006,6 +2030,18 @@ object pulumiKubernetesStrings {
   
   @js.native
   sealed trait networkingDotk8sDotioSlashv1 extends js.Object
+  
+  @js.native
+  sealed trait networkingDotk8sDotioSlashv1SlashIngress extends js.Object
+  
+  @js.native
+  sealed trait networkingDotk8sDotioSlashv1SlashIngressClass extends js.Object
+  
+  @js.native
+  sealed trait networkingDotk8sDotioSlashv1SlashIngressClassList extends js.Object
+  
+  @js.native
+  sealed trait networkingDotk8sDotioSlashv1SlashIngressList extends js.Object
   
   @js.native
   sealed trait networkingDotk8sDotioSlashv1SlashNetworkPolicy extends js.Object
@@ -2330,12 +2366,6 @@ object pulumiKubernetesStrings {
   
   @js.native
   sealed trait v1SlashBinding extends js.Object
-  
-  @js.native
-  sealed trait v1SlashComponentStatus extends js.Object
-  
-  @js.native
-  sealed trait v1SlashComponentStatusList extends js.Object
   
   @js.native
   sealed trait v1SlashConfigMap extends js.Object

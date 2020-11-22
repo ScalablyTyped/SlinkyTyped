@@ -9,6 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UseRowSelectHooks[D /* <: js.Object */] extends js.Object {
   
+  var getToggleAllPageRowsSelectedProps: js.Array[
+    PropGetter[D, TableToggleAllRowsSelectedProps, scala.Nothing, PartialTableToggleAllRows]
+  ] = js.native
+  
   var getToggleAllRowsSelectedProps: js.Array[
     PropGetter[D, TableToggleAllRowsSelectedProps, scala.Nothing, PartialTableToggleAllRows]
   ] = js.native
@@ -21,6 +25,9 @@ object UseRowSelectHooks {
   
   @scala.inline
   def apply[D /* <: js.Object */](
+    getToggleAllPageRowsSelectedProps: js.Array[
+      PropGetter[D, TableToggleAllRowsSelectedProps, scala.Nothing, PartialTableToggleAllRows]
+    ],
     getToggleAllRowsSelectedProps: js.Array[
       PropGetter[D, TableToggleAllRowsSelectedProps, scala.Nothing, PartialTableToggleAllRows]
     ],
@@ -28,7 +35,7 @@ object UseRowSelectHooks {
       PropGetter[D, TableToggleRowsSelectedProps, scala.Nothing, PartialTableToggleRowsSel]
     ]
   ): UseRowSelectHooks[D] = {
-    val __obj = js.Dynamic.literal(getToggleAllRowsSelectedProps = getToggleAllRowsSelectedProps.asInstanceOf[js.Any], getToggleRowSelectedProps = getToggleRowSelectedProps.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(getToggleAllPageRowsSelectedProps = getToggleAllPageRowsSelectedProps.asInstanceOf[js.Any], getToggleAllRowsSelectedProps = getToggleAllRowsSelectedProps.asInstanceOf[js.Any], getToggleRowSelectedProps = getToggleRowSelectedProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[UseRowSelectHooks[D]]
   }
   
@@ -46,6 +53,16 @@ object UseRowSelectHooks {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setGetToggleAllPageRowsSelectedPropsVarargs(value: (PropGetter[D, TableToggleAllRowsSelectedProps, scala.Nothing, PartialTableToggleAllRows])*): Self = this.set("getToggleAllPageRowsSelectedProps", js.Array(value :_*))
+    
+    @scala.inline
+    def setGetToggleAllPageRowsSelectedProps(
+      value: js.Array[
+          PropGetter[D, TableToggleAllRowsSelectedProps, scala.Nothing, PartialTableToggleAllRows]
+        ]
+    ): Self = this.set("getToggleAllPageRowsSelectedProps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setGetToggleAllRowsSelectedPropsVarargs(value: (PropGetter[D, TableToggleAllRowsSelectedProps, scala.Nothing, PartialTableToggleAllRows])*): Self = this.set("getToggleAllRowsSelectedProps", js.Array(value :_*))

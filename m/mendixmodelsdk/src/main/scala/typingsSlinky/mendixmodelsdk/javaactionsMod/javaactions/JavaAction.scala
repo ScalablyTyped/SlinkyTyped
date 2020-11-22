@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions.CodeAction
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -12,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/java-actions relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/java-actions relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -65,9 +64,6 @@ class JavaAction protected () extends CodeAction {
     */
   @JSName("microflowActionInfo")
   val microflowActionInfo_FJavaAction: IMicroflowActionInfo | Null = js.native
-  
-  @JSName("model")
-  var model_FJavaAction: IModel = js.native
   
   /**
     * In version 7.21.0: deleted

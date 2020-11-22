@@ -37,6 +37,8 @@ trait Options extends LoggerOptions {
   var stream: js.UndefOr[DestinationStream] = js.native
   
   var useLevel: js.UndefOr[Level] = js.native
+  
+  var wrapSerializers: js.UndefOr[Boolean] = js.native
 }
 object Options {
   
@@ -120,5 +122,11 @@ object Options {
     
     @scala.inline
     def deleteUseLevel: Self = this.set("useLevel", js.undefined)
+    
+    @scala.inline
+    def setWrapSerializers(value: Boolean): Self = this.set("wrapSerializers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWrapSerializers: Self = this.set("wrapSerializers", js.undefined)
   }
 }

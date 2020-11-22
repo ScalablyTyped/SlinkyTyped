@@ -1,6 +1,7 @@
 package typingsSlinky.rcTree.contextTypesMod
 
 import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcTree.interfaceMod.DataEntity
@@ -34,35 +35,35 @@ trait TreeContextProps extends js.Object {
   
   def loadData(treeNode: EventDataNode): js.Promise[Unit] = js.native
   
-  def onNodeCheck(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode, checked: Boolean): Unit = js.native
+  def onNodeCheck(e: SyntheticMouseEvent[HTMLSpanElement], treeNode: EventDataNode, checked: Boolean): Unit = js.native
   
-  var onNodeClick: NodeMouseEventHandler = js.native
+  var onNodeClick: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
-  var onNodeContextMenu: NodeMouseEventHandler = js.native
+  var onNodeContextMenu: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
-  var onNodeDoubleClick: NodeMouseEventHandler = js.native
+  var onNodeDoubleClick: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
-  var onNodeDragEnd: NodeDragEventHandler = js.native
+  var onNodeDragEnd: NodeDragEventHandler[HTMLDivElement] = js.native
   
-  var onNodeDragEnter: NodeDragEventHandler = js.native
+  var onNodeDragEnter: NodeDragEventHandler[HTMLDivElement] = js.native
   
-  var onNodeDragLeave: NodeDragEventHandler = js.native
+  var onNodeDragLeave: NodeDragEventHandler[HTMLDivElement] = js.native
   
-  var onNodeDragOver: NodeDragEventHandler = js.native
+  var onNodeDragOver: NodeDragEventHandler[HTMLDivElement] = js.native
   
-  var onNodeDragStart: NodeDragEventHandler = js.native
+  var onNodeDragStart: NodeDragEventHandler[HTMLDivElement] = js.native
   
-  var onNodeDrop: NodeDragEventHandler = js.native
+  var onNodeDrop: NodeDragEventHandler[HTMLDivElement] = js.native
   
-  var onNodeExpand: NodeMouseEventHandler = js.native
+  var onNodeExpand: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
   def onNodeLoad(treeNode: EventDataNode): Unit = js.native
   
-  var onNodeMouseEnter: NodeMouseEventHandler = js.native
+  var onNodeMouseEnter: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
-  var onNodeMouseLeave: NodeMouseEventHandler = js.native
+  var onNodeMouseLeave: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
-  var onNodeSelect: NodeMouseEventHandler = js.native
+  var onNodeSelect: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
   var prefixCls: String = js.native
   
@@ -84,21 +85,21 @@ object TreeContextProps {
     filterTreeNode: EventDataNode => Boolean,
     keyEntities: Record[Key, DataEntity],
     loadData: EventDataNode => js.Promise[Unit],
-    onNodeCheck: (SyntheticMouseEvent[HTMLDivElement], EventDataNode, Boolean) => Unit,
-    onNodeClick: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit,
-    onNodeContextMenu: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit,
-    onNodeDoubleClick: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit,
+    onNodeCheck: (SyntheticMouseEvent[HTMLSpanElement], EventDataNode, Boolean) => Unit,
+    onNodeClick: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit,
+    onNodeContextMenu: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit,
+    onNodeDoubleClick: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit,
     onNodeDragEnd: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ NodeInstance) => Unit,
     onNodeDragEnter: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ NodeInstance) => Unit,
     onNodeDragLeave: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ NodeInstance) => Unit,
     onNodeDragOver: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ NodeInstance) => Unit,
     onNodeDragStart: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ NodeInstance) => Unit,
     onNodeDrop: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ NodeInstance) => Unit,
-    onNodeExpand: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit,
+    onNodeExpand: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit,
     onNodeLoad: EventDataNode => Unit,
-    onNodeMouseEnter: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit,
-    onNodeMouseLeave: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit,
-    onNodeSelect: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit,
+    onNodeMouseEnter: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit,
+    onNodeMouseLeave: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit,
+    onNodeSelect: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit,
     prefixCls: String,
     selectable: Boolean,
     showIcon: Boolean
@@ -141,16 +142,16 @@ object TreeContextProps {
     def setLoadData(value: EventDataNode => js.Promise[Unit]): Self = this.set("loadData", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnNodeCheck(value: (SyntheticMouseEvent[HTMLDivElement], EventDataNode, Boolean) => Unit): Self = this.set("onNodeCheck", js.Any.fromFunction3(value))
+    def setOnNodeCheck(value: (SyntheticMouseEvent[HTMLSpanElement], EventDataNode, Boolean) => Unit): Self = this.set("onNodeCheck", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setOnNodeClick(value: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeClick", js.Any.fromFunction2(value))
+    def setOnNodeClick(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeClick", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setOnNodeContextMenu(value: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeContextMenu", js.Any.fromFunction2(value))
+    def setOnNodeContextMenu(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeContextMenu", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setOnNodeDoubleClick(value: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeDoubleClick", js.Any.fromFunction2(value))
+    def setOnNodeDoubleClick(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeDoubleClick", js.Any.fromFunction2(value))
     
     @scala.inline
     def setOnNodeDragEnd(value: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ NodeInstance) => Unit): Self = this.set("onNodeDragEnd", js.Any.fromFunction2(value))
@@ -171,19 +172,19 @@ object TreeContextProps {
     def setOnNodeDrop(value: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ NodeInstance) => Unit): Self = this.set("onNodeDrop", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setOnNodeExpand(value: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeExpand", js.Any.fromFunction2(value))
+    def setOnNodeExpand(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeExpand", js.Any.fromFunction2(value))
     
     @scala.inline
     def setOnNodeLoad(value: EventDataNode => Unit): Self = this.set("onNodeLoad", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnNodeMouseEnter(value: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeMouseEnter", js.Any.fromFunction2(value))
+    def setOnNodeMouseEnter(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeMouseEnter", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setOnNodeMouseLeave(value: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeMouseLeave", js.Any.fromFunction2(value))
+    def setOnNodeMouseLeave(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeMouseLeave", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setOnNodeSelect(value: (/* e */ SyntheticMouseEvent[HTMLDivElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeSelect", js.Any.fromFunction2(value))
+    def setOnNodeSelect(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): Self = this.set("onNodeSelect", js.Any.fromFunction2(value))
     
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])

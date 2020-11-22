@@ -38,6 +38,9 @@ object FormItemInput {
     def help(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def status(value: ValidateStatus): this.type = set("status", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def validateStatus(value: ValidateStatus): this.type = set("validateStatus", value.asInstanceOf[js.Any])
     
     @scala.inline

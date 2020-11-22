@@ -3,7 +3,7 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.SVGElement
 import org.scalajs.dom.raw.SVGGElement
-import typingsSlinky.devextreme.anon.`20`
+import typingsSlinky.devextreme.anon.`23`
 import typingsSlinky.devextreme.mod.DevExpress.core.template
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
@@ -13,16 +13,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFunnelLegend extends BaseLegend {
   
-  /** @name dxFunnel.Options.legend.customizeHint */
-  var customizeHint: js.UndefOr[js.Function1[/* itemInfo */ `20`, String]] = js.native
+  /**
+    * [descr:dxFunnel.Options.legend.customizeHint]
+    */
+  var customizeHint: js.UndefOr[js.Function1[/* itemInfo */ `23`, String]] = js.native
   
-  /** @name dxFunnel.Options.legend.customizeItems */
+  /**
+    * [descr:dxFunnel.Options.legend.customizeItems]
+    */
   var customizeItems: js.UndefOr[js.Function1[/* items */ js.Array[FunnelLegendItem], js.Array[FunnelLegendItem]]] = js.native
   
-  /** @name dxFunnel.Options.legend.customizeText */
-  var customizeText: js.UndefOr[js.Function1[/* itemInfo */ `20`, String]] = js.native
+  /**
+    * [descr:dxFunnel.Options.legend.customizeText]
+    */
+  var customizeText: js.UndefOr[js.Function1[/* itemInfo */ `23`, String]] = js.native
   
-  /** @name dxFunnel.Options.legend.markerTemplate */
+  /**
+    * [descr:dxFunnel.Options.legend.markerTemplate]
+    */
   var markerTemplate: js.UndefOr[
     template | (js.Function2[
       /* legendItem */ FunnelLegendItem, 
@@ -55,7 +63,7 @@ object dxFunnelLegend {
     }
     
     @scala.inline
-    def setCustomizeHint(value: /* itemInfo */ `20` => String): Self = this.set("customizeHint", js.Any.fromFunction1(value))
+    def setCustomizeHint(value: /* itemInfo */ `23` => String): Self = this.set("customizeHint", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCustomizeHint: Self = this.set("customizeHint", js.undefined)
@@ -67,7 +75,7 @@ object dxFunnelLegend {
     def deleteCustomizeItems: Self = this.set("customizeItems", js.undefined)
     
     @scala.inline
-    def setCustomizeText(value: /* itemInfo */ `20` => String): Self = this.set("customizeText", js.Any.fromFunction1(value))
+    def setCustomizeText(value: /* itemInfo */ `23` => String): Self = this.set("customizeText", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCustomizeText: Self = this.set("customizeText", js.undefined)

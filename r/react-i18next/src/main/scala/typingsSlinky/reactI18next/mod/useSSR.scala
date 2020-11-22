@@ -1,5 +1,6 @@
 package typingsSlinky.reactI18next.mod
 
+import typingsSlinky.i18next.mod.Resource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useSSR extends js.Object {
   
-  def apply(initialI18nStore: js.Any, initialLanguage: js.Any): Unit = js.native
+  def apply(initialI18nStore: Resource, initialLanguage: String): Unit = js.native
 }

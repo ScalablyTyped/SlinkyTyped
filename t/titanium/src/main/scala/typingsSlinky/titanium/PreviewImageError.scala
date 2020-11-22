@@ -14,7 +14,7 @@ trait PreviewImageError extends FailureResponse {
     * Description of the error.
     * @deprecated
     */
-  var message: js.UndefOr[java.lang.String] = js.native
+  var message: js.UndefOr[String] = js.native
 }
 object PreviewImageError {
   
@@ -34,13 +34,13 @@ object PreviewImageError {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setMessage(value: java.lang.String): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)

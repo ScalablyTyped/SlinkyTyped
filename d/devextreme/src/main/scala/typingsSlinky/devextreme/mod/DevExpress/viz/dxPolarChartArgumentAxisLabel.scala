@@ -9,13 +9,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartArgumentAxisLabel extends dxPolarChartCommonAxisSettingsLabel {
   
-  /** @name dxPolarChart.Options.argumentAxis.label.customizeHint */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.label.customizeHint]
+    */
   var customizeHint: js.UndefOr[js.Function1[/* argument */ ValueValueText, String]] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.label.customizeText */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.label.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* argument */ ValueValueText, String]] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis.label.format */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.label.format]
+    */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
 }
 object dxPolarChartArgumentAxisLabel {

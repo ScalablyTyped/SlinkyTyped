@@ -7,17 +7,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FormItem extends js.Object {
   
+  var attributes: js.UndefOr[js.Any] = js.native
+  
+  var colSpan: js.UndefOr[Double] = js.native
+  
   var editor: js.UndefOr[String | js.Function] = js.native
   
   var editorOptions: js.UndefOr[js.Any] = js.native
   
   var field: js.UndefOr[String] = js.native
   
+  var hint: js.UndefOr[String] = js.native
+  
   var id: js.UndefOr[String] = js.native
   
   var items: js.UndefOr[js.Array[FormItem]] = js.native
   
-  var label: js.UndefOr[String] = js.native
+  var label: js.UndefOr[String | FormItemLabel] = js.native
   
   var name: js.UndefOr[String] = js.native
   
@@ -51,6 +57,18 @@ object FormItem {
     }
     
     @scala.inline
+    def setAttributes(value: js.Any): Self = this.set("attributes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAttributes: Self = this.set("attributes", js.undefined)
+    
+    @scala.inline
+    def setColSpan(value: Double): Self = this.set("colSpan", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColSpan: Self = this.set("colSpan", js.undefined)
+    
+    @scala.inline
     def setEditor(value: String | js.Function): Self = this.set("editor", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -69,6 +87,12 @@ object FormItem {
     def deleteField: Self = this.set("field", js.undefined)
     
     @scala.inline
+    def setHint(value: String): Self = this.set("hint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHint: Self = this.set("hint", js.undefined)
+    
+    @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -84,7 +108,7 @@ object FormItem {
     def deleteItems: Self = this.set("items", js.undefined)
     
     @scala.inline
-    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: String | FormItemLabel): Self = this.set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)

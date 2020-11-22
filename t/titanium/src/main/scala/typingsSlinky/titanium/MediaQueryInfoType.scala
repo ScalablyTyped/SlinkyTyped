@@ -18,7 +18,7 @@ trait MediaQueryInfoType extends js.Object {
   /**
     * The value for the given predicate. See the descriptions in <MediaQueryType> for information about which properties require which values.
     */
-  var value: js.UndefOr[Double | java.lang.String | Boolean] = js.native
+  var value: js.UndefOr[Double | String | Boolean] = js.native
 }
 object MediaQueryInfoType {
   
@@ -38,7 +38,7 @@ object MediaQueryInfoType {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -50,7 +50,7 @@ object MediaQueryInfoType {
     def deleteExact: Self = this.set("exact", js.undefined)
     
     @scala.inline
-    def setValue(value: Double | java.lang.String | Boolean): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: Double | String | Boolean): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)

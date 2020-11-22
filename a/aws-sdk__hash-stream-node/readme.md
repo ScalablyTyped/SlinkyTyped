@@ -1,7 +1,7 @@
 
 # Scala.js typings for aws-sdk__hash-stream-node
 
-Typings are for version 0.1.0-preview.2
+Typings are for version 1.0.0-rc.7
 
 ## Library description:
 A utility for calculating the hash of Node.JS readable streams. This package is currently only compatible with file streams, as no other stream type can be replayed.

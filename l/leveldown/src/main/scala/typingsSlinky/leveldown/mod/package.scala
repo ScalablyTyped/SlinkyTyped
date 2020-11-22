@@ -6,5 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type BaseType = java.lang.String | typingsSlinky.node.Buffer
+  type Bytes = java.lang.String | typingsSlinky.node.Buffer
+  
+  type ErrorSizeCallback = js.Function2[/* err */ js.UndefOr[js.Error], /* size */ scala.Double, scala.Unit]
 }

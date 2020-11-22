@@ -1,10 +1,13 @@
 package typingsSlinky.officeUiFabricReact.components
 
 import org.scalajs.dom.raw.HTMLButtonElement
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
+import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderCheckboxProps
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderProps
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderStyleProps
@@ -14,7 +17,6 @@ import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
 import scala.scalajs.js
@@ -31,6 +33,9 @@ object GroupHeader {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
+    @scala.inline
+    def ariaColSpan(value: Double): this.type = set("ariaColSpan", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ariaPosInSet(value: Double): this.type = set("ariaPosInSet", value.asInstanceOf[js.Any])
@@ -97,6 +102,9 @@ object GroupHeader {
     
     @scala.inline
     def onGroupHeaderClick(value: /* group */ IGroup => Unit): this.type = set("onGroupHeaderClick", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onGroupHeaderKeyUp(value: (/* ev */ SyntheticKeyboardEvent[HTMLElement], /* group */ IGroup) => Unit): this.type = set("onGroupHeaderKeyUp", js.Any.fromFunction2(value))
     
     @scala.inline
     def onRenderGroupHeaderCheckbox(

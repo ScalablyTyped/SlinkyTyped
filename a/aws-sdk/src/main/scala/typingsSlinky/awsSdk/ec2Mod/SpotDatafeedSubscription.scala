@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SpotDatafeedSubscription extends js.Object {
   
   /**
-    * The Amazon S3 bucket where the Spot Instance data feed is located.
+    * The name of the Amazon S3 bucket where the Spot Instance data feed is located.
     */
   var Bucket: js.UndefOr[String] = js.native
   
@@ -23,7 +23,7 @@ trait SpotDatafeedSubscription extends js.Object {
   var OwnerId: js.UndefOr[String] = js.native
   
   /**
-    * The prefix that is prepended to data feed files.
+    * The prefix for the data feed files.
     */
   var Prefix: js.UndefOr[String] = js.native
   

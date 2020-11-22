@@ -1,18 +1,23 @@
 package typingsSlinky.lodash.fpMod
 
+import typingsSlinky.lodash.mod.Collection
+import typingsSlinky.lodash.mod.Function
 import typingsSlinky.lodash.mod.Function0
 import typingsSlinky.lodash.mod.Function1
 import typingsSlinky.lodash.mod.Function2
 import typingsSlinky.lodash.mod.Function3
 import typingsSlinky.lodash.mod.Function4
-import typingsSlinky.lodash.mod.LoDashImplicitWrapper
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.Object
+import typingsSlinky.lodash.mod.Primitive
+import typingsSlinky.lodash.mod.String
 import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashPartialRight extends LodashConvertible {
+trait LodashPartialRight extends js.Object {
   
   def apply(func: js.Function1[/* repeated */ js.Any, _]): LodashPartialRight27x1 = js.native
   def apply(func: js.Function1[/* repeated */ js.Any, _], args: js.Array[_]): js.Function1[/* repeated */ js.Any, _] = js.native
@@ -33,6 +38,22 @@ trait LodashPartialRight extends LodashConvertible {
   def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], arg3: js.Tuple2[T3, T4]): Function2[T1, T2, R] = js.native
   def apply[T1, T2, T3, T4, R](func: Function4[T1, T2, T3, T4, R], arg4: js.Array[T4]): Function3[T1, T2, T3, R] = js.native
   
+  def placeholder(): String = js.native
+  def placeholder(value: java.lang.String): String = js.native
+  def placeholder[T /* <: js.Object */](value: T): Object[T] = js.native
+  def placeholder[T](value: List[T]): Collection[T] = js.native
+  @JSName("placeholder")
+  var placeholder_Original: __ = js.native
+  @JSName("placeholder")
+  def placeholder_T_Collection[T](): Collection[T] = js.native
+  @JSName("placeholder")
+  def placeholder_T_Function1AnyWildcard_Function[T /* <: js.Function1[/* args */ js.Any, _] */](value: T): Function[T] = js.native
+  @JSName("placeholder")
+  def placeholder_T_Object_Object[T /* <: js.Object */](): Object[T] = js.native
+  @JSName("placeholder")
+  def placeholder_T_Primitive[T](value: T): Primitive[T] = js.native
+  @JSName("placeholder")
+  def `placeholder_T_UnionNull<undefined>_Primitive`[T /* <: js.UndefOr[Null] */](value: T): Primitive[T] = js.native
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -101,7 +122,6 @@ trait LodashPartialRight extends LodashConvertible {
     * toString, toUpper, trim, trimEnd, trimStart, truncate, unescape, uniqueId, upperCase,
     * upperFirst, value, and words.
     **/
-  def placeholder[T](value: T): LoDashImplicitWrapper[T] = js.native
   @JSName("placeholder")
-  var placeholder_Original: __ = js.native
+  def placeholder_TrapAny_TrapAny_Intersection[TrapAny /* <: typingsSlinky.lodash.anon.TrapAny */](value: TrapAny): Collection[_] with Function[_] with Object[_] with Primitive[_] with String = js.native
 }

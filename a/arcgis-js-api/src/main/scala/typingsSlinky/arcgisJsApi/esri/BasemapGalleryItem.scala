@@ -27,8 +27,6 @@ trait BasemapGalleryItem extends Accessor {
     * The item's state.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery-support-BasemapGalleryItem.html#state)
-    *
-    * @default loading
     */
   val state: loading | ready | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.error = js.native
   

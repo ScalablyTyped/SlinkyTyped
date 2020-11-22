@@ -9,7 +9,7 @@ trait GridColumnGapProps[TLength] extends js.Object {
   
   val gridColumnGap: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridColumnGapProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridColumnGap<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object GridColumnGapProps {
     }
     
     @scala.inline
+    def setGridColumnGapVarargs(value: js.Any*): Self = this.set("gridColumnGap", js.Array(value :_*))
+    
+    @scala.inline
     def setGridColumnGap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridColumnGapProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridColumnGap<TLength> */ _
         ]
     ): Self = this.set("gridColumnGap", value.asInstanceOf[js.Any])
     

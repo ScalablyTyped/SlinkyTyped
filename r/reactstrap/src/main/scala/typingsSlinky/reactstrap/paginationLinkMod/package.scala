@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object paginationLinkMod {
   
-  type PaginationLink[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.paginationLinkMod.PaginationLinkProps]
+  type PaginationLink = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.paginationLinkMod.PaginationLinkProps]
 }

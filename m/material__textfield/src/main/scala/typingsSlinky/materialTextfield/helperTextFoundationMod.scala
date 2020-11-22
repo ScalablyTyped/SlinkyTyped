@@ -17,6 +17,17 @@ object helperTextFoundationMod extends js.Object {
   class MDCTextFieldHelperTextFoundation () extends MDCFoundation[MDCTextFieldHelperTextAdapter] {
     def this(adapter: PartialMDCTextFieldHelper) = this()
     
+    def getId(): String | Null = js.native
+    
+    def isPersistent(): Boolean = js.native
+    
+    /**
+      * @return whether the helper text acts as an error validation message.
+      */
+    def isValidation(): Boolean = js.native
+    
+    def isVisible(): Boolean = js.native
+    
     /**
       * Sets the content of the helper text field.
       */

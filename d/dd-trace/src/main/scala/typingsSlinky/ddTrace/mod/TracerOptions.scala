@@ -4,7 +4,9 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ddTrace.anon.B3
 import typingsSlinky.ddTrace.anon.Debug
 import typingsSlinky.ddTrace.anon.Hostname
+import typingsSlinky.ddTrace.anon.RateLimit
 import typingsSlinky.ddTrace.ddTraceStrings.async_hooks
+import typingsSlinky.ddTrace.ddTraceStrings.async_local_storage
 import typingsSlinky.ddTrace.ddTraceStrings.debug
 import typingsSlinky.ddTrace.ddTraceStrings.error
 import typingsSlinky.ddTrace.ddTraceStrings.noop
@@ -70,6 +72,11 @@ trait TracerOptions extends js.Object {
   var hostname: js.UndefOr[String] = js.native
   
   /**
+    * Configuration of the ingestion between the agent and the backend.
+    */
+  var ingestion: js.UndefOr[RateLimit] = js.native
+  
+  /**
     * Whether to enable trace ID injection in log records to be able to correlate
     * traces with logs.
     * @default false
@@ -84,7 +91,7 @@ trait TracerOptions extends js.Object {
   
   /**
     * Custom logger to be used by the tracer (if debug = true),
-    * should support debug() and error() methods
+    * should support error(), warn(), info(), and debug() methods
     * see https://datadog.github.io/dd-trace-js/#custom-logging
     */
   var logger: js.UndefOr[Debug] = js.native
@@ -114,9 +121,10 @@ trait TracerOptions extends js.Object {
   var port: js.UndefOr[Double | String] = js.native
   
   /**
-    * Whether to enable profiling.
+    * Protocol version to use for requests to the agent. The version configured must be supported by the agent version installed or all traces will be dropped.
+    * @default 0.4
     */
-  var profiling: js.UndefOr[Boolean] = js.native
+  var protocolVersion: js.UndefOr[String] = js.native
   
   /**
     * Whether to report the hostname of the service host. This is used when the agent is deployed on a different host and cannot determine the hostname automatically.
@@ -141,13 +149,19 @@ trait TracerOptions extends js.Object {
     * implementation for the runtime. Only change this if you know what you are
     * doing.
     */
-  var scope: js.UndefOr[async_hooks | noop] = js.native
+  var scope: js.UndefOr[async_hooks | async_local_storage | noop] = js.native
   
   /**
     * The service name to be used for this program. If not set, the service name
     * will attempted to be inferred from package.json
     */
   var service: js.UndefOr[String] = js.native
+  
+  /**
+    * Whether to enable startup logs.
+    * @default true
+    */
+  var startupLogs: js.UndefOr[Boolean] = js.native
   
   /**
     * Global tags that should be assigned to every span.
@@ -250,6 +264,12 @@ object TracerOptions {
     def deleteHostname: Self = this.set("hostname", js.undefined)
     
     @scala.inline
+    def setIngestion(value: RateLimit): Self = this.set("ingestion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIngestion: Self = this.set("ingestion", js.undefined)
+    
+    @scala.inline
     def setLogInjection(value: Boolean): Self = this.set("logInjection", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -294,10 +314,10 @@ object TracerOptions {
     def deletePort: Self = this.set("port", js.undefined)
     
     @scala.inline
-    def setProfiling(value: Boolean): Self = this.set("profiling", value.asInstanceOf[js.Any])
+    def setProtocolVersion(value: String): Self = this.set("protocolVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteProfiling: Self = this.set("profiling", js.undefined)
+    def deleteProtocolVersion: Self = this.set("protocolVersion", js.undefined)
     
     @scala.inline
     def setReportHostname(value: Boolean): Self = this.set("reportHostname", value.asInstanceOf[js.Any])
@@ -318,7 +338,7 @@ object TracerOptions {
     def deleteSampleRate: Self = this.set("sampleRate", js.undefined)
     
     @scala.inline
-    def setScope(value: async_hooks | noop): Self = this.set("scope", value.asInstanceOf[js.Any])
+    def setScope(value: async_hooks | async_local_storage | noop): Self = this.set("scope", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteScope: Self = this.set("scope", js.undefined)
@@ -328,6 +348,12 @@ object TracerOptions {
     
     @scala.inline
     def deleteService: Self = this.set("service", js.undefined)
+    
+    @scala.inline
+    def setStartupLogs(value: Boolean): Self = this.set("startupLogs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStartupLogs: Self = this.set("startupLogs", js.undefined)
     
     @scala.inline
     def setTags(value: StringDictionary[js.Any]): Self = this.set("tags", value.asInstanceOf[js.Any])

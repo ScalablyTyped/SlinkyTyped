@@ -11,6 +11,8 @@ trait Bone extends Node {
   
   var _baseMatrix: js.Any = js.native
   
+  var _bindPose: js.Any = js.native
+  
   var _compose: js.Any = js.native
   
   var _decompose: js.Any = js.native
@@ -144,6 +146,12 @@ trait Bone extends Node {
     * @returns a matrix
     */
   def getBaseMatrix(): Matrix = js.native
+  
+  /**
+    * Gets the bind pose matrix
+    * @returns the bind pose matrix
+    */
+  def getBindPose(): Matrix = js.native
   
   /**
     * Get the world direction from an axis that is in the local space of the bone
@@ -406,6 +414,17 @@ trait Bone extends Node {
   def setAxisAngle(axis: Vector3, angle: Double, space: Space, mesh: AbstractMesh): Unit = js.native
   
   /**
+    * Sets the bind pose matrix
+    * @param matrix the local-space bind pose to set for this bone
+    */
+  def setBindPose(matrix: Matrix): Unit = js.native
+  
+  /**
+    * Set the current local matrix as the restPose for this bone.
+    */
+  def setCurrentPoseAsRest(): Unit = js.native
+  
+  /**
     * Sets the parent bone
     * @param parent defines the parent (can be null if the bone is the root)
     * @param updateDifferenceMatrix defines if the difference matrix must be updated
@@ -425,7 +444,13 @@ trait Bone extends Node {
   def setPosition(position: Vector3, space: Space, mesh: AbstractMesh): Unit = js.native
   
   /**
-    * Set the euler rotation of the bone in local of world space
+    * Sets the rest pose matrix
+    * @param matrix the local-space rest pose to set for this bone
+    */
+  def setRestPose(matrix: Matrix): Unit = js.native
+  
+  /**
+    * Set the euler rotation of the bone in local or world space
     * @param rotation The euler rotation that the bone should be set to
     * @param space The space that the rotation is in
     * @param mesh The mesh that this bone is attached to. This is only used in world space
@@ -436,7 +461,7 @@ trait Bone extends Node {
   def setRotation(rotation: Vector3, space: Space, mesh: AbstractMesh): Unit = js.native
   
   /**
-    * Set the rotation matrix of the bone in local of world space
+    * Set the rotation matrix of the bone in local or world space
     * @param rotMat The rotation matrix that the bone should be set to
     * @param space The space that the rotation is in
     * @param mesh The mesh that this bone is attached to. This is only used in world space
@@ -447,7 +472,7 @@ trait Bone extends Node {
   def setRotationMatrix(rotMat: Matrix, space: Space, mesh: AbstractMesh): Unit = js.native
   
   /**
-    * Set the quaternion rotation of the bone in local of world space
+    * Set the quaternion rotation of the bone in local or world space
     * @param quat The quaternion rotation that the bone should be set to
     * @param space The space that the rotation is in
     * @param mesh The mesh that this bone is attached to. This is only used in world space

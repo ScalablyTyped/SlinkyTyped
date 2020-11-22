@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListAccountsResponse extends js.Object {
   
   /**
-    * List of Amazon Chime accounts and account details.
+    * The list of accounts.
     */
   var Accounts: js.UndefOr[AccountList] = js.native
   
   /**
-    * The token to use to retrieve the next page of results.
+    * The account's user token.
     */
   var NextToken: js.UndefOr[String] = js.native
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.jestConfig
 
-import typingsSlinky.std.Record
+import typingsSlinky.jestValidate.typesMod.DeprecatedOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object deprecatedMod extends js.Object {
   
-  val default: Record[String, js.Function] = js.native
+  val default: DeprecatedOptions = js.native
 }

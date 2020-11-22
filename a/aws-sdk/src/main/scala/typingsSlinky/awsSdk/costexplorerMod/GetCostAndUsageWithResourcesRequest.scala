@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetCostAndUsageWithResourcesRequest extends js.Object {
   
   /**
-    * Filters Amazon Web Services costs by different dimensions. For example, you can specify SERVICE and LINKED_ACCOUNT and get the costs that are associated with that account's usage of that service. You can nest Expression objects to define any combination of dimension filters. For more information, see Expression.  The GetCostAndUsageWithResources operation requires that you either group by or filter by a ResourceId.
+    * Filters Amazon Web Services costs by different dimensions. For example, you can specify SERVICE and LINKED_ACCOUNT and get the costs that are associated with that account's usage of that service. You can nest Expression objects to define any combination of dimension filters. For more information, see Expression.  The GetCostAndUsageWithResources operation requires that you either group by or filter by a ResourceId. It requires the Expression "SERVICE = Amazon Elastic Compute Cloud - Compute" in the filter.
     */
-  var Filter: js.UndefOr[Expression] = js.native
+  var Filter: Expression = js.native
   
   /**
     * Sets the AWS cost granularity to MONTHLY, DAILY, or HOURLY. If Granularity isn't set, the response object doesn't include the Granularity, MONTHLY, DAILY, or HOURLY. 
@@ -18,7 +18,7 @@ trait GetCostAndUsageWithResourcesRequest extends js.Object {
   var Granularity: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.Granularity] = js.native
   
   /**
-    * You can group Amazon Web Services costs using up to two different groups: either dimensions, tag keys, or both.
+    * You can group Amazon Web Services costs using up to two different groups: DIMENSION, TAG, COST_CATEGORY.
     */
   var GroupBy: js.UndefOr[GroupDefinitions] = js.native
   
@@ -40,8 +40,8 @@ trait GetCostAndUsageWithResourcesRequest extends js.Object {
 object GetCostAndUsageWithResourcesRequest {
   
   @scala.inline
-  def apply(TimePeriod: DateInterval): GetCostAndUsageWithResourcesRequest = {
-    val __obj = js.Dynamic.literal(TimePeriod = TimePeriod.asInstanceOf[js.Any])
+  def apply(Filter: Expression, TimePeriod: DateInterval): GetCostAndUsageWithResourcesRequest = {
+    val __obj = js.Dynamic.literal(Filter = Filter.asInstanceOf[js.Any], TimePeriod = TimePeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCostAndUsageWithResourcesRequest]
   }
   
@@ -61,13 +61,10 @@ object GetCostAndUsageWithResourcesRequest {
     }
     
     @scala.inline
-    def setTimePeriod(value: DateInterval): Self = this.set("TimePeriod", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setFilter(value: Expression): Self = this.set("Filter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteFilter: Self = this.set("Filter", js.undefined)
+    def setTimePeriod(value: DateInterval): Self = this.set("TimePeriod", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setGranularity(value: Granularity): Self = this.set("Granularity", value.asInstanceOf[js.Any])

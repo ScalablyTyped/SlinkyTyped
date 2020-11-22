@@ -1,7 +1,7 @@
 
 # Scala.js typings for escalade
 
-Typings are for version 3.0.2
+Typings are for version 3.1.1
 
 ## Library description:
 A tiny (183B to 210B) and fast utility to ascend parent directories

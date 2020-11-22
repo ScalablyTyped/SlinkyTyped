@@ -28,7 +28,7 @@ trait Member extends js.Object {
   var MasterId: js.UndefOr[NonEmptyString] = js.native
   
   /**
-    * The status of the relationship between the member account and its master account. 
+    * The status of the relationship between the member account and its master account.  The status can have one of the following values:    CREATED - Indicates that the master account added the member account, but has not yet invited the member account.    INVITED - Indicates that the master account invited the member account. The member account has not yet responded to the invitation.    ASSOCIATED - Indicates that the member account accepted the invitation.    REMOVED - Indicates that the master account disassociated the member account.    RESIGNED - Indicates that the member account disassociated themselves from the master account.    DELETED - Indicates that the master account deleted the member account.  
     */
   var MemberStatus: js.UndefOr[NonEmptyString] = js.native
   

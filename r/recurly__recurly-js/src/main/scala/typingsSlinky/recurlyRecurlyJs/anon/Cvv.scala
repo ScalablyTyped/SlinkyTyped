@@ -7,10 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Cvv extends js.Object {
   
+  /**
+    * Placeholder content for the card verification value input.
+    */
   var cvv: js.UndefOr[String] = js.native
   
+  /**
+    * Placeholder content for the expiry input.
+    */
   var expiry: js.UndefOr[String] = js.native
   
+  /**
+    * Placeholder content (e.g. 'Card number', 'CVV')
+    */
   var number: js.UndefOr[String] = js.native
 }
 object Cvv {

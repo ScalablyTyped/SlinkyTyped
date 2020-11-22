@@ -17,16 +17,16 @@ trait WindowsUniversalAppX extends MobileLobApp {
   var applicableDeviceTypes: js.UndefOr[WindowsDeviceType] = js.native
   
   // The Identity Name.
-  var identityName: js.UndefOr[String] = js.native
+  var identityName: js.UndefOr[NullableOption[String]] = js.native
   
   // The Identity Publisher Hash.
   var identityPublisherHash: js.UndefOr[String] = js.native
   
   // The Identity Resource Identifier.
-  var identityResourceIdentifier: js.UndefOr[String] = js.native
+  var identityResourceIdentifier: js.UndefOr[NullableOption[String]] = js.native
   
   // The identity version.
-  var identityVersion: js.UndefOr[String] = js.native
+  var identityVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Whether or not the app is a bundle.
   var isBundle: js.UndefOr[Boolean] = js.native
@@ -70,10 +70,13 @@ object WindowsUniversalAppX {
     def deleteApplicableDeviceTypes: Self = this.set("applicableDeviceTypes", js.undefined)
     
     @scala.inline
-    def setIdentityName(value: String): Self = this.set("identityName", value.asInstanceOf[js.Any])
+    def setIdentityName(value: NullableOption[String]): Self = this.set("identityName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIdentityName: Self = this.set("identityName", js.undefined)
+    
+    @scala.inline
+    def setIdentityNameNull: Self = this.set("identityName", null)
     
     @scala.inline
     def setIdentityPublisherHash(value: String): Self = this.set("identityPublisherHash", value.asInstanceOf[js.Any])
@@ -82,16 +85,22 @@ object WindowsUniversalAppX {
     def deleteIdentityPublisherHash: Self = this.set("identityPublisherHash", js.undefined)
     
     @scala.inline
-    def setIdentityResourceIdentifier(value: String): Self = this.set("identityResourceIdentifier", value.asInstanceOf[js.Any])
+    def setIdentityResourceIdentifier(value: NullableOption[String]): Self = this.set("identityResourceIdentifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIdentityResourceIdentifier: Self = this.set("identityResourceIdentifier", js.undefined)
     
     @scala.inline
-    def setIdentityVersion(value: String): Self = this.set("identityVersion", value.asInstanceOf[js.Any])
+    def setIdentityResourceIdentifierNull: Self = this.set("identityResourceIdentifier", null)
+    
+    @scala.inline
+    def setIdentityVersion(value: NullableOption[String]): Self = this.set("identityVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIdentityVersion: Self = this.set("identityVersion", js.undefined)
+    
+    @scala.inline
+    def setIdentityVersionNull: Self = this.set("identityVersion", null)
     
     @scala.inline
     def setIsBundle(value: Boolean): Self = this.set("isBundle", value.asInstanceOf[js.Any])

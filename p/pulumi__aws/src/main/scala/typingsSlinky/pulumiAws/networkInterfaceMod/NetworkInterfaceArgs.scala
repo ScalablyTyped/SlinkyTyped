@@ -20,6 +20,16 @@ trait NetworkInterfaceArgs extends js.Object {
     */
   val description: js.UndefOr[Input[String]] = js.native
   
+  /**
+    * The number of IPv6 addresses to assign to a network interface. You can't use this option if specifying specific `ipv6Addresses`. If your subnet has the AssignIpv6AddressOnCreation attribute set to `true`, you can specify `0` to override this setting.
+    */
+  val ipv6AddressCount: js.UndefOr[Input[Double]] = js.native
+  
+  /**
+    * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying `ipv6AddressCount`.
+    */
+  val ipv6Addresses: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  
   val privateIp: js.UndefOr[Input[String]] = js.native
   
   /**
@@ -92,6 +102,21 @@ object NetworkInterfaceArgs {
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
+    
+    @scala.inline
+    def setIpv6AddressCount(value: Input[Double]): Self = this.set("ipv6AddressCount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIpv6AddressCount: Self = this.set("ipv6AddressCount", js.undefined)
+    
+    @scala.inline
+    def setIpv6AddressesVarargs(value: Input[String]*): Self = this.set("ipv6Addresses", js.Array(value :_*))
+    
+    @scala.inline
+    def setIpv6Addresses(value: Input[js.Array[Input[String]]]): Self = this.set("ipv6Addresses", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIpv6Addresses: Self = this.set("ipv6Addresses", js.undefined)
     
     @scala.inline
     def setPrivateIp(value: Input[String]): Self = this.set("privateIp", value.asInstanceOf[js.Any])

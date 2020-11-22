@@ -43,10 +43,10 @@ trait LaunchNavigator_ extends js.Object {
     * Enables debug log output from the plugin to the JS and native consoles. By default debug is disabled.
     * @param enabled {boolean}
     */
-  def enableDebug(enabled: Boolean, successCallback: js.Function1[/* any */ js.Any, Unit]): Unit = js.native
+  def enableDebug(enabled: Boolean, successCallback: js.Function1[/* success */ js.Any, Unit]): Unit = js.native
   def enableDebug(
     enabled: Boolean,
-    successCallback: js.Function1[/* any */ js.Any, Unit],
+    successCallback: js.Function1[/* success */ js.Any, Unit],
     errorCallback: js.Function1[/* error */ String, Unit]
   ): Unit = js.native
   

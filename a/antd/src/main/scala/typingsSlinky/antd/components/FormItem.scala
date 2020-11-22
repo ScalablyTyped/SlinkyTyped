@@ -11,7 +11,13 @@ object FormItem {
   @js.native
   object component extends js.Object
   
-  def withProps(p: /* props */ FormItemProps): SharedBuilder_FormItemProps1002017227 = new SharedBuilder_FormItemProps1002017227(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[Values](p: FormItemProps[Values]): SharedBuilder_FormItemProps1309695920[Values] = new SharedBuilder_FormItemProps1309695920[Values](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make(companion: FormItem.type): SharedBuilder_FormItemProps1002017227 = new SharedBuilder_FormItemProps1002017227(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply[Values](): SharedBuilder_FormItemProps1309695920[Values] = {
+    val __props = js.Dynamic.literal()
+    new SharedBuilder_FormItemProps1309695920[Values](js.Array(this.component, __props.asInstanceOf[FormItemProps[Values]]))
+  }
+  
+  implicit def make[Values](companion: FormItem.type): SharedBuilder_FormItemProps1309695920[Values] = new SharedBuilder_FormItemProps1309695920[Values](js.Array(this.component, js.Dictionary.empty))()
 }

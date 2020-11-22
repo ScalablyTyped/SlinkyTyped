@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.nfsFileShareMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.inputMod.storagegateway.NfsFileShareCacheAttributes
 import typingsSlinky.pulumiAws.inputMod.storagegateway.NfsFileShareNfsFileShareDefaults
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -16,6 +17,11 @@ trait NfsFileShareState extends js.Object {
   val arn: js.UndefOr[Input[String]] = js.native
   
   /**
+    * Refresh cache information. see Cache Attributes for more details.
+    */
+  val cacheAttributes: js.UndefOr[Input[NfsFileShareCacheAttributes]] = js.native
+  
+  /**
     * The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
     */
   val clientLists: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
@@ -24,6 +30,11 @@ trait NfsFileShareState extends js.Object {
     * The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
     */
   val defaultStorageClass: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The name of the file share. Must be set if an S3 prefix name is set in `locationArn`.
+    */
+  val fileShareName: js.UndefOr[Input[String]] = js.native
   
   /**
     * ID of the NFS File Share.
@@ -56,7 +67,7 @@ trait NfsFileShareState extends js.Object {
   val locationArn: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Nested argument with file share default values. More information below.
+    * Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
     */
   val nfsFileShareDefaults: js.UndefOr[Input[NfsFileShareNfsFileShareDefaults]] = js.native
   
@@ -125,6 +136,12 @@ object NfsFileShareState {
     def deleteArn: Self = this.set("arn", js.undefined)
     
     @scala.inline
+    def setCacheAttributes(value: Input[NfsFileShareCacheAttributes]): Self = this.set("cacheAttributes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCacheAttributes: Self = this.set("cacheAttributes", js.undefined)
+    
+    @scala.inline
     def setClientListsVarargs(value: Input[String]*): Self = this.set("clientLists", js.Array(value :_*))
     
     @scala.inline
@@ -138,6 +155,12 @@ object NfsFileShareState {
     
     @scala.inline
     def deleteDefaultStorageClass: Self = this.set("defaultStorageClass", js.undefined)
+    
+    @scala.inline
+    def setFileShareName(value: Input[String]): Self = this.set("fileShareName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFileShareName: Self = this.set("fileShareName", js.undefined)
     
     @scala.inline
     def setFileshareId(value: Input[String]): Self = this.set("fileshareId", value.asInstanceOf[js.Any])

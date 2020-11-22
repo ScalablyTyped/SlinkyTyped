@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Typography extends js.Object {
   
-  var typography: Fonts = js.native
+  var typography: typingsSlinky.storybookTheming.typesMod.Typography = js.native
 }
 object Typography {
   
   @scala.inline
-  def apply(typography: Fonts): Typography = {
+  def apply(typography: typingsSlinky.storybookTheming.typesMod.Typography): Typography = {
     val __obj = js.Dynamic.literal(typography = typography.asInstanceOf[js.Any])
     __obj.asInstanceOf[Typography]
   }
@@ -33,6 +33,6 @@ object Typography {
     }
     
     @scala.inline
-    def setTypography(value: Fonts): Self = this.set("typography", value.asInstanceOf[js.Any])
+    def setTypography(value: typingsSlinky.storybookTheming.typesMod.Typography): Self = this.set("typography", value.asInstanceOf[js.Any])
   }
 }

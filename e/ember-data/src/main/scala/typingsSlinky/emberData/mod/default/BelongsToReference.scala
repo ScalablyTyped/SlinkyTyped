@@ -2,7 +2,7 @@ package typingsSlinky.emberData.mod.default
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A BelongsToReference is a low level API that allows users and
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class BelongsToReference ()
   extends typingsSlinky.emberData.mod.DS.BelongsToReference
-

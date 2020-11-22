@@ -17,123 +17,199 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CommonSeries */
+/**
+  * [descr:dxChartSeriesTypes.CommonSeries]
+  */
 @js.native
 trait dxChartSeriesTypesCommonSeries extends js.Object {
   
-  /** @name dxChartSeriesTypes.CommonSeries.aggregation */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.aggregation]
+    */
   var aggregation: js.UndefOr[dxChartSeriesTypesCommonSeriesAggregation] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.argumentField */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.argumentField]
+    */
   var argumentField: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.axis */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.axis]
+    */
   var axis: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.barOverlapGroup */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.barOverlapGroup]
+    */
   var barOverlapGroup: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.barPadding */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.barPadding]
+    */
   var barPadding: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.barWidth */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.barWidth]
+    */
   var barWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.border */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.border]
+    */
   var border: js.UndefOr[dxChartSeriesTypesCommonSeriesBorder] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.closeValueField */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.closeValueField]
+    */
   var closeValueField: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.color */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.cornerRadius */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.cornerRadius]
+    */
   var cornerRadius: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.dashStyle */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.dashStyle]
+    */
   var dashStyle: js.UndefOr[dash | dot | longDash | solid] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.highValueField */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.highValueField]
+    */
   var highValueField: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverMode */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverMode]
+    */
   var hoverMode: js.UndefOr[
     allArgumentPoints | allSeriesPoints | excludePoints | includePoints | nearestPoint | none | onlyPoint
   ] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverStyle */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle]
+    */
   var hoverStyle: js.UndefOr[dxChartSeriesTypesCommonSeriesHoverStyle] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.ignoreEmptyPoints */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.ignoreEmptyPoints]
+    */
   var ignoreEmptyPoints: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.innerColor */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.innerColor]
+    */
   var innerColor: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label]
+    */
   var label: js.UndefOr[dxChartSeriesTypesCommonSeriesLabel] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.lowValueField */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.lowValueField]
+    */
   var lowValueField: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.maxLabelCount */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.maxLabelCount]
+    */
   var maxLabelCount: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.minBarSize */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.minBarSize]
+    */
   var minBarSize: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.opacity */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.opacity]
+    */
   var opacity: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.openValueField */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.openValueField]
+    */
   var openValueField: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.pane */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.pane]
+    */
   var pane: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.point */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point]
+    */
   var point: js.UndefOr[dxChartSeriesTypesCommonSeriesPoint] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.rangeValue1Field */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.rangeValue1Field]
+    */
   var rangeValue1Field: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.rangeValue2Field */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.rangeValue2Field]
+    */
   var rangeValue2Field: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.reduction */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.reduction]
+    */
   var reduction: js.UndefOr[ColorLevel] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.selectionMode */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.selectionMode]
+    */
   var selectionMode: js.UndefOr[
     allArgumentPoints | allSeriesPoints | excludePoints | includePoints | none | onlyPoint
   ] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.selectionStyle */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle]
+    */
   var selectionStyle: js.UndefOr[dxChartSeriesTypesCommonSeriesSelectionStyle] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.showInLegend */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.showInLegend]
+    */
   var showInLegend: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.sizeField */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.sizeField]
+    */
   var sizeField: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.stack */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.stack]
+    */
   var stack: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.tagField */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.tagField]
+    */
   var tagField: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.valueErrorBar */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.valueErrorBar]
+    */
   var valueErrorBar: js.UndefOr[EdgeLength] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.valueField */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.valueField]
+    */
   var valueField: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.visible */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.width */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxChartSeriesTypesCommonSeries {

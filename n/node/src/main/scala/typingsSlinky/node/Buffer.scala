@@ -213,6 +213,18 @@ trait Buffer
   def lastIndexOf(value: js.typedarray.Uint8Array, byteOffset: Double): Double = js.native
   def lastIndexOf(value: js.typedarray.Uint8Array, byteOffset: Double, encoding: BufferEncoding): Double = js.native
   
+  def readBigInt64BE(): js.BigInt = js.native
+  def readBigInt64BE(offset: Double): js.BigInt = js.native
+  
+  def readBigInt64LE(): js.BigInt = js.native
+  def readBigInt64LE(offset: Double): js.BigInt = js.native
+  
+  def readBigUInt64BE(): js.BigInt = js.native
+  def readBigUInt64BE(offset: Double): js.BigInt = js.native
+  
+  def readBigUInt64LE(): js.BigInt = js.native
+  def readBigUInt64LE(offset: Double): js.BigInt = js.native
+  
   def readDoubleBE(): Double = js.native
   def readDoubleBE(offset: Double): Double = js.native
   
@@ -285,6 +297,18 @@ trait Buffer
   def write(string: java.lang.String, offset: Double, encoding: BufferEncoding): Double = js.native
   def write(string: java.lang.String, offset: Double, length: Double): Double = js.native
   def write(string: java.lang.String, offset: Double, length: Double, encoding: BufferEncoding): Double = js.native
+  
+  def writeBigInt64BE(value: js.BigInt): Double = js.native
+  def writeBigInt64BE(value: js.BigInt, offset: Double): Double = js.native
+  
+  def writeBigInt64LE(value: js.BigInt): Double = js.native
+  def writeBigInt64LE(value: js.BigInt, offset: Double): Double = js.native
+  
+  def writeBigUInt64BE(value: js.BigInt): Double = js.native
+  def writeBigUInt64BE(value: js.BigInt, offset: Double): Double = js.native
+  
+  def writeBigUInt64LE(value: js.BigInt): Double = js.native
+  def writeBigUInt64LE(value: js.BigInt, offset: Double): Double = js.native
   
   def writeDoubleBE(value: Double): Double = js.native
   def writeDoubleBE(value: Double, offset: Double): Double = js.native

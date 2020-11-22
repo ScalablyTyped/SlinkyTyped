@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import typingsSlinky.highcharts.highchartsStrings.auto
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -184,9 +185,13 @@ class Axis protected () extends js.Object {
     * @param to
     *        The axis value to end on.
     *
+    * @param options
+    *        The plotBand or plotLine configuration object.
+    *
     * @return The SVG path definition in array form.
     */
-  def getPlotBandPath(from: Double, to: Double): SVGPathArray = js.native
+  def getPlotBandPath(from: Double, to: Double, options: AxisPlotBandsOptions): SVGPathArray = js.native
+  def getPlotBandPath(from: Double, to: Double, options: AxisPlotLinesOptions): SVGPathArray = js.native
   
   /**
     * Create the path for a plot line that goes from the given value on this
@@ -438,13 +443,13 @@ class Axis protected () extends js.Object {
     newMin: js.UndefOr[scala.Nothing],
     newMax: js.UndefOr[scala.Nothing],
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def setExtremes(
     newMin: js.UndefOr[scala.Nothing],
     newMax: js.UndefOr[scala.Nothing],
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     eventArguments: js.Any
   ): Unit = js.native
   def setExtremes(newMin: js.UndefOr[scala.Nothing], newMax: js.UndefOr[scala.Nothing], redraw: Boolean): Unit = js.native
@@ -472,13 +477,13 @@ class Axis protected () extends js.Object {
     newMin: js.UndefOr[scala.Nothing],
     newMax: js.UndefOr[scala.Nothing],
     redraw: Boolean,
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def setExtremes(
     newMin: js.UndefOr[scala.Nothing],
     newMax: js.UndefOr[scala.Nothing],
     redraw: Boolean,
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     eventArguments: js.Any
   ): Unit = js.native
   def setExtremes(newMin: js.UndefOr[scala.Nothing], newMax: Double): Unit = js.native
@@ -506,13 +511,13 @@ class Axis protected () extends js.Object {
     newMin: js.UndefOr[scala.Nothing],
     newMax: Double,
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def setExtremes(
     newMin: js.UndefOr[scala.Nothing],
     newMax: Double,
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     eventArguments: js.Any
   ): Unit = js.native
   def setExtremes(newMin: js.UndefOr[scala.Nothing], newMax: Double, redraw: Boolean): Unit = js.native
@@ -535,13 +540,13 @@ class Axis protected () extends js.Object {
     newMin: js.UndefOr[scala.Nothing],
     newMax: Double,
     redraw: Boolean,
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def setExtremes(
     newMin: js.UndefOr[scala.Nothing],
     newMax: Double,
     redraw: Boolean,
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     eventArguments: js.Any
   ): Unit = js.native
   def setExtremes(newMin: Double): Unit = js.native
@@ -569,13 +574,13 @@ class Axis protected () extends js.Object {
     newMin: Double,
     newMax: js.UndefOr[scala.Nothing],
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def setExtremes(
     newMin: Double,
     newMax: js.UndefOr[scala.Nothing],
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     eventArguments: js.Any
   ): Unit = js.native
   def setExtremes(newMin: Double, newMax: js.UndefOr[scala.Nothing], redraw: Boolean): Unit = js.native
@@ -598,13 +603,13 @@ class Axis protected () extends js.Object {
     newMin: Double,
     newMax: js.UndefOr[scala.Nothing],
     redraw: Boolean,
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def setExtremes(
     newMin: Double,
     newMax: js.UndefOr[scala.Nothing],
     redraw: Boolean,
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     eventArguments: js.Any
   ): Unit = js.native
   def setExtremes(newMin: Double, newMax: Double): Unit = js.native
@@ -627,13 +632,13 @@ class Axis protected () extends js.Object {
     newMin: Double,
     newMax: Double,
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def setExtremes(
     newMin: Double,
     newMax: Double,
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     eventArguments: js.Any
   ): Unit = js.native
   def setExtremes(newMin: Double, newMax: Double, redraw: Boolean): Unit = js.native
@@ -646,21 +651,14 @@ class Axis protected () extends js.Object {
   ): Unit = js.native
   def setExtremes(newMin: Double, newMax: Double, redraw: Boolean, animation: Boolean): Unit = js.native
   def setExtremes(newMin: Double, newMax: Double, redraw: Boolean, animation: Boolean, eventArguments: js.Any): Unit = js.native
-  def setExtremes(newMin: Double, newMax: Double, redraw: Boolean, animation: AnimationOptionsObject): Unit = js.native
+  def setExtremes(newMin: Double, newMax: Double, redraw: Boolean, animation: PartialAnimationOptionsOb): Unit = js.native
   def setExtremes(
     newMin: Double,
     newMax: Double,
     redraw: Boolean,
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     eventArguments: js.Any
   ): Unit = js.native
-  
-  /**
-    * Now we have computed the normalized tickInterval, get the tick positions
-    *
-    * @fires Highcharts.Axis#afterSetTickPositions
-    */
-  def setTickPositions(): Unit = js.native
   
   /**
     * Update the axis title by options after render time.

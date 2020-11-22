@@ -3,8 +3,8 @@ package typingsSlinky.reactstrap.mediaMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +39,7 @@ trait MediaProps
   
   var src: js.UndefOr[String] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
   
   var top: js.UndefOr[Boolean] = js.native
 }
@@ -145,7 +145,7 @@ object MediaProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

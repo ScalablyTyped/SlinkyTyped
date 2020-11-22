@@ -23,7 +23,7 @@ trait RuntimeVersion extends js.Object {
   var ReleaseDate: js.UndefOr[js.Date] = js.native
   
   /**
-    * The name of the runtime version. Currently, the only valid value is syn-1.0.  Specifies the runtime version to use for the canary. Currently, the only valid value is syn-1.0.
+    * The name of the runtime version. For a list of valid runtime versions, see  Canary Runtime Versions.
     */
   var VersionName: js.UndefOr[String] = js.native
 }

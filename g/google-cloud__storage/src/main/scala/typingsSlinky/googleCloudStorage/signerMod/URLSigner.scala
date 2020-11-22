@@ -53,6 +53,11 @@ class URLSigner protected () extends js.Object {
   
   var getSignedUrlV4: js.Any = js.native
   
+  def parseAccessibleAt(): Double = js.native
+  def parseAccessibleAt(accessibleAt: String): Double = js.native
+  def parseAccessibleAt(accessibleAt: Double): Double = js.native
+  def parseAccessibleAt(accessibleAt: js.Date): Double = js.native
+  
   def parseExpires(expires: String): Double = js.native
   def parseExpires(expires: String, current: js.Date): Double = js.native
   def parseExpires(expires: Double): Double = js.native

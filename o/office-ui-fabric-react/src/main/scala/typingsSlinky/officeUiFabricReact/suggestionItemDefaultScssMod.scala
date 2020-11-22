@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object suggestionItemDefaultScssMod extends js.Object {
   
-  val peoplePickerPersona: /* "peoplePickerPersona_f6632ede" */ String = js.native
+  val peoplePickerPersona: /* "peoplePickerPersona_0bc208c7" */ String = js.native
   
-  val peoplePickerPersonaContent: /* "peoplePickerPersonaContent_f6632ede" */ String = js.native
+  val peoplePickerPersonaContent: /* "peoplePickerPersonaContent_0bc208c7" */ String = js.native
 }

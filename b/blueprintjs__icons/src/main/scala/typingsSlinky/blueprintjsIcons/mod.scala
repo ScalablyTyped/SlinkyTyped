@@ -1039,6 +1039,18 @@ object mod extends js.Object {
     
     val ARCHIVE: /* "archive" */ String = js.native
     
+    val ARRAY: /* "array" */ String = js.native
+    
+    val ARRAY_BOOLEAN: /* "array-boolean" */ String = js.native
+    
+    val ARRAY_DATE: /* "array-date" */ String = js.native
+    
+    val ARRAY_NUMERIC: /* "array-numeric" */ String = js.native
+    
+    val ARRAY_STRING: /* "array-string" */ String = js.native
+    
+    val ARRAY_TIMESTAMP: /* "array-timestamp" */ String = js.native
+    
     val ARROWS_HORIZONTAL: /* "arrows-horizontal" */ String = js.native
     
     val ARROWS_VERTICAL: /* "arrows-vertical" */ String = js.native
@@ -1194,6 +1206,8 @@ object mod extends js.Object {
     val DASHBOARD: /* "dashboard" */ String = js.native
     
     val DATABASE: /* "database" */ String = js.native
+    
+    val DATA_CONNECTION: /* "data-connection" */ String = js.native
     
     val DATA_LINEAGE: /* "data-lineage" */ String = js.native
     
@@ -1519,6 +1533,8 @@ object mod extends js.Object {
     
     val LAYERS: /* "layers" */ String = js.native
     
+    val LAYER_OUTLINE: /* "layer-outline" */ String = js.native
+    
     val LAYOUT: /* "layout" */ String = js.native
     
     val LAYOUT_AUTO: /* "layout-auto" */ String = js.native
@@ -1638,6 +1654,8 @@ object mod extends js.Object {
     val NINJA: /* "ninja" */ String = js.native
     
     val NOTIFICATIONS: /* "notifications" */ String = js.native
+    
+    val NOTIFICATIONS_SNOOZE: /* "notifications-snooze" */ String = js.native
     
     val NOTIFICATIONS_UPDATED: /* "notifications-updated" */ String = js.native
     
@@ -1862,6 +1880,8 @@ object mod extends js.Object {
     val SWAP_HORIZONTAL: /* "swap-horizontal" */ String = js.native
     
     val SWAP_VERTICAL: /* "swap-vertical" */ String = js.native
+    
+    val SWITCH: /* "switch" */ String = js.native
     
     val SYMBOL_CIRCLE: /* "symbol-circle" */ String = js.native
     

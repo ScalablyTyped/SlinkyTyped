@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useTimeoutMod extends js.Object {
   
-  def default(cb: js.Function0[Unit], delay: Double): ReturnValue = js.native
-  def default(cb: js.Function0[Unit], delay: Double, defaultStarted: js.Function0[Boolean]): ReturnValue = js.native
-  def default(cb: js.Function0[Unit], delay: Double, defaultStarted: Boolean): ReturnValue = js.native
+  def useTimeout(cb: js.Function0[Unit], delay: Double): ReturnValue = js.native
+  def useTimeout(cb: js.Function0[Unit], delay: Double, defaultStarted: js.Function0[Boolean]): ReturnValue = js.native
+  def useTimeout(cb: js.Function0[Unit], delay: Double, defaultStarted: Boolean): ReturnValue = js.native
   
   type RestartTimeout = js.Function0[Unit]
   

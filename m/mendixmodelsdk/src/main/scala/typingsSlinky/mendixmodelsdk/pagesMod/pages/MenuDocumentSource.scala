@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.menusMod.menus.IMenuDocument
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,8 +20,8 @@ class MenuDocumentSource protected () extends MenuSource {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def menu: IMenuDocument | Null = js.native
@@ -27,9 +29,6 @@ class MenuDocumentSource protected () extends MenuSource {
   def menuQualifiedName: String | Null = js.native
   
   def menu_=(newValue: IMenuDocument | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FMenuDocumentSource: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.MenuDocumentSource")

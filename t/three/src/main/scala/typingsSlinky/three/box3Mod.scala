@@ -84,8 +84,14 @@ object box3Mod extends js.Object {
     
     def makeEmpty(): this.type = js.native
     
+    /**
+    	 * @default new THREE.Vector3( - Infinity, - Infinity, - Infinity )
+    	 */
     var max: Vector3 = js.native
     
+    /**
+    	 * @default new THREE.Vector3( + Infinity, + Infinity, + Infinity )
+    	 */
     var min: Vector3 = js.native
     
     def set(min: Vector3, max: Vector3): this.type = js.native

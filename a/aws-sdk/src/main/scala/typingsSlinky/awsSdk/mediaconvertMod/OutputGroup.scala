@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OutputGroup extends js.Object {
   
   /**
+    * Use automated encoding to have MediaConvert choose your encoding settings for you, based on characteristics of your input video.
+    */
+  var AutomatedEncodingSettings: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.AutomatedEncodingSettings] = js.native
+  
+  /**
     * Use Custom Group Name (CustomName) to specify a name for the output group. This value is displayed on the console and can make your job settings JSON more human-readable. It does not affect your outputs. Use up to twelve characters that are either letters, numbers, spaces, or underscores.
     */
   var CustomName: js.UndefOr[string] = js.native
@@ -49,6 +54,12 @@ object OutputGroup {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAutomatedEncodingSettings(value: AutomatedEncodingSettings): Self = this.set("AutomatedEncodingSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutomatedEncodingSettings: Self = this.set("AutomatedEncodingSettings", js.undefined)
     
     @scala.inline
     def setCustomName(value: string): Self = this.set("CustomName", value.asInstanceOf[js.Any])

@@ -38,7 +38,7 @@ object ILinearRingGeometryAccess {
   @scala.inline
   def apply(
     contain: Double => Boolean,
-    events: IEventManager,
+    events: IEventManager[js.Object],
     freeze: () => IFreezable,
     get: Double => js.Array[Double],
     getChildGeometry: Double => IPointGeometryAccess,

@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashZip extends LodashConvertible {
+trait LodashZip extends js.Object {
   
   def apply[T1](arrays1: List[T1]): LodashZip1x1[T1] = js.native
   def apply[T2](arrays1: __, arrays2: List[T2]): LodashZip1x2[T2] = js.native

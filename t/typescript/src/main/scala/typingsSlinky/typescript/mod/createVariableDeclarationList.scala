@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createVariableDeclarationList extends js.Object {
   
+  /** @deprecated Use `factory.createVariableDeclarationList` or the factory supplied by your transformation context instead. */
   def apply(declarations: js.Array[VariableDeclaration]): VariableDeclarationList = js.native
   def apply(declarations: js.Array[VariableDeclaration], flags: NodeFlags): VariableDeclarationList = js.native
 }

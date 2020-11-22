@@ -9,6 +9,7 @@ import org.scalajs.dom.raw.WebGLTexture
 import org.scalajs.dom.raw.WebGLUniformLocation
 import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglNumbers.`1`
 import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglNumbers.`2`
+import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.TensorInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,24 +18,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object webglUtil extends js.Object {
   
-  def bindCanvasToFramebuffer(gl: WebGLRenderingContext, debug: Boolean): Unit = js.native
+  def assertNotComplex(tensor: js.Array[TensorInfo], opName: String): Unit = js.native
+  def assertNotComplex(tensor: TensorInfo, opName: String): Unit = js.native
   
-  def bindColorTextureToFramebuffer(gl: WebGLRenderingContext, debug: Boolean, texture: WebGLTexture, framebuffer: WebGLFramebuffer): Unit = js.native
+  def bindCanvasToFramebuffer(gl: WebGLRenderingContext): Unit = js.native
+  
+  def bindColorTextureToFramebuffer(gl: WebGLRenderingContext, texture: WebGLTexture, framebuffer: WebGLFramebuffer): Unit = js.native
   
   def bindTextureToProgramUniformSampler(
     gl: WebGLRenderingContext,
-    debug: Boolean,
-    program: WebGLProgram,
     texture: WebGLTexture,
     uniformSamplerLocation: WebGLUniformLocation,
     textureUnit: Double
   ): Unit = js.native
   
-  def bindTextureUnit(gl: WebGLRenderingContext, debug: Boolean, texture: WebGLTexture, textureUnit: Double): Unit = js.native
+  def bindTextureUnit(gl: WebGLRenderingContext, texture: WebGLTexture, textureUnit: Double): Unit = js.native
   
   def bindVertexBufferToProgramAttribute(
     gl: WebGLRenderingContext,
-    debug: Boolean,
     program: WebGLProgram,
     attribute: String,
     buffer: WebGLBuffer,
@@ -43,28 +44,28 @@ object webglUtil extends js.Object {
     itemOffsetInBytes: Double
   ): Boolean = js.native
   
-  def callAndCheck[T](gl: WebGLRenderingContext, debugMode: Boolean, func: js.Function0[T]): T = js.native
+  def callAndCheck[T](gl: WebGLRenderingContext, func: js.Function0[T]): T = js.native
   
   def canBeRepresented(num: Double): Boolean = js.native
   
-  def createFragmentShader(gl: WebGLRenderingContext, debug: Boolean, fragmentShaderSource: String): WebGLShader = js.native
+  def createFragmentShader(gl: WebGLRenderingContext, fragmentShaderSource: String): WebGLShader = js.native
   
-  def createFramebuffer(gl: WebGLRenderingContext, debug: Boolean): WebGLFramebuffer = js.native
+  def createFramebuffer(gl: WebGLRenderingContext): WebGLFramebuffer = js.native
   
-  def createProgram(gl: WebGLRenderingContext, debug: Boolean): WebGLProgram = js.native
+  def createProgram(gl: WebGLRenderingContext): WebGLProgram = js.native
   
-  def createStaticIndexBuffer(gl: WebGLRenderingContext, debug: Boolean, data: js.typedarray.Uint16Array): WebGLBuffer = js.native
+  def createStaticIndexBuffer(gl: WebGLRenderingContext, data: js.typedarray.Uint16Array): WebGLBuffer = js.native
   
-  def createStaticVertexBuffer(gl: WebGLRenderingContext, debug: Boolean, data: js.typedarray.Float32Array): WebGLBuffer = js.native
+  def createStaticVertexBuffer(gl: WebGLRenderingContext, data: js.typedarray.Float32Array): WebGLBuffer = js.native
   
-  def createTexture(gl: WebGLRenderingContext, debug: Boolean): WebGLTexture = js.native
+  def createTexture(gl: WebGLRenderingContext): WebGLTexture = js.native
   
-  def createVertexShader(gl: WebGLRenderingContext, debug: Boolean, vertexShaderSource: String): WebGLShader = js.native
+  def createVertexShader(gl: WebGLRenderingContext, vertexShaderSource: String): WebGLShader = js.native
   
   def getBatchDim(shape: js.Array[Double]): Double = js.native
   def getBatchDim(shape: js.Array[Double], dimsToSkip: Double): Double = js.native
   
-  def getExtensionOrThrow(gl: WebGLRenderingContext, debug: Boolean, extensionName: String): js.Object = js.native
+  def getExtensionOrThrow(gl: WebGLRenderingContext, extensionName: String): js.Object = js.native
   
   def getFramebufferErrorMessage(gl: WebGLRenderingContext, status: Double): String = js.native
   
@@ -74,7 +75,7 @@ object webglUtil extends js.Object {
   
   def getProgramUniformLocation(gl: WebGLRenderingContext, program: WebGLProgram, uniformName: String): WebGLUniformLocation = js.native
   
-  def getProgramUniformLocationOrThrow(gl: WebGLRenderingContext, debug: Boolean, program: WebGLProgram, uniformName: String): WebGLUniformLocation = js.native
+  def getProgramUniformLocationOrThrow(gl: WebGLRenderingContext, program: WebGLProgram, uniformName: String): WebGLUniformLocation = js.native
   
   def getRowsCols(shape: js.Array[Double]): js.Tuple2[Double, Double] = js.native
   
@@ -104,19 +105,19 @@ object webglUtil extends js.Object {
   @JSName("isWebGLVersionEnabled")
   def isWebGLVersionEnabled_2(webGLVersion: `2`): Boolean = js.native
   
-  def linkProgram(gl: WebGLRenderingContext, debug: Boolean, program: WebGLProgram): Unit = js.native
+  def linkProgram(gl: WebGLRenderingContext, program: WebGLProgram): Unit = js.native
   
   def resetMaxTextureSize(): Unit = js.native
   
   def resetMaxTexturesInShader(): Unit = js.native
   
-  def unbindColorTextureFromFramebuffer(gl: WebGLRenderingContext, debug: Boolean, framebuffer: WebGLFramebuffer): Unit = js.native
+  def unbindColorTextureFromFramebuffer(gl: WebGLRenderingContext, framebuffer: WebGLFramebuffer): Unit = js.native
   
-  def unbindTextureUnit(gl: WebGLRenderingContext, debug: Boolean, textureUnit: Double): Unit = js.native
+  def unbindTextureUnit(gl: WebGLRenderingContext, textureUnit: Double): Unit = js.native
   
   def validateFramebuffer(gl: WebGLRenderingContext): Unit = js.native
   
-  def validateProgram(gl: WebGLRenderingContext, debug: Boolean, program: WebGLProgram): Unit = js.native
+  def validateProgram(gl: WebGLRenderingContext, program: WebGLProgram): Unit = js.native
   
   def validateTextureSize(width: Double, height: Double): Unit = js.native
 }

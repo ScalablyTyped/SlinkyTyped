@@ -24,6 +24,14 @@ trait TimeOptions extends js.Object {
   var getTimezoneOffset: js.UndefOr[TimezoneOffsetCallbackFunction] = js.native
   
   /**
+    * (Highcharts, Highstock, Highmaps, Gantt) Allows to manually load the
+    * `moment.js` library from Highcharts options instead of the `window`. In
+    * case of loading the library from a `script` tag, this option is not
+    * needed, it will be loaded from there by default.
+    */
+  var moment: js.UndefOr[js.Function] = js.native
+  
+  /**
     * (Highcharts, Highstock, Gantt) Requires moment.js. If the timezone option
     * is specified, it creates a default getTimezoneOffset function that looks
     * up the specified timezone in moment.js. If moment.js is not included,
@@ -84,6 +92,12 @@ object TimeOptions {
     
     @scala.inline
     def deleteGetTimezoneOffset: Self = this.set("getTimezoneOffset", js.undefined)
+    
+    @scala.inline
+    def setMoment(value: js.Function): Self = this.set("moment", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMoment: Self = this.set("moment", js.undefined)
     
     @scala.inline
     def setTimezone(value: String): Self = this.set("timezone", value.asInstanceOf[js.Any])

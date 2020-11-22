@@ -9,6 +9,8 @@ trait SliderProps extends js.Object {
   
   var disabled: js.UndefOr[Boolean] = js.native
   
+  var marks: js.UndefOr[Boolean] = js.native
+  
   var max: js.UndefOr[Double] = js.native
   
   var min: js.UndefOr[Double] = js.native
@@ -57,6 +59,12 @@ object SliderProps {
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setMarks(value: Boolean): Self = this.set("marks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMarks: Self = this.set("marks", js.undefined)
     
     @scala.inline
     def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])

@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
@@ -60,9 +59,6 @@ abstract class TemplateFormBase protected () extends FormBase {
   
   def imageData: String | Null = js.native
   def imageData_=(newValue: String | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FTemplateFormBase: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.TemplateFormBase")

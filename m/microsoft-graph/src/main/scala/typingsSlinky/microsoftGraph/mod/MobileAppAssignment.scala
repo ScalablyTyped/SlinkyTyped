@@ -14,10 +14,10 @@ trait MobileAppAssignment extends Entity {
   var intent: js.UndefOr[InstallIntent] = js.native
   
   // The settings for target assignment defined by the admin.
-  var settings: js.UndefOr[MobileAppAssignmentSettings] = js.native
+  var settings: js.UndefOr[NullableOption[MobileAppAssignmentSettings]] = js.native
   
   // The target group assignment defined by the admin.
-  var target: js.UndefOr[DeviceAndAppManagementAssignmentTarget] = js.native
+  var target: js.UndefOr[NullableOption[DeviceAndAppManagementAssignmentTarget]] = js.native
 }
 object MobileAppAssignment {
   
@@ -49,15 +49,21 @@ object MobileAppAssignment {
     def deleteIntent: Self = this.set("intent", js.undefined)
     
     @scala.inline
-    def setSettings(value: MobileAppAssignmentSettings): Self = this.set("settings", value.asInstanceOf[js.Any])
+    def setSettings(value: NullableOption[MobileAppAssignmentSettings]): Self = this.set("settings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSettings: Self = this.set("settings", js.undefined)
     
     @scala.inline
-    def setTarget(value: DeviceAndAppManagementAssignmentTarget): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setSettingsNull: Self = this.set("settings", null)
+    
+    @scala.inline
+    def setTarget(value: NullableOption[DeviceAndAppManagementAssignmentTarget]): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)
+    
+    @scala.inline
+    def setTargetNull: Self = this.set("target", null)
   }
 }

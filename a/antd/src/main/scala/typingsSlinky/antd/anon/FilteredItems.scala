@@ -1,28 +1,27 @@
 package typingsSlinky.antd.anon
 
 import typingsSlinky.antd.transferListMod.RenderedItem
-import typingsSlinky.antd.transferMod.TransferItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FilteredItems extends js.Object {
+trait FilteredItems[RecordType /* <: typingsSlinky.antd.transferMod.KeyWiseTransferItem */] extends js.Object {
   
-  var filteredItems: js.Array[TransferItem] = js.native
+  var filteredItems: js.Array[RecordType] = js.native
   
-  var filteredRenderItems: js.Array[RenderedItem] = js.native
+  var filteredRenderItems: js.Array[RenderedItem[RecordType]] = js.native
 }
 object FilteredItems {
   
   @scala.inline
-  def apply(filteredItems: js.Array[TransferItem], filteredRenderItems: js.Array[RenderedItem]): FilteredItems = {
+  def apply[RecordType /* <: typingsSlinky.antd.transferMod.KeyWiseTransferItem */](filteredItems: js.Array[RecordType], filteredRenderItems: js.Array[RenderedItem[RecordType]]): FilteredItems[RecordType] = {
     val __obj = js.Dynamic.literal(filteredItems = filteredItems.asInstanceOf[js.Any], filteredRenderItems = filteredRenderItems.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FilteredItems]
+    __obj.asInstanceOf[FilteredItems[RecordType]]
   }
   
   @scala.inline
-  implicit class FilteredItemsOps[Self <: FilteredItems] (val x: Self) extends AnyVal {
+  implicit class FilteredItemsOps[Self <: FilteredItems[_], RecordType /* <: typingsSlinky.antd.transferMod.KeyWiseTransferItem */] (val x: Self with FilteredItems[RecordType]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -37,15 +36,15 @@ object FilteredItems {
     }
     
     @scala.inline
-    def setFilteredItemsVarargs(value: TransferItem*): Self = this.set("filteredItems", js.Array(value :_*))
+    def setFilteredItemsVarargs(value: RecordType*): Self = this.set("filteredItems", js.Array(value :_*))
     
     @scala.inline
-    def setFilteredItems(value: js.Array[TransferItem]): Self = this.set("filteredItems", value.asInstanceOf[js.Any])
+    def setFilteredItems(value: js.Array[RecordType]): Self = this.set("filteredItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFilteredRenderItemsVarargs(value: RenderedItem*): Self = this.set("filteredRenderItems", js.Array(value :_*))
+    def setFilteredRenderItemsVarargs(value: RenderedItem[RecordType]*): Self = this.set("filteredRenderItems", js.Array(value :_*))
     
     @scala.inline
-    def setFilteredRenderItems(value: js.Array[RenderedItem]): Self = this.set("filteredRenderItems", value.asInstanceOf[js.Any])
+    def setFilteredRenderItems(value: js.Array[RenderedItem[RecordType]]): Self = this.set("filteredRenderItems", value.asInstanceOf[js.Any])
   }
 }

@@ -24,6 +24,7 @@ import typingsSlinky.reactNativeElements.anon.PartialSocialIconProps
 import typingsSlinky.reactNativeElements.anon.PartialTextProps
 import typingsSlinky.reactNativeElements.anon.PartialTileProps
 import typingsSlinky.reactNativeElements.anon.PartialTooltipProps
+import typingsSlinky.reactNativeElements.anon.PartialViewProperties
 import typingsSlinky.reactNativeElements.anon.RecursivePartialColors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -48,6 +49,16 @@ trait FullTheme extends js.Object {
   
   var Card: PartialCardProps = js.native
   
+  var CardDivider: PartialDividerProps = js.native
+  
+  var CardFeaturedSubtitle: PartialTextProps = js.native
+  
+  var CardFeaturedTitle: PartialTextProps = js.native
+  
+  var CardImage: PartialImageProps = js.native
+  
+  var CardTitle: PartialTextProps = js.native
+  
   var CheckBox: PartialCheckBoxProps = js.native
   
   var Divider: PartialDividerProps = js.native
@@ -61,6 +72,20 @@ trait FullTheme extends js.Object {
   var Input: PartialInputProps = js.native
   
   var ListItem: PartialListItemProps = js.native
+  
+  var ListItemButtonGroup: PartialButtonGroupProps = js.native
+  
+  var ListItemCheckBox: PartialCheckBoxProps = js.native
+  
+  var ListItemChevron: PartialIconProps = js.native
+  
+  var ListItemContent: PartialViewProperties = js.native
+  
+  var ListItemInput: PartialInputProps = js.native
+  
+  var ListItemSubtitle: PartialTextProps = js.native
+  
+  var ListItemTitle: PartialTextProps = js.native
   
   var Overlay: PartialOverlayProps = js.native
   
@@ -94,6 +119,11 @@ object FullTheme {
     Button: PartialButtonProps,
     ButtonGroup: PartialButtonGroupProps,
     Card: PartialCardProps,
+    CardDivider: PartialDividerProps,
+    CardFeaturedSubtitle: PartialTextProps,
+    CardFeaturedTitle: PartialTextProps,
+    CardImage: PartialImageProps,
+    CardTitle: PartialTextProps,
     CheckBox: PartialCheckBoxProps,
     Divider: PartialDividerProps,
     Header: PartialHeaderProps,
@@ -101,6 +131,13 @@ object FullTheme {
     Image: PartialImageProps,
     Input: PartialInputProps,
     ListItem: PartialListItemProps,
+    ListItemButtonGroup: PartialButtonGroupProps,
+    ListItemCheckBox: PartialCheckBoxProps,
+    ListItemChevron: PartialIconProps,
+    ListItemContent: PartialViewProperties,
+    ListItemInput: PartialInputProps,
+    ListItemSubtitle: PartialTextProps,
+    ListItemTitle: PartialTextProps,
     Overlay: PartialOverlayProps,
     PricingCard: PartialPricingCardProps,
     Rating: PartialRatingProps,
@@ -112,7 +149,7 @@ object FullTheme {
     Tooltip: PartialTooltipProps,
     colors: RecursivePartialColors
   ): FullTheme = {
-    val __obj = js.Dynamic.literal(Accessory = Accessory.asInstanceOf[js.Any], AirbnbRating = AirbnbRating.asInstanceOf[js.Any], Avatar = Avatar.asInstanceOf[js.Any], Badge = Badge.asInstanceOf[js.Any], BottomSheet = BottomSheet.asInstanceOf[js.Any], Button = Button.asInstanceOf[js.Any], ButtonGroup = ButtonGroup.asInstanceOf[js.Any], Card = Card.asInstanceOf[js.Any], CheckBox = CheckBox.asInstanceOf[js.Any], Divider = Divider.asInstanceOf[js.Any], Header = Header.asInstanceOf[js.Any], Icon = Icon.asInstanceOf[js.Any], Image = Image.asInstanceOf[js.Any], Input = Input.asInstanceOf[js.Any], ListItem = ListItem.asInstanceOf[js.Any], Overlay = Overlay.asInstanceOf[js.Any], PricingCard = PricingCard.asInstanceOf[js.Any], Rating = Rating.asInstanceOf[js.Any], SearchBar = SearchBar.asInstanceOf[js.Any], Slider = Slider.asInstanceOf[js.Any], SocialIcon = SocialIcon.asInstanceOf[js.Any], Text = Text.asInstanceOf[js.Any], Tile = Tile.asInstanceOf[js.Any], Tooltip = Tooltip.asInstanceOf[js.Any], colors = colors.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(Accessory = Accessory.asInstanceOf[js.Any], AirbnbRating = AirbnbRating.asInstanceOf[js.Any], Avatar = Avatar.asInstanceOf[js.Any], Badge = Badge.asInstanceOf[js.Any], BottomSheet = BottomSheet.asInstanceOf[js.Any], Button = Button.asInstanceOf[js.Any], ButtonGroup = ButtonGroup.asInstanceOf[js.Any], Card = Card.asInstanceOf[js.Any], CardDivider = CardDivider.asInstanceOf[js.Any], CardFeaturedSubtitle = CardFeaturedSubtitle.asInstanceOf[js.Any], CardFeaturedTitle = CardFeaturedTitle.asInstanceOf[js.Any], CardImage = CardImage.asInstanceOf[js.Any], CardTitle = CardTitle.asInstanceOf[js.Any], CheckBox = CheckBox.asInstanceOf[js.Any], Divider = Divider.asInstanceOf[js.Any], Header = Header.asInstanceOf[js.Any], Icon = Icon.asInstanceOf[js.Any], Image = Image.asInstanceOf[js.Any], Input = Input.asInstanceOf[js.Any], ListItem = ListItem.asInstanceOf[js.Any], ListItemButtonGroup = ListItemButtonGroup.asInstanceOf[js.Any], ListItemCheckBox = ListItemCheckBox.asInstanceOf[js.Any], ListItemChevron = ListItemChevron.asInstanceOf[js.Any], ListItemContent = ListItemContent.asInstanceOf[js.Any], ListItemInput = ListItemInput.asInstanceOf[js.Any], ListItemSubtitle = ListItemSubtitle.asInstanceOf[js.Any], ListItemTitle = ListItemTitle.asInstanceOf[js.Any], Overlay = Overlay.asInstanceOf[js.Any], PricingCard = PricingCard.asInstanceOf[js.Any], Rating = Rating.asInstanceOf[js.Any], SearchBar = SearchBar.asInstanceOf[js.Any], Slider = Slider.asInstanceOf[js.Any], SocialIcon = SocialIcon.asInstanceOf[js.Any], Text = Text.asInstanceOf[js.Any], Tile = Tile.asInstanceOf[js.Any], Tooltip = Tooltip.asInstanceOf[js.Any], colors = colors.asInstanceOf[js.Any])
     __obj.asInstanceOf[FullTheme]
   }
   
@@ -156,6 +193,21 @@ object FullTheme {
     def setCard(value: PartialCardProps): Self = this.set("Card", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setCardDivider(value: PartialDividerProps): Self = this.set("CardDivider", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCardFeaturedSubtitle(value: PartialTextProps): Self = this.set("CardFeaturedSubtitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCardFeaturedTitle(value: PartialTextProps): Self = this.set("CardFeaturedTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCardImage(value: PartialImageProps): Self = this.set("CardImage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCardTitle(value: PartialTextProps): Self = this.set("CardTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setCheckBox(value: PartialCheckBoxProps): Self = this.set("CheckBox", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -175,6 +227,27 @@ object FullTheme {
     
     @scala.inline
     def setListItem(value: PartialListItemProps): Self = this.set("ListItem", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setListItemButtonGroup(value: PartialButtonGroupProps): Self = this.set("ListItemButtonGroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setListItemCheckBox(value: PartialCheckBoxProps): Self = this.set("ListItemCheckBox", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setListItemChevron(value: PartialIconProps): Self = this.set("ListItemChevron", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setListItemContent(value: PartialViewProperties): Self = this.set("ListItemContent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setListItemInput(value: PartialInputProps): Self = this.set("ListItemInput", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setListItemSubtitle(value: PartialTextProps): Self = this.set("ListItemSubtitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setListItemTitle(value: PartialTextProps): Self = this.set("ListItemTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOverlay(value: PartialOverlayProps): Self = this.set("Overlay", value.asInstanceOf[js.Any])

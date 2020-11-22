@@ -1,7 +1,7 @@
 package typingsSlinky.testingLibraryReact.anon
 
 import org.scalajs.dom.raw.DocumentFragment
-import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactElement
 import typingsSlinky.prettyFormat.mod.OptionsReceived
 import typingsSlinky.testingLibraryDom.getQueriesForElementMod.BoundFunction
@@ -30,9 +30,9 @@ trait RenderResultreadonlygetAl extends js.Object {
   
   def asFragment(): DocumentFragment = js.native
   
-  var baseElement: HTMLElement = js.native
+  var baseElement: Element = js.native
   
-  var container: HTMLElement = js.native
+  var container: Element = js.native
   
   def debug(): Unit = js.native
   def debug(
@@ -42,22 +42,22 @@ trait RenderResultreadonlygetAl extends js.Object {
   ): Unit = js.native
   def debug(baseElement: js.UndefOr[scala.Nothing], maxLength: Double): Unit = js.native
   def debug(baseElement: js.UndefOr[scala.Nothing], maxLength: Double, options: OptionsReceived): Unit = js.native
-  def debug(baseElement: js.Array[HTMLElement | DocumentFragment]): Unit = js.native
+  def debug(baseElement: js.Array[Element | DocumentFragment]): Unit = js.native
   def debug(
-    baseElement: js.Array[HTMLElement | DocumentFragment],
+    baseElement: js.Array[Element | DocumentFragment],
     maxLength: js.UndefOr[scala.Nothing],
     options: OptionsReceived
   ): Unit = js.native
-  def debug(baseElement: js.Array[HTMLElement | DocumentFragment], maxLength: Double): Unit = js.native
-  def debug(baseElement: js.Array[HTMLElement | DocumentFragment], maxLength: Double, options: OptionsReceived): Unit = js.native
+  def debug(baseElement: js.Array[Element | DocumentFragment], maxLength: Double): Unit = js.native
+  def debug(baseElement: js.Array[Element | DocumentFragment], maxLength: Double, options: OptionsReceived): Unit = js.native
   def debug(baseElement: DocumentFragment): Unit = js.native
   def debug(baseElement: DocumentFragment, maxLength: js.UndefOr[scala.Nothing], options: OptionsReceived): Unit = js.native
   def debug(baseElement: DocumentFragment, maxLength: Double): Unit = js.native
   def debug(baseElement: DocumentFragment, maxLength: Double, options: OptionsReceived): Unit = js.native
-  def debug(baseElement: HTMLElement): Unit = js.native
-  def debug(baseElement: HTMLElement, maxLength: js.UndefOr[scala.Nothing], options: OptionsReceived): Unit = js.native
-  def debug(baseElement: HTMLElement, maxLength: Double): Unit = js.native
-  def debug(baseElement: HTMLElement, maxLength: Double, options: OptionsReceived): Unit = js.native
+  def debug(baseElement: Element): Unit = js.native
+  def debug(baseElement: Element, maxLength: js.UndefOr[scala.Nothing], options: OptionsReceived): Unit = js.native
+  def debug(baseElement: Element, maxLength: Double): Unit = js.native
+  def debug(baseElement: Element, maxLength: Double, options: OptionsReceived): Unit = js.native
   
   var findAllByAltText: BoundFunction[FindAllByBoundAttribute] = js.native
   

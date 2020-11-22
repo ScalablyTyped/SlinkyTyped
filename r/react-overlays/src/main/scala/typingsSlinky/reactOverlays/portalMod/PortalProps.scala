@@ -1,6 +1,9 @@
 package typingsSlinky.reactOverlays.portalMod
 
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
+import typingsSlinky.reactOverlays.useWaitForDOMRefMod.DOMContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,15 +11,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PortalProps extends js.Object {
   
-  var container: js.UndefOr[ReactElement | js.Function] = js.native
+  var children: ReactElement = js.native
   
-  var onRendered: js.UndefOr[js.Function] = js.native
+  var container: DOMContainer[HTMLElement] = js.native
+  
+  var onRendered: js.UndefOr[js.Function1[/* element */ js.Any, Unit]] = js.native
 }
 object PortalProps {
   
   @scala.inline
-  def apply(): PortalProps = {
-    val __obj = js.Dynamic.literal()
+  def apply(children: ReactElement): PortalProps = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
     __obj.asInstanceOf[PortalProps]
   }
   
@@ -36,16 +41,25 @@ object PortalProps {
     }
     
     @scala.inline
-    def setContainerReactElement(value: ReactElement): Self = this.set("container", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContainer(value: ReactElement | js.Function): Self = this.set("container", value.asInstanceOf[js.Any])
+    def setContainerRefObject(value: ReactRef[HTMLElement]): Self = this.set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteContainer: Self = this.set("container", js.undefined)
+    def setContainerHTMLElement(value: HTMLElement): Self = this.set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnRendered(value: js.Function): Self = this.set("onRendered", value.asInstanceOf[js.Any])
+    def setContainerFunction0(value: () => HTMLElement | ReactRef[HTMLElement] | Null): Self = this.set("container", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setContainer(value: DOMContainer[HTMLElement]): Self = this.set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setContainerNull: Self = this.set("container", null)
+    
+    @scala.inline
+    def setOnRendered(value: /* element */ js.Any => Unit): Self = this.set("onRendered", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnRendered: Self = this.set("onRendered", js.undefined)

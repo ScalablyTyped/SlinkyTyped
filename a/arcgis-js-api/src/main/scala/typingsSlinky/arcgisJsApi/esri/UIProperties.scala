@@ -16,11 +16,9 @@ trait UIProperties extends js.Object {
   var container: js.UndefOr[HTMLElement] = js.native
   
   /**
-    * Defines the padding for the UI from the top, left, right, and bottom sides of the container or [View](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html). If the value is a number, it will be used to pad all sides of the container.
+    * Defines the padding for the UI from the top, left, right, and bottom sides of the container or [View](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-ui-UI.html#padding)
-    *
-    * @default { left: 15, top: 15, right: 15, bottom: 15 }
     */
   var padding: js.UndefOr[js.Any | Double] = js.native
   

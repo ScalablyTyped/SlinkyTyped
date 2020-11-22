@@ -13,7 +13,7 @@ trait AssetModelHierarchyDefinition extends js.Object {
   var childAssetModelId: ID = js.native
   
   /**
-    * The name of the asset model hierarchy definition (as specified in CreateAssetModel or UpdateAssetModel).
+    * The name of the asset model hierarchy definition (as specified in the CreateAssetModel or UpdateAssetModel API operation).
     */
   var name: Name = js.native
 }

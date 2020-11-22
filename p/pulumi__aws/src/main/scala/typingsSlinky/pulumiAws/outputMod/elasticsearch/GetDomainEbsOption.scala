@@ -13,8 +13,7 @@ trait GetDomainEbsOption extends js.Object {
   var ebsEnabled: Boolean = js.native
   
   /**
-    * The baseline input/output (I/O) performance of EBS volumes
-    * attached to data nodes.
+    * The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
     */
   var iops: Double = js.native
   

@@ -30,6 +30,8 @@ object mod extends js.Object {
     
     type IsomorphicRequest = Request | typingsSlinky.nodeFetch.mod.Request
     
+    type IsomorphicRequestInit = RequestInit | typingsSlinky.nodeFetch.mod.RequestInit
+    
     type IsomorphicResponse = Response | typingsSlinky.nodeFetch.mod.Response
   }
 }

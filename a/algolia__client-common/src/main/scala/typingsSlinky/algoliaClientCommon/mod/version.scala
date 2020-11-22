@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@algolia/client-common", "version")
 @js.native
 object version
-  extends TopLevel[/* "4.3.1" */ String]
+  extends TopLevel[/* "4.8.0" */ String]

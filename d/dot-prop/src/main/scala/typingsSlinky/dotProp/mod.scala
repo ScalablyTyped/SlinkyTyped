@@ -10,8 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object mod extends js.Object {
   
   /**
+  	Delete the property at the given path.
   	@param object - Object to delete the `path` value.
   	@param path - Path of the property in the object, using `.` to separate each nested key. Use `\\.` if you have a `.` in the key.
+  	@returns A boolean of whether the property existed before being deleted.
   	@example
   	```
   	import dotProp = require('dot-prop');
@@ -25,11 +27,12 @@ object mod extends js.Object {
   	//=> {foo: {bar: {y: 'x'}}}
   	```
   	*/
-  def delete(`object`: StringDictionary[js.Any], path: String): Unit = js.native
+  def delete(`object`: StringDictionary[js.Any], path: String): Boolean = js.native
   
   def get[T](`object`: js.UndefOr[scala.Nothing], path: String): js.UndefOr[T] = js.native
   def get[T](`object`: js.UndefOr[scala.Nothing], path: String, defaultValue: T): T = js.native
   /**
+  	Get the value of the property at the given path.
   	@param object - Object to get the `path` value.
   	@param path - Path of the property in the object, using `.` to separate each nested key. Use `\\.` if you have a `.` in the key.
   	@param defaultValue - Default value.
@@ -51,6 +54,7 @@ object mod extends js.Object {
   
   def has(`object`: js.UndefOr[scala.Nothing], path: String): Boolean = js.native
   /**
+  	Check whether the property at the given path exists.
   	@param object - Object to test the `path` value.
   	@param path - Path of the property in the object, using `.` to separate each nested key. Use `\\.` if you have a `.` in the key.
   	@example
@@ -63,9 +67,11 @@ object mod extends js.Object {
   def has(`object`: StringDictionary[js.Any], path: String): Boolean = js.native
   
   /**
+  	Set the property at the given path to the given value.
   	@param object - Object to set the `path` value.
   	@param path - Path of the property in the object, using `.` to separate each nested key. Use `\\.` if you have a `.` in the key.
   	@param value - Value to set at `path`.
+  	@returns The object.
   	@example
   	```
   	import dotProp = require('dot-prop');

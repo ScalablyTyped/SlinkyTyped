@@ -103,6 +103,7 @@ object xrmNumbers {
   sealed trait `0`
     extends AttributeRequiredLevel
        with AttributeTypeCode
+       with ClientFormFactor
        with FormType
        with GridControlContext
        with RelationshipType
@@ -189,7 +190,6 @@ object xrmNumbers {
   @js.native
   sealed trait `4`
     extends AttributeTypeCode
-       with ClientFormFactor
        with FormType
        with GridControlContext
        with StageCategory

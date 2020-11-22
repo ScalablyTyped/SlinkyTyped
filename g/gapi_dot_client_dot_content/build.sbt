@@ -1,13 +1,11 @@
 organization := "org.scalablytyped.slinky"
 name := "gapi_dot_client_dot_content"
-version := "2.0-dt-20200515Z-e4be4b"
+version := "2.1-dt-20201116Z-9f896d"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "gapi_dot_client" % "1.0-dt-20200426Z-ac04f7",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "me.shadaj" %%% "slinky-web" % "0.6.6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

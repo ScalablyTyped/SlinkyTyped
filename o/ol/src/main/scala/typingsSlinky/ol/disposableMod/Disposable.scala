@@ -7,15 +7,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Disposable extends js.Object {
   
+  /**
+    * Clean up.
+    */
   def dispose(): Unit = js.native
   
+  /**
+    * Extension point for disposable objects.
+    */
   /* protected */ def disposeInternal(): Unit = js.native
+  
+  /**
+    * The object has already been disposed.
+    */
+  var disposed: Boolean = js.native
 }
 object Disposable {
   
   @scala.inline
-  def apply(dispose: () => Unit, disposeInternal: () => Unit): Disposable = {
-    val __obj = js.Dynamic.literal(dispose = js.Any.fromFunction0(dispose), disposeInternal = js.Any.fromFunction0(disposeInternal))
+  def apply(dispose: () => Unit, disposeInternal: () => Unit, disposed: Boolean): Disposable = {
+    val __obj = js.Dynamic.literal(dispose = js.Any.fromFunction0(dispose), disposeInternal = js.Any.fromFunction0(disposeInternal), disposed = disposed.asInstanceOf[js.Any])
     __obj.asInstanceOf[Disposable]
   }
   
@@ -39,5 +50,8 @@ object Disposable {
     
     @scala.inline
     def setDisposeInternal(value: () => Unit): Self = this.set("disposeInternal", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setDisposed(value: Boolean): Self = this.set("disposed", value.asInstanceOf[js.Any])
   }
 }

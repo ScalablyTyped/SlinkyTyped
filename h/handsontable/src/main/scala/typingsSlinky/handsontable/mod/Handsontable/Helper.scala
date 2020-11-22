@@ -57,6 +57,8 @@ trait Helper extends js.Object {
   
   def columnFactory(GridSettings: GridSettings, conflictList: js.Array[_]): js.Object = js.native
   
+  def countFirstRowKeys(data: js.Array[js.Array[CellValue] | js.Object]): Double = js.native
+  
   def createEmptySpreadsheetData(rows: Double, columns: Double): js.Array[_] = js.native
   
   def createObjectPropListener(): js.Object = js.native
@@ -77,6 +79,11 @@ trait Helper extends js.Object {
   def curry(func: js.Function0[Unit]): js.Function0[Unit] = js.native
   
   def curryRight(func: js.Function0[Unit]): js.Function0[Unit] = js.native
+  
+  def dataRowToChangesArray(dataRow: js.Array[CellValue]): js.Array[js.Tuple3[Double, Double | String, CellValue]] = js.native
+  def dataRowToChangesArray(dataRow: js.Array[CellValue], rowOffset: Double): js.Array[js.Tuple3[Double, Double | String, CellValue]] = js.native
+  def dataRowToChangesArray(dataRow: js.Object): js.Array[js.Tuple3[Double, Double | String, CellValue]] = js.native
+  def dataRowToChangesArray(dataRow: js.Object, rowOffset: Double): js.Array[js.Tuple3[Double, Double | String, CellValue]] = js.native
   
   def debounce(func: js.Function0[Unit]): js.Function0[Unit] = js.native
   def debounce(func: js.Function0[Unit], wait: Double): js.Function0[Unit] = js.native
@@ -103,11 +110,17 @@ trait Helper extends js.Object {
   def getComparisonFunction(language: String): js.Any | Unit = js.native
   def getComparisonFunction(language: String, options: js.Object): js.Any | Unit = js.native
   
+  def getDifferenceOfArrays(arrays: (js.Array[String | Double])*): js.Array[Double | String] = js.native
+  
+  def getIntersectionOfArrays(arrays: (js.Array[String | Double])*): js.Array[Double | String] = js.native
+  
   def getNormalizedDate(dateString: String): js.Date = js.native
   
   def getProperty(`object`: js.Object, name: String): js.Any | Unit = js.native
   
   def getPrototypeOf(obj: js.Object): js.Any | Unit = js.native
+  
+  def getUnionOfArrays(arrays: (js.Array[String | Double])*): js.Array[Double | String] = js.native
   
   def hasCaptionProblem(): Boolean | Unit = js.native
   
@@ -140,8 +153,6 @@ trait Helper extends js.Object {
   
   def isIE(): Boolean = js.native
   
-  def isIE8(): Boolean = js.native
-  
   def isIE9(): Boolean = js.native
   
   def isKey(keyCode: Double, baseCode: String): Boolean = js.native
@@ -173,8 +184,6 @@ trait Helper extends js.Object {
   
   def isUndefined(variable: js.Any): Boolean = js.native
   
-  def isWebComponentSupportedNatively(): Boolean = js.native
-  
   def mixin(Base: js.Object, mixins: js.Object*): js.Object = js.native
   
   def objectEach(
@@ -199,11 +208,15 @@ trait Helper extends js.Object {
   
   def requestAnimationFrame(callback: js.Function0[Unit]): Double = js.native
   
+  def setProperty(`object`: js.Object, name: String, value: js.Any): Unit = js.native
+  
   def spreadsheetColumnIndex(label: String): Double = js.native
   
   def spreadsheetColumnLabel(index: Double): String = js.native
   
   def startsWith(string: String, needle: String): Boolean = js.native
+  
+  def stringToArray(value: String): js.Array[String] = js.native
   
   def stringify(value: js.Any): String = js.native
   

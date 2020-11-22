@@ -30,18 +30,22 @@ trait EventTargetArgs extends js.Object {
   val ecsTarget: js.UndefOr[Input[EventTargetEcsTarget]] = js.native
   
   /**
-    * Valid JSON text passed to the target.
+    * The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+    */
+  val eventBusName: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Valid JSON text passed to the target. Conflicts with `inputPath` and `inputTransformer`.
     */
   val input: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
-    * that is used for extracting part of the matched event when passing it to the target.
+    * The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `inputTransformer`.
     */
   val inputPath: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Parameters used when you are providing a custom input to a target based on certain event data.
+    * Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `inputPath`.
     */
   val inputTransformer: js.UndefOr[Input[EventTargetInputTransformer]] = js.native
   
@@ -115,6 +119,12 @@ object EventTargetArgs {
     
     @scala.inline
     def deleteEcsTarget: Self = this.set("ecsTarget", js.undefined)
+    
+    @scala.inline
+    def setEventBusName(value: Input[String]): Self = this.set("eventBusName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEventBusName: Self = this.set("eventBusName", js.undefined)
     
     @scala.inline
     def setInput(value: Input[String]): Self = this.set("input", value.asInstanceOf[js.Any])

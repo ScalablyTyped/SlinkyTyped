@@ -64,6 +64,16 @@ trait Padding extends js.Object {
   var color: js.UndefOr[String] = js.native
   
   /**
+    * The distance between the label and tick line.
+    *
+    *
+    * @default
+    * "true"
+    * @see https://echarts.apache.org/en/option.html#series-gauge.axisLabel.distance
+    */
+  var distance: js.UndefOr[Double] = js.native
+  
+  /**
     * font family
     *
     * Can also be 'serif' , 'monospace', ...
@@ -117,7 +127,7 @@ trait Padding extends js.Object {
     * "normal"
     * @see https://echarts.apache.org/en/option.html#series-gauge.axisLabel.fontWeight
     */
-  var fontWeight: js.UndefOr[String] = js.native
+  var fontWeight: js.UndefOr[String | Double] = js.native
   
   /**
     * The content formatter of scale label, which supports both
@@ -369,6 +379,12 @@ object Padding {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
+    def setDistance(value: Double): Self = this.set("distance", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDistance: Self = this.set("distance", js.undefined)
+    
+    @scala.inline
     def setFontFamily(value: String): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -387,7 +403,7 @@ object Padding {
     def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
     
     @scala.inline
-    def setFontWeight(value: String): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
+    def setFontWeight(value: String | Double): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontWeight: Self = this.set("fontWeight", js.undefined)

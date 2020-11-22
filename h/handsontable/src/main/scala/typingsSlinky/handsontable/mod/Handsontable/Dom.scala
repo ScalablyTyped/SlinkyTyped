@@ -96,7 +96,7 @@ trait Dom extends js.Object {
   def isChildOf(child: HTMLElement, parent: String): Boolean = js.native
   def isChildOf(child: HTMLElement, parent: js.Object): Boolean = js.native
   
-  def isChildOfWebComponentTable(element: Element): Boolean = js.native
+  def isDetached(element: HTMLElement): Boolean = js.native
   
   def isImmediatePropagationStopped(event: Event): Boolean = js.native
   
@@ -120,14 +120,6 @@ trait Dom extends js.Object {
   
   def overlayContainsElement(overlayType: OverlayType, element: HTMLElement, root: HTMLElement): Boolean = js.native
   
-  def pageX(event: Event): Double = js.native
-  
-  def pageY(event: Event): Double = js.native
-  
-  def polymerUnwrap(element: HTMLElement): js.Any | Unit = js.native
-  
-  def polymerWrap(element: HTMLElement): js.Any | Unit = js.native
-  
   def removeClass(element: HTMLElement, className: String): Unit = js.native
   def removeClass(element: HTMLElement, className: js.Array[_]): Unit = js.native
   
@@ -137,11 +129,11 @@ trait Dom extends js.Object {
   
   def resetCssTransform(element: HTMLElement): Unit = js.native
   
+  def selectElementIfAllowed(element: HTMLElement): Unit = js.native
+  
   def setCaretPosition(element: HTMLElement, pos: Double, endPos: Double): Unit = js.native
   
   def setOverlayPosition(overlayElem: HTMLElement, left: Double, top: Double): Unit = js.native
   
   def stopImmediatePropagation(event: Event): Unit = js.native
-  
-  def stopPropagation(event: Event): Unit = js.native
 }

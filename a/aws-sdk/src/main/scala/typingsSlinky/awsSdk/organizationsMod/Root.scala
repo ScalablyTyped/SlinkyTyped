@@ -13,7 +13,7 @@ trait Root extends js.Object {
   var Arn: js.UndefOr[RootArn] = js.native
   
   /**
-    * The unique identifier (ID) for the root. The regex pattern for a root ID string requires "r-" followed by from 4 to 32 lower-case letters or digits.
+    * The unique identifier (ID) for the root. The regex pattern for a root ID string requires "r-" followed by from 4 to 32 lowercase letters or digits.
     */
   var Id: js.UndefOr[RootId] = js.native
   

@@ -1,5 +1,7 @@
 package typingsSlinky.jestEnvironment.anon
 
+import typingsSlinky.jestTypes.globalMod.TestFn
+import typingsSlinky.jestTypes.globalMod.TestName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FnCall extends js.Object {
   
-  def apply(): js.Array[_] = js.native
-  def apply(arrayLength: Double): js.Array[_] = js.native
-  def apply[T](items: T*): js.Array[T] = js.native
+  def apply(testName: TestName, fn: TestFn): Unit = js.native
+  def apply(testName: TestName, fn: TestFn, timeout: Double): Unit = js.native
 }

@@ -15,7 +15,7 @@ trait EmailFileAssessmentRequest extends ThreatAssessmentRequest {
     * advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox,
     * autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
     */
-  var destinationRoutingReason: js.UndefOr[MailDestinationRoutingReason] = js.native
+  var destinationRoutingReason: js.UndefOr[NullableOption[MailDestinationRoutingReason]] = js.native
   
   // The mail recipient whose policies are used to assess the mail.
   var recipientEmail: js.UndefOr[String] = js.native
@@ -50,10 +50,13 @@ object EmailFileAssessmentRequest {
     def deleteContentData: Self = this.set("contentData", js.undefined)
     
     @scala.inline
-    def setDestinationRoutingReason(value: MailDestinationRoutingReason): Self = this.set("destinationRoutingReason", value.asInstanceOf[js.Any])
+    def setDestinationRoutingReason(value: NullableOption[MailDestinationRoutingReason]): Self = this.set("destinationRoutingReason", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDestinationRoutingReason: Self = this.set("destinationRoutingReason", js.undefined)
+    
+    @scala.inline
+    def setDestinationRoutingReasonNull: Self = this.set("destinationRoutingReason", null)
     
     @scala.inline
     def setRecipientEmail(value: String): Self = this.set("recipientEmail", value.asInstanceOf[js.Any])

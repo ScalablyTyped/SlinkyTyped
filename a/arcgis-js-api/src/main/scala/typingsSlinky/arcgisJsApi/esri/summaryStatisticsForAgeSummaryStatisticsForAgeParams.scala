@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait summaryStatisticsForAgeSummaryStatisticsForAgeParams extends Object {
   
   /**
-    * The end time for the age calculation. This can be a field name or a date value, such as `Date.now()`. If a `Date` is provided, then the `startTime` parameter must be a field name.
+    * The end time for the age calculation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-summaryStatisticsForAge.html#summaryStatisticsForAge)
     */
@@ -31,14 +31,14 @@ trait summaryStatisticsForAgeSummaryStatisticsForAgeParams extends Object {
   var layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer = js.native
   
   /**
-    * Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+    * Allows for cancelable requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-summaryStatisticsForAge.html#summaryStatisticsForAge)
     */
   var signal: js.UndefOr[AbortSignal] = js.native
   
   /**
-    * The start time for the age calculation. This can be a field name or a date value, such as `Date.now()`. If a `Date` is provided, then the `endTime` parameter must be a field name.
+    * The start time for the age calculation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-summaryStatisticsForAge.html#summaryStatisticsForAge)
     */

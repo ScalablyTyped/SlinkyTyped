@@ -13,7 +13,7 @@ trait UpdateIAMPolicyAssignmentResponse extends js.Object {
   var AssignmentId: js.UndefOr[String] = js.native
   
   /**
-    * The name of the assignment. 
+    * The name of the assignment or rule.
     */
   var AssignmentName: js.UndefOr[IAMPolicyAssignmentName] = js.native
   

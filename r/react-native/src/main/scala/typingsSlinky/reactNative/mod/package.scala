@@ -76,6 +76,11 @@ package object mod {
   
   type DatePickerIOSProperties = typingsSlinky.reactNative.mod.DatePickerIOSProps
   
+  /**
+    * @see https://reactnative.dev/docs/sectionlist
+    */
+  type DefaultSectionT = org.scalablytyped.runtime.StringDictionary[js.Any]
+  
   type DrawerLayoutAndroidComponent = slinky.core.ReactComponentClass[typingsSlinky.reactNative.mod.DrawerLayoutAndroidProps]
   
   type DrawerLayoutAndroidProperties = typingsSlinky.reactNative.mod.DrawerLayoutAndroidProps
@@ -151,6 +156,8 @@ package object mod {
   
   type LayoutAnimation = typingsSlinky.reactNative.mod.LayoutAnimationStatic
   
+  type LayoutChangeEvent = slinky.core.SyntheticEvent[typingsSlinky.reactNative.mod.NodeHandle, typingsSlinky.reactNative.anon.Layout]
+  
   type Linking = typingsSlinky.reactNative.mod.LinkingStatic
   
   type ListRenderItem[ItemT] = js.Function1[
@@ -165,7 +172,7 @@ package object mod {
   type LogBox = typingsSlinky.reactNative.mod.LogBoxStatic
   
   /**
-    * @see https://facebook.github.io/react-native/docs/maskedviewios.html
+    * @see https://reactnative.dev/docs/maskedviewios
     */
   type MaskedViewComponent = slinky.core.ReactComponentClass[typingsSlinky.reactNative.mod.MaskedViewIOSProps]
   
@@ -199,7 +206,7 @@ package object mod {
   
   type ModalProperties = typingsSlinky.reactNative.mod.ModalProps
   
-  type ModalProps = typingsSlinky.reactNative.mod.ModalBaseProps with typingsSlinky.reactNative.mod.ModalPropsIOS with typingsSlinky.reactNative.mod.ModalPropsAndroid
+  type ModalProps = typingsSlinky.reactNative.mod.ModalBaseProps with typingsSlinky.reactNative.mod.ModalPropsIOS with typingsSlinky.reactNative.mod.ModalPropsAndroid with typingsSlinky.reactNative.mod.ViewProps
   
   type NativeMethodsMixin = typingsSlinky.reactNative.mod.NativeMethods
   
@@ -226,7 +233,7 @@ package object mod {
   type PermissionsAndroid = typingsSlinky.reactNative.mod.PermissionsAndroidStatic
   
   /**
-    * @see https://facebook.github.io/react-native/docs/pickerios.html
+    * @see https://reactnative.dev/docs/pickerios
     * @see PickerIOS.ios.js
     */
   type PickerIOSComponent = slinky.core.ReactComponentClass[typingsSlinky.reactNative.mod.PickerIOSProps]
@@ -264,7 +271,7 @@ package object mod {
     * Deprecated - subclass NativeEventEmitter to create granular event modules instead of
     * adding all event listeners directly to RCTNativeAppEventEmitter.
     * @see https://github.com/facebook/react-native/blob/0.34-stable\Libraries\EventEmitter\RCTNativeAppEventEmitter.js
-    * @see https://facebook.github.io/react-native/docs/native-modules-ios.html#sending-events-to-javascript
+    * @see https://reactnative.dev/docs/native-modules-ios#sending-events-to-javascript
     */
   type RCTNativeAppEventEmitter = typingsSlinky.reactNative.mod.DeviceEventEmitterStatic
   
@@ -330,10 +337,12 @@ package object mod {
   
   type ScrollViewPropertiesIOS = typingsSlinky.reactNative.mod.ScrollViewPropsIOS
   
-  type SectionListProperties[ItemT] = typingsSlinky.reactNative.mod.SectionListProps[ItemT]
+  type SectionListData[ItemT, SectionT] = (typingsSlinky.reactNative.mod.SectionBase[ItemT, SectionT]) with SectionT
   
-  type SectionListRenderItem[ItemT] = js.Function1[
-    /* info */ typingsSlinky.reactNative.mod.SectionListRenderItemInfo[ItemT], 
+  type SectionListProperties[ItemT] = typingsSlinky.reactNative.mod.SectionListProps[ItemT, typingsSlinky.reactNative.mod.DefaultSectionT]
+  
+  type SectionListRenderItem[ItemT, SectionT] = js.Function1[
+    /* info */ typingsSlinky.reactNative.mod.SectionListRenderItemInfo[ItemT, SectionT], 
     slinky.core.facade.ReactElement | scala.Null
   ]
   
@@ -430,7 +439,7 @@ package object mod {
   type TextInputAndroidProperties = typingsSlinky.reactNative.mod.TextInputAndroidProps
   
   /**
-    * @see https://facebook.github.io/react-native/docs/textinput.html#methods
+    * @see https://reactnative.dev/docs/textinput#methods
     */
   type TextInputComponent = slinky.core.ReactComponentClass[typingsSlinky.reactNative.mod.TextInputProps]
   
@@ -479,7 +488,7 @@ package object mod {
     * NOTE: TouchableHighlight supports only one child
     * If you wish to have several child components, wrap them in a View.
     *
-    * @see https://facebook.github.io/react-native/docs/touchablehighlight.html
+    * @see https://reactnative.dev/docs/touchablehighlight
     */
   type TouchableHighlightComponent = slinky.core.ReactComponentClass[typingsSlinky.reactNative.mod.TouchableHighlightProps]
   
@@ -493,7 +502,7 @@ package object mod {
     *
     * Background drawable of native feedback touchable can be customized with background property.
     *
-    * @see https://facebook.github.io/react-native/docs/touchablenativefeedback.html#content
+    * @see https://reactnative.dev/docs/touchablenativefeedback#content
     */
   type TouchableNativeFeedbackComponent = slinky.core.ReactComponentClass[typingsSlinky.reactNative.mod.TouchableNativeFeedbackProps]
   
@@ -505,7 +514,7 @@ package object mod {
     * This is done without actually changing the view hierarchy,
     * and in general is easy to add to an app without weird side-effects.
     *
-    * @see https://facebook.github.io/react-native/docs/touchableopacity.html
+    * @see https://reactnative.dev/docs/touchableopacity
     */
   type TouchableOpacityComponent = slinky.core.ReactComponentClass[typingsSlinky.reactNative.mod.TouchableOpacityProps]
   
@@ -516,7 +525,7 @@ package object mod {
     * All the elements that respond to press should have a visual feedback when touched.
     * This is one of the primary reason a "web" app doesn't feel "native".
     *
-    * @see https://facebook.github.io/react-native/docs/touchablewithoutfeedback.html
+    * @see https://reactnative.dev/docs/touchablewithoutfeedback
     */
   type TouchableWithoutFeedbackComponent = slinky.core.ReactComponentClass[typingsSlinky.reactNative.mod.TouchableWithoutFeedbackProps]
   

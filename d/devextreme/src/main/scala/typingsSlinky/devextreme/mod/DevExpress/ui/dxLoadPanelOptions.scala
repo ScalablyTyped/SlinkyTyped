@@ -19,32 +19,48 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxLoadPanelOptions extends dxOverlayOptions[dxLoadPanel] {
   
-  /** @name dxLoadPanel.Options.animation */
+  /**
+    * [descr:dxLoadPanel.Options.animation]
+    */
   @JSName("animation")
   var animation_dxLoadPanelOptions: js.UndefOr[dxLoadPanelAnimation] = js.native
   
-  /** @name dxLoadPanel.Options.container */
+  /**
+    * [descr:dxLoadPanel.Options.container]
+    */
   var container: js.UndefOr[String | Element | JQuery] = js.native
   
-  /** @name dxLoadPanel.Options.delay */
+  /**
+    * [descr:dxLoadPanel.Options.delay]
+    */
   var delay: js.UndefOr[Double] = js.native
   
-  /** @name dxLoadPanel.Options.indicatorSrc */
+  /**
+    * [descr:dxLoadPanel.Options.indicatorSrc]
+    */
   var indicatorSrc: js.UndefOr[String] = js.native
   
-  /** @name dxLoadPanel.Options.message */
+  /**
+    * [descr:dxLoadPanel.Options.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name dxLoadPanel.Options.position */
+  /**
+    * [descr:dxLoadPanel.Options.position]
+    */
   @JSName("position")
   var position_dxLoadPanelOptions: js.UndefOr[
     bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | positionConfig | js.Function
   ] = js.native
   
-  /** @name dxLoadPanel.Options.showIndicator */
+  /**
+    * [descr:dxLoadPanel.Options.showIndicator]
+    */
   var showIndicator: js.UndefOr[Boolean] = js.native
   
-  /** @name dxLoadPanel.Options.showPane */
+  /**
+    * [descr:dxLoadPanel.Options.showPane]
+    */
   var showPane: js.UndefOr[Boolean] = js.native
 }
 object dxLoadPanelOptions {

@@ -1,8 +1,8 @@
 package typingsSlinky.terminalImage
 
 import typingsSlinky.terminalImage.anon.ReadonlyBuffer
-import typingsSlinky.terminalImage.anon.Readonlywidthnumberundefi
 import typingsSlinky.terminalImage.anon.Readonlywidthstringnumber
+import typingsSlinky.terminalImage.anon.ReadonlywidthstringnumberHeight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -103,7 +103,7 @@ object mod extends js.Object {
   	```
   	*/
   def gifBuffer(imageBuffer: ReadonlyBuffer): js.Function0[Unit] = js.native
-  def gifBuffer(imageBuffer: ReadonlyBuffer, options: Readonlywidthnumberundefi): js.Function0[Unit] = js.native
+  def gifBuffer(imageBuffer: ReadonlyBuffer, options: ReadonlywidthstringnumberHeight): js.Function0[Unit] = js.native
   
   /**
   	Display gifs in the terminal.
@@ -135,7 +135,7 @@ object mod extends js.Object {
   	```
   	*/
   def gifFile(filePath: String): js.Function0[Unit] = js.native
-  def gifFile(filePath: String, options: Readonlywidthnumberundefi): js.Function0[Unit] = js.native
+  def gifFile(filePath: String, options: ReadonlywidthstringnumberHeight): js.Function0[Unit] = js.native
   
   @js.native
   trait RenderFrame extends js.Object {

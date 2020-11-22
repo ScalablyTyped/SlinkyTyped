@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UnparsedSection extends Node {
   
-  var data: js.UndefOr[java.lang.String] = js.native
+  val data: js.UndefOr[java.lang.String] = js.native
   
   @JSName("parent")
-  var parent_UnparsedSection: UnparsedSource = js.native
+  val parent_UnparsedSection: UnparsedSource = js.native
 }

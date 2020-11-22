@@ -25,6 +25,12 @@ trait Options extends js.Object {
   /** Test duration. */
   var duration: js.UndefOr[String] = js.native
   
+  /** Partition the test run in different segments. https://k6.io/docs/using-k6/options#execution-segment */
+  var executionSegment: js.UndefOr[String] = js.native
+  
+  /** Define the sequence segment to run. https://k6.io/docs/using-k6/options#execution-segment */
+  var executionSegmentSequence: js.UndefOr[String] = js.native
+  
   /** Third party collector configuration. */
   var ext: js.UndefOr[StringDictionary[CollectorOptions]] = js.native
   
@@ -52,6 +58,9 @@ trait Options extends js.Object {
   /** Disable keepalive connections. */
   var noConnectionReuse: js.UndefOr[Boolean] = js.native
   
+  /** This disables the default behavior of resetting the cookie jar after each VU iteration. If it's enabled, saved cookies will be persisted across VU iterations.. */
+  var noCookiesReset: js.UndefOr[Boolean] = js.native
+  
   /** Disable usage reports. */
   var noUsageReport: js.UndefOr[Boolean] = js.native
   
@@ -63,6 +72,9 @@ trait Options extends js.Object {
   
   /** Maximum requests per second across all VUs. */
   var rps: js.UndefOr[Double] = js.native
+  
+  /** Scenario specifications. */
+  var scenarios: js.UndefOr[StringDictionary[Scenario]] = js.native
   
   /** Setup function timeout. */
   var setupTimeout: js.UndefOr[String] = js.native
@@ -163,6 +175,18 @@ object Options {
     def deleteDuration: Self = this.set("duration", js.undefined)
     
     @scala.inline
+    def setExecutionSegment(value: String): Self = this.set("executionSegment", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExecutionSegment: Self = this.set("executionSegment", js.undefined)
+    
+    @scala.inline
+    def setExecutionSegmentSequence(value: String): Self = this.set("executionSegmentSequence", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExecutionSegmentSequence: Self = this.set("executionSegmentSequence", js.undefined)
+    
+    @scala.inline
     def setExt(value: StringDictionary[CollectorOptions]): Self = this.set("ext", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -217,6 +241,12 @@ object Options {
     def deleteNoConnectionReuse: Self = this.set("noConnectionReuse", js.undefined)
     
     @scala.inline
+    def setNoCookiesReset(value: Boolean): Self = this.set("noCookiesReset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNoCookiesReset: Self = this.set("noCookiesReset", js.undefined)
+    
+    @scala.inline
     def setNoUsageReport(value: Boolean): Self = this.set("noUsageReport", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -239,6 +269,12 @@ object Options {
     
     @scala.inline
     def deleteRps: Self = this.set("rps", js.undefined)
+    
+    @scala.inline
+    def setScenarios(value: StringDictionary[Scenario]): Self = this.set("scenarios", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScenarios: Self = this.set("scenarios", js.undefined)
     
     @scala.inline
     def setSetupTimeout(value: String): Self = this.set("setupTimeout", value.asInstanceOf[js.Any])

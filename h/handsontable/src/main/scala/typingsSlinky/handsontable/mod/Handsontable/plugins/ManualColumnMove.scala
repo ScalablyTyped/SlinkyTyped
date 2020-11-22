@@ -12,21 +12,19 @@ trait ManualColumnMove extends Base {
   
   var backlight: BacklightUI = js.native
   
-  var columnsMapper: MoveColumnsMapper = js.native
+  def dragColumn(column: Double, dropIndex: Double): Boolean = js.native
+  
+  def dragColumns(columns: js.Array[Double], dropIndex: Double): Boolean = js.native
   
   var eventManager: EventManager = js.native
   
   var guideline: GuidelineUI = js.native
   
-  def moveColumn(column: Double, target: Double): Unit = js.native
+  def isMovePossible(columns: js.Array[Double], finalIndex: Double): Boolean = js.native
   
-  def moveColumns(columns: js.Array[Double], target: Double): Unit = js.native
+  def moveColumn(column: Double, finalIndex: Double): Boolean = js.native
   
-  def persistentStateLoad(): Unit = js.native
-  
-  def persistentStateSave(): Unit = js.native
-  
-  var removedColumns: js.Array[_] = js.native
+  def moveColumns(columns: js.Array[Double], finalIndex: Double): Boolean = js.native
 }
 object ManualColumnMove {
   
@@ -36,9 +34,10 @@ object ManualColumnMove {
     backlight: BacklightUI,
     callOnPluginsReady: js.Function0[Unit] => Unit,
     clearHooks: () => Unit,
-    columnsMapper: MoveColumnsMapper,
     destroy: () => Unit,
     disablePlugin: () => Unit,
+    dragColumn: (Double, Double) => Boolean,
+    dragColumns: (js.Array[Double], Double) => Boolean,
     enablePlugin: () => Unit,
     enabled: Boolean,
     eventManager: EventManager,
@@ -46,19 +45,16 @@ object ManualColumnMove {
     hot: Core,
     init: () => Unit,
     initialized: Boolean,
+    isMovePossible: (js.Array[Double], Double) => Boolean,
     isPluginsReady: Boolean,
-    moveColumn: (Double, Double) => Unit,
-    moveColumns: (js.Array[Double], Double) => Unit,
-    persistentStateLoad: () => Unit,
-    persistentStateSave: () => Unit,
+    moveColumn: (Double, Double) => Boolean,
+    moveColumns: (js.Array[Double], Double) => Boolean,
     pluginName: String,
     pluginsInitializedCallback: js.Array[_],
     removeHooks: String => Unit,
-    removedColumns: js.Array[_],
-    t: RecordTranslator,
     updatePlugin: () => Unit
   ): ManualColumnMove = {
-    val __obj = js.Dynamic.literal(addHook = js.Any.fromFunction2(addHook), backlight = backlight.asInstanceOf[js.Any], callOnPluginsReady = js.Any.fromFunction1(callOnPluginsReady), clearHooks = js.Any.fromFunction0(clearHooks), columnsMapper = columnsMapper.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), disablePlugin = js.Any.fromFunction0(disablePlugin), enablePlugin = js.Any.fromFunction0(enablePlugin), enabled = enabled.asInstanceOf[js.Any], eventManager = eventManager.asInstanceOf[js.Any], guideline = guideline.asInstanceOf[js.Any], hot = hot.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), initialized = initialized.asInstanceOf[js.Any], isPluginsReady = isPluginsReady.asInstanceOf[js.Any], moveColumn = js.Any.fromFunction2(moveColumn), moveColumns = js.Any.fromFunction2(moveColumns), persistentStateLoad = js.Any.fromFunction0(persistentStateLoad), persistentStateSave = js.Any.fromFunction0(persistentStateSave), pluginName = pluginName.asInstanceOf[js.Any], pluginsInitializedCallback = pluginsInitializedCallback.asInstanceOf[js.Any], removeHooks = js.Any.fromFunction1(removeHooks), removedColumns = removedColumns.asInstanceOf[js.Any], t = t.asInstanceOf[js.Any], updatePlugin = js.Any.fromFunction0(updatePlugin))
+    val __obj = js.Dynamic.literal(addHook = js.Any.fromFunction2(addHook), backlight = backlight.asInstanceOf[js.Any], callOnPluginsReady = js.Any.fromFunction1(callOnPluginsReady), clearHooks = js.Any.fromFunction0(clearHooks), destroy = js.Any.fromFunction0(destroy), disablePlugin = js.Any.fromFunction0(disablePlugin), dragColumn = js.Any.fromFunction2(dragColumn), dragColumns = js.Any.fromFunction2(dragColumns), enablePlugin = js.Any.fromFunction0(enablePlugin), enabled = enabled.asInstanceOf[js.Any], eventManager = eventManager.asInstanceOf[js.Any], guideline = guideline.asInstanceOf[js.Any], hot = hot.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), initialized = initialized.asInstanceOf[js.Any], isMovePossible = js.Any.fromFunction2(isMovePossible), isPluginsReady = isPluginsReady.asInstanceOf[js.Any], moveColumn = js.Any.fromFunction2(moveColumn), moveColumns = js.Any.fromFunction2(moveColumns), pluginName = pluginName.asInstanceOf[js.Any], pluginsInitializedCallback = pluginsInitializedCallback.asInstanceOf[js.Any], removeHooks = js.Any.fromFunction1(removeHooks), updatePlugin = js.Any.fromFunction0(updatePlugin))
     __obj.asInstanceOf[ManualColumnMove]
   }
   
@@ -81,7 +77,10 @@ object ManualColumnMove {
     def setBacklight(value: BacklightUI): Self = this.set("backlight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColumnsMapper(value: MoveColumnsMapper): Self = this.set("columnsMapper", value.asInstanceOf[js.Any])
+    def setDragColumn(value: (Double, Double) => Boolean): Self = this.set("dragColumn", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setDragColumns(value: (js.Array[Double], Double) => Boolean): Self = this.set("dragColumns", js.Any.fromFunction2(value))
     
     @scala.inline
     def setEventManager(value: EventManager): Self = this.set("eventManager", value.asInstanceOf[js.Any])
@@ -90,21 +89,12 @@ object ManualColumnMove {
     def setGuideline(value: GuidelineUI): Self = this.set("guideline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMoveColumn(value: (Double, Double) => Unit): Self = this.set("moveColumn", js.Any.fromFunction2(value))
+    def setIsMovePossible(value: (js.Array[Double], Double) => Boolean): Self = this.set("isMovePossible", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setMoveColumns(value: (js.Array[Double], Double) => Unit): Self = this.set("moveColumns", js.Any.fromFunction2(value))
+    def setMoveColumn(value: (Double, Double) => Boolean): Self = this.set("moveColumn", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setPersistentStateLoad(value: () => Unit): Self = this.set("persistentStateLoad", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setPersistentStateSave(value: () => Unit): Self = this.set("persistentStateSave", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setRemovedColumnsVarargs(value: js.Any*): Self = this.set("removedColumns", js.Array(value :_*))
-    
-    @scala.inline
-    def setRemovedColumns(value: js.Array[_]): Self = this.set("removedColumns", value.asInstanceOf[js.Any])
+    def setMoveColumns(value: (js.Array[Double], Double) => Boolean): Self = this.set("moveColumns", js.Any.fromFunction2(value))
   }
 }

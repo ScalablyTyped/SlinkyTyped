@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.CodesOfConductGetConductCodeEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.CodesOfConductGetConductCodeResponseData
+import typingsSlinky.octokitTypes.endpointsMod.CodeScanningGetAlertEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.CodeScanningGetAlertResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `668` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[CodesOfConductGetConductCodeEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[CodeScanningGetAlertEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[CodesOfConductGetConductCodeResponseData] = js.native
+  var response: OctokitResponse[CodeScanningGetAlertResponseData] = js.native
 }
 object `668` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[CodesOfConductGetConductCodeEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[CodesOfConductGetConductCodeResponseData]
+    parameters: RequestParameters with (Omit[CodeScanningGetAlertEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[CodeScanningGetAlertResponseData]
   ): `668` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`668`]
@@ -46,11 +46,9 @@ object `668` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[CodesOfConductGetConductCodeEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[CodeScanningGetAlertEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[CodesOfConductGetConductCodeResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[CodeScanningGetAlertResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

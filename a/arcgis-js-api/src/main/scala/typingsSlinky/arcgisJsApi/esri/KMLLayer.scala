@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait KMLLayer
   extends Layer
      with PortalLayer
-     with ScaleRangeLayer {
+     with ScaleRangeLayer
+     with BlendLayer {
   
   /**
     * A collection of [KMLSublayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-KMLSublayer.html)s.

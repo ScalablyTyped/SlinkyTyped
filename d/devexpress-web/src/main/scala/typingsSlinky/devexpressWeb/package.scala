@@ -452,6 +452,11 @@ package object devexpressWeb {
     scala.Unit
   ]
   
+  /**
+    * References a method that handles the ASPxClientDashboard.CustomizeDataSourceWizard event.
+    * @param source The event source.
+    * @param e A ASPxClientCustomizeDataSourceWizardEventArgs object that contains event data.
+    */
   type ASPxClientCustomizeDataSourceWizardEventHandler[Sender] = js.Function2[
     /* source */ Sender, 
     /* e */ typingsSlinky.devexpressWeb.ASPxClientCustomizeDataSourceWizardEventArgs, 
@@ -718,6 +723,39 @@ package object devexpressWeb {
   type ASPxClientDateNavigatorVisibleMonthChangedEventHandler[Sender] = js.Function2[
     /* source */ Sender, 
     /* e */ typingsSlinky.devexpressWeb.ASPxClientDateNavigatorVisibleMonthChangedEventArgs, 
+    scala.Unit
+  ]
+  
+  /**
+    * A method that will handle the CustomShapeCreateTemplate event.
+    * @param source An object that contains event data.
+    * @param e An object that contains event data.
+    */
+  type ASPxClientDiagramCustomShapeCreateTemplateEventHandler[Sender] = js.Function2[
+    /* source */ Sender, 
+    /* e */ typingsSlinky.devexpressWeb.ASPxClientDiagramCustomShapeCreateTemplateEventArgs, 
+    scala.Unit
+  ]
+  
+  /**
+    * A method that will handle the ItemClick and ItemDblClick events.
+    * @param source The event source.
+    * @param e An object that contains event data.
+    */
+  type ASPxClientDiagramItemClickEventHandler[Sender] = js.Function2[
+    /* source */ Sender, 
+    /* e */ typingsSlinky.devexpressWeb.ASPxClientDiagramItemClickEventArgs, 
+    scala.Unit
+  ]
+  
+  /**
+    * A method that will handle the SelectionChanged event.
+    * @param source The event source.
+    * @param e An object that contains event data.
+    */
+  type ASPxClientDiagramSelectionChangedEventHandler[Sender] = js.Function2[
+    /* source */ Sender, 
+    /* e */ typingsSlinky.devexpressWeb.ASPxClientDiagramSelectionChangedEventArgs, 
     scala.Unit
   ]
   
@@ -1263,6 +1301,17 @@ package object devexpressWeb {
   ]
   
   /**
+    * A method that will handle the CustomCommand event.
+    * @param source The event source.
+    * @param e The event data.
+    */
+  type ASPxClientGanttCustomCommandEventHandler[Sender] = js.Function2[
+    /* source */ Sender, 
+    /* e */ typingsSlinky.devexpressWeb.ASPxClientGanttCustomCommandEventArgs, 
+    scala.Unit
+  ]
+  
+  /**
     * A method that will handle the ASPxClientGlobalEvents.BeginCallback event.
     * @param source The event source.
     * @param e An ASPxDataValidationEventArgs object that contains event data.
@@ -1295,6 +1344,11 @@ package object devexpressWeb {
     scala.Unit
   ]
   
+  /**
+    * A method that will handle the BatchEditSummaryDisplayText event.
+    * @param source The event source. This parameter identifies the object which raised the event.
+    * @param e The event data.
+    */
   type ASPxClientGridBatchEditSummaryDisplayTextEventHandler[Sender] = js.Function2[
     /* source */ Sender, 
     /* e */ typingsSlinky.devexpressWeb.ASPxClientGridBatchEditSummaryDisplayTextEventArgs, 
@@ -2495,6 +2549,17 @@ package object devexpressWeb {
   type ASPxClientRichEditDocumentFormattedEventHandler = js.Function2[
     /* source */ typingsSlinky.devexpressWeb.ASPxClientRichEdit, 
     /* e */ typingsSlinky.devexpressWeb.ASPxClientRichEditDocumentFormattedEventArgs, 
+    js.Any
+  ]
+  
+  /**
+    * A method that handles the FloatingObjectMoved event.
+    * @param source The event source.
+    * @param e An object that contains event data.
+    */
+  type ASPxClientRichEditFloatingObjectMovedEventHandler = js.Function2[
+    /* source */ typingsSlinky.devexpressWeb.ASPxClientRichEdit, 
+    /* e */ typingsSlinky.devexpressWeb.ASPxClientRichEditFloatingObjectMovedEventArgs, 
     js.Any
   ]
   
@@ -4196,6 +4261,11 @@ package object devexpressWeb {
     * A client-side counterpart of the DateEdit extension.
     */
   type MVCxClientDateEdit = typingsSlinky.devexpressWeb.ASPxClientDateEdit
+  
+  /**
+    * A client-side counterpart of the Diagram extension.
+    */
+  type MVCxClientDiagram = typingsSlinky.devexpressWeb.ASPxClientDiagram
   
   /**
     * A client-side counterpart of the Gantt extension.

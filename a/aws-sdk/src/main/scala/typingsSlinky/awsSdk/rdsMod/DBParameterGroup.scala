@@ -13,12 +13,12 @@ trait DBParameterGroup extends js.Object {
   var DBParameterGroupArn: js.UndefOr[String] = js.native
   
   /**
-    * Provides the name of the DB parameter group family that this DB parameter group is compatible with.
+    * The name of the DB parameter group family that this DB parameter group is compatible with.
     */
   var DBParameterGroupFamily: js.UndefOr[String] = js.native
   
   /**
-    * Provides the name of the DB parameter group.
+    * The name of the DB parameter group.
     */
   var DBParameterGroupName: js.UndefOr[String] = js.native
   

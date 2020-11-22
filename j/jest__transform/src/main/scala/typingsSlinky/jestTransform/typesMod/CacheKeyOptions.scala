@@ -6,11 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CacheKeyOptions extends js.Object {
+trait CacheKeyOptions extends TransformOptions {
   
   var config: ProjectConfig = js.native
-  
-  var instrument: Boolean = js.native
   
   var rootDir: String = js.native
 }
@@ -39,9 +37,6 @@ object CacheKeyOptions {
     
     @scala.inline
     def setConfig(value: ProjectConfig): Self = this.set("config", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setInstrument(value: Boolean): Self = this.set("instrument", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRootDir(value: String): Self = this.set("rootDir", value.asInstanceOf[js.Any])

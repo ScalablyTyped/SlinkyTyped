@@ -27,6 +27,7 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.DragEventHandler
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.FormEventHandler
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.PointerEventHandler
@@ -38,8 +39,13 @@ import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.reactMdList.getListItemHeightMod.ListItemHeight
 import typingsSlinky.reactMdList.listItemAddonMod.ListItemAddonPosition
 import typingsSlinky.reactMdList.listItemAddonMod.ListItemAddonType
+import typingsSlinky.reactMdList.reactMdListStrings.`additions removals`
 import typingsSlinky.reactMdList.reactMdListStrings.`additions text`
 import typingsSlinky.reactMdList.reactMdListStrings.`inline`
+import typingsSlinky.reactMdList.reactMdListStrings.`removals additions`
+import typingsSlinky.reactMdList.reactMdListStrings.`removals text`
+import typingsSlinky.reactMdList.reactMdListStrings.`text additions`
+import typingsSlinky.reactMdList.reactMdListStrings.`text removals`
 import typingsSlinky.reactMdList.reactMdListStrings.additions
 import typingsSlinky.reactMdList.reactMdListStrings.all
 import typingsSlinky.reactMdList.reactMdListStrings.ascending
@@ -279,7 +285,9 @@ trait ListItemLinkProps extends js.Object {
     * Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
     * @see aria-atomic.
     */
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   /** Indicates that user input is required on the element before a form may be submitted. */
   var `aria-required`: js.UndefOr[Boolean] = js.native
@@ -704,7 +712,7 @@ trait ListItemLinkProps extends js.Object {
   // Unknown
   var radioGroup: js.UndefOr[String] = js.native
   
-  var referrerPolicy: js.UndefOr[String] = js.native
+  var referrerPolicy: js.UndefOr[HTMLAttributeReferrerPolicy] = js.native
   
   var rel: js.UndefOr[String] = js.native
   
@@ -1066,7 +1074,9 @@ object ListItemLinkProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1930,7 +1940,7 @@ object ListItemLinkProps {
     def deleteRadioGroup: Self = this.set("radioGroup", js.undefined)
     
     @scala.inline
-    def setReferrerPolicy(value: String): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    def setReferrerPolicy(value: HTMLAttributeReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)

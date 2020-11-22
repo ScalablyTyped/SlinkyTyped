@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeviceActionResult extends js.Object {
   
   // Action name
-  var actionName: js.UndefOr[String] = js.native
+  var actionName: js.UndefOr[NullableOption[String]] = js.native
   
   // State of the action. Possible values are: none, pending, canceled, active, done, failed, notSupported.
   var actionState: js.UndefOr[ActionState] = js.native
@@ -43,10 +43,13 @@ object DeviceActionResult {
     }
     
     @scala.inline
-    def setActionName(value: String): Self = this.set("actionName", value.asInstanceOf[js.Any])
+    def setActionName(value: NullableOption[String]): Self = this.set("actionName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteActionName: Self = this.set("actionName", js.undefined)
+    
+    @scala.inline
+    def setActionNameNull: Self = this.set("actionName", null)
     
     @scala.inline
     def setActionState(value: ActionState): Self = this.set("actionState", value.asInstanceOf[js.Any])

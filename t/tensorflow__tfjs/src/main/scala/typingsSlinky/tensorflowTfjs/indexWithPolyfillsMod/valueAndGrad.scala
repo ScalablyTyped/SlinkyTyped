@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 
 import typingsSlinky.tensorflowTfjsCore.anon.Grad
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,7 +32,8 @@ object valueAndGrad extends js.Object {
     * console.log('grad');
     * grad.print();
     * ```
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def apply[I /* <: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] */, O /* <: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] */](f: js.Function1[/* x */ I, O]): js.Function2[/* x */ I, /* dy */ js.UndefOr[O], Grad[O, I]] = js.native
 }

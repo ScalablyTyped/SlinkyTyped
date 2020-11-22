@@ -52,7 +52,11 @@ package object mod {
     slinky.core.facade.ReactElement
   ]
   
-  type ShouldRenderSuggestions = js.Function1[/* value */ java.lang.String, scala.Boolean]
+  type ShouldRenderSuggestions = js.Function2[
+    /* value */ java.lang.String, 
+    /* reason */ typingsSlinky.reactAutosuggest.mod.ShouldRenderReasons, 
+    scala.Boolean
+  ]
   
   type SuggestionsFetchRequested = js.Function1[
     /* request */ typingsSlinky.reactAutosuggest.mod.SuggestionsFetchRequestedParams, 

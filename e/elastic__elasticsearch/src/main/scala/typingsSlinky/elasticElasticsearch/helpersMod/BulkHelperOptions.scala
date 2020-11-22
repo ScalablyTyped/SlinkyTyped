@@ -1,7 +1,5 @@
 package typingsSlinky.elasticElasticsearch.helpersMod
 
-import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.`false`
-import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.`true`
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.wait_for
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.Readable
@@ -38,8 +36,6 @@ trait BulkHelperOptions[TDocument] extends js.Object {
   
   var human: js.UndefOr[Boolean] = js.native
   
-  var ignore: js.UndefOr[Double | js.Array[Double]] = js.native
-  
   var index: js.UndefOr[String] = js.native
   
   var method: js.UndefOr[String] = js.native
@@ -52,9 +48,11 @@ trait BulkHelperOptions[TDocument] extends js.Object {
   
   var pretty: js.UndefOr[Boolean] = js.native
   
-  var refresh: js.UndefOr[`true` | `false` | wait_for] = js.native
+  var refresh: js.UndefOr[wait_for | Boolean] = js.native
   
   var refreshOnCompletion: js.UndefOr[Boolean | String] = js.native
+  
+  var require_alias: js.UndefOr[Boolean] = js.native
   
   var retries: js.UndefOr[Double] = js.native
   
@@ -193,15 +191,6 @@ object BulkHelperOptions {
     def deleteHuman: Self = this.set("human", js.undefined)
     
     @scala.inline
-    def setIgnoreVarargs(value: Double*): Self = this.set("ignore", js.Array(value :_*))
-    
-    @scala.inline
-    def setIgnore(value: Double | js.Array[Double]): Self = this.set("ignore", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteIgnore: Self = this.set("ignore", js.undefined)
-    
-    @scala.inline
     def setIndex(value: String): Self = this.set("index", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -232,7 +221,7 @@ object BulkHelperOptions {
     def deletePretty: Self = this.set("pretty", js.undefined)
     
     @scala.inline
-    def setRefresh(value: `true` | `false` | wait_for): Self = this.set("refresh", value.asInstanceOf[js.Any])
+    def setRefresh(value: wait_for | Boolean): Self = this.set("refresh", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRefresh: Self = this.set("refresh", js.undefined)
@@ -242,6 +231,12 @@ object BulkHelperOptions {
     
     @scala.inline
     def deleteRefreshOnCompletion: Self = this.set("refreshOnCompletion", js.undefined)
+    
+    @scala.inline
+    def setRequire_alias(value: Boolean): Self = this.set("require_alias", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequire_alias: Self = this.set("require_alias", js.undefined)
     
     @scala.inline
     def setRetries(value: Double): Self = this.set("retries", value.asInstanceOf[js.Any])

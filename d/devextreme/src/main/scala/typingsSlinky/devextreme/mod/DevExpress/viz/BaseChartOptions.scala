@@ -4,10 +4,9 @@ import typingsSlinky.devextreme.anon.Duration
 import typingsSlinky.devextreme.anon.ElementModelTarget
 import typingsSlinky.devextreme.anon.ElementTarget
 import typingsSlinky.devextreme.anon.ModelTarget
-import typingsSlinky.devextreme.anon.`14`
+import typingsSlinky.devextreme.anon.`17`
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
-import typingsSlinky.devextreme.devextremeStrings.Default
 import typingsSlinky.devextreme.devextremeStrings.Material
 import typingsSlinky.devextreme.devextremeStrings.Ocean
 import typingsSlinky.devextreme.devextremeStrings.Office
@@ -35,57 +34,91 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BaseChartOptions[T] extends BaseWidgetOptions[T] {
   
-  /** @name BaseChart.Options.adaptiveLayout */
+  /**
+    * [descr:BaseChart.Options.adaptiveLayout]
+    */
   var adaptiveLayout: js.UndefOr[BaseChartAdaptiveLayout] = js.native
   
-  /** @name BaseChart.Options.animation */
+  /**
+    * [descr:BaseChart.Options.animation]
+    */
   var animation: js.UndefOr[Duration | Boolean] = js.native
   
-  /** @name BaseChart.Options.customizeLabel */
+  /**
+    * [descr:BaseChart.Options.customizeLabel]
+    */
   var customizeLabel: js.UndefOr[js.Function1[/* pointInfo */ js.Any, dxChartSeriesTypesCommonSeriesLabel]] = js.native
   
-  /** @name BaseChart.Options.customizePoint */
+  /**
+    * [descr:BaseChart.Options.customizePoint]
+    */
   var customizePoint: js.UndefOr[js.Function1[/* pointInfo */ js.Any, dxChartSeriesTypesCommonSeriesPoint]] = js.native
   
-  /** @name BaseChart.Options.dataSource */
+  /**
+    * [descr:BaseChart.Options.dataSource]
+    */
   var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.native
   
-  /** @name BaseChart.Options.legend */
+  /**
+    * [descr:BaseChart.Options.legend]
+    */
   var legend: js.UndefOr[BaseChartLegend] = js.native
   
-  /** @name BaseChart.Options.onDone */
-  var onDone: js.UndefOr[js.Function1[/* e */ `14`[T], _]] = js.native
+  /**
+    * [descr:BaseChart.Options.onDone]
+    */
+  var onDone: js.UndefOr[js.Function1[/* e */ `17`[T], _]] = js.native
   
-  /** @name BaseChart.Options.onPointClick */
+  /**
+    * [descr:BaseChart.Options.onPointClick]
+    */
   var onPointClick: js.UndefOr[(js.Function1[/* e */ ModelTarget[T], _]) | String] = js.native
   
-  /** @name BaseChart.Options.onPointHoverChanged */
+  /**
+    * [descr:BaseChart.Options.onPointHoverChanged]
+    */
   var onPointHoverChanged: js.UndefOr[js.Function1[/* e */ ElementTarget, _]] = js.native
   
-  /** @name BaseChart.Options.onPointSelectionChanged */
+  /**
+    * [descr:BaseChart.Options.onPointSelectionChanged]
+    */
   var onPointSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementTarget, _]] = js.native
   
-  /** @name BaseChart.Options.onTooltipHidden */
+  /**
+    * [descr:BaseChart.Options.onTooltipHidden]
+    */
   var onTooltipHidden: js.UndefOr[js.Function1[/* e */ ElementModelTarget[T], _]] = js.native
   
-  /** @name BaseChart.Options.onTooltipShown */
+  /**
+    * [descr:BaseChart.Options.onTooltipShown]
+    */
   var onTooltipShown: js.UndefOr[js.Function1[/* e */ ElementModelTarget[T], _]] = js.native
   
-  /** @name BaseChart.Options.palette */
+  /**
+    * [descr:BaseChart.Options.palette]
+    */
   var palette: js.UndefOr[
-    js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+    js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
   ] = js.native
   
-  /** @name BaseChart.Options.paletteExtensionMode */
+  /**
+    * [descr:BaseChart.Options.paletteExtensionMode]
+    */
   var paletteExtensionMode: js.UndefOr[alternate | blend | extrapolate] = js.native
   
-  /** @name BaseChart.Options.pointSelectionMode */
+  /**
+    * [descr:BaseChart.Options.pointSelectionMode]
+    */
   var pointSelectionMode: js.UndefOr[multiple | single_] = js.native
   
-  /** @name BaseChart.Options.series */
+  /**
+    * [descr:BaseChart.Options.series]
+    */
   var series: js.UndefOr[js.Any | js.Array[_]] = js.native
   
-  /** @name BaseChart.Options.tooltip */
+  /**
+    * [descr:BaseChart.Options.tooltip]
+    */
   @JSName("tooltip")
   var tooltip_BaseChartOptions: js.UndefOr[BaseChartTooltip] = js.native
 }
@@ -152,7 +185,7 @@ object BaseChartOptions {
     def deleteLegend: Self = this.set("legend", js.undefined)
     
     @scala.inline
-    def setOnDone(value: /* e */ `14`[T] => _): Self = this.set("onDone", js.Any.fromFunction1(value))
+    def setOnDone(value: /* e */ `17`[T] => _): Self = this.set("onDone", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnDone: Self = this.set("onDone", js.undefined)
@@ -195,7 +228,7 @@ object BaseChartOptions {
     
     @scala.inline
     def setPalette(
-      value: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+      value: js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
     ): Self = this.set("palette", value.asInstanceOf[js.Any])
     
     @scala.inline

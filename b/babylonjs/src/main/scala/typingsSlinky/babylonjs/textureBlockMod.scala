@@ -19,8 +19,13 @@ object textureBlockMod extends js.Object {
       * @param name defines the block name
       */
     def this(name: String) = this()
+    def this(name: String, fragmentOnly: Boolean) = this()
     
     var _defineName: js.Any = js.native
+    
+    var _fragmentOnly: js.Any = js.native
+    
+    var _gammaDefineName: js.Any = js.native
     
     var _injectVertexCode: js.Any = js.native
     
@@ -60,6 +65,11 @@ object textureBlockMod extends js.Object {
       * Gets or sets a boolean indicating if content needs to be converted to gamma space
       */
     var convertToGammaSpace: Boolean = js.native
+    
+    /**
+      * Gets or sets a boolean indicating if content needs to be converted to linear space
+      */
+    var convertToLinearSpace: Boolean = js.native
     
     /**
       * Gets the g output component

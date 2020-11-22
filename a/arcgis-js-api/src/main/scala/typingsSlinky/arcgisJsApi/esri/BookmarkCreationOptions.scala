@@ -10,11 +10,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BookmarkCreationOptions extends Object {
   
   /**
-    * Indicates whether the extent of the current view will become the [extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#extent) of a newly created bookmark. Default is `true`.
+    * Indicates whether the extent of the current view will become the [extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#extent) of a newly created bookmark.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions)
     */
   var captureExtent: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * _Since 4.17_ Indicates whether the rotation of the current view will be saved in the [viewpoint](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#viewpoint) of a newly created bookmark.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions)
+    */
+  var captureRotation: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * _Since 4.17_ Indicates whether the scale of the current view will be saved in the [viewpoint](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#viewpoint) of a newly created bookmark.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions)
+    */
+  var captureScale: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * _Since 4.17_ Indicates whether the viewpoint of the current view will become the [viewpoint](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#viewpoint) of a newly created bookmark.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions)
+    */
+  var captureViewpoint: js.UndefOr[Boolean] = js.native
   
   /**
     * An object that specifies the settings of the screenshot that will be used to create the bookmark's [thumbnail](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#thumbnail).
@@ -24,7 +45,7 @@ trait BookmarkCreationOptions extends Object {
   var screenshotSettings: js.UndefOr[BookmarkCreationOptionsScreenshotSettings] = js.native
   
   /**
-    * Indicates whether a screenshot is taken when a new bookmark is created. The screenshot will be set as the [thumbnail](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#thumbnail) in the newly created bookmark. Default is `true`.
+    * Indicates whether a screenshot is taken when a new bookmark is created.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions)
     */
@@ -62,6 +83,24 @@ object BookmarkCreationOptions {
     
     @scala.inline
     def deleteCaptureExtent: Self = this.set("captureExtent", js.undefined)
+    
+    @scala.inline
+    def setCaptureRotation(value: Boolean): Self = this.set("captureRotation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCaptureRotation: Self = this.set("captureRotation", js.undefined)
+    
+    @scala.inline
+    def setCaptureScale(value: Boolean): Self = this.set("captureScale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCaptureScale: Self = this.set("captureScale", js.undefined)
+    
+    @scala.inline
+    def setCaptureViewpoint(value: Boolean): Self = this.set("captureViewpoint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCaptureViewpoint: Self = this.set("captureViewpoint", js.undefined)
     
     @scala.inline
     def setScreenshotSettings(value: BookmarkCreationOptionsScreenshotSettings): Self = this.set("screenshotSettings", value.asInstanceOf[js.Any])

@@ -1,71 +1,23 @@
 package typingsSlinky.reactIntl.components
 
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
-import typingsSlinky.formatjsIntlUnifiedNumberformat.mod.Unit
-import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsCompactDisplay
-import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsCurrencyDisplay
-import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsCurrencySign
-import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsLocaleMatcher
-import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsNotation
-import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsSignDisplay
-import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsStyle
-import typingsSlinky.formatjsIntlUtils.unifiedNumberformatTypesMod.UnifiedNumberFormatOptionsUnitDisplay
-import typingsSlinky.reactIntl.anon.UnifiedNumberFormatOption
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.formatjsEcma402Abstract.typesNumberMod.NumberFormatOptions
+import typingsSlinky.reactIntl.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.formatjsEcma402Abstract.typesNumberMod.NumberFormatOptions with (/ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CustomFormatConfig * / js.Any) with typingsSlinky.reactIntl.anon.`0` because: IArray(Could't extract props from / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CustomFormatConfig * / js.Any because couldn't resolve ClassTree.) */
 object FormattedNumber {
+  
   @JSImport("react-intl", "FormattedNumber")
   @js.native
   object component extends js.Object
   
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
-    @scala.inline
-    def compactDisplay(value: UnifiedNumberFormatOptionsCompactDisplay): this.type = set("compactDisplay", value.asInstanceOf[js.Any])
-    @scala.inline
-    def currency(value: String): this.type = set("currency", value.asInstanceOf[js.Any])
-    @scala.inline
-    def currencyDisplay(value: String with UnifiedNumberFormatOptionsCurrencyDisplay): this.type = set("currencyDisplay", value.asInstanceOf[js.Any])
-    @scala.inline
-    def currencySign(value: UnifiedNumberFormatOptionsCurrencySign): this.type = set("currencySign", value.asInstanceOf[js.Any])
-    @scala.inline
-    def format(value: String): this.type = set("format", value.asInstanceOf[js.Any])
-    @scala.inline
-    def localeMatcher(value: String with UnifiedNumberFormatOptionsLocaleMatcher): this.type = set("localeMatcher", value.asInstanceOf[js.Any])
-    @scala.inline
-    def maximumFractionDigits(value: Double): this.type = set("maximumFractionDigits", value.asInstanceOf[js.Any])
-    @scala.inline
-    def maximumSignificantDigits(value: Double): this.type = set("maximumSignificantDigits", value.asInstanceOf[js.Any])
-    @scala.inline
-    def minimumFractionDigits(value: Double): this.type = set("minimumFractionDigits", value.asInstanceOf[js.Any])
-    @scala.inline
-    def minimumIntegerDigits(value: Double): this.type = set("minimumIntegerDigits", value.asInstanceOf[js.Any])
-    @scala.inline
-    def minimumSignificantDigits(value: Double): this.type = set("minimumSignificantDigits", value.asInstanceOf[js.Any])
-    @scala.inline
-    def notation(value: UnifiedNumberFormatOptionsNotation): this.type = set("notation", value.asInstanceOf[js.Any])
-    @scala.inline
-    def signDisplay(value: UnifiedNumberFormatOptionsSignDisplay): this.type = set("signDisplay", value.asInstanceOf[js.Any])
-    @scala.inline
-    def style(value: String with UnifiedNumberFormatOptionsStyle): this.type = set("style", value.asInstanceOf[js.Any])
-    @scala.inline
-    def unit(value: Unit): this.type = set("unit", value.asInstanceOf[js.Any])
-    @scala.inline
-    def unitDisplay(value: UnifiedNumberFormatOptionsUnitDisplay): this.type = set("unitDisplay", value.asInstanceOf[js.Any])
-    @scala.inline
-    def useGrouping(value: Boolean): this.type = set("useGrouping", value.asInstanceOf[js.Any])
-  }
+  def apply(
+    p: NumberFormatOptions with (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CustomFormatConfig */ js.Any) with `0`
+  ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  def withProps(p: UnifiedNumberFormatOption): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  @scala.inline
-  def apply(value: Double): Builder = {
-    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[UnifiedNumberFormatOption]))
-  }
+  implicit def make(companion: FormattedNumber.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
-

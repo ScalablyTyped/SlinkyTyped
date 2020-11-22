@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PersistOptions extends js.Object {
   
   /**
-  		Text to be persisted before the symbol. No prefix text will be displayed if set to an empty string.
+  		Text or a function that returns text to be persisted before the symbol. No prefix text will be displayed if set to an empty string.
   		Default: Current `prefixText`.
   		*/
-  val prefixText: js.UndefOr[String] = js.native
+  val prefixText: js.UndefOr[String | PrefixTextGenerator] = js.native
   
   /**
   		Symbol to replace the spinner with.
@@ -49,7 +49,10 @@ object PersistOptions {
     }
     
     @scala.inline
-    def setPrefixText(value: String): Self = this.set("prefixText", value.asInstanceOf[js.Any])
+    def setPrefixTextFunction0(value: () => String): Self = this.set("prefixText", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setPrefixText(value: String | PrefixTextGenerator): Self = this.set("prefixText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePrefixText: Self = this.set("prefixText", js.undefined)

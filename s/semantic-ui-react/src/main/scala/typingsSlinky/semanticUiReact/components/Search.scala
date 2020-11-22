@@ -7,7 +7,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.inputInputMod.InputProps
@@ -74,7 +73,7 @@ object Search {
     
     @scala.inline
     def inputFunction3(
-      value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, InputProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("input", js.Any.fromFunction3(value))
     
     @scala.inline

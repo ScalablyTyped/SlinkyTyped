@@ -12,7 +12,7 @@ trait Continent extends js.Object {
   
   var continent: js.UndefOr[Base] = js.native
   
-  var hover: js.UndefOr[`0`] = js.native
+  var hover: js.UndefOr[`3`] = js.native
   
   var place: js.UndefOr[Base] = js.native
 }
@@ -52,7 +52,7 @@ object Continent {
     def deleteContinent: Self = this.set("continent", js.undefined)
     
     @scala.inline
-    def setHover(value: `0`): Self = this.set("hover", value.asInstanceOf[js.Any])
+    def setHover(value: `3`): Self = this.set("hover", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHover: Self = this.set("hover", js.undefined)

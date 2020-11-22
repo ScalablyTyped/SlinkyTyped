@@ -40,5 +40,7 @@ object signature extends js.Object {
       * @returns ASCII armor
       */
     def armor(): ReadableStream[String] = js.native
+    
+    var packets: List = js.native
   }
 }

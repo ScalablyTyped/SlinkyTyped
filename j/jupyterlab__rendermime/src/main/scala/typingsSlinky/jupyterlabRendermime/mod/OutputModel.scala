@@ -1,11 +1,11 @@
 package typingsSlinky.jupyterlabRendermime.mod
 
-import typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat.IOutput
+import typingsSlinky.jupyterlabNbformat.mod.IOutput
 import typingsSlinky.jupyterlabRendermime.outputmodelMod.IOutputModel.IOptions
-import typingsSlinky.phosphorCoreutils.jsonMod.JSONObject
+import typingsSlinky.luminoCoreutils.jsonMod.PartialJSONObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/rendermime", "OutputModel")
 @js.native
@@ -16,10 +16,10 @@ class OutputModel protected ()
     */
   def this(options: IOptions) = this()
 }
-
 @JSImport("@jupyterlab/rendermime", "OutputModel")
 @js.native
 object OutputModel extends js.Object {
+  
   /**
     * Get the data for an output.
     *
@@ -27,7 +27,8 @@ object OutputModel extends js.Object {
     *
     * @returns - The data for the payload.
     */
-  def getData(output: IOutput): JSONObject = js.native
+  def getData(output: IOutput): PartialJSONObject = js.native
+  
   /**
     * Get the metadata from an output message.
     *
@@ -35,6 +36,5 @@ object OutputModel extends js.Object {
     *
     * @returns - The metadata for the payload.
     */
-  def getMetadata(output: IOutput): JSONObject = js.native
+  def getMetadata(output: IOutput): PartialJSONObject = js.native
 }
-

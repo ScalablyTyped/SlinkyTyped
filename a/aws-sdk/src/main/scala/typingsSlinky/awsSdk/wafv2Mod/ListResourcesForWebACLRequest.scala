@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListResourcesForWebACLRequest extends js.Object {
   
   /**
-    * Used for web ACLs that are scoped for regional applications. A regional application can be an Application Load Balancer (ALB) or an API Gateway stage. 
+    * Used for web ACLs that are scoped for regional applications. A regional application can be an Application Load Balancer (ALB), an API Gateway REST API, or an AppSync GraphQL API. 
     */
   var ResourceType: js.UndefOr[typingsSlinky.awsSdk.wafv2Mod.ResourceType] = js.native
   

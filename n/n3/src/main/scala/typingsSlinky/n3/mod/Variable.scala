@@ -8,11 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Variable protected ()
   extends typingsSlinky.rdfJs.mod.Variable
-     with QuadGraph
-     with QuadObject
-     with QuadSubject
-     with Quad_Predicate
-     with Term {
+     with _QuadGraph
+     with _QuadObject
+     with _QuadSubject
+     with _Term {
   def this(name: String) = this()
   
   val id: String = js.native

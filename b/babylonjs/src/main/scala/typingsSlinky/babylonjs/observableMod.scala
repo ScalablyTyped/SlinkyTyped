@@ -79,6 +79,11 @@ object observableMod extends js.Object {
       * The object that originally notified the event
       */
     var target: js.UndefOr[js.Any] = js.native
+    
+    /**
+      * User defined information that will be sent to observers
+      */
+    var userInfo: js.UndefOr[js.Any] = js.native
   }
   
   @js.native
@@ -302,6 +307,7 @@ object observableMod extends js.Object {
       * @param mask defines the mask of the current notification (observers with incompatible mask (ie mask & observer.mask === 0) will not be notified)
       * @param target defines the original target of the state
       * @param currentTarget defines the current target of the state
+      * @param userInfo defines any user info to send to observers
       * @returns false if the complete observer chain was not processed (because one observer set the skipNextObservers to true)
       */
     def notifyObservers(eventData: T): Boolean = js.native
@@ -309,14 +315,64 @@ object observableMod extends js.Object {
       eventData: T,
       mask: js.UndefOr[scala.Nothing],
       target: js.UndefOr[scala.Nothing],
+      currentTarget: js.UndefOr[scala.Nothing],
+      userInfo: js.Any
+    ): Boolean = js.native
+    def notifyObservers(
+      eventData: T,
+      mask: js.UndefOr[scala.Nothing],
+      target: js.UndefOr[scala.Nothing],
       currentTarget: js.Any
     ): Boolean = js.native
+    def notifyObservers(
+      eventData: T,
+      mask: js.UndefOr[scala.Nothing],
+      target: js.UndefOr[scala.Nothing],
+      currentTarget: js.Any,
+      userInfo: js.Any
+    ): Boolean = js.native
     def notifyObservers(eventData: T, mask: js.UndefOr[scala.Nothing], target: js.Any): Boolean = js.native
+    def notifyObservers(
+      eventData: T,
+      mask: js.UndefOr[scala.Nothing],
+      target: js.Any,
+      currentTarget: js.UndefOr[scala.Nothing],
+      userInfo: js.Any
+    ): Boolean = js.native
     def notifyObservers(eventData: T, mask: js.UndefOr[scala.Nothing], target: js.Any, currentTarget: js.Any): Boolean = js.native
+    def notifyObservers(
+      eventData: T,
+      mask: js.UndefOr[scala.Nothing],
+      target: js.Any,
+      currentTarget: js.Any,
+      userInfo: js.Any
+    ): Boolean = js.native
     def notifyObservers(eventData: T, mask: Double): Boolean = js.native
+    def notifyObservers(
+      eventData: T,
+      mask: Double,
+      target: js.UndefOr[scala.Nothing],
+      currentTarget: js.UndefOr[scala.Nothing],
+      userInfo: js.Any
+    ): Boolean = js.native
     def notifyObservers(eventData: T, mask: Double, target: js.UndefOr[scala.Nothing], currentTarget: js.Any): Boolean = js.native
+    def notifyObservers(
+      eventData: T,
+      mask: Double,
+      target: js.UndefOr[scala.Nothing],
+      currentTarget: js.Any,
+      userInfo: js.Any
+    ): Boolean = js.native
     def notifyObservers(eventData: T, mask: Double, target: js.Any): Boolean = js.native
+    def notifyObservers(
+      eventData: T,
+      mask: Double,
+      target: js.Any,
+      currentTarget: js.UndefOr[scala.Nothing],
+      userInfo: js.Any
+    ): Boolean = js.native
     def notifyObservers(eventData: T, mask: Double, target: js.Any, currentTarget: js.Any): Boolean = js.native
+    def notifyObservers(eventData: T, mask: Double, target: js.Any, currentTarget: js.Any, userInfo: js.Any): Boolean = js.native
     
     /**
       * Calling this will execute each callback, expecting it to be a promise or return a value.
@@ -329,6 +385,7 @@ object observableMod extends js.Object {
       * @param mask is used to filter observers defaults to -1
       * @param target defines the callback target (see EventState)
       * @param currentTarget defines he current object in the bubbling phase
+      * @param userInfo defines any user info to send to observers
       * @returns {Promise<T>} will return a Promise than resolves when all callbacks executed successfully.
       */
     def notifyObserversWithPromise(eventData: T): js.Promise[T] = js.native
@@ -336,14 +393,64 @@ object observableMod extends js.Object {
       eventData: T,
       mask: js.UndefOr[scala.Nothing],
       target: js.UndefOr[scala.Nothing],
+      currentTarget: js.UndefOr[scala.Nothing],
+      userInfo: js.Any
+    ): js.Promise[T] = js.native
+    def notifyObserversWithPromise(
+      eventData: T,
+      mask: js.UndefOr[scala.Nothing],
+      target: js.UndefOr[scala.Nothing],
       currentTarget: js.Any
     ): js.Promise[T] = js.native
+    def notifyObserversWithPromise(
+      eventData: T,
+      mask: js.UndefOr[scala.Nothing],
+      target: js.UndefOr[scala.Nothing],
+      currentTarget: js.Any,
+      userInfo: js.Any
+    ): js.Promise[T] = js.native
     def notifyObserversWithPromise(eventData: T, mask: js.UndefOr[scala.Nothing], target: js.Any): js.Promise[T] = js.native
+    def notifyObserversWithPromise(
+      eventData: T,
+      mask: js.UndefOr[scala.Nothing],
+      target: js.Any,
+      currentTarget: js.UndefOr[scala.Nothing],
+      userInfo: js.Any
+    ): js.Promise[T] = js.native
     def notifyObserversWithPromise(eventData: T, mask: js.UndefOr[scala.Nothing], target: js.Any, currentTarget: js.Any): js.Promise[T] = js.native
+    def notifyObserversWithPromise(
+      eventData: T,
+      mask: js.UndefOr[scala.Nothing],
+      target: js.Any,
+      currentTarget: js.Any,
+      userInfo: js.Any
+    ): js.Promise[T] = js.native
     def notifyObserversWithPromise(eventData: T, mask: Double): js.Promise[T] = js.native
+    def notifyObserversWithPromise(
+      eventData: T,
+      mask: Double,
+      target: js.UndefOr[scala.Nothing],
+      currentTarget: js.UndefOr[scala.Nothing],
+      userInfo: js.Any
+    ): js.Promise[T] = js.native
     def notifyObserversWithPromise(eventData: T, mask: Double, target: js.UndefOr[scala.Nothing], currentTarget: js.Any): js.Promise[T] = js.native
+    def notifyObserversWithPromise(
+      eventData: T,
+      mask: Double,
+      target: js.UndefOr[scala.Nothing],
+      currentTarget: js.Any,
+      userInfo: js.Any
+    ): js.Promise[T] = js.native
     def notifyObserversWithPromise(eventData: T, mask: Double, target: js.Any): js.Promise[T] = js.native
+    def notifyObserversWithPromise(
+      eventData: T,
+      mask: Double,
+      target: js.Any,
+      currentTarget: js.UndefOr[scala.Nothing],
+      userInfo: js.Any
+    ): js.Promise[T] = js.native
     def notifyObserversWithPromise(eventData: T, mask: Double, target: js.Any, currentTarget: js.Any): js.Promise[T] = js.native
+    def notifyObserversWithPromise(eventData: T, mask: Double, target: js.Any, currentTarget: js.Any, userInfo: js.Any): js.Promise[T] = js.native
     
     /**
       * Gets the list of observers

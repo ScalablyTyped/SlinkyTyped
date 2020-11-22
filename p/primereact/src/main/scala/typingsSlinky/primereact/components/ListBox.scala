@@ -55,6 +55,9 @@ object ListBox {
     def itemTemplate(value: /* item */ js.Any => js.UndefOr[ReactElement]): this.type = set("itemTemplate", js.Any.fromFunction1(value))
     
     @scala.inline
+    def listClassName(value: String): this.type = set("listClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def listStyle(value: js.Object): this.type = set("listStyle", value.asInstanceOf[js.Any])
     
     @scala.inline

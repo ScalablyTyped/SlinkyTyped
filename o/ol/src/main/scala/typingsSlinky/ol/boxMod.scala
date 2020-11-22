@@ -13,6 +13,9 @@ object boxMod extends js.Object {
   trait RenderBox
     extends typingsSlinky.ol.disposableMod.default {
     
+    /**
+      * Creates or updates the cached geometry.
+      */
     def createOrUpdateGeometry(): Unit = js.native
     
     def getGeometry(): typingsSlinky.ol.polygonMod.default = js.native

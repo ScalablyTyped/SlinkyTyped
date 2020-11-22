@@ -1,5 +1,6 @@
 package typingsSlinky.wechatMiniprogram.DB
 
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,12 +12,12 @@ trait GeoPoint extends GeoInstance {
   
   var longitude: Double = js.native
   
-  def toJSON(): js.Object = js.native
+  def toJSON(): Record[String, _] = js.native
 }
 object GeoPoint {
   
   @scala.inline
-  def apply(latitude: Double, longitude: Double, toJSON: () => js.Object): GeoPoint = {
+  def apply(latitude: Double, longitude: Double, toJSON: () => Record[String, _]): GeoPoint = {
     val __obj = js.Dynamic.literal(latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[GeoPoint]
   }
@@ -43,6 +44,6 @@ object GeoPoint {
     def setLongitude(value: Double): Self = this.set("longitude", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setToJSON(value: () => js.Object): Self = this.set("toJSON", js.Any.fromFunction0(value))
+    def setToJSON(value: () => Record[String, _]): Self = this.set("toJSON", js.Any.fromFunction0(value))
   }
 }

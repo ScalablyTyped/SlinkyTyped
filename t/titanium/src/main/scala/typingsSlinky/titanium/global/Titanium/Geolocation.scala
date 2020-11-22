@@ -3,6 +3,7 @@ package typingsSlinky.titanium.global.Titanium
 import typingsSlinky.titanium.Dictionary
 import typingsSlinky.titanium.ForwardGeocodeResponse
 import typingsSlinky.titanium.HeadingResponse
+import typingsSlinky.titanium.LocationAccuracyAuthorizationResponse
 import typingsSlinky.titanium.LocationAuthorizationResponse
 import typingsSlinky.titanium.LocationResults
 import typingsSlinky.titanium.ReverseGeocodeResponse
@@ -39,6 +40,16 @@ class Geolocation ()
 @JSGlobal("Titanium.Geolocation")
 @js.native
 object Geolocation extends js.Object {
+  
+  /**
+    * The user authorized the app to access location data with full accuracy.
+    */
+  val ACCURACY_AUTHORIZATION_FULL: Double = js.native
+  
+  /**
+    * The user authorized the app to access location data with reduced accuracy.
+    */
+  val ACCURACY_AUTHORIZATION_REDUCED: Double = js.native
   
   /**
     * Use with [accuracy](Titanium.Geolocation.accuracy) to request the best
@@ -81,6 +92,11 @@ object Geolocation extends js.Object {
     * updates accurate to the nearest 10 meters.
     */
   val ACCURACY_NEAREST_TEN_METERS: Double = js.native
+  
+  /**
+    * The level of accuracy used when an app isn’t authorized for full accuracy location data.
+    */
+  val ACCURACY_REDUCED: Double = js.native
   
   /**
     * Use with [accuracy](Titanium.Geolocation.accuracy) to request location
@@ -384,6 +400,12 @@ object Geolocation extends js.Object {
   def getLifecycleContainer(): Window | TabGroup = js.native
   
   /**
+    * Gets the value of the <Titanium.Geolocation.locationAccuracyAuthorization> property.
+    * @deprecated Access <Titanium.Geolocation.locationAccuracyAuthorization> instead.
+    */
+  def getLocationAccuracyAuthorization(): Double = js.native
+  
+  /**
     * Gets the value of the <Titanium.Geolocation.locationServicesAuthorization> property.
     * @deprecated Access <Titanium.Geolocation.locationServicesAuthorization> instead.
     */
@@ -454,6 +476,11 @@ object Geolocation extends js.Object {
   var lifecycleContainer: Window | TabGroup = js.native
   
   /**
+    * A value that indicates the level of location accuracy the app has permission to use.
+    */
+  val locationAccuracyAuthorization: Double = js.native
+  
+  /**
     * Returns an authorization constant indicating if the application has access to location services.
     */
   val locationServicesAuthorization: Double = js.native
@@ -521,6 +548,14 @@ object Geolocation extends js.Object {
   def requestLocationPermissions(
     authorizationType: Double,
     callback: js.Function1[/* param0 */ LocationAuthorizationResponse, Unit]
+  ): Unit = js.native
+  
+  /**
+    * Requests the user's permission to temporarily use location services with full accuracy.
+    */
+  def requestTemporaryFullAccuracyAuthorization(
+    purposeKey: String,
+    callback: js.Function1[/* param0 */ LocationAccuracyAuthorizationResponse, Unit]
   ): Unit = js.native
   
   /**

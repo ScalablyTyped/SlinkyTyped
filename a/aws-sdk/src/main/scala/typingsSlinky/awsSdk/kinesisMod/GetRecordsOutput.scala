@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GetRecordsOutput extends js.Object {
   
+  var ChildShards: js.UndefOr[ChildShardList] = js.native
+  
   /**
     * The number of milliseconds the GetRecords response is from the tip of the stream, indicating how far behind current time the consumer is. A value of zero indicates that record processing is caught up, and there are no new records to process at this moment.
     */
@@ -50,6 +52,15 @@ object GetRecordsOutput {
     
     @scala.inline
     def setRecords(value: RecordList): Self = this.set("Records", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setChildShardsVarargs(value: ChildShard*): Self = this.set("ChildShards", js.Array(value :_*))
+    
+    @scala.inline
+    def setChildShards(value: ChildShardList): Self = this.set("ChildShards", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChildShards: Self = this.set("ChildShards", js.undefined)
     
     @scala.inline
     def setMillisBehindLatest(value: MillisBehindLatest): Self = this.set("MillisBehindLatest", value.asInstanceOf[js.Any])

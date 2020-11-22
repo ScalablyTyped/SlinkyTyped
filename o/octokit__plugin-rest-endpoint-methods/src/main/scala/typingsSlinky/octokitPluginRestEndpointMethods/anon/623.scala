@@ -3,7 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.AppsDeleteInstallationEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.AppsCreateFromManifestEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.AppsCreateFromManifestResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -14,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `623` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[AppsDeleteInstallationEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[AppsCreateFromManifestEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[_] = js.native
+  var response: OctokitResponse[AppsCreateFromManifestResponseData] = js.native
 }
 object `623` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[AppsDeleteInstallationEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[_]
+    parameters: RequestParameters with (Omit[AppsCreateFromManifestEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[AppsCreateFromManifestResponseData]
   ): `623` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`623`]
@@ -46,10 +47,10 @@ object `623` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[AppsDeleteInstallationEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[AppsCreateFromManifestEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[AppsCreateFromManifestResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

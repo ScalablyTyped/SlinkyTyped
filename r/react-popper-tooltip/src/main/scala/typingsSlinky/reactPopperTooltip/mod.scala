@@ -1,6 +1,6 @@
 package typingsSlinky.reactPopperTooltip
 
-import typingsSlinky.reactPopperTooltip.anon.CloseOnOutOfBoundaries
+import typingsSlinky.reactPopperTooltip.anon.CloseOnReferenceHidden
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,6 +16,6 @@ object mod extends js.Object {
   @js.native
   object default extends js.Object {
     
-    var defaultProps: CloseOnOutOfBoundaries = js.native
+    var defaultProps: CloseOnReferenceHidden = js.native
   }
 }

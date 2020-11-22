@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.anon
 
+import typingsSlinky.grammarkdown.grammarkdownMod.Range2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Range extends js.Object {
   
-  var range: typingsSlinky.grammarkdown.coreMod.Range = js.native
+  var range: Range2 = js.native
   
   var text: String = js.native
 }
 object Range {
   
   @scala.inline
-  def apply(range: typingsSlinky.grammarkdown.coreMod.Range, text: String): Range = {
+  def apply(range: Range2, text: String): Range = {
     val __obj = js.Dynamic.literal(range = range.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
     __obj.asInstanceOf[Range]
   }
@@ -35,7 +36,7 @@ object Range {
     }
     
     @scala.inline
-    def setRange(value: typingsSlinky.grammarkdown.coreMod.Range): Self = this.set("range", value.asInstanceOf[js.Any])
+    def setRange(value: Range2): Self = this.set("range", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])

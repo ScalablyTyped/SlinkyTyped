@@ -7,43 +7,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GradientBlockColorStep extends js.Object {
   
-  /**
-    * Gets or sets the color associated with this step
-    */
-  var color: Color3 = js.native
+  var _color: js.Any = js.native
+  
+  var _step: js.Any = js.native
   
   /**
-    * Gets or sets a value indicating which step this color is associated with (between 0 and 1)
+    * Gets the color associated with this step
     */
-  var step: Double = js.native
-}
-object GradientBlockColorStep {
+  def color: Color3 = js.native
+  /**
+    * Sets the color associated with this step
+    */
+  def color_=(`val`: Color3): Unit = js.native
   
-  @scala.inline
-  def apply(color: Color3, step: Double): GradientBlockColorStep = {
-    val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], step = step.asInstanceOf[js.Any])
-    __obj.asInstanceOf[GradientBlockColorStep]
-  }
-  
-  @scala.inline
-  implicit class GradientBlockColorStepOps[Self <: GradientBlockColorStep] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setColor(value: Color3): Self = this.set("color", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
-  }
+  /**
+    * Gets value indicating which step this color is associated with (between 0 and 1)
+    */
+  def step: Double = js.native
+  /**
+    * Sets a value indicating which step this color is associated with (between 0 and 1)
+    */
+  def step_=(`val`: Double): Unit = js.native
 }

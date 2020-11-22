@@ -4,7 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.anon.EventItem
+import typingsSlinky.baseui.anon.Item
 import typingsSlinky.baseui.anon.OptionState
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -57,6 +57,18 @@ object SelectDropdown {
     def isLoading(value: Boolean): this.type = set("isLoading", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def keyboardControlNodeRefObject(value: ReactRef[_]): this.type = set("keyboardControlNode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def keyboardControlNodeFunction1(value: /* instance */ _ | Null => Unit): this.type = set("keyboardControlNode", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def keyboardControlNode(value: Ref[_]): this.type = set("keyboardControlNode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def keyboardControlNodeNull: this.type = set("keyboardControlNode", null)
+    
+    @scala.inline
     def labelKey(value: String): this.type = set("labelKey", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -75,7 +87,7 @@ object SelectDropdown {
     def onActiveDescendantChange(value: /* id */ js.UndefOr[String] => Unit): this.type = set("onActiveDescendantChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onItemSelect(value: /* args */ EventItem => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
+    def onItemSelect(value: /* args */ Item => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
     
     @scala.inline
     def optionsVarargs(value: Option*): this.type = set("options", js.Array(value :_*))

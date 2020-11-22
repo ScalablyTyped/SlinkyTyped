@@ -3,6 +3,7 @@ package typingsSlinky.inquirer.mod
 import typingsSlinky.inquirer.anon.BottomBar
 import typingsSlinky.inquirer.anon.TypeofSeparator
 import typingsSlinky.inquirer.anon.Ui
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,6 +35,7 @@ trait Inquirer extends PromptModuleBase {
     * The default prompt-module.
     */
   def prompt[T](questions: QuestionCollection[T]): js.Promise[T] with Ui = js.native
+  def prompt[T](questions: QuestionCollection[T], initialAnswers: Partial[T]): js.Promise[T] with Ui = js.native
   /**
     * The default prompt-module.
     */

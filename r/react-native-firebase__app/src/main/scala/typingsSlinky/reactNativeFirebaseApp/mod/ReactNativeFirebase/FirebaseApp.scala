@@ -7,13 +7,33 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FirebaseApp extends js.Object {
   
-  def utils(): typingsSlinky.reactNativeFirebaseApp.Utils.Module = js.native
+  /**
+    * Make this app unusable and free up resources.
+    */
+  def delete(): js.Promise[Unit] = js.native
+  
+  /**
+    * The name (identifier) for this App. '[DEFAULT]' is the default App.
+    */
+  val name: String = js.native
+  
+  /**
+    * The (read-only) configuration options from the app initialization.
+    */
+  val options: FirebaseAppOptions = js.native
+  
+  def utils(): typingsSlinky.reactNativeFirebaseApp.mod.Utils_.Module = js.native
 }
 object FirebaseApp {
   
   @scala.inline
-  def apply(utils: () => typingsSlinky.reactNativeFirebaseApp.Utils.Module): FirebaseApp = {
-    val __obj = js.Dynamic.literal(utils = js.Any.fromFunction0(utils))
+  def apply(
+    delete: () => js.Promise[Unit],
+    name: String,
+    options: FirebaseAppOptions,
+    utils: () => typingsSlinky.reactNativeFirebaseApp.mod.Utils_.Module
+  ): FirebaseApp = {
+    val __obj = js.Dynamic.literal(delete = js.Any.fromFunction0(delete), name = name.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], utils = js.Any.fromFunction0(utils))
     __obj.asInstanceOf[FirebaseApp]
   }
   
@@ -33,6 +53,15 @@ object FirebaseApp {
     }
     
     @scala.inline
-    def setUtils(value: () => typingsSlinky.reactNativeFirebaseApp.Utils.Module): Self = this.set("utils", js.Any.fromFunction0(value))
+    def setDelete(value: () => js.Promise[Unit]): Self = this.set("delete", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOptions(value: FirebaseAppOptions): Self = this.set("options", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUtils(value: () => typingsSlinky.reactNativeFirebaseApp.mod.Utils_.Module): Self = this.set("utils", js.Any.fromFunction0(value))
   }
 }

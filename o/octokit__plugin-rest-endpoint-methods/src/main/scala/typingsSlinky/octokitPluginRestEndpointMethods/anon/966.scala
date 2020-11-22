@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposGetTopPathsEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposGetTopPathsResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposGetReadmeEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposGetReadmeResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `966` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposGetTopPathsEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposGetReadmeEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposGetTopPathsResponseData] = js.native
+  var response: OctokitResponse[ReposGetReadmeResponseData] = js.native
 }
 object `966` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposGetTopPathsEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposGetTopPathsResponseData]
+    parameters: RequestParameters with (Omit[ReposGetReadmeEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposGetReadmeResponseData]
   ): `966` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`966`]
@@ -46,9 +46,9 @@ object `966` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ReposGetTopPathsEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ReposGetReadmeEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposGetTopPathsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReposGetReadmeResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

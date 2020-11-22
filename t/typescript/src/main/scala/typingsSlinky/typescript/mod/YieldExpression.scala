@@ -7,10 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait YieldExpression extends Expression {
   
-  var asteriskToken: js.UndefOr[AsteriskToken] = js.native
+  val asteriskToken: js.UndefOr[AsteriskToken] = js.native
   
-  var expression: js.UndefOr[Expression] = js.native
+  val expression: js.UndefOr[Expression] = js.native
   
   @JSName("kind")
-  var kind_YieldExpression: typingsSlinky.typescript.mod.SyntaxKind.YieldExpression = js.native
+  val kind_YieldExpression: typingsSlinky.typescript.mod.SyntaxKind.YieldExpression = js.native
 }

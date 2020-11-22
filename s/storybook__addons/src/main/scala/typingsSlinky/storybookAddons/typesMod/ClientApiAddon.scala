@@ -19,7 +19,7 @@ object ClientApiAddon {
   def apply[StoryFnReturnType](
     apply: (StoryApi[StoryFnReturnType], js.Array[_]) => js.Any,
     render: RenderOptions => ReactElement,
-    title: String
+    title: js.Function0[String] | String
   ): ClientApiAddon[StoryFnReturnType] = {
     val __obj = js.Dynamic.literal(apply = js.Any.fromFunction2(apply), render = js.Any.fromFunction1(render), title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientApiAddon[StoryFnReturnType]]

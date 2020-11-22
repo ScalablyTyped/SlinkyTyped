@@ -29,6 +29,11 @@ package object App {
   type iOS = typingsSlinky.titanium.Titanium.Module
   
   /**
+    * Fired after the user takes a screenshot, e.g. by pressing both the home and lock screen buttons.
+    */
+  type iOSScreenshotcapturedEvent = typingsSlinky.titanium.Titanium.App.iOSBaseEvent
+  
+  /**
     * Fired when the trait collection of the device changes, e.g. the user interface style.
     */
   type iOSTraitcollectionchangeEvent = typingsSlinky.titanium.Titanium.App.iOSBaseEvent

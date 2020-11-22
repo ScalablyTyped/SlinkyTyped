@@ -30,6 +30,16 @@ trait MDCTextFieldInputAdapter extends js.Object {
     * Registers an event listener on the native input element for a given event.
     */
   def registerInputInteractionHandler[K /* <: EventType */](evtType: K, handler: SpecificEventListener[K]): Unit = js.native
+  
+  /**
+    * Removes the specified attribute from the input element.
+    */
+  def removeInputAttr(attr: String): Unit = js.native
+  
+  /**
+    * Sets the specified attribute to the specified value on the input element.
+    */
+  def setInputAttr(attr: String, value: String): Unit = js.native
 }
 object MDCTextFieldInputAdapter {
   
@@ -38,9 +48,11 @@ object MDCTextFieldInputAdapter {
     deregisterInputInteractionHandler: (js.Any, SpecificEventListener[js.Any]) => Unit,
     getNativeInput: () => MDCTextFieldNativeInputElement | Null,
     isFocused: () => Boolean,
-    registerInputInteractionHandler: (js.Any, SpecificEventListener[js.Any]) => Unit
+    registerInputInteractionHandler: (js.Any, SpecificEventListener[js.Any]) => Unit,
+    removeInputAttr: String => Unit,
+    setInputAttr: (String, String) => Unit
   ): MDCTextFieldInputAdapter = {
-    val __obj = js.Dynamic.literal(deregisterInputInteractionHandler = js.Any.fromFunction2(deregisterInputInteractionHandler), getNativeInput = js.Any.fromFunction0(getNativeInput), isFocused = js.Any.fromFunction0(isFocused), registerInputInteractionHandler = js.Any.fromFunction2(registerInputInteractionHandler))
+    val __obj = js.Dynamic.literal(deregisterInputInteractionHandler = js.Any.fromFunction2(deregisterInputInteractionHandler), getNativeInput = js.Any.fromFunction0(getNativeInput), isFocused = js.Any.fromFunction0(isFocused), registerInputInteractionHandler = js.Any.fromFunction2(registerInputInteractionHandler), removeInputAttr = js.Any.fromFunction1(removeInputAttr), setInputAttr = js.Any.fromFunction2(setInputAttr))
     __obj.asInstanceOf[MDCTextFieldInputAdapter]
   }
   
@@ -70,5 +82,11 @@ object MDCTextFieldInputAdapter {
     
     @scala.inline
     def setRegisterInputInteractionHandler(value: (js.Any, SpecificEventListener[js.Any]) => Unit): Self = this.set("registerInputInteractionHandler", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setRemoveInputAttr(value: String => Unit): Self = this.set("removeInputAttr", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setSetInputAttr(value: (String, String) => Unit): Self = this.set("setInputAttr", js.Any.fromFunction2(value))
   }
 }

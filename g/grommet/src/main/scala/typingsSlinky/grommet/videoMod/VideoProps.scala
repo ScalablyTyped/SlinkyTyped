@@ -1,5 +1,6 @@
 package typingsSlinky.grommet.videoMod
 
+import typingsSlinky.grommet.anon.FullScreen
 import typingsSlinky.grommet.grommetStrings.`false`
 import typingsSlinky.grommet.grommetStrings.below
 import typingsSlinky.grommet.grommetStrings.contain
@@ -31,6 +32,8 @@ trait VideoProps extends js.Object {
   var loop: js.UndefOr[Boolean] = js.native
   
   var margin: js.UndefOr[MarginType] = js.native
+  
+  var messages: js.UndefOr[FullScreen] = js.native
   
   var mute: js.UndefOr[Boolean] = js.native
 }
@@ -104,6 +107,12 @@ object VideoProps {
     
     @scala.inline
     def deleteMargin: Self = this.set("margin", js.undefined)
+    
+    @scala.inline
+    def setMessages(value: FullScreen): Self = this.set("messages", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMessages: Self = this.set("messages", js.undefined)
     
     @scala.inline
     def setMute(value: Boolean): Self = this.set("mute", value.asInstanceOf[js.Any])

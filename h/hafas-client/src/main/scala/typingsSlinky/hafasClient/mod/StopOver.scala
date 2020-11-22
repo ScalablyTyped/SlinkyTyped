@@ -17,12 +17,16 @@ trait StopOver extends js.Object {
   
   var arrivalPlatform: js.UndefOr[String] = js.native
   
+  var cancelled: js.UndefOr[Boolean] = js.native
+  
   /** null, if last stopOver of trip */
   var departure: js.UndefOr[String] = js.native
   
   var departureDelay: js.UndefOr[Double] = js.native
   
   var departurePlatform: js.UndefOr[String] = js.native
+  
+  var passBy: js.UndefOr[Boolean] = js.native
   
   var plannedArrival: js.UndefOr[String] = js.native
   
@@ -32,7 +36,15 @@ trait StopOver extends js.Object {
   
   var plannedDeparturePlatform: js.UndefOr[String] = js.native
   
-  var remarks: js.UndefOr[js.Array[Hint]] = js.native
+  var prognosedArrival: js.UndefOr[String] = js.native
+  
+  var prognosedArrivalPlatform: js.UndefOr[String] = js.native
+  
+  var prognosedDeparture: js.UndefOr[String] = js.native
+  
+  var prognosedDeparturePlatform: js.UndefOr[String] = js.native
+  
+  var remarks: js.UndefOr[js.Array[Hint | Warning]] = js.native
   
   var stop: Station | Stop = js.native
 }
@@ -81,6 +93,12 @@ object StopOver {
     def deleteArrivalPlatform: Self = this.set("arrivalPlatform", js.undefined)
     
     @scala.inline
+    def setCancelled(value: Boolean): Self = this.set("cancelled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCancelled: Self = this.set("cancelled", js.undefined)
+    
+    @scala.inline
     def setDeparture(value: String): Self = this.set("departure", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -97,6 +115,12 @@ object StopOver {
     
     @scala.inline
     def deleteDeparturePlatform: Self = this.set("departurePlatform", js.undefined)
+    
+    @scala.inline
+    def setPassBy(value: Boolean): Self = this.set("passBy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePassBy: Self = this.set("passBy", js.undefined)
     
     @scala.inline
     def setPlannedArrival(value: String): Self = this.set("plannedArrival", value.asInstanceOf[js.Any])
@@ -123,10 +147,34 @@ object StopOver {
     def deletePlannedDeparturePlatform: Self = this.set("plannedDeparturePlatform", js.undefined)
     
     @scala.inline
-    def setRemarksVarargs(value: Hint*): Self = this.set("remarks", js.Array(value :_*))
+    def setPrognosedArrival(value: String): Self = this.set("prognosedArrival", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRemarks(value: js.Array[Hint]): Self = this.set("remarks", value.asInstanceOf[js.Any])
+    def deletePrognosedArrival: Self = this.set("prognosedArrival", js.undefined)
+    
+    @scala.inline
+    def setPrognosedArrivalPlatform(value: String): Self = this.set("prognosedArrivalPlatform", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrognosedArrivalPlatform: Self = this.set("prognosedArrivalPlatform", js.undefined)
+    
+    @scala.inline
+    def setPrognosedDeparture(value: String): Self = this.set("prognosedDeparture", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrognosedDeparture: Self = this.set("prognosedDeparture", js.undefined)
+    
+    @scala.inline
+    def setPrognosedDeparturePlatform(value: String): Self = this.set("prognosedDeparturePlatform", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrognosedDeparturePlatform: Self = this.set("prognosedDeparturePlatform", js.undefined)
+    
+    @scala.inline
+    def setRemarksVarargs(value: (Hint | Warning)*): Self = this.set("remarks", js.Array(value :_*))
+    
+    @scala.inline
+    def setRemarks(value: js.Array[Hint | Warning]): Self = this.set("remarks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRemarks: Self = this.set("remarks", js.undefined)

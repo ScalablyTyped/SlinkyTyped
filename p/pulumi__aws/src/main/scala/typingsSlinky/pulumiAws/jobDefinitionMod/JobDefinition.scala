@@ -58,6 +58,11 @@ class JobDefinition protected () extends CustomResource {
   val revision: Output_[Double] = js.native
   
   /**
+    * Key-value map of resource tags
+    */
+  val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
+  
+  /**
     * Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
     */
   val timeout: Output_[js.UndefOr[JobDefinitionTimeout]] = js.native

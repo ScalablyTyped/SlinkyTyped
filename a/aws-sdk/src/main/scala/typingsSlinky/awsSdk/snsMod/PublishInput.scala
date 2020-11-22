@@ -18,6 +18,16 @@ trait PublishInput extends js.Object {
   var MessageAttributes: js.UndefOr[MessageAttributeMap] = js.native
   
   /**
+    * This parameter applies only to FIFO (first-in-first-out) topics. The MessageDeduplicationId can contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation (!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~). Every message must have a unique MessageDeduplicationId, which is a token used for deduplication of sent messages. If a message with a particular MessageDeduplicationId is sent successfully, any message sent with the same MessageDeduplicationId during the 5-minute deduplication interval is treated as a duplicate.  If the topic has ContentBasedDeduplication set, the system generates a MessageDeduplicationId based on the contents of the message. Your MessageDeduplicationId overrides the generated one.
+    */
+  var MessageDeduplicationId: js.UndefOr[String] = js.native
+  
+  /**
+    * This parameter applies only to FIFO (first-in-first-out) topics. The MessageGroupId can contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation (!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~). The MessageGroupId is a tag that specifies that a message belongs to a specific message group. Messages that belong to the same message group are processed in a FIFO manner (however, messages in different message groups might be processed out of order). Every message must include a MessageGroupId.
+    */
+  var MessageGroupId: js.UndefOr[String] = js.native
+  
+  /**
     * Set MessageStructure to json if you want to send a different message for each protocol. For example, using one publish action, you can send a short message to your SMS subscribers and a longer message to your email subscribers. If you set MessageStructure to json, the value of the Message parameter must:    be a syntactically valid JSON object; and   contain at least a top-level JSON key of "default" with a value that is a string.   You can define other top-level keys that define the message you want to send to a specific transport protocol (e.g., "http"). Valid value: json 
     */
   var MessageStructure: js.UndefOr[messageStructure] = js.native
@@ -73,6 +83,18 @@ object PublishInput {
     
     @scala.inline
     def deleteMessageAttributes: Self = this.set("MessageAttributes", js.undefined)
+    
+    @scala.inline
+    def setMessageDeduplicationId(value: String): Self = this.set("MessageDeduplicationId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMessageDeduplicationId: Self = this.set("MessageDeduplicationId", js.undefined)
+    
+    @scala.inline
+    def setMessageGroupId(value: String): Self = this.set("MessageGroupId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMessageGroupId: Self = this.set("MessageGroupId", js.undefined)
     
     @scala.inline
     def setMessageStructure(value: messageStructure): Self = this.set("MessageStructure", value.asInstanceOf[js.Any])

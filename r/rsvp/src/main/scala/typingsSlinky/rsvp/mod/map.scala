@@ -13,11 +13,12 @@ import typingsSlinky.rsvp.anon.`8`
 import typingsSlinky.rsvp.mod.RSVP.Arg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rsvp", "map")
 @js.native
 object map extends js.Object {
+  
   def apply[T, U](entries: js.Array[Arg[T]], mapFn: js.Function1[/* item */ T, U]): typingsSlinky.rsvp.mod.RSVP.Promise[js.Array[U] with `8`] = js.native
   def apply[T, U](entries: js.Array[Arg[T]], mapFn: js.Function1[/* item */ T, U], label: String): typingsSlinky.rsvp.mod.RSVP.Promise[js.Array[U] with `8`] = js.native
   def apply[T1, T2, U](entries: js.Tuple2[Arg[T1], Arg[T2]], mapFn: js.Function1[/* item */ T1 | T2, U]): typingsSlinky.rsvp.mod.RSVP.Promise[js.Array[U] with `7`] = js.native
@@ -92,4 +93,3 @@ object map extends js.Object {
     label: String
   ): typingsSlinky.rsvp.mod.RSVP.Promise[js.Array[U] with Length] = js.native
 }
-

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "ng-i18next"
-version := "v0.3.6-dt-20200515Z-acd8f2"
+version := "v0.3.6-dt-20201002Z-acd8f2"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

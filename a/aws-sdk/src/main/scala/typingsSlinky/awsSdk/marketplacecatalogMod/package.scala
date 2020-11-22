@@ -40,6 +40,13 @@ package object marketplacecatalogMod {
   
   type ErrorDetailList = js.Array[typingsSlinky.awsSdk.marketplacecatalogMod.ErrorDetail]
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CLIENT_ERROR
+    - typingsSlinky.awsSdk.awsSdkStrings.SERVER_FAULT
+    - java.lang.String
+  */
+  type FailureCode = typingsSlinky.awsSdk.marketplacecatalogMod._FailureCode | java.lang.String
+  
   type FilterList = js.Array[typingsSlinky.awsSdk.marketplacecatalogMod.Filter]
   
   type FilterName = java.lang.String

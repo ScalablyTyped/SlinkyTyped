@@ -41,6 +41,9 @@ object Statistic {
     def groupSeparator(value: String): this.type = set("groupSeparator", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def onMouseEnter(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     
     @scala.inline

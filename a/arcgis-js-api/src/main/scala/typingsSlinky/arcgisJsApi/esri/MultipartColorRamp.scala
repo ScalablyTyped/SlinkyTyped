@@ -19,8 +19,6 @@ trait MultipartColorRamp extends ColorRamp {
     * A string value representing the color ramp type.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-MultipartColorRamp.html#type)
-    *
-    * @default multipart
     */
   @JSName("type")
   val type_MultipartColorRamp: multipart = js.native

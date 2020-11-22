@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposAddStatusCheckContextsEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposAddStatusCheckContextsResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReactionsListForPullRequestReviewCommentEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReactionsListForPullRequestReviewCommentResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `889` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposAddStatusCheckContextsEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReactionsListForPullRequestReviewCommentEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposAddStatusCheckContextsResponseData] = js.native
+  var response: OctokitResponse[ReactionsListForPullRequestReviewCommentResponseData] = js.native
 }
 object `889` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposAddStatusCheckContextsEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposAddStatusCheckContextsResponseData]
+    parameters: RequestParameters with (Omit[ReactionsListForPullRequestReviewCommentEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReactionsListForPullRequestReviewCommentResponseData]
   ): `889` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`889`]
@@ -47,10 +47,10 @@ object `889` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[ReposAddStatusCheckContextsEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ReactionsListForPullRequestReviewCommentEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposAddStatusCheckContextsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReactionsListForPullRequestReviewCommentResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

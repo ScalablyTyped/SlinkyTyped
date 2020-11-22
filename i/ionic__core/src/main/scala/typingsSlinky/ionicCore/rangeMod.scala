@@ -28,7 +28,7 @@ object rangeMod extends js.Object {
     var color: js.UndefOr[Color] = js.native
     
     @JSName("componentDidLoad")
-    def componentDidLoad_MRange(): js.Promise[Unit] = js.native
+    def componentDidLoad_MRange(): Unit = js.native
     
     @JSName("connectedCallback")
     def connectedCallback_MRange(): Unit = js.native
@@ -36,10 +36,13 @@ object rangeMod extends js.Object {
     /**
       * How long, in milliseconds, to wait to trigger the
       * `ionChange` event after each change in the range value.
+      * This also impacts form bindings such as `ngModel` or `v-model`.
       */
     var debounce: Double = js.native
     
     /* protected */ def debounceChanged(): Unit = js.native
+    
+    var didLoad: js.Any = js.native
     
     /**
       * If `true`, the user cannot interact with the range.
@@ -146,6 +149,8 @@ object rangeMod extends js.Object {
     def render_MRange(): js.Any = js.native
     
     var setFocus: js.Any = js.native
+    
+    var setupGesture: js.Any = js.native
     
     /**
       * If `true`, the knob snaps to tick marks evenly spaced based

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait Identifier
-  extends Base[String, js.UndefOr[Container[String]]] {
+  extends Base[String, js.UndefOr[Container[String, Node]]] {
   
   @JSName("type")
   var type_Identifier: typingsSlinky.postcssSelectorParser.postcssSelectorParserStrings.id = js.native

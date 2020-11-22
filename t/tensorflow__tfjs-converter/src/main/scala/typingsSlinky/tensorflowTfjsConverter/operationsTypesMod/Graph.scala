@@ -11,6 +11,8 @@ trait Graph extends js.Object {
   
   var functions: js.UndefOr[StringDictionary[Graph]] = js.native
   
+  var initNodes: js.UndefOr[js.Array[Node]] = js.native
+  
   var inputs: js.Array[Node] = js.native
   
   var nodes: StringDictionary[Node] = js.native
@@ -84,6 +86,15 @@ object Graph {
     
     @scala.inline
     def deleteFunctions: Self = this.set("functions", js.undefined)
+    
+    @scala.inline
+    def setInitNodesVarargs(value: Node*): Self = this.set("initNodes", js.Array(value :_*))
+    
+    @scala.inline
+    def setInitNodes(value: js.Array[Node]): Self = this.set("initNodes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInitNodes: Self = this.set("initNodes", js.undefined)
     
     @scala.inline
     def setSignature(value: ISignatureDef): Self = this.set("signature", value.asInstanceOf[js.Any])

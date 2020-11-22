@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Route extends js.Object {
   
   /**
+    * The ID of the carrier gateway.
+    */
+  var CarrierGatewayId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.CarrierGatewayId] = js.native
+  
+  /**
     * The IPv4 CIDR block used for the destination match.
     */
   var DestinationCidrBlock: js.UndefOr[String] = js.native
@@ -99,6 +104,12 @@ object Route {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setCarrierGatewayId(value: CarrierGatewayId): Self = this.set("CarrierGatewayId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCarrierGatewayId: Self = this.set("CarrierGatewayId", js.undefined)
     
     @scala.inline
     def setDestinationCidrBlock(value: String): Self = this.set("DestinationCidrBlock", value.asInstanceOf[js.Any])

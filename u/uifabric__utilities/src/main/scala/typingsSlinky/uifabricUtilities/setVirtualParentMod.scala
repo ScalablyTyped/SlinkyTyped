@@ -9,5 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object setVirtualParentMod extends js.Object {
   
+  def setVirtualParent(child: HTMLElement): Unit = js.native
   def setVirtualParent(child: HTMLElement, parent: HTMLElement): Unit = js.native
 }

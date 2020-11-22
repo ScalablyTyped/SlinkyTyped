@@ -15,9 +15,9 @@ object default extends js.Object {
   
   var defaultProps: ColorTypeProps = js.native
   
-  def deserialize(value: String): String = js.native
+  def deserialize(value: ColorTypeKnobValue): String = js.native
   
   var propTypes: OnChange = js.native
   
-  def serialize(value: String): String = js.native
+  def serialize(value: ColorTypeKnobValue): String = js.native
 }

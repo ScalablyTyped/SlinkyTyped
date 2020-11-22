@@ -33,7 +33,7 @@ trait UsagePlanState extends js.Object {
   val name: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+    * The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
     */
   val productCode: js.UndefOr[Input[String]] = js.native
   

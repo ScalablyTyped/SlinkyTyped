@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.feedContentMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.feedDateMod.FeedDateProps
 import typingsSlinky.semanticUiReact.feedExtraMod.FeedExtraProps
 import typingsSlinky.semanticUiReact.feedMetaMod.FeedMetaProps
@@ -101,7 +100,7 @@ object StrictFeedContentProps {
     
     @scala.inline
     def setDateFunction3(
-      value: (/* component */ ReactType[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, FeedDateProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("date", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -115,7 +114,7 @@ object StrictFeedContentProps {
     
     @scala.inline
     def setExtraImagesFunction3(
-      value: (/* component */ ReactType[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, FeedExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("extraImages", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -129,7 +128,7 @@ object StrictFeedContentProps {
     
     @scala.inline
     def setExtraTextFunction3(
-      value: (/* component */ ReactType[FeedExtraProps], FeedExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, FeedExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("extraText", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -143,7 +142,7 @@ object StrictFeedContentProps {
     
     @scala.inline
     def setMetaFunction3(
-      value: (/* component */ ReactType[FeedMetaProps], FeedMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, FeedMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("meta", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -157,7 +156,7 @@ object StrictFeedContentProps {
     
     @scala.inline
     def setSummaryFunction3(
-      value: (/* component */ ReactType[FeedSummaryProps], FeedSummaryProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, FeedSummaryProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("summary", js.Any.fromFunction3(value))
     
     @scala.inline

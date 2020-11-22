@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.convertUnits.convertUnitsStrings.W
   - typingsSlinky.convertUnits.convertUnitsStrings.mW_
-  - typingsSlinky.convertUnits.convertUnitsStrings.kM
+  - typingsSlinky.convertUnits.convertUnitsStrings.kW
   - typingsSlinky.convertUnits.convertUnitsStrings.MW
   - typingsSlinky.convertUnits.convertUnitsStrings.GW
 */
@@ -25,7 +25,7 @@ object uPower {
   def W: typingsSlinky.convertUnits.convertUnitsStrings.W = "W".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.W]
   
   @scala.inline
-  def kM: typingsSlinky.convertUnits.convertUnitsStrings.kM = "kM".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kM]
+  def kW: typingsSlinky.convertUnits.convertUnitsStrings.kW = "kW".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kW]
   
   @scala.inline
   def mW: mW_ = "mW".asInstanceOf[mW_]

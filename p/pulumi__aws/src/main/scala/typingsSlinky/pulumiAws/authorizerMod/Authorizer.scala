@@ -35,8 +35,21 @@ class Authorizer protected () extends CustomResource {
   val authorizerCredentialsArn: Output_[js.UndefOr[String]] = js.native
   
   /**
+    * The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+    * Valid values: `1.0`, `2.0`.
+    */
+  val authorizerPayloadFormatVersion: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+    * If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+    * Supported only for HTTP API Lambda authorizers.
+    */
+  val authorizerResultTtlInSeconds: Output_[Double] = js.native
+  
+  /**
     * The authorizer type. Valid values: `JWT`, `REQUEST`.
-    * For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
+    * Specify `REQUEST` for a Lambda function using incoming request parameters.
     * For HTTP APIs, specify `JWT` to use JSON Web Tokens.
     */
   val authorizerType: Output_[String] = js.native
@@ -44,16 +57,22 @@ class Authorizer protected () extends CustomResource {
   /**
     * The authorizer's Uniform Resource Identifier (URI).
     * For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invokeArn` attribute of the `aws.lambda.Function` resource.
-    * Supported only for `REQUEST` authorizers.
+    * Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
     */
   val authorizerUri: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+    * Supported only for HTTP APIs.
+    */
+  val enableSimpleResponses: Output_[js.UndefOr[Boolean]] = js.native
   
   /**
     * The identity sources for which authorization is requested.
     * For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
     * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
     */
-  val identitySources: Output_[js.Array[String]] = js.native
+  val identitySources: Output_[js.UndefOr[js.Array[String]]] = js.native
   
   /**
     * The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
@@ -62,7 +81,7 @@ class Authorizer protected () extends CustomResource {
   val jwtConfiguration: Output_[js.UndefOr[AuthorizerJwtConfiguration]] = js.native
   
   /**
-    * The name of the authorizer.
+    * The name of the authorizer. Must be between 1 and 128 characters in length.
     */
   val name: Output_[String] = js.native
 }

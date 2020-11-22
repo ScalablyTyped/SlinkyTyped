@@ -1,7 +1,7 @@
 package typingsSlinky.viewerjs.Viewer
 
 import org.scalajs.dom.raw.CustomEvent
-import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +15,7 @@ trait Options extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
-  var container: js.UndefOr[String | Element] = js.native
+  var container: js.UndefOr[String | HTMLElement] = js.native
   
   var filter: js.UndefOr[js.Function] = js.native
   
@@ -24,6 +24,8 @@ trait Options extends js.Object {
   var hidden: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   
   var hide: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  
+  var inheritedAttributes: js.UndefOr[js.Array[String]] = js.native
   
   var initialViewIndex: js.UndefOr[Double] = js.native
   
@@ -49,6 +51,8 @@ trait Options extends js.Object {
   
   var navbar: js.UndefOr[Boolean | Visibility] = js.native
   
+  var play: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  
   var ready: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   
   var rotatable: js.UndefOr[Boolean] = js.native
@@ -58,6 +62,10 @@ trait Options extends js.Object {
   var show: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   
   var shown: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  
+  var slideOnTouch: js.UndefOr[Boolean] = js.native
+  
+  var stop: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   
   var title: js.UndefOr[Boolean | Visibility | js.Function | (js.Tuple2[Visibility, js.Function])] = js.native
   
@@ -79,13 +87,17 @@ trait Options extends js.Object {
   
   var zIndexInline: js.UndefOr[Double] = js.native
   
-  var zoom: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var zoom: js.UndefOr[js.Function1[/* event */ ZoomEvent, Unit]] = js.native
+  
+  var zoomOnTouch: js.UndefOr[Boolean] = js.native
+  
+  var zoomOnWheel: js.UndefOr[Boolean] = js.native
   
   var zoomRatio: js.UndefOr[Double] = js.native
   
   var zoomable: js.UndefOr[Boolean] = js.native
   
-  var zoomed: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var zoomed: js.UndefOr[js.Function1[/* event */ ZoomedEvent, Unit]] = js.native
 }
 object Options {
   
@@ -129,10 +141,10 @@ object Options {
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
-    def setContainerElement(value: Element): Self = this.set("container", value.asInstanceOf[js.Any])
+    def setContainerHTMLElement(value: HTMLElement): Self = this.set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContainer(value: String | Element): Self = this.set("container", value.asInstanceOf[js.Any])
+    def setContainer(value: String | HTMLElement): Self = this.set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContainer: Self = this.set("container", js.undefined)
@@ -160,6 +172,15 @@ object Options {
     
     @scala.inline
     def deleteHide: Self = this.set("hide", js.undefined)
+    
+    @scala.inline
+    def setInheritedAttributesVarargs(value: String*): Self = this.set("inheritedAttributes", js.Array(value :_*))
+    
+    @scala.inline
+    def setInheritedAttributes(value: js.Array[String]): Self = this.set("inheritedAttributes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInheritedAttributes: Self = this.set("inheritedAttributes", js.undefined)
     
     @scala.inline
     def setInitialViewIndex(value: Double): Self = this.set("initialViewIndex", value.asInstanceOf[js.Any])
@@ -234,6 +255,12 @@ object Options {
     def deleteNavbar: Self = this.set("navbar", js.undefined)
     
     @scala.inline
+    def setPlay(value: /* event */ CustomEvent => Unit): Self = this.set("play", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deletePlay: Self = this.set("play", js.undefined)
+    
+    @scala.inline
     def setReady(value: /* event */ CustomEvent => Unit): Self = this.set("ready", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -262,6 +289,18 @@ object Options {
     
     @scala.inline
     def deleteShown: Self = this.set("shown", js.undefined)
+    
+    @scala.inline
+    def setSlideOnTouch(value: Boolean): Self = this.set("slideOnTouch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSlideOnTouch: Self = this.set("slideOnTouch", js.undefined)
+    
+    @scala.inline
+    def setStop(value: /* event */ CustomEvent => Unit): Self = this.set("stop", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteStop: Self = this.set("stop", js.undefined)
     
     @scala.inline
     def setTitle(value: Boolean | Visibility | js.Function | (js.Tuple2[Visibility, js.Function])): Self = this.set("title", value.asInstanceOf[js.Any])
@@ -324,10 +363,22 @@ object Options {
     def deleteZIndexInline: Self = this.set("zIndexInline", js.undefined)
     
     @scala.inline
-    def setZoom(value: /* event */ CustomEvent => Unit): Self = this.set("zoom", js.Any.fromFunction1(value))
+    def setZoom(value: /* event */ ZoomEvent => Unit): Self = this.set("zoom", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteZoom: Self = this.set("zoom", js.undefined)
+    
+    @scala.inline
+    def setZoomOnTouch(value: Boolean): Self = this.set("zoomOnTouch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteZoomOnTouch: Self = this.set("zoomOnTouch", js.undefined)
+    
+    @scala.inline
+    def setZoomOnWheel(value: Boolean): Self = this.set("zoomOnWheel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteZoomOnWheel: Self = this.set("zoomOnWheel", js.undefined)
     
     @scala.inline
     def setZoomRatio(value: Double): Self = this.set("zoomRatio", value.asInstanceOf[js.Any])
@@ -342,7 +393,7 @@ object Options {
     def deleteZoomable: Self = this.set("zoomable", js.undefined)
     
     @scala.inline
-    def setZoomed(value: /* event */ CustomEvent => Unit): Self = this.set("zoomed", js.Any.fromFunction1(value))
+    def setZoomed(value: /* event */ ZoomedEvent => Unit): Self = this.set("zoomed", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteZoomed: Self = this.set("zoomed", js.undefined)

@@ -1,5 +1,6 @@
 package typingsSlinky.axeCore.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,11 @@ trait NodeResult extends js.Object {
   
   var all: js.Array[CheckResult] = js.native
   
+  var ancestry: js.UndefOr[js.Array[String]] = js.native
+  
   var any: js.Array[CheckResult] = js.native
+  
+  var element: js.UndefOr[HTMLElement] = js.native
   
   var failureSummary: js.UndefOr[String] = js.native
   
@@ -80,6 +85,21 @@ object NodeResult {
     def setTarget(value: js.Array[String]): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setAncestryVarargs(value: String*): Self = this.set("ancestry", js.Array(value :_*))
+    
+    @scala.inline
+    def setAncestry(value: js.Array[String]): Self = this.set("ancestry", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAncestry: Self = this.set("ancestry", js.undefined)
+    
+    @scala.inline
+    def setElement(value: HTMLElement): Self = this.set("element", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteElement: Self = this.set("element", js.undefined)
+    
+    @scala.inline
     def setFailureSummary(value: String): Self = this.set("failureSummary", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -90,6 +110,9 @@ object NodeResult {
     
     @scala.inline
     def deleteImpact: Self = this.set("impact", js.undefined)
+    
+    @scala.inline
+    def setImpactNull: Self = this.set("impact", null)
     
     @scala.inline
     def setXpathVarargs(value: String*): Self = this.set("xpath", js.Array(value :_*))

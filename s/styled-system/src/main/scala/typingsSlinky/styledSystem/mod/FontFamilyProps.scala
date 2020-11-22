@@ -9,7 +9,7 @@ trait FontFamilyProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.
   
   var fontFamily: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _, 
       ThemeType
     ]
   ] = js.native
@@ -43,7 +43,7 @@ object FontFamilyProps {
     @scala.inline
     def setFontFamily(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _, 
           ThemeType
         ]
     ): Self = this.set("fontFamily", value.asInstanceOf[js.Any])

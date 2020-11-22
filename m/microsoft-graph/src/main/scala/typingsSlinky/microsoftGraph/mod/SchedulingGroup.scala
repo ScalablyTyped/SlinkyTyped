@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SchedulingGroup extends ChangeTrackedEntity {
   
   // The display name for the schedulingGroup. Required.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates whether the schedulingGroup can be used when creating new entities or updating existing ones. Required.
-  var isActive: js.UndefOr[Boolean] = js.native
+  var isActive: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // The list of user IDs that are a member of the schedulingGroup. Required.
-  var userIds: js.UndefOr[js.Array[String]] = js.native
+  var userIds: js.UndefOr[NullableOption[js.Array[String]]] = js.native
 }
 object SchedulingGroup {
   
@@ -40,24 +40,33 @@ object SchedulingGroup {
     }
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
-    def setIsActive(value: Boolean): Self = this.set("isActive", value.asInstanceOf[js.Any])
+    def setDisplayNameNull: Self = this.set("displayName", null)
+    
+    @scala.inline
+    def setIsActive(value: NullableOption[Boolean]): Self = this.set("isActive", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIsActive: Self = this.set("isActive", js.undefined)
     
     @scala.inline
+    def setIsActiveNull: Self = this.set("isActive", null)
+    
+    @scala.inline
     def setUserIdsVarargs(value: String*): Self = this.set("userIds", js.Array(value :_*))
     
     @scala.inline
-    def setUserIds(value: js.Array[String]): Self = this.set("userIds", value.asInstanceOf[js.Any])
+    def setUserIds(value: NullableOption[js.Array[String]]): Self = this.set("userIds", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserIds: Self = this.set("userIds", js.undefined)
+    
+    @scala.inline
+    def setUserIdsNull: Self = this.set("userIds", null)
   }
 }

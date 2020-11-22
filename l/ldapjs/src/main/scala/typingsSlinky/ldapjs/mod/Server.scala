@@ -12,6 +12,8 @@ trait Server extends EventEmitter {
   
   def bind(mount: String, cbHandlers: js.Any*): Unit = js.native
   
+  def close(callback: js.Function0[Unit]): this.type = js.native
+  
   def compare(ditHook: String, cbHandlers: js.Any*): Unit = js.native
   
   /**

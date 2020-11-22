@@ -14,6 +14,10 @@ object jsonfeatureMod extends js.Object {
   trait JSONFeature
     extends typingsSlinky.ol.featureMod.default {
     
+    /**
+      * Read a feature.  Only works for a single feature. Use readFeatures to
+      * read a feature collection.
+      */
     def readFeature(source: js.typedarray.ArrayBuffer): typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default] = js.native
     def readFeature(source: js.typedarray.ArrayBuffer, opt_options: ReadOptions): typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default] = js.native
     
@@ -23,12 +27,18 @@ object jsonfeatureMod extends js.Object {
     /* protected */ def readFeaturesFromObject(`object`: js.Any): js.Array[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]] = js.native
     /* protected */ def readFeaturesFromObject(`object`: js.Any, opt_options: ReadOptions): js.Array[typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]] = js.native
     
+    /**
+      * Read a geometry.
+      */
     def readGeometry(source: js.typedarray.ArrayBuffer): typingsSlinky.ol.geometryMod.default = js.native
     def readGeometry(source: js.typedarray.ArrayBuffer, opt_options: ReadOptions): typingsSlinky.ol.geometryMod.default = js.native
     
     /* protected */ def readGeometryFromObject(`object`: js.Any): typingsSlinky.ol.geometryMod.default = js.native
     /* protected */ def readGeometryFromObject(`object`: js.Any, opt_options: ReadOptions): typingsSlinky.ol.geometryMod.default = js.native
     
+    /**
+      * Read the projection.
+      */
     def readProjection(source: js.typedarray.ArrayBuffer): typingsSlinky.ol.projectionMod.default = js.native
     
     /* protected */ def readProjectionFromObject(`object`: js.Any): typingsSlinky.ol.projectionMod.default = js.native

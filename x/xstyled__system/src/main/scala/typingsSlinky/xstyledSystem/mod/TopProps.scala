@@ -9,7 +9,7 @@ trait TopProps[TLength] extends js.Object {
   
   val top: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object TopProps {
     }
     
     @scala.inline
+    def setTopVarargs(value: js.Any*): Self = this.set("top", js.Array(value :_*))
+    
+    @scala.inline
     def setTop(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLength> */ _
         ]
     ): Self = this.set("top", value.asInstanceOf[js.Any])
     

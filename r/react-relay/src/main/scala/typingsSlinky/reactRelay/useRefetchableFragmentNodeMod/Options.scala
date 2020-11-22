@@ -1,12 +1,15 @@
 package typingsSlinky.reactRelay.useRefetchableFragmentNodeMod
 
-import typingsSlinky.reactRelay.queryResourceMod.FetchPolicy
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.FetchPolicy
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.RenderPolicy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Options extends js.Object {
+  
+  var UNSTABLE_renderPolicy: js.UndefOr[RenderPolicy] = js.native
   
   var fetchPolicy: js.UndefOr[FetchPolicy] = js.native
   
@@ -34,6 +37,12 @@ object Options {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setUNSTABLE_renderPolicy(value: RenderPolicy): Self = this.set("UNSTABLE_renderPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUNSTABLE_renderPolicy: Self = this.set("UNSTABLE_renderPolicy", js.undefined)
     
     @scala.inline
     def setFetchPolicy(value: FetchPolicy): Self = this.set("fetchPolicy", value.asInstanceOf[js.Any])

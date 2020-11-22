@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetPublicKeyRequest extends js.Object {
   
   /**
-    * Request the ID for the public key.
+    * The identifier of the public key you are getting.
     */
   var Id: String = js.native
 }

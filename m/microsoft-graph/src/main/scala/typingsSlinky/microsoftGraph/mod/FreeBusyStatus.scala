@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.free
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.tentative
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknown_
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.busy
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.oof
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.workingElsewhere
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknown_
 */
 trait FreeBusyStatus extends js.Object
 object FreeBusyStatus {

@@ -92,6 +92,8 @@ trait BackgroundMaterial extends PushMaterial {
   
   var _shadowLights: Nullable[js.Array[IShadowLight]] = js.native
   
+  var _shadowOnly: js.Any = js.native
+  
   var _useRGBColor: Boolean = js.native
   
   var _white: js.Any = js.native
@@ -206,16 +208,6 @@ trait BackgroundMaterial extends PushMaterial {
   def imageProcessingConfiguration_=(value: Nullable[ImageProcessingConfiguration]): Unit = js.native
   
   /**
-    * Checks wether the material is ready to be rendered for a given mesh.
-    * @param mesh The mesh to render
-    * @param subMesh The submesh to check against
-    * @param useInstances Specify wether or not the material is used with instances
-    * @returns true if all the dependencies are ready (Textures, Effects...)
-    */
-  def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh): Boolean = js.native
-  def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh, useInstances: Boolean): Boolean = js.native
-  
-  /**
     * Number of Simultaneous lights allowed on the material.
     */
   var maxSimultaneousLights: int = js.native
@@ -309,6 +301,11 @@ trait BackgroundMaterial extends PushMaterial {
     * All scene shadow lights will be included if null.
     */
   var shadowLights: Nullable[js.Array[IShadowLight]] = js.native
+  
+  /**
+    * Make the material only render shadows
+    */
+  var shadowOnly: Boolean = js.native
   
   /**
     * Due to a bug in iOS10, video tags (which are using the background material) are in BGR and not RGB.

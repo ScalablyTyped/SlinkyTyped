@@ -15,8 +15,7 @@ trait LogMetricFilterArgs extends js.Object {
   val logGroupName: Input[String] = js.native
   
   /**
-    * A block defining collection of information
-    * needed to define how metric data gets emitted. See below.
+    * A block defining collection of information needed to define how metric data gets emitted. See below.
     */
   val metricTransformation: Input[LogMetricFilterMetricTransformation] = js.native
   

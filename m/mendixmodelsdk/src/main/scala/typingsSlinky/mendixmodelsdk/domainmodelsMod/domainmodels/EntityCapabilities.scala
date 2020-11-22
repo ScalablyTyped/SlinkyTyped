@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,27 +20,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
-- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntityCapabilities because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsEntity */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.EntityCapabilities")
+- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntityCapabilities because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsEntity, countable */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.EntityCapabilities")
 @js.native
-class EntityCapabilities protected () extends Element {
+class EntityCapabilities protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsEntity: Entity = js.native
   @JSName("containerAsEntity")
   val containerAsEntity_FEntityCapabilities: IEntity = js.native
   
+  /**
+    * In version 8.14.0: added public
+    */
   def countable: Boolean = js.native
   def countable_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FEntityCapabilities: IModel = js.native
+  /**
+    * In version 8.14.0: added public
+    */
+  @JSName("countable")
+  val countable_FEntityCapabilities: Boolean = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.EntityCapabilities")

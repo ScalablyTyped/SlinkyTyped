@@ -21,14 +21,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MeshCreateCylinderParams extends Object {
   
   /**
-    * The additional number of subdivisions for generating the mesh representing a cylinder. A densificationFactor parameter of 0 will generate a default of 16 vertices to approximate the cylinder. A densificationFactor of 1 will generate 32 vertices, etc. The larger the densificationFactor, the better the mesh will approximate a perfect cylinder (at the cost of processing and rendering performance).
+    * The additional number of subdivisions for generating the mesh representing a cylinder.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Mesh.html#createCylinder)
     */
   var densificationFactor: js.UndefOr[Double] = js.native
   
   /**
-    * Whether to georeference relative to the globe or the projected coordinate system (PCS). This parameter is only relevant for spatial references that can be used in both local and global viewing modes (currently only WebMercator). This parameter defaults to `true` for WebMercator and WGS84, and `false` for any other PCS. When true, the mesh is created in a Cartesian system with respect to the local coordinate system on the globe and sizes are specified in meters.
+    * Whether to georeference relative to the globe or the projected coordinate system (PCS).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Mesh.html#createCylinder)
     */
@@ -42,7 +42,7 @@ trait MeshCreateCylinderParams extends Object {
   var material: js.UndefOr[MeshMaterial] = js.native
   
   /**
-    * A uniform size value or an object containing individual values width, height and depth. The unit of the size values is derived from the spatial reference of the provided location, unless a specific unit is specified.
+    * A uniform size value or an object containing individual values width, height and depth.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Mesh.html#createCylinder)
     */

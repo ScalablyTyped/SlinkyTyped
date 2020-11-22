@@ -22,54 +22,101 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPieChartOptions extends BaseChartOptions[dxPieChart] {
   
-  /** @name dxPieChart.Options.adaptiveLayout */
+  /**
+    * [descr:dxPieChart.Options.adaptiveLayout]
+    */
   @JSName("adaptiveLayout")
   var adaptiveLayout_dxPieChartOptions: js.UndefOr[dxPieChartAdaptiveLayout] = js.native
   
-  /** @name dxPieChart.Options.centerTemplate */
+  /**
+    * [descr:dxPieChart.Options.annotations]
+    */
+  var annotations: js.UndefOr[js.Array[dxPieChartAnnotationConfig | _]] = js.native
+  
+  /**
+    * [descr:dxPieChart.Options.centerTemplate]
+    */
   var centerTemplate: js.UndefOr[
     template | (js.Function2[/* component */ dxPieChart, /* element */ SVGGElement, String | SVGElement | JQuery])
   ] = js.native
   
-  /** @name dxPieChart.Options.commonSeriesSettings */
+  /**
+    * [descr:dxPieChart.Options.commonAnnotationSettings]
+    */
+  var commonAnnotationSettings: js.UndefOr[dxPieChartCommonAnnotationConfig] = js.native
+  
+  /**
+    * [descr:dxPieChart.Options.commonSeriesSettings]
+    */
   var commonSeriesSettings: js.UndefOr[js.Any] = js.native
   
-  /** @name dxPieChart.Options.diameter */
+  /**
+    * [descr:dxPieChart.Options.customizeAnnotation]
+    */
+  var customizeAnnotation: js.UndefOr[
+    js.Function1[/* annotation */ dxPieChartAnnotationConfig | js.Any, dxPieChartAnnotationConfig]
+  ] = js.native
+  
+  /**
+    * [descr:dxPieChart.Options.diameter]
+    */
   var diameter: js.UndefOr[Double] = js.native
   
-  /** @name dxPieChart.Options.innerRadius */
+  /**
+    * [descr:dxPieChart.Options.innerRadius]
+    */
   var innerRadius: js.UndefOr[Double] = js.native
   
-  /** @name dxPieChart.Options.legend */
+  /**
+    * [descr:dxPieChart.Options.legend]
+    */
   @JSName("legend")
   var legend_dxPieChartOptions: js.UndefOr[dxPieChartLegend] = js.native
   
-  /** @name dxPieChart.Options.minDiameter */
+  /**
+    * [descr:dxPieChart.Options.minDiameter]
+    */
   var minDiameter: js.UndefOr[Double] = js.native
   
-  /** @name dxPieChart.Options.onLegendClick */
+  /**
+    * [descr:dxPieChart.Options.onLegendClick]
+    */
   var onLegendClick: js.UndefOr[(js.Function1[/* e */ Points, _]) | String] = js.native
   
-  /** @name dxPieChart.Options.resolveLabelOverlapping */
+  /**
+    * [descr:dxPieChart.Options.resolveLabelOverlapping]
+    */
   var resolveLabelOverlapping: js.UndefOr[hide | none | shift] = js.native
   
-  /** @name dxPieChart.Options.segmentsDirection */
+  /**
+    * [descr:dxPieChart.Options.segmentsDirection]
+    */
   var segmentsDirection: js.UndefOr[anticlockwise | clockwise] = js.native
   
-  /** @name dxPieChart.Options.seriesTemplate */
+  /**
+    * [descr:dxPieChart.Options.seriesTemplate]
+    */
   var seriesTemplate: js.UndefOr[NameField] = js.native
   
-  /** @name dxPieChart.Options.series */
+  /**
+    * [descr:dxPieChart.Options.series]
+    */
   @JSName("series")
   var series_dxPieChartOptions: js.UndefOr[PieChartSeries | js.Array[PieChartSeries]] = js.native
   
-  /** @name dxPieChart.Options.sizeGroup */
+  /**
+    * [descr:dxPieChart.Options.sizeGroup]
+    */
   var sizeGroup: js.UndefOr[String] = js.native
   
-  /** @name dxPieChart.Options.startAngle */
+  /**
+    * [descr:dxPieChart.Options.startAngle]
+    */
   var startAngle: js.UndefOr[Double] = js.native
   
-  /** @name dxPieChart.Options.type */
+  /**
+    * [descr:dxPieChart.Options.type]
+    */
   var `type`: js.UndefOr[donut | doughnut | pie] = js.native
 }
 object dxPieChartOptions {
@@ -102,6 +149,15 @@ object dxPieChartOptions {
     def deleteAdaptiveLayout: Self = this.set("adaptiveLayout", js.undefined)
     
     @scala.inline
+    def setAnnotationsVarargs(value: (dxPieChartAnnotationConfig | js.Any)*): Self = this.set("annotations", js.Array(value :_*))
+    
+    @scala.inline
+    def setAnnotations(value: js.Array[dxPieChartAnnotationConfig | _]): Self = this.set("annotations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnnotations: Self = this.set("annotations", js.undefined)
+    
+    @scala.inline
     def setCenterTemplateFunction2(value: (/* component */ dxPieChart, /* element */ SVGGElement) => String | SVGElement | JQuery): Self = this.set("centerTemplate", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -116,10 +172,22 @@ object dxPieChartOptions {
     def deleteCenterTemplate: Self = this.set("centerTemplate", js.undefined)
     
     @scala.inline
+    def setCommonAnnotationSettings(value: dxPieChartCommonAnnotationConfig): Self = this.set("commonAnnotationSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCommonAnnotationSettings: Self = this.set("commonAnnotationSettings", js.undefined)
+    
+    @scala.inline
     def setCommonSeriesSettings(value: js.Any): Self = this.set("commonSeriesSettings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCommonSeriesSettings: Self = this.set("commonSeriesSettings", js.undefined)
+    
+    @scala.inline
+    def setCustomizeAnnotation(value: /* annotation */ dxPieChartAnnotationConfig | js.Any => dxPieChartAnnotationConfig): Self = this.set("customizeAnnotation", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteCustomizeAnnotation: Self = this.set("customizeAnnotation", js.undefined)
     
     @scala.inline
     def setDiameter(value: Double): Self = this.set("diameter", value.asInstanceOf[js.Any])

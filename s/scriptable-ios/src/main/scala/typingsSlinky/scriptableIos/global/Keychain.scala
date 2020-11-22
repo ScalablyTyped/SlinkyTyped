@@ -40,7 +40,7 @@ object Keychain extends js.Object {
   /**
     * _Add value for a specified key to keychain._
     *
-    * Adds the the value to the keychain, assigning it to the specified key. If the key already exists in the keychain, the value is overwritten.
+    * Adds the value to the keychain, assigning it to the specified key. If the key already exists in the keychain, the value is overwritten.
     *
     * Values are securely stored in an encrypted database.
     * @param key - Key which the value should be assigned to.

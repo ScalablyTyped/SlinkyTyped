@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.anon.Axes
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMinimalMotionControllerObject
-import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandness
+import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandedness
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.WebXRAbstractMotionController
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +15,11 @@ object webXRMicrosoftMixedRealityControllerMod extends js.Object {
   
   @js.native
   class WebXRMicrosoftMixedRealityController protected () extends WebXRAbstractMotionController {
-    def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
+    def this(
+      scene: Scene,
+      gamepadObject: IMinimalMotionControllerObject,
+      handedness: MotionControllerHandedness
+    ) = this()
     
     val _mapping: Axes = js.native
     

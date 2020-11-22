@@ -1,6 +1,6 @@
 package typingsSlinky.domAccessibilityApi.setLikeMod
 
-import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.domAccessibilityApi.setLikeMod.global.Set
 import scala.scalajs.js
@@ -10,4 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("dom-accessibility-api/dist/polyfills/SetLike", JSImport.Default)
 @js.native
 object default
-  extends TopLevel[Instantiable0[Set[js.Object]]]
+  extends TopLevel[
+      Instantiable1[
+        /* items */ js.UndefOr[js.Array[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]], 
+        Set[js.Object]
+      ]
+    ]

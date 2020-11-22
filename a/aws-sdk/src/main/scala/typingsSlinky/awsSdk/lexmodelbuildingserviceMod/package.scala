@@ -57,6 +57,8 @@ package object lexmodelbuildingserviceMod {
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.lexmodelbuildingserviceMod.ClientApiVersions
   
+  type ConfidenceThreshold = scala.Double
+  
   type ContentString = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
@@ -66,6 +68,10 @@ package object lexmodelbuildingserviceMod {
     - java.lang.String
   */
   type ContentType = typingsSlinky.awsSdk.lexmodelbuildingserviceMod._ContentType | java.lang.String
+  
+  type ContextTimeToLiveInSeconds = scala.Double
+  
+  type ContextTurnsToLive = scala.Double
   
   type Count = scala.Double
   
@@ -116,6 +122,10 @@ package object lexmodelbuildingserviceMod {
   */
   type ImportStatus = typingsSlinky.awsSdk.lexmodelbuildingserviceMod._ImportStatus | java.lang.String
   
+  type InputContextList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.InputContext]
+  
+  type InputContextName = java.lang.String
+  
   type IntentList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.Intent]
   
   type IntentMetadataList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.IntentMetadata]
@@ -135,9 +145,15 @@ package object lexmodelbuildingserviceMod {
   type ListsOfUtterances = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.UtteranceList]
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`en-US`
-    - typingsSlinky.awsSdk.awsSdkStrings.`en-GB`
     - typingsSlinky.awsSdk.awsSdkStrings.`de-DE`
+    - typingsSlinky.awsSdk.awsSdkStrings.`en-AU`
+    - typingsSlinky.awsSdk.awsSdkStrings.`en-GB`
+    - typingsSlinky.awsSdk.awsSdkStrings.`en-US`
+    - typingsSlinky.awsSdk.awsSdkStrings.`es-ES`
+    - typingsSlinky.awsSdk.awsSdkStrings.`es-US`
+    - typingsSlinky.awsSdk.awsSdkStrings.`fr-FR`
+    - typingsSlinky.awsSdk.awsSdkStrings.`fr-CA`
+    - typingsSlinky.awsSdk.awsSdkStrings.`it-IT`
     - java.lang.String
   */
   type Locale = typingsSlinky.awsSdk.lexmodelbuildingserviceMod._Locale | java.lang.String
@@ -181,6 +197,10 @@ package object lexmodelbuildingserviceMod {
   */
   type ObfuscationSetting = typingsSlinky.awsSdk.lexmodelbuildingserviceMod._ObfuscationSetting | java.lang.String
   
+  type OutputContextList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.OutputContext]
+  
+  type OutputContextName = java.lang.String
+  
   type Priority = scala.Double
   
   /* Rewritten from type alias, can be one of: 
@@ -218,6 +238,10 @@ package object lexmodelbuildingserviceMod {
     - java.lang.String
   */
   type SlotConstraint = typingsSlinky.awsSdk.lexmodelbuildingserviceMod._SlotConstraint | java.lang.String
+  
+  type SlotDefaultValueList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.SlotDefaultValue]
+  
+  type SlotDefaultValueString = java.lang.String
   
   type SlotList = js.Array[typingsSlinky.awsSdk.lexmodelbuildingserviceMod.Slot]
   

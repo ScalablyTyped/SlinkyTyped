@@ -2,7 +2,7 @@ package typingsSlinky.antd.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`

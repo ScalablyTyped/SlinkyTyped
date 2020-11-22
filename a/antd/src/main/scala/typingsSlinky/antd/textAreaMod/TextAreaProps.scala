@@ -1,5 +1,6 @@
 package typingsSlinky.antd.textAreaMod
 
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +12,10 @@ trait TextAreaProps
   var allowClear: js.UndefOr[Boolean] = js.native
   
   var bordered: js.UndefOr[Boolean] = js.native
+  
+  var showCount: js.UndefOr[Boolean] = js.native
+  
+  var size: js.UndefOr[SizeType] = js.native
 }
 object TextAreaProps {
   
@@ -46,5 +51,17 @@ object TextAreaProps {
     
     @scala.inline
     def deleteBordered: Self = this.set("bordered", js.undefined)
+    
+    @scala.inline
+    def setShowCount(value: Boolean): Self = this.set("showCount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShowCount: Self = this.set("showCount", js.undefined)
+    
+    @scala.inline
+    def setSize(value: SizeType): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
   }
 }

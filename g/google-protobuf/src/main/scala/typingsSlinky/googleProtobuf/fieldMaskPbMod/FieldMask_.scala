@@ -12,9 +12,9 @@ class FieldMask_ () extends Message {
   def addPaths(value: String): String = js.native
   def addPaths(value: String, index: Double): String = js.native
   
-  def clearPathsList(): Unit = js.native
+  def clearPathsList(): FieldMask = js.native
   
   def getPathsList(): js.Array[String] = js.native
   
-  def setPathsList(value: js.Array[String]): Unit = js.native
+  def setPathsList(value: js.Array[String]): FieldMask = js.native
 }

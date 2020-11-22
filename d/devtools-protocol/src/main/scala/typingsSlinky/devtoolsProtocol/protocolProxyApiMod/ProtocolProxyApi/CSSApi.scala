@@ -29,6 +29,7 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.GetStyleSheetTextResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.SetEffectivePropertyValueForNodeRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.SetKeyframeKeyRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.SetKeyframeKeyResponse
+import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.SetLocalFontsEnabledRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.SetMediaTextRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.SetMediaTextResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.SetRuleSelectorRequest
@@ -41,7 +42,9 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.StopRuleUsageTrackingResp
 import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.StyleSheetAddedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.StyleSheetChangedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.StyleSheetRemovedEvent
+import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.TakeComputedStyleUpdatesResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.TakeCoverageDeltaResponse
+import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.TrackComputedStyleUpdatesRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -156,6 +159,11 @@ trait CSSApi extends js.Object {
   def setKeyframeKey(params: SetKeyframeKeyRequest): js.Promise[SetKeyframeKeyResponse] = js.native
   
   /**
+    * Enables/disables rendering of local CSS fonts (enabled by default).
+    */
+  def setLocalFontsEnabled(params: SetLocalFontsEnabledRequest): js.Promise[Unit] = js.native
+  
+  /**
     * Modifies the rule selector.
     */
   def setMediaText(params: SetMediaTextRequest): js.Promise[SetMediaTextResponse] = js.native
@@ -187,8 +195,23 @@ trait CSSApi extends js.Object {
   def stopRuleUsageTracking(): js.Promise[StopRuleUsageTrackingResponse] = js.native
   
   /**
+    * Polls the next batch of computed style updates.
+    */
+  def takeComputedStyleUpdates(): js.Promise[TakeComputedStyleUpdatesResponse] = js.native
+  
+  /**
     * Obtain list of rules that became used since last call to this method (or since start of coverage
     * instrumentation)
     */
   def takeCoverageDelta(): js.Promise[TakeCoverageDeltaResponse] = js.native
+  
+  /**
+    * Starts tracking the given computed styles for updates. The specified array of properties
+    * replaces the one previously specified. Pass empty array to disable tracking.
+    * Use takeComputedStyleUpdates to retrieve the list of nodes that had properties modified.
+    * The changes to computed style properties are only tracked for nodes pushed to the front-end
+    * by the DOM agent. If no changes to the tracked properties occur after the node has been pushed
+    * to the front-end, no updates will be issued for the node.
+    */
+  def trackComputedStyleUpdates(params: TrackComputedStyleUpdatesRequest): js.Promise[Unit] = js.native
 }

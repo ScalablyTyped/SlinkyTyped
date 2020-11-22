@@ -13,13 +13,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTextBoxOptions[T] extends dxTextEditorOptions[T] {
   
-  /** @name dxTextBox.Options.maxLength */
+  /**
+    * [descr:dxTextBox.Options.maxLength]
+    */
   var maxLength: js.UndefOr[String | Double] = js.native
   
-  /** @name dxTextBox.Options.mode */
+  /**
+    * [descr:dxTextBox.Options.mode]
+    */
   var mode: js.UndefOr[email | password | search | tel | text | url] = js.native
   
-  /** @name dxTextBox.Options.value */
+  /**
+    * [descr:dxTextBox.Options.value]
+    */
   @JSName("value")
   var value_dxTextBoxOptions: js.UndefOr[String] = js.native
 }

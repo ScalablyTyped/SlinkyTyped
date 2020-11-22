@@ -5,7 +5,6 @@ import typingsSlinky.node.childProcessMod.ChildProcess
 import typingsSlinky.node.childProcessMod.SpawnOptions
 import typingsSlinky.node.httpMod.RequestOptions
 import typingsSlinky.node.urlMod.URL_
-import typingsSlinky.seleniumStandalone.anon.Arch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +16,7 @@ trait StartOpts extends js.Object {
   
   var cb: js.UndefOr[js.Function2[/* error */ js.Error, /* child */ ChildProcess, Unit]] = js.native
   
-  var drivers: js.UndefOr[StringDictionary[Arch]] = js.native
+  var drivers: js.UndefOr[StringDictionary[DriverOptions]] = js.native
   
   var javaArgs: js.UndefOr[js.Array[String]] = js.native
   
@@ -69,7 +68,7 @@ object StartOpts {
     def deleteCb: Self = this.set("cb", js.undefined)
     
     @scala.inline
-    def setDrivers(value: StringDictionary[Arch]): Self = this.set("drivers", value.asInstanceOf[js.Any])
+    def setDrivers(value: StringDictionary[DriverOptions]): Self = this.set("drivers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDrivers: Self = this.set("drivers", js.undefined)

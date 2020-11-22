@@ -30,6 +30,11 @@ package object relayStoreTypesMod {
   type RecordMap = // theoretically, this should be `[dataID: DataID]`, but `DataID` is a string.
   org.scalablytyped.runtime.StringDictionary[js.UndefOr[typingsSlinky.relayRuntime.relayStoreTypesMod.Record | scala.Null]]
   
+  type RequiredFieldLogger = js.Function1[
+    /* arg */ typingsSlinky.relayRuntime.anon.Readonlykindmissingfieldl | typingsSlinky.relayRuntime.anon.Readonlykindmissingfieldt, 
+    scala.Unit
+  ]
+  
   type Scheduler = js.Function1[/* callback */ js.Function0[scala.Unit], scala.Unit]
   
   type SelectorData = org.scalablytyped.runtime.StringDictionary[js.Any]

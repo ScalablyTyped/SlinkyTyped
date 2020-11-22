@@ -11,13 +11,23 @@ trait UnparseConfig extends js.Object {
    // default: false
   var columns: js.UndefOr[js.Array[String]] = js.native
   
-   // default: '"'
+   // default: false
   var delimiter: js.UndefOr[String] = js.native
+  
+   // default: ","
+  /**
+    * If defined and the download property is true,
+    * a POST request will be made instead of a GET request and the passed argument will be set as the body of the request.
+    * @default undefined
+    */
+  var downloadRequestBody: js.UndefOr[Boolean] = js.native
   
    // default: '"'
   var escapeChar: js.UndefOr[String] = js.native
   
-   // default: ","
+   // default: '"'
+  var escapeFormulae: js.UndefOr[Boolean] = js.native
+  
   var header: js.UndefOr[Boolean] = js.native
   
    // default: true
@@ -26,7 +36,7 @@ trait UnparseConfig extends js.Object {
    // default: false
   var quoteChar: js.UndefOr[String] = js.native
   
-  var quotes: js.UndefOr[Boolean | js.Array[Boolean]] = js.native
+  var quotes: js.UndefOr[Boolean | js.Array[Boolean] | (js.Function1[/* value */ js.Any, Boolean])] = js.native
   
    // default: "\r\n"
   var skipEmptyLines: js.UndefOr[Boolean | greedy] = js.native
@@ -70,10 +80,22 @@ object UnparseConfig {
     def deleteDelimiter: Self = this.set("delimiter", js.undefined)
     
     @scala.inline
+    def setDownloadRequestBody(value: Boolean): Self = this.set("downloadRequestBody", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDownloadRequestBody: Self = this.set("downloadRequestBody", js.undefined)
+    
+    @scala.inline
     def setEscapeChar(value: String): Self = this.set("escapeChar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEscapeChar: Self = this.set("escapeChar", js.undefined)
+    
+    @scala.inline
+    def setEscapeFormulae(value: Boolean): Self = this.set("escapeFormulae", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEscapeFormulae: Self = this.set("escapeFormulae", js.undefined)
     
     @scala.inline
     def setHeader(value: Boolean): Self = this.set("header", value.asInstanceOf[js.Any])
@@ -97,7 +119,10 @@ object UnparseConfig {
     def setQuotesVarargs(value: Boolean*): Self = this.set("quotes", js.Array(value :_*))
     
     @scala.inline
-    def setQuotes(value: Boolean | js.Array[Boolean]): Self = this.set("quotes", value.asInstanceOf[js.Any])
+    def setQuotesFunction1(value: /* value */ js.Any => Boolean): Self = this.set("quotes", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setQuotes(value: Boolean | js.Array[Boolean] | (js.Function1[/* value */ js.Any, Boolean])): Self = this.set("quotes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteQuotes: Self = this.set("quotes", js.undefined)

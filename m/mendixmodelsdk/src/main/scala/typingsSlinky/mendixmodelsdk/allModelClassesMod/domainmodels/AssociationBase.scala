@@ -1,15 +1,17 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/associations relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/associations relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "domainmodels.AssociationBase")
 @js.native
@@ -20,8 +22,8 @@ abstract class AssociationBase protected ()
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
 /* static members */

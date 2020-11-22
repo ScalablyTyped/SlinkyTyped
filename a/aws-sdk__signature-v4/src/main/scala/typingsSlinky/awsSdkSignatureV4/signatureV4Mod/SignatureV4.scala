@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkSignatureV4.signatureV4Mod
 
+import typingsSlinky.awsSdkTypes.signatureMod.EventSigner
 import typingsSlinky.awsSdkTypes.signatureMod.RequestPresigner
 import typingsSlinky.awsSdkTypes.signatureMod.RequestSigner
 import typingsSlinky.awsSdkTypes.signatureMod.StringSigner
@@ -7,12 +8,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/signature-v4/build/SignatureV4", "SignatureV4")
+@JSImport("@aws-sdk/signature-v4/dist/cjs/SignatureV4", "SignatureV4")
 @js.native
 class SignatureV4 protected ()
   extends RequestPresigner
      with RequestSigner
-     with StringSigner {
+     with StringSigner
+     with EventSigner {
   def this(hasApplyChecksumCredentialsRegionServiceSha256UriEscapePath: SignatureV4Init with SignatureV4CryptoInit) = this()
   
   val applyChecksum: js.Any = js.native
@@ -34,6 +36,8 @@ class SignatureV4 protected ()
   val service: js.Any = js.native
   
   val sha256: js.Any = js.native
+  
+  var signEvent: js.Any = js.native
   
   var signRequest: js.Any = js.native
   

@@ -5,22 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IndicesCreateDataStream[T] extends Generic {
-  
-  var body: T = js.native
+trait IndicesCreateDataStream extends Generic {
   
   var name: String = js.native
 }
 object IndicesCreateDataStream {
   
   @scala.inline
-  def apply[T](body: T, name: String): IndicesCreateDataStream[T] = {
-    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.asInstanceOf[IndicesCreateDataStream[T]]
+  def apply(name: String): IndicesCreateDataStream = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+    __obj.asInstanceOf[IndicesCreateDataStream]
   }
   
   @scala.inline
-  implicit class IndicesCreateDataStreamOps[Self <: IndicesCreateDataStream[_], T] (val x: Self with IndicesCreateDataStream[T]) extends AnyVal {
+  implicit class IndicesCreateDataStreamOps[Self <: IndicesCreateDataStream] (val x: Self) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -33,9 +31,6 @@ object IndicesCreateDataStream {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setBody(value: T): Self = this.set("body", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

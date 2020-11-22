@@ -39,24 +39,22 @@ object mapMod extends js.Object {
           Boolean
         ],
       thisArg2: U
-    ): T = js.native
+    ): js.UndefOr[T] = js.native
     
-    def forEachLayerAtPixel[S, T, U](
+    def forEachLayerAtPixel[T](
       pixel: Pixel,
       frameState: FrameState,
       hitTolerance: Double,
-      callback: js.ThisFunction2[
-          /* this */ S, 
+      callback: js.Function2[
           /* p0 */ typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default], 
           /* p1 */ js.typedarray.Uint8ClampedArray | js.typedarray.Uint8Array, 
           T
         ],
-      layerFilter: js.ThisFunction1[
-          /* this */ U, 
+      layerFilter: js.Function1[
           /* p0 */ typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default], 
           Boolean
         ]
-    ): T = js.native
+    ): js.UndefOr[T] = js.native
     
     def getMap(): typingsSlinky.ol.pluggableMapMod.default = js.native
     
@@ -73,6 +71,9 @@ object mapMod extends js.Object {
       thisArg: U
     ): Boolean = js.native
     
+    /**
+      * Render.
+      */
     def renderFrame(frameState: FrameState): Unit = js.native
     
     /* protected */ def scheduleExpireIconCache(frameState: FrameState): Unit = js.native

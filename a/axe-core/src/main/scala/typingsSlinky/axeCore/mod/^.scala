@@ -19,4 +19,6 @@ object ^ extends js.Object {
   	 * Source string to use as an injected script in Selenium
   	 */
   var source: String = js.native
+  
+  var version: String = js.native
 }

@@ -2,12 +2,14 @@ package typingsSlinky.blueprintjsCore
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import typingsSlinky.blueprintjsCore.alignmentMod.Alignment
 import typingsSlinky.blueprintjsCore.anon.Key
 import typingsSlinky.blueprintjsCore.blueprintjsCoreNumbers.`0`
@@ -56,8 +58,9 @@ object commonMod extends js.Object {
   
   def getPositionIgnoreAngles(position: Position): left | right | bottom | top = js.native
   
-  def getRef[T](ref: T): T = js.native
-  def getRef[T](ref: IRefObject[T]): T = js.native
+  def getRef[T](): T | Null = js.native
+  def getRef[T](ref: T): T | Null = js.native
+  def getRef[T](ref: IRefObject[T]): T | Null = js.native
   
   def isPositionHorizontal(position: Position): Boolean = js.native
   
@@ -75,35 +78,31 @@ object commonMod extends js.Object {
   def removeNonHTMLProps(props: StringDictionary[js.Any], invalidProps: js.Array[String], shouldMerge: Boolean): StringDictionary[js.Any] = js.native
   
   @js.native
-  abstract class AbstractComponent[P, S] ()
+  abstract class AbstractComponent[P, S] protected ()
     extends typingsSlinky.blueprintjsCore.abstractComponentMod.AbstractComponent[P, S] {
     def this(props: P) = this()
     def this(props: P, context: js.Any) = this()
-    def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
   }
   
   @js.native
-  abstract class AbstractComponent2[P, S, SS] ()
+  abstract class AbstractComponent2[P, S, SS] protected ()
     extends typingsSlinky.blueprintjsCore.abstractComponent2Mod.AbstractComponent2[P, S, SS] {
     def this(props: P) = this()
     def this(props: P, context: js.Any) = this()
-    def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
   }
   
   @js.native
-  abstract class AbstractPureComponent[P, S] ()
+  abstract class AbstractPureComponent[P, S] protected ()
     extends typingsSlinky.blueprintjsCore.abstractPureComponentMod.AbstractPureComponent[P, S] {
     def this(props: P) = this()
     def this(props: P, context: js.Any) = this()
-    def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
   }
   
   @js.native
-  abstract class AbstractPureComponent2[P, S, SS] ()
+  abstract class AbstractPureComponent2[P, S, SS] protected ()
     extends typingsSlinky.blueprintjsCore.abstractPureComponent2Mod.AbstractPureComponent2[P, S, SS] {
     def this(props: P) = this()
     def this(props: P, context: js.Any) = this()
-    def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
   }
   
   @js.native
@@ -393,6 +392,8 @@ object commonMod extends js.Object {
     
     val POPOVER_BACKDROP: String = js.native
     
+    val POPOVER_CAPTURING_DISMISS: String = js.native
+    
     val POPOVER_CONTENT: String = js.native
     
     val POPOVER_CONTENT_SIZING: String = js.native
@@ -543,19 +544,35 @@ object commonMod extends js.Object {
     
     val VERTICAL: String = js.native
     
-    def alignmentClass(alignment: Alignment): String = js.native
+    def alignmentClass(): js.UndefOr[String] = js.native
+    def alignmentClass(alignment: Alignment): js.UndefOr[String] = js.native
     
+    def elevationClass(): js.UndefOr[String] = js.native
+    def elevationClass(elevation: js.UndefOr[scala.Nothing]): js.UndefOr[scala.Nothing] = js.native
     def elevationClass(elevation: Elevation): String = js.native
+    @JSName("elevationClass")
+    def elevationClass_Union(elevation: Elevation): js.UndefOr[String] = js.native
     
     def getClassNamespace(): String = js.native
     
-    def iconClass(): String = js.native
+    def iconClass(): js.UndefOr[String] = js.native
+    def iconClass(iconName: js.UndefOr[scala.Nothing]): js.UndefOr[scala.Nothing] = js.native
     def iconClass(iconName: String): String = js.native
+    @JSName("iconClass")
+    def iconClass_Union(iconName: String): js.UndefOr[String] = js.native
     
-    def intentClass(): String = js.native
+    def intentClass(): js.UndefOr[scala.Nothing] = js.native
     def intentClass(intent: Intent): String = js.native
+    @JSName("intentClass")
+    def intentClass_Union(intent: Intent): js.UndefOr[Intent] = js.native
+    @JSName("intentClass")
+    def intentClass_none(intent: none): js.UndefOr[scala.Nothing] = js.native
     
+    def positionClass(): js.UndefOr[String] = js.native
+    def positionClass(position: js.UndefOr[scala.Nothing]): js.UndefOr[scala.Nothing] = js.native
     def positionClass(position: Position): String = js.native
+    @JSName("positionClass")
+    def positionClass_Union(position: Position): js.UndefOr[String] = js.native
   }
   
   @js.native
@@ -842,17 +859,19 @@ object commonMod extends js.Object {
     
     def countDecimalPlaces(num: Double): Double = js.native
     
+    def createReactRef[T](): ReactRef[T] = js.native
+    
     def deepCompareKeys(objA: js.Any, objB: js.Any): Boolean = js.native
     def deepCompareKeys(objA: js.Any, objB: js.Any, keys: js.Array[String | Double | js.Symbol]): Boolean = js.native
     
     def elementIsOrContains(element: HTMLElement, testElement: HTMLElement): Boolean = js.native
     
-    def ensureElement(): ReactElement = js.native
+    def ensureElement(): js.UndefOr[ReactElement] = js.native
     def ensureElement(
       child: js.UndefOr[ReactElement],
       tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any
-    ): ReactElement = js.native
-    def ensureElement(child: ReactElement): ReactElement = js.native
+    ): js.UndefOr[ReactElement] = js.native
+    def ensureElement(child: ReactElement): js.UndefOr[ReactElement] = js.native
     
     def getDeepUnequalKeyValues[T /* <: js.Object */](): js.Array[Key[T]] = js.native
     def getDeepUnequalKeyValues[T /* <: js.Object */](objA: T): js.Array[Key[T]] = js.native
@@ -870,8 +889,9 @@ object commonMod extends js.Object {
     def getDisplayName(ComponentClass: INamed): String = js.native
     def getDisplayName(ComponentClass: ReactComponentClass[js.Object]): String = js.native
     
-    def getRef[T](ref: T): T = js.native
-    def getRef[T](ref: IRefObject[T]): T = js.native
+    def getRef[T](): T | Null = js.native
+    def getRef[T](ref: T): T | Null = js.native
+    def getRef[T](ref: IRefObject[T]): T | Null = js.native
     
     def isElementOfType[P](element: js.Any, ComponentType: ReactComponentClass[P]): /* is react.react.ReactElement */ Boolean = js.native
     
@@ -957,10 +977,10 @@ object commonMod extends js.Object {
     
     def throttleEvent(target: EventTarget, eventName: String, newEventName: String): js.Function1[/* event */ Event, Unit] = js.native
     
-    def throttleReactEventCallback(callback: js.Function2[/* event */ SyntheticEvent[Event, _], /* repeated */ js.Any, _]): js.Function1[/* event2 */ SyntheticEvent[Event, _], Unit] = js.native
-    def throttleReactEventCallback(
-      callback: js.Function2[/* event */ SyntheticEvent[Event, _], /* repeated */ js.Any, _],
+    def throttleReactEventCallback[E /* <: SyntheticEvent[Event, Element] */](callback: js.Function2[/* event */ E, /* repeated */ js.Any, _]): js.Function1[/* event2 */ E, Unit] = js.native
+    def throttleReactEventCallback[E /* <: SyntheticEvent[Event, Element] */](
+      callback: js.Function2[/* event */ E, /* repeated */ js.Any, _],
       options: IThrottledReactEventOptions
-    ): js.Function1[/* event2 */ SyntheticEvent[Event, _], Unit] = js.native
+    ): js.Function1[/* event2 */ E, Unit] = js.native
   }
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResetPasscodeActionResult extends DeviceActionResult {
   
   // Newly generated passcode for the device
-  var passcode: js.UndefOr[String] = js.native
+  var passcode: js.UndefOr[NullableOption[String]] = js.native
 }
 object ResetPasscodeActionResult {
   
@@ -34,9 +34,12 @@ object ResetPasscodeActionResult {
     }
     
     @scala.inline
-    def setPasscode(value: String): Self = this.set("passcode", value.asInstanceOf[js.Any])
+    def setPasscode(value: NullableOption[String]): Self = this.set("passcode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasscode: Self = this.set("passcode", js.undefined)
+    
+    @scala.inline
+    def setPasscodeNull: Self = this.set("passcode", null)
   }
 }

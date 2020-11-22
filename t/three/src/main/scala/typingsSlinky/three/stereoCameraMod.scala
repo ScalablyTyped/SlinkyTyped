@@ -13,12 +13,18 @@ object stereoCameraMod extends js.Object {
   @js.native
   class StereoCamera () extends Camera {
     
+    /**
+    	 * @default 1
+    	 */
     var aspect: Double = js.native
     
     var cameraL: PerspectiveCamera = js.native
     
     var cameraR: PerspectiveCamera = js.native
     
+    /**
+    	 * @default 0.064
+    	 */
     var eyeSep: Double = js.native
     
     @JSName("type")

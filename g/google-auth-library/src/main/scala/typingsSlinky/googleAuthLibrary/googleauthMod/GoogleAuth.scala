@@ -93,6 +93,12 @@ class GoogleAuth () extends js.Object {
   var clientOptions: js.Any = js.native
   
   /**
+    * Scopes populated by the client library by default. We differentiate between
+    * these and user defined scopes when deciding whether to use a self-signed JWT.
+    */
+  var defaultScopes: js.UndefOr[String | js.Array[String]] = js.native
+  
+  /**
     * Create a credentials instance using the given API key string.
     * @param apiKey The API key string
     * @param options An optional options object.

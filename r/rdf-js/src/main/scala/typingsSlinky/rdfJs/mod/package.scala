@@ -18,6 +18,7 @@ package object mod {
     - typingsSlinky.rdfJs.mod.NamedNode[java.lang.String]
     - typingsSlinky.rdfJs.mod.Literal
     - typingsSlinky.rdfJs.mod.BlankNode
+    - typingsSlinky.rdfJs.mod.Quad
     - typingsSlinky.rdfJs.mod.Variable
   */
   type QuadObject = typingsSlinky.rdfJs.mod._QuadObject | typingsSlinky.rdfJs.mod.NamedNode[java.lang.String]
@@ -27,6 +28,7 @@ package object mod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.rdfJs.mod.NamedNode[java.lang.String]
     - typingsSlinky.rdfJs.mod.BlankNode
+    - typingsSlinky.rdfJs.mod.Quad
     - typingsSlinky.rdfJs.mod.Variable
   */
   type QuadSubject = typingsSlinky.rdfJs.mod._QuadSubject | typingsSlinky.rdfJs.mod.NamedNode[java.lang.String]
@@ -37,6 +39,7 @@ package object mod {
     - typingsSlinky.rdfJs.mod.Literal
     - typingsSlinky.rdfJs.mod.Variable
     - typingsSlinky.rdfJs.mod.DefaultGraph
+    - typingsSlinky.rdfJs.mod.BaseQuad
   */
   type Term = typingsSlinky.rdfJs.mod._Term | typingsSlinky.rdfJs.mod.NamedNode[java.lang.String]
 }

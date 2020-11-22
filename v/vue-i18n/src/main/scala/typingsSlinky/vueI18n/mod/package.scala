@@ -34,6 +34,10 @@ package object mod {
   
   type LocaleMessages = typingsSlinky.vueI18n.mod.VueI18n.LocaleMessages
   
+  type MessageContext = typingsSlinky.vueI18n.mod.VueI18n.MessageContext
+  
+  type MessageFunction = typingsSlinky.vueI18n.mod.VueI18n.MessageFunction
+  
   type MissingHandler = typingsSlinky.vueI18n.mod.VueI18n.MissingHandler
   
   type NumberFormat = typingsSlinky.vueI18n.mod.VueI18n.NumberFormat

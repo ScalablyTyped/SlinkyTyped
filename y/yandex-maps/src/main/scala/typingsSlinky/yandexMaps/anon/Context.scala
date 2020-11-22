@@ -13,7 +13,7 @@ trait Context extends js.Object {
   
   var controllers: js.UndefOr[js.Array[IEventWorkflowController]] = js.native
   
-  var parent: js.UndefOr[IEventManager] = js.native
+  var parent: js.UndefOr[IEventManager[js.Object]] = js.native
 }
 object Context {
   
@@ -54,7 +54,7 @@ object Context {
     def deleteControllers: Self = this.set("controllers", js.undefined)
     
     @scala.inline
-    def setParent(value: IEventManager): Self = this.set("parent", value.asInstanceOf[js.Any])
+    def setParent(value: IEventManager[js.Object]): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteParent: Self = this.set("parent", js.undefined)

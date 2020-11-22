@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait InvariantStatic extends js.Object {
   
-  def apply(testValue: js.Any, format: String, extra: js.Any*): Unit = js.native
+  def apply(testValue: js.Any, format: String, extra: js.Any*): /* asserts testValue */ Boolean = js.native
   def apply(testValue: `false`, format: String, extra: js.Any*): scala.Nothing = js.native
 }

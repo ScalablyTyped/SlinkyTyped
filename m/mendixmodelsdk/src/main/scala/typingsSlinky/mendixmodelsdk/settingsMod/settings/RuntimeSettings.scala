@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.settingsMod.settings
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
 import typingsSlinky.mendixmodelsdk.settingsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,8 +20,8 @@ class RuntimeSettings protected () extends ProjectSettingsPart {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def afterStartupMicroflow: IMicroflow | Null = js.native
@@ -70,9 +72,6 @@ class RuntimeSettings protected () extends ProjectSettingsPart {
   def healthCheckMicroflowQualifiedName: String | Null = js.native
   
   def healthCheckMicroflow_=(newValue: IMicroflow | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FRuntimeSettings: IModel = js.native
   
   def roundingMode: RoundingMode = js.native
   def roundingMode_=(newValue: RoundingMode): Unit = js.native

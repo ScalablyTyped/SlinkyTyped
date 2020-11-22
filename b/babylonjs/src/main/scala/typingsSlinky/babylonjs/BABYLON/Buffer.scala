@@ -16,7 +16,12 @@ trait Buffer extends js.Object {
   
   var _engine: js.Any = js.native
   
+  /** @hidden */
+  def _increaseReferences(): Unit = js.native
+  
   var _instanced: js.Any = js.native
+  
+  var _isAlreadyOwned: js.Any = js.native
   
   /** @hidden */
   def _rebuild(): Unit = js.native

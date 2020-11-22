@@ -16,6 +16,8 @@ trait YAxisProps extends EventAttributes {
   
   var allowDecimals: js.UndefOr[Boolean] = js.native
   
+  var allowDuplicatedCategory: js.UndefOr[Boolean] = js.native
+  
   // Rotation of tick labels
   var angle: js.UndefOr[Double] = js.native
   
@@ -124,6 +126,12 @@ object YAxisProps {
     
     @scala.inline
     def deleteAllowDecimals: Self = this.set("allowDecimals", js.undefined)
+    
+    @scala.inline
+    def setAllowDuplicatedCategory(value: Boolean): Self = this.set("allowDuplicatedCategory", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowDuplicatedCategory: Self = this.set("allowDuplicatedCategory", js.undefined)
     
     @scala.inline
     def setAngle(value: Double): Self = this.set("angle", value.asInstanceOf[js.Any])

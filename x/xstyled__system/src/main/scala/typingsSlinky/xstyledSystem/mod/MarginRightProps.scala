@@ -9,13 +9,13 @@ trait MarginRightProps[TLength] extends js.Object {
   
   val marginRight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginRightProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginRight<TLength> */ _
     ]
   ] = js.native
   
   val mr: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginRightProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginRight<TLength> */ _
     ]
   ] = js.native
 }
@@ -43,9 +43,12 @@ object MarginRightProps {
     }
     
     @scala.inline
+    def setMarginRightVarargs(value: js.Any*): Self = this.set("marginRight", js.Array(value :_*))
+    
+    @scala.inline
     def setMarginRight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginRightProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginRight<TLength> */ _
         ]
     ): Self = this.set("marginRight", value.asInstanceOf[js.Any])
     
@@ -53,9 +56,12 @@ object MarginRightProps {
     def deleteMarginRight: Self = this.set("marginRight", js.undefined)
     
     @scala.inline
+    def setMrVarargs(value: js.Any*): Self = this.set("mr", js.Array(value :_*))
+    
+    @scala.inline
     def setMr(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginRightProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginRight<TLength> */ _
         ]
     ): Self = this.set("mr", value.asInstanceOf[js.Any])
     

@@ -12,6 +12,8 @@ package object Mongo {
   
   type Dictionary[T] = org.scalablytyped.runtime.StringDictionary[T]
   
+  type DispatchTransform[Transform, T, U] = U | T | typingsSlinky.std.ReturnType[Transform]
+  
   type ElementsOf[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]:? meteor.meteor/mongo.Mongo.OnlyElementsOfArrays<T[P]>}
     */ typingsSlinky.meteor.meteorStrings.ElementsOf with org.scalablytyped.runtime.TopLevel[T]
@@ -39,4 +41,6 @@ package object Mongo {
   type Query[T] = typingsSlinky.meteor.meteorStrings.Query with org.scalablytyped.runtime.TopLevel[js.Any] with typingsSlinky.meteor.anon.And with typingsSlinky.meteor.mongoMod.Mongo.Dictionary[_]
   
   type Selector[T] = typingsSlinky.meteor.mongoMod.Mongo.Query[T] | typingsSlinky.meteor.mongoMod.Mongo.QueryWithModifiers[T]
+  
+  type Transform[T] = js.UndefOr[(js.Function1[/* doc */ T, js.Any]) | scala.Null]
 }

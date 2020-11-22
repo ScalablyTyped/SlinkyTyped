@@ -3,13 +3,13 @@ package typingsSlinky.officeUiFabricReact.coachmarkTypesMod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.coachmarkBaseMod.CoachmarkBase
 import typingsSlinky.officeUiFabricReact.positioningContainerTypesMod.IPositioningContainerProps
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubble
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

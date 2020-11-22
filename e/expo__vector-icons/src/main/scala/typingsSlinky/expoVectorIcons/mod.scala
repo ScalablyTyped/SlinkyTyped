@@ -32,9 +32,9 @@ object mod extends js.Object {
   
   def createIconSetFromFontello(config: js.Any, expoFontName: js.Any, expoAssetId: js.Any): js.Any = js.native
   
-  def createIconSetFromIcoMoon(config: js.Any, expoFontName: js.Any, expoAssetId: js.Any): Icon[scala.Nothing, _] = js.native
+  def createIconSetFromIcoMoon(config: js.Any, expoFontName: js.Any, expoAssetId: js.Any): Icon[String, String] = js.native
   
-  def createMu(config: js.Any, expoFontName: js.Any, expoAssetId: js.Any): Icon[scala.Nothing, _] = js.native
+  def createMu(config: js.Any, expoFontName: js.Any, expoAssetId: js.Any): Icon[String, String] = js.native
   
   def createMultiStyleIconSet(styles: FontStyles): js.Any = js.native
   def createMultiStyleIconSet(styles: FontStyles, optionsInput: js.Object): js.Any = js.native

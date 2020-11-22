@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ChatInfo extends js.Object {
   
   // The unique identifier of a message in a Microsoft Teams channel.
-  var messageId: js.UndefOr[String] = js.native
+  var messageId: js.UndefOr[NullableOption[String]] = js.native
   
   // The ID of the reply message.
-  var replyChainMessageId: js.UndefOr[String] = js.native
+  var replyChainMessageId: js.UndefOr[NullableOption[String]] = js.native
   
   // The unique identifier for a thread in Microsoft Teams.
-  var threadId: js.UndefOr[String] = js.native
+  var threadId: js.UndefOr[NullableOption[String]] = js.native
 }
 object ChatInfo {
   
@@ -40,21 +40,30 @@ object ChatInfo {
     }
     
     @scala.inline
-    def setMessageId(value: String): Self = this.set("messageId", value.asInstanceOf[js.Any])
+    def setMessageId(value: NullableOption[String]): Self = this.set("messageId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMessageId: Self = this.set("messageId", js.undefined)
     
     @scala.inline
-    def setReplyChainMessageId(value: String): Self = this.set("replyChainMessageId", value.asInstanceOf[js.Any])
+    def setMessageIdNull: Self = this.set("messageId", null)
+    
+    @scala.inline
+    def setReplyChainMessageId(value: NullableOption[String]): Self = this.set("replyChainMessageId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReplyChainMessageId: Self = this.set("replyChainMessageId", js.undefined)
     
     @scala.inline
-    def setThreadId(value: String): Self = this.set("threadId", value.asInstanceOf[js.Any])
+    def setReplyChainMessageIdNull: Self = this.set("replyChainMessageId", null)
+    
+    @scala.inline
+    def setThreadId(value: NullableOption[String]): Self = this.set("threadId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteThreadId: Self = this.set("threadId", js.undefined)
+    
+    @scala.inline
+    def setThreadIdNull: Self = this.set("threadId", null)
   }
 }

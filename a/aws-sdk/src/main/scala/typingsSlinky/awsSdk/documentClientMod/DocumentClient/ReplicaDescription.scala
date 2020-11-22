@@ -30,7 +30,12 @@ trait ReplicaDescription extends js.Object {
   var RegionName: js.UndefOr[typingsSlinky.awsSdk.documentClientMod.DocumentClient.RegionName] = js.native
   
   /**
-    * The current state of the replica:    CREATING - The replica is being created.    UPDATING - The replica is being updated.    DELETING - The replica is being deleted.    ACTIVE - The replica is ready for use.  
+    * The time at which the replica was first detected as inaccessible. To determine cause of inaccessibility check the ReplicaStatus property.
+    */
+  var ReplicaInaccessibleDateTime: js.UndefOr[js.Date] = js.native
+  
+  /**
+    * The current state of the replica:    CREATING - The replica is being created.    UPDATING - The replica is being updated.    DELETING - The replica is being deleted.    ACTIVE - The replica is ready for use.    REGION_DISABLED - The replica is inaccessible because the AWS Region has been disabled.  If the AWS Region remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the replication group. The replica will not be deleted and replication will stop from and to this region.     INACCESSIBLE_ENCRYPTION_CREDENTIALS  - The AWS KMS key used to encrypt the table is inaccessible.  If the AWS KMS key remains inaccessible for more than 20 hours, DynamoDB will remove this replica from the replication group. The replica will not be deleted and replication will stop from and to this region.   
     */
   var ReplicaStatus: js.UndefOr[typingsSlinky.awsSdk.documentClientMod.DocumentClient.ReplicaStatus] = js.native
   
@@ -95,6 +100,12 @@ object ReplicaDescription {
     
     @scala.inline
     def deleteRegionName: Self = this.set("RegionName", js.undefined)
+    
+    @scala.inline
+    def setReplicaInaccessibleDateTime(value: js.Date): Self = this.set("ReplicaInaccessibleDateTime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReplicaInaccessibleDateTime: Self = this.set("ReplicaInaccessibleDateTime", js.undefined)
     
     @scala.inline
     def setReplicaStatus(value: ReplicaStatus): Self = this.set("ReplicaStatus", value.asInstanceOf[js.Any])

@@ -15,7 +15,7 @@ trait JustifyItemsProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends j
     */
   var justifyItems: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.JustifyItemsProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.JustifyItems */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object JustifyItemsProps {
     @scala.inline
     def setJustifyItems(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.JustifyItemsProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.JustifyItems */ _, 
           ThemeType
         ]
     ): Self = this.set("justifyItems", value.asInstanceOf[js.Any])

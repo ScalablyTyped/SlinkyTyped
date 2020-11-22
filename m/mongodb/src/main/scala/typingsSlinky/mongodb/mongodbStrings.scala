@@ -2,6 +2,8 @@ package typingsSlinky.mongodb
 
 import typingsSlinky.mongodb.mod.BSONTypeAlias
 import typingsSlinky.mongodb.mod.ChangeEventTypes
+import typingsSlinky.mongodb.mod.MetaProjectionOperators
+import typingsSlinky.mongodb.mod.MetaSortOperators
 import typingsSlinky.mongodb.mod.ProfilingLevel
 import typingsSlinky.mongodb.mod.ReadConcernLevel
 import typingsSlinky.mongodb.mod.ReadPreferenceMode
@@ -19,6 +21,9 @@ object mongodbStrings {
   
   @scala.inline
   def FilterQuery: FilterQuery = "FilterQuery".asInstanceOf[FilterQuery]
+  
+  @scala.inline
+  def FindOneOptions: FindOneOptions = "FindOneOptions".asInstanceOf[FindOneOptions]
   
   @scala.inline
   def GSSAPI: GSSAPI = "GSSAPI".asInstanceOf[GSSAPI]
@@ -55,6 +60,9 @@ object mongodbStrings {
   
   @scala.inline
   def `SCRAM-SHA-256`: `SCRAM-SHA-256` = "SCRAM-SHA-256".asInstanceOf[`SCRAM-SHA-256`]
+  
+  @scala.inline
+  def SchemaMember: SchemaMember = "SchemaMember".asInstanceOf[SchemaMember]
   
   @scala.inline
   def SetFields: SetFields = "SetFields".asInstanceOf[SetFields]
@@ -109,6 +117,9 @@ object mongodbStrings {
   
   @scala.inline
   def error: error = "error".asInstanceOf[error]
+  
+  @scala.inline
+  def indexKey: indexKey = "indexKey".asInstanceOf[indexKey]
   
   @scala.inline
   def insert: insert = "insert".asInstanceOf[insert]
@@ -180,6 +191,12 @@ object mongodbStrings {
   def replace: replace = "replace".asInstanceOf[replace]
   
   @scala.inline
+  def searchHighlights: searchHighlights = "searchHighlights".asInstanceOf[searchHighlights]
+  
+  @scala.inline
+  def searchScore: searchScore = "searchScore".asInstanceOf[searchScore]
+  
+  @scala.inline
   def secondary: secondary = "secondary".asInstanceOf[secondary]
   
   @scala.inline
@@ -202,6 +219,9 @@ object mongodbStrings {
   
   @scala.inline
   def symbol: symbol = "symbol".asInstanceOf[symbol]
+  
+  @scala.inline
+  def textScore: textScore = "textScore".asInstanceOf[textScore]
   
   @scala.inline
   def timestamp: timestamp = "timestamp".asInstanceOf[timestamp]
@@ -229,6 +249,9 @@ object mongodbStrings {
   
   @js.native
   sealed trait FilterQuery extends js.Object
+  
+  @js.native
+  sealed trait FindOneOptions extends js.Object
   
   @js.native
   sealed trait GSSAPI extends js.Object
@@ -265,6 +288,9 @@ object mongodbStrings {
   
   @js.native
   sealed trait `SCRAM-SHA-256` extends js.Object
+  
+  @js.native
+  sealed trait SchemaMember extends js.Object
   
   @js.native
   sealed trait SetFields extends js.Object
@@ -319,6 +345,11 @@ object mongodbStrings {
   
   @js.native
   sealed trait error extends js.Object
+  
+  @js.native
+  sealed trait indexKey
+    extends MetaProjectionOperators
+       with MetaSortOperators
   
   @js.native
   sealed trait insert extends ChangeEventTypes
@@ -390,6 +421,12 @@ object mongodbStrings {
   sealed trait replace extends ChangeEventTypes
   
   @js.native
+  sealed trait searchHighlights extends MetaProjectionOperators
+  
+  @js.native
+  sealed trait searchScore extends MetaProjectionOperators
+  
+  @js.native
   sealed trait secondary extends ReadPreferenceMode
   
   @js.native
@@ -412,6 +449,11 @@ object mongodbStrings {
   
   @js.native
   sealed trait symbol extends BSONTypeAlias
+  
+  @js.native
+  sealed trait textScore
+    extends MetaProjectionOperators
+       with MetaSortOperators
   
   @js.native
   sealed trait timestamp extends BSONTypeAlias

@@ -1,6 +1,7 @@
 package typingsSlinky.antd.sliderMod
 
 import typingsSlinky.antd.antdBooleans.`true`
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,11 +11,15 @@ trait SliderRangeProps extends SliderBaseProps {
   
   var defaultValue: js.UndefOr[js.Tuple2[Double, Double]] = js.native
   
+  var handleStyle: js.UndefOr[js.Array[CSSProperties]] = js.native
+  
   var onAfterChange: js.UndefOr[js.Function1[/* value */ js.Tuple2[Double, Double], Unit]] = js.native
   
   var onChange: js.UndefOr[js.Function1[/* value */ js.Tuple2[Double, Double], Unit]] = js.native
   
   var range: `true` = js.native
+  
+  var trackStyle: js.UndefOr[js.Array[CSSProperties]] = js.native
   
   var value: js.UndefOr[js.Tuple2[Double, Double]] = js.native
 }
@@ -51,6 +56,15 @@ object SliderRangeProps {
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
     
     @scala.inline
+    def setHandleStyleVarargs(value: CSSProperties*): Self = this.set("handleStyle", js.Array(value :_*))
+    
+    @scala.inline
+    def setHandleStyle(value: js.Array[CSSProperties]): Self = this.set("handleStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHandleStyle: Self = this.set("handleStyle", js.undefined)
+    
+    @scala.inline
     def setOnAfterChange(value: /* value */ js.Tuple2[Double, Double] => Unit): Self = this.set("onAfterChange", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -61,6 +75,15 @@ object SliderRangeProps {
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
+    
+    @scala.inline
+    def setTrackStyleVarargs(value: CSSProperties*): Self = this.set("trackStyle", js.Array(value :_*))
+    
+    @scala.inline
+    def setTrackStyle(value: js.Array[CSSProperties]): Self = this.set("trackStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTrackStyle: Self = this.set("trackStyle", js.undefined)
     
     @scala.inline
     def setValue(value: js.Tuple2[Double, Double]): Self = this.set("value", value.asInstanceOf[js.Any])

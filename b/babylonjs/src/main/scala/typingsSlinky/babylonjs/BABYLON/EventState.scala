@@ -54,4 +54,9 @@ trait EventState extends js.Object {
     * The object that originally notified the event
     */
   var target: js.UndefOr[js.Any] = js.native
+  
+  /**
+    * User defined information that will be sent to observers
+    */
+  var userInfo: js.UndefOr[js.Any] = js.native
 }

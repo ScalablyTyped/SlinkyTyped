@@ -9,6 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResponseMetadata extends js.Object {
   
   /**
+    * The number of times this operation was attempted.
+    */
+  var attempts: js.UndefOr[Double] = js.native
+  
+  /**
     * A tertiary identifier for the last request sent. Used for debugging.
     */
   var cfId: js.UndefOr[String] = js.native
@@ -33,11 +38,6 @@ trait ResponseMetadata extends js.Object {
     * requested by AWS service teams to aid in debugging.
     */
   var requestId: js.UndefOr[String] = js.native
-  
-  /**
-    * The number of times this operation was retried.
-    */
-  var retries: js.UndefOr[Double] = js.native
   
   /**
     * The total amount of time (in milliseconds) that was spent waiting between
@@ -69,6 +69,12 @@ object ResponseMetadata {
     }
     
     @scala.inline
+    def setAttempts(value: Double): Self = this.set("attempts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAttempts: Self = this.set("attempts", js.undefined)
+    
+    @scala.inline
     def setCfId(value: String): Self = this.set("cfId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -97,12 +103,6 @@ object ResponseMetadata {
     
     @scala.inline
     def deleteRequestId: Self = this.set("requestId", js.undefined)
-    
-    @scala.inline
-    def setRetries(value: Double): Self = this.set("retries", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRetries: Self = this.set("retries", js.undefined)
     
     @scala.inline
     def setTotalRetryDelay(value: Double): Self = this.set("totalRetryDelay", value.asInstanceOf[js.Any])

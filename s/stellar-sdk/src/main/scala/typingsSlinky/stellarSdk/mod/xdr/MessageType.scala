@@ -19,7 +19,7 @@ object MessageType extends js.Object {
   
   def errorMsg(): typingsSlinky.stellarBase.xdrMod.xdr.MessageType = js.native
   
-  def getPeer(): typingsSlinky.stellarBase.xdrMod.xdr.MessageType = js.native
+  def getPeers(): typingsSlinky.stellarBase.xdrMod.xdr.MessageType = js.native
   
   def getScpQuorumset(): typingsSlinky.stellarBase.xdrMod.xdr.MessageType = js.native
   
@@ -29,7 +29,7 @@ object MessageType extends js.Object {
   
   def hello(): typingsSlinky.stellarBase.xdrMod.xdr.MessageType = js.native
   
-  def peer(): typingsSlinky.stellarBase.xdrMod.xdr.MessageType = js.native
+  def peers(): typingsSlinky.stellarBase.xdrMod.xdr.MessageType = js.native
   
   def scpMessage(): typingsSlinky.stellarBase.xdrMod.xdr.MessageType = js.native
   

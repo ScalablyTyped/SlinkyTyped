@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FileFilter extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/file-filter
+  // Docs: https://electronjs.org/docs/api/structures/file-filter
   var extensions: js.Array[String] = js.native
   
   var name: String = js.native

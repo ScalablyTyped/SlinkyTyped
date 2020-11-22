@@ -13,7 +13,7 @@ trait ByoipCidr extends js.Object {
   var Cidr: js.UndefOr[GenericString] = js.native
   
   /**
-    * A history of status changes for an IP address range that that you bring to AWS Global Accelerator through bring your own IP address (BYOIP).
+    * A history of status changes for an IP address range that you bring to AWS Global Accelerator through bring your own IP address (BYOIP).
     */
   var Events: js.UndefOr[ByoipCidrEvents] = js.native
   

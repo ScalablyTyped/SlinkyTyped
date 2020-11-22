@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkJsonBuilder
 
-import typingsSlinky.awsSdkTypes.marshallerMod.BodySerializer
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
@@ -11,11 +10,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  @js.native
-  class JsonBuilder protected () extends BodySerializer[String] {
+  /* import warning: RemoveDifficultInheritance.summarizeChanges 
+  - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodySerializer * / any */ @js.native
+  class JsonBuilder protected () extends js.Object {
     def this(base64Encoder: Encoder, utf8Decoder: Decoder) = this()
     
     val base64Encoder: js.Any = js.native
+    
+    def build(
+      hasOperationMemberInput: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodySerializerBuildOptions */ js.Any
+    ): String = js.native
     
     var format: js.Any = js.native
     

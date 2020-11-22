@@ -13,9 +13,34 @@ trait VpnConnectionOptions extends js.Object {
   var EnableAcceleration: js.UndefOr[Boolean] = js.native
   
   /**
+    * The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.
+    */
+  var LocalIpv4NetworkCidr: js.UndefOr[String] = js.native
+  
+  /**
+    * The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.
+    */
+  var LocalIpv6NetworkCidr: js.UndefOr[String] = js.native
+  
+  /**
+    * The IPv4 CIDR on the AWS side of the VPN connection.
+    */
+  var RemoteIpv4NetworkCidr: js.UndefOr[String] = js.native
+  
+  /**
+    * The IPv6 CIDR on the AWS side of the VPN connection.
+    */
+  var RemoteIpv6NetworkCidr: js.UndefOr[String] = js.native
+  
+  /**
     * Indicates whether the VPN connection uses static routes only. Static routes must be used for devices that don't support BGP.
     */
   var StaticRoutesOnly: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Indicates whether the VPN tunnels process IPv4 or IPv6 traffic.
+    */
+  var TunnelInsideIpVersion: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.TunnelInsideIpVersion] = js.native
   
   /**
     * Indicates the VPN tunnel options.
@@ -52,10 +77,40 @@ object VpnConnectionOptions {
     def deleteEnableAcceleration: Self = this.set("EnableAcceleration", js.undefined)
     
     @scala.inline
+    def setLocalIpv4NetworkCidr(value: String): Self = this.set("LocalIpv4NetworkCidr", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocalIpv4NetworkCidr: Self = this.set("LocalIpv4NetworkCidr", js.undefined)
+    
+    @scala.inline
+    def setLocalIpv6NetworkCidr(value: String): Self = this.set("LocalIpv6NetworkCidr", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocalIpv6NetworkCidr: Self = this.set("LocalIpv6NetworkCidr", js.undefined)
+    
+    @scala.inline
+    def setRemoteIpv4NetworkCidr(value: String): Self = this.set("RemoteIpv4NetworkCidr", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRemoteIpv4NetworkCidr: Self = this.set("RemoteIpv4NetworkCidr", js.undefined)
+    
+    @scala.inline
+    def setRemoteIpv6NetworkCidr(value: String): Self = this.set("RemoteIpv6NetworkCidr", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRemoteIpv6NetworkCidr: Self = this.set("RemoteIpv6NetworkCidr", js.undefined)
+    
+    @scala.inline
     def setStaticRoutesOnly(value: Boolean): Self = this.set("StaticRoutesOnly", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStaticRoutesOnly: Self = this.set("StaticRoutesOnly", js.undefined)
+    
+    @scala.inline
+    def setTunnelInsideIpVersion(value: TunnelInsideIpVersion): Self = this.set("TunnelInsideIpVersion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTunnelInsideIpVersion: Self = this.set("TunnelInsideIpVersion", js.undefined)
     
     @scala.inline
     def setTunnelOptionsVarargs(value: TunnelOption*): Self = this.set("TunnelOptions", js.Array(value :_*))

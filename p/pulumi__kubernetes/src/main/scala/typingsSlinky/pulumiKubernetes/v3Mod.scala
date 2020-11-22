@@ -2,7 +2,6 @@ package typingsSlinky.pulumiKubernetes
 
 import typingsSlinky.pulumiKubernetes.v3HelmMod.ChartOpts
 import typingsSlinky.pulumiKubernetes.v3HelmMod.LocalChartOpts
-import typingsSlinky.pulumiKubernetes.v3HelmMod.ResolvedFetchOpts
 import typingsSlinky.pulumiPulumi.resourceMod.ComponentResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,9 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@pulumi/kubernetes/helm/v3", JSImport.Namespace)
 @js.native
 object v3Mod extends js.Object {
-  
-  def fetch(chart: String): Unit = js.native
-  def fetch(chart: String, opts: ResolvedFetchOpts): Unit = js.native
   
   @js.native
   class Chart protected ()

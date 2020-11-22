@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ObjectTypeProperty
+import typingsSlinky.babelTraverse.babelTraverseStrings.NumberLiteralTypeAnnotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `152` extends js.Object {
   
-  var `type`: ObjectTypeProperty = js.native
+  var `type`: NumberLiteralTypeAnnotation = js.native
 }
 object `152` {
   
   @scala.inline
-  def apply(`type`: ObjectTypeProperty): `152` = {
+  def apply(`type`: NumberLiteralTypeAnnotation): `152` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`152`]
@@ -35,6 +35,6 @@ object `152` {
     }
     
     @scala.inline
-    def setType(value: ObjectTypeProperty): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: NumberLiteralTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

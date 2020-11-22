@@ -45,6 +45,10 @@ object typesMod extends js.Object {
     extends typingsSlinky.typedoc.intrinsicMod.IntrinsicConverter
   
   @js.native
+  class ParensConverter ()
+    extends typingsSlinky.typedoc.parensMod.ParensConverter
+  
+  @js.native
   class PredicateConverter ()
     extends typingsSlinky.typedoc.predicateMod.PredicateConverter
   

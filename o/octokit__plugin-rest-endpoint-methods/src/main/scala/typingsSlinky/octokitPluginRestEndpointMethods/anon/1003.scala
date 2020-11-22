@@ -3,8 +3,10 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposRemoveTeamAccessRestrictionsEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposRemoveTeamAccessRestrictionsResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposMergeEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposMergeResponse404Data
+import typingsSlinky.octokitTypes.endpointsMod.ReposMergeResponse409Data
+import typingsSlinky.octokitTypes.endpointsMod.ReposMergeResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +17,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `1003` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposRemoveTeamAccessRestrictionsEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposMergeEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposRemoveTeamAccessRestrictionsResponseData] = js.native
+  var response: OctokitResponse[ReposMergeResponseData | ReposMergeResponse404Data | ReposMergeResponse409Data] = js.native
 }
 object `1003` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposRemoveTeamAccessRestrictionsEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposRemoveTeamAccessRestrictionsResponseData]
+    parameters: RequestParameters with (Omit[ReposMergeEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposMergeResponseData | ReposMergeResponse404Data | ReposMergeResponse409Data]
   ): `1003` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1003`]
@@ -46,11 +48,11 @@ object `1003` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[ReposRemoveTeamAccessRestrictionsEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ReposMergeEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposRemoveTeamAccessRestrictionsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(
+      value: OctokitResponse[ReposMergeResponseData | ReposMergeResponse404Data | ReposMergeResponse409Data]
+    ): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

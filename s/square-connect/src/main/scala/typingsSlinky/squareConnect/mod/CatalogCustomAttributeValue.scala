@@ -14,12 +14,12 @@ class CatalogCustomAttributeValue () extends js.Object {
   var boolean_value: js.UndefOr[Boolean] = js.native
   
   /**
-    * The custom attribute definition this value belongs to.
+    * The id of the `CatalogCustomAttributeDefinition` this value belongs to.
     */
   val custom_attribute_definition_id: js.UndefOr[String] = js.native
   
   /**
-    * A copy of key from the associated custom attribute definition.
+    * A copy of key from the associated `CatalogCustomAttributeDefinition`.
     */
   val key: js.UndefOr[String] = js.native
   
@@ -44,7 +44,7 @@ class CatalogCustomAttributeValue () extends js.Object {
   var string_value: js.UndefOr[String] = js.native
   
   /**
-    * A copy of type from the associated custom attribute definition.
+    * A copy of type from the associated `CatalogCustomAttributeDefinition`.
     * See [CatalogCustomAttributeDefinitionType](#type-catalogcustomattributedefinitiontype) for possible values.
     */
   val `type`: js.UndefOr[String] = js.native

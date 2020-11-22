@@ -46,6 +46,8 @@ package object autoscalingMod {
   
   type BlockDeviceMappings = js.Array[typingsSlinky.awsSdk.autoscalingMod.BlockDeviceMapping]
   
+  type CapacityRebalanceEnabled = scala.Boolean
+  
   type ClassicLinkVPCSecurityGroups = js.Array[typingsSlinky.awsSdk.autoscalingMod.XmlStringMaxLen255]
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.autoscalingMod.ClientApiVersions

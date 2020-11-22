@@ -1,5 +1,6 @@
 package typingsSlinky.ol.dragBoxMod
 
+import org.scalajs.dom.raw.UIEvent
 import typingsSlinky.ol.eventsMod.EventsKey
 import typingsSlinky.ol.olStrings.boxdrag
 import typingsSlinky.ol.olStrings.boxend
@@ -13,9 +14,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DragBox
   extends typingsSlinky.ol.pointerMod.default {
   
-  def defaultBoxEndCondition(mapBrowserEvent: typingsSlinky.ol.mapBrowserEventMod.default, startPixel: Pixel, endPixel: Pixel): Boolean = js.native
+  /**
+    * The default condition for determining whether the boxend event
+    * should fire.
+    */
+  def defaultBoxEndCondition(
+    mapBrowserEvent: typingsSlinky.ol.mapBrowserEventMod.default[UIEvent],
+    startPixel: Pixel,
+    endPixel: Pixel
+  ): Boolean = js.native
   
+  /**
+    * Returns geometry of last drawn box.
+    */
   def getGeometry(): typingsSlinky.ol.polygonMod.default = js.native
+  
+  /**
+    * Function to execute just before onboxend is fired
+    */
+  def onBoxEnd(event: typingsSlinky.ol.mapBrowserEventMod.default[UIEvent]): Unit = js.native
   
   @JSName("on")
   def on_boxdrag(`type`: boxdrag, listener: js.Function1[/* evt */ DragBoxEvent, Unit]): EventsKey = js.native

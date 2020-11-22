@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsNode.tensorboardMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsNode.nodejsKernelBackendMod.NodeJSKernelBackend
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -17,8 +17,18 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`2`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`3`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`4`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`5`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`6`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals text`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.all
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.ascending
@@ -85,7 +95,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  className :string | undefined,   compact :boolean | undefined,   disableStyles :boolean | undefined,   noBorder :boolean | undefined,   ref :react.react.Ref<std.HTMLAnchorElement> | undefined} & react.react.HTMLAttributes<std.HTMLAnchorElement> */
+/* Inlined {  className :string | undefined,   compact :boolean | undefined,   disableStyles :boolean | undefined,   noBorder :boolean | undefined,   ref :react.react.Ref<std.HTMLAnchorElement> | undefined,   level :2 | 3 | 4 | 5 | 6 | undefined,   navigation :boolean | undefined,   partialNavigation :boolean | undefined,   selectable :boolean | undefined,   footer :string | react.react.<global>.JSX.Element | undefined,   header :string | react.react.<global>.JSX.Element | undefined} & react.react.HTMLAttributes<std.HTMLAnchorElement> */
 @js.native
 trait ListProps extends js.Object {
   
@@ -271,7 +281,9 @@ trait ListProps extends js.Object {
     * Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
     * @see aria-atomic.
     */
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   /** Indicates that user input is required on the element before a form may be submitted. */
   var `aria-required`: js.UndefOr[Boolean] = js.native
@@ -361,6 +373,10 @@ trait ListProps extends js.Object {
   
   var draggable: js.UndefOr[Booleanish] = js.native
   
+  var footer: js.UndefOr[String | ReactElement] = js.native
+  
+  var header: js.UndefOr[String | ReactElement] = js.native
+  
   var hidden: js.UndefOr[Boolean] = js.native
   
   var id: js.UndefOr[String] = js.native
@@ -391,6 +407,10 @@ trait ListProps extends js.Object {
   var itemType: js.UndefOr[String] = js.native
   
   var lang: js.UndefOr[String] = js.native
+  
+  var level: js.UndefOr[`2` | `3` | `4` | `5` | `6`] = js.native
+  
+  var navigation: js.UndefOr[Boolean] = js.native
   
   var noBorder: js.UndefOr[Boolean] = js.native
   
@@ -568,6 +588,8 @@ trait ListProps extends js.Object {
   // Wheel Events
   var onWheel: js.UndefOr[WheelEventHandler[HTMLAnchorElement]] = js.native
   
+  var partialNavigation: js.UndefOr[Boolean] = js.native
+  
   var placeholder: js.UndefOr[String] = js.native
   
   var prefix: js.UndefOr[String] = js.native
@@ -588,6 +610,8 @@ trait ListProps extends js.Object {
   var role: js.UndefOr[String] = js.native
   
   var security: js.UndefOr[String] = js.native
+  
+  var selectable: js.UndefOr[Boolean] = js.native
   
   var slot: js.UndefOr[String] = js.native
   
@@ -857,7 +881,9 @@ object ListProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1037,6 +1063,24 @@ object ListProps {
     def deleteDraggable: Self = this.set("draggable", js.undefined)
     
     @scala.inline
+    def setFooterReactElement(value: ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFooter(value: String | ReactElement): Self = this.set("footer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFooter: Self = this.set("footer", js.undefined)
+    
+    @scala.inline
+    def setHeaderReactElement(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHeader(value: String | ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeader: Self = this.set("header", js.undefined)
+    
+    @scala.inline
     def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1101,6 +1145,18 @@ object ListProps {
     
     @scala.inline
     def deleteLang: Self = this.set("lang", js.undefined)
+    
+    @scala.inline
+    def setLevel(value: `2` | `3` | `4` | `5` | `6`): Self = this.set("level", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLevel: Self = this.set("level", js.undefined)
+    
+    @scala.inline
+    def setNavigation(value: Boolean): Self = this.set("navigation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNavigation: Self = this.set("navigation", js.undefined)
     
     @scala.inline
     def setNoBorder(value: Boolean): Self = this.set("noBorder", value.asInstanceOf[js.Any])
@@ -1583,6 +1639,12 @@ object ListProps {
     def deleteOnWheel: Self = this.set("onWheel", js.undefined)
     
     @scala.inline
+    def setPartialNavigation(value: Boolean): Self = this.set("partialNavigation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePartialNavigation: Self = this.set("partialNavigation", js.undefined)
+    
+    @scala.inline
     def setPlaceholder(value: String): Self = this.set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1644,6 +1706,12 @@ object ListProps {
     
     @scala.inline
     def deleteSecurity: Self = this.set("security", js.undefined)
+    
+    @scala.inline
+    def setSelectable(value: Boolean): Self = this.set("selectable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelectable: Self = this.set("selectable", js.undefined)
     
     @scala.inline
     def setSlot(value: String): Self = this.set("slot", value.asInstanceOf[js.Any])

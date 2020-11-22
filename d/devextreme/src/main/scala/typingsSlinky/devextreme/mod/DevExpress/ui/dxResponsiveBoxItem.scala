@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxResponsiveBoxItem extends CollectionWidgetItem {
   
-  /** @name dxResponsiveBoxItem.location */
+  /**
+    * [descr:dxResponsiveBoxItem.location]
+    */
   var location: js.UndefOr[Col | js.Array[Col]] = js.native
 }
 object dxResponsiveBoxItem {

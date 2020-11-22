@@ -14,7 +14,7 @@ trait InvitationParticipantInfo extends js.Object {
     * Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is
     * added.
     */
-  var replacesCallId: js.UndefOr[String] = js.native
+  var replacesCallId: js.UndefOr[NullableOption[String]] = js.native
 }
 object InvitationParticipantInfo {
   
@@ -46,9 +46,12 @@ object InvitationParticipantInfo {
     def deleteIdentity: Self = this.set("identity", js.undefined)
     
     @scala.inline
-    def setReplacesCallId(value: String): Self = this.set("replacesCallId", value.asInstanceOf[js.Any])
+    def setReplacesCallId(value: NullableOption[String]): Self = this.set("replacesCallId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReplacesCallId: Self = this.set("replacesCallId", js.undefined)
+    
+    @scala.inline
+    def setReplacesCallIdNull: Self = this.set("replacesCallId", null)
   }
 }

@@ -19,14 +19,20 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.checkboxTypesMod.ICheckbox
 import typingsSlinky.officeUiFabricReact.checkboxTypesMod.ICheckboxProps
 import typingsSlinky.officeUiFabricReact.checkboxTypesMod.ICheckboxStyleProps
 import typingsSlinky.officeUiFabricReact.checkboxTypesMod.ICheckboxStyles
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions text`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`inline`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals text`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.additions
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.all
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.ascending
@@ -96,7 +102,6 @@ import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
@@ -181,7 +186,9 @@ trait ReadonlyICheckboxProps extends js.Object {
   
   val `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  val `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  val `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   val `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -761,7 +768,9 @@ object ReadonlyICheckboxProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

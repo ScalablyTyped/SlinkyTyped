@@ -13,7 +13,7 @@ trait ExportEC2InstanceRecommendationsRequest extends js.Object {
   var accountIds: js.UndefOr[AccountIds] = js.native
   
   /**
-    * The recommendations data to include in the export file.
+    * The recommendations data to include in the export file. For more information about the fields that can be exported, see Exported files in the Compute Optimizer User Guide.
     */
   var fieldsToExport: js.UndefOr[ExportableInstanceFields] = js.native
   

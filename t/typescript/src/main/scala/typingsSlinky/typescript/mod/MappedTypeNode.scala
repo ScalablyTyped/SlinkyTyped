@@ -5,24 +5,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.typescript.mod.TextRange because Already inherited
-- typingsSlinky.typescript.mod.Node because Already inherited
-- typingsSlinky.typescript.mod.Declaration because var conflicts: decorators, end, flags, kind, modifiers, parent, pos. Inlined _declarationBrand */ @js.native
+@js.native
 trait MappedTypeNode
   extends TypeNode
+     with Declaration
      with HasType {
   
-  var _declarationBrand: js.Any = js.native
-  
   @JSName("kind")
-  var kind_MappedTypeNode: MappedType = js.native
+  val kind_MappedTypeNode: MappedType = js.native
   
-  var questionToken: js.UndefOr[QuestionToken | PlusToken | MinusToken] = js.native
+  val nameType: js.UndefOr[TypeNode] = js.native
   
-  var readonlyToken: js.UndefOr[ReadonlyToken | PlusToken | MinusToken] = js.native
+  val questionToken: js.UndefOr[QuestionToken | PlusToken | MinusToken] = js.native
   
-  var `type`: js.UndefOr[TypeNode] = js.native
+  val readonlyToken: js.UndefOr[ReadonlyToken | PlusToken | MinusToken] = js.native
   
-  var typeParameter: TypeParameterDeclaration = js.native
+  val `type`: js.UndefOr[TypeNode] = js.native
+  
+  val typeParameter: TypeParameterDeclaration = js.native
 }

@@ -2,8 +2,8 @@ package typingsSlinky.grommet.selectMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.grommet.anon.Bottom
+import typingsSlinky.grommet.anon.Key
 import typingsSlinky.grommet.anon.Multiple
-import typingsSlinky.grommet.anon.Reduce
 import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
@@ -88,9 +88,9 @@ trait SelectProps extends js.Object {
   
   var size: js.UndefOr[small | medium | large | xlarge | String] = js.native
   
-  var value: js.UndefOr[String | ReactElement | js.Object | (js.Array[String | js.Object])] = js.native
+  var value: js.UndefOr[String | ReactElement | js.Object | (js.Array[String | Double | js.Object])] = js.native
   
-  var valueKey: js.UndefOr[String | Reduce | (js.Function1[/* repeated */ js.Any, _])] = js.native
+  var valueKey: js.UndefOr[String | Key | (js.Function1[/* repeated */ js.Any, _])] = js.native
   
   var valueLabel: js.UndefOr[ReactElement] = js.native
 }
@@ -340,10 +340,10 @@ object SelectProps {
     def setValueReactElement(value: ReactElement): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValueVarargs(value: (String | js.Object)*): Self = this.set("value", js.Array(value :_*))
+    def setValueVarargs(value: (String | Double | js.Object)*): Self = this.set("value", js.Array(value :_*))
     
     @scala.inline
-    def setValue(value: String | ReactElement | js.Object | (js.Array[String | js.Object])): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: String | ReactElement | js.Object | (js.Array[String | Double | js.Object])): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
@@ -352,7 +352,7 @@ object SelectProps {
     def setValueKeyFunction1(value: /* repeated */ js.Any => _): Self = this.set("valueKey", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setValueKey(value: String | Reduce | (js.Function1[/* repeated */ js.Any, _])): Self = this.set("valueKey", value.asInstanceOf[js.Any])
+    def setValueKey(value: String | Key | (js.Function1[/* repeated */ js.Any, _])): Self = this.set("valueKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValueKey: Self = this.set("valueKey", js.undefined)

@@ -2,6 +2,7 @@ package typingsSlinky.monacoEditor.mod.languages
 
 import typingsSlinky.monacoEditor.anon.Dark
 import typingsSlinky.monacoEditor.anon.Id
+import typingsSlinky.monacoEditor.mod.Uri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ trait WorkspaceEditMetadata extends js.Object {
   
   var description: js.UndefOr[String] = js.native
   
-  var iconPath: js.UndefOr[Id | Dark] = js.native
+  var iconPath: js.UndefOr[Id | Uri | Dark] = js.native
   
   var label: String = js.native
   
@@ -53,7 +54,7 @@ object WorkspaceEditMetadata {
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
-    def setIconPath(value: Id | Dark): Self = this.set("iconPath", value.asInstanceOf[js.Any])
+    def setIconPath(value: Id | Uri | Dark): Self = this.set("iconPath", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIconPath: Self = this.set("iconPath", js.undefined)

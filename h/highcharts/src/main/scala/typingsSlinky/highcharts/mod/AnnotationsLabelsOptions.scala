@@ -83,6 +83,12 @@ trait AnnotationsLabelsOptions extends js.Object {
   var formatter: js.UndefOr[FormatterCallbackFunction[Point]] = js.native
   
   /**
+    * (Highcharts, Highstock, Highmaps, Gantt) Whether the annotation is
+    * visible in the exported data table.
+    */
+  var includeInDataExport: js.UndefOr[Boolean] = js.native
+  
+  /**
     * (Highcharts, Highstock, Highmaps, Gantt) How to handle the annotation's
     * label that flow outside the plot area. The justify option aligns the
     * label inside the plot area.
@@ -248,6 +254,12 @@ object AnnotationsLabelsOptions {
     
     @scala.inline
     def deleteFormatter: Self = this.set("formatter", js.undefined)
+    
+    @scala.inline
+    def setIncludeInDataExport(value: Boolean): Self = this.set("includeInDataExport", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIncludeInDataExport: Self = this.set("includeInDataExport", js.undefined)
     
     @scala.inline
     def setOverflow(value: OptionsOverflowValue): Self = this.set("overflow", value.asInstanceOf[js.Any])

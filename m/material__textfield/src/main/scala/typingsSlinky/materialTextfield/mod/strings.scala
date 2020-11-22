@@ -32,6 +32,8 @@ object strings extends js.Object {
   
   var ARIA_CONTROLS: String = js.native
   
+  var ARIA_DESCRIBEDBY: String = js.native
+  
   var INPUT_SELECTOR: String = js.native
   
   var LABEL_SELECTOR: String = js.native

@@ -19,10 +19,15 @@ import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.materialUiCore.materialUiCoreStrings._empty
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions removals`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`after-edge`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`before-edge`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`removals additions`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`removals text`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`text additions`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`text removals`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`text-after-edge`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`text-before-edge`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`use-credentials`
@@ -212,7 +217,9 @@ trait PartialSvgIconProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -436,7 +443,7 @@ trait PartialSvgIconProps extends js.Object {
   
   var kerning: js.UndefOr[Double | String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyPoints: js.UndefOr[Double | String] = js.native
   
@@ -1198,7 +1205,9 @@ object PartialSvgIconProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1892,6 +1901,9 @@ object PartialSvgIconProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyPoints(value: Double | String): Self = this.set("keyPoints", value.asInstanceOf[js.Any])

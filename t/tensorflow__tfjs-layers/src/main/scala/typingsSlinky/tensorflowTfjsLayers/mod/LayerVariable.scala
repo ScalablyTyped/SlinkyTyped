@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsLayers.mod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.constraintsMod.Constraint
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("mobx/lib/types/observableobject", "ObservableObjectAdministration")
 @js.native
 class ObservableObjectAdministration protected ()
-  extends IInterceptable[IObjectWillChange]
+  extends IInterceptable[IObjectWillChange[js.Any]]
      with IListenable {
   def this(
     target: js.Any,
@@ -60,8 +60,8 @@ class ObservableObjectAdministration protected ()
     * See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/observe
     * for callback details
     */
-  def observe(callback: js.Function1[/* changes */ IObjectDidChange, Unit]): Lambda = js.native
-  def observe(callback: js.Function1[/* changes */ IObjectDidChange, Unit], fireImmediately: Boolean): Lambda = js.native
+  def observe(callback: js.Function1[/* changes */ IObjectDidChange[_], Unit]): Lambda = js.native
+  def observe(callback: js.Function1[/* changes */ IObjectDidChange[_], Unit], fireImmediately: Boolean): Lambda = js.native
   
   var pendingKeys: js.Any = js.native
   

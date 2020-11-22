@@ -28,12 +28,12 @@ object Transfer {
   object component extends js.Object
   
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
+  class Builder[RecordType /* <: TransferItem */] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Transfer] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Transfer[RecordType]] {
     
     @scala.inline
-    def children(value: /* props */ TransferListBodyProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
+    def children(value: /* props */ TransferListBodyProps[RecordType] => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -42,17 +42,17 @@ object Transfer {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def filterOption(value: (/* inputValue */ String, /* item */ TransferItem) => Boolean): this.type = set("filterOption", js.Any.fromFunction2(value))
+    def filterOption(value: (/* inputValue */ String, RecordType) => Boolean): this.type = set("filterOption", js.Any.fromFunction2(value))
     
     @scala.inline
-    def footer(value: /* props */ TransferListProps => ReactElement): this.type = set("footer", js.Any.fromFunction1(value))
+    def footer(value: /* props */ TransferListProps[RecordType] => ReactElement): this.type = set("footer", js.Any.fromFunction1(value))
     
     @scala.inline
     def locale(value: PartialTransferLocale): this.type = set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onChange(
-      value: (/* targetKeys */ js.Array[String], /* direction */ String, /* moveKeys */ js.Array[String]) => Unit
+      value: (/* targetKeys */ js.Array[String], /* direction */ TransferDirection, /* moveKeys */ js.Array[String]) => Unit
     ): this.type = set("onChange", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -87,10 +87,10 @@ object Transfer {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def render(value: /* item */ TransferItem => RenderResult): this.type = set("render", js.Any.fromFunction1(value))
+    def render(value: RecordType => RenderResult): this.type = set("render", js.Any.fromFunction1(value))
     
     @scala.inline
-    def rowKey(value: /* record */ TransferItem => String): this.type = set("rowKey", js.Any.fromFunction1(value))
+    def rowKey(value: RecordType => String): this.type = set("rowKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def selectAllLabelsVarargs(value: SelectAllLabel*): this.type = set("selectAllLabels", js.Array(value :_*))
@@ -126,14 +126,14 @@ object Transfer {
     def titles(value: js.Array[String]): this.type = set("titles", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: TransferProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[RecordType /* <: TransferItem */](p: TransferProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(
-    dataSource: js.Array[TransferItem],
+  def apply[RecordType /* <: TransferItem */](
+    dataSource: js.Array[RecordType],
     listStyle: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties
-  ): Builder = {
+  ): Builder[RecordType] = {
     val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], listStyle = listStyle.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[TransferProps]))
+    new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[TransferProps[RecordType]]))
   }
 }

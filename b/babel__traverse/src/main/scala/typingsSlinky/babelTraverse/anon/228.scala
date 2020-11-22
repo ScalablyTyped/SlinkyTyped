@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSNeverKeyword
+import typingsSlinky.babelTraverse.babelTraverseStrings.ClassPrivateMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `228` extends js.Object {
   
-  var `type`: TSNeverKeyword = js.native
+  var `type`: ClassPrivateMethod = js.native
 }
 object `228` {
   
   @scala.inline
-  def apply(`type`: TSNeverKeyword): `228` = {
+  def apply(`type`: ClassPrivateMethod): `228` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`228`]
@@ -35,6 +35,6 @@ object `228` {
     }
     
     @scala.inline
-    def setType(value: TSNeverKeyword): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ClassPrivateMethod): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

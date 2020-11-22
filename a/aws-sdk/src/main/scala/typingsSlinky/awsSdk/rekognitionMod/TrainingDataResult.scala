@@ -16,6 +16,11 @@ trait TrainingDataResult extends js.Object {
     * The images (assets) that were actually trained by Amazon Rekognition Custom Labels. 
     */
   var Output: js.UndefOr[TrainingData] = js.native
+  
+  /**
+    * The location of the data validation manifest. The data validation manifest is created for the training dataset during model training.
+    */
+  var Validation: js.UndefOr[ValidationData] = js.native
 }
 object TrainingDataResult {
   
@@ -51,5 +56,11 @@ object TrainingDataResult {
     
     @scala.inline
     def deleteOutput: Self = this.set("Output", js.undefined)
+    
+    @scala.inline
+    def setValidation(value: ValidationData): Self = this.set("Validation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValidation: Self = this.set("Validation", js.undefined)
   }
 }

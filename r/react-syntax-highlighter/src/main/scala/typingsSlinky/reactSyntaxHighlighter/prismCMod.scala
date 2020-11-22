@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-syntax-highlighter/dist/esm/languages/prism/c", JSImport.Namespace)
+@JSImport("react-syntax-highlighter/dist/cjs/languages/prism/c", JSImport.Namespace)
 @js.native
 object prismCMod extends js.Object {
   

@@ -15,6 +15,12 @@ trait SetDeviceMetricsOverrideRequest extends js.Object {
   var deviceScaleFactor: Double = js.native
   
   /**
+    * If set, the display feature of a multi-segment screen. If not set, multi-segment support
+    * is turned-off.
+    */
+  var displayFeature: js.UndefOr[DisplayFeature] = js.native
+  
+  /**
     * Do not set visible view size, rely upon explicit setVisibleSize call.
     */
   var dontSetVisibleSize: js.UndefOr[Boolean] = js.native
@@ -105,6 +111,12 @@ object SetDeviceMetricsOverrideRequest {
     
     @scala.inline
     def setWidth(value: integer): Self = this.set("width", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDisplayFeature(value: DisplayFeature): Self = this.set("displayFeature", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisplayFeature: Self = this.set("displayFeature", js.undefined)
     
     @scala.inline
     def setDontSetVisibleSize(value: Boolean): Self = this.set("dontSetVisibleSize", value.asInstanceOf[js.Any])

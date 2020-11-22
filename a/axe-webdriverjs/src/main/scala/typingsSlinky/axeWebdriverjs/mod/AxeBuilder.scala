@@ -1,6 +1,8 @@
 package typingsSlinky.axeWebdriverjs.mod
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.Instantiable2
+import org.scalablytyped.runtime.Instantiable3
 import typingsSlinky.axeCore.mod.RunOptions
 import typingsSlinky.axeCore.mod.Spec
 import typingsSlinky.seleniumWebdriver.mod.WebDriver
@@ -77,8 +79,18 @@ trait AxeBuilder extends js.Object {
 }
 @JSImport("axe-webdriverjs", "AxeBuilder")
 @js.native
-object AxeBuilder extends Instantiable1[/* driver */ WebDriver, AxeBuilder] {
+object AxeBuilder
+  extends Instantiable1[/* driver */ WebDriver, AxeBuilder]
+     with Instantiable2[/* driver */ WebDriver, /* source */ String, AxeBuilder]
+     with Instantiable3[
+      /* driver */ WebDriver, 
+      js.UndefOr[/* source */ String], 
+      /* builderOptions */ BuilderOptions, 
+      AxeBuilder
+    ] {
   
   def apply(driver: WebDriver): AxeBuilder = js.native
+  def apply(driver: WebDriver, source: js.UndefOr[scala.Nothing], builderOptions: BuilderOptions): AxeBuilder = js.native
   def apply(driver: WebDriver, source: String): AxeBuilder = js.native
+  def apply(driver: WebDriver, source: String, builderOptions: BuilderOptions): AxeBuilder = js.native
 }

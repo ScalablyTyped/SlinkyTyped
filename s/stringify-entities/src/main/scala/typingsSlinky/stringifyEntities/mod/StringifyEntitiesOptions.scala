@@ -9,21 +9,21 @@ trait StringifyEntitiesOptions extends js.Object {
   
   /**
     * Only needed when operating dangerously with `omitOptionalSemicolons: true`.
-    * Create entities which don’t fail in attributes (`boolean?`, default: `false`).
+    * Create character references which don’t fail in attributes (`boolean?`, default: `false`).
     */
   var attribute: js.UndefOr[Boolean] = js.native
   
   /**
     * Whether to only escape possibly dangerous characters (`boolean`, default: `false`).
-    * Those characters are `"`, `'`, `<`, `>` `&`, and `` ` ``.
+    * Those characters are `"`, `&`, `'`, `<`, `>`, and `` ` ``.
     */
   var escapeOnly: js.UndefOr[Boolean] = js.native
   
   /**
-    * Whether to omit semi-colons when possible (`boolean?`, default: `false`).
-    * **Note**: This creates parse errors, don’t use this except when building a minifier.
+    * Whether to omit semicolons when possible (`boolean?`, default: `false`).
+    * **Note**: This creates what HTML calls “parse errors” but is otherwise still valid HTML — don’t use this except when building a minifier.
     *
-    * Omitting semi-colons is possible for certain legacy named references, and numeric entities, in some cases.
+    * Omitting semicolons is possible for legacy named references in certain cases, and numeric references in some cases.
     */
   var omitOptionalSemicolons: js.UndefOr[Boolean] = js.native
   
@@ -33,12 +33,12 @@ trait StringifyEntitiesOptions extends js.Object {
   var subset: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * Whether to use named entities where possible (`boolean?`, default: `false`).
+    * Prefer named character references (`&amp;`) where possible (`boolean?`, default: `false`).
     */
   var useNamedReferences: js.UndefOr[Boolean] = js.native
   
   /**
-    * Whether to use named entities, where possible, if that results in less bytes (`boolean?`, default: `false`).
+    * Prefer the shortest possible reference, if that results in less bytes (`boolean?`, default: `false`).
     * **Note**: `useNamedReferences` can be omitted when using `useShortestReferences`.
     */
   var useShortestReferences: js.UndefOr[Boolean] = js.native

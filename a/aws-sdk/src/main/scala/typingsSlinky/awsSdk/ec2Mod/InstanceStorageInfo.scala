@@ -8,9 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait InstanceStorageInfo extends js.Object {
   
   /**
-    * Array describing the disks that are available for the instance type.
+    * Describes the disks that are available for the instance type.
     */
   var Disks: js.UndefOr[DiskInfoList] = js.native
+  
+  /**
+    * Indicates whether non-volatile memory express (NVMe) is supported for instance store.
+    */
+  var NvmeSupport: js.UndefOr[EphemeralNvmeSupport] = js.native
   
   /**
     * The total size of the disks, in GB.
@@ -48,6 +53,12 @@ object InstanceStorageInfo {
     
     @scala.inline
     def deleteDisks: Self = this.set("Disks", js.undefined)
+    
+    @scala.inline
+    def setNvmeSupport(value: EphemeralNvmeSupport): Self = this.set("NvmeSupport", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNvmeSupport: Self = this.set("NvmeSupport", js.undefined)
     
     @scala.inline
     def setTotalSizeInGB(value: DiskSize): Self = this.set("TotalSizeInGB", value.asInstanceOf[js.Any])

@@ -15,7 +15,7 @@ trait TypeofSession extends Instantiable0[Session_] {
     */
   var defaultSession: Session_ = js.native
   
-  // Docs: http://electronjs.org/docs/api/session
+  // Docs: https://electronjs.org/docs/api/session
   /**
     * A session instance from `partition` string. When there is an existing `Session`
     * with the same `partition`, it will be returned; otherwise a new `Session`

@@ -1,6 +1,5 @@
 package typingsSlinky.babylonjs
 
-import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.animatableInterfaceMod.IAnimatable
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.colorCurvesMod.ColorCurves
@@ -8,13 +7,14 @@ import typingsSlinky.babylonjs.fresnelParametersMod.FresnelParameters
 import typingsSlinky.babylonjs.imageProcessingConfigurationMod.IImageProcessingConfigurationDefines
 import typingsSlinky.babylonjs.imageProcessingConfigurationMod.ImageProcessingConfiguration
 import typingsSlinky.babylonjs.materialDefinesMod.MaterialDefines
+import typingsSlinky.babylonjs.materialDetailMapConfigurationMod.DetailMapConfiguration
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import typingsSlinky.babylonjs.mathVectorMod.Matrix
+import typingsSlinky.babylonjs.prePassConfigurationMod.PrePassConfiguration
 import typingsSlinky.babylonjs.pushMaterialMod.PushMaterial
 import typingsSlinky.babylonjs.renderTargetTextureMod.RenderTargetTexture
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.smartArrayMod.SmartArray
-import typingsSlinky.babylonjs.subMeshMod.SubMesh
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +30,7 @@ object standardMaterialMod extends js.Object {
       * Instantiates a new standard material.
       * This is the default material used in Babylon. It is the best trade off between quality
       * and performances.
-      * @see http://doc.babylonjs.com/babylon101/materials
+      * @see https://doc.babylonjs.com/babylon101/materials
       * @param name Define the name of the material in the scene
       * @param scene Define the scene the material belong to
       */
@@ -57,6 +57,11 @@ object standardMaterialMod extends js.Object {
     var _emissiveTexture: js.Any = js.native
     
     var _globalAmbientColor: Color3 = js.native
+    
+    /**
+      * Specifies whether or not there is a usable alpha channel for transparency.
+      */
+    /* protected */ def _hasAlphaChannel(): Boolean = js.native
     
     /**
       * Default configuration related to image processing available in the standard Material.
@@ -96,6 +101,9 @@ object standardMaterialMod extends js.Object {
     
     var _roughness: js.Any = js.native
     
+    /**
+      * Specifies whether or not the alpha value of the diffuse texture should be used for alpha blending.
+      */
     /* protected */ def _shouldUseAlphaFromDiffuseTexture(): Boolean = js.native
     
     var _specularTexture: js.Any = js.native
@@ -133,7 +141,7 @@ object standardMaterialMod extends js.Object {
     
     /**
       * The color of the material lit by the environmental background lighting.
-      * @see http://doc.babylonjs.com/babylon101/materials#ambient-color-example
+      * @see https://doc.babylonjs.com/babylon101/materials#ambient-color-example
       */
     var ambientColor: Color3 = js.native
     
@@ -151,7 +159,7 @@ object standardMaterialMod extends js.Object {
     /**
       * Bump mapping is a technique to simulate bump and dents on a rendered surface.
       * These are made by creating a normal map from an image. The means to do this can be found on the web, a search for 'normal map generator' will bring up free and paid for methods of doing this.
-      * @see http://doc.babylonjs.com/how_to/more_materials#bump-map
+      * @see https://doc.babylonjs.com/how_to/more_materials#bump-map
       */
     var bumpTexture: Nullable[BaseTexture] = js.native
     
@@ -230,15 +238,9 @@ object standardMaterialMod extends js.Object {
     def cameraToneMappingEnabled_=(value: Boolean): Unit = js.native
     
     /**
-      * Custom callback helping to override the default shader used in the material.
+      * Defines the detail map parameters for the material.
       */
-    def customShaderNameResolve(
-      shaderName: String,
-      uniforms: js.Array[String],
-      uniformBuffers: js.Array[String],
-      samplers: js.Array[String],
-      defines: StandardMaterialDefines
-    ): String = js.native
+    val detailMap: DetailMapConfiguration = js.native
     
     /**
       * The basic color of the material as viewed under a light.
@@ -247,7 +249,7 @@ object standardMaterialMod extends js.Object {
     
     /**
       * Define the diffuse fresnel parameters of the material.
-      * @see http://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
+      * @see https://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
       */
     var diffuseFresnelParameters: FresnelParameters = js.native
     
@@ -270,7 +272,7 @@ object standardMaterialMod extends js.Object {
     
     /**
       * Define the emissive fresnel parameters of the material.
-      * @see http://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
+      * @see https://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
       */
     var emissiveFresnelParameters: FresnelParameters = js.native
     
@@ -299,7 +301,7 @@ object standardMaterialMod extends js.Object {
     
     /**
       * In case of refraction, define the value of the index of refraction.
-      * @see http://doc.babylonjs.com/how_to/reflect#how-to-obtain-reflections-and-refractions
+      * @see https://doc.babylonjs.com/how_to/reflect#how-to-obtain-reflections-and-refractions
       */
     var indexOfRefraction: Double = js.native
     
@@ -316,25 +318,14 @@ object standardMaterialMod extends js.Object {
     /**
       * Invert the refraction texture alongside the y axis.
       * It can be useful with procedural textures or probe for instance.
-      * @see http://doc.babylonjs.com/how_to/reflect#how-to-obtain-reflections-and-refractions
+      * @see https://doc.babylonjs.com/how_to/reflect#how-to-obtain-reflections-and-refractions
       */
     var invertRefractionY: Boolean = js.native
     
     /**
-      * Get if the submesh is ready to be used and all its information available.
-      * Child classes can use it to update shaders
-      * @param mesh defines the mesh to check
-      * @param subMesh defines which submesh to check
-      * @param useInstances specifies that instances should be used
-      * @returns a boolean indicating that the submesh is ready or not
-      */
-    def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh): Boolean = js.native
-    def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh, useInstances: Boolean): Boolean = js.native
-    
-    /**
       * Complex lighting can be computationally expensive to compute at runtime.
       * To save on computation, lightmaps may be used to store calculated lighting in a texture which will be applied to a given mesh.
-      * @see http://doc.babylonjs.com/babylon101/lights#lightmaps
+      * @see https://doc.babylonjs.com/babylon101/lights#lightmaps
       */
     var lightmapTexture: Nullable[BaseTexture] = js.native
     
@@ -351,7 +342,7 @@ object standardMaterialMod extends js.Object {
     
     /**
       * Define the opacity fresnel parameters of the material.
-      * @see http://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
+      * @see https://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
       */
     var opacityFresnelParameters: FresnelParameters = js.native
     
@@ -368,26 +359,31 @@ object standardMaterialMod extends js.Object {
     var parallaxScaleBias: Double = js.native
     
     /**
+      * Defines additionnal PrePass parameters for the material.
+      */
+    val prePassConfiguration: PrePassConfiguration = js.native
+    
+    /**
       * Define the reflection fresnel parameters of the material.
-      * @see http://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
+      * @see https://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
       */
     var reflectionFresnelParameters: FresnelParameters = js.native
     
     /**
       * Define the texture used to display the reflection.
-      * @see http://doc.babylonjs.com/how_to/reflect#how-to-obtain-reflections-and-refractions
+      * @see https://doc.babylonjs.com/how_to/reflect#how-to-obtain-reflections-and-refractions
       */
     var reflectionTexture: Nullable[BaseTexture] = js.native
     
     /**
       * Define the refraction fresnel parameters of the material.
-      * @see http://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
+      * @see https://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
       */
     var refractionFresnelParameters: FresnelParameters = js.native
     
     /**
       * Define the texture used to display the refraction.
-      * @see http://doc.babylonjs.com/how_to/reflect#how-to-obtain-reflections-and-refractions
+      * @see https://doc.babylonjs.com/how_to/reflect#how-to-obtain-reflections-and-refractions
       */
     var refractionTexture: Nullable[BaseTexture] = js.native
     
@@ -441,7 +437,7 @@ object standardMaterialMod extends js.Object {
     /**
       * In case the depth buffer does not allow enough depth precision for your scene (might be the case in large scenes)
       * You can try switching to logarithmic depth.
-      * @see http://doc.babylonjs.com/how_to/using_logarithmic_depth_buffer
+      * @see https://doc.babylonjs.com/how_to/using_logarithmic_depth_buffer
       */
     def useLogarithmicDepth: Boolean = js.native
     def useLogarithmicDepth_=(value: Boolean): Unit = js.native
@@ -453,20 +449,20 @@ object standardMaterialMod extends js.Object {
     
     /**
       * Is parallax enabled or not.
-      * @see http://doc.babylonjs.com/how_to/using_parallax_mapping
+      * @see https://doc.babylonjs.com/how_to/using_parallax_mapping
       */
     var useParallax: Boolean = js.native
     
     /**
       * Is parallax occlusion enabled or not.
       * If true, the outcome is way more realistic than traditional Parallax but you can expect a performance hit that worthes consideration.
-      * @see http://doc.babylonjs.com/how_to/using_parallax_mapping
+      * @see https://doc.babylonjs.com/how_to/using_parallax_mapping
       */
     var useParallaxOcclusion: Boolean = js.native
     
     /**
       * If true automatically deducts the fresnels values from the material specularity.
-      * @see http://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
+      * @see https://doc.babylonjs.com/how_to/how_to_use_fresnelparameters
       */
     var useReflectionFresnelFromSpecular: Boolean = js.native
     
@@ -503,6 +499,12 @@ object standardMaterialMod extends js.Object {
       */
     def ColorGradingTextureEnabled: Boolean = js.native
     def ColorGradingTextureEnabled_=(value: Boolean): Unit = js.native
+    
+    /**
+      * Are detail textures enabled in the application.
+      */
+    def DetailTextureEnabled: Boolean = js.native
+    def DetailTextureEnabled_=(value: Boolean): Unit = js.native
     
     /**
       * Are diffuse textures enabled in the application.
@@ -562,18 +564,25 @@ object standardMaterialMod extends js.Object {
     def SpecularTextureEnabled_=(value: Boolean): Unit = js.native
   }
   
-  @js.native
+  /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+  - typingsSlinky.babylonjs.materialDetailMapConfigurationMod.IMaterialDetailMapDefines because var conflicts: _areTexturesDirty. Inlined DETAIL, DETAILDIRECTUV, DETAIL_NORMALBLENDMETHOD */ @js.native
   class StandardMaterialDefines ()
     extends MaterialDefines
        with IImageProcessingConfigurationDefines {
+    
+    var ALPHABLEND: Boolean = js.native
     
     var ALPHAFROMDIFFUSE: Boolean = js.native
     
     var ALPHATEST: Boolean = js.native
     
+    var ALPHATEST_AFTERALLALPHACOMPUTATIONS: Boolean = js.native
+    
     var AMBIENT: Boolean = js.native
     
     var AMBIENTDIRECTUV: Double = js.native
+    
+    var BONES_VELOCITY_ENABLED: Boolean = js.native
     
     var BONETEXTURE: Boolean = js.native
     
@@ -596,6 +605,12 @@ object standardMaterialMod extends js.Object {
     var CLIPPLANE6: Boolean = js.native
     
     var DEPTHPREPASS: Boolean = js.native
+    
+    var DETAIL: Boolean = js.native
+    
+    var DETAILDIRECTUV: Double = js.native
+    
+    var DETAIL_NORMALBLENDMETHOD: Double = js.native
     
     var DIFFUSE: Boolean = js.native
     
@@ -681,6 +696,32 @@ object standardMaterialMod extends js.Object {
     
     var PREMULTIPLYALPHA: Boolean = js.native
     
+    var PREPASS: Boolean = js.native
+    
+    var PREPASS_ALBEDO: Boolean = js.native
+    
+    var PREPASS_ALBEDO_INDEX: Double = js.native
+    
+    var PREPASS_DEPTHNORMAL: Boolean = js.native
+    
+    var PREPASS_DEPTHNORMAL_INDEX: Double = js.native
+    
+    var PREPASS_IRRADIANCE: Boolean = js.native
+    
+    var PREPASS_IRRADIANCE_INDEX: Double = js.native
+    
+    var PREPASS_POSITION: Boolean = js.native
+    
+    var PREPASS_POSITION_INDEX: Double = js.native
+    
+    var PREPASS_REFLECTIVITY: Boolean = js.native
+    
+    var PREPASS_REFLECTIVITY_INDEX: Double = js.native
+    
+    var PREPASS_VELOCITY: Boolean = js.native
+    
+    var PREPASS_VELOCITY_INDEX: Double = js.native
+    
     var REFLECTION: Boolean = js.native
     
     var REFLECTIONFRESNEL: Boolean = js.native
@@ -715,7 +756,15 @@ object standardMaterialMod extends js.Object {
     
     var REFRACTIONMAP_3D: Boolean = js.native
     
+    var RGBDLIGHTMAP: Boolean = js.native
+    
+    var RGBDREFLECTION: Boolean = js.native
+    
+    var RGBDREFRACTION: Boolean = js.native
+    
     var ROUGHNESS: Boolean = js.native
+    
+    var SCENE_MRT_COUNT: Double = js.native
     
     var SHADOWFLOAT: Boolean = js.native
     
@@ -726,6 +775,8 @@ object standardMaterialMod extends js.Object {
     var SPECULAROVERALPHA: Boolean = js.native
     
     var SPECULARTERM: Boolean = js.native
+    
+    var THIN_INSTANCES: Boolean = js.native
     
     var TWOSIDEDLIGHTING: Boolean = js.native
     

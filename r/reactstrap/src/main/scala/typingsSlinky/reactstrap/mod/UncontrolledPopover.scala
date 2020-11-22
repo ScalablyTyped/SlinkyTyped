@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "UncontrolledPopover")
+@JSImport("reactstrap/es", "UncontrolledPopover")
 @js.native
-class UncontrolledPopover[T] ()
+class UncontrolledPopover ()
   extends Component[UncontrolledPopoverProps, js.Object, js.Any]

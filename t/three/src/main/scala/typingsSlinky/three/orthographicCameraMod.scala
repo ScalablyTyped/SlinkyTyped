@@ -18,8 +18,8 @@ object orthographicCameraMod extends js.Object {
     	 * @param right Camera frustum right plane.
     	 * @param top Camera frustum top plane.
     	 * @param bottom Camera frustum bottom plane.
-    	 * @param near Camera frustum near plane.
-    	 * @param far Camera frustum far plane.
+    	 * @param [near=0.1] Camera frustum near plane.
+    	 * @param [far=2000] Camera frustum far plane.
     	 */
     def this(left: Double, right: Double, top: Double, bottom: Double) = this()
     def this(left: Double, right: Double, top: Double, bottom: Double, near: Double) = this()
@@ -35,6 +35,7 @@ object orthographicCameraMod extends js.Object {
     
     /**
     	 * Camera frustum bottom plane.
+    	 * @default -1
     	 */
     var bottom: Double = js.native
     
@@ -42,6 +43,7 @@ object orthographicCameraMod extends js.Object {
     
     /**
     	 * Camera frustum far plane.
+    	 * @default 2000
     	 */
     var far: Double = js.native
     
@@ -49,16 +51,19 @@ object orthographicCameraMod extends js.Object {
     
     /**
     	 * Camera frustum left plane.
+    	 * @default -1
     	 */
     var left: Double = js.native
     
     /**
     	 * Camera frustum near plane.
+    	 * @default 0.1
     	 */
     var near: Double = js.native
     
     /**
     	 * Camera frustum right plane.
+    	 * @default 1
     	 */
     var right: Double = js.native
     
@@ -75,6 +80,7 @@ object orthographicCameraMod extends js.Object {
     
     /**
     	 * Camera frustum top plane.
+    	 * @default 1
     	 */
     var top: Double = js.native
     
@@ -86,8 +92,14 @@ object orthographicCameraMod extends js.Object {
     	 */
     def updateProjectionMatrix(): Unit = js.native
     
+    /**
+    	 * @default null
+    	 */
     var view: Null | Enabled = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var zoom: Double = js.native
   }
 }

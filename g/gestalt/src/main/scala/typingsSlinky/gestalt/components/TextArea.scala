@@ -1,63 +1,23 @@
 package typingsSlinky.gestalt.components
 
+import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.anon.ValueString
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.gestalt.mod.TextAreaProps
+import typingsSlinky.react.mod.PropsWithoutRef
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Support for combinations of intersection and union types not implemented */
 object TextArea {
   
   @JSImport("gestalt", "TextArea")
   @js.native
   object component extends js.Object
   
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.TextArea] {
-    
-    @scala.inline
-    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def errorMessage(value: String): this.type = set("errorMessage", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def helperText(value: String): this.type = set("helperText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def onBlur(value: /* args */ ValueString => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def onFocus(value: /* args */ ValueString => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def onKeyDown(value: /* args */ ValueString => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
-  }
+  def apply(p: PropsWithoutRef[TextAreaProps] with RefAttributes[HTMLTextAreaElement]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  def withProps(p: TextAreaProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply(id: String, onChange: ValueString => Unit): Builder = {
-    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
-    new Builder(js.Array(this.component, __props.asInstanceOf[TextAreaProps]))
-  }
+  implicit def make(companion: TextArea.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }

@@ -33,12 +33,12 @@ trait AutoMLJobSummary extends js.Object {
   var CreationTime: js.Date = js.native
   
   /**
-    * The end time.
+    * The end time of an AutoML job.
     */
   var EndTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The failure reason.
+    * The failure reason of a job.
     */
   var FailureReason: js.UndefOr[AutoMLFailureReason] = js.native
   

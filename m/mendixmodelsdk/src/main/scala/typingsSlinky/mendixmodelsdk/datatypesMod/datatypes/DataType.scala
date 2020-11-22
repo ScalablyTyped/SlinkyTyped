@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.datatypesMod.datatypes
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.AppServiceAction
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.AppServiceActionParameter
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.IAppServiceAction
@@ -28,6 +29,7 @@ import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.MicroflowParameterB
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.MicroflowParameterObject
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.ResultHandling
 import typingsSlinky.mendixmodelsdk.restMod.rest.RestOperationParameter
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedOperation
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedParameter
 import scala.scalajs.js
@@ -35,7 +37,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/data-types relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/data-types relevant section in reference guide}
   *
   * In version 7.9.0: introduced
   */
@@ -46,14 +48,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
 - typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.IDataType because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsAppServiceAction, containerAsAppServiceActionParameter, containerAsConstant, containerAsDataSetParameter, containerAsDocumentTemplateParameter, containerAsImportMapping, containerAsMicroflowBase, containerAsMicroflowParameterBase */ @JSImport("mendixmodelsdk/dist/gen/datatypes", "datatypes.DataType")
 @js.native
-abstract class DataType protected () extends Element {
+abstract class DataType protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsAppServiceAction: AppServiceAction = js.native
@@ -104,9 +106,6 @@ abstract class DataType protected () extends Element {
   def containerAsResultHandling: ResultHandling = js.native
   
   def containerAsValueMappingElement: ValueMappingElement = js.native
-  
-  @JSName("model")
-  var model_FDataType: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/datatypes", "datatypes.DataType")

@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.frauddetectorMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -113,12 +113,12 @@ trait FraudDetector extends Service {
   ): Request[CreateVariableResult, AWSError] = js.native
   
   /**
-    * Deletes the detector. Before deleting a detector, you must first delete all detector versions and rule versions associated with the detector.
+    * Deletes the detector. Before deleting a detector, you must first delete all detector versions and rule versions associated with the detector. When you delete a detector, Amazon Fraud Detector permanently deletes the detector and the data is no longer stored in Amazon Fraud Detector.
     */
   def deleteDetector(): Request[DeleteDetectorResult, AWSError] = js.native
   def deleteDetector(callback: js.Function2[/* err */ AWSError, /* data */ DeleteDetectorResult, Unit]): Request[DeleteDetectorResult, AWSError] = js.native
   /**
-    * Deletes the detector. Before deleting a detector, you must first delete all detector versions and rule versions associated with the detector.
+    * Deletes the detector. Before deleting a detector, you must first delete all detector versions and rule versions associated with the detector. When you delete a detector, Amazon Fraud Detector permanently deletes the detector and the data is no longer stored in Amazon Fraud Detector.
     */
   def deleteDetector(params: DeleteDetectorRequest): Request[DeleteDetectorResult, AWSError] = js.native
   def deleteDetector(
@@ -127,12 +127,12 @@ trait FraudDetector extends Service {
   ): Request[DeleteDetectorResult, AWSError] = js.native
   
   /**
-    * Deletes the detector version. You cannot delete detector versions that are in ACTIVE status.
+    * Deletes the detector version. You cannot delete detector versions that are in ACTIVE status. When you delete a detector version, Amazon Fraud Detector permanently deletes the detector and the data is no longer stored in Amazon Fraud Detector.
     */
   def deleteDetectorVersion(): Request[DeleteDetectorVersionResult, AWSError] = js.native
   def deleteDetectorVersion(callback: js.Function2[/* err */ AWSError, /* data */ DeleteDetectorVersionResult, Unit]): Request[DeleteDetectorVersionResult, AWSError] = js.native
   /**
-    * Deletes the detector version. You cannot delete detector versions that are in ACTIVE status.
+    * Deletes the detector version. You cannot delete detector versions that are in ACTIVE status. When you delete a detector version, Amazon Fraud Detector permanently deletes the detector and the data is no longer stored in Amazon Fraud Detector.
     */
   def deleteDetectorVersion(params: DeleteDetectorVersionRequest): Request[DeleteDetectorVersionResult, AWSError] = js.native
   def deleteDetectorVersion(
@@ -141,12 +141,26 @@ trait FraudDetector extends Service {
   ): Request[DeleteDetectorVersionResult, AWSError] = js.native
   
   /**
-    * Deletes the specified event.
+    * Deletes an entity type. You cannot delete an entity type that is included in an event type. When you delete an entity type, Amazon Fraud Detector permanently deletes that entity type from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteEntityType(): Request[DeleteEntityTypeResult, AWSError] = js.native
+  def deleteEntityType(callback: js.Function2[/* err */ AWSError, /* data */ DeleteEntityTypeResult, Unit]): Request[DeleteEntityTypeResult, AWSError] = js.native
+  /**
+    * Deletes an entity type. You cannot delete an entity type that is included in an event type. When you delete an entity type, Amazon Fraud Detector permanently deletes that entity type from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteEntityType(params: DeleteEntityTypeRequest): Request[DeleteEntityTypeResult, AWSError] = js.native
+  def deleteEntityType(
+    params: DeleteEntityTypeRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteEntityTypeResult, Unit]
+  ): Request[DeleteEntityTypeResult, AWSError] = js.native
+  
+  /**
+    * Deletes the specified event. When you delete an event, Amazon Fraud Detector permanently deletes that event from the evaluation history, and the event data is no longer stored in Amazon Fraud Detector.
     */
   def deleteEvent(): Request[DeleteEventResult, AWSError] = js.native
   def deleteEvent(callback: js.Function2[/* err */ AWSError, /* data */ DeleteEventResult, Unit]): Request[DeleteEventResult, AWSError] = js.native
   /**
-    * Deletes the specified event.
+    * Deletes the specified event. When you delete an event, Amazon Fraud Detector permanently deletes that event from the evaluation history, and the event data is no longer stored in Amazon Fraud Detector.
     */
   def deleteEvent(params: DeleteEventRequest): Request[DeleteEventResult, AWSError] = js.native
   def deleteEvent(
@@ -155,18 +169,116 @@ trait FraudDetector extends Service {
   ): Request[DeleteEventResult, AWSError] = js.native
   
   /**
-    * Deletes the rule. You cannot delete a rule if it is used by an ACTIVE or INACTIVE detector version.
+    * Deletes an event type. You cannot delete an event type that is used in a detector or a model. When you delete an entity type, Amazon Fraud Detector permanently deletes that entity type from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteEventType(): Request[DeleteEventTypeResult, AWSError] = js.native
+  def deleteEventType(callback: js.Function2[/* err */ AWSError, /* data */ DeleteEventTypeResult, Unit]): Request[DeleteEventTypeResult, AWSError] = js.native
+  /**
+    * Deletes an event type. You cannot delete an event type that is used in a detector or a model. When you delete an entity type, Amazon Fraud Detector permanently deletes that entity type from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteEventType(params: DeleteEventTypeRequest): Request[DeleteEventTypeResult, AWSError] = js.native
+  def deleteEventType(
+    params: DeleteEventTypeRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteEventTypeResult, Unit]
+  ): Request[DeleteEventTypeResult, AWSError] = js.native
+  
+  /**
+    * Removes a SageMaker model from Amazon Fraud Detector. You can remove an Amazon SageMaker model if it is not associated with a detector version. Removing a SageMaker model disconnects it from Amazon Fraud Detector, but the model remains available in SageMaker.
+    */
+  def deleteExternalModel(): Request[DeleteExternalModelResult, AWSError] = js.native
+  def deleteExternalModel(callback: js.Function2[/* err */ AWSError, /* data */ DeleteExternalModelResult, Unit]): Request[DeleteExternalModelResult, AWSError] = js.native
+  /**
+    * Removes a SageMaker model from Amazon Fraud Detector. You can remove an Amazon SageMaker model if it is not associated with a detector version. Removing a SageMaker model disconnects it from Amazon Fraud Detector, but the model remains available in SageMaker.
+    */
+  def deleteExternalModel(params: DeleteExternalModelRequest): Request[DeleteExternalModelResult, AWSError] = js.native
+  def deleteExternalModel(
+    params: DeleteExternalModelRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteExternalModelResult, Unit]
+  ): Request[DeleteExternalModelResult, AWSError] = js.native
+  
+  /**
+    * Deletes a label. You cannot delete labels that are included in an event type in Amazon Fraud Detector. You cannot delete a label assigned to an event ID. You must first delete the relevant event ID. When you delete a label, Amazon Fraud Detector permanently deletes that label from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteLabel(): Request[DeleteLabelResult, AWSError] = js.native
+  def deleteLabel(callback: js.Function2[/* err */ AWSError, /* data */ DeleteLabelResult, Unit]): Request[DeleteLabelResult, AWSError] = js.native
+  /**
+    * Deletes a label. You cannot delete labels that are included in an event type in Amazon Fraud Detector. You cannot delete a label assigned to an event ID. You must first delete the relevant event ID. When you delete a label, Amazon Fraud Detector permanently deletes that label from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteLabel(params: DeleteLabelRequest): Request[DeleteLabelResult, AWSError] = js.native
+  def deleteLabel(
+    params: DeleteLabelRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteLabelResult, Unit]
+  ): Request[DeleteLabelResult, AWSError] = js.native
+  
+  /**
+    * Deletes a model. You can delete models and model versions in Amazon Fraud Detector, provided that they are not associated with a detector version.  When you delete a model, Amazon Fraud Detector permanently deletes that model from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteModel(): Request[DeleteModelResult, AWSError] = js.native
+  def deleteModel(callback: js.Function2[/* err */ AWSError, /* data */ DeleteModelResult, Unit]): Request[DeleteModelResult, AWSError] = js.native
+  /**
+    * Deletes a model. You can delete models and model versions in Amazon Fraud Detector, provided that they are not associated with a detector version.  When you delete a model, Amazon Fraud Detector permanently deletes that model from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteModel(params: DeleteModelRequest): Request[DeleteModelResult, AWSError] = js.native
+  def deleteModel(
+    params: DeleteModelRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteModelResult, Unit]
+  ): Request[DeleteModelResult, AWSError] = js.native
+  
+  /**
+    * Deletes a model version. You can delete models and model versions in Amazon Fraud Detector, provided that they are not associated with a detector version.  When you delete a model version, Amazon Fraud Detector permanently deletes that model version from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteModelVersion(): Request[DeleteModelVersionResult, AWSError] = js.native
+  def deleteModelVersion(callback: js.Function2[/* err */ AWSError, /* data */ DeleteModelVersionResult, Unit]): Request[DeleteModelVersionResult, AWSError] = js.native
+  /**
+    * Deletes a model version. You can delete models and model versions in Amazon Fraud Detector, provided that they are not associated with a detector version.  When you delete a model version, Amazon Fraud Detector permanently deletes that model version from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteModelVersion(params: DeleteModelVersionRequest): Request[DeleteModelVersionResult, AWSError] = js.native
+  def deleteModelVersion(
+    params: DeleteModelVersionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteModelVersionResult, Unit]
+  ): Request[DeleteModelVersionResult, AWSError] = js.native
+  
+  /**
+    * Deletes an outcome. You cannot delete an outcome that is used in a rule version. When you delete an outcome, Amazon Fraud Detector permanently deletes that outcome from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteOutcome(): Request[DeleteOutcomeResult, AWSError] = js.native
+  def deleteOutcome(callback: js.Function2[/* err */ AWSError, /* data */ DeleteOutcomeResult, Unit]): Request[DeleteOutcomeResult, AWSError] = js.native
+  /**
+    * Deletes an outcome. You cannot delete an outcome that is used in a rule version. When you delete an outcome, Amazon Fraud Detector permanently deletes that outcome from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteOutcome(params: DeleteOutcomeRequest): Request[DeleteOutcomeResult, AWSError] = js.native
+  def deleteOutcome(
+    params: DeleteOutcomeRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteOutcomeResult, Unit]
+  ): Request[DeleteOutcomeResult, AWSError] = js.native
+  
+  /**
+    * Deletes the rule. You cannot delete a rule if it is used by an ACTIVE or INACTIVE detector version. When you delete a rule, Amazon Fraud Detector permanently deletes that rule from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
     */
   def deleteRule(): Request[DeleteRuleResult, AWSError] = js.native
   def deleteRule(callback: js.Function2[/* err */ AWSError, /* data */ DeleteRuleResult, Unit]): Request[DeleteRuleResult, AWSError] = js.native
   /**
-    * Deletes the rule. You cannot delete a rule if it is used by an ACTIVE or INACTIVE detector version.
+    * Deletes the rule. You cannot delete a rule if it is used by an ACTIVE or INACTIVE detector version. When you delete a rule, Amazon Fraud Detector permanently deletes that rule from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
     */
   def deleteRule(params: DeleteRuleRequest): Request[DeleteRuleResult, AWSError] = js.native
   def deleteRule(
     params: DeleteRuleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteRuleResult, Unit]
   ): Request[DeleteRuleResult, AWSError] = js.native
+  
+  /**
+    * Deletes a variable. You can't delete variables that are included in an event type in Amazon Fraud Detector. Amazon Fraud Detector automatically deletes model output variables and SageMaker model output variables when you delete the model. You can't delete these variables manually. When you delete a variable, Amazon Fraud Detector permanently deletes that variable from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteVariable(): Request[DeleteVariableResult, AWSError] = js.native
+  def deleteVariable(callback: js.Function2[/* err */ AWSError, /* data */ DeleteVariableResult, Unit]): Request[DeleteVariableResult, AWSError] = js.native
+  /**
+    * Deletes a variable. You can't delete variables that are included in an event type in Amazon Fraud Detector. Amazon Fraud Detector automatically deletes model output variables and SageMaker model output variables when you delete the model. You can't delete these variables manually. When you delete a variable, Amazon Fraud Detector permanently deletes that variable from the evaluation history, and the data is no longer stored in Amazon Fraud Detector.
+    */
+  def deleteVariable(params: DeleteVariableRequest): Request[DeleteVariableResult, AWSError] = js.native
+  def deleteVariable(
+    params: DeleteVariableRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteVariableResult, Unit]
+  ): Request[DeleteVariableResult, AWSError] = js.native
   
   /**
     * Gets all versions for a specified detector.

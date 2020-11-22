@@ -2,7 +2,6 @@ package typingsSlinky.screeps.anon
 
 import typingsSlinky.screeps.screepsNumbers.`1000`
 import typingsSlinky.screeps.screepsNumbers.`100`
-import typingsSlinky.screeps.screepsNumbers.`800`
 import typingsSlinky.screeps.screepsStrings.operator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,7 +14,7 @@ trait CooldownDurationLevel extends js.Object {
   
   var cooldown: `1000` = js.native
   
-  var duration: `800` = js.native
+  var duration: `1000` = js.native
   
   var level: js.Tuple5[
     typingsSlinky.screeps.screepsNumbers.`0`, 
@@ -35,7 +34,7 @@ object CooldownDurationLevel {
   def apply(
     className: operator,
     cooldown: `1000`,
-    duration: `800`,
+    duration: `1000`,
     level: js.Tuple5[
       typingsSlinky.screeps.screepsNumbers.`0`, 
       typingsSlinky.screeps.screepsNumbers.`2`, 
@@ -72,7 +71,7 @@ object CooldownDurationLevel {
     def setCooldown(value: `1000`): Self = this.set("cooldown", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDuration(value: `800`): Self = this.set("duration", value.asInstanceOf[js.Any])
+    def setDuration(value: `1000`): Self = this.set("duration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLevel(

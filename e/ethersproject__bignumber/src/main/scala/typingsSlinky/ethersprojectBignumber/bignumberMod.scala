@@ -10,6 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object bignumberMod extends js.Object {
   
+  @JSName("_base16To36")
+  def base16To36(value: String): String = js.native
+  
+  @JSName("_base36To16")
+  def base36To16(value: String): String = js.native
+  
   def isBigNumberish(value: js.Any): /* is @ethersproject/bignumber.@ethersproject/bignumber/lib/bignumber.BigNumberish */ Boolean = js.native
   
   @js.native
@@ -59,6 +65,9 @@ object bignumberMod extends js.Object {
     def shr(value: Double): BigNumber = js.native
     
     def sub(other: BigNumberish): BigNumber = js.native
+    
+    def toJSON(): js.Any = js.native
+    def toJSON(key: String): js.Any = js.native
     
     def toNumber(): Double = js.native
     

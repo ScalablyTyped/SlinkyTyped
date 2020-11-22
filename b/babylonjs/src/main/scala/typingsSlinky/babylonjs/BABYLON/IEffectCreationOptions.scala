@@ -33,6 +33,11 @@ trait IEffectCreationOptions extends js.Object {
   var maxSimultaneousLights: js.UndefOr[Double] = js.native
   
   /**
+    * Is this effect rendering to several color attachments ?
+    */
+  var multiTarget: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Callback that will be called when the shader is compiled.
     */
   var onCompiled: Nullable[js.Function1[/* effect */ Effect, Unit]] = js.native
@@ -41,6 +46,11 @@ trait IEffectCreationOptions extends js.Object {
     * Callback that will be called if an error occurs during shader compilation.
     */
   var onError: Nullable[js.Function2[/* effect */ Effect, /* errors */ String, Unit]] = js.native
+  
+  /**
+    * If provided, will be called two times with the vertex and fragment code so that this code can be updated before it is compiled by the GPU
+    */
+  var processFinalCode: js.UndefOr[Nullable[js.Function2[/* shaderType */ String, /* code */ String, String]]] = js.native
   
   /**
     * Sampler texture variable names that will be set in the shader.
@@ -137,6 +147,12 @@ object IEffectCreationOptions {
     def deleteMaxSimultaneousLights: Self = this.set("maxSimultaneousLights", js.undefined)
     
     @scala.inline
+    def setMultiTarget(value: Boolean): Self = this.set("multiTarget", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMultiTarget: Self = this.set("multiTarget", js.undefined)
+    
+    @scala.inline
     def setOnCompiled(value: /* effect */ Effect => Unit): Self = this.set("onCompiled", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -147,6 +163,15 @@ object IEffectCreationOptions {
     
     @scala.inline
     def setOnErrorNull: Self = this.set("onError", null)
+    
+    @scala.inline
+    def setProcessFinalCode(value: (/* shaderType */ String, /* code */ String) => String): Self = this.set("processFinalCode", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteProcessFinalCode: Self = this.set("processFinalCode", js.undefined)
+    
+    @scala.inline
+    def setProcessFinalCodeNull: Self = this.set("processFinalCode", null)
     
     @scala.inline
     def setTransformFeedbackVaryingsVarargs(value: String*): Self = this.set("transformFeedbackVaryings", js.Array(value :_*))

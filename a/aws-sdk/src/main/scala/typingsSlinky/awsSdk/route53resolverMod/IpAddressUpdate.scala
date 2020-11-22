@@ -13,7 +13,7 @@ trait IpAddressUpdate extends js.Object {
   var Ip: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.Ip] = js.native
   
   /**
-    *  Only when removing an IP address from a resolver endpoint: The ID of the IP address that you want to remove. To get this ID, use GetResolverEndpoint.
+    *  Only when removing an IP address from a Resolver endpoint: The ID of the IP address that you want to remove. To get this ID, use GetResolverEndpoint.
     */
   var IpId: js.UndefOr[ResourceId] = js.native
   

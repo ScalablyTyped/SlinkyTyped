@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object ui {
   
+  type AppBarResizeEvent = typingsSlinky.kendoUi.kendo.ui.AppBarEvent
+  
   type AutoCompleteChangeEvent = typingsSlinky.kendoUi.kendo.ui.AutoCompleteEvent
   
   type AutoCompleteCloseEvent = typingsSlinky.kendoUi.kendo.ui.AutoCompleteEvent
@@ -70,6 +72,8 @@ package object ui {
   
   type DropTargetDropEvent = typingsSlinky.kendoUi.kendo.ui.DropTargetEvent
   
+  type FormClearEvent = typingsSlinky.kendoUi.kendo.ui.FormEvent
+  
   type FormData = org.scalablytyped.runtime.StringDictionary[js.Any]
   
   type GanttChangeEvent = typingsSlinky.kendoUi.kendo.ui.GanttEvent
@@ -83,6 +87,8 @@ package object ui {
   type GridDataBoundEvent = typingsSlinky.kendoUi.kendo.ui.GridEvent
   
   type GridSaveChangesEvent = typingsSlinky.kendoUi.kendo.ui.GridEvent
+  
+  type ImageEditorErrorEvent = typingsSlinky.kendoUi.kendo.ui.ImageEditorEvent
   
   type MaskedTextBoxChangeEvent = typingsSlinky.kendoUi.kendo.ui.MaskedTextBoxEvent
   
@@ -129,6 +135,8 @@ package object ui {
   type SpreadsheetInsertSheetEvent = typingsSlinky.kendoUi.kendo.ui.SpreadsheetEvent
   
   type SpreadsheetRenderEvent = typingsSlinky.kendoUi.kendo.ui.SpreadsheetEvent
+  
+  type TextAreaChangeEvent = typingsSlinky.kendoUi.kendo.ui.TextAreaEvent
   
   type TextBoxChangeEvent = typingsSlinky.kendoUi.kendo.ui.TextBoxEvent
   

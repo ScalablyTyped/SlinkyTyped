@@ -1,15 +1,16 @@
 package typingsSlinky.fundamentalReact
 
+import typingsSlinky.fundamentalReact.avatarMod.AvatarSize
+import typingsSlinky.fundamentalReact.busyIndicatorMod.BusyIndicatorSizes
 import typingsSlinky.fundamentalReact.buttonMod.ButtonOptions
 import typingsSlinky.fundamentalReact.buttonMod.ButtonTypes
 import typingsSlinky.fundamentalReact.iconMod.IconGlyph
 import typingsSlinky.fundamentalReact.iconMod.IconSize
-import typingsSlinky.fundamentalReact.identifierMod.IdentifierModifiers
-import typingsSlinky.fundamentalReact.identifierMod.IdentifierSizes
 import typingsSlinky.fundamentalReact.imageMod.imageSize
 import typingsSlinky.fundamentalReact.inlineHelpMod.InlineHelpPlacement
 import typingsSlinky.fundamentalReact.inputGroupMod.InputGroupAddonPosition
 import typingsSlinky.fundamentalReact.inputGroupMod.InputGroupTypes
+import typingsSlinky.fundamentalReact.objectStatusMod.ObjectStatusTypes
 import typingsSlinky.fundamentalReact.popoverMod.PopoverTypes
 import typingsSlinky.fundamentalReact.popoverMod.PopperPlacement
 import typingsSlinky.fundamentalReact.popoverMod.PopperSizingTypes
@@ -53,6 +54,27 @@ object fundamentalReactStrings {
   def LayoutGridProps: LayoutGridProps = "LayoutGridProps".asInstanceOf[LayoutGridProps]
   
   @scala.inline
+  def LayoutPanel: LayoutPanel = "LayoutPanel".asInstanceOf[LayoutPanel]
+  
+  @scala.inline
+  def LayoutPanelDotActions: LayoutPanelDotActions = "LayoutPanel.Actions".asInstanceOf[LayoutPanelDotActions]
+  
+  @scala.inline
+  def LayoutPanelDotBody: LayoutPanelDotBody = "LayoutPanel.Body".asInstanceOf[LayoutPanelDotBody]
+  
+  @scala.inline
+  def LayoutPanelDotFilters: LayoutPanelDotFilters = "LayoutPanel.Filters".asInstanceOf[LayoutPanelDotFilters]
+  
+  @scala.inline
+  def LayoutPanelDotFooter: LayoutPanelDotFooter = "LayoutPanel.Footer".asInstanceOf[LayoutPanelDotFooter]
+  
+  @scala.inline
+  def LayoutPanelDotHead: LayoutPanelDotHead = "LayoutPanel.Head".asInstanceOf[LayoutPanelDotHead]
+  
+  @scala.inline
+  def LayoutPanelDotHeader: LayoutPanelDotHeader = "LayoutPanel.Header".asInstanceOf[LayoutPanelDotHeader]
+  
+  @scala.inline
   def Link: Link = "Link".asInstanceOf[Link]
   
   @scala.inline
@@ -69,6 +91,9 @@ object fundamentalReactStrings {
   
   @scala.inline
   def ListDotItem: ListDotItem = "List.Item".asInstanceOf[ListDotItem]
+  
+  @scala.inline
+  def ListDotSelection: ListDotSelection = "List.Selection".asInstanceOf[ListDotSelection]
   
   @scala.inline
   def ListDotText: ListDotText = "List.Text".asInstanceOf[ListDotText]
@@ -93,27 +118,6 @@ object fundamentalReactStrings {
   
   @scala.inline
   def `Netweaver-business-client`: `Netweaver-business-client` = "Netweaver-business-client".asInstanceOf[`Netweaver-business-client`]
-  
-  @scala.inline
-  def Panel: Panel = "Panel".asInstanceOf[Panel]
-  
-  @scala.inline
-  def PanelDotActions: PanelDotActions = "Panel.Actions".asInstanceOf[PanelDotActions]
-  
-  @scala.inline
-  def PanelDotBody: PanelDotBody = "Panel.Body".asInstanceOf[PanelDotBody]
-  
-  @scala.inline
-  def PanelDotFilters: PanelDotFilters = "Panel.Filters".asInstanceOf[PanelDotFilters]
-  
-  @scala.inline
-  def PanelDotFooter: PanelDotFooter = "Panel.Footer".asInstanceOf[PanelDotFooter]
-  
-  @scala.inline
-  def PanelDotHead: PanelDotHead = "Panel.Head".asInstanceOf[PanelDotHead]
-  
-  @scala.inline
-  def PanelDotHeader: PanelDotHeader = "Panel.Header".asInstanceOf[PanelDotHeader]
   
   @scala.inline
   def SearchInput: SearchInput = "SearchInput".asInstanceOf[SearchInput]
@@ -152,13 +156,13 @@ object fundamentalReactStrings {
   def Tile: Tile = "Tile".asInstanceOf[Tile]
   
   @scala.inline
-  def TileDotActions: TileDotActions = "Tile.Actions".asInstanceOf[TileDotActions]
-  
-  @scala.inline
   def TileDotContent: TileDotContent = "Tile.Content".asInstanceOf[TileDotContent]
   
   @scala.inline
-  def TileDotMedia: TileDotMedia = "Tile.Media".asInstanceOf[TileDotMedia]
+  def TileDotFooter: TileDotFooter = "Tile.Footer".asInstanceOf[TileDotFooter]
+  
+  @scala.inline
+  def TileDotHeader: TileDotHeader = "Tile.Header".asInstanceOf[TileDotHeader]
   
   @scala.inline
   def Time: Time = "Time".asInstanceOf[Time]
@@ -266,6 +270,9 @@ object fundamentalReactStrings {
   def additions: additions = "additions".asInstanceOf[additions]
   
   @scala.inline
+  def `additions removals`: `additions removals` = ("additions removals").asInstanceOf[`additions removals`]
+  
+  @scala.inline
   def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   
   @scala.inline
@@ -348,6 +355,9 @@ object fundamentalReactStrings {
   
   @scala.inline
   def `attachment-zip-file`: `attachment-zip-file` = "attachment-zip-file".asInstanceOf[`attachment-zip-file`]
+  
+  @scala.inline
+  def attention: attention = "attention".asInstanceOf[attention]
   
   @scala.inline
   def `back-to-top`: `back-to-top` = "back-to-top".asInstanceOf[`back-to-top`]
@@ -663,6 +673,9 @@ object fundamentalReactStrings {
   
   @scala.inline
   def `credit-card`: `credit-card` = "credit-card".asInstanceOf[`credit-card`]
+  
+  @scala.inline
+  def critical: critical = "critical".asInstanceOf[critical]
   
   @scala.inline
   def `crm-sales`: `crm-sales` = "crm-sales".asInstanceOf[`crm-sales`]
@@ -995,6 +1008,9 @@ object fundamentalReactStrings {
   def `geographic-bubble-chart`: `geographic-bubble-chart` = "geographic-bubble-chart".asInstanceOf[`geographic-bubble-chart`]
   
   @scala.inline
+  def ghost: ghost = "ghost".asInstanceOf[ghost]
+  
+  @scala.inline
   def globe: globe = "globe".asInstanceOf[globe]
   
   @scala.inline
@@ -1101,6 +1117,9 @@ object fundamentalReactStrings {
   
   @scala.inline
   def information: information = "information".asInstanceOf[information]
+  
+  @scala.inline
+  def informative: informative = "informative".asInstanceOf[informative]
   
   @scala.inline
   def inherit: inherit = "inherit".asInstanceOf[inherit]
@@ -1688,6 +1707,12 @@ object fundamentalReactStrings {
   def removals: removals = "removals".asInstanceOf[removals]
   
   @scala.inline
+  def `removals additions`: `removals additions` = ("removals additions").asInstanceOf[`removals additions`]
+  
+  @scala.inline
+  def `removals text`: `removals text` = ("removals text").asInstanceOf[`removals text`]
+  
+  @scala.inline
   def repost: repost = "repost".asInstanceOf[repost]
   
   @scala.inline
@@ -2018,6 +2043,12 @@ object fundamentalReactStrings {
   def text: text = "text".asInstanceOf[text]
   
   @scala.inline
+  def `text additions`: `text additions` = ("text additions").asInstanceOf[`text additions`]
+  
+  @scala.inline
+  def `text removals`: `text removals` = ("text removals").asInstanceOf[`text removals`]
+  
+  @scala.inline
   def `text-align-center`: `text-align-center` = "text-align-center".asInstanceOf[`text-align-center`]
   
   @scala.inline
@@ -2249,12 +2280,6 @@ object fundamentalReactStrings {
   def xs: xs = "xs".asInstanceOf[xs]
   
   @scala.inline
-  def xxl: xxl = "xxl".asInstanceOf[xxl]
-  
-  @scala.inline
-  def xxs: xxs = "xxs".asInstanceOf[xxs]
-  
-  @scala.inline
   def yes: yes = "yes".asInstanceOf[yes]
   
   @scala.inline
@@ -2297,6 +2322,27 @@ object fundamentalReactStrings {
   sealed trait LayoutGridProps extends js.Object
   
   @js.native
+  sealed trait LayoutPanel extends js.Object
+  
+  @js.native
+  sealed trait LayoutPanelDotActions extends js.Object
+  
+  @js.native
+  sealed trait LayoutPanelDotBody extends js.Object
+  
+  @js.native
+  sealed trait LayoutPanelDotFilters extends js.Object
+  
+  @js.native
+  sealed trait LayoutPanelDotFooter extends js.Object
+  
+  @js.native
+  sealed trait LayoutPanelDotHead extends js.Object
+  
+  @js.native
+  sealed trait LayoutPanelDotHeader extends js.Object
+  
+  @js.native
   sealed trait Link extends js.Object
   
   @js.native
@@ -2313,6 +2359,9 @@ object fundamentalReactStrings {
   
   @js.native
   sealed trait ListDotItem extends js.Object
+  
+  @js.native
+  sealed trait ListDotSelection extends js.Object
   
   @js.native
   sealed trait ListDotText extends js.Object
@@ -2337,27 +2386,6 @@ object fundamentalReactStrings {
   
   @js.native
   sealed trait `Netweaver-business-client` extends IconGlyph
-  
-  @js.native
-  sealed trait Panel extends js.Object
-  
-  @js.native
-  sealed trait PanelDotActions extends js.Object
-  
-  @js.native
-  sealed trait PanelDotBody extends js.Object
-  
-  @js.native
-  sealed trait PanelDotFilters extends js.Object
-  
-  @js.native
-  sealed trait PanelDotFooter extends js.Object
-  
-  @js.native
-  sealed trait PanelDotHead extends js.Object
-  
-  @js.native
-  sealed trait PanelDotHeader extends js.Object
   
   @js.native
   sealed trait SearchInput extends js.Object
@@ -2396,13 +2424,13 @@ object fundamentalReactStrings {
   sealed trait Tile extends js.Object
   
   @js.native
-  sealed trait TileDotActions extends js.Object
-  
-  @js.native
   sealed trait TileDotContent extends js.Object
   
   @js.native
-  sealed trait TileDotMedia extends js.Object
+  sealed trait TileDotFooter extends js.Object
+  
+  @js.native
+  sealed trait TileDotHeader extends js.Object
   
   @js.native
   sealed trait Time extends js.Object
@@ -2510,6 +2538,9 @@ object fundamentalReactStrings {
   sealed trait additions extends js.Object
   
   @js.native
+  sealed trait `additions removals` extends js.Object
+  
+  @js.native
   sealed trait `additions text` extends js.Object
   
   @js.native
@@ -2592,6 +2623,9 @@ object fundamentalReactStrings {
   
   @js.native
   sealed trait `attachment-zip-file` extends IconGlyph
+  
+  @js.native
+  sealed trait attention extends ButtonTypes
   
   @js.native
   sealed trait `back-to-top` extends IconGlyph
@@ -2801,7 +2835,7 @@ object fundamentalReactStrings {
   sealed trait `choropleth-chart` extends IconGlyph
   
   @js.native
-  sealed trait circle extends IdentifierModifiers
+  sealed trait circle extends js.Object
   
   @js.native
   sealed trait `circle-task` extends IconGlyph
@@ -2907,6 +2941,9 @@ object fundamentalReactStrings {
   
   @js.native
   sealed trait `credit-card` extends IconGlyph
+  
+  @js.native
+  sealed trait critical extends ObjectStatusTypes
   
   @js.native
   sealed trait `crm-sales` extends IconGlyph
@@ -3239,6 +3276,9 @@ object fundamentalReactStrings {
   sealed trait `geographic-bubble-chart` extends IconGlyph
   
   @js.native
+  sealed trait ghost extends ButtonTypes
+  
+  @js.native
   sealed trait globe extends IconGlyph
   
   @js.native
@@ -3349,6 +3389,9 @@ object fundamentalReactStrings {
   sealed trait information extends js.Object
   
   @js.native
+  sealed trait informative extends ObjectStatusTypes
+  
+  @js.native
   sealed trait inherit extends js.Object
   
   @js.native
@@ -3434,8 +3477,9 @@ object fundamentalReactStrings {
   
   @js.native
   sealed trait l
-    extends IconSize
-       with IdentifierSizes
+    extends AvatarSize
+       with BusyIndicatorSizes
+       with IconSize
        with imageSize
   
   @js.native
@@ -3520,8 +3564,9 @@ object fundamentalReactStrings {
   
   @js.native
   sealed trait m
-    extends IconSize
-       with IdentifierSizes
+    extends AvatarSize
+       with BusyIndicatorSizes
+       with IconSize
        with imageSize
   
   @js.native
@@ -3692,6 +3737,7 @@ object fundamentalReactStrings {
   sealed trait negative
     extends ButtonTypes
        with IconGlyph
+       with ObjectStatusTypes
   
   @js.native
   sealed trait newspaper extends IconGlyph
@@ -3871,6 +3917,7 @@ object fundamentalReactStrings {
   sealed trait positive
     extends ButtonTypes
        with IconGlyph
+       with ObjectStatusTypes
   
   @js.native
   sealed trait post extends IconGlyph
@@ -3948,6 +3995,12 @@ object fundamentalReactStrings {
   sealed trait removals extends js.Object
   
   @js.native
+  sealed trait `removals additions` extends js.Object
+  
+  @js.native
+  sealed trait `removals text` extends js.Object
+  
+  @js.native
   sealed trait repost extends IconGlyph
   
   @js.native
@@ -4002,8 +4055,9 @@ object fundamentalReactStrings {
   
   @js.native
   sealed trait s
-    extends IconSize
-       with IdentifierSizes
+    extends AvatarSize
+       with BusyIndicatorSizes
+       with IconSize
        with imageSize
   
   @js.native
@@ -4285,6 +4339,12 @@ object fundamentalReactStrings {
   sealed trait text extends InputGroupTypes
   
   @js.native
+  sealed trait `text additions` extends js.Object
+  
+  @js.native
+  sealed trait `text removals` extends js.Object
+  
+  @js.native
   sealed trait `text-align-center` extends IconGlyph
   
   @js.native
@@ -4351,9 +4411,7 @@ object fundamentalReactStrings {
   sealed trait `top-start` extends PopperPlacement
   
   @js.native
-  sealed trait transparent
-    extends ButtonOptions
-       with IdentifierModifiers
+  sealed trait transparent extends ButtonOptions
   
   @js.native
   sealed trait `travel-expense` extends IconGlyph
@@ -4515,17 +4573,11 @@ object fundamentalReactStrings {
   
   @js.native
   sealed trait xl
-    extends IconSize
-       with IdentifierSizes
+    extends AvatarSize
+       with IconSize
   
   @js.native
-  sealed trait xs extends IdentifierSizes
-  
-  @js.native
-  sealed trait xxl extends IdentifierSizes
-  
-  @js.native
-  sealed trait xxs extends IdentifierSizes
+  sealed trait xs extends AvatarSize
   
   @js.native
   sealed trait yes extends js.Object

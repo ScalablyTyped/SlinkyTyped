@@ -1,5 +1,6 @@
 package typingsSlinky.yeomanTest.mod
 
+import typingsSlinky.yeomanGenerator.mod.GeneratorOptions
 import typingsSlinky.yeomanGenerator.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,6 +12,6 @@ object run extends js.Object {
   
   def apply(GeneratorOrNamespace: String): RunContext = js.native
   def apply(GeneratorOrNamespace: String, settings: RunContextSettings): RunContext = js.native
-  def apply(GeneratorOrNamespace: Constructor[^]): RunContext = js.native
-  def apply(GeneratorOrNamespace: Constructor[^], settings: RunContextSettings): RunContext = js.native
+  def apply(GeneratorOrNamespace: Constructor[^[GeneratorOptions]]): RunContext = js.native
+  def apply(GeneratorOrNamespace: Constructor[^[GeneratorOptions]], settings: RunContextSettings): RunContext = js.native
 }

@@ -19,6 +19,8 @@ class DateInput ()
   
   var formatDate: js.Any = js.native
   
+  var getLastTabbableElement: js.Any = js.native
+  
   var handleClosePopover: js.Any = js.native
   
   var handleDateChange: js.Any = js.native
@@ -45,7 +47,7 @@ class DateInput ()
   
   var isDateInRange: js.Any = js.native
   
-  var lastElementInPopover: js.Any = js.native
+  var lastTabbableElement: js.Any = js.native
   
   var parseDate: js.Any = js.native
   

@@ -13,6 +13,11 @@ object audioAnalyserMod extends js.Object {
   
   @js.native
   class AudioAnalyser protected () extends js.Object {
+    /**
+    	 * @param audio
+    	 * @param [fftSize=2048]
+    	 */
+    def this(audio: Audio[AudioNode]) = this()
     def this(audio: Audio[AudioNode], fftSize: Double) = this()
     
     var analyser: AnalyserNode = js.native

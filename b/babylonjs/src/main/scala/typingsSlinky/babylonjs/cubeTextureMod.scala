@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +21,7 @@ object cubeTextureMod extends js.Object {
       * Creates a cube texture to use with reflection for instance. It can be based upon dds or six images as well
       * as prefiltered data.
       * @param rootUrl defines the url of the texture or the root name of the six images
-      * @param scene defines the scene the texture is attached to
+      * @param null defines the scene or engine the texture is attached to
       * @param extensions defines the suffixes add to the picture name in case six images are in use like _px.jpg...
       * @param noMipmap defines if mipmaps should be created or not
       * @param files defines the six files to load for the different faces in that order: px, py, pz, nx, ny, nz
@@ -32,11 +33,12 @@ object cubeTextureMod extends js.Object {
       * @param createPolynomials defines whether or not to create polynomial harmonics from the texture data if necessary
       * @param lodScale defines the scale applied to environment texture. This manages the range of LOD level used for IBL according to the roughness
       * @param lodOffset defines the offset applied to environment texture. This manages first LOD level used for IBL according to the roughness
+      * @param loaderOptions options to be passed to the loader
       * @return the cube texture
       */
     def this(
       rootUrl: String,
-      scene: Scene,
+      sceneOrEngine: Scene | ThinEngine,
       extensions: js.UndefOr[Nullable[js.Array[String]]],
       noMipmap: js.UndefOr[Boolean],
       files: js.UndefOr[Nullable[js.Array[String]]],
@@ -51,7 +53,8 @@ object cubeTextureMod extends js.Object {
       forcedExtension: js.UndefOr[js.Any],
       createPolynomials: js.UndefOr[Boolean],
       lodScale: js.UndefOr[Double],
-      lodOffset: js.UndefOr[Double]
+      lodOffset: js.UndefOr[Double],
+      loaderOptions: js.UndefOr[js.Any]
     ) = this()
     
     var _boundingBoxSize: js.Any = js.native
@@ -68,10 +71,9 @@ object cubeTextureMod extends js.Object {
     
     var _format: js.Any = js.native
     
-    var _noMipmap: js.Any = js.native
+    var _loaderOptions: js.Any = js.native
     
-    /** @hidden */
-    var _prefiltered: Boolean = js.native
+    var _noMipmap: js.Any = js.native
     
     var _rotationY: Double = js.native
     
@@ -80,13 +82,13 @@ object cubeTextureMod extends js.Object {
     /**
       * Gets or sets the center of the bounding box associated with the cube texture.
       * It must define where the camera used to render the texture was set
-      * @see http://doc.babylonjs.com/how_to/reflect#using-local-cubemap-mode
+      * @see https://doc.babylonjs.com/how_to/reflect#using-local-cubemap-mode
       */
     var boundingBoxPosition: Vector3 = js.native
     
     /**
       * Returns the bounding box size
-      * @see http://doc.babylonjs.com/how_to/reflect#using-local-cubemap-mode
+      * @see https://doc.babylonjs.com/how_to/reflect#using-local-cubemap-mode
       */
     def boundingBoxSize: Vector3 = js.native
     /**
@@ -98,11 +100,6 @@ object cubeTextureMod extends js.Object {
     def boundingBoxSize_=(value: Vector3): Unit = js.native
     
     def delayLoad(forcedExtension: String): Unit = js.native
-    
-    /**
-      * Gets a boolean indicating if the cube texture contains prefiltered mips (used to simulate roughness with PBR)
-      */
-    def isPrefiltered: Boolean = js.native
     
     /**
       * Observable triggered once the texture has been loaded.

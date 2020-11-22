@@ -11,7 +11,7 @@ trait ICursorStateComputerData extends js.Object {
   /**
     * Get the inverse edit operations of the added edit operations.
     */
-  def getInverseEditOperations(): js.Array[IIdentifiedSingleEditOperation] = js.native
+  def getInverseEditOperations(): js.Array[IValidEditOperation] = js.native
   
   /**
     * Get a previously tracked selection.
@@ -24,7 +24,7 @@ object ICursorStateComputerData {
   
   @scala.inline
   def apply(
-    getInverseEditOperations: () => js.Array[IIdentifiedSingleEditOperation],
+    getInverseEditOperations: () => js.Array[IValidEditOperation],
     getTrackedSelection: String => Selection
   ): ICursorStateComputerData = {
     val __obj = js.Dynamic.literal(getInverseEditOperations = js.Any.fromFunction0(getInverseEditOperations), getTrackedSelection = js.Any.fromFunction1(getTrackedSelection))
@@ -47,7 +47,7 @@ object ICursorStateComputerData {
     }
     
     @scala.inline
-    def setGetInverseEditOperations(value: () => js.Array[IIdentifiedSingleEditOperation]): Self = this.set("getInverseEditOperations", js.Any.fromFunction0(value))
+    def setGetInverseEditOperations(value: () => js.Array[IValidEditOperation]): Self = this.set("getInverseEditOperations", js.Any.fromFunction0(value))
     
     @scala.inline
     def setGetTrackedSelection(value: String => Selection): Self = this.set("getTrackedSelection", js.Any.fromFunction1(value))

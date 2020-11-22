@@ -11,9 +11,9 @@ object Filter extends js.Object {
   /**
     * Register filter
     *
-    * @param {string} name - filter name
+    * @param name - filter name
     *
-    * @returns {ngESDecorator} - decorated class
+    * @returns decorated class
     */
   def apply(name: String): ngESDecorator = js.native
 }

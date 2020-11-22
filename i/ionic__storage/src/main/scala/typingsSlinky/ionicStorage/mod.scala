@@ -13,7 +13,7 @@ object mod extends js.Object {
   
   val StorageConfigToken: InjectionToken[js.Any] = js.native
   
-  def ɵa(storageConfig: StorageConfig): typingsSlinky.ionicStorage.storageMod.Storage = js.native
+  def ɵa(storageConfig: StorageConfig, platformID: js.Object): typingsSlinky.ionicStorage.storageMod.Storage = js.native
   
   @js.native
   class IonicStorageModule () extends js.Object
@@ -35,6 +35,6 @@ object mod extends js.Object {
       * Possible driver options are: ['sqlite', 'indexeddb', 'websql', 'localstorage'] and the
       * default is that exact ordering.
       */
-    def this(config: StorageConfig) = this()
+    def this(config: StorageConfig, platformId: js.Object) = this()
   }
 }

@@ -69,6 +69,12 @@ trait PickingInfo extends js.Object {
     */
   var ray: Nullable[Ray] = js.native
   
+  /** The index of the face on the subMesh that was picked, or the index of the Line if the picked Mesh is a LinesMesh */
+  var subMeshFaceId: Double = js.native
+  
   /** Id of the the submesh that was picked */
   var subMeshId: Double = js.native
+  
+  /** If we are pikcing a mesh with thin instance, this will give you the picked thin instance */
+  var thinInstanceIndex: Double = js.native
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for jest__reporters
 
-Typings are for version 26.2.2
+Typings are for version 26.6.2
 
 ## Library description:
 Jest's reporters

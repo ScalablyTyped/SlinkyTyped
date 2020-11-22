@@ -13,7 +13,7 @@ trait ListAttacksRequest extends js.Object {
   var EndTime: js.UndefOr[TimeRange] = js.native
   
   /**
-    * The maximum number of AttackSummary objects to be returned. If this is left blank, the first 20 results will be returned. This is a maximum value; it is possible that AWS WAF will return the results in smaller batches. That is, the number of AttackSummary objects returned could be less than MaxResults, even if there are still more AttackSummary objects yet to return. If there are more AttackSummary objects to return, AWS WAF will always also return a NextToken.
+    * The maximum number of AttackSummary objects to return. If you leave this blank, Shield Advanced returns the first 20 results. This is a maximum value. Shield Advanced might return the results in smaller batches. That is, the number of objects returned could be less than MaxResults, even if there are still more objects yet to return. If there are more objects to return, Shield Advanced returns a value in NextToken that you can use in your next request, to get the next batch of objects.
     */
   var MaxResults: js.UndefOr[typingsSlinky.awsSdk.shieldMod.MaxResults] = js.native
   

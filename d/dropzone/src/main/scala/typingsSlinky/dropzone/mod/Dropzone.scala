@@ -2,6 +2,7 @@ package typingsSlinky.dropzone.mod
 
 import org.scalajs.dom.raw.DragEvent
 import org.scalajs.dom.raw.FormData
+import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.dropzone.dropzoneStrings.`use-credentials`
 import typingsSlinky.dropzone.dropzoneStrings.addedfile
@@ -420,6 +421,8 @@ trait Dropzone extends js.Object {
   def getRejectedFiles(): js.Array[DropzoneFile] = js.native
   
   def getUploadingFiles(): js.Array[DropzoneFile] = js.native
+  
+  var hiddenFileInput: js.UndefOr[HTMLInputElement] = js.native
   
   var listeners: js.Array[DropzoneListener] = js.native
   

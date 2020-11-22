@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,14 +18,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.PageVariable")
 @js.native
-class PageVariable protected () extends Element {
+class PageVariable protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsAttributeWidget: AttributeWidget = js.native
@@ -33,9 +35,6 @@ class PageVariable protected () extends Element {
   def containerAsNanoflowParameterMapping: NanoflowParameterMapping = js.native
   
   def containerAsWidgetValue: WidgetValue = js.native
-  
-  @JSName("model")
-  var model_FPageVariable: IModel = js.native
   
   def useAllPages: Boolean = js.native
   def useAllPages_=(newValue: Boolean): Unit = js.native

@@ -2,31 +2,25 @@ package typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryTriggersListRequ
 
 import typingsSlinky.awsSdkClientCodecommitNode.putRepositoryTriggersExceptionsUnionMod.PutRepositoryTriggersExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.testRepositoryTriggersExceptionsUnionMod.TestRepositoryTriggersExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_RepositoryTriggersListRequiredExceptionDetails> * / any */ @js.native
 trait RepositoryTriggersListRequiredException
-  extends ServiceException[RepositoryTriggersListRequiredExceptionDetails]
-     with PutRepositoryTriggersExceptionsUnion
+  extends PutRepositoryTriggersExceptionsUnion
      with TestRepositoryTriggersExceptionsUnion {
   
-  @JSName("name")
-  var name_RepositoryTriggersListRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryTriggersListRequiredException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryTriggersListRequiredException = js.native
 }
 object RepositoryTriggersListRequiredException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: RepositoryTriggersListRequiredExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryTriggersListRequiredException
   ): RepositoryTriggersListRequiredException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[RepositoryTriggersListRequiredException]
   }
   

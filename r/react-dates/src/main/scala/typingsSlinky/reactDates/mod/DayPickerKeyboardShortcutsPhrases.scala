@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// defaultPhrases.js
 @js.native
 trait DayPickerKeyboardShortcutsPhrases extends js.Object {
   

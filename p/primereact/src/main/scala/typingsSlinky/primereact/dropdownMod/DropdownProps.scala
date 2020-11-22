@@ -1,7 +1,6 @@
 package typingsSlinky.primereact.dropdownMod
 
 import org.scalajs.dom.raw.Event
-import slinky.core.facade.ReactElement
 import typingsSlinky.primereact.anon.Target
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -29,6 +28,8 @@ trait DropdownProps extends js.Object {
   
   var editable: js.UndefOr[Boolean] = js.native
   
+  var emptyFilterMessage: js.UndefOr[js.Any] = js.native
+  
   var filter: js.UndefOr[Boolean] = js.native
   
   var filterBy: js.UndefOr[String] = js.native
@@ -45,7 +46,7 @@ trait DropdownProps extends js.Object {
   
   var inputId: js.UndefOr[String] = js.native
   
-  var itemTemplate: js.UndefOr[js.Function1[/* option */ js.Any, ReactElement]] = js.native
+  var itemTemplate: js.UndefOr[js.Function1[/* option */ js.Any, _]] = js.native
   
   var `lazy`: js.UndefOr[Boolean] = js.native
   
@@ -77,6 +78,8 @@ trait DropdownProps extends js.Object {
   
   var required: js.UndefOr[Boolean] = js.native
   
+  var resetFilterOnHide: js.UndefOr[Boolean] = js.native
+  
   var scrollHeight: js.UndefOr[String] = js.native
   
   var showClear: js.UndefOr[Boolean] = js.native
@@ -90,6 +93,8 @@ trait DropdownProps extends js.Object {
   var tooltipOptions: js.UndefOr[TooltipOptions] = js.native
   
   var value: js.UndefOr[js.Any] = js.native
+  
+  var valueTemplate: js.UndefOr[js.Function2[/* option */ js.Any, /* props */ js.Object, _]] = js.native
 }
 object DropdownProps {
   
@@ -169,6 +174,12 @@ object DropdownProps {
     def deleteEditable: Self = this.set("editable", js.undefined)
     
     @scala.inline
+    def setEmptyFilterMessage(value: js.Any): Self = this.set("emptyFilterMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEmptyFilterMessage: Self = this.set("emptyFilterMessage", js.undefined)
+    
+    @scala.inline
     def setFilter(value: Boolean): Self = this.set("filter", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -217,7 +228,7 @@ object DropdownProps {
     def deleteInputId: Self = this.set("inputId", js.undefined)
     
     @scala.inline
-    def setItemTemplate(value: /* option */ js.Any => ReactElement): Self = this.set("itemTemplate", js.Any.fromFunction1(value))
+    def setItemTemplate(value: /* option */ js.Any => _): Self = this.set("itemTemplate", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteItemTemplate: Self = this.set("itemTemplate", js.undefined)
@@ -316,6 +327,12 @@ object DropdownProps {
     def deleteRequired: Self = this.set("required", js.undefined)
     
     @scala.inline
+    def setResetFilterOnHide(value: Boolean): Self = this.set("resetFilterOnHide", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResetFilterOnHide: Self = this.set("resetFilterOnHide", js.undefined)
+    
+    @scala.inline
     def setScrollHeight(value: String): Self = this.set("scrollHeight", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -356,5 +373,11 @@ object DropdownProps {
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueTemplate(value: (/* option */ js.Any, /* props */ js.Object) => _): Self = this.set("valueTemplate", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteValueTemplate: Self = this.set("valueTemplate", js.undefined)
   }
 }

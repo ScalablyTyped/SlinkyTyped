@@ -7,16 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ColCountResponsible extends js.Object {
   
-  /** @name ColCountResponsible.lg */
+  /**
+    * [descr:ColCountResponsible.lg]
+    */
   var lg: js.UndefOr[Double] = js.native
   
-  /** @name ColCountResponsible.md */
+  /**
+    * [descr:ColCountResponsible.md]
+    */
   var md: js.UndefOr[Double] = js.native
   
-  /** @name ColCountResponsible.sm */
+  /**
+    * [descr:ColCountResponsible.sm]
+    */
   var sm: js.UndefOr[Double] = js.native
   
-  /** @name ColCountResponsible.xs */
+  /**
+    * [descr:ColCountResponsible.xs]
+    */
   var xs: js.UndefOr[Double] = js.native
 }
 object ColCountResponsible {

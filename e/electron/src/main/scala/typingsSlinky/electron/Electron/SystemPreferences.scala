@@ -320,7 +320,7 @@ trait SystemPreferences extends EventEmitter {
     */
   def isTrustedAccessibilityClient(prompt: Boolean): Boolean = js.native
   
-  // Docs: http://electronjs.org/docs/api/system-preferences
+  // Docs: https://electronjs.org/docs/api/system-preferences
   @JSName("on")
   def on_accentcolorchanged(
     event: `accent-color-changed`,
@@ -399,8 +399,8 @@ trait SystemPreferences extends EventEmitter {
     *
     * This API itself will not protect your user data; rather, it is a mechanism to
     * allow you to do so. Native apps will need to set Access Control Constants like
-    * `kSecAccessControlUserPresence` on the their keychain entry so that reading it
-    * would auto-prompt for Touch ID biometric consent. This could be done with
+    * `kSecAccessControlUserPresence` on their keychain entry so that reading it would
+    * auto-prompt for Touch ID biometric consent. This could be done with
     * `node-keytar`, such that one would store an encryption key with `node-keytar`
     * and only fetch it if `promptTouchID()` resolves.
     *
@@ -457,6 +457,18 @@ trait SystemPreferences extends EventEmitter {
   @JSName("setAppLevelAppearance")
   def setAppLevelAppearance_light(appearance: light): Unit = js.native
   
+  @JSName("setUserDefault")
+  def setUserDefault_array(key: String, `type`: array, value: String): Unit = js.native
+  @JSName("setUserDefault")
+  def setUserDefault_boolean(key: String, `type`: boolean, value: String): Unit = js.native
+  @JSName("setUserDefault")
+  def setUserDefault_dictionary(key: String, `type`: dictionary, value: String): Unit = js.native
+  @JSName("setUserDefault")
+  def setUserDefault_double(key: String, `type`: double, value: String): Unit = js.native
+  @JSName("setUserDefault")
+  def setUserDefault_float(key: String, `type`: float, value: String): Unit = js.native
+  @JSName("setUserDefault")
+  def setUserDefault_integer(key: String, `type`: integer, value: String): Unit = js.native
   /**
     * Set the value of `key` in `NSUserDefaults`.
     *
@@ -468,7 +480,10 @@ trait SystemPreferences extends EventEmitter {
     *
     * @platform darwin
     */
-  def setUserDefault(key: String, `type`: String, value: String): Unit = js.native
+  @JSName("setUserDefault")
+  def setUserDefault_string(key: String, `type`: string, value: String): Unit = js.native
+  @JSName("setUserDefault")
+  def setUserDefault_url(key: String, `type`: url, value: String): Unit = js.native
   
   /**
     * The ID of this subscription

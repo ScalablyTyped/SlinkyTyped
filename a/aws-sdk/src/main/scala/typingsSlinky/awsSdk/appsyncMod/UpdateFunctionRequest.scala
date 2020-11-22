@@ -40,7 +40,7 @@ trait UpdateFunctionRequest extends js.Object {
   /**
     * The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
     */
-  var requestMappingTemplate: MappingTemplate = js.native
+  var requestMappingTemplate: js.UndefOr[MappingTemplate] = js.native
   
   /**
     * The Function request mapping template. 
@@ -55,10 +55,9 @@ object UpdateFunctionRequest {
     dataSourceName: ResourceName,
     functionId: ResourceName,
     functionVersion: String,
-    name: ResourceName,
-    requestMappingTemplate: MappingTemplate
+    name: ResourceName
   ): UpdateFunctionRequest = {
-    val __obj = js.Dynamic.literal(apiId = apiId.asInstanceOf[js.Any], dataSourceName = dataSourceName.asInstanceOf[js.Any], functionId = functionId.asInstanceOf[js.Any], functionVersion = functionVersion.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], requestMappingTemplate = requestMappingTemplate.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(apiId = apiId.asInstanceOf[js.Any], dataSourceName = dataSourceName.asInstanceOf[js.Any], functionId = functionId.asInstanceOf[js.Any], functionVersion = functionVersion.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UpdateFunctionRequest]
   }
   
@@ -93,13 +92,16 @@ object UpdateFunctionRequest {
     def setName(value: ResourceName): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRequestMappingTemplate(value: MappingTemplate): Self = this.set("requestMappingTemplate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
+    
+    @scala.inline
+    def setRequestMappingTemplate(value: MappingTemplate): Self = this.set("requestMappingTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequestMappingTemplate: Self = this.set("requestMappingTemplate", js.undefined)
     
     @scala.inline
     def setResponseMappingTemplate(value: MappingTemplate): Self = this.set("responseMappingTemplate", value.asInstanceOf[js.Any])

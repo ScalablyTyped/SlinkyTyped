@@ -1,7 +1,7 @@
 
 # Scala.js typings for easystarjs
 
-Typings are for version 0.4.3
+Typings are for version 0.4.4
 
 ## Library description:
 Asynchronous A* Pathfinding API

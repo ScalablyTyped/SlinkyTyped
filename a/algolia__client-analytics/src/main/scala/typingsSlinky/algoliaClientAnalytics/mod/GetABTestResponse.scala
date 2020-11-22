@@ -44,6 +44,11 @@ trait GetABTestResponse extends js.Object {
   var status: String = js.native
   
   /**
+    * The ab test updated date.
+    */
+  var updatedAt: String = js.native
+  
+  /**
     * The ab test list of variants.
     */
   var variants: js.Array[VariantResponse] = js.native
@@ -59,9 +64,10 @@ object GetABTestResponse {
     endAt: String,
     name: String,
     status: String,
+    updatedAt: String,
     variants: js.Array[VariantResponse]
   ): GetABTestResponse = {
-    val __obj = js.Dynamic.literal(abTestID = abTestID.asInstanceOf[js.Any], clickSignificance = clickSignificance.asInstanceOf[js.Any], conversionSignificance = conversionSignificance.asInstanceOf[js.Any], createdAt = createdAt.asInstanceOf[js.Any], endAt = endAt.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], variants = variants.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(abTestID = abTestID.asInstanceOf[js.Any], clickSignificance = clickSignificance.asInstanceOf[js.Any], conversionSignificance = conversionSignificance.asInstanceOf[js.Any], createdAt = createdAt.asInstanceOf[js.Any], endAt = endAt.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], updatedAt = updatedAt.asInstanceOf[js.Any], variants = variants.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetABTestResponse]
   }
   
@@ -100,6 +106,9 @@ object GetABTestResponse {
     
     @scala.inline
     def setStatus(value: String): Self = this.set("status", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUpdatedAt(value: String): Self = this.set("updatedAt", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVariantsVarargs(value: VariantResponse*): Self = this.set("variants", js.Array(value :_*))

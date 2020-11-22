@@ -1,6 +1,5 @@
 package typingsSlinky.babylonjs
 
-import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.boundingInfoMod.ICullable
 import typingsSlinky.babylonjs.cameraInputsManagerMod.CameraInputsManager
@@ -31,7 +30,7 @@ object cameraMod extends js.Object {
     /**
       * Instantiates a new camera object.
       * This should not be used directly but through the inherited cameras: ArcRotate, Free...
-      * @see http://doc.babylonjs.com/features/cameras
+      * @see https://doc.babylonjs.com/features/cameras
       * @param name Defines the name of the camera in the scene
       * @param position Defines the position of the camera
       * @param scene Defines the scene the camera belongs too
@@ -149,6 +148,8 @@ object cameraMod extends js.Object {
     
     var _transformMatrix: js.Any = js.native
     
+    var _upVector: Vector3 = js.native
+    
     /* protected */ def _updateCameraRotationMatrix(): Unit = js.native
     
     var _updateFrustumPlanes: js.Any = js.native
@@ -176,15 +177,22 @@ object cameraMod extends js.Object {
     
     /**
       * Attach the input controls to a specific dom element to get the input from.
-      * @param element Defines the element the controls should be listened from
       * @param noPreventDefault Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
       */
-    def attachControl(element: HTMLElement): Unit = js.native
-    def attachControl(element: HTMLElement, noPreventDefault: Boolean): Unit = js.native
+    def attachControl(): Unit = js.native
+    /**
+      * Attach the input controls to a specific dom element to get the input from.
+      * @param ignored defines an ignored parameter kept for backward compatibility. If you want to define the source input element, you can set engine.inputElement before calling camera.attachControl
+      * @param noPreventDefault Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+      * BACK COMPAT SIGNATURE ONLY.
+      */
+    def attachControl(ignored: js.Any): Unit = js.native
+    def attachControl(ignored: js.Any, noPreventDefault: Boolean): Unit = js.native
+    def attachControl(noPreventDefault: Boolean): Unit = js.native
     
     /**
       * Attach a post process to the camera.
-      * @see http://doc.babylonjs.com/how_to/how_to_use_postprocesses#attach-postprocess
+      * @see https://doc.babylonjs.com/how_to/how_to_use_postprocesses#attach-postprocess
       * @param postProcess The post process to attach to the camera
       * @param insertAt The position of the post process in case several of them are in use in the scene
       * @returns the position the post process has been inserted at
@@ -223,13 +231,17 @@ object cameraMod extends js.Object {
     
     /**
       * Detach the current controls from the specified dom element.
-      * @param element Defines the element to stop listening the inputs from
       */
-    def detachControl(element: HTMLElement): Unit = js.native
+    def detachControl(): Unit = js.native
+    /**
+      * Detach the current controls from the specified dom element.
+      * @param ignored defines an ignored parameter kept for backward compatibility. If you want to define the source input element, you can set engine.inputElement before calling camera.attachControl
+      */
+    def detachControl(ignored: js.Any): Unit = js.native
     
     /**
       * Detach a post process to the camera.
-      * @see http://doc.babylonjs.com/how_to/how_to_use_postprocesses#attach-postprocess
+      * @see https://doc.babylonjs.com/how_to/how_to_use_postprocesses#attach-postprocess
       * @param postProcess The post process to detach from the camera
       */
     def detachPostProcess(postProcess: PostProcess): Unit = js.native
@@ -288,6 +300,28 @@ object cameraMod extends js.Object {
     def getForwardRay(length: Double, transform: js.UndefOr[scala.Nothing], origin: Vector3): Ray = js.native
     def getForwardRay(length: Double, transform: Matrix): Ray = js.native
     def getForwardRay(length: Double, transform: Matrix, origin: Vector3): Ray = js.native
+    
+    /**
+      * Gets a ray in the forward direction from the camera.
+      * @param refRay the ray to (re)use when setting the values
+      * @param length Defines the length of the ray to create
+      * @param transform Defines the transform to apply to the ray, by default the world matrx is used to create a workd space ray
+      * @param origin Defines the start point of the ray which defaults to the camera position
+      * @returns the forward ray
+      */
+    def getForwardRayToRef(refRay: Ray): Ray = js.native
+    def getForwardRayToRef(
+      refRay: Ray,
+      length: js.UndefOr[scala.Nothing],
+      transform: js.UndefOr[scala.Nothing],
+      origin: Vector3
+    ): Ray = js.native
+    def getForwardRayToRef(refRay: Ray, length: js.UndefOr[scala.Nothing], transform: Matrix): Ray = js.native
+    def getForwardRayToRef(refRay: Ray, length: js.UndefOr[scala.Nothing], transform: Matrix, origin: Vector3): Ray = js.native
+    def getForwardRayToRef(refRay: Ray, length: Double): Ray = js.native
+    def getForwardRayToRef(refRay: Ray, length: Double, transform: js.UndefOr[scala.Nothing], origin: Vector3): Ray = js.native
+    def getForwardRayToRef(refRay: Ray, length: Double, transform: Matrix): Ray = js.native
+    def getForwardRayToRef(refRay: Ray, length: Double, transform: Matrix, origin: Vector3): Ray = js.native
     
     /**
       * Gets the left camera target of a rig setup in case of Rigged Camera
@@ -534,11 +568,12 @@ object cameraMod extends js.Object {
       */
     def unfreezeProjectionMatrix(): Unit = js.native
     
+    def upVector: Vector3 = js.native
     /**
       * The vector the camera should consider as up.
       * (default is Vector3(0, 1, 0) aka Vector3.Up())
       */
-    var upVector: Vector3 = js.native
+    def upVector_=(vec: Vector3): Unit = js.native
     
     /**
       * Update the camera state according to the different inputs gathered during the frame.

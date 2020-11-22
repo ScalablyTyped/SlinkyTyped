@@ -7,28 +7,44 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait chartPointObject extends basePointObject {
   
-  /** @name chartPointObject.aggregationInfo */
+  /**
+    * [descr:chartPointObject.aggregationInfo]
+    */
   var aggregationInfo: js.UndefOr[chartPointAggregationInfoObject] = js.native
   
-  /** @name chartPointObject.getBoundingRect() */
+  /**
+    * [descr:chartPointObject.getBoundingRect()]
+    */
   def getBoundingRect(): js.Any = js.native
   
-  /** @name chartPointObject.originalCloseValue */
+  /**
+    * [descr:chartPointObject.originalCloseValue]
+    */
   var originalCloseValue: js.UndefOr[Double | String] = js.native
   
-  /** @name chartPointObject.originalHighValue */
+  /**
+    * [descr:chartPointObject.originalHighValue]
+    */
   var originalHighValue: js.UndefOr[Double | String] = js.native
   
-  /** @name chartPointObject.originalLowValue */
+  /**
+    * [descr:chartPointObject.originalLowValue]
+    */
   var originalLowValue: js.UndefOr[Double | String] = js.native
   
-  /** @name chartPointObject.originalMinValue */
+  /**
+    * [descr:chartPointObject.originalMinValue]
+    */
   var originalMinValue: js.UndefOr[String | Double | js.Date] = js.native
   
-  /** @name chartPointObject.originalOpenValue */
+  /**
+    * [descr:chartPointObject.originalOpenValue]
+    */
   var originalOpenValue: js.UndefOr[Double | String] = js.native
   
-  /** @name chartPointObject.size */
+  /**
+    * [descr:chartPointObject.size]
+    */
   var size: js.UndefOr[Double | String] = js.native
 }
 object chartPointObject {

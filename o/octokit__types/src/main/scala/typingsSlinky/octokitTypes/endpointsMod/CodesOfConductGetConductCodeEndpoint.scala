@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`4`
+import typingsSlinky.octokitTypes.anon.`3`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,12 +11,12 @@ trait CodesOfConductGetConductCodeEndpoint extends js.Object {
   
   var key: String = js.native
   
-  var mediaType: `4` = js.native
+  var mediaType: `3` = js.native
 }
 object CodesOfConductGetConductCodeEndpoint {
   
   @scala.inline
-  def apply(key: String, mediaType: `4`): CodesOfConductGetConductCodeEndpoint = {
+  def apply(key: String, mediaType: `3`): CodesOfConductGetConductCodeEndpoint = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodesOfConductGetConductCodeEndpoint]
   }
@@ -40,6 +40,6 @@ object CodesOfConductGetConductCodeEndpoint {
     def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `4`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `3`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
   }
 }

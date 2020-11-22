@@ -11,7 +11,7 @@ trait AssignedLicense extends js.Object {
   var disabledPlans: js.UndefOr[js.Array[String]] = js.native
   
   // The unique identifier for the SKU.
-  var skuId: js.UndefOr[String] = js.native
+  var skuId: js.UndefOr[NullableOption[String]] = js.native
 }
 object AssignedLicense {
   
@@ -46,9 +46,12 @@ object AssignedLicense {
     def deleteDisabledPlans: Self = this.set("disabledPlans", js.undefined)
     
     @scala.inline
-    def setSkuId(value: String): Self = this.set("skuId", value.asInstanceOf[js.Any])
+    def setSkuId(value: NullableOption[String]): Self = this.set("skuId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSkuId: Self = this.set("skuId", js.undefined)
+    
+    @scala.inline
+    def setSkuIdNull: Self = this.set("skuId", null)
   }
 }

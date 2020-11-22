@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FileAttachment extends Attachment {
   
   // The base64-encoded contents of the file.
-  var contentBytes: js.UndefOr[Double] = js.native
+  var contentBytes: js.UndefOr[NullableOption[Double]] = js.native
   
   // The ID of the attachment in the Exchange store.
-  var contentId: js.UndefOr[String] = js.native
+  var contentId: js.UndefOr[NullableOption[String]] = js.native
   
   // Do not use this property as it is not supported.
-  var contentLocation: js.UndefOr[String] = js.native
+  var contentLocation: js.UndefOr[NullableOption[String]] = js.native
 }
 object FileAttachment {
   
@@ -40,21 +40,30 @@ object FileAttachment {
     }
     
     @scala.inline
-    def setContentBytes(value: Double): Self = this.set("contentBytes", value.asInstanceOf[js.Any])
+    def setContentBytes(value: NullableOption[Double]): Self = this.set("contentBytes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContentBytes: Self = this.set("contentBytes", js.undefined)
     
     @scala.inline
-    def setContentId(value: String): Self = this.set("contentId", value.asInstanceOf[js.Any])
+    def setContentBytesNull: Self = this.set("contentBytes", null)
+    
+    @scala.inline
+    def setContentId(value: NullableOption[String]): Self = this.set("contentId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContentId: Self = this.set("contentId", js.undefined)
     
     @scala.inline
-    def setContentLocation(value: String): Self = this.set("contentLocation", value.asInstanceOf[js.Any])
+    def setContentIdNull: Self = this.set("contentId", null)
+    
+    @scala.inline
+    def setContentLocation(value: NullableOption[String]): Self = this.set("contentLocation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContentLocation: Self = this.set("contentLocation", js.undefined)
+    
+    @scala.inline
+    def setContentLocationNull: Self = this.set("contentLocation", null)
   }
 }

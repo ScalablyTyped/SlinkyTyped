@@ -493,13 +493,13 @@ trait ListView extends View {
     * Gets the value of the <Titanium.UI.ListView.resultsBackgroundColor> property.
     * @deprecated Access <Titanium.UI.ListView.resultsBackgroundColor> instead.
     */
-  def getResultsBackgroundColor(): String = js.native
+  def getResultsBackgroundColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ListView.resultsSeparatorColor> property.
     * @deprecated Access <Titanium.UI.ListView.resultsSeparatorColor> instead.
     */
-  def getResultsSeparatorColor(): String = js.native
+  def getResultsSeparatorColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ListView.resultsSeparatorInsets> property.
@@ -565,7 +565,7 @@ trait ListView extends View {
     * Gets the value of the <Titanium.UI.ListView.separatorColor> property.
     * @deprecated Access <Titanium.UI.ListView.separatorColor> instead.
     */
-  def getSeparatorColor(): String = js.native
+  def getSeparatorColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ListView.separatorHeight> property.
@@ -776,13 +776,13 @@ trait ListView extends View {
   /**
     * The background color of the search results (iOS-only).
     */
-  var resultsBackgroundColor: String = js.native
+  var resultsBackgroundColor: String | Color = js.native
   
   /**
     * Separator line color between rows inside search results,
     * as a color name or hex triplet (iOS-only).
     */
-  var resultsSeparatorColor: String = js.native
+  var resultsSeparatorColor: String | Color = js.native
   
   /**
     * The insets for search results separators (applies to all cells & iOS-only).
@@ -848,7 +848,7 @@ trait ListView extends View {
   /**
     * Separator line color between items, as a color name or hex triplet.
     */
-  var separatorColor: String = js.native
+  var separatorColor: String | Color = js.native
   
   /**
     * height of the ListView separator.
@@ -1033,12 +1033,14 @@ trait ListView extends View {
     * @deprecated Set the value using <Titanium.UI.ListView.resultsBackgroundColor> instead.
     */
   def setResultsBackgroundColor(resultsBackgroundColor: String): Unit = js.native
+  def setResultsBackgroundColor(resultsBackgroundColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ListView.resultsSeparatorColor> property.
     * @deprecated Set the value using <Titanium.UI.ListView.resultsSeparatorColor> instead.
     */
   def setResultsSeparatorColor(resultsSeparatorColor: String): Unit = js.native
+  def setResultsSeparatorColor(resultsSeparatorColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ListView.resultsSeparatorInsets> property.
@@ -1100,6 +1102,7 @@ trait ListView extends View {
     * @deprecated Set the value using <Titanium.UI.ListView.separatorColor> instead.
     */
   def setSeparatorColor(separatorColor: String): Unit = js.native
+  def setSeparatorColor(separatorColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ListView.separatorHeight> property.

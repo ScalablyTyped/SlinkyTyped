@@ -35,8 +35,7 @@ class Instance protected () extends CustomResource {
   val availabilityZone: Output_[String] = js.native
   
   /**
-    * The ID for a virtual private server image
-    * (see list below)
+    * The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
     */
   val blueprintId: Output_[String] = js.native
   
@@ -79,7 +78,7 @@ class Instance protected () extends CustomResource {
   val ramSize: Output_[Double] = js.native
   
   /**
-    * A map of tags to assign to the resource.
+    * A map of tags to assign to the resource. To create a key-only tag, use an empty string as the value.
     */
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   

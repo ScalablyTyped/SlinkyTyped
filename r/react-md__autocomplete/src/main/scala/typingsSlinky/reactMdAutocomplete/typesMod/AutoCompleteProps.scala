@@ -40,8 +40,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`additions removals`
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`additions text`
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`inline`
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`removals additions`
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`removals text`
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`text additions`
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`text removals`
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.additions
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.all
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.ascending
@@ -52,8 +57,11 @@ import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.date
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.decimal
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.descending
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.dialog
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.done
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.email
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.enter
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.execute
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.go
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.grammar
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.grid
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.horizontal
@@ -65,6 +73,7 @@ import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.location
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.menu
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.mixed
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.move
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.next
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.no
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.none
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.numeric
@@ -74,8 +83,10 @@ import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.other
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.page
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.polite
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.popup
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.previous
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.removals
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.search
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.send
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.spelling
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.step
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.tel
@@ -190,7 +201,9 @@ trait AutoCompleteProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -318,6 +331,8 @@ trait AutoCompleteProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   
   var draggable: js.UndefOr[Booleanish] = js.native
+  
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
   
   var error: js.UndefOr[Boolean] = js.native
   
@@ -1052,7 +1067,9 @@ object AutoCompleteProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1323,6 +1340,12 @@ object AutoCompleteProps {
     
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    
+    @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
     
     @scala.inline
     def setError(value: Boolean): Self = this.set("error", value.asInstanceOf[js.Any])

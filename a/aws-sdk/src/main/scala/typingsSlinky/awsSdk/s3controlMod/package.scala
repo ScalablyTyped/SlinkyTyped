@@ -12,19 +12,90 @@ package object s3controlMod {
   
   type AccountId = java.lang.String
   
+  type AwsOrgArn = java.lang.String
+  
   type Boolean = scala.Boolean
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.private__
+    - typingsSlinky.awsSdk.awsSdkStrings.`public-read`
+    - typingsSlinky.awsSdk.awsSdkStrings.`public-read-write`
+    - typingsSlinky.awsSdk.awsSdkStrings.`authenticated-read`
+    - java.lang.String
+  */
+  type BucketCannedACL = typingsSlinky.awsSdk.s3controlMod._BucketCannedACL | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.EU
+    - typingsSlinky.awsSdk.awsSdkStrings.`eu-west-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`us-west-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`us-west-2`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ap-south-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ap-southeast-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ap-southeast-2`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ap-northeast-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`sa-east-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`cn-north-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`eu-central-1`
+    - java.lang.String
+  */
+  type BucketLocationConstraint = typingsSlinky.awsSdk.s3controlMod._BucketLocationConstraint | java.lang.String
   
   type BucketName = java.lang.String
   
+  type Buckets = js.Array[typingsSlinky.awsSdk.s3controlMod.S3BucketArnString]
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.configUseDualstackMod.UseDualstackConfigOptions with typingsSlinky.awsSdk.s3controlMod.ClientApiVersions
+  
+  type ConfigId = java.lang.String
+  
+  type ConfirmRemoveSelfBucketAccess = scala.Boolean
   
   type ConfirmationRequired = scala.Boolean
   
+  type ContinuationToken = java.lang.String
+  
   type CreationDate = js.Date
+  
+  type Date = js.Date
+  
+  type Days = scala.Double
+  
+  type DaysAfterInitiation = scala.Double
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Enabled_
+    - typingsSlinky.awsSdk.awsSdkStrings.Disabled_
+    - java.lang.String
+  */
+  type ExpirationStatus = typingsSlinky.awsSdk.s3controlMod._ExpirationStatus | java.lang.String
+  
+  type ExpiredObjectDeleteMarker = scala.Boolean
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CSV
+    - typingsSlinky.awsSdk.awsSdkStrings.Parquet_
+    - java.lang.String
+  */
+  type Format = typingsSlinky.awsSdk.s3controlMod._Format | java.lang.String
   
   type FunctionArnString = java.lang.String
   
+  type GrantFullControl = java.lang.String
+  
+  type GrantRead = java.lang.String
+  
+  type GrantReadACP = java.lang.String
+  
+  type GrantWrite = java.lang.String
+  
+  type GrantWriteACP = java.lang.String
+  
   type IAMRoleArn = java.lang.String
+  
+  type ID = java.lang.String
+  
+  type IsEnabled = scala.Boolean
   
   type IsPublic = scala.Boolean
   
@@ -103,9 +174,15 @@ package object s3controlMod {
   
   type KmsKeyArnString = java.lang.String
   
+  type LifecycleRules = js.Array[typingsSlinky.awsSdk.s3controlMod.LifecycleRule]
+  
+  type Location = java.lang.String
+  
   type MaxLength1024String = java.lang.String
   
   type MaxResults = scala.Double
+  
+  type MinStorageBytesPercentage = scala.Double
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Internet_
@@ -122,6 +199,10 @@ package object s3controlMod {
   
   type NonEmptyMaxLength64String = java.lang.String
   
+  type NoncurrentVersionTransitionList = js.Array[typingsSlinky.awsSdk.s3controlMod.NoncurrentVersionTransition]
+  
+  type ObjectLockEnabledForBucket = scala.Boolean
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.LambdaInvoke
     - typingsSlinky.awsSdk.awsSdkStrings.S3PutObjectCopy
@@ -134,7 +215,17 @@ package object s3controlMod {
   */
   type OperationName = typingsSlinky.awsSdk.s3controlMod._OperationName | java.lang.String
   
+  type OutputSchemaVersion = typingsSlinky.awsSdk.awsSdkStrings.V_1 | java.lang.String
+  
   type Policy = java.lang.String
+  
+  type Prefix = java.lang.String
+  
+  type PublicAccessBlockEnabled = scala.Boolean
+  
+  type RegionalBucketList = js.Array[typingsSlinky.awsSdk.s3controlMod.RegionalBucket]
+  
+  type Regions = js.Array[typingsSlinky.awsSdk.s3controlMod.S3AWSRegion]
   
   type ReportPrefixString = java.lang.String
   
@@ -144,6 +235,10 @@ package object s3controlMod {
     - java.lang.String
   */
   type RequestedJobStatus = typingsSlinky.awsSdk.s3controlMod._RequestedJobStatus | java.lang.String
+  
+  type S3AWSRegion = java.lang.String
+  
+  type S3AccessPointArn = java.lang.String
   
   type S3BucketArnString = java.lang.String
   
@@ -222,6 +317,8 @@ package object s3controlMod {
   */
   type S3Permission = typingsSlinky.awsSdk.s3controlMod._S3Permission | java.lang.String
   
+  type S3RegionalBucketArn = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AES256
     - typingsSlinky.awsSdk.awsSdkStrings.KMS
@@ -244,7 +341,19 @@ package object s3controlMod {
   
   type S3UserMetadata = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.s3controlMod.MaxLength1024String]
   
+  type SSEKMSKeyId = java.lang.String
+  
   type Setting = scala.Boolean
+  
+  type StorageLensArn = java.lang.String
+  
+  type StorageLensConfigurationList = js.Array[typingsSlinky.awsSdk.s3controlMod.ListStorageLensConfigurationEntry]
+  
+  type StorageLensPrefixLevelDelimiter = java.lang.String
+  
+  type StorageLensPrefixLevelMaxDepth = scala.Double
+  
+  type StorageLensTags = js.Array[typingsSlinky.awsSdk.s3controlMod.StorageLensTag]
   
   type StringForNextToken = java.lang.String
   
@@ -257,6 +366,18 @@ package object s3controlMod {
   type TagValueString = java.lang.String
   
   type TimeStamp = js.Date
+  
+  type TransitionList = js.Array[typingsSlinky.awsSdk.s3controlMod.Transition]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.GLACIER
+    - typingsSlinky.awsSdk.awsSdkStrings.STANDARD_IA
+    - typingsSlinky.awsSdk.awsSdkStrings.ONEZONE_IA
+    - typingsSlinky.awsSdk.awsSdkStrings.INTELLIGENT_TIERING
+    - typingsSlinky.awsSdk.awsSdkStrings.DEEP_ARCHIVE
+    - java.lang.String
+  */
+  type TransitionStorageClass = typingsSlinky.awsSdk.s3controlMod._TransitionStorageClass | java.lang.String
   
   type VpcId = java.lang.String
   

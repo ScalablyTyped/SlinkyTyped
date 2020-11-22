@@ -9,9 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fundamentalReact.fundamentalReactStrings.positive
   - typingsSlinky.fundamentalReact.fundamentalReactStrings.negative
   - typingsSlinky.fundamentalReact.fundamentalReactStrings.medium
+  - typingsSlinky.fundamentalReact.fundamentalReactStrings.ghost
+  - typingsSlinky.fundamentalReact.fundamentalReactStrings.attention
 */
 trait ButtonTypes extends js.Object
 object ButtonTypes {
+  
+  @scala.inline
+  def attention: typingsSlinky.fundamentalReact.fundamentalReactStrings.attention = "attention".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.attention]
+  
+  @scala.inline
+  def ghost: typingsSlinky.fundamentalReact.fundamentalReactStrings.ghost = "ghost".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.ghost]
   
   @scala.inline
   def medium: typingsSlinky.fundamentalReact.fundamentalReactStrings.medium = "medium".asInstanceOf[typingsSlinky.fundamentalReact.fundamentalReactStrings.medium]

@@ -5,7 +5,6 @@ import typingsSlinky.blueprintjsCore.propsMod.IProps
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerBaseProps
 import typingsSlinky.blueprintjsDatetime.dateRangeMod.DateRange
 import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDateRangeShortcut
-import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -37,16 +36,6 @@ trait IDateRangePickerProps
     * @default true
     */
   var contiguousCalendarMonths: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * Props to pass to ReactDayPicker. See API documentation
-    * [here](http://react-day-picker.js.org/api/DayPicker).
-    *
-    * The following props are managed by the component and cannot be configured:
-    * `canChangeMonth`, `captionElement`, `numberOfMonths`, `fromMonth` (use
-    * `minDate`), `month` (use `initialMonth`), `toMonth` (use `maxDate`).
-    */
-  var dayPickerProps: js.UndefOr[DayPickerProps] = js.native
   
   /**
     * Initial `DateRange` the calendar will display as selected.
@@ -148,12 +137,6 @@ object IDateRangePickerProps {
     
     @scala.inline
     def deleteContiguousCalendarMonths: Self = this.set("contiguousCalendarMonths", js.undefined)
-    
-    @scala.inline
-    def setDayPickerProps(value: DayPickerProps): Self = this.set("dayPickerProps", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDayPickerProps: Self = this.set("dayPickerProps", js.undefined)
     
     @scala.inline
     def setDefaultValue(value: DateRange): Self = this.set("defaultValue", value.asInstanceOf[js.Any])

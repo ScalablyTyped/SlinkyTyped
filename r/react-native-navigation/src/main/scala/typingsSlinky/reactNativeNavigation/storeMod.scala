@@ -38,6 +38,8 @@ object storeMod extends js.Object {
     
     var lazyRegistratorFn: js.Any = js.native
     
+    def mergeNewPropsForId(componentId: String, newProps: js.Any): Unit = js.native
+    
     var propsById: js.Any = js.native
     
     def setComponentClassForName(componentName: String, ComponentClass: ComponentProvider): Unit = js.native

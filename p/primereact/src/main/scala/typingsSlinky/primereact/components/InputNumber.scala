@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.Target
+import typingsSlinky.primereact.anon.Value
 import typingsSlinky.primereact.inputNumberMod.InputNumberProps
 import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
@@ -97,10 +98,13 @@ object InputNumber {
     def onBlur(value: /* e */ Event => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* e */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def onFocus(value: /* e */ Event => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onValueChange(value: /* e */ Target => Unit): this.type = set("onValueChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])

@@ -20,17 +20,16 @@ trait CreateDirectoryConfigRequest extends js.Object {
   /**
     * The credentials for the service account used by the fleet or image builder to connect to the directory.
     */
-  var ServiceAccountCredentials: typingsSlinky.awsSdk.appstreamMod.ServiceAccountCredentials = js.native
+  var ServiceAccountCredentials: js.UndefOr[typingsSlinky.awsSdk.appstreamMod.ServiceAccountCredentials] = js.native
 }
 object CreateDirectoryConfigRequest {
   
   @scala.inline
   def apply(
     DirectoryName: DirectoryName,
-    OrganizationalUnitDistinguishedNames: OrganizationalUnitDistinguishedNamesList,
-    ServiceAccountCredentials: ServiceAccountCredentials
+    OrganizationalUnitDistinguishedNames: OrganizationalUnitDistinguishedNamesList
   ): CreateDirectoryConfigRequest = {
-    val __obj = js.Dynamic.literal(DirectoryName = DirectoryName.asInstanceOf[js.Any], OrganizationalUnitDistinguishedNames = OrganizationalUnitDistinguishedNames.asInstanceOf[js.Any], ServiceAccountCredentials = ServiceAccountCredentials.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(DirectoryName = DirectoryName.asInstanceOf[js.Any], OrganizationalUnitDistinguishedNames = OrganizationalUnitDistinguishedNames.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateDirectoryConfigRequest]
   }
   
@@ -60,5 +59,8 @@ object CreateDirectoryConfigRequest {
     
     @scala.inline
     def setServiceAccountCredentials(value: ServiceAccountCredentials): Self = this.set("ServiceAccountCredentials", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteServiceAccountCredentials: Self = this.set("ServiceAccountCredentials", js.undefined)
   }
 }

@@ -11,6 +11,8 @@ trait RunConfigurationDescription extends js.Object {
     * Describes the restore behavior of a restarting application.
     */
   var ApplicationRestoreConfigurationDescription: js.UndefOr[ApplicationRestoreConfiguration] = js.native
+  
+  var FlinkRunConfigurationDescription: js.UndefOr[FlinkRunConfiguration] = js.native
 }
 object RunConfigurationDescription {
   
@@ -40,5 +42,11 @@ object RunConfigurationDescription {
     
     @scala.inline
     def deleteApplicationRestoreConfigurationDescription: Self = this.set("ApplicationRestoreConfigurationDescription", js.undefined)
+    
+    @scala.inline
+    def setFlinkRunConfigurationDescription(value: FlinkRunConfiguration): Self = this.set("FlinkRunConfigurationDescription", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFlinkRunConfigurationDescription: Self = this.set("FlinkRunConfigurationDescription", js.undefined)
   }
 }

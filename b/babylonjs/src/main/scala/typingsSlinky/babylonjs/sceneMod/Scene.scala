@@ -12,9 +12,9 @@ import typingsSlinky.babylonjs.animatableMod.Animatable
 import typingsSlinky.babylonjs.animationGroupMod.AnimationGroup
 import typingsSlinky.babylonjs.animationMod.Animation
 import typingsSlinky.babylonjs.animationPropertiesOverrideMod.AnimationPropertiesOverride
+import typingsSlinky.babylonjs.anon.AdditiveAnimations
 import typingsSlinky.babylonjs.anon.Animations
 import typingsSlinky.babylonjs.anon.Max
-import typingsSlinky.babylonjs.anon.OriginalValue
 import typingsSlinky.babylonjs.anon.PartialIEnvironmentHelper
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.boneMod.Bone
@@ -34,6 +34,7 @@ import typingsSlinky.babylonjs.fileToolsMod.RequestFileError
 import typingsSlinky.babylonjs.gamepadManagerMod.GamepadManager
 import typingsSlinky.babylonjs.geometryBufferRendererMod.GeometryBufferRenderer
 import typingsSlinky.babylonjs.geometryMod.Geometry
+import typingsSlinky.babylonjs.iClipPlanesHolderMod.IClipPlanesHolder
 import typingsSlinky.babylonjs.imageProcessingConfigurationMod.ImageProcessingConfiguration
 import typingsSlinky.babylonjs.iofflineproviderMod.IOfflineProvider
 import typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem
@@ -73,7 +74,6 @@ import typingsSlinky.babylonjs.renderTargetTextureMod.RenderTargetTexture
 import typingsSlinky.babylonjs.renderingManagerMod.IRenderingManagerAutoClearSetup
 import typingsSlinky.babylonjs.renderingManagerMod.RenderingGroupInfo
 import typingsSlinky.babylonjs.runtimeAnimationMod.RuntimeAnimation
-import typingsSlinky.babylonjs.sceneComponentMod.ActiveMeshStageAction
 import typingsSlinky.babylonjs.sceneComponentMod.CameraStageAction
 import typingsSlinky.babylonjs.sceneComponentMod.CameraStageFrameBufferAction
 import typingsSlinky.babylonjs.sceneComponentMod.EvaluateSubMeshStageAction
@@ -82,6 +82,7 @@ import typingsSlinky.babylonjs.sceneComponentMod.ISceneSerializableComponent
 import typingsSlinky.babylonjs.sceneComponentMod.MeshStageAction
 import typingsSlinky.babylonjs.sceneComponentMod.PointerMoveStageAction
 import typingsSlinky.babylonjs.sceneComponentMod.PointerUpDownStageAction
+import typingsSlinky.babylonjs.sceneComponentMod.PreActiveMeshStageAction
 import typingsSlinky.babylonjs.sceneComponentMod.RenderTargetStageAction
 import typingsSlinky.babylonjs.sceneComponentMod.RenderTargetsStageAction
 import typingsSlinky.babylonjs.sceneComponentMod.RenderingGroupStageAction
@@ -89,6 +90,7 @@ import typingsSlinky.babylonjs.sceneComponentMod.RenderingMeshStageAction
 import typingsSlinky.babylonjs.sceneComponentMod.SimpleStageAction
 import typingsSlinky.babylonjs.sceneComponentMod.Stage
 import typingsSlinky.babylonjs.sceneInputManagerMod.InputManager
+import typingsSlinky.babylonjs.shaderMaterialMod.ShaderMaterial
 import typingsSlinky.babylonjs.skeletonMod.Skeleton
 import typingsSlinky.babylonjs.smartArrayMod.ISmartArrayLike
 import typingsSlinky.babylonjs.smartArrayMod.SmartArray
@@ -113,7 +115,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.babylonjs.animatableInterfaceMod.IAnimatable because var conflicts: animations. Inlined  */ @JSImport("babylonjs/scene", "Scene")
 @js.native
-class Scene protected () extends AbstractScene {
+class Scene protected ()
+  extends AbstractScene
+     with IClipPlanesHolder {
   /**
     * Creates a new Scene
     * @param engine defines the engine to use to render this scene
@@ -136,15 +140,10 @@ class Scene protected () extends AbstractScene {
   
   var _activeMesh: js.Any = js.native
   
-  /**
-    * @hidden
-    * Defines the actions happening during the active mesh stage.
-    */
-  var _activeMeshStage: Stage[ActiveMeshStageAction] = js.native
-  
   var _activeMeshes: js.Any = js.native
   
-  var _activeMeshesFrozen: js.Any = js.native
+  /** @hidden */
+  var _activeMeshesFrozen: Boolean = js.native
   
   /** @hidden */
   var _activeParticleSystems: SmartArray[IParticleSystem] = js.native
@@ -324,13 +323,13 @@ class Scene protected () extends AbstractScene {
   /** @hidden (Backing field) */
   var _depthRenderer: StringDictionary[DepthRenderer] = js.native
   
+  /** @hidden */
+  var _edgeRenderLineShader: Nullable[ShaderMaterial] = js.native
+  
   var _engine: js.Any = js.native
   
   /** @hidden */
   var _environmentIntensity: Double = js.native
-  
-  /** @hidden */
-  var _environmentTexture: Nullable[BaseTexture] = js.native
   
   var _evaluateActiveMeshes: js.Any = js.native
   
@@ -444,6 +443,20 @@ class Scene protected () extends AbstractScene {
     rayFunction: js.Function1[/* world */ Matrix, Ray],
     predicate: js.UndefOr[scala.Nothing],
     fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate
+  ): Nullable[PickingInfo] = js.native
+  def _internalPick(
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    predicate: js.UndefOr[scala.Nothing],
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPick(
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    predicate: js.UndefOr[scala.Nothing],
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
     trianglePredicate: TrianglePickingPredicate
   ): Nullable[PickingInfo] = js.native
   def _internalPick(
@@ -455,6 +468,20 @@ class Scene protected () extends AbstractScene {
     rayFunction: js.Function1[/* world */ Matrix, Ray],
     predicate: js.UndefOr[scala.Nothing],
     fastCheck: Boolean,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate
+  ): Nullable[PickingInfo] = js.native
+  def _internalPick(
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    predicate: js.UndefOr[scala.Nothing],
+    fastCheck: Boolean,
+    onlyBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPick(
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    predicate: js.UndefOr[scala.Nothing],
+    fastCheck: Boolean,
+    onlyBoundingInfo: Boolean,
     trianglePredicate: TrianglePickingPredicate
   ): Nullable[PickingInfo] = js.native
   def _internalPick(
@@ -465,6 +492,20 @@ class Scene protected () extends AbstractScene {
     rayFunction: js.Function1[/* world */ Matrix, Ray],
     predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
     fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate
+  ): Nullable[PickingInfo] = js.native
+  def _internalPick(
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPick(
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
     trianglePredicate: TrianglePickingPredicate
   ): Nullable[PickingInfo] = js.native
   def _internalPick(
@@ -476,7 +517,168 @@ class Scene protected () extends AbstractScene {
     rayFunction: js.Function1[/* world */ Matrix, Ray],
     predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
     fastCheck: Boolean,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
     trianglePredicate: TrianglePickingPredicate
+  ): Nullable[PickingInfo] = js.native
+  def _internalPick(
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+    fastCheck: Boolean,
+    onlyBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPick(
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+    fastCheck: Boolean,
+    onlyBoundingInfo: Boolean,
+    trianglePredicate: TrianglePickingPredicate
+  ): Nullable[PickingInfo] = js.native
+  
+  /** @hidden */
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate,
+    skipBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
+    trianglePredicate: TrianglePickingPredicate
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: js.UndefOr[scala.Nothing],
+    onlyBoundingInfo: Boolean,
+    trianglePredicate: TrianglePickingPredicate,
+    skipBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: Boolean,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: Boolean,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: Boolean,
+    onlyBoundingInfo: js.UndefOr[scala.Nothing],
+    trianglePredicate: TrianglePickingPredicate,
+    skipBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: Boolean,
+    onlyBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: Boolean,
+    onlyBoundingInfo: Boolean,
+    trianglePredicate: js.UndefOr[scala.Nothing],
+    skipBoundingInfo: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: Boolean,
+    onlyBoundingInfo: Boolean,
+    trianglePredicate: TrianglePickingPredicate
+  ): Nullable[PickingInfo] = js.native
+  def _internalPickForMesh(
+    pickingInfo: Nullable[PickingInfo],
+    rayFunction: js.Function1[/* world */ Matrix, Ray],
+    mesh: AbstractMesh,
+    world: Matrix,
+    fastCheck: Boolean,
+    onlyBoundingInfo: Boolean,
+    trianglePredicate: TrianglePickingPredicate,
+    skipBoundingInfo: Boolean
   ): Nullable[PickingInfo] = js.native
   
   /** @hidden */
@@ -827,16 +1029,22 @@ class Scene protected () extends AbstractScene {
   /** @hidden (Backing field) */
   var _postProcessRenderPipelineManager: PostProcessRenderPipelineManager = js.native
   
+  /**
+    * @hidden
+    * Defines the actions happening during the active mesh stage.
+    */
+  var _preActiveMeshStage: Stage[PreActiveMeshStageAction] = js.native
+  
   var _preventFreeActiveMeshesAndRenderingGroups: js.Any = js.native
   
   /** @hidden */
   def _processLateAnimationBindings(): Unit = js.native
   
   /** @hidden */
-  def _processLateAnimationBindingsForMatrices(holder: Animations): js.Any = js.native
+  def _processLateAnimationBindingsForMatrices(holder: AdditiveAnimations): js.Any = js.native
   
   /** @hidden */
-  def _processLateAnimationBindingsForQuaternions(holder: OriginalValue, refQuaternion: Quaternion): Quaternion = js.native
+  def _processLateAnimationBindingsForQuaternions(holder: Animations, refQuaternion: Quaternion): Quaternion = js.native
   
   var _processSubCameras: js.Any = js.native
   
@@ -1475,13 +1683,13 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets or sets the action manager associated with the scene
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions
     */
   var actionManager: AbstractActionManager = js.native
   
   /**
     * Gets the performance counter for active bones
-    * @see http://doc.babylonjs.com/how_to/optimizing_your_scene#instrumentation
+    * @see https://doc.babylonjs.com/how_to/optimizing_your_scene#instrumentation
     */
   def activeBonesPerfCounter: PerfCounter = js.native
   
@@ -1490,11 +1698,11 @@ class Scene protected () extends AbstractScene {
   def activeCamera_=(value: Nullable[Camera]): Unit = js.native
   
   /** All of the active cameras added to this scene. */
-  var activeCameras: js.Array[Camera] = js.native
+  var activeCameras: Nullable[js.Array[Camera]] = js.native
   
   /**
     * Gets the performance counter for active particles
-    * @see http://doc.babylonjs.com/how_to/optimizing_your_scene#instrumentation
+    * @see https://doc.babylonjs.com/how_to/optimizing_your_scene#instrumentation
     */
   def activeParticlesPerfCounter: PerfCounter = js.native
   
@@ -1647,13 +1855,13 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets or sets if audio support is enabled
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     */
   var audioEnabled: Boolean = js.native
   
   /**
     * Gets or sets custom audio listener position provider
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     */
   var audioListenerPositionProvider: Nullable[js.Function0[Vector3]] = js.native
   
@@ -1690,6 +1898,7 @@ class Scene protected () extends AbstractScene {
     * @param stopCurrent defines if the current animations must be stopped first (true by default)
     * @param targetMask defines if the target should be animate if animations are present (this is called recursively on descendant animatables regardless of return value)
     * @param onAnimationLoop defines the callback to call when an animation loops
+    * @param isAdditive defines whether the animation should be evaluated additively (false by default)
     * @returns the animatable object created for this animation
     */
   def beginAnimation(
@@ -1702,7 +1911,8 @@ class Scene protected () extends AbstractScene {
     animatable: js.UndefOr[Animatable],
     stopCurrent: js.UndefOr[Boolean],
     targetMask: js.UndefOr[js.Function1[/* target */ js.Any, Boolean]],
-    onAnimationLoop: js.UndefOr[js.Function0[Unit]]
+    onAnimationLoop: js.UndefOr[js.Function0[Unit]],
+    isAdditive: js.UndefOr[Boolean]
   ): Animatable = js.native
   
   /**
@@ -1715,6 +1925,7 @@ class Scene protected () extends AbstractScene {
     * @param speedRatio defines the speed ratio to apply to all animations
     * @param onAnimationEnd defines the callback to call when an animation ends (will be called once per node)
     * @param onAnimationLoop defines the callback to call when an animation loops
+    * @param isAdditive defines whether the animation should be evaluated additively (false by default)
     * @returns the list of created animatables
     */
   def beginDirectAnimation(target: js.Any, animations: js.Array[Animation], from: Double, to: Double): Animatable = js.native
@@ -1726,7 +1937,29 @@ class Scene protected () extends AbstractScene {
     loop: js.UndefOr[scala.Nothing],
     speedRatio: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.UndefOr[scala.Nothing],
     onAnimationLoop: js.Function0[Unit]
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
   ): Animatable = js.native
   def beginDirectAnimation(
     target: js.Any,
@@ -1745,6 +1978,17 @@ class Scene protected () extends AbstractScene {
     loop: js.UndefOr[scala.Nothing],
     speedRatio: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.Function0[Unit],
     onAnimationLoop: js.Function0[Unit]
   ): Animatable = js.native
   def beginDirectAnimation(
@@ -1753,7 +1997,29 @@ class Scene protected () extends AbstractScene {
     from: Double,
     to: Double,
     loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
     speedRatio: Double
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
   ): Animatable = js.native
   def beginDirectAnimation(
     target: js.Any,
@@ -1772,6 +2038,17 @@ class Scene protected () extends AbstractScene {
     to: Double,
     loop: js.UndefOr[scala.Nothing],
     speedRatio: Double,
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
     onAnimationEnd: js.Function0[Unit]
   ): Animatable = js.native
   def beginDirectAnimation(
@@ -1782,7 +2059,29 @@ class Scene protected () extends AbstractScene {
     loop: js.UndefOr[scala.Nothing],
     speedRatio: Double,
     onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
+    onAnimationEnd: js.Function0[Unit],
     onAnimationLoop: js.Function0[Unit]
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
+    onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
   ): Animatable = js.native
   def beginDirectAnimation(target: js.Any, animations: js.Array[Animation], from: Double, to: Double, loop: Boolean): Animatable = js.native
   def beginDirectAnimation(
@@ -1793,7 +2092,29 @@ class Scene protected () extends AbstractScene {
     loop: Boolean,
     speedRatio: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.UndefOr[scala.Nothing],
     onAnimationLoop: js.Function0[Unit]
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
   ): Animatable = js.native
   def beginDirectAnimation(
     target: js.Any,
@@ -1812,6 +2133,17 @@ class Scene protected () extends AbstractScene {
     loop: Boolean,
     speedRatio: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.Function0[Unit],
     onAnimationLoop: js.Function0[Unit]
   ): Animatable = js.native
   def beginDirectAnimation(
@@ -1820,7 +2152,29 @@ class Scene protected () extends AbstractScene {
     from: Double,
     to: Double,
     loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
     speedRatio: Double
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: Double,
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
   ): Animatable = js.native
   def beginDirectAnimation(
     target: js.Any,
@@ -1839,6 +2193,17 @@ class Scene protected () extends AbstractScene {
     to: Double,
     loop: Boolean,
     speedRatio: Double,
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: Double,
     onAnimationEnd: js.Function0[Unit]
   ): Animatable = js.native
   def beginDirectAnimation(
@@ -1849,7 +2214,29 @@ class Scene protected () extends AbstractScene {
     loop: Boolean,
     speedRatio: Double,
     onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: Double,
+    onAnimationEnd: js.Function0[Unit],
     onAnimationLoop: js.Function0[Unit]
+  ): Animatable = js.native
+  def beginDirectAnimation(
+    target: js.Any,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: Double,
+    onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
   ): Animatable = js.native
   
   /**
@@ -1863,6 +2250,7 @@ class Scene protected () extends AbstractScene {
     * @param speedRatio defines the speed ratio to apply to all animations
     * @param onAnimationEnd defines the callback to call when an animation ends (will be called once per node)
     * @param onAnimationLoop defines the callback to call when an animation loops
+    * @param isAdditive defines whether the animation should be evaluated additively (false by default)
     * @returns the list of animatables created for all nodes
     */
   def beginDirectHierarchyAnimation(
@@ -1881,7 +2269,31 @@ class Scene protected () extends AbstractScene {
     loop: js.UndefOr[scala.Nothing],
     speedRatio: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.UndefOr[scala.Nothing],
     onAnimationLoop: js.Function0[Unit]
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
   ): js.Array[Animatable] = js.native
   def beginDirectHierarchyAnimation(
     target: Node,
@@ -1902,6 +2314,18 @@ class Scene protected () extends AbstractScene {
     loop: js.UndefOr[scala.Nothing],
     speedRatio: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.Function0[Unit],
     onAnimationLoop: js.Function0[Unit]
   ): js.Array[Animatable] = js.native
   def beginDirectHierarchyAnimation(
@@ -1911,7 +2335,31 @@ class Scene protected () extends AbstractScene {
     from: Double,
     to: Double,
     loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
     speedRatio: Double
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
   ): js.Array[Animatable] = js.native
   def beginDirectHierarchyAnimation(
     target: Node,
@@ -1932,6 +2380,18 @@ class Scene protected () extends AbstractScene {
     to: Double,
     loop: js.UndefOr[scala.Nothing],
     speedRatio: Double,
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
     onAnimationEnd: js.Function0[Unit]
   ): js.Array[Animatable] = js.native
   def beginDirectHierarchyAnimation(
@@ -1943,7 +2403,31 @@ class Scene protected () extends AbstractScene {
     loop: js.UndefOr[scala.Nothing],
     speedRatio: Double,
     onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
+    onAnimationEnd: js.Function0[Unit],
     onAnimationLoop: js.Function0[Unit]
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
+    onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
   ): js.Array[Animatable] = js.native
   def beginDirectHierarchyAnimation(
     target: Node,
@@ -1962,7 +2446,31 @@ class Scene protected () extends AbstractScene {
     loop: Boolean,
     speedRatio: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.UndefOr[scala.Nothing],
     onAnimationLoop: js.Function0[Unit]
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
   ): js.Array[Animatable] = js.native
   def beginDirectHierarchyAnimation(
     target: Node,
@@ -1983,6 +2491,18 @@ class Scene protected () extends AbstractScene {
     loop: Boolean,
     speedRatio: js.UndefOr[scala.Nothing],
     onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.Function0[Unit],
     onAnimationLoop: js.Function0[Unit]
   ): js.Array[Animatable] = js.native
   def beginDirectHierarchyAnimation(
@@ -1992,7 +2512,31 @@ class Scene protected () extends AbstractScene {
     from: Double,
     to: Double,
     loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
     speedRatio: Double
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: Double,
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
   ): js.Array[Animatable] = js.native
   def beginDirectHierarchyAnimation(
     target: Node,
@@ -2013,6 +2557,18 @@ class Scene protected () extends AbstractScene {
     to: Double,
     loop: Boolean,
     speedRatio: Double,
+    onAnimationEnd: js.UndefOr[scala.Nothing],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: Double,
     onAnimationEnd: js.Function0[Unit]
   ): js.Array[Animatable] = js.native
   def beginDirectHierarchyAnimation(
@@ -2024,7 +2580,31 @@ class Scene protected () extends AbstractScene {
     loop: Boolean,
     speedRatio: Double,
     onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: Double,
+    onAnimationEnd: js.Function0[Unit],
     onAnimationLoop: js.Function0[Unit]
+  ): js.Array[Animatable] = js.native
+  def beginDirectHierarchyAnimation(
+    target: Node,
+    directDescendantsOnly: Boolean,
+    animations: js.Array[Animation],
+    from: Double,
+    to: Double,
+    loop: Boolean,
+    speedRatio: Double,
+    onAnimationEnd: js.Function0[Unit],
+    onAnimationLoop: js.Function0[Unit],
+    isAdditive: Boolean
   ): js.Array[Animatable] = js.native
   
   /**
@@ -2040,6 +2620,7 @@ class Scene protected () extends AbstractScene {
     * @param stopCurrent defines if the current animations must be stopped first (true by default)
     * @param targetMask defines if the target should be animated if animations are present (this is called recursively on descendant animatables regardless of return value)
     * @param onAnimationLoop defines the callback to call when an animation loops
+    * @param isAdditive defines whether the animation should be evaluated additively (false by default)
     * @returns the list of created animatables
     */
   def beginHierarchyAnimation(
@@ -2053,7 +2634,8 @@ class Scene protected () extends AbstractScene {
     animatable: js.UndefOr[Animatable],
     stopCurrent: js.UndefOr[Boolean],
     targetMask: js.UndefOr[js.Function1[/* target */ js.Any, Boolean]],
-    onAnimationLoop: js.UndefOr[js.Function0[Unit]]
+    onAnimationLoop: js.UndefOr[js.Function0[Unit]],
+    isAdditive: js.UndefOr[Boolean]
   ): js.Array[Animatable] = js.native
   
   /**
@@ -2068,6 +2650,7 @@ class Scene protected () extends AbstractScene {
     * @param animatable defines an animatable object. If not provided a new one will be created from the given params
     * @param targetMask defines if the target should be animated if animations are present (this is called recursively on descendant animatables regardless of return value)
     * @param onAnimationLoop defines the callback to call when an animation loops
+    * @param isAdditive defines whether the animation should be evaluated additively (false by default)
     * @returns the animatable object created for this animation
     */
   def beginWeightedAnimation(
@@ -2080,7 +2663,8 @@ class Scene protected () extends AbstractScene {
     onAnimationEnd: js.UndefOr[js.Function0[Unit]],
     animatable: js.UndefOr[Animatable],
     targetMask: js.UndefOr[js.Function1[/* target */ js.Any, Boolean]],
-    onAnimationLoop: js.UndefOr[js.Function0[Unit]]
+    onAnimationLoop: js.UndefOr[js.Function0[Unit]],
+    isAdditive: js.UndefOr[Boolean]
   ): Animatable = js.native
   
   /** Gets or sets a boolean blocking all the calls to markAllMaterialsAsDirty (ie. the materials won't be updated if they are out of sync) */
@@ -2116,41 +2700,47 @@ class Scene protected () extends AbstractScene {
   var clearColor: Color4 = js.native
   
   /**
-    * Gets or sets the active clipplane 1
-    */
-  var clipPlane: Nullable[Plane] = js.native
-  
-  /**
     * Gets or sets the active clipplane 2
     */
-  var clipPlane2: Nullable[Plane] = js.native
+  @JSName("clipPlane2")
+  var clipPlane2_Scene: Nullable[Plane] = js.native
   
   /**
     * Gets or sets the active clipplane 3
     */
-  var clipPlane3: Nullable[Plane] = js.native
+  @JSName("clipPlane3")
+  var clipPlane3_Scene: Nullable[Plane] = js.native
   
   /**
     * Gets or sets the active clipplane 4
     */
-  var clipPlane4: Nullable[Plane] = js.native
+  @JSName("clipPlane4")
+  var clipPlane4_Scene: Nullable[Plane] = js.native
   
   /**
     * Gets or sets the active clipplane 5
     */
-  var clipPlane5: Nullable[Plane] = js.native
+  @JSName("clipPlane5")
+  var clipPlane5_Scene: Nullable[Plane] = js.native
   
   /**
     * Gets or sets the active clipplane 6
     */
-  var clipPlane6: Nullable[Plane] = js.native
+  @JSName("clipPlane6")
+  var clipPlane6_Scene: Nullable[Plane] = js.native
+  
+  /**
+    * Gets or sets the active clipplane 1
+    */
+  @JSName("clipPlane")
+  var clipPlane_Scene: Nullable[Plane] = js.native
   
   /** @hidden */
   def collisionCoordinator: ICollisionCoordinator = js.native
   
   /**
     * Gets or sets a boolean indicating if collisions are enabled on this scene
-    * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
+    * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
     */
   var collisionsEnabled: Boolean = js.native
   
@@ -2162,7 +2752,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Creates a default camera for the scene.
-    * @see http://doc.babylonjs.com/How_To/Fast_Build#create-default-camera
+    * @see https://doc.babylonjs.com/How_To/Fast_Build#create-default-camera
     * @param createArcRotateCamera has the default false which creates a free camera, when true creates an arc rotate camera
     * @param replace has default false, when true replaces the active camera in the scene
     * @param attachCameraControls has default false, when true attaches camera controls to the canvas.
@@ -2182,7 +2772,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Creates a default camera and a default light.
-    * @see http://doc.babylonjs.com/how_to/Fast_Build#create-default-camera-or-light
+    * @see https://doc.babylonjs.com/how_to/Fast_Build#create-default-camera-or-light
     * @param createArcRotateCamera has the default false which creates a free camera, when true creates an arc rotate camera
     * @param replace has the default false, when true replaces the active camera/light in the scene
     * @param attachCameraControls has the default false, when true attaches camera controls to the canvas.
@@ -2202,7 +2792,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Creates a new environment
-    * @see http://doc.babylonjs.com/How_To/Fast_Build#create-default-environment
+    * @see https://doc.babylonjs.com/How_To/Fast_Build#create-default-environment
     * @param options defines the options you can use to configure the environment
     * @returns the new EnvironmentHelper
     */
@@ -2211,7 +2801,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Creates a default light for the scene.
-    * @see http://doc.babylonjs.com/How_To/Fast_Build#create-default-light
+    * @see https://doc.babylonjs.com/How_To/Fast_Build#create-default-light
     * @param replace has the default false, when true replaces the existing lights in the scene with a hemispheric light
     */
   def createDefaultLight(): Unit = js.native
@@ -2219,7 +2809,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Creates a new sky box
-    * @see http://doc.babylonjs.com/how_to/Fast_Build#create-default-skybox
+    * @see https://doc.babylonjs.com/how_to/Fast_Build#create-default-skybox
     * @param environmentTexture defines the texture to use as environment texture
     * @param pbr has default false which requires the StandardMaterial to be used, when true PBRMaterial must be used
     * @param scale defines the overall scale of the skybox
@@ -2378,7 +2968,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Creates a new VREXperienceHelper
-    * @see http://doc.babylonjs.com/how_to/webvr_helper
+    * @see https://doc.babylonjs.com/how_to/webvr_helper
     * @param webVROptions defines the options used to create the new VREXperienceHelper
     * @returns a new VREXperienceHelper
     */
@@ -2387,7 +2977,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Creates a new WebXRDefaultExperience
-    * @see http://doc.babylonjs.com/how_to/webxr
+    * @see https://doc.babylonjs.com/how_to/introduction_to_webxr
     * @param options experience options
     * @returns a promise for a new WebXRDefaultExperience
     */
@@ -2395,7 +2985,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Creates or updates the octree used to boost selection (picking)
-    * @see http://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
+    * @see https://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
     * @param maxCapacity defines the maximum capacity per leaf
     * @param maxDepth defines the maximum depth of the octree
     * @returns an octree of AbstractMesh
@@ -2471,7 +3061,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets the debug layer (aka Inspector) associated with the scene
-    * @see http://doc.babylonjs.com/features/playground_debuglayer
+    * @see https://doc.babylonjs.com/features/playground_debuglayer
     */
   var debugLayer: DebugLayer = js.native
   
@@ -2547,10 +3137,17 @@ class Scene protected () extends AbstractScene {
     * Creates a depth renderer a given camera which contains a depth map which can be used for post processing.
     * @param camera The camera to create the depth renderer on (default: scene's active camera)
     * @param storeNonLinearDepth Defines whether the depth is stored linearly like in Babylon Shadows or directly like glFragCoord.z
+    * @param force32bitsFloat Forces 32 bits float when supported (else 16 bits float is prioritized over 32 bits float if supported)
     * @returns the created depth renderer
     */
   def enableDepthRenderer(): DepthRenderer = js.native
+  def enableDepthRenderer(
+    camera: js.UndefOr[Nullable[Camera]],
+    storeNonLinearDepth: js.UndefOr[scala.Nothing],
+    force32bitsFloat: Boolean
+  ): DepthRenderer = js.native
   def enableDepthRenderer(camera: js.UndefOr[Nullable[Camera]], storeNonLinearDepth: Boolean): DepthRenderer = js.native
+  def enableDepthRenderer(camera: js.UndefOr[Nullable[Camera]], storeNonLinearDepth: Boolean, force32bitsFloat: Boolean): DepthRenderer = js.native
   def enableDepthRenderer(camera: Nullable[Camera]): DepthRenderer = js.native
   
   /**
@@ -2596,14 +3193,6 @@ class Scene protected () extends AbstractScene {
   def environmentIntensity_=(value: Double): Unit = js.native
   
   /**
-    * Texture used in all pbr material as the reflection texture.
-    * As in the majority of the scene they are the same (exception for multi room and so on),
-    * this is easier to reference from here than from all the materials.
-    */
-  @JSName("environmentTexture")
-  def environmentTexture_MScene: Nullable[BaseTexture] = js.native
-  
-  /**
     * The provided function will run before render once and will be disposed afterwards.
     * A timeout delay can be provided so that the function will be executed in N ms.
     * The timeout is using the browser's native setTimeout so time percision cannot be guaranteed.
@@ -2621,14 +3210,14 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets or sets the fog color to use
-    * @see http://doc.babylonjs.com/babylon101/environment#fog
+    * @see https://doc.babylonjs.com/babylon101/environment#fog
     * (Default is Color3(0.2, 0.2, 0.3))
     */
   var fogColor: Color3 = js.native
   
   /**
     * Gets or sets the fog density to use
-    * @see http://doc.babylonjs.com/babylon101/environment#fog
+    * @see https://doc.babylonjs.com/babylon101/environment#fog
     * (Default is 0.1)
     */
   var fogDensity: Double = js.native
@@ -2636,14 +3225,14 @@ class Scene protected () extends AbstractScene {
   def fogEnabled: Boolean = js.native
   /**
     * Gets or sets a boolean indicating if fog is enabled on this scene
-    * @see http://doc.babylonjs.com/babylon101/environment#fog
+    * @see https://doc.babylonjs.com/babylon101/environment#fog
     * (Default is true)
     */
   def fogEnabled_=(value: Boolean): Unit = js.native
   
   /**
     * Gets or sets the fog end distance to use
-    * @see http://doc.babylonjs.com/babylon101/environment#fog
+    * @see https://doc.babylonjs.com/babylon101/environment#fog
     * (Default is 1000)
     */
   var fogEnd: Double = js.native
@@ -2651,7 +3240,7 @@ class Scene protected () extends AbstractScene {
   def fogMode: Double = js.native
   /**
     * Gets or sets the fog mode to use
-    * @see http://doc.babylonjs.com/babylon101/environment#fog
+    * @see https://doc.babylonjs.com/babylon101/environment#fog
     * | mode | value |
     * | --- | --- |
     * | FOGMODE_NONE | 0 |
@@ -2663,7 +3252,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets or sets the fog start distance to use
-    * @see http://doc.babylonjs.com/babylon101/environment#fog
+    * @see https://doc.babylonjs.com/babylon101/environment#fog
     * (Default is 0)
     */
   var fogStart: Double = js.native
@@ -2703,10 +3292,34 @@ class Scene protected () extends AbstractScene {
   /**
     * Use this function to stop evaluating active meshes. The current list will be keep alive between frames
     * @param skipEvaluateActiveMeshes defines an optional boolean indicating that the evaluate active meshes step must be completely skipped
+    * @param onSuccess optional success callback
+    * @param onError optional error callback
     * @returns the current scene
     */
   def freezeActiveMeshes(): Scene = js.native
+  def freezeActiveMeshes(
+    skipEvaluateActiveMeshes: js.UndefOr[scala.Nothing],
+    onSuccess: js.UndefOr[scala.Nothing],
+    onError: js.Function1[/* message */ String, Unit]
+  ): Scene = js.native
+  def freezeActiveMeshes(skipEvaluateActiveMeshes: js.UndefOr[scala.Nothing], onSuccess: js.Function0[Unit]): Scene = js.native
+  def freezeActiveMeshes(
+    skipEvaluateActiveMeshes: js.UndefOr[scala.Nothing],
+    onSuccess: js.Function0[Unit],
+    onError: js.Function1[/* message */ String, Unit]
+  ): Scene = js.native
   def freezeActiveMeshes(skipEvaluateActiveMeshes: Boolean): Scene = js.native
+  def freezeActiveMeshes(
+    skipEvaluateActiveMeshes: Boolean,
+    onSuccess: js.UndefOr[scala.Nothing],
+    onError: js.Function1[/* message */ String, Unit]
+  ): Scene = js.native
+  def freezeActiveMeshes(skipEvaluateActiveMeshes: Boolean, onSuccess: js.Function0[Unit]): Scene = js.native
+  def freezeActiveMeshes(
+    skipEvaluateActiveMeshes: Boolean,
+    onSuccess: js.Function0[Unit],
+    onError: js.Function1[/* message */ String, Unit]
+  ): Scene = js.native
   
   /**
     * Freeze all materials
@@ -2721,7 +3334,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets the gamepad manager associated with the scene
-    * @see http://doc.babylonjs.com/how_to/how_to_use_gamepads
+    * @see https://doc.babylonjs.com/how_to/how_to_use_gamepads
     */
   var gamepadManager: GamepadManager = js.native
   
@@ -2873,7 +3486,7 @@ class Scene protected () extends AbstractScene {
   def getCamerasByTags(tagsQuery: String, forEach: js.Function1[/* camera */ Camera, Unit]): js.Array[Camera] = js.native
   
   /**
-    * Gets a string idenfifying the name of the class
+    * Gets a string identifying the name of the class
     * @returns "Scene" string
     */
   def getClassName(): String = js.native
@@ -2922,7 +3535,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets the internal step used by deterministic lock step
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+    * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
     * @returns the internal step
     */
   def getInternalStep(): Double = js.native
@@ -3065,6 +3678,13 @@ class Scene protected () extends AbstractScene {
   def getMorphTargetById(id: String): Nullable[MorphTarget] = js.native
   
   /**
+    * Gets a morph target using a given name (if many are found, this function will pick the first one)
+    * @param name defines the name to search for
+    * @return the found morph target or null if not found at all.
+    */
+  def getMorphTargetByName(name: String): Nullable[MorphTarget] = js.native
+  
+  /**
     * Gets a morph target manager  using a given id (if many are found, this function will pick the last one)
     * @param id defines the id to search for
     * @return the found morph target manager or null if not found at all.
@@ -3125,6 +3745,13 @@ class Scene protected () extends AbstractScene {
   def getPointerOverSprite(): Nullable[Sprite] = js.native
   
   /**
+    * Gets a post process using a given name (if many are found, this function will pick the first one)
+    * @param name defines the name to search for
+    * @return the found post process or null if not found at all.
+    */
+  def getPostProcessByName(name: String): Nullable[PostProcess] = js.native
+  
+  /**
     * Gets the current projection matrix
     * @returns a Matrix
     */
@@ -3172,7 +3799,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets the step Id used by deterministic lock step
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+    * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
     * @returns the step Id
     */
   def getStepId(): Double = js.native
@@ -3225,6 +3852,15 @@ class Scene protected () extends AbstractScene {
   def getTransformNodesByID(id: String): js.Array[TransformNode] = js.native
   
   /**
+    * Get a list of transform nodes by tags
+    * @param tagsQuery defines the tags query to use
+    * @param forEach defines a predicate used to filter results
+    * @returns an array of TransformNode
+    */
+  def getTransformNodesByTags(tagsQuery: String): js.Array[TransformNode] = js.native
+  def getTransformNodesByTags(tagsQuery: String, forEach: js.Function1[/* transform */ TransformNode, Unit]): js.Array[TransformNode] = js.native
+  
+  /**
     * Gets an unique (relatively to the current scene) Id
     * @returns an unique number for the scene
     */
@@ -3253,13 +3889,13 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Defines the gravity applied to this scene (used only for collisions)
-    * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
+    * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity
     */
   var gravity: Vector3 = js.native
   
   /**
     * Gets or sets if audio will be output to headphones
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     */
   var headphone: Boolean = js.native
   
@@ -3455,7 +4091,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets or sets the current offline provider to use to store scene data
-    * @see http://doc.babylonjs.com/how_to/caching_resources_in_indexeddb
+    * @see https://doc.babylonjs.com/how_to/caching_resources_in_indexeddb
     */
   var offlineProvider: IOfflineProvider = js.native
   
@@ -3651,6 +4287,11 @@ class Scene protected () extends AbstractScene {
   var onMeshRemovedObservable: Observable[AbstractMesh] = js.native
   
   /**
+    * An event triggered when a multi material is removed
+    */
+  var onMultiMaterialRemovedObservable: Observable[MultiMaterial] = js.native
+  
+  /**
     * An event triggered when a camera is created
     */
   var onNewCameraAddedObservable: Observable[Camera] = js.native
@@ -3674,6 +4315,11 @@ class Scene protected () extends AbstractScene {
     * An event triggered when a mesh is created
     */
   var onNewMeshAddedObservable: Observable[AbstractMesh] = js.native
+  
+  /**
+    * An event triggered when a multi material is created
+    */
+  var onNewMultiMaterialAddedObservable: Observable[MultiMaterial] = js.native
   
   /**
     * An event triggered when a skeleton is created
@@ -3744,11 +4390,16 @@ class Scene protected () extends AbstractScene {
     */
   var particlesEnabled: Boolean = js.native
   
+  /**
+    * Gets or sets a boolean indicating if physic engines are enabled on this scene
+    */
+  var physicsEnabled: Boolean = js.native
+  
   /** Launch a ray to try to pick a mesh in the scene
     * @param x position on screen
     * @param y position on screen
     * @param predicate Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
-    * @param fastCheck Launch a fast check only using the bounding boxes. Can be set to null.
+    * @param fastCheck defines if the first intersection will be used (and not the closest)
     * @param camera to use for computing the picking ray. Can be set to null. In this case, the scene.activeCamera will be used
     * @param trianglePredicate defines an optional predicate used to select faces when a mesh intersection is detected
     * @returns a PickingInfo
@@ -3827,7 +4478,7 @@ class Scene protected () extends AbstractScene {
     * @param x position on screen
     * @param y position on screen
     * @param predicate Predicate function used to determine eligible sprites. Can be set to null. In this case, a sprite must have isPickable set to true
-    * @param fastCheck Launch a fast check only using the bounding boxes. Can be set to null.
+    * @param fastCheck defines if the first intersection will be used (and not the closest)
     * @param camera camera to use for computing the picking ray. Can be set to null. In this case, the scene.activeCamera will be used
     * @returns a PickingInfo
     */
@@ -3861,7 +4512,7 @@ class Scene protected () extends AbstractScene {
   /** Use the given ray to pick a sprite in the scene
     * @param ray The ray (in world space) to use to pick meshes
     * @param predicate Predicate function used to determine eligible sprites. Can be set to null. In this case, a sprite must have isPickable set to true
-    * @param fastCheck Launch a fast check only using the bounding boxes. Can be set to null.
+    * @param fastCheck defines if the first intersection will be used (and not the closest)
     * @param camera camera to use. Can be set to null. In this case, the scene.activeCamera will be used
     * @returns a PickingInfo
     */
@@ -3889,10 +4540,56 @@ class Scene protected () extends AbstractScene {
     camera: Camera
   ): Nullable[PickingInfo] = js.native
   
+  /** Launch a ray to try to pick a mesh in the scene using only bounding information of the main mesh (not using submeshes)
+    * @param x position on screen
+    * @param y position on screen
+    * @param predicate Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
+    * @param fastCheck defines if the first intersection will be used (and not the closest)
+    * @param camera to use for computing the picking ray. Can be set to null. In this case, the scene.activeCamera will be used
+    * @returns a PickingInfo (Please note that some info will not be set like distance, bv, bu and everything that cannot be capture by only using bounding infos)
+    */
+  def pickWithBoundingInfo(x: Double, y: Double): Nullable[PickingInfo] = js.native
+  def pickWithBoundingInfo(
+    x: Double,
+    y: Double,
+    predicate: js.UndefOr[scala.Nothing],
+    fastCheck: js.UndefOr[scala.Nothing],
+    camera: Nullable[Camera]
+  ): Nullable[PickingInfo] = js.native
+  def pickWithBoundingInfo(x: Double, y: Double, predicate: js.UndefOr[scala.Nothing], fastCheck: Boolean): Nullable[PickingInfo] = js.native
+  def pickWithBoundingInfo(
+    x: Double,
+    y: Double,
+    predicate: js.UndefOr[scala.Nothing],
+    fastCheck: Boolean,
+    camera: Nullable[Camera]
+  ): Nullable[PickingInfo] = js.native
+  def pickWithBoundingInfo(x: Double, y: Double, predicate: js.Function1[/* mesh */ AbstractMesh, Boolean]): Nullable[PickingInfo] = js.native
+  def pickWithBoundingInfo(
+    x: Double,
+    y: Double,
+    predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+    fastCheck: js.UndefOr[scala.Nothing],
+    camera: Nullable[Camera]
+  ): Nullable[PickingInfo] = js.native
+  def pickWithBoundingInfo(
+    x: Double,
+    y: Double,
+    predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+    fastCheck: Boolean
+  ): Nullable[PickingInfo] = js.native
+  def pickWithBoundingInfo(
+    x: Double,
+    y: Double,
+    predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+    fastCheck: Boolean,
+    camera: Nullable[Camera]
+  ): Nullable[PickingInfo] = js.native
+  
   /** Use the given ray to pick a mesh in the scene
     * @param ray The ray to use to pick meshes
     * @param predicate Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must have isPickable set to true
-    * @param fastCheck Launch a fast check only using the bounding boxes. Can be set to null
+    * @param fastCheck defines if the first intersection will be used (and not the closest)
     * @param trianglePredicate defines an optional predicate used to select faces when a mesh intersection is detected
     * @returns a PickingInfo
     */
@@ -3959,20 +4656,20 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets the postprocess render pipeline manager
-    * @see http://doc.babylonjs.com/how_to/how_to_use_postprocessrenderpipeline
-    * @see http://doc.babylonjs.com/how_to/using_default_rendering_pipeline
+    * @see https://doc.babylonjs.com/how_to/how_to_use_postprocessrenderpipeline
+    * @see https://doc.babylonjs.com/how_to/using_default_rendering_pipeline
     */
   val postProcessRenderPipelineManager: PostProcessRenderPipelineManager = js.native
-  
-  /**
-    * The list of postprocesses added to the scene
-    */
-  var postProcesses: js.Array[PostProcess] = js.native
   
   /**
     * Gets or sets a boolean indicating if postprocesses are enabled on this scene
     */
   var postProcessesEnabled: Boolean = js.native
+  
+  /**
+    * Flag indicating that the frame buffer binding is handled by another component
+    */
+  var prePass: Boolean = js.native
   
   /**
     * This is used to call preventDefault() on pointer down
@@ -4161,7 +4858,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets the octree used to boost mesh selection (picking)
-    * @see http://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
+    * @see https://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
     */
   var selectionOctree: Octree[AbstractMesh] = js.native
   
@@ -4189,8 +4886,10 @@ class Scene protected () extends AbstractScene {
   /**
     * Force the value of meshUnderPointer
     * @param mesh defines the mesh to use
+    * @param pointerId optional pointer id when using more than one pointer
     */
   def setPointerOverMesh(mesh: Nullable[AbstractMesh]): Unit = js.native
+  def setPointerOverMesh(mesh: Nullable[AbstractMesh], pointerId: Double): Unit = js.native
   
   /**
     * Force the sprite under the pointer
@@ -4244,7 +4943,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Sets the step Id used by deterministic lock step
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+    * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
     * @param newStepId defines the step Id
     */
   def setStepId(newStepId: Double): Unit = js.native
@@ -4269,7 +4968,7 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets or sets the simplification queue attached to the scene
-    * @see http://doc.babylonjs.com/how_to/in-browser_mesh_simplification
+    * @see https://doc.babylonjs.com/how_to/in-browser_mesh_simplification
     */
   var simplificationQueue: SimplificationQueue = js.native
   
@@ -4325,13 +5024,13 @@ class Scene protected () extends AbstractScene {
   
   /**
     * The list of sound tracks added to the scene
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     */
   var soundTracks: Nullable[js.Array[SoundTrack]] = js.native
   
   /**
     * All of the sprite managers added to this scene
-    * @see http://doc.babylonjs.com/babylon101/sprites
+    * @see https://doc.babylonjs.com/babylon101/sprites
     */
   var spriteManagers: js.Array[ISpriteManager] = js.native
   
@@ -4376,13 +5075,13 @@ class Scene protected () extends AbstractScene {
   
   /**
     * Gets the performance counter for active indices
-    * @see http://doc.babylonjs.com/how_to/optimizing_your_scene#instrumentation
+    * @see https://doc.babylonjs.com/how_to/optimizing_your_scene#instrumentation
     */
   def totalActiveIndicesPerfCounter: PerfCounter = js.native
   
   /**
     * Gets the performance counter for total vertices
-    * @see http://doc.babylonjs.com/how_to/optimizing_your_scene#instrumentation
+    * @see https://doc.babylonjs.com/how_to/optimizing_your_scene#instrumentation
     */
   def totalVerticesPerfCounter: PerfCounter = js.native
   
@@ -4512,13 +5211,13 @@ object Scene extends js.Object {
   
   /**
     * Gets or sets the maximum deltatime when deterministic lock step is enabled
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+    * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
     */
   var MaxDeltaTime: Double = js.native
   
   /**
     * Gets or sets the minimum deltatime when deterministic lock step is enabled
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+    * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
     */
   var MinDeltaTime: Double = js.native
 }

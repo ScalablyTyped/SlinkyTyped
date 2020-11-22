@@ -16,7 +16,7 @@ object util extends js.Object {
   
   def addTrailingComment(node: js.Any, commentNode: js.Any): Unit = js.native
   
-  def getNextNonSpaceNonCommentCharacterIndex(text: String, node: js.Any, options: ParserOptions): Double = js.native
+  def getNextNonSpaceNonCommentCharacterIndex(text: String, node: js.Any, options: ParserOptions[_]): Double = js.native
   
   def isNextLineEmpty(text: String, node: js.Any, locEnd: js.Function1[/* node */ js.Any, Double]): Boolean = js.native
   

@@ -3,13 +3,14 @@ package typingsSlinky.backboneMarionette.mod
 import typingsSlinky.backbone.mod.Collection
 import typingsSlinky.backbone.mod.Model
 import typingsSlinky.backbone.mod.ModelSetOptions
+import typingsSlinky.backbone.mod.ObjectHash
 import typingsSlinky.backboneMarionette.anon.TypeofView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CollectionViewOptions[TModel /* <: Model[_, ModelSetOptions] */, TCollection /* <: Collection[TModel] */]
+trait CollectionViewOptions[TModel /* <: Model[_, ModelSetOptions, js.Object] */, TCollection /* <: Collection[TModel] */]
   extends typingsSlinky.backbone.mod.ViewOptions[TModel]
      with ViewMixinOptions {
   
@@ -72,17 +73,29 @@ trait CollectionViewOptions[TModel /* <: Model[_, ModelSetOptions] */, TCollecti
   var viewComparator: js.UndefOr[
     String | (js.Function1[/* element */ TModel, Double | String]) | (js.Function2[/* compare */ TModel, /* to */ js.UndefOr[TModel], Double])
   ] = js.native
+  
+  /**
+    * Prevent some of the underlying children from being attached to the DOM.
+    */
+  var viewFilter: js.UndefOr[
+    (js.Function3[
+      /* view */ js.UndefOr[TypeofView], 
+      /* index */ js.UndefOr[Double], 
+      /* children */ js.UndefOr[js.Array[typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions, js.Object]]]], 
+      Boolean
+    ]) | ObjectHash | String
+  ] = js.native
 }
 object CollectionViewOptions {
   
   @scala.inline
-  def apply[TModel /* <: Model[_, ModelSetOptions] */, TCollection /* <: Collection[TModel] */](): CollectionViewOptions[TModel, TCollection] = {
+  def apply[TModel /* <: Model[_, ModelSetOptions, js.Object] */, TCollection /* <: Collection[TModel] */](): CollectionViewOptions[TModel, TCollection] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CollectionViewOptions[TModel, TCollection]]
   }
   
   @scala.inline
-  implicit class CollectionViewOptionsOps[Self <: CollectionViewOptions[_, _], TModel /* <: Model[_, ModelSetOptions] */, TCollection /* <: Collection[TModel] */] (val x: Self with (CollectionViewOptions[TModel, TCollection])) extends AnyVal {
+  implicit class CollectionViewOptionsOps[Self <: CollectionViewOptions[_, _], TModel /* <: Model[_, ModelSetOptions, js.Object] */, TCollection /* <: Collection[TModel] */] (val x: Self with (CollectionViewOptions[TModel, TCollection])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -171,5 +184,23 @@ object CollectionViewOptions {
     
     @scala.inline
     def deleteViewComparator: Self = this.set("viewComparator", js.undefined)
+    
+    @scala.inline
+    def setViewFilterFunction3(
+      value: (/* view */ js.UndefOr[TypeofView], /* index */ js.UndefOr[Double], /* children */ js.UndefOr[js.Array[typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions, js.Object]]]]) => Boolean
+    ): Self = this.set("viewFilter", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setViewFilter(
+      value: (js.Function3[
+          /* view */ js.UndefOr[TypeofView], 
+          /* index */ js.UndefOr[Double], 
+          /* children */ js.UndefOr[js.Array[typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions, js.Object]]]], 
+          Boolean
+        ]) | ObjectHash | String
+    ): Self = this.set("viewFilter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteViewFilter: Self = this.set("viewFilter", js.undefined)
   }
 }

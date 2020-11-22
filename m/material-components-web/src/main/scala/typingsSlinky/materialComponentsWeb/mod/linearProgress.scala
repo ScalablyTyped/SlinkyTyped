@@ -2,8 +2,8 @@ package typingsSlinky.materialComponentsWeb.mod
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialLinearProgress.adapterMod.MDCLinearProgressAdapter
+import typingsSlinky.materialLinearProgress.anon.ANIMATIONREADYCLASS
 import typingsSlinky.materialLinearProgress.anon.ARIAVALUENOW
-import typingsSlinky.materialLinearProgress.anon.CLOSEDCLASS
 import typingsSlinky.materialLinearProgress.anon.PartialMDCLinearProgressA
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,7 +32,7 @@ object linearProgress extends js.Object {
   @js.native
   object MDCLinearProgressFoundation extends js.Object {
     
-    def cssClasses: CLOSEDCLASS = js.native
+    def cssClasses: ANIMATIONREADYCLASS = js.native
     
     def defaultAdapter: MDCLinearProgressAdapter = js.native
     
@@ -40,7 +40,25 @@ object linearProgress extends js.Object {
   }
   
   @js.native
+  object animationDimensionPercentages extends js.Object {
+    
+    var PRIMARY_FULL: Double = js.native
+    
+    var PRIMARY_HALF: Double = js.native
+    
+    var SECONDARY_FULL: Double = js.native
+    
+    var SECONDARY_HALF: Double = js.native
+    
+    var SECONDARY_QUARTER: Double = js.native
+  }
+  
+  @js.native
   object cssClasses extends js.Object {
+    
+    var ANIMATION_READY_CLASS: String = js.native
+    
+    var CLOSED_ANIMATION_OFF_CLASS: String = js.native
     
     var CLOSED_CLASS: String = js.native
     

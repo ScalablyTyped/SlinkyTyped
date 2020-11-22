@@ -7,11 +7,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // Base component for plain JS classes
-// tslint:disable-next-line:no-empty-interface
 @JSImport("react", "Component")
 @js.native
 class Component[P, S, SS] protected () extends ComponentLifecycle[P, S, SS] {
   def this(props: P) = this()
+  /**
+    * @deprecated
+    * @see https://reactjs.org/docs/legacy-context.html
+    */
   def this(props: P, context: js.Any) = this()
   
   /**

@@ -18,11 +18,11 @@ trait Workspace extends js.Object {
   
   def contains(path: String): Boolean = js.native
   
-  def onDidAddTextEditor(callback: js.Function1[/* editor */ TextEditor, Unit]): Unit = js.native
+  def onDidAddTextEditor(callback: js.Function1[/* editor */ TextEditor, Unit]): Disposable = js.native
   
-  def onDidChangePath(callback: js.Function1[/* newPath */ TextEditor, Unit]): Unit = js.native
+  def onDidChangePath(callback: js.Function1[/* newPath */ TextEditor, Unit]): Disposable = js.native
   
-  def onDidOpenTextDocument(callback: js.Function1[/* textDocument */ TextDocument, Unit]): Unit = js.native
+  def onDidOpenTextDocument(callback: js.Function1[/* textDocument */ TextDocument, Unit]): Disposable = js.native
   
   def openConfig(): Unit = js.native
   def openConfig(identifier: String): Unit = js.native
@@ -32,6 +32,8 @@ trait Workspace extends js.Object {
   val path: String | Null = js.native
   
   def relativizePath(path: String): String = js.native
+  
+  def reloadTasks(identifier: String): Unit = js.native
   
   def showActionPanel(message: String): Unit = js.native
   def showActionPanel(

@@ -20,8 +20,6 @@ class TensorBoardCallback () extends CustomCallback {
   
   var ensureValWriterCreated: js.Any = js.native
   
-  var epochsSeen: js.Any = js.native
-  
   var logMetrics: js.Any = js.native
   
   val logdir: String = js.native

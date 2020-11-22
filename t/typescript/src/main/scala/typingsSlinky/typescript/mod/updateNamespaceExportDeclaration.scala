@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateNamespaceExportDeclaration extends js.Object {
   
+  /** @deprecated Use `factory.updateNamespaceExportDeclaration` or the factory supplied by your transformation context instead. */
   def apply(node: NamespaceExportDeclaration, name: Identifier): NamespaceExportDeclaration = js.native
 }

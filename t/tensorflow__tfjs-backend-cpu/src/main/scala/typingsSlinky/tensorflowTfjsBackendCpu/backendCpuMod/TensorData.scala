@@ -10,17 +10,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TensorData[D /* <: DataType */] extends js.Object {
   
-  var complexTensors: js.UndefOr[Imag] = js.native
+  var complexTensorInfos: js.UndefOr[Imag] = js.native
   
   var dtype: D = js.native
+  
+  var refCount: Double = js.native
   
   var values: js.UndefOr[BackendValues] = js.native
 }
 object TensorData {
   
   @scala.inline
-  def apply[D /* <: DataType */](dtype: D): TensorData[D] = {
-    val __obj = js.Dynamic.literal(dtype = dtype.asInstanceOf[js.Any])
+  def apply[D /* <: DataType */](dtype: D, refCount: Double): TensorData[D] = {
+    val __obj = js.Dynamic.literal(dtype = dtype.asInstanceOf[js.Any], refCount = refCount.asInstanceOf[js.Any])
     __obj.asInstanceOf[TensorData[D]]
   }
   
@@ -43,10 +45,13 @@ object TensorData {
     def setDtype(value: D): Self = this.set("dtype", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setComplexTensors(value: Imag): Self = this.set("complexTensors", value.asInstanceOf[js.Any])
+    def setRefCount(value: Double): Self = this.set("refCount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteComplexTensors: Self = this.set("complexTensors", js.undefined)
+    def setComplexTensorInfos(value: Imag): Self = this.set("complexTensorInfos", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteComplexTensorInfos: Self = this.set("complexTensorInfos", js.undefined)
     
     @scala.inline
     def setValues(value: BackendValues): Self = this.set("values", value.asInstanceOf[js.Any])

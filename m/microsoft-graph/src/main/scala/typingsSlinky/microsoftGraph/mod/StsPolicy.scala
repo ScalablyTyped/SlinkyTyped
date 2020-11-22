@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StsPolicy extends PolicyBase {
   
-  var appliesTo: js.UndefOr[js.Array[DirectoryObject]] = js.native
+  var appliesTo: js.UndefOr[NullableOption[js.Array[DirectoryObject]]] = js.native
   
   /**
     * A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the
@@ -19,7 +19,7 @@ trait StsPolicy extends PolicyBase {
     * If set to true, activates this policy. There can be many policies for the same policy type, but only one can be
     * activated as the organization default. Optional, default value is false.
     */
-  var isOrganizationDefault: js.UndefOr[Boolean] = js.native
+  var isOrganizationDefault: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object StsPolicy {
   
@@ -48,10 +48,13 @@ object StsPolicy {
     def setAppliesToVarargs(value: DirectoryObject*): Self = this.set("appliesTo", js.Array(value :_*))
     
     @scala.inline
-    def setAppliesTo(value: js.Array[DirectoryObject]): Self = this.set("appliesTo", value.asInstanceOf[js.Any])
+    def setAppliesTo(value: NullableOption[js.Array[DirectoryObject]]): Self = this.set("appliesTo", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAppliesTo: Self = this.set("appliesTo", js.undefined)
+    
+    @scala.inline
+    def setAppliesToNull: Self = this.set("appliesTo", null)
     
     @scala.inline
     def setDefinitionVarargs(value: String*): Self = this.set("definition", js.Array(value :_*))
@@ -63,9 +66,12 @@ object StsPolicy {
     def deleteDefinition: Self = this.set("definition", js.undefined)
     
     @scala.inline
-    def setIsOrganizationDefault(value: Boolean): Self = this.set("isOrganizationDefault", value.asInstanceOf[js.Any])
+    def setIsOrganizationDefault(value: NullableOption[Boolean]): Self = this.set("isOrganizationDefault", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIsOrganizationDefault: Self = this.set("isOrganizationDefault", js.undefined)
+    
+    @scala.inline
+    def setIsOrganizationDefaultNull: Self = this.set("isOrganizationDefault", null)
   }
 }

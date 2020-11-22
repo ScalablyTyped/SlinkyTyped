@@ -93,9 +93,6 @@ trait InitializationOptions extends js.Object {
   /** Allow table edition: bool */
   var editable: js.UndefOr[Boolean] = js.native
   
-  /** Fullscreen mode */
-  var fullscreen: js.UndefOr[Boolean] = js.native
-  
   /** Include header titles on download: bool */
   var includeHeadersOnDownload: js.UndefOr[Boolean] = js.native
   
@@ -140,9 +137,6 @@ trait InitializationOptions extends js.Object {
   
   /** Row properties: height.: object */
   var rows: js.UndefOr[Record[String, _]] = js.native
-  
-  /** Allow search in the table */
-  var search: js.UndefOr[Boolean] = js.native
   
   /** Allow selection copy: bool */
   var selectionCopy: js.UndefOr[Boolean] = js.native
@@ -373,12 +367,6 @@ object InitializationOptions {
     def deleteEditable: Self = this.set("editable", js.undefined)
     
     @scala.inline
-    def setFullscreen(value: Boolean): Self = this.set("fullscreen", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteFullscreen: Self = this.set("fullscreen", js.undefined)
-    
-    @scala.inline
     def setIncludeHeadersOnDownload(value: Boolean): Self = this.set("includeHeadersOnDownload", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -482,12 +470,6 @@ object InitializationOptions {
     
     @scala.inline
     def deleteRows: Self = this.set("rows", js.undefined)
-    
-    @scala.inline
-    def setSearch(value: Boolean): Self = this.set("search", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSearch: Self = this.set("search", js.undefined)
     
     @scala.inline
     def setSelectionCopy(value: Boolean): Self = this.set("selectionCopy", value.asInstanceOf[js.Any])

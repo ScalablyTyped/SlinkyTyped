@@ -23,6 +23,7 @@ import typingsSlinky.grommet.anon.EnterSelect
 import typingsSlinky.grommet.anon.LabelValue
 import typingsSlinky.grommet.anon.Suggestion
 import typingsSlinky.grommet.dropMod.DropProps
+import typingsSlinky.grommet.grommetStrings.full
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.onSelect
@@ -41,8 +42,13 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.InputHTMLAttributes
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -53,8 +59,11 @@ import typingsSlinky.react.reactStrings.date
 import typingsSlinky.react.reactStrings.decimal
 import typingsSlinky.react.reactStrings.descending
 import typingsSlinky.react.reactStrings.dialog
+import typingsSlinky.react.reactStrings.done
 import typingsSlinky.react.reactStrings.email
+import typingsSlinky.react.reactStrings.enter
 import typingsSlinky.react.reactStrings.execute
+import typingsSlinky.react.reactStrings.go
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
@@ -66,6 +75,7 @@ import typingsSlinky.react.reactStrings.location
 import typingsSlinky.react.reactStrings.menu
 import typingsSlinky.react.reactStrings.mixed
 import typingsSlinky.react.reactStrings.move
+import typingsSlinky.react.reactStrings.next
 import typingsSlinky.react.reactStrings.no
 import typingsSlinky.react.reactStrings.none
 import typingsSlinky.react.reactStrings.numeric
@@ -75,8 +85,10 @@ import typingsSlinky.react.reactStrings.other
 import typingsSlinky.react.reactStrings.page
 import typingsSlinky.react.reactStrings.polite
 import typingsSlinky.react.reactStrings.popup
+import typingsSlinky.react.reactStrings.previous
 import typingsSlinky.react.reactStrings.removals
 import typingsSlinky.react.reactStrings.search
+import typingsSlinky.react.reactStrings.send
 import typingsSlinky.react.reactStrings.spelling
 import typingsSlinky.react.reactStrings.step
 import typingsSlinky.react.reactStrings.tel
@@ -219,7 +231,9 @@ object TextInput {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -328,6 +342,9 @@ object TextInput {
     
     @scala.inline
     def dropTarget(value: js.Object): this.type = set("dropTarget", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def focusIndicator(value: Boolean): this.type = set("focusIndicator", value.asInstanceOf[js.Any])
@@ -666,7 +683,7 @@ object TextInput {
     def placeholder(value: PlaceHolderType): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def plain(value: Boolean): this.type = set("plain", value.asInstanceOf[js.Any])
+    def plain(value: Boolean | full): this.type = set("plain", value.asInstanceOf[js.Any])
     
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])

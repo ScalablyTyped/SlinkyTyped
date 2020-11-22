@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TargetInstance extends js.Object {
   
   /**
-    *  The currency code that Amazon Web Services used to calculate the costs for this instance.
+    *  The currency code that AWS used to calculate the costs for this instance.
     */
   var CurrencyCode: js.UndefOr[GenericString] = js.native
   
   /**
-    *  Indicates whether or not this recommendation is the defaulted Amazon Web Services recommendation.
+    *  Indicates whether this recommendation is the defaulted AWS recommendation.
     */
   var DefaultTargetInstance: js.UndefOr[GenericBoolean] = js.native
   

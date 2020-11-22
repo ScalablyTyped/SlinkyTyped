@@ -18,9 +18,14 @@ trait NodeConfiguration extends js.Object {
   var InstanceType: InstanceTypeString = js.native
   
   /**
-    * 
+    * Configuration properties for logging events associated with a peer node owned by a member in a Managed Blockchain network. 
     */
   var LogPublishingConfiguration: js.UndefOr[NodeLogPublishingConfiguration] = js.native
+  
+  /**
+    * The state database that the node uses. Values are LevelDB or CouchDB. When using an Amazon Managed Blockchain network with Hyperledger Fabric version 1.4 or later, the default is CouchDB.
+    */
+  var StateDB: js.UndefOr[StateDBType] = js.native
 }
 object NodeConfiguration {
   
@@ -56,5 +61,11 @@ object NodeConfiguration {
     
     @scala.inline
     def deleteLogPublishingConfiguration: Self = this.set("LogPublishingConfiguration", js.undefined)
+    
+    @scala.inline
+    def setStateDB(value: StateDBType): Self = this.set("StateDB", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStateDB: Self = this.set("StateDB", js.undefined)
   }
 }

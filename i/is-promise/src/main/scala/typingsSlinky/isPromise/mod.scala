@@ -8,6 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def default[T, S](obj: S): /* is std.PromiseLike<T> */ Boolean = js.native
-  def default[T, S](obj: js.Thenable[T]): /* is std.PromiseLike<T> */ Boolean = js.native
+  def apply(obj: js.Any): /* is std.PromiseLike<any> */ Boolean = js.native
 }

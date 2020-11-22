@@ -38,6 +38,4 @@ trait Sheet extends js.Object {
   def recalculateOptimized(): Unit = js.native
   
   def setVariable(name: String, value: js.Any): Unit = js.native
-  
-  var t: RecordTranslator = js.native
 }

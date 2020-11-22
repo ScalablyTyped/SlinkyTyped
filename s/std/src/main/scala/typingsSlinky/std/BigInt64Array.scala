@@ -42,17 +42,17 @@ trait BigInt64Array
   
   /**
     * Determines whether all the members of an array satisfy the specified test.
-    * @param callbackfn A function that accepts up to three arguments. The every method calls
-    * the callbackfn function for each element in the array until the callbackfn returns false,
+    * @param predicate A function that accepts up to three arguments. The every method calls
+    * the predicate function for each element in the array until the predicate returns false,
     * or until the end of the array.
-    * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+    * @param thisArg An object to which the this keyword can refer in the predicate function.
     * If thisArg is omitted, undefined is used as the this value.
     */
   def every(
-    callbackfn: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, scala.Boolean]
+    predicate: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, scala.Boolean]
   ): scala.Boolean = js.native
   def every(
-    callbackfn: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, scala.Boolean],
+    predicate: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, scala.Boolean],
     thisArg: js.Any
   ): scala.Boolean = js.native
   
@@ -71,14 +71,14 @@ trait BigInt64Array
   
   /**
     * Returns the elements of an array that meet the condition specified in a callback function.
-    * @param callbackfn A function that accepts up to three arguments. The filter method calls
-    * the callbackfn function one time for each element in the array.
-    * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+    * @param predicate A function that accepts up to three arguments. The filter method calls
+    * the predicate function one time for each element in the array.
+    * @param thisArg An object to which the this keyword can refer in the predicate function.
     * If thisArg is omitted, undefined is used as the this value.
     */
-  def filter(callbackfn: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, _]): BigInt64Array = js.native
+  def filter(predicate: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, _]): BigInt64Array = js.native
   def filter(
-    callbackfn: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, _],
+    predicate: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, _],
     thisArg: js.Any
   ): BigInt64Array = js.native
   
@@ -291,17 +291,17 @@ trait BigInt64Array
   
   /**
     * Determines whether the specified callback function returns true for any element of an array.
-    * @param callbackfn A function that accepts up to three arguments. The some method calls the
-    * callbackfn function for each element in the array until the callbackfn returns true, or until
+    * @param predicate A function that accepts up to three arguments. The some method calls the
+    * predicate function for each element in the array until the predicate returns true, or until
     * the end of the array.
-    * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+    * @param thisArg An object to which the this keyword can refer in the predicate function.
     * If thisArg is omitted, undefined is used as the this value.
     */
   def some(
-    callbackfn: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, scala.Boolean]
+    predicate: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, scala.Boolean]
   ): scala.Boolean = js.native
   def some(
-    callbackfn: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, scala.Boolean],
+    predicate: js.Function3[/* value */ js.BigInt, /* index */ Double, /* array */ this.type, scala.Boolean],
     thisArg: js.Any
   ): scala.Boolean = js.native
   

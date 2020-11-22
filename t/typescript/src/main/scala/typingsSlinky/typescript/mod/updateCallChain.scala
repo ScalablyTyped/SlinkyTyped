@@ -29,6 +29,7 @@ object updateCallChain extends js.Object {
     typeArguments: js.UndefOr[scala.Nothing],
     argumentsArray: js.Array[Expression]
   ): CallChain = js.native
+  /** @deprecated Use `factory.updateCallChain` or the factory supplied by your transformation context instead. */
   def apply(
     node: CallChain,
     expression: Expression,

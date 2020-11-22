@@ -1,7 +1,7 @@
 package typingsSlinky.mjmlReact.mod
 
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.Color
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.ColorProperty
 import typingsSlinky.mjmlReact.mjmlReactStrings.auto
 import typingsSlinky.mjmlReact.mjmlReactStrings.center
 import typingsSlinky.mjmlReact.mjmlReactStrings.fixed
@@ -22,9 +22,9 @@ trait MjmlTableProps extends js.Object {
   
   var cellspacing: js.UndefOr[String] = js.native
   
-  var color: js.UndefOr[Color] = js.native
+  var color: js.UndefOr[ColorProperty] = js.native
   
-  var containerBackgroundColor: js.UndefOr[BackgroundColor] = js.native
+  var containerBackgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
   
   var fontFamily: js.UndefOr[String] = js.native
   
@@ -80,13 +80,13 @@ object MjmlTableProps {
     def deleteCellspacing: Self = this.set("cellspacing", js.undefined)
     
     @scala.inline
-    def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: ColorProperty): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setContainerBackgroundColor(value: BackgroundColor): Self = this.set("containerBackgroundColor", value.asInstanceOf[js.Any])
+    def setContainerBackgroundColor(value: BackgroundColorProperty): Self = this.set("containerBackgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContainerBackgroundColor: Self = this.set("containerBackgroundColor", js.undefined)

@@ -16,164 +16,22 @@ class PlaneRotationGizmo protected ()
     * @param color The color of the gizmo
     * @param tessellation Amount of tessellation to be used when creating rotation circles
     * @param useEulerRotation Use and update Euler angle instead of quaternion
+    * @param thickness display gizmo axis thickness
     */
-  def this(planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3) = this()
   def this(
     planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: js.UndefOr[scala.Nothing],
-    tessellation: Double
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
-    tessellation: Double
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: js.UndefOr[scala.Nothing],
-    tessellation: Double
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
-    tessellation: Double
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: js.UndefOr[scala.Nothing],
-    tessellation: js.UndefOr[scala.Nothing],
-    parent: Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: js.UndefOr[scala.Nothing],
-    tessellation: Double,
-    parent: Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
-    tessellation: js.UndefOr[scala.Nothing],
-    parent: Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
-    tessellation: Double,
-    parent: Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: js.UndefOr[scala.Nothing],
-    tessellation: js.UndefOr[scala.Nothing],
-    parent: Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: js.UndefOr[scala.Nothing],
-    tessellation: Double,
-    parent: Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
-    tessellation: js.UndefOr[scala.Nothing],
-    parent: Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
-    tessellation: Double,
-    parent: Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: js.UndefOr[scala.Nothing],
-    tessellation: js.UndefOr[scala.Nothing],
+    color: js.UndefOr[typingsSlinky.babylonjs.BABYLON.Color3],
+    gizmoLayer: js.UndefOr[typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer],
+    tessellation: js.UndefOr[Double],
     parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]],
-    useEulerRotation: Boolean
+    useEulerRotation: js.UndefOr[Boolean],
+    thickness: js.UndefOr[Double]
   ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: js.UndefOr[scala.Nothing],
-    tessellation: Double,
-    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]],
-    useEulerRotation: Boolean
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
-    tessellation: js.UndefOr[scala.Nothing],
-    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]],
-    useEulerRotation: Boolean
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: js.UndefOr[scala.Nothing],
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
-    tessellation: Double,
-    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]],
-    useEulerRotation: Boolean
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: js.UndefOr[scala.Nothing],
-    tessellation: js.UndefOr[scala.Nothing],
-    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]],
-    useEulerRotation: Boolean
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: js.UndefOr[scala.Nothing],
-    tessellation: Double,
-    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]],
-    useEulerRotation: Boolean
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
-    tessellation: js.UndefOr[scala.Nothing],
-    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]],
-    useEulerRotation: Boolean
-  ) = this()
-  def this(
-    planeNormal: typingsSlinky.babylonjs.BABYLON.Vector3,
-    color: typingsSlinky.babylonjs.BABYLON.Color3,
-    gizmoLayer: typingsSlinky.babylonjs.BABYLON.UtilityLayerRenderer,
-    tessellation: Double,
-    parent: js.UndefOr[Nullable[typingsSlinky.babylonjs.BABYLON.RotationGizmo]],
-    useEulerRotation: Boolean
-  ) = this()
+}
+/* static members */
+@JSGlobal("BABYLON.PlaneRotationGizmo")
+@js.native
+object PlaneRotationGizmo extends js.Object {
+  
+  var _CircleConstants: js.Any = js.native
 }

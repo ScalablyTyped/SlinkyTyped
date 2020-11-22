@@ -1,19 +1,16 @@
 package typingsSlinky.reactRnd.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
 import slinky.core.facade.ReactElement
-import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.reResizable.mod.ResizeDirection
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactDraggable.mod.DraggableEvent
 import typingsSlinky.reactDraggable.reactDraggableBooleans.`false`
-import typingsSlinky.reactRnd.anon.TypeofComponent
 import typingsSlinky.reactRnd.anon.X
 import typingsSlinky.reactRnd.anon.xnumberynumberSize
 import typingsSlinky.reactRnd.reactRndStrings.both
@@ -65,8 +62,6 @@ trait Props
   var minHeight: js.UndefOr[Double | String] = js.native
   
   var minWidth: js.UndefOr[Double | String] = js.native
-  
-  var nodeRef: js.UndefOr[Ref[TypeofComponent]] = js.native
   
   var onDrag: js.UndefOr[RndDragCallback] = js.native
   
@@ -245,21 +240,6 @@ object Props {
     def deleteMinWidth: Self = this.set("minWidth", js.undefined)
     
     @scala.inline
-    def setNodeRefRefObject(value: ReactRef[TypeofComponent]): Self = this.set("nodeRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setNodeRefFunction1(value: /* instance */ TypeofComponent | Null => Unit): Self = this.set("nodeRef", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setNodeRef(value: Ref[TypeofComponent]): Self = this.set("nodeRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteNodeRef: Self = this.set("nodeRef", js.undefined)
-    
-    @scala.inline
-    def setNodeRefNull: Self = this.set("nodeRef", null)
-    
-    @scala.inline
     def setOnDrag(
       value: (/* e */ DraggableEvent, /* data */ typingsSlinky.reactDraggable.mod.DraggableData) => Unit | `false`
     ): Self = this.set("onDrag", js.Any.fromFunction2(value))
@@ -297,7 +277,7 @@ object Props {
     
     @scala.inline
     def setOnResize(
-      value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
+      value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
     ): Self = this.set("onResize", js.Any.fromFunction5(value))
     
     @scala.inline
@@ -305,7 +285,7 @@ object Props {
     
     @scala.inline
     def setOnResizeStart(
-      value: (/* e */ SyntheticMouseEvent[HTMLDivElement] | SyntheticTouchEvent[HTMLDivElement], /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement) => Unit
+      value: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* dir */ ResizeDirection, /* elementRef */ HTMLElement) => Unit | Boolean
     ): Self = this.set("onResizeStart", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -313,7 +293,7 @@ object Props {
     
     @scala.inline
     def setOnResizeStop(
-      value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
+      value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
     ): Self = this.set("onResizeStop", js.Any.fromFunction5(value))
     
     @scala.inline

@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CSVLayerCapabilitiesQuery extends Object {
   
   /**
-    * Indicates if the geometry centroid associated with each polygon feature can be returned. This operation is only supported in ArcGIS Online hosted feature services.
+    * Indicates if the geometry centroid associated with each polygon feature can be returned.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
   var supportsCentroid: Boolean = js.native
   
   /**
-    * Indicates if the query operation supports `disjoint` [spatial relationship](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html#spatialRelationship). This is valid only for [hosted feature services](http://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm).
+    * Indicates if the query operation supports `disjoint` [spatial relationship](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html#spatialRelationship).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
@@ -45,7 +45,7 @@ trait CSVLayerCapabilitiesQuery extends Object {
   var supportsExtent: Boolean = js.native
   
   /**
-    * Indicates if the layer's query response contains geometry attributes, including shape area and length attributes. This operation is only supported in ArcGIS Online hosted feature services.
+    * Indicates if the layer's query response contains geometry attributes, including shape area and length attributes.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */
@@ -122,7 +122,7 @@ trait CSVLayerCapabilitiesQuery extends Object {
   var supportsSqlExpression: Boolean = js.native
   
   /**
-    * Indicates if the query operation supports using standardized queries. Learn more about [standardized queries here](http://server.arcgis.com/en/server/latest/administer/linux/about-standardized-queries.htm).
+    * Indicates if the query operation supports using standardized queries.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-CSVLayer.html#capabilities)
     */

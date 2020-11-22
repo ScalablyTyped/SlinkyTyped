@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProtocolResponse extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/protocol-response
+  // Docs: https://electronjs.org/docs/api/structures/protocol-response
   /**
     * The charset of response body, default is `"utf-8"`.
     */

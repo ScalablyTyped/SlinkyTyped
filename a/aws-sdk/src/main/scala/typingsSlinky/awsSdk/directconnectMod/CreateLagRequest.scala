@@ -13,12 +13,12 @@ trait CreateLagRequest extends js.Object {
   var childConnectionTags: js.UndefOr[TagList] = js.native
   
   /**
-    * The ID of an existing connection to migrate to the LAG.
+    * The ID of an existing dedicated connection to migrate to the LAG.
     */
   var connectionId: js.UndefOr[ConnectionId] = js.native
   
   /**
-    * The bandwidth of the individual physical connections bundled by the LAG. The possible values are 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, and 10Gbps. 
+    * The bandwidth of the individual physical dedicated connections bundled by the LAG. The possible values are 1Gbps and 10Gbps. 
     */
   var connectionsBandwidth: Bandwidth = js.native
   
@@ -33,7 +33,7 @@ trait CreateLagRequest extends js.Object {
   var location: LocationCode = js.native
   
   /**
-    * The number of physical connections initially provisioned and bundled by the LAG.
+    * The number of physical dedicated connections initially provisioned and bundled by the LAG.
     */
   var numberOfConnections: Count = js.native
   

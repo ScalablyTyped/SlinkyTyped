@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ReplicationRunStageDetails extends js.Object {
   
   /**
-    * String describing the current stage of a replication run.
+    * The current stage of a replication run.
     */
   var stage: js.UndefOr[ReplicationRunStage] = js.native
   
   /**
-    * String describing the progress of the current stage of a replication run.
+    * The progress of the current stage of a replication run.
     */
   var stageProgress: js.UndefOr[ReplicationRunStageProgress] = js.native
 }

@@ -5,9 +5,11 @@ import typingsSlinky.storybookAddons.hooksMod.Decorator
 import typingsSlinky.storybookAddons.hooksMod.EventMap
 import typingsSlinky.storybookAddons.makeDecoratorMod.MakeDecoratorOptions
 import typingsSlinky.storybookAddons.makeDecoratorMod.MakeDecoratorResult
+import typingsSlinky.storybookAddons.typesMod.Args
 import typingsSlinky.storybookAddons.typesMod.StoryContext
 import typingsSlinky.storybookAddons.typesMod.StoryGetter
 import typingsSlinky.storybookAddons.typesMod.Types_
+import typingsSlinky.storybookChannels.mod.ChannelArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,9 +32,15 @@ object mod extends js.Object {
   
   def isSupportedType(`type`: Types_): Boolean = js.native
   
-  def makeDecorator(hasNameParameterNameWrapperSkipIfNoParametersOrOptionsAllowDeprecatedUsage: MakeDecoratorOptions): MakeDecoratorResult = js.native
+  def makeDecorator(hasNameParameterNameWrapperSkipIfNoParametersOrOptions: MakeDecoratorOptions): MakeDecoratorResult = js.native
   
   def mockChannel(): typingsSlinky.storybookChannels.mod.default = js.native
+  
+  def useArgs(): js.Tuple3[
+    Args, 
+    js.Function1[/* newArgs */ Args, Unit], 
+    js.Function1[/* argNames */ js.UndefOr[js.Array[String]], Unit]
+  ] = js.native
   
   def useCallback[T](callback: T): T = js.native
   def useCallback[T](callback: T, deps: js.Array[_]): T = js.native
@@ -42,6 +50,8 @@ object mod extends js.Object {
   
   def useEffect(create: js.Function0[js.Function0[Unit] | Unit]): Unit = js.native
   def useEffect(create: js.Function0[js.Function0[Unit] | Unit], deps: js.Array[_]): Unit = js.native
+  
+  def useGlobals(): js.Tuple2[Args, js.Function1[/* newGlobals */ Args, Unit]] = js.native
   
   def useMemo[T](nextCreate: js.Function0[T]): T = js.native
   def useMemo[T](nextCreate: js.Function0[T], deps: js.Array[_]): T = js.native
@@ -68,6 +78,12 @@ object mod extends js.Object {
     extends typingsSlinky.storybookAddons.distMod.AddonStore
   
   @js.native
+  class Channel ()
+    extends typingsSlinky.storybookAddons.distMod.Channel {
+    def this(hasTransportAsync: ChannelArgs) = this()
+  }
+  
+  @js.native
   class HooksContext ()
     extends typingsSlinky.storybookAddons.hooksMod.HooksContext
   
@@ -86,5 +102,7 @@ object mod extends js.Object {
     /* "tab" */ val TAB: typingsSlinky.storybookAddons.typesMod.types.TAB with String = js.native
     
     /* "tool" */ val TOOL: typingsSlinky.storybookAddons.typesMod.types.TOOL with String = js.native
+    
+    /* "toolextra" */ val TOOLEXTRA: typingsSlinky.storybookAddons.typesMod.types.TOOLEXTRA with String = js.native
   }
 }

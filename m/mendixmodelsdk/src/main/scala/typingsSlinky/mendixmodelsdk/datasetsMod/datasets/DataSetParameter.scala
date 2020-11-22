@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.datasetsMod.datasets
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.datasetsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.DataType
@@ -9,6 +10,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,15 +23,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.datasetsMod.datasets.IDataSetParameter because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsDataSet, name */ @JSImport("mendixmodelsdk/dist/gen/datasets", "datasets.DataSetParameter")
 @js.native
 class DataSetParameter protected ()
-  extends Element
+  extends Element[IModel]
      with IByNameReferrable {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def constraints: IList[DataSetParameterConstraint] = js.native
@@ -37,9 +39,6 @@ class DataSetParameter protected ()
   def containerAsDataSet: DataSet = js.native
   @JSName("containerAsDataSet")
   val containerAsDataSet_FDataSetParameter: IDataSet = js.native
-  
-  @JSName("model")
-  var model_FDataSetParameter: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

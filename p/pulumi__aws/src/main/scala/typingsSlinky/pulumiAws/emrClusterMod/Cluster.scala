@@ -2,10 +2,11 @@ package typingsSlinky.pulumiAws.emrClusterMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.outputMod.emr.ClusterBootstrapAction
+import typingsSlinky.pulumiAws.outputMod.emr.ClusterCoreInstanceFleet
 import typingsSlinky.pulumiAws.outputMod.emr.ClusterCoreInstanceGroup
 import typingsSlinky.pulumiAws.outputMod.emr.ClusterEc2Attributes
-import typingsSlinky.pulumiAws.outputMod.emr.ClusterInstanceGroup
 import typingsSlinky.pulumiAws.outputMod.emr.ClusterKerberosAttributes
+import typingsSlinky.pulumiAws.outputMod.emr.ClusterMasterInstanceFleet
 import typingsSlinky.pulumiAws.outputMod.emr.ClusterMasterInstanceGroup
 import typingsSlinky.pulumiAws.outputMod.emr.ClusterStep
 import typingsSlinky.pulumiPulumi.mod.CustomResource
@@ -55,7 +56,7 @@ class Cluster protected () extends CustomResource {
   val clusterState: Output_[String] = js.native
   
   /**
-    * List of configurations supplied for the EMR cluster you are creating
+    * A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
     */
   val configurations: Output_[js.UndefOr[String]] = js.native
   
@@ -65,23 +66,14 @@ class Cluster protected () extends CustomResource {
   val configurationsJson: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * Use the `coreInstanceGroup` configuration block `instanceCount` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`coreInstanceCount`-1) as core nodes. Cannot be specified if `coreInstanceGroup` or `instanceGroup` configuration blocks are set. Default `1`
-    *
-    * @deprecated use `core_instance_group` configuration block `instance_count` argument instead
+    * Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `coreInstanceGroup` configuration blocks are set. Detailed below.
     */
-  val coreInstanceCount: Output_[Double] = js.native
+  val coreInstanceFleet: Output_[ClusterCoreInstanceFleet] = js.native
   
   /**
-    * Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `coreInstanceCount` argument, `coreInstanceType` argument, or `instanceGroup` configuration blocks are set. Detailed below.
+    * Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
     */
   val coreInstanceGroup: Output_[ClusterCoreInstanceGroup] = js.native
-  
-  /**
-    * Use the `coreInstanceGroup` configuration block `instanceType` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `coreInstanceGroup` or `instanceGroup` configuration blocks are set.
-    *
-    * @deprecated use `core_instance_group` configuration block `instance_type` argument instead
-    */
-  val coreInstanceType: Output_[String] = js.native
   
   /**
     * A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
@@ -99,13 +91,6 @@ class Cluster protected () extends CustomResource {
   val ec2Attributes: Output_[js.UndefOr[ClusterEc2Attributes]] = js.native
   
   /**
-    * Use the `masterInstanceGroup` configuration block, `coreInstanceGroup` configuration block and `aws.emr.InstanceGroup` resource(s) instead. A list of `instanceGroup` objects for each instance group in the cluster. Exactly one of `masterInstanceType` and `instanceGroup` must be specified. If `instanceGroup` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `masterInstanceGroup` or `coreInstanceGroup` configuration blocks are set. Defined below
-    *
-    * @deprecated use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead
-    */
-  val instanceGroups: Output_[js.Array[ClusterInstanceGroup]] = js.native
-  
-  /**
     * Switch on/off run cluster with no steps or when all steps are complete (default is on)
     */
   val keepJobFlowAliveWhenNoSteps: Output_[Boolean] = js.native
@@ -121,16 +106,14 @@ class Cluster protected () extends CustomResource {
   val logUri: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `masterInstanceType` argument or `instanceGroup` configuration blocks are set. Detailed below.
+    * Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `masterInstanceGroup` configuration blocks are set. Detailed below.
     */
-  val masterInstanceGroup: Output_[ClusterMasterInstanceGroup] = js.native
+  val masterInstanceFleet: Output_[ClusterMasterInstanceFleet] = js.native
   
   /**
-    * Use the `masterInstanceGroup` configuration block `instanceType` argument instead. The EC2 instance type of the master node. Cannot be specified if `masterInstanceGroup` or `instanceGroup` configuration blocks are set.
-    *
-    * @deprecated use `master_instance_group` configuration block `instance_type` argument instead
+    * Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
     */
-  val masterInstanceType: Output_[String] = js.native
+  val masterInstanceGroup: Output_[ClusterMasterInstanceGroup] = js.native
   
   /**
     * The public DNS name of the master EC2 instance.
@@ -139,7 +122,7 @@ class Cluster protected () extends CustomResource {
   val masterPublicDns: Output_[String] = js.native
   
   /**
-    * The name of the step.
+    * Friendly name given to the instance fleet.
     */
   val name: Output_[String] = js.native
   

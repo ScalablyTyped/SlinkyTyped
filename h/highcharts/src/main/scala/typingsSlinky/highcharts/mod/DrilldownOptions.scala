@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -51,7 +52,7 @@ trait DrilldownOptions extends js.Object {
     * - `easing`: A string reference to an easing function set on the `Math`
     * object. See the easing demo.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highcharts, Highmaps) Options for the drill up button that appears when
@@ -110,7 +111,7 @@ object DrilldownOptions {
     def deleteAllowPointDrilldown: Self = this.set("allowPointDrilldown", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)

@@ -33,6 +33,8 @@ trait CellTextDisabled extends js.Object {
   
   var root: String = js.native
   
+  var rowError: String = js.native
+  
   var tableWrapper: String = js.native
 }
 object CellTextDisabled {
@@ -52,9 +54,10 @@ object CellTextDisabled {
     label: String,
     materialDecorator: String,
     root: String,
+    rowError: String,
     tableWrapper: String
   ): CellTextDisabled = {
-    val __obj = js.Dynamic.literal(cell = cell.asInstanceOf[js.Any], cellText = cellText.asInstanceOf[js.Any], cellTextDisabled = cellTextDisabled.asInstanceOf[js.Any], cellTextSelected = cellTextSelected.asInstanceOf[js.Any], headerCell = headerCell.asInstanceOf[js.Any], itemChecked = itemChecked.asInstanceOf[js.Any], itemDecorator = itemDecorator.asInstanceOf[js.Any], itemDisabled = itemDisabled.asInstanceOf[js.Any], itemHover = itemHover.asInstanceOf[js.Any], itemValue = itemValue.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], materialDecorator = materialDecorator.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any], tableWrapper = tableWrapper.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(cell = cell.asInstanceOf[js.Any], cellText = cellText.asInstanceOf[js.Any], cellTextDisabled = cellTextDisabled.asInstanceOf[js.Any], cellTextSelected = cellTextSelected.asInstanceOf[js.Any], headerCell = headerCell.asInstanceOf[js.Any], itemChecked = itemChecked.asInstanceOf[js.Any], itemDecorator = itemDecorator.asInstanceOf[js.Any], itemDisabled = itemDisabled.asInstanceOf[js.Any], itemHover = itemHover.asInstanceOf[js.Any], itemValue = itemValue.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], materialDecorator = materialDecorator.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any], rowError = rowError.asInstanceOf[js.Any], tableWrapper = tableWrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[CellTextDisabled]
   }
   
@@ -111,6 +114,9 @@ object CellTextDisabled {
     
     @scala.inline
     def setRoot(value: String): Self = this.set("root", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRowError(value: String): Self = this.set("rowError", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTableWrapper(value: String): Self = this.set("tableWrapper", value.asInstanceOf[js.Any])

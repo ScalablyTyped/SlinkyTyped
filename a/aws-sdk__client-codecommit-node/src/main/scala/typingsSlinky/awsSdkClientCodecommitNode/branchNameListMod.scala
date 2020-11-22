@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientCodecommitNode
 
-import typingsSlinky.awsSdkTypes.protocolMod.List
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object branchNameListMod extends js.Object {
   
   @JSName("_BranchNameList")
-  val BranchNameList: List = js.native
+  val BranchNameList: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _List_ */ js.Any = js.native
 }

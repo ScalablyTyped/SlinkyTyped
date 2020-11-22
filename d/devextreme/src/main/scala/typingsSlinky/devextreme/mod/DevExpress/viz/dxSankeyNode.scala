@@ -7,29 +7,45 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSankeyNode extends js.Object {
   
-  /** @name dxSankeyNode.hideTooltip() */
+  /**
+    * [descr:dxSankeyNode.hideTooltip()]
+    */
   def hideTooltip(): Unit = js.native
   
-  /** @name dxSankeyNode.hover(state) */
+  /**
+    * [descr:dxSankeyNode.hover(state)]
+    */
   def hover(state: Boolean): Unit = js.native
   
-  /** @name dxSankeyNode.isHovered() */
+  /**
+    * [descr:dxSankeyNode.isHovered()]
+    */
   def isHovered(): Boolean = js.native
   
-  /** @name dxSankeyNode.label */
+  /**
+    * [descr:dxSankeyNode.label]
+    */
   var label: js.UndefOr[String] = js.native
   
-  /** @name dxSankeyNode.linksIn */
+  /**
+    * [descr:dxSankeyNode.linksIn]
+    */
   var linksIn: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name dxSankeyNode.linksOut */
+  /**
+    * [descr:dxSankeyNode.linksOut]
+    */
   var linksOut: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name dxSankeyNode.showTooltip() */
+  /**
+    * [descr:dxSankeyNode.showTooltip()]
+    */
   def showTooltip(): Unit = js.native
   
-  /** @deprecated */
-  /** @name dxSankeyNode.title */
+  /**
+    * [descr:dxSankeyNode.title]
+    * @deprecated [depNote:dxSankeyNode.title]
+    */
   var title: js.UndefOr[String] = js.native
 }
 object dxSankeyNode {

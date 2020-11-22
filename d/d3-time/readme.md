@@ -1,7 +1,7 @@
 
 # Scala.js typings for d3-time
 
-Typings are for version 1.0
+Typings are for version 2.0
 
 ## Library description:
 A calculator for humanity’s peculiar conventions of time.

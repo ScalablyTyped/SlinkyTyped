@@ -14,7 +14,7 @@ import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TypeofBluebird
@@ -32,10 +32,7 @@ trait TypeofBluebird
       ], 
       Bluebird[js.Object]
     ] {
-  /**
-    * The version number of the library
-    */
-  var version: String = js.native
+  
   def all[R](values: js.Array[js.Thenable[R] | R]): Bluebird[js.Array[R]] = js.native
   // array with values
   def all[R](values: js.Thenable[js.Array[js.Thenable[R] | R]]): Bluebird[js.Array[R]] = js.native
@@ -60,28 +57,34 @@ trait TypeofBluebird
   ): Bluebird[js.Tuple5[T1, T2, T3, T4, T5]] = js.native
   @JSName("all")
   def all_T1[T1](values: js.Array[js.Thenable[T1] | T1]): Bluebird[js.Array[T1]] = js.native
+  
   def any[R](values: js.Array[js.Thenable[R] | R]): Bluebird[R] = js.native
    // tslint:disable-line:unified-signatures
   /**
     * Like `Promise.some()`, with 1 as `count`. However, if the promise fulfills, the fulfillment value is not an array of 1 but the value directly.
     */
   def any[R](values: js.Thenable[js.Array[js.Thenable[R] | R]]): Bluebird[R] = js.native
+  
   def attempt[R](fn: js.Function0[R | js.Thenable[R]]): Bluebird[R] = js.native
+  
   /**
     * Sugar for `Promise.resolve(undefined).bind(thisArg);`. See `.bind()`.
     */
   def bind(thisArg: js.Any): Bluebird[Unit] = js.native
+  
   /**
     * Cast the given `value` to a trusted promise. If `value` is already a trusted `Promise`, it is returned as is. If `value` is not a thenable, a fulfilled is: Promise returned with `value` as its fulfillment value. If `value` is a thenable (Promise-like object, like those returned by jQuery's `$.ajax`), returns a trusted that: Promise assimilates the state of the thenable.
     */
   def cast[R](value: R): Bluebird[R] = js.native
   def cast[R](value: js.Thenable[R]): Bluebird[R] = js.native
+  
   /**
     * Configure long stack traces, warnings, monitoring and cancellation.
     * Note that even though false is the default here, a development environment might be detected which automatically
     *  enables long stack traces and warnings.
     */
   def config(options: Cancellation): Unit = js.native
+  
   /**
     * Returns a function that can use `yield` to run asynchronous code synchronously. This feature requires the support of generators which are drafted in the next version of the language. Node version greater than `0.11.2` is required and needs to be executed with the `--harmony-generators` (or `--harmony`) command-line switch.
     */
@@ -228,10 +231,12 @@ trait TypeofBluebird
     /* a8 */ A8, 
     Bluebird[T]
   ] = js.native
+  
   /**
     * Create a promise with undecided fate and return a `PromiseResolver` to control it. See resolution?: Promise(#promise-resolution).
     */
   def defer[R](): Resolver[R] = js.native
+  
   def delay(ms: Double): Bluebird[Unit] = js.native
   /**
     * Returns a promise that will be resolved with value (or undefined) after given ms milliseconds.
@@ -240,6 +245,7 @@ trait TypeofBluebird
     */
   def delay[R](ms: Double, value: R): Bluebird[R] = js.native
   def delay[R](ms: Double, value: js.Thenable[R]): Bluebird[R] = js.native
+  
   def each[R, U](
     values: js.Array[js.Thenable[R] | R],
     iterator: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
@@ -253,6 +259,7 @@ trait TypeofBluebird
     values: js.Thenable[js.Array[js.Thenable[R] | R]],
     iterator: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
   ): Bluebird[js.Array[R]] = js.native
+  
   def filter[R](
     values: js.Array[js.Thenable[R] | R],
     filterer: js.Function3[
@@ -298,6 +305,7 @@ trait TypeofBluebird
     ],
     option: ConcurrencyOption
   ): Bluebird[js.Array[R]] = js.native
+  
   def fromCallback(
     resolver: js.Function1[
       /* callback */ js.Function2[/* err */ js.Any, /* result */ js.UndefOr[js.Any], Unit], 
@@ -326,6 +334,7 @@ trait TypeofBluebird
     ],
     options: FromNodeOptions
   ): Bluebird[T] = js.native
+  
   /**
     * Returns a promise that is resolved by a node style callback function.
     */
@@ -357,10 +366,12 @@ trait TypeofBluebird
     ],
     options: FromNodeOptions
   ): Bluebird[T] = js.native
+  
   /**
     * See if `value` is a trusted Promise.
     */
   def is(value: js.Any): Boolean = js.native
+  
   // variadic array
   /** @deprecated use .all instead */
   def join[R](values: (R | js.Thenable[R])*): Bluebird[js.Array[R]] = js.native
@@ -552,11 +563,11 @@ trait TypeofBluebird
     handler: js.Function4[/* arg1 */ A1, /* arg2 */ A2, /* arg3 */ A3, /* arg4 */ A4, R | js.Thenable[R]]
   ): Bluebird[R] = js.native
   def join[R, A1, A2, A3, A4, A5](
-    arg1: A1 | js.Thenable[A1],
-    arg2: A2 | js.Thenable[A2],
-    arg3: A3 | js.Thenable[A3],
-    arg4: A4 | js.Thenable[A4],
-    arg5: A5 | js.Thenable[A5],
+    arg1: A1,
+    arg2: A2,
+    arg3: A3,
+    arg4: A4,
+    arg5: A5,
     handler: js.Function5[
       /* arg1 */ A1, 
       /* arg2 */ A2, 
@@ -566,10 +577,477 @@ trait TypeofBluebird
       R | js.Thenable[R]
     ]
   ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: A2,
+    arg3: A3,
+    arg4: A4,
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: A2,
+    arg3: A3,
+    arg4: js.Thenable[A4],
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: A2,
+    arg3: A3,
+    arg4: js.Thenable[A4],
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: A2,
+    arg3: js.Thenable[A3],
+    arg4: A4,
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: A2,
+    arg3: js.Thenable[A3],
+    arg4: A4,
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: A2,
+    arg3: js.Thenable[A3],
+    arg4: js.Thenable[A4],
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: A2,
+    arg3: js.Thenable[A3],
+    arg4: js.Thenable[A4],
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: js.Thenable[A2],
+    arg3: A3,
+    arg4: A4,
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: js.Thenable[A2],
+    arg3: A3,
+    arg4: A4,
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: js.Thenable[A2],
+    arg3: A3,
+    arg4: js.Thenable[A4],
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: js.Thenable[A2],
+    arg3: A3,
+    arg4: js.Thenable[A4],
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: js.Thenable[A2],
+    arg3: js.Thenable[A3],
+    arg4: A4,
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: js.Thenable[A2],
+    arg3: js.Thenable[A3],
+    arg4: A4,
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: js.Thenable[A2],
+    arg3: js.Thenable[A3],
+    arg4: js.Thenable[A4],
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: A1,
+    arg2: js.Thenable[A2],
+    arg3: js.Thenable[A3],
+    arg4: js.Thenable[A4],
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: A2,
+    arg3: A3,
+    arg4: A4,
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: A2,
+    arg3: A3,
+    arg4: A4,
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: A2,
+    arg3: A3,
+    arg4: js.Thenable[A4],
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: A2,
+    arg3: A3,
+    arg4: js.Thenable[A4],
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: A2,
+    arg3: js.Thenable[A3],
+    arg4: A4,
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: A2,
+    arg3: js.Thenable[A3],
+    arg4: A4,
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: A2,
+    arg3: js.Thenable[A3],
+    arg4: js.Thenable[A4],
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: A2,
+    arg3: js.Thenable[A3],
+    arg4: js.Thenable[A4],
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: js.Thenable[A2],
+    arg3: A3,
+    arg4: A4,
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: js.Thenable[A2],
+    arg3: A3,
+    arg4: A4,
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: js.Thenable[A2],
+    arg3: A3,
+    arg4: js.Thenable[A4],
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: js.Thenable[A2],
+    arg3: A3,
+    arg4: js.Thenable[A4],
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: js.Thenable[A2],
+    arg3: js.Thenable[A3],
+    arg4: A4,
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: js.Thenable[A2],
+    arg3: js.Thenable[A3],
+    arg4: A4,
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: js.Thenable[A2],
+    arg3: js.Thenable[A3],
+    arg4: js.Thenable[A4],
+    arg5: A5,
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  def join[R, A1, A2, A3, A4, A5](
+    arg1: js.Thenable[A1],
+    arg2: js.Thenable[A2],
+    arg3: js.Thenable[A3],
+    arg4: js.Thenable[A4],
+    arg5: js.Thenable[A5],
+    handler: js.Function5[
+      /* arg1 */ A1, 
+      /* arg2 */ A2, 
+      /* arg3 */ A3, 
+      /* arg4 */ A4, 
+      /* arg5 */ A5, 
+      R | js.Thenable[R]
+    ]
+  ): Bluebird[R] = js.native
+  
   /**
     * Call this right after the library is loaded to enabled long stack traces. Long stack traces cannot be disabled after being enabled, and cannot be enabled after promises have already been created. Long stack traces imply a substantial performance penalty, around 4-5x for throughput and 0.5x for latency.
     */
   def longStackTraces(): Unit = js.native
+  
   def map[R, U](
     values: js.Array[js.Thenable[R] | R],
     mapper: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
@@ -604,6 +1082,7 @@ trait TypeofBluebird
     mapper: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]],
     options: ConcurrencyOption
   ): Bluebird[js.Array[U]] = js.native
+  
   def mapSeries[R, U](
     values: js.Array[js.Thenable[R] | R],
     iterator: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
@@ -623,6 +1102,7 @@ trait TypeofBluebird
     values: js.Iterable[js.Thenable[R] | R],
     iterator: js.Function3[/* item */ R, /* index */ Double, /* arrayLength */ Double, U | js.Thenable[U]]
   ): Bluebird[js.Array[U]] = js.native
+  
   def method[R](fn: js.Function1[/* repeated */ js.Any, R | js.Thenable[R]]): js.Function1[/* repeated */ js.Any, Bluebird[R]] = js.native
   def method[R, A1, A2](fn: js.Function2[/* arg1 */ A1, /* arg2 */ A2, R | js.Thenable[R]]): js.Function2[/* arg1 */ A1, /* arg2 */ A2, Bluebird[R]] = js.native
   def method[R, A1, A2, A3](fn: js.Function3[/* arg1 */ A1, /* arg2 */ A2, /* arg3 */ A3, R | js.Thenable[R]]): js.Function3[/* arg1 */ A1, /* arg2 */ A2, /* arg3 */ A3, Bluebird[R]] = js.native
@@ -643,6 +1123,7 @@ trait TypeofBluebird
     */
   @JSName("method")
   def method_RA1[R, A1](fn: js.Function1[/* arg1 */ A1, R | js.Thenable[R]]): js.Function1[/* arg1 */ A1, Bluebird[R]] = js.native
+  
   /**
     * Add handler as the handler to call when there is a possibly unhandled rejection.
     * The default handler logs the error stack to stderr or console.error in browsers.
@@ -659,6 +1140,7 @@ trait TypeofBluebird
     */
   def onPossiblyUnhandledRejection(handler: js.Function1[/* reason */ js.Any, _]): Unit = js.native
   def onPossiblyUnhandledRejection(handler: js.Function2[/* error */ js.Error, /* promise */ Bluebird[_], Unit]): Unit = js.native
+  
   def promisify(nodeFunction: js.Function1[/* repeated */ js.Any, Unit]): js.Function1[/* repeated */ js.Any, Bluebird[_]] = js.native
   def promisify(nodeFunction: js.Function1[/* repeated */ js.Any, Unit], options: PromisifyOptions): js.Function1[/* repeated */ js.Any, Bluebird[_]] = js.native
   def promisify[T, A1](
@@ -756,6 +1238,7 @@ trait TypeofBluebird
     ],
     options: PromisifyOptions
   ): js.Function5[/* arg1 */ A1, /* arg2 */ A2, /* arg3 */ A3, /* arg4 */ A4, /* arg5 */ A5, Bluebird[T]] = js.native
+  
   /**
     * Promisifies the entire object by going through the object's properties and creating an async equivalent of each function on the object and its prototype chain. The promisified method name will be the original method name postfixed with `Async`. Returns the input object.
     *
@@ -764,6 +1247,7 @@ trait TypeofBluebird
   // TODO how to model promisifyAll?
   def promisifyAll(target: js.Object): js.Object = js.native
   def promisifyAll(target: js.Object, options: PromisifyAllOptions): js.Object = js.native
+  
   /**
     * Returns a function that will wrap the given `nodeFunction`. Instead of taking a callback, the returned function will return a promise whose fate is decided by the callback behavior of the given node function. The node function should conform to node.js convention of accepting a callback as last argument and calling that callback with error as the first argument and success value on the second argument.
     *
@@ -786,6 +1270,7 @@ trait TypeofBluebird
     ],
     options: PromisifyOptions
   ): js.Function0[Bluebird[T]] = js.native
+  
   // trusted promise for object
   def props[T](`object`: js.Thenable[ResolvableProps[T]]): Bluebird[T] = js.native
    // tslint:disable-line:unified-signatures
@@ -804,6 +1289,7 @@ trait TypeofBluebird
   // trusted promise for map
   @JSName("props")
   def props_KV[K, V](map: js.Thenable[Map[K, js.Thenable[V] | V]]): Bluebird[Map[K, V]] = js.native
+  
   def race[R](values: js.Array[js.Thenable[R] | R]): Bluebird[R] = js.native
   /**
     * Given an array, or a promise of an array, which contains promises (or a mix of promises and values) return a promise that is fulfilled or rejected as soon as a promise in the array is fulfilled or rejected with the respective rejection reason or fulfillment value.
@@ -811,6 +1297,7 @@ trait TypeofBluebird
     * **Note** If you pass empty array or a sparse array with no values, or a promise/thenable for such, it will be forever pending.
     */
   def race[R](values: js.Thenable[js.Array[js.Thenable[R] | R]]): Bluebird[R] = js.native
+  
   def reduce[R, U](
     values: js.Array[js.Thenable[R] | R],
     reducer: js.Function4[
@@ -860,18 +1347,21 @@ trait TypeofBluebird
     ],
     initialValue: U
   ): Bluebird[U] = js.native
+  
   /**
     * Create a promise that is rejected with the given `reason`.
     */
   def reject(reason: js.Any): Bluebird[_] = js.native
   @JSName("reject")
   def reject_R[R](reason: js.Any): Bluebird[R] = js.native
+  
   /**
     * Create a promise that is resolved with the given `value`. If `value` is a thenable or promise, the returned promise will assume its state.
     */
   def resolve(): Bluebird[Unit] = js.native
   def resolve[R](value: R): Bluebird[R] = js.native
   def resolve[R](value: js.Thenable[R]): Bluebird[R] = js.native
+  
   def some[R](values: js.Array[js.Thenable[R] | R], count: Double): Bluebird[js.Array[R]] = js.native
   /**
     * Initiate a competetive race between multiple promises or values (values will become immediately fulfilled promises). When `count` amount of promises have been fulfilled, the returned promise is fulfilled with an array that contains the fulfillment values of the winners in order of resolution.
@@ -881,6 +1371,7 @@ trait TypeofBluebird
     * *The original array is not modified.*
     */
   def some[R](values: js.Thenable[js.Array[js.Thenable[R] | R]], count: Double): Bluebird[js.Array[R]] = js.native
+  
   /**
     * Start the chain of promises with `Promise.try`. Any synchronous exceptions will be turned into rejections on the returned promise.
     *
@@ -889,6 +1380,7 @@ trait TypeofBluebird
     * Alias for `attempt();` for compatibility with earlier ECMAScript version.
     */
   def `try`[R](fn: js.Function0[R | js.Thenable[R]]): Bluebird[R] = js.native
+  
   /**
     * In conjunction with `.disposer`, using will make sure that no matter what, the specified disposer
     *  will be called when the promise returned by the callback passed to using has settled. The disposer is
@@ -906,5 +1398,9 @@ trait TypeofBluebird
     disposer3: Disposer[R3],
     executor: js.Function3[/* transaction1 */ R1, /* transaction2 */ R2, /* transaction3 */ R3, js.Thenable[T]]
   ): Bluebird[T] = js.native
+  
+  /**
+    * The version number of the library
+    */
+  var version: String = js.native
 }
-

@@ -2,12 +2,12 @@ package typingsSlinky.storybookClientApi.clientApiMod
 
 import typingsSlinky.node.NodeModule
 import typingsSlinky.storybookAddons.typesMod.DecoratorFunction
+import typingsSlinky.storybookAddons.typesMod.LoaderFunction
 import typingsSlinky.storybookAddons.typesMod.Parameters
 import typingsSlinky.storybookAddons.typesMod.StoryApi
-import typingsSlinky.storybookClientApi.anon.FileName
-import typingsSlinky.storybookClientApi.anon.HierarchyRootSeparator
-import typingsSlinky.storybookClientApi.anon.HierarchySeparator
-import typingsSlinky.storybookClientApi.typesMod.StoreItem
+import typingsSlinky.storybookClientApi.typesMod.ArgTypesEnhancer
+import typingsSlinky.storybookClientApi.typesMod.GetStorybookKind
+import typingsSlinky.storybookClientApi.typesMod.PublishedStoreItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,21 +19,23 @@ trait ClientApi extends js.Object {
   
   var _decorateStory: js.Any = js.native
   
+  var _noStoryModuleAddMethodHotDispose: js.Any = js.native
+  
   var _storyStore: js.Any = js.native
   
+  def addArgTypesEnhancer(enhancer: ArgTypesEnhancer): Unit = js.native
+  
   def addDecorator(decorator: DecoratorFunction[_]): Unit = js.native
+  
+  def addLoader(loader: LoaderFunction): Unit = js.native
   
   def addParameters(parameters: Parameters): Unit = js.native
   
   def clearDecorators(): Unit = js.native
   
-  def clearParameters(): Unit = js.native
+  def getStorybook(): js.Array[GetStorybookKind] = js.native
   
-  def getSeparators(): HierarchyRootSeparator | HierarchySeparator = js.native
-  
-  def getStorybook(): js.Array[FileName] = js.native
-  
-  def raw(): js.Array[StoreItem] = js.native
+  def raw(): js.Array[PublishedStoreItem] = js.native
   
   def setAddon(addon: js.Any): Unit = js.native
   
@@ -47,19 +49,20 @@ object ClientApi {
   def apply(
     _addons: js.Any,
     _decorateStory: js.Any,
+    _noStoryModuleAddMethodHotDispose: js.Any,
     _storyStore: js.Any,
+    addArgTypesEnhancer: ArgTypesEnhancer => Unit,
     addDecorator: DecoratorFunction[_] => Unit,
+    addLoader: LoaderFunction => Unit,
     addParameters: Parameters => Unit,
     clearDecorators: () => Unit,
-    clearParameters: () => Unit,
-    getSeparators: () => HierarchyRootSeparator | HierarchySeparator,
-    getStorybook: () => js.Array[FileName],
-    raw: () => js.Array[StoreItem],
+    getStorybook: () => js.Array[GetStorybookKind],
+    raw: () => js.Array[PublishedStoreItem],
     setAddon: js.Any => Unit,
     store: () => typingsSlinky.storybookClientApi.storyStoreMod.default,
     storiesOf: (String, NodeModule) => StoryApi[js.Any]
   ): ClientApi = {
-    val __obj = js.Dynamic.literal(_addons = _addons.asInstanceOf[js.Any], _decorateStory = _decorateStory.asInstanceOf[js.Any], _storyStore = _storyStore.asInstanceOf[js.Any], addDecorator = js.Any.fromFunction1(addDecorator), addParameters = js.Any.fromFunction1(addParameters), clearDecorators = js.Any.fromFunction0(clearDecorators), clearParameters = js.Any.fromFunction0(clearParameters), getSeparators = js.Any.fromFunction0(getSeparators), getStorybook = js.Any.fromFunction0(getStorybook), raw = js.Any.fromFunction0(raw), setAddon = js.Any.fromFunction1(setAddon), store = js.Any.fromFunction0(store), storiesOf = js.Any.fromFunction2(storiesOf))
+    val __obj = js.Dynamic.literal(_addons = _addons.asInstanceOf[js.Any], _decorateStory = _decorateStory.asInstanceOf[js.Any], _noStoryModuleAddMethodHotDispose = _noStoryModuleAddMethodHotDispose.asInstanceOf[js.Any], _storyStore = _storyStore.asInstanceOf[js.Any], addArgTypesEnhancer = js.Any.fromFunction1(addArgTypesEnhancer), addDecorator = js.Any.fromFunction1(addDecorator), addLoader = js.Any.fromFunction1(addLoader), addParameters = js.Any.fromFunction1(addParameters), clearDecorators = js.Any.fromFunction0(clearDecorators), getStorybook = js.Any.fromFunction0(getStorybook), raw = js.Any.fromFunction0(raw), setAddon = js.Any.fromFunction1(setAddon), store = js.Any.fromFunction0(store), storiesOf = js.Any.fromFunction2(storiesOf))
     __obj.asInstanceOf[ClientApi]
   }
   
@@ -85,10 +88,19 @@ object ClientApi {
     def set_decorateStory(value: js.Any): Self = this.set("_decorateStory", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def set_noStoryModuleAddMethodHotDispose(value: js.Any): Self = this.set("_noStoryModuleAddMethodHotDispose", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def set_storyStore(value: js.Any): Self = this.set("_storyStore", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setAddArgTypesEnhancer(value: ArgTypesEnhancer => Unit): Self = this.set("addArgTypesEnhancer", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def setAddDecorator(value: DecoratorFunction[_] => Unit): Self = this.set("addDecorator", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setAddLoader(value: LoaderFunction => Unit): Self = this.set("addLoader", js.Any.fromFunction1(value))
     
     @scala.inline
     def setAddParameters(value: Parameters => Unit): Self = this.set("addParameters", js.Any.fromFunction1(value))
@@ -97,16 +109,10 @@ object ClientApi {
     def setClearDecorators(value: () => Unit): Self = this.set("clearDecorators", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setClearParameters(value: () => Unit): Self = this.set("clearParameters", js.Any.fromFunction0(value))
+    def setGetStorybook(value: () => js.Array[GetStorybookKind]): Self = this.set("getStorybook", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGetSeparators(value: () => HierarchyRootSeparator | HierarchySeparator): Self = this.set("getSeparators", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setGetStorybook(value: () => js.Array[FileName]): Self = this.set("getStorybook", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setRaw(value: () => js.Array[StoreItem]): Self = this.set("raw", js.Any.fromFunction0(value))
+    def setRaw(value: () => js.Array[PublishedStoreItem]): Self = this.set("raw", js.Any.fromFunction0(value))
     
     @scala.inline
     def setSetAddon(value: js.Any => Unit): Self = this.set("setAddon", js.Any.fromFunction1(value))

@@ -1,16 +1,20 @@
 package typingsSlinky.mendixmodelsdk.settingsMod.settings
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.settingsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
+  *
+  * @ignore
   *
   * In version 8.0.0: deleted
   * In version 6.9.0: introduced
@@ -23,15 +27,12 @@ class JavaActionsSettings protected () extends ProjectSettingsPart {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def generatePostfixesForParameters: Boolean = js.native
   def generatePostfixesForParameters_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FJavaActionsSettings: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/settings", "settings.JavaActionsSettings")

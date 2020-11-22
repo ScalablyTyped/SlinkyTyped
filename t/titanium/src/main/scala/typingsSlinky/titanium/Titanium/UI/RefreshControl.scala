@@ -55,7 +55,7 @@ trait RefreshControl extends Proxy {
     * Gets the value of the <Titanium.UI.RefreshControl.tintColor> property.
     * @deprecated Access <Titanium.UI.RefreshControl.tintColor> instead.
     */
-  def getTintColor(): String = js.native
+  def getTintColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.RefreshControl.title> property.
@@ -82,6 +82,7 @@ trait RefreshControl extends Proxy {
     * @deprecated Set the value using <Titanium.UI.RefreshControl.tintColor> instead.
     */
   def setTintColor(tintColor: String): Unit = js.native
+  def setTintColor(tintColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.RefreshControl.title> property.
@@ -92,7 +93,7 @@ trait RefreshControl extends Proxy {
   /**
     * The tint color for the refresh control, as a color name or hex triplet.
     */
-  var tintColor: String = js.native
+  var tintColor: String | Color = js.native
   
   /**
     * The attributed title of the control.

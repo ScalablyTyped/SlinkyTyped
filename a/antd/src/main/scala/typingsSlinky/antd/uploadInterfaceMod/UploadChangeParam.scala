@@ -1,6 +1,6 @@
 package typingsSlinky.antd.uploadInterfaceMod
 
-import typingsSlinky.antd.anon.Percent
+import typingsSlinky.antd.anon.PercentNumber
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UploadChangeParam[T /* <: js.Object */] extends js.Object {
   
-  var event: js.UndefOr[Percent] = js.native
+  var event: js.UndefOr[PercentNumber] = js.native
   
   var file: T = js.native
   
@@ -47,7 +47,7 @@ object UploadChangeParam {
     def setFileList(value: js.Array[UploadFile[_]]): Self = this.set("fileList", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEvent(value: Percent): Self = this.set("event", value.asInstanceOf[js.Any])
+    def setEvent(value: PercentNumber): Self = this.set("event", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEvent: Self = this.set("event", js.undefined)

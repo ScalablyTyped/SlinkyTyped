@@ -28,20 +28,20 @@ object babylonjsMeshesAbstractMeshAugmentingMod extends js.Object {
       * @param force defines the force to apply
       * @param contactPoint defines where to apply the force
       * @returns the current mesh
-      * @see http://doc.babylonjs.com/how_to/using_the_physics_engine
+      * @see https://doc.babylonjs.com/how_to/using_the_physics_engine
       */
     def applyImpulse(force: Vector3, contactPoint: Vector3): AbstractMesh = js.native
     
     /**
       * Gets the current physics impostor
-      * @see http://doc.babylonjs.com/features/physics_engine
+      * @see https://doc.babylonjs.com/features/physics_engine
       * @returns a physics impostor or null
       */
     def getPhysicsImpostor(): Nullable[PhysicsImpostor] = js.native
     
     /**
       * Gets or sets impostor used for physic simulation
-      * @see http://doc.babylonjs.com/features/physics_engine
+      * @see https://doc.babylonjs.com/features/physics_engine
       */
     var physicsImpostor: Nullable[PhysicsImpostor] = js.native
     

@@ -5,14 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined @algolia/client-analytics.@algolia/client-analytics.Variant & {  averageClickPostion :number | undefined,   clickCount :number | undefined,   clickThroughRate :number | undefined,   conversionCount :number | undefined,   conversionRate :number | undefined,   noResultCount :number | undefined,   searchCount :number | undefined,   userCount :number | undefined,   customSearchParameters :@algolia/client-search.@algolia/client-search.SearchOptions | undefined} */
+/* Inlined @algolia/client-analytics.@algolia/client-analytics.Variant & {  averageClickPosition :number | undefined,   clickCount :number | undefined,   clickThroughRate :number | undefined,   conversionCount :number | undefined,   conversionRate :number | undefined,   noResultCount :number | undefined,   trackedSearchCount :number | undefined,   searchCount :number | undefined,   userCount :number | undefined,   customSearchParameters :@algolia/client-search.@algolia/client-search.SearchOptions | undefined} */
 @js.native
 trait VariantResponse extends js.Object {
   
   /**
     * Average click position for the variant.
     */
-  var averageClickPostion: js.UndefOr[Double] = js.native
+  var averageClickPosition: js.UndefOr[Double] = js.native
   
   /**
     * Distinct click count for the variant.
@@ -60,6 +60,11 @@ trait VariantResponse extends js.Object {
   var searchCount: js.UndefOr[Double] = js.native
   
   /**
+    * Tracked search count.
+    */
+  var trackedSearchCount: js.UndefOr[Double] = js.native
+  
+  /**
     * Percentage of the traffic that should be going to the variant. The sum of the percentage should be equal to 100.
     */
   val trafficPercentage: Double = js.native
@@ -99,10 +104,10 @@ object VariantResponse {
     def setTrafficPercentage(value: Double): Self = this.set("trafficPercentage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAverageClickPostion(value: Double): Self = this.set("averageClickPostion", value.asInstanceOf[js.Any])
+    def setAverageClickPosition(value: Double): Self = this.set("averageClickPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAverageClickPostion: Self = this.set("averageClickPostion", js.undefined)
+    def deleteAverageClickPosition: Self = this.set("averageClickPosition", js.undefined)
     
     @scala.inline
     def setClickCount(value: Double): Self = this.set("clickCount", value.asInstanceOf[js.Any])
@@ -151,6 +156,12 @@ object VariantResponse {
     
     @scala.inline
     def deleteSearchCount: Self = this.set("searchCount", js.undefined)
+    
+    @scala.inline
+    def setTrackedSearchCount(value: Double): Self = this.set("trackedSearchCount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTrackedSearchCount: Self = this.set("trackedSearchCount", js.undefined)
     
     @scala.inline
     def setUserCount(value: Double): Self = this.set("userCount", value.asInstanceOf[js.Any])

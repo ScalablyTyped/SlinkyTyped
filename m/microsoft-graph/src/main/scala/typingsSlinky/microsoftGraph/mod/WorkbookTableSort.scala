@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookTableSort extends Entity {
   
   // Represents the current conditions used to last sort the table. Read-only.
-  var fields: js.UndefOr[js.Array[WorkbookSortField]] = js.native
+  var fields: js.UndefOr[NullableOption[js.Array[WorkbookSortField]]] = js.native
   
   // Represents whether the casing impacted the last sort of the table. Read-only.
   var matchCase: js.UndefOr[Boolean] = js.native
@@ -46,10 +46,13 @@ object WorkbookTableSort {
     def setFieldsVarargs(value: WorkbookSortField*): Self = this.set("fields", js.Array(value :_*))
     
     @scala.inline
-    def setFields(value: js.Array[WorkbookSortField]): Self = this.set("fields", value.asInstanceOf[js.Any])
+    def setFields(value: NullableOption[js.Array[WorkbookSortField]]): Self = this.set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFields: Self = this.set("fields", js.undefined)
+    
+    @scala.inline
+    def setFieldsNull: Self = this.set("fields", null)
     
     @scala.inline
     def setMatchCase(value: Boolean): Self = this.set("matchCase", value.asInstanceOf[js.Any])

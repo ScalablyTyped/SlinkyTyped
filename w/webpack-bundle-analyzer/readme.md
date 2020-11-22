@@ -1,7 +1,7 @@
 
 # Scala.js typings for webpack-bundle-analyzer
 
-Typings are for version 3.8
+Typings are for version 3.9
 
 ## Library description:
 Webpack plugin and CLI utility that represents bundle content as convenient interactive zoomable treemap

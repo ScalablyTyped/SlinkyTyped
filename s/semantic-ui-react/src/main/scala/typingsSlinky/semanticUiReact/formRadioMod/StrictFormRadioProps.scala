@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.formRadioMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.labelLabelMod.LabelProps
@@ -70,7 +69,7 @@ object StrictFormRadioProps {
     
     @scala.inline
     def setErrorFunction3(
-      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("error", js.Any.fromFunction3(value))
     
     @scala.inline

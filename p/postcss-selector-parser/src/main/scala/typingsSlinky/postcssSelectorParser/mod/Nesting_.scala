@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait Nesting_
-  extends Base[String, js.UndefOr[Container[String]]] {
+  extends Base[String, js.UndefOr[Container[String, Node]]] {
   
   @JSName("type")
   var type_Nesting_ : typingsSlinky.postcssSelectorParser.postcssSelectorParserStrings.nesting = js.native

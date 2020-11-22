@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreatePublicKeyResult extends js.Object {
   
   /**
-    * The current version of the public key. For example: E2QWRUHAPOMQZL.
+    * The identifier for this version of the public key.
     */
   var ETag: js.UndefOr[String] = js.native
   
   /**
-    * The fully qualified URI of the new public key resource just created.
+    * The URL of the public key.
     */
   var Location: js.UndefOr[String] = js.native
   
   /**
-    * Returned when you add a public key.
+    * The public key.
     */
   var PublicKey: js.UndefOr[typingsSlinky.awsSdk.cloudfrontMod.PublicKey] = js.native
 }

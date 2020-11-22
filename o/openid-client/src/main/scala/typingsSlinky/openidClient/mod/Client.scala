@@ -1,15 +1,12 @@
 package typingsSlinky.openidClient.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.got.mod.GotPromise
 import typingsSlinky.jose.mod.JSONWebKeySet
-import typingsSlinky.node.Buffer
 import typingsSlinky.node.http2Mod.Http2ServerRequest
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.urlMod.URL_
 import typingsSlinky.openidClient.anon.Body
-import typingsSlinky.openidClient.anon.Headers
-import typingsSlinky.openidClient.anon.Params
+import typingsSlinky.openidClient.anon.DPoP
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -113,6 +110,8 @@ class Client protected ()
   def introspect(token: String, tokenTypeHint: js.UndefOr[TokenTypeHint], extras: IntrospectExtras): js.Promise[IntrospectionResponse] = js.native
   def introspect(token: String, tokenTypeHint: TokenTypeHint): js.Promise[IntrospectionResponse] = js.native
   
+  var issuer: Issuer[this.type] = js.native
+  
   var metadata: ClientMetadata = js.native
   
   def oauthCallback(redirectUri: js.UndefOr[scala.Nothing], parameters: CallbackParamsType): js.Promise[TokenSet] = js.native
@@ -173,8 +172,8 @@ class Client protected ()
     */
   def requestObject(payload: RequestObjectPayload): js.Promise[String] = js.native
   
-  def requestResource(resourceUrl: String, accessToken: String): GotPromise[Buffer] = js.native
-  def requestResource(resourceUrl: String, accessToken: String, options: Body): GotPromise[Buffer] = js.native
+  def requestResource(resourceUrl: String, accessToken: String): js.Any = js.native
+  def requestResource(resourceUrl: String, accessToken: String, options: Body): js.Any = js.native
   /**
     * Fetches an arbitrary resource with the provided Access Token in an Authorization header.
     *
@@ -183,20 +182,12 @@ class Client protected ()
     * will be used automatically.
     * @param options Options for the request.
     */
-  def requestResource(resourceUrl: String, accessToken: TokenSet): GotPromise[Buffer] = js.native
-  def requestResource(resourceUrl: String, accessToken: TokenSet, options: Body): GotPromise[Buffer] = js.native
-  def requestResource(resourceUrl: URL_, accessToken: String): GotPromise[Buffer] = js.native
-  def requestResource(resourceUrl: URL_, accessToken: String, options: Body): GotPromise[Buffer] = js.native
-  def requestResource(resourceUrl: URL_, accessToken: TokenSet): GotPromise[Buffer] = js.native
-  def requestResource(resourceUrl: URL_, accessToken: TokenSet, options: Body): GotPromise[Buffer] = js.native
-  
-  def resource(resourceUrl: String, accessToken: String): GotPromise[Buffer] = js.native
-  def resource(resourceUrl: String, accessToken: String, options: Headers): GotPromise[Buffer] = js.native
-  /**
-    * @deprecated in favor of client.requestResource
-    */
-  def resource(resourceUrl: String, accessToken: TokenSet): GotPromise[Buffer] = js.native
-  def resource(resourceUrl: String, accessToken: TokenSet, options: Headers): GotPromise[Buffer] = js.native
+  def requestResource(resourceUrl: String, accessToken: TokenSet): js.Any = js.native
+  def requestResource(resourceUrl: String, accessToken: TokenSet, options: Body): js.Any = js.native
+  def requestResource(resourceUrl: URL_, accessToken: String): js.Any = js.native
+  def requestResource(resourceUrl: URL_, accessToken: String, options: Body): js.Any = js.native
+  def requestResource(resourceUrl: URL_, accessToken: TokenSet): js.Any = js.native
+  def requestResource(resourceUrl: URL_, accessToken: TokenSet, options: Body): js.Any = js.native
   
   /**
     * Revokes a token at the Authorization Server's revocation_endpoint.
@@ -208,7 +199,7 @@ class Client protected ()
   var static: js.Any = js.native
   
   def userinfo(accessToken: String): js.Promise[UserinfoResponse] = js.native
-  def userinfo(accessToken: String, options: Params): js.Promise[UserinfoResponse] = js.native
+  def userinfo(accessToken: String, options: DPoP): js.Promise[UserinfoResponse] = js.native
   /**
     * Fetches the OIDC userinfo response with the provided Access Token. Also handles signed and/or
     * encrypted userinfo responses. When TokenSet is provided as an argument the userinfo sub property
@@ -219,7 +210,7 @@ class Client protected ()
     * @param options Options for the UserInfo request.
     */
   def userinfo(accessToken: TokenSet): js.Promise[UserinfoResponse] = js.native
-  def userinfo(accessToken: TokenSet, options: Params): js.Promise[UserinfoResponse] = js.native
+  def userinfo(accessToken: TokenSet, options: DPoP): js.Promise[UserinfoResponse] = js.native
 }
 /* static members */
 @JSImport("openid-client", "Client")
@@ -240,6 +231,8 @@ object Client extends js.Object {
     jwks: JSONWebKeySet,
     clientOptions: ClientOptions
   ): js.Promise[Client] = js.native
+  
+  var issuer: Issuer[Client] = js.native
   
   def register(metadata: js.Object): js.Promise[Client] = js.native
   def register(metadata: js.Object, other: RegisterOther with ClientOptions): js.Promise[Client] = js.native

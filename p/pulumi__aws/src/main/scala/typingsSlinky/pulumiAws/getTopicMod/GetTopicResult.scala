@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetTopicResult extends js.Object {
   
   /**
-    * Set to the ARN of the found topic, suitable for referencing in other resources that support SNS topics.
+    * Amazon Resource Name (ARN) of the found topic, suitable for referencing in other resources that support SNS topics.
     */
   val arn: String = js.native
   

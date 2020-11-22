@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createPrivateIdentifier extends js.Object {
   
+  /** @deprecated Use `factory.createPrivateIdentifier` or the factory supplied by your transformation context instead. */
   def apply(text: java.lang.String): PrivateIdentifier = js.native
 }

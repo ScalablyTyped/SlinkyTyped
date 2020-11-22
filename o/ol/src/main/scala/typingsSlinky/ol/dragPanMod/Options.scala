@@ -11,6 +11,8 @@ trait Options extends js.Object {
   var condition: js.UndefOr[Condition] = js.native
   
   var kinetic: js.UndefOr[typingsSlinky.ol.kineticMod.default] = js.native
+  
+  var onFocusOnly: js.UndefOr[Boolean] = js.native
 }
 object Options {
   
@@ -46,5 +48,11 @@ object Options {
     
     @scala.inline
     def deleteKinetic: Self = this.set("kinetic", js.undefined)
+    
+    @scala.inline
+    def setOnFocusOnly(value: Boolean): Self = this.set("onFocusOnly", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOnFocusOnly: Self = this.set("onFocusOnly", js.undefined)
   }
 }

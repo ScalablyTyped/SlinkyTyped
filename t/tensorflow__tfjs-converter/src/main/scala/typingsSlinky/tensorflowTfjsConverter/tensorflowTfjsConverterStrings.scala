@@ -51,6 +51,9 @@ object tensorflowTfjsConverterStrings {
   def graph: graph = "graph".asInstanceOf[graph]
   
   @scala.inline
+  def hash_table: hash_table = "hash_table".asInstanceOf[hash_table]
+  
+  @scala.inline
   def image: image = "image".asInstanceOf[image]
   
   @scala.inline
@@ -139,6 +142,9 @@ object tensorflowTfjsConverterStrings {
   
   @js.native
   sealed trait graph extends Category
+  
+  @js.native
+  sealed trait hash_table extends Category
   
   @js.native
   sealed trait image extends Category

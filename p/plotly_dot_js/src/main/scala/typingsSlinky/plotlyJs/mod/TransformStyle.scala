@@ -1,6 +1,6 @@
 package typingsSlinky.plotlyJs.mod
 
-import typingsSlinky.plotlyJs.anon.PartialPlotData
+import typingsSlinky.plotlyJs.anon.PartialPlotDataAutobinx
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,12 +10,12 @@ trait TransformStyle extends js.Object {
   
   var target: Double | String | (js.Array[Double | String]) = js.native
   
-  var value: PartialPlotData = js.native
+  var value: PartialPlotDataAutobinx = js.native
 }
 object TransformStyle {
   
   @scala.inline
-  def apply(target: Double | String | (js.Array[Double | String]), value: PartialPlotData): TransformStyle = {
+  def apply(target: Double | String | (js.Array[Double | String]), value: PartialPlotDataAutobinx): TransformStyle = {
     val __obj = js.Dynamic.literal(target = target.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransformStyle]
   }
@@ -42,6 +42,6 @@ object TransformStyle {
     def setTarget(value: Double | String | (js.Array[Double | String])): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: PartialPlotData): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: PartialPlotDataAutobinx): Self = this.set("value", value.asInstanceOf[js.Any])
   }
 }

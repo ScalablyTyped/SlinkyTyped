@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useModeClassNameMod extends js.Object {
   
-  def default(mode: UserInteractionMode): Unit = js.native
+  def useModeClassName(mode: UserInteractionMode): Unit = js.native
 }

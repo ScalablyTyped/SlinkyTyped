@@ -121,11 +121,12 @@ trait Options extends js.Object {
   var data: js.UndefOr[DataOptions] = js.native
   
   /**
-    * (Highcharts, Highstock, Highmaps, Gantt) Styled mode only. Configuration
-    * object for adding SVG definitions for reusable elements. See gradients,
-    * shadows and patterns for more information and code examples.
+    * (Highcharts, Highstock, Highmaps, Gantt) Options for configuring markers
+    * for annotations.
+    *
+    * An example of the arrow marker: (see online documentation for example)
     */
-  var defs: js.UndefOr[DefsOptions] = js.native
+  var defs: js.UndefOr[DefsOptions | Dictionary[SVGDefinitionObject]] = js.native
   
   /**
     * (Highcharts, Highmaps) Options for drill down, the concept of inspecting
@@ -418,7 +419,7 @@ object Options {
     def deleteData: Self = this.set("data", js.undefined)
     
     @scala.inline
-    def setDefs(value: DefsOptions): Self = this.set("defs", value.asInstanceOf[js.Any])
+    def setDefs(value: DefsOptions | Dictionary[SVGDefinitionObject]): Self = this.set("defs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefs: Self = this.set("defs", js.undefined)

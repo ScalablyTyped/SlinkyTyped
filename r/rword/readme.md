@@ -1,7 +1,7 @@
 
 # Scala.js typings for rword
 
-Typings are for version 3.1.1
+Typings are for version 3.1.2
 
 ## Library description:
 A cryptographically secure random generator for real English words. Contains 370,000 words.

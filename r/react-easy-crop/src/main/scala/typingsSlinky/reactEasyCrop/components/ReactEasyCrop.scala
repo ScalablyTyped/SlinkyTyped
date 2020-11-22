@@ -7,7 +7,7 @@ import typingsSlinky.react.mod.ImgHTMLAttributes
 import typingsSlinky.react.mod.VideoHTMLAttributes
 import typingsSlinky.reactEasyCrop.anon.ContainerClassName
 import typingsSlinky.reactEasyCrop.anon.ContainerStyle
-import typingsSlinky.reactEasyCrop.mod.Props
+import typingsSlinky.reactEasyCrop.mod.CropperProps
 import typingsSlinky.reactEasyCrop.mod.default
 import typingsSlinky.reactEasyCrop.reactEasyCropStrings.rect
 import typingsSlinky.reactEasyCrop.reactEasyCropStrings.round
@@ -43,7 +43,13 @@ object ReactEasyCrop {
     def initialCroppedAreaPixels(value: Area): this.type = set("initialCroppedAreaPixels", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def onCropAreaChange(value: (/* croppedArea */ Area, /* croppedAreaPixels */ Area) => Unit): this.type = set("onCropAreaChange", js.Any.fromFunction2(value))
+    
+    @scala.inline
     def onCropComplete(value: (/* croppedArea */ Area, /* croppedAreaPixels */ Area) => Unit): this.type = set("onCropComplete", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def onCropSizeChange(value: /* cropSize */ Size => Unit): this.type = set("onCropSizeChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def onInteractionEnd(value: () => Unit): this.type = set("onInteractionEnd", js.Any.fromFunction0(value))
@@ -73,7 +79,7 @@ object ReactEasyCrop {
     def zoomWithScroll(value: Boolean): this.type = set("zoomWithScroll", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: CropperProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
@@ -92,6 +98,6 @@ object ReactEasyCrop {
     zoomSpeed: Double
   ): Builder = {
     val __props = js.Dynamic.literal(aspect = aspect.asInstanceOf[js.Any], classes = classes.asInstanceOf[js.Any], crop = crop.asInstanceOf[js.Any], cropShape = cropShape.asInstanceOf[js.Any], maxZoom = maxZoom.asInstanceOf[js.Any], mediaProps = mediaProps.asInstanceOf[js.Any], minZoom = minZoom.asInstanceOf[js.Any], onCropChange = js.Any.fromFunction1(onCropChange), restrictPosition = restrictPosition.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], zoom = zoom.asInstanceOf[js.Any], zoomSpeed = zoomSpeed.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[CropperProps]))
   }
 }

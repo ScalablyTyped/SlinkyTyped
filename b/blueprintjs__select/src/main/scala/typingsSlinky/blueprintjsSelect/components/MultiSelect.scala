@@ -9,6 +9,8 @@ import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsSelect.anon.PartialIPopoverProps
 import typingsSlinky.blueprintjsSelect.anon.PartialITagInputProps
+import typingsSlinky.blueprintjsSelect.blueprintjsSelectStrings.first
+import typingsSlinky.blueprintjsSelect.blueprintjsSelectStrings.last
 import typingsSlinky.blueprintjsSelect.itemListRendererMod.IItemListRendererProps
 import typingsSlinky.blueprintjsSelect.itemRendererMod.IItemRendererProps
 import typingsSlinky.blueprintjsSelect.listItemsPropsMod.ItemsEqualProp
@@ -42,6 +44,9 @@ object MultiSelect {
     
     @scala.inline
     def createNewItemFromQuery(value: /* query */ String => T): this.type = set("createNewItemFromQuery", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def createNewItemPosition(value: first | last): this.type = set("createNewItemPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def createNewItemRenderer(
@@ -97,6 +102,9 @@ object MultiSelect {
     
     @scala.inline
     def onQueryChange(value: (/* query */ String, /* event */ js.UndefOr[ChangeEvent[HTMLInputElement]]) => Unit): this.type = set("onQueryChange", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def onRemove(value: (T, /* index */ Double) => Unit): this.type = set("onRemove", js.Any.fromFunction2(value))
     
     @scala.inline
     def openOnKeyDown(value: Boolean): this.type = set("openOnKeyDown", value.asInstanceOf[js.Any])

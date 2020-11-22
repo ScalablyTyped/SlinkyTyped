@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CustomScheme extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/custom-scheme
+  // Docs: https://electronjs.org/docs/api/structures/custom-scheme
   var privileges: js.UndefOr[Privileges] = js.native
   
   /**

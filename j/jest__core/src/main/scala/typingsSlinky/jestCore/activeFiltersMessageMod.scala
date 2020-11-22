@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/core/build/lib/active_filters_message", JSImport.Namespace)
+@JSImport("@jest/core/build/lib/activeFiltersMessage", JSImport.Namespace)
 @js.native
 object activeFiltersMessageMod extends js.Object {
   

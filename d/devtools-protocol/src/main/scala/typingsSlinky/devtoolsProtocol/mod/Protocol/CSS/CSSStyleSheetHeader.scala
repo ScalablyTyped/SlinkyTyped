@@ -35,6 +35,11 @@ trait CSSStyleSheetHeader extends js.Object {
   var hasSourceURL: js.UndefOr[Boolean] = js.native
   
   /**
+    * Whether this stylesheet is a constructed stylesheet (created using new CSSStyleSheet()).
+    */
+  var isConstructed: Boolean = js.native
+  
+  /**
     * Whether this stylesheet is created for STYLE tag by parser. This flag is not set for
     * document.written STYLE tags.
     */
@@ -43,8 +48,8 @@ trait CSSStyleSheetHeader extends js.Object {
   /**
     * Whether this stylesheet is mutable. Inline stylesheets become mutable
     * after they have been modified via CSSOM API.
-    * <link> element's stylesheets are never mutable. Constructed stylesheets
-    * (new CSSStyleSheet()) are mutable immediately after creation.
+    * <link> element's stylesheets become mutable only if DevTools modifies them.
+    * Constructed stylesheets (new CSSStyleSheet()) are mutable immediately after creation.
     */
   var isMutable: Boolean = js.native
   
@@ -101,6 +106,7 @@ object CSSStyleSheetHeader {
     endColumn: Double,
     endLine: Double,
     frameId: FrameId,
+    isConstructed: Boolean,
     isInline: Boolean,
     isMutable: Boolean,
     length: Double,
@@ -111,7 +117,7 @@ object CSSStyleSheetHeader {
     styleSheetId: StyleSheetId,
     title: String
   ): CSSStyleSheetHeader = {
-    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], endColumn = endColumn.asInstanceOf[js.Any], endLine = endLine.asInstanceOf[js.Any], frameId = frameId.asInstanceOf[js.Any], isInline = isInline.asInstanceOf[js.Any], isMutable = isMutable.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], sourceURL = sourceURL.asInstanceOf[js.Any], startColumn = startColumn.asInstanceOf[js.Any], startLine = startLine.asInstanceOf[js.Any], styleSheetId = styleSheetId.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], endColumn = endColumn.asInstanceOf[js.Any], endLine = endLine.asInstanceOf[js.Any], frameId = frameId.asInstanceOf[js.Any], isConstructed = isConstructed.asInstanceOf[js.Any], isInline = isInline.asInstanceOf[js.Any], isMutable = isMutable.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], sourceURL = sourceURL.asInstanceOf[js.Any], startColumn = startColumn.asInstanceOf[js.Any], startLine = startLine.asInstanceOf[js.Any], styleSheetId = styleSheetId.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[CSSStyleSheetHeader]
   }
   
@@ -141,6 +147,9 @@ object CSSStyleSheetHeader {
     
     @scala.inline
     def setFrameId(value: FrameId): Self = this.set("frameId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIsConstructed(value: Boolean): Self = this.set("isConstructed", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIsInline(value: Boolean): Self = this.set("isInline", value.asInstanceOf[js.Any])

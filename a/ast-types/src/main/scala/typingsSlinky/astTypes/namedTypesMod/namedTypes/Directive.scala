@@ -9,20 +9,23 @@ import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Node, 'type'> */
+@js.native
 trait Directive
   extends ASTNode
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.Directive
-  var value: DirectiveLiteralKind
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.Directive = js.native
+  
+  var value: DirectiveLiteralKind = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.Directive")
 @js.native
 object Directive extends TopLevel[Type[Directive]]
-

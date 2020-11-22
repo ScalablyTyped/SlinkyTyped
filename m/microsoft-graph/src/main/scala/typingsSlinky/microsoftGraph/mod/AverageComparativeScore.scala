@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AverageComparativeScore extends js.Object {
   
   // Average score within specified basis.
-  var averageScore: js.UndefOr[Double] = js.native
+  var averageScore: js.UndefOr[NullableOption[Double]] = js.native
   
   // Scope type. The possible values are: AllTenants, TotalSeats, IndustryTypes.
-  var basis: js.UndefOr[String] = js.native
+  var basis: js.UndefOr[NullableOption[String]] = js.native
 }
 object AverageComparativeScore {
   
@@ -37,15 +37,21 @@ object AverageComparativeScore {
     }
     
     @scala.inline
-    def setAverageScore(value: Double): Self = this.set("averageScore", value.asInstanceOf[js.Any])
+    def setAverageScore(value: NullableOption[Double]): Self = this.set("averageScore", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAverageScore: Self = this.set("averageScore", js.undefined)
     
     @scala.inline
-    def setBasis(value: String): Self = this.set("basis", value.asInstanceOf[js.Any])
+    def setAverageScoreNull: Self = this.set("averageScore", null)
+    
+    @scala.inline
+    def setBasis(value: NullableOption[String]): Self = this.set("basis", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBasis: Self = this.set("basis", js.undefined)
+    
+    @scala.inline
+    def setBasisNull: Self = this.set("basis", null)
   }
 }

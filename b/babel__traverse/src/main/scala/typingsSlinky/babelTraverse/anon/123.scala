@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSMappedType
+import typingsSlinky.babelTraverse.babelTraverseStrings.ObjectMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `123` extends js.Object {
   
-  var `type`: TSMappedType = js.native
+  var `type`: ObjectMethod = js.native
 }
 object `123` {
   
   @scala.inline
-  def apply(`type`: TSMappedType): `123` = {
+  def apply(`type`: ObjectMethod): `123` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`123`]
@@ -35,6 +35,6 @@ object `123` {
     }
     
     @scala.inline
-    def setType(value: TSMappedType): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ObjectMethod): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

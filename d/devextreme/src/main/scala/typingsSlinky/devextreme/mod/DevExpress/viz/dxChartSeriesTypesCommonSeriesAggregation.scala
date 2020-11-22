@@ -12,11 +12,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CommonSeries.aggregation */
+/**
+  * [descr:dxChartSeriesTypes.CommonSeries.aggregation]
+  */
 @js.native
 trait dxChartSeriesTypesCommonSeriesAggregation extends js.Object {
   
-  /** @name dxChartSeriesTypes.CommonSeries.aggregation.calculate */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.aggregation.calculate]
+    */
   var calculate: js.UndefOr[
     js.Function2[
       /* aggregationInfo */ chartPointAggregationInfoObject, 
@@ -25,10 +29,14 @@ trait dxChartSeriesTypesCommonSeriesAggregation extends js.Object {
     ]
   ] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.aggregation.enabled */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.aggregation.enabled]
+    */
   var enabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.aggregation.method */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.aggregation.method]
+    */
   var method: js.UndefOr[avg | count | max | min | ohlc | range | sum | custom] = js.native
 }
 object dxChartSeriesTypesCommonSeriesAggregation {

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Task protected () extends js.Object {
   /**
-    * ~~Creates a new task.~~
+    * Creates a new task.
     *
     * @deprecated Use the new constructors that allow specifying a scope for the task.
     *
@@ -342,6 +342,13 @@ class Task protected () extends js.Object {
     * The task's definition.
     */
   var definition: TaskDefinition = js.native
+  
+  /**
+    * A human-readable string which is rendered less prominently on a separate line in places
+    * where the task's name is displayed. Supports rendering of [theme icons](#ThemeIcon)
+    * via the `$(<name>)`-syntax.
+    */
+  var detail: js.UndefOr[String] = js.native
   
   /**
     * The task's execution engine

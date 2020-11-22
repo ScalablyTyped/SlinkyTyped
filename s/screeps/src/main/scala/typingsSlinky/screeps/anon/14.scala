@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `14` extends js.Object {
   
-  var filter: js.UndefOr[js.Any | String] = js.native
+  var filter: js.Any | String = js.native
 }
 object `14` {
   
   @scala.inline
-  def apply(): `14` = {
-    val __obj = js.Dynamic.literal()
+  def apply(filter: js.Any | String): `14` = {
+    val __obj = js.Dynamic.literal(filter = filter.asInstanceOf[js.Any])
     __obj.asInstanceOf[`14`]
   }
   
@@ -34,8 +34,5 @@ object `14` {
     
     @scala.inline
     def setFilter(value: js.Any | String): Self = this.set("filter", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteFilter: Self = this.set("filter", js.undefined)
   }
 }

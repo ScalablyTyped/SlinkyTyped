@@ -14,6 +14,8 @@ trait Environment extends js.Object {
   
   def beep(): Unit = js.native
   
+  val clipboard: Clipboard = js.native
+  
   val commands: CommandsRegistry = js.native
   
   val config: Configuration = js.native

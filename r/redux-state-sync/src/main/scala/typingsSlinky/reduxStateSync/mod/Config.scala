@@ -1,5 +1,6 @@
 package typingsSlinky.reduxStateSync.mod
 
+import typingsSlinky.broadcastChannel.broadcastChannelMod.BroadcastChannelOptions
 import typingsSlinky.redux.mod.AnyAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,7 @@ trait Config extends js.Object {
   
   var blacklist: js.UndefOr[js.Array[String]] = js.native
   
-  var broadcastChannelOption: js.UndefOr[js.Object | Null] = js.native
+  var broadcastChannelOption: js.UndefOr[BroadcastChannelOptions] = js.native
   
   var channel: js.UndefOr[String] = js.native
   
@@ -53,13 +54,10 @@ object Config {
     def deleteBlacklist: Self = this.set("blacklist", js.undefined)
     
     @scala.inline
-    def setBroadcastChannelOption(value: js.Object): Self = this.set("broadcastChannelOption", value.asInstanceOf[js.Any])
+    def setBroadcastChannelOption(value: BroadcastChannelOptions): Self = this.set("broadcastChannelOption", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBroadcastChannelOption: Self = this.set("broadcastChannelOption", js.undefined)
-    
-    @scala.inline
-    def setBroadcastChannelOptionNull: Self = this.set("broadcastChannelOption", null)
     
     @scala.inline
     def setChannel(value: String): Self = this.set("channel", value.asInstanceOf[js.Any])

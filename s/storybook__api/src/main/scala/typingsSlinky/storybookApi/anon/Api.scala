@@ -1,6 +1,7 @@
 package typingsSlinky.storybookApi.anon
 
 import typingsSlinky.storybookApi.mod.API
+import typingsSlinky.storybookApi.mod.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,12 +11,12 @@ trait Api extends js.Object {
   
   var api: API = js.native
   
-  var state: typingsSlinky.storybookApi.mod.State = js.native
+  var state: State = js.native
 }
 object Api {
   
   @scala.inline
-  def apply(api: API, state: typingsSlinky.storybookApi.mod.State): Api = {
+  def apply(api: API, state: State): Api = {
     val __obj = js.Dynamic.literal(api = api.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[Api]
   }
@@ -39,6 +40,6 @@ object Api {
     def setApi(value: API): Self = this.set("api", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setState(value: typingsSlinky.storybookApi.mod.State): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setState(value: State): Self = this.set("state", value.asInstanceOf[js.Any])
   }
 }

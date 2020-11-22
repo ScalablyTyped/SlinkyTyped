@@ -1,7 +1,7 @@
 
 # Scala.js typings for uifabric__foundation
 
-Typings are for version 7.7.40
+Typings are for version 7.9.20
 
 ## Library description:
 Foundation library for building Fabric components.

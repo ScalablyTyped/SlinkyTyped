@@ -38,6 +38,8 @@ trait PolarAngleAxisProps extends js.Object {
   
   var alignmentBaseline: js.UndefOr[String] = js.native
   
+  var allowDuplicatedCategory: js.UndefOr[Boolean] = js.native
+  
   var angle: js.UndefOr[Double] = js.native
   
   var angleAxisId: js.UndefOr[String | Double] = js.native
@@ -258,6 +260,12 @@ object PolarAngleAxisProps {
     
     @scala.inline
     def deleteAlignmentBaseline: Self = this.set("alignmentBaseline", js.undefined)
+    
+    @scala.inline
+    def setAllowDuplicatedCategory(value: Boolean): Self = this.set("allowDuplicatedCategory", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowDuplicatedCategory: Self = this.set("allowDuplicatedCategory", js.undefined)
     
     @scala.inline
     def setAngle(value: Double): Self = this.set("angle", value.asInstanceOf[js.Any])

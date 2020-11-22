@@ -92,7 +92,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
     /**
       * @hidden
       */
-    def _setCubeMapTextureParams(loadMipmap: Boolean): Unit = js.native
+    def _setCubeMapTextureParams(texture: InternalTexture, loadMipmap: Boolean): Unit = js.native
     
     def createCubeTexture(
       rootUrl: String,
@@ -108,7 +108,8 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       createPolynomials: Boolean,
       lodScale: Double,
       lodOffset: Double,
-      fallback: Nullable[InternalTexture]
+      fallback: Nullable[InternalTexture],
+      loaderOptions: js.Any
     ): InternalTexture = js.native
     def createCubeTexture(
       rootUrl: String,
@@ -124,7 +125,8 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       createPolynomials: Boolean,
       lodScale: Double,
       lodOffset: Double,
-      fallback: Nullable[InternalTexture]
+      fallback: Nullable[InternalTexture],
+      loaderOptions: js.Any
     ): InternalTexture = js.native
     def createCubeTexture(
       rootUrl: String,
@@ -167,7 +169,8 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       createPolynomials: Boolean,
       lodScale: Double,
       lodOffset: Double,
-      fallback: Nullable[InternalTexture]
+      fallback: Nullable[InternalTexture],
+      loaderOptions: js.Any
     ): InternalTexture = js.native
     /**
       * Creates a cube texture
@@ -237,6 +240,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       * @param lodScale defines the scale applied to environment texture. This manages the range of LOD level used for IBL according to the roughness
       * @param lodOffset defines the offset applied to environment texture. This manages first LOD level used for IBL according to the roughness
       * @param fallback defines texture to use while falling back when (compressed) texture file not found.
+      * @param loaderOptions options to be passed to the loader
       * @returns the cube texture as an InternalTexture
       */
     def createCubeTexture(
@@ -253,7 +257,8 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       createPolynomials: Boolean,
       lodScale: Double,
       lodOffset: Double,
-      fallback: Nullable[InternalTexture]
+      fallback: Nullable[InternalTexture],
+      loaderOptions: js.Any
     ): InternalTexture = js.native
   }
 }

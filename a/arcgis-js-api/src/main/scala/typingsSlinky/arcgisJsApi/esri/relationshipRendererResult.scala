@@ -38,14 +38,14 @@ trait relationshipRendererResult extends Object {
   var relationshipScheme: RelationshipScheme = js.native
   
   /**
-    * The renderer object representing the relationship visualization. Set this on a layer's `renderer` property to update its visualization.
+    * The renderer object representing the relationship visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-relationship.html#RendererResult)
     */
   var renderer: UniqueValueRenderer = js.native
   
   /**
-    * Describes each container or bin used in the visualization. Each unique value info object describes a class break for `field1` and `field2`. Therefore, features with the same color fall share will have values that fall in the same class break for `field1` and the same class break for `field2`.
+    * Describes each container or bin used in the visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-relationship.html#RendererResult)
     */

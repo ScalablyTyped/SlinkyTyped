@@ -18,6 +18,11 @@ trait Address extends js.Object {
   var AssociationId: js.UndefOr[String] = js.native
   
   /**
+    * The carrier IP address associated. This option is only available for network interfaces which reside in a subnet in a Wavelength Zone (for example an EC2 instance). 
+    */
+  var CarrierIp: js.UndefOr[String] = js.native
+  
+  /**
     * The customer-owned IP address.
     */
   var CustomerOwnedIp: js.UndefOr[String] = js.native
@@ -38,7 +43,7 @@ trait Address extends js.Object {
   var InstanceId: js.UndefOr[String] = js.native
   
   /**
-    * The name of the location from which the IP address is advertised.
+    * The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses. 
     */
   var NetworkBorderGroup: js.UndefOr[String] = js.native
   
@@ -106,6 +111,12 @@ object Address {
     
     @scala.inline
     def deleteAssociationId: Self = this.set("AssociationId", js.undefined)
+    
+    @scala.inline
+    def setCarrierIp(value: String): Self = this.set("CarrierIp", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCarrierIp: Self = this.set("CarrierIp", js.undefined)
     
     @scala.inline
     def setCustomerOwnedIp(value: String): Self = this.set("CustomerOwnedIp", value.asInstanceOf[js.Any])

@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsCore.opsMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object expandDims extends js.Object {
   
-  def apply[R2 /* <: Rank */](x: TensorLike): Tensor[R2] = js.native
-  def apply[R2 /* <: Rank */](x: TensorLike, axis: Double): Tensor[R2] = js.native
-  def apply[R2 /* <: Rank */](x: Tensor[Rank]): Tensor[R2] = js.native
-  def apply[R2 /* <: Rank */](x: Tensor[Rank], axis: Double): Tensor[R2] = js.native
+  def apply[T /* <: Tensor[Rank] */](x: Tensor[Rank]): T = js.native
+  def apply[T /* <: Tensor[Rank] */](x: Tensor[Rank], axis: Double): T = js.native
+  def apply[T /* <: Tensor[Rank] */](x: TensorLike): T = js.native
+  def apply[T /* <: Tensor[Rank] */](x: TensorLike, axis: Double): T = js.native
 }

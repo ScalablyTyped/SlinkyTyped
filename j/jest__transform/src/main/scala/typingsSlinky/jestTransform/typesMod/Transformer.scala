@@ -13,8 +13,16 @@ trait Transformer extends js.Object {
   
   var createTransformer: js.UndefOr[js.Function1[/* options */ js.UndefOr[js.Any], this.type]] = js.native
   
-  def getCacheKey(fileData: String, filePath: Path, configStr: String, options: CacheKeyOptions): String = js.native
+  var getCacheKey: js.UndefOr[
+    js.Function4[
+      /* fileData */ String, 
+      /* filePath */ Path, 
+      /* configStr */ String, 
+      /* options */ CacheKeyOptions, 
+      String
+    ]
+  ] = js.native
   
-  def process(sourceText: String, sourcePath: Path, config: ProjectConfig): String | TransformedSource = js.native
-  def process(sourceText: String, sourcePath: Path, config: ProjectConfig, options: TransformOptions): String | TransformedSource = js.native
+  def process(sourceText: String, sourcePath: Path, config: ProjectConfig): TransformedSource = js.native
+  def process(sourceText: String, sourcePath: Path, config: ProjectConfig, options: TransformOptions): TransformedSource = js.native
 }

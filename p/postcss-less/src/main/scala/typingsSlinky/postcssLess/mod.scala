@@ -48,6 +48,14 @@ object mod extends js.Object {
   
   // @see https://github.com/shellscape/postcss-less/blob/v3.1.4/lib/LessParser.js#L187
   @js.native
+  trait ExtendDeclaration
+    extends typingsSlinky.postcss.mod.Declaration {
+    
+    var extend: `true` = js.native
+  }
+  
+  // @see https://github.com/shellscape/postcss-less/blob/v3.1.4/lib/LessParser.js#L187
+  @js.native
   trait ExtendRule extends Rule_ {
     
     var extend: `true` = js.native
@@ -99,10 +107,14 @@ object mod extends js.Object {
     extends AtRule_
        with AtRule {
     
+    var value: String = js.native
+    
     var variable: `true` = js.native
   }
   
   type Comment = InlineComment
+  
+  type Declaration = ExtendDeclaration
   
   type Rule = ExtendRule
 }

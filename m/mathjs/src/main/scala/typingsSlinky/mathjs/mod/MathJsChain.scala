@@ -571,12 +571,7 @@ trait MathJsChain extends js.Object {
     * Filter the items in an array or one dimensional matrix.
     */
   def filter(
-    test: js.Function3[
-      /* value */ js.Any, 
-      /* index */ js.Any, 
-      /* matrix */ Matrix | MathArray, 
-      Matrix | MathArray
-    ]
+    test: js.Function3[/* value */ js.Any, /* index */ js.Any, /* matrix */ Matrix | MathArray, Boolean]
   ): MathJsChain = js.native
   def filter(test: js.RegExp): MathJsChain = js.native
   
@@ -1193,7 +1188,6 @@ trait MathJsChain extends js.Object {
     * @param min Minimum boundary for the random value, included
     * @param max Maximum boundary for the random value, excluded
     */
-  // tslint:disable-next-line unified-signatures
   def random(): MathJsChain = js.native
   def random(max: Double): MathJsChain = js.native
   // tslint:disable-next-line unified-signatures
@@ -1205,7 +1199,6 @@ trait MathJsChain extends js.Object {
     * @param min Minimum boundary for the random value, included
     * @param max Maximum boundary for the random value, excluded
     */
-  // tslint:disable-next-line unified-signatures
   def randomInt(): MathJsChain = js.native
   def randomInt(max: Double): MathJsChain = js.native
   // tslint:disable-next-line unified-signatures

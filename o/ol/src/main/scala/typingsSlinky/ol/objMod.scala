@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object objMod extends js.Object {
   
+  def assign(target: js.Any, var_sources: js.Any*): js.Any = js.native
+  
   def clear(`object`: js.Any): Unit = js.native
   
   def getValues[V](

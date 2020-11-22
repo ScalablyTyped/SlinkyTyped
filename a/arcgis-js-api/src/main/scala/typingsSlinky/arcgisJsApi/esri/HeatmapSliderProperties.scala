@@ -15,7 +15,7 @@ trait HeatmapSliderProperties extends WidgetProperties {
   var stops: js.UndefOr[js.Array[HeatmapColorStopProperties]] = js.native
   
   /**
-    * The view model for the Heatmap widget. This class contains all the logic (properties and methods) that controls this widget's behavior. See the module:esri/widgets/smartMapping/HeatmapSlider/HeatmapliderViewModel class to access all properties and methods on the HeatmapSlider widget.
+    * The view model for the Heatmap widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-HeatmapSlider.html#viewModel)
     */

@@ -16,27 +16,41 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxToolbarItem extends CollectionWidgetItem {
   
-  /** @name dxToolbarItem.cssClass */
+  /**
+    * [descr:dxToolbarItem.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name dxToolbarItem.locateInMenu */
+  /**
+    * [descr:dxToolbarItem.locateInMenu]
+    */
   var locateInMenu: js.UndefOr[always | auto | never] = js.native
   
-  /** @name dxToolbarItem.location */
+  /**
+    * [descr:dxToolbarItem.location]
+    */
   var location: js.UndefOr[after | before | center] = js.native
   
-  /** @name dxToolbarItem.menuItemTemplate */
+  /**
+    * [descr:dxToolbarItem.menuItemTemplate]
+    */
   var menuItemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function0[String | Element | JQuery])
   ] = js.native
   
-  /** @name dxToolbarItem.options */
+  /**
+    * [descr:dxToolbarItem.options]
+    */
   var options: js.UndefOr[js.Any] = js.native
   
-  /** @name dxToolbarItem.showText */
+  /**
+    * [descr:dxToolbarItem.showText]
+    */
   var showText: js.UndefOr[always | inMenu] = js.native
   
-  /** @name dxToolbarItem.widget */
+  /**
+    * [descr:dxToolbarItem.widget]
+    */
   var widget: js.UndefOr[
     typingsSlinky.devextreme.devextremeStrings.dxAutocomplete | typingsSlinky.devextreme.devextremeStrings.dxButton | typingsSlinky.devextreme.devextremeStrings.dxCheckBox | typingsSlinky.devextreme.devextremeStrings.dxDateBox | typingsSlinky.devextreme.devextremeStrings.dxMenu | typingsSlinky.devextreme.devextremeStrings.dxSelectBox | typingsSlinky.devextreme.devextremeStrings.dxTabs | typingsSlinky.devextreme.devextremeStrings.dxTextBox | typingsSlinky.devextreme.devextremeStrings.dxButtonGroup | typingsSlinky.devextreme.devextremeStrings.dxDropDownButton
   ] = js.native

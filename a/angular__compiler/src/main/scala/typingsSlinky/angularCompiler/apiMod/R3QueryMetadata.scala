@@ -19,7 +19,8 @@ trait R3QueryMetadata extends js.Object {
   var first: Boolean = js.native
   
   /**
-    * Either an expression representing a type for the query predicate, or a set of string selectors.
+    * Either an expression representing a type or `InjectionToken` for the query
+    * predicate, or a set of string selectors.
     */
   var predicate: Expression | js.Array[String] = js.native
   

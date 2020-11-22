@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait NodeWithTypeArguments extends TypeNode {
   
-  var typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
+  val typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
 }

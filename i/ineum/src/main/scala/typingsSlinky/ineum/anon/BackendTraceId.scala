@@ -17,6 +17,8 @@ trait BackendTraceId extends js.Object {
   var error: js.UndefOr[js.Error] = js.native
   
   var meta: js.UndefOr[StringDictionary[String | Double | Boolean]] = js.native
+  
+  var timestamp: js.UndefOr[Double] = js.native
 }
 object BackendTraceId {
   
@@ -70,5 +72,11 @@ object BackendTraceId {
     
     @scala.inline
     def deleteMeta: Self = this.set("meta", js.undefined)
+    
+    @scala.inline
+    def setTimestamp(value: Double): Self = this.set("timestamp", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimestamp: Self = this.set("timestamp", js.undefined)
   }
 }

@@ -12,14 +12,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PortalItemFetchRelatedItemsParams extends Object {
   
   /**
-    * The direction of the relationship. Can either be `forward` (from origin to destination) or `reverse` (from destination to origin).
+    * The direction of the relationship.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#fetchRelatedItems)
     */
   var direction: forward | reverse = js.native
   
   /**
-    * The type of relationship between the two items. See [Relationship types](https://developers.arcgis.com/rest/users-groups-and-items/relationship-types.htm) for a complete listing of types.
+    * The type of relationship between the two items.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#fetchRelatedItems)
     */

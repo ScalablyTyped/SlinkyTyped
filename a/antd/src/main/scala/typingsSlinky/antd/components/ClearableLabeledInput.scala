@@ -6,10 +6,11 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.input
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.clearableLabeledInputMod.ClearableInputProps
 import typingsSlinky.antd.clearableLabeledInputMod.default
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderContextMod.DirectionType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,7 +45,7 @@ object ClearableLabeledInput {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def direction(value: js.Any): this.type = set("direction", value.asInstanceOf[js.Any])
+    def direction(value: DirectionType): this.type = set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -84,7 +85,7 @@ object ClearableLabeledInput {
     bordered: Boolean,
     element: ReactElement,
     handleReset: SyntheticMouseEvent[HTMLElement] => Unit,
-    inputType: text | input,
+    inputType: text_ | input,
     prefixCls: String,
     triggerFocus: () => Unit
   ): Builder = {

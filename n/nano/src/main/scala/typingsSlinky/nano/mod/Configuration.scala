@@ -1,6 +1,5 @@
 package typingsSlinky.nano.mod
 
-import typingsSlinky.request.mod.CoreOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +15,7 @@ trait Configuration extends js.Object {
   
   var request: js.UndefOr[js.Function1[/* params */ js.Any, Unit]] = js.native
   
-  var requestDefaults: js.UndefOr[CoreOptions] = js.native
+  var requestDefaults: js.UndefOr[requestDefaultsOptions] = js.native
   
   var url: String = js.native
 }
@@ -71,7 +70,7 @@ object Configuration {
     def deleteRequest: Self = this.set("request", js.undefined)
     
     @scala.inline
-    def setRequestDefaults(value: CoreOptions): Self = this.set("requestDefaults", value.asInstanceOf[js.Any])
+    def setRequestDefaults(value: requestDefaultsOptions): Self = this.set("requestDefaults", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRequestDefaults: Self = this.set("requestDefaults", js.undefined)

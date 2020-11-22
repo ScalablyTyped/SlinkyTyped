@@ -40,6 +40,11 @@ trait DescribeStateMachineOutput extends js.Object {
   var status: js.UndefOr[StateMachineStatus] = js.native
   
   /**
+    * Selects whether AWS X-Ray tracing is enabled.
+    */
+  var tracingConfiguration: js.UndefOr[TracingConfiguration] = js.native
+  
+  /**
     * The type of the state machine (STANDARD or EXPRESS).
     */
   var `type`: StateMachineType = js.native
@@ -104,5 +109,11 @@ object DescribeStateMachineOutput {
     
     @scala.inline
     def deleteStatus: Self = this.set("status", js.undefined)
+    
+    @scala.inline
+    def setTracingConfiguration(value: TracingConfiguration): Self = this.set("tracingConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTracingConfiguration: Self = this.set("tracingConfiguration", js.undefined)
   }
 }

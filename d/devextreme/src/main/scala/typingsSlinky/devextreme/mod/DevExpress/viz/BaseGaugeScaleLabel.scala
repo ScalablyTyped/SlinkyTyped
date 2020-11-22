@@ -8,26 +8,40 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseGauge.Options.scale.label */
+/**
+  * [descr:BaseGauge.Options.scale.label]
+  */
 @js.native
 trait BaseGaugeScaleLabel extends js.Object {
   
-  /** @name BaseGauge.Options.scale.label.customizeText */
+  /**
+    * [descr:BaseGauge.Options.scale.label.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* scaleValue */ ValueText, String]] = js.native
   
-  /** @name BaseGauge.Options.scale.label.font */
+  /**
+    * [descr:BaseGauge.Options.scale.label.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name BaseGauge.Options.scale.label.format */
+  /**
+    * [descr:BaseGauge.Options.scale.label.format]
+    */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
   
-  /** @name BaseGauge.Options.scale.label.overlappingBehavior */
+  /**
+    * [descr:BaseGauge.Options.scale.label.overlappingBehavior]
+    */
   var overlappingBehavior: js.UndefOr[hide | none] = js.native
   
-  /** @name BaseGauge.Options.scale.label.useRangeColors */
+  /**
+    * [descr:BaseGauge.Options.scale.label.useRangeColors]
+    */
   var useRangeColors: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseGauge.Options.scale.label.visible */
+  /**
+    * [descr:BaseGauge.Options.scale.label.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object BaseGaugeScaleLabel {

@@ -9,6 +9,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactAutosuggest.mod.InputProps
 import typingsSlinky.reactAutosuggest.mod.RenderSuggestionParams
 import typingsSlinky.reactAutosuggest.mod.RenderSuggestionsContainerParams
+import typingsSlinky.reactAutosuggest.mod.ShouldRenderReasons
 import typingsSlinky.reactAutosuggest.mod.SuggestionHighlightedParams
 import typingsSlinky.reactAutosuggest.mod.SuggestionSelectedEventData
 import typingsSlinky.reactAutosuggest.mod.SuggestionsFetchRequestedParams
@@ -69,7 +70,7 @@ object ReactAutosuggest {
       def renderSuggestionsContainer(value: /* params */ RenderSuggestionsContainerParams => ReactElement): this.type = set("renderSuggestionsContainer", js.Any.fromFunction1(value))
       
       @scala.inline
-      def shouldRenderSuggestions(value: /* value */ String => Boolean): this.type = set("shouldRenderSuggestions", js.Any.fromFunction1(value))
+      def shouldRenderSuggestions(value: (/* value */ String, /* reason */ ShouldRenderReasons) => Boolean): this.type = set("shouldRenderSuggestions", js.Any.fromFunction2(value))
       
       @scala.inline
       def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])
@@ -135,7 +136,7 @@ object ReactAutosuggest {
       def renderSuggestionsContainer(value: /* params */ RenderSuggestionsContainerParams => ReactElement): this.type = set("renderSuggestionsContainer", js.Any.fromFunction1(value))
       
       @scala.inline
-      def shouldRenderSuggestions(value: /* value */ String => Boolean): this.type = set("shouldRenderSuggestions", js.Any.fromFunction1(value))
+      def shouldRenderSuggestions(value: (/* value */ String, /* reason */ ShouldRenderReasons) => Boolean): this.type = set("shouldRenderSuggestions", js.Any.fromFunction2(value))
       
       @scala.inline
       def theme(value: Theme): this.type = set("theme", value.asInstanceOf[js.Any])

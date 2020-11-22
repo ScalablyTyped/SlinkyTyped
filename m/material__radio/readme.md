@@ -1,7 +1,7 @@
 
 # Scala.js typings for material__radio
 
-Typings are for version 7.0.0
+Typings are for version 8.0.0
 
 ## Library description:
 The Material Components for the web radio component

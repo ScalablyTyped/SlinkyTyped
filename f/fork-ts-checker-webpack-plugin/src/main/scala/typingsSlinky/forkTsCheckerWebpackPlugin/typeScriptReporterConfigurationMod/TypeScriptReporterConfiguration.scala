@@ -32,6 +32,8 @@ trait TypeScriptReporterConfiguration extends js.Object {
   var mode: readonly | `write-tsbuildinfo` | `write-references` = js.native
   
   var profile: Boolean = js.native
+  
+  var typescriptPath: String = js.native
 }
 object TypeScriptReporterConfiguration {
   
@@ -46,9 +48,10 @@ object TypeScriptReporterConfiguration {
     extensions: Vue,
     memoryLimit: Double,
     mode: readonly | `write-tsbuildinfo` | `write-references`,
-    profile: Boolean
+    profile: Boolean,
+    typescriptPath: String
   ): TypeScriptReporterConfiguration = {
-    val __obj = js.Dynamic.literal(build = build.asInstanceOf[js.Any], configFile = configFile.asInstanceOf[js.Any], configOverwrite = configOverwrite.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], diagnosticOptions = diagnosticOptions.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any], extensions = extensions.asInstanceOf[js.Any], memoryLimit = memoryLimit.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], profile = profile.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(build = build.asInstanceOf[js.Any], configFile = configFile.asInstanceOf[js.Any], configOverwrite = configOverwrite.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], diagnosticOptions = diagnosticOptions.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any], extensions = extensions.asInstanceOf[js.Any], memoryLimit = memoryLimit.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], profile = profile.asInstanceOf[js.Any], typescriptPath = typescriptPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeScriptReporterConfiguration]
   }
   
@@ -96,5 +99,8 @@ object TypeScriptReporterConfiguration {
     
     @scala.inline
     def setProfile(value: Boolean): Self = this.set("profile", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTypescriptPath(value: String): Self = this.set("typescriptPath", value.asInstanceOf[js.Any])
   }
 }

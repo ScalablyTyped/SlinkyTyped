@@ -1,11 +1,11 @@
 package typingsSlinky.officeUiFabricReact.textFieldTypesMod
 
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Required<std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/TextField/TextField.types.ITextFieldProps, 'theme'>> & std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/TextField/TextField.types.ITextFieldProps, 'className' | 'disabled' | 'inputClassName' | 'required' | 'multiline' | 'borderless' | 'resizable' | 'underlined' | 'autoAdjustHeight'> & {  hasErrorMessage :boolean | undefined,   hasIcon :boolean | undefined,   hasLabel :boolean | undefined,   focused :boolean | undefined} */
+/* Inlined std.Required<std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/TextField/TextField.types.ITextFieldProps, 'theme'>> & std.Pick<office-ui-fabric-react.office-ui-fabric-react/lib/components/TextField/TextField.types.ITextFieldProps, 'className' | 'disabled' | 'inputClassName' | 'required' | 'multiline' | 'borderless' | 'resizable' | 'underlined' | 'autoAdjustHeight'> & {  hasErrorMessage :boolean | undefined,   hasIcon :boolean | undefined,   hasLabel :boolean | undefined,   focused :boolean | undefined,   hasRevealButton :boolean | undefined} */
 @js.native
 trait ITextFieldStyleProps extends js.Object {
   
@@ -28,6 +28,9 @@ trait ITextFieldStyleProps extends js.Object {
   
   /** Element has a label. */
   var hasLabel: js.UndefOr[Boolean] = js.native
+  
+  /** Element has a peek button for passwords */
+  var hasRevealButton: js.UndefOr[Boolean] = js.native
   
   var inputClassName: js.UndefOr[String] = js.native
   
@@ -114,6 +117,12 @@ object ITextFieldStyleProps {
     
     @scala.inline
     def deleteHasLabel: Self = this.set("hasLabel", js.undefined)
+    
+    @scala.inline
+    def setHasRevealButton(value: Boolean): Self = this.set("hasRevealButton", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHasRevealButton: Self = this.set("hasRevealButton", js.undefined)
     
     @scala.inline
     def setInputClassName(value: String): Self = this.set("inputClassName", value.asInstanceOf[js.Any])

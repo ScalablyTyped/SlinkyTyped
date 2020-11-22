@@ -24,17 +24,6 @@ class TmplAstTemplate protected ()
     children: js.Array[Node],
     references: js.Array[Reference],
     variables: js.Array[Variable],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     startSourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
@@ -48,77 +37,8 @@ class TmplAstTemplate protected ()
     references: js.Array[Reference],
     variables: js.Array[Variable],
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     startSourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     endSourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: Null,
-    i18n: Message
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: Null,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    i18n: Message
-  ) = this()
-  def this(
-    tagName: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    templateAttrs: js.Array[BoundAttribute | TextAttribute],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    variables: js.Array[Variable],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
   ) = this()
   def this(
     tagName: String,

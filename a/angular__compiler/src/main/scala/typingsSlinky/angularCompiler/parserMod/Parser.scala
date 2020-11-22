@@ -31,6 +31,8 @@ class Parser protected () extends js.Object {
   
   var checkSimpleExpression: js.Any = js.native
   
+  var createInterpolationAst: js.Any = js.native
+  
   var errors: js.Any = js.native
   
   def parseAction(input: String, location: js.Any, absoluteOffset: Double): ASTWithSource = js.native
@@ -41,6 +43,13 @@ class Parser protected () extends js.Object {
   
   def parseInterpolation(input: String, location: js.Any, absoluteOffset: Double): ASTWithSource | Null = js.native
   def parseInterpolation(input: String, location: js.Any, absoluteOffset: Double, interpolationConfig: InterpolationConfig): ASTWithSource | Null = js.native
+  
+  /**
+    * Similar to `parseInterpolation`, but treats the provided string as a single expression
+    * element that would normally appear within the interpolation prefix and suffix (`{{` and `}}`).
+    * This is used for parsing the switch expression in ICUs.
+    */
+  def parseInterpolationExpression(expression: String, location: js.Any, absoluteOffset: Double): ASTWithSource = js.native
   
   def parseSimpleBinding(input: String, location: String, absoluteOffset: Double): ASTWithSource = js.native
   def parseSimpleBinding(input: String, location: String, absoluteOffset: Double, interpolationConfig: InterpolationConfig): ASTWithSource = js.native
@@ -81,6 +90,13 @@ class Parser protected () extends js.Object {
   
   var simpleExpressionChecker: Instantiable0[SimpleExpressionChecker] = js.native
   
+  /**
+    * Splits a string of text into "raw" text segments and expressions present in interpolations in
+    * the string.
+    * Returns `null` if there are no interpolations, otherwise a
+    * `SplitInterpolation` with splits that look like
+    *   <raw text> <expression> <raw text> ... <raw text> <expression> <raw text>
+    */
   def splitInterpolation(input: String, location: String): SplitInterpolation | Null = js.native
   def splitInterpolation(input: String, location: String, interpolationConfig: InterpolationConfig): SplitInterpolation | Null = js.native
   

@@ -33,6 +33,7 @@ trait Lines extends js.Object {
   def text(times: Double): String = js.native
   
   def word(): String = js.native
+  def word(length: Double): String = js.native
   
   def words(): String = js.native
   def words(num: Double): String = js.native

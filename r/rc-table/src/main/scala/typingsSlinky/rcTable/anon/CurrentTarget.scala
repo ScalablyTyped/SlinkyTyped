@@ -1,6 +1,6 @@
 package typingsSlinky.rcTable.anon
 
-import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,15 +8,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CurrentTarget extends js.Object {
   
-  var currentTarget: js.UndefOr[HTMLElement] = js.native
+  var currentTarget: HTMLDivElement = js.native
   
   var scrollLeft: js.UndefOr[Double] = js.native
 }
 object CurrentTarget {
   
   @scala.inline
-  def apply(): CurrentTarget = {
-    val __obj = js.Dynamic.literal()
+  def apply(currentTarget: HTMLDivElement): CurrentTarget = {
+    val __obj = js.Dynamic.literal(currentTarget = currentTarget.asInstanceOf[js.Any])
     __obj.asInstanceOf[CurrentTarget]
   }
   
@@ -36,10 +36,7 @@ object CurrentTarget {
     }
     
     @scala.inline
-    def setCurrentTarget(value: HTMLElement): Self = this.set("currentTarget", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCurrentTarget: Self = this.set("currentTarget", js.undefined)
+    def setCurrentTarget(value: HTMLDivElement): Self = this.set("currentTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setScrollLeft(value: Double): Self = this.set("scrollLeft", value.asInstanceOf[js.Any])

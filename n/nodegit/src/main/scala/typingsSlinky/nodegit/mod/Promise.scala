@@ -18,7 +18,7 @@ class Promise[T] protected ()
     * and a reject callback used to reject the promise with a provided reason or error.
     */
   def this(executor: js.Function2[
-        /* resolve */ js.Function1[/* value */ js.UndefOr[T | js.Thenable[T]], Unit], 
+        /* resolve */ js.Function1[/* value */ T | js.Thenable[T], Unit], 
         /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
         Unit
       ]) = this()
@@ -30,9 +30,7 @@ object Promise
       PromiseConstructor with (Instantiable1[
         /* executor */ js.Function2[
           /* resolve */ js.Function1[
-            /* value */ js.UndefOr[
-              (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
-            ], 
+            /* value */ (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]), 
             Unit
           ], 
           /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 

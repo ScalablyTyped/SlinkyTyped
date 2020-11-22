@@ -3,6 +3,7 @@ package typingsSlinky.chaiAsPromised
 import typingsSlinky.chai.Chai.LanguageChains
 import typingsSlinky.chai.Chai.NumericComparison
 import typingsSlinky.chai.Chai.TypeComparison
+import typingsSlinky.std.PromiseLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -934,8 +935,8 @@ object Chai extends js.Object {
   
   @js.native
   trait PromisedAssertion
-    extends js.Thenable[js.Any]
-       with Eventually
+    extends Eventually
+       with PromiseLike[js.Any]
   
   @js.native
   trait PromisedDeep extends js.Object {

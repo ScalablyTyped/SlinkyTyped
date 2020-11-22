@@ -24,6 +24,8 @@ trait SiemaOptions extends js.Object {
   
   var perPage: js.UndefOr[Double | PageInterface] = js.native
   
+  var rtl: js.UndefOr[Boolean] = js.native
+  
   var selector: js.UndefOr[String | HTMLElement] = js.native
   
   var startIndex: js.UndefOr[Double] = js.native
@@ -100,6 +102,12 @@ object SiemaOptions {
     
     @scala.inline
     def deletePerPage: Self = this.set("perPage", js.undefined)
+    
+    @scala.inline
+    def setRtl(value: Boolean): Self = this.set("rtl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRtl: Self = this.set("rtl", js.undefined)
     
     @scala.inline
     def setSelectorHTMLElement(value: HTMLElement): Self = this.set("selector", value.asInstanceOf[js.Any])

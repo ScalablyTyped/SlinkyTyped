@@ -16,32 +16,36 @@ object utilsMod extends js.Object {
   def createTestService(app: FirebaseApp): Service = js.native
   def createTestService(
     app: FirebaseApp,
-    region: js.UndefOr[scala.Nothing],
+    regionOrCustomDomain: js.UndefOr[scala.Nothing],
     authProvider: Provider[`auth-internal`],
     messagingProvider: Provider[messaging]
   ): Service = js.native
-  def createTestService(app: FirebaseApp, region: String): Service = js.native
+  def createTestService(app: FirebaseApp, regionOrCustomDomain: String): Service = js.native
   def createTestService(
     app: FirebaseApp,
-    region: String,
+    regionOrCustomDomain: String,
     authProvider: Provider[`auth-internal`],
     messagingProvider: Provider[messaging]
   ): Service = js.native
   @JSName("createTestService")
-  def createTestService_authinternal(app: FirebaseApp, region: js.UndefOr[scala.Nothing], authProvider: Provider[`auth-internal`]): Service = js.native
+  def createTestService_authinternal(
+    app: FirebaseApp,
+    regionOrCustomDomain: js.UndefOr[scala.Nothing],
+    authProvider: Provider[`auth-internal`]
+  ): Service = js.native
   @JSName("createTestService")
-  def createTestService_authinternal(app: FirebaseApp, region: String, authProvider: Provider[`auth-internal`]): Service = js.native
+  def createTestService_authinternal(app: FirebaseApp, regionOrCustomDomain: String, authProvider: Provider[`auth-internal`]): Service = js.native
   @JSName("createTestService")
   def createTestService_messaging(
     app: FirebaseApp,
-    region: js.UndefOr[scala.Nothing],
+    regionOrCustomDomain: js.UndefOr[scala.Nothing],
     authProvider: js.UndefOr[scala.Nothing],
     messagingProvider: Provider[messaging]
   ): Service = js.native
   @JSName("createTestService")
   def createTestService_messaging(
     app: FirebaseApp,
-    region: String,
+    regionOrCustomDomain: String,
     authProvider: js.UndefOr[scala.Nothing],
     messagingProvider: Provider[messaging]
   ): Service = js.native

@@ -1,7 +1,7 @@
 
 # Scala.js typings for get-urls
 
-Typings are for version 9.2.1
+Typings are for version 10.0.0
 
 ## Library description:
 Get all URLs in a string

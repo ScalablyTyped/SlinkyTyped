@@ -18,6 +18,11 @@ trait Target extends js.Object {
   var BatchParameters: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.BatchParameters] = js.native
   
   /**
+    * The DeadLetterConfig that defines the target queue to send dead-letter queue events to.
+    */
+  var DeadLetterConfig: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.DeadLetterConfig] = js.native
+  
+  /**
     * Contains the Amazon ECS task definition and task count to be used, if the event target is an Amazon ECS task. For more information about Amazon ECS tasks, see Task Definitions  in the Amazon EC2 Container Service Developer Guide.
     */
   var EcsParameters: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.EcsParameters] = js.native
@@ -51,6 +56,16 @@ trait Target extends js.Object {
     * The custom parameter you can use to control the shard assignment, when the target is a Kinesis data stream. If you do not include this parameter, the default is to use the eventId as the partition key.
     */
   var KinesisParameters: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.KinesisParameters] = js.native
+  
+  /**
+    * Contains the Redshift Data API parameters to use when the target is a Redshift cluster. If you specify a Redshift Cluster as a Target, you can use this to specify parameters to invoke the Redshift Data API ExecuteStatement based on EventBridge events.
+    */
+  var RedshiftDataParameters: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.RedshiftDataParameters] = js.native
+  
+  /**
+    * The RetryPolicy object that contains the retry policy configuration to use for the dead-letter queue.
+    */
+  var RetryPolicy: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.RetryPolicy] = js.native
   
   /**
     * The Amazon Resource Name (ARN) of the IAM role to be used for this target when the rule is triggered. If one rule triggers multiple targets, you can use a different IAM role for each target.
@@ -103,6 +118,12 @@ object Target {
     def deleteBatchParameters: Self = this.set("BatchParameters", js.undefined)
     
     @scala.inline
+    def setDeadLetterConfig(value: DeadLetterConfig): Self = this.set("DeadLetterConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeadLetterConfig: Self = this.set("DeadLetterConfig", js.undefined)
+    
+    @scala.inline
     def setEcsParameters(value: EcsParameters): Self = this.set("EcsParameters", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -137,6 +158,18 @@ object Target {
     
     @scala.inline
     def deleteKinesisParameters: Self = this.set("KinesisParameters", js.undefined)
+    
+    @scala.inline
+    def setRedshiftDataParameters(value: RedshiftDataParameters): Self = this.set("RedshiftDataParameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRedshiftDataParameters: Self = this.set("RedshiftDataParameters", js.undefined)
+    
+    @scala.inline
+    def setRetryPolicy(value: RetryPolicy): Self = this.set("RetryPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRetryPolicy: Self = this.set("RetryPolicy", js.undefined)
     
     @scala.inline
     def setRoleArn(value: RoleArn): Self = this.set("RoleArn", value.asInstanceOf[js.Any])

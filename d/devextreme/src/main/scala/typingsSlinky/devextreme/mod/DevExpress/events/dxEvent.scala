@@ -8,34 +8,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxEvent extends event {
   
-  /** @name dxEvent.currentTarget */
+  /**
+    * [descr:dxEvent.currentTarget]
+    */
   var currentTarget: Element = js.native
   
-  /** @name dxEvent.data */
+  /**
+    * [descr:dxEvent.data]
+    */
   var data: js.Any = js.native
   
-  /** @name dxEvent.delegateTarget */
+  /**
+    * [descr:dxEvent.delegateTarget]
+    */
   var delegateTarget: Element = js.native
   
-  /** @name dxEvent.isDefaultPrevented() */
+  /**
+    * [descr:dxEvent.isDefaultPrevented()]
+    */
   def isDefaultPrevented(): Boolean = js.native
   
-  /** @name dxEvent.isImmediatePropagationStopped() */
+  /**
+    * [descr:dxEvent.isImmediatePropagationStopped()]
+    */
   def isImmediatePropagationStopped(): Boolean = js.native
   
-  /** @name dxEvent.isPropagationStopped() */
+  /**
+    * [descr:dxEvent.isPropagationStopped()]
+    */
   def isPropagationStopped(): Boolean = js.native
   
-  /** @name dxEvent.preventDefault() */
+  /**
+    * [descr:dxEvent.preventDefault()]
+    */
   def preventDefault(): Unit = js.native
   
-  /** @name dxEvent.stopImmediatePropagation() */
+  /**
+    * [descr:dxEvent.stopImmediatePropagation()]
+    */
   def stopImmediatePropagation(): Unit = js.native
   
-  /** @name dxEvent.stopPropagation() */
+  /**
+    * [descr:dxEvent.stopPropagation()]
+    */
   def stopPropagation(): Unit = js.native
   
-  /** @name dxEvent.target */
+  /**
+    * [descr:dxEvent.target]
+    */
   var target: Element = js.native
 }
 object dxEvent {

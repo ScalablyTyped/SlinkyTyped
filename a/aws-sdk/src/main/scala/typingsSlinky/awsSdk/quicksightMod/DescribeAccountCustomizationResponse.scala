@@ -8,17 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeAccountCustomizationResponse extends js.Object {
   
   /**
-    * The customizations associated with QuickSight.
+    * The QuickSight customizations that exist in the current AWS Region. 
     */
   var AccountCustomization: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.AccountCustomization] = js.native
   
   /**
-    * The ID for the AWS account that you want to describe QuickSight customizations for.
+    * The Amazon Resource Name (ARN) of the customization that's associated with this AWS account.
+    */
+  var Arn: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.Arn] = js.native
+  
+  /**
+    * The ID for the AWS account that you're describing.
     */
   var AwsAccountId: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.AwsAccountId] = js.native
   
   /**
-    * The namespace associated with the customization that you're describing.
+    * The QuickSight namespace that you're describing. 
     */
   var Namespace: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.Namespace] = js.native
   
@@ -60,6 +65,12 @@ object DescribeAccountCustomizationResponse {
     
     @scala.inline
     def deleteAccountCustomization: Self = this.set("AccountCustomization", js.undefined)
+    
+    @scala.inline
+    def setArn(value: Arn): Self = this.set("Arn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteArn: Self = this.set("Arn", js.undefined)
     
     @scala.inline
     def setAwsAccountId(value: AwsAccountId): Self = this.set("AwsAccountId", value.asInstanceOf[js.Any])

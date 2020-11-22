@@ -466,7 +466,7 @@ trait Autolinker extends js.Object {
     *
     * Ex: 0.25.1
     */
-  val version: /* "3.14.1" */ String = js.native
+  val version: /* "3.14.2" */ String = js.native
 }
 object Autolinker {
   
@@ -499,7 +499,7 @@ object Autolinker {
     tagBuilder: js.Any,
     truncate: js.Any,
     urls: js.Any,
-    version: /* "3.14.1" */ String
+    version: /* "3.14.2" */ String
   ): Autolinker = {
     val __obj = js.Dynamic.literal(className = className.asInstanceOf[js.Any], compactMatches = compactMatches.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], createMatchReturnVal = createMatchReturnVal.asInstanceOf[js.Any], decodePercentEncoding = decodePercentEncoding.asInstanceOf[js.Any], email = email.asInstanceOf[js.Any], getMatchers = getMatchers.asInstanceOf[js.Any], getTagBuilder = getTagBuilder.asInstanceOf[js.Any], hashtag = hashtag.asInstanceOf[js.Any], link = js.Any.fromFunction1(link), matchers = matchers.asInstanceOf[js.Any], mention = mention.asInstanceOf[js.Any], newWindow = newWindow.asInstanceOf[js.Any], normalizeStripPrefixCfg = normalizeStripPrefixCfg.asInstanceOf[js.Any], normalizeTruncateCfg = normalizeTruncateCfg.asInstanceOf[js.Any], normalizeUrlsCfg = normalizeUrlsCfg.asInstanceOf[js.Any], parse = js.Any.fromFunction1(parse), parseText = parseText.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], removeUnwantedMatches = removeUnwantedMatches.asInstanceOf[js.Any], replaceFn = replaceFn.asInstanceOf[js.Any], sanitizeHtml = sanitizeHtml.asInstanceOf[js.Any], stripPrefix = stripPrefix.asInstanceOf[js.Any], stripTrailingSlash = stripTrailingSlash.asInstanceOf[js.Any], tagBuilder = tagBuilder.asInstanceOf[js.Any], truncate = truncate.asInstanceOf[js.Any], urls = urls.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[Autolinker]
@@ -602,6 +602,6 @@ object Autolinker {
     def setUrls(value: js.Any): Self = this.set("urls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setVersion(value: /* "3.14.1" */ String): Self = this.set("version", value.asInstanceOf[js.Any])
+    def setVersion(value: /* "3.14.2" */ String): Self = this.set("version", value.asInstanceOf[js.Any])
   }
 }

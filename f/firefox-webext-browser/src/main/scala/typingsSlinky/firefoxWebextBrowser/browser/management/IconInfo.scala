@@ -10,14 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IconInfo extends js.Object {
   
   /**
-    * A number representing the width and height of the icon. Likely values include (but are not limited to) 128,
-    * 48, 24, and 16.
+    * A number representing the width and height of the icon. Likely values include (but are not limited to) 128, 48, 24, and 16.
     */
   var size: Double = js.native
   
   /**
-    * The URL for this icon image. To display a grayscale version of the icon (to indicate that an extension is
-    * disabled, for example), append `?grayscale=true` to the URL.
+    * The URL for this icon image. To display a grayscale version of the icon (to indicate that an extension is disabled, for example), append `?grayscale=true` to the URL.
     */
   var url: String = js.native
 }

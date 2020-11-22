@@ -6,12 +6,13 @@ import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSParameterProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TSParameterPropertyBuilder extends js.Object {
+  
   def apply(parameter: AssignmentPatternKind): TSParameterProperty = js.native
   def apply(parameter: IdentifierKind): TSParameterProperty = js.native
+  
   def from(params: Parameter): TSParameterProperty = js.native
 }
-

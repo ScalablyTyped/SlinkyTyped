@@ -18,7 +18,7 @@ trait ListResolverRuleAssociationsResponse extends js.Object {
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.NextToken] = js.native
   
   /**
-    * The associations that were created between resolver rules and VPCs using the current AWS account, and that match the specified filters, if any.
+    * The associations that were created between Resolver rules and VPCs using the current AWS account, and that match the specified filters, if any.
     */
   var ResolverRuleAssociations: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.ResolverRuleAssociations] = js.native
 }

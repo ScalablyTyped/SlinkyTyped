@@ -12,7 +12,7 @@ trait MVCObject extends js.Object {
     * identifier for this listener that can be used with
     * google.maps.event.removeListener.
     */
-  def addListener(eventName: String, handler: MVCEventHandler[this.type, js.Array[_]]): MapsEventListener = js.native
+  def addListener(eventName: String, handler: js.ThisFunction1[/* this */ this.type, /* repeated */ js.Any, Unit]): MapsEventListener = js.native
   
   /** Binds a View to a Model. */
   def bindTo(key: String, target: MVCObject): Unit = js.native

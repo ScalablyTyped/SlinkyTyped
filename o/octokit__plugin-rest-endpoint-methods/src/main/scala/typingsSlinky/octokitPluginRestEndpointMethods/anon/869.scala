@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReactionsCreateForIssueCommentEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReactionsCreateForIssueCommentResponseData
+import typingsSlinky.octokitTypes.endpointsMod.PullsUpdateBranchEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.PullsUpdateBranchResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `869` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReactionsCreateForIssueCommentEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[PullsUpdateBranchEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReactionsCreateForIssueCommentResponseData] = js.native
+  var response: OctokitResponse[PullsUpdateBranchResponseData] = js.native
 }
 object `869` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReactionsCreateForIssueCommentEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReactionsCreateForIssueCommentResponseData]
+    parameters: RequestParameters with (Omit[PullsUpdateBranchEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[PullsUpdateBranchResponseData]
   ): `869` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`869`]
@@ -46,11 +46,9 @@ object `869` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[ReactionsCreateForIssueCommentEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[PullsUpdateBranchEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReactionsCreateForIssueCommentResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[PullsUpdateBranchResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

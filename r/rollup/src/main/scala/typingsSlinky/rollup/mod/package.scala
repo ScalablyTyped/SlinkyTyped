@@ -13,6 +13,8 @@ package object mod {
     java.lang.String | js.Promise[java.lang.String]
   ]
   
+  type CustomPluginOptions = org.scalablytyped.runtime.StringDictionary[js.Any]
+  
   type EmitAsset = js.Function2[
     /* name */ java.lang.String, 
     /* source */ js.UndefOr[java.lang.String | js.typedarray.Uint8Array], 
@@ -34,19 +36,30 @@ package object mod {
     js.UndefOr[scala.Boolean | scala.Null]
   ])
   
+  type GetInterop = js.Function1[/* id */ java.lang.String | scala.Null, typingsSlinky.rollup.mod.InteropType]
+  
   type GetManualChunk = js.Function2[
     /* id */ java.lang.String, 
     /* api */ typingsSlinky.rollup.mod.GetManualChunkApi, 
     js.UndefOr[java.lang.String | scala.Null]
   ]
   
-  type GetModuleInfo = js.Function1[/* moduleId */ java.lang.String, typingsSlinky.rollup.mod.ModuleInfo]
+  type GetModuleInfo = js.Function1[/* moduleId */ java.lang.String, typingsSlinky.rollup.mod.ModuleInfo | scala.Null]
   
   type GlobalsOption = org.scalablytyped.runtime.StringDictionary[java.lang.String] | (js.Function1[/* name */ java.lang.String, java.lang.String])
   
   type HasModuleSideEffects = js.Function2[/* id */ java.lang.String, /* external */ scala.Boolean, scala.Boolean]
   
   type InputOption = java.lang.String | js.Array[java.lang.String] | org.scalablytyped.runtime.StringDictionary[java.lang.String]
+  
+  /* Rewritten from type alias, can be one of: 
+    - scala.Boolean
+    - typingsSlinky.rollup.rollupStrings.auto
+    - typingsSlinky.rollup.rollupStrings.esModule
+    - typingsSlinky.rollup.rollupStrings.default
+    - typingsSlinky.rollup.rollupStrings.defaultOnly
+  */
+  type InteropType = typingsSlinky.rollup.mod._InteropType | scala.Boolean
   
   type IsExternal = js.Function3[
     /* source */ java.lang.String, 
@@ -67,6 +80,12 @@ package object mod {
   
   type ManualChunksOption = org.scalablytyped.runtime.StringDictionary[js.Array[java.lang.String]] | typingsSlinky.rollup.mod.GetManualChunk
   
+  type ModuleParsedHook = js.ThisFunction1[
+    /* this */ typingsSlinky.rollup.mod.PluginContext, 
+    /* info */ typingsSlinky.rollup.mod.ModuleInfo, 
+    js.Promise[scala.Unit] | scala.Unit
+  ]
+  
   type ModuleSideEffectsOption = scala.Boolean | typingsSlinky.rollup.rollupStrings.`no-external` | js.Array[java.lang.String] | typingsSlinky.rollup.mod.HasModuleSideEffects
   
   type OptionsPaths = (typingsSlinky.std.Record[java.lang.String, java.lang.String]) | (js.Function1[/* id */ java.lang.String, java.lang.String])
@@ -76,6 +95,10 @@ package object mod {
   type OutputBundleWithPlaceholders = org.scalablytyped.runtime.StringDictionary[
     typingsSlinky.rollup.mod.OutputAsset | typingsSlinky.rollup.mod.OutputChunk | typingsSlinky.rollup.mod.FilePlaceholder
   ]
+  
+  type PartialNull[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof T ]: T[P] | null}
+    */ typingsSlinky.rollup.rollupStrings.PartialNull with org.scalablytyped.runtime.TopLevel[T]
   
   type PluginImpl[O /* <: js.Object */] = js.Function1[/* options */ js.UndefOr[O], typingsSlinky.rollup.mod.Plugin]
   
@@ -108,10 +131,11 @@ package object mod {
     js.UndefOr[java.lang.String | scala.Null]
   ]
   
-  type ResolveIdHook = js.ThisFunction2[
+  type ResolveIdHook = js.ThisFunction3[
     /* this */ typingsSlinky.rollup.mod.PluginContext, 
     /* source */ java.lang.String, 
     /* importer */ js.UndefOr[java.lang.String], 
+    /* options */ typingsSlinky.rollup.anon.`1`, 
     js.Promise[typingsSlinky.rollup.mod.ResolveIdResult] | typingsSlinky.rollup.mod.ResolveIdResult
   ]
   
@@ -160,13 +184,22 @@ package object mod {
     js.Promise[typingsSlinky.rollup.mod.TransformResult] | typingsSlinky.rollup.mod.TransformResult
   ]
   
-  type TransformResult = js.UndefOr[java.lang.String | scala.Null | typingsSlinky.rollup.mod.SourceDescription]
+  type TransformResult = js.UndefOr[
+    java.lang.String | scala.Null | typingsSlinky.rollup.anon.PartialSourceDescription
+  ]
   
   type WarningHandler = js.Function1[/* warning */ typingsSlinky.rollup.mod.RollupWarning, scala.Unit]
   
   type WarningHandlerWithDefault = js.Function2[
     /* warning */ typingsSlinky.rollup.mod.RollupWarning, 
     /* defaultHandler */ typingsSlinky.rollup.mod.WarningHandler, 
+    scala.Unit
+  ]
+  
+  type WatchChangeHook = js.ThisFunction2[
+    /* this */ typingsSlinky.rollup.mod.PluginContext, 
+    /* id */ java.lang.String, 
+    /* change */ typingsSlinky.rollup.anon.Event, 
     scala.Unit
   ]
 }

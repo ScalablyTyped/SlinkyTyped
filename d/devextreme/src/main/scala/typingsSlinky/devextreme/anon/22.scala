@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.viz.dxPolarChart
-import typingsSlinky.devextreme.mod.DevExpress.viz.polarChartSeriesObject
+import typingsSlinky.devextreme.mod.DevExpress.viz.chartSeriesObject
+import typingsSlinky.devextreme.mod.DevExpress.viz.dxChart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `22` extends js.Object {
   
-  var component: js.UndefOr[dxPolarChart] = js.native
+  var component: js.UndefOr[dxChart] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
   
-  var target: js.UndefOr[polarChartSeriesObject] = js.native
+  var target: js.UndefOr[chartSeriesObject] = js.native
 }
 object `22` {
   
@@ -42,7 +42,7 @@ object `22` {
     }
     
     @scala.inline
-    def setComponent(value: dxPolarChart): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxChart): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -60,7 +60,7 @@ object `22` {
     def deleteModel: Self = this.set("model", js.undefined)
     
     @scala.inline
-    def setTarget(value: polarChartSeriesObject): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setTarget(value: chartSeriesObject): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)

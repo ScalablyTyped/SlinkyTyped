@@ -11,6 +11,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OptionsLayout extends js.Object {
   
   /**
+    * Controls the application's preferred home indicator auto-hiding.
+    * #### (iOS specific)
+    */
+  var autoHideHomeIndicator: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Set the screen background color
     */
   var backgroundColor: js.UndefOr[Color] = js.native
@@ -62,6 +68,12 @@ object OptionsLayout {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAutoHideHomeIndicator(value: Boolean): Self = this.set("autoHideHomeIndicator", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoHideHomeIndicator: Self = this.set("autoHideHomeIndicator", js.undefined)
     
     @scala.inline
     def setBackgroundColor(value: Color): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])

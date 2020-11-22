@@ -5,8 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.typescript.mod.AfterFinallyFlow
-  - typingsSlinky.typescript.mod.PreFinallyFlow
   - typingsSlinky.typescript.mod.FlowStart
   - typingsSlinky.typescript.mod.FlowLabel
   - typingsSlinky.typescript.mod.FlowAssignment
@@ -14,13 +12,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.typescript.mod.FlowCondition
   - typingsSlinky.typescript.mod.FlowSwitchClause
   - typingsSlinky.typescript.mod.FlowArrayMutation
+  - typingsSlinky.typescript.mod.FlowReduceLabel
 */
 trait FlowNode extends js.Object
 object FlowNode {
   
   @scala.inline
-  def PreFinallyFlow(antecedent: FlowNode, flags: FlowFlags, lock: FlowLock): FlowNode = {
-    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], lock = lock.asInstanceOf[js.Any])
+  def FlowReduceLabel(antecedent: FlowNode, antecedents: js.Array[FlowNode], flags: FlowFlags, target: FlowLabel): FlowNode = {
+    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], antecedents = antecedents.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowNode]
   }
   
@@ -51,12 +50,6 @@ object FlowNode {
     switchStatement: SwitchStatement
   ): FlowNode = {
     val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], clauseEnd = clauseEnd.asInstanceOf[js.Any], clauseStart = clauseStart.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], switchStatement = switchStatement.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FlowNode]
-  }
-  
-  @scala.inline
-  def AfterFinallyFlow(antecedent: FlowNode, flags: FlowFlags): FlowNode = {
-    val __obj = js.Dynamic.literal(antecedent = antecedent.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlowNode]
   }
   

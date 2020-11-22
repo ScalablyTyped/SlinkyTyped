@@ -102,10 +102,10 @@ object AsyncCreatable {
     def defaultMenuIsOpen(value: Boolean): this.type = set("defaultMenuIsOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultOptionsVarargs(value: OptionType*): this.type = set("defaultOptions", js.Array(value :_*))
+    def defaultOptionsVarargs(value: (GroupType[OptionType] | OptionType)*): this.type = set("defaultOptions", js.Array(value :_*))
     
     @scala.inline
-    def defaultOptions(value: OptionsType[OptionType] | Boolean): this.type = set("defaultOptions", value.asInstanceOf[js.Any])
+    def defaultOptions(value: GroupedOptionsType[OptionType] | OptionsType[OptionType] | Boolean): this.type = set("defaultOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultValueVarargs(value: OptionType*): this.type = set("defaultValue", js.Array(value :_*))
@@ -189,7 +189,7 @@ object AsyncCreatable {
     
     @scala.inline
     def isValidNewOption(
-      value: (/* inputValue */ String, /* value */ ValueType[OptionType], /* options */ OptionsType[OptionType]) => Boolean
+      value: (/* inputValue */ String, /* value */ ValueType[OptionType], /* options */ OptionsType[OptionType] | GroupedOptionsType[OptionType]) => Boolean
     ): this.type = set("isValidNewOption", js.Any.fromFunction3(value))
     
     @scala.inline

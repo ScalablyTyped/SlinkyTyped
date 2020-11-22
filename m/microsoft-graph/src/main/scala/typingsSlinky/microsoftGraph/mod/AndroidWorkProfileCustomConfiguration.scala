@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AndroidWorkProfileCustomConfiguration extends DeviceConfiguration {
   
   // OMA settings. This collection can contain a maximum of 500 elements.
-  var omaSettings: js.UndefOr[js.Array[OmaSetting]] = js.native
+  var omaSettings: js.UndefOr[NullableOption[js.Array[OmaSetting]]] = js.native
 }
 object AndroidWorkProfileCustomConfiguration {
   
@@ -37,9 +37,12 @@ object AndroidWorkProfileCustomConfiguration {
     def setOmaSettingsVarargs(value: OmaSetting*): Self = this.set("omaSettings", js.Array(value :_*))
     
     @scala.inline
-    def setOmaSettings(value: js.Array[OmaSetting]): Self = this.set("omaSettings", value.asInstanceOf[js.Any])
+    def setOmaSettings(value: NullableOption[js.Array[OmaSetting]]): Self = this.set("omaSettings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOmaSettings: Self = this.set("omaSettings", js.undefined)
+    
+    @scala.inline
+    def setOmaSettingsNull: Self = this.set("omaSettings", null)
   }
 }

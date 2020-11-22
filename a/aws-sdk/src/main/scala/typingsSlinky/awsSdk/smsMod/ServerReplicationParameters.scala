@@ -8,37 +8,37 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ServerReplicationParameters extends js.Object {
   
   /**
-    * When true, the replication job produces encrypted AMIs. See also KmsKeyId below.
+    * Indicates whether the replication job produces encrypted AMIs.
     */
   var encrypted: js.UndefOr[Encrypted] = js.native
   
   /**
-    * Frequency of creating replication jobs for the server.
+    * The frequency of creating replication jobs for the server.
     */
   var frequency: js.UndefOr[Frequency] = js.native
   
   /**
-    *  KMS key ID for replication jobs that produce encrypted AMIs. Can be any of the following:    KMS key ID   KMS key alias   ARN referring to KMS key ID   ARN referring to KMS key alias    If encrypted is true but a KMS key id is not specified, the customer's default KMS key for EBS is used. 
+    * The ID of the KMS key for replication jobs that produce encrypted AMIs. This value can be any of the following:   KMS key ID   KMS key alias   ARN referring to the KMS key ID   ARN referring to the KMS key alias   If encrypted is enabled but a KMS key ID is not specified, the customer's default KMS key for Amazon EBS is used.
     */
   var kmsKeyId: js.UndefOr[KmsKeyId] = js.native
   
   /**
-    * License type for creating a replication job for the server.
+    * The license type for creating a replication job for the server.
     */
   var licenseType: js.UndefOr[LicenseType] = js.native
   
   /**
-    * Number of recent AMIs to keep when creating a replication job for this server.
+    * The number of recent AMIs to keep when creating a replication job for this server.
     */
   var numberOfRecentAmisToKeep: js.UndefOr[NumberOfRecentAmisToKeep] = js.native
   
   /**
-    * 
+    * Indicates whether to run the replication job one time.
     */
   var runOnce: js.UndefOr[RunOnce] = js.native
   
   /**
-    * Seed time for creating a replication job for the server.
+    * The seed time for creating a replication job for the server.
     */
   var seedTime: js.UndefOr[js.Date] = js.native
 }

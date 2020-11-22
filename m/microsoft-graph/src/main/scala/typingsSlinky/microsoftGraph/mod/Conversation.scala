@@ -20,7 +20,7 @@ trait Conversation extends Entity {
   var preview: js.UndefOr[String] = js.native
   
   // A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
-  var threads: js.UndefOr[js.Array[ConversationThread]] = js.native
+  var threads: js.UndefOr[NullableOption[js.Array[ConversationThread]]] = js.native
   
   // The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
   var topic: js.UndefOr[String] = js.native
@@ -73,10 +73,13 @@ object Conversation {
     def setThreadsVarargs(value: ConversationThread*): Self = this.set("threads", js.Array(value :_*))
     
     @scala.inline
-    def setThreads(value: js.Array[ConversationThread]): Self = this.set("threads", value.asInstanceOf[js.Any])
+    def setThreads(value: NullableOption[js.Array[ConversationThread]]): Self = this.set("threads", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteThreads: Self = this.set("threads", js.undefined)
+    
+    @scala.inline
+    def setThreadsNull: Self = this.set("threads", null)
     
     @scala.inline
     def setTopic(value: String): Self = this.set("topic", value.asInstanceOf[js.Any])

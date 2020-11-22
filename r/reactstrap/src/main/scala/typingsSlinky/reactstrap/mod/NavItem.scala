@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "NavItem")
+@JSImport("reactstrap/es", "NavItem")
 @js.native
-class NavItem[T] ()
+class NavItem ()
   extends Component[NavItemProps, js.Object, js.Any]

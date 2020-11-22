@@ -14,7 +14,7 @@ trait InviteAccepterArgs extends js.Object {
   val detectorId: Input[String] = js.native
   
   /**
-    * AWS account ID for master account.
+    * AWS account ID for primary account.
     */
   val masterAccountId: Input[String] = js.native
 }

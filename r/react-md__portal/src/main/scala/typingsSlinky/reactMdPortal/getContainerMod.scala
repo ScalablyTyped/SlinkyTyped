@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getContainerMod extends js.Object {
   
-  def default(): HTMLElement | Null = js.native
-  def default(into: js.UndefOr[PortalInto], intoId: String): HTMLElement | Null = js.native
-  def default(into: PortalInto): HTMLElement | Null = js.native
+  def getContainer(): HTMLElement | Null = js.native
+  def getContainer(into: js.UndefOr[PortalInto], intoId: String): HTMLElement | Null = js.native
+  def getContainer(into: PortalInto): HTMLElement | Null = js.native
   
   type PortalInto = (js.Function0[HTMLElement | Null]) | HTMLElement | String | Null
 }

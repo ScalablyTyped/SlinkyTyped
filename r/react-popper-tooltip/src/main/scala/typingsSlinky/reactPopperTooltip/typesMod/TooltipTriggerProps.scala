@@ -3,6 +3,7 @@ package typingsSlinky.reactPopperTooltip.typesMod
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MutationObserverInit
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactPopper.mod.Modifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,10 +17,10 @@ trait TooltipTriggerProps extends js.Object {
   def children(arg: ChildrenArg): ReactElement = js.native
   
   /**
-    * Whether to close the tooltip when it's trigger is out of the boundary
+    * Whether to close the tooltip when its trigger is out of boundary
     * @default true
     */
-  var closeOnOutOfBoundaries: Boolean = js.native
+  var closeOnReferenceHidden: Boolean = js.native
   
   /**
     * Whether tooltip is shown by default
@@ -58,15 +59,14 @@ trait TooltipTriggerProps extends js.Object {
   /**
     * Modifiers passed directly to the underlying popper.js instance
     * For more information, refer to Popper.js’ modifier docs:
-    * @link https://popper.js.org/popper-documentation.html#modifiers
+    * @link https://popper.js.org/docs/v2/modifiers
+    * @default []
     */
-  var modifiers: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Modifiers */ js.Any
-  ] = js.native
+  var modifiers: js.Array[Modifier[_, js.Object]] = js.native
   
   /**
     * Options to MutationObserver, used internally for updating
-    * tooltip position based on trigger DOM changes
+    * tooltip position based on its DOM changes
     * @default  { childList: true, subtree: true }
     */
   var mutationObserverOptions: MutationObserverInit = js.native
@@ -81,7 +81,7 @@ trait TooltipTriggerProps extends js.Object {
     * Tooltip placement w.r.t. trigger
     *  @default right
     */
-  var placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Placement */ js.Any = js.native
+  var placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any = js.native
   
   /**
     * Element to be used as portal container
@@ -116,20 +116,21 @@ object TooltipTriggerProps {
   @scala.inline
   def apply(
     children: ChildrenArg => ReactElement,
-    closeOnOutOfBoundaries: Boolean,
+    closeOnReferenceHidden: Boolean,
     defaultTooltipShown: Boolean,
     delayHide: Double,
     delayShow: Double,
     followCursor: Boolean,
+    modifiers: js.Array[Modifier[_, js.Object]],
     mutationObserverOptions: MutationObserverInit,
     onVisibilityChange: Boolean => Unit,
-    placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Placement */ js.Any,
+    placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any,
     portalContainer: HTMLElement,
     tooltip: TooltipArg => ReactElement,
     trigger: Trigger,
     usePortal: Boolean
   ): TooltipTriggerProps = {
-    val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), closeOnOutOfBoundaries = closeOnOutOfBoundaries.asInstanceOf[js.Any], defaultTooltipShown = defaultTooltipShown.asInstanceOf[js.Any], delayHide = delayHide.asInstanceOf[js.Any], delayShow = delayShow.asInstanceOf[js.Any], followCursor = followCursor.asInstanceOf[js.Any], mutationObserverOptions = mutationObserverOptions.asInstanceOf[js.Any], onVisibilityChange = js.Any.fromFunction1(onVisibilityChange), placement = placement.asInstanceOf[js.Any], portalContainer = portalContainer.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any], usePortal = usePortal.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), closeOnReferenceHidden = closeOnReferenceHidden.asInstanceOf[js.Any], defaultTooltipShown = defaultTooltipShown.asInstanceOf[js.Any], delayHide = delayHide.asInstanceOf[js.Any], delayShow = delayShow.asInstanceOf[js.Any], followCursor = followCursor.asInstanceOf[js.Any], modifiers = modifiers.asInstanceOf[js.Any], mutationObserverOptions = mutationObserverOptions.asInstanceOf[js.Any], onVisibilityChange = js.Any.fromFunction1(onVisibilityChange), placement = placement.asInstanceOf[js.Any], portalContainer = portalContainer.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any], usePortal = usePortal.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooltipTriggerProps]
   }
   
@@ -152,7 +153,7 @@ object TooltipTriggerProps {
     def setChildren(value: ChildrenArg => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setCloseOnOutOfBoundaries(value: Boolean): Self = this.set("closeOnOutOfBoundaries", value.asInstanceOf[js.Any])
+    def setCloseOnReferenceHidden(value: Boolean): Self = this.set("closeOnReferenceHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDefaultTooltipShown(value: Boolean): Self = this.set("defaultTooltipShown", value.asInstanceOf[js.Any])
@@ -167,6 +168,12 @@ object TooltipTriggerProps {
     def setFollowCursor(value: Boolean): Self = this.set("followCursor", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setModifiersVarargs(value: (Modifier[js.Any, js.Object])*): Self = this.set("modifiers", js.Array(value :_*))
+    
+    @scala.inline
+    def setModifiers(value: js.Array[Modifier[_, js.Object]]): Self = this.set("modifiers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setMutationObserverOptions(value: MutationObserverInit): Self = this.set("mutationObserverOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -174,7 +181,7 @@ object TooltipTriggerProps {
     
     @scala.inline
     def setPlacement(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Placement */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any
     ): Self = this.set("placement", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -215,14 +222,6 @@ object TooltipTriggerProps {
     
     @scala.inline
     def setGetTriggerRefNull: Self = this.set("getTriggerRef", null)
-    
-    @scala.inline
-    def setModifiers(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Modifiers */ js.Any
-    ): Self = this.set("modifiers", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteModifiers: Self = this.set("modifiers", js.undefined)
     
     @scala.inline
     def setTooltipShown(value: Boolean): Self = this.set("tooltipShown", value.asInstanceOf[js.Any])

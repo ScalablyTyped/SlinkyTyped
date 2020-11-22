@@ -3,7 +3,6 @@ package typingsSlinky.awsSdkClientS3Browser.typesUploadPartInputMod
 import typingsSlinky.awsSdkClientS3Browser.awsSdkClientS3BrowserStrings.requester_
 import typingsSlinky.awsSdkTypes.abortMod.AbortSignal
 import typingsSlinky.awsSdkTypes.cryptoMod.SourceData
-import typingsSlinky.awsSdkTypes.httpMod.BrowserHttpOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,7 +43,9 @@ trait UploadPartInput[StreamType] extends js.Object {
     * Per-request HTTP configuration options. If set, any options specified will override the corresponding HTTP option set on the client for this command.
     */
   @JSName("$httpOptions")
-  var $httpOptions: js.UndefOr[BrowserHttpOptions] = js.native
+  var $httpOptions: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __HttpOptions__ */ js.Any
+  ] = js.native
   
   /**
     * The maximum number of times this operation should be retried. If set, this value will override the `maxRetries` configuration set on the client for this command.
@@ -169,7 +170,9 @@ object UploadPartInput {
     def delete$forcePathStyle: Self = this.set("$forcePathStyle", js.undefined)
     
     @scala.inline
-    def set$httpOptions(value: BrowserHttpOptions): Self = this.set("$httpOptions", value.asInstanceOf[js.Any])
+    def set$httpOptions(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __HttpOptions__ */ js.Any
+    ): Self = this.set("$httpOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def delete$httpOptions: Self = this.set("$httpOptions", js.undefined)

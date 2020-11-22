@@ -1,8 +1,10 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty
 import typingsSlinky.mendixmodelsdk.byIdReferenceMod.ByIdReference
 import typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,10 +14,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object byIdReferencePropertyMod extends js.Object {
   
   @js.native
-  class ByIdReferenceProperty[T /* <: AbstractElement */] () extends AbstractProperty[T | Null, ByIdReference[T]] {
+  class ByIdReferenceProperty[T /* <: AbstractElement[IAbstractModel, Container] */] () extends AbstractProperty[T | Null, ByIdReference[T]] {
     
     @JSName("parent")
-    var parent_ByIdReferenceProperty: AbstractElement = js.native
+    var parent_ByIdReferenceProperty: AbstractElement[IAbstractModel, Container] = js.native
     
     def resolveReference(): Unit = js.native
     

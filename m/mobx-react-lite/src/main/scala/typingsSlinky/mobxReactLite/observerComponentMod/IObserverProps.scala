@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IObserverProps extends js.Object {
   
-  var children: js.UndefOr[js.Function0[ReactElement]] = js.native
+  var children: js.UndefOr[js.Function0[ReactElement | Null]] = js.native
   
-  var render: js.UndefOr[js.Function0[ReactElement]] = js.native
+  var render: js.UndefOr[js.Function0[ReactElement | Null]] = js.native
 }
 object IObserverProps {
   
@@ -36,13 +36,13 @@ object IObserverProps {
     }
     
     @scala.inline
-    def setChildren(value: () => ReactElement): Self = this.set("children", js.Any.fromFunction0(value))
+    def setChildren(value: () => ReactElement | Null): Self = this.set("children", js.Any.fromFunction0(value))
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
-    def setRender(value: () => ReactElement): Self = this.set("render", js.Any.fromFunction0(value))
+    def setRender(value: () => ReactElement | Null): Self = this.set("render", js.Any.fromFunction0(value))
     
     @scala.inline
     def deleteRender: Self = this.set("render", js.undefined)

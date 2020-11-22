@@ -8,7 +8,6 @@ package object mod {
   
   type AnimationEventHandler[T] = typingsSlinky.react.mod.EventHandler[slinky.web.SyntheticAnimationEvent[T]]
   
-  // tslint:disable-next-line:no-empty-interface
   type AudioHTMLAttributes[T] = typingsSlinky.react.mod.MediaHTMLAttributes[T]
   
   type Booleanish = scala.Boolean
@@ -145,12 +144,13 @@ package object mod {
   
   type FocusEventHandler[T] = typingsSlinky.react.mod.EventHandler[slinky.web.SyntheticFocusEvent[T]]
   
-  // tslint:disable-next-line:no-empty-interface
   type FormEvent[T] = slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, T]
   
   type FormEventHandler[T] = typingsSlinky.react.mod.EventHandler[
     slinky.core.SyntheticEvent[org.scalajs.dom.raw.EventTarget with T, org.scalajs.dom.raw.Event]
   ]
+  
+  type ForwardedRef[T] = (js.Function1[/* instance */ T | scala.Null, scala.Unit]) | (typingsSlinky.react.mod.MutableRefObject[T | scala.Null]) | scala.Null
   
   type FunctionComponentFactory[P] = js.Function2[
     /* props */ js.UndefOr[typingsSlinky.react.mod.Attributes with P], 
@@ -173,7 +173,6 @@ package object mod {
     */
   js.Function2[/* nextProps */ P, /* prevState */ S, typingsSlinky.std.Partial[S] | scala.Null]
   
-  // tslint:disable-next-line:no-empty-interface
   type HTMLFactory[T /* <: org.scalajs.dom.raw.HTMLElement */] = typingsSlinky.react.mod.DetailedHTMLFactory[typingsSlinky.react.mod.AllHTMLAttributes[T], T]
   
   type JSXElementConstructor[P] = (js.Function1[/* props */ P, slinky.core.facade.ReactElement | scala.Null]) | (org.scalablytyped.runtime.Instantiable1[/* props */ P, slinky.core.ReactComponentClass[P]])
@@ -230,6 +229,16 @@ package object mod {
   
   type NotExactlyAnyPropertyKeys[T] = typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, typingsSlinky.react.mod.ExactlyAnyPropertyKeys[T]]
   
+  /**
+    * WARNING: Don't use this as a `string`.
+    *
+    * This is an opaque type that is not supposed to type-check structurally.
+    * It is only valid if returned from React methods and passed to React e.g. `<button aria-labelledby={opaqueIdentifier} />`
+    */
+  // We can't create a type that would be rejected for string concatenation or `.toString()` calls.
+  // So in order to not have to add `string | OpaqueIdentifier` to every react-dom host prop we intersect it with `string`.
+  type OpaqueIdentifier = java.lang.String with typingsSlinky.react.anon.OpaqueIdentifierBranding
+  
   type PointerEventHandler[T] = typingsSlinky.react.mod.EventHandler[slinky.web.SyntheticPointerEvent[T]]
   
   /**
@@ -270,7 +279,6 @@ package object mod {
   type ReactFragment = js.Object | typingsSlinky.react.mod.ReactNodeArray
   
   // ReactHTML for ReactHTMLElement
-  // tslint:disable-next-line:no-empty-interface
   type ReactHTMLElement[T /* <: org.scalajs.dom.raw.HTMLElement */] = typingsSlinky.react.mod.DetailedReactHTMLElement[typingsSlinky.react.mod.AllHTMLAttributes[T], T]
   
   //
@@ -382,6 +390,8 @@ package object mod {
   ]
   
   type UIEventHandler[T] = typingsSlinky.react.mod.EventHandler[slinky.web.SyntheticUIEvent[T]]
+  
+  type VFC[P] = typingsSlinky.react.mod.VoidFunctionComponent[P]
   
   type ValidationMap[T] = typingsSlinky.propTypes.mod.ValidationMap[T]
   

@@ -62,9 +62,13 @@ class MatrixDropdownColumn protected ()
   
   var readOnly: Boolean = js.native
   
+  var renderAs: String = js.native
+  
   var requiredErrorText: String = js.native
   
   var requiredIf: String = js.native
+  
+  val requiredText: String = js.native
   
   def setIndex(`val`: Double): Unit = js.native
   

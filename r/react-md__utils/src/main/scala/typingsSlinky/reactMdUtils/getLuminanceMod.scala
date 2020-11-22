@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getLuminanceMod extends js.Object {
   
-  def default(color: HexString): Double = js.native
+  def getLuminance(color: HexString): Double = js.native
 }

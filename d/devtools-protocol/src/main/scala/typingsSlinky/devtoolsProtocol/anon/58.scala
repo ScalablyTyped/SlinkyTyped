@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetOuterHTMLRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetNodeStackTracesEnabledRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `58` extends js.Object {
   
-  var paramsType: js.Array[SetOuterHTMLRequest] = js.native
+  var paramsType: js.Array[SetNodeStackTracesEnabledRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `58` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetOuterHTMLRequest], returnType: Unit): `58` = {
+  def apply(paramsType: js.Array[SetNodeStackTracesEnabledRequest], returnType: Unit): `58` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`58`]
   }
@@ -36,10 +36,10 @@ object `58` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetOuterHTMLRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetNodeStackTracesEnabledRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetOuterHTMLRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetNodeStackTracesEnabledRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

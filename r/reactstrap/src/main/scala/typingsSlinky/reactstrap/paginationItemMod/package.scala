@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object paginationItemMod {
   
-  type PaginationItem[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.paginationItemMod.PaginationItemProps]
+  type PaginationItem = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.paginationItemMod.PaginationItemProps]
 }

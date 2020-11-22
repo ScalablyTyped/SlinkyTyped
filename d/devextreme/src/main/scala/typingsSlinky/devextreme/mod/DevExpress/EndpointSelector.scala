@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EndpointSelector extends js.Object {
   
-  /** @name EndpointSelector.urlFor(key) */
+  /**
+    * [descr:EndpointSelector.urlFor(key)]
+    */
   def urlFor(key: String): String = js.native
 }
 object EndpointSelector {

@@ -124,6 +124,12 @@ package object fileMod {
   
   type PolicyFields = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   
+  type RenameCallback = typingsSlinky.googleCloudStorage.fileMod.MoveCallback
+  
+  type RenameOptions = typingsSlinky.googleCloudStorage.fileMod.MoveOptions
+  
+  type RenameResponse = typingsSlinky.googleCloudStorage.fileMod.MoveResponse
+  
   type RotateEncryptionKeyCallback = typingsSlinky.googleCloudStorage.fileMod.CopyCallback
   
   type RotateEncryptionKeyOptions = java.lang.String | typingsSlinky.node.Buffer | typingsSlinky.googleCloudStorage.fileMod.EncryptionKeyOptions

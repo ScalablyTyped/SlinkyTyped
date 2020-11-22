@@ -15,6 +15,7 @@ class TransactionManager protected () extends js.Object {
   var beginImplicitTransaction: js.Any = js.native
   
   def beginTransaction(): Transaction = js.native
+  def beginTransaction(commitCurrentImplicitTransaction: Boolean): Transaction = js.native
   
   var checkModel: js.Any = js.native
   

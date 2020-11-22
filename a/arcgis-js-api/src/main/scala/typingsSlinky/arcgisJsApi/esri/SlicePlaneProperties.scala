@@ -11,17 +11,13 @@ trait SlicePlaneProperties extends js.Object {
     * The heading angle (in degrees) of the slice plane.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SlicePlane.html#heading)
-    *
-    * @default 0
     */
   var heading: js.UndefOr[Double] = js.native
   
   /**
-    * The height of the slice plane. The unit is derived from the [SpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html) of the [position](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SlicePlane.html#position).
+    * The height of the slice plane.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SlicePlane.html#height)
-    *
-    * @default 10
     */
   var height: js.UndefOr[Double] = js.native
   
@@ -36,17 +32,13 @@ trait SlicePlaneProperties extends js.Object {
     * The tilt angle (in degrees) of the slice plane.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SlicePlane.html#tilt)
-    *
-    * @default 0
     */
   var tilt: js.UndefOr[Double] = js.native
   
   /**
-    * The width of the slice plane. The unit is derived from the [SpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html) of the [position](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SlicePlane.html#position).
+    * The width of the slice plane.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SlicePlane.html#width)
-    *
-    * @default 10
     */
   var width: js.UndefOr[Double] = js.native
 }

@@ -12,9 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object fileInputMod extends js.Object {
   
-  /**
-    * This component is a wrapper for the `<input type="file" />` that can be themed
-    * like a button.
-    */
   val FileInput: ForwardRefExoticComponent[FileInputProps with RefAttributes[HTMLInputElement]] = js.native
 }

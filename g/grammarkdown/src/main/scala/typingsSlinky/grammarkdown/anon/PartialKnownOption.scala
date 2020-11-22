@@ -1,12 +1,12 @@
 package typingsSlinky.grammarkdown.anon
 
-import typingsSlinky.grammarkdown.optionsMod.RawArguments
+import typingsSlinky.grammarkdown.grammarkdownMod.RawArguments
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<grammarkdown.grammarkdown/dist/options.KnownOption> */
+/* Inlined std.Partial<grammarkdown.grammarkdown/dist/grammarkdown.KnownOption> */
 @js.native
 trait PartialKnownOption extends js.Object {
   

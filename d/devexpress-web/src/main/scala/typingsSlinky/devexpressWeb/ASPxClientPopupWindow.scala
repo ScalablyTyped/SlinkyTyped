@@ -11,67 +11,67 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ASPxClientPopupWindow extends js.Object {
   
   /**
-    * Returns the URL pointing to the image displayed within the <strong>window footer</strong>.
+    * Returns the URL pointing to the image displayed within the window footer.
     */
   def GetFooterImageUrl(): String = js.native
   
   /**
-    * Returns the URL where the web browser will navigate when the text or image is clicked within the popup window's <strong>footer</strong>.
+    * Returns the URL where the web browser will navigate when the text or image is clicked within the popup window's footer.
     */
   def GetFooterNavigateUrl(): String = js.native
   
   /**
-    * Returns the text displayed within the popup window's <strong>footer</strong>.
+    * Returns the text displayed within the popup window's footer.
     */
   def GetFooterText(): String = js.native
   
   /**
-    * Returns the URL pointing to the image displayed within the <strong>window header</strong>.
+    * Returns the URL pointing to the image displayed within the window header.
     */
   def GetHeaderImageUrl(): String = js.native
   
   /**
-    * Returns the URL where the web browser will navigate when the text or image is clicked within the popup window's <strong>header</strong>.
+    * Returns the URL where the web browser will navigate when the text or image is clicked within the popup window's header.
     */
   def GetHeaderNavigateUrl(): String = js.native
   
   /**
-    * Returns the text displayed within the window's <strong>header</strong>.
+    * Returns the text displayed within the window's header.
     */
   def GetHeaderText(): String = js.native
   
   /**
-    * Specifies the URL which points to the image displayed within the <strong>window footer</strong>.
+    * Specifies the URL which points to the image displayed within the window footer.
     * @param value A string value that is the URL to the image displayed within the window footer.
     */
   def SetFooterImageUrl(value: String): Unit = js.native
   
   /**
-    * Specifies the URL where the web browser will navigate when the text or image is clicked within the popup window's <strong>footer</strong>.
+    * Specifies the URL where the web browser will navigate when the text or image is clicked within the popup window's footer.
     * @param value A string value which specifies the required navigation location.
     */
   def SetFooterNavigateUrl(value: String): Unit = js.native
   
   /**
-    * Specifies the text displayed within the window's <strong>footer</strong>.
+    * Specifies the text displayed within the window's footer.
     * @param value A string value that specifies the window's footer text.
     */
   def SetFooterText(value: String): Unit = js.native
   
   /**
-    * Specifies the URL which points to the image displayed within the <strong>window header</strong>.
+    * Specifies the URL which points to the image displayed within the window header.
     * @param value A string value that is the URL to the image displayed within the header.
     */
   def SetHeaderImageUrl(value: String): Unit = js.native
   
   /**
-    * Returns the URL where the web browser will navigate when the text or image is clicked within the popup window's <strong>header</strong>.
+    * Returns the URL where the web browser will navigate when the text or image is clicked within the popup window's header.
     * @param value A string value which specifies the required navigation location.
     */
   def SetHeaderNavigateUrl(value: String): Unit = js.native
   
   /**
-    * Specifies the text displayed within the window's <strong>header</strong>.
+    * Specifies the text displayed within the window's header.
     * @param value A string value that specifies the window's header text.
     */
   def SetHeaderText(value: String): Unit = js.native

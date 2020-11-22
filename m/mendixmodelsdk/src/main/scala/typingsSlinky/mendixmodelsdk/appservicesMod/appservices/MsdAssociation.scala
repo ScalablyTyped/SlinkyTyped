@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.appservicesMod.appservices
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.DataAssociation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,14 +15,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/gen/appservices", "appservices.MsdAssociation")
 @js.native
-class MsdAssociation protected () extends Element {
+class MsdAssociation protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def associationKind: String = js.native
@@ -50,9 +52,6 @@ class MsdAssociation protected () extends Element {
   
   def guid: String = js.native
   def guid_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FMsdAssociation: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

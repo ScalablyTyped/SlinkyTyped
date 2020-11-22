@@ -102,6 +102,16 @@ trait IncomingHttpHeaders
   
   var `retry-after`: js.UndefOr[String] = js.native
   
+  var `sec-websocket-accept`: js.UndefOr[String] = js.native
+  
+  var `sec-websocket-extensions`: js.UndefOr[String] = js.native
+  
+  var `sec-websocket-key`: js.UndefOr[String] = js.native
+  
+  var `sec-websocket-protocol`: js.UndefOr[String] = js.native
+  
+  var `sec-websocket-version`: js.UndefOr[String] = js.native
+  
   var `set-cookie`: js.UndefOr[js.Array[String]] = js.native
   
   var `strict-transport-security`: js.UndefOr[String] = js.native
@@ -422,6 +432,36 @@ object IncomingHttpHeaders {
     
     @scala.inline
     def `deleteRetry-after`: Self = this.set("retry-after", js.undefined)
+    
+    @scala.inline
+    def `setSec-websocket-accept`(value: String): Self = this.set("sec-websocket-accept", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteSec-websocket-accept`: Self = this.set("sec-websocket-accept", js.undefined)
+    
+    @scala.inline
+    def `setSec-websocket-extensions`(value: String): Self = this.set("sec-websocket-extensions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteSec-websocket-extensions`: Self = this.set("sec-websocket-extensions", js.undefined)
+    
+    @scala.inline
+    def `setSec-websocket-key`(value: String): Self = this.set("sec-websocket-key", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteSec-websocket-key`: Self = this.set("sec-websocket-key", js.undefined)
+    
+    @scala.inline
+    def `setSec-websocket-protocol`(value: String): Self = this.set("sec-websocket-protocol", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteSec-websocket-protocol`: Self = this.set("sec-websocket-protocol", js.undefined)
+    
+    @scala.inline
+    def `setSec-websocket-version`(value: String): Self = this.set("sec-websocket-version", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteSec-websocket-version`: Self = this.set("sec-websocket-version", js.undefined)
     
     @scala.inline
     def `setSet-cookieVarargs`(value: String*): Self = this.set("set-cookie", js.Array(value :_*))

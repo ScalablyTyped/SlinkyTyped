@@ -204,6 +204,22 @@ object CardService extends js.Object {
   }
   
   /**
+    * Type of switch.
+    */
+  @js.native
+  object SwitchControlType extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[
+        typingsSlinky.googleAppsScript.GoogleAppsScript.CardService.SwitchControlType with Double
+      ] = js.native
+    
+    /* 1 */ val CHECK_BOX: typingsSlinky.googleAppsScript.GoogleAppsScript.CardService.SwitchControlType.CHECK_BOX with Double = js.native
+    
+    /* 0 */ val SWITCH: typingsSlinky.googleAppsScript.GoogleAppsScript.CardService.SwitchControlType.SWITCH with Double = js.native
+  }
+  
+  /**
     * An enum that specifies the style for TextButton.
     *
     * TEXT is the default; it renders a simple text button with clear background.

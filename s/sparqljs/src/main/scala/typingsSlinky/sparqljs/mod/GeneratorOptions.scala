@@ -1,5 +1,6 @@
 package typingsSlinky.sparqljs.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,6 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GeneratorOptions extends js.Object {
   
   var allPrefixes: js.UndefOr[Boolean] = js.native
+  
+  var indent: js.UndefOr[String] = js.native
+  
+  var newline: js.UndefOr[String] = js.native
+  
+  var prefixes: js.UndefOr[StringDictionary[String]] = js.native
+  
+  var sparqlStar: js.UndefOr[Boolean] = js.native
 }
 object GeneratorOptions {
   
@@ -37,5 +46,29 @@ object GeneratorOptions {
     
     @scala.inline
     def deleteAllPrefixes: Self = this.set("allPrefixes", js.undefined)
+    
+    @scala.inline
+    def setIndent(value: String): Self = this.set("indent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIndent: Self = this.set("indent", js.undefined)
+    
+    @scala.inline
+    def setNewline(value: String): Self = this.set("newline", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNewline: Self = this.set("newline", js.undefined)
+    
+    @scala.inline
+    def setPrefixes(value: StringDictionary[String]): Self = this.set("prefixes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrefixes: Self = this.set("prefixes", js.undefined)
+    
+    @scala.inline
+    def setSparqlStar(value: Boolean): Self = this.set("sparqlStar", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSparqlStar: Self = this.set("sparqlStar", js.undefined)
   }
 }

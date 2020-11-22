@@ -26,6 +26,11 @@ trait UsageRecord extends js.Object {
     * Timestamp, in UTC, for which the usage is being reported. Your application can meter usage for up to one hour in the past. Make sure the timestamp value is not before the start of the software usage.
     */
   var Timestamp: js.Date = js.native
+  
+  /**
+    * The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the Quantity of the UsageRecord.
+    */
+  var UsageAllocations: js.UndefOr[typingsSlinky.awsSdk.marketplacemeteringMod.UsageAllocations] = js.native
 }
 object UsageRecord {
   
@@ -64,5 +69,14 @@ object UsageRecord {
     
     @scala.inline
     def deleteQuantity: Self = this.set("Quantity", js.undefined)
+    
+    @scala.inline
+    def setUsageAllocationsVarargs(value: UsageAllocation*): Self = this.set("UsageAllocations", js.Array(value :_*))
+    
+    @scala.inline
+    def setUsageAllocations(value: UsageAllocations): Self = this.set("UsageAllocations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUsageAllocations: Self = this.set("UsageAllocations", js.undefined)
   }
 }

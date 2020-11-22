@@ -12,14 +12,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxLinearGaugeScale extends BaseGaugeScale {
   
-  /** @name dxLinearGauge.Options.scale.horizontalOrientation */
+  /**
+    * [descr:dxLinearGauge.Options.scale.horizontalOrientation]
+    */
   var horizontalOrientation: js.UndefOr[center | left | right] = js.native
   
-  /** @name dxLinearGauge.Options.scale.label */
+  /**
+    * [descr:dxLinearGauge.Options.scale.label]
+    */
   @JSName("label")
   var label_dxLinearGaugeScale: js.UndefOr[dxLinearGaugeScaleLabel] = js.native
   
-  /** @name dxLinearGauge.Options.scale.verticalOrientation */
+  /**
+    * [descr:dxLinearGauge.Options.scale.verticalOrientation]
+    */
   var verticalOrientation: js.UndefOr[bottom | center | top] = js.native
 }
 object dxLinearGaugeScale {

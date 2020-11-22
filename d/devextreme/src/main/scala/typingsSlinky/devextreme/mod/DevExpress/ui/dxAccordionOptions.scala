@@ -13,22 +13,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxAccordionOptions extends CollectionWidgetOptions[dxAccordion] {
   
-  /** @name dxAccordion.Options.animationDuration */
+  /**
+    * [descr:dxAccordion.Options.animationDuration]
+    */
   var animationDuration: js.UndefOr[Double] = js.native
   
-  /** @name dxAccordion.Options.collapsible */
+  /**
+    * [descr:dxAccordion.Options.collapsible]
+    */
   var collapsible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxAccordion.Options.dataSource */
+  /**
+    * [descr:dxAccordion.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxAccordionOptions: js.UndefOr[
     String | (js.Array[String | dxAccordionItem | _]) | DataSource | DataSourceOptions
   ] = js.native
   
-  /** @name dxAccordion.Options.deferRendering */
+  /**
+    * [descr:dxAccordion.Options.deferRendering]
+    */
   var deferRendering: js.UndefOr[Boolean] = js.native
   
-  /** @name dxAccordion.Options.itemTitleTemplate */
+  /**
+    * [descr:dxAccordion.Options.itemTitleTemplate]
+    */
   var itemTitleTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -38,17 +48,25 @@ trait dxAccordionOptions extends CollectionWidgetOptions[dxAccordion] {
     ])
   ] = js.native
   
-  /** @name dxAccordion.Options.items */
+  /**
+    * [descr:dxAccordion.Options.items]
+    */
   @JSName("items")
   var items_dxAccordionOptions: js.UndefOr[js.Array[String | dxAccordionItem | _]] = js.native
   
-  /** @name dxAccordion.Options.multiple */
+  /**
+    * [descr:dxAccordion.Options.multiple]
+    */
   var multiple: js.UndefOr[Boolean] = js.native
   
-  /** @name dxAccordion.Options.onItemTitleClick */
+  /**
+    * [descr:dxAccordion.Options.onItemTitleClick]
+    */
   var onItemTitleClick: js.UndefOr[(js.Function1[/* e */ ItemIndex, _]) | String] = js.native
   
-  /** @name dxAccordion.Options.repaintChangesOnly */
+  /**
+    * [descr:dxAccordion.Options.repaintChangesOnly]
+    */
   var repaintChangesOnly: js.UndefOr[Boolean] = js.native
 }
 object dxAccordionOptions {

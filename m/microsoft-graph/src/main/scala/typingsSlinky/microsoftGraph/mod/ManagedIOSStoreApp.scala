@@ -14,7 +14,7 @@ trait ManagedIOSStoreApp extends ManagedApp {
   var applicableDeviceType: js.UndefOr[IosDeviceType] = js.native
   
   // The app's Bundle ID.
-  var bundleId: js.UndefOr[String] = js.native
+  var bundleId: js.UndefOr[NullableOption[String]] = js.native
   
   // The value for the minimum supported operating system.
   var minimumSupportedOperatingSystem: js.UndefOr[IosMinimumOperatingSystem] = js.native
@@ -55,10 +55,13 @@ object ManagedIOSStoreApp {
     def deleteApplicableDeviceType: Self = this.set("applicableDeviceType", js.undefined)
     
     @scala.inline
-    def setBundleId(value: String): Self = this.set("bundleId", value.asInstanceOf[js.Any])
+    def setBundleId(value: NullableOption[String]): Self = this.set("bundleId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBundleId: Self = this.set("bundleId", js.undefined)
+    
+    @scala.inline
+    def setBundleIdNull: Self = this.set("bundleId", null)
     
     @scala.inline
     def setMinimumSupportedOperatingSystem(value: IosMinimumOperatingSystem): Self = this.set("minimumSupportedOperatingSystem", value.asInstanceOf[js.Any])

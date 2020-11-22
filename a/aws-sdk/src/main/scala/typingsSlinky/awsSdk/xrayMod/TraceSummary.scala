@@ -13,7 +13,7 @@ trait TraceSummary extends js.Object {
   var Annotations: js.UndefOr[typingsSlinky.awsSdk.xrayMod.Annotations] = js.native
   
   /**
-    * A list of availability zones for any zone corresponding to the trace segments.
+    * A list of Availability Zones for any zone corresponding to the trace segments.
     */
   var AvailabilityZones: js.UndefOr[TraceAvailabilityZones] = js.native
   
@@ -33,7 +33,7 @@ trait TraceSummary extends js.Object {
   var ErrorRootCauses: js.UndefOr[typingsSlinky.awsSdk.xrayMod.ErrorRootCauses] = js.native
   
   /**
-    * A collection of FaultRootCause structures corresponding to the the trace segments.
+    * A collection of FaultRootCause structures corresponding to the trace segments.
     */
   var FaultRootCauses: js.UndefOr[typingsSlinky.awsSdk.xrayMod.FaultRootCauses] = js.native
   

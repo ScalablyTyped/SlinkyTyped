@@ -3,32 +3,24 @@ package typingsSlinky.awsSdkClientSqsNode.typesTooManyEntriesInBatchRequestMod
 import typingsSlinky.awsSdkClientSqsNode.changeMessageVisibilityBatchExceptionsUnionMod.ChangeMessageVisibilityBatchExceptionsUnion
 import typingsSlinky.awsSdkClientSqsNode.deleteMessageBatchExceptionsUnionMod.DeleteMessageBatchExceptionsUnion
 import typingsSlinky.awsSdkClientSqsNode.sendMessageBatchExceptionsUnionMod.SendMessageBatchExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_TooManyEntriesInBatchRequestDetails> * / any */ @js.native
 trait TooManyEntriesInBatchRequest
-  extends ServiceException[TooManyEntriesInBatchRequestDetails]
-     with ChangeMessageVisibilityBatchExceptionsUnion
+  extends ChangeMessageVisibilityBatchExceptionsUnion
      with DeleteMessageBatchExceptionsUnion
      with SendMessageBatchExceptionsUnion {
   
-  @JSName("name")
-  var name_TooManyEntriesInBatchRequest: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.TooManyEntriesInBatchRequest = js.native
+  var name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.TooManyEntriesInBatchRequest = js.native
 }
 object TooManyEntriesInBatchRequest {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: TooManyEntriesInBatchRequestDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.TooManyEntriesInBatchRequest
-  ): TooManyEntriesInBatchRequest = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.TooManyEntriesInBatchRequest): TooManyEntriesInBatchRequest = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooManyEntriesInBatchRequest]
   }
   

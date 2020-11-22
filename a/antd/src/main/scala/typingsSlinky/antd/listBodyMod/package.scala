@@ -14,8 +14,8 @@ package object listBodyMod {
     ]
   ]
   
-  type PartialTransferListProps = typingsSlinky.antd.typeMod.Omit[
-    typingsSlinky.antd.transferListMod.TransferListProps, 
+  type PartialTransferListProps[RecordType] = typingsSlinky.antd.typeMod.Omit[
+    typingsSlinky.antd.transferListMod.TransferListProps[RecordType], 
     typingsSlinky.antd.listBodyMod.OmitProp
   ]
 }

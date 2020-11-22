@@ -1,6 +1,6 @@
 package typingsSlinky.ecmarkup
 
-import typingsSlinky.ecmarkup.algorithmErrorReporterTypeMod.LintingError
+import typingsSlinky.ecmarkup.specMod.Warning
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object collectSpellingDiagnosticsMod extends js.Object {
   
-  def collectSpellingDiagnostics(sourceText: String): js.Array[LintingError] = js.native
+  def collectSpellingDiagnostics(
+    report: js.Function1[/* e */ Warning, Unit],
+    mainSource: String,
+    imports: js.Array[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Import */ _
+    ]
+  ): Unit = js.native
 }

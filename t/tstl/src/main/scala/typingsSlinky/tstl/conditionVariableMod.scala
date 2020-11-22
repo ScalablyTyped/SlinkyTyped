@@ -57,7 +57,7 @@ object conditionVariableMod extends js.Object {
       *
       * This method is equivalent to:
       ```typescript
-      let at: Date = new Date(Date.now() + ms);
+      const at: Date = new Date(Date.now() + ms);
       while (!await predicator())
       {
       if (!await this.wait_until(at))

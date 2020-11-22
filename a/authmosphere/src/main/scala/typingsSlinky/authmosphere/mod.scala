@@ -1,8 +1,6 @@
 package typingsSlinky.authmosphere
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.authmosphere.anon.Accesstoken
-import typingsSlinky.authmosphere.anon.Token
 import typingsSlinky.authmosphere.getTokenInfoMod.GetTokenInfo
 import typingsSlinky.authmosphere.loggerMod.Logger
 import typingsSlinky.authmosphere.mockOptionsMod.MockOptions
@@ -10,7 +8,9 @@ import typingsSlinky.authmosphere.oauthconfigMod.OAuthConfig
 import typingsSlinky.authmosphere.oauthconfigMod.TokenCacheOAuthConfig
 import typingsSlinky.authmosphere.tokenCacheConfigMod.CacheConfig
 import typingsSlinky.authmosphere.tokenCacheConfigMod.TokenCacheOptions
+import typingsSlinky.authmosphere.tokenMod.Token
 import typingsSlinky.nock.mod.Scope
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -55,8 +55,8 @@ object mod extends js.Object {
     * @param logger - optional logger
     * @returns {Promise<T>}
     */
-  def getAccessToken(options: OAuthConfig): js.Promise[Token] = js.native
-  def getAccessToken(options: OAuthConfig, logger: Logger): js.Promise[Token] = js.native
+  def getAccessToken(options: OAuthConfig): js.Promise[Token[Record[String, _]]] = js.native
+  def getAccessToken(options: OAuthConfig, logger: Logger): js.Promise[Token[Record[String, _]]] = js.native
   
   /**
     * Makes a request to the `tokenInfoUrl` to validate the given `accessToken`.
@@ -71,7 +71,7 @@ object mod extends js.Object {
     *
     * @returns { Promise<Token<T>> }
     */
-  val getTokenInfo: GetTokenInfo[js.Object] = js.native
+  val getTokenInfo: GetTokenInfo[Record[String, js.Any]] = js.native
   
   /**
     * Creates a __very basic__ mock of token endpoint as defined in [RFC 6749](https://tools.ietf.org/html/rfc6749).
@@ -84,7 +84,7 @@ object mod extends js.Object {
   def mockAccessTokenEndpoint(options: MockOptions): Scope = js.native
   
   def mockAccessTokenEndpointWithErrorResponse(options: MockOptions, httpStatus: Double): Scope = js.native
-  def mockAccessTokenEndpointWithErrorResponse(options: MockOptions, httpStatus: Double, responseBody: js.Object): Scope = js.native
+  def mockAccessTokenEndpointWithErrorResponse(options: MockOptions, httpStatus: Double, responseBody: Record[String, _]): Scope = js.native
   
   /**
     * Creates a __very basic__ mock of a token validation endpoint.
@@ -95,10 +95,10 @@ object mod extends js.Object {
     * @throws on parse error of options.url
     */
   def mockTokeninfoEndpoint(options: MockOptions): Scope = js.native
-  def mockTokeninfoEndpoint(options: MockOptions, tokens: js.Array[Accesstoken]): Scope = js.native
+  def mockTokeninfoEndpoint(options: MockOptions, tokens: js.Array[Token[Record[String, _]]]): Scope = js.native
   
   def mockTokeninfoEndpointWithErrorResponse(options: MockOptions, httpStatus: Double): Scope = js.native
-  def mockTokeninfoEndpointWithErrorResponse(options: MockOptions, httpStatus: Double, responseBody: js.Object): Scope = js.native
+  def mockTokeninfoEndpointWithErrorResponse(options: MockOptions, httpStatus: Double, responseBody: Record[String, _]): Scope = js.native
   
   val requireScopesMiddleware: typingsSlinky.authmosphere.expressToolingMod.requireScopesMiddleware = js.native
   

@@ -36,12 +36,7 @@ trait PlotPyramidOptions extends js.Object {
     * (Highcharts) Initial animation is by default disabled for the funnel
     * chart.
     */
-  var animation: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * (Highcharts) Sets the color blending in the boost module.
-    */
-  var boostBlending: js.UndefOr[OptionsBoostBlendingValue] = js.native
+  var animation: js.UndefOr[Boolean | PlotPyramidAnimationOptions] = js.native
   
   /**
     * (Highcharts) The color of the border surrounding each slice. When `null`,
@@ -569,16 +564,10 @@ object PlotPyramidOptions {
     def deleteAllowPointSelect: Self = this.set("allowPointSelect", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PlotPyramidAnimationOptions): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)
-    
-    @scala.inline
-    def setBoostBlending(value: OptionsBoostBlendingValue): Self = this.set("boostBlending", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBoostBlending: Self = this.set("boostBlending", js.undefined)
     
     @scala.inline
     def setBorderColor(value: ColorString | GradientColorObject | PatternObject): Self = this.set("borderColor", value.asInstanceOf[js.Any])

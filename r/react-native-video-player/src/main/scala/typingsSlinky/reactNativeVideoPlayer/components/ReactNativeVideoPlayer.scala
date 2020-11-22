@@ -7,7 +7,7 @@ import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeVideoPlayer.anon.ControlButton
-import typingsSlinky.reactNativeVideoPlayer.anon.Uri
+import typingsSlinky.reactNativeVideoPlayer.anon.MainVer
 import typingsSlinky.reactNativeVideoPlayer.mod.VideoPlayerProps
 import typingsSlinky.reactNativeVideoPlayer.mod.default
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.contain
@@ -120,7 +120,7 @@ object ReactNativeVideoPlayer {
     def thumbnail(value: ImageSourcePropType): this.type = set("thumbnail", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def video(value: Uri | Double): this.type = set("video", value.asInstanceOf[js.Any])
+    def video(value: MainVer | Double): this.type = set("video", value.asInstanceOf[js.Any])
     
     @scala.inline
     def videoHeight(value: Double): this.type = set("videoHeight", value.asInstanceOf[js.Any])

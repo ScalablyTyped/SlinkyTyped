@@ -19,7 +19,7 @@ trait GroupMixedInstancesPolicyInstancesDistribution extends js.Object {
   var onDemandBaseCapacity: js.UndefOr[Input[Double]] = js.native
   
   /**
-    * Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: `100`.
+    * Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: `0`.
     */
   var onDemandPercentageAboveBaseCapacity: js.UndefOr[Input[Double]] = js.native
   

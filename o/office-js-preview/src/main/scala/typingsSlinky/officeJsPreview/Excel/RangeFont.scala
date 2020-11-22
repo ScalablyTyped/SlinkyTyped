@@ -64,7 +64,7 @@ trait RangeFont extends ClientObject {
   
   /**
     *
-    * Font name (e.g., "Calibri")
+    * Font name (e.g., "Calibri"). The name's length should not be greater than 31 characters.
     *
     * [Api set: ExcelApi 1.1]
     */

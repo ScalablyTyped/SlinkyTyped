@@ -85,4 +85,11 @@ trait PostProcessRenderPipeline extends js.Object {
     * Gets pipeline name
     */
   def name: String = js.native
+  
+  /**
+    * Sets the required values to the prepass renderer.
+    * @param prePassRenderer defines the prepass renderer to setup.
+    * @returns true if the pre pass is needed.
+    */
+  def setPrePassRenderer(prePassRenderer: PrePassRenderer): Boolean = js.native
 }

@@ -16,13 +16,31 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
   trait ThinEngine extends js.Object {
     
     /**
+      * Select a subsets of attachments to draw to.
+      * @param attachments gl attachments
+      */
+    def bindAttachments(attachments: js.Array[Double]): Unit = js.native
+    
+    /**
+      * Creates a layout object to draw/clear on specific textures in a MRT
+      * @param textureStatus textureStatus[i] indicates if the i-th is active
+      * @returns A layout to be fed to the engine, calling `bindAttachments`.
+      */
+    def buildTextureLayout(textureStatus: js.Array[Boolean]): js.Array[Double] = js.native
+    
+    /**
       * Create a multi render target texture
-      * @see http://doc.babylonjs.com/features/webgl2#multiple-render-target
+      * @see https://doc.babylonjs.com/features/webgl2#multiple-render-target
       * @param size defines the size of the texture
       * @param options defines the creation options
       * @returns the cube texture as an InternalTexture
       */
     def createMultipleRenderTarget(size: js.Any, options: IMultiRenderTargetOptions): js.Array[InternalTexture] = js.native
+    
+    /**
+      * Restores the webgl state to only draw on the main color attachment
+      */
+    def restoreSingleAttachment(): Unit = js.native
     
     /**
       * Unbind a list of render target textures from the webGL context
@@ -40,7 +58,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
     
     /**
       * Update the sample count for a given multiple render target texture
-      * @see http://doc.babylonjs.com/features/webgl2#multisample-render-targets
+      * @see https://doc.babylonjs.com/features/webgl2#multisample-render-targets
       * @param textures defines the textures to update
       * @param samples defines the sample count to set
       * @returns the effective sample count (could be 0 if multisample render targets are not supported)

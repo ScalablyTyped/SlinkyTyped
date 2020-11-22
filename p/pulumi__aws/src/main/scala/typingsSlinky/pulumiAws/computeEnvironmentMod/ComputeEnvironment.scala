@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.computeEnvironmentMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.outputMod.batch.ComputeEnvironmentComputeResources
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -67,6 +68,11 @@ class ComputeEnvironment protected () extends CustomResource {
     * A short, human-readable string to provide additional details about the current status of the compute environment.
     */
   val statusReason: Output_[String] = js.native
+  
+  /**
+    * Key-value pair tags to be applied to resources that are launched in the compute environment.
+    */
+  val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
   /**
     * The type of compute environment. Valid items are `EC2` or `SPOT`.

@@ -1,11 +1,11 @@
 package typingsSlinky.babelTypes.anon
 
-import typingsSlinky.babelTypes.mod.JSXElement_
-import typingsSlinky.babelTypes.mod.JSXEmptyExpression_
-import typingsSlinky.babelTypes.mod.JSXExpressionContainer_
-import typingsSlinky.babelTypes.mod.JSXFragment_
-import typingsSlinky.babelTypes.mod.JSXSpreadChild_
-import typingsSlinky.babelTypes.mod.JSXText_
+import typingsSlinky.babelTypes.indexTs37Mod.JSXElement_
+import typingsSlinky.babelTypes.indexTs37Mod.JSXEmptyExpression_
+import typingsSlinky.babelTypes.indexTs37Mod.JSXExpressionContainer_
+import typingsSlinky.babelTypes.indexTs37Mod.JSXFragment_
+import typingsSlinky.babelTypes.indexTs37Mod.JSXSpreadChild_
+import typingsSlinky.babelTypes.indexTs37Mod.JSXText_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

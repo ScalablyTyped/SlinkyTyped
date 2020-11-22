@@ -1,5 +1,6 @@
 package typingsSlinky.summernote
 
+import typingsSlinky.summernote.mod.global.Summernote.fontSizeUnitOptions
 import typingsSlinky.summernote.mod.global.Summernote.miscGroupOptions
 import typingsSlinky.summernote.mod.global.Summernote.popoverAirOptionsFont
 import typingsSlinky.summernote.mod.global.Summernote.popoverAirOptionsInsert
@@ -171,6 +172,9 @@ object summernoteStrings {
   def fontsize_ : fontsize_ = "fontsize".asInstanceOf[fontsize_]
   
   @scala.inline
+  def fontsizeunit: fontsizeunit = "fontsizeunit".asInstanceOf[fontsizeunit]
+  
+  @scala.inline
   def foreColor: foreColor = "foreColor".asInstanceOf[foreColor]
   
   @scala.inline
@@ -313,6 +317,12 @@ object summernoteStrings {
   
   @scala.inline
   def pre: pre = "pre".asInstanceOf[pre]
+  
+  @scala.inline
+  def pt: pt = "pt".asInstanceOf[pt]
+  
+  @scala.inline
+  def px: px = "px".asInstanceOf[px]
   
   @scala.inline
   def redo: redo = "redo".asInstanceOf[redo]
@@ -533,6 +543,9 @@ object summernoteStrings {
        with toolbarFontsizeGroupOptions
   
   @js.native
+  sealed trait fontsizeunit extends toolbarFontGroupOptions
+  
+  @js.native
   sealed trait foreColor extends js.Object
   
   @js.native
@@ -687,6 +700,12 @@ object summernoteStrings {
   
   @js.native
   sealed trait pre extends styleTagsOptions
+  
+  @js.native
+  sealed trait pt extends fontSizeUnitOptions
+  
+  @js.native
+  sealed trait px extends fontSizeUnitOptions
   
   @js.native
   sealed trait redo extends miscGroupOptions

@@ -15,7 +15,7 @@ trait FlexWrapProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Ob
     */
   var flexWrap: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexWrapProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexWrap */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object FlexWrapProps {
     @scala.inline
     def setFlexWrap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexWrapProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexWrap */ _, 
           ThemeType
         ]
     ): Self = this.set("flexWrap", value.asInstanceOf[js.Any])

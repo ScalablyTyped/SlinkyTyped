@@ -13,6 +13,8 @@ class ODataVersion ()
 @js.native
 object ODataVersion extends js.Object {
   
+  var OData2: typingsSlinky.mendixmodelsdk.restMod.rest.ODataVersion = js.native
+  
   var OData3: typingsSlinky.mendixmodelsdk.restMod.rest.ODataVersion = js.native
   
   var OData4: typingsSlinky.mendixmodelsdk.restMod.rest.ODataVersion = js.native

@@ -2,7 +2,6 @@ package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
-import typingsSlinky.devextreme.devextremeStrings.Default
 import typingsSlinky.devextreme.devextremeStrings.Material
 import typingsSlinky.devextreme.devextremeStrings.Ocean
 import typingsSlinky.devextreme.devextremeStrings.Office
@@ -32,15 +31,11 @@ trait BarGroupPadding extends js.Object {
   
   var barGroupWidth: js.UndefOr[Double] = js.native
   
-  var barWidth: js.UndefOr[Double] = js.native
-  
   var bottomIndent: js.UndefOr[Double] = js.native
   
   var commonSeriesSettings: js.UndefOr[dxChartCommonSeriesSettings] = js.native
   
   var dataPrepareSettings: js.UndefOr[ConvertToAxisDataType] = js.native
-  
-  var equalBarWidth: js.UndefOr[Boolean] = js.native
   
   var maxBubbleSize: js.UndefOr[Double] = js.native
   
@@ -49,7 +44,7 @@ trait BarGroupPadding extends js.Object {
   var negativesAsZeroes: js.UndefOr[Boolean] = js.native
   
   var palette: js.UndefOr[
-    js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+    js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
   ] = js.native
   
   var paletteExtensionMode: js.UndefOr[alternate | blend | extrapolate] = js.native
@@ -59,8 +54,6 @@ trait BarGroupPadding extends js.Object {
   var seriesTemplate: js.UndefOr[CustomizeSeries] = js.native
   
   var topIndent: js.UndefOr[Double] = js.native
-  
-  var useAggregation: js.UndefOr[Boolean] = js.native
   
   var valueAxis: js.UndefOr[Inverted] = js.native
 }
@@ -100,12 +93,6 @@ object BarGroupPadding {
     def deleteBarGroupWidth: Self = this.set("barGroupWidth", js.undefined)
     
     @scala.inline
-    def setBarWidth(value: Double): Self = this.set("barWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBarWidth: Self = this.set("barWidth", js.undefined)
-    
-    @scala.inline
     def setBottomIndent(value: Double): Self = this.set("bottomIndent", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -122,12 +109,6 @@ object BarGroupPadding {
     
     @scala.inline
     def deleteDataPrepareSettings: Self = this.set("dataPrepareSettings", js.undefined)
-    
-    @scala.inline
-    def setEqualBarWidth(value: Boolean): Self = this.set("equalBarWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteEqualBarWidth: Self = this.set("equalBarWidth", js.undefined)
     
     @scala.inline
     def setMaxBubbleSize(value: Double): Self = this.set("maxBubbleSize", value.asInstanceOf[js.Any])
@@ -152,7 +133,7 @@ object BarGroupPadding {
     
     @scala.inline
     def setPalette(
-      value: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+      value: js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
     ): Self = this.set("palette", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -184,12 +165,6 @@ object BarGroupPadding {
     
     @scala.inline
     def deleteTopIndent: Self = this.set("topIndent", js.undefined)
-    
-    @scala.inline
-    def setUseAggregation(value: Boolean): Self = this.set("useAggregation", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUseAggregation: Self = this.set("useAggregation", js.undefined)
     
     @scala.inline
     def setValueAxis(value: Inverted): Self = this.set("valueAxis", value.asInstanceOf[js.Any])

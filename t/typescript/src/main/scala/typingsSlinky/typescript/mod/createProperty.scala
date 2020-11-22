@@ -8,10 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createProperty extends js.Object {
   
+  /** @deprecated Use `factory.createPropertyDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     decorators: js.UndefOr[js.Array[Decorator]],
     modifiers: js.UndefOr[js.Array[Modifier]],
-    name: java.lang.String | PropertyName,
+    name: java.lang.String | Identifier | StringLiteral | NumericLiteral | ComputedPropertyName | PrivateIdentifier,
     questionOrExclamationToken: js.UndefOr[QuestionToken | ExclamationToken],
     `type`: js.UndefOr[TypeNode],
     initializer: js.UndefOr[Expression]

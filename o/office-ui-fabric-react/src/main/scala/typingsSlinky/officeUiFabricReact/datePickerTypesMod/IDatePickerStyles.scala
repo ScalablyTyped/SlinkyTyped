@@ -18,6 +18,8 @@ trait IDatePickerStyles extends js.Object {
   var root: IStyle = js.native
   
   var textField: IStyle = js.native
+  
+  var wrapper: js.UndefOr[IStyle] = js.native
 }
 object IDatePickerStyles {
   
@@ -77,5 +79,14 @@ object IDatePickerStyles {
     
     @scala.inline
     def setTextFieldNull: Self = this.set("textField", null)
+    
+    @scala.inline
+    def setWrapper(value: IStyle): Self = this.set("wrapper", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWrapper: Self = this.set("wrapper", js.undefined)
+    
+    @scala.inline
+    def setWrapperNull: Self = this.set("wrapper", null)
   }
 }

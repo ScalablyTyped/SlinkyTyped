@@ -24,6 +24,9 @@ object StatefulSlider {
     def initialState(value: State): this.type = set("initialState", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def marks(value: Boolean): this.type = set("marks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -39,7 +39,7 @@ trait DirectoryArgs extends js.Object {
   /**
     * The fully qualified name for the directory, such as `corp.example.com`
     */
-  val name: js.UndefOr[Input[String]] = js.native
+  val name: Input[String] = js.native
   
   /**
     * The password for the directory administrator or connector user.
@@ -74,8 +74,8 @@ trait DirectoryArgs extends js.Object {
 object DirectoryArgs {
   
   @scala.inline
-  def apply(password: Input[String]): DirectoryArgs = {
-    val __obj = js.Dynamic.literal(password = password.asInstanceOf[js.Any])
+  def apply(name: Input[String], password: Input[String]): DirectoryArgs = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any])
     __obj.asInstanceOf[DirectoryArgs]
   }
   
@@ -93,6 +93,9 @@ object DirectoryArgs {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setName(value: Input[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPassword(value: Input[String]): Self = this.set("password", value.asInstanceOf[js.Any])
@@ -126,12 +129,6 @@ object DirectoryArgs {
     
     @scala.inline
     def deleteEnableSso: Self = this.set("enableSso", js.undefined)
-    
-    @scala.inline
-    def setName(value: Input[String]): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
     def setShortName(value: Input[String]): Self = this.set("shortName", value.asInstanceOf[js.Any])

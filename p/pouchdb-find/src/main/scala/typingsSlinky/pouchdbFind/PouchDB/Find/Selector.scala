@@ -10,7 +10,7 @@ trait Selector
   extends CombinationOperators
      with /* field */ StringDictionary[Selector | js.Array[Selector] | ConditionOperators | js.Any] {
   
-  var _id: js.UndefOr[ConditionOperators] = js.native
+  var _id: js.UndefOr[String | ConditionOperators] = js.native
 }
 object Selector {
   
@@ -36,7 +36,7 @@ object Selector {
     }
     
     @scala.inline
-    def set_id(value: ConditionOperators): Self = this.set("_id", value.asInstanceOf[js.Any])
+    def set_id(value: String | ConditionOperators): Self = this.set("_id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def delete_id: Self = this.set("_id", js.undefined)

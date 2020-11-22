@@ -70,6 +70,7 @@ object updateTypeAliasDeclaration extends js.Object {
     typeParameters: js.UndefOr[scala.Nothing],
     `type`: TypeNode
   ): TypeAliasDeclaration = js.native
+  /** @deprecated Use `factory.updateTypeAliasDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     node: TypeAliasDeclaration,
     decorators: js.Array[Decorator],

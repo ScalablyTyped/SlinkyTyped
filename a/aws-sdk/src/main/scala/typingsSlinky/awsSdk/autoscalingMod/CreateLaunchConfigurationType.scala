@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateLaunchConfigurationType extends js.Object {
   
   /**
-    * For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group's instances. If you specify true, each instance in the Auto Scaling group receives a unique public IP address. For more information, see Launching Auto Scaling Instances in a VPC in the Amazon EC2 Auto Scaling User Guide. If you specify this parameter, you must specify at least one subnet for VPCZoneIdentifier when you create your group.  If the instance is launched into a default subnet, the default is to assign a public IP address, unless you disabled the option to assign a public IP address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a public IP address, unless you enabled the option to assign a public IP address on the subnet. 
+    * For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group's instances. If you specify true, each instance in the Auto Scaling group receives a unique public IP address. For more information, see Launching Auto Scaling instances in a VPC in the Amazon EC2 Auto Scaling User Guide. If you specify this parameter, you must specify at least one subnet for VPCZoneIdentifier when you create your group.  If the instance is launched into a default subnet, the default is to assign a public IP address, unless you disabled the option to assign a public IP address on the subnet. If the instance is launched into a nondefault subnet, the default is not to assign a public IP address, unless you enabled the option to assign a public IP address on the subnet. 
     */
   var AssociatePublicIpAddress: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.AssociatePublicIpAddress] = js.native
   
@@ -18,12 +18,12 @@ trait CreateLaunchConfigurationType extends js.Object {
   var BlockDeviceMappings: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.BlockDeviceMappings] = js.native
   
   /**
-    * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see ClassicLink in the Amazon EC2 User Guide for Linux Instances and Linking EC2-Classic Instances to a VPC in the Amazon EC2 Auto Scaling User Guide. This parameter can only be used if you are launching EC2-Classic instances.
+    * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to. For more information, see ClassicLink in the Amazon EC2 User Guide for Linux Instances and Linking EC2-Classic instances to a VPC in the Amazon EC2 Auto Scaling User Guide. This parameter can only be used if you are launching EC2-Classic instances.
     */
   var ClassicLinkVPCId: js.UndefOr[XmlStringMaxLen255] = js.native
   
   /**
-    * The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information, see ClassicLink in the Amazon EC2 User Guide for Linux Instances and Linking EC2-Classic Instances to a VPC in the Amazon EC2 Auto Scaling User Guide. If you specify the ClassicLinkVPCId parameter, you must specify this parameter.
+    * The IDs of one or more security groups for the specified ClassicLink-enabled VPC. For more information, see ClassicLink in the Amazon EC2 User Guide for Linux Instances and Linking EC2-Classic instances to a VPC in the Amazon EC2 Auto Scaling User Guide. If you specify the ClassicLinkVPCId parameter, you must specify this parameter.
     */
   var ClassicLinkVPCSecurityGroups: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.ClassicLinkVPCSecurityGroups] = js.native
   
@@ -33,7 +33,7 @@ trait CreateLaunchConfigurationType extends js.Object {
   var EbsOptimized: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.EbsOptimized] = js.native
   
   /**
-    * The name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role. For more information, see IAM Role for Applications That Run on Amazon EC2 Instances in the Amazon EC2 Auto Scaling User Guide.
+    * The name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role. For more information, see IAM role for applications that run on Amazon EC2 instances in the Amazon EC2 Auto Scaling User Guide.
     */
   var IamInstanceProfile: js.UndefOr[XmlStringMaxLen1600] = js.native
   
@@ -43,7 +43,7 @@ trait CreateLaunchConfigurationType extends js.Object {
   var ImageId: js.UndefOr[XmlStringMaxLen255] = js.native
   
   /**
-    * The ID of the instance to use to create the launch configuration. The new launch configuration derives attributes from the instance, except for the block device mapping. To create a launch configuration with a block device mapping or override any other instance attributes, specify them as part of the same request. For more information, see Create a Launch Configuration Using an EC2 Instance in the Amazon EC2 Auto Scaling User Guide. If you do not specify InstanceId, you must specify both ImageId and InstanceType.
+    * The ID of the instance to use to create the launch configuration. The new launch configuration derives attributes from the instance, except for the block device mapping. To create a launch configuration with a block device mapping or override any other instance attributes, specify them as part of the same request. For more information, see Creating a launch configuration using an EC2 instance in the Amazon EC2 Auto Scaling User Guide. If you do not specify InstanceId, you must specify both ImageId and InstanceType.
     */
   var InstanceId: js.UndefOr[XmlStringMaxLen19] = js.native
   
@@ -73,12 +73,12 @@ trait CreateLaunchConfigurationType extends js.Object {
   var LaunchConfigurationName: XmlStringMaxLen255 = js.native
   
   /**
-    * The metadata options for the instances. For more information, see Instance Metadata and User Data in the Amazon EC2 User Guide for Linux Instances.
+    * The metadata options for the instances. For more information, see Configuring the Instance Metadata Options in the Amazon EC2 Auto Scaling User Guide.
     */
   var MetadataOptions: js.UndefOr[InstanceMetadataOptions] = js.native
   
   /**
-    * The tenancy of the instance. An instance with dedicated tenancy runs on isolated, single-tenant hardware and can only be launched into a VPC. To launch dedicated instances into a shared tenancy VPC (a VPC with the instance placement tenancy attribute set to default), you must set the value of this parameter to dedicated. If you specify PlacementTenancy, you must specify at least one subnet for VPCZoneIdentifier when you create your group. For more information, see Instance Placement Tenancy in the Amazon EC2 Auto Scaling User Guide. Valid Values: default | dedicated 
+    * The tenancy of the instance. An instance with dedicated tenancy runs on isolated, single-tenant hardware and can only be launched into a VPC. To launch dedicated instances into a shared tenancy VPC (a VPC with the instance placement tenancy attribute set to default), you must set the value of this parameter to dedicated. If you specify PlacementTenancy, you must specify at least one subnet for VPCZoneIdentifier when you create your group. For more information, see Configuring instance tenancy with Amazon EC2 Auto Scaling in the Amazon EC2 Auto Scaling User Guide. Valid Values: default | dedicated 
     */
   var PlacementTenancy: js.UndefOr[XmlStringMaxLen64] = js.native
   
@@ -93,12 +93,12 @@ trait CreateLaunchConfigurationType extends js.Object {
   var SecurityGroups: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.SecurityGroups] = js.native
   
   /**
-    * The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances are launched when the price you specify exceeds the current Spot price. For more information, see Launching Spot Instances in Your Auto Scaling Group in the Amazon EC2 Auto Scaling User Guide.  When you change your maximum price by creating a new launch configuration, running instances will continue to run as long as the maximum price for those running instances is higher than the current Spot price. 
+    * The maximum hourly price to be paid for any Spot Instance launched to fulfill the request. Spot Instances are launched when the price you specify exceeds the current Spot price. For more information, see Requesting Spot Instances in the Amazon EC2 Auto Scaling User Guide.  When you change your maximum price by creating a new launch configuration, running instances will continue to run as long as the maximum price for those running instances is higher than the current Spot price. 
     */
   var SpotPrice: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.SpotPrice] = js.native
   
   /**
-    * The Base64-encoded user data to make available to the launched EC2 instances. For more information, see Instance Metadata and User Data in the Amazon EC2 User Guide for Linux Instances.
+    * The Base64-encoded user data to make available to the launched EC2 instances. For more information, see Instance metadata and user data in the Amazon EC2 User Guide for Linux Instances.
     */
   var UserData: js.UndefOr[XmlStringUserData] = js.native
 }

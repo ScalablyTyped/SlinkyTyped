@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.CustomWidget
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetObject
@@ -10,6 +11,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,14 +19,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.ClientTemplate")
 @js.native
-class ClientTemplate protected () extends Element {
+class ClientTemplate protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsButton: Button = js.native
@@ -45,6 +47,8 @@ class ClientTemplate protected () extends Element {
   
   def containerAsStaticImageViewer: StaticImageViewer = js.native
   
+  def containerAsTabPage: TabPage = js.native
+  
   def containerAsWidgetObject: WidgetObject = js.native
   
   def containerAsWidgetValue: WidgetValue = js.native
@@ -54,9 +58,6 @@ class ClientTemplate protected () extends Element {
     */
   def fallback: Text = js.native
   def fallback_=(newValue: Text): Unit = js.native
-  
-  @JSName("model")
-  var model_FClientTemplate: IModel = js.native
   
   def parameters: IList[ClientTemplateParameter] = js.native
   
@@ -162,6 +163,16 @@ object ClientTemplate extends js.Object {
     *  8.6.0 and higher
     */
   def createInStaticImageViewerUnderAlternativeText(container: StaticImageViewer): ClientTemplate = js.native
+  
+  /**
+    * Creates and returns a new ClientTemplate instance in the SDK and on the server.
+    * The new ClientTemplate will be automatically stored in the 'badge' property
+    * of the parent TabPage element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.13.0 and higher
+    */
+  def createInTabPageUnderBadge(container: TabPage): ClientTemplate = js.native
   
   /**
     * Creates and returns a new ClientTemplate instance in the SDK and on the server.

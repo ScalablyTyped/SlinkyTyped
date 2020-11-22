@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// Experimental(er) features
+// Experimental/Draft features
 @js.native
 trait XRRay extends js.Object {
   

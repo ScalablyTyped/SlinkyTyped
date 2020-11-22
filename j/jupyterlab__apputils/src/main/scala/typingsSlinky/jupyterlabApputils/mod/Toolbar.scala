@@ -1,10 +1,11 @@
 package typingsSlinky.jupyterlabApputils.mod
 
-import typingsSlinky.jupyterlabApputils.clientsessionMod.IClientSession
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.jupyterlabApputils.sessioncontextMod.ISessionContext
+import typingsSlinky.jupyterlabApputils.sessioncontextMod.ISessionContext.IDialogs
+import typingsSlinky.luminoWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/apputils", "Toolbar")
 @js.native
@@ -13,23 +14,25 @@ import scala.scalajs.js.annotation._
   */
 class Toolbar[T /* <: Widget */] ()
   extends typingsSlinky.jupyterlabApputils.toolbarMod.Toolbar[T]
-
 @JSImport("@jupyterlab/apputils", "Toolbar")
 @js.native
 object Toolbar extends js.Object {
+  
   /**
     * Create an interrupt toolbar item.
     */
-  def createInterruptButton(session: IClientSession): Widget = js.native
+  def createInterruptButton(sessionContext: ISessionContext): Widget = js.native
+  
   /**
     * Create a kernel name indicator item.
     *
     * #### Notes
-    * It will display the `'display_name`' of the current kernel,
-    * or `'No Kernel'` if there is no kernel.
-    * It can handle a change in context or kernel.
+    * It will display the `'display_name`' of the session context. It can
+    * handle a change in context or kernel.
     */
-  def createKernelNameItem(session: IClientSession): Widget = js.native
+  def createKernelNameItem(sessionContext: ISessionContext): Widget = js.native
+  def createKernelNameItem(sessionContext: ISessionContext, dialogs: IDialogs): Widget = js.native
+  
   /**
     * Create a kernel status indicator item.
     *
@@ -38,11 +41,14 @@ object Toolbar extends js.Object {
     * It will show the current status in the node title.
     * It can handle a change to the context or the kernel.
     */
-  def createKernelStatusItem(session: IClientSession): Widget = js.native
+  def createKernelStatusItem(sessionContext: ISessionContext): Widget = js.native
+  
   /**
     * Create a restart toolbar item.
     */
-  def createRestartButton(session: IClientSession): Widget = js.native
+  def createRestartButton(sessionContext: ISessionContext): Widget = js.native
+  def createRestartButton(sessionContext: ISessionContext, dialogs: IDialogs): Widget = js.native
+  
   /**
     * Create a toolbar spacer item.
     *
@@ -52,4 +58,3 @@ object Toolbar extends js.Object {
     */
   def createSpacerItem(): Widget = js.native
 }
-

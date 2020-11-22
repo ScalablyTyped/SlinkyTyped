@@ -1,12 +1,14 @@
 package typingsSlinky.antDesignReactNative.defaultTabBarMod
 
+import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.antDesignReactNative.anon.ActiveTab
 import typingsSlinky.antDesignReactNative.libStyleMod.Theme
 import typingsSlinky.antDesignReactNative.tabsPropsTypeMod.TabData
 import typingsSlinky.antDesignReactNative.tabsStyleMod.TabBarStyle
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.anon.Layout
+import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ScrollView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,11 +35,11 @@ class DefaultTabBar protected ()
   
   def necessarilyMeasurementsCompleted(position: Double, isLastTab: Boolean): js.Any = js.native
   
-  def onContainerLayout(e: LayoutChangeEvent): Unit = js.native
+  def onContainerLayout(e: SyntheticEvent[NodeHandle, Layout]): Unit = js.native
   
   def onPress(index: Double): Unit = js.native
   
-  def onTabContainerLayout(e: LayoutChangeEvent): Unit = js.native
+  def onTabContainerLayout(e: SyntheticEvent[NodeHandle, Layout]): Unit = js.native
   
   def renderTab(
     tab: TabData,

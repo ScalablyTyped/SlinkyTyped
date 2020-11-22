@@ -1,5 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.SVGElement
+import org.scalajs.dom.raw.SVGGElement
+import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
+import typingsSlinky.devextreme.mod.DevExpress.core.template
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,8 +13,37 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartCommonAnnotationConfig extends BaseChartAnnotationConfig {
   
-  /** @name dxChartCommonAnnotationConfig.axis */
+  /**
+    * [descr:dxChartCommonAnnotationConfig.axis]
+    */
   var axis: js.UndefOr[String] = js.native
+  
+  /**
+    * [descr:dxChartCommonAnnotationConfig.customizeTooltip]
+    */
+  var customizeTooltip: js.UndefOr[js.Function1[/* annotation */ dxChartAnnotationConfig | js.Any, _]] = js.native
+  
+  /**
+    * [descr:dxChartCommonAnnotationConfig.template]
+    */
+  var template: js.UndefOr[
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
+      /* annotation */ dxChartAnnotationConfig | js.Any, 
+      /* element */ SVGGElement, 
+      String | SVGElement | JQuery
+    ])
+  ] = js.native
+  
+  /**
+    * [descr:dxChartCommonAnnotationConfig.tooltipTemplate]
+    */
+  var tooltipTemplate: js.UndefOr[
+    template | (js.Function2[
+      /* annotation */ dxChartAnnotationConfig | js.Any, 
+      /* element */ dxElement, 
+      String | Element | JQuery
+    ])
+  ] = js.native
 }
 object dxChartCommonAnnotationConfig {
   
@@ -38,5 +73,51 @@ object dxChartCommonAnnotationConfig {
     
     @scala.inline
     def deleteAxis: Self = this.set("axis", js.undefined)
+    
+    @scala.inline
+    def setCustomizeTooltip(value: /* annotation */ dxChartAnnotationConfig | js.Any => _): Self = this.set("customizeTooltip", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteCustomizeTooltip: Self = this.set("customizeTooltip", js.undefined)
+    
+    @scala.inline
+    def setTemplateFunction2(
+      value: (/* annotation */ dxChartAnnotationConfig | js.Any, /* element */ SVGGElement) => String | SVGElement | JQuery
+    ): Self = this.set("template", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setTemplateElement(value: Element): Self = this.set("template", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTemplate(
+      value: template | (js.Function2[
+          /* annotation */ dxChartAnnotationConfig | js.Any, 
+          /* element */ SVGGElement, 
+          String | SVGElement | JQuery
+        ])
+    ): Self = this.set("template", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTemplate: Self = this.set("template", js.undefined)
+    
+    @scala.inline
+    def setTooltipTemplateFunction2(
+      value: (/* annotation */ dxChartAnnotationConfig | js.Any, /* element */ dxElement) => String | Element | JQuery
+    ): Self = this.set("tooltipTemplate", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setTooltipTemplateElement(value: Element): Self = this.set("tooltipTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTooltipTemplate(
+      value: template | (js.Function2[
+          /* annotation */ dxChartAnnotationConfig | js.Any, 
+          /* element */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = this.set("tooltipTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTooltipTemplate: Self = this.set("tooltipTemplate", js.undefined)
   }
 }

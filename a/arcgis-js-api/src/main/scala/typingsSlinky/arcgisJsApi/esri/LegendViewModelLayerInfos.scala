@@ -17,7 +17,7 @@ trait LegendViewModelLayerInfos extends Object {
   var layer: js.UndefOr[Layer] = js.native
   
   /**
-    * Specify a title for the layer. If no title is specified the service name is used.
+    * Specify a title for the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-LegendViewModel.html#layerInfos)
     */

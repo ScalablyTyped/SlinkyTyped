@@ -35,6 +35,8 @@ trait Exposure extends js.Object {
   
   var skyboxMip: Double = js.native
   
+  var skyboxRotation: js.Array[Double] = js.native
+  
   var tonemapping: Double = js.native
 }
 object Exposure {
@@ -54,9 +56,10 @@ object Exposure {
     lightmapSizeMultiplier: Double,
     skyboxIntensity: Double,
     skyboxMip: Double,
+    skyboxRotation: js.Array[Double],
     tonemapping: Double
   ): Exposure = {
-    val __obj = js.Dynamic.literal(exposure = exposure.asInstanceOf[js.Any], fog = fog.asInstanceOf[js.Any], fog_color = fog_color.asInstanceOf[js.Any], fog_density = fog_density.asInstanceOf[js.Any], fog_end = fog_end.asInstanceOf[js.Any], fog_start = fog_start.asInstanceOf[js.Any], gamma_correction = gamma_correction.asInstanceOf[js.Any], global_ambient = global_ambient.asInstanceOf[js.Any], lightmapMaxResolution = lightmapMaxResolution.asInstanceOf[js.Any], lightmapMode = lightmapMode.asInstanceOf[js.Any], lightmapSizeMultiplier = lightmapSizeMultiplier.asInstanceOf[js.Any], skyboxIntensity = skyboxIntensity.asInstanceOf[js.Any], skyboxMip = skyboxMip.asInstanceOf[js.Any], tonemapping = tonemapping.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(exposure = exposure.asInstanceOf[js.Any], fog = fog.asInstanceOf[js.Any], fog_color = fog_color.asInstanceOf[js.Any], fog_density = fog_density.asInstanceOf[js.Any], fog_end = fog_end.asInstanceOf[js.Any], fog_start = fog_start.asInstanceOf[js.Any], gamma_correction = gamma_correction.asInstanceOf[js.Any], global_ambient = global_ambient.asInstanceOf[js.Any], lightmapMaxResolution = lightmapMaxResolution.asInstanceOf[js.Any], lightmapMode = lightmapMode.asInstanceOf[js.Any], lightmapSizeMultiplier = lightmapSizeMultiplier.asInstanceOf[js.Any], skyboxIntensity = skyboxIntensity.asInstanceOf[js.Any], skyboxMip = skyboxMip.asInstanceOf[js.Any], skyboxRotation = skyboxRotation.asInstanceOf[js.Any], tonemapping = tonemapping.asInstanceOf[js.Any])
     __obj.asInstanceOf[Exposure]
   }
   
@@ -119,6 +122,12 @@ object Exposure {
     
     @scala.inline
     def setSkyboxMip(value: Double): Self = this.set("skyboxMip", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSkyboxRotationVarargs(value: Double*): Self = this.set("skyboxRotation", js.Array(value :_*))
+    
+    @scala.inline
+    def setSkyboxRotation(value: js.Array[Double]): Self = this.set("skyboxRotation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTonemapping(value: Double): Self = this.set("tonemapping", value.asInstanceOf[js.Any])

@@ -12,6 +12,14 @@ class PercentPipe protected () extends PipeTransform {
   
   var _locale: js.Any = js.native
   
+  def transform(): Null = js.native
+  def transform(value: js.UndefOr[scala.Nothing], digitsInfo: js.UndefOr[scala.Nothing], locale: String): Null = js.native
+  def transform(value: js.UndefOr[scala.Nothing], digitsInfo: String): Null = js.native
+  def transform(value: js.UndefOr[scala.Nothing], digitsInfo: String, locale: String): Null = js.native
+  def transform(value: String): String | Null = js.native
+  def transform(value: String, digitsInfo: js.UndefOr[scala.Nothing], locale: String): String | Null = js.native
+  def transform(value: String, digitsInfo: String): String | Null = js.native
+  def transform(value: String, digitsInfo: String, locale: String): String | Null = js.native
   /**
     *
     * @param value The number to be formatted as a percentage.
@@ -28,8 +36,25 @@ class PercentPipe protected () extends PipeTransform {
     * When not supplied, uses the value of `LOCALE_ID`, which is `en-US` by default.
     * See [Setting your app locale](guide/i18n#setting-up-the-locale-of-your-app).
     */
-  def transform(value: js.Any): String | Null = js.native
-  def transform(value: js.Any, digitsInfo: js.UndefOr[scala.Nothing], locale: String): String | Null = js.native
-  def transform(value: js.Any, digitsInfo: String): String | Null = js.native
-  def transform(value: js.Any, digitsInfo: String, locale: String): String | Null = js.native
+  def transform(value: Double): String | Null = js.native
+  def transform(value: Double, digitsInfo: js.UndefOr[scala.Nothing], locale: String): String | Null = js.native
+  def transform(value: Double, digitsInfo: String): String | Null = js.native
+  def transform(value: Double, digitsInfo: String, locale: String): String | Null = js.native
+  def transform(value: Null, digitsInfo: js.UndefOr[scala.Nothing], locale: String): Null = js.native
+  def transform(value: Null, digitsInfo: String): Null = js.native
+  def transform(value: Null, digitsInfo: String, locale: String): Null = js.native
+  @JSName("transform")
+  def transform_Union(): String | Null = js.native
+  @JSName("transform")
+  def transform_Union(value: js.UndefOr[scala.Nothing], digitsInfo: js.UndefOr[scala.Nothing], locale: String): String | Null = js.native
+  @JSName("transform")
+  def transform_Union(value: js.UndefOr[scala.Nothing], digitsInfo: String): String | Null = js.native
+  @JSName("transform")
+  def transform_Union(value: js.UndefOr[scala.Nothing], digitsInfo: String, locale: String): String | Null = js.native
+  @JSName("transform")
+  def transform_Union(value: Null, digitsInfo: js.UndefOr[scala.Nothing], locale: String): String | Null = js.native
+  @JSName("transform")
+  def transform_Union(value: Null, digitsInfo: String): String | Null = js.native
+  @JSName("transform")
+  def transform_Union(value: Null, digitsInfo: String, locale: String): String | Null = js.native
 }

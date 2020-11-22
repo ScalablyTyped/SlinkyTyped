@@ -32,8 +32,6 @@ import typingsSlinky.kendoUi.kendo.mobile.ui.DetailButton
 import typingsSlinky.kendoUi.kendo.mobile.ui.DetailButtonOptions
 import typingsSlinky.kendoUi.kendo.mobile.ui.Layout
 import typingsSlinky.kendoUi.kendo.mobile.ui.LayoutOptions
-import typingsSlinky.kendoUi.kendo.mobile.ui.Loader
-import typingsSlinky.kendoUi.kendo.mobile.ui.LoaderOptions
 import typingsSlinky.kendoUi.kendo.mobile.ui.ModalView
 import typingsSlinky.kendoUi.kendo.mobile.ui.ModalViewOptions
 import typingsSlinky.kendoUi.kendo.mobile.ui.NavBar
@@ -56,6 +54,8 @@ import typingsSlinky.kendoUi.kendo.mobile.ui.View
 import typingsSlinky.kendoUi.kendo.mobile.ui.ViewOptions
 import typingsSlinky.kendoUi.kendo.ui.Alert
 import typingsSlinky.kendoUi.kendo.ui.AlertOptions
+import typingsSlinky.kendoUi.kendo.ui.AppBar
+import typingsSlinky.kendoUi.kendo.ui.AppBarOptions
 import typingsSlinky.kendoUi.kendo.ui.AutoComplete
 import typingsSlinky.kendoUi.kendo.ui.AutoCompleteOptions
 import typingsSlinky.kendoUi.kendo.ui.Button
@@ -110,10 +110,14 @@ import typingsSlinky.kendoUi.kendo.ui.Gantt
 import typingsSlinky.kendoUi.kendo.ui.GanttOptions
 import typingsSlinky.kendoUi.kendo.ui.Grid
 import typingsSlinky.kendoUi.kendo.ui.GridOptions
+import typingsSlinky.kendoUi.kendo.ui.ImageEditor
+import typingsSlinky.kendoUi.kendo.ui.ImageEditorOptions
 import typingsSlinky.kendoUi.kendo.ui.ListBox
 import typingsSlinky.kendoUi.kendo.ui.ListBoxOptions
 import typingsSlinky.kendoUi.kendo.ui.ListView
 import typingsSlinky.kendoUi.kendo.ui.ListViewOptions
+import typingsSlinky.kendoUi.kendo.ui.Loader
+import typingsSlinky.kendoUi.kendo.ui.LoaderOptions
 import typingsSlinky.kendoUi.kendo.ui.MaskedTextBox
 import typingsSlinky.kendoUi.kendo.ui.MaskedTextBoxOptions
 import typingsSlinky.kendoUi.kendo.ui.MediaPlayer
@@ -164,6 +168,8 @@ import typingsSlinky.kendoUi.kendo.ui.Spreadsheet
 import typingsSlinky.kendoUi.kendo.ui.SpreadsheetOptions
 import typingsSlinky.kendoUi.kendo.ui.Stepper
 import typingsSlinky.kendoUi.kendo.ui.StepperOptions
+import typingsSlinky.kendoUi.kendo.ui.TextArea
+import typingsSlinky.kendoUi.kendo.ui.TextAreaOptions
 import typingsSlinky.kendoUi.kendo.ui.TextBox
 import typingsSlinky.kendoUi.kendo.ui.TextBoxOptions
 import typingsSlinky.kendoUi.kendo.ui.TileLayout
@@ -188,7 +194,10 @@ import typingsSlinky.kendoUi.kendo.ui.Validator
 import typingsSlinky.kendoUi.kendo.ui.ValidatorOptions
 import typingsSlinky.kendoUi.kendo.ui.Window
 import typingsSlinky.kendoUi.kendo.ui.WindowOptions
+import typingsSlinky.kendoUi.kendo.ui.Wizard
+import typingsSlinky.kendoUi.kendo.ui.WizardOptions
 import typingsSlinky.kendoUi.kendoUiStrings.kendoAlert
+import typingsSlinky.kendoUi.kendoUiStrings.kendoAppBar
 import typingsSlinky.kendoUi.kendoUiStrings.kendoArcGauge
 import typingsSlinky.kendoUi.kendoUiStrings.kendoAutoComplete
 import typingsSlinky.kendoUi.kendoUiStrings.kendoBarcode
@@ -220,9 +229,11 @@ import typingsSlinky.kendoUi.kendoUiStrings.kendoFilterMenu
 import typingsSlinky.kendoUi.kendoUiStrings.kendoFlatColorPicker
 import typingsSlinky.kendoUi.kendoUiStrings.kendoGantt
 import typingsSlinky.kendoUi.kendoUiStrings.kendoGrid
+import typingsSlinky.kendoUi.kendoUiStrings.kendoImageEditor
 import typingsSlinky.kendoUi.kendoUiStrings.kendoLinearGauge
 import typingsSlinky.kendoUi.kendoUiStrings.kendoListBox
 import typingsSlinky.kendoUi.kendoUiStrings.kendoListView
+import typingsSlinky.kendoUi.kendoUiStrings.kendoLoader
 import typingsSlinky.kendoUi.kendoUiStrings.kendoMap
 import typingsSlinky.kendoUi.kendoUiStrings.kendoMaskedTextBox
 import typingsSlinky.kendoUi.kendoUiStrings.kendoMediaPlayer
@@ -276,6 +287,7 @@ import typingsSlinky.kendoUi.kendoUiStrings.kendoStepper
 import typingsSlinky.kendoUi.kendoUiStrings.kendoStockChart
 import typingsSlinky.kendoUi.kendoUiStrings.kendoSwitch
 import typingsSlinky.kendoUi.kendoUiStrings.kendoTabStrip
+import typingsSlinky.kendoUi.kendoUiStrings.kendoTextArea
 import typingsSlinky.kendoUi.kendoUiStrings.kendoTextBox
 import typingsSlinky.kendoUi.kendoUiStrings.kendoTileLayout
 import typingsSlinky.kendoUi.kendoUiStrings.kendoTimePicker
@@ -289,6 +301,7 @@ import typingsSlinky.kendoUi.kendoUiStrings.kendoTreeView
 import typingsSlinky.kendoUi.kendoUiStrings.kendoUpload
 import typingsSlinky.kendoUi.kendoUiStrings.kendoValidator
 import typingsSlinky.kendoUi.kendoUiStrings.kendoWindow
+import typingsSlinky.kendoUi.kendoUiStrings.kendoWizard
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -299,6 +312,8 @@ trait JQuery extends js.Object {
   def data(key: js.Any): js.Any = js.native
   @JSName("data")
   def data_kendoAlert(key: kendoAlert): Alert = js.native
+  @JSName("data")
+  def data_kendoAppBar(key: kendoAppBar): AppBar = js.native
   @JSName("data")
   def data_kendoArcGauge(key: kendoArcGauge): ArcGauge = js.native
   @JSName("data")
@@ -362,11 +377,15 @@ trait JQuery extends js.Object {
   @JSName("data")
   def data_kendoGrid(key: kendoGrid): Grid = js.native
   @JSName("data")
+  def data_kendoImageEditor(key: kendoImageEditor): ImageEditor = js.native
+  @JSName("data")
   def data_kendoLinearGauge(key: kendoLinearGauge): LinearGauge = js.native
   @JSName("data")
   def data_kendoListBox(key: kendoListBox): ListBox = js.native
   @JSName("data")
   def data_kendoListView(key: kendoListView): ListView = js.native
+  @JSName("data")
+  def data_kendoLoader(key: kendoLoader): Loader = js.native
   @JSName("data")
   def data_kendoMap(key: kendoMap): Map = js.native
   @JSName("data")
@@ -394,7 +413,7 @@ trait JQuery extends js.Object {
   @JSName("data")
   def data_kendoMobileListView(key: kendoMobileListView): typingsSlinky.kendoUi.kendo.mobile.ui.ListView = js.native
   @JSName("data")
-  def data_kendoMobileLoader(key: kendoMobileLoader): Loader = js.native
+  def data_kendoMobileLoader(key: kendoMobileLoader): typingsSlinky.kendoUi.kendo.mobile.ui.Loader = js.native
   @JSName("data")
   def data_kendoMobileModalView(key: kendoMobileModalView): ModalView = js.native
   @JSName("data")
@@ -474,6 +493,8 @@ trait JQuery extends js.Object {
   @JSName("data")
   def data_kendoTabStrip(key: kendoTabStrip): typingsSlinky.kendoUi.kendo.ui.TabStrip = js.native
   @JSName("data")
+  def data_kendoTextArea(key: kendoTextArea): TextArea = js.native
+  @JSName("data")
   def data_kendoTextBox(key: kendoTextBox): TextBox = js.native
   @JSName("data")
   def data_kendoTileLayout(key: kendoTileLayout): TileLayout = js.native
@@ -499,9 +520,14 @@ trait JQuery extends js.Object {
   def data_kendoValidator(key: kendoValidator): Validator = js.native
   @JSName("data")
   def data_kendoWindow(key: kendoWindow): Window = js.native
+  @JSName("data")
+  def data_kendoWizard(key: kendoWizard): Wizard = js.native
   
   def kendoAlert(): JQuery = js.native
   def kendoAlert(options: AlertOptions): JQuery = js.native
+  
+  def kendoAppBar(): JQuery = js.native
+  def kendoAppBar(options: AppBarOptions): JQuery = js.native
   
   def kendoArcGauge(): JQuery = js.native
   def kendoArcGauge(options: ArcGaugeOptions): JQuery = js.native
@@ -596,6 +622,9 @@ trait JQuery extends js.Object {
   def kendoGrid(): JQuery = js.native
   def kendoGrid(options: GridOptions): JQuery = js.native
   
+  def kendoImageEditor(): JQuery = js.native
+  def kendoImageEditor(options: ImageEditorOptions): JQuery = js.native
+  
   def kendoLinearGauge(): JQuery = js.native
   def kendoLinearGauge(options: LinearGaugeOptions): JQuery = js.native
   
@@ -604,6 +633,9 @@ trait JQuery extends js.Object {
   
   def kendoListView(): JQuery = js.native
   def kendoListView(options: ListViewOptions): JQuery = js.native
+  
+  def kendoLoader(): JQuery = js.native
+  def kendoLoader(options: LoaderOptions): JQuery = js.native
   
   def kendoMap(): JQuery = js.native
   def kendoMap(options: MapOptions): JQuery = js.native
@@ -645,7 +677,7 @@ trait JQuery extends js.Object {
   def kendoMobileListView(options: typingsSlinky.kendoUi.kendo.mobile.ui.ListViewOptions): JQuery = js.native
   
   def kendoMobileLoader(): JQuery = js.native
-  def kendoMobileLoader(options: LoaderOptions): JQuery = js.native
+  def kendoMobileLoader(options: typingsSlinky.kendoUi.kendo.mobile.ui.LoaderOptions): JQuery = js.native
   
   def kendoMobileModalView(): JQuery = js.native
   def kendoMobileModalView(options: ModalViewOptions): JQuery = js.native
@@ -764,6 +796,9 @@ trait JQuery extends js.Object {
   def kendoTabStrip(): JQuery = js.native
   def kendoTabStrip(options: typingsSlinky.kendoUi.kendo.ui.TabStripOptions): JQuery = js.native
   
+  def kendoTextArea(): JQuery = js.native
+  def kendoTextArea(options: TextAreaOptions): JQuery = js.native
+  
   def kendoTextBox(): JQuery = js.native
   def kendoTextBox(options: TextBoxOptions): JQuery = js.native
   
@@ -802,4 +837,7 @@ trait JQuery extends js.Object {
   
   def kendoWindow(): JQuery = js.native
   def kendoWindow(options: WindowOptions): JQuery = js.native
+  
+  def kendoWizard(): JQuery = js.native
+  def kendoWizard(options: WizardOptions): JQuery = js.native
 }

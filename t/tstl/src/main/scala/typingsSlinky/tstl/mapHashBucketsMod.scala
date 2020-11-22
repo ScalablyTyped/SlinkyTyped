@@ -14,25 +14,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object mapHashBucketsMod extends js.Object {
   
   @js.native
-  class MapHashBuckets[Key, T, Unique /* <: Boolean */, Source /* <: IHashMap[Key, T, Unique, Source] */] protected () extends HashBuckets[Iterator[Key, T, Unique, Source]] {
+  class MapHashBuckets[Key, T, Unique /* <: Boolean */, Source /* <: IHashMap[Key, T, Unique, Source] */] protected () extends HashBuckets[Key, Iterator[Key, T, Unique, Source]] {
     /**
       * Initializer Constructor
       *
       * @param source Source map container
-      * @param hash Hash function
+      * @param hasher Hash function
       * @param pred Equality function
       */
-    def this(source: IHashMap[Key, T, Unique, Source], hash: Hasher[Key], pred: Comparator[Key, Key]) = this()
+    def this(source: IHashMap[Key, T, Unique, Source], hasher: Hasher[Key], pred: Comparator[Key, Key]) = this()
     
     def find(key: Key): Iterator[Key, T, Unique, Source] = js.native
     
-    def hash_function(): Hasher[Key] = js.native
-    
-    var hash_function_ : js.Any = js.native
-    
     def key_eq(): Comparator[Key, Key] = js.native
     
-    var key_eq_ : js.Any = js.native
+    val key_eq_ : js.Any = js.native
     
     var source_ : js.Any = js.native
   }

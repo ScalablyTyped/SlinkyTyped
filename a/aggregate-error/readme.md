@@ -1,7 +1,7 @@
 
 # Scala.js typings for aggregate-error
 
-Typings are for version 3.0.1
+Typings are for version 3.1.0
 
 ## Library description:
 Create an error from multiple errors

@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "ThemeSettingName")
 @js.native
-object ThemeSettingName extends TopLevel[/* "@media screen and (-ms-high-contrast: active)" */ String]
+object ThemeSettingName extends TopLevel[/* "change" */ String]

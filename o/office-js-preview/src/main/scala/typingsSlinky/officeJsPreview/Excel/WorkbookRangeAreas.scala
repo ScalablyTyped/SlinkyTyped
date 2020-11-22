@@ -12,8 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Represents a collection of one or more rectangular ranges in multiple worksheets.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait WorkbookRangeAreas extends ClientObject {
@@ -22,17 +21,15 @@ trait WorkbookRangeAreas extends ClientObject {
     *
     * Returns an array of address in A1-style. Address value will contain the worksheet name for each rectangular block of cells (e.g., "Sheet1!A1:B4, Sheet1!D1:D4"). Read-only.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val addresses: js.Array[String] = js.native
   
   /**
     *
-    * Returns the RangeAreasCollection object, each RangeAreas in the collection represent one or more rectangle ranges in one worksheet.
+    * Returns the `RangeAreasCollection` object. Each `RangeAreas` in the collection represent one or more rectangle ranges in one worksheet.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val areas: RangeAreasCollection = js.native
   
@@ -43,18 +40,16 @@ trait WorkbookRangeAreas extends ClientObject {
   /**
     * Returns the `RangeAreas` object based on worksheet id or name in the collection.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     *
     * @param key The name or id of the worksheet.
     */
   def getRangeAreasBySheet(key: String): RangeAreas = js.native
   
   /**
-    * Returns the `RangeAreas` object based on worksheet name or id in the collection. If the worksheet does not exist, will return a null object.
+    * Returns the RangeAreas object based on worksheet name or id in the collection. If the worksheet does not exist, will return a null object.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     *
     * @param key The name or id of the worksheet.
     */
@@ -73,10 +68,9 @@ trait WorkbookRangeAreas extends ClientObject {
   
   /**
     *
-    * Returns a collection of ranges that comprises this object.
+    * Returns ranges that comprise this object in a `RangeCollection` object.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val ranges: RangeCollection = js.native
   

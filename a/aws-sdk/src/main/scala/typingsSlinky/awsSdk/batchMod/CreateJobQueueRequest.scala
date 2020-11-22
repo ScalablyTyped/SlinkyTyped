@@ -23,9 +23,14 @@ trait CreateJobQueueRequest extends js.Object {
   var priority: Integer = js.native
   
   /**
-    * The state of the job queue. If the job queue state is ENABLED, it is able to accept jobs.
+    * The state of the job queue. If the job queue state is ENABLED, it is able to accept jobs. If the job queue state is DISABLED, new jobs cannot be added to the queue, but jobs already in the queue can finish.
     */
   var state: js.UndefOr[JQState] = js.native
+  
+  /**
+    * The tags that you apply to the job queue to help you categorize and organize your resources. Each tag consists of a key and an optional value. For more information, see Tagging AWS Resources in AWS General Reference.
+    */
+  var tags: js.UndefOr[TagrisTagsMap] = js.native
 }
 object CreateJobQueueRequest {
   
@@ -67,5 +72,11 @@ object CreateJobQueueRequest {
     
     @scala.inline
     def deleteState: Self = this.set("state", js.undefined)
+    
+    @scala.inline
+    def setTags(value: TagrisTagsMap): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
   }
 }

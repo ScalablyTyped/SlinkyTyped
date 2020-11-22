@@ -19,6 +19,11 @@ trait Layout extends js.Object {
   var i: String = js.native
   
   /**
+    * If true and draggable, item will be moved only within grid.
+    */
+  var isBounded: js.UndefOr[Boolean] = js.native
+  
+  /**
     * If false, will not be draggable. Overrides `static`.
     */
   var isDraggable: js.UndefOr[Boolean] = js.native
@@ -52,6 +57,12 @@ trait Layout extends js.Object {
     * set by DragEvents (onDragStart, onDrag, onDragStop) and ResizeEvents (onResizeStart, onResize, onResizeStop)
     */
   var moved: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * By default, a handle is only shown on the bottom-right (southeast) corner.
+    * Note that resizing from the top or left is generally not intuitive.
+    */
+  var resizeHandles: js.UndefOr[js.Array[ResizeHandle]] = js.native
   
   /**
     * If true, equal to `isDraggable: false` and `isResizable: false`.
@@ -112,6 +123,12 @@ object Layout {
     def setY(value: Double): Self = this.set("y", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setIsBounded(value: Boolean): Self = this.set("isBounded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsBounded: Self = this.set("isBounded", js.undefined)
+    
+    @scala.inline
     def setIsDraggable(value: Boolean): Self = this.set("isDraggable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -152,6 +169,15 @@ object Layout {
     
     @scala.inline
     def deleteMoved: Self = this.set("moved", js.undefined)
+    
+    @scala.inline
+    def setResizeHandlesVarargs(value: ResizeHandle*): Self = this.set("resizeHandles", js.Array(value :_*))
+    
+    @scala.inline
+    def setResizeHandles(value: js.Array[ResizeHandle]): Self = this.set("resizeHandles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResizeHandles: Self = this.set("resizeHandles", js.undefined)
     
     @scala.inline
     def setStatic(value: Boolean): Self = this.set("static", value.asInstanceOf[js.Any])

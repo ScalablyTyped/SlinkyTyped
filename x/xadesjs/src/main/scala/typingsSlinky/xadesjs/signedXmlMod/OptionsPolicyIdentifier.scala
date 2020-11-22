@@ -10,7 +10,7 @@ trait OptionsPolicyIdentifier extends js.Object {
   
   var description: js.UndefOr[String] = js.native
   
-  var qualifier: IdentifierQualifier = js.native
+  var qualifier: js.UndefOr[IdentifierQualifier] = js.native
   
   var references: js.UndefOr[js.Array[String]] = js.native
   
@@ -19,8 +19,8 @@ trait OptionsPolicyIdentifier extends js.Object {
 object OptionsPolicyIdentifier {
   
   @scala.inline
-  def apply(qualifier: IdentifierQualifier, value: String): OptionsPolicyIdentifier = {
-    val __obj = js.Dynamic.literal(qualifier = qualifier.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(value: String): OptionsPolicyIdentifier = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsPolicyIdentifier]
   }
   
@@ -40,9 +40,6 @@ object OptionsPolicyIdentifier {
     }
     
     @scala.inline
-    def setQualifier(value: IdentifierQualifier): Self = this.set("qualifier", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -50,6 +47,12 @@ object OptionsPolicyIdentifier {
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
+    
+    @scala.inline
+    def setQualifier(value: IdentifierQualifier): Self = this.set("qualifier", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteQualifier: Self = this.set("qualifier", js.undefined)
     
     @scala.inline
     def setReferencesVarargs(value: String*): Self = this.set("references", js.Array(value :_*))

@@ -9,6 +9,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Frame extends js.Object {
   
   /**
+    * Indicates whether this frame was tagged as an ad.
+    */
+  var adFrameType: js.UndefOr[AdFrameType] = js.native
+  
+  /**
+    * Indicates whether this is a cross origin isolated context.
+    */
+  var crossOriginIsolatedContextType: CrossOriginIsolatedContextType = js.native
+  
+  /**
+    * Frame document's registered domain, taking the public suffixes list into account.
+    * Extracted from the Frame's url.
+    * Example URLs: http://www.google.com/file.html -> "google.com"
+    *               http://a.b.co.uk/file.html      -> "b.co.uk"
+    */
+  var domainAndRegistry: String = js.native
+  
+  /**
     * Frame unique identifier.
     */
   var id: FrameId = js.native
@@ -34,6 +52,11 @@ trait Frame extends js.Object {
   var parentId: js.UndefOr[String] = js.native
   
   /**
+    * Indicates whether the main document is a secure context and explains why that is the case.
+    */
+  var secureContextType: SecureContextType = js.native
+  
+  /**
     * Frame document's security origin.
     */
   var securityOrigin: String = js.native
@@ -56,8 +79,17 @@ trait Frame extends js.Object {
 object Frame {
   
   @scala.inline
-  def apply(id: FrameId, loaderId: LoaderId, mimeType: String, securityOrigin: String, url: String): Frame = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], loaderId = loaderId.asInstanceOf[js.Any], mimeType = mimeType.asInstanceOf[js.Any], securityOrigin = securityOrigin.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+  def apply(
+    crossOriginIsolatedContextType: CrossOriginIsolatedContextType,
+    domainAndRegistry: String,
+    id: FrameId,
+    loaderId: LoaderId,
+    mimeType: String,
+    secureContextType: SecureContextType,
+    securityOrigin: String,
+    url: String
+  ): Frame = {
+    val __obj = js.Dynamic.literal(crossOriginIsolatedContextType = crossOriginIsolatedContextType.asInstanceOf[js.Any], domainAndRegistry = domainAndRegistry.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], loaderId = loaderId.asInstanceOf[js.Any], mimeType = mimeType.asInstanceOf[js.Any], secureContextType = secureContextType.asInstanceOf[js.Any], securityOrigin = securityOrigin.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[Frame]
   }
   
@@ -77,6 +109,12 @@ object Frame {
     }
     
     @scala.inline
+    def setCrossOriginIsolatedContextType(value: CrossOriginIsolatedContextType): Self = this.set("crossOriginIsolatedContextType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDomainAndRegistry(value: String): Self = this.set("domainAndRegistry", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setId(value: FrameId): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -86,10 +124,19 @@ object Frame {
     def setMimeType(value: String): Self = this.set("mimeType", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setSecureContextType(value: SecureContextType): Self = this.set("secureContextType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setSecurityOrigin(value: String): Self = this.set("securityOrigin", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAdFrameType(value: AdFrameType): Self = this.set("adFrameType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdFrameType: Self = this.set("adFrameType", js.undefined)
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

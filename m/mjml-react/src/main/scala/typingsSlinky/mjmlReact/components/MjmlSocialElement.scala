@@ -2,8 +2,8 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.Color
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.ColorProperty
 import typingsSlinky.mjmlReact.mjmlReactStrings.`facebook-noshare`
 import typingsSlinky.mjmlReact.mjmlReactStrings.`google-noshare`
 import typingsSlinky.mjmlReact.mjmlReactStrings.`linkedin-noshare`
@@ -55,13 +55,13 @@ object MjmlSocialElement {
     def alt(value: String): this.type = set("alt", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def backgroundColor(value: BackgroundColor): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def borderRadius(value: String | Double): this.type = set("borderRadius", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: ColorProperty): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])

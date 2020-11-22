@@ -1,6 +1,7 @@
 package typingsSlinky.prettier
 
 import typingsSlinky.prettier.mod.BuiltInParserName
+import typingsSlinky.prettier.mod.SupportOptionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -140,6 +141,9 @@ object prettierStrings {
   def none: none = "none".asInstanceOf[none]
   
   @scala.inline
+  def off: off = "off".asInstanceOf[off]
+  
+  @scala.inline
   def path: path = "path".asInstanceOf[path]
   
   @scala.inline
@@ -203,13 +207,13 @@ object prettierStrings {
   sealed trait `babel-ts` extends BuiltInParserName
   
   @js.native
-  sealed trait boolean extends js.Object
+  sealed trait boolean extends SupportOptionType
   
   @js.native
   sealed trait `break-parent` extends js.Object
   
   @js.native
-  sealed trait choice extends js.Object
+  sealed trait choice extends SupportOptionType
   
   @js.native
   sealed trait concat extends js.Object
@@ -257,7 +261,7 @@ object prettierStrings {
   sealed trait indent extends js.Object
   
   @js.native
-  sealed trait int extends js.Object
+  sealed trait int extends SupportOptionType
   
   @js.native
   sealed trait json extends BuiltInParserName
@@ -299,7 +303,10 @@ object prettierStrings {
   sealed trait none extends js.Object
   
   @js.native
-  sealed trait path extends js.Object
+  sealed trait off extends js.Object
+  
+  @js.native
+  sealed trait path extends SupportOptionType
   
   @js.native
   sealed trait preserve extends js.Object

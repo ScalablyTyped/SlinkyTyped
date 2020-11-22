@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.AwaitExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.StaticBlock
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `108` extends js.Object {
   
-  var `type`: AwaitExpression = js.native
+  var `type`: StaticBlock = js.native
 }
 object `108` {
   
   @scala.inline
-  def apply(`type`: AwaitExpression): `108` = {
+  def apply(`type`: StaticBlock): `108` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`108`]
@@ -35,6 +35,6 @@ object `108` {
     }
     
     @scala.inline
-    def setType(value: AwaitExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: StaticBlock): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -36,31 +36,45 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait positionConfig extends js.Object {
   
-  /** @name positionConfig.at */
+  /**
+    * [descr:positionConfig.at]
+    */
   var at: js.UndefOr[
     bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | X
   ] = js.native
   
-  /** @name positionConfig.boundary */
+  /**
+    * [descr:positionConfig.boundary]
+    */
   var boundary: js.UndefOr[String | Element | JQuery | Window] = js.native
   
-  /** @name positionConfig.boundaryOffset */
+  /**
+    * [descr:positionConfig.boundaryOffset]
+    */
   var boundaryOffset: js.UndefOr[String | Y] = js.native
   
-  /** @name positionConfig.collision */
+  /**
+    * [descr:positionConfig.collision]
+    */
   var collision: js.UndefOr[
     fit | (`fit flip`) | (`fit flipfit`) | (`fit none`) | flip | (`flip fit`) | (`flip none`) | flipfit | (`flipfit fit`) | (`flipfit none`) | none | (`none fit`) | (`none flip`) | (`none flipfit`) | XY
   ] = js.native
   
-  /** @name positionConfig.my */
+  /**
+    * [descr:positionConfig.my]
+    */
   var my: js.UndefOr[
     bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | X
   ] = js.native
   
-  /** @name positionConfig.of */
+  /**
+    * [descr:positionConfig.of]
+    */
   var of: js.UndefOr[String | Element | JQuery | Window] = js.native
   
-  /** @name positionConfig.offset */
+  /**
+    * [descr:positionConfig.offset]
+    */
   var offset: js.UndefOr[String | Y] = js.native
 }
 object positionConfig {

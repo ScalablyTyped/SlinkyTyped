@@ -18,12 +18,18 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.choiceGroupOptionTypesMod.IChoiceGroupOptionStyleProps
 import typingsSlinky.officeUiFabricReact.choiceGroupOptionTypesMod.IChoiceGroupOptionStyles
 import typingsSlinky.officeUiFabricReact.choiceGroupTypesMod.IChoiceGroupOption
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions text`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`inline`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals text`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.additions
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.all
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.ascending
@@ -34,8 +40,11 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.date
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.decimal
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.descending
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.dialog
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.done
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.email
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.enter
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.execute
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.go
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.grammar
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.grid
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.horizontal
@@ -47,6 +56,7 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.location
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.menu
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.mixed
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.move
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.next
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.no
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.none
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.numeric
@@ -56,8 +66,10 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.other
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.page
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.polite
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.popup
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.previous
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.removals
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.search
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.send
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.spelling
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.step
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.tel
@@ -86,7 +98,6 @@ import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
@@ -175,7 +186,9 @@ trait PartialIChoiceGroupOption extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -245,6 +258,8 @@ trait PartialIChoiceGroupOption extends js.Object {
   
   var draggable: js.UndefOr[Booleanish] = js.native
   
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
+  
   var focused: js.UndefOr[Boolean] = js.native
   
   var form: js.UndefOr[String] = js.native
@@ -269,7 +284,7 @@ trait PartialIChoiceGroupOption extends js.Object {
   
   var imageAlt: js.UndefOr[String] = js.native
   
-  var imageSize: js.UndefOr[Width] = js.native
+  var imageSize: js.UndefOr[Height] = js.native
   
   var imageSrc: js.UndefOr[String] = js.native
   
@@ -811,7 +826,9 @@ object PartialIChoiceGroupOption {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1033,6 +1050,12 @@ object PartialIChoiceGroupOption {
     def deleteDraggable: Self = this.set("draggable", js.undefined)
     
     @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
+    
+    @scala.inline
     def setFocused(value: Boolean): Self = this.set("focused", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1105,7 +1128,7 @@ object PartialIChoiceGroupOption {
     def deleteImageAlt: Self = this.set("imageAlt", js.undefined)
     
     @scala.inline
-    def setImageSize(value: Width): Self = this.set("imageSize", value.asInstanceOf[js.Any])
+    def setImageSize(value: Height): Self = this.set("imageSize", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteImageSize: Self = this.set("imageSize", js.undefined)

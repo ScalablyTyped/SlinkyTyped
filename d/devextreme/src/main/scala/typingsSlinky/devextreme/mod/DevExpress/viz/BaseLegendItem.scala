@@ -8,13 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BaseLegendItem extends js.Object {
   
-  /** @name BaseLegendItem.marker */
+  /**
+    * [descr:BaseLegendItem.marker]
+    */
   var marker: js.UndefOr[Fill] = js.native
   
-  /** @name BaseLegendItem.text */
+  /**
+    * [descr:BaseLegendItem.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name BaseLegendItem.visible */
+  /**
+    * [descr:BaseLegendItem.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object BaseLegendItem {

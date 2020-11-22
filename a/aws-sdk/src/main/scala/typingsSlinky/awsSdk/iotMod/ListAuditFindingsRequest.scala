@@ -18,6 +18,11 @@ trait ListAuditFindingsRequest extends js.Object {
   var endTime: js.UndefOr[js.Date] = js.native
   
   /**
+    *  Boolean flag indicating whether only the suppressed findings or the unsuppressed findings should be listed. If this parameter isn't provided, the response will list both suppressed and unsuppressed findings. 
+    */
+  var listSuppressedFindings: js.UndefOr[ListSuppressedFindings] = js.native
+  
+  /**
     * The maximum number of results to return at one time. The default is 25.
     */
   var maxResults: js.UndefOr[MaxResults] = js.native
@@ -76,6 +81,12 @@ object ListAuditFindingsRequest {
     
     @scala.inline
     def deleteEndTime: Self = this.set("endTime", js.undefined)
+    
+    @scala.inline
+    def setListSuppressedFindings(value: ListSuppressedFindings): Self = this.set("listSuppressedFindings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListSuppressedFindings: Self = this.set("listSuppressedFindings", js.undefined)
     
     @scala.inline
     def setMaxResults(value: MaxResults): Self = this.set("maxResults", value.asInstanceOf[js.Any])

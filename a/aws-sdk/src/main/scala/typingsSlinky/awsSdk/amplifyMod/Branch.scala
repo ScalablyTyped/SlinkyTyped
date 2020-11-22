@@ -83,7 +83,12 @@ trait Branch extends js.Object {
   var enableNotification: EnableNotification = js.native
   
   /**
-    *  Enables pull request preview for the branch. 
+    * Enables performance mode for the branch. Performance mode optimizes for faster hosting performance by keeping content cached at the edge for a longer interval. When performance mode is enabled, hosting configuration or code changes can take up to 10 minutes to roll out. 
+    */
+  var enablePerformanceMode: js.UndefOr[EnablePerformanceMode] = js.native
+  
+  /**
+    *  Enables pull request previews for the branch. 
     */
   var enablePullRequestPreview: EnablePullRequestPreview = js.native
   
@@ -264,6 +269,12 @@ object Branch {
     
     @scala.inline
     def deleteDestinationBranch: Self = this.set("destinationBranch", js.undefined)
+    
+    @scala.inline
+    def setEnablePerformanceMode(value: EnablePerformanceMode): Self = this.set("enablePerformanceMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnablePerformanceMode: Self = this.set("enablePerformanceMode", js.undefined)
     
     @scala.inline
     def setPullRequestEnvironmentName(value: PullRequestEnvironmentName): Self = this.set("pullRequestEnvironmentName", value.asInstanceOf[js.Any])

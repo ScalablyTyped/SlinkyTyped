@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxFileUploader
-import typingsSlinky.devextreme.mod.global.JQueryEventObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,8 +22,6 @@ trait BytesLoaded extends js.Object {
   var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
   
   var file: js.UndefOr[org.scalajs.dom.raw.File] = js.native
-  
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
   
@@ -90,12 +87,6 @@ object BytesLoaded {
     
     @scala.inline
     def deleteFile: Self = this.set("file", js.undefined)
-    
-    @scala.inline
-    def setJQueryEvent(value: JQueryEventObject): Self = this.set("jQueryEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteJQueryEvent: Self = this.set("jQueryEvent", js.undefined)
     
     @scala.inline
     def setModel(value: js.Any): Self = this.set("model", value.asInstanceOf[js.Any])

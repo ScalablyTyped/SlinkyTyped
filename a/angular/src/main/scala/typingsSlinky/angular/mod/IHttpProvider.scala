@@ -19,9 +19,10 @@ trait IHttpProvider extends IServiceProvider {
   def useApplyAsync(value: Boolean): IHttpProvider = js.native
   
   /**
-    * @param value If true, `$http` will return a normal promise without the `success` and `error` methods.
-    * @returns If a value is specified, returns the $httpProvider for chaining.
-    *    otherwise, returns the current configured value.
+    * Array containing URLs whose origins are trusted to receive the XSRF token.
     */
-  def useLegacyPromiseExtensions(value: Boolean): Boolean | IHttpProvider = js.native
+  var xsrfTrustedOrigins: js.Array[String] = js.native
+  
+  /** @deprecated The old name of xsrfTrustedOrigins. Kept for compatibility. */
+  var xsrfWhitelistedOrigins: js.Array[String] = js.native
 }

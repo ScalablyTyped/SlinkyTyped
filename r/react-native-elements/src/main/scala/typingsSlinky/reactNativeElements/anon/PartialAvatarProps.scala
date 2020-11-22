@@ -25,8 +25,6 @@ trait PartialAvatarProps extends js.Object {
   
   var ImageComponent: js.UndefOr[ReactComponentClass[js.Object]] = js.native
   
-  var accessory: js.UndefOr[PartialIconPropsPartialIm] = js.native
-  
   var activeOpacity: js.UndefOr[Double] = js.native
   
   var avatarStyle: js.UndefOr[ImageStyle] = js.native
@@ -39,8 +37,6 @@ trait PartialAvatarProps extends js.Object {
   
   var imageProps: js.UndefOr[PartialImageProps] = js.native
   
-  var onAccessoryPress: js.UndefOr[js.Function0[Unit]] = js.native
-  
   var onLongPress: js.UndefOr[js.Function0[Unit]] = js.native
   
   var onPress: js.UndefOr[js.Function0[Unit]] = js.native
@@ -52,8 +48,6 @@ trait PartialAvatarProps extends js.Object {
   var renderPlaceholderContent: js.UndefOr[ReactElement] = js.native
   
   var rounded: js.UndefOr[Boolean] = js.native
-  
-  var showAccessory: js.UndefOr[Boolean] = js.native
   
   var size: js.UndefOr[small | medium | large | xlarge | Double] = js.native
   
@@ -99,12 +93,6 @@ object PartialAvatarProps {
     def deleteImageComponent: Self = this.set("ImageComponent", js.undefined)
     
     @scala.inline
-    def setAccessory(value: PartialIconPropsPartialIm): Self = this.set("accessory", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAccessory: Self = this.set("accessory", js.undefined)
-    
-    @scala.inline
     def setActiveOpacity(value: Double): Self = this.set("activeOpacity", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -147,12 +135,6 @@ object PartialAvatarProps {
     def deleteImageProps: Self = this.set("imageProps", js.undefined)
     
     @scala.inline
-    def setOnAccessoryPress(value: () => Unit): Self = this.set("onAccessoryPress", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def deleteOnAccessoryPress: Self = this.set("onAccessoryPress", js.undefined)
-    
-    @scala.inline
     def setOnLongPress(value: () => Unit): Self = this.set("onLongPress", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -193,12 +175,6 @@ object PartialAvatarProps {
     
     @scala.inline
     def deleteRounded: Self = this.set("rounded", js.undefined)
-    
-    @scala.inline
-    def setShowAccessory(value: Boolean): Self = this.set("showAccessory", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteShowAccessory: Self = this.set("showAccessory", js.undefined)
     
     @scala.inline
     def setSize(value: small | medium | large | xlarge | Double): Self = this.set("size", value.asInstanceOf[js.Any])

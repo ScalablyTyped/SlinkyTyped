@@ -22,9 +22,16 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.IframeHTMLAttributes
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`lazy`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -34,6 +41,7 @@ import typingsSlinky.react.reactStrings.copy
 import typingsSlinky.react.reactStrings.date
 import typingsSlinky.react.reactStrings.decimal
 import typingsSlinky.react.reactStrings.descending
+import typingsSlinky.react.reactStrings.eager
 import typingsSlinky.react.reactStrings.email
 import typingsSlinky.react.reactStrings.execute
 import typingsSlinky.react.reactStrings.grammar
@@ -199,7 +207,9 @@ object iframe {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | typingsSlinky.react.reactStrings.text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | typingsSlinky.react.reactStrings.text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -319,6 +329,9 @@ object iframe {
     
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def loading(value: eager | `lazy`): this.type = set("loading", value.asInstanceOf[js.Any])
     
     @scala.inline
     def marginHeight(value: Double): this.type = set("marginHeight", value.asInstanceOf[js.Any])
@@ -579,7 +592,7 @@ object iframe {
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def referrerPolicy(value: String): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
+    def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])

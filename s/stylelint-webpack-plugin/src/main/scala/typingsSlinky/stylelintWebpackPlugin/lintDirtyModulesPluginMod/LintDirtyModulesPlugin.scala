@@ -1,6 +1,7 @@
 package typingsSlinky.stylelintWebpackPlugin.lintDirtyModulesPluginMod
 
 import typingsSlinky.std.Map
+import typingsSlinky.stylelintWebpackPlugin.anon.Partialtimestampnumber
 import typingsSlinky.stylelintWebpackPlugin.linterMod.LinterResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,12 +21,12 @@ trait LintDirtyModulesPlugin extends js.Object {
   var compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_webpack.Compiler */ js.Any = js.native
   
   /**
-    * @param {Map<string, number>} fileTimestamps
+    * @param {Map<string, number|FileSystemInfoEntry>} fileTimestamps
     * @param {string | ReadonlyArray<string>} glob
     * @returns {Array<string>}
     */
-  def getChangedFiles(fileTimestamps: Map[String, Double], glob: String): js.Array[String] = js.native
-  def getChangedFiles(fileTimestamps: Map[String, Double], glob: js.Array[String]): js.Array[String] = js.native
+  def getChangedFiles(fileTimestamps: Map[String, Double | Partialtimestampnumber], glob: String): js.Array[String] = js.native
+  def getChangedFiles(fileTimestamps: Map[String, Double | Partialtimestampnumber], glob: js.Array[String]): js.Array[String] = js.native
   
   var isFirstRun: Boolean = js.native
   

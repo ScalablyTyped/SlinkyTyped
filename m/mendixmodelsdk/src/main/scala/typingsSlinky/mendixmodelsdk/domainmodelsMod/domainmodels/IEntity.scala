@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/entities relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/entities relevant section in reference guide}
   */
 @js.native
 trait IEntity
@@ -46,6 +46,8 @@ trait IEntity
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     *
     * In version 8.10.0: deleted
     * In version 8.2.0: introduced

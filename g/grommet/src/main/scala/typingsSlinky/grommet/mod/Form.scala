@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.formMod.FormProps
 import typingsSlinky.grommet.grommetStrings.onChange
+import typingsSlinky.grommet.grommetStrings.onSubmit
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.FormHTMLAttributes
@@ -17,13 +18,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Form protected ()
   extends Component[
-      FormProps[_] with (Omit[DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], onChange]), 
+      FormProps[_] with (Omit[
+        DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], 
+        onChange | onSubmit
+      ]), 
       js.Object, 
       js.Any
     ] {
-  def this(props: FormProps[_] with (Omit[DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], onChange])) = this()
+  def this(props: FormProps[_] with (Omit[
+        DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], 
+        onChange | onSubmit
+      ])) = this()
   def this(
-    props: FormProps[_] with (Omit[DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], onChange]),
+    props: FormProps[_] with (Omit[
+        DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], 
+        onChange | onSubmit
+      ]),
     context: js.Any
   ) = this()
 }
@@ -32,6 +42,9 @@ class Form protected ()
 object Form
   extends TopLevel[
       ReactComponentClass[
-        FormProps[js.Any] with (Omit[DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], onChange])
+        FormProps[js.Any] with (Omit[
+          DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], 
+          onChange | onSubmit
+        ])
       ]
     ]

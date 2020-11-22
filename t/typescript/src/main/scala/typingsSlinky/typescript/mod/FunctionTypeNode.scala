@@ -13,5 +13,5 @@ trait FunctionTypeNode
      with _HasJSDoc {
   
   @JSName("kind")
-  var kind_FunctionTypeNode: FunctionType = js.native
+  val kind_FunctionTypeNode: FunctionType = js.native
 }

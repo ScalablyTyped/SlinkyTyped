@@ -28,9 +28,19 @@ trait ProvisionedProductAttribute extends js.Object {
   var IdempotencyToken: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.IdempotencyToken] = js.native
   
   /**
+    * The record identifier of the last request performed on this provisioned product of the following types:    ProvisionedProduct     UpdateProvisionedProduct     ExecuteProvisionedProductPlan     TerminateProvisionedProduct   
+    */
+  var LastProvisioningRecordId: js.UndefOr[Id] = js.native
+  
+  /**
     * The record identifier of the last request performed on this provisioned product.
     */
   var LastRecordId: js.UndefOr[Id] = js.native
+  
+  /**
+    * The record identifier of the last successful request performed on this provisioned product of the following types:    ProvisionedProduct     UpdateProvisionedProduct     ExecuteProvisionedProductPlan     TerminateProvisionedProduct   
+    */
+  var LastSuccessfulProvisioningRecordId: js.UndefOr[Id] = js.native
   
   /**
     * The user-friendly name of the provisioned product.
@@ -48,9 +58,19 @@ trait ProvisionedProductAttribute extends js.Object {
   var ProductId: js.UndefOr[Id] = js.native
   
   /**
+    * The name of the product.
+    */
+  var ProductName: js.UndefOr[ProductViewName] = js.native
+  
+  /**
     * The identifier of the provisioning artifact.
     */
   var ProvisioningArtifactId: js.UndefOr[Id] = js.native
+  
+  /**
+    * The name of the provisioning artifact.
+    */
+  var ProvisioningArtifactName: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.ProvisioningArtifactName] = js.native
   
   /**
     * The current status of the provisioned product.    AVAILABLE - Stable state, ready to perform any operation. The most recent operation succeeded and completed.    UNDER_CHANGE - Transitive state. Operations performed might not have valid results. Wait for an AVAILABLE status before performing operations.    TAINTED - Stable state, ready to perform any operation. The stack has completed the requested operation but is not exactly what was requested. For example, a request to update to a new version failed and the stack rolled back to the current version.    ERROR - An unexpected error occurred. The provisioned product exists but the stack is not running. For example, CloudFormation received a parameter value that was not valid and could not launch the stack.    PLAN_IN_PROGRESS - Transitive state. The plan operations were performed to provision a new product, but resources have not yet been created. After reviewing the list of resources to be created, execute the plan. Wait for an AVAILABLE status before performing operations.  
@@ -130,10 +150,22 @@ object ProvisionedProductAttribute {
     def deleteIdempotencyToken: Self = this.set("IdempotencyToken", js.undefined)
     
     @scala.inline
+    def setLastProvisioningRecordId(value: Id): Self = this.set("LastProvisioningRecordId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLastProvisioningRecordId: Self = this.set("LastProvisioningRecordId", js.undefined)
+    
+    @scala.inline
     def setLastRecordId(value: Id): Self = this.set("LastRecordId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastRecordId: Self = this.set("LastRecordId", js.undefined)
+    
+    @scala.inline
+    def setLastSuccessfulProvisioningRecordId(value: Id): Self = this.set("LastSuccessfulProvisioningRecordId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLastSuccessfulProvisioningRecordId: Self = this.set("LastSuccessfulProvisioningRecordId", js.undefined)
     
     @scala.inline
     def setName(value: ProvisionedProductNameOrArn): Self = this.set("Name", value.asInstanceOf[js.Any])
@@ -154,10 +186,22 @@ object ProvisionedProductAttribute {
     def deleteProductId: Self = this.set("ProductId", js.undefined)
     
     @scala.inline
+    def setProductName(value: ProductViewName): Self = this.set("ProductName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProductName: Self = this.set("ProductName", js.undefined)
+    
+    @scala.inline
     def setProvisioningArtifactId(value: Id): Self = this.set("ProvisioningArtifactId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProvisioningArtifactId: Self = this.set("ProvisioningArtifactId", js.undefined)
+    
+    @scala.inline
+    def setProvisioningArtifactName(value: ProvisioningArtifactName): Self = this.set("ProvisioningArtifactName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProvisioningArtifactName: Self = this.set("ProvisioningArtifactName", js.undefined)
     
     @scala.inline
     def setStatus(value: ProvisionedProductStatus): Self = this.set("Status", value.asInstanceOf[js.Any])

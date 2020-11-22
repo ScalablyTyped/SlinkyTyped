@@ -9,6 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object nextStrings {
   
   @scala.inline
+  def blocking: blocking = "blocking".asInstanceOf[blocking]
+  
+  @scala.inline
   def close: close = "close".asInstanceOf[close]
   
   @scala.inline
@@ -48,10 +51,16 @@ object nextStrings {
   def rewrite: rewrite = "rewrite".asInstanceOf[rewrite]
   
   @scala.inline
+  def static: static = "static".asInstanceOf[static]
+  
+  @scala.inline
   def test: test = "test".asInstanceOf[test]
   
   @scala.inline
   def unpipe: unpipe = "unpipe".asInstanceOf[unpipe]
+  
+  @js.native
+  sealed trait blocking extends js.Object
   
   @js.native
   sealed trait close extends js.Object
@@ -91,6 +100,9 @@ object nextStrings {
   
   @js.native
   sealed trait rewrite extends RouteType
+  
+  @js.native
+  sealed trait static extends js.Object
   
   @js.native
   sealed trait test extends js.Object

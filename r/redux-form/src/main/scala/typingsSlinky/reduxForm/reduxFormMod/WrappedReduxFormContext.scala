@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WrappedReduxFormContext extends js.Object {
   
-  var _reduxForm: ReduxFormContext = js.native
+  var _reduxForm: FormContext = js.native
 }
 object WrappedReduxFormContext {
   
   @scala.inline
-  def apply(_reduxForm: ReduxFormContext): WrappedReduxFormContext = {
+  def apply(_reduxForm: FormContext): WrappedReduxFormContext = {
     val __obj = js.Dynamic.literal(_reduxForm = _reduxForm.asInstanceOf[js.Any])
     __obj.asInstanceOf[WrappedReduxFormContext]
   }
@@ -33,6 +33,6 @@ object WrappedReduxFormContext {
     }
     
     @scala.inline
-    def set_reduxForm(value: ReduxFormContext): Self = this.set("_reduxForm", value.asInstanceOf[js.Any])
+    def set_reduxForm(value: FormContext): Self = this.set("_reduxForm", value.asInstanceOf[js.Any])
   }
 }

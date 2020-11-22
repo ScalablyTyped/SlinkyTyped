@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("kdbxweb", "KdbxError")
 @js.native
 class KdbxError protected () extends js.Object {
-  def this(code: Double, message: String) = this()
+  def this(code: KdbxErrorCode, message: String) = this()
   
-  var code: Double = js.native
+  var code: KdbxErrorCode = js.native
   
   var message: String = js.native
   

@@ -29,7 +29,6 @@ trait Component extends Directive {
   
   /**
     * An encapsulation policy for the template and CSS styles. One of:
-    * - `ViewEncapsulation.Native`: Deprecated. Use `ViewEncapsulation.ShadowDom` instead.
     * - `ViewEncapsulation.Emulated`: Use shimmed CSS that
     * emulates the native behavior.
     * - `ViewEncapsulation.None`: Use global CSS without any

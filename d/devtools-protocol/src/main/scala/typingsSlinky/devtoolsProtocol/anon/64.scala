@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.DOMDebugger.SetEventListenerBreakpointRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOMDebugger.RemoveInstrumentationBreakpointRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `64` extends js.Object {
   
-  var paramsType: js.Array[SetEventListenerBreakpointRequest] = js.native
+  var paramsType: js.Array[RemoveInstrumentationBreakpointRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `64` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetEventListenerBreakpointRequest], returnType: Unit): `64` = {
+  def apply(paramsType: js.Array[RemoveInstrumentationBreakpointRequest], returnType: Unit): `64` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`64`]
   }
@@ -36,10 +36,10 @@ object `64` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetEventListenerBreakpointRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: RemoveInstrumentationBreakpointRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetEventListenerBreakpointRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[RemoveInstrumentationBreakpointRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

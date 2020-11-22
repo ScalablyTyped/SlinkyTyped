@@ -11,7 +11,7 @@ trait InferenceClassification extends Entity {
     * A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other.
     * Read-only. Nullable.
     */
-  var overrides: js.UndefOr[js.Array[InferenceClassificationOverride]] = js.native
+  var overrides: js.UndefOr[NullableOption[js.Array[InferenceClassificationOverride]]] = js.native
 }
 object InferenceClassification {
   
@@ -40,9 +40,12 @@ object InferenceClassification {
     def setOverridesVarargs(value: InferenceClassificationOverride*): Self = this.set("overrides", js.Array(value :_*))
     
     @scala.inline
-    def setOverrides(value: js.Array[InferenceClassificationOverride]): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: NullableOption[js.Array[InferenceClassificationOverride]]): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)
+    
+    @scala.inline
+    def setOverridesNull: Self = this.set("overrides", null)
   }
 }

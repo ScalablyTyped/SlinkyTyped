@@ -7,9 +7,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RestartPolicy extends js.Object {
   
+  var Condition: js.UndefOr[String] = js.native
+  
+  var Delay: js.UndefOr[Double] = js.native
+  
+  var MaxAttempts: js.UndefOr[Double] = js.native
+  
   var MaximumRetryCount: js.UndefOr[Double] = js.native
   
   var Name: String = js.native
+  
+  var Window: js.UndefOr[Double] = js.native
 }
 object RestartPolicy {
   
@@ -38,9 +46,33 @@ object RestartPolicy {
     def setName(value: String): Self = this.set("Name", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setCondition(value: String): Self = this.set("Condition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCondition: Self = this.set("Condition", js.undefined)
+    
+    @scala.inline
+    def setDelay(value: Double): Self = this.set("Delay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDelay: Self = this.set("Delay", js.undefined)
+    
+    @scala.inline
+    def setMaxAttempts(value: Double): Self = this.set("MaxAttempts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxAttempts: Self = this.set("MaxAttempts", js.undefined)
+    
+    @scala.inline
     def setMaximumRetryCount(value: Double): Self = this.set("MaximumRetryCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaximumRetryCount: Self = this.set("MaximumRetryCount", js.undefined)
+    
+    @scala.inline
+    def setWindow(value: Double): Self = this.set("Window", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWindow: Self = this.set("Window", js.undefined)
   }
 }

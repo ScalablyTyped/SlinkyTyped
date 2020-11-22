@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DatasetActionSummary extends js.Object {
   
   /**
-    * The name of the action which automatically creates the data set's contents.
+    * The name of the action that automatically creates the dataset's contents.
     */
   var actionName: js.UndefOr[DatasetActionName] = js.native
   
   /**
-    * The type of action by which the data set's contents are automatically created.
+    * The type of action by which the dataset's contents are automatically created.
     */
   var actionType: js.UndefOr[DatasetActionType] = js.native
 }

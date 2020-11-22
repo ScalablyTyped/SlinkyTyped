@@ -9,13 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListenerRuleCondition extends js.Object {
   
   /**
-    * The type of condition. Valid values are `host-header` or `path-pattern`. Must also set `values`.
-    *
-    * @deprecated use 'host_header' or 'path_pattern' attribute instead
-    */
-  var field: js.UndefOr[Input[String]] = js.native
-  
-  /**
     * Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
     */
   var hostHeader: js.UndefOr[Input[ListenerRuleConditionHostHeader]] = js.native
@@ -44,13 +37,6 @@ trait ListenerRuleCondition extends js.Object {
     * Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `httpHeader` condition instead.
     */
   var sourceIp: js.UndefOr[Input[ListenerRuleConditionSourceIp]] = js.native
-  
-  /**
-    * List of exactly one pattern to match. Required when `field` is set.
-    *
-    * @deprecated use 'host_header' or 'path_pattern' attribute instead
-    */
-  var values: js.UndefOr[Input[String]] = js.native
 }
 object ListenerRuleCondition {
   
@@ -74,12 +60,6 @@ object ListenerRuleCondition {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setField(value: Input[String]): Self = this.set("field", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteField: Self = this.set("field", js.undefined)
     
     @scala.inline
     def setHostHeader(value: Input[ListenerRuleConditionHostHeader]): Self = this.set("hostHeader", value.asInstanceOf[js.Any])
@@ -119,11 +99,5 @@ object ListenerRuleCondition {
     
     @scala.inline
     def deleteSourceIp: Self = this.set("sourceIp", js.undefined)
-    
-    @scala.inline
-    def setValues(value: Input[String]): Self = this.set("values", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValues: Self = this.set("values", js.undefined)
   }
 }

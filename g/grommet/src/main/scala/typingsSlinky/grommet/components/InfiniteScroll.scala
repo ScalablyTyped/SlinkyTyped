@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.grommetStrings.window
 import typingsSlinky.grommet.infiniteScrollMod.InfiniteScrollProps
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,19 +22,16 @@ object InfiniteScroll {
        with StBuildingComponent[tag.type, typingsSlinky.grommet.mod.InfiniteScroll] {
     
     @scala.inline
-    def children(value: /* repeated */ js.Any => _): this.type = set("children", js.Any.fromFunction1(value))
+    def itemsVarargs(value: (String | Double | ReactElement | (Record[String, js.Any]))*): this.type = set("items", js.Array(value :_*))
     
     @scala.inline
-    def itemsVarargs(value: js.Any*): this.type = set("items", js.Array(value :_*))
+    def items(value: js.Array[String | Double | ReactElement | (Record[String, _])]): this.type = set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def items(value: js.Array[_]): this.type = set("items", value.asInstanceOf[js.Any])
+    def onMore(value: () => Unit): this.type = set("onMore", js.Any.fromFunction0(value))
     
     @scala.inline
-    def onMore(value: /* repeated */ js.Any => _): this.type = set("onMore", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def renderMarker(value: /* repeated */ js.Any => _): this.type = set("renderMarker", js.Any.fromFunction1(value))
+    def renderMarker(value: /* marker */ ReactElement => ReactElement): this.type = set("renderMarker", js.Any.fromFunction1(value))
     
     @scala.inline
     def replace(value: Boolean): this.type = set("replace", value.asInstanceOf[js.Any])

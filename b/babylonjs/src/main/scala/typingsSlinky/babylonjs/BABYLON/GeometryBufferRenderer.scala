@@ -8,11 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GeometryBufferRenderer extends js.Object {
   
+  var _assignRenderTargetIndices: js.Any = js.native
+  
+  var _attachments: js.Any = js.native
+  
   var _cachedDefines: String = js.native
   
   var _copyBonesTransformationMatrices: js.Any = js.native
   
   /* protected */ def _createRenderTargets(): Unit = js.native
+  
+  var _depthNormalIndex: js.Any = js.native
   
   var _effect: Effect = js.native
   
@@ -22,9 +28,34 @@ trait GeometryBufferRenderer extends js.Object {
   
   var _enableVelocity: js.Any = js.native
   
+  /**
+    * @hidden
+    * Replaces a texture in the geometry buffer renderer
+    * Useful when linking textures of the prepass renderer
+    */
+  def _forceTextureType(geometryBufferType: Double, index: Double): Unit = js.native
+  
+  /**
+    * @hidden
+    * Replaces the first texture which is hard coded as a depth texture in the geometry buffer
+    * Useful when linking textures of the prepass renderer
+    */
+  def _linkInternalTexture(internalTexture: InternalTexture): Unit = js.native
+  
+  /**
+    * @hidden
+    * Sets up internal structures to share outputs with PrePassRenderer
+    * This method should only be called by the PrePassRenderer itself
+    */
+  def _linkPrePassRenderer(prePassRenderer: PrePassRenderer): Unit = js.native
+  
+  var _linkedWithPrePass: js.Any = js.native
+  
   var _multiRenderTarget: js.Any = js.native
   
   var _positionIndex: js.Any = js.native
+  
+  var _prePassRenderer: js.Any = js.native
   
   /**
     * Dictionary used to store the previous bones transformation matrices of each rendered mesh
@@ -44,7 +75,29 @@ trait GeometryBufferRenderer extends js.Object {
   
   var _reflectivityIndex: js.Any = js.native
   
+  /**
+    * @hidden
+    * Resets the geometry buffer layout
+    */
+  def _resetLayout(): Unit = js.native
+  
+  var _resizeObserver: js.Any = js.native
+  
   var _scene: js.Any = js.native
+  
+  /**
+    * @hidden
+    * Sets texture attachments
+    * Useful when linking textures of the prepass renderer
+    */
+  def _setAttachments(attachments: js.Array[Double]): Unit = js.native
+  
+  /**
+    * @hidden
+    * Separates internal structures from PrePassRenderer so the geometry buffer can now operate by itself.
+    * This method should only be called by the PrePassRenderer itself
+    */
+  def _unlinkPrePassRenderer(): Unit = js.native
   
   var _velocityIndex: js.Any = js.native
   
@@ -120,9 +173,13 @@ trait GeometryBufferRenderer extends js.Object {
   def ratio: Double = js.native
   
   /**
+    * Gets the render list (meshes to be rendered) used in the G buffer.
+    */
+  def renderList: Nullable[js.Array[AbstractMesh]] = js.native
+  /**
     * Set the render list (meshes to be rendered) used in the G buffer.
     */
-  def renderList_=(meshes: js.Array[Mesh]): Unit = js.native
+  def renderList_=(meshes: Nullable[js.Array[AbstractMesh]]): Unit = js.native
   
   /** Gets or sets a boolean indicating if transparent meshes should be rendered */
   var renderTransparentMeshes: Boolean = js.native

@@ -1,7 +1,7 @@
 
 # Scala.js typings for alex
 
-Typings are for version 8.1
+Typings are for version 9.0
 
 ## Library description:
 Catch insensitive, inconsiderate writing

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object baseExtendedPickerScssMod extends js.Object {
   
-  val pickerInput: /* "pickerInput_34694d2a" */ String = js.native
+  val pickerInput: /* "pickerInput_cf6f1afa" */ String = js.native
   
-  val pickerText: /* "pickerText_34694d2a" */ String = js.native
+  val pickerText: /* "pickerText_cf6f1afa" */ String = js.native
 }

@@ -9,6 +9,8 @@ trait Options extends js.Object {
   
   var cwd: js.UndefOr[String] = js.native
   
+  var ignoredPackages: js.UndefOr[js.Array[String]] = js.native
+  
   var internals: js.UndefOr[js.Array[js.RegExp]] = js.native
   
   var wrapCallSite: js.UndefOr[js.Function1[/* callSite */ CallSite, CallSite]] = js.native
@@ -41,6 +43,15 @@ object Options {
     
     @scala.inline
     def deleteCwd: Self = this.set("cwd", js.undefined)
+    
+    @scala.inline
+    def setIgnoredPackagesVarargs(value: String*): Self = this.set("ignoredPackages", js.Array(value :_*))
+    
+    @scala.inline
+    def setIgnoredPackages(value: js.Array[String]): Self = this.set("ignoredPackages", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIgnoredPackages: Self = this.set("ignoredPackages", js.undefined)
     
     @scala.inline
     def setInternalsVarargs(value: js.RegExp*): Self = this.set("internals", js.Array(value :_*))

@@ -1,7 +1,7 @@
 
 # Scala.js typings for minimist
 
-Typings are for version 1.2.0
+Typings are for version 1.2
 
 ## Library description:
 parse argument options

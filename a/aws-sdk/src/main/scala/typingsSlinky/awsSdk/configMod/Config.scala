@@ -2,6 +2,7 @@ package typingsSlinky.awsSdk.configMod
 
 import typingsSlinky.awsSdk.anon.ConfigurationOptionsConfi
 import typingsSlinky.awsSdk.awsSdkBooleans.`true`
+import typingsSlinky.awsSdk.configBaseMod.ConfigurationOptions
 import typingsSlinky.awsSdk.configServicePlaceholdersMod.ConfigurationServicePlaceholders
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +14,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Creates a new configuration object.
   * This is the object that passes option data along to service requests, including credentials, security, region information, and some service specific settings.
   */
-class Config () extends ConfigBase {
+class Config ()
+  extends typingsSlinky.awsSdk.configBaseMod.ConfigBase {
   def this(options: ConfigurationOptions with ConfigurationServicePlaceholders with APIVersions) = this()
   
   /**

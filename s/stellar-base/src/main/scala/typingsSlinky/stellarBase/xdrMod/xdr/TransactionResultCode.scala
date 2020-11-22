@@ -4,6 +4,7 @@ import typingsSlinky.stellarBase.stellarBaseNumbers.`-10`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`-11`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`-12`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`-13`
+import typingsSlinky.stellarBase.stellarBaseNumbers.`-14`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`-1`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`-2`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`-3`
@@ -18,6 +19,7 @@ import typingsSlinky.stellarBase.stellarBaseNumbers.`1`
 import typingsSlinky.stellarBase.stellarBaseStrings.txBadAuth
 import typingsSlinky.stellarBase.stellarBaseStrings.txBadAuthExtra
 import typingsSlinky.stellarBase.stellarBaseStrings.txBadSeq
+import typingsSlinky.stellarBase.stellarBaseStrings.txBadSponsorship
 import typingsSlinky.stellarBase.stellarBaseStrings.txFailed
 import typingsSlinky.stellarBase.stellarBaseStrings.txFeeBumpInnerFailed
 import typingsSlinky.stellarBase.stellarBaseStrings.txFeeBumpInnerSuccess
@@ -37,16 +39,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TransactionResultCode extends js.Object {
   
-  val name: txFeeBumpInnerSuccess | txSuccess | txFailed | txTooEarly | txTooLate | txMissingOperation | txBadSeq | txBadAuth | txInsufficientBalance | txNoAccount | txInsufficientFee | txBadAuthExtra | txInternalError | txNotSupported | txFeeBumpInnerFailed = js.native
+  val name: txFeeBumpInnerSuccess | txSuccess | txFailed | txTooEarly | txTooLate | txMissingOperation | txBadSeq | txBadAuth | txInsufficientBalance | txNoAccount | txInsufficientFee | txBadAuthExtra | txInternalError | txNotSupported | txFeeBumpInnerFailed | txBadSponsorship = js.native
   
-  val value: `1` | `0` | `-1` | `-2` | `-3` | `-4` | `-5` | `-6` | `-7` | `-8` | `-9` | `-10` | `-11` | `-12` | `-13` = js.native
+  val value: `1` | `0` | `-1` | `-2` | `-3` | `-4` | `-5` | `-6` | `-7` | `-8` | `-9` | `-10` | `-11` | `-12` | `-13` | `-14` = js.native
 }
 object TransactionResultCode {
   
   @scala.inline
   def apply(
-    name: txFeeBumpInnerSuccess | txSuccess | txFailed | txTooEarly | txTooLate | txMissingOperation | txBadSeq | txBadAuth | txInsufficientBalance | txNoAccount | txInsufficientFee | txBadAuthExtra | txInternalError | txNotSupported | txFeeBumpInnerFailed,
-    value: `1` | `0` | `-1` | `-2` | `-3` | `-4` | `-5` | `-6` | `-7` | `-8` | `-9` | `-10` | `-11` | `-12` | `-13`
+    name: txFeeBumpInnerSuccess | txSuccess | txFailed | txTooEarly | txTooLate | txMissingOperation | txBadSeq | txBadAuth | txInsufficientBalance | txNoAccount | txInsufficientFee | txBadAuthExtra | txInternalError | txNotSupported | txFeeBumpInnerFailed | txBadSponsorship,
+    value: `1` | `0` | `-1` | `-2` | `-3` | `-4` | `-5` | `-6` | `-7` | `-8` | `-9` | `-10` | `-11` | `-12` | `-13` | `-14`
   ): TransactionResultCode = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[TransactionResultCode]
@@ -69,12 +71,12 @@ object TransactionResultCode {
     
     @scala.inline
     def setName(
-      value: txFeeBumpInnerSuccess | txSuccess | txFailed | txTooEarly | txTooLate | txMissingOperation | txBadSeq | txBadAuth | txInsufficientBalance | txNoAccount | txInsufficientFee | txBadAuthExtra | txInternalError | txNotSupported | txFeeBumpInnerFailed
+      value: txFeeBumpInnerSuccess | txSuccess | txFailed | txTooEarly | txTooLate | txMissingOperation | txBadSeq | txBadAuth | txInsufficientBalance | txNoAccount | txInsufficientFee | txBadAuthExtra | txInternalError | txNotSupported | txFeeBumpInnerFailed | txBadSponsorship
     ): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setValue(
-      value: `1` | `0` | `-1` | `-2` | `-3` | `-4` | `-5` | `-6` | `-7` | `-8` | `-9` | `-10` | `-11` | `-12` | `-13`
+      value: `1` | `0` | `-1` | `-2` | `-3` | `-4` | `-5` | `-6` | `-7` | `-8` | `-9` | `-10` | `-11` | `-12` | `-13` | `-14`
     ): Self = this.set("value", value.asInstanceOf[js.Any])
   }
 }

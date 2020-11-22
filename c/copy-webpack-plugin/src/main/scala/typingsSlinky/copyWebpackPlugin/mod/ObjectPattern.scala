@@ -25,6 +25,11 @@ trait ObjectPattern extends js.Object {
   var context: js.UndefOr[String] = js.native
   
   /**
+    * Allows to filter copied assets.
+    */
+  var filter: js.UndefOr[js.Function1[/* resourcePath */ String, Boolean]] = js.native
+  
+  /**
     * Removes all directory references and only copies file names. (default: `false`)
     * If files have the same name, the result is non-deterministic.
     * {@link https://webpack.js.org/plugins/copy-webpack-plugin/#flatten}
@@ -135,6 +140,12 @@ object ObjectPattern {
     
     @scala.inline
     def deleteContext: Self = this.set("context", js.undefined)
+    
+    @scala.inline
+    def setFilter(value: /* resourcePath */ String => Boolean): Self = this.set("filter", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteFilter: Self = this.set("filter", js.undefined)
     
     @scala.inline
     def setFlatten(value: Boolean): Self = this.set("flatten", value.asInstanceOf[js.Any])

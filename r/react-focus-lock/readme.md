@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-focus-lock
 
-Typings are for version 2.4.1
+Typings are for version 2.5.0
 
 ## Library description:
 It is a trap! (for a focus)

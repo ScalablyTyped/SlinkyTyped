@@ -33,6 +33,8 @@ trait RelativeTimeSpec extends js.Object {
   
   var w: js.UndefOr[RelativeTimeSpecVal] = js.native
   
+  var ww: js.UndefOr[RelativeTimeSpecVal] = js.native
+  
   var y: js.UndefOr[RelativeTimeSpecVal] = js.native
   
   var yy: js.UndefOr[RelativeTimeSpecVal] = js.native
@@ -176,6 +178,17 @@ object RelativeTimeSpec {
     
     @scala.inline
     def deleteW: Self = this.set("w", js.undefined)
+    
+    @scala.inline
+    def setWwFunction4(
+      value: (/* n */ Double, /* withoutSuffix */ Boolean, /* key */ RelativeTimeKey, /* isFuture */ Boolean) => String
+    ): Self = this.set("ww", js.Any.fromFunction4(value))
+    
+    @scala.inline
+    def setWw(value: RelativeTimeSpecVal): Self = this.set("ww", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWw: Self = this.set("ww", js.undefined)
     
     @scala.inline
     def setYFunction4(

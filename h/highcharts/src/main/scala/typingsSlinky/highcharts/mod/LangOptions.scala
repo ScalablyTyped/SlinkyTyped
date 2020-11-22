@@ -86,6 +86,11 @@ trait LangOptions extends js.Object {
   var exportData: js.UndefOr[LangExportDataOptions] = js.native
   
   /**
+    * (Highcharts, Highstock, Highmaps, Gantt) The text for the menu item.
+    */
+  var hideData: js.UndefOr[String] = js.native
+  
+  /**
     * (Highcharts, Highstock) What to show in a date field for invalid dates.
     * Defaults to an empty string.
     */
@@ -319,6 +324,12 @@ object LangOptions {
     
     @scala.inline
     def deleteExportData: Self = this.set("exportData", js.undefined)
+    
+    @scala.inline
+    def setHideData(value: String): Self = this.set("hideData", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHideData: Self = this.set("hideData", js.undefined)
     
     @scala.inline
     def setInvalidDate(value: String): Self = this.set("invalidDate", value.asInstanceOf[js.Any])

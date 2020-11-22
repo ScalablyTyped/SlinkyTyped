@@ -10,7 +10,7 @@ trait InventoryDeletionStatusItem extends js.Object {
   /**
     * The deletion ID returned by the DeleteInventory action.
     */
-  var DeletionId: js.UndefOr[InventoryDeletionId] = js.native
+  var DeletionId: js.UndefOr[UUID] = js.native
   
   /**
     * The UTC timestamp when the delete operation started.
@@ -66,7 +66,7 @@ object InventoryDeletionStatusItem {
     }
     
     @scala.inline
-    def setDeletionId(value: InventoryDeletionId): Self = this.set("DeletionId", value.asInstanceOf[js.Any])
+    def setDeletionId(value: UUID): Self = this.set("DeletionId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeletionId: Self = this.set("DeletionId", js.undefined)

@@ -6,5 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type InkSelectInput = slinky.core.ReactComponentClass[typingsSlinky.inkSelectInput.mod.InkSelectInputProps]
+  type SelectInput = slinky.core.ReactComponentClass[
+    typingsSlinky.inkSelectInput.mod.SelectInputProps[typingsSlinky.inkSelectInput.mod.ItemOfSelectInput]
+  ]
 }

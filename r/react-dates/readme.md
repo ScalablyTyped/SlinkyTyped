@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-dates
 
-Typings are for version v17.1.0
+Typings are for version 21.8
 
 ## Library description:
 A responsive and accessible date range picker component built with React

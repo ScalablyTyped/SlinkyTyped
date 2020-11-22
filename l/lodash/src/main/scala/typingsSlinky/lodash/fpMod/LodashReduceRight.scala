@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashReduceRight extends LodashConvertible {
+trait LodashReduceRight extends js.Object {
   
   def apply[TResult](callback: __, accumulator: TResult): LodashReduceRight1x2[TResult] = js.native
   def apply[T](callback: __, accumulator: __): LodashReduceRight2x4[T] = js.native

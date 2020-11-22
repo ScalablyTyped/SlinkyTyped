@@ -35,7 +35,7 @@ class DateTime () extends js.Object {
   def equals(other: DateTime): Boolean = js.native
   
   def get(
-    unit: /* keyof luxon.luxon.DateTime */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 110 */ js.Any
+    unit: /* keyof luxon.luxon.DateTime */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 111 */ js.Any
   ): Double = js.native
   
   def hasSame(other: DateTime, unit: DurationUnit): Boolean = js.native
@@ -113,35 +113,35 @@ class DateTime () extends js.Object {
   
   def toHTTP(): String = js.native
   
-  def toISO(): String | Null = js.native
-  def toISO(options: ToISOTimeOptions): String | Null = js.native
+  def toISO(): String = js.native
+  def toISO(options: ToISOTimeOptions): String = js.native
   
   /** Returns an ISO 8601-compliant string representation of this DateTime's date component */
-  def toISODate(): String | Null = js.native
-  def toISODate(options: ToISODateOptions): String | Null = js.native
+  def toISODate(): String = js.native
+  def toISODate(options: ToISODateOptions): String = js.native
   
-  def toISOTime(): String | Null = js.native
-  def toISOTime(options: ToISOTimeOptions): String | Null = js.native
+  def toISOTime(): String = js.native
+  def toISOTime(options: ToISOTimeOptions): String = js.native
   
-  def toISOWeekDate(): String | Null = js.native
+  def toISOWeekDate(): String = js.native
   
   def toJSDate(): js.Date = js.native
   
-  def toJSON(): String | Null = js.native
+  def toJSON(): String = js.native
   
   def toLocal(): DateTime = js.native
   
   def toLocaleParts(): js.Array[_] = js.native
   def toLocaleParts(options: LocaleOptions with DateTimeFormatOptions): js.Array[_] = js.native
   
-  def toLocaleString(options: LocaleOptions with DateTimeFormatOptions): String | Null = js.native
+  def toLocaleString(options: LocaleOptions with DateTimeFormatOptions): String = js.native
   
   def toMillis(): Double = js.native
   
   def toObject(): DateObject = js.native
   def toObject(options: IncludeConfig): DateObject = js.native
   
-  def toRFC2822(): String | Null = js.native
+  def toRFC2822(): String = js.native
   
   def toRelative(): String | Null = js.native
   def toRelative(options: ToRelativeOptions): String | Null = js.native
@@ -149,13 +149,13 @@ class DateTime () extends js.Object {
   def toRelativeCalendar(): String | Null = js.native
   def toRelativeCalendar(options: ToRelativeCalendarOptions): String | Null = js.native
   
-  def toSQL(): String | Null = js.native
-  def toSQL(options: ToSQLOptions): String | Null = js.native
+  def toSQL(): String = js.native
+  def toSQL(options: ToSQLOptions): String = js.native
   
-  def toSQLDate(): String | Null = js.native
+  def toSQLDate(): String = js.native
   
-  def toSQLTime(): String | Null = js.native
-  def toSQLTime(options: ToSQLOptions): String | Null = js.native
+  def toSQLTime(): String = js.native
+  def toSQLTime(options: ToSQLOptions): String = js.native
   
   def toSeconds(): Double = js.native
   
@@ -210,6 +210,9 @@ object DateTime extends js.Object {
   val DATE_HUGE: DateTimeFormatOptions = js.native
   
   val DATE_MED: DateTimeFormatOptions = js.native
+  
+  /** abbreviated date with weekday */
+  val DATE_MED_WITH_WEEKDAY: DateTimeFormatOptions = js.native
   
   val DATE_SHORT: DateTimeFormatOptions = js.native
   

@@ -10,14 +10,25 @@ trait IconImageCache extends js.Object {
   
   def canExpireCache(): Boolean = js.native
   
+  /**
+    * FIXME empty description for jsdoc
+    */
   def clear(): Unit = js.native
   
+  /**
+    * FIXME empty description for jsdoc
+    */
   def expire(): Unit = js.native
   
   def get(src: String, crossOrigin: String, color: Color): typingsSlinky.ol.iconImageMod.default = js.native
   
   def set(src: String, crossOrigin: String, color: Color, iconImage: typingsSlinky.ol.iconImageMod.default): Unit = js.native
   
+  /**
+    * Set the cache size of the icon cache. Default is 32. Change this value when
+    * your map uses more than 32 different icon images and you are not caching icon
+    * styles on the application level.
+    */
   def setSize(maxCacheSize: Double): Unit = js.native
 }
 object IconImageCache {

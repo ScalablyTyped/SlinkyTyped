@@ -22,6 +22,12 @@ trait RefactorActionInfo extends js.Object {
     * The programmatic name of the refactoring action
     */
   var name: java.lang.String = js.native
+  
+  /**
+    * A message to show to the user if the refactoring cannot be applied in
+    * the current context.
+    */
+  var notApplicableReason: js.UndefOr[java.lang.String] = js.native
 }
 object RefactorActionInfo {
   
@@ -51,5 +57,11 @@ object RefactorActionInfo {
     
     @scala.inline
     def setName(value: java.lang.String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNotApplicableReason(value: java.lang.String): Self = this.set("notApplicableReason", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNotApplicableReason: Self = this.set("notApplicableReason", js.undefined)
   }
 }

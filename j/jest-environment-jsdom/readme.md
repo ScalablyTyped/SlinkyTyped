@@ -1,7 +1,7 @@
 
 # Scala.js typings for jest-environment-jsdom
 
-Typings are for version 26.2.0
+Typings are for version 26.6.2
 
 
 

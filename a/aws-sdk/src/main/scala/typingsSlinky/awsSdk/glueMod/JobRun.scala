@@ -53,7 +53,7 @@ trait JobRun extends js.Object {
   var JobName: js.UndefOr[NameString] = js.native
   
   /**
-    * The current state of the job run.
+    * The current state of the job run. For more information about the statuses of jobs that have terminated abnormally, see AWS Glue Job Run Statuses.
     */
   var JobRunState: js.UndefOr[typingsSlinky.awsSdk.glueMod.JobRunState] = js.native
   

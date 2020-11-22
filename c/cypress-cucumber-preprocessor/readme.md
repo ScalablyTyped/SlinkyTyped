@@ -1,7 +1,7 @@
 
 # Scala.js typings for cypress-cucumber-preprocessor
 
-Typings are for version 1.14
+Typings are for version 4.0
 
 ## Library description:
 Run gherkin-syntaxed specs with cypress.io

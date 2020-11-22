@@ -10,22 +10,26 @@ import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Pattern, 'type'> */
+@js.native
 trait AssignmentPattern
   extends ASTNode
      with NodeKind
      with PatternKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var left: PatternKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var right: ExpressionKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.AssignmentPattern
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var left: PatternKind = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var right: ExpressionKind = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.AssignmentPattern = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.AssignmentPattern")
 @js.native
 object AssignmentPattern extends TopLevel[Type[AssignmentPattern]]
-

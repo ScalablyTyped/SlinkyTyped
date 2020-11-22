@@ -96,8 +96,8 @@ trait ZoomTransform_ extends js.Object {
   def scale(k: Double): ZoomTransform_ = js.native
   
   /**
-    * Return a transform whose translation tx1 and ty1 is equal to tx0 + x and ty0 + y,
-    * where tx0 and ty0 is this transform’s translation.
+    * Returns a transform whose translation tx1 and ty1 is equal to tx0 + tkx and ty0 + tky,
+    * where tx0 and ty0 is this transform’s translation and tk is this transform’s scale.
     *
     * @param x Amount of translation in x-direction.
     * @param y Amount of translation in y-direction.

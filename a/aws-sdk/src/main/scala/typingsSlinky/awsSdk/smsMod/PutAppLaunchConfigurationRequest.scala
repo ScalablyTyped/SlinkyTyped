@@ -8,17 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PutAppLaunchConfigurationRequest extends js.Object {
   
   /**
-    * ID of the application associated with the launch configuration.
+    * The ID of the application.
     */
   var appId: js.UndefOr[AppId] = js.native
   
   /**
-    * Name of service role in the customer's account that Amazon CloudFormation uses to launch the application.
+    * Indicates whether the application is configured to launch automatically after replication is complete.
+    */
+  var autoLaunch: js.UndefOr[AutoLaunch] = js.native
+  
+  /**
+    * The name of service role in the customer's account that AWS CloudFormation uses to launch the application.
     */
   var roleName: js.UndefOr[RoleName] = js.native
   
   /**
-    * Launch configurations for server groups in the application.
+    * Information about the launch configurations for server groups in the application.
     */
   var serverGroupLaunchConfigurations: js.UndefOr[ServerGroupLaunchConfigurations] = js.native
 }
@@ -50,6 +55,12 @@ object PutAppLaunchConfigurationRequest {
     
     @scala.inline
     def deleteAppId: Self = this.set("appId", js.undefined)
+    
+    @scala.inline
+    def setAutoLaunch(value: AutoLaunch): Self = this.set("autoLaunch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoLaunch: Self = this.set("autoLaunch", js.undefined)
     
     @scala.inline
     def setRoleName(value: RoleName): Self = this.set("roleName", value.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -7,23 +8,24 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/row-document-template relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/row-document-template relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.TableRow")
 @js.native
-class TableRow protected () extends Element {
+class TableRow protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def cells: IList[TableCell] = js.native
@@ -32,9 +34,6 @@ class TableRow protected () extends Element {
   def conditionSettings_=(newValue: ConditionSettings): Unit = js.native
   
   def containerAsTable: Table = js.native
-  
-  @JSName("model")
-  var model_FTableRow: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.TableRow")

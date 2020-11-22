@@ -1,5 +1,6 @@
 package typingsSlinky.coinbaseCommerceNode.mod
 
+import typingsSlinky.coinbaseCommerceNode.mod.resources.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,6 +13,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("coinbase-commerce-node", "Webhook")
 @js.native
 object Webhook extends js.Object {
+  
+  /**
+    * Verify event body.
+    *
+    * @link https://github.com/coinbase/coinbase-commerce-node/blob/v1.0.4/lib/Webhook.js#L10
+    */
+  def verifyEventBody(rawBody: String, signature: String, sharedSecret: String): Event = js.native
   
   /**
     * Verify a signature header.

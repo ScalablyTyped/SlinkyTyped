@@ -17,6 +17,16 @@ trait CustomResourceDefinitionVersion extends js.Object {
   var additionalPrinterColumns: js.UndefOr[Input[js.Array[Input[CustomResourceColumnDefinition]]]] = js.native
   
   /**
+    * deprecated indicates this version of the custom resource API is deprecated. When set to true, API requests to this version receive a warning header in the server response. Defaults to false.
+    */
+  var deprecated: js.UndefOr[Input[Boolean]] = js.native
+  
+  /**
+    * deprecationWarning overrides the default warning returned to API clients. May only be set when `deprecated` is true. The default warning indicates this version is deprecated and recommends use of the newest served version of equal or greater stability, if one exists.
+    */
+  var deprecationWarning: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/<group>/<version>/...` if `served` is true.
     */
   var name: Input[String] = js.native
@@ -81,6 +91,18 @@ object CustomResourceDefinitionVersion {
     
     @scala.inline
     def deleteAdditionalPrinterColumns: Self = this.set("additionalPrinterColumns", js.undefined)
+    
+    @scala.inline
+    def setDeprecated(value: Input[Boolean]): Self = this.set("deprecated", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeprecated: Self = this.set("deprecated", js.undefined)
+    
+    @scala.inline
+    def setDeprecationWarning(value: Input[String]): Self = this.set("deprecationWarning", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeprecationWarning: Self = this.set("deprecationWarning", js.undefined)
     
     @scala.inline
     def setSchema(value: Input[CustomResourceValidation]): Self = this.set("schema", value.asInstanceOf[js.Any])

@@ -28,8 +28,13 @@ import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.reactSimpleCodeEditor.anon.DetailedHTMLPropsHTMLAttr
 import typingsSlinky.reactSimpleCodeEditor.mod.default
+import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`additions removals`
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`additions text`
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`inline`
+import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`removals additions`
+import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`removals text`
+import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`text additions`
+import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`text removals`
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.additions
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.all
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.ascending
@@ -200,7 +205,9 @@ object ReactSimpleCodeEditor {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

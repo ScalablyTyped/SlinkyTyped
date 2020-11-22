@@ -1,7 +1,7 @@
 
 # Scala.js typings for jest-environment-node
 
-Typings are for version 26.2.0
+Typings are for version 26.6.2
 
 
 

@@ -44,7 +44,7 @@ trait ASPxClientWebDocumentViewer extends ASPxClientControl {
   ] = js.native
   
   /**
-    * Enables you to customize the Web Document Viewer's menu actions.
+    * Enables you to customize Web Document Viewer menu actions.
     */
   var CustomizeMenuActions: ASPxClientEvent[
     ASPxClientWebDocumentViewerCustomizeMenuActionsEventHandler[ASPxClientWebDocumentViewer]
@@ -85,9 +85,9 @@ trait ASPxClientWebDocumentViewer extends ASPxClientControl {
   ] = js.native
   
   /**
-    * Exports the document to a specified file format.
-    * @param format A String value that specifies the export format. The following formats are currently supported: 'csv', 'html', 'image', 'mht', 'pdf', 'rtf', 'docx', 'txt', 'xls', and 'xlsx'.
-    * @param inlineResult true, to try opening the result file in a new browser tab without a download; otherwise, false.
+    * Exports the document to the  specified file format.
+    * @param format A string value that specifies the export format. The DevExpress.Reporting.Viewer.ExportFormatID enumeration lists supported formats.
+    * @param inlineResult true, to inform the browser to display a file instead of download; otherwise, false.
     */
   def ExportTo(): Unit = js.native
   def ExportTo(format: js.UndefOr[scala.Nothing], inlineResult: Boolean): Unit = js.native
@@ -126,8 +126,8 @@ trait ASPxClientWebDocumentViewer extends ASPxClientControl {
   var OnServerError: ASPxClientEvent[ASPxClientWebDocumentViewerErrorEventHandler[ASPxClientWebDocumentViewer]] = js.native
   
   /**
-    * Opens the specified report on the Web Document Viewer's client side. A Deferred Promise object.
-    * @param url A string that specifies the URL of a report to be opened.
+    * Opens the specified report on the Web Document Viewer's client side. Allows you to refresh preview for the loaded report. A Deferred Promise object.
+    * @param url A string that specifies the report's URL.
     */
   def OpenReport(url: String): JQueryPromise[_] = js.native
   
@@ -161,8 +161,8 @@ trait ASPxClientWebDocumentViewer extends ASPxClientControl {
   var PreviewClick: ASPxClientEvent[ASPxClientWebDocumentViewerPreviewClickEventHandler[ASPxClientWebDocumentViewer]] = js.native
   
   /**
-    * Prints the document's page with the specified index.
-    * @param pageIndex An index of the page to be printed.
+    * Prints the entire document or the specified page.
+    * @param pageIndex An index of the page to be printed. If the page index is not specified, the entire document is printed.
     */
   def Print(): Unit = js.native
   def Print(pageIndex: Double): Unit = js.native

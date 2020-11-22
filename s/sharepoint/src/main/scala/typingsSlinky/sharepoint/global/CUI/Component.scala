@@ -8,6 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Component protected ()
   extends typingsSlinky.sharepoint.CUI.Component {
-  /* tslint:enable:variable-name */
   def this(root: typingsSlinky.sharepoint.CUI.Component, id: String, title: String, description: String) = this()
 }

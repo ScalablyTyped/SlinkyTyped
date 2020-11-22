@@ -11,10 +11,13 @@ import typingsSlinky.handsontable.anon.ValueCellValue
 import typingsSlinky.handsontable.handsontableNumbers.`-1`
 import typingsSlinky.handsontable.handsontableNumbers.`0`
 import typingsSlinky.handsontable.handsontableStrings.afterAddChild
+import typingsSlinky.handsontable.handsontableStrings.afterAutofill
 import typingsSlinky.handsontable.handsontableStrings.afterBeginEditing
 import typingsSlinky.handsontable.handsontableStrings.afterCellMetaReset
 import typingsSlinky.handsontable.handsontableStrings.afterChange
 import typingsSlinky.handsontable.handsontableStrings.afterChangesObserved
+import typingsSlinky.handsontable.handsontableStrings.afterColumnCollapse
+import typingsSlinky.handsontable.handsontableStrings.afterColumnExpand
 import typingsSlinky.handsontable.handsontableStrings.afterColumnMove
 import typingsSlinky.handsontable.handsontableStrings.afterColumnResize
 import typingsSlinky.handsontable.handsontableStrings.afterColumnSort
@@ -77,6 +80,7 @@ import typingsSlinky.handsontable.handsontableStrings.afterSelectionEndByProp
 import typingsSlinky.handsontable.handsontableStrings.afterSetCellMeta
 import typingsSlinky.handsontable.handsontableStrings.afterSetDataAtCell
 import typingsSlinky.handsontable.handsontableStrings.afterSetDataAtRowProp
+import typingsSlinky.handsontable.handsontableStrings.afterSetSourceDataAtCell
 import typingsSlinky.handsontable.handsontableStrings.afterTrimRow
 import typingsSlinky.handsontable.handsontableStrings.afterUndo
 import typingsSlinky.handsontable.handsontableStrings.afterUnhideColumns
@@ -95,6 +99,8 @@ import typingsSlinky.handsontable.handsontableStrings.beforeAutofillInsidePopula
 import typingsSlinky.handsontable.handsontableStrings.beforeCellAlignment
 import typingsSlinky.handsontable.handsontableStrings.beforeChange
 import typingsSlinky.handsontable.handsontableStrings.beforeChangeRender
+import typingsSlinky.handsontable.handsontableStrings.beforeColumnCollapse
+import typingsSlinky.handsontable.handsontableStrings.beforeColumnExpand
 import typingsSlinky.handsontable.handsontableStrings.beforeColumnMove
 import typingsSlinky.handsontable.handsontableStrings.beforeColumnResize
 import typingsSlinky.handsontable.handsontableStrings.beforeColumnSort
@@ -116,6 +122,7 @@ import typingsSlinky.handsontable.handsontableStrings.beforeInit
 import typingsSlinky.handsontable.handsontableStrings.beforeInitWalkontable
 import typingsSlinky.handsontable.handsontableStrings.beforeKeyDown
 import typingsSlinky.handsontable.handsontableStrings.beforeLanguageChange
+import typingsSlinky.handsontable.handsontableStrings.beforeLoadData
 import typingsSlinky.handsontable.handsontableStrings.beforeMergeCells
 import typingsSlinky.handsontable.handsontableStrings.beforeOnCellContextMenu
 import typingsSlinky.handsontable.handsontableStrings.beforeOnCellMouseDown
@@ -133,6 +140,7 @@ import typingsSlinky.handsontable.handsontableStrings.beforeRender
 import typingsSlinky.handsontable.handsontableStrings.beforeRenderer
 import typingsSlinky.handsontable.handsontableStrings.beforeRowMove
 import typingsSlinky.handsontable.handsontableStrings.beforeRowResize
+import typingsSlinky.handsontable.handsontableStrings.beforeSetCellMeta
 import typingsSlinky.handsontable.handsontableStrings.beforeSetRangeEnd
 import typingsSlinky.handsontable.handsontableStrings.beforeSetRangeStart
 import typingsSlinky.handsontable.handsontableStrings.beforeSetRangeStartOnly
@@ -150,8 +158,6 @@ import typingsSlinky.handsontable.handsontableStrings.construct
 import typingsSlinky.handsontable.handsontableStrings.current
 import typingsSlinky.handsontable.handsontableStrings.down
 import typingsSlinky.handsontable.handsontableStrings.get
-import typingsSlinky.handsontable.handsontableStrings.hiddenColumn
-import typingsSlinky.handsontable.handsontableStrings.hiddenRow
 import typingsSlinky.handsontable.handsontableStrings.highlight
 import typingsSlinky.handsontable.handsontableStrings.horizontal
 import typingsSlinky.handsontable.handsontableStrings.htBottom
@@ -164,19 +170,18 @@ import typingsSlinky.handsontable.handsontableStrings.htTop
 import typingsSlinky.handsontable.handsontableStrings.init
 import typingsSlinky.handsontable.handsontableStrings.left
 import typingsSlinky.handsontable.handsontableStrings.modifyAutofillRange
-import typingsSlinky.handsontable.handsontableStrings.modifyCol
 import typingsSlinky.handsontable.handsontableStrings.modifyColHeader
 import typingsSlinky.handsontable.handsontableStrings.modifyColWidth
 import typingsSlinky.handsontable.handsontableStrings.modifyColumnHeaderHeight
 import typingsSlinky.handsontable.handsontableStrings.modifyCopyableRange
 import typingsSlinky.handsontable.handsontableStrings.modifyData
 import typingsSlinky.handsontable.handsontableStrings.modifyGetCellCoords
-import typingsSlinky.handsontable.handsontableStrings.modifyRow
 import typingsSlinky.handsontable.handsontableStrings.modifyRowData
 import typingsSlinky.handsontable.handsontableStrings.modifyRowHeader
 import typingsSlinky.handsontable.handsontableStrings.modifyRowHeaderWidth
 import typingsSlinky.handsontable.handsontableStrings.modifyRowHeight
 import typingsSlinky.handsontable.handsontableStrings.modifyRowSourceData
+import typingsSlinky.handsontable.handsontableStrings.modifySourceData
 import typingsSlinky.handsontable.handsontableStrings.modifyTransformEnd
 import typingsSlinky.handsontable.handsontableStrings.modifyTransformStart
 import typingsSlinky.handsontable.handsontableStrings.persistentStateLoad
@@ -184,9 +189,6 @@ import typingsSlinky.handsontable.handsontableStrings.persistentStateReset
 import typingsSlinky.handsontable.handsontableStrings.persistentStateSave
 import typingsSlinky.handsontable.handsontableStrings.right
 import typingsSlinky.handsontable.handsontableStrings.set
-import typingsSlinky.handsontable.handsontableStrings.skipLengthCache
-import typingsSlinky.handsontable.handsontableStrings.unmodifyCol
-import typingsSlinky.handsontable.handsontableStrings.unmodifyRow
 import typingsSlinky.handsontable.handsontableStrings.up
 import typingsSlinky.handsontable.handsontableStrings.vertical
 import typingsSlinky.handsontable.mod.Handsontable
@@ -526,6 +528,60 @@ trait Methods extends js.Object {
     ],
     context: Handsontable
   ): Methods = js.native
+  def add(
+    key: modifySourceData,
+    callback: js.UndefOr[
+      js.Function4[
+        /* row */ Double, 
+        /* col */ Double, 
+        /* valueHolder */ ValueCellValue, 
+        /* ioMode */ get | set, 
+        Unit
+      ]
+    ]
+  ): Methods = js.native
+  def add(
+    key: modifySourceData,
+    callback: js.UndefOr[
+      js.Function4[
+        /* row */ Double, 
+        /* col */ Double, 
+        /* valueHolder */ ValueCellValue, 
+        /* ioMode */ get | set, 
+        Unit
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  def add(
+    key: modifySourceData,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* row */ Double, 
+          /* col */ Double, 
+          /* valueHolder */ ValueCellValue, 
+          /* ioMode */ get | set, 
+          Unit
+        ]
+      ]
+    ]
+  ): Methods = js.native
+  def add(
+    key: modifySourceData,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* row */ Double, 
+          /* col */ Double, 
+          /* valueHolder */ ValueCellValue, 
+          /* ioMode */ get | set, 
+          Unit
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
   @JSName("add")
   def add_afterAddChild(
     key: afterAddChild,
@@ -574,6 +630,60 @@ trait Methods extends js.Object {
           /* parent */ RowObject, 
           /* element */ RowObject | Unit, 
           /* index */ Double | Unit, 
+          Unit
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterAutofill(
+    key: afterAutofill,
+    callback: js.UndefOr[
+      js.Function3[
+        /* start */ CellCoords, 
+        /* end */ CellCoords, 
+        /* data */ js.Array[js.Array[CellValue]], 
+        Unit
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterAutofill(
+    key: afterAutofill,
+    callback: js.UndefOr[
+      js.Function3[
+        /* start */ CellCoords, 
+        /* end */ CellCoords, 
+        /* data */ js.Array[js.Array[CellValue]], 
+        Unit
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterAutofill(
+    key: afterAutofill,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* start */ CellCoords, 
+          /* end */ CellCoords, 
+          /* data */ js.Array[js.Array[CellValue]], 
+          Unit
+        ]
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterAutofill(
+    key: afterAutofill,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* start */ CellCoords, 
+          /* end */ CellCoords, 
+          /* data */ js.Array[js.Array[CellValue]], 
           Unit
         ]
       ]
@@ -657,6 +767,122 @@ trait Methods extends js.Object {
     context: Handsontable
   ): Methods = js.native
   @JSName("add")
+  def add_afterColumnCollapse(
+    key: afterColumnCollapse,
+    callback: js.UndefOr[
+      js.Function4[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* collapsePossible */ Boolean, 
+        /* successfullyCollapsed */ Boolean, 
+        Unit
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterColumnCollapse(
+    key: afterColumnCollapse,
+    callback: js.UndefOr[
+      js.Function4[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* collapsePossible */ Boolean, 
+        /* successfullyCollapsed */ Boolean, 
+        Unit
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterColumnCollapse(
+    key: afterColumnCollapse,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* collapsePossible */ Boolean, 
+          /* successfullyCollapsed */ Boolean, 
+          Unit
+        ]
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterColumnCollapse(
+    key: afterColumnCollapse,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* collapsePossible */ Boolean, 
+          /* successfullyCollapsed */ Boolean, 
+          Unit
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterColumnExpand(
+    key: afterColumnExpand,
+    callback: js.UndefOr[
+      js.Function4[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* expandPossible */ Boolean, 
+        /* successfullyExpanded */ Boolean, 
+        Unit
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterColumnExpand(
+    key: afterColumnExpand,
+    callback: js.UndefOr[
+      js.Function4[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* expandPossible */ Boolean, 
+        /* successfullyExpanded */ Boolean, 
+        Unit
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterColumnExpand(
+    key: afterColumnExpand,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* expandPossible */ Boolean, 
+          /* successfullyExpanded */ Boolean, 
+          Unit
+        ]
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterColumnExpand(
+    key: afterColumnExpand,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* expandPossible */ Boolean, 
+          /* successfullyExpanded */ Boolean, 
+          Unit
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
   def add_afterColumnMove(
     key: afterColumnMove,
     callback: js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]]
@@ -686,14 +912,14 @@ trait Methods extends js.Object {
   def add_afterColumnResize(
     key: afterColumnResize,
     callback: js.UndefOr[
-      js.Function3[/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+      js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit]
     ]
   ): Methods = js.native
   @JSName("add")
   def add_afterColumnResize(
     key: afterColumnResize,
     callback: js.UndefOr[
-      js.Function3[/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+      js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit]
     ],
     context: Handsontable
   ): Methods = js.native
@@ -702,7 +928,7 @@ trait Methods extends js.Object {
     key: afterColumnResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+        js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit]
       ]
     ]
   ): Methods = js.native
@@ -711,7 +937,7 @@ trait Methods extends js.Object {
     key: afterColumnResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+        js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit]
       ]
     ],
     context: Handsontable
@@ -1571,19 +1797,37 @@ trait Methods extends js.Object {
   @JSName("add")
   def add_afterListen(key: afterListen, callback: js.Array[js.UndefOr[js.Function0[Unit]]], context: Handsontable): Methods = js.native
   @JSName("add")
-  def add_afterLoadData(key: afterLoadData, callback: js.UndefOr[js.Function1[/* initialLoad */ Boolean, Unit]]): Methods = js.native
+  def add_afterLoadData(
+    key: afterLoadData,
+    callback: js.UndefOr[
+      js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+    ]
+  ): Methods = js.native
   @JSName("add")
   def add_afterLoadData(
     key: afterLoadData,
-    callback: js.UndefOr[js.Function1[/* initialLoad */ Boolean, Unit]],
+    callback: js.UndefOr[
+      js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+    ],
     context: Handsontable
   ): Methods = js.native
   @JSName("add")
-  def add_afterLoadData(key: afterLoadData, callback: js.Array[js.UndefOr[js.Function1[/* initialLoad */ Boolean, Unit]]]): Methods = js.native
+  def add_afterLoadData(
+    key: afterLoadData,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+      ]
+    ]
+  ): Methods = js.native
   @JSName("add")
   def add_afterLoadData(
     key: afterLoadData,
-    callback: js.Array[js.UndefOr[js.Function1[/* initialLoad */ Boolean, Unit]]],
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+      ]
+    ],
     context: Handsontable
   ): Methods = js.native
   @JSName("add")
@@ -2055,7 +2299,7 @@ trait Methods extends js.Object {
       js.Function4[
         /* index */ Double, 
         /* amount */ Double, 
-        /* physicalColumns */ js.Array[Double], 
+        /* physicalRows */ js.Array[Double], 
         /* source */ js.UndefOr[ChangeSource], 
         Unit
       ]
@@ -2068,7 +2312,7 @@ trait Methods extends js.Object {
       js.Function4[
         /* index */ Double, 
         /* amount */ Double, 
-        /* physicalColumns */ js.Array[Double], 
+        /* physicalRows */ js.Array[Double], 
         /* source */ js.UndefOr[ChangeSource], 
         Unit
       ]
@@ -2083,7 +2327,7 @@ trait Methods extends js.Object {
         js.Function4[
           /* index */ Double, 
           /* amount */ Double, 
-          /* physicalColumns */ js.Array[Double], 
+          /* physicalRows */ js.Array[Double], 
           /* source */ js.UndefOr[ChangeSource], 
           Unit
         ]
@@ -2098,7 +2342,7 @@ trait Methods extends js.Object {
         js.Function4[
           /* index */ Double, 
           /* amount */ Double, 
-          /* physicalColumns */ js.Array[Double], 
+          /* physicalRows */ js.Array[Double], 
           /* source */ js.UndefOr[ChangeSource], 
           Unit
         ]
@@ -2191,37 +2435,77 @@ trait Methods extends js.Object {
   @JSName("add")
   def add_afterRowMove(
     key: afterRowMove,
-    callback: js.UndefOr[js.Function2[/* startRow */ Double, /* endRow */ Double, Unit]]
+    callback: js.UndefOr[
+      js.Function5[
+        /* movedRows */ js.Array[Double], 
+        /* finalIndex */ Double, 
+        /* dropIndex */ Double | Unit, 
+        /* movePossible */ Boolean, 
+        /* orderChanged */ Boolean, 
+        Unit
+      ]
+    ]
   ): Methods = js.native
   @JSName("add")
   def add_afterRowMove(
     key: afterRowMove,
-    callback: js.UndefOr[js.Function2[/* startRow */ Double, /* endRow */ Double, Unit]],
+    callback: js.UndefOr[
+      js.Function5[
+        /* movedRows */ js.Array[Double], 
+        /* finalIndex */ Double, 
+        /* dropIndex */ Double | Unit, 
+        /* movePossible */ Boolean, 
+        /* orderChanged */ Boolean, 
+        Unit
+      ]
+    ],
     context: Handsontable
   ): Methods = js.native
   @JSName("add")
   def add_afterRowMove(
     key: afterRowMove,
-    callback: js.Array[js.UndefOr[js.Function2[/* startRow */ Double, /* endRow */ Double, Unit]]]
+    callback: js.Array[
+      js.UndefOr[
+        js.Function5[
+          /* movedRows */ js.Array[Double], 
+          /* finalIndex */ Double, 
+          /* dropIndex */ Double | Unit, 
+          /* movePossible */ Boolean, 
+          /* orderChanged */ Boolean, 
+          Unit
+        ]
+      ]
+    ]
   ): Methods = js.native
   @JSName("add")
   def add_afterRowMove(
     key: afterRowMove,
-    callback: js.Array[js.UndefOr[js.Function2[/* startRow */ Double, /* endRow */ Double, Unit]]],
+    callback: js.Array[
+      js.UndefOr[
+        js.Function5[
+          /* movedRows */ js.Array[Double], 
+          /* finalIndex */ Double, 
+          /* dropIndex */ Double | Unit, 
+          /* movePossible */ Boolean, 
+          /* orderChanged */ Boolean, 
+          Unit
+        ]
+      ]
+    ],
     context: Handsontable
   ): Methods = js.native
   @JSName("add")
   def add_afterRowResize(
     key: afterRowResize,
     callback: js.UndefOr[
-      js.Function3[/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+      js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Unit]
     ]
   ): Methods = js.native
   @JSName("add")
   def add_afterRowResize(
     key: afterRowResize,
     callback: js.UndefOr[
-      js.Function3[/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+      js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Unit]
     ],
     context: Handsontable
   ): Methods = js.native
@@ -2230,7 +2514,7 @@ trait Methods extends js.Object {
     key: afterRowResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+        js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Unit]
       ]
     ]
   ): Methods = js.native
@@ -2239,7 +2523,7 @@ trait Methods extends js.Object {
     key: afterRowResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+        js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Unit]
       ]
     ],
     context: Handsontable
@@ -2619,6 +2903,40 @@ trait Methods extends js.Object {
   @JSName("add")
   def add_afterSetDataAtRowProp(
     key: afterSetDataAtRowProp,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterSetSourceDataAtCell(
+    key: afterSetSourceDataAtCell,
+    callback: js.UndefOr[
+      js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterSetSourceDataAtCell(
+    key: afterSetSourceDataAtCell,
+    callback: js.UndefOr[
+      js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterSetSourceDataAtCell(
+    key: afterSetSourceDataAtCell,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_afterSetSourceDataAtCell(
+    key: afterSetSourceDataAtCell,
     callback: js.Array[
       js.UndefOr[
         js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
@@ -3091,7 +3409,7 @@ trait Methods extends js.Object {
         /* start */ CellCoords, 
         /* end */ CellCoords, 
         /* data */ js.Array[js.Array[CellValue]], 
-        Unit
+        Unit | Boolean
       ]
     ]
   ): Methods = js.native
@@ -3103,7 +3421,7 @@ trait Methods extends js.Object {
         /* start */ CellCoords, 
         /* end */ CellCoords, 
         /* data */ js.Array[js.Array[CellValue]], 
-        Unit
+        Unit | Boolean
       ]
     ],
     context: Handsontable
@@ -3117,7 +3435,7 @@ trait Methods extends js.Object {
           /* start */ CellCoords, 
           /* end */ CellCoords, 
           /* data */ js.Array[js.Array[CellValue]], 
-          Unit
+          Unit | Boolean
         ]
       ]
     ]
@@ -3131,7 +3449,7 @@ trait Methods extends js.Object {
           /* start */ CellCoords, 
           /* end */ CellCoords, 
           /* data */ js.Array[js.Array[CellValue]], 
-          Unit
+          Unit | Boolean
         ]
       ]
     ],
@@ -3206,6 +3524,114 @@ trait Methods extends js.Object {
     context: Handsontable
   ): Methods = js.native
   @JSName("add")
+  def add_beforeColumnCollapse(
+    key: beforeColumnCollapse,
+    callback: js.UndefOr[
+      js.Function3[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* collapsePossible */ Boolean, 
+        Unit | Boolean
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeColumnCollapse(
+    key: beforeColumnCollapse,
+    callback: js.UndefOr[
+      js.Function3[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* collapsePossible */ Boolean, 
+        Unit | Boolean
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeColumnCollapse(
+    key: beforeColumnCollapse,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* collapsePossible */ Boolean, 
+          Unit | Boolean
+        ]
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeColumnCollapse(
+    key: beforeColumnCollapse,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* collapsePossible */ Boolean, 
+          Unit | Boolean
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeColumnExpand(
+    key: beforeColumnExpand,
+    callback: js.UndefOr[
+      js.Function3[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* expandPossible */ Boolean, 
+        Unit | Boolean
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeColumnExpand(
+    key: beforeColumnExpand,
+    callback: js.UndefOr[
+      js.Function3[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* expandPossible */ Boolean, 
+        Unit | Boolean
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeColumnExpand(
+    key: beforeColumnExpand,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* expandPossible */ Boolean, 
+          Unit | Boolean
+        ]
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeColumnExpand(
+    key: beforeColumnExpand,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* expandPossible */ Boolean, 
+          Unit | Boolean
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
   def add_beforeColumnMove(
     key: beforeColumnMove,
     callback: js.UndefOr[
@@ -3243,24 +3669,14 @@ trait Methods extends js.Object {
   def add_beforeColumnResize(
     key: beforeColumnResize,
     callback: js.UndefOr[
-      js.Function3[
-        /* currentColumn */ Double, 
-        /* newSize */ Double, 
-        /* isDoubleClick */ Boolean, 
-        Unit | Double
-      ]
+      js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit | Double]
     ]
   ): Methods = js.native
   @JSName("add")
   def add_beforeColumnResize(
     key: beforeColumnResize,
     callback: js.UndefOr[
-      js.Function3[
-        /* currentColumn */ Double, 
-        /* newSize */ Double, 
-        /* isDoubleClick */ Boolean, 
-        Unit | Double
-      ]
+      js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit | Double]
     ],
     context: Handsontable
   ): Methods = js.native
@@ -3269,12 +3685,7 @@ trait Methods extends js.Object {
     key: beforeColumnResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[
-          /* currentColumn */ Double, 
-          /* newSize */ Double, 
-          /* isDoubleClick */ Boolean, 
-          Unit | Double
-        ]
+        js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit | Double]
       ]
     ]
   ): Methods = js.native
@@ -3283,12 +3694,7 @@ trait Methods extends js.Object {
     key: beforeColumnResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[
-          /* currentColumn */ Double, 
-          /* newSize */ Double, 
-          /* isDoubleClick */ Boolean, 
-          Unit | Double
-        ]
+        js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit | Double]
       ]
     ],
     context: Handsontable
@@ -3866,6 +4272,40 @@ trait Methods extends js.Object {
   def add_beforeLanguageChange(
     key: beforeLanguageChange,
     callback: js.Array[js.UndefOr[js.Function1[/* languageCode */ String, Unit]]],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeLoadData(
+    key: beforeLoadData,
+    callback: js.UndefOr[
+      js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeLoadData(
+    key: beforeLoadData,
+    callback: js.UndefOr[
+      js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeLoadData(
+    key: beforeLoadData,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeLoadData(
+    key: beforeLoadData,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+      ]
+    ],
     context: Handsontable
   ): Methods = js.native
   @JSName("add")
@@ -4516,26 +4956,58 @@ trait Methods extends js.Object {
   @JSName("add")
   def add_beforeRowMove(
     key: beforeRowMove,
-    callback: js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]]
+    callback: js.UndefOr[
+      js.Function4[
+        /* movedRows */ js.Array[Double], 
+        /* finalIndex */ Double, 
+        /* dropIndex */ Double | Unit, 
+        /* movePossible */ Boolean, 
+        Unit
+      ]
+    ]
   ): Methods = js.native
   @JSName("add")
   def add_beforeRowMove(
     key: beforeRowMove,
-    callback: js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]],
+    callback: js.UndefOr[
+      js.Function4[
+        /* movedRows */ js.Array[Double], 
+        /* finalIndex */ Double, 
+        /* dropIndex */ Double | Unit, 
+        /* movePossible */ Boolean, 
+        Unit
+      ]
+    ],
     context: Handsontable
   ): Methods = js.native
   @JSName("add")
   def add_beforeRowMove(
     key: beforeRowMove,
     callback: js.Array[
-      js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]]
+      js.UndefOr[
+        js.Function4[
+          /* movedRows */ js.Array[Double], 
+          /* finalIndex */ Double, 
+          /* dropIndex */ Double | Unit, 
+          /* movePossible */ Boolean, 
+          Unit
+        ]
+      ]
     ]
   ): Methods = js.native
   @JSName("add")
   def add_beforeRowMove(
     key: beforeRowMove,
     callback: js.Array[
-      js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]]
+      js.UndefOr[
+        js.Function4[
+          /* movedRows */ js.Array[Double], 
+          /* finalIndex */ Double, 
+          /* dropIndex */ Double | Unit, 
+          /* movePossible */ Boolean, 
+          Unit
+        ]
+      ]
     ],
     context: Handsontable
   ): Methods = js.native
@@ -4543,24 +5015,14 @@ trait Methods extends js.Object {
   def add_beforeRowResize(
     key: beforeRowResize,
     callback: js.UndefOr[
-      js.Function3[
-        /* currentRow */ Double, 
-        /* newSize */ Double, 
-        /* isDoubleClick */ Boolean, 
-        Double | Unit
-      ]
+      js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Double | Unit]
     ]
   ): Methods = js.native
   @JSName("add")
   def add_beforeRowResize(
     key: beforeRowResize,
     callback: js.UndefOr[
-      js.Function3[
-        /* currentRow */ Double, 
-        /* newSize */ Double, 
-        /* isDoubleClick */ Boolean, 
-        Double | Unit
-      ]
+      js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Double | Unit]
     ],
     context: Handsontable
   ): Methods = js.native
@@ -4569,12 +5031,7 @@ trait Methods extends js.Object {
     key: beforeRowResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[
-          /* currentRow */ Double, 
-          /* newSize */ Double, 
-          /* isDoubleClick */ Boolean, 
-          Double | Unit
-        ]
+        js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Double | Unit]
       ]
     ]
   ): Methods = js.native
@@ -4583,12 +5040,41 @@ trait Methods extends js.Object {
     key: beforeRowResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[
-          /* currentRow */ Double, 
-          /* newSize */ Double, 
-          /* isDoubleClick */ Boolean, 
-          Double | Unit
-        ]
+        js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Double | Unit]
+      ]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeSetCellMeta(
+    key: beforeSetCellMeta,
+    callback: js.UndefOr[
+      js.Function4[/* row */ Double, /* col */ Double, /* key */ String, /* value */ js.Any, Boolean | Unit]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeSetCellMeta(
+    key: beforeSetCellMeta,
+    callback: js.UndefOr[
+      js.Function4[/* row */ Double, /* col */ Double, /* key */ String, /* value */ js.Any, Boolean | Unit]
+    ],
+    context: Handsontable
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeSetCellMeta(
+    key: beforeSetCellMeta,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[/* row */ Double, /* col */ Double, /* key */ String, /* value */ _, Boolean | Unit]
+      ]
+    ]
+  ): Methods = js.native
+  @JSName("add")
+  def add_beforeSetCellMeta(
+    key: beforeSetCellMeta,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[/* row */ Double, /* col */ Double, /* key */ String, /* value */ _, Boolean | Unit]
       ]
     ],
     context: Handsontable
@@ -5031,34 +5517,6 @@ trait Methods extends js.Object {
   @JSName("add")
   def add_construct(key: construct, callback: js.Array[js.UndefOr[js.Function0[Unit]]], context: Handsontable): Methods = js.native
   @JSName("add")
-  def add_hiddenColumn(key: hiddenColumn, callback: js.UndefOr[js.Function1[/* column */ Double, Unit]]): Methods = js.native
-  @JSName("add")
-  def add_hiddenColumn(
-    key: hiddenColumn,
-    callback: js.UndefOr[js.Function1[/* column */ Double, Unit]],
-    context: Handsontable
-  ): Methods = js.native
-  @JSName("add")
-  def add_hiddenColumn(key: hiddenColumn, callback: js.Array[js.UndefOr[js.Function1[/* column */ Double, Unit]]]): Methods = js.native
-  @JSName("add")
-  def add_hiddenColumn(
-    key: hiddenColumn,
-    callback: js.Array[js.UndefOr[js.Function1[/* column */ Double, Unit]]],
-    context: Handsontable
-  ): Methods = js.native
-  @JSName("add")
-  def add_hiddenRow(key: hiddenRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]]): Methods = js.native
-  @JSName("add")
-  def add_hiddenRow(key: hiddenRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]], context: Handsontable): Methods = js.native
-  @JSName("add")
-  def add_hiddenRow(key: hiddenRow, callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]]): Methods = js.native
-  @JSName("add")
-  def add_hiddenRow(
-    key: hiddenRow,
-    callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]],
-    context: Handsontable
-  ): Methods = js.native
-  @JSName("add")
   def add_init(key: init, callback: js.UndefOr[js.Function0[Unit]]): Methods = js.native
   @JSName("add")
   def add_init(key: init, callback: js.UndefOr[js.Function0[Unit]], context: Handsontable): Methods = js.native
@@ -5114,18 +5572,6 @@ trait Methods extends js.Object {
         ]
       ]
     ],
-    context: Handsontable
-  ): Methods = js.native
-  @JSName("add")
-  def add_modifyCol(key: modifyCol, callback: js.UndefOr[js.Function1[/* col */ Double, Unit]]): Methods = js.native
-  @JSName("add")
-  def add_modifyCol(key: modifyCol, callback: js.UndefOr[js.Function1[/* col */ Double, Unit]], context: Handsontable): Methods = js.native
-  @JSName("add")
-  def add_modifyCol(key: modifyCol, callback: js.Array[js.UndefOr[js.Function1[/* col */ Double, Unit]]]): Methods = js.native
-  @JSName("add")
-  def add_modifyCol(
-    key: modifyCol,
-    callback: js.Array[js.UndefOr[js.Function1[/* col */ Double, Unit]]],
     context: Handsontable
   ): Methods = js.native
   @JSName("add")
@@ -5252,18 +5698,6 @@ trait Methods extends js.Object {
         ]
       ]
     ],
-    context: Handsontable
-  ): Methods = js.native
-  @JSName("add")
-  def add_modifyRow(key: modifyRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]]): Methods = js.native
-  @JSName("add")
-  def add_modifyRow(key: modifyRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]], context: Handsontable): Methods = js.native
-  @JSName("add")
-  def add_modifyRow(key: modifyRow, callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]]): Methods = js.native
-  @JSName("add")
-  def add_modifyRow(
-    key: modifyRow,
-    callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]],
     context: Handsontable
   ): Methods = js.native
   @JSName("add")
@@ -5457,54 +5891,6 @@ trait Methods extends js.Object {
     callback: js.Array[js.UndefOr[js.Function2[/* key */ String, /* value */ _, Unit]]],
     context: Handsontable
   ): Methods = js.native
-  @JSName("add")
-  def add_skipLengthCache(key: skipLengthCache, callback: js.UndefOr[js.Function1[/* delay */ Double, Unit]]): Methods = js.native
-  @JSName("add")
-  def add_skipLengthCache(
-    key: skipLengthCache,
-    callback: js.UndefOr[js.Function1[/* delay */ Double, Unit]],
-    context: Handsontable
-  ): Methods = js.native
-  @JSName("add")
-  def add_skipLengthCache(key: skipLengthCache, callback: js.Array[js.UndefOr[js.Function1[/* delay */ Double, Unit]]]): Methods = js.native
-  @JSName("add")
-  def add_skipLengthCache(
-    key: skipLengthCache,
-    callback: js.Array[js.UndefOr[js.Function1[/* delay */ Double, Unit]]],
-    context: Handsontable
-  ): Methods = js.native
-  @JSName("add")
-  def add_unmodifyCol(key: unmodifyCol, callback: js.UndefOr[js.Function1[/* col */ Double, Unit]]): Methods = js.native
-  @JSName("add")
-  def add_unmodifyCol(
-    key: unmodifyCol,
-    callback: js.UndefOr[js.Function1[/* col */ Double, Unit]],
-    context: Handsontable
-  ): Methods = js.native
-  @JSName("add")
-  def add_unmodifyCol(key: unmodifyCol, callback: js.Array[js.UndefOr[js.Function1[/* col */ Double, Unit]]]): Methods = js.native
-  @JSName("add")
-  def add_unmodifyCol(
-    key: unmodifyCol,
-    callback: js.Array[js.UndefOr[js.Function1[/* col */ Double, Unit]]],
-    context: Handsontable
-  ): Methods = js.native
-  @JSName("add")
-  def add_unmodifyRow(key: unmodifyRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]]): Methods = js.native
-  @JSName("add")
-  def add_unmodifyRow(
-    key: unmodifyRow,
-    callback: js.UndefOr[js.Function1[/* row */ Double, Unit]],
-    context: Handsontable
-  ): Methods = js.native
-  @JSName("add")
-  def add_unmodifyRow(key: unmodifyRow, callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]]): Methods = js.native
-  @JSName("add")
-  def add_unmodifyRow(
-    key: unmodifyRow,
-    callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]],
-    context: Handsontable
-  ): Methods = js.native
   
   def createEmptyBucket(): Bucket = js.native
   
@@ -5517,16 +5903,16 @@ trait Methods extends js.Object {
   def getBucket(context: Handsontable): Bucket = js.native
   
   def getRegistered(): js.Array[
-    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any
+    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 163 */ js.Any
   ] = js.native
   
-  def has(key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any): Boolean = js.native
+  def has(key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 163 */ js.Any): Boolean = js.native
   def has(
-    key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any,
+    key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 163 */ js.Any,
     context: Handsontable
   ): Boolean = js.native
   
-  def isRegistered(key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any): Boolean = js.native
+  def isRegistered(key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 163 */ js.Any): Boolean = js.native
   
   def once(
     key: afterModifyTransformEnd,
@@ -5836,6 +6222,60 @@ trait Methods extends js.Object {
     ],
     context: Handsontable
   ): Unit = js.native
+  def once(
+    key: modifySourceData,
+    callback: js.UndefOr[
+      js.Function4[
+        /* row */ Double, 
+        /* col */ Double, 
+        /* valueHolder */ ValueCellValue, 
+        /* ioMode */ get | set, 
+        Unit
+      ]
+    ]
+  ): Unit = js.native
+  def once(
+    key: modifySourceData,
+    callback: js.UndefOr[
+      js.Function4[
+        /* row */ Double, 
+        /* col */ Double, 
+        /* valueHolder */ ValueCellValue, 
+        /* ioMode */ get | set, 
+        Unit
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  def once(
+    key: modifySourceData,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* row */ Double, 
+          /* col */ Double, 
+          /* valueHolder */ ValueCellValue, 
+          /* ioMode */ get | set, 
+          Unit
+        ]
+      ]
+    ]
+  ): Unit = js.native
+  def once(
+    key: modifySourceData,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* row */ Double, 
+          /* col */ Double, 
+          /* valueHolder */ ValueCellValue, 
+          /* ioMode */ get | set, 
+          Unit
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
   @JSName("once")
   def once_afterAddChild(
     key: afterAddChild,
@@ -5884,6 +6324,60 @@ trait Methods extends js.Object {
           /* parent */ RowObject, 
           /* element */ RowObject | Unit, 
           /* index */ Double | Unit, 
+          Unit
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterAutofill(
+    key: afterAutofill,
+    callback: js.UndefOr[
+      js.Function3[
+        /* start */ CellCoords, 
+        /* end */ CellCoords, 
+        /* data */ js.Array[js.Array[CellValue]], 
+        Unit
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterAutofill(
+    key: afterAutofill,
+    callback: js.UndefOr[
+      js.Function3[
+        /* start */ CellCoords, 
+        /* end */ CellCoords, 
+        /* data */ js.Array[js.Array[CellValue]], 
+        Unit
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterAutofill(
+    key: afterAutofill,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* start */ CellCoords, 
+          /* end */ CellCoords, 
+          /* data */ js.Array[js.Array[CellValue]], 
+          Unit
+        ]
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterAutofill(
+    key: afterAutofill,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* start */ CellCoords, 
+          /* end */ CellCoords, 
+          /* data */ js.Array[js.Array[CellValue]], 
           Unit
         ]
       ]
@@ -5967,6 +6461,122 @@ trait Methods extends js.Object {
     context: Handsontable
   ): Unit = js.native
   @JSName("once")
+  def once_afterColumnCollapse(
+    key: afterColumnCollapse,
+    callback: js.UndefOr[
+      js.Function4[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* collapsePossible */ Boolean, 
+        /* successfullyCollapsed */ Boolean, 
+        Unit
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterColumnCollapse(
+    key: afterColumnCollapse,
+    callback: js.UndefOr[
+      js.Function4[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* collapsePossible */ Boolean, 
+        /* successfullyCollapsed */ Boolean, 
+        Unit
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterColumnCollapse(
+    key: afterColumnCollapse,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* collapsePossible */ Boolean, 
+          /* successfullyCollapsed */ Boolean, 
+          Unit
+        ]
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterColumnCollapse(
+    key: afterColumnCollapse,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* collapsePossible */ Boolean, 
+          /* successfullyCollapsed */ Boolean, 
+          Unit
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterColumnExpand(
+    key: afterColumnExpand,
+    callback: js.UndefOr[
+      js.Function4[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* expandPossible */ Boolean, 
+        /* successfullyExpanded */ Boolean, 
+        Unit
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterColumnExpand(
+    key: afterColumnExpand,
+    callback: js.UndefOr[
+      js.Function4[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* expandPossible */ Boolean, 
+        /* successfullyExpanded */ Boolean, 
+        Unit
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterColumnExpand(
+    key: afterColumnExpand,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* expandPossible */ Boolean, 
+          /* successfullyExpanded */ Boolean, 
+          Unit
+        ]
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterColumnExpand(
+    key: afterColumnExpand,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* expandPossible */ Boolean, 
+          /* successfullyExpanded */ Boolean, 
+          Unit
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
   def once_afterColumnMove(
     key: afterColumnMove,
     callback: js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]]
@@ -5996,14 +6606,14 @@ trait Methods extends js.Object {
   def once_afterColumnResize(
     key: afterColumnResize,
     callback: js.UndefOr[
-      js.Function3[/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+      js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit]
     ]
   ): Unit = js.native
   @JSName("once")
   def once_afterColumnResize(
     key: afterColumnResize,
     callback: js.UndefOr[
-      js.Function3[/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+      js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit]
     ],
     context: Handsontable
   ): Unit = js.native
@@ -6012,7 +6622,7 @@ trait Methods extends js.Object {
     key: afterColumnResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+        js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit]
       ]
     ]
   ): Unit = js.native
@@ -6021,7 +6631,7 @@ trait Methods extends js.Object {
     key: afterColumnResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+        js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit]
       ]
     ],
     context: Handsontable
@@ -6881,19 +7491,37 @@ trait Methods extends js.Object {
   @JSName("once")
   def once_afterListen(key: afterListen, callback: js.Array[js.UndefOr[js.Function0[Unit]]], context: Handsontable): Unit = js.native
   @JSName("once")
-  def once_afterLoadData(key: afterLoadData, callback: js.UndefOr[js.Function1[/* initialLoad */ Boolean, Unit]]): Unit = js.native
+  def once_afterLoadData(
+    key: afterLoadData,
+    callback: js.UndefOr[
+      js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+    ]
+  ): Unit = js.native
   @JSName("once")
   def once_afterLoadData(
     key: afterLoadData,
-    callback: js.UndefOr[js.Function1[/* initialLoad */ Boolean, Unit]],
+    callback: js.UndefOr[
+      js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+    ],
     context: Handsontable
   ): Unit = js.native
   @JSName("once")
-  def once_afterLoadData(key: afterLoadData, callback: js.Array[js.UndefOr[js.Function1[/* initialLoad */ Boolean, Unit]]]): Unit = js.native
+  def once_afterLoadData(
+    key: afterLoadData,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+      ]
+    ]
+  ): Unit = js.native
   @JSName("once")
   def once_afterLoadData(
     key: afterLoadData,
-    callback: js.Array[js.UndefOr[js.Function1[/* initialLoad */ Boolean, Unit]]],
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+      ]
+    ],
     context: Handsontable
   ): Unit = js.native
   @JSName("once")
@@ -7365,7 +7993,7 @@ trait Methods extends js.Object {
       js.Function4[
         /* index */ Double, 
         /* amount */ Double, 
-        /* physicalColumns */ js.Array[Double], 
+        /* physicalRows */ js.Array[Double], 
         /* source */ js.UndefOr[ChangeSource], 
         Unit
       ]
@@ -7378,7 +8006,7 @@ trait Methods extends js.Object {
       js.Function4[
         /* index */ Double, 
         /* amount */ Double, 
-        /* physicalColumns */ js.Array[Double], 
+        /* physicalRows */ js.Array[Double], 
         /* source */ js.UndefOr[ChangeSource], 
         Unit
       ]
@@ -7393,7 +8021,7 @@ trait Methods extends js.Object {
         js.Function4[
           /* index */ Double, 
           /* amount */ Double, 
-          /* physicalColumns */ js.Array[Double], 
+          /* physicalRows */ js.Array[Double], 
           /* source */ js.UndefOr[ChangeSource], 
           Unit
         ]
@@ -7408,7 +8036,7 @@ trait Methods extends js.Object {
         js.Function4[
           /* index */ Double, 
           /* amount */ Double, 
-          /* physicalColumns */ js.Array[Double], 
+          /* physicalRows */ js.Array[Double], 
           /* source */ js.UndefOr[ChangeSource], 
           Unit
         ]
@@ -7501,37 +8129,77 @@ trait Methods extends js.Object {
   @JSName("once")
   def once_afterRowMove(
     key: afterRowMove,
-    callback: js.UndefOr[js.Function2[/* startRow */ Double, /* endRow */ Double, Unit]]
+    callback: js.UndefOr[
+      js.Function5[
+        /* movedRows */ js.Array[Double], 
+        /* finalIndex */ Double, 
+        /* dropIndex */ Double | Unit, 
+        /* movePossible */ Boolean, 
+        /* orderChanged */ Boolean, 
+        Unit
+      ]
+    ]
   ): Unit = js.native
   @JSName("once")
   def once_afterRowMove(
     key: afterRowMove,
-    callback: js.UndefOr[js.Function2[/* startRow */ Double, /* endRow */ Double, Unit]],
+    callback: js.UndefOr[
+      js.Function5[
+        /* movedRows */ js.Array[Double], 
+        /* finalIndex */ Double, 
+        /* dropIndex */ Double | Unit, 
+        /* movePossible */ Boolean, 
+        /* orderChanged */ Boolean, 
+        Unit
+      ]
+    ],
     context: Handsontable
   ): Unit = js.native
   @JSName("once")
   def once_afterRowMove(
     key: afterRowMove,
-    callback: js.Array[js.UndefOr[js.Function2[/* startRow */ Double, /* endRow */ Double, Unit]]]
+    callback: js.Array[
+      js.UndefOr[
+        js.Function5[
+          /* movedRows */ js.Array[Double], 
+          /* finalIndex */ Double, 
+          /* dropIndex */ Double | Unit, 
+          /* movePossible */ Boolean, 
+          /* orderChanged */ Boolean, 
+          Unit
+        ]
+      ]
+    ]
   ): Unit = js.native
   @JSName("once")
   def once_afterRowMove(
     key: afterRowMove,
-    callback: js.Array[js.UndefOr[js.Function2[/* startRow */ Double, /* endRow */ Double, Unit]]],
+    callback: js.Array[
+      js.UndefOr[
+        js.Function5[
+          /* movedRows */ js.Array[Double], 
+          /* finalIndex */ Double, 
+          /* dropIndex */ Double | Unit, 
+          /* movePossible */ Boolean, 
+          /* orderChanged */ Boolean, 
+          Unit
+        ]
+      ]
+    ],
     context: Handsontable
   ): Unit = js.native
   @JSName("once")
   def once_afterRowResize(
     key: afterRowResize,
     callback: js.UndefOr[
-      js.Function3[/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+      js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Unit]
     ]
   ): Unit = js.native
   @JSName("once")
   def once_afterRowResize(
     key: afterRowResize,
     callback: js.UndefOr[
-      js.Function3[/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+      js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Unit]
     ],
     context: Handsontable
   ): Unit = js.native
@@ -7540,7 +8208,7 @@ trait Methods extends js.Object {
     key: afterRowResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+        js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Unit]
       ]
     ]
   ): Unit = js.native
@@ -7549,7 +8217,7 @@ trait Methods extends js.Object {
     key: afterRowResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+        js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Unit]
       ]
     ],
     context: Handsontable
@@ -7929,6 +8597,40 @@ trait Methods extends js.Object {
   @JSName("once")
   def once_afterSetDataAtRowProp(
     key: afterSetDataAtRowProp,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterSetSourceDataAtCell(
+    key: afterSetSourceDataAtCell,
+    callback: js.UndefOr[
+      js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterSetSourceDataAtCell(
+    key: afterSetSourceDataAtCell,
+    callback: js.UndefOr[
+      js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterSetSourceDataAtCell(
+    key: afterSetSourceDataAtCell,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_afterSetSourceDataAtCell(
+    key: afterSetSourceDataAtCell,
     callback: js.Array[
       js.UndefOr[
         js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
@@ -8401,7 +9103,7 @@ trait Methods extends js.Object {
         /* start */ CellCoords, 
         /* end */ CellCoords, 
         /* data */ js.Array[js.Array[CellValue]], 
-        Unit
+        Unit | Boolean
       ]
     ]
   ): Unit = js.native
@@ -8413,7 +9115,7 @@ trait Methods extends js.Object {
         /* start */ CellCoords, 
         /* end */ CellCoords, 
         /* data */ js.Array[js.Array[CellValue]], 
-        Unit
+        Unit | Boolean
       ]
     ],
     context: Handsontable
@@ -8427,7 +9129,7 @@ trait Methods extends js.Object {
           /* start */ CellCoords, 
           /* end */ CellCoords, 
           /* data */ js.Array[js.Array[CellValue]], 
-          Unit
+          Unit | Boolean
         ]
       ]
     ]
@@ -8441,7 +9143,7 @@ trait Methods extends js.Object {
           /* start */ CellCoords, 
           /* end */ CellCoords, 
           /* data */ js.Array[js.Array[CellValue]], 
-          Unit
+          Unit | Boolean
         ]
       ]
     ],
@@ -8516,6 +9218,114 @@ trait Methods extends js.Object {
     context: Handsontable
   ): Unit = js.native
   @JSName("once")
+  def once_beforeColumnCollapse(
+    key: beforeColumnCollapse,
+    callback: js.UndefOr[
+      js.Function3[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* collapsePossible */ Boolean, 
+        Unit | Boolean
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeColumnCollapse(
+    key: beforeColumnCollapse,
+    callback: js.UndefOr[
+      js.Function3[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* collapsePossible */ Boolean, 
+        Unit | Boolean
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeColumnCollapse(
+    key: beforeColumnCollapse,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* collapsePossible */ Boolean, 
+          Unit | Boolean
+        ]
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeColumnCollapse(
+    key: beforeColumnCollapse,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* collapsePossible */ Boolean, 
+          Unit | Boolean
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeColumnExpand(
+    key: beforeColumnExpand,
+    callback: js.UndefOr[
+      js.Function3[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* expandPossible */ Boolean, 
+        Unit | Boolean
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeColumnExpand(
+    key: beforeColumnExpand,
+    callback: js.UndefOr[
+      js.Function3[
+        /* currentCollapsedColumn */ js.Array[Double], 
+        /* destinationCollapsedColumns */ js.Array[Double], 
+        /* expandPossible */ Boolean, 
+        Unit | Boolean
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeColumnExpand(
+    key: beforeColumnExpand,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* expandPossible */ Boolean, 
+          Unit | Boolean
+        ]
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeColumnExpand(
+    key: beforeColumnExpand,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function3[
+          /* currentCollapsedColumn */ js.Array[Double], 
+          /* destinationCollapsedColumns */ js.Array[Double], 
+          /* expandPossible */ Boolean, 
+          Unit | Boolean
+        ]
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
   def once_beforeColumnMove(
     key: beforeColumnMove,
     callback: js.UndefOr[
@@ -8553,24 +9363,14 @@ trait Methods extends js.Object {
   def once_beforeColumnResize(
     key: beforeColumnResize,
     callback: js.UndefOr[
-      js.Function3[
-        /* currentColumn */ Double, 
-        /* newSize */ Double, 
-        /* isDoubleClick */ Boolean, 
-        Unit | Double
-      ]
+      js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit | Double]
     ]
   ): Unit = js.native
   @JSName("once")
   def once_beforeColumnResize(
     key: beforeColumnResize,
     callback: js.UndefOr[
-      js.Function3[
-        /* currentColumn */ Double, 
-        /* newSize */ Double, 
-        /* isDoubleClick */ Boolean, 
-        Unit | Double
-      ]
+      js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit | Double]
     ],
     context: Handsontable
   ): Unit = js.native
@@ -8579,12 +9379,7 @@ trait Methods extends js.Object {
     key: beforeColumnResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[
-          /* currentColumn */ Double, 
-          /* newSize */ Double, 
-          /* isDoubleClick */ Boolean, 
-          Unit | Double
-        ]
+        js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit | Double]
       ]
     ]
   ): Unit = js.native
@@ -8593,12 +9388,7 @@ trait Methods extends js.Object {
     key: beforeColumnResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[
-          /* currentColumn */ Double, 
-          /* newSize */ Double, 
-          /* isDoubleClick */ Boolean, 
-          Unit | Double
-        ]
+        js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit | Double]
       ]
     ],
     context: Handsontable
@@ -9176,6 +9966,40 @@ trait Methods extends js.Object {
   def once_beforeLanguageChange(
     key: beforeLanguageChange,
     callback: js.Array[js.UndefOr[js.Function1[/* languageCode */ String, Unit]]],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeLoadData(
+    key: beforeLoadData,
+    callback: js.UndefOr[
+      js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeLoadData(
+    key: beforeLoadData,
+    callback: js.UndefOr[
+      js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeLoadData(
+    key: beforeLoadData,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeLoadData(
+    key: beforeLoadData,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+      ]
+    ],
     context: Handsontable
   ): Unit = js.native
   @JSName("once")
@@ -9826,26 +10650,58 @@ trait Methods extends js.Object {
   @JSName("once")
   def once_beforeRowMove(
     key: beforeRowMove,
-    callback: js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]]
+    callback: js.UndefOr[
+      js.Function4[
+        /* movedRows */ js.Array[Double], 
+        /* finalIndex */ Double, 
+        /* dropIndex */ Double | Unit, 
+        /* movePossible */ Boolean, 
+        Unit
+      ]
+    ]
   ): Unit = js.native
   @JSName("once")
   def once_beforeRowMove(
     key: beforeRowMove,
-    callback: js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]],
+    callback: js.UndefOr[
+      js.Function4[
+        /* movedRows */ js.Array[Double], 
+        /* finalIndex */ Double, 
+        /* dropIndex */ Double | Unit, 
+        /* movePossible */ Boolean, 
+        Unit
+      ]
+    ],
     context: Handsontable
   ): Unit = js.native
   @JSName("once")
   def once_beforeRowMove(
     key: beforeRowMove,
     callback: js.Array[
-      js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]]
+      js.UndefOr[
+        js.Function4[
+          /* movedRows */ js.Array[Double], 
+          /* finalIndex */ Double, 
+          /* dropIndex */ Double | Unit, 
+          /* movePossible */ Boolean, 
+          Unit
+        ]
+      ]
     ]
   ): Unit = js.native
   @JSName("once")
   def once_beforeRowMove(
     key: beforeRowMove,
     callback: js.Array[
-      js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]]
+      js.UndefOr[
+        js.Function4[
+          /* movedRows */ js.Array[Double], 
+          /* finalIndex */ Double, 
+          /* dropIndex */ Double | Unit, 
+          /* movePossible */ Boolean, 
+          Unit
+        ]
+      ]
     ],
     context: Handsontable
   ): Unit = js.native
@@ -9853,24 +10709,14 @@ trait Methods extends js.Object {
   def once_beforeRowResize(
     key: beforeRowResize,
     callback: js.UndefOr[
-      js.Function3[
-        /* currentRow */ Double, 
-        /* newSize */ Double, 
-        /* isDoubleClick */ Boolean, 
-        Double | Unit
-      ]
+      js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Double | Unit]
     ]
   ): Unit = js.native
   @JSName("once")
   def once_beforeRowResize(
     key: beforeRowResize,
     callback: js.UndefOr[
-      js.Function3[
-        /* currentRow */ Double, 
-        /* newSize */ Double, 
-        /* isDoubleClick */ Boolean, 
-        Double | Unit
-      ]
+      js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Double | Unit]
     ],
     context: Handsontable
   ): Unit = js.native
@@ -9879,12 +10725,7 @@ trait Methods extends js.Object {
     key: beforeRowResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[
-          /* currentRow */ Double, 
-          /* newSize */ Double, 
-          /* isDoubleClick */ Boolean, 
-          Double | Unit
-        ]
+        js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Double | Unit]
       ]
     ]
   ): Unit = js.native
@@ -9893,12 +10734,41 @@ trait Methods extends js.Object {
     key: beforeRowResize,
     callback: js.Array[
       js.UndefOr[
-        js.Function3[
-          /* currentRow */ Double, 
-          /* newSize */ Double, 
-          /* isDoubleClick */ Boolean, 
-          Double | Unit
-        ]
+        js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Double | Unit]
+      ]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeSetCellMeta(
+    key: beforeSetCellMeta,
+    callback: js.UndefOr[
+      js.Function4[/* row */ Double, /* col */ Double, /* key */ String, /* value */ js.Any, Boolean | Unit]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeSetCellMeta(
+    key: beforeSetCellMeta,
+    callback: js.UndefOr[
+      js.Function4[/* row */ Double, /* col */ Double, /* key */ String, /* value */ js.Any, Boolean | Unit]
+    ],
+    context: Handsontable
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeSetCellMeta(
+    key: beforeSetCellMeta,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[/* row */ Double, /* col */ Double, /* key */ String, /* value */ _, Boolean | Unit]
+      ]
+    ]
+  ): Unit = js.native
+  @JSName("once")
+  def once_beforeSetCellMeta(
+    key: beforeSetCellMeta,
+    callback: js.Array[
+      js.UndefOr[
+        js.Function4[/* row */ Double, /* col */ Double, /* key */ String, /* value */ _, Boolean | Unit]
       ]
     ],
     context: Handsontable
@@ -10341,34 +11211,6 @@ trait Methods extends js.Object {
   @JSName("once")
   def once_construct(key: construct, callback: js.Array[js.UndefOr[js.Function0[Unit]]], context: Handsontable): Unit = js.native
   @JSName("once")
-  def once_hiddenColumn(key: hiddenColumn, callback: js.UndefOr[js.Function1[/* column */ Double, Unit]]): Unit = js.native
-  @JSName("once")
-  def once_hiddenColumn(
-    key: hiddenColumn,
-    callback: js.UndefOr[js.Function1[/* column */ Double, Unit]],
-    context: Handsontable
-  ): Unit = js.native
-  @JSName("once")
-  def once_hiddenColumn(key: hiddenColumn, callback: js.Array[js.UndefOr[js.Function1[/* column */ Double, Unit]]]): Unit = js.native
-  @JSName("once")
-  def once_hiddenColumn(
-    key: hiddenColumn,
-    callback: js.Array[js.UndefOr[js.Function1[/* column */ Double, Unit]]],
-    context: Handsontable
-  ): Unit = js.native
-  @JSName("once")
-  def once_hiddenRow(key: hiddenRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]]): Unit = js.native
-  @JSName("once")
-  def once_hiddenRow(key: hiddenRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]], context: Handsontable): Unit = js.native
-  @JSName("once")
-  def once_hiddenRow(key: hiddenRow, callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]]): Unit = js.native
-  @JSName("once")
-  def once_hiddenRow(
-    key: hiddenRow,
-    callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]],
-    context: Handsontable
-  ): Unit = js.native
-  @JSName("once")
   def once_init(key: init, callback: js.UndefOr[js.Function0[Unit]]): Unit = js.native
   @JSName("once")
   def once_init(key: init, callback: js.UndefOr[js.Function0[Unit]], context: Handsontable): Unit = js.native
@@ -10424,18 +11266,6 @@ trait Methods extends js.Object {
         ]
       ]
     ],
-    context: Handsontable
-  ): Unit = js.native
-  @JSName("once")
-  def once_modifyCol(key: modifyCol, callback: js.UndefOr[js.Function1[/* col */ Double, Unit]]): Unit = js.native
-  @JSName("once")
-  def once_modifyCol(key: modifyCol, callback: js.UndefOr[js.Function1[/* col */ Double, Unit]], context: Handsontable): Unit = js.native
-  @JSName("once")
-  def once_modifyCol(key: modifyCol, callback: js.Array[js.UndefOr[js.Function1[/* col */ Double, Unit]]]): Unit = js.native
-  @JSName("once")
-  def once_modifyCol(
-    key: modifyCol,
-    callback: js.Array[js.UndefOr[js.Function1[/* col */ Double, Unit]]],
     context: Handsontable
   ): Unit = js.native
   @JSName("once")
@@ -10562,18 +11392,6 @@ trait Methods extends js.Object {
         ]
       ]
     ],
-    context: Handsontable
-  ): Unit = js.native
-  @JSName("once")
-  def once_modifyRow(key: modifyRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]]): Unit = js.native
-  @JSName("once")
-  def once_modifyRow(key: modifyRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]], context: Handsontable): Unit = js.native
-  @JSName("once")
-  def once_modifyRow(key: modifyRow, callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]]): Unit = js.native
-  @JSName("once")
-  def once_modifyRow(
-    key: modifyRow,
-    callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]],
     context: Handsontable
   ): Unit = js.native
   @JSName("once")
@@ -10767,70 +11585,22 @@ trait Methods extends js.Object {
     callback: js.Array[js.UndefOr[js.Function2[/* key */ String, /* value */ _, Unit]]],
     context: Handsontable
   ): Unit = js.native
-  @JSName("once")
-  def once_skipLengthCache(key: skipLengthCache, callback: js.UndefOr[js.Function1[/* delay */ Double, Unit]]): Unit = js.native
-  @JSName("once")
-  def once_skipLengthCache(
-    key: skipLengthCache,
-    callback: js.UndefOr[js.Function1[/* delay */ Double, Unit]],
-    context: Handsontable
-  ): Unit = js.native
-  @JSName("once")
-  def once_skipLengthCache(key: skipLengthCache, callback: js.Array[js.UndefOr[js.Function1[/* delay */ Double, Unit]]]): Unit = js.native
-  @JSName("once")
-  def once_skipLengthCache(
-    key: skipLengthCache,
-    callback: js.Array[js.UndefOr[js.Function1[/* delay */ Double, Unit]]],
-    context: Handsontable
-  ): Unit = js.native
-  @JSName("once")
-  def once_unmodifyCol(key: unmodifyCol, callback: js.UndefOr[js.Function1[/* col */ Double, Unit]]): Unit = js.native
-  @JSName("once")
-  def once_unmodifyCol(
-    key: unmodifyCol,
-    callback: js.UndefOr[js.Function1[/* col */ Double, Unit]],
-    context: Handsontable
-  ): Unit = js.native
-  @JSName("once")
-  def once_unmodifyCol(key: unmodifyCol, callback: js.Array[js.UndefOr[js.Function1[/* col */ Double, Unit]]]): Unit = js.native
-  @JSName("once")
-  def once_unmodifyCol(
-    key: unmodifyCol,
-    callback: js.Array[js.UndefOr[js.Function1[/* col */ Double, Unit]]],
-    context: Handsontable
-  ): Unit = js.native
-  @JSName("once")
-  def once_unmodifyRow(key: unmodifyRow, callback: js.UndefOr[js.Function1[/* row */ Double, Unit]]): Unit = js.native
-  @JSName("once")
-  def once_unmodifyRow(
-    key: unmodifyRow,
-    callback: js.UndefOr[js.Function1[/* row */ Double, Unit]],
-    context: Handsontable
-  ): Unit = js.native
-  @JSName("once")
-  def once_unmodifyRow(key: unmodifyRow, callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]]): Unit = js.native
-  @JSName("once")
-  def once_unmodifyRow(
-    key: unmodifyRow,
-    callback: js.Array[js.UndefOr[js.Function1[/* row */ Double, Unit]]],
-    context: Handsontable
-  ): Unit = js.native
   
   def register(key: String): Unit = js.native
   
   def remove(
-    key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any,
+    key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 163 */ js.Any,
     callback: js.Function
   ): Boolean = js.native
   def remove(
-    key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any,
+    key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 163 */ js.Any,
     callback: js.Function,
     context: Handsontable
   ): Boolean = js.native
   
   def run(
     context: Handsontable,
-    key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any,
+    key: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 163 */ js.Any,
     p1: js.UndefOr[js.Any],
     p2: js.UndefOr[js.Any],
     p3: js.UndefOr[js.Any],

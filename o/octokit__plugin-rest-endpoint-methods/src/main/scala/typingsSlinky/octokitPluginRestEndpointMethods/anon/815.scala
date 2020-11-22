@@ -3,8 +3,7 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ProjectsCreateCardEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ProjectsCreateCardResponseData
+import typingsSlinky.octokitTypes.endpointsMod.OrgsSetPublicMembershipForAuthenticatedUserEndpoint
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +14,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `815` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ProjectsCreateCardEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[OrgsSetPublicMembershipForAuthenticatedUserEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ProjectsCreateCardResponseData] = js.native
+  var response: OctokitResponse[_] = js.native
 }
 object `815` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ProjectsCreateCardEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ProjectsCreateCardResponseData]
+    parameters: RequestParameters with (Omit[OrgsSetPublicMembershipForAuthenticatedUserEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[_]
   ): `815` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`815`]
@@ -46,9 +45,11 @@ object `815` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ProjectsCreateCardEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(
+      value: RequestParameters with (Omit[OrgsSetPublicMembershipForAuthenticatedUserEndpoint, baseUrl | headers | mediaType])
+    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ProjectsCreateCardResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -8,6 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Schema extends js.Object {
   
+  @JSName("$id")
+  var $id: js.UndefOr[String] = js.native
+  
   @JSName("$ref")
   var $ref: js.UndefOr[String] = js.native
   
@@ -22,21 +25,27 @@ trait Schema extends js.Object {
   
   var anyOf: js.UndefOr[js.Array[Schema]] = js.native
   
+  var const: js.UndefOr[js.Any] = js.native
+  
   var definitions: js.UndefOr[StringDictionary[Schema]] = js.native
   
   var dependencies: js.UndefOr[StringDictionary[Schema | js.Array[String]]] = js.native
   
   var description: js.UndefOr[String] = js.native
   
+  var `else`: js.UndefOr[Schema] = js.native
+  
   var enum: js.UndefOr[js.Array[_]] = js.native
   
-  var exclusiveMaximum: js.UndefOr[Boolean] = js.native
+  var exclusiveMaximum: js.UndefOr[Double | Boolean] = js.native
   
-  var exclusiveMinimum: js.UndefOr[Boolean] = js.native
+  var exclusiveMinimum: js.UndefOr[Double | Boolean] = js.native
   
   var format: js.UndefOr[String] = js.native
   
   var id: js.UndefOr[String] = js.native
+  
+  var `if`: js.UndefOr[Schema] = js.native
   
   var items: js.UndefOr[Schema | js.Array[Schema]] = js.native
   
@@ -70,6 +79,8 @@ trait Schema extends js.Object {
   
   var required: js.UndefOr[js.Array[String] | Boolean] = js.native
   
+  var `then`: js.UndefOr[Schema] = js.native
+  
   var title: js.UndefOr[String] = js.native
   
   var `type`: js.UndefOr[String | js.Array[String]] = js.native
@@ -98,6 +109,12 @@ object Schema {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def set$id(value: String): Self = this.set("$id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def delete$id: Self = this.set("$id", js.undefined)
     
     @scala.inline
     def set$ref(value: String): Self = this.set("$ref", value.asInstanceOf[js.Any])
@@ -142,6 +159,12 @@ object Schema {
     def deleteAnyOf: Self = this.set("anyOf", js.undefined)
     
     @scala.inline
+    def setConst(value: js.Any): Self = this.set("const", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConst: Self = this.set("const", js.undefined)
+    
+    @scala.inline
     def setDefinitions(value: StringDictionary[Schema]): Self = this.set("definitions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -160,6 +183,12 @@ object Schema {
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
+    def setElse(value: Schema): Self = this.set("else", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteElse: Self = this.set("else", js.undefined)
+    
+    @scala.inline
     def setEnumVarargs(value: js.Any*): Self = this.set("enum", js.Array(value :_*))
     
     @scala.inline
@@ -169,13 +198,13 @@ object Schema {
     def deleteEnum: Self = this.set("enum", js.undefined)
     
     @scala.inline
-    def setExclusiveMaximum(value: Boolean): Self = this.set("exclusiveMaximum", value.asInstanceOf[js.Any])
+    def setExclusiveMaximum(value: Double | Boolean): Self = this.set("exclusiveMaximum", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExclusiveMaximum: Self = this.set("exclusiveMaximum", js.undefined)
     
     @scala.inline
-    def setExclusiveMinimum(value: Boolean): Self = this.set("exclusiveMinimum", value.asInstanceOf[js.Any])
+    def setExclusiveMinimum(value: Double | Boolean): Self = this.set("exclusiveMinimum", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExclusiveMinimum: Self = this.set("exclusiveMinimum", js.undefined)
@@ -191,6 +220,12 @@ object Schema {
     
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
+    
+    @scala.inline
+    def setIf(value: Schema): Self = this.set("if", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIf: Self = this.set("if", js.undefined)
     
     @scala.inline
     def setItemsVarargs(value: Schema*): Self = this.set("items", js.Array(value :_*))
@@ -299,6 +334,12 @@ object Schema {
     
     @scala.inline
     def deleteRequired: Self = this.set("required", js.undefined)
+    
+    @scala.inline
+    def setThen(value: Schema): Self = this.set("then", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThen: Self = this.set("then", js.undefined)
     
     @scala.inline
     def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])

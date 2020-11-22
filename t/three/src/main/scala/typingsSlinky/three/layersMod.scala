@@ -19,6 +19,9 @@ object layersMod extends js.Object {
     
     def enableAll(): Unit = js.native
     
+    /**
+    	 * @default 1 | 0
+    	 */
     var mask: Double = js.native
     
     def set(channel: Double): Unit = js.native

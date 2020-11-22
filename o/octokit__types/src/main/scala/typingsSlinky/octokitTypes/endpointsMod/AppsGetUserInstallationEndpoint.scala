@@ -1,23 +1,19 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  username :string} & @octokit/types.@octokit/types/dist-types/generated/Endpoints.RequiredPreview<'machine-man'> */
 @js.native
 trait AppsGetUserInstallationEndpoint extends js.Object {
-  
-  var mediaType: `1` = js.native
   
   var username: String = js.native
 }
 object AppsGetUserInstallationEndpoint {
   
   @scala.inline
-  def apply(mediaType: `1`, username: String): AppsGetUserInstallationEndpoint = {
-    val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
+  def apply(username: String): AppsGetUserInstallationEndpoint = {
+    val __obj = js.Dynamic.literal(username = username.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppsGetUserInstallationEndpoint]
   }
   
@@ -35,9 +31,6 @@ object AppsGetUserInstallationEndpoint {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setMediaType(value: `1`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUsername(value: String): Self = this.set("username", value.asInstanceOf[js.Any])

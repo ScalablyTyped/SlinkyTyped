@@ -78,7 +78,7 @@ object keytipsMod extends js.Object {
     /**
       * Static function to get singleton KeytipManager instance
       *
-      * @returns {KeytipManager} Singleton KeytipManager instance
+      * @returns Singleton KeytipManager instance
       */
     def getInstance(): typingsSlinky.officeUiFabricReact.keytipManagerMod.KeytipManager = js.native
   }

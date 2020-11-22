@@ -32,7 +32,7 @@ trait IdentityPoolArgs extends js.Object {
   val identityPoolName: Input[String] = js.native
   
   /**
-    * A list of OpendID Connect provider ARNs.
+    * Set of OpendID Connect provider ARNs.
     */
   val openidConnectProviderArns: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   

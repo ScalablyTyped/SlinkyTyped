@@ -1,82 +1,60 @@
 package typingsSlinky.reactOverlays.overlayMod
 
-import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.react.mod.ReactInstance
-import typingsSlinky.reactOverlays.mod.TransitionCallbacks
-import typingsSlinky.reactOverlays.portalMod.PortalProps
-import typingsSlinky.reactOverlays.reactOverlaysStrings.click
-import typingsSlinky.reactOverlays.reactOverlaysStrings.mousedown
-import typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps
+import slinky.core.facade.ReactRef
+import typingsSlinky.reactOverlays.anon.ArrowProps
+import typingsSlinky.reactOverlays.anon.inbooleanundefinedappearb
+import typingsSlinky.reactOverlays.reactOverlaysStrings.placement
+import typingsSlinky.reactOverlays.typesMod.TransitionCallbacks
+import typingsSlinky.reactOverlays.usePopperMod.Offset
+import typingsSlinky.reactOverlays.usePopperMod.OffsetValue
+import typingsSlinky.reactOverlays.usePopperMod.Placement
+import typingsSlinky.reactOverlays.usePopperMod.UsePopperOptions
+import typingsSlinky.reactOverlays.useRootCloseMod.MouseEvents
+import typingsSlinky.reactOverlays.useWaitForDOMRefMod.DOMContainer
+import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait OverlayProps
-  extends TransitionCallbacks
-     with PortalProps {
+trait OverlayProps extends TransitionCallbacks {
   
-  /**
-    * A render prop that returns an element to overlay and position. See
-    * the [react-popper documentation](https://github.com/FezVrasta/react-popper#children) for more info.
-    */
-  def children(renderProps: OverlayRenderProps): ReactElement = js.native
+  def children(value: ArrowProps): ReactElement = js.native
   
-  /**
-    * Enables the Popper.js `flip` modifier, allowing the Overlay to
-    * automatically adjust it's placement in case of overlap with the viewport or toggle.
-    */
+  var container: js.UndefOr[DOMContainer[HTMLElement]] = js.native
+  
+  var containerPadding: js.UndefOr[Double] = js.native
+  
   var flip: js.UndefOr[Boolean] = js.native
   
-  /**
-    * A Callback fired by the Overlay when it wishes to be hidden.
-    *
-    * __required__ when `rootClose` is `true`.
-    */
-  var onHide: js.UndefOr[js.Function2[/* props */ PortalProps, /* repeated */ js.Any, _]] = js.native
+  var offset: js.UndefOr[Offset] = js.native
   
-  /** Specify where the overlay element is positioned in relation to the target element */
-  var placement: js.UndefOr[Placements] = js.native
+  var onHide: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   
-  /**
-    * A set of popper options and props passed directly to react-popper's Popper component.
-    */
-  var popperConfig: js.UndefOr[js.Object] = js.native
+  var placement: js.UndefOr[Placement] = js.native
   
-  /**
-    * Specify whether the overlay should trigger `onHide` when the user clicks outside the overlay
-    */
+  var popperConfig: js.UndefOr[Omit[UsePopperOptions, placement]] = js.native
+  
   var rootClose: js.UndefOr[Boolean] = js.native
   
-  /**
-    * Specify disabled for disable RootCloseWrapper
-    */
   var rootCloseDisabled: js.UndefOr[Boolean] = js.native
   
-  /**
-    * Specify event for toggling overlay
-    */
-  var rootCloseEvent: js.UndefOr[click | mousedown] = js.native
+  var rootCloseEvent: js.UndefOr[MouseEvents] = js.native
   
-  /**
-    * Set the visibility of the Overlay
-    */
   var show: js.UndefOr[Boolean] = js.native
   
-  var target: js.UndefOr[ReactInstance | js.Function0[ReactInstance]] = js.native
+  var target: DOMContainer[HTMLElement] = js.native
   
-  /**
-    * A `react-transition-group@2.0.0` `<Transition/>` component
-    * used to animate the overlay as it changes visibility.
-    */
-  var transition: js.UndefOr[ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]] = js.native
+  var transition: js.UndefOr[ReactComponentClass[inbooleanundefinedappearb]] = js.native
 }
 object OverlayProps {
   
   @scala.inline
-  def apply(children: OverlayRenderProps => ReactElement): OverlayProps = {
+  def apply(children: ArrowProps => ReactElement): OverlayProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     __obj.asInstanceOf[OverlayProps]
   }
@@ -97,7 +75,31 @@ object OverlayProps {
     }
     
     @scala.inline
-    def setChildren(value: OverlayRenderProps => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildren(value: ArrowProps => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setContainerRefObject(value: ReactRef[HTMLElement]): Self = this.set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setContainerHTMLElement(value: HTMLElement): Self = this.set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setContainerFunction0(value: () => HTMLElement | ReactRef[HTMLElement] | Null): Self = this.set("container", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setContainer(value: DOMContainer[HTMLElement]): Self = this.set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContainer: Self = this.set("container", js.undefined)
+    
+    @scala.inline
+    def setContainerNull: Self = this.set("container", null)
+    
+    @scala.inline
+    def setContainerPadding(value: Double): Self = this.set("containerPadding", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContainerPadding: Self = this.set("containerPadding", js.undefined)
     
     @scala.inline
     def setFlip(value: Boolean): Self = this.set("flip", value.asInstanceOf[js.Any])
@@ -106,19 +108,28 @@ object OverlayProps {
     def deleteFlip: Self = this.set("flip", js.undefined)
     
     @scala.inline
-    def setOnHide(value: (/* props */ PortalProps, /* repeated */ js.Any) => _): Self = this.set("onHide", js.Any.fromFunction2(value))
+    def setOffsetFunction1(value: /* details */ typingsSlinky.reactOverlays.anon.Placement => OffsetValue): Self = this.set("offset", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setOffset(value: Offset): Self = this.set("offset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOffset: Self = this.set("offset", js.undefined)
+    
+    @scala.inline
+    def setOnHide(value: /* e */ Event => Unit): Self = this.set("onHide", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnHide: Self = this.set("onHide", js.undefined)
     
     @scala.inline
-    def setPlacement(value: Placements): Self = this.set("placement", value.asInstanceOf[js.Any])
+    def setPlacement(value: Placement): Self = this.set("placement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePlacement: Self = this.set("placement", js.undefined)
     
     @scala.inline
-    def setPopperConfig(value: js.Object): Self = this.set("popperConfig", value.asInstanceOf[js.Any])
+    def setPopperConfig(value: Omit[UsePopperOptions, placement]): Self = this.set("popperConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePopperConfig: Self = this.set("popperConfig", js.undefined)
@@ -136,7 +147,7 @@ object OverlayProps {
     def deleteRootCloseDisabled: Self = this.set("rootCloseDisabled", js.undefined)
     
     @scala.inline
-    def setRootCloseEvent(value: click | mousedown): Self = this.set("rootCloseEvent", value.asInstanceOf[js.Any])
+    def setRootCloseEvent(value: MouseEvents): Self = this.set("rootCloseEvent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRootCloseEvent: Self = this.set("rootCloseEvent", js.undefined)
@@ -148,28 +159,28 @@ object OverlayProps {
     def deleteShow: Self = this.set("show", js.undefined)
     
     @scala.inline
-    def setTargetElement(value: Element): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setTargetRefObject(value: ReactRef[HTMLElement]): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetFunction0(value: () => ReactInstance): Self = this.set("target", js.Any.fromFunction0(value))
+    def setTargetHTMLElement(value: HTMLElement): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetComponent(value: ReactComponentClass[js.Any]): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setTargetFunction0(value: () => HTMLElement | ReactRef[HTMLElement] | Null): Self = this.set("target", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setTarget(value: ReactInstance | js.Function0[ReactInstance]): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setTarget(value: DOMContainer[HTMLElement]): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteTarget: Self = this.set("target", js.undefined)
+    def setTargetNull: Self = this.set("target", null)
     
     @scala.inline
-    def setTransitionFunctionComponent(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): Self = this.set("transition", value.asInstanceOf[js.Any])
+    def setTransitionFunctionComponent(value: ReactComponentClass[inbooleanundefinedappearb]): Self = this.set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTransitionComponentClass(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): Self = this.set("transition", value.asInstanceOf[js.Any])
+    def setTransitionComponentClass(value: ReactComponentClass[inbooleanundefinedappearb]): Self = this.set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTransition(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): Self = this.set("transition", value.asInstanceOf[js.Any])
+    def setTransition(value: ReactComponentClass[inbooleanundefinedappearb]): Self = this.set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTransition: Self = this.set("transition", js.undefined)

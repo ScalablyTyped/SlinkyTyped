@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RealtimeChannelCallbacks extends RealtimeChannelBase {
   
   def attach(): Unit = js.native
-  def attach(callback: standardCallback): Unit = js.native
+  def attach(callback: errorCallback): Unit = js.native
   
   def detach(): Unit = js.native
-  def detach(callback: standardCallback): Unit = js.native
+  def detach(callback: errorCallback): Unit = js.native
   
   def history(): Unit = js.native
   def history(paramsOrCallback: js.UndefOr[scala.Nothing], callback: paginatedResultCallback[Message]): Unit = js.native
@@ -33,40 +33,32 @@ trait RealtimeChannelCallbacks extends RealtimeChannelBase {
   def setOptions(options: ChannelOptions, callback: errorCallback): Unit = js.native
   
   def subscribe(eventOrCallback: String): Unit = js.native
-  def subscribe(
-    eventOrCallback: String,
-    listener: js.UndefOr[scala.Nothing],
-    callbackWhenAttached: standardCallback
-  ): Unit = js.native
+  def subscribe(eventOrCallback: String, listener: js.UndefOr[scala.Nothing], callbackWhenAttached: errorCallback): Unit = js.native
   def subscribe(eventOrCallback: String, listener: messageCallback[Message]): Unit = js.native
-  def subscribe(
-    eventOrCallback: String,
-    listener: messageCallback[Message],
-    callbackWhenAttached: standardCallback
-  ): Unit = js.native
+  def subscribe(eventOrCallback: String, listener: messageCallback[Message], callbackWhenAttached: errorCallback): Unit = js.native
   def subscribe(eventOrCallback: js.Array[String]): Unit = js.native
   def subscribe(
     eventOrCallback: js.Array[String],
     listener: js.UndefOr[scala.Nothing],
-    callbackWhenAttached: standardCallback
+    callbackWhenAttached: errorCallback
   ): Unit = js.native
   def subscribe(eventOrCallback: js.Array[String], listener: messageCallback[Message]): Unit = js.native
   def subscribe(
     eventOrCallback: js.Array[String],
     listener: messageCallback[Message],
-    callbackWhenAttached: standardCallback
+    callbackWhenAttached: errorCallback
   ): Unit = js.native
   def subscribe(eventOrCallback: messageCallback[Message]): Unit = js.native
   def subscribe(
     eventOrCallback: messageCallback[Message],
     listener: js.UndefOr[scala.Nothing],
-    callbackWhenAttached: standardCallback
+    callbackWhenAttached: errorCallback
   ): Unit = js.native
   def subscribe(eventOrCallback: messageCallback[Message], listener: messageCallback[Message]): Unit = js.native
   def subscribe(
     eventOrCallback: messageCallback[Message],
     listener: messageCallback[Message],
-    callbackWhenAttached: standardCallback
+    callbackWhenAttached: errorCallback
   ): Unit = js.native
   
   def whenState(targetState: ChannelState, callback: channelEventCallback): Unit = js.native

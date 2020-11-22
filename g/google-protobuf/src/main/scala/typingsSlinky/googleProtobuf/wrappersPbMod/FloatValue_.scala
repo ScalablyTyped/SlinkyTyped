@@ -11,5 +11,5 @@ class FloatValue_ () extends Message {
   
   def getValue(): Double = js.native
   
-  def setValue(value: Double): Unit = js.native
+  def setValue(value: Double): FloatValue = js.native
 }

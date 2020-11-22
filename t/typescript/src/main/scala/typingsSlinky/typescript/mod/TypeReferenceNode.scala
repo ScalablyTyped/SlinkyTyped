@@ -10,7 +10,7 @@ trait TypeReferenceNode
      with TypeReferenceType {
   
   @JSName("kind")
-  var kind_TypeReferenceNode: typingsSlinky.typescript.mod.SyntaxKind.TypeReference = js.native
+  val kind_TypeReferenceNode: typingsSlinky.typescript.mod.SyntaxKind.TypeReference = js.native
   
-  var typeName: EntityName = js.native
+  val typeName: EntityName = js.native
 }

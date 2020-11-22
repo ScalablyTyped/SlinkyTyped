@@ -19,9 +19,18 @@ object ssao2RenderingPipelineMod extends js.Object {
       * @param scene The scene linked to this pipeline
       * @param ratio The size of the postprocesses. Can be a number shared between passes or an object for more precision: { ssaoRatio: 0.5, blurRatio: 1.0 }
       * @param cameras The array of cameras that the rendering pipeline will be attached to
+      * @param forceGeometryBuffer Set to true if you want to use the legacy geometry buffer renderer
       */
     def this(name: String, scene: Scene, ratio: js.Any) = this()
     def this(name: String, scene: Scene, ratio: js.Any, cameras: js.Array[Camera]) = this()
+    def this(
+      name: String,
+      scene: Scene,
+      ratio: js.Any,
+      cameras: js.UndefOr[scala.Nothing],
+      forceGeometryBuffer: Boolean
+    ) = this()
+    def this(name: String, scene: Scene, ratio: js.Any, cameras: js.Array[Camera], forceGeometryBuffer: Boolean) = this()
     
     /**
       * @ignore
@@ -67,19 +76,24 @@ object ssao2RenderingPipelineMod extends js.Object {
     
     var _createSSAOPostProcess: js.Any = js.native
     
-    var _depthTexture: js.Any = js.native
-    
     var _expensiveBlur: js.Any = js.native
     
+    /**
+      * Force rendering the geometry through geometry buffer
+      */
+    var _forceGeometryBuffer: js.Any = js.native
+    
     var _generateHemisphere: js.Any = js.native
+    
+    var _getDefinesForSSAO: js.Any = js.native
     
     var _hammersley: js.Any = js.native
     
     var _hemisphereSample_uniform: js.Any = js.native
     
-    var _normalTexture: js.Any = js.native
-    
     var _originalColorPostProcess: js.Any = js.native
+    
+    var _prePassRenderer: js.Any = js.native
     
     var _radicalInverse_VdC: js.Any = js.native
     

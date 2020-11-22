@@ -1,7 +1,9 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty
 import typingsSlinky.mendixmodelsdk.structuresMod.Structure
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import typingsSlinky.mobx.observablevalueMod.IObservableValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +18,7 @@ object primitivePropertyMod extends js.Object {
     
     var beforeChange: js.Any = js.native
     
-    def deepCopyInto(clone: Structure): Unit = js.native
+    def deepCopyInto(clone: Structure[IAbstractModel, IContainer | Null]): Unit = js.native
     
     var defaultValue: T = js.native
     

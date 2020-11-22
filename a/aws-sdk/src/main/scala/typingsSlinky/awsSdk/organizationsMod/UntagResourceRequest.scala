@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UntagResourceRequest extends js.Object {
   
   /**
-    * The ID of the resource to remove the tag from.
+    * The ID of the resource to remove a tag from. You can specify any of the following taggable resources.   AWS account – specify the account ID number.   Organizational unit – specify the OU ID that begins with ou- and looks similar to: ou-1a2b-34uvwxyz     Root – specify the root ID that begins with r- and looks similar to: r-1a2b     Policy – specify the policy ID that begins with p- andlooks similar to: p-12abcdefg3    
     */
   var ResourceId: TaggableResourceId = js.native
   
   /**
-    * The tag to remove from the specified resource.
+    * The list of keys for tags to remove from the specified resource.
     */
   var TagKeys: typingsSlinky.awsSdk.organizationsMod.TagKeys = js.native
 }

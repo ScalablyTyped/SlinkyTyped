@@ -2,41 +2,31 @@ package typingsSlinky.rcSlider.rangeMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcSlider.anon.AriaLabel
-import typingsSlinky.rcSlider.anon.Label
+import typingsSlinky.rcSlider.interfaceMod.GenericSliderProps
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RangeProps extends js.Object {
+trait RangeProps extends GenericSliderProps {
   
   var allowCross: js.UndefOr[Boolean] = js.native
   
-  var ariaLabelGroupForHandles: js.UndefOr[String] = js.native
+  var ariaLabelGroupForHandles: js.UndefOr[String | js.Array[String]] = js.native
   
-  var ariaLabelledByGroupForHandles: js.UndefOr[String] = js.native
+  var ariaLabelledByGroupForHandles: js.UndefOr[String | js.Array[String]] = js.native
   
-  var ariaValueTextFormatterGroupForHandles: js.UndefOr[String] = js.native
+  var ariaValueTextFormatterGroupForHandles: js.UndefOr[String | js.Array[String]] = js.native
   
   var count: js.UndefOr[Double] = js.native
   
   var defaultValue: js.UndefOr[js.Array[Double]] = js.native
   
-  var disabled: js.UndefOr[Boolean] = js.native
+  var handle: js.UndefOr[js.Function1[/* props */ AriaLabel, ReactElement]] = js.native
   
-  var handle: js.Function1[/* props */ AriaLabel, ReactElement] = js.native
-  
-  var handleStyle: js.UndefOr[CSSProperties] = js.native
-  
-  var included: js.UndefOr[Boolean] = js.native
-  
-  var marks: js.UndefOr[Record[Double, ReactElement | Label]] = js.native
-  
-  var max: js.UndefOr[Double] = js.native
-  
-  var min: js.UndefOr[Double] = js.native
+  @JSName("handleStyle")
+  var handleStyle_RangeProps: js.UndefOr[js.Array[CSSProperties]] = js.native
   
   var onAfterChange: js.UndefOr[js.Function1[/* value */ js.Array[Double], Unit]] = js.native
   
@@ -44,29 +34,25 @@ trait RangeProps extends js.Object {
   
   var onChange: js.UndefOr[js.Function1[/* value */ js.Array[Double], Unit]] = js.native
   
-  var prefixCls: js.UndefOr[String] = js.native
+  var pushable: js.UndefOr[Boolean] = js.native
   
-  var pushable: Boolean = js.native
+  @JSName("step")
+  var step_RangeProps: js.UndefOr[Double] = js.native
   
-  var reverse: js.UndefOr[Boolean] = js.native
-  
-  var step: js.UndefOr[Double] = js.native
-  
-  var tabIndex: js.UndefOr[Double] = js.native
+  var tabIndex: js.UndefOr[Double | js.Array[Double]] = js.native
   
   var threshold: js.UndefOr[Double] = js.native
   
-  var trackStyle: js.UndefOr[CSSProperties] = js.native
+  @JSName("trackStyle")
+  var trackStyle_RangeProps: js.UndefOr[js.Array[CSSProperties]] = js.native
   
   var value: js.UndefOr[js.Array[Double]] = js.native
-  
-  var vertical: js.UndefOr[Boolean] = js.native
 }
 object RangeProps {
   
   @scala.inline
-  def apply(handle: /* props */ AriaLabel => ReactElement, pushable: Boolean): RangeProps = {
-    val __obj = js.Dynamic.literal(handle = js.Any.fromFunction1(handle), pushable = pushable.asInstanceOf[js.Any])
+  def apply(): RangeProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[RangeProps]
   }
   
@@ -86,31 +72,34 @@ object RangeProps {
     }
     
     @scala.inline
-    def setHandle(value: /* props */ AriaLabel => ReactElement): Self = this.set("handle", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setPushable(value: Boolean): Self = this.set("pushable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setAllowCross(value: Boolean): Self = this.set("allowCross", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAllowCross: Self = this.set("allowCross", js.undefined)
     
     @scala.inline
-    def setAriaLabelGroupForHandles(value: String): Self = this.set("ariaLabelGroupForHandles", value.asInstanceOf[js.Any])
+    def setAriaLabelGroupForHandlesVarargs(value: String*): Self = this.set("ariaLabelGroupForHandles", js.Array(value :_*))
+    
+    @scala.inline
+    def setAriaLabelGroupForHandles(value: String | js.Array[String]): Self = this.set("ariaLabelGroupForHandles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAriaLabelGroupForHandles: Self = this.set("ariaLabelGroupForHandles", js.undefined)
     
     @scala.inline
-    def setAriaLabelledByGroupForHandles(value: String): Self = this.set("ariaLabelledByGroupForHandles", value.asInstanceOf[js.Any])
+    def setAriaLabelledByGroupForHandlesVarargs(value: String*): Self = this.set("ariaLabelledByGroupForHandles", js.Array(value :_*))
+    
+    @scala.inline
+    def setAriaLabelledByGroupForHandles(value: String | js.Array[String]): Self = this.set("ariaLabelledByGroupForHandles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAriaLabelledByGroupForHandles: Self = this.set("ariaLabelledByGroupForHandles", js.undefined)
     
     @scala.inline
-    def setAriaValueTextFormatterGroupForHandles(value: String): Self = this.set("ariaValueTextFormatterGroupForHandles", value.asInstanceOf[js.Any])
+    def setAriaValueTextFormatterGroupForHandlesVarargs(value: String*): Self = this.set("ariaValueTextFormatterGroupForHandles", js.Array(value :_*))
+    
+    @scala.inline
+    def setAriaValueTextFormatterGroupForHandles(value: String | js.Array[String]): Self = this.set("ariaValueTextFormatterGroupForHandles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAriaValueTextFormatterGroupForHandles: Self = this.set("ariaValueTextFormatterGroupForHandles", js.undefined)
@@ -131,40 +120,19 @@ object RangeProps {
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
     
     @scala.inline
-    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    def setHandle(value: /* props */ AriaLabel => ReactElement): Self = this.set("handle", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    def deleteHandle: Self = this.set("handle", js.undefined)
     
     @scala.inline
-    def setHandleStyle(value: CSSProperties): Self = this.set("handleStyle", value.asInstanceOf[js.Any])
+    def setHandleStyleVarargs(value: CSSProperties*): Self = this.set("handleStyle", js.Array(value :_*))
+    
+    @scala.inline
+    def setHandleStyle(value: js.Array[CSSProperties]): Self = this.set("handleStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHandleStyle: Self = this.set("handleStyle", js.undefined)
-    
-    @scala.inline
-    def setIncluded(value: Boolean): Self = this.set("included", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteIncluded: Self = this.set("included", js.undefined)
-    
-    @scala.inline
-    def setMarks(value: Record[Double, ReactElement | Label]): Self = this.set("marks", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMarks: Self = this.set("marks", js.undefined)
-    
-    @scala.inline
-    def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMax: Self = this.set("max", js.undefined)
-    
-    @scala.inline
-    def setMin(value: Double): Self = this.set("min", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMin: Self = this.set("min", js.undefined)
     
     @scala.inline
     def setOnAfterChange(value: /* value */ js.Array[Double] => Unit): Self = this.set("onAfterChange", js.Any.fromFunction1(value))
@@ -185,16 +153,10 @@ object RangeProps {
     def deleteOnChange: Self = this.set("onChange", js.undefined)
     
     @scala.inline
-    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    def setPushable(value: Boolean): Self = this.set("pushable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
-    
-    @scala.inline
-    def setReverse(value: Boolean): Self = this.set("reverse", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteReverse: Self = this.set("reverse", js.undefined)
+    def deletePushable: Self = this.set("pushable", js.undefined)
     
     @scala.inline
     def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
@@ -203,7 +165,10 @@ object RangeProps {
     def deleteStep: Self = this.set("step", js.undefined)
     
     @scala.inline
-    def setTabIndex(value: Double): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
+    def setTabIndexVarargs(value: Double*): Self = this.set("tabIndex", js.Array(value :_*))
+    
+    @scala.inline
+    def setTabIndex(value: Double | js.Array[Double]): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTabIndex: Self = this.set("tabIndex", js.undefined)
@@ -215,7 +180,10 @@ object RangeProps {
     def deleteThreshold: Self = this.set("threshold", js.undefined)
     
     @scala.inline
-    def setTrackStyle(value: CSSProperties): Self = this.set("trackStyle", value.asInstanceOf[js.Any])
+    def setTrackStyleVarargs(value: CSSProperties*): Self = this.set("trackStyle", js.Array(value :_*))
+    
+    @scala.inline
+    def setTrackStyle(value: js.Array[CSSProperties]): Self = this.set("trackStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTrackStyle: Self = this.set("trackStyle", js.undefined)
@@ -228,11 +196,5 @@ object RangeProps {
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
-    
-    @scala.inline
-    def setVertical(value: Boolean): Self = this.set("vertical", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteVertical: Self = this.set("vertical", js.undefined)
   }
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.rdsInstanceMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.outputMod.rds.InstanceRestoreToPointInTime
 import typingsSlinky.pulumiAws.outputMod.rds.InstanceS3Import
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -129,7 +130,7 @@ class Instance protected () extends CustomResource {
   val domainIamRoleName: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
+    * Set of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on `engine`). MySQL and MariaDB: `audit`, `error`, `general`, `slowquery`. PostgreSQL: `postgresql`, `upgrade`. MSSQL: `agent` , `error`. Oracle: `alert`, `audit`, `listener`, `trace`.
     */
   val enabledCloudwatchLogsExports: Output_[js.UndefOr[js.Array[String]]] = js.native
   
@@ -205,6 +206,11 @@ class Instance protected () extends CustomResource {
     * encrypted replica, set this to the destination KMS ARN.
     */
   val kmsKeyId: Output_[String] = js.native
+  
+  /**
+    * The latest time, in UTC [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), to which a database can be restored with point-in-time restore.
+    */
+  val latestRestorableTime: Output_[String] = js.native
   
   /**
     * (Optional, but required for some DB engines, i.e. Oracle
@@ -316,6 +322,11 @@ class Instance protected () extends CustomResource {
     * The RDS Resource ID of this instance.
     */
   val resourceId: Output_[String] = js.native
+  
+  /**
+    * A configuration block for restoring a DB instance to an arbitrary point in time. Requires the `identifier` argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
+    */
+  val restoreToPointInTime: Output_[js.UndefOr[InstanceRestoreToPointInTime]] = js.native
   
   /**
     * Restore from a Percona Xtrabackup in S3.  See [Importing Data into an Amazon RDS MySQL DB Instance](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html)

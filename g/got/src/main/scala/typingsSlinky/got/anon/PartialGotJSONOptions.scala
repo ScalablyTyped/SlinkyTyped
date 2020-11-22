@@ -129,6 +129,8 @@ trait PartialGotJSONOptions extends js.Object {
   
   var sessionIdContext: js.UndefOr[String] = js.native
   
+  var sessionTimeout: js.UndefOr[Double] = js.native
+  
   var setHost: js.UndefOr[Boolean] = js.native
   
   var sigalgs: js.UndefOr[String] = js.native
@@ -136,6 +138,8 @@ trait PartialGotJSONOptions extends js.Object {
   var socketPath: js.UndefOr[String] = js.native
   
   var throwHttpErrors: js.UndefOr[Boolean] = js.native
+  
+  var ticketKeys: js.UndefOr[Buffer] = js.native
   
   var timeout: js.UndefOr[Double | TimeoutOptions] = js.native
   
@@ -491,6 +495,12 @@ object PartialGotJSONOptions {
     def deleteSessionIdContext: Self = this.set("sessionIdContext", js.undefined)
     
     @scala.inline
+    def setSessionTimeout(value: Double): Self = this.set("sessionTimeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSessionTimeout: Self = this.set("sessionTimeout", js.undefined)
+    
+    @scala.inline
     def setSetHost(value: Boolean): Self = this.set("setHost", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -513,6 +523,12 @@ object PartialGotJSONOptions {
     
     @scala.inline
     def deleteThrowHttpErrors: Self = this.set("throwHttpErrors", js.undefined)
+    
+    @scala.inline
+    def setTicketKeys(value: Buffer): Self = this.set("ticketKeys", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTicketKeys: Self = this.set("ticketKeys", js.undefined)
     
     @scala.inline
     def setTimeout(value: Double | TimeoutOptions): Self = this.set("timeout", value.asInstanceOf[js.Any])

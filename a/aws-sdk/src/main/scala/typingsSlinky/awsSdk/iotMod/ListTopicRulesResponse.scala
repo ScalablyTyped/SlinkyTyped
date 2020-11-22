@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListTopicRulesResponse extends js.Object {
   
   /**
-    * A token used to retrieve the next value.
+    * The token to use to get the next set of results, or null if there are no additional results.
     */
   var nextToken: js.UndefOr[NextToken] = js.native
   

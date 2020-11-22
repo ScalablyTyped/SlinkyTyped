@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait Root_
-  extends Container[js.UndefOr[scala.Nothing]] {
+  extends Container[js.UndefOr[scala.Nothing], Selector_] {
   
   /**
     * Raises an error, if the processor is invoked on

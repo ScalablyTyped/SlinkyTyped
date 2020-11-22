@@ -1,7 +1,6 @@
 package typingsSlinky.std.global
 
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,8 +19,6 @@ object Reflect extends js.Object {
   def defineProperty(target: js.Object, propertyKey: PropertyKey, attributes: js.PropertyDescriptor): scala.Boolean = js.native
   
   def deleteProperty(target: js.Object, propertyKey: PropertyKey): scala.Boolean = js.native
-  
-  def enumerate(target: js.Object): IterableIterator[_] = js.native
   
   def get(target: js.Object, propertyKey: PropertyKey): js.Any = js.native
   def get(target: js.Object, propertyKey: PropertyKey, receiver: js.Any): js.Any = js.native

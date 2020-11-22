@@ -5,6 +5,7 @@ import typingsSlinky.pulumiPulumi.outputMod.Output_
 import typingsSlinky.pulumiPulumi.queryableMod.ResolvedResource
 import typingsSlinky.pulumiPulumi.resourceMod.Resource
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceOptions
+import typingsSlinky.pulumiPulumi.resourceMod.URN
 import typingsSlinky.pulumiQuery.interfacesMod.AsyncQueryable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +22,16 @@ object runtimeResourceMod extends js.Object {
   
   def readResource(res: Resource, t: String, name: String, props: Inputs, opts: ResourceOptions): Unit = js.native
   
-  def registerResource(res: Resource, t: String, name: String, custom: Boolean, props: Inputs, opts: ResourceOptions): Unit = js.native
+  def registerResource(
+    res: Resource,
+    t: String,
+    name: String,
+    custom: Boolean,
+    remote: Boolean,
+    newDependency: js.Function1[/* urn */ URN, Resource],
+    props: Inputs,
+    opts: ResourceOptions
+  ): Unit = js.native
   
   def registerResourceOutputs(res: Resource, outputs: js.Promise[Inputs]): Unit = js.native
   def registerResourceOutputs(res: Resource, outputs: Inputs): Unit = js.native

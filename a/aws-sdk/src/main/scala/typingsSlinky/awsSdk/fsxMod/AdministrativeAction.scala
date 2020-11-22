@@ -12,7 +12,7 @@ trait AdministrativeAction extends js.Object {
   var FailureDetails: js.UndefOr[AdministrativeActionFailureDetails] = js.native
   
   /**
-    * Provides the percent complete of a STORAGE_OPTIMIZATION administrative action.
+    * Provides the percent complete of a STORAGE_OPTIMIZATION administrative action. Does not apply to any other administrative action type.
     */
   var ProgressPercent: js.UndefOr[typingsSlinky.awsSdk.fsxMod.ProgressPercent] = js.native
   
@@ -27,7 +27,7 @@ trait AdministrativeAction extends js.Object {
   var Status: js.UndefOr[typingsSlinky.awsSdk.fsxMod.Status] = js.native
   
   /**
-    * Describes the target StorageCapacity or ThroughputCapacity value provided in the UpdateFileSystem operation. Returned for FILE_SYSTEM_UPDATE administrative actions. 
+    * Describes the target value for the administration action, provided in the UpdateFileSystem operation. Returned for FILE_SYSTEM_UPDATE administrative actions. 
     */
   var TargetFileSystemValues: js.UndefOr[FileSystem] = js.native
 }

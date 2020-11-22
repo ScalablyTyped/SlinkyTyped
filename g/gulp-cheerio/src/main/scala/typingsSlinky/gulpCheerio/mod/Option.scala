@@ -1,7 +1,7 @@
 package typingsSlinky.gulpCheerio.mod
 
-import typingsSlinky.cheerio.CheerioOptionsInterface
-import typingsSlinky.cheerio.CheerioStatic
+import typingsSlinky.cheerio.cheerio.CheerioParserOptions
+import typingsSlinky.cheerio.cheerio.Root
 import typingsSlinky.vinyl.mod.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Option extends js.Object {
   
-  var cheerio: js.UndefOr[CheerioStatic] = js.native
+  var cheerio: js.UndefOr[Root] = js.native
   
-  var parserOptions: js.UndefOr[CheerioOptionsInterface] = js.native
+  var parserOptions: js.UndefOr[CheerioParserOptions] = js.native
   
   var run: js.UndefOr[Callback] = js.native
 }
@@ -40,19 +40,19 @@ object Option {
     }
     
     @scala.inline
-    def setCheerio(value: CheerioStatic): Self = this.set("cheerio", value.asInstanceOf[js.Any])
+    def setCheerio(value: Root): Self = this.set("cheerio", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCheerio: Self = this.set("cheerio", js.undefined)
     
     @scala.inline
-    def setParserOptions(value: CheerioOptionsInterface): Self = this.set("parserOptions", value.asInstanceOf[js.Any])
+    def setParserOptions(value: CheerioParserOptions): Self = this.set("parserOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteParserOptions: Self = this.set("parserOptions", js.undefined)
     
     @scala.inline
-    def setRun(value: (/* $ */ CheerioStatic, /* file */ File, /* done */ js.UndefOr[js.Function]) => js.Any): Self = this.set("run", js.Any.fromFunction3(value))
+    def setRun(value: (/* $ */ Root, /* file */ File, /* done */ js.UndefOr[js.Function]) => js.Any): Self = this.set("run", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteRun: Self = this.set("run", js.undefined)

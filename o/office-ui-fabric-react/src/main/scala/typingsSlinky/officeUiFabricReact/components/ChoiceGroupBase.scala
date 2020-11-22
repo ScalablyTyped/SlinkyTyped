@@ -19,6 +19,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.choiceGroupTypesMod.IChoiceGroup
 import typingsSlinky.officeUiFabricReact.choiceGroupTypesMod.IChoiceGroupOption
 import typingsSlinky.officeUiFabricReact.choiceGroupTypesMod.IChoiceGroupProps
@@ -28,8 +29,13 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -40,8 +46,11 @@ import typingsSlinky.react.reactStrings.date
 import typingsSlinky.react.reactStrings.decimal
 import typingsSlinky.react.reactStrings.descending
 import typingsSlinky.react.reactStrings.dialog
+import typingsSlinky.react.reactStrings.done
 import typingsSlinky.react.reactStrings.email
+import typingsSlinky.react.reactStrings.enter
 import typingsSlinky.react.reactStrings.execute
+import typingsSlinky.react.reactStrings.go
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
@@ -53,6 +62,7 @@ import typingsSlinky.react.reactStrings.location
 import typingsSlinky.react.reactStrings.menu
 import typingsSlinky.react.reactStrings.mixed
 import typingsSlinky.react.reactStrings.move
+import typingsSlinky.react.reactStrings.next
 import typingsSlinky.react.reactStrings.no
 import typingsSlinky.react.reactStrings.none
 import typingsSlinky.react.reactStrings.numeric
@@ -62,8 +72,10 @@ import typingsSlinky.react.reactStrings.other
 import typingsSlinky.react.reactStrings.page
 import typingsSlinky.react.reactStrings.polite
 import typingsSlinky.react.reactStrings.popup
+import typingsSlinky.react.reactStrings.previous
 import typingsSlinky.react.reactStrings.removals
 import typingsSlinky.react.reactStrings.search
+import typingsSlinky.react.reactStrings.send
 import typingsSlinky.react.reactStrings.spelling
 import typingsSlinky.react.reactStrings.step
 import typingsSlinky.react.reactStrings.tel
@@ -75,7 +87,6 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -210,7 +221,9 @@ object ChoiceGroupBase {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -322,6 +335,9 @@ object ChoiceGroupBase {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])

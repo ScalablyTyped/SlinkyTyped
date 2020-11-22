@@ -15,6 +15,10 @@ trait NotebookProvider extends js.Object {
   
   val providerId: String = js.native
   
+  /**
+    * @deprecated standardKernels will be removed in an upcoming release. Standard kernel contribution
+    * should happen via JSON for extensions. Until this is removed, notebook providers can safely return an empty array.
+    */
   val standardKernels: js.Array[IStandardKernel] = js.native
 }
 object NotebookProvider {

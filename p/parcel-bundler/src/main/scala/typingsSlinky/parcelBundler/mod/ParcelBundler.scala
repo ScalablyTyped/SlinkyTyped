@@ -27,7 +27,7 @@ trait ParcelBundler extends js.Object {
   
   def middleware(): js.Function3[
     /* req */ Request[ParamsDictionary, _, _, ParsedQs], 
-    /* res */ Response[_], 
+    /* res */ Response[_, Double], 
     /* next */ NextFunction, 
     _
   ] = js.native

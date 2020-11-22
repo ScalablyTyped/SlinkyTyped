@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IndicesDeleteDataStream extends Generic {
   
-  var name: String = js.native
+  var name: String | js.Array[String] = js.native
 }
 object IndicesDeleteDataStream {
   
   @scala.inline
-  def apply(name: String): IndicesDeleteDataStream = {
+  def apply(name: String | js.Array[String]): IndicesDeleteDataStream = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndicesDeleteDataStream]
   }
@@ -33,6 +33,9 @@ object IndicesDeleteDataStream {
     }
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setNameVarargs(value: String*): Self = this.set("name", js.Array(value :_*))
+    
+    @scala.inline
+    def setName(value: String | js.Array[String]): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

@@ -42,6 +42,7 @@ package object codestarconnectionsMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Bitbucket_
+    - typingsSlinky.awsSdk.awsSdkStrings.GitHub_
     - typingsSlinky.awsSdk.awsSdkStrings.GitHubEnterpriseServer
     - java.lang.String
   */

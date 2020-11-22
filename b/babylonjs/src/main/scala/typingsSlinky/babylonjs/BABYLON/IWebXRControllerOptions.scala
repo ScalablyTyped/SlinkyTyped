@@ -23,6 +23,12 @@ trait IWebXRControllerOptions extends js.Object {
     * This can be used when creating your own profile or when testing different controllers
     */
   var forceControllerProfile: js.UndefOr[String] = js.native
+  
+  /**
+    * Defines a rendering group ID for meshes that will be loaded.
+    * This is for the default controllers only.
+    */
+  var renderingGroupId: js.UndefOr[Double] = js.native
 }
 object IWebXRControllerOptions {
   
@@ -64,5 +70,11 @@ object IWebXRControllerOptions {
     
     @scala.inline
     def deleteForceControllerProfile: Self = this.set("forceControllerProfile", js.undefined)
+    
+    @scala.inline
+    def setRenderingGroupId(value: Double): Self = this.set("renderingGroupId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRenderingGroupId: Self = this.set("renderingGroupId", js.undefined)
   }
 }

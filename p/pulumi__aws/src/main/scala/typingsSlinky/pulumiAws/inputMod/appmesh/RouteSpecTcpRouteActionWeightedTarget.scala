@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RouteSpecTcpRouteActionWeightedTarget extends js.Object {
   
   /**
-    * The virtual node to associate with the weighted target.
+    * The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
     */
   var virtualNode: Input[String] = js.native
   

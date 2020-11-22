@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "OneOfList")
 @js.native
 class OneOfList protected ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.OneOfList] {
+  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.OneOfList]
+     with ProductionBody {
   def this(oneKeyword: Token[OneKeyword], ofKeyword: js.UndefOr[scala.Nothing], indented: Boolean) = this()
   def this(oneKeyword: Token[OneKeyword], ofKeyword: Token[OfKeyword], indented: Boolean) = this()
   def this(

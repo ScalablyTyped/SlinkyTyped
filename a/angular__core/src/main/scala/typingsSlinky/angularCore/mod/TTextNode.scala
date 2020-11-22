@@ -17,7 +17,7 @@ trait TTextNode extends TNode {
     * retrieved using LView.node).
     */
   @JSName("parent")
-  var parent_TTextNode: ɵangularPackagesCoreCoreBf | TElementContainerNode | Null = js.native
+  var parent_TTextNode: ɵangularPackagesCoreCoreBh | TElementContainerNode | Null = js.native
   
   @JSName("projection")
   var projection_TTextNode: Null = js.native
@@ -41,9 +41,10 @@ object TTextNode {
     providerIndexes: TNodeProviderIndexes,
     styleBindings: TStylingRange,
     tViews: Null,
-    `type`: TNodeType
+    `type`: TNodeType,
+    value: js.Any
   ): TTextNode = {
-    val __obj = js.Dynamic.literal(child = child.asInstanceOf[js.Any], classBindings = classBindings.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], directiveStylingLast = directiveStylingLast.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], styleBindings = styleBindings.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(child = child.asInstanceOf[js.Any], classBindings = classBindings.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], directiveStylingLast = directiveStylingLast.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], styleBindings = styleBindings.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TTextNode]
   }
@@ -73,7 +74,7 @@ object TTextNode {
     def setTViews(value: Null): Self = this.set("tViews", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setParent(value: ɵangularPackagesCoreCoreBf | TElementContainerNode): Self = this.set("parent", value.asInstanceOf[js.Any])
+    def setParent(value: ɵangularPackagesCoreCoreBh | TElementContainerNode): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParentNull: Self = this.set("parent", null)

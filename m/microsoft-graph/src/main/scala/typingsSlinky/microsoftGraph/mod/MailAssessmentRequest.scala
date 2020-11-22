@@ -12,7 +12,7 @@ trait MailAssessmentRequest extends ThreatAssessmentRequest {
     * advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox,
     * autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
     */
-  var destinationRoutingReason: js.UndefOr[MailDestinationRoutingReason] = js.native
+  var destinationRoutingReason: js.UndefOr[NullableOption[MailDestinationRoutingReason]] = js.native
   
   // The resource URI of the mail message for assessment.
   var messageUri: js.UndefOr[String] = js.native
@@ -44,10 +44,13 @@ object MailAssessmentRequest {
     }
     
     @scala.inline
-    def setDestinationRoutingReason(value: MailDestinationRoutingReason): Self = this.set("destinationRoutingReason", value.asInstanceOf[js.Any])
+    def setDestinationRoutingReason(value: NullableOption[MailDestinationRoutingReason]): Self = this.set("destinationRoutingReason", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDestinationRoutingReason: Self = this.set("destinationRoutingReason", js.undefined)
+    
+    @scala.inline
+    def setDestinationRoutingReasonNull: Self = this.set("destinationRoutingReason", null)
     
     @scala.inline
     def setMessageUri(value: String): Self = this.set("messageUri", value.asInstanceOf[js.Any])

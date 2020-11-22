@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CompatibleImage extends js.Object {
   
   /**
-    * The unique identifier for an individual Snowball Edge AMI.
+    * The unique identifier for an individual Snow device AMI.
     */
   var AmiId: js.UndefOr[String] = js.native
   

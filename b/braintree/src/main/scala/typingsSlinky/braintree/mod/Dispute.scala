@@ -45,7 +45,7 @@ class Dispute () extends js.Object {
   
   var status: DisputeStatus = js.native
   
-  var statusHistory: DisputeStatusHistory = js.native
+  var statusHistory: js.Array[DisputeStatusHistory] = js.native
   
   var transaction: Amount = js.native
   

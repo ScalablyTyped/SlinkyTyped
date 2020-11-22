@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.smsMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -43,12 +43,12 @@ trait SMS extends Service {
   ): Request[CreateReplicationJobResponse, AWSError] = js.native
   
   /**
-    * Deletes an existing application. Optionally deletes the launched stack associated with the application and all AWS SMS replication jobs for servers in the application.
+    * Deletes the specified application. Optionally deletes the launched stack associated with the application and all AWS SMS replication jobs for servers in the application.
     */
   def deleteApp(): Request[DeleteAppResponse, AWSError] = js.native
   def deleteApp(callback: js.Function2[/* err */ AWSError, /* data */ DeleteAppResponse, Unit]): Request[DeleteAppResponse, AWSError] = js.native
   /**
-    * Deletes an existing application. Optionally deletes the launched stack associated with the application and all AWS SMS replication jobs for servers in the application.
+    * Deletes the specified application. Optionally deletes the launched stack associated with the application and all AWS SMS replication jobs for servers in the application.
     */
   def deleteApp(params: DeleteAppRequest): Request[DeleteAppResponse, AWSError] = js.native
   def deleteApp(
@@ -57,12 +57,12 @@ trait SMS extends Service {
   ): Request[DeleteAppResponse, AWSError] = js.native
   
   /**
-    * Deletes existing launch configuration for an application.
+    * Deletes the launch configuration for the specified application.
     */
   def deleteAppLaunchConfiguration(): Request[DeleteAppLaunchConfigurationResponse, AWSError] = js.native
   def deleteAppLaunchConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ DeleteAppLaunchConfigurationResponse, Unit]): Request[DeleteAppLaunchConfigurationResponse, AWSError] = js.native
   /**
-    * Deletes existing launch configuration for an application.
+    * Deletes the launch configuration for the specified application.
     */
   def deleteAppLaunchConfiguration(params: DeleteAppLaunchConfigurationRequest): Request[DeleteAppLaunchConfigurationResponse, AWSError] = js.native
   def deleteAppLaunchConfiguration(
@@ -71,20 +71,36 @@ trait SMS extends Service {
   ): Request[DeleteAppLaunchConfigurationResponse, AWSError] = js.native
   
   /**
-    * Deletes existing replication configuration for an application.
+    * Deletes the replication configuration for the specified application.
     */
   def deleteAppReplicationConfiguration(): Request[DeleteAppReplicationConfigurationResponse, AWSError] = js.native
   def deleteAppReplicationConfiguration(
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteAppReplicationConfigurationResponse, Unit]
   ): Request[DeleteAppReplicationConfigurationResponse, AWSError] = js.native
   /**
-    * Deletes existing replication configuration for an application.
+    * Deletes the replication configuration for the specified application.
     */
   def deleteAppReplicationConfiguration(params: DeleteAppReplicationConfigurationRequest): Request[DeleteAppReplicationConfigurationResponse, AWSError] = js.native
   def deleteAppReplicationConfiguration(
     params: DeleteAppReplicationConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteAppReplicationConfigurationResponse, Unit]
   ): Request[DeleteAppReplicationConfigurationResponse, AWSError] = js.native
+  
+  /**
+    * Deletes the validation configuration for the specified application.
+    */
+  def deleteAppValidationConfiguration(): Request[DeleteAppValidationConfigurationResponse, AWSError] = js.native
+  def deleteAppValidationConfiguration(
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteAppValidationConfigurationResponse, Unit]
+  ): Request[DeleteAppValidationConfigurationResponse, AWSError] = js.native
+  /**
+    * Deletes the validation configuration for the specified application.
+    */
+  def deleteAppValidationConfiguration(params: DeleteAppValidationConfigurationRequest): Request[DeleteAppValidationConfigurationResponse, AWSError] = js.native
+  def deleteAppValidationConfiguration(
+    params: DeleteAppValidationConfigurationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteAppValidationConfigurationResponse, Unit]
+  ): Request[DeleteAppValidationConfigurationResponse, AWSError] = js.native
   
   /**
     * Deletes the specified replication job. After you delete a replication job, there are no further replication runs. AWS deletes the contents of the Amazon S3 bucket used to store AWS SMS artifacts. The AMIs created by the replication runs are not deleted.
@@ -143,12 +159,12 @@ trait SMS extends Service {
   ): Request[GenerateChangeSetResponse, AWSError] = js.native
   
   /**
-    * Generates an Amazon CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
+    * Generates an AWS CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
     */
   def generateTemplate(): Request[GenerateTemplateResponse, AWSError] = js.native
   def generateTemplate(callback: js.Function2[/* err */ AWSError, /* data */ GenerateTemplateResponse, Unit]): Request[GenerateTemplateResponse, AWSError] = js.native
   /**
-    * Generates an Amazon CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
+    * Generates an AWS CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
     */
   def generateTemplate(params: GenerateTemplateRequest): Request[GenerateTemplateResponse, AWSError] = js.native
   def generateTemplate(
@@ -157,23 +173,23 @@ trait SMS extends Service {
   ): Request[GenerateTemplateResponse, AWSError] = js.native
   
   /**
-    * Retrieve information about an application.
+    * Retrieve information about the specified application.
     */
   def getApp(): Request[GetAppResponse, AWSError] = js.native
   def getApp(callback: js.Function2[/* err */ AWSError, /* data */ GetAppResponse, Unit]): Request[GetAppResponse, AWSError] = js.native
   /**
-    * Retrieve information about an application.
+    * Retrieve information about the specified application.
     */
   def getApp(params: GetAppRequest): Request[GetAppResponse, AWSError] = js.native
   def getApp(params: GetAppRequest, callback: js.Function2[/* err */ AWSError, /* data */ GetAppResponse, Unit]): Request[GetAppResponse, AWSError] = js.native
   
   /**
-    * Retrieves the application launch configuration associated with an application.
+    * Retrieves the application launch configuration associated with the specified application.
     */
   def getAppLaunchConfiguration(): Request[GetAppLaunchConfigurationResponse, AWSError] = js.native
   def getAppLaunchConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ GetAppLaunchConfigurationResponse, Unit]): Request[GetAppLaunchConfigurationResponse, AWSError] = js.native
   /**
-    * Retrieves the application launch configuration associated with an application.
+    * Retrieves the application launch configuration associated with the specified application.
     */
   def getAppLaunchConfiguration(params: GetAppLaunchConfigurationRequest): Request[GetAppLaunchConfigurationResponse, AWSError] = js.native
   def getAppLaunchConfiguration(
@@ -182,20 +198,48 @@ trait SMS extends Service {
   ): Request[GetAppLaunchConfigurationResponse, AWSError] = js.native
   
   /**
-    * Retrieves an application replication configuration associatd with an application.
+    * Retrieves the application replication configuration associated with the specified application.
     */
   def getAppReplicationConfiguration(): Request[GetAppReplicationConfigurationResponse, AWSError] = js.native
   def getAppReplicationConfiguration(
     callback: js.Function2[/* err */ AWSError, /* data */ GetAppReplicationConfigurationResponse, Unit]
   ): Request[GetAppReplicationConfigurationResponse, AWSError] = js.native
   /**
-    * Retrieves an application replication configuration associatd with an application.
+    * Retrieves the application replication configuration associated with the specified application.
     */
   def getAppReplicationConfiguration(params: GetAppReplicationConfigurationRequest): Request[GetAppReplicationConfigurationResponse, AWSError] = js.native
   def getAppReplicationConfiguration(
     params: GetAppReplicationConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetAppReplicationConfigurationResponse, Unit]
   ): Request[GetAppReplicationConfigurationResponse, AWSError] = js.native
+  
+  /**
+    * Retrieves information about a configuration for validating an application.
+    */
+  def getAppValidationConfiguration(): Request[GetAppValidationConfigurationResponse, AWSError] = js.native
+  def getAppValidationConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ GetAppValidationConfigurationResponse, Unit]): Request[GetAppValidationConfigurationResponse, AWSError] = js.native
+  /**
+    * Retrieves information about a configuration for validating an application.
+    */
+  def getAppValidationConfiguration(params: GetAppValidationConfigurationRequest): Request[GetAppValidationConfigurationResponse, AWSError] = js.native
+  def getAppValidationConfiguration(
+    params: GetAppValidationConfigurationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetAppValidationConfigurationResponse, Unit]
+  ): Request[GetAppValidationConfigurationResponse, AWSError] = js.native
+  
+  /**
+    * Retrieves output from validating an application.
+    */
+  def getAppValidationOutput(): Request[GetAppValidationOutputResponse, AWSError] = js.native
+  def getAppValidationOutput(callback: js.Function2[/* err */ AWSError, /* data */ GetAppValidationOutputResponse, Unit]): Request[GetAppValidationOutputResponse, AWSError] = js.native
+  /**
+    * Retrieves output from validating an application.
+    */
+  def getAppValidationOutput(params: GetAppValidationOutputRequest): Request[GetAppValidationOutputResponse, AWSError] = js.native
+  def getAppValidationOutput(
+    params: GetAppValidationOutputRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetAppValidationOutputResponse, Unit]
+  ): Request[GetAppValidationOutputResponse, AWSError] = js.native
   
   /**
     * Describes the connectors registered with the AWS SMS.
@@ -254,12 +298,26 @@ trait SMS extends Service {
   ): Request[GetServersResponse, AWSError] = js.native
   
   /**
-    * Gathers a complete list of on-premises servers. Connectors must be installed and monitoring all servers that you want to import. This call returns immediately, but might take additional time to retrieve all the servers.
+    * Allows application import from AWS Migration Hub.
+    */
+  def importAppCatalog(): Request[ImportAppCatalogResponse, AWSError] = js.native
+  def importAppCatalog(callback: js.Function2[/* err */ AWSError, /* data */ ImportAppCatalogResponse, Unit]): Request[ImportAppCatalogResponse, AWSError] = js.native
+  /**
+    * Allows application import from AWS Migration Hub.
+    */
+  def importAppCatalog(params: ImportAppCatalogRequest): Request[ImportAppCatalogResponse, AWSError] = js.native
+  def importAppCatalog(
+    params: ImportAppCatalogRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ImportAppCatalogResponse, Unit]
+  ): Request[ImportAppCatalogResponse, AWSError] = js.native
+  
+  /**
+    * Gathers a complete list of on-premises servers. Connectors must be installed and monitoring all servers to import. This call returns immediately, but might take additional time to retrieve all the servers.
     */
   def importServerCatalog(): Request[ImportServerCatalogResponse, AWSError] = js.native
   def importServerCatalog(callback: js.Function2[/* err */ AWSError, /* data */ ImportServerCatalogResponse, Unit]): Request[ImportServerCatalogResponse, AWSError] = js.native
   /**
-    * Gathers a complete list of on-premises servers. Connectors must be installed and monitoring all servers that you want to import. This call returns immediately, but might take additional time to retrieve all the servers.
+    * Gathers a complete list of on-premises servers. Connectors must be installed and monitoring all servers to import. This call returns immediately, but might take additional time to retrieve all the servers.
     */
   def importServerCatalog(params: ImportServerCatalogRequest): Request[ImportServerCatalogResponse, AWSError] = js.native
   def importServerCatalog(
@@ -268,12 +326,12 @@ trait SMS extends Service {
   ): Request[ImportServerCatalogResponse, AWSError] = js.native
   
   /**
-    * Launches an application stack.
+    * Launches the specified application as a stack in AWS CloudFormation.
     */
   def launchApp(): Request[LaunchAppResponse, AWSError] = js.native
   def launchApp(callback: js.Function2[/* err */ AWSError, /* data */ LaunchAppResponse, Unit]): Request[LaunchAppResponse, AWSError] = js.native
   /**
-    * Launches an application stack.
+    * Launches the specified application as a stack in AWS CloudFormation.
     */
   def launchApp(params: LaunchAppRequest): Request[LaunchAppResponse, AWSError] = js.native
   def launchApp(
@@ -282,12 +340,12 @@ trait SMS extends Service {
   ): Request[LaunchAppResponse, AWSError] = js.native
   
   /**
-    * Returns a list of summaries for all applications.
+    * Retrieves summaries for all applications.
     */
   def listApps(): Request[ListAppsResponse, AWSError] = js.native
   def listApps(callback: js.Function2[/* err */ AWSError, /* data */ ListAppsResponse, Unit]): Request[ListAppsResponse, AWSError] = js.native
   /**
-    * Returns a list of summaries for all applications.
+    * Retrieves summaries for all applications.
     */
   def listApps(params: ListAppsRequest): Request[ListAppsResponse, AWSError] = js.native
   def listApps(
@@ -296,12 +354,26 @@ trait SMS extends Service {
   ): Request[ListAppsResponse, AWSError] = js.native
   
   /**
-    * Creates a launch configuration for an application.
+    * Provides information to AWS SMS about whether application validation is successful.
+    */
+  def notifyAppValidationOutput(): Request[NotifyAppValidationOutputResponse, AWSError] = js.native
+  def notifyAppValidationOutput(callback: js.Function2[/* err */ AWSError, /* data */ NotifyAppValidationOutputResponse, Unit]): Request[NotifyAppValidationOutputResponse, AWSError] = js.native
+  /**
+    * Provides information to AWS SMS about whether application validation is successful.
+    */
+  def notifyAppValidationOutput(params: NotifyAppValidationOutputRequest): Request[NotifyAppValidationOutputResponse, AWSError] = js.native
+  def notifyAppValidationOutput(
+    params: NotifyAppValidationOutputRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ NotifyAppValidationOutputResponse, Unit]
+  ): Request[NotifyAppValidationOutputResponse, AWSError] = js.native
+  
+  /**
+    * Creates or updates the launch configuration for the specified application.
     */
   def putAppLaunchConfiguration(): Request[PutAppLaunchConfigurationResponse, AWSError] = js.native
   def putAppLaunchConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ PutAppLaunchConfigurationResponse, Unit]): Request[PutAppLaunchConfigurationResponse, AWSError] = js.native
   /**
-    * Creates a launch configuration for an application.
+    * Creates or updates the launch configuration for the specified application.
     */
   def putAppLaunchConfiguration(params: PutAppLaunchConfigurationRequest): Request[PutAppLaunchConfigurationResponse, AWSError] = js.native
   def putAppLaunchConfiguration(
@@ -310,14 +382,14 @@ trait SMS extends Service {
   ): Request[PutAppLaunchConfigurationResponse, AWSError] = js.native
   
   /**
-    * Creates or updates a replication configuration for an application.
+    * Creates or updates the replication configuration for the specified application.
     */
   def putAppReplicationConfiguration(): Request[PutAppReplicationConfigurationResponse, AWSError] = js.native
   def putAppReplicationConfiguration(
     callback: js.Function2[/* err */ AWSError, /* data */ PutAppReplicationConfigurationResponse, Unit]
   ): Request[PutAppReplicationConfigurationResponse, AWSError] = js.native
   /**
-    * Creates or updates a replication configuration for an application.
+    * Creates or updates the replication configuration for the specified application.
     */
   def putAppReplicationConfiguration(params: PutAppReplicationConfigurationRequest): Request[PutAppReplicationConfigurationResponse, AWSError] = js.native
   def putAppReplicationConfiguration(
@@ -326,12 +398,26 @@ trait SMS extends Service {
   ): Request[PutAppReplicationConfigurationResponse, AWSError] = js.native
   
   /**
-    * Starts replicating an application.
+    * Creates or updates a validation configuration for the specified application.
+    */
+  def putAppValidationConfiguration(): Request[PutAppValidationConfigurationResponse, AWSError] = js.native
+  def putAppValidationConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ PutAppValidationConfigurationResponse, Unit]): Request[PutAppValidationConfigurationResponse, AWSError] = js.native
+  /**
+    * Creates or updates a validation configuration for the specified application.
+    */
+  def putAppValidationConfiguration(params: PutAppValidationConfigurationRequest): Request[PutAppValidationConfigurationResponse, AWSError] = js.native
+  def putAppValidationConfiguration(
+    params: PutAppValidationConfigurationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ PutAppValidationConfigurationResponse, Unit]
+  ): Request[PutAppValidationConfigurationResponse, AWSError] = js.native
+  
+  /**
+    * Starts replicating the specified application by creating replication jobs for each server in the application.
     */
   def startAppReplication(): Request[StartAppReplicationResponse, AWSError] = js.native
   def startAppReplication(callback: js.Function2[/* err */ AWSError, /* data */ StartAppReplicationResponse, Unit]): Request[StartAppReplicationResponse, AWSError] = js.native
   /**
-    * Starts replicating an application.
+    * Starts replicating the specified application by creating replication jobs for each server in the application.
     */
   def startAppReplication(params: StartAppReplicationRequest): Request[StartAppReplicationResponse, AWSError] = js.native
   def startAppReplication(
@@ -340,12 +426,26 @@ trait SMS extends Service {
   ): Request[StartAppReplicationResponse, AWSError] = js.native
   
   /**
-    * Starts an on-demand replication run for the specified replication job. This replication run starts immediately. This replication run is in addition to the ones already scheduled. There is a limit on the number of on-demand replications runs you can request in a 24-hour period.
+    * Starts an on-demand replication run for the specified application.
+    */
+  def startOnDemandAppReplication(): Request[StartOnDemandAppReplicationResponse, AWSError] = js.native
+  def startOnDemandAppReplication(callback: js.Function2[/* err */ AWSError, /* data */ StartOnDemandAppReplicationResponse, Unit]): Request[StartOnDemandAppReplicationResponse, AWSError] = js.native
+  /**
+    * Starts an on-demand replication run for the specified application.
+    */
+  def startOnDemandAppReplication(params: StartOnDemandAppReplicationRequest): Request[StartOnDemandAppReplicationResponse, AWSError] = js.native
+  def startOnDemandAppReplication(
+    params: StartOnDemandAppReplicationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ StartOnDemandAppReplicationResponse, Unit]
+  ): Request[StartOnDemandAppReplicationResponse, AWSError] = js.native
+  
+  /**
+    * Starts an on-demand replication run for the specified replication job. This replication run starts immediately. This replication run is in addition to the ones already scheduled. There is a limit on the number of on-demand replications runs that you can request in a 24-hour period.
     */
   def startOnDemandReplicationRun(): Request[StartOnDemandReplicationRunResponse, AWSError] = js.native
   def startOnDemandReplicationRun(callback: js.Function2[/* err */ AWSError, /* data */ StartOnDemandReplicationRunResponse, Unit]): Request[StartOnDemandReplicationRunResponse, AWSError] = js.native
   /**
-    * Starts an on-demand replication run for the specified replication job. This replication run starts immediately. This replication run is in addition to the ones already scheduled. There is a limit on the number of on-demand replications runs you can request in a 24-hour period.
+    * Starts an on-demand replication run for the specified replication job. This replication run starts immediately. This replication run is in addition to the ones already scheduled. There is a limit on the number of on-demand replications runs that you can request in a 24-hour period.
     */
   def startOnDemandReplicationRun(params: StartOnDemandReplicationRunRequest): Request[StartOnDemandReplicationRunResponse, AWSError] = js.native
   def startOnDemandReplicationRun(
@@ -354,12 +454,12 @@ trait SMS extends Service {
   ): Request[StartOnDemandReplicationRunResponse, AWSError] = js.native
   
   /**
-    * Stops replicating an application.
+    * Stops replicating the specified application by deleting the replication job for each server in the application.
     */
   def stopAppReplication(): Request[StopAppReplicationResponse, AWSError] = js.native
   def stopAppReplication(callback: js.Function2[/* err */ AWSError, /* data */ StopAppReplicationResponse, Unit]): Request[StopAppReplicationResponse, AWSError] = js.native
   /**
-    * Stops replicating an application.
+    * Stops replicating the specified application by deleting the replication job for each server in the application.
     */
   def stopAppReplication(params: StopAppReplicationRequest): Request[StopAppReplicationResponse, AWSError] = js.native
   def stopAppReplication(
@@ -368,12 +468,12 @@ trait SMS extends Service {
   ): Request[StopAppReplicationResponse, AWSError] = js.native
   
   /**
-    * Terminates the stack for an application.
+    * Terminates the stack for the specified application.
     */
   def terminateApp(): Request[TerminateAppResponse, AWSError] = js.native
   def terminateApp(callback: js.Function2[/* err */ AWSError, /* data */ TerminateAppResponse, Unit]): Request[TerminateAppResponse, AWSError] = js.native
   /**
-    * Terminates the stack for an application.
+    * Terminates the stack for the specified application.
     */
   def terminateApp(params: TerminateAppRequest): Request[TerminateAppResponse, AWSError] = js.native
   def terminateApp(
@@ -382,12 +482,12 @@ trait SMS extends Service {
   ): Request[TerminateAppResponse, AWSError] = js.native
   
   /**
-    * Updates an application.
+    * Updates the specified application.
     */
   def updateApp(): Request[UpdateAppResponse, AWSError] = js.native
   def updateApp(callback: js.Function2[/* err */ AWSError, /* data */ UpdateAppResponse, Unit]): Request[UpdateAppResponse, AWSError] = js.native
   /**
-    * Updates an application.
+    * Updates the specified application.
     */
   def updateApp(params: UpdateAppRequest): Request[UpdateAppResponse, AWSError] = js.native
   def updateApp(

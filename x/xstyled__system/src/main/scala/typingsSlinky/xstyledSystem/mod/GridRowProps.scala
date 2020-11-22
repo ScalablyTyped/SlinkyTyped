@@ -9,7 +9,7 @@ trait GridRowProps extends js.Object {
   
   val gridRow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRow */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object GridRowProps {
     }
     
     @scala.inline
+    def setGridRowVarargs(value: js.Any*): Self = this.set("gridRow", js.Array(value :_*))
+    
+    @scala.inline
     def setGridRow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRow */ _
         ]
     ): Self = this.set("gridRow", value.asInstanceOf[js.Any])
     

@@ -11,7 +11,7 @@ trait IAction extends js.Object {
     * Internal only - manager for action
     * @hidden
     */
-  var _actionManager: AbstractActionManager = js.native
+  var _actionManager: Nullable[AbstractActionManager] = js.native
   
   /**
     * Internal only - executes current action event

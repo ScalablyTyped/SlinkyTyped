@@ -1,7 +1,7 @@
 
 # Scala.js typings for unl-core
 
-Typings are for version 1.0
+Typings are for version 2.1
 
 ## Library description:
 Gustavo Niemeyer’s geocoding system with elevation

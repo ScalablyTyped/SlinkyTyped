@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CollectionWidget extends Widget {
   
-  /** @name DataHelperMixin.getDataSource() */
+  /**
+    * [descr:DataHelperMixin.getDataSource()]
+    */
   def getDataSource(): DataSource = js.native
 }

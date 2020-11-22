@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Tethering.BindRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Target.ActivateTargetRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `190` extends js.Object {
   
-  var paramsType: js.Array[BindRequest] = js.native
+  var paramsType: js.Array[ActivateTargetRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `190` {
   
   @scala.inline
-  def apply(paramsType: js.Array[BindRequest], returnType: Unit): `190` = {
+  def apply(paramsType: js.Array[ActivateTargetRequest], returnType: Unit): `190` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`190`]
   }
@@ -36,10 +36,10 @@ object `190` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: BindRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: ActivateTargetRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[BindRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[ActivateTargetRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

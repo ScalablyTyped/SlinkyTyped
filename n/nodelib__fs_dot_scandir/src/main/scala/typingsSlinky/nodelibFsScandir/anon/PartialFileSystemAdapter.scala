@@ -16,11 +16,11 @@ trait PartialFileSystemAdapter extends js.Object {
   
   var readdir: js.UndefOr[Typeofreaddir] = js.native
   
-  var readdirSync: js.UndefOr[FnCall] = js.native
+  var readdirSync: js.UndefOr[FnCallPathOptions] = js.native
   
   var stat: js.UndefOr[Typeofstat] = js.native
   
-  var statSync: js.UndefOr[js.Function1[/* path */ PathLike, Stats]] = js.native
+  var statSync: js.UndefOr[FnCall] = js.native
 }
 object PartialFileSystemAdapter {
   
@@ -64,7 +64,7 @@ object PartialFileSystemAdapter {
     def deleteReaddir: Self = this.set("readdir", js.undefined)
     
     @scala.inline
-    def setReaddirSync(value: FnCall): Self = this.set("readdirSync", value.asInstanceOf[js.Any])
+    def setReaddirSync(value: FnCallPathOptions): Self = this.set("readdirSync", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReaddirSync: Self = this.set("readdirSync", js.undefined)
@@ -76,7 +76,7 @@ object PartialFileSystemAdapter {
     def deleteStat: Self = this.set("stat", js.undefined)
     
     @scala.inline
-    def setStatSync(value: /* path */ PathLike => Stats): Self = this.set("statSync", js.Any.fromFunction1(value))
+    def setStatSync(value: FnCall): Self = this.set("statSync", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStatSync: Self = this.set("statSync", js.undefined)

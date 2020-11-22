@@ -16,6 +16,11 @@ trait TestingDataResult extends js.Object {
     * The subset of the dataset that was actually tested. Some images (assets) might not be tested due to file formatting and other issues. 
     */
   var Output: js.UndefOr[TestingData] = js.native
+  
+  /**
+    * The location of the data validation manifest. The data validation manifest is created for the test dataset during model training.
+    */
+  var Validation: js.UndefOr[ValidationData] = js.native
 }
 object TestingDataResult {
   
@@ -51,5 +56,11 @@ object TestingDataResult {
     
     @scala.inline
     def deleteOutput: Self = this.set("Output", js.undefined)
+    
+    @scala.inline
+    def setValidation(value: ValidationData): Self = this.set("Validation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValidation: Self = this.set("Validation", js.undefined)
   }
 }

@@ -12,6 +12,8 @@ trait SplitButtonProps extends js.Object {
   
   var appendTo: js.UndefOr[HTMLElement] = js.native
   
+  var buttonTemplate: js.UndefOr[js.Any] = js.native
+  
   var className: js.UndefOr[String] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
@@ -66,6 +68,12 @@ object SplitButtonProps {
     
     @scala.inline
     def deleteAppendTo: Self = this.set("appendTo", js.undefined)
+    
+    @scala.inline
+    def setButtonTemplate(value: js.Any): Self = this.set("buttonTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteButtonTemplate: Self = this.set("buttonTemplate", js.undefined)
     
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])

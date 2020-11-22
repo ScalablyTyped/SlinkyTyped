@@ -82,11 +82,11 @@ object mod extends js.Object {
       * @param {string} route Request method + URL. Example: `'GET /orgs/:org'`
       * @param {object} [parameters] URL, query or body parameters, as well as `headers`, `mediaType.{format|previews}`, `request`, or `baseUrl`.
       */
-    def request[R /* <: Route */](route: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 631 */ js.Any): js.Promise[
+    def request[R /* <: Route */](route: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 670 */ js.Any): js.Promise[
         (/* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints[R]['response'] */ js.Any) | OctokitResponse[_]
       ] = js.native
     def request[R /* <: Route */](
-      route: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 631 */ js.Any,
+      route: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 670 */ js.Any,
       options: typingsSlinky.octokitTypes.requestParametersMod.RequestParameters | ((/* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints[R]['parameters'] */ js.Any) with typingsSlinky.octokitTypes.requestParametersMod.RequestParameters)
     ): js.Promise[
         (/* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints[R]['response'] */ js.Any) | OctokitResponse[_]

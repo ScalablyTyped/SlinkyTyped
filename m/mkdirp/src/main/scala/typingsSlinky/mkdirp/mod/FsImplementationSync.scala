@@ -1,10 +1,14 @@
 package typingsSlinky.mkdirp.mod
 
 import typingsSlinky.mkdirp.anon.FnCall
+import typingsSlinky.mkdirp.anon.FnCallPathOptions
 import typingsSlinky.node.anon.MakeDirectoryOptionsrecur
 import typingsSlinky.node.anon.MakeDirectoryOptionsrecurMode
+import typingsSlinky.node.fsMod.BigIntOptions
+import typingsSlinky.node.fsMod.BigIntStats
 import typingsSlinky.node.fsMod.MakeDirectoryOptions
 import typingsSlinky.node.fsMod.PathLike
+import typingsSlinky.node.fsMod.StatOptions
 import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,6 +30,8 @@ trait FsImplementationSync extends js.Object {
   def mkdirSync_Unit(path: PathLike, options: typingsSlinky.node.fsMod.Mode): Unit = js.native
   
   def statSync(path: PathLike): Stats = js.native
+  def statSync(path: PathLike, options: BigIntOptions): BigIntStats = js.native
+  def statSync(path: PathLike, options: StatOptions): Stats | BigIntStats = js.native
   @JSName("statSync")
-  var statSync_Original: js.Function1[/* path */ PathLike, Stats] = js.native
+  var statSync_Original: FnCallPathOptions = js.native
 }

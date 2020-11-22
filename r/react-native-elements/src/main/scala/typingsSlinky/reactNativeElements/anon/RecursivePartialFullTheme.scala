@@ -24,6 +24,16 @@ trait RecursivePartialFullTheme extends js.Object {
   
   var Card: js.UndefOr[RecursivePartialPartialCa] = js.native
   
+  var CardDivider: js.UndefOr[RecursivePartialPartialDi] = js.native
+  
+  var CardFeaturedSubtitle: js.UndefOr[RecursivePartialPartialTe] = js.native
+  
+  var CardFeaturedTitle: js.UndefOr[RecursivePartialPartialTe] = js.native
+  
+  var CardImage: js.UndefOr[RecursivePartialPartialIm] = js.native
+  
+  var CardTitle: js.UndefOr[RecursivePartialPartialTe] = js.native
+  
   var CheckBox: js.UndefOr[RecursivePartialPartialCh] = js.native
   
   var Divider: js.UndefOr[RecursivePartialPartialDi] = js.native
@@ -37,6 +47,20 @@ trait RecursivePartialFullTheme extends js.Object {
   var Input: js.UndefOr[RecursivePartialPartialIn] = js.native
   
   var ListItem: js.UndefOr[RecursivePartialPartialLi] = js.native
+  
+  var ListItemButtonGroup: js.UndefOr[RecursivePartialPartialBuActiveOpacity] = js.native
+  
+  var ListItemCheckBox: js.UndefOr[RecursivePartialPartialCh] = js.native
+  
+  var ListItemChevron: js.UndefOr[RecursivePartialPartialIcAccessibilityActions] = js.native
+  
+  var ListItemContent: js.UndefOr[RecursivePartialPartialVi] = js.native
+  
+  var ListItemInput: js.UndefOr[RecursivePartialPartialIn] = js.native
+  
+  var ListItemSubtitle: js.UndefOr[RecursivePartialPartialTe] = js.native
+  
+  var ListItemTitle: js.UndefOr[RecursivePartialPartialTe] = js.native
   
   var Overlay: js.UndefOr[RecursivePartialPartialOv] = js.native
   
@@ -130,6 +154,36 @@ object RecursivePartialFullTheme {
     def deleteCard: Self = this.set("Card", js.undefined)
     
     @scala.inline
+    def setCardDivider(value: RecursivePartialPartialDi): Self = this.set("CardDivider", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCardDivider: Self = this.set("CardDivider", js.undefined)
+    
+    @scala.inline
+    def setCardFeaturedSubtitle(value: RecursivePartialPartialTe): Self = this.set("CardFeaturedSubtitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCardFeaturedSubtitle: Self = this.set("CardFeaturedSubtitle", js.undefined)
+    
+    @scala.inline
+    def setCardFeaturedTitle(value: RecursivePartialPartialTe): Self = this.set("CardFeaturedTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCardFeaturedTitle: Self = this.set("CardFeaturedTitle", js.undefined)
+    
+    @scala.inline
+    def setCardImage(value: RecursivePartialPartialIm): Self = this.set("CardImage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCardImage: Self = this.set("CardImage", js.undefined)
+    
+    @scala.inline
+    def setCardTitle(value: RecursivePartialPartialTe): Self = this.set("CardTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCardTitle: Self = this.set("CardTitle", js.undefined)
+    
+    @scala.inline
     def setCheckBox(value: RecursivePartialPartialCh): Self = this.set("CheckBox", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -170,6 +224,48 @@ object RecursivePartialFullTheme {
     
     @scala.inline
     def deleteListItem: Self = this.set("ListItem", js.undefined)
+    
+    @scala.inline
+    def setListItemButtonGroup(value: RecursivePartialPartialBuActiveOpacity): Self = this.set("ListItemButtonGroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemButtonGroup: Self = this.set("ListItemButtonGroup", js.undefined)
+    
+    @scala.inline
+    def setListItemCheckBox(value: RecursivePartialPartialCh): Self = this.set("ListItemCheckBox", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemCheckBox: Self = this.set("ListItemCheckBox", js.undefined)
+    
+    @scala.inline
+    def setListItemChevron(value: RecursivePartialPartialIcAccessibilityActions): Self = this.set("ListItemChevron", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemChevron: Self = this.set("ListItemChevron", js.undefined)
+    
+    @scala.inline
+    def setListItemContent(value: RecursivePartialPartialVi): Self = this.set("ListItemContent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemContent: Self = this.set("ListItemContent", js.undefined)
+    
+    @scala.inline
+    def setListItemInput(value: RecursivePartialPartialIn): Self = this.set("ListItemInput", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemInput: Self = this.set("ListItemInput", js.undefined)
+    
+    @scala.inline
+    def setListItemSubtitle(value: RecursivePartialPartialTe): Self = this.set("ListItemSubtitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemSubtitle: Self = this.set("ListItemSubtitle", js.undefined)
+    
+    @scala.inline
+    def setListItemTitle(value: RecursivePartialPartialTe): Self = this.set("ListItemTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemTitle: Self = this.set("ListItemTitle", js.undefined)
     
     @scala.inline
     def setOverlay(value: RecursivePartialPartialOv): Self = this.set("Overlay", value.asInstanceOf[js.Any])

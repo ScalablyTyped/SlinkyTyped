@@ -10,11 +10,11 @@ trait ObjectBindingPattern
      with Node
      with ObjectBindingOrAssignmentPattern {
   
-  var elements: NodeArray[BindingElement] = js.native
+  val elements: NodeArray[BindingElement] = js.native
   
   @JSName("kind")
-  var kind_ObjectBindingPattern: typingsSlinky.typescript.mod.SyntaxKind.ObjectBindingPattern = js.native
+  val kind_ObjectBindingPattern: typingsSlinky.typescript.mod.SyntaxKind.ObjectBindingPattern = js.native
   
   @JSName("parent")
-  var parent_ObjectBindingPattern: VariableDeclaration | ParameterDeclaration | BindingElement = js.native
+  val parent_ObjectBindingPattern: VariableDeclaration | ParameterDeclaration | BindingElement = js.native
 }

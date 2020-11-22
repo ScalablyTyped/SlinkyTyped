@@ -4,6 +4,7 @@ import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.nodeStrings.error
 import typingsSlinky.node.nodeStrings.exit
 import typingsSlinky.node.nodeStrings.message
+import typingsSlinky.node.nodeStrings.messageerror
 import typingsSlinky.node.nodeStrings.online
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable
@@ -32,6 +33,8 @@ class Worker protected () extends EventEmitter {
   @JSName("addListener")
   def addListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("addListener")
+  def addListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
+  @JSName("addListener")
   def addListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
   
   @JSName("emit")
@@ -40,6 +43,8 @@ class Worker protected () extends EventEmitter {
   def emit_exit(event: exit, exitCode: Double): Boolean = js.native
   @JSName("emit")
   def emit_message(event: message, value: js.Any): Boolean = js.native
+  @JSName("emit")
+  def emit_messageerror(event: messageerror, error: js.Error): Boolean = js.native
   @JSName("emit")
   def emit_online(event: online): Boolean = js.native
   
@@ -60,6 +65,8 @@ class Worker protected () extends EventEmitter {
   @JSName("off")
   def off_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("off")
+  def off_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
+  @JSName("off")
   def off_online(event: online, listener: js.Function0[Unit]): this.type = js.native
   
   @JSName("on")
@@ -68,6 +75,8 @@ class Worker protected () extends EventEmitter {
   def on_exit(event: exit, listener: js.Function1[/* exitCode */ Double, Unit]): this.type = js.native
   @JSName("on")
   def on_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+  @JSName("on")
+  def on_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("on")
   def on_online(event: online, listener: js.Function0[Unit]): this.type = js.native
   
@@ -78,10 +87,12 @@ class Worker protected () extends EventEmitter {
   @JSName("once")
   def once_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("once")
+  def once_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
+  @JSName("once")
   def once_online(event: online, listener: js.Function0[Unit]): this.type = js.native
   
   def postMessage(value: js.Any): Unit = js.native
-  def postMessage(value: js.Any, transferList: js.Array[js.typedarray.ArrayBuffer | MessagePort]): Unit = js.native
+  def postMessage(value: js.Any, transferList: js.Array[TransferListItem]): Unit = js.native
   
   @JSName("prependListener")
   def prependListener_error(event: error, listener: js.Function1[/* err */ js.Error, Unit]): this.type = js.native
@@ -89,6 +100,8 @@ class Worker protected () extends EventEmitter {
   def prependListener_exit(event: exit, listener: js.Function1[/* exitCode */ Double, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+  @JSName("prependListener")
+  def prependListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("prependListener")
   def prependListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
   
@@ -98,6 +111,8 @@ class Worker protected () extends EventEmitter {
   def prependOnceListener_exit(event: exit, listener: js.Function1[/* exitCode */ Double, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
+  @JSName("prependOnceListener")
+  def prependOnceListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
   @JSName("prependOnceListener")
   def prependOnceListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
   
@@ -110,9 +125,11 @@ class Worker protected () extends EventEmitter {
   @JSName("removeListener")
   def removeListener_message(event: message, listener: js.Function1[/* value */ js.Any, Unit]): this.type = js.native
   @JSName("removeListener")
+  def removeListener_messageerror(event: messageerror, listener: js.Function1[/* error */ js.Error, Unit]): this.type = js.native
+  @JSName("removeListener")
   def removeListener_online(event: online, listener: js.Function0[Unit]): this.type = js.native
   
-  val resourceLimits: js.UndefOr[ResourceLimits] = js.native
+  val resourceLimits: js.UndefOr[ResourceLimits_] = js.native
   
   val stderr: Readable = js.native
   

@@ -18,8 +18,6 @@ trait DimensionalDefinitionProperties extends js.Object {
     * Indicates whether the values indicate slices (rather than ranges).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-DimensionalDefinition.html#isSlice)
-    *
-    * @default false
     */
   var isSlice: js.UndefOr[Boolean] = js.native
   

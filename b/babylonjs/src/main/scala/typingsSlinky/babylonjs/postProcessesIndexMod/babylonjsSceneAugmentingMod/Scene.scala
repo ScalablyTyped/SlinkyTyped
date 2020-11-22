@@ -13,8 +13,8 @@ trait Scene extends js.Object {
   
   /**
     * Gets the postprocess render pipeline manager
-    * @see http://doc.babylonjs.com/how_to/how_to_use_postprocessrenderpipeline
-    * @see http://doc.babylonjs.com/how_to/using_default_rendering_pipeline
+    * @see https://doc.babylonjs.com/how_to/how_to_use_postprocessrenderpipeline
+    * @see https://doc.babylonjs.com/how_to/using_default_rendering_pipeline
     */
   val postProcessRenderPipelineManager: PostProcessRenderPipelineManager = js.native
 }

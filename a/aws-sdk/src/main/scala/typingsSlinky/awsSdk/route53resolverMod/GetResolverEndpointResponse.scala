@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetResolverEndpointResponse extends js.Object {
   
   /**
-    * Information about the resolver endpoint that you specified in a GetResolverEndpoint request.
+    * Information about the Resolver endpoint that you specified in a GetResolverEndpoint request.
     */
   var ResolverEndpoint: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.ResolverEndpoint] = js.native
 }

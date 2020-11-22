@@ -1,7 +1,9 @@
 package typingsSlinky.reactBootstrapDaterangepicker.components
 
+import org.scalajs.dom.raw.Element
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.daterangepicker.daterangepickerBooleans.`false`
 import typingsSlinky.daterangepicker.daterangepickerStrings.auto
 import typingsSlinky.daterangepicker.daterangepickerStrings.center
 import typingsSlinky.daterangepicker.daterangepickerStrings.down
@@ -10,8 +12,7 @@ import typingsSlinky.daterangepicker.daterangepickerStrings.right
 import typingsSlinky.daterangepicker.daterangepickerStrings.up
 import typingsSlinky.daterangepicker.mod.DateOrString
 import typingsSlinky.daterangepicker.mod.Locale
-import typingsSlinky.moment.mod.Duration_
-import typingsSlinky.moment.mod.MomentInput
+import typingsSlinky.moment.mod.DurationInputArg1
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactBootstrapDaterangepicker.ReactBootstrapDaterangepicker.Props
 import scala.scalajs.js
@@ -69,7 +70,7 @@ object DateRangePicker {
     def endDate(value: DateOrString): this.type = set("endDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def isCustomDate(value: /* date */ DateOrString => js.UndefOr[String | js.Array[String]]): this.type = set("isCustomDate", js.Any.fromFunction1(value))
+    def isCustomDate(value: /* date */ DateOrString => js.UndefOr[String | js.Array[String] | `false`]): this.type = set("isCustomDate", js.Any.fromFunction1(value))
     
     @scala.inline
     def isInvalidDate(value: (/* startDate */ DateOrString, /* endDate */ js.UndefOr[DateOrString]) => Boolean): this.type = set("isInvalidDate", js.Any.fromFunction2(value))
@@ -87,13 +88,7 @@ object DateRangePicker {
     def maxDate(value: DateOrString): this.type = set("maxDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maxSpanVarargs(value: (Double | String)*): this.type = set("maxSpan", js.Array(value :_*))
-    
-    @scala.inline
-    def maxSpanDate(value: js.Date): this.type = set("maxSpan", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def maxSpan(value: MomentInput | Duration_): this.type = set("maxSpan", value.asInstanceOf[js.Any])
+    def maxSpan(value: DurationInputArg1): this.type = set("maxSpan", value.asInstanceOf[js.Any])
     
     @scala.inline
     def maxYear(value: Double): this.type = set("maxYear", value.asInstanceOf[js.Any])
@@ -132,7 +127,10 @@ object DateRangePicker {
     def opens(value: left | right | center): this.type = set("opens", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def parentEl(value: String): this.type = set("parentEl", value.asInstanceOf[js.Any])
+    def parentElElement(value: Element): this.type = set("parentEl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def parentEl(value: Element | String): this.type = set("parentEl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def showCustomRangeLabel(value: Boolean): this.type = set("showCustomRangeLabel", value.asInstanceOf[js.Any])

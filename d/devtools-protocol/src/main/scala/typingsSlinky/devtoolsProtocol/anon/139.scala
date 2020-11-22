@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.RemoveScriptToEvaluateOnLoadRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowHitTestBordersRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `139` extends js.Object {
   
-  var paramsType: js.Array[RemoveScriptToEvaluateOnLoadRequest] = js.native
+  var paramsType: js.Array[SetShowHitTestBordersRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `139` {
   
   @scala.inline
-  def apply(paramsType: js.Array[RemoveScriptToEvaluateOnLoadRequest], returnType: Unit): `139` = {
+  def apply(paramsType: js.Array[SetShowHitTestBordersRequest], returnType: Unit): `139` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`139`]
   }
@@ -36,10 +36,10 @@ object `139` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: RemoveScriptToEvaluateOnLoadRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetShowHitTestBordersRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[RemoveScriptToEvaluateOnLoadRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetShowHitTestBordersRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

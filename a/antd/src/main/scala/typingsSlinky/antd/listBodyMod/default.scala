@@ -1,17 +1,18 @@
 package typingsSlinky.antd.listBodyMod
 
 import typingsSlinky.antd.anon.Current
+import typingsSlinky.antd.transferMod.KeyWiseTransferItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd/lib/transfer/ListBody", JSImport.Default)
 @js.native
-class default () extends ListBody
+class default[RecordType /* <: KeyWiseTransferItem */] () extends ListBody[RecordType]
 /* static members */
 @JSImport("antd/lib/transfer/ListBody", JSImport.Default)
 @js.native
 object default extends js.Object {
   
-  def getDerivedStateFromProps(hasFilteredRenderItemsPagination: TransferListBodyProps, hasCurrent: TransferListBodyState): Current | Null = js.native
+  def getDerivedStateFromProps[T](hasFilteredRenderItemsPagination: TransferListBodyProps[T], hasCurrent: TransferListBodyState): Current | Null = js.native
 }

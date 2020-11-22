@@ -73,6 +73,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @property enableMarkup - Flag for enabling markup processing. Only works for {@link pc.ELEMENTTYPE_TEXT} types. The only supported tag is `[color]` with a hex color value. E.g `[color="#ff0000"]red text[/color]`
   * @property rangeStart - Index of the first character to render. Only works for {@link pc.ELEMENTTYPE_TEXT} types.
   * @property rangeEnd - Index of the last character to render. Only works for {@link pc.ELEMENTTYPE_TEXT} types.
+  * @property mask - Switch Image Element into a mask. Masks do not render into the scene, but instead limit child elements to only be rendered where this element is rendered.
   * @param system - The ComponentSystem that created this Component.
   * @param entity - The Entity that this Component is attached to.
   */

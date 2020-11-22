@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseMessaging
 
+import org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration
 import typingsSlinky.firebaseAppTypes.privateMod.FirebaseService
 import typingsSlinky.firebaseMessaging.internalDependenciesMod.FirebaseInternalDependencies
 import typingsSlinky.firebaseMessaging.mod.FirebaseApp
@@ -22,27 +23,39 @@ object windowControllerMod extends js.Object {
     @JSName("app")
     def app_MWindowController: FirebaseApp = js.native
     
-    def deleteToken(): js.Promise[Boolean] = js.native
-    
     val firebaseDependencies: js.Any = js.native
     
-    /**
-      * Creates or updates the default service worker registration.
-      * @return The service worker registration to be used for the push service.
-      */
-    var getServiceWorkerRegistration: js.Any = js.native
+    def getSwReg(): js.UndefOr[ServiceWorkerRegistration] = js.native
+    
+    def getToken(options: typingsSlinky.firebaseMessaging.anon.ServiceWorkerRegistration): js.Promise[String] = js.native
+    
+    def getVapidKey(): String | Null = js.native
     
     var logEvent: js.Any = js.native
     
     var messageEventListener: js.Any = js.native
     
+    def onBackgroundMessage(): Unsubscribe = js.native
+    
     var onMessageCallback: js.Any = js.native
     
+    /**
+      * @deprecated No-op. It was initially designed with token rotation requests from server in mind.
+      * However, the plan to implement such feature was abandoned.
+      */
     def onTokenRefresh(): Unsubscribe = js.native
+    
+    var registerDefaultSw: js.Any = js.native
     
     def setBackgroundMessageHandler(): Unit = js.native
     
     var swRegistration: js.Any = js.native
+    
+    def updateSwReg(): js.Promise[Unit] = js.native
+    def updateSwReg(swRegistration: ServiceWorkerRegistration): js.Promise[Unit] = js.native
+    
+    def updateVapidKey(): js.Promise[Unit] = js.native
+    def updateVapidKey(vapidKey: String): js.Promise[Unit] = js.native
     
     var vapidKey: js.Any = js.native
   }

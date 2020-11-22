@@ -1,5 +1,6 @@
 package typingsSlinky.itPushable.mod
 
+import typingsSlinky.itPushable.itPushableBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Options extends js.Object {
   
-  var onEnd: js.UndefOr[js.Function1[/* err */ js.UndefOr[js.Error], _]] = js.native
+  var onEnd: js.UndefOr[js.Function1[/* err */ js.UndefOr[js.Error], Unit]] = js.native
   
-  var writev: js.UndefOr[Boolean] = js.native
+  var writev: js.UndefOr[`false`] = js.native
 }
 object Options {
   
@@ -35,13 +36,13 @@ object Options {
     }
     
     @scala.inline
-    def setOnEnd(value: /* err */ js.UndefOr[js.Error] => _): Self = this.set("onEnd", js.Any.fromFunction1(value))
+    def setOnEnd(value: /* err */ js.UndefOr[js.Error] => Unit): Self = this.set("onEnd", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnEnd: Self = this.set("onEnd", js.undefined)
     
     @scala.inline
-    def setWritev(value: Boolean): Self = this.set("writev", value.asInstanceOf[js.Any])
+    def setWritev(value: `false`): Self = this.set("writev", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWritev: Self = this.set("writev", js.undefined)

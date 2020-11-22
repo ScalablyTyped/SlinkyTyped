@@ -33,7 +33,7 @@ trait DescribeSessionsRequest extends js.Object {
   var StackName: String = js.native
   
   /**
-    * The user identifier.
+    * The user identifier (ID). If you specify a user ID, you must also specify the authentication type.
     */
   var UserId: js.UndefOr[typingsSlinky.awsSdk.appstreamMod.UserId] = js.native
 }

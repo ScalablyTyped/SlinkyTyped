@@ -24,7 +24,7 @@ trait LegendLayerInfos extends Object {
   var layer: Layer = js.native
   
   /**
-    * Specifies a title for the layer to display above its symbols and descriptions. If no title is specified the service name is used.
+    * Specifies a title for the layer to display above its symbols and descriptions.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend.html#layerInfos)
     */

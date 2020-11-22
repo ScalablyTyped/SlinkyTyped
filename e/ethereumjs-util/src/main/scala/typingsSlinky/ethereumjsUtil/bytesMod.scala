@@ -1,6 +1,8 @@
 package typingsSlinky.ethereumjsUtil
 
 import typingsSlinky.bnJs.mod.^
+import typingsSlinky.ethereumjsUtil.typesMod.TransformableToArray
+import typingsSlinky.ethereumjsUtil.typesMod.TransformableToBuffer
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +26,15 @@ object bytesMod extends js.Object {
   
   def setLengthRight(msg: Buffer, length: Double): Buffer = js.native
   
-  def toBuffer(v: js.Any): Buffer = js.native
+  def toBuffer(): Buffer = js.native
+  def toBuffer(v: String): Buffer = js.native
+  def toBuffer(v: js.Array[Double]): Buffer = js.native
+  def toBuffer(v: Double): Buffer = js.native
+  def toBuffer(v: ^): Buffer = js.native
+  def toBuffer(v: TransformableToArray): Buffer = js.native
+  def toBuffer(v: TransformableToBuffer): Buffer = js.native
+  def toBuffer(v: Buffer): Buffer = js.native
+  def toBuffer(v: js.typedarray.Uint8Array): Buffer = js.native
   
   def toUnsigned(num: ^): Buffer = js.native
   

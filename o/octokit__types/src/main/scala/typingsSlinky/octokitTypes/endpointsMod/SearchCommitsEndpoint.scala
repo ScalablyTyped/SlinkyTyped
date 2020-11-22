@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`19`
+import typingsSlinky.octokitTypes.anon.`18`
 import typingsSlinky.octokitTypes.octokitTypesStrings.`author-date`
 import typingsSlinky.octokitTypes.octokitTypesStrings.`committer-date`
 import typingsSlinky.octokitTypes.octokitTypesStrings.asc
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SearchCommitsEndpoint extends js.Object {
   
-  var mediaType: `19` = js.native
+  var mediaType: `18` = js.native
   
   /**
     * Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`.
@@ -43,7 +43,7 @@ trait SearchCommitsEndpoint extends js.Object {
 object SearchCommitsEndpoint {
   
   @scala.inline
-  def apply(mediaType: `19`, q: String): SearchCommitsEndpoint = {
+  def apply(mediaType: `18`, q: String): SearchCommitsEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], q = q.asInstanceOf[js.Any])
     __obj.asInstanceOf[SearchCommitsEndpoint]
   }
@@ -64,7 +64,7 @@ object SearchCommitsEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `19`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `18`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setQ(value: String): Self = this.set("q", value.asInstanceOf[js.Any])

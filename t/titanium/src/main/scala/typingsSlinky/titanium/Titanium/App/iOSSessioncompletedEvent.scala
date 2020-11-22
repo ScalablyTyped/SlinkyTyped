@@ -18,11 +18,14 @@ trait iOSSessioncompletedEvent extends iOSBaseEvent {
   
   /**
     * A string containing the localized description of the error.
+    * This property does not exhist if errorCode is 0, which means there is no error.
     */
   var message: String = js.native
   
   /**
-    * The response text for upload tasks (since SDK 7.2.0).
+    * The response text for [task](Modules.URLSession.task) and [uploadTask](Modules.URLSession.uploadTask).
+    * This property does not exhist for download task. For download task response,
+    * use [downloadcompleted](Titanium.App.iOS.downloadcompleted) event.
     */
   var responseText: String = js.native
   
@@ -33,7 +36,7 @@ trait iOSSessioncompletedEvent extends iOSBaseEvent {
   var sessionIdentifier: String = js.native
   
   /**
-    * The response status code for upload tasks (since SDK 7.2.0).
+    * The response status code for tasks.
     */
   var statusCode: Double = js.native
   

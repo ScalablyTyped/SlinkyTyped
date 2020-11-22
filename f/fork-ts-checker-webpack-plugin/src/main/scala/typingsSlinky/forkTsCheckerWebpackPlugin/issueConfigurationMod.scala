@@ -1,7 +1,5 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin
 
-import typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.all
-import typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStrings.webpack
 import typingsSlinky.forkTsCheckerWebpackPlugin.issueIssueMod.Issue
 import typingsSlinky.forkTsCheckerWebpackPlugin.issueOptionsMod.IssueOptions
 import typingsSlinky.forkTsCheckerWebpackPlugin.issuePredicateMod.IssuePredicate
@@ -27,7 +25,5 @@ object issueConfigurationMod extends js.Object {
     def predicate(issue: Issue): Boolean = js.native
     @JSName("predicate")
     var predicate_Original: IssuePredicate = js.native
-    
-    var scope: all | webpack = js.native
   }
 }

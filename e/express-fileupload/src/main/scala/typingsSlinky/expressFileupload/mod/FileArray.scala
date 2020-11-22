@@ -7,5 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("express-fileupload", "FileArray")
 @js.native
-class FileArray ()
-  extends /* index */ StringDictionary[UploadedFile | js.Array[UploadedFile]]
+class FileArray () extends /* index */ StringDictionary[UploadedFile]

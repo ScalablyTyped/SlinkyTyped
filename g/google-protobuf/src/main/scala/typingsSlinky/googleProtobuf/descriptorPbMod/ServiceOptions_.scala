@@ -14,9 +14,9 @@ class ServiceOptions_ () extends Message {
   def addUninterpretedOption(value: UninterpretedOption): UninterpretedOption = js.native
   def addUninterpretedOption(value: UninterpretedOption, index: Double): UninterpretedOption = js.native
   
-  def clearDeprecated(): Unit = js.native
+  def clearDeprecated(): ServiceOptions = js.native
   
-  def clearUninterpretedOptionList(): Unit = js.native
+  def clearUninterpretedOptionList(): ServiceOptions = js.native
   
   def getDeprecated(): js.UndefOr[Boolean] = js.native
   
@@ -24,7 +24,7 @@ class ServiceOptions_ () extends Message {
   
   def hasDeprecated(): Boolean = js.native
   
-  def setDeprecated(value: Boolean): Unit = js.native
+  def setDeprecated(value: Boolean): ServiceOptions = js.native
   
-  def setUninterpretedOptionList(value: js.Array[UninterpretedOption]): Unit = js.native
+  def setUninterpretedOptionList(value: js.Array[UninterpretedOption]): ServiceOptions = js.native
 }

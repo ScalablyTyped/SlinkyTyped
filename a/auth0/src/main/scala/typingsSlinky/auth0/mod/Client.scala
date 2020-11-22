@@ -47,7 +47,7 @@ trait Client extends js.Object {
   var cross_origin_auth: js.UndefOr[Boolean] = js.native
   
   /**
-    * Url fo the location in your site where the cross origin verification takes place for the cross-origin auth flow when performing Auth in your own domain instead of Auth0 hosted login page.
+    * Url of the location in your site where the cross origin verification takes place for the cross-origin auth flow when performing Auth in your own domain instead of Auth0 hosted login page.
     */
   var cross_origin_loc: js.UndefOr[String] = js.native
   

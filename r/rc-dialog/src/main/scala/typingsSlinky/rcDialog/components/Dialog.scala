@@ -1,17 +1,16 @@
 package typingsSlinky.rcDialog.components
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
-import slinky.web.html.div.tag
+import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcDialog.anon.X
 import typingsSlinky.rcDialog.dialogMod.IDialogChildProps
-import typingsSlinky.rcDialog.dialogMod.default
-import typingsSlinky.rcDialog.idialogproptypesMod.IStringOrHtmlElement
 import typingsSlinky.rcDialog.rcDialogBooleans.`false`
+import typingsSlinky.rcUtil.portalWrapperMod.GetContainer
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,14 +18,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object Dialog {
   
-  @JSImport("rc-dialog/lib/Dialog", JSImport.Default)
+  @JSImport("rc-dialog/es/Dialog", JSImport.Default)
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
     def afterClose(value: () => _): this.type = set("afterClose", js.Any.fromFunction0(value))
@@ -74,10 +73,10 @@ object Dialog {
     def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def getContainerFunction0(value: () => IStringOrHtmlElement): this.type = set("getContainer", js.Any.fromFunction0(value))
+    def getContainerFunction0(value: () => HTMLElement): this.type = set("getContainer", js.Any.fromFunction0(value))
     
     @scala.inline
-    def getContainer(value: IStringOrHtmlElement | js.Function0[IStringOrHtmlElement] | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
+    def getContainer(value: GetContainer | `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
@@ -104,10 +103,13 @@ object Dialog {
     def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def modalRender(value: /* node */ ReactElement => ReactElement): this.type = set("modalRender", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def mousePosition(value: X): this.type = set("mousePosition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onClose(value: /* e */ SyntheticEvent[Event, HTMLDivElement] => _): this.type = set("onClose", js.Any.fromFunction1(value))
+    def onClose(value: /* e */ SyntheticEvent[Event, Element] => _): this.type = set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])

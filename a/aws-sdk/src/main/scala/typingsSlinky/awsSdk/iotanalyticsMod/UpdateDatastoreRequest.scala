@@ -13,7 +13,7 @@ trait UpdateDatastoreRequest extends js.Object {
   var datastoreName: DatastoreName = js.native
   
   /**
-    * Where data store data is stored. You may choose one of "serviceManagedS3" or "customerManagedS3" storage. If not specified, the default is "serviceManagedS3". This cannot be changed after the data store is created.
+    * Where data store data is stored. You can choose one of serviceManagedS3 or customerManagedS3 storage. If not specified, the default isserviceManagedS3. You cannot change this storage option after the data store is created.
     */
   var datastoreStorage: js.UndefOr[DatastoreStorage] = js.native
   

@@ -161,6 +161,11 @@ trait EffectLayer extends js.Object {
   def camera: Nullable[Camera] = js.native
   
   /**
+    * Specifies if the bounding boxes should be rendered normally or if they should undergo the effect of the layer
+    */
+  var disableBoundingBoxesFromEffectLayer: Boolean = js.native
+  
+  /**
     * Dispose the highlight layer and free resources.
     */
   def dispose(): Unit = js.native

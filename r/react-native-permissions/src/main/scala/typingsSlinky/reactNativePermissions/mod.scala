@@ -1,14 +1,18 @@
 package typingsSlinky.reactNativePermissions
 
 import typingsSlinky.reactNative.mod.Rationale
-import typingsSlinky.reactNativePermissions.anon.ReadonlyACCEPTHANDOVERand
-import typingsSlinky.reactNativePermissions.anon.ReadonlyANDROIDReadonlyAC
-import typingsSlinky.reactNativePermissions.anon.ReadonlyBLUETOOTHPERIPHER
-import typingsSlinky.reactNativePermissions.anon.ReadonlyUNAVAILABLEunavai
+import typingsSlinky.reactNativePermissions.anon.ReadonlyreadonlyACCEPTHAN
+import typingsSlinky.reactNativePermissions.anon.ReadonlyreadonlyACCESSORY
+import typingsSlinky.reactNativePermissions.anon.ReadonlyreadonlyANDROIDRe
+import typingsSlinky.reactNativePermissions.anon.ReadonlyreadonlyAPPTRACKI
+import typingsSlinky.reactNativePermissions.anon.ReadonlyreadonlyUNAVAILAB
 import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.blocked
 import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.denied
 import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.granted
+import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.limited
 import typingsSlinky.reactNativePermissions.reactNativePermissionsStrings.unavailable
+import typingsSlinky.reactNativePermissions.typesMod.LocationAccuracy
+import typingsSlinky.reactNativePermissions.typesMod.LocationAccuracyOptions
 import typingsSlinky.reactNativePermissions.typesMod.NotificationOption
 import typingsSlinky.reactNativePermissions.typesMod.NotificationsResponse
 import typingsSlinky.reactNativePermissions.typesMod.Permission
@@ -21,26 +25,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def check(permission: Permission): js.Promise[unavailable | denied | blocked | granted] = js.native
+  def check(permission: Permission): js.Promise[unavailable | blocked | denied | granted | limited] = js.native
+  
+  def checkLocationAccuracy(): js.Promise[LocationAccuracy] = js.native
   
   def checkMultiple[P /* <: js.Array[Permission] */](permissions: P): js.Promise[
     Record[
       /* import warning: importer.ImportType#apply Failed type conversion: P[number] */ js.Any, 
-      unavailable | denied | blocked | granted
+      unavailable | blocked | denied | granted | limited
     ]
   ] = js.native
   
   def checkNotifications(): js.Promise[NotificationsResponse] = js.native
   
+  def openLimitedPhotoLibraryPicker(): js.Promise[Unit] = js.native
+  
   def openSettings(): js.Promise[Unit] = js.native
   
-  def request(permission: Permission): js.Promise[unavailable | denied | blocked | granted] = js.native
-  def request(permission: Permission, rationale: Rationale): js.Promise[unavailable | denied | blocked | granted] = js.native
+  def request(permission: Permission): js.Promise[unavailable | blocked | denied | granted | limited] = js.native
+  def request(permission: Permission, rationale: Rationale): js.Promise[unavailable | blocked | denied | granted | limited] = js.native
+  
+  def requestLocationAccuracy(options: LocationAccuracyOptions): js.Promise[LocationAccuracy] = js.native
   
   def requestMultiple[P /* <: js.Array[Permission] */](permissions: P): js.Promise[
     Record[
       /* import warning: importer.ImportType#apply Failed type conversion: P[number] */ js.Any, 
-      unavailable | denied | blocked | granted
+      unavailable | blocked | denied | granted | limited
     ]
   ] = js.native
   
@@ -49,9 +59,11 @@ object mod extends js.Object {
   @js.native
   object PERMISSIONS extends js.Object {
     
-    val ANDROID: ReadonlyACCEPTHANDOVERand = js.native
+    val ANDROID: ReadonlyreadonlyACCEPTHAN = js.native
     
-    val IOS: ReadonlyBLUETOOTHPERIPHER = js.native
+    val IOS: ReadonlyreadonlyAPPTRACKI = js.native
+    
+    val WINDOWS: ReadonlyreadonlyACCESSORY = js.native
   }
   
   @js.native
@@ -63,36 +75,44 @@ object mod extends js.Object {
     
     val GRANTED: granted = js.native
     
+    val LIMITED: limited = js.native
+    
     val UNAVAILABLE: unavailable = js.native
   }
   
   @js.native
   object default extends js.Object {
     
-    var PERMISSIONS: ReadonlyANDROIDReadonlyAC = js.native
+    var PERMISSIONS: ReadonlyreadonlyANDROIDRe = js.native
     
-    var RESULTS: ReadonlyUNAVAILABLEunavai = js.native
+    var RESULTS: ReadonlyreadonlyUNAVAILAB = js.native
     
-    def check(permission: Permission): js.Promise[unavailable | denied | blocked | granted] = js.native
+    def check(permission: Permission): js.Promise[unavailable | blocked | denied | granted | limited] = js.native
+    
+    def checkLocationAccuracy(): js.Promise[LocationAccuracy] = js.native
     
     def checkMultiple[P /* <: js.Array[Permission] */](permissions: P): js.Promise[
         Record[
           /* import warning: importer.ImportType#apply Failed type conversion: P[number] */ js.Any, 
-          unavailable | denied | blocked | granted
+          unavailable | blocked | denied | granted | limited
         ]
       ] = js.native
     
     def checkNotifications(): js.Promise[NotificationsResponse] = js.native
     
+    def openLimitedPhotoLibraryPicker(): js.Promise[Unit] = js.native
+    
     def openSettings(): js.Promise[Unit] = js.native
     
-    def request(permission: Permission): js.Promise[unavailable | denied | blocked | granted] = js.native
-    def request(permission: Permission, rationale: Rationale): js.Promise[unavailable | denied | blocked | granted] = js.native
+    def request(permission: Permission): js.Promise[unavailable | blocked | denied | granted | limited] = js.native
+    def request(permission: Permission, rationale: Rationale): js.Promise[unavailable | blocked | denied | granted | limited] = js.native
+    
+    def requestLocationAccuracy(options: LocationAccuracyOptions): js.Promise[LocationAccuracy] = js.native
     
     def requestMultiple[P_1 /* <: js.Array[Permission] */](permissions: P_1): js.Promise[
         Record[
           /* import warning: importer.ImportType#apply Failed type conversion: P_1[number] */ js.Any, 
-          unavailable | denied | blocked | granted
+          unavailable | blocked | denied | granted | limited
         ]
       ] = js.native
     

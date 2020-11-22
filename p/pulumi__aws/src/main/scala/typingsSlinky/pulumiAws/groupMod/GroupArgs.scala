@@ -3,12 +3,12 @@ package typingsSlinky.pulumiAws.groupMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.ec2Mod.LaunchConfiguration
 import typingsSlinky.pulumiAws.ec2Mod.PlacementGroup
+import typingsSlinky.pulumiAws.enumsAutoscalingMod.Metric
+import typingsSlinky.pulumiAws.enumsAutoscalingMod.MetricsGranularity
 import typingsSlinky.pulumiAws.inputMod.autoscaling.GroupInitialLifecycleHook
 import typingsSlinky.pulumiAws.inputMod.autoscaling.GroupLaunchTemplate
 import typingsSlinky.pulumiAws.inputMod.autoscaling.GroupMixedInstancesPolicy
 import typingsSlinky.pulumiAws.inputMod.autoscaling.GroupTag
-import typingsSlinky.pulumiAws.metricsMod.Metric
-import typingsSlinky.pulumiAws.metricsMod.MetricsGranularity
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GroupArgs extends js.Object {
   
   /**
-    * A list of one or more availability zones for the group. This parameter should not be specified when using `vpcZoneIdentifier`.
+    * A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpcZoneIdentifier` argument. Conflicts with `vpcZoneIdentifier`.
     */
   val availabilityZones: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
@@ -164,7 +164,7 @@ trait GroupArgs extends js.Object {
   val tagsCollection: js.UndefOr[Input[js.Array[Input[StringDictionary[Input[String]]]]]] = js.native
   
   /**
-    * A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
+    * A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
     */
   val targetGroupArns: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
@@ -174,7 +174,7 @@ trait GroupArgs extends js.Object {
   val terminationPolicies: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
   /**
-    * A list of subnet IDs to launch resources in.
+    * A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availabilityZones`.
     */
   val vpcZoneIdentifiers: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   

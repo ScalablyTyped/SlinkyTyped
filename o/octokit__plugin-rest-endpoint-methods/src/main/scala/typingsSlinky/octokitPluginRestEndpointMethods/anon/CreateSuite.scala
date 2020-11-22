@@ -7,43 +7,43 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CreateSuite extends js.Object {
   
-  var create: `654` = js.native
+  var create: `657` = js.native
   
-  var createSuite: `655` = js.native
+  var createSuite: `658` = js.native
   
-  var get: `656` = js.native
+  var get: `659` = js.native
   
-  var getSuite: `657` = js.native
+  var getSuite: `660` = js.native
   
-  var listAnnotations: `658` = js.native
+  var listAnnotations: `661` = js.native
   
-  var listForRef: `659` = js.native
+  var listForRef: `662` = js.native
   
-  var listForSuite: `660` = js.native
+  var listForSuite: `663` = js.native
   
-  var listSuitesForRef: `661` = js.native
+  var listSuitesForRef: `664` = js.native
   
-  var rerequestSuite: `662` = js.native
+  var rerequestSuite: `665` = js.native
   
-  var setSuitesPreferences: `663` = js.native
+  var setSuitesPreferences: `666` = js.native
   
-  var update: `664` = js.native
+  var update: `667` = js.native
 }
 object CreateSuite {
   
   @scala.inline
   def apply(
-    create: `654`,
-    createSuite: `655`,
-    get: `656`,
-    getSuite: `657`,
-    listAnnotations: `658`,
-    listForRef: `659`,
-    listForSuite: `660`,
-    listSuitesForRef: `661`,
-    rerequestSuite: `662`,
-    setSuitesPreferences: `663`,
-    update: `664`
+    create: `657`,
+    createSuite: `658`,
+    get: `659`,
+    getSuite: `660`,
+    listAnnotations: `661`,
+    listForRef: `662`,
+    listForSuite: `663`,
+    listSuitesForRef: `664`,
+    rerequestSuite: `665`,
+    setSuitesPreferences: `666`,
+    update: `667`
   ): CreateSuite = {
     val __obj = js.Dynamic.literal(create = create.asInstanceOf[js.Any], createSuite = createSuite.asInstanceOf[js.Any], get = get.asInstanceOf[js.Any], getSuite = getSuite.asInstanceOf[js.Any], listAnnotations = listAnnotations.asInstanceOf[js.Any], listForRef = listForRef.asInstanceOf[js.Any], listForSuite = listForSuite.asInstanceOf[js.Any], listSuitesForRef = listSuitesForRef.asInstanceOf[js.Any], rerequestSuite = rerequestSuite.asInstanceOf[js.Any], setSuitesPreferences = setSuitesPreferences.asInstanceOf[js.Any], update = update.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateSuite]
@@ -65,36 +65,36 @@ object CreateSuite {
     }
     
     @scala.inline
-    def setCreate(value: `654`): Self = this.set("create", value.asInstanceOf[js.Any])
+    def setCreate(value: `657`): Self = this.set("create", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCreateSuite(value: `655`): Self = this.set("createSuite", value.asInstanceOf[js.Any])
+    def setCreateSuite(value: `658`): Self = this.set("createSuite", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGet(value: `656`): Self = this.set("get", value.asInstanceOf[js.Any])
+    def setGet(value: `659`): Self = this.set("get", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetSuite(value: `657`): Self = this.set("getSuite", value.asInstanceOf[js.Any])
+    def setGetSuite(value: `660`): Self = this.set("getSuite", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setListAnnotations(value: `658`): Self = this.set("listAnnotations", value.asInstanceOf[js.Any])
+    def setListAnnotations(value: `661`): Self = this.set("listAnnotations", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setListForRef(value: `659`): Self = this.set("listForRef", value.asInstanceOf[js.Any])
+    def setListForRef(value: `662`): Self = this.set("listForRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setListForSuite(value: `660`): Self = this.set("listForSuite", value.asInstanceOf[js.Any])
+    def setListForSuite(value: `663`): Self = this.set("listForSuite", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setListSuitesForRef(value: `661`): Self = this.set("listSuitesForRef", value.asInstanceOf[js.Any])
+    def setListSuitesForRef(value: `664`): Self = this.set("listSuitesForRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRerequestSuite(value: `662`): Self = this.set("rerequestSuite", value.asInstanceOf[js.Any])
+    def setRerequestSuite(value: `665`): Self = this.set("rerequestSuite", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSetSuitesPreferences(value: `663`): Self = this.set("setSuitesPreferences", value.asInstanceOf[js.Any])
+    def setSetSuitesPreferences(value: `666`): Self = this.set("setSuitesPreferences", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUpdate(value: `664`): Self = this.set("update", value.asInstanceOf[js.Any])
+    def setUpdate(value: `667`): Self = this.set("update", value.asInstanceOf[js.Any])
   }
 }

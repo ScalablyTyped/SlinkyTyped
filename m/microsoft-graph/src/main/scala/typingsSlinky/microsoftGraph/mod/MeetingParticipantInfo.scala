@@ -8,10 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MeetingParticipantInfo extends js.Object {
   
   // Identity information of the participant.
-  var identity: js.UndefOr[IdentitySet] = js.native
+  var identity: js.UndefOr[NullableOption[IdentitySet]] = js.native
+  
+  // Specifies the participant's role in the meeting. Possible values are listed in the following table.
+  var role: js.UndefOr[NullableOption[OnlineMeetingRole]] = js.native
   
   // User principal name of the participant.
-  var upn: js.UndefOr[String] = js.native
+  var upn: js.UndefOr[NullableOption[String]] = js.native
 }
 object MeetingParticipantInfo {
   
@@ -37,15 +40,30 @@ object MeetingParticipantInfo {
     }
     
     @scala.inline
-    def setIdentity(value: IdentitySet): Self = this.set("identity", value.asInstanceOf[js.Any])
+    def setIdentity(value: NullableOption[IdentitySet]): Self = this.set("identity", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIdentity: Self = this.set("identity", js.undefined)
     
     @scala.inline
-    def setUpn(value: String): Self = this.set("upn", value.asInstanceOf[js.Any])
+    def setIdentityNull: Self = this.set("identity", null)
+    
+    @scala.inline
+    def setRole(value: NullableOption[OnlineMeetingRole]): Self = this.set("role", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRole: Self = this.set("role", js.undefined)
+    
+    @scala.inline
+    def setRoleNull: Self = this.set("role", null)
+    
+    @scala.inline
+    def setUpn(value: NullableOption[String]): Self = this.set("upn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUpn: Self = this.set("upn", js.undefined)
+    
+    @scala.inline
+    def setUpnNull: Self = this.set("upn", null)
   }
 }

@@ -153,7 +153,7 @@ trait UserPoolType extends js.Object {
   var UsernameAttributes: js.UndefOr[UsernameAttributesListType] = js.native
   
   /**
-    * You can choose to enable case sensitivity on the username input for the selected sign-in option. For example, when this is set to False, users will be able to sign in using either "username" or "Username". This configuration is immutable once it has been set. For more information, see .
+    * You can choose to enable case sensitivity on the username input for the selected sign-in option. For example, when this is set to False, users will be able to sign in using either "username" or "Username". This configuration is immutable once it has been set. For more information, see UsernameConfigurationType.
     */
   var UsernameConfiguration: js.UndefOr[UsernameConfigurationType] = js.native
   

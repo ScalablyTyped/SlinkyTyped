@@ -12,14 +12,14 @@ trait ParametersChecksListForSuiteEndpoint extends js.Object {
   
   var parameters: ChecksListForSuiteEndpoint = js.native
   
-  var response: OctokitResponse[ChecksListForSuiteResponseData] with `9` = js.native
+  var response: OctokitResponse[ChecksListForSuiteResponseData] with `13` = js.native
 }
 object ParametersChecksListForSuiteEndpoint {
   
   @scala.inline
   def apply(
     parameters: ChecksListForSuiteEndpoint,
-    response: OctokitResponse[ChecksListForSuiteResponseData] with `9`
+    response: OctokitResponse[ChecksListForSuiteResponseData] with `13`
   ): ParametersChecksListForSuiteEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersChecksListForSuiteEndpoint]
@@ -44,6 +44,6 @@ object ParametersChecksListForSuiteEndpoint {
     def setParameters(value: ChecksListForSuiteEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ChecksListForSuiteResponseData] with `9`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ChecksListForSuiteResponseData] with `13`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CodeReview extends js.Object {
   
   /**
+    *  The Amazon Resource Name (ARN) of the  RepositoryAssociation  that contains the reviewed source code. You can retrieve associated repository ARNs by calling  ListRepositoryAssociations . 
+    */
+  var AssociationArn: js.UndefOr[typingsSlinky.awsSdk.codegurureviewerMod.AssociationArn] = js.native
+  
+  /**
     * The Amazon Resource Name (ARN) of the  CodeReview  object. 
     */
   var CodeReviewArn: js.UndefOr[Arn] = js.native
@@ -33,7 +38,7 @@ trait CodeReview extends js.Object {
   var Name: js.UndefOr[typingsSlinky.awsSdk.codegurureviewerMod.Name] = js.native
   
   /**
-    * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that owns the repository. For a GitHub or Bitbucket repository, this is the username for the account that owns the repository.
+    * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for the account that owns the repository.
     */
   var Owner: js.UndefOr[typingsSlinky.awsSdk.codegurureviewerMod.Owner] = js.native
   
@@ -94,6 +99,12 @@ object CodeReview {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAssociationArn(value: AssociationArn): Self = this.set("AssociationArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAssociationArn: Self = this.set("AssociationArn", js.undefined)
     
     @scala.inline
     def setCodeReviewArn(value: Arn): Self = this.set("CodeReviewArn", value.asInstanceOf[js.Any])

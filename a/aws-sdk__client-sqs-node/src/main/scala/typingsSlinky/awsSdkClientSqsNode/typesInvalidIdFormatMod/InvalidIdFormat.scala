@@ -1,30 +1,21 @@
 package typingsSlinky.awsSdkClientSqsNode.typesInvalidIdFormatMod
 
 import typingsSlinky.awsSdkClientSqsNode.deleteMessageExceptionsUnionMod.DeleteMessageExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait InvalidIdFormat
-  extends ServiceException[InvalidIdFormatDetails]
-     with DeleteMessageExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidIdFormatDetails> * / any */ @js.native
+trait InvalidIdFormat extends DeleteMessageExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidIdFormat: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.InvalidIdFormat = js.native
+  var name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.InvalidIdFormat = js.native
 }
 object InvalidIdFormat {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidIdFormatDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.InvalidIdFormat
-  ): InvalidIdFormat = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientSqsNode.awsSdkClientSqsNodeStrings.InvalidIdFormat): InvalidIdFormat = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidIdFormat]
   }
   

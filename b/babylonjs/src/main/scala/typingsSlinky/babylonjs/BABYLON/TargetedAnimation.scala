@@ -13,6 +13,12 @@ trait TargetedAnimation extends js.Object {
   var animation: Animation = js.native
   
   /**
+    * Returns the string "TargetedAnimation"
+    * @returns "TargetedAnimation"
+    */
+  def getClassName(): String = js.native
+  
+  /**
     * Serialize the object
     * @returns the JSON object representing the current entity
     */
@@ -26,8 +32,8 @@ trait TargetedAnimation extends js.Object {
 object TargetedAnimation {
   
   @scala.inline
-  def apply(animation: Animation, serialize: () => js.Any, target: js.Any): TargetedAnimation = {
-    val __obj = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any], serialize = js.Any.fromFunction0(serialize), target = target.asInstanceOf[js.Any])
+  def apply(animation: Animation, getClassName: () => String, serialize: () => js.Any, target: js.Any): TargetedAnimation = {
+    val __obj = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any], getClassName = js.Any.fromFunction0(getClassName), serialize = js.Any.fromFunction0(serialize), target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[TargetedAnimation]
   }
   
@@ -48,6 +54,9 @@ object TargetedAnimation {
     
     @scala.inline
     def setAnimation(value: Animation): Self = this.set("animation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setGetClassName(value: () => String): Self = this.set("getClassName", js.Any.fromFunction0(value))
     
     @scala.inline
     def setSerialize(value: () => js.Any): Self = this.set("serialize", js.Any.fromFunction0(value))

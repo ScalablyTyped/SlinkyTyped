@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientKmsNode.kmsconfigurationMod.KMSResolvedConfigur
 import typingsSlinky.awsSdkClientKmsNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientKmsNode.typesListRetirableGrantsInputMod.ListRetirableGrantsInput
 import typingsSlinky.awsSdkClientKmsNode.typesListRetirableGrantsOutputMod.ListRetirableGrantsOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object listRetirableGrantsCommandMod extends js.Object {
           ListRetirableGrantsInput, 
           OutputTypesUnion, 
           ListRetirableGrantsOutput, 
-          KMSResolvedConfiguration, 
-          Readable
+          KMSResolvedConfiguration
         ] {
     def this(input: ListRetirableGrantsInput) = this()
     
-    val middlewareStack: MiddlewareStack[ListRetirableGrantsInput, ListRetirableGrantsOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: KMSResolvedConfiguration
     ): Handler[ListRetirableGrantsInput, ListRetirableGrantsOutput] = js.native
   }

@@ -98,10 +98,13 @@ class SharedBuilder_ReactInfiniteCalendarProps1567389525[R <: js.Object] (val ar
   def rowHeight(value: Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def selectedVarargs(value: DateType*): this.type = set("selected", js.Array(value :_*))
+  
+  @scala.inline
   def selectedDate(value: js.Date): this.type = set("selected", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def selected(value: DateType | `false` | End): this.type = set("selected", value.asInstanceOf[js.Any])
+  def selected(value: DateType | `false` | End | js.Array[DateType]): this.type = set("selected", value.asInstanceOf[js.Any])
   
   @scala.inline
   def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])

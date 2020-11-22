@@ -1,5 +1,6 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -102,6 +103,7 @@ trait Mac extends js.Object {
     * mac.setPassword({"b64u": "Mb-c3f_"});
     */
   def setPassword(pass: String): Unit = js.native
+  def setPassword(pass: StringDictionary[String]): Unit = js.native
   
   /**
     * update digest by specified hexadecimal string
@@ -118,57 +120,4 @@ trait Mac extends js.Object {
     * mac.updateString('New York');
     */
   def updateString(str: String): Unit = js.native
-}
-object Mac {
-  
-  @scala.inline
-  def apply(
-    doFinal: () => Unit,
-    doFinalHex: String => Unit,
-    doFinalString: String => Unit,
-    setAlgAndProvider: (String, String) => Unit,
-    setPassword: String => Unit,
-    updateHex: String => Unit,
-    updateString: String => Unit
-  ): Mac = {
-    val __obj = js.Dynamic.literal(doFinal = js.Any.fromFunction0(doFinal), doFinalHex = js.Any.fromFunction1(doFinalHex), doFinalString = js.Any.fromFunction1(doFinalString), setAlgAndProvider = js.Any.fromFunction2(setAlgAndProvider), setPassword = js.Any.fromFunction1(setPassword), updateHex = js.Any.fromFunction1(updateHex), updateString = js.Any.fromFunction1(updateString))
-    __obj.asInstanceOf[Mac]
-  }
-  
-  @scala.inline
-  implicit class MacOps[Self <: Mac] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setDoFinal(value: () => Unit): Self = this.set("doFinal", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setDoFinalHex(value: String => Unit): Self = this.set("doFinalHex", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setDoFinalString(value: String => Unit): Self = this.set("doFinalString", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setSetAlgAndProvider(value: (String, String) => Unit): Self = this.set("setAlgAndProvider", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def setSetPassword(value: String => Unit): Self = this.set("setPassword", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setUpdateHex(value: String => Unit): Self = this.set("updateHex", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setUpdateString(value: String => Unit): Self = this.set("updateString", js.Any.fromFunction1(value))
-  }
 }

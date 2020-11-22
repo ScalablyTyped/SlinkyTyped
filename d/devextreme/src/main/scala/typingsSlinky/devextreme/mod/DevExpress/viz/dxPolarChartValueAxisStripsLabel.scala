@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartValueAxisStripsLabel extends dxPolarChartCommonAxisSettingsStripStyleLabel {
   
-  /** @name dxPolarChart.Options.valueAxis.strips.label.text */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.strips.label.text]
+    */
   var text: js.UndefOr[String] = js.native
 }
 object dxPolarChartValueAxisStripsLabel {

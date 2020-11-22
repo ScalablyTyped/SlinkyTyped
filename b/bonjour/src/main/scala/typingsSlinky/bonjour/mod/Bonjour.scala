@@ -13,10 +13,10 @@ trait Bonjour extends js.Object {
   def destroy(): Unit = js.native
   
   def find(options: BrowserOptions): Browser = js.native
-  def find(options: BrowserOptions, onUp: js.Function1[/* service */ Service, Unit]): Browser = js.native
+  def find(options: BrowserOptions, onUp: js.Function1[/* service */ RemoteService, Unit]): Browser = js.native
   
   def findOne(options: BrowserOptions): Browser = js.native
-  def findOne(options: BrowserOptions, cb: js.Function1[/* service */ Service, Unit]): Browser = js.native
+  def findOne(options: BrowserOptions, cb: js.Function1[/* service */ RemoteService, Unit]): Browser = js.native
   
   def publish(options: ServiceOptions): Service = js.native
   

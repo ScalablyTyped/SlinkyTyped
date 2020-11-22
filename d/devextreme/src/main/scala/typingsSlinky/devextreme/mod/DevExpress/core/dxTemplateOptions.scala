@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTemplateOptions extends js.Object {
   
-  /** @name dxTemplate.Options.name */
+  /**
+    * [descr:dxTemplate.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
 }
 object dxTemplateOptions {

@@ -23,8 +23,7 @@ trait PivotTableCollectionLoadOptions extends js.Object {
     *
     * For EACH ITEM in the collection: Specifies if the PivotTable allows the application of multiple PivotFilters on a given PivotField in the table.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var allowMultipleFiltersPerField: js.UndefOr[Boolean] = js.native
   
@@ -59,6 +58,15 @@ trait PivotTableCollectionLoadOptions extends js.Object {
     * [Api set: ExcelApi 1.3]
     */
   var name: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
+    * For EACH ITEM in the collection: Specifies whether the PivotTable refreshes when the workbook opens. Corresponds to "Refresh on load" setting in the UI.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var refreshOnOpen: js.UndefOr[Boolean] = js.native
   
   /**
     *
@@ -134,6 +142,12 @@ object PivotTableCollectionLoadOptions {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setRefreshOnOpen(value: Boolean): Self = this.set("refreshOnOpen", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRefreshOnOpen: Self = this.set("refreshOnOpen", js.undefined)
     
     @scala.inline
     def setUseCustomSortLists(value: Boolean): Self = this.set("useCustomSortLists", value.asInstanceOf[js.Any])

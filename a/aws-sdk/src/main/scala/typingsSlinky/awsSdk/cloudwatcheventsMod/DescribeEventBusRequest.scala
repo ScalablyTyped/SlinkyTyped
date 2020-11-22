@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeEventBusRequest extends js.Object {
   
   /**
-    * The name of the event bus to show details for. If you omit this, the default event bus is displayed.
+    * The name or ARN of the event bus to show details for. If you omit this, the default event bus is displayed.
     */
-  var Name: js.UndefOr[EventBusName] = js.native
+  var Name: js.UndefOr[EventBusNameOrArn] = js.native
 }
 object DescribeEventBusRequest {
   
@@ -36,7 +36,7 @@ object DescribeEventBusRequest {
     }
     
     @scala.inline
-    def setName(value: EventBusName): Self = this.set("Name", value.asInstanceOf[js.Any])
+    def setName(value: EventBusNameOrArn): Self = this.set("Name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("Name", js.undefined)

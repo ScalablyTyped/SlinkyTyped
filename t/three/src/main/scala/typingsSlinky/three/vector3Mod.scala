@@ -5,6 +5,7 @@ import typingsSlinky.three.bufferAttributeMod.BufferAttribute
 import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.cylindricalMod.Cylindrical
 import typingsSlinky.three.eulerMod.Euler
+import typingsSlinky.three.interleavedBufferAttributeMod.InterleavedBufferAttribute
 import typingsSlinky.three.matrix3Mod.Matrix3
 import typingsSlinky.three.matrix4Mod.Matrix4
 import typingsSlinky.three.quaternionMod.Quaternion
@@ -125,6 +126,7 @@ object vector3Mod extends js.Object {
     def fromArray(array: ArrayLike[Double], offset: Double): this.type = js.native
     
     def fromBufferAttribute(attribute: BufferAttribute, index: Double): this.type = js.native
+    def fromBufferAttribute(attribute: InterleavedBufferAttribute, index: Double): this.type = js.native
     
     val isVector3: `true` = js.native
     
@@ -256,10 +258,19 @@ object vector3Mod extends js.Object {
     
     def unproject(camera: Camera): this.type = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var x: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var y: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var z: Double = js.native
   }
 }

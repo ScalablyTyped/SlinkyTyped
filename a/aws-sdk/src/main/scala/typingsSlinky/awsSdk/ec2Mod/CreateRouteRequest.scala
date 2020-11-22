@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateRouteRequest extends js.Object {
   
   /**
+    * The ID of the carrier gateway. You can only use this option when the VPC contains a subnet which is associated with a Wavelength Zone.
+    */
+  var CarrierGatewayId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.CarrierGatewayId] = js.native
+  
+  /**
     * The IPv4 CIDR address block used for the destination match. Routing decisions are based on the most specific match. We modify the specified CIDR block to its canonical form; for example, if you specify 100.68.0.18/18, we modify it to 100.68.0.0/18.
     */
   var DestinationCidrBlock: js.UndefOr[String] = js.native
@@ -68,6 +73,11 @@ trait CreateRouteRequest extends js.Object {
   var TransitGatewayId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.TransitGatewayId] = js.native
   
   /**
+    * The ID of a VPC endpoint. Supported for Gateway Load Balancer endpoints only.
+    */
+  var VpcEndpointId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.VpcEndpointId] = js.native
+  
+  /**
     * The ID of a VPC peering connection.
     */
   var VpcPeeringConnectionId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.VpcPeeringConnectionId] = js.native
@@ -97,6 +107,12 @@ object CreateRouteRequest {
     
     @scala.inline
     def setRouteTableId(value: RouteTableId): Self = this.set("RouteTableId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCarrierGatewayId(value: CarrierGatewayId): Self = this.set("CarrierGatewayId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCarrierGatewayId: Self = this.set("CarrierGatewayId", js.undefined)
     
     @scala.inline
     def setDestinationCidrBlock(value: String): Self = this.set("DestinationCidrBlock", value.asInstanceOf[js.Any])
@@ -163,6 +179,12 @@ object CreateRouteRequest {
     
     @scala.inline
     def deleteTransitGatewayId: Self = this.set("TransitGatewayId", js.undefined)
+    
+    @scala.inline
+    def setVpcEndpointId(value: VpcEndpointId): Self = this.set("VpcEndpointId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVpcEndpointId: Self = this.set("VpcEndpointId", js.undefined)
     
     @scala.inline
     def setVpcPeeringConnectionId(value: VpcPeeringConnectionId): Self = this.set("VpcPeeringConnectionId", value.asInstanceOf[js.Any])

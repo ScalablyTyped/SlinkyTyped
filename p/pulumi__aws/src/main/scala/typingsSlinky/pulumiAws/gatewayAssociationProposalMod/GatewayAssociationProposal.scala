@@ -30,7 +30,7 @@ class GatewayAssociationProposal protected () extends CustomResource {
   /**
     * The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
     */
-  val associatedGatewayId: Output_[js.UndefOr[String]] = js.native
+  val associatedGatewayId: Output_[String] = js.native
   
   /**
     * The ID of the AWS account that owns the VGW or transit gateway with which to associate the Direct Connect gateway.
@@ -51,13 +51,6 @@ class GatewayAssociationProposal protected () extends CustomResource {
     * AWS Account identifier of the Direct Connect Gateway's owner.
     */
   val dxGatewayOwnerAccountId: Output_[String] = js.native
-  
-  /**
-    * *Deprecated:* Use `associatedGatewayId` instead. Virtual Gateway identifier to associate with the Direct Connect Gateway.
-    *
-    * @deprecated use 'associated_gateway_id' argument instead
-    */
-  val vpnGatewayId: Output_[js.UndefOr[String]] = js.native
 }
 /* static members */
 @JSImport("@pulumi/aws/directconnect/gatewayAssociationProposal", "GatewayAssociationProposal")

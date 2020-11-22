@@ -1,9 +1,9 @@
 package typingsSlinky.officeUiFabricReact.colorSliderTypesMod
 
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.alpha
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.hue
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.transparency
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SqlQueryDatasetAction extends js.Object {
   
   /**
-    * Pre-filters applied to message data.
+    * Prefilters applied to message data.
     */
   var filters: js.UndefOr[QueryFilters] = js.native
   

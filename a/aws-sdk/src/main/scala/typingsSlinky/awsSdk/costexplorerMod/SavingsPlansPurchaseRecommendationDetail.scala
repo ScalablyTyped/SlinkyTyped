@@ -13,7 +13,7 @@ trait SavingsPlansPurchaseRecommendationDetail extends js.Object {
   var AccountId: js.UndefOr[GenericString] = js.native
   
   /**
-    * The currency code Amazon Web Services used to generate the recommendations and present potential savings.
+    * The currency code AWS used to generate the recommendations and present potential savings.
     */
   var CurrencyCode: js.UndefOr[GenericString] = js.native
   

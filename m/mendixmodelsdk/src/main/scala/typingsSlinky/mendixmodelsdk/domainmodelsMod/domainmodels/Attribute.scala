@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable
@@ -7,31 +8,45 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/attributes relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/attributes relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
-- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAttribute because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsEntity, name, `type`, value */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.Attribute")
+- typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAttribute because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsEntity, name, `type`, value, capabilities */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.Attribute")
 @js.native
 class Attribute protected ()
-  extends Element
+  extends Element[IModel]
      with IByNameReferrable {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
+  
+  /**
+    * In version 8.13.0: introduced
+    */
+  def capabilities: AttributeCapabilities = js.native
+  def capabilities_=(newValue: AttributeCapabilities): Unit = js.native
+  /**
+    * This property is required and cannot be set to null.
+    *
+    * In version 8.13.0: introduced
+    */
+  @JSName("capabilities")
+  val capabilities_FAttribute: IAttributeCapabilities = js.native
   
   def containerAsEntity: Entity = js.native
   @JSName("containerAsEntity")
@@ -42,9 +57,6 @@ class Attribute protected ()
   
   def documentation: String = js.native
   def documentation_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FAttribute: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IRefObject[T] extends js.Object {
   
-  val current: T | Null = js.native
+  var current: T | Null = js.native
 }
 object IRefObject {
   

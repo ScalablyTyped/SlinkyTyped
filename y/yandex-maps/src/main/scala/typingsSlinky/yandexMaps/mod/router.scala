@@ -19,7 +19,7 @@ object router extends js.Object {
   }
   
   @js.native
-  abstract class Route () extends IGeoObject {
+  abstract class Route () extends IGeoObject[IGeometry] {
     
     var editor: Editor = js.native
     

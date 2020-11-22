@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// No static is available
 /**
   * A global object representing the in-game market. You can use this object to track resource transactions to/from your
   * terminals, and your buy/sell orders. The object is accessible via the singleton Game.market property.

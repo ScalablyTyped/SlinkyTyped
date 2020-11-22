@@ -6,22 +6,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* browserAction types */
 /**
-  * Specifies to which tab or window the value should be set, or from which one it should be retrieved. If no tab
-  * nor window is specified, the global value is set or retrieved.
+  * Specifies to which tab or window the value should be set, or from which one it should be retrieved. If no tab nor window is specified, the global value is set or retrieved.
   */
 @js.native
 trait Details extends js.Object {
   
   /**
-    * When setting a value, it will be specific to the specified tab, and will automatically reset when the tab
-    * navigates. When getting, specifies the tab to get the value from; if there is no tab-specific value, the
-    * window one will be inherited.
+    * When setting a value, it will be specific to the specified tab, and will automatically reset when the tab navigates. When getting, specifies the tab to get the value from; if there is no tab-specific value, the window one will be inherited.
     */
   var tabId: js.UndefOr[Double] = js.native
   
   /**
-    * When setting a value, it will be specific to the specified window. When getting, specifies the window to get
-    * the value from; if there is no window-specific value, the global one will be inherited.
+    * When setting a value, it will be specific to the specified window. When getting, specifies the window to get the value from; if there is no window-specific value, the global one will be inherited.
     */
   var windowId: js.UndefOr[Double] = js.native
 }

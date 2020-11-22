@@ -43,7 +43,7 @@ trait CreateBrokerRequest extends js.Object {
   var EncryptionOptions: js.UndefOr[typingsSlinky.awsSdk.mqMod.EncryptionOptions] = js.native
   
   /**
-    * Required. The type of broker engine. Note: Currently, Amazon MQ supports only ACTIVEMQ.
+    * Required. The type of broker engine. Note: Currently, Amazon MQ supports ACTIVEMQ and RABBITMQ.
     */
   var EngineType: js.UndefOr[typingsSlinky.awsSdk.mqMod.EngineType] = js.native
   
@@ -88,7 +88,7 @@ trait CreateBrokerRequest extends js.Object {
   var StorageType: js.UndefOr[BrokerStorageType] = js.native
   
   /**
-    * The list of groups (2 maximum) that define which subnets and IP ranges the broker can use from different Availability Zones. A SINGLE_INSTANCE deployment requires one subnet (for example, the default subnet). An ACTIVE_STANDBY_MULTI_AZ deployment requires two subnets.
+    * The list of groups that define which subnets and IP ranges the broker can use from different Availability Zones. A SINGLE_INSTANCE deployment requires one subnet (for example, the default subnet). An ACTIVE_STANDBY_MULTI_AZ deployment (ACTIVEMQ) requires two subnets. A CLUSTER_MULTI_AZ deployment (RABBITMQ) has no subnet requirements when deployed with public accessibility, deployment without public accessibility requires at least one subnet.
     */
   var SubnetIds: js.UndefOr[listOfString] = js.native
   
@@ -98,7 +98,7 @@ trait CreateBrokerRequest extends js.Object {
   var Tags: js.UndefOr[mapOfString] = js.native
   
   /**
-    * Required. The list of ActiveMQ users (persons or applications) who can access queues and topics. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 2-100 characters long.
+    * Required. The list of broker users (persons or applications) who can access queues and topics. For RabbitMQ brokers, one and only one administrative user is accepted and created when a broker is first provisioned. All subsequent broker users are created by making RabbitMQ API calls directly to brokers or via the RabbitMQ Web Console. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 2-100 characters long.
     */
   var Users: js.UndefOr[listOfUser] = js.native
 }

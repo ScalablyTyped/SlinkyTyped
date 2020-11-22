@@ -16,15 +16,6 @@ class Element protected () extends Node {
     outputs: js.Array[BoundEvent],
     children: js.Array[Node],
     references: js.Array[Reference],
-    sourceSpan: ParseSourceSpan
-  ) = this()
-  def this(
-    name: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    children: js.Array[Node],
-    references: js.Array[Reference],
     sourceSpan: ParseSourceSpan,
     startSourceSpan: ParseSourceSpan
   ) = this()
@@ -36,67 +27,8 @@ class Element protected () extends Node {
     children: js.Array[Node],
     references: js.Array[Reference],
     sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: ParseSourceSpan
-  ) = this()
-  def this(
-    name: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    sourceSpan: ParseSourceSpan,
     startSourceSpan: ParseSourceSpan,
     endSourceSpan: ParseSourceSpan
-  ) = this()
-  def this(
-    name: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: Null,
-    i18n: Message
-  ) = this()
-  def this(
-    name: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: Null,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
-  ) = this()
-  def this(
-    name: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: ParseSourceSpan,
-    i18n: Message
-  ) = this()
-  def this(
-    name: String,
-    attributes: js.Array[TextAttribute],
-    inputs: js.Array[BoundAttribute],
-    outputs: js.Array[BoundEvent],
-    children: js.Array[Node],
-    references: js.Array[Reference],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: ParseSourceSpan,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
   ) = this()
   def this(
     name: String,
@@ -163,5 +95,5 @@ class Element protected () extends Node {
   
   var references: js.Array[Reference] = js.native
   
-  var startSourceSpan: ParseSourceSpan | Null = js.native
+  var startSourceSpan: ParseSourceSpan = js.native
 }

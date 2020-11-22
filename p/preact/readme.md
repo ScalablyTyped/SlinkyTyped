@@ -1,7 +1,7 @@
 
 # Scala.js typings for preact
 
-Typings are for version 10.4.6
+Typings are for version 10.5.7
 
 ## Library description:
 Fast 3kb React-compatible Virtual DOM library.

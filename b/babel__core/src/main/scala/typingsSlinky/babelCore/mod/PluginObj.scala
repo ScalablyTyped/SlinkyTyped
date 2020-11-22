@@ -14,9 +14,9 @@ trait PluginObj[S] extends js.Object {
   
   var name: js.UndefOr[String] = js.native
   
-  var post: js.UndefOr[js.ThisFunction1[/* this */ S, /* state */ S, Unit]] = js.native
+  var post: js.UndefOr[js.ThisFunction1[/* this */ S, /* file */ BabelFile, Unit]] = js.native
   
-  var pre: js.UndefOr[js.ThisFunction1[/* this */ S, /* state */ S, Unit]] = js.native
+  var pre: js.UndefOr[js.ThisFunction1[/* this */ S, /* file */ BabelFile, Unit]] = js.native
   
   var visitor: Visitor[S] = js.native
 }
@@ -65,13 +65,13 @@ object PluginObj {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setPost(value: js.ThisFunction1[/* this */ S, /* state */ S, Unit]): Self = this.set("post", value.asInstanceOf[js.Any])
+    def setPost(value: js.ThisFunction1[/* this */ S, /* file */ BabelFile, Unit]): Self = this.set("post", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePost: Self = this.set("post", js.undefined)
     
     @scala.inline
-    def setPre(value: js.ThisFunction1[/* this */ S, /* state */ S, Unit]): Self = this.set("pre", value.asInstanceOf[js.Any])
+    def setPre(value: js.ThisFunction1[/* this */ S, /* file */ BabelFile, Unit]): Self = this.set("pre", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePre: Self = this.set("pre", js.undefined)

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/Table", JSImport.Default)
+@JSImport("reactstrap/es/Table", JSImport.Default)
 @js.native
-class default[T] ()
+class default ()
   extends Component[TableProps, js.Object, js.Any]

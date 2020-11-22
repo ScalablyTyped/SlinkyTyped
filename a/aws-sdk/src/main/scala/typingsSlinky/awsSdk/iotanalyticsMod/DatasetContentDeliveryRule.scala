@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DatasetContentDeliveryRule extends js.Object {
   
   /**
-    * The destination to which data set contents are delivered.
+    * The destination to which dataset contents are delivered.
     */
   var destination: DatasetContentDeliveryDestination = js.native
   
   /**
-    * The name of the data set content delivery rules entry.
+    * The name of the dataset content delivery rules entry.
     */
   var entryName: js.UndefOr[EntryName] = js.native
 }

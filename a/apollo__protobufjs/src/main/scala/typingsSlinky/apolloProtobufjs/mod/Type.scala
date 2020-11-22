@@ -15,7 +15,7 @@ class Type protected () extends NamespaceBase {
     * @param [options] Declared options
     */
   def this(name: String) = this()
-  def this(name: String, options: StringDictionary[js.Any]) = this()
+  def this(name: String, options: StringDictionary[js.UndefOr[js.Any]]) = this()
   
   /**
     * Creates a new message of this type using the specified properties.
@@ -23,7 +23,7 @@ class Type protected () extends NamespaceBase {
     * @returns Message instance
     */
   def create(): Message[js.Object] = js.native
-  def create(properties: StringDictionary[js.Any]): Message[js.Object] = js.native
+  def create(properties: StringDictionary[js.UndefOr[js.Any]]): Message[js.Object] = js.native
   
   /**
     * The registered constructor, if any registered, otherwise a generic constructor.
@@ -54,8 +54,8 @@ class Type protected () extends NamespaceBase {
   def decodeDelimited(reader: Reader): Message[js.Object] = js.native
   def decodeDelimited(reader: js.typedarray.Uint8Array): Message[js.Object] = js.native
   
-  def encode(message: StringDictionary[js.Any]): Writer = js.native
-  def encode(message: StringDictionary[js.Any], writer: Writer): Writer = js.native
+  def encode(message: StringDictionary[js.UndefOr[js.Any]]): Writer = js.native
+  def encode(message: StringDictionary[js.UndefOr[js.Any]], writer: Writer): Writer = js.native
   /**
     * Encodes a message of this type. Does not implicitly {@link Type#verify|verify} messages.
     * @param message Message instance or plain object
@@ -65,8 +65,8 @@ class Type protected () extends NamespaceBase {
   def encode(message: Message[js.Object]): Writer = js.native
   def encode(message: Message[js.Object], writer: Writer): Writer = js.native
   
-  def encodeDelimited(message: StringDictionary[js.Any]): Writer = js.native
-  def encodeDelimited(message: StringDictionary[js.Any], writer: Writer): Writer = js.native
+  def encodeDelimited(message: StringDictionary[js.UndefOr[js.Any]]): Writer = js.native
+  def encodeDelimited(message: StringDictionary[js.UndefOr[js.Any]], writer: Writer): Writer = js.native
   /**
     * Encodes a message of this type preceeded by its byte length as a varint. Does not implicitly {@link Type#verify|verify} messages.
     * @param message Message instance or plain object
@@ -80,20 +80,20 @@ class Type protected () extends NamespaceBase {
   var extensions: js.Array[js.Array[Double]] = js.native
   
   /** Message fields. */
-  var fields: StringDictionary[Field] = js.native
+  var fields: StringDictionary[js.UndefOr[Field]] = js.native
   
   /** Fields of this message as an array for iteration. */
   val fieldsArray: js.Array[Field] = js.native
   
   /** Message fields by id. */
-  val fieldsById: NumberDictionary[Field] = js.native
+  val fieldsById: NumberDictionary[js.UndefOr[Field]] = js.native
   
   /**
     * Creates a new message of this type from a plain object. Also converts values to their respective internal types.
     * @param object Plain object to convert
     * @returns Message instance
     */
-  def fromObject(`object`: StringDictionary[js.Any]): Message[js.Object] = js.native
+  def fromObject(`object`: StringDictionary[js.UndefOr[js.Any]]): Message[js.Object] = js.native
   
   /**
     * Tests if the specified id is reserved.
@@ -110,7 +110,7 @@ class Type protected () extends NamespaceBase {
   def isReservedName(name: String): Boolean = js.native
   
   /** Oneofs declared within this namespace, if any. */
-  var oneofs: StringDictionary[OneOf] = js.native
+  var oneofs: StringDictionary[js.UndefOr[OneOf]] = js.native
   
   /** Oneofs of this message as an array for iteration. */
   val oneofsArray: js.Array[OneOf] = js.native
@@ -130,15 +130,15 @@ class Type protected () extends NamespaceBase {
     * @param [options] Conversion options
     * @returns Plain object
     */
-  def toObject(message: Message[js.Object]): StringDictionary[js.Any] = js.native
-  def toObject(message: Message[js.Object], options: IConversionOptions): StringDictionary[js.Any] = js.native
+  def toObject(message: Message[js.Object]): StringDictionary[js.UndefOr[js.Any]] = js.native
+  def toObject(message: Message[js.Object], options: IConversionOptions): StringDictionary[js.UndefOr[js.Any]] = js.native
   
   /**
     * Verifies that field values are valid and that required fields are present.
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
-  def verify(message: StringDictionary[js.Any]): Null | String = js.native
+  def verify(message: StringDictionary[js.UndefOr[js.Any]]): Null | String = js.native
 }
 /* static members */
 @JSImport("@apollo/protobufjs", "Type")

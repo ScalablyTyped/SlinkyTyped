@@ -1,7 +1,11 @@
 package typingsSlinky.nodelibFsStat
 
+import typingsSlinky.node.fsMod.BigIntOptions
+import typingsSlinky.node.fsMod.BigIntStats
 import typingsSlinky.node.fsMod.PathLike
+import typingsSlinky.node.fsMod.StatOptions
 import typingsSlinky.node.fsMod.Stats
+import typingsSlinky.nodelibFsStat.anon.FnCall
 import typingsSlinky.nodelibFsStat.anon.PartialFileSystemAdapter
 import typingsSlinky.nodelibFsStat.anon.Typeoflstat
 import typingsSlinky.nodelibFsStat.anon.Typeofstat
@@ -30,7 +34,9 @@ object fsMod extends js.Object {
     var stat: Typeofstat = js.native
     
     def statSync(path: PathLike): Stats = js.native
+    def statSync(path: PathLike, options: BigIntOptions): BigIntStats = js.native
+    def statSync(path: PathLike, options: StatOptions): Stats | BigIntStats = js.native
     @JSName("statSync")
-    var statSync_Original: js.Function1[/* path */ PathLike, Stats] = js.native
+    var statSync_Original: FnCall = js.native
   }
 }

@@ -19,6 +19,8 @@ trait GanttOptions extends js.Object {
   
   var change: js.UndefOr[js.Function1[/* e */ GanttChangeEvent, Unit]] = js.native
   
+  var columnMenu: js.UndefOr[Boolean | js.Any] = js.native
+  
   var columnResize: js.UndefOr[js.Function1[/* e */ GanttColumnResizeEvent, Unit]] = js.native
   
   var columnResizeHandleWidth: js.UndefOr[Double] = js.native
@@ -40,6 +42,8 @@ trait GanttOptions extends js.Object {
   var edit: js.UndefOr[js.Function1[/* e */ GanttEditEvent, Unit]] = js.native
   
   var editable: js.UndefOr[Boolean | GanttEditable] = js.native
+  
+  var filterable: js.UndefOr[Boolean | js.Any] = js.native
   
   var height: js.UndefOr[Double | String] = js.native
   
@@ -69,6 +73,8 @@ trait GanttOptions extends js.Object {
   
   var remove: js.UndefOr[js.Function1[/* e */ GanttRemoveEvent, Unit]] = js.native
   
+  var reorderable: js.UndefOr[Boolean] = js.native
+  
   var resizable: js.UndefOr[Boolean] = js.native
   
   var resize: js.UndefOr[js.Function1[/* e */ GanttResizeEvent, Unit]] = js.native
@@ -92,6 +98,8 @@ trait GanttOptions extends js.Object {
   var snap: js.UndefOr[Boolean] = js.native
   
   var taskTemplate: js.UndefOr[String | js.Function] = js.native
+  
+  var togglePlannedTasks: js.UndefOr[js.Function1[/* e */ GanttTogglePlannedTasks, Unit]] = js.native
   
   var toolbar: js.UndefOr[js.Array[GanttToolbarItem]] = js.native
   
@@ -161,6 +169,12 @@ object GanttOptions {
     def deleteChange: Self = this.set("change", js.undefined)
     
     @scala.inline
+    def setColumnMenu(value: Boolean | js.Any): Self = this.set("columnMenu", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnMenu: Self = this.set("columnMenu", js.undefined)
+    
+    @scala.inline
     def setColumnResize(value: /* e */ GanttColumnResizeEvent => Unit): Self = this.set("columnResize", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -228,6 +242,12 @@ object GanttOptions {
     
     @scala.inline
     def deleteEditable: Self = this.set("editable", js.undefined)
+    
+    @scala.inline
+    def setFilterable(value: Boolean | js.Any): Self = this.set("filterable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFilterable: Self = this.set("filterable", js.undefined)
     
     @scala.inline
     def setHeight(value: Double | String): Self = this.set("height", value.asInstanceOf[js.Any])
@@ -314,6 +334,12 @@ object GanttOptions {
     def deleteRemove: Self = this.set("remove", js.undefined)
     
     @scala.inline
+    def setReorderable(value: Boolean): Self = this.set("reorderable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReorderable: Self = this.set("reorderable", js.undefined)
+    
+    @scala.inline
     def setResizable(value: Boolean): Self = this.set("resizable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -384,6 +410,12 @@ object GanttOptions {
     
     @scala.inline
     def deleteTaskTemplate: Self = this.set("taskTemplate", js.undefined)
+    
+    @scala.inline
+    def setTogglePlannedTasks(value: /* e */ GanttTogglePlannedTasks => Unit): Self = this.set("togglePlannedTasks", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteTogglePlannedTasks: Self = this.set("togglePlannedTasks", js.undefined)
     
     @scala.inline
     def setToolbarVarargs(value: GanttToolbarItem*): Self = this.set("toolbar", js.Array(value :_*))

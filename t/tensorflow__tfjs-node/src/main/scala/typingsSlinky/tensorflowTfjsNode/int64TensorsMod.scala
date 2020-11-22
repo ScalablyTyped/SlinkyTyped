@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object int64TensorsMod extends js.Object {
   
+  def encodeInt32ArrayAsInt64(value: js.typedarray.Int32Array): js.typedarray.Int32Array = js.native
+  
   @js.native
   class Int64Scalar protected () extends js.Object {
     def this(value: Double) = this()

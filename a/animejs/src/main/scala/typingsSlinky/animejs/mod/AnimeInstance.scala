@@ -47,6 +47,8 @@ trait AnimeInstance extends AnimeCallBack {
   
   def seek(time: Double): Unit = js.native
   
+  def tick(time: Double): Unit = js.native
+  
   var timelineOffset: Double = js.native
 }
 object AnimeInstance {
@@ -73,9 +75,10 @@ object AnimeInstance {
     reverse: () => Unit,
     reversed: Boolean,
     seek: Double => Unit,
+    tick: Double => Unit,
     timelineOffset: Double
   ): AnimeInstance = {
-    val __obj = js.Dynamic.literal(animatables = animatables.asInstanceOf[js.Any], animations = animations.asInstanceOf[js.Any], autoplay = autoplay.asInstanceOf[js.Any], began = began.asInstanceOf[js.Any], completed = completed.asInstanceOf[js.Any], currentTime = currentTime.asInstanceOf[js.Any], delay = delay.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], finished = finished.asInstanceOf[js.Any], loop = loop.asInstanceOf[js.Any], pause = js.Any.fromFunction0(pause), paused = paused.asInstanceOf[js.Any], play = js.Any.fromFunction0(play), progress = progress.asInstanceOf[js.Any], remaining = remaining.asInstanceOf[js.Any], restart = js.Any.fromFunction0(restart), reverse = js.Any.fromFunction0(reverse), reversed = reversed.asInstanceOf[js.Any], seek = js.Any.fromFunction1(seek), timelineOffset = timelineOffset.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(animatables = animatables.asInstanceOf[js.Any], animations = animations.asInstanceOf[js.Any], autoplay = autoplay.asInstanceOf[js.Any], began = began.asInstanceOf[js.Any], completed = completed.asInstanceOf[js.Any], currentTime = currentTime.asInstanceOf[js.Any], delay = delay.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], finished = finished.asInstanceOf[js.Any], loop = loop.asInstanceOf[js.Any], pause = js.Any.fromFunction0(pause), paused = paused.asInstanceOf[js.Any], play = js.Any.fromFunction0(play), progress = progress.asInstanceOf[js.Any], remaining = remaining.asInstanceOf[js.Any], restart = js.Any.fromFunction0(restart), reverse = js.Any.fromFunction0(reverse), reversed = reversed.asInstanceOf[js.Any], seek = js.Any.fromFunction1(seek), tick = js.Any.fromFunction1(tick), timelineOffset = timelineOffset.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimeInstance]
   }
   
@@ -159,6 +162,9 @@ object AnimeInstance {
     
     @scala.inline
     def setSeek(value: Double => Unit): Self = this.set("seek", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setTick(value: Double => Unit): Self = this.set("tick", js.Any.fromFunction1(value))
     
     @scala.inline
     def setTimelineOffset(value: Double): Self = this.set("timelineOffset", value.asInstanceOf[js.Any])

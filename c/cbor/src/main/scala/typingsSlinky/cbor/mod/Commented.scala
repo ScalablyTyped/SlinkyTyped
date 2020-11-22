@@ -28,4 +28,10 @@ object Commented extends js.Object {
   def comment(input: Buffer, options: String, cb: commentCallback): Unit = js.native
   def comment(input: Buffer, options: CommentOptions): js.Promise[String] = js.native
   def comment(input: Buffer, options: CommentOptions, cb: commentCallback): Unit = js.native
+  def comment(input: js.typedarray.ArrayBufferView): js.Promise[String] = js.native
+  def comment(input: js.typedarray.ArrayBufferView, cb: commentCallback): Unit = js.native
+  def comment(input: js.typedarray.ArrayBufferView, options: String): js.Promise[String] = js.native
+  def comment(input: js.typedarray.ArrayBufferView, options: String, cb: commentCallback): Unit = js.native
+  def comment(input: js.typedarray.ArrayBufferView, options: CommentOptions): js.Promise[String] = js.native
+  def comment(input: js.typedarray.ArrayBufferView, options: CommentOptions, cb: commentCallback): Unit = js.native
 }

@@ -243,8 +243,6 @@ object r3IdentifiersMod extends js.Object {
     
     var sanitizeUrlOrResourceUrl: ExternalReference = js.native
     
-    var select: ExternalReference = js.native
-    
     var setComponentScope: ExternalReference = js.native
     
     var setNgModuleScope: ExternalReference = js.native
@@ -322,6 +320,12 @@ object r3IdentifiersMod extends js.Object {
     var textInterpolate8: ExternalReference = js.native
     
     var textInterpolateV: ExternalReference = js.native
+    
+    var trustConstantHtml: ExternalReference = js.native
+    
+    var trustConstantResourceUrl: ExternalReference = js.native
+    
+    var trustConstantScript: ExternalReference = js.native
     
     var viewQuery: ExternalReference = js.native
   }

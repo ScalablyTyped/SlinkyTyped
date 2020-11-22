@@ -1,5 +1,6 @@
 package typingsSlinky.reactD3Graph.mod
 
+import typingsSlinky.reactD3Graph.anon.Height
 import typingsSlinky.reactD3Graph.reactD3GraphStrings.SAME
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,7 +35,7 @@ trait GraphLevelNodeConfiguration[N /* <: GraphNode */] extends js.Object {
   
   var renderLabel: Boolean = js.native
   
-  var size: Double = js.native
+  var size: Double | Height = js.native
   
   var strokeColor: String = js.native
   
@@ -63,7 +64,7 @@ object GraphLevelNodeConfiguration {
     mouseCursor: String,
     opacity: Double,
     renderLabel: Boolean,
-    size: Double,
+    size: Double | Height,
     strokeColor: String,
     strokeWidth: Double,
     svg: String,
@@ -132,7 +133,7 @@ object GraphLevelNodeConfiguration {
     def setRenderLabel(value: Boolean): Self = this.set("renderLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setSize(value: Double | Height): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStrokeColor(value: String): Self = this.set("strokeColor", value.asInstanceOf[js.Any])

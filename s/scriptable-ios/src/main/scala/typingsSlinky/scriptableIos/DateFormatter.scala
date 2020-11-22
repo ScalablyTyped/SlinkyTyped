@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * _Converts between texts and strings._
+  * _Converts between dates and strings._
   *
   * To convert between dates and their textual representation, use the `string()` and `date()` functions.
   * @see https://docs.scriptable.app/dateformatter/#-new-dateformatter
@@ -140,7 +140,7 @@ trait DateFormatter extends js.Object {
   /**
     * _Use a medium style for the date._
     *
-    * Dates with a medium style usually includes abbreviations, e.g. "Aug 23, 2019" or "7:16:42 PM".
+    * Dates with a medium style usually includes abbreviations, e.g. "Aug 23, 2019".
     * @see https://docs.scriptable.app/dateformatter/#-usemediumdatestyle
     */
   def useMediumDateStyle(): Unit = js.native

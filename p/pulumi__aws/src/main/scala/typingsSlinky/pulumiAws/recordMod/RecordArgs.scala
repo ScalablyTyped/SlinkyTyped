@@ -1,11 +1,11 @@
 package typingsSlinky.pulumiAws.recordMod
 
+import typingsSlinky.pulumiAws.enumsRoute53Mod.RecordType
 import typingsSlinky.pulumiAws.inputMod.route53.RecordAlias
 import typingsSlinky.pulumiAws.inputMod.route53.RecordFailoverRoutingPolicy
 import typingsSlinky.pulumiAws.inputMod.route53.RecordGeolocationRoutingPolicy
 import typingsSlinky.pulumiAws.inputMod.route53.RecordLatencyRoutingPolicy
 import typingsSlinky.pulumiAws.inputMod.route53.RecordWeightedRoutingPolicy
-import typingsSlinky.pulumiAws.recordTypeMod.RecordType
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`

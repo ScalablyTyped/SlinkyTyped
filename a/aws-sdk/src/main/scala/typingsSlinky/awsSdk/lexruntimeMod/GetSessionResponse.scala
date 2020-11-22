@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetSessionResponse extends js.Object {
   
   /**
+    * A list of active contexts for the session. A context can be set when an intent is fulfilled or by calling the PostContent, PostText, or PutSession operation. You can use a context to control the intents that can follow up an intent, or to modify the operation of your application.
+    */
+  var activeContexts: js.UndefOr[ActiveContextsList] = js.native
+  
+  /**
     * Describes the current state of the bot.
     */
   var dialogAction: js.UndefOr[DialogAction] = js.native
@@ -49,6 +54,15 @@ object GetSessionResponse {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setActiveContextsVarargs(value: ActiveContext*): Self = this.set("activeContexts", js.Array(value :_*))
+    
+    @scala.inline
+    def setActiveContexts(value: ActiveContextsList): Self = this.set("activeContexts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteActiveContexts: Self = this.set("activeContexts", js.undefined)
     
     @scala.inline
     def setDialogAction(value: DialogAction): Self = this.set("dialogAction", value.asInstanceOf[js.Any])

@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class QuestionCheckboxModel protected () extends QuestionCheckboxBase {
   def this(name: String) = this()
   
+  def getItemClass(item: js.Any): js.Any = js.native
+  
   /**
     * Set this property to true, to show the "None" item on the bottom. If end-user checks this item, all other items would be unchecked.
     */
@@ -25,15 +27,14 @@ class QuestionCheckboxModel protected () extends QuestionCheckboxBase {
     */
   var isAllSelected: Boolean = js.native
   
-  /**
-    * Returns true if item is checked
-    * @param item checkbox item value
-    */
-  def isItemSelected(item: ItemValue): Boolean = js.native
-  
   val locNoneText: LocalizableString = js.native
   
   val locSelectAllText: LocalizableString = js.native
+  
+  /**
+    * Set this property different to 0 to limit the number of selected choices in the checkbox.
+    */
+  var maxSelectedChoices: Double = js.native
   
   /**
     * Returns the none item. By using this property, you may change programmatically it's value and text.

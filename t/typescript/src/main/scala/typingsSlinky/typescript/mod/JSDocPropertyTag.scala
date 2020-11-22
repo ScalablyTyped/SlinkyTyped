@@ -10,5 +10,5 @@ trait JSDocPropertyTag
      with VariableLikeDeclaration {
   
   @JSName("kind")
-  var kind_JSDocPropertyTag: typingsSlinky.typescript.mod.SyntaxKind.JSDocPropertyTag = js.native
+  val kind_JSDocPropertyTag: typingsSlinky.typescript.mod.SyntaxKind.JSDocPropertyTag = js.native
 }

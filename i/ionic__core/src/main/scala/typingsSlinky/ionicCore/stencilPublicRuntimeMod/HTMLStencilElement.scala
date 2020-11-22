@@ -9,7 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait HTMLStencilElement extends HTMLElement {
   
   def componentOnReady(): js.Promise[this.type] = js.native
-  
-  /** @deprecated */
-  def forceUpdate(): Unit = js.native
 }

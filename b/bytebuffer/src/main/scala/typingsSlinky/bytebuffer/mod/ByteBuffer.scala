@@ -15,59 +15,59 @@ trait ByteBuffer extends js.Object {
   /**
     * Switches (to) big endian byte order.
     */
-  def BE(): ByteBuffer = js.native
-  def BE(bigEndian: Boolean): ByteBuffer = js.native
+  def BE(): this.type = js.native
+  def BE(bigEndian: Boolean): this.type = js.native
   
   /**
     * Switches (to) little endian byte order.
     */
-  def LE(): ByteBuffer = js.native
-  def LE(bigEndian: Boolean): ByteBuffer = js.native
+  def LE(): this.type = js.native
+  def LE(bigEndian: Boolean): this.type = js.native
   
-  def append(source: String): ByteBuffer = js.native
-  def append(source: String, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def append(source: String, encoding: String): ByteBuffer = js.native
-  def append(source: String, encoding: String, offset: Double): ByteBuffer = js.native
-  def append(source: String, encoding: Double): ByteBuffer = js.native
-  def append(source: String, encoding: Double, offset: Double): ByteBuffer = js.native
+  def append(source: String): this.type = js.native
+  def append(source: String, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def append(source: String, encoding: String): this.type = js.native
+  def append(source: String, encoding: String, offset: Double): this.type = js.native
+  def append(source: String, encoding: Double): this.type = js.native
+  def append(source: String, encoding: Double, offset: Double): this.type = js.native
   /**
     * Appends some data to this ByteBuffer. This will overwrite any contents behind the specified offset up to the appended data's length.
     */
-  def append(source: ByteBuffer): ByteBuffer = js.native
-  def append(source: ByteBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def append(source: ByteBuffer, encoding: String): ByteBuffer = js.native
-  def append(source: ByteBuffer, encoding: String, offset: Double): ByteBuffer = js.native
-  def append(source: ByteBuffer, encoding: Double): ByteBuffer = js.native
-  def append(source: ByteBuffer, encoding: Double, offset: Double): ByteBuffer = js.native
-  def append(source: Buffer): ByteBuffer = js.native
-  def append(source: Buffer, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def append(source: Buffer, encoding: String): ByteBuffer = js.native
-  def append(source: Buffer, encoding: String, offset: Double): ByteBuffer = js.native
-  def append(source: Buffer, encoding: Double): ByteBuffer = js.native
-  def append(source: Buffer, encoding: Double, offset: Double): ByteBuffer = js.native
-  def append(source: js.typedarray.ArrayBuffer): ByteBuffer = js.native
-  def append(source: js.typedarray.ArrayBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def append(source: js.typedarray.ArrayBuffer, encoding: String): ByteBuffer = js.native
-  def append(source: js.typedarray.ArrayBuffer, encoding: String, offset: Double): ByteBuffer = js.native
-  def append(source: js.typedarray.ArrayBuffer, encoding: Double): ByteBuffer = js.native
-  def append(source: js.typedarray.ArrayBuffer, encoding: Double, offset: Double): ByteBuffer = js.native
-  def append(source: js.typedarray.Uint8Array): ByteBuffer = js.native
-  def append(source: js.typedarray.Uint8Array, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def append(source: js.typedarray.Uint8Array, encoding: String): ByteBuffer = js.native
-  def append(source: js.typedarray.Uint8Array, encoding: String, offset: Double): ByteBuffer = js.native
-  def append(source: js.typedarray.Uint8Array, encoding: Double): ByteBuffer = js.native
-  def append(source: js.typedarray.Uint8Array, encoding: Double, offset: Double): ByteBuffer = js.native
+  def append(source: ByteBuffer): this.type = js.native
+  def append(source: ByteBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def append(source: ByteBuffer, encoding: String): this.type = js.native
+  def append(source: ByteBuffer, encoding: String, offset: Double): this.type = js.native
+  def append(source: ByteBuffer, encoding: Double): this.type = js.native
+  def append(source: ByteBuffer, encoding: Double, offset: Double): this.type = js.native
+  def append(source: Buffer): this.type = js.native
+  def append(source: Buffer, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def append(source: Buffer, encoding: String): this.type = js.native
+  def append(source: Buffer, encoding: String, offset: Double): this.type = js.native
+  def append(source: Buffer, encoding: Double): this.type = js.native
+  def append(source: Buffer, encoding: Double, offset: Double): this.type = js.native
+  def append(source: js.typedarray.ArrayBuffer): this.type = js.native
+  def append(source: js.typedarray.ArrayBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def append(source: js.typedarray.ArrayBuffer, encoding: String): this.type = js.native
+  def append(source: js.typedarray.ArrayBuffer, encoding: String, offset: Double): this.type = js.native
+  def append(source: js.typedarray.ArrayBuffer, encoding: Double): this.type = js.native
+  def append(source: js.typedarray.ArrayBuffer, encoding: Double, offset: Double): this.type = js.native
+  def append(source: js.typedarray.Uint8Array): this.type = js.native
+  def append(source: js.typedarray.Uint8Array, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def append(source: js.typedarray.Uint8Array, encoding: String): this.type = js.native
+  def append(source: js.typedarray.Uint8Array, encoding: String, offset: Double): this.type = js.native
+  def append(source: js.typedarray.Uint8Array, encoding: Double): this.type = js.native
+  def append(source: js.typedarray.Uint8Array, encoding: Double, offset: Double): this.type = js.native
   
   /**
     * Appends this ByteBuffer's contents to another ByteBuffer. This will overwrite any contents behind the specified offset up to the length of this ByteBuffer's data.
     */
-  def appendTo(target: ByteBuffer): ByteBuffer = js.native
-  def appendTo(target: ByteBuffer, offset: Double): ByteBuffer = js.native
+  def appendTo(target: ByteBuffer): this.type = js.native
+  def appendTo(target: ByteBuffer, offset: Double): this.type = js.native
   
   /**
     * Enables or disables assertions of argument types and offsets. Assertions are enabled by default but you can opt to disable them if your code already makes sure that everything is valid.
     */
-  def assert(assert: Boolean): ByteBuffer = js.native
+  def assert(assert: Boolean): this.type = js.native
   
   /**
     * Backing buffer.
@@ -83,17 +83,17 @@ trait ByteBuffer extends js.Object {
     * Clears this ByteBuffer's offsets by setting ByteBuffer#offset to 0 and
     * ByteBuffer#limit to the backing buffer's capacity. Discards ByteBuffer#markedOffset.
     */
-  def clear(): ByteBuffer = js.native
+  def clear(): this.type = js.native
   
   def clone(copy: Boolean): ByteBuffer = js.native
   
   /**
     * Compacts this ByteBuffer to be backed by a ByteBuffer#buffer of its contents' length. Contents are the bytes between ByteBuffer#offset and ByteBuffer#limit. Will set offset = 0 and limit = capacity and adapt ByteBuffer#markedOffset to the same relative position if set.
     */
-  def compact(): ByteBuffer = js.native
-  def compact(begin: js.UndefOr[scala.Nothing], end: Double): ByteBuffer = js.native
-  def compact(begin: Double): ByteBuffer = js.native
-  def compact(begin: Double, end: Double): ByteBuffer = js.native
+  def compact(): this.type = js.native
+  def compact(begin: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
+  def compact(begin: Double): this.type = js.native
+  def compact(begin: Double, end: Double): this.type = js.native
   
   /**
     * Creates a copy of this ByteBuffer's contents. Contents are the bytes between ByteBuffer#offset and ByteBuffer#limit.
@@ -106,51 +106,51 @@ trait ByteBuffer extends js.Object {
   /**
     * Copies this ByteBuffer's contents to another ByteBuffer. Contents are the bytes between ByteBuffer#offset and ByteBuffer#limit.
     */
-  def copyTo(target: ByteBuffer): ByteBuffer = js.native
+  def copyTo(target: ByteBuffer): this.type = js.native
   def copyTo(
     target: ByteBuffer,
     targetOffset: js.UndefOr[scala.Nothing],
     sourceOffset: js.UndefOr[scala.Nothing],
     sourceLimit: Double
-  ): ByteBuffer = js.native
-  def copyTo(target: ByteBuffer, targetOffset: js.UndefOr[scala.Nothing], sourceOffset: Double): ByteBuffer = js.native
+  ): this.type = js.native
+  def copyTo(target: ByteBuffer, targetOffset: js.UndefOr[scala.Nothing], sourceOffset: Double): this.type = js.native
   def copyTo(
     target: ByteBuffer,
     targetOffset: js.UndefOr[scala.Nothing],
     sourceOffset: Double,
     sourceLimit: Double
-  ): ByteBuffer = js.native
-  def copyTo(target: ByteBuffer, targetOffset: Double): ByteBuffer = js.native
+  ): this.type = js.native
+  def copyTo(target: ByteBuffer, targetOffset: Double): this.type = js.native
   def copyTo(
     target: ByteBuffer,
     targetOffset: Double,
     sourceOffset: js.UndefOr[scala.Nothing],
     sourceLimit: Double
-  ): ByteBuffer = js.native
-  def copyTo(target: ByteBuffer, targetOffset: Double, sourceOffset: Double): ByteBuffer = js.native
-  def copyTo(target: ByteBuffer, targetOffset: Double, sourceOffset: Double, sourceLimit: Double): ByteBuffer = js.native
+  ): this.type = js.native
+  def copyTo(target: ByteBuffer, targetOffset: Double, sourceOffset: Double): this.type = js.native
+  def copyTo(target: ByteBuffer, targetOffset: Double, sourceOffset: Double, sourceLimit: Double): this.type = js.native
   
   /**
     * Makes sure that this ByteBuffer is backed by a ByteBuffer#buffer of at least the specified capacity. If the current capacity is exceeded, it will be doubled. If double the current capacity is less than the required capacity, the required capacity will be used instead.
     */
-  def ensureCapacity(capacity: Double): ByteBuffer = js.native
+  def ensureCapacity(capacity: Double): this.type = js.native
   
-  def fill(value: String): ByteBuffer = js.native
-  def fill(value: String, begin: js.UndefOr[scala.Nothing], end: Double): ByteBuffer = js.native
-  def fill(value: String, begin: Double): ByteBuffer = js.native
-  def fill(value: String, begin: Double, end: Double): ByteBuffer = js.native
+  def fill(value: String): this.type = js.native
+  def fill(value: String, begin: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
+  def fill(value: String, begin: Double): this.type = js.native
+  def fill(value: String, begin: Double, end: Double): this.type = js.native
   /**
     * Overwrites this ByteBuffer's contents with the specified value. Contents are the bytes between ByteBuffer#offset and ByteBuffer#limit.
     */
-  def fill(value: Double): ByteBuffer = js.native
-  def fill(value: Double, begin: js.UndefOr[scala.Nothing], end: Double): ByteBuffer = js.native
-  def fill(value: Double, begin: Double): ByteBuffer = js.native
-  def fill(value: Double, begin: Double, end: Double): ByteBuffer = js.native
+  def fill(value: Double): this.type = js.native
+  def fill(value: Double, begin: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
+  def fill(value: Double, begin: Double): this.type = js.native
+  def fill(value: Double, begin: Double, end: Double): this.type = js.native
   
   /**
     * Makes this ByteBuffer ready for a new sequence of write or relative read operations. Sets limit = offset and offset = 0. Make sure always to flip a ByteBuffer when all relative read or write operations are complete.
     */
-  def flip(): ByteBuffer = js.native
+  def flip(): this.type = js.native
   
   /**
     * Absolute limit of the contained data. Set to the backing buffer's capacity upon allocation.
@@ -165,8 +165,8 @@ trait ByteBuffer extends js.Object {
   /**
     * Marks an offset on this ByteBuffer to be used later.
     */
-  def mark(): ByteBuffer = js.native
-  def mark(offset: Double): ByteBuffer = js.native
+  def mark(): this.type = js.native
+  def mark(offset: Double): this.type = js.native
   
   /**
     * Marked offset.
@@ -186,41 +186,41 @@ trait ByteBuffer extends js.Object {
   /**
     * Sets the byte order.
     */
-  def order(littleEndian: Boolean): ByteBuffer = js.native
+  def order(littleEndian: Boolean): this.type = js.native
   
-  def prepend(source: String): ByteBuffer = js.native
-  def prepend(source: String, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def prepend(source: String, encoding: String): ByteBuffer = js.native
-  def prepend(source: String, encoding: String, offset: Double): ByteBuffer = js.native
-  def prepend(source: String, encoding: Double): ByteBuffer = js.native
-  def prepend(source: String, encoding: Double, offset: Double): ByteBuffer = js.native
+  def prepend(source: String): this.type = js.native
+  def prepend(source: String, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def prepend(source: String, encoding: String): this.type = js.native
+  def prepend(source: String, encoding: String, offset: Double): this.type = js.native
+  def prepend(source: String, encoding: Double): this.type = js.native
+  def prepend(source: String, encoding: Double, offset: Double): this.type = js.native
   /**
     * Prepends some data to this ByteBuffer. This will overwrite any contents before the specified offset up to the prepended data's length. If there is not enough space available before the specified offset, the backing buffer will be resized and its contents moved accordingly.
     */
-  def prepend(source: ByteBuffer): ByteBuffer = js.native
-  def prepend(source: ByteBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def prepend(source: ByteBuffer, encoding: String): ByteBuffer = js.native
-  def prepend(source: ByteBuffer, encoding: String, offset: Double): ByteBuffer = js.native
-  def prepend(source: ByteBuffer, encoding: Double): ByteBuffer = js.native
-  def prepend(source: ByteBuffer, encoding: Double, offset: Double): ByteBuffer = js.native
-  def prepend(source: Buffer): ByteBuffer = js.native
-  def prepend(source: Buffer, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def prepend(source: Buffer, encoding: String): ByteBuffer = js.native
-  def prepend(source: Buffer, encoding: String, offset: Double): ByteBuffer = js.native
-  def prepend(source: Buffer, encoding: Double): ByteBuffer = js.native
-  def prepend(source: Buffer, encoding: Double, offset: Double): ByteBuffer = js.native
-  def prepend(source: js.typedarray.ArrayBuffer): ByteBuffer = js.native
-  def prepend(source: js.typedarray.ArrayBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def prepend(source: js.typedarray.ArrayBuffer, encoding: String): ByteBuffer = js.native
-  def prepend(source: js.typedarray.ArrayBuffer, encoding: String, offset: Double): ByteBuffer = js.native
-  def prepend(source: js.typedarray.ArrayBuffer, encoding: Double): ByteBuffer = js.native
-  def prepend(source: js.typedarray.ArrayBuffer, encoding: Double, offset: Double): ByteBuffer = js.native
+  def prepend(source: ByteBuffer): this.type = js.native
+  def prepend(source: ByteBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def prepend(source: ByteBuffer, encoding: String): this.type = js.native
+  def prepend(source: ByteBuffer, encoding: String, offset: Double): this.type = js.native
+  def prepend(source: ByteBuffer, encoding: Double): this.type = js.native
+  def prepend(source: ByteBuffer, encoding: Double, offset: Double): this.type = js.native
+  def prepend(source: Buffer): this.type = js.native
+  def prepend(source: Buffer, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def prepend(source: Buffer, encoding: String): this.type = js.native
+  def prepend(source: Buffer, encoding: String, offset: Double): this.type = js.native
+  def prepend(source: Buffer, encoding: Double): this.type = js.native
+  def prepend(source: Buffer, encoding: Double, offset: Double): this.type = js.native
+  def prepend(source: js.typedarray.ArrayBuffer): this.type = js.native
+  def prepend(source: js.typedarray.ArrayBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def prepend(source: js.typedarray.ArrayBuffer, encoding: String): this.type = js.native
+  def prepend(source: js.typedarray.ArrayBuffer, encoding: String, offset: Double): this.type = js.native
+  def prepend(source: js.typedarray.ArrayBuffer, encoding: Double): this.type = js.native
+  def prepend(source: js.typedarray.ArrayBuffer, encoding: Double, offset: Double): this.type = js.native
   
   /**
     * Prepends this ByteBuffer to another ByteBuffer. This will overwrite any contents before the specified offset up to the prepended data's length. If there is not enough space available before the specified offset, the backing buffer will be resized and its contents moved accordingly.
     */
-  def prependTo(target: ByteBuffer): ByteBuffer = js.native
-  def prependTo(target: ByteBuffer, offset: Double): ByteBuffer = js.native
+  def prependTo(target: ByteBuffer): this.type = js.native
+  def prependTo(target: ByteBuffer, offset: Double): this.type = js.native
   
   /**
     * Prints debug information about this ByteBuffer's contents.
@@ -394,25 +394,25 @@ trait ByteBuffer extends js.Object {
   /**
     * Resets this ByteBuffer's ByteBuffer#offset. If an offset has been marked through ByteBuffer#mark before, offset will be set to ByteBuffer#markedOffset, which will then be discarded. If no offset has been marked, sets offset = 0.
     */
-  def reset(): ByteBuffer = js.native
+  def reset(): this.type = js.native
   
   /**
     * Resizes this ByteBuffer to be backed by a buffer of at least the given capacity. Will do nothing if already that large or larger.
     */
-  def resize(capacity: Double): ByteBuffer = js.native
+  def resize(capacity: Double): this.type = js.native
   
   /**
     * Reverses this ByteBuffer's contents
     */
-  def reverse(): ByteBuffer = js.native
-  def reverse(begin: js.UndefOr[scala.Nothing], end: Double): ByteBuffer = js.native
-  def reverse(begin: Double): ByteBuffer = js.native
-  def reverse(begin: Double, end: Double): ByteBuffer = js.native
+  def reverse(): this.type = js.native
+  def reverse(begin: js.UndefOr[scala.Nothing], end: Double): this.type = js.native
+  def reverse(begin: Double): this.type = js.native
+  def reverse(begin: Double, end: Double): this.type = js.native
   
   /**
     * Skips the next length bytes. This will just advance
     */
-  def skip(length: Double): ByteBuffer = js.native
+  def skip(length: Double): this.type = js.native
   
   /**
     * Slices this ByteBuffer by creating a cloned instance with offset = begin and limit = end.
@@ -486,135 +486,135 @@ trait ByteBuffer extends js.Object {
   /**
     * Writes an 8bit signed integer. This is an alias of ByteBuffer#writeInt8.
     */
-  def writeByte(value: Double): ByteBuffer = js.native
-  def writeByte(value: Double, offset: Double): ByteBuffer = js.native
+  def writeByte(value: Double): this.type = js.native
+  def writeByte(value: Double, offset: Double): this.type = js.native
   
-  def writeBytes(source: String): ByteBuffer = js.native
-  def writeBytes(source: String, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def writeBytes(source: String, encoding: String): ByteBuffer = js.native
-  def writeBytes(source: String, encoding: String, offset: Double): ByteBuffer = js.native
-  def writeBytes(source: String, encoding: Double): ByteBuffer = js.native
-  def writeBytes(source: String, encoding: Double, offset: Double): ByteBuffer = js.native
+  def writeBytes(source: String): this.type = js.native
+  def writeBytes(source: String, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def writeBytes(source: String, encoding: String): this.type = js.native
+  def writeBytes(source: String, encoding: String, offset: Double): this.type = js.native
+  def writeBytes(source: String, encoding: Double): this.type = js.native
+  def writeBytes(source: String, encoding: Double, offset: Double): this.type = js.native
   /**
     * Writes an array of bytes. This is an alias for append
     */
-  def writeBytes(source: ByteBuffer): ByteBuffer = js.native
-  def writeBytes(source: ByteBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def writeBytes(source: ByteBuffer, encoding: String): ByteBuffer = js.native
-  def writeBytes(source: ByteBuffer, encoding: String, offset: Double): ByteBuffer = js.native
-  def writeBytes(source: ByteBuffer, encoding: Double): ByteBuffer = js.native
-  def writeBytes(source: ByteBuffer, encoding: Double, offset: Double): ByteBuffer = js.native
-  def writeBytes(source: Buffer): ByteBuffer = js.native
-  def writeBytes(source: Buffer, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def writeBytes(source: Buffer, encoding: String): ByteBuffer = js.native
-  def writeBytes(source: Buffer, encoding: String, offset: Double): ByteBuffer = js.native
-  def writeBytes(source: Buffer, encoding: Double): ByteBuffer = js.native
-  def writeBytes(source: Buffer, encoding: Double, offset: Double): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.ArrayBuffer): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.ArrayBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.ArrayBuffer, encoding: String): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.ArrayBuffer, encoding: String, offset: Double): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.ArrayBuffer, encoding: Double): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.ArrayBuffer, encoding: Double, offset: Double): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.Uint8Array): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.Uint8Array, encoding: js.UndefOr[scala.Nothing], offset: Double): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.Uint8Array, encoding: String): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.Uint8Array, encoding: String, offset: Double): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.Uint8Array, encoding: Double): ByteBuffer = js.native
-  def writeBytes(source: js.typedarray.Uint8Array, encoding: Double, offset: Double): ByteBuffer = js.native
+  def writeBytes(source: ByteBuffer): this.type = js.native
+  def writeBytes(source: ByteBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def writeBytes(source: ByteBuffer, encoding: String): this.type = js.native
+  def writeBytes(source: ByteBuffer, encoding: String, offset: Double): this.type = js.native
+  def writeBytes(source: ByteBuffer, encoding: Double): this.type = js.native
+  def writeBytes(source: ByteBuffer, encoding: Double, offset: Double): this.type = js.native
+  def writeBytes(source: Buffer): this.type = js.native
+  def writeBytes(source: Buffer, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def writeBytes(source: Buffer, encoding: String): this.type = js.native
+  def writeBytes(source: Buffer, encoding: String, offset: Double): this.type = js.native
+  def writeBytes(source: Buffer, encoding: Double): this.type = js.native
+  def writeBytes(source: Buffer, encoding: Double, offset: Double): this.type = js.native
+  def writeBytes(source: js.typedarray.ArrayBuffer): this.type = js.native
+  def writeBytes(source: js.typedarray.ArrayBuffer, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def writeBytes(source: js.typedarray.ArrayBuffer, encoding: String): this.type = js.native
+  def writeBytes(source: js.typedarray.ArrayBuffer, encoding: String, offset: Double): this.type = js.native
+  def writeBytes(source: js.typedarray.ArrayBuffer, encoding: Double): this.type = js.native
+  def writeBytes(source: js.typedarray.ArrayBuffer, encoding: Double, offset: Double): this.type = js.native
+  def writeBytes(source: js.typedarray.Uint8Array): this.type = js.native
+  def writeBytes(source: js.typedarray.Uint8Array, encoding: js.UndefOr[scala.Nothing], offset: Double): this.type = js.native
+  def writeBytes(source: js.typedarray.Uint8Array, encoding: String): this.type = js.native
+  def writeBytes(source: js.typedarray.Uint8Array, encoding: String, offset: Double): this.type = js.native
+  def writeBytes(source: js.typedarray.Uint8Array, encoding: Double): this.type = js.native
+  def writeBytes(source: js.typedarray.Uint8Array, encoding: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a NULL-terminated UTF8 encoded string. For this to work the specified string must not contain any NULL characters itself.
     */
-  def writeCString(str: String): ByteBuffer = js.native
-  def writeCString(str: String, offset: Double): ByteBuffer = js.native
+  def writeCString(str: String): this.type = js.native
+  def writeCString(str: String, offset: Double): this.type = js.native
   
   /**
     * Writes a 64bit float. This is an alias of ByteBuffer#writeFloat64.
     */
-  def writeDouble(value: Double): ByteBuffer = js.native
-  def writeDouble(value: Double, offset: Double): ByteBuffer = js.native
+  def writeDouble(value: Double): this.type = js.native
+  def writeDouble(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a 32bit float. This is an alias of ByteBuffer#writeFloat32.
     */
-  def writeFloat(value: Double): ByteBuffer = js.native
-  def writeFloat(value: Double, offset: Double): ByteBuffer = js.native
+  def writeFloat(value: Double): this.type = js.native
+  def writeFloat(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a 32bit float.
     */
-  def writeFloat32(value: Double): ByteBuffer = js.native
-  def writeFloat32(value: Double, offset: Double): ByteBuffer = js.native
+  def writeFloat32(value: Double): this.type = js.native
+  def writeFloat32(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a 64bit float.
     */
-  def writeFloat64(value: Double): ByteBuffer = js.native
-  def writeFloat64(value: Double, offset: Double): ByteBuffer = js.native
+  def writeFloat64(value: Double): this.type = js.native
+  def writeFloat64(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a length as uint32 prefixed UTF8 encoded string.
     */
-  def writeIString(str: String): ByteBuffer = js.native
-  def writeIString(str: String, offset: Double): ByteBuffer = js.native
+  def writeIString(str: String): this.type = js.native
+  def writeIString(str: String, offset: Double): this.type = js.native
   
   /**
     * Writes a 32bit signed integer. This is an alias of ByteBuffer#writeInt32.
     */
-  def writeInt(value: Double): ByteBuffer = js.native
-  def writeInt(value: Double, offset: Double): ByteBuffer = js.native
+  def writeInt(value: Double): this.type = js.native
+  def writeInt(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a 16bit signed integer.
     */
-  def writeInt16(value: Double): ByteBuffer = js.native
-  def writeInt16(value: Double, offset: Double): ByteBuffer = js.native
+  def writeInt16(value: Double): this.type = js.native
+  def writeInt16(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a 32bit signed integer.
     */
-  def writeInt32(value: Double): ByteBuffer = js.native
-  def writeInt32(value: Double, offset: Double): ByteBuffer = js.native
+  def writeInt32(value: Double): this.type = js.native
+  def writeInt32(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a 64bit signed integer.
     */
-  def writeInt64(value: Double): ByteBuffer = js.native
-  def writeInt64(value: Double, offset: Double): ByteBuffer = js.native
-  def writeInt64(value: Long): ByteBuffer = js.native
-  def writeInt64(value: Long, offset: Double): ByteBuffer = js.native
+  def writeInt64(value: Double): this.type = js.native
+  def writeInt64(value: Double, offset: Double): this.type = js.native
+  def writeInt64(value: Long): this.type = js.native
+  def writeInt64(value: Long, offset: Double): this.type = js.native
   
   /**
     * Writes an 8bit signed integer.
     */
-  def writeInt8(value: Double): ByteBuffer = js.native
-  def writeInt8(value: Double, offset: Double): ByteBuffer = js.native
+  def writeInt8(value: Double): this.type = js.native
+  def writeInt8(value: Double, offset: Double): this.type = js.native
   
   /**
     * Write a 64bit signed integer. This is an alias of ByteBuffer#writeInt64.
     */
-  def writeLong(value: Double): ByteBuffer = js.native
-  def writeLong(value: Double, offset: Double): ByteBuffer = js.native
-  def writeLong(value: Long): ByteBuffer = js.native
-  def writeLong(value: Long, offset: Double): ByteBuffer = js.native
+  def writeLong(value: Double): this.type = js.native
+  def writeLong(value: Double, offset: Double): this.type = js.native
+  def writeLong(value: Long): this.type = js.native
+  def writeLong(value: Long, offset: Double): this.type = js.native
   
   /**
     * Writes a 16bit signed integer. This is an alias of ByteBuffer#writeInt16.
     */
-  def writeShort(value: Double): ByteBuffer = js.native
-  def writeShort(value: Double, offset: Double): ByteBuffer = js.native
+  def writeShort(value: Double): this.type = js.native
+  def writeShort(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes an UTF8 encoded string. This is an alias of ByteBuffer#writeUTF8String.
     */
-  def writeString(str: String): ByteBuffer = js.native
+  def writeString(str: String): this.type = js.native
   def writeString(str: String, offset: Double): Double = js.native
   
   /**
     * Writes an UTF8 encoded string.
     */
-  def writeUTF8String(str: String): ByteBuffer = js.native
+  def writeUTF8String(str: String): this.type = js.native
   def writeUTF8String(str: String, offset: Double): Double = js.native
   @JSName("writeUTF8String")
   def writeUTF8String_Double(str: String): Double = js.native
@@ -622,60 +622,60 @@ trait ByteBuffer extends js.Object {
   /**
     * Writes a 16bit unsigned integer.
     */
-  def writeUint16(value: Double): ByteBuffer = js.native
-  def writeUint16(value: Double, offset: Double): ByteBuffer = js.native
+  def writeUint16(value: Double): this.type = js.native
+  def writeUint16(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a 32bit unsigned integer.
     */
-  def writeUint32(value: Double): ByteBuffer = js.native
-  def writeUint32(value: Double, offset: Double): ByteBuffer = js.native
+  def writeUint32(value: Double): this.type = js.native
+  def writeUint32(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a 64bit unsigned integer.
     */
-  def writeUint64(value: Double): ByteBuffer = js.native
-  def writeUint64(value: Double, offset: Double): ByteBuffer = js.native
-  def writeUint64(value: Long): ByteBuffer = js.native
-  def writeUint64(value: Long, offset: Double): ByteBuffer = js.native
+  def writeUint64(value: Double): this.type = js.native
+  def writeUint64(value: Double, offset: Double): this.type = js.native
+  def writeUint64(value: Long): this.type = js.native
+  def writeUint64(value: Long, offset: Double): this.type = js.native
   
   /**
     * Writes an 8bit unsigned integer.
     */
-  def writeUint8(value: Double): ByteBuffer = js.native
-  def writeUint8(value: Double, offset: Double): ByteBuffer = js.native
+  def writeUint8(value: Double): this.type = js.native
+  def writeUint8(value: Double, offset: Double): this.type = js.native
   
   /**
     * Writes a length as varint32 prefixed UTF8 encoded string.
     */
-  def writeVString(str: String): ByteBuffer = js.native
+  def writeVString(str: String): this.type = js.native
   def writeVString(str: String, offset: Double): Double = js.native
   
   /**
     * Writes a 32bit base 128 variable-length integer.
     */
-  def writeVarint32(value: Double): ByteBuffer = js.native
+  def writeVarint32(value: Double): this.type = js.native
   def writeVarint32(value: Double, offset: Double): Double = js.native
   
   /**
     * Writes a zig-zag encoded 32bit base 128 variable-length integer.
     */
-  def writeVarint32ZigZag(value: Double): ByteBuffer = js.native
+  def writeVarint32ZigZag(value: Double): this.type = js.native
   def writeVarint32ZigZag(value: Double, offset: Double): Double = js.native
   
   /**
     * Writes a 64bit base 128 variable-length integer.
     */
-  def writeVarint64(value: Double): ByteBuffer = js.native
+  def writeVarint64(value: Double): this.type = js.native
   def writeVarint64(value: Double, offset: Double): Double = js.native
-  def writeVarint64(value: Long): ByteBuffer = js.native
+  def writeVarint64(value: Long): this.type = js.native
   def writeVarint64(value: Long, offset: Double): Double = js.native
   
   /**
     * Writes a zig-zag encoded 64bit base 128 variable-length integer.
     */
-  def writeVarint64ZigZag(value: Double): ByteBuffer = js.native
+  def writeVarint64ZigZag(value: Double): this.type = js.native
   def writeVarint64ZigZag(value: Double, offset: Double): Double = js.native
-  def writeVarint64ZigZag(value: Long): ByteBuffer = js.native
+  def writeVarint64ZigZag(value: Long): this.type = js.native
   def writeVarint64ZigZag(value: Long, offset: Double): Double = js.native
 }

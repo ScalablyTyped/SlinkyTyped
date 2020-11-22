@@ -1,5 +1,6 @@
 package typingsSlinky.pullStream
 
+import typingsSlinky.pullStream.mod.EndOrError
 import typingsSlinky.pullStream.mod.Sink
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,5 +14,5 @@ object onEndMod extends js.Object {
     * Drain the stream and then call `cb` when done.
     */
   def apply(): Sink[_] = js.native
-  def apply(cb: js.Function1[/* err */ js.Error | Null, _]): Sink[_] = js.native
+  def apply(cb: js.Function1[/* err */ EndOrError, _]): Sink[_] = js.native
 }

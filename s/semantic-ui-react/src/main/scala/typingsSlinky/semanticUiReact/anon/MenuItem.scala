@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.anon
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.tabPaneMod.TabPaneProps
 import scala.scalajs.js
@@ -52,7 +51,7 @@ object MenuItem {
     
     @scala.inline
     def setPaneFunction3(
-      value: (/* component */ ReactType[TabPaneProps], TabPaneProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, TabPaneProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("pane", js.Any.fromFunction3(value))
     
     @scala.inline

@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.opsMod
 
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.float32
 import scala.scalajs.js
 import scala.scalajs.js.`|`

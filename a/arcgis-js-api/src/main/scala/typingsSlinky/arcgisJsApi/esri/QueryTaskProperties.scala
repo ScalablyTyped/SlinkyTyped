@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait QueryTaskProperties extends TaskProperties {
   
   /**
-    * Specify the geodatabase version to query. Requires ArcGIS Server service 10.1 or greater.
+    * Specify the geodatabase version to query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-QueryTask.html#gdbVersion)
     */

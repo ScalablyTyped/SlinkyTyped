@@ -1,17 +1,13 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  installation_id :number,   per_page :number | undefined,   page :number | undefined} & @octokit/types.@octokit/types/dist-types/generated/Endpoints.RequiredPreview<'machine-man'> */
 @js.native
 trait AppsListInstallationReposForAuthenticatedUserEndpoint extends js.Object {
   
   var installation_id: Double = js.native
-  
-  var mediaType: `1` = js.native
   
   /**
     * Page number of the results to fetch.
@@ -26,8 +22,8 @@ trait AppsListInstallationReposForAuthenticatedUserEndpoint extends js.Object {
 object AppsListInstallationReposForAuthenticatedUserEndpoint {
   
   @scala.inline
-  def apply(installation_id: Double, mediaType: `1`): AppsListInstallationReposForAuthenticatedUserEndpoint = {
-    val __obj = js.Dynamic.literal(installation_id = installation_id.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any])
+  def apply(installation_id: Double): AppsListInstallationReposForAuthenticatedUserEndpoint = {
+    val __obj = js.Dynamic.literal(installation_id = installation_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppsListInstallationReposForAuthenticatedUserEndpoint]
   }
   
@@ -48,9 +44,6 @@ object AppsListInstallationReposForAuthenticatedUserEndpoint {
     
     @scala.inline
     def setInstallation_id(value: Double): Self = this.set("installation_id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMediaType(value: `1`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPage(value: Double): Self = this.set("page", value.asInstanceOf[js.Any])

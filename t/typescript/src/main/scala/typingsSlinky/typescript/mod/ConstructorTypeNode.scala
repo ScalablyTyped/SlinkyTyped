@@ -13,5 +13,5 @@ trait ConstructorTypeNode
      with _HasJSDoc {
   
   @JSName("kind")
-  var kind_ConstructorTypeNode: ConstructorType = js.native
+  val kind_ConstructorTypeNode: ConstructorType = js.native
 }

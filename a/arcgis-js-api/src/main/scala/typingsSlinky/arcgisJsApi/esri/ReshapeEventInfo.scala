@@ -15,14 +15,7 @@ trait ReshapeEventInfo
      with UpdateToolEventInfo {
   
   /**
-    * Returns information indicating the stage of the reshape operation.  **Possible Values**
-    *
-    * Value | Description |
-    * ----- | ----------- |
-    * reshape-start | The type changes to `reshape-start` at the start of `reshape` operation.
-    * reshape | The type changes to `reshape` while graphics are being reshaped.
-    * reshape-stop | The type changes to `reshape-stop` once graphics are reshaped.
-    *
+    * Returns information indicating the stage of the reshape operation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#ReshapeEventInfo)
     */

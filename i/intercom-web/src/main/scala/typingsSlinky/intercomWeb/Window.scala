@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Window extends js.Object {
   
-  var intercomSettings: IntercomSettings = js.native
+  var intercomSettings: js.UndefOr[IntercomSettings] = js.native
 }
 object Window {
   
   @scala.inline
-  def apply(intercomSettings: IntercomSettings): Window = {
-    val __obj = js.Dynamic.literal(intercomSettings = intercomSettings.asInstanceOf[js.Any])
+  def apply(): Window = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Window]
   }
   
@@ -35,5 +35,8 @@ object Window {
     
     @scala.inline
     def setIntercomSettings(value: IntercomSettings): Self = this.set("intercomSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIntercomSettings: Self = this.set("intercomSettings", js.undefined)
   }
 }

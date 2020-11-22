@@ -7,17 +7,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartValueAxisStrips extends dxChartCommonAxisSettingsStripStyle {
   
-  /** @name dxChart.Options.valueAxis.strips.color */
+  /**
+    * [descr:dxChart.Options.valueAxis.strips.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxChart.Options.valueAxis.strips.endValue */
+  /**
+    * [descr:dxChart.Options.valueAxis.strips.endValue]
+    */
   var endValue: js.UndefOr[Double | js.Date | String] = js.native
   
-  /** @name dxChart.Options.valueAxis.strips.label */
+  /**
+    * [descr:dxChart.Options.valueAxis.strips.label]
+    */
   @JSName("label")
   var label_dxChartValueAxisStrips: js.UndefOr[dxChartValueAxisStripsLabel] = js.native
   
-  /** @name dxChart.Options.valueAxis.strips.startValue */
+  /**
+    * [descr:dxChart.Options.valueAxis.strips.startValue]
+    */
   var startValue: js.UndefOr[Double | js.Date | String] = js.native
 }
 object dxChartValueAxisStrips {

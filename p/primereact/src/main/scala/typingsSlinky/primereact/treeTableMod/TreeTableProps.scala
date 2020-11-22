@@ -101,6 +101,8 @@ trait TreeTableProps extends js.Object {
   
   var paginator: js.UndefOr[Boolean] = js.native
   
+  var paginatorDropdownAppendTo: js.UndefOr[js.Any] = js.native
+  
   var paginatorLeft: js.UndefOr[js.Any] = js.native
   
   var paginatorPosition: js.UndefOr[String] = js.native
@@ -432,6 +434,12 @@ object TreeTableProps {
     
     @scala.inline
     def deletePaginator: Self = this.set("paginator", js.undefined)
+    
+    @scala.inline
+    def setPaginatorDropdownAppendTo(value: js.Any): Self = this.set("paginatorDropdownAppendTo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePaginatorDropdownAppendTo: Self = this.set("paginatorDropdownAppendTo", js.undefined)
     
     @scala.inline
     def setPaginatorLeft(value: js.Any): Self = this.set("paginatorLeft", value.asInstanceOf[js.Any])

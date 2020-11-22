@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("backbone.marionette", "CollectionView")
 @js.native
-class CollectionView[TModel /* <: Model[_, ModelSetOptions] */, TView /* <: View[TModel] */, TCollection /* <: Collection[TModel] */] () extends View[TModel] {
+class CollectionView[TModel /* <: Model[_, ModelSetOptions, js.Object] */, TView /* <: View[TModel] */, TCollection /* <: Collection[TModel] */] () extends View[TModel] {
   def this(options: CollectionViewOptions[TModel, TCollection]) = this()
   
   /**

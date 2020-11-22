@@ -457,7 +457,7 @@ object default
     * @factory true
     * @return {Stream}
     */
-  def empty(): Stream[_] = js.native
+  def empty[T](): Stream[T] = js.native
   
   def from[T](input: js.Array[T]): Stream[T] = js.native
   /**
@@ -867,7 +867,7 @@ object default
     * @factory true
     * @return {Stream}
     */
-  def never(): Stream[_] = js.native
+  def never[T](): Stream[T] = js.native
   
   /**
     * Creates a Stream that immediately emits the arguments that you give to

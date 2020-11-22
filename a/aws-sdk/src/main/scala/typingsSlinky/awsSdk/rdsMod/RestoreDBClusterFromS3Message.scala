@@ -78,7 +78,7 @@ trait RestoreDBClusterFromS3Message extends js.Object {
   var EnableIAMDatabaseAuthentication: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * The name of the database engine to be used for the restored DB cluster. Valid Values: aurora, aurora-postgresql 
+    * The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora), and aurora-postgresql 
     */
   var Engine: String = js.native
   
@@ -143,7 +143,7 @@ trait RestoreDBClusterFromS3Message extends js.Object {
   var SourceEngine: String = js.native
   
   /**
-    * The version of the database that the backup files were created from. MySQL versions 5.5, 5.6, and 5.7 are supported.  Example: 5.6.40 
+    * The version of the database that the backup files were created from. MySQL versions 5.5, 5.6, and 5.7 are supported.  Example: 5.6.40, 5.7.28 
     */
   var SourceEngineVersion: String = js.native
   

@@ -2,130 +2,98 @@ package typingsSlinky.reactInstantsearchCore.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InstantSearchProps extends js.Object {
+  
   var createURL: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  
   var indexName: String = js.native
+  
   var onSearchParameters: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  
   var onSearchStateChange: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  
   var refresh: js.UndefOr[Boolean] = js.native
+  
   var resultsState: js.UndefOr[js.Any] = js.native
+  
   var searchClient: js.Any = js.native
+  
   var searchState: js.UndefOr[js.Any] = js.native
+  
   var stalledSearchDelay: js.UndefOr[Double] = js.native
 }
-
 object InstantSearchProps {
+  
   @scala.inline
   def apply(indexName: String, searchClient: js.Any): InstantSearchProps = {
     val __obj = js.Dynamic.literal(indexName = indexName.asInstanceOf[js.Any], searchClient = searchClient.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstantSearchProps]
   }
+  
   @scala.inline
   implicit class InstantSearchPropsOps[Self <: InstantSearchProps] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
-    def withIndexName(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("indexName")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
-    def withSearchClient(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchClient")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIndexName(value: String): Self = this.set("indexName", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withCreateURL(value: /* repeated */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createURL")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setSearchClient(value: js.Any): Self = this.set("searchClient", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withoutCreateURL: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("createURL")(js.undefined)
-        ret
-    }
+    def setCreateURL(value: /* repeated */ js.Any => _): Self = this.set("createURL", js.Any.fromFunction1(value))
+    
     @scala.inline
-    def withOnSearchParameters(value: /* repeated */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchParameters")(js.Any.fromFunction1(value))
-        ret
-    }
+    def deleteCreateURL: Self = this.set("createURL", js.undefined)
+    
     @scala.inline
-    def withoutOnSearchParameters: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchParameters")(js.undefined)
-        ret
-    }
+    def setOnSearchParameters(value: /* repeated */ js.Any => _): Self = this.set("onSearchParameters", js.Any.fromFunction1(value))
+    
     @scala.inline
-    def withOnSearchStateChange(value: /* repeated */ js.Any => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchStateChange")(js.Any.fromFunction1(value))
-        ret
-    }
+    def deleteOnSearchParameters: Self = this.set("onSearchParameters", js.undefined)
+    
     @scala.inline
-    def withoutOnSearchStateChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSearchStateChange")(js.undefined)
-        ret
-    }
+    def setOnSearchStateChange(value: /* repeated */ js.Any => _): Self = this.set("onSearchStateChange", js.Any.fromFunction1(value))
+    
     @scala.inline
-    def withRefresh(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteOnSearchStateChange: Self = this.set("onSearchStateChange", js.undefined)
+    
     @scala.inline
-    def withoutRefresh: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("refresh")(js.undefined)
-        ret
-    }
+    def setRefresh(value: Boolean): Self = this.set("refresh", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withResultsState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultsState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteRefresh: Self = this.set("refresh", js.undefined)
+    
     @scala.inline
-    def withoutResultsState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("resultsState")(js.undefined)
-        ret
-    }
+    def setResultsState(value: js.Any): Self = this.set("resultsState", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withSearchState(value: js.Any): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchState")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteResultsState: Self = this.set("resultsState", js.undefined)
+    
     @scala.inline
-    def withoutSearchState: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchState")(js.undefined)
-        ret
-    }
+    def setSearchState(value: js.Any): Self = this.set("searchState", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withStalledSearchDelay(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stalledSearchDelay")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteSearchState: Self = this.set("searchState", js.undefined)
+    
     @scala.inline
-    def withoutStalledSearchDelay: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("stalledSearchDelay")(js.undefined)
-        ret
-    }
+    def setStalledSearchDelay(value: Double): Self = this.set("stalledSearchDelay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStalledSearchDelay: Self = this.set("stalledSearchDelay", js.undefined)
   }
-  
 }
-

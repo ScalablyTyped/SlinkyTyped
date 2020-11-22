@@ -14,16 +14,25 @@ object EmitFormat extends js.Object {
   @JSBracketAccess
   def apply(value: Double): js.UndefOr[EmitFormat with Double] = js.native
   
+  /**
+    * Output should be emitted in ECMArkup format.
+    */
   @js.native
   sealed trait ecmarkup extends EmitFormat
   /* 2 */ @js.native
   object ecmarkup extends TopLevel[ecmarkup with Double]
   
+  /**
+    * Output should be emitted in HTML format.
+    */
   @js.native
   sealed trait html extends EmitFormat
   /* 1 */ @js.native
   object html extends TopLevel[html with Double]
   
+  /**
+    * Output should be emitted in Markdown format.
+    */
   @js.native
   sealed trait markdown extends EmitFormat
   /* 0 */ @js.native

@@ -18,7 +18,7 @@ trait LocationProviderDict extends js.Object {
   /**
     * Name of the location provider.
     */
-  var name: js.UndefOr[java.lang.String] = js.native
+  var name: js.UndefOr[String] = js.native
   
   /**
     * Power consumption for this provider, either low (1), medium (2), or high (3).
@@ -43,7 +43,7 @@ object LocationProviderDict {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -55,7 +55,7 @@ object LocationProviderDict {
     def deleteAccuracy: Self = this.set("accuracy", js.undefined)
     
     @scala.inline
-    def setName(value: java.lang.String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)

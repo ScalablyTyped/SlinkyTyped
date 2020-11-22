@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object overflowSetScssMod extends js.Object {
   
-  val item: /* "item_172ca124" */ String = js.native
+  val item: /* "item_5d434f3b" */ String = js.native
   
-  val root: /* "root_172ca124" */ String = js.native
+  val root: /* "root_5d434f3b" */ String = js.native
   
-  val rootVertical: /* "rootVertical_172ca124" */ String = js.native
+  val rootVertical: /* "rootVertical_5d434f3b" */ String = js.native
 }

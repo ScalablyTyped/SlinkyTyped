@@ -5,7 +5,7 @@ import typingsSlinky.std.Pick
 import typingsSlinky.std.Record
 import typingsSlinky.xstate.actorMod.Actor
 import typingsSlinky.xstate.anon.Context
-import typingsSlinky.xstate.anon.Value
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import typingsSlinky.xstate.typesMod.ActionObject
 import typingsSlinky.xstate.typesMod.ActivityMap
@@ -29,7 +29,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object stateMod extends js.Object {
   
-  def bindActionToState[TC, TE /* <: EventObject */](action: ActionObject[TC, TE], state: State[TC, TE, _, Value[TC]]): ActionObject[TC, TE] = js.native
+  def bindActionToState[TC, TE /* <: EventObject */](action: ActionObject[TC, TE], state: State[TC, TE, _, Context[TC]]): ActionObject[TC, TE] = js.native
   
   def isState[TContext, TEvent /* <: EventObject */, TStateSchema /* <: StateSchema[TContext] */, TTypestate /* <: Typestate[TContext] */](state: String): /* is xstate.xstate/lib/State.State<TContext, TEvent, TStateSchema, TTypestate> */ Boolean = js.native
   def isState[TContext, TEvent /* <: EventObject */, TStateSchema /* <: StateSchema[TContext] */, TTypestate /* <: Typestate[TContext] */](state: js.Object): /* is xstate.xstate/lib/State.State<TContext, TEvent, TStateSchema, TTypestate> */ Boolean = js.native
@@ -80,7 +80,7 @@ object stateMod extends js.Object {
     /**
       * The enabled state nodes representative of the state value.
       */
-    var configuration: js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+    var configuration: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]] = js.native
     
     var context: TContext = js.native
     
@@ -93,7 +93,7 @@ object stateMod extends js.Object {
     
     var events: js.Array[TEvent] = js.native
     
-    var history: js.UndefOr[State[TContext, TEvent, TStateSchema, Context[TContext]]] = js.native
+    var history: js.UndefOr[State[TContext, TEvent, TStateSchema, TTypestate]] = js.native
     
     var historyValue: js.UndefOr[HistoryValue] = js.native
     
@@ -136,24 +136,24 @@ object stateMod extends js.Object {
       * Creates a new State instance for the given `config`.
       * @param config The state config
       */
-    def create[TC, TE /* <: EventObject */](config: StateConfig[TC, TE]): State[TC, TE, _, Value[TC]] = js.native
+    def create[TC, TE /* <: EventObject */](config: StateConfig[TC, TE]): State[TC, TE, _, Context[TC]] = js.native
     
     /**
       * Creates a new State instance for the given `stateValue` and `context`.
       * @param stateValue
       * @param context
       */
-    def from[TC, TE /* <: EventObject */](stateValue: State[TC, TE, _, Value[TC]]): State[TC, TE, _, Value[TC]] = js.native
-    def from[TC, TE /* <: EventObject */](stateValue: State[TC, TE, _, Value[TC]], context: TC): State[TC, TE, _, Value[TC]] = js.native
-    def from[TC, TE /* <: EventObject */](stateValue: StateValue): State[TC, TE, _, Value[TC]] = js.native
-    def from[TC, TE /* <: EventObject */](stateValue: StateValue, context: TC): State[TC, TE, _, Value[TC]] = js.native
+    def from[TC, TE /* <: EventObject */](stateValue: State[TC, TE, _, Context[TC]]): State[TC, TE, _, Context[TC]] = js.native
+    def from[TC, TE /* <: EventObject */](stateValue: State[TC, TE, _, Context[TC]], context: TC): State[TC, TE, _, Context[TC]] = js.native
+    def from[TC, TE /* <: EventObject */](stateValue: StateValue): State[TC, TE, _, Context[TC]] = js.native
+    def from[TC, TE /* <: EventObject */](stateValue: StateValue, context: TC): State[TC, TE, _, Context[TC]] = js.native
     
     /**
       * Creates a new `State` instance for the given `stateValue` and `context` with no actions (side-effects).
       * @param stateValue
       * @param context
       */
-    def inert[TC, TE /* <: EventObject */](stateValue: State[TC, TE, _, Value[TC]], context: TC): State[TC, TE, _, Value[TC]] = js.native
-    def inert[TC, TE /* <: EventObject */](stateValue: StateValue, context: TC): State[TC, TE, _, Value[TC]] = js.native
+    def inert[TC, TE /* <: EventObject */](stateValue: State[TC, TE, _, Context[TC]], context: TC): State[TC, TE, _, Context[TC]] = js.native
+    def inert[TC, TE /* <: EventObject */](stateValue: StateValue, context: TC): State[TC, TE, _, Context[TC]] = js.native
   }
 }

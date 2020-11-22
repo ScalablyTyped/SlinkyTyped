@@ -5,13 +5,13 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.muiDatatables.anon.ColIndex
 import typingsSlinky.muiDatatables.anon.Columns
-import typingsSlinky.muiDatatables.anon.DataDataIndex
 import typingsSlinky.muiDatatables.anon.DataLookup
 import typingsSlinky.muiDatatables.anon.Lookup
 import typingsSlinky.muiDatatables.anon.PartialMUIDataTableTextLaBody
 import typingsSlinky.muiDatatables.anon.Partialfilenamestringsepa
 import typingsSlinky.muiDatatables.anon.RowIndex
 import typingsSlinky.muiDatatables.anon.XAxis
+import typingsSlinky.muiDatatables.muiDatatablesBooleans.`false`
 import typingsSlinky.muiDatatables.muiDatatablesStrings.above
 import typingsSlinky.muiDatatables.muiDatatablesStrings.asc
 import typingsSlinky.muiDatatables.muiDatatablesStrings.chip
@@ -24,11 +24,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<{  caseSensitive :boolean,   confirmFilters :boolean,   count :number, customFilterDialogFooter (filterList : std.Array<any>, applyNewFilters : (args : ...any): any | undefined): react.react.ReactNode, customFooter (rowCount : number, page : number, rowsPerPage : number, changeRowsPerPage : (page : string | number): void, changePage : (newPage : number): void): react.react.ReactNode, customRowRender (data : std.Array<any>, dataIndex : number, rowIndex : number): react.react.ReactNode, customSearch (searchQuery : string, currentRow : std.Array<any>, columns : std.Array<any>): boolean, customSearchRender (searchText : string, handleSearch : any, hideSearch : any, options : any): react.react.Component<{}, {}, any> | react.react.<global>.JSX.Element, customSort (data : std.Array<any>, colIndex : number, order : string): std.Array<any>, customTableBodyFooterRender (options : {  data :std.Array<any>,   selectableRows :mui-datatables.mui-datatables.SelectableRows,   columns :std.Array<any>}): any, customToolbar (): react.react.ReactNode, customToolbarSelect (selectedRows : {  data :std.Array<{  index :number,   dataIndex :number}>,   lookup :{[key: number] : boolean}}, displayData : std.Array<{  data :std.Array<any>,   dataIndex :number}>, setSelectedRows : (rows : std.Array<number>): void): react.react.ReactNode,   disableToolbarSelect :boolean,   download :boolean,   downloadOptions :std.Partial<{  filename :string,   separator :string,   filterOptions :std.Partial<{  useDisplayedColumnsOnly :boolean,   useDisplayedRowsOnly :boolean}>}>,   elevation :number,   enableNestedDataAccess :string,   expandableRows :boolean,   expandableRowsHeader :boolean,   expandableRowsOnClick :boolean,   filter :boolean,   filterType :mui-datatables.mui-datatables.FilterType,   fixedHeader :boolean,   fixedHeaderOptions :{  xAxis :boolean,   yAxis :boolean},   fixedSelectColumn :boolean, isRowExpandable (dataIndex : number, expandedRows : mui-datatables.mui-datatables.MUIDataTableIsRowCheck | undefined): boolean, isRowSelectable (dataIndex : number, selectedRows : mui-datatables.mui-datatables.MUIDataTableIsRowCheck | undefined): boolean, onCellClick (colData : any, cellMeta : {  colIndex :number,   rowIndex :number,   dataIndex :number,   event :react.react.MouseEvent<std.Element, react.react.NativeMouseEvent>}): void, onChangePage (currentPage : number): void, onChangeRowsPerPage (numberOfRows : number): void, onColumnSortChange (changedColumn : string, direction : 'asc' | 'desc'): void,   onColumnViewChange :(changedColumn : string, action : string): void | undefined, onDownload (buildHead : (columns : any): string, buildBody : (data : any): string, columns : any, data : any): string | boolean, onFilterChange (changedColumn : string, filterList : std.Array<any>, type : mui-datatables.mui-datatables.FilterType | 'chip' | 'reset'): void, onFilterChipClose (index : number, removedFilter : string, filterList : std.Array<any>): void, onFilterConfirm (filterList : std.Array<any>): void, onFilterDialogClose (): void, onFilterDialogOpen (): void, onRowClick (rowData : std.Array<string>, rowMeta : {  dataIndex :number,   rowIndex :number}): void, onRowExpansionChange (currentRowsExpanded : std.Array<any>, allRowsExpanded : std.Array<any>, rowsExpanded : std.Array<any> | undefined): void, onRowsDelete (rowsDeleted : {  lookup :{[dataIndex: number] : boolean},   data :std.Array<{  index :number,   dataIndex :number}>}): void, onRowSelectionChange (currentRowsSelected : std.Array<any>, allRowsSelected : std.Array<any>, rowsSelected : std.Array<any> | undefined): void, onSearchChange (searchText : string): void, onSearchClose (): void, onSearchOpen (): void, onTableChange (action : string, tableState : mui-datatables.mui-datatables.MUIDataTableState): void, onTableInit (action : string, tableState : mui-datatables.mui-datatables.MUIDataTableState): void, onViewColumnsChange (changedColumn : string, action : string): void,   page :number,   pagination :boolean,   print :boolean, renderExpandableRow (rowData : std.Array<string>, rowMeta : {  dataIndex :number,   rowIndex :number}): react.react.ReactNode,   resizableColumns :boolean,   responsive :mui-datatables.mui-datatables.Responsive,   rowHover :boolean,   rowsExpanded :std.Array<any>,   rowsPerPage :number,   rowsPerPageOptions :std.Array<number>,   rowsSelected :std.Array<any>,   search :boolean,   searchOpen :boolean,   searchProps :react.react.HTMLAttributes<std.HTMLInputElement>,   searchPlaceholder :string,   searchText :string,   selectableRows :mui-datatables.mui-datatables.SelectableRows,   selectableRowsHeader :boolean,   selectableRowsHideCheckboxes :boolean,   selectableRowsOnClick :boolean,   selectToolbarPlacement :'replace' | 'above' | 'none',   serverSide :boolean, setRowProps (row : std.Array<any>, rowIndex : number): object, setTableProps (): object,   sort :boolean,   sortFilterList :boolean,   sortOrder :mui-datatables.mui-datatables.MUISortOptions,   tableBodyHeight :string,   tableBodyMaxHeight :string,   textLabels :std.Partial<mui-datatables.mui-datatables.MUIDataTableTextLabels>,   viewColumns :boolean}> */
+/* Inlined std.Partial<{  caseSensitive :boolean,   confirmFilters :boolean,   columnOrder :std.Array<number>,   count :number, customFilterDialogFooter (filterList : mui-datatables.mui-datatables.MUIDataTableState['filterList'], applyNewFilters : (args : ...any): any | undefined): react.react.ReactNode, customFooter (rowCount : number, page : number, rowsPerPage : number, changeRowsPerPage : (page : string | number): void, changePage : (newPage : number): void, textLabels : std.Partial<mui-datatables.mui-datatables.MUIDataTableTextLabels>): react.react.ReactNode, customRowRender (data : std.Array<any>, dataIndex : number, rowIndex : number): react.react.ReactNode, customSearch (searchQuery : string, currentRow : std.Array<any>, columns : std.Array<any>): boolean, customSearchRender (searchText : string, handleSearch : (text : string): void, hideSearch : (): void, options : any): react.react.Component<{}, {}, any> | react.react.<global>.JSX.Element, customSort (data : std.Array<any>, colIndex : number, order : string): std.Array<any>, customTableBodyFooterRender (options : {  data :std.Array<any>,   selectableRows :mui-datatables.mui-datatables.SelectableRows,   columns :std.Array<any>}): any, customToolbar (data : {  displayData :mui-datatables.mui-datatables.DisplayData}): react.react.ReactNode, customToolbarSelect (selectedRows : {  data :std.Array<{  index :number,   dataIndex :number}>,   lookup :{[key: number] : boolean}}, displayData : mui-datatables.mui-datatables.DisplayData, setSelectedRows : (rows : std.Array<number>): void): react.react.ReactNode,   disableToolbarSelect :boolean,   download :mui-datatables.mui-datatables.ToolbarButton,   downloadOptions :std.Partial<{  filename :string,   separator :string,   filterOptions :std.Partial<{  useDisplayedColumnsOnly :boolean,   useDisplayedRowsOnly :boolean}>}>,   draggableColumns :mui-datatables.mui-datatables.MUIDataTableDraggableColumns,   elevation :number,   enableNestedDataAccess :string,   expandableRows :boolean,   expandableRowsHeader :boolean,   expandableRowsOnClick :boolean,   filter :mui-datatables.mui-datatables.ToolbarButton,   filterArrayFullMatch :boolean,   filterType :mui-datatables.mui-datatables.FilterType,   fixedHeader :boolean,   fixedHeaderOptions :{  xAxis :boolean,   yAxis :boolean},   fixedSelectColumn :boolean, isRowExpandable (dataIndex : number, expandedRows : mui-datatables.mui-datatables.MUIDataTableIsRowCheck | undefined): boolean, isRowSelectable (dataIndex : number, selectedRows : mui-datatables.mui-datatables.MUIDataTableIsRowCheck | undefined): boolean,   jumpToPage :boolean, onCellClick (colData : any, cellMeta : {  colIndex :number,   rowIndex :number,   dataIndex :number,   event :react.react.MouseEvent<std.Element, react.react.NativeMouseEvent>}): void, onChangePage (currentPage : number): void, onChangeRowsPerPage (numberOfRows : number): void, onColumnOrderChange (newColumnOrder : std.Array<number>, columnIndex : number, newPosition : number): void, onColumnSortChange (changedColumn : string, direction : 'asc' | 'desc'): void,   onColumnViewChange :(changedColumn : string, action : string): void | undefined, onDownload (buildHead : (columns : any): string, buildBody : (data : any): string, columns : any, data : any): string | boolean, onFilterChange (changedColumn : string | mui-datatables.mui-datatables.MUIDataTableColumn | null, filterList : mui-datatables.mui-datatables.MUIDataTableState['filterList'], type : mui-datatables.mui-datatables.FilterType | 'chip' | 'reset', changedColumnIndex : number, displayData : mui-datatables.mui-datatables.DisplayData): void, onFilterChipClose (index : number, removedFilter : string, filterList : mui-datatables.mui-datatables.MUIDataTableState['filterList']): void, onFilterConfirm (filterList : mui-datatables.mui-datatables.MUIDataTableState['filterList']): void, onFilterDialogClose (): void, onFilterDialogOpen (): void, onRowClick (rowData : std.Array<string>, rowMeta : {  dataIndex :number,   rowIndex :number}): void, onRowExpansionChange (currentRowsExpanded : std.Array<any>, allRowsExpanded : std.Array<any>, rowsExpanded : std.Array<any> | undefined): void, onRowsDelete (rowsDeleted : {  lookup :{[dataIndex: number] : boolean},   data :std.Array<{  index :number,   dataIndex :number}>}, newTableData : std.Array<any>): void | false, onRowSelectionChange (currentRowsSelected : std.Array<any>, allRowsSelected : std.Array<any>, rowsSelected : std.Array<any> | undefined): void, onSearchChange (searchText : string | null): void, onSearchClose (): void, onSearchOpen (): void, onTableChange (action : string, tableState : mui-datatables.mui-datatables.MUIDataTableState): void, onTableInit (action : string, tableState : mui-datatables.mui-datatables.MUIDataTableState): void, onViewColumnsChange (changedColumn : string, action : string): void,   page :number,   pagination :boolean,   print :mui-datatables.mui-datatables.ToolbarButton, renderExpandableRow (rowData : std.Array<string>, rowMeta : {  dataIndex :number,   rowIndex :number}): react.react.ReactNode,   resizableColumns :boolean,   responsive :mui-datatables.mui-datatables.Responsive,   rowHover :boolean,   rowsExpanded :std.Array<any>,   rowsPerPage :number,   rowsPerPageOptions :std.Array<number>,   rowsSelected :std.Array<any>,   search :mui-datatables.mui-datatables.ToolbarButton,   searchOpen :boolean,   searchProps :react.react.HTMLAttributes<std.HTMLInputElement>,   searchPlaceholder :string,   searchText :string,   selectableRows :mui-datatables.mui-datatables.SelectableRows,   selectableRowsHeader :boolean,   selectableRowsHideCheckboxes :boolean,   selectableRowsOnClick :boolean,   selectToolbarPlacement :'replace' | 'above' | 'none',   serverSide :boolean, setFilterChipProps (colIndex : number, colName : string, data : std.ReadonlyArray<std.Array<any>>): mui-datatables.mui-datatables.MUIDataTableChip, setRowProps (row : std.Array<any>, dataIndex : number, rowIndex : number): object, setTableProps (): object,   sort :boolean,   sortFilterList :boolean,   sortOrder :mui-datatables.mui-datatables.MUISortOptions,   tableId :string,   tableBodyHeight :string,   tableBodyMaxHeight :string,   textLabels :std.Partial<mui-datatables.mui-datatables.MUIDataTableTextLabels>,   viewColumns :mui-datatables.mui-datatables.ToolbarButton}> */
 @js.native
 trait MUIDataTableOptions extends js.Object {
   
   var caseSensitive: js.UndefOr[Boolean] = js.native
+  
+  var columnOrder: js.UndefOr[js.Array[Double]] = js.native
   
   var confirmFilters: js.UndefOr[Boolean] = js.native
   
@@ -36,19 +38,20 @@ trait MUIDataTableOptions extends js.Object {
   
   var customFilterDialogFooter: js.UndefOr[
     js.Function2[
-      /* filterList */ js.Array[_], 
+      /* filterList */ js.Array[js.Array[String]], 
       /* applyNewFilters */ js.UndefOr[js.Function1[/* repeated */ js.Any, _]], 
       ReactElement
     ]
   ] = js.native
   
   var customFooter: js.UndefOr[
-    js.Function5[
+    js.Function6[
       /* rowCount */ Double, 
       /* page */ Double, 
       /* rowsPerPage */ Double, 
       /* changeRowsPerPage */ js.Function1[/* page */ String | Double, Unit], 
       /* changePage */ js.Function1[/* newPage */ Double, Unit], 
+      /* textLabels */ PartialMUIDataTableTextLaBody, 
       ReactElement
     ]
   ] = js.native
@@ -69,8 +72,8 @@ trait MUIDataTableOptions extends js.Object {
   var customSearchRender: js.UndefOr[
     js.Function4[
       /* searchText */ String, 
-      /* handleSearch */ js.Any, 
-      /* hideSearch */ js.Any, 
+      /* handleSearch */ js.Function1[/* text */ String, Unit], 
+      /* hideSearch */ js.Function0[Unit], 
       /* options */ js.Any, 
       ReactComponentClass[js.Object] | ReactElement
     ]
@@ -82,12 +85,14 @@ trait MUIDataTableOptions extends js.Object {
   
   var customTableBodyFooterRender: js.UndefOr[js.Function1[/* options */ Columns, _]] = js.native
   
-  var customToolbar: js.UndefOr[js.Function0[ReactElement]] = js.native
+  var customToolbar: js.UndefOr[
+    js.Function1[/* data */ typingsSlinky.muiDatatables.anon.DisplayData, ReactElement]
+  ] = js.native
   
   var customToolbarSelect: js.UndefOr[
     js.Function3[
       /* selectedRows */ DataLookup, 
-      /* displayData */ js.Array[DataDataIndex], 
+      /* displayData */ DisplayData, 
       /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit], 
       ReactElement
     ]
@@ -95,9 +100,11 @@ trait MUIDataTableOptions extends js.Object {
   
   var disableToolbarSelect: js.UndefOr[Boolean] = js.native
   
-  var download: js.UndefOr[Boolean] = js.native
+  var download: js.UndefOr[ToolbarButton] = js.native
   
   var downloadOptions: js.UndefOr[Partialfilenamestringsepa] = js.native
+  
+  var draggableColumns: js.UndefOr[MUIDataTableDraggableColumns] = js.native
   
   var elevation: js.UndefOr[Double] = js.native
   
@@ -109,7 +116,9 @@ trait MUIDataTableOptions extends js.Object {
   
   var expandableRowsOnClick: js.UndefOr[Boolean] = js.native
   
-  var filter: js.UndefOr[Boolean] = js.native
+  var filter: js.UndefOr[ToolbarButton] = js.native
+  
+  var filterArrayFullMatch: js.UndefOr[Boolean] = js.native
   
   var filterType: js.UndefOr[FilterType] = js.native
   
@@ -135,11 +144,22 @@ trait MUIDataTableOptions extends js.Object {
     ]
   ] = js.native
   
+  var jumpToPage: js.UndefOr[Boolean] = js.native
+  
   var onCellClick: js.UndefOr[js.Function2[/* colData */ js.Any, /* cellMeta */ ColIndex, Unit]] = js.native
   
   var onChangePage: js.UndefOr[js.Function1[/* currentPage */ Double, Unit]] = js.native
   
   var onChangeRowsPerPage: js.UndefOr[js.Function1[/* numberOfRows */ Double, Unit]] = js.native
+  
+  var onColumnOrderChange: js.UndefOr[
+    js.Function3[
+      /* newColumnOrder */ js.Array[Double], 
+      /* columnIndex */ Double, 
+      /* newPosition */ Double, 
+      Unit
+    ]
+  ] = js.native
   
   var onColumnSortChange: js.UndefOr[js.Function2[/* changedColumn */ String, /* direction */ asc | desc, Unit]] = js.native
   
@@ -156,19 +176,26 @@ trait MUIDataTableOptions extends js.Object {
   ] = js.native
   
   var onFilterChange: js.UndefOr[
-    js.Function3[
-      /* changedColumn */ String, 
-      /* filterList */ js.Array[_], 
+    js.Function5[
+      /* changedColumn */ String | MUIDataTableColumn | Null, 
+      /* filterList */ js.Array[js.Array[String]], 
       /* type */ FilterType | chip | reset, 
+      /* changedColumnIndex */ Double, 
+      /* displayData */ DisplayData, 
       Unit
     ]
   ] = js.native
   
   var onFilterChipClose: js.UndefOr[
-    js.Function3[/* index */ Double, /* removedFilter */ String, /* filterList */ js.Array[_], Unit]
+    js.Function3[
+      /* index */ Double, 
+      /* removedFilter */ String, 
+      /* filterList */ js.Array[js.Array[String]], 
+      Unit
+    ]
   ] = js.native
   
-  var onFilterConfirm: js.UndefOr[js.Function1[/* filterList */ js.Array[_], Unit]] = js.native
+  var onFilterConfirm: js.UndefOr[js.Function1[/* filterList */ js.Array[js.Array[String]], Unit]] = js.native
   
   var onFilterDialogClose: js.UndefOr[js.Function0[Unit]] = js.native
   
@@ -194,9 +221,11 @@ trait MUIDataTableOptions extends js.Object {
     ]
   ] = js.native
   
-  var onRowsDelete: js.UndefOr[js.Function1[/* rowsDeleted */ Lookup, Unit]] = js.native
+  var onRowsDelete: js.UndefOr[
+    js.Function2[/* rowsDeleted */ Lookup, /* newTableData */ js.Array[_], Unit | `false`]
+  ] = js.native
   
-  var onSearchChange: js.UndefOr[js.Function1[/* searchText */ String, Unit]] = js.native
+  var onSearchChange: js.UndefOr[js.Function1[/* searchText */ String | Null, Unit]] = js.native
   
   var onSearchClose: js.UndefOr[js.Function0[Unit]] = js.native
   
@@ -212,7 +241,7 @@ trait MUIDataTableOptions extends js.Object {
   
   var pagination: js.UndefOr[Boolean] = js.native
   
-  var print: js.UndefOr[Boolean] = js.native
+  var print: js.UndefOr[ToolbarButton] = js.native
   
   var renderExpandableRow: js.UndefOr[
     js.Function2[/* rowData */ js.Array[String], /* rowMeta */ RowIndex, ReactElement]
@@ -232,7 +261,7 @@ trait MUIDataTableOptions extends js.Object {
   
   var rowsSelected: js.UndefOr[js.Array[_]] = js.native
   
-  var search: js.UndefOr[Boolean] = js.native
+  var search: js.UndefOr[ToolbarButton] = js.native
   
   var searchOpen: js.UndefOr[Boolean] = js.native
   
@@ -254,7 +283,18 @@ trait MUIDataTableOptions extends js.Object {
   
   var serverSide: js.UndefOr[Boolean] = js.native
   
-  var setRowProps: js.UndefOr[js.Function2[/* row */ js.Array[_], /* rowIndex */ Double, js.Object]] = js.native
+  var setFilterChipProps: js.UndefOr[
+    js.Function3[
+      /* colIndex */ Double, 
+      /* colName */ String, 
+      /* data */ js.Array[js.Array[_]], 
+      MUIDataTableChip
+    ]
+  ] = js.native
+  
+  var setRowProps: js.UndefOr[
+    js.Function3[/* row */ js.Array[_], /* dataIndex */ Double, /* rowIndex */ Double, js.Object]
+  ] = js.native
   
   var setTableProps: js.UndefOr[js.Function0[js.Object]] = js.native
   
@@ -268,9 +308,11 @@ trait MUIDataTableOptions extends js.Object {
   
   var tableBodyMaxHeight: js.UndefOr[String] = js.native
   
+  var tableId: js.UndefOr[String] = js.native
+  
   var textLabels: js.UndefOr[PartialMUIDataTableTextLaBody] = js.native
   
-  var viewColumns: js.UndefOr[Boolean] = js.native
+  var viewColumns: js.UndefOr[ToolbarButton] = js.native
 }
 object MUIDataTableOptions {
   
@@ -302,6 +344,15 @@ object MUIDataTableOptions {
     def deleteCaseSensitive: Self = this.set("caseSensitive", js.undefined)
     
     @scala.inline
+    def setColumnOrderVarargs(value: Double*): Self = this.set("columnOrder", js.Array(value :_*))
+    
+    @scala.inline
+    def setColumnOrder(value: js.Array[Double]): Self = this.set("columnOrder", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnOrder: Self = this.set("columnOrder", js.undefined)
+    
+    @scala.inline
     def setConfirmFilters(value: Boolean): Self = this.set("confirmFilters", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -315,7 +366,7 @@ object MUIDataTableOptions {
     
     @scala.inline
     def setCustomFilterDialogFooter(
-      value: (/* filterList */ js.Array[_], /* applyNewFilters */ js.UndefOr[js.Function1[/* repeated */ js.Any, _]]) => ReactElement
+      value: (/* filterList */ js.Array[js.Array[String]], /* applyNewFilters */ js.UndefOr[js.Function1[/* repeated */ js.Any, _]]) => ReactElement
     ): Self = this.set("customFilterDialogFooter", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -323,8 +374,8 @@ object MUIDataTableOptions {
     
     @scala.inline
     def setCustomFooter(
-      value: (/* rowCount */ Double, /* page */ Double, /* rowsPerPage */ Double, /* changeRowsPerPage */ js.Function1[/* page */ String | Double, Unit], /* changePage */ js.Function1[/* newPage */ Double, Unit]) => ReactElement
-    ): Self = this.set("customFooter", js.Any.fromFunction5(value))
+      value: (/* rowCount */ Double, /* page */ Double, /* rowsPerPage */ Double, /* changeRowsPerPage */ js.Function1[/* page */ String | Double, Unit], /* changePage */ js.Function1[/* newPage */ Double, Unit], /* textLabels */ PartialMUIDataTableTextLaBody) => ReactElement
+    ): Self = this.set("customFooter", js.Any.fromFunction6(value))
     
     @scala.inline
     def deleteCustomFooter: Self = this.set("customFooter", js.undefined)
@@ -345,7 +396,7 @@ object MUIDataTableOptions {
     
     @scala.inline
     def setCustomSearchRender(
-      value: (/* searchText */ String, /* handleSearch */ js.Any, /* hideSearch */ js.Any, /* options */ js.Any) => ReactComponentClass[js.Object] | ReactElement
+      value: (/* searchText */ String, /* handleSearch */ js.Function1[/* text */ String, Unit], /* hideSearch */ js.Function0[Unit], /* options */ js.Any) => ReactComponentClass[js.Object] | ReactElement
     ): Self = this.set("customSearchRender", js.Any.fromFunction4(value))
     
     @scala.inline
@@ -364,14 +415,14 @@ object MUIDataTableOptions {
     def deleteCustomTableBodyFooterRender: Self = this.set("customTableBodyFooterRender", js.undefined)
     
     @scala.inline
-    def setCustomToolbar(value: () => ReactElement): Self = this.set("customToolbar", js.Any.fromFunction0(value))
+    def setCustomToolbar(value: /* data */ typingsSlinky.muiDatatables.anon.DisplayData => ReactElement): Self = this.set("customToolbar", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCustomToolbar: Self = this.set("customToolbar", js.undefined)
     
     @scala.inline
     def setCustomToolbarSelect(
-      value: (/* selectedRows */ DataLookup, /* displayData */ js.Array[DataDataIndex], /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit]) => ReactElement
+      value: (/* selectedRows */ DataLookup, /* displayData */ DisplayData, /* setSelectedRows */ js.Function1[/* rows */ js.Array[Double], Unit]) => ReactElement
     ): Self = this.set("customToolbarSelect", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -384,7 +435,7 @@ object MUIDataTableOptions {
     def deleteDisableToolbarSelect: Self = this.set("disableToolbarSelect", js.undefined)
     
     @scala.inline
-    def setDownload(value: Boolean): Self = this.set("download", value.asInstanceOf[js.Any])
+    def setDownload(value: ToolbarButton): Self = this.set("download", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDownload: Self = this.set("download", js.undefined)
@@ -394,6 +445,12 @@ object MUIDataTableOptions {
     
     @scala.inline
     def deleteDownloadOptions: Self = this.set("downloadOptions", js.undefined)
+    
+    @scala.inline
+    def setDraggableColumns(value: MUIDataTableDraggableColumns): Self = this.set("draggableColumns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDraggableColumns: Self = this.set("draggableColumns", js.undefined)
     
     @scala.inline
     def setElevation(value: Double): Self = this.set("elevation", value.asInstanceOf[js.Any])
@@ -426,10 +483,16 @@ object MUIDataTableOptions {
     def deleteExpandableRowsOnClick: Self = this.set("expandableRowsOnClick", js.undefined)
     
     @scala.inline
-    def setFilter(value: Boolean): Self = this.set("filter", value.asInstanceOf[js.Any])
+    def setFilter(value: ToolbarButton): Self = this.set("filter", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFilter: Self = this.set("filter", js.undefined)
+    
+    @scala.inline
+    def setFilterArrayFullMatch(value: Boolean): Self = this.set("filterArrayFullMatch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFilterArrayFullMatch: Self = this.set("filterArrayFullMatch", js.undefined)
     
     @scala.inline
     def setFilterType(value: FilterType): Self = this.set("filterType", value.asInstanceOf[js.Any])
@@ -468,6 +531,12 @@ object MUIDataTableOptions {
     def deleteIsRowSelectable: Self = this.set("isRowSelectable", js.undefined)
     
     @scala.inline
+    def setJumpToPage(value: Boolean): Self = this.set("jumpToPage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJumpToPage: Self = this.set("jumpToPage", js.undefined)
+    
+    @scala.inline
     def setOnCellClick(value: (/* colData */ js.Any, /* cellMeta */ ColIndex) => Unit): Self = this.set("onCellClick", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -484,6 +553,14 @@ object MUIDataTableOptions {
     
     @scala.inline
     def deleteOnChangeRowsPerPage: Self = this.set("onChangeRowsPerPage", js.undefined)
+    
+    @scala.inline
+    def setOnColumnOrderChange(
+      value: (/* newColumnOrder */ js.Array[Double], /* columnIndex */ Double, /* newPosition */ Double) => Unit
+    ): Self = this.set("onColumnOrderChange", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def deleteOnColumnOrderChange: Self = this.set("onColumnOrderChange", js.undefined)
     
     @scala.inline
     def setOnColumnSortChange(value: (/* changedColumn */ String, /* direction */ asc | desc) => Unit): Self = this.set("onColumnSortChange", js.Any.fromFunction2(value))
@@ -507,20 +584,22 @@ object MUIDataTableOptions {
     
     @scala.inline
     def setOnFilterChange(
-      value: (/* changedColumn */ String, /* filterList */ js.Array[_], /* type */ FilterType | chip | reset) => Unit
-    ): Self = this.set("onFilterChange", js.Any.fromFunction3(value))
+      value: (/* changedColumn */ String | MUIDataTableColumn | Null, /* filterList */ js.Array[js.Array[String]], /* type */ FilterType | chip | reset, /* changedColumnIndex */ Double, /* displayData */ DisplayData) => Unit
+    ): Self = this.set("onFilterChange", js.Any.fromFunction5(value))
     
     @scala.inline
     def deleteOnFilterChange: Self = this.set("onFilterChange", js.undefined)
     
     @scala.inline
-    def setOnFilterChipClose(value: (/* index */ Double, /* removedFilter */ String, /* filterList */ js.Array[_]) => Unit): Self = this.set("onFilterChipClose", js.Any.fromFunction3(value))
+    def setOnFilterChipClose(
+      value: (/* index */ Double, /* removedFilter */ String, /* filterList */ js.Array[js.Array[String]]) => Unit
+    ): Self = this.set("onFilterChipClose", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteOnFilterChipClose: Self = this.set("onFilterChipClose", js.undefined)
     
     @scala.inline
-    def setOnFilterConfirm(value: /* filterList */ js.Array[_] => Unit): Self = this.set("onFilterConfirm", js.Any.fromFunction1(value))
+    def setOnFilterConfirm(value: /* filterList */ js.Array[js.Array[String]] => Unit): Self = this.set("onFilterConfirm", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnFilterConfirm: Self = this.set("onFilterConfirm", js.undefined)
@@ -560,13 +639,13 @@ object MUIDataTableOptions {
     def deleteOnRowSelectionChange: Self = this.set("onRowSelectionChange", js.undefined)
     
     @scala.inline
-    def setOnRowsDelete(value: /* rowsDeleted */ Lookup => Unit): Self = this.set("onRowsDelete", js.Any.fromFunction1(value))
+    def setOnRowsDelete(value: (/* rowsDeleted */ Lookup, /* newTableData */ js.Array[_]) => Unit | `false`): Self = this.set("onRowsDelete", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnRowsDelete: Self = this.set("onRowsDelete", js.undefined)
     
     @scala.inline
-    def setOnSearchChange(value: /* searchText */ String => Unit): Self = this.set("onSearchChange", js.Any.fromFunction1(value))
+    def setOnSearchChange(value: /* searchText */ String | Null => Unit): Self = this.set("onSearchChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSearchChange: Self = this.set("onSearchChange", js.undefined)
@@ -614,7 +693,7 @@ object MUIDataTableOptions {
     def deletePagination: Self = this.set("pagination", js.undefined)
     
     @scala.inline
-    def setPrint(value: Boolean): Self = this.set("print", value.asInstanceOf[js.Any])
+    def setPrint(value: ToolbarButton): Self = this.set("print", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePrint: Self = this.set("print", js.undefined)
@@ -677,7 +756,7 @@ object MUIDataTableOptions {
     def deleteRowsSelected: Self = this.set("rowsSelected", js.undefined)
     
     @scala.inline
-    def setSearch(value: Boolean): Self = this.set("search", value.asInstanceOf[js.Any])
+    def setSearch(value: ToolbarButton): Self = this.set("search", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSearch: Self = this.set("search", js.undefined)
@@ -743,7 +822,15 @@ object MUIDataTableOptions {
     def deleteServerSide: Self = this.set("serverSide", js.undefined)
     
     @scala.inline
-    def setSetRowProps(value: (/* row */ js.Array[_], /* rowIndex */ Double) => js.Object): Self = this.set("setRowProps", js.Any.fromFunction2(value))
+    def setSetFilterChipProps(
+      value: (/* colIndex */ Double, /* colName */ String, /* data */ js.Array[js.Array[_]]) => MUIDataTableChip
+    ): Self = this.set("setFilterChipProps", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def deleteSetFilterChipProps: Self = this.set("setFilterChipProps", js.undefined)
+    
+    @scala.inline
+    def setSetRowProps(value: (/* row */ js.Array[_], /* dataIndex */ Double, /* rowIndex */ Double) => js.Object): Self = this.set("setRowProps", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteSetRowProps: Self = this.set("setRowProps", js.undefined)
@@ -785,13 +872,19 @@ object MUIDataTableOptions {
     def deleteTableBodyMaxHeight: Self = this.set("tableBodyMaxHeight", js.undefined)
     
     @scala.inline
+    def setTableId(value: String): Self = this.set("tableId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTableId: Self = this.set("tableId", js.undefined)
+    
+    @scala.inline
     def setTextLabels(value: PartialMUIDataTableTextLaBody): Self = this.set("textLabels", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTextLabels: Self = this.set("textLabels", js.undefined)
     
     @scala.inline
-    def setViewColumns(value: Boolean): Self = this.set("viewColumns", value.asInstanceOf[js.Any])
+    def setViewColumns(value: ToolbarButton): Self = this.set("viewColumns", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteViewColumns: Self = this.set("viewColumns", js.undefined)

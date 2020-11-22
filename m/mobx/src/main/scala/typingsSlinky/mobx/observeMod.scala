@@ -20,10 +20,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object observeMod extends js.Object {
   
-  def observe(`object`: js.Object, listener: js.Function1[/* change */ IObjectDidChange, Unit]): Lambda = js.native
+  def observe(`object`: js.Object, listener: js.Function1[/* change */ IObjectDidChange[_], Unit]): Lambda = js.native
   def observe(
     `object`: js.Object,
-    listener: js.Function1[/* change */ IObjectDidChange, Unit],
+    listener: js.Function1[/* change */ IObjectDidChange[_], Unit],
     fireImmediately: Boolean
   ): Lambda = js.native
   def observe[T](

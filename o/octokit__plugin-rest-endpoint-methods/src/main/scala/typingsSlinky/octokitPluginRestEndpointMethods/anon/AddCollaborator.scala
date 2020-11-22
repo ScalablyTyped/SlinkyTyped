@@ -30,7 +30,7 @@ trait AddCollaborator extends js.Object {
     * Adds a collaborator to an organization project and sets their permission level. You must be an organization owner or a project `admin` to add a collaborator.
     */
   @JSName("addCollaborator")
-  var addCollaborator_Original: `264` = js.native
+  var addCollaborator_Original: `267` = js.native
   
   /**
     * **Note**: GitHub's REST API v3 considers every pull request an issue, but not every issue is a pull request. For this reason, "Issues" endpoints may return both issues and pull requests in the response. You can identify pull requests by the `pull_request` key.
@@ -54,7 +54,7 @@ trait AddCollaborator extends js.Object {
     * Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
     */
   @JSName("createCard")
-  var createCard_Original: `265` = js.native
+  var createCard_Original: `268` = js.native
   
   def createColumn(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /projects/:project_id/columns']['response'] */ js.Any
@@ -68,7 +68,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /projects/:project_id/columns']['response'] */ js.Any
   ] = js.native
   @JSName("createColumn")
-  var createColumn_Original: `266` = js.native
+  var createColumn_Original: `269` = js.native
   
   def createForAuthenticatedUser(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /user/projects']['response'] */ js.Any
@@ -82,7 +82,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /user/projects']['response'] */ js.Any
   ] = js.native
   @JSName("createForAuthenticatedUser")
-  var createForAuthenticatedUser_Original: `267` = js.native
+  var createForAuthenticatedUser_Original: `270` = js.native
   
   /**
     * Creates an organization project board. Returns a `404 Not Found` status if projects are disabled in the organization. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
@@ -102,7 +102,7 @@ trait AddCollaborator extends js.Object {
     * Creates an organization project board. Returns a `404 Not Found` status if projects are disabled in the organization. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
     */
   @JSName("createForOrg")
-  var createForOrg_Original: `268` = js.native
+  var createForOrg_Original: `271` = js.native
   
   /**
     * Creates a repository project board. Returns a `404 Not Found` status if projects are disabled in the repository. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
@@ -122,7 +122,7 @@ trait AddCollaborator extends js.Object {
     * Creates a repository project board. Returns a `404 Not Found` status if projects are disabled in the repository. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
     */
   @JSName("createForRepo")
-  var createForRepo_Original: `269` = js.native
+  var createForRepo_Original: `272` = js.native
   
   /**
     * Deletes a project board. Returns a `404 Not Found` status if projects are disabled.
@@ -151,7 +151,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /projects/columns/cards/:card_id']['response'] */ js.Any
   ] = js.native
   @JSName("deleteCard")
-  var deleteCard_Original: `271` = js.native
+  var deleteCard_Original: `274` = js.native
   
   def deleteColumn(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /projects/columns/:column_id']['response'] */ js.Any
@@ -165,13 +165,13 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /projects/columns/:column_id']['response'] */ js.Any
   ] = js.native
   @JSName("deleteColumn")
-  var deleteColumn_Original: `272` = js.native
+  var deleteColumn_Original: `275` = js.native
   
   /**
     * Deletes a project board. Returns a `404 Not Found` status if projects are disabled.
     */
   @JSName("delete")
-  var delete_Original: `270` = js.native
+  var delete_Original: `273` = js.native
   
   /**
     * Gets a project by its `id`. Returns a `404 Not Found` status if projects are disabled. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
@@ -200,7 +200,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /projects/columns/cards/:card_id']['response'] */ js.Any
   ] = js.native
   @JSName("getCard")
-  var getCard_Original: `274` = js.native
+  var getCard_Original: `277` = js.native
   
   def getColumn(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /projects/columns/:column_id']['response'] */ js.Any
@@ -214,7 +214,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /projects/columns/:column_id']['response'] */ js.Any
   ] = js.native
   @JSName("getColumn")
-  var getColumn_Original: `275` = js.native
+  var getColumn_Original: `278` = js.native
   
   /**
     * Returns the collaborator's permission level for an organization project. Possible values for the `permission` key: `admin`, `write`, `read`, `none`. You must be an organization owner or a project `admin` to review a user's permission level.
@@ -234,13 +234,13 @@ trait AddCollaborator extends js.Object {
     * Returns the collaborator's permission level for an organization project. Possible values for the `permission` key: `admin`, `write`, `read`, `none`. You must be an organization owner or a project `admin` to review a user's permission level.
     */
   @JSName("getPermissionForUser")
-  var getPermissionForUser_Original: `276` = js.native
+  var getPermissionForUser_Original: `279` = js.native
   
   /**
     * Gets a project by its `id`. Returns a `404 Not Found` status if projects are disabled. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
     */
   @JSName("get")
-  var get_Original: `273` = js.native
+  var get_Original: `276` = js.native
   
   def listCards(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /projects/columns/:column_id/cards']['response'] */ js.Any
@@ -254,7 +254,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /projects/columns/:column_id/cards']['response'] */ js.Any
   ] = js.native
   @JSName("listCards")
-  var listCards_Original: `277` = js.native
+  var listCards_Original: `280` = js.native
   
   /**
     * Lists the collaborators for an organization project. For a project, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners. You must be an organization owner or a project `admin` to list collaborators.
@@ -274,7 +274,7 @@ trait AddCollaborator extends js.Object {
     * Lists the collaborators for an organization project. For a project, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners. You must be an organization owner or a project `admin` to list collaborators.
     */
   @JSName("listCollaborators")
-  var listCollaborators_Original: `278` = js.native
+  var listCollaborators_Original: `281` = js.native
   
   def listColumns(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /projects/:project_id/columns']['response'] */ js.Any
@@ -288,7 +288,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /projects/:project_id/columns']['response'] */ js.Any
   ] = js.native
   @JSName("listColumns")
-  var listColumns_Original: `279` = js.native
+  var listColumns_Original: `282` = js.native
   
   /**
     * Lists the projects in an organization. Returns a `404 Not Found` status if projects are disabled in the organization. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
@@ -308,7 +308,7 @@ trait AddCollaborator extends js.Object {
     * Lists the projects in an organization. Returns a `404 Not Found` status if projects are disabled in the organization. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
     */
   @JSName("listForOrg")
-  var listForOrg_Original: `280` = js.native
+  var listForOrg_Original: `283` = js.native
   
   /**
     * Lists the projects in a repository. Returns a `404 Not Found` status if projects are disabled in the repository. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
@@ -328,7 +328,7 @@ trait AddCollaborator extends js.Object {
     * Lists the projects in a repository. Returns a `404 Not Found` status if projects are disabled in the repository. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
     */
   @JSName("listForRepo")
-  var listForRepo_Original: `281` = js.native
+  var listForRepo_Original: `284` = js.native
   
   def listForUser(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /users/:username/projects']['response'] */ js.Any
@@ -342,7 +342,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /users/:username/projects']['response'] */ js.Any
   ] = js.native
   @JSName("listForUser")
-  var listForUser_Original: `282` = js.native
+  var listForUser_Original: `285` = js.native
   
   def moveCard(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /projects/columns/cards/:card_id/moves']['response'] */ js.Any
@@ -356,7 +356,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /projects/columns/cards/:card_id/moves']['response'] */ js.Any
   ] = js.native
   @JSName("moveCard")
-  var moveCard_Original: `283` = js.native
+  var moveCard_Original: `286` = js.native
   
   def moveColumn(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /projects/columns/:column_id/moves']['response'] */ js.Any
@@ -370,7 +370,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /projects/columns/:column_id/moves']['response'] */ js.Any
   ] = js.native
   @JSName("moveColumn")
-  var moveColumn_Original: `284` = js.native
+  var moveColumn_Original: `287` = js.native
   
   /**
     * Removes a collaborator from an organization project. You must be an organization owner or a project `admin` to remove a collaborator.
@@ -390,7 +390,7 @@ trait AddCollaborator extends js.Object {
     * Removes a collaborator from an organization project. You must be an organization owner or a project `admin` to remove a collaborator.
     */
   @JSName("removeCollaborator")
-  var removeCollaborator_Original: `285` = js.native
+  var removeCollaborator_Original: `288` = js.native
   
   /**
     * Updates a project board's information. Returns a `404 Not Found` status if projects are disabled. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
@@ -419,7 +419,7 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /projects/columns/cards/:card_id']['response'] */ js.Any
   ] = js.native
   @JSName("updateCard")
-  var updateCard_Original: `287` = js.native
+  var updateCard_Original: `290` = js.native
   
   def updateColumn(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /projects/columns/:column_id']['response'] */ js.Any
@@ -433,11 +433,11 @@ trait AddCollaborator extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PATCH /projects/columns/:column_id']['response'] */ js.Any
   ] = js.native
   @JSName("updateColumn")
-  var updateColumn_Original: `288` = js.native
+  var updateColumn_Original: `291` = js.native
   
   /**
     * Updates a project board's information. Returns a `404 Not Found` status if projects are disabled. If you do not have sufficient privileges to perform this action, a `401 Unauthorized` or `410 Gone` status is returned.
     */
   @JSName("update")
-  var update_Original: `286` = js.native
+  var update_Original: `289` = js.native
 }

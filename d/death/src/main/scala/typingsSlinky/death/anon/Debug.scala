@@ -1,13 +1,12 @@
 package typingsSlinky.death.anon
 
+import typingsSlinky.death.deathBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Debug extends js.Object {
-  
-  var SIGHUP: js.UndefOr[Boolean] = js.native
   
   var SIGINT: js.UndefOr[Boolean] = js.native
   
@@ -17,13 +16,13 @@ trait Debug extends js.Object {
   
   var debug: js.UndefOr[Boolean] = js.native
   
-  var uncaughtException: js.UndefOr[Boolean] = js.native
+  var uncaughtException: `true` = js.native
 }
 object Debug {
   
   @scala.inline
-  def apply(): Debug = {
-    val __obj = js.Dynamic.literal()
+  def apply(uncaughtException: `true`): Debug = {
+    val __obj = js.Dynamic.literal(uncaughtException = uncaughtException.asInstanceOf[js.Any])
     __obj.asInstanceOf[Debug]
   }
   
@@ -43,10 +42,7 @@ object Debug {
     }
     
     @scala.inline
-    def setSIGHUP(value: Boolean): Self = this.set("SIGHUP", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSIGHUP: Self = this.set("SIGHUP", js.undefined)
+    def setUncaughtException(value: `true`): Self = this.set("uncaughtException", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSIGINT(value: Boolean): Self = this.set("SIGINT", value.asInstanceOf[js.Any])
@@ -71,11 +67,5 @@ object Debug {
     
     @scala.inline
     def deleteDebug: Self = this.set("debug", js.undefined)
-    
-    @scala.inline
-    def setUncaughtException(value: Boolean): Self = this.set("uncaughtException", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUncaughtException: Self = this.set("uncaughtException", js.undefined)
   }
 }

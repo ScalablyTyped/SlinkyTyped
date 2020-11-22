@@ -2,6 +2,7 @@ package typingsSlinky.emojiMart.sharedPropsMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.emojiMart.nimbleEmojiIndexMod.EmojiData
 import typingsSlinky.emojiMart.nimbleEmojiIndexMod.EmojiSkin
@@ -18,7 +19,11 @@ trait EmojiProps extends js.Object {
   var emoji: String | EmojiData = js.native
   
   var fallback: js.UndefOr[
-    js.Function2[/* emoji */ EmojiData, /* props */ this.type, ReactComponentClass[js.Object]]
+    js.Function2[
+      /* emoji */ EmojiData, 
+      /* props */ this.type, 
+      ReactComponentClass[js.Object] | ReactElement
+    ]
   ] = js.native
   
   var forceSize: js.UndefOr[Boolean] = js.native
@@ -94,7 +99,7 @@ object EmojiProps {
     def deleteBackgroundImageFn: Self = this.set("backgroundImageFn", js.undefined)
     
     @scala.inline
-    def setFallback(value: (/* emoji */ EmojiData, EmojiProps) => ReactComponentClass[js.Object]): Self = this.set("fallback", js.Any.fromFunction2(value))
+    def setFallback(value: (/* emoji */ EmojiData, EmojiProps) => ReactComponentClass[js.Object] | ReactElement): Self = this.set("fallback", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteFallback: Self = this.set("fallback", js.undefined)

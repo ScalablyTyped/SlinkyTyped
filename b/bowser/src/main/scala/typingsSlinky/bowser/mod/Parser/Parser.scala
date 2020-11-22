@@ -34,6 +34,12 @@ trait Parser extends js.Object {
   def getEngine(): EngineDetails = js.native
   
   /**
+    * Get parsed engine's name
+    * @returns {String} Engine's name or an empty string
+    */
+  def getEngineName(): String = js.native
+  
+  /**
     * Get OS
     * @return {OSDetails} - OS Details
     *
@@ -103,8 +109,9 @@ trait Parser extends js.Object {
   
   /**
     * Parse full information about the browser
+    * @returns {Parser.Parser}
     */
-  def parse(): Unit = js.native
+  def parse(): typingsSlinky.bowser.mod.Parser.Parser = js.native
   
   /**
     * Get parsed browser object

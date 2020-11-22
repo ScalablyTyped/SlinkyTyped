@@ -19,6 +19,11 @@ trait ConnectWifiOption extends js.Object {
   /** 接口调用失败的回调函数 */
   var fail: js.UndefOr[ConnectWifiFailCallback] = js.native
   
+  /** 跳转到系统设置页进行连接，仅安卓生效
+    *
+    * 最低基础库： `2.12.0` */
+  var maunal: js.UndefOr[Boolean] = js.native
+  
   /** Wi-Fi 设备密码 */
   var password: String = js.native
   
@@ -71,6 +76,12 @@ object ConnectWifiOption {
     
     @scala.inline
     def deleteFail: Self = this.set("fail", js.undefined)
+    
+    @scala.inline
+    def setMaunal(value: Boolean): Self = this.set("maunal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaunal: Self = this.set("maunal", js.undefined)
     
     @scala.inline
     def setSuccess(value: /* res */ WifiError => Unit): Self = this.set("success", js.Any.fromFunction1(value))

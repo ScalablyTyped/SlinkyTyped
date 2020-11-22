@@ -2,6 +2,7 @@ package typingsSlinky.muiDatatables.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
 import typingsSlinky.muiDatatables.mod.MUIDataTablePagination
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +20,7 @@ object TablePagination {
   def apply(
     changeRowsPerPage: js.Any => js.Any,
     count: Double,
-    options: js.Object,
+    options: MUIDataTableOptions,
     page: Double,
     rowsPerPage: Double
   ): Default[tag.type, js.Object] = {

@@ -1,32 +1,43 @@
 package typingsSlinky.reactOverlays.components
 
-import slinky.core.facade.ReactElement
+import org.scalajs.dom.raw.HTMLElement
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactOverlays.portalMod.PortalProps
+import typingsSlinky.reactOverlays.useWaitForDOMRefMod.DOMContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Portal {
   
-  @JSImport("react-overlays", "Portal")
+  @JSImport("react-overlays/esm", "Portal")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.Portal] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def containerReactElement(value: ReactElement): this.type = set("container", value.asInstanceOf[js.Any])
+    def containerRefObject(value: ReactRef[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def container(value: ReactElement | js.Function): this.type = set("container", value.asInstanceOf[js.Any])
+    def containerHTMLElement(value: HTMLElement): this.type = set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onRendered(value: js.Function): this.type = set("onRendered", value.asInstanceOf[js.Any])
+    def containerFunction0(value: () => HTMLElement | ReactRef[HTMLElement] | Null): this.type = set("container", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def container(value: DOMContainer[HTMLElement]): this.type = set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def containerNull: this.type = set("container", null)
+    
+    @scala.inline
+    def onRendered(value: /* element */ js.Any => Unit): this.type = set("onRendered", js.Any.fromFunction1(value))
   }
   
   def withProps(p: PortalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

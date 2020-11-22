@@ -205,7 +205,7 @@ trait Map extends js.Object {
   
   def setMapStyle(mapStyle: MapStyle): Unit = js.native
   
-  def setMapStyle2(style: MapStyleV2): Unit = js.native
+  def setMapStyleV2(style: MapStyleV2): Unit = js.native
   
   def setMapType(mapType: MapType): Unit = js.native
   

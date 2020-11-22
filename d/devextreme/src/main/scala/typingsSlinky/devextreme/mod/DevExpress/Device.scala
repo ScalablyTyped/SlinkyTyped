@@ -16,31 +16,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Device extends js.Object {
   
-  /** @name Device.android */
+  /**
+    * [descr:Device.android]
+    */
   var android: js.UndefOr[Boolean] = js.native
   
-  /** @name Device.deviceType */
+  /**
+    * [descr:Device.deviceType]
+    */
   var deviceType: js.UndefOr[phone | tablet | desktop] = js.native
   
-  /** @name Device.generic */
+  /**
+    * [descr:Device.generic]
+    */
   var generic: js.UndefOr[Boolean] = js.native
   
-  /** @name Device.grade */
+  /**
+    * [descr:Device.grade]
+    */
   var grade: js.UndefOr[A | B | C] = js.native
   
-  /** @name Device.ios */
+  /**
+    * [descr:Device.ios]
+    */
   var ios: js.UndefOr[Boolean] = js.native
   
-  /** @name Device.phone */
+  /**
+    * [descr:Device.phone]
+    */
   var phone: js.UndefOr[Boolean] = js.native
   
-  /** @name Device.platform */
+  /**
+    * [descr:Device.platform]
+    */
   var platform: js.UndefOr[android | ios | generic] = js.native
   
-  /** @name Device.tablet */
+  /**
+    * [descr:Device.tablet]
+    */
   var tablet: js.UndefOr[Boolean] = js.native
   
-  /** @name Device.version */
+  /**
+    * [descr:Device.version]
+    */
   var version: js.UndefOr[js.Array[Double]] = js.native
 }
 object Device {

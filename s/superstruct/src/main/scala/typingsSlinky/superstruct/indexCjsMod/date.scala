@@ -14,11 +14,5 @@ object date extends js.Object {
     * Note: this also ensures that the value is *not* an invalid `Date` object,
     * which can occur when parsing a date fails but still returns a `Date`.
     */
-  /**
-    * Validate that `Date` values.
-    *
-    * Note: this also ensures that the value is *not* an invalid `Date` object,
-    * which can occur when parsing a date fails but still returns a `Date`.
-    */
   def apply(): Struct_[js.Date, _] = js.native
 }

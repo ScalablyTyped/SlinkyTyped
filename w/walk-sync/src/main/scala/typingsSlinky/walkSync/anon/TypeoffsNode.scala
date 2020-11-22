@@ -19,6 +19,8 @@ import typingsSlinky.node.anon.Recursive
 import typingsSlinky.node.anon.WithFileTypes
 import typingsSlinky.node.anon.`3`
 import typingsSlinky.node.fsMod.BaseEncodingOptions
+import typingsSlinky.node.fsMod.BigIntOptions
+import typingsSlinky.node.fsMod.BigIntStats
 import typingsSlinky.node.fsMod.BufferEncodingOption
 import typingsSlinky.node.fsMod.Dir
 import typingsSlinky.node.fsMod.Dirent
@@ -31,6 +33,8 @@ import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.ReadStream
 import typingsSlinky.node.fsMod.ReadSyncOptions
 import typingsSlinky.node.fsMod.RmDirOptions
+import typingsSlinky.node.fsMod.RmOptions
+import typingsSlinky.node.fsMod.StatOptions
 import typingsSlinky.node.fsMod.Stats
 import typingsSlinky.node.fsMod.WriteFileOptions
 import typingsSlinky.node.fsMod.WriteStream
@@ -42,6 +46,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait TypeoffsNode extends js.Object {
+  
+  var BigIntStats: Instantiable0[typingsSlinky.node.fsMod.BigIntStats] = js.native
   
   var Dir: Instantiable0[typingsSlinky.node.fsMod.Dir] = js.native
   
@@ -153,6 +159,18 @@ trait TypeoffsNode extends js.Object {
   
   def lstatSync(path: PathLike): Stats = js.native
   
+  val lutimes: Typeoflutimes = js.native
+  
+  def lutimesSync(path: PathLike, atime: String, mtime: String): Unit = js.native
+  def lutimesSync(path: PathLike, atime: String, mtime: Double): Unit = js.native
+  def lutimesSync(path: PathLike, atime: String, mtime: js.Date): Unit = js.native
+  def lutimesSync(path: PathLike, atime: Double, mtime: String): Unit = js.native
+  def lutimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
+  def lutimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
+  def lutimesSync(path: PathLike, atime: js.Date, mtime: String): Unit = js.native
+  def lutimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
+  def lutimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
+  
   val mkdir: Typeofmkdir = js.native
   
   def mkdirSync(path: PathLike): js.UndefOr[String] = js.native
@@ -253,6 +271,11 @@ trait TypeoffsNode extends js.Object {
   
   def renameSync(oldPath: PathLike, newPath: PathLike): Unit = js.native
   
+  val rm: Typeofrm = js.native
+  
+  def rmSync(path: PathLike): Unit = js.native
+  def rmSync(path: PathLike, options: RmOptions): Unit = js.native
+  
   val rmdir: Typeofrmdir = js.native
   
   def rmdirSync(path: PathLike): Unit = js.native
@@ -261,6 +284,8 @@ trait TypeoffsNode extends js.Object {
   val stat: Typeofstat = js.native
   
   def statSync(path: PathLike): Stats = js.native
+  def statSync(path: PathLike, options: BigIntOptions): BigIntStats = js.native
+  def statSync(path: PathLike, options: StatOptions): Stats | BigIntStats = js.native
   
   val symlink: Typeofsymlink = js.native
   

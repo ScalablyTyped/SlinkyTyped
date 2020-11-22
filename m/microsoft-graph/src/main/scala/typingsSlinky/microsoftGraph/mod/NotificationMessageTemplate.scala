@@ -14,7 +14,7 @@ trait NotificationMessageTemplate extends Entity {
   var brandingOptions: js.UndefOr[NotificationTemplateBrandingOptions] = js.native
   
   // The default locale to fallback onto when the requested locale is not available.
-  var defaultLocale: js.UndefOr[String] = js.native
+  var defaultLocale: js.UndefOr[NullableOption[String]] = js.native
   
   // Display name for the Notification Message Template.
   var displayName: js.UndefOr[String] = js.native
@@ -23,7 +23,7 @@ trait NotificationMessageTemplate extends Entity {
   var lastModifiedDateTime: js.UndefOr[String] = js.native
   
   // The list of localized messages for this Notification Message Template.
-  var localizedNotificationMessages: js.UndefOr[js.Array[LocalizedNotificationMessage]] = js.native
+  var localizedNotificationMessages: js.UndefOr[NullableOption[js.Array[LocalizedNotificationMessage]]] = js.native
 }
 object NotificationMessageTemplate {
   
@@ -55,10 +55,13 @@ object NotificationMessageTemplate {
     def deleteBrandingOptions: Self = this.set("brandingOptions", js.undefined)
     
     @scala.inline
-    def setDefaultLocale(value: String): Self = this.set("defaultLocale", value.asInstanceOf[js.Any])
+    def setDefaultLocale(value: NullableOption[String]): Self = this.set("defaultLocale", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefaultLocale: Self = this.set("defaultLocale", js.undefined)
+    
+    @scala.inline
+    def setDefaultLocaleNull: Self = this.set("defaultLocale", null)
     
     @scala.inline
     def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
@@ -76,9 +79,12 @@ object NotificationMessageTemplate {
     def setLocalizedNotificationMessagesVarargs(value: LocalizedNotificationMessage*): Self = this.set("localizedNotificationMessages", js.Array(value :_*))
     
     @scala.inline
-    def setLocalizedNotificationMessages(value: js.Array[LocalizedNotificationMessage]): Self = this.set("localizedNotificationMessages", value.asInstanceOf[js.Any])
+    def setLocalizedNotificationMessages(value: NullableOption[js.Array[LocalizedNotificationMessage]]): Self = this.set("localizedNotificationMessages", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLocalizedNotificationMessages: Self = this.set("localizedNotificationMessages", js.undefined)
+    
+    @scala.inline
+    def setLocalizedNotificationMessagesNull: Self = this.set("localizedNotificationMessages", null)
   }
 }

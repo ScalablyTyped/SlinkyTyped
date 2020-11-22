@@ -9,15 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.typescript.mod.SyntaxKind.AnyKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.AsKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.AssertsKeyword
+  - typingsSlinky.typescript.mod.SyntaxKind.AsyncKeyword
+  - typingsSlinky.typescript.mod.SyntaxKind.AwaitKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.BigIntKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.BooleanKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.BreakKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.CaseKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.CatchKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.ClassKeyword
-  - typingsSlinky.typescript.mod.SyntaxKind.ContinueKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.ConstKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.ConstructorKeyword
+  - typingsSlinky.typescript.mod.SyntaxKind.ContinueKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.DebuggerKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.DeclareKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.DefaultKeyword
@@ -33,13 +35,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.typescript.mod.SyntaxKind.FromKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.FunctionKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.GetKeyword
+  - typingsSlinky.typescript.mod.SyntaxKind.GlobalKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.IfKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.ImplementsKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.ImportKeyword
-  - typingsSlinky.typescript.mod.SyntaxKind.InKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.InferKeyword
+  - typingsSlinky.typescript.mod.SyntaxKind.InKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.InstanceOfKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.InterfaceKeyword
+  - typingsSlinky.typescript.mod.SyntaxKind.IntrinsicKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.IsKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.KeyOfKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.LetKeyword
@@ -50,13 +54,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.typescript.mod.SyntaxKind.NullKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.NumberKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.ObjectKeyword
+  - typingsSlinky.typescript.mod.SyntaxKind.OfKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.PackageKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.PrivateKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.ProtectedKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.PublicKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.ReadonlyKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.RequireKeyword
-  - typingsSlinky.typescript.mod.SyntaxKind.GlobalKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.ReturnKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.SetKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.StaticKeyword
@@ -78,8 +82,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.typescript.mod.SyntaxKind.WhileKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.WithKeyword
   - typingsSlinky.typescript.mod.SyntaxKind.YieldKeyword
-  - typingsSlinky.typescript.mod.SyntaxKind.AsyncKeyword
-  - typingsSlinky.typescript.mod.SyntaxKind.AwaitKeyword
-  - typingsSlinky.typescript.mod.SyntaxKind.OfKeyword
 */
-trait KeywordSyntaxKind extends JSDocSyntaxKind
+trait KeywordSyntaxKind
+  extends JSDocSyntaxKind
+     with TokenSyntaxKind

@@ -14,7 +14,7 @@ object transformsMod extends js.Object {
   
   def clear(): Unit = js.native
   
-  def get(sourceCode: String, destinationCode: String): TransformFunction = js.native
+  def get(sourceCode: String, destinationCode: String): js.UndefOr[TransformFunction] = js.native
   
   def remove(source: default, destination: default): TransformFunction = js.native
 }

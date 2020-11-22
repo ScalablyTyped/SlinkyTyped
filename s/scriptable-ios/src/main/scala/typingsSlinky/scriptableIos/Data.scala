@@ -18,9 +18,9 @@ trait Data extends js.Object {
   def getBytes(): js.Array[Double] = js.native
   
   /**
-    * _Creates a base 64 encoded string._
+    * _Creates a base64 encoded string._
     *
-    * Creates a base 64 encoded string from the data.
+    * Creates a base64 encoded string from the data.
     * @see https://docs.scriptable.app/data/#-tobase64string
     */
   def toBase64String(): String = js.native

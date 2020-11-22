@@ -16,7 +16,7 @@ trait AbortSignal extends js.Object {
     * A function to be invoked when the action represented by this signal has
     * been cancelled.
     */
-  var onabort: js.UndefOr[AbortHandler] = js.native
+  var onabort: AbortHandler | Null = js.native
 }
 object AbortSignal {
   
@@ -45,9 +45,9 @@ object AbortSignal {
     def setAborted(value: Boolean): Self = this.set("aborted", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnabort(value: () => Unit): Self = this.set("onabort", js.Any.fromFunction0(value))
+    def setOnabort(value: AbortHandler): Self = this.set("onabort", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteOnabort: Self = this.set("onabort", js.undefined)
+    def setOnabortNull: Self = this.set("onabort", null)
   }
 }

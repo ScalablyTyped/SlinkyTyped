@@ -10,10 +10,10 @@ import typingsSlinky.antd.antdStrings.click
 import typingsSlinky.antd.antdStrings.contextMenu
 import typingsSlinky.antd.antdStrings.hover
 import typingsSlinky.antd.buttonButtonMod.ButtonHTMLType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.dropdownButtonMod.DropdownButtonType
 import typingsSlinky.antd.dropdownDropdownMod.Align
 import typingsSlinky.antd.dropdownDropdownMod.Placement
-import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`

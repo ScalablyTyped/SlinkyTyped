@@ -1,6 +1,6 @@
 package typingsSlinky.relayRuntime.relayStoreTypesMod
 
-import typingsSlinky.relayRuntime.anon.CacheConfig
+import typingsSlinky.relayRuntime.anon.Operation
 import typingsSlinky.relayRuntime.anon.OptimisticResponse
 import typingsSlinky.relayRuntime.anon.Source
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponse
@@ -62,7 +62,7 @@ trait Environment extends js.Object {
     * Note: Observables are lazy, so calling this method will do nothing until
     * the result is subscribed to: environment.execute({...}).subscribe({...}).
     */
-  def execute(config: CacheConfig): RelayObservable[GraphQLResponse] = js.native
+  def execute(config: Operation): RelayObservable[GraphQLResponse] = js.native
   
   /**
     * Returns an Observable of GraphQLResponse resulting from executing the

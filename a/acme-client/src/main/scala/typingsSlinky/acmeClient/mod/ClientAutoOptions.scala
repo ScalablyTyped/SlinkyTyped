@@ -18,6 +18,8 @@ trait ClientAutoOptions extends js.Object {
   
   var email: js.UndefOr[String] = js.native
   
+  var preferredChain: js.UndefOr[String] = js.native
+  
   var skipChallengeVerification: js.UndefOr[Boolean] = js.native
   
   var termsOfServiceAgreed: js.UndefOr[Boolean] = js.native
@@ -72,6 +74,12 @@ object ClientAutoOptions {
     
     @scala.inline
     def deleteEmail: Self = this.set("email", js.undefined)
+    
+    @scala.inline
+    def setPreferredChain(value: String): Self = this.set("preferredChain", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreferredChain: Self = this.set("preferredChain", js.undefined)
     
     @scala.inline
     def setSkipChallengeVerification(value: Boolean): Self = this.set("skipChallengeVerification", value.asInstanceOf[js.Any])

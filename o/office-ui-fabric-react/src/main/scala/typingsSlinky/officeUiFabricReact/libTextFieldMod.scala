@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.officeUiFabricReact.textFieldTypesMod.IMaskedTextFieldProps
 import typingsSlinky.officeUiFabricReact.textFieldTypesMod.ITextFieldProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,13 +18,13 @@ object libTextFieldMod extends js.Object {
   @js.native
   class MaskedTextField protected ()
     extends typingsSlinky.officeUiFabricReact.textFieldMod.MaskedTextField {
-    def this(props: ITextFieldProps) = this()
+    def this(props: IMaskedTextFieldProps) = this()
   }
   /* static members */
   @js.native
   object MaskedTextField extends js.Object {
     
-    var defaultProps: ITextFieldProps = js.native
+    var defaultProps: IMaskedTextFieldProps = js.native
   }
   
   @js.native

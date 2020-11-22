@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.nodesMod
 
+import typingsSlinky.grammarkdown.tokensMod.MetaElementKind
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.AtToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`

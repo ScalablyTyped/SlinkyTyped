@@ -10,7 +10,6 @@ import typingsSlinky.babylonjs.ImageBitmap
 import typingsSlinky.babylonjs.WebGLProgram
 import typingsSlinky.babylonjs.WebGLRenderingContext
 import typingsSlinky.babylonjs.WebGLUniformLocation
-import typingsSlinky.babylonjs.audioEngineMod.IAudioEngine
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.customAnimationFrameRequesterMod.ICustomAnimationFrameRequester
 import typingsSlinky.babylonjs.dataBufferMod.DataBuffer
@@ -18,8 +17,10 @@ import typingsSlinky.babylonjs.effectFallbacksMod.EffectFallbacks
 import typingsSlinky.babylonjs.effectMod.Effect
 import typingsSlinky.babylonjs.engineViewsMod.EngineView
 import typingsSlinky.babylonjs.engineWebVRMod.IVRPresentationAttributes
+import typingsSlinky.babylonjs.iaudioengineMod.IAudioEngine
 import typingsSlinky.babylonjs.internalTextureMod.InternalTexture
 import typingsSlinky.babylonjs.iofflineproviderMod.IOfflineProvider
+import typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem
 import typingsSlinky.babylonjs.loadingScreenMod.ILoadingScreen
 import typingsSlinky.babylonjs.materialMod.Material
 import typingsSlinky.babylonjs.mathLikeMod.IColor4Like
@@ -34,8 +35,6 @@ import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.thinEngineMod.EngineOptions
 import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.timeTokenMod.TimeToken
-import typingsSlinky.babylonjs.typesMod.DataArray
-import typingsSlinky.babylonjs.typesMod.IndicesArray
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.typesMod.int
 import typingsSlinky.babylonjs.webVRCameraMod.WebVROptions
@@ -115,9 +114,6 @@ class Engine protected () extends ThinEngine {
   def _connectVREvents(canvas: HTMLCanvasElement, document: js.Any): Unit = js.native
   
   /** @hidden */
-  def _convertRGBtoRGBATextureData(rgbData: js.Any, width: Double, height: Double, textureType: Double): js.typedarray.ArrayBufferView = js.native
-  
-  /** @hidden */
   def _createTimeQuery(): WebGLQuery = js.native
   
   /** @hidden */
@@ -135,7 +131,8 @@ class Engine protected () extends ThinEngine {
   /** @hidden */
   var _drawCalls: PerfCounter = js.native
   
-  var _dummyFramebuffer: js.Any = js.native
+  /** @hidden */
+  var _excludedCompressedTextures: js.Array[String] = js.native
   
   var _fps: js.Any = js.native
   
@@ -220,50 +217,6 @@ class Engine protected () extends ThinEngine {
   ): js.Promise[js.typedarray.ArrayBufferView] | Null = js.native
   
   /** @hidden */
-  def _readTexturePixels(texture: InternalTexture, width: Double, height: Double): js.typedarray.ArrayBufferView = js.native
-  def _readTexturePixels(
-    texture: InternalTexture,
-    width: Double,
-    height: Double,
-    faceIndex: js.UndefOr[scala.Nothing],
-    level: js.UndefOr[scala.Nothing],
-    buffer: Nullable[js.typedarray.ArrayBufferView]
-  ): js.typedarray.ArrayBufferView = js.native
-  def _readTexturePixels(
-    texture: InternalTexture,
-    width: Double,
-    height: Double,
-    faceIndex: js.UndefOr[scala.Nothing],
-    level: Double
-  ): js.typedarray.ArrayBufferView = js.native
-  def _readTexturePixels(
-    texture: InternalTexture,
-    width: Double,
-    height: Double,
-    faceIndex: js.UndefOr[scala.Nothing],
-    level: Double,
-    buffer: Nullable[js.typedarray.ArrayBufferView]
-  ): js.typedarray.ArrayBufferView = js.native
-  def _readTexturePixels(texture: InternalTexture, width: Double, height: Double, faceIndex: Double): js.typedarray.ArrayBufferView = js.native
-  def _readTexturePixels(
-    texture: InternalTexture,
-    width: Double,
-    height: Double,
-    faceIndex: Double,
-    level: js.UndefOr[scala.Nothing],
-    buffer: Nullable[js.typedarray.ArrayBufferView]
-  ): js.typedarray.ArrayBufferView = js.native
-  def _readTexturePixels(texture: InternalTexture, width: Double, height: Double, faceIndex: Double, level: Double): js.typedarray.ArrayBufferView = js.native
-  def _readTexturePixels(
-    texture: InternalTexture,
-    width: Double,
-    height: Double,
-    faceIndex: Double,
-    level: Double,
-    buffer: Nullable[js.typedarray.ArrayBufferView]
-  ): js.typedarray.ArrayBufferView = js.native
-  
-  /** @hidden */
   def _renderFrame(): Unit = js.native
   
   /** @hidden */
@@ -276,6 +229,9 @@ class Engine protected () extends ThinEngine {
   
   /** @hidden */
   def _submitVRFrame(): Unit = js.native
+  
+  /** @hidden */
+  var _textureFormatInUse: String = js.native
   
   var _timeStep: js.Any = js.native
   
@@ -317,7 +273,7 @@ class Engine protected () extends ThinEngine {
     * @param algorithmType defines the algorithm to use
     * @param query defines the query to use
     * @returns the current engine
-    * @see http://doc.babylonjs.com/features/occlusionquery
+    * @see https://doc.babylonjs.com/features/occlusionquery
     */
   def beginOcclusionQuery(algorithmType: Double, query: WebGLQuery): typingsSlinky.babylonjs.engineOcclusionQueryMod.babylonjsEnginesEngineAugmentingMod.Engine = js.native
   
@@ -355,7 +311,8 @@ class Engine protected () extends ThinEngine {
   
   /**
     * Create an effect to use with particle systems.
-    * Please note that some parameters like animation sheets or not being billboard are not supported in this configuration
+    * Please note that some parameters like animation sheets or not being billboard are not supported in this configuration, except if you pass
+    * the particle system for which you want to create a custom effect in the last parameter
     * @param fragmentName defines the base name of the effect (The name of file without .fragment.fx)
     * @param uniformsNames defines a list of attribute names
     * @param samplers defines an array of string used to represent textures
@@ -363,6 +320,7 @@ class Engine protected () extends ThinEngine {
     * @param fallbacks defines the list of potential fallbacks to use if shader conmpilation fails
     * @param onCompiled defines a function to call when the effect creation is successful
     * @param onError defines a function to call when the effect creation has failed
+    * @param particleSystem the particle system you want to create the effect for
     * @returns the new Effect
     */
   def createEffectForParticles(fragmentName: String, uniformsNames: js.Array[String], samplers: js.Array[String], defines: String): Effect = js.native
@@ -373,7 +331,27 @@ class Engine protected () extends ThinEngine {
     defines: String,
     fallbacks: js.UndefOr[scala.Nothing],
     onCompiled: js.UndefOr[scala.Nothing],
+    onError: js.UndefOr[scala.Nothing],
+    particleSystem: IParticleSystem
+  ): Effect = js.native
+  def createEffectForParticles(
+    fragmentName: String,
+    uniformsNames: js.Array[String],
+    samplers: js.Array[String],
+    defines: String,
+    fallbacks: js.UndefOr[scala.Nothing],
+    onCompiled: js.UndefOr[scala.Nothing],
     onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit]
+  ): Effect = js.native
+  def createEffectForParticles(
+    fragmentName: String,
+    uniformsNames: js.Array[String],
+    samplers: js.Array[String],
+    defines: String,
+    fallbacks: js.UndefOr[scala.Nothing],
+    onCompiled: js.UndefOr[scala.Nothing],
+    onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit],
+    particleSystem: IParticleSystem
   ): Effect = js.native
   def createEffectForParticles(
     fragmentName: String,
@@ -390,7 +368,27 @@ class Engine protected () extends ThinEngine {
     defines: String,
     fallbacks: js.UndefOr[scala.Nothing],
     onCompiled: js.Function1[/* effect */ Effect, Unit],
+    onError: js.UndefOr[scala.Nothing],
+    particleSystem: IParticleSystem
+  ): Effect = js.native
+  def createEffectForParticles(
+    fragmentName: String,
+    uniformsNames: js.Array[String],
+    samplers: js.Array[String],
+    defines: String,
+    fallbacks: js.UndefOr[scala.Nothing],
+    onCompiled: js.Function1[/* effect */ Effect, Unit],
     onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit]
+  ): Effect = js.native
+  def createEffectForParticles(
+    fragmentName: String,
+    uniformsNames: js.Array[String],
+    samplers: js.Array[String],
+    defines: String,
+    fallbacks: js.UndefOr[scala.Nothing],
+    onCompiled: js.Function1[/* effect */ Effect, Unit],
+    onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit],
+    particleSystem: IParticleSystem
   ): Effect = js.native
   def createEffectForParticles(
     fragmentName: String,
@@ -406,7 +404,27 @@ class Engine protected () extends ThinEngine {
     defines: String,
     fallbacks: EffectFallbacks,
     onCompiled: js.UndefOr[scala.Nothing],
+    onError: js.UndefOr[scala.Nothing],
+    particleSystem: IParticleSystem
+  ): Effect = js.native
+  def createEffectForParticles(
+    fragmentName: String,
+    uniformsNames: js.Array[String],
+    samplers: js.Array[String],
+    defines: String,
+    fallbacks: EffectFallbacks,
+    onCompiled: js.UndefOr[scala.Nothing],
     onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit]
+  ): Effect = js.native
+  def createEffectForParticles(
+    fragmentName: String,
+    uniformsNames: js.Array[String],
+    samplers: js.Array[String],
+    defines: String,
+    fallbacks: EffectFallbacks,
+    onCompiled: js.UndefOr[scala.Nothing],
+    onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit],
+    particleSystem: IParticleSystem
   ): Effect = js.native
   def createEffectForParticles(
     fragmentName: String,
@@ -423,7 +441,27 @@ class Engine protected () extends ThinEngine {
     defines: String,
     fallbacks: EffectFallbacks,
     onCompiled: js.Function1[/* effect */ Effect, Unit],
+    onError: js.UndefOr[scala.Nothing],
+    particleSystem: IParticleSystem
+  ): Effect = js.native
+  def createEffectForParticles(
+    fragmentName: String,
+    uniformsNames: js.Array[String],
+    samplers: js.Array[String],
+    defines: String,
+    fallbacks: EffectFallbacks,
+    onCompiled: js.Function1[/* effect */ Effect, Unit],
     onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit]
+  ): Effect = js.native
+  def createEffectForParticles(
+    fragmentName: String,
+    uniformsNames: js.Array[String],
+    samplers: js.Array[String],
+    defines: String,
+    fallbacks: EffectFallbacks,
+    onCompiled: js.Function1[/* effect */ Effect, Unit],
+    onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit],
+    particleSystem: IParticleSystem
   ): Effect = js.native
   
   /**
@@ -446,83 +484,6 @@ class Engine protected () extends ThinEngine {
     * @return the new query
     */
   def createQuery(): WebGLQuery = js.native
-  
-  /**
-    * Creates a new raw cube texture from a specified url
-    * @param url defines the url where the data is located
-    * @param scene defines the current scene
-    * @param size defines the size of the textures
-    * @param format defines the format of the data
-    * @param type defines the type fo the data (like Engine.TEXTURETYPE_UNSIGNED_INT)
-    * @param noMipmap defines if the engine should avoid generating the mip levels
-    * @param callback defines a callback used to extract texture data from loaded data
-    * @param mipmapGenerator defines to provide an optional tool to generate mip levels
-    * @param onLoad defines a callback called when texture is loaded
-    * @param onError defines a callback called if there is an error
-    * @returns the cube texture as an InternalTexture
-    */
-  def createRawCubeTextureFromUrl(
-    url: String,
-    scene: Scene,
-    size: Double,
-    format: Double,
-    `type`: Double,
-    noMipmap: Boolean,
-    callback: js.Function1[
-      /* ArrayBuffer */ js.typedarray.ArrayBuffer, 
-      Nullable[js.Array[js.typedarray.ArrayBufferView]]
-    ],
-    mipmapGenerator: Nullable[
-      js.Function1[
-        /* faces */ js.Array[js.typedarray.ArrayBufferView], 
-        js.Array[js.Array[js.typedarray.ArrayBufferView]]
-      ]
-    ],
-    onLoad: Nullable[js.Function0[Unit]],
-    onError: Nullable[
-      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-    ]
-  ): InternalTexture = js.native
-  /**
-    * Creates a new raw cube texture from a specified url
-    * @param url defines the url where the data is located
-    * @param scene defines the current scene
-    * @param size defines the size of the textures
-    * @param format defines the format of the data
-    * @param type defines the type fo the data (like Engine.TEXTURETYPE_UNSIGNED_INT)
-    * @param noMipmap defines if the engine should avoid generating the mip levels
-    * @param callback defines a callback used to extract texture data from loaded data
-    * @param mipmapGenerator defines to provide an optional tool to generate mip levels
-    * @param onLoad defines a callback called when texture is loaded
-    * @param onError defines a callback called if there is an error
-    * @param samplingMode defines the required sampling mode (like Texture.NEAREST_SAMPLINGMODE)
-    * @param invertY defines if data must be stored with Y axis inverted
-    * @returns the cube texture as an InternalTexture
-    */
-  def createRawCubeTextureFromUrl(
-    url: String,
-    scene: Scene,
-    size: Double,
-    format: Double,
-    `type`: Double,
-    noMipmap: Boolean,
-    callback: js.Function1[
-      /* ArrayBuffer */ js.typedarray.ArrayBuffer, 
-      Nullable[js.Array[js.typedarray.ArrayBufferView]]
-    ],
-    mipmapGenerator: Nullable[
-      js.Function1[
-        /* faces */ js.Array[js.typedarray.ArrayBufferView], 
-        js.Array[js.Array[js.typedarray.ArrayBufferView]]
-      ]
-    ],
-    onLoad: Nullable[js.Function0[Unit]],
-    onError: Nullable[
-      js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-    ],
-    samplingMode: Double,
-    invertY: Boolean
-  ): InternalTexture = js.native
   
   /**
     * Creates a webGL transform feedback object
@@ -573,13 +534,13 @@ class Engine protected () extends ThinEngine {
   /**
     * Call this function to leave webVR mode
     * Will do nothing if webVR is not supported or if there is no webVR device
-    * @see http://doc.babylonjs.com/how_to/webvr_camera
+    * @see https://doc.babylonjs.com/how_to/webvr_camera
     */
   def disableVR(): Unit = js.native
   
   /**
     * Display the loading screen
-    * @see http://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
+    * @see https://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
     */
   def displayLoadingUI(): Unit = js.native
   
@@ -601,13 +562,13 @@ class Engine protected () extends ThinEngine {
     * Call this function to switch to webVR mode
     * Will do nothing if webVR is not supported or if there is no webVR device
     * @param options the webvr options provided to the camera. mainly used for multiview
-    * @see http://doc.babylonjs.com/how_to/webvr_camera
+    * @see https://doc.babylonjs.com/how_to/webvr_camera
     */
   def enableVR(options: WebVROptions): Unit = js.native
   
   /**
     * Ends an occlusion query
-    * @see http://doc.babylonjs.com/features/occlusionquery
+    * @see https://doc.babylonjs.com/features/occlusionquery
     * @param algorithmType defines the algorithm to use
     * @returns the current engine
     */
@@ -708,7 +669,7 @@ class Engine protected () extends ThinEngine {
   
   /**
     * Gets the max steps when engine is running in deterministic lock step
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+    * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
     * @returns the max steps
     */
   def getLockstepMaxSteps(): Double = js.native
@@ -807,7 +768,7 @@ class Engine protected () extends ThinEngine {
   
   /**
     * Hide the loading screen
-    * @see http://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
+    * @see https://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
     */
   def hideLoadingUI(): Unit = js.native
   
@@ -832,7 +793,7 @@ class Engine protected () extends ThinEngine {
   
   /**
     * Gets a boolean indicating that the engine is running in deterministic lock step mode
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+    * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
     * @returns true if engine is in deterministic lock step mode
     */
   def isDeterministicLockStep(): Boolean = js.native
@@ -869,24 +830,24 @@ class Engine protected () extends ThinEngine {
   
   /**
     * Gets the current loading screen object
-    * @see http://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
+    * @see https://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
     */
   def loadingScreen: ILoadingScreen = js.native
   /**
     * Sets the current loading screen object
-    * @see http://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
+    * @see https://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
     */
   def loadingScreen_=(loadingScreen: ILoadingScreen): Unit = js.native
   
   /**
     * Sets the current loading screen background color
-    * @see http://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
+    * @see https://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
     */
   def loadingUIBackgroundColor_=(color: String): Unit = js.native
   
   /**
     * Sets the current loading screen text
-    * @see http://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
+    * @see https://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
     */
   def loadingUIText_=(text: String): Unit = js.native
   
@@ -954,7 +915,7 @@ class Engine protected () extends ThinEngine {
   
   /**
     * Gets the performance monitor attached to this engine
-    * @see http://doc.babylonjs.com/how_to/optimizing_your_scene#engineinstrumentation
+    * @see https://doc.babylonjs.com/how_to/optimizing_your_scene#engineinstrumentation
     */
   def performanceMonitor: PerformanceMonitor = js.native
   
@@ -991,6 +952,14 @@ class Engine protected () extends ThinEngine {
     * @param clearColor defines the clear color
     */
   def scissorClear(x: Double, y: Double, width: Double, height: Double, clearColor: IColor4Like): Unit = js.native
+  
+  /**
+    * Set the compressed texture extensions or file names to skip.
+    *
+    * @param skippedFiles defines the list of those texture files you want to skip
+    * Example: [".dds", ".env", "myfile.png"]
+    */
+  def setCompressedTextureExclusions(skippedFiles: js.Array[String]): Unit = js.native
   
   /**
     * Enable or disable depth buffering
@@ -1131,6 +1100,28 @@ class Engine protected () extends ThinEngine {
   def setStencilOperationPass(operation: Double): Unit = js.native
   
   /**
+    * Set the compressed texture format to use, based on the formats you have, and the formats
+    * supported by the hardware / browser.
+    *
+    * Khronos Texture Container (.ktx) files are used to support this.  This format has the
+    * advantage of being specifically designed for OpenGL.  Header elements directly correspond
+    * to API arguments needed to compressed textures.  This puts the burden on the container
+    * generator to house the arcane code for determining these for current & future formats.
+    *
+    * for description see https://www.khronos.org/opengles/sdk/tools/KTX/
+    * for file layout see https://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/
+    *
+    * Note: The result of this call is not taken into account when a texture is base64.
+    *
+    * @param formatsAvailable defines the list of those format families you have created
+    * on your server.  Syntax: '-' + format family + '.ktx'.  (Case and order do not matter.)
+    *
+    * Current families are astc, dxt, pvrtc, etc2, & etc1.
+    * @returns The extension selected.
+    */
+  def setTextureFormatToUse(formatsAvailable: js.Array[String]): Nullable[String] = js.native
+  
+  /**
     * Sets a texture to the webGL context from a postprocess
     * @param channel defines the channel to use
     * @param postProcess defines the source postprocess
@@ -1171,6 +1162,16 @@ class Engine protected () extends ThinEngine {
   def switchFullscreen(requestPointerLock: Boolean): Unit = js.native
   
   /**
+    * Gets the texture format in use
+    */
+  val textureFormatInUse: Nullable[String] = js.native
+  
+  /**
+    * Gets the list of texture formats supported
+    */
+  val texturesSupported: js.Array[String] = js.native
+  
+  /**
     * Remove a registered child canvas
     * @param canvas defines the canvas to remove
     * @returns the current engine
@@ -1178,179 +1179,8 @@ class Engine protected () extends ThinEngine {
   def unRegisterView(canvas: HTMLCanvasElement): typingsSlinky.babylonjs.engineViewsMod.babylonjsEnginesEngineAugmentingMod.Engine = js.native
   
   /**
-    * Update a dynamic index buffer
-    * @param indexBuffer defines the target index buffer
-    * @param indices defines the data to update
-    * @param offset defines the offset in the target index buffer where update should start
-    */
-  def updateDynamicIndexBuffer(indexBuffer: DataBuffer, indices: IndicesArray): Unit = js.native
-  def updateDynamicIndexBuffer(indexBuffer: DataBuffer, indices: IndicesArray, offset: Double): Unit = js.native
-  
-  /**
-    * Updates a dynamic vertex buffer.
-    * @param vertexBuffer the vertex buffer to update
-    * @param data the data used to update the vertex buffer
-    * @param byteOffset the byte offset of the data
-    * @param byteLength the byte length of the data
-    */
-  def updateDynamicVertexBuffer(vertexBuffer: DataBuffer, data: DataArray): Unit = js.native
-  def updateDynamicVertexBuffer(
-    vertexBuffer: DataBuffer,
-    data: DataArray,
-    byteOffset: js.UndefOr[scala.Nothing],
-    byteLength: Double
-  ): Unit = js.native
-  def updateDynamicVertexBuffer(vertexBuffer: DataBuffer, data: DataArray, byteOffset: Double): Unit = js.native
-  def updateDynamicVertexBuffer(vertexBuffer: DataBuffer, data: DataArray, byteOffset: Double, byteLength: Double): Unit = js.native
-  
-  /**
-    * Update a raw cube texture
-    * @param texture defines the texture to udpdate
-    * @param data defines the data to store
-    * @param format defines the data format
-    * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
-    * @param invertY defines if data must be stored with Y axis inverted
-    */
-  def updateRawCubeTexture(
-    texture: InternalTexture,
-    data: js.Array[js.typedarray.ArrayBufferView],
-    format: Double,
-    `type`: Double,
-    invertY: Boolean
-  ): Unit = js.native
-  /**
-    * Update a raw cube texture
-    * @param texture defines the texture to udpdate
-    * @param data defines the data to store
-    * @param format defines the data format
-    * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
-    * @param invertY defines if data must be stored with Y axis inverted
-    * @param compression defines the compression used (null by default)
-    */
-  def updateRawCubeTexture(
-    texture: InternalTexture,
-    data: js.Array[js.typedarray.ArrayBufferView],
-    format: Double,
-    `type`: Double,
-    invertY: Boolean,
-    compression: Nullable[String]
-  ): Unit = js.native
-  /**
-    * Update a raw cube texture
-    * @param texture defines the texture to udpdate
-    * @param data defines the data to store
-    * @param format defines the data format
-    * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
-    * @param invertY defines if data must be stored with Y axis inverted
-    * @param compression defines the compression used (null by default)
-    * @param level defines which level of the texture to update
-    */
-  def updateRawCubeTexture(
-    texture: InternalTexture,
-    data: js.Array[js.typedarray.ArrayBufferView],
-    format: Double,
-    `type`: Double,
-    invertY: Boolean,
-    compression: Nullable[String],
-    level: Double
-  ): Unit = js.native
-  
-  /**
-    * Update a raw texture
-    * @param texture defines the texture to update
-    * @param data defines the data to store in the texture
-    * @param format defines the format of the data
-    * @param invertY defines if data must be stored with Y axis inverted
-    */
-  def updateRawTexture(
-    texture: Nullable[InternalTexture],
-    data: Nullable[js.typedarray.ArrayBufferView],
-    format: Double,
-    invertY: Boolean
-  ): Unit = js.native
-  /**
-    * Update a raw texture
-    * @param texture defines the texture to update
-    * @param data defines the data to store in the texture
-    * @param format defines the format of the data
-    * @param invertY defines if data must be stored with Y axis inverted
-    * @param compression defines the compression used (null by default)
-    * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
-    */
-  def updateRawTexture(
-    texture: Nullable[InternalTexture],
-    data: Nullable[js.typedarray.ArrayBufferView],
-    format: Double,
-    invertY: Boolean,
-    compression: Nullable[String],
-    `type`: Double
-  ): Unit = js.native
-  
-  /**
-    * Update a raw 2D array texture
-    * @param texture defines the texture to update
-    * @param data defines the data to store
-    * @param format defines the data format
-    * @param invertY defines if data must be stored with Y axis inverted
-    */
-  def updateRawTexture2DArray(
-    texture: InternalTexture,
-    data: Nullable[js.typedarray.ArrayBufferView],
-    format: Double,
-    invertY: Boolean
-  ): Unit = js.native
-  /**
-    * Update a raw 2D array texture
-    * @param texture defines the texture to update
-    * @param data defines the data to store
-    * @param format defines the data format
-    * @param invertY defines if data must be stored with Y axis inverted
-    * @param compression defines the used compression (can be null)
-    * @param textureType defines the texture Type (Engine.TEXTURETYPE_UNSIGNED_INT, Engine.TEXTURETYPE_FLOAT...)
-    */
-  def updateRawTexture2DArray(
-    texture: InternalTexture,
-    data: Nullable[js.typedarray.ArrayBufferView],
-    format: Double,
-    invertY: Boolean,
-    compression: Nullable[String],
-    textureType: Double
-  ): Unit = js.native
-  
-  /**
-    * Update a raw 3D texture
-    * @param texture defines the texture to update
-    * @param data defines the data to store
-    * @param format defines the data format
-    * @param invertY defines if data must be stored with Y axis inverted
-    */
-  def updateRawTexture3D(
-    texture: InternalTexture,
-    data: Nullable[js.typedarray.ArrayBufferView],
-    format: Double,
-    invertY: Boolean
-  ): Unit = js.native
-  /**
-    * Update a raw 3D texture
-    * @param texture defines the texture to update
-    * @param data defines the data to store
-    * @param format defines the data format
-    * @param invertY defines if data must be stored with Y axis inverted
-    * @param compression defines the used compression (can be null)
-    * @param textureType defines the texture Type (Engine.TEXTURETYPE_UNSIGNED_INT, Engine.TEXTURETYPE_FLOAT...)
-    */
-  def updateRawTexture3D(
-    texture: InternalTexture,
-    data: Nullable[js.typedarray.ArrayBufferView],
-    format: Double,
-    invertY: Boolean,
-    compression: Nullable[String],
-    textureType: Double
-  ): Unit = js.native
-  
-  /**
     * Updates the sample count of a render target texture
-    * @see http://doc.babylonjs.com/features/webgl2#multisample-render-targets
+    * @see https://doc.babylonjs.com/features/webgl2#multisample-render-targets
     * @param texture defines the texture to update
     * @param samples defines the sample count to set
     * @returns the effective sample count (could be 0 if multisample render targets are not supported)
@@ -1743,7 +1573,7 @@ object Engine extends js.Object {
   
   /**
     * Gets the audio engine
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     * @ignorenaming
     */
   var audioEngine: IAudioEngine = js.native

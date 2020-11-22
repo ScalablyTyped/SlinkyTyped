@@ -30,13 +30,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ChartSeries extends dxChartSeriesTypesCommonSeries {
   
-  /** @name ChartSeries.name */
+  /**
+    * [descr:ChartSeries.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name ChartSeries.tag */
+  /**
+    * [descr:ChartSeries.tag]
+    */
   var tag: js.UndefOr[js.Any] = js.native
   
-  /** @name ChartSeries.type */
+  /**
+    * [descr:ChartSeries.type]
+    */
   var `type`: js.UndefOr[
     area | bar | bubble | candlestick | fullstackedarea | fullstackedbar | fullstackedline | fullstackedspline | fullstackedsplinearea | line | rangearea | rangebar_ | scatter | spline | splinearea | stackedarea | stackedbar | stackedline | stackedspline | stackedsplinearea | steparea | stepline | stock
   ] = js.native

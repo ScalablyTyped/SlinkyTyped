@@ -26,7 +26,7 @@ trait PortalItemProperties extends LoadableProperties {
   var accessInformation: js.UndefOr[String] = js.native
   
   /**
-    * Average rating. Uses a weighted average called "Bayesian average."
+    * Average rating.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#avgRating)
     */
@@ -68,14 +68,14 @@ trait PortalItemProperties extends LoadableProperties {
   var extent: js.UndefOr[ExtentProperties] = js.native
   
   /**
-    * An array of group categories set on the item. This varies slightly from `categories` as it only returns categories in the group content returned from [PortalGroup.queryItems](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#queryItems).
+    * An array of group categories set on the item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#groupCategories)
     */
   var groupCategories: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * The unique id for the item. You can typically find the id for an item in its url.
+    * The unique id for the item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#id)
     */
@@ -131,40 +131,23 @@ trait PortalItemProperties extends LoadableProperties {
   var owner: js.UndefOr[String] = js.native
   
   /**
-    * The ID of the folder in which the owner has stored the item. This is only returned to the item owner or the org administrator.
+    * The ID of the folder in which the owner has stored the item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#ownerFolder)
     */
   var ownerFolder: js.UndefOr[String] = js.native
   
   /**
-    * The portal that contains the item. It uses Portal.getDefault(). This, in turn, obtains the URL from [config.portalUrl](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#portalUrl). It's suggested to use [config.portalUrl](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#portalUrl) instead of this property. If needing to work with multiple portal instances, either set the portal's [url](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#url) directly within the PortalItem or create separate portal instances before passing them into the PortalItem.portal property. Both examples are shown below.
-    * ```js
-    * Layer.fromPortalItem({
-    *   portalItem: {
-    *     id: "e691172598f04ea8881cd2a4adaa45ba",
-    *     // autocastable to Portal
-    *     portal: {
-    *       url: "https://thePortalUrl"
-    *     }
-    *   }
-    * });
-    * ```
-    *
-    * ```js
-    * let portalA = new Portal({ url: "https://www.exampleA.com/arcgis" // First instance });  let portalB = new Portal({ url: "https://www.exampleB.com/arcgis" // Second instance });  let item = new PortalItem({ id: "e691172598f04ea8881cd2a4adaa45ba", portal: portalA // This loads the first portal instance set above });  item.load();
-    * ```
+    * The portal that contains the item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#portal)
     */
   var portal: js.UndefOr[PortalProperties] = js.native
   
   /**
-    * An array of string URLs. These URLs should point to screenshots (i.e. screen captures) associated with an application.  An example value could be something similar to `"screenshots/Basic.png"`.
+    * An array of string URLs.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#screenshots)
-    *
-    * @default null
     */
   var screenshots: js.UndefOr[js.Array[String]] = js.native
   
@@ -183,7 +166,7 @@ trait PortalItemProperties extends LoadableProperties {
   var snippet: js.UndefOr[String] = js.native
   
   /**
-    * The JSON used to create the property values when the `PortalItem` is loaded. Although most commonly used properties are exposed on the `PortalItem` class directly, this provides access to all information returned by the portal item. This property is useful if working in an application built using an older version of the API which requires access to a portal's item properties from a more recent version.
+    * The JSON used to create the property values when the `PortalItem` is loaded.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#sourceJSON)
     */
@@ -197,14 +180,14 @@ trait PortalItemProperties extends LoadableProperties {
   var tags: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * The title for the item. This is the name that is displayed to users and used to refer to the item. Every item must have a title.
+    * The title for the item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#title)
     */
   var title: js.UndefOr[String] = js.native
   
   /**
-    * The GIS content type of this item. Example types include Web Map, Map Service, Shapefile, and Web Mapping Application. See the [ArcGIS REST API Items and Items Types Reference](https://developers.arcgis.com/rest/users-groups-and-items/items-and-item-types.htm) to get an understanding of the item type hierarchy.
+    * The GIS content type of this item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#type)
     */
@@ -218,7 +201,7 @@ trait PortalItemProperties extends LoadableProperties {
   var typeKeywords: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * The service URL of this item. Only certain layer item types such as "Feature Service", "Map Service", "Image Service", "Scene Service", "WMS" and "KML" have service URLs.
+    * The service URL of this item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#url)
     */

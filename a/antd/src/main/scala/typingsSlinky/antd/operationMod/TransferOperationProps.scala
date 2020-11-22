@@ -2,8 +2,7 @@ package typingsSlinky.antd.operationMod
 
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.antdStrings.ltr
-import typingsSlinky.antd.antdStrings.rtl
+import typingsSlinky.antd.configProviderContextMod.DirectionType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
@@ -15,7 +14,7 @@ trait TransferOperationProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
-  var direction: js.UndefOr[ltr | rtl] = js.native
+  var direction: js.UndefOr[DirectionType] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
   
@@ -65,7 +64,7 @@ object TransferOperationProps {
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
-    def setDirection(value: ltr | rtl): Self = this.set("direction", value.asInstanceOf[js.Any])
+    def setDirection(value: DirectionType): Self = this.set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDirection: Self = this.set("direction", js.undefined)

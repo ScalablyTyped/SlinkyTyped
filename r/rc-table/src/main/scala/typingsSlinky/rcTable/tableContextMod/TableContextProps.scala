@@ -18,6 +18,8 @@ trait TableContextProps extends js.Object {
   
   var getComponent: GetComponent = js.native
   
+  var isSticky: Boolean = js.native
+  
   var prefixCls: String = js.native
   
   var scrollbarSize: Double = js.native
@@ -29,10 +31,11 @@ object TableContextProps {
     direction: ltr | rtl,
     fixedInfoList: js.Array[FixedInfo],
     getComponent: (/* path */ js.Array[String], /* defaultComponent */ js.UndefOr[CustomizeComponent]) => CustomizeComponent,
+    isSticky: Boolean,
     prefixCls: String,
     scrollbarSize: Double
   ): TableContextProps = {
-    val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], fixedInfoList = fixedInfoList.asInstanceOf[js.Any], getComponent = js.Any.fromFunction2(getComponent), prefixCls = prefixCls.asInstanceOf[js.Any], scrollbarSize = scrollbarSize.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], fixedInfoList = fixedInfoList.asInstanceOf[js.Any], getComponent = js.Any.fromFunction2(getComponent), isSticky = isSticky.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], scrollbarSize = scrollbarSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[TableContextProps]
   }
   
@@ -64,6 +67,9 @@ object TableContextProps {
     def setGetComponent(
       value: (/* path */ js.Array[String], /* defaultComponent */ js.UndefOr[CustomizeComponent]) => CustomizeComponent
     ): Self = this.set("getComponent", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setIsSticky(value: Boolean): Self = this.set("isSticky", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])

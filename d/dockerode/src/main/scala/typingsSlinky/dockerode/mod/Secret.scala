@@ -6,13 +6,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("dockerode", "Secret")
 @js.native
-class Secret protected () extends js.Object {
+class Secret protected () extends Meta {
   def this(modem: js.Any, id: String) = this()
+  
+  var ID: String = js.native
+  
+  var Spec: js.UndefOr[SecretSpec] = js.native
   
   var id: String = js.native
   
-  def inspect(): js.Promise[SecretInfo] = js.native
-  def inspect(callback: Callback[SecretInfo]): Unit = js.native
+  def inspect(): js.Promise[Secret] = js.native
+  def inspect(callback: Callback[Secret]): Unit = js.native
   
   var modem: js.Any = js.native
   

@@ -18,7 +18,7 @@ trait ProvisionedThroughputDescription extends js.Object {
   var LastIncreaseDateTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The number of provisioned throughput decreases for this table during this UTC calendar day. For current maximums on provisioned throughput decreases, see Limits in the Amazon DynamoDB Developer Guide.
+    * The number of provisioned throughput decreases for this table during this UTC calendar day. For current maximums on provisioned throughput decreases, see Service, Account, and Table Quotas in the Amazon DynamoDB Developer Guide.
     */
   var NumberOfDecreasesToday: js.UndefOr[PositiveLongObject] = js.native
   

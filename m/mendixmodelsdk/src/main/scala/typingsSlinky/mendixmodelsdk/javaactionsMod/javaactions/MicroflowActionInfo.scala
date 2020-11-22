@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.imagesMod.images.IImage
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,14 +25,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
 - typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.IMicroflowActionInfo because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsJavaAction, caption, category, icon, iconQualifiedName */ @JSImport("mendixmodelsdk/dist/gen/javaactions", "javaactions.MicroflowActionInfo")
 @js.native
-class MicroflowActionInfo protected () extends Element {
+class MicroflowActionInfo protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def caption: String = js.native
@@ -56,9 +58,6 @@ class MicroflowActionInfo protected () extends Element {
   def icon_=(newValue: IImage | Null): Unit = js.native
   @JSName("icon")
   val icon_FMicroflowActionInfo: IImage | Null = js.native
-  
-  @JSName("model")
-  var model_FMicroflowActionInfo: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/javaactions", "javaactions.MicroflowActionInfo")

@@ -16,6 +16,11 @@ trait EffectWrapperCreationOptions extends js.Object {
   var attributeNames: js.UndefOr[js.Array[String]] = js.native
   
   /**
+    * Defines to use in the shader
+    */
+  var defines: js.UndefOr[js.Array[String]] = js.native
+  
+  /**
     * Engine to use to create the effect
     */
   var engine: ThinEngine = js.native
@@ -31,6 +36,11 @@ trait EffectWrapperCreationOptions extends js.Object {
   var name: js.UndefOr[String] = js.native
   
   /**
+    * Callback when effect is compiled
+    */
+  var onCompiled: js.UndefOr[Nullable[js.Function1[/* effect */ Effect, Unit]]] = js.native
+  
+  /**
     * Texture sampler names to use in the shader
     */
   var samplerNames: js.UndefOr[js.Array[String]] = js.native
@@ -39,6 +49,11 @@ trait EffectWrapperCreationOptions extends js.Object {
     * Uniforms to use in the shader
     */
   var uniformNames: js.UndefOr[js.Array[String]] = js.native
+  
+  /**
+    * Use the shader store instead of direct source code
+    */
+  var useShaderStore: js.UndefOr[Boolean] = js.native
   
   /**
     * Vertex shader for the effect
@@ -84,10 +99,28 @@ object EffectWrapperCreationOptions {
     def deleteAttributeNames: Self = this.set("attributeNames", js.undefined)
     
     @scala.inline
+    def setDefinesVarargs(value: String*): Self = this.set("defines", js.Array(value :_*))
+    
+    @scala.inline
+    def setDefines(value: js.Array[String]): Self = this.set("defines", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefines: Self = this.set("defines", js.undefined)
+    
+    @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setOnCompiled(value: /* effect */ Effect => Unit): Self = this.set("onCompiled", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnCompiled: Self = this.set("onCompiled", js.undefined)
+    
+    @scala.inline
+    def setOnCompiledNull: Self = this.set("onCompiled", null)
     
     @scala.inline
     def setSamplerNamesVarargs(value: String*): Self = this.set("samplerNames", js.Array(value :_*))
@@ -106,6 +139,12 @@ object EffectWrapperCreationOptions {
     
     @scala.inline
     def deleteUniformNames: Self = this.set("uniformNames", js.undefined)
+    
+    @scala.inline
+    def setUseShaderStore(value: Boolean): Self = this.set("useShaderStore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUseShaderStore: Self = this.set("useShaderStore", js.undefined)
     
     @scala.inline
     def setVertexShader(value: String): Self = this.set("vertexShader", value.asInstanceOf[js.Any])

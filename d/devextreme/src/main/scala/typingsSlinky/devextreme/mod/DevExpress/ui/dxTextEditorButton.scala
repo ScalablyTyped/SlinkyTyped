@@ -9,13 +9,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTextEditorButton extends js.Object {
   
-  /** @name dxTextEditorButton.location */
+  /**
+    * [descr:dxTextEditorButton.location]
+    */
   var location: js.UndefOr[after | before] = js.native
   
-  /** @name dxTextEditorButton.name */
+  /**
+    * [descr:dxTextEditorButton.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxTextEditorButton.options */
+  /**
+    * [descr:dxTextEditorButton.options]
+    */
   var options: js.UndefOr[dxButtonOptions] = js.native
 }
 object dxTextEditorButton {

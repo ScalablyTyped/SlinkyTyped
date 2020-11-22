@@ -19,6 +19,8 @@ trait PartialAirbnbRatingProps extends js.Object {
   
   var reviews: js.UndefOr[js.Array[String]] = js.native
   
+  var selectedColor: js.UndefOr[String] = js.native
+  
   var showRating: js.UndefOr[Boolean] = js.native
   
   var size: js.UndefOr[Double] = js.native
@@ -80,6 +82,12 @@ object PartialAirbnbRatingProps {
     
     @scala.inline
     def deleteReviews: Self = this.set("reviews", js.undefined)
+    
+    @scala.inline
+    def setSelectedColor(value: String): Self = this.set("selectedColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelectedColor: Self = this.set("selectedColor", js.undefined)
     
     @scala.inline
     def setShowRating(value: Boolean): Self = this.set("showRating", value.asInstanceOf[js.Any])

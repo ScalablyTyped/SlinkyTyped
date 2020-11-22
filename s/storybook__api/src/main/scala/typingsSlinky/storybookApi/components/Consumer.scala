@@ -1,11 +1,11 @@
 package typingsSlinky.storybookApi.components
 
+import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.storybookApi.mod.Combo
-import typingsSlinky.storybookApi.mod.ConsumerProps
-import typingsSlinky.storybookApi.mod.SubState
+import typingsSlinky.storybookApi.mod.ManagerConsumerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,22 +17,30 @@ object Consumer {
   object component extends js.Object
   
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
+  class Builder[P] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.storybookApi.mod.Consumer] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def filter(value: Combo => SubState): this.type = set("filter", js.Any.fromFunction1(value))
+    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def pure(value: Boolean): this.type = set("pure", value.asInstanceOf[js.Any])
+    def childrenFunctionComponent(value: ReactComponentClass[P]): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def children(value: ReactComponentClass[P] | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def filter(value: /* combo */ Combo => P): this.type = set("filter", js.Any.fromFunction1(value))
   }
   
-  def withProps(p: ConsumerProps[SubState, Combo]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[P](p: ManagerConsumerProps[P]): Builder[P] = new Builder[P](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(children: Combo | SubState => ReactElement | Null): Builder = {
-    val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
-    new Builder(js.Array(this.component, __props.asInstanceOf[ConsumerProps[SubState, Combo]]))
+  def apply[P](): Builder[P] = {
+    val __props = js.Dynamic.literal()
+    new Builder[P](js.Array(this.component, __props.asInstanceOf[ManagerConsumerProps[P]]))
   }
+  
+  implicit def make[P](companion: Consumer.type): Builder[P] = new Builder[P](js.Array(this.component, js.Dictionary.empty))()
 }

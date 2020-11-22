@@ -5,14 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.sparqljs.mod.Pattern because Already inherited */ @js.native
-trait GraphPattern extends BlockPattern {
+@js.native
+trait GraphPattern
+  extends BlockPattern
+     with _Expression {
   
   var name: IriTerm = js.native
   
-  @JSName("type")
-  var type_GraphPattern: graph = js.native
+  var patterns: js.Array[Pattern] = js.native
+  
+  var `type`: graph = js.native
 }
 object GraphPattern {
   
@@ -40,6 +42,12 @@ object GraphPattern {
     
     @scala.inline
     def setName(value: IriTerm): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPatternsVarargs(value: Pattern*): Self = this.set("patterns", js.Array(value :_*))
+    
+    @scala.inline
+    def setPatterns(value: js.Array[Pattern]): Self = this.set("patterns", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: graph): Self = this.set("type", value.asInstanceOf[js.Any])

@@ -1,9 +1,11 @@
 package typingsSlinky.mendixmodelsdk.mod.expressions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.expressionsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,9 +14,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Interfaces and instance classes for types from the Mendix sub meta model `Expressions`.
   */
 /**
-  * See: {@link https://docs.mendix.com/refguide7/expressions relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/expressions relevant section in reference guide}
   *
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
+  *
+  * @ignore
   *
   * In version 7.9.0: introduced
   */
@@ -27,8 +31,8 @@ abstract class Expression protected ()
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
 /* static members */

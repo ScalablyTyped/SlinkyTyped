@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class QuestionMatrixBaseModel[TRow, TColumn] protected () extends Question {
   def this(name: String) = this()
   
+  /* protected */ def clearGeneratedRows(): Unit = js.native
+  
   /* protected */ def clearInvisibleValuesInRows(): Unit = js.native
   
   /**

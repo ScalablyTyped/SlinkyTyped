@@ -22,7 +22,7 @@ object orequestMod extends js.Object {
     
     var config: RequestInit = js.native
     
-    val fetch: js.Promise[Response] = js.native
+    def fetch: js.Promise[Response] = js.native
     
     var url: URL = js.native
   }

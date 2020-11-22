@@ -12,7 +12,15 @@ object deprecationsMod extends js.Object {
   @js.native
   class Deprecations () extends js.Object {
     
+    def checkForDeprecatedOptions(options: Record[String, _]): Unit = js.native
+    
     var deprecateBottomTabsVisibility: js.Any = js.native
+    
+    var deprecateInterpolationOptions: js.Any = js.native
+    
+    var deprecateSearchBarOptions: js.Any = js.native
+    
+    var deprecatedOptions: js.Any = js.native
     
     def onProcessDefaultOptions(_key: String, _parentOptions: Record[String, _]): Unit = js.native
     

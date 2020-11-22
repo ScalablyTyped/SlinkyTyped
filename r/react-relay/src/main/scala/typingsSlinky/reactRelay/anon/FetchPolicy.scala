@@ -1,37 +1,22 @@
 package typingsSlinky.reactRelay.anon
 
-import typingsSlinky.reactRelay.queryResourceMod.RenderPolicy
-import typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.Action
-import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Variables
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.FetchQueryFetchPolicy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FetchPolicy extends Action {
+trait FetchPolicy extends js.Object {
   
-  var environment: typingsSlinky.relayRuntime.relayStoreTypesMod.Environment = js.native
+  var fetchPolicy: js.UndefOr[FetchQueryFetchPolicy] = js.native
   
-  var fetchPolicy: js.UndefOr[typingsSlinky.reactRelay.queryResourceMod.FetchPolicy] = js.native
-  
-  var onComplete: js.UndefOr[js.Function1[/* args */ js.Error | Null, Unit]] = js.native
-  
-  var refetchVariables: Variables = js.native
-  
-  var renderPolicy: js.UndefOr[RenderPolicy] = js.native
-  
-  var `type`: String = js.native
+  var networkCacheConfig: js.UndefOr[typingsSlinky.relayRuntime.relayRuntimeTypesMod.CacheConfig] = js.native
 }
 object FetchPolicy {
   
   @scala.inline
-  def apply(
-    environment: typingsSlinky.relayRuntime.relayStoreTypesMod.Environment,
-    refetchVariables: Variables,
-    `type`: String
-  ): FetchPolicy = {
-    val __obj = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any], refetchVariables = refetchVariables.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+  def apply(): FetchPolicy = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[FetchPolicy]
   }
   
@@ -51,30 +36,15 @@ object FetchPolicy {
     }
     
     @scala.inline
-    def setEnvironment(value: typingsSlinky.relayRuntime.relayStoreTypesMod.Environment): Self = this.set("environment", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRefetchVariables(value: Variables): Self = this.set("refetchVariables", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setFetchPolicy(value: typingsSlinky.reactRelay.queryResourceMod.FetchPolicy): Self = this.set("fetchPolicy", value.asInstanceOf[js.Any])
+    def setFetchPolicy(value: FetchQueryFetchPolicy): Self = this.set("fetchPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFetchPolicy: Self = this.set("fetchPolicy", js.undefined)
     
     @scala.inline
-    def setOnComplete(value: /* args */ js.Error | Null => Unit): Self = this.set("onComplete", js.Any.fromFunction1(value))
+    def setNetworkCacheConfig(value: typingsSlinky.relayRuntime.relayRuntimeTypesMod.CacheConfig): Self = this.set("networkCacheConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteOnComplete: Self = this.set("onComplete", js.undefined)
-    
-    @scala.inline
-    def setRenderPolicy(value: RenderPolicy): Self = this.set("renderPolicy", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRenderPolicy: Self = this.set("renderPolicy", js.undefined)
+    def deleteNetworkCacheConfig: Self = this.set("networkCacheConfig", js.undefined)
   }
 }

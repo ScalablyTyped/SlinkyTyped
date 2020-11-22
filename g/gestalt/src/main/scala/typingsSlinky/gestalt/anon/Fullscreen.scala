@@ -1,6 +1,5 @@
 package typingsSlinky.gestalt.anon
 
-import org.scalajs.dom.raw.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,15 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Fullscreen extends js.Object {
   
-  var event: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLDivElement] = js.native
-  
   var fullscreen: Boolean = js.native
 }
 object Fullscreen {
   
   @scala.inline
-  def apply(event: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLDivElement], fullscreen: Boolean): Fullscreen = {
-    val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], fullscreen = fullscreen.asInstanceOf[js.Any])
+  def apply(fullscreen: Boolean): Fullscreen = {
+    val __obj = js.Dynamic.literal(fullscreen = fullscreen.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fullscreen]
   }
   
@@ -34,9 +31,6 @@ object Fullscreen {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setEvent(value: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLDivElement]): Self = this.set("event", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFullscreen(value: Boolean): Self = this.set("fullscreen", value.asInstanceOf[js.Any])

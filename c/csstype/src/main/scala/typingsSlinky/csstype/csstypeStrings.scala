@@ -1,396 +1,409 @@
 package typingsSlinky.csstype
 
+import typingsSlinky.csstype.mod.AbsoluteSize
 import typingsSlinky.csstype.mod.AdvancedPseudos
-import typingsSlinky.csstype.mod.AtRule.FontDisplay
-import typingsSlinky.csstype.mod.AtRule.Orientation
-import typingsSlinky.csstype.mod.AtRule.UserZoom
-import typingsSlinky.csstype.mod.AtRule._Range
-import typingsSlinky.csstype.mod.AtRule._SpeakAs
-import typingsSlinky.csstype.mod.AtRule._System
+import typingsSlinky.csstype.mod.AlignmentBaselineProperty
+import typingsSlinky.csstype.mod.AppearanceProperty
 import typingsSlinky.csstype.mod.AtRules
-import typingsSlinky.csstype.mod.DataType.AbsoluteSize
-import typingsSlinky.csstype.mod.DataType.Attachment
-import typingsSlinky.csstype.mod.DataType.BlendMode
-import typingsSlinky.csstype.mod.DataType.Box
-import typingsSlinky.csstype.mod.DataType.CompatAuto
-import typingsSlinky.csstype.mod.DataType.CompositeStyle
-import typingsSlinky.csstype.mod.DataType.CompositingOperator
-import typingsSlinky.csstype.mod.DataType.ContentDistribution
-import typingsSlinky.csstype.mod.DataType.ContentPosition
-import typingsSlinky.csstype.mod.DataType.DeprecatedSystemColor
-import typingsSlinky.csstype.mod.DataType.DisplayInside
-import typingsSlinky.csstype.mod.DataType.DisplayInternal
-import typingsSlinky.csstype.mod.DataType.DisplayLegacy
-import typingsSlinky.csstype.mod.DataType.DisplayOutside
-import typingsSlinky.csstype.mod.DataType.EastAsianVariantValues
-import typingsSlinky.csstype.mod.DataType.GenericFamily
-import typingsSlinky.csstype.mod.DataType.GeometryBox
-import typingsSlinky.csstype.mod.DataType.LineStyle
-import typingsSlinky.csstype.mod.DataType.MaskingMode
-import typingsSlinky.csstype.mod.DataType.NamedColor
-import typingsSlinky.csstype.mod.DataType.Quote
-import typingsSlinky.csstype.mod.DataType.SelfPosition
-import typingsSlinky.csstype.mod.DataType.SingleAnimationDirection
-import typingsSlinky.csstype.mod.DataType.SingleAnimationFillMode
-import typingsSlinky.csstype.mod.DataType._AnimateableFeature
-import typingsSlinky.csstype.mod.DataType._BgPosition
-import typingsSlinky.csstype.mod.DataType._BgSize
-import typingsSlinky.csstype.mod.DataType._Color
-import typingsSlinky.csstype.mod.DataType._ContentList
-import typingsSlinky.csstype.mod.DataType._CubicBezierTimingFunction
-import typingsSlinky.csstype.mod.DataType._FinalBgLayer
-import typingsSlinky.csstype.mod.DataType._FontStretchAbsolute
-import typingsSlinky.csstype.mod.DataType._FontWeightAbsolute
-import typingsSlinky.csstype.mod.DataType._LineWidth
-import typingsSlinky.csstype.mod.DataType._MaskLayer
-import typingsSlinky.csstype.mod.DataType._Paint
-import typingsSlinky.csstype.mod.DataType._Position
-import typingsSlinky.csstype.mod.DataType._RepeatStyle
-import typingsSlinky.csstype.mod.DataType._SingleAnimation
-import typingsSlinky.csstype.mod.DataType._SingleTransition
-import typingsSlinky.csstype.mod.DataType._StepTimingFunction
-import typingsSlinky.csstype.mod.DataType._TimingFunction
-import typingsSlinky.csstype.mod.DataType._TrackBreadth
+import typingsSlinky.csstype.mod.Attachment
+import typingsSlinky.csstype.mod.BackfaceVisibilityProperty
+import typingsSlinky.csstype.mod.BlendMode
+import typingsSlinky.csstype.mod.BorderBlockEndStyleProperty
+import typingsSlinky.csstype.mod.BorderBlockStartStyleProperty
+import typingsSlinky.csstype.mod.BorderBlockStyleProperty
+import typingsSlinky.csstype.mod.BorderBottomStyleProperty
+import typingsSlinky.csstype.mod.BorderCollapseProperty
+import typingsSlinky.csstype.mod.BorderInlineEndStyleProperty
+import typingsSlinky.csstype.mod.BorderInlineStartStyleProperty
+import typingsSlinky.csstype.mod.BorderInlineStyleProperty
+import typingsSlinky.csstype.mod.BorderLeftStyleProperty
+import typingsSlinky.csstype.mod.BorderRightStyleProperty
+import typingsSlinky.csstype.mod.BorderTopStyleProperty
+import typingsSlinky.csstype.mod.Box
+import typingsSlinky.csstype.mod.BoxAlignProperty
+import typingsSlinky.csstype.mod.BoxDecorationBreakProperty
+import typingsSlinky.csstype.mod.BoxDirectionProperty
+import typingsSlinky.csstype.mod.BoxLinesProperty
+import typingsSlinky.csstype.mod.BoxOrientProperty
+import typingsSlinky.csstype.mod.BoxPackProperty
+import typingsSlinky.csstype.mod.BoxSizingProperty
+import typingsSlinky.csstype.mod.BreakAfterProperty
+import typingsSlinky.csstype.mod.BreakBeforeProperty
+import typingsSlinky.csstype.mod.BreakInsideProperty
+import typingsSlinky.csstype.mod.CaptionSideProperty
+import typingsSlinky.csstype.mod.ClearProperty
+import typingsSlinky.csstype.mod.ClipRuleProperty
+import typingsSlinky.csstype.mod.ColorAdjustProperty
+import typingsSlinky.csstype.mod.ColorInterpolationProperty
+import typingsSlinky.csstype.mod.ColorRenderingProperty
+import typingsSlinky.csstype.mod.ColumnFillProperty
+import typingsSlinky.csstype.mod.ColumnSpanProperty
+import typingsSlinky.csstype.mod.CompatAuto
+import typingsSlinky.csstype.mod.CompositeStyle
+import typingsSlinky.csstype.mod.CompositingOperator
+import typingsSlinky.csstype.mod.ContentDistribution
+import typingsSlinky.csstype.mod.ContentPosition
+import typingsSlinky.csstype.mod.DeprecatedSystemColor
+import typingsSlinky.csstype.mod.DirectionProperty
+import typingsSlinky.csstype.mod.DisplayInside
+import typingsSlinky.csstype.mod.DisplayInternal
+import typingsSlinky.csstype.mod.DisplayLegacy
+import typingsSlinky.csstype.mod.DisplayOutside
+import typingsSlinky.csstype.mod.DominantBaselineProperty
+import typingsSlinky.csstype.mod.EastAsianVariantValues
+import typingsSlinky.csstype.mod.EmptyCellsProperty
+import typingsSlinky.csstype.mod.FillRuleProperty
+import typingsSlinky.csstype.mod.FlexDirectionProperty
+import typingsSlinky.csstype.mod.FlexWrapProperty
+import typingsSlinky.csstype.mod.FloatProperty
+import typingsSlinky.csstype.mod.FontFaceFontDisplayProperty
+import typingsSlinky.csstype.mod.FontKerningProperty
+import typingsSlinky.csstype.mod.FontOpticalSizingProperty
+import typingsSlinky.csstype.mod.FontVariantCapsProperty
+import typingsSlinky.csstype.mod.FontVariantPositionProperty
+import typingsSlinky.csstype.mod.GenericFamily
+import typingsSlinky.csstype.mod.GeometryBox
 import typingsSlinky.csstype.mod.Globals
 import typingsSlinky.csstype.mod.HtmlAttributes
-import typingsSlinky.csstype.mod.Property.AlignmentBaseline
-import typingsSlinky.csstype.mod.Property.Appearance
-import typingsSlinky.csstype.mod.Property.BackfaceVisibility
-import typingsSlinky.csstype.mod.Property.BorderBlockEndStyle
-import typingsSlinky.csstype.mod.Property.BorderBlockStartStyle
-import typingsSlinky.csstype.mod.Property.BorderBlockStyle
-import typingsSlinky.csstype.mod.Property.BorderBottomStyle
-import typingsSlinky.csstype.mod.Property.BorderCollapse
-import typingsSlinky.csstype.mod.Property.BorderInlineEndStyle
-import typingsSlinky.csstype.mod.Property.BorderInlineStartStyle
-import typingsSlinky.csstype.mod.Property.BorderInlineStyle
-import typingsSlinky.csstype.mod.Property.BorderLeftStyle
-import typingsSlinky.csstype.mod.Property.BorderRightStyle
-import typingsSlinky.csstype.mod.Property.BorderTopStyle
-import typingsSlinky.csstype.mod.Property.BoxAlign
-import typingsSlinky.csstype.mod.Property.BoxDecorationBreak
-import typingsSlinky.csstype.mod.Property.BoxDirection
-import typingsSlinky.csstype.mod.Property.BoxLines
-import typingsSlinky.csstype.mod.Property.BoxOrient
-import typingsSlinky.csstype.mod.Property.BoxPack
-import typingsSlinky.csstype.mod.Property.BoxSizing
-import typingsSlinky.csstype.mod.Property.BreakAfter
-import typingsSlinky.csstype.mod.Property.BreakBefore
-import typingsSlinky.csstype.mod.Property.BreakInside
-import typingsSlinky.csstype.mod.Property.CaptionSide
-import typingsSlinky.csstype.mod.Property.Clear
-import typingsSlinky.csstype.mod.Property.ClipRule
-import typingsSlinky.csstype.mod.Property.ColorAdjust
-import typingsSlinky.csstype.mod.Property.ColorInterpolation
-import typingsSlinky.csstype.mod.Property.ColorRendering
-import typingsSlinky.csstype.mod.Property.ColumnFill
-import typingsSlinky.csstype.mod.Property.ColumnSpan
-import typingsSlinky.csstype.mod.Property.Direction
-import typingsSlinky.csstype.mod.Property.DominantBaseline
-import typingsSlinky.csstype.mod.Property.EmptyCells
-import typingsSlinky.csstype.mod.Property.FillRule
-import typingsSlinky.csstype.mod.Property.FlexDirection
-import typingsSlinky.csstype.mod.Property.FlexWrap
-import typingsSlinky.csstype.mod.Property.Float
-import typingsSlinky.csstype.mod.Property.FontKerning
-import typingsSlinky.csstype.mod.Property.FontOpticalSizing
-import typingsSlinky.csstype.mod.Property.FontVariantCaps
-import typingsSlinky.csstype.mod.Property.FontVariantPosition
-import typingsSlinky.csstype.mod.Property.Hyphens
-import typingsSlinky.csstype.mod.Property.ImageRendering
-import typingsSlinky.csstype.mod.Property.ImeMode
-import typingsSlinky.csstype.mod.Property.Isolation
-import typingsSlinky.csstype.mod.Property.LineBreak
-import typingsSlinky.csstype.mod.Property.ListStylePosition
-import typingsSlinky.csstype.mod.Property.MaskBorderMode
-import typingsSlinky.csstype.mod.Property.MaskType
-import typingsSlinky.csstype.mod.Property.MixBlendMode
-import typingsSlinky.csstype.mod.Property.MozAppearance
-import typingsSlinky.csstype.mod.Property.MozFloatEdge
-import typingsSlinky.csstype.mod.Property.MozOrient
-import typingsSlinky.csstype.mod.Property.MozStackSizing
-import typingsSlinky.csstype.mod.Property.MozTextBlink
-import typingsSlinky.csstype.mod.Property.MozUserFocus
-import typingsSlinky.csstype.mod.Property.MozUserInput
-import typingsSlinky.csstype.mod.Property.MozUserModify
-import typingsSlinky.csstype.mod.Property.MozWindowDragging
-import typingsSlinky.csstype.mod.Property.MozWindowShadow
-import typingsSlinky.csstype.mod.Property.MsAccelerator
-import typingsSlinky.csstype.mod.Property.MsBlockProgression
-import typingsSlinky.csstype.mod.Property.MsContentZoomChaining
-import typingsSlinky.csstype.mod.Property.MsContentZoomSnapType
-import typingsSlinky.csstype.mod.Property.MsContentZooming
-import typingsSlinky.csstype.mod.Property.MsHighContrastAdjust
-import typingsSlinky.csstype.mod.Property.MsImeAlign
-import typingsSlinky.csstype.mod.Property.MsOverflowStyle
-import typingsSlinky.csstype.mod.Property.MsScrollChaining
-import typingsSlinky.csstype.mod.Property.MsScrollRails
-import typingsSlinky.csstype.mod.Property.MsScrollSnapType
-import typingsSlinky.csstype.mod.Property.MsScrollTranslation
-import typingsSlinky.csstype.mod.Property.MsTextAutospace
-import typingsSlinky.csstype.mod.Property.MsTouchSelect
-import typingsSlinky.csstype.mod.Property.MsUserSelect
-import typingsSlinky.csstype.mod.Property.MsWrapFlow
-import typingsSlinky.csstype.mod.Property.MsWrapThrough
-import typingsSlinky.csstype.mod.Property.ObjectFit
-import typingsSlinky.csstype.mod.Property.OverflowAnchor
-import typingsSlinky.csstype.mod.Property.OverflowBlock
-import typingsSlinky.csstype.mod.Property.OverflowClipBox
-import typingsSlinky.csstype.mod.Property.OverflowInline
-import typingsSlinky.csstype.mod.Property.OverflowWrap
-import typingsSlinky.csstype.mod.Property.OverflowX
-import typingsSlinky.csstype.mod.Property.OverflowY
-import typingsSlinky.csstype.mod.Property.OverscrollBehaviorBlock
-import typingsSlinky.csstype.mod.Property.OverscrollBehaviorInline
-import typingsSlinky.csstype.mod.Property.OverscrollBehaviorX
-import typingsSlinky.csstype.mod.Property.OverscrollBehaviorY
-import typingsSlinky.csstype.mod.Property.PageBreakAfter
-import typingsSlinky.csstype.mod.Property.PageBreakBefore
-import typingsSlinky.csstype.mod.Property.PageBreakInside
-import typingsSlinky.csstype.mod.Property.PointerEvents
-import typingsSlinky.csstype.mod.Property.Position
-import typingsSlinky.csstype.mod.Property.Resize
-import typingsSlinky.csstype.mod.Property.RubyAlign
-import typingsSlinky.csstype.mod.Property.RubyMerge
-import typingsSlinky.csstype.mod.Property.RubyPosition
-import typingsSlinky.csstype.mod.Property.ScrollBehavior
-import typingsSlinky.csstype.mod.Property.ScrollSnapStop
-import typingsSlinky.csstype.mod.Property.ScrollSnapTypeX
-import typingsSlinky.csstype.mod.Property.ScrollSnapTypeY
-import typingsSlinky.csstype.mod.Property.ScrollbarWidth
-import typingsSlinky.csstype.mod.Property.ShapeRendering
-import typingsSlinky.csstype.mod.Property.StrokeLinecap
-import typingsSlinky.csstype.mod.Property.StrokeLinejoin
-import typingsSlinky.csstype.mod.Property.TableLayout
-import typingsSlinky.csstype.mod.Property.TextAlign
-import typingsSlinky.csstype.mod.Property.TextAlignLast
-import typingsSlinky.csstype.mod.Property.TextAnchor
-import typingsSlinky.csstype.mod.Property.TextDecorationSkipInk
-import typingsSlinky.csstype.mod.Property.TextDecorationStyle
-import typingsSlinky.csstype.mod.Property.TextJustify
-import typingsSlinky.csstype.mod.Property.TextOrientation
-import typingsSlinky.csstype.mod.Property.TextRendering
-import typingsSlinky.csstype.mod.Property.TextTransform
-import typingsSlinky.csstype.mod.Property.TransformBox
-import typingsSlinky.csstype.mod.Property.TransformStyle
-import typingsSlinky.csstype.mod.Property.UnicodeBidi
-import typingsSlinky.csstype.mod.Property.UserSelect
-import typingsSlinky.csstype.mod.Property.VectorEffect
-import typingsSlinky.csstype.mod.Property.Visibility
-import typingsSlinky.csstype.mod.Property.WebkitAppearance
-import typingsSlinky.csstype.mod.Property.WebkitMaskRepeatX
-import typingsSlinky.csstype.mod.Property.WebkitMaskRepeatY
-import typingsSlinky.csstype.mod.Property.WebkitOverflowScrolling
-import typingsSlinky.csstype.mod.Property.WebkitTouchCallout
-import typingsSlinky.csstype.mod.Property.WebkitUserModify
-import typingsSlinky.csstype.mod.Property.WhiteSpace
-import typingsSlinky.csstype.mod.Property.WordBreak
-import typingsSlinky.csstype.mod.Property.WordWrap
-import typingsSlinky.csstype.mod.Property.WritingMode
-import typingsSlinky.csstype.mod.Property._AlignContent
-import typingsSlinky.csstype.mod.Property._AlignItems
-import typingsSlinky.csstype.mod.Property._AlignSelf
-import typingsSlinky.csstype.mod.Property._AnimationIterationCount
-import typingsSlinky.csstype.mod.Property._AnimationName
-import typingsSlinky.csstype.mod.Property._AnimationPlayState
-import typingsSlinky.csstype.mod.Property._AspectRatio
-import typingsSlinky.csstype.mod.Property._BackdropFilter
-import typingsSlinky.csstype.mod.Property._BackgroundImage
-import typingsSlinky.csstype.mod.Property._BackgroundPositionX
-import typingsSlinky.csstype.mod.Property._BackgroundPositionY
-import typingsSlinky.csstype.mod.Property._BaselineShift
-import typingsSlinky.csstype.mod.Property._BlockOverflow
-import typingsSlinky.csstype.mod.Property._BlockSize
-import typingsSlinky.csstype.mod.Property._BorderImage
-import typingsSlinky.csstype.mod.Property._BorderImageRepeat
-import typingsSlinky.csstype.mod.Property._BorderImageSource
-import typingsSlinky.csstype.mod.Property._BorderImageWidth
-import typingsSlinky.csstype.mod.Property._Bottom
-import typingsSlinky.csstype.mod.Property._BoxShadow
-import typingsSlinky.csstype.mod.Property._CaretColor
-import typingsSlinky.csstype.mod.Property._Clip
-import typingsSlinky.csstype.mod.Property._ClipPath
-import typingsSlinky.csstype.mod.Property._ColumnCount
-import typingsSlinky.csstype.mod.Property._ColumnGap
-import typingsSlinky.csstype.mod.Property._ColumnWidth
-import typingsSlinky.csstype.mod.Property._Columns
-import typingsSlinky.csstype.mod.Property._Contain
-import typingsSlinky.csstype.mod.Property._Content
-import typingsSlinky.csstype.mod.Property._CounterIncrement
-import typingsSlinky.csstype.mod.Property._CounterReset
-import typingsSlinky.csstype.mod.Property._CounterSet
-import typingsSlinky.csstype.mod.Property._Cursor
-import typingsSlinky.csstype.mod.Property._Display
-import typingsSlinky.csstype.mod.Property._Filter
-import typingsSlinky.csstype.mod.Property._Flex
-import typingsSlinky.csstype.mod.Property._FlexBasis
-import typingsSlinky.csstype.mod.Property._FlexFlow
-import typingsSlinky.csstype.mod.Property._FloodColor
-import typingsSlinky.csstype.mod.Property._Font
-import typingsSlinky.csstype.mod.Property._FontFeatureSettings
-import typingsSlinky.csstype.mod.Property._FontLanguageOverride
-import typingsSlinky.csstype.mod.Property._FontSize
-import typingsSlinky.csstype.mod.Property._FontSizeAdjust
-import typingsSlinky.csstype.mod.Property._FontStyle
-import typingsSlinky.csstype.mod.Property._FontSynthesis
-import typingsSlinky.csstype.mod.Property._FontVariant
-import typingsSlinky.csstype.mod.Property._FontVariantAlternates
-import typingsSlinky.csstype.mod.Property._FontVariantEastAsian
-import typingsSlinky.csstype.mod.Property._FontVariantLigatures
-import typingsSlinky.csstype.mod.Property._FontVariantNumeric
-import typingsSlinky.csstype.mod.Property._FontVariationSettings
-import typingsSlinky.csstype.mod.Property._FontWeight
-import typingsSlinky.csstype.mod.Property._Gap
-import typingsSlinky.csstype.mod.Property._GlyphOrientationVertical
-import typingsSlinky.csstype.mod.Property._Grid
-import typingsSlinky.csstype.mod.Property._GridAutoFlow
-import typingsSlinky.csstype.mod.Property._GridTemplate
-import typingsSlinky.csstype.mod.Property._GridTemplateAreas
-import typingsSlinky.csstype.mod.Property._GridTemplateColumns
-import typingsSlinky.csstype.mod.Property._GridTemplateRows
-import typingsSlinky.csstype.mod.Property._HangingPunctuation
-import typingsSlinky.csstype.mod.Property._Height
-import typingsSlinky.csstype.mod.Property._ImageOrientation
-import typingsSlinky.csstype.mod.Property._ImageResolution
-import typingsSlinky.csstype.mod.Property._InitialLetter
-import typingsSlinky.csstype.mod.Property._InlineSize
-import typingsSlinky.csstype.mod.Property._Inset
-import typingsSlinky.csstype.mod.Property._InsetBlock
-import typingsSlinky.csstype.mod.Property._InsetBlockEnd
-import typingsSlinky.csstype.mod.Property._InsetBlockStart
-import typingsSlinky.csstype.mod.Property._InsetInline
-import typingsSlinky.csstype.mod.Property._InsetInlineEnd
-import typingsSlinky.csstype.mod.Property._InsetInlineStart
-import typingsSlinky.csstype.mod.Property._JustifyContent
-import typingsSlinky.csstype.mod.Property._JustifyItems
-import typingsSlinky.csstype.mod.Property._JustifySelf
-import typingsSlinky.csstype.mod.Property._Left
-import typingsSlinky.csstype.mod.Property._LetterSpacing
-import typingsSlinky.csstype.mod.Property._LightingColor
-import typingsSlinky.csstype.mod.Property._LineClamp
-import typingsSlinky.csstype.mod.Property._LineHeight
-import typingsSlinky.csstype.mod.Property._ListStyle
-import typingsSlinky.csstype.mod.Property._ListStyleImage
-import typingsSlinky.csstype.mod.Property._ListStyleType
-import typingsSlinky.csstype.mod.Property._Margin
-import typingsSlinky.csstype.mod.Property._MarginBlock
-import typingsSlinky.csstype.mod.Property._MarginBlockEnd
-import typingsSlinky.csstype.mod.Property._MarginBlockStart
-import typingsSlinky.csstype.mod.Property._MarginBottom
-import typingsSlinky.csstype.mod.Property._MarginInline
-import typingsSlinky.csstype.mod.Property._MarginInlineEnd
-import typingsSlinky.csstype.mod.Property._MarginInlineStart
-import typingsSlinky.csstype.mod.Property._MarginLeft
-import typingsSlinky.csstype.mod.Property._MarginRight
-import typingsSlinky.csstype.mod.Property._MarginTop
-import typingsSlinky.csstype.mod.Property._Marker
-import typingsSlinky.csstype.mod.Property._MarkerEnd
-import typingsSlinky.csstype.mod.Property._MarkerMid
-import typingsSlinky.csstype.mod.Property._MarkerStart
-import typingsSlinky.csstype.mod.Property._MaskBorder
-import typingsSlinky.csstype.mod.Property._MaskBorderRepeat
-import typingsSlinky.csstype.mod.Property._MaskBorderSource
-import typingsSlinky.csstype.mod.Property._MaskBorderWidth
-import typingsSlinky.csstype.mod.Property._MaskClip
-import typingsSlinky.csstype.mod.Property._MaskImage
-import typingsSlinky.csstype.mod.Property._MaskOrigin
-import typingsSlinky.csstype.mod.Property._MaxBlockSize
-import typingsSlinky.csstype.mod.Property._MaxHeight
-import typingsSlinky.csstype.mod.Property._MaxInlineSize
-import typingsSlinky.csstype.mod.Property._MaxLines
-import typingsSlinky.csstype.mod.Property._MaxWidth
-import typingsSlinky.csstype.mod.Property._MinBlockSize
-import typingsSlinky.csstype.mod.Property._MinHeight
-import typingsSlinky.csstype.mod.Property._MinInlineSize
-import typingsSlinky.csstype.mod.Property._MinWidth
-import typingsSlinky.csstype.mod.Property._MozBinding
-import typingsSlinky.csstype.mod.Property._MozBorderBottomColors
-import typingsSlinky.csstype.mod.Property._MozBorderLeftColors
-import typingsSlinky.csstype.mod.Property._MozBorderRightColors
-import typingsSlinky.csstype.mod.Property._MozBorderTopColors
-import typingsSlinky.csstype.mod.Property._MozContextProperties
-import typingsSlinky.csstype.mod.Property._MozImageRegion
-import typingsSlinky.csstype.mod.Property._MsContentZoomSnap
-import typingsSlinky.csstype.mod.Property._MsFlowFrom
-import typingsSlinky.csstype.mod.Property._MsFlowInto
-import typingsSlinky.csstype.mod.Property._MsHyphenateLimitChars
-import typingsSlinky.csstype.mod.Property._MsHyphenateLimitLines
-import typingsSlinky.csstype.mod.Property._MsScrollLimitXMax
-import typingsSlinky.csstype.mod.Property._MsScrollLimitYMax
-import typingsSlinky.csstype.mod.Property._Offset
-import typingsSlinky.csstype.mod.Property._OffsetAnchor
-import typingsSlinky.csstype.mod.Property._OffsetPath
-import typingsSlinky.csstype.mod.Property._OffsetRotate
-import typingsSlinky.csstype.mod.Property._Outline
-import typingsSlinky.csstype.mod.Property._OutlineColor
-import typingsSlinky.csstype.mod.Property._OutlineStyle
-import typingsSlinky.csstype.mod.Property._Overflow
-import typingsSlinky.csstype.mod.Property._OverscrollBehavior
-import typingsSlinky.csstype.mod.Property._PaintOrder
-import typingsSlinky.csstype.mod.Property._Perspective
-import typingsSlinky.csstype.mod.Property._PlaceContent
-import typingsSlinky.csstype.mod.Property._PlaceItems
-import typingsSlinky.csstype.mod.Property._PlaceSelf
-import typingsSlinky.csstype.mod.Property._Quotes
-import typingsSlinky.csstype.mod.Property._Right
-import typingsSlinky.csstype.mod.Property._Rotate
-import typingsSlinky.csstype.mod.Property._RowGap
-import typingsSlinky.csstype.mod.Property._Scale
-import typingsSlinky.csstype.mod.Property._ScrollPadding
-import typingsSlinky.csstype.mod.Property._ScrollPaddingBlock
-import typingsSlinky.csstype.mod.Property._ScrollPaddingBlockEnd
-import typingsSlinky.csstype.mod.Property._ScrollPaddingBlockStart
-import typingsSlinky.csstype.mod.Property._ScrollPaddingBottom
-import typingsSlinky.csstype.mod.Property._ScrollPaddingInline
-import typingsSlinky.csstype.mod.Property._ScrollPaddingInlineEnd
-import typingsSlinky.csstype.mod.Property._ScrollPaddingInlineStart
-import typingsSlinky.csstype.mod.Property._ScrollPaddingLeft
-import typingsSlinky.csstype.mod.Property._ScrollPaddingRight
-import typingsSlinky.csstype.mod.Property._ScrollPaddingTop
-import typingsSlinky.csstype.mod.Property._ScrollSnapAlign
-import typingsSlinky.csstype.mod.Property._ScrollSnapCoordinate
-import typingsSlinky.csstype.mod.Property._ScrollSnapPointsX
-import typingsSlinky.csstype.mod.Property._ScrollSnapPointsY
-import typingsSlinky.csstype.mod.Property._ScrollSnapType
-import typingsSlinky.csstype.mod.Property._ScrollbarColor
-import typingsSlinky.csstype.mod.Property._ShapeOutside
-import typingsSlinky.csstype.mod.Property._StopColor
-import typingsSlinky.csstype.mod.Property._StrokeDasharray
-import typingsSlinky.csstype.mod.Property._TextCombineUpright
-import typingsSlinky.csstype.mod.Property._TextDecoration
-import typingsSlinky.csstype.mod.Property._TextDecorationLine
-import typingsSlinky.csstype.mod.Property._TextDecorationSkip
-import typingsSlinky.csstype.mod.Property._TextDecorationThickness
-import typingsSlinky.csstype.mod.Property._TextEmphasis
-import typingsSlinky.csstype.mod.Property._TextEmphasisStyle
-import typingsSlinky.csstype.mod.Property._TextOverflow
-import typingsSlinky.csstype.mod.Property._TextShadow
-import typingsSlinky.csstype.mod.Property._TextSizeAdjust
-import typingsSlinky.csstype.mod.Property._TextUnderlineOffset
-import typingsSlinky.csstype.mod.Property._TextUnderlinePosition
-import typingsSlinky.csstype.mod.Property._Top
-import typingsSlinky.csstype.mod.Property._TouchAction
-import typingsSlinky.csstype.mod.Property._Transform
-import typingsSlinky.csstype.mod.Property._TransformOrigin
-import typingsSlinky.csstype.mod.Property._TransitionProperty
-import typingsSlinky.csstype.mod.Property._Translate
-import typingsSlinky.csstype.mod.Property._VerticalAlign
-import typingsSlinky.csstype.mod.Property._WebkitBoxReflect
-import typingsSlinky.csstype.mod.Property._WebkitLineClamp
-import typingsSlinky.csstype.mod.Property._WebkitMask
-import typingsSlinky.csstype.mod.Property._WebkitMaskClip
-import typingsSlinky.csstype.mod.Property._WebkitMaskImage
-import typingsSlinky.csstype.mod.Property._WebkitMaskOrigin
-import typingsSlinky.csstype.mod.Property._WebkitMaskPositionX
-import typingsSlinky.csstype.mod.Property._WebkitMaskPositionY
-import typingsSlinky.csstype.mod.Property._Width
-import typingsSlinky.csstype.mod.Property._WillChange
-import typingsSlinky.csstype.mod.Property._WordSpacing
-import typingsSlinky.csstype.mod.Property._ZIndex
-import typingsSlinky.csstype.mod.Property._Zoom
+import typingsSlinky.csstype.mod.HyphensProperty
+import typingsSlinky.csstype.mod.ImageRenderingProperty
+import typingsSlinky.csstype.mod.ImeModeProperty
+import typingsSlinky.csstype.mod.IsolationProperty
+import typingsSlinky.csstype.mod.LineBreakProperty
+import typingsSlinky.csstype.mod.LineStyle
+import typingsSlinky.csstype.mod.ListStylePositionProperty
+import typingsSlinky.csstype.mod.MaskBorderModeProperty
+import typingsSlinky.csstype.mod.MaskTypeProperty
+import typingsSlinky.csstype.mod.MaskingMode
+import typingsSlinky.csstype.mod.MathStyleProperty
+import typingsSlinky.csstype.mod.MixBlendModeProperty
+import typingsSlinky.csstype.mod.MozAppearanceProperty
+import typingsSlinky.csstype.mod.MozFloatEdgeProperty
+import typingsSlinky.csstype.mod.MozOrientProperty
+import typingsSlinky.csstype.mod.MozStackSizingProperty
+import typingsSlinky.csstype.mod.MozTextBlinkProperty
+import typingsSlinky.csstype.mod.MozUserFocusProperty
+import typingsSlinky.csstype.mod.MozUserInputProperty
+import typingsSlinky.csstype.mod.MozUserModifyProperty
+import typingsSlinky.csstype.mod.MozWindowDraggingProperty
+import typingsSlinky.csstype.mod.MozWindowShadowProperty
+import typingsSlinky.csstype.mod.MsAcceleratorProperty
+import typingsSlinky.csstype.mod.MsBlockProgressionProperty
+import typingsSlinky.csstype.mod.MsContentZoomChainingProperty
+import typingsSlinky.csstype.mod.MsContentZoomSnapTypeProperty
+import typingsSlinky.csstype.mod.MsContentZoomingProperty
+import typingsSlinky.csstype.mod.MsHighContrastAdjustProperty
+import typingsSlinky.csstype.mod.MsImeAlignProperty
+import typingsSlinky.csstype.mod.MsOverflowStyleProperty
+import typingsSlinky.csstype.mod.MsScrollChainingProperty
+import typingsSlinky.csstype.mod.MsScrollRailsProperty
+import typingsSlinky.csstype.mod.MsScrollSnapTypeProperty
+import typingsSlinky.csstype.mod.MsScrollTranslationProperty
+import typingsSlinky.csstype.mod.MsTextAutospaceProperty
+import typingsSlinky.csstype.mod.MsTouchSelectProperty
+import typingsSlinky.csstype.mod.MsUserSelectProperty
+import typingsSlinky.csstype.mod.MsWrapFlowProperty
+import typingsSlinky.csstype.mod.MsWrapThroughProperty
+import typingsSlinky.csstype.mod.NamedColor
+import typingsSlinky.csstype.mod.ObjectFitProperty
+import typingsSlinky.csstype.mod.OverflowAnchorProperty
+import typingsSlinky.csstype.mod.OverflowBlockProperty
+import typingsSlinky.csstype.mod.OverflowClipBoxProperty
+import typingsSlinky.csstype.mod.OverflowInlineProperty
+import typingsSlinky.csstype.mod.OverflowWrapProperty
+import typingsSlinky.csstype.mod.OverflowXProperty
+import typingsSlinky.csstype.mod.OverflowYProperty
+import typingsSlinky.csstype.mod.OverscrollBehaviorBlockProperty
+import typingsSlinky.csstype.mod.OverscrollBehaviorInlineProperty
+import typingsSlinky.csstype.mod.OverscrollBehaviorXProperty
+import typingsSlinky.csstype.mod.OverscrollBehaviorYProperty
+import typingsSlinky.csstype.mod.PageBreakAfterProperty
+import typingsSlinky.csstype.mod.PageBreakBeforeProperty
+import typingsSlinky.csstype.mod.PageBreakInsideProperty
+import typingsSlinky.csstype.mod.PointerEventsProperty
+import typingsSlinky.csstype.mod.PositionProperty
+import typingsSlinky.csstype.mod.PropertyInheritsProperty
 import typingsSlinky.csstype.mod.Pseudos
+import typingsSlinky.csstype.mod.Quote
+import typingsSlinky.csstype.mod.ResizeProperty
+import typingsSlinky.csstype.mod.RubyAlignProperty
+import typingsSlinky.csstype.mod.RubyMergeProperty
+import typingsSlinky.csstype.mod.RubyPositionProperty
+import typingsSlinky.csstype.mod.ScrollBehaviorProperty
+import typingsSlinky.csstype.mod.ScrollSnapStopProperty
+import typingsSlinky.csstype.mod.ScrollSnapTypeXProperty
+import typingsSlinky.csstype.mod.ScrollSnapTypeYProperty
+import typingsSlinky.csstype.mod.ScrollbarWidthProperty
+import typingsSlinky.csstype.mod.SelfPosition
+import typingsSlinky.csstype.mod.ShapeRenderingProperty
 import typingsSlinky.csstype.mod.SimplePseudos
+import typingsSlinky.csstype.mod.SingleAnimationDirection
+import typingsSlinky.csstype.mod.SingleAnimationFillMode
+import typingsSlinky.csstype.mod.StrokeLinecapProperty
+import typingsSlinky.csstype.mod.StrokeLinejoinProperty
 import typingsSlinky.csstype.mod.SvgAttributes
+import typingsSlinky.csstype.mod.TableLayoutProperty
+import typingsSlinky.csstype.mod.TextAlignLastProperty
+import typingsSlinky.csstype.mod.TextAlignProperty
+import typingsSlinky.csstype.mod.TextAnchorProperty
+import typingsSlinky.csstype.mod.TextDecorationSkipInkProperty
+import typingsSlinky.csstype.mod.TextDecorationStyleProperty
+import typingsSlinky.csstype.mod.TextJustifyProperty
+import typingsSlinky.csstype.mod.TextOrientationProperty
+import typingsSlinky.csstype.mod.TextRenderingProperty
+import typingsSlinky.csstype.mod.TextTransformProperty
+import typingsSlinky.csstype.mod.TransformBoxProperty
+import typingsSlinky.csstype.mod.TransformStyleProperty
+import typingsSlinky.csstype.mod.UnicodeBidiProperty
+import typingsSlinky.csstype.mod.UserSelectProperty
+import typingsSlinky.csstype.mod.VectorEffectProperty
+import typingsSlinky.csstype.mod.ViewportOrientationProperty
+import typingsSlinky.csstype.mod.ViewportUserZoomProperty
+import typingsSlinky.csstype.mod.VisibilityProperty
+import typingsSlinky.csstype.mod.WebkitAppearanceProperty
+import typingsSlinky.csstype.mod.WebkitMaskRepeatXProperty
+import typingsSlinky.csstype.mod.WebkitMaskRepeatYProperty
+import typingsSlinky.csstype.mod.WebkitOverflowScrollingProperty
+import typingsSlinky.csstype.mod.WebkitTouchCalloutProperty
+import typingsSlinky.csstype.mod.WebkitUserModifyProperty
+import typingsSlinky.csstype.mod.WhiteSpaceProperty
+import typingsSlinky.csstype.mod.WordBreakProperty
+import typingsSlinky.csstype.mod.WordWrapProperty
+import typingsSlinky.csstype.mod.WritingModeProperty
+import typingsSlinky.csstype.mod._AlignContentProperty
+import typingsSlinky.csstype.mod._AlignItemsProperty
+import typingsSlinky.csstype.mod._AlignSelfProperty
+import typingsSlinky.csstype.mod._AlignTracksProperty
+import typingsSlinky.csstype.mod._AnimateableFeature
+import typingsSlinky.csstype.mod._AnimationIterationCountProperty
+import typingsSlinky.csstype.mod._AnimationNameProperty
+import typingsSlinky.csstype.mod._AnimationPlayStateProperty
+import typingsSlinky.csstype.mod._AspectRatioProperty
+import typingsSlinky.csstype.mod._AzimuthProperty
+import typingsSlinky.csstype.mod._BackdropFilterProperty
+import typingsSlinky.csstype.mod._BackgroundImageProperty
+import typingsSlinky.csstype.mod._BackgroundPositionXProperty
+import typingsSlinky.csstype.mod._BackgroundPositionYProperty
+import typingsSlinky.csstype.mod._BaselineShiftProperty
+import typingsSlinky.csstype.mod._BgPosition
+import typingsSlinky.csstype.mod._BgSize
+import typingsSlinky.csstype.mod._BlockOverflowProperty
+import typingsSlinky.csstype.mod._BlockSizeProperty
+import typingsSlinky.csstype.mod._BorderImageProperty
+import typingsSlinky.csstype.mod._BorderImageRepeatProperty
+import typingsSlinky.csstype.mod._BorderImageSourceProperty
+import typingsSlinky.csstype.mod._BorderImageWidthProperty
+import typingsSlinky.csstype.mod._BottomProperty
+import typingsSlinky.csstype.mod._BoxShadowProperty
+import typingsSlinky.csstype.mod._CaretColorProperty
+import typingsSlinky.csstype.mod._ClipPathProperty
+import typingsSlinky.csstype.mod._ClipProperty
+import typingsSlinky.csstype.mod._Color
+import typingsSlinky.csstype.mod._ColumnCountProperty
+import typingsSlinky.csstype.mod._ColumnGapProperty
+import typingsSlinky.csstype.mod._ColumnWidthProperty
+import typingsSlinky.csstype.mod._ColumnsProperty
+import typingsSlinky.csstype.mod._ContainProperty
+import typingsSlinky.csstype.mod._ContentList
+import typingsSlinky.csstype.mod._ContentProperty
+import typingsSlinky.csstype.mod._CounterIncrementProperty
+import typingsSlinky.csstype.mod._CounterResetProperty
+import typingsSlinky.csstype.mod._CounterSetProperty
+import typingsSlinky.csstype.mod._CounterStyleRangeProperty
+import typingsSlinky.csstype.mod._CounterStyleSpeakAsProperty
+import typingsSlinky.csstype.mod._CounterStyleSystemProperty
+import typingsSlinky.csstype.mod._CubicBezierTimingFunction
+import typingsSlinky.csstype.mod._CursorProperty
+import typingsSlinky.csstype.mod._DisplayProperty
+import typingsSlinky.csstype.mod._FilterProperty
+import typingsSlinky.csstype.mod._FinalBgLayer
+import typingsSlinky.csstype.mod._FlexBasisProperty
+import typingsSlinky.csstype.mod._FlexFlowProperty
+import typingsSlinky.csstype.mod._FlexProperty
+import typingsSlinky.csstype.mod._FloodColorProperty
+import typingsSlinky.csstype.mod._FontFaceFontStyleProperty
+import typingsSlinky.csstype.mod._FontFaceFontVariantProperty
+import typingsSlinky.csstype.mod._FontFeatureSettingsProperty
+import typingsSlinky.csstype.mod._FontLanguageOverrideProperty
+import typingsSlinky.csstype.mod._FontProperty
+import typingsSlinky.csstype.mod._FontSizeAdjustProperty
+import typingsSlinky.csstype.mod._FontSizeProperty
+import typingsSlinky.csstype.mod._FontSmoothProperty
+import typingsSlinky.csstype.mod._FontStretchAbsolute
+import typingsSlinky.csstype.mod._FontStyleProperty
+import typingsSlinky.csstype.mod._FontSynthesisProperty
+import typingsSlinky.csstype.mod._FontVariantAlternatesProperty
+import typingsSlinky.csstype.mod._FontVariantEastAsianProperty
+import typingsSlinky.csstype.mod._FontVariantLigaturesProperty
+import typingsSlinky.csstype.mod._FontVariantNumericProperty
+import typingsSlinky.csstype.mod._FontVariantProperty
+import typingsSlinky.csstype.mod._FontVariationSettingsProperty
+import typingsSlinky.csstype.mod._FontWeightAbsolute
+import typingsSlinky.csstype.mod._FontWeightProperty
+import typingsSlinky.csstype.mod._GapProperty
+import typingsSlinky.csstype.mod._GlyphOrientationVerticalProperty
+import typingsSlinky.csstype.mod._GridAutoFlowProperty
+import typingsSlinky.csstype.mod._GridProperty
+import typingsSlinky.csstype.mod._GridTemplateAreasProperty
+import typingsSlinky.csstype.mod._GridTemplateColumnsProperty
+import typingsSlinky.csstype.mod._GridTemplateProperty
+import typingsSlinky.csstype.mod._GridTemplateRowsProperty
+import typingsSlinky.csstype.mod._HangingPunctuationProperty
+import typingsSlinky.csstype.mod._HeightProperty
+import typingsSlinky.csstype.mod._ImageOrientationProperty
+import typingsSlinky.csstype.mod._ImageResolutionProperty
+import typingsSlinky.csstype.mod._InitialLetterProperty
+import typingsSlinky.csstype.mod._InlineSizeProperty
+import typingsSlinky.csstype.mod._InsetBlockEndProperty
+import typingsSlinky.csstype.mod._InsetBlockProperty
+import typingsSlinky.csstype.mod._InsetBlockStartProperty
+import typingsSlinky.csstype.mod._InsetInlineEndProperty
+import typingsSlinky.csstype.mod._InsetInlineProperty
+import typingsSlinky.csstype.mod._InsetInlineStartProperty
+import typingsSlinky.csstype.mod._InsetProperty
+import typingsSlinky.csstype.mod._JustifyContentProperty
+import typingsSlinky.csstype.mod._JustifyItemsProperty
+import typingsSlinky.csstype.mod._JustifySelfProperty
+import typingsSlinky.csstype.mod._JustifyTracksProperty
+import typingsSlinky.csstype.mod._LeftProperty
+import typingsSlinky.csstype.mod._LetterSpacingProperty
+import typingsSlinky.csstype.mod._LightingColorProperty
+import typingsSlinky.csstype.mod._LineClampProperty
+import typingsSlinky.csstype.mod._LineHeightProperty
+import typingsSlinky.csstype.mod._LineWidth
+import typingsSlinky.csstype.mod._ListStyleImageProperty
+import typingsSlinky.csstype.mod._ListStyleProperty
+import typingsSlinky.csstype.mod._ListStyleTypeProperty
+import typingsSlinky.csstype.mod._MarginBlockEndProperty
+import typingsSlinky.csstype.mod._MarginBlockProperty
+import typingsSlinky.csstype.mod._MarginBlockStartProperty
+import typingsSlinky.csstype.mod._MarginBottomProperty
+import typingsSlinky.csstype.mod._MarginInlineEndProperty
+import typingsSlinky.csstype.mod._MarginInlineProperty
+import typingsSlinky.csstype.mod._MarginInlineStartProperty
+import typingsSlinky.csstype.mod._MarginLeftProperty
+import typingsSlinky.csstype.mod._MarginProperty
+import typingsSlinky.csstype.mod._MarginRightProperty
+import typingsSlinky.csstype.mod._MarginTopProperty
+import typingsSlinky.csstype.mod._MarkerEndProperty
+import typingsSlinky.csstype.mod._MarkerMidProperty
+import typingsSlinky.csstype.mod._MarkerProperty
+import typingsSlinky.csstype.mod._MarkerStartProperty
+import typingsSlinky.csstype.mod._MaskBorderProperty
+import typingsSlinky.csstype.mod._MaskBorderRepeatProperty
+import typingsSlinky.csstype.mod._MaskBorderSourceProperty
+import typingsSlinky.csstype.mod._MaskBorderWidthProperty
+import typingsSlinky.csstype.mod._MaskClipProperty
+import typingsSlinky.csstype.mod._MaskImageProperty
+import typingsSlinky.csstype.mod._MaskLayer
+import typingsSlinky.csstype.mod._MaskOriginProperty
+import typingsSlinky.csstype.mod._MasonryAutoFlowProperty
+import typingsSlinky.csstype.mod._MaxBlockSizeProperty
+import typingsSlinky.csstype.mod._MaxHeightProperty
+import typingsSlinky.csstype.mod._MaxInlineSizeProperty
+import typingsSlinky.csstype.mod._MaxLinesProperty
+import typingsSlinky.csstype.mod._MaxWidthProperty
+import typingsSlinky.csstype.mod._MinBlockSizeProperty
+import typingsSlinky.csstype.mod._MinHeightProperty
+import typingsSlinky.csstype.mod._MinInlineSizeProperty
+import typingsSlinky.csstype.mod._MinWidthProperty
+import typingsSlinky.csstype.mod._MozBindingProperty
+import typingsSlinky.csstype.mod._MozBorderBottomColorsProperty
+import typingsSlinky.csstype.mod._MozBorderLeftColorsProperty
+import typingsSlinky.csstype.mod._MozBorderRightColorsProperty
+import typingsSlinky.csstype.mod._MozBorderTopColorsProperty
+import typingsSlinky.csstype.mod._MozContextPropertiesProperty
+import typingsSlinky.csstype.mod._MozImageRegionProperty
+import typingsSlinky.csstype.mod._MsContentZoomSnapProperty
+import typingsSlinky.csstype.mod._MsFlowFromProperty
+import typingsSlinky.csstype.mod._MsFlowIntoProperty
+import typingsSlinky.csstype.mod._MsGridColumnsProperty
+import typingsSlinky.csstype.mod._MsGridRowsProperty
+import typingsSlinky.csstype.mod._MsHyphenateLimitCharsProperty
+import typingsSlinky.csstype.mod._MsHyphenateLimitLinesProperty
+import typingsSlinky.csstype.mod._MsScrollLimitXMaxProperty
+import typingsSlinky.csstype.mod._MsScrollLimitYMaxProperty
+import typingsSlinky.csstype.mod._OffsetAnchorProperty
+import typingsSlinky.csstype.mod._OffsetPathProperty
+import typingsSlinky.csstype.mod._OffsetProperty
+import typingsSlinky.csstype.mod._OffsetRotateProperty
+import typingsSlinky.csstype.mod._OutlineColorProperty
+import typingsSlinky.csstype.mod._OutlineProperty
+import typingsSlinky.csstype.mod._OutlineStyleProperty
+import typingsSlinky.csstype.mod._OverflowProperty
+import typingsSlinky.csstype.mod._OverscrollBehaviorProperty
+import typingsSlinky.csstype.mod._PageSizeProperty
+import typingsSlinky.csstype.mod._Paint
+import typingsSlinky.csstype.mod._PaintOrderProperty
+import typingsSlinky.csstype.mod._PerspectiveProperty
+import typingsSlinky.csstype.mod._PlaceContentProperty
+import typingsSlinky.csstype.mod._PlaceItemsProperty
+import typingsSlinky.csstype.mod._PlaceSelfProperty
+import typingsSlinky.csstype.mod._Position
+import typingsSlinky.csstype.mod._QuotesProperty
+import typingsSlinky.csstype.mod._RepeatStyle
+import typingsSlinky.csstype.mod._RightProperty
+import typingsSlinky.csstype.mod._RotateProperty
+import typingsSlinky.csstype.mod._RowGapProperty
+import typingsSlinky.csstype.mod._ScaleProperty
+import typingsSlinky.csstype.mod._ScrollPaddingBlockEndProperty
+import typingsSlinky.csstype.mod._ScrollPaddingBlockProperty
+import typingsSlinky.csstype.mod._ScrollPaddingBlockStartProperty
+import typingsSlinky.csstype.mod._ScrollPaddingBottomProperty
+import typingsSlinky.csstype.mod._ScrollPaddingInlineEndProperty
+import typingsSlinky.csstype.mod._ScrollPaddingInlineProperty
+import typingsSlinky.csstype.mod._ScrollPaddingInlineStartProperty
+import typingsSlinky.csstype.mod._ScrollPaddingLeftProperty
+import typingsSlinky.csstype.mod._ScrollPaddingProperty
+import typingsSlinky.csstype.mod._ScrollPaddingRightProperty
+import typingsSlinky.csstype.mod._ScrollPaddingTopProperty
+import typingsSlinky.csstype.mod._ScrollSnapAlignProperty
+import typingsSlinky.csstype.mod._ScrollSnapCoordinateProperty
+import typingsSlinky.csstype.mod._ScrollSnapPointsXProperty
+import typingsSlinky.csstype.mod._ScrollSnapPointsYProperty
+import typingsSlinky.csstype.mod._ScrollSnapTypeProperty
+import typingsSlinky.csstype.mod._ScrollbarColorProperty
+import typingsSlinky.csstype.mod._ScrollbarGutterProperty
+import typingsSlinky.csstype.mod._ShapeOutsideProperty
+import typingsSlinky.csstype.mod._SingleAnimation
+import typingsSlinky.csstype.mod._SingleTransition
+import typingsSlinky.csstype.mod._StepTimingFunction
+import typingsSlinky.csstype.mod._StopColorProperty
+import typingsSlinky.csstype.mod._StrokeDasharrayProperty
+import typingsSlinky.csstype.mod._TextCombineUprightProperty
+import typingsSlinky.csstype.mod._TextDecorationLineProperty
+import typingsSlinky.csstype.mod._TextDecorationProperty
+import typingsSlinky.csstype.mod._TextDecorationSkipProperty
+import typingsSlinky.csstype.mod._TextDecorationThicknessProperty
+import typingsSlinky.csstype.mod._TextEmphasisProperty
+import typingsSlinky.csstype.mod._TextEmphasisStyleProperty
+import typingsSlinky.csstype.mod._TextOverflowProperty
+import typingsSlinky.csstype.mod._TextShadowProperty
+import typingsSlinky.csstype.mod._TextSizeAdjustProperty
+import typingsSlinky.csstype.mod._TextUnderlineOffsetProperty
+import typingsSlinky.csstype.mod._TextUnderlinePositionProperty
+import typingsSlinky.csstype.mod._TimingFunction
+import typingsSlinky.csstype.mod._TopProperty
+import typingsSlinky.csstype.mod._TouchActionProperty
+import typingsSlinky.csstype.mod._TrackBreadth
+import typingsSlinky.csstype.mod._TransformOriginProperty
+import typingsSlinky.csstype.mod._TransformProperty
+import typingsSlinky.csstype.mod._TransitionPropertyProperty
+import typingsSlinky.csstype.mod._TranslateProperty
+import typingsSlinky.csstype.mod._VerticalAlignProperty
+import typingsSlinky.csstype.mod._WebkitBoxReflectProperty
+import typingsSlinky.csstype.mod._WebkitLineClampProperty
+import typingsSlinky.csstype.mod._WebkitMaskClipProperty
+import typingsSlinky.csstype.mod._WebkitMaskImageProperty
+import typingsSlinky.csstype.mod._WebkitMaskOriginProperty
+import typingsSlinky.csstype.mod._WebkitMaskPositionXProperty
+import typingsSlinky.csstype.mod._WebkitMaskPositionYProperty
+import typingsSlinky.csstype.mod._WebkitMaskProperty
+import typingsSlinky.csstype.mod._WidthProperty
+import typingsSlinky.csstype.mod._WillChangeProperty
+import typingsSlinky.csstype.mod._WordSpacingProperty
+import typingsSlinky.csstype.mod._ZIndexProperty
+import typingsSlinky.csstype.mod._ZoomProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -398,10 +411,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object csstypeStrings {
   
   @scala.inline
+  def `-apple-pay-button`: `-apple-pay-button` = "-apple-pay-button".asInstanceOf[`-apple-pay-button`]
+  
+  @scala.inline
   def `-moz-crisp-edges`: `-moz-crisp-edges` = "-moz-crisp-edges".asInstanceOf[`-moz-crisp-edges`]
   
   @scala.inline
   def `-moz-grab`: `-moz-grab` = "-moz-grab".asInstanceOf[`-moz-grab`]
+  
+  @scala.inline
+  def `-moz-hidden-unscrollable`: `-moz-hidden-unscrollable` = "-moz-hidden-unscrollable".asInstanceOf[`-moz-hidden-unscrollable`]
   
   @scala.inline
   def `-moz-initial`: `-moz-initial` = "-moz-initial".asInstanceOf[`-moz-initial`]
@@ -570,6 +589,9 @@ object csstypeStrings {
   
   @scala.inline
   def `@page`: `@page` = "@page".asInstanceOf[`@page`]
+  
+  @scala.inline
+  def `@property`: `@property` = "@property".asInstanceOf[`@property`]
   
   @scala.inline
   def `@supports`: `@supports` = "@supports".asInstanceOf[`@supports`]
@@ -1098,9 +1120,6 @@ object csstypeStrings {
   
   @scala.inline
   def `[bbox]`: `[bbox]` = "[bbox]".asInstanceOf[`[bbox]`]
-  
-  @scala.inline
-  def `[begin]`: `[begin]` = "[begin]".asInstanceOf[`[begin]`]
   
   @scala.inline
   def `[behavior]`: `[behavior]` = "[behavior]".asInstanceOf[`[behavior]`]
@@ -1961,6 +1980,9 @@ object csstypeStrings {
   def `[ry]`: `[ry]` = "[ry]".asInstanceOf[`[ry]`]
   
   @scala.inline
+  def `[sandbox-allow-downloads]`: `[sandbox-allow-downloads]` = "[sandbox-allow-downloads]".asInstanceOf[`[sandbox-allow-downloads]`]
+  
+  @scala.inline
   def `[sandbox-allow-modals]`: `[sandbox-allow-modals]` = "[sandbox-allow-modals]".asInstanceOf[`[sandbox-allow-modals]`]
   
   @scala.inline
@@ -2432,6 +2454,9 @@ object csstypeStrings {
   def `before-edge`: `before-edge` = "before-edge".asInstanceOf[`before-edge`]
   
   @scala.inline
+  def behind: behind = "behind".asInstanceOf[behind]
+  
+  @scala.inline
   def beige: beige = "beige".asInstanceOf[beige]
   
   @scala.inline
@@ -2558,6 +2583,12 @@ object csstypeStrings {
   def center: center = "center".asInstanceOf[center]
   
   @scala.inline
+  def `center-left`: `center-left` = "center-left".asInstanceOf[`center-left`]
+  
+  @scala.inline
+  def `center-right`: `center-right` = "center-right".asInstanceOf[`center-right`]
+  
+  @scala.inline
   def central: central = "central".asInstanceOf[central]
   
   @scala.inline
@@ -2619,6 +2650,9 @@ object csstypeStrings {
   
   @scala.inline
   def `common-ligatures`: `common-ligatures` = "common-ligatures".asInstanceOf[`common-ligatures`]
+  
+  @scala.inline
+  def compact: compact = "compact".asInstanceOf[compact]
   
   @scala.inline
   def condensed: condensed = "condensed".asInstanceOf[condensed]
@@ -2768,6 +2802,9 @@ object csstypeStrings {
   def `default-button`: `default-button` = "default-button".asInstanceOf[`default-button`]
   
   @scala.inline
+  def `definite-first`: `definite-first` = "definite-first".asInstanceOf[`definite-first`]
+  
+  @scala.inline
   def dense: dense = "dense".asInstanceOf[dense]
   
   @scala.inline
@@ -2892,6 +2929,12 @@ object csstypeStrings {
   
   @scala.inline
   def fantasy: fantasy = "fantasy".asInstanceOf[fantasy]
+  
+  @scala.inline
+  def `far-left`: `far-left` = "far-left".asInstanceOf[`far-left`]
+  
+  @scala.inline
+  def `far-right`: `far-right` = "far-right".asInstanceOf[`far-right`]
   
   @scala.inline
   def fill: fill = "fill".asInstanceOf[fill]
@@ -3198,6 +3241,12 @@ object csstypeStrings {
   
   @scala.inline
   def left: left = "left".asInstanceOf[left]
+  
+  @scala.inline
+  def `left-side`: `left-side` = "left-side".asInstanceOf[`left-side`]
+  
+  @scala.inline
+  def leftwards: leftwards = "leftwards".asInstanceOf[leftwards]
   
   @scala.inline
   def legacy: legacy = "legacy".asInstanceOf[legacy]
@@ -3539,6 +3588,12 @@ object csstypeStrings {
   def `nesw-resize`: `nesw-resize` = "nesw-resize".asInstanceOf[`nesw-resize`]
   
   @scala.inline
+  def never: never = "never".asInstanceOf[never]
+  
+  @scala.inline
+  def next: next = "next".asInstanceOf[next]
+  
+  @scala.inline
   def `no-change`: `no-change` = "no-change".asInstanceOf[`no-change`]
   
   @scala.inline
@@ -3653,6 +3708,9 @@ object csstypeStrings {
   def orchid: orchid = "orchid".asInstanceOf[orchid]
   
   @scala.inline
+  def ordered: ordered = "ordered".asInstanceOf[ordered]
+  
+  @scala.inline
   def ordinal: ordinal = "ordinal".asInstanceOf[ordinal]
   
   @scala.inline
@@ -3669,6 +3727,9 @@ object csstypeStrings {
   
   @scala.inline
   def overline: overline = "overline".asInstanceOf[overline]
+  
+  @scala.inline
+  def pack: pack = "pack".asInstanceOf[pack]
   
   @scala.inline
   def padding: padding = "padding".asInstanceOf[padding]
@@ -3879,6 +3940,12 @@ object csstypeStrings {
   
   @scala.inline
   def right: right = "right".asInstanceOf[right]
+  
+  @scala.inline
+  def `right-side`: `right-side` = "right-side".asInstanceOf[`right-side`]
+  
+  @scala.inline
+  def rightwards: rightwards = "rightwards".asInstanceOf[rightwards]
   
   @scala.inline
   def rl: rl = "rl".asInstanceOf[rl]
@@ -4209,6 +4276,9 @@ object csstypeStrings {
   
   @scala.inline
   def `square-button`: `square-button` = "square-button".asInstanceOf[`square-button`]
+  
+  @scala.inline
+  def stable: stable = "stable".asInstanceOf[stable]
   
   @scala.inline
   def `stacked-fractions`: `stacked-fractions` = "stacked-fractions".asInstanceOf[`stacked-fractions`]
@@ -4586,258 +4656,268 @@ object csstypeStrings {
   def `zoom-out`: `zoom-out` = "zoom-out".asInstanceOf[`zoom-out`]
   
   @js.native
-  sealed trait `-moz-crisp-edges` extends ImageRendering
+  sealed trait `-apple-pay-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `-moz-grab` extends _Cursor
+  sealed trait `-moz-crisp-edges` extends ImageRenderingProperty
+  
+  @js.native
+  sealed trait `-moz-grab` extends _CursorProperty
+  
+  @js.native
+  sealed trait `-moz-hidden-unscrollable`
+    extends OverflowXProperty
+       with OverflowYProperty
+       with _OverflowProperty
   
   @js.native
   sealed trait `-moz-initial`
     extends Globals
-       with AlignmentBaseline
-       with Appearance
-       with BackfaceVisibility
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderCollapse
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with BoxAlign
-       with BoxDecorationBreak
-       with BoxDirection
-       with BoxLines
-       with BoxOrient
-       with BoxPack
-       with BoxSizing
-       with BreakAfter
-       with BreakBefore
-       with BreakInside
-       with CaptionSide
-       with Clear
-       with ClipRule
-       with ColorAdjust
-       with ColorInterpolation
-       with ColorRendering
-       with ColumnFill
-       with ColumnSpan
-       with Direction
-       with DominantBaseline
-       with EmptyCells
-       with FillRule
-       with FlexDirection
-       with FlexWrap
-       with Float
-       with FontKerning
-       with FontOpticalSizing
-       with FontVariantCaps
-       with FontVariantPosition
-       with Hyphens
-       with ImageRendering
-       with ImeMode
-       with Isolation
-       with LineBreak
-       with ListStylePosition
-       with MaskBorderMode
-       with MaskType
-       with MixBlendMode
-       with MozAppearance
-       with MozFloatEdge
-       with MozOrient
-       with MozStackSizing
-       with MozTextBlink
-       with MozUserFocus
-       with MozUserInput
-       with MozUserModify
-       with MozWindowDragging
-       with MozWindowShadow
-       with MsAccelerator
-       with MsBlockProgression
-       with MsContentZoomChaining
-       with MsContentZoomSnapType
-       with MsContentZooming
-       with MsHighContrastAdjust
-       with MsImeAlign
-       with MsOverflowStyle
-       with MsScrollChaining
-       with MsScrollRails
-       with MsScrollSnapType
-       with MsScrollTranslation
-       with MsTextAutospace
-       with MsTouchSelect
-       with MsUserSelect
-       with MsWrapFlow
-       with MsWrapThrough
-       with ObjectFit
-       with OverflowAnchor
-       with OverflowBlock
-       with OverflowClipBox
-       with OverflowInline
-       with OverflowWrap
-       with OverflowX
-       with OverflowY
-       with OverscrollBehaviorBlock
-       with OverscrollBehaviorInline
-       with OverscrollBehaviorX
-       with OverscrollBehaviorY
-       with PageBreakAfter
-       with PageBreakBefore
-       with PageBreakInside
-       with PointerEvents
-       with Position
-       with Resize
-       with RubyAlign
-       with RubyMerge
-       with RubyPosition
-       with ScrollBehavior
-       with ScrollSnapStop
-       with ScrollSnapTypeX
-       with ScrollSnapTypeY
-       with ScrollbarWidth
-       with ShapeRendering
-       with StrokeLinecap
-       with StrokeLinejoin
-       with TableLayout
-       with TextAlign
-       with TextAlignLast
-       with TextAnchor
-       with TextDecorationSkipInk
-       with TextDecorationStyle
-       with TextJustify
-       with TextOrientation
-       with TextRendering
-       with TextTransform
-       with TransformBox
-       with TransformStyle
-       with UnicodeBidi
-       with UserSelect
-       with VectorEffect
-       with Visibility
-       with WebkitAppearance
-       with WebkitMaskRepeatX
-       with WebkitMaskRepeatY
-       with WebkitOverflowScrolling
-       with WebkitTouchCallout
-       with WebkitUserModify
-       with WhiteSpace
-       with WordBreak
-       with WordWrap
-       with WritingMode
+       with AlignmentBaselineProperty
+       with AppearanceProperty
+       with BackfaceVisibilityProperty
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderCollapseProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with BoxAlignProperty
+       with BoxDecorationBreakProperty
+       with BoxDirectionProperty
+       with BoxLinesProperty
+       with BoxOrientProperty
+       with BoxPackProperty
+       with BoxSizingProperty
+       with BreakAfterProperty
+       with BreakBeforeProperty
+       with BreakInsideProperty
+       with CaptionSideProperty
+       with ClearProperty
+       with ClipRuleProperty
+       with ColorAdjustProperty
+       with ColorInterpolationProperty
+       with ColorRenderingProperty
+       with ColumnFillProperty
+       with ColumnSpanProperty
+       with DirectionProperty
+       with DominantBaselineProperty
+       with EmptyCellsProperty
+       with FillRuleProperty
+       with FlexDirectionProperty
+       with FlexWrapProperty
+       with FloatProperty
+       with FontKerningProperty
+       with FontOpticalSizingProperty
+       with FontVariantCapsProperty
+       with FontVariantPositionProperty
+       with HyphensProperty
+       with ImageRenderingProperty
+       with ImeModeProperty
+       with IsolationProperty
+       with LineBreakProperty
+       with ListStylePositionProperty
+       with MaskBorderModeProperty
+       with MaskTypeProperty
+       with MathStyleProperty
+       with MixBlendModeProperty
+       with MozAppearanceProperty
+       with MozFloatEdgeProperty
+       with MozOrientProperty
+       with MozStackSizingProperty
+       with MozTextBlinkProperty
+       with MozUserFocusProperty
+       with MozUserInputProperty
+       with MozUserModifyProperty
+       with MozWindowDraggingProperty
+       with MozWindowShadowProperty
+       with MsAcceleratorProperty
+       with MsBlockProgressionProperty
+       with MsContentZoomChainingProperty
+       with MsContentZoomSnapTypeProperty
+       with MsContentZoomingProperty
+       with MsHighContrastAdjustProperty
+       with MsImeAlignProperty
+       with MsOverflowStyleProperty
+       with MsScrollChainingProperty
+       with MsScrollRailsProperty
+       with MsScrollSnapTypeProperty
+       with MsScrollTranslationProperty
+       with MsTextAutospaceProperty
+       with MsTouchSelectProperty
+       with MsUserSelectProperty
+       with MsWrapFlowProperty
+       with MsWrapThroughProperty
+       with ObjectFitProperty
+       with OverflowAnchorProperty
+       with OverflowBlockProperty
+       with OverflowClipBoxProperty
+       with OverflowInlineProperty
+       with OverflowWrapProperty
+       with OverflowXProperty
+       with OverflowYProperty
+       with OverscrollBehaviorBlockProperty
+       with OverscrollBehaviorInlineProperty
+       with OverscrollBehaviorXProperty
+       with OverscrollBehaviorYProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
+       with PageBreakInsideProperty
+       with PointerEventsProperty
+       with PositionProperty
+       with ResizeProperty
+       with RubyAlignProperty
+       with RubyMergeProperty
+       with RubyPositionProperty
+       with ScrollBehaviorProperty
+       with ScrollSnapStopProperty
+       with ScrollSnapTypeXProperty
+       with ScrollSnapTypeYProperty
+       with ScrollbarWidthProperty
+       with ShapeRenderingProperty
+       with StrokeLinecapProperty
+       with StrokeLinejoinProperty
+       with TableLayoutProperty
+       with TextAlignLastProperty
+       with TextAlignProperty
+       with TextAnchorProperty
+       with TextDecorationSkipInkProperty
+       with TextDecorationStyleProperty
+       with TextJustifyProperty
+       with TextOrientationProperty
+       with TextRenderingProperty
+       with TextTransformProperty
+       with TransformBoxProperty
+       with TransformStyleProperty
+       with UnicodeBidiProperty
+       with UserSelectProperty
+       with VectorEffectProperty
+       with VisibilityProperty
+       with WebkitAppearanceProperty
+       with WebkitMaskRepeatXProperty
+       with WebkitMaskRepeatYProperty
+       with WebkitOverflowScrollingProperty
+       with WebkitTouchCalloutProperty
+       with WebkitUserModifyProperty
+       with WhiteSpaceProperty
+       with WordBreakProperty
+       with WordWrapProperty
+       with WritingModeProperty
   
   @js.native
-  sealed trait `-moz-isolate` extends UnicodeBidi
+  sealed trait `-moz-isolate` extends UnicodeBidiProperty
   
   @js.native
-  sealed trait `-moz-isolate-override` extends UnicodeBidi
+  sealed trait `-moz-isolate-override` extends UnicodeBidiProperty
   
   @js.native
-  sealed trait `-moz-mac-unified-toolbar` extends MozAppearance
+  sealed trait `-moz-mac-unified-toolbar` extends MozAppearanceProperty
   
   @js.native
   sealed trait `-moz-max-content`
-    extends _BlockSize[js.Any]
-       with _FlexBasis[js.Any]
-       with _Height[js.Any]
-       with _InlineSize[js.Any]
-       with _MaxBlockSize[js.Any]
-       with _MaxHeight[js.Any]
-       with _MaxInlineSize[js.Any]
-       with _MaxWidth[js.Any]
-       with _MinBlockSize[js.Any]
-       with _MinHeight[js.Any]
-       with _MinInlineSize[js.Any]
-       with _MinWidth[js.Any]
-       with _Width[js.Any]
+    extends _BlockSizeProperty[js.Any]
+       with _FlexBasisProperty[js.Any]
+       with _HeightProperty[js.Any]
+       with _InlineSizeProperty[js.Any]
+       with _MaxBlockSizeProperty[js.Any]
+       with _MaxHeightProperty[js.Any]
+       with _MaxInlineSizeProperty[js.Any]
+       with _MaxWidthProperty[js.Any]
+       with _MinBlockSizeProperty[js.Any]
+       with _MinHeightProperty[js.Any]
+       with _MinInlineSizeProperty[js.Any]
+       with _MinWidthProperty[js.Any]
+       with _WidthProperty[js.Any]
   
   @js.native
   sealed trait `-moz-min-content`
-    extends _BlockSize[js.Any]
-       with _FlexBasis[js.Any]
-       with _Height[js.Any]
-       with _InlineSize[js.Any]
-       with _MaxBlockSize[js.Any]
-       with _MaxHeight[js.Any]
-       with _MaxInlineSize[js.Any]
-       with _MaxWidth[js.Any]
-       with _MinBlockSize[js.Any]
-       with _MinHeight[js.Any]
-       with _MinInlineSize[js.Any]
-       with _MinWidth[js.Any]
-       with _Width[js.Any]
+    extends _BlockSizeProperty[js.Any]
+       with _FlexBasisProperty[js.Any]
+       with _HeightProperty[js.Any]
+       with _InlineSizeProperty[js.Any]
+       with _MaxBlockSizeProperty[js.Any]
+       with _MaxHeightProperty[js.Any]
+       with _MaxInlineSizeProperty[js.Any]
+       with _MaxWidthProperty[js.Any]
+       with _MinBlockSizeProperty[js.Any]
+       with _MinHeightProperty[js.Any]
+       with _MinInlineSizeProperty[js.Any]
+       with _MinWidthProperty[js.Any]
+       with _WidthProperty[js.Any]
   
   @js.native
-  sealed trait `-moz-none` extends UserSelect
+  sealed trait `-moz-none` extends UserSelectProperty
   
   @js.native
-  sealed trait `-moz-plaintext` extends UnicodeBidi
+  sealed trait `-moz-plaintext` extends UnicodeBidiProperty
   
   @js.native
-  sealed trait `-moz-pre-wrap` extends WhiteSpace
+  sealed trait `-moz-pre-wrap` extends WhiteSpaceProperty
   
   @js.native
-  sealed trait `-moz-win-borderless-glass` extends MozAppearance
+  sealed trait `-moz-win-borderless-glass` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-win-browsertabbar-toolbox` extends MozAppearance
+  sealed trait `-moz-win-browsertabbar-toolbox` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-win-communications-toolbox` extends MozAppearance
+  sealed trait `-moz-win-communications-toolbox` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-win-communicationstext` extends MozAppearance
+  sealed trait `-moz-win-communicationstext` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-win-exclude-glass` extends MozAppearance
+  sealed trait `-moz-win-exclude-glass` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-win-glass` extends MozAppearance
+  sealed trait `-moz-win-glass` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-win-media-toolbox` extends MozAppearance
+  sealed trait `-moz-win-media-toolbox` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-win-mediatext` extends MozAppearance
+  sealed trait `-moz-win-mediatext` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-button-box` extends MozAppearance
+  sealed trait `-moz-window-button-box` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-button-box-maximized` extends MozAppearance
+  sealed trait `-moz-window-button-box-maximized` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-button-close` extends MozAppearance
+  sealed trait `-moz-window-button-close` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-button-maximize` extends MozAppearance
+  sealed trait `-moz-window-button-maximize` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-button-minimize` extends MozAppearance
+  sealed trait `-moz-window-button-minimize` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-button-restore` extends MozAppearance
+  sealed trait `-moz-window-button-restore` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-frame-bottom` extends MozAppearance
+  sealed trait `-moz-window-frame-bottom` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-frame-left` extends MozAppearance
+  sealed trait `-moz-window-frame-left` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-frame-right` extends MozAppearance
+  sealed trait `-moz-window-frame-right` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-titlebar` extends MozAppearance
+  sealed trait `-moz-window-titlebar` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-moz-window-titlebar-maximized` extends MozAppearance
+  sealed trait `-moz-window-titlebar-maximized` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `-ms-autohiding-scrollbar` extends MsOverflowStyle
+  sealed trait `-ms-autohiding-scrollbar` extends MsOverflowStyleProperty
   
   @js.native
   sealed trait `-ms-flexbox` extends DisplayInside
@@ -4852,53 +4932,53 @@ object csstypeStrings {
   sealed trait `-ms-inline-grid` extends DisplayLegacy
   
   @js.native
-  sealed trait `-ms-manipulation` extends _TouchAction
+  sealed trait `-ms-manipulation` extends _TouchActionProperty
   
   @js.native
-  sealed trait `-ms-none` extends _TouchAction
+  sealed trait `-ms-none` extends _TouchActionProperty
   
   @js.native
-  sealed trait `-ms-pinch-zoom` extends _TouchAction
+  sealed trait `-ms-pinch-zoom` extends _TouchActionProperty
   
   @js.native
-  sealed trait `-ms-zoom` extends UserZoom
+  sealed trait `-ms-zoom` extends ViewportUserZoomProperty
   
   @js.native
   sealed trait `-webkit-auto`
-    extends _FlexBasis[js.Any]
+    extends _FlexBasisProperty[js.Any]
   
   @js.native
   sealed trait `-webkit-flex` extends DisplayInside
   
   @js.native
-  sealed trait `-webkit-grab` extends _Cursor
+  sealed trait `-webkit-grab` extends _CursorProperty
   
   @js.native
   sealed trait `-webkit-inline-flex` extends DisplayLegacy
   
   @js.native
-  sealed trait `-webkit-isolate` extends UnicodeBidi
+  sealed trait `-webkit-isolate` extends UnicodeBidiProperty
   
   @js.native
   sealed trait `-webkit-max-content`
-    extends _MaxHeight[js.Any]
-       with _MaxWidth[js.Any]
-       with _MinHeight[js.Any]
-       with _MinWidth[js.Any]
-       with _Width[js.Any]
+    extends _MaxHeightProperty[js.Any]
+       with _MaxWidthProperty[js.Any]
+       with _MinHeightProperty[js.Any]
+       with _MinWidthProperty[js.Any]
+       with _WidthProperty[js.Any]
   
   @js.native
   sealed trait `-webkit-min-content`
-    extends _MaxHeight[js.Any]
-       with _MaxWidth[js.Any]
-       with _MinHeight[js.Any]
-       with _MinWidth[js.Any]
+    extends _MaxHeightProperty[js.Any]
+       with _MaxWidthProperty[js.Any]
+       with _MinHeightProperty[js.Any]
+       with _MinWidthProperty[js.Any]
   
   @js.native
-  sealed trait `-webkit-optimize-contrast` extends ImageRendering
+  sealed trait `-webkit-optimize-contrast` extends ImageRenderingProperty
   
   @js.native
-  sealed trait `-webkit-sticky` extends Position
+  sealed trait `-webkit-sticky` extends PositionProperty
   
   @js.native
   sealed trait `@charset` extends AtRules
@@ -4929,6 +5009,9 @@ object csstypeStrings {
   
   @js.native
   sealed trait `@page` extends AtRules
+  
+  @js.native
+  sealed trait `@property` extends AtRules
   
   @js.native
   sealed trait `@supports` extends AtRules
@@ -5681,9 +5764,6 @@ object csstypeStrings {
   
   @js.native
   sealed trait `[bbox]` extends SvgAttributes
-  
-  @js.native
-  sealed trait `[begin]` extends SvgAttributes
   
   @js.native
   sealed trait `[behavior]` extends HtmlAttributes
@@ -6574,6 +6654,9 @@ object csstypeStrings {
   sealed trait `[ry]` extends SvgAttributes
   
   @js.native
+  sealed trait `[sandbox-allow-downloads]` extends HtmlAttributes
+  
+  @js.native
   sealed trait `[sandbox-allow-modals]` extends HtmlAttributes
   
   @js.native
@@ -6961,74 +7044,74 @@ object csstypeStrings {
   
   @js.native
   sealed trait above
-    extends _WebkitBoxReflect[js.Any]
+    extends _WebkitBoxReflectProperty[js.Any]
   
   @js.native
-  sealed trait absolute extends Position
+  sealed trait absolute extends PositionProperty
   
   @js.native
-  sealed trait active extends ImeMode
+  sealed trait active extends ImeModeProperty
   
   @js.native
   sealed trait add extends CompositingOperator
   
   @js.native
-  sealed trait additive extends _System
+  sealed trait additive extends _CounterStyleSystemProperty
   
   @js.native
-  sealed trait after extends MsImeAlign
+  sealed trait after extends MsImeAlignProperty
   
   @js.native
-  sealed trait `after-edge` extends AlignmentBaseline
+  sealed trait `after-edge` extends AlignmentBaselineProperty
   
   @js.native
-  sealed trait alias extends _Cursor
+  sealed trait alias extends _CursorProperty
   
   @js.native
   sealed trait aliceblue extends NamedColor
   
   @js.native
   sealed trait all
-    extends _SingleTransition[js.Any]
-       with BreakAfter
-       with BreakBefore
-       with ColumnSpan
-       with PointerEvents
-       with TextDecorationSkipInk
-       with UserSelect
-       with _TextCombineUpright
-       with _TransitionProperty
+    extends _SingleTransition
+       with BreakAfterProperty
+       with BreakBeforeProperty
+       with ColumnSpanProperty
+       with PointerEventsProperty
+       with TextDecorationSkipInkProperty
+       with UserSelectProperty
+       with _TextCombineUprightProperty
+       with _TransitionPropertyProperty
   
   @js.native
   sealed trait `all-petite-caps`
-    extends FontVariantCaps
-       with _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
+    extends FontVariantCapsProperty
+       with _FontFaceFontVariantProperty
+       with _FontVariantProperty
   
   @js.native
-  sealed trait `all-scroll` extends _Cursor
+  sealed trait `all-scroll` extends _CursorProperty
   
   @js.native
   sealed trait `all-small-caps`
-    extends FontVariantCaps
-       with _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
+    extends FontVariantCapsProperty
+       with _FontFaceFontVariantProperty
+       with _FontVariantProperty
   
   @js.native
-  sealed trait `allow-end` extends _HangingPunctuation
+  sealed trait `allow-end` extends _HangingPunctuationProperty
   
   @js.native
   sealed trait alpha
     extends MaskingMode
-       with MaskBorderMode
-       with MaskType
-       with _MaskBorder
+       with MaskBorderModeProperty
+       with MaskTypeProperty
+       with _MaskBorderProperty
   
   @js.native
   sealed trait alphabetic
-    extends AlignmentBaseline
-       with DominantBaseline
-       with _System
+    extends AlignmentBaselineProperty
+       with DominantBaselineProperty
+       with _CounterStyleSystemProperty
   
   @js.native
   sealed trait alternate extends SingleAnimationDirection
@@ -7038,19 +7121,21 @@ object csstypeStrings {
   
   @js.native
   sealed trait always
-    extends BreakAfter
-       with BreakBefore
-       with PageBreakAfter
-       with PageBreakBefore
-       with ScrollSnapStop
+    extends BreakAfterProperty
+       with BreakBeforeProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
+       with ScrollSnapStopProperty
+       with _FontSmoothProperty[js.Any]
+       with _ScrollbarGutterProperty
   
   @js.native
   sealed trait antiquewhite extends NamedColor
   
   @js.native
   sealed trait anywhere
-    extends LineBreak
-       with OverflowWrap
+    extends LineBreakProperty
+       with OverflowWrapProperty
   
   @js.native
   sealed trait aqua extends NamedColor
@@ -7061,163 +7146,163 @@ object csstypeStrings {
   @js.native
   sealed trait auto
     extends _TrackBreadth[js.Any]
-       with AlignmentBaseline
-       with BreakAfter
-       with BreakBefore
-       with BreakInside
-       with ColorInterpolation
-       with ColorRendering
-       with ColumnFill
-       with DominantBaseline
-       with FontDisplay
-       with FontKerning
-       with FontOpticalSizing
-       with Hyphens
-       with ImageRendering
-       with ImeMode
-       with Isolation
-       with LineBreak
-       with MozUserInput
-       with MsHighContrastAdjust
-       with MsImeAlign
-       with MsOverflowStyle
-       with MsWrapFlow
-       with Orientation
-       with OverflowAnchor
-       with OverflowBlock
-       with OverflowInline
-       with OverflowX
-       with OverflowY
-       with OverscrollBehaviorBlock
-       with OverscrollBehaviorInline
-       with OverscrollBehaviorX
-       with OverscrollBehaviorY
-       with PageBreakAfter
-       with PageBreakBefore
-       with PageBreakInside
-       with PointerEvents
-       with RubyMerge
-       with ScrollBehavior
-       with ScrollbarWidth
-       with ShapeRendering
-       with TableLayout
-       with TextAlignLast
-       with TextDecorationSkipInk
-       with TextJustify
-       with TextRendering
-       with UserSelect
-       with WebkitOverflowScrolling
-       with _AlignSelf
-       with _AspectRatio
+       with AlignmentBaselineProperty
+       with AppearanceProperty
+       with BreakAfterProperty
+       with BreakBeforeProperty
+       with BreakInsideProperty
+       with ColorInterpolationProperty
+       with ColorRenderingProperty
+       with ColumnFillProperty
+       with DominantBaselineProperty
+       with FontFaceFontDisplayProperty
+       with FontKerningProperty
+       with FontOpticalSizingProperty
+       with HyphensProperty
+       with ImageRenderingProperty
+       with ImeModeProperty
+       with IsolationProperty
+       with LineBreakProperty
+       with MozUserInputProperty
+       with MsHighContrastAdjustProperty
+       with MsImeAlignProperty
+       with MsOverflowStyleProperty
+       with MsWrapFlowProperty
+       with OverflowAnchorProperty
+       with OverflowBlockProperty
+       with OverflowInlineProperty
+       with OverflowXProperty
+       with OverflowYProperty
+       with OverscrollBehaviorBlockProperty
+       with OverscrollBehaviorInlineProperty
+       with OverscrollBehaviorXProperty
+       with OverscrollBehaviorYProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
+       with PageBreakInsideProperty
+       with PointerEventsProperty
+       with RubyMergeProperty
+       with ScrollBehaviorProperty
+       with ScrollbarWidthProperty
+       with ShapeRenderingProperty
+       with TableLayoutProperty
+       with TextAlignLastProperty
+       with TextDecorationSkipInkProperty
+       with TextJustifyProperty
+       with TextRenderingProperty
+       with UserSelectProperty
+       with ViewportOrientationProperty
+       with WebkitOverflowScrollingProperty
+       with _AlignSelfProperty
+       with _AspectRatioProperty
        with _BgSize[js.Any]
-       with _BlockSize[js.Any]
-       with _BorderImageWidth[js.Any]
-       with _Bottom[js.Any]
-       with _CaretColor
-       with _Clip
-       with _ColumnCount
-       with _ColumnWidth[js.Any]
-       with _Columns[js.Any]
-       with _Cursor
-       with _Flex[js.Any]
-       with _FlexBasis[js.Any]
-       with _GlyphOrientationVertical
-       with _Height[js.Any]
-       with _InlineSize[js.Any]
-       with _Inset[js.Any]
-       with _InsetBlock[js.Any]
-       with _InsetBlockEnd[js.Any]
-       with _InsetBlockStart[js.Any]
-       with _InsetInline[js.Any]
-       with _InsetInlineEnd[js.Any]
-       with _InsetInlineStart[js.Any]
-       with _JustifySelf
-       with _Left[js.Any]
-       with _Margin[js.Any]
-       with _MarginBlock[js.Any]
-       with _MarginBlockEnd[js.Any]
-       with _MarginBlockStart[js.Any]
-       with _MarginBottom[js.Any]
-       with _MarginInline[js.Any]
-       with _MarginInlineEnd[js.Any]
-       with _MarginInlineStart[js.Any]
-       with _MarginLeft[js.Any]
-       with _MarginRight[js.Any]
-       with _MarginTop[js.Any]
-       with _MaskBorderWidth[js.Any]
-       with _MaxBlockSize[js.Any]
-       with _MaxHeight[js.Any]
-       with _MaxInlineSize[js.Any]
-       with _MaxWidth[js.Any]
-       with _MinBlockSize[js.Any]
-       with _MinHeight[js.Any]
-       with _MinInlineSize[js.Any]
-       with _MinWidth[js.Any]
-       with _MozImageRegion
-       with _MsHyphenateLimitChars
-       with _MsScrollLimitXMax[js.Any]
-       with _MsScrollLimitYMax[js.Any]
-       with _Offset[js.Any]
-       with _OffsetAnchor[js.Any]
-       with _OffsetRotate
-       with _Outline[js.Any]
-       with _OutlineStyle
-       with _Overflow
-       with _OverscrollBehavior
-       with _PlaceSelf
-       with _Quotes
-       with _Range
-       with _Right[js.Any]
-       with _ScrollPadding[js.Any]
-       with _ScrollPaddingBlock[js.Any]
-       with _ScrollPaddingBlockEnd[js.Any]
-       with _ScrollPaddingBlockStart[js.Any]
-       with _ScrollPaddingBottom[js.Any]
-       with _ScrollPaddingInline[js.Any]
-       with _ScrollPaddingInlineEnd[js.Any]
-       with _ScrollPaddingInlineStart[js.Any]
-       with _ScrollPaddingLeft[js.Any]
-       with _ScrollPaddingRight[js.Any]
-       with _ScrollPaddingTop[js.Any]
-       with _ScrollbarColor
-       with _SpeakAs
-       with _TextDecoration[js.Any]
-       with _TextDecorationThickness[js.Any]
-       with _TextSizeAdjust
-       with _TextUnderlineOffset[js.Any]
-       with _TextUnderlinePosition
-       with _Top[js.Any]
-       with _TouchAction
-       with _Width[js.Any]
-       with _WillChange
-       with _ZIndex
+       with _BlockSizeProperty[js.Any]
+       with _BorderImageWidthProperty[js.Any]
+       with _BottomProperty[js.Any]
+       with _CaretColorProperty
+       with _ClipProperty
+       with _ColumnCountProperty
+       with _ColumnWidthProperty[js.Any]
+       with _ColumnsProperty[js.Any]
+       with _CounterStyleRangeProperty
+       with _CounterStyleSpeakAsProperty
+       with _CursorProperty
+       with _FlexBasisProperty[js.Any]
+       with _FlexProperty[js.Any]
+       with _FontSmoothProperty[js.Any]
+       with _GlyphOrientationVerticalProperty
+       with _HeightProperty[js.Any]
+       with _InlineSizeProperty[js.Any]
+       with _InsetBlockEndProperty[js.Any]
+       with _InsetBlockProperty[js.Any]
+       with _InsetBlockStartProperty[js.Any]
+       with _InsetInlineEndProperty[js.Any]
+       with _InsetInlineProperty[js.Any]
+       with _InsetInlineStartProperty[js.Any]
+       with _InsetProperty[js.Any]
+       with _JustifySelfProperty
+       with _LeftProperty[js.Any]
+       with _MarginBlockEndProperty[js.Any]
+       with _MarginBlockProperty[js.Any]
+       with _MarginBlockStartProperty[js.Any]
+       with _MarginBottomProperty[js.Any]
+       with _MarginInlineEndProperty[js.Any]
+       with _MarginInlineProperty[js.Any]
+       with _MarginInlineStartProperty[js.Any]
+       with _MarginLeftProperty[js.Any]
+       with _MarginProperty[js.Any]
+       with _MarginRightProperty[js.Any]
+       with _MarginTopProperty[js.Any]
+       with _MaskBorderWidthProperty[js.Any]
+       with _MinBlockSizeProperty[js.Any]
+       with _MinHeightProperty[js.Any]
+       with _MinInlineSizeProperty[js.Any]
+       with _MinWidthProperty[js.Any]
+       with _MozImageRegionProperty
+       with _MsHyphenateLimitCharsProperty
+       with _MsScrollLimitXMaxProperty[js.Any]
+       with _MsScrollLimitYMaxProperty[js.Any]
+       with _OffsetAnchorProperty[js.Any]
+       with _OffsetProperty[js.Any]
+       with _OffsetRotateProperty
+       with _OutlineProperty[js.Any]
+       with _OutlineStyleProperty
+       with _OverflowProperty
+       with _OverscrollBehaviorProperty
+       with _PageSizeProperty[js.Any]
+       with _PlaceSelfProperty
+       with _QuotesProperty
+       with _RightProperty[js.Any]
+       with _ScrollPaddingBlockEndProperty[js.Any]
+       with _ScrollPaddingBlockProperty[js.Any]
+       with _ScrollPaddingBlockStartProperty[js.Any]
+       with _ScrollPaddingBottomProperty[js.Any]
+       with _ScrollPaddingInlineEndProperty[js.Any]
+       with _ScrollPaddingInlineProperty[js.Any]
+       with _ScrollPaddingInlineStartProperty[js.Any]
+       with _ScrollPaddingLeftProperty[js.Any]
+       with _ScrollPaddingProperty[js.Any]
+       with _ScrollPaddingRightProperty[js.Any]
+       with _ScrollPaddingTopProperty[js.Any]
+       with _ScrollbarColorProperty
+       with _ScrollbarGutterProperty
+       with _TextDecorationProperty[js.Any]
+       with _TextDecorationThicknessProperty[js.Any]
+       with _TextSizeAdjustProperty
+       with _TextUnderlineOffsetProperty[js.Any]
+       with _TextUnderlinePositionProperty
+       with _TopProperty[js.Any]
+       with _TouchActionProperty
+       with _WidthProperty[js.Any]
+       with _WillChangeProperty
+       with _ZIndexProperty
   
   @js.native
   sealed trait avoid
-    extends BreakAfter
-       with BreakBefore
-       with BreakInside
-       with PageBreakAfter
-       with PageBreakBefore
-       with PageBreakInside
+    extends BreakAfterProperty
+       with BreakBeforeProperty
+       with BreakInsideProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
+       with PageBreakInsideProperty
   
   @js.native
   sealed trait `avoid-column`
-    extends BreakAfter
-       with BreakBefore
-       with BreakInside
+    extends BreakAfterProperty
+       with BreakBeforeProperty
+       with BreakInsideProperty
   
   @js.native
   sealed trait `avoid-page`
-    extends BreakAfter
-       with BreakBefore
-       with BreakInside
+    extends BreakAfterProperty
+       with BreakBeforeProperty
+       with BreakInsideProperty
   
   @js.native
   sealed trait `avoid-region`
-    extends BreakAfter
-       with BreakBefore
-       with BreakInside
+    extends BreakAfterProperty
+       with BreakBeforeProperty
+       with BreakInsideProperty
   
   @js.native
   sealed trait azure extends NamedColor
@@ -7226,38 +7311,42 @@ object csstypeStrings {
   sealed trait backwards extends SingleAnimationFillMode
   
   @js.native
-  sealed trait balance extends ColumnFill
+  sealed trait balance extends ColumnFillProperty
   
   @js.native
   sealed trait baseline
-    extends AlignmentBaseline
-       with BoxAlign
-       with _AlignContent
-       with _AlignItems
-       with _AlignSelf
-       with _BaselineShift[js.Any]
-       with _JustifyItems
-       with _JustifySelf
-       with _PlaceContent
-       with _PlaceItems
-       with _PlaceSelf
-       with _VerticalAlign[js.Any]
+    extends AlignmentBaselineProperty
+       with BoxAlignProperty
+       with _AlignContentProperty
+       with _AlignItemsProperty
+       with _AlignSelfProperty
+       with _AlignTracksProperty
+       with _BaselineShiftProperty[js.Any]
+       with _JustifyItemsProperty
+       with _JustifySelfProperty
+       with _PlaceContentProperty
+       with _PlaceItemsProperty
+       with _PlaceSelfProperty
+       with _VerticalAlignProperty[js.Any]
   
   @js.native
-  sealed trait `before-edge` extends AlignmentBaseline
+  sealed trait `before-edge` extends AlignmentBaselineProperty
+  
+  @js.native
+  sealed trait behind extends _AzimuthProperty
   
   @js.native
   sealed trait beige extends NamedColor
   
   @js.native
   sealed trait below
-    extends _WebkitBoxReflect[js.Any]
+    extends _WebkitBoxReflectProperty[js.Any]
   
   @js.native
-  sealed trait bevel extends StrokeLinejoin
+  sealed trait bevel extends StrokeLinejoinProperty
   
   @js.native
-  sealed trait `bidi-override` extends UnicodeBidi
+  sealed trait `bidi-override` extends UnicodeBidiProperty
   
   @js.native
   sealed trait bisque extends NamedColor
@@ -7270,26 +7359,26 @@ object csstypeStrings {
   
   @js.native
   sealed trait blink
-    extends MozTextBlink
-       with _TextDecoration[js.Any]
-       with _TextDecorationLine
+    extends MozTextBlinkProperty
+       with _TextDecorationLineProperty
+       with _TextDecorationProperty[js.Any]
   
   @js.native
   sealed trait block
     extends DisplayOutside
-       with FontDisplay
-       with MozOrient
-       with Resize
-       with _ScrollSnapType
+       with FontFaceFontDisplayProperty
+       with MozOrientProperty
+       with ResizeProperty
+       with _ScrollSnapTypeProperty
   
   @js.native
-  sealed trait `block-axis` extends BoxOrient
+  sealed trait `block-axis` extends BoxOrientProperty
   
   @js.native
-  sealed trait `block-end` extends CaptionSide
+  sealed trait `block-end` extends CaptionSideProperty
   
   @js.native
-  sealed trait `block-start` extends CaptionSide
+  sealed trait `block-start` extends CaptionSideProperty
   
   @js.native
   sealed trait blue extends NamedColor
@@ -7301,159 +7390,167 @@ object csstypeStrings {
   sealed trait bold extends _FontWeightAbsolute
   
   @js.native
-  sealed trait bolder extends _FontWeight
+  sealed trait bolder extends _FontWeightProperty
   
   @js.native
   sealed trait border
-    extends _WebkitMask[js.Any]
-       with _WebkitMaskClip
-       with _WebkitMaskOrigin
+    extends _WebkitMaskClipProperty
+       with _WebkitMaskOriginProperty
+       with _WebkitMaskProperty[js.Any]
   
   @js.native
   sealed trait `border-box`
     extends Box
-       with BoxSizing
+       with BoxSizingProperty
        with GeometryBox
-       with MozFloatEdge
-       with TransformBox
+       with MozFloatEdgeProperty
+       with TransformBoxProperty
   
   @js.native
   sealed trait both
     extends SingleAnimationFillMode
-       with Clear
-       with MsWrapFlow
-       with Resize
-       with _ScrollSnapType
+       with ClearProperty
+       with MsWrapFlowProperty
+       with ResizeProperty
+       with _ScrollSnapTypeProperty
   
   @js.native
   sealed trait bottom
     extends _Position[js.Any]
-       with CaptionSide
-       with _BackgroundPositionY[js.Any]
+       with CaptionSideProperty
+       with _BackgroundPositionYProperty[js.Any]
        with _BgPosition[js.Any]
-       with _TransformOrigin[js.Any]
-       with _VerticalAlign[js.Any]
-       with _WebkitMaskPositionY[js.Any]
+       with _TransformOriginProperty[js.Any]
+       with _VerticalAlignProperty[js.Any]
+       with _WebkitMaskPositionYProperty[js.Any]
   
   @js.native
-  sealed trait `box-decoration` extends _TextDecorationSkip
+  sealed trait `box-decoration` extends _TextDecorationSkipProperty
   
   @js.native
-  sealed trait `break-all` extends WordBreak
+  sealed trait `break-all` extends WordBreakProperty
   
   @js.native
-  sealed trait `break-spaces` extends WhiteSpace
+  sealed trait `break-spaces` extends WhiteSpaceProperty
   
   @js.native
   sealed trait `break-word`
-    extends OverflowWrap
-       with WordBreak
-       with WordWrap
+    extends OverflowWrapProperty
+       with WordBreakProperty
+       with WordWrapProperty
   
   @js.native
   sealed trait brown extends NamedColor
   
   @js.native
-  sealed trait bt extends MsBlockProgression
+  sealed trait bt extends MsBlockProgressionProperty
   
   @js.native
-  sealed trait bullets extends _SpeakAs
+  sealed trait bullets extends _CounterStyleSpeakAsProperty
   
   @js.native
   sealed trait burlywood extends NamedColor
   
   @js.native
-  sealed trait butt extends StrokeLinecap
+  sealed trait butt extends StrokeLinecapProperty
   
   @js.native
   sealed trait button
-    extends Appearance
-       with MozAppearance
-       with WebkitAppearance
+    extends AppearanceProperty
+       with CompatAuto
+       with MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait `button-arrow-down` extends MozAppearance
+  sealed trait `button-arrow-down` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `button-arrow-next` extends MozAppearance
+  sealed trait `button-arrow-next` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `button-arrow-previous` extends MozAppearance
+  sealed trait `button-arrow-previous` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `button-arrow-up` extends MozAppearance
+  sealed trait `button-arrow-up` extends MozAppearanceProperty
   
   @js.native
   sealed trait `button-bevel`
-    extends MozAppearance
-       with WebkitAppearance
+    extends MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait `button-focus` extends MozAppearance
+  sealed trait `button-focus` extends MozAppearanceProperty
   
   @js.native
   sealed trait cadetblue extends NamedColor
   
   @js.native
-  sealed trait capitalize extends TextTransform
+  sealed trait capitalize extends TextTransformProperty
   
   @js.native
-  sealed trait caption extends _Font
+  sealed trait caption extends _FontProperty
   
   @js.native
   sealed trait caret
-    extends MozAppearance
-       with WebkitAppearance
+    extends MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait cell extends _Cursor
+  sealed trait cell extends _CursorProperty
   
   @js.native
   sealed trait center
     extends _Position[js.Any]
-       with BoxAlign
-       with BoxPack
+       with BoxAlignProperty
+       with BoxPackProperty
        with ContentPosition
-       with RubyAlign
+       with RubyAlignProperty
        with SelfPosition
-       with TextAlign
-       with TextAlignLast
-       with _BackgroundPositionX[js.Any]
-       with _BackgroundPositionY[js.Any]
+       with TextAlignLastProperty
+       with TextAlignProperty
+       with _AzimuthProperty
+       with _BackgroundPositionXProperty[js.Any]
+       with _BackgroundPositionYProperty[js.Any]
        with _BgPosition[js.Any]
-       with _ScrollSnapAlign
-       with _TransformOrigin[js.Any]
-       with _WebkitMaskPositionX[js.Any]
-       with _WebkitMaskPositionY[js.Any]
+       with _ScrollSnapAlignProperty
+       with _TransformOriginProperty[js.Any]
+       with _WebkitMaskPositionXProperty[js.Any]
+       with _WebkitMaskPositionYProperty[js.Any]
+  
+  @js.native
+  sealed trait `center-left` extends _AzimuthProperty
+  
+  @js.native
+  sealed trait `center-right` extends _AzimuthProperty
   
   @js.native
   sealed trait central
-    extends AlignmentBaseline
-       with DominantBaseline
+    extends AlignmentBaselineProperty
+       with DominantBaselineProperty
   
   @js.native
   sealed trait chained
-    extends MsContentZoomChaining
-       with MsScrollChaining
+    extends MsContentZoomChainingProperty
+       with MsScrollChainingProperty
   
   @js.native
   sealed trait chartreuse extends NamedColor
   
   @js.native
   sealed trait checkbox
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with MozAppearance
-       with WebkitAppearance
+       with MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait `checkbox-container` extends MozAppearance
+  sealed trait `checkbox-container` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `checkbox-label` extends MozAppearance
+  sealed trait `checkbox-label` extends MozAppearanceProperty
   
   @js.native
-  sealed trait checkmenuitem extends MozAppearance
+  sealed trait checkmenuitem extends MozAppearanceProperty
   
   @js.native
   sealed trait child extends _Paint
@@ -7463,69 +7560,75 @@ object csstypeStrings {
   
   @js.native
   sealed trait circle
-    extends _TextEmphasis
-       with _TextEmphasisStyle
+    extends _TextEmphasisProperty
+       with _TextEmphasisStyleProperty
   
   @js.native
   sealed trait clear
     extends CompositeStyle
-       with MsWrapFlow
+       with MsWrapFlowProperty
   
   @js.native
   sealed trait clip
-    extends OverflowBlock
-       with OverflowInline
-       with _BlockOverflow
-       with _TextOverflow
+    extends OverflowBlockProperty
+       with OverflowInlineProperty
+       with OverflowXProperty
+       with OverflowYProperty
+       with _BlockOverflowProperty
+       with _OverflowProperty
+       with _TextOverflowProperty
   
   @js.native
-  sealed trait clone extends BoxDecorationBreak
+  sealed trait clone extends BoxDecorationBreakProperty
   
   @js.native
   sealed trait `close-quote` extends Quote
   
   @js.native
-  sealed trait `col-resize` extends _Cursor
+  sealed trait `col-resize` extends _CursorProperty
   
   @js.native
   sealed trait collapse
-    extends BorderCollapse
-       with RubyMerge
-       with Visibility
+    extends BorderCollapseProperty
+       with RubyMergeProperty
+       with VisibilityProperty
   
   @js.native
   sealed trait color
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
   sealed trait `color-burn`
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
   sealed trait `color-dodge`
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
   sealed trait column
-    extends BreakAfter
-       with BreakBefore
-       with FlexDirection
-       with _FlexFlow
-       with _GridAutoFlow
+    extends BreakAfterProperty
+       with BreakBeforeProperty
+       with FlexDirectionProperty
+       with _FlexFlowProperty
+       with _GridAutoFlowProperty
   
   @js.native
   sealed trait `column-reverse`
-    extends FlexDirection
-       with _FlexFlow
+    extends FlexDirectionProperty
+       with _FlexFlowProperty
   
   @js.native
   sealed trait `common-ligatures`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantLigatures
+    extends _FontFaceFontVariantProperty
+       with _FontVariantLigaturesProperty
+       with _FontVariantProperty
+  
+  @js.native
+  sealed trait compact extends MathStyleProperty
   
   @js.native
   sealed trait condensed extends _FontStretchAbsolute
@@ -7533,57 +7636,57 @@ object csstypeStrings {
   @js.native
   sealed trait contain
     extends _BgSize[js.Any]
-       with ObjectFit
-       with OverscrollBehaviorBlock
-       with OverscrollBehaviorInline
-       with OverscrollBehaviorX
-       with OverscrollBehaviorY
-       with UserSelect
-       with _OverscrollBehavior
+       with ObjectFitProperty
+       with OverscrollBehaviorBlockProperty
+       with OverscrollBehaviorInlineProperty
+       with OverscrollBehaviorXProperty
+       with OverscrollBehaviorYProperty
+       with UserSelectProperty
+       with _OverscrollBehaviorProperty
   
   @js.native
   sealed trait content
-    extends _Contain
-       with _Flex[js.Any]
-       with _FlexBasis[js.Any]
-       with _WebkitMask[js.Any]
-       with _WebkitMaskClip
-       with _WebkitMaskOrigin
+    extends _ContainProperty
+       with _FlexBasisProperty[js.Any]
+       with _FlexProperty[js.Any]
+       with _WebkitMaskClipProperty
+       with _WebkitMaskOriginProperty
+       with _WebkitMaskProperty[js.Any]
   
   @js.native
   sealed trait `content-box`
     extends Box
-       with BoxSizing
+       with BoxSizingProperty
        with GeometryBox
-       with MozFloatEdge
-       with OverflowClipBox
-       with TransformBox
+       with MozFloatEdgeProperty
+       with OverflowClipBoxProperty
+       with TransformBoxProperty
   
   @js.native
   sealed trait contents
     extends _AnimateableFeature
        with _ContentList
-       with _Display
+       with _DisplayProperty
   
   @js.native
   sealed trait `context-fill` extends _Paint
   
   @js.native
-  sealed trait `context-menu` extends _Cursor
+  sealed trait `context-menu` extends _CursorProperty
   
   @js.native
   sealed trait `context-stroke` extends _Paint
   
   @js.native
   sealed trait contextual
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantLigatures
+    extends _FontFaceFontVariantProperty
+       with _FontVariantLigaturesProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait copy
     extends CompositeStyle
-       with _Cursor
+       with _CursorProperty
   
   @js.native
   sealed trait coral extends NamedColor
@@ -7597,25 +7700,25 @@ object csstypeStrings {
   @js.native
   sealed trait cover
     extends _BgSize[js.Any]
-       with ObjectFit
+       with ObjectFitProperty
   
   @js.native
   sealed trait crimson extends NamedColor
   
   @js.native
-  sealed trait `crisp-edges` extends ImageRendering
+  sealed trait `crisp-edges` extends ImageRenderingProperty
   
   @js.native
-  sealed trait crispEdges extends ShapeRendering
+  sealed trait crispEdges extends ShapeRenderingProperty
   
   @js.native
-  sealed trait crosshair extends _Cursor
+  sealed trait crosshair extends _CursorProperty
   
   @js.native
   sealed trait currentColor
-    extends _FloodColor
-       with _LightingColor
-       with _StopColor
+    extends _FloodColorProperty
+       with _LightingColorProperty
+       with _StopColorProperty
   
   @js.native
   sealed trait currentcolor_ extends _Color
@@ -7627,10 +7730,10 @@ object csstypeStrings {
   sealed trait cyan extends NamedColor
   
   @js.native
-  sealed trait cyclic extends _System
+  sealed trait cyclic extends _CounterStyleSystemProperty
   
   @js.native
-  sealed trait dark extends _ScrollbarColor
+  sealed trait dark extends _ScrollbarColorProperty
   
   @js.native
   sealed trait darkblue extends NamedColor
@@ -7641,7 +7744,7 @@ object csstypeStrings {
   @js.native
   sealed trait darken
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
   sealed trait darkgoldenrod extends NamedColor
@@ -7697,18 +7800,18 @@ object csstypeStrings {
   @js.native
   sealed trait dashed
     extends LineStyle
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with TextDecorationStyle
-       with _TextDecoration[js.Any]
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with TextDecorationStyleProperty
+       with _TextDecorationProperty[js.Any]
   
   @js.native
   sealed trait deeppink extends NamedColor
@@ -7718,15 +7821,18 @@ object csstypeStrings {
   
   @js.native
   sealed trait default
-    extends MozWindowShadow
-       with WebkitTouchCallout
-       with _Cursor
+    extends MozWindowShadowProperty
+       with WebkitTouchCalloutProperty
+       with _CursorProperty
   
   @js.native
-  sealed trait `default-button` extends WebkitAppearance
+  sealed trait `default-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait dense extends _GridAutoFlow
+  sealed trait `definite-first` extends _MasonryAutoFlowProperty
+  
+  @js.native
+  sealed trait dense extends _GridAutoFlowProperty
   
   @js.native
   sealed trait `destination-atop` extends CompositeStyle
@@ -7742,17 +7848,17 @@ object csstypeStrings {
   
   @js.native
   sealed trait `diagonal-fractions`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantNumeric
+    extends _FontFaceFontVariantProperty
+       with _FontVariantNumericProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait difference
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
-  sealed trait digits extends _TextCombineUpright
+  sealed trait digits extends _TextCombineUprightProperty
   
   @js.native
   sealed trait dimgray extends NamedColor
@@ -7762,68 +7868,68 @@ object csstypeStrings {
   
   @js.native
   sealed trait disabled
-    extends ImeMode
-       with MozUserInput
+    extends ImeModeProperty
+       with MozUserInputProperty
   
   @js.native
   sealed trait `discretionary-ligatures`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantLigatures
+    extends _FontFaceFontVariantProperty
+       with _FontVariantLigaturesProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait dodgerblue extends NamedColor
   
   @js.native
   sealed trait dot
-    extends _TextEmphasis
-       with _TextEmphasisStyle
+    extends _TextEmphasisProperty
+       with _TextEmphasisStyleProperty
   
   @js.native
   sealed trait dotted
     extends LineStyle
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with TextDecorationStyle
-       with _TextDecoration[js.Any]
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with TextDecorationStyleProperty
+       with _TextDecorationProperty[js.Any]
   
   @js.native
   sealed trait double
     extends LineStyle
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with TextDecorationStyle
-       with _TextDecoration[js.Any]
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with TextDecorationStyleProperty
+       with _TextDecorationProperty[js.Any]
   
   @js.native
   sealed trait `double-circle`
-    extends _TextEmphasis
-       with _TextEmphasisStyle
+    extends _TextEmphasisProperty
+       with _TextEmphasisStyleProperty
   
   @js.native
-  sealed trait drag extends MozWindowDragging
+  sealed trait drag extends MozWindowDraggingProperty
   
   @js.native
-  sealed trait dualbutton extends MozAppearance
+  sealed trait dualbutton extends MozAppearanceProperty
   
   @js.native
-  sealed trait `e-resize` extends _Cursor
+  sealed trait `e-resize` extends _CursorProperty
   
   @js.native
   sealed trait ease extends _CubicBezierTimingFunction
@@ -7838,49 +7944,49 @@ object csstypeStrings {
   sealed trait `ease-out` extends _CubicBezierTimingFunction
   
   @js.native
-  sealed trait economy extends ColorAdjust
+  sealed trait economy extends ColorAdjustProperty
   
   @js.native
-  sealed trait edges extends _TextDecorationSkip
+  sealed trait edges extends _TextDecorationSkipProperty
   
   @js.native
   sealed trait element
-    extends MsUserSelect
-       with UserSelect
+    extends MsUserSelectProperty
+       with UserSelectProperty
   
   @js.native
   sealed trait ellipsis
-    extends _BlockOverflow
-       with _TextOverflow
+    extends _BlockOverflowProperty
+       with _TextOverflowProperty
   
   @js.native
-  sealed trait embed extends UnicodeBidi
+  sealed trait embed extends UnicodeBidiProperty
   
   @js.native
-  sealed trait enabled extends MozUserInput
+  sealed trait enabled extends MozUserInputProperty
   
   @js.native
   sealed trait end
     extends SelfPosition
-       with BoxAlign
-       with BoxPack
+       with BoxAlignProperty
+       with BoxPackProperty
        with ContentPosition
-       with MsWrapFlow
-       with TextAlign
-       with TextAlignLast
-       with TextAnchor
-       with _ScrollSnapAlign
+       with MsWrapFlowProperty
+       with TextAlignLastProperty
+       with TextAlignProperty
+       with TextAnchorProperty
+       with _ScrollSnapAlignProperty
   
   @js.native
   sealed trait evenodd
-    extends ClipRule
-       with FillRule
+    extends ClipRuleProperty
+       with FillRuleProperty
   
   @js.native
-  sealed trait `ew-resize` extends _Cursor
+  sealed trait `ew-resize` extends _CursorProperty
   
   @js.native
-  sealed trait exact extends ColorAdjust
+  sealed trait exact extends ColorAdjustProperty
   
   @js.native
   sealed trait exclude extends CompositingOperator
@@ -7888,7 +7994,7 @@ object csstypeStrings {
   @js.native
   sealed trait exclusion
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
   sealed trait expanded extends _FontStretchAbsolute
@@ -7900,50 +8006,58 @@ object csstypeStrings {
   sealed trait `extra-expanded` extends _FontStretchAbsolute
   
   @js.native
-  sealed trait fallback extends FontDisplay
+  sealed trait fallback extends FontFaceFontDisplayProperty
   
   @js.native
-  sealed trait `false` extends MsAccelerator
+  sealed trait `false`
+    extends MsAcceleratorProperty
+       with PropertyInheritsProperty
   
   @js.native
   sealed trait fantasy extends GenericFamily
   
   @js.native
+  sealed trait `far-left` extends _AzimuthProperty
+  
+  @js.native
+  sealed trait `far-right` extends _AzimuthProperty
+  
+  @js.native
   sealed trait fill
-    extends ObjectFit
-       with PointerEvents
-       with _MozContextProperties
-       with _PaintOrder
+    extends ObjectFitProperty
+       with PointerEventsProperty
+       with _MozContextPropertiesProperty
+       with _PaintOrderProperty
   
   @js.native
   sealed trait `fill-box`
     extends GeometryBox
-       with TransformBox
+       with TransformBoxProperty
   
   @js.native
-  sealed trait `fill-opacity` extends _MozContextProperties
+  sealed trait `fill-opacity` extends _MozContextPropertiesProperty
   
   @js.native
   sealed trait filled
-    extends _TextEmphasis
-       with _TextEmphasisStyle
+    extends _TextEmphasisProperty
+       with _TextEmphasisStyleProperty
   
   @js.native
   sealed trait firebrick extends NamedColor
   
   @js.native
-  sealed trait first extends _HangingPunctuation
+  sealed trait first extends _HangingPunctuationProperty
   
   @js.native
   sealed trait fixed
     extends Attachment
-       with Position
-       with TableLayout
-       with UserZoom
-       with _System
+       with PositionProperty
+       with TableLayoutProperty
+       with ViewportUserZoomProperty
+       with _CounterStyleSystemProperty
   
   @js.native
-  sealed trait flat extends TransformStyle
+  sealed trait flat extends TransformStyleProperty
   
   @js.native
   sealed trait flex extends DisplayInside
@@ -7959,7 +8073,7 @@ object csstypeStrings {
        with ContentPosition
   
   @js.native
-  sealed trait flip extends _ImageOrientation
+  sealed trait flip extends _ImageOrientationProperty
   
   @js.native
   sealed trait floralwhite extends NamedColor
@@ -7971,7 +8085,7 @@ object csstypeStrings {
   sealed trait `flow-root` extends DisplayInside
   
   @js.native
-  sealed trait `force-end` extends _HangingPunctuation
+  sealed trait `force-end` extends _HangingPunctuationProperty
   
   @js.native
   sealed trait forestgreen extends NamedColor
@@ -7981,35 +8095,35 @@ object csstypeStrings {
   
   @js.native
   sealed trait `from-font`
-    extends _TextDecoration[js.Any]
-       with _TextDecorationThickness[js.Any]
-       with _TextUnderlinePosition
+    extends _TextDecorationProperty[js.Any]
+       with _TextDecorationThicknessProperty[js.Any]
+       with _TextUnderlinePositionProperty
   
   @js.native
   sealed trait `from-image`
-    extends _ImageOrientation
-       with _ImageResolution
+    extends _ImageOrientationProperty
+       with _ImageResolutionProperty
   
   @js.native
   sealed trait fuchsia extends NamedColor
   
   @js.native
-  sealed trait `full-size-kana` extends TextTransform
+  sealed trait `full-size-kana` extends TextTransformProperty
   
   @js.native
   sealed trait `full-width`
-    extends TextTransform
-       with _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantEastAsian
+    extends TextTransformProperty
+       with _FontFaceFontVariantProperty
+       with _FontVariantEastAsianProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait gainsboro extends NamedColor
   
   @js.native
   sealed trait geometricPrecision
-    extends ShapeRendering
-       with TextRendering
+    extends ShapeRenderingProperty
+       with TextRenderingProperty
   
   @js.native
   sealed trait ghostwhite extends NamedColor
@@ -8021,15 +8135,15 @@ object csstypeStrings {
   sealed trait goldenrod extends NamedColor
   
   @js.native
-  sealed trait grab extends _Cursor
+  sealed trait grab extends _CursorProperty
   
   @js.native
-  sealed trait grabbing extends _Cursor
+  sealed trait grabbing extends _CursorProperty
   
   @js.native
   sealed trait `grammar-error`
-    extends _TextDecoration[js.Any]
-       with _TextDecorationLine
+    extends _TextDecorationLineProperty
+       with _TextDecorationProperty[js.Any]
   
   @js.native
   sealed trait gray extends NamedColor
@@ -8047,85 +8161,85 @@ object csstypeStrings {
   sealed trait grid extends DisplayInside
   
   @js.native
-  sealed trait grippers extends MsTouchSelect
+  sealed trait grippers extends MsTouchSelectProperty
   
   @js.native
   sealed trait groove
     extends LineStyle
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
   
   @js.native
-  sealed trait groupbox extends MozAppearance
+  sealed trait groupbox extends MozAppearanceProperty
   
   @js.native
   sealed trait hanging
-    extends AlignmentBaseline
-       with DominantBaseline
+    extends AlignmentBaselineProperty
+       with DominantBaselineProperty
   
   @js.native
   sealed trait `hard-light`
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
-  sealed trait help extends _Cursor
+  sealed trait help extends _CursorProperty
   
   @js.native
   sealed trait hidden
     extends LineStyle
-       with BackfaceVisibility
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with OverflowBlock
-       with OverflowInline
-       with OverflowX
-       with OverflowY
-       with Visibility
-       with _Overflow
+       with BackfaceVisibilityProperty
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with OverflowBlockProperty
+       with OverflowInlineProperty
+       with OverflowXProperty
+       with OverflowYProperty
+       with VisibilityProperty
+       with _OverflowProperty
   
   @js.native
-  sealed trait hide extends EmptyCells
+  sealed trait hide extends EmptyCellsProperty
   
   @js.native
   sealed trait `historical-forms`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantAlternates
+    extends _FontFaceFontVariantProperty
+       with _FontVariantAlternatesProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait `historical-ligatures`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantLigatures
+    extends _FontFaceFontVariantProperty
+       with _FontVariantLigaturesProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait honeydew extends NamedColor
   
   @js.native
   sealed trait horizontal
-    extends BoxOrient
-       with MozOrient
-       with Resize
+    extends BoxOrientProperty
+       with MozOrientProperty
+       with ResizeProperty
   
   @js.native
-  sealed trait `horizontal-tb` extends WritingMode
+  sealed trait `horizontal-tb` extends WritingModeProperty
   
   @js.native
   sealed trait hotpink extends NamedColor
@@ -8133,35 +8247,35 @@ object csstypeStrings {
   @js.native
   sealed trait hue
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
-  sealed trait icon extends _Font
+  sealed trait icon extends _FontProperty
   
   @js.native
-  sealed trait `ideograph-alpha` extends MsTextAutospace
+  sealed trait `ideograph-alpha` extends MsTextAutospaceProperty
   
   @js.native
-  sealed trait `ideograph-numeric` extends MsTextAutospace
+  sealed trait `ideograph-numeric` extends MsTextAutospaceProperty
   
   @js.native
-  sealed trait `ideograph-parenthesis` extends MsTextAutospace
+  sealed trait `ideograph-parenthesis` extends MsTextAutospaceProperty
   
   @js.native
-  sealed trait `ideograph-space` extends MsTextAutospace
+  sealed trait `ideograph-space` extends MsTextAutospaceProperty
   
   @js.native
   sealed trait ideographic
-    extends AlignmentBaseline
-       with DominantBaseline
+    extends AlignmentBaselineProperty
+       with DominantBaselineProperty
   
   @js.native
   sealed trait ignore
-    extends MozStackSizing
-       with MozUserFocus
+    extends MozStackSizingProperty
+       with MozUserFocusProperty
   
   @js.native
-  sealed trait inactive extends ImeMode
+  sealed trait inactive extends ImeModeProperty
   
   @js.native
   sealed trait indianred extends NamedColor
@@ -8171,304 +8285,306 @@ object csstypeStrings {
   
   @js.native
   sealed trait infinite
-    extends _SingleAnimation[js.Any]
-       with _AnimationIterationCount
-       with _Range
+    extends _SingleAnimation
+       with _AnimationIterationCountProperty
+       with _CounterStyleRangeProperty
   
   @js.native
   sealed trait inherit
     extends Globals
-       with AlignmentBaseline
-       with Appearance
-       with BackfaceVisibility
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderCollapse
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with BoxAlign
-       with BoxDecorationBreak
-       with BoxDirection
-       with BoxLines
-       with BoxOrient
-       with BoxPack
-       with BoxSizing
-       with BreakAfter
-       with BreakBefore
-       with BreakInside
-       with CaptionSide
-       with Clear
-       with ClipRule
-       with ColorAdjust
-       with ColorInterpolation
-       with ColorRendering
-       with ColumnFill
-       with ColumnSpan
-       with Direction
-       with DominantBaseline
-       with EmptyCells
-       with FillRule
-       with FlexDirection
-       with FlexWrap
-       with Float
-       with FontKerning
-       with FontOpticalSizing
-       with FontVariantCaps
-       with FontVariantPosition
-       with Hyphens
-       with ImageRendering
-       with ImeMode
-       with Isolation
-       with LineBreak
-       with ListStylePosition
-       with MaskBorderMode
-       with MaskType
-       with MixBlendMode
-       with MozAppearance
-       with MozFloatEdge
-       with MozOrient
-       with MozStackSizing
-       with MozTextBlink
-       with MozUserFocus
-       with MozUserInput
-       with MozUserModify
-       with MozWindowDragging
-       with MozWindowShadow
-       with MsAccelerator
-       with MsBlockProgression
-       with MsContentZoomChaining
-       with MsContentZoomSnapType
-       with MsContentZooming
-       with MsHighContrastAdjust
-       with MsImeAlign
-       with MsOverflowStyle
-       with MsScrollChaining
-       with MsScrollRails
-       with MsScrollSnapType
-       with MsScrollTranslation
-       with MsTextAutospace
-       with MsTouchSelect
-       with MsUserSelect
-       with MsWrapFlow
-       with MsWrapThrough
-       with ObjectFit
-       with OverflowAnchor
-       with OverflowBlock
-       with OverflowClipBox
-       with OverflowInline
-       with OverflowWrap
-       with OverflowX
-       with OverflowY
-       with OverscrollBehaviorBlock
-       with OverscrollBehaviorInline
-       with OverscrollBehaviorX
-       with OverscrollBehaviorY
-       with PageBreakAfter
-       with PageBreakBefore
-       with PageBreakInside
-       with PointerEvents
-       with Position
-       with Resize
-       with RubyAlign
-       with RubyMerge
-       with RubyPosition
-       with ScrollBehavior
-       with ScrollSnapStop
-       with ScrollSnapTypeX
-       with ScrollSnapTypeY
-       with ScrollbarWidth
-       with ShapeRendering
-       with StrokeLinecap
-       with StrokeLinejoin
-       with TableLayout
-       with TextAlign
-       with TextAlignLast
-       with TextAnchor
-       with TextDecorationSkipInk
-       with TextDecorationStyle
-       with TextJustify
-       with TextOrientation
-       with TextRendering
-       with TextTransform
-       with TransformBox
-       with TransformStyle
-       with UnicodeBidi
-       with UserSelect
-       with VectorEffect
-       with Visibility
-       with WebkitAppearance
-       with WebkitMaskRepeatX
-       with WebkitMaskRepeatY
-       with WebkitOverflowScrolling
-       with WebkitTouchCallout
-       with WebkitUserModify
-       with WhiteSpace
-       with WordBreak
-       with WordWrap
-       with WritingMode
+       with AlignmentBaselineProperty
+       with AppearanceProperty
+       with BackfaceVisibilityProperty
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderCollapseProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with BoxAlignProperty
+       with BoxDecorationBreakProperty
+       with BoxDirectionProperty
+       with BoxLinesProperty
+       with BoxOrientProperty
+       with BoxPackProperty
+       with BoxSizingProperty
+       with BreakAfterProperty
+       with BreakBeforeProperty
+       with BreakInsideProperty
+       with CaptionSideProperty
+       with ClearProperty
+       with ClipRuleProperty
+       with ColorAdjustProperty
+       with ColorInterpolationProperty
+       with ColorRenderingProperty
+       with ColumnFillProperty
+       with ColumnSpanProperty
+       with DirectionProperty
+       with DominantBaselineProperty
+       with EmptyCellsProperty
+       with FillRuleProperty
+       with FlexDirectionProperty
+       with FlexWrapProperty
+       with FloatProperty
+       with FontKerningProperty
+       with FontOpticalSizingProperty
+       with FontVariantCapsProperty
+       with FontVariantPositionProperty
+       with HyphensProperty
+       with ImageRenderingProperty
+       with ImeModeProperty
+       with IsolationProperty
+       with LineBreakProperty
+       with ListStylePositionProperty
+       with MaskBorderModeProperty
+       with MaskTypeProperty
+       with MathStyleProperty
+       with MixBlendModeProperty
+       with MozAppearanceProperty
+       with MozFloatEdgeProperty
+       with MozOrientProperty
+       with MozStackSizingProperty
+       with MozTextBlinkProperty
+       with MozUserFocusProperty
+       with MozUserInputProperty
+       with MozUserModifyProperty
+       with MozWindowDraggingProperty
+       with MozWindowShadowProperty
+       with MsAcceleratorProperty
+       with MsBlockProgressionProperty
+       with MsContentZoomChainingProperty
+       with MsContentZoomSnapTypeProperty
+       with MsContentZoomingProperty
+       with MsHighContrastAdjustProperty
+       with MsImeAlignProperty
+       with MsOverflowStyleProperty
+       with MsScrollChainingProperty
+       with MsScrollRailsProperty
+       with MsScrollSnapTypeProperty
+       with MsScrollTranslationProperty
+       with MsTextAutospaceProperty
+       with MsTouchSelectProperty
+       with MsUserSelectProperty
+       with MsWrapFlowProperty
+       with MsWrapThroughProperty
+       with ObjectFitProperty
+       with OverflowAnchorProperty
+       with OverflowBlockProperty
+       with OverflowClipBoxProperty
+       with OverflowInlineProperty
+       with OverflowWrapProperty
+       with OverflowXProperty
+       with OverflowYProperty
+       with OverscrollBehaviorBlockProperty
+       with OverscrollBehaviorInlineProperty
+       with OverscrollBehaviorXProperty
+       with OverscrollBehaviorYProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
+       with PageBreakInsideProperty
+       with PointerEventsProperty
+       with PositionProperty
+       with ResizeProperty
+       with RubyAlignProperty
+       with RubyMergeProperty
+       with RubyPositionProperty
+       with ScrollBehaviorProperty
+       with ScrollSnapStopProperty
+       with ScrollSnapTypeXProperty
+       with ScrollSnapTypeYProperty
+       with ScrollbarWidthProperty
+       with ShapeRenderingProperty
+       with StrokeLinecapProperty
+       with StrokeLinejoinProperty
+       with TableLayoutProperty
+       with TextAlignLastProperty
+       with TextAlignProperty
+       with TextAnchorProperty
+       with TextDecorationSkipInkProperty
+       with TextDecorationStyleProperty
+       with TextJustifyProperty
+       with TextOrientationProperty
+       with TextRenderingProperty
+       with TextTransformProperty
+       with TransformBoxProperty
+       with TransformStyleProperty
+       with UnicodeBidiProperty
+       with UserSelectProperty
+       with VectorEffectProperty
+       with VisibilityProperty
+       with WebkitAppearanceProperty
+       with WebkitMaskRepeatXProperty
+       with WebkitMaskRepeatYProperty
+       with WebkitOverflowScrollingProperty
+       with WebkitTouchCalloutProperty
+       with WebkitUserModifyProperty
+       with WhiteSpaceProperty
+       with WordBreakProperty
+       with WordWrapProperty
+       with WritingModeProperty
   
   @js.native
   sealed trait initial
     extends Globals
-       with AlignmentBaseline
-       with Appearance
-       with BackfaceVisibility
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderCollapse
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with BoxAlign
-       with BoxDecorationBreak
-       with BoxDirection
-       with BoxLines
-       with BoxOrient
-       with BoxPack
-       with BoxSizing
-       with BreakAfter
-       with BreakBefore
-       with BreakInside
-       with CaptionSide
-       with Clear
-       with ClipRule
-       with ColorAdjust
-       with ColorInterpolation
-       with ColorRendering
-       with ColumnFill
-       with ColumnSpan
-       with Direction
-       with DominantBaseline
-       with EmptyCells
-       with FillRule
-       with FlexDirection
-       with FlexWrap
-       with Float
-       with FontKerning
-       with FontOpticalSizing
-       with FontVariantCaps
-       with FontVariantPosition
-       with Hyphens
-       with ImageRendering
-       with ImeMode
-       with Isolation
-       with LineBreak
-       with ListStylePosition
-       with MaskBorderMode
-       with MaskType
-       with MixBlendMode
-       with MozAppearance
-       with MozFloatEdge
-       with MozOrient
-       with MozStackSizing
-       with MozTextBlink
-       with MozUserFocus
-       with MozUserInput
-       with MozUserModify
-       with MozWindowDragging
-       with MozWindowShadow
-       with MsAccelerator
-       with MsBlockProgression
-       with MsContentZoomChaining
-       with MsContentZoomSnapType
-       with MsContentZooming
-       with MsHighContrastAdjust
-       with MsImeAlign
-       with MsOverflowStyle
-       with MsScrollChaining
-       with MsScrollRails
-       with MsScrollSnapType
-       with MsScrollTranslation
-       with MsTextAutospace
-       with MsTouchSelect
-       with MsUserSelect
-       with MsWrapFlow
-       with MsWrapThrough
-       with ObjectFit
-       with OverflowAnchor
-       with OverflowBlock
-       with OverflowClipBox
-       with OverflowInline
-       with OverflowWrap
-       with OverflowX
-       with OverflowY
-       with OverscrollBehaviorBlock
-       with OverscrollBehaviorInline
-       with OverscrollBehaviorX
-       with OverscrollBehaviorY
-       with PageBreakAfter
-       with PageBreakBefore
-       with PageBreakInside
-       with PointerEvents
-       with Position
-       with Resize
-       with RubyAlign
-       with RubyMerge
-       with RubyPosition
-       with ScrollBehavior
-       with ScrollSnapStop
-       with ScrollSnapTypeX
-       with ScrollSnapTypeY
-       with ScrollbarWidth
-       with ShapeRendering
-       with StrokeLinecap
-       with StrokeLinejoin
-       with TableLayout
-       with TextAlign
-       with TextAlignLast
-       with TextAnchor
-       with TextDecorationSkipInk
-       with TextDecorationStyle
-       with TextJustify
-       with TextOrientation
-       with TextRendering
-       with TextTransform
-       with TransformBox
-       with TransformStyle
-       with UnicodeBidi
-       with UserSelect
-       with VectorEffect
-       with Visibility
-       with WebkitAppearance
-       with WebkitMaskRepeatX
-       with WebkitMaskRepeatY
-       with WebkitOverflowScrolling
-       with WebkitTouchCallout
-       with WebkitUserModify
-       with WhiteSpace
-       with WordBreak
-       with WordWrap
-       with WritingMode
+       with AlignmentBaselineProperty
+       with AppearanceProperty
+       with BackfaceVisibilityProperty
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderCollapseProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with BoxAlignProperty
+       with BoxDecorationBreakProperty
+       with BoxDirectionProperty
+       with BoxLinesProperty
+       with BoxOrientProperty
+       with BoxPackProperty
+       with BoxSizingProperty
+       with BreakAfterProperty
+       with BreakBeforeProperty
+       with BreakInsideProperty
+       with CaptionSideProperty
+       with ClearProperty
+       with ClipRuleProperty
+       with ColorAdjustProperty
+       with ColorInterpolationProperty
+       with ColorRenderingProperty
+       with ColumnFillProperty
+       with ColumnSpanProperty
+       with DirectionProperty
+       with DominantBaselineProperty
+       with EmptyCellsProperty
+       with FillRuleProperty
+       with FlexDirectionProperty
+       with FlexWrapProperty
+       with FloatProperty
+       with FontKerningProperty
+       with FontOpticalSizingProperty
+       with FontVariantCapsProperty
+       with FontVariantPositionProperty
+       with HyphensProperty
+       with ImageRenderingProperty
+       with ImeModeProperty
+       with IsolationProperty
+       with LineBreakProperty
+       with ListStylePositionProperty
+       with MaskBorderModeProperty
+       with MaskTypeProperty
+       with MathStyleProperty
+       with MixBlendModeProperty
+       with MozAppearanceProperty
+       with MozFloatEdgeProperty
+       with MozOrientProperty
+       with MozStackSizingProperty
+       with MozTextBlinkProperty
+       with MozUserFocusProperty
+       with MozUserInputProperty
+       with MozUserModifyProperty
+       with MozWindowDraggingProperty
+       with MozWindowShadowProperty
+       with MsAcceleratorProperty
+       with MsBlockProgressionProperty
+       with MsContentZoomChainingProperty
+       with MsContentZoomSnapTypeProperty
+       with MsContentZoomingProperty
+       with MsHighContrastAdjustProperty
+       with MsImeAlignProperty
+       with MsOverflowStyleProperty
+       with MsScrollChainingProperty
+       with MsScrollRailsProperty
+       with MsScrollSnapTypeProperty
+       with MsScrollTranslationProperty
+       with MsTextAutospaceProperty
+       with MsTouchSelectProperty
+       with MsUserSelectProperty
+       with MsWrapFlowProperty
+       with MsWrapThroughProperty
+       with ObjectFitProperty
+       with OverflowAnchorProperty
+       with OverflowBlockProperty
+       with OverflowClipBoxProperty
+       with OverflowInlineProperty
+       with OverflowWrapProperty
+       with OverflowXProperty
+       with OverflowYProperty
+       with OverscrollBehaviorBlockProperty
+       with OverscrollBehaviorInlineProperty
+       with OverscrollBehaviorXProperty
+       with OverscrollBehaviorYProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
+       with PageBreakInsideProperty
+       with PointerEventsProperty
+       with PositionProperty
+       with ResizeProperty
+       with RubyAlignProperty
+       with RubyMergeProperty
+       with RubyPositionProperty
+       with ScrollBehaviorProperty
+       with ScrollSnapStopProperty
+       with ScrollSnapTypeXProperty
+       with ScrollSnapTypeYProperty
+       with ScrollbarWidthProperty
+       with ShapeRenderingProperty
+       with StrokeLinecapProperty
+       with StrokeLinejoinProperty
+       with TableLayoutProperty
+       with TextAlignLastProperty
+       with TextAlignProperty
+       with TextAnchorProperty
+       with TextDecorationSkipInkProperty
+       with TextDecorationStyleProperty
+       with TextJustifyProperty
+       with TextOrientationProperty
+       with TextRenderingProperty
+       with TextTransformProperty
+       with TransformBoxProperty
+       with TransformStyleProperty
+       with UnicodeBidiProperty
+       with UserSelectProperty
+       with VectorEffectProperty
+       with VisibilityProperty
+       with WebkitAppearanceProperty
+       with WebkitMaskRepeatXProperty
+       with WebkitMaskRepeatYProperty
+       with WebkitOverflowScrollingProperty
+       with WebkitTouchCalloutProperty
+       with WebkitUserModifyProperty
+       with WhiteSpaceProperty
+       with WordBreakProperty
+       with WordWrapProperty
+       with WritingModeProperty
   
   @js.native
   sealed trait `inline`
     extends DisplayOutside
-       with MozOrient
-       with Resize
-       with _ScrollSnapType
+       with MozOrientProperty
+       with ResizeProperty
+       with _ScrollSnapTypeProperty
   
   @js.native
-  sealed trait `inline-axis` extends BoxOrient
+  sealed trait `inline-axis` extends BoxOrientProperty
   
   @js.native
   sealed trait `inline-block` extends DisplayLegacy
   
   @js.native
   sealed trait `inline-end`
-    extends CaptionSide
-       with Clear
-       with Float
+    extends CaptionSideProperty
+       with ClearProperty
+       with FloatProperty
   
   @js.native
   sealed trait `inline-flex` extends DisplayLegacy
@@ -8481,67 +8597,67 @@ object csstypeStrings {
   
   @js.native
   sealed trait `inline-start`
-    extends CaptionSide
-       with Clear
-       with Float
+    extends CaptionSideProperty
+       with ClearProperty
+       with FloatProperty
   
   @js.native
   sealed trait `inline-table` extends DisplayLegacy
   
   @js.native
-  sealed trait `inner-spin-button` extends WebkitAppearance
+  sealed trait `inner-spin-button` extends WebkitAppearanceProperty
   
   @js.native
   sealed trait inset
     extends LineStyle
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
   
   @js.native
   sealed trait inside
-    extends ListStylePosition
-       with _ListStyle
+    extends ListStylePositionProperty
+       with _ListStyleProperty
   
   @js.native
-  sealed trait `inter-character` extends TextJustify
+  sealed trait `inter-character` extends TextJustifyProperty
   
   @js.native
-  sealed trait `inter-word` extends TextJustify
+  sealed trait `inter-word` extends TextJustifyProperty
   
   @js.native
   sealed trait intersect extends CompositingOperator
   
   @js.native
   sealed trait intrinsic
-    extends _MaxWidth[js.Any]
-       with _MinWidth[js.Any]
-       with _Width[js.Any]
+    extends _MaxWidthProperty[js.Any]
+       with _MinWidthProperty[js.Any]
+       with _WidthProperty[js.Any]
   
   @js.native
   sealed trait invert
-    extends _Outline[js.Any]
-       with _OutlineColor
+    extends _OutlineColorProperty
+       with _OutlineProperty[js.Any]
   
   @js.native
   sealed trait isolate
-    extends Isolation
-       with UnicodeBidi
+    extends IsolationProperty
+       with UnicodeBidiProperty
   
   @js.native
-  sealed trait `isolate-override` extends UnicodeBidi
+  sealed trait `isolate-override` extends UnicodeBidiProperty
   
   @js.native
   sealed trait italic
-    extends _FontStyle
-       with typingsSlinky.csstype.mod.AtRule._FontStyle
+    extends _FontFaceFontStyleProperty
+       with _FontStyleProperty
   
   @js.native
   sealed trait ivory extends NamedColor
@@ -8560,28 +8676,30 @@ object csstypeStrings {
   
   @js.native
   sealed trait justify
-    extends BoxPack
-       with TextAlign
-       with TextAlignLast
+    extends BoxPackProperty
+       with TextAlignLastProperty
+       with TextAlignProperty
   
   @js.native
-  sealed trait `keep-all` extends WordBreak
+  sealed trait `keep-all` extends WordBreakProperty
   
   @js.native
   sealed trait khaki extends NamedColor
   
   @js.native
-  sealed trait landscape extends Orientation
+  sealed trait landscape
+    extends ViewportOrientationProperty
+       with _PageSizeProperty[js.Any]
   
   @js.native
   sealed trait large extends AbsoluteSize
   
   @js.native
   sealed trait larger
-    extends _FontSize[js.Any]
+    extends _FontSizeProperty[js.Any]
   
   @js.native
-  sealed trait last extends _HangingPunctuation
+  sealed trait last extends _HangingPunctuationProperty
   
   @js.native
   sealed trait lavender extends NamedColor
@@ -8593,40 +8711,48 @@ object csstypeStrings {
   sealed trait lawngreen extends NamedColor
   
   @js.native
-  sealed trait layout extends _Contain
+  sealed trait layout extends _ContainProperty
   
   @js.native
-  sealed trait `leading-spaces` extends _TextDecorationSkip
+  sealed trait `leading-spaces` extends _TextDecorationSkipProperty
   
   @js.native
   sealed trait left
     extends _Position[js.Any]
-       with BreakAfter
-       with BreakBefore
-       with Clear
-       with Float
-       with PageBreakAfter
-       with PageBreakBefore
-       with TextAlign
-       with TextAlignLast
-       with _BackgroundPositionX[js.Any]
+       with BreakAfterProperty
+       with BreakBeforeProperty
+       with ClearProperty
+       with FloatProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
+       with TextAlignLastProperty
+       with TextAlignProperty
+       with _AzimuthProperty
+       with _BackgroundPositionXProperty[js.Any]
        with _BgPosition[js.Any]
-       with _JustifyContent
-       with _JustifyItems
-       with _JustifySelf
-       with _TextUnderlinePosition
-       with _TransformOrigin[js.Any]
-       with _WebkitBoxReflect[js.Any]
-       with _WebkitMaskPositionX[js.Any]
+       with _JustifyContentProperty
+       with _JustifyItemsProperty
+       with _JustifySelfProperty
+       with _JustifyTracksProperty
+       with _TextUnderlinePositionProperty
+       with _TransformOriginProperty[js.Any]
+       with _WebkitBoxReflectProperty[js.Any]
+       with _WebkitMaskPositionXProperty[js.Any]
   
   @js.native
-  sealed trait legacy extends _JustifyItems
+  sealed trait `left-side` extends _AzimuthProperty
+  
+  @js.native
+  sealed trait leftwards extends _AzimuthProperty
+  
+  @js.native
+  sealed trait legacy extends _JustifyItemsProperty
   
   @js.native
   sealed trait lemonchiffon extends NamedColor
   
   @js.native
-  sealed trait light extends _ScrollbarColor
+  sealed trait light extends _ScrollbarColorProperty
   
   @js.native
   sealed trait lightblue extends NamedColor
@@ -8640,10 +8766,10 @@ object csstypeStrings {
   @js.native
   sealed trait lighten
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
-  sealed trait lighter extends _FontWeight
+  sealed trait lighter extends _FontWeightProperty
   
   @js.native
   sealed trait lightgoldenrodyellow extends NamedColor
@@ -8689,181 +8815,181 @@ object csstypeStrings {
   
   @js.native
   sealed trait `line-through`
-    extends _TextDecoration[js.Any]
-       with _TextDecorationLine
+    extends _TextDecorationLineProperty
+       with _TextDecorationProperty[js.Any]
   
   @js.native
   sealed trait linear extends _TimingFunction
   
   @js.native
-  sealed trait linearRGB extends ColorInterpolation
+  sealed trait linearRGB extends ColorInterpolationProperty
   
   @js.native
   sealed trait linen extends NamedColor
   
   @js.native
   sealed trait `lining-nums`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantNumeric
+    extends _FontFaceFontVariantProperty
+       with _FontVariantNumericProperty
+       with _FontVariantProperty
   
   @js.native
-  sealed trait `list-item` extends _Display
+  sealed trait `list-item` extends _DisplayProperty
   
   @js.native
   sealed trait listbox
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with MozAppearance
-       with WebkitAppearance
+       with MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
   sealed trait listitem
-    extends MozAppearance
-       with WebkitAppearance
+    extends MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
   sealed trait local extends Attachment
   
   @js.native
-  sealed trait loose extends LineBreak
+  sealed trait loose extends LineBreakProperty
   
   @js.native
-  sealed trait lowercase extends TextTransform
+  sealed trait lowercase extends TextTransformProperty
   
   @js.native
-  sealed trait lr extends MsBlockProgression
+  sealed trait lr extends MsBlockProgressionProperty
   
   @js.native
-  sealed trait ltr extends Direction
+  sealed trait ltr extends DirectionProperty
   
   @js.native
   sealed trait luminance
     extends MaskingMode
-       with MaskBorderMode
-       with MaskType
-       with _MaskBorder
+       with MaskBorderModeProperty
+       with MaskTypeProperty
+       with _MaskBorderProperty
   
   @js.native
   sealed trait luminosity
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
   sealed trait magenta extends NamedColor
   
   @js.native
   sealed trait mandatory
-    extends MsContentZoomSnapType
-       with MsScrollSnapType
-       with ScrollSnapTypeX
-       with ScrollSnapTypeY
-       with _MsContentZoomSnap
+    extends MsContentZoomSnapTypeProperty
+       with MsScrollSnapTypeProperty
+       with ScrollSnapTypeXProperty
+       with ScrollSnapTypeYProperty
+       with _MsContentZoomSnapProperty
   
   @js.native
-  sealed trait manipulation extends _TouchAction
+  sealed trait manipulation extends _TouchActionProperty
   
   @js.native
-  sealed trait manual extends Hyphens
+  sealed trait manual extends HyphensProperty
   
   @js.native
   sealed trait `margin-box`
     extends GeometryBox
-       with MozFloatEdge
-       with _MaskOrigin
-       with _ShapeOutside
+       with MozFloatEdgeProperty
+       with _MaskOriginProperty
+       with _ShapeOutsideProperty
   
   @js.native
-  sealed trait markers extends _PaintOrder
+  sealed trait markers extends _PaintOrderProperty
   
   @js.native
   sealed trait maroon extends NamedColor
   
   @js.native
-  sealed trait `match-parent` extends TextAlign
+  sealed trait `match-parent` extends TextAlignProperty
   
   @js.native
   sealed trait `match-source` extends MaskingMode
   
   @js.native
   sealed trait mathematical
-    extends AlignmentBaseline
-       with DominantBaseline
+    extends AlignmentBaselineProperty
+       with DominantBaselineProperty
   
   @js.native
   sealed trait `max-content`
     extends _TrackBreadth[js.Any]
-       with _BlockSize[js.Any]
-       with _Flex[js.Any]
-       with _FlexBasis[js.Any]
-       with _Height[js.Any]
-       with _InlineSize[js.Any]
-       with _MaxBlockSize[js.Any]
-       with _MaxHeight[js.Any]
-       with _MaxInlineSize[js.Any]
-       with _MaxWidth[js.Any]
-       with _MinBlockSize[js.Any]
-       with _MinHeight[js.Any]
-       with _MinInlineSize[js.Any]
-       with _MinWidth[js.Any]
-       with _Width[js.Any]
+       with _BlockSizeProperty[js.Any]
+       with _FlexBasisProperty[js.Any]
+       with _FlexProperty[js.Any]
+       with _HeightProperty[js.Any]
+       with _InlineSizeProperty[js.Any]
+       with _MaxBlockSizeProperty[js.Any]
+       with _MaxHeightProperty[js.Any]
+       with _MaxInlineSizeProperty[js.Any]
+       with _MaxWidthProperty[js.Any]
+       with _MinBlockSizeProperty[js.Any]
+       with _MinHeightProperty[js.Any]
+       with _MinInlineSizeProperty[js.Any]
+       with _MinWidthProperty[js.Any]
+       with _WidthProperty[js.Any]
   
   @js.native
-  sealed trait maximum extends MsWrapFlow
+  sealed trait maximum extends MsWrapFlowProperty
   
   @js.native
-  sealed trait `media-controls-background` extends WebkitAppearance
+  sealed trait `media-controls-background` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-controls-fullscreen-background` extends WebkitAppearance
+  sealed trait `media-controls-fullscreen-background` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-current-time-display` extends WebkitAppearance
+  sealed trait `media-current-time-display` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-enter-fullscreen-button` extends WebkitAppearance
+  sealed trait `media-enter-fullscreen-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-exit-fullscreen-button` extends WebkitAppearance
+  sealed trait `media-exit-fullscreen-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-fullscreen-button` extends WebkitAppearance
+  sealed trait `media-fullscreen-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-mute-button` extends WebkitAppearance
+  sealed trait `media-mute-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-overlay-play-button` extends WebkitAppearance
+  sealed trait `media-overlay-play-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-play-button` extends WebkitAppearance
+  sealed trait `media-play-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-seek-back-button` extends WebkitAppearance
+  sealed trait `media-seek-back-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-seek-forward-button` extends WebkitAppearance
+  sealed trait `media-seek-forward-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-slider` extends WebkitAppearance
+  sealed trait `media-slider` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-sliderthumb` extends WebkitAppearance
+  sealed trait `media-sliderthumb` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-time-remaining-display` extends WebkitAppearance
+  sealed trait `media-time-remaining-display` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-toggle-closed-captions-button` extends WebkitAppearance
+  sealed trait `media-toggle-closed-captions-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-volume-slider` extends WebkitAppearance
+  sealed trait `media-volume-slider` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-volume-slider-container` extends WebkitAppearance
+  sealed trait `media-volume-slider-container` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `media-volume-sliderthumb` extends WebkitAppearance
+  sealed trait `media-volume-sliderthumb` extends WebkitAppearanceProperty
   
   @js.native
   sealed trait medium
@@ -8899,80 +9025,80 @@ object csstypeStrings {
   
   @js.native
   sealed trait menu_
-    extends MozWindowShadow
-       with _Font
+    extends MozWindowShadowProperty
+       with _FontProperty
   
   @js.native
-  sealed trait menuarrow extends MozAppearance
+  sealed trait menuarrow extends MozAppearanceProperty
   
   @js.native
-  sealed trait menubar extends MozAppearance
+  sealed trait menubar extends MozAppearanceProperty
   
   @js.native
-  sealed trait menucheckbox extends MozAppearance
+  sealed trait menucheckbox extends MozAppearanceProperty
   
   @js.native
-  sealed trait menuimage extends MozAppearance
+  sealed trait menuimage extends MozAppearanceProperty
   
   @js.native
-  sealed trait menuitem extends MozAppearance
+  sealed trait menuitem extends MozAppearanceProperty
   
   @js.native
-  sealed trait menuitemtext extends MozAppearance
+  sealed trait menuitemtext extends MozAppearanceProperty
   
   @js.native
   sealed trait menulist
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with MozAppearance
-       with WebkitAppearance
+       with MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
   sealed trait `menulist-button`
-    extends Appearance
-       with MozAppearance
-       with WebkitAppearance
+    extends AppearanceProperty
+       with MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
   sealed trait `menulist-text`
-    extends MozAppearance
-       with WebkitAppearance
+    extends MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
   sealed trait `menulist-textfield`
-    extends MozAppearance
-       with WebkitAppearance
+    extends MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait menupopup extends MozAppearance
+  sealed trait menupopup extends MozAppearanceProperty
   
   @js.native
-  sealed trait menuradio extends MozAppearance
+  sealed trait menuradio extends MozAppearanceProperty
   
   @js.native
-  sealed trait menuseparator extends MozAppearance
+  sealed trait menuseparator extends MozAppearanceProperty
   
   @js.native
-  sealed trait `message-box` extends _Font
+  sealed trait `message-box` extends _FontProperty
   
   @js.native
   sealed trait meter
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with WebkitAppearance
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait meterbar extends MozAppearance
+  sealed trait meterbar extends MozAppearanceProperty
   
   @js.native
-  sealed trait meterchunk extends MozAppearance
+  sealed trait meterchunk extends MozAppearanceProperty
   
   @js.native
   sealed trait middle
-    extends AlignmentBaseline
-       with DominantBaseline
-       with TextAnchor
-       with _VerticalAlign[js.Any]
+    extends AlignmentBaselineProperty
+       with DominantBaselineProperty
+       with TextAnchorProperty
+       with _VerticalAlignProperty[js.Any]
   
   @js.native
   sealed trait midnightblue extends NamedColor
@@ -8980,25 +9106,25 @@ object csstypeStrings {
   @js.native
   sealed trait `min-content`
     extends _TrackBreadth[js.Any]
-       with _BlockSize[js.Any]
-       with _Flex[js.Any]
-       with _FlexBasis[js.Any]
-       with _Height[js.Any]
-       with _InlineSize[js.Any]
-       with _MaxBlockSize[js.Any]
-       with _MaxHeight[js.Any]
-       with _MaxInlineSize[js.Any]
-       with _MaxWidth[js.Any]
-       with _MinBlockSize[js.Any]
-       with _MinHeight[js.Any]
-       with _MinInlineSize[js.Any]
-       with _MinWidth[js.Any]
-       with _Width[js.Any]
+       with _BlockSizeProperty[js.Any]
+       with _FlexBasisProperty[js.Any]
+       with _FlexProperty[js.Any]
+       with _HeightProperty[js.Any]
+       with _InlineSizeProperty[js.Any]
+       with _MaxBlockSizeProperty[js.Any]
+       with _MaxHeightProperty[js.Any]
+       with _MaxInlineSizeProperty[js.Any]
+       with _MaxWidthProperty[js.Any]
+       with _MinBlockSizeProperty[js.Any]
+       with _MinHeightProperty[js.Any]
+       with _MinInlineSizeProperty[js.Any]
+       with _MinWidthProperty[js.Any]
+       with _WidthProperty[js.Any]
   
   @js.native
   sealed trait `min-intrinsic`
-    extends _MinWidth[js.Any]
-       with _Width[js.Any]
+    extends _MinWidthProperty[js.Any]
+       with _WidthProperty[js.Any]
   
   @js.native
   sealed trait mintcream extends NamedColor
@@ -9007,10 +9133,10 @@ object csstypeStrings {
   sealed trait mistyrose extends NamedColor
   
   @js.native
-  sealed trait miter extends StrokeLinejoin
+  sealed trait miter extends StrokeLinejoinProperty
   
   @js.native
-  sealed trait mixed extends TextOrientation
+  sealed trait mixed extends TextOrientationProperty
   
   @js.native
   sealed trait moccasin extends NamedColor
@@ -9019,18 +9145,18 @@ object csstypeStrings {
   sealed trait monospace extends GenericFamily
   
   @js.native
-  sealed trait move extends _Cursor
+  sealed trait move extends _CursorProperty
   
   @js.native
-  sealed trait multiple extends BoxLines
+  sealed trait multiple extends BoxLinesProperty
   
   @js.native
   sealed trait multiply
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
-  sealed trait `n-resize` extends _Cursor
+  sealed trait `n-resize` extends _CursorProperty
   
   @js.native
   sealed trait navajowhite extends NamedColor
@@ -9039,54 +9165,61 @@ object csstypeStrings {
   sealed trait navy extends NamedColor
   
   @js.native
-  sealed trait `ne-resize` extends _Cursor
+  sealed trait `ne-resize` extends _CursorProperty
   
   @js.native
-  sealed trait `nesw-resize` extends _Cursor
+  sealed trait `nesw-resize` extends _CursorProperty
   
   @js.native
-  sealed trait `no-change` extends DominantBaseline
+  sealed trait never
+    extends _FontSmoothProperty[js.Any]
+  
+  @js.native
+  sealed trait next extends _MasonryAutoFlowProperty
+  
+  @js.native
+  sealed trait `no-change` extends DominantBaselineProperty
   
   @js.native
   sealed trait `no-clip`
     extends _MaskLayer[js.Any]
-       with _MaskClip
+       with _MaskClipProperty
   
   @js.native
   sealed trait `no-close-quote` extends Quote
   
   @js.native
   sealed trait `no-common-ligatures`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantLigatures
+    extends _FontFaceFontVariantProperty
+       with _FontVariantLigaturesProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait `no-contextual`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantLigatures
+    extends _FontFaceFontVariantProperty
+       with _FontVariantLigaturesProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait `no-discretionary-ligatures`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantLigatures
+    extends _FontFaceFontVariantProperty
+       with _FontVariantLigaturesProperty
+       with _FontVariantProperty
   
   @js.native
-  sealed trait `no-drag` extends MozWindowDragging
+  sealed trait `no-drag` extends MozWindowDraggingProperty
   
   @js.native
-  sealed trait `no-drop` extends _Cursor
+  sealed trait `no-drop` extends _CursorProperty
   
   @js.native
   sealed trait `no-historical-ligatures`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantLigatures
+    extends _FontFaceFontVariantProperty
+       with _FontVariantLigaturesProperty
+       with _FontVariantProperty
   
   @js.native
-  sealed trait `no-limit` extends _MsHyphenateLimitLines
+  sealed trait `no-limit` extends _MsHyphenateLimitLinesProperty
   
   @js.native
   sealed trait `no-open-quote` extends Quote
@@ -9094,249 +9227,258 @@ object csstypeStrings {
   @js.native
   sealed trait `no-repeat`
     extends _RepeatStyle
-       with WebkitMaskRepeatX
-       with WebkitMaskRepeatY
+       with WebkitMaskRepeatXProperty
+       with WebkitMaskRepeatYProperty
   
   @js.native
-  sealed trait `non-scaling-stroke` extends VectorEffect
+  sealed trait `non-scaling-stroke` extends VectorEffectProperty
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-  - typingsSlinky.csstype.mod.Property._Animation because Already inherited
-  - typingsSlinky.csstype.mod.DataType._SingleAnimation because Already inherited */ @js.native
+  - typingsSlinky.csstype.mod._AnimationProperty because Already inherited
+  - typingsSlinky.csstype.mod._SingleAnimation because Already inherited */ @js.native
   sealed trait none
     extends LineStyle
-       with Appearance
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with Clear
-       with ColumnSpan
-       with Float
-       with FontKerning
-       with FontOpticalSizing
-       with Hyphens
-       with MozAppearance
-       with MozTextBlink
-       with MozUserFocus
-       with MozUserInput
-       with MozWindowShadow
-       with MsContentZoomChaining
-       with MsContentZoomSnapType
-       with MsContentZooming
-       with MsHighContrastAdjust
-       with MsOverflowStyle
-       with MsScrollChaining
-       with MsScrollRails
-       with MsScrollSnapType
-       with MsScrollTranslation
-       with MsTextAutospace
-       with MsTouchSelect
-       with MsUserSelect
-       with MsWrapThrough
-       with ObjectFit
-       with OverflowAnchor
-       with OverscrollBehaviorBlock
-       with OverscrollBehaviorInline
-       with OverscrollBehaviorX
-       with OverscrollBehaviorY
-       with PointerEvents
-       with Resize
-       with ScrollSnapTypeX
-       with ScrollSnapTypeY
-       with ScrollbarWidth
+       with AppearanceProperty
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with ClearProperty
+       with ColumnSpanProperty
+       with FloatProperty
+       with FontKerningProperty
+       with FontOpticalSizingProperty
+       with HyphensProperty
+       with MozAppearanceProperty
+       with MozTextBlinkProperty
+       with MozUserFocusProperty
+       with MozUserInputProperty
+       with MozWindowShadowProperty
+       with MsContentZoomChainingProperty
+       with MsContentZoomSnapTypeProperty
+       with MsContentZoomingProperty
+       with MsHighContrastAdjustProperty
+       with MsOverflowStyleProperty
+       with MsScrollChainingProperty
+       with MsScrollRailsProperty
+       with MsScrollSnapTypeProperty
+       with MsScrollTranslationProperty
+       with MsTextAutospaceProperty
+       with MsTouchSelectProperty
+       with MsUserSelectProperty
+       with MsWrapThroughProperty
+       with ObjectFitProperty
+       with OverflowAnchorProperty
+       with OverscrollBehaviorBlockProperty
+       with OverscrollBehaviorInlineProperty
+       with OverscrollBehaviorXProperty
+       with OverscrollBehaviorYProperty
+       with PointerEventsProperty
+       with ResizeProperty
+       with ScrollSnapTypeXProperty
+       with ScrollSnapTypeYProperty
+       with ScrollbarWidthProperty
        with SingleAnimationFillMode
-       with TextDecorationSkipInk
-       with TextJustify
-       with TextTransform
-       with UserSelect
-       with VectorEffect
-       with WebkitAppearance
-       with WebkitTouchCallout
-       with _AnimationName
-       with _BackdropFilter
-       with _BackgroundImage
-       with _BorderImage
-       with _BorderImageSource
-       with _BoxShadow
-       with _ClipPath
-       with _Contain
-       with _Content
-       with _CounterIncrement
-       with _CounterReset
-       with _CounterSet
-       with _Cursor
-       with _Display
-       with _Filter
+       with TextDecorationSkipInkProperty
+       with TextJustifyProperty
+       with TextTransformProperty
+       with UserSelectProperty
+       with VectorEffectProperty
+       with WebkitAppearanceProperty
+       with WebkitTouchCalloutProperty
+       with _AnimationNameProperty
+       with _BackdropFilterProperty
+       with _BackgroundImageProperty
+       with _BorderImageProperty
+       with _BorderImageSourceProperty
+       with _BoxShadowProperty
+       with _ClipPathProperty
+       with _ContainProperty
+       with _ContentProperty
+       with _CounterIncrementProperty
+       with _CounterResetProperty
+       with _CounterSetProperty
+       with _CursorProperty
+       with _DisplayProperty
+       with _FilterProperty
        with _FinalBgLayer[js.Any]
-       with _Flex[js.Any]
-       with _FontSizeAdjust
-       with _FontSynthesis
-       with _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantLigatures
-       with _Grid
-       with _GridTemplate
-       with _GridTemplateAreas
-       with _GridTemplateColumns[js.Any]
-       with _GridTemplateRows[js.Any]
-       with _HangingPunctuation
-       with _LineClamp
-       with _ListStyle
-       with _ListStyleImage
-       with _ListStyleType
-       with _Marker
-       with _MarkerEnd
-       with _MarkerMid
-       with _MarkerStart
-       with _MaskBorder
-       with _MaskBorderSource
-       with _MaskImage
+       with _FlexProperty[js.Any]
+       with _FontFaceFontVariantProperty
+       with _FontSizeAdjustProperty
+       with _FontSynthesisProperty
+       with _FontVariantLigaturesProperty
+       with _FontVariantProperty
+       with _GridProperty
+       with _GridTemplateAreasProperty
+       with _GridTemplateColumnsProperty[js.Any]
+       with _GridTemplateProperty
+       with _GridTemplateRowsProperty[js.Any]
+       with _HangingPunctuationProperty
+       with _LineClampProperty
+       with _ListStyleImageProperty
+       with _ListStyleProperty
+       with _ListStyleTypeProperty
+       with _MarkerEndProperty
+       with _MarkerMidProperty
+       with _MarkerProperty
+       with _MarkerStartProperty
+       with _MaskBorderProperty
+       with _MaskBorderSourceProperty
+       with _MaskImageProperty
        with _MaskLayer[js.Any]
-       with _MaxLines
-       with _MozBinding
-       with _MozBorderBottomColors
-       with _MozBorderLeftColors
-       with _MozBorderRightColors
-       with _MozBorderTopColors
-       with _MozContextProperties
-       with _MsContentZoomSnap
-       with _MsFlowFrom
-       with _MsFlowInto
-       with _Offset[js.Any]
-       with _OffsetPath
-       with _OverscrollBehavior
+       with _MaxBlockSizeProperty[js.Any]
+       with _MaxHeightProperty[js.Any]
+       with _MaxInlineSizeProperty[js.Any]
+       with _MaxLinesProperty
+       with _MaxWidthProperty[js.Any]
+       with _MozBindingProperty
+       with _MozBorderBottomColorsProperty
+       with _MozBorderLeftColorsProperty
+       with _MozBorderRightColorsProperty
+       with _MozBorderTopColorsProperty
+       with _MozContextPropertiesProperty
+       with _MsContentZoomSnapProperty
+       with _MsFlowFromProperty
+       with _MsFlowIntoProperty
+       with _MsGridColumnsProperty[js.Any]
+       with _MsGridRowsProperty[js.Any]
+       with _OffsetPathProperty
+       with _OffsetProperty[js.Any]
+       with _OverscrollBehaviorProperty
        with _Paint
-       with _Perspective[js.Any]
-       with _Quotes
-       with _Rotate
-       with _Scale
-       with _ScrollSnapAlign
-       with _ScrollSnapCoordinate[js.Any]
-       with _ScrollSnapPointsX
-       with _ScrollSnapPointsY
-       with _ScrollSnapType
-       with _ShapeOutside
-       with _SingleTransition[js.Any]
-       with _StrokeDasharray[js.Any]
-       with _TextCombineUpright
-       with _TextDecoration[js.Any]
-       with _TextDecorationLine
-       with _TextDecorationSkip
-       with _TextEmphasis
-       with _TextEmphasisStyle
-       with _TextShadow
-       with _TextSizeAdjust
-       with _TouchAction
-       with _Transform
-       with _TransitionProperty
-       with _Translate[js.Any]
-       with _WebkitLineClamp
-       with _WebkitMask[js.Any]
-       with _WebkitMaskImage
+       with _PerspectiveProperty[js.Any]
+       with _QuotesProperty
+       with _RotateProperty
+       with _ScaleProperty
+       with _ScrollSnapAlignProperty
+       with _ScrollSnapCoordinateProperty[js.Any]
+       with _ScrollSnapPointsXProperty
+       with _ScrollSnapPointsYProperty
+       with _ScrollSnapTypeProperty
+       with _ShapeOutsideProperty
+       with _SingleTransition
+       with _StrokeDasharrayProperty[js.Any]
+       with _TextCombineUprightProperty
+       with _TextDecorationLineProperty
+       with _TextDecorationProperty[js.Any]
+       with _TextDecorationSkipProperty
+       with _TextEmphasisProperty
+       with _TextEmphasisStyleProperty
+       with _TextShadowProperty
+       with _TextSizeAdjustProperty
+       with _TouchActionProperty
+       with _TransformProperty
+       with _TransitionPropertyProperty
+       with _TranslateProperty[js.Any]
+       with _WebkitLineClampProperty
+       with _WebkitMaskImageProperty
+       with _WebkitMaskProperty[js.Any]
   
   @js.native
   sealed trait nonzero
-    extends ClipRule
-       with FillRule
+    extends ClipRuleProperty
+       with FillRuleProperty
   
   @js.native
   sealed trait normal
     extends SingleAnimationDirection
        with BlendMode
-       with BoxDirection
-       with FontKerning
-       with FontVariantCaps
-       with FontVariantPosition
-       with ImeMode
-       with LineBreak
-       with MixBlendMode
-       with MozUserFocus
-       with OverflowWrap
-       with ScrollSnapStop
-       with UnicodeBidi
-       with WhiteSpace
-       with WordBreak
-       with WordWrap
-       with _AlignContent
-       with _AlignItems
-       with _AlignSelf
-       with _ColumnGap[js.Any]
-       with _Content
-       with _FontFeatureSettings
-       with _FontLanguageOverride
+       with BoxDirectionProperty
+       with FontKerningProperty
+       with FontVariantCapsProperty
+       with FontVariantPositionProperty
+       with ImeModeProperty
+       with LineBreakProperty
+       with MathStyleProperty
+       with MixBlendModeProperty
+       with MozUserFocusProperty
+       with OverflowWrapProperty
+       with ScrollSnapStopProperty
+       with UnicodeBidiProperty
+       with WhiteSpaceProperty
+       with WordBreakProperty
+       with WordWrapProperty
+       with _AlignContentProperty
+       with _AlignItemsProperty
+       with _AlignSelfProperty
+       with _AlignTracksProperty
+       with _ColumnGapProperty[js.Any]
+       with _ContentProperty
+       with _FontFaceFontStyleProperty
+       with _FontFaceFontVariantProperty
+       with _FontFeatureSettingsProperty
+       with _FontLanguageOverrideProperty
        with _FontStretchAbsolute
-       with _FontStyle
-       with typingsSlinky.csstype.mod.AtRule._FontStyle
-       with _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantAlternates
-       with _FontVariantEastAsian
-       with _FontVariantLigatures
-       with _FontVariantNumeric
-       with _FontVariationSettings
+       with _FontStyleProperty
+       with _FontVariantAlternatesProperty
+       with _FontVariantEastAsianProperty
+       with _FontVariantLigaturesProperty
+       with _FontVariantNumericProperty
+       with _FontVariantProperty
+       with _FontVariationSettingsProperty
        with _FontWeightAbsolute
-       with _Gap[js.Any]
-       with _InitialLetter
-       with _JustifyContent
-       with _JustifyItems
-       with _JustifySelf
-       with _LetterSpacing[js.Any]
-       with _LineHeight[js.Any]
-       with _PaintOrder
-       with _PlaceContent
-       with _PlaceItems
-       with _PlaceSelf
-       with _RowGap[js.Any]
-       with _WordSpacing[js.Any]
-       with _Zoom
+       with _GapProperty[js.Any]
+       with _InitialLetterProperty
+       with _JustifyContentProperty
+       with _JustifyItemsProperty
+       with _JustifySelfProperty
+       with _JustifyTracksProperty
+       with _LetterSpacingProperty[js.Any]
+       with _LineHeightProperty[js.Any]
+       with _PaintOrderProperty
+       with _PlaceContentProperty
+       with _PlaceItemsProperty
+       with _PlaceSelfProperty
+       with _RowGapProperty[js.Any]
+       with _WordSpacingProperty[js.Any]
+       with _ZoomProperty
   
   @js.native
-  sealed trait `not-allowed` extends _Cursor
+  sealed trait `not-allowed` extends _CursorProperty
   
   @js.native
   sealed trait nowrap
-    extends FlexWrap
-       with WhiteSpace
-       with _FlexFlow
+    extends FlexWrapProperty
+       with WhiteSpaceProperty
+       with _FlexFlowProperty
   
   @js.native
-  sealed trait `ns-resize` extends _Cursor
+  sealed trait `ns-resize` extends _CursorProperty
   
   @js.native
-  sealed trait numbers extends _SpeakAs
+  sealed trait numbers extends _CounterStyleSpeakAsProperty
   
   @js.native
-  sealed trait numeric extends _System
+  sealed trait numeric extends _CounterStyleSystemProperty
   
   @js.native
-  sealed trait `nw-resize` extends _Cursor
+  sealed trait `nw-resize` extends _CursorProperty
   
   @js.native
-  sealed trait `nwse-resize` extends _Cursor
+  sealed trait `nwse-resize` extends _CursorProperty
   
   @js.native
-  sealed trait objects extends _TextDecorationSkip
+  sealed trait objects extends _TextDecorationSkipProperty
   
   @js.native
   sealed trait oblique
-    extends _FontStyle
-       with typingsSlinky.csstype.mod.AtRule._FontStyle
+    extends _FontFaceFontStyleProperty
+       with _FontStyleProperty
   
   @js.native
   sealed trait oldlace extends NamedColor
   
   @js.native
   sealed trait `oldstyle-nums`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantNumeric
+    extends _FontFaceFontVariantProperty
+       with _FontVariantNumericProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait olive extends NamedColor
@@ -9346,26 +9488,26 @@ object csstypeStrings {
   
   @js.native
   sealed trait open
-    extends _TextEmphasis
-       with _TextEmphasisStyle
+    extends _TextEmphasisProperty
+       with _TextEmphasisStyleProperty
   
   @js.native
   sealed trait `open-quote` extends Quote
   
   @js.native
-  sealed trait optimizeLegibility extends TextRendering
+  sealed trait optimizeLegibility extends TextRenderingProperty
   
   @js.native
-  sealed trait optimizeQuality extends ColorRendering
+  sealed trait optimizeQuality extends ColorRenderingProperty
   
   @js.native
   sealed trait optimizeSpeed
-    extends ColorRendering
-       with ShapeRendering
-       with TextRendering
+    extends ColorRenderingProperty
+       with ShapeRenderingProperty
+       with TextRenderingProperty
   
   @js.native
-  sealed trait optional extends FontDisplay
+  sealed trait optional extends FontFaceFontDisplayProperty
   
   @js.native
   sealed trait orange extends NamedColor
@@ -9377,66 +9519,72 @@ object csstypeStrings {
   sealed trait orchid extends NamedColor
   
   @js.native
+  sealed trait ordered extends _MasonryAutoFlowProperty
+  
+  @js.native
   sealed trait ordinal
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantNumeric
+    extends _FontFaceFontVariantProperty
+       with _FontVariantNumericProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait outset
     extends LineStyle
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
   
   @js.native
   sealed trait outside
-    extends ListStylePosition
-       with _ListStyle
+    extends ListStylePositionProperty
+       with _ListStyleProperty
   
   @js.native
-  sealed trait over extends RubyPosition
+  sealed trait over extends RubyPositionProperty
   
   @js.native
   sealed trait overlay
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
   sealed trait overline
-    extends _TextDecoration[js.Any]
-       with _TextDecorationLine
+    extends _TextDecorationLineProperty
+       with _TextDecorationProperty[js.Any]
+  
+  @js.native
+  sealed trait pack extends _MasonryAutoFlowProperty
   
   @js.native
   sealed trait padding
-    extends _WebkitMask[js.Any]
-       with _WebkitMaskClip
-       with _WebkitMaskOrigin
+    extends _WebkitMaskClipProperty
+       with _WebkitMaskOriginProperty
+       with _WebkitMaskProperty[js.Any]
   
   @js.native
   sealed trait `padding-box`
     extends Box
        with GeometryBox
-       with MozFloatEdge
-       with OverflowClipBox
+       with MozFloatEdgeProperty
+       with OverflowClipBoxProperty
   
   @js.native
   sealed trait page
-    extends BreakAfter
-       with BreakBefore
+    extends BreakAfterProperty
+       with BreakBeforeProperty
   
   @js.native
-  sealed trait paint extends _Contain
+  sealed trait paint extends _ContainProperty
   
   @js.native
-  sealed trait painted extends PointerEvents
+  sealed trait painted extends PointerEventsProperty
   
   @js.native
   sealed trait palegoldenrod extends NamedColor
@@ -9451,30 +9599,30 @@ object csstypeStrings {
   sealed trait palevioletred extends NamedColor
   
   @js.native
-  sealed trait `pan-down` extends _TouchAction
+  sealed trait `pan-down` extends _TouchActionProperty
   
   @js.native
-  sealed trait `pan-left` extends _TouchAction
+  sealed trait `pan-left` extends _TouchActionProperty
   
   @js.native
-  sealed trait `pan-right` extends _TouchAction
+  sealed trait `pan-right` extends _TouchActionProperty
   
   @js.native
-  sealed trait `pan-up` extends _TouchAction
+  sealed trait `pan-up` extends _TouchActionProperty
   
   @js.native
-  sealed trait `pan-x` extends _TouchAction
+  sealed trait `pan-x` extends _TouchActionProperty
   
   @js.native
-  sealed trait `pan-y` extends _TouchAction
+  sealed trait `pan-y` extends _TouchActionProperty
   
   @js.native
   sealed trait papayawhip extends NamedColor
   
   @js.native
   sealed trait paused
-    extends _SingleAnimation[js.Any]
-       with _AnimationPlayState
+    extends _SingleAnimation
+       with _AnimationPlayStateProperty
   
   @js.native
   sealed trait peachpuff extends NamedColor
@@ -9484,167 +9632,169 @@ object csstypeStrings {
   
   @js.native
   sealed trait `petite-caps`
-    extends FontVariantCaps
-       with _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
+    extends FontVariantCapsProperty
+       with _FontFaceFontVariantProperty
+       with _FontVariantProperty
   
   @js.native
-  sealed trait `pinch-zoom` extends _TouchAction
+  sealed trait `pinch-zoom` extends _TouchActionProperty
   
   @js.native
   sealed trait pink extends NamedColor
   
   @js.native
-  sealed trait pixelated extends ImageRendering
+  sealed trait pixelated extends ImageRenderingProperty
   
   @js.native
-  sealed trait plaintext extends UnicodeBidi
+  sealed trait plaintext extends UnicodeBidiProperty
   
   @js.native
   sealed trait plum extends NamedColor
   
   @js.native
-  sealed trait pointer extends _Cursor
+  sealed trait pointer extends _CursorProperty
   
   @js.native
-  sealed trait portrait extends Orientation
+  sealed trait portrait
+    extends ViewportOrientationProperty
+       with _PageSizeProperty[js.Any]
   
   @js.native
   sealed trait powderblue extends NamedColor
   
   @js.native
-  sealed trait pre extends WhiteSpace
+  sealed trait pre extends WhiteSpaceProperty
   
   @js.native
-  sealed trait `pre-line` extends WhiteSpace
+  sealed trait `pre-line` extends WhiteSpaceProperty
   
   @js.native
-  sealed trait `pre-wrap` extends WhiteSpace
+  sealed trait `pre-wrap` extends WhiteSpaceProperty
   
   @js.native
-  sealed trait `preserve-3d` extends TransformStyle
+  sealed trait `preserve-3d` extends TransformStyleProperty
   
   @js.native
-  sealed trait progress extends _Cursor
+  sealed trait progress extends _CursorProperty
   
   @js.native
   sealed trait `progress-bar`
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with WebkitAppearance
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait `progress-bar-value` extends WebkitAppearance
+  sealed trait `progress-bar-value` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait progressbar extends MozAppearance
+  sealed trait progressbar extends MozAppearanceProperty
   
   @js.native
-  sealed trait `progressbar-vertical` extends MozAppearance
+  sealed trait `progressbar-vertical` extends MozAppearanceProperty
   
   @js.native
-  sealed trait progresschunk extends MozAppearance
+  sealed trait progresschunk extends MozAppearanceProperty
   
   @js.native
-  sealed trait `progresschunk-vertical` extends MozAppearance
+  sealed trait `progresschunk-vertical` extends MozAppearanceProperty
   
   @js.native
   sealed trait `proportional-nums`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantNumeric
+    extends _FontFaceFontVariantProperty
+       with _FontVariantNumericProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait `proportional-width`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantEastAsian
+    extends _FontFaceFontVariantProperty
+       with _FontVariantEastAsianProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait proximity
-    extends MsContentZoomSnapType
-       with MsScrollSnapType
-       with ScrollSnapTypeX
-       with ScrollSnapTypeY
-       with _MsContentZoomSnap
+    extends MsContentZoomSnapTypeProperty
+       with MsScrollSnapTypeProperty
+       with ScrollSnapTypeXProperty
+       with ScrollSnapTypeYProperty
+       with _MsContentZoomSnapProperty
   
   @js.native
   sealed trait purple extends NamedColor
   
   @js.native
   sealed trait `push-button`
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with WebkitAppearance
+       with WebkitAppearanceProperty
   
   @js.native
   sealed trait radio
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with MozAppearance
-       with WebkitAppearance
+       with MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait `radio-container` extends MozAppearance
+  sealed trait `radio-container` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `radio-label` extends MozAppearance
+  sealed trait `radio-label` extends MozAppearanceProperty
   
   @js.native
-  sealed trait radiomenuitem extends MozAppearance
+  sealed trait radiomenuitem extends MozAppearanceProperty
   
   @js.native
-  sealed trait railed extends MsScrollRails
+  sealed trait railed extends MsScrollRailsProperty
   
   @js.native
-  sealed trait range extends MozAppearance
+  sealed trait range extends MozAppearanceProperty
   
   @js.native
-  sealed trait `range-thumb` extends MozAppearance
+  sealed trait `range-thumb` extends MozAppearanceProperty
   
   @js.native
   sealed trait `read-only`
-    extends MozUserModify
-       with WebkitUserModify
+    extends MozUserModifyProperty
+       with WebkitUserModifyProperty
   
   @js.native
   sealed trait `read-write`
-    extends MozUserModify
-       with WebkitUserModify
+    extends MozUserModifyProperty
+       with WebkitUserModifyProperty
   
   @js.native
-  sealed trait `read-write-plaintext-only` extends WebkitUserModify
+  sealed trait `read-write-plaintext-only` extends WebkitUserModifyProperty
   
   @js.native
   sealed trait rebeccapurple extends NamedColor
   
   @js.native
   sealed trait recto
-    extends BreakAfter
-       with BreakBefore
-       with PageBreakAfter
-       with PageBreakBefore
+    extends BreakAfterProperty
+       with BreakBeforeProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
   
   @js.native
   sealed trait red extends NamedColor
   
   @js.native
   sealed trait region
-    extends BreakAfter
-       with BreakBefore
+    extends BreakAfterProperty
+       with BreakBeforeProperty
   
   @js.native
-  sealed trait relative extends Position
+  sealed trait relative extends PositionProperty
   
   @js.native
   sealed trait repeat
     extends _RepeatStyle
-       with WebkitMaskRepeatX
-       with WebkitMaskRepeatY
-       with _BorderImage
-       with _BorderImageRepeat
-       with _MaskBorder
-       with _MaskBorderRepeat
+       with WebkitMaskRepeatXProperty
+       with WebkitMaskRepeatYProperty
+       with _BorderImageProperty
+       with _BorderImageRepeatProperty
+       with _MaskBorderProperty
+       with _MaskBorderRepeatProperty
   
   @js.native
   sealed trait `repeat-x` extends _RepeatStyle
@@ -9653,198 +9803,207 @@ object csstypeStrings {
   sealed trait `repeat-y` extends _RepeatStyle
   
   @js.native
-  sealed trait reset extends _Zoom
+  sealed trait reset extends _ZoomProperty
   
   @js.native
-  sealed trait `reset-size` extends DominantBaseline
+  sealed trait `reset-size` extends DominantBaselineProperty
   
   @js.native
-  sealed trait resizer extends MozAppearance
+  sealed trait resizer extends MozAppearanceProperty
   
   @js.native
-  sealed trait resizerpanel extends MozAppearance
+  sealed trait resizerpanel extends MozAppearanceProperty
   
   @js.native
   sealed trait reverse
     extends SingleAnimationDirection
-       with BoxDirection
-       with _OffsetRotate
+       with BoxDirectionProperty
+       with _OffsetRotateProperty
   
   @js.native
   sealed trait revert
     extends Globals
-       with AlignmentBaseline
-       with Appearance
-       with BackfaceVisibility
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderCollapse
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with BoxAlign
-       with BoxDecorationBreak
-       with BoxDirection
-       with BoxLines
-       with BoxOrient
-       with BoxPack
-       with BoxSizing
-       with BreakAfter
-       with BreakBefore
-       with BreakInside
-       with CaptionSide
-       with Clear
-       with ClipRule
-       with ColorAdjust
-       with ColorInterpolation
-       with ColorRendering
-       with ColumnFill
-       with ColumnSpan
-       with Direction
-       with DominantBaseline
-       with EmptyCells
-       with FillRule
-       with FlexDirection
-       with FlexWrap
-       with Float
-       with FontKerning
-       with FontOpticalSizing
-       with FontVariantCaps
-       with FontVariantPosition
-       with Hyphens
-       with ImageRendering
-       with ImeMode
-       with Isolation
-       with LineBreak
-       with ListStylePosition
-       with MaskBorderMode
-       with MaskType
-       with MixBlendMode
-       with MozAppearance
-       with MozFloatEdge
-       with MozOrient
-       with MozStackSizing
-       with MozTextBlink
-       with MozUserFocus
-       with MozUserInput
-       with MozUserModify
-       with MozWindowDragging
-       with MozWindowShadow
-       with MsAccelerator
-       with MsBlockProgression
-       with MsContentZoomChaining
-       with MsContentZoomSnapType
-       with MsContentZooming
-       with MsHighContrastAdjust
-       with MsImeAlign
-       with MsOverflowStyle
-       with MsScrollChaining
-       with MsScrollRails
-       with MsScrollSnapType
-       with MsScrollTranslation
-       with MsTextAutospace
-       with MsTouchSelect
-       with MsUserSelect
-       with MsWrapFlow
-       with MsWrapThrough
-       with ObjectFit
-       with OverflowAnchor
-       with OverflowBlock
-       with OverflowClipBox
-       with OverflowInline
-       with OverflowWrap
-       with OverflowX
-       with OverflowY
-       with OverscrollBehaviorBlock
-       with OverscrollBehaviorInline
-       with OverscrollBehaviorX
-       with OverscrollBehaviorY
-       with PageBreakAfter
-       with PageBreakBefore
-       with PageBreakInside
-       with PointerEvents
-       with Position
-       with Resize
-       with RubyAlign
-       with RubyMerge
-       with RubyPosition
-       with ScrollBehavior
-       with ScrollSnapStop
-       with ScrollSnapTypeX
-       with ScrollSnapTypeY
-       with ScrollbarWidth
-       with ShapeRendering
-       with StrokeLinecap
-       with StrokeLinejoin
-       with TableLayout
-       with TextAlign
-       with TextAlignLast
-       with TextAnchor
-       with TextDecorationSkipInk
-       with TextDecorationStyle
-       with TextJustify
-       with TextOrientation
-       with TextRendering
-       with TextTransform
-       with TransformBox
-       with TransformStyle
-       with UnicodeBidi
-       with UserSelect
-       with VectorEffect
-       with Visibility
-       with WebkitAppearance
-       with WebkitMaskRepeatX
-       with WebkitMaskRepeatY
-       with WebkitOverflowScrolling
-       with WebkitTouchCallout
-       with WebkitUserModify
-       with WhiteSpace
-       with WordBreak
-       with WordWrap
-       with WritingMode
+       with AlignmentBaselineProperty
+       with AppearanceProperty
+       with BackfaceVisibilityProperty
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderCollapseProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with BoxAlignProperty
+       with BoxDecorationBreakProperty
+       with BoxDirectionProperty
+       with BoxLinesProperty
+       with BoxOrientProperty
+       with BoxPackProperty
+       with BoxSizingProperty
+       with BreakAfterProperty
+       with BreakBeforeProperty
+       with BreakInsideProperty
+       with CaptionSideProperty
+       with ClearProperty
+       with ClipRuleProperty
+       with ColorAdjustProperty
+       with ColorInterpolationProperty
+       with ColorRenderingProperty
+       with ColumnFillProperty
+       with ColumnSpanProperty
+       with DirectionProperty
+       with DominantBaselineProperty
+       with EmptyCellsProperty
+       with FillRuleProperty
+       with FlexDirectionProperty
+       with FlexWrapProperty
+       with FloatProperty
+       with FontKerningProperty
+       with FontOpticalSizingProperty
+       with FontVariantCapsProperty
+       with FontVariantPositionProperty
+       with HyphensProperty
+       with ImageRenderingProperty
+       with ImeModeProperty
+       with IsolationProperty
+       with LineBreakProperty
+       with ListStylePositionProperty
+       with MaskBorderModeProperty
+       with MaskTypeProperty
+       with MathStyleProperty
+       with MixBlendModeProperty
+       with MozAppearanceProperty
+       with MozFloatEdgeProperty
+       with MozOrientProperty
+       with MozStackSizingProperty
+       with MozTextBlinkProperty
+       with MozUserFocusProperty
+       with MozUserInputProperty
+       with MozUserModifyProperty
+       with MozWindowDraggingProperty
+       with MozWindowShadowProperty
+       with MsAcceleratorProperty
+       with MsBlockProgressionProperty
+       with MsContentZoomChainingProperty
+       with MsContentZoomSnapTypeProperty
+       with MsContentZoomingProperty
+       with MsHighContrastAdjustProperty
+       with MsImeAlignProperty
+       with MsOverflowStyleProperty
+       with MsScrollChainingProperty
+       with MsScrollRailsProperty
+       with MsScrollSnapTypeProperty
+       with MsScrollTranslationProperty
+       with MsTextAutospaceProperty
+       with MsTouchSelectProperty
+       with MsUserSelectProperty
+       with MsWrapFlowProperty
+       with MsWrapThroughProperty
+       with ObjectFitProperty
+       with OverflowAnchorProperty
+       with OverflowBlockProperty
+       with OverflowClipBoxProperty
+       with OverflowInlineProperty
+       with OverflowWrapProperty
+       with OverflowXProperty
+       with OverflowYProperty
+       with OverscrollBehaviorBlockProperty
+       with OverscrollBehaviorInlineProperty
+       with OverscrollBehaviorXProperty
+       with OverscrollBehaviorYProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
+       with PageBreakInsideProperty
+       with PointerEventsProperty
+       with PositionProperty
+       with ResizeProperty
+       with RubyAlignProperty
+       with RubyMergeProperty
+       with RubyPositionProperty
+       with ScrollBehaviorProperty
+       with ScrollSnapStopProperty
+       with ScrollSnapTypeXProperty
+       with ScrollSnapTypeYProperty
+       with ScrollbarWidthProperty
+       with ShapeRenderingProperty
+       with StrokeLinecapProperty
+       with StrokeLinejoinProperty
+       with TableLayoutProperty
+       with TextAlignLastProperty
+       with TextAlignProperty
+       with TextAnchorProperty
+       with TextDecorationSkipInkProperty
+       with TextDecorationStyleProperty
+       with TextJustifyProperty
+       with TextOrientationProperty
+       with TextRenderingProperty
+       with TextTransformProperty
+       with TransformBoxProperty
+       with TransformStyleProperty
+       with UnicodeBidiProperty
+       with UserSelectProperty
+       with VectorEffectProperty
+       with VisibilityProperty
+       with WebkitAppearanceProperty
+       with WebkitMaskRepeatXProperty
+       with WebkitMaskRepeatYProperty
+       with WebkitOverflowScrollingProperty
+       with WebkitTouchCalloutProperty
+       with WebkitUserModifyProperty
+       with WhiteSpaceProperty
+       with WordBreakProperty
+       with WordWrapProperty
+       with WritingModeProperty
   
   @js.native
   sealed trait ridge
     extends LineStyle
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
   
   @js.native
   sealed trait right
     extends _Position[js.Any]
-       with BreakAfter
-       with BreakBefore
-       with Clear
-       with Float
-       with PageBreakAfter
-       with PageBreakBefore
-       with TextAlign
-       with TextAlignLast
-       with _BackgroundPositionX[js.Any]
+       with BreakAfterProperty
+       with BreakBeforeProperty
+       with ClearProperty
+       with FloatProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
+       with TextAlignLastProperty
+       with TextAlignProperty
+       with _AzimuthProperty
+       with _BackgroundPositionXProperty[js.Any]
        with _BgPosition[js.Any]
-       with _JustifyContent
-       with _JustifyItems
-       with _JustifySelf
-       with _TextUnderlinePosition
-       with _TransformOrigin[js.Any]
-       with _WebkitBoxReflect[js.Any]
-       with _WebkitMaskPositionX[js.Any]
+       with _JustifyContentProperty
+       with _JustifyItemsProperty
+       with _JustifySelfProperty
+       with _JustifyTracksProperty
+       with _TextUnderlinePositionProperty
+       with _TransformOriginProperty[js.Any]
+       with _WebkitBoxReflectProperty[js.Any]
+       with _WebkitMaskPositionXProperty[js.Any]
   
   @js.native
-  sealed trait rl extends MsBlockProgression
+  sealed trait `right-side` extends _AzimuthProperty
+  
+  @js.native
+  sealed trait rightwards extends _AzimuthProperty
+  
+  @js.native
+  sealed trait rl extends MsBlockProgressionProperty
   
   @js.native
   sealed trait rosybrown extends NamedColor
@@ -9852,41 +10011,41 @@ object csstypeStrings {
   @js.native
   sealed trait round
     extends _RepeatStyle
-       with StrokeLinecap
-       with StrokeLinejoin
-       with WebkitMaskRepeatX
-       with WebkitMaskRepeatY
-       with _BorderImage
-       with _BorderImageRepeat
-       with _MaskBorder
-       with _MaskBorderRepeat
+       with StrokeLinecapProperty
+       with StrokeLinejoinProperty
+       with WebkitMaskRepeatXProperty
+       with WebkitMaskRepeatYProperty
+       with _BorderImageProperty
+       with _BorderImageRepeatProperty
+       with _MaskBorderProperty
+       with _MaskBorderRepeatProperty
   
   @js.native
   sealed trait row
-    extends FlexDirection
-       with _FlexFlow
-       with _GridAutoFlow
+    extends FlexDirectionProperty
+       with _FlexFlowProperty
+       with _GridAutoFlowProperty
   
   @js.native
-  sealed trait `row-resize` extends _Cursor
+  sealed trait `row-resize` extends _CursorProperty
   
   @js.native
   sealed trait `row-reverse`
-    extends FlexDirection
-       with _FlexFlow
+    extends FlexDirectionProperty
+       with _FlexFlowProperty
   
   @js.native
   sealed trait royalblue extends NamedColor
   
   @js.native
-  sealed trait rtl extends Direction
+  sealed trait rtl extends DirectionProperty
   
   @js.native
   sealed trait ruby
     extends DisplayInside
-       with _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantEastAsian
+       with _FontFaceFontVariantProperty
+       with _FontVariantEastAsianProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait `ruby-base` extends DisplayInternal
@@ -9905,14 +10064,14 @@ object csstypeStrings {
   
   @js.native
   sealed trait running
-    extends _SingleAnimation[js.Any]
-       with _AnimationPlayState
+    extends _SingleAnimation
+       with _AnimationPlayStateProperty
   
   @js.native
-  sealed trait `s-resize` extends _Cursor
+  sealed trait `s-resize` extends _CursorProperty
   
   @js.native
-  sealed trait sRGB extends ColorInterpolation
+  sealed trait sRGB extends ColorInterpolationProperty
   
   @js.native
   sealed trait saddlebrown extends NamedColor
@@ -9929,118 +10088,118 @@ object csstypeStrings {
   @js.native
   sealed trait saturation
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
-  sealed trait `scale-down` extends ObjectFit
+  sealed trait `scale-down` extends ObjectFitProperty
   
   @js.native
-  sealed trait `scale-horizontal` extends MozAppearance
+  sealed trait `scale-horizontal` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `scale-vertical` extends MozAppearance
+  sealed trait `scale-vertical` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `scalethumb-horizontal` extends MozAppearance
+  sealed trait `scalethumb-horizontal` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `scalethumb-vertical` extends MozAppearance
+  sealed trait `scalethumb-vertical` extends MozAppearanceProperty
   
   @js.native
-  sealed trait scalethumbend extends MozAppearance
+  sealed trait scalethumbend extends MozAppearanceProperty
   
   @js.native
-  sealed trait scalethumbstart extends MozAppearance
+  sealed trait scalethumbstart extends MozAppearanceProperty
   
   @js.native
-  sealed trait scalethumbtick extends MozAppearance
+  sealed trait scalethumbtick extends MozAppearanceProperty
   
   @js.native
   sealed trait screen
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
   sealed trait scroll
     extends Attachment
-       with OverflowBlock
-       with OverflowInline
-       with OverflowX
-       with OverflowY
-       with _Overflow
+       with OverflowBlockProperty
+       with OverflowInlineProperty
+       with OverflowXProperty
+       with OverflowYProperty
+       with _OverflowProperty
   
   @js.native
   sealed trait `scroll-position` extends _AnimateableFeature
   
   @js.native
-  sealed trait scrollbar_ extends MsOverflowStyle
+  sealed trait scrollbar_ extends MsOverflowStyleProperty
   
   @js.native
-  sealed trait `scrollbarbutton-down` extends MozAppearance
+  sealed trait `scrollbarbutton-down` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `scrollbarbutton-left` extends MozAppearance
+  sealed trait `scrollbarbutton-left` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `scrollbarbutton-right` extends MozAppearance
+  sealed trait `scrollbarbutton-right` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `scrollbarbutton-up` extends MozAppearance
+  sealed trait `scrollbarbutton-up` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `scrollbarthumb-horizontal` extends MozAppearance
+  sealed trait `scrollbarthumb-horizontal` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `scrollbarthumb-vertical` extends MozAppearance
+  sealed trait `scrollbarthumb-vertical` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `scrollbartrack-horizontal` extends MozAppearance
+  sealed trait `scrollbartrack-horizontal` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `scrollbartrack-vertical` extends MozAppearance
+  sealed trait `scrollbartrack-vertical` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `se-resize` extends _Cursor
+  sealed trait `se-resize` extends _CursorProperty
   
   @js.native
   sealed trait seagreen extends NamedColor
   
   @js.native
   sealed trait searchfield
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with MozAppearance
-       with WebkitAppearance
+       with MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait `searchfield-cancel-button` extends WebkitAppearance
+  sealed trait `searchfield-cancel-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `searchfield-decoration` extends WebkitAppearance
+  sealed trait `searchfield-decoration` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `searchfield-results-button` extends WebkitAppearance
+  sealed trait `searchfield-results-button` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `searchfield-results-decoration` extends WebkitAppearance
+  sealed trait `searchfield-results-decoration` extends WebkitAppearanceProperty
   
   @js.native
   sealed trait seashell extends NamedColor
   
   @js.native
-  sealed trait `select-after` extends MozUserFocus
+  sealed trait `select-after` extends MozUserFocusProperty
   
   @js.native
-  sealed trait `select-all` extends MozUserFocus
+  sealed trait `select-all` extends MozUserFocusProperty
   
   @js.native
-  sealed trait `select-before` extends MozUserFocus
+  sealed trait `select-before` extends MozUserFocusProperty
   
   @js.native
-  sealed trait `select-menu` extends MozUserFocus
+  sealed trait `select-menu` extends MozUserFocusProperty
   
   @js.native
-  sealed trait `select-same` extends MozUserFocus
+  sealed trait `select-same` extends MozUserFocusProperty
   
   @js.native
   sealed trait `self-end` extends SelfPosition
@@ -10056,36 +10215,36 @@ object csstypeStrings {
   
   @js.native
   sealed trait separate
-    extends BorderCollapse
-       with RubyMerge
+    extends BorderCollapseProperty
+       with RubyMergeProperty
   
   @js.native
-  sealed trait separator extends MozAppearance
+  sealed trait separator extends MozAppearanceProperty
   
   @js.native
   sealed trait serif extends GenericFamily
   
   @js.native
   sealed trait sesame
-    extends _TextEmphasis
-       with _TextEmphasisStyle
+    extends _TextEmphasisProperty
+       with _TextEmphasisStyleProperty
   
   @js.native
   sealed trait sheet
-    extends MozAppearance
-       with MozWindowShadow
+    extends MozAppearanceProperty
+       with MozWindowShadowProperty
   
   @js.native
-  sealed trait show extends EmptyCells
+  sealed trait show extends EmptyCellsProperty
   
   @js.native
-  sealed trait sideways extends TextOrientation
+  sealed trait sideways extends TextOrientationProperty
   
   @js.native
-  sealed trait `sideways-lr` extends WritingMode
+  sealed trait `sideways-lr` extends WritingModeProperty
   
   @js.native
-  sealed trait `sideways-rl` extends WritingMode
+  sealed trait `sideways-rl` extends WritingModeProperty
   
   @js.native
   sealed trait sienna extends NamedColor
@@ -10097,19 +10256,19 @@ object csstypeStrings {
   sealed trait simplified extends EastAsianVariantValues
   
   @js.native
-  sealed trait single extends BoxLines
+  sealed trait single extends BoxLinesProperty
   
   @js.native
-  sealed trait size extends _Contain
+  sealed trait size extends _ContainProperty
   
   @js.native
   sealed trait skyblue extends NamedColor
   
   @js.native
   sealed trait `slashed-zero`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantNumeric
+    extends _FontFaceFontVariantProperty
+       with _FontVariantNumericProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait slateblue extends NamedColor
@@ -10121,41 +10280,41 @@ object csstypeStrings {
   sealed trait slategrey extends NamedColor
   
   @js.native
-  sealed trait slice extends BoxDecorationBreak
+  sealed trait slice extends BoxDecorationBreakProperty
   
   @js.native
   sealed trait `slider-horizontal`
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with WebkitAppearance
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait `slider-vertical` extends WebkitAppearance
+  sealed trait `slider-vertical` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `sliderthumb-horizontal` extends WebkitAppearance
+  sealed trait `sliderthumb-horizontal` extends WebkitAppearanceProperty
   
   @js.native
-  sealed trait `sliderthumb-vertical` extends WebkitAppearance
+  sealed trait `sliderthumb-vertical` extends WebkitAppearanceProperty
   
   @js.native
   sealed trait small extends AbsoluteSize
   
   @js.native
   sealed trait `small-caps`
-    extends FontVariantCaps
-       with _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
+    extends FontVariantCapsProperty
+       with _FontFaceFontVariantProperty
+       with _FontVariantProperty
   
   @js.native
-  sealed trait `small-caption` extends _Font
+  sealed trait `small-caption` extends _FontProperty
   
   @js.native
   sealed trait smaller
-    extends _FontSize[js.Any]
+    extends _FontSizeProperty[js.Any]
   
   @js.native
-  sealed trait smooth extends ScrollBehavior
+  sealed trait smooth extends ScrollBehaviorProperty
   
   @js.native
   sealed trait snow extends NamedColor
@@ -10163,23 +10322,23 @@ object csstypeStrings {
   @js.native
   sealed trait `soft-light`
     extends BlendMode
-       with MixBlendMode
+       with MixBlendModeProperty
   
   @js.native
   sealed trait solid
     extends LineStyle
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with TextDecorationStyle
-       with _TextDecoration[js.Any]
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with TextDecorationStyleProperty
+       with _TextDecorationProperty[js.Any]
   
   @js.native
   sealed trait `source-atop` extends CompositeStyle
@@ -10196,94 +10355,97 @@ object csstypeStrings {
   @js.native
   sealed trait space
     extends _RepeatStyle
-       with WebkitMaskRepeatX
-       with WebkitMaskRepeatY
-       with _BorderImage
-       with _BorderImageRepeat
-       with _MaskBorder
-       with _MaskBorderRepeat
+       with WebkitMaskRepeatXProperty
+       with WebkitMaskRepeatYProperty
+       with _BorderImageProperty
+       with _BorderImageRepeatProperty
+       with _MaskBorderProperty
+       with _MaskBorderRepeatProperty
   
   @js.native
   sealed trait `space-around`
     extends ContentDistribution
-       with RubyAlign
+       with RubyAlignProperty
   
   @js.native
   sealed trait `space-between`
     extends ContentDistribution
-       with RubyAlign
+       with RubyAlignProperty
   
   @js.native
   sealed trait `space-evenly` extends ContentDistribution
   
   @js.native
-  sealed trait spaces extends _TextDecorationSkip
+  sealed trait spaces extends _TextDecorationSkipProperty
   
   @js.native
-  sealed trait `spell-out` extends _SpeakAs
+  sealed trait `spell-out` extends _CounterStyleSpeakAsProperty
   
   @js.native
   sealed trait `spelling-error`
-    extends _TextDecoration[js.Any]
-       with _TextDecorationLine
+    extends _TextDecorationLineProperty
+       with _TextDecorationProperty[js.Any]
   
   @js.native
-  sealed trait spinner extends MozAppearance
+  sealed trait spinner extends MozAppearanceProperty
   
   @js.native
-  sealed trait `spinner-downbutton` extends MozAppearance
+  sealed trait `spinner-downbutton` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `spinner-textfield` extends MozAppearance
+  sealed trait `spinner-textfield` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `spinner-upbutton` extends MozAppearance
+  sealed trait `spinner-upbutton` extends MozAppearanceProperty
   
   @js.native
-  sealed trait splitter extends MozAppearance
+  sealed trait splitter extends MozAppearanceProperty
   
   @js.native
   sealed trait springgreen extends NamedColor
   
   @js.native
-  sealed trait square extends StrokeLinecap
+  sealed trait square extends StrokeLinecapProperty
   
   @js.native
   sealed trait `square-button`
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with WebkitAppearance
+       with WebkitAppearanceProperty
+  
+  @js.native
+  sealed trait stable extends _ScrollbarGutterProperty
   
   @js.native
   sealed trait `stacked-fractions`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantNumeric
+    extends _FontFaceFontVariantProperty
+       with _FontVariantNumericProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait start
     extends SelfPosition
-       with BoxAlign
-       with BoxPack
+       with BoxAlignProperty
+       with BoxPackProperty
        with ContentPosition
-       with MsWrapFlow
-       with RubyAlign
-       with TextAlign
-       with TextAlignLast
-       with TextAnchor
-       with _ScrollSnapAlign
+       with MsWrapFlowProperty
+       with RubyAlignProperty
+       with TextAlignLastProperty
+       with TextAlignProperty
+       with TextAnchorProperty
+       with _ScrollSnapAlignProperty
   
   @js.native
-  sealed trait static extends Position
+  sealed trait static extends PositionProperty
   
   @js.native
-  sealed trait `status-bar` extends _Font
+  sealed trait `status-bar` extends _FontProperty
   
   @js.native
-  sealed trait statusbar extends MozAppearance
+  sealed trait statusbar extends MozAppearanceProperty
   
   @js.native
-  sealed trait statusbarpanel extends MozAppearance
+  sealed trait statusbarpanel extends MozAppearanceProperty
   
   @js.native
   sealed trait steelblue extends NamedColor
@@ -10295,87 +10457,87 @@ object csstypeStrings {
   sealed trait `step-start` extends _StepTimingFunction
   
   @js.native
-  sealed trait sticky extends Position
+  sealed trait sticky extends PositionProperty
   
   @js.native
   sealed trait stretch
     extends ContentDistribution
-       with BoxAlign
-       with _AlignItems
-       with _AlignSelf
-       with _BorderImage
-       with _BorderImageRepeat
-       with _JustifyItems
-       with _JustifySelf
-       with _MaskBorder
-       with _MaskBorderRepeat
-       with _PlaceItems
-       with _PlaceSelf
+       with BoxAlignProperty
+       with _AlignItemsProperty
+       with _AlignSelfProperty
+       with _BorderImageProperty
+       with _BorderImageRepeatProperty
+       with _JustifyItemsProperty
+       with _JustifySelfProperty
+       with _MaskBorderProperty
+       with _MaskBorderRepeatProperty
+       with _PlaceItemsProperty
+       with _PlaceSelfProperty
   
   @js.native
-  sealed trait `stretch-to-fit` extends MozStackSizing
+  sealed trait `stretch-to-fit` extends MozStackSizingProperty
   
   @js.native
   sealed trait strict
-    extends LineBreak
-       with _Contain
+    extends LineBreakProperty
+       with _ContainProperty
   
   @js.native
   sealed trait stroke
-    extends PointerEvents
-       with _MozContextProperties
-       with _PaintOrder
+    extends PointerEventsProperty
+       with _MozContextPropertiesProperty
+       with _PaintOrderProperty
   
   @js.native
   sealed trait `stroke-box`
     extends GeometryBox
-       with TransformBox
+       with TransformBoxProperty
   
   @js.native
-  sealed trait `stroke-opacity` extends _MozContextProperties
+  sealed trait `stroke-opacity` extends _MozContextPropertiesProperty
   
   @js.native
   sealed trait style
-    extends _Contain
-       with _FontSynthesis
+    extends _ContainProperty
+       with _FontSynthesisProperty
   
   @js.native
   sealed trait sub
-    extends FontVariantPosition
-       with _BaselineShift[js.Any]
-       with _VerticalAlign[js.Any]
+    extends FontVariantPositionProperty
+       with _BaselineShiftProperty[js.Any]
+       with _VerticalAlignProperty[js.Any]
   
   @js.native
   sealed trait subgrid
-    extends _GridTemplateColumns[js.Any]
-       with _GridTemplateRows[js.Any]
+    extends _GridTemplateColumnsProperty[js.Any]
+       with _GridTemplateRowsProperty[js.Any]
   
   @js.native
   sealed trait subtract extends CompositingOperator
   
   @js.native
   sealed trait `super`
-    extends FontVariantPosition
-       with _BaselineShift[js.Any]
-       with _VerticalAlign[js.Any]
+    extends FontVariantPositionProperty
+       with _BaselineShiftProperty[js.Any]
+       with _VerticalAlignProperty[js.Any]
   
   @js.native
-  sealed trait `sw-resize` extends _Cursor
+  sealed trait `sw-resize` extends _CursorProperty
   
   @js.native
-  sealed trait swap extends FontDisplay
+  sealed trait swap extends FontFaceFontDisplayProperty
   
   @js.native
-  sealed trait symbolic extends _System
+  sealed trait symbolic extends _CounterStyleSystemProperty
   
   @js.native
-  sealed trait tab extends MozAppearance
+  sealed trait tab extends MozAppearanceProperty
   
   @js.native
-  sealed trait `tab-scroll-arrow-back` extends MozAppearance
+  sealed trait `tab-scroll-arrow-back` extends MozAppearanceProperty
   
   @js.native
-  sealed trait `tab-scroll-arrow-forward` extends MozAppearance
+  sealed trait `tab-scroll-arrow-forward` extends MozAppearanceProperty
   
   @js.native
   sealed trait table extends DisplayInside
@@ -10405,66 +10567,66 @@ object csstypeStrings {
   sealed trait `table-row-group` extends DisplayInternal
   
   @js.native
-  sealed trait tabpanel extends MozAppearance
+  sealed trait tabpanel extends MozAppearanceProperty
   
   @js.native
-  sealed trait tabpanels extends MozAppearance
+  sealed trait tabpanels extends MozAppearanceProperty
   
   @js.native
   sealed trait `tabular-nums`
-    extends _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
-       with _FontVariantNumeric
+    extends _FontFaceFontVariantProperty
+       with _FontVariantNumericProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait tan extends NamedColor
   
   @js.native
-  sealed trait tb extends MsBlockProgression
+  sealed trait tb extends MsBlockProgressionProperty
   
   @js.native
   sealed trait teal extends NamedColor
   
   @js.native
   sealed trait text
-    extends MsUserSelect
-       with UserSelect
-       with _Cursor
-       with _WebkitMask[js.Any]
-       with _WebkitMaskClip
+    extends MsUserSelectProperty
+       with UserSelectProperty
+       with _CursorProperty
+       with _WebkitMaskClipProperty
+       with _WebkitMaskProperty[js.Any]
   
   @js.native
   sealed trait `text-after-edge`
-    extends AlignmentBaseline
-       with DominantBaseline
+    extends AlignmentBaselineProperty
+       with DominantBaselineProperty
   
   @js.native
   sealed trait `text-before-edge`
-    extends AlignmentBaseline
-       with DominantBaseline
+    extends AlignmentBaselineProperty
+       with DominantBaselineProperty
   
   @js.native
   sealed trait `text-bottom`
-    extends _VerticalAlign[js.Any]
+    extends _VerticalAlignProperty[js.Any]
   
   @js.native
   sealed trait `text-top`
-    extends _VerticalAlign[js.Any]
+    extends _VerticalAlignProperty[js.Any]
   
   @js.native
   sealed trait textarea
-    extends Appearance
+    extends AppearanceProperty
        with CompatAuto
-       with WebkitAppearance
+       with WebkitAppearanceProperty
   
   @js.native
   sealed trait textfield
-    extends Appearance
-       with MozAppearance
-       with WebkitAppearance
+    extends AppearanceProperty
+       with MozAppearanceProperty
+       with WebkitAppearanceProperty
   
   @js.native
-  sealed trait `textfield-multiline` extends MozAppearance
+  sealed trait `textfield-multiline` extends MozAppearanceProperty
   
   @js.native
   sealed trait thick
@@ -10473,93 +10635,95 @@ object csstypeStrings {
   @js.native
   sealed trait thin
     extends _LineWidth[js.Any]
-       with ScrollbarWidth
+       with ScrollbarWidthProperty
   
   @js.native
   sealed trait thistle extends NamedColor
   
   @js.native
   sealed trait `titling-caps`
-    extends FontVariantCaps
-       with _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
+    extends FontVariantCapsProperty
+       with _FontFaceFontVariantProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait tomato extends NamedColor
   
   @js.native
-  sealed trait toolbar extends MozAppearance
+  sealed trait toolbar extends MozAppearanceProperty
   
   @js.native
-  sealed trait toolbarbutton extends MozAppearance
+  sealed trait toolbarbutton extends MozAppearanceProperty
   
   @js.native
-  sealed trait `toolbarbutton-dropdown` extends MozAppearance
+  sealed trait `toolbarbutton-dropdown` extends MozAppearanceProperty
   
   @js.native
-  sealed trait toolbargripper extends MozAppearance
+  sealed trait toolbargripper extends MozAppearanceProperty
   
   @js.native
-  sealed trait toolbox extends MozAppearance
+  sealed trait toolbox extends MozAppearanceProperty
   
   @js.native
   sealed trait tooltip
-    extends MozAppearance
-       with MozWindowShadow
+    extends MozAppearanceProperty
+       with MozWindowShadowProperty
   
   @js.native
   sealed trait top
     extends _Position[js.Any]
-       with CaptionSide
-       with _BackgroundPositionY[js.Any]
+       with CaptionSideProperty
+       with _BackgroundPositionYProperty[js.Any]
        with _BgPosition[js.Any]
-       with _TransformOrigin[js.Any]
-       with _VerticalAlign[js.Any]
-       with _WebkitMaskPositionY[js.Any]
+       with _TransformOriginProperty[js.Any]
+       with _VerticalAlignProperty[js.Any]
+       with _WebkitMaskPositionYProperty[js.Any]
   
   @js.native
-  sealed trait touch extends WebkitOverflowScrolling
+  sealed trait touch extends WebkitOverflowScrollingProperty
   
   @js.native
   sealed trait traditional extends EastAsianVariantValues
   
   @js.native
-  sealed trait `trailing-spaces` extends _TextDecorationSkip
+  sealed trait `trailing-spaces` extends _TextDecorationSkipProperty
   
   @js.native
   sealed trait transparent extends NamedColor
   
   @js.native
-  sealed trait treeheader extends MozAppearance
+  sealed trait treeheader extends MozAppearanceProperty
   
   @js.native
-  sealed trait treeheadercell extends MozAppearance
+  sealed trait treeheadercell extends MozAppearanceProperty
   
   @js.native
-  sealed trait treeheadersortarrow extends MozAppearance
+  sealed trait treeheadersortarrow extends MozAppearanceProperty
   
   @js.native
-  sealed trait treeitem extends MozAppearance
+  sealed trait treeitem extends MozAppearanceProperty
   
   @js.native
-  sealed trait treeline extends MozAppearance
+  sealed trait treeline extends MozAppearanceProperty
   
   @js.native
-  sealed trait treetwisty extends MozAppearance
+  sealed trait treetwisty extends MozAppearanceProperty
   
   @js.native
-  sealed trait treetwistyopen extends MozAppearance
+  sealed trait treetwistyopen extends MozAppearanceProperty
   
   @js.native
-  sealed trait treeview extends MozAppearance
+  sealed trait treeview extends MozAppearanceProperty
   
   @js.native
   sealed trait triangle
-    extends _TextEmphasis
-       with _TextEmphasisStyle
+    extends _TextEmphasisProperty
+       with _TextEmphasisStyleProperty
   
   @js.native
-  sealed trait `true` extends MsAccelerator
+  sealed trait `true`
+    extends MsAcceleratorProperty
+       with PropertyInheritsProperty
   
   @js.native
   sealed trait turquoise extends NamedColor
@@ -10572,233 +10736,234 @@ object csstypeStrings {
   
   @js.native
   sealed trait under
-    extends RubyPosition
-       with _TextUnderlinePosition
+    extends RubyPositionProperty
+       with _TextUnderlinePositionProperty
   
   @js.native
   sealed trait underline
-    extends _TextDecoration[js.Any]
-       with _TextDecorationLine
+    extends _TextDecorationLineProperty
+       with _TextDecorationProperty[js.Any]
   
   @js.native
   sealed trait unicase
-    extends FontVariantCaps
-       with _FontVariant
-       with typingsSlinky.csstype.mod.AtRule._FontVariant
+    extends FontVariantCapsProperty
+       with _FontFaceFontVariantProperty
+       with _FontVariantProperty
   
   @js.native
   sealed trait unset
     extends Globals
-       with AlignmentBaseline
-       with Appearance
-       with BackfaceVisibility
-       with BorderBlockEndStyle
-       with BorderBlockStartStyle
-       with BorderBlockStyle
-       with BorderBottomStyle
-       with BorderCollapse
-       with BorderInlineEndStyle
-       with BorderInlineStartStyle
-       with BorderInlineStyle
-       with BorderLeftStyle
-       with BorderRightStyle
-       with BorderTopStyle
-       with BoxAlign
-       with BoxDecorationBreak
-       with BoxDirection
-       with BoxLines
-       with BoxOrient
-       with BoxPack
-       with BoxSizing
-       with BreakAfter
-       with BreakBefore
-       with BreakInside
-       with CaptionSide
-       with Clear
-       with ClipRule
-       with ColorAdjust
-       with ColorInterpolation
-       with ColorRendering
-       with ColumnFill
-       with ColumnSpan
-       with Direction
-       with DominantBaseline
-       with EmptyCells
-       with FillRule
-       with FlexDirection
-       with FlexWrap
-       with Float
-       with FontKerning
-       with FontOpticalSizing
-       with FontVariantCaps
-       with FontVariantPosition
-       with Hyphens
-       with ImageRendering
-       with ImeMode
-       with Isolation
-       with LineBreak
-       with ListStylePosition
-       with MaskBorderMode
-       with MaskType
-       with MixBlendMode
-       with MozAppearance
-       with MozFloatEdge
-       with MozOrient
-       with MozStackSizing
-       with MozTextBlink
-       with MozUserFocus
-       with MozUserInput
-       with MozUserModify
-       with MozWindowDragging
-       with MozWindowShadow
-       with MsAccelerator
-       with MsBlockProgression
-       with MsContentZoomChaining
-       with MsContentZoomSnapType
-       with MsContentZooming
-       with MsHighContrastAdjust
-       with MsImeAlign
-       with MsOverflowStyle
-       with MsScrollChaining
-       with MsScrollRails
-       with MsScrollSnapType
-       with MsScrollTranslation
-       with MsTextAutospace
-       with MsTouchSelect
-       with MsUserSelect
-       with MsWrapFlow
-       with MsWrapThrough
-       with ObjectFit
-       with OverflowAnchor
-       with OverflowBlock
-       with OverflowClipBox
-       with OverflowInline
-       with OverflowWrap
-       with OverflowX
-       with OverflowY
-       with OverscrollBehaviorBlock
-       with OverscrollBehaviorInline
-       with OverscrollBehaviorX
-       with OverscrollBehaviorY
-       with PageBreakAfter
-       with PageBreakBefore
-       with PageBreakInside
-       with PointerEvents
-       with Position
-       with Resize
-       with RubyAlign
-       with RubyMerge
-       with RubyPosition
-       with ScrollBehavior
-       with ScrollSnapStop
-       with ScrollSnapTypeX
-       with ScrollSnapTypeY
-       with ScrollbarWidth
-       with ShapeRendering
-       with StrokeLinecap
-       with StrokeLinejoin
-       with TableLayout
-       with TextAlign
-       with TextAlignLast
-       with TextAnchor
-       with TextDecorationSkipInk
-       with TextDecorationStyle
-       with TextJustify
-       with TextOrientation
-       with TextRendering
-       with TextTransform
-       with TransformBox
-       with TransformStyle
-       with UnicodeBidi
-       with UserSelect
-       with VectorEffect
-       with Visibility
-       with WebkitAppearance
-       with WebkitMaskRepeatX
-       with WebkitMaskRepeatY
-       with WebkitOverflowScrolling
-       with WebkitTouchCallout
-       with WebkitUserModify
-       with WhiteSpace
-       with WordBreak
-       with WordWrap
-       with WritingMode
+       with AlignmentBaselineProperty
+       with AppearanceProperty
+       with BackfaceVisibilityProperty
+       with BorderBlockEndStyleProperty
+       with BorderBlockStartStyleProperty
+       with BorderBlockStyleProperty
+       with BorderBottomStyleProperty
+       with BorderCollapseProperty
+       with BorderInlineEndStyleProperty
+       with BorderInlineStartStyleProperty
+       with BorderInlineStyleProperty
+       with BorderLeftStyleProperty
+       with BorderRightStyleProperty
+       with BorderTopStyleProperty
+       with BoxAlignProperty
+       with BoxDecorationBreakProperty
+       with BoxDirectionProperty
+       with BoxLinesProperty
+       with BoxOrientProperty
+       with BoxPackProperty
+       with BoxSizingProperty
+       with BreakAfterProperty
+       with BreakBeforeProperty
+       with BreakInsideProperty
+       with CaptionSideProperty
+       with ClearProperty
+       with ClipRuleProperty
+       with ColorAdjustProperty
+       with ColorInterpolationProperty
+       with ColorRenderingProperty
+       with ColumnFillProperty
+       with ColumnSpanProperty
+       with DirectionProperty
+       with DominantBaselineProperty
+       with EmptyCellsProperty
+       with FillRuleProperty
+       with FlexDirectionProperty
+       with FlexWrapProperty
+       with FloatProperty
+       with FontKerningProperty
+       with FontOpticalSizingProperty
+       with FontVariantCapsProperty
+       with FontVariantPositionProperty
+       with HyphensProperty
+       with ImageRenderingProperty
+       with ImeModeProperty
+       with IsolationProperty
+       with LineBreakProperty
+       with ListStylePositionProperty
+       with MaskBorderModeProperty
+       with MaskTypeProperty
+       with MathStyleProperty
+       with MixBlendModeProperty
+       with MozAppearanceProperty
+       with MozFloatEdgeProperty
+       with MozOrientProperty
+       with MozStackSizingProperty
+       with MozTextBlinkProperty
+       with MozUserFocusProperty
+       with MozUserInputProperty
+       with MozUserModifyProperty
+       with MozWindowDraggingProperty
+       with MozWindowShadowProperty
+       with MsAcceleratorProperty
+       with MsBlockProgressionProperty
+       with MsContentZoomChainingProperty
+       with MsContentZoomSnapTypeProperty
+       with MsContentZoomingProperty
+       with MsHighContrastAdjustProperty
+       with MsImeAlignProperty
+       with MsOverflowStyleProperty
+       with MsScrollChainingProperty
+       with MsScrollRailsProperty
+       with MsScrollSnapTypeProperty
+       with MsScrollTranslationProperty
+       with MsTextAutospaceProperty
+       with MsTouchSelectProperty
+       with MsUserSelectProperty
+       with MsWrapFlowProperty
+       with MsWrapThroughProperty
+       with ObjectFitProperty
+       with OverflowAnchorProperty
+       with OverflowBlockProperty
+       with OverflowClipBoxProperty
+       with OverflowInlineProperty
+       with OverflowWrapProperty
+       with OverflowXProperty
+       with OverflowYProperty
+       with OverscrollBehaviorBlockProperty
+       with OverscrollBehaviorInlineProperty
+       with OverscrollBehaviorXProperty
+       with OverscrollBehaviorYProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
+       with PageBreakInsideProperty
+       with PointerEventsProperty
+       with PositionProperty
+       with ResizeProperty
+       with RubyAlignProperty
+       with RubyMergeProperty
+       with RubyPositionProperty
+       with ScrollBehaviorProperty
+       with ScrollSnapStopProperty
+       with ScrollSnapTypeXProperty
+       with ScrollSnapTypeYProperty
+       with ScrollbarWidthProperty
+       with ShapeRenderingProperty
+       with StrokeLinecapProperty
+       with StrokeLinejoinProperty
+       with TableLayoutProperty
+       with TextAlignLastProperty
+       with TextAlignProperty
+       with TextAnchorProperty
+       with TextDecorationSkipInkProperty
+       with TextDecorationStyleProperty
+       with TextJustifyProperty
+       with TextOrientationProperty
+       with TextRenderingProperty
+       with TextTransformProperty
+       with TransformBoxProperty
+       with TransformStyleProperty
+       with UnicodeBidiProperty
+       with UserSelectProperty
+       with VectorEffectProperty
+       with VisibilityProperty
+       with WebkitAppearanceProperty
+       with WebkitMaskRepeatXProperty
+       with WebkitMaskRepeatYProperty
+       with WebkitOverflowScrollingProperty
+       with WebkitTouchCalloutProperty
+       with WebkitUserModifyProperty
+       with WhiteSpaceProperty
+       with WordBreakProperty
+       with WordWrapProperty
+       with WritingModeProperty
   
   @js.native
-  sealed trait uppercase extends TextTransform
+  sealed trait uppercase extends TextTransformProperty
   
   @js.native
-  sealed trait upright extends TextOrientation
+  sealed trait upright extends TextOrientationProperty
   
   @js.native
-  sealed trait `use-script` extends DominantBaseline
+  sealed trait `use-script` extends DominantBaselineProperty
   
   @js.native
   sealed trait verso
-    extends BreakAfter
-       with BreakBefore
-       with PageBreakAfter
-       with PageBreakBefore
+    extends BreakAfterProperty
+       with BreakBeforeProperty
+       with PageBreakAfterProperty
+       with PageBreakBeforeProperty
   
   @js.native
   sealed trait vertical
-    extends BoxOrient
-       with MozOrient
-       with Resize
+    extends BoxOrientProperty
+       with MozOrientProperty
+       with ResizeProperty
   
   @js.native
-  sealed trait `vertical-lr` extends WritingMode
+  sealed trait `vertical-lr` extends WritingModeProperty
   
   @js.native
-  sealed trait `vertical-rl` extends WritingMode
+  sealed trait `vertical-rl` extends WritingModeProperty
   
   @js.native
-  sealed trait `vertical-text` extends _Cursor
+  sealed trait `vertical-text` extends _CursorProperty
   
   @js.native
-  sealed trait `vertical-to-horizontal` extends MsScrollTranslation
+  sealed trait `vertical-to-horizontal` extends MsScrollTranslationProperty
   
   @js.native
   sealed trait `view-box`
     extends GeometryBox
-       with TransformBox
+       with TransformBoxProperty
   
   @js.native
   sealed trait violet extends NamedColor
   
   @js.native
   sealed trait visible
-    extends BackfaceVisibility
-       with OverflowBlock
-       with OverflowInline
-       with OverflowX
-       with OverflowY
-       with PointerEvents
-       with Visibility
-       with _Overflow
+    extends BackfaceVisibilityProperty
+       with OverflowBlockProperty
+       with OverflowInlineProperty
+       with OverflowXProperty
+       with OverflowYProperty
+       with PointerEventsProperty
+       with VisibilityProperty
+       with _OverflowProperty
   
   @js.native
-  sealed trait visibleFill extends PointerEvents
+  sealed trait visibleFill extends PointerEventsProperty
   
   @js.native
-  sealed trait visiblePainted extends PointerEvents
+  sealed trait visiblePainted extends PointerEventsProperty
   
   @js.native
-  sealed trait visibleStroke extends PointerEvents
+  sealed trait visibleStroke extends PointerEventsProperty
   
   @js.native
-  sealed trait `w-resize` extends _Cursor
+  sealed trait `w-resize` extends _CursorProperty
   
   @js.native
-  sealed trait wait extends _Cursor
+  sealed trait wait extends _CursorProperty
   
   @js.native
   sealed trait wavy
-    extends TextDecorationStyle
-       with _TextDecoration[js.Any]
+    extends TextDecorationStyleProperty
+       with _TextDecorationProperty[js.Any]
   
   @js.native
-  sealed trait weight extends _FontSynthesis
+  sealed trait weight extends _FontSynthesisProperty
   
   @js.native
   sealed trait wheat extends NamedColor
@@ -10810,28 +10975,28 @@ object csstypeStrings {
   sealed trait whitesmoke extends NamedColor
   
   @js.native
-  sealed trait words extends _SpeakAs
+  sealed trait words extends _CounterStyleSpeakAsProperty
   
   @js.native
   sealed trait wrap
-    extends FlexWrap
-       with MsWrapThrough
-       with _FlexFlow
+    extends FlexWrapProperty
+       with MsWrapThroughProperty
+       with _FlexFlowProperty
   
   @js.native
   sealed trait `wrap-reverse`
-    extends FlexWrap
-       with _FlexFlow
+    extends FlexWrapProperty
+       with _FlexFlowProperty
   
   @js.native
-  sealed trait `write-only` extends MozUserModify
+  sealed trait `write-only` extends MozUserModifyProperty
   
   @js.native
-  sealed trait x extends _ScrollSnapType
+  sealed trait x extends _ScrollSnapTypeProperty
   
   @js.native
   sealed trait `x-end`
-    extends _BackgroundPositionX[js.Any]
+    extends _BackgroundPositionXProperty[js.Any]
   
   @js.native
   sealed trait `x-large` extends AbsoluteSize
@@ -10841,7 +11006,7 @@ object csstypeStrings {
   
   @js.native
   sealed trait `x-start`
-    extends _BackgroundPositionX[js.Any]
+    extends _BackgroundPositionXProperty[js.Any]
   
   @js.native
   sealed trait xor extends CompositeStyle
@@ -10856,15 +11021,15 @@ object csstypeStrings {
   sealed trait `xxx-large` extends AbsoluteSize
   
   @js.native
-  sealed trait y extends _ScrollSnapType
+  sealed trait y extends _ScrollSnapTypeProperty
   
   @js.native
   sealed trait `y-end`
-    extends _BackgroundPositionY[js.Any]
+    extends _BackgroundPositionYProperty[js.Any]
   
   @js.native
   sealed trait `y-start`
-    extends _BackgroundPositionY[js.Any]
+    extends _BackgroundPositionYProperty[js.Any]
   
   @js.native
   sealed trait yellow extends NamedColor
@@ -10874,12 +11039,12 @@ object csstypeStrings {
   
   @js.native
   sealed trait zoom
-    extends MsContentZooming
-       with UserZoom
+    extends MsContentZoomingProperty
+       with ViewportUserZoomProperty
   
   @js.native
-  sealed trait `zoom-in` extends _Cursor
+  sealed trait `zoom-in` extends _CursorProperty
   
   @js.native
-  sealed trait `zoom-out` extends _Cursor
+  sealed trait `zoom-out` extends _CursorProperty
 }

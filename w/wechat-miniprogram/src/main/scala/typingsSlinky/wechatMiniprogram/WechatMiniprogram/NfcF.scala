@@ -31,14 +31,6 @@ trait NfcF extends js.Object {
   def getMaxTransceiveLength(): Unit = js.native
   def getMaxTransceiveLength(option: GetMaxTransceiveLengthOption): Unit = js.native
   
-  /** [NfcF.isConnected(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/NfcF.isConnected.html)
-    *
-    * 检查连接状态
-    *
-    * 最低基础库： `2.11.2` */
-  def isConnected(): Unit = js.native
-  def isConnected(option: IsConnectedOption): Unit = js.native
-  
   /** [NfcF.setTimeout(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/NfcF.setTimeout.html)
     *
     * 设置超时时间

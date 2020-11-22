@@ -41,7 +41,7 @@ trait Options extends js.Object {
   
   var rotation: js.UndefOr[Double] = js.native
   
-  var scale: js.UndefOr[Double] = js.native
+  var scale: js.UndefOr[Double | Size] = js.native
   
   var size: js.UndefOr[Size] = js.native
   
@@ -173,7 +173,7 @@ object Options {
     def deleteRotation: Self = this.set("rotation", js.undefined)
     
     @scala.inline
-    def setScale(value: Double): Self = this.set("scale", value.asInstanceOf[js.Any])
+    def setScale(value: Double | Size): Self = this.set("scale", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteScale: Self = this.set("scale", js.undefined)

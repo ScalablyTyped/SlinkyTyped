@@ -12,22 +12,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ExcelFont extends js.Object {
   
-  /** @name ExcelFont.bold */
+  /**
+    * [descr:ExcelFont.bold]
+    */
   var bold: js.UndefOr[Boolean] = js.native
   
-  /** @name ExcelFont.color */
+  /**
+    * [descr:ExcelFont.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name ExcelFont.italic */
+  /**
+    * [descr:ExcelFont.italic]
+    */
   var italic: js.UndefOr[Boolean] = js.native
   
-  /** @name ExcelFont.name */
+  /**
+    * [descr:ExcelFont.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name ExcelFont.size */
+  /**
+    * [descr:ExcelFont.size]
+    */
   var size: js.UndefOr[Double] = js.native
   
-  /** @name ExcelFont.underline */
+  /**
+    * [descr:ExcelFont.underline]
+    */
   var underline: js.UndefOr[double | doubleAccounting | none | single_ | singleAccounting] = js.native
 }
 object ExcelFont {

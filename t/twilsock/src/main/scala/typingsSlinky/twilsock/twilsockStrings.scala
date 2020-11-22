@@ -64,6 +64,9 @@ object twilsockStrings {
   def reply: reply = "reply".asInstanceOf[reply]
   
   @scala.inline
+  def telemetryDotv1: telemetryDotv1 = "telemetry.v1".asInstanceOf[telemetryDotv1]
+  
+  @scala.inline
   def unknown: unknown = "unknown".asInstanceOf[unknown]
   
   @js.native
@@ -119,6 +122,9 @@ object twilsockStrings {
   
   @js.native
   sealed trait reply extends MessageType
+  
+  @js.native
+  sealed trait telemetryDotv1 extends MessageType
   
   @js.native
   sealed trait unknown extends State

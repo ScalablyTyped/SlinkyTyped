@@ -11,6 +11,7 @@ import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
 import typingsSlinky.reactSelect.typesMod.InnerRef
 import typingsSlinky.reactSelect.typesMod.OptionsType
+import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.reactSelect.typesMod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -63,9 +64,10 @@ object Option {
     selectOption: js.Any => Unit,
     selectProps: Props[js.Any],
     setValue: (ValueType[js.Any], ActionTypes) => Unit,
+    theme: Theme,
     `type`: option
   ): Builder = {
-    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), data = data.asInstanceOf[js.Any], getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isDisabled = isDisabled.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], isSelected = isSelected.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
+    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), data = data.asInstanceOf[js.Any], getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isDisabled = isDisabled.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], isSelected = isSelected.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue), theme = theme.asInstanceOf[js.Any])
     __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[OptionProps[js.Any]]))
   }

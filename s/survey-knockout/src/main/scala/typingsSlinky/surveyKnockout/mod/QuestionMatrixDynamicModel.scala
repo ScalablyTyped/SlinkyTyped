@@ -119,6 +119,8 @@ class QuestionMatrixDynamicModel protected () extends QuestionMatrixDropdownMode
     */
   var minRowCount: Double = js.native
   
+  def onGetValueForNewRowCallBack(sender: QuestionMatrixDynamicModel): js.Any = js.native
+  
   /**
     * Removes a row by it's index.
     * @param index a row index, from 0 to rowCount - 1

@@ -1,8 +1,8 @@
 package typingsSlinky.reactRedux.mod
 
 import typingsSlinky.react.mod.Context
-import typingsSlinky.reactRedux.anon.Fn1
-import typingsSlinky.redux.mod.AnyAction
+import typingsSlinky.redux.mod.Action
+import typingsSlinky.redux.mod.Dispatch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createDispatchHook extends js.Object {
   
-  def apply(): Fn1 = js.native
-  def apply(context: Context[ReactReduxContextValue[_, AnyAction]]): Fn1 = js.native
+  def apply[S, A /* <: Action[_] */](): js.Function0[Dispatch[A]] = js.native
+  def apply[S, A /* <: Action[_] */](context: Context[ReactReduxContextValue[S, A]]): js.Function0[Dispatch[A]] = js.native
 }

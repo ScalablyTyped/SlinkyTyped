@@ -10,18 +10,18 @@ trait DocumentFilter extends js.Object {
   /**
     * A language id, like `typescript`.
     */
-  var language: js.UndefOr[String] = js.native
+  val language: js.UndefOr[String] = js.native
   
   /**
     * A [glob pattern](#GlobPattern) that is matched on the absolute path of the document. Use a [relative pattern](#RelativePattern)
     * to filter documents to a [workspace folder](#WorkspaceFolder).
     */
-  var pattern: js.UndefOr[GlobPattern] = js.native
+  val pattern: js.UndefOr[GlobPattern] = js.native
   
   /**
     * A Uri [scheme](#Uri.scheme), like `file` or `untitled`.
     */
-  var scheme: js.UndefOr[String] = js.native
+  val scheme: js.UndefOr[String] = js.native
 }
 object DocumentFilter {
   

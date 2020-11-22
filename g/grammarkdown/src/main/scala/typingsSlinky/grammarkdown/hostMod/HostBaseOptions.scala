@@ -8,10 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait HostBaseOptions extends js.Object {
   
+  /**
+    * Indicates whether the host is case-insensitive (`true`) or case-sensitive (`false`).
+    */
   var ignoreCase: js.UndefOr[Boolean] = js.native
   
+  /**
+    * A set of known grammars in the form `{ "name": "path" }`
+    */
   var knownGrammars: js.UndefOr[Record[String, String]] = js.native
   
+  /**
+    * Indicates whether to include builtin grammars in the set of known grammars.
+    */
   var useBuiltinGrammars: js.UndefOr[Boolean] = js.native
 }
 object HostBaseOptions {

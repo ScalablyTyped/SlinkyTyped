@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@tensorflow/tfjs-core", "AdamOptimizer")
 @js.native
 class AdamOptimizer protected ()
-  extends typingsSlinky.tensorflowTfjsCore.adamOptimizerMod.AdamOptimizer {
+  extends typingsSlinky.tensorflowTfjsCore.baseMod.AdamOptimizer {
   def this(learningRate: Double, beta1: Double, beta2: Double) = this()
   def this(learningRate: Double, beta1: Double, beta2: Double, epsilon: Double) = this()
 }

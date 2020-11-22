@@ -9,15 +9,15 @@ trait TypePredicateNode
   extends TypeNode
      with HasType {
   
-  var assertsModifier: js.UndefOr[AssertsToken] = js.native
+  val assertsModifier: js.UndefOr[AssertsToken] = js.native
   
   @JSName("kind")
-  var kind_TypePredicateNode: typingsSlinky.typescript.mod.SyntaxKind.TypePredicate = js.native
+  val kind_TypePredicateNode: typingsSlinky.typescript.mod.SyntaxKind.TypePredicate = js.native
   
-  var parameterName: Identifier | ThisTypeNode = js.native
+  val parameterName: Identifier | ThisTypeNode = js.native
   
   @JSName("parent")
-  var parent_TypePredicateNode: SignatureDeclaration | JSDocTypeExpression = js.native
+  val parent_TypePredicateNode: SignatureDeclaration | JSDocTypeExpression = js.native
   
-  var `type`: js.UndefOr[TypeNode] = js.native
+  val `type`: js.UndefOr[TypeNode] = js.native
 }

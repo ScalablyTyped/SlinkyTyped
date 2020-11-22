@@ -8,6 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object exec extends js.Object {
   
+  /**
+    * Call `youtube-dl` with whatever arguments you like.
+    */
   def apply(
     url: String,
     args: js.Array[String],

@@ -8,5 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object get extends js.Object {
   
+  /**
+    * Looks up a JSON pointer in an object
+    */
   def apply(`object`: js.Object, pointer: String): js.Any = js.native
 }

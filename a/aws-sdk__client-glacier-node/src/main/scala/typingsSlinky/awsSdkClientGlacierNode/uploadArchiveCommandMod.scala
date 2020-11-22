@@ -5,7 +5,6 @@ import typingsSlinky.awsSdkClientGlacierNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientGlacierNode.typesUploadArchiveInputMod.UploadArchiveInput
 import typingsSlinky.awsSdkClientGlacierNode.typesUploadArchiveOutputMod.UploadArchiveOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import typingsSlinky.node.streamMod.Readable
@@ -23,15 +22,12 @@ object uploadArchiveCommandMod extends js.Object {
           UploadArchiveInput[Readable], 
           OutputTypesUnion, 
           UploadArchiveOutput, 
-          GlacierResolvedConfiguration, 
-          Readable
+          GlacierResolvedConfiguration
         ] {
     def this(input: UploadArchiveInput[Readable]) = this()
     
-    val middlewareStack: MiddlewareStack[UploadArchiveInput[Readable], UploadArchiveOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: GlacierResolvedConfiguration
     ): Handler[UploadArchiveInput[Readable], UploadArchiveOutput] = js.native
   }

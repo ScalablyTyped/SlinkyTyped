@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ShortcutDetails extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/shortcut-details
+  // Docs: https://electronjs.org/docs/api/structures/shortcut-details
   /**
     * The Application User Model ID. Default is empty.
     */

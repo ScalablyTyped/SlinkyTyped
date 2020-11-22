@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("devextreme", "ui.dxGantt")
 @js.native
 class dxGantt protected ()
-  extends typingsSlinky.devextreme.mod.DevExpress.ui.Widget {
+  extends typingsSlinky.devextreme.mod.DevExpress.ui.dxGantt {
   def this(element: JQuery) = this()
   def this(element: Element) = this()
   def this(element: JQuery, options: dxGanttOptions) = this()

@@ -13,25 +13,16 @@ object webappsecCredentialManagementStrings {
   def `cross-platform`: `cross-platform` = "cross-platform".asInstanceOf[`cross-platform`]
   
   @scala.inline
-  def direct: direct = "direct".asInstanceOf[direct]
-  
-  @scala.inline
   def discouraged: discouraged = "discouraged".asInstanceOf[discouraged]
   
   @scala.inline
   def federated: federated = "federated".asInstanceOf[federated]
   
   @scala.inline
-  def indirect: indirect = "indirect".asInstanceOf[indirect]
-  
-  @scala.inline
   def internal: internal = "internal".asInstanceOf[internal]
   
   @scala.inline
   def nfc: nfc = "nfc".asInstanceOf[nfc]
-  
-  @scala.inline
-  def none: none = "none".asInstanceOf[none]
   
   @scala.inline
   def optional: optional = "optional".asInstanceOf[optional]
@@ -64,25 +55,16 @@ object webappsecCredentialManagementStrings {
   sealed trait `cross-platform` extends js.Object
   
   @js.native
-  sealed trait direct extends js.Object
-  
-  @js.native
   sealed trait discouraged extends js.Object
   
   @js.native
   sealed trait federated extends js.Object
   
   @js.native
-  sealed trait indirect extends js.Object
-  
-  @js.native
   sealed trait internal extends js.Object
   
   @js.native
   sealed trait nfc extends js.Object
-  
-  @js.native
-  sealed trait none extends js.Object
   
   @js.native
   sealed trait optional extends js.Object

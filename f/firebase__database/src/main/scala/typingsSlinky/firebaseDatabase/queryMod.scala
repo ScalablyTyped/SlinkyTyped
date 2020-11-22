@@ -51,6 +51,11 @@ object queryMod extends js.Object {
     def equalTo(value: Null, name: String): Query = js.native
     
     /**
+      * Get the server-value for this query, or return a cached value if not connected.
+      */
+    def get(): js.Promise[DataSnapshot] = js.native
+    
+    /**
       * @return {!QueryParams}
       */
     def getQueryParams(): QueryParams = js.native

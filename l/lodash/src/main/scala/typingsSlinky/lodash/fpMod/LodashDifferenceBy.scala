@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashDifferenceBy extends LodashConvertible {
+trait LodashDifferenceBy extends js.Object {
   
   def apply[T1](iteratee: __): LodashDifferenceBy1x2[T1] = js.native
   def apply[T1](iteratee: __, array: List[T1]): LodashDifferenceBy1x2[T1] = js.native

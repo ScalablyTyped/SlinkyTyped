@@ -1,6 +1,6 @@
 package typingsSlinky.grammarkdown.mod
 
-import typingsSlinky.grammarkdown.nodesMod.AssertionKind
+import typingsSlinky.grammarkdown.tokensMod.AssertionKind
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.CloseBracketToken
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.OpenBracketGreaterThanToken
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.OpenBracketToken

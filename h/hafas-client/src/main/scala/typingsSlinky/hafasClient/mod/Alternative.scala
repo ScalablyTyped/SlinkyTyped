@@ -17,13 +17,23 @@ trait Alternative extends js.Object {
   
   var loadFactor: js.UndefOr[String] = js.native
   
+  var nextStopovers: js.UndefOr[js.Array[StopOver]] = js.native
+  
   var plannedPlatform: js.UndefOr[String] = js.native
   
   var plannedWhen: js.UndefOr[String] = js.native
   
   var platform: js.UndefOr[String] = js.native
   
-  var remarks: js.UndefOr[js.Array[Hint]] = js.native
+  var previousStopovers: js.UndefOr[js.Array[StopOver]] = js.native
+  
+  var prognosedPlatform: js.UndefOr[String] = js.native
+  
+  var prognosedWhen: js.UndefOr[String] = js.native
+  
+  var provenance: js.UndefOr[String] = js.native
+  
+  var remarks: js.UndefOr[js.Array[Hint | Warning]] = js.native
   
   var stop: js.UndefOr[Station | Stop] = js.native
   
@@ -88,6 +98,15 @@ object Alternative {
     def deleteLoadFactor: Self = this.set("loadFactor", js.undefined)
     
     @scala.inline
+    def setNextStopoversVarargs(value: StopOver*): Self = this.set("nextStopovers", js.Array(value :_*))
+    
+    @scala.inline
+    def setNextStopovers(value: js.Array[StopOver]): Self = this.set("nextStopovers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNextStopovers: Self = this.set("nextStopovers", js.undefined)
+    
+    @scala.inline
     def setPlannedPlatform(value: String): Self = this.set("plannedPlatform", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -106,10 +125,37 @@ object Alternative {
     def deletePlatform: Self = this.set("platform", js.undefined)
     
     @scala.inline
-    def setRemarksVarargs(value: Hint*): Self = this.set("remarks", js.Array(value :_*))
+    def setPreviousStopoversVarargs(value: StopOver*): Self = this.set("previousStopovers", js.Array(value :_*))
     
     @scala.inline
-    def setRemarks(value: js.Array[Hint]): Self = this.set("remarks", value.asInstanceOf[js.Any])
+    def setPreviousStopovers(value: js.Array[StopOver]): Self = this.set("previousStopovers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreviousStopovers: Self = this.set("previousStopovers", js.undefined)
+    
+    @scala.inline
+    def setPrognosedPlatform(value: String): Self = this.set("prognosedPlatform", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrognosedPlatform: Self = this.set("prognosedPlatform", js.undefined)
+    
+    @scala.inline
+    def setPrognosedWhen(value: String): Self = this.set("prognosedWhen", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrognosedWhen: Self = this.set("prognosedWhen", js.undefined)
+    
+    @scala.inline
+    def setProvenance(value: String): Self = this.set("provenance", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProvenance: Self = this.set("provenance", js.undefined)
+    
+    @scala.inline
+    def setRemarksVarargs(value: (Hint | Warning)*): Self = this.set("remarks", js.Array(value :_*))
+    
+    @scala.inline
+    def setRemarks(value: js.Array[Hint | Warning]): Self = this.set("remarks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRemarks: Self = this.set("remarks", js.undefined)

@@ -22,7 +22,7 @@ object arrayMod extends js.Object {
   def find[VALUE](
     arr: js.Array[VALUE],
     func: js.Function3[/* p0 */ VALUE, /* p1 */ Double, /* p2 */ js.Any, Boolean]
-  ): VALUE = js.native
+  ): VALUE | Null = js.native
   
   def findIndex(arr: js.Array[_], func: js.Function0[Unit]): Double = js.native
   

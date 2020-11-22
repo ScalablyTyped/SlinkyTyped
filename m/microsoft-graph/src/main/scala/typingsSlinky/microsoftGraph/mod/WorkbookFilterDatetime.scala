@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WorkbookFilterDatetime extends js.Object {
   
-  var date: js.UndefOr[String] = js.native
+  var date: js.UndefOr[NullableOption[String]] = js.native
   
   var specificity: js.UndefOr[String] = js.native
 }
@@ -35,10 +35,13 @@ object WorkbookFilterDatetime {
     }
     
     @scala.inline
-    def setDate(value: String): Self = this.set("date", value.asInstanceOf[js.Any])
+    def setDate(value: NullableOption[String]): Self = this.set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDate: Self = this.set("date", js.undefined)
+    
+    @scala.inline
+    def setDateNull: Self = this.set("date", null)
     
     @scala.inline
     def setSpecificity(value: String): Self = this.set("specificity", value.asInstanceOf[js.Any])

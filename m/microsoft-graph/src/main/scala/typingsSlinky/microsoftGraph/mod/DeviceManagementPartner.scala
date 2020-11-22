@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeviceManagementPartner extends Entity {
   
   // Partner display name
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // Whether device management partner is configured or not
   var isConfigured: js.UndefOr[Boolean] = js.native
@@ -23,13 +23,13 @@ trait DeviceManagementPartner extends Entity {
   var partnerState: js.UndefOr[DeviceManagementPartnerTenantState] = js.native
   
   // Partner Single tenant App id
-  var singleTenantAppId: js.UndefOr[String] = js.native
+  var singleTenantAppId: js.UndefOr[NullableOption[String]] = js.native
   
   // DateTime in UTC when PartnerDevices will be marked as NonCompliant
-  var whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime: js.UndefOr[String] = js.native
+  var whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // DateTime in UTC when PartnerDevices will be removed
-  var whenPartnerDevicesWillBeRemovedDateTime: js.UndefOr[String] = js.native
+  var whenPartnerDevicesWillBeRemovedDateTime: js.UndefOr[NullableOption[String]] = js.native
 }
 object DeviceManagementPartner {
   
@@ -55,10 +55,13 @@ object DeviceManagementPartner {
     }
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
     
     @scala.inline
     def setIsConfigured(value: Boolean): Self = this.set("isConfigured", value.asInstanceOf[js.Any])
@@ -85,21 +88,30 @@ object DeviceManagementPartner {
     def deletePartnerState: Self = this.set("partnerState", js.undefined)
     
     @scala.inline
-    def setSingleTenantAppId(value: String): Self = this.set("singleTenantAppId", value.asInstanceOf[js.Any])
+    def setSingleTenantAppId(value: NullableOption[String]): Self = this.set("singleTenantAppId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSingleTenantAppId: Self = this.set("singleTenantAppId", js.undefined)
     
     @scala.inline
-    def setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(value: String): Self = this.set("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", value.asInstanceOf[js.Any])
+    def setSingleTenantAppIdNull: Self = this.set("singleTenantAppId", null)
+    
+    @scala.inline
+    def setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime(value: NullableOption[String]): Self = this.set("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime: Self = this.set("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", js.undefined)
     
     @scala.inline
-    def setWhenPartnerDevicesWillBeRemovedDateTime(value: String): Self = this.set("whenPartnerDevicesWillBeRemovedDateTime", value.asInstanceOf[js.Any])
+    def setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTimeNull: Self = this.set("whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime", null)
+    
+    @scala.inline
+    def setWhenPartnerDevicesWillBeRemovedDateTime(value: NullableOption[String]): Self = this.set("whenPartnerDevicesWillBeRemovedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWhenPartnerDevicesWillBeRemovedDateTime: Self = this.set("whenPartnerDevicesWillBeRemovedDateTime", js.undefined)
+    
+    @scala.inline
+    def setWhenPartnerDevicesWillBeRemovedDateTimeNull: Self = this.set("whenPartnerDevicesWillBeRemovedDateTime", null)
   }
 }

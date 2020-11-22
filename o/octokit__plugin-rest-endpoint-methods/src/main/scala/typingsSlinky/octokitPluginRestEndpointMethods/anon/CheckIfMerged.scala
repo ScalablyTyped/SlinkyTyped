@@ -24,7 +24,7 @@ trait CheckIfMerged extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/pulls/:pull_number/merge']['response'] */ js.Any
   ] = js.native
   @JSName("checkIfMerged")
-  var checkIfMerged_Original: `289` = js.native
+  var checkIfMerged_Original: `292` = js.native
   
   /**
     * Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -69,7 +69,7 @@ trait CheckIfMerged extends js.Object {
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
     */
   @JSName("createReplyForReviewComment")
-  var createReplyForReviewComment_Original: `291` = js.native
+  var createReplyForReviewComment_Original: `294` = js.native
   
   /**
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
@@ -158,7 +158,7 @@ trait CheckIfMerged extends js.Object {
     * *   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
     */
   @JSName("createReviewComment")
-  var createReviewComment_Original: `293` = js.native
+  var createReviewComment_Original: `296` = js.native
   
   /**
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
@@ -170,7 +170,7 @@ trait CheckIfMerged extends js.Object {
     * The `position` value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
     */
   @JSName("createReview")
-  var createReview_Original: `292` = js.native
+  var createReview_Original: `295` = js.native
   
   /**
     * Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -182,7 +182,7 @@ trait CheckIfMerged extends js.Object {
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
     */
   @JSName("create")
-  var create_Original: `290` = js.native
+  var create_Original: `293` = js.native
   
   def deletePendingReview(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id']['response'] */ js.Any
@@ -196,7 +196,7 @@ trait CheckIfMerged extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id']['response'] */ js.Any
   ] = js.native
   @JSName("deletePendingReview")
-  var deletePendingReview_Original: `294` = js.native
+  var deletePendingReview_Original: `297` = js.native
   
   /**
     * Deletes a review comment.
@@ -216,7 +216,7 @@ trait CheckIfMerged extends js.Object {
     * Deletes a review comment.
     */
   @JSName("deleteReviewComment")
-  var deleteReviewComment_Original: `295` = js.native
+  var deleteReviewComment_Original: `298` = js.native
   
   /**
     * **Note:** To dismiss a pull request review on a [protected branch](https://developer.github.com/v3/repos/branches/), you must be a repository administrator or be included in the list of people or teams who can dismiss pull request reviews.
@@ -236,7 +236,7 @@ trait CheckIfMerged extends js.Object {
     * **Note:** To dismiss a pull request review on a [protected branch](https://developer.github.com/v3/repos/branches/), you must be a repository administrator or be included in the list of people or teams who can dismiss pull request reviews.
     */
   @JSName("dismissReview")
-  var dismissReview_Original: `296` = js.native
+  var dismissReview_Original: `299` = js.native
   
   /**
     * Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -337,10 +337,10 @@ trait CheckIfMerged extends js.Object {
     * The `reactions` key will have the following payload where `url` can be used to construct the API location for [listing and creating](https://developer.github.com/v3/reactions) reactions.
     */
   @JSName("getReviewComment")
-  var getReviewComment_Original: `299` = js.native
+  var getReviewComment_Original: `302` = js.native
   
   @JSName("getReview")
-  var getReview_Original: `298` = js.native
+  var getReview_Original: `301` = js.native
   
   /**
     * Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -360,7 +360,7 @@ trait CheckIfMerged extends js.Object {
     * Pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
     */
   @JSName("get")
-  var get_Original: `297` = js.native
+  var get_Original: `300` = js.native
   
   /**
     * Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -395,7 +395,7 @@ trait CheckIfMerged extends js.Object {
     * List comments for a specific pull request review.
     */
   @JSName("listCommentsForReview")
-  var listCommentsForReview_Original: `301` = js.native
+  var listCommentsForReview_Original: `304` = js.native
   
   /**
     * Lists a maximum of 250 commits for a pull request. To receive a complete commit list for pull requests with more than 250 commits, use the [List commits](https://developer.github.com/v3/repos/commits/#list-commits) endpoint.
@@ -415,7 +415,7 @@ trait CheckIfMerged extends js.Object {
     * Lists a maximum of 250 commits for a pull request. To receive a complete commit list for pull requests with more than 250 commits, use the [List commits](https://developer.github.com/v3/repos/commits/#list-commits) endpoint.
     */
   @JSName("listCommits")
-  var listCommits_Original: `302` = js.native
+  var listCommits_Original: `305` = js.native
   
   /**
     * **Note:** Responses include a maximum of 3000 files. The paginated response returns 30 files per page by default.
@@ -435,7 +435,7 @@ trait CheckIfMerged extends js.Object {
     * **Note:** Responses include a maximum of 3000 files. The paginated response returns 30 files per page by default.
     */
   @JSName("listFiles")
-  var listFiles_Original: `303` = js.native
+  var listFiles_Original: `306` = js.native
   
   def listRequestedReviewers(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers']['response'] */ js.Any
@@ -449,7 +449,7 @@ trait CheckIfMerged extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/pulls/:pull_number/requested_reviewers']['response'] */ js.Any
   ] = js.native
   @JSName("listRequestedReviewers")
-  var listRequestedReviewers_Original: `304` = js.native
+  var listRequestedReviewers_Original: `307` = js.native
   
   /**
     * **Note:** Multi-line comments on pull requests are currently in public beta and subject to change.
@@ -544,7 +544,7 @@ trait CheckIfMerged extends js.Object {
     * The `reactions` key will have the following payload where `url` can be used to construct the API location for [listing and creating](https://developer.github.com/v3/reactions) reactions.
     */
   @JSName("listReviewCommentsForRepo")
-  var listReviewCommentsForRepo_Original: `306` = js.native
+  var listReviewCommentsForRepo_Original: `309` = js.native
   
   /**
     * **Note:** Multi-line comments on pull requests are currently in public beta and subject to change.
@@ -570,7 +570,7 @@ trait CheckIfMerged extends js.Object {
     * The `reactions` key will have the following payload where `url` can be used to construct the API location for [listing and creating](https://developer.github.com/v3/reactions) reactions.
     */
   @JSName("listReviewComments")
-  var listReviewComments_Original: `305` = js.native
+  var listReviewComments_Original: `308` = js.native
   
   /**
     * The list of reviews returns in chronological order.
@@ -590,13 +590,13 @@ trait CheckIfMerged extends js.Object {
     * The list of reviews returns in chronological order.
     */
   @JSName("listReviews")
-  var listReviews_Original: `307` = js.native
+  var listReviews_Original: `310` = js.native
   
   /**
     * Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
     */
   @JSName("list")
-  var list_Original: `300` = js.native
+  var list_Original: `303` = js.native
   
   /**
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
@@ -616,7 +616,7 @@ trait CheckIfMerged extends js.Object {
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
     */
   @JSName("merge")
-  var merge_Original: `308` = js.native
+  var merge_Original: `311` = js.native
   
   def removeRequestedReviewers(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/pulls/:pull_number/requested_reviewers']['response'] */ js.Any
@@ -630,7 +630,7 @@ trait CheckIfMerged extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/pulls/:pull_number/requested_reviewers']['response'] */ js.Any
   ] = js.native
   @JSName("removeRequestedReviewers")
-  var removeRequestedReviewers_Original: `309` = js.native
+  var removeRequestedReviewers_Original: `312` = js.native
   
   /**
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
@@ -650,7 +650,7 @@ trait CheckIfMerged extends js.Object {
     * This endpoint triggers [notifications](https://docs.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
     */
   @JSName("requestReviewers")
-  var requestReviewers_Original: `310` = js.native
+  var requestReviewers_Original: `313` = js.native
   
   def submitReview(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/events']['response'] */ js.Any
@@ -664,7 +664,7 @@ trait CheckIfMerged extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /repos/:owner/:repo/pulls/:pull_number/reviews/:review_id/events']['response'] */ js.Any
   ] = js.native
   @JSName("submitReview")
-  var submitReview_Original: `311` = js.native
+  var submitReview_Original: `314` = js.native
   
   /**
     * Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -701,7 +701,7 @@ trait CheckIfMerged extends js.Object {
     * Updates the pull request branch with the latest upstream changes by merging HEAD from the base branch into the pull request branch.
     */
   @JSName("updateBranch")
-  var updateBranch_Original: `313` = js.native
+  var updateBranch_Original: `316` = js.native
   
   /**
     * Update the review summary comment with new text.
@@ -772,13 +772,13 @@ trait CheckIfMerged extends js.Object {
     * *   For single-line comments, the diff-positioned way of referencing comments for the `position` attribute. For more information, see `position` in the [input parameters](https://developer.github.com/v3/pulls/comments/#parameters-2) table.
     */
   @JSName("updateReviewComment")
-  var updateReviewComment_Original: `315` = js.native
+  var updateReviewComment_Original: `318` = js.native
   
   /**
     * Update the review summary comment with new text.
     */
   @JSName("updateReview")
-  var updateReview_Original: `314` = js.native
+  var updateReview_Original: `317` = js.native
   
   /**
     * Draft pull requests are available in public repositories with GitHub Free and GitHub Free for organizations, GitHub Pro, and legacy per-repository billing plans, and in public and private repositories with GitHub Team and GitHub Enterprise Cloud. For more information, see [GitHub's products](https://docs.github.com/github/getting-started-with-github/githubs-products) in the GitHub Help documentation.
@@ -786,5 +786,5 @@ trait CheckIfMerged extends js.Object {
     * To open or update a pull request in a public repository, you must have write access to the head or the source branch. For organization-owned repositories, you must be a member of the organization that owns the repository to open or update a pull request.
     */
   @JSName("update")
-  var update_Original: `312` = js.native
+  var update_Original: `315` = js.native
 }

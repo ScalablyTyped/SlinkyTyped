@@ -44,13 +44,19 @@ object expressToolingMod extends js.Object {
   ]
   
   /**
-    * A factory that returns a middleware that compares scopes attached to `express.Request` object with a given list (`scopes` parameter).
-    * If all required scopes are matched, the middleware calls `next`. Otherwise, it rejects the request with _403 FORBIDDEN_.
+    * A factory that returns a middleware that compares scopes attached to `express.Request` object
+    * with a given list (`scopes` parameter).
+    * If all required scopes are matched, the middleware calls `next`.
+    * Otherwise, it rejects the request with _403 FORBIDDEN_.
     *
     * * ⚠️&nbsp;&nbsp;This middleware requires scope information to be attached to the `Express.request` object.
-    * The `authenticationMiddleware` can do this job. Otherwise `request.$$tokeninfo.scope: string[]` has to be set manually.
+    * The `authenticationMiddleware` can do this job.
+    * Otherwise `request.$$tokeninfo.scope: string[]` has to be set manually.
     *
-    * There may apply cases where another type of authorization should be used. For that cases `options.precedenceFunction` has to be set. If the `precedence` function returns with anything else than resolved state normal scope validation is applied afterwards.
+    * There may apply cases where another type of authorization should be used.
+    * For that cases `options.precedenceFunction` has to be set.
+    * If the `precedence` function returns with anything else than resolved state normal
+    * scope validation is applied afterwards.
     *
     * Detailed middleware authorization flow:
     *

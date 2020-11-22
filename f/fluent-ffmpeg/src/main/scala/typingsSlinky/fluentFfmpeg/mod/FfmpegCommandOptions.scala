@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FfmpegCommandOptions extends js.Object {
   
+  var cwd: js.UndefOr[String] = js.native
+  
   var logger: js.UndefOr[FfmpegCommandLogger] = js.native
   
   var niceness: js.UndefOr[Double] = js.native
@@ -46,6 +48,12 @@ object FfmpegCommandOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setCwd(value: String): Self = this.set("cwd", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCwd: Self = this.set("cwd", js.undefined)
     
     @scala.inline
     def setLogger(value: FfmpegCommandLogger): Self = this.set("logger", value.asInstanceOf[js.Any])

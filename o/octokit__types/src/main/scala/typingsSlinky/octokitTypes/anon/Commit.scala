@@ -9,7 +9,7 @@ trait Commit extends js.Object {
   
   var author: Gravatarid = js.native
   
-  var commit: Message = js.native
+  var commit: Tree = js.native
   
   var committer: Gravatarid = js.native
   
@@ -26,7 +26,7 @@ object Commit {
   @scala.inline
   def apply(
     author: Gravatarid,
-    commit: Message,
+    commit: Tree,
     committer: Gravatarid,
     node_id: String,
     parents: js.Array[ShaUrl],
@@ -56,7 +56,7 @@ object Commit {
     def setAuthor(value: Gravatarid): Self = this.set("author", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCommit(value: Message): Self = this.set("commit", value.asInstanceOf[js.Any])
+    def setCommit(value: Tree): Self = this.set("commit", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCommitter(value: Gravatarid): Self = this.set("committer", value.asInstanceOf[js.Any])

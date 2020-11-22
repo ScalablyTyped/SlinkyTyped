@@ -1,8 +1,8 @@
 package typingsSlinky.mendixmodelsdk.datatypesMod.datatypes
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.AppServiceAction
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.AppServiceActionParameter
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.constantsMod.constants.Constant
 import typingsSlinky.mendixmodelsdk.datasetsMod.datasets.DataSetParameter
 import typingsSlinky.mendixmodelsdk.datatypesMod.StructureVersionInfo
@@ -14,6 +14,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.MicroflowBase
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.MicroflowParameterBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,8 +36,8 @@ abstract class EntityType protected () extends DataType {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsAppServiceActionParameter")
@@ -75,9 +76,6 @@ abstract class EntityType protected () extends DataType {
     */
   @JSName("entity")
   val entity_FEntityType: IEntity = js.native
-  
-  @JSName("model")
-  var model_FEntityType: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/datatypes", "datatypes.EntityType")

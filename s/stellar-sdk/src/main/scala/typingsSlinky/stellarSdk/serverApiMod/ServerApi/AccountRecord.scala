@@ -38,6 +38,10 @@ trait AccountRecord
   
   var last_modified_ledger: Double = js.native
   
+  var num_sponsored: Double = js.native
+  
+  var num_sponsoring: Double = js.native
+  
   def offers(): js.Promise[CollectionPage[OfferRecord]] = js.native
   def offers(options: CallFunctionTemplateOptions): js.Promise[CollectionPage[OfferRecord]] = js.native
   @JSName("offers")
@@ -58,6 +62,8 @@ trait AccountRecord
   var sequence: String = js.native
   
   var signers: js.Array[AccountRecordSigners] = js.native
+  
+  var sponsor: js.UndefOr[String] = js.native
   
   var subentry_count: Double = js.native
   

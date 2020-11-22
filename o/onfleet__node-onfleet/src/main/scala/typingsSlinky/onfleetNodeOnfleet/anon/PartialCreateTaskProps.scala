@@ -3,6 +3,7 @@ package typingsSlinky.onfleetNodeOnfleet.anon
 import typingsSlinky.onfleetNodeOnfleet.destinationsMod.CreateDestinationProps
 import typingsSlinky.onfleetNodeOnfleet.metadataMod.OnfleetMetadata
 import typingsSlinky.onfleetNodeOnfleet.recipientsMod.CreateRecipientProps
+import typingsSlinky.onfleetNodeOnfleet.tasksMod.Barcode
 import typingsSlinky.onfleetNodeOnfleet.tasksMod.TaskAutoAssign
 import typingsSlinky.onfleetNodeOnfleet.tasksMod.TaskCompletionRequirements
 import scala.scalajs.js
@@ -14,6 +15,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PartialCreateTaskProps extends js.Object {
   
   var autoAssign: js.UndefOr[TaskAutoAssign] = js.native
+  
+  var barcodes: js.UndefOr[js.Array[Barcode]] = js.native
   
   var capacity: js.UndefOr[Double] = js.native
   
@@ -75,6 +78,15 @@ object PartialCreateTaskProps {
     
     @scala.inline
     def deleteAutoAssign: Self = this.set("autoAssign", js.undefined)
+    
+    @scala.inline
+    def setBarcodesVarargs(value: Barcode*): Self = this.set("barcodes", js.Array(value :_*))
+    
+    @scala.inline
+    def setBarcodes(value: js.Array[Barcode]): Self = this.set("barcodes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBarcodes: Self = this.set("barcodes", js.undefined)
     
     @scala.inline
     def setCapacity(value: Double): Self = this.set("capacity", value.asInstanceOf[js.Any])

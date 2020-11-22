@@ -1,7 +1,9 @@
 package typingsSlinky.openapiFramework.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.ajv.mod.KeywordDefinition
 import typingsSlinky.openapiSecurityHandler.mod.SecurityHandlers
+import typingsSlinky.openapiTypes.mod.IJsonSchema
 import typingsSlinky.openapiTypes.mod.OpenAPIV2.Document
 import typingsSlinky.tsLog.mod.Logger
 import scala.scalajs.js
@@ -15,13 +17,15 @@ trait OpenAPIFrameworkArgs extends js.Object {
   
   var customFormats: js.UndefOr[StringDictionary[js.Function1[/* arg */ js.Any, Boolean]]] = js.native
   
+  var customKeywords: js.UndefOr[StringDictionary[KeywordDefinition]] = js.native
+  
   var dependencies: js.UndefOr[StringDictionary[js.Any]] = js.native
   
   var enableObjectCoercion: js.UndefOr[Boolean] = js.native
   
   var errorTransformer: js.UndefOr[OpenAPIErrorTransformer] = js.native
   
-  var externalSchemas: js.UndefOr[typingsSlinky.openapiFramework.anon.String] = js.native
+  var externalSchemas: js.UndefOr[StringDictionary[IJsonSchema]] = js.native
   
   var logger: js.UndefOr[Logger] = js.native
   
@@ -74,6 +78,12 @@ object OpenAPIFrameworkArgs {
     def deleteCustomFormats: Self = this.set("customFormats", js.undefined)
     
     @scala.inline
+    def setCustomKeywords(value: StringDictionary[KeywordDefinition]): Self = this.set("customKeywords", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomKeywords: Self = this.set("customKeywords", js.undefined)
+    
+    @scala.inline
     def setDependencies(value: StringDictionary[js.Any]): Self = this.set("dependencies", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -92,7 +102,7 @@ object OpenAPIFrameworkArgs {
     def deleteErrorTransformer: Self = this.set("errorTransformer", js.undefined)
     
     @scala.inline
-    def setExternalSchemas(value: typingsSlinky.openapiFramework.anon.String): Self = this.set("externalSchemas", value.asInstanceOf[js.Any])
+    def setExternalSchemas(value: StringDictionary[IJsonSchema]): Self = this.set("externalSchemas", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExternalSchemas: Self = this.set("externalSchemas", js.undefined)

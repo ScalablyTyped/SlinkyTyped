@@ -11,7 +11,7 @@ trait OperationHistoryOptions extends js.Object {
   
   var from: js.UndefOr[String | js.Date] = js.native
   
-  var label: String = js.native
+  var label: js.UndefOr[String] = js.native
   
   var records: js.UndefOr[Double] = js.native
   
@@ -24,8 +24,8 @@ trait OperationHistoryOptions extends js.Object {
 object OperationHistoryOptions {
   
   @scala.inline
-  def apply(label: String, `type`: String): OperationHistoryOptions = {
-    val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any])
+  def apply(`type`: String): OperationHistoryOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OperationHistoryOptions]
   }
@@ -46,9 +46,6 @@ object OperationHistoryOptions {
     }
     
     @scala.inline
-    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -65,6 +62,12 @@ object OperationHistoryOptions {
     
     @scala.inline
     def deleteFrom: Self = this.set("from", js.undefined)
+    
+    @scala.inline
+    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
     
     @scala.inline
     def setRecords(value: Double): Self = this.set("records", value.asInstanceOf[js.Any])

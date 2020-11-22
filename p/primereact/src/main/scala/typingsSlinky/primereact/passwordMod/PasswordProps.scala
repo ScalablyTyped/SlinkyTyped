@@ -19,6 +19,10 @@ trait PasswordProps
   
   var mediumLabel: js.UndefOr[String] = js.native
   
+  var panelClassName: js.UndefOr[String] = js.native
+  
+  var panelStyle: js.UndefOr[js.Object] = js.native
+  
   var promptLabel: js.UndefOr[String] = js.native
   
   var strongLabel: js.UndefOr[String] = js.native
@@ -63,6 +67,18 @@ object PasswordProps {
     
     @scala.inline
     def deleteMediumLabel: Self = this.set("mediumLabel", js.undefined)
+    
+    @scala.inline
+    def setPanelClassName(value: String): Self = this.set("panelClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePanelClassName: Self = this.set("panelClassName", js.undefined)
+    
+    @scala.inline
+    def setPanelStyle(value: js.Object): Self = this.set("panelStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePanelStyle: Self = this.set("panelStyle", js.undefined)
     
     @scala.inline
     def setPromptLabel(value: String): Self = this.set("promptLabel", value.asInstanceOf[js.Any])

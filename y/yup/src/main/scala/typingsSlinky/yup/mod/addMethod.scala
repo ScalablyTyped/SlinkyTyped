@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object addMethod extends js.Object {
   
-  def apply[T /* <: Schema[_] */](
+  def apply[T /* <: Schema[_, js.Object] */](
     schemaCtor: AnySchemaConstructor,
     name: String,
     method: js.ThisFunction1[/* this */ T, /* repeated */ js.Any, T]

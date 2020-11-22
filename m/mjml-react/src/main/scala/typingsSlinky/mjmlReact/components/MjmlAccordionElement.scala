@@ -2,7 +2,7 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.Property.BackgroundColor
+import typingsSlinky.csstype.mod.BackgroundColorProperty
 import typingsSlinky.mjmlReact.mjmlReactStrings.left
 import typingsSlinky.mjmlReact.mjmlReactStrings.right
 import typingsSlinky.mjmlReact.mod.ClassNameProps
@@ -24,7 +24,7 @@ object MjmlAccordionElement {
        with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlAccordionElement] {
     
     @scala.inline
-    def backgroundColor(value: BackgroundColor): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])

@@ -17,4 +17,6 @@ object dbUtilMod extends js.Object {
   def getHost(uri: String): String = js.native
   
   def getUriBase(host: String, port: Double, dbName: String): String = js.native
+  
+  def isNullOrUndefined(`val`: js.Any): Boolean = js.native
 }

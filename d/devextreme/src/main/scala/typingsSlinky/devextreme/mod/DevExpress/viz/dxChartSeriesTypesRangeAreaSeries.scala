@@ -8,27 +8,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.RangeAreaSeries */
+/**
+  * [descr:dxChartSeriesTypes.RangeAreaSeries]
+  */
 @js.native
 trait dxChartSeriesTypesRangeAreaSeries extends dxChartSeriesTypesCommonSeries {
   
-  /** @name dxChartSeriesTypes.RangeAreaSeries.aggregation */
+  /**
+    * [descr:dxChartSeriesTypes.RangeAreaSeries.aggregation]
+    */
   @JSName("aggregation")
   var aggregation_dxChartSeriesTypesRangeAreaSeries: js.UndefOr[dxChartSeriesTypesRangeAreaSeriesAggregation] = js.native
   
-  /** @name dxChartSeriesTypes.RangeAreaSeries.hoverMode */
+  /**
+    * [descr:dxChartSeriesTypes.RangeAreaSeries.hoverMode]
+    */
   @JSName("hoverMode")
   var hoverMode_dxChartSeriesTypesRangeAreaSeries: js.UndefOr[nearestPoint | includePoints | excludePoints | none] = js.native
   
-  /** @name dxChartSeriesTypes.RangeAreaSeries.label */
+  /**
+    * [descr:dxChartSeriesTypes.RangeAreaSeries.label]
+    */
   @JSName("label")
   var label_dxChartSeriesTypesRangeAreaSeries: js.UndefOr[dxChartSeriesTypesRangeAreaSeriesLabel] = js.native
   
-  /** @name dxChartSeriesTypes.RangeAreaSeries.point */
+  /**
+    * [descr:dxChartSeriesTypes.RangeAreaSeries.point]
+    */
   @JSName("point")
   var point_dxChartSeriesTypesRangeAreaSeries: js.UndefOr[dxChartSeriesTypesRangeAreaSeriesPoint] = js.native
   
-  /** @name dxChartSeriesTypes.RangeAreaSeries.selectionMode */
+  /**
+    * [descr:dxChartSeriesTypes.RangeAreaSeries.selectionMode]
+    */
   @JSName("selectionMode")
   var selectionMode_dxChartSeriesTypesRangeAreaSeries: js.UndefOr[includePoints | excludePoints | none] = js.native
 }

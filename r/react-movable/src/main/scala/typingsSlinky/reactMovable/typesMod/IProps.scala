@@ -2,10 +2,6 @@ package typingsSlinky.reactMovable.typesMod
 
 import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactMovable.anon.Children
-import typingsSlinky.reactMovable.anon.Elements
-import typingsSlinky.reactMovable.anon.Index
-import typingsSlinky.reactMovable.anon.NewIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,19 +9,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IProps[Value] extends js.Object {
   
-  var beforeDrag: js.UndefOr[js.Function1[/* params */ Elements, Unit]] = js.native
+  var beforeDrag: js.UndefOr[js.Function1[/* params */ BeforeDragParams, Unit]] = js.native
   
   var container: js.UndefOr[Element | Null] = js.native
   
   var lockVertically: Boolean = js.native
   
-  def onChange(meta: NewIndex): Unit = js.native
+  def onChange(meta: OnChangeMeta): Unit = js.native
   
   var removableByMove: Boolean = js.native
   
-  def renderItem(params: Index[Value]): ReactElement = js.native
+  def renderItem(params: RenderItemParams[Value]): ReactElement = js.native
   
-  def renderList(props: Children): ReactElement = js.native
+  def renderList(props: RenderListParams): ReactElement = js.native
   
   var transitionDuration: Double = js.native
   
@@ -38,10 +34,10 @@ object IProps {
   @scala.inline
   def apply[Value](
     lockVertically: Boolean,
-    onChange: NewIndex => Unit,
+    onChange: OnChangeMeta => Unit,
     removableByMove: Boolean,
-    renderItem: Index[Value] => ReactElement,
-    renderList: Children => ReactElement,
+    renderItem: RenderItemParams[Value] => ReactElement,
+    renderList: RenderListParams => ReactElement,
     transitionDuration: Double,
     values: js.Array[Value],
     voiceover: IVoiceover
@@ -69,16 +65,16 @@ object IProps {
     def setLockVertically(value: Boolean): Self = this.set("lockVertically", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnChange(value: NewIndex => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    def setOnChange(value: OnChangeMeta => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def setRemovableByMove(value: Boolean): Self = this.set("removableByMove", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRenderItem(value: Index[Value] => ReactElement): Self = this.set("renderItem", js.Any.fromFunction1(value))
+    def setRenderItem(value: RenderItemParams[Value] => ReactElement): Self = this.set("renderItem", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setRenderList(value: Children => ReactElement): Self = this.set("renderList", js.Any.fromFunction1(value))
+    def setRenderList(value: RenderListParams => ReactElement): Self = this.set("renderList", js.Any.fromFunction1(value))
     
     @scala.inline
     def setTransitionDuration(value: Double): Self = this.set("transitionDuration", value.asInstanceOf[js.Any])
@@ -93,7 +89,7 @@ object IProps {
     def setVoiceover(value: IVoiceover): Self = this.set("voiceover", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBeforeDrag(value: /* params */ Elements => Unit): Self = this.set("beforeDrag", js.Any.fromFunction1(value))
+    def setBeforeDrag(value: /* params */ BeforeDragParams => Unit): Self = this.set("beforeDrag", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteBeforeDrag: Self = this.set("beforeDrag", js.undefined)

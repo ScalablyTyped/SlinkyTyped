@@ -21,8 +21,14 @@ import typingsSlinky.react.mod.AnchorHTMLAttributes
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -203,7 +209,9 @@ object Link {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -316,7 +324,7 @@ object Link {
     @scala.inline
     def fontFamily(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _, 
           RequiredTheme
         ]
     ): this.type = set("fontFamily", value.asInstanceOf[js.Any])
@@ -339,7 +347,7 @@ object Link {
     @scala.inline
     def fontStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontStyle */ _, 
           RequiredTheme
         ]
     ): this.type = set("fontStyle", value.asInstanceOf[js.Any])
@@ -785,7 +793,7 @@ object Link {
     @scala.inline
     def opacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): this.type = set("opacity", value.asInstanceOf[js.Any])
@@ -935,7 +943,7 @@ object Link {
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def referrerPolicy(value: String): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
+    def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])
@@ -979,7 +987,7 @@ object Link {
     @scala.inline
     def textAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextAlignProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextAlign */ _, 
           RequiredTheme
         ]
     ): this.type = set("textAlign", value.asInstanceOf[js.Any])

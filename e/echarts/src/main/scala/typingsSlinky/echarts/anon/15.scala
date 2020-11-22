@@ -8,12 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait `15` extends js.Object {
   
   /**
-    * Color of the area.
-    *
-    *
-    * @see https://echarts.apache.org/en/option.html#series-map.data.itemStyle.areaColor
+    * @see https://echarts.apache.org/en/option.html#series-map.data.emphasis.itemStyle
     */
-  var areaColor: js.UndefOr[BorderType] = js.native
+  var itemStyle: js.UndefOr[AreaColor] = js.native
+  
+  /**
+    * @see https://echarts.apache.org/en/option.html#series-map.data.emphasis.label
+    */
+  var label: js.UndefOr[Rotate] = js.native
 }
 object `15` {
   
@@ -39,9 +41,15 @@ object `15` {
     }
     
     @scala.inline
-    def setAreaColor(value: BorderType): Self = this.set("areaColor", value.asInstanceOf[js.Any])
+    def setItemStyle(value: AreaColor): Self = this.set("itemStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAreaColor: Self = this.set("areaColor", js.undefined)
+    def deleteItemStyle: Self = this.set("itemStyle", js.undefined)
+    
+    @scala.inline
+    def setLabel(value: Rotate): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
   }
 }

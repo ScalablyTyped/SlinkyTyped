@@ -1,6 +1,6 @@
 package typingsSlinky.reactRange.anon
 
-import typingsSlinky.reactRange.typesMod.IThumbProps
+import typingsSlinky.reactRange.typesMod.IMarkProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,17 +10,13 @@ trait Index extends js.Object {
   
   var index: Double = js.native
   
-  var isDragged: Boolean = js.native
-  
-  var props: IThumbProps = js.native
-  
-  var value: Double = js.native
+  var props: IMarkProps = js.native
 }
 object Index {
   
   @scala.inline
-  def apply(index: Double, isDragged: Boolean, props: IThumbProps, value: Double): Index = {
-    val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], isDragged = isDragged.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(index: Double, props: IMarkProps): Index = {
+    val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any], props = props.asInstanceOf[js.Any])
     __obj.asInstanceOf[Index]
   }
   
@@ -43,12 +39,6 @@ object Index {
     def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIsDragged(value: Boolean): Self = this.set("isDragged", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setProps(value: IThumbProps): Self = this.set("props", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setProps(value: IMarkProps): Self = this.set("props", value.asInstanceOf[js.Any])
   }
 }

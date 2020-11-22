@@ -13,6 +13,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SliderChangeEvent extends SliderBaseEvent {
   
   /**
+    * True if change was made by the user. False if change was made programmatically.
+    */
+  var isTrusted: Boolean = js.native
+  
+  /**
     * Dictionary with properties `x` and `y` of the thumb's left-top corner in
     * the control. Available with custom thumb image.
     */
@@ -32,8 +37,8 @@ trait SliderChangeEvent extends SliderBaseEvent {
 object SliderChangeEvent {
   
   @scala.inline
-  def apply(source: Slider, thumbOffset: Point, thumbSize: Size, value: Double): SliderChangeEvent = {
-    val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any], thumbOffset = thumbOffset.asInstanceOf[js.Any], thumbSize = thumbSize.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(isTrusted: Boolean, source: Slider, thumbOffset: Point, thumbSize: Size, value: Double): SliderChangeEvent = {
+    val __obj = js.Dynamic.literal(isTrusted = isTrusted.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], thumbOffset = thumbOffset.asInstanceOf[js.Any], thumbSize = thumbSize.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SliderChangeEvent]
   }
   
@@ -51,6 +56,9 @@ object SliderChangeEvent {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setIsTrusted(value: Boolean): Self = this.set("isTrusted", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setThumbOffset(value: Point): Self = this.set("thumbOffset", value.asInstanceOf[js.Any])

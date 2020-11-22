@@ -30,6 +30,8 @@ trait InstanceDataStorage extends js.Object {
   
   var previousBatch: Nullable[InstancesBatch] = js.native
   
+  var previousRenderId: Double = js.native
+  
   var sideOrientation: Double = js.native
   
   var visibleInstances: js.Any = js.native
@@ -45,10 +47,11 @@ object InstanceDataStorage {
     isFrozen: Boolean,
     manualUpdate: Boolean,
     overridenInstanceCount: Double,
+    previousRenderId: Double,
     sideOrientation: Double,
     visibleInstances: js.Any
   ): InstanceDataStorage = {
-    val __obj = js.Dynamic.literal(batchCache = batchCache.asInstanceOf[js.Any], hardwareInstancedRendering = hardwareInstancedRendering.asInstanceOf[js.Any], instancesBufferSize = instancesBufferSize.asInstanceOf[js.Any], instancesData = instancesData.asInstanceOf[js.Any], isFrozen = isFrozen.asInstanceOf[js.Any], manualUpdate = manualUpdate.asInstanceOf[js.Any], overridenInstanceCount = overridenInstanceCount.asInstanceOf[js.Any], sideOrientation = sideOrientation.asInstanceOf[js.Any], visibleInstances = visibleInstances.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(batchCache = batchCache.asInstanceOf[js.Any], hardwareInstancedRendering = hardwareInstancedRendering.asInstanceOf[js.Any], instancesBufferSize = instancesBufferSize.asInstanceOf[js.Any], instancesData = instancesData.asInstanceOf[js.Any], isFrozen = isFrozen.asInstanceOf[js.Any], manualUpdate = manualUpdate.asInstanceOf[js.Any], overridenInstanceCount = overridenInstanceCount.asInstanceOf[js.Any], previousRenderId = previousRenderId.asInstanceOf[js.Any], sideOrientation = sideOrientation.asInstanceOf[js.Any], visibleInstances = visibleInstances.asInstanceOf[js.Any])
     __obj.asInstanceOf[InstanceDataStorage]
   }
   
@@ -87,6 +90,9 @@ object InstanceDataStorage {
     
     @scala.inline
     def setOverridenInstanceCount(value: Double): Self = this.set("overridenInstanceCount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPreviousRenderId(value: Double): Self = this.set("previousRenderId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSideOrientation(value: Double): Self = this.set("sideOrientation", value.asInstanceOf[js.Any])

@@ -13,16 +13,7 @@ package object mod {
     scala.Unit
   ]
   
-  type AlgorithmCallback = js.Function2[
-    /* error */ js.Error | scala.Null, 
-    /* result */ typingsSlinky.node.Buffer, 
-    scala.Unit
-  ]
-  
-  /**
-    * Prepare compressed versions of assets to serve them with Content-Encoding.
-    */
-  type CompressionPlugin[O] = typingsSlinky.std.Plugin
+  type AlgorithmCallback = js.Function2[/* error */ js.Error | scala.Null, /* result */ js.typedarray.Uint8Array, scala.Unit]
   
   type FilenameFunction = js.Function1[/* info */ typingsSlinky.compressionWebpackPlugin.mod.FileInfo, java.lang.String]
   

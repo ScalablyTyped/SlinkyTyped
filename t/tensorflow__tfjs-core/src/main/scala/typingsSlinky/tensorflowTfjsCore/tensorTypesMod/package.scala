@@ -8,22 +8,22 @@ package object tensorTypesMod {
   
   type GradSaveFunc = js.Function1[
     /* save */ js.Array[
-      typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+      typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
     ], 
     scala.Unit
   ]
   
   type NamedTensorMap = org.scalablytyped.runtime.StringDictionary[
-    typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+    typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
   ]
   
   type NamedVariableMap = org.scalablytyped.runtime.StringDictionary[
-    typingsSlinky.tensorflowTfjsCore.tensorMod.Variable[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+    typingsSlinky.tensorflowTfjsCore.distTensorMod.Variable[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
   ]
   
   /* Rewritten from type alias, can be one of: 
     - scala.Unit
-    - typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+    - typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
     - java.lang.String
     - scala.Double
     - scala.Boolean
@@ -33,5 +33,5 @@ package object tensorTypesMod {
     - typingsSlinky.std.Int32Array
     - typingsSlinky.std.Uint8Array
   */
-  type TensorContainer = typingsSlinky.tensorflowTfjsCore.tensorTypesMod._TensorContainer | typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | scala.Unit | java.lang.String | scala.Double | scala.Boolean | js.typedarray.Float32Array | js.typedarray.Int32Array | js.typedarray.Uint8Array
+  type TensorContainer = typingsSlinky.tensorflowTfjsCore.tensorTypesMod._TensorContainer | typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | scala.Unit | java.lang.String | scala.Double | scala.Boolean | js.typedarray.Float32Array | js.typedarray.Int32Array | js.typedarray.Uint8Array
 }

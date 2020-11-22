@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.anon
 
-import typingsSlinky.babylonjs.mathColorMod.Color4
-import typingsSlinky.babylonjs.mathVectorMod.Vector4
+import typingsSlinky.babylonjs.BABYLON.Color4
+import typingsSlinky.babylonjs.BABYLON.Vector4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,8 +24,6 @@ trait BackUVsDepth extends js.Object {
   var sideOrientation: js.UndefOr[Double] = js.native
   
   var size: js.UndefOr[Double] = js.native
-  
-  var updatable: js.UndefOr[Boolean] = js.native
   
   var width: js.UndefOr[Double] = js.native
 }
@@ -105,12 +103,6 @@ object BackUVsDepth {
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)
-    
-    @scala.inline
-    def setUpdatable(value: Boolean): Self = this.set("updatable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUpdatable: Self = this.set("updatable", js.undefined)
     
     @scala.inline
     def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])

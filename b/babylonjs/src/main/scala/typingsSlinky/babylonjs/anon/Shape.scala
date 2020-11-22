@@ -1,8 +1,8 @@
 package typingsSlinky.babylonjs.anon
 
-import typingsSlinky.babylonjs.BABYLON.Color4
-import typingsSlinky.babylonjs.BABYLON.Vector3
-import typingsSlinky.babylonjs.BABYLON.Vector4
+import typingsSlinky.babylonjs.mathColorMod.Color4
+import typingsSlinky.babylonjs.mathVectorMod.Vector3
+import typingsSlinky.babylonjs.mathVectorMod.Vector4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

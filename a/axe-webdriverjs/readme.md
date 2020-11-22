@@ -1,7 +1,7 @@
 
 # Scala.js typings for axe-webdriverjs
 
-Typings are for version 2.1
+Typings are for version 2.3
 
 ## Library description:
 Provides a method to inject and analyze web pages using aXe

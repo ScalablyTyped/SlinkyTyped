@@ -1,5 +1,7 @@
 package typingsSlinky.pulumiAws
 
+import typingsSlinky.pulumiAws.getOrderableClusterMod.GetOrderableClusterArgs
+import typingsSlinky.pulumiAws.getOrderableClusterMod.GetOrderableClusterResult
 import typingsSlinky.pulumiAws.redshiftClusterMod.ClusterArgs
 import typingsSlinky.pulumiAws.redshiftClusterMod.ClusterState
 import typingsSlinky.pulumiAws.redshiftEventSubscriptionMod.EventSubscriptionArgs
@@ -34,6 +36,11 @@ object redshiftMod extends js.Object {
   
   def getCluster(args: GetClusterArgs): js.Promise[GetClusterResult] = js.native
   def getCluster(args: GetClusterArgs, opts: InvokeOptions): js.Promise[GetClusterResult] = js.native
+  
+  def getOrderableCluster(): js.Promise[GetOrderableClusterResult] = js.native
+  def getOrderableCluster(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetOrderableClusterResult] = js.native
+  def getOrderableCluster(args: GetOrderableClusterArgs): js.Promise[GetOrderableClusterResult] = js.native
+  def getOrderableCluster(args: GetOrderableClusterArgs, opts: InvokeOptions): js.Promise[GetOrderableClusterResult] = js.native
   
   def getServiceAccount(): js.Promise[GetServiceAccountResult] = js.native
   def getServiceAccount(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetServiceAccountResult] = js.native

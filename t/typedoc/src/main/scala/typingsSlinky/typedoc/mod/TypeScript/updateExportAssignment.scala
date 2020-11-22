@@ -30,6 +30,7 @@ object updateExportAssignment extends js.Object {
     modifiers: js.UndefOr[scala.Nothing],
     expression: Expression
   ): ExportAssignment = js.native
+  /** @deprecated Use `factory.updateExportAssignment` or the factory supplied by your transformation context instead. */
   def apply(
     node: ExportAssignment,
     decorators: js.Array[Decorator],

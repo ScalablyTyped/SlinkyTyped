@@ -34,6 +34,10 @@ class ManagementClient[A, U] protected () extends js.Object {
   def createConnection(data: CreateConnection): js.Promise[Connection] = js.native
   def createConnection(data: CreateConnection, cb: js.Function2[/* err */ js.Error, /* connection */ Connection, Unit]): Unit = js.native
   
+  // Custom Domains
+  def createCustomDomain(data: CreateDomainData): js.Promise[Domain] = js.native
+  def createCustomDomain(data: CreateDomainData, cb: js.Function2[/* err */ js.Error, /* domain */ Domain, Unit]): Unit = js.native
+  
   def createDevicePublicKey(data: Data): js.Promise[User[A, U]] = js.native
   def createDevicePublicKey(data: Data, cb: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
   
@@ -87,6 +91,9 @@ class ManagementClient[A, U] protected () extends js.Object {
   
   def deleteConnection(params: ObjectWithId): js.Promise[Unit] = js.native
   def deleteConnection(params: ObjectWithId, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
+  def deleteCustomDomain(params: ObjectWithId): js.Promise[Unit] = js.native
+  def deleteCustomDomain(params: ObjectWithId, cb: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   
   def deleteDeviceCredential(params: ClientParams): js.Promise[User[A, U]] = js.native
   def deleteDeviceCredential(params: ClientParams, cb: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
@@ -170,6 +177,12 @@ class ManagementClient[A, U] protected () extends js.Object {
   // Connections
   def getConnections(): js.Promise[js.Array[Connection]] = js.native
   def getConnections(cb: js.Function2[/* err */ js.Error, /* connections */ js.Array[Connection], Unit]): Unit = js.native
+  
+  def getCustomDomain(params: ObjectWithId): js.Promise[Domain] = js.native
+  def getCustomDomain(params: ObjectWithId, cb: js.Function2[/* err */ js.Error, /* data */ Domain, Unit]): Unit = js.native
+  
+  def getCustomDomains(): js.Promise[js.Array[Domain]] = js.native
+  def getCustomDomains(cb: js.Function2[/* err */ js.Error, /* data */ js.Array[Domain], Unit]): Unit = js.native
   
   def getDailyStats(data: StatsParams): js.Promise[_] = js.native
   def getDailyStats(data: StatsParams, cb: js.Function2[/* err */ js.Error, /* data */ js.Any, Unit]): Unit = js.native
@@ -447,4 +460,7 @@ class ManagementClient[A, U] protected () extends js.Object {
   
   def updateUserMetadata(params: ObjectWithId, data: U): js.Promise[User[A, U]] = js.native
   def updateUserMetadata(params: ObjectWithId, data: U, cb: js.Function2[/* err */ js.Error, /* data */ User[A, U], Unit]): Unit = js.native
+  
+  def verifyCustomDomain(params: ObjectWithId): js.Promise[DomainVerification] = js.native
+  def verifyCustomDomain(params: ObjectWithId, cb: js.Function2[/* err */ js.Error, /* data */ DomainVerification, Unit]): Unit = js.native
 }

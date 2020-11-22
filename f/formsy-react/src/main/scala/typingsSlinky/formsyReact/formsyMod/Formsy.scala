@@ -1,5 +1,8 @@
 package typingsSlinky.formsyReact.formsyMod
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
+import slinky.core.SyntheticEvent
 import typingsSlinky.formsyReact.anon.Disabled
 import typingsSlinky.formsyReact.anon.IsRequired
 import typingsSlinky.formsyReact.anon.PartialFormsyProps
@@ -67,7 +70,9 @@ class Formsy protected ()
   def setInputValidationErrors(errors: js.Any): Unit = js.native
   
   def submit(): Unit = js.native
-  def submit(event: js.Any): Unit = js.native
+  def submit(event: SyntheticEvent[Event, Element]): Unit = js.native
+  
+  val throttledValidateForm: js.Any = js.native
   
   var updateInputsWithError: IUpdateInputsWithError = js.native
   

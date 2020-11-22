@@ -25,8 +25,6 @@ trait RecursivePartialPartialAv extends js.Object {
   
   var ImageComponent: js.UndefOr[RecursivePartial[js.UndefOr[ReactComponentClass[js.Object]]]] = js.native
   
-  var accessory: js.UndefOr[RecursivePartial[js.UndefOr[PartialIconPropsPartialIm]]] = js.native
-  
   var activeOpacity: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
   
   var avatarStyle: js.UndefOr[RecursivePartial[js.UndefOr[ImageStyle]]] = js.native
@@ -39,8 +37,6 @@ trait RecursivePartialPartialAv extends js.Object {
   
   var imageProps: js.UndefOr[RecursivePartial[js.UndefOr[PartialImageProps]]] = js.native
   
-  var onAccessoryPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
-  
   var onLongPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
   
   var onPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
@@ -52,8 +48,6 @@ trait RecursivePartialPartialAv extends js.Object {
   var renderPlaceholderContent: js.UndefOr[RecursivePartial[js.UndefOr[ReactElement]]] = js.native
   
   var rounded: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
-  
-  var showAccessory: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
   
   var size: js.UndefOr[RecursivePartial[js.UndefOr[small | medium | large | xlarge | Double]]] = js.native
   
@@ -99,12 +93,6 @@ object RecursivePartialPartialAv {
     def deleteImageComponent: Self = this.set("ImageComponent", js.undefined)
     
     @scala.inline
-    def setAccessory(value: RecursivePartial[js.UndefOr[PartialIconPropsPartialIm]]): Self = this.set("accessory", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAccessory: Self = this.set("accessory", js.undefined)
-    
-    @scala.inline
     def setActiveOpacity(value: RecursivePartial[js.UndefOr[Double]]): Self = this.set("activeOpacity", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -141,12 +129,6 @@ object RecursivePartialPartialAv {
     def deleteImageProps: Self = this.set("imageProps", js.undefined)
     
     @scala.inline
-    def setOnAccessoryPress(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = this.set("onAccessoryPress", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOnAccessoryPress: Self = this.set("onAccessoryPress", js.undefined)
-    
-    @scala.inline
     def setOnLongPress(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = this.set("onLongPress", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -181,12 +163,6 @@ object RecursivePartialPartialAv {
     
     @scala.inline
     def deleteRounded: Self = this.set("rounded", js.undefined)
-    
-    @scala.inline
-    def setShowAccessory(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("showAccessory", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteShowAccessory: Self = this.set("showAccessory", js.undefined)
     
     @scala.inline
     def setSize(value: RecursivePartial[js.UndefOr[small | medium | large | xlarge | Double]]): Self = this.set("size", value.asInstanceOf[js.Any])

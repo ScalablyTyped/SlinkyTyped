@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Electron.remote.TouchBarColorPicker")
 @js.native
 class TouchBarColorPickerCls protected () extends TouchBarColorPicker {
-  // Docs: http://electronjs.org/docs/api/touch-bar-color-picker
+  // Docs: https://electronjs.org/docs/api/touch-bar-color-picker
   /**
     * TouchBarColorPicker
     */

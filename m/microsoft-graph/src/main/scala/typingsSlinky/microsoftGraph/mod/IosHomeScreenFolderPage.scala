@@ -11,7 +11,7 @@ trait IosHomeScreenFolderPage extends js.Object {
   var apps: js.UndefOr[js.Array[IosHomeScreenApp]] = js.native
   
   // Name of the folder page
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
 }
 object IosHomeScreenFolderPage {
   
@@ -46,9 +46,12 @@ object IosHomeScreenFolderPage {
     def deleteApps: Self = this.set("apps", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
   }
 }

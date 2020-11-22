@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.global.esri
 
+import typingsSlinky.arcgisJsApi.esri.ActionToggleProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ActionToggleCls ()
   extends typingsSlinky.arcgisJsApi.esri.ActionToggle {
-  def this(properties: js.Any) = this()
+  def this(properties: ActionToggleProperties) = this()
 }

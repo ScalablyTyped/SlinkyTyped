@@ -12,12 +12,12 @@ trait IControl extends js.Object {
   
   def onAdd(map: Map): HTMLElement = js.native
   
-  def onRemove(map: Map): js.Any = js.native
+  def onRemove(map: Map): Unit = js.native
 }
 object IControl {
   
   @scala.inline
-  def apply(onAdd: Map => HTMLElement, onRemove: Map => js.Any): IControl = {
+  def apply(onAdd: Map => HTMLElement, onRemove: Map => Unit): IControl = {
     val __obj = js.Dynamic.literal(onAdd = js.Any.fromFunction1(onAdd), onRemove = js.Any.fromFunction1(onRemove))
     __obj.asInstanceOf[IControl]
   }
@@ -41,7 +41,7 @@ object IControl {
     def setOnAdd(value: Map => HTMLElement): Self = this.set("onAdd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnRemove(value: Map => js.Any): Self = this.set("onRemove", js.Any.fromFunction1(value))
+    def setOnRemove(value: Map => Unit): Self = this.set("onRemove", js.Any.fromFunction1(value))
     
     @scala.inline
     def setGetDefaultPosition(value: () => String): Self = this.set("getDefaultPosition", js.Any.fromFunction0(value))

@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EventMessageResponse extends EventMessage {
   
-  var proposedNewTime: js.UndefOr[TimeSlot] = js.native
+  var proposedNewTime: js.UndefOr[NullableOption[TimeSlot]] = js.native
   
-  var responseType: js.UndefOr[ResponseType] = js.native
+  var responseType: js.UndefOr[NullableOption[ResponseType]] = js.native
 }
 object EventMessageResponse {
   
@@ -35,15 +35,21 @@ object EventMessageResponse {
     }
     
     @scala.inline
-    def setProposedNewTime(value: TimeSlot): Self = this.set("proposedNewTime", value.asInstanceOf[js.Any])
+    def setProposedNewTime(value: NullableOption[TimeSlot]): Self = this.set("proposedNewTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProposedNewTime: Self = this.set("proposedNewTime", js.undefined)
     
     @scala.inline
-    def setResponseType(value: ResponseType): Self = this.set("responseType", value.asInstanceOf[js.Any])
+    def setProposedNewTimeNull: Self = this.set("proposedNewTime", null)
+    
+    @scala.inline
+    def setResponseType(value: NullableOption[ResponseType]): Self = this.set("responseType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResponseType: Self = this.set("responseType", js.undefined)
+    
+    @scala.inline
+    def setResponseTypeNull: Self = this.set("responseType", null)
   }
 }

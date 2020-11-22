@@ -1,40 +1,30 @@
 package typingsSlinky.jupyterlabMainmenu.runMod
 
 import typingsSlinky.jupyterlabMainmenu.labmenuMod.JupyterLabMenu
-import typingsSlinky.phosphorWidgets.menuMod.Menu.IOptions
+import typingsSlinky.jupyterlabMainmenu.runMod.IRunMenu.ICodeRunner
+import typingsSlinky.luminoWidgets.menuMod.Menu.IOptions
+import typingsSlinky.luminoWidgets.mod.Widget
+import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/mainmenu/lib/run", "RunMenu")
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.luminoDisposable.mod.IDisposable because Already inherited
+- typingsSlinky.jupyterlabMainmenu.labmenuMod.IJupyterLabMenu because Already inherited
+- typingsSlinky.jupyterlabMainmenu.runMod.IRunMenu because var conflicts: isDisposed. Inlined codeRunners */ @JSImport("@jupyterlab/mainmenu/lib/run", "RunMenu")
 @js.native
-class RunMenu protected ()
-  extends JupyterLabMenu
-     with IRunMenu {
+class RunMenu protected () extends JupyterLabMenu {
   /**
     * Construct the run menu.
     */
   def this(options: IOptions) = this()
+  
   /**
-    * Test whether the object has been disposed.
+    * A set storing ICodeRunner for the Run menu.
     *
-    * #### Notes
-    * This property is always safe to access.
+    * ### Notes
+    * The key for the set may be used in menu labels.
     */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
-  /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
+  val codeRunners: Set[ICodeRunner[Widget]] = js.native
 }
-

@@ -1,7 +1,7 @@
 
 # Scala.js typings for octokit__endpoint
 
-Typings are for version 6.0.5
+Typings are for version 6.0.9
 
 ## Library description:
 Turns REST API endpoints into generic request options

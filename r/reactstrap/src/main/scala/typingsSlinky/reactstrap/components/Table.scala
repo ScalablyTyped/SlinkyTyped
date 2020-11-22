@@ -2,9 +2,11 @@ package typingsSlinky.reactstrap.components
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
-import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLTableElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -21,9 +23,14 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.ReactType
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -75,14 +82,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object Table {
   
-  @JSImport("reactstrap", "Table")
+  @JSImport("reactstrap/es", "Table")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactstrap.mod.Table[T]] {
+       with StBuildingComponent[slinky.web.html.table.tag.type, typingsSlinky.reactstrap.mod.Table] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -196,7 +203,9 @@ object Table {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -250,6 +259,12 @@ object Table {
     def borderless(value: Boolean): this.type = set("borderless", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def cellPadding(value: Double | String): this.type = set("cellPadding", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def cellSpacing(value: Double | String): this.type = set("cellSpacing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -298,6 +313,18 @@ object Table {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def innerRefRefObject(value: ReactRef[HTMLTableElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ HTMLTableElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def innerRef(value: Ref[HTMLTableElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
+    
+    @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -325,241 +352,241 @@ object Table {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onAbort(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
+    def onAbort(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onAnimationEnd(value: SyntheticAnimationEvent[HTMLElement] => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
+    def onAnimationEnd(value: SyntheticAnimationEvent[HTMLTableElement] => Unit): this.type = set("onAnimationEnd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onAnimationIteration(value: SyntheticAnimationEvent[HTMLElement] => Unit): this.type = set("onAnimationIteration", js.Any.fromFunction1(value))
+    def onAnimationIteration(value: SyntheticAnimationEvent[HTMLTableElement] => Unit): this.type = set("onAnimationIteration", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onAnimationStart(value: SyntheticAnimationEvent[HTMLElement] => Unit): this.type = set("onAnimationStart", js.Any.fromFunction1(value))
+    def onAnimationStart(value: SyntheticAnimationEvent[HTMLTableElement] => Unit): this.type = set("onAnimationStart", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onAuxClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onAuxClick", js.Any.fromFunction1(value))
+    def onAuxClick(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onAuxClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onBeforeInput(value: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
+    def onBeforeInput(value: SyntheticEvent[EventTarget with HTMLTableElement, Event] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onBlur(value: SyntheticFocusEvent[HTMLElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: SyntheticFocusEvent[HTMLTableElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onCanPlay(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
+    def onCanPlay(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onCanPlayThrough(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
+    def onCanPlayThrough(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onCanPlayThrough", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onChange(value: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: SyntheticEvent[EventTarget with HTMLTableElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onCompositionEnd(value: SyntheticCompositionEvent[HTMLElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
+    def onCompositionEnd(value: SyntheticCompositionEvent[HTMLTableElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onCompositionStart(value: SyntheticCompositionEvent[HTMLElement] => Unit): this.type = set("onCompositionStart", js.Any.fromFunction1(value))
+    def onCompositionStart(value: SyntheticCompositionEvent[HTMLTableElement] => Unit): this.type = set("onCompositionStart", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onCompositionUpdate(value: SyntheticCompositionEvent[HTMLElement] => Unit): this.type = set("onCompositionUpdate", js.Any.fromFunction1(value))
+    def onCompositionUpdate(value: SyntheticCompositionEvent[HTMLTableElement] => Unit): this.type = set("onCompositionUpdate", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onContextMenu(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
+    def onContextMenu(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onContextMenu", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onCopy(value: SyntheticClipboardEvent[HTMLElement] => Unit): this.type = set("onCopy", js.Any.fromFunction1(value))
+    def onCopy(value: SyntheticClipboardEvent[HTMLTableElement] => Unit): this.type = set("onCopy", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onCut(value: SyntheticClipboardEvent[HTMLElement] => Unit): this.type = set("onCut", js.Any.fromFunction1(value))
+    def onCut(value: SyntheticClipboardEvent[HTMLTableElement] => Unit): this.type = set("onCut", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDoubleClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onDoubleClick", js.Any.fromFunction1(value))
+    def onDoubleClick(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onDoubleClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDrag(value: DragEvent[HTMLElement] => Unit): this.type = set("onDrag", js.Any.fromFunction1(value))
+    def onDrag(value: DragEvent[HTMLTableElement] => Unit): this.type = set("onDrag", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDragEnd(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
+    def onDragEnd(value: DragEvent[HTMLTableElement] => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDragEnter(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragEnter", js.Any.fromFunction1(value))
+    def onDragEnter(value: DragEvent[HTMLTableElement] => Unit): this.type = set("onDragEnter", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDragExit(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragExit", js.Any.fromFunction1(value))
+    def onDragExit(value: DragEvent[HTMLTableElement] => Unit): this.type = set("onDragExit", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDragLeave(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragLeave", js.Any.fromFunction1(value))
+    def onDragLeave(value: DragEvent[HTMLTableElement] => Unit): this.type = set("onDragLeave", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDragOver(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragOver", js.Any.fromFunction1(value))
+    def onDragOver(value: DragEvent[HTMLTableElement] => Unit): this.type = set("onDragOver", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDragStart(value: DragEvent[HTMLElement] => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
+    def onDragStart(value: DragEvent[HTMLTableElement] => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDrop(value: DragEvent[HTMLElement] => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
+    def onDrop(value: DragEvent[HTMLTableElement] => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDurationChange(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
+    def onDurationChange(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onEmptied(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
+    def onEmptied(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onEmptied", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onEncrypted(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
+    def onEncrypted(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onEncrypted", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onEnded(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    def onEnded(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onError(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
+    def onError(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onFocus(value: SyntheticFocusEvent[HTMLElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: SyntheticFocusEvent[HTMLTableElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onInput(value: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
+    def onInput(value: SyntheticEvent[EventTarget with HTMLTableElement, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onInvalid(value: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
+    def onInvalid(value: SyntheticEvent[EventTarget with HTMLTableElement, Event] => Unit): this.type = set("onInvalid", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onKeyDown(value: SyntheticKeyboardEvent[HTMLElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
+    def onKeyDown(value: SyntheticKeyboardEvent[HTMLTableElement] => Unit): this.type = set("onKeyDown", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onKeyPress(value: SyntheticKeyboardEvent[HTMLElement] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
+    def onKeyPress(value: SyntheticKeyboardEvent[HTMLTableElement] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onKeyUp(value: SyntheticKeyboardEvent[HTMLElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
+    def onKeyUp(value: SyntheticKeyboardEvent[HTMLTableElement] => Unit): this.type = set("onKeyUp", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onLoad(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
+    def onLoad(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onLoadStart(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
+    def onLoadStart(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onLoadStart", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onLoadedData(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
+    def onLoadedData(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onLoadedData", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onLoadedMetadata(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
+    def onLoadedMetadata(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onLoadedMetadata", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onMouseDown(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
+    def onMouseDown(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onMouseDown", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onMouseEnter(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+    def onMouseEnter(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onMouseLeave(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+    def onMouseLeave(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onMouseMove(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
+    def onMouseMove(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onMouseMove", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onMouseOut(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseOut", js.Any.fromFunction1(value))
+    def onMouseOut(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onMouseOut", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onMouseOver(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseOver", js.Any.fromFunction1(value))
+    def onMouseOver(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onMouseOver", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onMouseUp(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
+    def onMouseUp(value: SyntheticMouseEvent[HTMLTableElement] => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPaste(value: SyntheticClipboardEvent[HTMLElement] => Unit): this.type = set("onPaste", js.Any.fromFunction1(value))
+    def onPaste(value: SyntheticClipboardEvent[HTMLTableElement] => Unit): this.type = set("onPaste", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPause(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    def onPause(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPlay(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    def onPlay(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPlaying(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
+    def onPlaying(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onPlaying", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPointerCancel(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerCancel", js.Any.fromFunction1(value))
+    def onPointerCancel(value: SyntheticPointerEvent[HTMLTableElement] => Unit): this.type = set("onPointerCancel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPointerDown(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerDown", js.Any.fromFunction1(value))
+    def onPointerDown(value: SyntheticPointerEvent[HTMLTableElement] => Unit): this.type = set("onPointerDown", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPointerEnter(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerEnter", js.Any.fromFunction1(value))
+    def onPointerEnter(value: SyntheticPointerEvent[HTMLTableElement] => Unit): this.type = set("onPointerEnter", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPointerLeave(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerLeave", js.Any.fromFunction1(value))
+    def onPointerLeave(value: SyntheticPointerEvent[HTMLTableElement] => Unit): this.type = set("onPointerLeave", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPointerMove(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerMove", js.Any.fromFunction1(value))
+    def onPointerMove(value: SyntheticPointerEvent[HTMLTableElement] => Unit): this.type = set("onPointerMove", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPointerOut(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerOut", js.Any.fromFunction1(value))
+    def onPointerOut(value: SyntheticPointerEvent[HTMLTableElement] => Unit): this.type = set("onPointerOut", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPointerOver(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerOver", js.Any.fromFunction1(value))
+    def onPointerOver(value: SyntheticPointerEvent[HTMLTableElement] => Unit): this.type = set("onPointerOver", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPointerUp(value: SyntheticPointerEvent[HTMLElement] => Unit): this.type = set("onPointerUp", js.Any.fromFunction1(value))
+    def onPointerUp(value: SyntheticPointerEvent[HTMLTableElement] => Unit): this.type = set("onPointerUp", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onProgress(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
+    def onProgress(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onRateChange(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
+    def onRateChange(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onRateChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onReset(value: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
+    def onReset(value: SyntheticEvent[EventTarget with HTMLTableElement, Event] => Unit): this.type = set("onReset", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onScroll(value: SyntheticUIEvent[HTMLElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
+    def onScroll(value: SyntheticUIEvent[HTMLTableElement] => Unit): this.type = set("onScroll", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSeeked(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
+    def onSeeked(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onSeeked", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSeeking(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
+    def onSeeking(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSelect(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onStalled(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
+    def onStalled(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSubmit(value: SyntheticEvent[EventTarget with HTMLElement, Event] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    def onSubmit(value: SyntheticEvent[EventTarget with HTMLTableElement, Event] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSuspend(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
+    def onSuspend(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onTimeUpdate(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
+    def onTimeUpdate(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onTouchCancel(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
+    def onTouchCancel(value: SyntheticTouchEvent[HTMLTableElement] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onTouchEnd(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
+    def onTouchEnd(value: SyntheticTouchEvent[HTMLTableElement] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onTouchMove(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchMove", js.Any.fromFunction1(value))
+    def onTouchMove(value: SyntheticTouchEvent[HTMLTableElement] => Unit): this.type = set("onTouchMove", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onTouchStart(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
+    def onTouchStart(value: SyntheticTouchEvent[HTMLTableElement] => Unit): this.type = set("onTouchStart", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onTransitionEnd(value: SyntheticTransitionEvent[HTMLElement] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
+    def onTransitionEnd(value: SyntheticTransitionEvent[HTMLTableElement] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onVolumeChange(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    def onVolumeChange(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onWaiting(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
+    def onWaiting(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onWaiting", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onWheel(value: SyntheticWheelEvent[HTMLElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
+    def onWheel(value: SyntheticWheelEvent[HTMLTableElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -589,7 +616,7 @@ object Table {
     def responsiveTagComponentClass(value: ReactComponentClass[_]): this.type = set("responsiveTag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def responsiveTag(value: ReactType[_]): this.type = set("responsiveTag", value.asInstanceOf[js.Any])
+    def responsiveTag(value: ReactElement): this.type = set("responsiveTag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
@@ -616,6 +643,9 @@ object Table {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def summary(value: String): this.type = set("summary", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -631,7 +661,7 @@ object Table {
     def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tag(value: String | ReactType[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: ReactElement): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -647,15 +677,12 @@ object Table {
     
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: TableProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: TableProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply[T](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[TableProps]))
-  }
-  
-  implicit def make[T](companion: Table.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: Table.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

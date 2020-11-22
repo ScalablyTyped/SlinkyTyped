@@ -1,7 +1,7 @@
 
 # Scala.js typings for ethersproject__bytes
 
-Typings are for version 5.0.3
+Typings are for version 5.0.6
 
 ## Library description:
 Bytes utility functions for ethers.

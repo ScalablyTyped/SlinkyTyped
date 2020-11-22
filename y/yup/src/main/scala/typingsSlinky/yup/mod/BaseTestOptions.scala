@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BaseTestOptions[P /* <: Record[String, _] */] extends js.Object {
+trait BaseTestOptions[P /* <: Record[String, _] */, C] extends js.Object {
   
   /**
     * Mark the test as exclusive, meaning only one of the same can be active at once
@@ -36,5 +36,5 @@ trait BaseTestOptions[P /* <: Record[String, _] */] extends js.Object {
     * Test function, determines schema validity
     */
   @JSName("test")
-  var test_Original: TestFunction = js.native
+  var test_Original: TestFunction[_, C] = js.native
 }

@@ -1,9 +1,12 @@
 package typingsSlinky.gestalt.mod
 
 import typingsSlinky.gestalt.anon.Name
+import typingsSlinky.gestalt.gestaltStrings.fit
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.sm
+import typingsSlinky.gestalt.gestaltStrings.xl
+import typingsSlinky.gestalt.gestaltStrings.xs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +18,7 @@ trait GroupAvatarProps extends js.Object {
   
   var outline: js.UndefOr[Boolean] = js.native
   
-  var size: js.UndefOr[sm | md | lg] = js.native
+  var size: js.UndefOr[xs | sm | md | lg | xl | fit] = js.native
 }
 object GroupAvatarProps {
   
@@ -53,7 +56,7 @@ object GroupAvatarProps {
     def deleteOutline: Self = this.set("outline", js.undefined)
     
     @scala.inline
-    def setSize(value: sm | md | lg): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setSize(value: xs | sm | md | lg | xl | fit): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)

@@ -11,9 +11,6 @@ object struct extends js.Object {
   /**
     * Define a `Struct` instance with a type and validation function.
     */
-  /**
-    * Define a `Struct` instance with a type and validation function.
-    */
   def apply[T](
     name: String,
     validator: js.Function2[/* value */ js.Any, /* context */ StructContext, StructResult]

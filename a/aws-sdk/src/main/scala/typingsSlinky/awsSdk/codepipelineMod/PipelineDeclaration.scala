@@ -18,7 +18,7 @@ trait PipelineDeclaration extends js.Object {
   var artifactStores: js.UndefOr[ArtifactStoreMap] = js.native
   
   /**
-    * The name of the action to be performed.
+    * The name of the pipeline.
     */
   var name: PipelineName = js.native
   

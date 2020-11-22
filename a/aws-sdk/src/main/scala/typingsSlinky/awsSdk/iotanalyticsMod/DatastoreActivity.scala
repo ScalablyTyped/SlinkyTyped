@@ -13,7 +13,7 @@ trait DatastoreActivity extends js.Object {
   var datastoreName: DatastoreName = js.native
   
   /**
-    * The name of the 'datastore' activity.
+    * The name of the datastore activity.
     */
   var name: ActivityName = js.native
 }

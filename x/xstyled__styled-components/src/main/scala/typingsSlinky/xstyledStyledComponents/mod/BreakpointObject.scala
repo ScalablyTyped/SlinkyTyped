@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {[ Key in keyof @xstyled/styled-components.@xstyled/styled-components.Breakpoints ]:? ArgType} */
+/* Inlined {[ Key in @xstyled/styled-components.@xstyled/styled-components.BreakpointName ]:? ArgType} */
 @js.native
 trait BreakpointObject[ArgType] extends js.Object {
   

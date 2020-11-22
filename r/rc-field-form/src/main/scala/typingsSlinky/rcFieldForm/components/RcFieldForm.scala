@@ -5,7 +5,6 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
-import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -19,10 +18,10 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.rcFieldForm.anon.Children
 import typingsSlinky.rcFieldForm.fieldMod.FieldProps
 import typingsSlinky.rcFieldForm.formContextMod.FormProviderProps
 import typingsSlinky.rcFieldForm.formMod.FormProps
-import typingsSlinky.rcFieldForm.formMod.RenderProps
 import typingsSlinky.rcFieldForm.interfaceMod.FieldData
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
 import typingsSlinky.rcFieldForm.interfaceMod.NamePath
@@ -31,8 +30,13 @@ import typingsSlinky.rcFieldForm.interfaceMod.ValidateErrorEntity
 import typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages
 import typingsSlinky.rcFieldForm.listMod.ListProps
 import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`false`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`additions removals`
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.`additions text`
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.`inline`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`removals additions`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`removals text`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`text additions`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`text removals`
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.additions
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.all
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.ascending
@@ -80,7 +84,6 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -92,9 +95,9 @@ object RcFieldForm {
   object component extends js.Object
   
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
+  class Builder[Values] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, FormInstance] {
+       with StBuildingComponent[tag.type, FormInstance[Values]] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -214,7 +217,9 @@ object RcFieldForm {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -263,15 +268,6 @@ object RcFieldForm {
     
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def childrenFunction2(value: (/* values */ Store, /* form */ FormInstance) => ReactElement): this.type = set("children", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def children(value: RenderProps | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -325,7 +321,7 @@ object RcFieldForm {
     def fields(value: js.Array[FieldData]): this.type = set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def form(value: FormInstance): this.type = set("form", value.asInstanceOf[js.Any])
+    def form(value: FormInstance[Values]): this.type = set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -469,10 +465,10 @@ object RcFieldForm {
     def onFieldsChange(value: (/* changedFields */ js.Array[FieldData], /* allFields */ js.Array[FieldData]) => Unit): this.type = set("onFieldsChange", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onFinish(value: /* values */ Store => Unit): this.type = set("onFinish", js.Any.fromFunction1(value))
+    def onFinish(value: Values => Unit): this.type = set("onFinish", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onFinishFailed(value: /* errorInfo */ ValidateErrorEntity => Unit): this.type = set("onFinishFailed", js.Any.fromFunction1(value))
+    def onFinishFailed(value: /* errorInfo */ ValidateErrorEntity[Values] => Unit): this.type = set("onFinishFailed", js.Any.fromFunction1(value))
     
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLFormElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
@@ -607,7 +603,7 @@ object RcFieldForm {
     def onTransitionEnd(value: SyntheticTransitionEvent[HTMLFormElement] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onValuesChange(value: (/* changedValues */ Store, /* values */ Store) => Unit): this.type = set("onValuesChange", js.Any.fromFunction2(value))
+    def onValuesChange(value: (/* changedValues */ js.Any, Values) => Unit): this.type = set("onValuesChange", js.Any.fromFunction2(value))
     
     @scala.inline
     def onVolumeChange(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
@@ -691,31 +687,15 @@ object RcFieldForm {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FormProps with RefAttributes[FormInstance]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[Values](p: Children[Values] with FormProps[Values]): Builder[Values] = new Builder[Values](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make(companion: RcFieldForm.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
-  
-  object FormProvider {
-    
-    @JSImport("rc-field-form", "default.FormProvider")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: FormProviderProps): SharedBuilder_FormProviderProps1295524528 = new SharedBuilder_FormProviderProps1295524528(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: FormProvider.type): SharedBuilder_FormProviderProps1295524528 = new SharedBuilder_FormProviderProps1295524528(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply[Values](): Builder[Values] = {
+    val __props = js.Dynamic.literal()
+    new Builder[Values](js.Array(this.component, __props.asInstanceOf[Children[Values] with FormProps[Values]]))
   }
   
-  object Field {
-    
-    @JSImport("rc-field-form", "default.Field")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: FieldProps): SharedBuilder_FieldProps1867252267 = new SharedBuilder_FieldProps1867252267(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Field.type): SharedBuilder_FieldProps1867252267 = new SharedBuilder_FieldProps1867252267(js.Array(this.component, js.Dictionary.empty))()
-  }
+  implicit def make[Values](companion: RcFieldForm.type): Builder[Values] = new Builder[Values](js.Array(this.component, js.Dictionary.empty))()
   
   object List {
     
@@ -730,5 +710,33 @@ object RcFieldForm {
       val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
       new SharedBuilder_ListProps425441958(js.Array(this.component, __props.asInstanceOf[ListProps]))
     }
+  }
+  
+  object Field {
+    
+    @JSImport("rc-field-form", "default.Field")
+    @js.native
+    object component extends js.Object
+    
+    def withProps[Values](p: FieldProps[Values]): SharedBuilder_FieldProps1642681149[Values] = new SharedBuilder_FieldProps1642681149[Values](js.Array(this.component, p.asInstanceOf[js.Any]))
+    
+    @scala.inline
+    def apply[Values](): SharedBuilder_FieldProps1642681149[Values] = {
+      val __props = js.Dynamic.literal()
+      new SharedBuilder_FieldProps1642681149[Values](js.Array(this.component, __props.asInstanceOf[FieldProps[Values]]))
+    }
+    
+    implicit def make[Values](companion: Field.type): SharedBuilder_FieldProps1642681149[Values] = new SharedBuilder_FieldProps1642681149[Values](js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object FormProvider {
+    
+    @JSImport("rc-field-form", "default.FormProvider")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormProviderProps): SharedBuilder_FormProviderProps1295524528 = new SharedBuilder_FormProviderProps1295524528(js.Array(this.component, p.asInstanceOf[js.Any]))
+    
+    implicit def make(companion: FormProvider.type): SharedBuilder_FormProviderProps1295524528 = new SharedBuilder_FormProviderProps1295524528(js.Array(this.component, js.Dictionary.empty))()
   }
 }

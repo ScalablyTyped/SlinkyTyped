@@ -5,7 +5,6 @@ import typingsSlinky.angularCompiler.astMod.BindingType
 import typingsSlinky.angularCompiler.astMod.BoundElementProperty
 import typingsSlinky.angularCompiler.coreMod.SecurityContext
 import typingsSlinky.angularCompiler.i18nAstMod.I18nMeta
-import typingsSlinky.angularCompiler.i18nAstMod.Message
 import typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +19,8 @@ class BoundAttribute protected () extends Node {
     securityContext: SecurityContext,
     value: AST,
     unit: String,
-    sourceSpan: ParseSourceSpan
+    sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan
   ) = this()
   def this(
     name: String,
@@ -28,7 +28,8 @@ class BoundAttribute protected () extends Node {
     securityContext: SecurityContext,
     value: AST,
     unit: Null,
-    sourceSpan: ParseSourceSpan
+    sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan
   ) = this()
   def this(
     name: String,
@@ -37,6 +38,7 @@ class BoundAttribute protected () extends Node {
     value: AST,
     unit: String,
     sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan,
     valueSpan: ParseSourceSpan
   ) = this()
   def this(
@@ -46,6 +48,7 @@ class BoundAttribute protected () extends Node {
     value: AST,
     unit: Null,
     sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan,
     valueSpan: ParseSourceSpan
   ) = this()
   def this(
@@ -55,8 +58,9 @@ class BoundAttribute protected () extends Node {
     value: AST,
     unit: String,
     sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan,
     valueSpan: js.UndefOr[scala.Nothing],
-    i18n: Message
+    i18n: I18nMeta
   ) = this()
   def this(
     name: String,
@@ -65,28 +69,20 @@ class BoundAttribute protected () extends Node {
     value: AST,
     unit: String,
     sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan,
+    valueSpan: ParseSourceSpan,
+    i18n: I18nMeta
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: AST,
+    unit: Null,
+    sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan,
     valueSpan: js.UndefOr[scala.Nothing],
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
-  ) = this()
-  def this(
-    name: String,
-    `type`: BindingType,
-    securityContext: SecurityContext,
-    value: AST,
-    unit: String,
-    sourceSpan: ParseSourceSpan,
-    valueSpan: ParseSourceSpan,
-    i18n: Message
-  ) = this()
-  def this(
-    name: String,
-    `type`: BindingType,
-    securityContext: SecurityContext,
-    value: AST,
-    unit: String,
-    sourceSpan: ParseSourceSpan,
-    valueSpan: ParseSourceSpan,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+    i18n: I18nMeta
   ) = this()
   def this(
     name: String,
@@ -95,41 +91,14 @@ class BoundAttribute protected () extends Node {
     value: AST,
     unit: Null,
     sourceSpan: ParseSourceSpan,
-    valueSpan: js.UndefOr[scala.Nothing],
-    i18n: Message
-  ) = this()
-  def this(
-    name: String,
-    `type`: BindingType,
-    securityContext: SecurityContext,
-    value: AST,
-    unit: Null,
-    sourceSpan: ParseSourceSpan,
-    valueSpan: js.UndefOr[scala.Nothing],
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
-  ) = this()
-  def this(
-    name: String,
-    `type`: BindingType,
-    securityContext: SecurityContext,
-    value: AST,
-    unit: Null,
-    sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan,
     valueSpan: ParseSourceSpan,
-    i18n: Message
-  ) = this()
-  def this(
-    name: String,
-    `type`: BindingType,
-    securityContext: SecurityContext,
-    value: AST,
-    unit: Null,
-    sourceSpan: ParseSourceSpan,
-    valueSpan: ParseSourceSpan,
-    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+    i18n: I18nMeta
   ) = this()
   
-  var i18n: js.UndefOr[Message | typingsSlinky.angularCompiler.i18nAstMod.Node] = js.native
+  var i18n: js.UndefOr[I18nMeta] = js.native
+  
+  val keySpan: ParseSourceSpan = js.native
   
   var name: String = js.native
   

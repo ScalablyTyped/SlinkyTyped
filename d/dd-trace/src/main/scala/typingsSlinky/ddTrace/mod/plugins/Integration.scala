@@ -16,7 +16,7 @@ trait Integration extends js.Object {
   /**
     * The service name to be used for this plugin.
     */
-  var service: js.UndefOr[String] = js.native
+  var service: js.UndefOr[String | js.Any] = js.native
 }
 object Integration {
   
@@ -48,7 +48,7 @@ object Integration {
     def deleteEnabled: Self = this.set("enabled", js.undefined)
     
     @scala.inline
-    def setService(value: String): Self = this.set("service", value.asInstanceOf[js.Any])
+    def setService(value: String | js.Any): Self = this.set("service", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteService: Self = this.set("service", js.undefined)

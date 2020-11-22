@@ -20,6 +20,8 @@ object excC14nMod extends js.Object {
     def InclusiveNamespacesPrefixList: String = js.native
     def InclusiveNamespacesPrefixList_=(value: String): Unit = js.native
     
+    var setInclusiveNamespacesElement: js.Any = js.native
+    
     var xmlCanonicalizer: XmlCanonicalizer = js.native
   }
   

@@ -1,6 +1,7 @@
 package typingsSlinky.storybookAddonStoryshots.anon
 
 import typingsSlinky.storybookAddonStoryshots.frameworksLoaderMod.ClientApi
+import typingsSlinky.storybookAddonStoryshots.frameworksLoaderMod.RenderTree
 import typingsSlinky.storybookAddonStoryshots.supportedFrameworkMod.SupportedFramework
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +14,7 @@ trait Framework extends js.Object {
   
   var renderShallowTree: js.Any = js.native
   
-  var renderTree: typingsSlinky.storybookAddonStoryshots.frameworksLoaderMod.RenderTree = js.native
+  var renderTree: RenderTree = js.native
   
   var storybook: ClientApi = js.native
 }

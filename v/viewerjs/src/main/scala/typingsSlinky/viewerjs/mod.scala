@@ -1,6 +1,6 @@
 package typingsSlinky.viewerjs
 
-import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.viewerjs.Viewer.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,8 +12,8 @@ object mod extends js.Object {
   
   @js.native
   class default protected () extends Viewer {
-    def this(element: Element) = this()
-    def this(element: Element, options: Options) = this()
+    def this(element: HTMLElement) = this()
+    def this(element: HTMLElement, options: Options) = this()
   }
   /* static members */
   @js.native

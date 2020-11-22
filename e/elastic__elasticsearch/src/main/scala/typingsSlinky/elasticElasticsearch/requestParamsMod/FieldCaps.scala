@@ -10,9 +10,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FieldCaps extends Generic {
+trait FieldCaps[T] extends Generic {
   
   var allow_no_indices: js.UndefOr[Boolean] = js.native
+  
+  var body: js.UndefOr[T] = js.native
   
   var expand_wildcards: js.UndefOr[open | closed | hidden | none | all] = js.native
   
@@ -27,13 +29,13 @@ trait FieldCaps extends Generic {
 object FieldCaps {
   
   @scala.inline
-  def apply(): FieldCaps = {
+  def apply[T](): FieldCaps[T] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[FieldCaps]
+    __obj.asInstanceOf[FieldCaps[T]]
   }
   
   @scala.inline
-  implicit class FieldCapsOps[Self <: FieldCaps] (val x: Self) extends AnyVal {
+  implicit class FieldCapsOps[Self <: FieldCaps[_], T] (val x: Self with FieldCaps[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -52,6 +54,12 @@ object FieldCaps {
     
     @scala.inline
     def deleteAllow_no_indices: Self = this.set("allow_no_indices", js.undefined)
+    
+    @scala.inline
+    def setBody(value: T): Self = this.set("body", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBody: Self = this.set("body", js.undefined)
     
     @scala.inline
     def setExpand_wildcards(value: open | closed | hidden | none | all): Self = this.set("expand_wildcards", value.asInstanceOf[js.Any])

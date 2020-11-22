@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.input
-import typingsSlinky.antd.antdStrings.text
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.antdStrings.text_
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +35,7 @@ object ClearableInputProps {
     bordered: Boolean,
     element: ReactElement,
     handleReset: SyntheticMouseEvent[HTMLElement] => Unit,
-    inputType: text | input,
+    inputType: text_ | input,
     prefixCls: String,
     triggerFocus: () => Unit
   ): ClearableInputProps = {

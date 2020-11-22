@@ -24,9 +24,14 @@ trait FirehoseDeliveryStreamElasticsearchConfiguration extends js.Object {
   var cloudwatchLoggingOptions: js.UndefOr[Input[FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions]] = js.native
   
   /**
-    * The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`.
+    * The endpoint to use when communicating with the cluster. Conflicts with `domainArn`.
     */
-  var domainArn: Input[String] = js.native
+  var clusterEndpoint: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`. Conflicts with `clusterEndpoint`.
+    */
+  var domainArn: js.UndefOr[Input[String]] = js.native
   
   /**
     * The Elasticsearch index name.
@@ -62,12 +67,17 @@ trait FirehoseDeliveryStreamElasticsearchConfiguration extends js.Object {
     * The Elasticsearch type name with maximum length of 100 characters.
     */
   var typeName: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
+    */
+  var vpcConfig: js.UndefOr[Input[FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig]] = js.native
 }
 object FirehoseDeliveryStreamElasticsearchConfiguration {
   
   @scala.inline
-  def apply(domainArn: Input[String], indexName: Input[String], roleArn: Input[String]): FirehoseDeliveryStreamElasticsearchConfiguration = {
-    val __obj = js.Dynamic.literal(domainArn = domainArn.asInstanceOf[js.Any], indexName = indexName.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
+  def apply(indexName: Input[String], roleArn: Input[String]): FirehoseDeliveryStreamElasticsearchConfiguration = {
+    val __obj = js.Dynamic.literal(indexName = indexName.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[FirehoseDeliveryStreamElasticsearchConfiguration]
   }
   
@@ -85,9 +95,6 @@ object FirehoseDeliveryStreamElasticsearchConfiguration {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setDomainArn(value: Input[String]): Self = this.set("domainArn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIndexName(value: Input[String]): Self = this.set("indexName", value.asInstanceOf[js.Any])
@@ -112,6 +119,18 @@ object FirehoseDeliveryStreamElasticsearchConfiguration {
     
     @scala.inline
     def deleteCloudwatchLoggingOptions: Self = this.set("cloudwatchLoggingOptions", js.undefined)
+    
+    @scala.inline
+    def setClusterEndpoint(value: Input[String]): Self = this.set("clusterEndpoint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClusterEndpoint: Self = this.set("clusterEndpoint", js.undefined)
+    
+    @scala.inline
+    def setDomainArn(value: Input[String]): Self = this.set("domainArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDomainArn: Self = this.set("domainArn", js.undefined)
     
     @scala.inline
     def setIndexRotationPeriod(value: Input[String]): Self = this.set("indexRotationPeriod", value.asInstanceOf[js.Any])
@@ -142,5 +161,11 @@ object FirehoseDeliveryStreamElasticsearchConfiguration {
     
     @scala.inline
     def deleteTypeName: Self = this.set("typeName", js.undefined)
+    
+    @scala.inline
+    def setVpcConfig(value: Input[FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig]): Self = this.set("vpcConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVpcConfig: Self = this.set("vpcConfig", js.undefined)
   }
 }

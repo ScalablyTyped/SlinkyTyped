@@ -13,24 +13,7 @@ trait ListenerTls extends js.Object {
   var certificate: ListenerTlsCertificate = js.native
   
   /**
-    * Specify one of the following modes.
-    
-    
-    
-    STRICT – Listener only accepts connections with TLS
-    enabled. 
-    
-    
-    
-    PERMISSIVE – Listener accepts connections with or
-    without TLS enabled.
-    
-    
-    
-    DISABLED – Listener only accepts connections without
-    TLS. 
-    
-    
+    * Specify one of the following modes.    STRICT – Listener only accepts connections with TLS enabled.     PERMISSIVE – Listener accepts connections with or without TLS enabled.    DISABLED – Listener only accepts connections without TLS.   
     */
   var mode: ListenerTlsMode = js.native
 }

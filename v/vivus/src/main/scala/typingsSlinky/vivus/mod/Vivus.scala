@@ -8,6 +8,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Take any SVG and make the animation
+  * to give give the impression of live drawing
+  */
 @js.native
 trait Vivus extends js.Object {
   
@@ -37,9 +41,14 @@ trait Vivus extends js.Object {
     * This value can be negative to go reverse, between 0 and 1 to play slowly, or greater than 1 to go faster.
     * Callback executed after the animation is finished (optional).
     *
-    * (default: `1`)
+    * @param [speed=1] Animation speed
+    * @param [callback]
     */
   def play(): this.type = js.native
+  /**
+    * @param callback
+    */
+  def play(callback: js.Function0[Unit]): this.type = js.native
   def play(speed: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): this.type = js.native
   def play(speed: Double): this.type = js.native
   def play(speed: Double, callback: js.Function0[Unit]): this.type = js.native

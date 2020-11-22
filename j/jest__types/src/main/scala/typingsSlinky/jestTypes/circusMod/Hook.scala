@@ -9,8 +9,8 @@ trait Hook extends js.Object {
   
   var asyncError: js.Error = js.native
   
-  def fn(): js.UndefOr[js.Promise[_] | Null] = js.native
-  def fn(done: DoneFn): js.UndefOr[js.Promise[_] | Null] = js.native
+  def fn(): js.UndefOr[(js.Promise[js.UndefOr[Unit | _]]) | Unit] = js.native
+  def fn(done: typingsSlinky.jestTypes.globalMod.DoneFn): js.UndefOr[(js.Promise[js.UndefOr[Unit | _]]) | Unit] = js.native
   @JSName("fn")
   var fn_Original: HookFn = js.native
   

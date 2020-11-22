@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateEventSourceMappingRequest extends js.Object {
   
   /**
-    * The maximum number of items to retrieve in a single batch.    Amazon Kinesis - Default 100. Max 10,000.    Amazon DynamoDB Streams - Default 100. Max 1,000.    Amazon Simple Queue Service - Default 10. Max 10.  
+    * The maximum number of items to retrieve in a single batch.    Amazon Kinesis - Default 100. Max 10,000.    Amazon DynamoDB Streams - Default 100. Max 1,000.    Amazon Simple Queue Service - Default 10. Max 10.    Amazon Managed Streaming for Apache Kafka - Default 100. Max 10,000.  
     */
   var BatchSize: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.BatchSize] = js.native
   
@@ -23,7 +23,7 @@ trait UpdateEventSourceMappingRequest extends js.Object {
   var DestinationConfig: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.DestinationConfig] = js.native
   
   /**
-    * Disables the event source mapping to pause polling and invocation.
+    * If true, the event source mapping is active. Set to false to pause polling and invocation.
     */
   var Enabled: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.Enabled] = js.native
   
@@ -38,12 +38,12 @@ trait UpdateEventSourceMappingRequest extends js.Object {
   var MaximumBatchingWindowInSeconds: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.MaximumBatchingWindowInSeconds] = js.native
   
   /**
-    * (Streams) The maximum age of a record that Lambda sends to a function for processing.
+    * (Streams) Discard records older than the specified age. The default value is infinite (-1).
     */
   var MaximumRecordAgeInSeconds: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.MaximumRecordAgeInSeconds] = js.native
   
   /**
-    * (Streams) The maximum number of times to retry when the function returns an error.
+    * (Streams) Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records will be retried until the record expires.
     */
   var MaximumRetryAttempts: js.UndefOr[MaximumRetryAttemptsEventSourceMapping] = js.native
   
@@ -51,6 +51,11 @@ trait UpdateEventSourceMappingRequest extends js.Object {
     * (Streams) The number of batches to process from each shard concurrently.
     */
   var ParallelizationFactor: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.ParallelizationFactor] = js.native
+  
+  /**
+    *  (MQ) The Secrets Manager secret that stores your broker credentials. To store your secret, use the following format:  { "username": "your username", "password": "your password" }  To reference the secret, use the following format: [ { "Type": "BASIC_AUTH", "URI": "secretARN" } ]  The value of Type is always BASIC_AUTH. To encrypt the secret, you can use customer or service managed keys. When using a customer managed KMS key, the Lambda execution role requires kms:Decrypt permissions.
+    */
+  var SourceAccessConfigurations: js.UndefOr[typingsSlinky.awsSdk.lambdaMod.SourceAccessConfigurations] = js.native
   
   /**
     * The identifier of the event source mapping.
@@ -136,5 +141,14 @@ object UpdateEventSourceMappingRequest {
     
     @scala.inline
     def deleteParallelizationFactor: Self = this.set("ParallelizationFactor", js.undefined)
+    
+    @scala.inline
+    def setSourceAccessConfigurationsVarargs(value: SourceAccessConfiguration*): Self = this.set("SourceAccessConfigurations", js.Array(value :_*))
+    
+    @scala.inline
+    def setSourceAccessConfigurations(value: SourceAccessConfigurations): Self = this.set("SourceAccessConfigurations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSourceAccessConfigurations: Self = this.set("SourceAccessConfigurations", js.undefined)
   }
 }

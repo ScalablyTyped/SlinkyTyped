@@ -1,30 +1,21 @@
 package typingsSlinky.awsSdkClientGlacierNode.typesPolicyEnforcedExceptionMod
 
 import typingsSlinky.awsSdkClientGlacierNode.initiateJobExceptionsUnionMod.InitiateJobExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait PolicyEnforcedException
-  extends ServiceException[PolicyEnforcedExceptionDetails]
-     with InitiateJobExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_PolicyEnforcedExceptionDetails> * / any */ @js.native
+trait PolicyEnforcedException extends InitiateJobExceptionsUnion {
   
-  @JSName("name")
-  var name_PolicyEnforcedException: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.PolicyEnforcedException = js.native
+  var name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.PolicyEnforcedException = js.native
 }
 object PolicyEnforcedException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: PolicyEnforcedExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.PolicyEnforcedException
-  ): PolicyEnforcedException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.PolicyEnforcedException): PolicyEnforcedException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyEnforcedException]
   }
   

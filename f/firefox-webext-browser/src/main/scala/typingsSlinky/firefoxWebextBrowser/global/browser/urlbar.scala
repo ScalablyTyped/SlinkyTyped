@@ -18,8 +18,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Use the `browser.urlbar` API to experiment with new features in the URLBar. Restricted to Mozilla privileged
-  * WebExtensions.
+  * Use the `browser.urlbar` API to experiment with new features in the URLBar. Restricted to Mozilla privileged WebExtensions.
   *
   * Permissions: `urlbar`
   *
@@ -46,9 +45,7 @@ object urlbar extends js.Object {
   
   /* urlbar events */
   /**
-    * Before a query starts, this event is fired for the given provider. Its purpose is to request the provider's
-    * behavior for the query. The listener should return a behavior in response. By default, providers are inactive,
-    * so if your provider should always be inactive, you don't need to listen for this event.
+    * Before a query starts, this event is fired for the given provider. Its purpose is to request the provider's behavior for the query. The listener should return a behavior in response. By default, providers are inactive, so if your provider should always be inactive, you don't need to listen for this event.
     * @param query The query for which the behavior is requested.
     * @returns The behavior of the provider for the query.
     */
@@ -61,25 +58,20 @@ object urlbar extends js.Object {
   val onEngagement: UrlbarOnEngagementEvent[js.Function1[/* state */ EngagementState, Unit]] = js.native
   
   /**
-    * This event is fired for the given provider when a query is canceled. The listener should stop any ongoing fetch
-    * or creation of results and clean up its resources.
+    * This event is fired for the given provider when a query is canceled. The listener should stop any ongoing fetch or creation of results and clean up its resources.
     * @param query The query that was canceled.
     */
   val onQueryCanceled: UrlbarOnQueryCanceledEvent[js.Function1[/* query */ Query, Unit]] = js.native
   
   /**
-    * Typically, a provider includes a `url` property in its results' payloads. When the user picks a result with a
-    * URL, Firefox automatically loads the URL. URLs don't make sense for every result type, however. When the user
-    * picks a result without a URL, this event is fired. The provider should take an appropriate action in response.
-    * Currently the only applicable `ResultType` is `tip`.
+    * Typically, a provider includes a `url` property in its results' payloads. When the user picks a result with a URL, Firefox automatically loads the URL. URLs don't make sense for every result type, however. When the user picks a result without a URL, this event is fired. The provider should take an appropriate action in response. Currently the only applicable `ResultTypes` are `dynamic` and `tip`.
     * @param payload The payload of the result that was picked.
+    * @param elementName If the result is a dynamic type, this is the name of the element in the result view that was picked. If the result is not a dynamic type, this is an empty string.
     */
-  val onResultPicked: UrlbarOnResultPickedEvent[js.Function1[/* payload */ js.Object, Unit]] = js.native
+  val onResultPicked: UrlbarOnResultPickedEvent[js.Function2[/* payload */ js.Object, /* elementName */ String, Unit]] = js.native
   
   /**
-    * When a query starts, this event is fired for the given provider if the provider is active for the query and
-    * there are no other providers that are restricting. Its purpose is to request the provider's results for the
-    * query. The listener should return a list of results in response.
+    * When a query starts, this event is fired for the given provider if the provider is active for the query and there are no other providers that are restricting. Its purpose is to request the provider's results for the query. The listener should return a list of results in response.
     * @param query The query for which results are requested.
     * @returns The results that the provider fetched for the query.
     */

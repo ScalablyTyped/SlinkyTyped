@@ -1,6 +1,6 @@
 package typingsSlinky.mendixmodelsdk.mappingsMod.mappings
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAssociationBase
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -8,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.mappingsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,8 +21,8 @@ abstract class ObjectMappingElement protected () extends MappingElement {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def association: IAssociationBase | Null = js.native
@@ -46,9 +47,6 @@ abstract class ObjectMappingElement protected () extends MappingElement {
   
   def mappingMicroflowCall: MappingMicroflowCall | Null = js.native
   def mappingMicroflowCall_=(newValue: MappingMicroflowCall | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FObjectMappingElement: IModel = js.native
   
   def objectHandling: ObjectHandlingEnum = js.native
   

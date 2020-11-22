@@ -9,7 +9,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object constantsMod extends js.Object {
   
   @js.native
+  object animationDimensionPercentages extends js.Object {
+    
+    var PRIMARY_FULL: Double = js.native
+    
+    var PRIMARY_HALF: Double = js.native
+    
+    var SECONDARY_FULL: Double = js.native
+    
+    var SECONDARY_HALF: Double = js.native
+    
+    var SECONDARY_QUARTER: Double = js.native
+  }
+  
+  @js.native
   object cssClasses extends js.Object {
+    
+    var ANIMATION_READY_CLASS: String = js.native
+    
+    var CLOSED_ANIMATION_OFF_CLASS: String = js.native
     
     var CLOSED_CLASS: String = js.native
     

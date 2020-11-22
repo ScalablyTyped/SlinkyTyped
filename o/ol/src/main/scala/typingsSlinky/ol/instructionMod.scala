@@ -8,6 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object instructionMod extends js.Object {
   
+  val beginPathInstruction: js.Array[Instruction] = js.native
+  
+  val closePathInstruction: js.Array[Instruction] = js.native
+  
+  val fillInstruction: js.Array[Instruction] = js.native
+  
+  val strokeInstruction: js.Array[Instruction] = js.native
+  
   @js.native
   sealed trait Instruction extends js.Object
   @js.native

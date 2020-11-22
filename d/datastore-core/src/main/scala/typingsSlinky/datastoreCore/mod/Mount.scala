@@ -1,6 +1,6 @@
 package typingsSlinky.datastoreCore.mod
 
-import typingsSlinky.interfaceDatastore.mod.Datastore
+import typingsSlinky.interfaceDatastore.mod.Adapter
 import typingsSlinky.interfaceDatastore.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait Mount[Value] extends js.Object {
   /**
     * The child datastore.
     */
-  var datastore: Datastore[Value] = js.native
+  var datastore: Adapter[Value] = js.native
   
   /**
     * The mount prefix.
@@ -22,7 +22,7 @@ trait Mount[Value] extends js.Object {
 object Mount {
   
   @scala.inline
-  def apply[Value](datastore: Datastore[Value], prefix: Key): Mount[Value] = {
+  def apply[Value](datastore: Adapter[Value], prefix: Key): Mount[Value] = {
     val __obj = js.Dynamic.literal(datastore = datastore.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
     __obj.asInstanceOf[Mount[Value]]
   }
@@ -43,7 +43,7 @@ object Mount {
     }
     
     @scala.inline
-    def setDatastore(value: Datastore[Value]): Self = this.set("datastore", value.asInstanceOf[js.Any])
+    def setDatastore(value: Adapter[Value]): Self = this.set("datastore", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPrefix(value: Key): Self = this.set("prefix", value.asInstanceOf[js.Any])

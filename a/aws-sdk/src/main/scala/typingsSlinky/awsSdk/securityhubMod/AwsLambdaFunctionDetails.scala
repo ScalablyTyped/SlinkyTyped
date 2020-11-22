@@ -43,7 +43,7 @@ trait AwsLambdaFunctionDetails extends js.Object {
   var KmsKeyArn: js.UndefOr[NonEmptyString] = js.native
   
   /**
-    * The date and time that the function was last updated, in ISO-8601 format (YYYY-MM-DDThh:mm:ss.sTZD).
+    * Indicates when the function was last updated. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var LastModified: js.UndefOr[NonEmptyString] = js.native
   

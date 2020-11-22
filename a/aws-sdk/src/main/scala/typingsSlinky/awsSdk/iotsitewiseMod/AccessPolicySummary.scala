@@ -18,7 +18,7 @@ trait AccessPolicySummary extends js.Object {
   var id: ID = js.native
   
   /**
-    * The AWS SSO identity (a user or group).
+    * The identity (an AWS SSO user, an AWS SSO group, or an IAM user).
     */
   var identity: Identity = js.native
   

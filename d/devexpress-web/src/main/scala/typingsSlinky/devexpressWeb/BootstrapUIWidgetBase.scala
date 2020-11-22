@@ -77,7 +77,7 @@ trait BootstrapUIWidgetBase extends ASPxClientControl {
   
   /**
     * Sets the client data source instance.
-    * @param dataSource A DevExtreme <a href="https://js.devexpress.com/DevExtreme/ApiReference/Data_Layer/DataSource/">DataSource</a> object.
+    * @param dataSource A DevExtreme DataSource object.
     */
   def SetDataSource(dataSource: js.Any): Unit = js.native
   

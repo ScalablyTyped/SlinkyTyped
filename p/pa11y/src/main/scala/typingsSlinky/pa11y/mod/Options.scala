@@ -1,6 +1,5 @@
 package typingsSlinky.pa11y.mod
 
-import typingsSlinky.puppeteer.deviceDescriptorsMod.Viewport
 import typingsSlinky.puppeteer.mod.Browser
 import typingsSlinky.puppeteer.mod.Page
 import scala.scalajs.js
@@ -34,6 +33,8 @@ trait Options extends js.Object {
   
   var method: js.UndefOr[String] = js.native
   
+  var page: js.UndefOr[Page] = js.native
+  
   var pages: js.UndefOr[js.Array[Page]] = js.native
   
   var postData: js.UndefOr[String] = js.native
@@ -56,7 +57,9 @@ trait Options extends js.Object {
   
   var userAgent: js.UndefOr[String] = js.native
   
-  var viewport: js.UndefOr[Viewport] = js.native
+  var viewport: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Viewport */ js.Any
+  ] = js.native
   
   @JSName("wait")
   var wait_FOptions: js.UndefOr[Double] = js.native
@@ -163,6 +166,12 @@ object Options {
     def deleteMethod: Self = this.set("method", js.undefined)
     
     @scala.inline
+    def setPage(value: Page): Self = this.set("page", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePage: Self = this.set("page", js.undefined)
+    
+    @scala.inline
     def setPagesVarargs(value: Page*): Self = this.set("pages", js.Array(value :_*))
     
     @scala.inline
@@ -238,7 +247,9 @@ object Options {
     def deleteUserAgent: Self = this.set("userAgent", js.undefined)
     
     @scala.inline
-    def setViewport(value: Viewport): Self = this.set("viewport", value.asInstanceOf[js.Any])
+    def setViewport(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Viewport */ js.Any
+    ): Self = this.set("viewport", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteViewport: Self = this.set("viewport", js.undefined)

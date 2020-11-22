@@ -19,5 +19,5 @@ object tileurlfunctionMod extends js.Object {
   
   def expandUrl(url: String): js.Array[String] = js.native
   
-  def nullTileUrlFunction(tileCoord: TileCoord, pixelRatio: Double, projection: typingsSlinky.ol.projectionMod.default): String = js.native
+  def nullTileUrlFunction(tileCoord: TileCoord, pixelRatio: Double, projection: typingsSlinky.ol.projectionMod.default): js.UndefOr[String] = js.native
 }

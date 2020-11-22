@@ -25,7 +25,7 @@ trait CreateModelPackageInput extends js.Object {
   /**
     * The name of the model package. The name must have 1 to 63 characters. Valid characters are a-z, A-Z, 0-9, and - (hyphen).
     */
-  var ModelPackageName: EntityName = js.native
+  var ModelPackageName: js.UndefOr[EntityName] = js.native
   
   /**
     * Details about the algorithm that was used to create the model package.
@@ -40,8 +40,8 @@ trait CreateModelPackageInput extends js.Object {
 object CreateModelPackageInput {
   
   @scala.inline
-  def apply(ModelPackageName: EntityName): CreateModelPackageInput = {
-    val __obj = js.Dynamic.literal(ModelPackageName = ModelPackageName.asInstanceOf[js.Any])
+  def apply(): CreateModelPackageInput = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CreateModelPackageInput]
   }
   
@@ -61,9 +61,6 @@ object CreateModelPackageInput {
     }
     
     @scala.inline
-    def setModelPackageName(value: EntityName): Self = this.set("ModelPackageName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setCertifyForMarketplace(value: CertifyForMarketplace): Self = this.set("CertifyForMarketplace", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -80,6 +77,12 @@ object CreateModelPackageInput {
     
     @scala.inline
     def deleteModelPackageDescription: Self = this.set("ModelPackageDescription", js.undefined)
+    
+    @scala.inline
+    def setModelPackageName(value: EntityName): Self = this.set("ModelPackageName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModelPackageName: Self = this.set("ModelPackageName", js.undefined)
     
     @scala.inline
     def setSourceAlgorithmSpecification(value: SourceAlgorithmSpecification): Self = this.set("SourceAlgorithmSpecification", value.asInstanceOf[js.Any])

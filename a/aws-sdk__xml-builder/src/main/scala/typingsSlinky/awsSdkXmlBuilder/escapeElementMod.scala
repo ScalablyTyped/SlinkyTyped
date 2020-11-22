@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/xml-builder/build/escape-element", JSImport.Namespace)
+@JSImport("@aws-sdk/xml-builder/dist/cjs/escape-element", JSImport.Namespace)
 @js.native
 object escapeElementMod extends js.Object {
   

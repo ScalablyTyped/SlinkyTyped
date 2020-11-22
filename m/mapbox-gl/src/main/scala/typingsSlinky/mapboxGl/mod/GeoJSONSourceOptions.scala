@@ -32,6 +32,8 @@ trait GeoJSONSourceOptions extends js.Object {
     (Feature[Geometry, GeoJsonProperties]) | (FeatureCollection[Geometry, GeoJsonProperties]) | String
   ] = js.native
   
+  var filter: js.UndefOr[js.Any] = js.native
+  
   var generateId: js.UndefOr[Boolean] = js.native
   
   var lineMetrics: js.UndefOr[Boolean] = js.native
@@ -114,6 +116,12 @@ object GeoJSONSourceOptions {
     
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)
+    
+    @scala.inline
+    def setFilter(value: js.Any): Self = this.set("filter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFilter: Self = this.set("filter", js.undefined)
     
     @scala.inline
     def setGenerateId(value: Boolean): Self = this.set("generateId", value.asInstanceOf[js.Any])

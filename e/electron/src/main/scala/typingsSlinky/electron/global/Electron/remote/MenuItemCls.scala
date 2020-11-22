@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Electron.remote.MenuItem")
 @js.native
 class MenuItemCls protected () extends MenuItem {
-  // Docs: http://electronjs.org/docs/api/menu-item
+  // Docs: https://electronjs.org/docs/api/menu-item
   /**
     * MenuItem
     */

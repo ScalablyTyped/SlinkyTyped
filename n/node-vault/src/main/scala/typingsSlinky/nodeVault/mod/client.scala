@@ -46,6 +46,9 @@ trait client extends js.Object {
   def auths(): js.Promise[_] = js.native
   def auths(options: Option): js.Promise[_] = js.native
   
+  def awsIamLogin(): js.Promise[_] = js.native
+  def awsIamLogin(options: Option): js.Promise[_] = js.native
+  
   def decryptData(): js.Promise[_] = js.native
   def decryptData(options: Option): js.Promise[_] = js.native
   

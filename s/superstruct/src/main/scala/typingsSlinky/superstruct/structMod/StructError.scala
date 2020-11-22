@@ -2,6 +2,7 @@ package typingsSlinky.superstruct.structMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Error
+import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,11 +12,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class StructError protected ()
   extends Error
      with /* key */ StringDictionary[js.Any] {
-  def this(failure: StructFailure, iterable: js.Iterable[StructFailure]) = this()
+  def this(failure: StructFailure, moreFailures: IterableIterator[StructFailure]) = this()
   
   var branch: js.Array[_] = js.native
   
-  def failures(): js.Iterable[StructFailure] = js.native
+  def failures(): js.Array[StructFailure] = js.native
   
   var path: js.Array[Double | String] = js.native
   

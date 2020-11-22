@@ -6,12 +6,15 @@ import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.small
 import typingsSlinky.grommet.grommetStrings.vertical
 import typingsSlinky.grommet.grommetStrings.xlarge
+import typingsSlinky.grommet.utilsMod.A11yTitleType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TextAreaProps extends js.Object {
+  
+  var a11yTitle: js.UndefOr[A11yTitleType] = js.native
   
   var fill: js.UndefOr[Boolean] = js.native
   
@@ -53,6 +56,12 @@ object TextAreaProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setA11yTitle(value: A11yTitleType): Self = this.set("a11yTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteA11yTitle: Self = this.set("a11yTitle", js.undefined)
     
     @scala.inline
     def setFill(value: Boolean): Self = this.set("fill", value.asInstanceOf[js.Any])

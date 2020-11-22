@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LocatorSuggestLocationsParams extends Object {
   
   /**
-    * A place or address type which can be used to filter suggest results. The parameter supports input of single category values or multiple comma-separated values.
+    * A place or address type which can be used to filter suggest results.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#suggestLocations)
     */

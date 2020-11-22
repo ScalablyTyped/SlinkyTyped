@@ -115,6 +115,8 @@ object mod extends js.Object {
     value: js.Array[PropertyKey],
     groupId: String
   ): js.Array[PropertyKey] = js.native
+  def select(name: String, options: SelectTypeOptionsProp[Boolean], value: Boolean): Boolean = js.native
+  def select(name: String, options: SelectTypeOptionsProp[Boolean], value: Boolean, groupId: String): Boolean = js.native
   def select(name: String, options: SelectTypeOptionsProp[Double], value: Double): Double = js.native
   def select(name: String, options: SelectTypeOptionsProp[Double], value: Double, groupId: String): Double = js.native
   def select(name: String, options: SelectTypeOptionsProp[Null], value: Null, groupId: String): Null = js.native

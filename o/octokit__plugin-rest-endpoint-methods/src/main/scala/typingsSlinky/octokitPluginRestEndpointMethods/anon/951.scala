@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposGetDeploymentEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposGetDeploymentResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposGetCommitCommentEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposGetCommitCommentResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `951` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposGetDeploymentEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposGetCommitCommentEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposGetDeploymentResponseData] = js.native
+  var response: OctokitResponse[ReposGetCommitCommentResponseData] = js.native
 }
 object `951` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposGetDeploymentEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposGetDeploymentResponseData]
+    parameters: RequestParameters with (Omit[ReposGetCommitCommentEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposGetCommitCommentResponseData]
   ): `951` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`951`]
@@ -46,9 +46,9 @@ object `951` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ReposGetDeploymentEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ReposGetCommitCommentEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposGetDeploymentResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReposGetCommitCommentResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

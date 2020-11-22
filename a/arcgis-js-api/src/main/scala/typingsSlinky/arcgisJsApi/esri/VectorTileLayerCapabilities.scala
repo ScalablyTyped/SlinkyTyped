@@ -12,7 +12,7 @@ trait VectorTileLayerCapabilities extends Object {
   var exportMap: VectorTileLayerCapabilitiesExportMap = js.native
   
   /**
-    * Indicates options supported by the exportTiles operation. Will be `null` if the `supportsExportTiles` is `false`.
+    * Indicates options supported by the exportTiles operation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#capabilities)
     */

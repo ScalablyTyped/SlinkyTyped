@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.mod.rds
 
-import typingsSlinky.pulumiAws.storageTypeMod.StorageType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object StorageTypes extends js.Object {
   
-  val GP2: StorageType = js.native
+  /** Use StorageType.GP2 instead. */
+  val GP2: typingsSlinky.pulumiAws.enumsRdsMod.StorageType = js.native
   
-  val Io1: StorageType = js.native
+  /** Use StorageType.IO1 instead. */
+  val Io1: typingsSlinky.pulumiAws.enumsRdsMod.StorageType = js.native
   
-  val Standard: StorageType = js.native
+  /** Use StorageType.Standard instead. */
+  val Standard: typingsSlinky.pulumiAws.enumsRdsMod.StorageType = js.native
 }

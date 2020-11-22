@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ObjectContaining[T]
-  extends AsymmetricMatcher[js.Any]
+  extends AsymmetricMatcher[T]
      with _Expected[T] {
   
   def jasmineMatches(other: js.Any, mismatchKeys: js.Array[_], mismatchValues: js.Array[_]): Boolean = js.native
@@ -27,7 +27,7 @@ object ObjectContaining {
   
   @scala.inline
   def apply[T](
-    asymmetricMatch: (js.Any, js.Array[CustomEqualityTester]) => Boolean,
+    asymmetricMatch: (T, js.Array[CustomEqualityTester]) => Boolean,
     jasmineMatches: (js.Any, js.Array[_], js.Array[_]) => Boolean
   ): ObjectContaining[T] = {
     val __obj = js.Dynamic.literal(asymmetricMatch = js.Any.fromFunction2(asymmetricMatch), jasmineMatches = js.Any.fromFunction3(jasmineMatches))

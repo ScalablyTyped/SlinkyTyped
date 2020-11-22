@@ -8,9 +8,9 @@ package object optionsMod {
   
   type AndroidDensityNumber = scala.Double
   
-  type Color = java.lang.String
+  type Color = java.lang.String | js.Symbol
   
   type FontFamily = java.lang.String
   
-  type ImageResource = java.lang.String
+  type ImageResource = typingsSlinky.reactNative.mod.ImageRequireSource | java.lang.String | typingsSlinky.reactNativeNavigation.optionsMod.ImageSystemSource
 }

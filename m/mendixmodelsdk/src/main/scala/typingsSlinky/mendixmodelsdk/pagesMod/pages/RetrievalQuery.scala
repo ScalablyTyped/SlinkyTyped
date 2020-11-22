@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -9,6 +10,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.securityMod.security.IUserRole
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,14 +20,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.RetrievalQuery")
 @js.native
-class RetrievalQuery protected () extends Element {
+class RetrievalQuery protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def allowedUserRoles: IList[IUserRole] = js.native
@@ -46,9 +48,6 @@ class RetrievalQuery protected () extends Element {
   def microflowQualifiedName: String | Null = js.native
   
   def microflow_=(newValue: IMicroflow | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FRetrievalQuery: IModel = js.native
   
   /**
     * In version 7.14.0: introduced

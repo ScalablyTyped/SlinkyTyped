@@ -15,6 +15,8 @@ trait Options extends js.Object {
   
   var hidpi: js.UndefOr[Boolean] = js.native
   
+  var imageSmoothing: js.UndefOr[Boolean] = js.native
+  
   var imagerySet: String = js.native
   
   var key: String = js.native
@@ -75,6 +77,12 @@ object Options {
     
     @scala.inline
     def deleteHidpi: Self = this.set("hidpi", js.undefined)
+    
+    @scala.inline
+    def setImageSmoothing(value: Boolean): Self = this.set("imageSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImageSmoothing: Self = this.set("imageSmoothing", js.undefined)
     
     @scala.inline
     def setMaxZoom(value: Double): Self = this.set("maxZoom", value.asInstanceOf[js.Any])

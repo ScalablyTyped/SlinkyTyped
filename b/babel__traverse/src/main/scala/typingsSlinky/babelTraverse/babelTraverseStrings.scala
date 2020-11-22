@@ -208,6 +208,9 @@ object babelTraverseStrings {
   def File: File = "File".asInstanceOf[File]
   
   @scala.inline
+  def FnCall: FnCall = "FnCall".asInstanceOf[FnCall]
+  
+  @scala.inline
   def ForInStatement: ForInStatement = "ForInStatement".asInstanceOf[ForInStatement]
   
   @scala.inline
@@ -442,6 +445,9 @@ object babelTraverseStrings {
   def SpreadElement: SpreadElement = "SpreadElement".asInstanceOf[SpreadElement]
   
   @scala.inline
+  def StaticBlock: StaticBlock = "StaticBlock".asInstanceOf[StaticBlock]
+  
+  @scala.inline
   def StringLiteral: StringLiteral = "StringLiteral".asInstanceOf[StringLiteral]
   
   @scala.inline
@@ -536,6 +542,9 @@ object babelTraverseStrings {
   
   @scala.inline
   def TSIntersectionType: TSIntersectionType = "TSIntersectionType".asInstanceOf[TSIntersectionType]
+  
+  @scala.inline
+  def TSIntrinsicKeyword: TSIntrinsicKeyword = "TSIntrinsicKeyword".asInstanceOf[TSIntrinsicKeyword]
   
   @scala.inline
   def TSLiteralType: TSLiteralType = "TSLiteralType".asInstanceOf[TSLiteralType]
@@ -697,6 +706,9 @@ object babelTraverseStrings {
   def TypeofTypeAnnotation: TypeofTypeAnnotation = "TypeofTypeAnnotation".asInstanceOf[TypeofTypeAnnotation]
   
   @scala.inline
+  def Typeofvisitors: Typeofvisitors = "Typeofvisitors".asInstanceOf[Typeofvisitors]
+  
+  @scala.inline
   def UnaryExpression: UnaryExpression = "UnaryExpression".asInstanceOf[UnaryExpression]
   
   @scala.inline
@@ -731,6 +743,12 @@ object babelTraverseStrings {
   
   @scala.inline
   def const: const = "const".asInstanceOf[const]
+  
+  @scala.inline
+  def default: default = "default".asInstanceOf[default]
+  
+  @scala.inline
+  def explode: explode = "explode".asInstanceOf[explode]
   
   @scala.inline
   def let: let = "let".asInstanceOf[let]
@@ -941,6 +959,9 @@ object babelTraverseStrings {
   
   @js.native
   sealed trait File extends js.Object
+  
+  @js.native
+  sealed trait FnCall extends js.Object
   
   @js.native
   sealed trait ForInStatement extends js.Object
@@ -1177,6 +1198,9 @@ object babelTraverseStrings {
   sealed trait SpreadElement extends js.Object
   
   @js.native
+  sealed trait StaticBlock extends js.Object
+  
+  @js.native
   sealed trait StringLiteral extends js.Object
   
   @js.native
@@ -1271,6 +1295,9 @@ object babelTraverseStrings {
   
   @js.native
   sealed trait TSIntersectionType extends js.Object
+  
+  @js.native
+  sealed trait TSIntrinsicKeyword extends js.Object
   
   @js.native
   sealed trait TSLiteralType extends js.Object
@@ -1432,6 +1459,9 @@ object babelTraverseStrings {
   sealed trait TypeofTypeAnnotation extends js.Object
   
   @js.native
+  sealed trait Typeofvisitors extends js.Object
+  
+  @js.native
   sealed trait UnaryExpression extends js.Object
   
   @js.native
@@ -1466,6 +1496,12 @@ object babelTraverseStrings {
   
   @js.native
   sealed trait const extends js.Object
+  
+  @js.native
+  sealed trait default extends js.Object
+  
+  @js.native
+  sealed trait explode extends js.Object
   
   @js.native
   sealed trait let extends js.Object

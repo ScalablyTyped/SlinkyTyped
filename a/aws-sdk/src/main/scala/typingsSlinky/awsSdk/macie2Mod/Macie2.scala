@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.macie2Mod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -217,14 +217,14 @@ trait Macie2 extends Service {
   ): Request[DescribeBucketsResponse, AWSError] = js.native
   
   /**
-    * Retrieves information about the status and settings for a classification job.
+    * Retrieves the status and settings for a classification job.
     */
   def describeClassificationJob(): Request[DescribeClassificationJobResponse, AWSError] = js.native
   def describeClassificationJob(
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeClassificationJobResponse, scala.Unit]
   ): Request[DescribeClassificationJobResponse, AWSError] = js.native
   /**
-    * Retrieves information about the status and settings for a classification job.
+    * Retrieves the status and settings for a classification job.
     */
   def describeClassificationJob(params: DescribeClassificationJobRequest): Request[DescribeClassificationJobResponse, AWSError] = js.native
   def describeClassificationJob(
@@ -233,14 +233,14 @@ trait Macie2 extends Service {
   ): Request[DescribeClassificationJobResponse, AWSError] = js.native
   
   /**
-    * Retrieves information about the Amazon Macie configuration settings for an AWS organization.
+    * Retrieves the Amazon Macie configuration settings for an AWS organization.
     */
   def describeOrganizationConfiguration(): Request[DescribeOrganizationConfigurationResponse, AWSError] = js.native
   def describeOrganizationConfiguration(
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeOrganizationConfigurationResponse, scala.Unit]
   ): Request[DescribeOrganizationConfigurationResponse, AWSError] = js.native
   /**
-    * Retrieves information about the Amazon Macie configuration settings for an AWS organization.
+    * Retrieves the Amazon Macie configuration settings for an AWS organization.
     */
   def describeOrganizationConfiguration(params: DescribeOrganizationConfigurationRequest): Request[DescribeOrganizationConfigurationResponse, AWSError] = js.native
   def describeOrganizationConfiguration(
@@ -263,14 +263,14 @@ trait Macie2 extends Service {
   ): Request[DisableMacieResponse, AWSError] = js.native
   
   /**
-    * Disables an account as a delegated administrator of Amazon Macie for an AWS organization.
+    * Disables an account as the delegated Amazon Macie administrator account for an AWS organization.
     */
   def disableOrganizationAdminAccount(): Request[DisableOrganizationAdminAccountResponse, AWSError] = js.native
   def disableOrganizationAdminAccount(
     callback: js.Function2[/* err */ AWSError, /* data */ DisableOrganizationAdminAccountResponse, scala.Unit]
   ): Request[DisableOrganizationAdminAccountResponse, AWSError] = js.native
   /**
-    * Disables an account as a delegated administrator of Amazon Macie for an AWS organization.
+    * Disables an account as the delegated Amazon Macie administrator account for an AWS organization.
     */
   def disableOrganizationAdminAccount(params: DisableOrganizationAdminAccountRequest): Request[DisableOrganizationAdminAccountResponse, AWSError] = js.native
   def disableOrganizationAdminAccount(
@@ -323,14 +323,14 @@ trait Macie2 extends Service {
   ): Request[EnableMacieResponse, AWSError] = js.native
   
   /**
-    * Enables an account as a delegated administrator of Amazon Macie for an AWS organization.
+    * Designates an account as the delegated Amazon Macie administrator account for an AWS organization.
     */
   def enableOrganizationAdminAccount(): Request[EnableOrganizationAdminAccountResponse, AWSError] = js.native
   def enableOrganizationAdminAccount(
     callback: js.Function2[/* err */ AWSError, /* data */ EnableOrganizationAdminAccountResponse, scala.Unit]
   ): Request[EnableOrganizationAdminAccountResponse, AWSError] = js.native
   /**
-    * Enables an account as a delegated administrator of Amazon Macie for an AWS organization.
+    * Designates an account as the delegated Amazon Macie administrator account for an AWS organization.
     */
   def enableOrganizationAdminAccount(params: EnableOrganizationAdminAccountRequest): Request[EnableOrganizationAdminAccountResponse, AWSError] = js.native
   def enableOrganizationAdminAccount(
@@ -377,12 +377,12 @@ trait Macie2 extends Service {
   ): Request[GetClassificationExportConfigurationResponse, AWSError] = js.native
   
   /**
-    * Retrieves information about the criteria and other settings for a custom data identifier.
+    * Retrieves the criteria and other settings for a custom data identifier.
     */
   def getCustomDataIdentifier(): Request[GetCustomDataIdentifierResponse, AWSError] = js.native
   def getCustomDataIdentifier(callback: js.Function2[/* err */ AWSError, /* data */ GetCustomDataIdentifierResponse, scala.Unit]): Request[GetCustomDataIdentifierResponse, AWSError] = js.native
   /**
-    * Retrieves information about the criteria and other settings for a custom data identifier.
+    * Retrieves the criteria and other settings for a custom data identifier.
     */
   def getCustomDataIdentifier(params: GetCustomDataIdentifierRequest): Request[GetCustomDataIdentifierResponse, AWSError] = js.native
   def getCustomDataIdentifier(
@@ -405,12 +405,12 @@ trait Macie2 extends Service {
   ): Request[GetFindingStatisticsResponse, AWSError] = js.native
   
   /**
-    * Retrieves information about one or more findings.
+    * Retrieves the details of one or more findings.
     */
   def getFindings(): Request[GetFindingsResponse, AWSError] = js.native
   def getFindings(callback: js.Function2[/* err */ AWSError, /* data */ GetFindingsResponse, scala.Unit]): Request[GetFindingsResponse, AWSError] = js.native
   /**
-    * Retrieves information about one or more findings.
+    * Retrieves the details of one or more findings.
     */
   def getFindings(params: GetFindingsRequest): Request[GetFindingsResponse, AWSError] = js.native
   def getFindings(
@@ -419,12 +419,12 @@ trait Macie2 extends Service {
   ): Request[GetFindingsResponse, AWSError] = js.native
   
   /**
-    * Retrieves information about the criteria and other settings for a findings filter.
+    * Retrieves the criteria and other settings for a findings filter.
     */
   def getFindingsFilter(): Request[GetFindingsFilterResponse, AWSError] = js.native
   def getFindingsFilter(callback: js.Function2[/* err */ AWSError, /* data */ GetFindingsFilterResponse, scala.Unit]): Request[GetFindingsFilterResponse, AWSError] = js.native
   /**
-    * Retrieves information about the criteria and other settings for a findings filter.
+    * Retrieves the criteria and other settings for a findings filter.
     */
   def getFindingsFilter(params: GetFindingsFilterRequest): Request[GetFindingsFilterResponse, AWSError] = js.native
   def getFindingsFilter(
@@ -447,12 +447,12 @@ trait Macie2 extends Service {
   ): Request[GetInvitationsCountResponse, AWSError] = js.native
   
   /**
-    * Retrieves information about the current status and configuration settings for an Amazon Macie account.
+    * Retrieves the current status and configuration settings for an Amazon Macie account.
     */
   def getMacieSession(): Request[GetMacieSessionResponse, AWSError] = js.native
   def getMacieSession(callback: js.Function2[/* err */ AWSError, /* data */ GetMacieSessionResponse, scala.Unit]): Request[GetMacieSessionResponse, AWSError] = js.native
   /**
-    * Retrieves information about the current status and configuration settings for an Amazon Macie account.
+    * Retrieves the current status and configuration settings for an Amazon Macie account.
     */
   def getMacieSession(params: GetMacieSessionRequest): Request[GetMacieSessionResponse, AWSError] = js.native
   def getMacieSession(
@@ -603,14 +603,14 @@ trait Macie2 extends Service {
   ): Request[ListMembersResponse, AWSError] = js.native
   
   /**
-    * Retrieves information about the account that's designated as the delegated administrator of Amazon Macie for an AWS organization.
+    * Retrieves information about the delegated Amazon Macie administrator account for an AWS organization.
     */
   def listOrganizationAdminAccounts(): Request[ListOrganizationAdminAccountsResponse, AWSError] = js.native
   def listOrganizationAdminAccounts(
     callback: js.Function2[/* err */ AWSError, /* data */ ListOrganizationAdminAccountsResponse, scala.Unit]
   ): Request[ListOrganizationAdminAccountsResponse, AWSError] = js.native
   /**
-    * Retrieves information about the account that's designated as the delegated administrator of Amazon Macie for an AWS organization.
+    * Retrieves information about the delegated Amazon Macie administrator account for an AWS organization.
     */
   def listOrganizationAdminAccounts(params: ListOrganizationAdminAccountsRequest): Request[ListOrganizationAdminAccountsResponse, AWSError] = js.native
   def listOrganizationAdminAccounts(
@@ -701,12 +701,12 @@ trait Macie2 extends Service {
   ): Request[UntagResourceResponse, AWSError] = js.native
   
   /**
-    * Cancels a classification job.
+    * Changes the status of a classification job.
     */
   def updateClassificationJob(): Request[UpdateClassificationJobResponse, AWSError] = js.native
   def updateClassificationJob(callback: js.Function2[/* err */ AWSError, /* data */ UpdateClassificationJobResponse, scala.Unit]): Request[UpdateClassificationJobResponse, AWSError] = js.native
   /**
-    * Cancels a classification job.
+    * Changes the status of a classification job.
     */
   def updateClassificationJob(params: UpdateClassificationJobRequest): Request[UpdateClassificationJobResponse, AWSError] = js.native
   def updateClassificationJob(
@@ -757,14 +757,14 @@ trait Macie2 extends Service {
   ): Request[UpdateMemberSessionResponse, AWSError] = js.native
   
   /**
-    * Updates Amazon Macie configuration settings for an AWS organization.
+    * Updates the Amazon Macie configuration settings for an AWS organization.
     */
   def updateOrganizationConfiguration(): Request[UpdateOrganizationConfigurationResponse, AWSError] = js.native
   def updateOrganizationConfiguration(
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateOrganizationConfigurationResponse, scala.Unit]
   ): Request[UpdateOrganizationConfigurationResponse, AWSError] = js.native
   /**
-    * Updates Amazon Macie configuration settings for an AWS organization.
+    * Updates the Amazon Macie configuration settings for an AWS organization.
     */
   def updateOrganizationConfiguration(params: UpdateOrganizationConfigurationRequest): Request[UpdateOrganizationConfigurationResponse, AWSError] = js.native
   def updateOrganizationConfiguration(

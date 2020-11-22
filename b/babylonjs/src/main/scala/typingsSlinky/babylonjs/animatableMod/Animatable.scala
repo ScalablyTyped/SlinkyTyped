@@ -23,6 +23,7 @@ class Animatable protected () extends js.Object {
     * @param onAnimationEnd defines a callback to call when animation ends if it is not looping
     * @param animations defines a group of animation to add to the new Animatable
     * @param onAnimationLoop defines a callback to call when animation loops
+    * @param isAdditive defines whether the animation should be evaluated additively
     */
   def this(
     scene: Scene,
@@ -39,7 +40,9 @@ class Animatable protected () extends js.Object {
   onAnimationEnd: js.UndefOr[js.Function0[Unit] | Null],
     animations: js.UndefOr[js.Array[Animation]],
     /** defines a callback to call when animation loops */
-  onAnimationLoop: js.UndefOr[js.Function0[Unit] | Null]
+  onAnimationLoop: js.UndefOr[js.Function0[Unit] | Null],
+    /** defines whether the animation should be evaluated additively */
+  isAdditive: js.UndefOr[Boolean]
   ) = this()
   
   /** @hidden */
@@ -77,7 +80,7 @@ class Animatable protected () extends js.Object {
   
   /**
     * Disable animation blending
-    * @see http://doc.babylonjs.com/babylon101/animations#animation-blending
+    * @see https://doc.babylonjs.com/babylon101/animations#animation-blending
     */
   def disableBlending(): Unit = js.native
   
@@ -89,7 +92,7 @@ class Animatable protected () extends js.Object {
   
   /**
     * Allows the animatable to blend with current running animations
-    * @see http://doc.babylonjs.com/babylon101/animations#animation-blending
+    * @see https://doc.babylonjs.com/babylon101/animations#animation-blending
     * @param blendingSpeed defines the blending speed to use
     */
   def enableBlending(blendingSpeed: Double): Unit = js.native
@@ -122,6 +125,9 @@ class Animatable protected () extends js.Object {
     * @param frame defines the frame to jump to
     */
   def goToFrame(frame: Double): Unit = js.native
+  
+  /** defines whether the animation should be evaluated additively */
+  var isAdditive: Boolean = js.native
   
   /** defines if the animation must loop (default is false)  */
   var loopAnimation: Boolean = js.native

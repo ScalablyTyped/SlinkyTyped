@@ -22,7 +22,7 @@ package object mod {
     typingsSlinky.emotionSerialize.mod._CSSInterpolation | scala.Null | scala.Boolean | scala.Double | java.lang.String | typingsSlinky.emotionSerialize.mod.Keyframes | typingsSlinky.emotionUtils.mod.SerializedStyles
   ]
   
-  type CSSProperties = typingsSlinky.csstype.mod.PropertiesFallback[scala.Double | java.lang.String, java.lang.String with js.Object]
+  type CSSProperties = typingsSlinky.csstype.mod.PropertiesFallback[scala.Double | java.lang.String]
   
   /* Rewritten from type alias, can be one of: 
     - scala.Null

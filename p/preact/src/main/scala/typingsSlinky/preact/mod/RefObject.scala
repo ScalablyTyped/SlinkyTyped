@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RefObject[T] extends js.Object {
   
-  var current: js.UndefOr[T | Null] = js.native
+  var current: T | Null = js.native
 }
 object RefObject {
   
@@ -34,9 +34,6 @@ object RefObject {
     
     @scala.inline
     def setCurrent(value: T): Self = this.set("current", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCurrent: Self = this.set("current", js.undefined)
     
     @scala.inline
     def setCurrentNull: Self = this.set("current", null)

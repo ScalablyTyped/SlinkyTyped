@@ -5,8 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Defines how zoom changes are handled, i.e. which entity is responsible for the actual scaling of the page;
-  * defaults to `automatic`.
+  * Defines how zoom changes are handled, i.e. which entity is responsible for the actual scaling of the page; defaults to `automatic`.
   */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.automatic

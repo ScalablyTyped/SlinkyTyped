@@ -1,7 +1,5 @@
 package typingsSlinky.fsPromise.mod
 
-import typingsSlinky.fsExtra.mod.WriteResult
-import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.NodeJS.ErrnoException
 import scala.scalajs.js
@@ -12,43 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object write extends js.Object {
   
-  def apply(fd: Double, buffer: Buffer): js.Promise[WriteResult] = js.native
-  def apply(
-    fd: Double,
-    buffer: Buffer,
-    offset: js.UndefOr[scala.Nothing],
-    length: js.UndefOr[scala.Nothing],
-    position: Double
-  ): js.Promise[WriteResult] = js.native
-  def apply(fd: Double, buffer: Buffer, offset: js.UndefOr[scala.Nothing], length: Double): js.Promise[WriteResult] = js.native
-  def apply(fd: Double, buffer: Buffer, offset: js.UndefOr[scala.Nothing], length: Double, position: Double): js.Promise[WriteResult] = js.native
-  def apply(fd: Double, buffer: Buffer, offset: Double): js.Promise[WriteResult] = js.native
-  def apply(fd: Double, buffer: Buffer, offset: Double, length: js.UndefOr[scala.Nothing], position: Double): js.Promise[WriteResult] = js.native
-  def apply(fd: Double, buffer: Buffer, offset: Double, length: Double): js.Promise[WriteResult] = js.native
-  def apply(
-    fd: Double,
-    buffer: Buffer,
-    offset: Double,
-    length: Double,
-    callback: js.Function3[/* err */ ErrnoException, /* written */ Double, /* buffer */ Buffer, Unit]
-  ): Unit = js.native
-  def apply(fd: Double, buffer: Buffer, offset: Double, length: Double, position: Double): js.Promise[WriteResult] = js.native
-  def apply(
-    fd: Double,
-    buffer: Buffer,
-    offset: Double,
-    length: Double,
-    position: Double,
-    callback: js.Function3[/* err */ ErrnoException, /* written */ Double, /* buffer */ Buffer, Unit]
-  ): Unit = js.native
-  def apply(
-    fd: Double,
-    buffer: Buffer,
-    offset: Double,
-    length: Double,
-    position: Null,
-    callback: js.Function3[/* err */ ErrnoException, /* written */ Double, /* buffer */ Buffer, Unit]
-  ): Unit = js.native
   def apply(fd: Double, buffer: js.typedarray.DataView): js.Promise[js.Tuple2[Double, js.typedarray.DataView]] = js.native
   def apply(
     fd: Double,
@@ -316,7 +277,7 @@ object write extends js.Object {
     offset: Double,
     length: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.DataView, 
       Unit
@@ -343,7 +304,7 @@ object write extends js.Object {
     length: Double,
     position: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.DataView, 
       Unit
@@ -356,7 +317,7 @@ object write extends js.Object {
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.DataView, 
       Unit
@@ -844,7 +805,7 @@ object write extends js.Object {
     offset: Double,
     length: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float32Array, 
       Unit
@@ -871,7 +832,7 @@ object write extends js.Object {
     length: Double,
     position: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float32Array, 
       Unit
@@ -884,7 +845,7 @@ object write extends js.Object {
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float32Array, 
       Unit
@@ -1372,7 +1333,7 @@ object write extends js.Object {
     offset: Double,
     length: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float64Array, 
       Unit
@@ -1399,7 +1360,7 @@ object write extends js.Object {
     length: Double,
     position: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float64Array, 
       Unit
@@ -1412,7 +1373,7 @@ object write extends js.Object {
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Float64Array, 
       Unit
@@ -1900,7 +1861,7 @@ object write extends js.Object {
     offset: Double,
     length: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int16Array, 
       Unit
@@ -1927,7 +1888,7 @@ object write extends js.Object {
     length: Double,
     position: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int16Array, 
       Unit
@@ -1940,7 +1901,7 @@ object write extends js.Object {
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int16Array, 
       Unit
@@ -2428,7 +2389,7 @@ object write extends js.Object {
     offset: Double,
     length: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int32Array, 
       Unit
@@ -2455,7 +2416,7 @@ object write extends js.Object {
     length: Double,
     position: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int32Array, 
       Unit
@@ -2468,7 +2429,7 @@ object write extends js.Object {
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int32Array, 
       Unit
@@ -2956,7 +2917,7 @@ object write extends js.Object {
     offset: Double,
     length: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int8Array, 
       Unit
@@ -2983,7 +2944,7 @@ object write extends js.Object {
     length: Double,
     position: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int8Array, 
       Unit
@@ -2996,7 +2957,7 @@ object write extends js.Object {
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Int8Array, 
       Unit
@@ -3484,7 +3445,7 @@ object write extends js.Object {
     offset: Double,
     length: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
@@ -3511,7 +3472,7 @@ object write extends js.Object {
     length: Double,
     position: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
@@ -3524,7 +3485,7 @@ object write extends js.Object {
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint16Array, 
       Unit
@@ -4012,7 +3973,7 @@ object write extends js.Object {
     offset: Double,
     length: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
@@ -4039,7 +4000,7 @@ object write extends js.Object {
     length: Double,
     position: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
@@ -4052,7 +4013,7 @@ object write extends js.Object {
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint32Array, 
       Unit
@@ -4540,7 +4501,7 @@ object write extends js.Object {
     offset: Double,
     length: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
@@ -4567,7 +4528,7 @@ object write extends js.Object {
     length: Double,
     position: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
@@ -4580,7 +4541,7 @@ object write extends js.Object {
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8Array, 
       Unit
@@ -5073,7 +5034,7 @@ object write extends js.Object {
     offset: Double,
     length: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
@@ -5106,7 +5067,7 @@ object write extends js.Object {
     length: Double,
     position: Double,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit
@@ -5119,7 +5080,7 @@ object write extends js.Object {
     length: Double,
     position: Null,
     callback: js.Function3[
-      /* err */ ErrnoException | Null, 
+      (/* err */ ErrnoException) | Null, 
       /* written */ Double, 
       /* buffer */ js.typedarray.Uint8ClampedArray, 
       Unit

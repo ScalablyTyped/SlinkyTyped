@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createStrictInequality extends js.Object {
   
+  /** @deprecated Use `factory.createStrictInequality` or the factory supplied by your transformation context instead. */
   def apply(left: Expression, right: Expression): BinaryExpression = js.native
 }

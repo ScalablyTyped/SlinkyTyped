@@ -1,7 +1,10 @@
 package typingsSlinky.grommet.anon
 
+import typingsSlinky.grommet.baseMod.ExtendProps
 import typingsSlinky.grommet.baseMod.ExtendType
+import typingsSlinky.grommet.baseMod.ExtendValue
 import typingsSlinky.grommet.utilsMod.BackgroundType
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,13 +14,13 @@ trait Overlay extends js.Object {
   
   var background: js.UndefOr[BackgroundType] = js.native
   
-  var border: js.UndefOr[`8`] = js.native
+  var border: js.UndefOr[`11`] = js.native
   
   var container: js.UndefOr[ZIndex] = js.native
   
-  var extend: js.UndefOr[ExtendType] = js.native
+  var extend: js.UndefOr[ExtendType[Record[String, _]]] = js.native
   
-  var overlay: js.UndefOr[`3`] = js.native
+  var overlay: js.UndefOr[`5`] = js.native
   
   var responsiveBreakpoint: js.UndefOr[String] = js.native
   
@@ -53,7 +56,7 @@ object Overlay {
     def deleteBackground: Self = this.set("background", js.undefined)
     
     @scala.inline
-    def setBorder(value: `8`): Self = this.set("border", value.asInstanceOf[js.Any])
+    def setBorder(value: `11`): Self = this.set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBorder: Self = this.set("border", js.undefined)
@@ -65,16 +68,16 @@ object Overlay {
     def deleteContainer: Self = this.set("container", js.undefined)
     
     @scala.inline
-    def setExtendFunction1(value: /* args */ js.Any => Unit): Self = this.set("extend", js.Any.fromFunction1(value))
+    def setExtendFunction1(value: /* props */ ExtendProps[Record[String, _]] => ExtendValue[Record[String, _]]): Self = this.set("extend", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setExtend(value: ExtendType): Self = this.set("extend", value.asInstanceOf[js.Any])
+    def setExtend(value: ExtendType[Record[String, _]]): Self = this.set("extend", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExtend: Self = this.set("extend", js.undefined)
     
     @scala.inline
-    def setOverlay(value: `3`): Self = this.set("overlay", value.asInstanceOf[js.Any])
+    def setOverlay(value: `5`): Self = this.set("overlay", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverlay: Self = this.set("overlay", js.undefined)

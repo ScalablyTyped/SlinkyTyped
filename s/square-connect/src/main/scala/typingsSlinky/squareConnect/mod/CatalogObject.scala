@@ -1,6 +1,5 @@
 package typingsSlinky.squareConnect.mod
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,15 +31,18 @@ class CatalogObject () extends js.Object {
   var custom_attribute_definition_data: js.UndefOr[CatalogCustomAttributeDefinition] = js.native
   
   /**
-    * Application-defined key/value attributes that are set at a global (location-independent) level.
-    * Values from the `*_data` fields may not be duplicated. Custom Attribute fields are intended to store additional
-    * information about a Catalog Object or associations with an entity in another system. Do not use custom attributes
-    * to store any sensitive information (personally identifiable information, card details, etc.).
-    * For CustomAttributesDefinitions defined by the app making the request, the map key is the key defined in
-    * CustomAttributeDefinition (eg. `reference_id`). For CustomAttributesDefinitions by other apps, the map key is the key
-    * defined in CustomAttributeDefinition prefixed with the application ID and a colon (eg. "abcd1234:reference_id").
+    * A map (key-value pairs) of application-defined custom attribute values.
+    * The value of a key-value pair is a `CatalogCustomAttributeValue` object.
+    * The key is the `key` attribute value defined in the associated `CatalogCustomAttributeDefinition` object defined by the application making the request.
+    * If the `CatalogCustomAttributeDefinition` object is defined by another application, the `CatalogCustomAttributeDefinition`'s key attribute value is prefixed by the defining application ID.
+    * For example, if the `CatalogCustomAttributeDefinition` has a `key` attribute of `\"cocoa_brand\"` and the defining
+    * application ID is `\"abcd1234\"`, the key in the map is `\"abcd1234:cocoa_brand\"` if the application making the
+    * request is different from the application defining the custom attribute definition.
+    * Otherwise, the key used in the map is simply `\"cocoa_brand\"`. Application-defined custom attributes that are set at a global (location-independent) level.
+    * Custom attribute values are intended to store additional information about a catalog object or associations with
+    * an entity in another system. Do not use custom attributes to store any sensitive information (personally identifiable information, card details, etc.).
     */
-  var custom_attribute_values: js.UndefOr[StringDictionary[CatalogCustomAttributeValue]] = js.native
+  var custom_attribute_values: js.UndefOr[Record[String, CatalogCustomAttributeValue]] = js.native
   
   /**
     * Structured data for a `CatalogDiscount`, set for CatalogObjects of type `DISCOUNT`.
@@ -120,6 +122,7 @@ class CatalogObject () extends js.Object {
   
   /**
     * Structured data for a `CatalogPricingRule`, set for CatalogObjects of type `PRICING_RULE`.
+    * A `CatalogPricingRule` object often works with a `CatalogProductSet` object or a `CatalogTimePeriod` object.
     */
   var pricing_rule_data: js.UndefOr[CatalogPricingRule] = js.native
   
@@ -127,6 +130,16 @@ class CatalogObject () extends js.Object {
     * Structured data for a `CatalogProductSet`, set for CatalogObjects of type `PRODUCT_SET`.
     */
   var product_set_data: js.UndefOr[CatalogProductSet] = js.native
+  
+  /**
+    * Structured data for a `CatalogQuickAmountsSettings`, set for CatalogObjects of type `QUICK_AMOUNTS_SETTINGS`.
+    */
+  var quick_amounts_settings_data: js.UndefOr[CatalogQuickAmountsSettings] = js.native
+  
+  /**
+    * Structured data for a `CatalogSubscriptionPlan`, set for CatalogObjects of type `SUBSCRIPTION_PLAN`.
+    */
+  var subscription_plan_data: js.UndefOr[CatalogSubscriptionPlan] = js.native
   
   /**
     * Structured data for a `CatalogTax`, set for CatalogObjects of type `TAX`.

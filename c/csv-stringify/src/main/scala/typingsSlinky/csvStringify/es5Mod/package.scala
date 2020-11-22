@@ -6,11 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object es5Mod {
   
-  type Callback = js.Function2[
-    /* err */ js.UndefOr[scala.Null | js.Error], 
-    /* output */ js.UndefOr[java.lang.String], 
-    scala.Unit
-  ]
+  type Callback = js.Function2[/* err */ js.UndefOr[js.Error], /* output */ java.lang.String, scala.Unit]
   
   type Cast[T] = js.Function2[
     /* value */ T, 

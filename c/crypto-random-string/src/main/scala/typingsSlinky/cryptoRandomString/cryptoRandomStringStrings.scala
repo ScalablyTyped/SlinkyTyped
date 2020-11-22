@@ -7,6 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object cryptoRandomStringStrings {
   
   @scala.inline
+  def alphanumeric: alphanumeric = "alphanumeric".asInstanceOf[alphanumeric]
+  
+  @scala.inline
+  def `ascii-printable`: `ascii-printable` = "ascii-printable".asInstanceOf[`ascii-printable`]
+  
+  @scala.inline
   def base64: base64 = "base64".asInstanceOf[base64]
   
   @scala.inline
@@ -20,6 +26,12 @@ object cryptoRandomStringStrings {
   
   @scala.inline
   def `url-safe`: `url-safe` = "url-safe".asInstanceOf[`url-safe`]
+  
+  @js.native
+  sealed trait alphanumeric extends js.Object
+  
+  @js.native
+  sealed trait `ascii-printable` extends js.Object
   
   @js.native
   sealed trait base64 extends js.Object

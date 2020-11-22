@@ -151,6 +151,9 @@ object screepsStrings {
   def alloy: alloy = "alloy".asInstanceOf[alloy]
   
   @scala.inline
+  def astar: astar = "astar".asInstanceOf[astar]
+  
+  @scala.inline
   def attack: attack = "attack".asInstanceOf[attack]
   
   @scala.inline
@@ -218,6 +221,9 @@ object screepsStrings {
   
   @scala.inline
   def device: device = "device".asInstanceOf[device]
+  
+  @scala.inline
+  def dijkstra: dijkstra = "dijkstra".asInstanceOf[dijkstra]
   
   @scala.inline
   def dotted: dotted = "dotted".asInstanceOf[dotted]
@@ -607,6 +613,9 @@ object screepsStrings {
   sealed trait alloy extends ResourceConstantSansEnergy
   
   @js.native
+  sealed trait astar extends FindClosestByPathAlgorithm
+  
+  @js.native
   sealed trait attack extends js.Object
   
   @js.native
@@ -674,6 +683,9 @@ object screepsStrings {
   
   @js.native
   sealed trait device extends ResourceConstantSansEnergy
+  
+  @js.native
+  sealed trait dijkstra extends FindClosestByPathAlgorithm
   
   @js.native
   sealed trait dotted extends js.Object

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.clientMod.client.SupportedPlatform
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.StructureVersionInfo
@@ -7,20 +8,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/customwidgets", "customwidgets.CustomWidgetType")
 @js.native
-class CustomWidgetType protected () extends Element {
+class CustomWidgetType protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsCustomWidget: CustomWidget = js.native
@@ -47,9 +49,6 @@ class CustomWidgetType protected () extends Element {
     */
   def labeled: Boolean = js.native
   def labeled_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FCustomWidgetType: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

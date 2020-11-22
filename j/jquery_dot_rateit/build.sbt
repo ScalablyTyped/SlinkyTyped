@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery_dot_rateit"
-version := "1.1.1-dt-20200515Z-b6009e"
+version := "1.1.1-dt-20201002Z-b6009e"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

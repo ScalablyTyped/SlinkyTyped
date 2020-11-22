@@ -71,12 +71,12 @@ trait ASPxClientPopupControlBase extends ASPxClientControl {
   def GetContentHtml(): String = js.native
   
   /**
-    * Returns an iframe object containing a web page specified via the control's ASPxPopupControlBase.ContentUrl property (or the ASPxClientPopupControlBase.SetContentUrl client method).
+    * Returns an iframe object containing a web page specified via the control's ASPxPopupControlBase.ContentUrl property (or the client ASPxClientPopupControlBase.SetContentUrl method).
     */
   def GetContentIFrame(): js.Any = js.native
   
   /**
-    * Returns an iframe object containing a web page specified via the control's ASPxPopupControlBase.ContentUrl property (or the ASPxClientPopupControlBase.SetContentUrl client method).
+    * Returns an iframe object containing a web page specified via the control's ASPxPopupControlBase.ContentUrl property (or the client ASPxClientPopupControlBase.SetContentUrl method).
     */
   def GetContentIFrameWindow(): js.Any = js.native
   
@@ -91,32 +91,32 @@ trait ASPxClientPopupControlBase extends ASPxClientControl {
   def GetContentWidth(): Double = js.native
   
   /**
-    * Returns the URL pointing to the image displayed within the <strong>window footer</strong> by default.
+    * Returns the URL pointing to the image displayed within the window footer by default.
     */
   def GetFooterImageUrl(): String = js.native
   
   /**
-    * Returns the URL where the web browser will navigate when the text or image is clicked within a window's <strong>footer</strong>.
+    * Returns the URL where the web browser will navigate when the text or image is clicked within a window's footer.
     */
   def GetFooterNavigateUrl(): String = js.native
   
   /**
-    * Returns the text displayed within a window's <strong>footer</strong>.
+    * Returns the text displayed within a window's footer.
     */
   def GetFooterText(): String = js.native
   
   /**
-    * Returns the URL pointing to the image displayed within the <strong>window header</strong>.
+    * Returns the URL pointing to the image displayed within the window header.
     */
   def GetHeaderImageUrl(): String = js.native
   
   /**
-    * Returns the URL where the web browser will navigate when the text or image is clicked within a window's <strong>header</strong>.
+    * Returns the URL where the web browser will navigate when the text or image is clicked within a window's header.
     */
   def GetHeaderNavigateUrl(): String = js.native
   
   /**
-    * Returns the text displayed within a window's <strong>header</strong>.
+    * Returns the text displayed within a window's header.
     */
   def GetHeaderText(): String = js.native
   
@@ -185,31 +185,31 @@ trait ASPxClientPopupControlBase extends ASPxClientControl {
   def SetContentUrl(url: String): Unit = js.native
   
   /**
-    * Specifies the URL which points to the image displayed within the <strong>window footer</strong> by default.
+    * Specifies the URL which points to the image displayed within the window footer by default.
     * @param value A string value that is the URL for the image displayed within the window footer.
     */
   def SetFooterImageUrl(value: String): Unit = js.native
   
   /**
-    * Specifies the URL where the web browser will navigate when the text or image is clicked within a window's <strong>footer</strong>.
+    * Specifies the URL where the web browser will navigate when the text or image is clicked within a window's footer.
     * @param value A string value which specifies the required navigation location.
     */
   def SetFooterNavigateUrl(value: String): Unit = js.native
   
   /**
-    * Specifies the text displayed within a window's <strong>footer</strong>.
+    * Specifies the text displayed within a window's footer.
     * @param value A string value that specifies a window's footer text.
     */
   def SetFooterText(value: String): Unit = js.native
   
   /**
-    * Specifies the URL which points to the image displayed within the <strong>window header</strong>.
+    * Specifies the URL which points to the image displayed within the window header.
     * @param value A string value that is the URL to the image displayed within the header.
     */
   def SetHeaderImageUrl(value: String): Unit = js.native
   
   /**
-    * Specifies the URL where the web browser will navigate when the text or image is clicked within a window's <strong>header</strong>.
+    * Specifies the URL where the web browser will navigate when the text or image is clicked within a window's header.
     * @param value A string value which specifies the required navigation location.
     */
   def SetHeaderNavigateUrl(value: String): Unit = js.native

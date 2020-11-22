@@ -14,15 +14,15 @@ trait UnorderedListNode
   
   var indent: Double = js.native
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: ul = js.native
 }
 object UnorderedListNode {
   
   @scala.inline
-  def apply(contents: js.Array[UnorderedListItemNode], indent: Double, name: ul): UnorderedListNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], indent = indent.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(contents: js.Array[UnorderedListItemNode], indent: Double, location: LocationRange, name: ul): UnorderedListNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], indent = indent.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnorderedListNode]
   }
   
@@ -51,12 +51,9 @@ object UnorderedListNode {
     def setIndent(value: Double): Self = this.set("indent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: ul): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
+    def setName(value: ul): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

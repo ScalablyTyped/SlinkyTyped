@@ -16,9 +16,9 @@ trait RemoveHandlerOptions extends js.Object {
   var asyncContext: js.UndefOr[js.Any] = js.native
   
   /**
-    * The handler to be removed. If not specified all handlers for the specified event type are removed.
+    * The handler to be removed. If a particular handler is not specified, then all handlers for the specified event type are removed. The `BindingEventHandler` type is defined with `type BindingEventHandler = (eventArgs?: Office.BindingDataChangedEventArgs | Office.BindingSelectionChangedEventArgs) => any`.
     */
-  var handler: js.UndefOr[String] = js.native
+  var handler: js.UndefOr[BindingEventHandler] = js.native
 }
 object RemoveHandlerOptions {
   
@@ -50,7 +50,9 @@ object RemoveHandlerOptions {
     def deleteAsyncContext: Self = this.set("asyncContext", js.undefined)
     
     @scala.inline
-    def setHandler(value: String): Self = this.set("handler", value.asInstanceOf[js.Any])
+    def setHandler(
+      value: /* eventArgs */ js.UndefOr[BindingDataChangedEventArgs | BindingSelectionChangedEventArgs] => js.Any
+    ): Self = this.set("handler", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteHandler: Self = this.set("handler", js.undefined)

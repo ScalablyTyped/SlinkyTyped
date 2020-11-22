@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DaylightTimeZoneOffset extends StandardTimeZoneOffset {
   
   // The time offset from Coordinated Universal Time (UTC) for daylight saving time. This value is in minutes.
-  var daylightBias: js.UndefOr[Double] = js.native
+  var daylightBias: js.UndefOr[NullableOption[Double]] = js.native
 }
 object DaylightTimeZoneOffset {
   
@@ -34,9 +34,12 @@ object DaylightTimeZoneOffset {
     }
     
     @scala.inline
-    def setDaylightBias(value: Double): Self = this.set("daylightBias", value.asInstanceOf[js.Any])
+    def setDaylightBias(value: NullableOption[Double]): Self = this.set("daylightBias", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDaylightBias: Self = this.set("daylightBias", js.undefined)
+    
+    @scala.inline
+    def setDaylightBiasNull: Self = this.set("daylightBias", null)
   }
 }

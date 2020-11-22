@@ -25,6 +25,18 @@ trait Options extends js.Object {
   var decay: js.UndefOr[Double] = js.native
   
   /**
+    * Disables confetti entirely for users that prefer reduced motion. The confetti() promise will resolve immediately in this case.
+    * @default false
+    */
+  var disableForReducedMotion: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * How quickly the particles are pulled down. 1 is full gravity, 0.5 is half gravity, etc., but there are no limits.
+    * @default 1
+    */
+  var gravity: js.UndefOr[Double] = js.native
+  
+  /**
     * Where to start firing confetti from. Feel free to launch off-screen if you'd like.
     */
   var origin: js.UndefOr[Origin] = js.native
@@ -34,6 +46,12 @@ trait Options extends js.Object {
     * @default 50
     */
   var particleCount: js.UndefOr[Double] = js.native
+  
+  /**
+    * Scale factor for each confetti particle. Use decimals to make the confetti smaller.
+    * @default 1
+    */
+  var scalar: js.UndefOr[Double] = js.native
   
   /**
     * The possible values are square and circle. The default is to use both shapes in an even mix.
@@ -110,6 +128,18 @@ object Options {
     def deleteDecay: Self = this.set("decay", js.undefined)
     
     @scala.inline
+    def setDisableForReducedMotion(value: Boolean): Self = this.set("disableForReducedMotion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableForReducedMotion: Self = this.set("disableForReducedMotion", js.undefined)
+    
+    @scala.inline
+    def setGravity(value: Double): Self = this.set("gravity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGravity: Self = this.set("gravity", js.undefined)
+    
+    @scala.inline
     def setOrigin(value: Origin): Self = this.set("origin", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -120,6 +150,12 @@ object Options {
     
     @scala.inline
     def deleteParticleCount: Self = this.set("particleCount", js.undefined)
+    
+    @scala.inline
+    def setScalar(value: Double): Self = this.set("scalar", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScalar: Self = this.set("scalar", js.undefined)
     
     @scala.inline
     def setShapesVarargs(value: shape*): Self = this.set("shapes", js.Array(value :_*))

@@ -16,6 +16,8 @@ trait StatisticProps extends FormatConfig {
   
   var className: js.UndefOr[String] = js.native
   
+  var loading: js.UndefOr[Boolean] = js.native
+  
   var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
   
   var onMouseLeave: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
@@ -62,6 +64,12 @@ object StatisticProps {
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
+    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
     
     @scala.inline
     def setOnMouseEnter(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseEnter", js.Any.fromFunction1(value))

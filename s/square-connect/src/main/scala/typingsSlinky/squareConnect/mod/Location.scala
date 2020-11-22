@@ -70,6 +70,14 @@ class Location () extends js.Object {
   var facebook_url: js.UndefOr[String] = js.native
   
   /**
+    * The URL of a full-format logo image for the location.
+    * The Seller must choose this logo in the Seller dashboard (Receipts section) for the logo to appear on
+    * transactions (such as receipts, invoices) that Square generates on behalf of the Seller.
+    * This image can have an aspect ratio of 2:1 or greater and is recommended to be at least 1280x648 pixels.
+    */
+  var full_format_logo_url: js.UndefOr[String] = js.native
+  
+  /**
     * The Square-issued ID of the location.
     */
   var id: js.UndefOr[String] = js.native
@@ -85,7 +93,9 @@ class Location () extends js.Object {
   var language_code: js.UndefOr[String] = js.native
   
   /**
-    * The URL of the logo image for the location.
+    * The URL of the logo image for the location. The Seller must choose this logo in the Seller dashboard (Receipts section)
+    * for the logo to appear on transactions (such as receipts, invoices) that Square generates on behalf of the Seller.
+    * This image should have an aspect ratio close to 1:1 and is recommended to be at least 200x200 pixels.
     */
   var logo_url: js.UndefOr[String] = js.native
   

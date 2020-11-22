@@ -21,5 +21,5 @@ trait TypeofAnimationClip extends Instantiable0[AnimationClip] {
   
   def parseAnimation(animation: js.Any, bones: js.Array[Bone]): typingsSlinky.three.animationClipMod.AnimationClip = js.native
   
-  def toJSON(): js.Any = js.native
+  def toJSON(clip: typingsSlinky.three.animationClipMod.AnimationClip): js.Any = js.native
 }

@@ -15,5 +15,8 @@ object global extends js.Object {
     */
   def clearImmediate(handle: Double): Unit = js.native
   
-  def setImmediate(callback: js.Function1[/* repeated */ js.Any, Unit], args: js.Any*): Double = js.native
+  def setImmediate[T /* <: js.Array[_] */](
+    callback: js.Function1[/* args */ T, Unit],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type T is not an array type */ args: T
+  ): Double = js.native
 }

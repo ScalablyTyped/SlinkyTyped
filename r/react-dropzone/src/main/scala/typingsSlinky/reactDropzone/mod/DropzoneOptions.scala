@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Pick<react.react.HTMLProps<std.HTMLElement>, react-dropzone.react-dropzone.PropTypes> & {  accept :string | std.Array<string> | undefined,   minSize :number | undefined,   maxSize :number | undefined,   preventDropOnDocument :boolean | undefined,   noClick :boolean | undefined,   noKeyboard :boolean | undefined,   noDrag :boolean | undefined,   noDragEventsBubbling :boolean | undefined,   disabled :boolean | undefined,   onDrop :<T extends std.File>(acceptedFiles : std.Array<T>, fileRejections : std.Array<react-dropzone.react-dropzone.FileRejection>, event : react-dropzone.react-dropzone.DropEvent): void | undefined,   onDropAccepted :<T extends std.File>(files : std.Array<T>, event : react-dropzone.react-dropzone.DropEvent): void | undefined,   onDropRejected :(fileRejections : std.Array<react-dropzone.react-dropzone.FileRejection>, event : react-dropzone.react-dropzone.DropEvent): void | undefined,   getFilesFromEvent :(event : react-dropzone.react-dropzone.DropEvent): std.Promise<std.Array<std.File | std.DataTransferItem>> | undefined,   onFileDialogCancel :(): void | undefined} */
+/* Inlined std.Pick<react.react.HTMLProps<std.HTMLElement>, react-dropzone.react-dropzone.PropTypes> & {  accept :string | std.Array<string> | undefined,   minSize :number | undefined,   maxSize :number | undefined,   maxFiles :number | undefined,   preventDropOnDocument :boolean | undefined,   noClick :boolean | undefined,   noKeyboard :boolean | undefined,   noDrag :boolean | undefined,   noDragEventsBubbling :boolean | undefined,   disabled :boolean | undefined,   onDrop :<T extends std.File>(acceptedFiles : std.Array<T>, fileRejections : std.Array<react-dropzone.react-dropzone.FileRejection>, event : react-dropzone.react-dropzone.DropEvent): void | undefined,   onDropAccepted :<T extends std.File>(files : std.Array<T>, event : react-dropzone.react-dropzone.DropEvent): void | undefined,   onDropRejected :(fileRejections : std.Array<react-dropzone.react-dropzone.FileRejection>, event : react-dropzone.react-dropzone.DropEvent): void | undefined,   getFilesFromEvent :(event : react-dropzone.react-dropzone.DropEvent): std.Promise<std.Array<std.File | std.DataTransferItem>> | undefined,   onFileDialogCancel :(): void | undefined} */
 @js.native
 trait DropzoneOptions extends js.Object {
   
@@ -20,6 +20,8 @@ trait DropzoneOptions extends js.Object {
   var getFilesFromEvent: js.UndefOr[
     js.Function1[/* event */ DropEvent, js.Promise[js.Array[File | DataTransferItem]]]
   ] = js.native
+  
+  var maxFiles: js.UndefOr[Double] = js.native
   
   var maxSize: js.UndefOr[Double] = js.native
   
@@ -103,6 +105,12 @@ object DropzoneOptions {
     
     @scala.inline
     def deleteGetFilesFromEvent: Self = this.set("getFilesFromEvent", js.undefined)
+    
+    @scala.inline
+    def setMaxFiles(value: Double): Self = this.set("maxFiles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxFiles: Self = this.set("maxFiles", js.undefined)
     
     @scala.inline
     def setMaxSize(value: Double): Self = this.set("maxSize", value.asInstanceOf[js.Any])

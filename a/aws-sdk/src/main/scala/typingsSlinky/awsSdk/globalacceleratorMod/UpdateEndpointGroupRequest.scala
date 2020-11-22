@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateEndpointGroupRequest extends js.Object {
   
   /**
-    * The list of endpoint objects.
+    * The list of endpoint objects. A resource must be valid and active when you add it as an endpoint.
     */
   var EndpointConfigurations: js.UndefOr[typingsSlinky.awsSdk.globalacceleratorMod.EndpointConfigurations] = js.native
   
@@ -36,6 +36,11 @@ trait UpdateEndpointGroupRequest extends js.Object {
     * The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
     */
   var HealthCheckProtocol: js.UndefOr[typingsSlinky.awsSdk.globalacceleratorMod.HealthCheckProtocol] = js.native
+  
+  /**
+    * Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. For example, you can create a port override in which the listener receives user traffic on ports 80 and 443, but your accelerator routes that traffic to ports 1080 and 1443, respectively, on the endpoints. For more information, see  Port overrides in the AWS Global Accelerator Developer Guide.
+    */
+  var PortOverrides: js.UndefOr[typingsSlinky.awsSdk.globalacceleratorMod.PortOverrides] = js.native
   
   /**
     * The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
@@ -105,6 +110,15 @@ object UpdateEndpointGroupRequest {
     
     @scala.inline
     def deleteHealthCheckProtocol: Self = this.set("HealthCheckProtocol", js.undefined)
+    
+    @scala.inline
+    def setPortOverridesVarargs(value: PortOverride*): Self = this.set("PortOverrides", js.Array(value :_*))
+    
+    @scala.inline
+    def setPortOverrides(value: PortOverrides): Self = this.set("PortOverrides", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePortOverrides: Self = this.set("PortOverrides", js.undefined)
     
     @scala.inline
     def setThresholdCount(value: ThresholdCount): Self = this.set("ThresholdCount", value.asInstanceOf[js.Any])

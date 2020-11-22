@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjs.mod
 
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,24 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object spectral extends js.Object {
   
-  val fft: js.Function1[
-    /* input */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], 
-    Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
-  ] = js.native
+  def fft(input: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
   
-  val ifft: js.Function1[
-    /* input */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], 
-    Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
-  ] = js.native
+  def ifft(input: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
   
-  val irfft: js.Function1[
-    /* input */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], 
-    Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
-  ] = js.native
+  def irfft(input: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
   
-  val rfft: js.Function2[
-    /* input */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], 
-    /* fftLength */ js.UndefOr[Double], 
-    Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
-  ] = js.native
+  def rfft(input: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
+  def rfft(input: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], fftLength: Double): Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] = js.native
 }

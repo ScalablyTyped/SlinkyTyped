@@ -9,4 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object sourceCommonMod extends js.Object {
   
   val DEFAULT_WMS_VERSION: String = js.native
+  
+  val IMAGE_SMOOTHING_DISABLED: js.Any = js.native
 }

@@ -1,12 +1,10 @@
 package typingsSlinky.awsSdkClientCognitoIdentityBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.cognitoIdentityConfigurationMod.CognitoIdentityResolvedConfiguration
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesDescribeIdentityInputMod.DescribeIdentityInput
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesDescribeIdentityOutputMod.DescribeIdentityOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
@@ -23,15 +21,12 @@ object describeIdentityCommandMod extends js.Object {
           DescribeIdentityInput, 
           OutputTypesUnion, 
           DescribeIdentityOutput, 
-          CognitoIdentityResolvedConfiguration, 
-          Blob
+          CognitoIdentityResolvedConfiguration
         ] {
     def this(input: DescribeIdentityInput) = this()
     
-    val middlewareStack: MiddlewareStack[DescribeIdentityInput, DescribeIdentityOutput, Blob] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any,
       configuration: CognitoIdentityResolvedConfiguration
     ): Handler[DescribeIdentityInput, DescribeIdentityOutput] = js.native
   }

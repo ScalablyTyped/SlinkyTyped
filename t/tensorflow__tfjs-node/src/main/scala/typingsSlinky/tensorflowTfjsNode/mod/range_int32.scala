@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsNode.mod
 
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.int32
 import scala.scalajs.js
 import scala.scalajs.js.`|`

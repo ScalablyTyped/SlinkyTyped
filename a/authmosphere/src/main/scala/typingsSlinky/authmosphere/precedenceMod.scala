@@ -22,7 +22,8 @@ object precedenceMod extends js.Object {
   }
   
   /**
-    * Must return a promise that return true or false. If the result is true the scope checking will be skipped and next is called
+    * Must return a promise that return true or false.
+    * If the result is true the scope checking will be skipped and next is called
     */
   type PrecedenceFunction = js.Function3[
     /* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], 

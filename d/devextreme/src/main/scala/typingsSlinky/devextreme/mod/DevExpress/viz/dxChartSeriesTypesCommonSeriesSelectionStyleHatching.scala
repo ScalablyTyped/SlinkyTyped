@@ -7,20 +7,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CommonSeries.selectionStyle.hatching */
+/**
+  * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle.hatching]
+  */
 @js.native
 trait dxChartSeriesTypesCommonSeriesSelectionStyleHatching extends js.Object {
   
-  /** @name dxChartSeriesTypes.CommonSeries.selectionStyle.hatching.direction */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle.hatching.direction]
+    */
   var direction: js.UndefOr[left | none | right] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.selectionStyle.hatching.opacity */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle.hatching.opacity]
+    */
   var opacity: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.selectionStyle.hatching.step */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle.hatching.step]
+    */
   var step: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.selectionStyle.hatching.width */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle.hatching.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxChartSeriesTypesCommonSeriesSelectionStyleHatching {

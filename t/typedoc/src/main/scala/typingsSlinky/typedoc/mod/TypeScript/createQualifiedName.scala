@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createQualifiedName extends js.Object {
   
+  /** @deprecated Use `factory.createQualifiedName` or the factory supplied by your transformation context instead. */
   def apply(left: EntityName, right: String): QualifiedName = js.native
   def apply(left: EntityName, right: Identifier): QualifiedName = js.native
 }

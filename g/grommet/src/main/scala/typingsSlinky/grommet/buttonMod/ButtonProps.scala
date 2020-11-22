@@ -68,7 +68,7 @@ trait ButtonProps extends js.Object {
   
   var size: js.UndefOr[small | medium | large] = js.native
   
-  var target: js.UndefOr[_self | _blank | _parent | _top] = js.native
+  var target: js.UndefOr[_self | _blank | _parent | _top | String] = js.native
   
   var `type`: js.UndefOr[button | reset | submit] = js.native
 }
@@ -225,7 +225,7 @@ object ButtonProps {
     def deleteSize: Self = this.set("size", js.undefined)
     
     @scala.inline
-    def setTarget(value: _self | _blank | _parent | _top): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setTarget(value: _self | _blank | _parent | _top | String): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)

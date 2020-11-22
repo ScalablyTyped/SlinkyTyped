@@ -29,6 +29,8 @@ object mod extends js.Object {
     
     var getNode: js.Any = js.native
     
+    var handleCacheQueue: js.Any = js.native
+    
     var handleError: js.Any = js.native
     
     var handleLoad: js.Any = js.native

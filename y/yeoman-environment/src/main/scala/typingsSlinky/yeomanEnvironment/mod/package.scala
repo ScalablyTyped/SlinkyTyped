@@ -6,5 +6,33 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type RunDone = js.Function1[/* err */ scala.Null | js.Error, scala.Unit]
+  /**
+    * Represents an adapter.
+    */
+  type Adapter = typingsSlinky.yeomanEnvironment.adapterMod.^
+  
+  /**
+    * Represents an answer-hash.
+    */
+  type Answers = typingsSlinky.inquirer.mod.Answers
+  
+  /**
+    * Provides the functionality to handle callbacks.
+    */
+  type Callback = /**
+    * Handles a callback.
+    *
+    * @param err The error that occurred.
+    */
+  js.Function1[/* err */ js.Error | scala.Null, scala.Unit]
+  
+  /**
+    * Represents a question.
+    */
+  type Question[T] = typingsSlinky.inquirer.mod.DistinctQuestion[T]
+  
+  /**
+    * Represents a collection of questions.
+    */
+  type Questions[T] = typingsSlinky.inquirer.mod.QuestionCollection[T]
 }

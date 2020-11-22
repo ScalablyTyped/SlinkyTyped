@@ -11,10 +11,10 @@ trait MicrosoftStoreForBusinessApp extends MobileApp {
   var licenseType: js.UndefOr[MicrosoftStoreForBusinessLicenseType] = js.native
   
   // The app package identifier
-  var packageIdentityName: js.UndefOr[String] = js.native
+  var packageIdentityName: js.UndefOr[NullableOption[String]] = js.native
   
   // The app product key
-  var productKey: js.UndefOr[String] = js.native
+  var productKey: js.UndefOr[NullableOption[String]] = js.native
   
   // The total number of Microsoft Store for Business licenses.
   var totalLicenseCount: js.UndefOr[Double] = js.native
@@ -52,16 +52,22 @@ object MicrosoftStoreForBusinessApp {
     def deleteLicenseType: Self = this.set("licenseType", js.undefined)
     
     @scala.inline
-    def setPackageIdentityName(value: String): Self = this.set("packageIdentityName", value.asInstanceOf[js.Any])
+    def setPackageIdentityName(value: NullableOption[String]): Self = this.set("packageIdentityName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePackageIdentityName: Self = this.set("packageIdentityName", js.undefined)
     
     @scala.inline
-    def setProductKey(value: String): Self = this.set("productKey", value.asInstanceOf[js.Any])
+    def setPackageIdentityNameNull: Self = this.set("packageIdentityName", null)
+    
+    @scala.inline
+    def setProductKey(value: NullableOption[String]): Self = this.set("productKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProductKey: Self = this.set("productKey", js.undefined)
+    
+    @scala.inline
+    def setProductKeyNull: Self = this.set("productKey", null)
     
     @scala.inline
     def setTotalLicenseCount(value: Double): Self = this.set("totalLicenseCount", value.asInstanceOf[js.Any])

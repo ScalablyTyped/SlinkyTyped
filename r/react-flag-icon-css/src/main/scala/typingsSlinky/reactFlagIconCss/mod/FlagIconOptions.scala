@@ -21,9 +21,7 @@ trait FlagIconOptions extends js.Object {
     * using .theme-base and/or b) you are using custom flags.
     */
   var themeStyles: js.UndefOr[
-    StringDictionary[
-      (Properties[(String with js.Object) | `0`, String with js.Object]) with (PropertiesHyphen[(String with js.Object) | `0`, String with js.Object])
-    ]
+    StringDictionary[(Properties[String | `0`]) with (PropertiesHyphen[String | `0`])]
   ] = js.native
   
   /**
@@ -61,11 +59,7 @@ object FlagIconOptions {
     def deleteCustomCodes: Self = this.set("customCodes", js.undefined)
     
     @scala.inline
-    def setThemeStyles(
-      value: StringDictionary[
-          (Properties[(String with js.Object) | `0`, String with js.Object]) with (PropertiesHyphen[(String with js.Object) | `0`, String with js.Object])
-        ]
-    ): Self = this.set("themeStyles", value.asInstanceOf[js.Any])
+    def setThemeStyles(value: StringDictionary[(Properties[String | `0`]) with (PropertiesHyphen[String | `0`])]): Self = this.set("themeStyles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteThemeStyles: Self = this.set("themeStyles", js.undefined)

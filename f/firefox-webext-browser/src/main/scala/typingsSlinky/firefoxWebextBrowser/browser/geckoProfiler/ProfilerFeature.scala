@@ -25,9 +25,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.fileio
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.fileioall
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.noiostacks
+  - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.audiocallbacktracing
 */
 trait ProfilerFeature extends js.Object
 object ProfilerFeature {
+  
+  @scala.inline
+  def audiocallbacktracing: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.audiocallbacktracing = "audiocallbacktracing".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.audiocallbacktracing]
   
   @scala.inline
   def fileio: typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.fileio = "fileio".asInstanceOf[typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.fileio]

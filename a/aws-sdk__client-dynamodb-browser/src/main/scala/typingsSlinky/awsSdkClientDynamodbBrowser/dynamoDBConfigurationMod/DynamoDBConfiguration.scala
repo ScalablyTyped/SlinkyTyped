@@ -1,22 +1,16 @@
 package typingsSlinky.awsSdkClientDynamodbBrowser.dynamoDBConfigurationMod
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkTypes.credentialsMod.Credentials
 import typingsSlinky.awsSdkTypes.cryptoMod.HashConstructor
-import typingsSlinky.awsSdkTypes.httpMod.HttpEndpoint
-import typingsSlinky.awsSdkTypes.httpMod.HttpHandler
-import typingsSlinky.awsSdkTypes.httpMod.HttpOptions
-import typingsSlinky.awsSdkTypes.middlewareMod.FinalizeHandler
+import typingsSlinky.awsSdkTypes.httpMod.Endpoint
+import typingsSlinky.awsSdkTypes.middlewareMod.DeserializeHandler
 import typingsSlinky.awsSdkTypes.middlewareMod.HandlerExecutionContext
 import typingsSlinky.awsSdkTypes.middlewareMod.Terminalware
+import typingsSlinky.awsSdkTypes.serdeMod.StreamCollector
 import typingsSlinky.awsSdkTypes.signatureMod.RequestSigner
-import typingsSlinky.awsSdkTypes.unmarshallerMod.StreamCollector
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
-import typingsSlinky.awsSdkTypes.utilMod.DelayDecider
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import typingsSlinky.awsSdkTypes.utilMod.Provider
-import typingsSlinky.awsSdkTypes.utilMod.RetryDecider
-import typingsSlinky.awsSdkTypes.utilMod.SdkError
 import typingsSlinky.awsSdkTypes.utilMod.UrlParser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -43,12 +37,18 @@ trait DynamoDBConfiguration extends js.Object {
   /**
     * A function that determines how long (in milliseconds) the SDK should wait before retrying a request
     */
-  var delayDecider: js.UndefOr[DelayDecider] = js.native
+  var delayDecider: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.DelayDecider */ js.Any
+  ] = js.native
   
   /**
     * The fully qualified endpoint of the webservice. This is only required when using a custom endpoint (for example, when using a local version of S3).
     */
-  var endpoint: js.UndefOr[String | HttpEndpoint | Provider[HttpEndpoint]] = js.native
+  var endpoint: js.UndefOr[
+    String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.HttpEndpoint */ js.Any) | (Provider[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.HttpEndpoint */ _
+    ])
+  ] = js.native
   
   /**
     * The endpoint provider to call if no endpoint is provided
@@ -58,12 +58,14 @@ trait DynamoDBConfiguration extends js.Object {
   /**
     * The handler to use as the core of the client's middleware stack
     */
-  var handler: js.UndefOr[Terminalware[_, Blob]] = js.native
+  var handler: js.UndefOr[Terminalware] = js.native
   
   /**
     * The HTTP handler to use
     */
-  var httpHandler: js.UndefOr[HttpHandler[Blob, HttpOptions]] = js.native
+  var httpHandler: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.HttpHandler<Blob> */ js.Any
+  ] = js.native
   
   /**
     * The maximum number of redirects to follow for a service request. Set to `0` to disable retries.
@@ -88,7 +90,9 @@ trait DynamoDBConfiguration extends js.Object {
   /**
     * A function that determines whether an error is retryable
     */
-  var retryDecider: js.UndefOr[RetryDecider] = js.native
+  var retryDecider: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.RetryDecider */ js.Any
+  ] = js.native
   
   /**
     * A constructor for a class implementing the @aws-sdk/types.Hash interface that computes the SHA-256 HMAC or checksum of a string or binary buffer
@@ -113,7 +117,7 @@ trait DynamoDBConfiguration extends js.Object {
   /**
     * A function that converts a stream into an array of bytes.
     */
-  var streamCollector: js.UndefOr[StreamCollector[Blob]] = js.native
+  var streamCollector: js.UndefOr[StreamCollector] = js.native
   
   /**
     * The function that will be used to convert strings into HTTP endpoints
@@ -178,16 +182,26 @@ object DynamoDBConfiguration {
     def deleteBase64Encoder: Self = this.set("base64Encoder", js.undefined)
     
     @scala.inline
-    def setDelayDecider(value: (/* delayBase */ Double, /* attempts */ Double) => Double): Self = this.set("delayDecider", js.Any.fromFunction2(value))
+    def setDelayDecider(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.DelayDecider */ js.Any
+    ): Self = this.set("delayDecider", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDelayDecider: Self = this.set("delayDecider", js.undefined)
     
     @scala.inline
-    def setEndpointFunction0(value: () => js.Promise[HttpEndpoint]): Self = this.set("endpoint", js.Any.fromFunction0(value))
+    def setEndpointFunction0(
+      value: () => js.Promise[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.HttpEndpoint */ _
+        ]
+    ): Self = this.set("endpoint", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setEndpoint(value: String | HttpEndpoint | Provider[HttpEndpoint]): Self = this.set("endpoint", value.asInstanceOf[js.Any])
+    def setEndpoint(
+      value: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.HttpEndpoint */ js.Any) | (Provider[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.HttpEndpoint */ _
+        ])
+    ): Self = this.set("endpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEndpoint: Self = this.set("endpoint", js.undefined)
@@ -199,13 +213,15 @@ object DynamoDBConfiguration {
     def deleteEndpointProvider: Self = this.set("endpointProvider", js.undefined)
     
     @scala.inline
-    def setHandler(value: /* context */ HandlerExecutionContext => FinalizeHandler[js.Object, _, Blob]): Self = this.set("handler", js.Any.fromFunction1(value))
+    def setHandler(value: /* context */ HandlerExecutionContext => DeserializeHandler[js.Object, js.Object]): Self = this.set("handler", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteHandler: Self = this.set("handler", js.undefined)
     
     @scala.inline
-    def setHttpHandler(value: HttpHandler[Blob, HttpOptions]): Self = this.set("httpHandler", value.asInstanceOf[js.Any])
+    def setHttpHandler(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.HttpHandler<Blob> */ js.Any
+    ): Self = this.set("httpHandler", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHttpHandler: Self = this.set("httpHandler", js.undefined)
@@ -229,7 +245,9 @@ object DynamoDBConfiguration {
     def deleteProfile: Self = this.set("profile", js.undefined)
     
     @scala.inline
-    def setRetryDecider(value: /* error */ SdkError => Boolean): Self = this.set("retryDecider", js.Any.fromFunction1(value))
+    def setRetryDecider(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.RetryDecider */ js.Any
+    ): Self = this.set("retryDecider", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRetryDecider: Self = this.set("retryDecider", js.undefined)
@@ -259,13 +277,13 @@ object DynamoDBConfiguration {
     def deleteSslEnabled: Self = this.set("sslEnabled", js.undefined)
     
     @scala.inline
-    def setStreamCollector(value: Blob => js.Promise[js.typedarray.Uint8Array]): Self = this.set("streamCollector", js.Any.fromFunction1(value))
+    def setStreamCollector(value: /* stream */ js.Any => js.Promise[js.typedarray.Uint8Array]): Self = this.set("streamCollector", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteStreamCollector: Self = this.set("streamCollector", js.undefined)
     
     @scala.inline
-    def setUrlParser(value: /* url */ String => HttpEndpoint): Self = this.set("urlParser", js.Any.fromFunction1(value))
+    def setUrlParser(value: /* url */ String => Endpoint): Self = this.set("urlParser", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteUrlParser: Self = this.set("urlParser", js.undefined)

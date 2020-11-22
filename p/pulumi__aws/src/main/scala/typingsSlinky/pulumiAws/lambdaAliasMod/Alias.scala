@@ -34,7 +34,7 @@ class Alias protected () extends CustomResource {
   val description: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * The function ARN of the Lambda function for which you want to create an alias.
+    * Lambda Function name or ARN.
     */
   val functionName: Output_[String] = js.native
   

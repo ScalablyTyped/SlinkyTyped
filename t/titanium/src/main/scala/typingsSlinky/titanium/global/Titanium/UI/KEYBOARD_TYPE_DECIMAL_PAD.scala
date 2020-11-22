@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Use a keyboard with decimal numbers only, with the pad keyboard layout.
+  * Use a number pad keyboard layout showing only numbers, decimal separator, and sign character.
   */
 @JSGlobal("Titanium.UI.KEYBOARD_TYPE_DECIMAL_PAD")
 @js.native

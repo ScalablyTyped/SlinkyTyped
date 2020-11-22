@@ -8,8 +8,13 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdNumbers.`0`
 import typingsSlinky.antd.antdNumbers.`1`
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -41,11 +46,12 @@ import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
+import typingsSlinky.rcPicker.interfaceMod.CustomFormat
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.EventValue
 import typingsSlinky.rcPicker.interfaceMod.Locale
@@ -148,7 +154,9 @@ trait RangePickerDateProps[DateType] extends RangePickerProps[DateType] {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -206,7 +214,7 @@ trait RangePickerDateProps[DateType] extends RangePickerProps[DateType] {
   
   var dropdownClassName: js.UndefOr[String] = js.native
   
-  var format: js.UndefOr[String | js.Array[String]] = js.native
+  var format: js.UndefOr[String | CustomFormat[DateType] | (js.Array[String | CustomFormat[DateType]])] = js.native
   
   var getPopupContainer: js.UndefOr[js.Function1[/* node */ HTMLElement, HTMLElement]] = js.native
   
@@ -558,7 +566,9 @@ object RangePickerDateProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -732,10 +742,13 @@ object RangePickerDateProps {
     def deleteDropdownClassName: Self = this.set("dropdownClassName", js.undefined)
     
     @scala.inline
-    def setFormatVarargs(value: String*): Self = this.set("format", js.Array(value :_*))
+    def setFormatVarargs(value: (String | CustomFormat[DateType])*): Self = this.set("format", js.Array(value :_*))
     
     @scala.inline
-    def setFormat(value: String | js.Array[String]): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setFormatFunction1(value: DateType => String): Self = this.set("format", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setFormat(value: String | CustomFormat[DateType] | (js.Array[String | CustomFormat[DateType]])): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)

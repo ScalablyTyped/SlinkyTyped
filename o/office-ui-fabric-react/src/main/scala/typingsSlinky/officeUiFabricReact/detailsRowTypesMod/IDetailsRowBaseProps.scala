@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.EventName
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.CheckboxVisibility
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
@@ -17,7 +18,6 @@ import typingsSlinky.officeUiFabricReact.groupedListTypesMod.CollapseAllVisibili
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey

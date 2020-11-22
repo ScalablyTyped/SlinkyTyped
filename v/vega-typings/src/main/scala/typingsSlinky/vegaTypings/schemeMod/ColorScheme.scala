@@ -29,10 +29,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vegaTypings.vegaTypingsStrings.warmgreys
   - typingsSlinky.vegaTypings.vegaTypingsStrings.reds
   - typingsSlinky.vegaTypings.vegaTypingsStrings.oranges
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.turbo
   - typingsSlinky.vegaTypings.vegaTypingsStrings.viridis
   - typingsSlinky.vegaTypings.vegaTypingsStrings.inferno
   - typingsSlinky.vegaTypings.vegaTypingsStrings.magma
   - typingsSlinky.vegaTypings.vegaTypingsStrings.plasma
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.cividis
   - typingsSlinky.vegaTypings.vegaTypingsStrings.bluegreen
   - typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-3`
   - typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-4`
@@ -467,6 +469,9 @@ object ColorScheme {
   
   @scala.inline
   def category20c: typingsSlinky.vegaTypings.vegaTypingsStrings.category20c = "category20c".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.category20c]
+  
+  @scala.inline
+  def cividis: typingsSlinky.vegaTypings.vegaTypingsStrings.cividis = "cividis".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.cividis]
   
   @scala.inline
   def dark2: typingsSlinky.vegaTypings.vegaTypingsStrings.dark2 = "dark2".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.dark2]
@@ -1226,6 +1231,9 @@ object ColorScheme {
   
   @scala.inline
   def teals: typingsSlinky.vegaTypings.vegaTypingsStrings.teals = "teals".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.teals]
+  
+  @scala.inline
+  def turbo: typingsSlinky.vegaTypings.vegaTypingsStrings.turbo = "turbo".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.turbo]
   
   @scala.inline
   def viridis: typingsSlinky.vegaTypings.vegaTypingsStrings.viridis = "viridis".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.viridis]

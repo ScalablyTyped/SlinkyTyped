@@ -8,11 +8,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * The object returned from a call to window.open.
+  * The object returned from a call to cordova.InAppBrowser.open.
   * NOTE: The InAppBrowser window behaves like a standard web browser, and can't access Cordova APIs.
   */
 @js.native
-trait InAppBrowser extends Window {
+trait InAppBrowser extends js.Object {
   
   /**
     * Adds a listener for an event from the InAppBrowser.
@@ -66,6 +66,19 @@ trait InAppBrowser extends Window {
   def onloadstart(`type`: Event): Unit = js.native
   
   def onloadstop(`type`: InAppBrowserEvent): Unit = js.native
+  
+  /**
+    * Opens a URL in a new InAppBrowser instance, the current browser instance, or the system browser.
+    * @param  url     The URL to load.
+    * @param  target  The target in which to load the URL, an optional parameter that defaults to _self.
+    * @param  options Options for the InAppBrowser. Optional, defaulting to: location=yes.
+    *                 The options string must not contain any blank space, and each feature's
+    *                 name/value pairs must be separated by a comma. Feature names are case insensitive.
+    */
+  def open(url: String): InAppBrowser = js.native
+  def open(url: String, target: js.UndefOr[scala.Nothing], options: String): InAppBrowser = js.native
+  def open(url: String, target: String): InAppBrowser = js.native
+  def open(url: String, target: String, options: String): InAppBrowser = js.native
   
   // removeEventListener overloads
   /**

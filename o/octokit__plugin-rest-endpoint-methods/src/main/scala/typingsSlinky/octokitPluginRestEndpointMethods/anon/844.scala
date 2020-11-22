@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.PullsDeletePendingReviewEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.PullsDeletePendingReviewResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ProjectsUpdateColumnEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ProjectsUpdateColumnResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `844` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[PullsDeletePendingReviewEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ProjectsUpdateColumnEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[PullsDeletePendingReviewResponseData] = js.native
+  var response: OctokitResponse[ProjectsUpdateColumnResponseData] = js.native
 }
 object `844` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[PullsDeletePendingReviewEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[PullsDeletePendingReviewResponseData]
+    parameters: RequestParameters with (Omit[ProjectsUpdateColumnEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ProjectsUpdateColumnResponseData]
   ): `844` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`844`]
@@ -46,11 +46,9 @@ object `844` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[PullsDeletePendingReviewEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ProjectsUpdateColumnEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[PullsDeletePendingReviewResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ProjectsUpdateColumnResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

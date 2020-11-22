@@ -21,9 +21,4 @@ class ExpressionType protected ()
     modifiers: js.Array[TypeModifier],
     typeParams: js.Array[typingsSlinky.angularCompiler.outputAstMod.Type]
   ) = this()
-  def this(
-    value: typingsSlinky.angularCompiler.outputAstMod.Expression,
-    modifiers: Null,
-    typeParams: js.Array[typingsSlinky.angularCompiler.outputAstMod.Type]
-  ) = this()
 }

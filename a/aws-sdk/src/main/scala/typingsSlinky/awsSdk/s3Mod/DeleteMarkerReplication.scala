@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteMarkerReplication extends js.Object {
   
   /**
-    * Indicates whether to replicate delete markers.   In the current implementation, Amazon S3 doesn't replicate the delete markers. The status must be Disabled.  
+    * Indicates whether to replicate delete markers.  Indicates whether to replicate delete markers. 
     */
   var Status: js.UndefOr[DeleteMarkerReplicationStatus] = js.native
 }

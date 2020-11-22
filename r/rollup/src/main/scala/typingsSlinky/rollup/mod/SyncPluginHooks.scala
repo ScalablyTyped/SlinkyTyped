@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Inlined std.Exclude<keyof rollup.rollup.PluginHooks, rollup.rollup.AsyncPluginHooks> */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.rollup.rollupStrings.watchChange
+  - typingsSlinky.rollup.rollupStrings.closeWatcher
   - typingsSlinky.rollup.rollupStrings.resolveFileUrl
   - typingsSlinky.rollup.rollupStrings.augmentChunkHash
   - typingsSlinky.rollup.rollupStrings.resolveImportMeta
   - typingsSlinky.rollup.rollupStrings.outputOptions
   - typingsSlinky.rollup.rollupStrings.renderDynamicImport
-  - typingsSlinky.rollup.rollupStrings.options
   - typingsSlinky.rollup.rollupStrings.resolveAssetUrl
 */
 trait SyncPluginHooks extends js.Object
@@ -22,7 +22,7 @@ object SyncPluginHooks {
   def augmentChunkHash: typingsSlinky.rollup.rollupStrings.augmentChunkHash = "augmentChunkHash".asInstanceOf[typingsSlinky.rollup.rollupStrings.augmentChunkHash]
   
   @scala.inline
-  def options: typingsSlinky.rollup.rollupStrings.options = "options".asInstanceOf[typingsSlinky.rollup.rollupStrings.options]
+  def closeWatcher: typingsSlinky.rollup.rollupStrings.closeWatcher = "closeWatcher".asInstanceOf[typingsSlinky.rollup.rollupStrings.closeWatcher]
   
   @scala.inline
   def outputOptions: typingsSlinky.rollup.rollupStrings.outputOptions = "outputOptions".asInstanceOf[typingsSlinky.rollup.rollupStrings.outputOptions]

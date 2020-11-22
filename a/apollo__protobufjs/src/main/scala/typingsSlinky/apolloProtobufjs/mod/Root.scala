@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @param [options] Top level options
   */
 class Root () extends NamespaceBase {
-  def this(options: StringDictionary[js.Any]) = this()
+  def this(options: StringDictionary[js.UndefOr[js.Any]]) = this()
   
   /** Deferred extension fields. */
   var deferred: js.Array[Field] = js.native

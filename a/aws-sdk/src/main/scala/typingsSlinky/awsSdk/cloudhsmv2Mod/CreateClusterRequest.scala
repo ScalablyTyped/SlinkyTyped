@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateClusterRequest extends js.Object {
   
   /**
+    * A policy that defines how the service retains backups.
+    */
+  var BackupRetentionPolicy: js.UndefOr[typingsSlinky.awsSdk.cloudhsmv2Mod.BackupRetentionPolicy] = js.native
+  
+  /**
     * The type of HSM to use in the cluster. Currently the only allowed value is hsm1.medium.
     */
   var HsmType: typingsSlinky.awsSdk.cloudhsmv2Mod.HsmType = js.native
@@ -58,6 +63,12 @@ object CreateClusterRequest {
     
     @scala.inline
     def setSubnetIds(value: SubnetIds): Self = this.set("SubnetIds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBackupRetentionPolicy(value: BackupRetentionPolicy): Self = this.set("BackupRetentionPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBackupRetentionPolicy: Self = this.set("BackupRetentionPolicy", js.undefined)
     
     @scala.inline
     def setSourceBackupId(value: BackupId): Self = this.set("SourceBackupId", value.asInstanceOf[js.Any])

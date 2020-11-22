@@ -13,14 +13,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * Initialize the AbstractControl instance.
   *
-  * @param validator The function that determines the synchronous validity of this control.
-  * @param asyncValidator The function that determines the asynchronous validity of this
-  * control.
+  * @param validators The function or array of functions that is used to determine the validity of
+  *     this control synchronously.
+  * @param asyncValidators The function or array of functions that is used to determine validity of
+  *     this control asynchronously.
   */
 abstract class AbstractControl () extends js.Object {
-  def this(validator: ValidatorFn) = this()
-  def this(validator: Null, asyncValidator: AsyncValidatorFn) = this()
-  def this(validator: ValidatorFn, asyncValidator: AsyncValidatorFn) = this()
+  def this(validators: js.Array[ValidatorFn]) = this()
+  def this(validators: ValidatorFn) = this()
+  def this(validators: js.Array[ValidatorFn], asyncValidators: js.Array[AsyncValidatorFn]) = this()
+  def this(validators: js.Array[ValidatorFn], asyncValidators: AsyncValidatorFn) = this()
+  def this(validators: Null, asyncValidators: js.Array[AsyncValidatorFn]) = this()
+  def this(validators: Null, asyncValidators: AsyncValidatorFn) = this()
+  def this(validators: ValidatorFn, asyncValidators: js.Array[AsyncValidatorFn]) = this()
+  def this(validators: ValidatorFn, asyncValidators: AsyncValidatorFn) = this()
   
   var _asyncValidationSubscription: js.Any = js.native
   
@@ -38,7 +44,11 @@ abstract class AbstractControl () extends js.Object {
   
   var _updateAncestors: js.Any = js.native
   
-  var asyncValidator: AsyncValidatorFn | Null = js.native
+  /**
+    * The function that is used to determine the validity of this control asynchronously.
+    */
+  def asyncValidator: AsyncValidatorFn | Null = js.native
+  def asyncValidator_=(asyncValidatorFn: AsyncValidatorFn | Null): Unit = js.native
   
   /**
     * Empties out the async validator list.
@@ -330,7 +340,7 @@ abstract class AbstractControl () extends js.Object {
   /**
     * The parent control.
     */
-  def parent: FormGroup | FormArray = js.native
+  def parent: FormGroup | FormArray | Null = js.native
   
   /**
     * Patches the value of the control. Abstract method (implemented in sub-classes).
@@ -508,7 +518,11 @@ abstract class AbstractControl () extends js.Object {
     */
   def valid: Boolean = js.native
   
-  var validator: ValidatorFn | Null = js.native
+  /**
+    * The function that is used to determine the validity of this control synchronously.
+    */
+  def validator: ValidatorFn | Null = js.native
+  def validator_=(validatorFn: ValidatorFn | Null): Unit = js.native
   
   /**
     * The current value of the control.

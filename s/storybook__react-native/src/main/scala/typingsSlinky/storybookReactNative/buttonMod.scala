@@ -25,6 +25,8 @@ object buttonMod extends js.Object {
     
     def onPress(id: String): Unit = js.native
     def onPress(id: Double): Unit = js.native
+    
+    var testID: js.UndefOr[String] = js.native
   }
   
   @js.native

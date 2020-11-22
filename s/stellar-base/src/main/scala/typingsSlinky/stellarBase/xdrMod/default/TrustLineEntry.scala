@@ -1,7 +1,7 @@
 package typingsSlinky.stellarBase.xdrMod.default
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.stellarBase.anon.Balance
+import typingsSlinky.stellarBase.anon.Flags
 import typingsSlinky.stellarBase.stellarBaseStrings.base64
 import typingsSlinky.stellarBase.stellarBaseStrings.hex
 import typingsSlinky.stellarBase.stellarBaseStrings.raw
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class TrustLineEntry protected ()
   extends typingsSlinky.stellarBase.xdrMod.xdr.TrustLineEntry {
-  def this(attributes: Balance) = this()
+  def this(attributes: Flags) = this()
 }
 /* static members */
 @JSImport("stellar-base/types/xdr", "TrustLineEntry")
@@ -33,6 +33,14 @@ object TrustLineEntry extends js.Object {
   def read(io: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.TrustLineEntry = js.native
   
   def toXDR(value: typingsSlinky.stellarBase.xdrMod.xdr.TrustLineEntry): Buffer = js.native
+  
+  def validateXDR(input: Buffer): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_base64(input: String, format: base64): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_hex(input: String, format: hex): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_raw(input: Buffer, format: raw): Boolean = js.native
   
   def write(value: typingsSlinky.stellarBase.xdrMod.xdr.TrustLineEntry, io: Buffer): Unit = js.native
 }

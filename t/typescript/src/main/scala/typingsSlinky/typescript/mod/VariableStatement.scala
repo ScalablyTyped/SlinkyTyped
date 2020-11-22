@@ -10,8 +10,8 @@ trait VariableStatement
      with JSDocContainer
      with _HasJSDoc {
   
-  var declarationList: VariableDeclarationList = js.native
+  val declarationList: VariableDeclarationList = js.native
   
   @JSName("kind")
-  var kind_VariableStatement: typingsSlinky.typescript.mod.SyntaxKind.VariableStatement = js.native
+  val kind_VariableStatement: typingsSlinky.typescript.mod.SyntaxKind.VariableStatement = js.native
 }

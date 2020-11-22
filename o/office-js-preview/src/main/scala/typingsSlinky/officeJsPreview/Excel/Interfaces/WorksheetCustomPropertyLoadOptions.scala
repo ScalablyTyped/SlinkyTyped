@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Represents a worksheet-level custom property.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait WorksheetCustomPropertyLoadOptions extends js.Object {
@@ -24,8 +23,7 @@ trait WorksheetCustomPropertyLoadOptions extends js.Object {
     *
     * Gets the key of the custom property. Custom property keys are case-insensitive. The key is limited to 255 characters (larger values will cause an "InvalidArgument" error to be thrown.)
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var key: js.UndefOr[Boolean] = js.native
   
@@ -33,8 +31,7 @@ trait WorksheetCustomPropertyLoadOptions extends js.Object {
     *
     * Gets or sets the value of the custom property.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var value: js.UndefOr[Boolean] = js.native
 }

@@ -23,4 +23,9 @@ object BRDFTextureTools extends js.Object {
   def GetEnvironmentBRDFTexture(scene: Scene): BaseTexture = js.native
   
   var _environmentBRDFBase64Texture: js.Any = js.native
+  
+  /**
+    * Prevents texture cache collision
+    */
+  var _instanceNumber: js.Any = js.native
 }

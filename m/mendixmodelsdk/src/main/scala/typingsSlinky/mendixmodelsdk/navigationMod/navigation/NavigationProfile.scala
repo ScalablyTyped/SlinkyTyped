@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.navigationMod.navigation
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.imagesMod.images.IImage
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -9,6 +10,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.menusMod.menus.MenuItemCollection
 import typingsSlinky.mendixmodelsdk.navigationMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.PageSettings
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,8 +34,8 @@ class NavigationProfile protected () extends NavigationProfileBase {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -83,9 +85,6 @@ class NavigationProfile protected () extends NavigationProfileBase {
   
   def menuItemCollection: MenuItemCollection = js.native
   def menuItemCollection_=(newValue: MenuItemCollection): Unit = js.native
-  
-  @JSName("model")
-  var model_FNavigationProfile: IModel = js.native
   
   /**
     * In version 7.2.0: deleted

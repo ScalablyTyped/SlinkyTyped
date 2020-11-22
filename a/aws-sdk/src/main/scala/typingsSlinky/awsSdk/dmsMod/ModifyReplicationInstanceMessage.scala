@@ -28,7 +28,7 @@ trait ModifyReplicationInstanceMessage extends js.Object {
   var AutoMinorVersionUpgrade: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * The engine version number of the replication instance.
+    * The engine version number of the replication instance. When modifying a major engine version of an instance, also set AllowMajorVersionUpgrade to true.
     */
   var EngineVersion: js.UndefOr[String] = js.native
   

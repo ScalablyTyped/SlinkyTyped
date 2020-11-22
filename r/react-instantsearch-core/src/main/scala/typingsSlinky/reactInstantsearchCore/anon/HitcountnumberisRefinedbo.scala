@@ -2,11 +2,12 @@ package typingsSlinky.reactInstantsearchCore.anon
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-instantsearch-core.react-instantsearch-core.Hit<{  count  :number,   isRefined  :boolean,   label  :string,   value  :std.Array<string>}> */
+/* Inlined react-instantsearch-core.react-instantsearch-core.Hit<{  count :number,   isRefined :boolean,   label :string,   value :std.Array<string>}> */
 @js.native
 trait HitcountnumberisRefinedbo extends js.Object {
+  
   /**
     * Contains the searchable attributes within the document and shows which part of the
     * attribute was matched by the search terms.  Note that if the index has defined
@@ -14,14 +15,19 @@ trait HitcountnumberisRefinedbo extends js.Object {
     * will not exist.
     */
   var _highlightResult: typingsSlinky.reactInstantsearchCore.mod.HighlightResult[Value] = js.native
+  
   var count: Double = js.native
+  
   var isRefined: Boolean = js.native
+  
   var label: String = js.native
+  
   var objectID: String = js.native
+  
   var value: js.Array[String] = js.native
 }
-
 object HitcountnumberisRefinedbo {
+  
   @scala.inline
   def apply(
     _highlightResult: typingsSlinky.reactInstantsearchCore.mod.HighlightResult[Value],
@@ -34,49 +40,41 @@ object HitcountnumberisRefinedbo {
     val __obj = js.Dynamic.literal(_highlightResult = _highlightResult.asInstanceOf[js.Any], count = count.asInstanceOf[js.Any], isRefined = isRefined.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], objectID = objectID.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[HitcountnumberisRefinedbo]
   }
+  
   @scala.inline
   implicit class HitcountnumberisRefinedboOps[Self <: HitcountnumberisRefinedbo] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
-    def with_highlightResult(value: typingsSlinky.reactInstantsearchCore.mod.HighlightResult[Value]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("_highlightResult")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
-    def withCount(value: Double): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("count")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def set_highlightResult(value: typingsSlinky.reactInstantsearchCore.mod.HighlightResult[Value]): Self = this.set("_highlightResult", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withIsRefined(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isRefined")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setCount(value: Double): Self = this.set("count", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withLabel(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("label")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsRefined(value: Boolean): Self = this.set("isRefined", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withObjectID(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("objectID")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withValue(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("value")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setObjectID(value: String): Self = this.set("objectID", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setValueVarargs(value: String*): Self = this.set("value", js.Array(value :_*))
+    
+    @scala.inline
+    def setValue(value: js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
   }
-  
 }
-

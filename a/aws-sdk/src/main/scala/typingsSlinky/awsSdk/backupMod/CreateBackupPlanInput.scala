@@ -18,7 +18,7 @@ trait CreateBackupPlanInput extends js.Object {
   var BackupPlanTags: js.UndefOr[Tags] = js.native
   
   /**
-    * Identifies the request and allows failed requests to be retried without the risk of executing the operation twice. If the request includes a CreatorRequestId that matches an existing backup plan, that plan is returned. This parameter is optional.
+    * Identifies the request and allows failed requests to be retried without the risk of running the operation twice. If the request includes a CreatorRequestId that matches an existing backup plan, that plan is returned. This parameter is optional.
     */
   var CreatorRequestId: js.UndefOr[String] = js.native
 }

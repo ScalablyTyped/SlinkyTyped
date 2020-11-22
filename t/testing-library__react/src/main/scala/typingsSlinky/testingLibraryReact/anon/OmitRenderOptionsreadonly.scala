@@ -1,6 +1,6 @@
 package typingsSlinky.testingLibraryReact.anon
 
-import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Element
 import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait OmitRenderOptionsreadonly extends js.Object {
   
-  var baseElement: js.UndefOr[HTMLElement] = js.native
+  var baseElement: js.UndefOr[Element] = js.native
   
-  var container: js.UndefOr[HTMLElement] = js.native
+  var container: js.UndefOr[Element] = js.native
   
   var hydrate: js.UndefOr[Boolean] = js.native
   
@@ -42,13 +42,13 @@ object OmitRenderOptionsreadonly {
     }
     
     @scala.inline
-    def setBaseElement(value: HTMLElement): Self = this.set("baseElement", value.asInstanceOf[js.Any])
+    def setBaseElement(value: Element): Self = this.set("baseElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBaseElement: Self = this.set("baseElement", js.undefined)
     
     @scala.inline
-    def setContainer(value: HTMLElement): Self = this.set("container", value.asInstanceOf[js.Any])
+    def setContainer(value: Element): Self = this.set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContainer: Self = this.set("container", js.undefined)

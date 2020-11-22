@@ -1,6 +1,7 @@
 package typingsSlinky.yandexMaps.mod.multiRouter
 
 import typingsSlinky.yandexMaps.mod.IGeoObject
+import typingsSlinky.yandexMaps.mod.IGeometry
 import typingsSlinky.yandexMaps.mod.data.Manager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("yandex-maps", "multiRouter.WayPoint")
 @js.native
-class WayPoint () extends IGeoObject {
+class WayPoint () extends IGeoObject[IGeometry] {
   
   var model: WayPointModel = js.native
   

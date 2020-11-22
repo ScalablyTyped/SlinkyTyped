@@ -24,7 +24,7 @@ trait GetIpRangesArgs extends js.Object {
   val services: js.Array[String] = js.native
   
   /**
-    * Custom URL for source JSON file. Syntax must match [AWS IP Address Ranges documention](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). Defaults to `https://ip-ranges.amazonaws.com/ip-ranges.json`.
+    * Custom URL for source JSON file. Syntax must match [AWS IP Address Ranges documentation](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). Defaults to `https://ip-ranges.amazonaws.com/ip-ranges.json`.
     */
   val url: js.UndefOr[String] = js.native
 }

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait InternalViewRef extends ViewRef {
   
-  def attachToAppRef(appRef: ApplicationRef): Unit = js.native
+  def attachToAppRef(appRef: ViewRefTracker): Unit = js.native
   
   def detachFromAppRef(): Unit = js.native
 }

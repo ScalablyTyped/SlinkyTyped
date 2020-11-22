@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// tslint:disable-next-line strict-export-declare-modifiers
 @JSImport("emoji-mart/dist-es/utils/store", "default")
 @js.native
 object default extends js.Object {

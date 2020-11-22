@@ -9,8 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DataTypeSet extends js.Object {
   
   /**
-    * The browser's cache. Note: when removing data, this clears the _entire_ cache: it is not limited to the
-    * range you specify.
+    * The browser's cache. Note: when removing data, this clears the _entire_ cache: it is not limited to the range you specify.
     */
   var cache: js.UndefOr[Boolean] = js.native
   

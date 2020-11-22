@@ -1,7 +1,7 @@
 
 # Scala.js typings for object-inspect
 
-Typings are for version 1.6
+Typings are for version 1.8
 
 ## Library description:
 string representations of objects in node and the browser

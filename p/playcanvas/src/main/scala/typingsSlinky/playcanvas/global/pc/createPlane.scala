@@ -13,7 +13,7 @@ object createPlane extends js.Object {
     * Creates a procedural plane-shaped mesh.
     *
     * The size and tesselation properties of the plane can be controlled via function
-    * parameters. By default, the function will create a plane centred on the object
+    * parameters. By default, the function will create a plane centered on the object
     * space origin with a width and length of 1.0 and 5 segments in either axis (50
     * triangles). The normal vector of the plane is aligned along the positive Y axis.
     *

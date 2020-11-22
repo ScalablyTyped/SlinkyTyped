@@ -35,7 +35,7 @@ trait StreamDescriptionSummary extends js.Object {
   /**
     * The current retention period, in hours.
     */
-  var RetentionPeriodHours: PositiveIntegerObject = js.native
+  var RetentionPeriodHours: typingsSlinky.awsSdk.kinesisMod.RetentionPeriodHours = js.native
   
   /**
     * The Amazon Resource Name (ARN) for the stream being described.
@@ -63,7 +63,7 @@ object StreamDescriptionSummary {
   def apply(
     EnhancedMonitoring: EnhancedMonitoringList,
     OpenShardCount: ShardCountObject,
-    RetentionPeriodHours: PositiveIntegerObject,
+    RetentionPeriodHours: RetentionPeriodHours,
     StreamARN: StreamARN,
     StreamCreationTimestamp: js.Date,
     StreamName: StreamName,
@@ -98,7 +98,7 @@ object StreamDescriptionSummary {
     def setOpenShardCount(value: ShardCountObject): Self = this.set("OpenShardCount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRetentionPeriodHours(value: PositiveIntegerObject): Self = this.set("RetentionPeriodHours", value.asInstanceOf[js.Any])
+    def setRetentionPeriodHours(value: RetentionPeriodHours): Self = this.set("RetentionPeriodHours", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStreamARN(value: StreamARN): Self = this.set("StreamARN", value.asInstanceOf[js.Any])

@@ -1,17 +1,19 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.imagesMod.images.IImage
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/static-image-document-template relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/static-image-document-template relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.StaticImageViewer")
 @js.native
@@ -21,8 +23,8 @@ class StaticImageViewer protected () extends Widget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def height: Double = js.native
@@ -33,9 +35,6 @@ class StaticImageViewer protected () extends Widget {
   def imageQualifiedName: String | Null = js.native
   
   def image_=(newValue: IImage | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FStaticImageViewer: IModel = js.native
   
   def width: Double = js.native
   def width_=(newValue: Double): Unit = js.native

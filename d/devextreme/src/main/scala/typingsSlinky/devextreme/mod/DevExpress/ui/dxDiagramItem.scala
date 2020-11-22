@@ -9,14 +9,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDiagramItem extends js.Object {
   
-  /** @name dxDiagramItem.dataItem */
+  /**
+    * [descr:dxDiagramItem.dataItem]
+    */
   var dataItem: js.UndefOr[js.Any] = js.native
   
-  /** @name dxDiagramItem.id */
+  /**
+    * [descr:dxDiagramItem.id]
+    */
   var id: js.UndefOr[String] = js.native
   
-  /** @name dxDiagramItem.itemType */
+  /**
+    * [descr:dxDiagramItem.itemType]
+    */
   var itemType: js.UndefOr[shape | connector] = js.native
+  
+  /**
+    * [descr:dxDiagramItem.key]
+    */
+  var key: js.UndefOr[js.Any] = js.native
 }
 object dxDiagramItem {
   
@@ -58,5 +69,11 @@ object dxDiagramItem {
     
     @scala.inline
     def deleteItemType: Self = this.set("itemType", js.undefined)
+    
+    @scala.inline
+    def setKey(value: js.Any): Self = this.set("key", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKey: Self = this.set("key", js.undefined)
   }
 }

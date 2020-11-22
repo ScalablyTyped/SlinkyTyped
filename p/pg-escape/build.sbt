@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "pg-escape"
-version := "0.2-dt-20200515Z-127b9e"
+version := "0.2-dt-20200823Z-127b9e"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

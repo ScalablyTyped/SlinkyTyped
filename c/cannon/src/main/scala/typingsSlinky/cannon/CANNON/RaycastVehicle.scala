@@ -38,6 +38,8 @@ trait RaycastVehicle extends js.Object {
   
   def updateVehicle(timeStep: Double): Unit = js.native
   
+  def updateWheelTransform(wheelIndex: Double): Unit = js.native
+  
   var wheelInfos: js.Array[IWheelInfoOptions] = js.native
   
   var world: World = js.native

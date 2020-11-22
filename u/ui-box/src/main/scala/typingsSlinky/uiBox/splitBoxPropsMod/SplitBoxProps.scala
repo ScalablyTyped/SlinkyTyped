@@ -12,14 +12,14 @@ trait SplitBoxProps[P /* <: EnhancerProps */] extends js.Object {
   
   var matchedProps: Pick[
     P, 
-    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 142 */ js.Any
+    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 143 */ js.Any
   ] = js.native
   
   var remainingProps: Pick[
     P, 
     Exclude[
       /* keyof P */ String, 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 142 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 143 */ js.Any
     ]
   ] = js.native
 }
@@ -29,13 +29,13 @@ object SplitBoxProps {
   def apply[P /* <: EnhancerProps */](
     matchedProps: Pick[
       P, 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 142 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 143 */ js.Any
     ],
     remainingProps: Pick[
       P, 
       Exclude[
         /* keyof P */ String, 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 142 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 143 */ js.Any
       ]
     ]
   ): SplitBoxProps[P] = {
@@ -62,7 +62,7 @@ object SplitBoxProps {
     def setMatchedProps(
       value: Pick[
           P, 
-          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 142 */ js.Any
+          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 143 */ js.Any
         ]
     ): Self = this.set("matchedProps", value.asInstanceOf[js.Any])
     
@@ -72,7 +72,7 @@ object SplitBoxProps {
           P, 
           Exclude[
             /* keyof P */ String, 
-            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 142 */ js.Any
+            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 143 */ js.Any
           ]
         ]
     ): Self = this.set("remainingProps", value.asInstanceOf[js.Any])

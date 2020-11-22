@@ -39,6 +39,9 @@ object CopyCellsMenuItem {
     def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def htmlTitle(value: String): this.type = set("htmlTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline

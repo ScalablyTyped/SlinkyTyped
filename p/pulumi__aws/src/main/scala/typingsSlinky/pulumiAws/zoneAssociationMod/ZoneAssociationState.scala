@@ -9,6 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ZoneAssociationState extends js.Object {
   
   /**
+    * The account ID of the account that created the hosted zone.
+    */
+  val owningAccount: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * The VPC to associate with the private hosted zone.
     */
   val vpcId: js.UndefOr[Input[String]] = js.native
@@ -45,6 +50,12 @@ object ZoneAssociationState {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setOwningAccount(value: Input[String]): Self = this.set("owningAccount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOwningAccount: Self = this.set("owningAccount", js.undefined)
     
     @scala.inline
     def setVpcId(value: Input[String]): Self = this.set("vpcId", value.asInstanceOf[js.Any])

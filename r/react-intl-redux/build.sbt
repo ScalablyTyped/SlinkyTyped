@@ -1,25 +1,22 @@
 organization := "org.scalablytyped.slinky"
 name := "react-intl-redux"
-version := "v0.1.0-dt-20200515Z-32bc3e"
-scalaVersion := "2.13.2"
+version := "v0.1.0-dt-20200515Z-793767"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-6e65be",
-  "org.scalablytyped.slinky" %%% "formatjs__intl-listformat" % "1.4.2-4e5076",
-  "org.scalablytyped.slinky" %%% "formatjs__intl-relativetimeformat" % "4.5.10-4a5cca",
-  "org.scalablytyped.slinky" %%% "formatjs__intl-unified-numberformat" % "3.2.0-5636fa",
-  "org.scalablytyped.slinky" %%% "formatjs__intl-utils" % "2.2.0-5544c0",
-  "org.scalablytyped.slinky" %%% "hoist-non-react-statics" % "3.3-dt-20190402Z-272fb7",
-  "org.scalablytyped.slinky" %%% "intl-messageformat" % "7.8.4-c27260",
-  "org.scalablytyped.slinky" %%% "intl-messageformat-parser" % "3.6.4-f3133c",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ecc9ab",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-b103c7",
-  "org.scalablytyped.slinky" %%% "react-intl" % "3.12.1-5e9a08",
-  "org.scalablytyped.slinky" %%% "react-redux" % "7.1-dt-20200519Z-3f3995",
-  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-7392f6",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.14-23cf0c",
+  "org.scalablytyped.slinky" %%% "formatjs__ecma402-abstract" % "1.5.0-37d0d0",
+  "org.scalablytyped.slinky" %%% "hoist-non-react-statics" % "3.3-dt-20190402Z-750dce",
+  "org.scalablytyped.slinky" %%% "intl-messageformat" % "9.3.19-90c618",
+  "org.scalablytyped.slinky" %%% "intl-messageformat-parser" % "6.0.17-e5eeea",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ed7fbd",
+  "org.scalablytyped.slinky" %%% "react" % "17.0-dt-20201121Z-8f0b52",
+  "org.scalablytyped.slinky" %%% "react-intl" % "5.10.4-7f8844",
+  "org.scalablytyped.slinky" %%% "react-redux" % "7.1-dt-20201103Z-6ff589",
+  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-f9ab72",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

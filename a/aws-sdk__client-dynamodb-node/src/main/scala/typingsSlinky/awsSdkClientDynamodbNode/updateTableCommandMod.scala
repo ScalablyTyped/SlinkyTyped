@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientDynamodbNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbNode.typesUpdateTableInputMod.UpdateTableInput
 import typingsSlinky.awsSdkClientDynamodbNode.typesUpdateTableOutputMod.UpdateTableOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object updateTableCommandMod extends js.Object {
           UpdateTableInput, 
           OutputTypesUnion, 
           UpdateTableOutput, 
-          DynamoDBResolvedConfiguration, 
-          Readable
+          DynamoDBResolvedConfiguration
         ] {
     def this(input: UpdateTableInput) = this()
     
-    val middlewareStack: MiddlewareStack[UpdateTableInput, UpdateTableOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: DynamoDBResolvedConfiguration
     ): Handler[UpdateTableInput, UpdateTableOutput] = js.native
   }

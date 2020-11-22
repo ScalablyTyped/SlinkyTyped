@@ -1,9 +1,9 @@
 package typingsSlinky.tensorflowTfjsNode.mod
 
 import typingsSlinky.tensorflowTfjsCore.convUtilMod.ExplicitPadding
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor2D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor3D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.NCW
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.NWC
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.same

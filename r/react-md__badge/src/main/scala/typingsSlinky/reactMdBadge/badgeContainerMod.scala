@@ -12,11 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object badgeContainerMod extends js.Object {
   
-  /**
-    * This is a really simple component that will just allow you to position a
-    * badge relative to another component.
-    */
-  val default: ForwardRefExoticComponent[BadgeContainerProps with RefAttributes[HTMLSpanElement]] = js.native
+  val BadgeContainer: ForwardRefExoticComponent[BadgeContainerProps with RefAttributes[HTMLSpanElement]] = js.native
   
   type BadgeContainerProps = HTMLAttributes[HTMLSpanElement]
 }

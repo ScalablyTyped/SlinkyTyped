@@ -41,24 +41,4 @@ trait AudioEngine extends IAudioEngine {
     */
   @JSName("audioContext")
   def audioContext_MAudioEngine: Nullable[AudioContext] = js.native
-  
-  /**
-    * Connect the audio engine to an audio analyser allowing some amazing
-    * synchornization between the sounds/music and your visualization (VuMeter for instance).
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#using-the-analyser
-    * @param analyser The analyser to connect to the engine
-    */
-  def connectToAnalyser(analyser: Analyser): Unit = js.native
-  
-  /**
-    * Gets the global volume sets on the master gain.
-    * @returns the global volume if set or -1 otherwise
-    */
-  def getGlobalVolume(): Double = js.native
-  
-  /**
-    * Sets the global volume of your experience (sets on the master gain).
-    * @param newVolume Defines the new global volume of the application
-    */
-  def setGlobalVolume(newVolume: Double): Unit = js.native
 }

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/** @deprecated */
 @JSGlobal("name")
 @js.native
-object name
-  extends TopLevel[scala.Nothing]
+object name extends TopLevel[Unit]

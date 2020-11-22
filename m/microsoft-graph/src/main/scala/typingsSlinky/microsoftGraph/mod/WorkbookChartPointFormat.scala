@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookChartPointFormat extends Entity {
   
   // Represents the fill format of a chart, which includes background formating information. Read-only.
-  var fill: js.UndefOr[WorkbookChartFill] = js.native
+  var fill: js.UndefOr[NullableOption[WorkbookChartFill]] = js.native
 }
 object WorkbookChartPointFormat {
   
@@ -34,9 +34,12 @@ object WorkbookChartPointFormat {
     }
     
     @scala.inline
-    def setFill(value: WorkbookChartFill): Self = this.set("fill", value.asInstanceOf[js.Any])
+    def setFill(value: NullableOption[WorkbookChartFill]): Self = this.set("fill", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFill: Self = this.set("fill", js.undefined)
+    
+    @scala.inline
+    def setFillNull: Self = this.set("fill", null)
   }
 }

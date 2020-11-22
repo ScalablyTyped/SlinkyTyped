@@ -1,10 +1,9 @@
 package typingsSlinky.angularCommon.mod
 
-import org.scalablytyped.runtime.NumberDictionary
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.angularCore.mod.KeyValueDiffers
 import typingsSlinky.angularCore.mod.PipeTransform
-import typingsSlinky.std.Map
+import typingsSlinky.std.ReadonlyMap
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,61 +19,92 @@ class KeyValuePipe protected () extends PipeTransform {
   
   var keyValues: js.Any = js.native
   
-  def transform[V](): (js.Array[KeyValue[String, V]]) | Null = js.native
-  def transform[V](input: NumberDictionary[V]): js.Array[KeyValue[Double, V]] = js.native
-  def transform[V](
-    input: NumberDictionary[V],
-    compareFn: js.Function2[/* a */ KeyValue[Double, V], /* b */ KeyValue[Double, V], Double]
-  ): js.Array[KeyValue[Double, V]] = js.native
-  def transform[V](input: StringDictionary[V]): js.Array[KeyValue[String, V]] = js.native
-  def transform[V](
-    input: StringDictionary[V],
+  def transform(): Null = js.native
+  def transform(
+    input: js.UndefOr[scala.Nothing],
+    compareFn: js.Function2[/* a */ KeyValue[_, _], /* b */ KeyValue[_, _], Double]
+  ): Null = js.native
+  def transform(input: Null, compareFn: js.Function2[/* a */ KeyValue[_, _], /* b */ KeyValue[_, _], Double]): Null = js.native
+  def transform[K /* <: String */, V](input: ReadonlyMap[K, V]): (js.Array[KeyValue[K, V]]) | Null = js.native
+  def transform[K /* <: String */, V](
+    input: ReadonlyMap[K, V],
+    compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]
+  ): (js.Array[KeyValue[K, V]]) | Null = js.native
+  def transform[K /* <: Double */, V](input: Record[K, V]): js.Array[KeyValue[String, V]] = js.native
+  def transform[K /* <: Double */, V](
+    input: Record[K, V],
     compareFn: js.Function2[/* a */ KeyValue[String, V], /* b */ KeyValue[String, V], Double]
   ): js.Array[KeyValue[String, V]] = js.native
-  def transform[V](
+  @JSName("transform")
+  def transform_KV[K, V](input: ReadonlyMap[K, V]): (js.Array[KeyValue[K, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_KV[K, V](
+    input: ReadonlyMap[K, V],
+    compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]
+  ): (js.Array[KeyValue[K, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_KV_Array[K, V](input: ReadonlyMap[K, V]): js.Array[KeyValue[K, V]] = js.native
+  @JSName("transform")
+  def transform_KV_Array[K, V](
+    input: ReadonlyMap[K, V],
+    compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]
+  ): js.Array[KeyValue[K, V]] = js.native
+  @JSName("transform")
+  def transform_KV_Union[K, V](): (js.Array[KeyValue[K, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_KV_Union[K, V](
+    input: js.UndefOr[scala.Nothing],
+    compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]
+  ): (js.Array[KeyValue[K, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_KV_Union[K, V](input: Null, compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]): (js.Array[KeyValue[K, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_K_DoubleV_Union[K /* <: Double */, V](): (js.Array[KeyValue[String, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_K_DoubleV_Union[K /* <: Double */, V](
+    input: js.UndefOr[scala.Nothing],
+    compareFn: js.Function2[/* a */ KeyValue[String, V], /* b */ KeyValue[String, V], Double]
+  ): (js.Array[KeyValue[String, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_K_DoubleV_Union[K /* <: Double */, V](
     input: Null,
-    compareFn: js.Function2[/* a */ KeyValue[Double | String, V], /* b */ KeyValue[Double | String, V], Double]
-  ): (js.Array[KeyValue[String, V]]) | Null = js.native
-  def transform[V](input: Map[Double | String, V]): js.Array[KeyValue[String, V]] = js.native
-  def transform[V](
-    input: Map[Double | String, V],
-    compareFn: js.Function2[/* a */ KeyValue[Double | String, V], /* b */ KeyValue[Double | String, V], Double]
-  ): js.Array[KeyValue[String, V]] = js.native
-  @JSName("transform")
-  def transform_KV[K, V](): (js.Array[KeyValue[K, V]]) | Null = js.native
-  @JSName("transform")
-  def transform_KV[K, V](input: Null, compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]): (js.Array[KeyValue[K, V]]) | Null = js.native
-  @JSName("transform")
-  def transform_KV[K, V](input: Map[K, V]): js.Array[KeyValue[K, V]] = js.native
-  @JSName("transform")
-  def transform_KV[K, V](input: Map[K, V], compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]): js.Array[KeyValue[K, V]] = js.native
-  @JSName("transform")
-  def transform_KV_Null[K, V](): Null = js.native
-  @JSName("transform")
-  def transform_KV_Null[K, V](input: Null, compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]): Null = js.native
-  @JSName("transform")
-  def transform_KV_Union[K, V](input: Map[K, V]): (js.Array[KeyValue[K, V]]) | Null = js.native
-  @JSName("transform")
-  def transform_KV_Union[K, V](input: Map[K, V], compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]): (js.Array[KeyValue[K, V]]) | Null = js.native
-  @JSName("transform")
-  def transform_V_Union[V](input: NumberDictionary[V]): (js.Array[KeyValue[Double, V]]) | Null = js.native
-  @JSName("transform")
-  def transform_V_Union[V](
-    input: NumberDictionary[V],
-    compareFn: js.Function2[/* a */ KeyValue[Double, V], /* b */ KeyValue[Double, V], Double]
-  ): (js.Array[KeyValue[Double, V]]) | Null = js.native
-  @JSName("transform")
-  def transform_V_Union[V](input: StringDictionary[V]): (js.Array[KeyValue[String, V]]) | Null = js.native
-  @JSName("transform")
-  def transform_V_Union[V](
-    input: StringDictionary[V],
     compareFn: js.Function2[/* a */ KeyValue[String, V], /* b */ KeyValue[String, V], Double]
   ): (js.Array[KeyValue[String, V]]) | Null = js.native
   @JSName("transform")
-  def transform_V_Union[V](input: Map[Double | String, V]): (js.Array[KeyValue[String, V]]) | Null = js.native
+  def transform_K_DoubleV_Union[K /* <: Double */, V](input: Record[K, V]): (js.Array[KeyValue[String, V]]) | Null = js.native
   @JSName("transform")
-  def transform_V_Union[V](
-    input: Map[Double | String, V],
-    compareFn: js.Function2[/* a */ KeyValue[Double | String, V], /* b */ KeyValue[Double | String, V], Double]
+  def transform_K_DoubleV_Union[K /* <: Double */, V](
+    input: Record[K, V],
+    compareFn: js.Function2[/* a */ KeyValue[String, V], /* b */ KeyValue[String, V], Double]
   ): (js.Array[KeyValue[String, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_K_StringV[K /* <: String */, V](input: Record[K, V]): js.Array[KeyValue[K, V]] = js.native
+  @JSName("transform")
+  def transform_K_StringV[K /* <: String */, V](
+    input: Record[K, V],
+    compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]
+  ): js.Array[KeyValue[K, V]] = js.native
+  @JSName("transform")
+  def transform_K_StringV_Array[K /* <: String */, V](input: ReadonlyMap[K, V]): js.Array[KeyValue[K, V]] = js.native
+  @JSName("transform")
+  def transform_K_StringV_Array[K /* <: String */, V](
+    input: ReadonlyMap[K, V],
+    compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]
+  ): js.Array[KeyValue[K, V]] = js.native
+  @JSName("transform")
+  def transform_K_StringV_Union[K /* <: String */, V](): (js.Array[KeyValue[K, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_K_StringV_Union[K /* <: String */, V](
+    input: js.UndefOr[scala.Nothing],
+    compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]
+  ): (js.Array[KeyValue[K, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_K_StringV_Union[K /* <: String */, V](input: Null, compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]): (js.Array[KeyValue[K, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_K_StringV_Union[K /* <: String */, V](input: Record[K, V]): (js.Array[KeyValue[K, V]]) | Null = js.native
+  @JSName("transform")
+  def transform_K_StringV_Union[K /* <: String */, V](
+    input: Record[K, V],
+    compareFn: js.Function2[/* a */ KeyValue[K, V], /* b */ KeyValue[K, V], Double]
+  ): (js.Array[KeyValue[K, V]]) | Null = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.antd.anon
 
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Icon extends js.Object {
   
-  var icon: String = js.native
+  var icon: js.UndefOr[ReactElement] = js.native
 }
 object Icon {
   
   @scala.inline
-  def apply(icon: String): Icon = {
-    val __obj = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
+  def apply(): Icon = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Icon]
   }
   
@@ -33,6 +34,9 @@ object Icon {
     }
     
     @scala.inline
-    def setIcon(value: String): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
   }
 }

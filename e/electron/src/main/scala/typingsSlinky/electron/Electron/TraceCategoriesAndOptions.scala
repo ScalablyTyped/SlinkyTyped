@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TraceCategoriesAndOptions extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/trace-categories-and-options
+  // Docs: https://electronjs.org/docs/api/structures/trace-categories-and-options
   /**
     * A filter to control what category groups should be traced. A filter can have an
     * optional '-' prefix to exclude category groups that contain a matching category.

@@ -17,6 +17,8 @@ trait RecursivePartialPartialTo extends js.Object {
   
   var backgroundColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
   
+  var closeOnlyOnBackdropPress: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  
   var containerStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.native
   
   var height: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
@@ -79,6 +81,12 @@ object RecursivePartialPartialTo {
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
+    
+    @scala.inline
+    def setCloseOnlyOnBackdropPress(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("closeOnlyOnBackdropPress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCloseOnlyOnBackdropPress: Self = this.set("closeOnlyOnBackdropPress", js.undefined)
     
     @scala.inline
     def setContainerStyle(value: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]): Self = this.set("containerStyle", value.asInstanceOf[js.Any])

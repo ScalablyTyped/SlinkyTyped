@@ -13,14 +13,11 @@ trait SpatialReference
     * Checks if the specified spatial reference object has the same [wkid](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#wkid) or [wkt](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#wkt) as this spatial reference object.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#equals)
-    *
-    * @param spatialReference The spatial reference to compare to.
-    *
     */
   def equals(spatialReference: SpatialReference): Boolean = js.native
   
   /**
-    * An [image coordinate system](https://developers.arcgis.com/rest/services-reference/raster-ics.htm) defines the spatial reference used to display the image in its original coordinates without distortion, map transformations or ortho-rectification. Typically, [ImageryLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html) is displayed in the [spatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#spatialReference) of the view. In some cases, converting images into map coordinates can cause your images to look skewed or distorted because of the various transformations and terrain corrections that are used. Since there is no distortion with images in the image coordinate system, it is ideal for using with oblique imagery and mensuration.  The image can be displayed in its original coordinates only in 2D [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) with a `top-up`rotation which is always oriented in the look of direction of the dataset. This works similarly to an in-car navigation system where the choices are often either north is at the top of the screen (therefore, not using a top up option) or the screen rotates so the travel direction is always displayed at the top.
+    * An [image coordinate system](https://developers.arcgis.com/rest/services-reference/raster-ics.htm) defines the spatial reference used to display the image in its original coordinates without distortion, map transformations or ortho-rectification.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#imageCoordinateSystem)
     */
@@ -48,14 +45,14 @@ trait SpatialReference
   val isWebMercator: Boolean = js.native
   
   /**
-    * Indicates if the spatial reference of the map supports wrapping around the International Date Line. Value is `true` if the spatial reference is Web Mercator or WGS84.
+    * Indicates if the spatial reference of the map supports wrapping around the International Date Line.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#isWrappable)
     */
   val isWrappable: Boolean = js.native
   
   /**
-    * The well-known ID of a spatial reference. See [Projected Coordinate Systems](https://developers.arcgis.com/rest/services-reference/projected-coordinate-systems.htm) and [Geographic Coordinate Systems](https://developers.arcgis.com/rest/services-reference/geographic-coordinate-systems.htm) for the list of supported spatial references.
+    * The well-known ID of a spatial reference.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-SpatialReference.html#wkid)
     */

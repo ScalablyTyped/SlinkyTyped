@@ -5,10 +5,12 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.prettyFormat.mod.OptionsReceived
+import typingsSlinky.prettyFormat.typesMod.NewPlugin
 import typingsSlinky.testingLibraryDom.anon.Interval
 import typingsSlinky.testingLibraryDom.anon.PartialConfig
 import typingsSlinky.testingLibraryDom.configMod.Config
 import typingsSlinky.testingLibraryDom.configMod.ConfigFn
+import typingsSlinky.testingLibraryDom.eventsMod.CreateFunction
 import typingsSlinky.testingLibraryDom.eventsMod.CreateObject
 import typingsSlinky.testingLibraryDom.eventsMod.FireFunction
 import typingsSlinky.testingLibraryDom.eventsMod.FireObject
@@ -55,10 +57,12 @@ object mod extends js.Object {
     getMissingError: js.Function2[/* container */ HTMLElement, /* args */ Arguments, String]
   ): BuiltQueryMethods[Arguments] = js.native
   
+  def computeHeadingLevel(element: Element): js.UndefOr[Double] = js.native
+  
   def configure(configDelta: PartialConfig): Unit = js.native
   def configure(configDelta: ConfigFn): Unit = js.native
   
-  val createEvent: CreateObject = js.native
+  val createEvent: CreateObject with CreateFunction = js.native
   
   val findAllByAltText: FindAllByBoundAttribute = js.native
   
@@ -215,8 +219,8 @@ object mod extends js.Object {
   def wait(callback: js.Function0[Unit]): js.Promise[Unit] = js.native
   def wait(callback: js.Function0[Unit], options: Interval): js.Promise[Unit] = js.native
   
-  def waitFor[T](callback: js.Function0[T]): js.Promise[T] = js.native
-  def waitFor[T](callback: js.Function0[T], options: waitForOptions): js.Promise[T] = js.native
+  def waitFor[T](callback: js.Function0[T | js.Promise[T]]): js.Promise[T] = js.native
+  def waitFor[T](callback: js.Function0[T | js.Promise[T]], options: waitForOptions): js.Promise[T] = js.native
   
   def waitForDomChange(): js.Promise[_] = js.native
   def waitForDomChange(options: waitForOptions): js.Promise[_] = js.native
@@ -228,6 +232,36 @@ object mod extends js.Object {
   def waitForElementToBeRemoved[T](callback: T, options: waitForOptions): js.Promise[Unit] = js.native
   def waitForElementToBeRemoved[T](callback: js.Function0[T]): js.Promise[Unit] = js.native
   def waitForElementToBeRemoved[T](callback: js.Function0[T], options: waitForOptions): js.Promise[Unit] = js.native
+  
+  @js.native
+  object prettyFormat extends js.Object {
+    
+    /**
+      * Returns a presentation string of your `val` object
+      * @param val any potential JavaScript object
+      * @param options Custom settings
+      */
+    def apply(`val`: js.Any): String = js.native
+    def apply(`val`: js.Any, options: typingsSlinky.prettyFormat.typesMod.OptionsReceived): String = js.native
+    
+    @js.native
+    object plugins extends js.Object {
+      
+      var AsymmetricMatcher: NewPlugin = js.native
+      
+      var ConvertAnsi: NewPlugin = js.native
+      
+      var DOMCollection: NewPlugin = js.native
+      
+      var DOMElement: NewPlugin = js.native
+      
+      var Immutable: NewPlugin = js.native
+      
+      var ReactElement: NewPlugin = js.native
+      
+      var ReactTestComponent: NewPlugin = js.native
+    }
+  }
   
   @js.native
   object queries extends js.Object {
@@ -436,6 +470,14 @@ object mod extends js.Object {
     var getByText: BoundFunction[GetByText_] = js.native
     
     var getByTitle: BoundFunction[GetByBoundAttribute] = js.native
+    
+    /**
+      * Convenience function for `Testing Playground` which logs URL that
+      * can be opened in a browser
+      */
+    def logTestingPlaygroundURL(): Unit = js.native
+    def logTestingPlaygroundURL(element: Element): Unit = js.native
+    def logTestingPlaygroundURL(element: HTMLDocument): Unit = js.native
     
     var queryAllByAltText: BoundFunction[AllByBoundAttribute] = js.native
     

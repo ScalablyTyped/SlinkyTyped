@@ -8,9 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TaskSucceededEventDetails extends js.Object {
   
   /**
-    * The full JSON response from a resource when a task has succeeded. This response becomes the output of the related task.
+    * The full JSON response from a resource when a task has succeeded. This response becomes the output of the related task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
     */
   var output: js.UndefOr[SensitiveData] = js.native
+  
+  /**
+    * Contains details about the output of an execution history event.
+    */
+  var outputDetails: js.UndefOr[HistoryEventExecutionDataDetails] = js.native
   
   /**
     * The service name of the resource in a task state.
@@ -56,5 +61,11 @@ object TaskSucceededEventDetails {
     
     @scala.inline
     def deleteOutput: Self = this.set("output", js.undefined)
+    
+    @scala.inline
+    def setOutputDetails(value: HistoryEventExecutionDataDetails): Self = this.set("outputDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutputDetails: Self = this.set("outputDetails", js.undefined)
   }
 }

@@ -5,6 +5,7 @@ import typingsSlinky.reactNativeVersionCheck.anon.CurrentVersion
 import typingsSlinky.reactNativeVersionCheck.anon.FetchOptions
 import typingsSlinky.reactNativeVersionCheck.anon.IgnoreErrors
 import typingsSlinky.reactNativeVersionCheck.anon.IsNeeded
+import typingsSlinky.reactNativeVersionCheck.anon.PackageName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ object mod extends js.Object {
       * Returns url of App Store of app.
       */
     def getAppStoreUrl(): js.Promise[String] = js.native
-    def getAppStoreUrl(option: AppID): js.Promise[String] = js.native
+    def getAppStoreUrl(option: IgnoreErrors): js.Promise[String] = js.native
     
     /**
       * Returns device's country code of 2 characters.
@@ -52,7 +53,7 @@ object mod extends js.Object {
       * Returns url of Play Store of app.
       */
     def getPlayStoreUrl(): js.Promise[String] = js.native
-    def getPlayStoreUrl(option: IgnoreErrors): js.Promise[String] = js.native
+    def getPlayStoreUrl(option: PackageName): js.Promise[String] = js.native
     
     /**
       * Returns url of Play Market or App Store of app.

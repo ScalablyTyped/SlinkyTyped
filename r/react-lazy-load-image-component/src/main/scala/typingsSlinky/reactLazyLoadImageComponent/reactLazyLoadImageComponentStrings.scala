@@ -15,6 +15,9 @@ object reactLazyLoadImageComponentStrings {
   def additions: additions = "additions".asInstanceOf[additions]
   
   @scala.inline
+  def `additions removals`: `additions removals` = ("additions removals").asInstanceOf[`additions removals`]
+  
+  @scala.inline
   def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   
   @scala.inline
@@ -114,9 +117,6 @@ object reactLazyLoadImageComponentStrings {
   def no: no = "no".asInstanceOf[no]
   
   @scala.inline
-  def `no-referrer`: `no-referrer` = "no-referrer".asInstanceOf[`no-referrer`]
-  
-  @scala.inline
   def none: none = "none".asInstanceOf[none]
   
   @scala.inline
@@ -132,9 +132,6 @@ object reactLazyLoadImageComponentStrings {
   def opacity: opacity = "opacity".asInstanceOf[opacity]
   
   @scala.inline
-  def origin: origin = "origin".asInstanceOf[origin]
-  
-  @scala.inline
   def other: other = "other".asInstanceOf[other]
   
   @scala.inline
@@ -148,6 +145,12 @@ object reactLazyLoadImageComponentStrings {
   
   @scala.inline
   def removals: removals = "removals".asInstanceOf[removals]
+  
+  @scala.inline
+  def `removals additions`: `removals additions` = ("removals additions").asInstanceOf[`removals additions`]
+  
+  @scala.inline
+  def `removals text`: `removals text` = ("removals text").asInstanceOf[`removals text`]
   
   @scala.inline
   def scrollPosition: scrollPosition = "scrollPosition".asInstanceOf[scrollPosition]
@@ -171,6 +174,12 @@ object reactLazyLoadImageComponentStrings {
   def text: text = "text".asInstanceOf[text]
   
   @scala.inline
+  def `text additions`: `text additions` = ("text additions").asInstanceOf[`text additions`]
+  
+  @scala.inline
+  def `text removals`: `text removals` = ("text removals").asInstanceOf[`text removals`]
+  
+  @scala.inline
   def throttle: throttle = "throttle".asInstanceOf[throttle]
   
   @scala.inline
@@ -178,9 +187,6 @@ object reactLazyLoadImageComponentStrings {
   
   @scala.inline
   def tree: tree = "tree".asInstanceOf[tree]
-  
-  @scala.inline
-  def `unsafe-url`: `unsafe-url` = "unsafe-url".asInstanceOf[`unsafe-url`]
   
   @scala.inline
   def url: url = "url".asInstanceOf[url]
@@ -199,6 +205,9 @@ object reactLazyLoadImageComponentStrings {
   
   @js.native
   sealed trait additions extends js.Object
+  
+  @js.native
+  sealed trait `additions removals` extends js.Object
   
   @js.native
   sealed trait `additions text` extends js.Object
@@ -300,9 +309,6 @@ object reactLazyLoadImageComponentStrings {
   sealed trait no extends js.Object
   
   @js.native
-  sealed trait `no-referrer` extends js.Object
-  
-  @js.native
   sealed trait none extends js.Object
   
   @js.native
@@ -318,9 +324,6 @@ object reactLazyLoadImageComponentStrings {
   sealed trait opacity extends Effect
   
   @js.native
-  sealed trait origin extends js.Object
-  
-  @js.native
   sealed trait other extends js.Object
   
   @js.native
@@ -334,6 +337,12 @@ object reactLazyLoadImageComponentStrings {
   
   @js.native
   sealed trait removals extends js.Object
+  
+  @js.native
+  sealed trait `removals additions` extends js.Object
+  
+  @js.native
+  sealed trait `removals text` extends js.Object
   
   @js.native
   sealed trait scrollPosition extends js.Object
@@ -357,6 +366,12 @@ object reactLazyLoadImageComponentStrings {
   sealed trait text extends js.Object
   
   @js.native
+  sealed trait `text additions` extends js.Object
+  
+  @js.native
+  sealed trait `text removals` extends js.Object
+  
+  @js.native
   sealed trait throttle extends DelayMethod
   
   @js.native
@@ -364,9 +379,6 @@ object reactLazyLoadImageComponentStrings {
   
   @js.native
   sealed trait tree extends js.Object
-  
-  @js.native
-  sealed trait `unsafe-url` extends js.Object
   
   @js.native
   sealed trait url extends js.Object

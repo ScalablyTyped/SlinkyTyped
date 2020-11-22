@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResourceReference extends js.Object {
   
   // The item's unique identifier.
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[NullableOption[String]] = js.native
   
   // A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[NullableOption[String]] = js.native
   
   // A URL leading to the referenced item.
-  var webUrl: js.UndefOr[String] = js.native
+  var webUrl: js.UndefOr[NullableOption[String]] = js.native
 }
 object ResourceReference {
   
@@ -40,21 +40,30 @@ object ResourceReference {
     }
     
     @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setId(value: NullableOption[String]): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setIdNull: Self = this.set("id", null)
+    
+    @scala.inline
+    def setType(value: NullableOption[String]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
     
     @scala.inline
-    def setWebUrl(value: String): Self = this.set("webUrl", value.asInstanceOf[js.Any])
+    def setTypeNull: Self = this.set("type", null)
+    
+    @scala.inline
+    def setWebUrl(value: NullableOption[String]): Self = this.set("webUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWebUrl: Self = this.set("webUrl", js.undefined)
+    
+    @scala.inline
+    def setWebUrlNull: Self = this.set("webUrl", null)
   }
 }

@@ -15,6 +15,8 @@ trait Serverless extends js.Object {
   
   var app: js.UndefOr[String] = js.native
   
+  var configValidationMode: js.UndefOr[String] = js.native
+  
   var custom: js.UndefOr[Custom] = js.native
   
   var frameworkVersion: String = js.native
@@ -79,6 +81,12 @@ object Serverless {
     
     @scala.inline
     def deleteApp: Self = this.set("app", js.undefined)
+    
+    @scala.inline
+    def setConfigValidationMode(value: String): Self = this.set("configValidationMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConfigValidationMode: Self = this.set("configValidationMode", js.undefined)
     
     @scala.inline
     def setCustom(value: Custom): Self = this.set("custom", value.asInstanceOf[js.Any])

@@ -18,14 +18,24 @@ trait RedshiftSettings extends js.Object {
   var AfterConnectScript: js.UndefOr[String] = js.native
   
   /**
-    * The location where the comma-separated value (.csv) files are stored before being uploaded to the S3 bucket. 
+    * An S3 folder where the comma-separated-value (.csv) files are stored before being uploaded to the target Redshift cluster.  For full load mode, AWS DMS converts source records into .csv files and loads them to the BucketFolder/TableID path. AWS DMS uses the Redshift COPY command to upload the .csv files to the target table. The files are deleted once the COPY operation has finished. For more information, see Amazon Redshift Database Developer Guide  For change-data-capture (CDC) mode, AWS DMS creates a NetChanges table, and loads the .csv files to this BucketFolder/NetChangesTableID path.
     */
   var BucketFolder: js.UndefOr[String] = js.native
   
   /**
-    * The name of the S3 bucket you want to use
+    * The name of the intermediate S3 bucket used to store .csv files before uploading data to Redshift.
     */
   var BucketName: js.UndefOr[String] = js.native
+  
+  /**
+    * If Amazon Redshift is configured to support case sensitive schema names, set CaseSensitiveNames to true. The default is false.
+    */
+  var CaseSensitiveNames: js.UndefOr[BooleanOptional] = js.native
+  
+  /**
+    * If you set CompUpdate to true Amazon Redshift applies automatic compression if the table is empty. This applies even if the table columns already have encodings other than RAW. If you set CompUpdate to false, automatic compression is disabled and existing column encodings aren't changed. The default is true.
+    */
+  var CompUpdate: js.UndefOr[BooleanOptional] = js.native
   
   /**
     * A value that sets the amount of time to wait (in milliseconds) before timing out, beginning from when you initially establish a connection.
@@ -48,22 +58,27 @@ trait RedshiftSettings extends js.Object {
   var EmptyAsNull: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * The type of server-side encryption that you want to use for your data. This encryption type is part of the endpoint settings or the extra connections attributes for Amazon S3. You can choose either SSE_S3 (the default) or SSE_KMS. To use SSE_S3, create an AWS Identity and Access Management (IAM) role with a policy that allows "arn:aws:s3:::*" to use the following actions: "s3:PutObject", "s3:ListBucket" 
+    * The type of server-side encryption that you want to use for your data. This encryption type is part of the endpoint settings or the extra connections attributes for Amazon S3. You can choose either SSE_S3 (the default) or SSE_KMS.   For the ModifyEndpoint operation, you can change the existing value of the EncryptionMode parameter from SSE_KMS to SSE_S3. But you can’t change the existing value from SSE_S3 to SSE_KMS.  To use SSE_S3, create an AWS Identity and Access Management (IAM) role with a policy that allows "arn:aws:s3:::*" to use the following actions: "s3:PutObject", "s3:ListBucket" 
     */
   var EncryptionMode: js.UndefOr[EncryptionModeValue] = js.native
   
   /**
-    * The number of threads used to upload a single file. This parameter accepts a value from 1 through 64. It defaults to 10.
+    * This setting is only valid for a full-load migration task. Set ExplicitIds to true to have tables with IDENTITY columns override their auto-generated values with explicit values loaded from the source data files used to populate the tables. The default is false.
+    */
+  var ExplicitIds: js.UndefOr[BooleanOptional] = js.native
+  
+  /**
+    * The number of threads used to upload a single file. This parameter accepts a value from 1 through 64. It defaults to 10. The number of parallel streams used to upload a single .csv file to an S3 bucket using S3 Multipart Upload. For more information, see Multipart upload overview.   FileTransferUploadStreams accepts a value from 1 through 64. It defaults to 10.
     */
   var FileTransferUploadStreams: js.UndefOr[IntegerOptional] = js.native
   
   /**
-    * The amount of time to wait (in milliseconds) before timing out, beginning from when you begin loading.
+    * The amount of time to wait (in milliseconds) before timing out of operations performed by AWS DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE, and UPDATE.
     */
   var LoadTimeout: js.UndefOr[IntegerOptional] = js.native
   
   /**
-    * The maximum size (in KB) of any .csv file used to transfer data to Amazon Redshift. This accepts a value from 1 through 1,048,576. It defaults to 32,768 KB (32 MB).
+    * The maximum size (in KB) of any .csv file used to load data on an S3 bucket and transfer data to Amazon Redshift. It defaults to 1048576KB (1 GB).
     */
   var MaxFileSize: js.UndefOr[IntegerOptional] = js.native
   
@@ -128,7 +143,7 @@ trait RedshiftSettings extends js.Object {
   var Username: js.UndefOr[String] = js.native
   
   /**
-    * The size of the write buffer to use in rows. Valid values range from 1 through 2,048. The default is 1,024. Use this setting to tune performance. 
+    * The size (in KB) of the in-memory file write buffer used when generating .csv files on the local disk at the DMS replication instance. The default value is 1000 (buffer size is 1000KB).
     */
   var WriteBufferSize: js.UndefOr[IntegerOptional] = js.native
 }
@@ -180,6 +195,18 @@ object RedshiftSettings {
     def deleteBucketName: Self = this.set("BucketName", js.undefined)
     
     @scala.inline
+    def setCaseSensitiveNames(value: BooleanOptional): Self = this.set("CaseSensitiveNames", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCaseSensitiveNames: Self = this.set("CaseSensitiveNames", js.undefined)
+    
+    @scala.inline
+    def setCompUpdate(value: BooleanOptional): Self = this.set("CompUpdate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCompUpdate: Self = this.set("CompUpdate", js.undefined)
+    
+    @scala.inline
     def setConnectionTimeout(value: IntegerOptional): Self = this.set("ConnectionTimeout", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -208,6 +235,12 @@ object RedshiftSettings {
     
     @scala.inline
     def deleteEncryptionMode: Self = this.set("EncryptionMode", js.undefined)
+    
+    @scala.inline
+    def setExplicitIds(value: BooleanOptional): Self = this.set("ExplicitIds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExplicitIds: Self = this.set("ExplicitIds", js.undefined)
     
     @scala.inline
     def setFileTransferUploadStreams(value: IntegerOptional): Self = this.set("FileTransferUploadStreams", value.asInstanceOf[js.Any])

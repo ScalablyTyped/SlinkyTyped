@@ -14,12 +14,12 @@ trait PushNotificationSuccessArg extends SuccessResponse {
   /**
     * The device token which this device was registered for.
     */
-  var deviceToken: js.UndefOr[java.lang.String] = js.native
+  var deviceToken: js.UndefOr[String] = js.native
   
   /**
     * The value of this string is always "remote".
     */
-  var `type`: js.UndefOr[java.lang.String] = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 object PushNotificationSuccessArg {
   
@@ -39,19 +39,19 @@ object PushNotificationSuccessArg {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setDeviceToken(value: java.lang.String): Self = this.set("deviceToken", value.asInstanceOf[js.Any])
+    def setDeviceToken(value: String): Self = this.set("deviceToken", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceToken: Self = this.set("deviceToken", js.undefined)
     
     @scala.inline
-    def setType(value: java.lang.String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)

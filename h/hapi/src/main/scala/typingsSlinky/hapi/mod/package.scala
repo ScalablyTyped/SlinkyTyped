@@ -90,5 +90,5 @@ package object mod {
   
   type StopEventHandler = js.Function0[scala.Unit]
   
-  type ValidationObject = typingsSlinky.joi.mod.SchemaMap
+  type ValidationObject = typingsSlinky.joi.mod.SchemaMap[js.Any]
 }

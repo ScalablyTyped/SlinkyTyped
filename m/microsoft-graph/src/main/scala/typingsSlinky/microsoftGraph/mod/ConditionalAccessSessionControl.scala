@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ConditionalAccessSessionControl extends js.Object {
   
-  var isEnabled: js.UndefOr[Boolean] = js.native
+  // Specifies whether the session control is enabled.
+  var isEnabled: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object ConditionalAccessSessionControl {
   
@@ -33,9 +34,12 @@ object ConditionalAccessSessionControl {
     }
     
     @scala.inline
-    def setIsEnabled(value: Boolean): Self = this.set("isEnabled", value.asInstanceOf[js.Any])
+    def setIsEnabled(value: NullableOption[Boolean]): Self = this.set("isEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIsEnabled: Self = this.set("isEnabled", js.undefined)
+    
+    @scala.inline
+    def setIsEnabledNull: Self = this.set("isEnabled", null)
   }
 }

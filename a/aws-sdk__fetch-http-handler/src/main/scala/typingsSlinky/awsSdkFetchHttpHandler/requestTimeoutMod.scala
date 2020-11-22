@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/fetch-http-handler/build/request-timeout", JSImport.Namespace)
+@JSImport("@aws-sdk/fetch-http-handler/dist/cjs/request-timeout", JSImport.Namespace)
 @js.native
 object requestTimeoutMod extends js.Object {
   

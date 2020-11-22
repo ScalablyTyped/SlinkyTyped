@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.projectsMod.projects
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.projectsMod.StructureVersionInfo
 import scala.scalajs.js
@@ -8,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/resources relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/resources relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
@@ -29,9 +28,6 @@ class Folder protected () extends FolderBase {
   
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MFolder: FolderBase = js.native
-  
-  @JSName("model")
-  var model_FFolder: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

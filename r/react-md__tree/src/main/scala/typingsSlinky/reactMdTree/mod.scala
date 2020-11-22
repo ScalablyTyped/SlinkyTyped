@@ -27,28 +27,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  /**
-    * Creates an accessible tree widget that allows you to show hierarchical data
-    * in a list presentation view. This component requires the selection and
-    * expansion state to be provided/controlled but you can use the
-    * `useTreeItemSelection` and `useTreeItemExpansion` hooks for a great starting
-    * point for this functionality.
-    */
   val Tree: ForwardRefExoticComponent[TreeProps[_] with RefAttributes[ListElement]] = js.native
   
-  /**
-    * The `TreeGroup` component is used to render a tree item's nested items
-    * whenever the `expanded` prop is `true`. It uses the `Collapse` component
-    * behind the scenes to animate in-and-out of view and will fully unrender when
-    * the `expanded` prop is `false`.
-    */
   val TreeGroup: ForwardRefExoticComponent[PickTreeGroupPropshiddenc] = js.native
   
-  /**
-    * This component renders an item within a tree with optional child items. This
-    * should almost always be used from the `itemRenderer` prop from the `Tree`
-    * component as it provides a lot of the required a11y props for you.
-    */
   val TreeItem: ForwardRefExoticComponent[
     (TreeItemProps with RefAttributes[HTMLLIElement]) | (TreeItemWithContentComponentProps with RefAttributes[HTMLLIElement])
   ] = js.native

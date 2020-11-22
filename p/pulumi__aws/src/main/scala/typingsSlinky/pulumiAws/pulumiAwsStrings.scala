@@ -1,27 +1,28 @@
 package typingsSlinky.pulumiAws
 
-import typingsSlinky.pulumiAws.applicationloadbalancingIpAddressTypeMod.IpAddressType
-import typingsSlinky.pulumiAws.applicationloadbalancingLoadBalancerTypeMod.LoadBalancerType
-import typingsSlinky.pulumiAws.cannedAclMod.CannedAcl
 import typingsSlinky.pulumiAws.containerMod.KernelCapability
 import typingsSlinky.pulumiAws.containerMod.LogDriver
 import typingsSlinky.pulumiAws.containerMod.Protocol
 import typingsSlinky.pulumiAws.containerMod.UlimitName
 import typingsSlinky.pulumiAws.documentsMod.Principal
-import typingsSlinky.pulumiAws.engineModeMod.EngineMode
-import typingsSlinky.pulumiAws.engineTypeMod.EngineType
-import typingsSlinky.pulumiAws.instancePlatformMod.InstancePlatform
-import typingsSlinky.pulumiAws.instanceTypeMod.InstanceType
-import typingsSlinky.pulumiAws.metricsMod.Metric
-import typingsSlinky.pulumiAws.notificationTypeMod.NotificationType
-import typingsSlinky.pulumiAws.parameterTypeMod.ParameterType
-import typingsSlinky.pulumiAws.placementStrategyMod.PlacementStrategy
-import typingsSlinky.pulumiAws.protocolTypeMod.ProtocolType
-import typingsSlinky.pulumiAws.recordTypeMod.RecordType
-import typingsSlinky.pulumiAws.regionMod.Region
-import typingsSlinky.pulumiAws.runtimesMod.Runtime
-import typingsSlinky.pulumiAws.storageTypeMod.StorageType
-import typingsSlinky.pulumiAws.tenancyMod.Tenancy
+import typingsSlinky.pulumiAws.enumsApplicationloadbalancingMod.IpAddressType
+import typingsSlinky.pulumiAws.enumsApplicationloadbalancingMod.LoadBalancerType
+import typingsSlinky.pulumiAws.enumsAutoscalingMod.Metric
+import typingsSlinky.pulumiAws.enumsAutoscalingMod.NotificationType
+import typingsSlinky.pulumiAws.enumsEc2Mod.InstancePlatform
+import typingsSlinky.pulumiAws.enumsEc2Mod.InstanceType
+import typingsSlinky.pulumiAws.enumsEc2Mod.PlacementStrategy
+import typingsSlinky.pulumiAws.enumsEc2Mod.ProtocolType
+import typingsSlinky.pulumiAws.enumsEc2Mod.Tenancy
+import typingsSlinky.pulumiAws.enumsIamMod.ManagedPolicy
+import typingsSlinky.pulumiAws.enumsLambdaMod.Runtime
+import typingsSlinky.pulumiAws.enumsMod.Region
+import typingsSlinky.pulumiAws.enumsRdsMod.EngineMode
+import typingsSlinky.pulumiAws.enumsRdsMod.EngineType
+import typingsSlinky.pulumiAws.enumsRdsMod.StorageType
+import typingsSlinky.pulumiAws.enumsRoute53Mod.RecordType
+import typingsSlinky.pulumiAws.enumsS3Mod.CannedAcl
+import typingsSlinky.pulumiAws.enumsSsmMod.ParameterType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -104,6 +105,9 @@ object pulumiAwsStrings {
   def GroupDesiredCapacity: GroupDesiredCapacity = "GroupDesiredCapacity".asInstanceOf[GroupDesiredCapacity]
   
   @scala.inline
+  def GroupInServiceCapacity: GroupInServiceCapacity = "GroupInServiceCapacity".asInstanceOf[GroupInServiceCapacity]
+  
+  @scala.inline
   def GroupInServiceInstances: GroupInServiceInstances = "GroupInServiceInstances".asInstanceOf[GroupInServiceInstances]
   
   @scala.inline
@@ -113,13 +117,25 @@ object pulumiAwsStrings {
   def GroupMinSize: GroupMinSize = "GroupMinSize".asInstanceOf[GroupMinSize]
   
   @scala.inline
+  def GroupPendingCapacity: GroupPendingCapacity = "GroupPendingCapacity".asInstanceOf[GroupPendingCapacity]
+  
+  @scala.inline
   def GroupPendingInstances: GroupPendingInstances = "GroupPendingInstances".asInstanceOf[GroupPendingInstances]
+  
+  @scala.inline
+  def GroupStandbyCapacity: GroupStandbyCapacity = "GroupStandbyCapacity".asInstanceOf[GroupStandbyCapacity]
   
   @scala.inline
   def GroupStandbyInstances: GroupStandbyInstances = "GroupStandbyInstances".asInstanceOf[GroupStandbyInstances]
   
   @scala.inline
+  def GroupTerminatingCapacity: GroupTerminatingCapacity = "GroupTerminatingCapacity".asInstanceOf[GroupTerminatingCapacity]
+  
+  @scala.inline
   def GroupTerminatingInstances: GroupTerminatingInstances = "GroupTerminatingInstances".asInstanceOf[GroupTerminatingInstances]
+  
+  @scala.inline
+  def GroupTotalCapacity: GroupTotalCapacity = "GroupTotalCapacity".asInstanceOf[GroupTotalCapacity]
   
   @scala.inline
   def GroupTotalInstances: GroupTotalInstances = "GroupTotalInstances".asInstanceOf[GroupTotalInstances]
@@ -333,6 +349,810 @@ object pulumiAwsStrings {
   
   @scala.inline
   def application: application = "application".asInstanceOf[application]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSAccountActivityAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSAccountActivityAccess = "arn:aws:iam::aws:policy/AWSAccountActivityAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSAccountActivityAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSAccountUsageReportAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSAccountUsageReportAccess = "arn:aws:iam::aws:policy/AWSAccountUsageReportAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSAccountUsageReportAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSAgentlessDiscoveryService: arnColonawsColoniamColonColonawsColonpolicySlashAWSAgentlessDiscoveryService = "arn:aws:iam::aws:policy/AWSAgentlessDiscoveryService".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSAgentlessDiscoveryService]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSApplicationDiscoveryAgentAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSApplicationDiscoveryAgentAccess = "arn:aws:iam::aws:policy/AWSApplicationDiscoveryAgentAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSApplicationDiscoveryAgentAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSApplicationDiscoveryServiceFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSApplicationDiscoveryServiceFullAccess = "arn:aws:iam::aws:policy/AWSApplicationDiscoveryServiceFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSApplicationDiscoveryServiceFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSBatchFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSBatchFullAccess = "arn:aws:iam::aws:policy/AWSBatchFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSBatchFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCertificateManagerFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCertificateManagerFullAccess = "arn:aws:iam::aws:policy/AWSCertificateManagerFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCertificateManagerFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCertificateManagerReadOnly: arnColonawsColoniamColonColonawsColonpolicySlashAWSCertificateManagerReadOnly = "arn:aws:iam::aws:policy/AWSCertificateManagerReadOnly".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCertificateManagerReadOnly]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudFormationReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudFormationReadOnlyAccess = "arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudFormationReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudHSMFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudHSMFullAccess = "arn:aws:iam::aws:policy/AWSCloudHSMFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudHSMFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudHSMReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudHSMReadOnlyAccess = "arn:aws:iam::aws:policy/AWSCloudHSMReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudHSMReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudTrailFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudTrailFullAccess = "arn:aws:iam::aws:policy/AWSCloudTrailFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudTrailFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudTrailReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudTrailReadOnlyAccess = "arn:aws:iam::aws:policy/AWSCloudTrailReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudTrailReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildAdminAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildAdminAccess = "arn:aws:iam::aws:policy/AWSCodeBuildAdminAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildAdminAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildDeveloperAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildDeveloperAccess = "arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildDeveloperAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildReadOnlyAccess = "arn:aws:iam::aws:policy/AWSCodeBuildReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitFullAccess = "arn:aws:iam::aws:policy/AWSCodeCommitFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitPowerUser: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitPowerUser = "arn:aws:iam::aws:policy/AWSCodeCommitPowerUser".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitPowerUser]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitReadOnly: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitReadOnly = "arn:aws:iam::aws:policy/AWSCodeCommitReadOnly".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitReadOnly]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployDeployerAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployDeployerAccess = "arn:aws:iam::aws:policy/AWSCodeDeployDeployerAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployDeployerAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployFullAccess = "arn:aws:iam::aws:policy/AWSCodeDeployFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployReadOnlyAccess = "arn:aws:iam::aws:policy/AWSCodeDeployReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployRoleForECS: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployRoleForECS = "arn:aws:iam::aws:policy/AWSCodeDeployRoleForECS".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployRoleForECS]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineApproverAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineApproverAccess = "arn:aws:iam::aws:policy/AWSCodePipelineApproverAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineApproverAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineCustomActionAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineCustomActionAccess = "arn:aws:iam::aws:policy/AWSCodePipelineCustomActionAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineCustomActionAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineFullAccess = "arn:aws:iam::aws:policy/AWSCodePipelineFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineReadOnlyAccess = "arn:aws:iam::aws:policy/AWSCodePipelineReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeStarFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeStarFullAccess = "arn:aws:iam::aws:policy/AWSCodeStarFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeStarFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSConfigUserAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSConfigUserAccess = "arn:aws:iam::aws:policy/AWSConfigUserAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSConfigUserAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSConnector: arnColonawsColoniamColonColonawsColonpolicySlashAWSConnector = "arn:aws:iam::aws:policy/AWSConnector".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSConnector]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSDataPipeline_FullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSDataPipeline_FullAccess = "arn:aws:iam::aws:policy/AWSDataPipeline_FullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSDataPipeline_FullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSDataPipeline_PowerUser: arnColonawsColoniamColonColonawsColonpolicySlashAWSDataPipeline_PowerUser = "arn:aws:iam::aws:policy/AWSDataPipeline_PowerUser".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSDataPipeline_PowerUser]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSDeviceFarmFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSDeviceFarmFullAccess = "arn:aws:iam::aws:policy/AWSDeviceFarmFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSDeviceFarmFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectConnectFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectConnectFullAccess = "arn:aws:iam::aws:policy/AWSDirectConnectFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectConnectFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectConnectReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectConnectReadOnlyAccess = "arn:aws:iam::aws:policy/AWSDirectConnectReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectConnectReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectoryServiceFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectoryServiceFullAccess = "arn:aws:iam::aws:policy/AWSDirectoryServiceFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectoryServiceFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectoryServiceReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectoryServiceReadOnlyAccess = "arn:aws:iam::aws:policy/AWSDirectoryServiceReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectoryServiceReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkCustomPlatformforEC2Role: arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkCustomPlatformforEC2Role = "arn:aws:iam::aws:policy/AWSElasticBeanstalkCustomPlatformforEC2Role".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkCustomPlatformforEC2Role]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkFullAccess = "arn:aws:iam::aws:policy/AWSElasticBeanstalkFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkMulticontainerDocker: arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkMulticontainerDocker = "arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkMulticontainerDocker]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkReadOnlyAccess = "arn:aws:iam::aws:policy/AWSElasticBeanstalkReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkWebTier: arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkWebTier = "arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkWebTier]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkWorkerTier: arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkWorkerTier = "arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkWorkerTier]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSGreengrassFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSGreengrassFullAccess = "arn:aws:iam::aws:policy/AWSGreengrassFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSGreengrassFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSHealthFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSHealthFullAccess = "arn:aws:iam::aws:policy/AWSHealthFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSHealthFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSImportExportFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSImportExportFullAccess = "arn:aws:iam::aws:policy/AWSImportExportFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSImportExportFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSImportExportReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSImportExportReadOnlyAccess = "arn:aws:iam::aws:policy/AWSImportExportReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSImportExportReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTConfigAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTConfigAccess = "arn:aws:iam::aws:policy/AWSIoTConfigAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTConfigAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTConfigReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTConfigReadOnlyAccess = "arn:aws:iam::aws:policy/AWSIoTConfigReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTConfigReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTDataAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTDataAccess = "arn:aws:iam::aws:policy/AWSIoTDataAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTDataAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTFullAccess = "arn:aws:iam::aws:policy/AWSIoTFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSKeyManagementServicePowerUser: arnColonawsColoniamColonColonawsColonpolicySlashAWSKeyManagementServicePowerUser = "arn:aws:iam::aws:policy/AWSKeyManagementServicePowerUser".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSKeyManagementServicePowerUser]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaExecute: arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaExecute = "arn:aws:iam::aws:policy/AWSLambdaExecute".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaExecute]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaFullAccess = "arn:aws:iam::aws:policy/AWSLambdaFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaFullAccess]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaInvocation-DynamoDB`: `arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaInvocation-DynamoDB` = "arn:aws:iam::aws:policy/AWSLambdaInvocation-DynamoDB".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaInvocation-DynamoDB`]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaReadOnlyAccess = "arn:aws:iam::aws:policy/AWSLambdaReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceFullAccess = "arn:aws:iam::aws:policy/AWSMarketplaceFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceGetEntitlements: arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceGetEntitlements = "arn:aws:iam::aws:policy/AWSMarketplaceGetEntitlements".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceGetEntitlements]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceManageSubscriptions: arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceManageSubscriptions = "arn:aws:iam::aws:policy/AWSMarketplaceManageSubscriptions".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceManageSubscriptions]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceMeteringFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceMeteringFullAccess = "arn:aws:iam::aws:policy/AWSMarketplaceMeteringFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceMeteringFullAccess]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceRead-only`: `arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceRead-only` = "arn:aws:iam::aws:policy/AWSMarketplaceRead-only".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceRead-only`]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSMobileHub_FullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSMobileHub_FullAccess = "arn:aws:iam::aws:policy/AWSMobileHub_FullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSMobileHub_FullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSMobileHub_ReadOnly: arnColonawsColoniamColonColonawsColonpolicySlashAWSMobileHub_ReadOnly = "arn:aws:iam::aws:policy/AWSMobileHub_ReadOnly".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSMobileHub_ReadOnly]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksCMInstanceProfileRole: arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksCMInstanceProfileRole = "arn:aws:iam::aws:policy/AWSOpsWorksCMInstanceProfileRole".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksCMInstanceProfileRole]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksCloudWatchLogs: arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksCloudWatchLogs = "arn:aws:iam::aws:policy/AWSOpsWorksCloudWatchLogs".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksCloudWatchLogs]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksFullAccess = "arn:aws:iam::aws:policy/AWSOpsWorksFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksInstanceRegistration: arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksInstanceRegistration = "arn:aws:iam::aws:policy/AWSOpsWorksInstanceRegistration".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksInstanceRegistration]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksRegisterCLI: arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksRegisterCLI = "arn:aws:iam::aws:policy/AWSOpsWorksRegisterCLI".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksRegisterCLI]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsConsoleFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsConsoleFullAccess = "arn:aws:iam::aws:policy/AWSStepFunctionsConsoleFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsConsoleFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsFullAccess = "arn:aws:iam::aws:policy/AWSStepFunctionsFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsReadOnlyAccess = "arn:aws:iam::aws:policy/AWSStepFunctionsReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSStorageGatewayFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSStorageGatewayFullAccess = "arn:aws:iam::aws:policy/AWSStorageGatewayFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSStorageGatewayFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSStorageGatewayReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSStorageGatewayReadOnlyAccess = "arn:aws:iam::aws:policy/AWSStorageGatewayReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSStorageGatewayReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSSupportAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSSupportAccess = "arn:aws:iam::aws:policy/AWSSupportAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSSupportAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSWAFFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSWAFFullAccess = "arn:aws:iam::aws:policy/AWSWAFFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSWAFFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSWAFReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSWAFReadOnlyAccess = "arn:aws:iam::aws:policy/AWSWAFReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSWAFReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSXRayDaemonWriteAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSXRayDaemonWriteAccess = "arn:aws:iam::aws:policy/AWSXRayDaemonWriteAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSXRayDaemonWriteAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayFullAccess = "arn:aws:iam::aws:policy/AWSXrayFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayReadOnlyAccess = "arn:aws:iam::aws:policy/AWSXrayReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayWriteOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayWriteOnlyAccess = "arn:aws:iam::aws:policy/AWSXrayWriteOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayWriteOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAdministratorAccess: arnColonawsColoniamColonColonawsColonpolicySlashAdministratorAccess = "arn:aws:iam::aws:policy/AdministratorAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAdministratorAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonAPIGatewayAdministrator: arnColonawsColoniamColonColonawsColonpolicySlashAmazonAPIGatewayAdministrator = "arn:aws:iam::aws:policy/AmazonAPIGatewayAdministrator".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonAPIGatewayAdministrator]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonAPIGatewayInvokeFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonAPIGatewayInvokeFullAccess = "arn:aws:iam::aws:policy/AmazonAPIGatewayInvokeFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonAPIGatewayInvokeFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonAppStreamFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonAppStreamFullAccess = "arn:aws:iam::aws:policy/AmazonAppStreamFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonAppStreamFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonAppStreamReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonAppStreamReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonAppStreamReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonAppStreamReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonAthenaFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonAthenaFullAccess = "arn:aws:iam::aws:policy/AmazonAthenaFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonAthenaFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonCloudDirectoryFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonCloudDirectoryFullAccess = "arn:aws:iam::aws:policy/AmazonCloudDirectoryFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonCloudDirectoryFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonCloudDirectoryReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonCloudDirectoryReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonCloudDirectoryReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonCloudDirectoryReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoDeveloperAuthenticatedIdentities: arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoDeveloperAuthenticatedIdentities = "arn:aws:iam::aws:policy/AmazonCognitoDeveloperAuthenticatedIdentities".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoDeveloperAuthenticatedIdentities]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoPowerUser: arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoPowerUser = "arn:aws:iam::aws:policy/AmazonCognitoPowerUser".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoPowerUser]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoReadOnly: arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoReadOnly = "arn:aws:iam::aws:policy/AmazonCognitoReadOnly".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoReadOnly]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonDRSVPCManagement: arnColonawsColoniamColonColonawsColonpolicySlashAmazonDRSVPCManagement = "arn:aws:iam::aws:policy/AmazonDRSVPCManagement".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonDRSVPCManagement]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBFullAccess = "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBFullAccesswithDataPipeline: arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBFullAccesswithDataPipeline = "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccesswithDataPipeline".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBFullAccesswithDataPipeline]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonDynamoDBReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryFullAccess = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryPowerUser: arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryPowerUser = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryPowerUser]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryReadOnly: arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryReadOnly = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryReadOnly]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerServiceFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerServiceFullAccess = "arn:aws:iam::aws:policy/AmazonEC2ContainerServiceFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerServiceFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2FullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2FullAccess = "arn:aws:iam::aws:policy/AmazonEC2FullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2FullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ReportsAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ReportsAccess = "arn:aws:iam::aws:policy/AmazonEC2ReportsAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ReportsAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonESFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonESFullAccess = "arn:aws:iam::aws:policy/AmazonESFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonESFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonESReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonESReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonESReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonESReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonElastiCacheFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonElastiCacheFullAccess = "arn:aws:iam::aws:policy/AmazonElastiCacheFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonElastiCacheFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonElastiCacheReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonElastiCacheReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonElastiCacheReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonElastiCacheReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticFileSystemFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticFileSystemFullAccess = "arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticFileSystemFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticFileSystemReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticFileSystemReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonElasticFileSystemReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticFileSystemReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticMapReduceFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticMapReduceFullAccess = "arn:aws:iam::aws:policy/AmazonElasticMapReduceFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticMapReduceFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticMapReduceReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticMapReduceReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonElasticMapReduceReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticMapReduceReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderFullAccess = "arn:aws:iam::aws:policy/AmazonElasticTranscoderFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderJobsSubmitter: arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderJobsSubmitter = "arn:aws:iam::aws:policy/AmazonElasticTranscoderJobsSubmitter".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderJobsSubmitter]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonElasticTranscoderReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonGlacierFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonGlacierFullAccess = "arn:aws:iam::aws:policy/AmazonGlacierFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonGlacierFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonGlacierReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonGlacierReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonGlacierReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonGlacierReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonInspectorFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonInspectorFullAccess = "arn:aws:iam::aws:policy/AmazonInspectorFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonInspectorFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonInspectorReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonInspectorReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonInspectorReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonInspectorReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisAnalyticsFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisAnalyticsFullAccess = "arn:aws:iam::aws:policy/AmazonKinesisAnalyticsFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisAnalyticsFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisAnalyticsReadOnly: arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisAnalyticsReadOnly = "arn:aws:iam::aws:policy/AmazonKinesisAnalyticsReadOnly".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisAnalyticsReadOnly]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFirehoseFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFirehoseFullAccess = "arn:aws:iam::aws:policy/AmazonKinesisFirehoseFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFirehoseFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFirehoseReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFirehoseReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonKinesisFirehoseReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFirehoseReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFullAccess = "arn:aws:iam::aws:policy/AmazonKinesisFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonKinesisReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexFullAccess = "arn:aws:iam::aws:policy/AmazonLexFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexReadOnly: arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexReadOnly = "arn:aws:iam::aws:policy/AmazonLexReadOnly".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexReadOnly]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexRunBotsOnly: arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexRunBotsOnly = "arn:aws:iam::aws:policy/AmazonLexRunBotsOnly".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexRunBotsOnly]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningBatchPredictionsAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningBatchPredictionsAccess = "arn:aws:iam::aws:policy/AmazonMachineLearningBatchPredictionsAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningBatchPredictionsAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningCreateOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningCreateOnlyAccess = "arn:aws:iam::aws:policy/AmazonMachineLearningCreateOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningCreateOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningFullAccess = "arn:aws:iam::aws:policy/AmazonMachineLearningFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningManageRealTimeEndpointOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningManageRealTimeEndpointOnlyAccess = "arn:aws:iam::aws:policy/AmazonMachineLearningManageRealTimeEndpointOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningManageRealTimeEndpointOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonMachineLearningReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningRealTimePredictionOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningRealTimePredictionOnlyAccess = "arn:aws:iam::aws:policy/AmazonMachineLearningRealTimePredictionOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningRealTimePredictionOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMechanicalTurkFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMechanicalTurkFullAccess = "arn:aws:iam::aws:policy/AmazonMechanicalTurkFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMechanicalTurkFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMechanicalTurkReadOnly: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMechanicalTurkReadOnly = "arn:aws:iam::aws:policy/AmazonMechanicalTurkReadOnly".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMechanicalTurkReadOnly]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsFinancialReportAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsFinancialReportAccess = "arn:aws:iam::aws:policy/AmazonMobileAnalyticsFinancialReportAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsFinancialReportAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsFullAccess = "arn:aws:iam::aws:policy/AmazonMobileAnalyticsFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsFullAccess]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsNon-financialReportAccess`: `arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsNon-financialReportAccess` = "arn:aws:iam::aws:policy/AmazonMobileAnalyticsNon-financialReportAccess".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsNon-financialReportAccess`]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsWriteOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsWriteOnlyAccess = "arn:aws:iam::aws:policy/AmazonMobileAnalyticsWriteOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsWriteOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonPollyFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonPollyFullAccess = "arn:aws:iam::aws:policy/AmazonPollyFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonPollyFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonPollyReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonPollyReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonPollyReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonPollyReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSDataFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSDataFullAccess = "arn:aws:iam::aws:policy/AmazonRDSDataFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSDataFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSFullAccess = "arn:aws:iam::aws:policy/AmazonRDSFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonRDSReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRedshiftFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRedshiftFullAccess = "arn:aws:iam::aws:policy/AmazonRedshiftFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRedshiftFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRedshiftReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRedshiftReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonRedshiftReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRedshiftReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRekognitionFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRekognitionFullAccess = "arn:aws:iam::aws:policy/AmazonRekognitionFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRekognitionFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRekognitionReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRekognitionReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonRekognitionReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRekognitionReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53DomainsFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53DomainsFullAccess = "arn:aws:iam::aws:policy/AmazonRoute53DomainsFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53DomainsFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53DomainsReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53DomainsReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonRoute53DomainsReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53DomainsReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53FullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53FullAccess = "arn:aws:iam::aws:policy/AmazonRoute53FullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53FullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53ReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53ReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonRoute53ReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53ReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonS3FullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonS3FullAccess = "arn:aws:iam::aws:policy/AmazonS3FullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonS3FullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonS3ReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonS3ReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonS3ReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSESFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSESFullAccess = "arn:aws:iam::aws:policy/AmazonSESFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSESFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSESReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSESReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonSESReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSESReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSNSFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSNSFullAccess = "arn:aws:iam::aws:policy/AmazonSNSFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSNSFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSNSReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSNSReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonSNSReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSNSReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSQSFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSQSFullAccess = "arn:aws:iam::aws:policy/AmazonSQSFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSQSFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSQSReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSQSReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonSQSReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSQSReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMAutomationApproverAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMAutomationApproverAccess = "arn:aws:iam::aws:policy/AmazonSSMAutomationApproverAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMAutomationApproverAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMDirectoryServiceAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMDirectoryServiceAccess = "arn:aws:iam::aws:policy/AmazonSSMDirectoryServiceAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMDirectoryServiceAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMFullAccess = "arn:aws:iam::aws:policy/AmazonSSMFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMManagedInstanceCore: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMManagedInstanceCore = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMManagedInstanceCore]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMPatchAssociation: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMPatchAssociation = "arn:aws:iam::aws:policy/AmazonSSMPatchAssociation".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMPatchAssociation]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonVPCFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonVPCFullAccess = "arn:aws:iam::aws:policy/AmazonVPCFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonVPCFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonVPCReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonVPCReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonVPCReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonVPCReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkMailFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkMailFullAccess = "arn:aws:iam::aws:policy/AmazonWorkMailFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkMailFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkMailReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkMailReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonWorkMailReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkMailReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkSpacesAdmin: arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkSpacesAdmin = "arn:aws:iam::aws:policy/AmazonWorkSpacesAdmin".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkSpacesAdmin]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkSpacesApplicationManagerAdminAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkSpacesApplicationManagerAdminAccess = "arn:aws:iam::aws:policy/AmazonWorkSpacesApplicationManagerAdminAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkSpacesApplicationManagerAdminAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonZocaloFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonZocaloFullAccess = "arn:aws:iam::aws:policy/AmazonZocaloFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonZocaloFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAmazonZocaloReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAmazonZocaloReadOnlyAccess = "arn:aws:iam::aws:policy/AmazonZocaloReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAmazonZocaloReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingConsoleFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingConsoleFullAccess = "arn:aws:iam::aws:policy/AutoScalingConsoleFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingConsoleFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingConsoleReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingConsoleReadOnlyAccess = "arn:aws:iam::aws:policy/AutoScalingConsoleReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingConsoleReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingFullAccess = "arn:aws:iam::aws:policy/AutoScalingFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingReadOnlyAccess = "arn:aws:iam::aws:policy/AutoScalingReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudFrontFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashCloudFrontFullAccess = "arn:aws:iam::aws:policy/CloudFrontFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudFrontFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudFrontReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashCloudFrontReadOnlyAccess = "arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudFrontReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudSearchFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashCloudSearchFullAccess = "arn:aws:iam::aws:policy/CloudSearchFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudSearchFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudSearchReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashCloudSearchReadOnlyAccess = "arn:aws:iam::aws:policy/CloudSearchReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudSearchReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchActionsEC2Access: arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchActionsEC2Access = "arn:aws:iam::aws:policy/CloudWatchActionsEC2Access".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchActionsEC2Access]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchEventsFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchEventsFullAccess = "arn:aws:iam::aws:policy/CloudWatchEventsFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchEventsFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchEventsReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchEventsReadOnlyAccess = "arn:aws:iam::aws:policy/CloudWatchEventsReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchEventsReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchFullAccess = "arn:aws:iam::aws:policy/CloudWatchFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchLogsFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchLogsFullAccess = "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchLogsFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchLogsReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchLogsReadOnlyAccess = "arn:aws:iam::aws:policy/CloudWatchLogsReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchLogsReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchReadOnlyAccess = "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashIAMFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashIAMFullAccess = "arn:aws:iam::aws:policy/IAMFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashIAMFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashIAMReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashIAMReadOnlyAccess = "arn:aws:iam::aws:policy/IAMReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashIAMReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashIAMSelfManageServiceSpecificCredentials: arnColonawsColoniamColonColonawsColonpolicySlashIAMSelfManageServiceSpecificCredentials = "arn:aws:iam::aws:policy/IAMSelfManageServiceSpecificCredentials".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashIAMSelfManageServiceSpecificCredentials]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashIAMUserChangePassword: arnColonawsColoniamColonColonawsColonpolicySlashIAMUserChangePassword = "arn:aws:iam::aws:policy/IAMUserChangePassword".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashIAMUserChangePassword]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashIAMUserSSHKeys: arnColonawsColoniamColonColonawsColonpolicySlashIAMUserSSHKeys = "arn:aws:iam::aws:policy/IAMUserSSHKeys".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashIAMUserSSHKeys]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashPowerUserAccess: arnColonawsColoniamColonColonawsColonpolicySlashPowerUserAccess = "arn:aws:iam::aws:policy/PowerUserAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashPowerUserAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashReadOnlyAccess = "arn:aws:iam::aws:policy/ReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashResourceGroupsandTagEditorFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashResourceGroupsandTagEditorFullAccess = "arn:aws:iam::aws:policy/ResourceGroupsandTagEditorFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashResourceGroupsandTagEditorFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashResourceGroupsandTagEditorReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashResourceGroupsandTagEditorReadOnlyAccess = "arn:aws:iam::aws:policy/ResourceGroupsandTagEditorReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashResourceGroupsandTagEditorReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashSecurityAudit: arnColonawsColoniamColonColonawsColonpolicySlashSecurityAudit = "arn:aws:iam::aws:policy/SecurityAudit".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashSecurityAudit]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashServerMigrationConnector: arnColonawsColoniamColonColonawsColonpolicySlashServerMigrationConnector = "arn:aws:iam::aws:policy/ServerMigrationConnector".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashServerMigrationConnector]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogAdminFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogAdminFullAccess = "arn:aws:iam::aws:policy/ServiceCatalogAdminFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogAdminFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogAdminReadOnlyAccess: arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogAdminReadOnlyAccess = "arn:aws:iam::aws:policy/ServiceCatalogAdminReadOnlyAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogAdminReadOnlyAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogEndUserAccess: arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogEndUserAccess = "arn:aws:iam::aws:policy/ServiceCatalogEndUserAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogEndUserAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogEndUserFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogEndUserFullAccess = "arn:aws:iam::aws:policy/ServiceCatalogEndUserFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogEndUserFullAccess]
+  
+  @scala.inline
+  def arnColonawsColoniamColonColonawsColonpolicySlashSimpleWorkflowFullAccess: arnColonawsColoniamColonColonawsColonpolicySlashSimpleWorkflowFullAccess = "arn:aws:iam::aws:policy/SimpleWorkflowFullAccess".asInstanceOf[arnColonawsColoniamColonColonawsColonpolicySlashSimpleWorkflowFullAccess]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashBilling`: `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashBilling` = "arn:aws:iam::aws:policy/job-function/Billing".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashBilling`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashDataScientist`: `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashDataScientist` = "arn:aws:iam::aws:policy/job-function/DataScientist".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashDataScientist`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashDatabaseAdministrator`: `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashDatabaseAdministrator` = "arn:aws:iam::aws:policy/job-function/DatabaseAdministrator".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashDatabaseAdministrator`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashNetworkAdministrator`: `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashNetworkAdministrator` = "arn:aws:iam::aws:policy/job-function/NetworkAdministrator".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashNetworkAdministrator`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashSupportUser`: `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashSupportUser` = "arn:aws:iam::aws:policy/job-function/SupportUser".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashSupportUser`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashSystemAdministrator`: `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashSystemAdministrator` = "arn:aws:iam::aws:policy/job-function/SystemAdministrator".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashSystemAdministrator`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashViewOnlyAccess`: `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashViewOnlyAccess` = "arn:aws:iam::aws:policy/job-function/ViewOnlyAccess".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashViewOnlyAccess`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSBatchServiceRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSBatchServiceRole` = "arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSBatchServiceRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCloudHSMRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCloudHSMRole` = "arn:aws:iam::aws:policy/service-role/AWSCloudHSMRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCloudHSMRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCodeDeployRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCodeDeployRole` = "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCodeDeployRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCodeStarServiceRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCodeStarServiceRole` = "arn:aws:iam::aws:policy/service-role/AWSCodeStarServiceRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCodeStarServiceRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSConfigRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSConfigRole` = "arn:aws:iam::aws:policy/service-role/AWSConfigRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSConfigRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSConfigRulesExecutionRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSConfigRulesExecutionRole` = "arn:aws:iam::aws:policy/service-role/AWSConfigRulesExecutionRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSConfigRulesExecutionRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSDataPipelineRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSDataPipelineRole` = "arn:aws:iam::aws:policy/service-role/AWSDataPipelineRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSDataPipelineRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSElasticBeanstalkEnhancedHealth`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSElasticBeanstalkEnhancedHealth` = "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkEnhancedHealth".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSElasticBeanstalkEnhancedHealth`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSElasticBeanstalkService`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSElasticBeanstalkService` = "arn:aws:iam::aws:policy/service-role/AWSElasticBeanstalkService".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSElasticBeanstalkService`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSGreengrassResourceAccessRolePolicy`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSGreengrassResourceAccessRolePolicy` = "arn:aws:iam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSGreengrassResourceAccessRolePolicy`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSIoTLogging`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSIoTLogging` = "arn:aws:iam::aws:policy/service-role/AWSIoTLogging".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSIoTLogging`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSIoTRuleActions`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSIoTRuleActions` = "arn:aws:iam::aws:policy/service-role/AWSIoTRuleActions".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSIoTRuleActions`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaBasicExecutionRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaBasicExecutionRole` = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaBasicExecutionRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaDynamoDBExecutionRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaDynamoDBExecutionRole` = "arn:aws:iam::aws:policy/service-role/AWSLambdaDynamoDBExecutionRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaDynamoDBExecutionRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaENIManagementAccess`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaENIManagementAccess` = "arn:aws:iam::aws:policy/service-role/AWSLambdaENIManagementAccess".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaENIManagementAccess`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaKinesisExecutionRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaKinesisExecutionRole` = "arn:aws:iam::aws:policy/service-role/AWSLambdaKinesisExecutionRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaKinesisExecutionRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaRole` = "arn:aws:iam::aws:policy/service-role/AWSLambdaRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaSQSQueueExecutionRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaSQSQueueExecutionRole` = "arn:aws:iam::aws:policy/service-role/AWSLambdaSQSQueueExecutionRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaSQSQueueExecutionRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaVPCAccessExecutionRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaVPCAccessExecutionRole` = "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaVPCAccessExecutionRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSMobileHub_ServiceUseOnly`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSMobileHub_ServiceUseOnly` = "arn:aws:iam::aws:policy/service-role/AWSMobileHub_ServiceUseOnly".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSMobileHub_ServiceUseOnly`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSOpsWorksCMServiceRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSOpsWorksCMServiceRole` = "arn:aws:iam::aws:policy/service-role/AWSOpsWorksCMServiceRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSOpsWorksCMServiceRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSOpsWorksRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSOpsWorksRole` = "arn:aws:iam::aws:policy/service-role/AWSOpsWorksRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSOpsWorksRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightDescribeRDS`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightDescribeRDS` = "arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRDS".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightDescribeRDS`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightDescribeRedshift`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightDescribeRedshift` = "arn:aws:iam::aws:policy/service-role/AWSQuickSightDescribeRedshift".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightDescribeRedshift`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightListIAM`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightListIAM` = "arn:aws:iam::aws:policy/service-role/AWSQuickSightListIAM".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightListIAM`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuicksightAthenaAccess`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuicksightAthenaAccess` = "arn:aws:iam::aws:policy/service-role/AWSQuicksightAthenaAccess".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuicksightAthenaAccess`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonAPIGatewayPushToCloudWatchLogs`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonAPIGatewayPushToCloudWatchLogs` = "arn:aws:iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonAPIGatewayPushToCloudWatchLogs`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonAppStreamServiceAccess`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonAppStreamServiceAccess` = "arn:aws:iam::aws:policy/service-role/AmazonAppStreamServiceAccess".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonAppStreamServiceAccess`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSCloudWatchLogsRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSCloudWatchLogsRole` = "arn:aws:iam::aws:policy/service-role/AmazonDMSCloudWatchLogsRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSCloudWatchLogsRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSRedshiftS3Role`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSRedshiftS3Role` = "arn:aws:iam::aws:policy/service-role/AmazonDMSRedshiftS3Role".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSRedshiftS3Role`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSVPCManagementRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSVPCManagementRole` = "arn:aws:iam::aws:policy/service-role/AmazonDMSVPCManagementRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSVPCManagementRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceAutoscaleRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceAutoscaleRole` = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceAutoscaleRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceRole` = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceforEC2Role`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceforEC2Role` = "arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceforEC2Role".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceforEC2Role`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforAWSCodeDeploy`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforAWSCodeDeploy` = "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforAWSCodeDeploy".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforAWSCodeDeploy`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforDataPipelineRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforDataPipelineRole` = "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforDataPipelineRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforDataPipelineRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforSSM`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforSSM` = "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforSSM`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetAutoscaleRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetAutoscaleRole` = "arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetAutoscaleRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetAutoscaleRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetRole` = "arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetTaggingRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetTaggingRole` = "arn:aws:iam::aws:policy/service-role/AmazonEC2SpotFleetTaggingRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetTaggingRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceRole` = "arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceforAutoScalingRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceforAutoScalingRole` = "arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforAutoScalingRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceforAutoScalingRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceforEC2Role`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceforEC2Role` = "arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceforEC2Role`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticTranscoderRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticTranscoderRole` = "arn:aws:iam::aws:policy/service-role/AmazonElasticTranscoderRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticTranscoderRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonMachineLearningRoleforRedshiftDataSource`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonMachineLearningRoleforRedshiftDataSource` = "arn:aws:iam::aws:policy/service-role/AmazonMachineLearningRoleforRedshiftDataSource".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonMachineLearningRoleforRedshiftDataSource`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonRDSDirectoryServiceAccess`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonRDSDirectoryServiceAccess` = "arn:aws:iam::aws:policy/service-role/AmazonRDSDirectoryServiceAccess".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonRDSDirectoryServiceAccess`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonRDSEnhancedMonitoringRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonRDSEnhancedMonitoringRole` = "arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonRDSEnhancedMonitoringRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSNSRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSNSRole` = "arn:aws:iam::aws:policy/service-role/AmazonSNSRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSNSRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSSMAutomationRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSSMAutomationRole` = "arn:aws:iam::aws:policy/service-role/AmazonSSMAutomationRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSSMAutomationRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSSMMaintenanceWindowRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSSMMaintenanceWindowRole` = "arn:aws:iam::aws:policy/service-role/AmazonSSMMaintenanceWindowRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSSMMaintenanceWindowRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashApplicationAutoScalingForAmazonAppStreamAccess`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashApplicationAutoScalingForAmazonAppStreamAccess` = "arn:aws:iam::aws:policy/service-role/ApplicationAutoScalingForAmazonAppStreamAccess".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashApplicationAutoScalingForAmazonAppStreamAccess`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAutoScalingNotificationAccessRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAutoScalingNotificationAccessRole` = "arn:aws:iam::aws:policy/service-role/AutoScalingNotificationAccessRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAutoScalingNotificationAccessRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashCloudWatchEventsBuiltInTargetExecutionAccess`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashCloudWatchEventsBuiltInTargetExecutionAccess` = "arn:aws:iam::aws:policy/service-role/CloudWatchEventsBuiltInTargetExecutionAccess".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashCloudWatchEventsBuiltInTargetExecutionAccess`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashCloudWatchEventsInvocationAccess`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashCloudWatchEventsInvocationAccess` = "arn:aws:iam::aws:policy/service-role/CloudWatchEventsInvocationAccess".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashCloudWatchEventsInvocationAccess`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashRDSCloudHsmAuthorizationRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashRDSCloudHsmAuthorizationRole` = "arn:aws:iam::aws:policy/service-role/RDSCloudHsmAuthorizationRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashRDSCloudHsmAuthorizationRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashServerMigrationServiceRole`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashServerMigrationServiceRole` = "arn:aws:iam::aws:policy/service-role/ServerMigrationServiceRole".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashServerMigrationServiceRole`]
+  
+  @scala.inline
+  def `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashVMImportExportRoleForAWSConnector`: `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashVMImportExportRoleForAWSConnector` = "arn:aws:iam::aws:policy/service-role/VMImportExportRoleForAWSConnector".asInstanceOf[`arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashVMImportExportRoleForAWSConnector`]
   
   @scala.inline
   def aurora: aurora = "aurora".asInstanceOf[aurora]
@@ -560,9 +1380,6 @@ object pulumiAwsStrings {
   def dbDotm4Dot10xlarge: dbDotm4Dot10xlarge = "db.m4.10xlarge".asInstanceOf[dbDotm4Dot10xlarge]
   
   @scala.inline
-  def dbDotm4Dot16xlarge: dbDotm4Dot16xlarge = "db.m4.16xlarge".asInstanceOf[dbDotm4Dot16xlarge]
-  
-  @scala.inline
   def dbDotm4Dot2xlarge: dbDotm4Dot2xlarge = "db.m4.2xlarge".asInstanceOf[dbDotm4Dot2xlarge]
   
   @scala.inline
@@ -707,12 +1524,6 @@ object pulumiAwsStrings {
   def default: default = "default".asInstanceOf[default]
   
   @scala.inline
-  def dotnetcore1Dot0: dotnetcore1Dot0 = "dotnetcore1.0".asInstanceOf[dotnetcore1Dot0]
-  
-  @scala.inline
-  def dotnetcore2Dot0: dotnetcore2Dot0 = "dotnetcore2.0".asInstanceOf[dotnetcore2Dot0]
-  
-  @scala.inline
   def dotnetcore2Dot1: dotnetcore2Dot1 = "dotnetcore2.1".asInstanceOf[dotnetcore2Dot1]
   
   @scala.inline
@@ -839,6 +1650,9 @@ object pulumiAwsStrings {
   def java8: java8 = "java8".asInstanceOf[java8]
   
   @scala.inline
+  def java8Dotal2: java8Dotal2 = "java8.al2".asInstanceOf[java8Dotal2]
+  
+  @scala.inline
   def journald: journald = "journald".asInstanceOf[journald]
   
   @scala.inline
@@ -950,25 +1764,10 @@ object pulumiAwsStrings {
   def nice: nice = "nice".asInstanceOf[nice]
   
   @scala.inline
-  def nodejs: nodejs = "nodejs".asInstanceOf[nodejs]
-  
-  @scala.inline
   def nodejs10Dotx: nodejs10Dotx = "nodejs10.x".asInstanceOf[nodejs10Dotx]
   
   @scala.inline
   def nodejs12Dotx: nodejs12Dotx = "nodejs12.x".asInstanceOf[nodejs12Dotx]
-  
-  @scala.inline
-  def nodejs4Dot3: nodejs4Dot3 = "nodejs4.3".asInstanceOf[nodejs4Dot3]
-  
-  @scala.inline
-  def `nodejs4Dot3-edge`: `nodejs4Dot3-edge` = "nodejs4.3-edge".asInstanceOf[`nodejs4Dot3-edge`]
-  
-  @scala.inline
-  def nodejs6Dot10: nodejs6Dot10 = "nodejs6.10".asInstanceOf[nodejs6Dot10]
-  
-  @scala.inline
-  def nodejs8Dot10: nodejs8Dot10 = "nodejs8.10".asInstanceOf[nodejs8Dot10]
   
   @scala.inline
   def nofile: nofile = "nofile".asInstanceOf[nofile]
@@ -1005,6 +1804,9 @@ object pulumiAwsStrings {
   
   @scala.inline
   def provided: provided = "provided".asInstanceOf[provided]
+  
+  @scala.inline
+  def providedDotal2: providedDotal2 = "provided.al2".asInstanceOf[providedDotal2]
   
   @scala.inline
   def provisioned: provisioned = "provisioned".asInstanceOf[provisioned]
@@ -1247,6 +2049,12 @@ object pulumiAwsStrings {
   def `us-east-2`: `us-east-2` = "us-east-2".asInstanceOf[`us-east-2`]
   
   @scala.inline
+  def `us-gov-east-1`: `us-gov-east-1` = "us-gov-east-1".asInstanceOf[`us-gov-east-1`]
+  
+  @scala.inline
+  def `us-gov-west-1`: `us-gov-west-1` = "us-gov-west-1".asInstanceOf[`us-gov-west-1`]
+  
+  @scala.inline
   def `us-west-1`: `us-west-1` = "us-west-1".asInstanceOf[`us-west-1`]
   
   @scala.inline
@@ -1370,6 +2178,9 @@ object pulumiAwsStrings {
   sealed trait GroupDesiredCapacity extends Metric
   
   @js.native
+  sealed trait GroupInServiceCapacity extends Metric
+  
+  @js.native
   sealed trait GroupInServiceInstances extends Metric
   
   @js.native
@@ -1379,13 +2190,25 @@ object pulumiAwsStrings {
   sealed trait GroupMinSize extends Metric
   
   @js.native
+  sealed trait GroupPendingCapacity extends Metric
+  
+  @js.native
   sealed trait GroupPendingInstances extends Metric
+  
+  @js.native
+  sealed trait GroupStandbyCapacity extends Metric
   
   @js.native
   sealed trait GroupStandbyInstances extends Metric
   
   @js.native
+  sealed trait GroupTerminatingCapacity extends Metric
+  
+  @js.native
   sealed trait GroupTerminatingInstances extends Metric
+  
+  @js.native
+  sealed trait GroupTotalCapacity extends Metric
   
   @js.native
   sealed trait GroupTotalInstances extends Metric
@@ -1600,7 +2423,811 @@ object pulumiAwsStrings {
   @js.native
   sealed trait application
     extends LoadBalancerType
-       with typingsSlinky.pulumiAws.loadBalancerTypeMod.LoadBalancerType
+       with typingsSlinky.pulumiAws.enumsAlbMod.LoadBalancerType
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSAccountActivityAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSAccountUsageReportAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSAgentlessDiscoveryService extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSApplicationDiscoveryAgentAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSApplicationDiscoveryServiceFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSBatchFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCertificateManagerFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCertificateManagerReadOnly extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudFormationReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudHSMFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudHSMReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudTrailFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCloudTrailReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildAdminAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildDeveloperAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeBuildReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitPowerUser extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeCommitReadOnly extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployDeployerAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeDeployRoleForECS extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineApproverAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineCustomActionAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodePipelineReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSCodeStarFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSConfigUserAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSConnector extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSDataPipeline_FullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSDataPipeline_PowerUser extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSDeviceFarmFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectConnectFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectConnectReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectoryServiceFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSDirectoryServiceReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkCustomPlatformforEC2Role extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkMulticontainerDocker extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkWebTier extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSElasticBeanstalkWorkerTier extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSGreengrassFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSHealthFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSImportExportFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSImportExportReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTConfigAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTConfigReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTDataAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSIoTFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSKeyManagementServicePowerUser extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaExecute extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaInvocation-DynamoDB` extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSLambdaReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceGetEntitlements extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceManageSubscriptions extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceMeteringFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashAWSMarketplaceRead-only` extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSMobileHub_FullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSMobileHub_ReadOnly extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksCMInstanceProfileRole extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksCloudWatchLogs extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksInstanceRegistration extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSOpsWorksRegisterCLI extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsConsoleFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSStepFunctionsReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSStorageGatewayFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSStorageGatewayReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSSupportAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSWAFFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSWAFReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSXRayDaemonWriteAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAWSXrayWriteOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAdministratorAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonAPIGatewayAdministrator extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonAPIGatewayInvokeFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonAppStreamFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonAppStreamReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonAthenaFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonCloudDirectoryFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonCloudDirectoryReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoDeveloperAuthenticatedIdentities extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoPowerUser extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonCognitoReadOnly extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonDRSVPCManagement extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBFullAccesswithDataPipeline extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonDynamoDBReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryPowerUser extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerRegistryReadOnly extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ContainerServiceFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2FullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonEC2ReportsAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonESFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonESReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonElastiCacheFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonElastiCacheReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticFileSystemFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticFileSystemReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticMapReduceFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticMapReduceReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderJobsSubmitter extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonElasticTranscoderReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonGlacierFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonGlacierReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonInspectorFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonInspectorReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisAnalyticsFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisAnalyticsReadOnly extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFirehoseFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFirehoseReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonKinesisReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexReadOnly extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonLexRunBotsOnly extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningBatchPredictionsAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningCreateOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningManageRealTimeEndpointOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMachineLearningRealTimePredictionOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMechanicalTurkFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMechanicalTurkReadOnly extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsFinancialReportAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsNon-financialReportAccess` extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonMobileAnalyticsWriteOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonPollyFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonPollyReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSDataFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRDSReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRedshiftFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRedshiftReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRekognitionFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRekognitionReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53DomainsFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53DomainsReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53FullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonRoute53ReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonS3FullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonS3ReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSESFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSESReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSNSFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSNSReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSQSFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSQSReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMAutomationApproverAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMDirectoryServiceAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMManagedInstanceCore extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMPatchAssociation extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonSSMReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonVPCFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonVPCReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkMailFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkMailReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkSpacesAdmin extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonWorkSpacesApplicationManagerAdminAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonZocaloFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAmazonZocaloReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingConsoleFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingConsoleReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashAutoScalingReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudFrontFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudFrontReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudSearchFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudSearchReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchActionsEC2Access extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchEventsFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchEventsReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchLogsFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchLogsReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashCloudWatchReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashIAMFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashIAMReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashIAMSelfManageServiceSpecificCredentials extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashIAMUserChangePassword extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashIAMUserSSHKeys extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashPowerUserAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashResourceGroupsandTagEditorFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashResourceGroupsandTagEditorReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashSecurityAudit extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashServerMigrationConnector extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogAdminFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogAdminReadOnlyAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogEndUserAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashServiceCatalogEndUserFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait arnColonawsColoniamColonColonawsColonpolicySlashSimpleWorkflowFullAccess extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashBilling` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashDataScientist` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashDatabaseAdministrator` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashNetworkAdministrator` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashSupportUser` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashSystemAdministrator` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashjob-functionSlashViewOnlyAccess` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSBatchServiceRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCloudHSMRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCodeDeployRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSCodeStarServiceRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSConfigRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSConfigRulesExecutionRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSDataPipelineRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSElasticBeanstalkEnhancedHealth` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSElasticBeanstalkService` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSGreengrassResourceAccessRolePolicy` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSIoTLogging` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSIoTRuleActions` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaBasicExecutionRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaDynamoDBExecutionRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaENIManagementAccess` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaKinesisExecutionRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaSQSQueueExecutionRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSLambdaVPCAccessExecutionRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSMobileHub_ServiceUseOnly` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSOpsWorksCMServiceRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSOpsWorksRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightDescribeRDS` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightDescribeRedshift` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuickSightListIAM` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAWSQuicksightAthenaAccess` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonAPIGatewayPushToCloudWatchLogs` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonAppStreamServiceAccess` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSCloudWatchLogsRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSRedshiftS3Role` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonDMSVPCManagementRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceAutoscaleRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2ContainerServiceforEC2Role` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforAWSCodeDeploy` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforDataPipelineRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2RoleforSSM` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetAutoscaleRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonEC2SpotFleetTaggingRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceforAutoScalingRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticMapReduceforEC2Role` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonElasticTranscoderRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonMachineLearningRoleforRedshiftDataSource` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonRDSDirectoryServiceAccess` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonRDSEnhancedMonitoringRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSNSRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSSMAutomationRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAmazonSSMMaintenanceWindowRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashApplicationAutoScalingForAmazonAppStreamAccess` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashAutoScalingNotificationAccessRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashCloudWatchEventsBuiltInTargetExecutionAccess` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashCloudWatchEventsInvocationAccess` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashRDSCloudHsmAuthorizationRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashServerMigrationServiceRole` extends ManagedPolicy
+  
+  @js.native
+  sealed trait `arnColonawsColoniamColonColonawsColonpolicySlashservice-roleSlashVMImportExportRoleForAWSConnector` extends ManagedPolicy
   
   @js.native
   sealed trait aurora extends EngineType
@@ -1793,251 +3420,241 @@ object pulumiAwsStrings {
   
   @js.native
   sealed trait dbDotm1Dotlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm1Dotmedium
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm1Dotsmall
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm1Dotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm2Dot2xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm2Dot4xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm2Dotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm3Dot2xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm3Dotlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm3Dotmedium
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm3Dotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm4Dot10xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
-  
-  @js.native
-  sealed trait dbDotm4Dot16xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm4Dot2xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm4Dot4xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm4Dotlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm4Dotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm5Dot12xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm5Dot24xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm5Dot2xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm5Dot4xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm5Dotlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotm5Dotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr3Dot2xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr3Dot4xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr3Dot8xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr3Dotlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr3Dotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr4Dot16xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr4Dot2xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr4Dot4xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr4Dot8xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr4Dotlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr4Dotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr5Dot12xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr5Dot24xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr5Dot2xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr5Dot4xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr5Dotlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotr5Dotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott2Dot2xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott2Dotlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott2Dotmedium
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott2Dotmicro
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott2Dotsmall
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott2Dotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott3Dot2xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott3Dotlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott3Dotmedium
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott3Dotmicro
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott3Dotsmall
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDott3Dotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotx1Dot16xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotx1Dot32xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotx1eDot2xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotx1eDot32xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotx1eDot4xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotx1eDot8xlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dbDotx1eDotxlarge
-    extends typingsSlinky.pulumiAws.rdsInstanceTypeMod.InstanceType
+    extends typingsSlinky.pulumiAws.enumsRdsMod.InstanceType
   
   @js.native
   sealed trait dedicated extends Tenancy
   
   @js.native
   sealed trait default extends Tenancy
-  
-  @js.native
-  sealed trait dotnetcore1Dot0 extends Runtime
-  
-  @js.native
-  sealed trait dotnetcore2Dot0 extends Runtime
   
   @js.native
   sealed trait dotnetcore2Dot1 extends Runtime
@@ -2048,7 +3665,7 @@ object pulumiAwsStrings {
   @js.native
   sealed trait dualstack
     extends IpAddressType
-       with typingsSlinky.pulumiAws.ipAddressTypeMod.IpAddressType
+       with typingsSlinky.pulumiAws.enumsAlbMod.IpAddressType
   
   @js.native
   sealed trait `eu-central-1` extends Region
@@ -2161,13 +3778,16 @@ object pulumiAwsStrings {
   @js.native
   sealed trait ipv4
     extends IpAddressType
-       with typingsSlinky.pulumiAws.ipAddressTypeMod.IpAddressType
+       with typingsSlinky.pulumiAws.enumsAlbMod.IpAddressType
   
   @js.native
   sealed trait java11 extends Runtime
   
   @js.native
   sealed trait java8 extends Runtime
+  
+  @js.native
+  sealed trait java8Dotal2 extends Runtime
   
   @js.native
   sealed trait journald extends LogDriver
@@ -2277,31 +3897,16 @@ object pulumiAwsStrings {
   @js.native
   sealed trait network
     extends LoadBalancerType
-       with typingsSlinky.pulumiAws.loadBalancerTypeMod.LoadBalancerType
+       with typingsSlinky.pulumiAws.enumsAlbMod.LoadBalancerType
   
   @js.native
   sealed trait nice extends UlimitName
-  
-  @js.native
-  sealed trait nodejs extends Runtime
   
   @js.native
   sealed trait nodejs10Dotx extends Runtime
   
   @js.native
   sealed trait nodejs12Dotx extends Runtime
-  
-  @js.native
-  sealed trait nodejs4Dot3 extends Runtime
-  
-  @js.native
-  sealed trait `nodejs4Dot3-edge` extends Runtime
-  
-  @js.native
-  sealed trait nodejs6Dot10 extends Runtime
-  
-  @js.native
-  sealed trait nodejs8Dot10 extends Runtime
   
   @js.native
   sealed trait nofile extends UlimitName
@@ -2338,6 +3943,9 @@ object pulumiAwsStrings {
   
   @js.native
   sealed trait provided extends Runtime
+  
+  @js.native
+  sealed trait providedDotal2 extends Runtime
   
   @js.native
   sealed trait provisioned extends EngineMode
@@ -2582,6 +4190,12 @@ object pulumiAwsStrings {
   
   @js.native
   sealed trait `us-east-2` extends Region
+  
+  @js.native
+  sealed trait `us-gov-east-1` extends Region
+  
+  @js.native
+  sealed trait `us-gov-west-1` extends Region
   
   @js.native
   sealed trait `us-west-1` extends Region

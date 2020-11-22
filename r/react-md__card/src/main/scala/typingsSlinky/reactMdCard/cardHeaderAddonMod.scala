@@ -1,7 +1,7 @@
 package typingsSlinky.reactMdCard
 
 import org.scalajs.dom.raw.HTMLSpanElement
-import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,11 +11,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object cardHeaderAddonMod extends js.Object {
   
-  /**
-    * This component is used to dynamically add addons to the `CardHeader`
-    * component. When no children are provided, nothing will be rendered.
-    *
-    * @private
-    */
-  val default: ReactComponentClass[HTMLAttributes[HTMLSpanElement]] = js.native
+  def CardHeaderAddon(hasClassNameChildrenProps: HTMLAttributes[HTMLSpanElement]): ReactElement | Null = js.native
 }

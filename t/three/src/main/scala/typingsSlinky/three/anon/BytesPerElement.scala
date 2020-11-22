@@ -1,7 +1,6 @@
 package typingsSlinky.three.anon
 
 import org.scalajs.dom.raw.WebGLBuffer
-import typingsSlinky.std.GLenum
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,14 +12,14 @@ trait BytesPerElement extends js.Object {
   
   var bytesPerElement: Double = js.native
   
-  var `type`: GLenum = js.native
+  var `type`: Double = js.native
   
   var version: Double = js.native
 }
 object BytesPerElement {
   
   @scala.inline
-  def apply(buffer: WebGLBuffer, bytesPerElement: Double, `type`: GLenum, version: Double): BytesPerElement = {
+  def apply(buffer: WebGLBuffer, bytesPerElement: Double, `type`: Double, version: Double): BytesPerElement = {
     val __obj = js.Dynamic.literal(buffer = buffer.asInstanceOf[js.Any], bytesPerElement = bytesPerElement.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BytesPerElement]
@@ -48,7 +47,7 @@ object BytesPerElement {
     def setBytesPerElement(value: Double): Self = this.set("bytesPerElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: GLenum): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: Double): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVersion(value: Double): Self = this.set("version", value.asInstanceOf[js.Any])

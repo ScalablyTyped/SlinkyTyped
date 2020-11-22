@@ -1,5 +1,7 @@
 package typingsSlinky.babylonjs.anon
 
+import typingsSlinky.babylonjs.mathVectorMod.Vector3
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,6 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Body extends js.Object {
   
   var body: js.Any = js.native
+  
+  var point: Nullable[Vector3] = js.native
 }
 object Body {
   
@@ -34,5 +38,11 @@ object Body {
     
     @scala.inline
     def setBody(value: js.Any): Self = this.set("body", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPoint(value: Nullable[Vector3]): Self = this.set("point", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPointNull: Self = this.set("point", null)
   }
 }

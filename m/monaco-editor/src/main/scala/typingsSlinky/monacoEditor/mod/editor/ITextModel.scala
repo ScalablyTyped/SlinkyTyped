@@ -7,6 +7,8 @@ import typingsSlinky.monacoEditor.mod.Position
 import typingsSlinky.monacoEditor.mod.Range
 import typingsSlinky.monacoEditor.mod.Selection
 import typingsSlinky.monacoEditor.mod.Uri
+import typingsSlinky.monacoEditor.monacoEditorBooleans.`false`
+import typingsSlinky.monacoEditor.monacoEditorBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,9 +20,13 @@ trait ITextModel extends IEditorModel {
     * Edit the model without adding the edits to the undo stack.
     * This can have dire consequences on the undo stack! See @pushEditOperations for the preferred way.
     * @param operations The edit operations.
-    * @return The inverse edit operations, that, when applied, will bring the model back to the previous state.
+    * @return If desired, the inverse edit operations, that, when applied, will bring the model back to the previous state.
     */
-  def applyEdits(operations: js.Array[IIdentifiedSingleEditOperation]): js.Array[IIdentifiedSingleEditOperation] = js.native
+  def applyEdits(operations: js.Array[IIdentifiedSingleEditOperation]): Unit = js.native
+  @JSName("applyEdits")
+  def applyEdits_false(operations: js.Array[IIdentifiedSingleEditOperation], computeUndoEdits: `false`): Unit = js.native
+  @JSName("applyEdits")
+  def applyEdits_true(operations: js.Array[IIdentifiedSingleEditOperation], computeUndoEdits: `true`): js.Array[IValidEditOperation] = js.native
   
   /**
     * Perform a minimum amount of operations, in order to transform the decorations
@@ -91,10 +97,44 @@ trait ITextModel extends IEditorModel {
     captureMatches: Boolean,
     limitResultCount: Double
   ): js.Array[FindMatch] = js.native
+  def findMatches(
+    searchString: String,
+    searchScope: js.Array[IRange],
+    isRegex: Boolean,
+    matchCase: Boolean,
+    wordSeparators: String,
+    captureMatches: Boolean
+  ): js.Array[FindMatch] = js.native
+  def findMatches(
+    searchString: String,
+    searchScope: js.Array[IRange],
+    isRegex: Boolean,
+    matchCase: Boolean,
+    wordSeparators: String,
+    captureMatches: Boolean,
+    limitResultCount: Double
+  ): js.Array[FindMatch] = js.native
+  def findMatches(
+    searchString: String,
+    searchScope: js.Array[IRange],
+    isRegex: Boolean,
+    matchCase: Boolean,
+    wordSeparators: Null,
+    captureMatches: Boolean
+  ): js.Array[FindMatch] = js.native
+  def findMatches(
+    searchString: String,
+    searchScope: js.Array[IRange],
+    isRegex: Boolean,
+    matchCase: Boolean,
+    wordSeparators: Null,
+    captureMatches: Boolean,
+    limitResultCount: Double
+  ): js.Array[FindMatch] = js.native
   /**
     * Search the model.
     * @param searchString The string used to search. If it is a regular expression, set `isRegex` to true.
-    * @param searchScope Limit the searching to only search inside this range.
+    * @param searchScope Limit the searching to only search inside these ranges.
     * @param isRegex Used to indicate that `searchString` is a regular expression.
     * @param matchCase Force the matching to match lower/upper case exactly.
     * @param wordSeparators Force the matching to match entire words only. Pass null otherwise.
@@ -497,6 +537,11 @@ trait ITextModel extends IEditorModel {
     */
   def pushEditOperations(
     beforeCursorState: js.Array[Selection],
+    editOperations: js.Array[IIdentifiedSingleEditOperation],
+    cursorStateComputer: ICursorStateComputer
+  ): js.Array[Selection] | Null = js.native
+  def pushEditOperations(
+    beforeCursorState: Null,
     editOperations: js.Array[IIdentifiedSingleEditOperation],
     cursorStateComputer: ICursorStateComputer
   ): js.Array[Selection] | Null = js.native

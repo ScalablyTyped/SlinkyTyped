@@ -1,20 +1,20 @@
 package typingsSlinky.babylonjs
 
-import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.animatableInterfaceMod.IAnimatable
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.imageProcessingConfigurationMod.IImageProcessingConfigurationDefines
 import typingsSlinky.babylonjs.imageProcessingConfigurationMod.ImageProcessingConfiguration
 import typingsSlinky.babylonjs.materialDefinesMod.MaterialDefines
+import typingsSlinky.babylonjs.materialDetailMapConfigurationMod.DetailMapConfiguration
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import typingsSlinky.babylonjs.pbrAnisotropicConfigurationMod.PBRAnisotropicConfiguration
 import typingsSlinky.babylonjs.pbrBRDFConfigurationMod.PBRBRDFConfiguration
 import typingsSlinky.babylonjs.pbrClearCoatConfigurationMod.PBRClearCoatConfiguration
 import typingsSlinky.babylonjs.pbrSheenConfigurationMod.PBRSheenConfiguration
 import typingsSlinky.babylonjs.pbrSubSurfaceConfigurationMod.PBRSubSurfaceConfiguration
+import typingsSlinky.babylonjs.prePassConfigurationMod.PrePassConfiguration
 import typingsSlinky.babylonjs.pushMaterialMod.PushMaterial
 import typingsSlinky.babylonjs.sceneMod.Scene
-import typingsSlinky.babylonjs.subMeshMod.SubMesh
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -91,11 +91,6 @@ object pbrBaseMaterialMod extends js.Object {
     var _directIntensity: Double = js.native
     
     /**
-      * Returns true if alpha blending should be disabled.
-      */
-    /* private */ def _disableAlphaBlending: js.Any = js.native
-    
-    /**
       * Debug Control allowing disabling the bump map on this material.
       */
     var _disableBumpMap: Boolean = js.native
@@ -142,11 +137,6 @@ object pbrBaseMaterialMod extends js.Object {
     var _environmentIntensity: Double = js.native
     
     /**
-      * Enforces alpha test in opaque or blend mode in order to improve the performances of some situations.
-      */
-    var _forceAlphaTest: Boolean = js.native
-    
-    /**
       * Force the shader to compute irradiance in the fragment shader in order to take bump in account.
       */
     var _forceIrradianceInFragment: Boolean = js.native
@@ -166,6 +156,11 @@ object pbrBaseMaterialMod extends js.Object {
       * Sets the global ambient color for the material used in lighting calculations.
       */
     var _globalAmbientColor: js.Any = js.native
+    
+    /**
+      * Specifies whether or not there is a usable alpha channel for transparency.
+      */
+    /* protected */ def _hasAlphaChannel(): Boolean = js.native
     
     /**
       * Default configuration related to image processing available in the PBR Material.
@@ -215,12 +210,32 @@ object pbrBaseMaterialMod extends js.Object {
     var _metallic: Nullable[Double] = js.native
     
     /**
-      * Specifies the an F0 factor to help configuring the material F0.
-      * Instead of the default 4%, 8% * factor will be used. As the factor is defaulting
-      * to 0.5 the previously hard coded value stays the same.
-      * Can also be used to scale the F0 values of the metallic texture.
+      * In metallic workflow, specifies an F0 factor to help configuring the material F0.
+      * By default the indexOfrefraction is used to compute F0;
+      *
+      * This is used as a factor against the default reflectance at normal incidence to tweak it.
+      *
+      * F0 = defaultF0 * metallicF0Factor * metallicReflectanceColor;
+      * F90 = metallicReflectanceColor;
       */
     var _metallicF0Factor: Double = js.native
+    
+    /**
+      * In metallic workflow, specifies an F90 color to help configuring the material F90.
+      * By default the F90 is always 1;
+      *
+      * Please note that this factor is also used as a factor against the default reflectance at normal incidence.
+      *
+      * F0 = defaultF0 * metallicF0Factor * metallicReflectanceColor
+      * F90 = metallicReflectanceColor;
+      */
+    var _metallicReflectanceColor: Color3 = js.native
+    
+    /**
+      * Defines to store metallicReflectanceColor in RGB and metallicF0Factor in A
+      * This is multiply against the scalar values defined in the material.
+      */
+    var _metallicReflectanceTexture: Nullable[BaseTexture] = js.native
     
     /**
       * Used to switch from specular/glossiness to metallic/roughness workflow.
@@ -251,6 +266,10 @@ object pbrBaseMaterialMod extends js.Object {
     var _prepareDefines: js.Any = js.native
     
     var _prepareEffect: js.Any = js.native
+    
+    var _realTimeFiltering: js.Any = js.native
+    
+    var _realTimeFilteringQuality: js.Any = js.native
     
     var _rebuildInParallel: Boolean = js.native
     
@@ -295,11 +314,6 @@ object pbrBaseMaterialMod extends js.Object {
       * four lights of the scene. Those highlights may not be needed in full environment lighting.
       */
     var _specularIntensity: Double = js.native
-    
-    /**
-      * The transparency mode of the material.
-      */
-    var _transparencyMode: Nullable[Double] = js.native
     
     /**
       * If sets to true and backfaceCulling is false, normals will be flipped on the backside.
@@ -359,13 +373,6 @@ object pbrBaseMaterialMod extends js.Object {
       * Enables the use of logarithmic depth buffers, which is good for wide depth buffers.
       */
     var _useLogarithmicDepth: js.Any = js.native
-    
-    /**
-      * Specifies whether the F0 factor can be fetched from the mettalic texture.
-      * If set to true, please adapt the metallicF0Factor to ensure it fits with
-      * your expectation as it multiplies with the texture data.
-      */
-    var _useMetallicF0FactorFromMetallicTexture: Boolean = js.native
     
     /**
       * Specifies if the metallic texture contains the metallness information in its blue channel.
@@ -441,17 +448,6 @@ object pbrBaseMaterialMod extends js.Object {
     val clearCoat: PBRClearCoatConfiguration = js.native
     
     /**
-      * Custom callback helping to override the default shader used in the material.
-      */
-    def customShaderNameResolve(
-      shaderName: String,
-      uniforms: js.Array[String],
-      uniformBuffers: js.Array[String],
-      samplers: js.Array[String],
-      defines: PBRMaterialDefines
-    ): String = js.native
-    
-    /**
       * @hidden
       * This is reserved for the inspector.
       * As the default viewing range might not be enough (if the ambient is really small for instance)
@@ -478,6 +474,11 @@ object pbrBaseMaterialMod extends js.Object {
     var debugMode: Double = js.native
     
     /**
+      * Defines the detail map parameters for the material.
+      */
+    val detailMap: DetailMapConfiguration = js.native
+    
+    /**
       * Returns the animatable textures.
       * @returns - Array of animatable textures.
       */
@@ -490,14 +491,22 @@ object pbrBaseMaterialMod extends js.Object {
     def isMetallicWorkflow(): Boolean = js.native
     
     /**
-      * Specifies that the submesh is ready to be used.
-      * @param mesh - BJS mesh.
-      * @param subMesh - A submesh of the BJS mesh.  Used to check if it is ready.
-      * @param useInstances - Specifies that instances should be used.
-      * @returns - boolean indicating that the submesh is ready or not.
+      * Defines additionnal PrePass parameters for the material.
       */
-    def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh): Boolean = js.native
-    def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh, useInstances: Boolean): Boolean = js.native
+    val prePassConfiguration: PrePassConfiguration = js.native
+    
+    /**
+      * Enables realtime filtering on the texture.
+      */
+    def realTimeFiltering: Boolean = js.native
+    
+    /**
+      * Quality switch for realtime filtering
+      */
+    def realTimeFilteringQuality: Double = js.native
+    def realTimeFilteringQuality_=(n: Double): Unit = js.native
+    
+    def realTimeFiltering_=(b: Boolean): Unit = js.native
     
     /**
       * Defines the Sheen parameters for the material.
@@ -508,23 +517,6 @@ object pbrBaseMaterialMod extends js.Object {
       * Defines the SubSurface parameters for the material.
       */
     val subSurface: PBRSubSurfaceConfiguration = js.native
-    
-    /**
-      * Gets the current transparency mode.
-      */
-    def transparencyMode: Nullable[Double] = js.native
-    /**
-      * Sets the transparency mode of the material.
-      *
-      * | Value | Type                                | Description |
-      * | ----- | ----------------------------------- | ----------- |
-      * | 0     | OPAQUE                              |             |
-      * | 1     | ALPHATEST                           |             |
-      * | 2     | ALPHABLEND                          |             |
-      * | 3     | ALPHATESTANDBLEND                   |             |
-      *
-      */
-    def transparencyMode_=(value: Nullable[Double]): Unit = js.native
     
     /**
       * Enabled the use of logarithmic depth buffers, which is good for wide depth buffers.
@@ -585,11 +577,12 @@ object pbrBaseMaterialMod extends js.Object {
   }
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-  - typingsSlinky.babylonjs.pbrSubSurfaceConfigurationMod.IMaterialSubSurfaceDefines because var conflicts: _areTexturesDirty. Inlined SUBSURFACE, SS_REFRACTION, SS_TRANSLUCENCY, SS_SCATERRING, SS_THICKNESSANDMASK_TEXTURE, SS_THICKNESSANDMASK_TEXTUREDIRECTUV, SS_REFRACTIONMAP_3D, SS_REFRACTIONMAP_OPPOSITEZ, SS_LODINREFRACTIONALPHA, SS_GAMMAREFRACTION, SS_RGBDREFRACTION, SS_LINEARSPECULARREFRACTION, SS_LINKREFRACTIONTOTRANSPARENCY, SS_MASK_FROM_THICKNESS_TEXTURE
-  - typingsSlinky.babylonjs.pbrSheenConfigurationMod.IMaterialSheenDefines because var conflicts: _areTexturesDirty. Inlined SHEEN, SHEEN_TEXTURE, SHEEN_TEXTUREDIRECTUV, SHEEN_LINKWITHALBEDO
+  - typingsSlinky.babylonjs.materialDetailMapConfigurationMod.IMaterialDetailMapDefines because var conflicts: _areTexturesDirty. Inlined DETAIL, DETAILDIRECTUV, DETAIL_NORMALBLENDMETHOD
+  - typingsSlinky.babylonjs.pbrSubSurfaceConfigurationMod.IMaterialSubSurfaceDefines because var conflicts: _areTexturesDirty. Inlined SUBSURFACE, SS_REFRACTION, SS_TRANSLUCENCY, SS_SCATTERING, SS_THICKNESSANDMASK_TEXTURE, SS_THICKNESSANDMASK_TEXTUREDIRECTUV, SS_REFRACTIONMAP_3D, SS_REFRACTIONMAP_OPPOSITEZ, SS_LODINREFRACTIONALPHA, SS_GAMMAREFRACTION, SS_RGBDREFRACTION, SS_LINEARSPECULARREFRACTION, SS_LINKREFRACTIONTOTRANSPARENCY, SS_ALBEDOFORREFRACTIONTINT, SS_MASK_FROM_THICKNESS_TEXTURE, SS_MASK_FROM_THICKNESS_TEXTURE_GLTF
+  - typingsSlinky.babylonjs.pbrSheenConfigurationMod.IMaterialSheenDefines because var conflicts: _areTexturesDirty. Inlined SHEEN, SHEEN_TEXTURE, SHEEN_TEXTURE_ROUGHNESS, SHEEN_TEXTUREDIRECTUV, SHEEN_TEXTURE_ROUGHNESSDIRECTUV, SHEEN_LINKWITHALBEDO, SHEEN_ROUGHNESS, SHEEN_ALBEDOSCALING, SHEEN_USE_ROUGHNESS_FROM_MAINTEXTURE, SHEEN_TEXTURE_ROUGHNESS_IDENTICAL
   - typingsSlinky.babylonjs.pbrBRDFConfigurationMod.IMaterialBRDFDefines because var conflicts: _areMiscDirty. Inlined BRDF_V_HEIGHT_CORRELATED, MS_BRDF_ENERGY_CONSERVATION, SPHERICAL_HARMONICS, SPECULAR_GLOSSINESS_ENERGY_CONSERVATION
   - typingsSlinky.babylonjs.pbrAnisotropicConfigurationMod.IMaterialAnisotropicDefines because var conflicts: _areTexturesDirty, _needUVs. Inlined ANISOTROPIC, ANISOTROPIC_TEXTURE, ANISOTROPIC_TEXTUREDIRECTUV, MAINUV1
-  - typingsSlinky.babylonjs.pbrClearCoatConfigurationMod.IMaterialClearCoatDefines because var conflicts: _areTexturesDirty. Inlined CLEARCOAT, CLEARCOAT_DEFAULTIOR, CLEARCOAT_TEXTURE, CLEARCOAT_TEXTUREDIRECTUV, CLEARCOAT_BUMP, CLEARCOAT_BUMPDIRECTUV, CLEARCOAT_TINT, CLEARCOAT_TINT_TEXTURE, CLEARCOAT_TINT_TEXTUREDIRECTUV */ @js.native
+  - typingsSlinky.babylonjs.pbrClearCoatConfigurationMod.IMaterialClearCoatDefines because var conflicts: _areTexturesDirty. Inlined CLEARCOAT, CLEARCOAT_DEFAULTIOR, CLEARCOAT_TEXTURE, CLEARCOAT_TEXTURE_ROUGHNESS, CLEARCOAT_TEXTUREDIRECTUV, CLEARCOAT_TEXTURE_ROUGHNESSDIRECTUV, CLEARCOAT_BUMP, CLEARCOAT_BUMPDIRECTUV, CLEARCOAT_USE_ROUGHNESS_FROM_MAINTEXTURE, CLEARCOAT_TEXTURE_ROUGHNESS_IDENTICAL, CLEARCOAT_REMAP_F0, CLEARCOAT_TINT, CLEARCOAT_TINT_TEXTURE, CLEARCOAT_TINT_TEXTUREDIRECTUV */ @js.native
   /**
     * Initializes the PBR Material defines.
     */
@@ -625,6 +618,8 @@ object pbrBaseMaterialMod extends js.Object {
     
     var AOSTOREINMETALMAPRED: Boolean = js.native
     
+    var BONES_VELOCITY_ENABLED: Boolean = js.native
+    
     var BONETEXTURE: Boolean = js.native
     
     var BRDF_V_HEIGHT_CORRELATED: Boolean = js.native
@@ -643,15 +638,25 @@ object pbrBaseMaterialMod extends js.Object {
     
     var CLEARCOAT_DEFAULTIOR: Boolean = js.native
     
+    var CLEARCOAT_REMAP_F0: Boolean = js.native
+    
     var CLEARCOAT_TEXTURE: Boolean = js.native
     
     var CLEARCOAT_TEXTUREDIRECTUV: Double = js.native
+    
+    var CLEARCOAT_TEXTURE_ROUGHNESS: Boolean = js.native
+    
+    var CLEARCOAT_TEXTURE_ROUGHNESSDIRECTUV: Double = js.native
+    
+    var CLEARCOAT_TEXTURE_ROUGHNESS_IDENTICAL: Boolean = js.native
     
     var CLEARCOAT_TINT: Boolean = js.native
     
     var CLEARCOAT_TINT_TEXTURE: Boolean = js.native
     
     var CLEARCOAT_TINT_TEXTUREDIRECTUV: Double = js.native
+    
+    var CLEARCOAT_USE_ROUGHNESS_FROM_MAINTEXTURE: Boolean = js.native
     
     var CLIPPLANE: Boolean = js.native
     
@@ -668,6 +673,12 @@ object pbrBaseMaterialMod extends js.Object {
     var DEBUGMODE: Double = js.native
     
     var DEPTHPREPASS: Boolean = js.native
+    
+    var DETAIL: Boolean = js.native
+    
+    var DETAILDIRECTUV: Double = js.native
+    
+    var DETAIL_NORMALBLENDMETHOD: Double = js.native
     
     var EMISSIVE: Boolean = js.native
     
@@ -711,9 +722,11 @@ object pbrBaseMaterialMod extends js.Object {
     
     var MAINUV2: Boolean = js.native
     
-    var METALLICF0FACTORFROMMETALLICMAP: Boolean = js.native
-    
     var METALLICWORKFLOW: Boolean = js.native
+    
+    var METALLIC_REFLECTANCE: Boolean = js.native
+    
+    var METALLIC_REFLECTANCEDIRECTUV: Double = js.native
     
     var METALLNESSSTOREINMETALMAPBLUE: Boolean = js.native
     
@@ -747,6 +760,8 @@ object pbrBaseMaterialMod extends js.Object {
     
     var NUM_MORPH_INFLUENCERS: Double = js.native
     
+    var NUM_SAMPLES: String = js.native
+    
     var OBJECTSPACE_NORMALMAP: Boolean = js.native
     
     var OPACITY: Boolean = js.native
@@ -765,9 +780,37 @@ object pbrBaseMaterialMod extends js.Object {
     
     var PREMULTIPLYALPHA: Boolean = js.native
     
+    var PREPASS: Boolean = js.native
+    
+    var PREPASS_ALBEDO: Boolean = js.native
+    
+    var PREPASS_ALBEDO_INDEX: Double = js.native
+    
+    var PREPASS_DEPTHNORMAL: Boolean = js.native
+    
+    var PREPASS_DEPTHNORMAL_INDEX: Double = js.native
+    
+    var PREPASS_IRRADIANCE: Boolean = js.native
+    
+    var PREPASS_IRRADIANCE_INDEX: Double = js.native
+    
+    var PREPASS_POSITION: Boolean = js.native
+    
+    var PREPASS_POSITION_INDEX: Double = js.native
+    
+    var PREPASS_REFLECTIVITY: Boolean = js.native
+    
+    var PREPASS_REFLECTIVITY_INDEX: Double = js.native
+    
+    var PREPASS_VELOCITY: Boolean = js.native
+    
+    var PREPASS_VELOCITY_INDEX: Double = js.native
+    
     var RADIANCEOCCLUSION: Boolean = js.native
     
     var RADIANCEOVERALPHA: Boolean = js.native
+    
+    var REALTIME_FILTERING: Boolean = js.native
     
     var REFLECTION: Boolean = js.native
     
@@ -805,15 +848,29 @@ object pbrBaseMaterialMod extends js.Object {
     
     var ROUGHNESSSTOREINMETALMAPGREEN: Boolean = js.native
     
+    var SCENE_MRT_COUNT: Double = js.native
+    
     var SHADOWFLOAT: Boolean = js.native
     
     var SHEEN: Boolean = js.native
     
+    var SHEEN_ALBEDOSCALING: Boolean = js.native
+    
     var SHEEN_LINKWITHALBEDO: Boolean = js.native
+    
+    var SHEEN_ROUGHNESS: Boolean = js.native
     
     var SHEEN_TEXTURE: Boolean = js.native
     
     var SHEEN_TEXTUREDIRECTUV: Double = js.native
+    
+    var SHEEN_TEXTURE_ROUGHNESS: Boolean = js.native
+    
+    var SHEEN_TEXTURE_ROUGHNESSDIRECTUV: Double = js.native
+    
+    var SHEEN_TEXTURE_ROUGHNESS_IDENTICAL: Boolean = js.native
+    
+    var SHEEN_USE_ROUGHNESS_FROM_MAINTEXTURE: Boolean = js.native
     
     var SPECULARAA: Boolean = js.native
     
@@ -825,6 +882,8 @@ object pbrBaseMaterialMod extends js.Object {
     
     var SPHERICAL_HARMONICS: Boolean = js.native
     
+    var SS_ALBEDOFORREFRACTIONTINT: Boolean = js.native
+    
     var SS_GAMMAREFRACTION: Boolean = js.native
     
     var SS_LINEARSPECULARREFRACTION: Boolean = js.native
@@ -835,6 +894,8 @@ object pbrBaseMaterialMod extends js.Object {
     
     var SS_MASK_FROM_THICKNESS_TEXTURE: Boolean = js.native
     
+    var SS_MASK_FROM_THICKNESS_TEXTURE_GLTF: Boolean = js.native
+    
     var SS_REFRACTION: Boolean = js.native
     
     var SS_REFRACTIONMAP_3D: Boolean = js.native
@@ -843,7 +904,7 @@ object pbrBaseMaterialMod extends js.Object {
     
     var SS_RGBDREFRACTION: Boolean = js.native
     
-    var SS_SCATERRING: Boolean = js.native
+    var SS_SCATTERING: Boolean = js.native
     
     var SS_THICKNESSANDMASK_TEXTURE: Boolean = js.native
     
@@ -854,6 +915,8 @@ object pbrBaseMaterialMod extends js.Object {
     var SUBSURFACE: Boolean = js.native
     
     var TANGENT: Boolean = js.native
+    
+    var THIN_INSTANCES: Boolean = js.native
     
     var TWOSIDEDLIGHTING: Boolean = js.native
     

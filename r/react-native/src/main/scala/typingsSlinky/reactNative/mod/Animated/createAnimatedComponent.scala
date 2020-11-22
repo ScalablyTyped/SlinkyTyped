@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createAnimatedComponent extends js.Object {
   
-  def apply[T /* <: ReactComponentClass[_] */](component: T): ReactComponentClass[ComponentProps[T] | AnimatedProps[ComponentPropsWithRef[T]]] = js.native
+  def apply[T /* <: ReactComponentClass[_] */](component: T): ReactComponentClass[AnimatedProps[ComponentPropsWithRef[T]]] = js.native
 }

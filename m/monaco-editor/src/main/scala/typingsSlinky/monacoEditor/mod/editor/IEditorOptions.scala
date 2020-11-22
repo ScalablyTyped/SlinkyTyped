@@ -36,6 +36,7 @@ import typingsSlinky.monacoEditor.monacoEditorStrings.off
 import typingsSlinky.monacoEditor.monacoEditorStrings.on
 import typingsSlinky.monacoEditor.monacoEditorStrings.onlySnippets
 import typingsSlinky.monacoEditor.monacoEditorStrings.phase
+import typingsSlinky.monacoEditor.monacoEditorStrings.prompt
 import typingsSlinky.monacoEditor.monacoEditorStrings.recentlyUsed
 import typingsSlinky.monacoEditor.monacoEditorStrings.recentlyUsedByPrefix
 import typingsSlinky.monacoEditor.monacoEditorStrings.same
@@ -47,6 +48,7 @@ import typingsSlinky.monacoEditor.monacoEditorStrings.solid
 import typingsSlinky.monacoEditor.monacoEditorStrings.spread
 import typingsSlinky.monacoEditor.monacoEditorStrings.text
 import typingsSlinky.monacoEditor.monacoEditorStrings.top
+import typingsSlinky.monacoEditor.monacoEditorStrings.trailing
 import typingsSlinky.monacoEditor.monacoEditorStrings.tree
 import typingsSlinky.monacoEditor.monacoEditorStrings.underline
 import typingsSlinky.monacoEditor.monacoEditorStrings.wordWrapColumn
@@ -138,6 +140,12 @@ trait IEditorOptions extends js.Object {
   var colorDecorators: js.UndefOr[Boolean] = js.native
   
   /**
+    * Enable that the selection with the mouse and keys is doing column selection.
+    * Defaults to false.
+    */
+  var columnSelection: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Control the behaviour of comments in the editor.
     */
   var comments: js.UndefOr[IEditorCommentsOptions] = js.native
@@ -188,6 +196,12 @@ trait IEditorOptions extends js.Object {
     * Control the width of the cursor when cursorStyle is set to 'line'
     */
   var cursorWidth: js.UndefOr[Double] = js.native
+  
+  /**
+    * Controls whether the definition link opens element in the peek widget.
+    * Defaults to false.
+    */
+  var definitionLinkOpensInPeek: js.UndefOr[Boolean] = js.native
   
   /**
     * Disable the use of `transform: translate3d(0px, 0px, 0px)` for the editor margin and lines layers.
@@ -429,6 +443,11 @@ trait IEditorOptions extends js.Object {
   var overviewRulerLanes: js.UndefOr[Double] = js.native
   
   /**
+    * Controls the spacing around the editor.
+    */
+  var padding: js.UndefOr[IEditorPaddingOptions] = js.native
+  
+  /**
     * Parameter hint options.
     */
   var parameterHints: js.UndefOr[IEditorParameterHintOptions] = js.native
@@ -458,6 +477,12 @@ trait IEditorOptions extends js.Object {
   var readOnly: js.UndefOr[Boolean] = js.native
   
   /**
+    * Rename matching regions on type.
+    * Defaults to false.
+    */
+  var renameOnType: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Enable rendering of control characters.
     * Defaults to false.
     */
@@ -482,6 +507,12 @@ trait IEditorOptions extends js.Object {
   var renderLineHighlight: js.UndefOr[none | gutter | line | all] = js.native
   
   /**
+    * Control if the current line highlight should be rendered only the editor is focused.
+    * Defaults to false.
+    */
+  var renderLineHighlightOnlyWhenFocus: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Should the editor render validation decorations.
     * Defaults to editable.
     */
@@ -491,7 +522,7 @@ trait IEditorOptions extends js.Object {
     * Enable rendering of whitespace.
     * Defaults to none.
     */
-  var renderWhitespace: js.UndefOr[none | boundary | selection | all] = js.native
+  var renderWhitespace: js.UndefOr[none | boundary | selection | trailing | all] = js.native
   
   /**
     * When revealing the cursor, a virtual padding (px) is added to the cursor, turning it into a rectangle.
@@ -510,7 +541,7 @@ trait IEditorOptions extends js.Object {
     * Render vertical lines at the specified columns.
     * Defaults to empty array.
     */
-  var rulers: js.UndefOr[js.Array[Double]] = js.native
+  var rulers: js.UndefOr[js.Array[Double | IRulerOption]] = js.native
   
   /**
     * Enable that scrolling can go beyond the last column by a number of columns.
@@ -523,6 +554,12 @@ trait IEditorOptions extends js.Object {
     * Defaults to true.
     */
   var scrollBeyondLastLine: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Enable that the editor scrolls only the predominant axis. Prevents horizontal drift when scrolling vertically on a trackpad.
+    * Defaults to true.
+    */
+  var scrollPredominantAxis: js.UndefOr[Boolean] = js.native
   
   /**
     * Control the behavior and rendering of the scrollbars.
@@ -546,6 +583,11 @@ trait IEditorOptions extends js.Object {
     * Defaults to true.
     */
   var selectionHighlight: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Controls strikethrough deprecated variables.
+    */
+  var showDeprecated: js.UndefOr[Boolean] = js.native
   
   /**
     * Controls whether the fold actions in the gutter stay always visible or hide unless the mouse is over the gutter.
@@ -608,6 +650,23 @@ trait IEditorOptions extends js.Object {
     * Enable tab completion.
     */
   var tabCompletion: js.UndefOr[on | off | onlySnippets] = js.native
+  
+  /**
+    * The `tabindex` property of the editor's textarea
+    */
+  var tabIndex: js.UndefOr[Double] = js.native
+  
+  /**
+    * Controls whether clicking on the empty content after a folded line will unfold the line.
+    * Defaults to false.
+    */
+  var unfoldOnClickAfterEndOfLine: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Remove unusual line terminators like LINE SEPARATOR (LS), PARAGRAPH SEPARATOR (PS).
+    * Defaults to 'prompt'.
+    */
+  var unusualLineTerminators: js.UndefOr[off | prompt | auto] = js.native
   
   /**
     * Inserting and deleting whitespace follows tab stops.
@@ -778,6 +837,12 @@ object IEditorOptions {
     def deleteColorDecorators: Self = this.set("colorDecorators", js.undefined)
     
     @scala.inline
+    def setColumnSelection(value: Boolean): Self = this.set("columnSelection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnSelection: Self = this.set("columnSelection", js.undefined)
+    
+    @scala.inline
     def setComments(value: IEditorCommentsOptions): Self = this.set("comments", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -830,6 +895,12 @@ object IEditorOptions {
     
     @scala.inline
     def deleteCursorWidth: Self = this.set("cursorWidth", js.undefined)
+    
+    @scala.inline
+    def setDefinitionLinkOpensInPeek(value: Boolean): Self = this.set("definitionLinkOpensInPeek", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefinitionLinkOpensInPeek: Self = this.set("definitionLinkOpensInPeek", js.undefined)
     
     @scala.inline
     def setDisableLayerHinting(value: Boolean): Self = this.set("disableLayerHinting", value.asInstanceOf[js.Any])
@@ -1081,6 +1152,12 @@ object IEditorOptions {
     def deleteOverviewRulerLanes: Self = this.set("overviewRulerLanes", js.undefined)
     
     @scala.inline
+    def setPadding(value: IEditorPaddingOptions): Self = this.set("padding", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePadding: Self = this.set("padding", js.undefined)
+    
+    @scala.inline
     def setParameterHints(value: IEditorParameterHintOptions): Self = this.set("parameterHints", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1111,6 +1188,12 @@ object IEditorOptions {
     def deleteReadOnly: Self = this.set("readOnly", js.undefined)
     
     @scala.inline
+    def setRenameOnType(value: Boolean): Self = this.set("renameOnType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRenameOnType: Self = this.set("renameOnType", js.undefined)
+    
+    @scala.inline
     def setRenderControlCharacters(value: Boolean): Self = this.set("renderControlCharacters", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1135,13 +1218,19 @@ object IEditorOptions {
     def deleteRenderLineHighlight: Self = this.set("renderLineHighlight", js.undefined)
     
     @scala.inline
+    def setRenderLineHighlightOnlyWhenFocus(value: Boolean): Self = this.set("renderLineHighlightOnlyWhenFocus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRenderLineHighlightOnlyWhenFocus: Self = this.set("renderLineHighlightOnlyWhenFocus", js.undefined)
+    
+    @scala.inline
     def setRenderValidationDecorations(value: editable | on | off): Self = this.set("renderValidationDecorations", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRenderValidationDecorations: Self = this.set("renderValidationDecorations", js.undefined)
     
     @scala.inline
-    def setRenderWhitespace(value: none | boundary | selection | all): Self = this.set("renderWhitespace", value.asInstanceOf[js.Any])
+    def setRenderWhitespace(value: none | boundary | selection | trailing | all): Self = this.set("renderWhitespace", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRenderWhitespace: Self = this.set("renderWhitespace", js.undefined)
@@ -1159,10 +1248,10 @@ object IEditorOptions {
     def deleteRoundedSelection: Self = this.set("roundedSelection", js.undefined)
     
     @scala.inline
-    def setRulersVarargs(value: Double*): Self = this.set("rulers", js.Array(value :_*))
+    def setRulersVarargs(value: (Double | IRulerOption)*): Self = this.set("rulers", js.Array(value :_*))
     
     @scala.inline
-    def setRulers(value: js.Array[Double]): Self = this.set("rulers", value.asInstanceOf[js.Any])
+    def setRulers(value: js.Array[Double | IRulerOption]): Self = this.set("rulers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRulers: Self = this.set("rulers", js.undefined)
@@ -1178,6 +1267,12 @@ object IEditorOptions {
     
     @scala.inline
     def deleteScrollBeyondLastLine: Self = this.set("scrollBeyondLastLine", js.undefined)
+    
+    @scala.inline
+    def setScrollPredominantAxis(value: Boolean): Self = this.set("scrollPredominantAxis", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScrollPredominantAxis: Self = this.set("scrollPredominantAxis", js.undefined)
     
     @scala.inline
     def setScrollbar(value: IEditorScrollbarOptions): Self = this.set("scrollbar", value.asInstanceOf[js.Any])
@@ -1202,6 +1297,12 @@ object IEditorOptions {
     
     @scala.inline
     def deleteSelectionHighlight: Self = this.set("selectionHighlight", js.undefined)
+    
+    @scala.inline
+    def setShowDeprecated(value: Boolean): Self = this.set("showDeprecated", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShowDeprecated: Self = this.set("showDeprecated", js.undefined)
     
     @scala.inline
     def setShowFoldingControls(value: always | mouseover): Self = this.set("showFoldingControls", value.asInstanceOf[js.Any])
@@ -1268,6 +1369,24 @@ object IEditorOptions {
     
     @scala.inline
     def deleteTabCompletion: Self = this.set("tabCompletion", js.undefined)
+    
+    @scala.inline
+    def setTabIndex(value: Double): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTabIndex: Self = this.set("tabIndex", js.undefined)
+    
+    @scala.inline
+    def setUnfoldOnClickAfterEndOfLine(value: Boolean): Self = this.set("unfoldOnClickAfterEndOfLine", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnfoldOnClickAfterEndOfLine: Self = this.set("unfoldOnClickAfterEndOfLine", js.undefined)
+    
+    @scala.inline
+    def setUnusualLineTerminators(value: off | prompt | auto): Self = this.set("unusualLineTerminators", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnusualLineTerminators: Self = this.set("unusualLineTerminators", js.undefined)
     
     @scala.inline
     def setUseTabStops(value: Boolean): Self = this.set("useTabStops", value.asInstanceOf[js.Any])

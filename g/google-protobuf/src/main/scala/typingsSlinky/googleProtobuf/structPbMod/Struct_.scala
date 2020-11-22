@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Struct_ () extends Message {
   
-  def clearFieldsMap(): Unit = js.native
+  def clearFieldsMap(): Struct = js.native
   
   def getFieldsMap(): Map[String, Value] = js.native
   

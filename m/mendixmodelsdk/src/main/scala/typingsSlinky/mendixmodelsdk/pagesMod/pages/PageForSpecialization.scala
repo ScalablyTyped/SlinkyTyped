@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,20 +8,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.PageForSpecialization")
 @js.native
-class PageForSpecialization protected () extends Element {
+class PageForSpecialization protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsGridEditButton: GridEditButton = js.native
@@ -32,9 +34,6 @@ class PageForSpecialization protected () extends Element {
   def entityQualifiedName: String = js.native
   
   def entity_=(newValue: IEntity): Unit = js.native
-  
-  @JSName("model")
-  var model_FPageForSpecialization: IModel = js.native
   
   def pageSettings: PageSettings = js.native
   def pageSettings_=(newValue: PageSettings): Unit = js.native

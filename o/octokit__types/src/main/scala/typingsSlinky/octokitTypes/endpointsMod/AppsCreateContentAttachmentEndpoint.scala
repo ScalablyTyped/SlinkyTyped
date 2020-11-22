@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`2`
+import typingsSlinky.octokitTypes.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +16,7 @@ trait AppsCreateContentAttachmentEndpoint extends js.Object {
   
   var content_reference_id: Double = js.native
   
-  var mediaType: `2` = js.native
+  var mediaType: `1` = js.native
   
   /**
     * The title of the content attachment displayed in the body or comment of an issue or pull request.
@@ -26,7 +26,7 @@ trait AppsCreateContentAttachmentEndpoint extends js.Object {
 object AppsCreateContentAttachmentEndpoint {
   
   @scala.inline
-  def apply(body: String, content_reference_id: Double, mediaType: `2`, title: String): AppsCreateContentAttachmentEndpoint = {
+  def apply(body: String, content_reference_id: Double, mediaType: `1`, title: String): AppsCreateContentAttachmentEndpoint = {
     val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any], content_reference_id = content_reference_id.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppsCreateContentAttachmentEndpoint]
   }
@@ -53,7 +53,7 @@ object AppsCreateContentAttachmentEndpoint {
     def setContent_reference_id(value: Double): Self = this.set("content_reference_id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `2`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `1`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])

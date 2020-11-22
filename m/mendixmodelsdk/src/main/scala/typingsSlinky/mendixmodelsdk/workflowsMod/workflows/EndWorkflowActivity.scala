@@ -1,9 +1,11 @@
 package typingsSlinky.mendixmodelsdk.workflowsMod.workflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.workflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +14,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
   *
-  * In version 8.10.0: introduced
+  * @ignore
+  *
+  * In version 8.15.0: introduced
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -20,7 +24,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
 - typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IWorkflowActivity because Already inherited
-- typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IEndWorkflowActivity because var conflicts: caption, containerAsWorkflow, id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.EndWorkflowActivity")
+- typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IEndWorkflowActivity because var conflicts: caption, containerAsFlow, id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.EndWorkflowActivity")
 @js.native
 class EndWorkflowActivity protected () extends WorkflowActivity {
   def this(
@@ -28,15 +32,12 @@ class EndWorkflowActivity protected () extends WorkflowActivity {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
-  @JSName("containerAsWorkflow")
-  def containerAsWorkflow_MEndWorkflowActivity: Workflow = js.native
-  
-  @JSName("model")
-  var model_FEndWorkflowActivity: IModel = js.native
+  @JSName("containerAsFlow")
+  def containerAsFlow_MEndWorkflowActivity: Flow = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.EndWorkflowActivity")
@@ -53,12 +54,12 @@ object EndWorkflowActivity extends js.Object {
   /**
     * Creates and returns a new EndWorkflowActivity instance in the SDK and on the server.
     * The new EndWorkflowActivity will be automatically stored in the 'activities' property
-    * of the parent Workflow element passed as argument.
+    * of the parent Flow element passed as argument.
     *
     * Warning! Can only be used on models with the following Mendix meta model versions:
-    *  8.10.0 and higher
+    *  8.15.0 and higher
     */
-  def createIn(container: Workflow): EndWorkflowActivity = js.native
+  def createIn(container: Flow): EndWorkflowActivity = js.native
   
   var structureTypeName: String = js.native
   

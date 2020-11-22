@@ -42,7 +42,7 @@ trait ASPxClientSplitterPane extends js.Object {
   def GetClientWidth(): Double = js.native
   
   /**
-    * Returns an iframe object containing a web page specified via the pane's SplitterPane.ContentUrl property (or the ASPxClientSplitterPane.SetContentUrl client method).
+    * Returns an iframe object containing a web page specified via the pane's SplitterPane.ContentUrl property (or the client ASPxClientSplitterPane.SetContentUrl method).
     */
   def GetContentIFrame(): js.Any = js.native
   

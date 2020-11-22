@@ -14,6 +14,9 @@ object olImageCanvasMod extends js.Object {
   trait ImageCanvas
     extends typingsSlinky.ol.imageBaseMod.default {
     
+    /**
+      * Get any error associated with asynchronous rendering.
+      */
     def getError(): js.Error = js.native
   }
   

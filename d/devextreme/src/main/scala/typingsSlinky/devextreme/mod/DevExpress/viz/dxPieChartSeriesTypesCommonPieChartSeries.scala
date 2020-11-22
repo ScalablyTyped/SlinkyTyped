@@ -16,46 +16,74 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPieChartSeriesTypesCommonPieChartSeries extends js.Object {
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.argumentField */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.argumentField]
+    */
   var argumentField: js.UndefOr[String] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.argumentType */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.argumentType]
+    */
   var argumentType: js.UndefOr[datetime | numeric | string_] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.border */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.border]
+    */
   var border: js.UndefOr[ColorDashStyle] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.color */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.hoverMode */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.hoverMode]
+    */
   var hoverMode: js.UndefOr[none | onlyPoint] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.hoverStyle */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.hoverStyle]
+    */
   var hoverStyle: js.UndefOr[Hatching] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.label */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.label]
+    */
   var label: js.UndefOr[ArgumentFormat] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.maxLabelCount */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.maxLabelCount]
+    */
   var maxLabelCount: js.UndefOr[Double] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.minSegmentSize */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.minSegmentSize]
+    */
   var minSegmentSize: js.UndefOr[Double] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.selectionMode */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.selectionMode]
+    */
   var selectionMode: js.UndefOr[none | onlyPoint] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.selectionStyle */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.selectionStyle]
+    */
   var selectionStyle: js.UndefOr[Hatching] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.smallValuesGrouping */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.smallValuesGrouping]
+    */
   var smallValuesGrouping: js.UndefOr[GroupName] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.tagField */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.tagField]
+    */
   var tagField: js.UndefOr[String] = js.native
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries.valueField */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries.valueField]
+    */
   var valueField: js.UndefOr[String] = js.native
 }
 object dxPieChartSeriesTypesCommonPieChartSeries {

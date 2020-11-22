@@ -18,6 +18,16 @@ trait IMultiSelectProps[T] extends IListItemsProps[T] {
   var fill: js.UndefOr[Boolean] = js.native
   
   /**
+    * Callback invoked when an item is removed from the selection by
+    * removing its tag in the TagInput. This is generally more useful than
+    * `tagInputProps.onRemove`  because it receives the removed value instead of
+    * the value's rendered `ReactNode` tag.
+    *
+    * It is not recommended to supply _both_ this prop and `tagInputProps.onRemove`.
+    */
+  var onRemove: js.UndefOr[js.Function2[/* value */ T, /* index */ Double, Unit]] = js.native
+  
+  /**
     * If true, the component waits until a keydown event in the TagInput
     * before opening its popover.
     *

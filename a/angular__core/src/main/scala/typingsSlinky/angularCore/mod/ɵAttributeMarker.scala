@@ -98,7 +98,8 @@ object ɵAttributeMarker {
   def NamespaceURI: `0` = 0.asInstanceOf[`0`]
   
   /**
-    * Signals that the following attribute is `ngProjectAs` and its value is a parsed `CssSelector`.
+    * Signals that the following attribute is `ngProjectAs` and its value is a parsed
+    * `CssSelector`.
     *
     * For example, given the following HTML:
     *

@@ -16,6 +16,8 @@ trait AudioCodecSettings extends js.Object {
   var Mp2Settings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.Mp2Settings] = js.native
   
   var PassThroughSettings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.PassThroughSettings] = js.native
+  
+  var WavSettings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.WavSettings] = js.native
 }
 object AudioCodecSettings {
   
@@ -69,5 +71,11 @@ object AudioCodecSettings {
     
     @scala.inline
     def deletePassThroughSettings: Self = this.set("PassThroughSettings", js.undefined)
+    
+    @scala.inline
+    def setWavSettings(value: WavSettings): Self = this.set("WavSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWavSettings: Self = this.set("WavSettings", js.undefined)
   }
 }

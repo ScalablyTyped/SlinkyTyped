@@ -6,13 +6,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object typesMod {
   
-  type EventHandler = js.Function6[
+  type EventHandler = js.Function2[
     /* e */ org.scalajs.dom.raw.Event, 
-    /* deltaX */ scala.Double, 
-    /* deltaY */ scala.Double, 
-    /* absX */ scala.Double, 
-    /* absY */ scala.Double, 
-    /* duration */ scala.Double, 
+    /* data */ typingsSlinky.vanillaSwipe.typesMod.EventData, 
     scala.Unit
   ]
+  
+  type Trace = js.Array[scala.Double]
 }

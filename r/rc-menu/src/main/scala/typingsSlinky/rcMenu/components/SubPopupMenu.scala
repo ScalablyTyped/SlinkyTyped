@@ -17,7 +17,7 @@ import typingsSlinky.rcMenu.rcMenuStrings.ltr
 import typingsSlinky.rcMenu.rcMenuStrings.rtl
 import typingsSlinky.rcMenu.subPopupMenuMod.SubPopupMenuProps
 import typingsSlinky.rcMenu.subPopupMenuMod.default
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.ReactInstance
@@ -106,7 +106,7 @@ object SubPopupMenu {
     def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def motion(value: MotionType): this.type = set("motion", value.asInstanceOf[js.Any])
+    def motion(value: CSSMotionProps): this.type = set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])

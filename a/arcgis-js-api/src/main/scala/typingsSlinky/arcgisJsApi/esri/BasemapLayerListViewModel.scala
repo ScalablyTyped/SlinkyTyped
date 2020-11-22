@@ -18,11 +18,18 @@ trait BasemapLayerListViewModel extends Accessor {
   val baseItems: Collection[ListItem] = js.native
   
   /**
-    * Specifies a function that accesses each [ListItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html). Each list item can be modified according to its modifiable properties. Actions can be added to list items using the [actionsSections](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html#actionsSections) property of the ListItem.
+    * Specifies a function that accesses each [ListItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#baseListItemCreatedFunction)
     */
-  var baseListItemCreatedFunction: js.Function = js.native
+  def baseListItemCreatedFunction(event: js.Any): Unit = js.native
+  /**
+    * Specifies a function that accesses each [ListItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html).
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#baseListItemCreatedFunction)
+    */
+  @JSName("baseListItemCreatedFunction")
+  var baseListItemCreatedFunction_Original: ListItemCreatedHandler = js.native
   
   /**
     * The current basemap's title.
@@ -43,14 +50,19 @@ trait BasemapLayerListViewModel extends Accessor {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#referenceListItemCreatedFunction)
     */
-  var referenceListItemCreatedFunction: js.Function = js.native
+  def referenceListItemCreatedFunction(event: js.Any): Unit = js.native
+  /**
+    * Specifies a function that accesses each [ListItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList-ListItem.html) representing reference layers.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#referenceListItemCreatedFunction)
+    */
+  @JSName("referenceListItemCreatedFunction")
+  var referenceListItemCreatedFunction_Original: ListItemCreatedHandler = js.native
   
   /**
     * The view model's state.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#state)
-    *
-    * @default disabled
     */
   val state: ready | loading | disabled = js.native
   
@@ -58,16 +70,12 @@ trait BasemapLayerListViewModel extends Accessor {
     * Triggers the [trigger-action](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#event-trigger-action) event and executes the given [action](https://developers.arcgis.com/javascript/latest/api-reference/esri-support-actions-ActionButton.html) or [action toggle](https://developers.arcgis.com/javascript/latest/api-reference/esri-support-actions-ActionToggle.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#triggerAction)
-    *
-    * @param action The action to execute.
-    * @param item An item associated with the action.
-    *
     */
   def triggerAction(action: ActionButton, item: ListItem): Unit = js.native
   def triggerAction(action: ActionToggle, item: ListItem): Unit = js.native
   
   /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the widget to a specific view.
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapLayerList-BasemapLayerListViewModel.html#view)
     */

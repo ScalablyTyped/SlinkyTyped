@@ -1,7 +1,5 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
-import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.accelerate
-import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.decelerate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +21,7 @@ trait OptionsAnimationPropertyConfig extends js.Object {
   /**
     * Animation interplation
     */
-  var interpolation: js.UndefOr[accelerate | decelerate] = js.native
+  var interpolation: js.UndefOr[Interpolation] = js.native
   
   /**
     * Animation delay
@@ -72,7 +70,7 @@ object OptionsAnimationPropertyConfig {
     def deleteFrom: Self = this.set("from", js.undefined)
     
     @scala.inline
-    def setInterpolation(value: accelerate | decelerate): Self = this.set("interpolation", value.asInstanceOf[js.Any])
+    def setInterpolation(value: Interpolation): Self = this.set("interpolation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInterpolation: Self = this.set("interpolation", js.undefined)

@@ -8,6 +8,7 @@ import typingsSlinky.firebaseUtil.jwtMod.DecodedToken
 import typingsSlinky.firebaseUtil.subscribeMod.ErrorFn
 import typingsSlinky.firebaseUtil.subscribeMod.Executor
 import typingsSlinky.firebaseUtil.subscribeMod.Subscribe
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,6 +16,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@firebase/util", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val MAX_VALUE_MILLIS: Double = js.native
+  
+  val RANDOM_FACTOR: /* 0.5 */ Double = js.native
   
   def areCookiesEnabled(): Boolean = js.native
   
@@ -30,6 +35,11 @@ object mod extends js.Object {
   def base64Decode(str: String): String | Null = js.native
   
   def base64Encode(str: String): String = js.native
+  
+  def calculateBackoffMillis(backoffCount: Double): Double = js.native
+  def calculateBackoffMillis(backoffCount: Double, intervalMillis: js.UndefOr[scala.Nothing], backoffFactor: Double): Double = js.native
+  def calculateBackoffMillis(backoffCount: Double, intervalMillis: Double): Double = js.native
+  def calculateBackoffMillis(backoffCount: Double, intervalMillis: Double, backoffFactor: Double): Double = js.native
   
   def contains[T /* <: js.Object */](obj: T, key: String): Boolean = js.native
   
@@ -112,6 +122,8 @@ object mod extends js.Object {
   {[ key in K ]: U}
     */ typingsSlinky.firebaseUtil.firebaseUtilStrings.map with TopLevel[js.Any] = js.native
   
+  def ordinal(i: Double): String = js.native
+  
   def querystring(querystringParams: StringDictionary[String | Double]): String = js.native
   
   def querystringDecode(querystring: String): js.Object = js.native
@@ -171,6 +183,7 @@ object mod extends js.Object {
   class FirebaseError protected ()
     extends typingsSlinky.firebaseUtil.errorsMod.FirebaseError {
     def this(code: String, message: String) = this()
+    def this(code: String, message: String, customData: Record[String, _]) = this()
   }
   
   @js.native

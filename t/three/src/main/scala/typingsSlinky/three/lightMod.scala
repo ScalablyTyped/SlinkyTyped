@@ -22,6 +22,9 @@ object lightMod extends js.Object {
     
     var color: Color = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var intensity: Double = js.native
     
     val isLight: `true` = js.native

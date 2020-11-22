@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createTypeQueryNode extends js.Object {
   
+  /** @deprecated Use `factory.createTypeQueryNode` or the factory supplied by your transformation context instead. */
   def apply(exprName: EntityName): TypeQueryNode = js.native
 }

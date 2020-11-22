@@ -1,8 +1,10 @@
 package typingsSlinky.vis.mod
 
-import typingsSlinky.vis.anon.Align
-import typingsSlinky.vis.anon.ForceDirection
+import typingsSlinky.vis.anon.Angle
+import typingsSlinky.vis.anon.Enabled
 import typingsSlinky.vis.anon.From
+import typingsSlinky.vis.anon.To
+import typingsSlinky.vis.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,11 +16,15 @@ trait EdgeOptions extends js.Object {
   
   var arrows: js.UndefOr[String | From] = js.native
   
+  var chosen: js.UndefOr[Boolean | typingsSlinky.vis.anon.Edge] = js.native
+  
   var color: js.UndefOr[String | typingsSlinky.vis.anon.Color] = js.native
   
   var dashes: js.UndefOr[Boolean | js.Array[Double]] = js.native
   
-  var font: js.UndefOr[String | Align] = js.native
+  var endPointOffset: js.UndefOr[To] = js.native
+  
+  var font: js.UndefOr[String | Font] = js.native
   
   var hidden: js.UndefOr[Boolean] = js.native
   
@@ -37,18 +43,22 @@ trait EdgeOptions extends js.Object {
   
   var selectionWidth: js.UndefOr[Double] = js.native
   
+  var selfReference: js.UndefOr[Angle] = js.native
+  
    // please note, selectionWidth could be also a function. This case is not represented here
   var selfReferenceSize: js.UndefOr[Double] = js.native
   
   var shadow: js.UndefOr[Boolean | OptionsShadow] = js.native
   
-  var smooth: js.UndefOr[Boolean | ForceDirection] = js.native
+  var smooth: js.UndefOr[Boolean | Enabled] = js.native
   
   var title: js.UndefOr[String] = js.native
   
   var value: js.UndefOr[Double] = js.native
   
   var width: js.UndefOr[Double] = js.native
+  
+  var widthConstraint: js.UndefOr[Double | Boolean | `0`] = js.native
 }
 object EdgeOptions {
   
@@ -86,6 +96,12 @@ object EdgeOptions {
     def deleteArrows: Self = this.set("arrows", js.undefined)
     
     @scala.inline
+    def setChosen(value: Boolean | typingsSlinky.vis.anon.Edge): Self = this.set("chosen", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChosen: Self = this.set("chosen", js.undefined)
+    
+    @scala.inline
     def setColor(value: String | typingsSlinky.vis.anon.Color): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -101,7 +117,13 @@ object EdgeOptions {
     def deleteDashes: Self = this.set("dashes", js.undefined)
     
     @scala.inline
-    def setFont(value: String | Align): Self = this.set("font", value.asInstanceOf[js.Any])
+    def setEndPointOffset(value: To): Self = this.set("endPointOffset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEndPointOffset: Self = this.set("endPointOffset", js.undefined)
+    
+    @scala.inline
+    def setFont(value: String | Font): Self = this.set("font", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFont: Self = this.set("font", js.undefined)
@@ -155,6 +177,12 @@ object EdgeOptions {
     def deleteSelectionWidth: Self = this.set("selectionWidth", js.undefined)
     
     @scala.inline
+    def setSelfReference(value: Angle): Self = this.set("selfReference", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelfReference: Self = this.set("selfReference", js.undefined)
+    
+    @scala.inline
     def setSelfReferenceSize(value: Double): Self = this.set("selfReferenceSize", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -167,7 +195,7 @@ object EdgeOptions {
     def deleteShadow: Self = this.set("shadow", js.undefined)
     
     @scala.inline
-    def setSmooth(value: Boolean | ForceDirection): Self = this.set("smooth", value.asInstanceOf[js.Any])
+    def setSmooth(value: Boolean | Enabled): Self = this.set("smooth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSmooth: Self = this.set("smooth", js.undefined)
@@ -189,5 +217,11 @@ object EdgeOptions {
     
     @scala.inline
     def deleteWidth: Self = this.set("width", js.undefined)
+    
+    @scala.inline
+    def setWidthConstraint(value: Double | Boolean | `0`): Self = this.set("widthConstraint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWidthConstraint: Self = this.set("widthConstraint", js.undefined)
   }
 }

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashDivide extends LodashConvertible {
+trait LodashDivide extends js.Object {
   
   def apply(dividend: Double): LodashDivide1x1 = js.native
   def apply(dividend: Double, divisor: Double): Double = js.native

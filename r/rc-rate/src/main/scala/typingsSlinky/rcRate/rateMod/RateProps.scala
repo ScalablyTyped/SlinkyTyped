@@ -19,7 +19,7 @@ trait RateProps extends js.Object {
   
   var autoFocus: js.UndefOr[Boolean] = js.native
   
-  var character: js.UndefOr[js.Function1[/* props */ StarProps, ReactElement]] = js.native
+  var character: js.UndefOr[ReactElement] = js.native
   
   var characterRender: js.UndefOr[js.Function2[/* origin */ ReactElement, /* props */ StarProps, ReactElement]] = js.native
   
@@ -93,7 +93,10 @@ object RateProps {
     def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
     
     @scala.inline
-    def setCharacter(value: /* props */ StarProps => ReactElement): Self = this.set("character", js.Any.fromFunction1(value))
+    def setCharacterReactElement(value: ReactElement): Self = this.set("character", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCharacter(value: ReactElement): Self = this.set("character", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCharacter: Self = this.set("character", js.undefined)

@@ -80,8 +80,21 @@ trait Options extends js.Object {
   val removeQueryParameters: js.UndefOr[js.Array[js.RegExp | String]] = js.native
   
   /**
+  		Remove a sole `/` pathname in the output. This option is independant of `removeTrailingSlash`.
+  		@default true
+  		@example
+  		```
+  		normalizeUrl('https://sindresorhus.com/');
+  		//=> 'https://sindresorhus.com'
+  		normalizeUrl('https://sindresorhus.com/', {removeSingleSlash: false});
+  		//=> 'https://sindresorhus.com/'
+  		```
+  		*/
+  val removeSingleSlash: js.UndefOr[Boolean] = js.native
+  
+  /**
   		Removes trailing slash.
-  		__Note__: Trailing slash is always removed if the URL doesn't have a pathname.
+  		__Note__: Trailing slash is always removed if the URL doesn't have a pathname unless the `removeSingleSlash` option is set to `false`.
   		@default true
   		@example
   		```
@@ -224,6 +237,12 @@ object Options {
     
     @scala.inline
     def deleteRemoveQueryParameters: Self = this.set("removeQueryParameters", js.undefined)
+    
+    @scala.inline
+    def setRemoveSingleSlash(value: Boolean): Self = this.set("removeSingleSlash", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRemoveSingleSlash: Self = this.set("removeSingleSlash", js.undefined)
     
     @scala.inline
     def setRemoveTrailingSlash(value: Boolean): Self = this.set("removeTrailingSlash", value.asInstanceOf[js.Any])

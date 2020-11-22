@@ -1,9 +1,10 @@
 package typingsSlinky.reactGridLayout.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactGridLayout.anon.E
 import typingsSlinky.reactGridLayout.anon.H
 import typingsSlinky.reactGridLayout.reactGridLayoutStrings.horizontal
 import typingsSlinky.reactGridLayout.reactGridLayoutStrings.vertical
@@ -54,6 +55,11 @@ trait CoreProps extends js.Object {
   var droppingItem: js.UndefOr[H] = js.native
   
   /**
+    * If true and draggable, all items will be moved only within grid.
+    */
+  var isBounded: js.UndefOr[Boolean] = js.native
+  
+  /**
     * If set to false it will disable dragging on all children.
     */
   var isDraggable: js.UndefOr[Boolean] = js.native
@@ -95,7 +101,9 @@ trait CoreProps extends js.Object {
   /**
     * Calls when some element has been dropped
     */
-  var onDrop: js.UndefOr[js.Function1[/* elemParams */ E, Unit]] = js.native
+  var onDrop: js.UndefOr[
+    js.Function3[/* layout */ js.Array[Layout], /* item */ Layout, /* e */ Event, Unit]
+  ] = js.native
   
   /**
     * Calls when resize movement happens.
@@ -116,6 +124,25 @@ trait CoreProps extends js.Object {
     * If true, grid items won't change position when being dragged over.
     */
   var preventCollision: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Defines custom component for resize handle
+    */
+  var resizeHandle: js.UndefOr[ReactElement | (js.Function1[/* resizeHandle */ ResizeHandle, ReactElement])] = js.native
+  
+  /**
+    * Defines which resize handles should be rendered
+    * Allows for any combination of:
+    * 's' - South handle (bottom-center)
+    * 'w' - West handle (left-center)
+    * 'e' - East handle (right-center)
+    * 'n' - North handle (top-center)
+    * 'sw' - Southwest handle (bottom-left)
+    * 'nw' - Northwest handle (top-left)
+    * 'se' - Southeast handle (bottom-right)
+    * 'ne' - Northeast handle (top-right)
+    */
+  var resizeHandles: js.UndefOr[js.Array[ResizeHandle]] = js.native
   
   /**
     * Rows have a static height, but you can change this based on breakpoints if you like.
@@ -212,6 +239,12 @@ object CoreProps {
     def deleteDroppingItem: Self = this.set("droppingItem", js.undefined)
     
     @scala.inline
+    def setIsBounded(value: Boolean): Self = this.set("isBounded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsBounded: Self = this.set("isBounded", js.undefined)
+    
+    @scala.inline
     def setIsDraggable(value: Boolean): Self = this.set("isDraggable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -260,7 +293,7 @@ object CoreProps {
     def deleteOnDragStop: Self = this.set("onDragStop", js.undefined)
     
     @scala.inline
-    def setOnDrop(value: /* elemParams */ E => Unit): Self = this.set("onDrop", js.Any.fromFunction1(value))
+    def setOnDrop(value: (/* layout */ js.Array[Layout], /* item */ Layout, /* e */ Event) => Unit): Self = this.set("onDrop", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteOnDrop: Self = this.set("onDrop", js.undefined)
@@ -294,6 +327,27 @@ object CoreProps {
     
     @scala.inline
     def deletePreventCollision: Self = this.set("preventCollision", js.undefined)
+    
+    @scala.inline
+    def setResizeHandleReactElement(value: ReactElement): Self = this.set("resizeHandle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setResizeHandleFunction1(value: /* resizeHandle */ ResizeHandle => ReactElement): Self = this.set("resizeHandle", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setResizeHandle(value: ReactElement | (js.Function1[/* resizeHandle */ ResizeHandle, ReactElement])): Self = this.set("resizeHandle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResizeHandle: Self = this.set("resizeHandle", js.undefined)
+    
+    @scala.inline
+    def setResizeHandlesVarargs(value: ResizeHandle*): Self = this.set("resizeHandles", js.Array(value :_*))
+    
+    @scala.inline
+    def setResizeHandles(value: js.Array[ResizeHandle]): Self = this.set("resizeHandles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResizeHandles: Self = this.set("resizeHandles", js.undefined)
     
     @scala.inline
     def setRowHeight(value: Double): Self = this.set("rowHeight", value.asInstanceOf[js.Any])

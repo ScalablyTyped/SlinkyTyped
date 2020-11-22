@@ -161,7 +161,7 @@ abstract class BaseLanguageClient protected () extends js.Object {
   @JSName("getFeature")
   def getFeature_textDocumentcodeAction(request: textDocumentSlashcodeAction): (DynamicFeature[
     typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions
-  ]) with TextDocumentProviderFeature[CodeActionProvider] = js.native
+  ]) with TextDocumentProviderFeature[CodeActionProvider[typingsSlinky.vscode.mod.CodeAction]] = js.native
   @JSName("getFeature")
   def getFeature_textDocumentcompletion(request: textDocumentSlashcompletion): (DynamicFeature[
     typingsSlinky.vscodeLanguageserverProtocol.protocolMod.TextDocumentRegistrationOptions

@@ -23,7 +23,7 @@ trait CreateVocabularyRequest extends js.Object {
   var VocabularyFileUri: js.UndefOr[Uri] = js.native
   
   /**
-    * The name of the vocabulary. The name must be unique within an AWS account. The name is case-sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will receive a ConflictException error.
+    * The name of the vocabulary. The name must be unique within an AWS account. The name is case sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will receive a ConflictException error.
     */
   var VocabularyName: typingsSlinky.awsSdk.transcribeserviceMod.VocabularyName = js.native
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjs.mod
 
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.int32
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

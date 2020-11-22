@@ -24,9 +24,13 @@ trait MatcherState extends js.Object {
   
   var expand: js.UndefOr[Boolean] = js.native
   
-  var expectedAssertionsNumber: js.UndefOr[Double] = js.native
+  var expectedAssertionsNumber: js.UndefOr[Double | Null] = js.native
+  
+  var expectedAssertionsNumberError: js.UndefOr[js.Error] = js.native
   
   var isExpectingAssertions: js.UndefOr[Boolean] = js.native
+  
+  var isExpectingAssertionsError: js.UndefOr[js.Error] = js.native
   
   var isNot: Boolean = js.native
   

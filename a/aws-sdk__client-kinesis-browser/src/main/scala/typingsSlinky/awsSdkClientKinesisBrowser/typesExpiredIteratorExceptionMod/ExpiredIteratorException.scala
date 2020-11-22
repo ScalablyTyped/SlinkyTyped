@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientKinesisBrowser.typesExpiredIteratorExceptionMod
 
 import typingsSlinky.awsSdkClientKinesisBrowser.getRecordsExceptionsUnionMod.GetRecordsExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait ExpiredIteratorException
-  extends ServiceException[ExpiredIteratorExceptionDetails]
-     with GetRecordsExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ExpiredIteratorExceptionDetails> * / any */ @js.native
+trait ExpiredIteratorException extends GetRecordsExceptionsUnion {
   
-  @JSName("name")
-  var name_ExpiredIteratorException: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ExpiredIteratorException = js.native
+  var name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ExpiredIteratorException = js.native
 }
 object ExpiredIteratorException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: ExpiredIteratorExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ExpiredIteratorException
   ): ExpiredIteratorException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpiredIteratorException]
   }
   

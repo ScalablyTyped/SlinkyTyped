@@ -56,9 +56,14 @@ trait Picker extends View {
   var countDownDuration: Double = js.native
   
   /**
+    * Request a style if the picker is a date picker (`PICKER_TYPE_DATE`).
+    */
+  var datePickerStyle: Double = js.native
+  
+  /**
     * Sets the text color of date- and time-pickers.
     */
-  var dateTimeColor: String = js.native
+  var dateTimeColor: String | Color = js.native
   
   /**
     * Fires a synthesized event to any registered listeners.
@@ -129,10 +134,16 @@ trait Picker extends View {
   def getCountDownDuration(): Double = js.native
   
   /**
+    * Gets the value of the <Titanium.UI.Picker.datePickerStyle> property.
+    * @deprecated Access <Titanium.UI.Picker.datePickerStyle> instead.
+    */
+  def getDatePickerStyle(): Double = js.native
+  
+  /**
     * Gets the value of the <Titanium.UI.Picker.dateTimeColor> property.
     * @deprecated Access <Titanium.UI.Picker.dateTimeColor> instead.
     */
-  def getDateTimeColor(): String = js.native
+  def getDateTimeColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Picker.font> property.
@@ -286,10 +297,17 @@ trait Picker extends View {
   def setCountDownDuration(countDownDuration: Double): Unit = js.native
   
   /**
+    * Sets the value of the <Titanium.UI.Picker.datePickerStyle> property.
+    * @deprecated Set the value using <Titanium.UI.Picker.datePickerStyle> instead.
+    */
+  def setDatePickerStyle(datePickerStyle: Double): Unit = js.native
+  
+  /**
     * Sets the value of the <Titanium.UI.Picker.dateTimeColor> property.
     * @deprecated Set the value using <Titanium.UI.Picker.dateTimeColor> instead.
     */
   def setDateTimeColor(dateTimeColor: String): Unit = js.native
+  def setDateTimeColor(dateTimeColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Picker.font> property.

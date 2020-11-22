@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.settingsMod.settings
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.ActionActivityColor
 import typingsSlinky.mendixmodelsdk.settingsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,14 +21,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("mendixmodelsdk/dist/gen/settings", "settings.ActionActivityDefaultColor")
 @js.native
-class ActionActivityDefaultColor protected () extends Element {
+class ActionActivityDefaultColor protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def actionActivityType: String = js.native
@@ -36,9 +38,6 @@ class ActionActivityDefaultColor protected () extends Element {
   def backgroundColor_=(newValue: ActionActivityColor): Unit = js.native
   
   def containerAsModelerSettings: ModelerSettings = js.native
-  
-  @JSName("model")
-  var model_FActionActivityDefaultColor: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/settings", "settings.ActionActivityDefaultColor")

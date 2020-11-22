@@ -9,7 +9,7 @@ trait BorderProps[TLength] extends js.Object {
   
   val border: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BorderProps {
     }
     
     @scala.inline
+    def setBorderVarargs(value: js.Any*): Self = this.set("border", js.Array(value :_*))
+    
+    @scala.inline
     def setBorder(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLength> */ _
         ]
     ): Self = this.set("border", value.asInstanceOf[js.Any])
     

@@ -14,6 +14,11 @@ package object mod {
     scala.Unit
   ]
   
+  /**
+    * Describes a log line.
+    */
+  type LogDescriptor = typingsSlinky.std.Record[java.lang.String, js.Any]
+  
   type MixinFn = js.Function0[js.Object]
   
   type SerializedError = typingsSlinky.pinoStdSerializers.mod.SerializedError

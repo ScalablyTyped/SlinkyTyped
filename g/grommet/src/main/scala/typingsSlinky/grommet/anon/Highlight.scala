@@ -1,5 +1,7 @@
 package typingsSlinky.grommet.anon
 
+import org.scalajs.dom.raw.Element
+import slinky.web.SyntheticMouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,9 +15,9 @@ trait Highlight extends js.Object {
   
   var label: js.UndefOr[String] = js.native
   
-  var onClick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* event */ SyntheticMouseEvent[Element], Unit]] = js.native
   
-  var onHover: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var onHover: js.UndefOr[js.Function1[/* over */ Boolean, Unit]] = js.native
   
   var value: Double = js.native
 }
@@ -64,13 +66,13 @@ object Highlight {
     def deleteLabel: Self = this.set("label", js.undefined)
     
     @scala.inline
-    def setOnClick(value: /* repeated */ js.Any => _): Self = this.set("onClick", js.Any.fromFunction1(value))
+    def setOnClick(value: /* event */ SyntheticMouseEvent[Element] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
-    def setOnHover(value: /* repeated */ js.Any => _): Self = this.set("onHover", js.Any.fromFunction1(value))
+    def setOnHover(value: /* over */ Boolean => Unit): Self = this.set("onHover", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnHover: Self = this.set("onHover", js.undefined)

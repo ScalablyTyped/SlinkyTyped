@@ -17,86 +17,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 class Vector3 ()
   extends typingsSlinky.babylonjs.legacyMod.Vector3 {
-  def this(/**
-    * Defines the first coordinates (on X axis)
-    */
-  x: Double) = this()
-  def this(
-    /**
-    * Defines the first coordinates (on X axis)
-    */
-  x: js.UndefOr[scala.Nothing],
-    /**
-    * Defines the second coordinates (on Y axis)
-    */
-  y: Double
-  ) = this()
-  def this(
-    /**
-    * Defines the first coordinates (on X axis)
-    */
-  x: Double,
-    /**
-    * Defines the second coordinates (on Y axis)
-    */
-  y: Double
-  ) = this()
-  def this(
-    /**
-    * Defines the first coordinates (on X axis)
-    */
-  x: js.UndefOr[scala.Nothing],
-    /**
-    * Defines the second coordinates (on Y axis)
-    */
-  y: js.UndefOr[scala.Nothing],
-    /**
-    * Defines the third coordinates (on Z axis)
-    */
-  z: Double
-  ) = this()
-  def this(
-    /**
-    * Defines the first coordinates (on X axis)
-    */
-  x: js.UndefOr[scala.Nothing],
-    /**
-    * Defines the second coordinates (on Y axis)
-    */
-  y: Double,
-    /**
-    * Defines the third coordinates (on Z axis)
-    */
-  z: Double
-  ) = this()
-  def this(
-    /**
-    * Defines the first coordinates (on X axis)
-    */
-  x: Double,
-    /**
-    * Defines the second coordinates (on Y axis)
-    */
-  y: js.UndefOr[scala.Nothing],
-    /**
-    * Defines the third coordinates (on Z axis)
-    */
-  z: Double
-  ) = this()
-  def this(
-    /**
-    * Defines the first coordinates (on X axis)
-    */
-  x: Double,
-    /**
-    * Defines the second coordinates (on Y axis)
-    */
-  y: Double,
-    /**
-    * Defines the third coordinates (on Z axis)
-    */
-  z: Double
-  ) = this()
+  def this(x: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
+  def this(x: Double, y: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], z: Double) = this()
+  def this(x: js.UndefOr[scala.Nothing], y: Double, z: Double) = this()
+  def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double) = this()
+  def this(x: Double, y: Double, z: Double) = this()
 }
 /* static members */
 @JSImport("babylonjs", "Vector3")
@@ -105,9 +32,11 @@ object Vector3 extends js.Object {
   
   /**
     * Returns a new Vector3 set to (0.0, 0.0, -1.0)
+    * @param rightHandedSystem is the scene right-handed (negative-z)
     * @returns a new forward Vector3
     */
   def Backward(): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  def Backward(rightHandedSystem: Boolean): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
   
   /**
     * Returns a new Vector3 located for "amount" on the CatmullRom interpolation spline defined by the vectors "value1", "value2", "value3", "value4"
@@ -200,8 +129,8 @@ object Vector3 extends js.Object {
     * @param result defines the Vector3 where to store the result
     */
   def CrossToRef(
-    left: typingsSlinky.babylonjs.mathVectorMod.Vector3,
-    right: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    left: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
+    right: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
     result: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): Unit = js.native
   
@@ -246,9 +175,11 @@ object Vector3 extends js.Object {
   
   /**
     * Returns a new Vector3 set to (0.0, 0.0, 1.0)
+    * @param rightHandedSystem is the scene right-handed (negative z)
     * @returns a new forward Vector3
     */
   def Forward(): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  def Forward(rightHandedSystem: Boolean): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
   
   /**
     * Returns a new Vector3 set from the index "offset" of the given array
@@ -439,6 +370,23 @@ object Vector3 extends js.Object {
     world: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     transform: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     viewport: DeepImmutable[typingsSlinky.babylonjs.mathViewportMod.Viewport]
+  ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
+  
+  /**
+    * Project a Vector3 onto screen space to reference
+    * @param vector defines the Vector3 to project
+    * @param world defines the world matrix to use
+    * @param transform defines the transform (view x projection) matrix to use
+    * @param viewport defines the screen viewport to use
+    * @param result the vector in which the screen space will be stored
+    * @returns the new Vector3
+    */
+  def ProjectToRef(
+    vector: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
+    world: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
+    transform: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
+    viewport: DeepImmutable[typingsSlinky.babylonjs.mathViewportMod.Viewport],
+    result: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
   ): typingsSlinky.babylonjs.mathVectorMod.Vector3 = js.native
   
   /**

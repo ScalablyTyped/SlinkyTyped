@@ -1,7 +1,7 @@
 
 # Scala.js typings for openapi-security-handler
 
-Typings are for version 7.0.0
+Typings are for version 7.0.1
 
 ## Library description:
 A library to process OpenAPI security definitions in parallel.

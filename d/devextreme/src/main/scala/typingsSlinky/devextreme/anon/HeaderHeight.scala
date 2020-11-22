@@ -15,11 +15,11 @@ trait HeaderHeight extends js.Object {
   
   var hoverEnabled: js.UndefOr[Boolean] = js.native
   
-  var hoverStyle: js.UndefOr[`26`] = js.native
+  var hoverStyle: js.UndefOr[`30`] = js.native
   
   var label: js.UndefOr[TextOverflow] = js.native
   
-  var selectionStyle: js.UndefOr[`26`] = js.native
+  var selectionStyle: js.UndefOr[`30`] = js.native
 }
 object HeaderHeight {
   
@@ -69,7 +69,7 @@ object HeaderHeight {
     def deleteHoverEnabled: Self = this.set("hoverEnabled", js.undefined)
     
     @scala.inline
-    def setHoverStyle(value: `26`): Self = this.set("hoverStyle", value.asInstanceOf[js.Any])
+    def setHoverStyle(value: `30`): Self = this.set("hoverStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHoverStyle: Self = this.set("hoverStyle", js.undefined)
@@ -81,7 +81,7 @@ object HeaderHeight {
     def deleteLabel: Self = this.set("label", js.undefined)
     
     @scala.inline
-    def setSelectionStyle(value: `26`): Self = this.set("selectionStyle", value.asInstanceOf[js.Any])
+    def setSelectionStyle(value: `30`): Self = this.set("selectionStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSelectionStyle: Self = this.set("selectionStyle", js.undefined)

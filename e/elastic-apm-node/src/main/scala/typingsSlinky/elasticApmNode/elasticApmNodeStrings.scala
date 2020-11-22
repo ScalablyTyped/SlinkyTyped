@@ -3,6 +3,7 @@ package typingsSlinky.elasticApmNode
 import typingsSlinky.elasticApmNode.mod.CaptureBody
 import typingsSlinky.elasticApmNode.mod.CaptureErrorLogStackTraces
 import typingsSlinky.elasticApmNode.mod.LogLevel
+import typingsSlinky.elasticApmNode.mod.Outcome
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,6 +26,9 @@ object elasticApmNodeStrings {
   def errors: errors = "errors".asInstanceOf[errors]
   
   @scala.inline
+  def failure: failure = "failure".asInstanceOf[failure]
+  
+  @scala.inline
   def fatal: fatal = "fatal".asInstanceOf[fatal]
   
   @scala.inline
@@ -40,10 +44,16 @@ object elasticApmNodeStrings {
   def off: off = "off".asInstanceOf[off]
   
   @scala.inline
+  def success: success = "success".asInstanceOf[success]
+  
+  @scala.inline
   def trace: trace = "trace".asInstanceOf[trace]
   
   @scala.inline
   def transactions: transactions = "transactions".asInstanceOf[transactions]
+  
+  @scala.inline
+  def unknown: unknown = "unknown".asInstanceOf[unknown]
   
   @scala.inline
   def warn: warn = "warn".asInstanceOf[warn]
@@ -64,6 +74,9 @@ object elasticApmNodeStrings {
   sealed trait errors extends CaptureBody
   
   @js.native
+  sealed trait failure extends Outcome
+  
+  @js.native
   sealed trait fatal extends LogLevel
   
   @js.native
@@ -79,10 +92,16 @@ object elasticApmNodeStrings {
   sealed trait off extends CaptureBody
   
   @js.native
+  sealed trait success extends Outcome
+  
+  @js.native
   sealed trait trace extends LogLevel
   
   @js.native
   sealed trait transactions extends CaptureBody
+  
+  @js.native
+  sealed trait unknown extends Outcome
   
   @js.native
   sealed trait warn extends LogLevel

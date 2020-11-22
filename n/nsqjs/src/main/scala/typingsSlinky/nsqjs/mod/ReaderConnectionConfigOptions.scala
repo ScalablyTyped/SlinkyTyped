@@ -13,6 +13,8 @@ trait ReaderConnectionConfigOptions extends ConnectionConfigOptions {
   
   var lookupdPollJitter: js.UndefOr[Double] = js.native
   
+  var lowRdyTimeout: js.UndefOr[Double] = js.native
+  
   var maxAttempts: js.UndefOr[Double] = js.native
   
   var maxBackoffDuration: js.UndefOr[Double] = js.native
@@ -64,6 +66,12 @@ object ReaderConnectionConfigOptions {
     
     @scala.inline
     def deleteLookupdPollJitter: Self = this.set("lookupdPollJitter", js.undefined)
+    
+    @scala.inline
+    def setLowRdyTimeout(value: Double): Self = this.set("lowRdyTimeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLowRdyTimeout: Self = this.set("lowRdyTimeout", js.undefined)
     
     @scala.inline
     def setMaxAttempts(value: Double): Self = this.set("maxAttempts", value.asInstanceOf[js.Any])

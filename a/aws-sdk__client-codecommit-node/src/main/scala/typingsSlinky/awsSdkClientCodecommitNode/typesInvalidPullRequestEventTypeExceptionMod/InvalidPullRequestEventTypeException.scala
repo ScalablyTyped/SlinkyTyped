@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPullRequestEventTypeExceptionMod
 
 import typingsSlinky.awsSdkClientCodecommitNode.describePullRequestEventsExceptionsUnionMod.DescribePullRequestEventsExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait InvalidPullRequestEventTypeException
-  extends ServiceException[InvalidPullRequestEventTypeExceptionDetails]
-     with DescribePullRequestEventsExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidPullRequestEventTypeExceptionDetails> * / any */ @js.native
+trait InvalidPullRequestEventTypeException extends DescribePullRequestEventsExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidPullRequestEventTypeException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidPullRequestEventTypeException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidPullRequestEventTypeException = js.native
 }
 object InvalidPullRequestEventTypeException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidPullRequestEventTypeExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidPullRequestEventTypeException
   ): InvalidPullRequestEventTypeException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidPullRequestEventTypeException]
   }
   

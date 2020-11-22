@@ -13,6 +13,13 @@ trait LoadBalancerSubnetMapping extends js.Object {
     */
   var allocationId: js.UndefOr[Input[String]] = js.native
   
+  var outpostId: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * A private ipv4 address within the subnet to assign to the internal-facing load balancer.
+    */
+  var privateIpv4Address: js.UndefOr[Input[String]] = js.native
+  
   /**
     * The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
     */
@@ -49,5 +56,17 @@ object LoadBalancerSubnetMapping {
     
     @scala.inline
     def deleteAllocationId: Self = this.set("allocationId", js.undefined)
+    
+    @scala.inline
+    def setOutpostId(value: Input[String]): Self = this.set("outpostId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutpostId: Self = this.set("outpostId", js.undefined)
+    
+    @scala.inline
+    def setPrivateIpv4Address(value: Input[String]): Self = this.set("privateIpv4Address", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrivateIpv4Address: Self = this.set("privateIpv4Address", js.undefined)
   }
 }

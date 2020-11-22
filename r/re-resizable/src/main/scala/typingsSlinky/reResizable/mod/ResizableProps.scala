@@ -1,9 +1,9 @@
 package typingsSlinky.reResizable.mod
 
-import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
+import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
@@ -18,6 +18,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ResizableProps extends js.Object {
+  
+  var as: js.UndefOr[String | ReactComponentClass[_]] = js.native
   
   var bounds: js.UndefOr[parent | window | HTMLElement] = js.native
   
@@ -95,6 +97,18 @@ object ResizableProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAsFunctionComponent(value: ReactComponentClass[_]): Self = this.set("as", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAsComponentClass(value: ReactComponentClass[_]): Self = this.set("as", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAs(value: String | ReactComponentClass[_]): Self = this.set("as", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAs: Self = this.set("as", js.undefined)
     
     @scala.inline
     def setBoundsHTMLElement(value: HTMLElement): Self = this.set("bounds", value.asInstanceOf[js.Any])
@@ -212,7 +226,7 @@ object ResizableProps {
     
     @scala.inline
     def setOnResize(
-      value: (/* event */ MouseEvent | TouchEvent, /* direction */ Direction, /* elementRef */ HTMLDivElement, /* delta */ NumberSize) => Unit
+      value: (/* event */ MouseEvent | TouchEvent, /* direction */ Direction, /* elementRef */ HTMLElement, /* delta */ NumberSize) => Unit
     ): Self = this.set("onResize", js.Any.fromFunction4(value))
     
     @scala.inline
@@ -220,7 +234,7 @@ object ResizableProps {
     
     @scala.inline
     def setOnResizeStart(
-      value: (/* e */ SyntheticMouseEvent[HTMLDivElement] | SyntheticTouchEvent[HTMLDivElement], /* dir */ Direction, /* elementRef */ HTMLDivElement) => Unit | Boolean
+      value: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* dir */ Direction, /* elementRef */ HTMLElement) => Unit | Boolean
     ): Self = this.set("onResizeStart", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -228,7 +242,7 @@ object ResizableProps {
     
     @scala.inline
     def setOnResizeStop(
-      value: (/* event */ MouseEvent | TouchEvent, /* direction */ Direction, /* elementRef */ HTMLDivElement, /* delta */ NumberSize) => Unit
+      value: (/* event */ MouseEvent | TouchEvent, /* direction */ Direction, /* elementRef */ HTMLElement, /* delta */ NumberSize) => Unit
     ): Self = this.set("onResizeStop", js.Any.fromFunction4(value))
     
     @scala.inline

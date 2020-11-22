@@ -8,6 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object adjacent extends js.Object {
   
-  def apply(geohash: String, direction: String): String = js.native
-  def apply(geohash: String, direction: Direction): String = js.native
+  def apply(locationId: String, direction: Direction): String = js.native
 }

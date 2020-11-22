@@ -9,5 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class AudioAnalyser protected ()
   extends typingsSlinky.three.audioAnalyserMod.AudioAnalyser {
+  /**
+  	 * @param audio
+  	 * @param [fftSize=2048]
+  	 */
+  def this(audio: typingsSlinky.three.audioMod.Audio[AudioNode]) = this()
   def this(audio: typingsSlinky.three.audioMod.Audio[AudioNode], fftSize: Double) = this()
 }

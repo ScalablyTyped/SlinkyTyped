@@ -23,6 +23,11 @@ trait DescribeInputDeviceResponse extends js.Object {
   var DeviceSettingsSyncState: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.DeviceSettingsSyncState] = js.native
   
   /**
+    * The status of software on the input device.
+    */
+  var DeviceUpdateStatus: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.DeviceUpdateStatus] = js.native
+  
+  /**
     * Settings that describe an input device that is type HD.
     */
   var HdDeviceSettings: js.UndefOr[InputDeviceHdSettings] = js.native
@@ -97,6 +102,12 @@ object DescribeInputDeviceResponse {
     
     @scala.inline
     def deleteDeviceSettingsSyncState: Self = this.set("DeviceSettingsSyncState", js.undefined)
+    
+    @scala.inline
+    def setDeviceUpdateStatus(value: DeviceUpdateStatus): Self = this.set("DeviceUpdateStatus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeviceUpdateStatus: Self = this.set("DeviceUpdateStatus", js.undefined)
     
     @scala.inline
     def setHdDeviceSettings(value: InputDeviceHdSettings): Self = this.set("HdDeviceSettings", value.asInstanceOf[js.Any])

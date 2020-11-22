@@ -10,7 +10,7 @@ trait Stanza
   extends Element
      with // This has to be used for the static class initializer new Client.Stanza(..). If there is a better way feel free to
 // contribute.
-// tslint:disable-next-line
+// tslint:disable-next-line:no-misused-new
 Instantiable2[/* name */ String, /* attr */ js.Any, Stanza] {
   
   var from: String = js.native

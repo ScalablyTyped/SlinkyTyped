@@ -3,7 +3,6 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 import typingsSlinky.devextreme.anon.EndValue
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
-import typingsSlinky.devextreme.devextremeStrings.Default
 import typingsSlinky.devextreme.devextremeStrings.Material
 import typingsSlinky.devextreme.devextremeStrings.Ocean
 import typingsSlinky.devextreme.devextremeStrings.Office
@@ -24,25 +23,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseGauge.Options.rangeContainer */
+/**
+  * [descr:BaseGauge.Options.rangeContainer]
+  */
 @js.native
 trait BaseGaugeRangeContainer extends js.Object {
   
-  /** @name BaseGauge.Options.rangeContainer.backgroundColor */
+  /**
+    * [descr:BaseGauge.Options.rangeContainer.backgroundColor]
+    */
   var backgroundColor: js.UndefOr[String] = js.native
   
-  /** @name BaseGauge.Options.rangeContainer.offset */
+  /**
+    * [descr:BaseGauge.Options.rangeContainer.offset]
+    */
   var offset: js.UndefOr[Double] = js.native
   
-  /** @name BaseGauge.Options.rangeContainer.palette */
+  /**
+    * [descr:BaseGauge.Options.rangeContainer.palette]
+    */
   var palette: js.UndefOr[
-    js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+    js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
   ] = js.native
   
-  /** @name BaseGauge.Options.rangeContainer.paletteExtensionMode */
+  /**
+    * [descr:BaseGauge.Options.rangeContainer.paletteExtensionMode]
+    */
   var paletteExtensionMode: js.UndefOr[alternate | blend | extrapolate] = js.native
   
-  /** @name BaseGauge.Options.rangeContainer.ranges */
+  /**
+    * [descr:BaseGauge.Options.rangeContainer.ranges]
+    */
   var ranges: js.UndefOr[js.Array[EndValue]] = js.native
 }
 object BaseGaugeRangeContainer {
@@ -85,7 +96,7 @@ object BaseGaugeRangeContainer {
     
     @scala.inline
     def setPalette(
-      value: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+      value: js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
     ): Self = this.set("palette", value.asInstanceOf[js.Any])
     
     @scala.inline

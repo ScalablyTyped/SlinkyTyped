@@ -108,6 +108,9 @@ object yandexMapsStrings {
   def htmlNumbersignrectangle: htmlNumbersignrectangle = "html#rectangle".asInstanceOf[htmlNumbersignrectangle]
   
   @scala.inline
+  def ifMercator: ifMercator = "ifMercator".asInstanceOf[ifMercator]
+  
+  @scala.inline
   def ifNull: ifNull = "ifNull".asInstanceOf[ifNull]
   
   @scala.inline
@@ -144,10 +147,28 @@ object yandexMapsStrings {
   def metro: metro = "metro".asInstanceOf[metro]
   
   @scala.inline
+  def mousedown: mousedown = "mousedown".asInstanceOf[mousedown]
+  
+  @scala.inline
+  def newZoom: newZoom = "newZoom".asInstanceOf[newZoom]
+  
+  @scala.inline
   def nonZero: nonZero = "nonZero".asInstanceOf[nonZero]
   
   @scala.inline
   def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def objectId: objectId = "objectId".asInstanceOf[objectId]
+  
+  @scala.inline
+  def off: off = "off".asInstanceOf[off]
+  
+  @scala.inline
+  def oldZoom: oldZoom = "oldZoom".asInstanceOf[oldZoom]
+  
+  @scala.inline
+  def on: on = "on".asInstanceOf[on]
   
   @scala.inline
   def pedestrian: pedestrian = "pedestrian".asInstanceOf[pedestrian]
@@ -196,6 +217,9 @@ object yandexMapsStrings {
   
   @scala.inline
   def trafficControl: trafficControl = "trafficControl".asInstanceOf[trafficControl]
+  
+  @scala.inline
+  def `type`: `type` = "type".asInstanceOf[`type`]
   
   @scala.inline
   def typeSelector: typeSelector = "typeSelector".asInstanceOf[typeSelector]
@@ -327,6 +351,9 @@ object yandexMapsStrings {
   sealed trait htmlNumbersignrectangle extends _OverlayKey
   
   @js.native
+  sealed trait ifMercator extends js.Object
+  
+  @js.native
   sealed trait ifNull extends js.Object
   
   @js.native
@@ -367,10 +394,28 @@ object yandexMapsStrings {
   sealed trait metro extends js.Object
   
   @js.native
+  sealed trait mousedown extends js.Object
+  
+  @js.native
+  sealed trait newZoom extends js.Object
+  
+  @js.native
   sealed trait nonZero extends js.Object
   
   @js.native
   sealed trait none extends js.Object
+  
+  @js.native
+  sealed trait objectId extends js.Object
+  
+  @js.native
+  sealed trait off extends js.Object
+  
+  @js.native
+  sealed trait oldZoom extends js.Object
+  
+  @js.native
+  sealed trait on extends js.Object
   
   @js.native
   sealed trait pedestrian extends js.Object
@@ -429,6 +474,9 @@ object yandexMapsStrings {
   sealed trait trafficControl
     extends ControlKey
        with ControlSingleKey
+  
+  @js.native
+  sealed trait `type` extends js.Object
   
   @js.native
   sealed trait typeSelector

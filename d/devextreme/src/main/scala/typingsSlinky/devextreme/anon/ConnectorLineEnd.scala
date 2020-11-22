@@ -19,6 +19,14 @@ trait ConnectorLineEnd extends js.Object {
   
   var connectorLineType: js.UndefOr[straight | orthogonal] = js.native
   
+  var shapeMaxHeight: js.UndefOr[Double] = js.native
+  
+  var shapeMaxWidth: js.UndefOr[Double] = js.native
+  
+  var shapeMinHeight: js.UndefOr[Double] = js.native
+  
+  var shapeMinWidth: js.UndefOr[Double] = js.native
+  
   var style: js.UndefOr[js.Any] = js.native
   
   var textStyle: js.UndefOr[js.Any] = js.native
@@ -63,6 +71,30 @@ object ConnectorLineEnd {
     
     @scala.inline
     def deleteConnectorLineType: Self = this.set("connectorLineType", js.undefined)
+    
+    @scala.inline
+    def setShapeMaxHeight(value: Double): Self = this.set("shapeMaxHeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShapeMaxHeight: Self = this.set("shapeMaxHeight", js.undefined)
+    
+    @scala.inline
+    def setShapeMaxWidth(value: Double): Self = this.set("shapeMaxWidth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShapeMaxWidth: Self = this.set("shapeMaxWidth", js.undefined)
+    
+    @scala.inline
+    def setShapeMinHeight(value: Double): Self = this.set("shapeMinHeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShapeMinHeight: Self = this.set("shapeMinHeight", js.undefined)
+    
+    @scala.inline
+    def setShapeMinWidth(value: Double): Self = this.set("shapeMinWidth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShapeMinWidth: Self = this.set("shapeMinWidth", js.undefined)
     
     @scala.inline
     def setStyle(value: js.Any): Self = this.set("style", value.asInstanceOf[js.Any])

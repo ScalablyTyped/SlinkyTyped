@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("gestalt", "Masonry")
 @js.native
 class Masonry ()
-  extends Component[MasonryProps, js.Any, js.Any]
+  extends Component[MasonryProps[js.Any], js.Any, js.Any]

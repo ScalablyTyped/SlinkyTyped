@@ -8,16 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.joi.mod._SchemaLike because Already inherited
 - typingsSlinky.joi.mod._Schema because Already inherited */ @js.native
 trait DateSchema extends AnySchema {
-  
-  /**
-    * Specifies the allowed date format:
-    * @param format - string or array of strings that follow the moment.js format.
-    */
-  def format(format: String): this.type = js.native
-  def format(format: js.Array[String]): this.type = js.native
   
   def greater(date: String): this.type = js.native
   def greater(date: Double): this.type = js.native

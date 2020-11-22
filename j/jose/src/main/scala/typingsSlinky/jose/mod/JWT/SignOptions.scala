@@ -23,8 +23,6 @@ trait SignOptions extends js.Object {
   
   var kid: js.UndefOr[Boolean] = js.native
   
-  var nonce: js.UndefOr[String] = js.native
-  
   var notBefore: js.UndefOr[String] = js.native
   
   var now: js.UndefOr[js.Date] = js.native
@@ -104,12 +102,6 @@ object SignOptions {
     
     @scala.inline
     def deleteKid: Self = this.set("kid", js.undefined)
-    
-    @scala.inline
-    def setNonce(value: String): Self = this.set("nonce", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteNonce: Self = this.set("nonce", js.undefined)
     
     @scala.inline
     def setNotBefore(value: String): Self = this.set("notBefore", value.asInstanceOf[js.Any])

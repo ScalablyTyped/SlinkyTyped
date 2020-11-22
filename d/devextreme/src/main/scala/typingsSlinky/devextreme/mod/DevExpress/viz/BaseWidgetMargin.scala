@@ -4,20 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseWidget.Options.margin */
+/**
+  * [descr:BaseWidget.Options.margin]
+  */
 @js.native
 trait BaseWidgetMargin extends js.Object {
   
-  /** @name BaseWidget.Options.margin.bottom */
+  /**
+    * [descr:BaseWidget.Options.margin.bottom]
+    */
   var bottom: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.margin.left */
+  /**
+    * [descr:BaseWidget.Options.margin.left]
+    */
   var left: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.margin.right */
+  /**
+    * [descr:BaseWidget.Options.margin.right]
+    */
   var right: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.margin.top */
+  /**
+    * [descr:BaseWidget.Options.margin.top]
+    */
   var top: js.UndefOr[Double] = js.native
 }
 object BaseWidgetMargin {

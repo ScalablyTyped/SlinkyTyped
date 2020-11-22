@@ -4,8 +4,7 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.antdStrings.ltr
-import typingsSlinky.antd.antdStrings.rtl
+import typingsSlinky.antd.configProviderContextMod.DirectionType
 import typingsSlinky.antd.operationMod.TransferOperationProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -27,7 +26,7 @@ object Operation {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
+    def direction(value: DirectionType): this.type = set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])

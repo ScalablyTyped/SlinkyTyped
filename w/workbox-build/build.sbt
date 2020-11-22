@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "workbox-build"
-version := "5.0-dt-20200515Z-c11602"
+version := "5.0-dt-20200515Z-b2f4ae"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
-  "org.scalablytyped.slinky" %%% "workbox-routing" % "4.3-dt-20200515Z-5764c3")
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "workbox-routing" % "4.3-dt-20201002Z-a589f6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

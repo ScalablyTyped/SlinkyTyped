@@ -23,7 +23,7 @@ trait VerifySoftwareTokenRequest extends js.Object {
   var Session: js.UndefOr[SessionType] = js.native
   
   /**
-    * The one time password computed using the secret code returned by 
+    * The one time password computed using the secret code returned by AssociateSoftwareToken".
     */
   var UserCode: SoftwareTokenMFAUserCodeType = js.native
 }

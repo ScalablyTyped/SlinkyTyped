@@ -46,7 +46,7 @@ package object mod {
     typingsSlinky.grpc.mod.ServiceDefinition[js.Any] | typingsSlinky.grpc.mod.ProtobufTypeDefinition
   ]
   
-  type ServerWriteableStream[RequestType] = typingsSlinky.grpc.mod.ServerWritableStream[RequestType]
+  type ServerWriteableStream[RequestType, ResponseType] = typingsSlinky.grpc.mod.ServerWritableStream[RequestType, ResponseType]
   
   type ServiceDefinition[ImplementationType] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {readonly [ I in keyof ImplementationType ]: grpc.grpc.MethodDefinition<any, any>}
@@ -85,7 +85,10 @@ package object mod {
   /**
     * User provided method to handle server streaming methods on the server.
     */
-  type handleServerStreamingCall[RequestType, ResponseType] = js.Function1[/* call */ typingsSlinky.grpc.mod.ServerWritableStream[RequestType], scala.Unit]
+  type handleServerStreamingCall[RequestType, ResponseType] = js.Function1[
+    /* call */ typingsSlinky.grpc.mod.ServerWritableStream[RequestType, ResponseType], 
+    scala.Unit
+  ]
   
   /**
     * User-provided method to handle unary requests on a server

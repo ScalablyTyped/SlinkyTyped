@@ -12,16 +12,14 @@ import typingsSlinky.awsSdkClientCognitoIdentityBrowser.setIdentityPoolRolesExce
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.unlinkDeveloperIdentityExceptionsUnionMod.UnlinkDeveloperIdentityExceptionsUnion
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.unlinkIdentityExceptionsUnionMod.UnlinkIdentityExceptionsUnion
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.updateIdentityPoolExceptionsUnionMod.UpdateIdentityPoolExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ResourceConflictExceptionDetails> * / any */ @js.native
 trait ResourceConflictException
-  extends ServiceException[ResourceConflictExceptionDetails]
-     with CreateIdentityPoolExceptionsUnion
+  extends CreateIdentityPoolExceptionsUnion
      with GetCredentialsForIdentityExceptionsUnion
      with GetIdExceptionsUnion
      with GetIdentityPoolRolesExceptionsUnion
@@ -34,19 +32,15 @@ trait ResourceConflictException
      with UnlinkIdentityExceptionsUnion
      with UpdateIdentityPoolExceptionsUnion {
   
-  @JSName("name")
-  var name_ResourceConflictException: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.ResourceConflictException = js.native
+  var name: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.ResourceConflictException = js.native
 }
 object ResourceConflictException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: ResourceConflictExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.ResourceConflictException
   ): ResourceConflictException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceConflictException]
   }
   

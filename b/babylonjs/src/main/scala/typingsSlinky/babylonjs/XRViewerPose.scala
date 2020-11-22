@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait XRViewerPose extends XRPose {
   
-  var views: js.Array[XRView] = js.native
+  val views: js.Array[XRView] = js.native
 }
 object XRViewerPose {
   

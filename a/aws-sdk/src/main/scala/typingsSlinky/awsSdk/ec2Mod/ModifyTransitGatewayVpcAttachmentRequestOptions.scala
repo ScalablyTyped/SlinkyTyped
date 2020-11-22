@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ModifyTransitGatewayVpcAttachmentRequestOptions extends js.Object {
   
   /**
+    * Enable or disable support for appliance mode. If enabled, a traffic flow between a source and destination uses the same Availability Zone for the VPC attachment for the lifetime of that flow. The default is disable.
+    */
+  var ApplianceModeSupport: js.UndefOr[ApplianceModeSupportValue] = js.native
+  
+  /**
     * Enable or disable DNS support. The default is enable.
     */
   var DnsSupport: js.UndefOr[DnsSupportValue] = js.native
@@ -39,6 +44,12 @@ object ModifyTransitGatewayVpcAttachmentRequestOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setApplianceModeSupport(value: ApplianceModeSupportValue): Self = this.set("ApplianceModeSupport", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteApplianceModeSupport: Self = this.set("ApplianceModeSupport", js.undefined)
     
     @scala.inline
     def setDnsSupport(value: DnsSupportValue): Self = this.set("DnsSupport", value.asInstanceOf[js.Any])

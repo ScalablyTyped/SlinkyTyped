@@ -49,7 +49,7 @@ class UsagePlan protected () extends CustomResource {
   val name: Output_[String] = js.native
   
   /**
-    * The AWS Markeplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
+    * The AWS Marketplace product identifier to associate with the usage plan as a SaaS product on AWS Marketplace.
     */
   val productCode: Output_[js.UndefOr[String]] = js.native
   

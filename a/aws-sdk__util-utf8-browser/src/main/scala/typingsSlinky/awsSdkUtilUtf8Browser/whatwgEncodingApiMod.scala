@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/util-utf8-browser/build/whatwgEncodingApi", JSImport.Namespace)
+@JSImport("@aws-sdk/util-utf8-browser/dist/cjs/whatwgEncodingApi", JSImport.Namespace)
 @js.native
 object whatwgEncodingApiMod extends js.Object {
   

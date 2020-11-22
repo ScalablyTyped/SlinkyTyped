@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("k6/http", "CookieJar")
 @js.native
-abstract class CookieJar_ () extends js.Object {
+class CookieJar_ () extends js.Object {
   
   /**
     * Get cookies set for a particular URL.

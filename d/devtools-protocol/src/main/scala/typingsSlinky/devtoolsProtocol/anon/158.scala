@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetInterceptFileChooserDialogRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetLifecycleEventsEnabledRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `158` extends js.Object {
   
-  var paramsType: js.Array[SetInterceptFileChooserDialogRequest] = js.native
+  var paramsType: js.Array[SetLifecycleEventsEnabledRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `158` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetInterceptFileChooserDialogRequest], returnType: Unit): `158` = {
+  def apply(paramsType: js.Array[SetLifecycleEventsEnabledRequest], returnType: Unit): `158` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`158`]
   }
@@ -36,10 +36,10 @@ object `158` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetInterceptFileChooserDialogRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetLifecycleEventsEnabledRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetInterceptFileChooserDialogRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetLifecycleEventsEnabledRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

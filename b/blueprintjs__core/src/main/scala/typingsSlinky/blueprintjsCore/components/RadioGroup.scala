@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.propsMod.IOptionProps
@@ -33,7 +34,10 @@ object RadioGroup {
     def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def label(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])

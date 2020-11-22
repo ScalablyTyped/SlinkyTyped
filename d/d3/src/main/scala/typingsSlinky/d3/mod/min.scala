@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object min extends js.Object {
   
-  def apply(array: js.Iterable[String]): js.UndefOr[String] = js.native
+  def apply(iterable: js.Iterable[String]): js.UndefOr[String] = js.native
   def apply[T](
-    array: js.Iterable[T],
+    iterable: js.Iterable[T],
     accessor: js.Function3[
       /* datum */ T, 
       /* index */ Double, 

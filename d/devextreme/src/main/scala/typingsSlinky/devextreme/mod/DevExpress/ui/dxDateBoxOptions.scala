@@ -2,16 +2,12 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import typingsSlinky.devextreme.anon.ComponentDate
 import typingsSlinky.devextreme.devextremeStrings.calendar
-import typingsSlinky.devextreme.devextremeStrings.century
 import typingsSlinky.devextreme.devextremeStrings.date
 import typingsSlinky.devextreme.devextremeStrings.datetime
-import typingsSlinky.devextreme.devextremeStrings.decade
 import typingsSlinky.devextreme.devextremeStrings.list
-import typingsSlinky.devextreme.devextremeStrings.month
 import typingsSlinky.devextreme.devextremeStrings.native
 import typingsSlinky.devextreme.devextremeStrings.rollers
 import typingsSlinky.devextreme.devextremeStrings.time
-import typingsSlinky.devextreme.devextremeStrings.year
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,63 +15,89 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDateBoxOptions extends dxDropDownEditorOptions[dxDateBox] {
   
-  /** @name dxDateBox.Options.adaptivityEnabled */
+  /**
+    * [descr:dxDateBox.Options.adaptivityEnabled]
+    */
   var adaptivityEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDateBox.Options.applyButtonText */
+  /**
+    * [descr:dxDateBox.Options.applyButtonText]
+    */
   var applyButtonText: js.UndefOr[String] = js.native
   
-  /** @name dxDateBox.Options.calendarOptions */
+  /**
+    * [descr:dxDateBox.Options.calendarOptions]
+    */
   var calendarOptions: js.UndefOr[dxCalendarOptions] = js.native
   
-  /** @name dxDateBox.Options.cancelButtonText */
+  /**
+    * [descr:dxDateBox.Options.cancelButtonText]
+    */
   var cancelButtonText: js.UndefOr[String] = js.native
   
-  /** @name dxDateBox.Options.dateOutOfRangeMessage */
+  /**
+    * [descr:dxDateBox.Options.dateOutOfRangeMessage]
+    */
   var dateOutOfRangeMessage: js.UndefOr[String] = js.native
   
-  /** @name dxDateBox.Options.dateSerializationFormat */
+  /**
+    * [descr:dxDateBox.Options.dateSerializationFormat]
+    */
   var dateSerializationFormat: js.UndefOr[String] = js.native
   
-  /** @name dxDateBox.Options.disabledDates */
+  /**
+    * [descr:dxDateBox.Options.disabledDates]
+    */
   var disabledDates: js.UndefOr[js.Array[js.Date] | (js.Function1[/* data */ ComponentDate, Boolean])] = js.native
   
-  /** @name dxDateBox.Options.displayFormat */
+  /**
+    * [descr:dxDateBox.Options.displayFormat]
+    */
   var displayFormat: js.UndefOr[format] = js.native
   
-  /** @name dxDateBox.Options.interval */
+  /**
+    * [descr:dxDateBox.Options.interval]
+    */
   var interval: js.UndefOr[Double] = js.native
   
-  /** @name dxDateBox.Options.invalidDateMessage */
+  /**
+    * [descr:dxDateBox.Options.invalidDateMessage]
+    */
   var invalidDateMessage: js.UndefOr[String] = js.native
   
-  /** @name dxDateBox.Options.max */
+  /**
+    * [descr:dxDateBox.Options.max]
+    */
   var max: js.UndefOr[js.Date | Double | String] = js.native
   
-  /** @deprecated */
-  /** @name dxDateBox.Options.maxZoomLevel */
-  var maxZoomLevel: js.UndefOr[century | decade | month | year] = js.native
-  
-  /** @name dxDateBox.Options.min */
+  /**
+    * [descr:dxDateBox.Options.min]
+    */
   var min: js.UndefOr[js.Date | Double | String] = js.native
   
-  /** @deprecated */
-  /** @name dxDateBox.Options.minZoomLevel */
-  var minZoomLevel: js.UndefOr[century | decade | month | year] = js.native
-  
-  /** @name dxDateBox.Options.pickerType */
+  /**
+    * [descr:dxDateBox.Options.pickerType]
+    */
   var pickerType: js.UndefOr[calendar | list | native | rollers] = js.native
   
-  /** @name dxDateBox.Options.showAnalogClock */
+  /**
+    * [descr:dxDateBox.Options.showAnalogClock]
+    */
   var showAnalogClock: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDateBox.Options.type */
+  /**
+    * [descr:dxDateBox.Options.type]
+    */
   var `type`: js.UndefOr[date | datetime | time] = js.native
   
-  /** @name dxDateBox.Options.useMaskBehavior */
+  /**
+    * [descr:dxDateBox.Options.useMaskBehavior]
+    */
   var useMaskBehavior: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDateBox.Options.value */
+  /**
+    * [descr:dxDateBox.Options.value]
+    */
   @JSName("value")
   var value_dxDateBoxOptions: js.UndefOr[js.Date | Double | String] = js.native
 }
@@ -181,12 +203,6 @@ object dxDateBoxOptions {
     def deleteMax: Self = this.set("max", js.undefined)
     
     @scala.inline
-    def setMaxZoomLevel(value: century | decade | month | year): Self = this.set("maxZoomLevel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMaxZoomLevel: Self = this.set("maxZoomLevel", js.undefined)
-    
-    @scala.inline
     def setMinDate(value: js.Date): Self = this.set("min", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -194,12 +210,6 @@ object dxDateBoxOptions {
     
     @scala.inline
     def deleteMin: Self = this.set("min", js.undefined)
-    
-    @scala.inline
-    def setMinZoomLevel(value: century | decade | month | year): Self = this.set("minZoomLevel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMinZoomLevel: Self = this.set("minZoomLevel", js.undefined)
     
     @scala.inline
     def setPickerType(value: calendar | list | native | rollers): Self = this.set("pickerType", value.asInstanceOf[js.Any])

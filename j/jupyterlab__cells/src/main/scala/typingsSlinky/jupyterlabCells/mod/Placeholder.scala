@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.web.SyntheticMouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/cells", "Placeholder")
 @js.native
@@ -15,4 +15,3 @@ abstract class Placeholder protected ()
     */
   def this(callback: js.Function1[/* e */ SyntheticMouseEvent[HTMLDivElement], Unit]) = this()
 }
-

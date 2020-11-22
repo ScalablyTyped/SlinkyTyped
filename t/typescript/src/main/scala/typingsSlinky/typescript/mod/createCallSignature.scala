@@ -14,6 +14,7 @@ object createCallSignature extends js.Object {
     parameters: js.Array[ParameterDeclaration],
     `type`: TypeNode
   ): CallSignatureDeclaration = js.native
+  /** @deprecated Use `factory.createCallSignature` or the factory supplied by your transformation context instead. */
   def apply(typeParameters: js.Array[TypeParameterDeclaration], parameters: js.Array[ParameterDeclaration]): CallSignatureDeclaration = js.native
   def apply(
     typeParameters: js.Array[TypeParameterDeclaration],

@@ -1,40 +1,39 @@
 package typingsSlinky.jupyterlabMainmenu.editMod
 
+import typingsSlinky.jupyterlabMainmenu.editMod.IEditMenu.IClearer
+import typingsSlinky.jupyterlabMainmenu.editMod.IEditMenu.IGoToLiner
+import typingsSlinky.jupyterlabMainmenu.editMod.IEditMenu.IUndoer
 import typingsSlinky.jupyterlabMainmenu.labmenuMod.JupyterLabMenu
-import typingsSlinky.phosphorWidgets.menuMod.Menu.IOptions
+import typingsSlinky.luminoWidgets.menuMod.Menu.IOptions
+import typingsSlinky.luminoWidgets.mod.Widget
+import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/mainmenu/lib/edit", "EditMenu")
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.luminoDisposable.mod.IDisposable because Already inherited
+- typingsSlinky.jupyterlabMainmenu.labmenuMod.IJupyterLabMenu because Already inherited
+- typingsSlinky.jupyterlabMainmenu.editMod.IEditMenu because var conflicts: isDisposed. Inlined undoers, clearers, goToLiners */ @JSImport("@jupyterlab/mainmenu/lib/edit", "EditMenu")
 @js.native
-class EditMenu protected ()
-  extends JupyterLabMenu
-     with IEditMenu {
+class EditMenu protected () extends JupyterLabMenu {
   /**
     * Construct the edit menu.
     */
   def this(options: IOptions) = this()
+  
   /**
-    * Test whether the object has been disposed.
-    *
-    * #### Notes
-    * This property is always safe to access.
+    * A set storing IClearers for the Edit menu.
     */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
+  val clearers: Set[IClearer[Widget]] = js.native
+  
   /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
+    * A set storing IGoToLiners for the Edit menu.
     */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
+  val goToLiners: Set[IGoToLiner[Widget]] = js.native
+  
+  /**
+    * A set storing IUndoers for the Edit menu.
+    */
+  val undoers: Set[IUndoer[Widget]] = js.native
 }
-

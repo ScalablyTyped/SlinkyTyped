@@ -1,6 +1,8 @@
 package typingsSlinky.kendoUi.kendo.ui
 
 import typingsSlinky.kendoUi.JQuery
+import typingsSlinky.kendoUi.kendo.data.DataSource
+import typingsSlinky.kendoUi.kendo.data.DataSourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,6 +17,12 @@ trait GridColumn extends js.Object {
   var columns: js.UndefOr[js.Any] = js.native
   
   var command: js.UndefOr[String | (js.Array[GridColumnCommandItem | String]) | GridColumnCommandItem] = js.native
+  
+  var dataSource: js.UndefOr[DataSource | DataSourceOptions] = js.native
+  
+  var dataTextField: js.UndefOr[String] = js.native
+  
+  var dataValueField: js.UndefOr[String] = js.native
   
   var editable: js.UndefOr[js.Function] = js.native
   
@@ -63,6 +71,10 @@ trait GridColumn extends js.Object {
   var selectable: js.UndefOr[Boolean] = js.native
   
   var sortable: js.UndefOr[Boolean | GridColumnSortable] = js.native
+  
+  var stickable: js.UndefOr[Boolean] = js.native
+  
+  var sticky: js.UndefOr[Boolean] = js.native
   
   var template: js.UndefOr[String | js.Function] = js.native
   
@@ -121,6 +133,24 @@ object GridColumn {
     
     @scala.inline
     def deleteCommand: Self = this.set("command", js.undefined)
+    
+    @scala.inline
+    def setDataSource(value: DataSource | DataSourceOptions): Self = this.set("dataSource", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataSource: Self = this.set("dataSource", js.undefined)
+    
+    @scala.inline
+    def setDataTextField(value: String): Self = this.set("dataTextField", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataTextField: Self = this.set("dataTextField", js.undefined)
+    
+    @scala.inline
+    def setDataValueField(value: String): Self = this.set("dataValueField", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataValueField: Self = this.set("dataValueField", js.undefined)
     
     @scala.inline
     def setEditable(value: js.Function): Self = this.set("editable", value.asInstanceOf[js.Any])
@@ -259,6 +289,18 @@ object GridColumn {
     
     @scala.inline
     def deleteSortable: Self = this.set("sortable", js.undefined)
+    
+    @scala.inline
+    def setStickable(value: Boolean): Self = this.set("stickable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStickable: Self = this.set("stickable", js.undefined)
+    
+    @scala.inline
+    def setSticky(value: Boolean): Self = this.set("sticky", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSticky: Self = this.set("sticky", js.undefined)
     
     @scala.inline
     def setTemplate(value: String | js.Function): Self = this.set("template", value.asInstanceOf[js.Any])

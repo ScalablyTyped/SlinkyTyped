@@ -3,8 +3,8 @@ package typingsSlinky.reactstrap.labelMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLLabelElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.LabelHTMLAttributes
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactstrap.colMod.ColumnProps
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
@@ -34,7 +34,10 @@ trait LabelProps
   
   var sm: js.UndefOr[ColumnProps] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
+  
+  // custom widths
+  var widths: js.UndefOr[js.Array[String]] = js.native
   
   var xl: js.UndefOr[ColumnProps] = js.native
   
@@ -124,10 +127,19 @@ object LabelProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)
+    
+    @scala.inline
+    def setWidthsVarargs(value: String*): Self = this.set("widths", js.Array(value :_*))
+    
+    @scala.inline
+    def setWidths(value: js.Array[String]): Self = this.set("widths", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWidths: Self = this.set("widths", js.undefined)
     
     @scala.inline
     def setXl(value: ColumnProps): Self = this.set("xl", value.asInstanceOf[js.Any])

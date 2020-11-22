@@ -10,14 +10,14 @@ trait ImageServiceIdentifyResult
      with JSONSupport {
   
   /**
-    * The set of visible areas for the identified catalog items. `CatalogItemVisibilities` are returned only when the image service source is a mosaic dataset. Each element in the array corresponds to the percentage contribution (to final mosaic in given extent) of the item in `catalogItems`.
+    * The set of visible areas for the identified catalog items.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ImageServiceIdentifyResult.html#catalogItemVisibilities)
     */
   var catalogItemVisibilities: js.Array[Double] = js.native
   
   /**
-    * The set of catalog items that overlap the input geometry. Catalog Items are returned only when the image service source is a mosaic dataset.
+    * The set of catalog items that overlap the input geometry.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ImageServiceIdentifyResult.html#catalogItems)
     */

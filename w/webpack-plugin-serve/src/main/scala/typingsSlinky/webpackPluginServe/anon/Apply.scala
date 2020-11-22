@@ -5,25 +5,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Apply extends js.Object {
+trait Apply[Compiler] extends js.Object {
   
   @JSName("apply")
-  def apply(
-    compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Compiler */ js.Any
-  ): Unit = js.native
+  def apply(compiler: Compiler): Unit = js.native
 }
 object Apply {
   
   @scala.inline
-  def apply(
-    apply: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Compiler */ js.Any => Unit
-  ): Apply = {
+  def apply[Compiler](apply: Compiler => Unit): Apply[Compiler] = {
     val __obj = js.Dynamic.literal(apply = js.Any.fromFunction1(apply))
-    __obj.asInstanceOf[Apply]
+    __obj.asInstanceOf[Apply[Compiler]]
   }
   
   @scala.inline
-  implicit class ApplyOps[Self <: Apply] (val x: Self) extends AnyVal {
+  implicit class ApplyOps[Self <: Apply[_], Compiler] (val x: Self with Apply[Compiler]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -38,8 +34,6 @@ object Apply {
     }
     
     @scala.inline
-    def setApply(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Compiler */ js.Any => Unit
-    ): Self = this.set("apply", js.Any.fromFunction1(value))
+    def setApply(value: Compiler => Unit): Self = this.set("apply", js.Any.fromFunction1(value))
   }
 }

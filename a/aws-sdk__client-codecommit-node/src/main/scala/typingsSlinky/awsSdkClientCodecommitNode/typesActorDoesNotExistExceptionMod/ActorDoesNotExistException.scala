@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientCodecommitNode.typesActorDoesNotExistExceptionMod
 
 import typingsSlinky.awsSdkClientCodecommitNode.describePullRequestEventsExceptionsUnionMod.DescribePullRequestEventsExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait ActorDoesNotExistException
-  extends ServiceException[ActorDoesNotExistExceptionDetails]
-     with DescribePullRequestEventsExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ActorDoesNotExistExceptionDetails> * / any */ @js.native
+trait ActorDoesNotExistException extends DescribePullRequestEventsExceptionsUnion {
   
-  @JSName("name")
-  var name_ActorDoesNotExistException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.ActorDoesNotExistException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.ActorDoesNotExistException = js.native
 }
 object ActorDoesNotExistException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: ActorDoesNotExistExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.ActorDoesNotExistException
   ): ActorDoesNotExistException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActorDoesNotExistException]
   }
   

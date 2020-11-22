@@ -6,5 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object typesMod {
   
-  type Omit[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
+  type TransformResult = typingsSlinky.jestTypes.transformMod.TransformResult
+  
+  type TransformedSource = typingsSlinky.jestTransform.anon.Code | java.lang.String
 }

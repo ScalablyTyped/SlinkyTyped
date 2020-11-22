@@ -31,7 +31,7 @@ trait AbstractScene extends js.Object {
   
   /**
     * The list of lens flare system added to the scene
-    * @see http://doc.babylonjs.com/how_to/how_to_use_lens_flares
+    * @see https://doc.babylonjs.com/how_to/how_to_use_lens_flares
     */
   var lensFlareSystems: js.Array[LensFlareSystem] = js.native
   

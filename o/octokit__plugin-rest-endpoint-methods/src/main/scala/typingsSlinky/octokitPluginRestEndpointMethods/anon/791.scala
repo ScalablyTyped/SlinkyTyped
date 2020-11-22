@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.OrgsListEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.OrgsListResponseData
+import typingsSlinky.octokitTypes.endpointsMod.OrgsCreateWebhookEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.OrgsCreateWebhookResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `791` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[OrgsListEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[OrgsCreateWebhookEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[OrgsListResponseData] = js.native
+  var response: OctokitResponse[OrgsCreateWebhookResponseData] = js.native
 }
 object `791` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[OrgsListEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[OrgsListResponseData]
+    parameters: RequestParameters with (Omit[OrgsCreateWebhookEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[OrgsCreateWebhookResponseData]
   ): `791` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`791`]
@@ -46,9 +46,9 @@ object `791` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[OrgsListEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[OrgsCreateWebhookEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[OrgsListResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[OrgsCreateWebhookResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

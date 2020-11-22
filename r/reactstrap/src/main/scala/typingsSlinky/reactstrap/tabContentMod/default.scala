@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/TabContent", JSImport.Default)
+@JSImport("reactstrap/es/TabContent", JSImport.Default)
 @js.native
-class default[T] ()
+class default ()
   extends Component[TabContentProps, js.Object, js.Any]

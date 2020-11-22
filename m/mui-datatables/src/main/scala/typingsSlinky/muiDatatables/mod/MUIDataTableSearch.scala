@@ -13,7 +13,7 @@ trait MUIDataTableSearch extends js.Object {
   
   var onSearch: js.UndefOr[js.Function1[/* args */ js.Any, _]] = js.native
   
-  var options: js.UndefOr[js.Object] = js.native
+  var options: js.UndefOr[MUIDataTableOptions] = js.native
   
   var searchText: js.UndefOr[String] = js.native
 }
@@ -59,7 +59,7 @@ object MUIDataTableSearch {
     def deleteOnSearch: Self = this.set("onSearch", js.undefined)
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: MUIDataTableOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

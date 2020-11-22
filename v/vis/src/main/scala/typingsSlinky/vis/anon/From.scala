@@ -1,5 +1,6 @@
 package typingsSlinky.vis.anon
 
+import typingsSlinky.vis.mod.ArrowHead
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait From extends js.Object {
   
-  var from: js.UndefOr[Boolean | Enabled] = js.native
+  var from: js.UndefOr[Boolean | ArrowHead] = js.native
   
-  var middle: js.UndefOr[Boolean | Enabled] = js.native
+  var middle: js.UndefOr[Boolean | ArrowHead] = js.native
   
-  var to: js.UndefOr[Boolean | Enabled] = js.native
+  var to: js.UndefOr[Boolean | ArrowHead] = js.native
 }
 object From {
   
@@ -37,19 +38,19 @@ object From {
     }
     
     @scala.inline
-    def setFrom(value: Boolean | Enabled): Self = this.set("from", value.asInstanceOf[js.Any])
+    def setFrom(value: Boolean | ArrowHead): Self = this.set("from", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFrom: Self = this.set("from", js.undefined)
     
     @scala.inline
-    def setMiddle(value: Boolean | Enabled): Self = this.set("middle", value.asInstanceOf[js.Any])
+    def setMiddle(value: Boolean | ArrowHead): Self = this.set("middle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMiddle: Self = this.set("middle", js.undefined)
     
     @scala.inline
-    def setTo(value: Boolean | Enabled): Self = this.set("to", value.asInstanceOf[js.Any])
+    def setTo(value: Boolean | ArrowHead): Self = this.set("to", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTo: Self = this.set("to", js.undefined)

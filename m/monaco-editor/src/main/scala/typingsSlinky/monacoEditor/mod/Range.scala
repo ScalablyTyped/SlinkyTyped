@@ -149,6 +149,16 @@ object Range extends js.Object {
   def fromPositions(start: IPosition, end: IPosition): Range = js.native
   
   /**
+    * Return the end position (which will be after or equal to the start position)
+    */
+  def getEndPosition(range: IRange): Position = js.native
+  
+  /**
+    * Return the start position (which will be before or equal to the end position)
+    */
+  def getStartPosition(range: IRange): Position = js.native
+  
+  /**
     * A intersection of the two ranges.
     */
   def intersectRanges(a: IRange, b: IRange): Range | Null = js.native

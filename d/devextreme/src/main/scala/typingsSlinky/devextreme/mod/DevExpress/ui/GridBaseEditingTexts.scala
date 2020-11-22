@@ -7,37 +7,59 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GridBaseEditingTexts extends js.Object {
   
-  /** @name GridBase.Options.editing.texts.addRow */
+  /**
+    * [descr:GridBase.Options.editing.texts.addRow]
+    */
   var addRow: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing.texts.cancelAllChanges */
+  /**
+    * [descr:GridBase.Options.editing.texts.cancelAllChanges]
+    */
   var cancelAllChanges: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing.texts.cancelRowChanges */
+  /**
+    * [descr:GridBase.Options.editing.texts.cancelRowChanges]
+    */
   var cancelRowChanges: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing.texts.confirmDeleteMessage */
+  /**
+    * [descr:GridBase.Options.editing.texts.confirmDeleteMessage]
+    */
   var confirmDeleteMessage: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing.texts.confirmDeleteTitle */
+  /**
+    * [descr:GridBase.Options.editing.texts.confirmDeleteTitle]
+    */
   var confirmDeleteTitle: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing.texts.deleteRow */
+  /**
+    * [descr:GridBase.Options.editing.texts.deleteRow]
+    */
   var deleteRow: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing.texts.editRow */
+  /**
+    * [descr:GridBase.Options.editing.texts.editRow]
+    */
   var editRow: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing.texts.saveAllChanges */
+  /**
+    * [descr:GridBase.Options.editing.texts.saveAllChanges]
+    */
   var saveAllChanges: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing.texts.saveRowChanges */
+  /**
+    * [descr:GridBase.Options.editing.texts.saveRowChanges]
+    */
   var saveRowChanges: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing.texts.undeleteRow */
+  /**
+    * [descr:GridBase.Options.editing.texts.undeleteRow]
+    */
   var undeleteRow: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing.texts.validationCancelChanges */
+  /**
+    * [descr:GridBase.Options.editing.texts.validationCancelChanges]
+    */
   var validationCancelChanges: js.UndefOr[String] = js.native
 }
 object GridBaseEditingTexts {

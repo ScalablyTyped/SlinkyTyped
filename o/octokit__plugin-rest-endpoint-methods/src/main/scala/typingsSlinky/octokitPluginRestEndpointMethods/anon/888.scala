@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposAddCollaboratorEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposAddCollaboratorResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReactionsListForIssueCommentEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReactionsListForIssueCommentResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `888` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposAddCollaboratorEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReactionsListForIssueCommentEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposAddCollaboratorResponseData] = js.native
+  var response: OctokitResponse[ReactionsListForIssueCommentResponseData] = js.native
 }
 object `888` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposAddCollaboratorEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposAddCollaboratorResponseData]
+    parameters: RequestParameters with (Omit[ReactionsListForIssueCommentEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReactionsListForIssueCommentResponseData]
   ): `888` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`888`]
@@ -46,9 +46,11 @@ object `888` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ReposAddCollaboratorEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(
+      value: RequestParameters with (Omit[ReactionsListForIssueCommentEndpoint, baseUrl | headers | mediaType])
+    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposAddCollaboratorResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReactionsListForIssueCommentResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

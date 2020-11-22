@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ObjectProperty
+import typingsSlinky.babelTraverse.babelTraverseStrings.EmptyTypeAnnotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `139` extends js.Object {
   
-  var `type`: ObjectProperty = js.native
+  var `type`: EmptyTypeAnnotation = js.native
 }
 object `139` {
   
   @scala.inline
-  def apply(`type`: ObjectProperty): `139` = {
+  def apply(`type`: EmptyTypeAnnotation): `139` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`139`]
@@ -35,6 +35,6 @@ object `139` {
     }
     
     @scala.inline
-    def setType(value: ObjectProperty): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: EmptyTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

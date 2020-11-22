@@ -22,10 +22,19 @@ object triangleMod extends js.Object {
     def this(a: Vector3, b: js.UndefOr[scala.Nothing], c: Vector3) = this()
     def this(a: Vector3, b: Vector3, c: Vector3) = this()
     
+    /**
+    	 * @default new THREE.Vector3()
+    	 */
     var a: Vector3 = js.native
     
+    /**
+    	 * @default new THREE.Vector3()
+    	 */
     var b: Vector3 = js.native
     
+    /**
+    	 * @default new THREE.Vector3()
+    	 */
     var c: Vector3 = js.native
     
     def closestPointToPoint(point: Vector3, target: Vector3): Vector3 = js.native

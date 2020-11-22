@@ -43,21 +43,21 @@ trait Spy extends js.Object {
   def apply[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R](fn: SpyFunc10[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R]): SpyFunc10Proxy[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R] = js.native
   def apply[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R](name: String, fn: SpyFunc10[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R]): SpyFunc10Proxy[A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, R] = js.native
   
-  def `object`(methods: js.Array[String]): js.Any = js.native
+  def interface(methods: js.Array[String]): js.Any = js.native
   /**
-    * #### chai.spy.object (function)
+    * #### chai.spy.interface (function)
     *
     * Creates an object with spied methods.
     * ```ts
-    * var object = chai.spy.object('Array', [ 'push', 'pop' ]);
+    * var object = chai.spy.interface('Array', [ 'push', 'pop' ]);
     * ```
     * @param {String} [name] object name
     * @param {String[]|Object} method names or method definitions
     * @returns object with spied methods
     */
-  def `object`(name: String, methods: js.Array[String]): js.Any = js.native
-  def `object`[T](methods: T): T = js.native
-  def `object`[T](name: String, methods: T): T = js.native
+  def interface(name: String, methods: js.Array[String]): js.Any = js.native
+  def interface[T](methods: T): T = js.native
+  def interface[T](name: String, methods: T): T = js.native
   
   /**
     * #### chai.spy.on (function)

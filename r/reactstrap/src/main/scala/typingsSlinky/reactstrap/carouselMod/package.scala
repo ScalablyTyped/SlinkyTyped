@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object carouselMod {
   
-  type Carousel[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.carouselMod.CarouselProps]
+  type Carousel = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.carouselMod.CarouselProps]
 }

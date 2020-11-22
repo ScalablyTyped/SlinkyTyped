@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait JumpListCategory extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/jump-list-category
+  // Docs: https://electronjs.org/docs/api/structures/jump-list-category
   /**
     * Array of `JumpListItem` objects if `type` is `tasks` or `custom`, otherwise it
     * should be omitted.

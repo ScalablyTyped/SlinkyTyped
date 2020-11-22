@@ -61,6 +61,9 @@ object mzStrings {
   def ed25519: ed25519 = "ed25519".asInstanceOf[ed25519]
   
   @scala.inline
+  def ed448: ed448 = "ed448".asInstanceOf[ed448]
+  
+  @scala.inline
   def hex: hex = "hex".asInstanceOf[hex]
   
   @scala.inline
@@ -77,6 +80,12 @@ object mzStrings {
   
   @scala.inline
   def uncompressed: uncompressed = "uncompressed".asInstanceOf[uncompressed]
+  
+  @scala.inline
+  def x25519: x25519 = "x25519".asInstanceOf[x25519]
+  
+  @scala.inline
+  def x448: x448 = "x448".asInstanceOf[x448]
   
   @js.native
   sealed trait A extends js.Object
@@ -133,6 +142,9 @@ object mzStrings {
   sealed trait ed25519 extends js.Object
   
   @js.native
+  sealed trait ed448 extends js.Object
+  
+  @js.native
   sealed trait hex extends js.Object
   
   @js.native
@@ -149,4 +161,10 @@ object mzStrings {
   
   @js.native
   sealed trait uncompressed extends js.Object
+  
+  @js.native
+  sealed trait x25519 extends js.Object
+  
+  @js.native
+  sealed trait x448 extends js.Object
 }

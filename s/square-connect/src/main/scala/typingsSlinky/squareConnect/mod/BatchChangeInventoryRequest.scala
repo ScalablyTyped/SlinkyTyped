@@ -10,7 +10,7 @@ class BatchChangeInventoryRequest () extends js.Object {
   
   /**
     * The set of physical counts and inventory adjustments to be made.
-    * Changes are applied based on the client-supplied timestamp and may be sent out of order. Max size is 100 changes.
+    * Changes are applied based on the client-supplied timestamp and may be sent out of order.
     */
   var changes: js.UndefOr[js.Array[InventoryChange]] = js.native
   

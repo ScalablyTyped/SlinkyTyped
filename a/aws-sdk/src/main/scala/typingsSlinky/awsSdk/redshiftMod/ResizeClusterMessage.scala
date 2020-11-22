@@ -28,7 +28,7 @@ trait ResizeClusterMessage extends js.Object {
   var NodeType: js.UndefOr[String] = js.native
   
   /**
-    * The new number of nodes for the cluster.
+    * The new number of nodes for the cluster. If not specified, the cluster's current number of nodes is used.
     */
   var NumberOfNodes: js.UndefOr[Integer] = js.native
 }

@@ -12,7 +12,7 @@ object ^ extends js.Object {
   Extends [`minimatch.match()`](https://github.com/isaacs/minimatch#minimatchmatchlist-pattern-options) with support for multiple patterns.
   @param paths - Paths to match against.
   @param patterns - Globbing patterns to use. For example: `['*', '!cake']`. See supported [`minimatch` patterns](https://github.com/isaacs/minimatch#usage).
-  @returns The matching paths.
+  @returns The matching paths in the order of input paths.
   @example
   ```
   import multimatch = require('multimatch');

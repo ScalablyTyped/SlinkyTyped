@@ -4,12 +4,12 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.reachRouter.mod.LocationProviderProps
 import typingsSlinky.reachRouter.mod.NavigateFn
 import typingsSlinky.react.mod.Component
-import typingsSlinky.storybookRouter.anon.Path
 import typingsSlinky.storybookRouter.anon.Search
 import typingsSlinky.storybookRouter.routerMod.QueryLinkProps
 import typingsSlinky.storybookRouter.routerMod.QueryLocationProps
 import typingsSlinky.storybookRouter.routerMod.QueryMatchProps
 import typingsSlinky.storybookRouter.routerMod.RouteProps
+import typingsSlinky.storybookRouter.utilsMod.Match
 import typingsSlinky.storybookRouter.utilsMod.Query
 import typingsSlinky.storybookRouter.utilsMod.StoryData
 import scala.scalajs.js
@@ -20,8 +20,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def getMatch(current: String, target: String): Path = js.native
-  def getMatch(current: String, target: String, startsWith: js.Any): Path = js.native
+  def getMatch(current: String, target: String): Match | Null = js.native
+  def getMatch(current: String, target: String, startsWith: js.Any): Match | Null = js.native
   
   val navigate: NavigateFn = js.native
   
@@ -33,8 +33,6 @@ object mod extends js.Object {
   def queryFromString(s: String): Query = js.native
   
   def stringifyQuery(query: Query): js.Any = js.native
-  
-  /* import warning: parser.TsParser#tsDeclVar Dropped IArray(parseKind, sanitize, storyNameFromExport) */ def toId(kind: String, name: String): String = js.native
   
   @js.native
   object Link extends js.Object {

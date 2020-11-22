@@ -33,6 +33,8 @@ trait AlertInput extends js.Object {
   
   var placeholder: js.UndefOr[String] = js.native
   
+  var tabindex: js.UndefOr[Double] = js.native
+  
   var `type`: js.UndefOr[TextFieldTypes | checkbox | radio | textarea] = js.native
   
   var value: js.UndefOr[js.Any] = js.native
@@ -128,6 +130,12 @@ object AlertInput {
     
     @scala.inline
     def deletePlaceholder: Self = this.set("placeholder", js.undefined)
+    
+    @scala.inline
+    def setTabindex(value: Double): Self = this.set("tabindex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTabindex: Self = this.set("tabindex", js.undefined)
     
     @scala.inline
     def setType(value: TextFieldTypes | checkbox | radio | textarea): Self = this.set("type", value.asInstanceOf[js.Any])

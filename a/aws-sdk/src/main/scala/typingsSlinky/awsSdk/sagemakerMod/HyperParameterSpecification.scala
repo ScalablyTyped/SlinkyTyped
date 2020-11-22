@@ -10,7 +10,7 @@ trait HyperParameterSpecification extends js.Object {
   /**
     * The default value for this hyperparameter. If a default value is specified, a hyperparameter cannot be required.
     */
-  var DefaultValue: js.UndefOr[ParameterValue] = js.native
+  var DefaultValue: js.UndefOr[HyperParameterValue] = js.native
   
   /**
     * A brief description of the hyperparameter.
@@ -72,7 +72,7 @@ object HyperParameterSpecification {
     def setType(value: ParameterType): Self = this.set("Type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDefaultValue(value: ParameterValue): Self = this.set("DefaultValue", value.asInstanceOf[js.Any])
+    def setDefaultValue(value: HyperParameterValue): Self = this.set("DefaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefaultValue: Self = this.set("DefaultValue", js.undefined)

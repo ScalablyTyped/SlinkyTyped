@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 js.Any with typingsSlinky.styletronReact.mod.StyletronComponentInjectedProps[js.Any]] because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.) */
 object StyledArrow {
   
-  @JSImport("baseui/tooltip", "StyledArrow")
+  @JSImport("baseui/helper", "StyledArrow")
   @js.native
   object component extends js.Object
   

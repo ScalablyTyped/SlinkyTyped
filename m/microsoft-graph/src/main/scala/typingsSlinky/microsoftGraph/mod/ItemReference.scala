@@ -8,27 +8,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ItemReference extends js.Object {
   
   // Unique identifier of the drive instance that contains the item. Read-only.
-  var driveId: js.UndefOr[String] = js.native
+  var driveId: js.UndefOr[NullableOption[String]] = js.native
   
   // Identifies the type of drive. See [drive][] resource for values.
-  var driveType: js.UndefOr[String] = js.native
+  var driveType: js.UndefOr[NullableOption[String]] = js.native
   
   // Unique identifier of the item in the drive. Read-only.
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[NullableOption[String]] = js.native
   
   // The name of the item being referenced. Read-only.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   // Path that can be used to navigate to the item. Read-only.
-  var path: js.UndefOr[String] = js.native
+  var path: js.UndefOr[NullableOption[String]] = js.native
   
   // A unique identifier for a shared resource that can be accessed via the [Shares][] API.
-  var shareId: js.UndefOr[String] = js.native
+  var shareId: js.UndefOr[NullableOption[String]] = js.native
   
   // Returns identifiers useful for SharePoint REST compatibility. Read-only.
-  var sharepointIds: js.UndefOr[SharepointIds] = js.native
+  var sharepointIds: js.UndefOr[NullableOption[SharepointIds]] = js.native
   
-  var siteId: js.UndefOr[String] = js.native
+  var siteId: js.UndefOr[NullableOption[String]] = js.native
 }
 object ItemReference {
   
@@ -54,51 +54,75 @@ object ItemReference {
     }
     
     @scala.inline
-    def setDriveId(value: String): Self = this.set("driveId", value.asInstanceOf[js.Any])
+    def setDriveId(value: NullableOption[String]): Self = this.set("driveId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDriveId: Self = this.set("driveId", js.undefined)
     
     @scala.inline
-    def setDriveType(value: String): Self = this.set("driveType", value.asInstanceOf[js.Any])
+    def setDriveIdNull: Self = this.set("driveId", null)
+    
+    @scala.inline
+    def setDriveType(value: NullableOption[String]): Self = this.set("driveType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDriveType: Self = this.set("driveType", js.undefined)
     
     @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setDriveTypeNull: Self = this.set("driveType", null)
+    
+    @scala.inline
+    def setId(value: NullableOption[String]): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setIdNull: Self = this.set("id", null)
+    
+    @scala.inline
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
+    def setPath(value: NullableOption[String]): Self = this.set("path", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)
     
     @scala.inline
-    def setShareId(value: String): Self = this.set("shareId", value.asInstanceOf[js.Any])
+    def setPathNull: Self = this.set("path", null)
+    
+    @scala.inline
+    def setShareId(value: NullableOption[String]): Self = this.set("shareId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShareId: Self = this.set("shareId", js.undefined)
     
     @scala.inline
-    def setSharepointIds(value: SharepointIds): Self = this.set("sharepointIds", value.asInstanceOf[js.Any])
+    def setShareIdNull: Self = this.set("shareId", null)
+    
+    @scala.inline
+    def setSharepointIds(value: NullableOption[SharepointIds]): Self = this.set("sharepointIds", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSharepointIds: Self = this.set("sharepointIds", js.undefined)
     
     @scala.inline
-    def setSiteId(value: String): Self = this.set("siteId", value.asInstanceOf[js.Any])
+    def setSharepointIdsNull: Self = this.set("sharepointIds", null)
+    
+    @scala.inline
+    def setSiteId(value: NullableOption[String]): Self = this.set("siteId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSiteId: Self = this.set("siteId", js.undefined)
+    
+    @scala.inline
+    def setSiteIdNull: Self = this.set("siteId", null)
   }
 }

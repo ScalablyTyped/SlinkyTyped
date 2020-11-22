@@ -8,19 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookTableColumn extends Entity {
   
   // Retrieve the filter applied to the column. Read-only.
-  var filter: js.UndefOr[WorkbookFilter] = js.native
+  var filter: js.UndefOr[NullableOption[WorkbookFilter]] = js.native
   
   // Returns the index number of the column within the columns collection of the table. Zero-indexed. Read-only.
   var index: js.UndefOr[Double] = js.native
   
   // Returns the name of the table column.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell
     * that contain an error will return the error string.
     */
-  var values: js.UndefOr[js.Any] = js.native
+  var values: js.UndefOr[NullableOption[_]] = js.native
 }
 object WorkbookTableColumn {
   
@@ -46,10 +46,13 @@ object WorkbookTableColumn {
     }
     
     @scala.inline
-    def setFilter(value: WorkbookFilter): Self = this.set("filter", value.asInstanceOf[js.Any])
+    def setFilter(value: NullableOption[WorkbookFilter]): Self = this.set("filter", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFilter: Self = this.set("filter", js.undefined)
+    
+    @scala.inline
+    def setFilterNull: Self = this.set("filter", null)
     
     @scala.inline
     def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
@@ -58,15 +61,21 @@ object WorkbookTableColumn {
     def deleteIndex: Self = this.set("index", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setValues(value: js.Any): Self = this.set("values", value.asInstanceOf[js.Any])
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
+    def setValues(value: NullableOption[_]): Self = this.set("values", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValues: Self = this.set("values", js.undefined)
+    
+    @scala.inline
+    def setValuesNull: Self = this.set("values", null)
   }
 }

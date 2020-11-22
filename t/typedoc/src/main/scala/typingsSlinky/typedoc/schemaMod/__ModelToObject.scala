@@ -1,6 +1,9 @@
 package typingsSlinky.typedoc.schemaMod
 
 import typingsSlinky.typedoc.abstractMod.ReflectionKind
+import typingsSlinky.typedoc.typedocStrings.keyof
+import typingsSlinky.typedoc.typedocStrings.readonly
+import typingsSlinky.typedoc.typedocStrings.unique
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -250,7 +253,7 @@ object __ModelToObject {
   
   @scala.inline
   def TypeOperatorType[T](
-    operator: (ModelToObject[/* "keyof" */ String]) | (/* "keyof" */ String),
+    operator: (ModelToObject[keyof | unique | readonly]) | keyof | unique | readonly,
     target: ModelToObject[typingsSlinky.typedoc.typesAbstractMod.Type] | typingsSlinky.typedoc.typesAbstractMod.Type,
     `type`: (ModelToObject[/* "typeOperator" */ String]) | (/* "typeOperator" */ String)
   ): __ModelToObject[T] = {

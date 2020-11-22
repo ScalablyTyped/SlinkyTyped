@@ -1,7 +1,7 @@
 package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
-import typingsSlinky.reactNative.anon.AnimatedHeight
+import typingsSlinky.reactNative.anon.Width
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -273,7 +273,7 @@ trait ScrollResponderMixin extends SubscribableMixin {
     *
     * @platform ios
     */
-  def scrollResponderZoomTo(rect: AnimatedHeight): Unit = js.native
-  def scrollResponderZoomTo(rect: AnimatedHeight,  // deprecated, put this inside the rect argument instead
+  def scrollResponderZoomTo(rect: Width): Unit = js.native
+  def scrollResponderZoomTo(rect: Width,  // deprecated, put this inside the rect argument instead
   animated: Boolean): Unit = js.native
 }

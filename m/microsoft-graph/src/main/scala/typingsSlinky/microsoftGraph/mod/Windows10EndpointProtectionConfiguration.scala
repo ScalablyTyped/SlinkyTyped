@@ -63,28 +63,28 @@ trait Windows10EndpointProtectionConfiguration extends DeviceConfiguration {
   var bitLockerEncryptDevice: js.UndefOr[Boolean] = js.native
   
   // BitLocker Removable Drive Policy.
-  var bitLockerRemovableDrivePolicy: js.UndefOr[BitLockerRemovableDrivePolicy] = js.native
+  var bitLockerRemovableDrivePolicy: js.UndefOr[NullableOption[BitLockerRemovableDrivePolicy]] = js.native
   
   // List of folder paths to be added to the list of protected folders
-  var defenderAdditionalGuardedFolders: js.UndefOr[js.Array[String]] = js.native
+  var defenderAdditionalGuardedFolders: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // List of exe files and folders to be excluded from attack surface reduction rules
-  var defenderAttackSurfaceReductionExcludedPaths: js.UndefOr[js.Array[String]] = js.native
+  var defenderAttackSurfaceReductionExcludedPaths: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // Xml content containing information regarding exploit protection details.
-  var defenderExploitProtectionXml: js.UndefOr[Double] = js.native
+  var defenderExploitProtectionXml: js.UndefOr[NullableOption[Double]] = js.native
   
   // Name of the file from which DefenderExploitProtectionXml was obtained.
-  var defenderExploitProtectionXmlFileName: js.UndefOr[String] = js.native
+  var defenderExploitProtectionXmlFileName: js.UndefOr[NullableOption[String]] = js.native
   
   // List of paths to exe that are allowed to access protected folders
-  var defenderGuardedFoldersAllowedAppPaths: js.UndefOr[js.Array[String]] = js.native
+  var defenderGuardedFoldersAllowedAppPaths: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // Indicates whether or not to block user from overriding Exploit Protection settings.
   var defenderSecurityCenterBlockExploitProtectionOverride: js.UndefOr[Boolean] = js.native
   
   // Blocks stateful FTP connections to the device
-  var firewallBlockStatefulFTP: js.UndefOr[Boolean] = js.native
+  var firewallBlockStatefulFTP: js.UndefOr[NullableOption[Boolean]] = js.native
   
   /**
     * Specify how the certificate revocation list is to be enforced. Possible values are: deviceDefault, none, attempt,
@@ -108,13 +108,13 @@ trait Windows10EndpointProtectionConfiguration extends DeviceConfiguration {
     * Configures the idle timeout for security associations, in seconds, from 300 to 3600 inclusive. This is the period after
     * which security associations will expire and be deleted. Valid values 300 to 3600
     */
-  var firewallIdleTimeoutForSecurityAssociationInSeconds: js.UndefOr[Double] = js.native
+  var firewallIdleTimeoutForSecurityAssociationInSeconds: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * If an authentication set is not fully supported by a keying module, direct the module to ignore only unsupported
     * authentication suites rather than the entire set
     */
-  var firewallMergeKeyingModuleSettings: js.UndefOr[Boolean] = js.native
+  var firewallMergeKeyingModuleSettings: js.UndefOr[NullableOption[Boolean]] = js.native
   
   /**
     * Configures how packet queueing should be applied in the tunnel gateway scenario. Possible values are: deviceDefault,
@@ -126,13 +126,13 @@ trait Windows10EndpointProtectionConfiguration extends DeviceConfiguration {
   var firewallPreSharedKeyEncodingMethod: js.UndefOr[FirewallPreSharedKeyEncodingMethodType] = js.native
   
   // Configures the firewall profile settings for domain networks
-  var firewallProfileDomain: js.UndefOr[WindowsFirewallNetworkProfile] = js.native
+  var firewallProfileDomain: js.UndefOr[NullableOption[WindowsFirewallNetworkProfile]] = js.native
   
   // Configures the firewall profile settings for private networks
-  var firewallProfilePrivate: js.UndefOr[WindowsFirewallNetworkProfile] = js.native
+  var firewallProfilePrivate: js.UndefOr[NullableOption[WindowsFirewallNetworkProfile]] = js.native
   
   // Configures the firewall profile settings for public networks
-  var firewallProfilePublic: js.UndefOr[WindowsFirewallNetworkProfile] = js.native
+  var firewallProfilePublic: js.UndefOr[NullableOption[WindowsFirewallNetworkProfile]] = js.native
   
   // Allows IT Admins to control whether users can ignore SmartScreen warnings and run malicious files.
   var smartScreenBlockOverrideForFiles: js.UndefOr[Boolean] = js.native
@@ -248,49 +248,67 @@ object Windows10EndpointProtectionConfiguration {
     def deleteBitLockerEncryptDevice: Self = this.set("bitLockerEncryptDevice", js.undefined)
     
     @scala.inline
-    def setBitLockerRemovableDrivePolicy(value: BitLockerRemovableDrivePolicy): Self = this.set("bitLockerRemovableDrivePolicy", value.asInstanceOf[js.Any])
+    def setBitLockerRemovableDrivePolicy(value: NullableOption[BitLockerRemovableDrivePolicy]): Self = this.set("bitLockerRemovableDrivePolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBitLockerRemovableDrivePolicy: Self = this.set("bitLockerRemovableDrivePolicy", js.undefined)
     
     @scala.inline
+    def setBitLockerRemovableDrivePolicyNull: Self = this.set("bitLockerRemovableDrivePolicy", null)
+    
+    @scala.inline
     def setDefenderAdditionalGuardedFoldersVarargs(value: String*): Self = this.set("defenderAdditionalGuardedFolders", js.Array(value :_*))
     
     @scala.inline
-    def setDefenderAdditionalGuardedFolders(value: js.Array[String]): Self = this.set("defenderAdditionalGuardedFolders", value.asInstanceOf[js.Any])
+    def setDefenderAdditionalGuardedFolders(value: NullableOption[js.Array[String]]): Self = this.set("defenderAdditionalGuardedFolders", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderAdditionalGuardedFolders: Self = this.set("defenderAdditionalGuardedFolders", js.undefined)
     
     @scala.inline
+    def setDefenderAdditionalGuardedFoldersNull: Self = this.set("defenderAdditionalGuardedFolders", null)
+    
+    @scala.inline
     def setDefenderAttackSurfaceReductionExcludedPathsVarargs(value: String*): Self = this.set("defenderAttackSurfaceReductionExcludedPaths", js.Array(value :_*))
     
     @scala.inline
-    def setDefenderAttackSurfaceReductionExcludedPaths(value: js.Array[String]): Self = this.set("defenderAttackSurfaceReductionExcludedPaths", value.asInstanceOf[js.Any])
+    def setDefenderAttackSurfaceReductionExcludedPaths(value: NullableOption[js.Array[String]]): Self = this.set("defenderAttackSurfaceReductionExcludedPaths", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderAttackSurfaceReductionExcludedPaths: Self = this.set("defenderAttackSurfaceReductionExcludedPaths", js.undefined)
     
     @scala.inline
-    def setDefenderExploitProtectionXml(value: Double): Self = this.set("defenderExploitProtectionXml", value.asInstanceOf[js.Any])
+    def setDefenderAttackSurfaceReductionExcludedPathsNull: Self = this.set("defenderAttackSurfaceReductionExcludedPaths", null)
+    
+    @scala.inline
+    def setDefenderExploitProtectionXml(value: NullableOption[Double]): Self = this.set("defenderExploitProtectionXml", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderExploitProtectionXml: Self = this.set("defenderExploitProtectionXml", js.undefined)
     
     @scala.inline
-    def setDefenderExploitProtectionXmlFileName(value: String): Self = this.set("defenderExploitProtectionXmlFileName", value.asInstanceOf[js.Any])
+    def setDefenderExploitProtectionXmlNull: Self = this.set("defenderExploitProtectionXml", null)
+    
+    @scala.inline
+    def setDefenderExploitProtectionXmlFileName(value: NullableOption[String]): Self = this.set("defenderExploitProtectionXmlFileName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderExploitProtectionXmlFileName: Self = this.set("defenderExploitProtectionXmlFileName", js.undefined)
     
     @scala.inline
+    def setDefenderExploitProtectionXmlFileNameNull: Self = this.set("defenderExploitProtectionXmlFileName", null)
+    
+    @scala.inline
     def setDefenderGuardedFoldersAllowedAppPathsVarargs(value: String*): Self = this.set("defenderGuardedFoldersAllowedAppPaths", js.Array(value :_*))
     
     @scala.inline
-    def setDefenderGuardedFoldersAllowedAppPaths(value: js.Array[String]): Self = this.set("defenderGuardedFoldersAllowedAppPaths", value.asInstanceOf[js.Any])
+    def setDefenderGuardedFoldersAllowedAppPaths(value: NullableOption[js.Array[String]]): Self = this.set("defenderGuardedFoldersAllowedAppPaths", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderGuardedFoldersAllowedAppPaths: Self = this.set("defenderGuardedFoldersAllowedAppPaths", js.undefined)
+    
+    @scala.inline
+    def setDefenderGuardedFoldersAllowedAppPathsNull: Self = this.set("defenderGuardedFoldersAllowedAppPaths", null)
     
     @scala.inline
     def setDefenderSecurityCenterBlockExploitProtectionOverride(value: Boolean): Self = this.set("defenderSecurityCenterBlockExploitProtectionOverride", value.asInstanceOf[js.Any])
@@ -299,10 +317,13 @@ object Windows10EndpointProtectionConfiguration {
     def deleteDefenderSecurityCenterBlockExploitProtectionOverride: Self = this.set("defenderSecurityCenterBlockExploitProtectionOverride", js.undefined)
     
     @scala.inline
-    def setFirewallBlockStatefulFTP(value: Boolean): Self = this.set("firewallBlockStatefulFTP", value.asInstanceOf[js.Any])
+    def setFirewallBlockStatefulFTP(value: NullableOption[Boolean]): Self = this.set("firewallBlockStatefulFTP", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFirewallBlockStatefulFTP: Self = this.set("firewallBlockStatefulFTP", js.undefined)
+    
+    @scala.inline
+    def setFirewallBlockStatefulFTPNull: Self = this.set("firewallBlockStatefulFTP", null)
     
     @scala.inline
     def setFirewallCertificateRevocationListCheckMethod(value: FirewallCertificateRevocationListCheckMethodType): Self = this.set("firewallCertificateRevocationListCheckMethod", value.asInstanceOf[js.Any])
@@ -335,16 +356,22 @@ object Windows10EndpointProtectionConfiguration {
     def deleteFirewallIPSecExemptionsAllowRouterDiscovery: Self = this.set("firewallIPSecExemptionsAllowRouterDiscovery", js.undefined)
     
     @scala.inline
-    def setFirewallIdleTimeoutForSecurityAssociationInSeconds(value: Double): Self = this.set("firewallIdleTimeoutForSecurityAssociationInSeconds", value.asInstanceOf[js.Any])
+    def setFirewallIdleTimeoutForSecurityAssociationInSeconds(value: NullableOption[Double]): Self = this.set("firewallIdleTimeoutForSecurityAssociationInSeconds", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFirewallIdleTimeoutForSecurityAssociationInSeconds: Self = this.set("firewallIdleTimeoutForSecurityAssociationInSeconds", js.undefined)
     
     @scala.inline
-    def setFirewallMergeKeyingModuleSettings(value: Boolean): Self = this.set("firewallMergeKeyingModuleSettings", value.asInstanceOf[js.Any])
+    def setFirewallIdleTimeoutForSecurityAssociationInSecondsNull: Self = this.set("firewallIdleTimeoutForSecurityAssociationInSeconds", null)
+    
+    @scala.inline
+    def setFirewallMergeKeyingModuleSettings(value: NullableOption[Boolean]): Self = this.set("firewallMergeKeyingModuleSettings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFirewallMergeKeyingModuleSettings: Self = this.set("firewallMergeKeyingModuleSettings", js.undefined)
+    
+    @scala.inline
+    def setFirewallMergeKeyingModuleSettingsNull: Self = this.set("firewallMergeKeyingModuleSettings", null)
     
     @scala.inline
     def setFirewallPacketQueueingMethod(value: FirewallPacketQueueingMethodType): Self = this.set("firewallPacketQueueingMethod", value.asInstanceOf[js.Any])
@@ -359,22 +386,31 @@ object Windows10EndpointProtectionConfiguration {
     def deleteFirewallPreSharedKeyEncodingMethod: Self = this.set("firewallPreSharedKeyEncodingMethod", js.undefined)
     
     @scala.inline
-    def setFirewallProfileDomain(value: WindowsFirewallNetworkProfile): Self = this.set("firewallProfileDomain", value.asInstanceOf[js.Any])
+    def setFirewallProfileDomain(value: NullableOption[WindowsFirewallNetworkProfile]): Self = this.set("firewallProfileDomain", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFirewallProfileDomain: Self = this.set("firewallProfileDomain", js.undefined)
     
     @scala.inline
-    def setFirewallProfilePrivate(value: WindowsFirewallNetworkProfile): Self = this.set("firewallProfilePrivate", value.asInstanceOf[js.Any])
+    def setFirewallProfileDomainNull: Self = this.set("firewallProfileDomain", null)
+    
+    @scala.inline
+    def setFirewallProfilePrivate(value: NullableOption[WindowsFirewallNetworkProfile]): Self = this.set("firewallProfilePrivate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFirewallProfilePrivate: Self = this.set("firewallProfilePrivate", js.undefined)
     
     @scala.inline
-    def setFirewallProfilePublic(value: WindowsFirewallNetworkProfile): Self = this.set("firewallProfilePublic", value.asInstanceOf[js.Any])
+    def setFirewallProfilePrivateNull: Self = this.set("firewallProfilePrivate", null)
+    
+    @scala.inline
+    def setFirewallProfilePublic(value: NullableOption[WindowsFirewallNetworkProfile]): Self = this.set("firewallProfilePublic", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFirewallProfilePublic: Self = this.set("firewallProfilePublic", js.undefined)
+    
+    @scala.inline
+    def setFirewallProfilePublicNull: Self = this.set("firewallProfilePublic", null)
     
     @scala.inline
     def setSmartScreenBlockOverrideForFiles(value: Boolean): Self = this.set("smartScreenBlockOverrideForFiles", value.asInstanceOf[js.Any])

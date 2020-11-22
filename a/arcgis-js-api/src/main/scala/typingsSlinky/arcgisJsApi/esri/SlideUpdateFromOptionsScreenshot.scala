@@ -13,8 +13,6 @@ trait SlideUpdateFromOptionsScreenshot extends Object {
     * The image format.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Slide.html#updateFrom)
-    *
-    * @default jpeg
     */
   var format: js.UndefOr[String] = js.native
   
@@ -22,8 +20,6 @@ trait SlideUpdateFromOptionsScreenshot extends Object {
     * The image height.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Slide.html#updateFrom)
-    *
-    * @default 75
     */
   var height: js.UndefOr[Double] = js.native
   
@@ -31,8 +27,6 @@ trait SlideUpdateFromOptionsScreenshot extends Object {
     * The image quality (due to compression).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Slide.html#updateFrom)
-    *
-    * @default 80
     */
   var quality: js.UndefOr[Double] = js.native
   
@@ -40,8 +34,6 @@ trait SlideUpdateFromOptionsScreenshot extends Object {
     * The image width.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Slide.html#updateFrom)
-    *
-    * @default 120
     */
   var width: js.UndefOr[Double] = js.native
 }

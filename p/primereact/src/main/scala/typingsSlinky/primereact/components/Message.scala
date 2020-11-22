@@ -22,6 +22,9 @@ object Message {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def content(value: /* props */ js.Object => _): this.type = set("content", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline

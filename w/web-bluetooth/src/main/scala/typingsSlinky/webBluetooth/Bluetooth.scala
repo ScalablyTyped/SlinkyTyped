@@ -37,6 +37,8 @@ trait Bluetooth
   
   def getAvailability(): js.Promise[Boolean] = js.native
   
+  def getDevices(): js.Promise[js.Array[BluetoothDevice]] = js.native
+  
   def onavailabilitychanged(ev: Event): js.Any = js.native
   
   val referringDevice: js.UndefOr[BluetoothDevice] = js.native

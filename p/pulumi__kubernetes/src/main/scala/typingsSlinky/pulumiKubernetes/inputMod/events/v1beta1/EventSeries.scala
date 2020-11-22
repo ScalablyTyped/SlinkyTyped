@@ -12,25 +12,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EventSeries extends js.Object {
   
   /**
-    * Number of occurrences in this series up to the last heartbeat time
+    * count is the number of occurrences in this series up to the last heartbeat time.
     */
   var count: Input[Double] = js.native
   
   /**
-    * Time when last Event from the series was seen before last heartbeat.
+    * lastObservedTime is the time when last Event from the series was seen before last heartbeat.
     */
   var lastObservedTime: Input[String] = js.native
   
   /**
     * Information whether this series is ongoing or finished. Deprecated. Planned removal for 1.18
     */
-  var state: Input[String] = js.native
+  var state: js.UndefOr[Input[String]] = js.native
 }
 object EventSeries {
   
   @scala.inline
-  def apply(count: Input[Double], lastObservedTime: Input[String], state: Input[String]): EventSeries = {
-    val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], lastObservedTime = lastObservedTime.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
+  def apply(count: Input[Double], lastObservedTime: Input[String]): EventSeries = {
+    val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], lastObservedTime = lastObservedTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventSeries]
   }
   
@@ -57,5 +57,8 @@ object EventSeries {
     
     @scala.inline
     def setState(value: Input[String]): Self = this.set("state", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteState: Self = this.set("state", js.undefined)
   }
 }

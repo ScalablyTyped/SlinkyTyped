@@ -84,6 +84,8 @@ package object textractMod {
   
   type JobTag = java.lang.String
   
+  type KMSKeyId = java.lang.String
+  
   type MaxResults = scala.Double
   
   type NonEmptyString = java.lang.String
@@ -101,6 +103,7 @@ package object textractMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.VALUE
     - typingsSlinky.awsSdk.awsSdkStrings.CHILD
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPLEX_FEATURES
     - java.lang.String
   */
   type RelationshipType = typingsSlinky.awsSdk.textractMod._RelationshipType | java.lang.String
@@ -125,6 +128,13 @@ package object textractMod {
   type StatusMessage = java.lang.String
   
   type String = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.HANDWRITING
+    - typingsSlinky.awsSdk.awsSdkStrings.PRINTED
+    - java.lang.String
+  */
+  type TextType = typingsSlinky.awsSdk.textractMod._TextType | java.lang.String
   
   type UInteger = scala.Double
   

@@ -10,11 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait meshUtilsCreateFromElevationOptions extends Object {
   
   /**
-    * Controls the horizontal resolution (cell size) in meters from which elevation data is sampled (defaults to `auto`). See [ElevationLayer.queryElevation](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#queryElevation) for more details on the different settings.
+    * Controls the horizontal resolution (cell size) in meters from which elevation data is sampled (defaults to `auto`).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-meshUtils.html#createFromElevation)
-    *
-    * @default auto
     */
   var demResolution: js.UndefOr[Double | String] = js.native
 }

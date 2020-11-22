@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Folder extends js.Object {
   
   // Number of children contained immediately within this container.
-  var childCount: js.UndefOr[Double] = js.native
+  var childCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // A collection of properties defining the recommended view for the folder.
-  var view: js.UndefOr[FolderView] = js.native
+  var view: js.UndefOr[NullableOption[FolderView]] = js.native
 }
 object Folder {
   
@@ -37,15 +37,21 @@ object Folder {
     }
     
     @scala.inline
-    def setChildCount(value: Double): Self = this.set("childCount", value.asInstanceOf[js.Any])
+    def setChildCount(value: NullableOption[Double]): Self = this.set("childCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteChildCount: Self = this.set("childCount", js.undefined)
     
     @scala.inline
-    def setView(value: FolderView): Self = this.set("view", value.asInstanceOf[js.Any])
+    def setChildCountNull: Self = this.set("childCount", null)
+    
+    @scala.inline
+    def setView(value: NullableOption[FolderView]): Self = this.set("view", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteView: Self = this.set("view", js.undefined)
+    
+    @scala.inline
+    def setViewNull: Self = this.set("view", null)
   }
 }

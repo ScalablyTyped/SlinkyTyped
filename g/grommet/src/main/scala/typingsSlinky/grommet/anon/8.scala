@@ -1,5 +1,6 @@
 package typingsSlinky.grommet.anon
 
+import typingsSlinky.grommet.utilsMod.ColorType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `8` extends js.Object {
   
-  var radius: js.UndefOr[String] = js.native
+  var background: js.UndefOr[ColorType | `7`] = js.native
+  
+  var color: js.UndefOr[ColorType] = js.native
 }
 object `8` {
   
@@ -33,9 +36,15 @@ object `8` {
     }
     
     @scala.inline
-    def setRadius(value: String): Self = this.set("radius", value.asInstanceOf[js.Any])
+    def setBackground(value: ColorType | `7`): Self = this.set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRadius: Self = this.set("radius", js.undefined)
+    def deleteBackground: Self = this.set("background", js.undefined)
+    
+    @scala.inline
+    def setColor(value: ColorType): Self = this.set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
   }
 }

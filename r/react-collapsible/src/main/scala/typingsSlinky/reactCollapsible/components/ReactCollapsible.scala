@@ -21,8 +21,13 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -223,7 +228,9 @@ object ReactCollapsible {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -325,6 +332,9 @@ object ReactCollapsible {
     def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def containerElementProps(value: js.Object): this.type = set("containerElementProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -332,6 +342,9 @@ object ReactCollapsible {
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def contentHiddenWhenClosed(value: Boolean): this.type = set("contentHiddenWhenClosed", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentInnerClassName(value: String): this.type = set("contentInnerClassName", value.asInstanceOf[js.Any])
@@ -961,6 +974,9 @@ object ReactCollapsible {
     
     @scala.inline
     def triggerDisabled(value: Boolean): this.type = set("triggerDisabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def triggerElementProps(value: js.Object): this.type = set("triggerElementProps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def triggerOpenedClassName(value: String): this.type = set("triggerOpenedClassName", value.asInstanceOf[js.Any])

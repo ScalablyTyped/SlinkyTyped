@@ -6,7 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("yandex-maps", "Circle")
 @js.native
-class Circle protected () extends GeoObject_ {
+class Circle protected ()
+  extends GeoObject_[ICircleGeometry, js.Object] {
   def this(geometry: js.Array[js.Array[js.Array[js.Array[ICircleGeometry]] | Double]]) = this()
   def this(geometry: js.Object) = this()
   def this(geometry: js.Array[js.Array[js.Array[js.Array[ICircleGeometry]] | Double]], properties: js.Object) = this()

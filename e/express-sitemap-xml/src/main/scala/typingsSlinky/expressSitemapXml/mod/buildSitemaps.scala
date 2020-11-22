@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object buildSitemaps extends js.Object {
   
   /**
-    *
+    * @async
     * Create an object where the keys are sitemap URLs to be served by the server
     * and the values are strings of sitemap XML content
     */

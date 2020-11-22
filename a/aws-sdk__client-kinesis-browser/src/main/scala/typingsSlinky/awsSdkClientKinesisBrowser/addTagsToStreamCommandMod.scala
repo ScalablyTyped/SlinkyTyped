@@ -1,12 +1,10 @@
 package typingsSlinky.awsSdkClientKinesisBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientKinesisBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.kinesisConfigurationMod.KinesisResolvedConfiguration
 import typingsSlinky.awsSdkClientKinesisBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.typesAddTagsToStreamInputMod.AddTagsToStreamInput
 import typingsSlinky.awsSdkClientKinesisBrowser.typesAddTagsToStreamOutputMod.AddTagsToStreamOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
@@ -23,15 +21,12 @@ object addTagsToStreamCommandMod extends js.Object {
           AddTagsToStreamInput, 
           OutputTypesUnion, 
           AddTagsToStreamOutput, 
-          KinesisResolvedConfiguration, 
-          Blob
+          KinesisResolvedConfiguration
         ] {
     def this(input: AddTagsToStreamInput) = this()
     
-    val middlewareStack: MiddlewareStack[AddTagsToStreamInput, AddTagsToStreamOutput, Blob] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any,
       configuration: KinesisResolvedConfiguration
     ): Handler[AddTagsToStreamInput, AddTagsToStreamOutput] = js.native
   }

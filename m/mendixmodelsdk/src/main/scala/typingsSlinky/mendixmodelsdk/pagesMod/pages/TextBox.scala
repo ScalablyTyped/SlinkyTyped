@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -9,12 +10,13 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayout
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallArgument
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/text-box relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/text-box relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.TextBox")
 @js.native
@@ -24,8 +26,8 @@ class TextBox protected () extends TextWidget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -56,14 +58,23 @@ class TextBox protected () extends TextWidget {
   def keyboardType: KeyboardType = js.native
   def keyboardType_=(newValue: KeyboardType): Unit = js.native
   
-  @JSName("model")
-  var model_FTextBox: IModel = js.native
-  
   /**
     * In version 8.7.0: introduced
     */
   def onEnterKeyPressAction: ClientAction = js.native
   def onEnterKeyPressAction_=(newValue: ClientAction): Unit = js.native
+  
+  /**
+    * In version 8.15.0: introduced
+    */
+  def submitBehaviour: SubmitBehaviourType = js.native
+  def submitBehaviour_=(newValue: SubmitBehaviourType): Unit = js.native
+  
+  /**
+    * In version 8.15.0: introduced
+    */
+  def submitOnInputDelay: Double = js.native
+  def submitOnInputDelay_=(newValue: Double): Unit = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.TextBox")

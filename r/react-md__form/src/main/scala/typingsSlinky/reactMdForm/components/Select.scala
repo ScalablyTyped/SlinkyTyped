@@ -27,8 +27,13 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdForm.formThemeProviderMod.FormTheme
 import typingsSlinky.reactMdForm.formThemeProviderMod.FormUnderlineDirection
 import typingsSlinky.reactMdForm.listboxMod.ListboxChangeEventData
+import typingsSlinky.reactMdForm.reactMdFormStrings.`additions removals`
 import typingsSlinky.reactMdForm.reactMdFormStrings.`additions text`
 import typingsSlinky.reactMdForm.reactMdFormStrings.`inline`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`removals additions`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`removals text`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`text additions`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`text removals`
 import typingsSlinky.reactMdForm.reactMdFormStrings.additions
 import typingsSlinky.reactMdForm.reactMdFormStrings.all
 import typingsSlinky.reactMdForm.reactMdFormStrings.ascending
@@ -207,7 +212,9 @@ object Select {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

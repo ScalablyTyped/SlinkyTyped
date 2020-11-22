@@ -3,10 +3,10 @@ package typingsSlinky.babylonjs
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.File
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.babylonjs.babylonjsBooleans.`true`
 import typingsSlinky.babylonjs.engineMod.Engine
-import typingsSlinky.babylonjs.sceneLoaderMod.SceneLoaderProgressEvent
+import typingsSlinky.babylonjs.sceneLoaderMod.ISceneLoaderProgressEvent
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,14 +31,16 @@ object filesInputMod extends js.Object {
       */
     def this(
       engine: Engine,
-      scene: Scene,
-      sceneLoadedCallback: js.Function2[/* sceneFile */ File, /* scene */ Scene, Unit],
-      progressCallback: js.Function1[/* progress */ SceneLoaderProgressEvent, Unit],
-      additionalRenderLoopLogicCallback: js.Function0[Unit],
-      textureLoadingCallback: js.Function1[/* remaining */ Double, Unit],
-      startingProcessingFilesCallback: js.Function1[/* files */ js.UndefOr[js.Array[File]], Unit],
-      onReloadCallback: js.Function1[/* sceneFile */ File, Unit],
-      errorCallback: js.Function3[/* sceneFile */ File, /* scene */ Scene, /* message */ String, Unit]
+      scene: Nullable[Scene],
+      sceneLoadedCallback: Nullable[js.Function2[/* sceneFile */ File, /* scene */ Scene, Unit]],
+      progressCallback: Nullable[js.Function1[/* progress */ ISceneLoaderProgressEvent, Unit]],
+      additionalRenderLoopLogicCallback: Nullable[js.Function0[Unit]],
+      textureLoadingCallback: Nullable[js.Function1[/* remaining */ Double, Unit]],
+      startingProcessingFilesCallback: Nullable[js.Function1[/* files */ js.UndefOr[js.Array[File]], Unit]],
+      onReloadCallback: Nullable[js.Function1[/* sceneFile */ File, Unit]],
+      errorCallback: Nullable[
+            js.Function3[/* sceneFile */ File, /* scene */ Nullable[Scene], /* message */ String, Unit]
+          ]
     ) = this()
     
     var _additionalRenderLoopLogicCallback: js.Any = js.native
@@ -86,6 +88,9 @@ object filesInputMod extends js.Object {
     
     var drop: js.Any = js.native
     
+    /** Gets the current list of files to load */
+    def filesToLoad: js.Array[File] = js.native
+    
     /**
       * Load files from a drop event
       * @param event defines the drop event to use as source
@@ -101,7 +106,7 @@ object filesInputMod extends js.Object {
     /**
       * Callback called when a file is processed
       */
-    def onProcessFileCallback(file: File, name: String, extension: String): `true` = js.native
+    def onProcessFileCallback(file: File, name: String, extension: String): Boolean = js.native
     
     /**
       * Reload the current scene from the loaded files

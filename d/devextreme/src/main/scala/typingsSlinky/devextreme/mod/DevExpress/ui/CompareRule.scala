@@ -24,24 +24,36 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CompareRule extends js.Object {
   
-  /** @name CompareRule.comparisonTarget */
+  /**
+    * [descr:CompareRule.comparisonTarget]
+    */
   var comparisonTarget: js.UndefOr[js.Function0[_]] = js.native
   
-  /** @name CompareRule.comparisonType */
+  /**
+    * [descr:CompareRule.comparisonType]
+    */
   var comparisonType: js.UndefOr[
     ExclamationmarkEqualssign | ExclamationmarkEqualssignEqualssign | Lessthansign | LessthansignEqualssign | EqualssignEqualssign | EqualssignEqualssignEqualssign | Greaterthansign | GreaterthansignEqualssign
   ] = js.native
   
-  /** @name CompareRule.ignoreEmptyValue */
+  /**
+    * [descr:CompareRule.ignoreEmptyValue]
+    */
   var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
   
-  /** @name CompareRule.message */
+  /**
+    * [descr:CompareRule.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name CompareRule.reevaluate */
+  /**
+    * [descr:CompareRule.reevaluate]
+    */
   var reevaluate: js.UndefOr[Boolean] = js.native
   
-  /** @name CompareRule.type */
+  /**
+    * [descr:CompareRule.type]
+    */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native

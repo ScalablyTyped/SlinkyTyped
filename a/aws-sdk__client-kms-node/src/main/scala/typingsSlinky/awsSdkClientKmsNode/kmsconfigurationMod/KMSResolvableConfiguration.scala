@@ -1,7 +1,6 @@
 package typingsSlinky.awsSdkClientKmsNode.kmsconfigurationMod
 
-import typingsSlinky.awsSdkTypes.marshallerMod.RequestSerializer
-import typingsSlinky.awsSdkTypes.unmarshallerMod.ResponseParser
+import typingsSlinky.awsSdkTypes.serdeMod.RequestSerializer
 import typingsSlinky.awsSdkTypes.utilMod.Provider
 import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
@@ -24,15 +23,15 @@ trait KMSResolvableConfiguration extends KMSConfiguration {
   /**
     * The parser to use when converting HTTP responses to SDK output types
     */
-  var parser: ResponseParser[Readable] = js.native
+  var parser: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.ResponseParser<_stream.Readable> */ js.Any = js.native
   
   /**
     * The serializer to use when converting SDK input to HTTP requests
     */
-  def serializer(): js.Promise[RequestSerializer[Readable]] = js.native
+  def serializer(): js.Promise[RequestSerializer[Readable, _]] = js.native
   /**
     * The serializer to use when converting SDK input to HTTP requests
     */
   @JSName("serializer")
-  var serializer_Original: Provider[RequestSerializer[Readable]] = js.native
+  var serializer_Original: Provider[RequestSerializer[Readable, _]] = js.native
 }

@@ -5,6 +5,7 @@ import typingsSlinky.nodeZendesk.mod.Tickets.Priority
 import typingsSlinky.nodeZendesk.mod.Tickets.Status
 import typingsSlinky.nodeZendesk.mod.Tickets.TicketType
 import typingsSlinky.nodeZendesk.mod.Tickets.ViaChannel
+import typingsSlinky.nodeZendesk.mod.Users.Fields.UserFieldType
 import typingsSlinky.nodeZendesk.mod.Users.Identities.DeliverableState
 import typingsSlinky.nodeZendesk.mod.Users.Identities.IdentityType
 import typingsSlinky.nodeZendesk.mod.Users.Role
@@ -37,10 +38,19 @@ object nodeZendeskStrings {
   def assigned: assigned = "assigned".asInstanceOf[assigned]
   
   @scala.inline
+  def checkbox: checkbox = "checkbox".asInstanceOf[checkbox]
+  
+  @scala.inline
   def closed: closed = "closed".asInstanceOf[closed]
   
   @scala.inline
   def completed: completed = "completed".asInstanceOf[completed]
+  
+  @scala.inline
+  def date: date = "date".asInstanceOf[date]
+  
+  @scala.inline
+  def decimal: decimal = "decimal".asInstanceOf[decimal]
   
   @scala.inline
   def deliverable: deliverable = "deliverable".asInstanceOf[deliverable]
@@ -71,6 +81,9 @@ object nodeZendeskStrings {
   
   @scala.inline
   def incident: incident = "incident".asInstanceOf[incident]
+  
+  @scala.inline
+  def integer: integer = "integer".asInstanceOf[integer]
   
   @scala.inline
   def killed: killed = "killed".asInstanceOf[killed]
@@ -109,6 +122,9 @@ object nodeZendeskStrings {
   def queued: queued = "queued".asInstanceOf[queued]
   
   @scala.inline
+  def regexp: regexp = "regexp".asInstanceOf[regexp]
+  
+  @scala.inline
   def requested: requested = "requested".asInstanceOf[requested]
   
   @scala.inline
@@ -124,7 +140,16 @@ object nodeZendeskStrings {
   def system: system = "system".asInstanceOf[system]
   
   @scala.inline
+  def tagger: tagger = "tagger".asInstanceOf[tagger]
+  
+  @scala.inline
   def task: task = "task".asInstanceOf[task]
+  
+  @scala.inline
+  def text: text = "text".asInstanceOf[text]
+  
+  @scala.inline
+  def textarea: textarea = "textarea".asInstanceOf[textarea]
   
   @scala.inline
   def undeliverable: undeliverable = "undeliverable".asInstanceOf[undeliverable]
@@ -160,11 +185,20 @@ object nodeZendeskStrings {
   sealed trait assigned extends TicketRestriction
   
   @js.native
+  sealed trait checkbox extends UserFieldType
+  
+  @js.native
   sealed trait closed extends Status
   
   @js.native
   sealed trait completed
     extends typingsSlinky.nodeZendesk.mod.JobStatuses.Status
+  
+  @js.native
+  sealed trait date extends UserFieldType
+  
+  @js.native
+  sealed trait decimal extends UserFieldType
   
   @js.native
   sealed trait deliverable extends DeliverableState
@@ -196,6 +230,9 @@ object nodeZendeskStrings {
   
   @js.native
   sealed trait incident extends TicketType
+  
+  @js.native
+  sealed trait integer extends UserFieldType
   
   @js.native
   sealed trait killed
@@ -236,6 +273,9 @@ object nodeZendeskStrings {
     extends typingsSlinky.nodeZendesk.mod.JobStatuses.Status
   
   @js.native
+  sealed trait regexp extends UserFieldType
+  
+  @js.native
   sealed trait requested extends TicketRestriction
   
   @js.native
@@ -251,7 +291,16 @@ object nodeZendeskStrings {
   sealed trait system extends ViaChannel
   
   @js.native
+  sealed trait tagger extends UserFieldType
+  
+  @js.native
   sealed trait task extends TicketType
+  
+  @js.native
+  sealed trait text extends UserFieldType
+  
+  @js.native
+  sealed trait textarea extends UserFieldType
   
   @js.native
   sealed trait undeliverable extends DeliverableState

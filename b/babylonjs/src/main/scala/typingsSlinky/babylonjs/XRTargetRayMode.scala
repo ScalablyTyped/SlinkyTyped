@@ -4,6 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * InputSource target ray modes
+  */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babylonjs.babylonjsStrings.gaze
   - typingsSlinky.babylonjs.babylonjsStrings.`tracked-pointer`

@@ -11,13 +11,13 @@ trait WorkbookSortField extends js.Object {
   var ascending: js.UndefOr[Boolean] = js.native
   
   // Represents the color that is the target of the condition if the sorting is on font or cell color.
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[NullableOption[String]] = js.native
   
   // Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
   var dataOption: js.UndefOr[String] = js.native
   
   // Represents the icon that is the target of the condition if the sorting is on the cell's icon.
-  var icon: js.UndefOr[WorkbookIcon] = js.native
+  var icon: js.UndefOr[NullableOption[WorkbookIcon]] = js.native
   
   /**
     * Represents the column (or row, depending on the sort orientation) that the condition is on. Represented as an offset
@@ -58,10 +58,13 @@ object WorkbookSortField {
     def deleteAscending: Self = this.set("ascending", js.undefined)
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: NullableOption[String]): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
+    
+    @scala.inline
+    def setColorNull: Self = this.set("color", null)
     
     @scala.inline
     def setDataOption(value: String): Self = this.set("dataOption", value.asInstanceOf[js.Any])
@@ -70,10 +73,13 @@ object WorkbookSortField {
     def deleteDataOption: Self = this.set("dataOption", js.undefined)
     
     @scala.inline
-    def setIcon(value: WorkbookIcon): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: NullableOption[WorkbookIcon]): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
+    
+    @scala.inline
+    def setIconNull: Self = this.set("icon", null)
     
     @scala.inline
     def setKey(value: Double): Self = this.set("key", value.asInstanceOf[js.Any])

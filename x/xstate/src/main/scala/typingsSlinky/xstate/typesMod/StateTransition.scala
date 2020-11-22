@@ -1,6 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
-import typingsSlinky.xstate.anon.Context
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateMod.State
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import scala.scalajs.js
@@ -12,16 +12,16 @@ trait StateTransition[TContext, TEvent /* <: EventObject */] extends js.Object {
   
   var actions: js.Array[ActionObject[TContext, TEvent]] = js.native
   
-  var configuration: js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+  var configuration: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]] = js.native
   
-  var entrySet: js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+  var entrySet: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]] = js.native
   
-  var exitSet: js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+  var exitSet: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]] = js.native
   
   /**
     * The source state that preceded the transition.
     */
-  var source: js.UndefOr[State[TContext, EventObject, _, Context[TContext]]] = js.native
+  var source: js.UndefOr[State[TContext, EventObject, _, ContextTContext[TContext]]] = js.native
   
   var transitions: js.Array[TransitionDefinition[TContext, TEvent]] = js.native
 }
@@ -30,9 +30,9 @@ object StateTransition {
   @scala.inline
   def apply[TContext, TEvent /* <: EventObject */](
     actions: js.Array[ActionObject[TContext, TEvent]],
-    configuration: js.Array[StateNode[TContext, _, TEvent, _]],
-    entrySet: js.Array[StateNode[TContext, _, TEvent, _]],
-    exitSet: js.Array[StateNode[TContext, _, TEvent, _]],
+    configuration: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]],
+    entrySet: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]],
+    exitSet: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]],
     transitions: js.Array[TransitionDefinition[TContext, TEvent]]
   ): StateTransition[TContext, TEvent] = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], configuration = configuration.asInstanceOf[js.Any], entrySet = entrySet.asInstanceOf[js.Any], exitSet = exitSet.asInstanceOf[js.Any], transitions = transitions.asInstanceOf[js.Any])
@@ -61,22 +61,22 @@ object StateTransition {
     def setActions(value: js.Array[ActionObject[TContext, TEvent]]): Self = this.set("actions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setConfigurationVarargs(value: (StateNode[TContext, js.Any, TEvent, js.Any])*): Self = this.set("configuration", js.Array(value :_*))
+    def setConfigurationVarargs(value: (StateNode[TContext, js.Any, TEvent, ContextTContext[TContext]])*): Self = this.set("configuration", js.Array(value :_*))
     
     @scala.inline
-    def setConfiguration(value: js.Array[StateNode[TContext, _, TEvent, _]]): Self = this.set("configuration", value.asInstanceOf[js.Any])
+    def setConfiguration(value: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]]): Self = this.set("configuration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEntrySetVarargs(value: (StateNode[TContext, js.Any, TEvent, js.Any])*): Self = this.set("entrySet", js.Array(value :_*))
+    def setEntrySetVarargs(value: (StateNode[TContext, js.Any, TEvent, ContextTContext[TContext]])*): Self = this.set("entrySet", js.Array(value :_*))
     
     @scala.inline
-    def setEntrySet(value: js.Array[StateNode[TContext, _, TEvent, _]]): Self = this.set("entrySet", value.asInstanceOf[js.Any])
+    def setEntrySet(value: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]]): Self = this.set("entrySet", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExitSetVarargs(value: (StateNode[TContext, js.Any, TEvent, js.Any])*): Self = this.set("exitSet", js.Array(value :_*))
+    def setExitSetVarargs(value: (StateNode[TContext, js.Any, TEvent, ContextTContext[TContext]])*): Self = this.set("exitSet", js.Array(value :_*))
     
     @scala.inline
-    def setExitSet(value: js.Array[StateNode[TContext, _, TEvent, _]]): Self = this.set("exitSet", value.asInstanceOf[js.Any])
+    def setExitSet(value: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]]): Self = this.set("exitSet", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTransitionsVarargs(value: (TransitionDefinition[TContext, TEvent])*): Self = this.set("transitions", js.Array(value :_*))
@@ -85,7 +85,7 @@ object StateTransition {
     def setTransitions(value: js.Array[TransitionDefinition[TContext, TEvent]]): Self = this.set("transitions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSource(value: State[TContext, EventObject, _, Context[TContext]]): Self = this.set("source", value.asInstanceOf[js.Any])
+    def setSource(value: State[TContext, EventObject, _, ContextTContext[TContext]]): Self = this.set("source", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSource: Self = this.set("source", js.undefined)

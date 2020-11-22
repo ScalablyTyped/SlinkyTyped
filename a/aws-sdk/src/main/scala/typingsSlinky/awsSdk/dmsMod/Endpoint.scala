@@ -22,6 +22,8 @@ trait Endpoint extends js.Object {
     */
   var DmsTransferSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.DmsTransferSettings] = js.native
   
+  var DocDbSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.DocDbSettings] = js.native
+  
   /**
     * The settings for the DynamoDB target endpoint. For more information, see the DynamoDBSettings structure.
     */
@@ -207,6 +209,12 @@ object Endpoint {
     
     @scala.inline
     def deleteDmsTransferSettings: Self = this.set("DmsTransferSettings", js.undefined)
+    
+    @scala.inline
+    def setDocDbSettings(value: DocDbSettings): Self = this.set("DocDbSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDocDbSettings: Self = this.set("DocDbSettings", js.undefined)
     
     @scala.inline
     def setDynamoDbSettings(value: DynamoDbSettings): Self = this.set("DynamoDbSettings", value.asInstanceOf[js.Any])

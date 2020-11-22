@@ -13,13 +13,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait JobArgs extends js.Object {
   
   /**
-    * **DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-    *
-    * @deprecated Please use attribute `max_capacity' instead. This attribute might be removed in future releases.
-    */
-  val allocatedCapacity: js.UndefOr[Input[Double]] = js.native
-  
-  /**
     * The command of the job. Defined below.
     */
   val command: Input[JobCommand] = js.native
@@ -50,7 +43,7 @@ trait JobArgs extends js.Object {
   val glueVersion: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
+    * The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `numberOfWorkers` and `workerType` arguments instead with `glueVersion` `2.0` and above.
     */
   val maxCapacity: js.UndefOr[Input[Double]] = js.native
   
@@ -63,6 +56,11 @@ trait JobArgs extends js.Object {
     * The name you assign to this job. It must be unique in your account.
     */
   val name: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Non-overridable arguments for this job, specified as name-value pairs.
+    */
+  val nonOverridableArguments: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
     * Notification property of the job. Defined below.
@@ -129,12 +127,6 @@ object JobArgs {
     def setRoleArn(value: Input[String]): Self = this.set("roleArn", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAllocatedCapacity(value: Input[Double]): Self = this.set("allocatedCapacity", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAllocatedCapacity: Self = this.set("allocatedCapacity", js.undefined)
-    
-    @scala.inline
     def setConnectionsVarargs(value: Input[String]*): Self = this.set("connections", js.Array(value :_*))
     
     @scala.inline
@@ -184,6 +176,12 @@ object JobArgs {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setNonOverridableArguments(value: Input[StringDictionary[Input[String]]]): Self = this.set("nonOverridableArguments", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNonOverridableArguments: Self = this.set("nonOverridableArguments", js.undefined)
     
     @scala.inline
     def setNotificationProperty(value: Input[JobNotificationProperty]): Self = this.set("notificationProperty", value.asInstanceOf[js.Any])

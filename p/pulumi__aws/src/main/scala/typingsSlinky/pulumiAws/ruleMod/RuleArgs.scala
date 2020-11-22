@@ -22,8 +22,7 @@ trait RuleArgs extends js.Object {
   val inputParameters: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The frequency that you want AWS Config to run evaluations for a rule that
-    * is triggered periodically. If specified, requires `messageType` to be `ScheduledNotification`.
+    * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `messageType` to be `ScheduledNotification`.
     */
   val maximumExecutionFrequency: js.UndefOr[Input[String]] = js.native
   
@@ -38,8 +37,7 @@ trait RuleArgs extends js.Object {
   val scope: js.UndefOr[Input[RuleScope]] = js.native
   
   /**
-    * Source specifies the rule owner, the rule identifier, and the notifications that cause
-    * the function to evaluate your AWS resources as documented below.
+    * Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
     */
   val source: Input[RuleSource] = js.native
   

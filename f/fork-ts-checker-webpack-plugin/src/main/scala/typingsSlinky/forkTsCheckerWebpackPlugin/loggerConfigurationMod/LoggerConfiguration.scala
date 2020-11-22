@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LoggerConfiguration extends js.Object {
   
+  var devServer: Boolean = js.native
+  
   var infrastructure: Logger = js.native
   
   var issues: Logger = js.native
@@ -15,8 +17,8 @@ trait LoggerConfiguration extends js.Object {
 object LoggerConfiguration {
   
   @scala.inline
-  def apply(infrastructure: Logger, issues: Logger): LoggerConfiguration = {
-    val __obj = js.Dynamic.literal(infrastructure = infrastructure.asInstanceOf[js.Any], issues = issues.asInstanceOf[js.Any])
+  def apply(devServer: Boolean, infrastructure: Logger, issues: Logger): LoggerConfiguration = {
+    val __obj = js.Dynamic.literal(devServer = devServer.asInstanceOf[js.Any], infrastructure = infrastructure.asInstanceOf[js.Any], issues = issues.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoggerConfiguration]
   }
   
@@ -34,6 +36,9 @@ object LoggerConfiguration {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDevServer(value: Boolean): Self = this.set("devServer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setInfrastructure(value: Logger): Self = this.set("infrastructure", value.asInstanceOf[js.Any])

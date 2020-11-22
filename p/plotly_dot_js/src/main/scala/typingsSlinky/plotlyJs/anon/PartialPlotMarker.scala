@@ -1,9 +1,13 @@
 package typingsSlinky.plotlyJs.anon
 
+import typingsSlinky.plotlyJs.mod.ColorBar
 import typingsSlinky.plotlyJs.mod.ColorScale
 import typingsSlinky.plotlyJs.mod.MarkerSymbol
+import typingsSlinky.plotlyJs.mod.Padding
+import typingsSlinky.plotlyJs.mod.ScatterMarkerLine
 import typingsSlinky.plotlyJs.plotlyJsStrings.area
 import typingsSlinky.plotlyJs.plotlyJsStrings.diameter
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +26,7 @@ trait PartialPlotMarker extends js.Object {
   
   var color: js.UndefOr[typingsSlinky.plotlyJs.mod.Color | js.Array[typingsSlinky.plotlyJs.mod.Color]] = js.native
   
-  var colorbar: js.UndefOr[PartialColorBar] = js.native
+  var colorbar: js.UndefOr[Partial[ColorBar]] = js.native
   
   var colors: js.UndefOr[js.Array[typingsSlinky.plotlyJs.mod.Color]] = js.native
   
@@ -30,13 +34,13 @@ trait PartialPlotMarker extends js.Object {
   
   var gradient: js.UndefOr[Colorsrc] = js.native
   
-  var line: js.UndefOr[PartialScatterMarkerLine] = js.native
+  var line: js.UndefOr[Partial[ScatterMarkerLine]] = js.native
   
   var maxdisplayed: js.UndefOr[Double] = js.native
   
   var opacity: js.UndefOr[Double | js.Array[Double]] = js.native
   
-  var pad: js.UndefOr[PartialPadding] = js.native
+  var pad: js.UndefOr[Partial[Padding]] = js.native
   
   var reversescale: js.UndefOr[Boolean] = js.native
   
@@ -117,7 +121,7 @@ object PartialPlotMarker {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setColorbar(value: PartialColorBar): Self = this.set("colorbar", value.asInstanceOf[js.Any])
+    def setColorbar(value: Partial[ColorBar]): Self = this.set("colorbar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColorbar: Self = this.set("colorbar", js.undefined)
@@ -147,7 +151,7 @@ object PartialPlotMarker {
     def deleteGradient: Self = this.set("gradient", js.undefined)
     
     @scala.inline
-    def setLine(value: PartialScatterMarkerLine): Self = this.set("line", value.asInstanceOf[js.Any])
+    def setLine(value: Partial[ScatterMarkerLine]): Self = this.set("line", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLine: Self = this.set("line", js.undefined)
@@ -168,7 +172,7 @@ object PartialPlotMarker {
     def deleteOpacity: Self = this.set("opacity", js.undefined)
     
     @scala.inline
-    def setPad(value: PartialPadding): Self = this.set("pad", value.asInstanceOf[js.Any])
+    def setPad(value: Partial[Padding]): Self = this.set("pad", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePad: Self = this.set("pad", js.undefined)

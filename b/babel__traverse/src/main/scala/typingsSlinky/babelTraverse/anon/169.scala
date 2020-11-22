@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.CatchClause
+import typingsSlinky.babelTraverse.babelTraverseStrings.JSXElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `169` extends js.Object {
   
-  var `type`: CatchClause = js.native
+  var `type`: JSXElement = js.native
 }
 object `169` {
   
   @scala.inline
-  def apply(`type`: CatchClause): `169` = {
+  def apply(`type`: JSXElement): `169` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`169`]
@@ -35,6 +35,6 @@ object `169` {
     }
     
     @scala.inline
-    def setType(value: CatchClause): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: JSXElement): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

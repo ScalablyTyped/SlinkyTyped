@@ -8,6 +8,7 @@ import typingsSlinky.babylonjs.conditionMod.Condition
 import typingsSlinky.babylonjs.nodeMod.Node
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -94,11 +95,11 @@ object actionMod extends js.Object {
   @js.native
   object Action extends js.Object {
     
+    def _GetTargetProperty(target: Node): Name = js.native
     /**
       * Internal only
       * @hidden
       */
-    def _GetTargetProperty(target: Node): Name = js.native
     def _GetTargetProperty(target: Scene): Name = js.native
     
     /**
@@ -115,7 +116,7 @@ object actionMod extends js.Object {
       * Internal only - manager for action
       * @hidden
       */
-    var _actionManager: AbstractActionManager = js.native
+    var _actionManager: Nullable[AbstractActionManager] = js.native
     
     /**
       * Internal only - executes current action event

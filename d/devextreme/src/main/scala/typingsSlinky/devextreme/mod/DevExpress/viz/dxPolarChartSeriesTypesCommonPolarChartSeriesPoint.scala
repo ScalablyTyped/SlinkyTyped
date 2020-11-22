@@ -19,34 +19,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartSeriesTypesCommonPolarChartSeriesPoint extends js.Object {
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point.border */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point.border]
+    */
   var border: js.UndefOr[ColorVisible] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point.color */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point.hoverMode */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point.hoverMode]
+    */
   var hoverMode: js.UndefOr[allArgumentPoints | allSeriesPoints | none | onlyPoint] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point.hoverStyle */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point.hoverStyle]
+    */
   var hoverStyle: js.UndefOr[Size] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point.image */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point.image]
+    */
   var image: js.UndefOr[String | Url] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point.selectionMode */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point.selectionMode]
+    */
   var selectionMode: js.UndefOr[allArgumentPoints | allSeriesPoints | none | onlyPoint] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point.selectionStyle */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point.selectionStyle]
+    */
   var selectionStyle: js.UndefOr[Size] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point.size */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point.size]
+    */
   var size: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point.symbol */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point.symbol]
+    */
   var symbol: js.UndefOr[circle | cross | polygon | square | triangle] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point.visible */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object dxPolarChartSeriesTypesCommonPolarChartSeriesPoint {

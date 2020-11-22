@@ -16,7 +16,7 @@ trait TransportRequestParams extends js.Object {
   
   var path: String = js.native
   
-  var querystring: js.UndefOr[Record[String, _]] = js.native
+  var querystring: js.UndefOr[(Record[String, _]) | String] = js.native
 }
 object TransportRequestParams {
   
@@ -63,7 +63,7 @@ object TransportRequestParams {
     def deleteBulkBody: Self = this.set("bulkBody", js.undefined)
     
     @scala.inline
-    def setQuerystring(value: Record[String, _]): Self = this.set("querystring", value.asInstanceOf[js.Any])
+    def setQuerystring(value: (Record[String, _]) | String): Self = this.set("querystring", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteQuerystring: Self = this.set("querystring", js.undefined)

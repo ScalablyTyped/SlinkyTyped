@@ -1,6 +1,8 @@
 package typingsSlinky.mendixmodelsdk.deltaUtilsMod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IContainmentInfo extends js.Object {
   
-  var element: AbstractElement = js.native
+  var element: AbstractElement[IAbstractModel, Container] = js.native
   
   var index: js.UndefOr[Double] = js.native
   
@@ -19,7 +21,7 @@ trait IContainmentInfo extends js.Object {
 object IContainmentInfo {
   
   @scala.inline
-  def apply(element: AbstractElement, parentId: String, parentPropertyName: String): IContainmentInfo = {
+  def apply(element: AbstractElement[IAbstractModel, Container], parentId: String, parentPropertyName: String): IContainmentInfo = {
     val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], parentId = parentId.asInstanceOf[js.Any], parentPropertyName = parentPropertyName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IContainmentInfo]
   }
@@ -40,7 +42,7 @@ object IContainmentInfo {
     }
     
     @scala.inline
-    def setElement(value: AbstractElement): Self = this.set("element", value.asInstanceOf[js.Any])
+    def setElement(value: AbstractElement[IAbstractModel, Container]): Self = this.set("element", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParentId(value: String): Self = this.set("parentId", value.asInstanceOf[js.Any])

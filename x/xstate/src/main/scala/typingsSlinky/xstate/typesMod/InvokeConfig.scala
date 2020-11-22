@@ -1,5 +1,7 @@
 package typingsSlinky.xstate.typesMod
 
+import typingsSlinky.xstate.anon.ContextAny
+import typingsSlinky.xstate.anon.ContextTFinalContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -48,12 +50,14 @@ trait InvokeConfig[TContext, TEvent /* <: EventObject */] extends js.Object {
   /**
     * The source of the machine to be invoked, or the machine itself.
     */
-  var src: String | (StateMachine[_, _, _, _]) | (InvokeCreator[TContext, TEvent, _]) = js.native
+  var src: String | InvokeSourceDefinition | (StateMachine[_, _, _, ContextAny]) | (InvokeCreator[TContext, TEvent, _]) = js.native
 }
 object InvokeConfig {
   
   @scala.inline
-  def apply[TContext, TEvent /* <: EventObject */](src: String | (StateMachine[_, _, _, _]) | (InvokeCreator[TContext, TEvent, _])): InvokeConfig[TContext, TEvent] = {
+  def apply[TContext, TEvent /* <: EventObject */](
+    src: String | InvokeSourceDefinition | (StateMachine[_, _, _, ContextAny]) | (InvokeCreator[TContext, TEvent, _])
+  ): InvokeConfig[TContext, TEvent] = {
     val __obj = js.Dynamic.literal(src = src.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvokeConfig[TContext, TEvent]]
   }
@@ -75,11 +79,13 @@ object InvokeConfig {
     
     @scala.inline
     def setSrcFunction3(
-      value: (TContext, TEvent, /* meta */ InvokeMeta) => js.Thenable[_] | (StateMachine[_, js.Any, js.Any, js.Any]) | Subscribable[js.Any] | InvokeCallback
+      value: (TContext, TEvent, /* meta */ InvokeMeta) => js.Thenable[_] | (StateMachine[_, js.Any, js.Any, ContextTFinalContext[_]]) | Subscribable[js.Any] | InvokeCallback
     ): Self = this.set("src", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setSrc(value: String | (StateMachine[_, _, _, _]) | (InvokeCreator[TContext, TEvent, _])): Self = this.set("src", value.asInstanceOf[js.Any])
+    def setSrc(
+      value: String | InvokeSourceDefinition | (StateMachine[_, _, _, ContextAny]) | (InvokeCreator[TContext, TEvent, _])
+    ): Self = this.set("src", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAutoForward(value: Boolean): Self = this.set("autoForward", value.asInstanceOf[js.Any])

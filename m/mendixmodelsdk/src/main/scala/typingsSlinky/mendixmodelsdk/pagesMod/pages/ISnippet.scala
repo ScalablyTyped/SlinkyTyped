@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/snippet relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/snippet relevant section in reference guide}
   */
 @js.native
 trait ISnippet extends IFormBase {

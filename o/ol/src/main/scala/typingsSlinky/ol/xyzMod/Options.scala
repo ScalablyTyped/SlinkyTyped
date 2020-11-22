@@ -23,6 +23,8 @@ trait Options extends js.Object {
   
   var crossOrigin: js.UndefOr[String] = js.native
   
+  var imageSmoothing: js.UndefOr[Boolean] = js.native
+  
   var maxResolution: js.UndefOr[Double] = js.native
   
   var maxZoom: js.UndefOr[Double] = js.native
@@ -109,6 +111,12 @@ object Options {
     def deleteCrossOrigin: Self = this.set("crossOrigin", js.undefined)
     
     @scala.inline
+    def setImageSmoothing(value: Boolean): Self = this.set("imageSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImageSmoothing: Self = this.set("imageSmoothing", js.undefined)
+    
+    @scala.inline
     def setMaxResolution(value: Double): Self = this.set("maxResolution", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -170,7 +178,7 @@ object Options {
     
     @scala.inline
     def setTileUrlFunction(
-      value: (/* p0 */ TileCoord, /* p1 */ Double, /* p2 */ typingsSlinky.ol.projectionMod.default) => String
+      value: (/* p0 */ TileCoord, /* p1 */ Double, /* p2 */ typingsSlinky.ol.projectionMod.default) => js.UndefOr[String]
     ): Self = this.set("tileUrlFunction", js.Any.fromFunction3(value))
     
     @scala.inline

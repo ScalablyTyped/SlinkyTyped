@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.blueprintjsCore.propsMod.IElementRefProps
 import typingsSlinky.blueprintjsCore.propsMod.IIntentProps
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
@@ -17,7 +18,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.blueprintjsCore.propsMod.IProps because var conflicts: className. Inlined  */ @js.native
 trait ITagProps
   extends HTMLAttributes[HTMLSpanElement]
-     with IIntentProps {
+     with IIntentProps
+     with IElementRefProps[HTMLSpanElement] {
   
   /**
     * Whether the tag should appear in an active state.
@@ -30,6 +32,11 @@ trait ITagProps
     * @default false
     */
   var fill: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * HTML title to be passed to the <Text> component
+    */
+  var htmlTitle: js.UndefOr[String] = js.native
   
   /** Name of a Blueprint UI icon (or an icon element) to render before the children. */
   var icon: js.UndefOr[IconName | MaybeElement] = js.native
@@ -123,6 +130,12 @@ object ITagProps {
     
     @scala.inline
     def deleteFill: Self = this.set("fill", js.undefined)
+    
+    @scala.inline
+    def setHtmlTitle(value: String): Self = this.set("htmlTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHtmlTitle: Self = this.set("htmlTitle", js.undefined)
     
     @scala.inline
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])

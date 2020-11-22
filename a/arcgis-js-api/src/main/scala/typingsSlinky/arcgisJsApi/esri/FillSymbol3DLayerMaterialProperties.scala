@@ -13,27 +13,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FillSymbol3DLayerMaterialProperties extends Object {
   
   /**
-    * The color of the fill. This can be autocast with an array of rgb(a) values, named string, hex string or an hsl(a) string, an object with `r`, `g`, `b`, and `a` properties, or a [Color](https://developers.arcgis.com/javascript/latest/api-reference/esri-Color.html) object.
+    * The color of the fill.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-FillSymbol3DLayer.html#material)
-    *
-    * @default white
     */
   var color: js.UndefOr[Color_ | js.Array[Double] | String] = js.native
   
   /**
-    * Specifies how the material `color` is applied to the geometry color/texture information. This property applies only to [MeshSymbol3D](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-MeshSymbol3D.html) symbols.
-    *
-    * Value | Description
-    * ------|------------
-    * tint | Applies the material `color` to the desaturated geometry/texture color.
-    * replace | Removes the geometry/texture color and applies the material `color`.
-    * multiply | Multiplies geometry/texture color value with the material `color` value. The result is a darker color. Multiplying with white keeps the geometry color the same.
-    *
+    * Specifies how the material `color` is applied to the geometry color/texture information.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-FillSymbol3DLayer.html#material)
-    *
-    * @default multiply
     */
   var colorMixMode: js.UndefOr[tint | replace | multiply] = js.native
 }

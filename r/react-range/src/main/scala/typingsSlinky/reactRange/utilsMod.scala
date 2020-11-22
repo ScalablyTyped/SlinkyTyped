@@ -23,6 +23,8 @@ object utilsMod extends js.Object {
   
   def checkInitialOverlap(values: js.Array[Double]): Unit = js.native
   
+  def getClosestThumbIndex(thumbs: js.Array[Element], clientX: Double, clientY: Double, direction: Direction): Double = js.native
+  
   def getMargin(element: Element): Bottom = js.native
   
   def getPaddingAndBorder(element: Element): Bottom = js.native

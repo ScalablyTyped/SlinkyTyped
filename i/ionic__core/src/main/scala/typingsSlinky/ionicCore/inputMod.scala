@@ -91,7 +91,7 @@ object inputMod extends js.Object {
     def connectedCallback_MInput(): Unit = js.native
     
     /**
-      * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke.
+      * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`.
       */
     var debounce: Double = js.native
     
@@ -120,6 +120,16 @@ object inputMod extends js.Object {
       */
     var enterkeyhint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
     
+    /**
+      * This is required for a WebKit bug which requires us to
+      * blur and focus an input to properly focus the input in
+      * an item with delegatesFocus. It will no longer be needed
+      * with iOS 14.
+      *
+      * @internal
+      */
+    var fireFocusEvents: Boolean = js.native
+    
     var focusChanged: js.Any = js.native
     
     /**
@@ -132,6 +142,8 @@ object inputMod extends js.Object {
     var hasFocus: Boolean = js.native
     
     var hasValue: js.Any = js.native
+    
+    var inheritedAttributes: js.Any = js.native
     
     var inputId: js.Any = js.native
     
@@ -232,7 +244,14 @@ object inputMod extends js.Object {
     var required: Boolean = js.native
     
     /**
-      * Sets focus on the specified `ion-input`. Use this method instead of the global
+      * Sets blur on the native `input` in `ion-input`. Use this method instead of the global
+      * `input.blur()`.
+      * @internal
+      */
+    def setBlur(): js.Promise[Unit] = js.native
+    
+    /**
+      * Sets focus on the native `input` in `ion-input`. Use this method instead of the global
       * `input.focus()`.
       */
     def setFocus(): js.Promise[Unit] = js.native
@@ -254,8 +273,6 @@ object inputMod extends js.Object {
       * Possible values are: `"any"` or a positive floating point number.
       */
     var step: js.UndefOr[String] = js.native
-    
-    var tabindex: js.Any = js.native
     
     /**
       * The type of control to display. The default type is text.

@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.getInvocationMod
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,25 +22,12 @@ trait GetInvocationResult extends js.Object {
     * String result of the lambda function invocation.
     */
   val result: String = js.native
-  
-  /**
-    * (**DEPRECATED**) This field is set only if result is a map of primitive types, where the map is string keys and string values.
-    *
-    * @deprecated use `result` attribute with jsondecode() function
-    */
-  val resultMap: StringDictionary[String] = js.native
 }
 object GetInvocationResult {
   
   @scala.inline
-  def apply(
-    functionName: String,
-    id: String,
-    input: String,
-    result: String,
-    resultMap: StringDictionary[String]
-  ): GetInvocationResult = {
-    val __obj = js.Dynamic.literal(functionName = functionName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any], resultMap = resultMap.asInstanceOf[js.Any])
+  def apply(functionName: String, id: String, input: String, result: String): GetInvocationResult = {
+    val __obj = js.Dynamic.literal(functionName = functionName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInvocationResult]
   }
   
@@ -71,9 +57,6 @@ object GetInvocationResult {
     
     @scala.inline
     def setResult(value: String): Self = this.set("result", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setResultMap(value: StringDictionary[String]): Self = this.set("resultMap", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setQualifier(value: String): Self = this.set("qualifier", value.asInstanceOf[js.Any])

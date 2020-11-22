@@ -44,5 +44,5 @@ object ^ extends js.Object {
   def callCount(fn: js.Function1[/* repeated */ js.Any, _]): Double = js.native
   
   // TODO: Remove this for the next major release
-  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof oneTime */ js.Any = js.native
+  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof onetime */ js.Any = js.native
 }

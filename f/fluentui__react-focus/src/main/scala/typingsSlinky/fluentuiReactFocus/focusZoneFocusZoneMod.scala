@@ -59,6 +59,8 @@ object focusZoneFocusZoneMod extends js.Object {
       */
     var _lastIndexPath: js.Any = js.native
     
+    var _mergedRef: js.Any = js.native
+    
     var _moveFocus: js.Any = js.native
     
     var _moveFocusDown: js.Any = js.native

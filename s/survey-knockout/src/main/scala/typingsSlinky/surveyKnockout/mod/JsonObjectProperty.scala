@@ -32,6 +32,8 @@ class JsonObjectProperty protected () extends IObject {
   
   var classNamePart: String = js.native
   
+  var dataList: js.Array[String] = js.native
+  
   var defaultValue: js.Any = js.native
   
   var defaultValueValue: js.Any = js.native
@@ -59,7 +61,11 @@ class JsonObjectProperty protected () extends IObject {
   
   val hasToUseSetValue: String | (js.Function3[/* obj */ js.Any, /* value */ js.Any, /* jsonConv */ JsonObject, _]) = js.native
   
+  val id: Double = js.native
+  
   var isArray: Boolean = js.native
+  
+  var isBindable: Boolean = js.native
   
   var isCustom: Boolean = js.native
   
@@ -74,6 +80,8 @@ class JsonObjectProperty protected () extends IObject {
   var isRequired: Boolean = js.native
   
   var isSerializable: Boolean = js.native
+  
+  var isUnique: Boolean = js.native
   
   def isVisible(layout: String): Boolean = js.native
   def isVisible(layout: String, obj: js.Any): Boolean = js.native
@@ -99,6 +107,8 @@ class JsonObjectProperty protected () extends IObject {
   def onSetValue(obj: js.Any, value: js.Any, jsonConv: JsonObject): js.Any = js.native
   
   var readOnly: Boolean = js.native
+  
+  def schemaType(): String = js.native
   
   var serializationProperty: String = js.native
   

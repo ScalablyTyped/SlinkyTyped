@@ -1,6 +1,8 @@
 package typingsSlinky.mendixmodelsdk.mod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +21,7 @@ abstract class AbstractProperty[T, P] protected ()
     */
   def this(
     declaredOn: IStructureClass,
-    parent: typingsSlinky.mendixmodelsdk.structuresMod.Structure,
+    parent: typingsSlinky.mendixmodelsdk.structuresMod.Structure[IAbstractModel, IContainer | Null],
     name: String,
     initialValue: T,
     moreArgs: js.Any*

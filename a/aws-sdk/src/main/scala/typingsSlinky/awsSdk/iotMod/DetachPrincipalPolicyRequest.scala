@@ -13,7 +13,7 @@ trait DetachPrincipalPolicyRequest extends js.Object {
   var policyName: PolicyName = js.native
   
   /**
-    * The principal. If the principal is a certificate, specify the certificate ARN. If the principal is an Amazon Cognito identity, specify the identity ID.
+    * The principal. Valid principals are CertificateArn (arn:aws:iot:region:accountId:cert/certificateId), thingGroupArn (arn:aws:iot:region:accountId:thinggroup/groupName) and CognitoId (region:id).
     */
   var principal: Principal = js.native
 }

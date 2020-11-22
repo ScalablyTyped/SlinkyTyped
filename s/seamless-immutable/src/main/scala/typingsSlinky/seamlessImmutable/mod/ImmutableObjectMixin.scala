@@ -112,7 +112,10 @@ trait ImmutableObjectMixin[T] extends js.Object {
   def update[K /* <: /* keyof T */ String */](
     property: K,
     updaterFunction: js.Function2[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ /* value */ js.Any, 
+      /* value */ Immutable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any, 
+        js.Object
+      ], 
       /* repeated */ js.Any, 
       _
     ],
@@ -120,14 +123,17 @@ trait ImmutableObjectMixin[T] extends js.Object {
   ): Immutable[T, js.Object] = js.native
   def update[TValue](
     property: String,
-    updaterFunction: js.Function2[/* value */ TValue, /* repeated */ js.Any, _],
+    updaterFunction: js.Function2[/* value */ Immutable[TValue, js.Object], /* repeated */ js.Any, _],
     additionalArguments: js.Any*
   ): Immutable[T, js.Object] = js.native
   
   def updateIn[K /* <: /* keyof T */ String */](
     propertyPath: js.Array[K],
     updaterFunction: js.Function2[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ /* value */ js.Any, 
+      /* value */ Immutable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any, 
+        js.Object
+      ], 
       /* repeated */ js.Any, 
       _
     ],
@@ -136,7 +142,10 @@ trait ImmutableObjectMixin[T] extends js.Object {
   def updateIn[K /* <: /* keyof T */ String */, L /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K] */ js.Any */](
     propertyPath: js.Tuple2[K, L],
     updaterFunction: js.Function2[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[K][L] */ /* value */ js.Any, 
+      /* value */ Immutable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[K][L] */ js.Any, 
+        js.Object
+      ], 
       /* repeated */ js.Any, 
       _
     ],
@@ -145,7 +154,10 @@ trait ImmutableObjectMixin[T] extends js.Object {
   def updateIn[K /* <: /* keyof T */ String */, L /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K] */ js.Any */, M /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K][L] */ js.Any */](
     propertyPath: js.Tuple3[K, L, M],
     updaterFunction: js.Function2[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[K][L][M] */ /* value */ js.Any, 
+      /* value */ Immutable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[K][L][M] */ js.Any, 
+        js.Object
+      ], 
       /* repeated */ js.Any, 
       _
     ],
@@ -154,7 +166,10 @@ trait ImmutableObjectMixin[T] extends js.Object {
   def updateIn[K /* <: /* keyof T */ String */, L /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K] */ js.Any */, M /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K][L] */ js.Any */, N /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K][L][M] */ js.Any */](
     propertyPath: js.Tuple4[K, L, M, N],
     updaterFunction: js.Function2[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[K][L][M][N] */ /* value */ js.Any, 
+      /* value */ Immutable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[K][L][M][N] */ js.Any, 
+        js.Object
+      ], 
       /* repeated */ js.Any, 
       _
     ],
@@ -163,7 +178,10 @@ trait ImmutableObjectMixin[T] extends js.Object {
   def updateIn[K /* <: /* keyof T */ String */, L /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K] */ js.Any */, M /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K][L] */ js.Any */, N /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K][L][M] */ js.Any */, O /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof T[K][L][M][N] */ js.Any */](
     propertyPath: js.Tuple5[K, L, M, N, O],
     updaterFunction: js.Function2[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[K][L][M][N][O] */ /* value */ js.Any, 
+      /* value */ Immutable[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[K][L][M][N][O] */ js.Any, 
+        js.Object
+      ], 
       /* repeated */ js.Any, 
       _
     ],

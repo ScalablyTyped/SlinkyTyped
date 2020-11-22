@@ -1,5 +1,12 @@
 package typingsSlinky.react.mod
 
+import typingsSlinky.react.reactStrings.done
+import typingsSlinky.react.reactStrings.enter
+import typingsSlinky.react.reactStrings.go
+import typingsSlinky.react.reactStrings.next
+import typingsSlinky.react.reactStrings.previous
+import typingsSlinky.react.reactStrings.search
+import typingsSlinky.react.reactStrings.send
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,6 +30,8 @@ trait InputHTMLAttributes[T] extends HTMLAttributes[T] {
   var crossOrigin: js.UndefOr[String] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
+  
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
   
   var form: js.UndefOr[String] = js.native
   
@@ -143,6 +152,12 @@ object InputHTMLAttributes {
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
     
     @scala.inline
     def setForm(value: String): Self = this.set("form", value.asInstanceOf[js.Any])

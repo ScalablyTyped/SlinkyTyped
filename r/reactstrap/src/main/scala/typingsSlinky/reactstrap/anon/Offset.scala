@@ -11,10 +11,6 @@ trait Offset extends js.Object {
   
   var order: js.UndefOr[String | Double] = js.native
   
-  var pull: js.UndefOr[String | Double] = js.native
-  
-  var push: js.UndefOr[String | Double] = js.native
-  
   var size: js.UndefOr[Boolean | Double | String] = js.native
 }
 object Offset {
@@ -51,18 +47,6 @@ object Offset {
     
     @scala.inline
     def deleteOrder: Self = this.set("order", js.undefined)
-    
-    @scala.inline
-    def setPull(value: String | Double): Self = this.set("pull", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePull: Self = this.set("pull", js.undefined)
-    
-    @scala.inline
-    def setPush(value: String | Double): Self = this.set("push", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePush: Self = this.set("push", js.undefined)
     
     @scala.inline
     def setSize(value: Boolean | Double | String): Self = this.set("size", value.asInstanceOf[js.Any])

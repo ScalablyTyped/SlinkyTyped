@@ -18,7 +18,7 @@ trait UpdateShardCountInput extends js.Object {
   var StreamName: typingsSlinky.awsSdk.kinesisMod.StreamName = js.native
   
   /**
-    * The new number of shards.
+    * The new number of shards. This value has the following default limits. By default, you cannot do the following:    Set this value to more than double your current shard count for a stream.   Set this value below half your current shard count for a stream.   Set this value to more than 500 shards in a stream (the default limit for shard count per stream is 500 per account per region), unless you request a limit increase.   Scale a stream with more than 500 shards down unless you set this value to less than 500 shards.  
     */
   var TargetShardCount: PositiveIntegerObject = js.native
 }

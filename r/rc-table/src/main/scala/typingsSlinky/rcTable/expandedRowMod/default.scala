@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object default extends js.Object {
   
-  def apply[RecordType](
-    hasPrefixClsChildrenComponentCellComponentFixHeaderFixColumnHorizonScrollClassNameExpandedComponentWidthColSpan: ExpandedRowProps[RecordType]
+  def apply(
+    hasPrefixClsChildrenComponentCellComponentFixHeaderFixColumnHorizonScrollClassNameExpandedComponentWidthColSpan: ExpandedRowProps
   ): ReactElement = js.native
 }

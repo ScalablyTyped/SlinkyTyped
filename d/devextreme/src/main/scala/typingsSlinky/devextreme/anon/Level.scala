@@ -4,7 +4,6 @@ import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeList
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeListNode
-import typingsSlinky.devextreme.mod.global.JQueryEventObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,8 +28,6 @@ trait Level extends js.Object {
   var isNewRow: js.UndefOr[Boolean] = js.native
   
   var isSelected: js.UndefOr[Boolean] = js.native
-  
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
   
   var key: js.UndefOr[js.Any] = js.native
   
@@ -127,12 +124,6 @@ object Level {
     
     @scala.inline
     def deleteIsSelected: Self = this.set("isSelected", js.undefined)
-    
-    @scala.inline
-    def setJQueryEvent(value: JQueryEventObject): Self = this.set("jQueryEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteJQueryEvent: Self = this.set("jQueryEvent", js.undefined)
     
     @scala.inline
     def setKey(value: js.Any): Self = this.set("key", value.asInstanceOf[js.Any])

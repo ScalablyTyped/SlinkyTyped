@@ -20,7 +20,7 @@ object cacheMod extends js.Object {
     
     def dispose(value: V, key: K): Unit = js.native
     
-    def get(key: K): Unit | V = js.native
+    def get(key: K): js.UndefOr[V] = js.native
     
     var getEntry: js.Any = js.native
     

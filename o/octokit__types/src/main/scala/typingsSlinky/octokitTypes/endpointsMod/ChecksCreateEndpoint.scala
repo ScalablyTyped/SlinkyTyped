@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`3`
+import typingsSlinky.octokitTypes.anon.`2`
 import typingsSlinky.octokitTypes.octokitTypesStrings.action_required
 import typingsSlinky.octokitTypes.octokitTypesStrings.cancelled
 import typingsSlinky.octokitTypes.octokitTypesStrings.completed
@@ -50,7 +50,7 @@ trait ChecksCreateEndpoint extends js.Object {
     */
   var head_sha: String = js.native
   
-  var mediaType: `3` = js.native
+  var mediaType: `2` = js.native
   
   /**
     * The name of the check. For example, "code-coverage".
@@ -79,7 +79,7 @@ trait ChecksCreateEndpoint extends js.Object {
 object ChecksCreateEndpoint {
   
   @scala.inline
-  def apply(head_sha: String, mediaType: `3`, name: String, owner: String, repo: String): ChecksCreateEndpoint = {
+  def apply(head_sha: String, mediaType: `2`, name: String, owner: String, repo: String): ChecksCreateEndpoint = {
     val __obj = js.Dynamic.literal(head_sha = head_sha.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChecksCreateEndpoint]
   }
@@ -103,7 +103,7 @@ object ChecksCreateEndpoint {
     def setHead_sha(value: String): Self = this.set("head_sha", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `3`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `2`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

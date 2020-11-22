@@ -18,7 +18,7 @@ trait FilterLogEventsResponse extends js.Object {
   var nextToken: js.UndefOr[NextToken] = js.native
   
   /**
-    * Indicates which log streams have been searched and whether each has been searched completely.
+    *  IMPORTANT Starting on May 15, 2020, this parameter will be deprecated. This parameter will be an empty list after the deprecation occurs. Indicates which log streams have been searched and whether each has been searched completely.
     */
   var searchedLogStreams: js.UndefOr[SearchedLogStreams] = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -9,23 +10,24 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.menusMod.menus.MenuItem
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.BottomBarItem
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/image relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/image relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.Icon")
 @js.native
-abstract class Icon protected () extends Element {
+abstract class Icon protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsBottomBarItem: BottomBarItem = js.native
@@ -37,9 +39,6 @@ abstract class Icon protected () extends Element {
   def containerAsMenuItem: MenuItem = js.native
   
   def containerAsWidgetValue: WidgetValue = js.native
-  
-  @JSName("model")
-  var model_FIcon: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.Icon")

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PasswordlessWithEmailParams extends js.Object {
   
-  var authParams: js.UndefOr[String] = js.native
+  var authParams: js.UndefOr[AuthParams] = js.native
   
   var email: String = js.native
   
@@ -42,7 +42,7 @@ object PasswordlessWithEmailParams {
     def setEmail(value: String): Self = this.set("email", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAuthParams(value: String): Self = this.set("authParams", value.asInstanceOf[js.Any])
+    def setAuthParams(value: AuthParams): Self = this.set("authParams", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAuthParams: Self = this.set("authParams", js.undefined)

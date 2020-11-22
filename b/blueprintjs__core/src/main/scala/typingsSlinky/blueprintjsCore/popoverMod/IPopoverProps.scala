@@ -1,6 +1,7 @@
 package typingsSlinky.blueprintjsCore.popoverMod
 
 import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.popoverSharedPropsMod.IPopoverSharedProps
 import typingsSlinky.react.mod.HTMLProps
@@ -44,17 +45,9 @@ trait IPopoverProps extends IPopoverSharedProps {
   var interactionKind: js.UndefOr[PopoverInteractionKind] = js.native
   
   /**
-    * Whether to apply minimal styles to this popover, which includes removing
-    * the arrow and adding `Classes.MINIMAL` to minimize and accelerate the
-    * transitions.
-    * @default false
-    */
-  var minimal: js.UndefOr[Boolean] = js.native
-  
-  /**
     * Ref supplied to the `Classes.POPOVER` element.
     */
-  var popoverRef: js.UndefOr[js.Function1[/* ref */ HTMLDivElement | Null, Unit]] = js.native
+  var popoverRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, Unit]] = js.native
   
   /**
     * The target to which the popover content is attached. This can instead be
@@ -119,13 +112,7 @@ object IPopoverProps {
     def deleteInteractionKind: Self = this.set("interactionKind", js.undefined)
     
     @scala.inline
-    def setMinimal(value: Boolean): Self = this.set("minimal", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMinimal: Self = this.set("minimal", js.undefined)
-    
-    @scala.inline
-    def setPopoverRef(value: /* ref */ HTMLDivElement | Null => Unit): Self = this.set("popoverRef", js.Any.fromFunction1(value))
+    def setPopoverRef(value: /* ref */ HTMLElement | Null => Unit): Self = this.set("popoverRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def deletePopoverRef: Self = this.set("popoverRef", js.undefined)

@@ -17,8 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Occurs when existing comments are changed.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait CommentChangedEventArgs extends js.Object {
@@ -27,8 +26,7 @@ trait CommentChangedEventArgs extends js.Object {
     *
     * Gets the change type that represents how the changed event is triggered.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var changeType: CommentChangeType | CommentEdited | CommentResolved | CommentReopened | ReplyAdded | ReplyDeleted | ReplyEdited = js.native
   
@@ -36,8 +34,7 @@ trait CommentChangedEventArgs extends js.Object {
     *
     * Gets the `CommentDetail` array which contains the comment ID and IDs of its related replies.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var commentDetails: js.Array[CommentDetail] = js.native
   
@@ -45,8 +42,7 @@ trait CommentChangedEventArgs extends js.Object {
     *
     * Specifies the source of the event. See `Excel.EventSource` for details.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var source: EventSource | Local | Remote = js.native
   
@@ -54,8 +50,7 @@ trait CommentChangedEventArgs extends js.Object {
     *
     * Gets the type of the event. See `Excel.EventType` for details.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var `type`: CommentChanged = js.native
   
@@ -63,8 +58,7 @@ trait CommentChangedEventArgs extends js.Object {
     *
     * Gets the ID of the worksheet in which the event happened.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var worksheetId: String = js.native
 }

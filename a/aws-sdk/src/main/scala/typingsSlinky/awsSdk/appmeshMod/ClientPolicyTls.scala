@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ClientPolicyTls extends js.Object {
   
   /**
-    * Whether the policy is enforced. The default is True, if a value isn't
-    specified.
+    * Whether the policy is enforced. The default is True, if a value isn't specified.
     */
   var enforce: js.UndefOr[Boolean] = js.native
   

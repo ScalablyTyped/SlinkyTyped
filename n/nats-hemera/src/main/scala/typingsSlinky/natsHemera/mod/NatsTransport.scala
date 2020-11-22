@@ -1,5 +1,6 @@
 package typingsSlinky.natsHemera.mod
 
+import typingsSlinky.nats.mod.SubscribeOptions
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,30 +23,12 @@ trait NatsTransport extends js.Object {
     options: js.UndefOr[scala.Nothing],
     callback: js.Function
   ): Double = js.native
-  def request(
-    subject: String,
-    msg: js.UndefOr[scala.Nothing],
-    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify nats.SubscribeOptions */ js.Any
-  ): Double = js.native
-  def request(
-    subject: String,
-    msg: js.UndefOr[scala.Nothing],
-    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify nats.SubscribeOptions */ js.Any,
-    callback: js.Function
-  ): Double = js.native
+  def request(subject: String, msg: js.UndefOr[scala.Nothing], options: SubscribeOptions): Double = js.native
+  def request(subject: String, msg: js.UndefOr[scala.Nothing], options: SubscribeOptions, callback: js.Function): Double = js.native
   def request(subject: String, msg: String): Double = js.native
   def request(subject: String, msg: String, options: js.UndefOr[scala.Nothing], callback: js.Function): Double = js.native
-  def request(
-    subject: String,
-    msg: String,
-    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify nats.SubscribeOptions */ js.Any
-  ): Double = js.native
-  def request(
-    subject: String,
-    msg: String,
-    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify nats.SubscribeOptions */ js.Any,
-    callback: js.Function
-  ): Double = js.native
+  def request(subject: String, msg: String, options: SubscribeOptions): Double = js.native
+  def request(subject: String, msg: String, options: SubscribeOptions, callback: js.Function): Double = js.native
   
   def send(subject: String): Unit = js.native
   def send(
@@ -65,11 +48,7 @@ trait NatsTransport extends js.Object {
   def send(subject: String, msg: Buffer, reply: String): Unit = js.native
   def send(subject: String, msg: Buffer, reply: String, callback: js.Function): Unit = js.native
   
-  def subscribe(
-    subject: String,
-    opts: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify nats.SubscribeOptions */ js.Any,
-    callback: js.Function
-  ): Double = js.native
+  def subscribe(subject: String, opts: SubscribeOptions, callback: js.Function): Double = js.native
   
   def timeout(sid: Double, timeout: Double, expected: Double, callback: js.Function1[/* sid */ Double, Unit]): Unit = js.native
   

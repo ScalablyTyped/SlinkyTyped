@@ -16,6 +16,8 @@ import typingsSlinky.pulumiPulumi.resourceMod.ResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ResourceTransformation
 import typingsSlinky.pulumiPulumi.resourceMod.URN
 import typingsSlinky.pulumiPulumi.rpcMod.OutputResolvers
+import typingsSlinky.pulumiPulumi.rpcMod.ResourceModule
+import typingsSlinky.pulumiPulumi.rpcMod.ResourcePackage
 import typingsSlinky.pulumiPulumi.serializeClosureMod.SerializeFunctionArgs
 import typingsSlinky.pulumiPulumi.serializeClosureMod.SerializedFunction
 import typingsSlinky.pulumiPulumi.stackMod.Stack
@@ -64,7 +66,7 @@ object runtimeMod extends js.Object {
   
   def deserializeProperty(prop: js.Any): js.Any = js.native
   
-  def disconnect(): Unit = js.native
+  def disconnect(): js.Promise[Unit] = js.native
   
   def disconnectSync(): Unit = js.native
   
@@ -84,6 +86,8 @@ object runtimeMod extends js.Object {
   
   def getStackResource(): js.UndefOr[Stack] = js.native
   
+  def hasEngine(): Boolean = js.native
+  
   def hasMonitor(): Boolean = js.native
   
   def invoke(tok: String, props: Inputs): js.Promise[_] = js.native
@@ -95,34 +99,93 @@ object runtimeMod extends js.Object {
   
   def isQueryMode(): Boolean = js.native
   
+  def isRpcSecret(obj: js.Any): Boolean = js.native
+  
   def isTestModeEnabled(): Boolean = js.native
+  
+  def leakedPromises(): js.Tuple2[Set[js.Promise[_]], String] = js.native
   
   def listResourceOutputs[U /* <: Resource */](): AsyncQueryable[ResolvedResource[U]] = js.native
   def listResourceOutputs[U /* <: Resource */](typeFilter: js.UndefOr[scala.Nothing], stackName: String): AsyncQueryable[ResolvedResource[U]] = js.native
   def listResourceOutputs[U /* <: Resource */](typeFilter: js.Function1[/* o */ js.Any, /* is U */ Boolean]): AsyncQueryable[ResolvedResource[U]] = js.native
   def listResourceOutputs[U /* <: Resource */](typeFilter: js.Function1[/* o */ js.Any, /* is U */ Boolean], stackName: String): AsyncQueryable[ResolvedResource[U]] = js.native
   
+  val maxRPCMessageSize: Double = js.native
+  
+  def monitorSupportsFeature(feature: String): js.Promise[Boolean] = js.native
+  
+  def monitorSupportsResourceReferences(): js.Promise[Boolean] = js.native
+  
   def monitorSupportsSecrets(): js.Promise[Boolean] = js.native
   
   def readResource(res: Resource, t: String, name: String, props: Inputs, opts: ResourceOptions): Unit = js.native
   
-  def registerResource(res: Resource, t: String, name: String, custom: Boolean, props: Inputs, opts: ResourceOptions): Unit = js.native
+  def registerResource(
+    res: Resource,
+    t: String,
+    name: String,
+    custom: Boolean,
+    remote: Boolean,
+    newDependency: js.Function1[/* urn */ URN, Resource],
+    props: Inputs,
+    opts: ResourceOptions
+  ): Unit = js.native
+  
+  def registerResourceModule(name: String, version: String, module: ResourceModule): Unit = js.native
   
   def registerResourceOutputs(res: Resource, outputs: js.Promise[Inputs]): Unit = js.native
   def registerResourceOutputs(res: Resource, outputs: Inputs): Unit = js.native
   def registerResourceOutputs(res: Resource, outputs: Output_[Inputs]): Unit = js.native
   
+  def registerResourcePackage(name: String, version: String, pkg: ResourcePackage): Unit = js.native
+  
   def registerStackTransformation(t: ResourceTransformation): Unit = js.native
+  
+  def resetOptions(
+    project: String,
+    stack: String,
+    parallel: Double,
+    engineAddr: String,
+    monitorAddr: String,
+    preview: Boolean
+  ): Unit = js.native
   
   def resolveProperties(
     res: Resource,
     resolvers: Record[
       String, 
-      js.Function3[/* v */ _, /* isKnown */ Boolean, /* isSecret */ Boolean, Unit]
+      js.Function5[
+        /* v */ _, 
+        /* isKnown */ Boolean, 
+        /* isSecret */ Boolean, 
+        /* deps */ js.UndefOr[js.Array[Resource]], 
+        /* err */ js.UndefOr[js.Error], 
+        Unit
+      ]
     ],
     t: String,
     name: String,
-    allProps: js.Any
+    allProps: js.Any,
+    deps: Record[String, js.Array[Resource]]
+  ): Unit = js.native
+  def resolveProperties(
+    res: Resource,
+    resolvers: Record[
+      String, 
+      js.Function5[
+        /* v */ _, 
+        /* isKnown */ Boolean, 
+        /* isSecret */ Boolean, 
+        /* deps */ js.UndefOr[js.Array[Resource]], 
+        /* err */ js.UndefOr[js.Error], 
+        Unit
+      ]
+    ],
+    t: String,
+    name: String,
+    allProps: js.Any,
+    deps: Record[String, js.Array[Resource]],
+    err: js.Error
   ): Unit = js.native
   
   val rootPulumiStackTypeName: /* "pulumi:pulumi:Stack" */ String = js.native
@@ -144,6 +207,8 @@ object runtimeMod extends js.Object {
   def serializeProperty(ctx: String, prop: Input[_], dependentResources: Set[Resource]): js.Promise[_] = js.native
   
   def serializeResourceProperties(label: String, props: Inputs): js.Promise[js.Tuple2[Record[String, _], Map[String, Set[Resource]]]] = js.native
+  
+  def setAllConfig(c: StringDictionary[String]): Unit = js.native
   
   def setConfig(k: String, v: String): Unit = js.native
   
@@ -181,6 +246,8 @@ object runtimeMod extends js.Object {
   
   val specialAssetSig: /* "c44067f5952c0a294b673a41bacd8c17" */ String = js.native
   
+  val specialResourceSig: /* "5cf8f73096256a8f31e491e813e4eb8e" */ String = js.native
+  
   val specialSecretSig: /* "1b47061264138c4ac30d75fd1eb44270" */ String = js.native
   
   val specialSigKey: /* "4dabf18193072939515e22adb298388d" */ String = js.native
@@ -188,9 +255,15 @@ object runtimeMod extends js.Object {
   def streamInvoke(tok: String, props: Inputs): js.Promise[typingsSlinky.pulumiPulumi.runtimeInvokeMod.StreamInvokeResponse[_]] = js.native
   def streamInvoke(tok: String, props: Inputs, opts: InvokeOptions): js.Promise[typingsSlinky.pulumiPulumi.runtimeInvokeMod.StreamInvokeResponse[_]] = js.native
   
+  def suppressUnhandledGrpcRejections[T](p: js.Promise[T]): js.Promise[T] = js.native
+  
+  def terminateRpcs(): Unit = js.native
+  
   def transferProperties(onto: Resource, label: String, props: Inputs): OutputResolvers = js.native
   
   val unknownValue: /* "04da6b54-80e4-46f7-96ec-b56ff0331ba9" */ String = js.native
+  
+  def unwrapRpcSecret(obj: js.Any): js.Any = js.native
   
   @js.native
   class StreamInvokeResponse[T] protected ()

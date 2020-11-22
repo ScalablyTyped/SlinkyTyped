@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashRandom extends LodashConvertible {
+trait LodashRandom extends js.Object {
   
   def apply(maxOrMin: Double): LodashRandom1x1 = js.native
   def apply(maxOrMin: Double, floatingOrMax: Boolean): Double = js.native

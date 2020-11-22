@@ -1,7 +1,7 @@
 package typingsSlinky.paypalCheckoutComponents.anon
 
 import typingsSlinky.paypalCheckoutComponents.callbackDataMod.AuthorizationData
-import typingsSlinky.paypalCheckoutComponents.callbackDataMod.AuthorizationTokenizePayload
+import typingsSlinky.paypalCheckoutComponents.callbackDataMod.AuthorizationResponse
 import typingsSlinky.paypalCheckoutComponents.callbackDataMod.CancellationData
 import typingsSlinky.paypalCheckoutComponents.configurationMod.ButtonStyle
 import typingsSlinky.paypalCheckoutComponents.configurationMod.Environment
@@ -28,6 +28,8 @@ trait AccessToken extends js.Object {
   
   var experience: js.UndefOr[js.Object] = js.native
   
+  var funding: js.UndefOr[Allowed] = js.native
+  
   var fundingOffered: js.UndefOr[js.Object] = js.native
   
   var fundingSource: js.UndefOr[String] = js.native
@@ -42,7 +44,7 @@ trait AccessToken extends js.Object {
   
   var onAuth: js.UndefOr[js.Function1[/* data */ String | js.Object, js.Object]] = js.native
   
-  def onAuthorize(data: AuthorizationData, actions: js.Object): js.Promise[AuthorizationTokenizePayload] = js.native
+  def onAuthorize(data: AuthorizationData, actions: js.Object): js.Promise[AuthorizationResponse] = js.native
   
   var onCancel: js.UndefOr[js.Function2[/* data */ CancellationData, /* actions */ js.Object, Unit]] = js.native
   
@@ -67,7 +69,7 @@ trait AccessToken extends js.Object {
 object AccessToken {
   
   @scala.inline
-  def apply(onAuthorize: (AuthorizationData, js.Object) => js.Promise[AuthorizationTokenizePayload]): AccessToken = {
+  def apply(onAuthorize: (AuthorizationData, js.Object) => js.Promise[AuthorizationResponse]): AccessToken = {
     val __obj = js.Dynamic.literal(onAuthorize = js.Any.fromFunction2(onAuthorize))
     __obj.asInstanceOf[AccessToken]
   }
@@ -88,7 +90,7 @@ object AccessToken {
     }
     
     @scala.inline
-    def setOnAuthorize(value: (AuthorizationData, js.Object) => js.Promise[AuthorizationTokenizePayload]): Self = this.set("onAuthorize", js.Any.fromFunction2(value))
+    def setOnAuthorize(value: (AuthorizationData, js.Object) => js.Promise[AuthorizationResponse]): Self = this.set("onAuthorize", js.Any.fromFunction2(value))
     
     @scala.inline
     def setAccessToken(value: () => Unit): Self = this.set("accessToken", js.Any.fromFunction0(value))
@@ -137,6 +139,12 @@ object AccessToken {
     
     @scala.inline
     def deleteExperience: Self = this.set("experience", js.undefined)
+    
+    @scala.inline
+    def setFunding(value: Allowed): Self = this.set("funding", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFunding: Self = this.set("funding", js.undefined)
     
     @scala.inline
     def setFundingOffered(value: js.Object): Self = this.set("fundingOffered", value.asInstanceOf[js.Any])

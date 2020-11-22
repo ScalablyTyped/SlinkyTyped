@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MapLocation extends js.Object {
   
-  /** @name MapLocation.lat */
+  /**
+    * [descr:MapLocation.lat]
+    */
   var lat: js.UndefOr[Double] = js.native
   
-  /** @name MapLocation.lng */
+  /**
+    * [descr:MapLocation.lng]
+    */
   var lng: js.UndefOr[Double] = js.native
 }
 object MapLocation {

@@ -41,6 +41,8 @@ class Player protected () extends js.Object {
   
   def getLoop(): VimeoPromise[Boolean, Error] = js.native
   
+  def getMuted(): VimeoPromise[Boolean, Error] = js.native
+  
   def getPaused(): VimeoPromise[Boolean, Error] = js.native
   
   def getPlaybackRate(): VimeoPromise[Double, Error] = js.native
@@ -89,6 +91,8 @@ class Player protected () extends js.Object {
   def setCurrentTime(seconds: Double): VimeoPromise[Double, RangeError | Error] = js.native
   
   def setLoop(loop: Boolean): VimeoPromise[Boolean, Error] = js.native
+  
+  def setMuted(muted: Boolean): VimeoPromise[Boolean, Error] = js.native
   
   def setPlaybackRate(playbackRate: Double): VimeoPromise[Double, RangeError | Error] = js.native
   

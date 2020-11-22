@@ -23,6 +23,11 @@ trait VideoTextureSettings extends js.Object {
   var loop: js.UndefOr[Boolean] = js.native
   
   /**
+    * Applies `muted` to video, if specified
+    */
+  var muted: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Image src displayed during the video loading or until the user interacts with the video.
     */
   var poster: js.UndefOr[String] = js.native
@@ -64,6 +69,12 @@ object VideoTextureSettings {
     
     @scala.inline
     def deleteLoop: Self = this.set("loop", js.undefined)
+    
+    @scala.inline
+    def setMuted(value: Boolean): Self = this.set("muted", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMuted: Self = this.set("muted", js.undefined)
     
     @scala.inline
     def setPoster(value: String): Self = this.set("poster", value.asInstanceOf[js.Any])

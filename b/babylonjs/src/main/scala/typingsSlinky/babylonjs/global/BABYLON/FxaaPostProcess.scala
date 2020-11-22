@@ -20,3 +20,16 @@ class FxaaPostProcess protected ()
     textureType: js.UndefOr[Double]
   ) = this()
 }
+/* static members */
+@JSGlobal("BABYLON.FxaaPostProcess")
+@js.native
+object FxaaPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(
+    parsedPostProcess: js.Any,
+    targetCamera: typingsSlinky.babylonjs.BABYLON.Camera,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    rootUrl: String
+  ): typingsSlinky.babylonjs.BABYLON.FxaaPostProcess = js.native
+}

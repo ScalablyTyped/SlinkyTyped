@@ -1,7 +1,7 @@
 
 # Scala.js typings for jupyterlab__outputarea
 
-Typings are for version 1.2.9
+Typings are for version 2.2.4
 
 ## Library description:
 JupyterLab - Notebook Output Area

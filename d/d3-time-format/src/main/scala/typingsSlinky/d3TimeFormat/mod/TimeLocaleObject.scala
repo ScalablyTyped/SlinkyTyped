@@ -17,6 +17,8 @@ trait TimeLocaleObject extends js.Object {
     * - %d - zero-padded day of the month as a decimal number [01,31].
     * - %e - space-padded day of the month as a decimal number [ 1,31]; equivalent to %_d.
     * - %f - microseconds as a decimal number [000000, 999999].
+    * - %g - ISO 8601 week-based year without century as a decimal number [00,99].
+    * - %G - ISO 8601 week-based year with century as a decimal number.
     * - %H - hour (24-hour clock) as a decimal number [00,23].
     * - %I - hour (12-hour clock) as a decimal number [01,12].
     * - %j - day of the year as a decimal number [001,366].
@@ -24,6 +26,7 @@ trait TimeLocaleObject extends js.Object {
     * - %M - minute as a decimal number [00,59].
     * - %L - milliseconds as a decimal number [000, 999].
     * - %p - either AM or PM.*
+    * - %q - quarter of the year as a decimal number [1,4].
     * - %Q - milliseconds since UNIX epoch.
     * - %s - seconds since UNIX epoch.
     * - %S - second as a decimal number [00,61].
@@ -46,11 +49,11 @@ trait TimeLocaleObject extends js.Object {
     * Week numbers are computed using interval.count. For example, 2015-52 and 2016-00 represent Monday, December 28, 2015, while 2015-53 and 2016-01 represent Monday, January 4, 2016.
     * This differs from the ISO week date specification (%V), which uses a more complicated definition!
     *
-    * For %V, per the strftime man page:
+    * For %V,%g and %G, per the strftime man page:
     *
     * In this system, weeks start on a Monday, and are numbered from 01, for the first week, up to 52 or 53, for the last week.
     * Week 1 is the first week where four or more days fall within the new year (or, synonymously, week 01 is: the first week of the year that contains a Thursday;
-    * or, the week that has 4 January in it).
+    * or, the week that has 4 January in it). If the ISO week number belongs to the previous or next year, that year is used instead.
     *
     * The % sign indicating a directive may be immediately followed by a padding modifier:
     *

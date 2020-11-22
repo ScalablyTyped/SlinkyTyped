@@ -12,32 +12,48 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CustomStoreOptions extends StoreOptions[CustomStore] {
   
-  /** @name CustomStore.Options.byKey */
+  /**
+    * [descr:CustomStore.Options.byKey]
+    */
   var byKey: js.UndefOr[js.Function1[/* key */ js.Any | String | Double, Promise[_] | JQueryPromise[_]]] = js.native
   
-  /** @name CustomStore.Options.cacheRawData */
+  /**
+    * [descr:CustomStore.Options.cacheRawData]
+    */
   var cacheRawData: js.UndefOr[Boolean] = js.native
   
-  /** @name CustomStore.Options.insert */
+  /**
+    * [descr:CustomStore.Options.insert]
+    */
   var insert: js.UndefOr[js.Function1[/* values */ js.Any, Promise[_] | JQueryPromise[_]]] = js.native
   
-  /** @name CustomStore.Options.load */
+  /**
+    * [descr:CustomStore.Options.load]
+    */
   var load: js.UndefOr[
     js.Function1[/* options */ LoadOptions, Promise[_] | JQueryPromise[_] | js.Array[_]]
   ] = js.native
   
-  /** @name CustomStore.Options.loadMode */
+  /**
+    * [descr:CustomStore.Options.loadMode]
+    */
   var loadMode: js.UndefOr[processed | raw] = js.native
   
-  /** @name CustomStore.Options.remove */
+  /**
+    * [descr:CustomStore.Options.remove]
+    */
   var remove: js.UndefOr[
     js.Function1[/* key */ js.Any | String | Double, Promise[Unit] | JQueryPromise[Unit]]
   ] = js.native
   
-  /** @name CustomStore.Options.totalCount */
+  /**
+    * [descr:CustomStore.Options.totalCount]
+    */
   var totalCount: js.UndefOr[js.Function1[/* loadOptions */ Filter, Promise[Double] | JQueryPromise[Double]]] = js.native
   
-  /** @name CustomStore.Options.update */
+  /**
+    * [descr:CustomStore.Options.update]
+    */
   var update: js.UndefOr[
     js.Function2[
       /* key */ js.Any | String | Double, 
@@ -46,7 +62,9 @@ trait CustomStoreOptions extends StoreOptions[CustomStore] {
     ]
   ] = js.native
   
-  /** @name CustomStore.Options.useDefaultSearch */
+  /**
+    * [descr:CustomStore.Options.useDefaultSearch]
+    */
   var useDefaultSearch: js.UndefOr[Boolean] = js.native
 }
 object CustomStoreOptions {

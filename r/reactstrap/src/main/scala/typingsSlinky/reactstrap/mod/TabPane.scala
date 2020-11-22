@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "TabPane")
+@JSImport("reactstrap/es", "TabPane")
 @js.native
-class TabPane[T] ()
+class TabPane ()
   extends Component[TabPaneProps, js.Object, js.Any]

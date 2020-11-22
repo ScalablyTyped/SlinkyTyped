@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.InterfaceExtends
+import typingsSlinky.babelTraverse.babelTraverseStrings.EnumBooleanBody
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `134` extends js.Object {
   
-  var `type`: InterfaceExtends = js.native
+  var `type`: EnumBooleanBody = js.native
 }
 object `134` {
   
   @scala.inline
-  def apply(`type`: InterfaceExtends): `134` = {
+  def apply(`type`: EnumBooleanBody): `134` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`134`]
@@ -35,6 +35,6 @@ object `134` {
     }
     
     @scala.inline
-    def setType(value: InterfaceExtends): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: EnumBooleanBody): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

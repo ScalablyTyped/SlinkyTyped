@@ -16,10 +16,11 @@ import typingsSlinky.astTypes.kindsMod.TSTypeParameterDeclarationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeParameters */
+@js.native
 trait TSInterfaceDeclaration
   extends ASTNode
      with DeclarationKind
@@ -27,17 +28,23 @@ trait TSInterfaceDeclaration
      with PrintableKind
      with StatementKind
      with TSHasOptionalTypeParametersKind {
-  var body: TSInterfaceBodyKind
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var declare: js.UndefOr[Boolean] = js.undefined
-  var `extends`: js.UndefOr[js.Array[TSExpressionWithTypeArgumentsKind] | Null] = js.undefined
-  var id: IdentifierKind | TSQualifiedNameKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSInterfaceDeclaration
-  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.undefined
+  
+  var body: TSInterfaceBodyKind = js.native
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var declare: js.UndefOr[Boolean] = js.native
+  
+  var `extends`: js.UndefOr[js.Array[TSExpressionWithTypeArgumentsKind] | Null] = js.native
+  
+  var id: IdentifierKind | TSQualifiedNameKind = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSInterfaceDeclaration = js.native
+  
+  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSInterfaceDeclaration")
 @js.native
 object TSInterfaceDeclaration extends TopLevel[Type[TSInterfaceDeclaration]]
-

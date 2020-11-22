@@ -1,7 +1,7 @@
 package typingsSlinky.readableWebToNodeStream
 
 import org.scalajs.dom.experimental.ReadableStream
-import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.readableStream.mod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

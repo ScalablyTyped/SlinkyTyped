@@ -24,7 +24,7 @@ import typingsSlinky.stellarBase.stellarBaseStrings.pathPaymentStrictReceiveOver
 import typingsSlinky.stellarBase.stellarBaseStrings.pathPaymentStrictReceiveSrcNoTrust
 import typingsSlinky.stellarBase.stellarBaseStrings.pathPaymentStrictReceiveSrcNotAuthorized
 import typingsSlinky.stellarBase.stellarBaseStrings.pathPaymentStrictReceiveSuccess
-import typingsSlinky.stellarBase.stellarBaseStrings.pathPaymentStrictReceiveTooFewOffer
+import typingsSlinky.stellarBase.stellarBaseStrings.pathPaymentStrictReceiveTooFewOffers
 import typingsSlinky.stellarBase.stellarBaseStrings.pathPaymentStrictReceiveUnderfunded
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,7 +33,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PathPaymentStrictReceiveResultCode extends js.Object {
   
-  val name: pathPaymentStrictReceiveSuccess | pathPaymentStrictReceiveMalformed | pathPaymentStrictReceiveUnderfunded | pathPaymentStrictReceiveSrcNoTrust | pathPaymentStrictReceiveSrcNotAuthorized | pathPaymentStrictReceiveNoDestination | pathPaymentStrictReceiveNoTrust | pathPaymentStrictReceiveNotAuthorized | pathPaymentStrictReceiveLineFull | pathPaymentStrictReceiveNoIssuer | pathPaymentStrictReceiveTooFewOffer | pathPaymentStrictReceiveOfferCrossSelf | pathPaymentStrictReceiveOverSendmax = js.native
+  val name: pathPaymentStrictReceiveSuccess | pathPaymentStrictReceiveMalformed | pathPaymentStrictReceiveUnderfunded | pathPaymentStrictReceiveSrcNoTrust | pathPaymentStrictReceiveSrcNotAuthorized | pathPaymentStrictReceiveNoDestination | pathPaymentStrictReceiveNoTrust | pathPaymentStrictReceiveNotAuthorized | pathPaymentStrictReceiveLineFull | pathPaymentStrictReceiveNoIssuer | pathPaymentStrictReceiveTooFewOffers | pathPaymentStrictReceiveOfferCrossSelf | pathPaymentStrictReceiveOverSendmax = js.native
   
   val value: `0` | `-1` | `-2` | `-3` | `-4` | `-5` | `-6` | `-7` | `-8` | `-9` | `-10` | `-11` | `-12` = js.native
 }
@@ -41,7 +41,7 @@ object PathPaymentStrictReceiveResultCode {
   
   @scala.inline
   def apply(
-    name: pathPaymentStrictReceiveSuccess | pathPaymentStrictReceiveMalformed | pathPaymentStrictReceiveUnderfunded | pathPaymentStrictReceiveSrcNoTrust | pathPaymentStrictReceiveSrcNotAuthorized | pathPaymentStrictReceiveNoDestination | pathPaymentStrictReceiveNoTrust | pathPaymentStrictReceiveNotAuthorized | pathPaymentStrictReceiveLineFull | pathPaymentStrictReceiveNoIssuer | pathPaymentStrictReceiveTooFewOffer | pathPaymentStrictReceiveOfferCrossSelf | pathPaymentStrictReceiveOverSendmax,
+    name: pathPaymentStrictReceiveSuccess | pathPaymentStrictReceiveMalformed | pathPaymentStrictReceiveUnderfunded | pathPaymentStrictReceiveSrcNoTrust | pathPaymentStrictReceiveSrcNotAuthorized | pathPaymentStrictReceiveNoDestination | pathPaymentStrictReceiveNoTrust | pathPaymentStrictReceiveNotAuthorized | pathPaymentStrictReceiveLineFull | pathPaymentStrictReceiveNoIssuer | pathPaymentStrictReceiveTooFewOffers | pathPaymentStrictReceiveOfferCrossSelf | pathPaymentStrictReceiveOverSendmax,
     value: `0` | `-1` | `-2` | `-3` | `-4` | `-5` | `-6` | `-7` | `-8` | `-9` | `-10` | `-11` | `-12`
   ): PathPaymentStrictReceiveResultCode = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
@@ -65,7 +65,7 @@ object PathPaymentStrictReceiveResultCode {
     
     @scala.inline
     def setName(
-      value: pathPaymentStrictReceiveSuccess | pathPaymentStrictReceiveMalformed | pathPaymentStrictReceiveUnderfunded | pathPaymentStrictReceiveSrcNoTrust | pathPaymentStrictReceiveSrcNotAuthorized | pathPaymentStrictReceiveNoDestination | pathPaymentStrictReceiveNoTrust | pathPaymentStrictReceiveNotAuthorized | pathPaymentStrictReceiveLineFull | pathPaymentStrictReceiveNoIssuer | pathPaymentStrictReceiveTooFewOffer | pathPaymentStrictReceiveOfferCrossSelf | pathPaymentStrictReceiveOverSendmax
+      value: pathPaymentStrictReceiveSuccess | pathPaymentStrictReceiveMalformed | pathPaymentStrictReceiveUnderfunded | pathPaymentStrictReceiveSrcNoTrust | pathPaymentStrictReceiveSrcNotAuthorized | pathPaymentStrictReceiveNoDestination | pathPaymentStrictReceiveNoTrust | pathPaymentStrictReceiveNotAuthorized | pathPaymentStrictReceiveLineFull | pathPaymentStrictReceiveNoIssuer | pathPaymentStrictReceiveTooFewOffers | pathPaymentStrictReceiveOfferCrossSelf | pathPaymentStrictReceiveOverSendmax
     ): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -1,10 +1,10 @@
 package typingsSlinky.pulumiAws.applicationloadbalancingLoadBalancerMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.enumsAlbMod.IpAddressType
+import typingsSlinky.pulumiAws.enumsAlbMod.LoadBalancerType
 import typingsSlinky.pulumiAws.inputMod.applicationloadbalancing.LoadBalancerAccessLogs
 import typingsSlinky.pulumiAws.inputMod.applicationloadbalancing.LoadBalancerSubnetMapping
-import typingsSlinky.pulumiAws.ipAddressTypeMod.IpAddressType
-import typingsSlinky.pulumiAws.loadBalancerTypeMod.LoadBalancerType
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,6 +27,11 @@ trait LoadBalancerState extends js.Object {
     * The ARN suffix for use with CloudWatch Metrics.
     */
   val arnSuffix: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The ID of the customer owned ipv4 pool to use for this load balancer.
+    */
+  val customerOwnedIpv4Pool: js.UndefOr[Input[String]] = js.native
   
   /**
     * The DNS name of the load balancer.
@@ -71,7 +76,7 @@ trait LoadBalancerState extends js.Object {
   val ipAddressType: js.UndefOr[Input[IpAddressType]] = js.native
   
   /**
-    * The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    * The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
     */
   val loadBalancerType: js.UndefOr[Input[LoadBalancerType]] = js.native
   
@@ -113,6 +118,7 @@ trait LoadBalancerState extends js.Object {
   
   /**
     * The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
+    * * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
     */
   val zoneId: js.UndefOr[Input[String]] = js.native
 }
@@ -156,6 +162,12 @@ object LoadBalancerState {
     
     @scala.inline
     def deleteArnSuffix: Self = this.set("arnSuffix", js.undefined)
+    
+    @scala.inline
+    def setCustomerOwnedIpv4Pool(value: Input[String]): Self = this.set("customerOwnedIpv4Pool", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomerOwnedIpv4Pool: Self = this.set("customerOwnedIpv4Pool", js.undefined)
     
     @scala.inline
     def setDnsName(value: Input[String]): Self = this.set("dnsName", value.asInstanceOf[js.Any])

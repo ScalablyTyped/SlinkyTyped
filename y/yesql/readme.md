@@ -1,7 +1,7 @@
 
 # Scala.js typings for yesql
 
-Typings are for version 3.2
+Typings are for version 4.1
 
 ## Library description:
 Read named SQL statements from .sql files. Also named parameters for prepared statements.

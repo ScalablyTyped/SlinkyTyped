@@ -1,7 +1,7 @@
 
 # Scala.js typings for node-html-parser
 
-Typings are for version 1.2.20
+Typings are for version 1.4.9
 
 ## Library description:
 A very fast HTML parser, generating a simplified DOM, with basic element query support.

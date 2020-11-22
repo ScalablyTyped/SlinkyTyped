@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Typeofhtml extends js.Object {
   
-  var handlebarDefaults: LanguageServiceDefaults = js.native
+  val handlebarDefaults: LanguageServiceDefaults = js.native
   
-  var htmlDefaults: LanguageServiceDefaults = js.native
+  val htmlDefaults: LanguageServiceDefaults = js.native
   
-  var razorDefaults: LanguageServiceDefaults = js.native
+  val razorDefaults: LanguageServiceDefaults = js.native
 }
 object Typeofhtml {
   

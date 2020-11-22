@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  val calculateSha256: StreamHasher[Blob] = js.native
+  val blobHasher: StreamHasher[Blob] = js.native
 }

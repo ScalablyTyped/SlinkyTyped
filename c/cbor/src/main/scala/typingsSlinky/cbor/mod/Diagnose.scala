@@ -22,4 +22,7 @@ object Diagnose extends js.Object {
   def diagnose(input: Buffer): js.Promise[String] = js.native
   def diagnose(input: Buffer, cb: diagnoseCallback): Unit = js.native
   def diagnose(input: Buffer, encoding: String): js.Promise[String] = js.native
+  def diagnose(input: js.typedarray.ArrayBufferView): js.Promise[String] = js.native
+  def diagnose(input: js.typedarray.ArrayBufferView, cb: diagnoseCallback): Unit = js.native
+  def diagnose(input: js.typedarray.ArrayBufferView, encoding: String): js.Promise[String] = js.native
 }

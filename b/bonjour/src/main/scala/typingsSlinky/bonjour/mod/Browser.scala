@@ -25,14 +25,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Browser extends EventEmitter {
   
   @JSName("on")
-  def on_down(event: down, listener: js.Function1[/* service */ Service, Unit]): this.type = js.native
+  def on_down(event: down, listener: js.Function1[/* service */ RemoteService, Unit]): this.type = js.native
   @JSName("on")
-  def on_up(event: up, listener: js.Function1[/* service */ Service, Unit]): this.type = js.native
+  def on_up(event: up, listener: js.Function1[/* service */ RemoteService, Unit]): this.type = js.native
   
   @JSName("once")
-  def once_down(event: down, listener: js.Function1[/* service */ Service, Unit]): this.type = js.native
+  def once_down(event: down, listener: js.Function1[/* service */ RemoteService, Unit]): this.type = js.native
   @JSName("once")
-  def once_up(event: up, listener: js.Function1[/* service */ Service, Unit]): this.type = js.native
+  def once_up(event: up, listener: js.Function1[/* service */ RemoteService, Unit]): this.type = js.native
   
   @JSName("removeAllListeners")
   def removeAllListeners_down(event: down): this.type = js.native
@@ -40,11 +40,11 @@ trait Browser extends EventEmitter {
   def removeAllListeners_up(event: up): this.type = js.native
   
   @JSName("removeListener")
-  def removeListener_down(event: down, listener: js.Function1[/* service */ Service, Unit]): this.type = js.native
+  def removeListener_down(event: down, listener: js.Function1[/* service */ RemoteService, Unit]): this.type = js.native
   @JSName("removeListener")
-  def removeListener_up(event: up, listener: js.Function1[/* service */ Service, Unit]): this.type = js.native
+  def removeListener_up(event: up, listener: js.Function1[/* service */ RemoteService, Unit]): this.type = js.native
   
-  var services: js.Array[Service] = js.native
+  var services: js.Array[RemoteService] = js.native
   
   def start(): Unit = js.native
   

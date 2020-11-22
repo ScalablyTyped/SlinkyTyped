@@ -43,7 +43,7 @@ trait RouteState extends js.Object {
   val modelSelectionExpression: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The operation name for the route.
+    * The operation name for the route. Must be between 1 and 64 characters in length.
     */
   val operationName: js.UndefOr[Input[String]] = js.native
   
@@ -53,7 +53,7 @@ trait RouteState extends js.Object {
   val requestModels: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
-    * The route key for the route.
+    * The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
     */
   val routeKey: js.UndefOr[Input[String]] = js.native
   
@@ -63,7 +63,7 @@ trait RouteState extends js.Object {
   val routeResponseSelectionExpression: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The target for the route.
+    * The target for the route. Must be between 1 and 128 characters in length.
     */
   val target: js.UndefOr[Input[String]] = js.native
 }

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait InstanceNetworkInterfaceAssociation extends js.Object {
   
   /**
+    * The carrier IP address associated with the network interface.
+    */
+  var CarrierIp: js.UndefOr[String] = js.native
+  
+  /**
     * The ID of the owner of the Elastic IP address.
     */
   var IpOwnerId: js.UndefOr[String] = js.native
@@ -44,6 +49,12 @@ object InstanceNetworkInterfaceAssociation {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setCarrierIp(value: String): Self = this.set("CarrierIp", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCarrierIp: Self = this.set("CarrierIp", js.undefined)
     
     @scala.inline
     def setIpOwnerId(value: String): Self = this.set("IpOwnerId", value.asInstanceOf[js.Any])

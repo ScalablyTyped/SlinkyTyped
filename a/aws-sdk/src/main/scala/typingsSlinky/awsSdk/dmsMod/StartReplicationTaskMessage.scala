@@ -18,7 +18,7 @@ trait StartReplicationTaskMessage extends js.Object {
   var CdcStartTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * Indicates when you want a change data capture (CDC) operation to stop. The value can be either server time or commit time. Server time example: --cdc-stop-position “server_time:3018-02-09T12:12:12” Commit time example: --cdc-stop-position “commit_time: 3018-02-09T12:12:12 “
+    * Indicates when you want a change data capture (CDC) operation to stop. The value can be either server time or commit time. Server time example: --cdc-stop-position “server_time:2018-02-09T12:12:12” Commit time example: --cdc-stop-position “commit_time: 2018-02-09T12:12:12 “
     */
   var CdcStopPosition: js.UndefOr[String] = js.native
   
@@ -28,7 +28,7 @@ trait StartReplicationTaskMessage extends js.Object {
   var ReplicationTaskArn: String = js.native
   
   /**
-    * The type of replication task.
+    * A type of replication task.
     */
   var StartReplicationTaskType: StartReplicationTaskTypeValue = js.native
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.babylonjs.anon.DistanceMax
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -67,8 +66,6 @@ trait ArcRotateCamera extends TargetCamera {
   
   var _upToYMatrix: Matrix = js.native
   
-  var _upVector: Vector3 = js.native
-  
   /** @hidden */
   var _useCtrlForPanning: Boolean = js.native
   
@@ -95,36 +92,30 @@ trait ArcRotateCamera extends TargetCamera {
   def angularSensibilityY: Double = js.native
   def angularSensibilityY_=(value: Double): Unit = js.native
   
-  def attachControl(
-    element: HTMLElement,
-    noPreventDefault: js.UndefOr[scala.Nothing],
-    useCtrlForPanning: js.UndefOr[scala.Nothing],
-    panningMouseButton: Double
-  ): Unit = js.native
-  def attachControl(element: HTMLElement, noPreventDefault: js.UndefOr[scala.Nothing], useCtrlForPanning: Boolean): Unit = js.native
-  def attachControl(
-    element: HTMLElement,
-    noPreventDefault: js.UndefOr[scala.Nothing],
-    useCtrlForPanning: Boolean,
-    panningMouseButton: Double
-  ): Unit = js.native
-  def attachControl(
-    element: HTMLElement,
-    noPreventDefault: Boolean,
-    useCtrlForPanning: js.UndefOr[scala.Nothing],
-    panningMouseButton: Double
-  ): Unit = js.native
-  def attachControl(element: HTMLElement, noPreventDefault: Boolean, useCtrlForPanning: Boolean): Unit = js.native
-  def attachControl(
-    element: HTMLElement,
-    noPreventDefault: Boolean,
-    useCtrlForPanning: Boolean,
-    panningMouseButton: Double
-  ): Unit = js.native
+  /**
+    * Attached controls to the current camera.
+    * @param ignored defines an ignored parameter kept for backward compatibility. If you want to define the source input element, you can set engine.inputElement before calling camera.attachControl
+    * @param noPreventDefault Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+    * @param useCtrlForPanning  Defines whether ctrl is used for paning within the controls
+    */
+  def attachControl(ignored: js.Any, noPreventDefault: Boolean, useCtrlForPanning: Boolean): Unit = js.native
+  /**
+    * Attached controls to the current camera.
+    * @param noPreventDefault Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+    * @param useCtrlForPanning  Defines whether ctrl is used for paning within the controls
+    */
+  def attachControl(noPreventDefault: Boolean, useCtrlForPanning: Boolean): Unit = js.native
+  /**
+    * Attached controls to the current camera.
+    * @param noPreventDefault Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
+    * @param useCtrlForPanning  Defines whether ctrl is used for paning within the controls
+    * @param panningMouseButton Defines whether panning is allowed through mouse click button
+    */
+  def attachControl(noPreventDefault: Boolean, useCtrlForPanning: Boolean, panningMouseButton: Double): Unit = js.native
   
   /**
     * Gets the auto rotation behavior of the camera if it has been enabled.
-    * @see http://doc.babylonjs.com/how_to/camera_behaviors#autorotation-behavior
+    * @see https://doc.babylonjs.com/how_to/camera_behaviors#autorotation-behavior
     */
   def autoRotationBehavior: Nullable[AutoRotationBehavior] = js.native
   
@@ -135,20 +126,20 @@ trait ArcRotateCamera extends TargetCamera {
   
   /**
     * Gets the bouncing behavior of the camera if it has been enabled.
-    * @see http://doc.babylonjs.com/how_to/camera_behaviors#bouncing-behavior
+    * @see https://doc.babylonjs.com/how_to/camera_behaviors#bouncing-behavior
     */
   def bouncingBehavior: Nullable[BouncingBehavior] = js.native
   
   /**
     * Defines whether the camera should check collision with the objects oh the scene.
-    * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity#how-can-i-do-this
+    * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity#how-can-i-do-this
     */
   var checkCollisions: Boolean = js.native
   
   /**
     * Defines the collision radius of the camera.
     * This simulates a sphere around the camera.
-    * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity#arcrotatecamera
+    * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity#arcrotatecamera
     */
   var collisionRadius: Vector3 = js.native
   
@@ -165,7 +156,7 @@ trait ArcRotateCamera extends TargetCamera {
   
   /**
     * Gets the framing behavior of the camera if it has been enabled.
-    * @see http://doc.babylonjs.com/how_to/camera_behaviors#framing-behavior
+    * @see https://doc.babylonjs.com/how_to/camera_behaviors#framing-behavior
     */
   def framingBehavior: Nullable[FramingBehavior] = js.native
   
@@ -341,20 +332,9 @@ trait ArcRotateCamera extends TargetCamera {
   def setTarget(target: Vector3, toBoundingCenter: Boolean, allowSamePosition: Boolean): Unit = js.native
   
   /**
-    * Defines the target point of the camera.
-    * The camera looks towards it form the radius distance.
-    */
-  def target: Vector3 = js.native
-  
-  /**
     * Defines a screen offset for the camera position.
     */
   var targetScreenOffset: Vector2 = js.native
-  
-  def target_=(value: Vector3): Unit = js.native
-  
-  @JSName("upVector")
-  def upVector_MArcRotateCamera: Vector3 = js.native
   
   /**
     * Maximum allowed angle on the longitudinal axis.
@@ -376,21 +356,21 @@ trait ArcRotateCamera extends TargetCamera {
   
   /**
     * Defines if the auto rotation behavior of the camera is enabled on the camera.
-    * @see http://doc.babylonjs.com/how_to/camera_behaviors#autorotation-behavior
+    * @see https://doc.babylonjs.com/how_to/camera_behaviors#autorotation-behavior
     */
   def useAutoRotationBehavior: Boolean = js.native
   def useAutoRotationBehavior_=(value: Boolean): Unit = js.native
   
   /**
     * Defines if the bouncing behavior of the camera is enabled on the camera.
-    * @see http://doc.babylonjs.com/how_to/camera_behaviors#bouncing-behavior
+    * @see https://doc.babylonjs.com/how_to/camera_behaviors#bouncing-behavior
     */
   def useBouncingBehavior: Boolean = js.native
   def useBouncingBehavior_=(value: Boolean): Unit = js.native
   
   /**
     * Defines if the framing behavior of the camera is enabled on the camera.
-    * @see http://doc.babylonjs.com/how_to/camera_behaviors#framing-behavior
+    * @see https://doc.babylonjs.com/how_to/camera_behaviors#framing-behavior
     */
   def useFramingBehavior: Boolean = js.native
   def useFramingBehavior_=(value: Boolean): Unit = js.native

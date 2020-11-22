@@ -18,14 +18,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait locationGetSchemesParams extends Object {
   
   /**
-    * The Esri basemap to pair with the visualization. This value indicates the best symbol color for visualizing features against the given basemap. If you have a non-Esri basemap (e.g. a VectorTileLayer basemap with a custom style) or no basemap at all, then use the `basemapTheme` parameter instead of this parameter.
+    * The Esri basemap to pair with the visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-location.html#getSchemes)
     */
   var basemap: js.UndefOr[String | Basemap] = js.native
   
   /**
-    * If you have a non-Esri basemap (e.g. a VectorTileLayer basemap with a custom style) or no basemap at all, use this parameter to indicate whether the background of the visualization is `light` or `dark`.
+    * If you have a non-Esri basemap (e.g.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-location.html#getSchemes)
     */
@@ -39,14 +39,14 @@ trait locationGetSchemesParams extends Object {
   var geometryType: point | multipoint | polyline | polygon | mesh | multipatch = js.native
   
   /**
-    * The SceneView instance in which the scheme will be used. This property is only applicable when the scheme will be used in conjunction with 3D symbols.
+    * The SceneView instance in which the scheme will be used.
     *
     * [Read more...](global.html)
     */
   var view: js.UndefOr[SceneView] = js.native
   
   /**
-    * Indicates if the size units of the scheme will be in meters. This should be `true` when the scheme is intended for 3D volumetric symbology. A `view` must be provided if this property is set to `true`.
+    * Indicates if the size units of the scheme will be in meters.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-location.html#getSchemes)
     */

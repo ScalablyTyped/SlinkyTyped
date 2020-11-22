@@ -11,6 +11,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcTabs.anon.Direction
 import typingsSlinky.rcTabs.interfaceMod.AnimatedConfig
 import typingsSlinky.rcTabs.interfaceMod.EditableConfig
+import typingsSlinky.rcTabs.interfaceMod.TabBarExtraContent
 import typingsSlinky.rcTabs.interfaceMod.TabPosition
 import typingsSlinky.rcTabs.interfaceMod.TabsLocale
 import typingsSlinky.rcTabs.tabNavListMod.TabNavListProps
@@ -48,7 +49,7 @@ object TabNavList {
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    def extra(value: TabBarExtraContent): this.type = set("extra", value.asInstanceOf[js.Any])
     
     @scala.inline
     def locale(value: TabsLocale): this.type = set("locale", value.asInstanceOf[js.Any])

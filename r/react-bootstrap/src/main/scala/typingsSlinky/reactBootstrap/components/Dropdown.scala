@@ -1,5 +1,6 @@
 package typingsSlinky.reactBootstrap.components
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.ReactComponentClass
@@ -22,8 +23,13 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactType
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -67,6 +73,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.reactBootstrap.anon.Source
 import typingsSlinky.reactBootstrap.dropdownMod.DropdownProps
 import typingsSlinky.reactBootstrap.mod.SelectCallback
 import scala.scalajs.js
@@ -214,7 +221,9 @@ object Dropdown {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -757,7 +766,9 @@ object Dropdown {
     def onTimeUpdate(value: SyntheticEvent[Event, typingsSlinky.reactBootstrap.dropdownMod.Dropdown] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onToggle(value: /* isOpen */ Boolean => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
+    def onToggle(
+      value: (/* isOpen */ Boolean, /* event */ SyntheticEvent[Event, Element], /* metadata */ Source) => Unit
+    ): this.type = set("onToggle", js.Any.fromFunction3(value))
     
     @scala.inline
     def onTouchCancel(value: SyntheticTouchEvent[typingsSlinky.reactBootstrap.dropdownMod.Dropdown] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))

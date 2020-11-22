@@ -29,16 +29,14 @@ import typingsSlinky.awsSdkClientLambdaNode.updateAliasExceptionsUnionMod.Update
 import typingsSlinky.awsSdkClientLambdaNode.updateEventSourceMappingExceptionsUnionMod.UpdateEventSourceMappingExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateFunctionCodeExceptionsUnionMod.UpdateFunctionCodeExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateFunctionConfigurationExceptionsUnionMod.UpdateFunctionConfigurationExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_TooManyRequestsExceptionDetails> * / any */ @js.native
 trait TooManyRequestsException
-  extends ServiceException[TooManyRequestsExceptionDetails]
-     with AddPermissionExceptionsUnion
+  extends AddPermissionExceptionsUnion
      with CreateAliasExceptionsUnion
      with CreateEventSourceMappingExceptionsUnion
      with CreateFunctionExceptionsUnion
@@ -68,19 +66,13 @@ trait TooManyRequestsException
      with UpdateFunctionCodeExceptionsUnion
      with UpdateFunctionConfigurationExceptionsUnion {
   
-  @JSName("name")
-  var name_TooManyRequestsException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.TooManyRequestsException = js.native
+  var name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.TooManyRequestsException = js.native
 }
 object TooManyRequestsException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: TooManyRequestsExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.TooManyRequestsException
-  ): TooManyRequestsException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.TooManyRequestsException): TooManyRequestsException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[TooManyRequestsException]
   }
   

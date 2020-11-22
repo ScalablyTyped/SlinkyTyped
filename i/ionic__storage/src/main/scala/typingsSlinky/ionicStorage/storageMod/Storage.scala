@@ -16,7 +16,7 @@ class Storage protected () extends js.Object {
     * Possible driver options are: ['sqlite', 'indexeddb', 'websql', 'localstorage'] and the
     * default is that exact ordering.
     */
-  def this(config: StorageConfig) = this()
+  def this(config: StorageConfig, platformId: js.Object) = this()
   
   var _dbPromise: js.Any = js.native
   
@@ -62,6 +62,8 @@ class Storage protected () extends js.Object {
     * @returns Returns a promise that resolves with the number of keys stored.
     */
   def length(): js.Promise[Double] = js.native
+  
+  var platformId: js.Any = js.native
   
   /**
     * Reflect the readiness of the store.

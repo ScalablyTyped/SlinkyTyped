@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ApplicationSnapshotConfigurationUpdate extends js.Object {
   
   /**
-    * Describes updates to whether snapshots are enabled for a Java-based Kinesis Data Analytics application.
+    * Describes updates to whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
     */
   var SnapshotsEnabledUpdate: BooleanObject = js.native
 }

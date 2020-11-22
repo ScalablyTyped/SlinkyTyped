@@ -178,6 +178,7 @@ package object ssmMod {
     - typingsSlinky.awsSdk.awsSdkStrings.StartTimeAfter
     - typingsSlinky.awsSdk.awsSdkStrings.AutomationType
     - typingsSlinky.awsSdk.awsSdkStrings.TagKey
+    - typingsSlinky.awsSdk.awsSdkStrings.TargetResourceGroup
     - java.lang.String
   */
   type AutomationExecutionFilterKey = typingsSlinky.awsSdk.ssmMod._AutomationExecutionFilterKey | java.lang.String
@@ -651,8 +652,6 @@ package object ssmMod {
     - java.lang.String
   */
   type InventoryAttributeDataType = typingsSlinky.awsSdk.ssmMod._InventoryAttributeDataType | java.lang.String
-  
-  type InventoryDeletionId = java.lang.String
   
   type InventoryDeletionLastStatusMessage = java.lang.String
   
@@ -1146,9 +1145,25 @@ package object ssmMod {
   */
   type PatchAction = typingsSlinky.awsSdk.ssmMod._PatchAction | java.lang.String
   
+  type PatchAdvisoryId = java.lang.String
+  
+  type PatchAdvisoryIdList = js.Array[typingsSlinky.awsSdk.ssmMod.PatchAdvisoryId]
+  
+  type PatchArch = java.lang.String
+  
   type PatchBaselineIdentityList = js.Array[typingsSlinky.awsSdk.ssmMod.PatchBaselineIdentity]
   
   type PatchBaselineMaxResults = scala.Double
+  
+  type PatchBugzillaId = java.lang.String
+  
+  type PatchBugzillaIdList = js.Array[typingsSlinky.awsSdk.ssmMod.PatchBugzillaId]
+  
+  type PatchCVEId = java.lang.String
+  
+  type PatchCVEIdList = js.Array[typingsSlinky.awsSdk.ssmMod.PatchCVEId]
+  
+  type PatchCVEIds = java.lang.String
   
   type PatchClassification = java.lang.String
   
@@ -1192,18 +1207,30 @@ package object ssmMod {
   
   type PatchDescription = java.lang.String
   
+  type PatchEpoch = scala.Double
+  
   type PatchFailedCount = scala.Double
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ARCH
+    - typingsSlinky.awsSdk.awsSdkStrings.ADVISORY_ID
+    - typingsSlinky.awsSdk.awsSdkStrings.BUGZILLA_ID
     - typingsSlinky.awsSdk.awsSdkStrings.PATCH_SET
     - typingsSlinky.awsSdk.awsSdkStrings.PRODUCT
     - typingsSlinky.awsSdk.awsSdkStrings.PRODUCT_FAMILY
     - typingsSlinky.awsSdk.awsSdkStrings.CLASSIFICATION
+    - typingsSlinky.awsSdk.awsSdkStrings.CVE_ID
+    - typingsSlinky.awsSdk.awsSdkStrings.EPOCH
     - typingsSlinky.awsSdk.awsSdkStrings.MSRC_SEVERITY
+    - typingsSlinky.awsSdk.awsSdkStrings.NAME
     - typingsSlinky.awsSdk.awsSdkStrings.PATCH_ID
     - typingsSlinky.awsSdk.awsSdkStrings.SECTION
     - typingsSlinky.awsSdk.awsSdkStrings.PRIORITY
+    - typingsSlinky.awsSdk.awsSdkStrings.REPOSITORY
+    - typingsSlinky.awsSdk.awsSdkStrings.RELEASE
     - typingsSlinky.awsSdk.awsSdkStrings.SEVERITY
+    - typingsSlinky.awsSdk.awsSdkStrings.SECURITY
+    - typingsSlinky.awsSdk.awsSdkStrings.VERSION
     - java.lang.String
   */
   type PatchFilterKey = typingsSlinky.awsSdk.ssmMod._PatchFilterKey | java.lang.String
@@ -1244,6 +1271,8 @@ package object ssmMod {
   
   type PatchMsrcSeverity = java.lang.String
   
+  type PatchName = java.lang.String
+  
   type PatchNotApplicableCount = scala.Double
   
   /* Rewritten from type alias, can be one of: 
@@ -1280,6 +1309,10 @@ package object ssmMod {
   
   type PatchPropertyEntry = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.ssmMod.AttributeValue]
   
+  type PatchRelease = java.lang.String
+  
+  type PatchRepository = java.lang.String
+  
   type PatchRuleList = js.Array[typingsSlinky.awsSdk.ssmMod.PatchRule]
   
   /* Rewritten from type alias, can be one of: 
@@ -1308,6 +1341,8 @@ package object ssmMod {
   type PatchUnreportedNotApplicableCount = scala.Double
   
   type PatchVendor = java.lang.String
+  
+  type PatchVersion = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Online_
@@ -1442,6 +1477,7 @@ package object ssmMod {
     - typingsSlinky.awsSdk.awsSdkStrings.Target
     - typingsSlinky.awsSdk.awsSdkStrings.Owner_
     - typingsSlinky.awsSdk.awsSdkStrings.Status_
+    - typingsSlinky.awsSdk.awsSdkStrings.SessionId
     - java.lang.String
   */
   type SessionFilterKey = typingsSlinky.awsSdk.ssmMod._SessionFilterKey | java.lang.String
@@ -1589,6 +1625,8 @@ package object ssmMod {
   type TokenValue = java.lang.String
   
   type TotalCount = scala.Double
+  
+  type UUID = java.lang.String
   
   type Url = java.lang.String
   

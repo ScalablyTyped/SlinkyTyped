@@ -8,7 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CanaryRunConfigOutput extends js.Object {
   
   /**
-    * The maximum amount of memory available to the canary while it is running, in MB. The value you must be a multiple of 64.
+    * Displays whether this canary run used active AWS X-Ray tracing. 
+    */
+  var ActiveTracing: js.UndefOr[NullableBoolean] = js.native
+  
+  /**
+    * The maximum amount of memory available to the canary while it is running, in MB. This value must be a multiple of 64.
     */
   var MemoryInMB: js.UndefOr[MaxSize3008] = js.native
   
@@ -39,6 +44,12 @@ object CanaryRunConfigOutput {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setActiveTracing(value: NullableBoolean): Self = this.set("ActiveTracing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteActiveTracing: Self = this.set("ActiveTracing", js.undefined)
     
     @scala.inline
     def setMemoryInMB(value: MaxSize3008): Self = this.set("MemoryInMB", value.asInstanceOf[js.Any])

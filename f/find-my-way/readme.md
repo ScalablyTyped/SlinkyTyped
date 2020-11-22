@@ -1,7 +1,7 @@
 
 # Scala.js typings for find-my-way
 
-Typings are for version 2.2.3
+Typings are for version 2.2.5
 
 ## Library description:
 Crazy fast http radix based router

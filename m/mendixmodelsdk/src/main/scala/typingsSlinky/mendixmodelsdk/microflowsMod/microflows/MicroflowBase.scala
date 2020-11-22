@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.DataType
 import typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.IDataType
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -53,9 +52,6 @@ abstract class MicroflowBase protected () extends Document {
     */
   @JSName("microflowReturnType")
   val microflowReturnType_FMicroflowBase: IDataType = js.native
-  
-  @JSName("model")
-  var model_FMicroflowBase: IModel = js.native
   
   def objectCollection: MicroflowObjectCollection = js.native
   def objectCollection_=(newValue: MicroflowObjectCollection): Unit = js.native

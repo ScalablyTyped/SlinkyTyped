@@ -17,6 +17,8 @@ class DateRangePicker protected ()
   
   var disabledDays: js.Any = js.native
   
+  var getDateRangePickerModifiers: js.Any = js.native
+  
   var getDisabledDaysModifier: js.Any = js.native
   
   var handleDayClick: js.Any = js.native
@@ -55,6 +57,8 @@ class DateRangePicker protected ()
   
   var renderCalendars: js.Any = js.native
   
+  var renderDay: js.Any = js.native
+  
   var renderLeftCaption: js.Any = js.native
   
   var renderLeftNavbar: js.Any = js.native
@@ -68,6 +72,8 @@ class DateRangePicker protected ()
   var renderSingleNavbar: js.Any = js.native
   
   var setViews: js.Any = js.native
+  
+  var shouldHighlightCurrentDay: js.Any = js.native
   
   var updateLeftView: js.Any = js.native
   

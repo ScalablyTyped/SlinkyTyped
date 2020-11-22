@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientCodecommitNode.typesFileContentSizeLimitExceededExceptionMod
 
 import typingsSlinky.awsSdkClientCodecommitNode.putFileExceptionsUnionMod.PutFileExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait FileContentSizeLimitExceededException
-  extends ServiceException[FileContentSizeLimitExceededExceptionDetails]
-     with PutFileExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_FileContentSizeLimitExceededExceptionDetails> * / any */ @js.native
+trait FileContentSizeLimitExceededException extends PutFileExceptionsUnion {
   
-  @JSName("name")
-  var name_FileContentSizeLimitExceededException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.FileContentSizeLimitExceededException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.FileContentSizeLimitExceededException = js.native
 }
 object FileContentSizeLimitExceededException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: FileContentSizeLimitExceededExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.FileContentSizeLimitExceededException
   ): FileContentSizeLimitExceededException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileContentSizeLimitExceededException]
   }
   

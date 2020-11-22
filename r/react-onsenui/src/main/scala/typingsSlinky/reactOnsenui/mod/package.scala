@@ -8,7 +8,7 @@ package object mod {
   
   type HTMLAttributes[K /* <: /* keyof react.react.HTMLAttributes<{}> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 173 */ js.Any */] = typingsSlinky.std.Partial[typingsSlinky.std.Pick[typingsSlinky.react.mod.HTMLAttributes[js.Object], K]]
   
-  type InputHTMLAttributes[K /* <: /* keyof react.react.InputHTMLAttributes<{}> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 204 */ js.Any */] = typingsSlinky.std.Partial[
+  type InputHTMLAttributes[K /* <: /* keyof react.react.InputHTMLAttributes<{}> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 205 */ js.Any */] = typingsSlinky.std.Partial[
     typingsSlinky.std.Pick[typingsSlinky.react.mod.InputHTMLAttributes[js.Object], K]
   ]
   
@@ -20,4 +20,8 @@ package object mod {
     - java.lang.String
   */
   type NavigatorAnimationTypes = typingsSlinky.reactOnsenui.mod._NavigatorAnimationTypes | java.lang.String
+  
+  type Route = js.Any
+  
+  type RouterProcess = js.Object
 }

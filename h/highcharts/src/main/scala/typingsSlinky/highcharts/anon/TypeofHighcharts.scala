@@ -143,13 +143,13 @@ trait TypeofHighcharts extends js.Object {
   def animObject(animation: AnimationOptionsObject): AnimationOptionsObject = js.native
   
   def animate(el: HTMLElement, params: CSSObject): Unit = js.native
-  def animate(el: HTMLElement, params: CSSObject, opt: AnimationOptionsObject): Unit = js.native
+  def animate(el: HTMLElement, params: CSSObject, opt: PartialAnimationOptionsOb): Unit = js.native
   def animate(el: HTMLElement, params: SVGAttributes): Unit = js.native
-  def animate(el: HTMLElement, params: SVGAttributes, opt: AnimationOptionsObject): Unit = js.native
+  def animate(el: HTMLElement, params: SVGAttributes, opt: PartialAnimationOptionsOb): Unit = js.native
   def animate(el: SVGElement, params: CSSObject): Unit = js.native
-  def animate(el: SVGElement, params: CSSObject, opt: AnimationOptionsObject): Unit = js.native
+  def animate(el: SVGElement, params: CSSObject, opt: PartialAnimationOptionsOb): Unit = js.native
   def animate(el: SVGElement, params: SVGAttributes): Unit = js.native
-  def animate(el: SVGElement, params: SVGAttributes, opt: AnimationOptionsObject): Unit = js.native
+  def animate(el: SVGElement, params: SVGAttributes, opt: PartialAnimationOptionsOb): Unit = js.native
   
   def arrayMax(data: js.Array[_]): Double = js.native
   
@@ -334,6 +334,11 @@ trait TypeofHighcharts extends js.Object {
   def format(str: String, ctx: Record[String, _]): String = js.native
   def format(str: String, ctx: Record[String, _], chart: Chart_): String = js.native
   
+  def getDeferredAnimation(chart: Chart_, animation: Boolean): Double = js.native
+  def getDeferredAnimation(chart: Chart_, animation: Boolean, series: Series): Double = js.native
+  def getDeferredAnimation(chart: Chart_, animation: AnimationOptionsObject): Double = js.native
+  def getDeferredAnimation(chart: Chart_, animation: AnimationOptionsObject, series: Series): Double = js.native
+  
   def getMagnitude(num: Double): Double = js.native
   
   def getOptions(): Options = js.native
@@ -510,7 +515,7 @@ trait TypeofHighcharts extends js.Object {
   
   def setAnimation(animation: js.UndefOr[scala.Nothing], chart: Chart_): Unit = js.native
   def setAnimation(animation: Boolean, chart: Chart_): Unit = js.native
-  def setAnimation(animation: AnimationOptionsObject, chart: Chart_): Unit = js.native
+  def setAnimation(animation: PartialAnimationOptionsOb, chart: Chart_): Unit = js.native
   
   def setOptions(options: Options): Options = js.native
   
@@ -525,6 +530,8 @@ trait TypeofHighcharts extends js.Object {
   
   def syncTimeout(fn: js.Function, delay: Double): Double = js.native
   def syncTimeout(fn: js.Function, delay: Double, context: js.Any): Double = js.native
+  
+  var theme: Options = js.native
   
   var time: Time_ = js.native
   

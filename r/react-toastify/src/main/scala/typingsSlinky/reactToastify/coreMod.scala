@@ -7,6 +7,7 @@ import typingsSlinky.reactToastify.eventManagerMod.EventManager_
 import typingsSlinky.reactToastify.eventManagerMod.OnChangeCallback
 import typingsSlinky.reactToastify.reactToastifyBooleans.`false`
 import typingsSlinky.reactToastify.typesMod.ClearWaitingQueueParams
+import typingsSlinky.reactToastify.typesMod.Id
 import typingsSlinky.reactToastify.typesMod.ToastContainerProps
 import typingsSlinky.reactToastify.typesMod.ToastContent
 import typingsSlinky.reactToastify.typesMod.ToastOptions
@@ -56,7 +57,7 @@ object coreMod extends js.Object {
     /**
       * Used for controlled progress bar.
       */
-    def done(id: ReactText): Unit = js.native
+    def done(id: Id): Unit = js.native
     
     def error(content: ToastContent): ReactText = js.native
     def error(content: ToastContent, options: ToastOptions): ReactText = js.native
@@ -67,7 +68,7 @@ object coreMod extends js.Object {
     /**
       * return true if one container is displaying the toast
       */
-    def isActive(id: ReactText): Boolean = js.native
+    def isActive(id: Id): Boolean = js.native
     
     /**
       * Track changes. The callback get the number of toast displayed
@@ -78,8 +79,8 @@ object coreMod extends js.Object {
     def success(content: ToastContent): ReactText = js.native
     def success(content: ToastContent, options: ToastOptions): ReactText = js.native
     
-    def update(toastId: ReactText): Unit = js.native
-    def update(toastId: ReactText, options: UpdateOptions): Unit = js.native
+    def update(toastId: Id): Unit = js.native
+    def update(toastId: Id, options: UpdateOptions): Unit = js.native
     
     /**
       * Maybe I should remove warning in favor of warn, I don't know

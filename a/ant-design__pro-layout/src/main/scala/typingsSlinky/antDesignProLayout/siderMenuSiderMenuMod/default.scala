@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("@ant-design/pro-layout/lib/SiderMenu/SiderMenu", JSImport.Default)
 @js.native
-object default extends TopLevel[ReactComponentClass[SiderMenuProps]]
+object default extends TopLevel[ReactComponentClass[SiderMenuProps with PrivateSiderMenuProps]]

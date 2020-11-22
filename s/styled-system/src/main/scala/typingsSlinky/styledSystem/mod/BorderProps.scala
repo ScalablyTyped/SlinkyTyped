@@ -15,19 +15,19 @@ trait BorderProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal]
      with BorderRadiusProps[ThemeType, ThemeValue[radii, ThemeType, js.Any]]
      with BorderTopProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTop<TLengthStyledSystem> */ js.Any
     ]
      with BorderRightProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRightProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRight<TLengthStyledSystem> */ js.Any
     ]
      with BorderBottomProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderBottomProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderBottom<TLengthStyledSystem> */ js.Any
     ]
      with BorderLeftProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderLeftProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderLeft<TLengthStyledSystem> */ js.Any
     ] {
   
   /**

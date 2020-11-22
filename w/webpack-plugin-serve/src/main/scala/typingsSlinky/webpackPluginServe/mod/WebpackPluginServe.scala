@@ -7,17 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("webpack-plugin-serve", "WebpackPluginServe")
 @js.native
-class WebpackPluginServe () extends js.Object {
+class WebpackPluginServe[Compiler] () extends js.Object {
   def this(opts: WebpackPluginServeOptions) = this()
   
   @JSName("apply")
-  def apply(
-    compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Compiler */ js.Any
-  ): Unit = js.native
+  def apply(compiler: Compiler): Unit = js.native
   
-  def attach(): Apply = js.native
+  def attach(): Apply[Compiler] = js.native
   
-  def hook(
-    compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Compiler */ js.Any
-  ): Unit = js.native
+  def hook(compiler: Compiler): Unit = js.native
 }

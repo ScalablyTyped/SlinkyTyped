@@ -12,12 +12,12 @@ trait ParametersSearchReposEndpoint extends js.Object {
   
   var parameters: SearchReposEndpoint = js.native
   
-  var response: OctokitResponse[SearchReposResponseData] with `17` = js.native
+  var response: OctokitResponse[SearchReposResponseData] with `21` = js.native
 }
 object ParametersSearchReposEndpoint {
   
   @scala.inline
-  def apply(parameters: SearchReposEndpoint, response: OctokitResponse[SearchReposResponseData] with `17`): ParametersSearchReposEndpoint = {
+  def apply(parameters: SearchReposEndpoint, response: OctokitResponse[SearchReposResponseData] with `21`): ParametersSearchReposEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersSearchReposEndpoint]
   }
@@ -41,6 +41,6 @@ object ParametersSearchReposEndpoint {
     def setParameters(value: SearchReposEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[SearchReposResponseData] with `17`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[SearchReposResponseData] with `21`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

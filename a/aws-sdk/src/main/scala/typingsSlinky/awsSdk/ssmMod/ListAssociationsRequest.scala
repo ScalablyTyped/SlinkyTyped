@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListAssociationsRequest extends js.Object {
   
   /**
-    * One or more filters. Use a filter to return a more specific list of results.
+    * One or more filters. Use a filter to return a more specific list of results.  Filtering associations using the InstanceID attribute only returns legacy associations created using the InstanceID attribute. Associations targeting the instance that are part of the Target Attributes ResourceGroup or Tags are not returned. 
     */
   var AssociationFilterList: js.UndefOr[typingsSlinky.awsSdk.ssmMod.AssociationFilterList] = js.native
   

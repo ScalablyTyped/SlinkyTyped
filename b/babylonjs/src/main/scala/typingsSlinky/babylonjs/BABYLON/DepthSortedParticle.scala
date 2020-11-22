@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DepthSortedParticle extends js.Object {
   
   /**
+    * Particle index
+    */
+  var idx: Double = js.native
+  
+  /**
     * Index of the particle in the "indices" array
     */
   var ind: Double = js.native
@@ -30,8 +35,8 @@ trait DepthSortedParticle extends js.Object {
 object DepthSortedParticle {
   
   @scala.inline
-  def apply(ind: Double, indicesLength: Double, materialIndex: Double, sqDistance: Double): DepthSortedParticle = {
-    val __obj = js.Dynamic.literal(ind = ind.asInstanceOf[js.Any], indicesLength = indicesLength.asInstanceOf[js.Any], materialIndex = materialIndex.asInstanceOf[js.Any], sqDistance = sqDistance.asInstanceOf[js.Any])
+  def apply(idx: Double, ind: Double, indicesLength: Double, materialIndex: Double, sqDistance: Double): DepthSortedParticle = {
+    val __obj = js.Dynamic.literal(idx = idx.asInstanceOf[js.Any], ind = ind.asInstanceOf[js.Any], indicesLength = indicesLength.asInstanceOf[js.Any], materialIndex = materialIndex.asInstanceOf[js.Any], sqDistance = sqDistance.asInstanceOf[js.Any])
     __obj.asInstanceOf[DepthSortedParticle]
   }
   
@@ -49,6 +54,9 @@ object DepthSortedParticle {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setIdx(value: Double): Self = this.set("idx", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setInd(value: Double): Self = this.set("ind", value.asInstanceOf[js.Any])

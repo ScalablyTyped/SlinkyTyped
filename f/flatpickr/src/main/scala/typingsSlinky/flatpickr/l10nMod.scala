@@ -26,6 +26,8 @@ object l10nMod extends js.Object {
     
     var bs: CustomLocale = js.native
     
+    var ca: CustomLocale = js.native
+    
     var cat: CustomLocale = js.native
     
     var cs: CustomLocale = js.native
@@ -123,6 +125,10 @@ object l10nMod extends js.Object {
     var tr: CustomLocale = js.native
     
     var uk: CustomLocale = js.native
+    
+    var uz: CustomLocale = js.native
+    
+    var uz_latn: CustomLocale = js.native
     
     var vn: CustomLocale = js.native
     

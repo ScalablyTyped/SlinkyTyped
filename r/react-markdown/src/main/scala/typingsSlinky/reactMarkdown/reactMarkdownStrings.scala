@@ -1,13 +1,14 @@
 package typingsSlinky.reactMarkdown
 
 import typingsSlinky.reactMarkdown.mod.NodeType
-import typingsSlinky.reactMarkdown.mod.ReferenceType
-import typingsSlinky.reactMarkdown.mod._AlignType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object reactMarkdownStrings {
+  
+  @scala.inline
+  def Not: Not = "Not".asInstanceOf[Not]
   
   @scala.inline
   def blockquote: blockquote = "blockquote".asInstanceOf[blockquote]
@@ -16,13 +17,7 @@ object reactMarkdownStrings {
   def break: break = "break".asInstanceOf[break]
   
   @scala.inline
-  def center: center = "center".asInstanceOf[center]
-  
-  @scala.inline
   def code: code = "code".asInstanceOf[code]
-  
-  @scala.inline
-  def collapsed: collapsed = "collapsed".asInstanceOf[collapsed]
   
   @scala.inline
   def definition: definition = "definition".asInstanceOf[definition]
@@ -34,7 +29,13 @@ object reactMarkdownStrings {
   def emphasis: emphasis = "emphasis".asInstanceOf[emphasis]
   
   @scala.inline
-  def full: full = "full".asInstanceOf[full]
+  def footnote: footnote = "footnote".asInstanceOf[footnote]
+  
+  @scala.inline
+  def footnoteDefinition: footnoteDefinition = "footnoteDefinition".asInstanceOf[footnoteDefinition]
+  
+  @scala.inline
+  def footnoteReference: footnoteReference = "footnoteReference".asInstanceOf[footnoteReference]
   
   @scala.inline
   def heading: heading = "heading".asInstanceOf[heading]
@@ -52,9 +53,6 @@ object reactMarkdownStrings {
   def inlineCode: inlineCode = "inlineCode".asInstanceOf[inlineCode]
   
   @scala.inline
-  def left: left = "left".asInstanceOf[left]
-  
-  @scala.inline
   def link: link = "link".asInstanceOf[link]
   
   @scala.inline
@@ -70,28 +68,13 @@ object reactMarkdownStrings {
   def paragraph: paragraph = "paragraph".asInstanceOf[paragraph]
   
   @scala.inline
-  def right: right = "right".asInstanceOf[right]
-  
-  @scala.inline
-  def root: root = "root".asInstanceOf[root]
-  
-  @scala.inline
-  def shortcut: shortcut = "shortcut".asInstanceOf[shortcut]
-  
-  @scala.inline
   def strong: strong = "strong".asInstanceOf[strong]
   
   @scala.inline
   def table: table = "table".asInstanceOf[table]
   
   @scala.inline
-  def tableBody: tableBody = "tableBody".asInstanceOf[tableBody]
-  
-  @scala.inline
   def tableCell: tableCell = "tableCell".asInstanceOf[tableCell]
-  
-  @scala.inline
-  def tableHead: tableHead = "tableHead".asInstanceOf[tableHead]
   
   @scala.inline
   def tableRow: tableRow = "tableRow".asInstanceOf[tableRow]
@@ -103,7 +86,10 @@ object reactMarkdownStrings {
   def thematicBreak: thematicBreak = "thematicBreak".asInstanceOf[thematicBreak]
   
   @scala.inline
-  def virtualHtml: virtualHtml = "virtualHtml".asInstanceOf[virtualHtml]
+  def yaml: yaml = "yaml".asInstanceOf[yaml]
+  
+  @js.native
+  sealed trait Not extends js.Object
   
   @js.native
   sealed trait blockquote extends NodeType
@@ -112,13 +98,7 @@ object reactMarkdownStrings {
   sealed trait break extends NodeType
   
   @js.native
-  sealed trait center extends _AlignType
-  
-  @js.native
   sealed trait code extends NodeType
-  
-  @js.native
-  sealed trait collapsed extends ReferenceType
   
   @js.native
   sealed trait definition extends NodeType
@@ -130,7 +110,13 @@ object reactMarkdownStrings {
   sealed trait emphasis extends NodeType
   
   @js.native
-  sealed trait full extends ReferenceType
+  sealed trait footnote extends NodeType
+  
+  @js.native
+  sealed trait footnoteDefinition extends NodeType
+  
+  @js.native
+  sealed trait footnoteReference extends NodeType
   
   @js.native
   sealed trait heading extends NodeType
@@ -148,9 +134,6 @@ object reactMarkdownStrings {
   sealed trait inlineCode extends NodeType
   
   @js.native
-  sealed trait left extends _AlignType
-  
-  @js.native
   sealed trait link extends NodeType
   
   @js.native
@@ -166,28 +149,13 @@ object reactMarkdownStrings {
   sealed trait paragraph extends NodeType
   
   @js.native
-  sealed trait right extends _AlignType
-  
-  @js.native
-  sealed trait root extends NodeType
-  
-  @js.native
-  sealed trait shortcut extends ReferenceType
-  
-  @js.native
   sealed trait strong extends NodeType
   
   @js.native
   sealed trait table extends NodeType
   
   @js.native
-  sealed trait tableBody extends NodeType
-  
-  @js.native
   sealed trait tableCell extends NodeType
-  
-  @js.native
-  sealed trait tableHead extends NodeType
   
   @js.native
   sealed trait tableRow extends NodeType
@@ -199,5 +167,5 @@ object reactMarkdownStrings {
   sealed trait thematicBreak extends NodeType
   
   @js.native
-  sealed trait virtualHtml extends NodeType
+  sealed trait yaml extends NodeType
 }

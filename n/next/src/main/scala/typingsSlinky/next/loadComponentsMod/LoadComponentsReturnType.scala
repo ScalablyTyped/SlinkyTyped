@@ -2,18 +2,19 @@ package typingsSlinky.next.loadComponentsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
-import typingsSlinky.next.anon.Fallback
 import typingsSlinky.next.getPageFilesMod.BuildManifest
+import typingsSlinky.next.libUtilsMod.AppType
+import typingsSlinky.next.libUtilsMod.DocumentType
 import typingsSlinky.next.mod.GetServerSideProps
 import typingsSlinky.next.mod.GetServerSidePropsContext
 import typingsSlinky.next.mod.GetServerSidePropsResult
 import typingsSlinky.next.mod.GetStaticPaths
+import typingsSlinky.next.mod.GetStaticPathsContext
+import typingsSlinky.next.mod.GetStaticPathsResult
 import typingsSlinky.next.mod.GetStaticProps
 import typingsSlinky.next.mod.GetStaticPropsContext
 import typingsSlinky.next.mod.GetStaticPropsResult
 import typingsSlinky.next.mod.PageConfig
-import typingsSlinky.next.utilsMod.AppType
-import typingsSlinky.next.utilsMod.DocumentType
 import typingsSlinky.node.querystringMod.ParsedUrlQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -93,7 +94,7 @@ object LoadComponentsReturnType {
     def deleteGetServerSideProps: Self = this.set("getServerSideProps", js.undefined)
     
     @scala.inline
-    def setGetStaticPaths(value: () => js.Promise[Fallback[ParsedUrlQuery]]): Self = this.set("getStaticPaths", js.Any.fromFunction0(value))
+    def setGetStaticPaths(value: /* context */ GetStaticPathsContext => js.Promise[GetStaticPathsResult[ParsedUrlQuery]]): Self = this.set("getStaticPaths", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteGetStaticPaths: Self = this.set("getStaticPaths", js.undefined)

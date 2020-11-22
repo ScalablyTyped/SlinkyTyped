@@ -2,7 +2,7 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.EventFromData
-import typingsSlinky.devextreme.anon.ItemDataItemElement
+import typingsSlinky.devextreme.anon.ItemElement
 import typingsSlinky.devextreme.anon.ToData
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.global.JQuery
@@ -13,26 +13,36 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDraggableOptions extends DraggableBaseOptions[dxDraggable] {
   
-  /** @name dxDraggable.Options.clone */
+  /**
+    * [descr:dxDraggable.Options.clone]
+    */
   @JSName("clone")
   var clone_FdxDraggableOptions: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDraggable.Options.dragTemplate */
+  /**
+    * [descr:dxDraggable.Options.dragTemplate]
+    */
   var dragTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-      /* dragInfo */ ItemDataItemElement, 
+      /* dragInfo */ ItemElement, 
       /* containerElement */ dxElement, 
       String | Element | JQuery
     ])
   ] = js.native
   
-  /** @name dxDraggable.Options.onDragEnd */
+  /**
+    * [descr:dxDraggable.Options.onDragEnd]
+    */
   var onDragEnd: js.UndefOr[js.Function1[/* e */ ToData, _]] = js.native
   
-  /** @name dxDraggable.Options.onDragMove */
+  /**
+    * [descr:dxDraggable.Options.onDragMove]
+    */
   var onDragMove: js.UndefOr[js.Function1[/* e */ ToData, _]] = js.native
   
-  /** @name dxDraggable.Options.onDragStart */
+  /**
+    * [descr:dxDraggable.Options.onDragStart]
+    */
   var onDragStart: js.UndefOr[js.Function1[/* e */ EventFromData, _]] = js.native
 }
 object dxDraggableOptions {
@@ -65,9 +75,7 @@ object dxDraggableOptions {
     def deleteClone: Self = this.set("clone", js.undefined)
     
     @scala.inline
-    def setDragTemplateFunction2(
-      value: (/* dragInfo */ ItemDataItemElement, /* containerElement */ dxElement) => String | Element | JQuery
-    ): Self = this.set("dragTemplate", js.Any.fromFunction2(value))
+    def setDragTemplateFunction2(value: (/* dragInfo */ ItemElement, /* containerElement */ dxElement) => String | Element | JQuery): Self = this.set("dragTemplate", js.Any.fromFunction2(value))
     
     @scala.inline
     def setDragTemplateElement(value: Element): Self = this.set("dragTemplate", value.asInstanceOf[js.Any])
@@ -75,7 +83,7 @@ object dxDraggableOptions {
     @scala.inline
     def setDragTemplate(
       value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
-          /* dragInfo */ ItemDataItemElement, 
+          /* dragInfo */ ItemElement, 
           /* containerElement */ dxElement, 
           String | Element | JQuery
         ])

@@ -23,10 +23,15 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactIcons.anon.IconBasePropsattrundefine
 import typingsSlinky.reactIcons.reactIconsStrings._empty
+import typingsSlinky.reactIcons.reactIconsStrings.`additions removals`
 import typingsSlinky.reactIcons.reactIconsStrings.`additions text`
 import typingsSlinky.reactIcons.reactIconsStrings.`after-edge`
 import typingsSlinky.reactIcons.reactIconsStrings.`before-edge`
 import typingsSlinky.reactIcons.reactIconsStrings.`inline`
+import typingsSlinky.reactIcons.reactIconsStrings.`removals additions`
+import typingsSlinky.reactIcons.reactIconsStrings.`removals text`
+import typingsSlinky.reactIcons.reactIconsStrings.`text additions`
+import typingsSlinky.reactIcons.reactIconsStrings.`text removals`
 import typingsSlinky.reactIcons.reactIconsStrings.`text-after-edge`
 import typingsSlinky.reactIcons.reactIconsStrings.`text-before-edge`
 import typingsSlinky.reactIcons.reactIconsStrings.`use-credentials`
@@ -237,7 +242,9 @@ object IconBase {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

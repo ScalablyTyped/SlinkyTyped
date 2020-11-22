@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.robomakerMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -10,6 +10,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait RoboMaker extends Service {
+  
+  /**
+    * Deletes one or more worlds in a batch operation.
+    */
+  def batchDeleteWorlds(): Request[BatchDeleteWorldsResponse, AWSError] = js.native
+  def batchDeleteWorlds(callback: js.Function2[/* err */ AWSError, /* data */ BatchDeleteWorldsResponse, Unit]): Request[BatchDeleteWorldsResponse, AWSError] = js.native
+  /**
+    * Deletes one or more worlds in a batch operation.
+    */
+  def batchDeleteWorlds(params: BatchDeleteWorldsRequest): Request[BatchDeleteWorldsResponse, AWSError] = js.native
+  def batchDeleteWorlds(
+    params: BatchDeleteWorldsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ BatchDeleteWorldsResponse, Unit]
+  ): Request[BatchDeleteWorldsResponse, AWSError] = js.native
   
   /**
     * Describes one or more simulation jobs.
@@ -66,6 +80,34 @@ trait RoboMaker extends Service {
     params: CancelSimulationJobBatchRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CancelSimulationJobBatchResponse, Unit]
   ): Request[CancelSimulationJobBatchResponse, AWSError] = js.native
+  
+  /**
+    * Cancels the specified export job.
+    */
+  def cancelWorldExportJob(): Request[CancelWorldExportJobResponse, AWSError] = js.native
+  def cancelWorldExportJob(callback: js.Function2[/* err */ AWSError, /* data */ CancelWorldExportJobResponse, Unit]): Request[CancelWorldExportJobResponse, AWSError] = js.native
+  /**
+    * Cancels the specified export job.
+    */
+  def cancelWorldExportJob(params: CancelWorldExportJobRequest): Request[CancelWorldExportJobResponse, AWSError] = js.native
+  def cancelWorldExportJob(
+    params: CancelWorldExportJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CancelWorldExportJobResponse, Unit]
+  ): Request[CancelWorldExportJobResponse, AWSError] = js.native
+  
+  /**
+    * Cancels the specified world generator job.
+    */
+  def cancelWorldGenerationJob(): Request[CancelWorldGenerationJobResponse, AWSError] = js.native
+  def cancelWorldGenerationJob(callback: js.Function2[/* err */ AWSError, /* data */ CancelWorldGenerationJobResponse, Unit]): Request[CancelWorldGenerationJobResponse, AWSError] = js.native
+  /**
+    * Cancels the specified world generator job.
+    */
+  def cancelWorldGenerationJob(params: CancelWorldGenerationJobRequest): Request[CancelWorldGenerationJobResponse, AWSError] = js.native
+  def cancelWorldGenerationJob(
+    params: CancelWorldGenerationJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CancelWorldGenerationJobResponse, Unit]
+  ): Request[CancelWorldGenerationJobResponse, AWSError] = js.native
   
   @JSName("config")
   var config_RoboMaker: ConfigBase with ClientConfiguration = js.native
@@ -185,6 +227,48 @@ trait RoboMaker extends Service {
   ): Request[CreateSimulationJobResponse, AWSError] = js.native
   
   /**
+    * Creates a world export job.
+    */
+  def createWorldExportJob(): Request[CreateWorldExportJobResponse, AWSError] = js.native
+  def createWorldExportJob(callback: js.Function2[/* err */ AWSError, /* data */ CreateWorldExportJobResponse, Unit]): Request[CreateWorldExportJobResponse, AWSError] = js.native
+  /**
+    * Creates a world export job.
+    */
+  def createWorldExportJob(params: CreateWorldExportJobRequest): Request[CreateWorldExportJobResponse, AWSError] = js.native
+  def createWorldExportJob(
+    params: CreateWorldExportJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateWorldExportJobResponse, Unit]
+  ): Request[CreateWorldExportJobResponse, AWSError] = js.native
+  
+  /**
+    * Creates worlds using the specified template.
+    */
+  def createWorldGenerationJob(): Request[CreateWorldGenerationJobResponse, AWSError] = js.native
+  def createWorldGenerationJob(callback: js.Function2[/* err */ AWSError, /* data */ CreateWorldGenerationJobResponse, Unit]): Request[CreateWorldGenerationJobResponse, AWSError] = js.native
+  /**
+    * Creates worlds using the specified template.
+    */
+  def createWorldGenerationJob(params: CreateWorldGenerationJobRequest): Request[CreateWorldGenerationJobResponse, AWSError] = js.native
+  def createWorldGenerationJob(
+    params: CreateWorldGenerationJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateWorldGenerationJobResponse, Unit]
+  ): Request[CreateWorldGenerationJobResponse, AWSError] = js.native
+  
+  /**
+    * Creates a world template.
+    */
+  def createWorldTemplate(): Request[CreateWorldTemplateResponse, AWSError] = js.native
+  def createWorldTemplate(callback: js.Function2[/* err */ AWSError, /* data */ CreateWorldTemplateResponse, Unit]): Request[CreateWorldTemplateResponse, AWSError] = js.native
+  /**
+    * Creates a world template.
+    */
+  def createWorldTemplate(params: CreateWorldTemplateRequest): Request[CreateWorldTemplateResponse, AWSError] = js.native
+  def createWorldTemplate(
+    params: CreateWorldTemplateRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateWorldTemplateResponse, Unit]
+  ): Request[CreateWorldTemplateResponse, AWSError] = js.native
+  
+  /**
     * Deletes a fleet.
     */
   def deleteFleet(): Request[DeleteFleetResponse, AWSError] = js.native
@@ -239,6 +323,20 @@ trait RoboMaker extends Service {
     params: DeleteSimulationApplicationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteSimulationApplicationResponse, Unit]
   ): Request[DeleteSimulationApplicationResponse, AWSError] = js.native
+  
+  /**
+    * Deletes a world template.
+    */
+  def deleteWorldTemplate(): Request[DeleteWorldTemplateResponse, AWSError] = js.native
+  def deleteWorldTemplate(callback: js.Function2[/* err */ AWSError, /* data */ DeleteWorldTemplateResponse, Unit]): Request[DeleteWorldTemplateResponse, AWSError] = js.native
+  /**
+    * Deletes a world template.
+    */
+  def deleteWorldTemplate(params: DeleteWorldTemplateRequest): Request[DeleteWorldTemplateResponse, AWSError] = js.native
+  def deleteWorldTemplate(
+    params: DeleteWorldTemplateRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteWorldTemplateResponse, Unit]
+  ): Request[DeleteWorldTemplateResponse, AWSError] = js.native
   
   /**
     * Deregisters a robot.
@@ -353,6 +451,76 @@ trait RoboMaker extends Service {
   ): Request[DescribeSimulationJobBatchResponse, AWSError] = js.native
   
   /**
+    * Describes a world.
+    */
+  def describeWorld(): Request[DescribeWorldResponse, AWSError] = js.native
+  def describeWorld(callback: js.Function2[/* err */ AWSError, /* data */ DescribeWorldResponse, Unit]): Request[DescribeWorldResponse, AWSError] = js.native
+  /**
+    * Describes a world.
+    */
+  def describeWorld(params: DescribeWorldRequest): Request[DescribeWorldResponse, AWSError] = js.native
+  def describeWorld(
+    params: DescribeWorldRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeWorldResponse, Unit]
+  ): Request[DescribeWorldResponse, AWSError] = js.native
+  
+  /**
+    * Describes a world export job.
+    */
+  def describeWorldExportJob(): Request[DescribeWorldExportJobResponse, AWSError] = js.native
+  def describeWorldExportJob(callback: js.Function2[/* err */ AWSError, /* data */ DescribeWorldExportJobResponse, Unit]): Request[DescribeWorldExportJobResponse, AWSError] = js.native
+  /**
+    * Describes a world export job.
+    */
+  def describeWorldExportJob(params: DescribeWorldExportJobRequest): Request[DescribeWorldExportJobResponse, AWSError] = js.native
+  def describeWorldExportJob(
+    params: DescribeWorldExportJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeWorldExportJobResponse, Unit]
+  ): Request[DescribeWorldExportJobResponse, AWSError] = js.native
+  
+  /**
+    * Describes a world generation job.
+    */
+  def describeWorldGenerationJob(): Request[DescribeWorldGenerationJobResponse, AWSError] = js.native
+  def describeWorldGenerationJob(callback: js.Function2[/* err */ AWSError, /* data */ DescribeWorldGenerationJobResponse, Unit]): Request[DescribeWorldGenerationJobResponse, AWSError] = js.native
+  /**
+    * Describes a world generation job.
+    */
+  def describeWorldGenerationJob(params: DescribeWorldGenerationJobRequest): Request[DescribeWorldGenerationJobResponse, AWSError] = js.native
+  def describeWorldGenerationJob(
+    params: DescribeWorldGenerationJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeWorldGenerationJobResponse, Unit]
+  ): Request[DescribeWorldGenerationJobResponse, AWSError] = js.native
+  
+  /**
+    * Describes a world template.
+    */
+  def describeWorldTemplate(): Request[DescribeWorldTemplateResponse, AWSError] = js.native
+  def describeWorldTemplate(callback: js.Function2[/* err */ AWSError, /* data */ DescribeWorldTemplateResponse, Unit]): Request[DescribeWorldTemplateResponse, AWSError] = js.native
+  /**
+    * Describes a world template.
+    */
+  def describeWorldTemplate(params: DescribeWorldTemplateRequest): Request[DescribeWorldTemplateResponse, AWSError] = js.native
+  def describeWorldTemplate(
+    params: DescribeWorldTemplateRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeWorldTemplateResponse, Unit]
+  ): Request[DescribeWorldTemplateResponse, AWSError] = js.native
+  
+  /**
+    * Gets the world template body.
+    */
+  def getWorldTemplateBody(): Request[GetWorldTemplateBodyResponse, AWSError] = js.native
+  def getWorldTemplateBody(callback: js.Function2[/* err */ AWSError, /* data */ GetWorldTemplateBodyResponse, Unit]): Request[GetWorldTemplateBodyResponse, AWSError] = js.native
+  /**
+    * Gets the world template body.
+    */
+  def getWorldTemplateBody(params: GetWorldTemplateBodyRequest): Request[GetWorldTemplateBodyResponse, AWSError] = js.native
+  def getWorldTemplateBody(
+    params: GetWorldTemplateBodyRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetWorldTemplateBodyResponse, Unit]
+  ): Request[GetWorldTemplateBodyResponse, AWSError] = js.native
+  
+  /**
     * Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment jobs. 
     */
   def listDeploymentJobs(): Request[ListDeploymentJobsResponse, AWSError] = js.native
@@ -465,6 +633,62 @@ trait RoboMaker extends Service {
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
   
   /**
+    * Lists world export jobs.
+    */
+  def listWorldExportJobs(): Request[ListWorldExportJobsResponse, AWSError] = js.native
+  def listWorldExportJobs(callback: js.Function2[/* err */ AWSError, /* data */ ListWorldExportJobsResponse, Unit]): Request[ListWorldExportJobsResponse, AWSError] = js.native
+  /**
+    * Lists world export jobs.
+    */
+  def listWorldExportJobs(params: ListWorldExportJobsRequest): Request[ListWorldExportJobsResponse, AWSError] = js.native
+  def listWorldExportJobs(
+    params: ListWorldExportJobsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListWorldExportJobsResponse, Unit]
+  ): Request[ListWorldExportJobsResponse, AWSError] = js.native
+  
+  /**
+    * Lists world generator jobs.
+    */
+  def listWorldGenerationJobs(): Request[ListWorldGenerationJobsResponse, AWSError] = js.native
+  def listWorldGenerationJobs(callback: js.Function2[/* err */ AWSError, /* data */ ListWorldGenerationJobsResponse, Unit]): Request[ListWorldGenerationJobsResponse, AWSError] = js.native
+  /**
+    * Lists world generator jobs.
+    */
+  def listWorldGenerationJobs(params: ListWorldGenerationJobsRequest): Request[ListWorldGenerationJobsResponse, AWSError] = js.native
+  def listWorldGenerationJobs(
+    params: ListWorldGenerationJobsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListWorldGenerationJobsResponse, Unit]
+  ): Request[ListWorldGenerationJobsResponse, AWSError] = js.native
+  
+  /**
+    * Lists world templates.
+    */
+  def listWorldTemplates(): Request[ListWorldTemplatesResponse, AWSError] = js.native
+  def listWorldTemplates(callback: js.Function2[/* err */ AWSError, /* data */ ListWorldTemplatesResponse, Unit]): Request[ListWorldTemplatesResponse, AWSError] = js.native
+  /**
+    * Lists world templates.
+    */
+  def listWorldTemplates(params: ListWorldTemplatesRequest): Request[ListWorldTemplatesResponse, AWSError] = js.native
+  def listWorldTemplates(
+    params: ListWorldTemplatesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListWorldTemplatesResponse, Unit]
+  ): Request[ListWorldTemplatesResponse, AWSError] = js.native
+  
+  /**
+    * Lists worlds.
+    */
+  def listWorlds(): Request[ListWorldsResponse, AWSError] = js.native
+  def listWorlds(callback: js.Function2[/* err */ AWSError, /* data */ ListWorldsResponse, Unit]): Request[ListWorldsResponse, AWSError] = js.native
+  /**
+    * Lists worlds.
+    */
+  def listWorlds(params: ListWorldsRequest): Request[ListWorldsResponse, AWSError] = js.native
+  def listWorlds(
+    params: ListWorldsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListWorldsResponse, Unit]
+  ): Request[ListWorldsResponse, AWSError] = js.native
+  
+  /**
     * Registers a robot with a fleet.
     */
   def registerRobot(): Request[RegisterRobotResponse, AWSError] = js.native
@@ -575,4 +799,18 @@ trait RoboMaker extends Service {
     params: UpdateSimulationApplicationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateSimulationApplicationResponse, Unit]
   ): Request[UpdateSimulationApplicationResponse, AWSError] = js.native
+  
+  /**
+    * Updates a world template.
+    */
+  def updateWorldTemplate(): Request[UpdateWorldTemplateResponse, AWSError] = js.native
+  def updateWorldTemplate(callback: js.Function2[/* err */ AWSError, /* data */ UpdateWorldTemplateResponse, Unit]): Request[UpdateWorldTemplateResponse, AWSError] = js.native
+  /**
+    * Updates a world template.
+    */
+  def updateWorldTemplate(params: UpdateWorldTemplateRequest): Request[UpdateWorldTemplateResponse, AWSError] = js.native
+  def updateWorldTemplate(
+    params: UpdateWorldTemplateRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateWorldTemplateResponse, Unit]
+  ): Request[UpdateWorldTemplateResponse, AWSError] = js.native
 }

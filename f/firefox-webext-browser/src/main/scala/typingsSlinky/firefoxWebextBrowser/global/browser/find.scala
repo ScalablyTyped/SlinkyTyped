@@ -1,8 +1,8 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
-import typingsSlinky.firefoxWebextBrowser.anon.CaseSensitive
 import typingsSlinky.firefoxWebextBrowser.anon.Count
-import typingsSlinky.firefoxWebextBrowser.anon.NoScroll
+import typingsSlinky.firefoxWebextBrowser.browser.find.FindParams
+import typingsSlinky.firefoxWebextBrowser.browser.find.HighlightResultsParams
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,14 +25,14 @@ object find extends js.Object {
     * @param [params] Search parameters.
     */
   def find(queryphrase: String): js.Promise[Count] = js.native
-  def find(queryphrase: String, params: CaseSensitive): js.Promise[Count] = js.native
+  def find(queryphrase: String, params: FindParams): js.Promise[Count] = js.native
   
   /**
     * Highlight a range
     * @param [params] highlightResults parameters
     */
   def highlightResults(): Unit = js.native
-  def highlightResults(params: NoScroll): Unit = js.native
+  def highlightResults(params: HighlightResultsParams): Unit = js.native
   
   /**
     * Remove all highlighting from previous searches.

@@ -10,7 +10,12 @@ object vectorImageLayerMod extends js.Object {
   
   @js.native
   trait CanvasVectorImageLayerRenderer
-    extends typingsSlinky.ol.imageLayerMod.default
+    extends typingsSlinky.ol.imageLayerMod.default {
+    
+    def postRender(): Unit = js.native
+    
+    def preRender(): Unit = js.native
+  }
   
   @js.native
   class default protected () extends CanvasVectorImageLayerRenderer {

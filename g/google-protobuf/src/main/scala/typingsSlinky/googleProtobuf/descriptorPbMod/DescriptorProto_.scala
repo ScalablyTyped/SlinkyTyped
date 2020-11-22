@@ -49,25 +49,25 @@ class DescriptorProto_ () extends Message {
   def addReservedRange(value: ReservedRange): ReservedRange = js.native
   def addReservedRange(value: ReservedRange, index: Double): ReservedRange = js.native
   
-  def clearEnumTypeList(): Unit = js.native
+  def clearEnumTypeList(): DescriptorProto = js.native
   
-  def clearExtensionList(): Unit = js.native
+  def clearExtensionList(): DescriptorProto = js.native
   
-  def clearExtensionRangeList(): Unit = js.native
+  def clearExtensionRangeList(): DescriptorProto = js.native
   
-  def clearFieldList(): Unit = js.native
+  def clearFieldList(): DescriptorProto = js.native
   
-  def clearName(): Unit = js.native
+  def clearName(): DescriptorProto = js.native
   
-  def clearNestedTypeList(): Unit = js.native
+  def clearNestedTypeList(): DescriptorProto = js.native
   
-  def clearOneofDeclList(): Unit = js.native
+  def clearOneofDeclList(): DescriptorProto = js.native
   
-  def clearOptions(): Unit = js.native
+  def clearOptions(): DescriptorProto = js.native
   
-  def clearReservedNameList(): Unit = js.native
+  def clearReservedNameList(): DescriptorProto = js.native
   
-  def clearReservedRangeList(): Unit = js.native
+  def clearReservedRangeList(): DescriptorProto = js.native
   
   def getEnumTypeList(): js.Array[EnumDescriptorProto] = js.native
   
@@ -93,24 +93,24 @@ class DescriptorProto_ () extends Message {
   
   def hasOptions(): Boolean = js.native
   
-  def setEnumTypeList(value: js.Array[EnumDescriptorProto]): Unit = js.native
+  def setEnumTypeList(value: js.Array[EnumDescriptorProto]): DescriptorProto = js.native
   
-  def setExtensionList(value: js.Array[FieldDescriptorProto]): Unit = js.native
+  def setExtensionList(value: js.Array[FieldDescriptorProto]): DescriptorProto = js.native
   
-  def setExtensionRangeList(value: js.Array[ExtensionRange]): Unit = js.native
+  def setExtensionRangeList(value: js.Array[ExtensionRange]): DescriptorProto = js.native
   
-  def setFieldList(value: js.Array[FieldDescriptorProto]): Unit = js.native
+  def setFieldList(value: js.Array[FieldDescriptorProto]): DescriptorProto = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): DescriptorProto = js.native
   
-  def setNestedTypeList(value: js.Array[DescriptorProto]): Unit = js.native
+  def setNestedTypeList(value: js.Array[DescriptorProto]): DescriptorProto = js.native
   
-  def setOneofDeclList(value: js.Array[OneofDescriptorProto]): Unit = js.native
+  def setOneofDeclList(value: js.Array[OneofDescriptorProto]): DescriptorProto = js.native
   
-  def setOptions(): Unit = js.native
-  def setOptions(value: MessageOptions): Unit = js.native
+  def setOptions(): DescriptorProto = js.native
+  def setOptions(value: MessageOptions): DescriptorProto = js.native
   
-  def setReservedNameList(value: js.Array[String]): Unit = js.native
+  def setReservedNameList(value: js.Array[String]): DescriptorProto = js.native
   
-  def setReservedRangeList(value: js.Array[ReservedRange]): Unit = js.native
+  def setReservedRangeList(value: js.Array[ReservedRange]): DescriptorProto = js.native
 }

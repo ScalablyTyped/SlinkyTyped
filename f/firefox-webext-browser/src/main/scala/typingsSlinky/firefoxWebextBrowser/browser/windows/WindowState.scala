@@ -5,8 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * The state of this browser window. Under some circumstances a Window may not be assigned state property, for
-  * example when querying closed windows from the `sessions` API.
+  * The state of this browser window. Under some circumstances a Window may not be assigned state property, for example when querying closed windows from the `sessions` API.
   */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.normal

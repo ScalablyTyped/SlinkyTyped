@@ -22,6 +22,8 @@ trait Options extends js.Object {
   
   var imageLoadFunction: js.UndefOr[LoadFunction] = js.native
   
+  var imageSmoothing: js.UndefOr[Boolean] = js.native
+  
   var params: StringDictionary[js.Any] = js.native
   
   var projection: js.UndefOr[ProjectionLike] = js.native
@@ -92,6 +94,12 @@ object Options {
     
     @scala.inline
     def deleteImageLoadFunction: Self = this.set("imageLoadFunction", js.undefined)
+    
+    @scala.inline
+    def setImageSmoothing(value: Boolean): Self = this.set("imageSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImageSmoothing: Self = this.set("imageSmoothing", js.undefined)
     
     @scala.inline
     def setProjection(value: ProjectionLike): Self = this.set("projection", value.asInstanceOf[js.Any])

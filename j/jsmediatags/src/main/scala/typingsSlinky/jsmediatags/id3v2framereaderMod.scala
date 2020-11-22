@@ -15,7 +15,6 @@ object id3v2framereaderMod extends js.Object {
   
   val default: ID3v2FrameReader = js.native
   
-  // tslint:disable-next-line:interface-name
   @js.native
   trait ID3v2FrameReader extends js.Object {
     

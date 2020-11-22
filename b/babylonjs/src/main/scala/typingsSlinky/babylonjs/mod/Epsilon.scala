@@ -11,4 +11,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("babylonjs", "Epsilon")
 @js.native
-object Epsilon extends TopLevel[Double]
+object Epsilon
+  extends TopLevel[/* 2.2 */ Double]

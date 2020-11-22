@@ -25,7 +25,7 @@ trait Query[Value] extends js.Object {
 @js.native
 object Query extends js.Object {
   
-  type Filter[T] = js.Function1[/* item */ Result[T], Boolean]
+  type Filter[Value] = js.Function1[/* item */ Pair[Value], Boolean]
   
-  type Order[T] = js.Function1[/* items */ js.Array[Result[T]], js.Array[Result[T]]]
+  type Order[Value] = js.Function1[/* items */ js.Array[Pair[Value]], js.Array[Pair[Value]]]
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkPropertyProvider
 
+import typingsSlinky.awsSdkPropertyProvider.memoizeMod.MemoizeOverload
 import typingsSlinky.awsSdkTypes.utilMod.Provider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,13 +14,7 @@ object mod extends js.Object {
   
   def fromStatic[T](staticValue: T): Provider[T] = js.native
   
-  def memoize[T](provider: Provider[T]): Provider[T] = js.native
-  def memoize[T](provider: Provider[T], isExpired: js.Function1[/* resolved */ T, Boolean]): Provider[T] = js.native
-  def memoize[T](
-    provider: Provider[T],
-    isExpired: js.Function1[/* resolved */ T, Boolean],
-    requiresRefresh: js.Function1[/* resolved */ T, Boolean]
-  ): Provider[T] = js.native
+  val memoize: MemoizeOverload = js.native
   
   @js.native
   class ProviderError protected ()

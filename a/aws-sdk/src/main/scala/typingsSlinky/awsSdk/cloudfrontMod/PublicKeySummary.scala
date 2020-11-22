@@ -8,27 +8,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PublicKeySummary extends js.Object {
   
   /**
-    *  Comment for public key information summary. 
+    * A comment to describe the public key.
     */
   var Comment: js.UndefOr[String] = js.native
   
   /**
-    *  Creation time for public key information summary. 
+    * The date and time when the public key was uploaded.
     */
   var CreatedTime: js.Date = js.native
   
   /**
-    *  Encoded key for public key information summary. 
+    * The public key.
     */
   var EncodedKey: String = js.native
   
   /**
-    *  ID for public key information summary. 
+    * The identifier of the public key.
     */
   var Id: String = js.native
   
   /**
-    *  Name for public key information summary. 
+    * A name to help identify the public key.
     */
   var Name: String = js.native
 }

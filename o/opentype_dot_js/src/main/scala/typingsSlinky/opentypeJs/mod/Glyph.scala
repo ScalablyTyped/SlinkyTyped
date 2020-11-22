@@ -333,7 +333,7 @@ class Glyph protected () extends js.Object {
   def getPath(x: Double, y: Double, fontSize: Double, options: RenderOptions): Path = js.native
   def getPath(x: Double, y: Double, fontSize: Double, options: RenderOptions, font: Font): Path = js.native
   
-  var index: js.Any = js.native
+  var index: Double = js.native
   
   var name: String = js.native
   

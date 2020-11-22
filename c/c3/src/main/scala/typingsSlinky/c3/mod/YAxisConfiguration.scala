@@ -1,5 +1,6 @@
 package typingsSlinky.c3.mod
 
+import typingsSlinky.c3.anon.PositionText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,6 +24,11 @@ trait YAxisConfiguration extends AxisConfiguration {
     */
   var inverted: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Set label on Y axis.
+    */
+  var label: js.UndefOr[String | PositionText] = js.native
+  
   @JSName("max")
   var max_YAxisConfiguration: js.UndefOr[Double] = js.native
   
@@ -30,6 +36,8 @@ trait YAxisConfiguration extends AxisConfiguration {
   var min_YAxisConfiguration: js.UndefOr[Double] = js.native
   
   var tick: js.UndefOr[YTickConfiguration] = js.native
+  
+  var `type`: js.UndefOr[YAxisType] = js.native
 }
 object YAxisConfiguration {
   
@@ -73,6 +81,12 @@ object YAxisConfiguration {
     def deleteInverted: Self = this.set("inverted", js.undefined)
     
     @scala.inline
+    def setLabel(value: String | PositionText): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
+    
+    @scala.inline
     def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -89,5 +103,11 @@ object YAxisConfiguration {
     
     @scala.inline
     def deleteTick: Self = this.set("tick", js.undefined)
+    
+    @scala.inline
+    def setType(value: YAxisType): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
   }
 }

@@ -186,20 +186,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* Inlined parent styled-components.styled-components.ForwardRefExoticBase<styled-components.styled-components.StyledComponentProps<C, T, O, A>> */
 @js.native
-trait StyledComponentBase[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */, T /* <: js.Object */, O /* <: js.Object */, A /* <: /* keyof any */ String */] extends js.Object {
+trait StyledComponentBase[C /* <: String | ReactComponentClass[_] */, T /* <: js.Object */, O /* <: js.Object */, A /* <: /* keyof any */ String */] extends js.Object {
   
   // add our own fake call signature to implement the polymorphic 'as' prop
-  // NOTE: TS <3.2 will refuse to infer the generic and this component becomes impossible to use in JSX
-  // just the presence of the overload is enough to break JSX
-  //
-  // TODO (TypeScript 3.2): actually makes the 'as' prop polymorphic
-  // (
-  //     props: StyledComponentProps<C, T, O, A> & { as?: never }
-  //   ): React.ReactElement<StyledComponentProps<C, T, O, A>>
-  // <AsC extends keyof JSX.IntrinsicElements | React.ComponentType<any> = C>(
-  //   props: StyledComponentPropsWithAs<AsC, T, O, A>
-  // ): React.ReactElement<StyledComponentPropsWithAs<AsC, T, O, A>>
-  // TODO (TypeScript 3.2): delete this overload
   def apply(props: (StyledComponentProps[C, T, O, A]) with ForwardedAs): ReactElement = js.native
   
   @JSName("$$typeof")

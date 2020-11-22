@@ -9,9 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetInfo extends js.Object {
   
   /**
-    * If true, the `windows.Window` returned will have a `tabs` property that contains a list of the `tabs.Tab`
-    * objects. The `Tab` objects only contain the `url`, `title` and `favIconUrl` properties if the extension's
-    * manifest file includes the `"tabs"` permission.
+    * If true, the `windows.Window` returned will have a `tabs` property that contains a list of the `tabs.Tab` objects. The `Tab` objects only contain the `url`, `title` and `favIconUrl` properties if the extension's manifest file includes the `"tabs"` permission.
     */
   var populate: js.UndefOr[Boolean] = js.native
   

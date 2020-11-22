@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object mod {
   
   type Callback = js.Function3[
-    /* $ */ typingsSlinky.cheerio.CheerioStatic, 
+    /* $ */ typingsSlinky.cheerio.cheerio.Root, 
     /* file */ typingsSlinky.vinyl.mod.File, 
     /* done */ js.UndefOr[js.Function], 
     js.Any

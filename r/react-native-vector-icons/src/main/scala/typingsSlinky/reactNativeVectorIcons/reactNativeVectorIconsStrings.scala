@@ -8,6 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object reactNativeVectorIconsStrings {
   
   @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  
+  @scala.inline
   def assertive: assertive = "assertive".asInstanceOf[assertive]
   
   @scala.inline
@@ -26,6 +29,9 @@ object reactNativeVectorIconsStrings {
   def clip: clip = "clip".asInstanceOf[clip]
   
   @scala.inline
+  def email: email = "email".asInstanceOf[email]
+  
+  @scala.inline
   def head: head = "head".asInstanceOf[head]
   
   @scala.inline
@@ -33,6 +39,9 @@ object reactNativeVectorIconsStrings {
   
   @scala.inline
   def light: light = "light".asInstanceOf[light]
+  
+  @scala.inline
+  def link: link = "link".asInstanceOf[link]
   
   @scala.inline
   def middle: middle = "middle".asInstanceOf[middle]
@@ -45,6 +54,9 @@ object reactNativeVectorIconsStrings {
   
   @scala.inline
   def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def phoneNumber: phoneNumber = "phoneNumber".asInstanceOf[phoneNumber]
   
   @scala.inline
   def polite: polite = "polite".asInstanceOf[polite]
@@ -68,6 +80,9 @@ object reactNativeVectorIconsStrings {
   def yes: yes = "yes".asInstanceOf[yes]
   
   @js.native
+  sealed trait all extends js.Object
+  
+  @js.native
   sealed trait assertive extends js.Object
   
   @js.native
@@ -86,6 +101,9 @@ object reactNativeVectorIconsStrings {
   sealed trait clip extends js.Object
   
   @js.native
+  sealed trait email extends js.Object
+  
+  @js.native
   sealed trait head extends js.Object
   
   @js.native
@@ -93,6 +111,9 @@ object reactNativeVectorIconsStrings {
   
   @js.native
   sealed trait light extends FontAwesome5IconVariants
+  
+  @js.native
+  sealed trait link extends js.Object
   
   @js.native
   sealed trait middle extends js.Object
@@ -105,6 +126,9 @@ object reactNativeVectorIconsStrings {
   
   @js.native
   sealed trait none extends js.Object
+  
+  @js.native
+  sealed trait phoneNumber extends js.Object
   
   @js.native
   sealed trait polite extends js.Object

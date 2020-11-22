@@ -33,9 +33,9 @@ trait PartialMDCDataTableAdapte extends js.Object {
   
   var getSelectedRowCount: js.UndefOr[js.Function0[Double]] = js.native
   
-  var getTableBodyHeight: js.UndefOr[js.Function0[String]] = js.native
+  var getTableContainerHeight: js.UndefOr[js.Function0[Double]] = js.native
   
-  var getTableHeaderHeight: js.UndefOr[js.Function0[String]] = js.native
+  var getTableHeaderHeight: js.UndefOr[js.Function0[Double]] = js.native
   
   var isCheckboxAtRowIndexChecked: js.UndefOr[js.Function1[/* rowIndex */ Double, Boolean]] = js.native
   
@@ -163,13 +163,13 @@ object PartialMDCDataTableAdapte {
     def deleteGetSelectedRowCount: Self = this.set("getSelectedRowCount", js.undefined)
     
     @scala.inline
-    def setGetTableBodyHeight(value: () => String): Self = this.set("getTableBodyHeight", js.Any.fromFunction0(value))
+    def setGetTableContainerHeight(value: () => Double): Self = this.set("getTableContainerHeight", js.Any.fromFunction0(value))
     
     @scala.inline
-    def deleteGetTableBodyHeight: Self = this.set("getTableBodyHeight", js.undefined)
+    def deleteGetTableContainerHeight: Self = this.set("getTableContainerHeight", js.undefined)
     
     @scala.inline
-    def setGetTableHeaderHeight(value: () => String): Self = this.set("getTableHeaderHeight", js.Any.fromFunction0(value))
+    def setGetTableHeaderHeight(value: () => Double): Self = this.set("getTableHeaderHeight", js.Any.fromFunction0(value))
     
     @scala.inline
     def deleteGetTableHeaderHeight: Self = this.set("getTableHeaderHeight", js.undefined)

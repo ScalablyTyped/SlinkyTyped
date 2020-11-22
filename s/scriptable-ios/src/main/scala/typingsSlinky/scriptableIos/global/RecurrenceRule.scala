@@ -19,8 +19,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a complex monthly recurrence rule._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and
-    * a value of 3 specifies that the rule should repeat every third month.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and a
+    * value of 3 specifies that the rule should repeat every third month.
     *
     * The setPositions filters which recurrences to include in the rule's frequency. For example, a yearly recurrence rule that has a daysOfTheWeek value that specifies Monday through
     * Friday and setPositions contain 2 and -1, occurs only on the second weekday and last weekday of every year.
@@ -40,8 +40,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a complex monthly recurrence rule with an end date._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and
-    * a value of 3 specifies that the rule should repeat every third month.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and a
+    * value of 3 specifies that the rule should repeat every third month.
     *
     * The setPositions filters which recurrences to include in the rule's frequency. For example, a yearly recurrence rule that has a daysOfTheWeek value that specifies Monday through
     * Friday and setPositions contain 2 and -1, occurs only on the second weekday and last weekday of every year.
@@ -63,8 +63,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a complex monthly recurrence rule with an occurrence count._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and
-    * a value of 3 specifies that the rule should repeat every third month.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and a
+    * value of 3 specifies that the rule should repeat every third month.
     *
     * The setPositions filters which recurrences to include in the rule's frequency. For example, a yearly recurrence rule that has a daysOfTheWeek value that specifies Monday through
     * Friday and setPositions contain 2 and -1, occurs only on the second weekday and last weekday of every year.
@@ -86,8 +86,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a complex weekly recurrence rule._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and
-    * a value of 3 specifies that the rule should repeat every third week.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and a
+    * value of 3 specifies that the rule should repeat every third week.
     *
     * The setPositions filters which recurrences to include in the rule's frequency. For example, a yearly recurrence rule that has a daysOfTheWeek value that specifies Monday through
     * Friday and setPositions contain 2 and -1, occurs only on the second weekday and last weekday of every year.
@@ -101,8 +101,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a complex weekly recurrence rule with an end date._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and
-    * a value of 3 specifies that the rule should repeat every third week.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and a
+    * value of 3 specifies that the rule should repeat every third week.
     *
     * The setPositions filters which recurrences to include in the rule's frequency. For example, a yearly recurrence rule that has a daysOfTheWeek value that specifies Monday through
     * Friday and setPositions contain 2 and -1, occurs only on the second weekday and last weekday of every year.
@@ -122,8 +122,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a complex weekly recurrence rule with an occurrence count._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and
-    * a value of 3 specifies that the rule should repeat every third week.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and a
+    * value of 3 specifies that the rule should repeat every third week.
     *
     * The setPositions filters which recurrences to include in the rule's frequency. For example, a yearly recurrence rule that has a daysOfTheWeek value that specifies Monday through
     * Friday and setPositions contain 2 and -1, occurs only on the second weekday and last weekday of every year.
@@ -143,8 +143,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a complex yearly recurrence rule._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and
-    * a value of 3 specifies that the rule should repeat every third year.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and a
+    * value of 3 specifies that the rule should repeat every third year.
     *
     * The setPositions filters which recurrences to include in the rule's frequency. For example, a yearly recurrence rule that has a daysOfTheWeek value that specifies Monday through
     * Friday and setPositions contain 2 and -1, occurs only on the second weekday and last weekday of every year.
@@ -168,8 +168,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a complex yearly recurrence rule with an end date._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and
-    * a value of 3 specifies that the rule should repeat every third week.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and a
+    * value of 3 specifies that the rule should repeat every third week.
     *
     * The setPositions filters which recurrences to include in the rule's frequency. For example, a yearly recurrence rule that has a daysOfTheWeek value that specifies Monday through
     * Friday and setPositions contain 2 and -1, occurs only on the second weekday and last weekday of every year.
@@ -195,8 +195,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a complex yearly recurrence rule with an occurrence count._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and
-    * a value of 3 specifies that the rule should repeat every third year.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and a
+    * value of 3 specifies that the rule should repeat every third year.
     *
     * The setPositions filters which recurrences to include in the rule's frequency. For example, a yearly recurrence rule that has a daysOfTheWeek value that specifies Monday through
     * Friday and setPositions contain 2 and -1, occurs only on the second weekday and last weekday of every year.
@@ -222,7 +222,7 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a daily recurrence rule._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every day and a
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every day and a
     * value of 3 specifies that the rule should repeat every third day.
     * @param interval - Interval at which to repeat the rule.
     * @see https://docs.scriptable.app/recurrencerule/#daily
@@ -232,7 +232,7 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a daily recurrence rule with an end date._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every day and a
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every day and a
     * value of 3 specifies that the rule should repeat every third day.
     * @param interval - Interval at which to repeat the rule.
     * @param endDate - Date at which the recurrence rule should end.
@@ -243,7 +243,7 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a daily recurrence rule with an occurrence count._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every day and a
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every day and a
     * value of 3 specifies that the rule should repeat every third day.
     * @param interval - Interval at which to repeat the rule.
     * @param occurrenceCount - Number of times the rule should repeat before it ends.
@@ -254,8 +254,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a monthly recurrence rule._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and
-    * a value of 3 specifies that the rule should repeat every third month.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and a
+    * value of 3 specifies that the rule should repeat every third month.
     * @param interval - Interval at which to repeat the rule.
     * @see https://docs.scriptable.app/recurrencerule/#monthly
     */
@@ -264,8 +264,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a monthly recurrence rule with an end date._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and
-    * a value of 3 specifies that the rule should repeat every third month.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and a
+    * value of 3 specifies that the rule should repeat every third month.
     * @param interval - Interval at which to repeat the rule.
     * @param endDate - Date at which the recurrence rule should end.
     * @see https://docs.scriptable.app/recurrencerule/#monthlyenddate
@@ -275,8 +275,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a monthly recurrence rule with an occurrence count._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and
-    * a value of 3 specifies that the rule should repeat every third month.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every month and a
+    * value of 3 specifies that the rule should repeat every third month.
     * @param interval - Interval at which to repeat the rule.
     * @param occurrenceCount - Number of times the rule should repeat before it ends.
     * @see https://docs.scriptable.app/recurrencerule/#monthlyoccurrencecount
@@ -286,8 +286,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a weekly recurrence rule._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and
-    * a value of 3 specifies that the rule should repeat every third week.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and a
+    * value of 3 specifies that the rule should repeat every third week.
     * @param interval - Interval at which to repeat the rule.
     * @see https://docs.scriptable.app/recurrencerule/#weekly
     */
@@ -296,8 +296,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a weekly recurrence rule with an end date._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and
-    * a value of 3 specifies that the rule should repeat every third week.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and a
+    * value of 3 specifies that the rule should repeat every third week.
     * @param interval - Interval at which to repeat the rule.
     * @param endDate - Date at which the recurrence rule should end.
     * @see https://docs.scriptable.app/recurrencerule/#weeklyenddate
@@ -307,8 +307,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a weekly recurrence rule with an occurrence count._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and
-    * a value of 3 specifies that the rule should repeat every third week.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every week and a
+    * value of 3 specifies that the rule should repeat every third week.
     * @param interval - Interval at which to repeat the rule.
     * @param occurrenceCount - Number of times the rule should repeat before it ends.
     * @see https://docs.scriptable.app/recurrencerule/#weeklyoccurrencecount
@@ -318,8 +318,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a yearly recurrence rule._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and
-    * a value of 3 specifies that the rule should repeat every third year.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and a
+    * value of 3 specifies that the rule should repeat every third year.
     * @param interval - Interval at which to repeat the rule.
     * @see https://docs.scriptable.app/recurrencerule/#yearly
     */
@@ -328,8 +328,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a yearly recurrence rule with an end date._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and
-    * a value of 3 specifies that the rule should repeat every third year.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and a
+    * value of 3 specifies that the rule should repeat every third year.
     * @param interval - Interval at which to repeat the rule.
     * @param endDate - Date at which the recurrence rule should end.
     * @see https://docs.scriptable.app/recurrencerule/#yearlyenddate
@@ -339,8 +339,8 @@ object RecurrenceRule extends js.Object {
   /**
     * _Constructs a yearly recurrence rule with an occurrence count._
     *
-    * The interval should have a value greater than 0 and specifies how often the the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and
-    * a value of 3 specifies that the rule should repeat every third year.
+    * The interval should have a value greater than 0 and specifies how often the pattern repeats. For example, an interval of 1 specifies that the rule should repeat every year and a
+    * value of 3 specifies that the rule should repeat every third year.
     * @param interval - Interval at which to repeat the rule.
     * @param occurrenceCount - Number of times the rule should repeat before it ends.
     * @see https://docs.scriptable.app/recurrencerule/#yearlyoccurrencecount

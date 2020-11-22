@@ -7,14 +7,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait QueryDefinition extends js.Object {
   
+  /**
+    * The date that the query definition was most recently modified.
+    */
   var lastModified: js.UndefOr[Timestamp] = js.native
   
+  /**
+    * If this query definition contains a list of log groups that it is limited to, that list appears here.
+    */
   var logGroupNames: js.UndefOr[LogGroupNames] = js.native
   
+  /**
+    * The name of the query definition.
+    */
   var name: js.UndefOr[QueryDefinitionName] = js.native
   
+  /**
+    * The unique ID of the query definition.
+    */
   var queryDefinitionId: js.UndefOr[QueryId] = js.native
   
+  /**
+    * The query string to use for this definition. For more information, see CloudWatch Logs Insights Query Syntax.
+    */
   var queryString: js.UndefOr[QueryDefinitionString] = js.native
 }
 object QueryDefinition {

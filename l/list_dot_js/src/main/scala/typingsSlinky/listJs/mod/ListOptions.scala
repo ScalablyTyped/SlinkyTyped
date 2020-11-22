@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ListOptions extends js.Object {
   
+  var fuzzySearch: js.UndefOr[FuzzySearchOptions] = js.native
+  
   var i: js.UndefOr[Double] = js.native
   
   var indexAsync: js.UndefOr[Boolean] = js.native
@@ -47,6 +49,12 @@ object ListOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setFuzzySearch(value: FuzzySearchOptions): Self = this.set("fuzzySearch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFuzzySearch: Self = this.set("fuzzySearch", js.undefined)
     
     @scala.inline
     def setI(value: Double): Self = this.set("i", value.asInstanceOf[js.Any])

@@ -4,9 +4,9 @@ import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.NCDHW
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.NDHWC
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.same
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.valid
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor5D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor5D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

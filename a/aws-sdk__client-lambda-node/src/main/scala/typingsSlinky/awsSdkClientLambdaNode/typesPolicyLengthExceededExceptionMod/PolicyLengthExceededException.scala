@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientLambdaNode.typesPolicyLengthExceededExceptionMod
 
 import typingsSlinky.awsSdkClientLambdaNode.addPermissionExceptionsUnionMod.AddPermissionExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait PolicyLengthExceededException
-  extends ServiceException[PolicyLengthExceededExceptionDetails]
-     with AddPermissionExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_PolicyLengthExceededExceptionDetails> * / any */ @js.native
+trait PolicyLengthExceededException extends AddPermissionExceptionsUnion {
   
-  @JSName("name")
-  var name_PolicyLengthExceededException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.PolicyLengthExceededException = js.native
+  var name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.PolicyLengthExceededException = js.native
 }
 object PolicyLengthExceededException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: PolicyLengthExceededExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.PolicyLengthExceededException
   ): PolicyLengthExceededException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[PolicyLengthExceededException]
   }
   

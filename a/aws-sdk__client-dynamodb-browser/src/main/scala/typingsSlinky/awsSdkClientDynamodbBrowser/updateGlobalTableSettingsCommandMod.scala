@@ -1,12 +1,10 @@
 package typingsSlinky.awsSdkClientDynamodbBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientDynamodbBrowser.dynamoDBConfigurationMod.DynamoDBResolvedConfiguration
 import typingsSlinky.awsSdkClientDynamodbBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.typesUpdateGlobalTableSettingsInputMod.UpdateGlobalTableSettingsInput
 import typingsSlinky.awsSdkClientDynamodbBrowser.typesUpdateGlobalTableSettingsOutputMod.UpdateGlobalTableSettingsOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
@@ -23,15 +21,12 @@ object updateGlobalTableSettingsCommandMod extends js.Object {
           UpdateGlobalTableSettingsInput, 
           OutputTypesUnion, 
           UpdateGlobalTableSettingsOutput, 
-          DynamoDBResolvedConfiguration, 
-          Blob
+          DynamoDBResolvedConfiguration
         ] {
     def this(input: UpdateGlobalTableSettingsInput) = this()
     
-    val middlewareStack: MiddlewareStack[UpdateGlobalTableSettingsInput, UpdateGlobalTableSettingsOutput, Blob] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any,
       configuration: DynamoDBResolvedConfiguration
     ): Handler[UpdateGlobalTableSettingsInput, UpdateGlobalTableSettingsOutput] = js.native
   }

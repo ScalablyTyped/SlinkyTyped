@@ -1,21 +1,29 @@
 package typingsSlinky.jestTypes.anon
 
-import typingsSlinky.jestTypes.circusMod.Event
-import typingsSlinky.jestTypes.jestTypesStrings.include_test_location_in_result
+import typingsSlinky.jestTypes.circusMod.AsyncEvent
+import typingsSlinky.jestTypes.circusMod.JestGlobals
+import typingsSlinky.jestTypes.circusMod.Process
+import typingsSlinky.jestTypes.jestTypesStrings.setup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Name extends Event {
+trait Name extends AsyncEvent {
   
-  var name: include_test_location_in_result = js.native
+  var name: setup = js.native
+  
+  var parentProcess: Process = js.native
+  
+  var runtimeGlobals: JestGlobals = js.native
+  
+  var testNamePattern: js.UndefOr[String] = js.native
 }
 object Name {
   
   @scala.inline
-  def apply(name: include_test_location_in_result): Name = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+  def apply(name: setup, parentProcess: Process, runtimeGlobals: JestGlobals): Name = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], parentProcess = parentProcess.asInstanceOf[js.Any], runtimeGlobals = runtimeGlobals.asInstanceOf[js.Any])
     __obj.asInstanceOf[Name]
   }
   
@@ -35,6 +43,18 @@ object Name {
     }
     
     @scala.inline
-    def setName(value: include_test_location_in_result): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: setup): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setParentProcess(value: Process): Self = this.set("parentProcess", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRuntimeGlobals(value: JestGlobals): Self = this.set("runtimeGlobals", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTestNamePattern(value: String): Self = this.set("testNamePattern", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTestNamePattern: Self = this.set("testNamePattern", js.undefined)
   }
 }

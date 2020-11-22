@@ -5,6 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.baseui.baseuiStrings.button
+import typingsSlinky.baseui.baseuiStrings.circle
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -57,7 +58,7 @@ trait ButtonPropsautoFocusboole extends js.Object {
   
   var overrides: js.UndefOr[ButtonOverrides] = js.native
   
-  var shape: js.UndefOr[default_ | pill | round | square] = js.native
+  var shape: js.UndefOr[pill | default_ | square | round | circle] = js.native
   
   var size: js.UndefOr[compact | default_ | large_ | mini] = js.native
   
@@ -178,7 +179,7 @@ object ButtonPropsautoFocusboole {
     def deleteOverrides: Self = this.set("overrides", js.undefined)
     
     @scala.inline
-    def setShape(value: default_ | pill | round | square): Self = this.set("shape", value.asInstanceOf[js.Any])
+    def setShape(value: pill | default_ | square | round | circle): Self = this.set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShape: Self = this.set("shape", js.undefined)

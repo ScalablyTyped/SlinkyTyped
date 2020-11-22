@@ -64,6 +64,15 @@ trait Events extends js.Object {
     ]
   ] = js.native
   
+  var afterAutofill: js.UndefOr[
+    js.Function3[
+      /* start */ CellCoords, 
+      /* end */ CellCoords, 
+      /* data */ js.Array[js.Array[CellValue]], 
+      Unit
+    ]
+  ] = js.native
+  
   var afterBeginEditing: js.UndefOr[js.Function2[/* row */ Double, /* column */ Double, Unit]] = js.native
   
   var afterCellMetaReset: js.UndefOr[js.Function0[Unit]] = js.native
@@ -74,10 +83,30 @@ trait Events extends js.Object {
   
   var afterChangesObserved: js.UndefOr[js.Function0[Unit]] = js.native
   
+  var afterColumnCollapse: js.UndefOr[
+    js.Function4[
+      /* currentCollapsedColumn */ js.Array[Double], 
+      /* destinationCollapsedColumns */ js.Array[Double], 
+      /* collapsePossible */ Boolean, 
+      /* successfullyCollapsed */ Boolean, 
+      Unit
+    ]
+  ] = js.native
+  
+  var afterColumnExpand: js.UndefOr[
+    js.Function4[
+      /* currentCollapsedColumn */ js.Array[Double], 
+      /* destinationCollapsedColumns */ js.Array[Double], 
+      /* expandPossible */ Boolean, 
+      /* successfullyExpanded */ Boolean, 
+      Unit
+    ]
+  ] = js.native
+  
   var afterColumnMove: js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]] = js.native
   
   var afterColumnResize: js.UndefOr[
-    js.Function3[/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+    js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit]
   ] = js.native
   
   var afterColumnSort: js.UndefOr[
@@ -198,7 +227,9 @@ trait Events extends js.Object {
   
   var afterListen: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var afterLoadData: js.UndefOr[js.Function1[/* initialLoad */ Boolean, Unit]] = js.native
+  var afterLoadData: js.UndefOr[
+    js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+  ] = js.native
   
   var afterMergeCells: js.UndefOr[
     js.Function3[/* cellRange */ CellRange, /* mergeParent */ Settings, /* auto */ Boolean, Unit]
@@ -283,7 +314,7 @@ trait Events extends js.Object {
     js.Function4[
       /* index */ Double, 
       /* amount */ Double, 
-      /* physicalColumns */ js.Array[Double], 
+      /* physicalRows */ js.Array[Double], 
       /* source */ js.UndefOr[ChangeSource], 
       Unit
     ]
@@ -303,10 +334,19 @@ trait Events extends js.Object {
     ]
   ] = js.native
   
-  var afterRowMove: js.UndefOr[js.Function2[/* startRow */ Double, /* endRow */ Double, Unit]] = js.native
+  var afterRowMove: js.UndefOr[
+    js.Function5[
+      /* movedRows */ js.Array[Double], 
+      /* finalIndex */ Double, 
+      /* dropIndex */ Double | Unit, 
+      /* movePossible */ Boolean, 
+      /* orderChanged */ Boolean, 
+      Unit
+    ]
+  ] = js.native
   
   var afterRowResize: js.UndefOr[
-    js.Function3[/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean, Unit]
+    js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Unit]
   ] = js.native
   
   var afterScrollHorizontally: js.UndefOr[js.Function0[Unit]] = js.native
@@ -368,6 +408,10 @@ trait Events extends js.Object {
   ] = js.native
   
   var afterSetDataAtRowProp: js.UndefOr[
+    js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
+  ] = js.native
+  
+  var afterSetSourceDataAtCell: js.UndefOr[
     js.Function2[/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource], Unit]
   ] = js.native
   
@@ -448,7 +492,7 @@ trait Events extends js.Object {
       /* start */ CellCoords, 
       /* end */ CellCoords, 
       /* data */ js.Array[js.Array[CellValue]], 
-      Unit
+      Unit | Boolean
     ]
   ] = js.native
   
@@ -480,17 +524,30 @@ trait Events extends js.Object {
     js.Function2[/* changes */ js.Array[CellChange], /* source */ ChangeSource, Unit]
   ] = js.native
   
+  var beforeColumnCollapse: js.UndefOr[
+    js.Function3[
+      /* currentCollapsedColumn */ js.Array[Double], 
+      /* destinationCollapsedColumns */ js.Array[Double], 
+      /* collapsePossible */ Boolean, 
+      Unit | Boolean
+    ]
+  ] = js.native
+  
+  var beforeColumnExpand: js.UndefOr[
+    js.Function3[
+      /* currentCollapsedColumn */ js.Array[Double], 
+      /* destinationCollapsedColumns */ js.Array[Double], 
+      /* expandPossible */ Boolean, 
+      Unit | Boolean
+    ]
+  ] = js.native
+  
   var beforeColumnMove: js.UndefOr[
     js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit | Boolean]
   ] = js.native
   
   var beforeColumnResize: js.UndefOr[
-    js.Function3[
-      /* currentColumn */ Double, 
-      /* newSize */ Double, 
-      /* isDoubleClick */ Boolean, 
-      Unit | Double
-    ]
+    js.Function3[/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean, Unit | Double]
   ] = js.native
   
   var beforeColumnSort: js.UndefOr[
@@ -579,6 +636,10 @@ trait Events extends js.Object {
   var beforeKeyDown: js.UndefOr[js.Function1[/* event */ KeyboardEvent, Unit]] = js.native
   
   var beforeLanguageChange: js.UndefOr[js.Function1[/* languageCode */ String, Unit]] = js.native
+  
+  var beforeLoadData: js.UndefOr[
+    js.Function2[/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean, Unit]
+  ] = js.native
   
   var beforeMergeCells: js.UndefOr[js.Function2[/* cellRange */ CellRange, /* auto */ Boolean, Unit]] = js.native
   
@@ -679,15 +740,22 @@ trait Events extends js.Object {
     ]
   ] = js.native
   
-  var beforeRowMove: js.UndefOr[js.Function2[/* columns */ js.Array[Double], /* target */ Double, Unit]] = js.native
+  var beforeRowMove: js.UndefOr[
+    js.Function4[
+      /* movedRows */ js.Array[Double], 
+      /* finalIndex */ Double, 
+      /* dropIndex */ Double | Unit, 
+      /* movePossible */ Boolean, 
+      Unit
+    ]
+  ] = js.native
   
   var beforeRowResize: js.UndefOr[
-    js.Function3[
-      /* currentRow */ Double, 
-      /* newSize */ Double, 
-      /* isDoubleClick */ Boolean, 
-      Double | Unit
-    ]
+    js.Function3[/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean, Double | Unit]
+  ] = js.native
+  
+  var beforeSetCellMeta: js.UndefOr[
+    js.Function4[/* row */ Double, /* col */ Double, /* key */ String, /* value */ js.Any, Boolean | Unit]
   ] = js.native
   
   var beforeSetRangeEnd: js.UndefOr[js.Function1[/* coords */ CellCoords, Unit]] = js.native
@@ -754,10 +822,6 @@ trait Events extends js.Object {
   
   var construct: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var hiddenColumn: js.UndefOr[js.Function1[/* column */ Double, Unit]] = js.native
-  
-  var hiddenRow: js.UndefOr[js.Function1[/* row */ Double, Unit]] = js.native
-  
   var init: js.UndefOr[js.Function0[Unit]] = js.native
   
   var modifyAutofillRange: js.UndefOr[
@@ -767,8 +831,6 @@ trait Events extends js.Object {
       Unit
     ]
   ] = js.native
-  
-  var modifyCol: js.UndefOr[js.Function1[/* col */ Double, Unit]] = js.native
   
   var modifyColHeader: js.UndefOr[js.Function1[/* column */ Double, Unit]] = js.native
   
@@ -797,8 +859,6 @@ trait Events extends js.Object {
     ]
   ] = js.native
   
-  var modifyRow: js.UndefOr[js.Function1[/* row */ Double, Unit]] = js.native
-  
   var modifyRowData: js.UndefOr[js.Function1[/* row */ Double, Unit]] = js.native
   
   var modifyRowHeader: js.UndefOr[js.Function1[/* row */ Double, Unit]] = js.native
@@ -809,6 +869,16 @@ trait Events extends js.Object {
   
   var modifyRowSourceData: js.UndefOr[js.Function1[/* row */ Double, Unit]] = js.native
   
+  var modifySourceData: js.UndefOr[
+    js.Function4[
+      /* row */ Double, 
+      /* col */ Double, 
+      /* valueHolder */ ValueCellValue, 
+      /* ioMode */ get | set, 
+      Unit
+    ]
+  ] = js.native
+  
   var modifyTransformEnd: js.UndefOr[js.Function1[/* delta */ CellCoords, Unit]] = js.native
   
   var modifyTransformStart: js.UndefOr[js.Function1[/* delta */ CellCoords, Unit]] = js.native
@@ -818,12 +888,6 @@ trait Events extends js.Object {
   var persistentStateReset: js.UndefOr[js.Function1[/* key */ String, Unit]] = js.native
   
   var persistentStateSave: js.UndefOr[js.Function2[/* key */ String, /* value */ js.Any, Unit]] = js.native
-  
-  var skipLengthCache: js.UndefOr[js.Function1[/* delay */ Double, Unit]] = js.native
-  
-  var unmodifyCol: js.UndefOr[js.Function1[/* col */ Double, Unit]] = js.native
-  
-  var unmodifyRow: js.UndefOr[js.Function1[/* row */ Double, Unit]] = js.native
 }
 object Events {
   
@@ -855,6 +919,14 @@ object Events {
     def deleteAfterAddChild: Self = this.set("afterAddChild", js.undefined)
     
     @scala.inline
+    def setAfterAutofill(
+      value: (/* start */ CellCoords, /* end */ CellCoords, /* data */ js.Array[js.Array[CellValue]]) => Unit
+    ): Self = this.set("afterAutofill", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def deleteAfterAutofill: Self = this.set("afterAutofill", js.undefined)
+    
+    @scala.inline
     def setAfterBeginEditing(value: (/* row */ Double, /* column */ Double) => Unit): Self = this.set("afterBeginEditing", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -879,13 +951,29 @@ object Events {
     def deleteAfterChangesObserved: Self = this.set("afterChangesObserved", js.undefined)
     
     @scala.inline
+    def setAfterColumnCollapse(
+      value: (/* currentCollapsedColumn */ js.Array[Double], /* destinationCollapsedColumns */ js.Array[Double], /* collapsePossible */ Boolean, /* successfullyCollapsed */ Boolean) => Unit
+    ): Self = this.set("afterColumnCollapse", js.Any.fromFunction4(value))
+    
+    @scala.inline
+    def deleteAfterColumnCollapse: Self = this.set("afterColumnCollapse", js.undefined)
+    
+    @scala.inline
+    def setAfterColumnExpand(
+      value: (/* currentCollapsedColumn */ js.Array[Double], /* destinationCollapsedColumns */ js.Array[Double], /* expandPossible */ Boolean, /* successfullyExpanded */ Boolean) => Unit
+    ): Self = this.set("afterColumnExpand", js.Any.fromFunction4(value))
+    
+    @scala.inline
+    def deleteAfterColumnExpand: Self = this.set("afterColumnExpand", js.undefined)
+    
+    @scala.inline
     def setAfterColumnMove(value: (/* columns */ js.Array[Double], /* target */ Double) => Unit): Self = this.set("afterColumnMove", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteAfterColumnMove: Self = this.set("afterColumnMove", js.undefined)
     
     @scala.inline
-    def setAfterColumnResize(value: (/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean) => Unit): Self = this.set("afterColumnResize", js.Any.fromFunction3(value))
+    def setAfterColumnResize(value: (/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean) => Unit): Self = this.set("afterColumnResize", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteAfterColumnResize: Self = this.set("afterColumnResize", js.undefined)
@@ -1073,7 +1161,7 @@ object Events {
     def deleteAfterListen: Self = this.set("afterListen", js.undefined)
     
     @scala.inline
-    def setAfterLoadData(value: /* initialLoad */ Boolean => Unit): Self = this.set("afterLoadData", js.Any.fromFunction1(value))
+    def setAfterLoadData(value: (/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean) => Unit): Self = this.set("afterLoadData", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteAfterLoadData: Self = this.set("afterLoadData", js.undefined)
@@ -1190,7 +1278,7 @@ object Events {
     
     @scala.inline
     def setAfterRemoveRow(
-      value: (/* index */ Double, /* amount */ Double, /* physicalColumns */ js.Array[Double], /* source */ js.UndefOr[ChangeSource]) => Unit
+      value: (/* index */ Double, /* amount */ Double, /* physicalRows */ js.Array[Double], /* source */ js.UndefOr[ChangeSource]) => Unit
     ): Self = this.set("afterRemoveRow", js.Any.fromFunction4(value))
     
     @scala.inline
@@ -1211,13 +1299,15 @@ object Events {
     def deleteAfterRenderer: Self = this.set("afterRenderer", js.undefined)
     
     @scala.inline
-    def setAfterRowMove(value: (/* startRow */ Double, /* endRow */ Double) => Unit): Self = this.set("afterRowMove", js.Any.fromFunction2(value))
+    def setAfterRowMove(
+      value: (/* movedRows */ js.Array[Double], /* finalIndex */ Double, /* dropIndex */ Double | Unit, /* movePossible */ Boolean, /* orderChanged */ Boolean) => Unit
+    ): Self = this.set("afterRowMove", js.Any.fromFunction5(value))
     
     @scala.inline
     def deleteAfterRowMove: Self = this.set("afterRowMove", js.undefined)
     
     @scala.inline
-    def setAfterRowResize(value: (/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean) => Unit): Self = this.set("afterRowResize", js.Any.fromFunction3(value))
+    def setAfterRowResize(value: (/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean) => Unit): Self = this.set("afterRowResize", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteAfterRowResize: Self = this.set("afterRowResize", js.undefined)
@@ -1283,6 +1373,12 @@ object Events {
     
     @scala.inline
     def deleteAfterSetDataAtRowProp: Self = this.set("afterSetDataAtRowProp", js.undefined)
+    
+    @scala.inline
+    def setAfterSetSourceDataAtCell(value: (/* changes */ js.Array[CellChange], /* source */ js.UndefOr[ChangeSource]) => Unit): Self = this.set("afterSetSourceDataAtCell", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteAfterSetSourceDataAtCell: Self = this.set("afterSetSourceDataAtCell", js.undefined)
     
     @scala.inline
     def setAfterTrimRow(
@@ -1368,7 +1464,7 @@ object Events {
     
     @scala.inline
     def setBeforeAutofill(
-      value: (/* start */ CellCoords, /* end */ CellCoords, /* data */ js.Array[js.Array[CellValue]]) => Unit
+      value: (/* start */ CellCoords, /* end */ CellCoords, /* data */ js.Array[js.Array[CellValue]]) => Unit | Boolean
     ): Self = this.set("beforeAutofill", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -1403,15 +1499,29 @@ object Events {
     def deleteBeforeChangeRender: Self = this.set("beforeChangeRender", js.undefined)
     
     @scala.inline
+    def setBeforeColumnCollapse(
+      value: (/* currentCollapsedColumn */ js.Array[Double], /* destinationCollapsedColumns */ js.Array[Double], /* collapsePossible */ Boolean) => Unit | Boolean
+    ): Self = this.set("beforeColumnCollapse", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def deleteBeforeColumnCollapse: Self = this.set("beforeColumnCollapse", js.undefined)
+    
+    @scala.inline
+    def setBeforeColumnExpand(
+      value: (/* currentCollapsedColumn */ js.Array[Double], /* destinationCollapsedColumns */ js.Array[Double], /* expandPossible */ Boolean) => Unit | Boolean
+    ): Self = this.set("beforeColumnExpand", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def deleteBeforeColumnExpand: Self = this.set("beforeColumnExpand", js.undefined)
+    
+    @scala.inline
     def setBeforeColumnMove(value: (/* columns */ js.Array[Double], /* target */ Double) => Unit | Boolean): Self = this.set("beforeColumnMove", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteBeforeColumnMove: Self = this.set("beforeColumnMove", js.undefined)
     
     @scala.inline
-    def setBeforeColumnResize(
-      value: (/* currentColumn */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean) => Unit | Double
-    ): Self = this.set("beforeColumnResize", js.Any.fromFunction3(value))
+    def setBeforeColumnResize(value: (/* newSize */ Double, /* column */ Double, /* isDoubleClick */ Boolean) => Unit | Double): Self = this.set("beforeColumnResize", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteBeforeColumnResize: Self = this.set("beforeColumnResize", js.undefined)
@@ -1545,6 +1655,12 @@ object Events {
     def deleteBeforeLanguageChange: Self = this.set("beforeLanguageChange", js.undefined)
     
     @scala.inline
+    def setBeforeLoadData(value: (/* sourceData */ js.Array[CellValue], /* initialLoad */ Boolean) => Unit): Self = this.set("beforeLoadData", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteBeforeLoadData: Self = this.set("beforeLoadData", js.undefined)
+    
+    @scala.inline
     def setBeforeMergeCells(value: (/* cellRange */ CellRange, /* auto */ Boolean) => Unit): Self = this.set("beforeMergeCells", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -1651,18 +1767,26 @@ object Events {
     def deleteBeforeRenderer: Self = this.set("beforeRenderer", js.undefined)
     
     @scala.inline
-    def setBeforeRowMove(value: (/* columns */ js.Array[Double], /* target */ Double) => Unit): Self = this.set("beforeRowMove", js.Any.fromFunction2(value))
+    def setBeforeRowMove(
+      value: (/* movedRows */ js.Array[Double], /* finalIndex */ Double, /* dropIndex */ Double | Unit, /* movePossible */ Boolean) => Unit
+    ): Self = this.set("beforeRowMove", js.Any.fromFunction4(value))
     
     @scala.inline
     def deleteBeforeRowMove: Self = this.set("beforeRowMove", js.undefined)
     
     @scala.inline
-    def setBeforeRowResize(
-      value: (/* currentRow */ Double, /* newSize */ Double, /* isDoubleClick */ Boolean) => Double | Unit
-    ): Self = this.set("beforeRowResize", js.Any.fromFunction3(value))
+    def setBeforeRowResize(value: (/* newSize */ Double, /* row */ Double, /* isDoubleClick */ Boolean) => Double | Unit): Self = this.set("beforeRowResize", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteBeforeRowResize: Self = this.set("beforeRowResize", js.undefined)
+    
+    @scala.inline
+    def setBeforeSetCellMeta(
+      value: (/* row */ Double, /* col */ Double, /* key */ String, /* value */ js.Any) => Boolean | Unit
+    ): Self = this.set("beforeSetCellMeta", js.Any.fromFunction4(value))
+    
+    @scala.inline
+    def deleteBeforeSetCellMeta: Self = this.set("beforeSetCellMeta", js.undefined)
     
     @scala.inline
     def setBeforeSetRangeEnd(value: /* coords */ CellCoords => Unit): Self = this.set("beforeSetRangeEnd", js.Any.fromFunction1(value))
@@ -1759,18 +1883,6 @@ object Events {
     def deleteConstruct: Self = this.set("construct", js.undefined)
     
     @scala.inline
-    def setHiddenColumn(value: /* column */ Double => Unit): Self = this.set("hiddenColumn", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteHiddenColumn: Self = this.set("hiddenColumn", js.undefined)
-    
-    @scala.inline
-    def setHiddenRow(value: /* row */ Double => Unit): Self = this.set("hiddenRow", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteHiddenRow: Self = this.set("hiddenRow", js.undefined)
-    
-    @scala.inline
     def setInit(value: () => Unit): Self = this.set("init", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -1783,12 +1895,6 @@ object Events {
     
     @scala.inline
     def deleteModifyAutofillRange: Self = this.set("modifyAutofillRange", js.undefined)
-    
-    @scala.inline
-    def setModifyCol(value: /* col */ Double => Unit): Self = this.set("modifyCol", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteModifyCol: Self = this.set("modifyCol", js.undefined)
     
     @scala.inline
     def setModifyColHeader(value: /* column */ Double => Unit): Self = this.set("modifyColHeader", js.Any.fromFunction1(value))
@@ -1831,12 +1937,6 @@ object Events {
     def deleteModifyGetCellCoords: Self = this.set("modifyGetCellCoords", js.undefined)
     
     @scala.inline
-    def setModifyRow(value: /* row */ Double => Unit): Self = this.set("modifyRow", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteModifyRow: Self = this.set("modifyRow", js.undefined)
-    
-    @scala.inline
     def setModifyRowData(value: /* row */ Double => Unit): Self = this.set("modifyRowData", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -1867,6 +1967,14 @@ object Events {
     def deleteModifyRowSourceData: Self = this.set("modifyRowSourceData", js.undefined)
     
     @scala.inline
+    def setModifySourceData(
+      value: (/* row */ Double, /* col */ Double, /* valueHolder */ ValueCellValue, /* ioMode */ get | set) => Unit
+    ): Self = this.set("modifySourceData", js.Any.fromFunction4(value))
+    
+    @scala.inline
+    def deleteModifySourceData: Self = this.set("modifySourceData", js.undefined)
+    
+    @scala.inline
     def setModifyTransformEnd(value: /* delta */ CellCoords => Unit): Self = this.set("modifyTransformEnd", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -1895,23 +2003,5 @@ object Events {
     
     @scala.inline
     def deletePersistentStateSave: Self = this.set("persistentStateSave", js.undefined)
-    
-    @scala.inline
-    def setSkipLengthCache(value: /* delay */ Double => Unit): Self = this.set("skipLengthCache", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteSkipLengthCache: Self = this.set("skipLengthCache", js.undefined)
-    
-    @scala.inline
-    def setUnmodifyCol(value: /* col */ Double => Unit): Self = this.set("unmodifyCol", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteUnmodifyCol: Self = this.set("unmodifyCol", js.undefined)
-    
-    @scala.inline
-    def setUnmodifyRow(value: /* row */ Double => Unit): Self = this.set("unmodifyRow", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteUnmodifyRow: Self = this.set("unmodifyRow", js.undefined)
   }
 }

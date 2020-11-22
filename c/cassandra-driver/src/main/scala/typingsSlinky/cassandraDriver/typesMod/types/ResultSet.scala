@@ -2,14 +2,16 @@ package typingsSlinky.cassandraDriver.typesMod.types
 
 import typingsSlinky.cassandraDriver.anon.AchievedConsistency
 import typingsSlinky.cassandraDriver.anon.Type
-import typingsSlinky.std.Iterator
+import typingsSlinky.std.AsyncIterable
+import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ResultSet
-  extends Iterator[Row, js.Any, js.UndefOr[scala.Nothing]] {
+  extends Iterable[Row]
+     with AsyncIterable[Row] {
   
   var columns: js.Array[Type] = js.native
   

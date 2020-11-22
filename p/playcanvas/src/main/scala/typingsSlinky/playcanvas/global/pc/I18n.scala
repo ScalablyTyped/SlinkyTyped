@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * Handles localization. Responsible for loading localization assets
   * and returning translations for a certain key. Can also handle plural forms. To override
-  * its default behaviour define a different implementation for {@link pc.I18n#getText} and {@link pc.I18n#getPluralText}.
+  * its default behavior define a different implementation for {@link pc.I18n#getText} and {@link pc.I18n#getPluralText}.
   * @property locale - The current locale for example "en-US". Changing the locale will raise an event which will cause localized Text Elements to
   * change language to the new locale.
   * @property assets - An array of asset ids or assets that contain localization data in the expected format. I18n will automatically load

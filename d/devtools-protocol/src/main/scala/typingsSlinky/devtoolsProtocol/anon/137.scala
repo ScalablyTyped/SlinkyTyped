@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.NavigateToHistoryEntryRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowLayoutShiftRegionsRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `137` extends js.Object {
   
-  var paramsType: js.Array[NavigateToHistoryEntryRequest] = js.native
+  var paramsType: js.Array[SetShowLayoutShiftRegionsRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `137` {
   
   @scala.inline
-  def apply(paramsType: js.Array[NavigateToHistoryEntryRequest], returnType: Unit): `137` = {
+  def apply(paramsType: js.Array[SetShowLayoutShiftRegionsRequest], returnType: Unit): `137` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`137`]
   }
@@ -36,10 +36,10 @@ object `137` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: NavigateToHistoryEntryRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetShowLayoutShiftRegionsRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[NavigateToHistoryEntryRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetShowLayoutShiftRegionsRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

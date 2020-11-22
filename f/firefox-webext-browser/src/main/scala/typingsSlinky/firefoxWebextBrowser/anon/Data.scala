@@ -1,37 +1,29 @@
 package typingsSlinky.firefoxWebextBrowser.anon
 
-import typingsSlinky.firefoxWebextBrowser.browser.activityLog.UndefinedType
-import typingsSlinky.firefoxWebextBrowser.browser.activityLog.UndefinedViewType
-import typingsSlinky.firefoxWebextBrowser.browser.extensionTypes.Date
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.firefoxWebextBrowser.browser.manifest.ExtensionID
+import typingsSlinky.firefoxWebextBrowser.browser.manifest.NativeManifest
+import typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.storage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Data extends js.Object {
+trait Data extends NativeManifest {
   
-  var data: Args = js.native
+  var data: StringDictionary[js.Any] = js.native
   
-  /** The name of the api call or event, or the script url if this is a content or user script event. */
-  var name: String = js.native
+  var description: String = js.native
   
-  /** The date string when this call is triggered. */
-  var timeStamp: Date = js.native
+  var name: ExtensionID = js.native
   
-  /**
-    * The type of log entry. api_call is a function call made by the extension and api_event is an event callback
-    * to the extension. content_script is logged when a content script is injected.
-    */
-  var `type`: UndefinedType = js.native
-  
-  /** The type of view where the activity occurred. Content scripts will not have a viewType. */
-  var viewType: js.UndefOr[UndefinedViewType] = js.native
+  var `type`: storage = js.native
 }
 object Data {
   
   @scala.inline
-  def apply(data: Args, name: String, timeStamp: Date, `type`: UndefinedType): Data = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], timeStamp = timeStamp.asInstanceOf[js.Any])
+  def apply(data: StringDictionary[js.Any], description: String, name: ExtensionID, `type`: storage): Data = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data]
   }
@@ -52,21 +44,15 @@ object Data {
     }
     
     @scala.inline
-    def setData(value: Args): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: StringDictionary[js.Any]): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTimeStamp(value: Date): Self = this.set("timeStamp", value.asInstanceOf[js.Any])
+    def setName(value: ExtensionID): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: UndefinedType): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setViewType(value: UndefinedViewType): Self = this.set("viewType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteViewType: Self = this.set("viewType", js.undefined)
+    def setType(value: storage): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

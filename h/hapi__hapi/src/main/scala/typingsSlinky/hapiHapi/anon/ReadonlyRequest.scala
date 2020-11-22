@@ -75,7 +75,7 @@ trait ReadonlyRequest extends js.Object {
   
   val orig: RequestOrig = js.native
   
-  val params: Dictionary[String] = js.native
+  val params: Dictionary[_] = js.native
   
   val paramsArray: js.Array[String] = js.native
   

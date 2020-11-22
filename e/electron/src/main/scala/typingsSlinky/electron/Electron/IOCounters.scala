@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IOCounters extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/io-counters
+  // Docs: https://electronjs.org/docs/api/structures/io-counters
   /**
     * Then number of I/O other operations.
     */

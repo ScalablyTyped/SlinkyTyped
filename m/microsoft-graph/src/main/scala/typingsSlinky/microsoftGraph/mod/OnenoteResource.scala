@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OnenoteResource extends OnenoteEntityBaseModel {
   
   // The content stream
-  var content: js.UndefOr[js.Any] = js.native
+  var content: js.UndefOr[NullableOption[_]] = js.native
   
   // The URL for downloading the content
-  var contentUrl: js.UndefOr[String] = js.native
+  var contentUrl: js.UndefOr[NullableOption[String]] = js.native
 }
 object OnenoteResource {
   
@@ -37,15 +37,21 @@ object OnenoteResource {
     }
     
     @scala.inline
-    def setContent(value: js.Any): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: NullableOption[_]): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     
     @scala.inline
-    def setContentUrl(value: String): Self = this.set("contentUrl", value.asInstanceOf[js.Any])
+    def setContentNull: Self = this.set("content", null)
+    
+    @scala.inline
+    def setContentUrl(value: NullableOption[String]): Self = this.set("contentUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContentUrl: Self = this.set("contentUrl", js.undefined)
+    
+    @scala.inline
+    def setContentUrlNull: Self = this.set("contentUrl", null)
   }
 }

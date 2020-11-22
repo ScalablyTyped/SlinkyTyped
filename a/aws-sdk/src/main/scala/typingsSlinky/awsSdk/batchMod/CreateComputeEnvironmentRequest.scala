@@ -28,6 +28,11 @@ trait CreateComputeEnvironmentRequest extends js.Object {
   var state: js.UndefOr[CEState] = js.native
   
   /**
+    * The tags that you apply to the compute environment to help you categorize and organize your resources. Each tag consists of a key and an optional value. For more information, see Tagging AWS Resources in AWS General Reference. These tags can be updated or removed using the TagResource and UntagResource API operations. These tags do not propagate to the underlying compute resources.
+    */
+  var tags: js.UndefOr[TagrisTagsMap] = js.native
+  
+  /**
     * The type of the compute environment. For more information, see Compute Environments in the AWS Batch User Guide.
     */
   var `type`: CEType = js.native
@@ -76,5 +81,11 @@ object CreateComputeEnvironmentRequest {
     
     @scala.inline
     def deleteState: Self = this.set("state", js.undefined)
+    
+    @scala.inline
+    def setTags(value: TagrisTagsMap): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
   }
 }

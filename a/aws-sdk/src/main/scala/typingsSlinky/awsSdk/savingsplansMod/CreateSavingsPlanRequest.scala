@@ -18,6 +18,11 @@ trait CreateSavingsPlanRequest extends js.Object {
   var commitment: Amount = js.native
   
   /**
+    * The time at which to purchase the Savings Plan, in UTC format (YYYY-MM-DDTHH:MM:SSZ).
+    */
+  var purchaseTime: js.UndefOr[js.Date] = js.native
+  
+  /**
     * The ID of the offering.
     */
   var savingsPlanOfferingId: SavingsPlanOfferingId = js.native
@@ -66,6 +71,12 @@ object CreateSavingsPlanRequest {
     
     @scala.inline
     def deleteClientToken: Self = this.set("clientToken", js.undefined)
+    
+    @scala.inline
+    def setPurchaseTime(value: js.Date): Self = this.set("purchaseTime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePurchaseTime: Self = this.set("purchaseTime", js.undefined)
     
     @scala.inline
     def setTags(value: TagMap): Self = this.set("tags", value.asInstanceOf[js.Any])

@@ -1,6 +1,8 @@
 package typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component
 
 import typingsSlinky.std.Partial
+import typingsSlinky.std.Record
+import typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.BehaviorIdentifier
 import typingsSlinky.wechatMiniprogram.WechatMiniprogram.CreateIntersectionObserverOption
 import typingsSlinky.wechatMiniprogram.WechatMiniprogram.EventChannel
 import typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject
@@ -18,6 +20,7 @@ trait InstanceMethods[D /* <: DataOption */] extends js.Object {
     *
     * 最低基础库版本：[`2.9.0`](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
     **/
+  def animate(selector: String, keyFrames: js.Array[KeyFrame], duration: Double): Unit = js.native
   def animate(selector: String, keyFrames: js.Array[KeyFrame], duration: Double, callback: js.Function0[Unit]): Unit = js.native
   /**
     * 执行关键帧动画，详见[动画](https://developers.weixin.qq.com/miniprogram/dev/framework/view/animation.html)
@@ -36,12 +39,15 @@ trait InstanceMethods[D /* <: DataOption */] extends js.Object {
     *
     * 最低基础库版本：[`2.9.0`](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
     **/
-  def clearAnimation(selector: String, callback: js.Function0[Unit]): Unit = js.native
+  def clearAnimation(selector: String): Unit = js.native
   /**
     * 清除关键帧动画，详见[动画](https://developers.weixin.qq.com/miniprogram/dev/framework/view/animation.html)
     *
     * 最低基础库版本：[`2.9.0`](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html)
     **/
+  def clearAnimation(selector: String, callback: js.Function0[Unit]): Unit = js.native
+  def clearAnimation(selector: String, options: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
+  def clearAnimation(selector: String, options: ClearAnimationOptions): Unit = js.native
   def clearAnimation(selector: String, options: ClearAnimationOptions, callback: js.Function0[Unit]): Unit = js.native
   
   /** 创建一个 IntersectionObserver 对象，选择器选取范围为这个组件实例内 */
@@ -78,7 +84,7 @@ trait InstanceMethods[D /* <: DataOption */] extends js.Object {
   def groupSetData(callback: js.Function0[Unit]): Unit = js.native
   
   /** 检查组件是否具有 `behavior` （检查时会递归检查被直接或间接引入的所有behavior） */
-  def hasBehavior(behavior: js.Object): Unit = js.native
+  def hasBehavior(behavior: BehaviorIdentifier): Unit = js.native
   
   /** 使用选择器选择组件实例节点，返回匹配到的全部组件实例对象组成的数组 */
   def selectAllComponents(selector: String): js.Array[TrivialInstance] = js.native
@@ -127,6 +133,6 @@ trait InstanceMethods[D /* <: DataOption */] extends js.Object {
   /** 触发事件，参见组件事件 */
   def triggerEvent(name: String): Unit = js.native
   def triggerEvent(name: String, detail: js.UndefOr[scala.Nothing], options: TriggerEventOption): Unit = js.native
-  def triggerEvent(name: String, detail: js.Object): Unit = js.native
-  def triggerEvent(name: String, detail: js.Object, options: TriggerEventOption): Unit = js.native
+  def triggerEvent(name: String, detail: Record[String, _]): Unit = js.native
+  def triggerEvent(name: String, detail: Record[String, _], options: TriggerEventOption): Unit = js.native
 }

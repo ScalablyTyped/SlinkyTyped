@@ -85,7 +85,7 @@ trait StrictDropdownProps extends js.Object {
   var defaultUpward: js.UndefOr[Boolean] = js.native
   
   /** Initial value or value array if multiple. */
-  var defaultValue: js.UndefOr[String | Double | Boolean | js.Array[Boolean]] = js.native
+  var defaultValue: js.UndefOr[String | Double | Boolean | (js.Array[Double | String | Boolean])] = js.native
   
   /** A dropdown menu can open to the left or to the right. */
   var direction: js.UndefOr[left | right] = js.native
@@ -279,11 +279,11 @@ trait StrictDropdownProps extends js.Object {
     * Pass a function here to replace the default search.
     */
   var search: js.UndefOr[
-    js.Function2[
+    Boolean | (js.Function2[
       /* options */ js.Array[DropdownItemProps], 
       /* value */ String, 
-      js.Array[DropdownItemProps] | Boolean
-    ]
+      js.Array[DropdownItemProps]
+    ])
   ] = js.native
   
   /** A shorthand for a search input. */
@@ -320,7 +320,7 @@ trait StrictDropdownProps extends js.Object {
   var upward: js.UndefOr[Boolean] = js.native
   
   /** Current value or value array if multiple. Creates a controlled component. */
-  var value: js.UndefOr[Boolean | Double | String | js.Array[String]] = js.native
+  var value: js.UndefOr[Boolean | Double | String | (js.Array[Boolean | Double | String])] = js.native
   
   /**
     * A dropdown will go to the last element when ArrowUp is pressed on the first,
@@ -466,10 +466,10 @@ object StrictDropdownProps {
     def deleteDefaultUpward: Self = this.set("defaultUpward", js.undefined)
     
     @scala.inline
-    def setDefaultValueVarargs(value: Boolean*): Self = this.set("defaultValue", js.Array(value :_*))
+    def setDefaultValueVarargs(value: (Double | String | Boolean)*): Self = this.set("defaultValue", js.Array(value :_*))
     
     @scala.inline
-    def setDefaultValue(value: String | Double | Boolean | js.Array[Boolean]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    def setDefaultValue(value: String | Double | Boolean | (js.Array[Double | String | Boolean])): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
@@ -680,9 +680,18 @@ object StrictDropdownProps {
     def deleteScrolling: Self = this.set("scrolling", js.undefined)
     
     @scala.inline
-    def setSearch(
-      value: (/* options */ js.Array[DropdownItemProps], /* value */ String) => js.Array[DropdownItemProps] | Boolean
+    def setSearchFunction2(
+      value: (/* options */ js.Array[DropdownItemProps], /* value */ String) => js.Array[DropdownItemProps]
     ): Self = this.set("search", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setSearch(
+      value: Boolean | (js.Function2[
+          /* options */ js.Array[DropdownItemProps], 
+          /* value */ String, 
+          js.Array[DropdownItemProps]
+        ])
+    ): Self = this.set("search", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSearch: Self = this.set("search", js.undefined)
@@ -757,10 +766,10 @@ object StrictDropdownProps {
     def deleteUpward: Self = this.set("upward", js.undefined)
     
     @scala.inline
-    def setValueVarargs(value: String*): Self = this.set("value", js.Array(value :_*))
+    def setValueVarargs(value: (Boolean | Double | String)*): Self = this.set("value", js.Array(value :_*))
     
     @scala.inline
-    def setValue(value: Boolean | Double | String | js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: Boolean | Double | String | (js.Array[Boolean | Double | String])): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)

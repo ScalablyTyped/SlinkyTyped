@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Tag extends js.Object {
   
   /**
-    * Name of the tag.
+    * Name of the object key.
     */
   var Key: ObjectKey = js.native
   

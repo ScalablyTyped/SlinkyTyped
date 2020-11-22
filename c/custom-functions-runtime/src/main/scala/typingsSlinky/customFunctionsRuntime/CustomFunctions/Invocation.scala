@@ -17,8 +17,20 @@ trait Invocation extends js.Object {
     * `{ "requiresAddress": true }`
     *
     * If the metadata JSON file is being generated from JSDoc comments, include the tag `@requiresAddress`.
+    * [Api set: CustomFunctionsRuntime 1.1]
     */
   var address: js.UndefOr[String] = js.native
+  
+  /**
+    * The range addresses where the function parameters are located, if requested, otherwise undefined.
+    *
+    * To request the parameter addresses for the function, in the metadata JSON file, the function options should specify:
+    * `{ "requiresParameterAddresses": true }`
+    *
+    * If the metadata JSON file is being generated from JSDoc comments, include the tag `@requiresParameterAddresses`.
+    * [Api set: CustomFunctionsRuntime 1.3]
+    */
+  var parameterAddresses: js.UndefOr[js.Array[String]] = js.native
 }
 object Invocation {
   
@@ -48,5 +60,14 @@ object Invocation {
     
     @scala.inline
     def deleteAddress: Self = this.set("address", js.undefined)
+    
+    @scala.inline
+    def setParameterAddressesVarargs(value: String*): Self = this.set("parameterAddresses", js.Array(value :_*))
+    
+    @scala.inline
+    def setParameterAddresses(value: js.Array[String]): Self = this.set("parameterAddresses", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParameterAddresses: Self = this.set("parameterAddresses", js.undefined)
   }
 }

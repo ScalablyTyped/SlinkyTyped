@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/s3-request-presigner/build/constants", JSImport.Namespace)
+@JSImport("@aws-sdk/s3-request-presigner/dist/cjs/constants", JSImport.Namespace)
 @js.native
 object constantsMod extends js.Object {
   

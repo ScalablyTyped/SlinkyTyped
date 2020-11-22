@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates.AttributeWidget
@@ -18,6 +19,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.MemberWidget
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.RangeSearchField
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.SingleSearchField
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.StaticOrDynamicString
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,8 +35,8 @@ class AttributeRef protected () extends MemberRef {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def attribute: IAttribute = js.native
@@ -42,9 +44,6 @@ class AttributeRef protected () extends MemberRef {
   def attributeQualifiedName: String = js.native
   
   def attribute_=(newValue: IAttribute): Unit = js.native
-  
-  @JSName("model")
-  var model_FAttributeRef: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.AttributeRef")

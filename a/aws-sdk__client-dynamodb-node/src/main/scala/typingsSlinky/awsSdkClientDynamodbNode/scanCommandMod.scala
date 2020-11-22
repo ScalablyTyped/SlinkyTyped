@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientDynamodbNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbNode.typesScanInputMod.ScanInput
 import typingsSlinky.awsSdkClientDynamodbNode.typesScanOutputMod.ScanOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,20 +16,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object scanCommandMod extends js.Object {
   
   @js.native
-  class ScanCommand protected () extends Command[
-          InputTypesUnion, 
-          ScanInput, 
-          OutputTypesUnion, 
-          ScanOutput, 
-          DynamoDBResolvedConfiguration, 
-          Readable
-        ] {
+  class ScanCommand protected () extends Command[InputTypesUnion, ScanInput, OutputTypesUnion, ScanOutput, DynamoDBResolvedConfiguration] {
     def this(input: ScanInput) = this()
     
-    val middlewareStack: MiddlewareStack[ScanInput, ScanOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: DynamoDBResolvedConfiguration
     ): Handler[ScanInput, ScanOutput] = js.native
   }

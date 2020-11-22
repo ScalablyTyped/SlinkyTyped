@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object fadeMod {
   
-  type Fade[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.fadeMod.FadeProps]
+  type Fade = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.fadeMod.FadeProps]
 }

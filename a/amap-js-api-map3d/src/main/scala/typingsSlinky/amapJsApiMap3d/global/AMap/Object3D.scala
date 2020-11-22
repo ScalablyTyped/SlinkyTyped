@@ -52,7 +52,6 @@ object Object3D extends js.Object {
     def this(options: typingsSlinky.amapJsApiMap3d.AMap.Object3D.ThinLine.Options) = this()
   }
   
-  // tslint:disable-next-line
   @js.native
   class Wall ()
     extends typingsSlinky.amapJsApiMap3d.AMap.Object3D.MeshAcceptLights

@@ -6,8 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* menus types */
 /**
-  * The different contexts a menu can appear in. Specifying 'all' is equivalent to the combination of all other
-  * contexts except for 'tab' and 'tools_menu'.
+  * The different contexts a menu can appear in. Specifying 'all' is equivalent to the combination of all other contexts except for 'tab' and 'tools_menu'.
   */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.all

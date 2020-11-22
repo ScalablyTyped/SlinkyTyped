@@ -23,6 +23,11 @@ class ZoneAssociation protected () extends CustomResource {
   def this(name: String, args: ZoneAssociationArgs, opts: CustomResourceOptions) = this()
   
   /**
+    * The account ID of the account that created the hosted zone.
+    */
+  val owningAccount: Output_[String] = js.native
+  
+  /**
     * The VPC to associate with the private hosted zone.
     */
   val vpcId: Output_[String] = js.native

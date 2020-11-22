@@ -18,6 +18,9 @@ class WebGLRenderList protected () extends js.Object {
   
   def init(): Unit = js.native
   
+  /**
+  	 * @default []
+  	 */
   var opaque: js.Array[RenderItem] = js.native
   
   def push(`object`: Object3D, geometry: Null, material: Material, groupOrder: Double, z: Double): Unit = js.native
@@ -41,6 +44,9 @@ class WebGLRenderList protected () extends js.Object {
   
   def sort(opaqueSort: js.Function, transparentSort: js.Function): Unit = js.native
   
+  /**
+  	 * @default []
+  	 */
   var transparent: js.Array[RenderItem] = js.native
   
   def unshift(`object`: Object3D, geometry: Null, material: Material, groupOrder: Double, z: Double): Unit = js.native

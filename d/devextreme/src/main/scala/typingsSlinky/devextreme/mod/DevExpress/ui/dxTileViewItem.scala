@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTileViewItem extends CollectionWidgetItem {
   
-  /** @name dxTileViewItem.heightRatio */
+  /**
+    * [descr:dxTileViewItem.heightRatio]
+    */
   var heightRatio: js.UndefOr[Double] = js.native
   
-  /** @name dxTileViewItem.widthRatio */
+  /**
+    * [descr:dxTileViewItem.widthRatio]
+    */
   var widthRatio: js.UndefOr[Double] = js.native
 }
 object dxTileViewItem {

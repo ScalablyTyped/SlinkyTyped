@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesSankey
 
-import typingsSlinky.echarts.anon.CurvenessOpacity
+import typingsSlinky.echarts.anon.ColorCurveness
 import typingsSlinky.echarts.anon.`21`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +20,7 @@ trait LinkObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sankey.links.lineStyle
     */
-  var lineStyle: js.UndefOr[CurvenessOpacity] = js.native
+  var lineStyle: js.UndefOr[ColorCurveness] = js.native
   
   /**
     * The
@@ -80,7 +80,7 @@ object LinkObject {
     def deleteEmphasis: Self = this.set("emphasis", js.undefined)
     
     @scala.inline
-    def setLineStyle(value: CurvenessOpacity): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
+    def setLineStyle(value: ColorCurveness): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLineStyle: Self = this.set("lineStyle", js.undefined)

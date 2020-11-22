@@ -8,6 +8,8 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.blueprintjsSelect.blueprintjsSelectStrings.first
+import typingsSlinky.blueprintjsSelect.blueprintjsSelectStrings.last
 import typingsSlinky.blueprintjsSelect.itemListRendererMod.IItemListRendererProps
 import typingsSlinky.blueprintjsSelect.itemRendererMod.IItemRendererProps
 import typingsSlinky.blueprintjsSelect.listItemsPropsMod.ItemsEqualProp
@@ -42,6 +44,9 @@ object QueryList {
     
     @scala.inline
     def createNewItemFromQuery(value: /* query */ String => T): this.type = set("createNewItemFromQuery", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def createNewItemPosition(value: first | last): this.type = set("createNewItemPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def createNewItemRenderer(

@@ -1,7 +1,7 @@
 package typingsSlinky.materialUiCore.createTypographyMod
 
-import typingsSlinky.csstype.mod.Property.FontFamily
-import typingsSlinky.csstype.mod.Property.FontWeight
+import typingsSlinky.csstype.mod.FontFamilyProperty
+import typingsSlinky.csstype.mod.FontWeightProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,15 +28,15 @@ trait Typography extends js.Object {
   
   var display4: TypographyStyle = js.native
   
-  var fontFamily: FontFamily = js.native
+  var fontFamily: FontFamilyProperty = js.native
   
   var fontSize: Double = js.native
   
-  var fontWeightLight: FontWeight = js.native
+  var fontWeightLight: FontWeightProperty = js.native
   
-  var fontWeightMedium: FontWeight = js.native
+  var fontWeightMedium: FontWeightProperty = js.native
   
-  var fontWeightRegular: FontWeight = js.native
+  var fontWeightRegular: FontWeightProperty = js.native
   
   var h1: TypographyStyle = js.native
   
@@ -76,11 +76,11 @@ object Typography {
     display2: TypographyStyle,
     display3: TypographyStyle,
     display4: TypographyStyle,
-    fontFamily: FontFamily,
+    fontFamily: FontFamilyProperty,
     fontSize: Double,
-    fontWeightLight: FontWeight,
-    fontWeightMedium: FontWeight,
-    fontWeightRegular: FontWeight,
+    fontWeightLight: FontWeightProperty,
+    fontWeightMedium: FontWeightProperty,
+    fontWeightRegular: FontWeightProperty,
     h1: TypographyStyle,
     h2: TypographyStyle,
     h3: TypographyStyle,
@@ -139,19 +139,19 @@ object Typography {
     def setDisplay4(value: TypographyStyle): Self = this.set("display4", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFontFamily(value: FontFamily): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
+    def setFontFamily(value: FontFamilyProperty): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFontSize(value: Double): Self = this.set("fontSize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFontWeightLight(value: FontWeight): Self = this.set("fontWeightLight", value.asInstanceOf[js.Any])
+    def setFontWeightLight(value: FontWeightProperty): Self = this.set("fontWeightLight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFontWeightMedium(value: FontWeight): Self = this.set("fontWeightMedium", value.asInstanceOf[js.Any])
+    def setFontWeightMedium(value: FontWeightProperty): Self = this.set("fontWeightMedium", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFontWeightRegular(value: FontWeight): Self = this.set("fontWeightRegular", value.asInstanceOf[js.Any])
+    def setFontWeightRegular(value: FontWeightProperty): Self = this.set("fontWeightRegular", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setH1(value: TypographyStyle): Self = this.set("h1", value.asInstanceOf[js.Any])

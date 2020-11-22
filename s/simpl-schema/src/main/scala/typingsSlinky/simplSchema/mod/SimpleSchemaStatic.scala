@@ -32,6 +32,7 @@ trait SimpleSchemaStatic
   def clean(doc: js.Any): js.Any = js.native
   def clean(doc: js.Any, options: CleanOption): js.Any = js.native
   
+  def extend(otherSchema: SimpleSchemaDefinition): SimpleSchemaStatic = js.native
   def extend(otherSchema: SimpleSchemaStatic): SimpleSchemaStatic = js.native
   
   def extendOptions(options: js.Array[String]): Unit = js.native

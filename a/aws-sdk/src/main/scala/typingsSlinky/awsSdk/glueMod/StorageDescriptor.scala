@@ -48,6 +48,11 @@ trait StorageDescriptor extends js.Object {
   var Parameters: js.UndefOr[ParametersMap] = js.native
   
   /**
+    * An object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference.
+    */
+  var SchemaReference: js.UndefOr[typingsSlinky.awsSdk.glueMod.SchemaReference] = js.native
+  
+  /**
     * The serialization/deserialization (SerDe) information.
     */
   var SerdeInfo: js.UndefOr[SerDeInfo] = js.native
@@ -143,6 +148,12 @@ object StorageDescriptor {
     
     @scala.inline
     def deleteParameters: Self = this.set("Parameters", js.undefined)
+    
+    @scala.inline
+    def setSchemaReference(value: SchemaReference): Self = this.set("SchemaReference", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSchemaReference: Self = this.set("SchemaReference", js.undefined)
     
     @scala.inline
     def setSerdeInfo(value: SerDeInfo): Self = this.set("SerdeInfo", value.asInstanceOf[js.Any])

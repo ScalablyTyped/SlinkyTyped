@@ -8,5 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ExpandConstructor
-  extends Instantiable0[Expand]
+  extends /**
+  * The Expand widget acts as a clickable button for opening a widget.
+  *
+  * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand.html)
+  */
+Instantiable0[Expand]
      with Instantiable1[/* properties */ ExpandProperties, Expand]

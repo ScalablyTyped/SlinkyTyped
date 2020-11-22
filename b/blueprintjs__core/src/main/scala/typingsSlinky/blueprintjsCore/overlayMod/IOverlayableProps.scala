@@ -48,7 +48,7 @@ trait IOverlayableProps extends IOverlayLifecycleProps {
     * mouse or key event). Note that, since this component is controlled by the `isOpen` prop, it
     * will not actually close itself until that prop becomes `false`.
     */
-  var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.native
   
   /**
     * Space-delimited string of class names applied to the `Portal` element if
@@ -134,7 +134,7 @@ object IOverlayableProps {
     def deleteLazy: Self = this.set("lazy", js.undefined)
     
     @scala.inline
-    def setOnClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
+    def setOnClose(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClose: Self = this.set("onClose", js.undefined)

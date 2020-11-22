@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ProjectsGetCardEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ProjectsGetCardResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ProjectsCreateForOrgEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ProjectsCreateForOrgResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `824` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ProjectsGetCardEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ProjectsCreateForOrgEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ProjectsGetCardResponseData] = js.native
+  var response: OctokitResponse[ProjectsCreateForOrgResponseData] = js.native
 }
 object `824` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ProjectsGetCardEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ProjectsGetCardResponseData]
+    parameters: RequestParameters with (Omit[ProjectsCreateForOrgEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ProjectsCreateForOrgResponseData]
   ): `824` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`824`]
@@ -46,9 +46,9 @@ object `824` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ProjectsGetCardEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ProjectsCreateForOrgEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ProjectsGetCardResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ProjectsCreateForOrgResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

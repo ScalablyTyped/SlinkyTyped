@@ -14,8 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object lineLoopMod extends js.Object {
   
   @js.native
-  class LineLoop[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: Material | js.Array[Material] */] ()
-    extends Line[Geometry | BufferGeometry, Material | js.Array[Material]] {
+  class LineLoop[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: Material | js.Array[Material] */] () extends Line[TGeometry, TMaterial] {
     def this(geometry: TGeometry) = this()
     def this(geometry: TGeometry, material: TMaterial) = this()
     def this(geometry: js.UndefOr[scala.Nothing], material: TMaterial) = this()

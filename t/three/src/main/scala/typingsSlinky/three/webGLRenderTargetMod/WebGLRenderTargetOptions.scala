@@ -25,7 +25,7 @@ trait WebGLRenderTargetOptions extends js.Object {
   
   var format: js.UndefOr[Double] = js.native
   
-   // true;
+   // false;
   var generateMipmaps: js.UndefOr[Boolean] = js.native
   
   var magFilter: js.UndefOr[TextureFilter] = js.native

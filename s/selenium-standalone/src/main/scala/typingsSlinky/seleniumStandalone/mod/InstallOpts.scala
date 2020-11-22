@@ -3,7 +3,6 @@ package typingsSlinky.seleniumStandalone.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.httpMod.RequestOptions
 import typingsSlinky.node.urlMod.URL_
-import typingsSlinky.seleniumStandalone.anon.Arch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +16,7 @@ trait InstallOpts extends js.Object {
   
   var cb: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
   
-  var drivers: js.UndefOr[StringDictionary[Arch]] = js.native
+  var drivers: js.UndefOr[StringDictionary[DriverOptions]] = js.native
   
   var logger: js.UndefOr[js.Function1[/* message */ String, Unit]] = js.native
   
@@ -71,7 +70,7 @@ object InstallOpts {
     def deleteCb: Self = this.set("cb", js.undefined)
     
     @scala.inline
-    def setDrivers(value: StringDictionary[Arch]): Self = this.set("drivers", value.asInstanceOf[js.Any])
+    def setDrivers(value: StringDictionary[DriverOptions]): Self = this.set("drivers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDrivers: Self = this.set("drivers", js.undefined)

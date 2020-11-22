@@ -1,7 +1,7 @@
 
 # Scala.js typings for angular-cookies
 
-Typings are for version 1.4
+Typings are for version 1.8
 
 ## Library description:
 AngularJS module for cookies

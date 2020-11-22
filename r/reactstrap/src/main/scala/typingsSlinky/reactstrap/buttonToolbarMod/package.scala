@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object buttonToolbarMod {
   
-  type ButtonToolbar[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.buttonToolbarMod.ButtonToolbarProps]
+  type ButtonToolbar = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.buttonToolbarMod.ButtonToolbarProps]
 }

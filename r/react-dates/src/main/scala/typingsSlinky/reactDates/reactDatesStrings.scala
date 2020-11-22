@@ -4,6 +4,7 @@ import typingsSlinky.reactDates.mod.AnchorDirectionShape
 import typingsSlinky.reactDates.mod.CalendarInfoPositionShape
 import typingsSlinky.reactDates.mod.FocusedInputShape
 import typingsSlinky.reactDates.mod.IconPositionShape
+import typingsSlinky.reactDates.mod.NavPositionShape
 import typingsSlinky.reactDates.mod.OpenDirectionShape
 import typingsSlinky.reactDates.mod.OrientationShape
 import typingsSlinky.reactDates.mod.ScrollableOrientationShape
@@ -34,6 +35,12 @@ object reactDatesStrings {
   
   @scala.inline
   def left: left = "left".asInstanceOf[left]
+  
+  @scala.inline
+  def navPositionBottom: navPositionBottom = "navPositionBottom".asInstanceOf[navPositionBottom]
+  
+  @scala.inline
+  def navPositionTop: navPositionTop = "navPositionTop".asInstanceOf[navPositionTop]
   
   @scala.inline
   def right: right = "right".asInstanceOf[right]
@@ -81,6 +88,12 @@ object reactDatesStrings {
   
   @js.native
   sealed trait left extends AnchorDirectionShape
+  
+  @js.native
+  sealed trait navPositionBottom extends NavPositionShape
+  
+  @js.native
+  sealed trait navPositionTop extends NavPositionShape
   
   @js.native
   sealed trait right extends AnchorDirectionShape

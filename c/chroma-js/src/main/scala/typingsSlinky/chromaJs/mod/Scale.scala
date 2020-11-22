@@ -26,6 +26,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Scale[OutType] extends js.Object {
   
+  def apply(): OutType = js.native
   def apply(c: js.Array[String]): Scale[Color] = js.native
   def apply(value: Double): OutType = js.native
   

@@ -1,17 +1,19 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.FormattingInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/dynamic-label-document-template relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/dynamic-label-document-template relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.DynamicLabel")
 @js.native
@@ -21,15 +23,12 @@ class DynamicLabel protected () extends AttributeWidget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def formattingInfo: FormattingInfo = js.native
   def formattingInfo_=(newValue: FormattingInfo): Unit = js.native
-  
-  @JSName("model")
-  var model_FDynamicLabel: IModel = js.native
   
   def renderXHTML: Boolean = js.native
   def renderXHTML_=(newValue: Boolean): Unit = js.native

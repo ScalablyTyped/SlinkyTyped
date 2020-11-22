@@ -1,7 +1,7 @@
 
 # Scala.js typings for aws-sdk__util-create-request
 
-Typings are for version 0.1.0-preview.2
+Typings are for version 1.0.0-rc.7
 
 ## Library description:
 [![NPM version](https://img.shields.io/npm/v/@aws-sdk/util-create-request/preview.svg)](https://www.npmjs.com/package/@aws-sdk/util-create-request) [![NPM downloads](https://img.shields.io/npm/dm/@aws-sdk/util-create-request.svg)](https://www.npmjs.com/pa

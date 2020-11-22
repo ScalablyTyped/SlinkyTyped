@@ -7,21 +7,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WorkbookFilterCriteria extends js.Object {
   
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[NullableOption[String]] = js.native
   
-  var criterion1: js.UndefOr[String] = js.native
+  var criterion1: js.UndefOr[NullableOption[String]] = js.native
   
-  var criterion2: js.UndefOr[String] = js.native
+  var criterion2: js.UndefOr[NullableOption[String]] = js.native
   
   var dynamicCriteria: js.UndefOr[String] = js.native
   
   var filterOn: js.UndefOr[String] = js.native
   
-  var icon: js.UndefOr[WorkbookIcon] = js.native
+  var icon: js.UndefOr[NullableOption[WorkbookIcon]] = js.native
   
   var operator: js.UndefOr[String] = js.native
   
-  var values: js.UndefOr[js.Any] = js.native
+  var values: js.UndefOr[NullableOption[_]] = js.native
 }
 object WorkbookFilterCriteria {
   
@@ -47,22 +47,31 @@ object WorkbookFilterCriteria {
     }
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: NullableOption[String]): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setCriterion1(value: String): Self = this.set("criterion1", value.asInstanceOf[js.Any])
+    def setColorNull: Self = this.set("color", null)
+    
+    @scala.inline
+    def setCriterion1(value: NullableOption[String]): Self = this.set("criterion1", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCriterion1: Self = this.set("criterion1", js.undefined)
     
     @scala.inline
-    def setCriterion2(value: String): Self = this.set("criterion2", value.asInstanceOf[js.Any])
+    def setCriterion1Null: Self = this.set("criterion1", null)
+    
+    @scala.inline
+    def setCriterion2(value: NullableOption[String]): Self = this.set("criterion2", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCriterion2: Self = this.set("criterion2", js.undefined)
+    
+    @scala.inline
+    def setCriterion2Null: Self = this.set("criterion2", null)
     
     @scala.inline
     def setDynamicCriteria(value: String): Self = this.set("dynamicCriteria", value.asInstanceOf[js.Any])
@@ -77,10 +86,13 @@ object WorkbookFilterCriteria {
     def deleteFilterOn: Self = this.set("filterOn", js.undefined)
     
     @scala.inline
-    def setIcon(value: WorkbookIcon): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: NullableOption[WorkbookIcon]): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
+    
+    @scala.inline
+    def setIconNull: Self = this.set("icon", null)
     
     @scala.inline
     def setOperator(value: String): Self = this.set("operator", value.asInstanceOf[js.Any])
@@ -89,9 +101,12 @@ object WorkbookFilterCriteria {
     def deleteOperator: Self = this.set("operator", js.undefined)
     
     @scala.inline
-    def setValues(value: js.Any): Self = this.set("values", value.asInstanceOf[js.Any])
+    def setValues(value: NullableOption[_]): Self = this.set("values", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValues: Self = this.set("values", js.undefined)
+    
+    @scala.inline
+    def setValuesNull: Self = this.set("values", null)
   }
 }

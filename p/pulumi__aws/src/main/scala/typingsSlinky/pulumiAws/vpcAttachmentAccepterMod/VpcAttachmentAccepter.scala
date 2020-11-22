@@ -24,6 +24,11 @@ class VpcAttachmentAccepter protected () extends CustomResource {
   def this(name: String, args: VpcAttachmentAccepterArgs, opts: CustomResourceOptions) = this()
   
   /**
+    * Whether Appliance Mode support is enabled. Valid values: `disable`, `enable`.
+    */
+  val applianceModeSupport: Output_[String] = js.native
+  
+  /**
     * Whether DNS support is enabled. Valid values: `disable`, `enable`.
     */
   val dnsSupport: Output_[String] = js.native

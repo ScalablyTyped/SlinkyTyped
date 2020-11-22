@@ -34,8 +34,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactMdAlert.reactMdAlertStrings.`additions removals`
 import typingsSlinky.reactMdAlert.reactMdAlertStrings.`additions text`
 import typingsSlinky.reactMdAlert.reactMdAlertStrings.`inline`
+import typingsSlinky.reactMdAlert.reactMdAlertStrings.`removals additions`
+import typingsSlinky.reactMdAlert.reactMdAlertStrings.`removals text`
+import typingsSlinky.reactMdAlert.reactMdAlertStrings.`text additions`
+import typingsSlinky.reactMdAlert.reactMdAlertStrings.`text removals`
 import typingsSlinky.reactMdAlert.reactMdAlertStrings.additions
 import typingsSlinky.reactMdAlert.reactMdAlertStrings.all
 import typingsSlinky.reactMdAlert.reactMdAlertStrings.ascending
@@ -172,7 +177,9 @@ trait ToastMessage extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -772,7 +779,9 @@ object ToastMessage {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

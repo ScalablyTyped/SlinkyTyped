@@ -1,10 +1,13 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.ColorIcon
-import typingsSlinky.firefoxWebextBrowser.anon.Icon
-import typingsSlinky.firefoxWebextBrowser.anon.Name
 import typingsSlinky.firefoxWebextBrowser.browser.contextualIdentities.ContextualIdentity
+import typingsSlinky.firefoxWebextBrowser.browser.contextualIdentities.CreateDetails
+import typingsSlinky.firefoxWebextBrowser.browser.contextualIdentities.OnCreatedChangeInfo
+import typingsSlinky.firefoxWebextBrowser.browser.contextualIdentities.OnRemovedChangeInfo
+import typingsSlinky.firefoxWebextBrowser.browser.contextualIdentities.OnUpdatedChangeInfo
+import typingsSlinky.firefoxWebextBrowser.browser.contextualIdentities.QueryDetails
+import typingsSlinky.firefoxWebextBrowser.browser.contextualIdentities.UpdateDetails
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +27,7 @@ object contextualIdentities extends js.Object {
     * Creates a contextual identity with the given data.
     * @param details Details about the contextual identity being created.
     */
-  def create(details: Icon): js.Promise[ContextualIdentity] = js.native
+  def create(details: CreateDetails): js.Promise[ContextualIdentity] = js.native
   
   /* contextualIdentities functions */
   /**
@@ -34,26 +37,20 @@ object contextualIdentities extends js.Object {
   def get(cookieStoreId: String): js.Promise[ContextualIdentity] = js.native
   
   /** Fired when a new container is created. */
-  val onCreated: WebExtEvent[
-    js.Function1[/* changeInfo */ typingsSlinky.firefoxWebextBrowser.anon.ContextualIdentity, Unit]
-  ] = js.native
+  val onCreated: WebExtEvent[js.Function1[/* changeInfo */ OnCreatedChangeInfo, Unit]] = js.native
   
   /** Fired when a container is removed. */
-  val onRemoved: WebExtEvent[
-    js.Function1[/* changeInfo */ typingsSlinky.firefoxWebextBrowser.anon.ContextualIdentity, Unit]
-  ] = js.native
+  val onRemoved: WebExtEvent[js.Function1[/* changeInfo */ OnRemovedChangeInfo, Unit]] = js.native
   
   /* contextualIdentities events */
   /** Fired when a container is updated. */
-  val onUpdated: WebExtEvent[
-    js.Function1[/* changeInfo */ typingsSlinky.firefoxWebextBrowser.anon.ContextualIdentity, Unit]
-  ] = js.native
+  val onUpdated: WebExtEvent[js.Function1[/* changeInfo */ OnUpdatedChangeInfo, Unit]] = js.native
   
   /**
     * Retrieves all contextual identities
     * @param details Information to filter the contextual identities being retrieved.
     */
-  def query(details: Name): js.Promise[js.Array[ContextualIdentity]] = js.native
+  def query(details: QueryDetails): js.Promise[js.Array[ContextualIdentity]] = js.native
   
   /**
     * Deletes a contetual identity by its cookie Store ID.
@@ -66,5 +63,5 @@ object contextualIdentities extends js.Object {
     * @param cookieStoreId The ID of the contextual identity cookie store.
     * @param details Details about the contextual identity being created.
     */
-  def update(cookieStoreId: String, details: ColorIcon): js.Promise[ContextualIdentity] = js.native
+  def update(cookieStoreId: String, details: UpdateDetails): js.Promise[ContextualIdentity] = js.native
 }

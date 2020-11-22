@@ -1,6 +1,7 @@
 package typingsSlinky.antd.formItemInputMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.formItemMod.ValidateStatus
 import typingsSlinky.antd.gridColMod.ColProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,6 +13,8 @@ trait FormItemInputProps extends js.Object {
   var extra: js.UndefOr[ReactElement] = js.native
   
   var help: js.UndefOr[ReactElement] = js.native
+  
+  var status: js.UndefOr[ValidateStatus] = js.native
   
   var wrapperCol: js.UndefOr[ColProps] = js.native
 }
@@ -55,6 +58,12 @@ object FormItemInputProps {
     
     @scala.inline
     def deleteHelp: Self = this.set("help", js.undefined)
+    
+    @scala.inline
+    def setStatus(value: ValidateStatus): Self = this.set("status", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStatus: Self = this.set("status", js.undefined)
     
     @scala.inline
     def setWrapperCol(value: ColProps): Self = this.set("wrapperCol", value.asInstanceOf[js.Any])

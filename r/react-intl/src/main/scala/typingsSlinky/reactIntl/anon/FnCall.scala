@@ -1,14 +1,13 @@
 package typingsSlinky.reactIntl.anon
 
-import slinky.core.TagMod
-import typingsSlinky.reactIntl.typesMod.FormatListOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FnCall extends js.Object {
-  def apply(values: js.Array[String | TagMod[Any]]): TagMod[Any] = js.native
-  def apply(values: js.Array[String | TagMod[Any]], opts: FormatListOptions): TagMod[Any] = js.native
+  
+  def apply(): String = js.native
+  def apply(date: Double): String = js.native
+  def apply(date: js.Date): String = js.native
 }
-

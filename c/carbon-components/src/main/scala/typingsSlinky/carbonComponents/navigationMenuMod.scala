@@ -1,7 +1,6 @@
 package typingsSlinky.carbonComponents
 
 import typingsSlinky.carbonComponents.anon.BACKWARD
-import typingsSlinky.carbonComponents.anon.MatchesNavSubmenu
 import typingsSlinky.std.WeakMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +20,7 @@ object navigationMenuMod extends js.Object {
     
     def _handleKeyDown(event: js.Any): Unit = js.native
     
-    def changeNavSubmenuState(hasMatchesNavSubmenuShouldBeCollapsed: MatchesNavSubmenu): Unit = js.native
+    def changeNavSubmenuState(hasMatchesNavSubmenuShouldBeCollapsed: js.Any): Unit = js.native
     
     def getCurrentNavigation(): js.Any = js.native
     

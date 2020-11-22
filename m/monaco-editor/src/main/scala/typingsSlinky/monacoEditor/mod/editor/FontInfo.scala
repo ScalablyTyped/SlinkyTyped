@@ -25,4 +25,6 @@ class FontInfo () extends BareFontInfo {
   val typicalFullwidthCharacterWidth: Double = js.native
   
   val typicalHalfwidthCharacterWidth: Double = js.native
+  
+  val wsmiddotWidth: Double = js.native
 }

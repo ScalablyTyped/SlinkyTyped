@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PutBotResponse extends js.Object {
   
   /**
-    * The message that Amazon Lex uses to abort a conversation. For more information, see PutBot.
+    * The message that Amazon Lex uses to cancel a conversation. For more information, see PutBot.
     */
   var abortStatement: js.UndefOr[Statement] = js.native
   
@@ -48,6 +48,11 @@ trait PutBotResponse extends js.Object {
   var detectSentiment: js.UndefOr[Boolean] = js.native
   
   /**
+    * Indicates whether the bot uses accuracy improvements. true indicates that the bot is using the improvements, otherwise, false.
+    */
+  var enableModelImprovements: js.UndefOr[Boolean] = js.native
+  
+  /**
     * If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
     */
   var failureReason: js.UndefOr[String] = js.native
@@ -76,6 +81,11 @@ trait PutBotResponse extends js.Object {
     * The name of the bot.
     */
   var name: js.UndefOr[BotName] = js.native
+  
+  /**
+    * The score that determines where Amazon Lex inserts the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent is inserted if the confidence score for all intents is below this value. AMAZON.KendraSearchIntent is only inserted if it is configured for the bot.
+    */
+  var nluIntentConfidenceThreshold: js.UndefOr[ConfidenceThreshold] = js.native
   
   /**
     *  When you send a request to create a bot with processBehavior set to BUILD, Amazon Lex sets the status response element to BUILDING. In the READY_BASIC_TESTING state you can test the bot with user inputs that exactly match the utterances configured for the bot's intents and values in the slot types. If Amazon Lex can't build the bot, Amazon Lex sets status to FAILED. Amazon Lex returns the reason for the failure in the failureReason response element.  When you set processBehavior to SAVE, Amazon Lex sets the status code to NOT BUILT. When the bot is in the READY state you can test and publish the bot.
@@ -169,6 +179,12 @@ object PutBotResponse {
     def deleteDetectSentiment: Self = this.set("detectSentiment", js.undefined)
     
     @scala.inline
+    def setEnableModelImprovements(value: Boolean): Self = this.set("enableModelImprovements", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnableModelImprovements: Self = this.set("enableModelImprovements", js.undefined)
+    
+    @scala.inline
     def setFailureReason(value: String): Self = this.set("failureReason", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -206,6 +222,12 @@ object PutBotResponse {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setNluIntentConfidenceThreshold(value: ConfidenceThreshold): Self = this.set("nluIntentConfidenceThreshold", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNluIntentConfidenceThreshold: Self = this.set("nluIntentConfidenceThreshold", js.undefined)
     
     @scala.inline
     def setStatus(value: Status): Self = this.set("status", value.asInstanceOf[js.Any])

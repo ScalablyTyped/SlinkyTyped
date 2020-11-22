@@ -33,12 +33,12 @@ trait Backup extends js.Object {
   var FileSystem: typingsSlinky.awsSdk.fsxMod.FileSystem = js.native
   
   /**
-    * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt this backup of the Amazon FSx for Windows file system's data at rest. Amazon FSx for Lustre does not support KMS encryption.
+    * The ID of the AWS Key Management Service (AWS KMS) key used to encrypt the backup of the Amazon FSx file system's data at rest. 
     */
   var KmsKeyId: js.UndefOr[typingsSlinky.awsSdk.fsxMod.KmsKeyId] = js.native
   
   /**
-    * The lifecycle status of the backup.
+    * The lifecycle status of the backup.    AVAILABLE - The backup is fully available.    CREATING - FSx is creating the backup.    TRANSFERRING - For Lustre file systems only; FSx is transferring the backup to S3.    DELETED - The backup was deleted is no longer available.    FAILED - Amazon FSx could not complete the backup.  
     */
   var Lifecycle: BackupLifecycle = js.native
   

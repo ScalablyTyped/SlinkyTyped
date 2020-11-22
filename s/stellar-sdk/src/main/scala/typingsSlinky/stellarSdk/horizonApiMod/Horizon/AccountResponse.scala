@@ -27,11 +27,17 @@ trait AccountResponse extends BaseResponse[transactions | operations | payments 
   
   var id: String = js.native
   
+  var num_sponsored: Double = js.native
+  
+  var num_sponsoring: Double = js.native
+  
   var paging_token: String = js.native
   
   var sequence: String = js.native
   
   var signers: js.Array[AccountSigner] = js.native
+  
+  var sponsor: js.UndefOr[String] = js.native
   
   var subentry_count: Double = js.native
   
@@ -49,13 +55,15 @@ object AccountResponse {
     data: StringDictionary[String],
     flags: Flags,
     id: String,
+    num_sponsored: Double,
+    num_sponsoring: Double,
     paging_token: String,
     sequence: String,
     signers: js.Array[AccountSigner],
     subentry_count: Double,
     thresholds: AccountThresholds
   ): AccountResponse = {
-    val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], account_id = account_id.asInstanceOf[js.Any], balances = balances.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], paging_token = paging_token.asInstanceOf[js.Any], sequence = sequence.asInstanceOf[js.Any], signers = signers.asInstanceOf[js.Any], subentry_count = subentry_count.asInstanceOf[js.Any], thresholds = thresholds.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(_links = _links.asInstanceOf[js.Any], account_id = account_id.asInstanceOf[js.Any], balances = balances.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], num_sponsored = num_sponsored.asInstanceOf[js.Any], num_sponsoring = num_sponsoring.asInstanceOf[js.Any], paging_token = paging_token.asInstanceOf[js.Any], sequence = sequence.asInstanceOf[js.Any], signers = signers.asInstanceOf[js.Any], subentry_count = subentry_count.asInstanceOf[js.Any], thresholds = thresholds.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccountResponse]
   }
   
@@ -93,6 +101,12 @@ object AccountResponse {
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setNum_sponsored(value: Double): Self = this.set("num_sponsored", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNum_sponsoring(value: Double): Self = this.set("num_sponsoring", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setPaging_token(value: String): Self = this.set("paging_token", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -109,5 +123,11 @@ object AccountResponse {
     
     @scala.inline
     def setThresholds(value: AccountThresholds): Self = this.set("thresholds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSponsor(value: String): Self = this.set("sponsor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSponsor: Self = this.set("sponsor", js.undefined)
   }
 }

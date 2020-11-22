@@ -23,7 +23,7 @@ trait CreateClientVpnRouteRequest extends js.Object {
   var Description: js.UndefOr[String] = js.native
   
   /**
-    * The IPv4 address range, in CIDR notation, of the route destination. For example:   To add a route for Internet access, enter 0.0.0.0/0    To add a route for a peered VPC, enter the peered VPC's IPv4 CIDR range   To add a route for an on-premises network, enter the AWS Site-to-Site VPN connection's IPv4 CIDR range   Route address ranges cannot overlap with the CIDR range specified for client allocation.
+    * The IPv4 address range, in CIDR notation, of the route destination. For example:   To add a route for Internet access, enter 0.0.0.0/0    To add a route for a peered VPC, enter the peered VPC's IPv4 CIDR range   To add a route for an on-premises network, enter the AWS Site-to-Site VPN connection's IPv4 CIDR range   To add a route for the local network, enter the client CIDR range  
     */
   var DestinationCidrBlock: String = js.native
   
@@ -33,7 +33,7 @@ trait CreateClientVpnRouteRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * The ID of the subnet through which you want to route traffic. The specified subnet must be an existing target network of the Client VPN endpoint.
+    * The ID of the subnet through which you want to route traffic. The specified subnet must be an existing target network of the Client VPN endpoint. Alternatively, if you're adding a route for the local network, specify local.
     */
   var TargetVpcSubnetId: SubnetId = js.native
 }

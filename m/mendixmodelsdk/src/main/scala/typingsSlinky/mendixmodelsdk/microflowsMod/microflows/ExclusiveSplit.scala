@@ -1,16 +1,18 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/decisions relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/decisions relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.ExclusiveSplit")
 @js.native
@@ -20,8 +22,8 @@ class ExclusiveSplit protected () extends MicroflowObject {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def caption: String = js.native
@@ -32,9 +34,6 @@ class ExclusiveSplit protected () extends MicroflowObject {
   
   def errorHandlingType: ErrorHandlingType = js.native
   def errorHandlingType_=(newValue: ErrorHandlingType): Unit = js.native
-  
-  @JSName("model")
-  var model_FExclusiveSplit: IModel = js.native
   
   def splitCondition: SplitCondition = js.native
   def splitCondition_=(newValue: SplitCondition): Unit = js.native

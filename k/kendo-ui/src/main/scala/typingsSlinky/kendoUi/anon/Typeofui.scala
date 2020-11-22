@@ -14,6 +14,8 @@ trait Typeofui extends js.Object {
   
   var Alert: TypeofAlert = js.native
   
+  var AppBar: TypeofAppBar = js.native
+  
   var AutoComplete: TypeofAutoComplete = js.native
   
   var Button: TypeofButton = js.native
@@ -80,9 +82,13 @@ trait Typeofui extends js.Object {
   
   var Grid: TypeofGrid = js.native
   
+  var ImageEditor: TypeofImageEditor = js.native
+  
   var ListBox: TypeofListBox = js.native
   
   var ListView: TypeofListView = js.native
+  
+  var Loader: TypeofLoader = js.native
   
   var MaskedTextBox: TypeofMaskedTextBox = js.native
   
@@ -140,6 +146,8 @@ trait Typeofui extends js.Object {
   
   var TabStrip: TypeofTabStrip = js.native
   
+  var TextArea: TypeofTextArea = js.native
+  
   var TextBox: TypeofTextBox = js.native
   
   var TileLayout: TypeofTileLayout = js.native
@@ -165,6 +173,8 @@ trait Typeofui extends js.Object {
   var Widget: TypeofWidget = js.native
   
   var Window: TypeofWindow = js.native
+  
+  var Wizard: TypeofWizard = js.native
   
   val editor: Typeofeditor = js.native
   

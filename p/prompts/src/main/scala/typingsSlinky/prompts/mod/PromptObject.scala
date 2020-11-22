@@ -25,6 +25,8 @@ trait PromptObject[T /* <: String */] extends js.Object {
   
   var initial: js.UndefOr[String | Double | Boolean | js.Date] = js.native
   
+  var instructions: js.UndefOr[String | Boolean] = js.native
+  
   var limit: js.UndefOr[Double] = js.native
   
   var mask: js.UndefOr[String] = js.native
@@ -137,6 +139,12 @@ object PromptObject {
     
     @scala.inline
     def deleteInitial: Self = this.set("initial", js.undefined)
+    
+    @scala.inline
+    def setInstructions(value: String | Boolean): Self = this.set("instructions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInstructions: Self = this.set("instructions", js.undefined)
     
     @scala.inline
     def setLimit(value: Double): Self = this.set("limit", value.asInstanceOf[js.Any])

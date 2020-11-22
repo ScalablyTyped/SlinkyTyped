@@ -8,19 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NetLog extends js.Object {
   
   /**
-    * A `Boolean` property that indicates whether network logs are recorded.
+    * A `Boolean` property that indicates whether network logs are currently being
+    * recorded.
     *
     */
   val currentlyLogging: Boolean = js.native
   
-  /**
-    * A `String` property that returns the path to the current log file.
-    *
-    * @deprecated
-    */
-  val currentlyLoggingPath: String = js.native
-  
-  // Docs: http://electronjs.org/docs/api/net-log
+  // Docs: https://electronjs.org/docs/api/net-log
   /**
     * resolves when the net log has begun recording.
     * 
@@ -30,10 +24,10 @@ trait NetLog extends js.Object {
   def startLogging(path: String, options: StartLoggingOptions): js.Promise[Unit] = js.native
   
   /**
-    * resolves with a file path to which network logs were recorded.
+    * resolves when the net log has been flushed to disk.
     *
     * Stops recording network events. If not called, net logging will automatically
     * end when app quits.
     */
-  def stopLogging(): js.Promise[String] = js.native
+  def stopLogging(): js.Promise[Unit] = js.native
 }

@@ -4,8 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.popperJs.mod.Modifiers
-import typingsSlinky.popperJs.mod.Placement
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactstrap.anon.Hide
 import typingsSlinky.reactstrap.mod.CSSModule
@@ -35,9 +33,13 @@ trait UncontrolledTooltipProps
   
   var innerClassName: js.UndefOr[String] = js.native
   
-  var modifiers: js.UndefOr[Modifiers] = js.native
+  var modifiers: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Modifiers */ js.Any
+  ] = js.native
   
-  var placement: js.UndefOr[Placement] = js.native
+  var placement: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Placement */ js.Any
+  ] = js.native
   
   var popperClassName: js.UndefOr[String] = js.native
   
@@ -136,13 +138,17 @@ object UncontrolledTooltipProps {
     def deleteInnerClassName: Self = this.set("innerClassName", js.undefined)
     
     @scala.inline
-    def setModifiers(value: Modifiers): Self = this.set("modifiers", value.asInstanceOf[js.Any])
+    def setModifiers(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Modifiers */ js.Any
+    ): Self = this.set("modifiers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModifiers: Self = this.set("modifiers", js.undefined)
     
     @scala.inline
-    def setPlacement(value: Placement): Self = this.set("placement", value.asInstanceOf[js.Any])
+    def setPlacement(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Placement */ js.Any
+    ): Self = this.set("placement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePlacement: Self = this.set("placement", js.undefined)

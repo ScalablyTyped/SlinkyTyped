@@ -1,17 +1,18 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.anon.AccessComments
+import typingsSlinky.astTypes.anon.Static
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.PrivateNameKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ClassPrivateProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ClassPrivatePropertyBuilder extends js.Object {
+  
   def apply(key: PrivateNameKind): ClassPrivateProperty = js.native
   def apply(key: PrivateNameKind, value: ExpressionKind): ClassPrivateProperty = js.native
-  def from(params: AccessComments): ClassPrivateProperty = js.native
+  
+  def from(params: Static): ClassPrivateProperty = js.native
 }
-

@@ -5,6 +5,7 @@ import typingsSlinky.storybookAddons.typesMod.DecoratorFunction
 import typingsSlinky.storybookAddons.typesMod.Loadable
 import typingsSlinky.storybookAddons.typesMod.Parameters
 import typingsSlinky.storybookAddons.typesMod.StoryApi
+import typingsSlinky.storybookAddons.typesMod.StoryKind
 import typingsSlinky.storybookVue.typesMod.IStorybookSection
 import typingsSlinky.storybookVue.typesMod.StoryFnVueReturnType
 import scala.scalajs.js
@@ -32,5 +33,5 @@ object mod extends js.Object {
   
   val setAddon: js.Function1[/* addon */ js.Any, Unit] = js.native
   
-  val storiesOf: js.Function2[/* kind */ String, /* module */ NodeModule, StoryApi[StoryFnVueReturnType]] = js.native
+  val storiesOf: js.Function2[/* kind */ StoryKind, /* module */ NodeModule, StoryApi[StoryFnVueReturnType]] = js.native
 }

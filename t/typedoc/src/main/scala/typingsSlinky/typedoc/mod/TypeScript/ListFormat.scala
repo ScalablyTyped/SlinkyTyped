@@ -77,6 +77,8 @@ object ListFormat extends js.Object {
   
   /* 1 */ val MultiLineFunctionBodyStatements: typingsSlinky.typescript.mod.ListFormat.MultiLineFunctionBodyStatements with Double = js.native
   
+  /* 657 */ val MultiLineTupleTypeElements: typingsSlinky.typescript.mod.ListFormat.MultiLineTupleTypeElements with Double = js.native
+  
   /* 32897 */ val MultiLineTypeLiteralMembers: typingsSlinky.typescript.mod.ListFormat.MultiLineTypeLiteralMembers with Double = js.native
   
   /* 525136 */ val NamedImportsOrExportsElements: typingsSlinky.typescript.mod.ListFormat.NamedImportsOrExportsElements with Double = js.native
@@ -119,6 +121,8 @@ object ListFormat extends js.Object {
   
   /* 768 */ val SingleLineFunctionBodyStatements: typingsSlinky.typescript.mod.ListFormat.SingleLineFunctionBodyStatements with Double = js.native
   
+  /* 528 */ val SingleLineTupleTypeElements: typingsSlinky.typescript.mod.ListFormat.SingleLineTupleTypeElements with Double = js.native
+  
   /* 768 */ val SingleLineTypeLiteralMembers: typingsSlinky.typescript.mod.ListFormat.SingleLineTypeLiteralMembers with Double = js.native
   
   /* 131073 */ val SourceFileStatements: typingsSlinky.typescript.mod.ListFormat.SourceFileStatements with Double = js.native
@@ -132,8 +136,6 @@ object ListFormat extends js.Object {
   /* 8192 */ val SquareBrackets: typingsSlinky.typescript.mod.ListFormat.SquareBrackets with Double = js.native
   
   /* 262144 */ val TemplateExpressionSpans: typingsSlinky.typescript.mod.ListFormat.TemplateExpressionSpans with Double = js.native
-  
-  /* 528 */ val TupleTypeElements: typingsSlinky.typescript.mod.ListFormat.TupleTypeElements with Double = js.native
   
   /* 53776 */ val TypeArguments: typingsSlinky.typescript.mod.ListFormat.TypeArguments with Double = js.native
   

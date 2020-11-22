@@ -1,6 +1,6 @@
 package typingsSlinky.typedoc.mod.TypeScript
 
-import typingsSlinky.typescript.mod.AwaitKeywordToken
+import typingsSlinky.typescript.mod.AwaitKeyword
 import typingsSlinky.typescript.mod.Expression
 import typingsSlinky.typescript.mod.ForInitializer
 import typingsSlinky.typescript.mod.ForOfStatement
@@ -20,9 +20,10 @@ object updateForOf extends js.Object {
     expression: Expression,
     statement: Statement
   ): ForOfStatement = js.native
+  /** @deprecated Use `factory.updateForOf` or the factory supplied by your transformation context instead. */
   def apply(
     node: ForOfStatement,
-    awaitModifier: AwaitKeywordToken,
+    awaitModifier: AwaitKeyword,
     initializer: ForInitializer,
     expression: Expression,
     statement: Statement

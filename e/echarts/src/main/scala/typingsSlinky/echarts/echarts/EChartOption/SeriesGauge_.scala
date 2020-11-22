@@ -3,7 +3,7 @@ package typingsSlinky.echarts.echarts.EChartOption
 import typingsSlinky.echarts.anon.AnimationEasing
 import typingsSlinky.echarts.anon.AnimationEasingUpdate
 import typingsSlinky.echarts.anon.AnimationThreshold
-import typingsSlinky.echarts.anon.BorderType
+import typingsSlinky.echarts.anon.BorderColorBorderType
 import typingsSlinky.echarts.anon.LengthLineStyle
 import typingsSlinky.echarts.anon.LengthShow
 import typingsSlinky.echarts.anon.LineStyleShow
@@ -228,7 +228,7 @@ trait SeriesGauge_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.itemStyle
     */
-  var itemStyle: js.UndefOr[BorderType] = js.native
+  var itemStyle: js.UndefOr[BorderColorBorderType] = js.native
   
   /**
     * Used to mark an area in chart.
@@ -498,7 +498,7 @@ object SeriesGauge_ {
     def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
-    def setItemStyle(value: BorderType): Self = this.set("itemStyle", value.asInstanceOf[js.Any])
+    def setItemStyle(value: BorderColorBorderType): Self = this.set("itemStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteItemStyle: Self = this.set("itemStyle", js.undefined)

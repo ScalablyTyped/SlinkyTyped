@@ -1,6 +1,7 @@
 package typingsSlinky.ecmarkdown.anon
 
 import typingsSlinky.ecmarkdown.ecmarkdownStrings.algorithm
+import typingsSlinky.ecmarkdown.nodeTypesMod.LocationRange
 import typingsSlinky.ecmarkdown.nodeTypesMod.OrderedListNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,13 +12,15 @@ trait Contents extends js.Object {
   
   var contents: OrderedListNode = js.native
   
+  var location: LocationRange = js.native
+  
   var name: algorithm = js.native
 }
 object Contents {
   
   @scala.inline
-  def apply(contents: OrderedListNode, name: algorithm): Contents = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(contents: OrderedListNode, location: LocationRange, name: algorithm): Contents = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Contents]
   }
   
@@ -38,6 +41,9 @@ object Contents {
     
     @scala.inline
     def setContents(value: OrderedListNode): Self = this.set("contents", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: algorithm): Self = this.set("name", value.asInstanceOf[js.Any])

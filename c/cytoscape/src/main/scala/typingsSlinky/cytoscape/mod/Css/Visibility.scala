@@ -1,6 +1,7 @@
 package typingsSlinky.cytoscape.mod.Css
 
 import typingsSlinky.cytoscape.cytoscapeStrings.displayed
+import typingsSlinky.cytoscape.cytoscapeStrings.hidden
 import typingsSlinky.cytoscape.cytoscapeStrings.none
 import typingsSlinky.cytoscape.cytoscapeStrings.visible
 import typingsSlinky.cytoscape.mod.EdgeSingular
@@ -31,7 +32,7 @@ trait Visibility[SingularType /* <: NodeSingular | EdgeSingular */] extends js.O
     * Whether the element is visible; may be visible or hidden.
     * Note that a "visibility : hidden" bezier edge still takes up space in its bundle.
     */
-  var visibility: PropertyValue[SingularType, none | visible] = js.native
+  var visibility: PropertyValue[SingularType, hidden | visible] = js.native
   
   /**
     * An integer value that affects the relative draw order of elements.
@@ -46,7 +47,7 @@ object Visibility {
   def apply[SingularType /* <: NodeSingular | EdgeSingular */](
     display: PropertyValue[SingularType, none | displayed],
     opacity: PropertyValue[SingularType, Double],
-    visibility: PropertyValue[SingularType, none | visible],
+    visibility: PropertyValue[SingularType, hidden | visible],
     `z-index`: PropertyValue[SingularType, Double]
   ): Visibility[SingularType] = {
     val __obj = js.Dynamic.literal(display = display.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], visibility = visibility.asInstanceOf[js.Any])
@@ -82,10 +83,10 @@ object Visibility {
     def setOpacity(value: PropertyValue[SingularType, Double]): Self = this.set("opacity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setVisibilityFunction1(value: SingularType => none | visible): Self = this.set("visibility", js.Any.fromFunction1(value))
+    def setVisibilityFunction1(value: SingularType => hidden | visible): Self = this.set("visibility", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setVisibility(value: PropertyValue[SingularType, none | visible]): Self = this.set("visibility", value.asInstanceOf[js.Any])
+    def setVisibility(value: PropertyValue[SingularType, hidden | visible]): Self = this.set("visibility", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setZ-indexFunction1`(value: SingularType => Double): Self = this.set("z-index", js.Any.fromFunction1(value))

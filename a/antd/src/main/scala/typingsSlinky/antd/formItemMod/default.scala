@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object default extends js.Object {
   
-  def apply(props: FormItemProps): ReactElement = js.native
+  def apply[Values](props: FormItemProps[Values]): ReactElement = js.native
 }

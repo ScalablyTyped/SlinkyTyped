@@ -38,22 +38,22 @@ trait S3CopyObjectOperation extends js.Object {
   var NewObjectTagging: js.UndefOr[S3TagSet] = js.native
   
   /**
-    * The Legal Hold status to be applied to all objects in the Batch Operations job.
+    * The legal hold status to be applied to all objects in the Batch Operations job.
     */
   var ObjectLockLegalHoldStatus: js.UndefOr[S3ObjectLockLegalHoldStatus] = js.native
   
   /**
-    * The Retention mode to be applied to all objects in the Batch Operations job.
+    * The retention mode to be applied to all objects in the Batch Operations job.
     */
   var ObjectLockMode: js.UndefOr[S3ObjectLockMode] = js.native
   
   /**
-    * The date when the applied Object Retention configuration will expire on all objects in the Batch Operations job.
+    * The date when the applied object retention configuration expires on all objects in the Batch Operations job.
     */
   var ObjectLockRetainUntilDate: js.UndefOr[js.Date] = js.native
   
   /**
-    * 
+    * Specifies an optional metadata property for website redirects, x-amz-website-redirect-location. Allows webpage redirects if the object is accessed through a website endpoint.
     */
   var RedirectLocation: js.UndefOr[NonEmptyMaxLength2048String] = js.native
   
@@ -73,12 +73,12 @@ trait S3CopyObjectOperation extends js.Object {
   var StorageClass: js.UndefOr[S3StorageClass] = js.native
   
   /**
-    * 
+    * Specifies the folder prefix into which you would like the objects to be copied. For example, to copy objects into a folder named "Folder1" in the destination bucket, set the TargetKeyPrefix to "Folder1/".
     */
   var TargetKeyPrefix: js.UndefOr[NonEmptyMaxLength1024String] = js.native
   
   /**
-    * 
+    * Specifies the destination bucket ARN for the batch copy operation. For example, to copy objects to a bucket named "destinationBucket", set the TargetResource to "arn:aws:s3:::destinationBucket".
     */
   var TargetResource: js.UndefOr[S3BucketArnString] = js.native
   

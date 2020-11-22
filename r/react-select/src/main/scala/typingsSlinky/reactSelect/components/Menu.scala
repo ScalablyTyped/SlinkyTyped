@@ -1,5 +1,6 @@
 package typingsSlinky.reactSelect.components
 
+import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactSelect.menuMod.MenuProps
@@ -7,6 +8,7 @@ import typingsSlinky.reactSelect.menuMod.MenuState
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
+import typingsSlinky.reactSelect.typesMod.InnerRef
 import typingsSlinky.reactSelect.typesMod.MenuPlacement
 import typingsSlinky.reactSelect.typesMod.MenuPosition
 import typingsSlinky.reactSelect.typesMod.OptionsType
@@ -28,6 +30,18 @@ object Menu {
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[js.Any]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ js.Any | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def innerRef(value: InnerRef): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
   }
   
   def withProps(p: MenuProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

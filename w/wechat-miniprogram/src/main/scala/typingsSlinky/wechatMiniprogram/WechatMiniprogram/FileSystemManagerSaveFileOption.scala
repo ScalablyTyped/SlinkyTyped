@@ -17,7 +17,7 @@ trait FileSystemManagerSaveFileOption extends js.Object {
   var filePath: js.UndefOr[String] = js.native
   
   /** 接口调用成功的回调函数 */
-  var success: js.UndefOr[FileSystemManagerSaveFileSuccessCallback] = js.native
+  var success: js.UndefOr[SaveFileSuccessCallback] = js.native
   
   /** 临时存储文件路径 (本地路径) */
   var tempFilePath: String = js.native
@@ -67,7 +67,7 @@ object FileSystemManagerSaveFileOption {
     def deleteFilePath: Self = this.set("filePath", js.undefined)
     
     @scala.inline
-    def setSuccess(value: /* result */ FileSystemManagerSaveFileSuccessCallbackResult => Unit): Self = this.set("success", js.Any.fromFunction1(value))
+    def setSuccess(value: /* result */ SaveFileSuccessCallbackResult => Unit): Self = this.set("success", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteSuccess: Self = this.set("success", js.undefined)

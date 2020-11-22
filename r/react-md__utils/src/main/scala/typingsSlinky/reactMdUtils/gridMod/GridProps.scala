@@ -13,6 +13,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GridProps extends HTMLAttributes[HTMLDivElement] {
   
   /**
+    * Boolean if the `children` should have the grid `style` and `className`
+    * props cloned using `React.cloneElement`. This is useful if you just want to
+    * use the grid styles without the additional wrapper `<div>`.
+    *
+    * Note: if this prop is provided, all of the `HTMLAttributes` props will be
+    * ignored as well as the `clone` and `wrapOnly` props.
+    *
+    * @since 2.3.0
+    */
+  var cloneStyles: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Boolean if the `children` should be updated to be wrapped in the `GridCell`
     * component and clone the `className` into each child automatically. This is
     * really just a convenience prop so you don't always need to import both the
@@ -118,6 +130,12 @@ object GridProps {
     
     @scala.inline
     def deleteClone: Self = this.set("clone", js.undefined)
+    
+    @scala.inline
+    def setCloneStyles(value: Boolean): Self = this.set("cloneStyles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCloneStyles: Self = this.set("cloneStyles", js.undefined)
     
     @scala.inline
     def setColumns(value: Double): Self = this.set("columns", value.asInstanceOf[js.Any])

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FeatureTemplatesVisibleElements extends Object {
   
   /**
-    * Indicates whether to the filter will be displayed. Default is `true`.
+    * Indicates whether to the filter will be displayed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates.html#VisibleElements)
     */

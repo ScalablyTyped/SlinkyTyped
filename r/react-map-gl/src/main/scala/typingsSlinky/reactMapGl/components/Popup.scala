@@ -2,15 +2,8 @@ package typingsSlinky.reactMapGl.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.mapboxGl.mod.Anchor
 import typingsSlinky.reactMapGl.mod.PopupProps
-import typingsSlinky.reactMapGl.reactMapGlStrings.`bottom-left`
-import typingsSlinky.reactMapGl.reactMapGlStrings.`bottom-right`
-import typingsSlinky.reactMapGl.reactMapGlStrings.`top-left`
-import typingsSlinky.reactMapGl.reactMapGlStrings.`top-right`
-import typingsSlinky.reactMapGl.reactMapGlStrings.bottom
-import typingsSlinky.reactMapGl.reactMapGlStrings.left
-import typingsSlinky.reactMapGl.reactMapGlStrings.right
-import typingsSlinky.reactMapGl.reactMapGlStrings.top
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,7 +23,7 @@ object Popup {
     def altitude(value: Double): this.type = set("altitude", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def anchor(value: top | `top-left` | `top-right` | bottom | `bottom-left` | `bottom-right` | left | right): this.type = set("anchor", value.asInstanceOf[js.Any])
+    def anchor(value: Anchor): this.type = set("anchor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def captureClick(value: Boolean): this.type = set("captureClick", value.asInstanceOf[js.Any])

@@ -9,24 +9,64 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ReplSetOpts extends js.Object {
   
+  /**
+    * additional command line args passed to `mongod`
+    * @default []
+    */
   var args: js.UndefOr[js.Array[String]] = js.native
   
+  /**
+    * enable auth ("--auth" / "--noauth")
+    * @default false
+    */
   var auth: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Options for "rsConfig"
+    * @default {}
+    */
   var configSettings: js.UndefOr[MongoMemoryReplSetConfigSettingsT] = js.native
   
+  /**
+    * number of `mongod` servers to start
+    * @default 1
+    */
   var count: js.UndefOr[Double] = js.native
   
+  /**
+    * database name used in connection string
+    * @default uuidv4()
+    */
   var dbName: js.UndefOr[String] = js.native
   
+  /**
+    * bind to all IP addresses specify `::,0.0.0.0`
+    * @default '127.0.0.1'
+    */
   var ip: js.UndefOr[String] = js.native
   
+  /**
+    * replSet name
+    * @default 'testset'
+    */
   var name: js.UndefOr[String] = js.native
   
+  /**
+    * oplog size (in MB)
+    * @default 1
+    */
   var oplogSize: js.UndefOr[Double] = js.native
   
+  /**
+    * Childprocess spawn options
+    * @default {}
+    */
   var spawn: js.UndefOr[SpawnOptions] = js.native
   
+  /**
+    *`mongod` storage engine type
+    * @default 'ephemeralForTest'
+    */
   var storageEngine: js.UndefOr[StorageEngineT] = js.native
 }
 object ReplSetOpts {

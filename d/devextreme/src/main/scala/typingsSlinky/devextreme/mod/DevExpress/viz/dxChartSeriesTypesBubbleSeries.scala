@@ -8,23 +8,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.BubbleSeries */
+/**
+  * [descr:dxChartSeriesTypes.BubbleSeries]
+  */
 @js.native
 trait dxChartSeriesTypesBubbleSeries extends dxChartSeriesTypesCommonSeries {
   
-  /** @name dxChartSeriesTypes.BubbleSeries.aggregation */
+  /**
+    * [descr:dxChartSeriesTypes.BubbleSeries.aggregation]
+    */
   @JSName("aggregation")
   var aggregation_dxChartSeriesTypesBubbleSeries: js.UndefOr[dxChartSeriesTypesBubbleSeriesAggregation] = js.native
   
-  /** @name dxChartSeriesTypes.BubbleSeries.hoverMode */
+  /**
+    * [descr:dxChartSeriesTypes.BubbleSeries.hoverMode]
+    */
   @JSName("hoverMode")
   var hoverMode_dxChartSeriesTypesBubbleSeries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.native
   
-  /** @name dxChartSeriesTypes.BubbleSeries.label */
+  /**
+    * [descr:dxChartSeriesTypes.BubbleSeries.label]
+    */
   @JSName("label")
   var label_dxChartSeriesTypesBubbleSeries: js.UndefOr[dxChartSeriesTypesBubbleSeriesLabel] = js.native
   
-  /** @name dxChartSeriesTypes.BubbleSeries.selectionMode */
+  /**
+    * [descr:dxChartSeriesTypes.BubbleSeries.selectionMode]
+    */
   @JSName("selectionMode")
   var selectionMode_dxChartSeriesTypesBubbleSeries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.native
 }

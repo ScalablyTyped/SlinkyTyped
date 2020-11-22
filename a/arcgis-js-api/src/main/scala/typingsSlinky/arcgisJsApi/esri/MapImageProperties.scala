@@ -26,18 +26,16 @@ trait MapImageProperties extends js.Object {
   var height: js.UndefOr[Double] = js.native
   
   /**
-    * URL to the returned image. The image format must be of a type supported by the HTML `<img>` tag.
+    * URL to the returned image.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-MapImage.html#href)
     */
   var href: js.UndefOr[gif | jpg | png | bmp] = js.native
   
   /**
-    * The opacity of the image. Value can be any number between `0` and `1` where `0` is 100% transparent, `0.5` is 50% transparent and `1` is fully opaque.
+    * The opacity of the image.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-MapImage.html#opacity)
-    *
-    * @default 1
     */
   var opacity: js.UndefOr[Double] = js.native
   
@@ -52,8 +50,6 @@ trait MapImageProperties extends js.Object {
     * Indicates if the requested image is visible in the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-MapImage.html#visible)
-    *
-    * @default true
     */
   var visible: js.UndefOr[Boolean] = js.native
   

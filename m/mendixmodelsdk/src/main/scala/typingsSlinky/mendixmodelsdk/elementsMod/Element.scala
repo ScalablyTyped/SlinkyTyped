@@ -3,6 +3,7 @@ package typingsSlinky.mendixmodelsdk.elementsMod
 import typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.anon.Copy
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.unitsMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,20 +15,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/sdk/internal/elements", "Element")
 @js.native
-abstract class Element protected () extends AbstractElement {
+abstract class Element[TModel /* <: IAbstractModel */] protected () extends AbstractElement[TModel, AbstractElement[IAbstractModel, Container]] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   var _deepCopyElement: js.Any = js.native
-  
-  @JSName("container")
-  val container_FElement: AbstractElement = js.native
   
   /**
     * Creates a deep copy of this element and its children.
@@ -52,5 +50,5 @@ abstract class Element protected () extends AbstractElement {
   def isLoaded_MElement: Boolean = js.native
   
   @JSName("unit")
-  def unit_MElement: ModelUnit = js.native
+  def unit_MElement: ModelUnit[IAbstractModel] = js.native
 }

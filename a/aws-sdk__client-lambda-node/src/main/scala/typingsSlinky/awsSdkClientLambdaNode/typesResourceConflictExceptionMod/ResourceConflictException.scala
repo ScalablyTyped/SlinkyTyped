@@ -7,16 +7,14 @@ import typingsSlinky.awsSdkClientLambdaNode.createFunctionExceptionsUnionMod.Cre
 import typingsSlinky.awsSdkClientLambdaNode.deleteFunctionExceptionsUnionMod.DeleteFunctionExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateEventSourceMappingExceptionsUnionMod.UpdateEventSourceMappingExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateFunctionConfigurationExceptionsUnionMod.UpdateFunctionConfigurationExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ResourceConflictExceptionDetails> * / any */ @js.native
 trait ResourceConflictException
-  extends ServiceException[ResourceConflictExceptionDetails]
-     with AddPermissionExceptionsUnion
+  extends AddPermissionExceptionsUnion
      with CreateAliasExceptionsUnion
      with CreateEventSourceMappingExceptionsUnion
      with CreateFunctionExceptionsUnion
@@ -24,19 +22,13 @@ trait ResourceConflictException
      with UpdateEventSourceMappingExceptionsUnion
      with UpdateFunctionConfigurationExceptionsUnion {
   
-  @JSName("name")
-  var name_ResourceConflictException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceConflictException = js.native
+  var name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceConflictException = js.native
 }
 object ResourceConflictException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: ResourceConflictExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceConflictException
-  ): ResourceConflictException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceConflictException): ResourceConflictException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceConflictException]
   }
   

@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Runtime.SetMaxCallStackSizeToCaptureRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Runtime.SetCustomObjectFormatterEnabledRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `20` extends js.Object {
   
-  var paramsType: js.Array[SetMaxCallStackSizeToCaptureRequest] = js.native
+  var paramsType: js.Array[SetCustomObjectFormatterEnabledRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `20` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetMaxCallStackSizeToCaptureRequest], returnType: Unit): `20` = {
+  def apply(paramsType: js.Array[SetCustomObjectFormatterEnabledRequest], returnType: Unit): `20` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`20`]
   }
@@ -36,10 +36,10 @@ object `20` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetMaxCallStackSizeToCaptureRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetCustomObjectFormatterEnabledRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetMaxCallStackSizeToCaptureRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetCustomObjectFormatterEnabledRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

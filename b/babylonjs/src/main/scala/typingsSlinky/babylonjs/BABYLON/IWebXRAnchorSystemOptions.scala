@@ -8,15 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IWebXRAnchorSystemOptions extends js.Object {
   
   /**
-    * Should a new anchor be added every time a select event is triggered
+    * If set to true a reference of the created anchors will be kept until the next session starts
+    * If not defined, anchors will be removed from the array when the feature is detached or the session ended.
     */
-  var addAnchorOnSelect: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * should the anchor system use plane detection.
-    * If set to true, the plane-detection feature should be set using setPlaneDetector
-    */
-  var usePlaneDetection: js.UndefOr[Boolean] = js.native
+  var doNotRemoveAnchorsOnSessionEnded: js.UndefOr[Boolean] = js.native
   
   /**
     * a node that will be used to convert local to world coordinates
@@ -47,16 +42,10 @@ object IWebXRAnchorSystemOptions {
     }
     
     @scala.inline
-    def setAddAnchorOnSelect(value: Boolean): Self = this.set("addAnchorOnSelect", value.asInstanceOf[js.Any])
+    def setDoNotRemoveAnchorsOnSessionEnded(value: Boolean): Self = this.set("doNotRemoveAnchorsOnSessionEnded", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAddAnchorOnSelect: Self = this.set("addAnchorOnSelect", js.undefined)
-    
-    @scala.inline
-    def setUsePlaneDetection(value: Boolean): Self = this.set("usePlaneDetection", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUsePlaneDetection: Self = this.set("usePlaneDetection", js.undefined)
+    def deleteDoNotRemoveAnchorsOnSessionEnded: Self = this.set("doNotRemoveAnchorsOnSessionEnded", js.undefined)
     
     @scala.inline
     def setWorldParentNode(value: TransformNode): Self = this.set("worldParentNode", value.asInstanceOf[js.Any])

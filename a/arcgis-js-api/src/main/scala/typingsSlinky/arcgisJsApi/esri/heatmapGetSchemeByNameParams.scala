@@ -12,14 +12,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait heatmapGetSchemeByNameParams extends Object {
   
   /**
-    * The basemap to pair with the visualization. This value indicates the best colors for visualizing features against the given basemap.
+    * The basemap to pair with the visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-heatmap.html#getSchemeByName)
     */
   var basemap: js.UndefOr[String | Basemap] = js.native
   
   /**
-    * If you have a non-Esri basemap (e.g. a VectorTileLayer basemap with a custom style) or no basemap at all, use this parameter to indicate whether the background of the visualization is `light` or `dark`.
+    * If you have a non-Esri basemap (e.g.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-heatmap.html#getSchemeByName)
     */

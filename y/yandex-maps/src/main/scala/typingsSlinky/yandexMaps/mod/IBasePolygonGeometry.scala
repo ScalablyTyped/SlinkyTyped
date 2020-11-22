@@ -46,7 +46,7 @@ object IBasePolygonGeometry {
   @scala.inline
   def apply(
     contains: js.Array[Double] => Boolean,
-    events: IEventManager,
+    events: IEventManager[js.Object],
     freeze: () => IFreezable,
     get: Double => js.Array[js.Array[Double]],
     getBounds: () => js.Array[js.Array[Double]] | Null,

@@ -167,22 +167,13 @@ trait Material extends js.Object {
   var redWrite: Boolean = js.native
   
   def setParameter(name: String, data: js.Array[Double]): Unit = js.native
-  def setParameter(name: String, data: js.Array[Double], passFlags: Double): Unit = js.native
   /**
     * Sets a shader parameter on a material.
     * @param name - The name of the parameter to set.
     * @param data - The value for the specified parameter.
-    * @param [passFlags] - Mask describing which passes the material should be included in.
     */
   def setParameter(name: String, data: Double): Unit = js.native
-  def setParameter(name: String, data: Double, passFlags: Double): Unit = js.native
   def setParameter(name: String, data: Texture): Unit = js.native
-  def setParameter(name: String, data: Texture, passFlags: Double): Unit = js.native
-  
-  /**
-    * Pushes all material parameters into scope.
-    */
-  def setParameters(): Unit = js.native
   
   /**
     * The shader used by this material to render mesh instances (default is null).

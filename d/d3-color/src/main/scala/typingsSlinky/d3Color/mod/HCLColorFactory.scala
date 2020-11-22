@@ -33,6 +33,6 @@ trait HCLColorFactory
     * @param l Luminance channel value typically in the range [0, 100].
     * @param opacity Optional opacity value, defaults to 1.
     */
-  def apply(h: Double, l: Double, c: Double): HCLColor = js.native
-  def apply(h: Double, l: Double, c: Double, opacity: Double): HCLColor = js.native
+  def apply(h: Double, c: Double, l: Double): HCLColor = js.native
+  def apply(h: Double, c: Double, l: Double, opacity: Double): HCLColor = js.native
 }

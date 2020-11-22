@@ -1,6 +1,6 @@
 package typingsSlinky.storybookReact
 
-import typingsSlinky.storybookReact.typesMod.RenderMainArgs
+import typingsSlinky.storybookClientApi.typesMod.RenderContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object renderMod extends js.Object {
   
-  def default(hasStoryFnShowMainShowExceptionForceRender: RenderMainArgs): js.Promise[Unit] = js.native
+  def default(hasStoryContextUnboundStoryFnShowMainShowExceptionForceRender: RenderContext): js.Promise[Unit] = js.native
 }

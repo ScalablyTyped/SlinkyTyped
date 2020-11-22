@@ -13,8 +13,6 @@ package object mod {
     js.Promise[T]
   ]
   
-  type DatabaseConfigurationType = java.lang.String | typingsSlinky.slonik.anon.Database
-  
   type IdentifierNormalizerType = js.Function1[/* identifierName */ java.lang.String, java.lang.String]
   
   type LoggerType = js.Function1[/* repeated */ java.lang.String, scala.Nothing]
@@ -39,6 +37,11 @@ package object mod {
   type QueryAnyFunctionType = js.Function1[
     /* args */ typingsSlinky.slonik.mod.QueryMethodParams[js.Any], 
     js.Promise[js.Array[js.Any]]
+  ]
+  
+  type QueryExistsFunctionType = js.Function1[
+    /* args */ typingsSlinky.slonik.mod.QueryMethodParams[js.Any], 
+    js.Promise[scala.Boolean]
   ]
   
   type QueryFunctionType = js.Function1[

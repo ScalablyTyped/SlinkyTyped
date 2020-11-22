@@ -6,12 +6,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /** A message received by a target object. */
 @js.native
-trait MessageEvent extends Event {
+trait MessageEvent[T] extends Event {
   
   /**
     * Returns the data of the message.
     */
-  val data: js.Any = js.native
+  val data: T = js.native
   
   /**
     * Returns the last event ID string, for server-sent events.

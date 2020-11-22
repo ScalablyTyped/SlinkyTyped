@@ -1,5 +1,6 @@
 package typingsSlinky.antd
 
+import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.antd.radioInterfaceMod.RadioGroupProps
 import typingsSlinky.react.mod.ForwardRefExoticComponent
@@ -12,5 +13,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object radioGroupMod extends js.Object {
   
-  val default: ReactComponentClass[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[_]]] = js.native
+  val default: ReactComponentClass[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[HTMLDivElement]]] = js.native
 }

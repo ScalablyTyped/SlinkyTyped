@@ -14,9 +14,9 @@ class FileDescriptorSet_ () extends Message {
   def addFile(value: FileDescriptorProto): FileDescriptorProto = js.native
   def addFile(value: FileDescriptorProto, index: Double): FileDescriptorProto = js.native
   
-  def clearFileList(): Unit = js.native
+  def clearFileList(): FileDescriptorSet = js.native
   
   def getFileList(): js.Array[FileDescriptorProto] = js.native
   
-  def setFileList(value: js.Array[FileDescriptorProto]): Unit = js.native
+  def setFileList(value: js.Array[FileDescriptorProto]): FileDescriptorSet = js.native
 }

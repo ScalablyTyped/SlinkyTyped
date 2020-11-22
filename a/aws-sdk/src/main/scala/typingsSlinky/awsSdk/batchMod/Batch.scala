@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.batchMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -169,6 +169,20 @@ trait Batch extends Service {
   ): Request[ListJobsResponse, AWSError] = js.native
   
   /**
+    * List the tags for an AWS Batch resource. AWS Batch resources that support tags are compute environments, jobs, job definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not supported.
+    */
+  def listTagsForResource(): Request[ListTagsForResourceResponse, AWSError] = js.native
+  def listTagsForResource(callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]): Request[ListTagsForResourceResponse, AWSError] = js.native
+  /**
+    * List the tags for an AWS Batch resource. AWS Batch resources that support tags are compute environments, jobs, job definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not supported.
+    */
+  def listTagsForResource(params: ListTagsForResourceRequest): Request[ListTagsForResourceResponse, AWSError] = js.native
+  def listTagsForResource(
+    params: ListTagsForResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
+  ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
+  /**
     * Registers an AWS Batch job definition.
     */
   def registerJobDefinition(): Request[RegisterJobDefinitionResponse, AWSError] = js.native
@@ -197,6 +211,20 @@ trait Batch extends Service {
   ): Request[SubmitJobResponse, AWSError] = js.native
   
   /**
+    * Associates the specified tags to a resource with the specified resourceArn. If existing tags on a resource are not specified in the request parameters, they are not changed. When a resource is deleted, the tags associated with that resource are deleted as well. AWS Batch resources that support tags are compute environments, jobs, job definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not supported.
+    */
+  def tagResource(): Request[TagResourceResponse, AWSError] = js.native
+  def tagResource(callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]): Request[TagResourceResponse, AWSError] = js.native
+  /**
+    * Associates the specified tags to a resource with the specified resourceArn. If existing tags on a resource are not specified in the request parameters, they are not changed. When a resource is deleted, the tags associated with that resource are deleted as well. AWS Batch resources that support tags are compute environments, jobs, job definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not supported.
+    */
+  def tagResource(params: TagResourceRequest): Request[TagResourceResponse, AWSError] = js.native
+  def tagResource(
+    params: TagResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]
+  ): Request[TagResourceResponse, AWSError] = js.native
+  
+  /**
     * Terminates a job in a job queue. Jobs that are in the STARTING or RUNNING state are terminated, which causes them to transition to FAILED. Jobs that have not progressed to the STARTING state are cancelled.
     */
   def terminateJob(): Request[TerminateJobResponse, AWSError] = js.native
@@ -209,6 +237,20 @@ trait Batch extends Service {
     params: TerminateJobRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ TerminateJobResponse, Unit]
   ): Request[TerminateJobResponse, AWSError] = js.native
+  
+  /**
+    * Deletes specified tags from an AWS Batch resource.
+    */
+  def untagResource(): Request[UntagResourceResponse, AWSError] = js.native
+  def untagResource(callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]): Request[UntagResourceResponse, AWSError] = js.native
+  /**
+    * Deletes specified tags from an AWS Batch resource.
+    */
+  def untagResource(params: UntagResourceRequest): Request[UntagResourceResponse, AWSError] = js.native
+  def untagResource(
+    params: UntagResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]
+  ): Request[UntagResourceResponse, AWSError] = js.native
   
   /**
     * Updates an AWS Batch compute environment.

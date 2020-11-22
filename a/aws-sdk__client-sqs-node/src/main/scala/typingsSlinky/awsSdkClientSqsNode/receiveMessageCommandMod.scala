@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientSqsNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientSqsNode.sqsconfigurationMod.SQSResolvedConfiguration
 import typingsSlinky.awsSdkClientSqsNode.typesReceiveMessageInputMod.ReceiveMessageInput
 import typingsSlinky.awsSdkClientSqsNode.typesReceiveMessageOutputMod.ReceiveMessageOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object receiveMessageCommandMod extends js.Object {
           ReceiveMessageInput, 
           OutputTypesUnion, 
           ReceiveMessageOutput, 
-          SQSResolvedConfiguration, 
-          Readable
+          SQSResolvedConfiguration
         ] {
     def this(input: ReceiveMessageInput) = this()
     
-    val middlewareStack: MiddlewareStack[ReceiveMessageInput, ReceiveMessageOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: SQSResolvedConfiguration
     ): Handler[ReceiveMessageInput, ReceiveMessageOutput] = js.native
   }

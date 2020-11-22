@@ -17,5 +17,7 @@ object mod extends js.Object {
   def linkTo(idOrKindInput: String, storyInput: String): js.Function1[/* repeated */ js.Any, Unit] = js.native
   def linkTo(idOrKindInput: String, storyInput: js.Function1[/* repeated */ js.Any, String]): js.Function1[/* repeated */ js.Any, Unit] = js.native
   
-  def withLinks(storyFn: js.Function0[Unit]): Unit = js.native
+  def withLinks(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type any is not an array type */ args: js.Any
+  ): js.Any = js.native
 }

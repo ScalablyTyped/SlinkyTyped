@@ -17,6 +17,11 @@ class CreateOrderRequest () extends js.Object {
   var idempotency_key: js.UndefOr[String] = js.native
   
   /**
+    * The ID of the business location to associate the order with.
+    */
+  var location_id: js.UndefOr[String] = js.native
+  
+  /**
     * The order to create. If this field is set, then the only other top-level field that can be set is the idempotency_key.
     */
   var order: js.UndefOr[Order] = js.native

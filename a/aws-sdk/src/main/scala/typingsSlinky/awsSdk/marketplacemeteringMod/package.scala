@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object marketplacemeteringMod {
   
+  type AllocatedUsageQuantity = scala.Double
+  
   type Boolean = scala.Boolean
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.marketplacemeteringMod.ClientApiVersions
@@ -20,7 +22,15 @@ package object marketplacemeteringMod {
   
   type String = java.lang.String
   
+  type TagKey = java.lang.String
+  
+  type TagList = js.Array[typingsSlinky.awsSdk.marketplacemeteringMod.Tag]
+  
+  type TagValue = java.lang.String
+  
   type Timestamp = js.Date
+  
+  type UsageAllocations = js.Array[typingsSlinky.awsSdk.marketplacemeteringMod.UsageAllocation]
   
   type UsageDimension = java.lang.String
   

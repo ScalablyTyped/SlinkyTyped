@@ -103,7 +103,7 @@ trait ValidationMapISplitEditor extends js.Object {
   
   var splits: js.UndefOr[Validator[Double]] = js.native
   
-  var style: js.UndefOr[Validator[_]] = js.native
+  var style: js.UndefOr[Validator[js.UndefOr[js.Object]]] = js.native
   
   var tabSize: js.UndefOr[Validator[js.UndefOr[Double]]] = js.native
   
@@ -375,7 +375,7 @@ object ValidationMapISplitEditor {
     def deleteSplits: Self = this.set("splits", js.undefined)
     
     @scala.inline
-    def setStyle(value: Validator[_]): Self = this.set("style", value.asInstanceOf[js.Any])
+    def setStyle(value: Validator[js.UndefOr[js.Object]]): Self = this.set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)

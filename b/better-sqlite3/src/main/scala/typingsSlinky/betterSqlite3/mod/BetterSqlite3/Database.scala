@@ -44,7 +44,6 @@ trait Database extends js.Object {
   def pragma(source: String): js.Any = js.native
   def pragma(source: String, options: PragmaOptions): js.Any = js.native
   
-  // tslint:disable-next-line no-unnecessary-generics
   def prepare[BindParameters /* <: js.Array[_] | js.Object */](source: String): Statement[js.Array[BindParameters] | BindParameters] = js.native
   
   var readonly: Boolean = js.native

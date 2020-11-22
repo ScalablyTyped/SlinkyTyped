@@ -1,6 +1,6 @@
 package typingsSlinky.storybookTheming
 
-import typingsSlinky.storybookTheming.anon.ColorString
+import typingsSlinky.storybookTheming.anon.Color
 import typingsSlinky.storybookTheming.storybookThemingStrings.dark
 import typingsSlinky.storybookTheming.storybookThemingStrings.light
 import scala.scalajs.js
@@ -17,5 +17,5 @@ object utilsMod extends js.Object {
   
   def lightenColor(color: String): String = js.native
   
-  def mkColor(color: String): ColorString = js.native
+  def mkColor(color: String): Color = js.native
 }

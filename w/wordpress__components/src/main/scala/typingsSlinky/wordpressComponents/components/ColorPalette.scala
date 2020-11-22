@@ -23,6 +23,9 @@ object ColorPalette {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def clearable(value: Boolean): this.type = set("clearable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def disableCustomColors(value: Boolean): this.type = set("disableCustomColors", value.asInstanceOf[js.Any])
   }
   

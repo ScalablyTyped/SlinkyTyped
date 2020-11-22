@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createTypeOf extends js.Object {
   
+  /** @deprecated Use `factory.createTypeOf` or the factory supplied by your transformation context instead. */
   def apply(expression: Expression): TypeOfExpression = js.native
 }

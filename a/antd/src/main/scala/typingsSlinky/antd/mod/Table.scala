@@ -37,7 +37,7 @@ object Table extends js.Object {
   @js.native
   object Summary extends js.Object {
     
-    var Cell: js.Function1[/* hasClassNameIndexChildrenColSpanRowSpan */ SummaryCellProps, ReactElement] = js.native
+    var Cell: js.Function1[/* hasClassNameIndexChildrenColSpanRowSpanAlign */ SummaryCellProps, ReactElement] = js.native
     
     var Row: js.Function1[/* props */ FooterRowProps, ReactElement] = js.native
   }

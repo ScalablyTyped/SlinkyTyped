@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WhileStatement extends IterationStatement {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_WhileStatement: typingsSlinky.typescript.mod.SyntaxKind.WhileStatement = js.native
+  val kind_WhileStatement: typingsSlinky.typescript.mod.SyntaxKind.WhileStatement = js.native
 }

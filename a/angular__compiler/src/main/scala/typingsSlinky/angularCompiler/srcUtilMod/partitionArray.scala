@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object partitionArray extends js.Object {
   
-  def apply[T](arr: js.Array[T], conditionFn: js.Function1[/* value */ T, Boolean]): js.Tuple2[js.Array[T], js.Array[T]] = js.native
+  def apply[T, F](arr: js.Array[T | F], conditionFn: js.Function1[/* value */ T | F, Boolean]): js.Tuple2[js.Array[T], js.Array[F]] = js.native
 }

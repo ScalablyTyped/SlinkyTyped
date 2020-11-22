@@ -10,14 +10,17 @@ package object Object {
   /* Rewritten from type alias, can be one of: 
     - T
     - typingsSlinky.parse.mod.global.Parse.Object.ToJSON[T]
-    - js.Array[js.Any]
+    - js.Array[
+  / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias parse.parse.<global>.Parse.Object.Encode<R> * / js.Object]
     - java.lang.String
     - typingsSlinky.parse.anon.Iso
     - typingsSlinky.std.ReturnType[
   / * import warning: importer.ImportType#apply Failed type conversion: T['toJSON'] * / js.Any]
     - typingsSlinky.parse.mod.global.Parse.Pointer
   */
-  type Encode[T] = typingsSlinky.parse.mod.global.Parse.Object._Encode[T] | js.Array[js.Any] | (typingsSlinky.std.ReturnType[
+  type Encode[T] = typingsSlinky.parse.mod.global.Parse.Object._Encode[T] | (js.Array[
+    /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias parse.parse.<global>.Parse.Object.Encode<R> */ js.Object
+  ]) | (typingsSlinky.std.ReturnType[
     /* import warning: importer.ImportType#apply Failed type conversion: T['toJSON'] */ js.Any
   ]) | T | typingsSlinky.parse.mod.global.Parse.Object.ToJSON[T] | java.lang.String
   

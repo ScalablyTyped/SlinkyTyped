@@ -1,10 +1,12 @@
 package typingsSlinky.reactNativeScrollableTabView.components
 
+import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.mod.Animated.Value
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeScrollableTabView.anon.TabBarPropsScrollableTabB
@@ -43,7 +45,7 @@ object ScrollableTabBar {
     
     @scala.inline
     def renderTab(
-      value: (/* name */ String, /* pageIndex */ Double, /* isTabActive */ Boolean, /* onPressHandler */ js.Function1[/* pageNumber */ Double, Unit], /* onLayoutHandler */ js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]) => ReactElement
+      value: (/* name */ String, /* pageIndex */ Double, /* isTabActive */ Boolean, /* onPressHandler */ js.Function1[/* pageNumber */ Double, Unit], /* onLayoutHandler */ js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]]) => ReactElement
     ): this.type = set("renderTab", js.Any.fromFunction5(value))
     
     @scala.inline

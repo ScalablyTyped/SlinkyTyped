@@ -13,6 +13,11 @@ trait AvailabilityZone extends js.Object {
   var LoadBalancerAddresses: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.LoadBalancerAddresses] = js.native
   
   /**
+    * [Application Load Balancers on Outposts] The ID of the Outpost.
+    */
+  var OutpostId: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.OutpostId] = js.native
+  
+  /**
     * The ID of the subnet. You can specify one subnet per Availability Zone.
     */
   var SubnetId: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.SubnetId] = js.native
@@ -53,6 +58,12 @@ object AvailabilityZone {
     
     @scala.inline
     def deleteLoadBalancerAddresses: Self = this.set("LoadBalancerAddresses", js.undefined)
+    
+    @scala.inline
+    def setOutpostId(value: OutpostId): Self = this.set("OutpostId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutpostId: Self = this.set("OutpostId", js.undefined)
     
     @scala.inline
     def setSubnetId(value: SubnetId): Self = this.set("SubnetId", value.asInstanceOf[js.Any])

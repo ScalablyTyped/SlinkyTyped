@@ -1,6 +1,6 @@
 package typingsSlinky.antd.anon
 
-import typingsSlinky.antd.modalModalMod.ModalFuncProps
+import typingsSlinky.antd.confirmMod.ConfigUpdate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,12 +10,12 @@ trait Destroy extends js.Object {
   
   def destroy(): Unit = js.native
   
-  def update(newConfig: ModalFuncProps): Unit = js.native
+  def update(configUpdate: ConfigUpdate): Unit = js.native
 }
 object Destroy {
   
   @scala.inline
-  def apply(destroy: () => Unit, update: ModalFuncProps => Unit): Destroy = {
+  def apply(destroy: () => Unit, update: ConfigUpdate => Unit): Destroy = {
     val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[Destroy]
   }
@@ -39,6 +39,6 @@ object Destroy {
     def setDestroy(value: () => Unit): Self = this.set("destroy", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setUpdate(value: ModalFuncProps => Unit): Self = this.set("update", js.Any.fromFunction1(value))
+    def setUpdate(value: ConfigUpdate => Unit): Self = this.set("update", js.Any.fromFunction1(value))
   }
 }

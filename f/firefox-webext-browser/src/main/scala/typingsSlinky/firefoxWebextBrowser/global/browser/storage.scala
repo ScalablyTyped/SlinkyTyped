@@ -22,8 +22,7 @@ object storage extends js.Object {
   val local: StorageArea = js.native
   
   /**
-    * Items in the `managed` storage area are set by administrators or native applications, and are read-only for the
-    * extension; trying to modify this namespace results in an error.
+    * Items in the `managed` storage area are set by administrators or native applications, and are read-only for the extension; trying to modify this namespace results in an error.
     */
   val managed: StorageArea = js.native
   

@@ -18,7 +18,7 @@ trait AudioMetadata extends js.Object {
   var DurationMillis: js.UndefOr[ULong] = js.native
   
   /**
-    * The number of audio channels in the segement.
+    * The number of audio channels in the segment.
     */
   var NumberOfChannels: js.UndefOr[ULong] = js.native
   

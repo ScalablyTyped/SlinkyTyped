@@ -3,6 +3,7 @@ package typingsSlinky.tensorflowTfjsCore
 import org.scalajs.dom.experimental.RequestInit
 import org.scalajs.dom.experimental.Response
 import typingsSlinky.tensorflowTfjsCore.anon.KeptDims
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.BackendValues
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.FlatVector
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.NumericDataType
@@ -60,6 +61,8 @@ object distUtilMod extends js.Object {
   
   def computeStrides(shape: js.Array[Double]): js.Array[Double] = js.native
   
+  def createScalarValue(value: DataType, dtype: DataType): BackendValues = js.native
+  
   def createShuffledIndices(n: Double): js.typedarray.Uint32Array = js.native
   
   def decodeString(bytes: js.typedarray.Uint8Array): String = js.native
@@ -111,6 +114,8 @@ object distUtilMod extends js.Object {
   
   def isNumber(value: js.Object): Boolean = js.native
   
+  def isPromise(`object`: js.Any): Boolean = js.native
+  
   def isScalarShape(shape: js.Array[Double]): Boolean = js.native
   
   def isString(value: js.Object): /* is string */ Boolean = js.native
@@ -131,6 +136,17 @@ object distUtilMod extends js.Object {
   def makeOnesTypedArray_int32(size: Double, dtype: int32): js.typedarray.Int32Array = js.native
   @JSName("makeOnesTypedArray")
   def makeOnesTypedArray_string(size: Double, dtype: string): js.Array[String] = js.native
+  
+  @JSName("makeZerosNestedTypedArray")
+  def makeZerosNestedTypedArray_bool(shape: js.Array[Double], dtype: bool): Double | js.Array[_] = js.native
+  @JSName("makeZerosNestedTypedArray")
+  def makeZerosNestedTypedArray_complex64(shape: js.Array[Double], dtype: complex64): Double | js.Array[_] = js.native
+  @JSName("makeZerosNestedTypedArray")
+  def makeZerosNestedTypedArray_float32(shape: js.Array[Double], dtype: float32): Double | js.Array[_] = js.native
+  @JSName("makeZerosNestedTypedArray")
+  def makeZerosNestedTypedArray_int32(shape: js.Array[Double], dtype: int32): Double | js.Array[_] = js.native
+  @JSName("makeZerosNestedTypedArray")
+  def makeZerosNestedTypedArray_string(shape: js.Array[Double], dtype: string): Double | js.Array[_] = js.native
   
   @JSName("makeZerosTypedArray")
   def makeZerosTypedArray_bool(size: Double, dtype: bool): js.typedarray.Uint8Array = js.native
@@ -183,5 +199,5 @@ object distUtilMod extends js.Object {
   
   def toNestedArray(shape: js.Array[Double], a: TypedArray): Double | js.Array[_] = js.native
   
-  def toTypedArray(a: TensorLike, dtype: DataType, debugMode: Boolean): TypedArray = js.native
+  def toTypedArray(a: TensorLike, dtype: DataType): TypedArray = js.native
 }

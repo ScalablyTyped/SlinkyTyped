@@ -11,7 +11,7 @@ trait WindowsInformationProtectionPolicy extends WindowsInformationProtection {
   var daysWithoutContactBeforeUnenroll: js.UndefOr[Double] = js.native
   
   // Enrollment url for the MDM
-  var mdmEnrollmentUrl: js.UndefOr[String] = js.native
+  var mdmEnrollmentUrl: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become
@@ -104,10 +104,13 @@ object WindowsInformationProtectionPolicy {
     def deleteDaysWithoutContactBeforeUnenroll: Self = this.set("daysWithoutContactBeforeUnenroll", js.undefined)
     
     @scala.inline
-    def setMdmEnrollmentUrl(value: String): Self = this.set("mdmEnrollmentUrl", value.asInstanceOf[js.Any])
+    def setMdmEnrollmentUrl(value: NullableOption[String]): Self = this.set("mdmEnrollmentUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMdmEnrollmentUrl: Self = this.set("mdmEnrollmentUrl", js.undefined)
+    
+    @scala.inline
+    def setMdmEnrollmentUrlNull: Self = this.set("mdmEnrollmentUrl", null)
     
     @scala.inline
     def setMinutesOfInactivityBeforeDeviceLock(value: Double): Self = this.set("minutesOfInactivityBeforeDeviceLock", value.asInstanceOf[js.Any])

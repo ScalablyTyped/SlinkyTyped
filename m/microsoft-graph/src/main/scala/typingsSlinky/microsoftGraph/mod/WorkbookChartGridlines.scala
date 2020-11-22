@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookChartGridlines extends Entity {
   
   // Represents the formatting of chart gridlines. Read-only.
-  var format: js.UndefOr[WorkbookChartGridlinesFormat] = js.native
+  var format: js.UndefOr[NullableOption[WorkbookChartGridlinesFormat]] = js.native
   
   // Boolean value representing if the axis gridlines are visible or not.
   var visible: js.UndefOr[Boolean] = js.native
@@ -37,10 +37,13 @@ object WorkbookChartGridlines {
     }
     
     @scala.inline
-    def setFormat(value: WorkbookChartGridlinesFormat): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setFormat(value: NullableOption[WorkbookChartGridlinesFormat]): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
+    
+    @scala.inline
+    def setFormatNull: Self = this.set("format", null)
     
     @scala.inline
     def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])

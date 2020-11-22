@@ -14,13 +14,13 @@ trait FlexboxProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
      with FlexDirectionProps[ThemeType]
      with FlexProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ js.Any
     ]
      with FlexGrowProps[ThemeType]
      with FlexShrinkProps[ThemeType]
      with FlexBasisProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexBasisProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexBasis<TLengthStyledSystem> */ js.Any
     ]
      with JustifySelfProps[ThemeType]
      with AlignSelfProps[ThemeType]

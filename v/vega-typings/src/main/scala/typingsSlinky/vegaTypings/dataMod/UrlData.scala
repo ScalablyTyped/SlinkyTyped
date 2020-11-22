@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  url :string | vega-typings.vega-typings/types/spec.SignalRef,   format :vega-typings.vega-typings/types/spec/data.Format | vega-typings.vega-typings/types/spec.SignalRef | undefined,   async :boolean | vega-typings.vega-typings/types/spec.SignalRef | undefined} & vega-typings.vega-typings/types/spec/data.BaseData */
+/* Inlined {  url :vega-typings.vega-typings/types/spec/data.URI | vega-typings.vega-typings/types/spec.SignalRef,   format :vega-typings.vega-typings/types/spec/data.Format | vega-typings.vega-typings/types/spec.SignalRef | undefined,   async :boolean | vega-typings.vega-typings/types/spec.SignalRef | undefined} & vega-typings.vega-typings/types/spec/data.BaseData */
 @js.native
 trait UrlData extends Data {
   
@@ -21,12 +21,12 @@ trait UrlData extends Data {
   
   var transform: js.UndefOr[js.Array[Transforms]] = js.native
   
-  var url: String | SignalRef = js.native
+  var url: URI | SignalRef = js.native
 }
 object UrlData {
   
   @scala.inline
-  def apply(name: String, url: String | SignalRef): UrlData = {
+  def apply(name: String, url: URI | SignalRef): UrlData = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[UrlData]
   }
@@ -50,7 +50,7 @@ object UrlData {
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUrl(value: String | SignalRef): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrl(value: URI | SignalRef): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAsync(value: Boolean | SignalRef): Self = this.set("async", value.asInstanceOf[js.Any])

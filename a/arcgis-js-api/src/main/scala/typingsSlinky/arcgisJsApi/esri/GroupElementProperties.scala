@@ -11,29 +11,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GroupElementProperties extends ElementMixinProperties {
   
   /**
-    * An array of [field elements](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-FieldElement.html) to display as grouped. These objects represent an ordered list of [form](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm.html) elements.
+    * An array of [field elements](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-FieldElement.html) to display as grouped.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-GroupElement.html#elements)
     */
   var elements: js.UndefOr[js.Array[FieldElementProperties]] = js.native
   
   /**
-    * Defines if the group should be expanded or collapsed when the form is initially displayed. If not provided, the default value is expanded.
-    *
-    * Possible Value | Description
-    * ---------------|-------------
-    * collapsed | The grouped elements appear collapsed.
-    * expanded | The grouped elements appear expanded.
-    *
+    * Defines if the group should be expanded or collapsed when the form is initially displayed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-GroupElement.html#initialState)
-    *
-    * @default expanded
     */
   var initialState: js.UndefOr[collapsed | expanded] = js.native
   
   /**
-    * The type of the [element](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-Element.html). GroupElement is of type, `group`.
+    * The type of the [element](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-Element.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-GroupElement.html#type)
     */

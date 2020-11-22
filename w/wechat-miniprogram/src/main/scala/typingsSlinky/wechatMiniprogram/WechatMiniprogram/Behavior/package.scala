@@ -6,13 +6,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object Behavior {
   
+  type BehaviorIdentifier = java.lang.String
+  
   type Constructor = js.Function1[
     /* options */ typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.Options[
       typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.DataOption, 
       typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.PropertyOption, 
-      typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.MethodOption
+      typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.MethodOption, 
+      typingsSlinky.std.Record[java.lang.String, scala.Nothing]
     ], 
-    java.lang.String
+    typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.BehaviorIdentifier
   ]
   
   type Data[D /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.DataOption */] = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.Data[D]
@@ -21,11 +24,17 @@ package object Behavior {
   
   type DefinitionFilter = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.DefinitionFilter
   
-  type Instance[TData /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.DataOption */, TProperty /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.PropertyOption */, TMethod /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.MethodOption */] = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.Instance[TData, TProperty, TMethod, js.Object]
+  type Instance[TData /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.DataOption */, TProperty /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.PropertyOption */, TMethod /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.MethodOption */, TCustomInstanceProperty /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject */] = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.Instance[
+    TData, 
+    TProperty, 
+    TMethod, 
+    TCustomInstanceProperty, 
+    typingsSlinky.wechatMiniprogram.wechatMiniprogramBooleans.`false`
+  ]
   
   type Lifetimes = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.Lifetimes
   
-  type Method[M /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.MethodOption */] = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.Method[M]
+  type Method[M /* <: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.MethodOption */] = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.Method[M, typingsSlinky.wechatMiniprogram.wechatMiniprogramBooleans.`false`]
   
   type MethodOption = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.MethodOption
   
@@ -36,6 +45,7 @@ package object Behavior {
   type TrivialInstance = typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.Instance[
     typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject, 
     typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject, 
-    typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject
+    typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject, 
+    typingsSlinky.std.Record[java.lang.String, scala.Nothing]
   ]
 }

@@ -20,7 +20,7 @@ class BatchDeleteCatalogObjectsResponse () extends js.Object {
   var deleted_object_ids: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * The set of Errors encountered.
+    * Any errors that occurred during the request.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
 }

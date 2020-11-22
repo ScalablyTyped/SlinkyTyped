@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Transaction extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/transaction
+  // Docs: https://electronjs.org/docs/api/structures/transaction
   /**
     * The error code if an error occurred while processing the transaction.
     */

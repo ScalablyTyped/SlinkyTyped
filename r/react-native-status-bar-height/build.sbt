@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "react-native-status-bar-height"
-version := "2.5.0-6a778d"
+version := "2.6.0-0cf00b"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

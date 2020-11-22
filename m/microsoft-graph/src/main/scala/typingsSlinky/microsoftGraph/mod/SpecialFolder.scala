@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SpecialFolder extends js.Object {
   
   // The unique identifier for this item in the /drive/special collection
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
 }
 object SpecialFolder {
   
@@ -34,9 +34,12 @@ object SpecialFolder {
     }
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setNameNull: Self = this.set("name", null)
   }
 }

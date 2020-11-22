@@ -13,19 +13,13 @@ trait Window extends js.Object {
   
   var TrustedScriptURL: typingsSlinky.trustedTypes.mod.global.TrustedScriptURL = js.native
   
-  var TrustedTypePolicy: typingsSlinky.trustedTypes.mod.global.TrustedTypePolicy = js.native
+  var TrustedTypePolicy: typingsSlinky.trustedTypes.mod.global.TrustedTypePolicy[TrustedTypePolicyOptions] = js.native
   
   var TrustedTypePolicyFactory: typingsSlinky.trustedTypes.mod.global.TrustedTypePolicyFactory = js.native
   
-  /** @deprecated Prefer the lowercase version. */
-  var TrustedTypes: js.UndefOr[TrustedTypePolicyFactory] = js.native
-  
-  var TrustedURL: typingsSlinky.trustedTypes.mod.global.TrustedURL = js.native
-  
-  // NOTE: This is needed while the implementation in Chrome still relies
-  // on the old uppercase name, either of the values below could be
-  // undefined.
-  // See https://github.com/w3c/webappsec-trusted-types/issues/177
+  // `trustedTypes` is left intentionally optional to make sure that
+  // people handle the case when their code is running in a browser not
+  // supporting trustedTypes.
   var trustedTypes: js.UndefOr[TrustedTypePolicyFactory] = js.native
 }
 object Window {
@@ -35,11 +29,10 @@ object Window {
     TrustedHTML: TrustedHTML,
     TrustedScript: TrustedScript,
     TrustedScriptURL: TrustedScriptURL,
-    TrustedTypePolicy: TrustedTypePolicy,
-    TrustedTypePolicyFactory: TrustedTypePolicyFactory,
-    TrustedURL: TrustedURL
+    TrustedTypePolicy: TrustedTypePolicy[TrustedTypePolicyOptions],
+    TrustedTypePolicyFactory: TrustedTypePolicyFactory
   ): Window = {
-    val __obj = js.Dynamic.literal(TrustedHTML = TrustedHTML.asInstanceOf[js.Any], TrustedScript = TrustedScript.asInstanceOf[js.Any], TrustedScriptURL = TrustedScriptURL.asInstanceOf[js.Any], TrustedTypePolicy = TrustedTypePolicy.asInstanceOf[js.Any], TrustedTypePolicyFactory = TrustedTypePolicyFactory.asInstanceOf[js.Any], TrustedURL = TrustedURL.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(TrustedHTML = TrustedHTML.asInstanceOf[js.Any], TrustedScript = TrustedScript.asInstanceOf[js.Any], TrustedScriptURL = TrustedScriptURL.asInstanceOf[js.Any], TrustedTypePolicy = TrustedTypePolicy.asInstanceOf[js.Any], TrustedTypePolicyFactory = TrustedTypePolicyFactory.asInstanceOf[js.Any])
     __obj.asInstanceOf[Window]
   }
   
@@ -68,18 +61,15 @@ object Window {
     def setTrustedScriptURL(value: TrustedScriptURL): Self = this.set("TrustedScriptURL", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTrustedTypePolicy(value: TrustedTypePolicy): Self = this.set("TrustedTypePolicy", value.asInstanceOf[js.Any])
+    def setTrustedTypePolicy(value: TrustedTypePolicy[TrustedTypePolicyOptions]): Self = this.set("TrustedTypePolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTrustedTypePolicyFactory(value: TrustedTypePolicyFactory): Self = this.set("TrustedTypePolicyFactory", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTrustedURL(value: TrustedURL): Self = this.set("TrustedURL", value.asInstanceOf[js.Any])
+    def setTrustedTypes(value: TrustedTypePolicyFactory): Self = this.set("trustedTypes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTrustedTypes(value: TrustedTypePolicyFactory): Self = this.set("TrustedTypes", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTrustedTypes: Self = this.set("TrustedTypes", js.undefined)
+    def deleteTrustedTypes: Self = this.set("trustedTypes", js.undefined)
   }
 }

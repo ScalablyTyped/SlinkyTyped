@@ -19,11 +19,9 @@ trait SceneViewConstraintsClipDistanceProperties extends Object {
   var far: js.UndefOr[Double] = js.native
   
   /**
-    * Specifies the mode of the constraint which is either `auto` or `manual`. In `auto` mode, the near and far clip distance values are automatically determined. In `manual` mode, the near and far clip distance values are user defined, constant values. Note that the mode automatically changes to `manual` whenever the `near` or `far` property is set.
+    * Specifies the mode of the constraint which is either `auto` or `manual`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#constraints)
-    *
-    * @default auto
     */
   var mode: js.UndefOr[auto | manual] = js.native
   

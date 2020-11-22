@@ -13,13 +13,12 @@ trait DomainEbsOptions extends js.Object {
   var ebsEnabled: Boolean = js.native
   
   /**
-    * The baseline input/output (I/O) performance of EBS volumes
-    * attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
+    * The baseline input/output (I/O) performance of EBS volumes attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.
     */
   var iops: js.UndefOr[Double] = js.native
   
   /**
-    * The size of EBS volumes attached to data nodes (in GB).
+    * The size of EBS volumes attached to data nodes (in GiB).
     * **Required** if `ebsEnabled` is set to `true`.
     */
   var volumeSize: js.UndefOr[Double] = js.native

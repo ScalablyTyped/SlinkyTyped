@@ -10,13 +10,15 @@ trait Check extends js.Object {
   
   var border: js.UndefOr[ColorWidth] = js.native
   
-  var check: js.UndefOr[`8`] = js.native
+  var check: js.UndefOr[BackgroundRadius] = js.native
   
   var color: js.UndefOr[ColorType] = js.native
   
+  var font: js.UndefOr[`10`] = js.native
+  
   var gap: js.UndefOr[String] = js.native
   
-  var hover: js.UndefOr[`15`] = js.native
+  var hover: js.UndefOr[`19`] = js.native
   
   var icon: js.UndefOr[ExtendSize] = js.native
   
@@ -54,7 +56,7 @@ object Check {
     def deleteBorder: Self = this.set("border", js.undefined)
     
     @scala.inline
-    def setCheck(value: `8`): Self = this.set("check", value.asInstanceOf[js.Any])
+    def setCheck(value: BackgroundRadius): Self = this.set("check", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCheck: Self = this.set("check", js.undefined)
@@ -66,13 +68,19 @@ object Check {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
+    def setFont(value: `10`): Self = this.set("font", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFont: Self = this.set("font", js.undefined)
+    
+    @scala.inline
     def setGap(value: String): Self = this.set("gap", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGap: Self = this.set("gap", js.undefined)
     
     @scala.inline
-    def setHover(value: `15`): Self = this.set("hover", value.asInstanceOf[js.Any])
+    def setHover(value: `19`): Self = this.set("hover", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHover: Self = this.set("hover", js.undefined)

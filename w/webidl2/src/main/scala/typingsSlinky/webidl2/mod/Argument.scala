@@ -1,17 +1,15 @@
 package typingsSlinky.webidl2.mod
 
+import typingsSlinky.webidl2.webidl2Strings.argument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Argument extends js.Object {
+trait Argument extends AbstractBase {
   
   /** A default value, absent if there is none. */
   var default: ValueDescription | Null = js.native
-  
-  /** A list of extended attributes. */
-  var extAttrs: js.Array[ExtendedAttribute] = js.native
   
   /** An IDL Type describing the type of the argument. */
   var idlType: IDLTypeDescription = js.native
@@ -22,8 +20,11 @@ trait Argument extends js.Object {
   /** True if the argument is optional. */
   var optional: Boolean = js.native
   
-  /** The container of this type. */
-  var parent: CallbackType | ConstructorMemberType | ExtendedAttribute | OperationMemberType = js.native
+  @JSName("parent")
+  var parent_Argument: CallbackType | ConstructorMemberType | ExtendedAttribute | OperationMemberType = js.native
+  
+  @JSName("type")
+  var type_Argument: argument = js.native
   
   /** True if the argument is variadic. */
   var variadic: Boolean = js.native
@@ -37,9 +38,11 @@ object Argument {
     name: String,
     optional: Boolean,
     parent: CallbackType | ConstructorMemberType | ExtendedAttribute | OperationMemberType,
+    `type`: argument,
     variadic: Boolean
   ): Argument = {
     val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], idlType = idlType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], variadic = variadic.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Argument]
   }
   
@@ -59,12 +62,6 @@ object Argument {
     }
     
     @scala.inline
-    def setExtAttrsVarargs(value: ExtendedAttribute*): Self = this.set("extAttrs", js.Array(value :_*))
-    
-    @scala.inline
-    def setExtAttrs(value: js.Array[ExtendedAttribute]): Self = this.set("extAttrs", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setIdlType(value: IDLTypeDescription): Self = this.set("idlType", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -75,6 +72,9 @@ object Argument {
     
     @scala.inline
     def setParent(value: CallbackType | ConstructorMemberType | ExtendedAttribute | OperationMemberType): Self = this.set("parent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setType(value: argument): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVariadic(value: Boolean): Self = this.set("variadic", value.asInstanceOf[js.Any])

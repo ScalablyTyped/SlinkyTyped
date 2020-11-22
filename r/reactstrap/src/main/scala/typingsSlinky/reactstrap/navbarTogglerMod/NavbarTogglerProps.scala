@@ -1,11 +1,10 @@
 package typingsSlinky.reactstrap.navbarTogglerMod
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.HTMLAnchorElement
+import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.react.mod.ReactType
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.ButtonHTMLAttributes
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,13 +12,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait NavbarTogglerProps
-  extends AllHTMLAttributes[HTMLAnchorElement]
-     with ClassAttributes[HTMLAnchorElement]
+  extends ButtonHTMLAttributes[HTMLButtonElement]
      with /* key */ StringDictionary[js.Any] {
   
   var cssModule: js.UndefOr[CSSModule] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
 }
 object NavbarTogglerProps {
   
@@ -57,7 +55,7 @@ object NavbarTogglerProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

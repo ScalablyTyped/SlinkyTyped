@@ -20,6 +20,8 @@ trait RouteInfo[TOptions] extends js.Object {
   
   var pathname: String = js.native
   
+  var prevRouteLastPathname: js.UndefOr[String] = js.native
+  
   var pushedByRoute: js.UndefOr[String] = js.native
   
   var routeAction: js.UndefOr[RouteAction] = js.native
@@ -77,6 +79,12 @@ object RouteInfo {
     
     @scala.inline
     def deleteParams: Self = this.set("params", js.undefined)
+    
+    @scala.inline
+    def setPrevRouteLastPathname(value: String): Self = this.set("prevRouteLastPathname", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrevRouteLastPathname: Self = this.set("prevRouteLastPathname", js.undefined)
     
     @scala.inline
     def setPushedByRoute(value: String): Self = this.set("pushedByRoute", value.asInstanceOf[js.Any])

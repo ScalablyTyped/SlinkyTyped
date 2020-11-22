@@ -9,13 +9,7 @@ trait EffectRenderer extends js.Object {
   
   var _fullscreenViewport: js.Any = js.native
   
-  var _getNextFrameBuffer: js.Any = js.native
-  
   var _indexBuffer: js.Any = js.native
-  
-  var _ringBufferIndex: js.Any = js.native
-  
-  var _ringScreenBuffer: js.Any = js.native
   
   var _vertexBuffers: js.Any = js.native
   
@@ -45,15 +39,20 @@ trait EffectRenderer extends js.Object {
   
   var engine: js.Any = js.native
   
+  var isRenderTargetTexture: js.Any = js.native
+  
   /**
     * renders one or more effects to a specified texture
-    * @param effectWrappers list of effects to renderer
-    * @param outputTexture texture to draw to, if null it will render to the screen
+    * @param effectWrapper the effect to renderer
+    * @param outputTexture texture to draw to, if null it will render to the screen.
     */
-  def render(effectWrappers: js.Array[EffectWrapper]): Unit = js.native
-  def render(effectWrappers: js.Array[EffectWrapper], outputTexture: Nullable[Texture]): Unit = js.native
-  def render(effectWrappers: EffectWrapper): Unit = js.native
-  def render(effectWrappers: EffectWrapper, outputTexture: Nullable[Texture]): Unit = js.native
+  def render(effectWrapper: EffectWrapper): Unit = js.native
+  def render(effectWrapper: EffectWrapper, outputTexture: Nullable[InternalTexture | RenderTargetTexture]): Unit = js.native
+  
+  /**
+    * Restores engine states
+    */
+  def restoreStates(): Unit = js.native
   
   /**
     * Sets the current viewport in normalized coordinates 0-1

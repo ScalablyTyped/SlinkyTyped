@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * An interface representing all PivotFilters currently applied to a given PivotField.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait PivotFilters extends js.Object {
@@ -18,8 +17,7 @@ trait PivotFilters extends js.Object {
     *
     * The PivotField's currently applied date filter. Null if none is applied.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var dateFilter: js.UndefOr[PivotDateFilter] = js.native
   
@@ -27,8 +25,7 @@ trait PivotFilters extends js.Object {
     *
     * The PivotField's currently applied label filter. Null if none is applied.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var labelFilter: js.UndefOr[PivotLabelFilter] = js.native
   
@@ -36,8 +33,7 @@ trait PivotFilters extends js.Object {
     *
     * The PivotField's currently applied manual filter. Null if none is applied.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var manualFilter: js.UndefOr[PivotManualFilter] = js.native
   
@@ -45,8 +41,7 @@ trait PivotFilters extends js.Object {
     *
     * The PivotField's currently applied value filter. Null if none is applied.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var valueFilter: js.UndefOr[PivotValueFilter] = js.native
 }

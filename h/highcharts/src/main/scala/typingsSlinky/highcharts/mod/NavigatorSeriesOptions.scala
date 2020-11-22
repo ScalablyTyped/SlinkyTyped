@@ -67,8 +67,7 @@ trait NavigatorSeriesOptions extends js.Object {
   var threshold: js.UndefOr[Double | Null] = js.native
   
   /**
-    * (Highstock, Gantt) The type of the navigator series. Defaults to
-    * `areaspline` if defined, otherwise `line`.
+    * (Highstock, Gantt) The type of the navigator series.
     *
     * Heads up: In column-type navigator, zooming is limited to at least one
     * point with its `pointRange`.

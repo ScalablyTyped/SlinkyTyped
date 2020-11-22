@@ -13,7 +13,7 @@ trait DomainEntry extends js.Object {
   var id: js.UndefOr[NonEmptyString] = js.native
   
   /**
-    * When true, specifies whether the domain entry is an alias used by the Lightsail load balancer. You can include an alias (A type) record in your request, which points to a load balancer DNS name and routes traffic to your load balancer
+    * When true, specifies whether the domain entry is an alias used by the Lightsail load balancer. You can include an alias (A type) record in your request, which points to a load balancer DNS name and routes traffic to your load balancer.
     */
   var isAlias: js.UndefOr[Boolean] = js.native
   

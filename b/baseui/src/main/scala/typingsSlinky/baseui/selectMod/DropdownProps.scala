@@ -2,7 +2,7 @@ package typingsSlinky.baseui.selectMod
 
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.baseui.anon.EventItem
+import typingsSlinky.baseui.anon.Item
 import typingsSlinky.baseui.anon.OptionState
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -28,6 +28,8 @@ trait DropdownProps extends js.Object {
   var innerRef: js.UndefOr[Ref[_]] = js.native
   
   var isLoading: js.UndefOr[Boolean] = js.native
+  
+  var keyboardControlNode: js.UndefOr[Ref[_]] = js.native
   
   var labelKey: js.UndefOr[String] = js.native
   
@@ -122,6 +124,21 @@ object DropdownProps {
     def deleteIsLoading: Self = this.set("isLoading", js.undefined)
     
     @scala.inline
+    def setKeyboardControlNodeRefObject(value: ReactRef[_]): Self = this.set("keyboardControlNode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKeyboardControlNodeFunction1(value: /* instance */ _ | Null => Unit): Self = this.set("keyboardControlNode", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setKeyboardControlNode(value: Ref[_]): Self = this.set("keyboardControlNode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKeyboardControlNode: Self = this.set("keyboardControlNode", js.undefined)
+    
+    @scala.inline
+    def setKeyboardControlNodeNull: Self = this.set("keyboardControlNode", null)
+    
+    @scala.inline
     def setLabelKey(value: String): Self = this.set("labelKey", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -155,7 +172,7 @@ object DropdownProps {
     def deleteOnActiveDescendantChange: Self = this.set("onActiveDescendantChange", js.undefined)
     
     @scala.inline
-    def setOnItemSelect(value: /* args */ EventItem => js.Any): Self = this.set("onItemSelect", js.Any.fromFunction1(value))
+    def setOnItemSelect(value: /* args */ Item => js.Any): Self = this.set("onItemSelect", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnItemSelect: Self = this.set("onItemSelect", js.undefined)

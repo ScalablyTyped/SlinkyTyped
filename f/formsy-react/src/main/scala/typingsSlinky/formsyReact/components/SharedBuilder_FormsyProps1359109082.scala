@@ -17,8 +17,13 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.formsyReact.formsyReactStrings.`additions removals`
 import typingsSlinky.formsyReact.formsyReactStrings.`additions text`
 import typingsSlinky.formsyReact.formsyReactStrings.`inline`
+import typingsSlinky.formsyReact.formsyReactStrings.`removals additions`
+import typingsSlinky.formsyReact.formsyReactStrings.`removals text`
+import typingsSlinky.formsyReact.formsyReactStrings.`text additions`
+import typingsSlinky.formsyReact.formsyReactStrings.`text removals`
 import typingsSlinky.formsyReact.formsyReactStrings.additions
 import typingsSlinky.formsyReact.formsyReactStrings.all
 import typingsSlinky.formsyReact.formsyReactStrings.ascending
@@ -69,6 +74,7 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.FormHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -196,7 +202,9 @@ class SharedBuilder_FormsyProps1359109082[R <: js.Object] (val args: js.Array[js
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -530,8 +538,8 @@ class SharedBuilder_FormsyProps1359109082[R <: js.Object] (val args: js.Array[js
   
   @scala.inline
   def onSubmit(
-    value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError) => Unit
-  ): this.type = set("onSubmit", js.Any.fromFunction3(value))
+    value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError, /* event */ SyntheticEvent[Event, FormHTMLAttributes[js.Any]]) => Unit
+  ): this.type = set("onSubmit", js.Any.fromFunction4(value))
   
   @scala.inline
   def onSuspend(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
@@ -556,8 +564,8 @@ class SharedBuilder_FormsyProps1359109082[R <: js.Object] (val args: js.Array[js
   
   @scala.inline
   def onValidSubmit(
-    value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError) => Unit
-  ): this.type = set("onValidSubmit", js.Any.fromFunction3(value))
+    value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError, /* event */ SyntheticEvent[Event, FormHTMLAttributes[js.Any]]) => Unit
+  ): this.type = set("onValidSubmit", js.Any.fromFunction4(value))
   
   @scala.inline
   def onVolumeChange(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))

@@ -19,7 +19,7 @@ package object mod {
   
   type ResponsiveStyleValue[T] = T | (js.Array[T | scala.Null])
   
-  type StandardCSSProperties = typingsSlinky.csstype.mod.PropertiesFallback[scala.Double | java.lang.String, java.lang.String with js.Object]
+  type StandardCSSProperties = typingsSlinky.csstype.mod.PropertiesFallback[scala.Double | java.lang.String]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.styledSystemCss.mod.SystemCssProperties

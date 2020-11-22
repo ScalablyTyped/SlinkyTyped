@@ -1,7 +1,6 @@
 package typingsSlinky.lodash.fpMod
 
 import typingsSlinky.lodash.mod.Dictionary
-import typingsSlinky.lodash.mod.List
 import typingsSlinky.lodash.mod.NumericDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +16,5 @@ trait LodashSampleSize1x1 extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
   ] = js.native
   def apply[T](collection: Dictionary[T]): js.Array[T] = js.native
-  def apply[T](collection: List[T]): js.Array[T] = js.native
   def apply[T](collection: NumericDictionary[T]): js.Array[T] = js.native
 }

@@ -18,6 +18,7 @@ class SubMesh protected ()
     * @param mesh defines the parent mesh
     * @param renderingMesh defines an optional rendering mesh
     * @param createBoundingBox defines if bounding box should be created for this submesh
+    * @param addToMesh defines a boolean indicating that the submesh must be added to the mesh.subMeshes array (true by default)
     */
   def this(
     /** the material index to use */
@@ -75,6 +76,70 @@ class SubMesh protected ()
     mesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
     renderingMesh: typingsSlinky.babylonjs.meshMod.Mesh,
     createBoundingBox: Boolean
+  ) = this()
+  def this(
+    /** the material index to use */
+  materialIndex: Double,
+    /** vertex index start */
+  verticesStart: Double,
+    /** vertices count */
+  verticesCount: Double,
+    /** index start */
+  indexStart: Double,
+    /** indices count */
+  indexCount: Double,
+    mesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
+    renderingMesh: js.UndefOr[scala.Nothing],
+    createBoundingBox: js.UndefOr[scala.Nothing],
+    addToMesh: Boolean
+  ) = this()
+  def this(
+    /** the material index to use */
+  materialIndex: Double,
+    /** vertex index start */
+  verticesStart: Double,
+    /** vertices count */
+  verticesCount: Double,
+    /** index start */
+  indexStart: Double,
+    /** indices count */
+  indexCount: Double,
+    mesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
+    renderingMesh: js.UndefOr[scala.Nothing],
+    createBoundingBox: Boolean,
+    addToMesh: Boolean
+  ) = this()
+  def this(
+    /** the material index to use */
+  materialIndex: Double,
+    /** vertex index start */
+  verticesStart: Double,
+    /** vertices count */
+  verticesCount: Double,
+    /** index start */
+  indexStart: Double,
+    /** indices count */
+  indexCount: Double,
+    mesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
+    renderingMesh: typingsSlinky.babylonjs.meshMod.Mesh,
+    createBoundingBox: js.UndefOr[scala.Nothing],
+    addToMesh: Boolean
+  ) = this()
+  def this(
+    /** the material index to use */
+  materialIndex: Double,
+    /** vertex index start */
+  verticesStart: Double,
+    /** vertices count */
+  verticesCount: Double,
+    /** index start */
+  indexStart: Double,
+    /** indices count */
+  indexCount: Double,
+    mesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh,
+    renderingMesh: typingsSlinky.babylonjs.meshMod.Mesh,
+    createBoundingBox: Boolean,
+    addToMesh: Boolean
   ) = this()
 }
 /* static members */

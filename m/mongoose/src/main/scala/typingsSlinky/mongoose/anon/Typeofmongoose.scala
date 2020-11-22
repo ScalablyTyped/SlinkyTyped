@@ -52,6 +52,9 @@ trait Typeofmongoose extends js.Object {
   def createConnection(uri: String): ConnectionthenPromiseConn = js.native
   def createConnection(uri: String, options: ConnectionOptions): ConnectionthenPromiseConn = js.native
   
+  def deleteModel(name: String): Connection_ = js.native
+  def deleteModel(name: js.RegExp): Connection_ = js.native
+  
   def disconnect(): js.Promise[Unit] = js.native
   def disconnect(fn: js.Function1[/* error */ js.UndefOr[js.Any], Unit]): Unit = js.native
   

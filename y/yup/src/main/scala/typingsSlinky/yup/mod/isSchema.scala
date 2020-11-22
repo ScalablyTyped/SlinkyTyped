@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object isSchema extends js.Object {
   
-  def apply(obj: js.Any): /* is yup.yup.Schema<any> */ Boolean = js.native
+  def apply(obj: js.Any): /* is yup.yup.Schema<any, object> */ Boolean = js.native
 }

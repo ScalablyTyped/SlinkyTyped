@@ -28,7 +28,7 @@ trait Rich extends js.Object {
   var backgroundColor: js.UndefOr[js.Object | String] = js.native
   
   /**
-    * Border color of the text fregment.
+    * Border color of the text fragment.
     *
     *
     * @default
@@ -46,7 +46,7 @@ trait Rich extends js.Object {
   var borderRadius: js.UndefOr[Double] = js.native
   
   /**
-    * Border width of the text fregment.
+    * Border width of the text fragment.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-gauge.detail.borderWidth
@@ -117,7 +117,15 @@ trait Rich extends js.Object {
     * "normal"
     * @see https://echarts.apache.org/en/option.html#series-gauge.detail.fontWeight
     */
-  var fontWeight: js.UndefOr[String] = js.native
+  var fontWeight: js.UndefOr[String | Double] = js.native
+  
+  /**
+    * Formatter is used to format detail, which supports string template and callback function.
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-gauge.detail.formatter
+    */
+  var formatter: js.UndefOr[String | js.Function] = js.native
   
   /**
     * Height of the text block.
@@ -402,10 +410,16 @@ object Rich {
     def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
     
     @scala.inline
-    def setFontWeight(value: String): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
+    def setFontWeight(value: String | Double): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontWeight: Self = this.set("fontWeight", js.undefined)
+    
+    @scala.inline
+    def setFormatter(value: String | js.Function): Self = this.set("formatter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFormatter: Self = this.set("formatter", js.undefined)
     
     @scala.inline
     def setHeight(value: Double | String): Self = this.set("height", value.asInstanceOf[js.Any])

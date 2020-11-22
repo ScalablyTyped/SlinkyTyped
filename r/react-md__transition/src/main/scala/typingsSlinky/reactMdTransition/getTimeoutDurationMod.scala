@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getTimeoutDurationMod extends js.Object {
   
-  def default(stage: TransitionStage, appear: Double, enter: Double, exit: Double, appearing: Boolean): Double = js.native
+  def getTimeoutDuration(stage: TransitionStage, appear: Double, enter: Double, exit: Double, appearing: Boolean): Double = js.native
 }

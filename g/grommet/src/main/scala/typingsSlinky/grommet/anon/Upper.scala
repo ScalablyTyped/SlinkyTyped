@@ -1,7 +1,10 @@
 package typingsSlinky.grommet.anon
 
+import typingsSlinky.grommet.baseMod.ExtendProps
 import typingsSlinky.grommet.baseMod.ExtendType
+import typingsSlinky.grommet.baseMod.ExtendValue
 import typingsSlinky.grommet.utilsMod.OpacityType
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,15 +14,15 @@ trait Upper extends js.Object {
   
   var color: js.UndefOr[js.Any] = js.native
   
-  var extend: js.UndefOr[ExtendType] = js.native
+  var extend: js.UndefOr[ExtendType[Record[String, _]]] = js.native
   
   var height: js.UndefOr[String] = js.native
   
-  var lower: js.UndefOr[`5`] = js.native
+  var lower: js.UndefOr[`7`] = js.native
   
   var opacity: js.UndefOr[OpacityType] = js.native
   
-  var upper: js.UndefOr[`5`] = js.native
+  var upper: js.UndefOr[`7`] = js.native
 }
 object Upper {
   
@@ -51,10 +54,10 @@ object Upper {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setExtendFunction1(value: /* args */ js.Any => Unit): Self = this.set("extend", js.Any.fromFunction1(value))
+    def setExtendFunction1(value: /* props */ ExtendProps[Record[String, _]] => ExtendValue[Record[String, _]]): Self = this.set("extend", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setExtend(value: ExtendType): Self = this.set("extend", value.asInstanceOf[js.Any])
+    def setExtend(value: ExtendType[Record[String, _]]): Self = this.set("extend", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExtend: Self = this.set("extend", js.undefined)
@@ -66,7 +69,7 @@ object Upper {
     def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
-    def setLower(value: `5`): Self = this.set("lower", value.asInstanceOf[js.Any])
+    def setLower(value: `7`): Self = this.set("lower", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLower: Self = this.set("lower", js.undefined)
@@ -78,7 +81,7 @@ object Upper {
     def deleteOpacity: Self = this.set("opacity", js.undefined)
     
     @scala.inline
-    def setUpper(value: `5`): Self = this.set("upper", value.asInstanceOf[js.Any])
+    def setUpper(value: `7`): Self = this.set("upper", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUpper: Self = this.set("upper", js.undefined)

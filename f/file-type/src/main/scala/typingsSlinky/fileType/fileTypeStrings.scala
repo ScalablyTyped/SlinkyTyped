@@ -129,6 +129,9 @@ object fileTypeStrings {
   def `applicationSlashx-bzip2`: `applicationSlashx-bzip2` = "application/x-bzip2".asInstanceOf[`applicationSlashx-bzip2`]
   
   @scala.inline
+  def `applicationSlashx-cfb`: `applicationSlashx-cfb` = "application/x-cfb".asInstanceOf[`applicationSlashx-cfb`]
+  
+  @scala.inline
   def `applicationSlashx-compress`: `applicationSlashx-compress` = "application/x-compress".asInstanceOf[`applicationSlashx-compress`]
   
   @scala.inline
@@ -157,9 +160,6 @@ object fileTypeStrings {
   
   @scala.inline
   def `applicationSlashx-msdownload`: `applicationSlashx-msdownload` = "application/x-msdownload".asInstanceOf[`applicationSlashx-msdownload`]
-  
-  @scala.inline
-  def `applicationSlashx-msi`: `applicationSlashx-msi` = "application/x-msi".asInstanceOf[`applicationSlashx-msi`]
   
   @scala.inline
   def `applicationSlashx-nintendo-nes-rom`: `applicationSlashx-nintendo-nes-rom` = "application/x-nintendo-nes-rom".asInstanceOf[`applicationSlashx-nintendo-nes-rom`]
@@ -267,7 +267,7 @@ object fileTypeStrings {
   def `audioSlashx-m4a`: `audioSlashx-m4a` = "audio/x-m4a".asInstanceOf[`audioSlashx-m4a`]
   
   @scala.inline
-  def `audioSlashx-ms-wma`: `audioSlashx-ms-wma` = "audio/x-ms-wma".asInstanceOf[`audioSlashx-ms-wma`]
+  def `audioSlashx-ms-asf`: `audioSlashx-ms-asf` = "audio/x-ms-asf".asInstanceOf[`audioSlashx-ms-asf`]
   
   @scala.inline
   def `audioSlashx-musepack`: `audioSlashx-musepack` = "audio/x-musepack".asInstanceOf[`audioSlashx-musepack`]
@@ -301,6 +301,9 @@ object fileTypeStrings {
   
   @scala.inline
   def cab: cab = "cab".asInstanceOf[cab]
+  
+  @scala.inline
+  def cfb: cfb = "cfb".asInstanceOf[cfb]
   
   @scala.inline
   def close: close = "close".asInstanceOf[close]
@@ -567,6 +570,9 @@ object fileTypeStrings {
   def `modelSlashgltf-binary`: `modelSlashgltf-binary` = "model/gltf-binary".asInstanceOf[`modelSlashgltf-binary`]
   
   @scala.inline
+  def modelSlashstl: modelSlashstl = "model/stl".asInstanceOf[modelSlashstl]
+  
+  @scala.inline
   def mov: mov = "mov".asInstanceOf[mov]
   
   @scala.inline
@@ -586,9 +592,6 @@ object fileTypeStrings {
   
   @scala.inline
   def mpg: mpg = "mpg".asInstanceOf[mpg]
-  
-  @scala.inline
-  def msi: msi = "msi".asInstanceOf[msi]
   
   @scala.inline
   def mts: mts = "mts".asInstanceOf[mts]
@@ -699,6 +702,9 @@ object fileTypeStrings {
   def sqlite: sqlite = "sqlite".asInstanceOf[sqlite]
   
   @scala.inline
+  def stl: stl = "stl".asInstanceOf[stl]
+  
+  @scala.inline
   def swf: swf = "swf".asInstanceOf[swf]
   
   @scala.inline
@@ -772,12 +778,6 @@ object fileTypeStrings {
   
   @scala.inline
   def webp: webp = "webp".asInstanceOf[webp]
-  
-  @scala.inline
-  def wma: wma = "wma".asInstanceOf[wma]
-  
-  @scala.inline
-  def wmv: wmv = "wmv".asInstanceOf[wmv]
   
   @scala.inline
   def woff: woff = "woff".asInstanceOf[woff]
@@ -927,6 +927,9 @@ object fileTypeStrings {
   sealed trait `applicationSlashx-bzip2` extends MimeType
   
   @js.native
+  sealed trait `applicationSlashx-cfb` extends MimeType
+  
+  @js.native
   sealed trait `applicationSlashx-compress` extends MimeType
   
   @js.native
@@ -955,9 +958,6 @@ object fileTypeStrings {
   
   @js.native
   sealed trait `applicationSlashx-msdownload` extends MimeType
-  
-  @js.native
-  sealed trait `applicationSlashx-msi` extends MimeType
   
   @js.native
   sealed trait `applicationSlashx-nintendo-nes-rom` extends MimeType
@@ -1065,7 +1065,7 @@ object fileTypeStrings {
   sealed trait `audioSlashx-m4a` extends MimeType
   
   @js.native
-  sealed trait `audioSlashx-ms-wma` extends MimeType
+  sealed trait `audioSlashx-ms-asf` extends MimeType
   
   @js.native
   sealed trait `audioSlashx-musepack` extends MimeType
@@ -1099,6 +1099,9 @@ object fileTypeStrings {
   
   @js.native
   sealed trait cab extends FileExtension
+  
+  @js.native
+  sealed trait cfb extends FileExtension
   
   @js.native
   sealed trait close extends js.Object
@@ -1365,6 +1368,9 @@ object fileTypeStrings {
   sealed trait `modelSlashgltf-binary` extends MimeType
   
   @js.native
+  sealed trait modelSlashstl extends MimeType
+  
+  @js.native
   sealed trait mov extends FileExtension
   
   @js.native
@@ -1384,9 +1390,6 @@ object fileTypeStrings {
   
   @js.native
   sealed trait mpg extends FileExtension
-  
-  @js.native
-  sealed trait msi extends FileExtension
   
   @js.native
   sealed trait mts extends FileExtension
@@ -1497,6 +1500,9 @@ object fileTypeStrings {
   sealed trait sqlite extends FileExtension
   
   @js.native
+  sealed trait stl extends FileExtension
+  
+  @js.native
   sealed trait swf extends FileExtension
   
   @js.native
@@ -1570,12 +1576,6 @@ object fileTypeStrings {
   
   @js.native
   sealed trait webp extends FileExtension
-  
-  @js.native
-  sealed trait wma extends FileExtension
-  
-  @js.native
-  sealed trait wmv extends FileExtension
   
   @js.native
   sealed trait woff extends FileExtension

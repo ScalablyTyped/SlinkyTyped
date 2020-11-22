@@ -11,7 +11,7 @@ trait SourceFile
   
   var amdDependencies: js.Array[AmdDependency] = js.native
   
-  var endOfFileToken: Token[typingsSlinky.typescript.mod.SyntaxKind.EndOfFileToken] = js.native
+  val endOfFileToken: Token[typingsSlinky.typescript.mod.SyntaxKind.EndOfFileToken] = js.native
   
   var fileName: java.lang.String = js.native
   
@@ -36,7 +36,7 @@ trait SourceFile
   var isDeclarationFile: Boolean = js.native
   
   @JSName("kind")
-  var kind_SourceFile: typingsSlinky.typescript.mod.SyntaxKind.SourceFile = js.native
+  val kind_SourceFile: typingsSlinky.typescript.mod.SyntaxKind.SourceFile = js.native
   
   var languageVariant: LanguageVariant = js.native
   
@@ -48,7 +48,7 @@ trait SourceFile
   
   var referencedFiles: js.Array[FileReference] = js.native
   
-  var statements: NodeArray[Statement] = js.native
+  val statements: NodeArray[Statement] = js.native
   
   var text: java.lang.String = js.native
   

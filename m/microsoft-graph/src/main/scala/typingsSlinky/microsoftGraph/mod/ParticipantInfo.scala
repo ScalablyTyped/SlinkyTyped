@@ -11,25 +11,25 @@ trait ParticipantInfo extends js.Object {
     * The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call.
     * Read-only.
     */
-  var countryCode: js.UndefOr[String] = js.native
+  var countryCode: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The type of endpoint the participant is using. Possible values are: default, skypeForBusiness, or
     * skypeForBusinessVoipPhone. Read-only.
     */
-  var endpointType: js.UndefOr[EndpointType] = js.native
+  var endpointType: js.UndefOr[NullableOption[EndpointType]] = js.native
   
   // The identitySet associated with this participant. Read-only.
   var identity: js.UndefOr[IdentitySet] = js.native
   
   // The language culture string. Read-only.
-  var languageId: js.UndefOr[String] = js.native
+  var languageId: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not
     * change based on the participant's current physical location. Read-only.
     */
-  var region: js.UndefOr[String] = js.native
+  var region: js.UndefOr[NullableOption[String]] = js.native
 }
 object ParticipantInfo {
   
@@ -55,16 +55,22 @@ object ParticipantInfo {
     }
     
     @scala.inline
-    def setCountryCode(value: String): Self = this.set("countryCode", value.asInstanceOf[js.Any])
+    def setCountryCode(value: NullableOption[String]): Self = this.set("countryCode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCountryCode: Self = this.set("countryCode", js.undefined)
     
     @scala.inline
-    def setEndpointType(value: EndpointType): Self = this.set("endpointType", value.asInstanceOf[js.Any])
+    def setCountryCodeNull: Self = this.set("countryCode", null)
+    
+    @scala.inline
+    def setEndpointType(value: NullableOption[EndpointType]): Self = this.set("endpointType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEndpointType: Self = this.set("endpointType", js.undefined)
+    
+    @scala.inline
+    def setEndpointTypeNull: Self = this.set("endpointType", null)
     
     @scala.inline
     def setIdentity(value: IdentitySet): Self = this.set("identity", value.asInstanceOf[js.Any])
@@ -73,15 +79,21 @@ object ParticipantInfo {
     def deleteIdentity: Self = this.set("identity", js.undefined)
     
     @scala.inline
-    def setLanguageId(value: String): Self = this.set("languageId", value.asInstanceOf[js.Any])
+    def setLanguageId(value: NullableOption[String]): Self = this.set("languageId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLanguageId: Self = this.set("languageId", js.undefined)
     
     @scala.inline
-    def setRegion(value: String): Self = this.set("region", value.asInstanceOf[js.Any])
+    def setLanguageIdNull: Self = this.set("languageId", null)
+    
+    @scala.inline
+    def setRegion(value: NullableOption[String]): Self = this.set("region", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRegion: Self = this.set("region", js.undefined)
+    
+    @scala.inline
+    def setRegionNull: Self = this.set("region", null)
   }
 }

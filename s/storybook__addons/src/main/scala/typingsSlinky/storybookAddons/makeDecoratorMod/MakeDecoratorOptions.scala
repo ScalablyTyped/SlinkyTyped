@@ -11,8 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MakeDecoratorOptions extends js.Object {
   
-  var allowDeprecatedUsage: js.UndefOr[Boolean] = js.native
-  
   var name: String = js.native
   
   var parameterName: String = js.native
@@ -58,12 +56,6 @@ object MakeDecoratorOptions {
     def setWrapper(
       value: (/* getStory */ StoryGetter, /* context */ StoryContext, /* settings */ WrapperSettings) => js.Any
     ): Self = this.set("wrapper", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def setAllowDeprecatedUsage(value: Boolean): Self = this.set("allowDeprecatedUsage", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAllowDeprecatedUsage: Self = this.set("allowDeprecatedUsage", js.undefined)
     
     @scala.inline
     def setSkipIfNoParametersOrOptions(value: Boolean): Self = this.set("skipIfNoParametersOrOptions", value.asInstanceOf[js.Any])

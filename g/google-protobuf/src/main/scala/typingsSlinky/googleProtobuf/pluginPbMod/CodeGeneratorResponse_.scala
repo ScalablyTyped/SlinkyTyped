@@ -15,9 +15,9 @@ class CodeGeneratorResponse_ () extends Message {
   def addFile(value: File): File = js.native
   def addFile(value: File, index: Double): File = js.native
   
-  def clearError(): Unit = js.native
+  def clearError(): CodeGeneratorResponse = js.native
   
-  def clearFileList(): Unit = js.native
+  def clearFileList(): CodeGeneratorResponse = js.native
   
   def getError(): js.UndefOr[String] = js.native
   
@@ -25,7 +25,7 @@ class CodeGeneratorResponse_ () extends Message {
   
   def hasError(): Boolean = js.native
   
-  def setError(value: String): Unit = js.native
+  def setError(value: String): CodeGeneratorResponse = js.native
   
-  def setFileList(value: js.Array[File]): Unit = js.native
+  def setFileList(value: js.Array[File]): CodeGeneratorResponse = js.native
 }

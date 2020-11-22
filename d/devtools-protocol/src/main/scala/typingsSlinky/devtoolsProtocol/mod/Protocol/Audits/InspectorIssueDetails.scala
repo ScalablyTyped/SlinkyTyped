@@ -9,6 +9,8 @@ trait InspectorIssueDetails extends js.Object {
   
   var blockedByResponseIssueDetails: js.UndefOr[BlockedByResponseIssueDetails] = js.native
   
+  var contentSecurityPolicyIssueDetails: js.UndefOr[ContentSecurityPolicyIssueDetails] = js.native
+  
   var heavyAdIssueDetails: js.UndefOr[HeavyAdIssueDetails] = js.native
   
   var mixedContentIssueDetails: js.UndefOr[MixedContentIssueDetails] = js.native
@@ -43,6 +45,12 @@ object InspectorIssueDetails {
     
     @scala.inline
     def deleteBlockedByResponseIssueDetails: Self = this.set("blockedByResponseIssueDetails", js.undefined)
+    
+    @scala.inline
+    def setContentSecurityPolicyIssueDetails(value: ContentSecurityPolicyIssueDetails): Self = this.set("contentSecurityPolicyIssueDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContentSecurityPolicyIssueDetails: Self = this.set("contentSecurityPolicyIssueDetails", js.undefined)
     
     @scala.inline
     def setHeavyAdIssueDetails(value: HeavyAdIssueDetails): Self = this.set("heavyAdIssueDetails", value.asInstanceOf[js.Any])

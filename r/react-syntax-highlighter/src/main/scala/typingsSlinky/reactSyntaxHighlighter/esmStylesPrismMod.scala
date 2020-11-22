@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object esmStylesPrismMod extends js.Object {
   
+  val a11yDark: js.Any = js.native
+  
   val atomDark: js.Any = js.native
   
   val base16AteliersulphurpoolLight: js.Any = js.native
@@ -19,6 +21,8 @@ object esmStylesPrismMod extends js.Object {
   val darcula: js.Any = js.native
   
   val dark: js.Any = js.native
+  
+  val dracula: js.Any = js.native
   
   val duotoneDark: js.Any = js.native
   
@@ -38,19 +42,33 @@ object esmStylesPrismMod extends js.Object {
   
   val hopscotch: js.Any = js.native
   
+  val materialDark: js.Any = js.native
+  
+  val materialLight: js.Any = js.native
+  
+  val materialOceanic: js.Any = js.native
+  
+  val nord: js.Any = js.native
+  
   val okaidia: js.Any = js.native
   
   val pojoaque: js.Any = js.native
   
   val prism: js.Any = js.native
   
+  val shadesOfPurple: js.Any = js.native
+  
   val solarizedlight: js.Any = js.native
+  
+  val synthwave84: js.Any = js.native
   
   val tomorrow: js.Any = js.native
   
   val twilight: js.Any = js.native
   
   val vs: js.Any = js.native
+  
+  val vscDarkPlus: js.Any = js.native
   
   val xonokai: js.Any = js.native
 }

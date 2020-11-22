@@ -11,7 +11,7 @@ trait ProxiedDomain extends js.Object {
   var ipAddressOrFQDN: js.UndefOr[String] = js.native
   
   // Proxy IP or FQDN
-  var proxy: js.UndefOr[String] = js.native
+  var proxy: js.UndefOr[NullableOption[String]] = js.native
 }
 object ProxiedDomain {
   
@@ -43,9 +43,12 @@ object ProxiedDomain {
     def deleteIpAddressOrFQDN: Self = this.set("ipAddressOrFQDN", js.undefined)
     
     @scala.inline
-    def setProxy(value: String): Self = this.set("proxy", value.asInstanceOf[js.Any])
+    def setProxy(value: NullableOption[String]): Self = this.set("proxy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProxy: Self = this.set("proxy", js.undefined)
+    
+    @scala.inline
+    def setProxyNull: Self = this.set("proxy", null)
   }
 }

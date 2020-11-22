@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("yandex-maps", "GeoObject")
 @js.native
-class GeoObject_ () extends IGeoObject {
+class GeoObject_[T, TargetGeometry] () extends IGeoObject[T] {
   def this(feature: IGeoObjectFeature) = this()
   def this(feature: js.UndefOr[scala.Nothing], options: IGeoObjectOptions) = this()
   def this(feature: IGeoObjectFeature, options: IGeoObjectOptions) = this()
@@ -18,7 +18,7 @@ class GeoObject_ () extends IGeoObject {
   var editor: IGeometryEditor = js.native
   
   @JSName("events")
-  var events_GeoObject_ : Manager = js.native
+  var events_GeoObject_ : Manager[TargetGeometry] = js.native
   
   var hint: Hint = js.native
   

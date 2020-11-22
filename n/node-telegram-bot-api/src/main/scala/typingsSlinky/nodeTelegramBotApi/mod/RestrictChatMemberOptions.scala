@@ -9,11 +9,19 @@ trait RestrictChatMemberOptions extends js.Object {
   
   var can_add_web_page_previews: js.UndefOr[Boolean] = js.native
   
+  var can_change_info: js.UndefOr[Boolean] = js.native
+  
+  var can_invite_users: js.UndefOr[Boolean] = js.native
+  
+  var can_pin_messages: js.UndefOr[Boolean] = js.native
+  
   var can_send_media_messages: js.UndefOr[Boolean] = js.native
   
   var can_send_messages: js.UndefOr[Boolean] = js.native
   
   var can_send_other_messages: js.UndefOr[Boolean] = js.native
+  
+  var can_send_polls: js.UndefOr[Boolean] = js.native
   
   var until_date: js.UndefOr[Double] = js.native
 }
@@ -47,6 +55,24 @@ object RestrictChatMemberOptions {
     def deleteCan_add_web_page_previews: Self = this.set("can_add_web_page_previews", js.undefined)
     
     @scala.inline
+    def setCan_change_info(value: Boolean): Self = this.set("can_change_info", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCan_change_info: Self = this.set("can_change_info", js.undefined)
+    
+    @scala.inline
+    def setCan_invite_users(value: Boolean): Self = this.set("can_invite_users", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCan_invite_users: Self = this.set("can_invite_users", js.undefined)
+    
+    @scala.inline
+    def setCan_pin_messages(value: Boolean): Self = this.set("can_pin_messages", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCan_pin_messages: Self = this.set("can_pin_messages", js.undefined)
+    
+    @scala.inline
     def setCan_send_media_messages(value: Boolean): Self = this.set("can_send_media_messages", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -63,6 +89,12 @@ object RestrictChatMemberOptions {
     
     @scala.inline
     def deleteCan_send_other_messages: Self = this.set("can_send_other_messages", js.undefined)
+    
+    @scala.inline
+    def setCan_send_polls(value: Boolean): Self = this.set("can_send_polls", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCan_send_polls: Self = this.set("can_send_polls", js.undefined)
     
     @scala.inline
     def setUntil_date(value: Double): Self = this.set("until_date", value.asInstanceOf[js.Any])

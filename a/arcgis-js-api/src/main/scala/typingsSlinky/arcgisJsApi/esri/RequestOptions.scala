@@ -25,50 +25,42 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RequestOptions extends Object {
   
   /**
-    * Indicates if and how requests to ArcGIS Services are authenticated. Only applicable when [`esriConfig.request.useIdentity = true`](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#request).
-    *
-    * | Known Value | Description |
-    * |-------------|-------------|
-    * | auto |  The user will be signed in when a secure resource is requested. |
-    * | anonymous | An error will be returned when a secure resource is requested. |
-    * | immediate | The user will be signed in before the resource is requested. |
-    * | no-prompt | Checks for whether the user is already signed in. If so, no additional prompts display for sign-in. |
-    *
+    * Indicates if and how requests to ArcGIS Services are authenticated.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
   var authMode: js.UndefOr[auto | anonymous | immediate | `no-prompt`] = js.native
   
   /**
-    * If uploading a file, specify the form data or element used to submit the file here. If specified, the parameters of the `query` will be added to the URL.
+    * If uploading a file, specify the form data or element used to submit the file here.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
   var body: js.UndefOr[FormData | HTMLFormElement | String] = js.native
   
   /**
-    * If `true`, the browser will send a request to the server instead of using the browser's local cache. If `false`, the browser's default cache handling will be used.
+    * If `true`, the browser will send a request to the server instead of using the browser's local cache.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
   var cacheBust: js.UndefOr[Boolean] = js.native
   
   /**
-    * Headers to use for the request. This is an object whose property names are header names.
+    * Headers to use for the request.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
   var headers: js.UndefOr[js.Any] = js.native
   
   /**
-    * Indicates if the request should be made using the HTTP POST method. By default, this is determined automatically based on the request size.
+    * Indicates if the request should be made using the HTTP POST method.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
   var method: js.UndefOr[auto | post] = js.native
   
   /**
-    * Query parameters for the request. The query parameters will be added to the URL if: a GET request is used, or if the `body` property is set. Otherwise, the query parameters will be added to the body request parameters if: the `body` property is not set, and a POST request is used.
+    * Query parameters for the request.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
@@ -82,40 +74,21 @@ trait RequestOptions extends Object {
   var responseType: js.UndefOr[json | xml | text | blob | `array-buffer` | document | image] = js.native
   
   /**
-    * [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).  Example:
-    * ```js
-    * const controller = new AbortController();
-    * const signal = controller.signal;
-    *
-    * esriRequest(url, { signal })
-    *   .then((response) => {
-    *     // The request went OK
-    *   })
-    *   .catch((err) => {
-    *     if (err.name === 'AbortError') {
-    *       console.log('Request aborted');
-    *     } else {
-    *       console.error('Error encountered', err);
-    *     }
-    *   });
-    *
-    * // Abort requests that are aware of the controller's signal
-    * controller.abort();
-    * ```
+    * [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) allows for cancelable requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
   var signal: js.UndefOr[AbortSignal] = js.native
   
   /**
-    * Indicates the amount of time in milliseconds to wait for a response from the server. Set to `0` to wait for the response indefinitely.
+    * Indicates the amount of time in milliseconds to wait for a response from the server.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */
   var timeout: js.UndefOr[Double] = js.native
   
   /**
-    * Indicates the request should use the proxy. By default this is determined automatically based on the domain of the request URL.
+    * Indicates the request should use the proxy.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-request.html#RequestOptions)
     */

@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "Jumbotron")
+@JSImport("reactstrap/es", "Jumbotron")
 @js.native
-class Jumbotron[T] ()
+class Jumbotron ()
   extends Component[JumbotronProps, js.Object, js.Any]

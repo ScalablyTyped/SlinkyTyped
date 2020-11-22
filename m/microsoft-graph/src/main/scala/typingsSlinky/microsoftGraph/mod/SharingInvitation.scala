@@ -8,18 +8,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SharingInvitation extends js.Object {
   
   // The email address provided for the recipient of the sharing invitation. Read-only.
-  var email: js.UndefOr[String] = js.native
+  var email: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Provides information about who sent the invitation that created this permission, if that information is available.
     * Read-only.
     */
-  var invitedBy: js.UndefOr[IdentitySet] = js.native
+  var invitedBy: js.UndefOr[NullableOption[IdentitySet]] = js.native
   
-  var redeemedBy: js.UndefOr[String] = js.native
+  var redeemedBy: js.UndefOr[NullableOption[String]] = js.native
   
   // If true the recipient of the invitation needs to sign in in order to access the shared item. Read-only.
-  var signInRequired: js.UndefOr[Boolean] = js.native
+  var signInRequired: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object SharingInvitation {
   
@@ -45,27 +45,39 @@ object SharingInvitation {
     }
     
     @scala.inline
-    def setEmail(value: String): Self = this.set("email", value.asInstanceOf[js.Any])
+    def setEmail(value: NullableOption[String]): Self = this.set("email", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEmail: Self = this.set("email", js.undefined)
     
     @scala.inline
-    def setInvitedBy(value: IdentitySet): Self = this.set("invitedBy", value.asInstanceOf[js.Any])
+    def setEmailNull: Self = this.set("email", null)
+    
+    @scala.inline
+    def setInvitedBy(value: NullableOption[IdentitySet]): Self = this.set("invitedBy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInvitedBy: Self = this.set("invitedBy", js.undefined)
     
     @scala.inline
-    def setRedeemedBy(value: String): Self = this.set("redeemedBy", value.asInstanceOf[js.Any])
+    def setInvitedByNull: Self = this.set("invitedBy", null)
+    
+    @scala.inline
+    def setRedeemedBy(value: NullableOption[String]): Self = this.set("redeemedBy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRedeemedBy: Self = this.set("redeemedBy", js.undefined)
     
     @scala.inline
-    def setSignInRequired(value: Boolean): Self = this.set("signInRequired", value.asInstanceOf[js.Any])
+    def setRedeemedByNull: Self = this.set("redeemedBy", null)
+    
+    @scala.inline
+    def setSignInRequired(value: NullableOption[Boolean]): Self = this.set("signInRequired", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSignInRequired: Self = this.set("signInRequired", js.undefined)
+    
+    @scala.inline
+    def setSignInRequiredNull: Self = this.set("signInRequired", null)
   }
 }

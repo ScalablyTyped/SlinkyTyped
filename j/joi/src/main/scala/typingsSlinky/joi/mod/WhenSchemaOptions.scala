@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WhenSchemaOptions extends js.Object {
   
   /**
-    * the alternative schema type if the condition is false. Required if then is missing
+    * the alternative schema type if the condition is false. Required if then is missing.
     */
   var otherwise: js.UndefOr[SchemaLike] = js.native
   

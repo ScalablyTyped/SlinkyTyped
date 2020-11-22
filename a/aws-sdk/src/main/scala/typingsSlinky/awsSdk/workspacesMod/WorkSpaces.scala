@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.workspacesMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -10,6 +10,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait WorkSpaces extends Service {
+  
+  /**
+    * Associates the specified connection alias with the specified directory to enable cross-Region redirection. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.  Before performing this operation, call  DescribeConnectionAliases to make sure that the current state of the connection alias is CREATED. 
+    */
+  def associateConnectionAlias(): Request[AssociateConnectionAliasResult, AWSError] = js.native
+  def associateConnectionAlias(callback: js.Function2[/* err */ AWSError, /* data */ AssociateConnectionAliasResult, Unit]): Request[AssociateConnectionAliasResult, AWSError] = js.native
+  /**
+    * Associates the specified connection alias with the specified directory to enable cross-Region redirection. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.  Before performing this operation, call  DescribeConnectionAliases to make sure that the current state of the connection alias is CREATED. 
+    */
+  def associateConnectionAlias(params: AssociateConnectionAliasRequest): Request[AssociateConnectionAliasResult, AWSError] = js.native
+  def associateConnectionAlias(
+    params: AssociateConnectionAliasRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ AssociateConnectionAliasResult, Unit]
+  ): Request[AssociateConnectionAliasResult, AWSError] = js.native
   
   /**
     * Associates the specified IP access control group with the specified directory.
@@ -43,18 +57,32 @@ trait WorkSpaces extends Service {
   var config_WorkSpaces: ConfigBase with ClientConfiguration = js.native
   
   /**
-    * Copies the specified image from the specified Region to the current Region.
+    * Copies the specified image from the specified Region to the current Region. For more information about copying images, see  Copy a Custom WorkSpaces Image.  Before copying a shared image, be sure to verify that it has been shared from the correct AWS account. To determine if an image has been shared and to see the AWS account ID that owns an image, use the DescribeWorkSpaceImages and DescribeWorkspaceImagePermissions API operations.  
     */
   def copyWorkspaceImage(): Request[CopyWorkspaceImageResult, AWSError] = js.native
   def copyWorkspaceImage(callback: js.Function2[/* err */ AWSError, /* data */ CopyWorkspaceImageResult, Unit]): Request[CopyWorkspaceImageResult, AWSError] = js.native
   /**
-    * Copies the specified image from the specified Region to the current Region.
+    * Copies the specified image from the specified Region to the current Region. For more information about copying images, see  Copy a Custom WorkSpaces Image.  Before copying a shared image, be sure to verify that it has been shared from the correct AWS account. To determine if an image has been shared and to see the AWS account ID that owns an image, use the DescribeWorkSpaceImages and DescribeWorkspaceImagePermissions API operations.  
     */
   def copyWorkspaceImage(params: CopyWorkspaceImageRequest): Request[CopyWorkspaceImageResult, AWSError] = js.native
   def copyWorkspaceImage(
     params: CopyWorkspaceImageRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CopyWorkspaceImageResult, Unit]
   ): Request[CopyWorkspaceImageResult, AWSError] = js.native
+  
+  /**
+    * Creates the specified connection alias for use with cross-Region redirection. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.
+    */
+  def createConnectionAlias(): Request[CreateConnectionAliasResult, AWSError] = js.native
+  def createConnectionAlias(callback: js.Function2[/* err */ AWSError, /* data */ CreateConnectionAliasResult, Unit]): Request[CreateConnectionAliasResult, AWSError] = js.native
+  /**
+    * Creates the specified connection alias for use with cross-Region redirection. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.
+    */
+  def createConnectionAlias(params: CreateConnectionAliasRequest): Request[CreateConnectionAliasResult, AWSError] = js.native
+  def createConnectionAlias(
+    params: CreateConnectionAliasRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateConnectionAliasResult, Unit]
+  ): Request[CreateConnectionAliasResult, AWSError] = js.native
   
   /**
     * Creates an IP access control group. An IP access control group provides you with the ability to control the IP addresses from which users are allowed to access their WorkSpaces. To specify the CIDR address ranges, add rules to your IP access control group and then associate the group with your directory. You can add rules when you create the group or at any time using AuthorizeIpRules. There is a default IP access control group associated with your directory. If you don't associate an IP access control group with your directory, the default group is used. The default group includes a default rule that allows users to access their WorkSpaces from anywhere. You cannot modify the default IP access control group for your directory.
@@ -97,6 +125,20 @@ trait WorkSpaces extends Service {
     params: CreateWorkspacesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateWorkspacesResult, Unit]
   ): Request[CreateWorkspacesResult, AWSError] = js.native
+  
+  /**
+    * Deletes the specified connection alias. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.   If you will no longer be using a fully qualified domain name (FQDN) as the registration code for your WorkSpaces users, you must take certain precautions to prevent potential security issues. For more information, see  Security Considerations if You Stop Using Cross-Region Redirection.   To delete a connection alias that has been shared, the shared account must first disassociate the connection alias from any directories it has been associated with. Then you must unshare the connection alias from the account it has been shared with. You can delete a connection alias only after it is no longer shared with any accounts or associated with any directories. 
+    */
+  def deleteConnectionAlias(): Request[DeleteConnectionAliasResult, AWSError] = js.native
+  def deleteConnectionAlias(callback: js.Function2[/* err */ AWSError, /* data */ DeleteConnectionAliasResult, Unit]): Request[DeleteConnectionAliasResult, AWSError] = js.native
+  /**
+    * Deletes the specified connection alias. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.   If you will no longer be using a fully qualified domain name (FQDN) as the registration code for your WorkSpaces users, you must take certain precautions to prevent potential security issues. For more information, see  Security Considerations if You Stop Using Cross-Region Redirection.   To delete a connection alias that has been shared, the shared account must first disassociate the connection alias from any directories it has been associated with. Then you must unshare the connection alias from the account it has been shared with. You can delete a connection alias only after it is no longer shared with any accounts or associated with any directories. 
+    */
+  def deleteConnectionAlias(params: DeleteConnectionAliasRequest): Request[DeleteConnectionAliasResult, AWSError] = js.native
+  def deleteConnectionAlias(
+    params: DeleteConnectionAliasRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteConnectionAliasResult, Unit]
+  ): Request[DeleteConnectionAliasResult, AWSError] = js.native
   
   /**
     * Deletes the specified IP access control group. You cannot delete an IP access control group that is associated with a directory.
@@ -195,6 +237,36 @@ trait WorkSpaces extends Service {
     params: DescribeClientPropertiesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeClientPropertiesResult, Unit]
   ): Request[DescribeClientPropertiesResult, AWSError] = js.native
+  
+  /**
+    * Describes the permissions that the owner of a connection alias has granted to another AWS account for the specified connection alias. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.
+    */
+  def describeConnectionAliasPermissions(): Request[DescribeConnectionAliasPermissionsResult, AWSError] = js.native
+  def describeConnectionAliasPermissions(
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeConnectionAliasPermissionsResult, Unit]
+  ): Request[DescribeConnectionAliasPermissionsResult, AWSError] = js.native
+  /**
+    * Describes the permissions that the owner of a connection alias has granted to another AWS account for the specified connection alias. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.
+    */
+  def describeConnectionAliasPermissions(params: DescribeConnectionAliasPermissionsRequest): Request[DescribeConnectionAliasPermissionsResult, AWSError] = js.native
+  def describeConnectionAliasPermissions(
+    params: DescribeConnectionAliasPermissionsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeConnectionAliasPermissionsResult, Unit]
+  ): Request[DescribeConnectionAliasPermissionsResult, AWSError] = js.native
+  
+  /**
+    * Retrieves a list that describes the connection aliases used for cross-Region redirection. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.
+    */
+  def describeConnectionAliases(): Request[DescribeConnectionAliasesResult, AWSError] = js.native
+  def describeConnectionAliases(callback: js.Function2[/* err */ AWSError, /* data */ DescribeConnectionAliasesResult, Unit]): Request[DescribeConnectionAliasesResult, AWSError] = js.native
+  /**
+    * Retrieves a list that describes the connection aliases used for cross-Region redirection. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.
+    */
+  def describeConnectionAliases(params: DescribeConnectionAliasesRequest): Request[DescribeConnectionAliasesResult, AWSError] = js.native
+  def describeConnectionAliases(
+    params: DescribeConnectionAliasesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeConnectionAliasesResult, Unit]
+  ): Request[DescribeConnectionAliasesResult, AWSError] = js.native
   
   /**
     * Describes one or more of your IP access control groups.
@@ -327,6 +399,20 @@ trait WorkSpaces extends Service {
   ): Request[DescribeWorkspacesConnectionStatusResult, AWSError] = js.native
   
   /**
+    * Disassociates a connection alias from a directory. Disassociating a connection alias disables cross-Region redirection between two directories in different AWS Regions. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.  Before performing this operation, call  DescribeConnectionAliases to make sure that the current state of the connection alias is CREATED. 
+    */
+  def disassociateConnectionAlias(): Request[DisassociateConnectionAliasResult, AWSError] = js.native
+  def disassociateConnectionAlias(callback: js.Function2[/* err */ AWSError, /* data */ DisassociateConnectionAliasResult, Unit]): Request[DisassociateConnectionAliasResult, AWSError] = js.native
+  /**
+    * Disassociates a connection alias from a directory. Disassociating a connection alias disables cross-Region redirection between two directories in different AWS Regions. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.  Before performing this operation, call  DescribeConnectionAliases to make sure that the current state of the connection alias is CREATED. 
+    */
+  def disassociateConnectionAlias(params: DisassociateConnectionAliasRequest): Request[DisassociateConnectionAliasResult, AWSError] = js.native
+  def disassociateConnectionAlias(
+    params: DisassociateConnectionAliasRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DisassociateConnectionAliasResult, Unit]
+  ): Request[DisassociateConnectionAliasResult, AWSError] = js.native
+  
+  /**
     * Disassociates the specified IP access control group from the specified directory.
     */
   def disassociateIpGroups(): Request[DisassociateIpGroupsResult, AWSError] = js.native
@@ -341,12 +427,12 @@ trait WorkSpaces extends Service {
   ): Request[DisassociateIpGroupsResult, AWSError] = js.native
   
   /**
-    * Imports the specified Windows 7 or Windows 10 Bring Your Own License (BYOL) image into Amazon WorkSpaces. The image must be an already licensed EC2 image that is in your AWS account, and you must own the image. 
+    * Imports the specified Windows 10 Bring Your Own License (BYOL) image into Amazon WorkSpaces. The image must be an already licensed Amazon EC2 image that is in your AWS account, and you must own the image. For more information about creating BYOL images, see  Bring Your Own Windows Desktop Licenses.
     */
   def importWorkspaceImage(): Request[ImportWorkspaceImageResult, AWSError] = js.native
   def importWorkspaceImage(callback: js.Function2[/* err */ AWSError, /* data */ ImportWorkspaceImageResult, Unit]): Request[ImportWorkspaceImageResult, AWSError] = js.native
   /**
-    * Imports the specified Windows 7 or Windows 10 Bring Your Own License (BYOL) image into Amazon WorkSpaces. The image must be an already licensed EC2 image that is in your AWS account, and you must own the image. 
+    * Imports the specified Windows 10 Bring Your Own License (BYOL) image into Amazon WorkSpaces. The image must be an already licensed Amazon EC2 image that is in your AWS account, and you must own the image. For more information about creating BYOL images, see  Bring Your Own Windows Desktop Licenses.
     */
   def importWorkspaceImage(params: ImportWorkspaceImageRequest): Request[ImportWorkspaceImageResult, AWSError] = js.native
   def importWorkspaceImage(
@@ -355,14 +441,14 @@ trait WorkSpaces extends Service {
   ): Request[ImportWorkspaceImageResult, AWSError] = js.native
   
   /**
-    * Retrieves a list of IP address ranges, specified as IPv4 CIDR blocks, that you can use for the network management interface when you enable Bring Your Own License (BYOL).  The management network interface is connected to a secure Amazon WorkSpaces management network. It is used for interactive streaming of the WorkSpace desktop to Amazon WorkSpaces clients, and to allow Amazon WorkSpaces to manage the WorkSpace.
+    * Retrieves a list of IP address ranges, specified as IPv4 CIDR blocks, that you can use for the network management interface when you enable Bring Your Own License (BYOL).  This operation can be run only by AWS accounts that are enabled for BYOL. If your account isn't enabled for BYOL, you'll receive an AccessDeniedException error. The management network interface is connected to a secure Amazon WorkSpaces management network. It is used for interactive streaming of the WorkSpace desktop to Amazon WorkSpaces clients, and to allow Amazon WorkSpaces to manage the WorkSpace.
     */
   def listAvailableManagementCidrRanges(): Request[ListAvailableManagementCidrRangesResult, AWSError] = js.native
   def listAvailableManagementCidrRanges(
     callback: js.Function2[/* err */ AWSError, /* data */ ListAvailableManagementCidrRangesResult, Unit]
   ): Request[ListAvailableManagementCidrRangesResult, AWSError] = js.native
   /**
-    * Retrieves a list of IP address ranges, specified as IPv4 CIDR blocks, that you can use for the network management interface when you enable Bring Your Own License (BYOL).  The management network interface is connected to a secure Amazon WorkSpaces management network. It is used for interactive streaming of the WorkSpace desktop to Amazon WorkSpaces clients, and to allow Amazon WorkSpaces to manage the WorkSpace.
+    * Retrieves a list of IP address ranges, specified as IPv4 CIDR blocks, that you can use for the network management interface when you enable Bring Your Own License (BYOL).  This operation can be run only by AWS accounts that are enabled for BYOL. If your account isn't enabled for BYOL, you'll receive an AccessDeniedException error. The management network interface is connected to a secure Amazon WorkSpaces management network. It is used for interactive streaming of the WorkSpace desktop to Amazon WorkSpaces clients, and to allow Amazon WorkSpaces to manage the WorkSpace.
     */
   def listAvailableManagementCidrRanges(params: ListAvailableManagementCidrRangesRequest): Request[ListAvailableManagementCidrRangesResult, AWSError] = js.native
   def listAvailableManagementCidrRanges(
@@ -583,18 +669,32 @@ trait WorkSpaces extends Service {
   ): Request[StopWorkspacesResult, AWSError] = js.native
   
   /**
-    * Terminates the specified WorkSpaces. Terminating a WorkSpace is a permanent action and cannot be undone. The user's data is destroyed. If you need to archive any user data, contact Amazon Web Services before terminating the WorkSpace. You can terminate a WorkSpace that is in any state except SUSPENDED. This operation is asynchronous and returns before the WorkSpaces have been completely terminated.
+    * Terminates the specified WorkSpaces.  Terminating a WorkSpace is a permanent action and cannot be undone. The user's data is destroyed. If you need to archive any user data, contact AWS Support before terminating the WorkSpace.  You can terminate a WorkSpace that is in any state except SUSPENDED. This operation is asynchronous and returns before the WorkSpaces have been completely terminated. After a WorkSpace is terminated, the TERMINATED state is returned only briefly before the WorkSpace directory metadata is cleaned up, so this state is rarely returned. To confirm that a WorkSpace is terminated, check for the WorkSpace ID by using  DescribeWorkSpaces. If the WorkSpace ID isn't returned, then the WorkSpace has been successfully terminated.
     */
   def terminateWorkspaces(): Request[TerminateWorkspacesResult, AWSError] = js.native
   def terminateWorkspaces(callback: js.Function2[/* err */ AWSError, /* data */ TerminateWorkspacesResult, Unit]): Request[TerminateWorkspacesResult, AWSError] = js.native
   /**
-    * Terminates the specified WorkSpaces. Terminating a WorkSpace is a permanent action and cannot be undone. The user's data is destroyed. If you need to archive any user data, contact Amazon Web Services before terminating the WorkSpace. You can terminate a WorkSpace that is in any state except SUSPENDED. This operation is asynchronous and returns before the WorkSpaces have been completely terminated.
+    * Terminates the specified WorkSpaces.  Terminating a WorkSpace is a permanent action and cannot be undone. The user's data is destroyed. If you need to archive any user data, contact AWS Support before terminating the WorkSpace.  You can terminate a WorkSpace that is in any state except SUSPENDED. This operation is asynchronous and returns before the WorkSpaces have been completely terminated. After a WorkSpace is terminated, the TERMINATED state is returned only briefly before the WorkSpace directory metadata is cleaned up, so this state is rarely returned. To confirm that a WorkSpace is terminated, check for the WorkSpace ID by using  DescribeWorkSpaces. If the WorkSpace ID isn't returned, then the WorkSpace has been successfully terminated.
     */
   def terminateWorkspaces(params: TerminateWorkspacesRequest): Request[TerminateWorkspacesResult, AWSError] = js.native
   def terminateWorkspaces(
     params: TerminateWorkspacesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ TerminateWorkspacesResult, Unit]
   ): Request[TerminateWorkspacesResult, AWSError] = js.native
+  
+  /**
+    * Shares or unshares a connection alias with one account by specifying whether that account has permission to associate the connection alias with a directory. If the association permission is granted, the connection alias is shared with that account. If the association permission is revoked, the connection alias is unshared with the account. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.    Before performing this operation, call  DescribeConnectionAliases to make sure that the current state of the connection alias is CREATED.   To delete a connection alias that has been shared, the shared account must first disassociate the connection alias from any directories it has been associated with. Then you must unshare the connection alias from the account it has been shared with. You can delete a connection alias only after it is no longer shared with any accounts or associated with any directories.   
+    */
+  def updateConnectionAliasPermission(): Request[UpdateConnectionAliasPermissionResult, AWSError] = js.native
+  def updateConnectionAliasPermission(callback: js.Function2[/* err */ AWSError, /* data */ UpdateConnectionAliasPermissionResult, Unit]): Request[UpdateConnectionAliasPermissionResult, AWSError] = js.native
+  /**
+    * Shares or unshares a connection alias with one account by specifying whether that account has permission to associate the connection alias with a directory. If the association permission is granted, the connection alias is shared with that account. If the association permission is revoked, the connection alias is unshared with the account. For more information, see  Cross-Region Redirection for Amazon WorkSpaces.    Before performing this operation, call  DescribeConnectionAliases to make sure that the current state of the connection alias is CREATED.   To delete a connection alias that has been shared, the shared account must first disassociate the connection alias from any directories it has been associated with. Then you must unshare the connection alias from the account it has been shared with. You can delete a connection alias only after it is no longer shared with any accounts or associated with any directories.   
+    */
+  def updateConnectionAliasPermission(params: UpdateConnectionAliasPermissionRequest): Request[UpdateConnectionAliasPermissionResult, AWSError] = js.native
+  def updateConnectionAliasPermission(
+    params: UpdateConnectionAliasPermissionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateConnectionAliasPermissionResult, Unit]
+  ): Request[UpdateConnectionAliasPermissionResult, AWSError] = js.native
   
   /**
     * Replaces the current rules of the specified IP access control group with the specified rules.
@@ -611,12 +711,12 @@ trait WorkSpaces extends Service {
   ): Request[UpdateRulesOfIpGroupResult, AWSError] = js.native
   
   /**
-    * Shares or unshares an image with one account by specifying whether that account has permission to copy the image. If the copy image permission is granted, the image is shared with that account. If the copy image permission is revoked, the image is unshared with the account.    To delete an image that has been shared, you must unshare the image before you delete it.   Sharing Bring Your Own License (BYOL) images across AWS accounts isn't supported at this time in the AWS GovCloud (US-West) Region. To share BYOL images across accounts in the AWS GovCloud (US-West) Region, contact AWS Support.   
+    * Shares or unshares an image with one account by specifying whether that account has permission to copy the image. If the copy image permission is granted, the image is shared with that account. If the copy image permission is revoked, the image is unshared with the account. For more information about sharing images, see  Share or Unshare a Custom WorkSpaces Image.    To delete an image that has been shared, you must unshare the image before you delete it.   Sharing Bring Your Own License (BYOL) images across AWS accounts isn't supported at this time in the AWS GovCloud (US-West) Region. To share BYOL images across accounts in the AWS GovCloud (US-West) Region, contact AWS Support.   
     */
   def updateWorkspaceImagePermission(): Request[UpdateWorkspaceImagePermissionResult, AWSError] = js.native
   def updateWorkspaceImagePermission(callback: js.Function2[/* err */ AWSError, /* data */ UpdateWorkspaceImagePermissionResult, Unit]): Request[UpdateWorkspaceImagePermissionResult, AWSError] = js.native
   /**
-    * Shares or unshares an image with one account by specifying whether that account has permission to copy the image. If the copy image permission is granted, the image is shared with that account. If the copy image permission is revoked, the image is unshared with the account.    To delete an image that has been shared, you must unshare the image before you delete it.   Sharing Bring Your Own License (BYOL) images across AWS accounts isn't supported at this time in the AWS GovCloud (US-West) Region. To share BYOL images across accounts in the AWS GovCloud (US-West) Region, contact AWS Support.   
+    * Shares or unshares an image with one account by specifying whether that account has permission to copy the image. If the copy image permission is granted, the image is shared with that account. If the copy image permission is revoked, the image is unshared with the account. For more information about sharing images, see  Share or Unshare a Custom WorkSpaces Image.    To delete an image that has been shared, you must unshare the image before you delete it.   Sharing Bring Your Own License (BYOL) images across AWS accounts isn't supported at this time in the AWS GovCloud (US-West) Region. To share BYOL images across accounts in the AWS GovCloud (US-West) Region, contact AWS Support.   
     */
   def updateWorkspaceImagePermission(params: UpdateWorkspaceImagePermissionRequest): Request[UpdateWorkspaceImagePermissionResult, AWSError] = js.native
   def updateWorkspaceImagePermission(

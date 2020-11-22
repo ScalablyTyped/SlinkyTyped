@@ -37,6 +37,8 @@ object InnerTransactionResultResult extends js.Object {
   
   def txBadSeq(): typingsSlinky.stellarBase.xdrMod.xdr.InnerTransactionResultResult = js.native
   
+  def txBadSponsorship(): typingsSlinky.stellarBase.xdrMod.xdr.InnerTransactionResultResult = js.native
+  
   def txFailed(value: js.Array[typingsSlinky.stellarBase.xdrMod.xdr.OperationResult]): typingsSlinky.stellarBase.xdrMod.xdr.InnerTransactionResultResult = js.native
   
   def txInsufficientBalance(): typingsSlinky.stellarBase.xdrMod.xdr.InnerTransactionResultResult = js.native
@@ -56,6 +58,14 @@ object InnerTransactionResultResult extends js.Object {
   def txTooEarly(): typingsSlinky.stellarBase.xdrMod.xdr.InnerTransactionResultResult = js.native
   
   def txTooLate(): typingsSlinky.stellarBase.xdrMod.xdr.InnerTransactionResultResult = js.native
+  
+  def validateXDR(input: Buffer): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_base64(input: String, format: base64): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_hex(input: String, format: hex): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_raw(input: Buffer, format: raw): Boolean = js.native
   
   def write(value: typingsSlinky.stellarBase.xdrMod.xdr.InnerTransactionResultResult, io: Buffer): Unit = js.native
 }

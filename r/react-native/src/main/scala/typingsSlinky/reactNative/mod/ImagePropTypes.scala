@@ -2,6 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
 import typingsSlinky.propTypes.mod.Validator
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
 import typingsSlinky.reactNative.reactNativeStrings.assertive
@@ -89,7 +90,7 @@ object ImagePropTypes extends js.Object {
     Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ImageErrorEventData], Unit]]]
   ] = js.native
   
-  var onLayout: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]] = js.native
+  var onLayout: js.UndefOr[Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]]]] = js.native
   
   var onLoad: js.UndefOr[
     Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ImageLoadEventData], Unit]]]

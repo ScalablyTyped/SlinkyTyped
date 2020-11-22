@@ -143,7 +143,7 @@ object mod extends js.Object {
       *
       * Ex: 0.25.1
       */
-    val version: /* "3.14.1" */ String = js.native
+    val version: /* "3.14.2" */ String = js.native
   }
   
   @js.native
@@ -384,6 +384,6 @@ object mod extends js.Object {
       *
       * Ex: 0.25.1
       */
-    val version: /* "3.14.1" */ String = js.native
+    val version: /* "3.14.2" */ String = js.native
   }
 }

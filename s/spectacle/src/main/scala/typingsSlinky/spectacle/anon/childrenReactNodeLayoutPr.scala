@@ -19,7 +19,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var bottom: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -35,7 +35,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var display: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -49,7 +49,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridArea: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAreaProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridArea */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -61,7 +61,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridAutoColumns: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoColumnsProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoColumns<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -74,7 +74,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridAutoFlow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoFlowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoFlow */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -86,7 +86,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridAutoRows: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoRowsProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoRows<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -100,7 +100,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridColumn: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridColumnProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridColumn */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -114,7 +114,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridColumnGap: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridColumnGapProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridColumnGap<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -129,7 +129,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridGap: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridGapProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridGap<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -143,7 +143,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridRow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRow */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -157,7 +157,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridRowGap: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowGapProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRowGap<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -169,7 +169,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridTemplateAreas: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateAreasProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateAreas */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -181,7 +181,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridTemplateColumns: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateColumnsProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateColumns<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -193,7 +193,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var gridTemplateRows: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateRowsProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateRows<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -206,7 +206,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var height: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -219,7 +219,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var left: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -232,7 +232,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var maxHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -245,7 +245,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var maxWidth: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -258,7 +258,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var minHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -271,7 +271,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var minWidth: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -284,7 +284,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var overflow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -297,7 +297,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var overflowX: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -310,7 +310,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var overflowY: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -323,7 +323,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var position: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -336,14 +336,14 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var right: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
   
   var size: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -356,7 +356,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var top: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -368,7 +368,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var verticalAlign: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -383,7 +383,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var width: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -396,7 +396,7 @@ trait childrenReactNodeLayoutPr extends js.Object {
     */
   var zIndex: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -430,7 +430,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setBottom(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("bottom", value.asInstanceOf[js.Any])
@@ -453,7 +453,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setDisplay(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
           RequiredTheme
         ]
     ): Self = this.set("display", value.asInstanceOf[js.Any])
@@ -470,7 +470,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridArea(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAreaProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridArea */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridArea", value.asInstanceOf[js.Any])
@@ -487,7 +487,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridAutoColumns(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoColumnsProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoColumns<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridAutoColumns", value.asInstanceOf[js.Any])
@@ -504,7 +504,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridAutoFlow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoFlowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoFlow */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridAutoFlow", value.asInstanceOf[js.Any])
@@ -521,7 +521,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridAutoRows(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoRowsProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoRows<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridAutoRows", value.asInstanceOf[js.Any])
@@ -538,7 +538,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridColumn(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridColumnProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridColumn */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridColumn", value.asInstanceOf[js.Any])
@@ -555,7 +555,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridColumnGap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridColumnGapProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridColumnGap<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridColumnGap", value.asInstanceOf[js.Any])
@@ -572,7 +572,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridGap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridGapProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridGap<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridGap", value.asInstanceOf[js.Any])
@@ -589,7 +589,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridRow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRow */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridRow", value.asInstanceOf[js.Any])
@@ -606,7 +606,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridRowGap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowGapProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRowGap<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridRowGap", value.asInstanceOf[js.Any])
@@ -623,7 +623,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridTemplateAreas(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateAreasProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateAreas */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridTemplateAreas", value.asInstanceOf[js.Any])
@@ -640,7 +640,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridTemplateColumns(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateColumnsProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateColumns<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridTemplateColumns", value.asInstanceOf[js.Any])
@@ -657,7 +657,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setGridTemplateRows(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateRowsProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateRows<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("gridTemplateRows", value.asInstanceOf[js.Any])
@@ -674,7 +674,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("height", value.asInstanceOf[js.Any])
@@ -691,7 +691,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setLeft(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("left", value.asInstanceOf[js.Any])
@@ -708,7 +708,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setMaxHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("maxHeight", value.asInstanceOf[js.Any])
@@ -725,7 +725,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setMaxWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
@@ -742,7 +742,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setMinHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("minHeight", value.asInstanceOf[js.Any])
@@ -759,7 +759,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setMinWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("minWidth", value.asInstanceOf[js.Any])
@@ -776,7 +776,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setOverflow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflow", value.asInstanceOf[js.Any])
@@ -793,7 +793,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setOverflowX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflowX", value.asInstanceOf[js.Any])
@@ -810,7 +810,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setOverflowY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflowY", value.asInstanceOf[js.Any])
@@ -827,7 +827,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setPosition(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _, 
           RequiredTheme
         ]
     ): Self = this.set("position", value.asInstanceOf[js.Any])
@@ -844,7 +844,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setRight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("right", value.asInstanceOf[js.Any])
@@ -861,7 +861,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setSize(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("size", value.asInstanceOf[js.Any])
@@ -878,7 +878,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setTop(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("top", value.asInstanceOf[js.Any])
@@ -895,7 +895,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setVerticalAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
@@ -912,7 +912,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("width", value.asInstanceOf[js.Any])
@@ -929,7 +929,7 @@ object childrenReactNodeLayoutPr {
     @scala.inline
     def setZIndex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
           RequiredTheme
         ]
     ): Self = this.set("zIndex", value.asInstanceOf[js.Any])

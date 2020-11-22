@@ -1,17 +1,19 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxFilterBuilder
+import typingsSlinky.devextreme.mod.DevExpress.events.event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ModelPreviousValue extends js.Object {
+trait ModelPreviousValue[T] extends js.Object {
   
-  var component: js.UndefOr[dxFilterBuilder] = js.native
+  var component: js.UndefOr[T] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
+  
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
   
@@ -22,13 +24,13 @@ trait ModelPreviousValue extends js.Object {
 object ModelPreviousValue {
   
   @scala.inline
-  def apply(): ModelPreviousValue = {
+  def apply[T](): ModelPreviousValue[T] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ModelPreviousValue]
+    __obj.asInstanceOf[ModelPreviousValue[T]]
   }
   
   @scala.inline
-  implicit class ModelPreviousValueOps[Self <: ModelPreviousValue] (val x: Self) extends AnyVal {
+  implicit class ModelPreviousValueOps[Self <: ModelPreviousValue[_], T] (val x: Self with ModelPreviousValue[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -43,7 +45,7 @@ object ModelPreviousValue {
     }
     
     @scala.inline
-    def setComponent(value: dxFilterBuilder): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: T): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -53,6 +55,12 @@ object ModelPreviousValue {
     
     @scala.inline
     def deleteElement: Self = this.set("element", js.undefined)
+    
+    @scala.inline
+    def setEvent(value: event): Self = this.set("event", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEvent: Self = this.set("event", js.undefined)
     
     @scala.inline
     def setModel(value: js.Any): Self = this.set("model", value.asInstanceOf[js.Any])

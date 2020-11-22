@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions.IJavaActionParameter
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,8 +20,8 @@ class JavaActionParameterMapping protected () extends CodeActionParameterMapping
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -29,9 +31,6 @@ class JavaActionParameterMapping protected () extends CodeActionParameterMapping
     */
   def argument: String = js.native
   def argument_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FJavaActionParameterMapping: IModel = js.native
   
   def parameter: IJavaActionParameter = js.native
   

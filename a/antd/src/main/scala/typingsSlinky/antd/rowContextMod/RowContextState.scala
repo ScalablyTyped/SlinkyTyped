@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RowContextState extends js.Object {
   
   var gutter: js.UndefOr[js.Tuple2[Double, Double]] = js.native
+  
+  var wrap: js.UndefOr[Boolean] = js.native
 }
 object RowContextState {
   
@@ -37,5 +39,11 @@ object RowContextState {
     
     @scala.inline
     def deleteGutter: Self = this.set("gutter", js.undefined)
+    
+    @scala.inline
+    def setWrap(value: Boolean): Self = this.set("wrap", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWrap: Self = this.set("wrap", js.undefined)
   }
 }

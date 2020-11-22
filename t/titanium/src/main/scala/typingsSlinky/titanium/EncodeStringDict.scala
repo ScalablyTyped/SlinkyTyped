@@ -14,7 +14,7 @@ trait EncodeStringDict extends js.Object {
   /**
     * Character encoding to use when encoding this string to bytes.
     */
-  var charset: js.UndefOr[java.lang.String] = js.native
+  var charset: js.UndefOr[String] = js.native
   
   /**
     * Destination buffer.
@@ -29,7 +29,7 @@ trait EncodeStringDict extends js.Object {
   /**
     * Source string to encode.
     */
-  var source: java.lang.String = js.native
+  var source: String = js.native
   
   /**
     * Number of characters in `source` to encode.
@@ -44,7 +44,7 @@ trait EncodeStringDict extends js.Object {
 object EncodeStringDict {
   
   @scala.inline
-  def apply(dest: Buffer, source: java.lang.String): EncodeStringDict = {
+  def apply(dest: Buffer, source: String): EncodeStringDict = {
     val __obj = js.Dynamic.literal(dest = dest.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncodeStringDict]
   }
@@ -59,7 +59,7 @@ object EncodeStringDict {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -68,10 +68,10 @@ object EncodeStringDict {
     def setDest(value: Buffer): Self = this.set("dest", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSource(value: java.lang.String): Self = this.set("source", value.asInstanceOf[js.Any])
+    def setSource(value: String): Self = this.set("source", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCharset(value: java.lang.String): Self = this.set("charset", value.asInstanceOf[js.Any])
+    def setCharset(value: String): Self = this.set("charset", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCharset: Self = this.set("charset", js.undefined)

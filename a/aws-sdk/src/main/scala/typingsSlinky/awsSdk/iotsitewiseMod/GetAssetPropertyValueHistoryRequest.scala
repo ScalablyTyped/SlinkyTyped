@@ -18,7 +18,7 @@ trait GetAssetPropertyValueHistoryRequest extends js.Object {
   var endDate: js.UndefOr[js.Date] = js.native
   
   /**
-    * The maximum number of results to be returned per paginated request.
+    * The maximum number of results to be returned per paginated request. Default: 100
     */
   var maxResults: js.UndefOr[MaxResults] = js.native
   
@@ -28,7 +28,7 @@ trait GetAssetPropertyValueHistoryRequest extends js.Object {
   var nextToken: js.UndefOr[NextToken] = js.native
   
   /**
-    * The property alias that identifies the property, such as an OPC-UA server data stream path (for example, /company/windfarm/3/turbine/7/temperature). For more information, see Mapping Industrial Data Streams to Asset Properties in the AWS IoT SiteWise User Guide.
+    * The property alias that identifies the property, such as an OPC-UA server data stream path (for example, /company/windfarm/3/turbine/7/temperature). For more information, see Mapping industrial data streams to asset properties in the AWS IoT SiteWise User Guide.
     */
   var propertyAlias: js.UndefOr[AssetPropertyAlias] = js.native
   
@@ -48,7 +48,7 @@ trait GetAssetPropertyValueHistoryRequest extends js.Object {
   var startDate: js.UndefOr[js.Date] = js.native
   
   /**
-    * The chronological sorting order of the requested information.
+    * The chronological sorting order of the requested information. Default: ASCENDING 
     */
   var timeOrdering: js.UndefOr[TimeOrdering] = js.native
 }

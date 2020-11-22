@@ -18,6 +18,31 @@ trait ICalendarStrings extends IDateFormatting {
   var goToToday: String = js.native
   
   /**
+    * Aria-label for input."
+    */
+  var inputAriaLabel: js.UndefOr[String] = js.native
+  
+  /**
+    * Aria-label format string for restricted input. Should have 2 string params, 0 is minDate and 1 is maxDate"
+    */
+  var inputBoundedFormatString: js.UndefOr[String] = js.native
+  
+  /**
+    * Aria-label format string for restricted input only with maxDate. Should have 1 string param, 0 is maxDate"
+    */
+  var inputMaxBoundedFormatString: js.UndefOr[String] = js.native
+  
+  /**
+    * Aria-label format string for restricted input only with minDate. Should have 1 string param, 0 is minDate"
+    */
+  var inputMinBoundedFormatString: js.UndefOr[String] = js.native
+  
+  /**
+    * Placeholder string for an unfilled input.
+    */
+  var inputPlaceholder: String = js.native
+  
+  /**
     * Error message to render for TextField if input date string parsing fails.
     */
   var invalidInputErrorMessage: js.UndefOr[String] = js.native
@@ -53,6 +78,11 @@ trait ICalendarStrings extends IDateFormatting {
     * Aria-label for the "next year range" button in year picker.
     */
   var nextYearRangeAriaLabel: js.UndefOr[String] = js.native
+  
+  /**
+    * Title for button to open the calendar.
+    */
+  var openCalendarTitle: String = js.native
   
   /**
     * Aria-label for the "previous month" button in day picker.
@@ -96,16 +126,18 @@ object ICalendarStrings {
   def apply(
     days: js.Array[String],
     formatDay: js.Date => String,
-    formatMonthDayYear: js.Date => String,
-    formatMonthYear: js.Date => String,
+    formatMonthDayYear: (js.Date, IDateGridStrings) => String,
+    formatMonthYear: (js.Date, IDateGridStrings) => String,
     formatYear: js.Date => String,
     goToToday: String,
+    inputPlaceholder: String,
     months: js.Array[String],
+    openCalendarTitle: String,
     parseDate: String => js.Date | Null,
     shortDays: js.Array[String],
     shortMonths: js.Array[String]
   ): ICalendarStrings = {
-    val __obj = js.Dynamic.literal(days = days.asInstanceOf[js.Any], formatDay = js.Any.fromFunction1(formatDay), formatMonthDayYear = js.Any.fromFunction1(formatMonthDayYear), formatMonthYear = js.Any.fromFunction1(formatMonthYear), formatYear = js.Any.fromFunction1(formatYear), goToToday = goToToday.asInstanceOf[js.Any], months = months.asInstanceOf[js.Any], parseDate = js.Any.fromFunction1(parseDate), shortDays = shortDays.asInstanceOf[js.Any], shortMonths = shortMonths.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(days = days.asInstanceOf[js.Any], formatDay = js.Any.fromFunction1(formatDay), formatMonthDayYear = js.Any.fromFunction2(formatMonthDayYear), formatMonthYear = js.Any.fromFunction2(formatMonthYear), formatYear = js.Any.fromFunction1(formatYear), goToToday = goToToday.asInstanceOf[js.Any], inputPlaceholder = inputPlaceholder.asInstanceOf[js.Any], months = months.asInstanceOf[js.Any], openCalendarTitle = openCalendarTitle.asInstanceOf[js.Any], parseDate = js.Any.fromFunction1(parseDate), shortDays = shortDays.asInstanceOf[js.Any], shortMonths = shortMonths.asInstanceOf[js.Any])
     __obj.asInstanceOf[ICalendarStrings]
   }
   
@@ -128,10 +160,40 @@ object ICalendarStrings {
     def setGoToToday(value: String): Self = this.set("goToToday", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setInputPlaceholder(value: String): Self = this.set("inputPlaceholder", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOpenCalendarTitle(value: String): Self = this.set("openCalendarTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setCloseButtonAriaLabel(value: String): Self = this.set("closeButtonAriaLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCloseButtonAriaLabel: Self = this.set("closeButtonAriaLabel", js.undefined)
+    
+    @scala.inline
+    def setInputAriaLabel(value: String): Self = this.set("inputAriaLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputAriaLabel: Self = this.set("inputAriaLabel", js.undefined)
+    
+    @scala.inline
+    def setInputBoundedFormatString(value: String): Self = this.set("inputBoundedFormatString", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputBoundedFormatString: Self = this.set("inputBoundedFormatString", js.undefined)
+    
+    @scala.inline
+    def setInputMaxBoundedFormatString(value: String): Self = this.set("inputMaxBoundedFormatString", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputMaxBoundedFormatString: Self = this.set("inputMaxBoundedFormatString", js.undefined)
+    
+    @scala.inline
+    def setInputMinBoundedFormatString(value: String): Self = this.set("inputMinBoundedFormatString", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputMinBoundedFormatString: Self = this.set("inputMinBoundedFormatString", js.undefined)
     
     @scala.inline
     def setInvalidInputErrorMessage(value: String): Self = this.set("invalidInputErrorMessage", value.asInstanceOf[js.Any])

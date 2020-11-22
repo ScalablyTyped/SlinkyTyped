@@ -41,23 +41,21 @@ object TypeFlags extends js.Object {
   
   /* 8388608 */ val IndexedAccess: typingsSlinky.typescript.mod.TypeFlags.IndexedAccess with Double = js.native
   
-  /* 63176704 */ val Instantiable: typingsSlinky.typescript.mod.TypeFlags.Instantiable with Double = js.native
+  /* 465829888 */ val Instantiable: typingsSlinky.typescript.mod.TypeFlags.Instantiable with Double = js.native
   
   /* 58982400 */ val InstantiableNonPrimitive: typingsSlinky.typescript.mod.TypeFlags.InstantiableNonPrimitive with Double = js.native
   
-  /* 4194304 */ val InstantiablePrimitive: typingsSlinky.typescript.mod.TypeFlags.InstantiablePrimitive with Double = js.native
+  /* 406847488 */ val InstantiablePrimitive: typingsSlinky.typescript.mod.TypeFlags.InstantiablePrimitive with Double = js.native
   
   /* 2097152 */ val Intersection: typingsSlinky.typescript.mod.TypeFlags.Intersection with Double = js.native
   
   /* 2944 */ val Literal: typingsSlinky.typescript.mod.TypeFlags.Literal with Double = js.native
   
-  /* 133970943 */ val Narrowable: typingsSlinky.typescript.mod.TypeFlags.Narrowable with Double = js.native
+  /* 536624127 */ val Narrowable: typingsSlinky.typescript.mod.TypeFlags.Narrowable with Double = js.native
   
   /* 131072 */ val Never: typingsSlinky.typescript.mod.TypeFlags.Never with Double = js.native
   
   /* 67108864 */ val NonPrimitive: typingsSlinky.typescript.mod.TypeFlags.NonPrimitive with Double = js.native
-  
-  /* 67637251 */ val NotUnionOrUnit: typingsSlinky.typescript.mod.TypeFlags.NotUnionOrUnit with Double = js.native
   
   /* 65536 */ val Null: typingsSlinky.typescript.mod.TypeFlags.Null with Double = js.native
   
@@ -73,17 +71,21 @@ object TypeFlags extends js.Object {
   
   /* 4 */ val String: typingsSlinky.typescript.mod.TypeFlags.String with Double = js.native
   
-  /* 132 */ val StringLike: typingsSlinky.typescript.mod.TypeFlags.StringLike with Double = js.native
+  /* 402653316 */ val StringLike: typingsSlinky.typescript.mod.TypeFlags.StringLike with Double = js.native
   
   /* 128 */ val StringLiteral: typingsSlinky.typescript.mod.TypeFlags.StringLiteral with Double = js.native
   
+  /* 268435456 */ val StringMapping: typingsSlinky.typescript.mod.TypeFlags.StringMapping with Double = js.native
+  
   /* 384 */ val StringOrNumberLiteral: typingsSlinky.typescript.mod.TypeFlags.StringOrNumberLiteral with Double = js.native
   
-  /* 66846720 */ val StructuredOrInstantiable: typingsSlinky.typescript.mod.TypeFlags.StructuredOrInstantiable with Double = js.native
+  /* 469499904 */ val StructuredOrInstantiable: typingsSlinky.typescript.mod.TypeFlags.StructuredOrInstantiable with Double = js.native
   
   /* 3670016 */ val StructuredType: typingsSlinky.typescript.mod.TypeFlags.StructuredType with Double = js.native
   
   /* 33554432 */ val Substitution: typingsSlinky.typescript.mod.TypeFlags.Substitution with Double = js.native
+  
+  /* 134217728 */ val TemplateLiteral: typingsSlinky.typescript.mod.TypeFlags.TemplateLiteral with Double = js.native
   
   /* 262144 */ val TypeParameter: typingsSlinky.typescript.mod.TypeFlags.TypeParameter with Double = js.native
   

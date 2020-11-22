@@ -1,7 +1,9 @@
 package typingsSlinky.antdMobileRn.marqueeNativeMod
 
+import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.anon.Layout
+import typingsSlinky.reactNative.mod.NodeHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,9 +14,9 @@ trait Marquee
   
   def moveToHeader(): Unit = js.native
   
-  def onLayout(e: LayoutChangeEvent): Unit = js.native
+  def onLayout(e: SyntheticEvent[NodeHandle, Layout]): Unit = js.native
   
-  def onLayoutContainer(e: LayoutChangeEvent): Unit = js.native
+  def onLayoutContainer(e: SyntheticEvent[NodeHandle, Layout]): Unit = js.native
   
   def startMove(): Unit = js.native
   

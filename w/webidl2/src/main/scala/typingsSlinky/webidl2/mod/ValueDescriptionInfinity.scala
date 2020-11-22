@@ -6,17 +6,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ValueDescriptionInfinity extends ValueDescription {
+trait ValueDescriptionInfinity
+  extends AbstractValueDescription
+     with ValueDescription {
   
   var negative: Boolean = js.native
   
-  var `type`: Infinity = js.native
+  @JSName("type")
+  var type_ValueDescriptionInfinity: Infinity = js.native
 }
 object ValueDescriptionInfinity {
   
   @scala.inline
-  def apply(negative: Boolean, `type`: Infinity): ValueDescriptionInfinity = {
-    val __obj = js.Dynamic.literal(negative = negative.asInstanceOf[js.Any])
+  def apply(
+    extAttrs: js.Array[ExtendedAttribute],
+    negative: Boolean,
+    parent: Argument | ConstantMemberType | FieldType,
+    `type`: Infinity
+  ): ValueDescriptionInfinity = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], negative = negative.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueDescriptionInfinity]
   }

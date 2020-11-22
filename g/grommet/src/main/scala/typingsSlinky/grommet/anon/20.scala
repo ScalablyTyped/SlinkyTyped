@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `20` extends js.Object {
   
-  var icons: js.UndefOr[`0`] = js.native
+  var hover: js.UndefOr[BackgroundExtend] = js.native
 }
 object `20` {
   
@@ -33,9 +33,9 @@ object `20` {
     }
     
     @scala.inline
-    def setIcons(value: `0`): Self = this.set("icons", value.asInstanceOf[js.Any])
+    def setHover(value: BackgroundExtend): Self = this.set("hover", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteIcons: Self = this.set("icons", js.undefined)
+    def deleteHover: Self = this.set("hover", js.undefined)
   }
 }

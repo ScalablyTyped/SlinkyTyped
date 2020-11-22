@@ -11,13 +11,19 @@ trait Options extends js.Object {
   
   var base: js.UndefOr[String] = js.native
   
-  var propertyName: js.UndefOr[String] = js.native
+  var nestedErrors: js.UndefOr[Boolean] = js.native
+  
+  var preValidateProperty: js.UndefOr[PreValidatePropertyFunction] = js.native
   
   var rewrite: js.UndefOr[RewriteFunction] = js.native
   
   var skipAttributes: js.UndefOr[js.Array[String]] = js.native
   
+  var throwAll: js.UndefOr[Boolean] = js.native
+  
   var throwError: js.UndefOr[Boolean] = js.native
+  
+  var throwFirst: js.UndefOr[Boolean] = js.native
 }
 object Options {
   
@@ -55,10 +61,18 @@ object Options {
     def deleteBase: Self = this.set("base", js.undefined)
     
     @scala.inline
-    def setPropertyName(value: String): Self = this.set("propertyName", value.asInstanceOf[js.Any])
+    def setNestedErrors(value: Boolean): Self = this.set("nestedErrors", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deletePropertyName: Self = this.set("propertyName", js.undefined)
+    def deleteNestedErrors: Self = this.set("nestedErrors", js.undefined)
+    
+    @scala.inline
+    def setPreValidateProperty(
+      value: (/* instance */ js.Any, /* key */ String, /* schema */ Schema, /* options */ Options, /* ctx */ SchemaContext) => js.Any
+    ): Self = this.set("preValidateProperty", js.Any.fromFunction5(value))
+    
+    @scala.inline
+    def deletePreValidateProperty: Self = this.set("preValidateProperty", js.undefined)
     
     @scala.inline
     def setRewrite(
@@ -78,9 +92,21 @@ object Options {
     def deleteSkipAttributes: Self = this.set("skipAttributes", js.undefined)
     
     @scala.inline
+    def setThrowAll(value: Boolean): Self = this.set("throwAll", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThrowAll: Self = this.set("throwAll", js.undefined)
+    
+    @scala.inline
     def setThrowError(value: Boolean): Self = this.set("throwError", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteThrowError: Self = this.set("throwError", js.undefined)
+    
+    @scala.inline
+    def setThrowFirst(value: Boolean): Self = this.set("throwFirst", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThrowFirst: Self = this.set("throwFirst", js.undefined)
   }
 }

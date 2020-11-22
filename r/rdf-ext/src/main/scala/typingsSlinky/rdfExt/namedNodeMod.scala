@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object namedNodeMod extends js.Object {
   
   @js.native
-  trait NamedNodeExt extends NamedNode[String] {
+  trait NamedNodeExt[Iri /* <: String */] extends NamedNode[Iri] {
     
     def toCanonical(): String = js.native
     

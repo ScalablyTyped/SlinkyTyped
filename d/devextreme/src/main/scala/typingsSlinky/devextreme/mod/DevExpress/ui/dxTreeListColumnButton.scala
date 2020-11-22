@@ -3,7 +3,7 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.ColumnComponentElement
 import typingsSlinky.devextreme.anon.KeyRow
-import typingsSlinky.devextreme.anon.`12`
+import typingsSlinky.devextreme.anon.`15`
 import typingsSlinky.devextreme.devextremeStrings.add
 import typingsSlinky.devextreme.devextremeStrings.cancel
 import typingsSlinky.devextreme.devextremeStrings.delete
@@ -19,19 +19,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeListColumnButton extends GridBaseColumnButton {
   
-  /** @name dxTreeListColumnButton.name */
+  /**
+    * [descr:dxTreeListColumnButton.name]
+    */
   var name: js.UndefOr[add | cancel | delete | edit | save | undelete | String] = js.native
   
-  /** @name dxTreeListColumnButton.onClick */
+  /**
+    * [descr:dxTreeListColumnButton.onClick]
+    */
   var onClick: js.UndefOr[(js.Function1[/* e */ ColumnComponentElement, _]) | String] = js.native
   
-  /** @name dxTreeListColumnButton.template */
+  /**
+    * [descr:dxTreeListColumnButton.template]
+    */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ KeyRow, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxTreeListColumnButton.visible */
-  var visible: js.UndefOr[Boolean | (js.Function1[/* options */ `12`, Boolean])] = js.native
+  /**
+    * [descr:dxTreeListColumnButton.visible]
+    */
+  var visible: js.UndefOr[Boolean | (js.Function1[/* options */ `15`, Boolean])] = js.native
 }
 object dxTreeListColumnButton {
   
@@ -86,10 +94,10 @@ object dxTreeListColumnButton {
     def deleteTemplate: Self = this.set("template", js.undefined)
     
     @scala.inline
-    def setVisibleFunction1(value: /* options */ `12` => Boolean): Self = this.set("visible", js.Any.fromFunction1(value))
+    def setVisibleFunction1(value: /* options */ `15` => Boolean): Self = this.set("visible", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setVisible(value: Boolean | (js.Function1[/* options */ `12`, Boolean])): Self = this.set("visible", value.asInstanceOf[js.Any])
+    def setVisible(value: Boolean | (js.Function1[/* options */ `15`, Boolean])): Self = this.set("visible", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVisible: Self = this.set("visible", js.undefined)

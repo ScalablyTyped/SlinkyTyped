@@ -26,7 +26,7 @@ trait ShadowOffsetX extends js.Object {
     * "#000"
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.lineStyle.color
     */
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
   /**
     * Edge curvature, which supports value from 0 to
@@ -73,7 +73,7 @@ trait ShadowOffsetX extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine.data.1.lineStyle.shadowColor
     */
-  var shadowColor: js.UndefOr[String] = js.native
+  var shadowColor: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
   /**
     * Offset distance on the horizontal direction of
@@ -141,7 +141,7 @@ object ShadowOffsetX {
     }
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
@@ -171,7 +171,7 @@ object ShadowOffsetX {
     def deleteShadowBlur: Self = this.set("shadowBlur", js.undefined)
     
     @scala.inline
-    def setShadowColor(value: String): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
+    def setShadowColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShadowColor: Self = this.set("shadowColor", js.undefined)

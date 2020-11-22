@@ -13,13 +13,13 @@ trait MediaScannerResponse extends js.Object {
   /**
     * Path to the media file that was scanned.
     */
-  var path: js.UndefOr[java.lang.String] = js.native
+  var path: js.UndefOr[String] = js.native
   
   /**
     * URI to the file if it was scanned and added to the media library, or `null`
     * if the file was not added.
     */
-  var uri: js.UndefOr[java.lang.String] = js.native
+  var uri: js.UndefOr[String] = js.native
 }
 object MediaScannerResponse {
   
@@ -39,19 +39,19 @@ object MediaScannerResponse {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setPath(value: java.lang.String): Self = this.set("path", value.asInstanceOf[js.Any])
+    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)
     
     @scala.inline
-    def setUri(value: java.lang.String): Self = this.set("uri", value.asInstanceOf[js.Any])
+    def setUri(value: String): Self = this.set("uri", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUri: Self = this.set("uri", js.undefined)

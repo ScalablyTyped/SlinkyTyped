@@ -20,7 +20,7 @@ trait Options extends js.Object {
   
   var domain: js.UndefOr[String] = js.native
   
-  var domaincontroller: js.UndefOr[String] = js.native
+  var domaincontroller: js.UndefOr[String | js.Array[String]] = js.native
   
   var forbidden: js.UndefOr[Handler] = js.native
   
@@ -57,7 +57,7 @@ object Options {
     
     @scala.inline
     def setBadrequest(
-      value: (/* req */ Request[ParamsDictionary, js.Any, js.Any, ParsedQs], /* res */ Response[js.Any], /* next */ NextFunction) => js.Any
+      value: (/* req */ Request[ParamsDictionary, js.Any, js.Any, ParsedQs], /* res */ Response[js.Any, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("badrequest", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -76,14 +76,17 @@ object Options {
     def deleteDomain: Self = this.set("domain", js.undefined)
     
     @scala.inline
-    def setDomaincontroller(value: String): Self = this.set("domaincontroller", value.asInstanceOf[js.Any])
+    def setDomaincontrollerVarargs(value: String*): Self = this.set("domaincontroller", js.Array(value :_*))
+    
+    @scala.inline
+    def setDomaincontroller(value: String | js.Array[String]): Self = this.set("domaincontroller", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDomaincontroller: Self = this.set("domaincontroller", js.undefined)
     
     @scala.inline
     def setForbidden(
-      value: (/* req */ Request[ParamsDictionary, js.Any, js.Any, ParsedQs], /* res */ Response[js.Any], /* next */ NextFunction) => js.Any
+      value: (/* req */ Request[ParamsDictionary, js.Any, js.Any, ParsedQs], /* res */ Response[js.Any, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("forbidden", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -91,7 +94,7 @@ object Options {
     
     @scala.inline
     def setInternalservererror(
-      value: (/* req */ Request[ParamsDictionary, js.Any, js.Any, ParsedQs], /* res */ Response[js.Any], /* next */ NextFunction) => js.Any
+      value: (/* req */ Request[ParamsDictionary, js.Any, js.Any, ParsedQs], /* res */ Response[js.Any, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("internalservererror", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -111,7 +114,7 @@ object Options {
     
     @scala.inline
     def setUnauthorized(
-      value: (/* req */ Request[ParamsDictionary, js.Any, js.Any, ParsedQs], /* res */ Response[js.Any], /* next */ NextFunction) => js.Any
+      value: (/* req */ Request[ParamsDictionary, js.Any, js.Any, ParsedQs], /* res */ Response[js.Any, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("unauthorized", js.Any.fromFunction3(value))
     
     @scala.inline

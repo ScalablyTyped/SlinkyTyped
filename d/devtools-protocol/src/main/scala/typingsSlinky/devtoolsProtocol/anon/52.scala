@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetAttributeValueRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.RemoveAttributeRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `52` extends js.Object {
   
-  var paramsType: js.Array[SetAttributeValueRequest] = js.native
+  var paramsType: js.Array[RemoveAttributeRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `52` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetAttributeValueRequest], returnType: Unit): `52` = {
+  def apply(paramsType: js.Array[RemoveAttributeRequest], returnType: Unit): `52` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`52`]
   }
@@ -36,10 +36,10 @@ object `52` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetAttributeValueRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: RemoveAttributeRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetAttributeValueRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[RemoveAttributeRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

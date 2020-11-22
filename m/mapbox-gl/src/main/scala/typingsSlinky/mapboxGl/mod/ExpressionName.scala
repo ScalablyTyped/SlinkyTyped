@@ -2,6 +2,7 @@ package typingsSlinky.mapboxGl.mod
 
 import typingsSlinky.mapboxGl.mapboxGlStrings.`-_`
 import typingsSlinky.mapboxGl.mapboxGlStrings.get_
+import typingsSlinky.mapboxGl.mapboxGlStrings.image_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,6 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mapboxGl.mapboxGlStrings.number
   - typingsSlinky.mapboxGl.mapboxGlStrings.`object`
   - typingsSlinky.mapboxGl.mapboxGlStrings.string
+  - typingsSlinky.mapboxGl.mapboxGlStrings.image_
   - typingsSlinky.mapboxGl.mapboxGlStrings.`to-boolean`
   - typingsSlinky.mapboxGl.mapboxGlStrings.`to-color`
   - typingsSlinky.mapboxGl.mapboxGlStrings.`to-number`
@@ -28,7 +30,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mapboxGl.mapboxGlStrings.at
   - typingsSlinky.mapboxGl.mapboxGlStrings.get_
   - typingsSlinky.mapboxGl.mapboxGlStrings.has
+  - typingsSlinky.mapboxGl.mapboxGlStrings.in
+  - typingsSlinky.mapboxGl.mapboxGlStrings.`index-of`
   - typingsSlinky.mapboxGl.mapboxGlStrings.length
+  - typingsSlinky.mapboxGl.mapboxGlStrings.slice
   - typingsSlinky.mapboxGl.mapboxGlStrings.Exclamationmark
   - typingsSlinky.mapboxGl.mapboxGlStrings.ExclamationmarkEqualssign
   - typingsSlinky.mapboxGl.mapboxGlStrings.Lessthansign
@@ -200,6 +205,15 @@ object ExpressionName {
   def id: typingsSlinky.mapboxGl.mapboxGlStrings.id = "id".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.id]
   
   @scala.inline
+  def image: image_ = "image".asInstanceOf[image_]
+  
+  @scala.inline
+  def in: typingsSlinky.mapboxGl.mapboxGlStrings.in = "in".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.in]
+  
+  @scala.inline
+  def `index-of`: typingsSlinky.mapboxGl.mapboxGlStrings.`index-of` = "index-of".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.`index-of`]
+  
+  @scala.inline
   def interpolate: typingsSlinky.mapboxGl.mapboxGlStrings.interpolate = "interpolate".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.interpolate]
   
   @scala.inline
@@ -270,6 +284,9 @@ object ExpressionName {
   
   @scala.inline
   def sin: typingsSlinky.mapboxGl.mapboxGlStrings.sin = "sin".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.sin]
+  
+  @scala.inline
+  def slice: typingsSlinky.mapboxGl.mapboxGlStrings.slice = "slice".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.slice]
   
   @scala.inline
   def sqrt: typingsSlinky.mapboxGl.mapboxGlStrings.sqrt = "sqrt".asInstanceOf[typingsSlinky.mapboxGl.mapboxGlStrings.sqrt]

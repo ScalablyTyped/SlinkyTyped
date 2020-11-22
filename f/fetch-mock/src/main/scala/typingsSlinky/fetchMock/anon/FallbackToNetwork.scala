@@ -27,7 +27,11 @@ trait FallbackToNetwork extends js.Object {
     */
   var Promise: js.UndefOr[
     Instantiable1[
-      /* executor */ js.Function2[/* resolve */ js.Function0[Unit], /* reject */ js.Function0[Unit], Unit], 
+      /* executor */ js.Function2[
+        /* resolve */ js.Function1[/* value */ Response | js.Thenable[Response], Unit], 
+        /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
+        Unit
+      ], 
       js.Promise[Response]
     ]
   ] = js.native
@@ -134,7 +138,11 @@ object FallbackToNetwork {
     @scala.inline
     def setPromise(
       value: Instantiable1[
-          /* executor */ js.Function2[/* resolve */ js.Function0[Unit], /* reject */ js.Function0[Unit], Unit], 
+          /* executor */ js.Function2[
+            /* resolve */ js.Function1[/* value */ Response | js.Thenable[Response], Unit], 
+            /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
+            Unit
+          ], 
           js.Promise[Response]
         ]
     ): Self = this.set("Promise", value.asInstanceOf[js.Any])

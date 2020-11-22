@@ -77,6 +77,21 @@ object databaseMod extends js.Object {
       * @see https://github.com/mapbox/node-sqlite3/wiki/API#databaseeachsql-param--callback-complete
       * @returns Promise<number> Number of rows returned
       */
+    def each[T](sql: SqlType, callback: js.Function2[/* err */ js.Any, /* row */ T, Unit]): js.Promise[Double] = js.native
+    def each[T](sql: SqlType, param1: js.Any, callback: js.Function2[/* err */ js.Any, /* row */ T, Unit]): js.Promise[Double] = js.native
+    def each[T](
+      sql: SqlType,
+      param1: js.Any,
+      param2: js.Any,
+      callback: js.Function2[/* err */ js.Any, /* row */ T, Unit]
+    ): js.Promise[Double] = js.native
+    def each[T](
+      sql: SqlType,
+      param1: js.Any,
+      param2: js.Any,
+      param3: js.Any,
+      callback: js.Function2[/* err */ js.Any, /* row */ T, Unit]
+    ): js.Promise[Double] = js.native
     def each[T](sql: SqlType, params: js.Any*): js.Promise[Double] = js.native
     
     /**

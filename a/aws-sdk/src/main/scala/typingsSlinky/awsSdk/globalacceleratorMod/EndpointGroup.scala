@@ -18,7 +18,7 @@ trait EndpointGroup extends js.Object {
   var EndpointGroupArn: js.UndefOr[GenericString] = js.native
   
   /**
-    * The AWS Region that this endpoint group belongs.
+    * The AWS Region where the endpoint group is located.
     */
   var EndpointGroupRegion: js.UndefOr[GenericString] = js.native
   
@@ -41,6 +41,11 @@ trait EndpointGroup extends js.Object {
     * The protocol that Global Accelerator uses to perform health checks on endpoints that are part of this endpoint group. The default value is TCP.
     */
   var HealthCheckProtocol: js.UndefOr[typingsSlinky.awsSdk.globalacceleratorMod.HealthCheckProtocol] = js.native
+  
+  /**
+    * Allows you to override the destination ports used to route traffic to an endpoint. Using a port override lets you to map a list of external destination ports (that your users send traffic to) to a list of internal destination ports that you want an application endpoint to receive traffic on. 
+    */
+  var PortOverrides: js.UndefOr[typingsSlinky.awsSdk.globalacceleratorMod.PortOverrides] = js.native
   
   /**
     * The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
@@ -119,6 +124,15 @@ object EndpointGroup {
     
     @scala.inline
     def deleteHealthCheckProtocol: Self = this.set("HealthCheckProtocol", js.undefined)
+    
+    @scala.inline
+    def setPortOverridesVarargs(value: PortOverride*): Self = this.set("PortOverrides", js.Array(value :_*))
+    
+    @scala.inline
+    def setPortOverrides(value: PortOverrides): Self = this.set("PortOverrides", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePortOverrides: Self = this.set("PortOverrides", js.undefined)
     
     @scala.inline
     def setThresholdCount(value: ThresholdCount): Self = this.set("ThresholdCount", value.asInstanceOf[js.Any])

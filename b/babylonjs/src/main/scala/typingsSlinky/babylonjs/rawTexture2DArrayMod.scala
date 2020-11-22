@@ -219,8 +219,6 @@ object rawTexture2DArrayMod extends js.Object {
       textureType: Double
     ) = this()
     
-    var _engine: js.Any = js.native
-    
     /** Gets or sets the texture format to use */
     var format: Double = js.native
     

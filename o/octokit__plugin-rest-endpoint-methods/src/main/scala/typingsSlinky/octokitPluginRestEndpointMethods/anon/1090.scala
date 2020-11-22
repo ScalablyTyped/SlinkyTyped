@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.UsersSetPrimaryEmailVisibilityForAuthenticatedEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.UsersSetPrimaryEmailVisibilityForAuthenticatedResponseData
+import typingsSlinky.octokitTypes.endpointsMod.UsersListFollowingForUserEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.UsersListFollowingForUserResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,22 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `1090` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[
-    UsersSetPrimaryEmailVisibilityForAuthenticatedEndpoint, 
-    baseUrl | headers | mediaType
-  ]) = js.native
+  var parameters: RequestParameters with (Omit[UsersListFollowingForUserEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[UsersSetPrimaryEmailVisibilityForAuthenticatedResponseData] = js.native
+  var response: OctokitResponse[UsersListFollowingForUserResponseData] = js.native
 }
 object `1090` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[
-      UsersSetPrimaryEmailVisibilityForAuthenticatedEndpoint, 
-      baseUrl | headers | mediaType
-    ]),
-    response: OctokitResponse[UsersSetPrimaryEmailVisibilityForAuthenticatedResponseData]
+    parameters: RequestParameters with (Omit[UsersListFollowingForUserEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[UsersListFollowingForUserResponseData]
   ): `1090` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1090`]
@@ -53,13 +47,10 @@ object `1090` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[
-          UsersSetPrimaryEmailVisibilityForAuthenticatedEndpoint, 
-          baseUrl | headers | mediaType
-        ])
+      value: RequestParameters with (Omit[UsersListFollowingForUserEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[UsersSetPrimaryEmailVisibilityForAuthenticatedResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[UsersListFollowingForUserResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

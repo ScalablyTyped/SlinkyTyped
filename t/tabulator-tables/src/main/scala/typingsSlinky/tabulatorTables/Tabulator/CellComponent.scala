@@ -36,6 +36,8 @@ trait CellComponent extends js.Object {
   /** The getField function returns the field name for the column that contains the cell. */
   def getField(): String = js.native
   
+  def getInitialValue(): js.Any = js.native
+  
   /** The getOldValue function returns the previous value of the cell. Very usefull in the event of cell update callbacks. */
   def getOldValue(): js.Any = js.native
   
@@ -56,6 +58,8 @@ trait CellComponent extends js.Object {
   
   /** When a cell is being edited it is possible to move the editor focus from the current cell to one if its neighbours. There are a number of functions that can be called on the nav function to move the focus in different directions. */
   def nav(): CellNavigation = js.native
+  
+  def restoreInitialValue(): js.Any = js.native
   
   /** The restoreOldValue reverts the value of the cell back to its previous value, without triggering any of the cell edit callbacks. */
   def restoreOldValue(): js.Any = js.native

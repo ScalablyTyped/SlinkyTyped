@@ -4,6 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Eye types
+  */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.babylonjs.babylonjsStrings.none
   - typingsSlinky.babylonjs.babylonjsStrings.left

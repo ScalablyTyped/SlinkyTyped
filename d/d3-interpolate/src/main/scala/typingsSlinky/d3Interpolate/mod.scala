@@ -15,16 +15,56 @@ object mod extends js.Object {
   def interpolate(a: String, b: ColorCommonInstance): js.Function1[/* t */ Double, String] = js.native
   def interpolate(a: js.Any, b: Boolean): js.Function1[/* t */ Double, Boolean] = js.native
   def interpolate(a: js.Any, b: Null): js.Function1[/* t */ Double, Null] = js.native
+  def interpolate(a: js.Array[Double], b: js.typedarray.DataView): js.Function1[/* t */ Double, js.typedarray.DataView] = js.native
+  def interpolate(a: js.Array[Double], b: js.typedarray.Float32Array): js.Function1[/* t */ Double, js.typedarray.Float32Array] = js.native
+  def interpolate(a: js.Array[Double], b: js.typedarray.Float64Array): js.Function1[/* t */ Double, js.typedarray.Float64Array] = js.native
+  def interpolate(a: js.Array[Double], b: js.typedarray.Int16Array): js.Function1[/* t */ Double, js.typedarray.Int16Array] = js.native
+  def interpolate(a: js.Array[Double], b: js.typedarray.Int32Array): js.Function1[/* t */ Double, js.typedarray.Int32Array] = js.native
+  def interpolate(a: js.Array[Double], b: js.typedarray.Int8Array): js.Function1[/* t */ Double, js.typedarray.Int8Array] = js.native
+  def interpolate(a: js.Array[Double], b: js.typedarray.Uint16Array): js.Function1[/* t */ Double, js.typedarray.Uint16Array] = js.native
+  def interpolate(a: js.Array[Double], b: js.typedarray.Uint32Array): js.Function1[/* t */ Double, js.typedarray.Uint32Array] = js.native
+  def interpolate(a: js.Array[Double], b: js.typedarray.Uint8Array): js.Function1[/* t */ Double, js.typedarray.Uint8Array] = js.native
+  def interpolate(a: js.Array[Double], b: js.typedarray.Uint8ClampedArray): js.Function1[/* t */ Double, js.typedarray.Uint8ClampedArray] = js.native
   def interpolate(a: Double, b: Double): js.Function1[/* t */ Double, Double] = js.native
   def interpolate(a: Double, b: ValueOf): js.Function1[/* t */ Double, Double] = js.native
   def interpolate(a: ColorCommonInstance, b: ColorCommonInstance): js.Function1[/* t */ Double, String] = js.native
   def interpolate(a: ToString, b: String): js.Function1[/* t */ Double, String] = js.native
   def interpolate(a: ValueOf, b: Double): js.Function1[/* t */ Double, Double] = js.native
   def interpolate(a: ValueOf, b: ValueOf): js.Function1[/* t */ Double, Double] = js.native
+  def interpolate(a: NumberArray, b: js.typedarray.DataView): js.Function1[/* t */ Double, js.typedarray.DataView] = js.native
+  def interpolate(a: NumberArray, b: js.typedarray.Float32Array): js.Function1[/* t */ Double, js.typedarray.Float32Array] = js.native
+  def interpolate(a: NumberArray, b: js.typedarray.Float64Array): js.Function1[/* t */ Double, js.typedarray.Float64Array] = js.native
+  def interpolate(a: NumberArray, b: js.typedarray.Int16Array): js.Function1[/* t */ Double, js.typedarray.Int16Array] = js.native
+  def interpolate(a: NumberArray, b: js.typedarray.Int32Array): js.Function1[/* t */ Double, js.typedarray.Int32Array] = js.native
+  def interpolate(a: NumberArray, b: js.typedarray.Int8Array): js.Function1[/* t */ Double, js.typedarray.Int8Array] = js.native
+  def interpolate(a: NumberArray, b: js.typedarray.Uint16Array): js.Function1[/* t */ Double, js.typedarray.Uint16Array] = js.native
+  def interpolate(a: NumberArray, b: js.typedarray.Uint32Array): js.Function1[/* t */ Double, js.typedarray.Uint32Array] = js.native
+  def interpolate(a: NumberArray, b: js.typedarray.Uint8Array): js.Function1[/* t */ Double, js.typedarray.Uint8Array] = js.native
+  def interpolate(a: NumberArray, b: js.typedarray.Uint8ClampedArray): js.Function1[/* t */ Double, js.typedarray.Uint8ClampedArray] = js.native
   def interpolate(a: js.Date, b: js.Date): js.Function1[/* t */ Double, js.Date] = js.native
   def interpolate[U /* <: js.Object */](a: js.Any, b: U): js.Function1[/* t */ Double, U] = js.native
   def interpolate[U /* <: js.Array[_] */](a: js.Array[_], b: U): js.Function1[/* t */ Double, U] = js.native
   
+  def interpolateArray(a: js.Array[Double], b: js.typedarray.DataView): js.Function1[/* t */ Double, js.typedarray.DataView] = js.native
+  def interpolateArray(a: js.Array[Double], b: js.typedarray.Float32Array): js.Function1[/* t */ Double, js.typedarray.Float32Array] = js.native
+  def interpolateArray(a: js.Array[Double], b: js.typedarray.Float64Array): js.Function1[/* t */ Double, js.typedarray.Float64Array] = js.native
+  def interpolateArray(a: js.Array[Double], b: js.typedarray.Int16Array): js.Function1[/* t */ Double, js.typedarray.Int16Array] = js.native
+  def interpolateArray(a: js.Array[Double], b: js.typedarray.Int32Array): js.Function1[/* t */ Double, js.typedarray.Int32Array] = js.native
+  def interpolateArray(a: js.Array[Double], b: js.typedarray.Int8Array): js.Function1[/* t */ Double, js.typedarray.Int8Array] = js.native
+  def interpolateArray(a: js.Array[Double], b: js.typedarray.Uint16Array): js.Function1[/* t */ Double, js.typedarray.Uint16Array] = js.native
+  def interpolateArray(a: js.Array[Double], b: js.typedarray.Uint32Array): js.Function1[/* t */ Double, js.typedarray.Uint32Array] = js.native
+  def interpolateArray(a: js.Array[Double], b: js.typedarray.Uint8Array): js.Function1[/* t */ Double, js.typedarray.Uint8Array] = js.native
+  def interpolateArray(a: js.Array[Double], b: js.typedarray.Uint8ClampedArray): js.Function1[/* t */ Double, js.typedarray.Uint8ClampedArray] = js.native
+  def interpolateArray(a: NumberArray, b: js.typedarray.DataView): js.Function1[/* t */ Double, js.typedarray.DataView] = js.native
+  def interpolateArray(a: NumberArray, b: js.typedarray.Float32Array): js.Function1[/* t */ Double, js.typedarray.Float32Array] = js.native
+  def interpolateArray(a: NumberArray, b: js.typedarray.Float64Array): js.Function1[/* t */ Double, js.typedarray.Float64Array] = js.native
+  def interpolateArray(a: NumberArray, b: js.typedarray.Int16Array): js.Function1[/* t */ Double, js.typedarray.Int16Array] = js.native
+  def interpolateArray(a: NumberArray, b: js.typedarray.Int32Array): js.Function1[/* t */ Double, js.typedarray.Int32Array] = js.native
+  def interpolateArray(a: NumberArray, b: js.typedarray.Int8Array): js.Function1[/* t */ Double, js.typedarray.Int8Array] = js.native
+  def interpolateArray(a: NumberArray, b: js.typedarray.Uint16Array): js.Function1[/* t */ Double, js.typedarray.Uint16Array] = js.native
+  def interpolateArray(a: NumberArray, b: js.typedarray.Uint32Array): js.Function1[/* t */ Double, js.typedarray.Uint32Array] = js.native
+  def interpolateArray(a: NumberArray, b: js.typedarray.Uint8Array): js.Function1[/* t */ Double, js.typedarray.Uint8Array] = js.native
+  def interpolateArray(a: NumberArray, b: js.typedarray.Uint8ClampedArray): js.Function1[/* t */ Double, js.typedarray.Uint8ClampedArray] = js.native
   def interpolateArray[A /* <: js.Array[_] */](a: js.Array[_], b: A): ArrayInterpolator[A] = js.native
   
   def interpolateBasis(splineNodes: js.Array[Double]): js.Function1[/* t */ Double, Double] = js.native
@@ -71,6 +111,29 @@ object mod extends js.Object {
   def interpolateNumber(a: ValueOf, b: Double): js.Function1[/* t */ Double, Double] = js.native
   def interpolateNumber(a: ValueOf, b: ValueOf): js.Function1[/* t */ Double, Double] = js.native
   
+  def interpolateNumberArray(a: js.Array[Double], b: js.Array[Double]): js.Function1[/* t */ Double, js.Array[Double]] = js.native
+  def interpolateNumberArray(a: js.Array[Double], b: js.typedarray.DataView): js.Function1[/* t */ Double, js.typedarray.DataView] = js.native
+  def interpolateNumberArray(a: js.Array[Double], b: js.typedarray.Float32Array): js.Function1[/* t */ Double, js.typedarray.Float32Array] = js.native
+  def interpolateNumberArray(a: js.Array[Double], b: js.typedarray.Float64Array): js.Function1[/* t */ Double, js.typedarray.Float64Array] = js.native
+  def interpolateNumberArray(a: js.Array[Double], b: js.typedarray.Int16Array): js.Function1[/* t */ Double, js.typedarray.Int16Array] = js.native
+  def interpolateNumberArray(a: js.Array[Double], b: js.typedarray.Int32Array): js.Function1[/* t */ Double, js.typedarray.Int32Array] = js.native
+  def interpolateNumberArray(a: js.Array[Double], b: js.typedarray.Int8Array): js.Function1[/* t */ Double, js.typedarray.Int8Array] = js.native
+  def interpolateNumberArray(a: js.Array[Double], b: js.typedarray.Uint16Array): js.Function1[/* t */ Double, js.typedarray.Uint16Array] = js.native
+  def interpolateNumberArray(a: js.Array[Double], b: js.typedarray.Uint32Array): js.Function1[/* t */ Double, js.typedarray.Uint32Array] = js.native
+  def interpolateNumberArray(a: js.Array[Double], b: js.typedarray.Uint8Array): js.Function1[/* t */ Double, js.typedarray.Uint8Array] = js.native
+  def interpolateNumberArray(a: js.Array[Double], b: js.typedarray.Uint8ClampedArray): js.Function1[/* t */ Double, js.typedarray.Uint8ClampedArray] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.Array[Double]): js.Function1[/* t */ Double, js.Array[Double]] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.typedarray.DataView): js.Function1[/* t */ Double, js.typedarray.DataView] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.typedarray.Float32Array): js.Function1[/* t */ Double, js.typedarray.Float32Array] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.typedarray.Float64Array): js.Function1[/* t */ Double, js.typedarray.Float64Array] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.typedarray.Int16Array): js.Function1[/* t */ Double, js.typedarray.Int16Array] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.typedarray.Int32Array): js.Function1[/* t */ Double, js.typedarray.Int32Array] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.typedarray.Int8Array): js.Function1[/* t */ Double, js.typedarray.Int8Array] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.typedarray.Uint16Array): js.Function1[/* t */ Double, js.typedarray.Uint16Array] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.typedarray.Uint32Array): js.Function1[/* t */ Double, js.typedarray.Uint32Array] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.typedarray.Uint8Array): js.Function1[/* t */ Double, js.typedarray.Uint8Array] = js.native
+  def interpolateNumberArray(a: NumberArray, b: js.typedarray.Uint8ClampedArray): js.Function1[/* t */ Double, js.typedarray.Uint8ClampedArray] = js.native
+  
   def interpolateObject[U /* <: js.Object */](a: js.Any, b: U): js.Function1[/* t */ Double, U] = js.native
   
   val interpolateRgb: ColorGammaInterpolationFactory = js.native
@@ -99,13 +162,18 @@ object mod extends js.Object {
     interpolate: js.Function2[/* a */ ZoomView, /* b */ ZoomView, ZoomInterpolator],
     values: js.Array[ZoomView]
   ): ZoomInterpolator = js.native
+  def piecewise(values: js.Array[ZoomView]): ZoomInterpolator = js.native
   @JSName("piecewise")
   def piecewise_A_ArrayWildcard_ArrayInterpolator[A /* <: js.Array[_] */](
     interpolate: js.Function2[/* a */ js.Array[_], /* b */ A, ArrayInterpolator[A]],
     values: js.Array[A]
   ): ArrayInterpolator[A] = js.native
   @JSName("piecewise")
+  def piecewise_A_ArrayWildcard_ArrayInterpolator[A /* <: js.Array[_] */](values: js.Array[A]): ArrayInterpolator[A] = js.native
+  @JSName("piecewise")
   def piecewise_TDataInterpolator_Function1[TData, Interpolator](interpolate: js.Function2[/* a */ TData, /* b */ TData, Interpolator], values: js.Array[TData]): js.Function1[/* t */ Double, _] = js.native
+  @JSName("piecewise")
+  def piecewise_TData_Function1[TData](values: js.Array[TData]): js.Function1[/* t */ Double, _] = js.native
   
   def quantize[T](interpolator: js.Function1[/* t */ Double, T], n: Double): js.Array[T] = js.native
   
@@ -136,9 +204,21 @@ object mod extends js.Object {
       * Recommended duration of zoom transition in milliseconds.
       */
     var duration: Double = js.native
+    
+    /**
+      * Given a zoom interpolator, returns a new zoom interpolator using the specified curvature rho.
+      * When rho is close to 0, the interpolator is almost linear.
+      * The default curvature is sqrt(2).
+      * @param rho
+      */
+    def rho(rho: Double): this.type = js.native
   }
   
   type ArrayInterpolator[A /* <: js.Array[_] */] = js.Function1[/* t */ Double, A]
+  
+  type NumberArray = TypedArray | js.typedarray.DataView
+  
+  type TypedArray = js.typedarray.Int8Array | js.typedarray.Uint8Array | js.typedarray.Int16Array | js.typedarray.Uint16Array | js.typedarray.Int32Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array
   
   type ZoomView = js.Tuple3[Double, Double, Double]
 }

@@ -1,8 +1,8 @@
 package typingsSlinky.marko.expressMod
 
-import typingsSlinky.express.anon.Typeofm
-import typingsSlinky.expressServeStaticCore.mod.Handler
-import typingsSlinky.serveStatic.mod.ServeStaticOptions
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.express.mod.Response_
+import typingsSlinky.serveStatic.mod.RequestHandlerConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,13 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("marko/express", "static")
 @js.native
-object static extends js.Object {
-  
-  def apply(root: String): Handler = js.native
-  def apply(root: String, options: ServeStaticOptions): Handler = js.native
-  
-  var mime: Typeofm = js.native
-  
-  def serveStatic(root: String): Handler = js.native
-  def serveStatic(root: String, options: ServeStaticOptions): Handler = js.native
-}
+object static
+  extends TopLevel[RequestHandlerConstructor[Response_[js.Any]]]

@@ -5,15 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Details of the script or CSS to inject. Either the code or the file property must be set, but both may not be
-  * set at the same time.
+  * Details of the script or CSS to inject. Either the code or the file property must be set, but both may not be set at the same time.
   */
 @js.native
 trait InjectDetails extends js.Object {
   
   /**
-    * If allFrames is `true`, implies that the JavaScript or CSS should be injected into all frames of current
-    * page. By default, it's `false` and is only injected into the top frame.
+    * If allFrames is `true`, implies that the JavaScript or CSS should be injected into all frames of current page. By default, it's `false` and is only injected into the top frame.
     */
   var allFrames: js.UndefOr[Boolean] = js.native
   
@@ -21,8 +19,7 @@ trait InjectDetails extends js.Object {
     * JavaScript or CSS code to inject.
     *
     * **Warning:**
-    * Be careful using the `code` parameter. Incorrect use of it may open your extension to [cross site
-    * scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) attacks.
+    * Be careful using the `code` parameter. Incorrect use of it may open your extension to [cross site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) attacks.
     */
   var code: js.UndefOr[String] = js.native
   
@@ -36,9 +33,7 @@ trait InjectDetails extends js.Object {
   var frameId: js.UndefOr[Double] = js.native
   
   /**
-    * If matchAboutBlank is true, then the code is also injected in about:blank and about:srcdoc frames if your
-    * extension has access to its parent document. Code cannot be inserted in top-level about:-frames. By default
-    * it is `false`.
+    * If matchAboutBlank is true, then the code is also injected in about:blank and about:srcdoc frames if your extension has access to its parent document. Code cannot be inserted in top-level about:-frames. By default it is `false`.
     */
   var matchAboutBlank: js.UndefOr[Boolean] = js.native
   

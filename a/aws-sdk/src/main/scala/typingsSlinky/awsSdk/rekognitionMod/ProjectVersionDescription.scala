@@ -23,6 +23,11 @@ trait ProjectVersionDescription extends js.Object {
   var EvaluationResult: js.UndefOr[typingsSlinky.awsSdk.rekognitionMod.EvaluationResult] = js.native
   
   /**
+    * The location of the summary manifest. The summary manifest provides aggregate data validation results for the training and test datasets.
+    */
+  var ManifestSummary: js.UndefOr[GroundTruthManifest] = js.native
+  
+  /**
     * The minimum number of inference units used by the model. For more information, see StartProjectVersion.
     */
   var MinInferenceUnits: js.UndefOr[InferenceUnits] = js.native
@@ -48,12 +53,12 @@ trait ProjectVersionDescription extends js.Object {
   var StatusMessage: js.UndefOr[typingsSlinky.awsSdk.rekognitionMod.StatusMessage] = js.native
   
   /**
-    * The manifest file that represents the testing results.
+    * Contains information about the testing results.
     */
   var TestingDataResult: js.UndefOr[typingsSlinky.awsSdk.rekognitionMod.TestingDataResult] = js.native
   
   /**
-    * The manifest file that represents the training results.
+    * Contains information about the training results.
     */
   var TrainingDataResult: js.UndefOr[typingsSlinky.awsSdk.rekognitionMod.TrainingDataResult] = js.native
   
@@ -102,6 +107,12 @@ object ProjectVersionDescription {
     
     @scala.inline
     def deleteEvaluationResult: Self = this.set("EvaluationResult", js.undefined)
+    
+    @scala.inline
+    def setManifestSummary(value: GroundTruthManifest): Self = this.set("ManifestSummary", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteManifestSummary: Self = this.set("ManifestSummary", js.undefined)
     
     @scala.inline
     def setMinInferenceUnits(value: InferenceUnits): Self = this.set("MinInferenceUnits", value.asInstanceOf[js.Any])

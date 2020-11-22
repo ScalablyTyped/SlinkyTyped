@@ -9,6 +9,10 @@ trait TextureBlock extends NodeMaterialBlock {
   
   var _defineName: js.Any = js.native
   
+  var _fragmentOnly: js.Any = js.native
+  
+  var _gammaDefineName: js.Any = js.native
+  
   var _injectVertexCode: js.Any = js.native
   
   /* private */ def _isMixed: js.Any = js.native
@@ -47,6 +51,11 @@ trait TextureBlock extends NodeMaterialBlock {
     * Gets or sets a boolean indicating if content needs to be converted to gamma space
     */
   var convertToGammaSpace: Boolean = js.native
+  
+  /**
+    * Gets or sets a boolean indicating if content needs to be converted to linear space
+    */
+  var convertToLinearSpace: Boolean = js.native
   
   /**
     * Gets the g output component

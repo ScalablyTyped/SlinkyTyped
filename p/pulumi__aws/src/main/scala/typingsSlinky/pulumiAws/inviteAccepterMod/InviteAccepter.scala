@@ -28,7 +28,7 @@ class InviteAccepter protected () extends CustomResource {
   val detectorId: Output_[String] = js.native
   
   /**
-    * AWS account ID for master account.
+    * AWS account ID for primary account.
     */
   val masterAccountId: Output_[String] = js.native
 }

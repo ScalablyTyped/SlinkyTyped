@@ -29,7 +29,7 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var appsBlockWindowsStoreOriginatedApps: js.UndefOr[Boolean] = js.native
   
   // Specify a list of allowed Bluetooth services and profiles in hex formatted strings.
-  var bluetoothAllowedServices: js.UndefOr[js.Array[String]] = js.native
+  var bluetoothAllowedServices: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // Whether or not to Block the user from using bluetooth advertising.
   var bluetoothBlockAdvertising: js.UndefOr[Boolean] = js.native
@@ -77,16 +77,16 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var defenderCloudBlockLevel: js.UndefOr[DefenderCloudBlockLevelType] = js.native
   
   // Number of days before deleting quarantined malware. Valid values 0 to 90
-  var defenderDaysBeforeDeletingQuarantinedMalware: js.UndefOr[Double] = js.native
+  var defenderDaysBeforeDeletingQuarantinedMalware: js.UndefOr[NullableOption[Double]] = js.native
   
   // Gets or sets Defender’s actions to take on detected Malware per threat level.
-  var defenderDetectedMalwareActions: js.UndefOr[DefenderDetectedMalwareActions] = js.native
+  var defenderDetectedMalwareActions: js.UndefOr[NullableOption[DefenderDetectedMalwareActions]] = js.native
   
   // File extensions to exclude from scans and real time protection.
-  var defenderFileExtensionsToExclude: js.UndefOr[js.Array[String]] = js.native
+  var defenderFileExtensionsToExclude: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // Files and folder to exclude from scans and real time protection.
-  var defenderFilesAndFoldersToExclude: js.UndefOr[js.Array[String]] = js.native
+  var defenderFilesAndFoldersToExclude: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   /**
     * Value for monitoring file activity. Possible values are: userDefined, disable, monitorAllFiles,
@@ -95,7 +95,7 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var defenderMonitorFileActivity: js.UndefOr[DefenderMonitorFileActivity] = js.native
   
   // Processes to exclude from scans and real time protection.
-  var defenderProcessesToExclude: js.UndefOr[js.Array[String]] = js.native
+  var defenderProcessesToExclude: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   /**
     * The configuration for how to prompt user for sample submission. Possible values are: userDefined, alwaysPrompt,
@@ -128,7 +128,7 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var defenderScanMappedNetworkDrivesDuringFullScan: js.UndefOr[Boolean] = js.native
   
   // Max CPU usage percentage during scan. Valid values 0 to 100
-  var defenderScanMaxCpu: js.UndefOr[Double] = js.native
+  var defenderScanMaxCpu: js.UndefOr[NullableOption[Double]] = js.native
   
   // Indicates whether or not to scan files opened from a network folder.
   var defenderScanNetworkFiles: js.UndefOr[Boolean] = js.native
@@ -143,13 +143,13 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var defenderScanType: js.UndefOr[DefenderScanType] = js.native
   
   // The time to perform a daily quick scan.
-  var defenderScheduledQuickScanTime: js.UndefOr[String] = js.native
+  var defenderScheduledQuickScanTime: js.UndefOr[NullableOption[String]] = js.native
   
   // The defender time for the system scan.
-  var defenderScheduledScanTime: js.UndefOr[String] = js.native
+  var defenderScheduledScanTime: js.UndefOr[NullableOption[String]] = js.native
   
   // The signature update interval in hours. Specify 0 not to check. Valid values 0 to 24
-  var defenderSignatureUpdateIntervalInHours: js.UndefOr[Double] = js.native
+  var defenderSignatureUpdateIntervalInHours: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * Defender day of the week for the system scan. Possible values are: userDefined, everyday, sunday, monday, tuesday,
@@ -251,13 +251,13 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var edgeDisableFirstRunPage: js.UndefOr[Boolean] = js.native
   
   // Indicates the enterprise mode site list location. Could be a local file, local network or http location.
-  var edgeEnterpriseModeSiteListLocation: js.UndefOr[String] = js.native
+  var edgeEnterpriseModeSiteListLocation: js.UndefOr[NullableOption[String]] = js.native
   
   // The first run URL for when Edge browser is opened for the first time.
-  var edgeFirstRunUrl: js.UndefOr[String] = js.native
+  var edgeFirstRunUrl: js.UndefOr[NullableOption[String]] = js.native
   
   // The list of URLs for homepages shodwn on MDM-enrolled devices on Edge browser.
-  var edgeHomepageUrls: js.UndefOr[js.Array[String]] = js.native
+  var edgeHomepageUrls: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // Indicates whether or not to Require the user to use the smart screen filter.
   var edgeRequireSmartScreen: js.UndefOr[Boolean] = js.native
@@ -266,7 +266,7 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
     * Allows IT admins to set a default search engine for MDM-Controlled devices. Users can override this and change their
     * default search engine provided the AllowSearchEngineCustomization policy is not set.
     */
-  var edgeSearchEngine: js.UndefOr[EdgeSearchEngineBase] = js.native
+  var edgeSearchEngine: js.UndefOr[NullableOption[EdgeSearchEngineBase]] = js.native
   
   // Indicates whether or not to switch the intranet traffic from Edge to Internet Explorer.
   var edgeSendIntranetTrafficToInternetExplorer: js.UndefOr[Boolean] = js.native
@@ -278,25 +278,25 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var edgeSyncFavoritesWithInternetExplorer: js.UndefOr[Boolean] = js.native
   
   // Endpoint for discovering cloud printers.
-  var enterpriseCloudPrintDiscoveryEndPoint: js.UndefOr[String] = js.native
+  var enterpriseCloudPrintDiscoveryEndPoint: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Maximum number of printers that should be queried from a discovery endpoint. This is a mobile only setting. Valid
     * values 1 to 65535
     */
-  var enterpriseCloudPrintDiscoveryMaxLimit: js.UndefOr[Double] = js.native
+  var enterpriseCloudPrintDiscoveryMaxLimit: js.UndefOr[NullableOption[Double]] = js.native
   
   // OAuth resource URI for printer discovery service as configured in Azure portal.
-  var enterpriseCloudPrintMopriaDiscoveryResourceIdentifier: js.UndefOr[String] = js.native
+  var enterpriseCloudPrintMopriaDiscoveryResourceIdentifier: js.UndefOr[NullableOption[String]] = js.native
   
   // Authentication endpoint for acquiring OAuth tokens.
-  var enterpriseCloudPrintOAuthAuthority: js.UndefOr[String] = js.native
+  var enterpriseCloudPrintOAuthAuthority: js.UndefOr[NullableOption[String]] = js.native
   
   // GUID of a client application authorized to retrieve OAuth tokens from the OAuth Authority.
-  var enterpriseCloudPrintOAuthClientIdentifier: js.UndefOr[String] = js.native
+  var enterpriseCloudPrintOAuthClientIdentifier: js.UndefOr[NullableOption[String]] = js.native
   
   // OAuth resource URI for print service as configured in the Azure portal.
-  var enterpriseCloudPrintResourceIdentifier: js.UndefOr[String] = js.native
+  var enterpriseCloudPrintResourceIdentifier: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates whether or not to enable device discovery UX.
   var experienceBlockDeviceDiscovery: js.UndefOr[Boolean] = js.native
@@ -335,7 +335,7 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
     * Set the duration (in seconds) from the screen locking to the screen turning off for Windows 10 Mobile devices.
     * Supported values are 11-1800. Valid values 11 to 1800
     */
-  var lockScreenTimeoutInSeconds: js.UndefOr[Double] = js.native
+  var lockScreenTimeoutInSeconds: js.UndefOr[NullableOption[Double]] = js.native
   
   // Disables the ability to quickly switch between users that are logged on simultaneously without logging off.
   var logonBlockFastUserSwitching: js.UndefOr[Boolean] = js.native
@@ -353,7 +353,7 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var networkProxyApplySettingsDeviceWide: js.UndefOr[Boolean] = js.native
   
   // Address to the proxy auto-config (PAC) script you want to use.
-  var networkProxyAutomaticConfigurationUrl: js.UndefOr[String] = js.native
+  var networkProxyAutomaticConfigurationUrl: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Disable automatic detection of settings. If enabled, the system will try to find the path to a proxy auto-config (PAC)
@@ -362,7 +362,7 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var networkProxyDisableAutoDetect: js.UndefOr[Boolean] = js.native
   
   // Specifies manual proxy server settings.
-  var networkProxyServer: js.UndefOr[Windows10NetworkProxyServer] = js.native
+  var networkProxyServer: js.UndefOr[NullableOption[Windows10NetworkProxyServer]] = js.native
   
   // Indicates whether or not to Block the user from using near field communication.
   var nfcBlocked: js.UndefOr[Boolean] = js.native
@@ -377,19 +377,19 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var passwordBlockSimple: js.UndefOr[Boolean] = js.native
   
   // The password expiration in days. Valid values 0 to 730
-  var passwordExpirationDays: js.UndefOr[Double] = js.native
+  var passwordExpirationDays: js.UndefOr[NullableOption[Double]] = js.native
   
   // The number of character sets required in the password.
-  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.native
+  var passwordMinimumCharacterSetCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // The minimum password length. Valid values 4 to 16
-  var passwordMinimumLength: js.UndefOr[Double] = js.native
+  var passwordMinimumLength: js.UndefOr[NullableOption[Double]] = js.native
   
   // The minutes of inactivity before the screen times out.
-  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.native
+  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[NullableOption[Double]] = js.native
   
   // The number of previous passwords to prevent reuse of. Valid values 0 to 50
-  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var passwordPreviousPasswordBlockCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // Indicates whether or not to require a password upon resuming from an idle state.
   var passwordRequireWhenResumeFromIdleState: js.UndefOr[Boolean] = js.native
@@ -401,19 +401,19 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
   var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.native
   
   // The number of sign in failures before factory reset. Valid values 0 to 999
-  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.native
+  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * A http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url
     * to a local image on the file system that needs to used as the Desktop Image.
     */
-  var personalizationDesktopImageUrl: js.UndefOr[String] = js.native
+  var personalizationDesktopImageUrl: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * A http or https Url to a jpg, jpeg or png image that neeeds to be downloaded and used as the Lock Screen Image or a
     * file Url to a local image on the file system that needs to be used as the Lock Screen Image.
     */
-  var personalizationLockScreenImageUrl: js.UndefOr[String] = js.native
+  var personalizationLockScreenImageUrl: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Enables or disables the use of advertising ID. Added in Windows 10, version 1607. Possible values are: notConfigured,
@@ -598,13 +598,13 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
     * Edge secondary tile to appear empty in this case. This policy only gets applied when startMenuLayoutXml policy is
     * modified. The value should be a UTF-8 Base64 encoded byte array.
     */
-  var startMenuLayoutEdgeAssetsXml: js.UndefOr[Double] = js.native
+  var startMenuLayoutEdgeAssetsXml: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * Allows admins to override the default Start menu layout and prevents the user from changing it. The layout is modified
     * by specifying an XML file based on a layout modification schema. XML needs to be in a UTF8 encoded byte array format.
     */
-  var startMenuLayoutXml: js.UndefOr[Double] = js.native
+  var startMenuLayoutXml: js.UndefOr[NullableOption[Double]] = js.native
   
   // Allows admins to decide how the Start menu is displayed. Possible values are: userDefined, fullScreen, nonFullScreen.
   var startMenuMode: js.UndefOr[WindowsStartMenuModeType] = js.native
@@ -706,7 +706,7 @@ trait Windows10GeneralConfiguration extends DeviceConfiguration {
     * Specify how often devices scan for Wi-Fi networks. Supported values are 1-500, where 100 = default, and 500 = low
     * frequency. Valid values 1 to 500
     */
-  var wiFiScanInterval: js.UndefOr[Double] = js.native
+  var wiFiScanInterval: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * Allows IT admins to block experiences that are typically for consumers only, such as Start suggestions, Membership
@@ -807,10 +807,13 @@ object Windows10GeneralConfiguration {
     def setBluetoothAllowedServicesVarargs(value: String*): Self = this.set("bluetoothAllowedServices", js.Array(value :_*))
     
     @scala.inline
-    def setBluetoothAllowedServices(value: js.Array[String]): Self = this.set("bluetoothAllowedServices", value.asInstanceOf[js.Any])
+    def setBluetoothAllowedServices(value: NullableOption[js.Array[String]]): Self = this.set("bluetoothAllowedServices", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBluetoothAllowedServices: Self = this.set("bluetoothAllowedServices", js.undefined)
+    
+    @scala.inline
+    def setBluetoothAllowedServicesNull: Self = this.set("bluetoothAllowedServices", null)
     
     @scala.inline
     def setBluetoothBlockAdvertising(value: Boolean): Self = this.set("bluetoothBlockAdvertising", value.asInstanceOf[js.Any])
@@ -897,34 +900,46 @@ object Windows10GeneralConfiguration {
     def deleteDefenderCloudBlockLevel: Self = this.set("defenderCloudBlockLevel", js.undefined)
     
     @scala.inline
-    def setDefenderDaysBeforeDeletingQuarantinedMalware(value: Double): Self = this.set("defenderDaysBeforeDeletingQuarantinedMalware", value.asInstanceOf[js.Any])
+    def setDefenderDaysBeforeDeletingQuarantinedMalware(value: NullableOption[Double]): Self = this.set("defenderDaysBeforeDeletingQuarantinedMalware", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderDaysBeforeDeletingQuarantinedMalware: Self = this.set("defenderDaysBeforeDeletingQuarantinedMalware", js.undefined)
     
     @scala.inline
-    def setDefenderDetectedMalwareActions(value: DefenderDetectedMalwareActions): Self = this.set("defenderDetectedMalwareActions", value.asInstanceOf[js.Any])
+    def setDefenderDaysBeforeDeletingQuarantinedMalwareNull: Self = this.set("defenderDaysBeforeDeletingQuarantinedMalware", null)
+    
+    @scala.inline
+    def setDefenderDetectedMalwareActions(value: NullableOption[DefenderDetectedMalwareActions]): Self = this.set("defenderDetectedMalwareActions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderDetectedMalwareActions: Self = this.set("defenderDetectedMalwareActions", js.undefined)
     
     @scala.inline
+    def setDefenderDetectedMalwareActionsNull: Self = this.set("defenderDetectedMalwareActions", null)
+    
+    @scala.inline
     def setDefenderFileExtensionsToExcludeVarargs(value: String*): Self = this.set("defenderFileExtensionsToExclude", js.Array(value :_*))
     
     @scala.inline
-    def setDefenderFileExtensionsToExclude(value: js.Array[String]): Self = this.set("defenderFileExtensionsToExclude", value.asInstanceOf[js.Any])
+    def setDefenderFileExtensionsToExclude(value: NullableOption[js.Array[String]]): Self = this.set("defenderFileExtensionsToExclude", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderFileExtensionsToExclude: Self = this.set("defenderFileExtensionsToExclude", js.undefined)
     
     @scala.inline
+    def setDefenderFileExtensionsToExcludeNull: Self = this.set("defenderFileExtensionsToExclude", null)
+    
+    @scala.inline
     def setDefenderFilesAndFoldersToExcludeVarargs(value: String*): Self = this.set("defenderFilesAndFoldersToExclude", js.Array(value :_*))
     
     @scala.inline
-    def setDefenderFilesAndFoldersToExclude(value: js.Array[String]): Self = this.set("defenderFilesAndFoldersToExclude", value.asInstanceOf[js.Any])
+    def setDefenderFilesAndFoldersToExclude(value: NullableOption[js.Array[String]]): Self = this.set("defenderFilesAndFoldersToExclude", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderFilesAndFoldersToExclude: Self = this.set("defenderFilesAndFoldersToExclude", js.undefined)
+    
+    @scala.inline
+    def setDefenderFilesAndFoldersToExcludeNull: Self = this.set("defenderFilesAndFoldersToExclude", null)
     
     @scala.inline
     def setDefenderMonitorFileActivity(value: DefenderMonitorFileActivity): Self = this.set("defenderMonitorFileActivity", value.asInstanceOf[js.Any])
@@ -936,10 +951,13 @@ object Windows10GeneralConfiguration {
     def setDefenderProcessesToExcludeVarargs(value: String*): Self = this.set("defenderProcessesToExclude", js.Array(value :_*))
     
     @scala.inline
-    def setDefenderProcessesToExclude(value: js.Array[String]): Self = this.set("defenderProcessesToExclude", value.asInstanceOf[js.Any])
+    def setDefenderProcessesToExclude(value: NullableOption[js.Array[String]]): Self = this.set("defenderProcessesToExclude", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderProcessesToExclude: Self = this.set("defenderProcessesToExclude", js.undefined)
+    
+    @scala.inline
+    def setDefenderProcessesToExcludeNull: Self = this.set("defenderProcessesToExclude", null)
     
     @scala.inline
     def setDefenderPromptForSampleSubmission(value: DefenderPromptForSampleSubmission): Self = this.set("defenderPromptForSampleSubmission", value.asInstanceOf[js.Any])
@@ -996,10 +1014,13 @@ object Windows10GeneralConfiguration {
     def deleteDefenderScanMappedNetworkDrivesDuringFullScan: Self = this.set("defenderScanMappedNetworkDrivesDuringFullScan", js.undefined)
     
     @scala.inline
-    def setDefenderScanMaxCpu(value: Double): Self = this.set("defenderScanMaxCpu", value.asInstanceOf[js.Any])
+    def setDefenderScanMaxCpu(value: NullableOption[Double]): Self = this.set("defenderScanMaxCpu", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderScanMaxCpu: Self = this.set("defenderScanMaxCpu", js.undefined)
+    
+    @scala.inline
+    def setDefenderScanMaxCpuNull: Self = this.set("defenderScanMaxCpu", null)
     
     @scala.inline
     def setDefenderScanNetworkFiles(value: Boolean): Self = this.set("defenderScanNetworkFiles", value.asInstanceOf[js.Any])
@@ -1026,22 +1047,31 @@ object Windows10GeneralConfiguration {
     def deleteDefenderScanType: Self = this.set("defenderScanType", js.undefined)
     
     @scala.inline
-    def setDefenderScheduledQuickScanTime(value: String): Self = this.set("defenderScheduledQuickScanTime", value.asInstanceOf[js.Any])
+    def setDefenderScheduledQuickScanTime(value: NullableOption[String]): Self = this.set("defenderScheduledQuickScanTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderScheduledQuickScanTime: Self = this.set("defenderScheduledQuickScanTime", js.undefined)
     
     @scala.inline
-    def setDefenderScheduledScanTime(value: String): Self = this.set("defenderScheduledScanTime", value.asInstanceOf[js.Any])
+    def setDefenderScheduledQuickScanTimeNull: Self = this.set("defenderScheduledQuickScanTime", null)
+    
+    @scala.inline
+    def setDefenderScheduledScanTime(value: NullableOption[String]): Self = this.set("defenderScheduledScanTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderScheduledScanTime: Self = this.set("defenderScheduledScanTime", js.undefined)
     
     @scala.inline
-    def setDefenderSignatureUpdateIntervalInHours(value: Double): Self = this.set("defenderSignatureUpdateIntervalInHours", value.asInstanceOf[js.Any])
+    def setDefenderScheduledScanTimeNull: Self = this.set("defenderScheduledScanTime", null)
+    
+    @scala.inline
+    def setDefenderSignatureUpdateIntervalInHours(value: NullableOption[Double]): Self = this.set("defenderSignatureUpdateIntervalInHours", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefenderSignatureUpdateIntervalInHours: Self = this.set("defenderSignatureUpdateIntervalInHours", js.undefined)
+    
+    @scala.inline
+    def setDefenderSignatureUpdateIntervalInHoursNull: Self = this.set("defenderSignatureUpdateIntervalInHours", null)
     
     @scala.inline
     def setDefenderSystemScanSchedule(value: WeeklySchedule): Self = this.set("defenderSystemScanSchedule", value.asInstanceOf[js.Any])
@@ -1188,25 +1218,34 @@ object Windows10GeneralConfiguration {
     def deleteEdgeDisableFirstRunPage: Self = this.set("edgeDisableFirstRunPage", js.undefined)
     
     @scala.inline
-    def setEdgeEnterpriseModeSiteListLocation(value: String): Self = this.set("edgeEnterpriseModeSiteListLocation", value.asInstanceOf[js.Any])
+    def setEdgeEnterpriseModeSiteListLocation(value: NullableOption[String]): Self = this.set("edgeEnterpriseModeSiteListLocation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEdgeEnterpriseModeSiteListLocation: Self = this.set("edgeEnterpriseModeSiteListLocation", js.undefined)
     
     @scala.inline
-    def setEdgeFirstRunUrl(value: String): Self = this.set("edgeFirstRunUrl", value.asInstanceOf[js.Any])
+    def setEdgeEnterpriseModeSiteListLocationNull: Self = this.set("edgeEnterpriseModeSiteListLocation", null)
+    
+    @scala.inline
+    def setEdgeFirstRunUrl(value: NullableOption[String]): Self = this.set("edgeFirstRunUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEdgeFirstRunUrl: Self = this.set("edgeFirstRunUrl", js.undefined)
     
     @scala.inline
+    def setEdgeFirstRunUrlNull: Self = this.set("edgeFirstRunUrl", null)
+    
+    @scala.inline
     def setEdgeHomepageUrlsVarargs(value: String*): Self = this.set("edgeHomepageUrls", js.Array(value :_*))
     
     @scala.inline
-    def setEdgeHomepageUrls(value: js.Array[String]): Self = this.set("edgeHomepageUrls", value.asInstanceOf[js.Any])
+    def setEdgeHomepageUrls(value: NullableOption[js.Array[String]]): Self = this.set("edgeHomepageUrls", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEdgeHomepageUrls: Self = this.set("edgeHomepageUrls", js.undefined)
+    
+    @scala.inline
+    def setEdgeHomepageUrlsNull: Self = this.set("edgeHomepageUrls", null)
     
     @scala.inline
     def setEdgeRequireSmartScreen(value: Boolean): Self = this.set("edgeRequireSmartScreen", value.asInstanceOf[js.Any])
@@ -1215,10 +1254,13 @@ object Windows10GeneralConfiguration {
     def deleteEdgeRequireSmartScreen: Self = this.set("edgeRequireSmartScreen", js.undefined)
     
     @scala.inline
-    def setEdgeSearchEngine(value: EdgeSearchEngineBase): Self = this.set("edgeSearchEngine", value.asInstanceOf[js.Any])
+    def setEdgeSearchEngine(value: NullableOption[EdgeSearchEngineBase]): Self = this.set("edgeSearchEngine", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEdgeSearchEngine: Self = this.set("edgeSearchEngine", js.undefined)
+    
+    @scala.inline
+    def setEdgeSearchEngineNull: Self = this.set("edgeSearchEngine", null)
     
     @scala.inline
     def setEdgeSendIntranetTrafficToInternetExplorer(value: Boolean): Self = this.set("edgeSendIntranetTrafficToInternetExplorer", value.asInstanceOf[js.Any])
@@ -1233,40 +1275,58 @@ object Windows10GeneralConfiguration {
     def deleteEdgeSyncFavoritesWithInternetExplorer: Self = this.set("edgeSyncFavoritesWithInternetExplorer", js.undefined)
     
     @scala.inline
-    def setEnterpriseCloudPrintDiscoveryEndPoint(value: String): Self = this.set("enterpriseCloudPrintDiscoveryEndPoint", value.asInstanceOf[js.Any])
+    def setEnterpriseCloudPrintDiscoveryEndPoint(value: NullableOption[String]): Self = this.set("enterpriseCloudPrintDiscoveryEndPoint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnterpriseCloudPrintDiscoveryEndPoint: Self = this.set("enterpriseCloudPrintDiscoveryEndPoint", js.undefined)
     
     @scala.inline
-    def setEnterpriseCloudPrintDiscoveryMaxLimit(value: Double): Self = this.set("enterpriseCloudPrintDiscoveryMaxLimit", value.asInstanceOf[js.Any])
+    def setEnterpriseCloudPrintDiscoveryEndPointNull: Self = this.set("enterpriseCloudPrintDiscoveryEndPoint", null)
+    
+    @scala.inline
+    def setEnterpriseCloudPrintDiscoveryMaxLimit(value: NullableOption[Double]): Self = this.set("enterpriseCloudPrintDiscoveryMaxLimit", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnterpriseCloudPrintDiscoveryMaxLimit: Self = this.set("enterpriseCloudPrintDiscoveryMaxLimit", js.undefined)
     
     @scala.inline
-    def setEnterpriseCloudPrintMopriaDiscoveryResourceIdentifier(value: String): Self = this.set("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier", value.asInstanceOf[js.Any])
+    def setEnterpriseCloudPrintDiscoveryMaxLimitNull: Self = this.set("enterpriseCloudPrintDiscoveryMaxLimit", null)
+    
+    @scala.inline
+    def setEnterpriseCloudPrintMopriaDiscoveryResourceIdentifier(value: NullableOption[String]): Self = this.set("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnterpriseCloudPrintMopriaDiscoveryResourceIdentifier: Self = this.set("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier", js.undefined)
     
     @scala.inline
-    def setEnterpriseCloudPrintOAuthAuthority(value: String): Self = this.set("enterpriseCloudPrintOAuthAuthority", value.asInstanceOf[js.Any])
+    def setEnterpriseCloudPrintMopriaDiscoveryResourceIdentifierNull: Self = this.set("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier", null)
+    
+    @scala.inline
+    def setEnterpriseCloudPrintOAuthAuthority(value: NullableOption[String]): Self = this.set("enterpriseCloudPrintOAuthAuthority", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnterpriseCloudPrintOAuthAuthority: Self = this.set("enterpriseCloudPrintOAuthAuthority", js.undefined)
     
     @scala.inline
-    def setEnterpriseCloudPrintOAuthClientIdentifier(value: String): Self = this.set("enterpriseCloudPrintOAuthClientIdentifier", value.asInstanceOf[js.Any])
+    def setEnterpriseCloudPrintOAuthAuthorityNull: Self = this.set("enterpriseCloudPrintOAuthAuthority", null)
+    
+    @scala.inline
+    def setEnterpriseCloudPrintOAuthClientIdentifier(value: NullableOption[String]): Self = this.set("enterpriseCloudPrintOAuthClientIdentifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnterpriseCloudPrintOAuthClientIdentifier: Self = this.set("enterpriseCloudPrintOAuthClientIdentifier", js.undefined)
     
     @scala.inline
-    def setEnterpriseCloudPrintResourceIdentifier(value: String): Self = this.set("enterpriseCloudPrintResourceIdentifier", value.asInstanceOf[js.Any])
+    def setEnterpriseCloudPrintOAuthClientIdentifierNull: Self = this.set("enterpriseCloudPrintOAuthClientIdentifier", null)
+    
+    @scala.inline
+    def setEnterpriseCloudPrintResourceIdentifier(value: NullableOption[String]): Self = this.set("enterpriseCloudPrintResourceIdentifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnterpriseCloudPrintResourceIdentifier: Self = this.set("enterpriseCloudPrintResourceIdentifier", js.undefined)
+    
+    @scala.inline
+    def setEnterpriseCloudPrintResourceIdentifierNull: Self = this.set("enterpriseCloudPrintResourceIdentifier", null)
     
     @scala.inline
     def setExperienceBlockDeviceDiscovery(value: Boolean): Self = this.set("experienceBlockDeviceDiscovery", value.asInstanceOf[js.Any])
@@ -1329,10 +1389,13 @@ object Windows10GeneralConfiguration {
     def deleteLockScreenBlockToastNotifications: Self = this.set("lockScreenBlockToastNotifications", js.undefined)
     
     @scala.inline
-    def setLockScreenTimeoutInSeconds(value: Double): Self = this.set("lockScreenTimeoutInSeconds", value.asInstanceOf[js.Any])
+    def setLockScreenTimeoutInSeconds(value: NullableOption[Double]): Self = this.set("lockScreenTimeoutInSeconds", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLockScreenTimeoutInSeconds: Self = this.set("lockScreenTimeoutInSeconds", js.undefined)
+    
+    @scala.inline
+    def setLockScreenTimeoutInSecondsNull: Self = this.set("lockScreenTimeoutInSeconds", null)
     
     @scala.inline
     def setLogonBlockFastUserSwitching(value: Boolean): Self = this.set("logonBlockFastUserSwitching", value.asInstanceOf[js.Any])
@@ -1359,10 +1422,13 @@ object Windows10GeneralConfiguration {
     def deleteNetworkProxyApplySettingsDeviceWide: Self = this.set("networkProxyApplySettingsDeviceWide", js.undefined)
     
     @scala.inline
-    def setNetworkProxyAutomaticConfigurationUrl(value: String): Self = this.set("networkProxyAutomaticConfigurationUrl", value.asInstanceOf[js.Any])
+    def setNetworkProxyAutomaticConfigurationUrl(value: NullableOption[String]): Self = this.set("networkProxyAutomaticConfigurationUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNetworkProxyAutomaticConfigurationUrl: Self = this.set("networkProxyAutomaticConfigurationUrl", js.undefined)
+    
+    @scala.inline
+    def setNetworkProxyAutomaticConfigurationUrlNull: Self = this.set("networkProxyAutomaticConfigurationUrl", null)
     
     @scala.inline
     def setNetworkProxyDisableAutoDetect(value: Boolean): Self = this.set("networkProxyDisableAutoDetect", value.asInstanceOf[js.Any])
@@ -1371,10 +1437,13 @@ object Windows10GeneralConfiguration {
     def deleteNetworkProxyDisableAutoDetect: Self = this.set("networkProxyDisableAutoDetect", js.undefined)
     
     @scala.inline
-    def setNetworkProxyServer(value: Windows10NetworkProxyServer): Self = this.set("networkProxyServer", value.asInstanceOf[js.Any])
+    def setNetworkProxyServer(value: NullableOption[Windows10NetworkProxyServer]): Self = this.set("networkProxyServer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNetworkProxyServer: Self = this.set("networkProxyServer", js.undefined)
+    
+    @scala.inline
+    def setNetworkProxyServerNull: Self = this.set("networkProxyServer", null)
     
     @scala.inline
     def setNfcBlocked(value: Boolean): Self = this.set("nfcBlocked", value.asInstanceOf[js.Any])
@@ -1395,34 +1464,49 @@ object Windows10GeneralConfiguration {
     def deletePasswordBlockSimple: Self = this.set("passwordBlockSimple", js.undefined)
     
     @scala.inline
-    def setPasswordExpirationDays(value: Double): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDays(value: NullableOption[Double]): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordExpirationDays: Self = this.set("passwordExpirationDays", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumCharacterSetCount(value: Double): Self = this.set("passwordMinimumCharacterSetCount", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDaysNull: Self = this.set("passwordExpirationDays", null)
+    
+    @scala.inline
+    def setPasswordMinimumCharacterSetCount(value: NullableOption[Double]): Self = this.set("passwordMinimumCharacterSetCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumCharacterSetCount: Self = this.set("passwordMinimumCharacterSetCount", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumLength(value: Double): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
+    def setPasswordMinimumCharacterSetCountNull: Self = this.set("passwordMinimumCharacterSetCount", null)
+    
+    @scala.inline
+    def setPasswordMinimumLength(value: NullableOption[Double]): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumLength: Self = this.set("passwordMinimumLength", js.undefined)
     
     @scala.inline
-    def setPasswordMinutesOfInactivityBeforeScreenTimeout(value: Double): Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
+    def setPasswordMinimumLengthNull: Self = this.set("passwordMinimumLength", null)
+    
+    @scala.inline
+    def setPasswordMinutesOfInactivityBeforeScreenTimeout(value: NullableOption[Double]): Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinutesOfInactivityBeforeScreenTimeout: Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", js.undefined)
     
     @scala.inline
-    def setPasswordPreviousPasswordBlockCount(value: Double): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
+    def setPasswordMinutesOfInactivityBeforeScreenTimeoutNull: Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", null)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCount(value: NullableOption[Double]): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordPreviousPasswordBlockCount: Self = this.set("passwordPreviousPasswordBlockCount", js.undefined)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCountNull: Self = this.set("passwordPreviousPasswordBlockCount", null)
     
     @scala.inline
     def setPasswordRequireWhenResumeFromIdleState(value: Boolean): Self = this.set("passwordRequireWhenResumeFromIdleState", value.asInstanceOf[js.Any])
@@ -1443,22 +1527,31 @@ object Windows10GeneralConfiguration {
     def deletePasswordRequiredType: Self = this.set("passwordRequiredType", js.undefined)
     
     @scala.inline
-    def setPasswordSignInFailureCountBeforeFactoryReset(value: Double): Self = this.set("passwordSignInFailureCountBeforeFactoryReset", value.asInstanceOf[js.Any])
+    def setPasswordSignInFailureCountBeforeFactoryReset(value: NullableOption[Double]): Self = this.set("passwordSignInFailureCountBeforeFactoryReset", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordSignInFailureCountBeforeFactoryReset: Self = this.set("passwordSignInFailureCountBeforeFactoryReset", js.undefined)
     
     @scala.inline
-    def setPersonalizationDesktopImageUrl(value: String): Self = this.set("personalizationDesktopImageUrl", value.asInstanceOf[js.Any])
+    def setPasswordSignInFailureCountBeforeFactoryResetNull: Self = this.set("passwordSignInFailureCountBeforeFactoryReset", null)
+    
+    @scala.inline
+    def setPersonalizationDesktopImageUrl(value: NullableOption[String]): Self = this.set("personalizationDesktopImageUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePersonalizationDesktopImageUrl: Self = this.set("personalizationDesktopImageUrl", js.undefined)
     
     @scala.inline
-    def setPersonalizationLockScreenImageUrl(value: String): Self = this.set("personalizationLockScreenImageUrl", value.asInstanceOf[js.Any])
+    def setPersonalizationDesktopImageUrlNull: Self = this.set("personalizationDesktopImageUrl", null)
+    
+    @scala.inline
+    def setPersonalizationLockScreenImageUrl(value: NullableOption[String]): Self = this.set("personalizationLockScreenImageUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePersonalizationLockScreenImageUrl: Self = this.set("personalizationLockScreenImageUrl", js.undefined)
+    
+    @scala.inline
+    def setPersonalizationLockScreenImageUrlNull: Self = this.set("personalizationLockScreenImageUrl", null)
     
     @scala.inline
     def setPrivacyAdvertisingId(value: StateManagementSetting): Self = this.set("privacyAdvertisingId", value.asInstanceOf[js.Any])
@@ -1767,16 +1860,22 @@ object Windows10GeneralConfiguration {
     def deleteStartMenuHideUserTile: Self = this.set("startMenuHideUserTile", js.undefined)
     
     @scala.inline
-    def setStartMenuLayoutEdgeAssetsXml(value: Double): Self = this.set("startMenuLayoutEdgeAssetsXml", value.asInstanceOf[js.Any])
+    def setStartMenuLayoutEdgeAssetsXml(value: NullableOption[Double]): Self = this.set("startMenuLayoutEdgeAssetsXml", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStartMenuLayoutEdgeAssetsXml: Self = this.set("startMenuLayoutEdgeAssetsXml", js.undefined)
     
     @scala.inline
-    def setStartMenuLayoutXml(value: Double): Self = this.set("startMenuLayoutXml", value.asInstanceOf[js.Any])
+    def setStartMenuLayoutEdgeAssetsXmlNull: Self = this.set("startMenuLayoutEdgeAssetsXml", null)
+    
+    @scala.inline
+    def setStartMenuLayoutXml(value: NullableOption[Double]): Self = this.set("startMenuLayoutXml", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStartMenuLayoutXml: Self = this.set("startMenuLayoutXml", js.undefined)
+    
+    @scala.inline
+    def setStartMenuLayoutXmlNull: Self = this.set("startMenuLayoutXml", null)
     
     @scala.inline
     def setStartMenuMode(value: WindowsStartMenuModeType): Self = this.set("startMenuMode", value.asInstanceOf[js.Any])
@@ -1911,10 +2010,13 @@ object Windows10GeneralConfiguration {
     def deleteWiFiBlocked: Self = this.set("wiFiBlocked", js.undefined)
     
     @scala.inline
-    def setWiFiScanInterval(value: Double): Self = this.set("wiFiScanInterval", value.asInstanceOf[js.Any])
+    def setWiFiScanInterval(value: NullableOption[Double]): Self = this.set("wiFiScanInterval", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWiFiScanInterval: Self = this.set("wiFiScanInterval", js.undefined)
+    
+    @scala.inline
+    def setWiFiScanIntervalNull: Self = this.set("wiFiScanInterval", null)
     
     @scala.inline
     def setWindowsSpotlightBlockConsumerSpecificFeatures(value: Boolean): Self = this.set("windowsSpotlightBlockConsumerSpecificFeatures", value.asInstanceOf[js.Any])

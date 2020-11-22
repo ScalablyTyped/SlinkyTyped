@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MlDeleteExpiredData[T] extends Generic {
   
   var body: js.UndefOr[T] = js.native
+  
+  var job_id: js.UndefOr[String] = js.native
+  
+  var requests_per_second: js.UndefOr[Double] = js.native
+  
+  var timeout: js.UndefOr[String] = js.native
 }
 object MlDeleteExpiredData {
   
@@ -37,5 +43,23 @@ object MlDeleteExpiredData {
     
     @scala.inline
     def deleteBody: Self = this.set("body", js.undefined)
+    
+    @scala.inline
+    def setJob_id(value: String): Self = this.set("job_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJob_id: Self = this.set("job_id", js.undefined)
+    
+    @scala.inline
+    def setRequests_per_second(value: Double): Self = this.set("requests_per_second", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequests_per_second: Self = this.set("requests_per_second", js.undefined)
+    
+    @scala.inline
+    def setTimeout(value: String): Self = this.set("timeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimeout: Self = this.set("timeout", js.undefined)
   }
 }

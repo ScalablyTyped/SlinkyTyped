@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListRulesRequest extends js.Object {
   
   /**
-    * Limits the results to show only the rules associated with the specified event bus.
+    * The name or ARN of the event bus to list the rules for. If you omit this, the default event bus is used.
     */
-  var EventBusName: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.EventBusName] = js.native
+  var EventBusName: js.UndefOr[EventBusNameOrArn] = js.native
   
   /**
     * The maximum number of results to return.
@@ -51,7 +51,7 @@ object ListRulesRequest {
     }
     
     @scala.inline
-    def setEventBusName(value: EventBusName): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
+    def setEventBusName(value: EventBusNameOrArn): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEventBusName: Self = this.set("EventBusName", js.undefined)

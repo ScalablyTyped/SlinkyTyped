@@ -9,8 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Pricing extends js.Object {
   
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#pricing|Pricing}
+    */
   def Checkout(): CheckoutPricingInstance = js.native
   
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#pricing|Pricing}
+    */
   def Subscription(): SubscriptionPricingInstance = js.native
 }
 object Pricing {

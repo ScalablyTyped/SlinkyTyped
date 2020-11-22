@@ -12,6 +12,9 @@ trait UpdateFlowOutputResponse extends js.Object {
     */
   var FlowArn: js.UndefOr[string] = js.native
   
+  /**
+    * The new settings of the output that you updated.
+    */
   var Output: js.UndefOr[typingsSlinky.awsSdk.mediaconnectMod.Output] = js.native
 }
 object UpdateFlowOutputResponse {

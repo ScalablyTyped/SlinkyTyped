@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IDeltaManager extends js.Object {
   
   def beginTransaction(): Transaction = js.native
+  def beginTransaction(commitCurrentImplicitTransaction: Boolean): Transaction = js.native
   
   def closeConnection(callback: IVoidCallback): Unit = js.native
   def closeConnection(callback: IVoidCallback, errorCallback: IErrorCallback): Unit = js.native

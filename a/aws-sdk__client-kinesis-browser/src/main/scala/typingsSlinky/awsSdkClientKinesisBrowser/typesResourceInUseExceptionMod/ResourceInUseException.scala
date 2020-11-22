@@ -16,16 +16,14 @@ import typingsSlinky.awsSdkClientKinesisBrowser.splitShardExceptionsUnionMod.Spl
 import typingsSlinky.awsSdkClientKinesisBrowser.startStreamEncryptionExceptionsUnionMod.StartStreamEncryptionExceptionsUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.stopStreamEncryptionExceptionsUnionMod.StopStreamEncryptionExceptionsUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.updateShardCountExceptionsUnionMod.UpdateShardCountExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ResourceInUseExceptionDetails> * / any */ @js.native
 trait ResourceInUseException
-  extends ServiceException[ResourceInUseExceptionDetails]
-     with AddTagsToStreamExceptionsUnion
+  extends AddTagsToStreamExceptionsUnion
      with CreateStreamExceptionsUnion
      with DecreaseStreamRetentionPeriodExceptionsUnion
      with DeleteStreamExceptionsUnion
@@ -42,19 +40,15 @@ trait ResourceInUseException
      with StopStreamEncryptionExceptionsUnion
      with UpdateShardCountExceptionsUnion {
   
-  @JSName("name")
-  var name_ResourceInUseException: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ResourceInUseException = js.native
+  var name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ResourceInUseException = js.native
 }
 object ResourceInUseException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: ResourceInUseExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ResourceInUseException
   ): ResourceInUseException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceInUseException]
   }
   

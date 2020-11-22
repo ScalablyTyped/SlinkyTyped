@@ -129,6 +129,8 @@ package object emrMod {
   
   type EbsVolumeList = js.Array[typingsSlinky.awsSdk.emrMod.EbsVolume]
   
+  type ExecutionEngineType = typingsSlinky.awsSdk.awsSdkStrings.EMR | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.INSTANCE_FLEET
     - typingsSlinky.awsSdk.awsSdkStrings.INSTANCE_GROUP
@@ -296,9 +298,37 @@ package object emrMod {
   
   type NonNegativeDouble = scala.Double
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.START_PENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.STARTING
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.FINISHING
+    - typingsSlinky.awsSdk.awsSdkStrings.FINISHED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILING
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.STOP_PENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.STOPPING
+    - typingsSlinky.awsSdk.awsSdkStrings.STOPPED
+    - java.lang.String
+  */
+  type NotebookExecutionStatus = typingsSlinky.awsSdk.emrMod._NotebookExecutionStatus | java.lang.String
+  
+  type NotebookExecutionSummaryList = js.Array[typingsSlinky.awsSdk.emrMod.NotebookExecutionSummary]
+  
   type OnDemandProvisioningAllocationStrategy = typingsSlinky.awsSdk.awsSdkStrings.`lowest-price` | java.lang.String
   
   type OptionalArnType = java.lang.String
+  
+  type PlacementGroupConfigList = js.Array[typingsSlinky.awsSdk.emrMod.PlacementGroupConfig]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SPREAD
+    - typingsSlinky.awsSdk.awsSdkStrings.PARTITION
+    - typingsSlinky.awsSdk.awsSdkStrings.CLUSTER
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - java.lang.String
+  */
+  type PlacementGroupStrategy = typingsSlinky.awsSdk.emrMod._PlacementGroupStrategy | java.lang.String
   
   type Port = scala.Double
   

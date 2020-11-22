@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@tensorflow/tfjs-core", "MomentumOptimizer")
 @js.native
 class MomentumOptimizer protected ()
-  extends typingsSlinky.tensorflowTfjsCore.momentumOptimizerMod.MomentumOptimizer {
+  extends typingsSlinky.tensorflowTfjsCore.baseMod.MomentumOptimizer {
   def this(learningRate: Double, momentum: Double) = this()
   def this(learningRate: Double, momentum: Double, useNesterov: Boolean) = this()
 }

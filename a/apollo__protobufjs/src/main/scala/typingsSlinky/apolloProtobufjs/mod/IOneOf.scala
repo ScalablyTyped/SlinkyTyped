@@ -12,7 +12,7 @@ trait IOneOf extends js.Object {
   var oneof: js.Array[String] = js.native
   
   /** Oneof options */
-  var options: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var options: js.UndefOr[StringDictionary[js.UndefOr[js.Any]]] = js.native
 }
 object IOneOf {
   
@@ -44,7 +44,7 @@ object IOneOf {
     def setOneof(value: js.Array[String]): Self = this.set("oneof", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: StringDictionary[js.Any]): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: StringDictionary[js.UndefOr[js.Any]]): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import typingsSlinky.highcharts.highchartsNumbers.`0`
 import typingsSlinky.highcharts.highchartsNumbers.`100`
 import scala.scalajs.js
@@ -53,6 +54,8 @@ trait PlotTreemapOptions extends js.Object {
     * animation parameter under the API methods. The following properties are
     * supported:
     *
+    * - `defer`: The animation delay time in milliseconds.
+    *
     * - `duration`: The duration of the animation in milliseconds.
     *
     * - `easing`: Can be a string reference to an easing function set on the
@@ -61,7 +64,7 @@ trait PlotTreemapOptions extends js.Object {
     * Due to poor performance, animation is disabled in old IE browsers for
     * several chart types.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | PlotTreemapAnimationOptions | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highcharts) For some series, there is a limit that shuts down initial
@@ -164,7 +167,7 @@ trait PlotTreemapOptions extends js.Object {
     * `options.colors` collection, this option determines whether the chart
     * should receive one color per series or one color per point.
     */
-  var colorByPoint: js.UndefOr[Boolean] = js.native
+  var colorByPoint: js.UndefOr[js.Object] = js.native
   
   /**
     * (Highcharts) Styled mode only. A specific color index to use for the
@@ -782,7 +785,7 @@ object PlotTreemapOptions {
     def deleteAlternateStartingDirection: Self = this.set("alternateStartingDirection", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PlotTreemapAnimationOptions | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)
@@ -848,7 +851,7 @@ object PlotTreemapOptions {
     def deleteColorAxis: Self = this.set("colorAxis", js.undefined)
     
     @scala.inline
-    def setColorByPoint(value: Boolean): Self = this.set("colorByPoint", value.asInstanceOf[js.Any])
+    def setColorByPoint(value: js.Object): Self = this.set("colorByPoint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColorByPoint: Self = this.set("colorByPoint", js.undefined)

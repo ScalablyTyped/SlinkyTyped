@@ -42,7 +42,7 @@ trait Options extends js.Object {
     * If this function returns truthy, the circuit's `failPure` statistics will not be incremented.
     * This is useful, for example, when you don't want HTTP 404 to trip the circuit, but still want to handle it as a failure case.
     */
-  var errorFilter: js.UndefOr[js.Function0[Boolean]] = js.native
+  var errorFilter: js.UndefOr[js.Function1[/* err */ js.Any, Boolean]] = js.native
   
   /**
     * The error percentage at which to open the circuit and start short-circuiting requests to fallback.
@@ -160,7 +160,7 @@ object Options {
     def deleteEnabled: Self = this.set("enabled", js.undefined)
     
     @scala.inline
-    def setErrorFilter(value: () => Boolean): Self = this.set("errorFilter", js.Any.fromFunction0(value))
+    def setErrorFilter(value: /* err */ js.Any => Boolean): Self = this.set("errorFilter", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteErrorFilter: Self = this.set("errorFilter", js.undefined)

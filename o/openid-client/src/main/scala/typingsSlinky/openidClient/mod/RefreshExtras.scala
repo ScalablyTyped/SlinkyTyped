@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RefreshExtras extends js.Object {
   
   /**
+    * Private key to sign the DPoP Proof JWT with. This can be a crypto.KeyObject, crypto.createPrivateKey valid
+    * inputs, or a JWK formatted private key.
+    */
+  var DPoP: js.UndefOr[DPoPInput] = js.native
+  
+  /**
     * extra client assertion payload parameters to be sent as part of a client JWT assertion.
     * This is only used when the client's token_endpoint_auth_method is either client_secret_jwt or private_key_jwt.
     */
@@ -40,6 +46,12 @@ object RefreshExtras {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDPoP(value: DPoPInput): Self = this.set("DPoP", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDPoP: Self = this.set("DPoP", js.undefined)
     
     @scala.inline
     def setClientAssertionPayload(value: js.Object): Self = this.set("clientAssertionPayload", value.asInstanceOf[js.Any])

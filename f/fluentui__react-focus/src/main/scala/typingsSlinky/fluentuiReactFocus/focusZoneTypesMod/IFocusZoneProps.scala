@@ -10,6 +10,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.fluentuiReactFocus.focusZoneFocusZoneMod.FocusZone
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -90,6 +91,12 @@ trait IFocusZoneProps extends HTMLAttributes[HTMLElement | FocusZone] {
     * @deprecated Use `stopFocusPropagation` instead.
     */
   var doNotAllowFocusEventToPropagate: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Optional callback to access the root DOM element.
+    * @deprecated Temporary solution which will be replaced with ref in the V8 release.
+    */
+  var elementRef: js.UndefOr[Ref[HTMLElement]] = js.native
   
   /**
     * Element type the root element will use. Default is "div".
@@ -336,6 +343,21 @@ object IFocusZoneProps {
     
     @scala.inline
     def deleteDoNotAllowFocusEventToPropagate: Self = this.set("doNotAllowFocusEventToPropagate", js.undefined)
+    
+    @scala.inline
+    def setElementRefRefObject(value: ReactRef[HTMLElement]): Self = this.set("elementRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setElementRefFunction1(value: /* instance */ HTMLElement | Null => Unit): Self = this.set("elementRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setElementRef(value: Ref[HTMLElement]): Self = this.set("elementRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteElementRef: Self = this.set("elementRef", js.undefined)
+    
+    @scala.inline
+    def setElementRefNull: Self = this.set("elementRef", null)
     
     @scala.inline
     def setElementType(value: js.Any): Self = this.set("elementType", value.asInstanceOf[js.Any])

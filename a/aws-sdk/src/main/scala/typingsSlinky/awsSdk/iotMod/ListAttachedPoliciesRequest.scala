@@ -23,7 +23,7 @@ trait ListAttachedPoliciesRequest extends js.Object {
   var recursive: js.UndefOr[Recursive] = js.native
   
   /**
-    * The group or principal for which the policies will be listed.
+    * The group or principal for which the policies will be listed. Valid principals are CertificateArn (arn:aws:iot:region:accountId:cert/certificateId), thingGroupArn (arn:aws:iot:region:accountId:thinggroup/groupName) and CognitoId (region:id).
     */
   var target: PolicyTarget = js.native
 }

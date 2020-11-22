@@ -18,6 +18,8 @@ trait AccordionTabProps extends js.Object {
   var headerClassName: js.UndefOr[String] = js.native
   
   var headerStyle: js.UndefOr[js.Object] = js.native
+  
+  var headerTemplate: js.UndefOr[js.Any] = js.native
 }
 object AccordionTabProps {
   
@@ -77,5 +79,11 @@ object AccordionTabProps {
     
     @scala.inline
     def deleteHeaderStyle: Self = this.set("headerStyle", js.undefined)
+    
+    @scala.inline
+    def setHeaderTemplate(value: js.Any): Self = this.set("headerTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderTemplate: Self = this.set("headerTemplate", js.undefined)
   }
 }

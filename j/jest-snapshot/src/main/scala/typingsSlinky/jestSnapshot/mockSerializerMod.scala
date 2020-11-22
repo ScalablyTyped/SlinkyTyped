@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("jest-snapshot/build/mock_serializer", JSImport.Namespace)
+@JSImport("jest-snapshot/build/mockSerializer", JSImport.Namespace)
 @js.native
 object mockSerializerMod extends js.Object {
   

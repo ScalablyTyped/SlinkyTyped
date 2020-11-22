@@ -18,7 +18,7 @@ trait S3Object extends js.Object {
   var eTag: js.UndefOr[string] = js.native
   
   /**
-    * The file extension of the object. If the object doesn't have a file extension, this value is "".
+    * The file name extension of the object. If the object doesn't have a file name extension, this value is "".
     */
   var extension: js.UndefOr[string] = js.native
   
@@ -43,7 +43,7 @@ trait S3Object extends js.Object {
   var publicAccess: js.UndefOr[boolean] = js.native
   
   /**
-    * The server-side encryption settings for the object.
+    * The type of server-side encryption that's used for the object.
     */
   var serverSideEncryption: js.UndefOr[ServerSideEncryption] = js.native
   

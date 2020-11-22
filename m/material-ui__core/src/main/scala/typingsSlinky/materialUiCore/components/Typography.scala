@@ -21,8 +21,13 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapTypogr
 import typingsSlinky.materialUiCore.anon.typeinStylestring
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions removals`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`removals additions`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`removals text`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`text additions`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`text removals`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
 import typingsSlinky.materialUiCore.materialUiCoreStrings.all
 import typingsSlinky.materialUiCore.materialUiCoreStrings.ascending
@@ -209,7 +214,9 @@ object Typography {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

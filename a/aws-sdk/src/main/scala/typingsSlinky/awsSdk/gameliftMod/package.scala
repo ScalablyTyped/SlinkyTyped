@@ -37,6 +37,7 @@ package object gameliftMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SPOT_ONLY
     - typingsSlinky.awsSdk.awsSdkStrings.SPOT_PREFERRED
+    - typingsSlinky.awsSdk.awsSdkStrings.ON_DEMAND_ONLY
     - java.lang.String
   */
   type BalancingStrategy = typingsSlinky.awsSdk.gameliftMod._BalancingStrategy | java.lang.String
@@ -332,14 +333,24 @@ package object gameliftMod {
   
   type GameServerInstanceId = java.lang.String
   
+  type GameServerInstanceIds = js.Array[typingsSlinky.awsSdk.gameliftMod.GameServerInstanceId]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DRAINING
+    - typingsSlinky.awsSdk.awsSdkStrings.SPOT_TERMINATING
+    - java.lang.String
+  */
+  type GameServerInstanceStatus = typingsSlinky.awsSdk.gameliftMod._GameServerInstanceStatus | java.lang.String
+  
+  type GameServerInstances = js.Array[typingsSlinky.awsSdk.gameliftMod.GameServerInstance]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NO_PROTECTION
     - typingsSlinky.awsSdk.awsSdkStrings.FULL_PROTECTION
     - java.lang.String
   */
   type GameServerProtectionPolicy = typingsSlinky.awsSdk.gameliftMod._GameServerProtectionPolicy | java.lang.String
-  
-  type GameServerSortKey = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE

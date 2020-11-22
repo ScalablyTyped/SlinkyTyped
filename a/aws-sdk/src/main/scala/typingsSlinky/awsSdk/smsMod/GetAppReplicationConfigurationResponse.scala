@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetAppReplicationConfigurationResponse extends js.Object {
   
   /**
-    * Replication configurations associated with server groups in this application.
+    * The replication configurations associated with server groups in this application.
     */
   var serverGroupReplicationConfigurations: js.UndefOr[ServerGroupReplicationConfigurations] = js.native
 }

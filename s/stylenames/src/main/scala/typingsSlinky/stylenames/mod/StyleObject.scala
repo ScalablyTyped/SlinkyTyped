@@ -460,6 +460,16 @@ trait StyleObject extends js.Object {
   
   var overflowY: js.UndefOr[StyleValue] = js.native
   
+  var overscrollBehavior: js.UndefOr[StyleValue] = js.native
+  
+  var overscrollBehaviorBlock: js.UndefOr[StyleValue] = js.native
+  
+  var overscrollBehaviorInline: js.UndefOr[StyleValue] = js.native
+  
+  var overscrollBehaviorX: js.UndefOr[StyleValue] = js.native
+  
+  var overscrollBehaviorY: js.UndefOr[StyleValue] = js.native
+  
   var padding: js.UndefOr[StyleValue] = js.native
   
   var paddingBlockEnd: js.UndefOr[StyleValue] = js.native
@@ -2840,6 +2850,51 @@ object StyleObject {
     
     @scala.inline
     def setOverflowYNull: Self = this.set("overflowY", null)
+    
+    @scala.inline
+    def setOverscrollBehavior(value: StyleValue): Self = this.set("overscrollBehavior", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverscrollBehavior: Self = this.set("overscrollBehavior", js.undefined)
+    
+    @scala.inline
+    def setOverscrollBehaviorNull: Self = this.set("overscrollBehavior", null)
+    
+    @scala.inline
+    def setOverscrollBehaviorBlock(value: StyleValue): Self = this.set("overscrollBehaviorBlock", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverscrollBehaviorBlock: Self = this.set("overscrollBehaviorBlock", js.undefined)
+    
+    @scala.inline
+    def setOverscrollBehaviorBlockNull: Self = this.set("overscrollBehaviorBlock", null)
+    
+    @scala.inline
+    def setOverscrollBehaviorInline(value: StyleValue): Self = this.set("overscrollBehaviorInline", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverscrollBehaviorInline: Self = this.set("overscrollBehaviorInline", js.undefined)
+    
+    @scala.inline
+    def setOverscrollBehaviorInlineNull: Self = this.set("overscrollBehaviorInline", null)
+    
+    @scala.inline
+    def setOverscrollBehaviorX(value: StyleValue): Self = this.set("overscrollBehaviorX", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverscrollBehaviorX: Self = this.set("overscrollBehaviorX", js.undefined)
+    
+    @scala.inline
+    def setOverscrollBehaviorXNull: Self = this.set("overscrollBehaviorX", null)
+    
+    @scala.inline
+    def setOverscrollBehaviorY(value: StyleValue): Self = this.set("overscrollBehaviorY", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverscrollBehaviorY: Self = this.set("overscrollBehaviorY", js.undefined)
+    
+    @scala.inline
+    def setOverscrollBehaviorYNull: Self = this.set("overscrollBehaviorY", null)
     
     @scala.inline
     def setPadding(value: StyleValue): Self = this.set("padding", value.asInstanceOf[js.Any])

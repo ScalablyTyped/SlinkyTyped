@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object canvasUtilMod extends js.Object {
   
+  def clearWebGLContext(webGLVersion: Double): Unit = js.native
+  
   def getWebGLContext(webGLVersion: Double): WebGLRenderingContext = js.native
   
   def setWebGLContext(webGLVersion: Double, gl: WebGLRenderingContext): Unit = js.native

@@ -73,8 +73,9 @@ object datasetMod extends js.Object {
       * @param smallLastBatch Whether to emit the final batch when it has fewer
       *   than batchSize elements. Default true.
       * @returns A `Dataset`, from which a stream of batches can be obtained.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def batch(batchSize: Double): Dataset[TensorContainer] = js.native
     def batch(batchSize: Double, smallLastBatch: Boolean): Dataset[TensorContainer] = js.native
     
@@ -90,8 +91,9 @@ object datasetMod extends js.Object {
       *
       * @param dataset A `Dataset` to be concatenated onto this one.
       * @returns A `Dataset`.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def concatenate(dataset: Dataset[T]): Dataset[T] = js.native
     
     /**
@@ -107,8 +109,9 @@ object datasetMod extends js.Object {
       * `Promise` for one.
       *
       * @returns A `Dataset` of elements for which the predicate was true.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def filter(predicate: js.Function1[/* value */ T, Boolean]): Dataset[T] = js.native
     
     /**
@@ -124,8 +127,9 @@ object datasetMod extends js.Object {
       *
       * @param f A function to apply to each dataset element.
       * @returns A `Promise` that resolves after all elements have been processed.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def forEachAsync(f: js.Function1[/* input */ T, Unit]): js.Promise[Unit] = js.native
     
     def iterator(): js.Promise[LazyIterator[T]] = js.native
@@ -142,8 +146,9 @@ object datasetMod extends js.Object {
       *   dataset element.
       *
       * @returns A `Dataset` of transformed elements.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def map[O /* <: TensorContainer */](transform: js.Function1[/* value */ T, O]): Dataset[O] = js.native
     
     /**
@@ -166,8 +171,9 @@ object datasetMod extends js.Object {
       *   `map()` case).
       *
       * @returns A `Dataset` of transformed elements.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def mapAsync[O /* <: TensorContainer */](transform: js.Function1[/* value */ T, js.Promise[O]]): Dataset[O] = js.native
     
     /**
@@ -176,8 +182,9 @@ object datasetMod extends js.Object {
       * @param bufferSize: An integer specifying the number of elements to be
       *   prefetched.
       * @returns A `Dataset`.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def prefetch(bufferSize: Double): Dataset[T] = js.native
     
     /**
@@ -195,8 +202,9 @@ object datasetMod extends js.Object {
       *   the dataset should be repeated. The default behavior (if `count` is
       *   `undefined` or negative) is for the dataset be repeated indefinitely.
       * @returns A `Dataset`.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def repeat(): Dataset[T] = js.native
     def repeat(count: Double): Dataset[T] = js.native
     
@@ -218,8 +226,9 @@ object datasetMod extends js.Object {
       *   it is iterated over. If false, elements will be returned in the same
       *   shuffled order on each iteration. (Defaults to `true`.)
       * @returns A `Dataset`.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def shuffle(bufferSize: Double): Dataset[T] = js.native
     def shuffle(bufferSize: Double, seed: js.UndefOr[scala.Nothing], reshuffleEachIteration: Boolean): Dataset[T] = js.native
     def shuffle(bufferSize: Double, seed: String): Dataset[T] = js.native
@@ -241,8 +250,9 @@ object datasetMod extends js.Object {
       *   is `undefined` or negative, skips the entire dataset.
       *
       * @returns A `Dataset`.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def skip(count: Double): Dataset[T] = js.native
     
     /**
@@ -259,8 +269,9 @@ object datasetMod extends js.Object {
       *   `count` is greater than the size of this dataset, the new dataset will
       *   contain all elements of this dataset.
       * @returns A `Dataset`.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def take(count: Double): Dataset[T] = js.native
     
     /**
@@ -276,8 +287,9 @@ object datasetMod extends js.Object {
       *
       * @returns A Promise for an array of elements, which will resolve
       *   when a new stream has been obtained and fully consumed.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def toArray(): js.Promise[js.Array[T]] = js.native
     
     /**

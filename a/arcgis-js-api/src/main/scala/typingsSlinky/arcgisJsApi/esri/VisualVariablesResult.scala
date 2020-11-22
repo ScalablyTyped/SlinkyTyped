@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VisualVariablesResult extends Object {
   
   /**
-    * Authoring information related to the creation of the visual variables. This includes inforamation related to UI inputs from sliders and selected themes.
+    * Authoring information related to the creation of the visual variables.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-univariateColorSize.html#VisualVariablesResult)
     */
@@ -38,7 +38,7 @@ trait VisualVariablesResult extends Object {
   var color: VisualVariablesResultColor = js.native
   
   /**
-    * Indicates whether default values were used in the absence of sufficient data and/or statistics from the layer. Default values are typically used when all features have the same field value or no value at all.
+    * Indicates whether default values were used in the absence of sufficient data and/or statistics from the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-univariateColorSize.html#VisualVariablesResult)
     */

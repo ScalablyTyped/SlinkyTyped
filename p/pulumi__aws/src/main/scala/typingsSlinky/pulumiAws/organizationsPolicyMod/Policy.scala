@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.organizationsPolicyMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -43,7 +44,12 @@ class Policy protected () extends CustomResource {
   val name: Output_[String] = js.native
   
   /**
-    * The type of policy to create. Valid values are `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY` (SCP), and `TAG_POLICY`. Defaults to `SERVICE_CONTROL_POLICY`.
+    * Key-value map of resource tags.
+    */
+  val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
+  
+  /**
+    * The type of policy to create. Valid values are `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY` (SCP), and `TAG_POLICY`. Defaults to `SERVICE_CONTROL_POLICY`.
     */
   val `type`: Output_[js.UndefOr[String]] = js.native
 }

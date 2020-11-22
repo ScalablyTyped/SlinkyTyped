@@ -18,7 +18,7 @@ trait Webcam
   def componentDidMount_MWebcam(): Unit = js.native
   
   @JSName("componentDidUpdate")
-  def componentDidUpdate_MWebcam(nextProps: js.Any): Unit = js.native
+  def componentDidUpdate_MWebcam(nextProps: WebcamProps): Unit = js.native
   
   @JSName("componentWillUnmount")
   def componentWillUnmount_MWebcam(): Unit = js.native
@@ -38,6 +38,8 @@ trait Webcam
   var stopAndCleanup: js.Any = js.native
   
   var stream: MediaStream | Null = js.native
+  
+  var unmounted: js.Any = js.native
   
   var video: HTMLVideoElement | Null = js.native
 }

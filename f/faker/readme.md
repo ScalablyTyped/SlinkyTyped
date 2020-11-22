@@ -1,7 +1,7 @@
 
 # Scala.js typings for faker
 
-Typings are for version 4.1
+Typings are for version 5.1
 
 ## Library description:
 Generate massive amounts of fake contextual data

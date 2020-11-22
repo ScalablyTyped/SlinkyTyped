@@ -63,7 +63,7 @@ trait DescribeBrokerResponse extends js.Object {
   var EncryptionOptions: js.UndefOr[typingsSlinky.awsSdk.mqMod.EncryptionOptions] = js.native
   
   /**
-    * Required. The type of broker engine. Note: Currently, Amazon MQ supports only ACTIVEMQ.
+    * Required. The type of broker engine. Note: Currently, Amazon MQ supports ACTIVEMQ and RABBITMQ.
     */
   var EngineType: js.UndefOr[typingsSlinky.awsSdk.mqMod.EngineType] = js.native
   
@@ -133,7 +133,7 @@ trait DescribeBrokerResponse extends js.Object {
   var StorageType: js.UndefOr[BrokerStorageType] = js.native
   
   /**
-    * The list of groups (2 maximum) that define which subnets and IP ranges the broker can use from different Availability Zones. A SINGLE_INSTANCE deployment requires one subnet (for example, the default subnet). An ACTIVE_STANDBY_MULTI_AZ deployment requires two subnets.
+    * The list of groups that define which subnets and IP ranges the broker can use from different Availability Zones. A SINGLE_INSTANCE deployment requires one subnet (for example, the default subnet). An ACTIVE_STANDBY_MULTI_AZ deployment (ACTIVEMQ) requires two subnets. A CLUSTER_MULTI_AZ deployment (RABBITMQ) has no subnet requirements when deployed with public accessibility, deployment without public accessibility requires at least one subnet.
     */
   var SubnetIds: js.UndefOr[listOfString] = js.native
   
@@ -143,7 +143,7 @@ trait DescribeBrokerResponse extends js.Object {
   var Tags: js.UndefOr[mapOfString] = js.native
   
   /**
-    * The list of all ActiveMQ usernames for the specified broker.
+    * The list of all broker usernames for the specified broker.
     */
   var Users: js.UndefOr[listOfUserSummary] = js.native
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DisassociateConnectorRequest extends js.Object {
   
   /**
-    * The identifier of the connector.
+    * The ID of the connector.
     */
   var connectorId: ConnectorId = js.native
 }

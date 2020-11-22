@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "socketty"
-version := "v0.2.2-dt-20200515Z-a51653"
+version := "v0.2.2-dt-20201002Z-a51653"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

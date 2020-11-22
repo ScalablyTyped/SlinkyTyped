@@ -10,4 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object beginTransaction extends js.Object {
   
   def apply(model: IAbstractModel): Transaction = js.native
+  def apply(model: IAbstractModel, options: ITransactionOptions): Transaction = js.native
 }

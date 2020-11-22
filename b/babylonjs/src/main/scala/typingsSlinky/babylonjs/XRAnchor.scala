@@ -10,18 +10,13 @@ trait XRAnchor extends js.Object {
   
   var anchorSpace: EventTarget = js.native
   
-  def detach(): Unit = js.native
-  
-  // remove?
-  var id: js.UndefOr[String] = js.native
-  
-  var lastChangedTime: Double = js.native
+  def delete(): Unit = js.native
 }
 object XRAnchor {
   
   @scala.inline
-  def apply(anchorSpace: EventTarget, detach: () => Unit, lastChangedTime: Double): XRAnchor = {
-    val __obj = js.Dynamic.literal(anchorSpace = anchorSpace.asInstanceOf[js.Any], detach = js.Any.fromFunction0(detach), lastChangedTime = lastChangedTime.asInstanceOf[js.Any])
+  def apply(anchorSpace: EventTarget, delete: () => Unit): XRAnchor = {
+    val __obj = js.Dynamic.literal(anchorSpace = anchorSpace.asInstanceOf[js.Any], delete = js.Any.fromFunction0(delete))
     __obj.asInstanceOf[XRAnchor]
   }
   
@@ -44,15 +39,6 @@ object XRAnchor {
     def setAnchorSpace(value: EventTarget): Self = this.set("anchorSpace", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDetach(value: () => Unit): Self = this.set("detach", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setLastChangedTime(value: Double): Self = this.set("lastChangedTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteId: Self = this.set("id", js.undefined)
+    def setDelete(value: () => Unit): Self = this.set("delete", js.Any.fromFunction0(value))
   }
 }

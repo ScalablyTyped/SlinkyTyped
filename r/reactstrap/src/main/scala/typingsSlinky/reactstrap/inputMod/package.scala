@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object inputMod {
   
-  type Input[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.inputMod.InputProps]
+  type Input = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.inputMod.InputProps]
 }

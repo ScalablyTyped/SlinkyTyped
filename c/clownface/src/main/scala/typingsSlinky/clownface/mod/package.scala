@@ -6,22 +6,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type AddCallback[D /* <: typingsSlinky.rdfJs.mod.DatasetCore[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad] */, X /* <: typingsSlinky.rdfJs.mod.Term */] = js.Function1[/* added */ typingsSlinky.clownface.mod.Clownface[X, D], scala.Unit]
+  type AddCallback[D /* <: typingsSlinky.rdfJs.mod.DatasetCore[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad] */, X /* <: typingsSlinky.rdfJs.mod.Term */] = js.Function1[/* added */ typingsSlinky.clownface.mod.AnyPointer[X, D], scala.Unit]
   
   type AnyContext = js.UndefOr[typingsSlinky.rdfJs.mod.Term | js.Array[typingsSlinky.rdfJs.mod.Term]]
   
-  type Iteratee[T /* <: typingsSlinky.clownface.mod.AnyContext */, D /* <: typingsSlinky.rdfJs.mod.DatasetCore[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad] */] = typingsSlinky.clownface.mod.Clownface[
+  type GraphPointer[T /* <: typingsSlinky.rdfJs.mod.Term */, D /* <: typingsSlinky.rdfJs.mod.DatasetCore[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad] */] = typingsSlinky.clownface.mod.AnyPointer[T, D]
+  
+  type Iteratee[T /* <: typingsSlinky.clownface.mod.AnyContext */, D /* <: typingsSlinky.rdfJs.mod.DatasetCore[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad] */] = typingsSlinky.clownface.mod.AnyPointer[
     (/* import warning: importer.ImportType#apply Failed type conversion: T[0] */ js.Any) | T, 
     D
   ]
   
-  type SafeClownface[T /* <: typingsSlinky.rdfJs.mod.Term */, D /* <: typingsSlinky.rdfJs.mod.DatasetCore[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad] */] = typingsSlinky.clownface.mod.Clownface[T | js.Array[T], D]
-  
-  type SingleContextClownface[T /* <: typingsSlinky.rdfJs.mod.Term */, D /* <: typingsSlinky.rdfJs.mod.DatasetCore[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad] */] = typingsSlinky.clownface.mod.Clownface[T, D]
+  type MultiPointer[T /* <: typingsSlinky.rdfJs.mod.Term */, D /* <: typingsSlinky.rdfJs.mod.DatasetCore[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad] */] = typingsSlinky.clownface.mod.AnyPointer[T | js.Array[T], D]
   
   type SingleOrArray[T] = T | js.Array[T]
   
-  type SingleOrArrayOfTerms[X /* <: typingsSlinky.rdfJs.mod.Term */] = typingsSlinky.clownface.mod.SingleOrArray[X] | (typingsSlinky.clownface.mod.SafeClownface[
+  type SingleOrArrayOfTerms[X /* <: typingsSlinky.rdfJs.mod.Term */] = typingsSlinky.clownface.mod.SingleOrArray[X] | (typingsSlinky.clownface.mod.MultiPointer[
     X, 
     typingsSlinky.rdfJs.mod.DatasetCore[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad]
   ])
@@ -30,7 +30,7 @@ package object mod {
   
   type SingleOrOneElementArray[T] = T | js.Array[T]
   
-  type TermOrClownface[X /* <: typingsSlinky.rdfJs.mod.Term */] = (typingsSlinky.clownface.mod.SafeClownface[
+  type TermOrClownface[X /* <: typingsSlinky.rdfJs.mod.Term */] = (typingsSlinky.clownface.mod.MultiPointer[
     X, 
     typingsSlinky.rdfJs.mod.DatasetCore[typingsSlinky.rdfJs.mod.Quad, typingsSlinky.rdfJs.mod.Quad]
   ]) | X

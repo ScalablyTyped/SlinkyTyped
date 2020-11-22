@@ -8,6 +8,7 @@ import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.mini
+import typingsSlinky.baseui.timepickerMod.TimePickerOverrides
 import typingsSlinky.baseui.timepickerMod.TimePickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -43,7 +44,7 @@ object TimePicker {
     def onChange(value: /* args */ js.Date => _): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def overrides(value: typingsSlinky.baseui.anon.Select): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: TimePickerOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])

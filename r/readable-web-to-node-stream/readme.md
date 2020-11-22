@@ -1,7 +1,7 @@
 
 # Scala.js typings for readable-web-to-node-stream
 
-Typings are for version 2.0.0
+Typings are for version 3.0.0
 
 ## Library description:
 Converts a Web-API readable-stream into a Node readable-stream.

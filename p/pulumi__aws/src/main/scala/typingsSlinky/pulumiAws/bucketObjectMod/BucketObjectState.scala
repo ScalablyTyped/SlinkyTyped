@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BucketObjectState extends js.Object {
   
   /**
-    * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
+    * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
     */
   val acl: js.UndefOr[Input[String]] = js.native
   
@@ -74,12 +74,6 @@ trait BucketObjectState extends js.Object {
     */
   val key: js.UndefOr[Input[String]] = js.native
   
-  /**
-    * Specifies the AWS KMS Key ARN to use for object encryption.
-    * This value is a fully qualified **ARN** of the KMS Key. If using `aws.kms.Key`,
-    * use the exported `arn` attribute:
-    * `kmsKeyId = "${aws_kms_key.foo.arn}"`
-    */
   val kmsKeyId: js.UndefOr[Input[String]] = js.native
   
   /**

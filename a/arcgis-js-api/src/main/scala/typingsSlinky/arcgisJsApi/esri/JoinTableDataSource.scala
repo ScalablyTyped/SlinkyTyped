@@ -15,12 +15,6 @@ trait JoinTableDataSource extends Object {
   /**
     * The type of join that will be performed.
     *
-    * Possible Value | Description
-    * ---------------|------------
-    * left-outer-join | Unmatched records in the left table source are preserved and joined with `null` values in the right table source.
-    * left-inner-join | Records in the left table source are discarded if they are unmatched with records in the right table source.
-    *
-    *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#JoinTableDataSource)
     */
   var joinType: `left-outer-join` | `left-inner-join` = js.native
@@ -33,7 +27,7 @@ trait JoinTableDataSource extends Object {
   var leftTableKey: String = js.native
   
   /**
-    * The left table for joining to the right table source. This can either be a dynamic map layer or a dynamic data layer. The dynamic data layer may contain another join data source used for nested joining.
+    * The left table for joining to the right table source.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#JoinTableDataSource)
     */
@@ -47,7 +41,7 @@ trait JoinTableDataSource extends Object {
   var rightTableKey: String = js.native
   
   /**
-    * The right table for joining to the left table source. This can either be a dynamic map layer or a dynamic data layer. The dynamic data layer may contain another join data source used for nested joining.
+    * The right table for joining to the left table source.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#JoinTableDataSource)
     */

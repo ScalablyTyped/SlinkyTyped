@@ -59,7 +59,7 @@ object utilsMod extends js.Object {
   
   def objectValues[T](obj: Record[String, T]): js.Array[T] = js.native
   
-  def parseClassName(v: js.Any): String | Null = js.native
+  def parseClassName(v: js.Any): js.Any = js.native
   
   @js.native
   object POSITION extends js.Object {

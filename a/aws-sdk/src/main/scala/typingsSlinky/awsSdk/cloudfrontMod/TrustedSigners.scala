@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TrustedSigners extends js.Object {
   
   /**
-    * Specifies whether you want to require viewers to use signed URLs to access the files specified by PathPattern and TargetOriginId.
+    * This field is true if any of the AWS accounts have public keys that CloudFront can use to verify the signatures of signed URLs and signed cookies. If not, this field is false.
     */
   var Enabled: Boolean = js.native
   
   /**
-    *  Optional: A complex type that contains trusted signers for this cache behavior. If Quantity is 0, you can omit Items.
+    * A list of AWS account identifiers.
     */
   var Items: js.UndefOr[AwsAccountNumberList] = js.native
   
   /**
-    * The number of trusted signers for this cache behavior.
+    * The number of AWS accounts in the list.
     */
   var Quantity: integer = js.native
 }

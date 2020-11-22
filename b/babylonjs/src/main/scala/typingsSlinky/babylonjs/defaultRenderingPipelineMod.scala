@@ -10,6 +10,7 @@ import typingsSlinky.babylonjs.fxaaPostProcessMod.FxaaPostProcess
 import typingsSlinky.babylonjs.glowLayerMod.GlowLayer
 import typingsSlinky.babylonjs.grainPostProcessMod.GrainPostProcess
 import typingsSlinky.babylonjs.imageProcessingPostProcessMod.ImageProcessingPostProcess
+import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.postProcessRenderPipelineMod.PostProcessRenderPipeline
 import typingsSlinky.babylonjs.sceneMod.IDisposable
 import typingsSlinky.babylonjs.sceneMod.Scene
@@ -401,6 +402,11 @@ object defaultRenderingPipelineMod extends js.Object {
       * If image processing is enabled.
       */
     def imageProcessingEnabled_=(enabled: Boolean): Unit = js.native
+    
+    /**
+      * This is triggered each time the pipeline has been built.
+      */
+    var onBuildObservable: Observable[DefaultRenderingPipeline] = js.native
     
     /**
       * Force the compilation of the entire pipeline.

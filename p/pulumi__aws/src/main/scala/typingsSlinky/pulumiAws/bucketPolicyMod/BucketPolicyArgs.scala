@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.bucketPolicyMod
 
-import typingsSlinky.pulumiAws.documentsMod.PolicyDocument
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,19 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BucketPolicyArgs extends js.Object {
   
   /**
-    * The name of the bucket to which to apply the policy.
+    * Amazon Resource Name (ARN) of the bucket.
     */
   val bucket: Input[String] = js.native
   
-  /**
-    * The text of the policy.
-    */
-  val policy: Input[String | PolicyDocument] = js.native
+  val policy: Input[String] = js.native
 }
 object BucketPolicyArgs {
   
   @scala.inline
-  def apply(bucket: Input[String], policy: Input[String | PolicyDocument]): BucketPolicyArgs = {
+  def apply(bucket: Input[String], policy: Input[String]): BucketPolicyArgs = {
     val __obj = js.Dynamic.literal(bucket = bucket.asInstanceOf[js.Any], policy = policy.asInstanceOf[js.Any])
     __obj.asInstanceOf[BucketPolicyArgs]
   }
@@ -46,6 +42,6 @@ object BucketPolicyArgs {
     def setBucket(value: Input[String]): Self = this.set("bucket", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPolicy(value: Input[String | PolicyDocument]): Self = this.set("policy", value.asInstanceOf[js.Any])
+    def setPolicy(value: Input[String]): Self = this.set("policy", value.asInstanceOf[js.Any])
   }
 }

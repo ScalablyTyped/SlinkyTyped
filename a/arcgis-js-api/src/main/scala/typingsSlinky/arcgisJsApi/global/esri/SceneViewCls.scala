@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("__esri.SceneView")
 @js.native
 /**
-  * A SceneView displays a 3D view of a [Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html) or [WebScene](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html) instance using WebGL. To render a map and its layers in 2D, see the documentation for [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html). For a general overview of views, see [View](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html).
+  * A SceneView displays a 3D view of a [Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html) or [WebScene](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html) instance using WebGL.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html)
   */

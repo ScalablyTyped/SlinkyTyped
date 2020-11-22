@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ExtensionProperty extends DirectoryObject {
   
   // Display name of the application object on which this extension property is defined. Read-only.
-  var appDisplayName: js.UndefOr[String] = js.native
+  var appDisplayName: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable.
@@ -18,7 +18,7 @@ trait ExtensionProperty extends DirectoryObject {
   var dataType: js.UndefOr[String] = js.native
   
   // Indicates if this extension property was sycned from onpremises directory using Azure AD Connect. Read-only.
-  var isSyncedFromOnPremises: js.UndefOr[Boolean] = js.native
+  var isSyncedFromOnPremises: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // Name of the extension property. Not nullable.
   var name: js.UndefOr[String] = js.native
@@ -50,10 +50,13 @@ object ExtensionProperty {
     }
     
     @scala.inline
-    def setAppDisplayName(value: String): Self = this.set("appDisplayName", value.asInstanceOf[js.Any])
+    def setAppDisplayName(value: NullableOption[String]): Self = this.set("appDisplayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAppDisplayName: Self = this.set("appDisplayName", js.undefined)
+    
+    @scala.inline
+    def setAppDisplayNameNull: Self = this.set("appDisplayName", null)
     
     @scala.inline
     def setDataType(value: String): Self = this.set("dataType", value.asInstanceOf[js.Any])
@@ -62,10 +65,13 @@ object ExtensionProperty {
     def deleteDataType: Self = this.set("dataType", js.undefined)
     
     @scala.inline
-    def setIsSyncedFromOnPremises(value: Boolean): Self = this.set("isSyncedFromOnPremises", value.asInstanceOf[js.Any])
+    def setIsSyncedFromOnPremises(value: NullableOption[Boolean]): Self = this.set("isSyncedFromOnPremises", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIsSyncedFromOnPremises: Self = this.set("isSyncedFromOnPremises", js.undefined)
+    
+    @scala.inline
+    def setIsSyncedFromOnPremisesNull: Self = this.set("isSyncedFromOnPremises", null)
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

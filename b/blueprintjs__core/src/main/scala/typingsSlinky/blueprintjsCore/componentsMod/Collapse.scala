@@ -21,5 +21,5 @@ object Collapse extends js.Object {
   
   var displayName: String = js.native
   
-  def getDerivedStateFromProps(props: ICollapseProps, state: ICollapseState): AnimationState | Height = js.native
+  def getDerivedStateFromProps(props: ICollapseProps, state: ICollapseState): AnimationState | Height | Null = js.native
 }

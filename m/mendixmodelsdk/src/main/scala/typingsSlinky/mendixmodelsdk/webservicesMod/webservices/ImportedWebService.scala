@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.webservicesMod.webservices
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.Document
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
@@ -11,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/consumed-web-services relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/consumed-web-services relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -35,9 +34,6 @@ class ImportedWebService protected () extends Document {
   
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MImportedWebService: FolderBase = js.native
-  
-  @JSName("model")
-  var model_FImportedWebService: IModel = js.native
   
   /**
     * In version 6.4.1: introduced

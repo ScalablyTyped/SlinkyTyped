@@ -1,7 +1,6 @@
 package typingsSlinky.reactMdAutocomplete
 
 import org.scalajs.dom.raw.HTMLInputElement
-import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
@@ -18,10 +17,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  /**
-    * An AutoComplete is an accessible combobox widget that allows for real-time
-    * suggestions as the user types.
-    */
   val AutoComplete: ForwardRefExoticComponent[AutoCompleteProps with RefAttributes[HTMLInputElement]] = js.native
   
   def DEFAULT_GET_RESULT_ID(id: String, index: Double): String = js.native
@@ -30,15 +25,35 @@ object mod extends js.Object {
   
   def DEFAULT_GET_RESULT_VALUE(datum: AutoCompleteData, valueKey: String): String = js.native
   
-  /**
-    * The `HighlightedResult` component can be used to bold specific letters
-    * within the `children` if the `children` is a string.
-    */
-  val HighlightedResult: ReactComponentClass[HighlightedResultProps] = js.native
-  
   def isResultOf[T /* <: js.Object */](datum: AutoCompleteData): /* is T */ Boolean = js.native
   
   def useAutoComplete(
     hasSuggestionsIdDataPropValueDefaultValueFilterFilterOptionsFilterOnNoValueValueKeyGetResultIdGetResultValueOnBlurOnFocusOnClickOnChangeOnKeyDownForwardedRefOnAutoCompleteClearOnAutoCompleteAnchorXMarginYMarginVwMarginVhMarginTransformOriginListboxWidthListboxStylePreventOverlapDisableSwappingDisableVHBoundsCloseOnResizeCloseOnScrollDisableShowOnFocusIsListAutocompleteIsInlineAutocomplete: AutoCompleteOptions
   ): AutoCompleteReturnValue = js.native
+  
+  @js.native
+  object HighlightedResult extends js.Object {
+    
+    def apply(hasIdStyleClassNameEnabledValueChildrenRepeatableIndex: HighlightedResultProps): ReactElement = js.native
+    
+    @js.native
+    object propTypes extends js.Object {
+      
+      var children: js.Any = js.native
+      
+      var className: js.Any = js.native
+      
+      var enabled: js.Any = js.native
+      
+      var id: js.Any = js.native
+      
+      var index: js.Any = js.native
+      
+      var repeatable: js.Any = js.native
+      
+      var style: js.Any = js.native
+      
+      var value: js.Any = js.native
+    }
+  }
 }

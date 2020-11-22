@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -10,6 +11,7 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayout
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallArgument
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,18 +20,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Interfaces and instance classes for types from the Mendix sub meta model `Pages`.
   */
 /**
-  * See: {@link https://docs.mendix.com/refguide7/pages relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/pages relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.Widget")
 @js.native
-abstract class Widget protected () extends Element {
+abstract class Widget protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -93,9 +95,6 @@ abstract class Widget protected () extends Element {
   def containerAsWebLayoutContent: WebLayoutContent = js.native
   
   def containerAsWidgetValue: WidgetValue = js.native
-  
-  @JSName("model")
-  var model_FWidget: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

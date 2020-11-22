@@ -12,8 +12,9 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.IFocusZoneProps
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
+import typingsSlinky.officeUiFabricReact.anon.ContainsFocus
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
-import typingsSlinky.officeUiFabricReact.calloutTypesMod.Target
 import typingsSlinky.officeUiFabricReact.contextualMenuClassNamesMod.IContextualMenuClassNames
 import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuItemProps
 import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenu
@@ -26,7 +27,7 @@ import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.uifabricReactHooks.useTargetMod.Target
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import scala.scalajs.js
@@ -160,6 +161,9 @@ object ContextualMenuBase {
     def onRenderSubMenu(
       value: (/* props */ js.UndefOr[IContextualMenuProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IContextualMenuProps], ReactElement | Null]]) => ReactElement | Null
     ): this.type = set("onRenderSubMenu", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def onRestoreFocus(value: /* options */ ContainsFocus => Unit): this.type = set("onRestoreFocus", js.Any.fromFunction1(value))
     
     @scala.inline
     def responsiveMode(value: ResponsiveMode): this.type = set("responsiveMode", value.asInstanceOf[js.Any])

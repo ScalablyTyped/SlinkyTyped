@@ -8,12 +8,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Widget extends DOMComponent {
   
-  /** @name Widget.focus() */
+  /**
+    * [descr:Widget.focus()]
+    */
   def focus(): Unit = js.native
   
-  /** @name Widget.registerKeyHandler(key, handler) */
+  /**
+    * [descr:Widget.registerKeyHandler(key, handler)]
+    */
   def registerKeyHandler(key: String, handler: js.Function): Unit = js.native
   
-  /** @name Widget.repaint() */
+  /**
+    * [descr:Widget.repaint()]
+    */
   def repaint(): Unit = js.native
 }

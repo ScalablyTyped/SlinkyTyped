@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseFirestoreTypes.mod
 
-import typingsSlinky.firebaseFirestoreTypes.anon.CompleteError
+import typingsSlinky.firebaseFirestoreTypes.anon.Next
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +26,7 @@ class Query[T] protected () extends js.Object {
   
   def limitToLast(limit: Double): Query[T] = js.native
   
-  def onSnapshot(observer: CompleteError[T]): js.Function0[Unit] = js.native
+  def onSnapshot(observer: Next[T]): js.Function0[Unit] = js.native
   def onSnapshot(onNext: js.Function1[/* snapshot */ QuerySnapshot[T], Unit]): js.Function0[Unit] = js.native
   def onSnapshot(
     onNext: js.Function1[/* snapshot */ QuerySnapshot[T], Unit],
@@ -35,14 +35,14 @@ class Query[T] protected () extends js.Object {
   ): js.Function0[Unit] = js.native
   def onSnapshot(
     onNext: js.Function1[/* snapshot */ QuerySnapshot[T], Unit],
-    onError: js.Function1[/* error */ js.Error, Unit]
+    onError: js.Function1[/* error */ FirestoreError, Unit]
   ): js.Function0[Unit] = js.native
   def onSnapshot(
     onNext: js.Function1[/* snapshot */ QuerySnapshot[T], Unit],
-    onError: js.Function1[/* error */ js.Error, Unit],
+    onError: js.Function1[/* error */ FirestoreError, Unit],
     onCompletion: js.Function0[Unit]
   ): js.Function0[Unit] = js.native
-  def onSnapshot(options: SnapshotListenOptions, observer: CompleteError[T]): js.Function0[Unit] = js.native
+  def onSnapshot(options: SnapshotListenOptions, observer: Next[T]): js.Function0[Unit] = js.native
   def onSnapshot(options: SnapshotListenOptions, onNext: js.Function1[/* snapshot */ QuerySnapshot[T], Unit]): js.Function0[Unit] = js.native
   def onSnapshot(
     options: SnapshotListenOptions,
@@ -53,12 +53,12 @@ class Query[T] protected () extends js.Object {
   def onSnapshot(
     options: SnapshotListenOptions,
     onNext: js.Function1[/* snapshot */ QuerySnapshot[T], Unit],
-    onError: js.Function1[/* error */ js.Error, Unit]
+    onError: js.Function1[/* error */ FirestoreError, Unit]
   ): js.Function0[Unit] = js.native
   def onSnapshot(
     options: SnapshotListenOptions,
     onNext: js.Function1[/* snapshot */ QuerySnapshot[T], Unit],
-    onError: js.Function1[/* error */ js.Error, Unit],
+    onError: js.Function1[/* error */ FirestoreError, Unit],
     onCompletion: js.Function0[Unit]
   ): js.Function0[Unit] = js.native
   

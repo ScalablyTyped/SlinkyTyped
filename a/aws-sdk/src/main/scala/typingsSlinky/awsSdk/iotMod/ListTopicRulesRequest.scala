@@ -13,7 +13,7 @@ trait ListTopicRulesRequest extends js.Object {
   var maxResults: js.UndefOr[TopicRuleMaxResults] = js.native
   
   /**
-    * A token used to retrieve the next value.
+    * To retrieve the next set of results, the nextToken value from a previous response; otherwise null to receive the first set of results.
     */
   var nextToken: js.UndefOr[NextToken] = js.native
   

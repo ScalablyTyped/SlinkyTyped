@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object ^ extends js.Object {
   
   /**
-    * @param strict Strict parsing requires that the format and input match exactly, including delimeters.
+    * @param strict Strict parsing requires that the format and input match exactly, including delimiters.
     * Strict parsing is frequently the best parsing option. For more information about choosing strict vs
     * forgiving parsing, see the [parsing guide](https://momentjs.com/guides/#/parsing/).
     */
@@ -40,7 +40,11 @@ object ^ extends js.Object {
   
   var defaultFormatUtc: String = js.native
   
+  var deprecationHandler: (js.Function2[/* name */ String | Unit, /* msg */ String, Unit]) | Unit = js.native
+  
   var fn: Moment = js.native
+  
+  var suppressDeprecationWarnings: Boolean = js.native
   
   var version: String = js.native
 }

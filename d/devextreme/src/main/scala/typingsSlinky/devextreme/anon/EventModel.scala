@@ -2,7 +2,7 @@ package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxHtmlEditor
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxDropDownButton
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EventModel extends js.Object {
   
-  var component: js.UndefOr[dxHtmlEditor] = js.native
+  var component: js.UndefOr[dxDropDownButton] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -42,7 +42,7 @@ object EventModel {
     }
     
     @scala.inline
-    def setComponent(value: dxHtmlEditor): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxDropDownButton): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)

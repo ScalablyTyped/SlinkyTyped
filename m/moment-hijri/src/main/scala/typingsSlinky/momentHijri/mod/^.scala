@@ -39,7 +39,11 @@ object ^ extends js.Object {
   
   var defaultFormatUtc: String = js.native
   
+  var deprecationHandler: (js.Function2[/* name */ String | Unit, /* msg */ String, Unit]) | Unit = js.native
+  
   var fn: Moment = js.native
+  
+  var suppressDeprecationWarnings: Boolean = js.native
   
   var version: String = js.native
 }

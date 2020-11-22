@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BackupPlanInput extends js.Object {
   
   /**
+    * Specifies a list of BackupOptions for each resource type. These settings are only available for Windows VSS backup jobs.
+    */
+  var AdvancedBackupSettings: js.UndefOr[typingsSlinky.awsSdk.backupMod.AdvancedBackupSettings] = js.native
+  
+  /**
     * The optional display name of a backup plan.
     */
   var BackupPlanName: typingsSlinky.awsSdk.backupMod.BackupPlanName = js.native
@@ -48,5 +53,14 @@ object BackupPlanInput {
     
     @scala.inline
     def setRules(value: BackupRulesInput): Self = this.set("Rules", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAdvancedBackupSettingsVarargs(value: AdvancedBackupSetting*): Self = this.set("AdvancedBackupSettings", js.Array(value :_*))
+    
+    @scala.inline
+    def setAdvancedBackupSettings(value: AdvancedBackupSettings): Self = this.set("AdvancedBackupSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdvancedBackupSettings: Self = this.set("AdvancedBackupSettings", js.undefined)
   }
 }

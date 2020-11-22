@@ -1,7 +1,7 @@
 
 # Scala.js typings for vscode
 
-Typings are for version 1.47
+Typings are for version 1.51
 
 ## Library description:
 ## ⚠️ Use @types/vscode and vscode-test instead ⚠️

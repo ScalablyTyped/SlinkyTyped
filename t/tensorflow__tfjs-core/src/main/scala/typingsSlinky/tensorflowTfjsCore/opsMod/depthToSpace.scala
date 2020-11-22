@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsCore.opsMod
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike4D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCHW
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NHWC
 import scala.scalajs.js

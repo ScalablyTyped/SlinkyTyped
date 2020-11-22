@@ -1,9 +1,11 @@
 package typingsSlinky.antd.draggerMod
 
+import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("antd/lib/upload/Dragger", JSImport.Default)
 @js.native
-class default () extends Dragger
+object default extends TopLevel[ReactComponentClass[DraggerProps]]

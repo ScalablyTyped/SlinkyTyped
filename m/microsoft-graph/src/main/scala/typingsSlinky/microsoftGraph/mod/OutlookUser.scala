@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OutlookUser extends Entity {
   
   // A list of categories defined for the user.
-  var masterCategories: js.UndefOr[js.Array[OutlookCategory]] = js.native
+  var masterCategories: js.UndefOr[NullableOption[js.Array[OutlookCategory]]] = js.native
 }
 object OutlookUser {
   
@@ -37,9 +37,12 @@ object OutlookUser {
     def setMasterCategoriesVarargs(value: OutlookCategory*): Self = this.set("masterCategories", js.Array(value :_*))
     
     @scala.inline
-    def setMasterCategories(value: js.Array[OutlookCategory]): Self = this.set("masterCategories", value.asInstanceOf[js.Any])
+    def setMasterCategories(value: NullableOption[js.Array[OutlookCategory]]): Self = this.set("masterCategories", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMasterCategories: Self = this.set("masterCategories", js.undefined)
+    
+    @scala.inline
+    def setMasterCategoriesNull: Self = this.set("masterCategories", null)
   }
 }

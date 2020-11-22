@@ -17,7 +17,7 @@ trait decoratorsPropertyPropertyMetadata extends Object {
   var aliasOf: js.UndefOr[String] = js.native
   
   /**
-    * The function to use to [autocast](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#autocasting) the property. Alternative to define the `type`. The function is called with the value set by the user and should return the cast value.
+    * The function to use to [autocast](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#autocasting) the property.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-accessorSupport-decorators.html#property)
     */
@@ -27,8 +27,6 @@ trait decoratorsPropertyPropertyMetadata extends Object {
     * Indicates whether the property can be set during construction but is otherwise read-only.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-accessorSupport-decorators.html#property)
-    *
-    * @default false
     */
   var constructOnly: js.UndefOr[Boolean] = js.native
   
@@ -43,8 +41,6 @@ trait decoratorsPropertyPropertyMetadata extends Object {
     * Indicates whether the property is read-only.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-accessorSupport-decorators.html#property)
-    *
-    * @default false
     */
   var readOnly: js.UndefOr[Boolean] = js.native
   

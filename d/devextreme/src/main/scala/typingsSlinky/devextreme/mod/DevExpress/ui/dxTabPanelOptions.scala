@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.anon.ElementEventItemData
 import typingsSlinky.devextreme.anon.ElementItemDataItemElement
+import typingsSlinky.devextreme.anon.EventItemDataItemElement
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
@@ -14,13 +14,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTabPanelOptions extends dxMultiViewOptions[dxTabPanel] {
   
-  /** @name dxTabPanel.Options.dataSource */
+  /**
+    * [descr:dxTabPanel.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxTabPanelOptions: js.UndefOr[
     String | (js.Array[String | dxTabPanelItem | _]) | DataSource | DataSourceOptions
   ] = js.native
   
-  /** @name dxTabPanel.Options.itemTitleTemplate */
+  /**
+    * [descr:dxTabPanel.Options.itemTitleTemplate]
+    */
   var itemTitleTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -30,29 +34,45 @@ trait dxTabPanelOptions extends dxMultiViewOptions[dxTabPanel] {
     ])
   ] = js.native
   
-  /** @name dxTabPanel.Options.items */
+  /**
+    * [descr:dxTabPanel.Options.items]
+    */
   @JSName("items")
   var items_dxTabPanelOptions: js.UndefOr[js.Array[String | dxTabPanelItem | _]] = js.native
   
-  /** @name dxTabPanel.Options.onTitleClick */
-  var onTitleClick: js.UndefOr[(js.Function1[/* e */ ElementEventItemData, _]) | String] = js.native
+  /**
+    * [descr:dxTabPanel.Options.onTitleClick]
+    */
+  var onTitleClick: js.UndefOr[(js.Function1[/* e */ EventItemDataItemElement, _]) | String] = js.native
   
-  /** @name dxTabPanel.Options.onTitleHold */
-  var onTitleHold: js.UndefOr[js.Function1[/* e */ ElementEventItemData, _]] = js.native
+  /**
+    * [descr:dxTabPanel.Options.onTitleHold]
+    */
+  var onTitleHold: js.UndefOr[js.Function1[/* e */ EventItemDataItemElement, _]] = js.native
   
-  /** @name dxTabPanel.Options.onTitleRendered */
+  /**
+    * [descr:dxTabPanel.Options.onTitleRendered]
+    */
   var onTitleRendered: js.UndefOr[js.Function1[/* e */ ElementItemDataItemElement, _]] = js.native
   
-  /** @name dxTabPanel.Options.repaintChangesOnly */
+  /**
+    * [descr:dxTabPanel.Options.repaintChangesOnly]
+    */
   var repaintChangesOnly: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTabPanel.Options.scrollByContent */
+  /**
+    * [descr:dxTabPanel.Options.scrollByContent]
+    */
   var scrollByContent: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTabPanel.Options.scrollingEnabled */
+  /**
+    * [descr:dxTabPanel.Options.scrollingEnabled]
+    */
   var scrollingEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTabPanel.Options.showNavButtons */
+  /**
+    * [descr:dxTabPanel.Options.showNavButtons]
+    */
   var showNavButtons: js.UndefOr[Boolean] = js.native
 }
 object dxTabPanelOptions {
@@ -118,16 +138,16 @@ object dxTabPanelOptions {
     def deleteItems: Self = this.set("items", js.undefined)
     
     @scala.inline
-    def setOnTitleClickFunction1(value: /* e */ ElementEventItemData => _): Self = this.set("onTitleClick", js.Any.fromFunction1(value))
+    def setOnTitleClickFunction1(value: /* e */ EventItemDataItemElement => _): Self = this.set("onTitleClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnTitleClick(value: (js.Function1[/* e */ ElementEventItemData, _]) | String): Self = this.set("onTitleClick", value.asInstanceOf[js.Any])
+    def setOnTitleClick(value: (js.Function1[/* e */ EventItemDataItemElement, _]) | String): Self = this.set("onTitleClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnTitleClick: Self = this.set("onTitleClick", js.undefined)
     
     @scala.inline
-    def setOnTitleHold(value: /* e */ ElementEventItemData => _): Self = this.set("onTitleHold", js.Any.fromFunction1(value))
+    def setOnTitleHold(value: /* e */ EventItemDataItemElement => _): Self = this.set("onTitleHold", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnTitleHold: Self = this.set("onTitleHold", js.undefined)

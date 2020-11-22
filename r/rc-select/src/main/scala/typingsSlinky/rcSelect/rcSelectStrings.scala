@@ -21,6 +21,12 @@ object rcSelectStrings {
   def input: input = "input".asInstanceOf[input]
   
   @scala.inline
+  def keyboard: keyboard = "keyboard".asInstanceOf[keyboard]
+  
+  @scala.inline
+  def mouse: mouse = "mouse".asInstanceOf[mouse]
+  
+  @scala.inline
   def multiple: multiple = "multiple".asInstanceOf[multiple]
   
   @scala.inline
@@ -46,6 +52,12 @@ object rcSelectStrings {
   
   @js.native
   sealed trait input extends SelectSource
+  
+  @js.native
+  sealed trait keyboard extends js.Object
+  
+  @js.native
+  sealed trait mouse extends js.Object
   
   @js.native
   sealed trait multiple extends Mode

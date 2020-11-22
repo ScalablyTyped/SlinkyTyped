@@ -23,8 +23,14 @@ object sphericalMod extends js.Object {
     
     def makeSafe(): this.type = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var phi: Double = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var radius: Double = js.native
     
     def set(radius: Double, phi: Double, theta: Double): this.type = js.native
@@ -33,6 +39,9 @@ object sphericalMod extends js.Object {
     
     def setFromVector3(v: Vector3): this.type = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var theta: Double = js.native
   }
 }

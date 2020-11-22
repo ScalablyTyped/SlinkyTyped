@@ -13,6 +13,8 @@ class QuestionRadiogroupModel protected () extends QuestionCheckboxBase {
   
   val clearButtonCaption: js.Any = js.native
   
+  def getItemClass(item: js.Any): js.Any = js.native
+  
   val selectedItem: ItemValue = js.native
   
   /**

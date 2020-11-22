@@ -39,30 +39,31 @@ trait AssetContainer extends AbstractScene {
   def instantiateModelsToScene(nameFunction: js.Function1[/* sourceName */ String, String]): InstantiatedEntries = js.native
   def instantiateModelsToScene(nameFunction: js.Function1[/* sourceName */ String, String], cloneMaterials: Boolean): InstantiatedEntries = js.native
   
-  def mergeAnimationsTo(scene: js.UndefOr[scala.Nothing], animatables: js.Array[Animatable]): Unit = js.native
+  def mergeAnimationsTo(scene: js.UndefOr[scala.Nothing], animatables: js.Array[Animatable]): js.Array[AnimationGroup] = js.native
   def mergeAnimationsTo(
     scene: js.UndefOr[scala.Nothing],
     animatables: js.Array[Animatable],
     targetConverter: Nullable[js.Function1[/* target */ _, Nullable[Node]]]
-  ): Unit = js.native
-  def mergeAnimationsTo(scene: Null, animatables: js.Array[Animatable]): Unit = js.native
+  ): js.Array[AnimationGroup] = js.native
+  def mergeAnimationsTo(scene: Null, animatables: js.Array[Animatable]): js.Array[AnimationGroup] = js.native
   def mergeAnimationsTo(
     scene: Null,
     animatables: js.Array[Animatable],
     targetConverter: Nullable[js.Function1[/* target */ _, Nullable[Node]]]
-  ): Unit = js.native
+  ): js.Array[AnimationGroup] = js.native
   /**
-    * Merge animations from this asset container into a scene
+    * Merge animations (direct and animation groups) from this asset container into a scene
     * @param scene is the instance of BABYLON.Scene to append to (default: last created scene)
     * @param animatables set of animatables to retarget to a node from the scene
     * @param targetConverter defines a function used to convert animation targets from the asset container to the scene (default: search node by name)
+    * @returns an array of the new AnimationGroup added to the scene (empty array if none)
     */
-  def mergeAnimationsTo(scene: Scene, animatables: js.Array[Animatable]): Unit = js.native
+  def mergeAnimationsTo(scene: Scene, animatables: js.Array[Animatable]): js.Array[AnimationGroup] = js.native
   def mergeAnimationsTo(
     scene: Scene,
     animatables: js.Array[Animatable],
     targetConverter: Nullable[js.Function1[/* target */ _, Nullable[Node]]]
-  ): Unit = js.native
+  ): js.Array[AnimationGroup] = js.native
   
   /**
     * Removes all the assets contained in the scene and adds them to the container.

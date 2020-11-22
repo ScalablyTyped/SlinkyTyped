@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TimeOffReason extends ChangeTrackedEntity {
   
   // The name of the timeOffReason. Required.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup;
     * phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
     */
-  var iconType: js.UndefOr[TimeOffReasonIconType] = js.native
+  var iconType: js.UndefOr[NullableOption[TimeOffReasonIconType]] = js.native
   
   // Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
-  var isActive: js.UndefOr[Boolean] = js.native
+  var isActive: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object TimeOffReason {
   
@@ -43,21 +43,30 @@ object TimeOffReason {
     }
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
-    def setIconType(value: TimeOffReasonIconType): Self = this.set("iconType", value.asInstanceOf[js.Any])
+    def setDisplayNameNull: Self = this.set("displayName", null)
+    
+    @scala.inline
+    def setIconType(value: NullableOption[TimeOffReasonIconType]): Self = this.set("iconType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIconType: Self = this.set("iconType", js.undefined)
     
     @scala.inline
-    def setIsActive(value: Boolean): Self = this.set("isActive", value.asInstanceOf[js.Any])
+    def setIconTypeNull: Self = this.set("iconType", null)
+    
+    @scala.inline
+    def setIsActive(value: NullableOption[Boolean]): Self = this.set("isActive", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIsActive: Self = this.set("isActive", js.undefined)
+    
+    @scala.inline
+    def setIsActiveNull: Self = this.set("isActive", null)
   }
 }

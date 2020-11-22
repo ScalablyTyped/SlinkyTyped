@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ResizeObserverSize extends js.Object {
   
-  var blockSize: Double = js.native
+  val blockSize: Double = js.native
   
-  var inlineSize: Double = js.native
+  val inlineSize: Double = js.native
 }
 object ResizeObserverSize {
   

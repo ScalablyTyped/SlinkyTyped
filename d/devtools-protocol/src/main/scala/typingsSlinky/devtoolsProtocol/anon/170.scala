@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.ServiceWorker.StartWorkerRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Security.SetOverrideCertificateErrorsRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `170` extends js.Object {
   
-  var paramsType: js.Array[StartWorkerRequest] = js.native
+  var paramsType: js.Array[SetOverrideCertificateErrorsRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `170` {
   
   @scala.inline
-  def apply(paramsType: js.Array[StartWorkerRequest], returnType: Unit): `170` = {
+  def apply(paramsType: js.Array[SetOverrideCertificateErrorsRequest], returnType: Unit): `170` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`170`]
   }
@@ -36,10 +36,10 @@ object `170` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: StartWorkerRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetOverrideCertificateErrorsRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[StartWorkerRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetOverrideCertificateErrorsRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

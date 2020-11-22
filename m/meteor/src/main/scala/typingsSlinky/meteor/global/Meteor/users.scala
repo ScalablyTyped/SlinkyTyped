@@ -9,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSGlobal("Meteor.users")
 @js.native
-object users extends TopLevel[Collection[User]]
+object users extends TopLevel[Collection[User, User]]

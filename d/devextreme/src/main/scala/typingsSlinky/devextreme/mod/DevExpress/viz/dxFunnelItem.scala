@@ -7,34 +7,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFunnelItem extends js.Object {
   
-  /** @name dxFunnelItem.argument */
+  /**
+    * [descr:dxFunnelItem.argument]
+    */
   var argument: js.UndefOr[String | js.Date | Double] = js.native
   
-  /** @name dxFunnelItem.data */
+  /**
+    * [descr:dxFunnelItem.data]
+    */
   var data: js.UndefOr[js.Any] = js.native
   
-  /** @name dxFunnelItem.getColor() */
+  /**
+    * [descr:dxFunnelItem.getColor()]
+    */
   def getColor(): String = js.native
   
-  /** @name dxFunnelItem.hover(state) */
+  /**
+    * [descr:dxFunnelItem.hover(state)]
+    */
   def hover(state: Boolean): Unit = js.native
   
-  /** @name dxFunnelItem.isHovered() */
+  /**
+    * [descr:dxFunnelItem.isHovered()]
+    */
   def isHovered(): Boolean = js.native
   
-  /** @name dxFunnelItem.isSelected() */
+  /**
+    * [descr:dxFunnelItem.isSelected()]
+    */
   def isSelected(): Boolean = js.native
   
-  /** @name dxFunnelItem.percent */
+  /**
+    * [descr:dxFunnelItem.percent]
+    */
   var percent: js.UndefOr[Double] = js.native
   
-  /** @name dxFunnelItem.select(state) */
+  /**
+    * [descr:dxFunnelItem.select(state)]
+    */
   def select(state: Boolean): Unit = js.native
   
-  /** @name dxFunnelItem.showTooltip() */
+  /**
+    * [descr:dxFunnelItem.showTooltip()]
+    */
   def showTooltip(): Unit = js.native
   
-  /** @name dxFunnelItem.value */
+  /**
+    * [descr:dxFunnelItem.value]
+    */
   var value: js.UndefOr[Double] = js.native
 }
 object dxFunnelItem {

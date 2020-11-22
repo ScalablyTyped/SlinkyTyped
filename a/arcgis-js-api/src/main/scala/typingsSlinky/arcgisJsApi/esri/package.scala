@@ -55,6 +55,13 @@ package object esri {
     scala.Unit
   ]
   
+  type BasemapFilter = js.Function3[
+    /* item */ typingsSlinky.arcgisJsApi.esri.Basemap, 
+    /* index */ scala.Double, 
+    /* array */ js.Array[typingsSlinky.arcgisJsApi.esri.Basemap], 
+    scala.Boolean
+  ]
+  
   type BasemapLayerListTriggerActionEventHandler = js.Function1[
     /* event */ typingsSlinky.arcgisJsApi.esri.BasemapLayerListTriggerActionEvent, 
     scala.Unit
@@ -79,6 +86,13 @@ package object esri {
     scala.Unit
   ]
   
+  type BookmarksBookmarkEditEventHandler = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.BookmarksBookmarkEditEvent, scala.Unit]
+  
+  type BookmarksBookmarkSelectEventHandler = js.Function1[
+    /* event */ typingsSlinky.arcgisJsApi.esri.BookmarksBookmarkSelectEvent, 
+    scala.Unit
+  ]
+  
   type BookmarksSelectBookmarkEventHandler = js.Function1[
     /* event */ typingsSlinky.arcgisJsApi.esri.BookmarksSelectBookmarkEvent, 
     scala.Unit
@@ -98,6 +112,8 @@ package object esri {
     /* event */ typingsSlinky.arcgisJsApi.esri.BuildingSceneLayerLayerviewDestroyEvent, 
     scala.Unit
   ]
+  
+  type BuildingSceneLayerViewProperties = typingsSlinky.arcgisJsApi.esri.LayerViewProperties
   
   type ButtonMenuItemClickFunction = js.Function1[/* event */ js.Any, scala.Unit]
   
@@ -260,6 +276,18 @@ package object esri {
     scala.Unit
   ]
   
+  type DateLabelFormatter = js.Function4[
+    /* value */ js.Date | js.Array[js.Date], 
+    /* type */ js.UndefOr[
+      typingsSlinky.arcgisJsApi.arcgisJsApiStrings.min | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.max | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.extent
+    ], 
+    /* element */ js.UndefOr[org.scalajs.dom.raw.HTMLElement], 
+    /* layout */ js.UndefOr[
+      typingsSlinky.arcgisJsApi.arcgisJsApiStrings.compact | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.wide
+    ], 
+    scala.Unit
+  ]
+  
   type DatePickerViewModelProperties = typingsSlinky.arcgisJsApi.esri.MomentElementViewModelProperties
   
   type DateProperties = scala.Double | java.lang.String | js.Date
@@ -319,6 +347,8 @@ package object esri {
     /* event */ typingsSlinky.arcgisJsApi.esri.FeatureFormViewModelValueChangeEvent, 
     scala.Unit
   ]
+  
+  type FeatureLayerEditsEventHandler = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.FeatureLayerEditsEvent, scala.Unit]
   
   type FeatureLayerLayerviewCreateErrorEventHandler = js.Function1[
     /* event */ typingsSlinky.arcgisJsApi.esri.FeatureLayerLayerviewCreateErrorEvent, 
@@ -665,6 +695,8 @@ package object esri {
   
   type LayerLayerviewDestroyEventHandler = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.LayerLayerviewDestroyEvent, scala.Unit]
   
+  type LayerListListItemCreatedHandler = js.Function1[/* event */ js.Any, scala.Unit]
+  
   type LayerListTriggerActionEventHandler = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.LayerListTriggerActionEvent, scala.Unit]
   
   type LayerListViewModelTriggerActionEventHandler = js.Function1[
@@ -683,6 +715,13 @@ package object esri {
   type LocateViewModelLocateErrorEventHandler = js.Function1[
     /* event */ typingsSlinky.arcgisJsApi.esri.LocateViewModelLocateErrorEvent, 
     scala.Unit
+  ]
+  
+  type LogInterceptor = js.Function3[
+    /* level */ typingsSlinky.arcgisJsApi.arcgisJsApiStrings.error | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.warn | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.info, 
+    /* module */ java.lang.String, 
+    /* repeated */ js.Any, 
+    scala.Boolean
   ]
   
   type MapImageLayerLayerviewCreateErrorEventHandler = js.Function1[
@@ -853,6 +892,8 @@ package object esri {
   
   type PhaseCallback = js.Function1[/* event */ js.UndefOr[typingsSlinky.arcgisJsApi.esri.PhaseEvent], scala.Unit]
   
+  type PixelFilterFunction = js.Function1[/* pixelData */ typingsSlinky.arcgisJsApi.esri.PixelData, scala.Unit]
+  
   type PointCloudLayerLayerviewCreateErrorEventHandler = js.Function1[
     /* event */ typingsSlinky.arcgisJsApi.esri.PointCloudLayerLayerviewCreateErrorEvent, 
     scala.Unit
@@ -945,6 +986,10 @@ package object esri {
     /* event */ typingsSlinky.arcgisJsApi.esri.PopupViewModelTriggerActionEvent, 
     scala.Unit
   ]
+  
+  type PrintCompleteEventHandler = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.PrintCompleteEvent, scala.Unit]
+  
+  type PrintSubmitEventHandler = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.PrintSubmitEvent, scala.Unit]
   
   type RejectCallback = js.Function1[/* error */ js.UndefOr[js.Any], scala.Unit]
   
@@ -1217,6 +1262,22 @@ package object esri {
     scala.Unit
   ]
   
+  type StreamLayerViewUpdateRateEventHandler = js.Function1[
+    /* event */ typingsSlinky.arcgisJsApi.esri.StreamLayerViewUpdateRateEvent, 
+    scala.Unit
+  ]
+  
+  type TableListListItemCreatedHandler = js.Function1[/* event */ js.Any, scala.Unit]
+  
+  type TableListTriggerActionEventHandler = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.TableListTriggerActionEvent, scala.Unit]
+  
+  type TableListViewModelListItemCreatedHandler = js.Function1[/* event */ js.Any, scala.Unit]
+  
+  type TableListViewModelTriggerActionEventHandler = js.Function1[
+    /* event */ typingsSlinky.arcgisJsApi.esri.TableListViewModelTriggerActionEvent, 
+    scala.Unit
+  ]
+  
   type ThumbCreatedFunction = js.Function4[
     /* index */ scala.Double, 
     /* value */ scala.Double, 
@@ -1294,6 +1355,11 @@ package object esri {
   
   type UnsupportedLayerProperties = typingsSlinky.arcgisJsApi.esri.LayerProperties
   
+  type UpdateBasemapsCallback = js.Function1[
+    /* items */ js.Array[typingsSlinky.arcgisJsApi.esri.Basemap], 
+    js.Array[typingsSlinky.arcgisJsApi.esri.Basemap]
+  ]
+  
   type UpdateWorkflowProperties = typingsSlinky.arcgisJsApi.esri.WorkflowProperties
   
   type VectorTileLayerLayerviewCreateErrorEventHandler = js.Function1[
@@ -1356,6 +1422,21 @@ package object esri {
   type ViewPointerUpEventHandler = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.ViewPointerUpEvent, scala.Unit]
   
   type ViewResizeEventHandler = js.Function1[/* event */ typingsSlinky.arcgisJsApi.esri.ViewResizeEvent, scala.Unit]
+  
+  type WCSLayerLayerviewCreateErrorEventHandler = js.Function1[
+    /* event */ typingsSlinky.arcgisJsApi.esri.WCSLayerLayerviewCreateErrorEvent, 
+    scala.Unit
+  ]
+  
+  type WCSLayerLayerviewCreateEventHandler = js.Function1[
+    /* event */ typingsSlinky.arcgisJsApi.esri.WCSLayerLayerviewCreateEvent, 
+    scala.Unit
+  ]
+  
+  type WCSLayerLayerviewDestroyEventHandler = js.Function1[
+    /* event */ typingsSlinky.arcgisJsApi.esri.WCSLayerLayerviewDestroyEvent, 
+    scala.Unit
+  ]
   
   type WMSLayerLayerviewCreateErrorEventHandler = js.Function1[
     /* event */ typingsSlinky.arcgisJsApi.esri.WMSLayerLayerviewCreateErrorEvent, 
@@ -1420,10 +1501,6 @@ package object esri {
   
   type contentTextContent = typingsSlinky.arcgisJsApi.esri.TextContent
   
-  type elementsFieldElement = typingsSlinky.arcgisJsApi.esri.FieldElement
-  
-  type elementsGroupElement = typingsSlinky.arcgisJsApi.esri.GroupElement
-  
   type geometryExtent = typingsSlinky.arcgisJsApi.esri.Extent
   
   type geometryMesh = typingsSlinky.arcgisJsApi.esri.Mesh
@@ -1459,6 +1536,8 @@ package object esri {
   type rasterRenderersRasterStretchRenderer = typingsSlinky.arcgisJsApi.esri.RasterStretchRenderer
   
   type rasterRenderersUniqueValueRenderer = typingsSlinky.arcgisJsApi.esri.UniqueValueRenderer
+  
+  type rasterRenderersVectorFieldRenderer = typingsSlinky.arcgisJsApi.esri.VectorFieldRenderer
   
   type renderersClassBreaksRenderer = typingsSlinky.arcgisJsApi.esri.ClassBreaksRenderer
   

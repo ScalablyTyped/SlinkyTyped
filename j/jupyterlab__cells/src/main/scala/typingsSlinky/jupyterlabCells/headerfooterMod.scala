@@ -1,13 +1,14 @@
 package typingsSlinky.jupyterlabCells
 
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.luminoWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/cells/lib/headerfooter", JSImport.Namespace)
 @js.native
 object headerfooterMod extends js.Object {
+  
   @js.native
   /**
     * Construct a new cell footer.
@@ -21,6 +22,6 @@ object headerfooterMod extends js.Object {
   class CellHeader () extends Widget
   
   type ICellFooter = Widget
+  
   type ICellHeader = Widget
 }
-

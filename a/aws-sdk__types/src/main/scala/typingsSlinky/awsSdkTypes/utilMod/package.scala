@@ -10,13 +10,15 @@ package object utilMod {
   
   type Decoder = js.Function1[/* input */ java.lang.String, js.typedarray.Uint8Array]
   
-  type DelayDecider = js.Function2[/* delayBase */ scala.Double, /* attempts */ scala.Double, scala.Double]
-  
   type Encoder = js.Function1[/* input */ js.typedarray.Uint8Array, java.lang.String]
   
   type Provider[T] = js.Function0[js.Promise[T]]
   
-  type RetryDecider = js.Function1[/* error */ typingsSlinky.awsSdkTypes.utilMod.SdkError, scala.Boolean]
+  type RegionInfoProvider = js.Function2[
+    /* region */ java.lang.String, 
+    /* options */ js.UndefOr[js.Any], 
+    js.Promise[js.UndefOr[typingsSlinky.awsSdkTypes.utilMod.RegionInfo]]
+  ]
   
-  type UrlParser = js.Function1[/* url */ java.lang.String, typingsSlinky.awsSdkTypes.httpMod.HttpEndpoint]
+  type UrlParser = js.Function1[/* url */ java.lang.String, typingsSlinky.awsSdkTypes.httpMod.Endpoint]
 }

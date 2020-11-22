@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.CacheStorage.DeleteEntryRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.CSS.SetEffectivePropertyValueForNodeRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `41` extends js.Object {
   
-  var paramsType: js.Array[DeleteEntryRequest] = js.native
+  var paramsType: js.Array[SetEffectivePropertyValueForNodeRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `41` {
   
   @scala.inline
-  def apply(paramsType: js.Array[DeleteEntryRequest], returnType: Unit): `41` = {
+  def apply(paramsType: js.Array[SetEffectivePropertyValueForNodeRequest], returnType: Unit): `41` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`41`]
   }
@@ -36,10 +36,10 @@ object `41` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: DeleteEntryRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetEffectivePropertyValueForNodeRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[DeleteEntryRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetEffectivePropertyValueForNodeRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

@@ -7,9 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SkImageInfo extends js.Object {
   
-  var alphaType: SkAlphaType = js.native
+  var alphaType: AlphaType = js.native
   
-  var colorType: SkColorType = js.native
+  var colorSpace: ColorSpace = js.native
+  
+  var colorType: ColorType = js.native
   
   var height: Double = js.native
   
@@ -18,8 +20,8 @@ trait SkImageInfo extends js.Object {
 object SkImageInfo {
   
   @scala.inline
-  def apply(alphaType: SkAlphaType, colorType: SkColorType, height: Double, width: Double): SkImageInfo = {
-    val __obj = js.Dynamic.literal(alphaType = alphaType.asInstanceOf[js.Any], colorType = colorType.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+  def apply(alphaType: AlphaType, colorSpace: ColorSpace, colorType: ColorType, height: Double, width: Double): SkImageInfo = {
+    val __obj = js.Dynamic.literal(alphaType = alphaType.asInstanceOf[js.Any], colorSpace = colorSpace.asInstanceOf[js.Any], colorType = colorType.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[SkImageInfo]
   }
   
@@ -39,10 +41,13 @@ object SkImageInfo {
     }
     
     @scala.inline
-    def setAlphaType(value: SkAlphaType): Self = this.set("alphaType", value.asInstanceOf[js.Any])
+    def setAlphaType(value: AlphaType): Self = this.set("alphaType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColorType(value: SkColorType): Self = this.set("colorType", value.asInstanceOf[js.Any])
+    def setColorSpace(value: ColorSpace): Self = this.set("colorSpace", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setColorType(value: ColorType): Self = this.set("colorType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])

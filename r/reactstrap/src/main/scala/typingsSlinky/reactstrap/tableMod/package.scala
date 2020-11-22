@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object tableMod {
   
-  type Table[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.tableMod.TableProps]
+  type Table = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.tableMod.TableProps]
 }

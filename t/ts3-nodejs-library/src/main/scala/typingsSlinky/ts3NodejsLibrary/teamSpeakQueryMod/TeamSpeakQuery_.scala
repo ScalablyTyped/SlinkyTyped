@@ -62,6 +62,9 @@ class TeamSpeakQuery_ protected () extends EventEmitter {
     */
   var handleError: js.Any = js.native
   
+  /** handles a flooding response from the teamspeak query */
+  var handleFloodingError: js.Any = js.native
+  
   /** handles a single line response from the teamspeak server */
   var handleLine: js.Any = js.native
   

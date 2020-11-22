@@ -10,6 +10,5 @@ package object Object3D {
   
   type ThinLine = typingsSlinky.amapJsApiMap3d.AMap.Object3D.Line
   
-  // tslint:disable-next-line
   type Wall = typingsSlinky.amapJsApiMap3d.AMap.Object3D.Prism
 }

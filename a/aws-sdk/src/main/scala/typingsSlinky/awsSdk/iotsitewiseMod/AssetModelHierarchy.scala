@@ -18,7 +18,7 @@ trait AssetModelHierarchy extends js.Object {
   var id: js.UndefOr[ID] = js.native
   
   /**
-    * The name of the asset model hierarchy that you specify by using the CreateAssetModel or UpdateAssetModel API.
+    * The name of the asset model hierarchy that you specify by using the CreateAssetModel or UpdateAssetModel API operation.
     */
   var name: Name = js.native
 }

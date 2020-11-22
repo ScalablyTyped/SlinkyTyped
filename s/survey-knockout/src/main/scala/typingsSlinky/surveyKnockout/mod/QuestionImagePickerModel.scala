@@ -14,6 +14,8 @@ class QuestionImagePickerModel protected () extends QuestionCheckboxBase {
     */
   var contentMode: String = js.native
   
+  def getItemClass(item: js.Any): String = js.native
+  
   /**
     * The image fit mode.
     */
@@ -28,12 +30,6 @@ class QuestionImagePickerModel protected () extends QuestionCheckboxBase {
     * The image width.
     */
   var imageWidth: String = js.native
-  
-  /**
-    * Returns true if item is checked
-    * @param item image picker item value
-    */
-  def isItemSelected(item: ItemValue): Boolean = js.native
   
   /**
     * Multi select option. If set to true, then allows to select multiple images.

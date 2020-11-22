@@ -7,9 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CallHierarchyItem extends js.Object {
   
+  var containerName: js.UndefOr[java.lang.String] = js.native
+  
   var file: java.lang.String = js.native
   
   var kind: ScriptElementKind = js.native
+  
+  var kindModifiers: js.UndefOr[java.lang.String] = js.native
   
   var name: java.lang.String = js.native
   
@@ -60,5 +64,17 @@ object CallHierarchyItem {
     
     @scala.inline
     def setSpan(value: TextSpan): Self = this.set("span", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setContainerName(value: java.lang.String): Self = this.set("containerName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContainerName: Self = this.set("containerName", js.undefined)
+    
+    @scala.inline
+    def setKindModifiers(value: java.lang.String): Self = this.set("kindModifiers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKindModifiers: Self = this.set("kindModifiers", js.undefined)
   }
 }

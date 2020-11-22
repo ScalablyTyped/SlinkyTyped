@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposGetCommunityProfileMetricsEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposGetCommunityProfileMetricsResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposGetCollaboratorPermissionLevelEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposGetCollaboratorPermissionLevelResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `947` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposGetCommunityProfileMetricsEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposGetCollaboratorPermissionLevelEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposGetCommunityProfileMetricsResponseData] = js.native
+  var response: OctokitResponse[ReposGetCollaboratorPermissionLevelResponseData] = js.native
 }
 object `947` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposGetCommunityProfileMetricsEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposGetCommunityProfileMetricsResponseData]
+    parameters: RequestParameters with (Omit[ReposGetCollaboratorPermissionLevelEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposGetCollaboratorPermissionLevelResponseData]
   ): `947` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`947`]
@@ -47,10 +47,10 @@ object `947` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[ReposGetCommunityProfileMetricsEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ReposGetCollaboratorPermissionLevelEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposGetCommunityProfileMetricsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReposGetCollaboratorPermissionLevelResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

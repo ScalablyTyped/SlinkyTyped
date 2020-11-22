@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.anon.ItemElementModel
+import typingsSlinky.devextreme.anon.ItemDataItemElement
 import typingsSlinky.devextreme.anon.PreviousItem
 import typingsSlinky.devextreme.anon.SelectedItem
 import typingsSlinky.devextreme.devextremeStrings.contained
@@ -18,16 +18,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDropDownButtonOptions extends WidgetOptions[dxDropDownButton] {
   
-  /** @name dxDropDownButton.Options.dataSource */
+  /**
+    * [descr:dxDropDownButton.Options.dataSource]
+    */
   var dataSource: js.UndefOr[String | (js.Array[dxDropDownButtonItem | _]) | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxDropDownButton.Options.deferRendering */
+  /**
+    * [descr:dxDropDownButton.Options.deferRendering]
+    */
   var deferRendering: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDropDownButton.Options.displayExpr */
+  /**
+    * [descr:dxDropDownButton.Options.displayExpr]
+    */
   var displayExpr: js.UndefOr[String | (js.Function1[/* itemData */ js.Any, String])] = js.native
   
-  /** @name dxDropDownButton.Options.dropDownContentTemplate */
+  /**
+    * [descr:dxDropDownButton.Options.dropDownContentTemplate]
+    */
   var dropDownContentTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
       /* data */ (js.Array[String | Double | _]) | DataSource, 
@@ -36,13 +44,19 @@ trait dxDropDownButtonOptions extends WidgetOptions[dxDropDownButton] {
     ])
   ] = js.native
   
-  /** @name dxDropDownButton.Options.dropDownOptions */
+  /**
+    * [descr:dxDropDownButton.Options.dropDownOptions]
+    */
   var dropDownOptions: js.UndefOr[dxPopupOptions[dxPopup]] = js.native
   
-  /** @name dxDropDownButton.Options.icon */
+  /**
+    * [descr:dxDropDownButton.Options.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxDropDownButton.Options.itemTemplate */
+  /**
+    * [descr:dxDropDownButton.Options.itemTemplate]
+    */
   var itemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -52,49 +66,79 @@ trait dxDropDownButtonOptions extends WidgetOptions[dxDropDownButton] {
     ])
   ] = js.native
   
-  /** @name dxDropDownButton.Options.items */
+  /**
+    * [descr:dxDropDownButton.Options.items]
+    */
   var items: js.UndefOr[js.Array[dxDropDownButtonItem | _]] = js.native
   
-  /** @name dxDropDownButton.Options.keyExpr */
+  /**
+    * [descr:dxDropDownButton.Options.keyExpr]
+    */
   var keyExpr: js.UndefOr[String] = js.native
   
-  /** @name dxDropDownButton.Options.noDataText */
+  /**
+    * [descr:dxDropDownButton.Options.noDataText]
+    */
   var noDataText: js.UndefOr[String] = js.native
   
-  /** @name dxDropDownButton.Options.onButtonClick */
+  /**
+    * [descr:dxDropDownButton.Options.onButtonClick]
+    */
   var onButtonClick: js.UndefOr[(js.Function1[/* e */ SelectedItem, _]) | String] = js.native
   
-  /** @name dxDropDownButton.Options.onItemClick */
-  var onItemClick: js.UndefOr[(js.Function1[/* e */ ItemElementModel, _]) | String] = js.native
+  /**
+    * [descr:dxDropDownButton.Options.onItemClick]
+    */
+  var onItemClick: js.UndefOr[(js.Function1[/* e */ ItemDataItemElement, _]) | String] = js.native
   
-  /** @name dxDropDownButton.Options.onSelectionChanged */
+  /**
+    * [descr:dxDropDownButton.Options.onSelectionChanged]
+    */
   var onSelectionChanged: js.UndefOr[(js.Function1[/* e */ PreviousItem, _]) | String] = js.native
   
-  /** @name dxDropDownButton.Options.opened */
+  /**
+    * [descr:dxDropDownButton.Options.opened]
+    */
   var opened: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDropDownButton.Options.selectedItem */
+  /**
+    * [descr:dxDropDownButton.Options.selectedItem]
+    */
   var selectedItem: js.UndefOr[String | Double | js.Any] = js.native
   
-  /** @name dxDropDownButton.Options.selectedItemKey */
+  /**
+    * [descr:dxDropDownButton.Options.selectedItemKey]
+    */
   var selectedItemKey: js.UndefOr[String | Double] = js.native
   
-  /** @name dxDropDownButton.Options.showArrowIcon */
+  /**
+    * [descr:dxDropDownButton.Options.showArrowIcon]
+    */
   var showArrowIcon: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDropDownButton.Options.splitButton */
+  /**
+    * [descr:dxDropDownButton.Options.splitButton]
+    */
   var splitButton: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDropDownButton.Options.stylingMode */
+  /**
+    * [descr:dxDropDownButton.Options.stylingMode]
+    */
   var stylingMode: js.UndefOr[text | outlined | contained] = js.native
   
-  /** @name dxDropDownButton.Options.text */
+  /**
+    * [descr:dxDropDownButton.Options.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name dxDropDownButton.Options.useSelectMode */
+  /**
+    * [descr:dxDropDownButton.Options.useSelectMode]
+    */
   var useSelectMode: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDropDownButton.Options.wrapItemText */
+  /**
+    * [descr:dxDropDownButton.Options.wrapItemText]
+    */
   var wrapItemText: js.UndefOr[Boolean] = js.native
 }
 object dxDropDownButtonOptions {
@@ -228,10 +272,10 @@ object dxDropDownButtonOptions {
     def deleteOnButtonClick: Self = this.set("onButtonClick", js.undefined)
     
     @scala.inline
-    def setOnItemClickFunction1(value: /* e */ ItemElementModel => _): Self = this.set("onItemClick", js.Any.fromFunction1(value))
+    def setOnItemClickFunction1(value: /* e */ ItemDataItemElement => _): Self = this.set("onItemClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnItemClick(value: (js.Function1[/* e */ ItemElementModel, _]) | String): Self = this.set("onItemClick", value.asInstanceOf[js.Any])
+    def setOnItemClick(value: (js.Function1[/* e */ ItemDataItemElement, _]) | String): Self = this.set("onItemClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnItemClick: Self = this.set("onItemClick", js.undefined)

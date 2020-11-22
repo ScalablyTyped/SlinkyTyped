@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__utils
 
-Typings are for version 2.1.0
+Typings are for version 2.4.2
 
 ## Library description:
 General utils for react-md.

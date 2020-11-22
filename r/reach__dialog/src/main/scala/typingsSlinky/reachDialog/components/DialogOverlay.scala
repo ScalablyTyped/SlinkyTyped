@@ -20,8 +20,13 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reachDialog.mod.DialogOverlayProps
+import typingsSlinky.reachDialog.reachDialogStrings.`additions removals`
 import typingsSlinky.reachDialog.reachDialogStrings.`additions text`
 import typingsSlinky.reachDialog.reachDialogStrings.`inline`
+import typingsSlinky.reachDialog.reachDialogStrings.`removals additions`
+import typingsSlinky.reachDialog.reachDialogStrings.`removals text`
+import typingsSlinky.reachDialog.reachDialogStrings.`text additions`
+import typingsSlinky.reachDialog.reachDialogStrings.`text removals`
 import typingsSlinky.reachDialog.reachDialogStrings.additions
 import typingsSlinky.reachDialog.reachDialogStrings.all
 import typingsSlinky.reachDialog.reachDialogStrings.ascending
@@ -214,7 +219,9 @@ object DialogOverlay {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

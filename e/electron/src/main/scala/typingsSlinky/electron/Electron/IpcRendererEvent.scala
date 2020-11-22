@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IpcRendererEvent extends Event {
   
-  // Docs: http://electronjs.org/docs/api/structures/ipc-renderer-event
+  // Docs: https://electronjs.org/docs/api/structures/ipc-renderer-event
   /**
     * A list of MessagePorts that were transferred with this message
     */

@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__form
 
-Typings are for version 2.1.2
+Typings are for version 2.4.3
 
 ## Library description:
 This package is for creating all the different form input types.

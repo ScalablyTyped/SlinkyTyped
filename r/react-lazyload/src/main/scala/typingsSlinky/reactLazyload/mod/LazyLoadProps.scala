@@ -11,6 +11,8 @@ trait LazyLoadProps extends js.Object {
   
   var children: js.UndefOr[ReactElement] = js.native
   
+  var classNamePrefix: js.UndefOr[String] = js.native
+  
   var debounce: js.UndefOr[Double | Boolean] = js.native
   
   var height: js.UndefOr[Double | String] = js.native
@@ -66,6 +68,12 @@ object LazyLoadProps {
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
+    
+    @scala.inline
+    def setClassNamePrefix(value: String): Self = this.set("classNamePrefix", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassNamePrefix: Self = this.set("classNamePrefix", js.undefined)
     
     @scala.inline
     def setDebounce(value: Double | Boolean): Self = this.set("debounce", value.asInstanceOf[js.Any])

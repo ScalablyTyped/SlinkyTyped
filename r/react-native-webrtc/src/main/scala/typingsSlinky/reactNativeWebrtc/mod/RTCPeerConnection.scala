@@ -1,5 +1,6 @@
 package typingsSlinky.reactNativeWebrtc.mod
 
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,12 +32,16 @@ class RTCPeerConnection protected () extends js.Object {
   
   def close(): Unit = js.native
   
+  var connectionState: RTCPeerConnectionState = js.native
+  
   def createAnswer(): js.Promise[RTCSessionDescriptionType] = js.native
+  def createAnswer(options: RTCAnswerOptions): js.Promise[RTCSessionDescriptionType] = js.native
   
   def createDataChannel(label: String): Unit = js.native
   def createDataChannel(label: String, dataChannelDict: js.Any): Unit = js.native
   
   def createOffer(): js.Promise[RTCSessionDescriptionType] = js.native
+  def createOffer(options: RTCOfferOptions): js.Promise[RTCSessionDescriptionType] = js.native
   
   def getLocalStreams(): js.Array[MediaStream] = js.native
   
@@ -49,7 +54,7 @@ class RTCPeerConnection protected () extends js.Object {
   
   def onaddstream(event: EventOnAddStream): js.UndefOr[Unit] = js.native
   
-  def onconnectionstatechange(): js.UndefOr[Unit] = js.native
+  def onconnectionstatechange(event: Event): js.UndefOr[Unit] = js.native
   
   def onicecandidate(event: EventOnCandidate): js.UndefOr[Unit] = js.native
   

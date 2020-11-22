@@ -37,6 +37,9 @@ class Route protected () extends CustomResource {
     */
   val destinationCidrBlock: Output_[String] = js.native
   
+  /**
+    * Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
+    */
   val origin: Output_[String] = js.native
   
   /**
@@ -44,6 +47,9 @@ class Route protected () extends CustomResource {
     */
   val targetVpcSubnetId: Output_[String] = js.native
   
+  /**
+    * The type of the route.
+    */
   val `type`: Output_[String] = js.native
 }
 /* static members */

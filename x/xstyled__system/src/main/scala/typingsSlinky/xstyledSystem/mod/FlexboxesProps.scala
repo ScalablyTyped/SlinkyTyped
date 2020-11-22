@@ -12,6 +12,8 @@ trait FlexboxesProps
      with JustifyContentProps
      with JustifyItemsProps
      with FlexWrapProps
+     with FlexGrowProps
+     with FlexShrinkProps
      with FlexBasisProps[StyledSystemLength]
      with FlexDirectionProps
      with FlexProps[StyledSystemLength]

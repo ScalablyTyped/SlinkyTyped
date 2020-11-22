@@ -57,6 +57,9 @@ object fieldStateMod extends js.Object {
       **/
     var hasBeenValidated: Boolean = js.native
     
+    @JSName("hasError")
+    def hasError_MFieldState: Boolean = js.native
+    
     /** Trackers for validation */
     var lastValidationRequest: Double = js.native
     
@@ -67,9 +70,8 @@ object fieldStateMod extends js.Object {
     
     /**
       * onUpdate is called whenever we change something in our local state that is significant
-      * - value
-      * - $
-      * - error
+      * - any validation() call
+      * - any reset() call
       */
     def onUpdate(handler: js.Function1[/* state */ FieldState[TValue], _]): this.type = js.native
     

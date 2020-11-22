@@ -9,9 +9,6 @@ package object indexEsMod {
   /**
     * Type helper to Flatten the Union of optional and required properties.
     */
-  /**
-    * Type helper to Flatten the Union of optional and required properties.
-    */
   type Flatten[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof any ]: any[K]}
     */ typingsSlinky.superstruct.superstructStrings.Flatten with org.scalablytyped.runtime.TopLevel[js.Any]
@@ -19,15 +16,8 @@ package object indexEsMod {
   /**
     * Type helper to extract the optional keys of an object
     */
-  /**
-    * Type helper to extract the optional keys of an object
-    */
   type OptionalKeys[T] = /* import warning: importer.ImportType#apply Failed type conversion: {[ K in keyof T ]: undefined extends T[K]? K : never}[keyof T] */ js.Any
   
-  /**
-    * Type helper to create optional properties when the property value can be
-    * undefined (ie. when `optional()` is used to define a type)
-    */
   /**
     * Type helper to create optional properties when the property value can be
     * undefined (ie. when `optional()` is used to define a type)
@@ -39,16 +29,10 @@ package object indexEsMod {
   /**
     * Type helper to extract the required keys of an object
     */
-  /**
-    * Type helper to extract the required keys of an object
-    */
   type RequiredKeys[T] = /* import warning: importer.ImportType#apply Failed type conversion: {[ K in keyof T ]: undefined extends T[K]? never : K}[keyof T] */ js.Any
   
   type StructRecord[T] = typingsSlinky.std.Record[java.lang.String, typingsSlinky.superstruct.indexEsMod.Struct_[T, js.Any]]
   
-  /**
-    * A `StructResult` is returned from validation functions.
-    */
   /**
     * A `StructResult` is returned from validation functions.
     */
@@ -58,9 +42,6 @@ package object indexEsMod {
   {[ K in keyof T ]: superstruct.superstruct/lib/index.es.Struct<T[K], any>}
     */ typingsSlinky.superstruct.superstructStrings.StructTuple with org.scalablytyped.runtime.TopLevel[T]
   
-  /**
-    * A type utility to extract the type from a `Struct` class.
-    */
   /**
     * A type utility to extract the type from a `Struct` class.
     */

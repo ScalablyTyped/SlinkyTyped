@@ -19,6 +19,8 @@ object TransactionResultCode extends js.Object {
   
   def txBadSeq(): typingsSlinky.stellarBase.xdrMod.xdr.TransactionResultCode = js.native
   
+  def txBadSponsorship(): typingsSlinky.stellarBase.xdrMod.xdr.TransactionResultCode = js.native
+  
   def txFailed(): typingsSlinky.stellarBase.xdrMod.xdr.TransactionResultCode = js.native
   
   def txFeeBumpInnerFailed(): typingsSlinky.stellarBase.xdrMod.xdr.TransactionResultCode = js.native

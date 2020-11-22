@@ -32,3 +32,16 @@ class PassCubePostProcess protected ()
     blockCompilation: js.UndefOr[Boolean]
   ) = this()
 }
+/* static members */
+@JSGlobal("BABYLON.PassCubePostProcess")
+@js.native
+object PassCubePostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(
+    parsedPostProcess: js.Any,
+    targetCamera: typingsSlinky.babylonjs.BABYLON.Camera,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    rootUrl: String
+  ): typingsSlinky.babylonjs.BABYLON.PassCubePostProcess = js.native
+}

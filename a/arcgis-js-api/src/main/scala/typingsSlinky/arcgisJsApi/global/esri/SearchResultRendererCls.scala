@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("__esri.SearchResultRenderer")
 @js.native
 /**
-  * The `SearchResultRenderer` renders the [Search](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search.html) widget results and allows expanding a DOM element to show alternative matches. These alternative matches appear in the `Show more results` link of the Search widget.
+  * The `SearchResultRenderer` renders the [Search](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search.html) widget results and allows expanding a DOM element to show alternative matches.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search-SearchResultRenderer.html)
   */

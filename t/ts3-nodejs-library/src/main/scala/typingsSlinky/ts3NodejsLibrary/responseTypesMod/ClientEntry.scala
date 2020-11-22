@@ -22,11 +22,13 @@ trait ClientEntry extends ResponseEntry {
   
   var clientChannelGroupInheritedChannelId: Double = js.native
   
-  var clientCountry: String = js.native
+  var clientCountry: js.UndefOr[String] = js.native
   
   var clientCreated: Double = js.native
   
   var clientDatabaseId: String = js.native
+  
+  var clientEstimatedLocation: js.UndefOr[String] = js.native
   
   var clientFlagTalking: Boolean = js.native
   
@@ -77,7 +79,6 @@ object ClientEntry {
     clientBadges: String,
     clientChannelGroupId: String,
     clientChannelGroupInheritedChannelId: Double,
-    clientCountry: String,
     clientCreated: Double,
     clientDatabaseId: String,
     clientFlagTalking: Boolean,
@@ -100,7 +101,7 @@ object ClientEntry {
     clientVersion: String,
     connectionClientIp: String
   ): ClientEntry = {
-    val __obj = js.Dynamic.literal(cid = cid.asInstanceOf[js.Any], clid = clid.asInstanceOf[js.Any], clientAway = clientAway.asInstanceOf[js.Any], clientAwayMessage = clientAwayMessage.asInstanceOf[js.Any], clientBadges = clientBadges.asInstanceOf[js.Any], clientChannelGroupId = clientChannelGroupId.asInstanceOf[js.Any], clientChannelGroupInheritedChannelId = clientChannelGroupInheritedChannelId.asInstanceOf[js.Any], clientCountry = clientCountry.asInstanceOf[js.Any], clientCreated = clientCreated.asInstanceOf[js.Any], clientDatabaseId = clientDatabaseId.asInstanceOf[js.Any], clientFlagTalking = clientFlagTalking.asInstanceOf[js.Any], clientIdleTime = clientIdleTime.asInstanceOf[js.Any], clientInputHardware = clientInputHardware.asInstanceOf[js.Any], clientInputMuted = clientInputMuted.asInstanceOf[js.Any], clientIsChannelCommander = clientIsChannelCommander.asInstanceOf[js.Any], clientIsPrioritySpeaker = clientIsPrioritySpeaker.asInstanceOf[js.Any], clientIsRecording = clientIsRecording.asInstanceOf[js.Any], clientIsTalker = clientIsTalker.asInstanceOf[js.Any], clientLastconnected = clientLastconnected.asInstanceOf[js.Any], clientNickname = clientNickname.asInstanceOf[js.Any], clientOutputHardware = clientOutputHardware.asInstanceOf[js.Any], clientOutputMuted = clientOutputMuted.asInstanceOf[js.Any], clientPlatform = clientPlatform.asInstanceOf[js.Any], clientServergroups = clientServergroups.asInstanceOf[js.Any], clientTalkPower = clientTalkPower.asInstanceOf[js.Any], clientType = clientType.asInstanceOf[js.Any], clientUniqueIdentifier = clientUniqueIdentifier.asInstanceOf[js.Any], clientVersion = clientVersion.asInstanceOf[js.Any], connectionClientIp = connectionClientIp.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(cid = cid.asInstanceOf[js.Any], clid = clid.asInstanceOf[js.Any], clientAway = clientAway.asInstanceOf[js.Any], clientAwayMessage = clientAwayMessage.asInstanceOf[js.Any], clientBadges = clientBadges.asInstanceOf[js.Any], clientChannelGroupId = clientChannelGroupId.asInstanceOf[js.Any], clientChannelGroupInheritedChannelId = clientChannelGroupInheritedChannelId.asInstanceOf[js.Any], clientCreated = clientCreated.asInstanceOf[js.Any], clientDatabaseId = clientDatabaseId.asInstanceOf[js.Any], clientFlagTalking = clientFlagTalking.asInstanceOf[js.Any], clientIdleTime = clientIdleTime.asInstanceOf[js.Any], clientInputHardware = clientInputHardware.asInstanceOf[js.Any], clientInputMuted = clientInputMuted.asInstanceOf[js.Any], clientIsChannelCommander = clientIsChannelCommander.asInstanceOf[js.Any], clientIsPrioritySpeaker = clientIsPrioritySpeaker.asInstanceOf[js.Any], clientIsRecording = clientIsRecording.asInstanceOf[js.Any], clientIsTalker = clientIsTalker.asInstanceOf[js.Any], clientLastconnected = clientLastconnected.asInstanceOf[js.Any], clientNickname = clientNickname.asInstanceOf[js.Any], clientOutputHardware = clientOutputHardware.asInstanceOf[js.Any], clientOutputMuted = clientOutputMuted.asInstanceOf[js.Any], clientPlatform = clientPlatform.asInstanceOf[js.Any], clientServergroups = clientServergroups.asInstanceOf[js.Any], clientTalkPower = clientTalkPower.asInstanceOf[js.Any], clientType = clientType.asInstanceOf[js.Any], clientUniqueIdentifier = clientUniqueIdentifier.asInstanceOf[js.Any], clientVersion = clientVersion.asInstanceOf[js.Any], connectionClientIp = connectionClientIp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientEntry]
   }
   
@@ -139,9 +140,6 @@ object ClientEntry {
     
     @scala.inline
     def setClientChannelGroupInheritedChannelId(value: Double): Self = this.set("clientChannelGroupInheritedChannelId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setClientCountry(value: String): Self = this.set("clientCountry", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setClientCreated(value: Double): Self = this.set("clientCreated", value.asInstanceOf[js.Any])
@@ -208,5 +206,17 @@ object ClientEntry {
     
     @scala.inline
     def setConnectionClientIp(value: String): Self = this.set("connectionClientIp", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setClientCountry(value: String): Self = this.set("clientCountry", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClientCountry: Self = this.set("clientCountry", js.undefined)
+    
+    @scala.inline
+    def setClientEstimatedLocation(value: String): Self = this.set("clientEstimatedLocation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClientEstimatedLocation: Self = this.set("clientEstimatedLocation", js.undefined)
   }
 }

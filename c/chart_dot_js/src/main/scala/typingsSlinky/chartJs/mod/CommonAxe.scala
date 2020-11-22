@@ -43,6 +43,8 @@ trait CommonAxe extends js.Object {
   
   var id: js.UndefOr[String] = js.native
   
+  var labels: js.UndefOr[js.Array[String]] = js.native
+  
   var offset: js.UndefOr[Boolean] = js.native
   
   var position: js.UndefOr[String] = js.native
@@ -187,6 +189,15 @@ object CommonAxe {
     
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
+    
+    @scala.inline
+    def setLabelsVarargs(value: String*): Self = this.set("labels", js.Array(value :_*))
+    
+    @scala.inline
+    def setLabels(value: js.Array[String]): Self = this.set("labels", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabels: Self = this.set("labels", js.undefined)
     
     @scala.inline
     def setOffset(value: Boolean): Self = this.set("offset", value.asInstanceOf[js.Any])

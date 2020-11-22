@@ -47,8 +47,7 @@ trait CommentLoadOptions extends js.Object {
     *
     * Gets the content type of the comment.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var contentType: js.UndefOr[Boolean] = js.native
   

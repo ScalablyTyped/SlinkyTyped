@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.tabMod
 
+import typingsSlinky.blueprintjsCore.anon.PartialITabProps
 import typingsSlinky.blueprintjsCore.commonMod.AbstractPureComponent2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +15,7 @@ class Tab ()
 @js.native
 object Tab extends js.Object {
   
-  var defaultProps: ITabProps = js.native
+  var defaultProps: PartialITabProps = js.native
   
   var displayName: String = js.native
 }

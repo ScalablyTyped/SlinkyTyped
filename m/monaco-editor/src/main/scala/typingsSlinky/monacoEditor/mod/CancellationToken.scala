@@ -7,12 +7,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CancellationToken extends js.Object {
   
+  /**
+    * A flag signalling is cancellation has been requested.
+    */
   val isCancellationRequested: Boolean = js.native
   
   /**
-    * An event emitted when cancellation is requested
+    * An event which fires when cancellation is requested. This event
+    * only ever fires `once` as cancellation can only happen once. Listeners
+    * that are registered after cancellation will be called (next event loop run),
+    * but also only once.
+    *
     * @event
     */
   def onCancellationRequested(listener: js.Function1[/* e */ js.Any, _]): IDisposable = js.native
-  def onCancellationRequested(listener: js.Function1[/* e */ js.Any, _], thisArg: js.Any): IDisposable = js.native
+  def onCancellationRequested(
+    listener: js.Function1[/* e */ js.Any, _],
+    thisArgs: js.UndefOr[scala.Nothing],
+    disposables: js.Array[IDisposable]
+  ): IDisposable = js.native
+  def onCancellationRequested(listener: js.Function1[/* e */ js.Any, _], thisArgs: js.Any): IDisposable = js.native
+  def onCancellationRequested(listener: js.Function1[/* e */ js.Any, _], thisArgs: js.Any, disposables: js.Array[IDisposable]): IDisposable = js.native
 }

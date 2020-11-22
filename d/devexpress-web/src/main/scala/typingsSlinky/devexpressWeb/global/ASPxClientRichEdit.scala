@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * A client-side equivalent of the ASPxRichEdit object.
+  * A client-side equivalent of the ASPxRichEdit control.
   */
 @JSGlobal("ASPxClientRichEdit")
 @js.native

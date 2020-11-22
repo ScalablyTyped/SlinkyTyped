@@ -6,34 +6,35 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object entryPointTypesMod {
   
-  type EntryPointComponent[TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps] = slinky.core.ReactComponentClass[
+  type EntryPoint[TEntryPointComponent, TEntryPointParams /* <: js.Object */] = typingsSlinky.reactRelay.entryPointTypesMod.InternalEntryPointRepresentation[TEntryPointParams, js.Any, js.Any, js.Any, js.Any]
+  
+  type EntryPointComponent[TPreloadedQueries /* <: typingsSlinky.std.Record[java.lang.String, typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType] */, TPreloadedEntryPoints /* <: typingsSlinky.std.Record[
+    java.lang.String, 
+    js.UndefOr[typingsSlinky.reactRelay.entryPointTypesMod.EntryPoint[_, _]]
+  ] */, TRuntimeProps /* <: js.Object */, TExtraProps /* <: js.Object | scala.Null */] = slinky.core.ReactComponentClass[
     typingsSlinky.reactRelay.entryPointTypesMod.EntryPointProps[TPreloadedQueries, TPreloadedEntryPoints, TRuntimeProps, TExtraProps]
   ]
   
-  type EnvironmentProviderOptions = org.scalablytyped.runtime.StringDictionary[js.Any]
+  type EnvironmentProviderOptions[T /* <: typingsSlinky.std.Record[java.lang.String, _] */] = T
   
-  type ExtractEntryPointTypeHelper[TEntryPointParams] = js.Function1[
-    /* entryPoint */ js.UndefOr[
-      typingsSlinky.reactRelay.entryPointTypesMod.PreloadedEntryPoint[js.Any] | scala.Null
-    ], 
-    js.UndefOr[
-      (typingsSlinky.reactRelay.entryPointTypesMod.ThinNestedEntryPointParams[
-        TEntryPointParams, 
-        typingsSlinky.reactRelay.entryPointTypesMod.EntryPoint[TEntryPointParams, js.Any]
-      ]) | scala.Null
-    ]
-  ]
+  type PreloadedEntryPoint[TEntryPointComponent] = typingsSlinky.reactRelay.anon.Dispose[TEntryPointComponent]
   
-  type ExtractQueryTypeHelper[TEnvironmentProviderOptions] = js.Function1[
-    /* query */ typingsSlinky.reactRelay.entryPointTypesMod.PreloadedQuery[
-      typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType, 
-      typingsSlinky.reactRelay.entryPointTypesMod.EnvironmentProviderOptions
-    ], 
-    typingsSlinky.reactRelay.entryPointTypesMod.ThinQueryParams[
-      typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType, 
-      TEnvironmentProviderOptions
-    ]
-  ]
+  type PreloadedEntryPoints[TPreloadedEntryPoints] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ T in keyof TPreloadedEntryPoints ]: react-relay.react-relay/lib/relay-experimental/EntryPointTypes.PreloadedEntryPoint<react-relay.react-relay/lib/relay-experimental/helpers.GetEntryPointComponentFromEntryPoint<TPreloadedEntryPoints[T]>>}
+    */ typingsSlinky.reactRelay.reactRelayStrings.PreloadedEntryPoints with org.scalablytyped.runtime.TopLevel[TPreloadedEntryPoints]
   
-  type PreloadableConcreteRequest[TQuery /* <: typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType */] = js.Object
+  type PreloadedQueries[TPreloadedQueries] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ T in keyof TPreloadedQueries ]: react-relay.react-relay/lib/relay-experimental/EntryPointTypes.PreloadedQuery<TPreloadedQueries[T], react-relay.react-relay/lib/relay-experimental/EntryPointTypes.EnvironmentProviderOptions<std.Record<string, unknown>>>}
+    */ typingsSlinky.reactRelay.reactRelayStrings.PreloadedQueries with org.scalablytyped.runtime.TopLevel[TPreloadedQueries]
+  
+  type ThinNestedEntryPointParamsObject[TPreloadedEntryPoints /* <: typingsSlinky.std.Record[
+    java.lang.String, 
+    js.UndefOr[typingsSlinky.reactRelay.entryPointTypesMod.EntryPoint[_, _]]
+  ] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ K in keyof TPreloadedEntryPoints ]: react-relay.react-relay/lib/relay-experimental/EntryPointTypes.ThinNestedEntryPointParams<TPreloadedEntryPoints[K]>}
+    */ typingsSlinky.reactRelay.reactRelayStrings.ThinNestedEntryPointParamsObject with org.scalablytyped.runtime.TopLevel[TPreloadedEntryPoints]
+  
+  type ThinQueryParamsObject[TPreloadedQueries /* <: typingsSlinky.std.Record[java.lang.String, typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ K in keyof TPreloadedQueries ]: react-relay.react-relay/lib/relay-experimental/EntryPointTypes.ThinQueryParams<TPreloadedQueries[K], react-relay.react-relay/lib/relay-experimental/EntryPointTypes.EnvironmentProviderOptions<std.Record<string, unknown>>>}
+    */ typingsSlinky.reactRelay.reactRelayStrings.ThinQueryParamsObject with org.scalablytyped.runtime.TopLevel[TPreloadedQueries]
 }

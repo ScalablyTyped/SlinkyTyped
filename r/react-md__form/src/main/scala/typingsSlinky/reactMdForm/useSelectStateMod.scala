@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useSelectStateMod extends js.Object {
   
-  def default[T /* <: String */](defaultValue: DefaultValue[T]): ReturnValue[T] = js.native
+  def useSelectState[T /* <: String */](defaultValue: DefaultValue[T]): ReturnValue[T] = js.native
   
   type DefaultValue[T /* <: String */] = T | js.Function0[T]
   

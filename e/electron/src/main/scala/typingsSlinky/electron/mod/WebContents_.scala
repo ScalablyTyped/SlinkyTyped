@@ -13,7 +13,7 @@ class WebContents_ ()
 @js.native
 object WebContents_ extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/web-contents
+  // Docs: https://electronjs.org/docs/api/web-contents
   /**
     * A WebContents instance with the given ID.
     */

@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object hashMod extends js.Object {
   
-  def hash(items: js.Any*): Double = js.native
+  def hash(itemList: js.Any*): Double = js.native
 }

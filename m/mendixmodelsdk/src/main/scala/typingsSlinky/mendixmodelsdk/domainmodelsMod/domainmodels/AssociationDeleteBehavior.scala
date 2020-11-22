@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,14 +15,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.AssociationDeleteBehavior")
 @js.native
-class AssociationDeleteBehavior protected () extends Element {
+class AssociationDeleteBehavior protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def childDeleteBehavior: DeletingBehavior = js.native
@@ -30,9 +32,6 @@ class AssociationDeleteBehavior protected () extends Element {
   def childErrorMessage_=(newValue: Text | Null): Unit = js.native
   
   def containerAsAssociationBase: AssociationBase = js.native
-  
-  @JSName("model")
-  var model_FAssociationDeleteBehavior: IModel = js.native
   
   def parentDeleteBehavior: DeletingBehavior = js.native
   def parentDeleteBehavior_=(newValue: DeletingBehavior): Unit = js.native

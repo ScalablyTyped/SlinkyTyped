@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/reporters/build/notify_reporter", JSImport.Namespace)
+@JSImport("@jest/reporters/build/NotifyReporter", JSImport.Namespace)
 @js.native
 object notifyReporterMod extends js.Object {
   

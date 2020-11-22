@@ -11,15 +11,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSelectBoxOptions[T] extends dxDropDownListOptions[T] {
   
-  /** @name dxSelectBox.Options.fieldTemplate */
+  /**
+    * [descr:dxSelectBox.Options.fieldTemplate]
+    */
   var fieldTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* selectedItem */ js.Any, /* fieldElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxSelectBox.Options.onCustomItemCreating */
+  /**
+    * [descr:dxSelectBox.Options.onCustomItemCreating]
+    */
   var onCustomItemCreating: js.UndefOr[js.Function1[/* e */ CustomItem[T], _]] = js.native
   
-  /** @name dxSelectBox.Options.showSelectionControls */
+  /**
+    * [descr:dxSelectBox.Options.showSelectionControls]
+    */
   var showSelectionControls: js.UndefOr[Boolean] = js.native
 }
 object dxSelectBoxOptions {

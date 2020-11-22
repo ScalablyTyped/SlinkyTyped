@@ -1,7 +1,7 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.octokitTypesStrings.`gh-pages`
-import typingsSlinky.octokitTypes.octokitTypesStrings.master
+import typingsSlinky.octokitTypes.octokitTypesStrings.Slash
+import typingsSlinky.octokitTypes.octokitTypesStrings.Slashdocs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,15 +9,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ReposCreatePagesSiteParamsSource extends js.Object {
   
-  var branch: js.UndefOr[master | `gh-pages`] = js.native
+  var branch: String = js.native
   
-  var path: js.UndefOr[String] = js.native
+  var path: js.UndefOr[Slash | Slashdocs] = js.native
 }
 object ReposCreatePagesSiteParamsSource {
   
   @scala.inline
-  def apply(): ReposCreatePagesSiteParamsSource = {
-    val __obj = js.Dynamic.literal()
+  def apply(branch: String): ReposCreatePagesSiteParamsSource = {
+    val __obj = js.Dynamic.literal(branch = branch.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposCreatePagesSiteParamsSource]
   }
   
@@ -37,13 +37,10 @@ object ReposCreatePagesSiteParamsSource {
     }
     
     @scala.inline
-    def setBranch(value: master | `gh-pages`): Self = this.set("branch", value.asInstanceOf[js.Any])
+    def setBranch(value: String): Self = this.set("branch", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBranch: Self = this.set("branch", js.undefined)
-    
-    @scala.inline
-    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
+    def setPath(value: Slash | Slashdocs): Self = this.set("path", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)

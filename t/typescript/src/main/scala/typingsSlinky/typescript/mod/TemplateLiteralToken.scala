@@ -6,8 +6,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.typescript.mod.NoSubstitutionTemplateLiteral
-  - typingsSlinky.typescript.mod.TemplateHead
-  - typingsSlinky.typescript.mod.TemplateMiddle
-  - typingsSlinky.typescript.mod.TemplateTail
+  - typingsSlinky.typescript.mod.PseudoLiteralToken
 */
 trait TemplateLiteralToken extends js.Object

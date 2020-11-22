@@ -10,11 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AttachmentsProperties extends WidgetProperties {
   
   /**
-    * A string value indicating how to display the attachment.  If `list` is specified, attachments show as links. If `preview` is specified, a thumbnail of each attachment will be shown.
+    * A string value indicating how to display the attachment.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attachments.html#displayType)
-    *
-    * @default "list"
     */
   var displayType: js.UndefOr[preview | list] = js.native
   
@@ -26,7 +24,7 @@ trait AttachmentsProperties extends WidgetProperties {
   var graphic: js.UndefOr[GraphicProperties] = js.native
   
   /**
-    * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [AttachmentsViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attachments-AttachmentsViewModel.html) class to access all properties and methods on the widget.
+    * The view model for this widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attachments.html#viewModel)
     */

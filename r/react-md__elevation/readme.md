@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__elevation
 
-Typings are for version 2.1.2
+Typings are for version 2.4.2
 
 ## Library description:
 This is a small package for react-md that can create the elevation styles in the material design spec.

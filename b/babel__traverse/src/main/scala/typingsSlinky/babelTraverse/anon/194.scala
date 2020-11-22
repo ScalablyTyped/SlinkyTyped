@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSDeclareFunction
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSTupleType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `194` extends js.Object {
   
-  var `type`: TSDeclareFunction = js.native
+  var `type`: TSTupleType = js.native
 }
 object `194` {
   
   @scala.inline
-  def apply(`type`: TSDeclareFunction): `194` = {
+  def apply(`type`: TSTupleType): `194` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`194`]
@@ -35,6 +35,6 @@ object `194` {
     }
     
     @scala.inline
-    def setType(value: TSDeclareFunction): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSTupleType): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

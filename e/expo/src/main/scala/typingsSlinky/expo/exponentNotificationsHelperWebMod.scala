@@ -1,6 +1,6 @@
 package typingsSlinky.expo
 
-import typingsSlinky.expo.anon.Type
+import typingsSlinky.expo.anon.Data
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object exponentNotificationsHelperWebMod extends js.Object {
   
-  def getDevicePushTokenAsync(): js.Promise[Type] = js.native
+  def getDevicePushTokenAsync(): js.Promise[Data] = js.native
   
   def getExponentPushTokenAsync(): js.Promise[String] = js.native
   

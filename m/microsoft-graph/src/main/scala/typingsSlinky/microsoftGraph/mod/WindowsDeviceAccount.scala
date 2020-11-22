@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WindowsDeviceAccount extends js.Object {
   
   // Not yet documented
-  var password: js.UndefOr[String] = js.native
+  var password: js.UndefOr[NullableOption[String]] = js.native
 }
 object WindowsDeviceAccount {
   
@@ -34,9 +34,12 @@ object WindowsDeviceAccount {
     }
     
     @scala.inline
-    def setPassword(value: String): Self = this.set("password", value.asInstanceOf[js.Any])
+    def setPassword(value: NullableOption[String]): Self = this.set("password", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePassword: Self = this.set("password", js.undefined)
+    
+    @scala.inline
+    def setPasswordNull: Self = this.set("password", null)
   }
 }

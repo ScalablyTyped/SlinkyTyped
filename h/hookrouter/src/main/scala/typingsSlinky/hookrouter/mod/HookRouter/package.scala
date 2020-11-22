@@ -10,7 +10,7 @@ package object HookRouter {
   
   type QueryParams = org.scalablytyped.runtime.StringDictionary[js.Any]
   
-  type RouteObject = org.scalablytyped.runtime.StringDictionary[
-    js.Function1[/* params */ typingsSlinky.hookrouter.mod.HookRouter.QueryParams, js.Any]
+  type RouteObject[T] = org.scalablytyped.runtime.StringDictionary[
+    js.Function1[/* params */ typingsSlinky.hookrouter.mod.HookRouter.QueryParams, T]
   ]
 }

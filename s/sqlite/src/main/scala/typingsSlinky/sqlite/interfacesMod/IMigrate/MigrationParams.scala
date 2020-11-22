@@ -14,6 +14,12 @@ trait MigrationParams extends js.Object {
   var force: js.UndefOr[Boolean] = js.native
   
   /**
+    * Migration data read from migrations folder. `migrationsPath` will be ignored if this is
+    * provided.
+    */
+  var migrations: js.UndefOr[js.Array[MigrationData]] = js.native
+  
+  /**
     * Path to the migrations folder. Default is `path.join(process.cwd(), 'migrations')`
     */
   var migrationsPath: js.UndefOr[String] = js.native
@@ -51,6 +57,15 @@ object MigrationParams {
     
     @scala.inline
     def deleteForce: Self = this.set("force", js.undefined)
+    
+    @scala.inline
+    def setMigrationsVarargs(value: MigrationData*): Self = this.set("migrations", js.Array(value :_*))
+    
+    @scala.inline
+    def setMigrations(value: js.Array[MigrationData]): Self = this.set("migrations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMigrations: Self = this.set("migrations", js.undefined)
     
     @scala.inline
     def setMigrationsPath(value: String): Self = this.set("migrationsPath", value.asInstanceOf[js.Any])

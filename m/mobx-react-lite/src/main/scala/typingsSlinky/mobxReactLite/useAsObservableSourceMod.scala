@@ -9,6 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object useAsObservableSourceMod extends js.Object {
   
   def useAsObservableSource[TSource](current: TSource): TSource = js.native
-  
-  def useAsObservableSourceInternal[TSource](current: TSource, usedByLocalStore: Boolean): TSource = js.native
 }

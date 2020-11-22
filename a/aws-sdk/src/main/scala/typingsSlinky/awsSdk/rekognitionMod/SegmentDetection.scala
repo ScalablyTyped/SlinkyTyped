@@ -23,7 +23,7 @@ trait SegmentDetection extends js.Object {
   var EndTimecodeSMPTE: js.UndefOr[Timecode] = js.native
   
   /**
-    * The end time of the detected segment, in milliseconds, from the start of the video.
+    * The end time of the detected segment, in milliseconds, from the start of the video. This value is rounded down.
     */
   var EndTimestampMillis: js.UndefOr[Timestamp] = js.native
   
@@ -38,7 +38,7 @@ trait SegmentDetection extends js.Object {
   var StartTimecodeSMPTE: js.UndefOr[Timecode] = js.native
   
   /**
-    * The start time of the detected segment in milliseconds from the start of the video.
+    * The start time of the detected segment in milliseconds from the start of the video. This value is rounded down. For example, if the actual timestamp is 100.6667 milliseconds, Amazon Rekognition Video returns a value of 100 millis.
     */
   var StartTimestampMillis: js.UndefOr[Timestamp] = js.native
   

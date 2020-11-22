@@ -41,10 +41,7 @@ trait DataFactory[OutQuad /* <: BaseQuad */, InQuad /* <: BaseQuad */] extends j
     * @return A new instance of NamedNode.
     * @see NamedNode
     */
-  // TODO: This could be changed into a Generic method that returns a NamedNode constained to the
-  //       given `value` - but note that that would be a breaking change. See commit
-  //       16d29e86cd6fe34e6ac6f53bba6ba1a1988d7401.
-  def namedNode(value: String): NamedNode[String] = js.native
+  def namedNode[Iri /* <: String */](value: Iri): NamedNode[Iri] = js.native
   
   /**
     * @param subject   The quad subject term.

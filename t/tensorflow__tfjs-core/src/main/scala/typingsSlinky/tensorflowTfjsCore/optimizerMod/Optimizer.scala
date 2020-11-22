@@ -1,10 +1,10 @@
 package typingsSlinky.tensorflowTfjsCore.optimizerMod
 
 import typingsSlinky.tensorflowTfjsCore.anon.Value
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Variable
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.serializationMod.Serializable
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Variable
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensor
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import scala.scalajs.js
@@ -20,6 +20,8 @@ abstract class Optimizer () extends Serializable {
     * Updates variables by using the computed gradients.
     *
     * @param variableGradients A mapping of variable name to its gradient value.
+    *
+    * @doc {heading: 'Training', subheading: 'Optimizers'}
     */
   def applyGradients(variableGradients: NamedTensorMap): Unit = js.native
   
@@ -33,6 +35,8 @@ abstract class Optimizer () extends Serializable {
     * @param varList An optional list of variables to compute gradients with
     * respect to. If specified, only the trainable variables in varList will have
     * gradients computed with respect to. Defaults to all trainable variables.
+    *
+    * @doc {heading: 'Training', subheading: 'Optimizers'}
     */
   def computeGradients(f: js.Function0[Scalar]): Value = js.native
   def computeGradients(f: js.Function0[Scalar], varList: js.Array[Variable[Rank]]): Value = js.native
@@ -73,8 +77,9 @@ abstract class Optimizer () extends Serializable {
     * @param varList An optional list of variables to update. If specified, only
     * the trainable variables in varList will be updated by minimize. Defaults to
     * all trainable variables.
+    *
+    * @doc {heading: 'Training', subheading: 'Optimizers'}
     */
-  /** @doc {heading: 'Training', subheading: 'Optimizers'} */
   def minimize(f: js.Function0[Scalar]): Scalar | Null = js.native
   def minimize(f: js.Function0[Scalar], returnCost: js.UndefOr[scala.Nothing], varList: js.Array[Variable[Rank]]): Scalar | Null = js.native
   def minimize(f: js.Function0[Scalar], returnCost: Boolean): Scalar | Null = js.native

@@ -34,7 +34,7 @@ object URLScheme extends js.Object {
     *
     * Gets the URL for running the current script. When making a request to the returned URL from another app, e.g. Safari, the current script will run.
     *
-    * Any query parameter in the URL will be available using the URLScheme bridge. Get the query paramters using the `allParameters()` and `parameter(name)` functions.
+    * Get the query parameters using `args.queryParameters`.
     * @see https://docs.scriptable.app/urlscheme/#forrunningscript
     */
   def forRunningScript(): String = js.native

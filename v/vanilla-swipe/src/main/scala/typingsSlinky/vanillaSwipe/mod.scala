@@ -2,8 +2,8 @@ package typingsSlinky.vanillaSwipe
 
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
-import typingsSlinky.vanillaSwipe.anon.AbsX
 import typingsSlinky.vanillaSwipe.typesMod.ConstructorProps
+import typingsSlinky.vanillaSwipe.typesMod.EventData
 import typingsSlinky.vanillaSwipe.typesMod.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,12 +22,12 @@ object mod extends js.Object {
     
     def destroy(): Unit = js.native
     
-    def getPosition(e: MouseEvent): AbsX = js.native
-    def getPosition(e: TouchEvent): AbsX = js.native
+    def getEventData(e: MouseEvent): EventData = js.native
+    def getEventData(e: TouchEvent): EventData = js.native
     
     def handleMouseDown(e: MouseEvent): Unit = js.native
     
-    def handleMouseLeave(): Unit = js.native
+    def handleMouseLeave(e: MouseEvent): Unit = js.native
     
     def handleMouseMove(e: MouseEvent): Unit = js.native
     

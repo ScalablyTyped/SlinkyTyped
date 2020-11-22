@@ -6,6 +6,7 @@ import typingsSlinky.babelTraverse.babelTraverseStrings.const
 import typingsSlinky.babelTraverse.babelTraverseStrings.let
 import typingsSlinky.babelTraverse.babelTraverseStrings.module
 import typingsSlinky.babelTypes.mod.Identifier_
+import typingsSlinky.babelTypes.mod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

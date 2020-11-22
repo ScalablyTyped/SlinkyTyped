@@ -9,13 +9,13 @@ trait JsxExpression
   extends Expression
      with JsxChild {
   
-  var dotDotDotToken: js.UndefOr[Token[typingsSlinky.typescript.mod.SyntaxKind.DotDotDotToken]] = js.native
+  val dotDotDotToken: js.UndefOr[Token[typingsSlinky.typescript.mod.SyntaxKind.DotDotDotToken]] = js.native
   
-  var expression: js.UndefOr[Expression] = js.native
+  val expression: js.UndefOr[Expression] = js.native
   
   @JSName("kind")
-  var kind_JsxExpression: typingsSlinky.typescript.mod.SyntaxKind.JsxExpression = js.native
+  val kind_JsxExpression: typingsSlinky.typescript.mod.SyntaxKind.JsxExpression = js.native
   
   @JSName("parent")
-  var parent_JsxExpression: JsxElement | JsxAttributeLike = js.native
+  val parent_JsxExpression: JsxElement | JsxAttributeLike = js.native
 }

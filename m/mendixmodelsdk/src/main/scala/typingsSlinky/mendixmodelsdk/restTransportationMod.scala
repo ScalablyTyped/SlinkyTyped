@@ -22,6 +22,8 @@ object restTransportationMod extends js.Object {
     
     var prepareRequestOptions: js.Any = js.native
     
+    var retryRequest: js.Any = js.native
+    
     var sanitizedMethod: js.Any = js.native
     
     var url: js.Any = js.native

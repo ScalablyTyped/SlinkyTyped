@@ -2,8 +2,8 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import typingsSlinky.devextreme.anon.CancelComponentData
 import typingsSlinky.devextreme.anon.FormatModel
-import typingsSlinky.devextreme.anon.`16`
-import typingsSlinky.devextreme.anon.`17`
+import typingsSlinky.devextreme.anon.`19`
+import typingsSlinky.devextreme.anon.`20`
 import typingsSlinky.devextreme.devextremeStrings.genericDotcarmine
 import typingsSlinky.devextreme.devextremeStrings.genericDotcontrast
 import typingsSlinky.devextreme.devextremeStrings.genericDotdark
@@ -12,7 +12,6 @@ import typingsSlinky.devextreme.devextremeStrings.genericDotdarkviolet
 import typingsSlinky.devextreme.devextremeStrings.genericDotgreenmist
 import typingsSlinky.devextreme.devextremeStrings.genericDotlight
 import typingsSlinky.devextreme.devextremeStrings.genericDotsoftblue
-import typingsSlinky.devextreme.devextremeStrings.ios7Dotdefault
 import typingsSlinky.devextreme.devextremeStrings.materialDotblueDotlight
 import typingsSlinky.devextreme.devextremeStrings.materialDotlimeDotlight
 import typingsSlinky.devextreme.devextremeStrings.materialDotorangeDotlight
@@ -26,51 +25,81 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BaseWidgetOptions[T] extends DOMComponentOptions[T] {
   
-  /** @name BaseWidget.Options.disabled */
+  /**
+    * [descr:BaseWidget.Options.disabled]
+    */
   var disabled: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseWidget.Options.export */
+  /**
+    * [descr:BaseWidget.Options.export]
+    */
   var export: js.UndefOr[BaseWidgetExport] = js.native
   
-  /** @name BaseWidget.Options.loadingIndicator */
+  /**
+    * [descr:BaseWidget.Options.loadingIndicator]
+    */
   var loadingIndicator: js.UndefOr[BaseWidgetLoadingIndicator] = js.native
   
-  /** @name BaseWidget.Options.margin */
+  /**
+    * [descr:BaseWidget.Options.margin]
+    */
   var margin: js.UndefOr[BaseWidgetMargin] = js.native
   
-  /** @name BaseWidget.Options.onDrawn */
-  var onDrawn: js.UndefOr[js.Function1[/* e */ `16`[T], _]] = js.native
+  /**
+    * [descr:BaseWidget.Options.onDrawn]
+    */
+  var onDrawn: js.UndefOr[js.Function1[/* e */ `19`[T], _]] = js.native
   
-  /** @name BaseWidget.Options.onExported */
-  var onExported: js.UndefOr[js.Function1[/* e */ `16`[T], _]] = js.native
+  /**
+    * [descr:BaseWidget.Options.onExported]
+    */
+  var onExported: js.UndefOr[js.Function1[/* e */ `19`[T], _]] = js.native
   
-  /** @name BaseWidget.Options.onExporting */
+  /**
+    * [descr:BaseWidget.Options.onExporting]
+    */
   var onExporting: js.UndefOr[js.Function1[/* e */ FormatModel[T], _]] = js.native
   
-  /** @name BaseWidget.Options.onFileSaving */
+  /**
+    * [descr:BaseWidget.Options.onFileSaving]
+    */
   var onFileSaving: js.UndefOr[js.Function1[/* e */ CancelComponentData[T], _]] = js.native
   
-  /** @name BaseWidget.Options.onIncidentOccurred */
-  var onIncidentOccurred: js.UndefOr[js.Function1[/* e */ `17`[T], _]] = js.native
+  /**
+    * [descr:BaseWidget.Options.onIncidentOccurred]
+    */
+  var onIncidentOccurred: js.UndefOr[js.Function1[/* e */ `20`[T], _]] = js.native
   
-  /** @name BaseWidget.Options.pathModified */
+  /**
+    * [descr:BaseWidget.Options.pathModified]
+    */
   var pathModified: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseWidget.Options.redrawOnResize */
+  /**
+    * [descr:BaseWidget.Options.redrawOnResize]
+    */
   var redrawOnResize: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseWidget.Options.size */
+  /**
+    * [descr:BaseWidget.Options.size]
+    */
   var size: js.UndefOr[BaseWidgetSize] = js.native
   
-  /** @name BaseWidget.Options.theme */
+  /**
+    * [descr:BaseWidget.Options.theme]
+    */
   var theme: js.UndefOr[
-    genericDotdark | genericDotlight | genericDotcontrast | ios7Dotdefault | genericDotcarmine | genericDotdarkmoon | genericDotdarkviolet | genericDotgreenmist | genericDotsoftblue | materialDotblueDotlight | materialDotlimeDotlight | materialDotorangeDotlight | materialDotpurpleDotlight | materialDottealDotlight
+    genericDotdark | genericDotlight | genericDotcontrast | genericDotcarmine | genericDotdarkmoon | genericDotdarkviolet | genericDotgreenmist | genericDotsoftblue | materialDotblueDotlight | materialDotlimeDotlight | materialDotorangeDotlight | materialDotpurpleDotlight | materialDottealDotlight
   ] = js.native
   
-  /** @name BaseWidget.Options.title */
+  /**
+    * [descr:BaseWidget.Options.title]
+    */
   var title: js.UndefOr[BaseWidgetTitle | String] = js.native
   
-  /** @name BaseWidget.Options.tooltip */
+  /**
+    * [descr:BaseWidget.Options.tooltip]
+    */
   var tooltip: js.UndefOr[BaseWidgetTooltip] = js.native
 }
 object BaseWidgetOptions {
@@ -121,13 +150,13 @@ object BaseWidgetOptions {
     def deleteMargin: Self = this.set("margin", js.undefined)
     
     @scala.inline
-    def setOnDrawn(value: /* e */ `16`[T] => _): Self = this.set("onDrawn", js.Any.fromFunction1(value))
+    def setOnDrawn(value: /* e */ `19`[T] => _): Self = this.set("onDrawn", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnDrawn: Self = this.set("onDrawn", js.undefined)
     
     @scala.inline
-    def setOnExported(value: /* e */ `16`[T] => _): Self = this.set("onExported", js.Any.fromFunction1(value))
+    def setOnExported(value: /* e */ `19`[T] => _): Self = this.set("onExported", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnExported: Self = this.set("onExported", js.undefined)
@@ -145,7 +174,7 @@ object BaseWidgetOptions {
     def deleteOnFileSaving: Self = this.set("onFileSaving", js.undefined)
     
     @scala.inline
-    def setOnIncidentOccurred(value: /* e */ `17`[T] => _): Self = this.set("onIncidentOccurred", js.Any.fromFunction1(value))
+    def setOnIncidentOccurred(value: /* e */ `20`[T] => _): Self = this.set("onIncidentOccurred", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnIncidentOccurred: Self = this.set("onIncidentOccurred", js.undefined)
@@ -170,7 +199,7 @@ object BaseWidgetOptions {
     
     @scala.inline
     def setTheme(
-      value: genericDotdark | genericDotlight | genericDotcontrast | ios7Dotdefault | genericDotcarmine | genericDotdarkmoon | genericDotdarkviolet | genericDotgreenmist | genericDotsoftblue | materialDotblueDotlight | materialDotlimeDotlight | materialDotorangeDotlight | materialDotpurpleDotlight | materialDottealDotlight
+      value: genericDotdark | genericDotlight | genericDotcontrast | genericDotcarmine | genericDotdarkmoon | genericDotdarkviolet | genericDotgreenmist | genericDotsoftblue | materialDotblueDotlight | materialDotlimeDotlight | materialDotorangeDotlight | materialDotpurpleDotlight | materialDottealDotlight
     ): Self = this.set("theme", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TunnelOption extends js.Object {
   
   /**
+    * The action to take after a DPD timeout occurs.
+    */
+  var DpdTimeoutAction: js.UndefOr[String] = js.native
+  
+  /**
     * The number of seconds after which a DPD timeout occurs.
     */
   var DpdTimeoutSeconds: js.UndefOr[Integer] = js.native
@@ -83,9 +88,19 @@ trait TunnelOption extends js.Object {
   var ReplayWindowSize: js.UndefOr[Integer] = js.native
   
   /**
-    * The range of inside IP addresses for the tunnel.
+    * The action to take when the establishing the VPN tunnels for a VPN connection.
+    */
+  var StartupAction: js.UndefOr[String] = js.native
+  
+  /**
+    * The range of inside IPv4 addresses for the tunnel.
     */
   var TunnelInsideCidr: js.UndefOr[String] = js.native
+  
+  /**
+    * The range of inside IPv6 addresses for the tunnel.
+    */
+  var TunnelInsideIpv6Cidr: js.UndefOr[String] = js.native
 }
 object TunnelOption {
   
@@ -109,6 +124,12 @@ object TunnelOption {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDpdTimeoutAction(value: String): Self = this.set("DpdTimeoutAction", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDpdTimeoutAction: Self = this.set("DpdTimeoutAction", js.undefined)
     
     @scala.inline
     def setDpdTimeoutSeconds(value: Integer): Self = this.set("DpdTimeoutSeconds", value.asInstanceOf[js.Any])
@@ -222,9 +243,21 @@ object TunnelOption {
     def deleteReplayWindowSize: Self = this.set("ReplayWindowSize", js.undefined)
     
     @scala.inline
+    def setStartupAction(value: String): Self = this.set("StartupAction", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStartupAction: Self = this.set("StartupAction", js.undefined)
+    
+    @scala.inline
     def setTunnelInsideCidr(value: String): Self = this.set("TunnelInsideCidr", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTunnelInsideCidr: Self = this.set("TunnelInsideCidr", js.undefined)
+    
+    @scala.inline
+    def setTunnelInsideIpv6Cidr(value: String): Self = this.set("TunnelInsideIpv6Cidr", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTunnelInsideIpv6Cidr: Self = this.set("TunnelInsideIpv6Cidr", js.undefined)
   }
 }

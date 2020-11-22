@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.ec2Mod
 
-import typingsSlinky.pulumiAws.placementStrategyMod.PlacementStrategy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
-  var ClusterStrategy: PlacementStrategy = js.native
+  var ClusterStrategy: typingsSlinky.pulumiAws.enumsEc2Mod.PlacementStrategy = js.native
   
-  var SpreadStrategy: PlacementStrategy = js.native
+  var SpreadStrategy: typingsSlinky.pulumiAws.enumsEc2Mod.PlacementStrategy = js.native
 }

@@ -21,7 +21,11 @@ trait SharedStatelessProps extends js.Object {
   
   var getRequiredItemProps: js.UndefOr[js.Function2[/* item */ js.Any, /* index */ Double, RenderItemProps]] = js.native
   
+  var handleKeyDown: js.UndefOr[js.Function1[/* event */ KeyboardEvent, _]] = js.native
+  
   var highlightedIndex: js.UndefOr[Double] = js.native
+  
+  var isFocused: js.UndefOr[Boolean] = js.native
   
   var items: ItemsT = js.native
   
@@ -83,10 +87,22 @@ object SharedStatelessProps {
     def deleteGetRequiredItemProps: Self = this.set("getRequiredItemProps", js.undefined)
     
     @scala.inline
+    def setHandleKeyDown(value: /* event */ KeyboardEvent => _): Self = this.set("handleKeyDown", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteHandleKeyDown: Self = this.set("handleKeyDown", js.undefined)
+    
+    @scala.inline
     def setHighlightedIndex(value: Double): Self = this.set("highlightedIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHighlightedIndex: Self = this.set("highlightedIndex", js.undefined)
+    
+    @scala.inline
+    def setIsFocused(value: Boolean): Self = this.set("isFocused", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsFocused: Self = this.set("isFocused", js.undefined)
     
     @scala.inline
     def setNoResultsMsgReactElement(value: ReactElement): Self = this.set("noResultsMsg", value.asInstanceOf[js.Any])

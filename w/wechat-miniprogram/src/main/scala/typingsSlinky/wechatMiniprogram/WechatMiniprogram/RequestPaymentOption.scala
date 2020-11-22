@@ -1,6 +1,7 @@
 package typingsSlinky.wechatMiniprogram.WechatMiniprogram
 
 import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.MD5
+import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.RSA
 import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.`HMAC-SHA256`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,15 +23,16 @@ trait RequestPaymentOption extends js.Object {
   /** 随机字符串，长度为32个字符以下 */
   var nonceStr: String = js.native
   
-  /** 签名，具体签名方案参见 [小程序支付接口文档](https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_7&index=3) */
+  /** 签名，具体见微信支付文档 */
   var paySign: String = js.native
   
-  /** 签名算法
+  /** 签名算法，应与后台下单时的值一致
     *
     * 可选值：
-    * - 'MD5': MD5;
-    * - 'HMAC-SHA256': HMAC-SHA256; */
-  var signType: js.UndefOr[MD5 | `HMAC-SHA256`] = js.native
+    * - 'MD5': 仅在 v2 版本接口适用;
+    * - 'HMAC-SHA256': 仅在 v2 版本接口适用;
+    * - 'RSA': 仅在 v3 版本接口适用; */
+  var signType: js.UndefOr[MD5 | `HMAC-SHA256` | RSA] = js.native
   
   /** 接口调用成功的回调函数 */
   var success: js.UndefOr[RequestPaymentSuccessCallback] = js.native
@@ -87,7 +89,7 @@ object RequestPaymentOption {
     def deleteFail: Self = this.set("fail", js.undefined)
     
     @scala.inline
-    def setSignType(value: MD5 | `HMAC-SHA256`): Self = this.set("signType", value.asInstanceOf[js.Any])
+    def setSignType(value: MD5 | `HMAC-SHA256` | RSA): Self = this.set("signType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSignType: Self = this.set("signType", js.undefined)

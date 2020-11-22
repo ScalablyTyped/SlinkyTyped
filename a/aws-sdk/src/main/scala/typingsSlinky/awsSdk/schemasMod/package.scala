@@ -29,7 +29,12 @@ package object schemasMod {
   
   type Tags = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.schemasMod.string]
   
-  type Type = typingsSlinky.awsSdk.awsSdkStrings.OpenApi3 | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.OpenApi3
+    - typingsSlinky.awsSdk.awsSdkStrings.JSONSchemaDraft4
+    - java.lang.String
+  */
+  type Type = typingsSlinky.awsSdk.schemasMod._Type | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2019-12-02`

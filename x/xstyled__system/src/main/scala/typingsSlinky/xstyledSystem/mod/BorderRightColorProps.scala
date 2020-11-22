@@ -9,7 +9,7 @@ trait BorderRightColorProps extends js.Object {
   
   val borderRightColor: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderColorProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderColor */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BorderRightColorProps {
     }
     
     @scala.inline
+    def setBorderRightColorVarargs(value: js.Any*): Self = this.set("borderRightColor", js.Array(value :_*))
+    
+    @scala.inline
     def setBorderRightColor(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderColorProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderColor */ _
         ]
     ): Self = this.set("borderRightColor", value.asInstanceOf[js.Any])
     

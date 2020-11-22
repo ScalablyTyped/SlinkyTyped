@@ -8,9 +8,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResourceDetails extends js.Object {
   
   /**
+    * 
+    */
+  var AwsApiGatewayRestApi: js.UndefOr[AwsApiGatewayRestApiDetails] = js.native
+  
+  /**
+    * 
+    */
+  var AwsApiGatewayStage: js.UndefOr[AwsApiGatewayStageDetails] = js.native
+  
+  /**
+    * 
+    */
+  var AwsApiGatewayV2Api: js.UndefOr[AwsApiGatewayV2ApiDetails] = js.native
+  
+  /**
+    * 
+    */
+  var AwsApiGatewayV2Stage: js.UndefOr[AwsApiGatewayV2StageDetails] = js.native
+  
+  /**
     * Details for an autoscaling group.
     */
   var AwsAutoScalingAutoScalingGroup: js.UndefOr[AwsAutoScalingAutoScalingGroupDetails] = js.native
+  
+  /**
+    * 
+    */
+  var AwsCertificateManagerCertificate: js.UndefOr[AwsCertificateManagerCertificateDetails] = js.native
   
   /**
     * Details about a CloudFront distribution.
@@ -18,9 +43,24 @@ trait ResourceDetails extends js.Object {
   var AwsCloudFrontDistribution: js.UndefOr[AwsCloudFrontDistributionDetails] = js.native
   
   /**
+    * 
+    */
+  var AwsCloudTrailTrail: js.UndefOr[AwsCloudTrailTrailDetails] = js.native
+  
+  /**
     * Details for an AWS CodeBuild project.
     */
   var AwsCodeBuildProject: js.UndefOr[AwsCodeBuildProjectDetails] = js.native
+  
+  /**
+    * Details about a DynamoDB table.
+    */
+  var AwsDynamoDbTable: js.UndefOr[AwsDynamoDbTableDetails] = js.native
+  
+  /**
+    * Details about an Elastic IP address.
+    */
+  var AwsEc2Eip: js.UndefOr[AwsEc2EipDetails] = js.native
   
   /**
     * Details about an Amazon EC2 instance related to a finding.
@@ -53,6 +93,11 @@ trait ResourceDetails extends js.Object {
   var AwsElasticsearchDomain: js.UndefOr[AwsElasticsearchDomainDetails] = js.native
   
   /**
+    * 
+    */
+  var AwsElbLoadBalancer: js.UndefOr[AwsElbLoadBalancerDetails] = js.native
+  
+  /**
     * Details about a load balancer.
     */
   var AwsElbv2LoadBalancer: js.UndefOr[AwsElbv2LoadBalancerDetails] = js.native
@@ -63,9 +108,24 @@ trait ResourceDetails extends js.Object {
   var AwsIamAccessKey: js.UndefOr[AwsIamAccessKeyDetails] = js.native
   
   /**
+    * 
+    */
+  var AwsIamGroup: js.UndefOr[AwsIamGroupDetails] = js.native
+  
+  /**
+    * Details about an IAM permissions policy.
+    */
+  var AwsIamPolicy: js.UndefOr[AwsIamPolicyDetails] = js.native
+  
+  /**
     * Details about an IAM role.
     */
   var AwsIamRole: js.UndefOr[AwsIamRoleDetails] = js.native
+  
+  /**
+    * Details about an IAM user.
+    */
+  var AwsIamUser: js.UndefOr[AwsIamUserDetails] = js.native
   
   /**
     * Details about a KMS key.
@@ -83,9 +143,29 @@ trait ResourceDetails extends js.Object {
   var AwsLambdaLayerVersion: js.UndefOr[AwsLambdaLayerVersionDetails] = js.native
   
   /**
-    * Details for an Amazon RDS database instance.
+    * Details about an Amazon RDS database cluster.
+    */
+  var AwsRdsDbCluster: js.UndefOr[AwsRdsDbClusterDetails] = js.native
+  
+  /**
+    * Details about an Amazon RDS database cluster snapshot.
+    */
+  var AwsRdsDbClusterSnapshot: js.UndefOr[AwsRdsDbClusterSnapshotDetails] = js.native
+  
+  /**
+    * Details about an Amazon RDS database instance.
     */
   var AwsRdsDbInstance: js.UndefOr[AwsRdsDbInstanceDetails] = js.native
+  
+  /**
+    * Details about an Amazon RDS database snapshot.
+    */
+  var AwsRdsDbSnapshot: js.UndefOr[AwsRdsDbSnapshotDetails] = js.native
+  
+  /**
+    * 
+    */
+  var AwsRedshiftCluster: js.UndefOr[AwsRedshiftClusterDetails] = js.native
   
   /**
     * Details about an Amazon S3 bucket related to a finding.
@@ -96,6 +176,11 @@ trait ResourceDetails extends js.Object {
     * Details about an Amazon S3 object related to a finding.
     */
   var AwsS3Object: js.UndefOr[AwsS3ObjectDetails] = js.native
+  
+  /**
+    * Details about a Secrets Manager secret.
+    */
+  var AwsSecretsManagerSecret: js.UndefOr[AwsSecretsManagerSecretDetails] = js.native
   
   /**
     * Details about an SNS topic.
@@ -146,10 +231,40 @@ object ResourceDetails {
     }
     
     @scala.inline
+    def setAwsApiGatewayRestApi(value: AwsApiGatewayRestApiDetails): Self = this.set("AwsApiGatewayRestApi", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsApiGatewayRestApi: Self = this.set("AwsApiGatewayRestApi", js.undefined)
+    
+    @scala.inline
+    def setAwsApiGatewayStage(value: AwsApiGatewayStageDetails): Self = this.set("AwsApiGatewayStage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsApiGatewayStage: Self = this.set("AwsApiGatewayStage", js.undefined)
+    
+    @scala.inline
+    def setAwsApiGatewayV2Api(value: AwsApiGatewayV2ApiDetails): Self = this.set("AwsApiGatewayV2Api", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsApiGatewayV2Api: Self = this.set("AwsApiGatewayV2Api", js.undefined)
+    
+    @scala.inline
+    def setAwsApiGatewayV2Stage(value: AwsApiGatewayV2StageDetails): Self = this.set("AwsApiGatewayV2Stage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsApiGatewayV2Stage: Self = this.set("AwsApiGatewayV2Stage", js.undefined)
+    
+    @scala.inline
     def setAwsAutoScalingAutoScalingGroup(value: AwsAutoScalingAutoScalingGroupDetails): Self = this.set("AwsAutoScalingAutoScalingGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAwsAutoScalingAutoScalingGroup: Self = this.set("AwsAutoScalingAutoScalingGroup", js.undefined)
+    
+    @scala.inline
+    def setAwsCertificateManagerCertificate(value: AwsCertificateManagerCertificateDetails): Self = this.set("AwsCertificateManagerCertificate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsCertificateManagerCertificate: Self = this.set("AwsCertificateManagerCertificate", js.undefined)
     
     @scala.inline
     def setAwsCloudFrontDistribution(value: AwsCloudFrontDistributionDetails): Self = this.set("AwsCloudFrontDistribution", value.asInstanceOf[js.Any])
@@ -158,10 +273,28 @@ object ResourceDetails {
     def deleteAwsCloudFrontDistribution: Self = this.set("AwsCloudFrontDistribution", js.undefined)
     
     @scala.inline
+    def setAwsCloudTrailTrail(value: AwsCloudTrailTrailDetails): Self = this.set("AwsCloudTrailTrail", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsCloudTrailTrail: Self = this.set("AwsCloudTrailTrail", js.undefined)
+    
+    @scala.inline
     def setAwsCodeBuildProject(value: AwsCodeBuildProjectDetails): Self = this.set("AwsCodeBuildProject", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAwsCodeBuildProject: Self = this.set("AwsCodeBuildProject", js.undefined)
+    
+    @scala.inline
+    def setAwsDynamoDbTable(value: AwsDynamoDbTableDetails): Self = this.set("AwsDynamoDbTable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsDynamoDbTable: Self = this.set("AwsDynamoDbTable", js.undefined)
+    
+    @scala.inline
+    def setAwsEc2Eip(value: AwsEc2EipDetails): Self = this.set("AwsEc2Eip", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsEc2Eip: Self = this.set("AwsEc2Eip", js.undefined)
     
     @scala.inline
     def setAwsEc2Instance(value: AwsEc2InstanceDetails): Self = this.set("AwsEc2Instance", value.asInstanceOf[js.Any])
@@ -200,6 +333,12 @@ object ResourceDetails {
     def deleteAwsElasticsearchDomain: Self = this.set("AwsElasticsearchDomain", js.undefined)
     
     @scala.inline
+    def setAwsElbLoadBalancer(value: AwsElbLoadBalancerDetails): Self = this.set("AwsElbLoadBalancer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsElbLoadBalancer: Self = this.set("AwsElbLoadBalancer", js.undefined)
+    
+    @scala.inline
     def setAwsElbv2LoadBalancer(value: AwsElbv2LoadBalancerDetails): Self = this.set("AwsElbv2LoadBalancer", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -212,10 +351,28 @@ object ResourceDetails {
     def deleteAwsIamAccessKey: Self = this.set("AwsIamAccessKey", js.undefined)
     
     @scala.inline
+    def setAwsIamGroup(value: AwsIamGroupDetails): Self = this.set("AwsIamGroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsIamGroup: Self = this.set("AwsIamGroup", js.undefined)
+    
+    @scala.inline
+    def setAwsIamPolicy(value: AwsIamPolicyDetails): Self = this.set("AwsIamPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsIamPolicy: Self = this.set("AwsIamPolicy", js.undefined)
+    
+    @scala.inline
     def setAwsIamRole(value: AwsIamRoleDetails): Self = this.set("AwsIamRole", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAwsIamRole: Self = this.set("AwsIamRole", js.undefined)
+    
+    @scala.inline
+    def setAwsIamUser(value: AwsIamUserDetails): Self = this.set("AwsIamUser", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsIamUser: Self = this.set("AwsIamUser", js.undefined)
     
     @scala.inline
     def setAwsKmsKey(value: AwsKmsKeyDetails): Self = this.set("AwsKmsKey", value.asInstanceOf[js.Any])
@@ -236,10 +393,34 @@ object ResourceDetails {
     def deleteAwsLambdaLayerVersion: Self = this.set("AwsLambdaLayerVersion", js.undefined)
     
     @scala.inline
+    def setAwsRdsDbCluster(value: AwsRdsDbClusterDetails): Self = this.set("AwsRdsDbCluster", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsRdsDbCluster: Self = this.set("AwsRdsDbCluster", js.undefined)
+    
+    @scala.inline
+    def setAwsRdsDbClusterSnapshot(value: AwsRdsDbClusterSnapshotDetails): Self = this.set("AwsRdsDbClusterSnapshot", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsRdsDbClusterSnapshot: Self = this.set("AwsRdsDbClusterSnapshot", js.undefined)
+    
+    @scala.inline
     def setAwsRdsDbInstance(value: AwsRdsDbInstanceDetails): Self = this.set("AwsRdsDbInstance", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAwsRdsDbInstance: Self = this.set("AwsRdsDbInstance", js.undefined)
+    
+    @scala.inline
+    def setAwsRdsDbSnapshot(value: AwsRdsDbSnapshotDetails): Self = this.set("AwsRdsDbSnapshot", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsRdsDbSnapshot: Self = this.set("AwsRdsDbSnapshot", js.undefined)
+    
+    @scala.inline
+    def setAwsRedshiftCluster(value: AwsRedshiftClusterDetails): Self = this.set("AwsRedshiftCluster", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsRedshiftCluster: Self = this.set("AwsRedshiftCluster", js.undefined)
     
     @scala.inline
     def setAwsS3Bucket(value: AwsS3BucketDetails): Self = this.set("AwsS3Bucket", value.asInstanceOf[js.Any])
@@ -252,6 +433,12 @@ object ResourceDetails {
     
     @scala.inline
     def deleteAwsS3Object: Self = this.set("AwsS3Object", js.undefined)
+    
+    @scala.inline
+    def setAwsSecretsManagerSecret(value: AwsSecretsManagerSecretDetails): Self = this.set("AwsSecretsManagerSecret", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwsSecretsManagerSecret: Self = this.set("AwsSecretsManagerSecret", js.undefined)
     
     @scala.inline
     def setAwsSnsTopic(value: AwsSnsTopicDetails): Self = this.set("AwsSnsTopic", value.asInstanceOf[js.Any])

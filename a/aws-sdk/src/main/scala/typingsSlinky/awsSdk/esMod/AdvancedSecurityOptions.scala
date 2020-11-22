@@ -16,6 +16,11 @@ trait AdvancedSecurityOptions extends js.Object {
     * True if the internal user database is enabled.
     */
   var InternalUserDatabaseEnabled: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Describes the SAML application configured for a domain.
+    */
+  var SAMLOptions: js.UndefOr[SAMLOptionsOutput] = js.native
 }
 object AdvancedSecurityOptions {
   
@@ -51,5 +56,11 @@ object AdvancedSecurityOptions {
     
     @scala.inline
     def deleteInternalUserDatabaseEnabled: Self = this.set("InternalUserDatabaseEnabled", js.undefined)
+    
+    @scala.inline
+    def setSAMLOptions(value: SAMLOptionsOutput): Self = this.set("SAMLOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSAMLOptions: Self = this.set("SAMLOptions", js.undefined)
   }
 }

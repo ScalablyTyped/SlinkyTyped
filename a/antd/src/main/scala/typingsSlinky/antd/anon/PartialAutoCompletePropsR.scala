@@ -10,8 +10,13 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticUIEvent
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -43,14 +48,13 @@ import typingsSlinky.antd.antdStrings.popup
 import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.autoCompleteMod.DataSourceItemType
-import typingsSlinky.antd.selectMod.SelectValue
-import typingsSlinky.antd.selectMod.default
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
+import typingsSlinky.antd.selectMod.RefSelectProps
 import typingsSlinky.rcSelect.anon.Mark
 import typingsSlinky.rcSelect.generatorMod.CustomTagProps
 import typingsSlinky.rcSelect.generatorMod.FilterFunc
@@ -64,16 +68,14 @@ import typingsSlinky.rcSelect.interfaceMod.RenderDOMFunc
 import typingsSlinky.rcSelect.interfaceMod.RenderNode
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
-import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.UIEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<antd.antd/lib/auto-complete.AutoCompleteProps & react.react.RefAttributes<antd.antd/lib/select.default<antd.antd/lib/select.SelectValue>>> */
+/* Inlined std.Partial<antd.antd/lib/auto-complete.AutoCompleteProps & react.react.RefAttributes<antd.antd/lib/select.RefSelectProps>> */
 @js.native
 trait PartialAutoCompletePropsR extends js.Object {
   
@@ -151,7 +153,9 @@ trait PartialAutoCompletePropsR extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -231,7 +235,7 @@ trait PartialAutoCompletePropsR extends js.Object {
   
   var internalProps: js.UndefOr[Mark[OptionsType]] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[typingsSlinky.react.mod.Key | Null] = js.native
   
   var listHeight: js.UndefOr[Double] = js.native
   
@@ -309,7 +313,7 @@ trait PartialAutoCompletePropsR extends js.Object {
   
   var prefixCls: js.UndefOr[String] = js.native
   
-  var ref: js.UndefOr[Ref[default[SelectValue]]] = js.native
+  var ref: js.UndefOr[typingsSlinky.react.mod.Ref[RefSelectProps]] = js.native
   
   var removeIcon: js.UndefOr[ReactElement] = js.native
   
@@ -585,7 +589,9 @@ object PartialAutoCompletePropsR {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -833,10 +839,13 @@ object PartialAutoCompletePropsR {
     def deleteInternalProps: Self = this.set("internalProps", js.undefined)
     
     @scala.inline
-    def setKey(value: Key): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setKey(value: typingsSlinky.react.mod.Key): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setListHeight(value: Double): Self = this.set("listHeight", value.asInstanceOf[js.Any])
@@ -1034,13 +1043,13 @@ object PartialAutoCompletePropsR {
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     
     @scala.inline
-    def setRefRefObject(value: ReactRef[default[SelectValue]]): Self = this.set("ref", value.asInstanceOf[js.Any])
+    def setRefRefObject(value: ReactRef[RefSelectProps]): Self = this.set("ref", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRefFunction1(value: /* instance */ default[SelectValue] | Null => Unit): Self = this.set("ref", js.Any.fromFunction1(value))
+    def setRefFunction1(value: /* instance */ RefSelectProps | Null => Unit): Self = this.set("ref", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setRef(value: Ref[default[SelectValue]]): Self = this.set("ref", value.asInstanceOf[js.Any])
+    def setRef(value: typingsSlinky.react.mod.Ref[RefSelectProps]): Self = this.set("ref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRef: Self = this.set("ref", js.undefined)

@@ -18,7 +18,7 @@ trait CreateCertificateAuthorityRequest extends js.Object {
   var CertificateAuthorityType: typingsSlinky.awsSdk.acmpcaMod.CertificateAuthorityType = js.native
   
   /**
-    * Alphanumeric string that can be used to distinguish between calls to CreateCertificateAuthority. Idempotency tokens time out after five minutes. Therefore, if you call CreateCertificateAuthority multiple times with the same idempotency token within a five minute period, ACM Private CA recognizes that you are requesting only one certificate. As a result, ACM Private CA issues only one. If you change the idempotency token for each call, however, ACM Private CA recognizes that you are requesting multiple certificates.
+    * Alphanumeric string that can be used to distinguish between calls to CreateCertificateAuthority. For a given token, ACM Private CA creates exactly one CA. If you issue a subsequent call using the same token, ACM Private CA returns the ARN of the existing CA and takes no further action. If you change the idempotency token across multiple calls, ACM Private CA creates a unique CA for each unique token.
     */
   var IdempotencyToken: js.UndefOr[typingsSlinky.awsSdk.acmpcaMod.IdempotencyToken] = js.native
   
@@ -28,7 +28,7 @@ trait CreateCertificateAuthorityRequest extends js.Object {
   var RevocationConfiguration: js.UndefOr[typingsSlinky.awsSdk.acmpcaMod.RevocationConfiguration] = js.native
   
   /**
-    * Key-value pairs that will be attached to the new private CA. You can associate up to 50 tags with a private CA. For information using tags with  IAM to manage permissions, see Controlling Access Using IAM Tags.
+    * Key-value pairs that will be attached to the new private CA. You can associate up to 50 tags with a private CA. For information using tags with IAM to manage permissions, see Controlling Access Using IAM Tags.
     */
   var Tags: js.UndefOr[TagList] = js.native
 }

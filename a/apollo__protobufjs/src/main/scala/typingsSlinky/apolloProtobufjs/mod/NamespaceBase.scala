@@ -23,7 +23,7 @@ abstract class NamespaceBase () extends ReflectionObject {
     * @param nestedJson Any nested object descriptors
     * @returns `this`
     */
-  def addJSON(nestedJson: StringDictionary[AnyNestedObject]): Namespace = js.native
+  def addJSON(nestedJson: StringDictionary[js.UndefOr[AnyNestedObject]]): Namespace = js.native
   
   /**
     * Defines additial namespaces within this one if not yet existing.
@@ -50,7 +50,7 @@ abstract class NamespaceBase () extends ReflectionObject {
     * @returns Enum values
     * @throws {Error} If there is no such enum
     */
-  def getEnum(name: String): StringDictionary[Double] = js.native
+  def getEnum(name: String): StringDictionary[js.UndefOr[Double]] = js.native
   
   /**
     * Looks up the reflection object at the specified path, relative to this namespace.
@@ -119,7 +119,7 @@ abstract class NamespaceBase () extends ReflectionObject {
   def lookupTypeOrEnum(path: js.Array[String]): Type = js.native
   
   /** Nested objects by name. */
-  var nested: js.UndefOr[StringDictionary[ReflectionObject]] = js.native
+  var nested: js.UndefOr[StringDictionary[js.UndefOr[ReflectionObject]]] = js.native
   
   /** Nested objects of this namespace as an array for iteration. */
   val nestedArray: js.Array[ReflectionObject] = js.native

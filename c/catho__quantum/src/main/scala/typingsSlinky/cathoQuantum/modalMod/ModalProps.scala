@@ -1,5 +1,6 @@
 package typingsSlinky.cathoQuantum.modalMod
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
@@ -15,6 +16,8 @@ trait ModalProps extends js.Object {
   var children: js.UndefOr[js.Array[ReactElement] | ReactElement] = js.native
   
   var closeButtonAriaLabel: js.UndefOr[String] = js.native
+  
+  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[Element], Unit]] = js.native
   
   var onClose: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.native
   
@@ -60,6 +63,12 @@ object ModalProps {
     
     @scala.inline
     def deleteCloseButtonAriaLabel: Self = this.set("closeButtonAriaLabel", js.undefined)
+    
+    @scala.inline
+    def setOnClick(value: /* e */ SyntheticMouseEvent[Element] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
     def setOnClose(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))

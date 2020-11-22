@@ -1,18 +1,16 @@
 package typingsSlinky.datastoreCore.mod
 
-import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.interfaceDatastore.mod.Datastore
+import typingsSlinky.interfaceDatastore.mod.Adapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@JSImport("datastore-core", "KeytransformDatastore")
 @js.native
-trait KeytransformDatastore[Value] extends Datastore[Value] {
+class KeytransformDatastore[Value] protected () extends Adapter[Value] {
+  def this(child: Adapter[Value], transform: Transform) = this()
   
-  var child: Datastore[Value] = js.native
+  var child: Adapter[Value] = js.native
   
   var transform: Transform = js.native
 }
-@JSImport("datastore-core", "KeytransformDatastore")
-@js.native
-object KeytransformDatastore extends TopLevel[KeytransformDatastoreConstructor]

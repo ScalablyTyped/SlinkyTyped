@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object engineMod {
   
-  type CustomGradientFunc[T /* <: typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] */] = js.Function1[
-    /* repeated */ typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | typingsSlinky.tensorflowTfjsCore.tensorTypesMod.GradSaveFunc, 
+  type CustomGradientFunc[T /* <: typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] */] = js.Function1[
+    /* repeated */ typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | typingsSlinky.tensorflowTfjsCore.tensorTypesMod.GradSaveFunc, 
     typingsSlinky.tensorflowTfjsCore.anon.GradFunc[T]
   ]
   

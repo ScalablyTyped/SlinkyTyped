@@ -13,9 +13,10 @@ import typingsSlinky.astTypes.kindsMod.TypeAnnotationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Identifier, 'type' | 'name'> */
+@js.native
 trait JSXIdentifier
   extends ASTNode
      with ExpressionKind
@@ -23,15 +24,19 @@ trait JSXIdentifier
      with NodeKind
      with PatternKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var name: String
-  var optional: js.UndefOr[Boolean] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.JSXIdentifier
-  var typeAnnotation: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind] = js.undefined
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var name: String = js.native
+  
+  var optional: js.UndefOr[Boolean] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.JSXIdentifier = js.native
+  
+  var typeAnnotation: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind | Null] = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.JSXIdentifier")
 @js.native
 object JSXIdentifier extends TopLevel[Type[JSXIdentifier]]
-

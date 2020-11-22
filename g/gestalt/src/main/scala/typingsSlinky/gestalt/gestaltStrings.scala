@@ -17,6 +17,9 @@ object gestaltStrings {
   def absolute: absolute = "absolute".asInstanceOf[absolute]
   
   @scala.inline
+  def active: active = "active".asInstanceOf[active]
+  
+  @scala.inline
   def ad: ad = "ad".asInstanceOf[ad]
   
   @scala.inline
@@ -74,7 +77,13 @@ object gestaltStrings {
   def `align-top-right`: `align-top-right` = "align-top-right".asInstanceOf[`align-top-right`]
   
   @scala.inline
+  def `android-share`: `android-share` = "android-share".asInstanceOf[`android-share`]
+  
+  @scala.inline
   def `angled-pin`: `angled-pin` = "angled-pin".asInstanceOf[`angled-pin`]
+  
+  @scala.inline
+  def anonymous: anonymous = "anonymous".asInstanceOf[anonymous]
   
   @scala.inline
   def apps: apps = "apps".asInstanceOf[apps]
@@ -111,6 +120,9 @@ object gestaltStrings {
   
   @scala.inline
   def `arrow-up-right`: `arrow-up-right` = "arrow-up-right".asInstanceOf[`arrow-up-right`]
+  
+  @scala.inline
+  def asc: asc = "asc".asInstanceOf[asc]
   
   @scala.inline
   def auto: auto = "auto".asInstanceOf[auto]
@@ -173,13 +185,25 @@ object gestaltStrings {
   def `circle-outline`: `circle-outline` = "circle-outline".asInstanceOf[`circle-outline`]
   
   @scala.inline
+  def circule: circule = "circule".asInstanceOf[circule]
+  
+  @scala.inline
   def clear: clear = "clear".asInstanceOf[clear]
   
   @scala.inline
   def clock: clock = "clock".asInstanceOf[clock]
   
   @scala.inline
+  def code: code = "code".asInstanceOf[code]
+  
+  @scala.inline
   def cog: cog = "cog".asInstanceOf[cog]
+  
+  @scala.inline
+  def col: col = "col".asInstanceOf[col]
+  
+  @scala.inline
+  def colgroup: colgroup = "colgroup".asInstanceOf[colgroup]
   
   @scala.inline
   def `color-picker`: `color-picker` = "color-picker".asInstanceOf[`color-picker`]
@@ -191,10 +215,19 @@ object gestaltStrings {
   def compass: compass = "compass".asInstanceOf[compass]
   
   @scala.inline
+  def complete: complete = "complete".asInstanceOf[complete]
+  
+  @scala.inline
   def compose: compose = "compose".asInstanceOf[compose]
   
   @scala.inline
+  def compress: compress = "compress".asInstanceOf[compress]
+  
+  @scala.inline
   def contain: contain = "contain".asInstanceOf[contain]
+  
+  @scala.inline
+  def `conversion-tag`: `conversion-tag` = "conversion-tag".asInstanceOf[`conversion-tag`]
   
   @scala.inline
   def copy: copy = "copy".asInstanceOf[copy]
@@ -203,10 +236,16 @@ object gestaltStrings {
   def cover: cover = "cover".asInstanceOf[cover]
   
   @scala.inline
+  def `credit-card`: `credit-card` = "credit-card".asInstanceOf[`credit-card`]
+  
+  @scala.inline
   def crop: crop = "crop".asInstanceOf[crop]
   
   @scala.inline
   def `current-password`: `current-password` = "current-password".asInstanceOf[`current-password`]
+  
+  @scala.inline
+  def dark: dark = "dark".asInstanceOf[dark]
   
   @scala.inline
   def darkGray: darkGray = "darkGray".asInstanceOf[darkGray]
@@ -219,6 +258,9 @@ object gestaltStrings {
   
   @scala.inline
   def date: date = "date".asInstanceOf[date]
+  
+  @scala.inline
+  def desc: desc = "desc".asInstanceOf[desc]
   
   @scala.inline
   def dialog: dialog = "dialog".asInstanceOf[dialog]
@@ -234,6 +276,9 @@ object gestaltStrings {
   
   @scala.inline
   def download: download = "download".asInstanceOf[download]
+  
+  @scala.inline
+  def `drag-drop`: `drag-drop` = "drag-drop".asInstanceOf[`drag-drop`]
   
   @scala.inline
   def duplicate: duplicate = "duplicate".asInstanceOf[duplicate]
@@ -263,6 +308,9 @@ object gestaltStrings {
   def envelope: envelope = "envelope".asInstanceOf[envelope]
   
   @scala.inline
+  def error: error = "error".asInstanceOf[error]
+  
+  @scala.inline
   def evenly: evenly = "evenly".asInstanceOf[evenly]
   
   @scala.inline
@@ -284,6 +332,9 @@ object gestaltStrings {
   def `file-unknown`: `file-unknown` = "file-unknown".asInstanceOf[`file-unknown`]
   
   @scala.inline
+  def fill: fill = "fill".asInstanceOf[fill]
+  
+  @scala.inline
   def `fill-opaque`: `fill-opaque` = "fill-opaque".asInstanceOf[`fill-opaque`]
   
   @scala.inline
@@ -291,6 +342,9 @@ object gestaltStrings {
   
   @scala.inline
   def filter: filter = "filter".asInstanceOf[filter]
+  
+  @scala.inline
+  def fit: fit = "fit".asInstanceOf[fit]
   
   @scala.inline
   def fixed: fixed = "fixed".asInstanceOf[fixed]
@@ -306,6 +360,9 @@ object gestaltStrings {
   
   @scala.inline
   def flex: flex = "flex".asInstanceOf[flex]
+  
+  @scala.inline
+  def flexible: flexible = "flexible".asInstanceOf[flexible]
   
   @scala.inline
   def flipHorizontal: flipHorizontal = "flipHorizontal".asInstanceOf[flipHorizontal]
@@ -374,6 +431,12 @@ object gestaltStrings {
   def impressum: impressum = "impressum".asInstanceOf[impressum]
   
   @scala.inline
+  def inactive: inactive = "inactive".asInstanceOf[inactive]
+  
+  @scala.inline
+  def info: info = "info".asInstanceOf[info]
+  
+  @scala.inline
   def `info-circle`: `info-circle` = "info-circle".asInstanceOf[`info-circle`]
   
   @scala.inline
@@ -396,6 +459,9 @@ object gestaltStrings {
   
   @scala.inline
   def lg: lg = "lg".asInstanceOf[lg]
+  
+  @scala.inline
+  def light: light = "light".asInstanceOf[light]
   
   @scala.inline
   def lightGray: lightGray = "lightGray".asInstanceOf[lightGray]
@@ -479,10 +545,16 @@ object gestaltStrings {
   def navy: navy = "navy".asInstanceOf[navy]
   
   @scala.inline
+  def needsAttention: needsAttention = "needsAttention".asInstanceOf[needsAttention]
+  
+  @scala.inline
   def `new-password`: `new-password` = "new-password".asInstanceOf[`new-password`]
   
   @scala.inline
   def noDrop: noDrop = "noDrop".asInstanceOf[noDrop]
+  
+  @scala.inline
+  def nofollow: nofollow = "nofollow".asInstanceOf[nofollow]
   
   @scala.inline
   def none: none = "none".asInstanceOf[none]
@@ -491,7 +563,7 @@ object gestaltStrings {
   def normal: normal = "normal".asInstanceOf[normal]
   
   @scala.inline
-  def `null`: `null` = "null".asInstanceOf[`null`]
+  def notStarted: notStarted = "notStarted".asInstanceOf[notStarted]
   
   @scala.inline
   def number: number = "number".asInstanceOf[number]
@@ -521,6 +593,9 @@ object gestaltStrings {
   def pause: pause = "pause".asInstanceOf[pause]
   
   @scala.inline
+  def pending: pending = "pending".asInstanceOf[pending]
+  
+  @scala.inline
   def people: people = "people".asInstanceOf[people]
   
   @scala.inline
@@ -528,6 +603,9 @@ object gestaltStrings {
   
   @scala.inline
   def `person-add`: `person-add` = "person-add".asInstanceOf[`person-add`]
+  
+  @scala.inline
+  def phone: phone = "phone".asInstanceOf[phone]
   
   @scala.inline
   def pill: pill = "pill".asInstanceOf[pill]
@@ -545,19 +623,22 @@ object gestaltStrings {
   def pinterest: pinterest = "pinterest".asInstanceOf[pinterest]
   
   @scala.inline
-  def pintrest: pintrest = "pintrest".asInstanceOf[pintrest]
-  
-  @scala.inline
   def play: play = "play".asInstanceOf[play]
   
   @scala.inline
   def pointer: pointer = "pointer".asInstanceOf[pointer]
   
   @scala.inline
+  def protect: protect = "protect".asInstanceOf[protect]
+  
+  @scala.inline
   def purple: purple = "purple".asInstanceOf[purple]
   
   @scala.inline
   def `question-mark`: `question-mark` = "question-mark".asInstanceOf[`question-mark`]
+  
+  @scala.inline
+  def rectangle: rectangle = "rectangle".asInstanceOf[rectangle]
   
   @scala.inline
   def red: red = "red".asInstanceOf[red]
@@ -590,7 +671,13 @@ object gestaltStrings {
   def row: row = "row".asInstanceOf[row]
   
   @scala.inline
+  def rowgroup: rowgroup = "rowgroup".asInstanceOf[rowgroup]
+  
+  @scala.inline
   def scale: scale = "scale".asInstanceOf[scale]
+  
+  @scala.inline
+  def `scale-down`: `scale-down` = "scale-down".asInstanceOf[`scale-down`]
   
   @scala.inline
   def scroll: scroll = "scroll".asInstanceOf[scroll]
@@ -614,13 +701,13 @@ object gestaltStrings {
   def send: send = "send".asInstanceOf[send]
   
   @scala.inline
+  def shadow: shadow = "shadow".asInstanceOf[shadow]
+  
+  @scala.inline
   def share: share = "share".asInstanceOf[share]
   
   @scala.inline
   def `shopping-bag`: `shopping-bag` = "shopping-bag".asInstanceOf[`shopping-bag`]
-  
-  @scala.inline
-  def short: short = "short".asInstanceOf[short]
   
   @scala.inline
   def shrink: shrink = "shrink".asInstanceOf[shrink]
@@ -644,13 +731,22 @@ object gestaltStrings {
   def sound: sound = "sound".asInstanceOf[sound]
   
   @scala.inline
+  def sparkle: sparkle = "sparkle".asInstanceOf[sparkle]
+  
+  @scala.inline
   def speech: speech = "speech".asInstanceOf[speech]
   
   @scala.inline
   def `speech-ellipsis`: `speech-ellipsis` = "speech-ellipsis".asInstanceOf[`speech-ellipsis`]
   
   @scala.inline
+  def square: square = "square".asInstanceOf[square]
+  
+  @scala.inline
   def star: star = "star".asInstanceOf[star]
+  
+  @scala.inline
+  def `star-half`: `star-half` = "star-half".asInstanceOf[`star-half`]
   
   @scala.inline
   def start: start = "start".asInstanceOf[start]
@@ -659,7 +755,13 @@ object gestaltStrings {
   def static: static = "static".asInstanceOf[static]
   
   @scala.inline
+  def `story-pin`: `story-pin` = "story-pin".asInstanceOf[`story-pin`]
+  
+  @scala.inline
   def stretch: stretch = "stretch".asInstanceOf[stretch]
+  
+  @scala.inline
+  def string: string = "string".asInstanceOf[string]
   
   @scala.inline
   def submit: submit = "submit".asInstanceOf[submit]
@@ -668,10 +770,10 @@ object gestaltStrings {
   def `switch-account`: `switch-account` = "switch-account".asInstanceOf[`switch-account`]
   
   @scala.inline
-  def tag: tag = "tag".asInstanceOf[tag]
+  def tab: tab = "tab".asInstanceOf[tab]
   
   @scala.inline
-  def tall: tall = "tall".asInstanceOf[tall]
+  def tag: tag = "tag".asInstanceOf[tag]
   
   @scala.inline
   def terms: terms = "terms".asInstanceOf[terms]
@@ -725,16 +827,28 @@ object gestaltStrings {
   def transparentDarkGray: transparentDarkGray = "transparentDarkGray".asInstanceOf[transparentDarkGray]
   
   @scala.inline
+  def transparentWhiteText: transparentWhiteText = "transparentWhiteText".asInstanceOf[transparentWhiteText]
+  
+  @scala.inline
   def `trash-can`: `trash-can` = "trash-can".asInstanceOf[`trash-can`]
   
   @scala.inline
   def twitter: twitter = "twitter".asInstanceOf[twitter]
   
   @scala.inline
+  def underline: underline = "underline".asInstanceOf[underline]
+  
+  @scala.inline
   def up: up = "up".asInstanceOf[up]
   
   @scala.inline
   def url: url = "url".asInstanceOf[url]
+  
+  @scala.inline
+  def `use-credentials`: `use-credentials` = "use-credentials".asInstanceOf[`use-credentials`]
+  
+  @scala.inline
+  def userPreference: userPreference = "userPreference".asInstanceOf[userPreference]
   
   @scala.inline
   def username: username = "username".asInstanceOf[username]
@@ -765,6 +879,9 @@ object gestaltStrings {
   
   @scala.inline
   def visuallyHidden: visuallyHidden = "visuallyHidden".asInstanceOf[visuallyHidden]
+  
+  @scala.inline
+  def warning: warning = "warning".asInstanceOf[warning]
   
   @scala.inline
   def watermelon: watermelon = "watermelon".asInstanceOf[watermelon]
@@ -813,6 +930,9 @@ object gestaltStrings {
   
   @js.native
   sealed trait absolute extends js.Object
+  
+  @js.native
+  sealed trait active extends js.Object
   
   @js.native
   sealed trait ad extends Icons
@@ -872,7 +992,13 @@ object gestaltStrings {
   sealed trait `align-top-right` extends Icons
   
   @js.native
+  sealed trait `android-share` extends Icons
+  
+  @js.native
   sealed trait `angled-pin` extends Icons
+  
+  @js.native
+  sealed trait anonymous extends js.Object
   
   @js.native
   sealed trait apps extends Icons
@@ -909,6 +1035,9 @@ object gestaltStrings {
   
   @js.native
   sealed trait `arrow-up-right` extends Icons
+  
+  @js.native
+  sealed trait asc extends js.Object
   
   @js.native
   sealed trait auto extends js.Object
@@ -971,13 +1100,25 @@ object gestaltStrings {
   sealed trait `circle-outline` extends Icons
   
   @js.native
+  sealed trait circule extends js.Object
+  
+  @js.native
   sealed trait clear extends Icons
   
   @js.native
   sealed trait clock extends Icons
   
   @js.native
+  sealed trait code extends Icons
+  
+  @js.native
   sealed trait cog extends Icons
+  
+  @js.native
+  sealed trait col extends js.Object
+  
+  @js.native
+  sealed trait colgroup extends js.Object
   
   @js.native
   sealed trait `color-picker` extends Icons
@@ -989,10 +1130,19 @@ object gestaltStrings {
   sealed trait compass extends Icons
   
   @js.native
+  sealed trait complete extends js.Object
+  
+  @js.native
   sealed trait compose extends Icons
   
   @js.native
+  sealed trait compress extends js.Object
+  
+  @js.native
   sealed trait contain extends js.Object
+  
+  @js.native
+  sealed trait `conversion-tag` extends Icons
   
   @js.native
   sealed trait copy extends js.Object
@@ -1001,10 +1151,16 @@ object gestaltStrings {
   sealed trait cover extends js.Object
   
   @js.native
+  sealed trait `credit-card` extends Icons
+  
+  @js.native
   sealed trait crop extends Icons
   
   @js.native
   sealed trait `current-password` extends js.Object
+  
+  @js.native
+  sealed trait dark extends js.Object
   
   @js.native
   sealed trait darkGray extends js.Object
@@ -1017,6 +1173,9 @@ object gestaltStrings {
   
   @js.native
   sealed trait date extends js.Object
+  
+  @js.native
+  sealed trait desc extends js.Object
   
   @js.native
   sealed trait dialog extends js.Object
@@ -1032,6 +1191,9 @@ object gestaltStrings {
   
   @js.native
   sealed trait download extends Icons
+  
+  @js.native
+  sealed trait `drag-drop` extends Icons
   
   @js.native
   sealed trait duplicate extends Icons
@@ -1061,6 +1223,9 @@ object gestaltStrings {
   sealed trait envelope extends Icons
   
   @js.native
+  sealed trait error extends js.Object
+  
+  @js.native
   sealed trait evenly extends js.Object
   
   @js.native
@@ -1082,6 +1247,9 @@ object gestaltStrings {
   sealed trait `file-unknown` extends Icons
   
   @js.native
+  sealed trait fill extends js.Object
+  
+  @js.native
   sealed trait `fill-opaque` extends Icons
   
   @js.native
@@ -1089,6 +1257,9 @@ object gestaltStrings {
   
   @js.native
   sealed trait filter extends Icons
+  
+  @js.native
+  sealed trait fit extends js.Object
   
   @js.native
   sealed trait fixed extends js.Object
@@ -1104,6 +1275,9 @@ object gestaltStrings {
   
   @js.native
   sealed trait flex extends js.Object
+  
+  @js.native
+  sealed trait flexible extends js.Object
   
   @js.native
   sealed trait flipHorizontal extends Icons
@@ -1172,6 +1346,12 @@ object gestaltStrings {
   sealed trait impressum extends Icons
   
   @js.native
+  sealed trait inactive extends js.Object
+  
+  @js.native
+  sealed trait info extends js.Object
+  
+  @js.native
   sealed trait `info-circle` extends Icons
   
   @js.native
@@ -1194,6 +1374,9 @@ object gestaltStrings {
   
   @js.native
   sealed trait lg extends js.Object
+  
+  @js.native
+  sealed trait light extends js.Object
   
   @js.native
   sealed trait lightGray extends js.Object
@@ -1277,10 +1460,16 @@ object gestaltStrings {
   sealed trait navy extends js.Object
   
   @js.native
+  sealed trait needsAttention extends js.Object
+  
+  @js.native
   sealed trait `new-password` extends js.Object
   
   @js.native
   sealed trait noDrop extends js.Object
+  
+  @js.native
+  sealed trait nofollow extends js.Object
   
   @js.native
   sealed trait none extends js.Object
@@ -1289,7 +1478,7 @@ object gestaltStrings {
   sealed trait normal extends js.Object
   
   @js.native
-  sealed trait `null` extends js.Object
+  sealed trait notStarted extends js.Object
   
   @js.native
   sealed trait number extends js.Object
@@ -1319,6 +1508,9 @@ object gestaltStrings {
   sealed trait pause extends Icons
   
   @js.native
+  sealed trait pending extends js.Object
+  
+  @js.native
   sealed trait people extends Icons
   
   @js.native
@@ -1326,6 +1518,9 @@ object gestaltStrings {
   
   @js.native
   sealed trait `person-add` extends Icons
+  
+  @js.native
+  sealed trait phone extends Icons
   
   @js.native
   sealed trait pill extends js.Object
@@ -1343,19 +1538,22 @@ object gestaltStrings {
   sealed trait pinterest extends Icons
   
   @js.native
-  sealed trait pintrest extends js.Object
-  
-  @js.native
   sealed trait play extends Icons
   
   @js.native
   sealed trait pointer extends js.Object
   
   @js.native
+  sealed trait protect extends Icons
+  
+  @js.native
   sealed trait purple extends js.Object
   
   @js.native
   sealed trait `question-mark` extends Icons
+  
+  @js.native
+  sealed trait rectangle extends js.Object
   
   @js.native
   sealed trait red extends js.Object
@@ -1388,7 +1586,13 @@ object gestaltStrings {
   sealed trait row extends js.Object
   
   @js.native
+  sealed trait rowgroup extends js.Object
+  
+  @js.native
   sealed trait scale extends Icons
+  
+  @js.native
+  sealed trait `scale-down` extends js.Object
   
   @js.native
   sealed trait scroll extends js.Object
@@ -1412,13 +1616,13 @@ object gestaltStrings {
   sealed trait send extends Icons
   
   @js.native
+  sealed trait shadow extends js.Object
+  
+  @js.native
   sealed trait share extends Icons
   
   @js.native
   sealed trait `shopping-bag` extends Icons
-  
-  @js.native
-  sealed trait short extends js.Object
   
   @js.native
   sealed trait shrink extends js.Object
@@ -1442,13 +1646,22 @@ object gestaltStrings {
   sealed trait sound extends Icons
   
   @js.native
+  sealed trait sparkle extends Icons
+  
+  @js.native
   sealed trait speech extends Icons
   
   @js.native
   sealed trait `speech-ellipsis` extends Icons
   
   @js.native
+  sealed trait square extends js.Object
+  
+  @js.native
   sealed trait star extends Icons
+  
+  @js.native
+  sealed trait `star-half` extends Icons
   
   @js.native
   sealed trait start extends js.Object
@@ -1457,7 +1670,13 @@ object gestaltStrings {
   sealed trait static extends js.Object
   
   @js.native
+  sealed trait `story-pin` extends Icons
+  
+  @js.native
   sealed trait stretch extends js.Object
+  
+  @js.native
+  sealed trait string extends js.Object
   
   @js.native
   sealed trait submit extends js.Object
@@ -1466,10 +1685,10 @@ object gestaltStrings {
   sealed trait `switch-account` extends Icons
   
   @js.native
-  sealed trait tag extends Icons
+  sealed trait tab extends js.Object
   
   @js.native
-  sealed trait tall extends js.Object
+  sealed trait tag extends Icons
   
   @js.native
   sealed trait terms extends Icons
@@ -1523,16 +1742,28 @@ object gestaltStrings {
   sealed trait transparentDarkGray extends js.Object
   
   @js.native
+  sealed trait transparentWhiteText extends js.Object
+  
+  @js.native
   sealed trait `trash-can` extends Icons
   
   @js.native
   sealed trait twitter extends Icons
   
   @js.native
+  sealed trait underline extends js.Object
+  
+  @js.native
   sealed trait up extends js.Object
   
   @js.native
   sealed trait url extends js.Object
+  
+  @js.native
+  sealed trait `use-credentials` extends js.Object
+  
+  @js.native
+  sealed trait userPreference extends js.Object
   
   @js.native
   sealed trait username extends js.Object
@@ -1563,6 +1794,9 @@ object gestaltStrings {
   
   @js.native
   sealed trait visuallyHidden extends js.Object
+  
+  @js.native
+  sealed trait warning extends js.Object
   
   @js.native
   sealed trait watermelon extends js.Object

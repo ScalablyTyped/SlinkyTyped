@@ -4,18 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babylonjs.BABYLON.IMaterialDetailMapDefines because var conflicts: _areTexturesDirty. Inlined DETAIL, DETAILDIRECTUV, DETAIL_NORMALBLENDMETHOD */ @js.native
 trait StandardMaterialDefines
   extends MaterialDefines
      with IImageProcessingConfigurationDefines {
+  
+  var ALPHABLEND: Boolean = js.native
   
   var ALPHAFROMDIFFUSE: Boolean = js.native
   
   var ALPHATEST: Boolean = js.native
   
+  var ALPHATEST_AFTERALLALPHACOMPUTATIONS: Boolean = js.native
+  
   var AMBIENT: Boolean = js.native
   
   var AMBIENTDIRECTUV: Double = js.native
+  
+  var BONES_VELOCITY_ENABLED: Boolean = js.native
   
   var BONETEXTURE: Boolean = js.native
   
@@ -38,6 +45,12 @@ trait StandardMaterialDefines
   var CLIPPLANE6: Boolean = js.native
   
   var DEPTHPREPASS: Boolean = js.native
+  
+  var DETAIL: Boolean = js.native
+  
+  var DETAILDIRECTUV: Double = js.native
+  
+  var DETAIL_NORMALBLENDMETHOD: Double = js.native
   
   var DIFFUSE: Boolean = js.native
   
@@ -123,6 +136,32 @@ trait StandardMaterialDefines
   
   var PREMULTIPLYALPHA: Boolean = js.native
   
+  var PREPASS: Boolean = js.native
+  
+  var PREPASS_ALBEDO: Boolean = js.native
+  
+  var PREPASS_ALBEDO_INDEX: Double = js.native
+  
+  var PREPASS_DEPTHNORMAL: Boolean = js.native
+  
+  var PREPASS_DEPTHNORMAL_INDEX: Double = js.native
+  
+  var PREPASS_IRRADIANCE: Boolean = js.native
+  
+  var PREPASS_IRRADIANCE_INDEX: Double = js.native
+  
+  var PREPASS_POSITION: Boolean = js.native
+  
+  var PREPASS_POSITION_INDEX: Double = js.native
+  
+  var PREPASS_REFLECTIVITY: Boolean = js.native
+  
+  var PREPASS_REFLECTIVITY_INDEX: Double = js.native
+  
+  var PREPASS_VELOCITY: Boolean = js.native
+  
+  var PREPASS_VELOCITY_INDEX: Double = js.native
+  
   var REFLECTION: Boolean = js.native
   
   var REFLECTIONFRESNEL: Boolean = js.native
@@ -157,7 +196,15 @@ trait StandardMaterialDefines
   
   var REFRACTIONMAP_3D: Boolean = js.native
   
+  var RGBDLIGHTMAP: Boolean = js.native
+  
+  var RGBDREFLECTION: Boolean = js.native
+  
+  var RGBDREFRACTION: Boolean = js.native
+  
   var ROUGHNESS: Boolean = js.native
+  
+  var SCENE_MRT_COUNT: Double = js.native
   
   var SHADOWFLOAT: Boolean = js.native
   
@@ -168,6 +215,8 @@ trait StandardMaterialDefines
   var SPECULAROVERALPHA: Boolean = js.native
   
   var SPECULARTERM: Boolean = js.native
+  
+  var THIN_INSTANCES: Boolean = js.native
   
   var TWOSIDEDLIGHTING: Boolean = js.native
   

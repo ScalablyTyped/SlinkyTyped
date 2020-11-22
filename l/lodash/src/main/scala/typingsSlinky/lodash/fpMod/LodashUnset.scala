@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashUnset extends LodashConvertible {
+trait LodashUnset extends js.Object {
   
   def apply(path: PropertyPath): LodashUnset1x1 = js.native
   def apply[T](path: PropertyPath, `object`: T): T = js.native

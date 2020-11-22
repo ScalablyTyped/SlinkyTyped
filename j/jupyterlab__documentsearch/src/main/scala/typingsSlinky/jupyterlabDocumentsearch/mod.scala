@@ -1,22 +1,43 @@
 package typingsSlinky.jupyterlabDocumentsearch
 
 import typingsSlinky.jupyterlabDocumentsearch.interfacesMod.ISearchProvider
-import typingsSlinky.phosphorCoreutils.mod.Token
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.luminoCoreutils.mod.Token
+import typingsSlinky.luminoWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/documentsearch", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val ISearchProviderRegistry: Token[typingsSlinky.jupyterlabDocumentsearch.tokensMod.ISearchProviderRegistry] = js.native
+  
   @js.native
   class CodeMirrorSearchProvider ()
     extends typingsSlinky.jupyterlabDocumentsearch.codemirrorsearchproviderMod.CodeMirrorSearchProvider
+  /* static members */
+  @js.native
+  object CodeMirrorSearchProvider extends js.Object {
+    
+    /**
+      * Report whether or not this provider has the ability to search on the given object
+      */
+    def canSearchOn(domain: Widget): /* is @jupyterlab/documentsearch.@jupyterlab/documentsearch/lib/providers/codemirrorsearchprovider.CMMainAreaWidget */ Boolean = js.native
+  }
   
   @js.native
   class NotebookSearchProvider ()
     extends typingsSlinky.jupyterlabDocumentsearch.notebooksearchproviderMod.NotebookSearchProvider
+  /* static members */
+  @js.native
+  object NotebookSearchProvider extends js.Object {
+    
+    /**
+      * Report whether or not this provider has the ability to search on the given object
+      */
+    def canSearchOn(domain: Widget): /* is @jupyterlab/notebook.@jupyterlab/notebook.NotebookPanel */ Boolean = js.native
+  }
   
   @js.native
   class SearchInstance protected ()
@@ -31,25 +52,4 @@ object mod extends js.Object {
   @js.native
   class SearchState ()
     extends typingsSlinky.jupyterlabDocumentsearch.codemirrorsearchproviderMod.SearchState
-  
-  val ISearchProviderRegistry: Token[typingsSlinky.jupyterlabDocumentsearch.tokensMod.ISearchProviderRegistry] = js.native
-  /* static members */
-  @js.native
-  object CodeMirrorSearchProvider extends js.Object {
-    /**
-      * Report whether or not this provider has the ability to search on the given object
-      */
-    def canSearchOn(domain: Widget): /* is @jupyterlab/documentsearch.@jupyterlab/documentsearch/lib/providers/codemirrorsearchprovider.CMMainAreaWidget */ Boolean = js.native
-  }
-  
-  /* static members */
-  @js.native
-  object NotebookSearchProvider extends js.Object {
-    /**
-      * Report whether or not this provider has the ability to search on the given object
-      */
-    def canSearchOn(domain: Widget): /* is @jupyterlab/notebook.@jupyterlab/notebook.NotebookPanel */ Boolean = js.native
-  }
-  
 }
-

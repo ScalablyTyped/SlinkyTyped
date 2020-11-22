@@ -19,39 +19,61 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxMenuOptions extends dxMenuBaseOptions[dxMenu] {
   
-  /** @name dxMenu.Options.adaptivityEnabled */
+  /**
+    * [descr:dxMenu.Options.adaptivityEnabled]
+    */
   var adaptivityEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMenu.Options.dataSource */
+  /**
+    * [descr:dxMenu.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxMenuOptions: js.UndefOr[String | js.Array[dxMenuItem] | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxMenu.Options.hideSubmenuOnMouseLeave */
+  /**
+    * [descr:dxMenu.Options.hideSubmenuOnMouseLeave]
+    */
   var hideSubmenuOnMouseLeave: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMenu.Options.items */
+  /**
+    * [descr:dxMenu.Options.items]
+    */
   @JSName("items")
   var items_dxMenuOptions: js.UndefOr[js.Array[dxMenuItem]] = js.native
   
-  /** @name dxMenu.Options.onSubmenuHidden */
+  /**
+    * [descr:dxMenu.Options.onSubmenuHidden]
+    */
   var onSubmenuHidden: js.UndefOr[js.Function1[/* e */ RootItem, _]] = js.native
   
-  /** @name dxMenu.Options.onSubmenuHiding */
+  /**
+    * [descr:dxMenu.Options.onSubmenuHiding]
+    */
   var onSubmenuHiding: js.UndefOr[js.Function1[/* e */ ModelRootItem, _]] = js.native
   
-  /** @name dxMenu.Options.onSubmenuShowing */
+  /**
+    * [descr:dxMenu.Options.onSubmenuShowing]
+    */
   var onSubmenuShowing: js.UndefOr[js.Function1[/* e */ RootItem, _]] = js.native
   
-  /** @name dxMenu.Options.onSubmenuShown */
+  /**
+    * [descr:dxMenu.Options.onSubmenuShown]
+    */
   var onSubmenuShown: js.UndefOr[js.Function1[/* e */ RootItem, _]] = js.native
   
-  /** @name dxMenu.Options.orientation */
+  /**
+    * [descr:dxMenu.Options.orientation]
+    */
   var orientation: js.UndefOr[horizontal | vertical] = js.native
   
-  /** @name dxMenu.Options.showFirstSubmenuMode */
+  /**
+    * [descr:dxMenu.Options.showFirstSubmenuMode]
+    */
   var showFirstSubmenuMode: js.UndefOr[DelayName | onClick | onHover] = js.native
   
-  /** @name dxMenu.Options.submenuDirection */
+  /**
+    * [descr:dxMenu.Options.submenuDirection]
+    */
   var submenuDirection: js.UndefOr[auto | leftOrTop | rightOrBottom] = js.native
 }
 object dxMenuOptions {

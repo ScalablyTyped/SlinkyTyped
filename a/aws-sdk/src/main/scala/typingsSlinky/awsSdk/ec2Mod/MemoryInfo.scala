@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MemoryInfo extends js.Object {
   
   /**
-    * Size of the memory, in MiB.
+    * The size of the memory, in MiB.
     */
   var SizeInMiB: js.UndefOr[MemorySize] = js.native
 }

@@ -37,6 +37,27 @@ trait CustomProperties extends js.Object {
   def get(name: String): js.Any = js.native
   
   /**
+    * Returns an object with all custom properties in a collection of name/value pairs. The following are equivalent.
+    *
+    * `customProps.get("name")`
+    *
+    * `var dictionary = customProps.getAll(); dictionary["name"]`
+    *
+    * You can iterate through the dictionary object to discover all `names` and `values`.
+    *
+    * [Api set: Mailbox 1.9]
+    *
+    * @returns An object with all custom properties in a collection of name/value pairs.
+    *
+    * @remarks
+    *
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
+    *
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
+    */
+  def getAll(): js.Any = js.native
+  
+  /**
     * Removes the specified property from the custom property collection.
     *
     * To make the removal of the property permanent, you must call the `saveAsync` method of the `CustomProperties` object.

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PlannerProgressTaskBoardTaskFormat extends Entity {
   
   // Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
-  var orderHint: js.UndefOr[String] = js.native
+  var orderHint: js.UndefOr[NullableOption[String]] = js.native
 }
 object PlannerProgressTaskBoardTaskFormat {
   
@@ -34,9 +34,12 @@ object PlannerProgressTaskBoardTaskFormat {
     }
     
     @scala.inline
-    def setOrderHint(value: String): Self = this.set("orderHint", value.asInstanceOf[js.Any])
+    def setOrderHint(value: NullableOption[String]): Self = this.set("orderHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrderHint: Self = this.set("orderHint", js.undefined)
+    
+    @scala.inline
+    def setOrderHintNull: Self = this.set("orderHint", null)
   }
 }

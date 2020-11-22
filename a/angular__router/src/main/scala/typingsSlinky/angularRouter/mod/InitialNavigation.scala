@@ -5,12 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.angularRouter.angularRouterBooleans.`true`
-  - typingsSlinky.angularRouter.angularRouterBooleans.`false`
-  - typingsSlinky.angularRouter.angularRouterStrings.enabled
   - typingsSlinky.angularRouter.angularRouterStrings.disabled
-  - typingsSlinky.angularRouter.angularRouterStrings.legacy_enabled
-  - typingsSlinky.angularRouter.angularRouterStrings.legacy_disabled
+  - typingsSlinky.angularRouter.angularRouterStrings.enabled
+  - typingsSlinky.angularRouter.angularRouterStrings.enabledBlocking
+  - typingsSlinky.angularRouter.angularRouterStrings.enabledNonBlocking
 */
 trait InitialNavigation extends js.Object
 object InitialNavigation {
@@ -22,14 +20,8 @@ object InitialNavigation {
   def enabled: typingsSlinky.angularRouter.angularRouterStrings.enabled = "enabled".asInstanceOf[typingsSlinky.angularRouter.angularRouterStrings.enabled]
   
   @scala.inline
-  def `false`: typingsSlinky.angularRouter.angularRouterBooleans.`false` = false.asInstanceOf[typingsSlinky.angularRouter.angularRouterBooleans.`false`]
+  def enabledBlocking: typingsSlinky.angularRouter.angularRouterStrings.enabledBlocking = "enabledBlocking".asInstanceOf[typingsSlinky.angularRouter.angularRouterStrings.enabledBlocking]
   
   @scala.inline
-  def legacy_disabled: typingsSlinky.angularRouter.angularRouterStrings.legacy_disabled = "legacy_disabled".asInstanceOf[typingsSlinky.angularRouter.angularRouterStrings.legacy_disabled]
-  
-  @scala.inline
-  def legacy_enabled: typingsSlinky.angularRouter.angularRouterStrings.legacy_enabled = "legacy_enabled".asInstanceOf[typingsSlinky.angularRouter.angularRouterStrings.legacy_enabled]
-  
-  @scala.inline
-  def `true`: typingsSlinky.angularRouter.angularRouterBooleans.`true` = true.asInstanceOf[typingsSlinky.angularRouter.angularRouterBooleans.`true`]
+  def enabledNonBlocking: typingsSlinky.angularRouter.angularRouterStrings.enabledNonBlocking = "enabledNonBlocking".asInstanceOf[typingsSlinky.angularRouter.angularRouterStrings.enabledNonBlocking]
 }

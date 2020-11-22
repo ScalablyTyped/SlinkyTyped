@@ -23,7 +23,7 @@ trait DisassociateAssetsRequest extends js.Object {
   var clientToken: js.UndefOr[ClientToken] = js.native
   
   /**
-    * The ID of a hierarchy in the parent asset's model. Hierarchies allow different groupings of assets to be formed that all come from the same asset model. You can use the hierarchy ID to identify the correct asset to disassociate. For more information, see Asset Hierarchies in the AWS IoT SiteWise User Guide.
+    * The ID of a hierarchy in the parent asset's model. Hierarchies allow different groupings of assets to be formed that all come from the same asset model. You can use the hierarchy ID to identify the correct asset to disassociate. For more information, see Asset hierarchies in the AWS IoT SiteWise User Guide.
     */
   var hierarchyId: ID = js.native
 }

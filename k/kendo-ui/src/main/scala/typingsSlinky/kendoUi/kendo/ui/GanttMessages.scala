@@ -23,6 +23,8 @@ trait GanttMessages extends js.Object {
   
   var editor: js.UndefOr[GanttMessagesEditor] = js.native
   
+  var plannedTasks: js.UndefOr[GanttMessagesPlannedTasks] = js.native
+  
   var save: js.UndefOr[String] = js.native
   
   var views: js.UndefOr[GanttMessagesViews] = js.native
@@ -97,6 +99,12 @@ object GanttMessages {
     
     @scala.inline
     def deleteEditor: Self = this.set("editor", js.undefined)
+    
+    @scala.inline
+    def setPlannedTasks(value: GanttMessagesPlannedTasks): Self = this.set("plannedTasks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePlannedTasks: Self = this.set("plannedTasks", js.undefined)
     
     @scala.inline
     def setSave(value: String): Self = this.set("save", value.asInstanceOf[js.Any])

@@ -17,12 +17,12 @@ trait SingletonModels
     *
     * @param name The name of the base model for the model.
     */
-  def instance(name: String): Model[_, ModelSetOptions] = js.native
+  def instance(name: String): Model[_, ModelSetOptions, js.Object] = js.native
 }
 object SingletonModels {
   
   @scala.inline
-  def apply(instance: String => Model[_, ModelSetOptions]): SingletonModels = {
+  def apply(instance: String => Model[_, ModelSetOptions, js.Object]): SingletonModels = {
     val __obj = js.Dynamic.literal(instance = js.Any.fromFunction1(instance))
     __obj.asInstanceOf[SingletonModels]
   }
@@ -43,6 +43,6 @@ object SingletonModels {
     }
     
     @scala.inline
-    def setInstance(value: String => Model[_, ModelSetOptions]): Self = this.set("instance", js.Any.fromFunction1(value))
+    def setInstance(value: String => Model[_, ModelSetOptions, js.Object]): Self = this.set("instance", js.Any.fromFunction1(value))
   }
 }

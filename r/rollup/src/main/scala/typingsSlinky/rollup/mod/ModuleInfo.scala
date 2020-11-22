@@ -8,6 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ModuleInfo extends js.Object {
   
+  var ast: AcornNode | Null = js.native
+  
+  var code: String | Null = js.native
+  
   var dynamicImporters: js.Array[String] = js.native
   
   var dynamicallyImportedIds: js.Array[String] = js.native
@@ -27,6 +31,10 @@ trait ModuleInfo extends js.Object {
   var isEntry: Boolean = js.native
   
   var isExternal: Boolean = js.native
+  
+  var meta: CustomPluginOptions = js.native
+  
+  var syntheticNamedExports: Boolean | String = js.native
 }
 object ModuleInfo {
   
@@ -41,9 +49,11 @@ object ModuleInfo {
     importedIds: js.Array[String],
     importers: js.Array[String],
     isEntry: Boolean,
-    isExternal: Boolean
+    isExternal: Boolean,
+    meta: CustomPluginOptions,
+    syntheticNamedExports: Boolean | String
   ): ModuleInfo = {
-    val __obj = js.Dynamic.literal(dynamicImporters = dynamicImporters.asInstanceOf[js.Any], dynamicallyImportedIds = dynamicallyImportedIds.asInstanceOf[js.Any], hasModuleSideEffects = hasModuleSideEffects.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], implicitlyLoadedAfterOneOf = implicitlyLoadedAfterOneOf.asInstanceOf[js.Any], implicitlyLoadedBefore = implicitlyLoadedBefore.asInstanceOf[js.Any], importedIds = importedIds.asInstanceOf[js.Any], importers = importers.asInstanceOf[js.Any], isEntry = isEntry.asInstanceOf[js.Any], isExternal = isExternal.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(dynamicImporters = dynamicImporters.asInstanceOf[js.Any], dynamicallyImportedIds = dynamicallyImportedIds.asInstanceOf[js.Any], hasModuleSideEffects = hasModuleSideEffects.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], implicitlyLoadedAfterOneOf = implicitlyLoadedAfterOneOf.asInstanceOf[js.Any], implicitlyLoadedBefore = implicitlyLoadedBefore.asInstanceOf[js.Any], importedIds = importedIds.asInstanceOf[js.Any], importers = importers.asInstanceOf[js.Any], isEntry = isEntry.asInstanceOf[js.Any], isExternal = isExternal.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], syntheticNamedExports = syntheticNamedExports.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleInfo]
   }
   
@@ -109,5 +119,23 @@ object ModuleInfo {
     
     @scala.inline
     def setIsExternal(value: Boolean): Self = this.set("isExternal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMeta(value: CustomPluginOptions): Self = this.set("meta", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSyntheticNamedExports(value: Boolean | String): Self = this.set("syntheticNamedExports", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAst(value: AcornNode): Self = this.set("ast", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAstNull: Self = this.set("ast", null)
+    
+    @scala.inline
+    def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCodeNull: Self = this.set("code", null)
   }
 }

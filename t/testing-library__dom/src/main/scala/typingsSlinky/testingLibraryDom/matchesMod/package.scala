@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object matchesMod {
   
-  type ByRoleMatcher = typingsSlinky.ariaQuery.mod.ARIARole | (java.lang.String with js.Object) | js.RegExp | typingsSlinky.testingLibraryDom.matchesMod.MatcherFunction
+  type ByRoleMatcher = typingsSlinky.ariaQuery.mod.ARIARole | typingsSlinky.testingLibraryDom.matchesMod.MatcherFunction | js.Object
   
   type Match = js.Function4[
     /* textToMatch */ java.lang.String, 
@@ -16,7 +16,7 @@ package object matchesMod {
     scala.Boolean
   ]
   
-  type Matcher = java.lang.String | js.RegExp | typingsSlinky.testingLibraryDom.matchesMod.MatcherFunction
+  type Matcher = typingsSlinky.testingLibraryDom.matchesMod.MatcherFunction | js.Object
   
   type MatcherFunction = js.Function2[
     /* content */ java.lang.String, 

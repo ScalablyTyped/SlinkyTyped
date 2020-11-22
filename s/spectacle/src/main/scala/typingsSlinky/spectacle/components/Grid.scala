@@ -26,7 +26,7 @@ object Grid {
     @scala.inline
     def bottom(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("bottom", value.asInstanceOf[js.Any])
@@ -40,7 +40,7 @@ object Grid {
     @scala.inline
     def display(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
           RequiredTheme
         ]
     ): this.type = set("display", value.asInstanceOf[js.Any])
@@ -54,7 +54,7 @@ object Grid {
     @scala.inline
     def gridArea(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAreaProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridArea */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridArea", value.asInstanceOf[js.Any])
@@ -68,7 +68,7 @@ object Grid {
     @scala.inline
     def gridAutoColumns(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoColumnsProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoColumns<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridAutoColumns", value.asInstanceOf[js.Any])
@@ -82,7 +82,7 @@ object Grid {
     @scala.inline
     def gridAutoFlow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoFlowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoFlow */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridAutoFlow", value.asInstanceOf[js.Any])
@@ -96,7 +96,7 @@ object Grid {
     @scala.inline
     def gridAutoRows(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoRowsProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoRows<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridAutoRows", value.asInstanceOf[js.Any])
@@ -110,7 +110,7 @@ object Grid {
     @scala.inline
     def gridColumn(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridColumnProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridColumn */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridColumn", value.asInstanceOf[js.Any])
@@ -124,7 +124,7 @@ object Grid {
     @scala.inline
     def gridColumnGap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridColumnGapProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridColumnGap<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridColumnGap", value.asInstanceOf[js.Any])
@@ -138,7 +138,7 @@ object Grid {
     @scala.inline
     def gridGap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridGapProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridGap<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridGap", value.asInstanceOf[js.Any])
@@ -152,7 +152,7 @@ object Grid {
     @scala.inline
     def gridRow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRow */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridRow", value.asInstanceOf[js.Any])
@@ -166,7 +166,7 @@ object Grid {
     @scala.inline
     def gridRowGap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowGapProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRowGap<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridRowGap", value.asInstanceOf[js.Any])
@@ -180,7 +180,7 @@ object Grid {
     @scala.inline
     def gridTemplateAreas(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateAreasProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateAreas */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridTemplateAreas", value.asInstanceOf[js.Any])
@@ -194,7 +194,7 @@ object Grid {
     @scala.inline
     def gridTemplateColumns(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateColumnsProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateColumns<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridTemplateColumns", value.asInstanceOf[js.Any])
@@ -208,7 +208,7 @@ object Grid {
     @scala.inline
     def gridTemplateRows(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateRowsProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateRows<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("gridTemplateRows", value.asInstanceOf[js.Any])
@@ -222,7 +222,7 @@ object Grid {
     @scala.inline
     def height(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("height", value.asInstanceOf[js.Any])
@@ -236,7 +236,7 @@ object Grid {
     @scala.inline
     def left(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("left", value.asInstanceOf[js.Any])
@@ -250,7 +250,7 @@ object Grid {
     @scala.inline
     def maxHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("maxHeight", value.asInstanceOf[js.Any])
@@ -264,7 +264,7 @@ object Grid {
     @scala.inline
     def maxWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("maxWidth", value.asInstanceOf[js.Any])
@@ -278,7 +278,7 @@ object Grid {
     @scala.inline
     def minHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("minHeight", value.asInstanceOf[js.Any])
@@ -292,7 +292,7 @@ object Grid {
     @scala.inline
     def minWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("minWidth", value.asInstanceOf[js.Any])
@@ -306,7 +306,7 @@ object Grid {
     @scala.inline
     def overflow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflow", value.asInstanceOf[js.Any])
@@ -320,7 +320,7 @@ object Grid {
     @scala.inline
     def overflowX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflowX", value.asInstanceOf[js.Any])
@@ -334,7 +334,7 @@ object Grid {
     @scala.inline
     def overflowY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflowY", value.asInstanceOf[js.Any])
@@ -348,7 +348,7 @@ object Grid {
     @scala.inline
     def position(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _, 
           RequiredTheme
         ]
     ): this.type = set("position", value.asInstanceOf[js.Any])
@@ -362,7 +362,7 @@ object Grid {
     @scala.inline
     def right(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("right", value.asInstanceOf[js.Any])
@@ -376,7 +376,7 @@ object Grid {
     @scala.inline
     def size(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("size", value.asInstanceOf[js.Any])
@@ -390,7 +390,7 @@ object Grid {
     @scala.inline
     def top(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("top", value.asInstanceOf[js.Any])
@@ -404,7 +404,7 @@ object Grid {
     @scala.inline
     def verticalAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
@@ -418,7 +418,7 @@ object Grid {
     @scala.inline
     def width(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("width", value.asInstanceOf[js.Any])
@@ -432,7 +432,7 @@ object Grid {
     @scala.inline
     def zIndex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
           RequiredTheme
         ]
     ): this.type = set("zIndex", value.asInstanceOf[js.Any])

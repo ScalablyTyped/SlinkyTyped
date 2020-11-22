@@ -12,6 +12,8 @@ package object sesv2Mod {
   
   type AmazonResourceName = java.lang.String
   
+  type AttributesData = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.USE_DEFAULT_VALUE
     - typingsSlinky.awsSdk.awsSdkStrings.REJECT_MESSAGE
@@ -73,11 +75,27 @@ package object sesv2Mod {
   */
   type ContactLanguage = typingsSlinky.awsSdk.sesv2Mod._ContactLanguage | java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE
+    - typingsSlinky.awsSdk.awsSdkStrings.PUT
+    - java.lang.String
+  */
+  type ContactListImportAction = typingsSlinky.awsSdk.sesv2Mod._ContactListImportAction | java.lang.String
+  
+  type ContactListName = java.lang.String
+  
   type CustomRedirectDomain = java.lang.String
   
   type CustomVerificationEmailTemplatesList = js.Array[typingsSlinky.awsSdk.sesv2Mod.CustomVerificationEmailTemplateMetadata]
   
   type DailyVolumes = js.Array[typingsSlinky.awsSdk.sesv2Mod.DailyVolume]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CSV
+    - typingsSlinky.awsSdk.awsSdkStrings.JSON
+    - java.lang.String
+  */
+  type DataFormat = typingsSlinky.awsSdk.sesv2Mod._DataFormat | java.lang.String
   
   type DedicatedIpList = js.Array[typingsSlinky.awsSdk.sesv2Mod.DedicatedIp]
   
@@ -102,6 +120,8 @@ package object sesv2Mod {
   
   type DeliverabilityTestSubject = java.lang.String
   
+  type Description = java.lang.String
+  
   type DimensionName = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
@@ -111,6 +131,8 @@ package object sesv2Mod {
     - java.lang.String
   */
   type DimensionValueSource = typingsSlinky.awsSdk.sesv2Mod._DimensionValueSource | java.lang.String
+  
+  type DisplayName = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AWS_SES
@@ -181,11 +203,16 @@ package object sesv2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.CLICK
     - typingsSlinky.awsSdk.awsSdkStrings.RENDERING_FAILURE
     - typingsSlinky.awsSdk.awsSdkStrings.DELIVERY_DELAY
+    - typingsSlinky.awsSdk.awsSdkStrings.SUBSCRIPTION
     - java.lang.String
   */
   type EventType = typingsSlinky.awsSdk.sesv2Mod._EventType | java.lang.String
   
   type EventTypes = js.Array[typingsSlinky.awsSdk.sesv2Mod.EventType]
+  
+  type FailedRecordsCount = scala.Double
+  
+  type FailedRecordsS3Url = java.lang.String
   
   type FailureRedirectionURL = java.lang.String
   
@@ -207,6 +234,15 @@ package object sesv2Mod {
   
   type ImageUrl = java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SUPPRESSION_LIST
+    - typingsSlinky.awsSdk.awsSdkStrings.CONTACT_LIST
+    - java.lang.String
+  */
+  type ImportDestinationType = typingsSlinky.awsSdk.sesv2Mod._ImportDestinationType | java.lang.String
+  
+  type ImportJobSummaryList = js.Array[typingsSlinky.awsSdk.sesv2Mod.ImportJobSummary]
+  
   type Ip = java.lang.String
   
   type IpList = js.Array[typingsSlinky.awsSdk.sesv2Mod.Ip]
@@ -217,7 +253,22 @@ package object sesv2Mod {
   
   type IspPlacements = js.Array[typingsSlinky.awsSdk.sesv2Mod.IspPlacement]
   
+  type JobId = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATED
+    - typingsSlinky.awsSdk.awsSdkStrings.PROCESSING
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - java.lang.String
+  */
+  type JobStatus = typingsSlinky.awsSdk.sesv2Mod._JobStatus | java.lang.String
+  
   type LastFreshStart = js.Date
+  
+  type ListOfContactLists = js.Array[typingsSlinky.awsSdk.sesv2Mod.ContactList]
+  
+  type ListOfContacts = js.Array[typingsSlinky.awsSdk.sesv2Mod.Contact]
   
   type ListOfDedicatedIpPools = js.Array[typingsSlinky.awsSdk.sesv2Mod.PoolName]
   
@@ -273,6 +324,8 @@ package object sesv2Mod {
   
   type PrivateKey = java.lang.String
   
+  type ProcessedRecordsCount = scala.Double
+  
   type RawMessageData = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.sesv2Mod.Blob | java.lang.String
   
   type RblName = java.lang.String
@@ -292,6 +345,8 @@ package object sesv2Mod {
   */
   type ReviewStatus = typingsSlinky.awsSdk.sesv2Mod._ReviewStatus | java.lang.String
   
+  type S3Url = java.lang.String
+  
   type Selector = java.lang.String
   
   type SendingPoolName = java.lang.String
@@ -300,9 +355,23 @@ package object sesv2Mod {
   
   type Subject = java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.OPT_IN
+    - typingsSlinky.awsSdk.awsSdkStrings.OPT_OUT
+    - java.lang.String
+  */
+  type SubscriptionStatus = typingsSlinky.awsSdk.sesv2Mod._SubscriptionStatus | java.lang.String
+  
   type SuccessRedirectionURL = java.lang.String
   
   type SuppressedDestinationSummaries = js.Array[typingsSlinky.awsSdk.sesv2Mod.SuppressedDestinationSummary]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE
+    - typingsSlinky.awsSdk.awsSdkStrings.PUT
+    - java.lang.String
+  */
+  type SuppressionListImportAction = typingsSlinky.awsSdk.sesv2Mod._SuppressionListImportAction | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.BOUNCE
@@ -332,7 +401,17 @@ package object sesv2Mod {
   */
   type TlsPolicy = typingsSlinky.awsSdk.sesv2Mod._TlsPolicy | java.lang.String
   
+  type TopicName = java.lang.String
+  
+  type TopicPreferenceList = js.Array[typingsSlinky.awsSdk.sesv2Mod.TopicPreference]
+  
+  type Topics = js.Array[typingsSlinky.awsSdk.sesv2Mod.Topic]
+  
+  type UnsubscribeAll = scala.Boolean
+  
   type UseCaseDescription = java.lang.String
+  
+  type UseDefaultIfPreferenceUnavailable = scala.Boolean
   
   type Volume = scala.Double
   

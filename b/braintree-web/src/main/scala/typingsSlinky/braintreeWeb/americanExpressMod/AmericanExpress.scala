@@ -15,7 +15,7 @@ trait AmericanExpress extends js.Object {
     */
   var VERSION: String = js.native
   
-  def create(options: Client, callback: callback): Unit = js.native
+  def create(options: Client, callback: callback[_]): Unit = js.native
   
   /**
     * Gets the Express Checkout nonce profile given a nonce from American Express.     * @example
@@ -33,7 +33,7 @@ trait AmericanExpress extends js.Object {
     *   });
     * });
     */
-  def getExpressCheckoutProfile(options: Nonce, callback: callback): Unit = js.native
+  def getExpressCheckoutProfile(options: Nonce, callback: callback[_]): Unit = js.native
   
   /**
     * Gets the rewards balance associated with a Braintree nonce.     * @example
@@ -51,16 +51,16 @@ trait AmericanExpress extends js.Object {
     *   });
     * });
     */
-  def getRewardsBalance(options: Nonce, callback: callback): Unit = js.native
+  def getRewardsBalance(options: Nonce, callback: callback[_]): Unit = js.native
 }
 object AmericanExpress {
   
   @scala.inline
   def apply(
     VERSION: String,
-    create: (Client, callback) => Unit,
-    getExpressCheckoutProfile: (Nonce, callback) => Unit,
-    getRewardsBalance: (Nonce, callback) => Unit
+    create: (Client, callback[_]) => Unit,
+    getExpressCheckoutProfile: (Nonce, callback[_]) => Unit,
+    getRewardsBalance: (Nonce, callback[_]) => Unit
   ): AmericanExpress = {
     val __obj = js.Dynamic.literal(VERSION = VERSION.asInstanceOf[js.Any], create = js.Any.fromFunction2(create), getExpressCheckoutProfile = js.Any.fromFunction2(getExpressCheckoutProfile), getRewardsBalance = js.Any.fromFunction2(getRewardsBalance))
     __obj.asInstanceOf[AmericanExpress]
@@ -85,12 +85,12 @@ object AmericanExpress {
     def setVERSION(value: String): Self = this.set("VERSION", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCreate(value: (Client, callback) => Unit): Self = this.set("create", js.Any.fromFunction2(value))
+    def setCreate(value: (Client, callback[_]) => Unit): Self = this.set("create", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setGetExpressCheckoutProfile(value: (Nonce, callback) => Unit): Self = this.set("getExpressCheckoutProfile", js.Any.fromFunction2(value))
+    def setGetExpressCheckoutProfile(value: (Nonce, callback[_]) => Unit): Self = this.set("getExpressCheckoutProfile", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setGetRewardsBalance(value: (Nonce, callback) => Unit): Self = this.set("getRewardsBalance", js.Any.fromFunction2(value))
+    def setGetRewardsBalance(value: (Nonce, callback[_]) => Unit): Self = this.set("getRewardsBalance", js.Any.fromFunction2(value))
   }
 }

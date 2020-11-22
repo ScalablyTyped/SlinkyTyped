@@ -38,9 +38,9 @@ trait CreateResolverRequest extends js.Object {
   var pipelineConfig: js.UndefOr[PipelineConfig] = js.native
   
   /**
-    * The mapping template to be used for requests. A resolver uses a request mapping template to convert a GraphQL expression into a format that a data source can understand. Mapping templates are written in Apache Velocity Template Language (VTL).
+    * The mapping template to be used for requests. A resolver uses a request mapping template to convert a GraphQL expression into a format that a data source can understand. Mapping templates are written in Apache Velocity Template Language (VTL). VTL request mapping templates are optional when using a Lambda data source. For all other data sources, VTL request and response mapping templates are required.
     */
-  var requestMappingTemplate: MappingTemplate = js.native
+  var requestMappingTemplate: js.UndefOr[MappingTemplate] = js.native
   
   /**
     * The mapping template to be used for responses from the data source.
@@ -60,13 +60,8 @@ trait CreateResolverRequest extends js.Object {
 object CreateResolverRequest {
   
   @scala.inline
-  def apply(
-    apiId: String,
-    fieldName: ResourceName,
-    requestMappingTemplate: MappingTemplate,
-    typeName: ResourceName
-  ): CreateResolverRequest = {
-    val __obj = js.Dynamic.literal(apiId = apiId.asInstanceOf[js.Any], fieldName = fieldName.asInstanceOf[js.Any], requestMappingTemplate = requestMappingTemplate.asInstanceOf[js.Any], typeName = typeName.asInstanceOf[js.Any])
+  def apply(apiId: String, fieldName: ResourceName, typeName: ResourceName): CreateResolverRequest = {
+    val __obj = js.Dynamic.literal(apiId = apiId.asInstanceOf[js.Any], fieldName = fieldName.asInstanceOf[js.Any], typeName = typeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateResolverRequest]
   }
   
@@ -90,9 +85,6 @@ object CreateResolverRequest {
     
     @scala.inline
     def setFieldName(value: ResourceName): Self = this.set("fieldName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRequestMappingTemplate(value: MappingTemplate): Self = this.set("requestMappingTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTypeName(value: ResourceName): Self = this.set("typeName", value.asInstanceOf[js.Any])
@@ -120,6 +112,12 @@ object CreateResolverRequest {
     
     @scala.inline
     def deletePipelineConfig: Self = this.set("pipelineConfig", js.undefined)
+    
+    @scala.inline
+    def setRequestMappingTemplate(value: MappingTemplate): Self = this.set("requestMappingTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequestMappingTemplate: Self = this.set("requestMappingTemplate", js.undefined)
     
     @scala.inline
     def setResponseMappingTemplate(value: MappingTemplate): Self = this.set("responseMappingTemplate", value.asInstanceOf[js.Any])

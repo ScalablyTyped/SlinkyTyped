@@ -62,7 +62,7 @@ trait ReactInfiniteCalendarProps extends js.Object {
   
   var rowHeight: js.UndefOr[Double] = js.native
   
-  var selected: js.UndefOr[DateType | `false` | End] = js.native
+  var selected: js.UndefOr[DateType | `false` | End | js.Array[DateType]] = js.native
   
   var tabIndex: js.UndefOr[Double] = js.native
   
@@ -214,10 +214,13 @@ object ReactInfiniteCalendarProps {
     def deleteRowHeight: Self = this.set("rowHeight", js.undefined)
     
     @scala.inline
+    def setSelectedVarargs(value: DateType*): Self = this.set("selected", js.Array(value :_*))
+    
+    @scala.inline
     def setSelectedDate(value: js.Date): Self = this.set("selected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSelected(value: DateType | `false` | End): Self = this.set("selected", value.asInstanceOf[js.Any])
+    def setSelected(value: DateType | `false` | End | js.Array[DateType]): Self = this.set("selected", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSelected: Self = this.set("selected", js.undefined)

@@ -18,6 +18,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StackHeaderOptions extends js.Object {
   
   /**
+    * Accessibility label for the header back button.
+    */
+  var headerBackAccessibilityLabel: js.UndefOr[String] = js.native
+  
+  /**
     * Whether back button title font should scale to respect Text Size accessibility settings. Defaults to `false`.
     */
   var headerBackAllowFontScaling: js.UndefOr[Boolean] = js.native
@@ -126,9 +131,7 @@ trait StackHeaderOptions extends js.Object {
   /**
     * Style object for the title component.
     */
-  var headerTitleStyle: js.UndefOr[
-    /* import warning: importer.ImportType#apply Failed type conversion: react.react.ComponentProps<react-native.react-native.Animated.AnimatedComponent<new (): react-native.react-native.Text>>['style'] */ js.Any
-  ] = js.native
+  var headerTitleStyle: js.UndefOr[WithAnimatedValue[StyleProp[TextStyle]]] = js.native
   
   /**
     * Defaults to `false`. If `true`, the header will not have a background unless you explicitly provide it with `headerBackground`.
@@ -164,6 +167,12 @@ object StackHeaderOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setHeaderBackAccessibilityLabel(value: String): Self = this.set("headerBackAccessibilityLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderBackAccessibilityLabel: Self = this.set("headerBackAccessibilityLabel", js.undefined)
     
     @scala.inline
     def setHeaderBackAllowFontScaling(value: Boolean): Self = this.set("headerBackAllowFontScaling", value.asInstanceOf[js.Any])
@@ -217,6 +226,9 @@ object StackHeaderOptions {
     def deleteHeaderLeftContainerStyle: Self = this.set("headerLeftContainerStyle", js.undefined)
     
     @scala.inline
+    def setHeaderLeftContainerStyleNull: Self = this.set("headerLeftContainerStyle", null)
+    
+    @scala.inline
     def setHeaderPressColorAndroid(value: String): Self = this.set("headerPressColorAndroid", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -235,6 +247,9 @@ object StackHeaderOptions {
     def deleteHeaderRightContainerStyle: Self = this.set("headerRightContainerStyle", js.undefined)
     
     @scala.inline
+    def setHeaderRightContainerStyleNull: Self = this.set("headerRightContainerStyle", null)
+    
+    @scala.inline
     def setHeaderStatusBarHeight(value: Double): Self = this.set("headerStatusBarHeight", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -245,6 +260,9 @@ object StackHeaderOptions {
     
     @scala.inline
     def deleteHeaderStyle: Self = this.set("headerStyle", js.undefined)
+    
+    @scala.inline
+    def setHeaderStyleNull: Self = this.set("headerStyle", null)
     
     @scala.inline
     def setHeaderTintColor(value: String): Self = this.set("headerTintColor", value.asInstanceOf[js.Any])
@@ -280,12 +298,16 @@ object StackHeaderOptions {
     def deleteHeaderTitleContainerStyle: Self = this.set("headerTitleContainerStyle", js.undefined)
     
     @scala.inline
-    def setHeaderTitleStyle(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: react.react.ComponentProps<react-native.react-native.Animated.AnimatedComponent<new (): react-native.react-native.Text>>['style'] */ js.Any
-    ): Self = this.set("headerTitleStyle", value.asInstanceOf[js.Any])
+    def setHeaderTitleContainerStyleNull: Self = this.set("headerTitleContainerStyle", null)
+    
+    @scala.inline
+    def setHeaderTitleStyle(value: WithAnimatedValue[StyleProp[TextStyle]]): Self = this.set("headerTitleStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHeaderTitleStyle: Self = this.set("headerTitleStyle", js.undefined)
+    
+    @scala.inline
+    def setHeaderTitleStyleNull: Self = this.set("headerTitleStyle", null)
     
     @scala.inline
     def setHeaderTransparent(value: Boolean): Self = this.set("headerTransparent", value.asInstanceOf[js.Any])

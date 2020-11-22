@@ -9,7 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object charts extends js.Object {
   
-  def load(version: String, packages: js.Object): Unit = js.native
+  def load(version: String, packages: js.Object): js.Promise[Unit] = js.native
+  def load(version: String, packages: js.Object, mapsApiKey: String): js.Promise[Unit] = js.native
+  def load(version: Double, packages: js.Object): js.Promise[Unit] = js.native
+  def load(version: Double, packages: js.Object, mapsApiKey: String): js.Promise[Unit] = js.native
   
   def setOnLoadCallback(handler: js.Function): Unit = js.native
 }

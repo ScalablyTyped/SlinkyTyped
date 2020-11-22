@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object optionsMod {
   
-  type KnownOptions = org.scalablytyped.runtime.StringDictionary[typingsSlinky.grammarkdown.anon.PartialKnownOption]
+  type KnownOptions = org.scalablytyped.runtime.StringDictionary[typingsSlinky.grammarkdown.anon.PartialKnownOptionAliasFor]
 }

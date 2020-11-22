@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery_dot_tile"
-version := "1.1.0-dt-20200515Z-0e7a8b"
+version := "1.1.0-dt-20201002Z-0e7a8b"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

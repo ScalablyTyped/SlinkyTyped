@@ -8,9 +8,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/published-odata-services relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/consumed-odata-service-properties relevant section in reference guide}
   *
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
+  *
+  * @ignore
   *
   * In version 7.18.0: introduced
   */

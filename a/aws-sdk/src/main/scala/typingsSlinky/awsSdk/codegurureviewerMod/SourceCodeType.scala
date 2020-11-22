@@ -8,9 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SourceCodeType extends js.Object {
   
   /**
-    *  The commit diff for the pull request. 
+    *  A  SourceCodeType  that specifies a commit diff created by a pull request on an associated repository. 
     */
   var CommitDiff: js.UndefOr[CommitDiffSourceCodeType] = js.native
+  
+  var RepositoryHead: js.UndefOr[RepositoryHeadSourceCodeType] = js.native
 }
 object SourceCodeType {
   
@@ -40,5 +42,11 @@ object SourceCodeType {
     
     @scala.inline
     def deleteCommitDiff: Self = this.set("CommitDiff", js.undefined)
+    
+    @scala.inline
+    def setRepositoryHead(value: RepositoryHeadSourceCodeType): Self = this.set("RepositoryHead", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRepositoryHead: Self = this.set("RepositoryHead", js.undefined)
   }
 }

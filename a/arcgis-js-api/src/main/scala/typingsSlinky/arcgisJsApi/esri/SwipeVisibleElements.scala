@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SwipeVisibleElements extends Object {
   
   /**
-    * Indicates whether the divider between the leading and trailing layers is visible. Default value is `true`.
+    * Indicates whether the divider between the leading and trailing layers is visible.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html#VisibleElements)
     */
   var divider: Boolean = js.native
   
   /**
-    * Indicates whether the handle from which you drag the widget is visible. Default value is `true`.
+    * Indicates whether the handle from which you drag the widget is visible.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Swipe.html#VisibleElements)
     */

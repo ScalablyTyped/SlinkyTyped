@@ -19,27 +19,35 @@ import typingsSlinky.astTypes.kindsMod.TypeParameterInstantiationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
+@js.native
 trait ClassDeclaration
   extends ASTNode
      with DeclarationKind
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var body: ClassBodyKind
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var id: IdentifierKind | Null
-  var implements: js.UndefOr[js.Array[ClassImplementsKind | TSExpressionWithTypeArgumentsKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var superClass: js.UndefOr[ExpressionKind | Null] = js.undefined
-  var superTypeParameters: js.UndefOr[TypeParameterInstantiationKind | TSTypeParameterInstantiationKind | Null] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassDeclaration
-  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind | Null] = js.undefined
+  
+  var body: ClassBodyKind = js.native
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var id: IdentifierKind | Null = js.native
+  
+  var implements: js.UndefOr[js.Array[ClassImplementsKind | TSExpressionWithTypeArgumentsKind]] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var superClass: js.UndefOr[ExpressionKind | Null] = js.native
+  
+  var superTypeParameters: js.UndefOr[TypeParameterInstantiationKind | TSTypeParameterInstantiationKind | Null] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassDeclaration = js.native
+  
+  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind | Null] = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ClassDeclaration")
 @js.native
 object ClassDeclaration extends TopLevel[Type[ClassDeclaration]]
-

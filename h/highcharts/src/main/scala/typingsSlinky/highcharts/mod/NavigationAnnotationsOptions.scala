@@ -1,11 +1,24 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait NavigationAnnotationsOptions extends js.Object {
+  
+  /**
+    * (Highcharts, Highstock, Highmaps, Gantt) Enable or disable the initial
+    * animation when a series is displayed for the `annotation`. The animation
+    * can also be set as a configuration object. Please note that this option
+    * only applies to the initial animation. For other animations, see
+    * chart.animation and the animation parameter under the API methods. The
+    * following properties are supported:
+    *
+    * - `defer`: The animation delay time in milliseconds.
+    */
+  var animation: js.UndefOr[Boolean | NavigationAnnotationsAnimationOptions | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) Options for annotation's control
@@ -95,6 +108,12 @@ object NavigationAnnotationsOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAnimation(value: Boolean | NavigationAnnotationsAnimationOptions | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnimation: Self = this.set("animation", js.undefined)
     
     @scala.inline
     def setControlPointOptions(value: AnnotationControlPointOptionsObject): Self = this.set("controlPointOptions", value.asInstanceOf[js.Any])

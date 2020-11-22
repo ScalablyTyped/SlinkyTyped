@@ -1,6 +1,8 @@
 package typingsSlinky.babylonjs.anon
 
+import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.physicsImpostorMod.PhysicsImpostor
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,15 +10,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Callback extends js.Object {
   
-  def callback(collider: PhysicsImpostor, collidedAgainst: PhysicsImpostor): Unit = js.native
+  def callback(collider: PhysicsImpostor, collidedAgainst: PhysicsImpostor, point: Nullable[Vector3]): Unit = js.native
   
   var otherImpostors: js.Array[PhysicsImpostor] = js.native
 }
 object Callback {
   
   @scala.inline
-  def apply(callback: (PhysicsImpostor, PhysicsImpostor) => Unit, otherImpostors: js.Array[PhysicsImpostor]): Callback = {
-    val __obj = js.Dynamic.literal(callback = js.Any.fromFunction2(callback), otherImpostors = otherImpostors.asInstanceOf[js.Any])
+  def apply(
+    callback: (PhysicsImpostor, PhysicsImpostor, Nullable[Vector3]) => Unit,
+    otherImpostors: js.Array[PhysicsImpostor]
+  ): Callback = {
+    val __obj = js.Dynamic.literal(callback = js.Any.fromFunction3(callback), otherImpostors = otherImpostors.asInstanceOf[js.Any])
     __obj.asInstanceOf[Callback]
   }
   
@@ -36,7 +41,7 @@ object Callback {
     }
     
     @scala.inline
-    def setCallback(value: (PhysicsImpostor, PhysicsImpostor) => Unit): Self = this.set("callback", js.Any.fromFunction2(value))
+    def setCallback(value: (PhysicsImpostor, PhysicsImpostor, Nullable[Vector3]) => Unit): Self = this.set("callback", js.Any.fromFunction3(value))
     
     @scala.inline
     def setOtherImpostorsVarargs(value: PhysicsImpostor*): Self = this.set("otherImpostors", js.Array(value :_*))

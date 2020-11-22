@@ -27,7 +27,7 @@ object ^ extends js.Object {
     typingsSlinky.handsontable.mod._Handsontable.Core
   ] = js.native
   
-  var DefaultSettings: typingsSlinky.handsontable.mod.Handsontable.DefaultSettings = js.native
+  var DefaultSettings: GridSettings = js.native
   
   var EventManager: typingsSlinky.handsontable.mod.Handsontable.EventManager = js.native
   

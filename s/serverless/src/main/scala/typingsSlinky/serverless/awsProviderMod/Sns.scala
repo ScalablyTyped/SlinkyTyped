@@ -8,19 +8,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Sns extends js.Object {
   
+  var arn: js.UndefOr[String] = js.native
+  
   var displayName: js.UndefOr[String] = js.native
   
   var filterPolicy: js.UndefOr[js.Array[String] | StringDictionary[String]] = js.native
   
   var redrivePolicy: js.UndefOr[RedrivePolicy] = js.native
   
-  var topicName: String = js.native
+  var topicName: js.UndefOr[String] = js.native
 }
 object Sns {
   
   @scala.inline
-  def apply(topicName: String): Sns = {
-    val __obj = js.Dynamic.literal(topicName = topicName.asInstanceOf[js.Any])
+  def apply(): Sns = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Sns]
   }
   
@@ -40,7 +42,10 @@ object Sns {
     }
     
     @scala.inline
-    def setTopicName(value: String): Self = this.set("topicName", value.asInstanceOf[js.Any])
+    def setArn(value: String): Self = this.set("arn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteArn: Self = this.set("arn", js.undefined)
     
     @scala.inline
     def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
@@ -62,5 +67,11 @@ object Sns {
     
     @scala.inline
     def deleteRedrivePolicy: Self = this.set("redrivePolicy", js.undefined)
+    
+    @scala.inline
+    def setTopicName(value: String): Self = this.set("topicName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTopicName: Self = this.set("topicName", js.undefined)
   }
 }

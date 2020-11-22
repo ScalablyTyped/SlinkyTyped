@@ -13,7 +13,6 @@ import typingsSlinky.angularCommon.anon.ObserveParams
 import typingsSlinky.angularCommon.anon.ObserveParamsReportProgress
 import typingsSlinky.angularCommon.anon.ObserveParamsReportProgressResponseType
 import typingsSlinky.angularCommon.anon.ObserveParamsReportProgressResponseTypeWithCredentials
-import typingsSlinky.angularCommon.anon.ObserveResponseType
 import typingsSlinky.angularCommon.anon.ParamsReportProgress
 import typingsSlinky.angularCommon.anon.ParamsReportProgressResponseType
 import typingsSlinky.angularCommon.anon.ParamsReportProgressResponseTypeWithCredentials
@@ -1134,14 +1133,14 @@ class HttpClient protected () extends js.Object {
   def post_T[T](url: String, body: Null, options: `3`): Observable_[T] = js.native
   
   /**
-    * Constructs a `PUT` request that interprets the body as a JSON object and returns the response
-    * body as a JSON object.
+    * Constructs a `PUT` request that interprets the body as a JSON object
+    * and returns an observable of JSON object.
     *
     * @param url The endpoint URL.
     * @param body The resources to add/update.
     * @param options HTTP options
     *
-    * @return An `Observable` of the response, with the response body as a JSON object.
+    * @return An `Observable` of the response as a JSON object.
     */
   def put(url: String): Observable_[js.Object] = js.native
   def put(url: String, body: js.Any): Observable_[js.Object] = js.native
@@ -1288,6 +1287,20 @@ class HttpClient protected () extends js.Object {
   def put(url: String, body: Null, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
   def put(url: String, body: Null, options: `3`): Observable_[js.Object] = js.native
   /**
+    * Constructs a `PUT` request that interprets the body as an instance of the requested type
+    * and returns an observable of the requested type.
+    *
+    * @param url The endpoint URL.
+    * @param body The resources to add/update.
+    * @param options HTTP options
+    *
+    * @return An `Observable` of the requested type.
+    */
+  @JSName("put")
+  def put_T[T](url: String): Observable_[T] = js.native
+  @JSName("put")
+  def put_T[T](url: String, body: js.Any): Observable_[T] = js.native
+  /**
     * Constructs a `PUT` request that interprets the body as a JSON object and returns the
     * full event stream.
     *
@@ -1298,26 +1311,11 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of all `HttpEvents` for the request,
     * with a response body in the requested type.
     */
-  def put[T](url: String, body: js.Any, options: ObserveResponseType): Observable_[HttpEvent[T]] = js.native
-  def put[T](url: String, body: Null, options: ObserveResponseType): Observable_[HttpEvent[T]] = js.native
-  /**
-    * Constructs a `PUT` request that interprets the body as a JSON object
-    * and returns an observable of the response.
-    *
-    * @param url The endpoint URL.
-    * @param body The resources to add/update.
-    * @param options HTTP options
-    *
-    * @return An `Observable` of the `HTTPResponse` for the request, with a response body in the
-    *     requested type.
-    */
   @JSName("put")
-  def put_T[T](url: String): Observable_[T] = js.native
-  @JSName("put")
-  def put_T[T](url: String, body: js.Any): Observable_[T] = js.native
+  def put_T[T](url: String, body: js.Any, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[T]] = js.native
   /**
-    * Constructs a `PUT` request that interprets the body as a JSON object and returns the full HTTP
-    * response.
+    * Constructs a `PUT` request that interprets the body as an instance of the requested type and
+    * returns the full HTTP response.
     *
     * @param url The endpoint URL.
     * @param body The resources to add/update.
@@ -1330,6 +1328,8 @@ class HttpClient protected () extends js.Object {
   def put_T[T](url: String, body: js.Any, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("put")
   def put_T[T](url: String, body: js.Any, options: `3`): Observable_[T] = js.native
+  @JSName("put")
+  def put_T[T](url: String, body: Null, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[T]] = js.native
   @JSName("put")
   def put_T[T](url: String, body: Null, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("put")

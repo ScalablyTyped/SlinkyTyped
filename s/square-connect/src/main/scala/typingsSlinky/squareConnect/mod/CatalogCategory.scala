@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class CatalogCategory () extends js.Object {
   
   /**
-    * The category name. Searchable. This field has max length of 255 Unicode code points.
+    * The category name.
+    * This is a searchable attribute for use in applicable query filters, and its value length is of Unicode code points.
     */
   var name: js.UndefOr[String] = js.native
 }

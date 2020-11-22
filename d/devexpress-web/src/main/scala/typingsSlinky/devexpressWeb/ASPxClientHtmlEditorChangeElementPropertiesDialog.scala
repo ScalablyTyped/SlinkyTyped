@@ -51,7 +51,7 @@ trait ASPxClientHtmlEditorChangeElementPropertiesDialog extends ASPxClientHtmlEd
   def GetHeightValueSpinEdit(): ASPxClientSpinEdit = js.native
   
   /**
-    * Provides access to the client ASPxComboBox object that allows to specify the element height measurement unit in the Html Editor's "Change Element Properties" dialog.
+    * Provides access to the client ASPxComboBox object that allows you to specify the element height measurement unit in the Html Editor's "Change Element Properties" dialog.
     */
   def GetHeightValueTypeComboBox(): ASPxClientComboBox = js.native
   

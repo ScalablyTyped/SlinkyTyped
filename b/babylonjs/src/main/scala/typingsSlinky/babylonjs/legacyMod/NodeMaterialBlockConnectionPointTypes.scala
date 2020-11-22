@@ -27,6 +27,8 @@ object NodeMaterialBlockConnectionPointTypes extends js.Object {
   
   /* 128 */ val Matrix: typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointTypesMod.NodeMaterialBlockConnectionPointTypes.Matrix with Double = js.native
   
+  /* 256 */ val Object: typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointTypesMod.NodeMaterialBlockConnectionPointTypes.Object with Double = js.native
+  
   /* 4 */ val Vector2: typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointTypesMod.NodeMaterialBlockConnectionPointTypes.Vector2 with Double = js.native
   
   /* 8 */ val Vector3: typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointTypesMod.NodeMaterialBlockConnectionPointTypes.Vector3 with Double = js.native

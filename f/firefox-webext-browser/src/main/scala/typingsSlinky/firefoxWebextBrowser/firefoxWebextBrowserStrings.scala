@@ -1,22 +1,22 @@
 package typingsSlinky.firefoxWebextBrowser
 
-import typingsSlinky.firefoxWebextBrowser.browser.activityLog.UndefinedType
-import typingsSlinky.firefoxWebextBrowser.browser.activityLog.UndefinedViewType
+import typingsSlinky.firefoxWebextBrowser.browser.activityLog.OnExtensionActivityDetailsType
+import typingsSlinky.firefoxWebextBrowser.browser.activityLog.OnExtensionActivityDetailsViewType
 import typingsSlinky.firefoxWebextBrowser.browser.bookmarks.BookmarkTreeNodeType
 import typingsSlinky.firefoxWebextBrowser.browser.browserSettings.ContextMenuMouseEvent
 import typingsSlinky.firefoxWebextBrowser.browser.browserSettings.ImageAnimationBehavior
-import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.Status
-import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.UndefinedState
-import typingsSlinky.firefoxWebextBrowser.browser.clipboard.SetImageData
+import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.OnConnectivityAvailableStatus
+import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.OnStateChangedDetailsState
+import typingsSlinky.firefoxWebextBrowser.browser.clipboard.SetImageDataImageType
 import typingsSlinky.firefoxWebextBrowser.browser.contextMenus.ContextType
 import typingsSlinky.firefoxWebextBrowser.browser.contextMenus.ItemType
 import typingsSlinky.firefoxWebextBrowser.browser.contextMenus.OnClickDataModifiers
-import typingsSlinky.firefoxWebextBrowser.browser.contextMenus.OverrideContextContext
+import typingsSlinky.firefoxWebextBrowser.browser.contextMenus.OverrideContextContextOptionsContext
 import typingsSlinky.firefoxWebextBrowser.browser.cookies.OnChangedCause
 import typingsSlinky.firefoxWebextBrowser.browser.cookies.SameSiteStatus
 import typingsSlinky.firefoxWebextBrowser.browser.dns._ResolveFlags
 import typingsSlinky.firefoxWebextBrowser.browser.downloads.DangerType
-import typingsSlinky.firefoxWebextBrowser.browser.downloads.DownloadMethod
+import typingsSlinky.firefoxWebextBrowser.browser.downloads.DownloadOptionsMethod
 import typingsSlinky.firefoxWebextBrowser.browser.downloads.FilenameConflictAction
 import typingsSlinky.firefoxWebextBrowser.browser.downloads.InterruptReason
 import typingsSlinky.firefoxWebextBrowser.browser.downloads.State
@@ -56,10 +56,11 @@ import typingsSlinky.firefoxWebextBrowser.browser.proxy.ProxyConfigProxyType
 import typingsSlinky.firefoxWebextBrowser.browser.runtime.OnInstalledReason
 import typingsSlinky.firefoxWebextBrowser.browser.runtime.OnRestartRequiredReason
 import typingsSlinky.firefoxWebextBrowser.browser.runtime.PlatformArch
+import typingsSlinky.firefoxWebextBrowser.browser.runtime.PlatformNaclArch
 import typingsSlinky.firefoxWebextBrowser.browser.runtime.PlatformOs
 import typingsSlinky.firefoxWebextBrowser.browser.runtime.RequestUpdateCheckStatus
 import typingsSlinky.firefoxWebextBrowser.browser.tabs.MutedInfoReason
-import typingsSlinky.firefoxWebextBrowser.browser.tabs.QueryScreen
+import typingsSlinky.firefoxWebextBrowser.browser.tabs.QueryQueryInfoScreen
 import typingsSlinky.firefoxWebextBrowser.browser.tabs.TabStatus
 import typingsSlinky.firefoxWebextBrowser.browser.tabs.UpdatePropertyName
 import typingsSlinky.firefoxWebextBrowser.browser.tabs.ZoomSettingsMode
@@ -81,6 +82,7 @@ import typingsSlinky.firefoxWebextBrowser.browser.webRequest.OnHeadersReceivedOp
 import typingsSlinky.firefoxWebextBrowser.browser.webRequest.ResourceType
 import typingsSlinky.firefoxWebextBrowser.browser.webRequest.SecurityInfoProtocolVersion
 import typingsSlinky.firefoxWebextBrowser.browser.webRequest.SecurityInfoState
+import typingsSlinky.firefoxWebextBrowser.browser.webRequest.StreamFilterStatus
 import typingsSlinky.firefoxWebextBrowser.browser.webRequest.UrlClassificationFlags
 import typingsSlinky.firefoxWebextBrowser.browser.windows.CreateType
 import typingsSlinky.firefoxWebextBrowser.browser.windows.WindowState
@@ -299,6 +301,9 @@ object firefoxWebextBrowserStrings {
   def audio: audio = "audio".asInstanceOf[audio]
   
   @scala.inline
+  def audiocallbacktracing: audiocallbacktracing = "audiocallbacktracing".asInstanceOf[audiocallbacktracing]
+  
+  @scala.inline
   def author: author = "author".asInstanceOf[author]
   
   @scala.inline
@@ -405,6 +410,9 @@ object firefoxWebextBrowserStrings {
   
   @scala.inline
   def clipboardWrite: clipboardWrite = "clipboardWrite".asInstanceOf[clipboardWrite]
+  
+  @scala.inline
+  def closed: closed = "closed".asInstanceOf[closed]
   
   @scala.inline
   def complete: complete = "complete".asInstanceOf[complete]
@@ -521,6 +529,9 @@ object firefoxWebextBrowserStrings {
   def discarded: discarded = "discarded".asInstanceOf[discarded]
   
   @scala.inline
+  def disconnected: disconnected = "disconnected".asInstanceOf[disconnected]
+  
+  @scala.inline
   def dns: dns = "dns".asInstanceOf[dns]
   
   @scala.inline
@@ -548,6 +559,9 @@ object firefoxWebextBrowserStrings {
   def dweb: dweb = "dweb".asInstanceOf[dweb]
   
   @scala.inline
+  def dynamic: dynamic = "dynamic".asInstanceOf[dynamic]
+  
+  @scala.inline
   def editable: editable = "editable".asInstanceOf[editable]
   
   @scala.inline
@@ -572,6 +586,9 @@ object firefoxWebextBrowserStrings {
   def extension: extension = "extension".asInstanceOf[extension]
   
   @scala.inline
+  def failed: failed = "failed".asInstanceOf[failed]
+  
+  @scala.inline
   def favIconUrl: favIconUrl = "favIconUrl".asInstanceOf[favIconUrl]
   
   @scala.inline
@@ -591,6 +608,9 @@ object firefoxWebextBrowserStrings {
   
   @scala.inline
   def fingerprinting_content: fingerprinting_content = "fingerprinting_content".asInstanceOf[fingerprinting_content]
+  
+  @scala.inline
+  def finishedtransferringdata: finishedtransferringdata = "finishedtransferringdata".asInstanceOf[finishedtransferringdata]
   
   @scala.inline
   def folder: folder = "folder".asInstanceOf[folder]
@@ -1163,6 +1183,9 @@ object firefoxWebextBrowserStrings {
   def sub_frame: sub_frame = "sub_frame".asInstanceOf[sub_frame]
   
   @scala.inline
+  def suspended: suspended = "suspended".asInstanceOf[suspended]
+  
+  @scala.inline
   def system: system = "system".asInstanceOf[system]
   
   @scala.inline
@@ -1226,10 +1249,16 @@ object firefoxWebextBrowserStrings {
   def tracking_social: tracking_social = "tracking_social".asInstanceOf[tracking_social]
   
   @scala.inline
+  def transferringdata: transferringdata = "transferringdata".asInstanceOf[transferringdata]
+  
+  @scala.inline
   def typed: typed = "typed".asInstanceOf[typed]
   
   @scala.inline
   def uncommon: uncommon = "uncommon".asInstanceOf[uncommon]
+  
+  @scala.inline
+  def uninitialized: uninitialized = "uninitialized".asInstanceOf[uninitialized]
   
   @scala.inline
   def uniquify: uniquify = "uniquify".asInstanceOf[uniquify]
@@ -1347,7 +1376,7 @@ object firefoxWebextBrowserStrings {
        with typingsSlinky.firefoxWebextBrowser.browser.browserAction.OnClickDataModifiers
   
   @js.native
-  sealed trait Application extends QueryScreen
+  sealed trait Application extends QueryQueryInfoScreen
   
   @js.native
   sealed trait CRASH extends InterruptReason
@@ -1397,7 +1426,7 @@ object firefoxWebextBrowserStrings {
   sealed trait FILE_VIRUS_INFECTED extends InterruptReason
   
   @js.native
-  sealed trait GET extends DownloadMethod
+  sealed trait GET extends DownloadOptionsMethod
   
   @js.native
   sealed trait Lessthansignall_urlsGreaterthansign extends js.Object
@@ -1425,7 +1454,7 @@ object firefoxWebextBrowserStrings {
   sealed trait NETWORK_TIMEOUT extends InterruptReason
   
   @js.native
-  sealed trait POST extends DownloadMethod
+  sealed trait POST extends DownloadOptionsMethod
   
   @js.native
   sealed trait SERVER_BAD_CONTENT extends InterruptReason
@@ -1446,7 +1475,7 @@ object firefoxWebextBrowserStrings {
   sealed trait SERVER_UNAUTHORIZED extends InterruptReason
   
   @js.native
-  sealed trait Screen extends QueryScreen
+  sealed trait Screen extends QueryQueryInfoScreen
   
   @js.native
   sealed trait Shift
@@ -1486,7 +1515,7 @@ object firefoxWebextBrowserStrings {
   sealed trait USER_SHUTDOWN extends InterruptReason
   
   @js.native
-  sealed trait Window extends QueryScreen
+  sealed trait Window extends QueryQueryInfoScreen
   
   @js.native
   sealed trait _empty extends js.Object
@@ -1545,10 +1574,10 @@ object firefoxWebextBrowserStrings {
   sealed trait any_strict_tracking extends UrlClassificationFlags
   
   @js.native
-  sealed trait api_call extends UndefinedType
+  sealed trait api_call extends OnExtensionActivityDetailsType
   
   @js.native
-  sealed trait api_event extends UndefinedType
+  sealed trait api_event extends OnExtensionActivityDetailsType
   
   @js.native
   sealed trait app
@@ -1559,7 +1588,9 @@ object firefoxWebextBrowserStrings {
   sealed trait app_update extends OnRestartRequiredReason
   
   @js.native
-  sealed trait arm extends PlatformArch
+  sealed trait arm
+    extends PlatformArch
+       with PlatformNaclArch
   
   @js.native
   sealed trait asyncBlocking extends OnAuthRequiredOptions
@@ -1574,6 +1605,9 @@ object firefoxWebextBrowserStrings {
   sealed trait audio
     extends ContextType
        with typingsSlinky.firefoxWebextBrowser.browser.menus.ContextType
+  
+  @js.native
+  sealed trait audiocallbacktracing extends ProfilerFeature
   
   @js.native
   sealed trait author extends CSSOrigin
@@ -1602,7 +1636,7 @@ object firefoxWebextBrowserStrings {
   sealed trait automatic extends ZoomSettingsMode
   
   @js.native
-  sealed trait background extends UndefinedViewType
+  sealed trait background extends OnExtensionActivityDetailsViewType
   
   @js.native
   sealed trait basic extends TemplateType
@@ -1625,8 +1659,8 @@ object firefoxWebextBrowserStrings {
     extends BookmarkTreeNodeType
        with ContextType
        with typingsSlinky.firefoxWebextBrowser.browser.menus.ContextType
-       with OverrideContextContext
-       with typingsSlinky.firefoxWebextBrowser.browser.menus.OverrideContextContext
+       with OverrideContextContextOptionsContext
+       with typingsSlinky.firefoxWebextBrowser.browser.menus.OverrideContextContextOptionsContext
   
   @js.native
   sealed trait bookmarks
@@ -1663,7 +1697,7 @@ object firefoxWebextBrowserStrings {
   sealed trait canonical_name extends _ResolveFlags
   
   @js.native
-  sealed trait captive extends Status
+  sealed trait captive extends OnConnectivityAvailableStatus
   
   @js.native
   sealed trait captivePortal extends _PermissionNoPrompt
@@ -1692,7 +1726,7 @@ object firefoxWebextBrowserStrings {
   sealed trait cipher extends js.Object
   
   @js.native
-  sealed trait clear extends Status
+  sealed trait clear extends OnConnectivityAvailableStatus
   
   @js.native
   sealed trait client_redirect extends TransitionQualifier
@@ -1702,6 +1736,9 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait clipboardWrite extends _OptionalPermission
+  
+  @js.native
+  sealed trait closed extends StreamFilterStatus
   
   @js.native
   sealed trait complete
@@ -1718,7 +1755,7 @@ object firefoxWebextBrowserStrings {
   sealed trait content_parent extends APIParentScope
   
   @js.native
-  sealed trait content_script extends UndefinedType
+  sealed trait content_script extends OnExtensionActivityDetailsType
   
   @js.native
   sealed trait contextMenus extends _PermissionNoPrompt
@@ -1790,10 +1827,10 @@ object firefoxWebextBrowserStrings {
   sealed trait devtools_child extends APIChildScope
   
   @js.native
-  sealed trait devtools_page extends UndefinedViewType
+  sealed trait devtools_page extends OnExtensionActivityDetailsViewType
   
   @js.native
-  sealed trait devtools_panel extends UndefinedViewType
+  sealed trait devtools_panel extends OnExtensionActivityDetailsViewType
   
   @js.native
   sealed trait devtools_parent extends APIParentScope
@@ -1823,6 +1860,9 @@ object firefoxWebextBrowserStrings {
   sealed trait discarded extends UpdatePropertyName
   
   @js.native
+  sealed trait disconnected extends StreamFilterStatus
+  
+  @js.native
   sealed trait dns extends _PermissionNoPrompt
   
   @js.native
@@ -1848,6 +1888,9 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait dweb extends ProtocolHandlerProtocol
+  
+  @js.native
+  sealed trait dynamic extends ResultType
   
   @js.native
   sealed trait editable
@@ -1878,6 +1921,9 @@ object firefoxWebextBrowserStrings {
        with MutedInfoReason
   
   @js.native
+  sealed trait failed extends StreamFilterStatus
+  
+  @js.native
   sealed trait favIconUrl extends UpdatePropertyName
   
   @js.native
@@ -1897,6 +1943,9 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait fingerprinting_content extends UrlClassificationFlags
+  
+  @js.native
+  sealed trait finishedtransferringdata extends StreamFilterStatus
   
   @js.native
   sealed trait folder extends BookmarkTreeNodeType
@@ -2023,7 +2072,7 @@ object firefoxWebextBrowserStrings {
   @js.native
   sealed trait jpeg
     extends ImageFormat
-       with SetImageData
+       with SetImageDataImageType
   
   @js.native
   sealed trait js_ extends ProfilerFeature
@@ -2088,7 +2137,7 @@ object firefoxWebextBrowserStrings {
   sealed trait local extends SourceType
   
   @js.native
-  sealed trait locked_portal extends UndefinedState
+  sealed trait locked_portal extends OnStateChangedDetailsState
   
   @js.native
   sealed trait mac extends PlatformOs
@@ -2231,7 +2280,7 @@ object firefoxWebextBrowserStrings {
   sealed trait not_applicable extends CertificateTransparencyStatus
   
   @js.native
-  sealed trait not_captive extends UndefinedState
+  sealed trait not_captive extends OnStateChangedDetailsState
   
   @js.native
   sealed trait not_controllable extends LevelOfControl
@@ -2315,7 +2364,7 @@ object firefoxWebextBrowserStrings {
   @js.native
   sealed trait png
     extends ImageFormat
-       with SetImageData
+       with SetImageDataImageType
   
   @js.native
   sealed trait policy_compliant extends CertificateTransparencyStatus
@@ -2329,7 +2378,7 @@ object firefoxWebextBrowserStrings {
   @js.native
   sealed trait popup
     extends CreateType
-       with UndefinedViewType
+       with OnExtensionActivityDetailsViewType
        with ViewType
        with WindowType
        with typingsSlinky.firefoxWebextBrowser.browser.tabs.WindowType
@@ -2483,7 +2532,7 @@ object firefoxWebextBrowserStrings {
   
   @js.native
   sealed trait sidebar
-    extends UndefinedViewType
+    extends OnExtensionActivityDetailsViewType
        with ViewType
   
   @js.native
@@ -2547,16 +2596,19 @@ object firefoxWebextBrowserStrings {
   sealed trait sub_frame extends ResourceType
   
   @js.native
+  sealed trait suspended extends StreamFilterStatus
+  
+  @js.native
   sealed trait system extends ProxyConfigProxyType
   
   @js.native
   sealed trait tab
     extends ContextType
        with typingsSlinky.firefoxWebextBrowser.browser.menus.ContextType
-       with OverrideContextContext
-       with typingsSlinky.firefoxWebextBrowser.browser.menus.OverrideContextContext
+       with OnExtensionActivityDetailsViewType
+       with OverrideContextContextOptionsContext
+       with typingsSlinky.firefoxWebextBrowser.browser.menus.OverrideContextContextOptionsContext
        with ResultType
-       with UndefinedViewType
        with ViewType
   
   @js.native
@@ -2622,12 +2674,18 @@ object firefoxWebextBrowserStrings {
   sealed trait tracking_social extends UrlClassificationFlags
   
   @js.native
+  sealed trait transferringdata extends StreamFilterStatus
+  
+  @js.native
   sealed trait typed
     extends TransitionType
        with typingsSlinky.firefoxWebextBrowser.browser.history.TransitionType
   
   @js.native
   sealed trait uncommon extends DangerType
+  
+  @js.native
+  sealed trait uninitialized extends StreamFilterStatus
   
   @js.native
   sealed trait uniquify extends FilenameConflictAction
@@ -2637,16 +2695,16 @@ object firefoxWebextBrowserStrings {
     extends ExtensionDisabledReason
        with NetworkLinkInfoStatus
        with NetworkLinkInfoType
+       with OnStateChangedDetailsState
        with SecurityInfoProtocolVersion
        with TlsVersionRestrictionConfigMaximum
        with TlsVersionRestrictionConfigMinimum
-       with UndefinedState
   
   @js.native
   sealed trait unlimitedStorage extends _PermissionNoPrompt
   
   @js.native
-  sealed trait unlocked_portal extends UndefinedState
+  sealed trait unlocked_portal extends OnStateChangedDetailsState
   
   @js.native
   sealed trait unwanted extends DangerType
@@ -2682,7 +2740,7 @@ object firefoxWebextBrowserStrings {
        with MutedInfoReason
   
   @js.native
-  sealed trait user_script extends UndefinedType
+  sealed trait user_script extends OnExtensionActivityDetailsType
   
   @js.native
   sealed trait video
@@ -2726,10 +2784,14 @@ object firefoxWebextBrowserStrings {
   sealed trait wtai extends ProtocolHandlerProtocol
   
   @js.native
-  sealed trait `x86-32` extends PlatformArch
+  sealed trait `x86-32`
+    extends PlatformArch
+       with PlatformNaclArch
   
   @js.native
-  sealed trait `x86-64` extends PlatformArch
+  sealed trait `x86-64`
+    extends PlatformArch
+       with PlatformNaclArch
   
   @js.native
   sealed trait xml_dtd extends ResourceType

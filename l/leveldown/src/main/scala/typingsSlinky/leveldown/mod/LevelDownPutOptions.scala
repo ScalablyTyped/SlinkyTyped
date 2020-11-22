@@ -1,11 +1,12 @@
 package typingsSlinky.leveldown.mod
 
+import typingsSlinky.abstractLeveldown.mod.AbstractOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LevelDownPutOptions extends js.Object {
+trait LevelDownPutOptions extends AbstractOptions {
   
   var sync: js.UndefOr[Boolean] = js.native
 }

@@ -10,6 +10,6 @@ package object mod {
   
   type RetryStrategy = js.Function1[
     /* options */ typingsSlinky.redis.mod.RetryStrategyOptions, 
-    js.UndefOr[scala.Double | js.Error]
+    scala.Double | js.Error | js.Any
   ]
 }

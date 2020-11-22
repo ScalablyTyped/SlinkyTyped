@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AccountSettings extends js.Object {
   
   /**
-    * The name associated with the QuickSight subscription in your AWS account.
+    * The "account name" you provided for the QuickSight subscription in your AWS account. You create this name when you sign up for QuickSight. It is unique in all of AWS and it appears only in the console when users sign in.
     */
   var AccountName: js.UndefOr[String] = js.native
   
   /**
-    * The default QuickSight namespace for your AWS account.
+    * The default QuickSight namespace for your AWS account. 
     */
   var DefaultNamespace: js.UndefOr[Namespace] = js.native
   
   /**
-    * The edition of QuickSight that you're currently subscribed to.
+    * The edition of QuickSight that you're currently subscribed to: Enterprise edition or Standard edition.
     */
   var Edition: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.Edition] = js.native
   

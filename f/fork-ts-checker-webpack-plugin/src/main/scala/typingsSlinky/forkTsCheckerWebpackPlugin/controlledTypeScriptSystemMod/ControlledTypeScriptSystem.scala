@@ -32,8 +32,6 @@ trait ControlledTypeScriptSystem extends System {
   
   def invokeFileDeleted(path: String): Unit = js.native
   
-  def pollAndInvokeCreatedOrDeleted(): Unit = js.native
-  
   @JSName("setModifiedTime")
   def setModifiedTime_MControlledTypeScriptSystem(path: String, time: js.Date): Unit = js.native
   

@@ -1,7 +1,7 @@
 
 # Scala.js typings for babel__template
 
-Typings are for version 7.0
+Typings are for version 7.4
 
 ## Library description:
 Generate an AST from a string template.

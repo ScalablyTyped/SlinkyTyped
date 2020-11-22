@@ -18,7 +18,7 @@ trait CreatePortalResponse extends js.Object {
   var portalId: ID = js.native
   
   /**
-    * The public URL for the AWS IoT SiteWise Monitor portal.
+    * The URL for the AWS IoT SiteWise Monitor portal. You can use this URL to access portals that use AWS SSO for authentication. For portals that use IAM for authentication, you must use the CreatePresignedPortalUrl operation to create a URL that you can use to access the portal.
     */
   var portalStartUrl: Url = js.native
   
@@ -28,7 +28,7 @@ trait CreatePortalResponse extends js.Object {
   var portalStatus: PortalStatus = js.native
   
   /**
-    * The associated AWS SSO application Id.
+    * The associated AWS SSO application ID, if the portal uses AWS SSO.
     */
   var ssoApplicationId: SSOApplicationId = js.native
 }

@@ -71,6 +71,11 @@ trait Block extends js.Object {
     * The word or line of text that's recognized by Amazon Textract. 
     */
   var Text: js.UndefOr[String] = js.native
+  
+  /**
+    * The kind of text that Amazon Textract has detected. Can check for handwritten text and printed text.
+    */
+  var TextType: js.UndefOr[typingsSlinky.awsSdk.textractMod.TextType] = js.native
 }
 object Block {
   
@@ -178,5 +183,11 @@ object Block {
     
     @scala.inline
     def deleteText: Self = this.set("Text", js.undefined)
+    
+    @scala.inline
+    def setTextType(value: TextType): Self = this.set("TextType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTextType: Self = this.set("TextType", js.undefined)
   }
 }

@@ -19,7 +19,6 @@ class ShareOpenGraphValueContainer protected () extends js.Object {
   /**
     * Sets a number for the specified key.
     */
-  // tslint:disable-next-line:variable-name
   def putNumber(key: String, number: Double): Unit = js.native
   
   /**
@@ -35,6 +34,5 @@ class ShareOpenGraphValueContainer protected () extends js.Object {
   /**
     * Sets a string for the specified key.
     */
-  // tslint:disable-next-line:variable-name
   def putString(key: String, string: String): Unit = js.native
 }

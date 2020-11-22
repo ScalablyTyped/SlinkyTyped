@@ -1,6 +1,5 @@
 package typingsSlinky.baseui.spinnerMod
 
-import typingsSlinky.baseui.anon.ActivePath
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +11,7 @@ trait SpinnerProps extends js.Object {
   
   var color: js.UndefOr[String] = js.native
   
-  var overrides: js.UndefOr[ActivePath] = js.native
+  var overrides: js.UndefOr[SpinnerOverrides] = js.native
   
   var size: js.UndefOr[Double | String] = js.native
   
@@ -54,7 +53,7 @@ object SpinnerProps {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setOverrides(value: ActivePath): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: SpinnerOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)

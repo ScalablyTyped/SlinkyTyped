@@ -31,6 +31,9 @@ object ToggleButton {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def iconPos(value: String): this.type = set("iconPos", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline

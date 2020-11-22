@@ -8,31 +8,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSchedulerAppointment extends CollectionWidgetItem {
   
-  /** @name dxSchedulerAppointment.allDay */
+  /**
+    * [descr:dxSchedulerAppointment.allDay]
+    */
   var allDay: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSchedulerAppointment.description */
+  /**
+    * [descr:dxSchedulerAppointment.description]
+    */
   var description: js.UndefOr[String] = js.native
   
-  /** @name dxSchedulerAppointment.endDate */
+  /**
+    * [descr:dxSchedulerAppointment.endDate]
+    */
   var endDate: js.UndefOr[js.Date] = js.native
   
-  /** @name dxSchedulerAppointment.endDateTimeZone */
+  /**
+    * [descr:dxSchedulerAppointment.endDateTimeZone]
+    */
   var endDateTimeZone: js.UndefOr[String] = js.native
   
-  /** @name dxSchedulerAppointment.recurrenceException */
+  /**
+    * [descr:dxSchedulerAppointment.recurrenceException]
+    */
   var recurrenceException: js.UndefOr[String] = js.native
   
-  /** @name dxSchedulerAppointment.recurrenceRule */
+  /**
+    * [descr:dxSchedulerAppointment.recurrenceRule]
+    */
   var recurrenceRule: js.UndefOr[String] = js.native
   
-  /** @name dxSchedulerAppointment.startDate */
+  /**
+    * [descr:dxSchedulerAppointment.startDate]
+    */
   var startDate: js.UndefOr[js.Date] = js.native
   
-  /** @name dxSchedulerAppointment.startDateTimeZone */
+  /**
+    * [descr:dxSchedulerAppointment.startDateTimeZone]
+    */
   var startDateTimeZone: js.UndefOr[String] = js.native
   
-  /** @name dxSchedulerAppointment.template */
+  /**
+    * [descr:dxSchedulerAppointment.template]
+    */
   @JSName("template")
   var template_dxSchedulerAppointment: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.core.template] = js.native
 }

@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SequenceNumberRange extends js.Object {
   
   /**
-    * The last sequence number.
+    * The last sequence number for the stream records contained within a shard. String contains numeric characters only.
     */
   var EndingSequenceNumber: js.UndefOr[SequenceNumber] = js.native
   
   /**
-    * The first sequence number.
+    * The first sequence number for the stream records contained within a shard. String contains numeric characters only.
     */
   var StartingSequenceNumber: js.UndefOr[SequenceNumber] = js.native
 }

@@ -13,12 +13,12 @@ trait ObjectCountByEncryptionType extends js.Object {
   var customerManaged: js.UndefOr[long] = js.native
   
   /**
-    * The total number of objects that are encrypted using an AWS Key Management Service (AWS KMS) customer master key (CMK). The objects use AWS KMS AWS-managed (AWS-KMS) encryption or AWS KMS customer-managed (SSE-KMS) encryption.
+    * The total number of objects that are encrypted using an AWS Key Management Service (AWS KMS) customer master key (CMK). The objects use AWS managed AWS KMS (AWS-KMS) encryption or customer managed AWS KMS (SSE-KMS) encryption.
     */
   var kmsManaged: js.UndefOr[long] = js.native
   
   /**
-    * The total number of objects that are encrypted using an Amazon S3-managed key. The objects use Amazon S3-managed (SSE-S3) encryption.
+    * The total number of objects that are encrypted using an Amazon S3 managed key. The objects use Amazon S3 managed (SSE-S3) encryption.
     */
   var s3Managed: js.UndefOr[long] = js.native
   

@@ -26,6 +26,8 @@ trait ConfigurationServiceApiVersions extends js.Object {
   
   var appconfig: js.UndefOr[typingsSlinky.awsSdk.appconfigMod.apiVersion] = js.native
   
+  var appflow: js.UndefOr[typingsSlinky.awsSdk.appflowMod.apiVersion] = js.native
+  
   var applicationautoscaling: js.UndefOr[typingsSlinky.awsSdk.applicationautoscalingMod.apiVersion] = js.native
   
   var applicationinsights: js.UndefOr[typingsSlinky.awsSdk.applicationinsightsMod.apiVersion] = js.native
@@ -47,6 +49,8 @@ trait ConfigurationServiceApiVersions extends js.Object {
   var backup: js.UndefOr[typingsSlinky.awsSdk.backupMod.apiVersion] = js.native
   
   var batch: js.UndefOr[typingsSlinky.awsSdk.batchMod.apiVersion] = js.native
+  
+  var braket: js.UndefOr[typingsSlinky.awsSdk.braketMod.apiVersion] = js.native
   
   var budgets: js.UndefOr[typingsSlinky.awsSdk.budgetsMod.apiVersion] = js.native
   
@@ -117,6 +121,8 @@ trait ConfigurationServiceApiVersions extends js.Object {
   var costexplorer: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.apiVersion] = js.native
   
   var cur: js.UndefOr[typingsSlinky.awsSdk.curMod.apiVersion] = js.native
+  
+  var databrew: js.UndefOr[typingsSlinky.awsSdk.databrewMod.apiVersion] = js.native
   
   var dataexchange: js.UndefOr[typingsSlinky.awsSdk.dataexchangeMod.apiVersion] = js.native
   
@@ -209,6 +215,8 @@ trait ConfigurationServiceApiVersions extends js.Object {
   var honeycode: js.UndefOr[typingsSlinky.awsSdk.honeycodeMod.apiVersion] = js.native
   
   var iam: js.UndefOr[typingsSlinky.awsSdk.iamMod.apiVersion] = js.native
+  
+  var identitystore: js.UndefOr[typingsSlinky.awsSdk.identitystoreMod.apiVersion] = js.native
   
   var imagebuilder: js.UndefOr[typingsSlinky.awsSdk.imagebuilderMod.apiVersion] = js.native
   
@@ -318,6 +326,8 @@ trait ConfigurationServiceApiVersions extends js.Object {
   
   var neptune: js.UndefOr[typingsSlinky.awsSdk.neptuneMod.apiVersion] = js.native
   
+  var networkfirewall: js.UndefOr[typingsSlinky.awsSdk.networkfirewallMod.apiVersion] = js.native
+  
   var networkmanager: js.UndefOr[typingsSlinky.awsSdk.networkmanagerMod.apiVersion] = js.native
   
   var opsworks: js.UndefOr[typingsSlinky.awsSdk.opsworksMod.apiVersion] = js.native
@@ -360,6 +370,8 @@ trait ConfigurationServiceApiVersions extends js.Object {
   
   var redshift: js.UndefOr[typingsSlinky.awsSdk.redshiftMod.apiVersion] = js.native
   
+  var redshiftdata: js.UndefOr[typingsSlinky.awsSdk.redshiftdataMod.apiVersion] = js.native
+  
   var rekognition: js.UndefOr[typingsSlinky.awsSdk.rekognitionMod.apiVersion] = js.native
   
   var resourcegroups: js.UndefOr[typingsSlinky.awsSdk.resourcegroupsMod.apiVersion] = js.native
@@ -378,6 +390,8 @@ trait ConfigurationServiceApiVersions extends js.Object {
   
   var s3control: js.UndefOr[typingsSlinky.awsSdk.s3controlMod.apiVersion] = js.native
   
+  var s3outposts: js.UndefOr[typingsSlinky.awsSdk.s3outpostsMod.apiVersion] = js.native
+  
   var sagemaker: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.apiVersion] = js.native
   
   var sagemakerruntime: js.UndefOr[typingsSlinky.awsSdk.sagemakerruntimeMod.apiVersion] = js.native
@@ -393,6 +407,8 @@ trait ConfigurationServiceApiVersions extends js.Object {
   var serverlessapplicationrepository: js.UndefOr[typingsSlinky.awsSdk.serverlessapplicationrepositoryMod.apiVersion] = js.native
   
   var servicecatalog: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.apiVersion] = js.native
+  
+  var servicecatalogappregistry: js.UndefOr[typingsSlinky.awsSdk.servicecatalogappregistryMod.apiVersion] = js.native
   
   var servicediscovery: js.UndefOr[typingsSlinky.awsSdk.servicediscoveryMod.apiVersion] = js.native
   
@@ -420,6 +436,8 @@ trait ConfigurationServiceApiVersions extends js.Object {
   
   var sso: js.UndefOr[typingsSlinky.awsSdk.ssoMod.apiVersion] = js.native
   
+  var ssoadmin: js.UndefOr[typingsSlinky.awsSdk.ssoadminMod.apiVersion] = js.native
+  
   var ssooidc: js.UndefOr[typingsSlinky.awsSdk.ssooidcMod.apiVersion] = js.native
   
   var stepfunctions: js.UndefOr[typingsSlinky.awsSdk.stepfunctionsMod.apiVersion] = js.native
@@ -435,6 +453,10 @@ trait ConfigurationServiceApiVersions extends js.Object {
   var synthetics: js.UndefOr[typingsSlinky.awsSdk.syntheticsMod.apiVersion] = js.native
   
   var textract: js.UndefOr[typingsSlinky.awsSdk.textractMod.apiVersion] = js.native
+  
+  var timestreamquery: js.UndefOr[typingsSlinky.awsSdk.timestreamqueryMod.apiVersion] = js.native
+  
+  var timestreamwrite: js.UndefOr[typingsSlinky.awsSdk.timestreamwriteMod.apiVersion] = js.native
   
   var transcribeservice: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.apiVersion] = js.native
   
@@ -538,6 +560,12 @@ object ConfigurationServiceApiVersions {
     def deleteAppconfig: Self = this.set("appconfig", js.undefined)
     
     @scala.inline
+    def setAppflow(value: typingsSlinky.awsSdk.appflowMod.apiVersion): Self = this.set("appflow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAppflow: Self = this.set("appflow", js.undefined)
+    
+    @scala.inline
     def setApplicationautoscaling(value: typingsSlinky.awsSdk.applicationautoscalingMod.apiVersion): Self = this.set("applicationautoscaling", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -602,6 +630,12 @@ object ConfigurationServiceApiVersions {
     
     @scala.inline
     def deleteBatch: Self = this.set("batch", js.undefined)
+    
+    @scala.inline
+    def setBraket(value: typingsSlinky.awsSdk.braketMod.apiVersion): Self = this.set("braket", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBraket: Self = this.set("braket", js.undefined)
     
     @scala.inline
     def setBudgets(value: typingsSlinky.awsSdk.budgetsMod.apiVersion): Self = this.set("budgets", value.asInstanceOf[js.Any])
@@ -812,6 +846,12 @@ object ConfigurationServiceApiVersions {
     
     @scala.inline
     def deleteCur: Self = this.set("cur", js.undefined)
+    
+    @scala.inline
+    def setDatabrew(value: typingsSlinky.awsSdk.databrewMod.apiVersion): Self = this.set("databrew", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDatabrew: Self = this.set("databrew", js.undefined)
     
     @scala.inline
     def setDataexchange(value: typingsSlinky.awsSdk.dataexchangeMod.apiVersion): Self = this.set("dataexchange", value.asInstanceOf[js.Any])
@@ -1088,6 +1128,12 @@ object ConfigurationServiceApiVersions {
     
     @scala.inline
     def deleteIam: Self = this.set("iam", js.undefined)
+    
+    @scala.inline
+    def setIdentitystore(value: typingsSlinky.awsSdk.identitystoreMod.apiVersion): Self = this.set("identitystore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIdentitystore: Self = this.set("identitystore", js.undefined)
     
     @scala.inline
     def setImagebuilder(value: typingsSlinky.awsSdk.imagebuilderMod.apiVersion): Self = this.set("imagebuilder", value.asInstanceOf[js.Any])
@@ -1414,6 +1460,12 @@ object ConfigurationServiceApiVersions {
     def deleteNeptune: Self = this.set("neptune", js.undefined)
     
     @scala.inline
+    def setNetworkfirewall(value: typingsSlinky.awsSdk.networkfirewallMod.apiVersion): Self = this.set("networkfirewall", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkfirewall: Self = this.set("networkfirewall", js.undefined)
+    
+    @scala.inline
     def setNetworkmanager(value: typingsSlinky.awsSdk.networkmanagerMod.apiVersion): Self = this.set("networkmanager", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1540,6 +1592,12 @@ object ConfigurationServiceApiVersions {
     def deleteRedshift: Self = this.set("redshift", js.undefined)
     
     @scala.inline
+    def setRedshiftdata(value: typingsSlinky.awsSdk.redshiftdataMod.apiVersion): Self = this.set("redshiftdata", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRedshiftdata: Self = this.set("redshiftdata", js.undefined)
+    
+    @scala.inline
     def setRekognition(value: typingsSlinky.awsSdk.rekognitionMod.apiVersion): Self = this.set("rekognition", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1594,6 +1652,12 @@ object ConfigurationServiceApiVersions {
     def deleteS3control: Self = this.set("s3control", js.undefined)
     
     @scala.inline
+    def setS3outposts(value: typingsSlinky.awsSdk.s3outpostsMod.apiVersion): Self = this.set("s3outposts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteS3outposts: Self = this.set("s3outposts", js.undefined)
+    
+    @scala.inline
     def setSagemaker(value: typingsSlinky.awsSdk.sagemakerMod.apiVersion): Self = this.set("sagemaker", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1640,6 +1704,12 @@ object ConfigurationServiceApiVersions {
     
     @scala.inline
     def deleteServicecatalog: Self = this.set("servicecatalog", js.undefined)
+    
+    @scala.inline
+    def setServicecatalogappregistry(value: typingsSlinky.awsSdk.servicecatalogappregistryMod.apiVersion): Self = this.set("servicecatalogappregistry", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteServicecatalogappregistry: Self = this.set("servicecatalogappregistry", js.undefined)
     
     @scala.inline
     def setServicediscovery(value: typingsSlinky.awsSdk.servicediscoveryMod.apiVersion): Self = this.set("servicediscovery", value.asInstanceOf[js.Any])
@@ -1720,6 +1790,12 @@ object ConfigurationServiceApiVersions {
     def deleteSso: Self = this.set("sso", js.undefined)
     
     @scala.inline
+    def setSsoadmin(value: typingsSlinky.awsSdk.ssoadminMod.apiVersion): Self = this.set("ssoadmin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSsoadmin: Self = this.set("ssoadmin", js.undefined)
+    
+    @scala.inline
     def setSsooidc(value: typingsSlinky.awsSdk.ssooidcMod.apiVersion): Self = this.set("ssooidc", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1766,6 +1842,18 @@ object ConfigurationServiceApiVersions {
     
     @scala.inline
     def deleteTextract: Self = this.set("textract", js.undefined)
+    
+    @scala.inline
+    def setTimestreamquery(value: typingsSlinky.awsSdk.timestreamqueryMod.apiVersion): Self = this.set("timestreamquery", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimestreamquery: Self = this.set("timestreamquery", js.undefined)
+    
+    @scala.inline
+    def setTimestreamwrite(value: typingsSlinky.awsSdk.timestreamwriteMod.apiVersion): Self = this.set("timestreamwrite", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimestreamwrite: Self = this.set("timestreamwrite", js.undefined)
     
     @scala.inline
     def setTranscribeservice(value: typingsSlinky.awsSdk.transcribeserviceMod.apiVersion): Self = this.set("transcribeservice", value.asInstanceOf[js.Any])

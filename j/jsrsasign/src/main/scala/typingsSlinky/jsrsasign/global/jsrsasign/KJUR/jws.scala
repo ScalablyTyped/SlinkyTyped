@@ -1,5 +1,6 @@
 package typingsSlinky.jsrsasign.global.jsrsasign.KJUR
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.jsrsasign.anon.AlgString
 import typingsSlinky.jsrsasign.anon.Aud
 import typingsSlinky.jsrsasign.anon.B64
@@ -363,20 +364,28 @@ object jws extends js.Object {
       */
     def sign(alg: String, spHead: String, spPayload: String): String = js.native
     def sign(alg: String, spHead: String, spPayload: String, pass: String): String = js.native
+    def sign(alg: String, spHead: String, spPayload: String, pass: StringDictionary[String]): String = js.native
     def sign(alg: String, spHead: String, spPayload: js.Object): String = js.native
     def sign(alg: String, spHead: String, spPayload: js.Object, pass: String): String = js.native
+    def sign(alg: String, spHead: String, spPayload: js.Object, pass: StringDictionary[String]): String = js.native
     def sign(alg: String, spHead: AlgString, spPayload: String): String = js.native
     def sign(alg: String, spHead: AlgString, spPayload: String, pass: String): String = js.native
+    def sign(alg: String, spHead: AlgString, spPayload: String, pass: StringDictionary[String]): String = js.native
     def sign(alg: String, spHead: AlgString, spPayload: js.Object): String = js.native
     def sign(alg: String, spHead: AlgString, spPayload: js.Object, pass: String): String = js.native
+    def sign(alg: String, spHead: AlgString, spPayload: js.Object, pass: StringDictionary[String]): String = js.native
     def sign(alg: Null, spHead: String, spPayload: String): String = js.native
     def sign(alg: Null, spHead: String, spPayload: String, pass: String): String = js.native
+    def sign(alg: Null, spHead: String, spPayload: String, pass: StringDictionary[String]): String = js.native
     def sign(alg: Null, spHead: String, spPayload: js.Object): String = js.native
     def sign(alg: Null, spHead: String, spPayload: js.Object, pass: String): String = js.native
+    def sign(alg: Null, spHead: String, spPayload: js.Object, pass: StringDictionary[String]): String = js.native
     def sign(alg: Null, spHead: AlgString, spPayload: String): String = js.native
     def sign(alg: Null, spHead: AlgString, spPayload: String, pass: String): String = js.native
+    def sign(alg: Null, spHead: AlgString, spPayload: String, pass: StringDictionary[String]): String = js.native
     def sign(alg: Null, spHead: AlgString, spPayload: js.Object): String = js.native
     def sign(alg: Null, spHead: AlgString, spPayload: js.Object, pass: String): String = js.native
+    def sign(alg: Null, spHead: AlgString, spPayload: js.Object, pass: StringDictionary[String]): String = js.native
     
     /**
       * verify JWS signature by specified key or certificate

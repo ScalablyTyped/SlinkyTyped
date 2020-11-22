@@ -13,7 +13,7 @@ trait BoundaryIdentifier extends js.Object {
   /**
     * Arbitrary identifier for the boundary
     */
-  var identifier: js.UndefOr[java.lang.String] = js.native
+  var identifier: js.UndefOr[String] = js.native
   
   /**
     * Start point for the boundary
@@ -43,13 +43,13 @@ object BoundaryIdentifier {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setIdentifier(value: java.lang.String): Self = this.set("identifier", value.asInstanceOf[js.Any])
+    def setIdentifier(value: String): Self = this.set("identifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIdentifier: Self = this.set("identifier", js.undefined)

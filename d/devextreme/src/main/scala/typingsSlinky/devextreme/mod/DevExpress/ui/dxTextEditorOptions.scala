@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.anon.EventJQueryEventModel
+import typingsSlinky.devextreme.anon.`13`
 import typingsSlinky.devextreme.devextremeStrings.always
 import typingsSlinky.devextreme.devextremeStrings.clear
 import typingsSlinky.devextreme.devextremeStrings.filled
@@ -14,83 +14,135 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTextEditorOptions[T] extends EditorOptions[T] {
   
-  /** @name dxTextEditor.Options.buttons */
+  /**
+    * [descr:dxTextEditor.Options.buttons]
+    */
   var buttons: js.UndefOr[js.Array[String | clear | dxTextEditorButton]] = js.native
   
-  /** @name dxTextEditor.Options.inputAttr */
+  /**
+    * [descr:dxTextEditor.Options.inputAttr]
+    */
   var inputAttr: js.UndefOr[js.Any] = js.native
   
-  /** @name dxTextEditor.Options.mask */
+  /**
+    * [descr:dxTextEditor.Options.mask]
+    */
   var mask: js.UndefOr[String] = js.native
   
-  /** @name dxTextEditor.Options.maskChar */
+  /**
+    * [descr:dxTextEditor.Options.maskChar]
+    */
   var maskChar: js.UndefOr[String] = js.native
   
-  /** @name dxTextEditor.Options.maskInvalidMessage */
+  /**
+    * [descr:dxTextEditor.Options.maskInvalidMessage]
+    */
   var maskInvalidMessage: js.UndefOr[String] = js.native
   
-  /** @name dxTextEditor.Options.maskRules */
+  /**
+    * [descr:dxTextEditor.Options.maskRules]
+    */
   var maskRules: js.UndefOr[js.Any] = js.native
   
-  /** @name dxTextEditor.Options.name */
+  /**
+    * [descr:dxTextEditor.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxTextEditor.Options.onChange */
-  var onChange: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onChange]
+    */
+  var onChange: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @name dxTextEditor.Options.onCopy */
-  var onCopy: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onCopy]
+    */
+  var onCopy: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @name dxTextEditor.Options.onCut */
-  var onCut: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onCut]
+    */
+  var onCut: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @name dxTextEditor.Options.onEnterKey */
-  var onEnterKey: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onEnterKey]
+    */
+  var onEnterKey: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @name dxTextEditor.Options.onFocusIn */
-  var onFocusIn: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onFocusIn]
+    */
+  var onFocusIn: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @name dxTextEditor.Options.onFocusOut */
-  var onFocusOut: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onFocusOut]
+    */
+  var onFocusOut: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @name dxTextEditor.Options.onInput */
-  var onInput: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onInput]
+    */
+  var onInput: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @name dxTextEditor.Options.onKeyDown */
-  var onKeyDown: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onKeyDown]
+    */
+  var onKeyDown: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @deprecated */
-  /** @name dxTextEditor.Options.onKeyPress */
-  var onKeyPress: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onKeyPress]
+    * @deprecated [depNote:dxTextEditor.Options.onKeyPress]
+    */
+  var onKeyPress: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @name dxTextEditor.Options.onKeyUp */
-  var onKeyUp: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onKeyUp]
+    */
+  var onKeyUp: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @name dxTextEditor.Options.onPaste */
-  var onPaste: js.UndefOr[js.Function1[/* e */ EventJQueryEventModel[T], _]] = js.native
+  /**
+    * [descr:dxTextEditor.Options.onPaste]
+    */
+  var onPaste: js.UndefOr[js.Function1[/* e */ `13`[T], _]] = js.native
   
-  /** @name dxTextEditor.Options.placeholder */
+  /**
+    * [descr:dxTextEditor.Options.placeholder]
+    */
   var placeholder: js.UndefOr[String] = js.native
   
-  /** @name dxTextEditor.Options.showClearButton */
+  /**
+    * [descr:dxTextEditor.Options.showClearButton]
+    */
   var showClearButton: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTextEditor.Options.showMaskMode */
+  /**
+    * [descr:dxTextEditor.Options.showMaskMode]
+    */
   var showMaskMode: js.UndefOr[always | onFocus] = js.native
   
-  /** @name dxTextEditor.Options.spellcheck */
+  /**
+    * [descr:dxTextEditor.Options.spellcheck]
+    */
   var spellcheck: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTextEditor.Options.stylingMode */
+  /**
+    * [descr:dxTextEditor.Options.stylingMode]
+    */
   var stylingMode: js.UndefOr[outlined | underlined | filled] = js.native
   
-  /** @name dxTextEditor.Options.text */
+  /**
+    * [descr:dxTextEditor.Options.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name dxTextEditor.Options.useMaskedValue */
+  /**
+    * [descr:dxTextEditor.Options.useMaskedValue]
+    */
   var useMaskedValue: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTextEditor.Options.valueChangeEvent */
+  /**
+    * [descr:dxTextEditor.Options.valueChangeEvent]
+    */
   var valueChangeEvent: js.UndefOr[String] = js.native
 }
 object dxTextEditorOptions {
@@ -162,67 +214,67 @@ object dxTextEditorOptions {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setOnChange(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onChange", js.Any.fromFunction1(value))
+    def setOnChange(value: /* e */ `13`[T] => _): Self = this.set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
     
     @scala.inline
-    def setOnCopy(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onCopy", js.Any.fromFunction1(value))
+    def setOnCopy(value: /* e */ `13`[T] => _): Self = this.set("onCopy", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnCopy: Self = this.set("onCopy", js.undefined)
     
     @scala.inline
-    def setOnCut(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onCut", js.Any.fromFunction1(value))
+    def setOnCut(value: /* e */ `13`[T] => _): Self = this.set("onCut", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnCut: Self = this.set("onCut", js.undefined)
     
     @scala.inline
-    def setOnEnterKey(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onEnterKey", js.Any.fromFunction1(value))
+    def setOnEnterKey(value: /* e */ `13`[T] => _): Self = this.set("onEnterKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnEnterKey: Self = this.set("onEnterKey", js.undefined)
     
     @scala.inline
-    def setOnFocusIn(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onFocusIn", js.Any.fromFunction1(value))
+    def setOnFocusIn(value: /* e */ `13`[T] => _): Self = this.set("onFocusIn", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnFocusIn: Self = this.set("onFocusIn", js.undefined)
     
     @scala.inline
-    def setOnFocusOut(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onFocusOut", js.Any.fromFunction1(value))
+    def setOnFocusOut(value: /* e */ `13`[T] => _): Self = this.set("onFocusOut", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnFocusOut: Self = this.set("onFocusOut", js.undefined)
     
     @scala.inline
-    def setOnInput(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onInput", js.Any.fromFunction1(value))
+    def setOnInput(value: /* e */ `13`[T] => _): Self = this.set("onInput", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnInput: Self = this.set("onInput", js.undefined)
     
     @scala.inline
-    def setOnKeyDown(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onKeyDown", js.Any.fromFunction1(value))
+    def setOnKeyDown(value: /* e */ `13`[T] => _): Self = this.set("onKeyDown", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnKeyDown: Self = this.set("onKeyDown", js.undefined)
     
     @scala.inline
-    def setOnKeyPress(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onKeyPress", js.Any.fromFunction1(value))
+    def setOnKeyPress(value: /* e */ `13`[T] => _): Self = this.set("onKeyPress", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnKeyPress: Self = this.set("onKeyPress", js.undefined)
     
     @scala.inline
-    def setOnKeyUp(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onKeyUp", js.Any.fromFunction1(value))
+    def setOnKeyUp(value: /* e */ `13`[T] => _): Self = this.set("onKeyUp", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnKeyUp: Self = this.set("onKeyUp", js.undefined)
     
     @scala.inline
-    def setOnPaste(value: /* e */ EventJQueryEventModel[T] => _): Self = this.set("onPaste", js.Any.fromFunction1(value))
+    def setOnPaste(value: /* e */ `13`[T] => _): Self = this.set("onPaste", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnPaste: Self = this.set("onPaste", js.undefined)

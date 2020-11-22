@@ -28,7 +28,7 @@ trait ClusterArgs extends js.Object {
   /**
     * Name of the MSK cluster.
     */
-  val clusterName: Input[String] = js.native
+  val clusterName: js.UndefOr[Input[String]] = js.native
   
   /**
     * Configuration block for specifying a MSK Configuration to attach to Kafka brokers. See below.
@@ -75,11 +75,10 @@ object ClusterArgs {
   @scala.inline
   def apply(
     brokerNodeGroupInfo: Input[ClusterBrokerNodeGroupInfo],
-    clusterName: Input[String],
     kafkaVersion: Input[String],
     numberOfBrokerNodes: Input[Double]
   ): ClusterArgs = {
-    val __obj = js.Dynamic.literal(brokerNodeGroupInfo = brokerNodeGroupInfo.asInstanceOf[js.Any], clusterName = clusterName.asInstanceOf[js.Any], kafkaVersion = kafkaVersion.asInstanceOf[js.Any], numberOfBrokerNodes = numberOfBrokerNodes.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(brokerNodeGroupInfo = brokerNodeGroupInfo.asInstanceOf[js.Any], kafkaVersion = kafkaVersion.asInstanceOf[js.Any], numberOfBrokerNodes = numberOfBrokerNodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClusterArgs]
   }
   
@@ -102,9 +101,6 @@ object ClusterArgs {
     def setBrokerNodeGroupInfo(value: Input[ClusterBrokerNodeGroupInfo]): Self = this.set("brokerNodeGroupInfo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClusterName(value: Input[String]): Self = this.set("clusterName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setKafkaVersion(value: Input[String]): Self = this.set("kafkaVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -115,6 +111,12 @@ object ClusterArgs {
     
     @scala.inline
     def deleteClientAuthentication: Self = this.set("clientAuthentication", js.undefined)
+    
+    @scala.inline
+    def setClusterName(value: Input[String]): Self = this.set("clusterName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClusterName: Self = this.set("clusterName", js.undefined)
     
     @scala.inline
     def setConfigurationInfo(value: Input[ClusterConfigurationInfo]): Self = this.set("configurationInfo", value.asInstanceOf[js.Any])

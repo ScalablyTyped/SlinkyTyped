@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * An instant messaging field in a Contact.
   */
-// tslint:disable-next-line: interface-name
 @js.native
 trait IMField extends js.Object {
   

@@ -347,10 +347,23 @@ object mod extends js.Object {
       * @param {object=} options
       * @return {Array.<*>}
       */
-    def buildList(name: String, size: Double): js.Array[_] = js.native
-    def buildList(name: String, size: Double, attributes: js.UndefOr[scala.Nothing], options: js.Any): js.Array[_] = js.native
-    def buildList(name: String, size: Double, attributes: js.Any): js.Array[_] = js.native
-    def buildList(name: String, size: Double, attributes: js.Any, options: js.Any): js.Array[_] = js.native
+    def buildList[T](name: String, size: Double): js.Array[T] = js.native
+    def buildList[T](
+      name: String,
+      size: Double,
+      attributes: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+    {[ k in keyof T ]:? T[k] | boolean}
+      */ typingsSlinky.rosie.rosieStrings.IFactoryStatic with TopLevel[T]
+    ): js.Array[T] = js.native
+    def buildList[T](
+      name: String,
+      size: Double,
+      attributes: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+    {[ k in keyof T ]:? T[k] | boolean}
+      */ typingsSlinky.rosie.rosieStrings.IFactoryStatic with TopLevel[T],
+      options: js.Any
+    ): js.Array[T] = js.native
+    def buildList[T](name: String, size: Double, attributes: js.UndefOr[scala.Nothing], options: js.Any): js.Array[T] = js.native
     
     /**
       * Defines a factory by name and constructor function. Call #attr and #option

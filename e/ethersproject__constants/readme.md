@@ -1,7 +1,7 @@
 
 # Scala.js typings for ethersproject__constants
 
-Typings are for version 5.0.2
+Typings are for version 5.0.6
 
 ## Library description:
 Common Ethereum constants used for ethers.

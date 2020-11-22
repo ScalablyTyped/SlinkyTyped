@@ -12,8 +12,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BaseTileLayer
   extends typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceTileMod.default] {
   
+  /**
+    * Return the level as number to which we will preload tiles up to.
+    */
   def getPreload(): Double = js.native
   
+  /**
+    * Whether we use interim tiles on error.
+    */
   def getUseInterimTilesOnError(): Boolean = js.native
   
   @JSName("on")
@@ -26,8 +32,14 @@ trait BaseTileLayer
   @JSName("once")
   def once_changeuseInterimTilesOnError(`type`: changeColonuseInterimTilesOnError, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   
+  /**
+    * Set the level as number to which we will preload tiles up to.
+    */
   def setPreload(preload: Double): Unit = js.native
   
+  /**
+    * Set whether we use interim tiles on error.
+    */
   def setUseInterimTilesOnError(useInterimTilesOnError: Boolean): Unit = js.native
   
   @JSName("un")

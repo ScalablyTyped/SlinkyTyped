@@ -148,6 +148,8 @@ trait PartialRecordPropertystri extends js.Object {
   
   var `-moz-orient`: js.UndefOr[String] = js.native
   
+  var `-moz-osx-font-smoothing`: js.UndefOr[String] = js.native
+  
   var `-moz-outline`: js.UndefOr[String] = js.native
   
   var `-moz-outline-color`: js.UndefOr[String] = js.native
@@ -267,6 +269,8 @@ trait PartialRecordPropertystri extends js.Object {
   var `-ms-ime-align`: js.UndefOr[String] = js.native
   
   var `-ms-ime-mode`: js.UndefOr[String] = js.native
+  
+  var `-ms-justify-self`: js.UndefOr[String] = js.native
   
   var `-ms-line-break`: js.UndefOr[String] = js.native
   
@@ -524,6 +528,8 @@ trait PartialRecordPropertystri extends js.Object {
   
   var `-webkit-font-kerning`: js.UndefOr[String] = js.native
   
+  var `-webkit-font-smoothing`: js.UndefOr[String] = js.native
+  
   var `-webkit-font-variant-ligatures`: js.UndefOr[String] = js.native
   
   var `-webkit-hyphens`: js.UndefOr[String] = js.native
@@ -579,6 +585,8 @@ trait PartialRecordPropertystri extends js.Object {
   var `-webkit-perspective-origin`: js.UndefOr[String] = js.native
   
   var `-webkit-print-color-adjust`: js.UndefOr[String] = js.native
+  
+  var `-webkit-ruby-position`: js.UndefOr[String] = js.native
   
   var `-webkit-scroll-snap-points-x`: js.UndefOr[String] = js.native
   
@@ -785,6 +793,8 @@ trait PartialRecordPropertystri extends js.Object {
   var MozOpacity: js.UndefOr[String] = js.native
   
   var MozOrient: js.UndefOr[String] = js.native
+  
+  var MozOsxFontSmoothing: js.UndefOr[String] = js.native
   
   var MozOutline: js.UndefOr[String] = js.native
   
@@ -1022,6 +1032,8 @@ trait PartialRecordPropertystri extends js.Object {
   
   var WebkitFontKerning: js.UndefOr[String] = js.native
   
+  var WebkitFontSmoothing: js.UndefOr[String] = js.native
+  
   var WebkitFontVariantLigatures: js.UndefOr[String] = js.native
   
   var WebkitHyphens: js.UndefOr[String] = js.native
@@ -1077,6 +1089,8 @@ trait PartialRecordPropertystri extends js.Object {
   var WebkitPerspectiveOrigin: js.UndefOr[String] = js.native
   
   var WebkitPrintColorAdjust: js.UndefOr[String] = js.native
+  
+  var WebkitRubyPosition: js.UndefOr[String] = js.native
   
   var WebkitScrollSnapPointsX: js.UndefOr[String] = js.native
   
@@ -1150,11 +1164,15 @@ trait PartialRecordPropertystri extends js.Object {
   
   var `align-self`: js.UndefOr[String] = js.native
   
+  var `align-tracks`: js.UndefOr[String] = js.native
+  
   var alignContent: js.UndefOr[String] = js.native
   
   var alignItems: js.UndefOr[String] = js.native
   
   var alignSelf: js.UndefOr[String] = js.native
+  
+  var alignTracks: js.UndefOr[String] = js.native
   
   var `alignment-baseline`: js.UndefOr[String] = js.native
   
@@ -1201,6 +1219,8 @@ trait PartialRecordPropertystri extends js.Object {
   var `aspect-ratio`: js.UndefOr[String] = js.native
   
   var aspectRatio: js.UndefOr[String] = js.native
+  
+  var azimuth: js.UndefOr[String] = js.native
   
   var `backdrop-filter`: js.UndefOr[String] = js.native
   
@@ -1734,6 +1754,8 @@ trait PartialRecordPropertystri extends js.Object {
   
   var `font-size-adjust`: js.UndefOr[String] = js.native
   
+  var `font-smooth`: js.UndefOr[String] = js.native
+  
   var `font-stretch`: js.UndefOr[String] = js.native
   
   var `font-style`: js.UndefOr[String] = js.native
@@ -1771,6 +1793,8 @@ trait PartialRecordPropertystri extends js.Object {
   var fontSize: js.UndefOr[String] = js.native
   
   var fontSizeAdjust: js.UndefOr[String] = js.native
+  
+  var fontSmooth: js.UndefOr[String] = js.native
   
   var fontStretch: js.UndefOr[String] = js.native
   
@@ -1938,11 +1962,15 @@ trait PartialRecordPropertystri extends js.Object {
   
   var `justify-self`: js.UndefOr[String] = js.native
   
+  var `justify-tracks`: js.UndefOr[String] = js.native
+  
   var justifyContent: js.UndefOr[String] = js.native
   
   var justifyItems: js.UndefOr[String] = js.native
   
   var justifySelf: js.UndefOr[String] = js.native
+  
+  var justifyTracks: js.UndefOr[String] = js.native
   
   var left: js.UndefOr[String] = js.native
   
@@ -2108,6 +2136,14 @@ trait PartialRecordPropertystri extends js.Object {
   
   var maskType: js.UndefOr[String] = js.native
   
+  var `masonry-auto-flow`: js.UndefOr[String] = js.native
+  
+  var masonryAutoFlow: js.UndefOr[String] = js.native
+  
+  var `math-style`: js.UndefOr[String] = js.native
+  
+  var mathStyle: js.UndefOr[String] = js.native
+  
   var `max-block-size`: js.UndefOr[String] = js.native
   
   var `max-height`: js.UndefOr[String] = js.native
@@ -2213,6 +2249,8 @@ trait PartialRecordPropertystri extends js.Object {
   var msImeAlign: js.UndefOr[String] = js.native
   
   var msImeMode: js.UndefOr[String] = js.native
+  
+  var msJustifySelf: js.UndefOr[String] = js.native
   
   var msLineBreak: js.UndefOr[String] = js.native
   
@@ -2688,11 +2726,15 @@ trait PartialRecordPropertystri extends js.Object {
   
   var `scrollbar-color`: js.UndefOr[String] = js.native
   
+  var `scrollbar-gutter`: js.UndefOr[String] = js.native
+  
   var `scrollbar-track-color`: js.UndefOr[String] = js.native
   
   var `scrollbar-width`: js.UndefOr[String] = js.native
   
   var scrollbarColor: js.UndefOr[String] = js.native
+  
+  var scrollbarGutter: js.UndefOr[String] = js.native
   
   var scrollbarTrackColor: js.UndefOr[String] = js.native
   
@@ -3404,6 +3446,12 @@ object PartialRecordPropertystri {
     def `delete-moz-orient`: Self = this.set("-moz-orient", js.undefined)
     
     @scala.inline
+    def `set-moz-osx-font-smoothing`(value: String): Self = this.set("-moz-osx-font-smoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `delete-moz-osx-font-smoothing`: Self = this.set("-moz-osx-font-smoothing", js.undefined)
+    
+    @scala.inline
     def `set-moz-outline`(value: String): Self = this.set("-moz-outline", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -3762,6 +3810,12 @@ object PartialRecordPropertystri {
     
     @scala.inline
     def `delete-ms-ime-mode`: Self = this.set("-ms-ime-mode", js.undefined)
+    
+    @scala.inline
+    def `set-ms-justify-self`(value: String): Self = this.set("-ms-justify-self", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `delete-ms-justify-self`: Self = this.set("-ms-justify-self", js.undefined)
     
     @scala.inline
     def `set-ms-line-break`(value: String): Self = this.set("-ms-line-break", value.asInstanceOf[js.Any])
@@ -4532,6 +4586,12 @@ object PartialRecordPropertystri {
     def `delete-webkit-font-kerning`: Self = this.set("-webkit-font-kerning", js.undefined)
     
     @scala.inline
+    def `set-webkit-font-smoothing`(value: String): Self = this.set("-webkit-font-smoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `delete-webkit-font-smoothing`: Self = this.set("-webkit-font-smoothing", js.undefined)
+    
+    @scala.inline
     def `set-webkit-font-variant-ligatures`(value: String): Self = this.set("-webkit-font-variant-ligatures", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -4698,6 +4758,12 @@ object PartialRecordPropertystri {
     
     @scala.inline
     def `delete-webkit-print-color-adjust`: Self = this.set("-webkit-print-color-adjust", js.undefined)
+    
+    @scala.inline
+    def `set-webkit-ruby-position`(value: String): Self = this.set("-webkit-ruby-position", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `delete-webkit-ruby-position`: Self = this.set("-webkit-ruby-position", js.undefined)
     
     @scala.inline
     def `set-webkit-scroll-snap-points-x`(value: String): Self = this.set("-webkit-scroll-snap-points-x", value.asInstanceOf[js.Any])
@@ -5316,6 +5382,12 @@ object PartialRecordPropertystri {
     
     @scala.inline
     def deleteMozOrient: Self = this.set("MozOrient", js.undefined)
+    
+    @scala.inline
+    def setMozOsxFontSmoothing(value: String): Self = this.set("MozOsxFontSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMozOsxFontSmoothing: Self = this.set("MozOsxFontSmoothing", js.undefined)
     
     @scala.inline
     def setMozOutline(value: String): Self = this.set("MozOutline", value.asInstanceOf[js.Any])
@@ -6026,6 +6098,12 @@ object PartialRecordPropertystri {
     def deleteWebkitFontKerning: Self = this.set("WebkitFontKerning", js.undefined)
     
     @scala.inline
+    def setWebkitFontSmoothing(value: String): Self = this.set("WebkitFontSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWebkitFontSmoothing: Self = this.set("WebkitFontSmoothing", js.undefined)
+    
+    @scala.inline
     def setWebkitFontVariantLigatures(value: String): Self = this.set("WebkitFontVariantLigatures", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -6192,6 +6270,12 @@ object PartialRecordPropertystri {
     
     @scala.inline
     def deleteWebkitPrintColorAdjust: Self = this.set("WebkitPrintColorAdjust", js.undefined)
+    
+    @scala.inline
+    def setWebkitRubyPosition(value: String): Self = this.set("WebkitRubyPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWebkitRubyPosition: Self = this.set("WebkitRubyPosition", js.undefined)
     
     @scala.inline
     def setWebkitScrollSnapPointsX(value: String): Self = this.set("WebkitScrollSnapPointsX", value.asInstanceOf[js.Any])
@@ -6410,6 +6494,12 @@ object PartialRecordPropertystri {
     def `deleteAlign-self`: Self = this.set("align-self", js.undefined)
     
     @scala.inline
+    def `setAlign-tracks`(value: String): Self = this.set("align-tracks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteAlign-tracks`: Self = this.set("align-tracks", js.undefined)
+    
+    @scala.inline
     def setAlignContent(value: String): Self = this.set("alignContent", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -6426,6 +6516,12 @@ object PartialRecordPropertystri {
     
     @scala.inline
     def deleteAlignSelf: Self = this.set("alignSelf", js.undefined)
+    
+    @scala.inline
+    def setAlignTracks(value: String): Self = this.set("alignTracks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAlignTracks: Self = this.set("alignTracks", js.undefined)
     
     @scala.inline
     def `setAlignment-baseline`(value: String): Self = this.set("alignment-baseline", value.asInstanceOf[js.Any])
@@ -6564,6 +6660,12 @@ object PartialRecordPropertystri {
     
     @scala.inline
     def deleteAspectRatio: Self = this.set("aspectRatio", js.undefined)
+    
+    @scala.inline
+    def setAzimuth(value: String): Self = this.set("azimuth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAzimuth: Self = this.set("azimuth", js.undefined)
     
     @scala.inline
     def `setBackdrop-filter`(value: String): Self = this.set("backdrop-filter", value.asInstanceOf[js.Any])
@@ -8162,6 +8264,12 @@ object PartialRecordPropertystri {
     def `deleteFont-size-adjust`: Self = this.set("font-size-adjust", js.undefined)
     
     @scala.inline
+    def `setFont-smooth`(value: String): Self = this.set("font-smooth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteFont-smooth`: Self = this.set("font-smooth", js.undefined)
+    
+    @scala.inline
     def `setFont-stretch`(value: String): Self = this.set("font-stretch", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -8274,6 +8382,12 @@ object PartialRecordPropertystri {
     
     @scala.inline
     def deleteFontSizeAdjust: Self = this.set("fontSizeAdjust", js.undefined)
+    
+    @scala.inline
+    def setFontSmooth(value: String): Self = this.set("fontSmooth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontSmooth: Self = this.set("fontSmooth", js.undefined)
     
     @scala.inline
     def setFontStretch(value: String): Self = this.set("fontStretch", value.asInstanceOf[js.Any])
@@ -8774,6 +8888,12 @@ object PartialRecordPropertystri {
     def `deleteJustify-self`: Self = this.set("justify-self", js.undefined)
     
     @scala.inline
+    def `setJustify-tracks`(value: String): Self = this.set("justify-tracks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteJustify-tracks`: Self = this.set("justify-tracks", js.undefined)
+    
+    @scala.inline
     def setJustifyContent(value: String): Self = this.set("justifyContent", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -8790,6 +8910,12 @@ object PartialRecordPropertystri {
     
     @scala.inline
     def deleteJustifySelf: Self = this.set("justifySelf", js.undefined)
+    
+    @scala.inline
+    def setJustifyTracks(value: String): Self = this.set("justifyTracks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJustifyTracks: Self = this.set("justifyTracks", js.undefined)
     
     @scala.inline
     def setLeft(value: String): Self = this.set("left", value.asInstanceOf[js.Any])
@@ -9284,6 +9410,30 @@ object PartialRecordPropertystri {
     def deleteMaskType: Self = this.set("maskType", js.undefined)
     
     @scala.inline
+    def `setMasonry-auto-flow`(value: String): Self = this.set("masonry-auto-flow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteMasonry-auto-flow`: Self = this.set("masonry-auto-flow", js.undefined)
+    
+    @scala.inline
+    def setMasonryAutoFlow(value: String): Self = this.set("masonryAutoFlow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMasonryAutoFlow: Self = this.set("masonryAutoFlow", js.undefined)
+    
+    @scala.inline
+    def `setMath-style`(value: String): Self = this.set("math-style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteMath-style`: Self = this.set("math-style", js.undefined)
+    
+    @scala.inline
+    def setMathStyle(value: String): Self = this.set("mathStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMathStyle: Self = this.set("mathStyle", js.undefined)
+    
+    @scala.inline
     def `setMax-block-size`(value: String): Self = this.set("max-block-size", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -9600,6 +9750,12 @@ object PartialRecordPropertystri {
     
     @scala.inline
     def deleteMsImeMode: Self = this.set("msImeMode", js.undefined)
+    
+    @scala.inline
+    def setMsJustifySelf(value: String): Self = this.set("msJustifySelf", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMsJustifySelf: Self = this.set("msJustifySelf", js.undefined)
     
     @scala.inline
     def setMsLineBreak(value: String): Self = this.set("msLineBreak", value.asInstanceOf[js.Any])
@@ -11024,6 +11180,12 @@ object PartialRecordPropertystri {
     def `deleteScrollbar-color`: Self = this.set("scrollbar-color", js.undefined)
     
     @scala.inline
+    def `setScrollbar-gutter`(value: String): Self = this.set("scrollbar-gutter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteScrollbar-gutter`: Self = this.set("scrollbar-gutter", js.undefined)
+    
+    @scala.inline
     def `setScrollbar-track-color`(value: String): Self = this.set("scrollbar-track-color", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -11040,6 +11202,12 @@ object PartialRecordPropertystri {
     
     @scala.inline
     def deleteScrollbarColor: Self = this.set("scrollbarColor", js.undefined)
+    
+    @scala.inline
+    def setScrollbarGutter(value: String): Self = this.set("scrollbarGutter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScrollbarGutter: Self = this.set("scrollbarGutter", js.undefined)
     
     @scala.inline
     def setScrollbarTrackColor(value: String): Self = this.set("scrollbarTrackColor", value.asInstanceOf[js.Any])

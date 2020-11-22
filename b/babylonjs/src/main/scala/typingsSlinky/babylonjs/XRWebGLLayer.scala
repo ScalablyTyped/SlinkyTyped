@@ -8,24 +8,30 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait XRWebGLLayer extends js.Object {
   
-  var framebuffer: WebGLFramebuffer = js.native
+  val antialias: Boolean = js.native
   
-  var framebufferHeight: Double = js.native
+  val framebuffer: WebGLFramebuffer = js.native
   
-  var framebufferWidth: Double = js.native
+  val framebufferHeight: Double = js.native
   
-  var getViewport: js.Function = js.native
+  val framebufferWidth: Double = js.native
+  
+  def getViewport(view: XRView): XRViewport = js.native
+  
+  val ignoreDepthValues: Boolean = js.native
 }
 object XRWebGLLayer {
   
   @scala.inline
   def apply(
+    antialias: Boolean,
     framebuffer: WebGLFramebuffer,
     framebufferHeight: Double,
     framebufferWidth: Double,
-    getViewport: js.Function
+    getViewport: XRView => XRViewport,
+    ignoreDepthValues: Boolean
   ): XRWebGLLayer = {
-    val __obj = js.Dynamic.literal(framebuffer = framebuffer.asInstanceOf[js.Any], framebufferHeight = framebufferHeight.asInstanceOf[js.Any], framebufferWidth = framebufferWidth.asInstanceOf[js.Any], getViewport = getViewport.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(antialias = antialias.asInstanceOf[js.Any], framebuffer = framebuffer.asInstanceOf[js.Any], framebufferHeight = framebufferHeight.asInstanceOf[js.Any], framebufferWidth = framebufferWidth.asInstanceOf[js.Any], getViewport = js.Any.fromFunction1(getViewport), ignoreDepthValues = ignoreDepthValues.asInstanceOf[js.Any])
     __obj.asInstanceOf[XRWebGLLayer]
   }
   
@@ -45,6 +51,9 @@ object XRWebGLLayer {
     }
     
     @scala.inline
+    def setAntialias(value: Boolean): Self = this.set("antialias", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setFramebuffer(value: WebGLFramebuffer): Self = this.set("framebuffer", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -54,6 +63,9 @@ object XRWebGLLayer {
     def setFramebufferWidth(value: Double): Self = this.set("framebufferWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetViewport(value: js.Function): Self = this.set("getViewport", value.asInstanceOf[js.Any])
+    def setGetViewport(value: XRView => XRViewport): Self = this.set("getViewport", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIgnoreDepthValues(value: Boolean): Self = this.set("ignoreDepthValues", value.asInstanceOf[js.Any])
   }
 }

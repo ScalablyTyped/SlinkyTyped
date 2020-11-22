@@ -26,36 +26,27 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: Double,
     camera: typingsSlinky.babylonjs.cameraMod.Camera
   ) = this()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: PostProcessOptions,
     camera: typingsSlinky.babylonjs.cameraMod.Camera
   ) = this()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: Double,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: Double
@@ -63,12 +54,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: PostProcessOptions,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: Double
@@ -76,12 +64,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: Double,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -90,12 +75,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: Double,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: Double,
@@ -104,12 +86,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: PostProcessOptions,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -118,12 +97,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: PostProcessOptions,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: Double,
@@ -132,12 +108,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: Double,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -147,12 +120,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: Double,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -162,12 +132,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: Double,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: Double,
@@ -177,12 +144,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: Double,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: Double,
@@ -192,12 +156,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: PostProcessOptions,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -207,12 +168,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: PostProcessOptions,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -222,12 +180,9 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: PostProcessOptions,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: Double,
@@ -237,16 +192,26 @@ class RefractionPostProcess protected ()
   def this(
     name: String,
     refractionTextureUrl: String,
-    /** the base color of the refraction (used to taint the rendering) */
-  color: typingsSlinky.babylonjs.mathColorMod.Color3,
-    /** simulated refraction depth */
-  depth: Double,
-    /** the coefficient of the base color (0 to remove base color tainting) */
-  colorLevel: Double,
+    color: typingsSlinky.babylonjs.mathColorMod.Color3,
+    depth: Double,
+    colorLevel: Double,
     options: PostProcessOptions,
     camera: typingsSlinky.babylonjs.cameraMod.Camera,
     samplingMode: Double,
     engine: typingsSlinky.babylonjs.engineMod.Engine,
     reusable: Boolean
   ) = this()
+}
+/* static members */
+@JSImport("babylonjs", "RefractionPostProcess")
+@js.native
+object RefractionPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(
+    parsedPostProcess: js.Any,
+    targetCamera: typingsSlinky.babylonjs.cameraMod.Camera,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    rootUrl: String
+  ): typingsSlinky.babylonjs.refractionPostProcessMod.RefractionPostProcess = js.native
 }

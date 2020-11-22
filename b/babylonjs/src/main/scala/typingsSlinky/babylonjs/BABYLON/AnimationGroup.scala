@@ -17,6 +17,8 @@ trait AnimationGroup extends IDisposable {
   
   var _from: js.Any = js.native
   
+  var _isAdditive: js.Any = js.native
+  
   var _isPaused: js.Any = js.native
   
   var _isStarted: js.Any = js.native
@@ -47,6 +49,11 @@ trait AnimationGroup extends IDisposable {
   def animatables: js.Array[Animatable] = js.native
   
   /**
+    * Gets the list of target animations
+    */
+  def children: js.Array[TargetedAnimation] = js.native
+  
+  /**
     * Clone the current animation group and returns a copy
     * @param newName defines the name of the new group
     * @param targetConverter defines an optional function used to convert current animation targets to new ones
@@ -72,6 +79,12 @@ trait AnimationGroup extends IDisposable {
     * @return the animationGroup
     */
   def goToFrame(frame: Double): AnimationGroup = js.native
+  
+  /**
+    * Gets or sets if all animations should be evaluated additively
+    */
+  def isAdditive: Boolean = js.native
+  def isAdditive_=(value: Boolean): Unit = js.native
   
   /**
     * Gets a value indicating that the current group is playing
@@ -170,7 +183,7 @@ trait AnimationGroup extends IDisposable {
     * Set animation weight for all animatables
     * @param weight defines the weight to use
     * @return the animationGroup
-    * @see http://doc.babylonjs.com/babylon101/animations#animation-weights
+    * @see https://doc.babylonjs.com/babylon101/animations#animation-weights
     */
   def setWeightForAllAnimatables(weight: Double): AnimationGroup = js.native
   
@@ -189,6 +202,7 @@ trait AnimationGroup extends IDisposable {
     * @param speedRatio defines the ratio to apply to animation speed (1 by default)
     * @param from defines the from key (optional)
     * @param to defines the to key (optional)
+    * @param isAdditive defines the additive state for the resulting animatables (optional)
     * @returns the current animation group
     */
   def start(): AnimationGroup = js.native
@@ -196,22 +210,122 @@ trait AnimationGroup extends IDisposable {
     loop: js.UndefOr[scala.Nothing],
     speedRatio: js.UndefOr[scala.Nothing],
     from: js.UndefOr[scala.Nothing],
+    to: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
+  def start(
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    from: js.UndefOr[scala.Nothing],
     to: Double
   ): AnimationGroup = js.native
+  def start(
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    from: js.UndefOr[scala.Nothing],
+    to: Double,
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: js.UndefOr[scala.Nothing], speedRatio: js.UndefOr[scala.Nothing], from: Double): AnimationGroup = js.native
+  def start(
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    from: Double,
+    to: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: js.UndefOr[scala.Nothing], speedRatio: js.UndefOr[scala.Nothing], from: Double, to: Double): AnimationGroup = js.native
+  def start(
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: js.UndefOr[scala.Nothing],
+    from: Double,
+    to: Double,
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: js.UndefOr[scala.Nothing], speedRatio: Double): AnimationGroup = js.native
+  def start(
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
+    from: js.UndefOr[scala.Nothing],
+    to: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: js.UndefOr[scala.Nothing], speedRatio: Double, from: js.UndefOr[scala.Nothing], to: Double): AnimationGroup = js.native
+  def start(
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
+    from: js.UndefOr[scala.Nothing],
+    to: Double,
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: js.UndefOr[scala.Nothing], speedRatio: Double, from: Double): AnimationGroup = js.native
+  def start(
+    loop: js.UndefOr[scala.Nothing],
+    speedRatio: Double,
+    from: Double,
+    to: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: js.UndefOr[scala.Nothing], speedRatio: Double, from: Double, to: Double): AnimationGroup = js.native
+  def start(loop: js.UndefOr[scala.Nothing], speedRatio: Double, from: Double, to: Double, isAdditive: Boolean): AnimationGroup = js.native
   def start(loop: Boolean): AnimationGroup = js.native
+  def start(
+    loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    from: js.UndefOr[scala.Nothing],
+    to: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: Boolean, speedRatio: js.UndefOr[scala.Nothing], from: js.UndefOr[scala.Nothing], to: Double): AnimationGroup = js.native
+  def start(
+    loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    from: js.UndefOr[scala.Nothing],
+    to: Double,
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: Boolean, speedRatio: js.UndefOr[scala.Nothing], from: Double): AnimationGroup = js.native
+  def start(
+    loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    from: Double,
+    to: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: Boolean, speedRatio: js.UndefOr[scala.Nothing], from: Double, to: Double): AnimationGroup = js.native
+  def start(
+    loop: Boolean,
+    speedRatio: js.UndefOr[scala.Nothing],
+    from: Double,
+    to: Double,
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: Boolean, speedRatio: Double): AnimationGroup = js.native
+  def start(
+    loop: Boolean,
+    speedRatio: Double,
+    from: js.UndefOr[scala.Nothing],
+    to: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: Boolean, speedRatio: Double, from: js.UndefOr[scala.Nothing], to: Double): AnimationGroup = js.native
+  def start(
+    loop: Boolean,
+    speedRatio: Double,
+    from: js.UndefOr[scala.Nothing],
+    to: Double,
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: Boolean, speedRatio: Double, from: Double): AnimationGroup = js.native
+  def start(
+    loop: Boolean,
+    speedRatio: Double,
+    from: Double,
+    to: js.UndefOr[scala.Nothing],
+    isAdditive: Boolean
+  ): AnimationGroup = js.native
   def start(loop: Boolean, speedRatio: Double, from: Double, to: Double): AnimationGroup = js.native
+  def start(loop: Boolean, speedRatio: Double, from: Double, to: Double, isAdditive: Boolean): AnimationGroup = js.native
   
   /**
     * Stop all animations
@@ -223,7 +337,7 @@ trait AnimationGroup extends IDisposable {
     * Synchronize and normalize all animatables with a source animatable
     * @param root defines the root animatable to synchronize with
     * @return the animationGroup
-    * @see http://doc.babylonjs.com/babylon101/animations#animation-weights
+    * @see https://doc.babylonjs.com/babylon101/animations#animation-weights
     */
   def syncAllAnimationsWith(root: Animatable): AnimationGroup = js.native
   

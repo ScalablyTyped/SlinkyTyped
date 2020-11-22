@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object navItemMod {
   
-  type NavItem[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.navItemMod.NavItemProps]
+  type NavItem = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.navItemMod.NavItemProps]
 }

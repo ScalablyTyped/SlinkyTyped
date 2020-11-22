@@ -20,7 +20,7 @@ trait ListPortfolioAccessInput extends js.Object {
   /**
     * The maximum number of items to return with this call.
     */
-  var PageSize: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.PageSize] = js.native
+  var PageSize: js.UndefOr[PageSizeMax100] = js.native
   
   /**
     * The page token for the next set of results. To retrieve the first set of results, use null.
@@ -71,7 +71,7 @@ object ListPortfolioAccessInput {
     def deleteOrganizationParentId: Self = this.set("OrganizationParentId", js.undefined)
     
     @scala.inline
-    def setPageSize(value: PageSize): Self = this.set("PageSize", value.asInstanceOf[js.Any])
+    def setPageSize(value: PageSizeMax100): Self = this.set("PageSize", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePageSize: Self = this.set("PageSize", js.undefined)

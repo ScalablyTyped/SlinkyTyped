@@ -1,6 +1,6 @@
 package typingsSlinky.pulumiAws.notificationMod
 
-import typingsSlinky.pulumiAws.notificationTypeMod.NotificationType
+import typingsSlinky.pulumiAws.enumsAutoscalingMod.NotificationType
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_

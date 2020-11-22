@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ItemBody extends js.Object {
   
   // The content of the item.
-  var content: js.UndefOr[String] = js.native
+  var content: js.UndefOr[NullableOption[String]] = js.native
   
   // The type of the content. Possible values are text and html.
-  var contentType: js.UndefOr[BodyType] = js.native
+  var contentType: js.UndefOr[NullableOption[BodyType]] = js.native
 }
 object ItemBody {
   
@@ -37,15 +37,21 @@ object ItemBody {
     }
     
     @scala.inline
-    def setContent(value: String): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: NullableOption[String]): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     
     @scala.inline
-    def setContentType(value: BodyType): Self = this.set("contentType", value.asInstanceOf[js.Any])
+    def setContentNull: Self = this.set("content", null)
+    
+    @scala.inline
+    def setContentType(value: NullableOption[BodyType]): Self = this.set("contentType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContentType: Self = this.set("contentType", js.undefined)
+    
+    @scala.inline
+    def setContentTypeNull: Self = this.set("contentType", null)
   }
 }

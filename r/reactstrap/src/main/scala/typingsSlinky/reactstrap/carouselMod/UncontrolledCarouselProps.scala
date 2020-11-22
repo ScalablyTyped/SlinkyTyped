@@ -1,50 +1,23 @@
 package typingsSlinky.reactstrap.carouselMod
 
-import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.reactstrap.mod.CSSModule
-import typingsSlinky.reactstrap.reactstrapBooleans.`false`
-import typingsSlinky.reactstrap.reactstrapStrings.carousel
-import typingsSlinky.reactstrap.reactstrapStrings.hover
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait UncontrolledCarouselProps
-  extends AllHTMLAttributes[HTMLElement]
-     with ClassAttributes[HTMLElement]
-     with /* key */ StringDictionary[js.Any] {
+trait UncontrolledCarouselProps extends CommonCarouselProps {
   
-  var activeIndex: js.UndefOr[Double] = js.native
+  var autoPlay: js.UndefOr[Boolean] = js.native
   
-  var cssModule: js.UndefOr[CSSModule] = js.native
-  
-  var enableTouch: js.UndefOr[Boolean] = js.native
+  var controls: js.UndefOr[Boolean] = js.native
   
   var indicators: js.UndefOr[Boolean] = js.native
   
-  var interval: js.UndefOr[Double | String | Boolean] = js.native
-  
   var items: js.Array[_] = js.native
-  
-  var keyboard: js.UndefOr[Boolean] = js.native
-  
-  var mouseEnter: js.UndefOr[js.Function0[Unit]] = js.native
-  
-  var mouseExit: js.UndefOr[js.Function0[Unit]] = js.native
   
   var next: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var pause: js.UndefOr[hover | `false`] = js.native
-  
   var previous: js.UndefOr[js.Function0[Unit]] = js.native
-  
-  var ride: js.UndefOr[carousel] = js.native
-  
-  var slide: js.UndefOr[Boolean] = js.native
 }
 object UncontrolledCarouselProps {
   
@@ -76,22 +49,16 @@ object UncontrolledCarouselProps {
     def setItems(value: js.Array[_]): Self = this.set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setActiveIndex(value: Double): Self = this.set("activeIndex", value.asInstanceOf[js.Any])
+    def setAutoPlay(value: Boolean): Self = this.set("autoPlay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteActiveIndex: Self = this.set("activeIndex", js.undefined)
+    def deleteAutoPlay: Self = this.set("autoPlay", js.undefined)
     
     @scala.inline
-    def setCssModule(value: CSSModule): Self = this.set("cssModule", value.asInstanceOf[js.Any])
+    def setControls(value: Boolean): Self = this.set("controls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteCssModule: Self = this.set("cssModule", js.undefined)
-    
-    @scala.inline
-    def setEnableTouch(value: Boolean): Self = this.set("enableTouch", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteEnableTouch: Self = this.set("enableTouch", js.undefined)
+    def deleteControls: Self = this.set("controls", js.undefined)
     
     @scala.inline
     def setIndicators(value: Boolean): Self = this.set("indicators", value.asInstanceOf[js.Any])
@@ -100,57 +67,15 @@ object UncontrolledCarouselProps {
     def deleteIndicators: Self = this.set("indicators", js.undefined)
     
     @scala.inline
-    def setInterval(value: Double | String | Boolean): Self = this.set("interval", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteInterval: Self = this.set("interval", js.undefined)
-    
-    @scala.inline
-    def setKeyboard(value: Boolean): Self = this.set("keyboard", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteKeyboard: Self = this.set("keyboard", js.undefined)
-    
-    @scala.inline
-    def setMouseEnter(value: () => Unit): Self = this.set("mouseEnter", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def deleteMouseEnter: Self = this.set("mouseEnter", js.undefined)
-    
-    @scala.inline
-    def setMouseExit(value: () => Unit): Self = this.set("mouseExit", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def deleteMouseExit: Self = this.set("mouseExit", js.undefined)
-    
-    @scala.inline
     def setNext(value: () => Unit): Self = this.set("next", js.Any.fromFunction0(value))
     
     @scala.inline
     def deleteNext: Self = this.set("next", js.undefined)
     
     @scala.inline
-    def setPause(value: hover | `false`): Self = this.set("pause", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePause: Self = this.set("pause", js.undefined)
-    
-    @scala.inline
     def setPrevious(value: () => Unit): Self = this.set("previous", js.Any.fromFunction0(value))
     
     @scala.inline
     def deletePrevious: Self = this.set("previous", js.undefined)
-    
-    @scala.inline
-    def setRide(value: carousel): Self = this.set("ride", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRide: Self = this.set("ride", js.undefined)
-    
-    @scala.inline
-    def setSlide(value: Boolean): Self = this.set("slide", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSlide: Self = this.set("slide", js.undefined)
   }
 }

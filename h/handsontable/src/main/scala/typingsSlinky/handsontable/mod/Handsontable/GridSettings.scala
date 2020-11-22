@@ -137,8 +137,6 @@ trait GridSettings extends Events {
   
   var datePickerConfig: js.UndefOr[PikadayOptions] = js.native
   
-  var debug: js.UndefOr[Boolean] = js.native
-  
   var defaultDate: js.UndefOr[String] = js.native
   
   var disableVisualSelection: js.UndefOr[Boolean | current | area | header | (js.Array[current | area | header])] = js.native
@@ -184,8 +182,6 @@ trait GridSettings extends Events {
   var formulas: js.UndefOr[Boolean | typingsSlinky.handsontable.mod.Handsontable.formulas.Settings] = js.native
   
   var fragmentSelection: js.UndefOr[Boolean | cell] = js.native
-  
-  var ganttChart: js.UndefOr[typingsSlinky.handsontable.mod.Handsontable.ganttChart.Settings] = js.native
   
   var headerTooltips: js.UndefOr[Boolean | typingsSlinky.handsontable.mod.Handsontable.headerTooltips.Settings] = js.native
   
@@ -662,12 +658,6 @@ object GridSettings {
     def deleteDatePickerConfig: Self = this.set("datePickerConfig", js.undefined)
     
     @scala.inline
-    def setDebug(value: Boolean): Self = this.set("debug", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDebug: Self = this.set("debug", js.undefined)
-    
-    @scala.inline
     def setDefaultDate(value: String): Self = this.set("defaultDate", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -785,12 +775,6 @@ object GridSettings {
     
     @scala.inline
     def deleteFragmentSelection: Self = this.set("fragmentSelection", js.undefined)
-    
-    @scala.inline
-    def setGanttChart(value: typingsSlinky.handsontable.mod.Handsontable.ganttChart.Settings): Self = this.set("ganttChart", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteGanttChart: Self = this.set("ganttChart", js.undefined)
     
     @scala.inline
     def setHeaderTooltips(value: Boolean | typingsSlinky.handsontable.mod.Handsontable.headerTooltips.Settings): Self = this.set("headerTooltips", value.asInstanceOf[js.Any])

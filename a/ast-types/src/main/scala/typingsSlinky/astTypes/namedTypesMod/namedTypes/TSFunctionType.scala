@@ -17,11 +17,12 @@ import typingsSlinky.astTypes.kindsMod.TSTypeParameterDeclarationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.TSType, 'type'> */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeParameters */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeAnnotation */
+@js.native
 trait TSFunctionType
   extends ASTNode
      with NodeKind
@@ -29,15 +30,19 @@ trait TSFunctionType
      with TSHasOptionalTypeAnnotationKind
      with TSHasOptionalTypeParametersKind
      with TSTypeKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind]
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSFunctionType
-  var typeAnnotation: js.UndefOr[TSTypeAnnotationKind | Null] = js.undefined
-  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.undefined
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSFunctionType = js.native
+  
+  var typeAnnotation: js.UndefOr[TSTypeAnnotationKind | Null] = js.native
+  
+  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSFunctionType")
 @js.native
 object TSFunctionType extends TopLevel[Type[TSFunctionType]]
-

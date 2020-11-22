@@ -53,7 +53,7 @@ trait DBClusterEndpoint extends js.Object {
   var StaticMembers: js.UndefOr[StringList] = js.native
   
   /**
-    * The current status of the endpoint. One of: creating, available, deleting, modifying.
+    * The current status of the endpoint. One of: creating, available, deleting, inactive, modifying. The inactive state applies to an endpoint that can't be used for a certain kind of cluster, such as a writer endpoint for a read-only secondary cluster in a global database.
     */
   var Status: js.UndefOr[String] = js.native
 }

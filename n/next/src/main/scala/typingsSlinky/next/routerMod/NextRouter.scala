@@ -18,9 +18,15 @@ trait NextRouter extends js.Object {
   
   var beforePopState: js.Function1[/* cb */ BeforePopStateCallback, Unit] = js.native
   
+  var defaultLocale: js.UndefOr[String] = js.native
+  
   var events: MittEmitter = js.native
   
   var isFallback: Boolean = js.native
+  
+  var locale: js.UndefOr[String] = js.native
+  
+  var locales: js.UndefOr[js.Array[String]] = js.native
   
   var pathname: String = js.native
   
@@ -34,7 +40,7 @@ trait NextRouter extends js.Object {
   var push: js.Function3[
     /* url */ Url, 
     /* as */ js.UndefOr[Url], 
-    /* options */ js.UndefOr[js.Object], 
+    /* options */ js.UndefOr[TransitionOptions], 
     js.Promise[Boolean]
   ] = js.native
   
@@ -45,7 +51,7 @@ trait NextRouter extends js.Object {
   var replace: js.Function3[
     /* url */ Url, 
     /* as */ js.UndefOr[Url], 
-    /* options */ js.UndefOr[js.Object], 
+    /* options */ js.UndefOr[TransitionOptions], 
     js.Promise[Boolean]
   ] = js.native
   
@@ -63,10 +69,10 @@ object NextRouter {
     isFallback: Boolean,
     pathname: String,
     prefetch: (/* url */ String, /* asPath */ js.UndefOr[String], /* options */ js.UndefOr[PrefetchOptions]) => js.Promise[Unit],
-    push: (/* url */ Url, /* as */ js.UndefOr[Url], /* options */ js.UndefOr[js.Object]) => js.Promise[Boolean],
+    push: (/* url */ Url, /* as */ js.UndefOr[Url], /* options */ js.UndefOr[TransitionOptions]) => js.Promise[Boolean],
     query: ParsedUrlQuery,
     reload: () => Unit,
-    replace: (/* url */ Url, /* as */ js.UndefOr[Url], /* options */ js.UndefOr[js.Object]) => js.Promise[Boolean],
+    replace: (/* url */ Url, /* as */ js.UndefOr[Url], /* options */ js.UndefOr[TransitionOptions]) => js.Promise[Boolean],
     route: String
   ): NextRouter = {
     val __obj = js.Dynamic.literal(asPath = asPath.asInstanceOf[js.Any], back = js.Any.fromFunction0(back), basePath = basePath.asInstanceOf[js.Any], beforePopState = js.Any.fromFunction1(beforePopState), events = events.asInstanceOf[js.Any], isFallback = isFallback.asInstanceOf[js.Any], pathname = pathname.asInstanceOf[js.Any], prefetch = js.Any.fromFunction3(prefetch), push = js.Any.fromFunction3(push), query = query.asInstanceOf[js.Any], reload = js.Any.fromFunction0(reload), replace = js.Any.fromFunction3(replace), route = route.asInstanceOf[js.Any])
@@ -116,7 +122,7 @@ object NextRouter {
     
     @scala.inline
     def setPush(
-      value: (/* url */ Url, /* as */ js.UndefOr[Url], /* options */ js.UndefOr[js.Object]) => js.Promise[Boolean]
+      value: (/* url */ Url, /* as */ js.UndefOr[Url], /* options */ js.UndefOr[TransitionOptions]) => js.Promise[Boolean]
     ): Self = this.set("push", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -127,10 +133,31 @@ object NextRouter {
     
     @scala.inline
     def setReplace(
-      value: (/* url */ Url, /* as */ js.UndefOr[Url], /* options */ js.UndefOr[js.Object]) => js.Promise[Boolean]
+      value: (/* url */ Url, /* as */ js.UndefOr[Url], /* options */ js.UndefOr[TransitionOptions]) => js.Promise[Boolean]
     ): Self = this.set("replace", js.Any.fromFunction3(value))
     
     @scala.inline
     def setRoute(value: String): Self = this.set("route", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDefaultLocale(value: String): Self = this.set("defaultLocale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultLocale: Self = this.set("defaultLocale", js.undefined)
+    
+    @scala.inline
+    def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    
+    @scala.inline
+    def setLocalesVarargs(value: String*): Self = this.set("locales", js.Array(value :_*))
+    
+    @scala.inline
+    def setLocales(value: js.Array[String]): Self = this.set("locales", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocales: Self = this.set("locales", js.undefined)
   }
 }

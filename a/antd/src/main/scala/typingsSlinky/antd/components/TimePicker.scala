@@ -10,8 +10,13 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdNumbers.`0`
 import typingsSlinky.antd.antdNumbers.`1`
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -43,15 +48,16 @@ import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.generatePickerMod.PickerLocale
-import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.antd.timePickerMod.TimePickerProps
 import typingsSlinky.antd.timePickerMod.TimeRangePickerProps
 import typingsSlinky.moment.mod.Moment
+import typingsSlinky.rcPicker.interfaceMod.CustomFormat
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.EventValue
 import typingsSlinky.rcPicker.interfaceMod.Locale
@@ -193,7 +199,9 @@ object TimePicker {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -289,10 +297,13 @@ object TimePicker {
     def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
+    def formatVarargs(value: (String | CustomFormat[Moment])*): this.type = set("format", js.Array(value :_*))
     
     @scala.inline
-    def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
+    def formatFunction1(value: Moment => String): this.type = set("format", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def format(value: String | CustomFormat[Moment] | (js.Array[String | CustomFormat[Moment]])): this.type = set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
@@ -563,7 +574,9 @@ object TimePicker {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -665,10 +678,13 @@ object TimePicker {
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
+      def formatVarargs(value: (String | CustomFormat[Moment])*): this.type = set("format", js.Array(value :_*))
       
       @scala.inline
-      def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
+      def formatFunction1(value: Moment => String): this.type = set("format", js.Any.fromFunction1(value))
+      
+      @scala.inline
+      def format(value: String | CustomFormat[Moment] | (js.Array[String | CustomFormat[Moment]])): this.type = set("format", value.asInstanceOf[js.Any])
       
       @scala.inline
       def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
@@ -827,10 +843,6 @@ object TimePicker {
     
     def withProps(p: TimeRangePickerProps with RefAttributes[js.Any]): typingsSlinky.antd.components.TimePicker.RangePicker.Builder = new typingsSlinky.antd.components.TimePicker.RangePicker.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
-    @scala.inline
-    def apply(picker: time): typingsSlinky.antd.components.TimePicker.RangePicker.Builder = {
-      val __props = js.Dynamic.literal(picker = picker.asInstanceOf[js.Any])
-      new typingsSlinky.antd.components.TimePicker.RangePicker.Builder(js.Array(this.component, __props.asInstanceOf[TimeRangePickerProps with RefAttributes[js.Any]]))
-    }
+    implicit def make(companion: RangePicker.type): typingsSlinky.antd.components.TimePicker.RangePicker.Builder = new typingsSlinky.antd.components.TimePicker.RangePicker.Builder(js.Array(this.component, js.Dictionary.empty))()
   }
 }

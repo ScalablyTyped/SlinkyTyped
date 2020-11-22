@@ -16,6 +16,8 @@ trait ToggleButtonProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
+  var iconPos: js.UndefOr[String] = js.native
+  
   var id: js.UndefOr[String] = js.native
   
   var offIcon: js.UndefOr[String] = js.native
@@ -80,6 +82,12 @@ object ToggleButtonProps {
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
+    def setIconPos(value: String): Self = this.set("iconPos", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIconPos: Self = this.set("iconPos", js.undefined)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])

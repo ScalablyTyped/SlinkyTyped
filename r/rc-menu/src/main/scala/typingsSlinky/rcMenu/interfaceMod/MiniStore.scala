@@ -10,12 +10,18 @@ trait MiniStore extends js.Object {
   def getState(): js.Any = js.native
   
   def setState(state: js.Any): Unit = js.native
+  
+  def subscribe(listener: js.Function0[Unit]): js.Function0[Unit] = js.native
 }
 object MiniStore {
   
   @scala.inline
-  def apply(getState: () => js.Any, setState: js.Any => Unit): MiniStore = {
-    val __obj = js.Dynamic.literal(getState = js.Any.fromFunction0(getState), setState = js.Any.fromFunction1(setState))
+  def apply(
+    getState: () => js.Any,
+    setState: js.Any => Unit,
+    subscribe: js.Function0[Unit] => js.Function0[Unit]
+  ): MiniStore = {
+    val __obj = js.Dynamic.literal(getState = js.Any.fromFunction0(getState), setState = js.Any.fromFunction1(setState), subscribe = js.Any.fromFunction1(subscribe))
     __obj.asInstanceOf[MiniStore]
   }
   
@@ -39,5 +45,8 @@ object MiniStore {
     
     @scala.inline
     def setSetState(value: js.Any => Unit): Self = this.set("setState", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setSubscribe(value: js.Function0[Unit] => js.Function0[Unit]): Self = this.set("subscribe", js.Any.fromFunction1(value))
   }
 }

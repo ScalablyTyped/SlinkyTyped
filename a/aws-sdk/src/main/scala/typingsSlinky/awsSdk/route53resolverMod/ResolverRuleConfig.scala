@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResolverRuleConfig extends js.Object {
   
   /**
-    * The new name for the resolver rule. The name that you specify appears in the Resolver dashboard in the Route 53 console. 
+    * The new name for the Resolver rule. The name that you specify appears in the Resolver dashboard in the Route 53 console. 
     */
   var Name: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.Name] = js.native
   
   /**
-    * The ID of the new outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify in TargetIps.
+    * The ID of the new outbound Resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify in TargetIps.
     */
   var ResolverEndpointId: js.UndefOr[ResourceId] = js.native
   

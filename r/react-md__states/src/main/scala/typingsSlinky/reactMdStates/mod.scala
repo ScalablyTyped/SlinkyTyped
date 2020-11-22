@@ -31,15 +31,6 @@ object mod extends js.Object {
   @js.native
   object StatesConfig extends js.Object {
     
-    /**
-      * The `StatesConfig` component is a top-level context provider for the states
-      * context configuration. It'll keep track of:
-      *
-      * - the current interaction mode of your user
-      * - configuration for ripple effects
-      * - disabling or enabling the ripple effects
-      * - disabling or enabling the fix for color pollution
-      */
     def apply(hasRippleTimeoutRippleClassNamesDisableRippleDisableProgrammaticRippleChildren: StatesConfigProps): ReactElement = js.native
     
     @js.native

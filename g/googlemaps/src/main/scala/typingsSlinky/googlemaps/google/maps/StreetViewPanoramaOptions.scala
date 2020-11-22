@@ -52,6 +52,8 @@ trait StreetViewPanoramaOptions extends js.Object {
   
   var scrollwheel: js.UndefOr[Boolean] = js.native
   
+  var showRoadLabels: js.UndefOr[Boolean] = js.native
+  
   var visible: js.UndefOr[Boolean] = js.native
   
   var zoom: js.UndefOr[Double] = js.native
@@ -208,6 +210,12 @@ object StreetViewPanoramaOptions {
     
     @scala.inline
     def deleteScrollwheel: Self = this.set("scrollwheel", js.undefined)
+    
+    @scala.inline
+    def setShowRoadLabels(value: Boolean): Self = this.set("showRoadLabels", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShowRoadLabels: Self = this.set("showRoadLabels", js.undefined)
     
     @scala.inline
     def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])

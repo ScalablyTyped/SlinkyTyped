@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.feedSummaryMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.feedDateMod.FeedDateProps
 import typingsSlinky.semanticUiReact.feedUserMod.FeedUserProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -90,7 +89,7 @@ object StrictFeedSummaryProps {
     
     @scala.inline
     def setDateFunction3(
-      value: (/* component */ ReactType[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, FeedDateProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("date", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -104,7 +103,7 @@ object StrictFeedSummaryProps {
     
     @scala.inline
     def setUserFunction3(
-      value: (/* component */ ReactType[FeedUserProps], FeedUserProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, FeedUserProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("user", js.Any.fromFunction3(value))
     
     @scala.inline

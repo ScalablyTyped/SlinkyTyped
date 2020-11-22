@@ -8,5 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MVT
   extends typingsSlinky.ol.featureMod.default {
   
+  /**
+    * Sets the layers that features will be read from.
+    */
   def setLayers(layers: js.Array[String]): Unit = js.native
 }

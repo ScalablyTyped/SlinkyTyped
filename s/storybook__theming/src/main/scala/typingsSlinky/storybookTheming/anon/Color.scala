@@ -8,14 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Color extends js.Object {
   
   var color: String = js.native
-  
-  var fontStyle: String = js.native
 }
 object Color {
   
   @scala.inline
-  def apply(color: String, fontStyle: String): Color = {
-    val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], fontStyle = fontStyle.asInstanceOf[js.Any])
+  def apply(color: String): Color = {
+    val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any])
     __obj.asInstanceOf[Color]
   }
   
@@ -36,8 +34,5 @@ object Color {
     
     @scala.inline
     def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setFontStyle(value: String): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
   }
 }

@@ -18,7 +18,12 @@ trait GetTimeSeriesServiceStatisticsRequest extends js.Object {
   var EntitySelectorExpression: js.UndefOr[typingsSlinky.awsSdk.xrayMod.EntitySelectorExpression] = js.native
   
   /**
-    * The ARN of the group for which to pull statistics from.
+    * The forecasted high and low fault count values. Forecast enabled requests require the EntitySelectorExpression ID be provided.
+    */
+  var ForecastStatistics: js.UndefOr[NullableBoolean] = js.native
+  
+  /**
+    * The Amazon Resource Name (ARN) of the group for which to pull statistics from.
     */
   var GroupARN: js.UndefOr[typingsSlinky.awsSdk.xrayMod.GroupARN] = js.native
   
@@ -76,6 +81,12 @@ object GetTimeSeriesServiceStatisticsRequest {
     
     @scala.inline
     def deleteEntitySelectorExpression: Self = this.set("EntitySelectorExpression", js.undefined)
+    
+    @scala.inline
+    def setForecastStatistics(value: NullableBoolean): Self = this.set("ForecastStatistics", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteForecastStatistics: Self = this.set("ForecastStatistics", js.undefined)
     
     @scala.inline
     def setGroupARN(value: GroupARN): Self = this.set("GroupARN", value.asInstanceOf[js.Any])

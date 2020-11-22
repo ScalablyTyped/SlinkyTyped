@@ -12,12 +12,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFunnelTooltip extends BaseWidgetTooltip {
   
-  /** @name dxFunnel.Options.tooltip.contentTemplate */
+  /**
+    * [descr:dxFunnel.Options.tooltip.contentTemplate]
+    */
   var contentTemplate: js.UndefOr[
     template | (js.Function2[/* info */ Percent, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxFunnel.Options.tooltip.customizeTooltip */
+  /**
+    * [descr:dxFunnel.Options.tooltip.customizeTooltip]
+    */
   var customizeTooltip: js.UndefOr[js.Function1[/* info */ Percent, _]] = js.native
 }
 object dxFunnelTooltip {

@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.iShaderProcessorMod
 
+import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +15,13 @@ trait IShaderProcessor extends js.Object {
   var lineProcessor: js.UndefOr[js.Function2[/* line */ String, /* isFragment */ Boolean, String]] = js.native
   
   var postProcessor: js.UndefOr[
-    js.Function3[/* code */ String, /* defines */ js.Array[String], /* isFragment */ Boolean, String]
+    js.Function4[
+      /* code */ String, 
+      /* defines */ js.Array[String], 
+      /* isFragment */ Boolean, 
+      /* engine */ ThinEngine, 
+      String
+    ]
   ] = js.native
   
   var preProcessor: js.UndefOr[
@@ -69,7 +76,9 @@ object IShaderProcessor {
     def deleteLineProcessor: Self = this.set("lineProcessor", js.undefined)
     
     @scala.inline
-    def setPostProcessor(value: (/* code */ String, /* defines */ js.Array[String], /* isFragment */ Boolean) => String): Self = this.set("postProcessor", js.Any.fromFunction3(value))
+    def setPostProcessor(
+      value: (/* code */ String, /* defines */ js.Array[String], /* isFragment */ Boolean, /* engine */ ThinEngine) => String
+    ): Self = this.set("postProcessor", js.Any.fromFunction4(value))
     
     @scala.inline
     def deletePostProcessor: Self = this.set("postProcessor", js.undefined)

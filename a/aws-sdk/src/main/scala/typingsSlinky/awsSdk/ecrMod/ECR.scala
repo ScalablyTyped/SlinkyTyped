@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.anon.DescribeImageScanFindings
 import typingsSlinky.awsSdk.anon.GetLifecyclePolicyPreview
 import typingsSlinky.awsSdk.awsSdkStrings.imageScanComplete
 import typingsSlinky.awsSdk.awsSdkStrings.lifecyclePolicyPreviewComplete
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ReportDefinitionState extends js.Object {
   
   /**
-    * A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
+    * A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT, ATHENA. When ATHENA exists within additional_artifacts, no other artifact type can be declared and reportVersioning must be OVERWRITE_REPORT.
     */
   val additionalArtifacts: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
@@ -19,19 +19,29 @@ trait ReportDefinitionState extends js.Object {
   val additionalSchemaElements: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
   /**
-    * Compression format for report. Valid values are: GZIP, ZIP.
+    * Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.
     */
   val compression: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Format for report. Valid values are: textORcsv.
+    * Format for report. Valid values are: textORcsv, Parquet. If Parquet is used, then Compression must also be Parquet.
     */
   val format: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Set to true to update your reports after they have been finalized if AWS detects charges related to previous months.
+    */
+  val refreshClosedReports: js.UndefOr[Input[Boolean]] = js.native
   
   /**
     * Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
     */
   val reportName: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT, OVERWRITE_REPORT
+    */
+  val reportVersioning: js.UndefOr[Input[String]] = js.native
   
   /**
     * Name of the existing S3 bucket to hold generated reports.
@@ -107,10 +117,22 @@ object ReportDefinitionState {
     def deleteFormat: Self = this.set("format", js.undefined)
     
     @scala.inline
+    def setRefreshClosedReports(value: Input[Boolean]): Self = this.set("refreshClosedReports", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRefreshClosedReports: Self = this.set("refreshClosedReports", js.undefined)
+    
+    @scala.inline
     def setReportName(value: Input[String]): Self = this.set("reportName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReportName: Self = this.set("reportName", js.undefined)
+    
+    @scala.inline
+    def setReportVersioning(value: Input[String]): Self = this.set("reportVersioning", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReportVersioning: Self = this.set("reportVersioning", js.undefined)
     
     @scala.inline
     def setS3Bucket(value: Input[String]): Self = this.set("s3Bucket", value.asInstanceOf[js.Any])

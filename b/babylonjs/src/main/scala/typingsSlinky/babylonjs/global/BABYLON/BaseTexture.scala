@@ -14,9 +14,11 @@ class BaseTexture protected ()
     * Base class of all the textures in babylon.
     * It groups all the common properties the materials, post process, lights... might need
     * in order to make a correct use of the texture.
-    * @param scene Define the scene the texture blongs to
+    * @param sceneOrEngine Define the scene or engine the texture blongs to
     */
-  def this(scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]) = this()
+  def this(sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.BABYLON.Scene | typingsSlinky.babylonjs.BABYLON.ThinEngine
+      ]) = this()
 }
 /* static members */
 @JSGlobal("BABYLON.BaseTexture")
@@ -35,4 +37,6 @@ object BaseTexture extends js.Object {
     * @param callback Define the callback triggered once the entire list will be ready
     */
   def WhenAllReady(textures: js.Array[typingsSlinky.babylonjs.BABYLON.BaseTexture], callback: js.Function0[Unit]): Unit = js.native
+  
+  var _isScene: js.Any = js.native
 }

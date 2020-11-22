@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.postProcessesIndexMod
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,40 +24,25 @@ class ConvolutionPostProcess protected ()
     * @param reusable If the post process can be reused on the same frame. (default: false)
     * @param textureType Type of textures used when performing the post process. (default: 0)
     */
+  def this(name: String, kernel: js.Array[Double], options: Double, camera: Nullable[Camera]) = this()
+  def this(name: String, kernel: js.Array[Double], options: PostProcessOptions, camera: Nullable[Camera]) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
-    options: Double,
-    camera: Nullable[Camera]
-  ) = this()
-  def this(
-    name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
-    options: PostProcessOptions,
-    camera: Nullable[Camera]
-  ) = this()
-  def this(
-    name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: Double
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: Double
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -64,8 +50,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -73,8 +58,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -82,8 +66,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -91,8 +74,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -101,8 +83,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -111,8 +92,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -121,8 +101,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -131,8 +110,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -141,8 +119,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -151,8 +128,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -161,8 +137,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -171,8 +146,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -182,8 +156,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -193,8 +166,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -204,8 +176,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -215,8 +186,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -226,8 +196,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -237,8 +206,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -248,8 +216,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: Double,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -259,8 +226,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -270,8 +236,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -281,8 +246,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -292,8 +256,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -303,8 +266,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -314,8 +276,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -325,8 +286,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -336,8 +296,7 @@ class ConvolutionPostProcess protected ()
   ) = this()
   def this(
     name: String,
-    /** Array of 9 values corresponding to the 3x3 kernel to be applied */
-  kernel: js.Array[Double],
+    kernel: js.Array[Double],
     options: PostProcessOptions,
     camera: Nullable[Camera],
     samplingMode: Double,
@@ -380,4 +339,7 @@ object ConvolutionPostProcess extends js.Object {
     * Kernel to sharpen an image see https://en.wikipedia.org/wiki/Kernel_(image_processing)
     */
   var SharpenKernel: js.Array[Double] = js.native
+  
+  /** @hidden */
+  def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): Nullable[typingsSlinky.babylonjs.convolutionPostProcessMod.ConvolutionPostProcess] = js.native
 }

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PathElevationRequest extends js.Object {
   
-  var path: js.UndefOr[js.Array[LatLng]] = js.native
+  var path: js.UndefOr[js.Array[LatLngLiteral | LatLng]] = js.native
   
   var samples: js.UndefOr[Double] = js.native
 }
@@ -35,10 +35,10 @@ object PathElevationRequest {
     }
     
     @scala.inline
-    def setPathVarargs(value: LatLng*): Self = this.set("path", js.Array(value :_*))
+    def setPathVarargs(value: (LatLngLiteral | LatLng)*): Self = this.set("path", js.Array(value :_*))
     
     @scala.inline
-    def setPath(value: js.Array[LatLng]): Self = this.set("path", value.asInstanceOf[js.Any])
+    def setPath(value: js.Array[LatLngLiteral | LatLng]): Self = this.set("path", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)

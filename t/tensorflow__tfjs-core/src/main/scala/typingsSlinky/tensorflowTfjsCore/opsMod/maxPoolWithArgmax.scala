@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore.opsMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_

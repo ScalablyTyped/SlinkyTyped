@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LocationElevationRequest extends js.Object {
   
-  var locations: js.Array[LatLng] = js.native
+  var locations: js.Array[LatLngLiteral | LatLng] = js.native
 }
 object LocationElevationRequest {
   
   @scala.inline
-  def apply(locations: js.Array[LatLng]): LocationElevationRequest = {
+  def apply(locations: js.Array[LatLngLiteral | LatLng]): LocationElevationRequest = {
     val __obj = js.Dynamic.literal(locations = locations.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationElevationRequest]
   }
@@ -33,9 +33,9 @@ object LocationElevationRequest {
     }
     
     @scala.inline
-    def setLocationsVarargs(value: LatLng*): Self = this.set("locations", js.Array(value :_*))
+    def setLocationsVarargs(value: (LatLngLiteral | LatLng)*): Self = this.set("locations", js.Array(value :_*))
     
     @scala.inline
-    def setLocations(value: js.Array[LatLng]): Self = this.set("locations", value.asInstanceOf[js.Any])
+    def setLocations(value: js.Array[LatLngLiteral | LatLng]): Self = this.set("locations", value.asInstanceOf[js.Any])
   }
 }

@@ -5,17 +5,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SkPictureRecorder extends SkObject[SkPictureRecorder] {
+trait SkPictureRecorder extends EmbindObject[SkPicture] {
   
-  def beginRecording(rect: SkRect): SkCanvas = js.native
+  /**
+    * Returns a canvas on which to draw. When done drawing, call finishRecordingAsPicture()
+    *
+    * @param bounds - a rect to cull the results.
+    */
+  def beginRecording(bounds: InputRect): SkCanvas = js.native
   
+  /**
+    * Returns the captured draw commands as a picture and invalidates the canvas returned earlier.
+    */
   def finishRecordingAsPicture(): SkPicture = js.native
 }
 object SkPictureRecorder {
   
   @scala.inline
   def apply(
-    beginRecording: SkRect => SkCanvas,
+    beginRecording: InputRect => SkCanvas,
     delete: () => Unit,
     deleteAfter: () => Unit,
     finishRecordingAsPicture: () => SkPicture,
@@ -42,7 +50,7 @@ object SkPictureRecorder {
     }
     
     @scala.inline
-    def setBeginRecording(value: SkRect => SkCanvas): Self = this.set("beginRecording", js.Any.fromFunction1(value))
+    def setBeginRecording(value: InputRect => SkCanvas): Self = this.set("beginRecording", js.Any.fromFunction1(value))
     
     @scala.inline
     def setFinishRecordingAsPicture(value: () => SkPicture): Self = this.set("finishRecordingAsPicture", js.Any.fromFunction0(value))

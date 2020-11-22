@@ -181,8 +181,8 @@ object callMod extends js.Object {
     
     def isPaused(): Boolean = js.native
     
-    def listenerCount(`type`: String): Double = js.native
-    def listenerCount(`type`: js.Symbol): Double = js.native
+    def listenerCount(event: String): Double = js.native
+    def listenerCount(event: js.Symbol): Double = js.native
     
     def listeners(event: String): js.Array[js.Function] = js.native
     def listeners(event: js.Symbol): js.Array[js.Function] = js.native
@@ -596,8 +596,8 @@ object callMod extends js.Object {
     
     def isPaused(): Boolean = js.native
     
-    def listenerCount(`type`: String): Double = js.native
-    def listenerCount(`type`: js.Symbol): Double = js.native
+    def listenerCount(event: String): Double = js.native
+    def listenerCount(event: js.Symbol): Double = js.native
     
     def listeners(event: String): js.Array[js.Function] = js.native
     def listeners(event: js.Symbol): js.Array[js.Function] = js.native
@@ -851,8 +851,8 @@ object callMod extends js.Object {
     
     def getPeer(): String = js.native
     
-    def listenerCount(`type`: String): Double = js.native
-    def listenerCount(`type`: js.Symbol): Double = js.native
+    def listenerCount(event: String): Double = js.native
+    def listenerCount(event: js.Symbol): Double = js.native
     
     def listeners(event: String): js.Array[js.Function] = js.native
     def listeners(event: js.Symbol): js.Array[js.Function] = js.native
@@ -928,9 +928,9 @@ object callMod extends js.Object {
     override def getMaxListeners(): Double = js.native
     
     /* InferMemberOverrides */
-    override def listenerCount(`type`: String): Double = js.native
+    override def listenerCount(event: String): Double = js.native
     /* InferMemberOverrides */
-    override def listenerCount(`type`: js.Symbol): Double = js.native
+    override def listenerCount(event: js.Symbol): Double = js.native
     
     /* InferMemberOverrides */
     override def listeners(event: String): js.Array[js.Function] = js.native
@@ -1097,8 +1097,8 @@ object callMod extends js.Object {
     
     def getPeer(): String = js.native
     
-    def listenerCount(`type`: String): Double = js.native
-    def listenerCount(`type`: js.Symbol): Double = js.native
+    def listenerCount(event: String): Double = js.native
+    def listenerCount(event: js.Symbol): Double = js.native
     
     def listeners(event: String): js.Array[js.Function] = js.native
     def listeners(event: js.Symbol): js.Array[js.Function] = js.native
@@ -1352,8 +1352,8 @@ object callMod extends js.Object {
     
     def getPeer(): String = js.native
     
-    def listenerCount(`type`: String): Double = js.native
-    def listenerCount(`type`: js.Symbol): Double = js.native
+    def listenerCount(event: String): Double = js.native
+    def listenerCount(event: js.Symbol): Double = js.native
     
     def listeners(event: String): js.Array[js.Function] = js.native
     def listeners(event: js.Symbol): js.Array[js.Function] = js.native

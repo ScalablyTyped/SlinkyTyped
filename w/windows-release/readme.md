@@ -1,7 +1,7 @@
 
 # Scala.js typings for windows-release
 
-Typings are for version 3.3.1
+Typings are for version 3.3.3
 
 ## Library description:
 Get the name of a Windows version from the release number: `5.1.2600` → `XP`

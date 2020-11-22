@@ -7,16 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait VectorMapLegendItem extends BaseLegendItem {
   
-  /** @name VectorMapLegendItem.color */
+  /**
+    * [descr:VectorMapLegendItem.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name VectorMapLegendItem.end */
+  /**
+    * [descr:VectorMapLegendItem.end]
+    */
   var end: js.UndefOr[Double] = js.native
   
-  /** @name VectorMapLegendItem.size */
+  /**
+    * [descr:VectorMapLegendItem.size]
+    */
   var size: js.UndefOr[Double] = js.native
   
-  /** @name VectorMapLegendItem.start */
+  /**
+    * [descr:VectorMapLegendItem.start]
+    */
   var start: js.UndefOr[Double] = js.native
 }
 object VectorMapLegendItem {

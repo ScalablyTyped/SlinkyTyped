@@ -111,20 +111,35 @@ trait FrameBase
   def url(): String = js.native
   
   /**
-    * Waits for a certain amount of time before resolving.
-    * @param duration The time to wait for.
+    * @remarks
+    *
+    * This method behaves differently depending on the first parameter. If it's a
+    * `string`, it will be treated as a `selector` or `xpath` (if the string
+    * starts with `//`). This method then is a shortcut for
+    * {@link Frame.waitForSelector} or {@link Frame.waitForXPath}.
+    *
+    * If the first argument is a function this method is a shortcut for
+    * {@link Frame.waitForFunction}.
+    *
+    * If the first argument is a `number`, it's treated as a timeout in
+    * milliseconds and the method returns a promise which resolves after the
+    * timeout.
+    *
+    * @param selectorOrFunctionOrTimeout - a selector, predicate or timeout to
+    * wait for.
+    * @param options - optional waiting parameters.
+    * @param args - arguments to pass to `pageFunction`.
+    *
+    * @deprecated Don't use this method directly. Instead use the more explicit
+    * methods available: {@link Frame.waitForSelector},
+    * {@link Frame.waitForXPath}, {@link Frame.waitForFunction} or
+    * {@link Frame.waitForTimeout}.
     */
   def waitFor(duration: Double): js.Promise[Unit] = js.native
   def waitFor(selector: String): js.Promise[ElementHandle[Element]] = js.native
   def waitFor(selector: String, options: WaitForSelectorOptions): js.Promise[ElementHandle[Element]] = js.native
-  /**
-    * Shortcut for waitForSelector and waitForXPath
-    */
   def waitFor(selector: String, options: WaitForSelectorOptionsHidden): js.Promise[ElementHandle[Element] | Null] = js.native
   def waitFor(selector: EvaluateFn[_], options: js.UndefOr[scala.Nothing], args: SerializableOrJSHandle*): js.Promise[JSHandle[_]] = js.native
-  /**
-    * Shortcut for waitForFunction.
-    */
   def waitFor(selector: EvaluateFn[_], options: WaitForSelectorOptions, args: SerializableOrJSHandle*): js.Promise[JSHandle[_]] = js.native
   
   def waitForFunction(fn: EvaluateFn[_], options: js.UndefOr[scala.Nothing], args: SerializableOrJSHandle*): js.Promise[JSHandle[_]] = js.native
@@ -143,6 +158,26 @@ trait FrameBase
   def waitForSelector(selector: String): js.Promise[ElementHandle[Element]] = js.native
   def waitForSelector(selector: String, options: WaitForSelectorOptions): js.Promise[ElementHandle[Element]] = js.native
   def waitForSelector(selector: String, options: WaitForSelectorOptionsHidden): js.Promise[ElementHandle[Element] | Null] = js.native
+  
+  /**
+    * Causes your script to wait for the given number of milliseconds.
+    *
+    * @remarks
+    * It's generally recommended to not wait for a number of seconds, but instead
+    * use {@link Frame.waitForSelector}, {@link Frame.waitForXPath} or
+    * {@link Frame.waitForFunction} to wait for exactly the conditions you want.
+    *
+    * @example
+    *
+    * Wait for 1 second:
+    *
+    * ```
+    * await frame.waitForTimeout(1000);
+    * ```
+    *
+    * @param milliseconds - the number of milliseconds to wait.
+    */
+  def waitForTimeout(milliseconds: Double): js.Promise[Unit] = js.native
   
   def waitForXPath(xpath: String): js.Promise[ElementHandle[Element]] = js.native
   def waitForXPath(xpath: String, options: WaitForSelectorOptions): js.Promise[ElementHandle[Element]] = js.native

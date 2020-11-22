@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait S3Target extends js.Object {
   
   /**
+    * The name of a connection which allows a job or crawler to access data in Amazon S3 within an Amazon Virtual Private Cloud environment (Amazon VPC).
+    */
+  var ConnectionName: js.UndefOr[typingsSlinky.awsSdk.glueMod.ConnectionName] = js.native
+  
+  /**
     * A list of glob patterns used to exclude from the crawl. For more information, see Catalog Tables with a Crawler.
     */
   var Exclusions: js.UndefOr[PathList] = js.native
@@ -39,6 +44,12 @@ object S3Target {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setConnectionName(value: ConnectionName): Self = this.set("ConnectionName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConnectionName: Self = this.set("ConnectionName", js.undefined)
     
     @scala.inline
     def setExclusionsVarargs(value: Path*): Self = this.set("Exclusions", js.Array(value :_*))

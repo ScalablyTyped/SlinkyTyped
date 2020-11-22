@@ -1,5 +1,6 @@
 package typingsSlinky.daterangepicker.mod
 
+import org.scalajs.dom.raw.Event
 import typingsSlinky.daterangepicker.anon.DefaultOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,5 +26,10 @@ object global extends js.Object {
         /* callback */ js.UndefOr[DataRangePickerCallback], 
         this.type
       ]) with DefaultOptions = js.native
+    
+    def on(
+      events: DatepickerEvents,
+      handler: js.Function2[/* event */ Event, /* picker */ DateRangePicker_, Unit]
+    ): JQuery = js.native
   }
 }

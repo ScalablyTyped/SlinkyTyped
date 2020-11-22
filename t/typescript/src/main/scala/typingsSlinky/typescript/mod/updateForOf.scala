@@ -15,9 +15,10 @@ object updateForOf extends js.Object {
     expression: Expression,
     statement: Statement
   ): ForOfStatement = js.native
+  /** @deprecated Use `factory.updateForOf` or the factory supplied by your transformation context instead. */
   def apply(
     node: ForOfStatement,
-    awaitModifier: AwaitKeywordToken,
+    awaitModifier: AwaitKeyword,
     initializer: ForInitializer,
     expression: Expression,
     statement: Statement

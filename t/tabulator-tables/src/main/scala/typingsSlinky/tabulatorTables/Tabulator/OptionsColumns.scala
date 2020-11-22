@@ -1,5 +1,7 @@
 package typingsSlinky.tabulatorTables.Tabulator
 
+import typingsSlinky.std.Record
+import typingsSlinky.tabulatorTables.anon.PartialColumnDefinition
 import typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`false`
 import typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`true`
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.both
@@ -25,6 +27,13 @@ trait OptionsColumns extends js.Object {
     * If you set the autoColumns option to true, every time data is loaded into the table through the data option or through the setData function, Tabulator will examine the first row of the data and build columns to match that data.
     */
   var autoColumns: js.UndefOr[Boolean] = js.native
+  
+  var autoColumnsDefinitions: js.UndefOr[
+    (js.Function1[
+      /* columnDefinitions */ js.UndefOr[js.Array[ColumnDefinition]], 
+      js.Array[ColumnDefinition]
+    ]) | js.Array[ColumnDefinition] | (Record[String, PartialColumnDefinition])
+  ] = js.native
   
   /** By default column calculations are shown at the top and bottom of the table, unless row grouping is enabled, in which case they are shown at the top and bottom of each group.
     The columnCalcs option lets you decided where the calculations should be displayed, it can take one of four values:
@@ -62,8 +71,12 @@ trait OptionsColumns extends js.Object {
   /** The default placeholder text used for input elements can be set using the headerFilterPlaceholder option in the table definition */
   var headerFilterPlaceholder: js.UndefOr[String] = js.native
   
+  var headerHozAlign: js.UndefOr[ColumnDefinitionAlign] = js.native
+  
   /** The headerSort option can now be set in the table options to affect all columns as well as in column definitions. */
   var headerSort: js.UndefOr[Boolean] = js.native
+  
+  var headerSortElement: js.UndefOr[String] = js.native
   
   /** The headerSortTristate option can now be set in the table options to affect all columns as well as in column definitions.*/
   var headerSortTristate: js.UndefOr[Boolean] = js.native
@@ -159,6 +172,25 @@ object OptionsColumns {
     def deleteAutoColumns: Self = this.set("autoColumns", js.undefined)
     
     @scala.inline
+    def setAutoColumnsDefinitionsVarargs(value: ColumnDefinition*): Self = this.set("autoColumnsDefinitions", js.Array(value :_*))
+    
+    @scala.inline
+    def setAutoColumnsDefinitionsFunction1(
+      value: /* columnDefinitions */ js.UndefOr[js.Array[ColumnDefinition]] => js.Array[ColumnDefinition]
+    ): Self = this.set("autoColumnsDefinitions", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setAutoColumnsDefinitions(
+      value: (js.Function1[
+          /* columnDefinitions */ js.UndefOr[js.Array[ColumnDefinition]], 
+          js.Array[ColumnDefinition]
+        ]) | js.Array[ColumnDefinition] | (Record[String, PartialColumnDefinition])
+    ): Self = this.set("autoColumnsDefinitions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoColumnsDefinitions: Self = this.set("autoColumnsDefinitions", js.undefined)
+    
+    @scala.inline
     def setColumnCalcs(value: Boolean | both | table | group): Self = this.set("columnCalcs", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -222,10 +254,22 @@ object OptionsColumns {
     def deleteHeaderFilterPlaceholder: Self = this.set("headerFilterPlaceholder", js.undefined)
     
     @scala.inline
+    def setHeaderHozAlign(value: ColumnDefinitionAlign): Self = this.set("headerHozAlign", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderHozAlign: Self = this.set("headerHozAlign", js.undefined)
+    
+    @scala.inline
     def setHeaderSort(value: Boolean): Self = this.set("headerSort", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHeaderSort: Self = this.set("headerSort", js.undefined)
+    
+    @scala.inline
+    def setHeaderSortElement(value: String): Self = this.set("headerSortElement", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderSortElement: Self = this.set("headerSortElement", js.undefined)
     
     @scala.inline
     def setHeaderSortTristate(value: Boolean): Self = this.set("headerSortTristate", value.asInstanceOf[js.Any])

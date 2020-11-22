@@ -39,7 +39,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
     
     /**
       * Create a dynamic uniform buffer
-      * @see http://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
+      * @see https://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
       * @param elements defines the content of the uniform buffer
       * @returns the webGL uniform buffer
       */
@@ -47,7 +47,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
     
     /**
       * Create an uniform buffer
-      * @see http://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
+      * @see https://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
       * @param elements defines the content of the uniform buffer
       * @returns the webGL uniform buffer
       */
@@ -55,7 +55,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
     
     /**
       * Update an existing uniform buffer
-      * @see http://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
+      * @see https://doc.babylonjs.com/features/webgl2#uniform-buffer-objets
       * @param uniformBuffer defines the target uniform buffer
       * @param elements defines the content to update
       * @param offset defines the offset in the uniform buffer where update should start

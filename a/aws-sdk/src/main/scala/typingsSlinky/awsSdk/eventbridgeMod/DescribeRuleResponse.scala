@@ -13,12 +13,17 @@ trait DescribeRuleResponse extends js.Object {
   var Arn: js.UndefOr[RuleArn] = js.native
   
   /**
+    * The account ID of the user that created the rule. If you use PutRule to put a rule on an event bus in another account, the other account is the owner of the rule, and the rule ARN includes the account ID for that account. However, the value for CreatedBy is the account ID as the account that created the rule in the other account.
+    */
+  var CreatedBy: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.CreatedBy] = js.native
+  
+  /**
     * The description of the rule.
     */
   var Description: js.UndefOr[RuleDescription] = js.native
   
   /**
-    * The event bus associated with the rule.
+    * The name of the event bus associated with the rule.
     */
   var EventBusName: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.EventBusName] = js.native
   
@@ -80,6 +85,12 @@ object DescribeRuleResponse {
     
     @scala.inline
     def deleteArn: Self = this.set("Arn", js.undefined)
+    
+    @scala.inline
+    def setCreatedBy(value: CreatedBy): Self = this.set("CreatedBy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCreatedBy: Self = this.set("CreatedBy", js.undefined)
     
     @scala.inline
     def setDescription(value: RuleDescription): Self = this.set("Description", value.asInstanceOf[js.Any])

@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EditionUpgradeConfiguration extends DeviceConfiguration {
   
   // Edition Upgrade License File Content.
-  var license: js.UndefOr[String] = js.native
+  var license: js.UndefOr[NullableOption[String]] = js.native
   
   // Edition Upgrade License Type. Possible values are: productKey, licenseFile.
   var licenseType: js.UndefOr[EditionUpgradeLicenseType] = js.native
   
   // Edition Upgrade Product Key.
-  var productKey: js.UndefOr[String] = js.native
+  var productKey: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Edition Upgrade Target Edition. Possible values are: windows10Enterprise, windows10EnterpriseN, windows10Education,
@@ -48,10 +48,13 @@ object EditionUpgradeConfiguration {
     }
     
     @scala.inline
-    def setLicense(value: String): Self = this.set("license", value.asInstanceOf[js.Any])
+    def setLicense(value: NullableOption[String]): Self = this.set("license", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLicense: Self = this.set("license", js.undefined)
+    
+    @scala.inline
+    def setLicenseNull: Self = this.set("license", null)
     
     @scala.inline
     def setLicenseType(value: EditionUpgradeLicenseType): Self = this.set("licenseType", value.asInstanceOf[js.Any])
@@ -60,10 +63,13 @@ object EditionUpgradeConfiguration {
     def deleteLicenseType: Self = this.set("licenseType", js.undefined)
     
     @scala.inline
-    def setProductKey(value: String): Self = this.set("productKey", value.asInstanceOf[js.Any])
+    def setProductKey(value: NullableOption[String]): Self = this.set("productKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProductKey: Self = this.set("productKey", js.undefined)
+    
+    @scala.inline
+    def setProductKeyNull: Self = this.set("productKey", null)
     
     @scala.inline
     def setTargetEdition(value: Windows10EditionType): Self = this.set("targetEdition", value.asInstanceOf[js.Any])

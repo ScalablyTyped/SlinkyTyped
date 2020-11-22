@@ -69,7 +69,9 @@ class Map_ protected () extends Evented {
   def getBounds(): LatLngBounds_ = js.native
   
   def getBoundsZoom(bounds: LatLngBoundsExpression): Double = js.native
+  def getBoundsZoom(bounds: LatLngBoundsExpression, inside: js.UndefOr[scala.Nothing], padding: Point_): Double = js.native
   def getBoundsZoom(bounds: LatLngBoundsExpression, inside: Boolean): Double = js.native
+  def getBoundsZoom(bounds: LatLngBoundsExpression, inside: Boolean, padding: Point_): Double = js.native
   
   // Methods for getting map state
   def getCenter(): LatLng_ = js.native

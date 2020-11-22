@@ -1,7 +1,7 @@
 
 # Scala.js typings for kurento-client
 
-Typings are for version 6.12
+Typings are for version 6.14
 
 ## Library description:
 JavaScript Client API for Kurento Media Server

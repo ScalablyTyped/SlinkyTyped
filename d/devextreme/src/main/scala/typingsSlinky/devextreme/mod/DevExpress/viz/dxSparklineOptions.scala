@@ -22,70 +22,114 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSparklineOptions extends BaseSparklineOptions[dxSparkline] {
   
-  /** @name dxSparkline.Options.argumentField */
+  /**
+    * [descr:dxSparkline.Options.argumentField]
+    */
   var argumentField: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.barNegativeColor */
+  /**
+    * [descr:dxSparkline.Options.barNegativeColor]
+    */
   var barNegativeColor: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.barPositiveColor */
+  /**
+    * [descr:dxSparkline.Options.barPositiveColor]
+    */
   var barPositiveColor: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.dataSource */
+  /**
+    * [descr:dxSparkline.Options.dataSource]
+    */
   var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.native
   
-  /** @name dxSparkline.Options.firstLastColor */
+  /**
+    * [descr:dxSparkline.Options.firstLastColor]
+    */
   var firstLastColor: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.ignoreEmptyPoints */
+  /**
+    * [descr:dxSparkline.Options.ignoreEmptyPoints]
+    */
   var ignoreEmptyPoints: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSparkline.Options.lineColor */
+  /**
+    * [descr:dxSparkline.Options.lineColor]
+    */
   var lineColor: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.lineWidth */
+  /**
+    * [descr:dxSparkline.Options.lineWidth]
+    */
   var lineWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxSparkline.Options.lossColor */
+  /**
+    * [descr:dxSparkline.Options.lossColor]
+    */
   var lossColor: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.maxColor */
+  /**
+    * [descr:dxSparkline.Options.maxColor]
+    */
   var maxColor: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.maxValue */
+  /**
+    * [descr:dxSparkline.Options.maxValue]
+    */
   var maxValue: js.UndefOr[Double] = js.native
   
-  /** @name dxSparkline.Options.minColor */
+  /**
+    * [descr:dxSparkline.Options.minColor]
+    */
   var minColor: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.minValue */
+  /**
+    * [descr:dxSparkline.Options.minValue]
+    */
   var minValue: js.UndefOr[Double] = js.native
   
-  /** @name dxSparkline.Options.pointColor */
+  /**
+    * [descr:dxSparkline.Options.pointColor]
+    */
   var pointColor: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.pointSize */
+  /**
+    * [descr:dxSparkline.Options.pointSize]
+    */
   var pointSize: js.UndefOr[Double] = js.native
   
-  /** @name dxSparkline.Options.pointSymbol */
+  /**
+    * [descr:dxSparkline.Options.pointSymbol]
+    */
   var pointSymbol: js.UndefOr[circle | cross | polygon | square | triangle] = js.native
   
-  /** @name dxSparkline.Options.showFirstLast */
+  /**
+    * [descr:dxSparkline.Options.showFirstLast]
+    */
   var showFirstLast: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSparkline.Options.showMinMax */
+  /**
+    * [descr:dxSparkline.Options.showMinMax]
+    */
   var showMinMax: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSparkline.Options.type */
+  /**
+    * [descr:dxSparkline.Options.type]
+    */
   var `type`: js.UndefOr[area | bar | line | spline | splinearea | steparea | stepline | winloss] = js.native
   
-  /** @name dxSparkline.Options.valueField */
+  /**
+    * [descr:dxSparkline.Options.valueField]
+    */
   var valueField: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.winColor */
+  /**
+    * [descr:dxSparkline.Options.winColor]
+    */
   var winColor: js.UndefOr[String] = js.native
   
-  /** @name dxSparkline.Options.winlossThreshold */
+  /**
+    * [descr:dxSparkline.Options.winlossThreshold]
+    */
   var winlossThreshold: js.UndefOr[Double] = js.native
 }
 object dxSparklineOptions {

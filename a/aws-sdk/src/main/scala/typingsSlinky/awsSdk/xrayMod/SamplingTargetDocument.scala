@@ -18,7 +18,7 @@ trait SamplingTargetDocument extends js.Object {
   var Interval: js.UndefOr[NullableInteger] = js.native
   
   /**
-    * The number of requests per second that X-Ray allocated this service.
+    * The number of requests per second that X-Ray allocated for this service.
     */
   var ReservoirQuota: js.UndefOr[NullableInteger] = js.native
   

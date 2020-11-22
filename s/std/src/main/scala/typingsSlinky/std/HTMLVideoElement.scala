@@ -16,6 +16,11 @@ trait HTMLVideoElement extends HTMLMediaElement {
   var height: Double = js.native
   
   /**
+    * Gets or sets the playsinline of the video element. for example, On iPhone, video elements will now be allowed to play inline, and will not automatically enter fullscreen mode when playback begins.
+    */
+  var playsInline: scala.Boolean = js.native
+  
+  /**
     * Gets or sets a URL of an image to display, for example, like a movie poster. This can be a still frame from the video, or another image if no video data is available.
     */
   var poster: java.lang.String = js.native

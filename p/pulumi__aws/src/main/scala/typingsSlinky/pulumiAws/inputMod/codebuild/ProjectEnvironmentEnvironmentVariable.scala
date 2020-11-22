@@ -14,7 +14,7 @@ trait ProjectEnvironmentEnvironmentVariable extends js.Object {
   var name: Input[String] = js.native
   
   /**
-    * The type of environment variable. Valid values: `PARAMETER_STORE`, `PLAINTEXT`.
+    * The type of environment variable. Valid values: `PARAMETER_STORE`, `PLAINTEXT`, and `SECRETS_MANAGER`.
     */
   var `type`: js.UndefOr[Input[String]] = js.native
   

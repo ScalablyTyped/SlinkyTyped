@@ -26,7 +26,7 @@ trait BorderColor0 extends js.Object {
     * "#c23531"
     * @see https://echarts.apache.org/en/option.html#series-candlestick.data.emphasis.itemStyle.borderColor
     */
-  var borderColor: js.UndefOr[String] = js.native
+  var borderColor: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
   /**
     * Border color of bearish candle stick.
@@ -79,7 +79,7 @@ trait BorderColor0 extends js.Object {
     * "#c23531"
     * @see https://echarts.apache.org/en/option.html#series-candlestick.data.emphasis.itemStyle.color
     */
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
   /**
     * Fill color of bearish candle stick.
@@ -132,7 +132,7 @@ trait BorderColor0 extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.data.emphasis.itemStyle.shadowColor
     */
-  var shadowColor: js.UndefOr[String] = js.native
+  var shadowColor: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
   /**
     * Offset distance on the horizontal direction of shadow.
@@ -174,7 +174,7 @@ object BorderColor0 {
     }
     
     @scala.inline
-    def setBorderColor(value: String): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    def setBorderColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBorderColor: Self = this.set("borderColor", js.undefined)
@@ -192,7 +192,7 @@ object BorderColor0 {
     def deleteBorderWidth: Self = this.set("borderWidth", js.undefined)
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
@@ -216,7 +216,7 @@ object BorderColor0 {
     def deleteShadowBlur: Self = this.set("shadowBlur", js.undefined)
     
     @scala.inline
-    def setShadowColor(value: String): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
+    def setShadowColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShadowColor: Self = this.set("shadowColor", js.undefined)

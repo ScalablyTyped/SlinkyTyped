@@ -41,10 +41,16 @@ object interleavedBufferAttributeMod extends js.Object {
     
     var itemSize: Double = js.native
     
+    /**
+    	 * @default ''
+    	 */
     var name: String = js.native
     
     def needsUpdate_=(value: Boolean): Unit = js.native
     
+    /**
+    	 * @default false
+    	 */
     var normalized: Boolean = js.native
     
     var offset: Double = js.native

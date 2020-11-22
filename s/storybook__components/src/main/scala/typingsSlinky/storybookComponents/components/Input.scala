@@ -25,8 +25,13 @@ import typingsSlinky.storybookComponents.anon.PropsWithChildrenPickInpu
 import typingsSlinky.storybookComponents.inputMod.Alignments
 import typingsSlinky.storybookComponents.inputMod.Sizes
 import typingsSlinky.storybookComponents.inputMod.ValidationStates
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`additions removals`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`additions text`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`inline`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`removals additions`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`removals text`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`text additions`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`text removals`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.additions
 import typingsSlinky.storybookComponents.storybookComponentsStrings.all
 import typingsSlinky.storybookComponents.storybookComponentsStrings.ascending
@@ -219,7 +224,9 @@ object Input {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -405,7 +412,7 @@ object Input {
     def headers(value: String): this.type = set("headers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])

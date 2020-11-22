@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ModelWithCache
-  extends Model[js.Any, ModelSetOptions] {
+  extends Model[js.Any, ModelSetOptions, js.Object] {
   
   def fetch(options: ModelFetchWithCacheOptions): JQueryXHR = js.native
 }

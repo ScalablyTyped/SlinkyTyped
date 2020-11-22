@@ -1,6 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
-import typingsSlinky.firefoxWebextBrowser.anon.NameToken
+import typingsSlinky.firefoxWebextBrowser.anon.Name
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object pkcs11 extends js.Object {
   
   /** Enumerate a module's slots, each with their name and whether a token is present */
-  def getModuleSlots(name: String): js.Promise[NameToken] = js.native
+  def getModuleSlots(name: String): js.Promise[Name] = js.native
   
   /** Install a PKCS#11 module with a given name */
   def installModule(name: String): js.Promise[Unit] = js.native

@@ -28,16 +28,14 @@ import typingsSlinky.awsSdkClientGlacierNode.setVaultAccessPolicyExceptionsUnion
 import typingsSlinky.awsSdkClientGlacierNode.setVaultNotificationsExceptionsUnionMod.SetVaultNotificationsExceptionsUnion
 import typingsSlinky.awsSdkClientGlacierNode.uploadArchiveExceptionsUnionMod.UploadArchiveExceptionsUnion
 import typingsSlinky.awsSdkClientGlacierNode.uploadMultipartPartExceptionsUnionMod.UploadMultipartPartExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ResourceNotFoundExceptionDetails> * / any */ @js.native
 trait ResourceNotFoundException
-  extends ServiceException[ResourceNotFoundExceptionDetails]
-     with AbortMultipartUploadExceptionsUnion
+  extends AbortMultipartUploadExceptionsUnion
      with AbortVaultLockExceptionsUnion
      with AddTagsToVaultExceptionsUnion
      with CompleteMultipartUploadExceptionsUnion
@@ -66,19 +64,15 @@ trait ResourceNotFoundException
      with UploadArchiveExceptionsUnion
      with UploadMultipartPartExceptionsUnion {
   
-  @JSName("name")
-  var name_ResourceNotFoundException: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.ResourceNotFoundException = js.native
+  var name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.ResourceNotFoundException = js.native
 }
 object ResourceNotFoundException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: ResourceNotFoundExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.ResourceNotFoundException
   ): ResourceNotFoundException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceNotFoundException]
   }
   

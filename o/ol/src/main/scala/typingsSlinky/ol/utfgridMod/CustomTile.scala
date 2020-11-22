@@ -22,10 +22,20 @@ class CustomTile protected ()
     jsonp: Boolean
   ) = this()
   
+  /**
+    * Calls the callback (synchronously by default) with the available data
+    * for given coordinate (or null if not yet loaded).
+    */
   def forDataAtCoordinate(coordinate: Coordinate, callback: js.Function1[/* p0 */ js.Any, Unit]): Unit = js.native
   def forDataAtCoordinate(coordinate: Coordinate, callback: js.Function1[/* p0 */ js.Any, Unit], opt_request: Boolean): Unit = js.native
   
+  /**
+    * Synchronously returns data at given coordinate (if available).
+    */
   def getData(coordinate: Coordinate): js.Any = js.native
   
+  /**
+    * Get the image element for this tile.
+    */
   def getImage(): HTMLImageElement = js.native
 }

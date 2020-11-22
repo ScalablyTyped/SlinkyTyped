@@ -96,7 +96,7 @@ class VpcEndpoint protected () extends CustomResource {
   val state: Output_[String] = js.native
   
   /**
-    * The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
+    * The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
     */
   val subnetIds: Output_[js.Array[String]] = js.native
   
@@ -106,7 +106,7 @@ class VpcEndpoint protected () extends CustomResource {
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
   /**
-    * The VPC endpoint type, `Gateway` or `Interface`. Defaults to `Gateway`.
+    * The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
     */
   val vpcEndpointType: Output_[js.UndefOr[String]] = js.native
   

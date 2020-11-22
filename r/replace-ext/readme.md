@@ -1,7 +1,7 @@
 
 # Scala.js typings for replace-ext
 
-Typings are for version 0.0.1
+Typings are for version 2.0
 
 ## Library description:
 Replaces a file extension with another one

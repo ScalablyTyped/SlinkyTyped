@@ -39,6 +39,10 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.GetResponseBodyForInt
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.GetResponseBodyForInterceptionResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.GetResponseBodyRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.GetResponseBodyResponse
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.GetSecurityIsolationStatusRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.GetSecurityIsolationStatusResponse
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.LoadNetworkResourceRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.LoadNetworkResourceResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.LoadingFailedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.LoadingFinishedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.ReplayXHRRequest
@@ -51,6 +55,7 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.ResponseReceivedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.ResponseReceivedExtraInfoEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SearchInResponseBodyRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SearchInResponseBodyResponse
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SetAttachDebugHeaderRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SetBlockedURLsRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SetBypassServiceWorkerRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SetCacheDisabledRequest
@@ -163,6 +168,16 @@ trait NetworkApi extends js.Object {
     * Returns content served for the given currently intercepted request.
     */
   def getResponseBodyForInterception(params: GetResponseBodyForInterceptionRequest): js.Promise[GetResponseBodyForInterceptionResponse] = js.native
+  
+  /**
+    * Returns information about the COEP/COOP isolation status.
+    */
+  def getSecurityIsolationStatus(params: GetSecurityIsolationStatusRequest): js.Promise[GetSecurityIsolationStatusResponse] = js.native
+  
+  /**
+    * Fetches the resource and returns the content.
+    */
+  def loadNetworkResource(params: LoadNetworkResourceRequest): js.Promise[LoadNetworkResourceResponse] = js.native
   
   /**
     * Fired when data chunk was received over the network.
@@ -305,6 +320,11 @@ trait NetworkApi extends js.Object {
     * Searches for given string in response content.
     */
   def searchInResponseBody(params: SearchInResponseBodyRequest): js.Promise[SearchInResponseBodyResponse] = js.native
+  
+  /**
+    * Specifies whether to sned a debug header to all outgoing requests.
+    */
+  def setAttachDebugHeader(params: SetAttachDebugHeaderRequest): js.Promise[Unit] = js.native
   
   /**
     * Blocks URLs from loading.

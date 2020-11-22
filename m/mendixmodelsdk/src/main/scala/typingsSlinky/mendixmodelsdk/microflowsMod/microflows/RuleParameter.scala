@@ -1,16 +1,17 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/parameter relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/parameter relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -27,15 +28,12 @@ class RuleParameter protected () extends MicroflowParameterBase {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsRule")
   def containerAsRule_MRuleParameter: Rule = js.native
-  
-  @JSName("model")
-  var model_FRuleParameter: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.RuleParameter")

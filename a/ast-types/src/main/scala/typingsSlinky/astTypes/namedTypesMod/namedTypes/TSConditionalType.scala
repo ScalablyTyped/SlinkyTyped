@@ -9,24 +9,30 @@ import typingsSlinky.astTypes.kindsMod.TSTypeKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.TSType, 'type'> */
+@js.native
 trait TSConditionalType
   extends ASTNode
      with NodeKind
      with PrintableKind
      with TSTypeKind {
-  var checkType: TSTypeKind
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var extendsType: TSTypeKind
-  var falseType: TSTypeKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var trueType: TSTypeKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSConditionalType
+  
+  var checkType: TSTypeKind = js.native
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var extendsType: TSTypeKind = js.native
+  
+  var falseType: TSTypeKind = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var trueType: TSTypeKind = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSConditionalType = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSConditionalType")
 @js.native
 object TSConditionalType extends TopLevel[Type[TSConditionalType]]
-

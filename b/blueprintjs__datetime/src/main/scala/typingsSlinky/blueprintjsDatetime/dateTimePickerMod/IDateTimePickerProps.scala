@@ -43,7 +43,7 @@ trait IDateTimePickerProps extends IProps {
   /**
     * The currently set date and time. If this prop is provided, the component acts in a controlled manner.
     */
-  var value: js.UndefOr[js.Date] = js.native
+  var value: js.UndefOr[js.Date | Null] = js.native
 }
 object IDateTimePickerProps {
   
@@ -103,5 +103,8 @@ object IDateTimePickerProps {
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

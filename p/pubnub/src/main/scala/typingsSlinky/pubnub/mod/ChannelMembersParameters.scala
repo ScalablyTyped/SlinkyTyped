@@ -1,7 +1,7 @@
 package typingsSlinky.pubnub.mod
 
 import typingsSlinky.pubnub.anon.ChannelFields
-import typingsSlinky.pubnub.anon.Prev
+import typingsSlinky.pubnub.anon.Next
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +15,7 @@ trait ChannelMembersParameters extends js.Object {
   
   var limit: js.UndefOr[Double] = js.native
   
-  var page: js.UndefOr[Prev] = js.native
+  var page: js.UndefOr[Next] = js.native
   
   var sort: js.UndefOr[js.Object] = js.native
 }
@@ -61,7 +61,7 @@ object ChannelMembersParameters {
     def deleteLimit: Self = this.set("limit", js.undefined)
     
     @scala.inline
-    def setPage(value: Prev): Self = this.set("page", value.asInstanceOf[js.Any])
+    def setPage(value: Next): Self = this.set("page", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePage: Self = this.set("page", js.undefined)

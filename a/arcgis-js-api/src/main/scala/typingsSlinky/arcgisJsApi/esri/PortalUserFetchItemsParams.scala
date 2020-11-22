@@ -17,38 +17,30 @@ trait PortalUserFetchItemsParams extends Object {
   var folder: js.UndefOr[PortalFolder] = js.native
   
   /**
-    * The maximum number of results to be included in the result set response. The maximum value allowed is 100. The start property combined with the num property can be used to paginate the search results.
+    * The maximum number of results to be included in the result set response.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#fetchItems)
-    *
-    * @default 10
     */
   var num: js.UndefOr[Double] = js.native
   
   /**
-    * A comma-delimited list of fields to sort by. Allowed values are `created`, `modified`, `size`, and `type`.
+    * A comma-delimited list of fields to sort by.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#fetchItems)
-    *
-    * @default created
     */
   var sortField: js.UndefOr[String] = js.native
   
   /**
-    * The order in which to sort the results. Allowed values are `asc` for ascending order and `desc` for descending order.
+    * The order in which to sort the results.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#fetchItems)
-    *
-    * @default asc
     */
   var sortOrder: js.UndefOr[String] = js.native
   
   /**
-    * The index of the first entry in the result set response. The index is 1-based.
+    * The index of the first entry in the result set response.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#fetchItems)
-    *
-    * @default 1
     */
   var start: js.UndefOr[Double] = js.native
 }

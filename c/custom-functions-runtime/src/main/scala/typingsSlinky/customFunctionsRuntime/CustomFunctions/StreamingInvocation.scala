@@ -16,7 +16,8 @@ trait StreamingInvocation[ResultType] extends CancelableInvocation {
   
   /**
     * Set the result for the custom function. May be called more than once.
+    * [Api set: CustomFunctionsRuntime 1.1]
     */
   def setResult(value: ResultType): Unit = js.native
-  def setResult(value: js.Error): Unit = js.native
+  def setResult(value: Error): Unit = js.native
 }

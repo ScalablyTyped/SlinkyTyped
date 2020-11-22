@@ -58,6 +58,11 @@ trait ClientVpnConnection extends js.Object {
   var IngressPackets: js.UndefOr[String] = js.native
   
   /**
+    * The statuses returned by the client connect handler for posture compliance, if applicable.
+    */
+  var PostureComplianceStatuses: js.UndefOr[ValueStringList] = js.native
+  
+  /**
     * The current state of the client connection.
     */
   var Status: js.UndefOr[ClientVpnConnectionStatus] = js.native
@@ -154,6 +159,15 @@ object ClientVpnConnection {
     
     @scala.inline
     def deleteIngressPackets: Self = this.set("IngressPackets", js.undefined)
+    
+    @scala.inline
+    def setPostureComplianceStatusesVarargs(value: String*): Self = this.set("PostureComplianceStatuses", js.Array(value :_*))
+    
+    @scala.inline
+    def setPostureComplianceStatuses(value: ValueStringList): Self = this.set("PostureComplianceStatuses", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePostureComplianceStatuses: Self = this.set("PostureComplianceStatuses", js.undefined)
     
     @scala.inline
     def setStatus(value: ClientVpnConnectionStatus): Self = this.set("Status", value.asInstanceOf[js.Any])

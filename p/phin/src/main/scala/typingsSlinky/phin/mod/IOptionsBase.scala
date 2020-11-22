@@ -1,5 +1,6 @@
 package typingsSlinky.phin.mod
 
+import org.scalajs.dom.experimental.URL
 import typingsSlinky.node.httpMod.ClientRequestArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,12 +29,12 @@ trait IOptionsBase extends js.Object {
   
   var timeout: js.UndefOr[Double] = js.native
   
-  var url: String = js.native
+  var url: String | URL = js.native
 }
 object IOptionsBase {
   
   @scala.inline
-  def apply(url: String): IOptionsBase = {
+  def apply(url: String | URL): IOptionsBase = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptionsBase]
   }
@@ -54,7 +55,10 @@ object IOptionsBase {
     }
     
     @scala.inline
-    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrlURL(value: URL): Self = this.set("url", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUrl(value: String | URL): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCompression(value: Boolean): Self = this.set("compression", value.asInstanceOf[js.Any])

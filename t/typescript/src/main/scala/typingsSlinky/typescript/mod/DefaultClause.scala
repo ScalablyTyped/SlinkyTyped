@@ -10,10 +10,10 @@ trait DefaultClause
      with CaseOrDefaultClause {
   
   @JSName("kind")
-  var kind_DefaultClause: typingsSlinky.typescript.mod.SyntaxKind.DefaultClause = js.native
+  val kind_DefaultClause: typingsSlinky.typescript.mod.SyntaxKind.DefaultClause = js.native
   
   @JSName("parent")
-  var parent_DefaultClause: CaseBlock = js.native
+  val parent_DefaultClause: CaseBlock = js.native
   
-  var statements: NodeArray[Statement] = js.native
+  val statements: NodeArray[Statement] = js.native
 }

@@ -1143,6 +1143,9 @@ object semanticUiReactStrings {
   def child: child = "child".asInstanceOf[child]
   
   @scala.inline
+  def children: children = "children".asInstanceOf[children]
+  
+  @scala.inline
   def chile: chile = "chile".asInstanceOf[chile]
   
   @scala.inline
@@ -7499,6 +7502,9 @@ object semanticUiReactStrings {
   sealed trait child
     extends SemanticICONS
        with typingsSlinky.semanticUiReact.genericMod.SemanticICONS
+  
+  @js.native
+  sealed trait children extends js.Object
   
   @js.native
   sealed trait chile extends FlagNameValues

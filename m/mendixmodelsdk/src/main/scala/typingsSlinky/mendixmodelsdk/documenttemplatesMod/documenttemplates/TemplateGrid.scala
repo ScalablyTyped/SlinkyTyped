@@ -1,16 +1,18 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/template-grid-document-template relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/template-grid-document-template relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.TemplateGrid")
 @js.native
@@ -20,15 +22,12 @@ class TemplateGrid protected () extends Grid {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def evenRowsContents: TemplateGridContents | Null = js.native
   def evenRowsContents_=(newValue: TemplateGridContents | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FTemplateGrid: IModel = js.native
   
   def numberOfColumns: Double = js.native
   def numberOfColumns_=(newValue: Double): Unit = js.native

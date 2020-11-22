@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object decode extends js.Object {
   
-  def apply(geohash: String): Point = js.native
+  def apply(locationId: String): PointWithElevation = js.native
 }

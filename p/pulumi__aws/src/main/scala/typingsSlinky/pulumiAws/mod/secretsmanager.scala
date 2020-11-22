@@ -6,6 +6,8 @@ import typingsSlinky.pulumiAws.getSecretVersionMod.GetSecretVersionArgs
 import typingsSlinky.pulumiAws.getSecretVersionMod.GetSecretVersionResult
 import typingsSlinky.pulumiAws.secretMod.SecretArgs
 import typingsSlinky.pulumiAws.secretMod.SecretState
+import typingsSlinky.pulumiAws.secretPolicyMod.SecretPolicyArgs
+import typingsSlinky.pulumiAws.secretPolicyMod.SecretPolicyState
 import typingsSlinky.pulumiAws.secretRotationMod.SecretRotationArgs
 import typingsSlinky.pulumiAws.secretRotationMod.SecretRotationState
 import typingsSlinky.pulumiAws.secretVersionMod.SecretVersionArgs
@@ -73,6 +75,44 @@ object secretsmanager extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/secretsmanager/secret.Secret */ Boolean = js.native
+  }
+  
+  @js.native
+  class SecretPolicy protected ()
+    extends typingsSlinky.pulumiAws.secretsmanagerMod.SecretPolicy {
+    /**
+      * Create a SecretPolicy resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: SecretPolicyArgs) = this()
+    def this(name: String, args: SecretPolicyArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object SecretPolicy extends js.Object {
+    
+    /**
+      * Get an existing SecretPolicy resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.secretPolicyMod.SecretPolicy = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretPolicyMod.SecretPolicy = js.native
+    def get(name: String, id: Input[ID], state: SecretPolicyState): typingsSlinky.pulumiAws.secretPolicyMod.SecretPolicy = js.native
+    def get(name: String, id: Input[ID], state: SecretPolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.secretPolicyMod.SecretPolicy = js.native
+    
+    /**
+      * Returns true if the given object is an instance of SecretPolicy.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/secretsmanager/secretPolicy.SecretPolicy */ Boolean = js.native
   }
   
   @js.native

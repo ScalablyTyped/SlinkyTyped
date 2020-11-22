@@ -6,13 +6,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object typesMod {
   
-  type ClassName = java.lang.String | scala.Null
+  type ClassName = (js.Function1[
+    /* context */ js.UndefOr[typingsSlinky.reactToastify.anon.DefaultClassName], 
+    java.lang.String
+  ]) | java.lang.String
   
   type Id = scala.Double | java.lang.String
   
   type Nullable[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in keyof T ]: T[P] | null}
     */ typingsSlinky.reactToastify.reactToastifyStrings.Nullable with org.scalablytyped.runtime.TopLevel[T]
+  
+  type ToastClassName = (js.Function1[
+    /* context */ js.UndefOr[typingsSlinky.reactToastify.anon.Position], 
+    java.lang.String
+  ]) | java.lang.String
   
   type ToastContent = slinky.core.facade.ReactElement | (js.Function1[
     /* props */ typingsSlinky.reactToastify.typesMod.ToastContentProps, 

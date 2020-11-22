@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait VectorMapProjectionConfig extends js.Object {
   
-  /** @name VectorMapProjectionConfig.aspectRatio */
+  /**
+    * [descr:VectorMapProjectionConfig.aspectRatio]
+    */
   var aspectRatio: js.UndefOr[Double] = js.native
   
-  /** @name VectorMapProjectionConfig.from */
+  /**
+    * [descr:VectorMapProjectionConfig.from]
+    */
   var from: js.UndefOr[js.Function1[/* coordinates */ js.Array[Double], js.Array[Double]]] = js.native
   
-  /** @name VectorMapProjectionConfig.to */
+  /**
+    * [descr:VectorMapProjectionConfig.to]
+    */
   var to: js.UndefOr[js.Function1[/* coordinates */ js.Array[Double], js.Array[Double]]] = js.native
 }
 object VectorMapProjectionConfig {

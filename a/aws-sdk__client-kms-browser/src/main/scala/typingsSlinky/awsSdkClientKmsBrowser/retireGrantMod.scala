@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientKmsBrowser
 
-import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object retireGrantMod extends js.Object {
   
-  val RetireGrant: OperationModel = js.native
+  val RetireGrant: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _Operation_ */ js.Any = js.native
 }

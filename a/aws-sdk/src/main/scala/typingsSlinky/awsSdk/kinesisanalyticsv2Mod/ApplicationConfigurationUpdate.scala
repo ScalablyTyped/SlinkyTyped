@@ -8,29 +8,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ApplicationConfigurationUpdate extends js.Object {
   
   /**
-    * Describes updates to a Java-based Kinesis Data Analytics application's code configuration.
+    * Describes updates to a Flink-based Kinesis Data Analytics application's code configuration.
     */
   var ApplicationCodeConfigurationUpdate: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.ApplicationCodeConfigurationUpdate] = js.native
   
   /**
-    * Describes whether snapshots are enabled for a Java-based Kinesis Data Analytics application.
+    * Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
     */
   var ApplicationSnapshotConfigurationUpdate: js.UndefOr[
     typingsSlinky.awsSdk.kinesisanalyticsv2Mod.ApplicationSnapshotConfigurationUpdate
   ] = js.native
   
   /**
-    * Describes updates to the environment properties for a Java-based Kinesis Data Analytics application.
+    * Describes updates to the environment properties for a Flink-based Kinesis Data Analytics application.
     */
   var EnvironmentPropertyUpdates: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.EnvironmentPropertyUpdates] = js.native
   
   /**
-    * Describes updates to a Java-based Kinesis Data Analytics application's configuration.
+    * Describes updates to a Flink-based Kinesis Data Analytics application's configuration.
     */
   var FlinkApplicationConfigurationUpdate: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.FlinkApplicationConfigurationUpdate] = js.native
   
   /**
-    * Describes updates to an SQL-based Kinesis Data Analytics application's configuration.
+    * Describes updates to a SQL-based Kinesis Data Analytics application's configuration.
     */
   var SqlApplicationConfigurationUpdate: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.SqlApplicationConfigurationUpdate] = js.native
   

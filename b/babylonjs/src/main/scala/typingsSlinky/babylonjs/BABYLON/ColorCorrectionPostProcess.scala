@@ -8,4 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ColorCorrectionPostProcess extends PostProcess {
   
   var _colorTableTexture: js.Any = js.native
+  
+  /**
+    * Gets the color table url used to create the LUT texture
+    */
+  var colorTableUrl: String = js.native
 }

@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object serverRouterMod {
   
-  type DynamicRoutes = js.Array[typingsSlinky.next.anon.Page]
+  type DynamicRoutes = js.Array[typingsSlinky.next.anon.Match]
   
   type PageChecker = js.Function1[/* pathname */ java.lang.String, js.Promise[scala.Boolean]]
   

@@ -6,5 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type RawType = java.lang.String | js.typedarray.Uint8Array | js.Array[scala.Double] | typingsSlinky.node.Buffer
+  type IntArrayType = js.Array[scala.Double] | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array
+  
+  type RawType = typingsSlinky.encodingJapanese.mod.IntArrayType | js.Array[scala.Double] | typingsSlinky.node.Buffer
 }

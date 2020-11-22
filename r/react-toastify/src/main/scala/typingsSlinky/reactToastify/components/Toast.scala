@@ -6,9 +6,10 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactToastify.anon.Position
 import typingsSlinky.reactToastify.reactToastifyBooleans.`false`
-import typingsSlinky.reactToastify.typesMod.ClassName
 import typingsSlinky.reactToastify.typesMod.Id
+import typingsSlinky.reactToastify.typesMod.ToastClassName
 import typingsSlinky.reactToastify.typesMod.ToastContent
 import typingsSlinky.reactToastify.typesMod.ToastContentProps
 import typingsSlinky.reactToastify.typesMod.ToastPosition
@@ -34,10 +35,10 @@ object Toast {
     def autoClose(value: Double | `false`): this.type = set("autoClose", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def bodyClassName(value: ClassName): this.type = set("bodyClassName", value.asInstanceOf[js.Any])
+    def bodyClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("bodyClassName", js.Any.fromFunction1(value))
     
     @scala.inline
-    def bodyClassNameNull: this.type = set("bodyClassName", null)
+    def bodyClassName(value: ToastClassName): this.type = set("bodyClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def bodyStyle(value: CSSProperties): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
@@ -52,10 +53,10 @@ object Toast {
     def children(value: ToastContent): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def className(value: ClassName): this.type = set("className", value.asInstanceOf[js.Any])
+    def classNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("className", js.Any.fromFunction1(value))
     
     @scala.inline
-    def classNameNull: this.type = set("className", null)
+    def className(value: ToastClassName): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
     def closeButtonReactElement(value: ReactElement): this.type = set("closeButton", value.asInstanceOf[js.Any])
@@ -103,10 +104,10 @@ object Toast {
     def progress(value: Double | String): this.type = set("progress", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def progressClassName(value: ClassName): this.type = set("progressClassName", value.asInstanceOf[js.Any])
+    def progressClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("progressClassName", js.Any.fromFunction1(value))
     
     @scala.inline
-    def progressClassNameNull: this.type = set("progressClassName", null)
+    def progressClassName(value: ToastClassName): this.type = set("progressClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def progressStyle(value: CSSProperties): this.type = set("progressStyle", value.asInstanceOf[js.Any])

@@ -4,9 +4,10 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.tensorflowTfjsConverter.compiledApiMod.ISignatureDef
 import typingsSlinky.tensorflowTfjsConverter.executorTypesMod.FunctionExecutor
 import typingsSlinky.tensorflowTfjsConverter.operationsTypesMod.Graph
+import typingsSlinky.tensorflowTfjsConverter.resourceManagerMod.ResourceManager
 import typingsSlinky.tensorflowTfjsConverter.typesMod.TensorInfo
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,13 +32,33 @@ object graphExecutorMod extends js.Object {
     
     var SEPERATOR: js.Any = js.native
     
+    /**
+      * Executes the inference for given input tensors in Async fashion.
+      * @param inputs Tensor map for the model inputs, keyed by the input node
+      * names.
+      * @param outputs Optional. output node name from the Tensorflow model,
+      * if no outputs are specified, the default outputs of the model would be
+      * used. You can inspect intermediate nodes of the model by adding them to the
+      * outputs array.
+      * @param isFunctionExecution Optional. Flag for executing a function.
+      * @param tensorArrayMap Optional, global TensorArray map by id. Used for
+      * function execution.
+      * @param tensorArrayMap Optinal global TensorList map by id. Used for
+      * function execution.
+      */
+    var _executeAsync: js.Any = js.native
+    
     var _functionExecutorMap: js.Any = js.native
     
     var _functions: js.Any = js.native
     
+    var _initNodes: js.Any = js.native
+    
     var _inputs: js.Any = js.native
     
     var _outputs: js.Any = js.native
+    
+    var _resourceManager: js.Any = js.native
     
     var _signature: js.Any = js.native
     
@@ -70,11 +91,12 @@ object graphExecutorMod extends js.Object {
       * Executes the inference for given input tensors.
       * @param inputs Tensor map for the model inputs, keyed by the input node
       * names.
-      * @param outputs output node name from the Tensorflow model, if no outputs
-      * are specified, the default outputs of the model would be used. You can
-      * inspect intermediate nodes of the model by adding them to the outputs
-      * array.
+      * @param outputs Optional. output node name from the Tensorflow model, if
+      * no outputs are specified, the default outputs of the model would be used.
+      * You can inspect intermediate nodes of the model by adding them to the
+      * outputs array.
       */
+    def execute(inputs: NamedTensorMap): js.Array[Tensor[Rank]] = js.native
     def execute(inputs: NamedTensorMap, outputs: js.Array[String]): js.Array[Tensor[Rank]] = js.native
     
     /**
@@ -85,18 +107,20 @@ object graphExecutorMod extends js.Object {
       * are specified, the default outputs of the model would be used. You can
       * inspect intermediate nodes of the model by adding them to the outputs
       * array.
-      * @param disableWarning disable the no dynamic ops warning message, default
-      * to false
       */
+    def executeAsync(inputs: NamedTensorMap): js.Promise[js.Array[Tensor[Rank]]] = js.native
     def executeAsync(inputs: NamedTensorMap, outputs: js.Array[String]): js.Promise[js.Array[Tensor[Rank]]] = js.native
-    def executeAsync(inputs: NamedTensorMap, outputs: js.Array[String], disableWarning: Boolean): js.Promise[js.Array[Tensor[Rank]]] = js.native
     
     /**
       * When there are control flow nodes in the graph, the graph execution use
       * ExecutionContext to keep track of the frames and loop iterators.
       * @param inputs placeholder tensors for the graph.
       * @param context the execution context object for current execution.
-      * @param disableWarning disable no async op warning
+      * @param outputNames Optional. output node name from the Tensorflow model,
+      * if no outputs are specified, the default outputs of the model would be
+      * used. You can inspect intermediate nodes of the model by adding them to the
+      * outputs array.
+      * @param isFunctionExecution Flag for executing a function.
       */
     var executeWithControlFlow: js.Any = js.native
     
@@ -127,6 +151,12 @@ object graphExecutorMod extends js.Object {
     var processChildNodes: js.Any = js.native
     
     var processStack: js.Any = js.native
+    
+    /**
+      * Set `ResourceManager` shared by executors of a model.
+      * @param resourceManager: `ResourceManager` of the `GraphModel`.
+      */
+    var resourceManager: ResourceManager = js.native
     
     val weightIds: js.Array[Double] = js.native
   }

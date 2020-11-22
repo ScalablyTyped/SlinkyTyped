@@ -6,11 +6,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<@aws-sdk/types.@aws-sdk/types.HttpRequest<string>> & @aws-sdk/types.@aws-sdk/types.HttpMessage<string> & {  method :string} */
+/* Inlined std.Partial<@aws-sdk/types.@aws-sdk/types.HttpRequest> & @aws-sdk/types.@aws-sdk/types.HttpMessage & {  method :string} */
 @js.native
 trait DerivedHttpRequest extends js.Object {
   
-  var body: js.UndefOr[js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String] = js.native
+  var body: js.UndefOr[js.Any] = js.native
   
   var headers: js.UndefOr[HeaderBag] with HeaderBag = js.native
   
@@ -56,13 +56,7 @@ object DerivedHttpRequest {
     def setMethod(value: js.UndefOr[String] with String): Self = this.set("method", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBodyArrayBufferView(value: js.typedarray.ArrayBufferView): Self = this.set("body", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBodyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("body", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBody(value: js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | String): Self = this.set("body", value.asInstanceOf[js.Any])
+    def setBody(value: js.Any): Self = this.set("body", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBody: Self = this.set("body", js.undefined)

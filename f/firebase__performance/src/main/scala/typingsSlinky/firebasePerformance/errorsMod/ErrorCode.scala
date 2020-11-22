@@ -11,6 +11,8 @@ import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`no api key`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`no app id`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`no project id`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`no window`
+import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`nonpositive trace duration`
+import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`nonpositive trace startTime`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`trace started`
 import typingsSlinky.firebasePerformance.firebasePerformanceStrings.`trace stopped`
 import scala.scalajs.js
@@ -20,6 +22,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`trace started`
   - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`trace stopped`
+  - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`nonpositive trace startTime`
+  - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`nonpositive trace duration`
   - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`no window`
   - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`no app id`
   - typingsSlinky.firebasePerformance.firebasePerformanceStrings.`no project id`
@@ -52,6 +56,12 @@ object ErrorCode {
   
   @scala.inline
   def INVALID_STRING_MERGER_PARAMETER: `invalid String merger input` = ("invalid String merger input").asInstanceOf[`invalid String merger input`]
+  
+  @scala.inline
+  def NONPOSITIVE_TRACE_DURATION: `nonpositive trace duration` = ("nonpositive trace duration").asInstanceOf[`nonpositive trace duration`]
+  
+  @scala.inline
+  def NONPOSITIVE_TRACE_START_TIME: `nonpositive trace startTime` = ("nonpositive trace startTime").asInstanceOf[`nonpositive trace startTime`]
   
   @scala.inline
   def NO_API_KEY: `no api key` = ("no api key").asInstanceOf[`no api key`]

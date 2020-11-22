@@ -22,14 +22,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait colorGetSchemesParams extends Object {
   
   /**
-    * The Esri basemap to pair with the visualization. This value indicates the best symbol colors for visualizing features against the given basemap. If you have a non-Esri basemap (e.g. a VectorTileLayer basemap with a custom style) or no basemap at all, then use the `basemapTheme` parameter instead of this parameter.
+    * The Esri basemap to pair with the visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-color.html#getSchemes)
     */
   var basemap: js.UndefOr[String | Basemap] = js.native
   
   /**
-    * If you have a non-Esri basemap (e.g. a VectorTileLayer basemap with a custom style) or no basemap at all, use this parameter to indicate whether the background of the visualization is `light` or `dark`.
+    * If you have a non-Esri basemap (e.g.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-color.html#getSchemes)
     */
@@ -43,29 +43,21 @@ trait colorGetSchemesParams extends Object {
   var geometryType: point | multipoint | polyline | polygon | mesh | multipatch = js.native
   
   /**
-    * The theme determines which values will be emphasized in the continuous ramp and the map. Possible values are listed below.
-    *
-    * | Value | Description | Example |
-    * | ----- | ----------- | ------- |
-    * | high-to-low | High values are emphasized with strong colors. | ![high-to-low](https://developers.arcgis.com/javascript/assets/img/apiref/renderers/sm-high-to-low.png) |
-    * | above-and-below | Values centered around a given point (e.g. the average) are visualized with weak colors while other values are emphasized with strong colors. | ![above-and-below](https://developers.arcgis.com/javascript/assets/img/apiref/renderers/sm-above-and-below.png) |
-    * | centered-on | Values centered around a given point (e.g. the average) are emphasized with strong colors while other values are visualized with weak colors. | ![centered-on](https://developers.arcgis.com/javascript/assets/img/apiref/renderers/sm-centered-on.png) |
-    * | extremes | High and low values are emphasized with strong colors. All others are visualized with weak colors. | ![extremes](https://developers.arcgis.com/javascript/assets/img/apiref/renderers/sm-extremes.png) |
-    *
+    * The theme determines which values will be emphasized in the continuous ramp and the map.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-color.html#getSchemes)
     */
   var theme: `high-to-low` | `above-and-below` | `centered-on` | extremes = js.native
   
   /**
-    * The SceneView instance in which the scheme will be used. This property is only applicable when the scheme will be used in conjunction with 3D symbols.
+    * The SceneView instance in which the scheme will be used.
     *
     * [Read more...](global.html)
     */
   var view: js.UndefOr[SceneView] = js.native
   
   /**
-    * Indicates if the size units of the scheme will be in meters. This should be `true` when the scheme is intended for 3D volumetric symbology. A `view` must be provided if this property is set to `true`.
+    * Indicates if the size units of the scheme will be in meters.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-color.html#getSchemes)
     */

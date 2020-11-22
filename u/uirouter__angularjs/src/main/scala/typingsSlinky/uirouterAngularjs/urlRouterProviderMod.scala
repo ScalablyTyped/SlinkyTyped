@@ -170,7 +170,7 @@ object urlRouterProviderMod extends js.Object {
   @js.native
   object UrlRouterProvider extends js.Object {
     
-    def injectableHandler(router: UIRouter, handler: js.Any): UrlRuleHandlerFn = js.native
+    def injectableHandler(router: UIRouter, handler: IInjectable): UrlRuleHandlerFn = js.native
   }
   
   type RawNg1RuleFunction = js.Function2[/* $injector */ InjectorLike, /* $location */ LocationServices, String | Unit]

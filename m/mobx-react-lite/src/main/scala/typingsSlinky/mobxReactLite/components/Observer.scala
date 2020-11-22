@@ -20,10 +20,10 @@ object Observer {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def children(value: () => ReactElement): this.type = set("children", js.Any.fromFunction0(value))
+    def children(value: () => ReactElement | Null): this.type = set("children", js.Any.fromFunction0(value))
     
     @scala.inline
-    def render(value: () => ReactElement): this.type = set("render", js.Any.fromFunction0(value))
+    def render(value: () => ReactElement | Null): this.type = set("render", js.Any.fromFunction0(value))
   }
   
   def withProps(p: IObserverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

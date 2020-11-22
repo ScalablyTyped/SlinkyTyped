@@ -7,6 +7,7 @@ import typingsSlinky.antd.antdStrings.cancel
 import typingsSlinky.antd.antdStrings.ok
 import typingsSlinky.antd.buttonButtonMod.ButtonProps
 import typingsSlinky.antd.buttonButtonMod.LegacyButtonType
+import typingsSlinky.antd.configProviderContextMod.DirectionType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,6 +17,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ModalFuncProps extends js.Object {
   
   var autoFocusButton: js.UndefOr[Null | ok | cancel] = js.native
+  
+  var bodyStyle: js.UndefOr[CSSProperties] = js.native
   
   var cancelButtonProps: js.UndefOr[ButtonProps] = js.native
   
@@ -27,7 +30,7 @@ trait ModalFuncProps extends js.Object {
   
   var content: js.UndefOr[ReactElement] = js.native
   
-  var direction: js.UndefOr[String] = js.native
+  var direction: js.UndefOr[DirectionType] = js.native
   
   var getContainer: js.UndefOr[String | HTMLElement | getContainerFunc | `false` | Null] = js.native
   
@@ -42,6 +45,8 @@ trait ModalFuncProps extends js.Object {
   var maskStyle: js.UndefOr[CSSProperties] = js.native
   
   var maskTransitionName: js.UndefOr[String] = js.native
+  
+  var modalRender: js.UndefOr[js.Function1[/* node */ ReactElement, ReactElement]] = js.native
   
   var okButtonProps: js.UndefOr[ButtonProps] = js.native
   
@@ -104,6 +109,12 @@ object ModalFuncProps {
     def setAutoFocusButtonNull: Self = this.set("autoFocusButton", null)
     
     @scala.inline
+    def setBodyStyle(value: CSSProperties): Self = this.set("bodyStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBodyStyle: Self = this.set("bodyStyle", js.undefined)
+    
+    @scala.inline
     def setCancelButtonProps(value: ButtonProps): Self = this.set("cancelButtonProps", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -140,7 +151,7 @@ object ModalFuncProps {
     def deleteContent: Self = this.set("content", js.undefined)
     
     @scala.inline
-    def setDirection(value: String): Self = this.set("direction", value.asInstanceOf[js.Any])
+    def setDirection(value: DirectionType): Self = this.set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDirection: Self = this.set("direction", js.undefined)
@@ -198,6 +209,12 @@ object ModalFuncProps {
     
     @scala.inline
     def deleteMaskTransitionName: Self = this.set("maskTransitionName", js.undefined)
+    
+    @scala.inline
+    def setModalRender(value: /* node */ ReactElement => ReactElement): Self = this.set("modalRender", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteModalRender: Self = this.set("modalRender", js.undefined)
     
     @scala.inline
     def setOkButtonProps(value: ButtonProps): Self = this.set("okButtonProps", value.asInstanceOf[js.Any])

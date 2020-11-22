@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "apigee-access"
-version := "0.0-unknown-dt-20200515Z-0a9f6d"
+version := "0.0-unknown-dt-20200923Z-0a9f6d"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

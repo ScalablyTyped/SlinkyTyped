@@ -19,6 +19,11 @@ object repoManagerMod extends js.Object {
   class RepoManager () extends js.Object {
     
     /**
+      * Update an existing repo in place to point to a new host/port.
+      */
+    def applyEmulatorSettings(repo: Repo, host: String, port: Double): Unit = js.native
+    
+    /**
       * Ensures a repo doesn't already exist and then creates one using the
       * provided app.
       *
@@ -35,7 +40,19 @@ object repoManagerMod extends js.Object {
       * @return {!Database}
       */
     def databaseFromApp(app: FirebaseApp, authProvider: Provider[FirebaseAuthInternalName]): Database = js.native
+    def databaseFromApp(
+      app: FirebaseApp,
+      authProvider: Provider[FirebaseAuthInternalName],
+      url: js.UndefOr[scala.Nothing],
+      nodeAdmin: Boolean
+    ): Database = js.native
     def databaseFromApp(app: FirebaseApp, authProvider: Provider[FirebaseAuthInternalName], url: String): Database = js.native
+    def databaseFromApp(
+      app: FirebaseApp,
+      authProvider: Provider[FirebaseAuthInternalName],
+      url: String,
+      nodeAdmin: Boolean
+    ): Database = js.native
     
     /**
       * Remove the repo and make sure it is disconnected.

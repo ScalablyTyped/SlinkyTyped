@@ -46,6 +46,11 @@ object lightsIndexMod extends js.Object {
     val DEFAULT_CASCADES_COUNT: Double = js.native
     
     /**
+      *  Support test.
+      */
+    def IsSupported: Boolean = js.native
+    
+    /**
       * Defines the maximum number of cascades used by the CSM.
       */
     val MAX_CASCADES_COUNT: Double = js.native
@@ -404,5 +409,13 @@ object lightsIndexMod extends js.Object {
       * @param scene The scene the lights belongs to
       */
     def this(name: String, position: Vector3, direction: Vector3, angle: Double, exponent: Double, scene: Scene) = this()
+  }
+  /* static members */
+  @js.native
+  object SpotLight extends js.Object {
+    
+    var _IsProceduralTexture: js.Any = js.native
+    
+    var _IsTexture: js.Any = js.native
   }
 }

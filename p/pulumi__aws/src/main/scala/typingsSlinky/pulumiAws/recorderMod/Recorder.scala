@@ -34,9 +34,7 @@ class Recorder protected () extends CustomResource {
   val recordingGroup: Output_[RecorderRecordingGroup] = js.native
   
   /**
-    * Amazon Resource Name (ARN) of the IAM role.
-    * used to make read or write requests to the delivery channel and to describe the AWS resources associated with the account.
-    * See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) for more details.
+    * Amazon Resource Name (ARN) of the IAM role. Used to make read or write requests to the delivery channel and to describe the AWS resources associated with the account. See [AWS Docs](http://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) for more details.
     */
   val roleArn: Output_[String] = js.native
 }

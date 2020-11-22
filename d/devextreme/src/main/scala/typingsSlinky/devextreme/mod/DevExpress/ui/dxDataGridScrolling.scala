@@ -10,7 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDataGridScrolling extends GridBaseScrolling {
   
-  /** @name dxDataGrid.Options.scrolling.mode */
+  /**
+    * [descr:dxDataGrid.Options.scrolling.mode]
+    */
   var mode: js.UndefOr[infinite | standard | virtual] = js.native
 }
 object dxDataGridScrolling {

@@ -90,7 +90,7 @@ package object jest {
     *
     * @example
     *
-    *  import { MyClass } from "./libary";
+    *  import { MyClass } from "./library";
     *  jest.mock("./library");
     *
     *  const mockedMyClass = MyClass as jest.MockedClass<typeof MyClass>;

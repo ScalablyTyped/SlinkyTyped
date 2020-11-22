@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined parent std.Partial<rollup.rollup.PartialNull<rollup.rollup.ModuleOptions>> */
 @js.native
 trait TransformModuleJSON extends js.Object {
   
@@ -15,7 +16,9 @@ trait TransformModuleJSON extends js.Object {
   // note if plugins use new this.cache to opt-out auto transform cache
   var customTransformCache: Boolean = js.native
   
-  var moduleSideEffects: Boolean | `no-treeshake` | Null = js.native
+  var meta: js.UndefOr[CustomPluginOptions | Null] = js.native
+  
+  var moduleSideEffects: js.UndefOr[Boolean | `no-treeshake` | Null] = js.native
   
   var originalCode: String = js.native
   
@@ -25,7 +28,7 @@ trait TransformModuleJSON extends js.Object {
   
   var sourcemapChain: js.Array[DecodedSourceMapOrMissing] = js.native
   
-  var syntheticNamedExports: Boolean | String | Null = js.native
+  var syntheticNamedExports: js.UndefOr[Boolean | String | Null] = js.native
   
   var transformDependencies: js.Array[String] = js.native
 }
@@ -86,7 +89,19 @@ object TransformModuleJSON {
     def deleteAst: Self = this.set("ast", js.undefined)
     
     @scala.inline
+    def setMeta(value: CustomPluginOptions): Self = this.set("meta", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMeta: Self = this.set("meta", js.undefined)
+    
+    @scala.inline
+    def setMetaNull: Self = this.set("meta", null)
+    
+    @scala.inline
     def setModuleSideEffects(value: Boolean | `no-treeshake`): Self = this.set("moduleSideEffects", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModuleSideEffects: Self = this.set("moduleSideEffects", js.undefined)
     
     @scala.inline
     def setModuleSideEffectsNull: Self = this.set("moduleSideEffects", null)
@@ -105,6 +120,9 @@ object TransformModuleJSON {
     
     @scala.inline
     def setSyntheticNamedExports(value: Boolean | String): Self = this.set("syntheticNamedExports", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSyntheticNamedExports: Self = this.set("syntheticNamedExports", js.undefined)
     
     @scala.inline
     def setSyntheticNamedExportsNull: Self = this.set("syntheticNamedExports", null)

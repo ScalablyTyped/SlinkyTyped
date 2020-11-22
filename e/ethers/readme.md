@@ -1,7 +1,7 @@
 
 # Scala.js typings for ethers
 
-Typings are for version 4.0.0-beta.3
+Typings are for version 5.0.21
 
 ## Library description:
 Ethereum wallet library.

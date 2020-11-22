@@ -20,10 +20,13 @@ package object languages {
   
   type IShortMonarchLanguageAction = java.lang.String
   
-  type IShortMonarchLanguageRule1 = js.Tuple2[js.RegExp, typingsSlinky.monacoEditor.mod.languages.IMonarchLanguageAction]
+  type IShortMonarchLanguageRule1 = js.Tuple2[
+    java.lang.String | js.RegExp, 
+    typingsSlinky.monacoEditor.mod.languages.IMonarchLanguageAction
+  ]
   
   type IShortMonarchLanguageRule2 = js.Tuple3[
-    js.RegExp, 
+    java.lang.String | js.RegExp, 
     typingsSlinky.monacoEditor.mod.languages.IMonarchLanguageAction, 
     java.lang.String
   ]

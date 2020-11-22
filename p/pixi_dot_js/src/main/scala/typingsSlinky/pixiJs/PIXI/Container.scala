@@ -47,7 +47,9 @@ trait Container extends DisplayObject {
     * @param {...PIXI.DisplayObject} children - The DisplayObject(s) to add to the container
     * @return {PIXI.DisplayObject} The first child that was added.
     */
-  def addChild(children: DisplayObject*): DisplayObject = js.native
+  def addChild[TChildren /* <: js.Array[DisplayObject] */](
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param children because its type TChildren is not an array type */ children: TChildren
+  ): /* import warning: importer.ImportType#apply Failed type conversion: TChildren[0] */ js.Any = js.native
   
   /**
     * Adds a child to the container at a specified index. If the index is out of bounds an error will be thrown
@@ -181,7 +183,9 @@ trait Container extends DisplayObject {
     * @param {...PIXI.DisplayObject} children - The DisplayObject(s) to remove
     * @return {PIXI.DisplayObject} The first child that was removed.
     */
-  def removeChild(children: DisplayObject*): DisplayObject = js.native
+  def removeChild[TChildren /* <: js.Array[DisplayObject] */](
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param children because its type TChildren is not an array type */ children: TChildren
+  ): /* import warning: importer.ImportType#apply Failed type conversion: TChildren[0] */ js.Any = js.native
   
   /**
     * Removes a child from the specified index position.

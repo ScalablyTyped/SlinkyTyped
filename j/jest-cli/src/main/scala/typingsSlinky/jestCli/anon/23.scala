@@ -1,6 +1,6 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliStrings.`Display individual test results with the test suite hierarchyDot`
+import typingsSlinky.jestCli.jestCliStrings.`Divert all output to stderrDot`
 import typingsSlinky.jestCli.jestCliStrings.boolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,14 +11,14 @@ trait `23` extends js.Object {
   
   val default: js.UndefOr[scala.Nothing] = js.native
   
-  val description: `Display individual test results with the test suite hierarchyDot` = js.native
+  val description: `Divert all output to stderrDot` = js.native
   
   val `type`: boolean = js.native
 }
 object `23` {
   
   @scala.inline
-  def apply(description: `Display individual test results with the test suite hierarchyDot`, `type`: boolean): `23` = {
+  def apply(description: `Divert all output to stderrDot`, `type`: boolean): `23` = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`23`]
@@ -40,7 +40,7 @@ object `23` {
     }
     
     @scala.inline
-    def setDescription(value: `Display individual test results with the test suite hierarchyDot`): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: `Divert all output to stderrDot`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: boolean): Self = this.set("type", value.asInstanceOf[js.Any])

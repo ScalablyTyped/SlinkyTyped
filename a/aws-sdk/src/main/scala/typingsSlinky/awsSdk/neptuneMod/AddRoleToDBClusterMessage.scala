@@ -13,6 +13,11 @@ trait AddRoleToDBClusterMessage extends js.Object {
   var DBClusterIdentifier: String = js.native
   
   /**
+    * The name of the feature for the Neptune DB cluster that the IAM role is to be associated with. For the list of supported feature names, see DBEngineVersion.
+    */
+  var FeatureName: js.UndefOr[String] = js.native
+  
+  /**
     * The Amazon Resource Name (ARN) of the IAM role to associate with the Neptune DB cluster, for example arn:aws:iam::123456789012:role/NeptuneAccessRole.
     */
   var RoleArn: String = js.native
@@ -45,5 +50,11 @@ object AddRoleToDBClusterMessage {
     
     @scala.inline
     def setRoleArn(value: String): Self = this.set("RoleArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFeatureName(value: String): Self = this.set("FeatureName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFeatureName: Self = this.set("FeatureName", js.undefined)
   }
 }

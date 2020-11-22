@@ -11,10 +11,10 @@ trait DeviceConfigurationDeviceStatus extends Entity {
   var complianceGracePeriodExpirationDateTime: js.UndefOr[String] = js.native
   
   // Device name of the DevicePolicyStatus.
-  var deviceDisplayName: js.UndefOr[String] = js.native
+  var deviceDisplayName: js.UndefOr[NullableOption[String]] = js.native
   
   // The device model that is being reported
-  var deviceModel: js.UndefOr[String] = js.native
+  var deviceModel: js.UndefOr[NullableOption[String]] = js.native
   
   // Last modified date time of the policy report.
   var lastReportedDateTime: js.UndefOr[String] = js.native
@@ -26,10 +26,10 @@ trait DeviceConfigurationDeviceStatus extends Entity {
   var status: js.UndefOr[ComplianceStatus] = js.native
   
   // The User Name that is being reported
-  var userName: js.UndefOr[String] = js.native
+  var userName: js.UndefOr[NullableOption[String]] = js.native
   
   // UserPrincipalName.
-  var userPrincipalName: js.UndefOr[String] = js.native
+  var userPrincipalName: js.UndefOr[NullableOption[String]] = js.native
 }
 object DeviceConfigurationDeviceStatus {
   
@@ -61,16 +61,22 @@ object DeviceConfigurationDeviceStatus {
     def deleteComplianceGracePeriodExpirationDateTime: Self = this.set("complianceGracePeriodExpirationDateTime", js.undefined)
     
     @scala.inline
-    def setDeviceDisplayName(value: String): Self = this.set("deviceDisplayName", value.asInstanceOf[js.Any])
+    def setDeviceDisplayName(value: NullableOption[String]): Self = this.set("deviceDisplayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceDisplayName: Self = this.set("deviceDisplayName", js.undefined)
     
     @scala.inline
-    def setDeviceModel(value: String): Self = this.set("deviceModel", value.asInstanceOf[js.Any])
+    def setDeviceDisplayNameNull: Self = this.set("deviceDisplayName", null)
+    
+    @scala.inline
+    def setDeviceModel(value: NullableOption[String]): Self = this.set("deviceModel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceModel: Self = this.set("deviceModel", js.undefined)
+    
+    @scala.inline
+    def setDeviceModelNull: Self = this.set("deviceModel", null)
     
     @scala.inline
     def setLastReportedDateTime(value: String): Self = this.set("lastReportedDateTime", value.asInstanceOf[js.Any])
@@ -85,15 +91,21 @@ object DeviceConfigurationDeviceStatus {
     def deleteStatus: Self = this.set("status", js.undefined)
     
     @scala.inline
-    def setUserName(value: String): Self = this.set("userName", value.asInstanceOf[js.Any])
+    def setUserName(value: NullableOption[String]): Self = this.set("userName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserName: Self = this.set("userName", js.undefined)
     
     @scala.inline
-    def setUserPrincipalName(value: String): Self = this.set("userPrincipalName", value.asInstanceOf[js.Any])
+    def setUserNameNull: Self = this.set("userName", null)
+    
+    @scala.inline
+    def setUserPrincipalName(value: NullableOption[String]): Self = this.set("userPrincipalName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserPrincipalName: Self = this.set("userPrincipalName", js.undefined)
+    
+    @scala.inline
+    def setUserPrincipalNameNull: Self = this.set("userPrincipalName", null)
   }
 }

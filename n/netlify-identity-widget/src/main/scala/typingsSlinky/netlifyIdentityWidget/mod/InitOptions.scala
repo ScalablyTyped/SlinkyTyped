@@ -17,6 +17,15 @@ trait InitOptions extends js.Object {
   
   // The container to attach to. e.g.: '#some-query-selector'
   var container: js.UndefOr[String] = js.native
+  
+  // Initial language
+  var locale: js.UndefOr[String] = js.native
+  
+  // Enable Netlify logo
+  var logo: js.UndefOr[Boolean] = js.native
+  
+  // custom placeholder for name input form
+  var namePlaceholder: js.UndefOr[String] = js.native
 }
 object InitOptions {
   
@@ -52,5 +61,23 @@ object InitOptions {
     
     @scala.inline
     def deleteContainer: Self = this.set("container", js.undefined)
+    
+    @scala.inline
+    def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    
+    @scala.inline
+    def setLogo(value: Boolean): Self = this.set("logo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLogo: Self = this.set("logo", js.undefined)
+    
+    @scala.inline
+    def setNamePlaceholder(value: String): Self = this.set("namePlaceholder", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNamePlaceholder: Self = this.set("namePlaceholder", js.undefined)
   }
 }

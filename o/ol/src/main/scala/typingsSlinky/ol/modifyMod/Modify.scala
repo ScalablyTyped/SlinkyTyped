@@ -11,6 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Modify
   extends typingsSlinky.ol.pointerMod.default {
   
+  /**
+    * Get the overlay layer that this interaction renders sketch features to.
+    */
   def getOverlay(): typingsSlinky.ol.vectorMod.default = js.native
   
   @JSName("on")
@@ -23,6 +26,9 @@ trait Modify
   @JSName("once")
   def once_modifystart(`type`: modifystart, listener: js.Function1[/* evt */ ModifyEvent, Unit]): EventsKey = js.native
   
+  /**
+    * Removes the vertex currently being pointed.
+    */
   def removePoint(): Boolean = js.native
   
   @JSName("un")

@@ -7,8 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait NoiseProceduralTexture extends ProceduralTexture {
   
-  var _time: js.Any = js.native
-  
   var _updateShaderUniforms: js.Any = js.native
   
   /** Gets or sets animation speed factor (default is 1) */
@@ -22,4 +20,7 @@ trait NoiseProceduralTexture extends ProceduralTexture {
   
   /** Defines the level of persistence (0.8 by default) */
   var persistence: Double = js.native
+  
+  /** Gets or sets the start time (default is 0) */
+  var time: Double = js.native
 }

@@ -51,9 +51,9 @@ trait ICreateWorkingCopyParametersBase extends js.Object {
   var teamServerBaseBranch: js.UndefOr[String] = js.native
   
   /**
-    * If this working copy is created from a Git TeamServer checkout, the commit hash will be used for the clone operation.
+    * If this working copy is created from a Git TeamServer checkout, the commit id will be used for the clone operation.
     */
-  var teamServerBaseCommitHash: js.UndefOr[String] = js.native
+  var teamServerBaseCommitId: js.UndefOr[String] = js.native
   
   /**
     * If this working copy is created from an SVN TeamServer checkout, the BaseRevision / BaseBranch can be used by the Desktop Modeler during merge.
@@ -136,10 +136,10 @@ object ICreateWorkingCopyParametersBase {
     def deleteTeamServerBaseBranch: Self = this.set("teamServerBaseBranch", js.undefined)
     
     @scala.inline
-    def setTeamServerBaseCommitHash(value: String): Self = this.set("teamServerBaseCommitHash", value.asInstanceOf[js.Any])
+    def setTeamServerBaseCommitId(value: String): Self = this.set("teamServerBaseCommitId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteTeamServerBaseCommitHash: Self = this.set("teamServerBaseCommitHash", js.undefined)
+    def deleteTeamServerBaseCommitId: Self = this.set("teamServerBaseCommitId", js.undefined)
     
     @scala.inline
     def setTeamServerBaseRevision(value: Double): Self = this.set("teamServerBaseRevision", value.asInstanceOf[js.Any])

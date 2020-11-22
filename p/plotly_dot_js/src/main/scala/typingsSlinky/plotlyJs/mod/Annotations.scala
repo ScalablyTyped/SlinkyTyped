@@ -16,8 +16,6 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.pixel
 import typingsSlinky.plotlyJs.plotlyJsStrings.right
 import typingsSlinky.plotlyJs.plotlyJsStrings.start
 import typingsSlinky.plotlyJs.plotlyJsStrings.top
-import typingsSlinky.plotlyJs.plotlyJsStrings.x
-import typingsSlinky.plotlyJs.plotlyJsStrings.y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -69,7 +67,7 @@ trait Annotations extends Label {
     * for trendline annotations which should continue to indicate
     * the correct trend when zoomed.
     */
-  var axref: pixel = js.native
+  var axref: pixel | XAxisName = js.native
   
   /**
     * Sets the y component of the arrow tail about the arrow head.
@@ -89,7 +87,7 @@ trait Annotations extends Label {
     * for trendline annotations which should continue to indicate
     * the correct trend when zoomed.
     */
-  var ayref: pixel = js.native
+  var ayref: pixel | YAxisName = js.native
   
   /** Sets the padding (in px) between the `text` and the enclosing border. */
   var borderpad: Double = js.native
@@ -230,7 +228,7 @@ trait Annotations extends Label {
     * the left side of the plotting area in normalized coordinates
     * where 0 (1) corresponds to the left (right) side.
     */
-  var xref: paper | x = js.native
+  var xref: paper | XAxisName = js.native
   
   /**
     * Shifts the position of the whole annotation and arrow to the
@@ -272,7 +270,7 @@ trait Annotations extends Label {
     * the bottom of the plotting area in normalized coordinates
     * where 0 (1) corresponds to the bottom (top).
     */
-  var yref: paper | y = js.native
+  var yref: paper | YAxisName = js.native
   
   /**
     * Shifts the position of the whole annotation and arrow up
@@ -291,9 +289,9 @@ object Annotations {
     arrowsize: Double,
     arrowwidth: Double,
     ax: Double,
-    axref: pixel,
+    axref: pixel | XAxisName,
     ay: Double,
-    ayref: pixel,
+    ayref: pixel | YAxisName,
     bgcolor: String,
     bordercolor: String,
     borderpad: Double,
@@ -318,12 +316,12 @@ object Annotations {
     x: Double | String,
     xanchor: auto | left | center | right,
     xclick: js.Any,
-    xref: paper | x,
+    xref: paper | XAxisName,
     xshift: Double,
     y: Double | String,
     yanchor: auto | top | middle | bottom,
     yclick: js.Any,
-    yref: paper | y,
+    yref: paper | YAxisName,
     yshift: Double
   ): Annotations = {
     val __obj = js.Dynamic.literal(align = align.asInstanceOf[js.Any], arrowcolor = arrowcolor.asInstanceOf[js.Any], arrowhead = arrowhead.asInstanceOf[js.Any], arrowside = arrowside.asInstanceOf[js.Any], arrowsize = arrowsize.asInstanceOf[js.Any], arrowwidth = arrowwidth.asInstanceOf[js.Any], ax = ax.asInstanceOf[js.Any], axref = axref.asInstanceOf[js.Any], ay = ay.asInstanceOf[js.Any], ayref = ayref.asInstanceOf[js.Any], bgcolor = bgcolor.asInstanceOf[js.Any], bordercolor = bordercolor.asInstanceOf[js.Any], borderpad = borderpad.asInstanceOf[js.Any], borderwidth = borderwidth.asInstanceOf[js.Any], captureevents = captureevents.asInstanceOf[js.Any], clicktoshow = clicktoshow.asInstanceOf[js.Any], font = font.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], hoverlabel = hoverlabel.asInstanceOf[js.Any], hovertext = hovertext.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], showarrow = showarrow.asInstanceOf[js.Any], standoff = standoff.asInstanceOf[js.Any], startarrowhead = startarrowhead.asInstanceOf[js.Any], startarrowsize = startarrowsize.asInstanceOf[js.Any], startstandoff = startstandoff.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], textangle = textangle.asInstanceOf[js.Any], valign = valign.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], xanchor = xanchor.asInstanceOf[js.Any], xclick = xclick.asInstanceOf[js.Any], xref = xref.asInstanceOf[js.Any], xshift = xshift.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], yanchor = yanchor.asInstanceOf[js.Any], yclick = yclick.asInstanceOf[js.Any], yref = yref.asInstanceOf[js.Any], yshift = yshift.asInstanceOf[js.Any])
@@ -367,13 +365,13 @@ object Annotations {
     def setAx(value: Double): Self = this.set("ax", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAxref(value: pixel): Self = this.set("axref", value.asInstanceOf[js.Any])
+    def setAxref(value: pixel | XAxisName): Self = this.set("axref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAy(value: Double): Self = this.set("ay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAyref(value: pixel): Self = this.set("ayref", value.asInstanceOf[js.Any])
+    def setAyref(value: pixel | YAxisName): Self = this.set("ayref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBorderpad(value: Double): Self = this.set("borderpad", value.asInstanceOf[js.Any])
@@ -439,7 +437,7 @@ object Annotations {
     def setXclick(value: js.Any): Self = this.set("xclick", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setXref(value: paper | typingsSlinky.plotlyJs.plotlyJsStrings.x): Self = this.set("xref", value.asInstanceOf[js.Any])
+    def setXref(value: paper | XAxisName): Self = this.set("xref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setXshift(value: Double): Self = this.set("xshift", value.asInstanceOf[js.Any])
@@ -454,7 +452,7 @@ object Annotations {
     def setYclick(value: js.Any): Self = this.set("yclick", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setYref(value: paper | y): Self = this.set("yref", value.asInstanceOf[js.Any])
+    def setYref(value: paper | YAxisName): Self = this.set("yref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setYshift(value: Double): Self = this.set("yshift", value.asInstanceOf[js.Any])

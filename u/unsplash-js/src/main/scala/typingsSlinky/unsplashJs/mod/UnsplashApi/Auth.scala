@@ -1,6 +1,7 @@
 package typingsSlinky.unsplashJs.mod.UnsplashApi
 
 import org.scalajs.dom.experimental.Response
+import typingsSlinky.unsplashJs.mod.Scopes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Auth extends js.Object {
   
   def getAuthenticationUrl(): String = js.native
-  def getAuthenticationUrl(scopes: js.Array[String]): String = js.native
+  def getAuthenticationUrl(scopes: js.Array[Scopes]): String = js.native
   
   def setBearerToken(accessToken: String): Unit = js.native
   

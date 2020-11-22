@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-input-number
 
-Typings are for version 6.0.0
+Typings are for version 6.1.1
 
 ## Library description:
 React input-number component

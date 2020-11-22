@@ -36,6 +36,8 @@ trait ReactNativeInputSpinnerProps extends js.Object {
   
   var buttonPressStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
+  var buttonPressTextColor: js.UndefOr[String] = js.native
+  
   var buttonRightDisabled: js.UndefOr[Boolean] = js.native
   
   var buttonRightImage: js.UndefOr[ReactElement] = js.native
@@ -67,6 +69,8 @@ trait ReactNativeInputSpinnerProps extends js.Object {
   var fontSize: js.UndefOr[Double] = js.native
   
   var height: js.UndefOr[String | Double] = js.native
+  
+  var initialValue: js.UndefOr[Double] = js.native
   
   var inputStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
@@ -203,6 +207,12 @@ object ReactNativeInputSpinnerProps {
     def setButtonPressStyleNull: Self = this.set("buttonPressStyle", null)
     
     @scala.inline
+    def setButtonPressTextColor(value: String): Self = this.set("buttonPressTextColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteButtonPressTextColor: Self = this.set("buttonPressTextColor", js.undefined)
+    
+    @scala.inline
     def setButtonRightDisabled(value: Boolean): Self = this.set("buttonRightDisabled", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -300,6 +310,12 @@ object ReactNativeInputSpinnerProps {
     
     @scala.inline
     def deleteHeight: Self = this.set("height", js.undefined)
+    
+    @scala.inline
+    def setInitialValue(value: Double): Self = this.set("initialValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInitialValue: Self = this.set("initialValue", js.undefined)
     
     @scala.inline
     def setInputStyle(value: StyleProp[ViewStyle]): Self = this.set("inputStyle", value.asInstanceOf[js.Any])

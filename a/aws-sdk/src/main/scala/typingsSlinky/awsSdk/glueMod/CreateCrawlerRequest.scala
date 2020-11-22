@@ -38,6 +38,11 @@ trait CreateCrawlerRequest extends js.Object {
   var Name: NameString = js.native
   
   /**
+    * A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.
+    */
+  var RecrawlPolicy: js.UndefOr[typingsSlinky.awsSdk.glueMod.RecrawlPolicy] = js.native
+  
+  /**
     * The IAM role or Amazon Resource Name (ARN) of an IAM role used by the new crawler to access customer resources.
     */
   var Role: typingsSlinky.awsSdk.glueMod.Role = js.native
@@ -131,6 +136,12 @@ object CreateCrawlerRequest {
     
     @scala.inline
     def deleteDescription: Self = this.set("Description", js.undefined)
+    
+    @scala.inline
+    def setRecrawlPolicy(value: RecrawlPolicy): Self = this.set("RecrawlPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRecrawlPolicy: Self = this.set("RecrawlPolicy", js.undefined)
     
     @scala.inline
     def setSchedule(value: CronExpression): Self = this.set("Schedule", value.asInstanceOf[js.Any])

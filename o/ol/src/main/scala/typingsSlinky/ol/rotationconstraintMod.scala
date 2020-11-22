@@ -13,11 +13,11 @@ object rotationconstraintMod extends js.Object {
   def createSnapToZero(): Type = js.native
   def createSnapToZero(opt_tolerance: Double): Type = js.native
   
-  def disable(): Double = js.native
-  def disable(rotation: Double): Double = js.native
+  def disable(): js.UndefOr[Double] = js.native
+  def disable(rotation: Double): js.UndefOr[Double] = js.native
   
-  def none(): Double = js.native
-  def none(rotation: Double): Double = js.native
+  def none(): js.UndefOr[Double] = js.native
+  def none(rotation: Double): js.UndefOr[Double] = js.native
   
-  type Type = js.Function2[/* p0 */ js.UndefOr[Double], /* p1 */ js.UndefOr[Boolean], Double]
+  type Type = js.Function2[/* p0 */ js.UndefOr[Double], /* p1 */ js.UndefOr[Boolean], js.UndefOr[Double]]
 }

@@ -17,8 +17,6 @@ trait LinearUnitProperties extends js.Object {
     * Specifies the value of the linear distance.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-LinearUnit.html#distance)
-    *
-    * @default 0
     */
   var distance: js.UndefOr[Double] = js.native
   

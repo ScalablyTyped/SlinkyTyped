@@ -37,12 +37,12 @@ trait Button extends View {
   /**
     * Default button text color, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   /**
     * Text color of the button in its disabled state, as a color name or hex triplet.
     */
-  var disabledColor: String = js.native
+  var disabledColor: String | Color = js.native
   
   /**
     * Set to `true` to enable the button, `false` to disable the button.
@@ -97,13 +97,13 @@ trait Button extends View {
     * Gets the value of the <Titanium.UI.Button.color> property.
     * @deprecated Access <Titanium.UI.Button.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Button.disabledColor> property.
     * @deprecated Access <Titanium.UI.Button.disabledColor> instead.
     */
-  def getDisabledColor(): String = js.native
+  def getDisabledColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Button.enabled> property.
@@ -127,13 +127,13 @@ trait Button extends View {
     * Gets the value of the <Titanium.UI.Button.selectedColor> property.
     * @deprecated Access <Titanium.UI.Button.selectedColor> instead.
     */
-  def getSelectedColor(): String = js.native
+  def getSelectedColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Button.shadowColor> property.
     * @deprecated Access <Titanium.UI.Button.shadowColor> instead.
     */
-  def getShadowColor(): String = js.native
+  def getShadowColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Button.shadowOffset> property.
@@ -191,7 +191,7 @@ trait Button extends View {
   /**
     * Button text color used to indicate the selected state, as a color name or hex triplet.
     */
-  var selectedColor: String = js.native
+  var selectedColor: String | Color = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Button.attributedString> property.
@@ -204,12 +204,14 @@ trait Button extends View {
     * @deprecated Set the value using <Titanium.UI.Button.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Button.disabledColor> property.
     * @deprecated Set the value using <Titanium.UI.Button.disabledColor> instead.
     */
   def setDisabledColor(disabledColor: String): Unit = js.native
+  def setDisabledColor(disabledColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Button.enabled> property.
@@ -235,12 +237,14 @@ trait Button extends View {
     * @deprecated Set the value using <Titanium.UI.Button.selectedColor> instead.
     */
   def setSelectedColor(selectedColor: String): Unit = js.native
+  def setSelectedColor(selectedColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Button.shadowColor> property.
     * @deprecated Set the value using <Titanium.UI.Button.shadowColor> instead.
     */
   def setShadowColor(shadowColor: String): Unit = js.native
+  def setShadowColor(shadowColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Button.shadowOffset> property.
@@ -295,7 +299,7 @@ trait Button extends View {
   /**
     * Shadow color of the [title](Titanium.UI.Button.title), as a color name or hex triplet.
     */
-  var shadowColor: String = js.native
+  var shadowColor: String | Color = js.native
   
   /**
     * Shadow offset of the [title](Titanium.UI.Button.title), as a dictionary with the properties `x` and `y`.
@@ -321,6 +325,12 @@ trait Button extends View {
     * Text alignment, specified using one of the <Titanium.UI> text alignment constants.
     */
   var textAlign: String | Double = js.native
+  
+  /**
+    * Button tint color.
+    */
+  @JSName("tintColor")
+  var tintColor_Button: String = js.native
   
   /**
     * Button title.

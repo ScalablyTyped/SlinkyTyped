@@ -8,7 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VirtualNodeSpecBackendVirtualService extends js.Object {
   
   /**
-    * The name of the virtual service that is acting as a virtual node backend.
+    * The client policy for the backend.
+    */
+  var clientPolicy: js.UndefOr[VirtualNodeSpecBackendVirtualServiceClientPolicy] = js.native
+  
+  /**
+    * The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
     */
   var virtualServiceName: String = js.native
 }
@@ -37,5 +42,11 @@ object VirtualNodeSpecBackendVirtualService {
     
     @scala.inline
     def setVirtualServiceName(value: String): Self = this.set("virtualServiceName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setClientPolicy(value: VirtualNodeSpecBackendVirtualServiceClientPolicy): Self = this.set("clientPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClientPolicy: Self = this.set("clientPolicy", js.undefined)
   }
 }

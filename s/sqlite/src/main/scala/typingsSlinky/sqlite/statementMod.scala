@@ -61,6 +61,15 @@ object statementMod extends js.Object {
       * @see https://github.com/mapbox/node-sqlite3/wiki/API#statementeachparam--callback-complete
       * @returns Promise<number> Number of rows returned
       */
+    def each[T](callback: js.Function2[/* err */ js.Any, /* row */ T, Unit]): js.Promise[Double] = js.native
+    def each[T](param1: js.Any, callback: js.Function2[/* err */ js.Any, /* row */ T, Unit]): js.Promise[Double] = js.native
+    def each[T](param1: js.Any, param2: js.Any, callback: js.Function2[/* err */ js.Any, /* row */ T, Unit]): js.Promise[Double] = js.native
+    def each[T](
+      param1: js.Any,
+      param2: js.Any,
+      param3: js.Any,
+      callback: js.Function2[/* err */ js.Any, /* row */ T, Unit]
+    ): js.Promise[Double] = js.native
     def each[T](params: js.Any*): js.Promise[Double] = js.native
     
     /**

@@ -1,11 +1,22 @@
 package typingsSlinky.reactOverlays.modalMod
 
+import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.ReactComponentClass
+import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactOverlays.mod.TransitionCallbacks
-import typingsSlinky.reactOverlays.portalMod.PortalProps
+import slinky.core.facade.ReactRef
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactOverlays.anon.PreventScroll
+import typingsSlinky.reactOverlays.anon.inbooleanappearbooleanund
+import typingsSlinky.reactOverlays.reactOverlaysBooleans.`false`
+import typingsSlinky.reactOverlays.reactOverlaysBooleans.`true`
 import typingsSlinky.reactOverlays.reactOverlaysStrings.static
-import typingsSlinky.reactTransitionGroup.transitionMod.TransitionProps
+import typingsSlinky.reactOverlays.typesMod.TransitionCallbacks
+import typingsSlinky.reactOverlays.useWaitForDOMRefMod.DOMContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,115 +24,51 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ModalProps
   extends TransitionCallbacks
-     with PortalProps {
+     with /* other */ StringDictionary[js.Any] {
   
-  /**
-    * When `true` The modal will automatically shift focus to itself when it opens, and
-    * replace it to the last focused element when it closes. This also
-    * works correctly with any Modal children that have the `autoFocus` prop.
-    *
-    * Generally this should never be set to `false` as it makes the Modal less
-    * accessible to assistive technologies, like screen readers.
-    */
   var autoFocus: js.UndefOr[Boolean] = js.native
   
-  /**
-    * Include a backdrop component.
-    */
-  var backdrop: js.UndefOr[Boolean | static] = js.native
+  var backdrop: js.UndefOr[`true` | `false` | static] = js.native
   
-  /**
-    * A `react-transition-group@2.0.0` `<Transition/>` component used
-    * to control animations for the backdrop components.
-    */
-  var backdropTransition: js.UndefOr[ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]] = js.native
+  var backdropTransition: js.UndefOr[ModalTransitionComponent] = js.native
+  
+  var children: js.UndefOr[ReactElement] = js.native
   
   var className: js.UndefOr[String] = js.native
   
-  /**
-    * A css class or set of classes applied to the modal container when the modal is open,
-    * and removed when it is closed.
-    */
+  var container: js.UndefOr[DOMContainer[HTMLElement]] = js.native
+  
   var containerClassName: js.UndefOr[String] = js.native
   
-  /**
-    * When `true` The modal will prevent focus from leaving the Modal while open.
-    *
-    * Generally this should never be set to `false` as it makes the Modal less
-    * accessible to assistive technologies, like screen readers.
-    */
   var enforceFocus: js.UndefOr[Boolean] = js.native
   
-  /**
-    * Close the modal when escape key is pressed
-    */
   var keyboard: js.UndefOr[Boolean] = js.native
   
-  /**
-    * A ModalManager instance used to track and manage the state of open
-    * Modals. Useful when customizing how modals interact within a container
-    */
-  var manager: js.UndefOr[typingsSlinky.reactOverlays.modalManagerMod.^] = js.native
+  var manager: js.UndefOr[typingsSlinky.reactOverlays.modalManagerMod.default] = js.native
   
-  /**
-    * A callback fired when the backdrop, if specified, is clicked.
-    */
-  var onBackdropClick: js.UndefOr[js.Function] = js.native
+  var onBackdropClick: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, Element], Unit]] = js.native
   
-  /**
-    * A callback fired when the escape key, if specified in `keyboard`, is pressed.
-    */
-  var onEscapeKeyDown: js.UndefOr[js.Function] = js.native
+  var onEscapeKeyDown: js.UndefOr[js.Function1[/* e */ KeyboardEvent, Unit]] = js.native
   
-  /**
-    * A callback fired when either the backdrop is clicked, or the escape key is pressed.
-    *
-    * The `onHide` callback only signals intent from the Modal,
-    * you must actually set the `show` prop to `false` for the Modal to close.
-    */
-  var onHide: js.UndefOr[js.Function] = js.native
+  var onHide: js.UndefOr[js.Function0[Unit]] = js.native
   
-  /**
-    * A callback fired when the Modal is opening.
-    */
-  var onShow: js.UndefOr[js.Function] = js.native
+  var onShow: js.UndefOr[js.Function0[Unit]] = js.native
   
-  /**
-    * A function that returns a backdrop component. Useful for custom
-    * backdrop rendering.
-    *
-    * ```js
-    *  renderBackdrop={props => <MyBackdrop {...props} />}
-    * ```
-    */
-  var renderBackdrop: js.UndefOr[js.Function1[/* props */ js.Any, ReactElement]] = js.native
+  var renderBackdrop: js.UndefOr[js.Function1[/* props */ RenderModalBackdropProps, ReactElement]] = js.native
   
-  /**
-    * A function that returns the dialog component. Useful for custom
-    * rendering. **Note:** the component should make sure to apply the provided ref.
-    *
-    * ```js
-    *  renderDialog={props => <MyDialog {...props} />}
-    * ```
-    */
-  var renderDialog: js.UndefOr[js.Function1[/* props */ js.Any, ReactElement]] = js.native
+  var renderDialog: js.UndefOr[js.Function1[/* props */ RenderModalDialogProps, ReactElement]] = js.native
   
-  /**
-    * When `true` The modal will restore focus to previously focused element once
-    * modal is hidden
-    */
   var restoreFocus: js.UndefOr[Boolean] = js.native
   
-  /**
-    * Set the visibility of the Modal
-    */
+  var restoreFocusOptions: js.UndefOr[PreventScroll] = js.native
+  
+  var role: js.UndefOr[String] = js.native
+  
   var show: js.UndefOr[Boolean] = js.native
   
-  /**
-    * A `react-transition-group@2.0.0` `<Transition/>` component used
-    * to control animations for the dialog component.
-    */
-  var transition: js.UndefOr[ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]] = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
+  
+  var transition: js.UndefOr[ModalTransitionComponent] = js.native
 }
 object ModalProps {
   
@@ -153,28 +100,52 @@ object ModalProps {
     def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
     
     @scala.inline
-    def setBackdrop(value: Boolean | static): Self = this.set("backdrop", value.asInstanceOf[js.Any])
+    def setBackdrop(value: `true` | `false` | static): Self = this.set("backdrop", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackdrop: Self = this.set("backdrop", js.undefined)
     
     @scala.inline
-    def setBackdropTransitionFunctionComponent(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): Self = this.set("backdropTransition", value.asInstanceOf[js.Any])
+    def setBackdropTransitionFunctionComponent(value: ReactComponentClass[inbooleanappearbooleanund]): Self = this.set("backdropTransition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBackdropTransitionComponentClass(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): Self = this.set("backdropTransition", value.asInstanceOf[js.Any])
+    def setBackdropTransitionComponentClass(value: ReactComponentClass[inbooleanappearbooleanund]): Self = this.set("backdropTransition", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBackdropTransition(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): Self = this.set("backdropTransition", value.asInstanceOf[js.Any])
+    def setBackdropTransition(value: ModalTransitionComponent): Self = this.set("backdropTransition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackdropTransition: Self = this.set("backdropTransition", js.undefined)
+    
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
+    def setContainerRefObject(value: ReactRef[HTMLElement]): Self = this.set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setContainerHTMLElement(value: HTMLElement): Self = this.set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setContainerFunction0(value: () => HTMLElement | ReactRef[HTMLElement] | Null): Self = this.set("container", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setContainer(value: DOMContainer[HTMLElement]): Self = this.set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContainer: Self = this.set("container", js.undefined)
+    
+    @scala.inline
+    def setContainerNull: Self = this.set("container", null)
     
     @scala.inline
     def setContainerClassName(value: String): Self = this.set("containerClassName", value.asInstanceOf[js.Any])
@@ -195,43 +166,43 @@ object ModalProps {
     def deleteKeyboard: Self = this.set("keyboard", js.undefined)
     
     @scala.inline
-    def setManager(value: typingsSlinky.reactOverlays.modalManagerMod.^): Self = this.set("manager", value.asInstanceOf[js.Any])
+    def setManager(value: typingsSlinky.reactOverlays.modalManagerMod.default): Self = this.set("manager", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteManager: Self = this.set("manager", js.undefined)
     
     @scala.inline
-    def setOnBackdropClick(value: js.Function): Self = this.set("onBackdropClick", value.asInstanceOf[js.Any])
+    def setOnBackdropClick(value: /* e */ SyntheticEvent[Event, Element] => Unit): Self = this.set("onBackdropClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnBackdropClick: Self = this.set("onBackdropClick", js.undefined)
     
     @scala.inline
-    def setOnEscapeKeyDown(value: js.Function): Self = this.set("onEscapeKeyDown", value.asInstanceOf[js.Any])
+    def setOnEscapeKeyDown(value: /* e */ KeyboardEvent => Unit): Self = this.set("onEscapeKeyDown", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnEscapeKeyDown: Self = this.set("onEscapeKeyDown", js.undefined)
     
     @scala.inline
-    def setOnHide(value: js.Function): Self = this.set("onHide", value.asInstanceOf[js.Any])
+    def setOnHide(value: () => Unit): Self = this.set("onHide", js.Any.fromFunction0(value))
     
     @scala.inline
     def deleteOnHide: Self = this.set("onHide", js.undefined)
     
     @scala.inline
-    def setOnShow(value: js.Function): Self = this.set("onShow", value.asInstanceOf[js.Any])
+    def setOnShow(value: () => Unit): Self = this.set("onShow", js.Any.fromFunction0(value))
     
     @scala.inline
     def deleteOnShow: Self = this.set("onShow", js.undefined)
     
     @scala.inline
-    def setRenderBackdrop(value: /* props */ js.Any => ReactElement): Self = this.set("renderBackdrop", js.Any.fromFunction1(value))
+    def setRenderBackdrop(value: /* props */ RenderModalBackdropProps => ReactElement): Self = this.set("renderBackdrop", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRenderBackdrop: Self = this.set("renderBackdrop", js.undefined)
     
     @scala.inline
-    def setRenderDialog(value: /* props */ js.Any => ReactElement): Self = this.set("renderDialog", js.Any.fromFunction1(value))
+    def setRenderDialog(value: /* props */ RenderModalDialogProps => ReactElement): Self = this.set("renderDialog", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRenderDialog: Self = this.set("renderDialog", js.undefined)
@@ -243,19 +214,37 @@ object ModalProps {
     def deleteRestoreFocus: Self = this.set("restoreFocus", js.undefined)
     
     @scala.inline
+    def setRestoreFocusOptions(value: PreventScroll): Self = this.set("restoreFocusOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRestoreFocusOptions: Self = this.set("restoreFocusOptions", js.undefined)
+    
+    @scala.inline
+    def setRole(value: String): Self = this.set("role", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRole: Self = this.set("role", js.undefined)
+    
+    @scala.inline
     def setShow(value: Boolean): Self = this.set("show", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShow: Self = this.set("show", js.undefined)
     
     @scala.inline
-    def setTransitionFunctionComponent(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): Self = this.set("transition", value.asInstanceOf[js.Any])
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTransitionComponentClass(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): Self = this.set("transition", value.asInstanceOf[js.Any])
+    def deleteStyle: Self = this.set("style", js.undefined)
     
     @scala.inline
-    def setTransition(value: ReactComponentClass[TransitionProps[js.UndefOr[scala.Nothing]]]): Self = this.set("transition", value.asInstanceOf[js.Any])
+    def setTransitionFunctionComponent(value: ReactComponentClass[inbooleanappearbooleanund]): Self = this.set("transition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTransitionComponentClass(value: ReactComponentClass[inbooleanappearbooleanund]): Self = this.set("transition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTransition(value: ModalTransitionComponent): Self = this.set("transition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTransition: Self = this.set("transition", js.undefined)

@@ -24,7 +24,7 @@ object AnyNestedObject {
   }
   
   @scala.inline
-  def IEnum(values: StringDictionary[Double]): AnyNestedObject = {
+  def IEnum(values: StringDictionary[js.UndefOr[Double]]): AnyNestedObject = {
     val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnyNestedObject]
   }
@@ -37,13 +37,13 @@ object AnyNestedObject {
   }
   
   @scala.inline
-  def IType(fields: StringDictionary[IField]): AnyNestedObject = {
+  def IType(fields: StringDictionary[js.UndefOr[IField]]): AnyNestedObject = {
     val __obj = js.Dynamic.literal(fields = fields.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnyNestedObject]
   }
   
   @scala.inline
-  def IService(methods: StringDictionary[IMethod]): AnyNestedObject = {
+  def IService(methods: StringDictionary[js.UndefOr[IMethod]]): AnyNestedObject = {
     val __obj = js.Dynamic.literal(methods = methods.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnyNestedObject]
   }

@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ContentProps extends js.Object {
   
   var absolute: js.UndefOr[Boolean] = js.native
+  
+  var bordered: js.UndefOr[Boolean] = js.native
 }
 object ContentProps {
   
@@ -37,5 +39,11 @@ object ContentProps {
     
     @scala.inline
     def deleteAbsolute: Self = this.set("absolute", js.undefined)
+    
+    @scala.inline
+    def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBordered: Self = this.set("bordered", js.undefined)
   }
 }

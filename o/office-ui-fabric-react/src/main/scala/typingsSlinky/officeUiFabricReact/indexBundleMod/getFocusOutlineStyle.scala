@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
+import typingsSlinky.uifabricMergeStyles.irawstyleMod.IRawStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

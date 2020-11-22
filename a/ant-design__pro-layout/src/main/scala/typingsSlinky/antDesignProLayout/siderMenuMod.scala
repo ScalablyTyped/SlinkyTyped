@@ -1,6 +1,7 @@
 package typingsSlinky.antDesignProLayout
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.PrivateSiderMenuProps
 import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.SiderMenuProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,5 +11,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object siderMenuMod extends js.Object {
   
-  val default: ReactComponentClass[SiderMenuProps] = js.native
+  val default: ReactComponentClass[SiderMenuProps with PrivateSiderMenuProps] = js.native
 }

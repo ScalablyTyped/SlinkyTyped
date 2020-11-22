@@ -30,10 +30,8 @@ trait Options extends js.Object {
   val background: js.UndefOr[Boolean] = js.native
   
   /**
-  		Uses `URL` to encode the `target` before executing it.
-  		The use with targets that are not URLs is not recommended.
-  		Especially useful when dealing with the [double-quotes on Windows](https://github.com/sindresorhus/open#double-quotes-on-windows) caveat.
-  		@default false
+  		__deprecated__
+  		This option will be removed in the next major release.
   		*/
   val url: js.UndefOr[Boolean] = js.native
   

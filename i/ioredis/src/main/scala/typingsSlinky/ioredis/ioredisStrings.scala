@@ -66,6 +66,9 @@ object ioredisStrings {
   def TLSv1Dot3: TLSv1Dot3 = "TLSv1.3".asInstanceOf[TLSv1Dot3]
   
   @scala.inline
+  def USAGE: USAGE = "USAGE".asInstanceOf[USAGE]
+  
+  @scala.inline
   def WITHSCORES: WITHSCORES = "WITHSCORES".asInstanceOf[WITHSCORES]
   
   @scala.inline
@@ -145,6 +148,9 @@ object ioredisStrings {
   
   @js.native
   sealed trait TLSv1Dot3 extends SecureVersion
+  
+  @js.native
+  sealed trait USAGE extends js.Object
   
   @js.native
   sealed trait WITHSCORES extends js.Object

@@ -285,7 +285,7 @@ object KEYUTIL extends js.Object {
     encAlg: js.UndefOr[String],
     hexType: js.UndefOr[String],
     ivsaltHex: js.UndefOr[String]
-  ): Unit = js.native
+  ): String = js.native
   
   /**
     * parse hexadecimal string of PKCS#10 CSR (certificate signing request)

@@ -2,7 +2,6 @@ package typingsSlinky.three
 
 import typingsSlinky.three.fogMod.IFog
 import typingsSlinky.three.materialMod.Material
-import typingsSlinky.three.textureMod.Texture
 import typingsSlinky.three.webGLPropertiesMod.WebGLProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +17,6 @@ object webGLMaterialsMod extends js.Object {
     
     def refreshFogUniforms(uniforms: js.Object, fog: IFog): Unit = js.native
     
-    def refreshMaterialUniforms(uniforms: js.Object, material: Material, environment: Texture, pixelRatio: Double, height: Double): Unit = js.native
+    def refreshMaterialUniforms(uniforms: js.Object, material: Material, pixelRatio: Double, height: Double): Unit = js.native
   }
 }

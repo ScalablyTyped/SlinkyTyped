@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.organizationsPolicyMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +30,12 @@ trait PolicyState extends js.Object {
   val name: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The type of policy to create. Valid values are `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY` (SCP), and `TAG_POLICY`. Defaults to `SERVICE_CONTROL_POLICY`.
+    * Key-value map of resource tags.
+    */
+  val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
+  
+  /**
+    * The type of policy to create. Valid values are `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY` (SCP), and `TAG_POLICY`. Defaults to `SERVICE_CONTROL_POLICY`.
     */
   val `type`: js.UndefOr[Input[String]] = js.native
 }
@@ -79,6 +85,12 @@ object PolicyState {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setTags(value: Input[StringDictionary[Input[String]]]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
     
     @scala.inline
     def setType(value: Input[String]): Self = this.set("type", value.asInstanceOf[js.Any])

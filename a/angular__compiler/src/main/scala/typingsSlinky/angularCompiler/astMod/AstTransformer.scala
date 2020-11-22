@@ -9,4 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class AstTransformer () extends AstVisitor {
   
   def visitAll(asts: js.Array[_]): js.Array[_] = js.native
+  
+  @JSName("visitThisReceiver")
+  def visitThisReceiver_MAstTransformer(ast: ThisReceiver, context: js.Any): AST = js.native
+  
+  @JSName("visitUnary")
+  def visitUnary_MAstTransformer(ast: Unary, context: js.Any): AST = js.native
 }

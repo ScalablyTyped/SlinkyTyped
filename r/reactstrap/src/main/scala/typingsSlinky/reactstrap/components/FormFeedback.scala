@@ -20,8 +20,13 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -73,14 +78,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object FormFeedback {
   
-  @JSImport("reactstrap", "FormFeedback")
+  @JSImport("reactstrap/es", "FormFeedback")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactstrap.mod.FormFeedback[T]] {
+       with StBuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactstrap.mod.FormFeedback] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -194,7 +199,9 @@ object FormFeedback {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -596,6 +603,9 @@ object FormFeedback {
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def tooltip(value: Boolean): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -611,13 +621,7 @@ object FormFeedback {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: FormFeedbackProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: FormFeedbackProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply[T](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[FormFeedbackProps]))
-  }
-  
-  implicit def make[T](companion: FormFeedback.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: FormFeedback.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

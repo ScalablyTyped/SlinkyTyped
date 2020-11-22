@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -8,6 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.menusMod.menus.MenuItem
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.BottomBarItem
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,12 +22,9 @@ class NoClientAction protected () extends ClientAction {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
-  
-  @JSName("model")
-  var model_FNoClientAction: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.NoClientAction")
@@ -99,7 +98,7 @@ object NoClientAction extends js.Object {
     * of the parent nativepages.BottomBarItem element passed as argument.
     *
     * Warning! Can only be used on models with the following Mendix meta model versions:
-    *  8.0.0 and higher
+    *  8.0.0 to 8.14.0
     */
   def createInBottomBarItemUnderAction(container: BottomBarItem): NoClientAction = js.native
   

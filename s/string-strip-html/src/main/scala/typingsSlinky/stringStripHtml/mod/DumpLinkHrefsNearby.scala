@@ -7,12 +7,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DumpLinkHrefsNearby extends js.Object {
   
+  /**
+    * By default, this function is disabled - URL's are not inserted nearby.
+    *
+    * Set it to Boolean true to enable it.
+    */
   var enabled: js.UndefOr[Boolean] = js.native
   
+  /**
+    * By default, URL is inserted after any whatever was left after stripping the particular linked piece of code.
+    * If you want, you can force all inserted URL's to be on a new line, separated by a blank line.
+    */
   var putOnNewLine: js.UndefOr[Boolean] = js.native
   
+  /**
+    * This string (default is an empty string) will be inserted in front of every URL.
+    *
+    * Set it to any string you want, for example [.
+    */
   var wrapHeads: js.UndefOr[String] = js.native
   
+  /**
+    * This string (default is an empty string) will be inserted straight after every URL.
+    *
+    * Set it to any string you want, for example ].
+    */
   var wrapTails: js.UndefOr[String] = js.native
 }
 object DumpLinkHrefsNearby {

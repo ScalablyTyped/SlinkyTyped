@@ -15,16 +15,14 @@ trait LocalBasemapsSource extends Accessor {
   var basemaps: Collection[Basemap] = js.native
   
   /**
-    * Refreshes the source basemaps. Note: `refresh` will not affect LocalBasemapsSource. Modify basemaps directly instead.
+    * Refreshes the source basemaps.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery-support-LocalBasemapsSource.html#refresh)
-    *
-    *
     */
   def refresh(): Unit = js.native
   
   /**
-    * The source's state. The state is always `ready`.
+    * The source's state.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery-support-LocalBasemapsSource.html#state)
     */

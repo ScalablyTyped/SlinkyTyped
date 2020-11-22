@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.anon.ThresholdAngle
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import typingsSlinky.three.geometryMod.Geometry
 import scala.scalajs.js
@@ -12,9 +13,15 @@ object edgesGeometryMod extends js.Object {
   
   @js.native
   class EdgesGeometry protected () extends BufferGeometry {
+    /**
+    	 * @param geometry
+    	 * @param [thresholdAngle=1]
+    	 */
     def this(geometry: BufferGeometry) = this()
     def this(geometry: Geometry) = this()
     def this(geometry: BufferGeometry, thresholdAngle: Double) = this()
     def this(geometry: Geometry, thresholdAngle: Double) = this()
+    
+    var parameters: ThresholdAngle = js.native
   }
 }

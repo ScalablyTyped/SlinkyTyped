@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.cardContentMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.cardDescriptionMod.CardDescriptionProps
 import typingsSlinky.semanticUiReact.cardHeaderMod.CardHeaderProps
 import typingsSlinky.semanticUiReact.cardMetaMod.CardMetaProps
@@ -103,7 +102,7 @@ object StrictCardContentProps {
     
     @scala.inline
     def setDescriptionFunction3(
-      value: (/* component */ ReactType[CardDescriptionProps], CardDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, CardDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("description", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -123,7 +122,7 @@ object StrictCardContentProps {
     
     @scala.inline
     def setHeaderFunction3(
-      value: (/* component */ ReactType[CardHeaderProps], CardHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, CardHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("header", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -137,7 +136,7 @@ object StrictCardContentProps {
     
     @scala.inline
     def setMetaFunction3(
-      value: (/* component */ ReactType[CardMetaProps], CardMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, CardMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("meta", js.Any.fromFunction3(value))
     
     @scala.inline

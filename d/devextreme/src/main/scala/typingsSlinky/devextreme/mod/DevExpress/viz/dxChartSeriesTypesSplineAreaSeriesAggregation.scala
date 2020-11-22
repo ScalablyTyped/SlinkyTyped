@@ -10,11 +10,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.SplineAreaSeries.aggregation */
+/**
+  * [descr:dxChartSeriesTypes.SplineAreaSeries.aggregation]
+  */
 @js.native
 trait dxChartSeriesTypesSplineAreaSeriesAggregation extends dxChartSeriesTypesCommonSeriesAggregation {
   
-  /** @name dxChartSeriesTypes.SplineAreaSeries.aggregation.method */
+  /**
+    * [descr:dxChartSeriesTypes.SplineAreaSeries.aggregation.method]
+    */
   @JSName("method")
   var method_dxChartSeriesTypesSplineAreaSeriesAggregation: js.UndefOr[avg | count | max | min | sum | custom] = js.native
 }

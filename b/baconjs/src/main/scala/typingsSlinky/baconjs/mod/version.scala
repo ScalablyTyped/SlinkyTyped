@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("baconjs", "version")
 @js.native
-object version extends TopLevel[/* "<version>" */ String]
+object version extends TopLevel[/* "__version__" */ String]

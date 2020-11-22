@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__alert
 
-Typings are for version 2.1.2
+Typings are for version 2.4.2
 
 ## Library description:
 Create accessible alerts through snackbars and banners.

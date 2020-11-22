@@ -133,6 +133,11 @@ class REPLServer protected () extends Interface {
   /**
     * The `Readable` stream from which REPL input will be read.
     */
+  val input: ReadableStream = js.native
+  
+  /**
+    * @deprecated since v14.3.0 - Use `input` instead.
+    */
   val inputStream: ReadableStream = js.native
   
   /**
@@ -162,6 +167,11 @@ class REPLServer protected () extends Interface {
   
   /**
     * The `Writable` stream to which REPL output will be written.
+    */
+  val output: WritableStream = js.native
+  
+  /**
+    * @deprecated since v14.3.0 - Use `output` instead.
     */
   val outputStream: WritableStream = js.native
   

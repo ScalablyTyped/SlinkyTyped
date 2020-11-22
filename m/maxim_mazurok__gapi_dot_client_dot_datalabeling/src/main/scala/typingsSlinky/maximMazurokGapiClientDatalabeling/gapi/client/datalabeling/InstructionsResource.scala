@@ -1,0 +1,30 @@
+package typingsSlinky.maximMazurokGapiClientDatalabeling.gapi.client.datalabeling
+
+import typingsSlinky.gapiClient.gapi.client.Request
+import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Alt
+import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Callback
+import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.Fields
+import typingsSlinky.maximMazurokGapiClientDatalabeling.anon.FieldsKey
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@js.native
+trait InstructionsResource extends js.Object {
+  
+  def create(request: Alt, body: GoogleCloudDatalabelingV1beta1CreateInstructionRequest): Request[GoogleLongrunningOperation] = js.native
+  /** Creates an instruction for how data should be labeled. */
+  def create(request: FieldsKey): Request[GoogleLongrunningOperation] = js.native
+  
+  /** Deletes an instruction object by resource name. */
+  def delete(): Request[js.Object] = js.native
+  def delete(request: Callback): Request[js.Object] = js.native
+  
+  /** Gets an instruction by resource name. */
+  def get(): Request[GoogleCloudDatalabelingV1beta1Instruction] = js.native
+  def get(request: Callback): Request[GoogleCloudDatalabelingV1beta1Instruction] = js.native
+  
+  /** Lists instructions for a project. Pagination is supported. */
+  def list(): Request[GoogleCloudDatalabelingV1beta1ListInstructionsResponse] = js.native
+  def list(request: Fields): Request[GoogleCloudDatalabelingV1beta1ListInstructionsResponse] = js.native
+}

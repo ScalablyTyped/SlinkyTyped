@@ -1,7 +1,7 @@
 
 # Scala.js typings for file-selector
 
-Typings are for version 0.1.12
+Typings are for version 0.2.3
 
 ## Library description:
 Convert DataTransfer object to a list of File objects

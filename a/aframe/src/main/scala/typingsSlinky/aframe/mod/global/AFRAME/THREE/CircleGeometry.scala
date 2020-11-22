@@ -6,5 +6,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSGlobal("AFRAME.THREE.CircleGeometry")
 @js.native
+/**
+	 * @param [radius=1]
+	 * @param [segments=8]
+	 * @param [thetaStart=0]
+	 * @param [thetaLength=Math.PI * 2]
+	 */
 class CircleGeometry ()
   extends typingsSlinky.three.mod.CircleGeometry

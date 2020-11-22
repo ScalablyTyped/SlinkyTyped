@@ -15,6 +15,10 @@ trait GanttMessagesEditor extends js.Object {
   
   var percentComplete: js.UndefOr[String] = js.native
   
+  var plannedEnd: js.UndefOr[String] = js.native
+  
+  var plannedStart: js.UndefOr[String] = js.native
+  
   var resources: js.UndefOr[String] = js.native
   
   var resourcesEditorTitle: js.UndefOr[String] = js.native
@@ -73,6 +77,18 @@ object GanttMessagesEditor {
     
     @scala.inline
     def deletePercentComplete: Self = this.set("percentComplete", js.undefined)
+    
+    @scala.inline
+    def setPlannedEnd(value: String): Self = this.set("plannedEnd", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePlannedEnd: Self = this.set("plannedEnd", js.undefined)
+    
+    @scala.inline
+    def setPlannedStart(value: String): Self = this.set("plannedStart", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePlannedStart: Self = this.set("plannedStart", js.undefined)
     
     @scala.inline
     def setResources(value: String): Self = this.set("resources", value.asInstanceOf[js.Any])

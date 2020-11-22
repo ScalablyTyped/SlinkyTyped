@@ -3,10 +3,10 @@ package typingsSlinky.reactstrap.modalHeaderMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,11 +19,11 @@ trait ModalHeaderProps
   
   var cssModule: js.UndefOr[CSSModule] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
   
   var toggle: js.UndefOr[MouseEventHandler[_]] = js.native
   
-  var wrapTag: js.UndefOr[String | ReactType[_]] = js.native
+  var wrapTag: js.UndefOr[ReactElement] = js.native
 }
 object ModalHeaderProps {
   
@@ -61,7 +61,7 @@ object ModalHeaderProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)
@@ -79,7 +79,7 @@ object ModalHeaderProps {
     def setWrapTagComponentClass(value: ReactComponentClass[_]): Self = this.set("wrapTag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setWrapTag(value: String | ReactType[_]): Self = this.set("wrapTag", value.asInstanceOf[js.Any])
+    def setWrapTag(value: ReactElement): Self = this.set("wrapTag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWrapTag: Self = this.set("wrapTag", js.undefined)

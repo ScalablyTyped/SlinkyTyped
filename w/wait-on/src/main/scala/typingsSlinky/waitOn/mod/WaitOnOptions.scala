@@ -10,7 +10,7 @@ trait WaitOnOptions extends js.Object {
   
   /**
     * Https specific option.
-    * see https:// github.com/request/request#readme for specific details
+    * see https://github.com/request/request#readme for specific details
     */
   var auth: js.UndefOr[WaitOnAuth] = js.native
   
@@ -20,13 +20,9 @@ trait WaitOnOptions extends js.Object {
     */
   var delay: js.UndefOr[Double] = js.native
   
-  var followAllRedirects: js.UndefOr[Boolean] = js.native
-  
   var followRedirect: js.UndefOr[Boolean] = js.native
   
   var headers: js.UndefOr[Record[String, _]] = js.native
-  
-  var httpSignature: js.UndefOr[HttpSignature] = js.native
   
   /**
     * http HEAD/GET timeout to wait for request
@@ -44,6 +40,12 @@ trait WaitOnOptions extends js.Object {
     * Flag which outputs to stdout, remaining resources waited on and when complete or any error occurs.
     */
   var log: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Proxy options.
+    * see https://github.com/axios/axios#config-defaults
+    */
+  var proxy: js.UndefOr[AxiosProxyConfig] = js.native
   
   /**
     * Array of string resources to wait for. prefix determines the type of resource with the default type of file:
@@ -75,6 +77,11 @@ trait WaitOnOptions extends js.Object {
     * @default Infinity
     */
   var timeout: js.UndefOr[Double] = js.native
+  
+  /**
+    * Validates whether a status is valid.
+    */
+  var validateStatus: js.UndefOr[ValidateStatus] = js.native
   
   /**
     * Flag which outputs debug output.
@@ -131,12 +138,6 @@ object WaitOnOptions {
     def deleteDelay: Self = this.set("delay", js.undefined)
     
     @scala.inline
-    def setFollowAllRedirects(value: Boolean): Self = this.set("followAllRedirects", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteFollowAllRedirects: Self = this.set("followAllRedirects", js.undefined)
-    
-    @scala.inline
     def setFollowRedirect(value: Boolean): Self = this.set("followRedirect", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -147,12 +148,6 @@ object WaitOnOptions {
     
     @scala.inline
     def deleteHeaders: Self = this.set("headers", js.undefined)
-    
-    @scala.inline
-    def setHttpSignature(value: HttpSignature): Self = this.set("httpSignature", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHttpSignature: Self = this.set("httpSignature", js.undefined)
     
     @scala.inline
     def setHttpTimeout(value: Double): Self = this.set("httpTimeout", value.asInstanceOf[js.Any])
@@ -171,6 +166,12 @@ object WaitOnOptions {
     
     @scala.inline
     def deleteLog: Self = this.set("log", js.undefined)
+    
+    @scala.inline
+    def setProxy(value: AxiosProxyConfig): Self = this.set("proxy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProxy: Self = this.set("proxy", js.undefined)
     
     @scala.inline
     def setReverse(value: Boolean): Self = this.set("reverse", value.asInstanceOf[js.Any])
@@ -201,6 +202,12 @@ object WaitOnOptions {
     
     @scala.inline
     def deleteTimeout: Self = this.set("timeout", js.undefined)
+    
+    @scala.inline
+    def setValidateStatus(value: /* status */ Double => Boolean): Self = this.set("validateStatus", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteValidateStatus: Self = this.set("validateStatus", js.undefined)
     
     @scala.inline
     def setVerbose(value: Boolean): Self = this.set("verbose", value.asInstanceOf[js.Any])

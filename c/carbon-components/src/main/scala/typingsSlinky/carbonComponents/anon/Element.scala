@@ -8,12 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Element extends js.Object {
   
   var element: js.Any = js.native
+  
+  var index: Double = js.native
 }
 object Element {
   
   @scala.inline
-  def apply(element: js.Any): Element = {
-    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any])
+  def apply(element: js.Any, index: Double): Element = {
+    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any])
     __obj.asInstanceOf[Element]
   }
   
@@ -34,5 +36,8 @@ object Element {
     
     @scala.inline
     def setElement(value: js.Any): Self = this.set("element", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
   }
 }

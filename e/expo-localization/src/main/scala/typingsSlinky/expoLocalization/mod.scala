@@ -11,15 +11,15 @@ object mod extends js.Object {
   
   def getLocalizationAsync(): js.Promise[Localization] = js.native
   
-  val isRTL: js.Any = js.native
+  val isRTL: Boolean = js.native
   
-  val isoCurrencyCodes: js.Any = js.native
+  val isoCurrencyCodes: js.Array[String] = js.native
   
   val locale: String = js.native
   
-  val locales: js.Any = js.native
+  val locales: js.Array[String] = js.native
   
-  val region: js.Any = js.native
+  val region: String | Null = js.native
   
-  val timezone: js.Any = js.native
+  val timezone: String = js.native
 }

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ReportDefinitionArgs extends js.Object {
   
   /**
-    * A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT.
+    * A list of additional artifacts. Valid values are: REDSHIFT, QUICKSIGHT, ATHENA. When ATHENA exists within additional_artifacts, no other artifact type can be declared and reportVersioning must be OVERWRITE_REPORT.
     */
   val additionalArtifacts: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
@@ -19,19 +19,29 @@ trait ReportDefinitionArgs extends js.Object {
   val additionalSchemaElements: Input[js.Array[Input[String]]] = js.native
   
   /**
-    * Compression format for report. Valid values are: GZIP, ZIP.
+    * Compression format for report. Valid values are: GZIP, ZIP, Parquet. If Parquet is used, then format must also be Parquet.
     */
   val compression: Input[String] = js.native
   
   /**
-    * Format for report. Valid values are: textORcsv.
+    * Format for report. Valid values are: textORcsv, Parquet. If Parquet is used, then Compression must also be Parquet.
     */
   val format: Input[String] = js.native
+  
+  /**
+    * Set to true to update your reports after they have been finalized if AWS detects charges related to previous months.
+    */
+  val refreshClosedReports: js.UndefOr[Input[Boolean]] = js.native
   
   /**
     * Unique name for the report. Must start with a number/letter and is case sensitive. Limited to 256 characters.
     */
   val reportName: Input[String] = js.native
+  
+  /**
+    * Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT, OVERWRITE_REPORT
+    */
+  val reportVersioning: js.UndefOr[Input[String]] = js.native
   
   /**
     * Name of the existing S3 bucket to hold generated reports.
@@ -116,6 +126,18 @@ object ReportDefinitionArgs {
     
     @scala.inline
     def deleteAdditionalArtifacts: Self = this.set("additionalArtifacts", js.undefined)
+    
+    @scala.inline
+    def setRefreshClosedReports(value: Input[Boolean]): Self = this.set("refreshClosedReports", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRefreshClosedReports: Self = this.set("refreshClosedReports", js.undefined)
+    
+    @scala.inline
+    def setReportVersioning(value: Input[String]): Self = this.set("reportVersioning", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReportVersioning: Self = this.set("reportVersioning", js.undefined)
     
     @scala.inline
     def setS3Prefix(value: Input[String]): Self = this.set("s3Prefix", value.asInstanceOf[js.Any])

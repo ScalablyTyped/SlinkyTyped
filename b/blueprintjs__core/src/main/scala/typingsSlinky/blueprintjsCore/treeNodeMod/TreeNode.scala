@@ -36,5 +36,5 @@ object TreeNode extends js.Object {
   
   var displayName: String = js.native
   
-  def ofType[T](): Instantiable1[/* props */ ITreeNodeProps[T], TreeNode[T]] = js.native
+  def ofType[U](): Instantiable1[/* props */ ITreeNodeProps[U], TreeNode[U]] = js.native
 }

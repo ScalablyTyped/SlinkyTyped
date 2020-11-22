@@ -11,17 +11,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Provides options for creating a new argument.
+  */
 @js.native
 trait ArgumentConfig extends js.Object {
   
+  /**
+    * The default value of the argument.
+    */
   var default: js.UndefOr[js.Any] = js.native
   
+  /**
+    * Description for the argument.
+    */
   var description: js.UndefOr[String] = js.native
   
+  /**
+    * A value indicating whether the argument is optional.
+    */
   var optional: js.UndefOr[Boolean] = js.native
   
+  /**
+    * A value indicating whether the argument is required.
+    */
   var required: js.UndefOr[Boolean] = js.native
   
+  /**
+    * The type of the argument.
+    */
   var `type`: js.UndefOr[
     (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number]) | (ArrayConstructor with (Instantiable1[/* arrayLength */ Double, js.Array[js.Object]])) | (ObjectConstructor with Instantiable0[js.Object])
   ] = js.native

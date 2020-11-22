@@ -16,7 +16,7 @@ trait GatewayAssociationProposalArgs extends js.Object {
   /**
     * The ID of the VGW or transit gateway with which to associate the Direct Connect gateway.
     */
-  val associatedGatewayId: js.UndefOr[Input[String]] = js.native
+  val associatedGatewayId: Input[String] = js.native
   
   /**
     * Direct Connect Gateway identifier.
@@ -27,19 +27,16 @@ trait GatewayAssociationProposalArgs extends js.Object {
     * AWS Account identifier of the Direct Connect Gateway's owner.
     */
   val dxGatewayOwnerAccountId: Input[String] = js.native
-  
-  /**
-    * *Deprecated:* Use `associatedGatewayId` instead. Virtual Gateway identifier to associate with the Direct Connect Gateway.
-    *
-    * @deprecated use 'associated_gateway_id' argument instead
-    */
-  val vpnGatewayId: js.UndefOr[Input[String]] = js.native
 }
 object GatewayAssociationProposalArgs {
   
   @scala.inline
-  def apply(dxGatewayId: Input[String], dxGatewayOwnerAccountId: Input[String]): GatewayAssociationProposalArgs = {
-    val __obj = js.Dynamic.literal(dxGatewayId = dxGatewayId.asInstanceOf[js.Any], dxGatewayOwnerAccountId = dxGatewayOwnerAccountId.asInstanceOf[js.Any])
+  def apply(
+    associatedGatewayId: Input[String],
+    dxGatewayId: Input[String],
+    dxGatewayOwnerAccountId: Input[String]
+  ): GatewayAssociationProposalArgs = {
+    val __obj = js.Dynamic.literal(associatedGatewayId = associatedGatewayId.asInstanceOf[js.Any], dxGatewayId = dxGatewayId.asInstanceOf[js.Any], dxGatewayOwnerAccountId = dxGatewayOwnerAccountId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GatewayAssociationProposalArgs]
   }
   
@@ -59,6 +56,9 @@ object GatewayAssociationProposalArgs {
     }
     
     @scala.inline
+    def setAssociatedGatewayId(value: Input[String]): Self = this.set("associatedGatewayId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setDxGatewayId(value: Input[String]): Self = this.set("dxGatewayId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -72,17 +72,5 @@ object GatewayAssociationProposalArgs {
     
     @scala.inline
     def deleteAllowedPrefixes: Self = this.set("allowedPrefixes", js.undefined)
-    
-    @scala.inline
-    def setAssociatedGatewayId(value: Input[String]): Self = this.set("associatedGatewayId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAssociatedGatewayId: Self = this.set("associatedGatewayId", js.undefined)
-    
-    @scala.inline
-    def setVpnGatewayId(value: Input[String]): Self = this.set("vpnGatewayId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteVpnGatewayId: Self = this.set("vpnGatewayId", js.undefined)
   }
 }

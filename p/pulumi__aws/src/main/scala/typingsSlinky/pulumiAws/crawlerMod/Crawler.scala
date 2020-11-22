@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.outputMod.glue.CrawlerCatalogTarget
 import typingsSlinky.pulumiAws.outputMod.glue.CrawlerDynamodbTarget
 import typingsSlinky.pulumiAws.outputMod.glue.CrawlerJdbcTarget
+import typingsSlinky.pulumiAws.outputMod.glue.CrawlerMongodbTarget
 import typingsSlinky.pulumiAws.outputMod.glue.CrawlerS3Target
 import typingsSlinky.pulumiAws.outputMod.glue.CrawlerSchemaChangePolicy
 import typingsSlinky.pulumiPulumi.mod.CustomResource
@@ -64,6 +65,11 @@ class Crawler protected () extends CustomResource {
     * List of nested JBDC target arguments. See below.
     */
   val jdbcTargets: Output_[js.UndefOr[js.Array[CrawlerJdbcTarget]]] = js.native
+  
+  /**
+    * List nested MongoDB target arguments. See below.
+    */
+  val mongodbTargets: Output_[js.UndefOr[js.Array[CrawlerMongodbTarget]]] = js.native
   
   /**
     * Name of the crawler.

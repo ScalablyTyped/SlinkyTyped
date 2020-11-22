@@ -6,14 +6,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object contextTypesMod {
   
-  type NodeDragEventHandler = js.Function2[
-    /* e */ slinky.web.SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement], 
+  type NodeDragEventHandler[T] = js.Function2[
+    /* e */ slinky.web.SyntheticMouseEvent[T], 
     /* node */ typingsSlinky.rcTree.interfaceMod.NodeInstance, 
     scala.Unit
   ]
   
-  type NodeMouseEventHandler = js.Function2[
-    /* e */ slinky.web.SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement], 
+  type NodeMouseEventHandler[T] = js.Function2[
+    /* e */ slinky.web.SyntheticMouseEvent[T], 
     /* node */ typingsSlinky.rcTree.interfaceMod.EventDataNode, 
     scala.Unit
   ]

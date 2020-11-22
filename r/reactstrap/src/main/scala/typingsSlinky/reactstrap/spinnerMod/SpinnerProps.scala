@@ -3,9 +3,8 @@ package typingsSlinky.reactstrap.spinnerMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.react.mod.ReactType
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,16 +12,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait SpinnerProps
-  extends AllHTMLAttributes[HTMLElement]
-     with ClassAttributes[HTMLElement]
+  extends HTMLAttributes[HTMLElement]
      with /* key */ StringDictionary[js.Any] {
   
   var cssModule: js.UndefOr[CSSModule] = js.native
   
-  @JSName("size")
-  var size_SpinnerProps: js.UndefOr[js.Any] = js.native
+  var size: js.UndefOr[js.Any] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
+  
+  var `type`: js.UndefOr[String] = js.native
 }
 object SpinnerProps {
   
@@ -66,9 +65,15 @@ object SpinnerProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)
+    
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
   }
 }

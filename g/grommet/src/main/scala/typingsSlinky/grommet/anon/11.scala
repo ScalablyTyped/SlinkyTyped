@@ -1,6 +1,5 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.utilsMod.MarginType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `11` extends js.Object {
   
-  var margin: js.UndefOr[MarginType] = js.native
+  var radius: js.UndefOr[String] = js.native
 }
 object `11` {
   
@@ -34,9 +33,9 @@ object `11` {
     }
     
     @scala.inline
-    def setMargin(value: MarginType): Self = this.set("margin", value.asInstanceOf[js.Any])
+    def setRadius(value: String): Self = this.set("radius", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteMargin: Self = this.set("margin", js.undefined)
+    def deleteRadius: Self = this.set("radius", js.undefined)
   }
 }

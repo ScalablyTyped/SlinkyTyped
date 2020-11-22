@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__transition
 
-Typings are for version 2.1.2
+Typings are for version 2.4.2
 
 ## Library description:
 A package for working with react-md to use some simple transitions.

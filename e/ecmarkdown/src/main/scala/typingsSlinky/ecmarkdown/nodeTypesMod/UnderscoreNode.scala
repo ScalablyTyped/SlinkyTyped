@@ -12,15 +12,15 @@ trait UnderscoreNode
   
   var contents: js.Array[FragmentNode] = js.native
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: underscore = js.native
 }
 object UnderscoreNode {
   
   @scala.inline
-  def apply(contents: js.Array[FragmentNode], name: underscore): UnderscoreNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(contents: js.Array[FragmentNode], location: LocationRange, name: underscore): UnderscoreNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnderscoreNode]
   }
   
@@ -46,12 +46,9 @@ object UnderscoreNode {
     def setContents(value: js.Array[FragmentNode]): Self = this.set("contents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: underscore): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
+    def setName(value: underscore): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

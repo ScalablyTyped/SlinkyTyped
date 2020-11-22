@@ -9,18 +9,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DOMImplementation extends js.Object {
   
-  def createDocument(): org.scalajs.dom.raw.Document = js.native
-  def createDocument(namespaceURI: java.lang.String): org.scalajs.dom.raw.Document = js.native
-  def createDocument(namespaceURI: java.lang.String, qualifiedName: java.lang.String): org.scalajs.dom.raw.Document = js.native
+  def createDocument(): XMLDocument = js.native
+  def createDocument(namespace: java.lang.String): XMLDocument = js.native
+  def createDocument(namespace: java.lang.String, qualifiedName: java.lang.String): XMLDocument = js.native
   def createDocument(
-    namespaceURI: java.lang.String,
+    namespace: java.lang.String,
     qualifiedName: java.lang.String,
     doctype: org.scalajs.dom.raw.DocumentType
-  ): org.scalajs.dom.raw.Document = js.native
-  def createDocument(namespaceURI: java.lang.String, qualifiedName: Null, doctype: org.scalajs.dom.raw.DocumentType): org.scalajs.dom.raw.Document = js.native
-  def createDocument(namespaceURI: Null, qualifiedName: java.lang.String): org.scalajs.dom.raw.Document = js.native
-  def createDocument(namespaceURI: Null, qualifiedName: java.lang.String, doctype: org.scalajs.dom.raw.DocumentType): org.scalajs.dom.raw.Document = js.native
-  def createDocument(namespaceURI: Null, qualifiedName: Null, doctype: org.scalajs.dom.raw.DocumentType): org.scalajs.dom.raw.Document = js.native
+  ): XMLDocument = js.native
+  def createDocument(namespace: java.lang.String, qualifiedName: Null, doctype: org.scalajs.dom.raw.DocumentType): XMLDocument = js.native
+  def createDocument(namespace: Null, qualifiedName: java.lang.String): XMLDocument = js.native
+  def createDocument(namespace: Null, qualifiedName: java.lang.String, doctype: org.scalajs.dom.raw.DocumentType): XMLDocument = js.native
+  def createDocument(namespace: Null, qualifiedName: Null, doctype: org.scalajs.dom.raw.DocumentType): XMLDocument = js.native
   
   def createDocumentType(qualifiedName: java.lang.String, publicId: java.lang.String, systemId: java.lang.String): org.scalajs.dom.raw.DocumentType = js.native
   

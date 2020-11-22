@@ -49,6 +49,8 @@ class ItemValue protected ()
   
   var text: String = js.native
   
+  var typeName: String = js.native
+  
   var value: js.Any = js.native
   
   var visibleIf: String = js.native
@@ -87,6 +89,13 @@ object ItemValue extends js.Object {
   ): Boolean = js.native
   
   def runEnabledConditionsForItems(items: js.Array[ItemValue], runner: ConditionRunner, values: js.Any, properties: js.Any): Boolean = js.native
+  def runEnabledConditionsForItems(
+    items: js.Array[ItemValue],
+    runner: ConditionRunner,
+    values: js.Any,
+    properties: js.Any,
+    onItemCallBack: js.Function1[/* item */ this.type, Boolean]
+  ): Boolean = js.native
   
   def setData(items: js.Array[ItemValue], values: js.Array[_]): Unit = js.native
   

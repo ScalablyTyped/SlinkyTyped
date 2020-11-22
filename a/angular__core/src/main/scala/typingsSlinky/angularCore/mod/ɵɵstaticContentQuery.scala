@@ -10,6 +10,8 @@ object ɵɵstaticContentQuery extends js.Object {
   
   def apply[T](directiveIndex: Double, predicate: js.Array[String], descend: Boolean): Unit = js.native
   def apply[T](directiveIndex: Double, predicate: js.Array[String], descend: Boolean, read: js.Any): Unit = js.native
+  def apply[T](directiveIndex: Double, predicate: InjectionToken[_], descend: Boolean): Unit = js.native
+  def apply[T](directiveIndex: Double, predicate: InjectionToken[_], descend: Boolean, read: js.Any): Unit = js.native
   def apply[T](directiveIndex: Double, predicate: Type[_], descend: Boolean): Unit = js.native
   def apply[T](directiveIndex: Double, predicate: Type[_], descend: Boolean, read: js.Any): Unit = js.native
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliStrings.`Divert all output to stderrDot`
-import typingsSlinky.jestCli.jestCliStrings.boolean
+import typingsSlinky.jestCli.jestCliStrings.`This option sets the URL for the jsdom environmentDot`
+import typingsSlinky.jestCli.jestCliStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,16 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `22` extends js.Object {
   
-  val default: js.UndefOr[scala.Nothing] = js.native
+  val description: `This option sets the URL for the jsdom environmentDot` = js.native
   
-  val description: `Divert all output to stderrDot` = js.native
-  
-  val `type`: boolean = js.native
+  val `type`: string = js.native
 }
 object `22` {
   
   @scala.inline
-  def apply(description: `Divert all output to stderrDot`, `type`: boolean): `22` = {
+  def apply(description: `This option sets the URL for the jsdom environmentDot`, `type`: string): `22` = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`22`]
@@ -40,9 +38,9 @@ object `22` {
     }
     
     @scala.inline
-    def setDescription(value: `Divert all output to stderrDot`): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: `This option sets the URL for the jsdom environmentDot`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: boolean): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: string): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

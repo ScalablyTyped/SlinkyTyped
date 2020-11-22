@@ -13,12 +13,12 @@ trait CreateAppRequest extends js.Object {
   var accessToken: js.UndefOr[AccessToken] = js.native
   
   /**
-    *  The automated branch creation configuration for the Amplify app. 
+    *  The automated branch creation configuration for an Amplify app. 
     */
   var autoBranchCreationConfig: js.UndefOr[AutoBranchCreationConfig] = js.native
   
   /**
-    *  The automated branch creation glob patterns for the Amplify app. 
+    *  The automated branch creation glob patterns for an Amplify app. 
     */
   var autoBranchCreationPatterns: js.UndefOr[AutoBranchCreationPatterns] = js.native
   
@@ -33,6 +33,11 @@ trait CreateAppRequest extends js.Object {
   var buildSpec: js.UndefOr[BuildSpec] = js.native
   
   /**
+    * The custom HTTP headers for an Amplify app.
+    */
+  var customHeaders: js.UndefOr[CustomHeaders] = js.native
+  
+  /**
     *  The custom rewrite and redirect rules for an Amplify app. 
     */
   var customRules: js.UndefOr[CustomRules] = js.native
@@ -43,7 +48,7 @@ trait CreateAppRequest extends js.Object {
   var description: js.UndefOr[Description] = js.native
   
   /**
-    *  Enables automated branch creation for the Amplify app. 
+    *  Enables automated branch creation for an Amplify app. 
     */
   var enableAutoBranchCreation: js.UndefOr[EnableAutoBranchCreation] = js.native
   
@@ -73,7 +78,7 @@ trait CreateAppRequest extends js.Object {
   var iamServiceRoleArn: js.UndefOr[ServiceRoleArn] = js.native
   
   /**
-    *  The name for the Amplify app. 
+    *  The name for an Amplify app. 
     */
   var name: Name = js.native
   
@@ -155,6 +160,12 @@ object CreateAppRequest {
     
     @scala.inline
     def deleteBuildSpec: Self = this.set("buildSpec", js.undefined)
+    
+    @scala.inline
+    def setCustomHeaders(value: CustomHeaders): Self = this.set("customHeaders", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomHeaders: Self = this.set("customHeaders", js.undefined)
     
     @scala.inline
     def setCustomRulesVarargs(value: CustomRule*): Self = this.set("customRules", js.Array(value :_*))

@@ -13,6 +13,7 @@ import typingsSlinky.ioredis.ioredisStrings.RESETSTAT
 import typingsSlinky.ioredis.ioredisStrings.REWRITE
 import typingsSlinky.ioredis.ioredisStrings.SAVE
 import typingsSlinky.ioredis.ioredisStrings.SET
+import typingsSlinky.ioredis.ioredisStrings.USAGE
 import typingsSlinky.ioredis.ioredisStrings.WITHSCORES
 import typingsSlinky.ioredis.ioredisStrings.count_
 import typingsSlinky.ioredis.ioredisStrings.match_
@@ -62,9 +63,19 @@ trait Commands extends js.Object {
     arg4: KeyType,
     arg5: KeyType,
     arg6: KeyType,
+    timeout: Double
+  ): js.Promise[js.Tuple2[String, String]] = js.native
+  def blpop(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    arg6: KeyType,
     timeout: Double,
     cb: Callback[js.Tuple2[String, String]]
   ): Unit = js.native
+  def blpop(arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: KeyType, arg5: KeyType, timeout: Double): js.Promise[js.Tuple2[String, String]] = js.native
   def blpop(
     arg1: KeyType,
     arg2: KeyType,
@@ -74,6 +85,7 @@ trait Commands extends js.Object {
     timeout: Double,
     cb: Callback[js.Tuple2[String, String]]
   ): Unit = js.native
+  def blpop(arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: KeyType, timeout: Double): js.Promise[js.Tuple2[String, String]] = js.native
   def blpop(
     arg1: KeyType,
     arg2: KeyType,
@@ -82,6 +94,7 @@ trait Commands extends js.Object {
     timeout: Double,
     cb: Callback[js.Tuple2[String, String]]
   ): Unit = js.native
+  def blpop(arg1: KeyType, arg2: KeyType, arg3: KeyType, timeout: Double): js.Promise[js.Tuple2[String, String]] = js.native
   def blpop(
     arg1: KeyType,
     arg2: KeyType,
@@ -89,7 +102,9 @@ trait Commands extends js.Object {
     timeout: Double,
     cb: Callback[js.Tuple2[String, String]]
   ): Unit = js.native
+  def blpop(arg1: KeyType, arg2: KeyType, timeout: Double): js.Promise[js.Tuple2[String, String]] = js.native
   def blpop(arg1: KeyType, arg2: KeyType, timeout: Double, cb: Callback[js.Tuple2[String, String]]): Unit = js.native
+  def blpop(arg1: KeyType, timeout: Double): js.Promise[js.Tuple2[String, String]] = js.native
   def blpop(arg1: KeyType, timeout: Double, cb: Callback[js.Tuple2[String, String]]): Unit = js.native
   def blpop(args: (KeyType | Double)*): js.Promise[js.Tuple2[String, String]] = js.native
   @JSName("blpop")
@@ -104,9 +119,19 @@ trait Commands extends js.Object {
     arg4: KeyType,
     arg5: KeyType,
     arg6: KeyType,
+    timeout: Double
+  ): js.Promise[js.Tuple2[String, String]] = js.native
+  def brpop(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    arg6: KeyType,
     timeout: Double,
     cb: Callback[js.Tuple2[String, String]]
   ): Unit = js.native
+  def brpop(arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: KeyType, arg5: KeyType, timeout: Double): js.Promise[js.Tuple2[String, String]] = js.native
   def brpop(
     arg1: KeyType,
     arg2: KeyType,
@@ -116,6 +141,7 @@ trait Commands extends js.Object {
     timeout: Double,
     cb: Callback[js.Tuple2[String, String]]
   ): Unit = js.native
+  def brpop(arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: KeyType, timeout: Double): js.Promise[js.Tuple2[String, String]] = js.native
   def brpop(
     arg1: KeyType,
     arg2: KeyType,
@@ -124,6 +150,7 @@ trait Commands extends js.Object {
     timeout: Double,
     cb: Callback[js.Tuple2[String, String]]
   ): Unit = js.native
+  def brpop(arg1: KeyType, arg2: KeyType, arg3: KeyType, timeout: Double): js.Promise[js.Tuple2[String, String]] = js.native
   def brpop(
     arg1: KeyType,
     arg2: KeyType,
@@ -131,7 +158,9 @@ trait Commands extends js.Object {
     timeout: Double,
     cb: Callback[js.Tuple2[String, String]]
   ): Unit = js.native
+  def brpop(arg1: KeyType, arg2: KeyType, timeout: Double): js.Promise[js.Tuple2[String, String]] = js.native
   def brpop(arg1: KeyType, arg2: KeyType, timeout: Double, cb: Callback[js.Tuple2[String, String]]): Unit = js.native
+  def brpop(arg1: KeyType, timeout: Double): js.Promise[js.Tuple2[String, String]] = js.native
   def brpop(arg1: KeyType, timeout: Double, cb: Callback[js.Tuple2[String, String]]): Unit = js.native
   def brpop(args: (KeyType | Double)*): js.Promise[js.Tuple2[String, String]] = js.native
   @JSName("brpop")
@@ -139,6 +168,118 @@ trait Commands extends js.Object {
   
   def brpoplpush(source: String, destination: String, timeout: Double): js.Promise[String] = js.native
   def brpoplpush(source: String, destination: String, timeout: Double, callback: Callback[String]): Unit = js.native
+  
+  def bzpopmax(arg1: js.Array[KeyType | Double]): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmax(arg1: js.Array[KeyType | Double], cb: Callback[js.Tuple3[String, String, String]]): Unit = js.native
+  def bzpopmax(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    arg6: KeyType,
+    timeout: Double
+  ): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmax(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    arg6: KeyType,
+    timeout: Double,
+    cb: Callback[js.Tuple3[String, String, String]]
+  ): Unit = js.native
+  def bzpopmax(arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: KeyType, arg5: KeyType, timeout: Double): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmax(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    timeout: Double,
+    cb: Callback[js.Tuple3[String, String, String]]
+  ): Unit = js.native
+  def bzpopmax(arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: KeyType, timeout: Double): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmax(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    timeout: Double,
+    cb: Callback[js.Tuple3[String, String, String]]
+  ): Unit = js.native
+  def bzpopmax(arg1: KeyType, arg2: KeyType, arg3: KeyType, timeout: Double): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmax(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    timeout: Double,
+    cb: Callback[js.Tuple3[String, String, String]]
+  ): Unit = js.native
+  def bzpopmax(arg1: KeyType, arg2: KeyType, timeout: Double): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmax(arg1: KeyType, arg2: KeyType, timeout: Double, cb: Callback[js.Tuple3[String, String, String]]): Unit = js.native
+  def bzpopmax(arg1: KeyType, timeout: Double): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmax(arg1: KeyType, timeout: Double, cb: Callback[js.Tuple3[String, String, String]]): Unit = js.native
+  def bzpopmax(args: (KeyType | Double)*): js.Promise[js.Tuple3[String, String, String]] = js.native
+  @JSName("bzpopmax")
+  var bzpopmax_Original: OverloadedBlockingListCommand[KeyType, js.Tuple3[String, String, String]] = js.native
+  
+  def bzpopmin(arg1: js.Array[KeyType | Double]): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmin(arg1: js.Array[KeyType | Double], cb: Callback[js.Tuple3[String, String, String]]): Unit = js.native
+  def bzpopmin(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    arg6: KeyType,
+    timeout: Double
+  ): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmin(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    arg6: KeyType,
+    timeout: Double,
+    cb: Callback[js.Tuple3[String, String, String]]
+  ): Unit = js.native
+  def bzpopmin(arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: KeyType, arg5: KeyType, timeout: Double): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmin(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    arg5: KeyType,
+    timeout: Double,
+    cb: Callback[js.Tuple3[String, String, String]]
+  ): Unit = js.native
+  def bzpopmin(arg1: KeyType, arg2: KeyType, arg3: KeyType, arg4: KeyType, timeout: Double): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmin(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    arg4: KeyType,
+    timeout: Double,
+    cb: Callback[js.Tuple3[String, String, String]]
+  ): Unit = js.native
+  def bzpopmin(arg1: KeyType, arg2: KeyType, arg3: KeyType, timeout: Double): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmin(
+    arg1: KeyType,
+    arg2: KeyType,
+    arg3: KeyType,
+    timeout: Double,
+    cb: Callback[js.Tuple3[String, String, String]]
+  ): Unit = js.native
+  def bzpopmin(arg1: KeyType, arg2: KeyType, timeout: Double): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmin(arg1: KeyType, arg2: KeyType, timeout: Double, cb: Callback[js.Tuple3[String, String, String]]): Unit = js.native
+  def bzpopmin(arg1: KeyType, timeout: Double): js.Promise[js.Tuple3[String, String, String]] = js.native
+  def bzpopmin(arg1: KeyType, timeout: Double, cb: Callback[js.Tuple3[String, String, String]]): Unit = js.native
+  def bzpopmin(args: (KeyType | Double)*): js.Promise[js.Tuple3[String, String, String]] = js.native
+  @JSName("bzpopmin")
+  var bzpopmin_Original: OverloadedBlockingListCommand[KeyType, js.Tuple3[String, String, String]] = js.native
   
   def client(arg1: js.Array[ValueType]): js.Promise[_] = js.native
   def client(arg1: js.Array[ValueType], cb: Callback[_]): Unit = js.native
@@ -411,6 +552,9 @@ trait Commands extends js.Object {
   def getrange(key: KeyType, start: Double, end: Double): js.Promise[String] = js.native
   def getrange(key: KeyType, start: Double, end: Double, callback: Callback[String]): Unit = js.native
   
+  def getrangeBuffer(key: KeyType, start: Double, end: Double): js.Promise[Buffer] = js.native
+  def getrangeBuffer(key: KeyType, start: Double, end: Double, callback: Callback[Buffer]): Unit = js.native
+  
   def getset(key: KeyType, value: ValueType): js.Promise[String | Null] = js.native
   def getset(key: KeyType, value: ValueType, callback: Callback[String | Null]): Unit = js.native
   
@@ -571,14 +715,37 @@ trait Commands extends js.Object {
   @JSName("hscan")
   var hscan_Original: OverloadedKeyCommand[ValueType, js.Tuple2[String, js.Array[String]]] = js.native
   
-  def hset(key: KeyType, field: String, value: ValueType): js.Promise[BooleanResponse] = js.native
-  def hset(key: KeyType, field: String, value: ValueType, callback: Callback[BooleanResponse]): Unit = js.native
+  def hset(
+    key: KeyType,
+    arg1: ValueType,
+    arg2: ValueType,
+    arg3: ValueType,
+    arg4: ValueType,
+    arg5: ValueType,
+    arg6: ValueType,
+    cb: Callback[Ok]
+  ): Unit = js.native
+  def hset(key: KeyType, arg1: ValueType, arg2: ValueType, arg3: ValueType, arg4: ValueType, cb: Callback[Ok]): Unit = js.native
+  def hset(key: KeyType, arg1: ValueType, arg2: ValueType, cb: Callback[Ok]): Unit = js.native
+  def hset(key: KeyType, args: ValueType*): js.Promise[Ok] = js.native
+  def hset(key: KeyType, data: js.Array[ValueType]): js.Promise[Ok] = js.native
+  def hset(key: KeyType, data: js.Array[ValueType], cb: Callback[Ok]): Unit = js.native
+  def hset(key: KeyType, data: StringDictionary[ValueType]): js.Promise[Ok] = js.native
+  def hset(key: KeyType, data: StringDictionary[ValueType], cb: Callback[Ok]): Unit = js.native
+  def hset(key: KeyType, data: Map[String, ValueType]): js.Promise[Ok] = js.native
+  def hset(key: KeyType, data: Map[String, ValueType], cb: Callback[Ok]): Unit = js.native
   
   def hsetBuffer(key: KeyType, field: String, value: ValueType): js.Promise[Buffer] = js.native
   def hsetBuffer(key: KeyType, field: String, value: ValueType, callback: Callback[BooleanResponse]): Unit = js.native
   
+  @JSName("hset")
+  var hset_Original: OverloadedKeyedHashCommand[ValueType, Ok] = js.native
+  
   def hsetnx(key: KeyType, field: String, value: ValueType): js.Promise[BooleanResponse] = js.native
   def hsetnx(key: KeyType, field: String, value: ValueType, callback: Callback[BooleanResponse]): Unit = js.native
+  
+  def hstrlen(key: KeyType, field: String): js.Promise[Double] = js.native
+  def hstrlen(key: KeyType, field: String, callback: Callback[Double]): Unit = js.native
   
   def hvals(key: KeyType): js.Promise[js.Array[String]] = js.native
   def hvals(key: KeyType, callback: Callback[js.Array[String]]): Unit = js.native
@@ -740,6 +907,11 @@ trait Commands extends js.Object {
   
   def ltrim(key: KeyType, start: Double, stop: Double): js.Promise[Ok] = js.native
   def ltrim(key: KeyType, start: Double, stop: Double, callback: Callback[Ok]): Unit = js.native
+  
+  @JSName("memory")
+  def memory_USAGE(argument: USAGE, key: KeyType): js.Promise[Double] = js.native
+  @JSName("memory")
+  def memory_USAGE(argument: USAGE, key: KeyType, callback: Callback[Double]): js.Promise[Double] = js.native
   
   def mget(arg1: js.Array[KeyType]): js.Promise[js.Array[String | Null]] = js.native
   def mget(arg1: js.Array[KeyType], cb: Callback[js.Array[String | Null]]): Unit = js.native

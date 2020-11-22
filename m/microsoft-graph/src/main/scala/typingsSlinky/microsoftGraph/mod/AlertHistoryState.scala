@@ -7,19 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AlertHistoryState extends js.Object {
   
-  var appId: js.UndefOr[String] = js.native
+  var appId: js.UndefOr[NullableOption[String]] = js.native
   
-  var assignedTo: js.UndefOr[String] = js.native
+  var assignedTo: js.UndefOr[NullableOption[String]] = js.native
   
-  var comments: js.UndefOr[js.Array[String]] = js.native
+  var comments: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
-  var feedback: js.UndefOr[AlertFeedback] = js.native
+  var feedback: js.UndefOr[NullableOption[AlertFeedback]] = js.native
   
-  var status: js.UndefOr[AlertStatus] = js.native
+  var status: js.UndefOr[NullableOption[AlertStatus]] = js.native
   
-  var updatedDateTime: js.UndefOr[String] = js.native
+  var updatedDateTime: js.UndefOr[NullableOption[String]] = js.native
   
-  var user: js.UndefOr[String] = js.native
+  var user: js.UndefOr[NullableOption[String]] = js.native
 }
 object AlertHistoryState {
   
@@ -45,48 +45,69 @@ object AlertHistoryState {
     }
     
     @scala.inline
-    def setAppId(value: String): Self = this.set("appId", value.asInstanceOf[js.Any])
+    def setAppId(value: NullableOption[String]): Self = this.set("appId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAppId: Self = this.set("appId", js.undefined)
     
     @scala.inline
-    def setAssignedTo(value: String): Self = this.set("assignedTo", value.asInstanceOf[js.Any])
+    def setAppIdNull: Self = this.set("appId", null)
+    
+    @scala.inline
+    def setAssignedTo(value: NullableOption[String]): Self = this.set("assignedTo", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAssignedTo: Self = this.set("assignedTo", js.undefined)
     
     @scala.inline
+    def setAssignedToNull: Self = this.set("assignedTo", null)
+    
+    @scala.inline
     def setCommentsVarargs(value: String*): Self = this.set("comments", js.Array(value :_*))
     
     @scala.inline
-    def setComments(value: js.Array[String]): Self = this.set("comments", value.asInstanceOf[js.Any])
+    def setComments(value: NullableOption[js.Array[String]]): Self = this.set("comments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComments: Self = this.set("comments", js.undefined)
     
     @scala.inline
-    def setFeedback(value: AlertFeedback): Self = this.set("feedback", value.asInstanceOf[js.Any])
+    def setCommentsNull: Self = this.set("comments", null)
+    
+    @scala.inline
+    def setFeedback(value: NullableOption[AlertFeedback]): Self = this.set("feedback", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFeedback: Self = this.set("feedback", js.undefined)
     
     @scala.inline
-    def setStatus(value: AlertStatus): Self = this.set("status", value.asInstanceOf[js.Any])
+    def setFeedbackNull: Self = this.set("feedback", null)
+    
+    @scala.inline
+    def setStatus(value: NullableOption[AlertStatus]): Self = this.set("status", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStatus: Self = this.set("status", js.undefined)
     
     @scala.inline
-    def setUpdatedDateTime(value: String): Self = this.set("updatedDateTime", value.asInstanceOf[js.Any])
+    def setStatusNull: Self = this.set("status", null)
+    
+    @scala.inline
+    def setUpdatedDateTime(value: NullableOption[String]): Self = this.set("updatedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUpdatedDateTime: Self = this.set("updatedDateTime", js.undefined)
     
     @scala.inline
-    def setUser(value: String): Self = this.set("user", value.asInstanceOf[js.Any])
+    def setUpdatedDateTimeNull: Self = this.set("updatedDateTime", null)
+    
+    @scala.inline
+    def setUser(value: NullableOption[String]): Self = this.set("user", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUser: Self = this.set("user", js.undefined)
+    
+    @scala.inline
+    def setUserNull: Self = this.set("user", null)
   }
 }

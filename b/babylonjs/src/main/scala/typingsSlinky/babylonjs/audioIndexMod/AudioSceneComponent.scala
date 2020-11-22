@@ -15,3 +15,12 @@ class AudioSceneComponent protected ()
     */
   def this(scene: Scene) = this()
 }
+/* static members */
+@JSImport("babylonjs/Audio/index", "AudioSceneComponent")
+@js.native
+object AudioSceneComponent extends js.Object {
+  
+  var _CameraDirectionLH: js.Any = js.native
+  
+  var _CameraDirectionRH: js.Any = js.native
+}

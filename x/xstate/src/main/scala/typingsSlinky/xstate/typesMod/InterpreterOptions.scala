@@ -1,6 +1,7 @@
 package typingsSlinky.xstate.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.xstate.anon.ContextAny
 import typingsSlinky.xstate.interpreterMod.Clock
 import typingsSlinky.xstate.interpreterMod.Interpreter
 import scala.scalajs.js
@@ -41,7 +42,7 @@ trait InterpreterOptions
   
   def logger(args: js.Any*): Unit = js.native
   
-  var parent: js.UndefOr[Interpreter[_, _, _, _]] = js.native
+  var parent: js.UndefOr[Interpreter[_, _, _, ContextAny]] = js.native
 }
 object InterpreterOptions {
   
@@ -94,7 +95,7 @@ object InterpreterOptions {
     def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
-    def setParent(value: Interpreter[_, _, _, _]): Self = this.set("parent", value.asInstanceOf[js.Any])
+    def setParent(value: Interpreter[_, _, _, ContextAny]): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteParent: Self = this.set("parent", js.undefined)

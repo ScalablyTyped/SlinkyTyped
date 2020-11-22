@@ -9,12 +9,12 @@ trait ForStatement
   extends IterationStatement
      with HasInitializer {
   
-  var condition: js.UndefOr[Expression] = js.native
+  val condition: js.UndefOr[Expression] = js.native
   
-  var incrementor: js.UndefOr[Expression] = js.native
+  val incrementor: js.UndefOr[Expression] = js.native
   
-  var initializer: js.UndefOr[ForInitializer] = js.native
+  val initializer: js.UndefOr[ForInitializer] = js.native
   
   @JSName("kind")
-  var kind_ForStatement: typingsSlinky.typescript.mod.SyntaxKind.ForStatement = js.native
+  val kind_ForStatement: typingsSlinky.typescript.mod.SyntaxKind.ForStatement = js.native
 }

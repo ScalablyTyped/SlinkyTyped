@@ -1,5 +1,7 @@
 package typingsSlinky.firebaseDatabase
 
+import typingsSlinky.firebaseDatabase.anon.App
+import typingsSlinky.firebaseDatabase.anon.Instance
 import typingsSlinky.firebaseDatabase.referenceMod.Reference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +16,8 @@ object internalMod extends js.Object {
   def forceLongPolling(): Unit = js.native
   
   def forceWebSockets(): Unit = js.native
+  
+  def initStandalone[T](hasAppUrlVersionCustomAuthImplNamespaceNodeAdmin: App[T]): Instance[T] = js.native
   
   def interceptServerData(ref: Reference, callback: js.Function2[/* a */ String, /* b */ js.Any, Unit]): Unit = js.native
   

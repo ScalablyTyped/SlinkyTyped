@@ -11,39 +11,61 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait globalConfig extends js.Object {
   
-  /** @deprecated */
-  /** @name globalConfig.decimalSeparator */
+  /**
+    * [descr:globalConfig.decimalSeparator]
+    * @deprecated [depNote:globalConfig.decimalSeparator]
+    */
   var decimalSeparator: js.UndefOr[String] = js.native
   
-  /** @name globalConfig.defaultCurrency */
+  /**
+    * [descr:globalConfig.defaultCurrency]
+    */
   var defaultCurrency: js.UndefOr[String] = js.native
   
-  /** @name globalConfig.editorStylingMode */
+  /**
+    * [descr:globalConfig.editorStylingMode]
+    */
   var editorStylingMode: js.UndefOr[outlined | underlined | filled] = js.native
   
-  /** @name globalConfig.floatingActionButtonConfig */
+  /**
+    * [descr:globalConfig.floatingActionButtonConfig]
+    */
   var floatingActionButtonConfig: js.UndefOr[CloseIcon] = js.native
   
-  /** @name globalConfig.forceIsoDateParsing */
+  /**
+    * [descr:globalConfig.forceIsoDateParsing]
+    */
   var forceIsoDateParsing: js.UndefOr[Boolean] = js.native
   
-  /** @name globalConfig.oDataFilterToLower */
+  /**
+    * [descr:globalConfig.oDataFilterToLower]
+    */
   var oDataFilterToLower: js.UndefOr[Boolean] = js.native
   
-  /** @name globalConfig.rtlEnabled */
+  /**
+    * [descr:globalConfig.rtlEnabled]
+    */
   var rtlEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name globalConfig.serverDecimalSeparator */
+  /**
+    * [descr:globalConfig.serverDecimalSeparator]
+    */
   var serverDecimalSeparator: js.UndefOr[String] = js.native
   
-  /** @deprecated */
-  /** @name globalConfig.thousandsSeparator */
+  /**
+    * [descr:globalConfig.thousandsSeparator]
+    * @deprecated [depNote:globalConfig.thousandsSeparator]
+    */
   var thousandsSeparator: js.UndefOr[String] = js.native
   
-  /** @name globalConfig.useLegacyStoreResult */
+  /**
+    * [descr:globalConfig.useLegacyStoreResult]
+    */
   var useLegacyStoreResult: js.UndefOr[Boolean] = js.native
   
-  /** @name globalConfig.useLegacyVisibleIndex */
+  /**
+    * [descr:globalConfig.useLegacyVisibleIndex]
+    */
   var useLegacyVisibleIndex: js.UndefOr[Boolean] = js.native
 }
 object globalConfig {

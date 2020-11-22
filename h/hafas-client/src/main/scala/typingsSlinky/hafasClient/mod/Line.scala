@@ -29,7 +29,7 @@ trait Line extends js.Object {
   
   var metro: js.UndefOr[Boolean] = js.native
   
-  var mode: train | bus | watercraft | taxi | gondola | aircraft | car | bicycle | walking = js.native
+  var mode: js.UndefOr[train | bus | watercraft | taxi | gondola | aircraft | car | bicycle | walking] = js.native
   
   var name: js.UndefOr[String] = js.native
   
@@ -53,8 +53,8 @@ trait Line extends js.Object {
 object Line {
   
   @scala.inline
-  def apply(mode: train | bus | watercraft | taxi | gondola | aircraft | car | bicycle | walking, `type`: line): Line = {
-    val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any])
+  def apply(`type`: line): Line = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Line]
   }
@@ -73,9 +73,6 @@ object Line {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setMode(value: train | bus | watercraft | taxi | gondola | aircraft | car | bicycle | walking): Self = this.set("mode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: line): Self = this.set("type", value.asInstanceOf[js.Any])
@@ -115,6 +112,12 @@ object Line {
     
     @scala.inline
     def deleteMetro: Self = this.set("metro", js.undefined)
+    
+    @scala.inline
+    def setMode(value: train | bus | watercraft | taxi | gondola | aircraft | car | bicycle | walking): Self = this.set("mode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

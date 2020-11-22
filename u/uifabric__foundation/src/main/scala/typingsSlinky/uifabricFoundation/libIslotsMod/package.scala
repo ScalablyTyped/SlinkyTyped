@@ -19,7 +19,7 @@ package object libIslotsMod {
     /* userProps */ typingsSlinky.uifabricFoundation.libIslotsMod.ISlotProp[TProps, TShorthandProp], 
     /* slotOptions */ js.UndefOr[typingsSlinky.uifabricFoundation.libIslotsMod.ISlotOptions[TProps]], 
     /* defaultStyles */ typingsSlinky.uifabricMergeStyles.istyleMod.IStyle, 
-    /* theme */ js.UndefOr[typingsSlinky.uifabricStyling.ithemeMod.ITheme], 
+    /* theme */ js.UndefOr[typingsSlinky.fluentuiTheme.ithemeMod.ITheme], 
     typingsSlinky.std.ReturnType[slinky.core.ReactComponentClass[TProps]]
   ]
   

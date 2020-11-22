@@ -18,7 +18,7 @@ class Image ()
 object Image extends js.Object {
   
   /**
-    * _Creates image from raw data._
+    * _Creates an image from raw data._
     *
     * Loads an image from the raw data. If the image could not be read, the function will return null.
     * @param data - Data to read image from.
@@ -27,7 +27,7 @@ object Image extends js.Object {
   def fromData(data: typingsSlinky.scriptableIos.Data): typingsSlinky.scriptableIos.Image = js.native
   
   /**
-    * _Creates image from file._
+    * _Creates an image from file._
     *
     * Loads an image from the specified file path. If the image could not be read, the function will return null.
     * @param filePath - File path to read image from.

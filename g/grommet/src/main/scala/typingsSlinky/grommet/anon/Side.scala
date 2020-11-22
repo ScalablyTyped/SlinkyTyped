@@ -1,26 +1,22 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.listMod.SideType
-import typingsSlinky.grommet.listMod.SizeType
-import typingsSlinky.grommet.listMod._BorderType
+import typingsSlinky.grommet.grommetStrings.bottom
+import typingsSlinky.grommet.grommetStrings.left
+import typingsSlinky.grommet.grommetStrings.right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Side extends _BorderType {
+trait Side extends js.Object {
   
-  var color: js.UndefOr[String | Dark] = js.native
-  
-  var side: js.UndefOr[SideType] = js.native
-  
-  var size: js.UndefOr[SizeType] = js.native
+  var side: left | right | bottom = js.native
 }
 object Side {
   
   @scala.inline
-  def apply(): Side = {
-    val __obj = js.Dynamic.literal()
+  def apply(side: left | right | bottom): Side = {
+    val __obj = js.Dynamic.literal(side = side.asInstanceOf[js.Any])
     __obj.asInstanceOf[Side]
   }
   
@@ -40,21 +36,6 @@ object Side {
     }
     
     @scala.inline
-    def setColor(value: String | Dark): Self = this.set("color", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteColor: Self = this.set("color", js.undefined)
-    
-    @scala.inline
-    def setSide(value: SideType): Self = this.set("side", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSide: Self = this.set("side", js.undefined)
-    
-    @scala.inline
-    def setSize(value: SizeType): Self = this.set("size", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSize: Self = this.set("size", js.undefined)
+    def setSide(value: left | right | bottom): Self = this.set("side", value.asInstanceOf[js.Any])
   }
 }

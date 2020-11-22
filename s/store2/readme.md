@@ -1,7 +1,7 @@
 
 # Scala.js typings for store2
 
-Typings are for version 2.11.2
+Typings are for version 2.12.0
 
 ## Library description:
 Better localStorage

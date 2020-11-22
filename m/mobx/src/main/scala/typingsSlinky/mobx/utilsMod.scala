@@ -1,10 +1,9 @@
 package typingsSlinky.mobx
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.mobx.internalMod.ObservableMap
 import typingsSlinky.mobx.mobxBooleans.`false`
 import typingsSlinky.mobx.mobxBooleans.`true`
-import typingsSlinky.mobx.observablemapMod.IKeyValueMap
+import typingsSlinky.std.Map
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,6 +23,8 @@ object utilsMod extends js.Object {
   
   def assertPropertyConfigurable(`object`: js.Any, prop: PropertyKey): Unit = js.native
   
+  def convertToMap(dataStructure: js.Any): Map[_, _] = js.native
+  
   def createInstanceofPredicate[T](name: String, clazz: Instantiable1[/* args (repeated) */ js.Any, T]): js.Function1[/* x */ js.Any, /* is T */ Boolean] = js.native
   
   def deprecated(msg: String): Boolean = js.native
@@ -31,10 +32,6 @@ object utilsMod extends js.Object {
   
   def fail(message: String): scala.Nothing = js.native
   def fail(message: Boolean): scala.Nothing = js.native
-  
-  def getMapLikeKeys[V](map: js.Any): js.Array[String] = js.native
-  def getMapLikeKeys[V](map: IKeyValueMap[V]): js.Array[String] = js.native
-  def getMapLikeKeys[K, V](map: ObservableMap[K, V]): js.Array[K] = js.native
   
   def getNextId(): Double = js.native
   
@@ -73,6 +70,8 @@ object utilsMod extends js.Object {
   def noop(): Unit = js.native
   
   def once(func: Lambda): Lambda = js.native
+  
+  def ownKeys(target: js.Any): js.Array[PropertyKey] = js.native
   
   def stringifyKey(key: js.Any): String = js.native
   

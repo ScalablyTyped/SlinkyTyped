@@ -56,6 +56,9 @@ trait Skeleton extends IAnimatable {
   
   var _useTextureToStoreBoneMatrices: js.Any = js.native
   
+  /** @hidden */
+  var _waitingOverrideMeshId: Nullable[String] = js.native
+  
   /**
     * Gets or sets the animation properties override
     */
@@ -166,7 +169,7 @@ trait Skeleton extends IAnimatable {
   /**
     * Enable animation blending for this skeleton
     * @param blendingSpeed defines the blending speed to apply
-    * @see http://doc.babylonjs.com/babylon101/animations#animation-blending
+    * @see https://doc.babylonjs.com/babylon101/animations#animation-blending
     */
   def enableBlending(): Unit = js.native
   def enableBlending(blendingSpeed: Double): Unit = js.native
@@ -282,6 +285,11 @@ trait Skeleton extends IAnimatable {
     * @returns a JSON object
     */
   def serialize(): js.Any = js.native
+  
+  /**
+    * Set the current local matrix as the restPose for all bones in the skeleton.
+    */
+  def setCurrentPoseAsRest(): Unit = js.native
   
   /**
     * Sorts bones per internal index

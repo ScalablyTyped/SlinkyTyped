@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MapMatchingService extends js.Object {
   
-  def getMatching(request: MapMatchingRequest): MapiRequest = js.native
+  def getMatch(request: MapMatchingRequest): MapiRequest = js.native
 }
 object MapMatchingService {
   
   @scala.inline
-  def apply(getMatching: MapMatchingRequest => MapiRequest): MapMatchingService = {
-    val __obj = js.Dynamic.literal(getMatching = js.Any.fromFunction1(getMatching))
+  def apply(getMatch: MapMatchingRequest => MapiRequest): MapMatchingService = {
+    val __obj = js.Dynamic.literal(getMatch = js.Any.fromFunction1(getMatch))
     __obj.asInstanceOf[MapMatchingService]
   }
   
@@ -34,6 +34,6 @@ object MapMatchingService {
     }
     
     @scala.inline
-    def setGetMatching(value: MapMatchingRequest => MapiRequest): Self = this.set("getMatching", js.Any.fromFunction1(value))
+    def setGetMatch(value: MapMatchingRequest => MapiRequest): Self = this.set("getMatch", js.Any.fromFunction1(value))
   }
 }

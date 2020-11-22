@@ -15,20 +15,20 @@ trait ParameterDeclaration
      with _BindingOrAssignmentElement
      with _HasJSDoc {
   
-  var dotDotDotToken: js.UndefOr[DotDotDotToken] = js.native
+  val dotDotDotToken: js.UndefOr[DotDotDotToken] = js.native
   
-  var initializer: js.UndefOr[Expression] = js.native
+  val initializer: js.UndefOr[Expression] = js.native
   
   @JSName("kind")
-  var kind_ParameterDeclaration: Parameter = js.native
+  val kind_ParameterDeclaration: Parameter = js.native
   
   @JSName("name")
-  var name_ParameterDeclaration: BindingName = js.native
+  val name_ParameterDeclaration: BindingName = js.native
   
   @JSName("parent")
-  var parent_ParameterDeclaration: SignatureDeclaration = js.native
+  val parent_ParameterDeclaration: SignatureDeclaration = js.native
   
-  var questionToken: js.UndefOr[QuestionToken] = js.native
+  val questionToken: js.UndefOr[QuestionToken] = js.native
   
-  var `type`: js.UndefOr[TypeNode] = js.native
+  val `type`: js.UndefOr[TypeNode] = js.native
 }

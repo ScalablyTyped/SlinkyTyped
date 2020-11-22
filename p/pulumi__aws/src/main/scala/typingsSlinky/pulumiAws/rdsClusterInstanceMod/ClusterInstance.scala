@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.rdsClusterInstanceMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.engineTypeMod.EngineType
+import typingsSlinky.pulumiAws.enumsRdsMod.EngineType
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -89,7 +89,7 @@ class ClusterInstance protected () extends CustomResource {
   val engine: Output_[js.UndefOr[EngineType]] = js.native
   
   /**
-    * The database engine version.
+    * The database engine version
     */
   val engineVersion: Output_[String] = js.native
   

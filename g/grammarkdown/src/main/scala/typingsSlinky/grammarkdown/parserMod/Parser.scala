@@ -77,6 +77,8 @@ class Parser () extends js.Object {
   
   var parseLexicalGoalAssertionTail: js.Any = js.native
   
+  var parseLine: js.Any = js.native
+  
   var parseLinkReference: js.Any = js.native
   
   var parseList: js.Any = js.native
@@ -88,6 +90,8 @@ class Parser () extends js.Object {
   var parseNoSymbolHereAssertionTail: js.Any = js.native
   
   var parseNonterminal: js.Any = js.native
+  
+  var parseNumberLiteral: js.Any = js.native
   
   var parseOneOfList: js.Any = js.native
   

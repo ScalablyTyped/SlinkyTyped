@@ -6,15 +6,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type DefaultsFunction = js.Function1[/* root */ typingsSlinky.joi.mod.Schema, typingsSlinky.joi.mod.Schema]
+  type BasicType = scala.Boolean | scala.Double | java.lang.String | js.Array[js.Any] | js.Object | scala.Null
   
-  type ExtensionBoundSchema = typingsSlinky.joi.mod.Schema with typingsSlinky.joi.anon.CreateError
+  type CoerceFunction = js.Function2[
+    /* value */ js.Any, 
+    /* helpers */ typingsSlinky.joi.mod.CustomHelpers[js.Any], 
+    typingsSlinky.joi.mod.CoerceResult
+  ]
   
-  type LanguageOptions = java.lang.String | scala.Boolean | scala.Null | (org.scalablytyped.runtime.StringDictionary[
-    /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias joi.joi.LanguageOptions */ js.Object
-  ])
+  type ComparatorFunction = js.Function2[/* a */ js.Any, /* b */ js.Any, scala.Boolean]
   
-  type LazySchema = typingsSlinky.joi.mod.AnySchema
+  type CustomValidator[V] = js.Function2[
+    /* value */ V, 
+    /* helpers */ typingsSlinky.joi.mod.CustomHelpers[js.Any], 
+    V | typingsSlinky.joi.mod.ErrorReport
+  ]
+  
+  type ExtensionBoundSchema = typingsSlinky.joi.mod.Schema with typingsSlinky.joi.mod.SchemaInternals
+  
+  type ExtensionFactory = js.Function1[/* joi */ typingsSlinky.joi.mod.Root, typingsSlinky.joi.mod.Extension]
+  
+  type ExternalValidationFunction = js.Function1[/* value */ js.Any, js.Any]
+  
+  type LanguageMessages = typingsSlinky.std.Record[java.lang.String, java.lang.String]
+  
+  type RuleMethod = js.Function1[/* repeated */ js.Any, js.Any]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.joi.mod.AnySchema
@@ -25,25 +41,25 @@ package object mod {
     - typingsSlinky.joi.mod.DateSchema
     - typingsSlinky.joi.mod.FunctionSchema
     - typingsSlinky.joi.mod.NumberSchema
-    - typingsSlinky.joi.mod.ObjectSchema
+    - typingsSlinky.joi.mod.ObjectSchema[js.Any]
     - typingsSlinky.joi.mod.StringSchema
-    - typingsSlinky.joi.mod.LazySchema
+    - typingsSlinky.joi.mod.LinkSchema
+    - typingsSlinky.joi.mod.SymbolSchema
   */
-  type Schema = typingsSlinky.joi.mod._Schema | typingsSlinky.joi.mod.LazySchema
+  type Schema = typingsSlinky.joi.mod._Schema | typingsSlinky.joi.mod.ObjectSchema[js.Any]
   
-  /* Rewritten from type alias, can be one of: 
-    - java.lang.String
-    - scala.Double
-    - scala.Boolean
-    - js.Object
-    - scala.Null
-    - typingsSlinky.joi.mod.Schema
-    - typingsSlinky.joi.mod.SchemaMap
-  */
-  type SchemaLike = typingsSlinky.joi.mod._SchemaLike | java.lang.String | scala.Double | scala.Boolean | js.Object | scala.Null | typingsSlinky.joi.mod.LazySchema
+  type SchemaFunction = js.Function1[/* schema */ typingsSlinky.joi.mod.Schema, typingsSlinky.joi.mod.Schema]
+  
+  type SchemaLike = typingsSlinky.joi.mod.SchemaLikeWithoutArray | js.Object
+  
+  type SchemaLikeWithoutArray = java.lang.String | scala.Double | scala.Boolean | scala.Null | typingsSlinky.joi.mod.Schema | typingsSlinky.joi.mod.SchemaMap[js.Any]
+  
+  type SchemaMap[TSchema] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ key in keyof TSchema ]:? joi.joi.SchemaLike | std.Array<joi.joi.SchemaLike>}
+    */ typingsSlinky.joi.joiStrings.SchemaMap with org.scalablytyped.runtime.TopLevel[js.Any]
   
   type ValidationErrorFunction = js.Function1[
-    /* errors */ js.Array[typingsSlinky.joi.mod.ValidationErrorItem], 
-    java.lang.String | typingsSlinky.joi.mod.ValidationErrorItem | js.Array[typingsSlinky.joi.mod.ValidationErrorItem] | js.Error
+    /* errors */ js.Array[typingsSlinky.joi.mod.ErrorReport], 
+    java.lang.String | typingsSlinky.joi.mod.ValidationErrorItem | js.Error
   ]
 }

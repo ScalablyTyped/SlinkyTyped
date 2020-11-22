@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.DataType
 import typingsSlinky.mendixmodelsdk.expressionsMod.expressions.Expression
@@ -7,12 +8,13 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/create-variable relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/create-variable relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.CreateVariableAction")
 @js.native
@@ -22,8 +24,8 @@ class CreateVariableAction protected () extends MicroflowAction {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -34,15 +36,14 @@ class CreateVariableAction protected () extends MicroflowAction {
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 7.9.0: introduced
     */
   def initialValueModel: Expression = js.native
   def initialValueModel_=(newValue: Expression): Unit = js.native
   
   def initialValue_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FCreateVariableAction: IModel = js.native
   
   /**
     * The value of this property is conceptually of type dataTypes.LegacyDataType.

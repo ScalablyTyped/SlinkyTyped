@@ -221,11 +221,13 @@ trait PostProcessManager extends js.Object {
   
   /**
     * Manually render a set of post processes to a texture.
+    * Please note, the frame buffer won't be unbound after the call in case you have more render to do.
     * @param postProcesses An array of post processes to be run.
     * @param targetTexture The target texture to render to.
     * @param forceFullscreenViewport force gl.viewport to be full screen eg. 0,0,textureWidth,textureHeight
     * @param faceIndex defines the face to render to if a cubemap is defined as the target
     * @param lodLevel defines which lod of the texture to render to
+    * @param doNotBindFrambuffer If set to true, assumes that the framebuffer has been bound previously
     */
   def directRender(postProcesses: js.Array[PostProcess]): Unit = js.native
   def directRender(
@@ -233,7 +235,23 @@ trait PostProcessManager extends js.Object {
     targetTexture: js.UndefOr[Nullable[InternalTexture]],
     forceFullscreenViewport: js.UndefOr[scala.Nothing],
     faceIndex: js.UndefOr[scala.Nothing],
+    lodLevel: js.UndefOr[scala.Nothing],
+    doNotBindFrambuffer: Boolean
+  ): Unit = js.native
+  def directRender(
+    postProcesses: js.Array[PostProcess],
+    targetTexture: js.UndefOr[Nullable[InternalTexture]],
+    forceFullscreenViewport: js.UndefOr[scala.Nothing],
+    faceIndex: js.UndefOr[scala.Nothing],
     lodLevel: Double
+  ): Unit = js.native
+  def directRender(
+    postProcesses: js.Array[PostProcess],
+    targetTexture: js.UndefOr[Nullable[InternalTexture]],
+    forceFullscreenViewport: js.UndefOr[scala.Nothing],
+    faceIndex: js.UndefOr[scala.Nothing],
+    lodLevel: Double,
+    doNotBindFrambuffer: Boolean
   ): Unit = js.native
   def directRender(
     postProcesses: js.Array[PostProcess],
@@ -246,7 +264,23 @@ trait PostProcessManager extends js.Object {
     targetTexture: js.UndefOr[Nullable[InternalTexture]],
     forceFullscreenViewport: js.UndefOr[scala.Nothing],
     faceIndex: Double,
+    lodLevel: js.UndefOr[scala.Nothing],
+    doNotBindFrambuffer: Boolean
+  ): Unit = js.native
+  def directRender(
+    postProcesses: js.Array[PostProcess],
+    targetTexture: js.UndefOr[Nullable[InternalTexture]],
+    forceFullscreenViewport: js.UndefOr[scala.Nothing],
+    faceIndex: Double,
     lodLevel: Double
+  ): Unit = js.native
+  def directRender(
+    postProcesses: js.Array[PostProcess],
+    targetTexture: js.UndefOr[Nullable[InternalTexture]],
+    forceFullscreenViewport: js.UndefOr[scala.Nothing],
+    faceIndex: Double,
+    lodLevel: Double,
+    doNotBindFrambuffer: Boolean
   ): Unit = js.native
   def directRender(
     postProcesses: js.Array[PostProcess],
@@ -258,7 +292,23 @@ trait PostProcessManager extends js.Object {
     targetTexture: js.UndefOr[Nullable[InternalTexture]],
     forceFullscreenViewport: Boolean,
     faceIndex: js.UndefOr[scala.Nothing],
+    lodLevel: js.UndefOr[scala.Nothing],
+    doNotBindFrambuffer: Boolean
+  ): Unit = js.native
+  def directRender(
+    postProcesses: js.Array[PostProcess],
+    targetTexture: js.UndefOr[Nullable[InternalTexture]],
+    forceFullscreenViewport: Boolean,
+    faceIndex: js.UndefOr[scala.Nothing],
     lodLevel: Double
+  ): Unit = js.native
+  def directRender(
+    postProcesses: js.Array[PostProcess],
+    targetTexture: js.UndefOr[Nullable[InternalTexture]],
+    forceFullscreenViewport: Boolean,
+    faceIndex: js.UndefOr[scala.Nothing],
+    lodLevel: Double,
+    doNotBindFrambuffer: Boolean
   ): Unit = js.native
   def directRender(
     postProcesses: js.Array[PostProcess],
@@ -271,7 +321,23 @@ trait PostProcessManager extends js.Object {
     targetTexture: js.UndefOr[Nullable[InternalTexture]],
     forceFullscreenViewport: Boolean,
     faceIndex: Double,
+    lodLevel: js.UndefOr[scala.Nothing],
+    doNotBindFrambuffer: Boolean
+  ): Unit = js.native
+  def directRender(
+    postProcesses: js.Array[PostProcess],
+    targetTexture: js.UndefOr[Nullable[InternalTexture]],
+    forceFullscreenViewport: Boolean,
+    faceIndex: Double,
     lodLevel: Double
+  ): Unit = js.native
+  def directRender(
+    postProcesses: js.Array[PostProcess],
+    targetTexture: js.UndefOr[Nullable[InternalTexture]],
+    forceFullscreenViewport: Boolean,
+    faceIndex: Double,
+    lodLevel: Double,
+    doNotBindFrambuffer: Boolean
   ): Unit = js.native
   def directRender(postProcesses: js.Array[PostProcess], targetTexture: Nullable[InternalTexture]): Unit = js.native
   

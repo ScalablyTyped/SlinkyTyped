@@ -1,7 +1,7 @@
 
 # Scala.js typings for retry-request
 
-Typings are for version 4.1.2
+Typings are for version 4.1.3
 
 ## Library description:
 Retry a request.

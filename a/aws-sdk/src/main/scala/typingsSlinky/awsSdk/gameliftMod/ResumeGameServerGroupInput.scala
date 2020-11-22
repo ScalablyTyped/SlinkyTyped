@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResumeGameServerGroupInput extends js.Object {
   
   /**
-    * The unique identifier of the game server group to resume activity on. Use either the GameServerGroup name or ARN value.
+    * A unique identifier for the game server group. Use either the GameServerGroup name or ARN value.
     */
   var GameServerGroupName: GameServerGroupNameOrArn = js.native
   
   /**
-    * The action to resume for this game server group.
+    * The activity to resume for this game server group.
     */
   var ResumeActions: GameServerGroupActions = js.native
 }

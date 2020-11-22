@@ -6,6 +6,9 @@ import typingsSlinky.node.NodeJS.Immediate
 import typingsSlinky.node.NodeJS.Timeout
 import typingsSlinky.node.anon.ToPrimitive
 import typingsSlinky.node.anon.ValueOf
+import typingsSlinky.node.consoleMod.global.Console_
+import typingsSlinky.node.processMod.global.NodeJS.Process
+import typingsSlinky.std.SharedArrayBuffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,6 +23,8 @@ object global extends js.Object {
   
   def clearTimeout(timeoutId: Timeout): Unit = js.native
   
+  var console: Console_ = js.native
+  
   @JSName("__dirname")
   var dirname: java.lang.String = js.native
   
@@ -29,9 +34,11 @@ object global extends js.Object {
   @JSName("__filename")
   var filename: java.lang.String = js.native
   
-  var global: Global = js.native
+  var global: Global with (/* globalThis */ js.Any) = js.native
   
   var module: NodeModule = js.native
+  
+  var process: Process = js.native
   
   def queueMicrotask(callback: js.Function0[Unit]): Unit = js.native
   
@@ -47,7 +54,6 @@ object global extends js.Object {
   @js.native
   class Buffer protected ()
     extends typingsSlinky.node.Buffer {
-    def this(arrayBuffer: SharedArrayBuffer) = this()
     /**
       * Produces a Buffer backed by the same allocated memory as
       * the given {ArrayBuffer}/{SharedArrayBuffer}.
@@ -57,6 +63,7 @@ object global extends js.Object {
       * @deprecated since v10.0.0 - Use `Buffer.from(arrayBuffer[, byteOffset[, length]])` instead.
       */
     def this(arrayBuffer: js.typedarray.ArrayBuffer) = this()
+    def this(arrayBuffer: SharedArrayBuffer) = this()
     /**
       * Allocates a new buffer containing the given {array} of octets.
       *
@@ -143,10 +150,10 @@ object global extends js.Object {
     def byteLength(string: java.lang.String, encoding: BufferEncoding): Double = js.native
     def byteLength(string: ArrayBufferView): Double = js.native
     def byteLength(string: ArrayBufferView, encoding: BufferEncoding): Double = js.native
-    def byteLength(string: SharedArrayBuffer): Double = js.native
-    def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
     def byteLength(string: js.typedarray.ArrayBuffer): Double = js.native
     def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = js.native
+    def byteLength(string: SharedArrayBuffer): Double = js.native
+    def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
     
     /**
       * The same as buf1.compare(buf2).
@@ -167,10 +174,6 @@ object global extends js.Object {
     def concat(list: js.Array[js.typedarray.Uint8Array]): typingsSlinky.node.Buffer = js.native
     def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): typingsSlinky.node.Buffer = js.native
     
-    def from(arrayBuffer: SharedArrayBuffer): typingsSlinky.node.Buffer = js.native
-    def from(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
-    def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
-    def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
     /**
       * When passed a reference to the .buffer property of a TypedArray instance,
       * the newly created Buffer will share the same allocated memory as the TypedArray.
@@ -183,6 +186,10 @@ object global extends js.Object {
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
     def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
+    def from(arrayBuffer: SharedArrayBuffer): typingsSlinky.node.Buffer = js.native
+    def from(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
+    def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
+    def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
     /**
       * Creates a new Buffer using the passed {data}
       * @param data data to create a new Buffer
@@ -244,9 +251,6 @@ object global extends js.Object {
   *-----------------------------------------------*/
   @js.native
   object NodeJS extends js.Object
-  
-  @js.native
-  object Symbol extends SymbolConstructor
   
   @js.native
   object setImmediate extends js.Object {

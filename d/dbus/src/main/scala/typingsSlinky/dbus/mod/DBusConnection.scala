@@ -9,21 +9,28 @@ trait DBusConnection extends js.Object {
   
   def disconnect(): Unit = js.native
   
-  def getInterface(
+  /* tslint:disable-next-line:no-unnecessary-generics */
+  def getInterface[T](
     serviceName: String,
     objectPath: String,
     interfaceName: String,
-    callback: js.Function2[/* err */ DBusError, /* iface */ DBusInterface, Unit]
+    callback: js.Function2[/* err */ Error | Null, /* iface */ DBusInterface[T], Unit]
   ): Unit = js.native
+  
+  def getUniqueServiceName(serviceName: String, callback: js.Function2[/* err */ Error | Null, /* uniqueName */ String, Unit]): Unit = js.native
+  
+  def reconnect(callback: js.Function0[Unit]): Unit = js.native
 }
 object DBusConnection {
   
   @scala.inline
   def apply(
     disconnect: () => Unit,
-    getInterface: (String, String, String, js.Function2[/* err */ DBusError, /* iface */ DBusInterface, Unit]) => Unit
+    getInterface: (String, String, String, js.Function2[/* err */ Error | Null, /* iface */ DBusInterface[js.Any], Unit]) => Unit,
+    getUniqueServiceName: (String, js.Function2[/* err */ Error | Null, /* uniqueName */ String, Unit]) => Unit,
+    reconnect: js.Function0[Unit] => Unit
   ): DBusConnection = {
-    val __obj = js.Dynamic.literal(disconnect = js.Any.fromFunction0(disconnect), getInterface = js.Any.fromFunction4(getInterface))
+    val __obj = js.Dynamic.literal(disconnect = js.Any.fromFunction0(disconnect), getInterface = js.Any.fromFunction4(getInterface), getUniqueServiceName = js.Any.fromFunction2(getUniqueServiceName), reconnect = js.Any.fromFunction1(reconnect))
     __obj.asInstanceOf[DBusConnection]
   }
   
@@ -47,7 +54,13 @@ object DBusConnection {
     
     @scala.inline
     def setGetInterface(
-      value: (String, String, String, js.Function2[/* err */ DBusError, /* iface */ DBusInterface, Unit]) => Unit
+      value: (String, String, String, js.Function2[/* err */ Error | Null, /* iface */ DBusInterface[js.Any], Unit]) => Unit
     ): Self = this.set("getInterface", js.Any.fromFunction4(value))
+    
+    @scala.inline
+    def setGetUniqueServiceName(value: (String, js.Function2[/* err */ Error | Null, /* uniqueName */ String, Unit]) => Unit): Self = this.set("getUniqueServiceName", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setReconnect(value: js.Function0[Unit] => Unit): Self = this.set("reconnect", js.Any.fromFunction1(value))
   }
 }

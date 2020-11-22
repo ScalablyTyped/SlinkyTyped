@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
 import typingsSlinky.babylonjs.BABYLON.IMinimalMotionControllerObject
-import typingsSlinky.babylonjs.BABYLON.MotionControllerHandness
+import typingsSlinky.babylonjs.BABYLON.MotionControllerHandedness
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,12 +14,12 @@ class WebXRHTCViveMotionController protected ()
     * Create a new Vive motion controller object
     * @param scene the scene to use to create this controller
     * @param gamepadObject the corresponding gamepad object
-    * @param handness the handness of the controller
+    * @param handedness the handedness of the controller
     */
   def this(
     scene: typingsSlinky.babylonjs.BABYLON.Scene,
     gamepadObject: IMinimalMotionControllerObject,
-    handness: MotionControllerHandness
+    handedness: MotionControllerHandedness
   ) = this()
 }
 /* static members */

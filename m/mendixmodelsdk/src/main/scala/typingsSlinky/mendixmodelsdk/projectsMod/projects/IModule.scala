@@ -12,12 +12,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/modules relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/modules relevant section in reference guide}
   */
 @js.native
 trait IModule extends IFolderBase {
   
   var appStoreGuid: String = js.native
+  
+  /**
+    * In version 8.13.0: introduced
+    */
+  var appStorePackageId: Double = js.native
   
   var appStoreVersion: String = js.native
   
@@ -56,6 +61,7 @@ object IModule {
   def apply(
     allProperties: () => js.Array[AbstractProperty[_, _]],
     appStoreGuid: String,
+    appStorePackageId: Double,
     appStoreVersion: String,
     appStoreVersionGuid: String,
     container: IStructuralUnit,
@@ -84,7 +90,7 @@ object IModule {
     traversePublicParts: js.Function1[IModule, Unit] => Unit,
     unit: IAbstractUnit
   ): IModule = {
-    val __obj = js.Dynamic.literal(allProperties = js.Any.fromFunction0(allProperties), appStoreGuid = appStoreGuid.asInstanceOf[js.Any], appStoreVersion = appStoreVersion.asInstanceOf[js.Any], appStoreVersionGuid = appStoreVersionGuid.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any], containerAsFolderBase = containerAsFolderBase.asInstanceOf[js.Any], containerAsProject = containerAsProject.asInstanceOf[js.Any], delete = js.Any.fromFunction0(delete), documents = documents.asInstanceOf[js.Any], domainModel = domainModel.asInstanceOf[js.Any], folders = folders.asInstanceOf[js.Any], fromAppStore = fromAppStore.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isLoadable = isLoadable.asInstanceOf[js.Any], isLoaded = isLoaded.asInstanceOf[js.Any], isReadOnly = isReadOnly.asInstanceOf[js.Any], isReusableComponent = isReusableComponent.asInstanceOf[js.Any], loadedProperties = js.Any.fromFunction0(loadedProperties), model = model.asInstanceOf[js.Any], moduleSecurity = moduleSecurity.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], publicProperties = js.Any.fromFunction0(publicProperties), sortIndex = sortIndex.asInstanceOf[js.Any], structureTypeName = structureTypeName.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), traverse = js.Any.fromFunction1(traverse), traverseFind = js.Any.fromFunction1(traverseFind), traversePublicParts = js.Any.fromFunction1(traversePublicParts), unit = unit.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(allProperties = js.Any.fromFunction0(allProperties), appStoreGuid = appStoreGuid.asInstanceOf[js.Any], appStorePackageId = appStorePackageId.asInstanceOf[js.Any], appStoreVersion = appStoreVersion.asInstanceOf[js.Any], appStoreVersionGuid = appStoreVersionGuid.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any], containerAsFolderBase = containerAsFolderBase.asInstanceOf[js.Any], containerAsProject = containerAsProject.asInstanceOf[js.Any], delete = js.Any.fromFunction0(delete), documents = documents.asInstanceOf[js.Any], domainModel = domainModel.asInstanceOf[js.Any], folders = folders.asInstanceOf[js.Any], fromAppStore = fromAppStore.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isLoadable = isLoadable.asInstanceOf[js.Any], isLoaded = isLoaded.asInstanceOf[js.Any], isReadOnly = isReadOnly.asInstanceOf[js.Any], isReusableComponent = isReusableComponent.asInstanceOf[js.Any], loadedProperties = js.Any.fromFunction0(loadedProperties), model = model.asInstanceOf[js.Any], moduleSecurity = moduleSecurity.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], publicProperties = js.Any.fromFunction0(publicProperties), sortIndex = sortIndex.asInstanceOf[js.Any], structureTypeName = structureTypeName.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON), traverse = js.Any.fromFunction1(traverse), traverseFind = js.Any.fromFunction1(traverseFind), traversePublicParts = js.Any.fromFunction1(traversePublicParts), unit = unit.asInstanceOf[js.Any])
     __obj.asInstanceOf[IModule]
   }
   
@@ -105,6 +111,9 @@ object IModule {
     
     @scala.inline
     def setAppStoreGuid(value: String): Self = this.set("appStoreGuid", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAppStorePackageId(value: Double): Self = this.set("appStorePackageId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAppStoreVersion(value: String): Self = this.set("appStoreVersion", value.asInstanceOf[js.Any])

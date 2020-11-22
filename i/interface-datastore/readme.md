@@ -1,7 +1,7 @@
 
 # Scala.js typings for interface-datastore
 
-Typings are for version 0.8
+Typings are for version 1.0
 
 ## Library description:
 datastore interface

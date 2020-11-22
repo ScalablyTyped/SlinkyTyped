@@ -1,5 +1,6 @@
 package typingsSlinky.angularCore
 
+import typingsSlinky.typescript.mod.ImportSpecifier
 import typingsSlinky.typescript.mod.Node
 import typingsSlinky.typescript.mod.Symbol
 import typingsSlinky.typescript.mod.TypeChecker
@@ -12,4 +13,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object symbolMod extends js.Object {
   
   def getValueSymbolOfDeclaration(node: Node, typeChecker: TypeChecker): js.UndefOr[Symbol] = js.native
+  
+  def isReferenceToImport(typeChecker: TypeChecker, node: Node, importSpecifier: ImportSpecifier): Boolean = js.native
 }

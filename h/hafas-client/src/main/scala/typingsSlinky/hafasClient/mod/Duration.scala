@@ -9,12 +9,12 @@ trait Duration extends js.Object {
   
   var duration: Double = js.native
   
-  var stations: js.Array[Station | Stop] = js.native
+  var stations: js.Array[Station | Stop | Location] = js.native
 }
 object Duration {
   
   @scala.inline
-  def apply(duration: Double, stations: js.Array[Station | Stop]): Duration = {
+  def apply(duration: Double, stations: js.Array[Station | Stop | Location]): Duration = {
     val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], stations = stations.asInstanceOf[js.Any])
     __obj.asInstanceOf[Duration]
   }
@@ -38,9 +38,9 @@ object Duration {
     def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStationsVarargs(value: (Station | Stop)*): Self = this.set("stations", js.Array(value :_*))
+    def setStationsVarargs(value: (Station | Stop | Location)*): Self = this.set("stations", js.Array(value :_*))
     
     @scala.inline
-    def setStations(value: js.Array[Station | Stop]): Self = this.set("stations", value.asInstanceOf[js.Any])
+    def setStations(value: js.Array[Station | Stop | Location]): Self = this.set("stations", value.asInstanceOf[js.Any])
   }
 }

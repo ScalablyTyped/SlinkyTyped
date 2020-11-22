@@ -37,6 +37,9 @@ object NodeMaterial extends js.Object {
   /** Define the Url to load node editor script */
   var EditorURL: String = js.native
   
+  /** Gets or sets a boolean indicating that node materials should not deserialize textures from json / snippet content */
+  var IgnoreTexturesAtLoadTime: Boolean = js.native
+  
   /**
     * Creates a node material from parsed material data
     * @param source defines the JSON representation of the material
@@ -61,10 +64,23 @@ object NodeMaterial extends js.Object {
     * @param snippetId defines the snippet to load
     * @param scene defines the hosting scene
     * @param rootUrl defines the root URL to use to load textures and relative dependencies
+    * @param nodeMaterial defines a node material to update (instead of creating a new one)
     * @returns a promise that will resolve to the new node material
     */
   def ParseFromSnippetAsync(snippetId: String, scene: typingsSlinky.babylonjs.BABYLON.Scene): js.Promise[typingsSlinky.babylonjs.BABYLON.NodeMaterial] = js.native
+  def ParseFromSnippetAsync(
+    snippetId: String,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    rootUrl: js.UndefOr[scala.Nothing],
+    nodeMaterial: typingsSlinky.babylonjs.BABYLON.NodeMaterial
+  ): js.Promise[typingsSlinky.babylonjs.BABYLON.NodeMaterial] = js.native
   def ParseFromSnippetAsync(snippetId: String, scene: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): js.Promise[typingsSlinky.babylonjs.BABYLON.NodeMaterial] = js.native
+  def ParseFromSnippetAsync(
+    snippetId: String,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    rootUrl: String,
+    nodeMaterial: typingsSlinky.babylonjs.BABYLON.NodeMaterial
+  ): js.Promise[typingsSlinky.babylonjs.BABYLON.NodeMaterial] = js.native
   
   /** Define the Url to load snippets */
   var SnippetUrl: String = js.native

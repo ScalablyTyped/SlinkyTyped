@@ -6,7 +6,7 @@ import typingsSlinky.awsSdk.awsSdkStrings.servicesInactive
 import typingsSlinky.awsSdk.awsSdkStrings.servicesStable
 import typingsSlinky.awsSdk.awsSdkStrings.tasksRunning
 import typingsSlinky.awsSdk.awsSdkStrings.tasksStopped
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import scala.scalajs.js

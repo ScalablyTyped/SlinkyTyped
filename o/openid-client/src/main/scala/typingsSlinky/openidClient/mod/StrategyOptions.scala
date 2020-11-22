@@ -10,6 +10,11 @@ trait StrategyOptions[TClient /* <: Client */] extends js.Object {
   var client: TClient = js.native
   
   /**
+    * "extras" argument value passed to the client.callback() call.
+    */
+  var extras: js.UndefOr[CallbackExtras] = js.native
+  
+  /**
     * Authorization Request parameters. The strategy will use these.
     */
   var params: js.UndefOr[AuthorizationParameters] = js.native
@@ -57,6 +62,12 @@ object StrategyOptions {
     
     @scala.inline
     def setClient(value: TClient): Self = this.set("client", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setExtras(value: CallbackExtras): Self = this.set("extras", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExtras: Self = this.set("extras", js.undefined)
     
     @scala.inline
     def setParams(value: AuthorizationParameters): Self = this.set("params", value.asInstanceOf[js.Any])

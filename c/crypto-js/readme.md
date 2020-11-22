@@ -1,7 +1,7 @@
 
 # Scala.js typings for crypto-js
 
-Typings are for version v3.1.8
+Typings are for version v4.0.0
 
 ## Library description:
 JavaScript library of crypto standards.

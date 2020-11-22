@@ -11,9 +11,9 @@ object Value extends js.Object {
   /**
     * Register value
     *
-    * @param {string} name - value name
+    * @param name - value name
     *
-    * @returns {ngESDecorator} - decorated class
+    * @returns decorated class
     */
   def apply(name: String): ngESDecorator = js.native
 }

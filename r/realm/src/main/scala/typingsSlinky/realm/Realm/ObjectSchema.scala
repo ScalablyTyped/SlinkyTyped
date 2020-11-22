@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ObjectSchema extends js.Object {
   
+  var embedded: js.UndefOr[Boolean] = js.native
+  
   var name: String = js.native
   
   var primaryKey: js.UndefOr[String] = js.native
@@ -45,6 +47,12 @@ object ObjectSchema {
     
     @scala.inline
     def setProperties(value: PropertiesTypes): Self = this.set("properties", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEmbedded(value: Boolean): Self = this.set("embedded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEmbedded: Self = this.set("embedded", js.undefined)
     
     @scala.inline
     def setPrimaryKey(value: String): Self = this.set("primaryKey", value.asInstanceOf[js.Any])

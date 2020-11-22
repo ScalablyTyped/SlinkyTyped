@@ -13,7 +13,7 @@ trait TransitGatewayRouteTableAssociation extends js.Object {
   var ResourceId: js.UndefOr[String] = js.native
   
   /**
-    * The resource type.
+    * The resource type. Note that the tgw-peering resource type has been deprecated.
     */
   var ResourceType: js.UndefOr[TransitGatewayAttachmentResourceType] = js.native
   

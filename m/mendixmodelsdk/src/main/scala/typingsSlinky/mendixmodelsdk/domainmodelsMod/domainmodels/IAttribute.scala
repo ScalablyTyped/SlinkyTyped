@@ -8,12 +8,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/attributes relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/attributes relevant section in reference guide}
   */
 @js.native
 trait IAttribute
   extends IElement
      with IByNameReferrable {
+  
+  /**
+    * This property is required and cannot be set to null.
+    *
+    * In version 8.13.0: introduced
+    */
+  val capabilities: IAttributeCapabilities = js.native
   
   val containerAsEntity: IEntity = js.native
   

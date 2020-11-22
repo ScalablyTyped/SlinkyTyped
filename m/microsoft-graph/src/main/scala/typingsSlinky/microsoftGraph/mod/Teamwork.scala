@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Teamwork extends Entity {
   
-  var workforceIntegrations: js.UndefOr[js.Array[WorkforceIntegration]] = js.native
+  var workforceIntegrations: js.UndefOr[NullableOption[js.Array[WorkforceIntegration]]] = js.native
 }
 object Teamwork {
   
@@ -36,9 +36,12 @@ object Teamwork {
     def setWorkforceIntegrationsVarargs(value: WorkforceIntegration*): Self = this.set("workforceIntegrations", js.Array(value :_*))
     
     @scala.inline
-    def setWorkforceIntegrations(value: js.Array[WorkforceIntegration]): Self = this.set("workforceIntegrations", value.asInstanceOf[js.Any])
+    def setWorkforceIntegrations(value: NullableOption[js.Array[WorkforceIntegration]]): Self = this.set("workforceIntegrations", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkforceIntegrations: Self = this.set("workforceIntegrations", js.undefined)
+    
+    @scala.inline
+    def setWorkforceIntegrationsNull: Self = this.set("workforceIntegrations", null)
   }
 }

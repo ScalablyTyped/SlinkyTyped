@@ -102,9 +102,20 @@ object webXRDefaultExperienceMod extends js.Object {
     var inputOptions: js.UndefOr[IWebXRInputOptions] = js.native
     
     /**
+      * A list of optional features to init the session with
+      * If set to true, all features we support will be added
+      */
+    var optionalFeatures: js.UndefOr[Boolean | js.Array[String]] = js.native
+    
+    /**
       * optional configuration for the output canvas
       */
     var outputCanvasOptions: js.UndefOr[WebXRManagedOutputCanvasOptions] = js.native
+    
+    /**
+      * An optional rendering group id that will be set globally for teleportation, pointer selection and default controller meshes
+      */
+    var renderingGroupId: js.UndefOr[Double] = js.native
     
     /**
       * optional UI options. This can be used among other to change session mode and reference space type

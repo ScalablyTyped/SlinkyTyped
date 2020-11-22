@@ -2,7 +2,7 @@ package typingsSlinky.emberData.mod.default
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The store contains all of the data for records loaded from the server.
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class Store ()
   extends typingsSlinky.emberData.mod.DS.Store
-

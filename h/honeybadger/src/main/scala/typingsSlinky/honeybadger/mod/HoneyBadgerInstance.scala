@@ -17,7 +17,12 @@ trait HoneyBadgerInstance extends EventEmitter {
   
   def configure(options: ConfigureOptions): Unit = js.native
   
-  def errorHandler(err: js.Any, req: Request[ParamsDictionary, _, _, Query], res: Response[_], next: NextFunction): js.Any = js.native
+  def errorHandler(
+    err: js.Any,
+    req: Request[ParamsDictionary, _, _, Query],
+    res: Response[_, Double],
+    next: NextFunction
+  ): js.Any = js.native
   @JSName("errorHandler")
   var errorHandler_Original: ErrorRequestHandler[ParamsDictionary, _, _, Query] = js.native
   
@@ -77,7 +82,7 @@ trait HoneyBadgerInstance extends EventEmitter {
   
   def onUncaughtException(func: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   
-  def requestHandler(req: Request[ParamsDictionary, _, _, Query], res: Response[_], next: NextFunction): js.Any = js.native
+  def requestHandler(req: Request[ParamsDictionary, _, _, Query], res: Response[_, Double], next: NextFunction): js.Any = js.native
   @JSName("requestHandler")
   var requestHandler_Original: RequestHandler[ParamsDictionary, _, _, Query] = js.native
   

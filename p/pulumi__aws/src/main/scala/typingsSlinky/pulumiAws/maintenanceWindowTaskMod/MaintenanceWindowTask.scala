@@ -1,9 +1,7 @@
 package typingsSlinky.pulumiAws.maintenanceWindowTaskMod
 
-import typingsSlinky.pulumiAws.outputMod.ssm.MaintenanceWindowTaskLoggingInfo
 import typingsSlinky.pulumiAws.outputMod.ssm.MaintenanceWindowTaskTarget
 import typingsSlinky.pulumiAws.outputMod.ssm.MaintenanceWindowTaskTaskInvocationParameters
-import typingsSlinky.pulumiAws.outputMod.ssm.MaintenanceWindowTaskTaskParameter
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -30,13 +28,6 @@ class MaintenanceWindowTask protected () extends CustomResource {
     * The description of the maintenance window task.
     */
   val description: Output_[js.UndefOr[String]] = js.native
-  
-  /**
-    * A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `taskInvocationParameters` configuration block `runCommandParameters` configuration block `output_s3_*` arguments instead. Conflicts with `taskInvocationParameters`. Documented below.
-    *
-    * @deprecated use 'task_invocation_parameters' argument instead
-    */
-  val loggingInfo: Output_[js.UndefOr[MaintenanceWindowTaskLoggingInfo]] = js.native
   
   /**
     * The maximum number of targets this task can be run for in parallel.
@@ -74,16 +65,9 @@ class MaintenanceWindowTask protected () extends CustomResource {
   val taskArn: Output_[String] = js.native
   
   /**
-    * The parameters for task execution. This argument is conflict with `taskParameters` and `loggingInfo`.
+    * Configuration block with parameters for task execution.
     */
   val taskInvocationParameters: Output_[js.UndefOr[MaintenanceWindowTaskTaskInvocationParameters]] = js.native
-  
-  /**
-    * A structure containing information about parameters required by the particular `taskArn`. Use `parameter` configuration blocks under the `taskInvocationParameters` configuration block instead. Conflicts with `taskInvocationParameters`. Documented below.
-    *
-    * @deprecated use 'task_invocation_parameters' argument instead
-    */
-  val taskParameters: Output_[js.UndefOr[js.Array[MaintenanceWindowTaskTaskParameter]]] = js.native
   
   /**
     * The type of task being registered. The only allowed value is `RUN_COMMAND`.

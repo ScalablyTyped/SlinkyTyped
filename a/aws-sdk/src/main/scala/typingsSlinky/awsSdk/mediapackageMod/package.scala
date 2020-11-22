@@ -108,6 +108,14 @@ package object mediapackageMod {
   type Tags = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.mediapackageMod.string]
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.`HTTP-HEAD`
+    - typingsSlinky.awsSdk.awsSdkStrings.`HTTP-ISO`
+    - java.lang.String
+  */
+  type UtcTiming = typingsSlinky.awsSdk.mediapackageMod._UtcTiming | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2017-10-12`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_
     - java.lang.String

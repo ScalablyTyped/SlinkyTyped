@@ -7,15 +7,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Cooked extends js.Object {
   
-  var cooked: String = js.native
+  var cooked: js.UndefOr[String] = js.native
   
-  var raw: String = js.native
+  var raw: js.UndefOr[String] = js.native
 }
 object Cooked {
   
   @scala.inline
-  def apply(cooked: String, raw: String): Cooked = {
-    val __obj = js.Dynamic.literal(cooked = cooked.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any])
+  def apply(): Cooked = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Cooked]
   }
   
@@ -38,6 +38,12 @@ object Cooked {
     def setCooked(value: String): Self = this.set("cooked", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def deleteCooked: Self = this.set("cooked", js.undefined)
+    
+    @scala.inline
     def setRaw(value: String): Self = this.set("raw", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRaw: Self = this.set("raw", js.undefined)
   }
 }

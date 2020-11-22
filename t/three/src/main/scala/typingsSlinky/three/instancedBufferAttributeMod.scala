@@ -42,6 +42,9 @@ object instancedBufferAttributeMod extends js.Object {
     ) = this()
     def this(array: ArrayLike[Double], itemSize: Double, normalized: Boolean, meshPerAttribute: Double) = this()
     
+    /**
+    	 * @default 1
+    	 */
     var meshPerAttribute: Double = js.native
   }
 }

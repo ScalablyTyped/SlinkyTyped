@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.anon.`11`
+import typingsSlinky.devextreme.anon.`14`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,16 +8,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeListEditing extends GridBaseEditing {
   
-  /** @name dxTreeList.Options.editing.allowAdding */
-  var allowAdding: js.UndefOr[Boolean | (js.Function1[/* options */ `11`, Boolean])] = js.native
+  /**
+    * [descr:dxTreeList.Options.editing.allowAdding]
+    */
+  var allowAdding: js.UndefOr[Boolean | (js.Function1[/* options */ `14`, Boolean])] = js.native
   
-  /** @name dxTreeList.Options.editing.allowDeleting */
-  var allowDeleting: js.UndefOr[Boolean | (js.Function1[/* options */ `11`, Boolean])] = js.native
+  /**
+    * [descr:dxTreeList.Options.editing.allowDeleting]
+    */
+  var allowDeleting: js.UndefOr[Boolean | (js.Function1[/* options */ `14`, Boolean])] = js.native
   
-  /** @name dxTreeList.Options.editing.allowUpdating */
-  var allowUpdating: js.UndefOr[Boolean | (js.Function1[/* options */ `11`, Boolean])] = js.native
+  /**
+    * [descr:dxTreeList.Options.editing.allowUpdating]
+    */
+  var allowUpdating: js.UndefOr[Boolean | (js.Function1[/* options */ `14`, Boolean])] = js.native
   
-  /** @name dxTreeList.Options.editing.texts */
+  /**
+    * [descr:dxTreeList.Options.editing.texts]
+    */
   @JSName("texts")
   var texts_dxTreeListEditing: js.UndefOr[dxTreeListEditingTexts] = js.native
 }
@@ -45,28 +53,28 @@ object dxTreeListEditing {
     }
     
     @scala.inline
-    def setAllowAddingFunction1(value: /* options */ `11` => Boolean): Self = this.set("allowAdding", js.Any.fromFunction1(value))
+    def setAllowAddingFunction1(value: /* options */ `14` => Boolean): Self = this.set("allowAdding", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setAllowAdding(value: Boolean | (js.Function1[/* options */ `11`, Boolean])): Self = this.set("allowAdding", value.asInstanceOf[js.Any])
+    def setAllowAdding(value: Boolean | (js.Function1[/* options */ `14`, Boolean])): Self = this.set("allowAdding", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAllowAdding: Self = this.set("allowAdding", js.undefined)
     
     @scala.inline
-    def setAllowDeletingFunction1(value: /* options */ `11` => Boolean): Self = this.set("allowDeleting", js.Any.fromFunction1(value))
+    def setAllowDeletingFunction1(value: /* options */ `14` => Boolean): Self = this.set("allowDeleting", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setAllowDeleting(value: Boolean | (js.Function1[/* options */ `11`, Boolean])): Self = this.set("allowDeleting", value.asInstanceOf[js.Any])
+    def setAllowDeleting(value: Boolean | (js.Function1[/* options */ `14`, Boolean])): Self = this.set("allowDeleting", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAllowDeleting: Self = this.set("allowDeleting", js.undefined)
     
     @scala.inline
-    def setAllowUpdatingFunction1(value: /* options */ `11` => Boolean): Self = this.set("allowUpdating", js.Any.fromFunction1(value))
+    def setAllowUpdatingFunction1(value: /* options */ `14` => Boolean): Self = this.set("allowUpdating", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setAllowUpdating(value: Boolean | (js.Function1[/* options */ `11`, Boolean])): Self = this.set("allowUpdating", value.asInstanceOf[js.Any])
+    def setAllowUpdating(value: Boolean | (js.Function1[/* options */ `14`, Boolean])): Self = this.set("allowUpdating", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAllowUpdating: Self = this.set("allowUpdating", js.undefined)

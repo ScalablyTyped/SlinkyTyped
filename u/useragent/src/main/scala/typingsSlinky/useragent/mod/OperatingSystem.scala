@@ -9,10 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 /**
   * The representation of a parsed Operating System.
-  * @param family The name of the os
-  * @param major Major version of the os
-  * @param minor Minor version of the os
-  * @param patch Patch version of the os
+  * @param [family='Other'] The name of the os
+  * @param [major='0'] Major version of the os
+  * @param [minor='0'] Minor version of the os
+  * @param [patch='0'] Patch version of the os
   */
 class OperatingSystem () extends js.Object {
   def this(family: String) = this()

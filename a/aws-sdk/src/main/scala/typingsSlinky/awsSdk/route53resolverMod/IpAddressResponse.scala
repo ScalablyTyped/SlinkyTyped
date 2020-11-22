@@ -13,7 +13,7 @@ trait IpAddressResponse extends js.Object {
   var CreationTime: js.UndefOr[Rfc3339TimeString] = js.native
   
   /**
-    * One IP address that the resolver endpoint uses for DNS queries.
+    * One IP address that the Resolver endpoint uses for DNS queries.
     */
   var Ip: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.Ip] = js.native
   

@@ -1,28 +1,28 @@
 package typingsSlinky.reactBigCalendar.anon
 
 import slinky.core.ReactComponentClass
-import slinky.core.facade.ReactElement
+import typingsSlinky.reactBigCalendar.mod.EventProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Header extends js.Object {
+trait Header[TEvent /* <: js.Object */] extends js.Object {
   
-  var event: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.native
+  var event: js.UndefOr[ReactComponentClass[EventProps[TEvent]]] = js.native
   
-  var header: js.UndefOr[ReactComponentClass[js.Object] | ReactElement] = js.native
+  var header: js.UndefOr[ReactComponentClass[js.Object]] = js.native
 }
 object Header {
   
   @scala.inline
-  def apply(): Header = {
+  def apply[TEvent /* <: js.Object */](): Header[TEvent] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Header]
+    __obj.asInstanceOf[Header[TEvent]]
   }
   
   @scala.inline
-  implicit class HeaderOps[Self <: Header] (val x: Self) extends AnyVal {
+  implicit class HeaderOps[Self <: Header[_], TEvent /* <: js.Object */] (val x: Self with Header[TEvent]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -37,37 +37,25 @@ object Header {
     }
     
     @scala.inline
-    def setEventComponentClass(value: ReactComponentClass[js.Object]): Self = this.set("event", value.asInstanceOf[js.Any])
+    def setEventFunctionComponent(value: ReactComponentClass[EventProps[TEvent]]): Self = this.set("event", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEventComponent(value: ReactComponentClass[js.Object]): Self = this.set("event", value.asInstanceOf[js.Any])
+    def setEventComponentClass(value: ReactComponentClass[EventProps[TEvent]]): Self = this.set("event", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEvent(value: ReactComponentClass[js.Object] | ReactElement): Self = this.set("event", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setEventFunctionComponent(value: ReactComponentClass[js.Object]): Self = this.set("event", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setEventReactElement(value: ReactElement): Self = this.set("event", value.asInstanceOf[js.Any])
+    def setEvent(value: ReactComponentClass[EventProps[TEvent]]): Self = this.set("event", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEvent: Self = this.set("event", js.undefined)
     
     @scala.inline
-    def setHeader(value: ReactComponentClass[js.Object] | ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
+    def setHeaderFunctionComponent(value: ReactComponentClass[js.Object]): Self = this.set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHeaderComponentClass(value: ReactComponentClass[js.Object]): Self = this.set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeaderFunctionComponent(value: ReactComponentClass[js.Object]): Self = this.set("header", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHeaderComponent(value: ReactComponentClass[js.Object]): Self = this.set("header", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHeaderReactElement(value: ReactElement): Self = this.set("header", value.asInstanceOf[js.Any])
+    def setHeader(value: ReactComponentClass[js.Object]): Self = this.set("header", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHeader: Self = this.set("header", js.undefined)

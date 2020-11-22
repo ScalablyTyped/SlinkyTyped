@@ -13,23 +13,27 @@ import typingsSlinky.astTypes.kindsMod.TypeParameterInstantiationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.FlowType, 'type'> */
+@js.native
 trait GenericTypeAnnotation
   extends ASTNode
      with FlowKind
      with FlowTypeKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var id: IdentifierKind | QualifiedTypeIdentifierKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.GenericTypeAnnotation
-  var typeParameters: TypeParameterInstantiationKind | Null
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var id: IdentifierKind | QualifiedTypeIdentifierKind = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.GenericTypeAnnotation = js.native
+  
+  var typeParameters: TypeParameterInstantiationKind | Null = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.GenericTypeAnnotation")
 @js.native
 object GenericTypeAnnotation extends TopLevel[Type[GenericTypeAnnotation]]
-

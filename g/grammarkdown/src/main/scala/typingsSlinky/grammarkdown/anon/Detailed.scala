@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Detailed extends js.Object {
   
   var detailed: js.UndefOr[Boolean] = js.native
+  
+  var raw: js.UndefOr[Boolean] = js.native
 }
 object Detailed {
   
@@ -37,5 +39,11 @@ object Detailed {
     
     @scala.inline
     def deleteDetailed: Self = this.set("detailed", js.undefined)
+    
+    @scala.inline
+    def setRaw(value: Boolean): Self = this.set("raw", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRaw: Self = this.set("raw", js.undefined)
   }
 }

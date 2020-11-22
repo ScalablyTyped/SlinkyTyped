@@ -38,7 +38,7 @@ trait UpdateMaintenanceWindowTaskRequest extends js.Object {
   var Priority: js.UndefOr[MaintenanceWindowTaskPriority] = js.native
   
   /**
-    * If True, then all fields that are required by the RegisterTaskWithMaintenanceWndow action are also required for this API request. Optional fields that are not specified are set to null.
+    * If True, then all fields that are required by the RegisterTaskWithMaintenanceWindow action are also required for this API request. Optional fields that are not specified are set to null.
     */
   var Replace: js.UndefOr[Boolean] = js.native
   
@@ -58,7 +58,7 @@ trait UpdateMaintenanceWindowTaskRequest extends js.Object {
   var TaskArn: js.UndefOr[MaintenanceWindowTaskArn] = js.native
   
   /**
-    * The parameters that the task should use during execution. Populate only the fields that match the task type. All other fields should be empty.
+    * The parameters that the task should use during execution. Populate only the fields that match the task type. All other fields should be empty.  When you update a maintenance window task that has options specified in TaskInvocationParameters, you must provide again all the TaskInvocationParameters values that you want to retain. The values you do not specify again are removed. For example, suppose that when you registered a Run Command task, you specified TaskInvocationParameters values for Comment, NotificationConfig, and OutputS3BucketName. If you update the maintenance window task and specify only a different OutputS3BucketName value, the values for Comment and NotificationConfig are removed. 
     */
   var TaskInvocationParameters: js.UndefOr[MaintenanceWindowTaskInvocationParameters] = js.native
   

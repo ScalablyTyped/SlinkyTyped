@@ -16,6 +16,9 @@ object kendoUiStrings {
   def destroy: destroy = "destroy".asInstanceOf[destroy]
   
   @scala.inline
+  def grid: grid = "grid".asInstanceOf[grid]
+  
+  @scala.inline
   def half: half = "half".asInstanceOf[half]
   
   @scala.inline
@@ -32,6 +35,9 @@ object kendoUiStrings {
   
   @scala.inline
   def kendoAlert: kendoAlert = "kendoAlert".asInstanceOf[kendoAlert]
+  
+  @scala.inline
+  def kendoAppBar: kendoAppBar = "kendoAppBar".asInstanceOf[kendoAppBar]
   
   @scala.inline
   def kendoArcGauge: kendoArcGauge = "kendoArcGauge".asInstanceOf[kendoArcGauge]
@@ -127,6 +133,9 @@ object kendoUiStrings {
   def kendoGrid: kendoGrid = "kendoGrid".asInstanceOf[kendoGrid]
   
   @scala.inline
+  def kendoImageEditor: kendoImageEditor = "kendoImageEditor".asInstanceOf[kendoImageEditor]
+  
+  @scala.inline
   def kendoLinearGauge: kendoLinearGauge = "kendoLinearGauge".asInstanceOf[kendoLinearGauge]
   
   @scala.inline
@@ -134,6 +143,9 @@ object kendoUiStrings {
   
   @scala.inline
   def kendoListView: kendoListView = "kendoListView".asInstanceOf[kendoListView]
+  
+  @scala.inline
+  def kendoLoader: kendoLoader = "kendoLoader".asInstanceOf[kendoLoader]
   
   @scala.inline
   def kendoMap: kendoMap = "kendoMap".asInstanceOf[kendoMap]
@@ -295,6 +307,9 @@ object kendoUiStrings {
   def kendoTabStrip: kendoTabStrip = "kendoTabStrip".asInstanceOf[kendoTabStrip]
   
   @scala.inline
+  def kendoTextArea: kendoTextArea = "kendoTextArea".asInstanceOf[kendoTextArea]
+  
+  @scala.inline
   def kendoTextBox: kendoTextBox = "kendoTextBox".asInstanceOf[kendoTextBox]
   
   @scala.inline
@@ -334,6 +349,9 @@ object kendoUiStrings {
   def kendoWindow: kendoWindow = "kendoWindow".asInstanceOf[kendoWindow]
   
   @scala.inline
+  def kendoWizard: kendoWizard = "kendoWizard".asInstanceOf[kendoWizard]
+  
+  @scala.inline
   def popup: popup = "popup".asInstanceOf[popup]
   
   @scala.inline
@@ -358,6 +376,9 @@ object kendoUiStrings {
   sealed trait destroy extends js.Object
   
   @js.native
+  sealed trait grid extends js.Object
+  
+  @js.native
   sealed trait half extends js.Object
   
   @js.native
@@ -374,6 +395,9 @@ object kendoUiStrings {
   
   @js.native
   sealed trait kendoAlert extends js.Object
+  
+  @js.native
+  sealed trait kendoAppBar extends js.Object
   
   @js.native
   sealed trait kendoArcGauge extends js.Object
@@ -469,6 +493,9 @@ object kendoUiStrings {
   sealed trait kendoGrid extends js.Object
   
   @js.native
+  sealed trait kendoImageEditor extends js.Object
+  
+  @js.native
   sealed trait kendoLinearGauge extends js.Object
   
   @js.native
@@ -476,6 +503,9 @@ object kendoUiStrings {
   
   @js.native
   sealed trait kendoListView extends js.Object
+  
+  @js.native
+  sealed trait kendoLoader extends js.Object
   
   @js.native
   sealed trait kendoMap extends js.Object
@@ -637,6 +667,9 @@ object kendoUiStrings {
   sealed trait kendoTabStrip extends js.Object
   
   @js.native
+  sealed trait kendoTextArea extends js.Object
+  
+  @js.native
   sealed trait kendoTextBox extends js.Object
   
   @js.native
@@ -674,6 +707,9 @@ object kendoUiStrings {
   
   @js.native
   sealed trait kendoWindow extends js.Object
+  
+  @js.native
+  sealed trait kendoWizard extends js.Object
   
   @js.native
   sealed trait popup extends js.Object

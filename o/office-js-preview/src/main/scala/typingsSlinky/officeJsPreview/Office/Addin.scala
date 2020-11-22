@@ -24,7 +24,7 @@ trait Addin extends js.Object {
   /**
     * Adds a listener for the `onVisbilityModeChanged` event.
     * @param listener - The listener function that is called when the event is emitted. This function takes in a message for the receiving component.
-    * @returns A promise that resolves when the listener is added.
+    * @returns A promise that resolves to a function when the listener is added. The `RemoveEventListener` type is defined with `type RemoveEventListener = () => Promise<void>`. Calling it removes the listener.
     */
   def onVisibilityModeChanged(listener: js.Function1[/* message */ VisibilityModeChangedMessage, Unit]): js.Promise[RemoveEventListener] = js.native
   

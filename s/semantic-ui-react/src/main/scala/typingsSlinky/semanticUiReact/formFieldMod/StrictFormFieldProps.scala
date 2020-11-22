@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.formFieldMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.HtmlLabelProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -128,7 +127,7 @@ object StrictFormFieldProps {
     
     @scala.inline
     def setErrorFunction3(
-      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("error", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -154,7 +153,7 @@ object StrictFormFieldProps {
     
     @scala.inline
     def setLabelFunction3(
-      value: (/* component */ ReactType[HtmlLabelProps], HtmlLabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, HtmlLabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("label", js.Any.fromFunction3(value))
     
     @scala.inline

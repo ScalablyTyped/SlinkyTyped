@@ -11,7 +11,7 @@ package object mod {
       typingsSlinky.react.mod.HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
       org.scalajs.dom.raw.HTMLDivElement
     ], 
-    typingsSlinky.emotionStyledBase.helperMod.Omit[
+    typingsSlinky.std.Omit[
       (typingsSlinky.react.mod.DetailedHTMLProps[
         typingsSlinky.react.mod.HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
         org.scalajs.dom.raw.HTMLDivElement

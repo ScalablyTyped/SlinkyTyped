@@ -22,8 +22,8 @@ object utilMod extends js.Object {
   
   def beingCrawled(): Boolean = js.native
   
-  def bindCallback(callback: js.Function1[/* a */ js.Any, Unit]): js.Function = js.native
-  def bindCallback(callback: js.Function1[/* a */ js.Any, Unit], context: js.Object): js.Function = js.native
+  def bindCallback(callback: js.Function1[/* a */ js.Any, Unit]): js.Function1[/* a */ js.Any, Unit] = js.native
+  def bindCallback(callback: js.Function1[/* a */ js.Any, Unit], context: js.Object): js.Function1[/* a */ js.Any, Unit] = js.native
   
   def callUserCallback(callback: js.UndefOr[scala.Nothing], varArgs: js.Any*): Unit = js.native
   def callUserCallback(callback: js.Function, varArgs: js.Any*): Unit = js.native
@@ -68,7 +68,7 @@ object utilMod extends js.Object {
   
   def requireKey(key: String, obj: StringDictionary[js.Any]): js.Any = js.native
   
-  def setTimeoutNonBlocking(fn: js.Function, time: Double): Double | js.Object = js.native
+  def setTimeoutNonBlocking(fn: js.Function0[Unit], time: Double): Double | js.Object = js.native
   
   def sha1(str: String): String = js.native
   

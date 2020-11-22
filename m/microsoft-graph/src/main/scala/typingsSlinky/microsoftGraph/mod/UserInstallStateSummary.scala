@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UserInstallStateSummary extends Entity {
   
   // The install state of the eBook.
-  var deviceStates: js.UndefOr[js.Array[DeviceInstallState]] = js.native
+  var deviceStates: js.UndefOr[NullableOption[js.Array[DeviceInstallState]]] = js.native
   
   // Failed Device Count.
   var failedDeviceCount: js.UndefOr[Double] = js.native
@@ -20,7 +20,7 @@ trait UserInstallStateSummary extends Entity {
   var notInstalledDeviceCount: js.UndefOr[Double] = js.native
   
   // User name.
-  var userName: js.UndefOr[String] = js.native
+  var userName: js.UndefOr[NullableOption[String]] = js.native
 }
 object UserInstallStateSummary {
   
@@ -49,10 +49,13 @@ object UserInstallStateSummary {
     def setDeviceStatesVarargs(value: DeviceInstallState*): Self = this.set("deviceStates", js.Array(value :_*))
     
     @scala.inline
-    def setDeviceStates(value: js.Array[DeviceInstallState]): Self = this.set("deviceStates", value.asInstanceOf[js.Any])
+    def setDeviceStates(value: NullableOption[js.Array[DeviceInstallState]]): Self = this.set("deviceStates", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceStates: Self = this.set("deviceStates", js.undefined)
+    
+    @scala.inline
+    def setDeviceStatesNull: Self = this.set("deviceStates", null)
     
     @scala.inline
     def setFailedDeviceCount(value: Double): Self = this.set("failedDeviceCount", value.asInstanceOf[js.Any])
@@ -73,9 +76,12 @@ object UserInstallStateSummary {
     def deleteNotInstalledDeviceCount: Self = this.set("notInstalledDeviceCount", js.undefined)
     
     @scala.inline
-    def setUserName(value: String): Self = this.set("userName", value.asInstanceOf[js.Any])
+    def setUserName(value: NullableOption[String]): Self = this.set("userName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserName: Self = this.set("userName", js.undefined)
+    
+    @scala.inline
+    def setUserNameNull: Self = this.set("userName", null)
   }
 }

@@ -11,12 +11,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EventSeries extends js.Object {
   
   /**
-    * Number of occurrences in this series up to the last heartbeat time
+    * count is the number of occurrences in this series up to the last heartbeat time.
     */
   var count: Double = js.native
   
   /**
-    * Time when last Event from the series was seen before last heartbeat.
+    * lastObservedTime is the time when last Event from the series was seen before last heartbeat.
     */
   var lastObservedTime: String = js.native
   

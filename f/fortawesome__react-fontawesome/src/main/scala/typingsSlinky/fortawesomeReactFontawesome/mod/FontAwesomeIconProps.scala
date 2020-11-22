@@ -24,10 +24,15 @@ import typingsSlinky.fortawesomeFontawesomeSvgCore.mod.RotateProp
 import typingsSlinky.fortawesomeFontawesomeSvgCore.mod.SizeProp
 import typingsSlinky.fortawesomeFontawesomeSvgCore.mod.Transform
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings._empty
+import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`additions removals`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`additions text`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`after-edge`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`before-edge`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`inline`
+import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`removals additions`
+import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`removals text`
+import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`text additions`
+import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`text removals`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`text-after-edge`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`text-before-edge`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`use-credentials`
@@ -205,7 +210,9 @@ trait FontAwesomeIconProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -1202,7 +1209,9 @@ object FontAwesomeIconProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

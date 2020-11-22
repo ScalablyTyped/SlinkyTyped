@@ -17,13 +17,13 @@ trait IDateFormatting extends IDateGridStrings {
     * Format the month, day and year according to specified function.
     * Intended use case is localization.
     */
-  def formatMonthDayYear(date: js.Date): String = js.native
+  def formatMonthDayYear(date: js.Date, strings: IDateGridStrings): String = js.native
   
   /**
     * Format the month and year according to specified function.
     * Intended use case is localization.
     */
-  def formatMonthYear(date: js.Date): String = js.native
+  def formatMonthYear(date: js.Date, strings: IDateGridStrings): String = js.native
   
   /**
     * Format the year according to specified function.
@@ -42,15 +42,15 @@ object IDateFormatting {
   def apply(
     days: js.Array[String],
     formatDay: js.Date => String,
-    formatMonthDayYear: js.Date => String,
-    formatMonthYear: js.Date => String,
+    formatMonthDayYear: (js.Date, IDateGridStrings) => String,
+    formatMonthYear: (js.Date, IDateGridStrings) => String,
     formatYear: js.Date => String,
     months: js.Array[String],
     parseDate: String => js.Date | Null,
     shortDays: js.Array[String],
     shortMonths: js.Array[String]
   ): IDateFormatting = {
-    val __obj = js.Dynamic.literal(days = days.asInstanceOf[js.Any], formatDay = js.Any.fromFunction1(formatDay), formatMonthDayYear = js.Any.fromFunction1(formatMonthDayYear), formatMonthYear = js.Any.fromFunction1(formatMonthYear), formatYear = js.Any.fromFunction1(formatYear), months = months.asInstanceOf[js.Any], parseDate = js.Any.fromFunction1(parseDate), shortDays = shortDays.asInstanceOf[js.Any], shortMonths = shortMonths.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(days = days.asInstanceOf[js.Any], formatDay = js.Any.fromFunction1(formatDay), formatMonthDayYear = js.Any.fromFunction2(formatMonthDayYear), formatMonthYear = js.Any.fromFunction2(formatMonthYear), formatYear = js.Any.fromFunction1(formatYear), months = months.asInstanceOf[js.Any], parseDate = js.Any.fromFunction1(parseDate), shortDays = shortDays.asInstanceOf[js.Any], shortMonths = shortMonths.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDateFormatting]
   }
   
@@ -73,10 +73,10 @@ object IDateFormatting {
     def setFormatDay(value: js.Date => String): Self = this.set("formatDay", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setFormatMonthDayYear(value: js.Date => String): Self = this.set("formatMonthDayYear", js.Any.fromFunction1(value))
+    def setFormatMonthDayYear(value: (js.Date, IDateGridStrings) => String): Self = this.set("formatMonthDayYear", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setFormatMonthYear(value: js.Date => String): Self = this.set("formatMonthYear", js.Any.fromFunction1(value))
+    def setFormatMonthYear(value: (js.Date, IDateGridStrings) => String): Self = this.set("formatMonthYear", js.Any.fromFunction2(value))
     
     @scala.inline
     def setFormatYear(value: js.Date => String): Self = this.set("formatYear", js.Any.fromFunction1(value))

@@ -1,6 +1,7 @@
 package typingsSlinky.reactHtmlParser.mod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.domhandler.mod.DomElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,10 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object processNodes extends js.Object {
   
-  def apply(
-    nodes: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DomElement */ _
-    ],
-    transform: Transform
-  ): js.Array[ReactElement] = js.native
+  def apply(nodes: js.Array[DomElement], transform: Transform): js.Array[ReactElement] = js.native
 }

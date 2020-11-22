@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`7`
+import typingsSlinky.octokitTypes.anon.`6`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MigrationsListReposForOrgEndpoint extends js.Object {
   
-  var mediaType: `7` = js.native
+  var mediaType: `6` = js.native
   
   var migration_id: Double = js.native
   
@@ -29,7 +29,7 @@ trait MigrationsListReposForOrgEndpoint extends js.Object {
 object MigrationsListReposForOrgEndpoint {
   
   @scala.inline
-  def apply(mediaType: `7`, migration_id: Double, org_ : String): MigrationsListReposForOrgEndpoint = {
+  def apply(mediaType: `6`, migration_id: Double, org_ : String): MigrationsListReposForOrgEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], migration_id = migration_id.asInstanceOf[js.Any])
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[MigrationsListReposForOrgEndpoint]
@@ -51,7 +51,7 @@ object MigrationsListReposForOrgEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `6`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMigration_id(value: Double): Self = this.set("migration_id", value.asInstanceOf[js.Any])

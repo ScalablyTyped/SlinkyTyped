@@ -13,7 +13,7 @@ trait GetTransitGatewayRouteTableAssociationsRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * One or more filters. The possible values are:    resource-id - The ID of the resource.    resource-type - The resource type (vpc | vpn).    transit-gateway-attachment-id - The ID of the attachment.  
+    * One or more filters. The possible values are:    resource-id - The ID of the resource.    resource-type - The resource type. Valid values are vpc | vpn | direct-connect-gateway | peering.    transit-gateway-attachment-id - The ID of the attachment.  
     */
   var Filters: js.UndefOr[FilterList] = js.native
   

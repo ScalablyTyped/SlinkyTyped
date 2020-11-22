@@ -138,31 +138,36 @@ object mod extends js.Object {
   }
   
   @js.native
-  /**
-    * JWTAccess service account credentials.
-    *
-    * Create a new access token by using the credential to create a new JWT token
-    * that's recognized as the access token.
-    *
-    * @param email the service account email address.
-    * @param key the private key that will be used to sign the token.
-    * @param keyId the ID of the private key used to sign the token.
-    */
-  class JWTAccess ()
+  class JWTAccess protected ()
     extends typingsSlinky.googleAuthLibrary.jwtaccessMod.JWTAccess {
-    def this(email: String) = this()
-    def this(email: js.UndefOr[scala.Nothing], key: String) = this()
-    def this(email: String, key: String) = this()
-    def this(email: Null, key: String) = this()
-    def this(email: js.UndefOr[scala.Nothing], key: js.UndefOr[scala.Nothing], keyId: String) = this()
-    def this(email: js.UndefOr[scala.Nothing], key: String, keyId: String) = this()
-    def this(email: js.UndefOr[scala.Nothing], key: Null, keyId: String) = this()
-    def this(email: String, key: js.UndefOr[scala.Nothing], keyId: String) = this()
-    def this(email: String, key: String, keyId: String) = this()
-    def this(email: String, key: Null, keyId: String) = this()
-    def this(email: Null, key: js.UndefOr[scala.Nothing], keyId: String) = this()
-    def this(email: Null, key: String, keyId: String) = this()
-    def this(email: Null, key: Null, keyId: String) = this()
+    /**
+      * JWTAccess service account credentials.
+      *
+      * Create a new access token by using the credential to create a new JWT token
+      * that's recognized as the access token.
+      *
+      * @param email the service account email address.
+      * @param key the private key that will be used to sign the token.
+      * @param keyId the ID of the private key used to sign the token.
+      */
+    def this(
+      email: js.UndefOr[String | Null],
+      key: js.UndefOr[String | Null],
+      keyId: js.UndefOr[String | Null],
+      eagerRefreshThresholdMillis: js.UndefOr[Double]
+    ) = this()
+  }
+  /* static members */
+  @js.native
+  object JWTAccess extends js.Object {
+    
+    /**
+      * Returns an expiration time for the JWT token.
+      *
+      * @param iat The issued at time for the JWT.
+      * @returns An expiration time for the JWT.
+      */
+    var getExpirationTime: js.Any = js.native
   }
   
   @js.native

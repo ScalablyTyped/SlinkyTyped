@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ImportCall extends CallExpression {
   
   @JSName("expression")
-  var expression_ImportCall: ImportExpression = js.native
+  val expression_ImportCall: ImportExpression = js.native
 }

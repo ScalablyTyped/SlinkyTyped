@@ -14,7 +14,7 @@ trait TextAlignProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.O
     */
   var textAlign: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextAlignProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextAlign */ _, 
       ThemeType
     ]
   ] = js.native
@@ -48,7 +48,7 @@ object TextAlignProps {
     @scala.inline
     def setTextAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextAlignProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextAlign */ _, 
           ThemeType
         ]
     ): Self = this.set("textAlign", value.asInstanceOf[js.Any])

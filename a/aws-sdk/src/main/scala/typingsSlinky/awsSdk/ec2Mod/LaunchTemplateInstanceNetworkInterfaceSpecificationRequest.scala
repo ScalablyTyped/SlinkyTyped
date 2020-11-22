@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LaunchTemplateInstanceNetworkInterfaceSpecificationRequest extends js.Object {
   
   /**
+    * Associates a Carrier IP address with eth0 for a new network interface. Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface. For more information about Carrier IP addresses, see Carrier IP addresses in the AWS Wavelength Developer Guide.
+    */
+  var AssociateCarrierIpAddress: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Associates a public IPv4 address with eth0 for a new network interface.
     */
   var AssociatePublicIpAddress: js.UndefOr[Boolean] = js.native
@@ -46,6 +51,11 @@ trait LaunchTemplateInstanceNetworkInterfaceSpecificationRequest extends js.Obje
     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying a number of IPv6 addresses.
     */
   var Ipv6Addresses: js.UndefOr[InstanceIpv6AddressListRequest] = js.native
+  
+  /**
+    * The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
+    */
+  var NetworkCardIndex: js.UndefOr[Integer] = js.native
   
   /**
     * The ID of the network interface.
@@ -94,6 +104,12 @@ object LaunchTemplateInstanceNetworkInterfaceSpecificationRequest {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAssociateCarrierIpAddress(value: Boolean): Self = this.set("AssociateCarrierIpAddress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAssociateCarrierIpAddress: Self = this.set("AssociateCarrierIpAddress", js.undefined)
     
     @scala.inline
     def setAssociatePublicIpAddress(value: Boolean): Self = this.set("AssociatePublicIpAddress", value.asInstanceOf[js.Any])
@@ -148,6 +164,12 @@ object LaunchTemplateInstanceNetworkInterfaceSpecificationRequest {
     
     @scala.inline
     def deleteIpv6Addresses: Self = this.set("Ipv6Addresses", js.undefined)
+    
+    @scala.inline
+    def setNetworkCardIndex(value: Integer): Self = this.set("NetworkCardIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkCardIndex: Self = this.set("NetworkCardIndex", js.undefined)
     
     @scala.inline
     def setNetworkInterfaceId(value: NetworkInterfaceId): Self = this.set("NetworkInterfaceId", value.asInstanceOf[js.Any])

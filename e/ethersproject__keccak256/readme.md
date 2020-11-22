@@ -1,7 +1,7 @@
 
 # Scala.js typings for ethersproject__keccak256
 
-Typings are for version 5.0.2
+Typings are for version 5.0.5
 
 ## Library description:
 The keccak256 hash function for ethers.

@@ -4,11 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Provides data for the ASPxClientDashboard.CustomizeDataSourceWizard event.
+  */
 @js.native
 trait ASPxClientCustomizeDataSourceWizardEventArgs extends ASPxClientEventArgs {
   
+  /**
+    * Specifies the wizard's type.
+    */
   var Type: String = js.native
   
+  /**
+    * Specifies the wizard.
+    */
   var Wizard: js.Any = js.native
 }
 object ASPxClientCustomizeDataSourceWizardEventArgs {

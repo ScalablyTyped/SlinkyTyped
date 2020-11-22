@@ -53,13 +53,17 @@ trait IShadowGenerator extends js.Object {
     */
   def getTransformMatrix(): Matrix = js.native
   
+  /** Gets or set the id of the shadow generator. It will be the one from the light if not defined */
+  var id: String = js.native
+  
   /**
     * Determine wheter the shadow generator is ready or not (mainly all effects and related post processes needs to be ready).
     * @param subMesh The submesh we want to render in the shadow map
     * @param useInstances Defines wether will draw in the map using instances
+    * @param isTransparent Indicates that isReady is called for a transparent subMesh
     * @returns true if ready otherwise, false
     */
-  def isReady(subMesh: SubMesh, useInstances: Boolean): Boolean = js.native
+  def isReady(subMesh: SubMesh, useInstances: Boolean, isTransparent: Boolean): Boolean = js.native
   
   /**
     * Prepare all the defines in a material relying on a shadow map at the specified light index.

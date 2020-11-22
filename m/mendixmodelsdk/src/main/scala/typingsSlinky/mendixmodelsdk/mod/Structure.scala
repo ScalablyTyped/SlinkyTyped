@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.mod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -7,8 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk", "Structure")
 @js.native
-abstract class Structure protected ()
-  extends typingsSlinky.mendixmodelsdk.internalMod.Structure {
+abstract class Structure[TModel /* <: IAbstractModel */, TContainer /* <: IContainer | Null */] protected ()
+  extends typingsSlinky.mendixmodelsdk.internalMod.Structure[TModel, TContainer] {
   def this(
     _model: typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel,
     structureTypeName: String,

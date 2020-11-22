@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FlowReduceLabel extends FlowNodeBase {
+trait FlowReduceLabel
+  extends FlowNodeBase
+     with FlowNode {
   
   var antecedent: FlowNode = js.native
   

@@ -65,6 +65,8 @@ trait ColumnDefinition
   
   var bottomCalcParams: js.UndefOr[ColumnCalcParams] = js.native
   
+  var clickMenu: js.UndefOr[js.Array[MenuObject[CellComponent] | MenuSeparator]] = js.native
+  
   /** If you don't want to show a particular column in the clipboard output you can set the clipboard property in its column definition object to false */
   var clipboard: js.UndefOr[Boolean] = js.native
   
@@ -164,6 +166,8 @@ trait ColumnDefinition
   
   /**  placeholder text for the header filter */
   var headerFilterPlaceholder: js.UndefOr[String] = js.native
+  
+  var headerHozAlign: js.UndefOr[ColumnDefinitionAlign] = js.native
   
   /**You can add a menu to any column by passing an array of menu items to the headerMenu option in that columns definition. */
   var headerMenu: js.UndefOr[js.Array[MenuObject[ColumnComponent] | MenuSeparator]] = js.native
@@ -343,24 +347,24 @@ object ColumnDefinition {
     
     @scala.inline
     def setAccessor(
-      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* AccessorParams */ js.Any, /* column */ js.UndefOr[ColumnComponent]) => js.Any
-    ): Self = this.set("accessor", js.Any.fromFunction5(value))
+      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* AccessorParams */ js.Any, /* column */ js.UndefOr[ColumnComponent], /* row */ js.UndefOr[RowComponent]) => js.Any
+    ): Self = this.set("accessor", js.Any.fromFunction6(value))
     
     @scala.inline
     def deleteAccessor: Self = this.set("accessor", js.undefined)
     
     @scala.inline
     def setAccessorClipboard(
-      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* AccessorParams */ js.Any, /* column */ js.UndefOr[ColumnComponent]) => js.Any
-    ): Self = this.set("accessorClipboard", js.Any.fromFunction5(value))
+      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* AccessorParams */ js.Any, /* column */ js.UndefOr[ColumnComponent], /* row */ js.UndefOr[RowComponent]) => js.Any
+    ): Self = this.set("accessorClipboard", js.Any.fromFunction6(value))
     
     @scala.inline
     def deleteAccessorClipboard: Self = this.set("accessorClipboard", js.undefined)
     
     @scala.inline
-    def setAccessorClipboardParamsFunction4(
-      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* column */ js.UndefOr[ColumnComponent]) => js.Any
-    ): Self = this.set("accessorClipboardParams", js.Any.fromFunction4(value))
+    def setAccessorClipboardParamsFunction5(
+      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* column */ js.UndefOr[ColumnComponent], /* row */ js.UndefOr[RowComponent]) => js.Any
+    ): Self = this.set("accessorClipboardParams", js.Any.fromFunction5(value))
     
     @scala.inline
     def setAccessorClipboardParams(value: CustomAccessorParams): Self = this.set("accessorClipboardParams", value.asInstanceOf[js.Any])
@@ -370,16 +374,16 @@ object ColumnDefinition {
     
     @scala.inline
     def setAccessorDownload(
-      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* AccessorParams */ js.Any, /* column */ js.UndefOr[ColumnComponent]) => js.Any
-    ): Self = this.set("accessorDownload", js.Any.fromFunction5(value))
+      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* AccessorParams */ js.Any, /* column */ js.UndefOr[ColumnComponent], /* row */ js.UndefOr[RowComponent]) => js.Any
+    ): Self = this.set("accessorDownload", js.Any.fromFunction6(value))
     
     @scala.inline
     def deleteAccessorDownload: Self = this.set("accessorDownload", js.undefined)
     
     @scala.inline
-    def setAccessorDownloadParamsFunction4(
-      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* column */ js.UndefOr[ColumnComponent]) => js.Any
-    ): Self = this.set("accessorDownloadParams", js.Any.fromFunction4(value))
+    def setAccessorDownloadParamsFunction5(
+      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* column */ js.UndefOr[ColumnComponent], /* row */ js.UndefOr[RowComponent]) => js.Any
+    ): Self = this.set("accessorDownloadParams", js.Any.fromFunction5(value))
     
     @scala.inline
     def setAccessorDownloadParams(value: CustomAccessorParams): Self = this.set("accessorDownloadParams", value.asInstanceOf[js.Any])
@@ -389,16 +393,16 @@ object ColumnDefinition {
     
     @scala.inline
     def setAccessorHtmlOutput(
-      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* AccessorParams */ js.Any, /* column */ js.UndefOr[ColumnComponent]) => js.Any
-    ): Self = this.set("accessorHtmlOutput", js.Any.fromFunction5(value))
+      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* AccessorParams */ js.Any, /* column */ js.UndefOr[ColumnComponent], /* row */ js.UndefOr[RowComponent]) => js.Any
+    ): Self = this.set("accessorHtmlOutput", js.Any.fromFunction6(value))
     
     @scala.inline
     def deleteAccessorHtmlOutput: Self = this.set("accessorHtmlOutput", js.undefined)
     
     @scala.inline
-    def setAccessorHtmlOutputParamsFunction4(
-      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* column */ js.UndefOr[ColumnComponent]) => js.Any
-    ): Self = this.set("accessorHtmlOutputParams", js.Any.fromFunction4(value))
+    def setAccessorHtmlOutputParamsFunction5(
+      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* column */ js.UndefOr[ColumnComponent], /* row */ js.UndefOr[RowComponent]) => js.Any
+    ): Self = this.set("accessorHtmlOutputParams", js.Any.fromFunction5(value))
     
     @scala.inline
     def setAccessorHtmlOutputParams(value: CustomAccessorParams): Self = this.set("accessorHtmlOutputParams", value.asInstanceOf[js.Any])
@@ -407,9 +411,9 @@ object ColumnDefinition {
     def deleteAccessorHtmlOutputParams: Self = this.set("accessorHtmlOutputParams", js.undefined)
     
     @scala.inline
-    def setAccessorParamsFunction4(
-      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* column */ js.UndefOr[ColumnComponent]) => js.Any
-    ): Self = this.set("accessorParams", js.Any.fromFunction4(value))
+    def setAccessorParamsFunction5(
+      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* column */ js.UndefOr[ColumnComponent], /* row */ js.UndefOr[RowComponent]) => js.Any
+    ): Self = this.set("accessorParams", js.Any.fromFunction5(value))
     
     @scala.inline
     def setAccessorParams(value: CustomAccessorParams): Self = this.set("accessorParams", value.asInstanceOf[js.Any])
@@ -419,16 +423,16 @@ object ColumnDefinition {
     
     @scala.inline
     def setAccessorPrint(
-      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* AccessorParams */ js.Any, /* column */ js.UndefOr[ColumnComponent]) => js.Any
-    ): Self = this.set("accessorPrint", js.Any.fromFunction5(value))
+      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* AccessorParams */ js.Any, /* column */ js.UndefOr[ColumnComponent], /* row */ js.UndefOr[RowComponent]) => js.Any
+    ): Self = this.set("accessorPrint", js.Any.fromFunction6(value))
     
     @scala.inline
     def deleteAccessorPrint: Self = this.set("accessorPrint", js.undefined)
     
     @scala.inline
-    def setAccessorPrintParamsFunction4(
-      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* column */ js.UndefOr[ColumnComponent]) => js.Any
-    ): Self = this.set("accessorPrintParams", js.Any.fromFunction4(value))
+    def setAccessorPrintParamsFunction5(
+      value: (/* value */ js.Any, /* data */ js.Any, /* type */ data | download | clipboard, /* column */ js.UndefOr[ColumnComponent], /* row */ js.UndefOr[RowComponent]) => js.Any
+    ): Self = this.set("accessorPrintParams", js.Any.fromFunction5(value))
     
     @scala.inline
     def setAccessorPrintParams(value: CustomAccessorParams): Self = this.set("accessorPrintParams", value.asInstanceOf[js.Any])
@@ -472,6 +476,15 @@ object ColumnDefinition {
     
     @scala.inline
     def deleteBottomCalcParams: Self = this.set("bottomCalcParams", js.undefined)
+    
+    @scala.inline
+    def setClickMenuVarargs(value: (MenuObject[CellComponent] | MenuSeparator)*): Self = this.set("clickMenu", js.Array(value :_*))
+    
+    @scala.inline
+    def setClickMenu(value: js.Array[MenuObject[CellComponent] | MenuSeparator]): Self = this.set("clickMenu", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClickMenu: Self = this.set("clickMenu", js.undefined)
     
     @scala.inline
     def setClipboard(value: Boolean): Self = this.set("clipboard", value.asInstanceOf[js.Any])
@@ -725,6 +738,12 @@ object ColumnDefinition {
     
     @scala.inline
     def deleteHeaderFilterPlaceholder: Self = this.set("headerFilterPlaceholder", js.undefined)
+    
+    @scala.inline
+    def setHeaderHozAlign(value: ColumnDefinitionAlign): Self = this.set("headerHozAlign", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderHozAlign: Self = this.set("headerHozAlign", js.undefined)
     
     @scala.inline
     def setHeaderMenuVarargs(value: (MenuObject[ColumnComponent] | MenuSeparator)*): Self = this.set("headerMenu", js.Array(value :_*))

@@ -1,7 +1,7 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
 import typingsSlinky.octokitTypes.anon.Avatarurl
-import typingsSlinky.octokitTypes.anon.Closedissues
+import typingsSlinky.octokitTypes.anon.Closedat
 import typingsSlinky.octokitTypes.anon.Color
 import typingsSlinky.octokitTypes.anon.Diffurl
 import scala.scalajs.js
@@ -41,7 +41,7 @@ trait IssuesCreateResponseData extends js.Object {
   
   var locked: Boolean = js.native
   
-  var milestone: Closedissues = js.native
+  var milestone: Closedat = js.native
   
   var node_id: String = js.native
   
@@ -80,7 +80,7 @@ object IssuesCreateResponseData {
     labels: js.Array[Color],
     labels_url: String,
     locked: Boolean,
-    milestone: Closedissues,
+    milestone: Closedat,
     node_id: String,
     number: Double,
     pull_request: Diffurl,
@@ -162,7 +162,7 @@ object IssuesCreateResponseData {
     def setLocked(value: Boolean): Self = this.set("locked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMilestone(value: Closedissues): Self = this.set("milestone", value.asInstanceOf[js.Any])
+    def setMilestone(value: Closedat): Self = this.set("milestone", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNode_id(value: String): Self = this.set("node_id", value.asInstanceOf[js.Any])

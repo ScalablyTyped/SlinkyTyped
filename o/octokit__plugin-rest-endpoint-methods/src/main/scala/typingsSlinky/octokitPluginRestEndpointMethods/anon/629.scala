@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.AppsGetRepoInstallationEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.AppsGetRepoInstallationResponseData
+import typingsSlinky.octokitTypes.endpointsMod.AppsGetBySlugEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.AppsGetBySlugResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `629` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[AppsGetRepoInstallationEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[AppsGetBySlugEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[AppsGetRepoInstallationResponseData] = js.native
+  var response: OctokitResponse[AppsGetBySlugResponseData] = js.native
 }
 object `629` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[AppsGetRepoInstallationEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[AppsGetRepoInstallationResponseData]
+    parameters: RequestParameters with (Omit[AppsGetBySlugEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[AppsGetBySlugResponseData]
   ): `629` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`629`]
@@ -46,11 +46,9 @@ object `629` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[AppsGetRepoInstallationEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[AppsGetBySlugEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[AppsGetRepoInstallationResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[AppsGetBySlugResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -18,7 +18,7 @@ trait StepAdjustment extends js.Object {
   var MetricIntervalUpperBound: js.UndefOr[MetricScale] = js.native
   
   /**
-    * The amount by which to scale, based on the specified adjustment type. A positive value adds to the current capacity while a negative number removes from the current capacity. 
+    * The amount by which to scale, based on the specified adjustment type. A positive value adds to the current capacity while a negative number removes from the current capacity. For exact capacity, you must specify a positive value.
     */
   var ScalingAdjustment: typingsSlinky.awsSdk.applicationautoscalingMod.ScalingAdjustment = js.native
 }

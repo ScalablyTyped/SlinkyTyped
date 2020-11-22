@@ -33,7 +33,7 @@ trait GetDocumentTextDetectionResponse extends js.Object {
   var NextToken: js.UndefOr[PaginationToken] = js.native
   
   /**
-    * The current status of an asynchronous text-detection operation for the document. 
+    * Returns if the detection job could not be completed. Contains explanation for what error occured. 
     */
   var StatusMessage: js.UndefOr[typingsSlinky.awsSdk.textractMod.StatusMessage] = js.native
   

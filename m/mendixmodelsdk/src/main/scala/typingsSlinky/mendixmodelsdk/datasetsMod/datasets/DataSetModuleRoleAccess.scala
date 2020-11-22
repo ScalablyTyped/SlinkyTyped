@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.datasetsMod.datasets
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.datasetsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -8,26 +9,24 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.securityMod.security.IModuleRole
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/datasets", "datasets.DataSetModuleRoleAccess")
 @js.native
-class DataSetModuleRoleAccess protected () extends Element {
+class DataSetModuleRoleAccess protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsDataSetAccess: DataSetAccess = js.native
-  
-  @JSName("model")
-  var model_FDataSetModuleRoleAccess: IModel = js.native
   
   def moduleRole: IModuleRole | Null = js.native
   

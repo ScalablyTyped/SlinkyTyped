@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/navigation relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/navigation relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "navigation.NavigationDocument")
 @js.native

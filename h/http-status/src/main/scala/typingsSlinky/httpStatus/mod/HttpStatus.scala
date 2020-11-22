@@ -1,12 +1,12 @@
 package typingsSlinky.httpStatus.mod
 
-import typingsSlinky.httpStatus.anon.Cloudflare
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HttpStatus extends js.Object {
+trait HttpStatus extends /* key */ StringDictionary[String | Double | HttpStatusClasses | HttpStatusExtra] {
   
   val `100`: String = js.native
   
@@ -610,7 +610,7 @@ trait HttpStatus extends js.Object {
   
   var classes: HttpStatusClasses = js.native
   
-  var extra: Cloudflare = js.native
+  var extra: HttpStatusExtra = js.native
 }
 object HttpStatus {
   
@@ -2031,6 +2031,6 @@ object HttpStatus {
     def setClasses(value: HttpStatusClasses): Self = this.set("classes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExtra(value: Cloudflare): Self = this.set("extra", value.asInstanceOf[js.Any])
+    def setExtra(value: HttpStatusExtra): Self = this.set("extra", value.asInstanceOf[js.Any])
   }
 }

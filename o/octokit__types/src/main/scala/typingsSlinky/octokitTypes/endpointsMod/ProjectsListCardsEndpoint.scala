@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`8`
+import typingsSlinky.octokitTypes.anon.`7`
 import typingsSlinky.octokitTypes.octokitTypesStrings.all
 import typingsSlinky.octokitTypes.octokitTypesStrings.archived
 import typingsSlinky.octokitTypes.octokitTypesStrings.not_archived
@@ -19,7 +19,7 @@ trait ProjectsListCardsEndpoint extends js.Object {
   
   var column_id: Double = js.native
   
-  var mediaType: `8` = js.native
+  var mediaType: `7` = js.native
   
   /**
     * Page number of the results to fetch.
@@ -34,7 +34,7 @@ trait ProjectsListCardsEndpoint extends js.Object {
 object ProjectsListCardsEndpoint {
   
   @scala.inline
-  def apply(column_id: Double, mediaType: `8`): ProjectsListCardsEndpoint = {
+  def apply(column_id: Double, mediaType: `7`): ProjectsListCardsEndpoint = {
     val __obj = js.Dynamic.literal(column_id = column_id.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsListCardsEndpoint]
   }
@@ -58,7 +58,7 @@ object ProjectsListCardsEndpoint {
     def setColumn_id(value: Double): Self = this.set("column_id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setArchived_state(value: all | archived | not_archived): Self = this.set("archived_state", value.asInstanceOf[js.Any])

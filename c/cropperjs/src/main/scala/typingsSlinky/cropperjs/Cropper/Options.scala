@@ -24,17 +24,17 @@ trait Options extends js.Object {
   
   var checkOrientation: js.UndefOr[Boolean] = js.native
   
-  var crop: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var crop: js.UndefOr[js.Function1[/* event */ CropEvent, Unit]] = js.native
   
   var cropBoxMovable: js.UndefOr[Boolean] = js.native
   
   var cropBoxResizable: js.UndefOr[Boolean] = js.native
   
-  var cropend: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var cropend: js.UndefOr[js.Function1[/* event */ CropEndEvent, Unit]] = js.native
   
-  var cropmove: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var cropmove: js.UndefOr[js.Function1[/* event */ CropMoveEvent, Unit]] = js.native
   
-  var cropstart: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var cropstart: js.UndefOr[js.Function1[/* event */ CropStartEvent, Unit]] = js.native
   
   var data: js.UndefOr[Data] = js.native
   
@@ -64,7 +64,7 @@ trait Options extends js.Object {
   
   var preview: js.UndefOr[Element | js.Array[Element] | NodeList | String] = js.native
   
-  var ready: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var ready: js.UndefOr[js.Function1[CustomEvent, Unit]] = js.native
   
   var responsive: js.UndefOr[Boolean] = js.native
   
@@ -80,7 +80,7 @@ trait Options extends js.Object {
   
   var wheelZoomRatio: js.UndefOr[Double] = js.native
   
-  var zoom: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
+  var zoom: js.UndefOr[js.Function1[/* event */ ZoomEvent, Unit]] = js.native
   
   var zoomOnTouch: js.UndefOr[Boolean] = js.native
   
@@ -154,7 +154,7 @@ object Options {
     def deleteCheckOrientation: Self = this.set("checkOrientation", js.undefined)
     
     @scala.inline
-    def setCrop(value: /* event */ CustomEvent => Unit): Self = this.set("crop", js.Any.fromFunction1(value))
+    def setCrop(value: /* event */ CropEvent => Unit): Self = this.set("crop", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCrop: Self = this.set("crop", js.undefined)
@@ -172,19 +172,19 @@ object Options {
     def deleteCropBoxResizable: Self = this.set("cropBoxResizable", js.undefined)
     
     @scala.inline
-    def setCropend(value: /* event */ CustomEvent => Unit): Self = this.set("cropend", js.Any.fromFunction1(value))
+    def setCropend(value: /* event */ CropEndEvent => Unit): Self = this.set("cropend", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCropend: Self = this.set("cropend", js.undefined)
     
     @scala.inline
-    def setCropmove(value: /* event */ CustomEvent => Unit): Self = this.set("cropmove", js.Any.fromFunction1(value))
+    def setCropmove(value: /* event */ CropMoveEvent => Unit): Self = this.set("cropmove", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCropmove: Self = this.set("cropmove", js.undefined)
     
     @scala.inline
-    def setCropstart(value: /* event */ CustomEvent => Unit): Self = this.set("cropstart", js.Any.fromFunction1(value))
+    def setCropstart(value: /* event */ CropStartEvent => Unit): Self = this.set("cropstart", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCropstart: Self = this.set("cropstart", js.undefined)
@@ -283,7 +283,7 @@ object Options {
     def deletePreview: Self = this.set("preview", js.undefined)
     
     @scala.inline
-    def setReady(value: /* event */ CustomEvent => Unit): Self = this.set("ready", js.Any.fromFunction1(value))
+    def setReady(value: CustomEvent => Unit): Self = this.set("ready", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteReady: Self = this.set("ready", js.undefined)
@@ -331,7 +331,7 @@ object Options {
     def deleteWheelZoomRatio: Self = this.set("wheelZoomRatio", js.undefined)
     
     @scala.inline
-    def setZoom(value: /* event */ CustomEvent => Unit): Self = this.set("zoom", js.Any.fromFunction1(value))
+    def setZoom(value: /* event */ ZoomEvent => Unit): Self = this.set("zoom", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteZoom: Self = this.set("zoom", js.undefined)

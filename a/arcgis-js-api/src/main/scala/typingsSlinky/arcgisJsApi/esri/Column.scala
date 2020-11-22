@@ -11,8 +11,6 @@ trait Column extends js.Object {
     * Returns any associated menu items on the column.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable-Grid-Column.html#getMenuItems)
-    *
-    *
     */
   def getMenuItems(): ButtonMenuItemConfig = js.native
   
@@ -27,8 +25,6 @@ trait Column extends js.Object {
     * Indicates whether the column is resizable.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable-Grid-Column.html#resizable)
-    *
-    * @default true
     */
   val resizable: Boolean = js.native
 }

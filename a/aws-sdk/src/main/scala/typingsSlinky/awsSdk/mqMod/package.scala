@@ -55,11 +55,17 @@ package object mqMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SINGLE_INSTANCE
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE_STANDBY_MULTI_AZ
+    - typingsSlinky.awsSdk.awsSdkStrings.CLUSTER_MULTI_AZ
     - java.lang.String
   */
   type DeploymentMode = typingsSlinky.awsSdk.mqMod._DeploymentMode | java.lang.String
   
-  type EngineType = typingsSlinky.awsSdk.awsSdkStrings.ACTIVEMQ | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVEMQ
+    - typingsSlinky.awsSdk.awsSdkStrings.RABBITMQ
+    - java.lang.String
+  */
+  type EngineType = typingsSlinky.awsSdk.mqMod._EngineType | java.lang.String
   
   type MaxResults = scala.Double
   

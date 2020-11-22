@@ -8,10 +8,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Options extends js.Object {
   
   /**
-  		Format the number as [bits](https://en.wikipedia.org/wiki/Bit) instead of [bytes](https://en.wikipedia.org/wiki/Byte). This can be useful when, for example, referring to [bit rate](https://en.wikipedia.org/wiki/Bit_rate).
-  		
+  		Format the number using the [Binary Prefix](https://en.wikipedia.org/wiki/Binary_prefix) instead of the [SI Prefix](https://en.wikipedia.org/wiki/SI_Prefix). This can be useful for presenting memory amounts. However, this should not be used for presenting file sizes.
   		@default false
-  		
+  		```
+  		import prettyBytes = require('pretty-bytes');
+  		prettyBytes(1000, {binary: true});
+  		//=> '1000 bit'
+  		prettyBytes(1024, {binary: true});
+  		//=> '1 kiB'
+  		```
+  		*/
+  val binary: js.UndefOr[Boolean] = js.native
+  
+  /**
+  		Format the number as [bits](https://en.wikipedia.org/wiki/Bit) instead of [bytes](https://en.wikipedia.org/wiki/Byte). This can be useful when, for example, referring to [bit rate](https://en.wikipedia.org/wiki/Bit_rate).
+  		@default false
   		```
   		import prettyBytes = require('pretty-bytes');
   		prettyBytes(1337, {bits: true});
@@ -57,6 +68,12 @@ object Options {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setBinary(value: Boolean): Self = this.set("binary", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBinary: Self = this.set("binary", js.undefined)
     
     @scala.inline
     def setBits(value: Boolean): Self = this.set("bits", value.asInstanceOf[js.Any])

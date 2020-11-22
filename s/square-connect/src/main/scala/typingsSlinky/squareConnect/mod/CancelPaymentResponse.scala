@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class CancelPaymentResponse () extends js.Object {
   
   /**
-    * Information on errors encountered during the request.
+    * Information about errors encountered during the request.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   

@@ -7,16 +7,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait NonItemAdjustment extends Adjustment {
   
+  /**
+    * In unit price (1.0 for USD, etc)
+    */
   var amount: Double = js.native
   
+  /**
+    * Currency code
+    */
   var currency: js.UndefOr[String] = js.native
   
+  /**
+    * Unique identifier. Use this value to modify an adjustment in-place.
+    */
   var id: js.UndefOr[String] = js.native
   
+  /**
+    * Number of units
+    */
   var quantity: Double = js.native
   
+  /**
+    * Taxation code
+    */
   var taxCode: String = js.native
   
+  /**
+    * Whether this adjustment is tax exempt
+    */
   var taxExempt: Boolean = js.native
 }
 object NonItemAdjustment {

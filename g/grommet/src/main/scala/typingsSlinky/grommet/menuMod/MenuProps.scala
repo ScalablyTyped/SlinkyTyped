@@ -2,7 +2,7 @@ package typingsSlinky.grommet.menuMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.grommet.anon.CloseMenu
-import typingsSlinky.grommet.anon.Opacity
+import typingsSlinky.grommet.anon.ColorOpacity
 import typingsSlinky.grommet.anon.Right
 import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.large
@@ -29,7 +29,7 @@ trait MenuProps extends js.Object {
   
   var dropAlign: js.UndefOr[Right] = js.native
   
-  var dropBackground: js.UndefOr[String | Opacity] = js.native
+  var dropBackground: js.UndefOr[String | ColorOpacity] = js.native
   
   var dropProps: js.UndefOr[DropProps] = js.native
   
@@ -107,7 +107,7 @@ object MenuProps {
     def deleteDropAlign: Self = this.set("dropAlign", js.undefined)
     
     @scala.inline
-    def setDropBackground(value: String | Opacity): Self = this.set("dropBackground", value.asInstanceOf[js.Any])
+    def setDropBackground(value: String | ColorOpacity): Self = this.set("dropBackground", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDropBackground: Self = this.set("dropBackground", js.undefined)

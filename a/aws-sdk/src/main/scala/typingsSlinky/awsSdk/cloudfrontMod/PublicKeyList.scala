@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PublicKeyList extends js.Object {
   
   /**
-    * An array of information about a public key you add to CloudFront to use with features like field-level encryption.
+    * A list of public keys.
     */
   var Items: js.UndefOr[PublicKeySummaryList] = js.native
   
   /**
-    * The maximum number of public keys you want in the response body. 
+    * The maximum number of public keys you want in the response.
     */
   var MaxItems: integer = js.native
   
@@ -23,7 +23,7 @@ trait PublicKeyList extends js.Object {
   var NextMarker: js.UndefOr[String] = js.native
   
   /**
-    * The number of public keys you added to CloudFront to use with features like field-level encryption.
+    * The number of public keys in the list.
     */
   var Quantity: integer = js.native
 }

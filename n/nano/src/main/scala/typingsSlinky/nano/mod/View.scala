@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait View[D] extends js.Object {
   
-  var map: js.UndefOr[DocumentInfer[D]] = js.native
+  var map: js.UndefOr[String | DocumentInfer[D]] = js.native
   
   var reduce: js.UndefOr[String | DocumentInfer[D]] = js.native
 }
@@ -35,7 +35,10 @@ object View {
     }
     
     @scala.inline
-    def setMap(value: /* doc */ D with Document => Unit): Self = this.set("map", js.Any.fromFunction1(value))
+    def setMapFunction1(value: /* doc */ D with Document => Unit): Self = this.set("map", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setMap(value: String | DocumentInfer[D]): Self = this.set("map", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMap: Self = this.set("map", js.undefined)

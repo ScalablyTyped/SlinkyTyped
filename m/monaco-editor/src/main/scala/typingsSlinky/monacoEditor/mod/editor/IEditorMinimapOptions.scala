@@ -1,8 +1,11 @@
 package typingsSlinky.monacoEditor.mod.editor
 
 import typingsSlinky.monacoEditor.monacoEditorStrings.always
+import typingsSlinky.monacoEditor.monacoEditorStrings.fill
+import typingsSlinky.monacoEditor.monacoEditorStrings.fit
 import typingsSlinky.monacoEditor.monacoEditorStrings.left
 import typingsSlinky.monacoEditor.monacoEditorStrings.mouseover
+import typingsSlinky.monacoEditor.monacoEditorStrings.proportional
 import typingsSlinky.monacoEditor.monacoEditorStrings.right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,6 +48,12 @@ trait IEditorMinimapOptions extends js.Object {
     * Defaults to 'right'.
     */
   var side: js.UndefOr[right | left] = js.native
+  
+  /**
+    * Control the minimap rendering mode.
+    * Defaults to 'actual'.
+    */
+  var size: js.UndefOr[proportional | fill | fit] = js.native
 }
 object IEditorMinimapOptions {
   
@@ -104,5 +113,11 @@ object IEditorMinimapOptions {
     
     @scala.inline
     def deleteSide: Self = this.set("side", js.undefined)
+    
+    @scala.inline
+    def setSize(value: proportional | fill | fit): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
   }
 }

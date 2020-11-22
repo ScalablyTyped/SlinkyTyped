@@ -2,7 +2,7 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.Property.Color
+import typingsSlinky.csstype.mod.ColorProperty
 import typingsSlinky.mjmlReact.mod.HrefProps
 import typingsSlinky.mjmlReact.mod.MjmlNavbarLinkProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
@@ -22,7 +22,7 @@ object MjmlNavbarLink {
        with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlNavbarLink] {
     
     @scala.inline
-    def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: ColorProperty): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])

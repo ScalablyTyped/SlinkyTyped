@@ -24,6 +24,13 @@ package object greengrassMod {
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.greengrassMod.ClientApiVersions
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.InSync_
+    - typingsSlinky.awsSdk.awsSdkStrings.OutOfSync
+    - java.lang.String
+  */
+  type ConfigurationSyncStatus = typingsSlinky.awsSdk.greengrassMod._ConfigurationSyncStatus | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NewDeployment
     - typingsSlinky.awsSdk.awsSdkStrings.Redeployment
     - typingsSlinky.awsSdk.awsSdkStrings.ResetDeployment
@@ -91,6 +98,13 @@ package object greengrassMod {
   type SoftwareToUpdate = typingsSlinky.awsSdk.greengrassMod._SoftwareToUpdate | java.lang.String
   
   type Tags = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.greengrassMod.string]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.On_
+    - typingsSlinky.awsSdk.awsSdkStrings.Off_
+    - java.lang.String
+  */
+  type Telemetry = typingsSlinky.awsSdk.greengrassMod._Telemetry | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NONE

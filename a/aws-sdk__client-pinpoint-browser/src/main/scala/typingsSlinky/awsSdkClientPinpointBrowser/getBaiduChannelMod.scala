@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientPinpointBrowser
 
-import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getBaiduChannelMod extends js.Object {
   
-  val GetBaiduChannel: OperationModel = js.native
+  val GetBaiduChannel: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _Operation_ */ js.Any = js.native
 }

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("BABYLON.HighlightsPostProcess")
 @js.native
 class HighlightsPostProcess protected ()
-  extends typingsSlinky.babylonjs.BABYLON.PostProcess {
+  extends typingsSlinky.babylonjs.BABYLON.HighlightsPostProcess {
   /**
     * Extracts highlights from the image
     * @see https://doc.babylonjs.com/how_to/how_to_use_postprocesses

@@ -1,8 +1,10 @@
 package typingsSlinky.mendixmodelsdk.mod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.navigationMod.navigation.NavigationProfile
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object menus extends js.Object {
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/menu relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/menu relevant section in reference guide}
     */
   @js.native
   class MenuDocument protected ()
@@ -41,7 +43,7 @@ object menus extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/menu relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/menu relevant section in reference guide}
     */
   @js.native
   class MenuItem protected ()
@@ -51,8 +53,8 @@ object menus extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -86,8 +88,8 @@ object menus extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -128,8 +130,8 @@ object menus extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */

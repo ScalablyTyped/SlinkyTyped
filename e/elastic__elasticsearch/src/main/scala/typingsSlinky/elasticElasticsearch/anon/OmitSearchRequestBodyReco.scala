@@ -60,8 +60,6 @@ trait OmitSearchRequestBodyReco extends js.Object {
   
   var human: js.UndefOr[Boolean] = js.native
   
-  var ignore: js.UndefOr[Double | js.Array[Double]] = js.native
-  
   var ignore_throttled: js.UndefOr[Boolean] = js.native
   
   var ignore_unavailable: js.UndefOr[Boolean] = js.native
@@ -289,15 +287,6 @@ object OmitSearchRequestBodyReco {
     
     @scala.inline
     def deleteHuman: Self = this.set("human", js.undefined)
-    
-    @scala.inline
-    def setIgnoreVarargs(value: Double*): Self = this.set("ignore", js.Array(value :_*))
-    
-    @scala.inline
-    def setIgnore(value: Double | js.Array[Double]): Self = this.set("ignore", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteIgnore: Self = this.set("ignore", js.undefined)
     
     @scala.inline
     def setIgnore_throttled(value: Boolean): Self = this.set("ignore_throttled", value.asInstanceOf[js.Any])

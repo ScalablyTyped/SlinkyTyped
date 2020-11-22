@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetJobTaggingResult extends js.Object {
   
   /**
-    * The set of tags associated with the Amazon S3 Batch Operations job.
+    * The set of tags associated with the S3 Batch Operations job.
     */
   var Tags: js.UndefOr[S3TagSet] = js.native
 }

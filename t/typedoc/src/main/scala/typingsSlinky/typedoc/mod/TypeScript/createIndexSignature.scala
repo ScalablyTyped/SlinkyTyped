@@ -31,6 +31,7 @@ object createIndexSignature extends js.Object {
     parameters: js.Array[ParameterDeclaration],
     `type`: TypeNode
   ): IndexSignatureDeclaration = js.native
+  /** @deprecated Use `factory.createIndexSignature` or the factory supplied by your transformation context instead. */
   def apply(
     decorators: js.Array[Decorator],
     modifiers: js.Array[Modifier],

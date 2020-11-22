@@ -1,6 +1,6 @@
 package typingsSlinky.pollyjsAdapter.anon
 
-import org.scalajs.dom.experimental.Headers
+import typingsSlinky.pollyjsCore.mod.Headers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

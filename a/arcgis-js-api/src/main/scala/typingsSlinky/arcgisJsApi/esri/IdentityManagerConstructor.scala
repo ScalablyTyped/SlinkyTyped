@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IdentityManagerConstructor
   extends /**
-  * This object provides the framework and helper methods used in managing user credentials for the following resources:
+  * This object provides the framework and helper methods used in managing user credentials for the following resources:.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-IdentityManager.html)
   */

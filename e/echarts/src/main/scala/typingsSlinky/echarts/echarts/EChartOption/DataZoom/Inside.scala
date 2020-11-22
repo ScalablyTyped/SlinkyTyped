@@ -25,7 +25,7 @@ trait Inside extends js.Object {
   
   var angleAxisIndex: js.UndefOr[Double | js.Array[Double]] = js.native
   
-  var disable: js.UndefOr[Boolean] = js.native
+  var disabled: js.UndefOr[Boolean] = js.native
   
   var end: js.UndefOr[Double] = js.native
   
@@ -106,10 +106,10 @@ object Inside {
     def deleteAngleAxisIndex: Self = this.set("angleAxisIndex", js.undefined)
     
     @scala.inline
-    def setDisable(value: Boolean): Self = this.set("disable", value.asInstanceOf[js.Any])
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDisable: Self = this.set("disable", js.undefined)
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
     
     @scala.inline
     def setEnd(value: Double): Self = this.set("end", value.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.costexplorerMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -15,6 +15,34 @@ trait CostExplorer extends Service {
   var config_CostExplorer: ConfigBase with ClientConfiguration = js.native
   
   /**
+    * Creates a new cost anomaly detection monitor with the requested type and monitor specification. 
+    */
+  def createAnomalyMonitor(): Request[CreateAnomalyMonitorResponse, AWSError] = js.native
+  def createAnomalyMonitor(callback: js.Function2[/* err */ AWSError, /* data */ CreateAnomalyMonitorResponse, Unit]): Request[CreateAnomalyMonitorResponse, AWSError] = js.native
+  /**
+    * Creates a new cost anomaly detection monitor with the requested type and monitor specification. 
+    */
+  def createAnomalyMonitor(params: CreateAnomalyMonitorRequest): Request[CreateAnomalyMonitorResponse, AWSError] = js.native
+  def createAnomalyMonitor(
+    params: CreateAnomalyMonitorRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateAnomalyMonitorResponse, Unit]
+  ): Request[CreateAnomalyMonitorResponse, AWSError] = js.native
+  
+  /**
+    * Adds a subscription to a cost anomaly detection monitor. You can use each subscription to define subscribers with email or SNS notifications. Email subscribers can set a dollar threshold and a time frequency for receiving notifications. 
+    */
+  def createAnomalySubscription(): Request[CreateAnomalySubscriptionResponse, AWSError] = js.native
+  def createAnomalySubscription(callback: js.Function2[/* err */ AWSError, /* data */ CreateAnomalySubscriptionResponse, Unit]): Request[CreateAnomalySubscriptionResponse, AWSError] = js.native
+  /**
+    * Adds a subscription to a cost anomaly detection monitor. You can use each subscription to define subscribers with email or SNS notifications. Email subscribers can set a dollar threshold and a time frequency for receiving notifications. 
+    */
+  def createAnomalySubscription(params: CreateAnomalySubscriptionRequest): Request[CreateAnomalySubscriptionResponse, AWSError] = js.native
+  def createAnomalySubscription(
+    params: CreateAnomalySubscriptionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateAnomalySubscriptionResponse, Unit]
+  ): Request[CreateAnomalySubscriptionResponse, AWSError] = js.native
+  
+  /**
     * Creates a new Cost Category with the requested name and rules.
     */
   def createCostCategoryDefinition(): Request[CreateCostCategoryDefinitionResponse, AWSError] = js.native
@@ -27,6 +55,34 @@ trait CostExplorer extends Service {
     params: CreateCostCategoryDefinitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateCostCategoryDefinitionResponse, Unit]
   ): Request[CreateCostCategoryDefinitionResponse, AWSError] = js.native
+  
+  /**
+    * Deletes a cost anomaly monitor. 
+    */
+  def deleteAnomalyMonitor(): Request[DeleteAnomalyMonitorResponse, AWSError] = js.native
+  def deleteAnomalyMonitor(callback: js.Function2[/* err */ AWSError, /* data */ DeleteAnomalyMonitorResponse, Unit]): Request[DeleteAnomalyMonitorResponse, AWSError] = js.native
+  /**
+    * Deletes a cost anomaly monitor. 
+    */
+  def deleteAnomalyMonitor(params: DeleteAnomalyMonitorRequest): Request[DeleteAnomalyMonitorResponse, AWSError] = js.native
+  def deleteAnomalyMonitor(
+    params: DeleteAnomalyMonitorRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteAnomalyMonitorResponse, Unit]
+  ): Request[DeleteAnomalyMonitorResponse, AWSError] = js.native
+  
+  /**
+    * Deletes a cost anomaly subscription. 
+    */
+  def deleteAnomalySubscription(): Request[DeleteAnomalySubscriptionResponse, AWSError] = js.native
+  def deleteAnomalySubscription(callback: js.Function2[/* err */ AWSError, /* data */ DeleteAnomalySubscriptionResponse, Unit]): Request[DeleteAnomalySubscriptionResponse, AWSError] = js.native
+  /**
+    * Deletes a cost anomaly subscription. 
+    */
+  def deleteAnomalySubscription(params: DeleteAnomalySubscriptionRequest): Request[DeleteAnomalySubscriptionResponse, AWSError] = js.native
+  def deleteAnomalySubscription(
+    params: DeleteAnomalySubscriptionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteAnomalySubscriptionResponse, Unit]
+  ): Request[DeleteAnomalySubscriptionResponse, AWSError] = js.native
   
   /**
     * Deletes a Cost Category. Expenses from this month going forward will no longer be categorized with this Cost Category.
@@ -59,12 +115,54 @@ trait CostExplorer extends Service {
   ): Request[DescribeCostCategoryDefinitionResponse, AWSError] = js.native
   
   /**
-    * Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric, such as BlendedCosts or UsageQuantity, that you want the request to return. You can also filter and group your data by various dimensions, such as SERVICE or AZ, in a specific time range. For a complete list of valid dimensions, see the GetDimensionValues operation. Master accounts in an organization in AWS Organizations have access to all member accounts.
+    * Retrieves all of the cost anomalies detected on your account, during the time period specified by the DateInterval object. 
+    */
+  def getAnomalies(): Request[GetAnomaliesResponse, AWSError] = js.native
+  def getAnomalies(callback: js.Function2[/* err */ AWSError, /* data */ GetAnomaliesResponse, Unit]): Request[GetAnomaliesResponse, AWSError] = js.native
+  /**
+    * Retrieves all of the cost anomalies detected on your account, during the time period specified by the DateInterval object. 
+    */
+  def getAnomalies(params: GetAnomaliesRequest): Request[GetAnomaliesResponse, AWSError] = js.native
+  def getAnomalies(
+    params: GetAnomaliesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetAnomaliesResponse, Unit]
+  ): Request[GetAnomaliesResponse, AWSError] = js.native
+  
+  /**
+    * Retrieves the cost anomaly monitor definitions for your account. You can filter using a list of cost anomaly monitor Amazon Resource Names (ARNs). 
+    */
+  def getAnomalyMonitors(): Request[GetAnomalyMonitorsResponse, AWSError] = js.native
+  def getAnomalyMonitors(callback: js.Function2[/* err */ AWSError, /* data */ GetAnomalyMonitorsResponse, Unit]): Request[GetAnomalyMonitorsResponse, AWSError] = js.native
+  /**
+    * Retrieves the cost anomaly monitor definitions for your account. You can filter using a list of cost anomaly monitor Amazon Resource Names (ARNs). 
+    */
+  def getAnomalyMonitors(params: GetAnomalyMonitorsRequest): Request[GetAnomalyMonitorsResponse, AWSError] = js.native
+  def getAnomalyMonitors(
+    params: GetAnomalyMonitorsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetAnomalyMonitorsResponse, Unit]
+  ): Request[GetAnomalyMonitorsResponse, AWSError] = js.native
+  
+  /**
+    * Retrieves the cost anomaly subscription objects for your account. You can filter using a list of cost anomaly monitor Amazon Resource Names (ARNs). 
+    */
+  def getAnomalySubscriptions(): Request[GetAnomalySubscriptionsResponse, AWSError] = js.native
+  def getAnomalySubscriptions(callback: js.Function2[/* err */ AWSError, /* data */ GetAnomalySubscriptionsResponse, Unit]): Request[GetAnomalySubscriptionsResponse, AWSError] = js.native
+  /**
+    * Retrieves the cost anomaly subscription objects for your account. You can filter using a list of cost anomaly monitor Amazon Resource Names (ARNs). 
+    */
+  def getAnomalySubscriptions(params: GetAnomalySubscriptionsRequest): Request[GetAnomalySubscriptionsResponse, AWSError] = js.native
+  def getAnomalySubscriptions(
+    params: GetAnomalySubscriptionsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetAnomalySubscriptionsResponse, Unit]
+  ): Request[GetAnomalySubscriptionsResponse, AWSError] = js.native
+  
+  /**
+    * Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric, such as BlendedCosts or UsageQuantity, that you want the request to return. You can also filter and group your data by various dimensions, such as SERVICE or AZ, in a specific time range. For a complete list of valid dimensions, see the GetDimensionValues operation. Management account in an organization in AWS Organizations have access to all member accounts. For information about filter limitations, see Quotas and restrictions in the Billing and Cost Management User Guide.
     */
   def getCostAndUsage(): Request[GetCostAndUsageResponse, AWSError] = js.native
   def getCostAndUsage(callback: js.Function2[/* err */ AWSError, /* data */ GetCostAndUsageResponse, Unit]): Request[GetCostAndUsageResponse, AWSError] = js.native
   /**
-    * Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric, such as BlendedCosts or UsageQuantity, that you want the request to return. You can also filter and group your data by various dimensions, such as SERVICE or AZ, in a specific time range. For a complete list of valid dimensions, see the GetDimensionValues operation. Master accounts in an organization in AWS Organizations have access to all member accounts.
+    * Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric, such as BlendedCosts or UsageQuantity, that you want the request to return. You can also filter and group your data by various dimensions, such as SERVICE or AZ, in a specific time range. For a complete list of valid dimensions, see the GetDimensionValues operation. Management account in an organization in AWS Organizations have access to all member accounts. For information about filter limitations, see Quotas and restrictions in the Billing and Cost Management User Guide.
     */
   def getCostAndUsage(params: GetCostAndUsageRequest): Request[GetCostAndUsageResponse, AWSError] = js.native
   def getCostAndUsage(
@@ -73,12 +171,12 @@ trait CostExplorer extends Service {
   ): Request[GetCostAndUsageResponse, AWSError] = js.native
   
   /**
-    * Retrieves cost and usage metrics with resources for your account. You can specify which cost and usage-related metric, such as BlendedCosts or UsageQuantity, that you want the request to return. You can also filter and group your data by various dimensions, such as SERVICE or AZ, in a specific time range. For a complete list of valid dimensions, see the GetDimensionValues operation. Master accounts in an organization in AWS Organizations have access to all member accounts. This API is currently available for the Amazon Elastic Compute Cloud – Compute service only.  This is an opt-in only feature. You can enable this feature from the Cost Explorer Settings page. For information on how to access the Settings page, see Controlling Access for Cost Explorer in the AWS Billing and Cost Management User Guide. 
+    * Retrieves cost and usage metrics with resources for your account. You can specify which cost and usage-related metric, such as BlendedCosts or UsageQuantity, that you want the request to return. You can also filter and group your data by various dimensions, such as SERVICE or AZ, in a specific time range. For a complete list of valid dimensions, see the GetDimensionValues operation. Management account in an organization in AWS Organizations have access to all member accounts. This API is currently available for the Amazon Elastic Compute Cloud – Compute service only.  This is an opt-in only feature. You can enable this feature from the Cost Explorer Settings page. For information on how to access the Settings page, see Controlling Access for Cost Explorer in the AWS Billing and Cost Management User Guide. 
     */
   def getCostAndUsageWithResources(): Request[GetCostAndUsageWithResourcesResponse, AWSError] = js.native
   def getCostAndUsageWithResources(callback: js.Function2[/* err */ AWSError, /* data */ GetCostAndUsageWithResourcesResponse, Unit]): Request[GetCostAndUsageWithResourcesResponse, AWSError] = js.native
   /**
-    * Retrieves cost and usage metrics with resources for your account. You can specify which cost and usage-related metric, such as BlendedCosts or UsageQuantity, that you want the request to return. You can also filter and group your data by various dimensions, such as SERVICE or AZ, in a specific time range. For a complete list of valid dimensions, see the GetDimensionValues operation. Master accounts in an organization in AWS Organizations have access to all member accounts. This API is currently available for the Amazon Elastic Compute Cloud – Compute service only.  This is an opt-in only feature. You can enable this feature from the Cost Explorer Settings page. For information on how to access the Settings page, see Controlling Access for Cost Explorer in the AWS Billing and Cost Management User Guide. 
+    * Retrieves cost and usage metrics with resources for your account. You can specify which cost and usage-related metric, such as BlendedCosts or UsageQuantity, that you want the request to return. You can also filter and group your data by various dimensions, such as SERVICE or AZ, in a specific time range. For a complete list of valid dimensions, see the GetDimensionValues operation. Management account in an organization in AWS Organizations have access to all member accounts. This API is currently available for the Amazon Elastic Compute Cloud – Compute service only.  This is an opt-in only feature. You can enable this feature from the Cost Explorer Settings page. For information on how to access the Settings page, see Controlling Access for Cost Explorer in the AWS Billing and Cost Management User Guide. 
     */
   def getCostAndUsageWithResources(params: GetCostAndUsageWithResourcesRequest): Request[GetCostAndUsageWithResourcesResponse, AWSError] = js.native
   def getCostAndUsageWithResources(
@@ -115,12 +213,12 @@ trait CostExplorer extends Service {
   ): Request[GetDimensionValuesResponse, AWSError] = js.native
   
   /**
-    * Retrieves the reservation coverage for your account. This enables you to see how much of your Amazon Elastic Compute Cloud, Amazon ElastiCache, Amazon Relational Database Service, or Amazon Redshift usage is covered by a reservation. An organization's master account can see the coverage of the associated member accounts. This supports dimensions, Cost Categories, and nested expressions. For any time period, you can filter data about reservation usage by the following dimensions:   AZ   CACHE_ENGINE   DATABASE_ENGINE   DEPLOYMENT_OPTION   INSTANCE_TYPE   LINKED_ACCOUNT   OPERATING_SYSTEM   PLATFORM   REGION   SERVICE   TAG   TENANCY   To determine valid values for a dimension, use the GetDimensionValues operation. 
+    * Retrieves the reservation coverage for your account. This enables you to see how much of your Amazon Elastic Compute Cloud, Amazon ElastiCache, Amazon Relational Database Service, or Amazon Redshift usage is covered by a reservation. An organization's management account can see the coverage of the associated member accounts. This supports dimensions, Cost Categories, and nested expressions. For any time period, you can filter data about reservation usage by the following dimensions:   AZ   CACHE_ENGINE   DATABASE_ENGINE   DEPLOYMENT_OPTION   INSTANCE_TYPE   LINKED_ACCOUNT   OPERATING_SYSTEM   PLATFORM   REGION   SERVICE   TAG   TENANCY   To determine valid values for a dimension, use the GetDimensionValues operation. 
     */
   def getReservationCoverage(): Request[GetReservationCoverageResponse, AWSError] = js.native
   def getReservationCoverage(callback: js.Function2[/* err */ AWSError, /* data */ GetReservationCoverageResponse, Unit]): Request[GetReservationCoverageResponse, AWSError] = js.native
   /**
-    * Retrieves the reservation coverage for your account. This enables you to see how much of your Amazon Elastic Compute Cloud, Amazon ElastiCache, Amazon Relational Database Service, or Amazon Redshift usage is covered by a reservation. An organization's master account can see the coverage of the associated member accounts. This supports dimensions, Cost Categories, and nested expressions. For any time period, you can filter data about reservation usage by the following dimensions:   AZ   CACHE_ENGINE   DATABASE_ENGINE   DEPLOYMENT_OPTION   INSTANCE_TYPE   LINKED_ACCOUNT   OPERATING_SYSTEM   PLATFORM   REGION   SERVICE   TAG   TENANCY   To determine valid values for a dimension, use the GetDimensionValues operation. 
+    * Retrieves the reservation coverage for your account. This enables you to see how much of your Amazon Elastic Compute Cloud, Amazon ElastiCache, Amazon Relational Database Service, or Amazon Redshift usage is covered by a reservation. An organization's management account can see the coverage of the associated member accounts. This supports dimensions, Cost Categories, and nested expressions. For any time period, you can filter data about reservation usage by the following dimensions:   AZ   CACHE_ENGINE   DATABASE_ENGINE   DEPLOYMENT_OPTION   INSTANCE_TYPE   LINKED_ACCOUNT   OPERATING_SYSTEM   PLATFORM   REGION   SERVICE   TAG   TENANCY   To determine valid values for a dimension, use the GetDimensionValues operation. 
     */
   def getReservationCoverage(params: GetReservationCoverageRequest): Request[GetReservationCoverageResponse, AWSError] = js.native
   def getReservationCoverage(
@@ -145,12 +243,12 @@ trait CostExplorer extends Service {
   ): Request[GetReservationPurchaseRecommendationResponse, AWSError] = js.native
   
   /**
-    * Retrieves the reservation utilization for your account. Master accounts in an organization have access to member accounts. You can filter data by dimensions in a time period. You can use GetDimensionValues to determine the possible dimension values. Currently, you can group only by SUBSCRIPTION_ID. 
+    * Retrieves the reservation utilization for your account. Management account in an organization have access to member accounts. You can filter data by dimensions in a time period. You can use GetDimensionValues to determine the possible dimension values. Currently, you can group only by SUBSCRIPTION_ID. 
     */
   def getReservationUtilization(): Request[GetReservationUtilizationResponse, AWSError] = js.native
   def getReservationUtilization(callback: js.Function2[/* err */ AWSError, /* data */ GetReservationUtilizationResponse, Unit]): Request[GetReservationUtilizationResponse, AWSError] = js.native
   /**
-    * Retrieves the reservation utilization for your account. Master accounts in an organization have access to member accounts. You can filter data by dimensions in a time period. You can use GetDimensionValues to determine the possible dimension values. Currently, you can group only by SUBSCRIPTION_ID. 
+    * Retrieves the reservation utilization for your account. Management account in an organization have access to member accounts. You can filter data by dimensions in a time period. You can use GetDimensionValues to determine the possible dimension values. Currently, you can group only by SUBSCRIPTION_ID. 
     */
   def getReservationUtilization(params: GetReservationUtilizationRequest): Request[GetReservationUtilizationResponse, AWSError] = js.native
   def getReservationUtilization(
@@ -173,12 +271,12 @@ trait CostExplorer extends Service {
   ): Request[GetRightsizingRecommendationResponse, AWSError] = js.native
   
   /**
-    * Retrieves the Savings Plans covered for your account. This enables you to see how much of your cost is covered by a Savings Plan. An organization’s master account can see the coverage of the associated member accounts. This supports dimensions, Cost Categories, and nested expressions. For any time period, you can filter data for Savings Plans usage with the following dimensions:    LINKED_ACCOUNT     REGION     SERVICE     INSTANCE_FAMILY    To determine valid values for a dimension, use the GetDimensionValues operation.
+    * Retrieves the Savings Plans covered for your account. This enables you to see how much of your cost is covered by a Savings Plan. An organization’s management account can see the coverage of the associated member accounts. This supports dimensions, Cost Categories, and nested expressions. For any time period, you can filter data for Savings Plans usage with the following dimensions:    LINKED_ACCOUNT     REGION     SERVICE     INSTANCE_FAMILY    To determine valid values for a dimension, use the GetDimensionValues operation.
     */
   def getSavingsPlansCoverage(): Request[GetSavingsPlansCoverageResponse, AWSError] = js.native
   def getSavingsPlansCoverage(callback: js.Function2[/* err */ AWSError, /* data */ GetSavingsPlansCoverageResponse, Unit]): Request[GetSavingsPlansCoverageResponse, AWSError] = js.native
   /**
-    * Retrieves the Savings Plans covered for your account. This enables you to see how much of your cost is covered by a Savings Plan. An organization’s master account can see the coverage of the associated member accounts. This supports dimensions, Cost Categories, and nested expressions. For any time period, you can filter data for Savings Plans usage with the following dimensions:    LINKED_ACCOUNT     REGION     SERVICE     INSTANCE_FAMILY    To determine valid values for a dimension, use the GetDimensionValues operation.
+    * Retrieves the Savings Plans covered for your account. This enables you to see how much of your cost is covered by a Savings Plan. An organization’s management account can see the coverage of the associated member accounts. This supports dimensions, Cost Categories, and nested expressions. For any time period, you can filter data for Savings Plans usage with the following dimensions:    LINKED_ACCOUNT     REGION     SERVICE     INSTANCE_FAMILY    To determine valid values for a dimension, use the GetDimensionValues operation.
     */
   def getSavingsPlansCoverage(params: GetSavingsPlansCoverageRequest): Request[GetSavingsPlansCoverageResponse, AWSError] = js.native
   def getSavingsPlansCoverage(
@@ -203,12 +301,12 @@ trait CostExplorer extends Service {
   ): Request[GetSavingsPlansPurchaseRecommendationResponse, AWSError] = js.native
   
   /**
-    * Retrieves the Savings Plans utilization for your account across date ranges with daily or monthly granularity. Master accounts in an organization have access to member accounts. You can use GetDimensionValues in SAVINGS_PLANS to determine the possible dimension values.  You cannot group by any dimension values for GetSavingsPlansUtilization. 
+    * Retrieves the Savings Plans utilization for your account across date ranges with daily or monthly granularity. Management account in an organization have access to member accounts. You can use GetDimensionValues in SAVINGS_PLANS to determine the possible dimension values.  You cannot group by any dimension values for GetSavingsPlansUtilization. 
     */
   def getSavingsPlansUtilization(): Request[GetSavingsPlansUtilizationResponse, AWSError] = js.native
   def getSavingsPlansUtilization(callback: js.Function2[/* err */ AWSError, /* data */ GetSavingsPlansUtilizationResponse, Unit]): Request[GetSavingsPlansUtilizationResponse, AWSError] = js.native
   /**
-    * Retrieves the Savings Plans utilization for your account across date ranges with daily or monthly granularity. Master accounts in an organization have access to member accounts. You can use GetDimensionValues in SAVINGS_PLANS to determine the possible dimension values.  You cannot group by any dimension values for GetSavingsPlansUtilization. 
+    * Retrieves the Savings Plans utilization for your account across date ranges with daily or monthly granularity. Management account in an organization have access to member accounts. You can use GetDimensionValues in SAVINGS_PLANS to determine the possible dimension values.  You cannot group by any dimension values for GetSavingsPlansUtilization. 
     */
   def getSavingsPlansUtilization(params: GetSavingsPlansUtilizationRequest): Request[GetSavingsPlansUtilizationResponse, AWSError] = js.native
   def getSavingsPlansUtilization(
@@ -273,6 +371,48 @@ trait CostExplorer extends Service {
     params: ListCostCategoryDefinitionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListCostCategoryDefinitionsResponse, Unit]
   ): Request[ListCostCategoryDefinitionsResponse, AWSError] = js.native
+  
+  /**
+    * Modifies the feedback property of a given cost anomaly. 
+    */
+  def provideAnomalyFeedback(): Request[ProvideAnomalyFeedbackResponse, AWSError] = js.native
+  def provideAnomalyFeedback(callback: js.Function2[/* err */ AWSError, /* data */ ProvideAnomalyFeedbackResponse, Unit]): Request[ProvideAnomalyFeedbackResponse, AWSError] = js.native
+  /**
+    * Modifies the feedback property of a given cost anomaly. 
+    */
+  def provideAnomalyFeedback(params: ProvideAnomalyFeedbackRequest): Request[ProvideAnomalyFeedbackResponse, AWSError] = js.native
+  def provideAnomalyFeedback(
+    params: ProvideAnomalyFeedbackRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ProvideAnomalyFeedbackResponse, Unit]
+  ): Request[ProvideAnomalyFeedbackResponse, AWSError] = js.native
+  
+  /**
+    * Updates an existing cost anomaly monitor. The changes made are applied going forward, and does not change anomalies detected in the past. 
+    */
+  def updateAnomalyMonitor(): Request[UpdateAnomalyMonitorResponse, AWSError] = js.native
+  def updateAnomalyMonitor(callback: js.Function2[/* err */ AWSError, /* data */ UpdateAnomalyMonitorResponse, Unit]): Request[UpdateAnomalyMonitorResponse, AWSError] = js.native
+  /**
+    * Updates an existing cost anomaly monitor. The changes made are applied going forward, and does not change anomalies detected in the past. 
+    */
+  def updateAnomalyMonitor(params: UpdateAnomalyMonitorRequest): Request[UpdateAnomalyMonitorResponse, AWSError] = js.native
+  def updateAnomalyMonitor(
+    params: UpdateAnomalyMonitorRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateAnomalyMonitorResponse, Unit]
+  ): Request[UpdateAnomalyMonitorResponse, AWSError] = js.native
+  
+  /**
+    *  Updates an existing cost anomaly monitor subscription. 
+    */
+  def updateAnomalySubscription(): Request[UpdateAnomalySubscriptionResponse, AWSError] = js.native
+  def updateAnomalySubscription(callback: js.Function2[/* err */ AWSError, /* data */ UpdateAnomalySubscriptionResponse, Unit]): Request[UpdateAnomalySubscriptionResponse, AWSError] = js.native
+  /**
+    *  Updates an existing cost anomaly monitor subscription. 
+    */
+  def updateAnomalySubscription(params: UpdateAnomalySubscriptionRequest): Request[UpdateAnomalySubscriptionResponse, AWSError] = js.native
+  def updateAnomalySubscription(
+    params: UpdateAnomalySubscriptionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateAnomalySubscriptionResponse, Unit]
+  ): Request[UpdateAnomalySubscriptionResponse, AWSError] = js.native
   
   /**
     * Updates an existing Cost Category. Changes made to the Cost Category rules will be used to categorize the current month’s expenses and future expenses. This won’t change categorization for the previous months.

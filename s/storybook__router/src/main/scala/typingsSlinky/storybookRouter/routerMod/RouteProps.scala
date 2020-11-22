@@ -8,19 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RouteProps extends js.Object {
   
-  def children(renderData: RenderData): ReactElement = js.native
+  var children: ReactElement = js.native
   
-  var hideOnly: Boolean = js.native
+  var hideOnly: js.UndefOr[Boolean] = js.native
   
   var path: String = js.native
   
-  var startsWith: Boolean = js.native
+  var startsWith: js.UndefOr[Boolean] = js.native
 }
 object RouteProps {
   
   @scala.inline
-  def apply(children: RenderData => ReactElement, hideOnly: Boolean, path: String, startsWith: Boolean): RouteProps = {
-    val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children), hideOnly = hideOnly.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], startsWith = startsWith.asInstanceOf[js.Any])
+  def apply(path: String): RouteProps = {
+    val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
     __obj.asInstanceOf[RouteProps]
   }
   
@@ -40,15 +40,24 @@ object RouteProps {
     }
     
     @scala.inline
-    def setChildren(value: RenderData => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
+    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
     def setHideOnly(value: Boolean): Self = this.set("hideOnly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
+    def deleteHideOnly: Self = this.set("hideOnly", js.undefined)
     
     @scala.inline
     def setStartsWith(value: Boolean): Self = this.set("startsWith", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStartsWith: Self = this.set("startsWith", js.undefined)
   }
 }

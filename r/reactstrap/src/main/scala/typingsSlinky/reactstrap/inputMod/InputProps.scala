@@ -2,10 +2,11 @@ package typingsSlinky.reactstrap.inputMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLInputElement
+import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.InputHTMLAttributes
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.reactstrapStrings.lg
@@ -25,15 +26,13 @@ trait InputProps
   
   var cssModule: js.UndefOr[CSSModule] = js.native
   
-  var innerRef: js.UndefOr[Ref[HTMLInputElement]] = js.native
+  var innerRef: js.UndefOr[Ref[HTMLInputElement | HTMLTextAreaElement]] = js.native
   
   var invalid: js.UndefOr[Boolean] = js.native
   
   var plaintext: js.UndefOr[Boolean] = js.native
   
-  var state: js.UndefOr[String] = js.native
-  
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
   
   @JSName("type")
   var type_InputProps: js.UndefOr[InputType] = js.native
@@ -82,13 +81,13 @@ object InputProps {
     def deleteCssModule: Self = this.set("cssModule", js.undefined)
     
     @scala.inline
-    def setInnerRefRefObject(value: ReactRef[HTMLInputElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+    def setInnerRefRefObject(value: ReactRef[HTMLInputElement | HTMLTextAreaElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInnerRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): Self = this.set("innerRef", js.Any.fromFunction1(value))
+    def setInnerRefFunction1(value: /* instance */ HTMLInputElement | HTMLTextAreaElement | Null => Unit): Self = this.set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setInnerRef(value: Ref[HTMLInputElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+    def setInnerRef(value: Ref[HTMLInputElement | HTMLTextAreaElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInnerRef: Self = this.set("innerRef", js.undefined)
@@ -109,19 +108,13 @@ object InputProps {
     def deletePlaintext: Self = this.set("plaintext", js.undefined)
     
     @scala.inline
-    def setState(value: String): Self = this.set("state", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteState: Self = this.set("state", js.undefined)
-    
-    @scala.inline
     def setTagFunctionComponent(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

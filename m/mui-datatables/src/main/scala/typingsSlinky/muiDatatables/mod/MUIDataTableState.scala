@@ -23,11 +23,11 @@ trait MUIDataTableState extends js.Object {
   
   var data: js.Array[_] = js.native
   
-  var displayData: js.Array[Data] = js.native
+  var displayData: DisplayData = js.native
   
   var expandedRows: MUIDataTableStateRows = js.native
   
-  var filterData: js.Array[_] = js.native
+  var filterData: js.Array[js.Array[String]] = js.native
   
   var filterList: js.Array[js.Array[String]] = js.native
   
@@ -57,9 +57,9 @@ object MUIDataTableState {
     columns: js.Array[MUIDataTableColumnState],
     count: Double,
     data: js.Array[_],
-    displayData: js.Array[Data],
+    displayData: DisplayData,
     expandedRows: MUIDataTableStateRows,
-    filterData: js.Array[_],
+    filterData: js.Array[js.Array[String]],
     filterList: js.Array[js.Array[String]],
     page: Double,
     rowsPerPage: Double,
@@ -112,16 +112,16 @@ object MUIDataTableState {
     def setDisplayDataVarargs(value: Data*): Self = this.set("displayData", js.Array(value :_*))
     
     @scala.inline
-    def setDisplayData(value: js.Array[Data]): Self = this.set("displayData", value.asInstanceOf[js.Any])
+    def setDisplayData(value: DisplayData): Self = this.set("displayData", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setExpandedRows(value: MUIDataTableStateRows): Self = this.set("expandedRows", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFilterDataVarargs(value: js.Any*): Self = this.set("filterData", js.Array(value :_*))
+    def setFilterDataVarargs(value: js.Array[String]*): Self = this.set("filterData", js.Array(value :_*))
     
     @scala.inline
-    def setFilterData(value: js.Array[_]): Self = this.set("filterData", value.asInstanceOf[js.Any])
+    def setFilterData(value: js.Array[js.Array[String]]): Self = this.set("filterData", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFilterListVarargs(value: js.Array[String]*): Self = this.set("filterList", js.Array(value :_*))

@@ -13,7 +13,7 @@ trait CustomDetection extends js.Object {
   var arn: js.UndefOr[string] = js.native
   
   /**
-    * The total number of occurrences of the data that the custom data identifier detected for the finding.
+    * The total number of occurrences of the sensitive data that the custom data identifier detected.
     */
   var count: js.UndefOr[long] = js.native
   
@@ -21,6 +21,11 @@ trait CustomDetection extends js.Object {
     * The name of the custom data identifier.
     */
   var name: js.UndefOr[string] = js.native
+  
+  /**
+    * The location of 1-15 occurrences of the sensitive data that the custom data identifier detected. A finding includes location data for a maximum of 15 occurrences of sensitive data.
+    */
+  var occurrences: js.UndefOr[Occurrences] = js.native
 }
 object CustomDetection {
   
@@ -62,5 +67,11 @@ object CustomDetection {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setOccurrences(value: Occurrences): Self = this.set("occurrences", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOccurrences: Self = this.set("occurrences", js.undefined)
   }
 }

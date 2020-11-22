@@ -80,7 +80,7 @@ object ohandlerMod extends js.Object {
     /**
       * Determines how many request are outstanding.
       */
-    val pending: Double = js.native
+    def pending: Double = js.native
     
     /**
       * Post data to an endpoint + resource.

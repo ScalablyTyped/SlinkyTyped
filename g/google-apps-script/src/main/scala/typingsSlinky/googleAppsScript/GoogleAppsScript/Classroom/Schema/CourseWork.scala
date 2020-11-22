@@ -45,6 +45,8 @@ trait CourseWork extends js.Object {
   
   var title: js.UndefOr[String] = js.native
   
+  var topicId: js.UndefOr[String] = js.native
+  
   var updateTime: js.UndefOr[String] = js.native
   
   var workType: js.UndefOr[String] = js.native
@@ -188,6 +190,12 @@ object CourseWork {
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
+    
+    @scala.inline
+    def setTopicId(value: String): Self = this.set("topicId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTopicId: Self = this.set("topicId", js.undefined)
     
     @scala.inline
     def setUpdateTime(value: String): Self = this.set("updateTime", value.asInstanceOf[js.Any])

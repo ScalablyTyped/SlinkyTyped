@@ -1,14 +1,13 @@
 package typingsSlinky.nukaCarousel.mod
 
-import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("nuka-carousel", "PagingDots")
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify React.FunctionalComponent<PagingDotsProps> * / any */ @JSImport("nuka-carousel", "PagingDots")
 @js.native
-class PagingDots ()
-  extends Component[PagingDotsProps, js.Object, js.Any] {
+class PagingDots () extends js.Object {
   
   def getButtonStyles(active: Boolean): typingsSlinky.react.mod.CSSProperties = js.native
   

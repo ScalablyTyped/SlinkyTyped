@@ -18,6 +18,11 @@ trait UpdateWorkflowRequest extends js.Object {
   var Description: js.UndefOr[GenericString] = js.native
   
   /**
+    * You can use this parameter to prevent unwanted multiple updates to data, to control costs, or in some cases, to prevent exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+    */
+  var MaxConcurrentRuns: js.UndefOr[NullableInteger] = js.native
+  
+  /**
     * Name of the workflow to be updated.
     */
   var Name: NameString = js.native
@@ -59,5 +64,11 @@ object UpdateWorkflowRequest {
     
     @scala.inline
     def deleteDescription: Self = this.set("Description", js.undefined)
+    
+    @scala.inline
+    def setMaxConcurrentRuns(value: NullableInteger): Self = this.set("MaxConcurrentRuns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxConcurrentRuns: Self = this.set("MaxConcurrentRuns", js.undefined)
   }
 }

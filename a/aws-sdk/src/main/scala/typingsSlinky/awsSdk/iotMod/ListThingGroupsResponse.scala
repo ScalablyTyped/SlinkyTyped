@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListThingGroupsResponse extends js.Object {
   
   /**
-    * The token used to get the next set of results, or null if there are no additional results.
+    * The token to use to get the next set of results. Will not be returned if operation has returned all results.
     */
   var nextToken: js.UndefOr[NextToken] = js.native
   

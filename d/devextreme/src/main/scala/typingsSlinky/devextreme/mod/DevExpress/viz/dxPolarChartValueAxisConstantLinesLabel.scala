@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartValueAxisConstantLinesLabel extends dxPolarChartCommonAxisSettingsConstantLineStyleLabel {
   
-  /** @name dxPolarChart.Options.valueAxis.constantLines.label.text */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.constantLines.label.text]
+    */
   var text: js.UndefOr[String] = js.native
 }
 object dxPolarChartValueAxisConstantLinesLabel {

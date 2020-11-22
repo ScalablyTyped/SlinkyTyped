@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createExpressionStatement extends js.Object {
   
+  /** @deprecated Use `factory.createExpressionStatement` or the factory supplied by your transformation context instead. */
   def apply(expression: Expression): ExpressionStatement = js.native
 }

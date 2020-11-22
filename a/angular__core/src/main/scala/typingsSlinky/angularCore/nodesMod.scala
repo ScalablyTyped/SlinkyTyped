@@ -10,5 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object nodesMod extends js.Object {
   
+  def closestNode[T /* <: Node */](node: Node, kind: SyntaxKind): T | Null = js.native
+  
   def hasModifier(node: Node, modifierKind: SyntaxKind): Boolean = js.native
 }

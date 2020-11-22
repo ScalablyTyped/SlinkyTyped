@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ProjectsListColumnsEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ProjectsListColumnsResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ProjectsGetEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ProjectsGetResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `829` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ProjectsListColumnsEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ProjectsGetEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ProjectsListColumnsResponseData] = js.native
+  var response: OctokitResponse[ProjectsGetResponseData] = js.native
 }
 object `829` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ProjectsListColumnsEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ProjectsListColumnsResponseData]
+    parameters: RequestParameters with (Omit[ProjectsGetEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ProjectsGetResponseData]
   ): `829` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`829`]
@@ -46,9 +46,9 @@ object `829` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ProjectsListColumnsEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ProjectsGetEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ProjectsListColumnsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ProjectsGetResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

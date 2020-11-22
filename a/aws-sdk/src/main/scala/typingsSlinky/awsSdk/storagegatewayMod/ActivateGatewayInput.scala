@@ -33,7 +33,7 @@ trait ActivateGatewayInput extends js.Object {
   var GatewayType: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.GatewayType] = js.native
   
   /**
-    * The value that indicates the type of medium changer to use for tape gateway. This field is optional. Valid Values: STK-L700 | AWS-Gateway-VTL 
+    * The value that indicates the type of medium changer to use for tape gateway. This field is optional. Valid Values: STK-L700 | AWS-Gateway-VTL | IBM-03584L32-0402 
     */
   var MediumChangerType: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.MediumChangerType] = js.native
   

@@ -56,7 +56,7 @@ trait Color extends js.Object {
   
   /**
     * Returns a single channel value.
-    * @see set
+    * Also @see set
     */
   def get(modechan: String): Double = js.native
   
@@ -161,7 +161,32 @@ trait Color extends js.Object {
     * The color space used defaults to RGB.
     */
   def luminance(l: Double): Color = js.native
-  def luminance(l: Double, colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl): Color = js.native
+  def luminance(l: Double, colorSpace: InterpolationMode): Color = js.native
+  
+  def mix(targetColor: String): Color = js.native
+  def mix(
+    targetColor: String,
+    f: js.UndefOr[scala.Nothing],
+    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
+  ): Color = js.native
+  def mix(targetColor: String, f: Double): Color = js.native
+  def mix(
+    targetColor: String,
+    f: Double,
+    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
+  ): Color = js.native
+  def mix(targetColor: Color): Color = js.native
+  def mix(
+    targetColor: Color,
+    f: js.UndefOr[scala.Nothing],
+    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
+  ): Color = js.native
+  def mix(targetColor: Color, f: Double): Color = js.native
+  def mix(
+    targetColor: Color,
+    f: Double,
+    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
+  ): Color = js.native
   
   /**
     * Returns the named color. Falls back to hexadecimal RGB string, if the color isn't present.

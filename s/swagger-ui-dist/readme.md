@@ -1,7 +1,7 @@
 
 # Scala.js typings for swagger-ui-dist
 
-Typings are for version 3.x
+Typings are for version 3.30
 
 ## Library description:
 [![NPM version](https://badge.fury.io/js/swagger-ui-dist.svg)](http://badge.fury.io/js/swagger-ui-dist)

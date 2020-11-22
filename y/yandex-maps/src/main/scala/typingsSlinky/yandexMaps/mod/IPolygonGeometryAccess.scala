@@ -38,7 +38,7 @@ object IPolygonGeometryAccess {
   @scala.inline
   def apply(
     contains: js.Array[Double] => Boolean,
-    events: IEventManager,
+    events: IEventManager[js.Object],
     freeze: () => IFreezable,
     get: Double => js.Array[js.Array[Double]],
     getChildGeometry: Double => ILinearRingGeometryAccess,

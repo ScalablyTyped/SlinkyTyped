@@ -15,104 +15,104 @@ object Constants extends js.Object {
   
   /**
     * Nothing
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_NothingTrigger: Double = js.native
   
   /**
     * On center pick
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnCenterPickTrigger: Double = js.native
   
   /**
     * On double pick
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnDoublePickTrigger: Double = js.native
   
   /**
     * On every frame
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnEveryFrameTrigger: Double = js.native
   
   /**
     * On intersection enter
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnIntersectionEnterTrigger: Double = js.native
   
   /**
     * On intersection exit
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnIntersectionExitTrigger: Double = js.native
   
   /**
     * On key down
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnKeyDownTrigger: Double = js.native
   
   /**
     * On key up
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnKeyUpTrigger: Double = js.native
   
   /**
     * On left pick
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnLeftPickTrigger: Double = js.native
   
   /**
     * On long press
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnLongPressTrigger: Double = js.native
   
   /**
     * On pick down
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnPickDownTrigger: Double = js.native
   
   /**
     * On pick out.
     * This trigger will only be raised if you also declared a OnPickDown
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnPickOutTrigger: Double = js.native
   
   /**
     * On pick
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnPickTrigger: Double = js.native
   
   /**
     * On pick up
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnPickUpTrigger: Double = js.native
   
   /**
     * On pointer out
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnPointerOutTrigger: Double = js.native
   
   /**
     * On pointer over
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnPointerOverTrigger: Double = js.native
   
   /**
     * On right pick
-    * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+    * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
     */
   val ACTION_OnRightPickTrigger: Double = js.native
   
@@ -320,6 +320,11 @@ object Constants extends js.Object {
   val MATERIAL_PointListDrawMode: Double = js.native
   
   /**
+    * The dirty prepass flag value
+    */
+  val MATERIAL_PrePassDirtyFlag: Double = js.native
+  
+  /**
     * The dirty texture flag value
     */
   val MATERIAL_TextureDirtyFlag: Double = js.native
@@ -402,6 +407,48 @@ object Constants extends js.Object {
     * Billboard mode will only apply to Y axis
     */
   val PARTICLES_BILLBOARDMODE_Y: Double = js.native
+  
+  /**
+    * Constant used to retrieve albedo index in the textures array in the prepass
+    * using the getIndex(Constants.PREPASS_ALBEDO_TEXTURE_TYPE)
+    */
+  val PREPASS_ALBEDO_TEXTURE_TYPE: Double = js.native
+  
+  /**
+    * Constant used to retrieve the lit color texture index in the textures array in the prepass
+    * using the getIndex(Constants.PREPASS_COLOR_TEXTURE_TYPE)
+    */
+  val PREPASS_COLOR_TEXTURE_TYPE: Double = js.native
+  
+  /**
+    * Constant used to retrieve depth + normal index in the textures array in the prepass
+    * using the getIndex(Constants.PREPASS_DEPTHNORMAL_TEXTURE_TYPE)
+    */
+  val PREPASS_DEPTHNORMAL_TEXTURE_TYPE: Double = js.native
+  
+  /**
+    * Constant used to retrieve the irradiance texture index in the textures array in the prepass
+    * using getIndex(Constants.PREPASS_IRRADIANCE_TEXTURE_TYPE)
+    */
+  val PREPASS_IRRADIANCE_TEXTURE_TYPE: Double = js.native
+  
+  /**
+    * Constant used to retrieve the position texture index in the textures array in the prepass
+    * using getIndex(Constants.PREPASS_POSITION_TEXTURE_INDEX)
+    */
+  val PREPASS_POSITION_TEXTURE_TYPE: Double = js.native
+  
+  /**
+    * Constant used to retrieve the reflectivity texture index in the textures array in the prepass
+    * using the getIndex(Constants.PREPASS_REFLECTIVITY_TEXTURE_TYPE)
+    */
+  val PREPASS_REFLECTIVITY_TEXTURE_TYPE: Double = js.native
+  
+  /**
+    * Constant used to retrieve the velocity texture index in the textures array in the prepass
+    * using getIndex(Constants.PREPASS_VELOCITY_TEXTURE_INDEX)
+    */
+  val PREPASS_VELOCITY_TEXTURE_TYPE: Double = js.native
   
   /** Passed to stencilOperation to specify that stencil value must be replaced */
   val REPLACE: Double = js.native
@@ -539,6 +586,18 @@ object Constants extends js.Object {
   
   /** Explicit coordinates mode */
   val TEXTURE_EXPLICIT_MODE: Double = js.native
+  
+  /** High quality for texture filtering */
+  val TEXTURE_FILTERING_QUALITY_HIGH: Double = js.native
+  
+  /** Low quality for texture filtering */
+  val TEXTURE_FILTERING_QUALITY_LOW: Double = js.native
+  
+  /** Medium quality for texture filtering */
+  val TEXTURE_FILTERING_QUALITY_MEDIUM: Double = js.native
+  
+  /** Offline (baking) quality for texture filtering */
+  val TEXTURE_FILTERING_QUALITY_OFFLINE: Double = js.native
   
   /** Equirectangular Fixed Mirrored coordinates mode */
   val TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE: Double = js.native

@@ -14,37 +14,57 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ODataStoreOptions extends StoreOptions[ODataStore] {
   
-  /** @name ODataStore.Options.beforeSend */
+  /**
+    * [descr:ODataStore.Options.beforeSend]
+    */
   var beforeSend: js.UndefOr[js.Function1[/* options */ Async, _]] = js.native
   
-  /** @name ODataStore.Options.deserializeDates */
+  /**
+    * [descr:ODataStore.Options.deserializeDates]
+    */
   var deserializeDates: js.UndefOr[Boolean] = js.native
   
-  /** @name ODataStore.Options.errorHandler */
+  /**
+    * [descr:ODataStore.Options.errorHandler]
+    */
   @JSName("errorHandler")
   var errorHandler_ODataStoreOptions: js.UndefOr[js.Function1[/* e */ ErrorDetails, _]] = js.native
   
-  /** @name ODataStore.Options.fieldTypes */
+  /**
+    * [descr:ODataStore.Options.fieldTypes]
+    */
   var fieldTypes: js.UndefOr[js.Any] = js.native
   
-  /** @name ODataStore.Options.filterToLower */
+  /**
+    * [descr:ODataStore.Options.filterToLower]
+    */
   var filterToLower: js.UndefOr[Boolean] = js.native
   
-  /** @name ODataStore.Options.jsonp */
+  /**
+    * [descr:ODataStore.Options.jsonp]
+    */
   var jsonp: js.UndefOr[Boolean] = js.native
   
-  /** @name ODataStore.Options.keyType */
+  /**
+    * [descr:ODataStore.Options.keyType]
+    */
   var keyType: js.UndefOr[
     String | Int32 | Int64 | typingsSlinky.devextreme.devextremeStrings.Guid | typingsSlinky.devextreme.devextremeStrings.Boolean | Single | Decimal | js.Any
   ] = js.native
   
-  /** @name ODataStore.Options.url */
+  /**
+    * [descr:ODataStore.Options.url]
+    */
   var url: js.UndefOr[java.lang.String] = js.native
   
-  /** @name ODataStore.Options.version */
+  /**
+    * [descr:ODataStore.Options.version]
+    */
   var version: js.UndefOr[Double] = js.native
   
-  /** @name ODataStore.Options.withCredentials */
+  /**
+    * [descr:ODataStore.Options.withCredentials]
+    */
   var withCredentials: js.UndefOr[Boolean] = js.native
 }
 object ODataStoreOptions {

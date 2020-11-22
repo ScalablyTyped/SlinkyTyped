@@ -29,7 +29,7 @@ object MotionTreeNode {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, js.Any with js.Object] {
+       with StBuildingComponent[tag.type, HTMLDivElement] {
     
     @scala.inline
     def checkable(value: Boolean): this.type = set("checkable", value.asInstanceOf[js.Any])
@@ -146,11 +146,16 @@ object MotionTreeNode {
     def title(value: ReactElement | (js.Function1[/* data */ DataNode, ReactElement])): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MotionTreeNodeProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: MotionTreeNodeProps with RefAttributes[HTMLDivElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(active: Boolean, onMotionEnd: () => Unit, treeNodeRequiredProps: TreeNodeRequiredProps): Builder = {
-    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any], onMotionEnd = js.Any.fromFunction0(onMotionEnd), treeNodeRequiredProps = treeNodeRequiredProps.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MotionTreeNodeProps with RefAttributes[js.Any]]))
+  def apply(
+    active: Boolean,
+    onMotionEnd: () => Unit,
+    onMotionStart: () => Unit,
+    treeNodeRequiredProps: TreeNodeRequiredProps
+  ): Builder = {
+    val __props = js.Dynamic.literal(active = active.asInstanceOf[js.Any], onMotionEnd = js.Any.fromFunction0(onMotionEnd), onMotionStart = js.Any.fromFunction0(onMotionStart), treeNodeRequiredProps = treeNodeRequiredProps.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[MotionTreeNodeProps with RefAttributes[HTMLDivElement]]))
   }
 }

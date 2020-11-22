@@ -17,16 +17,14 @@ import typingsSlinky.awsSdkClientCognitoIdentityBrowser.setIdentityPoolRolesExce
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.unlinkDeveloperIdentityExceptionsUnionMod.UnlinkDeveloperIdentityExceptionsUnion
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.unlinkIdentityExceptionsUnionMod.UnlinkIdentityExceptionsUnion
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.updateIdentityPoolExceptionsUnionMod.UpdateIdentityPoolExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_NotAuthorizedExceptionDetails> * / any */ @js.native
 trait NotAuthorizedException
-  extends ServiceException[NotAuthorizedExceptionDetails]
-     with CreateIdentityPoolExceptionsUnion
+  extends CreateIdentityPoolExceptionsUnion
      with DeleteIdentityPoolExceptionsUnion
      with DescribeIdentityExceptionsUnion
      with DescribeIdentityPoolExceptionsUnion
@@ -44,19 +42,15 @@ trait NotAuthorizedException
      with UnlinkIdentityExceptionsUnion
      with UpdateIdentityPoolExceptionsUnion {
   
-  @JSName("name")
-  var name_NotAuthorizedException: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.NotAuthorizedException = js.native
+  var name: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.NotAuthorizedException = js.native
 }
 object NotAuthorizedException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: NotAuthorizedExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.NotAuthorizedException
   ): NotAuthorizedException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotAuthorizedException]
   }
   

@@ -17,7 +17,7 @@ trait ASPxClientPopupControl extends ASPxClientPopupControlBase {
   def BringWindowToFront(window: ASPxClientPopupWindow): Unit = js.native
   
   /**
-    * Occurs when a popup window's <strong>close button</strong> is clicked.
+    * Occurs when a user clicks the popup window's close button.
     */
   var CloseButtonClick: ASPxClientEvent[ASPxClientPopupWindowEventHandler[ASPxClientPopupControl]] = js.native
   
@@ -61,7 +61,7 @@ trait ASPxClientPopupControl extends ASPxClientPopupControlBase {
   def GetWindowCollapsed(window: ASPxClientPopupWindow): Boolean = js.native
   
   /**
-    * Gets the height of the specified popup window's <strong>content region</strong>. An integer value representing the height of the content region.
+    * Gets the height of the specified popup window's content region. An integer value representing the height of the content region.
     * @param window An ASPxClientPopupWindow object that specifies the required popup window.
     */
   def GetWindowContentHeight(window: ASPxClientPopupWindow): Double = js.native
@@ -73,7 +73,7 @@ trait ASPxClientPopupControl extends ASPxClientPopupControlBase {
   def GetWindowContentHtml(window: ASPxClientPopupWindow): String = js.native
   
   /**
-    * Returns an iframe object containing a web page specified via the specified popup window's PopupWindow.ContentUrl property (or the popup control's ASPxClientPopupControl.SetWindowContentUrl client method). The iframe object that contains a web page displayed within the specified popup window.
+    * Returns an iframe object containing a web page specified via the specified popup window's PopupWindow.ContentUrl property (or the popup control's client ASPxClientPopupControl.SetWindowContentUrl method). The iframe object that contains a web page displayed within the specified popup window.
     * @param window A ASPxClientPopupWindow object representing the required popup window.
     */
   def GetWindowContentIFrame(window: ASPxClientPopupWindow): js.Any = js.native
@@ -85,7 +85,7 @@ trait ASPxClientPopupControl extends ASPxClientPopupControlBase {
   def GetWindowContentUrl(window: ASPxClientPopupWindow): String = js.native
   
   /**
-    * Gets the width of the specified popup window's <strong>content region</strong>. An integer value representing the width of the content region.
+    * Gets the width of the specified popup window's content region. An integer value representing the width of the content region.
     * @param window An ASPxClientPopupWindow object that specifies the required popup window.
     */
   def GetWindowContentWidth(window: ASPxClientPopupWindow): Double = js.native

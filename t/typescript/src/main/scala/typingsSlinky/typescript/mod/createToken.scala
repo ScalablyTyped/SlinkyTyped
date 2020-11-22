@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createToken extends js.Object {
   
-  def apply[TKind /* <: SyntaxKind */](token: TKind): Token[TKind] = js.native
+  /** @deprecated Use `factory.createToken` or the factory supplied by your transformation context instead. */
+  def apply[TKind /* <: SyntaxKind */](kind: TKind): Token[TKind] = js.native
 }

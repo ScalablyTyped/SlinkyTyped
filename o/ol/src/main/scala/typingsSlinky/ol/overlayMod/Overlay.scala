@@ -26,20 +26,44 @@ trait Overlay
   
   var element: HTMLElement = js.native
   
-  def getElement(): HTMLElement = js.native
+  /**
+    * Get the DOM element of this overlay.
+    */
+  def getElement(): js.UndefOr[HTMLElement] = js.native
   
-  def getId(): Double | String = js.native
+  /**
+    * Get the overlay identifier which is set on constructor.
+    */
+  def getId(): js.UndefOr[Double | String] = js.native
   
-  def getMap(): typingsSlinky.ol.pluggableMapMod.default = js.native
+  /**
+    * Get the map associated with this overlay.
+    */
+  def getMap(): js.UndefOr[typingsSlinky.ol.pluggableMapMod.default] = js.native
   
+  /**
+    * Get the offset of this overlay.
+    */
   def getOffset(): js.Array[Double] = js.native
   
+  /**
+    * returns the options this Overlay has been created with
+    */
   def getOptions(): Options = js.native
   
-  def getPosition(): Coordinate = js.native
+  /**
+    * Get the current position of this overlay.
+    */
+  def getPosition(): js.UndefOr[Coordinate] = js.native
   
+  /**
+    * Get the current positioning of this overlay.
+    */
   def getPositioning(): OverlayPositioning = js.native
   
+  /**
+    * Get the extent of an element relative to the document
+    */
   /* protected */ def getRect(element: HTMLElement, size: Size): Extent = js.native
   
   /* protected */ def handleElementChanged(): Unit = js.native
@@ -82,28 +106,55 @@ trait Overlay
   
   var options: Options = js.native
   
+  /**
+    * Pan the map so that the overlay is entirely visible in the current viewport
+    * (if necessary).
+    */
   def panIntoView(): Unit = js.native
-  def panIntoView(panIntoViewOptions: PanIntoViewOptions): Unit = js.native
+  def panIntoView(opt_panIntoViewOptions: PanIntoViewOptions): Unit = js.native
   
+  /**
+    * Pan the map so that the overlay is entirely visisble in the current viewport
+    * (if necessary) using the configured autoPan parameters
+    */
   /* protected */ def performAutoPan(): Unit = js.native
   
   /* protected */ def render(): Unit = js.native
   
   var rendered: js.Any = js.native
   
+  /**
+    * Set the DOM element to be associated with this overlay.
+    */
   def setElement(): Unit = js.native
   def setElement(element: HTMLElement): Unit = js.native
   
+  /**
+    * Set the map to be associated with this overlay.
+    */
   def setMap(): Unit = js.native
   def setMap(map: typingsSlinky.ol.pluggableMapMod.default): Unit = js.native
   
+  /**
+    * Set the offset for this overlay.
+    */
   def setOffset(offset: js.Array[Double]): Unit = js.native
   
+  /**
+    * Set the position for this overlay. If the position is undefined the
+    * overlay is hidden.
+    */
   def setPosition(): Unit = js.native
   def setPosition(position: Coordinate): Unit = js.native
   
+  /**
+    * Set the positioning for this overlay.
+    */
   def setPositioning(positioning: OverlayPositioning): Unit = js.native
   
+  /**
+    * Modify the visibility of the element.
+    */
   /* protected */ def setVisible(visible: Boolean): Unit = js.native
   
   var stopEvent: Boolean = js.native
@@ -119,6 +170,9 @@ trait Overlay
   @JSName("un")
   def un_changepositioning(`type`: changeColonpositioning, listener: js.Function1[/* evt */ ObjectEvent, Unit]): Unit = js.native
   
+  /**
+    * Update pixel position.
+    */
   /* protected */ def updatePixelPosition(): Unit = js.native
   
   /* protected */ def updateRenderedPosition(pixel: Pixel): Unit = js.native

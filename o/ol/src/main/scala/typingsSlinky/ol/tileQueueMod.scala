@@ -22,6 +22,8 @@ object tileQueueMod extends js.Object {
   trait TileQueue
     extends typingsSlinky.ol.priorityQueueMod.default[js.Any] {
     
+    def enqueue(element: js.Array[_]): Boolean = js.native
+    
     def getTilesLoading(): Double = js.native
     
     /* protected */ def handleTileChange(event: typingsSlinky.ol.eventMod.default): Unit = js.native

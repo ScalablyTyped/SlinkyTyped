@@ -13,7 +13,7 @@ trait ColorScaleRuleType
   
   var cfvo: js.UndefOr[js.Array[Cvfo]] = js.native
   
-  var color: js.UndefOr[PartialColor] = js.native
+  var color: js.UndefOr[js.Array[PartialColor]] = js.native
   
   var `type`: colorScale = js.native
 }
@@ -54,7 +54,10 @@ object ColorScaleRuleType {
     def deleteCfvo: Self = this.set("cfvo", js.undefined)
     
     @scala.inline
-    def setColor(value: PartialColor): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColorVarargs(value: PartialColor*): Self = this.set("color", js.Array(value :_*))
+    
+    @scala.inline
+    def setColor(value: js.Array[PartialColor]): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)

@@ -1,10 +1,10 @@
 package typingsSlinky.officeUiFabricReact.tagPickerTypesMod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

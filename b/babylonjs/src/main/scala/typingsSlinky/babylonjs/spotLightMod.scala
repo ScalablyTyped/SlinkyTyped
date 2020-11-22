@@ -154,4 +154,12 @@ object spotLightMod extends js.Object {
       */
     def shadowAngleScale_=(value: Double): Unit = js.native
   }
+  /* static members */
+  @js.native
+  object SpotLight extends js.Object {
+    
+    var _IsProceduralTexture: js.Any = js.native
+    
+    var _IsTexture: js.Any = js.native
+  }
 }

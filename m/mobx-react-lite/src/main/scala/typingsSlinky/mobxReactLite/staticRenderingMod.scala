@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object staticRenderingMod extends js.Object {
   
-  def isUsingStaticRendering(): Boolean = js.native
+  def enableStaticRendering(enable: Boolean): Unit = js.native
   
-  def useStaticRendering(enable: Boolean): Unit = js.native
+  def isUsingStaticRendering(): Boolean = js.native
 }

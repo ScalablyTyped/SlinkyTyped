@@ -65,4 +65,10 @@ object csvParserStreamMod extends js.Object {
     
     def validate(validateFunction: RowValidate[O]): CsvParserStream[I, O] = js.native
   }
+  /* static members */
+  @js.native
+  object CsvParserStream extends js.Object {
+    
+    var wrapDoneCallback: js.Any = js.native
+  }
 }

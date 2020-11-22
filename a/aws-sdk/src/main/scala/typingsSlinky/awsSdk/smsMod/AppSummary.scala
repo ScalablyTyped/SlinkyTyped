@@ -8,29 +8,39 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AppSummary extends js.Object {
   
   /**
-    * Unique ID of the application.
+    * The unique ID of the application.
     */
   var appId: js.UndefOr[AppId] = js.native
   
   /**
-    * Time of creation of this application.
+    * The creation time of the application.
     */
   var creationTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * Description of the application.
+    * The description of the application.
     */
   var description: js.UndefOr[AppDescription] = js.native
   
   /**
-    * Timestamp of the application's creation.
+    * The ID of the application.
+    */
+  var importedAppId: js.UndefOr[ImportedAppId] = js.native
+  
+  /**
+    * The last modified time of the application.
     */
   var lastModified: js.UndefOr[js.Date] = js.native
   
   /**
-    * Timestamp of the application's most recent successful replication.
+    * The timestamp of the application's most recent successful replication.
     */
   var latestReplicationTime: js.UndefOr[js.Date] = js.native
+  
+  /**
+    * Status of the launch configuration.
+    */
+  var launchConfigurationStatus: js.UndefOr[AppLaunchConfigurationStatus] = js.native
   
   /**
     * Details about the latest launch of the application.
@@ -38,7 +48,7 @@ trait AppSummary extends js.Object {
   var launchDetails: js.UndefOr[LaunchDetails] = js.native
   
   /**
-    * Launch status of the application.
+    * The launch status of the application.
     */
   var launchStatus: js.UndefOr[AppLaunchStatus] = js.native
   
@@ -48,12 +58,17 @@ trait AppSummary extends js.Object {
   var launchStatusMessage: js.UndefOr[AppLaunchStatusMessage] = js.native
   
   /**
-    * Name of the application.
+    * The name of the application.
     */
   var name: js.UndefOr[AppName] = js.native
   
   /**
-    * Replication status of the application.
+    * Status of the replication configuration.
+    */
+  var replicationConfigurationStatus: js.UndefOr[AppReplicationConfigurationStatus] = js.native
+  
+  /**
+    * The replication status of the application.
     */
   var replicationStatus: js.UndefOr[AppReplicationStatus] = js.native
   
@@ -63,7 +78,7 @@ trait AppSummary extends js.Object {
   var replicationStatusMessage: js.UndefOr[AppReplicationStatusMessage] = js.native
   
   /**
-    * Name of the service role in the customer's account used by AWS SMS.
+    * The name of the service role in the customer's account used by AWS SMS.
     */
   var roleName: js.UndefOr[RoleName] = js.native
   
@@ -78,12 +93,12 @@ trait AppSummary extends js.Object {
   var statusMessage: js.UndefOr[AppStatusMessage] = js.native
   
   /**
-    * Number of server groups present in the application.
+    * The number of server groups present in the application.
     */
   var totalServerGroups: js.UndefOr[TotalServerGroups] = js.native
   
   /**
-    * Number of servers present in the application.
+    * The number of servers present in the application.
     */
   var totalServers: js.UndefOr[TotalServers] = js.native
 }
@@ -129,6 +144,12 @@ object AppSummary {
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
+    def setImportedAppId(value: ImportedAppId): Self = this.set("importedAppId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImportedAppId: Self = this.set("importedAppId", js.undefined)
+    
+    @scala.inline
     def setLastModified(value: js.Date): Self = this.set("lastModified", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -139,6 +160,12 @@ object AppSummary {
     
     @scala.inline
     def deleteLatestReplicationTime: Self = this.set("latestReplicationTime", js.undefined)
+    
+    @scala.inline
+    def setLaunchConfigurationStatus(value: AppLaunchConfigurationStatus): Self = this.set("launchConfigurationStatus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLaunchConfigurationStatus: Self = this.set("launchConfigurationStatus", js.undefined)
     
     @scala.inline
     def setLaunchDetails(value: LaunchDetails): Self = this.set("launchDetails", value.asInstanceOf[js.Any])
@@ -163,6 +190,12 @@ object AppSummary {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setReplicationConfigurationStatus(value: AppReplicationConfigurationStatus): Self = this.set("replicationConfigurationStatus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReplicationConfigurationStatus: Self = this.set("replicationConfigurationStatus", js.undefined)
     
     @scala.inline
     def setReplicationStatus(value: AppReplicationStatus): Self = this.set("replicationStatus", value.asInstanceOf[js.Any])

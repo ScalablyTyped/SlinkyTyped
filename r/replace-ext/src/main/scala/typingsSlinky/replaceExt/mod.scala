@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def apply(npath: String, ext: String): String = js.native
+  def apply(path: String, extension: String): String = js.native
 }

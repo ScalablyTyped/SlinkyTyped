@@ -13,12 +13,12 @@ trait ModifyAvailabilityZoneGroupRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * The name of the Availability Zone Group.
+    * The name of the Availability Zone group, Local Zone group, or Wavelength Zone group.
     */
   var GroupName: String = js.native
   
   /**
-    * Indicates whether to enable or disable membership. The valid values are opted-in. You must contact AWS Support to disable an Availability Zone group.
+    * Indicates whether you are opted in to the Local Zone group or Wavelength Zone group. The only valid value is opted-in. You must contact AWS Support to opt out of a Local Zone group, or Wavelength Zone group.
     */
   var OptInStatus: ModifyAvailabilityZoneOptInStatus = js.native
 }

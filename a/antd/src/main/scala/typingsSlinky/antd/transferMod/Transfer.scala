@@ -5,9 +5,10 @@ import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLUListElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.ItemUnit
 import typingsSlinky.antd.anon.ItemsUnit
 import typingsSlinky.antd.anon.LeftDataSource
-import typingsSlinky.antd.anon.NotFoundContent
+import typingsSlinky.antd.anon.RightDataSource
 import typingsSlinky.antd.renderEmptyMod.RenderEmptyHandler
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
@@ -17,10 +18,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Transfer
-  extends Component[TransferProps, TransferState, js.Any] {
+trait Transfer[RecordType /* <: TransferItem */]
+  extends Component[TransferProps[RecordType], TransferState, js.Any] {
   
-  def getLocale(transferLocale: TransferLocale, renderEmpty: RenderEmptyHandler): ItemsUnit | NotFoundContent = js.native
+  def getLocale(transferLocale: TransferLocale, renderEmpty: RenderEmptyHandler): ItemUnit | ItemsUnit = js.native
   
   def getTitles(transferLocale: TransferLocale): js.Array[String] = js.native
   
@@ -69,9 +70,9 @@ trait Transfer
   
   def renderTransfer(transferLocale: TransferLocale): ReactElement = js.native
   
-  def separateDataSource(): LeftDataSource = js.native
+  def separateDataSource(): RightDataSource[RecordType] = js.native
   
-  var separatedDataSource: LeftDataSource | Null = js.native
+  var separatedDataSource: LeftDataSource[RecordType] | Null = js.native
   
   def setStateKeys(direction: TransferDirection, keys: js.Array[String]): Unit = js.native
   def setStateKeys(

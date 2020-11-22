@@ -13,6 +13,8 @@ package object elasticacheMod {
   */
   type AZMode = typingsSlinky.awsSdk.elasticacheMod._AZMode | java.lang.String
   
+  type AccessString = java.lang.String
+  
   type AllowedNodeGroupId = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
@@ -25,9 +27,17 @@ package object elasticacheMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SET
     - typingsSlinky.awsSdk.awsSdkStrings.ROTATE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE
     - java.lang.String
   */
   type AuthTokenUpdateStrategyType = typingsSlinky.awsSdk.elasticacheMod._AuthTokenUpdateStrategyType | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.password__
+    - typingsSlinky.awsSdk.awsSdkStrings.`no-password`
+    - java.lang.String
+  */
+  type AuthenticationType = typingsSlinky.awsSdk.elasticacheMod._AuthenticationType | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.enabled__
@@ -87,7 +97,17 @@ package object elasticacheMod {
   
   type EC2SecurityGroupList = js.Array[typingsSlinky.awsSdk.elasticacheMod.EC2SecurityGroup]
   
+  type EngineType = java.lang.String
+  
   type EventList = js.Array[typingsSlinky.awsSdk.elasticacheMod.Event]
+  
+  type FilterList = js.Array[typingsSlinky.awsSdk.elasticacheMod.Filter]
+  
+  type FilterName = java.lang.String
+  
+  type FilterValue = java.lang.String
+  
+  type FilterValueList = js.Array[typingsSlinky.awsSdk.elasticacheMod.FilterValue]
   
   type GlobalNodeGroupIdList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
   
@@ -146,9 +166,20 @@ package object elasticacheMod {
   */
   type NodeUpdateStatus = typingsSlinky.awsSdk.elasticacheMod._NodeUpdateStatus | java.lang.String
   
+  type OutpostArnsList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`single-outpost`
+    - typingsSlinky.awsSdk.awsSdkStrings.`cross-outpost`
+    - java.lang.String
+  */
+  type OutpostMode = typingsSlinky.awsSdk.elasticacheMod._OutpostMode | java.lang.String
+  
   type ParameterNameValueList = js.Array[typingsSlinky.awsSdk.elasticacheMod.ParameterNameValue]
   
   type ParametersList = js.Array[typingsSlinky.awsSdk.elasticacheMod.Parameter]
+  
+  type PasswordListInput = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.enabled__
@@ -158,6 +189,8 @@ package object elasticacheMod {
   type PendingAutomaticFailoverStatus = typingsSlinky.awsSdk.elasticacheMod._PendingAutomaticFailoverStatus | java.lang.String
   
   type PreferredAvailabilityZoneList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
+  
+  type PreferredOutpostArnList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
   
   type ProcessedUpdateActionList = js.Array[typingsSlinky.awsSdk.elasticacheMod.ProcessedUpdateAction]
   
@@ -172,6 +205,8 @@ package object elasticacheMod {
   type ReplicationGroupIdList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
   
   type ReplicationGroupList = js.Array[typingsSlinky.awsSdk.elasticacheMod.ReplicationGroup]
+  
+  type ReplicationGroupOutpostArnList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
   
   type ReservedCacheNodeList = js.Array[typingsSlinky.awsSdk.elasticacheMod.ReservedCacheNode]
   
@@ -224,6 +259,8 @@ package object elasticacheMod {
     - typingsSlinky.awsSdk.awsSdkStrings.`cache-security-group`
     - typingsSlinky.awsSdk.awsSdkStrings.`cache-subnet-group`
     - typingsSlinky.awsSdk.awsSdkStrings.`replication-group`
+    - typingsSlinky.awsSdk.awsSdkStrings.user__
+    - typingsSlinky.awsSdk.awsSdkStrings.`user-group`
     - java.lang.String
   */
   type SourceType = typingsSlinky.awsSdk.elasticacheMod._SourceType | java.lang.String
@@ -237,6 +274,8 @@ package object elasticacheMod {
   type TStamp = js.Date
   
   type TagList = js.Array[typingsSlinky.awsSdk.elasticacheMod.Tag]
+  
+  type UGReplicationGroupIdList = js.Array[typingsSlinky.awsSdk.elasticacheMod.String]
   
   type UnprocessedUpdateActionList = js.Array[typingsSlinky.awsSdk.elasticacheMod.UnprocessedUpdateAction]
   
@@ -257,6 +296,24 @@ package object elasticacheMod {
   type UpdateActionStatus = typingsSlinky.awsSdk.elasticacheMod._UpdateActionStatus | java.lang.String
   
   type UpdateActionStatusList = js.Array[typingsSlinky.awsSdk.elasticacheMod.UpdateActionStatus]
+  
+  type UserGroupId = java.lang.String
+  
+  type UserGroupIdList = js.Array[typingsSlinky.awsSdk.elasticacheMod.UserGroupId]
+  
+  type UserGroupIdListInput = js.Array[typingsSlinky.awsSdk.elasticacheMod.UserGroupId]
+  
+  type UserGroupList = js.Array[typingsSlinky.awsSdk.elasticacheMod.UserGroup]
+  
+  type UserId = java.lang.String
+  
+  type UserIdList = js.Array[typingsSlinky.awsSdk.elasticacheMod.UserId]
+  
+  type UserIdListInput = js.Array[typingsSlinky.awsSdk.elasticacheMod.UserId]
+  
+  type UserList = js.Array[typingsSlinky.awsSdk.elasticacheMod.User]
+  
+  type UserName = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2012-11-15`

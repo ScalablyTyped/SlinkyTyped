@@ -6,25 +6,42 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined @storybook/addons.@storybook/addons/dist/types.StoryIdentifier & {[key: string] : any,   parameters :@storybook/addons.@storybook/addons/dist/types.Parameters,   args :@storybook/addons.@storybook/addons/dist/types.Args,   argTypes :@storybook/addons.@storybook/addons/dist/types.ArgTypes,   globals :@storybook/addons.@storybook/addons/dist/types.Args,   hooks :@storybook/addons.@storybook/addons/dist/hooks.HooksContext | undefined,   viewMode :@storybook/addons.@storybook/addons/dist/types.ViewMode | undefined} */
 @js.native
 trait StoryContext
   extends /* key */ StringDictionary[js.Any] {
   
+  var argTypes: ArgTypes = js.native
+  
+  var args: Args = js.native
+  
+  var globals: Args = js.native
+  
   var hooks: js.UndefOr[HooksContext] = js.native
   
-  var id: String = js.native
+  var id: StoryId = js.native
   
-  var kind: String = js.native
+  var kind: StoryKind = js.native
   
-  var name: String = js.native
+  var name: StoryName = js.native
   
   var parameters: Parameters = js.native
+  
+  var viewMode: js.UndefOr[ViewMode] = js.native
 }
 object StoryContext {
   
   @scala.inline
-  def apply(id: String, kind: String, name: String, parameters: Parameters): StoryContext = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any])
+  def apply(
+    argTypes: ArgTypes,
+    args: Args,
+    globals: Args,
+    id: StoryId,
+    kind: StoryKind,
+    name: StoryName,
+    parameters: Parameters
+  ): StoryContext = {
+    val __obj = js.Dynamic.literal(argTypes = argTypes.asInstanceOf[js.Any], args = args.asInstanceOf[js.Any], globals = globals.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[StoryContext]
   }
   
@@ -44,13 +61,22 @@ object StoryContext {
     }
     
     @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setArgTypes(value: ArgTypes): Self = this.set("argTypes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setKind(value: String): Self = this.set("kind", value.asInstanceOf[js.Any])
+    def setArgs(value: Args): Self = this.set("args", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setGlobals(value: Args): Self = this.set("globals", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setId(value: StoryId): Self = this.set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKind(value: StoryKind): Self = this.set("kind", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setName(value: StoryName): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParameters(value: Parameters): Self = this.set("parameters", value.asInstanceOf[js.Any])
@@ -60,5 +86,11 @@ object StoryContext {
     
     @scala.inline
     def deleteHooks: Self = this.set("hooks", js.undefined)
+    
+    @scala.inline
+    def setViewMode(value: ViewMode): Self = this.set("viewMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteViewMode: Self = this.set("viewMode", js.undefined)
   }
 }

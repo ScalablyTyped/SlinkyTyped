@@ -10,27 +10,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LocatorAddressesToLocationsParams extends Object {
   
   /**
-    * The input addresses in the format supported by the geocode service. If the service supports 'Single Line Input' the input addresses will be in the following format:
-    * ```js
-    * {
-    *   "OBJECTID": 0,
-    *   "Single Line Input":"77 Main St, Plymouth, NH 03264"
-    * }
-    * ```
+    * The input addresses in the format supported by the geocode service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#addressesToLocations)
     */
   var addresses: js.Array[_] = js.native
   
   /**
-    * Limit result to one or more categories. For example, "Populated Place" or "Scandinavian Food". Only applies to the World Geocode Service. See [Category filtering (World Geocoding Service)](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-category-filtering.htm#ESRI_SECTION1_502B3FE2028145D7B189C25B1A00E17B) for more information.
+    * Limit result to one or more categories.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#addressesToLocations)
     */
   var categories: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * Limits the results to only search in the country provided. For example `US` for United States or `SE` for Sweden. Only applies to the World Geocode Service. See the [World Geocoding Service documentation](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-category-filtering.htm) for more information.
+    * Limits the results to only search in the country provided.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#addressesToLocations)
     */

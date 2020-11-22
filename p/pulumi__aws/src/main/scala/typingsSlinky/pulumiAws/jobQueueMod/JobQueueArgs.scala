@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.jobQueueMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,6 +32,11 @@ trait JobQueueArgs extends js.Object {
     * The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
     */
   val state: Input[String] = js.native
+  
+  /**
+    * Key-value map of resource tags
+    */
+  val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
 }
 object JobQueueArgs {
   
@@ -72,5 +78,11 @@ object JobQueueArgs {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setTags(value: Input[StringDictionary[Input[String]]]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
   }
 }

@@ -18,14 +18,19 @@ trait ReadonlyArrayReactNode extends js.Object {
   val entries: js.Function0[IterableIterator[js.Tuple2[Double, ReactElement]]] = js.native
   
   val every: js.Function1[
-    /* callbackfn */ js.Function3[/* value */ ReactElement, /* index */ Double, /* array */ js.Array[ReactElement], _], 
-    Boolean
+    /* predicate */ js.Function3[
+      /* value */ ReactElement, 
+      /* index */ Double, 
+      /* array */ js.Array[ReactElement], 
+      /* is react.react.ReactNode */ Boolean
+    ], 
+    /* is std.Array<react.react.ReactNode> */ Boolean
   ] = js.native
   
   val fill: js.Function1[/* value */ ReactElement, this.type] = js.native
   
   val filter: js.Function1[
-    /* callbackfn */ js.Function3[
+    /* predicate */ js.Function3[
       /* value */ ReactElement, 
       /* index */ Double, 
       /* array */ js.Array[ReactElement], 
@@ -118,7 +123,7 @@ trait ReadonlyArrayReactNode extends js.Object {
   val slice: js.Function0[js.Array[ReactElement]] = js.native
   
   val some: js.Function1[
-    /* callbackfn */ js.Function3[/* value */ ReactElement, /* index */ Double, /* array */ js.Array[ReactElement], _], 
+    /* predicate */ js.Function3[/* value */ ReactElement, /* index */ Double, /* array */ js.Array[ReactElement], _], 
     Boolean
   ] = js.native
   
@@ -143,9 +148,14 @@ object ReadonlyArrayReactNode {
     concat: /* repeated */ js.Array[ReactElement] => js.Array[ReactElement],
     copyWithin: (/* target */ Double, /* start */ Double) => ReadonlyArrayReactNode,
     entries: () => IterableIterator[js.Tuple2[Double, ReactElement]],
-    every: /* callbackfn */ js.Function3[/* value */ ReactElement, /* index */ Double, /* array */ js.Array[ReactElement], _] => Boolean,
+    every: /* predicate */ js.Function3[
+      /* value */ ReactElement, 
+      /* index */ Double, 
+      /* array */ js.Array[ReactElement], 
+      /* is react.react.ReactNode */ Boolean
+    ] => /* is std.Array<react.react.ReactNode> */ Boolean,
     fill: /* value */ ReactElement => ReadonlyArrayReactNode,
-    filter: /* callbackfn */ js.Function3[
+    filter: /* predicate */ js.Function3[
       /* value */ ReactElement, 
       /* index */ Double, 
       /* array */ js.Array[ReactElement], 
@@ -194,7 +204,7 @@ object ReadonlyArrayReactNode {
     reverse: () => js.Array[ReactElement],
     shift: () => js.UndefOr[ReactElement],
     slice: () => js.Array[ReactElement],
-    some: /* callbackfn */ js.Function3[/* value */ ReactElement, /* index */ Double, /* array */ js.Array[ReactElement], _] => Boolean,
+    some: /* predicate */ js.Function3[/* value */ ReactElement, /* index */ Double, /* array */ js.Array[ReactElement], _] => Boolean,
     sort: () => ReadonlyArrayReactNode,
     splice: /* start */ Double => js.Array[ReactElement],
     toLocaleString: () => String,
@@ -232,7 +242,12 @@ object ReadonlyArrayReactNode {
     
     @scala.inline
     def setEvery(
-      value: /* callbackfn */ js.Function3[/* value */ ReactElement, /* index */ Double, /* array */ js.Array[ReactElement], _] => Boolean
+      value: /* predicate */ js.Function3[
+          /* value */ ReactElement, 
+          /* index */ Double, 
+          /* array */ js.Array[ReactElement], 
+          /* is react.react.ReactNode */ Boolean
+        ] => /* is std.Array<react.react.ReactNode> */ Boolean
     ): Self = this.set("every", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -240,7 +255,7 @@ object ReadonlyArrayReactNode {
     
     @scala.inline
     def setFilter(
-      value: /* callbackfn */ js.Function3[
+      value: /* predicate */ js.Function3[
           /* value */ ReactElement, 
           /* index */ Double, 
           /* array */ js.Array[ReactElement], 
@@ -347,7 +362,7 @@ object ReadonlyArrayReactNode {
     
     @scala.inline
     def setSome(
-      value: /* callbackfn */ js.Function3[/* value */ ReactElement, /* index */ Double, /* array */ js.Array[ReactElement], _] => Boolean
+      value: /* predicate */ js.Function3[/* value */ ReactElement, /* index */ Double, /* array */ js.Array[ReactElement], _] => Boolean
     ): Self = this.set("some", js.Any.fromFunction1(value))
     
     @scala.inline

@@ -1,13 +1,6 @@
 package typingsSlinky.reactMapGl.mod
 
-import typingsSlinky.reactMapGl.reactMapGlStrings.`bottom-left`
-import typingsSlinky.reactMapGl.reactMapGlStrings.`bottom-right`
-import typingsSlinky.reactMapGl.reactMapGlStrings.`top-left`
-import typingsSlinky.reactMapGl.reactMapGlStrings.`top-right`
-import typingsSlinky.reactMapGl.reactMapGlStrings.bottom
-import typingsSlinky.reactMapGl.reactMapGlStrings.left
-import typingsSlinky.reactMapGl.reactMapGlStrings.right
-import typingsSlinky.reactMapGl.reactMapGlStrings.top
+import typingsSlinky.mapboxGl.mod.Anchor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,9 +10,7 @@ trait PopupProps extends BaseControlProps {
   
   var altitude: js.UndefOr[Double] = js.native
   
-  var anchor: js.UndefOr[
-    top | `top-left` | `top-right` | bottom | `bottom-left` | `bottom-right` | left | right
-  ] = js.native
+  var anchor: js.UndefOr[Anchor] = js.native
   
   var className: js.UndefOr[String] = js.native
   
@@ -79,7 +70,7 @@ object PopupProps {
     def deleteAltitude: Self = this.set("altitude", js.undefined)
     
     @scala.inline
-    def setAnchor(value: top | `top-left` | `top-right` | bottom | `bottom-left` | `bottom-right` | left | right): Self = this.set("anchor", value.asInstanceOf[js.Any])
+    def setAnchor(value: Anchor): Self = this.set("anchor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnchor: Self = this.set("anchor", js.undefined)

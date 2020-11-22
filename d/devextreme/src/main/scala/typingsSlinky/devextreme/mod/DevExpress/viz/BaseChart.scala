@@ -8,27 +8,43 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BaseChart extends BaseWidget {
   
-  /** @name BaseChart.clearSelection() */
+  /**
+    * [descr:BaseChart.clearSelection()]
+    */
   def clearSelection(): Unit = js.native
   
-  /** @name BaseChart.getAllSeries() */
+  /**
+    * [descr:BaseChart.getAllSeries()]
+    */
   def getAllSeries(): js.Array[baseSeriesObject] = js.native
   
-  /** @name DataHelperMixin.getDataSource() */
+  /**
+    * [descr:DataHelperMixin.getDataSource()]
+    */
   def getDataSource(): DataSource = js.native
   
-  /** @name BaseChart.getSeriesByName(seriesName) */
+  /**
+    * [descr:BaseChart.getSeriesByName(seriesName)]
+    */
   def getSeriesByName(seriesName: js.Any): chartSeriesObject = js.native
   
-  /** @name BaseChart.getSeriesByPos(seriesIndex) */
+  /**
+    * [descr:BaseChart.getSeriesByPos(seriesIndex)]
+    */
   def getSeriesByPos(seriesIndex: Double): chartSeriesObject = js.native
   
-  /** @name BaseChart.hideTooltip() */
+  /**
+    * [descr:BaseChart.hideTooltip()]
+    */
   def hideTooltip(): Unit = js.native
   
-  /** @name BaseChart.refresh() */
+  /**
+    * [descr:BaseChart.refresh()]
+    */
   def refresh(): Unit = js.native
   
-  /** @name BaseChart.render(renderOptions) */
+  /**
+    * [descr:BaseChart.render(renderOptions)]
+    */
   def render(renderOptions: js.Any): Unit = js.native
 }

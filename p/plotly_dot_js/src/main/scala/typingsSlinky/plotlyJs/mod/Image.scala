@@ -12,8 +12,6 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.paper
 import typingsSlinky.plotlyJs.plotlyJsStrings.right
 import typingsSlinky.plotlyJs.plotlyJsStrings.stretch
 import typingsSlinky.plotlyJs.plotlyJsStrings.top
-import typingsSlinky.plotlyJs.plotlyJsStrings.x
-import typingsSlinky.plotlyJs.plotlyJsStrings.y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -39,13 +37,13 @@ trait Image extends js.Object {
   
   var xanchor: left | center | right = js.native
   
-  var xref: paper | x = js.native
+  var xref: paper | XAxisName = js.native
   
   var y: Double | String = js.native
   
   var yanchor: top | middle | bottom = js.native
   
-  var yref: paper | y = js.native
+  var yref: paper | YAxisName = js.native
 }
 object Image {
   
@@ -60,10 +58,10 @@ object Image {
     visible: Boolean,
     x: Double | String,
     xanchor: left | center | right,
-    xref: paper | x,
+    xref: paper | XAxisName,
     y: Double | String,
     yanchor: top | middle | bottom,
-    yref: paper | y
+    yref: paper | YAxisName
   ): Image = {
     val __obj = js.Dynamic.literal(layer = layer.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], sizex = sizex.asInstanceOf[js.Any], sizey = sizey.asInstanceOf[js.Any], sizing = sizing.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], xanchor = xanchor.asInstanceOf[js.Any], xref = xref.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], yanchor = yanchor.asInstanceOf[js.Any], yref = yref.asInstanceOf[js.Any])
     __obj.asInstanceOf[Image]
@@ -112,7 +110,7 @@ object Image {
     def setXanchor(value: left | center | right): Self = this.set("xanchor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setXref(value: paper | typingsSlinky.plotlyJs.plotlyJsStrings.x): Self = this.set("xref", value.asInstanceOf[js.Any])
+    def setXref(value: paper | XAxisName): Self = this.set("xref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setY(value: Double | String): Self = this.set("y", value.asInstanceOf[js.Any])
@@ -121,6 +119,6 @@ object Image {
     def setYanchor(value: top | middle | bottom): Self = this.set("yanchor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setYref(value: paper | y): Self = this.set("yref", value.asInstanceOf[js.Any])
+    def setYref(value: paper | YAxisName): Self = this.set("yref", value.asInstanceOf[js.Any])
   }
 }

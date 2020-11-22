@@ -68,6 +68,7 @@ import typingsSlinky.antdMobileRn.antdMobileRnStrings.words
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.yes
 import typingsSlinky.antdMobileRn.antdMobileRnStrings.yesExcludeDescendants
 import typingsSlinky.antdMobileRn.inputItemPropsTypeMod.InputItemPropsType
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.anon.Start
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
@@ -80,7 +81,6 @@ import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.DocumentSelectionState
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.KeyboardTypeOptions
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ReturnKeyTypeOptions
@@ -212,7 +212,7 @@ trait InputItemProps extends InputItemPropsType {
   
   var onKeyPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextInputKeyPressEventData], Unit]] = js.native
   
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   var onMagicTap: js.UndefOr[js.Function0[Unit]] = js.native
   
@@ -674,7 +674,7 @@ object InputItemProps {
     def deleteOnKeyPress: Self = this.set("onKeyPress", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)

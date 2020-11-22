@@ -1,29 +1,26 @@
 package typingsSlinky.xstate.anon
 
-import typingsSlinky.xstate.typesMod.ActionTypes.NullEvent
 import typingsSlinky.xstate.typesMod.EventObject
-import typingsSlinky.xstate.xstateStrings.Asterisk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `3`[TEvent /* <: EventObject */] extends js.Object {
+trait `3`[TEventType /* <: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any */, TEvent /* <: EventObject */] extends js.Object {
   
-  var event: (/* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any) | NullEvent | Asterisk = js.native
+  var `type`: TEventType = js.native
 }
 object `3` {
   
   @scala.inline
-  def apply[TEvent /* <: EventObject */](
-    event: (/* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any) | NullEvent | Asterisk
-  ): `3`[TEvent] = {
-    val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any])
-    __obj.asInstanceOf[`3`[TEvent]]
+  def apply[TEventType /* <: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any */, TEvent /* <: EventObject */](`type`: TEventType): `3`[TEventType, TEvent] = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[`3`[TEventType, TEvent]]
   }
   
   @scala.inline
-  implicit class `3Ops`[Self <: `3`[_], TEvent /* <: EventObject */] (val x: Self with `3`[TEvent]) extends AnyVal {
+  implicit class `3Ops`[Self <: `3`[_, _], TEventType /* <: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any */, TEvent /* <: EventObject */] (val x: Self with (`3`[TEventType, TEvent])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -38,8 +35,6 @@ object `3` {
     }
     
     @scala.inline
-    def setEvent(
-      value: (/* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any) | NullEvent | Asterisk
-    ): Self = this.set("event", value.asInstanceOf[js.Any])
+    def setType(value: TEventType): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

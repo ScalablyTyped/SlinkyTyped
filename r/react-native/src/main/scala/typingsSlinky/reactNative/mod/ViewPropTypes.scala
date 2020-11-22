@@ -2,6 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
 import typingsSlinky.propTypes.mod.Validator
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.reactNativeStrings.`box-none`
 import typingsSlinky.reactNative.reactNativeStrings.`box-only`
@@ -77,7 +78,7 @@ object ViewPropTypes extends js.Object {
   
   var onAccessibilityTap: js.UndefOr[Validator[js.UndefOr[js.Function0[Unit]]]] = js.native
   
-  var onLayout: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]] = js.native
+  var onLayout: js.UndefOr[Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]]]] = js.native
   
   var onMagicTap: js.UndefOr[Validator[js.UndefOr[js.Function0[Unit]]]] = js.native
   

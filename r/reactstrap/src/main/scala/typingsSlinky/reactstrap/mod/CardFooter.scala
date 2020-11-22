@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "CardFooter")
+@JSImport("reactstrap/es", "CardFooter")
 @js.native
-class CardFooter[T] ()
+class CardFooter ()
   extends Component[CardFooterProps, js.Object, js.Any]

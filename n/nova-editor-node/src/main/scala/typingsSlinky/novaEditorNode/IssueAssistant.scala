@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IssueAssistant extends js.Object {
   
-  def provideIssues(editor: TextEditor): js.Array[Issue] = js.native
+  def provideIssues(editor: TextEditor): AssistantArray[Issue] = js.native
 }
 object IssueAssistant {
   
   @scala.inline
-  def apply(provideIssues: TextEditor => js.Array[Issue]): IssueAssistant = {
+  def apply(provideIssues: TextEditor => AssistantArray[Issue]): IssueAssistant = {
     val __obj = js.Dynamic.literal(provideIssues = js.Any.fromFunction1(provideIssues))
     __obj.asInstanceOf[IssueAssistant]
   }
@@ -33,6 +33,6 @@ object IssueAssistant {
     }
     
     @scala.inline
-    def setProvideIssues(value: TextEditor => js.Array[Issue]): Self = this.set("provideIssues", js.Any.fromFunction1(value))
+    def setProvideIssues(value: TextEditor => AssistantArray[Issue]): Self = this.set("provideIssues", js.Any.fromFunction1(value))
   }
 }

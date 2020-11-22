@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteMedicalVocabularyRequest extends js.Object {
   
   /**
-    * The name of the vocabulary you are choosing to delete.
+    * The name of the vocabulary that you want to delete.
     */
   var VocabularyName: typingsSlinky.awsSdk.transcribeserviceMod.VocabularyName = js.native
 }

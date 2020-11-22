@@ -10,7 +10,7 @@ trait `21` extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle
     */
-  var lineStyle: js.UndefOr[CurvenessOpacity] = js.native
+  var lineStyle: js.UndefOr[ColorCurveness] = js.native
 }
 object `21` {
   
@@ -36,7 +36,7 @@ object `21` {
     }
     
     @scala.inline
-    def setLineStyle(value: CurvenessOpacity): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
+    def setLineStyle(value: ColorCurveness): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLineStyle: Self = this.set("lineStyle", js.undefined)

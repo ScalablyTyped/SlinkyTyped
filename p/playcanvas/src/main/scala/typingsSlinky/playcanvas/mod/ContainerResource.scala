@@ -6,6 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /**
   * Container for a list of animations, textures, materials and a model.
+  * @property animations - Array of assets of animations in the GLB container.
+  * @property textures - Array of assets of textures in the GLB container.
+  * @property materials - Array of assets of materials in the GLB container.
   * @param data - The loaded GLB data.
   */
 @JSImport("playcanvas", "ContainerResource")

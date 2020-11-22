@@ -1,6 +1,6 @@
 package typingsSlinky.webpackPluginServe.mod
 
-import typingsSlinky.fastGlob.mod.Options
+import typingsSlinky.globby.mod.GlobbyOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +10,7 @@ trait StaticObject extends js.Object {
   
   var glob: js.UndefOr[String | js.Array[String]] = js.native
   
-  var options: js.UndefOr[Options] = js.native
+  var options: js.UndefOr[GlobbyOptions] = js.native
 }
 object StaticObject {
   
@@ -45,7 +45,7 @@ object StaticObject {
     def deleteGlob: Self = this.set("glob", js.undefined)
     
     @scala.inline
-    def setOptions(value: Options): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: GlobbyOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

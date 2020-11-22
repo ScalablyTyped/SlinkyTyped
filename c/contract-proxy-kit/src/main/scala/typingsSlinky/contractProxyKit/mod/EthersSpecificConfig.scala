@@ -1,5 +1,7 @@
 package typingsSlinky.contractProxyKit.mod
 
+import typingsSlinky.contractProxyKit.anon.Typeofethers
+import typingsSlinky.ethers.mod.ethers.Signer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,17 +11,14 @@ trait EthersSpecificConfig
   extends CommonConfig
      with CPKConfig {
   
-  var ethers: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ethers */ js.Any = js.native
+  var ethers: Typeofethers = js.native
   
-  var signer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ethers.Signer */ js.Any = js.native
+  var signer: Signer = js.native
 }
 object EthersSpecificConfig {
   
   @scala.inline
-  def apply(
-    ethers: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ethers */ js.Any,
-    signer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ethers.Signer */ js.Any
-  ): EthersSpecificConfig = {
+  def apply(ethers: Typeofethers, signer: Signer): EthersSpecificConfig = {
     val __obj = js.Dynamic.literal(ethers = ethers.asInstanceOf[js.Any], signer = signer.asInstanceOf[js.Any])
     __obj.asInstanceOf[EthersSpecificConfig]
   }
@@ -40,11 +39,9 @@ object EthersSpecificConfig {
     }
     
     @scala.inline
-    def setEthers(value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ethers */ js.Any): Self = this.set("ethers", value.asInstanceOf[js.Any])
+    def setEthers(value: Typeofethers): Self = this.set("ethers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSigner(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ethers.Signer */ js.Any
-    ): Self = this.set("signer", value.asInstanceOf[js.Any])
+    def setSigner(value: Signer): Self = this.set("signer", value.asInstanceOf[js.Any])
   }
 }

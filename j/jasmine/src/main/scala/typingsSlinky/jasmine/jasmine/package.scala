@@ -24,17 +24,19 @@ package object jasmine {
     typingsSlinky.jasmine.jasmine.CustomMatcher
   ]
   
+  type CustomObjectFormatter = js.Function1[/* value */ js.Any, js.UndefOr[java.lang.String]]
+  
   /* Rewritten from type alias, can be one of: 
     - T
     - typingsSlinky.jasmine.jasmine.ObjectContaining[T]
     - typingsSlinky.jasmine.jasmine.AsymmetricMatcher[js.Any]
     - typingsSlinky.jasmine.jasmine.Any
-    - typingsSlinky.jasmine.jasmine.Spy
+    - typingsSlinky.jasmine.jasmine.Spy[typingsSlinky.jasmine.jasmine.Func]
     - / * import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: jasmine.jasmine.ExpectedRecursive<T[K]>}
     * / typingsSlinky.jasmine.jasmineStrings.Expected with org.scalablytyped.runtime.TopLevel[T]
   */
-  type Expected[T] = typingsSlinky.jasmine.jasmine._Expected[T] | typingsSlinky.jasmine.jasmine.AsymmetricMatcher[js.Any] | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  type Expected[T] = typingsSlinky.jasmine.jasmine._Expected[T] | typingsSlinky.jasmine.jasmine.AsymmetricMatcher[js.Any] | typingsSlinky.jasmine.jasmine.Spy[typingsSlinky.jasmine.jasmine.Func] | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]: jasmine.jasmine.ExpectedRecursive<T[K]>}
     */ typingsSlinky.jasmine.jasmineStrings.Expected with org.scalablytyped.runtime.TopLevel[T]) | T
   
@@ -44,9 +46,34 @@ package object jasmine {
   
   type Func = js.Function1[/* repeated */ js.Any, js.Any]
   
-  type ImplementationCallback = js.Function0[js.Thenable[js.Any]] | (js.Function1[/* done */ typingsSlinky.jasmine.DoneFn, scala.Unit])
+  type ImplementationCallback = (js.Function0[js.Thenable[js.Any] | scala.Unit]) | (js.Function1[/* done */ typingsSlinky.jasmine.DoneFn, scala.Unit])
+  
+  type MatchableArgs[Fn] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ K in keyof any ]: any[K] | jasmine.jasmine.AsymmetricMatcher<any>}
+    */ typingsSlinky.jasmine.jasmineStrings.MatchableArgs with org.scalablytyped.runtime.TopLevel[js.Any]
+  
+  /**
+    * It's like SpyObj, but doesn't verify argument/return types for functions.
+    * Useful if TS cannot correctly infer type for complex objects.
+    */
+  type NonTypedSpyObj[T] = typingsSlinky.jasmine.jasmine.SpyObj[
+    /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ K in keyof T ]: T[K] extends jasmine.jasmine.Func? jasmine.jasmine.Func : T[K]}
+    */ typingsSlinky.jasmine.jasmineStrings.NonTypedSpyObj with org.scalablytyped.runtime.TopLevel[js.Any]
+  ]
   
   type PassedExpectation = typingsSlinky.jasmine.jasmine.CustomReportExpectation
+  
+  /**
+    * Obtains the type that a promise-returning function can be rejected with.
+    * This is so we can use .and.rejectWith() only for functions that return a promise.
+    */
+  type PromisedRejectType[Fn /* <: js.Function */] = js.Any
+  
+  /**
+    * Obtains the promised type that a promise-returning function resolves to.
+    */
+  type PromisedReturnType[Fn /* <: typingsSlinky.jasmine.jasmine.Func */] = js.Any
   
   type SpecFunction = js.Function1[/* spec */ js.UndefOr[typingsSlinky.jasmine.jasmine.Spec], scala.Unit]
   

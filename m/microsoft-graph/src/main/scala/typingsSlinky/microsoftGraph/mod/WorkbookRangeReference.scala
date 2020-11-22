@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WorkbookRangeReference extends js.Object {
   
-  var address: js.UndefOr[String] = js.native
+  var address: js.UndefOr[NullableOption[String]] = js.native
 }
 object WorkbookRangeReference {
   
@@ -33,9 +33,12 @@ object WorkbookRangeReference {
     }
     
     @scala.inline
-    def setAddress(value: String): Self = this.set("address", value.asInstanceOf[js.Any])
+    def setAddress(value: NullableOption[String]): Self = this.set("address", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAddress: Self = this.set("address", js.undefined)
+    
+    @scala.inline
+    def setAddressNull: Self = this.set("address", null)
   }
 }

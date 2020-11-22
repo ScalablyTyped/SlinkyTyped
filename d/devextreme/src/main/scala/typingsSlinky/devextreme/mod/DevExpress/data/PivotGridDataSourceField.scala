@@ -44,123 +44,201 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PivotGridDataSourceField extends js.Object {
   
-  /** @name PivotGridDataSource.Options.fields.allowCrossGroupCalculation */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.allowCrossGroupCalculation]
+    */
   var allowCrossGroupCalculation: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.allowExpandAll */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.allowExpandAll]
+    */
   var allowExpandAll: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.allowFiltering */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.allowFiltering]
+    */
   var allowFiltering: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.allowSorting */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.allowSorting]
+    */
   var allowSorting: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.allowSortingBySummary */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.allowSortingBySummary]
+    */
   var allowSortingBySummary: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.area */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.area]
+    */
   var area: js.UndefOr[column | typingsSlinky.devextreme.devextremeStrings.data | filter | row] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.areaIndex */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.areaIndex]
+    */
   var areaIndex: js.UndefOr[Double] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.calculateCustomSummary */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.calculateCustomSummary]
+    */
   var calculateCustomSummary: js.UndefOr[js.Function1[/* options */ SummaryProcess, _]] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.calculateSummaryValue */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.calculateSummaryValue]
+    */
   var calculateSummaryValue: js.UndefOr[js.Function1[/* e */ dxPivotGridSummaryCell, Double]] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.caption */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.caption]
+    */
   var caption: js.UndefOr[String] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.customizeText */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* cellInfo */ Value, String]] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.dataField */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.dataField]
+    */
   var dataField: js.UndefOr[String] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.dataType */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.dataType]
+    */
   var dataType: js.UndefOr[date | number | string_] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.displayFolder */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.displayFolder]
+    */
   var displayFolder: js.UndefOr[String] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.expanded */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.expanded]
+    */
   var expanded: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.filterType */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.filterType]
+    */
   var filterType: js.UndefOr[exclude | include] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.filterValues */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.filterValues]
+    */
   var filterValues: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.format */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.format]
+    */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.groupIndex */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.groupIndex]
+    */
   var groupIndex: js.UndefOr[Double] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.groupInterval */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.groupInterval]
+    */
   var groupInterval: js.UndefOr[day | dayOfWeek | month | quarter | year | Double] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.groupName */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.groupName]
+    */
   var groupName: js.UndefOr[String] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.headerFilter */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.headerFilter]
+    */
   var headerFilter: js.UndefOr[AllowSearch] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.isMeasure */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.isMeasure]
+    */
   var isMeasure: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.name */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.runningTotal */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.runningTotal]
+    */
   var runningTotal: js.UndefOr[column | row] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.selector */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.selector]
+    */
   var selector: js.UndefOr[js.Function] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.showGrandTotals */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.showGrandTotals]
+    */
   var showGrandTotals: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.showTotals */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.showTotals]
+    */
   var showTotals: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.showValues */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.showValues]
+    */
   var showValues: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.sortBy */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.sortBy]
+    */
   var sortBy: js.UndefOr[displayText | value | none] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.sortBySummaryField */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.sortBySummaryField]
+    */
   var sortBySummaryField: js.UndefOr[String] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.sortBySummaryPath */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.sortBySummaryPath]
+    */
   var sortBySummaryPath: js.UndefOr[js.Array[Double | String]] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.sortOrder */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.sortOrder]
+    */
   var sortOrder: js.UndefOr[asc | desc] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.sortingMethod */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.sortingMethod]
+    */
   var sortingMethod: js.UndefOr[js.Function2[/* a */ Children, /* b */ Children, Double]] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.summaryDisplayMode */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.summaryDisplayMode]
+    */
   var summaryDisplayMode: js.UndefOr[
     absoluteVariation | percentOfColumnGrandTotal | percentOfColumnTotal | percentOfGrandTotal | percentOfRowGrandTotal | percentOfRowTotal | percentVariation
   ] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.summaryType */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.summaryType]
+    */
   var summaryType: js.UndefOr[avg | count | custom | max | min | sum | String] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.visible */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.width */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.width]
+    */
   var width: js.UndefOr[Double] = js.native
   
-  /** @name PivotGridDataSource.Options.fields.wordWrapEnabled */
+  /**
+    * [descr:PivotGridDataSource.Options.fields.wordWrapEnabled]
+    */
   var wordWrapEnabled: js.UndefOr[Boolean] = js.native
 }
 object PivotGridDataSourceField {

@@ -15,7 +15,7 @@ object FlexBox
       ReactComponentClass[
         BoxProps with (FlexProps[
           RequiredTheme, 
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ _
         ])
       ]
     ]

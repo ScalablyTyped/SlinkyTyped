@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BasicsProps
   extends OpacityProps
      with OverflowProps
-     with TransitionProps
+     with TransitionProps[StyledSystemLength]
 object BasicsProps {
   
   @scala.inline

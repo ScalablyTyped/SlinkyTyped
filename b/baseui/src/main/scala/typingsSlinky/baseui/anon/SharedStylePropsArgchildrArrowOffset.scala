@@ -37,6 +37,9 @@ trait SharedStylePropsArgchildrArrowOffset extends js.Object {
     topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
   ] = js.native
   
+  @JSName("$popoverMargin")
+  var $popoverMargin: js.UndefOr[Double] = js.native
+  
   @JSName("$popoverOffset")
   var $popoverOffset: js.UndefOr[Offset] = js.native
   
@@ -93,6 +96,12 @@ object SharedStylePropsArgchildrArrowOffset {
     
     @scala.inline
     def delete$placement: Self = this.set("$placement", js.undefined)
+    
+    @scala.inline
+    def set$popoverMargin(value: Double): Self = this.set("$popoverMargin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def delete$popoverMargin: Self = this.set("$popoverMargin", js.undefined)
     
     @scala.inline
     def set$popoverOffset(value: Offset): Self = this.set("$popoverOffset", value.asInstanceOf[js.Any])

@@ -28,7 +28,9 @@ trait PopoverProps extends WithThemeStyles[PopoverStyle] {
   
   var placement: js.UndefOr[Placement | auto] = js.native
   
-  var renderOverlayComponent: js.UndefOr[js.Function1[/* node */ ReactElement, ReactElement]] = js.native
+  var renderOverlayComponent: js.UndefOr[
+    js.Function2[/* node */ ReactElement, /* closePopover */ js.Function0[Unit], ReactElement]
+  ] = js.native
   
   var triggerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
@@ -100,7 +102,7 @@ object PopoverProps {
     def deletePlacement: Self = this.set("placement", js.undefined)
     
     @scala.inline
-    def setRenderOverlayComponent(value: /* node */ ReactElement => ReactElement): Self = this.set("renderOverlayComponent", js.Any.fromFunction1(value))
+    def setRenderOverlayComponent(value: (/* node */ ReactElement, /* closePopover */ js.Function0[Unit]) => ReactElement): Self = this.set("renderOverlayComponent", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteRenderOverlayComponent: Self = this.set("renderOverlayComponent", js.undefined)

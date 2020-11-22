@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/eventstream-marshaller/build/splitMessage", "splitMessage")
+@JSImport("@aws-sdk/eventstream-marshaller/dist/cjs/splitMessage", "splitMessage")
 @js.native
 object splitMessage extends js.Object {
   

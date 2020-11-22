@@ -1,7 +1,7 @@
 
 # Scala.js typings for terminal-image
 
-Typings are for version 1.2.0
+Typings are for version 1.2.1
 
 ## Library description:
 Display images in the terminal

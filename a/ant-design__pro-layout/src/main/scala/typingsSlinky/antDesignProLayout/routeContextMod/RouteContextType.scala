@@ -2,11 +2,13 @@ package typingsSlinky.antDesignProLayout.routeContextMod
 
 import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
 import typingsSlinky.antDesignProLayout.anon.Id
+import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.mix
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.side
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.top
 import typingsSlinky.antDesignProLayout.defaultSettingsMod.ContentWidth
+import typingsSlinky.antDesignProLayout.defaultSettingsMod.PureSettings
 import typingsSlinky.antDesignProLayout.getBreadcrumbPropsMod.BreadcrumbListReturn
 import typingsSlinky.antDesignProLayout.typingsMod.MenuDataItem
 import typingsSlinky.antd.menuContextMod.MenuTheme
@@ -28,6 +30,8 @@ trait RouteContextType extends js.Object {
   
   var contentWidth: js.UndefOr[ContentWidth] = js.native
   
+  var currentMenu: js.UndefOr[PureSettings with MenuDataItem] = js.native
+  
   var fixSiderbar: js.UndefOr[Boolean] = js.native
   
   var fixedHeader: js.UndefOr[Boolean] = js.native
@@ -42,6 +46,8 @@ trait RouteContextType extends js.Object {
   
   var headerHeight: js.UndefOr[Double] = js.native
   
+  var headerTheme: js.UndefOr[MenuTheme] = js.native
+  
   var iconfontUrl: js.UndefOr[String] = js.native
   
   var isChildrenLayout: js.UndefOr[Boolean] = js.native
@@ -49,6 +55,10 @@ trait RouteContextType extends js.Object {
   var isMobile: js.UndefOr[Boolean] = js.native
   
   var layout: js.UndefOr[side | top | mix] = js.native
+  
+  var matchMenuKeys: js.UndefOr[js.Array[String]] = js.native
+  
+  var matchMenus: js.UndefOr[js.Array[MenuDataItem]] = js.native
   
   var menu: js.UndefOr[DefaultOpenAll] = js.native
   
@@ -68,7 +78,7 @@ trait RouteContextType extends js.Object {
   
   var splitMenus: js.UndefOr[Boolean] = js.native
   
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String | `false`] = js.native
 }
 object RouteContextType {
   
@@ -118,6 +128,12 @@ object RouteContextType {
     def deleteContentWidth: Self = this.set("contentWidth", js.undefined)
     
     @scala.inline
+    def setCurrentMenu(value: PureSettings with MenuDataItem): Self = this.set("currentMenu", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCurrentMenu: Self = this.set("currentMenu", js.undefined)
+    
+    @scala.inline
     def setFixSiderbar(value: Boolean): Self = this.set("fixSiderbar", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -160,6 +176,12 @@ object RouteContextType {
     def deleteHeaderHeight: Self = this.set("headerHeight", js.undefined)
     
     @scala.inline
+    def setHeaderTheme(value: MenuTheme): Self = this.set("headerTheme", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderTheme: Self = this.set("headerTheme", js.undefined)
+    
+    @scala.inline
     def setIconfontUrl(value: String): Self = this.set("iconfontUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -182,6 +204,24 @@ object RouteContextType {
     
     @scala.inline
     def deleteLayout: Self = this.set("layout", js.undefined)
+    
+    @scala.inline
+    def setMatchMenuKeysVarargs(value: String*): Self = this.set("matchMenuKeys", js.Array(value :_*))
+    
+    @scala.inline
+    def setMatchMenuKeys(value: js.Array[String]): Self = this.set("matchMenuKeys", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMatchMenuKeys: Self = this.set("matchMenuKeys", js.undefined)
+    
+    @scala.inline
+    def setMatchMenusVarargs(value: MenuDataItem*): Self = this.set("matchMenus", js.Array(value :_*))
+    
+    @scala.inline
+    def setMatchMenus(value: js.Array[MenuDataItem]): Self = this.set("matchMenus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMatchMenus: Self = this.set("matchMenus", js.undefined)
     
     @scala.inline
     def setMenu(value: DefaultOpenAll): Self = this.set("menu", value.asInstanceOf[js.Any])
@@ -241,7 +281,7 @@ object RouteContextType {
     def deleteSplitMenus: Self = this.set("splitMenus", js.undefined)
     
     @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: String | `false`): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)

@@ -25,8 +25,6 @@ trait DirectLineMeasurement3DViewModel extends Accessor {
     * Clears the current measurement.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DirectLineMeasurement3D-DirectLineMeasurement3DViewModel.html#clear)
-    *
-    *
     */
   def clear(): Unit = js.native
   
@@ -34,8 +32,6 @@ trait DirectLineMeasurement3DViewModel extends Accessor {
     * Clears the current measurement.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DirectLineMeasurement3D-DirectLineMeasurement3DViewModel.html#clearMeasurement)
-    *
-    *
     */
   def clearMeasurement(): Unit = js.native
   
@@ -50,8 +46,6 @@ trait DirectLineMeasurement3DViewModel extends Accessor {
     * Starts a new measurement.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DirectLineMeasurement3D-DirectLineMeasurement3DViewModel.html#newMeasurement)
-    *
-    *
     */
   def newMeasurement(): Unit = js.native
   
@@ -59,25 +53,13 @@ trait DirectLineMeasurement3DViewModel extends Accessor {
     * Starts a new measurement.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DirectLineMeasurement3D-DirectLineMeasurement3DViewModel.html#start)
-    *
-    *
     */
   def start(): Unit = js.native
   
   /**
     * The view model's state.
     *
-    * Value | Description
-    * ------------|-------------
-    * disabled | not ready yet
-    * ready | ready for measuring
-    * measuring | currently measuring
-    * measured | measuring has finished
-    *
-    *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-DirectLineMeasurement3D-DirectLineMeasurement3DViewModel.html#state)
-    *
-    * @default disabled
     */
   val state: disabled | ready | measuring | measured = js.native
   

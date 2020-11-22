@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object dragAndDropMod {
   
   type DragAndDropCalendar[TEvent /* <: js.Object */, TResource /* <: js.Object */] = slinky.core.ReactComponentClass[
-    (typingsSlinky.reactBigCalendar.mod.CalendarProps[TEvent, TResource]) with typingsSlinky.reactBigCalendar.dragAndDropMod.withDragAndDropProps[TEvent]
+    typingsSlinky.reactBigCalendar.dragAndDropMod.DragAndDropCalendarProps[TEvent, TResource]
   ]
 }

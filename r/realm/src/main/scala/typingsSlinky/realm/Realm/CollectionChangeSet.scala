@@ -11,8 +11,6 @@ trait CollectionChangeSet extends js.Object {
   
   var insertions: js.Array[Double] = js.native
   
-  var modifications: js.Array[Double] = js.native
-  
   var newModifications: js.Array[Double] = js.native
   
   var oldModifications: js.Array[Double] = js.native
@@ -23,11 +21,10 @@ object CollectionChangeSet {
   def apply(
     deletions: js.Array[Double],
     insertions: js.Array[Double],
-    modifications: js.Array[Double],
     newModifications: js.Array[Double],
     oldModifications: js.Array[Double]
   ): CollectionChangeSet = {
-    val __obj = js.Dynamic.literal(deletions = deletions.asInstanceOf[js.Any], insertions = insertions.asInstanceOf[js.Any], modifications = modifications.asInstanceOf[js.Any], newModifications = newModifications.asInstanceOf[js.Any], oldModifications = oldModifications.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(deletions = deletions.asInstanceOf[js.Any], insertions = insertions.asInstanceOf[js.Any], newModifications = newModifications.asInstanceOf[js.Any], oldModifications = oldModifications.asInstanceOf[js.Any])
     __obj.asInstanceOf[CollectionChangeSet]
   }
   
@@ -57,12 +54,6 @@ object CollectionChangeSet {
     
     @scala.inline
     def setInsertions(value: js.Array[Double]): Self = this.set("insertions", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setModificationsVarargs(value: Double*): Self = this.set("modifications", js.Array(value :_*))
-    
-    @scala.inline
-    def setModifications(value: js.Array[Double]): Self = this.set("modifications", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNewModificationsVarargs(value: Double*): Self = this.set("newModifications", js.Array(value :_*))

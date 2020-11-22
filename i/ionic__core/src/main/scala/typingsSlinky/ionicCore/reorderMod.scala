@@ -1,6 +1,7 @@
 package typingsSlinky.ionicCore
 
 import org.scalajs.dom.raw.Event
+import typingsSlinky.ionicCore.componentsMod.global.HTMLIonReorderElement
 import typingsSlinky.ionicCore.stencilPublicRuntimeMod.ComponentInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,6 +13,8 @@ object reorderMod extends js.Object {
   
   @js.native
   class Reorder () extends ComponentInterface {
+    
+    var el: HTMLIonReorderElement = js.native
     
     def onClick(ev: Event): Unit = js.native
     

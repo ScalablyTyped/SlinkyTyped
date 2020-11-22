@@ -30,15 +30,13 @@ import typingsSlinky.awsSdkClientLambdaNode.updateAliasExceptionsUnionMod.Update
 import typingsSlinky.awsSdkClientLambdaNode.updateEventSourceMappingExceptionsUnionMod.UpdateEventSourceMappingExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateFunctionCodeExceptionsUnionMod.UpdateFunctionCodeExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateFunctionConfigurationExceptionsUnionMod.UpdateFunctionConfigurationExceptionsUnion
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ServiceException
-  extends typingsSlinky.awsSdkTypes.exceptionMod.ServiceException[ServiceExceptionDetails]
-     with AddPermissionExceptionsUnion
+  extends AddPermissionExceptionsUnion
      with CreateAliasExceptionsUnion
      with CreateEventSourceMappingExceptionsUnion
      with CreateFunctionExceptionsUnion
@@ -67,12 +65,34 @@ trait ServiceException
      with UpdateAliasExceptionsUnion
      with UpdateEventSourceMappingExceptionsUnion
      with UpdateFunctionCodeExceptionsUnion
-     with UpdateFunctionConfigurationExceptionsUnion
+     with UpdateFunctionConfigurationExceptionsUnion {
+  
+  var name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ServiceException = js.native
+}
 object ServiceException {
   
   @scala.inline
-  def apply($metadata: ResponseMetadata, details: ServiceExceptionDetails, message: String, name: String): ServiceException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ServiceException): ServiceException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ServiceException]
+  }
+  
+  @scala.inline
+  implicit class ServiceExceptionOps[Self <: ServiceException] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
+    }
+    
+    @scala.inline
+    def setName(value: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ServiceException): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

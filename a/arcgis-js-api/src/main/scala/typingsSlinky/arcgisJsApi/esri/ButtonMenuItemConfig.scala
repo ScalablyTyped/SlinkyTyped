@@ -38,7 +38,7 @@ trait ButtonMenuItemConfig extends Object {
   var items: js.UndefOr[js.Array[ButtonMenuItem]] = js.native
   
   /**
-    * The label of the menu item. This can be used in conjunction with the [iconClass](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable.html#iconClass) property.
+    * The label of the menu item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable.html#ButtonMenuItemConfig)
     */

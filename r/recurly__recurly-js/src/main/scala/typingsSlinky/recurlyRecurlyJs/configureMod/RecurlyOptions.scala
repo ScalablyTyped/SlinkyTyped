@@ -1,5 +1,6 @@
 package typingsSlinky.recurlyRecurlyJs.configureMod
 
+import typingsSlinky.recurlyRecurlyJs.anon.All
 import typingsSlinky.recurlyRecurlyJs.anon.Braintree
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,6 +12,11 @@ trait RecurlyOptions extends js.Object {
   var cors: js.UndefOr[Boolean] = js.native
   
   var currency: js.UndefOr[String] = js.native
+  
+  /**
+    * @deprecated Use {@link https://developers.recurly.com/reference/recurly-js/index.html#elements|Elements} instead.
+    */
+  var fields: js.UndefOr[All] = js.native
   
   var fraud: js.UndefOr[Braintree] = js.native
   
@@ -57,6 +63,12 @@ object RecurlyOptions {
     
     @scala.inline
     def deleteCurrency: Self = this.set("currency", js.undefined)
+    
+    @scala.inline
+    def setFields(value: All): Self = this.set("fields", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFields: Self = this.set("fields", js.undefined)
     
     @scala.inline
     def setFraud(value: Braintree): Self = this.set("fraud", value.asInstanceOf[js.Any])

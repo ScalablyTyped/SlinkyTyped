@@ -2,9 +2,9 @@ package typingsSlinky.echarts.echarts.EChartOption
 
 import typingsSlinky.echarts.anon.BorderColorSaturation
 import typingsSlinky.echarts.anon.Bottom
+import typingsSlinky.echarts.anon.Children
 import typingsSlinky.echarts.anon.ChildrenVisibleMin
 import typingsSlinky.echarts.anon.Ellipsis
-import typingsSlinky.echarts.anon.Link
 import typingsSlinky.echarts.anon.TextShadowColor
 import typingsSlinky.echarts.anon.UpperLabel
 import typingsSlinky.echarts.echarts.EChartOption.SeriesTreemap.DataObject
@@ -604,7 +604,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.silent
     */
-  var silent: js.UndefOr[Link] = js.native
+  var silent: js.UndefOr[Children] = js.native
   
   /**
     * The expected square ratio.
@@ -1024,7 +1024,7 @@ object SeriesTreemap_ {
     def deleteRoam: Self = this.set("roam", js.undefined)
     
     @scala.inline
-    def setSilent(value: Link): Self = this.set("silent", value.asInstanceOf[js.Any])
+    def setSilent(value: Children): Self = this.set("silent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSilent: Self = this.set("silent", js.undefined)

@@ -13,13 +13,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxLinearGaugeRangeContainer extends BaseGaugeRangeContainer {
   
-  /** @name dxLinearGauge.Options.rangeContainer.horizontalOrientation */
+  /**
+    * [descr:dxLinearGauge.Options.rangeContainer.horizontalOrientation]
+    */
   var horizontalOrientation: js.UndefOr[center | left | right] = js.native
   
-  /** @name dxLinearGauge.Options.rangeContainer.verticalOrientation */
+  /**
+    * [descr:dxLinearGauge.Options.rangeContainer.verticalOrientation]
+    */
   var verticalOrientation: js.UndefOr[bottom | center | top] = js.native
   
-  /** @name dxLinearGauge.Options.rangeContainer.width */
+  /**
+    * [descr:dxLinearGauge.Options.rangeContainer.width]
+    */
   var width: js.UndefOr[Start | Double] = js.native
 }
 object dxLinearGaugeRangeContainer {

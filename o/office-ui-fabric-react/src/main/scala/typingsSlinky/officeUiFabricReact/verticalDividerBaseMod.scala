@@ -10,5 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object verticalDividerBaseMod extends js.Object {
   
-  def VerticalDividerBase(props: IVerticalDividerProps): ReactElement = js.native
+  @js.native
+  object VerticalDividerBase extends js.Object {
+    
+    def apply(props: IVerticalDividerProps): ReactElement = js.native
+    
+    var displayName: String = js.native
+  }
 }

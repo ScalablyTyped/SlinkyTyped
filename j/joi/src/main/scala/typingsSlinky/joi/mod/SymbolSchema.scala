@@ -5,7 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.joi.mod._Schema because Already inherited */ @js.native
 trait SymbolSchema extends AnySchema {
   
   def map(iterable: StringDictionary[js.Symbol]): this.type = js.native

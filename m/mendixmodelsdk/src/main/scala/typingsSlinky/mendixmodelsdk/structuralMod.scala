@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
@@ -18,10 +19,15 @@ object structuralMod extends js.Object {
   @js.native
   class StructuralChildListProperty[T /* <: IStructuralUnit | IModelUnit */] protected ()
     extends AbstractProperty[js.Array[T], IList[T]] {
-    def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String, value: js.Array[T]) = this()
     def this(
       declaredOn: IStructureClass,
-      parent: StructuralUnit,
+      parent: StructuralUnit[IAbstractModel],
+      name: String,
+      value: js.Array[T]
+    ) = this()
+    def this(
+      declaredOn: IStructureClass,
+      parent: StructuralUnit[IAbstractModel],
       name: String,
       value: js.Array[T],
       targetRefType: String
@@ -40,12 +46,18 @@ object structuralMod extends js.Object {
   
   @js.native
   class StructuralChildProperty[T /* <: IStructuralUnit | IModelUnit */] protected () extends AbstractProperty[T | Null, IObservableValue[T | Null]] {
-    def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String) = this()
-    def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String, value: T) = this()
-    def this(declaredOn: IStructureClass, parent: StructuralUnit, name: String, value: T, targetRefType: String) = this()
+    def this(declaredOn: IStructureClass, parent: StructuralUnit[IAbstractModel], name: String) = this()
+    def this(declaredOn: IStructureClass, parent: StructuralUnit[IAbstractModel], name: String, value: T) = this()
     def this(
       declaredOn: IStructureClass,
-      parent: StructuralUnit,
+      parent: StructuralUnit[IAbstractModel],
+      name: String,
+      value: T,
+      targetRefType: String
+    ) = this()
+    def this(
+      declaredOn: IStructureClass,
+      parent: StructuralUnit[IAbstractModel],
       name: String,
       value: Null,
       targetRefType: String

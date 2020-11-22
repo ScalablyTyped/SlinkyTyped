@@ -92,6 +92,13 @@ trait ConfigOptions extends js.Object {
     *     <li>ChromeCanary (launcher comes installed with Karma)</li>
     *     <li>PhantomJS (launcher comes installed with Karma)</li>
     *     <li>Firefox (launcher requires karma-firefox-launcher plugin)</li>
+    *     <li>FirefoxHeadless (launcher requires karma-firefox-launcher plugin)</li>
+    *     <li>FirefoxDeveloper (launcher requires karma-firefox-launcher plugin)</li>
+    *     <li>FirefoxDeveloperHeadless (launcher requires karma-firefox-launcher plugin)</li>
+    *     <li>FirefoxAurora (launcher requires karma-firefox-launcher plugin)</li>
+    *     <li>FirefoxAuroraHeadless (launcher requires karma-firefox-launcher plugin)</li>
+    *     <li>FirefoxNightly (launcher requires karma-firefox-launcher plugin)</li>
+    *     <li>FirefoxNightlyHeadless (launcher requires karma-firefox-launcher plugin)</li>
     *     <li>Opera (launcher requires karma-opera-launcher plugin)</li>
     *     <li>Internet Explorer (launcher requires karma-ie-launcher plugin)</li>
     *     <li>Safari (launcher requires karma-safari-launcher plugin)</li>

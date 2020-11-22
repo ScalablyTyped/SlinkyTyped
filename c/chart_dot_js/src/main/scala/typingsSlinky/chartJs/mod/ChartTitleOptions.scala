@@ -21,6 +21,8 @@ trait ChartTitleOptions extends js.Object {
   
   var fullWidth: js.UndefOr[Boolean] = js.native
   
+  var lineHeight: js.UndefOr[Double | String] = js.native
+  
   var padding: js.UndefOr[Double] = js.native
   
   var position: js.UndefOr[PositionType] = js.native
@@ -94,6 +96,12 @@ object ChartTitleOptions {
     
     @scala.inline
     def deleteFullWidth: Self = this.set("fullWidth", js.undefined)
+    
+    @scala.inline
+    def setLineHeight(value: Double | String): Self = this.set("lineHeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLineHeight: Self = this.set("lineHeight", js.undefined)
     
     @scala.inline
     def setPadding(value: Double): Self = this.set("padding", value.asInstanceOf[js.Any])

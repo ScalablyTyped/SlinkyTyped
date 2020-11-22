@@ -15,7 +15,7 @@ trait AliasArgs extends js.Object {
   val description: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The function ARN of the Lambda function for which you want to create an alias.
+    * Lambda Function name or ARN.
     */
   val functionName: Input[String] = js.native
   

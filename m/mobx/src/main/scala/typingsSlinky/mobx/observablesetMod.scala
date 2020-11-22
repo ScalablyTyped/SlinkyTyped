@@ -64,6 +64,9 @@ object observablesetMod extends js.Object {
     def replace(other: IObservableSetInitialValues[T]): ObservableSet[T] = js.native
     def replace(other: ObservableSet[T]): ObservableSet[T] = js.native
     
+    @JSName("size")
+    def size_MObservableSet: Double = js.native
+    
     def toJS(): Set[T] = js.native
     
     @JSName(js.Symbol.toStringTag)

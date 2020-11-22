@@ -15,47 +15,47 @@ class FileOptions_ () extends Message {
   def addUninterpretedOption(value: UninterpretedOption): UninterpretedOption = js.native
   def addUninterpretedOption(value: UninterpretedOption, index: Double): UninterpretedOption = js.native
   
-  def clearCcEnableArenas(): Unit = js.native
+  def clearCcEnableArenas(): FileOptions = js.native
   
-  def clearCcGenericServices(): Unit = js.native
+  def clearCcGenericServices(): FileOptions = js.native
   
-  def clearCsharpNamespace(): Unit = js.native
+  def clearCsharpNamespace(): FileOptions = js.native
   
-  def clearDeprecated(): Unit = js.native
+  def clearDeprecated(): FileOptions = js.native
   
-  def clearGoPackage(): Unit = js.native
+  def clearGoPackage(): FileOptions = js.native
   
-  def clearJavaGenerateEqualsAndHash(): Unit = js.native
+  def clearJavaGenerateEqualsAndHash(): FileOptions = js.native
   
-  def clearJavaGenericServices(): Unit = js.native
+  def clearJavaGenericServices(): FileOptions = js.native
   
-  def clearJavaMultipleFiles(): Unit = js.native
+  def clearJavaMultipleFiles(): FileOptions = js.native
   
-  def clearJavaOuterClassname(): Unit = js.native
+  def clearJavaOuterClassname(): FileOptions = js.native
   
-  def clearJavaPackage(): Unit = js.native
+  def clearJavaPackage(): FileOptions = js.native
   
-  def clearJavaStringCheckUtf8(): Unit = js.native
+  def clearJavaStringCheckUtf8(): FileOptions = js.native
   
-  def clearObjcClassPrefix(): Unit = js.native
+  def clearObjcClassPrefix(): FileOptions = js.native
   
-  def clearOptimizeFor(): Unit = js.native
+  def clearOptimizeFor(): FileOptions = js.native
   
-  def clearPhpClassPrefix(): Unit = js.native
+  def clearPhpClassPrefix(): FileOptions = js.native
   
-  def clearPhpGenericServices(): Unit = js.native
+  def clearPhpGenericServices(): FileOptions = js.native
   
-  def clearPhpMetadataNamespace(): Unit = js.native
+  def clearPhpMetadataNamespace(): FileOptions = js.native
   
-  def clearPhpNamespace(): Unit = js.native
+  def clearPhpNamespace(): FileOptions = js.native
   
-  def clearPyGenericServices(): Unit = js.native
+  def clearPyGenericServices(): FileOptions = js.native
   
-  def clearRubyPackage(): Unit = js.native
+  def clearRubyPackage(): FileOptions = js.native
   
-  def clearSwiftPrefix(): Unit = js.native
+  def clearSwiftPrefix(): FileOptions = js.native
   
-  def clearUninterpretedOptionList(): Unit = js.native
+  def clearUninterpretedOptionList(): FileOptions = js.native
   
   def getCcEnableArenas(): js.UndefOr[Boolean] = js.native
   
@@ -139,45 +139,45 @@ class FileOptions_ () extends Message {
   
   def hasSwiftPrefix(): Boolean = js.native
   
-  def setCcEnableArenas(value: Boolean): Unit = js.native
+  def setCcEnableArenas(value: Boolean): FileOptions = js.native
   
-  def setCcGenericServices(value: Boolean): Unit = js.native
+  def setCcGenericServices(value: Boolean): FileOptions = js.native
   
-  def setCsharpNamespace(value: String): Unit = js.native
+  def setCsharpNamespace(value: String): FileOptions = js.native
   
-  def setDeprecated(value: Boolean): Unit = js.native
+  def setDeprecated(value: Boolean): FileOptions = js.native
   
-  def setGoPackage(value: String): Unit = js.native
+  def setGoPackage(value: String): FileOptions = js.native
   
-  def setJavaGenerateEqualsAndHash(value: Boolean): Unit = js.native
+  def setJavaGenerateEqualsAndHash(value: Boolean): FileOptions = js.native
   
-  def setJavaGenericServices(value: Boolean): Unit = js.native
+  def setJavaGenericServices(value: Boolean): FileOptions = js.native
   
-  def setJavaMultipleFiles(value: Boolean): Unit = js.native
+  def setJavaMultipleFiles(value: Boolean): FileOptions = js.native
   
-  def setJavaOuterClassname(value: String): Unit = js.native
+  def setJavaOuterClassname(value: String): FileOptions = js.native
   
-  def setJavaPackage(value: String): Unit = js.native
+  def setJavaPackage(value: String): FileOptions = js.native
   
-  def setJavaStringCheckUtf8(value: Boolean): Unit = js.native
+  def setJavaStringCheckUtf8(value: Boolean): FileOptions = js.native
   
-  def setObjcClassPrefix(value: String): Unit = js.native
+  def setObjcClassPrefix(value: String): FileOptions = js.native
   
-  def setOptimizeFor(value: OptimizeMode): Unit = js.native
+  def setOptimizeFor(value: OptimizeMode): FileOptions = js.native
   
-  def setPhpClassPrefix(value: String): Unit = js.native
+  def setPhpClassPrefix(value: String): FileOptions = js.native
   
-  def setPhpGenericServices(value: Boolean): Unit = js.native
+  def setPhpGenericServices(value: Boolean): FileOptions = js.native
   
-  def setPhpMetadataNamespace(value: String): Unit = js.native
+  def setPhpMetadataNamespace(value: String): FileOptions = js.native
   
-  def setPhpNamespace(value: String): Unit = js.native
+  def setPhpNamespace(value: String): FileOptions = js.native
   
-  def setPyGenericServices(value: Boolean): Unit = js.native
+  def setPyGenericServices(value: Boolean): FileOptions = js.native
   
-  def setRubyPackage(value: String): Unit = js.native
+  def setRubyPackage(value: String): FileOptions = js.native
   
-  def setSwiftPrefix(value: String): Unit = js.native
+  def setSwiftPrefix(value: String): FileOptions = js.native
   
-  def setUninterpretedOptionList(value: js.Array[UninterpretedOption]): Unit = js.native
+  def setUninterpretedOptionList(value: js.Array[UninterpretedOption]): FileOptions = js.native
 }

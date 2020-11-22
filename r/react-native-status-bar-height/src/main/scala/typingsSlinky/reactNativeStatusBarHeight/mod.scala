@@ -13,6 +13,10 @@ object mod extends js.Object {
   
   def isExpo(): Boolean = js.native
   
+  def isIPhone12(): Boolean = js.native
+  
+  def isIPhone12Max(): Boolean = js.native
+  
   def isIPhoneWithMonobrow(): Boolean = js.native
   
   def isIPhoneX(): Boolean = js.native

@@ -65,7 +65,7 @@ class NgForOf[T, U /* <: NgIterable[T] */] protected () extends DoCheck {
     * rather than the identity of the object itself.
     *
     * The function receives two inputs,
-    * the iteration index and the node object ID.
+    * the iteration index and the associated node data.
     */
   def ngForTrackBy_=(fn: TrackByFunction[T]): Unit = js.native
 }

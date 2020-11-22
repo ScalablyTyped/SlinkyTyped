@@ -13,7 +13,7 @@ trait GetParameterHistoryRequest extends js.Object {
   var MaxResults: js.UndefOr[typingsSlinky.awsSdk.ssmMod.MaxResults] = js.native
   
   /**
-    * The name of a parameter you want to query.
+    * The name of the parameter for which you want to review history.
     */
   var Name: PSParameterName = js.native
   

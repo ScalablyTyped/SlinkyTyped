@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
+  var CheckboxViewModel: js.Any = js.native
+  
   var Serializer: JsonMetadata = js.native
   
   var Version: String = js.native

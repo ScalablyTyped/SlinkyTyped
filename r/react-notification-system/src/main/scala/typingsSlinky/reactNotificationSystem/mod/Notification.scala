@@ -3,9 +3,14 @@ package typingsSlinky.reactNotificationSystem.mod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.bc
 import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.bl
+import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.both
 import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.br
+import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.button
+import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.click
 import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.error
+import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.hide
 import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.info
+import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.none
 import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.success
 import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.tc
 import typingsSlinky.reactNotificationSystem.reactNotificationSystemStrings.tl
@@ -24,7 +29,7 @@ trait Notification extends js.Object {
   
   var children: js.UndefOr[ReactElement] = js.native
   
-  var dismissible: js.UndefOr[Boolean] = js.native
+  var dismissible: js.UndefOr[both | button | click | hide | none | Boolean] = js.native
   
   var level: js.UndefOr[error | warning | info | success] = js.native
   
@@ -85,7 +90,7 @@ object Notification {
     def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
-    def setDismissible(value: Boolean): Self = this.set("dismissible", value.asInstanceOf[js.Any])
+    def setDismissible(value: both | button | click | hide | none | Boolean): Self = this.set("dismissible", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDismissible: Self = this.set("dismissible", js.undefined)

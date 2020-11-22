@@ -71,6 +71,11 @@ trait EdgeLine extends js.Object {
   var `line-style`: js.UndefOr[PropertyValueEdge[LineStyle]] = js.native
   
   /**
+    * The distance the edge ends from its source.
+    */
+  var `source-distance-from-node`: js.UndefOr[PropertyValueEdge[Double]] = js.native
+  
+  /**
     * The distance the edge ends from its target.
     */
   var `target-distance-from-node`: js.UndefOr[PropertyValueEdge[Double]] = js.native
@@ -165,6 +170,15 @@ object EdgeLine {
     
     @scala.inline
     def `deleteLine-style`: Self = this.set("line-style", js.undefined)
+    
+    @scala.inline
+    def `setSource-distance-from-nodeFunction1`(value: EdgeSingular => Double): Self = this.set("source-distance-from-node", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def `setSource-distance-from-node`(value: PropertyValueEdge[Double]): Self = this.set("source-distance-from-node", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `deleteSource-distance-from-node`: Self = this.set("source-distance-from-node", js.undefined)
     
     @scala.inline
     def `setTarget-distance-from-nodeFunction1`(value: EdgeSingular => Double): Self = this.set("target-distance-from-node", js.Any.fromFunction1(value))

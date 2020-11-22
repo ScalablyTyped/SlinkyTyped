@@ -3,7 +3,7 @@ package typingsSlinky.reactOnsenui.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameCheckedClassName
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameAutoFocusChecked
 import typingsSlinky.reactOnsenui.mod.SwitchChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,6 +19,9 @@ object Switch {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactOnsenui.mod.Switch] {
+    
+    @scala.inline
+    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
@@ -48,7 +51,7 @@ object Switch {
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HTMLAttributesidclassNameCheckedClassName): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: HTMLAttributesidclassNameAutoFocusChecked): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: Switch.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

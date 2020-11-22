@@ -50,5 +50,8 @@ class QuestionExpressionModel protected () extends Question {
   
   def unlocCalculation(): Unit = js.native
   
+  /**
+    * 	Determines whether to display grouping separators. The default value is true.
+    */
   var useGrouping: Boolean = js.native
 }

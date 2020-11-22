@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.c3.anon.Draggable
 import typingsSlinky.c3.anon.Format
 import typingsSlinky.c3.anon.LabelText
+import typingsSlinky.c3.anon.Normalize
 import typingsSlinky.c3.anon.Value
 import typingsSlinky.c3.anon.`1`
 import typingsSlinky.c3.c3Strings.asc
@@ -200,6 +201,8 @@ trait Data extends js.Object {
   var rows: js.UndefOr[js.Array[PrimitiveArray]] = js.native
   
   var selection: js.UndefOr[Draggable] = js.native
+  
+  var stack: js.UndefOr[Normalize] = js.native
   
   /**
     * Set chart type at once.
@@ -461,6 +464,12 @@ object Data {
     
     @scala.inline
     def deleteSelection: Self = this.set("selection", js.undefined)
+    
+    @scala.inline
+    def setStack(value: Normalize): Self = this.set("stack", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStack: Self = this.set("stack", js.undefined)
     
     @scala.inline
     def setType(value: ChartType): Self = this.set("type", value.asInstanceOf[js.Any])

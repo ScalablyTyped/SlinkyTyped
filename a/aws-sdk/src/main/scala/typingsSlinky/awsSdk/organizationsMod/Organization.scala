@@ -23,22 +23,22 @@ trait Organization extends js.Object {
   var FeatureSet: js.UndefOr[OrganizationFeatureSet] = js.native
   
   /**
-    * The unique identifier (ID) of an organization. The regex pattern for an organization ID string requires "o-" followed by from 10 to 32 lower-case letters or digits.
+    * The unique identifier (ID) of an organization. The regex pattern for an organization ID string requires "o-" followed by from 10 to 32 lowercase letters or digits.
     */
   var Id: js.UndefOr[OrganizationId] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) of the account that is designated as the master account for the organization. For more information about ARNs in Organizations, see ARN Formats Supported by Organizations in the AWS Organizations User Guide.
+    * The Amazon Resource Name (ARN) of the account that is designated as the management account for the organization. For more information about ARNs in Organizations, see ARN Formats Supported by Organizations in the AWS Organizations User Guide.
     */
   var MasterAccountArn: js.UndefOr[AccountArn] = js.native
   
   /**
-    * The email address that is associated with the AWS account that is designated as the master account for the organization.
+    * The email address that is associated with the AWS account that is designated as the management account for the organization.
     */
   var MasterAccountEmail: js.UndefOr[Email] = js.native
   
   /**
-    * The unique identifier (ID) of the master account of an organization. The regex pattern for an account ID string requires exactly 12 digits.
+    * The unique identifier (ID) of the management account of an organization. The regex pattern for an account ID string requires exactly 12 digits.
     */
   var MasterAccountId: js.UndefOr[AccountId] = js.native
 }

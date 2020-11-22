@@ -47,10 +47,10 @@ object Visibility {
     def fireOnMount(value: Boolean): this.type = set("fireOnMount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def offsetVarargs(value: String*): this.type = set("offset", js.Array(value :_*))
+    def offsetVarargs(value: (Double | String)*): this.type = set("offset", js.Array(value :_*))
     
     @scala.inline
-    def offset(value: Double | String | js.Array[String]): this.type = set("offset", value.asInstanceOf[js.Any])
+    def offset(value: Double | String | (js.Array[Double | String])): this.type = set("offset", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onBottomPassed(value: (/* nothing */ Null, /* data */ VisibilityEventData) => Unit): this.type = set("onBottomPassed", js.Any.fromFunction2(value))

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait OpenEvent
-  extends CustomEvent[js.Any] {
+  extends CustomEvent[js.UndefOr[scala.Nothing]] {
   
   var isReconnect: Boolean = js.native
   

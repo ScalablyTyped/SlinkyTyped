@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateResolverEndpointRequest extends js.Object {
   
   /**
-    * The name of the resolver endpoint that you want to update.
+    * The name of the Resolver endpoint that you want to update.
     */
   var Name: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.Name] = js.native
   
   /**
-    * The ID of the resolver endpoint that you want to update.
+    * The ID of the Resolver endpoint that you want to update.
     */
   var ResolverEndpointId: ResourceId = js.native
 }

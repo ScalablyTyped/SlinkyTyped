@@ -13,7 +13,7 @@ trait UpdateGlobalSecondaryIndexAction extends js.Object {
   var IndexName: typingsSlinky.awsSdk.dynamodbMod.IndexName = js.native
   
   /**
-    * Represents the provisioned throughput settings for the specified global secondary index. For current minimum and maximum provisioned throughput values, see Limits in the Amazon DynamoDB Developer Guide.
+    * Represents the provisioned throughput settings for the specified global secondary index. For current minimum and maximum provisioned throughput values, see Service, Account, and Table Quotas in the Amazon DynamoDB Developer Guide.
     */
   var ProvisionedThroughput: typingsSlinky.awsSdk.dynamodbMod.ProvisionedThroughput = js.native
 }

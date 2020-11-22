@@ -12,7 +12,7 @@ import typingsSlinky.awsSdk.awsSdkStrings.replicationTaskReady
 import typingsSlinky.awsSdk.awsSdkStrings.replicationTaskRunning
 import typingsSlinky.awsSdk.awsSdkStrings.replicationTaskStopped
 import typingsSlinky.awsSdk.awsSdkStrings.testConnectionSucceeds
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -24,12 +24,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DMS extends Service {
   
   /**
-    * Adds metadata tags to an AWS DMS resource, including replication instance, endpoint, security group, and migration task. These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a Condition statement in an IAM policy for DMS.
+    * Adds metadata tags to an AWS DMS resource, including replication instance, endpoint, security group, and migration task. These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a Condition statement in an IAM policy for DMS. For more information, see  Tag  data type description.
     */
   def addTagsToResource(): Request[AddTagsToResourceResponse, AWSError] = js.native
   def addTagsToResource(callback: js.Function2[/* err */ AWSError, /* data */ AddTagsToResourceResponse, Unit]): Request[AddTagsToResourceResponse, AWSError] = js.native
   /**
-    * Adds metadata tags to an AWS DMS resource, including replication instance, endpoint, security group, and migration task. These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a Condition statement in an IAM policy for DMS.
+    * Adds metadata tags to an AWS DMS resource, including replication instance, endpoint, security group, and migration task. These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a Condition statement in an IAM policy for DMS. For more information, see  Tag  data type description.
     */
   def addTagsToResource(params: AddTagsToResourceMessage): Request[AddTagsToResourceResponse, AWSError] = js.native
   def addTagsToResource(
@@ -595,12 +595,12 @@ trait DMS extends Service {
   ): Request[ImportCertificateResponse, AWSError] = js.native
   
   /**
-    * Lists all tags for an AWS DMS resource.
+    * Lists all metadata tags attached to an AWS DMS resource, including replication instance, endpoint, security group, and migration task. For more information, see  Tag  data type description.
     */
   def listTagsForResource(): Request[ListTagsForResourceResponse, AWSError] = js.native
   def listTagsForResource(callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]): Request[ListTagsForResourceResponse, AWSError] = js.native
   /**
-    * Lists all tags for an AWS DMS resource.
+    * Lists all metadata tags attached to an AWS DMS resource, including replication instance, endpoint, security group, and migration task. For more information, see  Tag  data type description.
     */
   def listTagsForResource(params: ListTagsForResourceMessage): Request[ListTagsForResourceResponse, AWSError] = js.native
   def listTagsForResource(
@@ -679,6 +679,20 @@ trait DMS extends Service {
   ): Request[ModifyReplicationTaskResponse, AWSError] = js.native
   
   /**
+    * Moves a replication task from its current replication instance to a different target replication instance using the specified parameters. The target replication instance must be created with the same or later AWS DMS version as the current replication instance.
+    */
+  def moveReplicationTask(): Request[MoveReplicationTaskResponse, AWSError] = js.native
+  def moveReplicationTask(callback: js.Function2[/* err */ AWSError, /* data */ MoveReplicationTaskResponse, Unit]): Request[MoveReplicationTaskResponse, AWSError] = js.native
+  /**
+    * Moves a replication task from its current replication instance to a different target replication instance using the specified parameters. The target replication instance must be created with the same or later AWS DMS version as the current replication instance.
+    */
+  def moveReplicationTask(params: MoveReplicationTaskMessage): Request[MoveReplicationTaskResponse, AWSError] = js.native
+  def moveReplicationTask(
+    params: MoveReplicationTaskMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ MoveReplicationTaskResponse, Unit]
+  ): Request[MoveReplicationTaskResponse, AWSError] = js.native
+  
+  /**
     * Reboots a replication instance. Rebooting results in a momentary outage, until the replication instance becomes available again.
     */
   def rebootReplicationInstance(): Request[RebootReplicationInstanceResponse, AWSError] = js.native
@@ -721,12 +735,12 @@ trait DMS extends Service {
   ): Request[ReloadTablesResponse, AWSError] = js.native
   
   /**
-    * Removes metadata tags from a DMS resource.
+    * Removes metadata tags from an AWS DMS resource, including replication instance, endpoint, security group, and migration task. For more information, see  Tag  data type description.
     */
   def removeTagsFromResource(): Request[RemoveTagsFromResourceResponse, AWSError] = js.native
   def removeTagsFromResource(callback: js.Function2[/* err */ AWSError, /* data */ RemoveTagsFromResourceResponse, Unit]): Request[RemoveTagsFromResourceResponse, AWSError] = js.native
   /**
-    * Removes metadata tags from a DMS resource.
+    * Removes metadata tags from an AWS DMS resource, including replication instance, endpoint, security group, and migration task. For more information, see  Tag  data type description.
     */
   def removeTagsFromResource(params: RemoveTagsFromResourceMessage): Request[RemoveTagsFromResourceResponse, AWSError] = js.native
   def removeTagsFromResource(

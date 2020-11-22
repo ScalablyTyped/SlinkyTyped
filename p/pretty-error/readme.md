@@ -1,7 +1,7 @@
 
 # Scala.js typings for pretty-error
 
-Typings are for version 2.1.1
+Typings are for version 2.1.2
 
 ## Library description:
 See nodejs errors with less clutter

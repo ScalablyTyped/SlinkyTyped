@@ -38,7 +38,7 @@ trait AddressCandidate
   var location: Point = js.native
   
   /**
-    * Numeric score between `0` and `100` for geocode candidates. A candidate with a score of `100` means a perfect match, and `0` means no match.
+    * Numeric score between `0` and `100` for geocode candidates.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-AddressCandidate.html#score)
     */

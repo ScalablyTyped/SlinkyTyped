@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "import-fresh"
-version := "3.2.1-75ff05"
+version := "3.2.2-fabfe3"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

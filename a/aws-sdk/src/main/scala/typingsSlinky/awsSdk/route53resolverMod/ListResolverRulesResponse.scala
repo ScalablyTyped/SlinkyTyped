@@ -13,12 +13,12 @@ trait ListResolverRulesResponse extends js.Object {
   var MaxResults: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.MaxResults] = js.native
   
   /**
-    * If more than MaxResults resolver rules match the specified criteria, you can submit another ListResolverRules request to get the next group of results. In the next request, specify the value of NextToken from the previous response. 
+    * If more than MaxResults Resolver rules match the specified criteria, you can submit another ListResolverRules request to get the next group of results. In the next request, specify the value of NextToken from the previous response. 
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.NextToken] = js.native
   
   /**
-    * The resolver rules that were created using the current AWS account and that match the specified filters, if any.
+    * The Resolver rules that were created using the current AWS account and that match the specified filters, if any.
     */
   var ResolverRules: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.ResolverRules] = js.native
 }

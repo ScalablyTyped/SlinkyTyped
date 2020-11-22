@@ -10,9 +10,13 @@ trait Options extends js.Object {
   
   var condition: js.UndefOr[Condition] = js.native
   
+  var constrainResolution: js.UndefOr[Boolean] = js.native
+  
   var duration: js.UndefOr[Double] = js.native
   
   var maxDelta: js.UndefOr[Double] = js.native
+  
+  var onFocusOnly: js.UndefOr[Boolean] = js.native
   
   var timeout: js.UndefOr[Double] = js.native
   
@@ -48,6 +52,12 @@ object Options {
     def deleteCondition: Self = this.set("condition", js.undefined)
     
     @scala.inline
+    def setConstrainResolution(value: Boolean): Self = this.set("constrainResolution", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConstrainResolution: Self = this.set("constrainResolution", js.undefined)
+    
+    @scala.inline
     def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -58,6 +68,12 @@ object Options {
     
     @scala.inline
     def deleteMaxDelta: Self = this.set("maxDelta", js.undefined)
+    
+    @scala.inline
+    def setOnFocusOnly(value: Boolean): Self = this.set("onFocusOnly", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOnFocusOnly: Self = this.set("onFocusOnly", js.undefined)
     
     @scala.inline
     def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])

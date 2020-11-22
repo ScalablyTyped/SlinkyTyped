@@ -8,6 +8,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LoginItemSettings extends js.Object {
   
   /**
+    * `true` if app is set to open at login and its run key is not deactivated. This
+    * differs from `openAtLogin` as it ignores the `args` option, this property will
+    * be true if the given executable would be launched at login with **any**
+    * arguments.
+    *
+    * @platform win32
+    */
+  var executableWillLaunchAtLogin: Boolean = js.native
+  
+  var launchItems: js.Array[LaunchItems] = js.native
+  
+  /**
     * `true` if the app is set to open as hidden at login. This setting is not
     * available on MAS builds.
     *
@@ -51,13 +63,15 @@ object LoginItemSettings {
   
   @scala.inline
   def apply(
+    executableWillLaunchAtLogin: Boolean,
+    launchItems: js.Array[LaunchItems],
     openAsHidden: Boolean,
     openAtLogin: Boolean,
     restoreState: Boolean,
     wasOpenedAsHidden: Boolean,
     wasOpenedAtLogin: Boolean
   ): LoginItemSettings = {
-    val __obj = js.Dynamic.literal(openAsHidden = openAsHidden.asInstanceOf[js.Any], openAtLogin = openAtLogin.asInstanceOf[js.Any], restoreState = restoreState.asInstanceOf[js.Any], wasOpenedAsHidden = wasOpenedAsHidden.asInstanceOf[js.Any], wasOpenedAtLogin = wasOpenedAtLogin.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(executableWillLaunchAtLogin = executableWillLaunchAtLogin.asInstanceOf[js.Any], launchItems = launchItems.asInstanceOf[js.Any], openAsHidden = openAsHidden.asInstanceOf[js.Any], openAtLogin = openAtLogin.asInstanceOf[js.Any], restoreState = restoreState.asInstanceOf[js.Any], wasOpenedAsHidden = wasOpenedAsHidden.asInstanceOf[js.Any], wasOpenedAtLogin = wasOpenedAtLogin.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoginItemSettings]
   }
   
@@ -75,6 +89,15 @@ object LoginItemSettings {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setExecutableWillLaunchAtLogin(value: Boolean): Self = this.set("executableWillLaunchAtLogin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLaunchItemsVarargs(value: LaunchItems*): Self = this.set("launchItems", js.Array(value :_*))
+    
+    @scala.inline
+    def setLaunchItems(value: js.Array[LaunchItems]): Self = this.set("launchItems", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOpenAsHidden(value: Boolean): Self = this.set("openAsHidden", value.asInstanceOf[js.Any])

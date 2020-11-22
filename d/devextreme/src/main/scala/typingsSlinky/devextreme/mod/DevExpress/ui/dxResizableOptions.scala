@@ -14,28 +14,44 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxResizableOptions extends DOMComponentOptions[dxResizable] {
   
-  /** @name dxResizable.Options.handles */
+  /**
+    * [descr:dxResizable.Options.handles]
+    */
   var handles: js.UndefOr[bottom | left | right | top | all | String] = js.native
   
-  /** @name dxResizable.Options.maxHeight */
+  /**
+    * [descr:dxResizable.Options.maxHeight]
+    */
   var maxHeight: js.UndefOr[Double] = js.native
   
-  /** @name dxResizable.Options.maxWidth */
+  /**
+    * [descr:dxResizable.Options.maxWidth]
+    */
   var maxWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxResizable.Options.minHeight */
+  /**
+    * [descr:dxResizable.Options.minHeight]
+    */
   var minHeight: js.UndefOr[Double] = js.native
   
-  /** @name dxResizable.Options.minWidth */
+  /**
+    * [descr:dxResizable.Options.minWidth]
+    */
   var minWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxResizable.Options.onResize */
+  /**
+    * [descr:dxResizable.Options.onResize]
+    */
   var onResize: js.UndefOr[js.Function1[/* e */ EventHeight, _]] = js.native
   
-  /** @name dxResizable.Options.onResizeEnd */
+  /**
+    * [descr:dxResizable.Options.onResizeEnd]
+    */
   var onResizeEnd: js.UndefOr[js.Function1[/* e */ EventHeight, _]] = js.native
   
-  /** @name dxResizable.Options.onResizeStart */
+  /**
+    * [descr:dxResizable.Options.onResizeStart]
+    */
   var onResizeStart: js.UndefOr[js.Function1[/* e */ EventHeight, _]] = js.native
 }
 object dxResizableOptions {

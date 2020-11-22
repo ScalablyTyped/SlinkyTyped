@@ -11,9 +11,9 @@ object InjectAsProperty extends js.Object {
   /**
     * Inject dependencies as properties to target
     *
-    * @param {Array<string>} dependencies - dependencies to inject
+    * @param dependencies - dependencies to inject
     *
-    * @returns {ngESDecorator} - decorated class
+    * @returns decorated class
     */
   def apply(dependencies: String*): ngESDecorator = js.native
 }

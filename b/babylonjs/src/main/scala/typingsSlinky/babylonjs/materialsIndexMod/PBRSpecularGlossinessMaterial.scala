@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("babylonjs/Materials/index", "PBRSpecularGlossinessMaterial")
 @js.native
 class PBRSpecularGlossinessMaterial protected ()
-  extends typingsSlinky.babylonjs.pbrIndexMod.PBRSpecularGlossinessMaterial {
+  extends typingsSlinky.babylonjs.materialsPbrIndexMod.PBRSpecularGlossinessMaterial {
   /**
     * Instantiates a new PBRSpecularGlossinessMaterial instance.
     *

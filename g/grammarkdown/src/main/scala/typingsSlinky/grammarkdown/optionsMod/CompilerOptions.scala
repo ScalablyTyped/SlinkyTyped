@@ -7,24 +7,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CompilerOptions extends js.Object {
   
+  /**
+    * Indicates whether internal diagnostic information should be reported to the console.
+    */
   var diagnostics: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Indicates whether to include hyperlinks in the emit output.
+    */
   var emitLinks: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Indicates the emit output format.
+    */
   var format: js.UndefOr[EmitFormat] = js.native
   
+  /**
+    * Indicates the token to use for line terminators during emit.
+    */
   var newLine: js.UndefOr[NewLineKind] = js.native
   
+  /**
+    * Indicates that diagnostics should not be reported.
+    */
   var noChecks: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Indicates that emit output should not be produced.
+    */
   var noEmit: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Indicates that emit output should not be produced if any diagnostics are reported.
+    */
   var noEmitOnError: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Disables strict checking of production parameters.
+    */
   var noStrictParametricProductions: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Indicates that diagnostics should be produced if production parameters are unused.
+    */
   var noUnusedParameters: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Indicates the file path for emit output.
+    */
   var out: js.UndefOr[String] = js.native
 }
 object CompilerOptions {

@@ -6,7 +6,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.imageImageMod.ImageProps
 import typingsSlinky.semanticUiReact.listContentMod.ListContentProps
@@ -37,7 +36,7 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   
   @scala.inline
   def contentFunction3(
-    value: (/* component */ ReactType[ListContentProps], ListContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, ListContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("content", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -48,7 +47,7 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   
   @scala.inline
   def descriptionFunction3(
-    value: (/* component */ ReactType[ListDescriptionProps], ListDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, ListDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("description", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -62,7 +61,7 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   
   @scala.inline
   def headerFunction3(
-    value: (/* component */ ReactType[ListHeaderProps], ListHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, ListHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("header", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -73,7 +72,7 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   
   @scala.inline
   def iconFunction3(
-    value: (/* component */ ReactType[ListIconProps], ListIconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, ListIconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("icon", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -84,7 +83,7 @@ class SharedBuilder_ListItemProps_1306166873 (val args: js.Array[js.Any])
   
   @scala.inline
   def imageFunction3(
-    value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("image", js.Any.fromFunction3(value))
   
   @scala.inline

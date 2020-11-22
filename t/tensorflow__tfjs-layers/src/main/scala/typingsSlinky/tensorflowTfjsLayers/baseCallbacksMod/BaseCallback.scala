@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.baseCallbacksMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.containerMod.Container
 import typingsSlinky.tensorflowTfjsLayers.logsMod.UnresolvedLogs
 import scala.scalajs.js

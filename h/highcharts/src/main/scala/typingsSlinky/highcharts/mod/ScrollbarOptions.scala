@@ -95,8 +95,6 @@ trait ScrollbarOptions extends js.Object {
     */
   var showFull: js.UndefOr[Boolean] = js.native
   
-  var step: js.UndefOr[Double] = js.native
-  
   /**
     * (Highstock, Gantt) The color of the track background.
     */
@@ -241,12 +239,6 @@ object ScrollbarOptions {
     
     @scala.inline
     def deleteShowFull: Self = this.set("showFull", js.undefined)
-    
-    @scala.inline
-    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStep: Self = this.set("step", js.undefined)
     
     @scala.inline
     def setTrackBackgroundColor(value: ColorString | GradientColorObject | PatternObject): Self = this.set("trackBackgroundColor", value.asInstanceOf[js.Any])

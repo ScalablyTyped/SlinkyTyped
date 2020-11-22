@@ -11,6 +11,11 @@ trait PublishResponse extends js.Object {
     * Unique identifier assigned to the published message. Length Constraint: Maximum 100 characters
     */
   var MessageId: js.UndefOr[messageId] = js.native
+  
+  /**
+    * This response element applies only to FIFO (first-in-first-out) topics.  The sequence number is a large, non-consecutive number that Amazon SNS assigns to each message. The length of SequenceNumber is 128 bits. SequenceNumber continues to increase for each MessageGroupId.
+    */
+  var SequenceNumber: js.UndefOr[String] = js.native
 }
 object PublishResponse {
   
@@ -40,5 +45,11 @@ object PublishResponse {
     
     @scala.inline
     def deleteMessageId: Self = this.set("MessageId", js.undefined)
+    
+    @scala.inline
+    def setSequenceNumber(value: String): Self = this.set("SequenceNumber", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSequenceNumber: Self = this.set("SequenceNumber", js.undefined)
   }
 }

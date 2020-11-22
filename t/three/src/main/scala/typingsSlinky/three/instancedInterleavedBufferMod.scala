@@ -15,6 +15,9 @@ object instancedInterleavedBufferMod extends js.Object {
     def this(array: ArrayLike[Double], stride: Double) = this()
     def this(array: ArrayLike[Double], stride: Double, meshPerAttribute: Double) = this()
     
+    /**
+    	 * @default 1
+    	 */
     var meshPerAttribute: Double = js.native
   }
 }

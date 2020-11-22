@@ -1,19 +1,28 @@
 package typingsSlinky.datastoreCore.mod
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.datastoreCore.mod.shard.Shard
-import typingsSlinky.interfaceDatastore.mod.Datastore
+import typingsSlinky.interfaceDatastore.mod.Adapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@JSImport("datastore-core", "ShardingDatastore")
 @js.native
-trait ShardingDatastore[Value] extends Datastore[Value] {
+class ShardingDatastore[Value] protected () extends Adapter[Value] {
+  def this(stores: js.Array[Adapter[Value]]) = this()
   
   var child: KeytransformDatastore[Value] = js.native
   
   var shard: Shard = js.native
 }
+/* static members */
 @JSImport("datastore-core", "ShardingDatastore")
 @js.native
-object ShardingDatastore extends TopLevel[ShardingDatastoreConstructor]
+object ShardingDatastore extends js.Object {
+  
+  def create[Value](store: Adapter[Value], shard: Shard): js.Promise[ShardingDatastore[Value]] = js.native
+  
+  def createOrOpen[Value](store: Adapter[Value], shard: Shard): js.Promise[ShardingDatastore[Value]] = js.native
+  
+  def open[Value](store: Adapter[Value]): js.Promise[ShardingDatastore[Value]] = js.native
+}

@@ -1,5 +1,6 @@
 package typingsSlinky.braintreeWebDropIn.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,9 +14,9 @@ trait Options extends js.Object {
   
   var card: js.UndefOr[Boolean | cardCreateOptions] = js.native
   
-  var container: js.Any = js.native
+  var container: String | HTMLElement = js.native
   
-  var dataCollector: js.UndefOr[dataCollectorOptions] = js.native
+  var dataCollector: js.UndefOr[dataCollectorOptions | Boolean] = js.native
   
   var googlePay: js.UndefOr[googlePayCreateOptions] = js.native
   
@@ -29,7 +30,7 @@ trait Options extends js.Object {
   
   var preselectVaultedPaymentMethod: js.UndefOr[Boolean] = js.native
   
-  var threeDSecure: js.UndefOr[threeDSecureOptions] = js.native
+  var threeDSecure: js.UndefOr[Boolean | threeDSecureOptions] = js.native
   
   var translations: js.UndefOr[js.Object] = js.native
   
@@ -40,7 +41,7 @@ trait Options extends js.Object {
 object Options {
   
   @scala.inline
-  def apply(authorization: String, container: js.Any): Options = {
+  def apply(authorization: String, container: String | HTMLElement): Options = {
     val __obj = js.Dynamic.literal(authorization = authorization.asInstanceOf[js.Any], container = container.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
@@ -64,7 +65,10 @@ object Options {
     def setAuthorization(value: String): Self = this.set("authorization", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setContainer(value: js.Any): Self = this.set("container", value.asInstanceOf[js.Any])
+    def setContainerHTMLElement(value: HTMLElement): Self = this.set("container", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setContainer(value: String | HTMLElement): Self = this.set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setApplePay(value: applePayCreateOptions): Self = this.set("applePay", value.asInstanceOf[js.Any])
@@ -79,7 +83,7 @@ object Options {
     def deleteCard: Self = this.set("card", js.undefined)
     
     @scala.inline
-    def setDataCollector(value: dataCollectorOptions): Self = this.set("dataCollector", value.asInstanceOf[js.Any])
+    def setDataCollector(value: dataCollectorOptions | Boolean): Self = this.set("dataCollector", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDataCollector: Self = this.set("dataCollector", js.undefined)
@@ -124,7 +128,7 @@ object Options {
     def deletePreselectVaultedPaymentMethod: Self = this.set("preselectVaultedPaymentMethod", js.undefined)
     
     @scala.inline
-    def setThreeDSecure(value: threeDSecureOptions): Self = this.set("threeDSecure", value.asInstanceOf[js.Any])
+    def setThreeDSecure(value: Boolean | threeDSecureOptions): Self = this.set("threeDSecure", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteThreeDSecure: Self = this.set("threeDSecure", js.undefined)

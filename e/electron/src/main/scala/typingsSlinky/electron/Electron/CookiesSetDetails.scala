@@ -1,5 +1,9 @@
 package typingsSlinky.electron.Electron
 
+import typingsSlinky.electron.electronStrings.lax
+import typingsSlinky.electron.electronStrings.no_restriction
+import typingsSlinky.electron.electronStrings.strict
+import typingsSlinky.electron.electronStrings.unspecified
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,6 +38,12 @@ trait CookiesSetDetails extends js.Object {
     * The path of the cookie. Empty by default if omitted.
     */
   var path: js.UndefOr[String] = js.native
+  
+  /**
+    * The Same Site policy to apply to this cookie.  Can be `unspecified`,
+    * `no_restriction`, `lax` or `strict`.  Default is `no_restriction`.
+    */
+  var sameSite: js.UndefOr[unspecified | no_restriction | lax | strict] = js.native
   
   /**
     * Whether the cookie should be marked as Secure. Defaults to false.
@@ -106,6 +116,12 @@ object CookiesSetDetails {
     
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)
+    
+    @scala.inline
+    def setSameSite(value: unspecified | no_restriction | lax | strict): Self = this.set("sameSite", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSameSite: Self = this.set("sameSite", js.undefined)
     
     @scala.inline
     def setSecure(value: Boolean): Self = this.set("secure", value.asInstanceOf[js.Any])

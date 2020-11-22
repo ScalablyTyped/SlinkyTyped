@@ -1,5 +1,8 @@
 package typingsSlinky.typedoc.schemaMod
 
+import typingsSlinky.typedoc.typedocStrings.keyof
+import typingsSlinky.typedoc.typedocStrings.readonly
+import typingsSlinky.typedoc.typedocStrings.unique
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TypeOperatorType extends SomeType {
   
-  var operator: (ModelToObject[/* "keyof" */ String]) | (/* "keyof" */ String) = js.native
+  var operator: (ModelToObject[keyof | unique | readonly]) | keyof | unique | readonly = js.native
   
   var target: ModelToObject[typingsSlinky.typedoc.typesAbstractMod.Type] | typingsSlinky.typedoc.typesAbstractMod.Type = js.native
   
@@ -19,7 +22,7 @@ object TypeOperatorType {
   
   @scala.inline
   def apply(
-    operator: (ModelToObject[/* "keyof" */ String]) | (/* "keyof" */ String),
+    operator: (ModelToObject[keyof | unique | readonly]) | keyof | unique | readonly,
     target: ModelToObject[typingsSlinky.typedoc.typesAbstractMod.Type] | typingsSlinky.typedoc.typesAbstractMod.Type,
     `type`: (ModelToObject[/* "typeOperator" */ String]) | (/* "typeOperator" */ String)
   ): TypeOperatorType = {
@@ -47,7 +50,7 @@ object TypeOperatorType {
     def setOperatorVarargs(value: _ModelToObject[js.Any]*): Self = this.set("operator", js.Array(value :_*))
     
     @scala.inline
-    def setOperator(value: (ModelToObject[/* "keyof" */ String]) | (/* "keyof" */ String)): Self = this.set("operator", value.asInstanceOf[js.Any])
+    def setOperator(value: (ModelToObject[keyof | unique | readonly]) | keyof | unique | readonly): Self = this.set("operator", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTargetVarargs(value: _ModelToObject[js.Any]*): Self = this.set("target", js.Array(value :_*))

@@ -3,7 +3,6 @@ package typingsSlinky.blueprintjsDatetime.datePickerMod
 import typingsSlinky.blueprintjsCore.propsMod.IProps
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerBaseProps
 import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDatePickerShortcut
-import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,32 +25,10 @@ trait IDatePickerProps
   var clearButtonText: js.UndefOr[String] = js.native
   
   /**
-    * Props to pass to ReactDayPicker. See API documentation
-    * [here](http://react-day-picker.js.org/api/DayPicker).
-    *
-    * The following props are managed by the component and cannot be configured:
-    * `canChangeMonth`, `captionElement`, `fromMonth` (use `minDate`), `month` (use
-    * `initialMonth`), `toMonth` (use `maxDate`).
-    *
-    * In case of supplying your owner `renderDay` function, make sure to apply the appropriate
-    * CSS wrapper class to obtain default Blueprint styling.
-    * eg.
-    * `<div className={Classes.DATEPICKER_DAY_WRAPPER}>{CONTENT_HERE}</div>`
-    *
-    */
-  var dayPickerProps: js.UndefOr[DayPickerProps] = js.native
-  
-  /**
     * Initial day the calendar will display as selected.
     * This should not be set if `value` is set.
     */
   var defaultValue: js.UndefOr[js.Date] = js.native
-  
-  /**
-    * Whether the current day should be highlighted in the calendar.
-    * @default false
-    */
-  var highlightCurrentDay: js.UndefOr[Boolean] = js.native
   
   /**
     * Called when the user selects a day.
@@ -96,7 +73,7 @@ trait IDatePickerProps
   /**
     * The currently selected day. If this prop is provided, the component acts in a controlled manner.
     */
-  var value: js.UndefOr[js.Date] = js.native
+  var value: js.UndefOr[js.Date | Null] = js.native
 }
 object IDatePickerProps {
   
@@ -134,22 +111,10 @@ object IDatePickerProps {
     def deleteClearButtonText: Self = this.set("clearButtonText", js.undefined)
     
     @scala.inline
-    def setDayPickerProps(value: DayPickerProps): Self = this.set("dayPickerProps", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDayPickerProps: Self = this.set("dayPickerProps", js.undefined)
-    
-    @scala.inline
     def setDefaultValue(value: js.Date): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
-    
-    @scala.inline
-    def setHighlightCurrentDay(value: Boolean): Self = this.set("highlightCurrentDay", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHighlightCurrentDay: Self = this.set("highlightCurrentDay", js.undefined)
     
     @scala.inline
     def setOnChange(value: (/* selectedDate */ js.Date, /* isUserChange */ Boolean) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
@@ -195,5 +160,8 @@ object IDatePickerProps {
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

@@ -58,20 +58,22 @@ package object Tabulator {
     js.Object
   ]
   
-  type CustomAccessor = js.Function5[
+  type CustomAccessor = js.Function6[
     /* value */ js.Any, 
     /* data */ js.Any, 
     /* type */ typingsSlinky.tabulatorTables.tabulatorTablesStrings.data | typingsSlinky.tabulatorTables.tabulatorTablesStrings.download | typingsSlinky.tabulatorTables.tabulatorTablesStrings.clipboard, 
     /* AccessorParams */ js.Any, 
     /* column */ js.UndefOr[typingsSlinky.tabulatorTables.Tabulator.ColumnComponent], 
+    /* row */ js.UndefOr[typingsSlinky.tabulatorTables.Tabulator.RowComponent], 
     js.Any
   ]
   
-  type CustomAccessorParams = js.Object | (js.Function4[
+  type CustomAccessorParams = js.Object | (js.Function5[
     /* value */ js.Any, 
     /* data */ js.Any, 
     /* type */ typingsSlinky.tabulatorTables.tabulatorTablesStrings.data | typingsSlinky.tabulatorTables.tabulatorTablesStrings.download | typingsSlinky.tabulatorTables.tabulatorTablesStrings.clipboard, 
     /* column */ js.UndefOr[typingsSlinky.tabulatorTables.Tabulator.ColumnComponent], 
+    /* row */ js.UndefOr[typingsSlinky.tabulatorTables.Tabulator.RowComponent], 
     js.Any
   ])
   
@@ -183,6 +185,7 @@ package object Tabulator {
     - typingsSlinky.tabulatorTables.Tabulator.TickCrossParams
     - typingsSlinky.tabulatorTables.Tabulator.TrafficParams
     - typingsSlinky.tabulatorTables.Tabulator.StarRatingParams
+    - typingsSlinky.tabulatorTables.Tabulator.RowSelectionParams
     - typingsSlinky.tabulatorTables.Tabulator.JSONRecord
     - js.Function1[/ * cell * / typingsSlinky.tabulatorTables.Tabulator.CellComponent, js.Object]
   */
@@ -190,15 +193,33 @@ package object Tabulator {
   
   type GlobalTooltipOption = scala.Boolean | (js.Function1[/* cell */ typingsSlinky.tabulatorTables.Tabulator.CellComponent, java.lang.String])
   
+  type GroupContextMenuSignature = (js.Array[
+    typingsSlinky.tabulatorTables.Tabulator.MenuObject[typingsSlinky.tabulatorTables.Tabulator.GroupComponent] | typingsSlinky.tabulatorTables.Tabulator.MenuSeparator
+  ]) | (js.Function2[
+    /* component */ typingsSlinky.tabulatorTables.Tabulator.GroupComponent, 
+    /* e */ org.scalajs.dom.raw.MouseEvent, 
+    typingsSlinky.tabulatorTables.Tabulator.MenuObject[typingsSlinky.tabulatorTables.Tabulator.GroupComponent] | typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`false` | js.Array[js.Any]
+  ])
+  
   type GroupEventCallback = js.Function2[
     /* e */ org.scalajs.dom.raw.UIEvent, 
     /* group */ typingsSlinky.tabulatorTables.Tabulator.GroupComponent, 
     scala.Unit
   ]
   
+  type GroupValuesArg = js.Array[js.Array[js.Any]]
+  
   type JSONRecord = typingsSlinky.std.Record[java.lang.String, java.lang.String | scala.Double | scala.Boolean]
   
   type RowChangedCallback = js.Function1[/* row */ typingsSlinky.tabulatorTables.Tabulator.RowComponent, scala.Unit]
+  
+  type RowContextMenuSignature = (js.Array[
+    typingsSlinky.tabulatorTables.Tabulator.MenuObject[typingsSlinky.tabulatorTables.Tabulator.RowComponent] | typingsSlinky.tabulatorTables.Tabulator.MenuSeparator
+  ]) | (js.Function2[
+    /* component */ typingsSlinky.tabulatorTables.Tabulator.RowComponent, 
+    /* e */ org.scalajs.dom.raw.MouseEvent, 
+    typingsSlinky.tabulatorTables.Tabulator.MenuObject[typingsSlinky.tabulatorTables.Tabulator.RowComponent] | typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`false` | js.Array[js.Any]
+  ])
   
   type RowEventCallback = js.Function2[
     /* e */ org.scalajs.dom.raw.UIEvent, 

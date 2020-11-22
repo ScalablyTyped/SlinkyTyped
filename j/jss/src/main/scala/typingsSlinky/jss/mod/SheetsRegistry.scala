@@ -12,6 +12,8 @@ class SheetsRegistry () extends js.Object {
   
   val index: Double = js.native
   
+  var registry: js.Array[StyleSheet[String | Double | js.Symbol]] = js.native
+  
   def remove[RuleName /* <: String | Double | js.Symbol */](sheet: StyleSheet[RuleName]): Unit = js.native
   
   def reset(): Unit = js.native

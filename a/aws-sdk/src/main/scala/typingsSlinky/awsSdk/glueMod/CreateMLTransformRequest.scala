@@ -63,6 +63,11 @@ trait CreateMLTransformRequest extends js.Object {
   var Timeout: js.UndefOr[typingsSlinky.awsSdk.glueMod.Timeout] = js.native
   
   /**
+    * The encryption-at-rest settings of the transform that apply to accessing user data. Machine learning transforms can access user data encrypted in Amazon S3 using KMS.
+    */
+  var TransformEncryption: js.UndefOr[typingsSlinky.awsSdk.glueMod.TransformEncryption] = js.native
+  
+  /**
     * The type of predefined worker that is allocated when this task runs. Accepts a value of Standard, G.1X, or G.2X.   For the Standard worker type, each worker provides 4 vCPU, 16 GB of memory and a 50GB disk, and 2 executors per worker.   For the G.1X worker type, each worker provides 4 vCPU, 16 GB of memory and a 64GB disk, and 1 executor per worker.   For the G.2X worker type, each worker provides 8 vCPU, 32 GB of memory and a 128GB disk, and 1 executor per worker.    MaxCapacity is a mutually exclusive option with NumberOfWorkers and WorkerType.   If either NumberOfWorkers or WorkerType is set, then MaxCapacity cannot be set.   If MaxCapacity is set then neither NumberOfWorkers or WorkerType can be set.   If WorkerType is set, then NumberOfWorkers is required (and vice versa).    MaxCapacity and NumberOfWorkers must both be at least 1.  
     */
   var WorkerType: js.UndefOr[typingsSlinky.awsSdk.glueMod.WorkerType] = js.native
@@ -146,6 +151,12 @@ object CreateMLTransformRequest {
     
     @scala.inline
     def deleteTimeout: Self = this.set("Timeout", js.undefined)
+    
+    @scala.inline
+    def setTransformEncryption(value: TransformEncryption): Self = this.set("TransformEncryption", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTransformEncryption: Self = this.set("TransformEncryption", js.undefined)
     
     @scala.inline
     def setWorkerType(value: WorkerType): Self = this.set("WorkerType", value.asInstanceOf[js.Any])

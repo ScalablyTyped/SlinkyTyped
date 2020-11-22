@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NetworkInfo extends js.Object {
   
   /**
+    * The index of the default network card, starting at 0.
+    */
+  var DefaultNetworkCardIndex: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.DefaultNetworkCardIndex] = js.native
+  
+  /**
     * Indicates whether Elastic Fabric Adapter (EFA) is supported.
     */
   var EfaSupported: js.UndefOr[EfaSupportedFlag] = js.native
@@ -33,12 +38,22 @@ trait NetworkInfo extends js.Object {
   var Ipv6Supported: js.UndefOr[Ipv6Flag] = js.native
   
   /**
+    * The maximum number of physical network cards that can be allocated to the instance.
+    */
+  var MaximumNetworkCards: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.MaximumNetworkCards] = js.native
+  
+  /**
     * The maximum number of network interfaces for the instance type.
     */
   var MaximumNetworkInterfaces: js.UndefOr[MaxNetworkInterfaces] = js.native
   
   /**
-    * Describes the network performance.
+    * Describes the network cards for the instance type.
+    */
+  var NetworkCards: js.UndefOr[NetworkCardInfoList] = js.native
+  
+  /**
+    * The network performance.
     */
   var NetworkPerformance: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.NetworkPerformance] = js.native
 }
@@ -64,6 +79,12 @@ object NetworkInfo {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDefaultNetworkCardIndex(value: DefaultNetworkCardIndex): Self = this.set("DefaultNetworkCardIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultNetworkCardIndex: Self = this.set("DefaultNetworkCardIndex", js.undefined)
     
     @scala.inline
     def setEfaSupported(value: EfaSupportedFlag): Self = this.set("EfaSupported", value.asInstanceOf[js.Any])
@@ -96,10 +117,25 @@ object NetworkInfo {
     def deleteIpv6Supported: Self = this.set("Ipv6Supported", js.undefined)
     
     @scala.inline
+    def setMaximumNetworkCards(value: MaximumNetworkCards): Self = this.set("MaximumNetworkCards", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaximumNetworkCards: Self = this.set("MaximumNetworkCards", js.undefined)
+    
+    @scala.inline
     def setMaximumNetworkInterfaces(value: MaxNetworkInterfaces): Self = this.set("MaximumNetworkInterfaces", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaximumNetworkInterfaces: Self = this.set("MaximumNetworkInterfaces", js.undefined)
+    
+    @scala.inline
+    def setNetworkCardsVarargs(value: NetworkCardInfo*): Self = this.set("NetworkCards", js.Array(value :_*))
+    
+    @scala.inline
+    def setNetworkCards(value: NetworkCardInfoList): Self = this.set("NetworkCards", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkCards: Self = this.set("NetworkCards", js.undefined)
     
     @scala.inline
     def setNetworkPerformance(value: NetworkPerformance): Self = this.set("NetworkPerformance", value.asInstanceOf[js.Any])

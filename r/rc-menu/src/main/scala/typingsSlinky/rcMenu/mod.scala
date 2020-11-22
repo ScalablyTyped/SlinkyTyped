@@ -3,8 +3,10 @@ package typingsSlinky.rcMenu
 import slinky.core.ReactComponentClass
 import typingsSlinky.rcMenu.anon.BuiltinPlacements
 import typingsSlinky.rcMenu.anon.Disabled
+import typingsSlinky.rcMenu.anon.PartialMenuState
 import typingsSlinky.rcMenu.dividerMod.DividerProps
 import typingsSlinky.rcMenu.menuMod.MenuProps
+import typingsSlinky.rcMenu.menuMod.MenuState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -55,5 +57,7 @@ object mod extends js.Object {
   object default extends js.Object {
     
     var defaultProps: BuiltinPlacements = js.native
+    
+    def getDerivedStateFromProps(nextProps: MenuProps, prevState: MenuState): PartialMenuState = js.native
   }
 }

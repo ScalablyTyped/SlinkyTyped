@@ -260,7 +260,15 @@ object mod extends js.Object {
   @js.native
   class Device () extends js.Object {
     
+    def __attachKernelDriver(addr: Double): Unit = js.native
+    
     def __claimInterface(addr: Double): Unit = js.native
+    
+    def __detachKernelDriver(addr: Double): Unit = js.native
+    
+    def __getConfigDescriptor(): ConfigDescriptor = js.native
+    
+    def __isKernelDriverActive(addr: Double): Boolean = js.native
     
     def __open(): Unit = js.native
     
@@ -277,13 +285,13 @@ object mod extends js.Object {
       */
     def close(): Unit = js.native
     
-    /** Object with properties for the fields of the configuration descriptor. */
+    /** Object with properties for the fields of the active configuration descriptor. */
     var configDescriptor: ConfigDescriptor = js.native
     
     /**
       * Perform a control transfer with `libusb_control_transfer`.
       *
-      * Parameter `data_or_length` can be a integer length for an IN transfer, or a Buffer for an out transfer. The type must match the direction specified in the MSB of bmRequestType.
+      * Parameter `data_or_length` can be an integer length for an IN transfer, or a `Buffer` for an OUT transfer. The type must match the direction specified in the MSB of bmRequestType.
       *
       * The `data` parameter of the callback is always undefined for OUT transfers, or will be passed a Buffer for IN transfers.
       *
@@ -300,8 +308,16 @@ object mod extends js.Object {
       bRequest: Double,
       wValue: Double,
       wIndex: Double,
-      data_or_length: js.Any,
-      callback: js.Function2[/* error */ js.UndefOr[LibUSBException], /* buf */ js.UndefOr[Buffer], Unit]
+      data_or_length: Double,
+      callback: js.Function2[/* error */ js.UndefOr[LibUSBException], /* buffer */ js.UndefOr[Buffer], Unit]
+    ): Device = js.native
+    def controlTransfer(
+      bmRequestType: Double,
+      bRequest: Double,
+      wValue: Double,
+      wIndex: Double,
+      data_or_length: Buffer,
+      callback: js.Function2[/* error */ js.UndefOr[LibUSBException], /* buffer */ js.UndefOr[Buffer], Unit]
     ): Device = js.native
     
     /** Integer USB device address */
@@ -317,7 +333,11 @@ object mod extends js.Object {
       * @param callback
       */
     def getBosDescriptor(
-      callback: js.Function2[/* error */ js.UndefOr[String], /* descriptor */ js.UndefOr[BosDescriptor], Unit]
+      callback: js.Function2[
+          /* error */ js.UndefOr[LibUSBException], 
+          /* descriptor */ js.UndefOr[BosDescriptor], 
+          Unit
+        ]
     ): Unit = js.native
     
     /**
@@ -328,7 +348,7 @@ object mod extends js.Object {
       */
     def getCapabilities(
       callback: js.Function2[
-          /* error */ js.UndefOr[String], 
+          /* error */ js.UndefOr[LibUSBException], 
           /* capabilities */ js.UndefOr[js.Array[Capability]], 
           Unit
         ]
@@ -343,7 +363,7 @@ object mod extends js.Object {
       */
     def getStringDescriptor(
       desc_index: Double,
-      callback: js.Function2[/* error */ js.UndefOr[String], /* buf */ js.UndefOr[Buffer], Unit]
+      callback: js.Function2[/* error */ js.UndefOr[LibUSBException], /* data */ js.UndefOr[String], Unit]
     ): Unit = js.native
     
     /**
@@ -376,7 +396,7 @@ object mod extends js.Object {
       * The device must be open to use this method.
       * @param callback
       */
-    def reset(callback: js.Function1[/* err */ js.UndefOr[String], Unit]): Unit = js.native
+    def reset(callback: js.Function1[/* error */ js.UndefOr[LibUSBException], Unit]): Unit = js.native
     
     /**
       * Set the device configuration to something other than the default (0). To use this, first call `.open(false)` (which tells it not to auto configure),
@@ -384,9 +404,9 @@ object mod extends js.Object {
       *
       * The device must be open to use this method.
       * @param desired
-      * @param cb
+      * @param callback
       */
-    def setConfiguration(desired: Double, cb: js.Function1[/* err */ js.UndefOr[String], Unit]): Unit = js.native
+    def setConfiguration(desired: Double, callback: js.Function1[/* error */ js.UndefOr[LibUSBException], Unit]): Unit = js.native
     
     /** Timeout in milliseconds to use for control transfers. */
     var timeout: Double = js.native
@@ -441,11 +461,33 @@ object mod extends js.Object {
   @js.native
   trait Endpoint extends EventEmitter {
     
+    /** Clear the halt/stall condition for this endpoint. */
+    def clearHalt(callback: js.Function1[/* error */ js.UndefOr[LibUSBException], Unit]): Unit = js.native
+    
     /** Object with fields from the endpoint descriptor -- see libusb documentation or USB spec. */
     var descriptor: EndpointDescriptor = js.native
     
     /** Endpoint direction: `"in"` or `"out"`. */
     var direction: String = js.native
+    
+    /**
+      * Create a new `Transfer` object for this endpoint.
+      *
+      * The passed callback will be called when the transfer is submitted and finishes. Its arguments are the error (if any), the submitted buffer, and the amount of data actually written (for
+      * OUT transfers) or read (for IN transfers).
+      *
+      * @param timeout Timeout for the transfer (0 means unlimited).
+      * @param callback Transfer completion callback.
+      */
+    def makeTransfer(
+      timeout: Double,
+      callback: js.Function3[
+          /* error */ js.UndefOr[LibUSBException], 
+          /* buffer */ js.UndefOr[Buffer], 
+          /* actualLength */ js.UndefOr[Double], 
+          Unit
+        ]
+    ): Transfer = js.native
     
     /** Sets the timeout in milliseconds for transfers on this endpoint. The default, `0`, is infinite timeout. */
     var timeout: Double = js.native
@@ -514,10 +556,10 @@ object mod extends js.Object {
       * Further data may still be received. The `end` event is emitted and the callback is called once all transfers have completed or canceled.
       *
       * The device must be open to use this method.
-      * @param cb
+      * @param callback
       */
     def stopPoll(): Unit = js.native
-    def stopPoll(cb: js.Function0[Unit]): Unit = js.native
+    def stopPoll(callback: js.Function0[Unit]): Unit = js.native
     
     /**
       * Perform a transfer to read data from the endpoint.
@@ -530,7 +572,10 @@ object mod extends js.Object {
       * @param length
       * @param callback
       */
-    def transfer(length: Double, callback: js.Function2[/* error */ LibUSBException, /* data */ Buffer, Unit]): InEndpoint = js.native
+    def transfer(
+      length: Double,
+      callback: js.Function2[/* error */ js.UndefOr[LibUSBException], /* data */ js.UndefOr[Buffer], Unit]
+    ): InEndpoint = js.native
   }
   
   @js.native
@@ -545,7 +590,7 @@ object mod extends js.Object {
       *
       * The device must be open to use this method.
       */
-    def attachKernelDriver(): Double = js.native
+    def attachKernelDriver(): Unit = js.native
     
     /**
       * Claims the interface. This method must be called before using any endpoints of this interface.
@@ -562,7 +607,7 @@ object mod extends js.Object {
       *
       * The device must be open to use this method.
       */
-    def detachKernelDriver(): Double = js.native
+    def detachKernelDriver(): Unit = js.native
     
     /**
       * Return the InEndpoint or OutEndpoint with the specified address.
@@ -591,22 +636,25 @@ object mod extends js.Object {
       * It is an error to release an interface with pending transfers.
       *
       * The device must be open to use this method.
-      * @param cb
+      * @param callback
       */
     def release(): Unit = js.native
-    def release(cb: js.Function1[/* err */ js.UndefOr[String], Unit]): Unit = js.native
-    def release(closeEndpoints: js.UndefOr[scala.Nothing], cb: js.Function1[/* err */ js.UndefOr[String], Unit]): Unit = js.native
+    def release(callback: js.Function1[/* error */ js.UndefOr[LibUSBException], Unit]): Unit = js.native
+    def release(
+      closeEndpoints: js.UndefOr[scala.Nothing],
+      callback: js.Function1[/* error */ js.UndefOr[LibUSBException], Unit]
+    ): Unit = js.native
     def release(closeEndpoints: Boolean): Unit = js.native
-    def release(closeEndpoints: Boolean, cb: js.Function1[/* err */ js.UndefOr[String], Unit]): Unit = js.native
+    def release(closeEndpoints: Boolean, callback: js.Function1[/* error */ js.UndefOr[LibUSBException], Unit]): Unit = js.native
     
     /**
       * Sets the alternate setting. It updates the `interface.endpoints` array to reflect the endpoints found in the alternate setting.
       *
       * The device must be open to use this method.
       * @param altSetting
-      * @param cb
+      * @param callback
       */
-    def setAltSetting(altSetting: Double, cb: js.Function1[/* err */ js.UndefOr[String], Unit]): Unit = js.native
+    def setAltSetting(altSetting: Double, callback: js.Function1[/* error */ js.UndefOr[LibUSBException], Unit]): Unit = js.native
   }
   
   @js.native
@@ -665,10 +713,28 @@ object mod extends js.Object {
       *
       * The device must be open to use this method.
       * @param buffer
-      * @param cb
+      * @param callback
       */
-    def transfer(buffer: Buffer, cb: js.Function1[/* err */ js.UndefOr[LibUSBException], Unit]): OutEndpoint = js.native
+    def transfer(buffer: Buffer, callback: js.Function1[/* error */ js.UndefOr[LibUSBException], Unit]): OutEndpoint = js.native
     
-    def transferWithZLP(buf: Buffer, cb: js.Function1[/* err */ js.UndefOr[LibUSBException], Unit]): Unit = js.native
+    def transferWithZLP(buffer: Buffer, callback: js.Function1[/* error */ js.UndefOr[LibUSBException], Unit]): Unit = js.native
+  }
+  
+  @js.native
+  class Transfer () extends js.Object {
+    
+    /**
+      * Cancel the transfer.
+      *
+      * Returns `true` if the transfer was canceled, `false` if it wasn't in pending state.
+      */
+    def cancel(): Boolean = js.native
+    
+    /**
+      * (Re-)submit the transfer.
+      *
+      * @param buffer Buffer where data will be written (for IN transfers) or read from (for OUT transfers).
+      */
+    def submit(buffer: Buffer): Transfer = js.native
   }
 }

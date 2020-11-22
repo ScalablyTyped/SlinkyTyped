@@ -23,7 +23,12 @@ trait AwsApiCallAction extends js.Object {
   var DomainDetails: js.UndefOr[typingsSlinky.awsSdk.guarddutyMod.DomainDetails] = js.native
   
   /**
-    * The remote IP information of the connection.
+    * The error code of the failed AWS API action.
+    */
+  var ErrorCode: js.UndefOr[String] = js.native
+  
+  /**
+    * The remote IP information of the connection that initiated the AWS API call.
     */
   var RemoteIpDetails: js.UndefOr[typingsSlinky.awsSdk.guarddutyMod.RemoteIpDetails] = js.native
   
@@ -72,6 +77,12 @@ object AwsApiCallAction {
     
     @scala.inline
     def deleteDomainDetails: Self = this.set("DomainDetails", js.undefined)
+    
+    @scala.inline
+    def setErrorCode(value: String): Self = this.set("ErrorCode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorCode: Self = this.set("ErrorCode", js.undefined)
     
     @scala.inline
     def setRemoteIpDetails(value: RemoteIpDetails): Self = this.set("RemoteIpDetails", value.asInstanceOf[js.Any])

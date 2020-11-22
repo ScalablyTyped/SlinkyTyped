@@ -15,6 +15,6 @@ class BytesValue_ () extends Message {
   
   def getValue_asU8(): js.typedarray.Uint8Array = js.native
   
-  def setValue(value: String): Unit = js.native
-  def setValue(value: js.typedarray.Uint8Array): Unit = js.native
+  def setValue(value: String): BytesValue = js.native
+  def setValue(value: js.typedarray.Uint8Array): BytesValue = js.native
 }

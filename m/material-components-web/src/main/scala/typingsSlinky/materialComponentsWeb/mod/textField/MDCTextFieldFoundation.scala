@@ -30,7 +30,8 @@ object MDCTextFieldFoundation extends js.Object {
   def cssClasses: DISABLED = js.native
   
   /**
-    * See {@link MDCTextFieldAdapter} for typing information on parameters and return types.
+    * See {@link MDCTextFieldAdapter} for typing information on parameters and
+    * return types.
     */
   def defaultAdapter: MDCTextFieldAdapter = js.native
   

@@ -1,7 +1,9 @@
 package typingsSlinky.antd.tagMod
 
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.colorsMod.PresetStatusColorType
 import typingsSlinky.antd.typeMod.LiteralUnion
@@ -22,7 +24,7 @@ trait TagProps extends HTMLAttributes[HTMLSpanElement] {
   
   var icon: js.UndefOr[ReactElement] = js.native
   
-  var onClose: js.UndefOr[js.Function] = js.native
+  var onClose: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLElement], Unit]] = js.native
   
   var prefixCls: js.UndefOr[String] = js.native
   
@@ -82,7 +84,7 @@ object TagProps {
     def deleteIcon: Self = this.set("icon", js.undefined)
     
     @scala.inline
-    def setOnClose(value: js.Function): Self = this.set("onClose", value.asInstanceOf[js.Any])
+    def setOnClose(value: /* e */ SyntheticMouseEvent[HTMLElement] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClose: Self = this.set("onClose", js.undefined)

@@ -13,7 +13,7 @@ trait AwsLambdaLayerVersionDetails extends js.Object {
   var CompatibleRuntimes: js.UndefOr[NonEmptyStringList] = js.native
   
   /**
-    * The date that the version was created, in ISO 8601 format. For example, 2018-11-27T15:10:45.123+0000. 
+    * Indicates when the version was created. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var CreatedDate: js.UndefOr[NonEmptyString] = js.native
   

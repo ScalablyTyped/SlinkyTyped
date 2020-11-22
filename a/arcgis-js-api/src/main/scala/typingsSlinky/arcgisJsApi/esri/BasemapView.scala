@@ -25,8 +25,6 @@ trait BasemapView extends Accessor {
     * Value is `true` when the basemap is updating; for example, if it is in the process of fetching data.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-BasemapView.html#updating)
-    *
-    * @default false
     */
   val updating: Boolean = js.native
   

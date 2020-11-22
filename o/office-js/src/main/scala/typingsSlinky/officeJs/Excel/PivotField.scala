@@ -4,10 +4,16 @@ import typingsSlinky.officeJs.Excel.Interfaces.PivotFieldData
 import typingsSlinky.officeJs.Excel.Interfaces.PivotFieldLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.PivotFieldUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
+import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Ascending
+import typingsSlinky.officeJs.officeJsStrings.Date
 import typingsSlinky.officeJs.officeJsStrings.Descending
+import typingsSlinky.officeJs.officeJsStrings.Label
+import typingsSlinky.officeJs.officeJsStrings.Manual
+import typingsSlinky.officeJs.officeJsStrings.Unknown_
+import typingsSlinky.officeJs.officeJsStrings.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,9 +27,60 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PivotField extends ClientObject {
   
+  /**
+    * Sets one or more of the field's current PivotFilters and applies them to the field.
+    If the provided filters are invalid or cannot be applied, an exception is thrown.
+    *
+    * [Api set: ExcelApi 1.12]
+    *
+    * @param filter A configured specific PivotFilter or a PivotFilters interface containing multiple configured filters.
+    */
+  def applyFilter(filter: PivotFilters): Unit = js.native
+  
+  /**
+    * Clears all criteria from all of the field's filters. This removes any active filtering on the field.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  def clearAllFilters(): Unit = js.native
+  
+  /**
+    * Clears all existing criteria from the field's filter of the given type (if one is currently applied).
+    *
+    * [Api set: ExcelApi 1.12]
+    *
+    * @param filterType The type of filter on the field of which to clear all criteria.
+    */
+  def clearFilter(filterType: PivotFilterType): Unit = js.native
+  @JSName("clearFilter")
+  def clearFilter_Date(filterType: Date): Unit = js.native
+  @JSName("clearFilter")
+  def clearFilter_Label(filterType: Label): Unit = js.native
+  @JSName("clearFilter")
+  def clearFilter_Manual(filterType: Manual): Unit = js.native
+  /**
+    * Clears all existing criteria from the field's filter of the given type (if one is currently applied).
+    *
+    * [Api set: ExcelApi 1.12]
+    *
+    * @param filterType The type of filter on the field of which to clear all criteria.
+    */
+  @JSName("clearFilter")
+  def clearFilter_Unknown(filterType: Unknown_): Unit = js.native
+  @JSName("clearFilter")
+  def clearFilter_Value(filterType: Value): Unit = js.native
+  
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")
   var context_PivotField: RequestContext = js.native
+  
+  /**
+    * Gets all filters currently applied on the field.
+    *
+    * [Api set: ExcelApi 1.12]
+    * @returns A PivotFilters interface with all active filters.
+    */
+  def getFilters(): ClientResult[PivotFilters] = js.native
   
   /**
     *
@@ -32,6 +89,27 @@ trait PivotField extends ClientObject {
     * [Api set: ExcelApi 1.8]
     */
   val id: String = js.native
+  
+  /**
+    * Checks if there are any applied filters on the field.
+    *
+    * [Api set: ExcelApi 1.12]
+    *
+    * @param filterType The filter type to check. If no type is provided, this method will check if any filter is applied.
+    * @returns True if the field has a filter of type `filterType` applied. If filterType is not specified, true is returned if the field has any applied filters.
+    */
+  def isFiltered(): ClientResult[Boolean] = js.native
+  def isFiltered(filterType: PivotFilterType): ClientResult[Boolean] = js.native
+  @JSName("isFiltered")
+  def isFiltered_Date(filterType: Date): ClientResult[Boolean] = js.native
+  @JSName("isFiltered")
+  def isFiltered_Label(filterType: Label): ClientResult[Boolean] = js.native
+  @JSName("isFiltered")
+  def isFiltered_Manual(filterType: Manual): ClientResult[Boolean] = js.native
+  @JSName("isFiltered")
+  def isFiltered_Unknown(filterType: Unknown_): ClientResult[Boolean] = js.native
+  @JSName("isFiltered")
+  def isFiltered_Value(filterType: Value): ClientResult[Boolean] = js.native
   
   /**
     *

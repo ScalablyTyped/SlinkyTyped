@@ -174,7 +174,7 @@ trait Options extends js.Object {
     * @default
     * function () {}
     */
-  var warn: js.UndefOr[js.Function1[/* message */ js.UndefOr[js.Any], Unit | Boolean]] = js.native
+  var warn: js.UndefOr[(js.Function1[/* message */ js.UndefOr[js.Any], Unit]) | Boolean] = js.native
 }
 @JSImport("conventional-commits-parser", "Options")
 @js.native

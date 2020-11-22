@@ -28,6 +28,7 @@ import typingsSlinky.ddTrace.ddTraceStrings.ioredis
 import typingsSlinky.ddTrace.ddTraceStrings.knex
 import typingsSlinky.ddTrace.ddTraceStrings.koa
 import typingsSlinky.ddTrace.ddTraceStrings.memcached
+import typingsSlinky.ddTrace.ddTraceStrings.mongoose
 import typingsSlinky.ddTrace.ddTraceStrings.mysql
 import typingsSlinky.ddTrace.ddTraceStrings.mysql2
 import typingsSlinky.ddTrace.ddTraceStrings.net
@@ -61,6 +62,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Tracer_ extends Tracer {
   
   /**
+    * Create and return a string that can be included in the <head> of a
+    * document to enable RUM tracing to include it. The resulting string
+    * should not be cached.
+    */
+  def getRumData(): String = js.native
+  
+  /**
     * Initializes the tracer. This should be called before importing other libraries.
     */
   def init(): this.type = js.native
@@ -83,6 +91,13 @@ trait Tracer_ extends Tracer {
     * Returns a reference to the current scope.
     */
   def scope(): Scope = js.native
+  
+  /**
+    * Sets the URL for the trace agent. This should only be called _after_
+    * init() is called, only in cases where the URL needs to be set after
+    * initialization.
+    */
+  def setUrl(url: String): this.type = js.native
   
   /**
     * Instruments a function by automatically creating a span activated on its
@@ -286,6 +301,12 @@ trait Tracer_ extends Tracer {
   def use_mongodbcore(plugin: `mongodb-core`, config: Boolean): this.type = js.native
   @JSName("use")
   def use_mongodbcore(plugin: `mongodb-core`, config: mongodbCore): this.type = js.native
+  @JSName("use")
+  def use_mongoose(plugin: mongoose): this.type = js.native
+  @JSName("use")
+  def use_mongoose(plugin: mongoose, config: Boolean): this.type = js.native
+  @JSName("use")
+  def use_mongoose(plugin: mongoose, config: typingsSlinky.ddTrace.mod.plugins.mongoose): this.type = js.native
   @JSName("use")
   def use_mysql(plugin: mysql): this.type = js.native
   @JSName("use")

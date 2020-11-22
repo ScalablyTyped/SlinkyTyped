@@ -8,6 +8,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.end
@@ -15,7 +16,6 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.start
 import typingsSlinky.react.mod.ButtonHTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js

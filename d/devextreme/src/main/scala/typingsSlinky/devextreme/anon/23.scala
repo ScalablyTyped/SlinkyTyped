@@ -1,5 +1,6 @@
 package typingsSlinky.devextreme.anon
 
+import typingsSlinky.devextreme.mod.DevExpress.viz.dxFunnelItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `23` extends js.Object {
   
-  var value: js.UndefOr[js.Date | Double] = js.native
+  var item: js.UndefOr[dxFunnelItem] = js.native
   
-  var valueText: js.UndefOr[String] = js.native
+  var text: js.UndefOr[String] = js.native
 }
 object `23` {
   
@@ -35,18 +36,15 @@ object `23` {
     }
     
     @scala.inline
-    def setValueDate(value: js.Date): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setItem(value: dxFunnelItem): Self = this.set("item", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: js.Date | Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    def deleteItem: Self = this.set("item", js.undefined)
     
     @scala.inline
-    def deleteValue: Self = this.set("value", js.undefined)
+    def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValueText(value: String): Self = this.set("valueText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValueText: Self = this.set("valueText", js.undefined)
+    def deleteText: Self = this.set("text", js.undefined)
   }
 }

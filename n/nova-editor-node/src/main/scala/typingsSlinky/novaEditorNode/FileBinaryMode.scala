@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FileBinaryMode extends File {
   
   def read(): js.typedarray.ArrayBuffer | Null = js.native
-  def read(size: String): js.typedarray.ArrayBuffer | Null = js.native
+  def read(size: Double): js.typedarray.ArrayBuffer | Null = js.native
 }

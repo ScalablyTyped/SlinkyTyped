@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RawDraftEntityRange extends js.Object {
   
-  var key: String = js.native
+  var key: Double = js.native
   
   var length: Double = js.native
   
@@ -22,7 +22,7 @@ trait RawDraftEntityRange extends js.Object {
 object RawDraftEntityRange {
   
   @scala.inline
-  def apply(key: String, length: Double, offset: Double): RawDraftEntityRange = {
+  def apply(key: Double, length: Double, offset: Double): RawDraftEntityRange = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], offset = offset.asInstanceOf[js.Any])
     __obj.asInstanceOf[RawDraftEntityRange]
   }
@@ -43,7 +43,7 @@ object RawDraftEntityRange {
     }
     
     @scala.inline
-    def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setKey(value: Double): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLength(value: Double): Self = this.set("length", value.asInstanceOf[js.Any])

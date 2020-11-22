@@ -6,12 +6,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TestContext extends js.Object {
+trait TestContext[C] extends js.Object {
   
   def createError(): ValidationError = js.native
   def createError(params: Message): ValidationError = js.native
   
-  var options: ValidateOptions = js.native
+  var options: ValidateOptions[C] = js.native
   
   var parent: js.Any = js.native
   
@@ -19,5 +19,5 @@ trait TestContext extends js.Object {
   
   def resolve(value: js.Any): js.Any = js.native
   
-  var schema: Schema[_] = js.native
+  var schema: Schema[_, C] = js.native
 }

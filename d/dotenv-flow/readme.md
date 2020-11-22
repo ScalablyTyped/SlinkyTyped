@@ -1,7 +1,7 @@
 
 # Scala.js typings for dotenv-flow
 
-Typings are for version 3.0
+Typings are for version 3.1
 
 ## Library description:
 Loads environment variables from `.env.[development|test|production][.local]` files

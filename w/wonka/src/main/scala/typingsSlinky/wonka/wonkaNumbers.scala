@@ -1,7 +1,6 @@
 package typingsSlinky.wonka
 
-import typingsSlinky.wonka.jsShimMod.talkbackT
-import typingsSlinky.wonka.wonkaCallbagGenMod.callbagSignal
+import typingsSlinky.wonka.wonkaTypesMod.Talkback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,15 +17,11 @@ object wonkaNumbers {
   def `2`: `2` = 2.asInstanceOf[`2`]
   
   @js.native
-  sealed trait `0`
-    extends callbagSignal
-       with talkbackT
+  sealed trait `0` extends Talkback
   
   @js.native
-  sealed trait `1`
-    extends callbagSignal
-       with talkbackT
+  sealed trait `1` extends Talkback
   
   @js.native
-  sealed trait `2` extends callbagSignal
+  sealed trait `2` extends js.Object
 }

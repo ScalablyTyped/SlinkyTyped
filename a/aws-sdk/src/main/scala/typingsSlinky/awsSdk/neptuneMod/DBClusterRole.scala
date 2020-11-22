@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DBClusterRole extends js.Object {
   
   /**
+    * The name of the feature associated with the AWS Identity and Access Management (IAM) role. For the list of supported feature names, see DBEngineVersion. 
+    */
+  var FeatureName: js.UndefOr[String] = js.native
+  
+  /**
     * The Amazon Resource Name (ARN) of the IAM role that is associated with the DB cluster.
     */
   var RoleArn: js.UndefOr[String] = js.native
@@ -39,6 +44,12 @@ object DBClusterRole {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setFeatureName(value: String): Self = this.set("FeatureName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFeatureName: Self = this.set("FeatureName", js.undefined)
     
     @scala.inline
     def setRoleArn(value: String): Self = this.set("RoleArn", value.asInstanceOf[js.Any])

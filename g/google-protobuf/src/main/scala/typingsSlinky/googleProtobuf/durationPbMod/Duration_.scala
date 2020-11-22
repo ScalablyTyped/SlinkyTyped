@@ -13,7 +13,7 @@ class Duration_ () extends Message {
   
   def getSeconds(): Double = js.native
   
-  def setNanos(value: Double): Unit = js.native
+  def setNanos(value: Double): Duration = js.native
   
-  def setSeconds(value: Double): Unit = js.native
+  def setSeconds(value: Double): Duration = js.native
 }

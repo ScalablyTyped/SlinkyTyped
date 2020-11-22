@@ -2,6 +2,7 @@ package typingsSlinky.pulumiAws.trailMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.inputMod.cloudtrail.TrailEventSelector
+import typingsSlinky.pulumiAws.inputMod.cloudtrail.TrailInsightSelector
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +18,7 @@ trait TrailState extends js.Object {
   
   /**
     * Specifies a log group name using an Amazon Resource Name (ARN),
-    * that represents the log group to which CloudTrail logs will be delivered.
+    * that represents the log group to which CloudTrail logs will be delivered. Note that CloudTrail requires the Log Stream wildcard.
     */
   val cloudWatchLogsGroupArn: js.UndefOr[Input[String]] = js.native
   
@@ -54,6 +55,11 @@ trait TrailState extends js.Object {
     * from global services such as IAM to the log files. Defaults to `true`.
     */
   val includeGlobalServiceEvents: js.UndefOr[Input[Boolean]] = js.native
+  
+  /**
+    * Specifies an insight selector for identifying unusual operational activity. Fields documented below.
+    */
+  val insightSelectors: js.UndefOr[Input[js.Array[Input[TrailInsightSelector]]]] = js.native
   
   /**
     * Specifies whether the trail is created in the current
@@ -171,6 +177,15 @@ object TrailState {
     
     @scala.inline
     def deleteIncludeGlobalServiceEvents: Self = this.set("includeGlobalServiceEvents", js.undefined)
+    
+    @scala.inline
+    def setInsightSelectorsVarargs(value: Input[TrailInsightSelector]*): Self = this.set("insightSelectors", js.Array(value :_*))
+    
+    @scala.inline
+    def setInsightSelectors(value: Input[js.Array[Input[TrailInsightSelector]]]): Self = this.set("insightSelectors", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInsightSelectors: Self = this.set("insightSelectors", js.undefined)
     
     @scala.inline
     def setIsMultiRegionTrail(value: Input[Boolean]): Self = this.set("isMultiRegionTrail", value.asInstanceOf[js.Any])

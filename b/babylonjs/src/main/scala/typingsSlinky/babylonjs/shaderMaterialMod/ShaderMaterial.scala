@@ -1,6 +1,8 @@
 package typingsSlinky.babylonjs.shaderMaterialMod
 
 import typingsSlinky.babylonjs.anon.PartialIShaderMaterialOpt
+import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
+import typingsSlinky.babylonjs.effectMod.Effect
 import typingsSlinky.babylonjs.materialMod.Material
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import typingsSlinky.babylonjs.mathColorMod.Color4
@@ -8,8 +10,9 @@ import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.mathVectorMod.Vector2
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.mathVectorMod.Vector4
+import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.sceneMod.Scene
-import typingsSlinky.babylonjs.textureMod.Texture
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +24,7 @@ class ShaderMaterial protected () extends Material {
     * Instantiate a new shader material.
     * The ShaderMaterial object has the necessary methods to pass data from your scene to the Vertex and Fragment Shaders and returns a material that can be applied to any mesh.
     * This returned material effects how the mesh will look based on the code in the shaders.
-    * @see http://doc.babylonjs.com/how_to/shader_material
+    * @see https://doc.babylonjs.com/how_to/shader_material
     * @param name Define the name of the material in the scene
     * @param scene Define the scene the material belongs to
     * @param shaderPath Defines  the route to the shader code in one of three ways:
@@ -33,6 +36,8 @@ class ShaderMaterial protected () extends Material {
     */
   def this(name: String, scene: Scene, shaderPath: js.Any) = this()
   def this(name: String, scene: Scene, shaderPath: js.Any, options: PartialIShaderMaterialOpt) = this()
+  
+  var _cachedDefines: js.Any = js.native
   
   var _cachedWorldViewMatrix: js.Any = js.native
   
@@ -87,6 +92,11 @@ class ShaderMaterial protected () extends Material {
   var _vectors4: js.Any = js.native
   
   var _vectors4Arrays: js.Any = js.native
+  
+  def bind(world: Matrix, mesh: js.UndefOr[scala.Nothing], effectOverride: Nullable[Effect]): Unit = js.native
+  def bind(world: Matrix, mesh: Mesh, effectOverride: Nullable[Effect]): Unit = js.native
+  
+  def bindOnlyWorldMatrix(world: Matrix, effectOverride: Nullable[Effect]): Unit = js.native
   
   /**
     * Gets the options used to compile the shader.
@@ -190,6 +200,7 @@ class ShaderMaterial protected () extends Material {
     */
   def setMatrix(name: String, value: Matrix): ShaderMaterial = js.native
   
+  def setMatrix2x2(name: String, value: js.Array[Double]): ShaderMaterial = js.native
   /**
     * Set a mat2 in the shader from a Float32Array.
     * @param name Define the name of the uniform as defined in the shader
@@ -198,6 +209,7 @@ class ShaderMaterial protected () extends Material {
     */
   def setMatrix2x2(name: String, value: js.typedarray.Float32Array): ShaderMaterial = js.native
   
+  def setMatrix3x3(name: String, value: js.Array[Double]): ShaderMaterial = js.native
   /**
     * Set a mat3 in the shader from a Float32Array.
     * @param name Define the name of the uniform as defined in the shader
@@ -212,7 +224,7 @@ class ShaderMaterial protected () extends Material {
     * @param texture Define the texture to bind to this sampler
     * @return the material itself allowing "fluent" like uniform updates
     */
-  def setTexture(name: String, texture: Texture): ShaderMaterial = js.native
+  def setTexture(name: String, texture: BaseTexture): ShaderMaterial = js.native
   
   /**
     * Set a texture array in the shader.
@@ -220,7 +232,7 @@ class ShaderMaterial protected () extends Material {
     * @param textures Define the list of textures to bind to this sampler
     * @return the material itself allowing "fluent" like uniform updates
     */
-  def setTextureArray(name: String, textures: js.Array[Texture]): ShaderMaterial = js.native
+  def setTextureArray(name: String, textures: js.Array[BaseTexture]): ShaderMaterial = js.native
   
   /**
     * Set a vec2 in the shader from a Vector2.
@@ -256,11 +268,24 @@ class ShaderMaterial protected () extends Material {
     * It can be modified to trigger a new compilation
     */
   def shaderPath_=(shaderPath: js.Any): Unit = js.native
+  
+  /** Snippet ID if the material was created from the snippet server */
+  var snippetId: String = js.native
 }
 /* static members */
 @JSImport("babylonjs/Materials/shaderMaterial", "ShaderMaterial")
 @js.native
 object ShaderMaterial extends js.Object {
+  
+  /**
+    * Creates a ShaderMaterial from a snippet saved by the Inspector
+    * @param snippetId defines the snippet to load
+    * @param scene defines the hosting scene
+    * @param rootUrl defines the root URL to use to load textures and relative dependencies
+    * @returns a promise that will resolve to the new ShaderMaterial
+    */
+  def CreateFromSnippetAsync(snippetId: String, scene: Scene): js.Promise[ShaderMaterial] = js.native
+  def CreateFromSnippetAsync(snippetId: String, scene: Scene, rootUrl: String): js.Promise[ShaderMaterial] = js.native
   
   /**
     * Creates a shader material from parsed shader material data
@@ -270,4 +295,18 @@ object ShaderMaterial extends js.Object {
     * @returns a new material
     */
   def Parse(source: js.Any, scene: Scene, rootUrl: String): ShaderMaterial = js.native
+  
+  /**
+    * Creates a new ShaderMaterial from a snippet saved in a remote file
+    * @param name defines the name of the ShaderMaterial to create (can be null or empty to use the one from the json data)
+    * @param url defines the url to load from
+    * @param scene defines the hosting scene
+    * @param rootUrl defines the root URL to use to load textures and relative dependencies
+    * @returns a promise that will resolve to the new ShaderMaterial
+    */
+  def ParseFromFileAsync(name: Nullable[String], url: String, scene: Scene): js.Promise[ShaderMaterial] = js.native
+  def ParseFromFileAsync(name: Nullable[String], url: String, scene: Scene, rootUrl: String): js.Promise[ShaderMaterial] = js.native
+  
+  /** Define the Url to load snippets */
+  var SnippetUrl: String = js.native
 }

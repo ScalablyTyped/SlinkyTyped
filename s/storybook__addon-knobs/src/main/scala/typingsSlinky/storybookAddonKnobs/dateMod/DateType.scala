@@ -1,7 +1,6 @@
 package typingsSlinky.storybookAddonKnobs.dateMod
 
 import org.scalajs.dom.raw.HTMLInputElement
-import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,9 +15,9 @@ trait DateType
   
   var dateInput: HTMLInputElement = js.native
   
-  def onDateChange(e: ChangeEvent[HTMLInputElement]): Unit = js.native
+  var onDateChange: js.Any = js.native
   
-  def onTimeChange(e: ChangeEvent[HTMLInputElement]): Unit = js.native
+  var onTimeChange: js.Any = js.native
   
   var timeInput: HTMLInputElement = js.native
 }

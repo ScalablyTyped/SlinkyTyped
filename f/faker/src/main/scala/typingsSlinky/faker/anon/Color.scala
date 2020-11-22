@@ -37,6 +37,8 @@ trait Color extends js.Object {
   
   def productAdjective(): String = js.native
   
+  def productDescription(): String = js.native
+  
   def productMaterial(): String = js.native
   
   def productName(): String = js.native

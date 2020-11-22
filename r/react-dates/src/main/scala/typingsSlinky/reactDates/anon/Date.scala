@@ -1,6 +1,6 @@
 package typingsSlinky.reactDates.anon
 
-import typingsSlinky.reactDates.mod.momentPropTypes.momentObj
+import typingsSlinky.moment.mod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Date extends js.Object {
   
-  var date: momentObj = js.native
+  var date: Moment | Null = js.native
 }
 object Date {
   
   @scala.inline
-  def apply(date: momentObj): Date = {
-    val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any])
+  def apply(): Date = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Date]
   }
   
@@ -34,6 +34,9 @@ object Date {
     }
     
     @scala.inline
-    def setDate(value: momentObj): Self = this.set("date", value.asInstanceOf[js.Any])
+    def setDate(value: Moment): Self = this.set("date", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDateNull: Self = this.set("date", null)
   }
 }

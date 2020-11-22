@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -12,6 +13,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.Document
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.WsdlDescription
@@ -39,7 +41,7 @@ object xmlschemasMod extends js.Object {
     trait IMxSchema extends IDocument
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/xml-schemas relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/xml-schemas relevant section in reference guide}
       */
     @js.native
     trait IXmlSchema extends IMxSchema
@@ -65,9 +67,6 @@ object xmlschemasMod extends js.Object {
       
       @JSName("containerAsFolderBase")
       def containerAsFolderBase_MMxSchema: FolderBase = js.native
-      
-      @JSName("model")
-      var model_FMxSchema: IModel = js.native
     }
     /* static members */
     @js.native
@@ -88,12 +87,9 @@ object xmlschemasMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
-      
-      @JSName("model")
-      var model_FXmlElement: IModel = js.native
     }
     /* static members */
     @js.native
@@ -163,7 +159,7 @@ object xmlschemasMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/xml-schemas relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/xml-schemas relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -192,9 +188,6 @@ object xmlschemasMod extends js.Object {
       
       def filePath: String = js.native
       def filePath_=(newValue: String): Unit = js.native
-      
-      @JSName("model")
-      var model_FXmlSchema: IModel = js.native
     }
     /* static members */
     @js.native
@@ -213,14 +206,14 @@ object xmlschemasMod extends js.Object {
     
     @js.native
     class XmlSchemaEntry protected ()
-      extends typingsSlinky.mendixmodelsdk.internalMod.Element {
+      extends typingsSlinky.mendixmodelsdk.internalMod.Element[IModel] {
       def this(
         model: AbstractModel,
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       def containerAsWsdlDescription: WsdlDescription = js.native
@@ -238,9 +231,6 @@ object xmlschemasMod extends js.Object {
       
       def location: String = js.native
       def location_=(newValue: String): Unit = js.native
-      
-      @JSName("model")
-      var model_FXmlSchemaEntry: IModel = js.native
       
       def targetNamespace: String = js.native
       def targetNamespace_=(newValue: String): Unit = js.native

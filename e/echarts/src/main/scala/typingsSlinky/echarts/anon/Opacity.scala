@@ -7,16 +7,73 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Opacity extends js.Object {
   
-  var color: js.UndefOr[String] = js.native
+  /**
+    * Fill color.
+    *
+    * > Color can be represented in RGB, for example `'rgb(128,
+    * 128, 128)'`.
+    * RGBA can be used when you need alpha channel, for
+    * example `'rgba(128, 128, 128, 0.5)'`.
+    * You may also use hexadecimal format, for example
+    * `'#ccc'`.
+    * Gradient color and texture are also supported besides
+    * single colors.
+    * >
+    * > [see doc](https://echarts.apache.org/en/option.html#series-radar.radar.data.emphasis.areaStyle)
+    *
+    *
+    * @default
+    * "#000"
+    * @see https://echarts.apache.org/en/option.html#series-radar.data.emphasis.areaStyle.color
+    */
+  var color: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
+  /**
+    * Opacity of the component.
+    * Supports value from 0 to 1, and the component will
+    * not be drawn when set to 0.
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-radar.data.emphasis.areaStyle.opacity
+    */
   var opacity: js.UndefOr[Double] = js.native
   
+  /**
+    * Size of shadow blur.
+    * This attribute should be used along with `shadowColor`,`shadowOffsetX`,
+    * `shadowOffsetY` to set shadow to component.
+    *
+    * For example:
+    *
+    * [see doc](https://echarts.apache.org/en/option.html#series-radar.radar.data.emphasis.areaStyle)
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-radar.data.emphasis.areaStyle.shadowBlur
+    */
   var shadowBlur: js.UndefOr[Double] = js.native
   
-  var shadowColor: js.UndefOr[String] = js.native
+  /**
+    * Shadow color. Support same format as `color`.
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-radar.data.emphasis.areaStyle.shadowColor
+    */
+  var shadowColor: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
+  /**
+    * Offset distance on the horizontal direction of shadow.
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-radar.data.emphasis.areaStyle.shadowOffsetX
+    */
   var shadowOffsetX: js.UndefOr[Double] = js.native
   
+  /**
+    * Offset distance on the vertical direction of shadow.
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-radar.data.emphasis.areaStyle.shadowOffsetY
+    */
   var shadowOffsetY: js.UndefOr[Double] = js.native
 }
 object Opacity {
@@ -43,7 +100,7 @@ object Opacity {
     }
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
@@ -61,7 +118,7 @@ object Opacity {
     def deleteShadowBlur: Self = this.set("shadowBlur", js.undefined)
     
     @scala.inline
-    def setShadowColor(value: String): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
+    def setShadowColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShadowColor: Self = this.set("shadowColor", js.undefined)

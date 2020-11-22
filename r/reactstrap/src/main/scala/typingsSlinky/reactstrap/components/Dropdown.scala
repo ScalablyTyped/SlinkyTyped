@@ -7,17 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object Dropdown {
   
-  @JSImport("reactstrap", "Dropdown")
+  @JSImport("reactstrap/es", "Dropdown")
   @js.native
   object component extends js.Object
   
-  def withProps[T](p: DropdownProps): SharedBuilder_DropdownProps_1846249806[typingsSlinky.reactstrap.mod.Dropdown[T], T] = new SharedBuilder_DropdownProps_1846249806[typingsSlinky.reactstrap.mod.Dropdown[T], T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: DropdownProps): SharedBuilder_DropdownProps303701658[typingsSlinky.reactstrap.mod.Dropdown] = new SharedBuilder_DropdownProps303701658[typingsSlinky.reactstrap.mod.Dropdown](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply[T](): SharedBuilder_DropdownProps_1846249806[typingsSlinky.reactstrap.mod.Dropdown[T], T] = {
-    val __props = js.Dynamic.literal()
-    new SharedBuilder_DropdownProps_1846249806[typingsSlinky.reactstrap.mod.Dropdown[T], T](js.Array(this.component, __props.asInstanceOf[DropdownProps]))
-  }
-  
-  implicit def make[T](companion: Dropdown.type): SharedBuilder_DropdownProps_1846249806[typingsSlinky.reactstrap.mod.Dropdown[T], T] = new SharedBuilder_DropdownProps_1846249806[typingsSlinky.reactstrap.mod.Dropdown[T], T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: Dropdown.type): SharedBuilder_DropdownProps303701658[typingsSlinky.reactstrap.mod.Dropdown] = new SharedBuilder_DropdownProps303701658[typingsSlinky.reactstrap.mod.Dropdown](js.Array(this.component, js.Dictionary.empty))()
 }

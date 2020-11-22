@@ -20,7 +20,8 @@ trait Alert extends js.Object {
   /**
     * _Adds a cancel action to the alert._
     *
-    * Adds a cancel action to the alert. When a cancel action is selected the index provided by presentAlert() or presentSheet() will always be -1.
+    * Adds a cancel action to the alert. When a cancel action is selected, the index provided by presentAlert() or presentSheet() will always be -1. Please note that when running on the
+    * iPad and presenting using presentSheet(), the action will not be shown in the list of actions. The operation is cancelled by tapping outside the sheet.
     * @param title - Title of the action.
     * @see https://docs.scriptable.app/alert/#-addcancelaction
     */
@@ -29,7 +30,7 @@ trait Alert extends js.Object {
   /**
     * _Adds a destructive action to the alert._
     *
-    * Destructive actions titles have a red text color, signaling that the action may modify or delete data.
+    * Destructive action titles have a red text color, signaling that the action may modify or delete data.
     * @param title - Title of the action.
     * @see https://docs.scriptable.app/alert/#-adddestructiveaction
     */
@@ -52,8 +53,8 @@ trait Alert extends js.Object {
   /**
     * _Adds a text field prompting for user input._
     *
-    * Adds a text field to the alert controller prompting for user input. Retrieve the value for the text field using textFieldValue() and supply the index of the text field. Indices for
-    * text fields are assigned in the same order as they are added to the alert starting at 0.
+    * Adds a text field to the alert controller prompting for user input. Retrieve the value for the text field using textFieldValue() and supply the index of the text field. Indices
+    * for text fields are assigned in the same order as they are added to the alert starting at 0.
     *
     * Text fields are not supported when using the sheet presentation.
     * @param placeholder - Optional placeholder that will be displayed when the text field is empty.

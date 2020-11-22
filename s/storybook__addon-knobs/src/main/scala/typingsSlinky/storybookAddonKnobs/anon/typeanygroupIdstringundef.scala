@@ -4,13 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  type :any,   groupId :string | undefined,   name :string,   label :string,   used :boolean | undefined,   defaultValue :any | undefined,   hideLabel :boolean | undefined,   callback :(): any | undefined} & std.Pick<@storybook/addon-knobs.@storybook/addon-knobs/dist/components/types.ObjectTypeKnob<any>, 'value'> */
+/* Inlined {  type :any,   groupId :string | undefined,   disableDebounce :boolean | undefined,   disableForceUpdate :boolean | undefined,   name :string,   label :string,   used :boolean | undefined,   defaultValue :any | undefined,   hideLabel :boolean | undefined,   callback :(): any | undefined} & std.Pick<@storybook/addon-knobs.@storybook/addon-knobs/dist/components/types.ObjectTypeKnob<any>, 'value'> */
 @js.native
 trait typeanygroupIdstringundef extends js.Object {
   
   var callback: js.UndefOr[js.Function0[_]] = js.native
   
   var defaultValue: js.UndefOr[js.Any] = js.native
+  
+  var disableDebounce: js.UndefOr[Boolean] = js.native
+  
+  var disableForceUpdate: js.UndefOr[Boolean] = js.native
   
   var groupId: js.UndefOr[String] = js.native
   
@@ -73,6 +77,18 @@ object typeanygroupIdstringundef {
     
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    
+    @scala.inline
+    def setDisableDebounce(value: Boolean): Self = this.set("disableDebounce", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableDebounce: Self = this.set("disableDebounce", js.undefined)
+    
+    @scala.inline
+    def setDisableForceUpdate(value: Boolean): Self = this.set("disableForceUpdate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableForceUpdate: Self = this.set("disableForceUpdate", js.undefined)
     
     @scala.inline
     def setGroupId(value: String): Self = this.set("groupId", value.asInstanceOf[js.Any])

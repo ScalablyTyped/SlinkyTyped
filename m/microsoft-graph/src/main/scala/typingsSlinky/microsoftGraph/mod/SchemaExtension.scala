@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SchemaExtension extends Entity {
   
   // Description for the schema extension.
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to
@@ -57,10 +57,13 @@ object SchemaExtension {
     }
     
     @scala.inline
-    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: NullableOption[String]): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
+    
+    @scala.inline
+    def setDescriptionNull: Self = this.set("description", null)
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

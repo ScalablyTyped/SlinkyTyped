@@ -53,7 +53,7 @@ object ^ extends js.Object {
   def literal(value: String, languageOrDatatype: String): LiteralExt = js.native
   def literal(value: String, languageOrDatatype: NamedNode[String]): LiteralExt = js.native
   
-  def namedNode(value: String): NamedNodeExt = js.native
+  def namedNode[Iri /* <: String */](value: Iri): NamedNodeExt[Iri] = js.native
   
   def prefixMap(prefixes: Prefixes): typingsSlinky.rdfExt.prefixMapMod.^ = js.native
   

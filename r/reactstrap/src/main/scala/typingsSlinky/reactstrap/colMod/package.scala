@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object colMod {
   
-  type Col[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.colMod.ColProps]
+  type Col = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.colMod.ColProps]
   
   type ColumnProps = java.lang.String | scala.Boolean | scala.Double | typingsSlinky.reactstrap.anon.Offset
 }

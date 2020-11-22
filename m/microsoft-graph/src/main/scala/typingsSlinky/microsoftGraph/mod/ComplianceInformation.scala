@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ComplianceInformation extends js.Object {
   
   // Collection of the certification controls associated with certification
-  var certificationControls: js.UndefOr[js.Array[CertificationControl]] = js.native
+  var certificationControls: js.UndefOr[NullableOption[js.Array[CertificationControl]]] = js.native
   
   // Compliance certification name (for example, ISO 27018:2014, GDPR, FedRAMP, NIST 800-171)
-  var certificationName: js.UndefOr[String] = js.native
+  var certificationName: js.UndefOr[NullableOption[String]] = js.native
 }
 object ComplianceInformation {
   
@@ -40,15 +40,21 @@ object ComplianceInformation {
     def setCertificationControlsVarargs(value: CertificationControl*): Self = this.set("certificationControls", js.Array(value :_*))
     
     @scala.inline
-    def setCertificationControls(value: js.Array[CertificationControl]): Self = this.set("certificationControls", value.asInstanceOf[js.Any])
+    def setCertificationControls(value: NullableOption[js.Array[CertificationControl]]): Self = this.set("certificationControls", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCertificationControls: Self = this.set("certificationControls", js.undefined)
     
     @scala.inline
-    def setCertificationName(value: String): Self = this.set("certificationName", value.asInstanceOf[js.Any])
+    def setCertificationControlsNull: Self = this.set("certificationControls", null)
+    
+    @scala.inline
+    def setCertificationName(value: NullableOption[String]): Self = this.set("certificationName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCertificationName: Self = this.set("certificationName", js.undefined)
+    
+    @scala.inline
+    def setCertificationNameNull: Self = this.set("certificationName", null)
   }
 }

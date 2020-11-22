@@ -9,6 +9,7 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactstrap.fadeMod.FadeProps
 import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.reactstrapStrings.static
@@ -40,6 +41,8 @@ trait ModalProps
   var external: js.UndefOr[ReactElement] = js.native
   
   var fade: js.UndefOr[Boolean] = js.native
+  
+  var innerRef: js.UndefOr[Ref[HTMLElement]] = js.native
   
   var isOpen: js.UndefOr[Boolean] = js.native
   
@@ -164,6 +167,21 @@ object ModalProps {
     
     @scala.inline
     def deleteFade: Self = this.set("fade", js.undefined)
+    
+    @scala.inline
+    def setInnerRefRefObject(value: ReactRef[HTMLElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInnerRefFunction1(value: /* instance */ HTMLElement | Null => Unit): Self = this.set("innerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setInnerRef(value: Ref[HTMLElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInnerRef: Self = this.set("innerRef", js.undefined)
+    
+    @scala.inline
+    def setInnerRefNull: Self = this.set("innerRef", null)
     
     @scala.inline
     def setIsOpen(value: Boolean): Self = this.set("isOpen", value.asInstanceOf[js.Any])

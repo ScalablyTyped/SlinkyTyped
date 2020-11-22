@@ -28,6 +28,16 @@ trait CostCategoryReference extends js.Object {
     *  The number of rules associated with a specific Cost Category. 
     */
   var NumberOfRules: js.UndefOr[NonNegativeInteger] = js.native
+  
+  /**
+    *  The list of processing statuses for Cost Management products for a specific cost category. 
+    */
+  var ProcessingStatus: js.UndefOr[CostCategoryProcessingStatusList] = js.native
+  
+  /**
+    *  A list of unique cost category values in a specific cost category. 
+    */
+  var Values: js.UndefOr[CostCategoryValuesList] = js.native
 }
 object CostCategoryReference {
   
@@ -81,5 +91,23 @@ object CostCategoryReference {
     
     @scala.inline
     def deleteNumberOfRules: Self = this.set("NumberOfRules", js.undefined)
+    
+    @scala.inline
+    def setProcessingStatusVarargs(value: CostCategoryProcessingStatus*): Self = this.set("ProcessingStatus", js.Array(value :_*))
+    
+    @scala.inline
+    def setProcessingStatus(value: CostCategoryProcessingStatusList): Self = this.set("ProcessingStatus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProcessingStatus: Self = this.set("ProcessingStatus", js.undefined)
+    
+    @scala.inline
+    def setValuesVarargs(value: CostCategoryValue*): Self = this.set("Values", js.Array(value :_*))
+    
+    @scala.inline
+    def setValues(value: CostCategoryValuesList): Self = this.set("Values", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValues: Self = this.set("Values", js.undefined)
   }
 }

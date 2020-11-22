@@ -11,12 +11,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RouteArgs extends js.Object {
   
   /**
-    * The name of the service mesh in which to create the route.
+    * The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
     */
   val meshName: Input[String] = js.native
   
   /**
-    * The name to use for the route.
+    * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    */
+  val meshOwner: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The name to use for the route. Must be between 1 and 255 characters in length.
     */
   val name: js.UndefOr[Input[String]] = js.native
   
@@ -31,7 +36,7 @@ trait RouteArgs extends js.Object {
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
-    * The name of the virtual router in which to create the route.
+    * The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
     */
   val virtualRouterName: Input[String] = js.native
 }
@@ -66,6 +71,12 @@ object RouteArgs {
     
     @scala.inline
     def setVirtualRouterName(value: Input[String]): Self = this.set("virtualRouterName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMeshOwner(value: Input[String]): Self = this.set("meshOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMeshOwner: Self = this.set("meshOwner", js.undefined)
     
     @scala.inline
     def setName(value: Input[String]): Self = this.set("name", value.asInstanceOf[js.Any])

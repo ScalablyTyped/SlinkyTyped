@@ -28,6 +28,11 @@ trait InstanceNetworkInterfaceAttachment extends js.Object {
   var DeviceIndex: js.UndefOr[Integer] = js.native
   
   /**
+    * The index of the network card.
+    */
+  var NetworkCardIndex: js.UndefOr[Integer] = js.native
+  
+  /**
     * The attachment state.
     */
   var Status: js.UndefOr[AttachmentStatus] = js.native
@@ -78,6 +83,12 @@ object InstanceNetworkInterfaceAttachment {
     
     @scala.inline
     def deleteDeviceIndex: Self = this.set("DeviceIndex", js.undefined)
+    
+    @scala.inline
+    def setNetworkCardIndex(value: Integer): Self = this.set("NetworkCardIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkCardIndex: Self = this.set("NetworkCardIndex", js.undefined)
     
     @scala.inline
     def setStatus(value: AttachmentStatus): Self = this.set("Status", value.asInstanceOf[js.Any])

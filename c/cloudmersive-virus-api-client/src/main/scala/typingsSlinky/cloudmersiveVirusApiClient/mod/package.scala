@@ -30,7 +30,7 @@ package object mod {
   ]
   
   type ScanWebsite = js.Function2[
-    /* input */ java.lang.String, 
+    /* input */ typingsSlinky.cloudmersiveVirusApiClient.mod.WebsiteScanRequest, 
     /* callback */ js.Function3[
       /* error */ js.Any, 
       /* data */ typingsSlinky.cloudmersiveVirusApiClient.mod.WebsiteScanResult, 

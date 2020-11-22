@@ -17,7 +17,7 @@ trait PixelBlockAddDataPlaneData extends Object {
   var pixels: js.Array[js.Array[Double]] = js.native
   
   /**
-    * An array of objects containing numeric statistical properties. See [statistics](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-PixelBlock.html#statistics) for details on the specifications of each object.
+    * An array of objects containing numeric statistical properties.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-PixelBlock.html#addData)
     */

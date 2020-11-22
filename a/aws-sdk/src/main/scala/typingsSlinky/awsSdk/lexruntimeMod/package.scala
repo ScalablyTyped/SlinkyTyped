@@ -8,6 +8,18 @@ package object lexruntimeMod {
   
   type Accept = java.lang.String
   
+  type ActiveContextName = java.lang.String
+  
+  type ActiveContextParametersMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.lexruntimeMod.Text]
+  
+  type ActiveContextTimeToLiveInSeconds = scala.Double
+  
+  type ActiveContextTurnsToLive = scala.Double
+  
+  type ActiveContextsList = js.Array[typingsSlinky.awsSdk.lexruntimeMod.ActiveContext]
+  
+  type ActiveContextsString = java.lang.String
+  
   type AttributesString = java.lang.String
   
   type BlobStream = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.lexruntimeMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
@@ -15,6 +27,8 @@ package object lexruntimeMod {
   type BotAlias = java.lang.String
   
   type BotName = java.lang.String
+  
+  type BotVersion = java.lang.String
   
   type ButtonTextStringWithLength = java.lang.String
   
@@ -53,6 +67,8 @@ package object lexruntimeMod {
   */
   type DialogState = typingsSlinky.awsSdk.lexruntimeMod._DialogState | java.lang.String
   
+  type Double = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Fulfilled_
     - typingsSlinky.awsSdk.awsSdkStrings.Failed_
@@ -62,6 +78,8 @@ package object lexruntimeMod {
   type FulfillmentState = typingsSlinky.awsSdk.lexruntimeMod._FulfillmentState | java.lang.String
   
   type HttpContentType = java.lang.String
+  
+  type IntentList = js.Array[typingsSlinky.awsSdk.lexruntimeMod.PredictedIntent]
   
   type IntentName = java.lang.String
   
@@ -77,6 +95,8 @@ package object lexruntimeMod {
     - java.lang.String
   */
   type MessageFormatType = typingsSlinky.awsSdk.lexruntimeMod._MessageFormatType | java.lang.String
+  
+  type ParameterName = java.lang.String
   
   type SentimentLabel = java.lang.String
   

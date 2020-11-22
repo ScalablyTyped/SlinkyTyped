@@ -24,9 +24,9 @@ class Method protected () extends ReflectionObject {
     `type`: js.UndefOr[String],
     requestType: String,
     responseType: String,
-    requestStream: js.UndefOr[Boolean | StringDictionary[js.Any]],
-    responseStream: js.UndefOr[Boolean | StringDictionary[js.Any]],
-    options: js.UndefOr[StringDictionary[js.Any]],
+    requestStream: js.UndefOr[Boolean | StringDictionary[js.UndefOr[js.Any]]],
+    responseStream: js.UndefOr[Boolean | StringDictionary[js.UndefOr[js.Any]]],
+    options: js.UndefOr[StringDictionary[js.UndefOr[js.Any]]],
     comment: js.UndefOr[String]
   ) = this()
   

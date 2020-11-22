@@ -4,11 +4,12 @@ import typingsSlinky.rsvp.mod.RSVP.Arg
 import typingsSlinky.rsvp.mod.RSVP.PromiseState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rsvp", "allSettled")
 @js.native
 object allSettled extends js.Object {
+  
   def apply[T](entries: js.Array[Arg[T]]): typingsSlinky.rsvp.mod.RSVP.Promise[js.Array[PromiseState[T]]] = js.native
   def apply[T](entries: js.Array[Arg[T]], label: String): typingsSlinky.rsvp.mod.RSVP.Promise[js.Array[PromiseState[T]]] = js.native
   def apply[T1, T2](entries: js.Tuple2[Arg[T1], Arg[T2]]): typingsSlinky.rsvp.mod.RSVP.Promise[js.Tuple2[PromiseState[T1], PromiseState[T2]]] = js.native
@@ -159,4 +160,3 @@ object allSettled extends js.Object {
     ]
   ] = js.native
 }
-

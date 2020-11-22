@@ -13,7 +13,6 @@ import org.scalajs.dom.crypto.CryptoKeyPair
 import org.scalajs.dom.crypto.DhImportKeyParams
 import org.scalajs.dom.crypto.EcKeyImportParams
 import org.scalajs.dom.crypto.EcdsaParams
-import org.scalajs.dom.crypto.HkdfCtrParams
 import org.scalajs.dom.crypto.HmacImportParams
 import org.scalajs.dom.crypto.JsonWebKey
 import org.scalajs.dom.crypto.Pbkdf2Params
@@ -26,6 +25,7 @@ import typingsSlinky.pkijs.pkijsStrings.raw
 import typingsSlinky.pkijs.pkijsStrings.spki
 import typingsSlinky.std.AlgorithmIdentifier
 import typingsSlinky.std.BufferSource
+import typingsSlinky.std.HkdfParams
 import typingsSlinky.std.SubtleCrypto
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -101,7 +101,7 @@ object cryptoEngineMod extends js.Object {
     def deriveKey(
       algorithm: String,
       baseKey: CryptoKey,
-      derivedKeyType: HkdfCtrParams,
+      derivedKeyType: HkdfParams,
       extractable: Boolean,
       keyUsages: js.Array[String]
     ): js.Promise[CryptoKey] = js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import typingsSlinky.highcharts.highchartsNumbers.`0`
 import typingsSlinky.highcharts.highchartsNumbers.`100`
 import scala.scalajs.js
@@ -40,6 +41,8 @@ trait PlotWaterfallOptions extends js.Object {
     * animation parameter under the API methods. The following properties are
     * supported:
     *
+    * - `defer`: The animation delay time in milliseconds.
+    *
     * - `duration`: The duration of the animation in milliseconds.
     *
     * - `easing`: Can be a string reference to an easing function set on the
@@ -48,7 +51,7 @@ trait PlotWaterfallOptions extends js.Object {
     * Due to poor performance, animation is disabled in old IE browsers for
     * several chart types.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | PlotWaterfallAnimationOptions | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highcharts) For some series, there is a limit that shuts down initial
@@ -58,28 +61,6 @@ trait PlotWaterfallOptions extends js.Object {
     * set `animationLimit` to `Infinity`.
     */
   var animationLimit: js.UndefOr[Double] = js.native
-  
-  /**
-    * (Highcharts) Sets the color blending in the boost module.
-    */
-  var boostBlending: js.UndefOr[OptionsBoostBlendingValue] = js.native
-  
-  /**
-    * (Highcharts) Set the point threshold for when a series should enter boost
-    * mode.
-    *
-    * Setting it to e.g. 2000 will cause the series to enter boost mode when
-    * there are 2000 or more points in the series.
-    *
-    * To disable boosting on the series, set the `boostThreshold` to 0. Setting
-    * it to 1 will force boosting.
-    *
-    * Note that the cropThreshold also affects this setting. When zooming in on
-    * a series that has fewer points than the `cropThreshold`, all points are
-    * rendered although outside the visible plot area, and the `boostThreshold`
-    * won't take effect.
-    */
-  var boostThreshold: js.UndefOr[Double] = js.native
   
   /**
     * (Highcharts) The color of the border of each waterfall column.
@@ -604,8 +585,10 @@ trait PlotWaterfallOptions extends js.Object {
   
   /**
     * (Highcharts, Highstock, Gantt) A pixel value specifying a fixed width for
-    * each column or bar. When `null`, the width is calculated from the
-    * `pointPadding` and `groupPadding`.
+    * each column or bar point. When `null`, the width is calculated from the
+    * `pointPadding` and `groupPadding`. The width effects the dimension that
+    * is not based on the point value. For column series it is the hoizontal
+    * length and for bar series it is the vertical length.
     */
   var pointWidth: js.UndefOr[Double] = js.native
   
@@ -797,7 +780,7 @@ object PlotWaterfallOptions {
     def deleteAllowPointSelect: Self = this.set("allowPointSelect", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PlotWaterfallAnimationOptions | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)
@@ -807,18 +790,6 @@ object PlotWaterfallOptions {
     
     @scala.inline
     def deleteAnimationLimit: Self = this.set("animationLimit", js.undefined)
-    
-    @scala.inline
-    def setBoostBlending(value: OptionsBoostBlendingValue): Self = this.set("boostBlending", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBoostBlending: Self = this.set("boostBlending", js.undefined)
-    
-    @scala.inline
-    def setBoostThreshold(value: Double): Self = this.set("boostThreshold", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBoostThreshold: Self = this.set("boostThreshold", js.undefined)
     
     @scala.inline
     def setBorderColor(value: ColorString | GradientColorObject | PatternObject): Self = this.set("borderColor", value.asInstanceOf[js.Any])

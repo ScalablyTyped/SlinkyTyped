@@ -13,13 +13,13 @@ trait SmartHomeV1ExecuteRequestExecution extends js.Object {
   
   var command: String = js.native
   
-  var params: ApiClientObjectMap[_] = js.native
+  var params: js.UndefOr[ApiClientObjectMap[_]] = js.native
 }
 object SmartHomeV1ExecuteRequestExecution {
   
   @scala.inline
-  def apply(command: String, params: ApiClientObjectMap[_]): SmartHomeV1ExecuteRequestExecution = {
-    val __obj = js.Dynamic.literal(command = command.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
+  def apply(command: String): SmartHomeV1ExecuteRequestExecution = {
+    val __obj = js.Dynamic.literal(command = command.asInstanceOf[js.Any])
     __obj.asInstanceOf[SmartHomeV1ExecuteRequestExecution]
   }
   
@@ -42,12 +42,15 @@ object SmartHomeV1ExecuteRequestExecution {
     def setCommand(value: String): Self = this.set("command", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setParams(value: ApiClientObjectMap[_]): Self = this.set("params", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setChallenge(value: Ack): Self = this.set("challenge", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteChallenge: Self = this.set("challenge", js.undefined)
+    
+    @scala.inline
+    def setParams(value: ApiClientObjectMap[_]): Self = this.set("params", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParams: Self = this.set("params", js.undefined)
   }
 }

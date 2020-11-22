@@ -1,5 +1,6 @@
 package typingsSlinky.babelParser.mod
 
+import typingsSlinky.babelParser.babelParserStrings.fsharp
 import typingsSlinky.babelParser.babelParserStrings.minimal
 import typingsSlinky.babelParser.babelParserStrings.smart
 import scala.scalajs.js
@@ -9,12 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PipelineOperatorPluginOptions extends js.Object {
   
-  var proposal: minimal | smart = js.native
+  var proposal: fsharp | minimal | smart = js.native
 }
 object PipelineOperatorPluginOptions {
   
   @scala.inline
-  def apply(proposal: minimal | smart): PipelineOperatorPluginOptions = {
+  def apply(proposal: fsharp | minimal | smart): PipelineOperatorPluginOptions = {
     val __obj = js.Dynamic.literal(proposal = proposal.asInstanceOf[js.Any])
     __obj.asInstanceOf[PipelineOperatorPluginOptions]
   }
@@ -35,6 +36,6 @@ object PipelineOperatorPluginOptions {
     }
     
     @scala.inline
-    def setProposal(value: minimal | smart): Self = this.set("proposal", value.asInstanceOf[js.Any])
+    def setProposal(value: fsharp | minimal | smart): Self = this.set("proposal", value.asInstanceOf[js.Any])
   }
 }

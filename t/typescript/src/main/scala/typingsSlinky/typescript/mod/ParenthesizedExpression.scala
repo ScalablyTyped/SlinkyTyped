@@ -10,8 +10,8 @@ trait ParenthesizedExpression
      with JSDocContainer
      with _HasJSDoc {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_ParenthesizedExpression: typingsSlinky.typescript.mod.SyntaxKind.ParenthesizedExpression = js.native
+  val kind_ParenthesizedExpression: typingsSlinky.typescript.mod.SyntaxKind.ParenthesizedExpression = js.native
 }

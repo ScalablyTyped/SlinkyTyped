@@ -16,7 +16,6 @@ import typingsSlinky.devextreme.anon.CellDataCellElement
 import typingsSlinky.devextreme.anon.EndDate
 import typingsSlinky.devextreme.anon.Form
 import typingsSlinky.devextreme.anon.OldData
-import typingsSlinky.devextreme.anon.Popup
 import typingsSlinky.devextreme.anon.TargetedAppointmentData
 import typingsSlinky.devextreme.devextremeNumbers.`0`
 import typingsSlinky.devextreme.devextremeNumbers.`1`
@@ -50,13 +49,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
   
-  /** @name dxScheduler.Options.adaptivityEnabled */
+  /**
+    * [descr:dxScheduler.Options.adaptivityEnabled]
+    */
   var adaptivityEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScheduler.Options.allDayExpr */
+  /**
+    * [descr:dxScheduler.Options.allDayExpr]
+    */
   var allDayExpr: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.appointmentCollectorTemplate */
+  /**
+    * [descr:dxScheduler.Options.appointmentCollectorTemplate]
+    */
   var appointmentCollectorTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
       /* data */ AppointmentCount, 
@@ -65,10 +70,14 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     ])
   ] = js.native
   
-  /** @name dxScheduler.Options.appointmentDragging */
+  /**
+    * [descr:dxScheduler.Options.appointmentDragging]
+    */
   var appointmentDragging: js.UndefOr[AutoScroll] = js.native
   
-  /** @name dxScheduler.Options.appointmentTemplate */
+  /**
+    * [descr:dxScheduler.Options.appointmentTemplate]
+    */
   var appointmentTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* model */ AppointmentData, 
@@ -78,7 +87,9 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     ])
   ] = js.native
   
-  /** @name dxScheduler.Options.appointmentTooltipTemplate */
+  /**
+    * [descr:dxScheduler.Options.appointmentTooltipTemplate]
+    */
   var appointmentTooltipTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* model */ AppointmentData, 
@@ -88,24 +99,36 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     ])
   ] = js.native
   
-  /** @name dxScheduler.Options.cellDuration */
+  /**
+    * [descr:dxScheduler.Options.cellDuration]
+    */
   var cellDuration: js.UndefOr[Double] = js.native
   
-  /** @name dxScheduler.Options.crossScrollingEnabled */
+  /**
+    * [descr:dxScheduler.Options.crossScrollingEnabled]
+    */
   var crossScrollingEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScheduler.Options.currentDate */
+  /**
+    * [descr:dxScheduler.Options.currentDate]
+    */
   var currentDate: js.UndefOr[js.Date | Double | String] = js.native
   
-  /** @name dxScheduler.Options.currentView */
+  /**
+    * [descr:dxScheduler.Options.currentView]
+    */
   var currentView: js.UndefOr[
     agenda | day | month | timelineDay | timelineMonth | timelineWeek | timelineWorkWeek | week | workWeek
   ] = js.native
   
-  /** @name dxScheduler.Options.customizeDateNavigatorText */
+  /**
+    * [descr:dxScheduler.Options.customizeDateNavigatorText]
+    */
   var customizeDateNavigatorText: js.UndefOr[js.Function1[/* info */ EndDate, String]] = js.native
   
-  /** @name dxScheduler.Options.dataCellTemplate */
+  /**
+    * [descr:dxScheduler.Options.dataCellTemplate]
+    */
   var dataCellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -115,10 +138,14 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     ])
   ] = js.native
   
-  /** @name dxScheduler.Options.dataSource */
+  /**
+    * [descr:dxScheduler.Options.dataSource]
+    */
   var dataSource: js.UndefOr[String | js.Array[dxSchedulerAppointment] | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxScheduler.Options.dateCellTemplate */
+  /**
+    * [descr:dxScheduler.Options.dateCellTemplate]
+    */
   var dateCellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -128,14 +155,20 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     ])
   ] = js.native
   
-  /** @name dxScheduler.Options.dateSerializationFormat */
+  /**
+    * [descr:dxScheduler.Options.dateSerializationFormat]
+    */
   var dateSerializationFormat: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.descriptionExpr */
+  /**
+    * [descr:dxScheduler.Options.descriptionExpr]
+    */
   var descriptionExpr: js.UndefOr[String] = js.native
   
-  /** @deprecated */
-  /** @name dxScheduler.Options.dropDownAppointmentTemplate */
+  /**
+    * [descr:dxScheduler.Options.dropDownAppointmentTemplate]
+    * @deprecated [depNote:dxScheduler.Options.dropDownAppointmentTemplate]
+    */
   var dropDownAppointmentTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -145,98 +178,154 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     ])
   ] = js.native
   
-  /** @name dxScheduler.Options.editing */
+  /**
+    * [descr:dxScheduler.Options.editing]
+    */
   var editing: js.UndefOr[Boolean | AllowAdding] = js.native
   
-  /** @name dxScheduler.Options.endDateExpr */
+  /**
+    * [descr:dxScheduler.Options.endDateExpr]
+    */
   var endDateExpr: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.endDateTimeZoneExpr */
+  /**
+    * [descr:dxScheduler.Options.endDateTimeZoneExpr]
+    */
   var endDateTimeZoneExpr: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.endDayHour */
+  /**
+    * [descr:dxScheduler.Options.endDayHour]
+    */
   var endDayHour: js.UndefOr[Double] = js.native
   
-  /** @name dxScheduler.Options.firstDayOfWeek */
+  /**
+    * [descr:dxScheduler.Options.firstDayOfWeek]
+    */
   var firstDayOfWeek: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.native
   
-  /** @name dxScheduler.Options.groupByDate */
+  /**
+    * [descr:dxScheduler.Options.groupByDate]
+    */
   var groupByDate: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScheduler.Options.groups */
+  /**
+    * [descr:dxScheduler.Options.groups]
+    */
   var groups: js.UndefOr[js.Array[String]] = js.native
   
-  /** @name dxScheduler.Options.indicatorUpdateInterval */
+  /**
+    * [descr:dxScheduler.Options.indicatorUpdateInterval]
+    */
   var indicatorUpdateInterval: js.UndefOr[Double] = js.native
   
-  /** @name dxScheduler.Options.max */
+  /**
+    * [descr:dxScheduler.Options.max]
+    */
   var max: js.UndefOr[js.Date | Double | String] = js.native
   
-  /** @name dxScheduler.Options.maxAppointmentsPerCell */
+  /**
+    * [descr:dxScheduler.Options.maxAppointmentsPerCell]
+    */
   var maxAppointmentsPerCell: js.UndefOr[Double | auto | unlimited] = js.native
   
-  /** @name dxScheduler.Options.min */
+  /**
+    * [descr:dxScheduler.Options.min]
+    */
   var min: js.UndefOr[js.Date | Double | String] = js.native
   
-  /** @name dxScheduler.Options.noDataText */
+  /**
+    * [descr:dxScheduler.Options.noDataText]
+    */
   var noDataText: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.onAppointmentAdded */
+  /**
+    * [descr:dxScheduler.Options.onAppointmentAdded]
+    */
   var onAppointmentAdded: js.UndefOr[js.Function1[/* e */ AppointmentDataComponent, _]] = js.native
   
-  /** @name dxScheduler.Options.onAppointmentAdding */
+  /**
+    * [descr:dxScheduler.Options.onAppointmentAdding]
+    */
   var onAppointmentAdding: js.UndefOr[js.Function1[/* e */ AppointmentDataCancel, _]] = js.native
   
-  /** @name dxScheduler.Options.onAppointmentClick */
+  /**
+    * [descr:dxScheduler.Options.onAppointmentClick]
+    */
   var onAppointmentClick: js.UndefOr[(js.Function1[/* e */ AppointmentElement, _]) | String] = js.native
   
-  /** @name dxScheduler.Options.onAppointmentContextMenu */
+  /**
+    * [descr:dxScheduler.Options.onAppointmentContextMenu]
+    */
   var onAppointmentContextMenu: js.UndefOr[(js.Function1[/* e */ TargetedAppointmentData, _]) | String] = js.native
   
-  /** @name dxScheduler.Options.onAppointmentDblClick */
+  /**
+    * [descr:dxScheduler.Options.onAppointmentDblClick]
+    */
   var onAppointmentDblClick: js.UndefOr[(js.Function1[/* e */ AppointmentElement, _]) | String] = js.native
   
-  /** @name dxScheduler.Options.onAppointmentDeleted */
+  /**
+    * [descr:dxScheduler.Options.onAppointmentDeleted]
+    */
   var onAppointmentDeleted: js.UndefOr[js.Function1[/* e */ AppointmentDataComponent, _]] = js.native
   
-  /** @name dxScheduler.Options.onAppointmentDeleting */
+  /**
+    * [descr:dxScheduler.Options.onAppointmentDeleting]
+    */
   var onAppointmentDeleting: js.UndefOr[js.Function1[/* e */ AppointmentDataCancel, _]] = js.native
   
-  /** @deprecated */
-  /** @name dxScheduler.Options.onAppointmentFormCreated */
-  var onAppointmentFormCreated: js.UndefOr[js.Function1[/* e */ Form, _]] = js.native
+  /**
+    * [descr:dxScheduler.Options.onAppointmentFormOpening]
+    */
+  var onAppointmentFormOpening: js.UndefOr[js.Function1[/* e */ Form, _]] = js.native
   
-  /** @name dxScheduler.Options.onAppointmentFormOpening */
-  var onAppointmentFormOpening: js.UndefOr[js.Function1[/* e */ Popup, _]] = js.native
-  
-  /** @name dxScheduler.Options.onAppointmentRendered */
+  /**
+    * [descr:dxScheduler.Options.onAppointmentRendered]
+    */
   var onAppointmentRendered: js.UndefOr[js.Function1[/* e */ AppointmentDataAppointmentElement, _]] = js.native
   
-  /** @name dxScheduler.Options.onAppointmentUpdated */
+  /**
+    * [descr:dxScheduler.Options.onAppointmentUpdated]
+    */
   var onAppointmentUpdated: js.UndefOr[js.Function1[/* e */ AppointmentDataComponent, _]] = js.native
   
-  /** @name dxScheduler.Options.onAppointmentUpdating */
+  /**
+    * [descr:dxScheduler.Options.onAppointmentUpdating]
+    */
   var onAppointmentUpdating: js.UndefOr[js.Function1[/* e */ OldData, _]] = js.native
   
-  /** @name dxScheduler.Options.onCellClick */
+  /**
+    * [descr:dxScheduler.Options.onCellClick]
+    */
   var onCellClick: js.UndefOr[(js.Function1[/* e */ CellData, _]) | String] = js.native
   
-  /** @name dxScheduler.Options.onCellContextMenu */
+  /**
+    * [descr:dxScheduler.Options.onCellContextMenu]
+    */
   var onCellContextMenu: js.UndefOr[(js.Function1[/* e */ CellDataCellElement, _]) | String] = js.native
   
-  /** @name dxScheduler.Options.recurrenceEditMode */
+  /**
+    * [descr:dxScheduler.Options.recurrenceEditMode]
+    */
   var recurrenceEditMode: js.UndefOr[dialog | occurrence | series] = js.native
   
-  /** @name dxScheduler.Options.recurrenceExceptionExpr */
+  /**
+    * [descr:dxScheduler.Options.recurrenceExceptionExpr]
+    */
   var recurrenceExceptionExpr: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.recurrenceRuleExpr */
+  /**
+    * [descr:dxScheduler.Options.recurrenceRuleExpr]
+    */
   var recurrenceRuleExpr: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.remoteFiltering */
+  /**
+    * [descr:dxScheduler.Options.remoteFiltering]
+    */
   var remoteFiltering: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScheduler.Options.resourceCellTemplate */
+  /**
+    * [descr:dxScheduler.Options.resourceCellTemplate]
+    */
   var resourceCellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -246,34 +335,59 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     ])
   ] = js.native
   
-  /** @name dxScheduler.Options.resources */
+  /**
+    * [descr:dxScheduler.Options.resources]
+    */
   var resources: js.UndefOr[js.Array[AllowMultiple]] = js.native
   
-  /** @name dxScheduler.Options.selectedCellData */
+  /**
+    * [descr:dxScheduler.Options.scrolling]
+    */
+  var scrolling: js.UndefOr[dxSchedulerScrolling] = js.native
+  
+  /**
+    * [descr:dxScheduler.Options.selectedCellData]
+    */
   var selectedCellData: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name dxScheduler.Options.shadeUntilCurrentTime */
+  /**
+    * [descr:dxScheduler.Options.shadeUntilCurrentTime]
+    */
   var shadeUntilCurrentTime: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScheduler.Options.showAllDayPanel */
+  /**
+    * [descr:dxScheduler.Options.showAllDayPanel]
+    */
   var showAllDayPanel: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScheduler.Options.showCurrentTimeIndicator */
+  /**
+    * [descr:dxScheduler.Options.showCurrentTimeIndicator]
+    */
   var showCurrentTimeIndicator: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScheduler.Options.startDateExpr */
+  /**
+    * [descr:dxScheduler.Options.startDateExpr]
+    */
   var startDateExpr: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.startDateTimeZoneExpr */
+  /**
+    * [descr:dxScheduler.Options.startDateTimeZoneExpr]
+    */
   var startDateTimeZoneExpr: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.startDayHour */
+  /**
+    * [descr:dxScheduler.Options.startDayHour]
+    */
   var startDayHour: js.UndefOr[Double] = js.native
   
-  /** @name dxScheduler.Options.textExpr */
+  /**
+    * [descr:dxScheduler.Options.textExpr]
+    */
   var textExpr: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.timeCellTemplate */
+  /**
+    * [descr:dxScheduler.Options.timeCellTemplate]
+    */
   var timeCellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -283,13 +397,19 @@ trait dxSchedulerOptions extends WidgetOptions[dxScheduler] {
     ])
   ] = js.native
   
-  /** @name dxScheduler.Options.timeZone */
+  /**
+    * [descr:dxScheduler.Options.timeZone]
+    */
   var timeZone: js.UndefOr[String] = js.native
   
-  /** @name dxScheduler.Options.useDropDownViewSwitcher */
+  /**
+    * [descr:dxScheduler.Options.useDropDownViewSwitcher]
+    */
   var useDropDownViewSwitcher: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScheduler.Options.views */
+  /**
+    * [descr:dxScheduler.Options.views]
+    */
   var views: js.UndefOr[
     js.Array[
       day | week | workWeek | month | timelineDay | timelineWeek | timelineWorkWeek | timelineMonth | agenda | AgendaDuration
@@ -651,13 +771,7 @@ object dxSchedulerOptions {
     def deleteOnAppointmentDeleting: Self = this.set("onAppointmentDeleting", js.undefined)
     
     @scala.inline
-    def setOnAppointmentFormCreated(value: /* e */ Form => _): Self = this.set("onAppointmentFormCreated", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnAppointmentFormCreated: Self = this.set("onAppointmentFormCreated", js.undefined)
-    
-    @scala.inline
-    def setOnAppointmentFormOpening(value: /* e */ Popup => _): Self = this.set("onAppointmentFormOpening", js.Any.fromFunction1(value))
+    def setOnAppointmentFormOpening(value: /* e */ Form => _): Self = this.set("onAppointmentFormOpening", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnAppointmentFormOpening: Self = this.set("onAppointmentFormOpening", js.undefined)
@@ -751,6 +865,12 @@ object dxSchedulerOptions {
     
     @scala.inline
     def deleteResources: Self = this.set("resources", js.undefined)
+    
+    @scala.inline
+    def setScrolling(value: dxSchedulerScrolling): Self = this.set("scrolling", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScrolling: Self = this.set("scrolling", js.undefined)
     
     @scala.inline
     def setSelectedCellDataVarargs(value: js.Any*): Self = this.set("selectedCellData", js.Array(value :_*))

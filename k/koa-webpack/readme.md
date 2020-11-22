@@ -1,7 +1,7 @@
 
 # Scala.js typings for koa-webpack
 
-Typings are for version 5.0
+Typings are for version 6.0
 
 ## Library description:
 Development and Hot Reload Middleware for Koa2

@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SHAPE extends js.Object {
   
+  var circle: typingsSlinky.baseui.baseuiStrings.circle = js.native
+  
   var default: default_ = js.native
   
   var pill: typingsSlinky.baseui.baseuiStrings.pill = js.native

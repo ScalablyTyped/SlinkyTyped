@@ -29,6 +29,9 @@ object antdNumbers {
   def `404`: `404` = 404.asInstanceOf[`404`]
   
   @scala.inline
+  def `5`: `5` = 5.asInstanceOf[`5`]
+  
+  @scala.inline
   def `500`: `500` = 500.asInstanceOf[`500`]
   
   @js.native
@@ -51,6 +54,9 @@ object antdNumbers {
   
   @js.native
   sealed trait `404` extends ExceptionStatusType
+  
+  @js.native
+  sealed trait `5` extends js.Object
   
   @js.native
   sealed trait `500` extends ExceptionStatusType

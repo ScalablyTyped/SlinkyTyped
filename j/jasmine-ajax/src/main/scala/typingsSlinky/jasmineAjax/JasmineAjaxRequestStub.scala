@@ -11,7 +11,7 @@ trait JasmineAjaxRequestStub extends js.Object {
   
   def andError(options: JasmineAjaxRequestStubErrorOptions): Unit = js.native
   
-  def andReturn(options: JasmineAjaxRequestStubReturnOptions): Unit = js.native
+  def andReturn(options: JasmineAjaxResponse): Unit = js.native
   
   def andTimeout(): Unit = js.native
   
@@ -31,7 +31,7 @@ object JasmineAjaxRequestStub {
   def apply(
     andCallFunction: js.Function1[/* request */ JasmineAjaxRequest, Unit] => Unit,
     andError: JasmineAjaxRequestStubErrorOptions => Unit,
-    andReturn: JasmineAjaxRequestStubReturnOptions => Unit,
+    andReturn: JasmineAjaxResponse => Unit,
     andTimeout: () => Unit,
     data: String,
     matches: (String, String, String) => Boolean,
@@ -65,7 +65,7 @@ object JasmineAjaxRequestStub {
     def setAndError(value: JasmineAjaxRequestStubErrorOptions => Unit): Self = this.set("andError", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setAndReturn(value: JasmineAjaxRequestStubReturnOptions => Unit): Self = this.set("andReturn", js.Any.fromFunction1(value))
+    def setAndReturn(value: JasmineAjaxResponse => Unit): Self = this.set("andReturn", js.Any.fromFunction1(value))
     
     @scala.inline
     def setAndTimeout(value: () => Unit): Self = this.set("andTimeout", js.Any.fromFunction0(value))

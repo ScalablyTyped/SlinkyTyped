@@ -12,7 +12,8 @@ class ProseAssertion protected ()
   extends AssertionBase[
       typingsSlinky.grammarkdown.tokensMod.SyntaxKind.ProseAssertion, 
       OpenBracketGreaterThanToken
-    ] {
+    ]
+     with Assertion {
   def this(openBracketToken: Token[OpenBracketGreaterThanToken]) = this()
   def this(openBracketToken: Token[OpenBracketGreaterThanToken], fragments: js.Array[ProseFragment]) = this()
   def this(

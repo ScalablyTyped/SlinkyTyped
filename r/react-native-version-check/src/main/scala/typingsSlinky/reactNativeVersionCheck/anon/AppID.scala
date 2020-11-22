@@ -12,12 +12,12 @@ trait AppID extends js.Object {
     */
   var appID: js.UndefOr[String] = js.native
   
-  var appName: js.UndefOr[String] = js.native
-  
   /**
     * @default true
     */
   var ignoreErrors: js.UndefOr[Boolean] = js.native
+  
+  var packageName: js.UndefOr[String] = js.native
 }
 object AppID {
   
@@ -49,15 +49,15 @@ object AppID {
     def deleteAppID: Self = this.set("appID", js.undefined)
     
     @scala.inline
-    def setAppName(value: String): Self = this.set("appName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAppName: Self = this.set("appName", js.undefined)
-    
-    @scala.inline
     def setIgnoreErrors(value: Boolean): Self = this.set("ignoreErrors", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIgnoreErrors: Self = this.set("ignoreErrors", js.undefined)
+    
+    @scala.inline
+    def setPackageName(value: String): Self = this.set("packageName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePackageName: Self = this.set("packageName", js.undefined)
   }
 }

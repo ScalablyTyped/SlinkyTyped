@@ -12,7 +12,7 @@ package object LazyJS {
   
   type ErrorCallback = js.Function1[/* error */ js.Any, scala.Unit]
   
-  type Flatten[T, Shallow /* <: scala.Boolean */] = (/* import warning: importer.ImportType#apply Failed type conversion: lazy.js.anon.0<T>[T extends lazy.js.LazyJS.Sequence<any> ? 0 : 1] */ js.Any) | T
+  type Flatten[T, Shallow /* <: scala.Boolean */] = (/* import warning: importer.ImportType#apply Failed type conversion: lazy.js.anon.0<T>[T extends lazy.js.LazyJS.Sequence<any> ? 0 : T extends std.Array<any> ? 0 : T extends std.ReadonlyArray<any> ? 0 : 1] */ js.Any) | T
   
   type GeneratorCallback[T] = js.Function1[/* index */ scala.Double, T]
   
@@ -26,7 +26,12 @@ package object LazyJS {
   
   type NumberCallback[T] = js.Function1[/* value */ T, scala.Double]
   
+  type PushFront[TailT /* <: js.Array[_] */, FrontT] = js.Any
+  
   type TestCallback[T, U] = js.Function2[/* value */ T, /* index */ U, scala.Boolean]
+  
+  type Tuple[ElementT, LengthT /* <: scala.Double */, OutputT /* <: js.Array[_] */] = /* import warning: importer.ImportType#apply Failed type conversion: lazy.js.anon.1<ElementT, OutputT>[// LengthT is not compile-time constant
+  number extends LengthT ? 0 : LengthT extends 0 ? 1 : OutputT['length'] extends LengthT ? 2 : 3] */ js.Any
   
   type ValueCallback[T] = js.Function1[/* value */ T, scala.Unit]
 }

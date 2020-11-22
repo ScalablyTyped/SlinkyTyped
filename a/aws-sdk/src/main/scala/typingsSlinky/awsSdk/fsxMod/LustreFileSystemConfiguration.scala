@@ -24,12 +24,17 @@ trait LustreFileSystemConfiguration extends js.Object {
   var DeploymentType: js.UndefOr[LustreDeploymentType] = js.native
   
   /**
+    * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This parameter is required when storage type is HDD. Set to READ, improve the performance for frequently accessed files and allows 20% of the total storage capacity of the file system to be cached.  This parameter is required when StorageType is set to HDD.
+    */
+  var DriveCacheType: js.UndefOr[typingsSlinky.awsSdk.fsxMod.DriveCacheType] = js.native
+  
+  /**
     * You use the MountName value when mounting the file system. For the SCRATCH_1 deployment type, this value is always "fsx". For SCRATCH_2 and PERSISTENT_1 deployment types, this value is a string that is unique within an AWS Region. 
     */
   var MountName: js.UndefOr[LustreFileSystemMountName] = js.native
   
   /**
-    *  Per unit storage throughput represents the megabytes per second of read or write throughput per 1 tebibyte of storage provisioned. File system throughput capacity is equal to Storage capacity (TiB) * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for PERSISTENT_1 deployment types. Valid values are 50, 100, 200. 
+    *  Per unit storage throughput represents the megabytes per second of read or write throughput per 1 tebibyte of storage provisioned. File system throughput capacity is equal to Storage capacity (TiB) * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for PERSISTENT_1 deployment types.  Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40. 
     */
   var PerUnitStorageThroughput: js.UndefOr[typingsSlinky.awsSdk.fsxMod.PerUnitStorageThroughput] = js.native
   
@@ -90,6 +95,12 @@ object LustreFileSystemConfiguration {
     
     @scala.inline
     def deleteDeploymentType: Self = this.set("DeploymentType", js.undefined)
+    
+    @scala.inline
+    def setDriveCacheType(value: DriveCacheType): Self = this.set("DriveCacheType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDriveCacheType: Self = this.set("DriveCacheType", js.undefined)
     
     @scala.inline
     def setMountName(value: LustreFileSystemMountName): Self = this.set("MountName", value.asInstanceOf[js.Any])

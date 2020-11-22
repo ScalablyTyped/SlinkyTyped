@@ -9,8 +9,8 @@ trait OmittedExpression
   extends Expression
      with ArrayBindingElement
      with BindingOrAssignmentElementTarget
-     with _BindingOrAssignmentElement {
+     with _ArrayBindingOrAssignmentElement {
   
   @JSName("kind")
-  var kind_OmittedExpression: typingsSlinky.typescript.mod.SyntaxKind.OmittedExpression = js.native
+  val kind_OmittedExpression: typingsSlinky.typescript.mod.SyntaxKind.OmittedExpression = js.native
 }

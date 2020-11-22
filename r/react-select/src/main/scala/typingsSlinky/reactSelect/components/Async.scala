@@ -94,10 +94,10 @@ object Async {
     def defaultMenuIsOpen(value: Boolean): this.type = set("defaultMenuIsOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultOptionsVarargs(value: OptionType*): this.type = set("defaultOptions", js.Array(value :_*))
+    def defaultOptionsVarargs(value: (GroupType[OptionType] | OptionType)*): this.type = set("defaultOptions", js.Array(value :_*))
     
     @scala.inline
-    def defaultOptions(value: OptionsType[OptionType] | Boolean): this.type = set("defaultOptions", value.asInstanceOf[js.Any])
+    def defaultOptions(value: GroupedOptionsType[OptionType] | OptionsType[OptionType] | Boolean): this.type = set("defaultOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultValueVarargs(value: OptionType*): this.type = set("defaultValue", js.Array(value :_*))

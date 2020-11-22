@@ -2,11 +2,12 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.gestaltStrings.`check-circle`
+import typingsSlinky.gestalt.gestaltStrings.fit
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
-import typingsSlinky.gestalt.gestaltStrings.pintrest
 import typingsSlinky.gestalt.gestaltStrings.sm
+import typingsSlinky.gestalt.gestaltStrings.xl
+import typingsSlinky.gestalt.gestaltStrings.xs
 import typingsSlinky.gestalt.mod.AvatarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,13 +25,13 @@ object Avatar {
        with StBuildingComponent[tag.type, typingsSlinky.gestalt.mod.Avatar] {
     
     @scala.inline
-    def icon(value: `check-circle` | pintrest): this.type = set("icon", value.asInstanceOf[js.Any])
+    def accessibilityLabel(value: String): this.type = set("accessibilityLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def outline(value: Boolean): this.type = set("outline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def size(value: sm | md | lg): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: xs | sm | md | lg | xl | fit): this.type = set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def src(value: String): this.type = set("src", value.asInstanceOf[js.Any])

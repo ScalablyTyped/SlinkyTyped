@@ -14,7 +14,11 @@ trait JasmineAjaxResponse extends js.Object {
   
   var responseHeaders: js.UndefOr[StringDictionary[String]] = js.native
   
+  var responseJSON: js.UndefOr[js.Any] = js.native
+  
   var responseText: js.UndefOr[String] = js.native
+  
+  var responseURL: js.UndefOr[String] = js.native
   
   var status: js.UndefOr[Double] = js.native
   
@@ -62,10 +66,22 @@ object JasmineAjaxResponse {
     def deleteResponseHeaders: Self = this.set("responseHeaders", js.undefined)
     
     @scala.inline
+    def setResponseJSON(value: js.Any): Self = this.set("responseJSON", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResponseJSON: Self = this.set("responseJSON", js.undefined)
+    
+    @scala.inline
     def setResponseText(value: String): Self = this.set("responseText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResponseText: Self = this.set("responseText", js.undefined)
+    
+    @scala.inline
+    def setResponseURL(value: String): Self = this.set("responseURL", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResponseURL: Self = this.set("responseURL", js.undefined)
     
     @scala.inline
     def setStatus(value: Double): Self = this.set("status", value.asInstanceOf[js.Any])

@@ -8,8 +8,13 @@ import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`3`
 import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`4`
 import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`5`
 import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`6`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals text`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.all
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.ascending
@@ -154,7 +159,11 @@ trait WeakValidationMapMenuGrou extends js.Object {
   var `aria-readonly`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
   var `aria-relevant`: js.UndefOr[
-    Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]
+    Validator[
+      js.UndefOr[
+        additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`) | Null
+      ]
+    ]
   ] = js.native
   
   var `aria-required`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
@@ -679,7 +688,13 @@ object WeakValidationMapMenuGrou {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: Validator[
+          js.UndefOr[
+            additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`) | Null
+          ]
+        ]
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

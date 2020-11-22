@@ -12,6 +12,11 @@ trait RouteSpecTcpRoute extends js.Object {
     * The action to take if a match is determined.
     */
   var action: Input[RouteSpecTcpRouteAction] = js.native
+  
+  /**
+    * The types of timeouts.
+    */
+  var timeout: js.UndefOr[Input[RouteSpecTcpRouteTimeout]] = js.native
 }
 object RouteSpecTcpRoute {
   
@@ -38,5 +43,11 @@ object RouteSpecTcpRoute {
     
     @scala.inline
     def setAction(value: Input[RouteSpecTcpRouteAction]): Self = this.set("action", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTimeout(value: Input[RouteSpecTcpRouteTimeout]): Self = this.set("timeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimeout: Self = this.set("timeout", js.undefined)
   }
 }

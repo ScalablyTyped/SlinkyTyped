@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import typingsSlinky.babylonjs.XREye
 import typingsSlinky.babylonjs.XRFrame
 import typingsSlinky.babylonjs.anon.Filename
 import scala.scalajs.js
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WebXRAbstractMotionController extends IDisposable {
   
-  /* protected */ def _getChildByName(node: AbstractMesh, name: String): AbstractMesh = js.native
+  /* protected */ def _getChildByName(node: AbstractMesh, name: String): js.UndefOr[AbstractMesh] = js.native
   
   /**
     * Get the filename and path for this controller's model
@@ -21,7 +22,7 @@ trait WebXRAbstractMotionController extends IDisposable {
   
   var _getGenericParentMesh: js.Any = js.native
   
-  /* protected */ def _getImmediateChildByName(node: AbstractMesh, name: String): AbstractMesh = js.native
+  /* protected */ def _getImmediateChildByName(node: AbstractMesh, name: String): js.UndefOr[AbstractMesh] = js.native
   
   /**
     * This function is called before the mesh is loaded. It checks for loading constraints.
@@ -113,9 +114,14 @@ trait WebXRAbstractMotionController extends IDisposable {
   def getMainComponent(): WebXRControllerComponent = js.native
   
   /**
-    * handness (left/right/none) of this controller
+    * handedness (left/right/none) of this controller
     */
-  var handness: MotionControllerHandness = js.native
+  var handedness: MotionControllerHandedness = js.native
+  
+  /**
+    * Backwards compatibility due to a deeply-integrated typo
+    */
+  def handness: XREye = js.native
   
   var layout: IMotionControllerLayout = js.native
   
@@ -135,6 +141,19 @@ trait WebXRAbstractMotionController extends IDisposable {
     * The profile id of this motion controller
     */
   var profileId: String = js.native
+  
+  /**
+    * Pulse (vibrate) this controller
+    * If the controller does not support pulses, this function will fail silently and return Promise<false> directly after called
+    * Consecutive calls to this function will cancel the last pulse call
+    *
+    * @param value the strength of the pulse in 0.0...1.0 range
+    * @param duration Duration of the pulse in milliseconds
+    * @param hapticActuatorIndex optional index of actuator (will usually be 0)
+    * @returns a promise that will send true when the pulse has ended and false if the device doesn't support pulse or an error accrued
+    */
+  def pulse(value: Double, duration: Double): js.Promise[Boolean] = js.native
+  def pulse(value: Double, duration: Double, hapticActuatorIndex: Double): js.Promise[Boolean] = js.native
   
   /**
     * The root mesh of the model. It is null if the model was not yet initialized

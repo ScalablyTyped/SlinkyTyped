@@ -10,15 +10,15 @@ trait OrderedListToken extends Token {
   
   var contents: String = js.native
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: ol = js.native
 }
 object OrderedListToken {
   
   @scala.inline
-  def apply(contents: String, name: ol): OrderedListToken = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(contents: String, location: LocationRange, name: ol): OrderedListToken = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[OrderedListToken]
   }
   
@@ -41,12 +41,9 @@ object OrderedListToken {
     def setContents(value: String): Self = this.set("contents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: ol): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
+    def setName(value: ol): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

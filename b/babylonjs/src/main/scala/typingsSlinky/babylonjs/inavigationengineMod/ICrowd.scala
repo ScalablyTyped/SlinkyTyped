@@ -39,6 +39,20 @@ trait ICrowd extends js.Object {
   def dispose(): Unit = js.native
   
   /**
+    * Gets the agent next target point on the path
+    * @param index agent index returned by addAgent
+    * @returns world space position
+    */
+  def getAgentNextTargetPath(index: Double): Vector3 = js.native
+  
+  /**
+    * Gets the agent next target point on the path
+    * @param index agent index returned by addAgent
+    * @param result output world space position
+    */
+  def getAgentNextTargetPathToRef(index: Double, result: Vector3): Unit = js.native
+  
+  /**
     * Returns the agent position in world space
     * @param index agent index returned by addAgent
     * @returns world space position
@@ -46,11 +60,32 @@ trait ICrowd extends js.Object {
   def getAgentPosition(index: Double): Vector3 = js.native
   
   /**
+    * Gets the agent position result in world space
+    * @param index agent index returned by addAgent
+    * @param result output world space position
+    */
+  def getAgentPositionToRef(index: Double, result: Vector3): Unit = js.native
+  
+  /**
+    * Gets the agent state
+    * @param index agent index returned by addAgent
+    * @returns agent state
+    */
+  def getAgentState(index: Double): Double = js.native
+  
+  /**
     * Gets the agent velocity in world space
     * @param index agent index returned by addAgent
     * @returns world space velocity
     */
   def getAgentVelocity(index: Double): Vector3 = js.native
+  
+  /**
+    * Gets the agent velocity result in world space
+    * @param index agent index returned by addAgent
+    * @param result output world space velocity
+    */
+  def getAgentVelocityToRef(index: Double, result: Vector3): Unit = js.native
   
   /**
     * get the list of all agents attached to this crowd
@@ -63,6 +98,19 @@ trait ICrowd extends js.Object {
     * @returns the box extent values
     */
   def getDefaultQueryExtent(): Vector3 = js.native
+  
+  /**
+    * Get the Bounding box extent result specified by setDefaultQueryExtent
+    * @param result output the box extent values
+    */
+  def getDefaultQueryExtentToRef(result: Vector3): Unit = js.native
+  
+  /**
+    * returns true if the agent in over an off mesh link connection
+    * @param index agent index returned by addAgent
+    * @returns true if over an off mesh link connection
+    */
+  def overOffmeshConnection(index: Double): Boolean = js.native
   
   /**
     * remove a particular agent previously created
@@ -99,16 +147,23 @@ object ICrowd {
     agentGoto: (Double, Vector3) => Unit,
     agentTeleport: (Double, Vector3) => Unit,
     dispose: () => Unit,
+    getAgentNextTargetPath: Double => Vector3,
+    getAgentNextTargetPathToRef: (Double, Vector3) => Unit,
     getAgentPosition: Double => Vector3,
+    getAgentPositionToRef: (Double, Vector3) => Unit,
+    getAgentState: Double => Double,
     getAgentVelocity: Double => Vector3,
+    getAgentVelocityToRef: (Double, Vector3) => Unit,
     getAgents: () => js.Array[Double],
     getDefaultQueryExtent: () => Vector3,
+    getDefaultQueryExtentToRef: Vector3 => Unit,
+    overOffmeshConnection: Double => Boolean,
     removeAgent: Double => Unit,
     setDefaultQueryExtent: Vector3 => Unit,
     update: Double => Unit,
     updateAgentParameters: (Double, IAgentParameters) => Unit
   ): ICrowd = {
-    val __obj = js.Dynamic.literal(addAgent = js.Any.fromFunction3(addAgent), agentGoto = js.Any.fromFunction2(agentGoto), agentTeleport = js.Any.fromFunction2(agentTeleport), dispose = js.Any.fromFunction0(dispose), getAgentPosition = js.Any.fromFunction1(getAgentPosition), getAgentVelocity = js.Any.fromFunction1(getAgentVelocity), getAgents = js.Any.fromFunction0(getAgents), getDefaultQueryExtent = js.Any.fromFunction0(getDefaultQueryExtent), removeAgent = js.Any.fromFunction1(removeAgent), setDefaultQueryExtent = js.Any.fromFunction1(setDefaultQueryExtent), update = js.Any.fromFunction1(update), updateAgentParameters = js.Any.fromFunction2(updateAgentParameters))
+    val __obj = js.Dynamic.literal(addAgent = js.Any.fromFunction3(addAgent), agentGoto = js.Any.fromFunction2(agentGoto), agentTeleport = js.Any.fromFunction2(agentTeleport), dispose = js.Any.fromFunction0(dispose), getAgentNextTargetPath = js.Any.fromFunction1(getAgentNextTargetPath), getAgentNextTargetPathToRef = js.Any.fromFunction2(getAgentNextTargetPathToRef), getAgentPosition = js.Any.fromFunction1(getAgentPosition), getAgentPositionToRef = js.Any.fromFunction2(getAgentPositionToRef), getAgentState = js.Any.fromFunction1(getAgentState), getAgentVelocity = js.Any.fromFunction1(getAgentVelocity), getAgentVelocityToRef = js.Any.fromFunction2(getAgentVelocityToRef), getAgents = js.Any.fromFunction0(getAgents), getDefaultQueryExtent = js.Any.fromFunction0(getDefaultQueryExtent), getDefaultQueryExtentToRef = js.Any.fromFunction1(getDefaultQueryExtentToRef), overOffmeshConnection = js.Any.fromFunction1(overOffmeshConnection), removeAgent = js.Any.fromFunction1(removeAgent), setDefaultQueryExtent = js.Any.fromFunction1(setDefaultQueryExtent), update = js.Any.fromFunction1(update), updateAgentParameters = js.Any.fromFunction2(updateAgentParameters))
     __obj.asInstanceOf[ICrowd]
   }
   
@@ -140,16 +195,37 @@ object ICrowd {
     def setDispose(value: () => Unit): Self = this.set("dispose", js.Any.fromFunction0(value))
     
     @scala.inline
+    def setGetAgentNextTargetPath(value: Double => Vector3): Self = this.set("getAgentNextTargetPath", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setGetAgentNextTargetPathToRef(value: (Double, Vector3) => Unit): Self = this.set("getAgentNextTargetPathToRef", js.Any.fromFunction2(value))
+    
+    @scala.inline
     def setGetAgentPosition(value: Double => Vector3): Self = this.set("getAgentPosition", js.Any.fromFunction1(value))
     
     @scala.inline
+    def setGetAgentPositionToRef(value: (Double, Vector3) => Unit): Self = this.set("getAgentPositionToRef", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setGetAgentState(value: Double => Double): Self = this.set("getAgentState", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def setGetAgentVelocity(value: Double => Vector3): Self = this.set("getAgentVelocity", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setGetAgentVelocityToRef(value: (Double, Vector3) => Unit): Self = this.set("getAgentVelocityToRef", js.Any.fromFunction2(value))
     
     @scala.inline
     def setGetAgents(value: () => js.Array[Double]): Self = this.set("getAgents", js.Any.fromFunction0(value))
     
     @scala.inline
     def setGetDefaultQueryExtent(value: () => Vector3): Self = this.set("getDefaultQueryExtent", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setGetDefaultQueryExtentToRef(value: Vector3 => Unit): Self = this.set("getDefaultQueryExtentToRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setOverOffmeshConnection(value: Double => Boolean): Self = this.set("overOffmeshConnection", js.Any.fromFunction1(value))
     
     @scala.inline
     def setRemoveAgent(value: Double => Unit): Self = this.set("removeAgent", js.Any.fromFunction1(value))

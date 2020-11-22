@@ -7,8 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Api extends js.Object {
   
-  /*
-    * Get FixedColumns Api
+  /**
+    * @description Namespacing for FixedColumns methods - FixedColumns' methods are available on the returned API instance.
+    * @see {@link https://datatables.net/reference/api/fixedColumns()}
     */
   def fixedColumns(): FixedColumnsMethods = js.native
 }

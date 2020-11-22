@@ -38,7 +38,7 @@ trait WindowsUpdateForBusinessConfiguration extends DeviceConfiguration {
   var featureUpdatesPaused: js.UndefOr[Boolean] = js.native
   
   // Installation schedule
-  var installationSchedule: js.UndefOr[WindowsUpdateInstallScheduleType] = js.native
+  var installationSchedule: js.UndefOr[NullableOption[WindowsUpdateInstallScheduleType]] = js.native
   
   // Allow Microsoft Update Service
   var microsoftUpdateServiceAllowed: js.UndefOr[Boolean] = js.native
@@ -121,10 +121,13 @@ object WindowsUpdateForBusinessConfiguration {
     def deleteFeatureUpdatesPaused: Self = this.set("featureUpdatesPaused", js.undefined)
     
     @scala.inline
-    def setInstallationSchedule(value: WindowsUpdateInstallScheduleType): Self = this.set("installationSchedule", value.asInstanceOf[js.Any])
+    def setInstallationSchedule(value: NullableOption[WindowsUpdateInstallScheduleType]): Self = this.set("installationSchedule", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInstallationSchedule: Self = this.set("installationSchedule", js.undefined)
+    
+    @scala.inline
+    def setInstallationScheduleNull: Self = this.set("installationSchedule", null)
     
     @scala.inline
     def setMicrosoftUpdateServiceAllowed(value: Boolean): Self = this.set("microsoftUpdateServiceAllowed", value.asInstanceOf[js.Any])

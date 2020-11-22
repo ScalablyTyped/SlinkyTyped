@@ -1,8 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.devextremeStrings.bottomToolbar
-import typingsSlinky.devextreme.devextremeStrings.topToolbar
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
@@ -14,15 +12,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxToolbarOptions extends CollectionWidgetOptions[dxToolbar] {
   
-  /** @name dxToolbar.Options.dataSource */
+  /**
+    * [descr:dxToolbar.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxToolbarOptions: js.UndefOr[String | (js.Array[String | dxToolbarItem | _]) | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxToolbar.Options.items */
+  /**
+    * [descr:dxToolbar.Options.items]
+    */
   @JSName("items")
   var items_dxToolbarOptions: js.UndefOr[js.Array[String | dxToolbarItem | _]] = js.native
   
-  /** @name dxToolbar.Options.menuItemTemplate */
+  /**
+    * [descr:dxToolbar.Options.menuItemTemplate]
+    */
   var menuItemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -31,9 +35,6 @@ trait dxToolbarOptions extends CollectionWidgetOptions[dxToolbar] {
       String | Element | JQuery
     ])
   ] = js.native
-  
-  /** @name dxToolbar.Options.renderAs */
-  var renderAs: js.UndefOr[bottomToolbar | topToolbar] = js.native
 }
 object dxToolbarOptions {
   
@@ -96,11 +97,5 @@ object dxToolbarOptions {
     
     @scala.inline
     def deleteMenuItemTemplate: Self = this.set("menuItemTemplate", js.undefined)
-    
-    @scala.inline
-    def setRenderAs(value: bottomToolbar | topToolbar): Self = this.set("renderAs", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRenderAs: Self = this.set("renderAs", js.undefined)
   }
 }

@@ -7,17 +7,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Cursor extends js.Object {
   
+  /** 光标位置 */
   var cursor: Double = js.native
   
-  var keyCode: Double = js.native
+  /** keyCode 为键值 (目前工具还不支持返回keyCode参数) `2.1.0` 起支持 */
+  var keyCode: js.UndefOr[Double] = js.native
   
+  /** 输入框内容 */
   var value: String = js.native
 }
 object Cursor {
   
   @scala.inline
-  def apply(cursor: Double, keyCode: Double, value: String): Cursor = {
-    val __obj = js.Dynamic.literal(cursor = cursor.asInstanceOf[js.Any], keyCode = keyCode.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(cursor: Double, value: String): Cursor = {
+    val __obj = js.Dynamic.literal(cursor = cursor.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cursor]
   }
   
@@ -40,9 +43,12 @@ object Cursor {
     def setCursor(value: Double): Self = this.set("cursor", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setKeyCode(value: Double): Self = this.set("keyCode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    def deleteKeyCode: Self = this.set("keyCode", js.undefined)
   }
 }

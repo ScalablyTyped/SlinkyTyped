@@ -8,6 +8,10 @@ package object comprehendMod {
   
   type AnyLengthString = java.lang.String
   
+  type AttributeNamesList = js.Array[typingsSlinky.awsSdk.comprehendMod.AttributeNamesListItem]
+  
+  type AttributeNamesListItem = java.lang.String
+  
   type BatchItemErrorList = js.Array[typingsSlinky.awsSdk.comprehendMod.BatchItemError]
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.comprehendMod.ClientApiVersions
@@ -31,6 +35,15 @@ package object comprehendMod {
   type DocumentClassificationJobPropertiesList = js.Array[typingsSlinky.awsSdk.comprehendMod.DocumentClassificationJobProperties]
   
   type DocumentClassifierArn = java.lang.String
+  
+  type DocumentClassifierAugmentedManifestsList = js.Array[typingsSlinky.awsSdk.comprehendMod.AugmentedManifestsListItem]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPREHEND_CSV
+    - typingsSlinky.awsSdk.awsSdkStrings.AUGMENTED_MANIFEST
+    - java.lang.String
+  */
+  type DocumentClassifierDataFormat = typingsSlinky.awsSdk.comprehendMod._DocumentClassifierDataFormat | java.lang.String
   
   type DocumentClassifierEndpointArn = java.lang.String
   
@@ -62,6 +75,15 @@ package object comprehendMod {
   type EntitiesDetectionJobPropertiesList = js.Array[typingsSlinky.awsSdk.comprehendMod.EntitiesDetectionJobProperties]
   
   type EntityRecognizerArn = java.lang.String
+  
+  type EntityRecognizerAugmentedManifestsList = js.Array[typingsSlinky.awsSdk.comprehendMod.AugmentedManifestsListItem]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPREHEND_CSV
+    - typingsSlinky.awsSdk.awsSdkStrings.AUGMENTED_MANIFEST
+    - java.lang.String
+  */
+  type EntityRecognizerDataFormat = typingsSlinky.awsSdk.comprehendMod._EntityRecognizerDataFormat | java.lang.String
   
   type EntityRecognizerEndpointArn = java.lang.String
   
@@ -160,7 +182,13 @@ package object comprehendMod {
   
   type ListOfLabels = js.Array[typingsSlinky.awsSdk.comprehendMod.DocumentLabel]
   
+  type ListOfPiiEntities = js.Array[typingsSlinky.awsSdk.comprehendMod.PiiEntity]
+  
+  type ListOfPiiEntityTypes = js.Array[typingsSlinky.awsSdk.comprehendMod.PiiEntityType]
+  
   type ListOfSyntaxTokens = js.Array[typingsSlinky.awsSdk.comprehendMod.SyntaxToken]
+  
+  type MaskCharacter = java.lang.String
   
   type MaxResultsInteger = scala.Double
   
@@ -200,6 +228,50 @@ package object comprehendMod {
     - java.lang.String
   */
   type PartOfSpeechTagType = typingsSlinky.awsSdk.comprehendMod._PartOfSpeechTagType | java.lang.String
+  
+  type PiiEntitiesDetectionJobPropertiesList = js.Array[typingsSlinky.awsSdk.comprehendMod.PiiEntitiesDetectionJobProperties]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.MASK
+    - typingsSlinky.awsSdk.awsSdkStrings.REPLACE_WITH_PII_ENTITY_TYPE
+    - java.lang.String
+  */
+  type PiiEntitiesDetectionMaskMode = typingsSlinky.awsSdk.comprehendMod._PiiEntitiesDetectionMaskMode | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ONLY_REDACTION
+    - typingsSlinky.awsSdk.awsSdkStrings.ONLY_OFFSETS
+    - java.lang.String
+  */
+  type PiiEntitiesDetectionMode = typingsSlinky.awsSdk.comprehendMod._PiiEntitiesDetectionMode | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.BANK_ACCOUNT_NUMBER
+    - typingsSlinky.awsSdk.awsSdkStrings.BANK_ROUTING
+    - typingsSlinky.awsSdk.awsSdkStrings.CREDIT_DEBIT_NUMBER
+    - typingsSlinky.awsSdk.awsSdkStrings.CREDIT_DEBIT_CVV
+    - typingsSlinky.awsSdk.awsSdkStrings.CREDIT_DEBIT_EXPIRY
+    - typingsSlinky.awsSdk.awsSdkStrings.PIN
+    - typingsSlinky.awsSdk.awsSdkStrings.EMAIL
+    - typingsSlinky.awsSdk.awsSdkStrings.ADDRESS
+    - typingsSlinky.awsSdk.awsSdkStrings.NAME
+    - typingsSlinky.awsSdk.awsSdkStrings.PHONE
+    - typingsSlinky.awsSdk.awsSdkStrings.SSN
+    - typingsSlinky.awsSdk.awsSdkStrings.DATE_TIME
+    - typingsSlinky.awsSdk.awsSdkStrings.PASSPORT_NUMBER
+    - typingsSlinky.awsSdk.awsSdkStrings.DRIVER_ID
+    - typingsSlinky.awsSdk.awsSdkStrings.URL
+    - typingsSlinky.awsSdk.awsSdkStrings.AGE
+    - typingsSlinky.awsSdk.awsSdkStrings.USERNAME
+    - typingsSlinky.awsSdk.awsSdkStrings.PASSWORD
+    - typingsSlinky.awsSdk.awsSdkStrings.AWS_ACCESS_KEY
+    - typingsSlinky.awsSdk.awsSdkStrings.AWS_SECRET_KEY
+    - typingsSlinky.awsSdk.awsSdkStrings.IP_ADDRESS
+    - typingsSlinky.awsSdk.awsSdkStrings.MAC_ADDRESS
+    - typingsSlinky.awsSdk.awsSdkStrings.ALL
+    - java.lang.String
+  */
+  type PiiEntityType = typingsSlinky.awsSdk.comprehendMod._PiiEntityType | java.lang.String
   
   type S3Uri = java.lang.String
   

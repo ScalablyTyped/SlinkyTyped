@@ -24,9 +24,7 @@ trait StorageOptions extends GoogleAuthOptions {
     PromiseConstructor with (Instantiable1[
       /* executor */ js.Function2[
         /* resolve */ js.Function1[
-          /* value */ js.UndefOr[
-            (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
-          ], 
+          /* value */ (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]), 
           Unit
         ], 
         /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
@@ -35,6 +33,8 @@ trait StorageOptions extends GoogleAuthOptions {
       js.Promise[js.Object]
     ])
   ] = js.native
+  
+  var userAgent: js.UndefOr[String] = js.native
 }
 object StorageOptions {
   
@@ -82,9 +82,7 @@ object StorageOptions {
       value: PromiseConstructor with (Instantiable1[
           /* executor */ js.Function2[
             /* resolve */ js.Function1[
-              /* value */ js.UndefOr[
-                (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
-              ], 
+              /* value */ (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]), 
               Unit
             ], 
             /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
@@ -96,5 +94,11 @@ object StorageOptions {
     
     @scala.inline
     def deletePromise: Self = this.set("promise", js.undefined)
+    
+    @scala.inline
+    def setUserAgent(value: String): Self = this.set("userAgent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserAgent: Self = this.set("userAgent", js.undefined)
   }
 }

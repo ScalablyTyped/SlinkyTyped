@@ -2,8 +2,13 @@ package typingsSlinky.fundamentalReact.anon
 
 import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactElement
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals text`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.all
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.ascending
@@ -148,7 +153,11 @@ trait WeakValidationMapSideNavL extends js.Object {
   var `aria-readonly`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
   var `aria-relevant`: js.UndefOr[
-    Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]
+    Validator[
+      js.UndefOr[
+        additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`) | Null
+      ]
+    ]
   ] = js.native
   
   var `aria-required`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
@@ -206,6 +215,8 @@ trait WeakValidationMapSideNavL extends js.Object {
   var dir: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
   
   var draggable: js.UndefOr[Validator[js.UndefOr[Booleanish | Null]]] = js.native
+  
+  var groupLabel: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
   
   var hasParent: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
@@ -687,7 +698,13 @@ object WeakValidationMapSideNavL {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: Validator[
+          js.UndefOr[
+            additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`) | Null
+          ]
+        ]
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -859,6 +876,12 @@ object WeakValidationMapSideNavL {
     
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    
+    @scala.inline
+    def setGroupLabel(value: Validator[js.UndefOr[Null | String]]): Self = this.set("groupLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGroupLabel: Self = this.set("groupLabel", js.undefined)
     
     @scala.inline
     def setHasParent(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("hasParent", value.asInstanceOf[js.Any])

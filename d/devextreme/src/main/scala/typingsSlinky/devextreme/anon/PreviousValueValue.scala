@@ -2,8 +2,7 @@ package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxLookup
-import typingsSlinky.devextreme.mod.global.JQueryEventObject
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxFileUploader
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,19 +10,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PreviousValueValue extends js.Object {
   
-  var component: js.UndefOr[dxLookup] = js.native
+  var component: js.UndefOr[dxFileUploader] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
   var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
   
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
-  
   var model: js.UndefOr[js.Any] = js.native
   
-  var previousValue: js.UndefOr[js.Any] = js.native
+  var previousValue: js.UndefOr[js.Array[org.scalajs.dom.raw.File]] = js.native
   
-  var value: js.UndefOr[js.Any] = js.native
+  var value: js.UndefOr[js.Array[org.scalajs.dom.raw.File]] = js.native
 }
 object PreviousValueValue {
   
@@ -49,7 +46,7 @@ object PreviousValueValue {
     }
     
     @scala.inline
-    def setComponent(value: dxLookup): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxFileUploader): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -67,25 +64,25 @@ object PreviousValueValue {
     def deleteEvent: Self = this.set("event", js.undefined)
     
     @scala.inline
-    def setJQueryEvent(value: JQueryEventObject): Self = this.set("jQueryEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteJQueryEvent: Self = this.set("jQueryEvent", js.undefined)
-    
-    @scala.inline
     def setModel(value: js.Any): Self = this.set("model", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)
     
     @scala.inline
-    def setPreviousValue(value: js.Any): Self = this.set("previousValue", value.asInstanceOf[js.Any])
+    def setPreviousValueVarargs(value: org.scalajs.dom.raw.File*): Self = this.set("previousValue", js.Array(value :_*))
+    
+    @scala.inline
+    def setPreviousValue(value: js.Array[org.scalajs.dom.raw.File]): Self = this.set("previousValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePreviousValue: Self = this.set("previousValue", js.undefined)
     
     @scala.inline
-    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValueVarargs(value: org.scalajs.dom.raw.File*): Self = this.set("value", js.Array(value :_*))
+    
+    @scala.inline
+    def setValue(value: js.Array[org.scalajs.dom.raw.File]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)

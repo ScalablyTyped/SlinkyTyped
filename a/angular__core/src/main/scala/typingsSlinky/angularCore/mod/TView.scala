@@ -27,7 +27,7 @@ trait TView extends js.Object {
     * This is a blueprint used to generate LView instances for this TView. Copying this
     * blueprint is faster than creating a new LView from scratch.
     */
-  var blueprint: ɵangularPackagesCoreCoreBp = js.native
+  var blueprint: ɵangularPackagesCoreCoreBv = js.native
   
   /**
     * When a view is destroyed, listeners need to be released and outputs need to be
@@ -91,8 +91,7 @@ trait TView extends js.Object {
   
   /**
     * An array of indices pointing to directives with content queries alongside with the
-    * corresponding
-    * query index. Each entry in this array is a tuple of:
+    * corresponding query index. Each entry in this array is a tuple of:
     * - index of the first content query index declared by a given directive;
     * - index of a directive.
     *
@@ -103,6 +102,11 @@ trait TView extends js.Object {
   
   /** Static data equivalent of LView.data[]. Contains TNodes, PipeDefInternal or TI18n. */
   var data: TData = js.native
+  
+  /**
+    * A `TNode` representing the declaration location of this `TView` (not part of this TView).
+    */
+  var declTNode: TNode | Null = js.native
   
   /**
     * Array of ngOnDestroy hooks that should be executed when this view is destroyed.
@@ -119,13 +123,6 @@ trait TView extends js.Object {
     * to render template functions without a host component.
     */
   var directiveRegistry: DirectiveDefList | Null = js.native
-  
-  /**
-    * Set of instructions used to process host bindings efficiently.
-    *
-    * See VIEW_DATA.md for more information.
-    */
-  var expandoInstructions: ExpandoInstructions | Null = js.native
   
   /**
     * The index where the "expando" section of `LView` begins. The expando
@@ -161,36 +158,17 @@ trait TView extends js.Object {
   var firstUpdatePass: Boolean = js.native
   
   /**
-    * ID for inline views to determine whether a view is the same as the previous view
-    * in a certain position. If it's not, we know the new view needs to be inserted
-    * and the one that exists needs to be removed (e.g. if/else statements)
+    * Stores the OpCodes to be replayed during change-detection to process the `HostBindings`
     *
-    * If this is -1, then this is a component view or a dynamically created view.
+    * See `HostBindingOpCodes` for encoding details.
     */
-  val id: Double = js.native
+  var hostBindingOpCodes: HostBindingOpCodes | Null = js.native
   
   /**
     * Indicates that there was an error before we managed to complete the first create pass of the
     * view. This means that the view is likely corrupted and we should try to recover it.
     */
   var incompleteFirstPass: Boolean = js.native
-  
-  /**
-    * Pointer to the host `TNode` (not part of this TView).
-    *
-    * If this is a `TViewNode` for an `LViewNode`, this is an embedded view of a container.
-    * We need this pointer to be able to efficiently find this node when inserting the view
-    * into an anchor.
-    *
-    * If this is a `TElementNode`, this is the view of a root component. It has exactly one
-    * root TNode.
-    *
-    * If this is null, this is the view of a component that is not at root. We do not store
-    * the host TNodes for child component views because they can potentially have several
-    * different host TNodes, depending on where the component is being used. These host
-    * TNodes cannot be shared (due to different indices, etc).
-    */
-  var node: TViewNode | ɵangularPackagesCoreCoreBf | Null = js.native
   
   /**
     * Full registry of pipes that may be found in this view.
@@ -206,8 +184,7 @@ trait TView extends js.Object {
   /**
     * Array of ngOnChanges and ngDoCheck hooks that should be executed for this view in update mode.
     *
-    * Even indices: Directive index
-    * Odd indices: Hook function
+    * This array has the same structure as the `preOrderHooks` one.
     */
   var preOrderCheckHooks: HookData | Null = js.native
   
@@ -215,8 +192,12 @@ trait TView extends js.Object {
     * Array of ngOnInit, ngOnChanges and ngDoCheck hooks that should be executed for this view in
     * creation mode.
     *
-    * Even indices: Directive index
-    * Odd indices: Hook function
+    * This array has a flat structure and contains TNode indices, directive indices (where an
+    * instance can be found in `LView`) and hook functions. TNode index is followed by the directive
+    * index and a hook function. If there are multiple hooks for a given TNode, the TNode index is
+    * not repeated and the next lifecycle hook information is stored right after the previous hook
+    * function. This is done so that at runtime the system can efficiently iterate over all of the
+    * functions to invoke without having to make any decisions/lookups.
     */
   var preOrderHooks: HookData | Null = js.native
   
@@ -285,18 +266,17 @@ object TView {
   @scala.inline
   def apply(
     bindingStartIndex: Double,
-    blueprint: ɵangularPackagesCoreCoreBp,
+    blueprint: ɵangularPackagesCoreCoreBv,
     data: TData,
     expandoStartIndex: Double,
     firstCreatePass: Boolean,
     firstUpdatePass: Boolean,
-    id: Double,
     incompleteFirstPass: Boolean,
     staticContentQueries: Boolean,
     staticViewQueries: Boolean,
     `type`: TViewType
   ): TView = {
-    val __obj = js.Dynamic.literal(bindingStartIndex = bindingStartIndex.asInstanceOf[js.Any], blueprint = blueprint.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], expandoStartIndex = expandoStartIndex.asInstanceOf[js.Any], firstCreatePass = firstCreatePass.asInstanceOf[js.Any], firstUpdatePass = firstUpdatePass.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], incompleteFirstPass = incompleteFirstPass.asInstanceOf[js.Any], staticContentQueries = staticContentQueries.asInstanceOf[js.Any], staticViewQueries = staticViewQueries.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(bindingStartIndex = bindingStartIndex.asInstanceOf[js.Any], blueprint = blueprint.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], expandoStartIndex = expandoStartIndex.asInstanceOf[js.Any], firstCreatePass = firstCreatePass.asInstanceOf[js.Any], firstUpdatePass = firstUpdatePass.asInstanceOf[js.Any], incompleteFirstPass = incompleteFirstPass.asInstanceOf[js.Any], staticContentQueries = staticContentQueries.asInstanceOf[js.Any], staticViewQueries = staticViewQueries.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TView]
   }
@@ -320,11 +300,11 @@ object TView {
     def setBindingStartIndex(value: Double): Self = this.set("bindingStartIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBlueprint(value: ɵangularPackagesCoreCoreBp): Self = this.set("blueprint", value.asInstanceOf[js.Any])
+    def setBlueprint(value: ɵangularPackagesCoreCoreBv): Self = this.set("blueprint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDataVarargs(
-      value: (TNode | ɵPipeDef[js.Any] | ɵDirectiveDef[js.Any] | ɵComponentDef[js.Any] | Double | TStylingRange | TStylingKey | Type[js.Any] | InjectionToken[js.Any] | TI18n | I18nUpdateOpCodes | Null | String)*
+      value: (TNode | ɵPipeDef[js.Any] | ɵDirectiveDef[js.Any] | ɵComponentDef[js.Any] | Double | TStylingRange | TStylingKey | Type[js.Any] | InjectionToken[js.Any] | TI18n | I18nUpdateOpCodes | TIcu | Null | String)*
     ): Self = this.set("data", js.Array(value :_*))
     
     @scala.inline
@@ -338,9 +318,6 @@ object TView {
     
     @scala.inline
     def setFirstUpdatePass(value: Boolean): Self = this.set("firstUpdatePass", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setId(value: Double): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIncompleteFirstPass(value: Boolean): Self = this.set("incompleteFirstPass", value.asInstanceOf[js.Any])
@@ -409,6 +386,12 @@ object TView {
     def setContentQueriesNull: Self = this.set("contentQueries", null)
     
     @scala.inline
+    def setDeclTNode(value: TNode): Self = this.set("declTNode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDeclTNodeNull: Self = this.set("declTNode", null)
+    
+    @scala.inline
     def setDestroyHooksVarargs(value: (HookEntry | HookData)*): Self = this.set("destroyHooks", js.Array(value :_*))
     
     @scala.inline
@@ -427,25 +410,16 @@ object TView {
     def setDirectiveRegistryNull: Self = this.set("directiveRegistry", null)
     
     @scala.inline
-    def setExpandoInstructionsVarargs(value: (Double | HostBindingsFunction[js.Any] | Null)*): Self = this.set("expandoInstructions", js.Array(value :_*))
-    
-    @scala.inline
-    def setExpandoInstructions(value: ExpandoInstructions): Self = this.set("expandoInstructions", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setExpandoInstructionsNull: Self = this.set("expandoInstructions", null)
-    
-    @scala.inline
     def setFirstChild(value: TNode): Self = this.set("firstChild", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFirstChildNull: Self = this.set("firstChild", null)
     
     @scala.inline
-    def setNode(value: TViewNode | ɵangularPackagesCoreCoreBf): Self = this.set("node", value.asInstanceOf[js.Any])
+    def setHostBindingOpCodes(value: HostBindingOpCodes): Self = this.set("hostBindingOpCodes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNodeNull: Self = this.set("node", null)
+    def setHostBindingOpCodesNull: Self = this.set("hostBindingOpCodes", null)
     
     @scala.inline
     def setPipeRegistryVarargs(value: ɵPipeDef[js.Any]*): Self = this.set("pipeRegistry", js.Array(value :_*))

@@ -17,12 +17,12 @@ trait Canary extends js.Object {
   /**
     * The ARN of the Lambda function that is used as your canary's engine. For more information about Lambda ARN format, see Resources and Conditions for Lambda Actions.
     */
-  var EngineArn: js.UndefOr[Arn] = js.native
+  var EngineArn: js.UndefOr[FunctionArn] = js.native
   
   /**
     * The ARN of the IAM role used to run the canary. This role must include lambda.amazonaws.com as a principal in the trust policy.
     */
-  var ExecutionRoleArn: js.UndefOr[Arn] = js.native
+  var ExecutionRoleArn: js.UndefOr[RoleArn] = js.native
   
   /**
     * The number of days to retain data about failed runs of this canary.
@@ -42,7 +42,7 @@ trait Canary extends js.Object {
   var RunConfig: js.UndefOr[CanaryRunConfigOutput] = js.native
   
   /**
-    * Specifies the runtime version to use for the canary. Currently, the only valid value is syn-1.0. For more information about runtime versions, see  Canary Runtime Versions.
+    * Specifies the runtime version to use for the canary. For more information about runtime versions, see  Canary Runtime Versions.
     */
   var RuntimeVersion: js.UndefOr[String] = js.native
   
@@ -109,13 +109,13 @@ object Canary {
     def deleteCode: Self = this.set("Code", js.undefined)
     
     @scala.inline
-    def setEngineArn(value: Arn): Self = this.set("EngineArn", value.asInstanceOf[js.Any])
+    def setEngineArn(value: FunctionArn): Self = this.set("EngineArn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEngineArn: Self = this.set("EngineArn", js.undefined)
     
     @scala.inline
-    def setExecutionRoleArn(value: Arn): Self = this.set("ExecutionRoleArn", value.asInstanceOf[js.Any])
+    def setExecutionRoleArn(value: RoleArn): Self = this.set("ExecutionRoleArn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExecutionRoleArn: Self = this.set("ExecutionRoleArn", js.undefined)

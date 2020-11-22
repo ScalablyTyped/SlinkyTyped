@@ -13,7 +13,7 @@ trait ListReservationsRequest extends js.Object {
   var ChannelClass: js.UndefOr[string] = js.native
   
   /**
-    * Filter by codec, 'AVC', 'HEVC', 'MPEG2', or 'AUDIO'
+    * Filter by codec, 'AVC', 'HEVC', 'MPEG2', 'AUDIO', or 'LINK'
     */
   var Codec: js.UndefOr[string] = js.native
   

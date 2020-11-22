@@ -1,20 +1,51 @@
 package typingsSlinky.reactIntl.anon
 
-import slinky.core.ReactComponentClass
-import typingsSlinky.reactIntl.mod.WrappedComponentProps
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-trait `4`[P /* <: WrappedComponentProps[IntlPropName] */, IntlPropName /* <: String */] extends js.Object {
-  var WrappedComponent: ReactComponentClass[P]
+@js.native
+trait `4` extends js.Object {
+  
+  var children: js.UndefOr[js.Function1[/* val */ String, ReactElement | Null]] = js.native
+  
+  var value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.react-intl/lib/src/types.IntlShape['formatTime']>[0] */ js.Any = js.native
 }
-
 object `4` {
+  
   @scala.inline
-  def apply[P, IntlPropName](WrappedComponent: ReactComponentClass[P]): `4`[P, IntlPropName] = {
-    val __obj = js.Dynamic.literal(WrappedComponent = WrappedComponent.asInstanceOf[js.Any])
-    __obj.asInstanceOf[`4`[P, IntlPropName]]
+  def apply(
+    value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.react-intl/lib/src/types.IntlShape['formatTime']>[0] */ js.Any
+  ): `4` = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[`4`]
+  }
+  
+  @scala.inline
+  implicit class `4Ops`[Self <: `4`] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
+    }
+    
+    @scala.inline
+    def setValue(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<react-intl.react-intl/lib/src/types.IntlShape['formatTime']>[0] */ js.Any
+    ): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setChildren(value: /* val */ String => ReactElement | Null): Self = this.set("children", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
   }
 }
-

@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.facepileTypesMod.IFacepile
 import typingsSlinky.officeUiFabricReact.facepileTypesMod.IFacepilePersona
@@ -15,7 +16,6 @@ import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaSharedProps
 import typingsSlinky.officeUiFabricReact.personaTypesMod.PersonaSize
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

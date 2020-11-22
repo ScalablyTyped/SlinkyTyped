@@ -1,7 +1,8 @@
 package typingsSlinky.typedoc.mod.TypeScript
 
-import typingsSlinky.typescript.mod.EntityName
+import typingsSlinky.typescript.mod.Identifier
 import typingsSlinky.typescript.mod.ImportTypeNode
+import typingsSlinky.typescript.mod.QualifiedName
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateImportTypeNode extends js.Object {
   
+  /** @deprecated Use `factory.updateImportTypeNode` or the factory supplied by your transformation context instead. */
   def apply(node: ImportTypeNode, argument: TypeNode): ImportTypeNode = js.native
   def apply(
     node: ImportTypeNode,
@@ -32,19 +34,40 @@ object updateImportTypeNode extends js.Object {
     typeArguments: js.Array[TypeNode],
     isTypeOf: Boolean
   ): ImportTypeNode = js.native
-  def apply(node: ImportTypeNode, argument: TypeNode, qualifier: EntityName): ImportTypeNode = js.native
+  def apply(node: ImportTypeNode, argument: TypeNode, qualifier: Identifier): ImportTypeNode = js.native
   def apply(
     node: ImportTypeNode,
     argument: TypeNode,
-    qualifier: EntityName,
+    qualifier: Identifier,
     typeArguments: js.UndefOr[scala.Nothing],
     isTypeOf: Boolean
   ): ImportTypeNode = js.native
-  def apply(node: ImportTypeNode, argument: TypeNode, qualifier: EntityName, typeArguments: js.Array[TypeNode]): ImportTypeNode = js.native
+  def apply(node: ImportTypeNode, argument: TypeNode, qualifier: Identifier, typeArguments: js.Array[TypeNode]): ImportTypeNode = js.native
   def apply(
     node: ImportTypeNode,
     argument: TypeNode,
-    qualifier: EntityName,
+    qualifier: Identifier,
+    typeArguments: js.Array[TypeNode],
+    isTypeOf: Boolean
+  ): ImportTypeNode = js.native
+  def apply(node: ImportTypeNode, argument: TypeNode, qualifier: QualifiedName): ImportTypeNode = js.native
+  def apply(
+    node: ImportTypeNode,
+    argument: TypeNode,
+    qualifier: QualifiedName,
+    typeArguments: js.UndefOr[scala.Nothing],
+    isTypeOf: Boolean
+  ): ImportTypeNode = js.native
+  def apply(
+    node: ImportTypeNode,
+    argument: TypeNode,
+    qualifier: QualifiedName,
+    typeArguments: js.Array[TypeNode]
+  ): ImportTypeNode = js.native
+  def apply(
+    node: ImportTypeNode,
+    argument: TypeNode,
+    qualifier: QualifiedName,
     typeArguments: js.Array[TypeNode],
     isTypeOf: Boolean
   ): ImportTypeNode = js.native

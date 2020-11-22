@@ -15,6 +15,11 @@ trait RedirectOptions extends js.Object {
   var follow_if_same_host: js.UndefOr[Boolean] = js.native
   
   /**
+    * Unless true, Needle will not follow redirects that point to same location (as set in the response header) as the original request URL. false by default.
+    */
+  var follow_if_same_location: js.UndefOr[Boolean] = js.native
+  
+  /**
     * When true, Needle will only follow redirects that point to the same protocol
     * as the original request.
     * false by default.
@@ -70,6 +75,12 @@ object RedirectOptions {
     
     @scala.inline
     def deleteFollow_if_same_host: Self = this.set("follow_if_same_host", js.undefined)
+    
+    @scala.inline
+    def setFollow_if_same_location(value: Boolean): Self = this.set("follow_if_same_location", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFollow_if_same_location: Self = this.set("follow_if_same_location", js.undefined)
     
     @scala.inline
     def setFollow_if_same_protocol(value: Boolean): Self = this.set("follow_if_same_protocol", value.asInstanceOf[js.Any])

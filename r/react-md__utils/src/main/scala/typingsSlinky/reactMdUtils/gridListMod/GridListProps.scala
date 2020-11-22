@@ -3,11 +3,13 @@ package typingsSlinky.reactMdUtils.gridListMod
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.reactMdUtils.useGridListMod.GridListSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.reactMdUtils.useGridListMod.UseGridListOptions because var conflicts: className, style. Inlined disableHeight, disableWidth, cellMargin, maxCellSize, defaultSize, containerPadding */ @js.native
 trait GridListProps extends HTMLAttributes[HTMLDivElement] {
   
   /**
@@ -55,6 +57,12 @@ trait GridListProps extends HTMLAttributes[HTMLDivElement] {
   var defaultSize: js.UndefOr[GridListSize | js.Function0[GridListSize]] = js.native
   
   /**
+    * Boolean if the recalculation of grid sizing should not happen for height
+    * changes.
+    */
+  var disableHeight: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Boolean if the resize observer should stop tracking width changes within
     * the `GridList`. This should normally stay as `false` since tracking width
     * changes will allow for dynamic content being added to the list to not mess
@@ -63,12 +71,10 @@ trait GridListProps extends HTMLAttributes[HTMLDivElement] {
   var disableHeightObserver: js.UndefOr[Boolean] = js.native
   
   /**
-    * Boolean if the current scrollbar width should no longer be subtracted from
-    * the total width of the grid list. This should only be disabled if your
-    * `containerPadding` is updated to include scrollbar width as well since
-    * it'll mess up the grid on OSes that display scrollbars.
+    * Boolean if the recalculation of grid sizing should not happen for width
+    * changes.
     */
-  var disableScrollbarWidth: js.UndefOr[Boolean] = js.native
+  var disableWidth: js.UndefOr[Boolean] = js.native
   
   /**
     * Boolean if the resize observer should stop tracking width changes within
@@ -153,16 +159,22 @@ object GridListProps {
     def deleteDefaultSize: Self = this.set("defaultSize", js.undefined)
     
     @scala.inline
+    def setDisableHeight(value: Boolean): Self = this.set("disableHeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableHeight: Self = this.set("disableHeight", js.undefined)
+    
+    @scala.inline
     def setDisableHeightObserver(value: Boolean): Self = this.set("disableHeightObserver", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisableHeightObserver: Self = this.set("disableHeightObserver", js.undefined)
     
     @scala.inline
-    def setDisableScrollbarWidth(value: Boolean): Self = this.set("disableScrollbarWidth", value.asInstanceOf[js.Any])
+    def setDisableWidth(value: Boolean): Self = this.set("disableWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDisableScrollbarWidth: Self = this.set("disableScrollbarWidth", js.undefined)
+    def deleteDisableWidth: Self = this.set("disableWidth", js.undefined)
     
     @scala.inline
     def setDisableWidthObserver(value: Boolean): Self = this.set("disableWidthObserver", value.asInstanceOf[js.Any])

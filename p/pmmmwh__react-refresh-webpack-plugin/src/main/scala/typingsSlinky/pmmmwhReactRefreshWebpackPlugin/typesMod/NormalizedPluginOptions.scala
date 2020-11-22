@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Pick<{  forceEnable :boolean | undefined,   useLegacyWDSSockets :boolean | undefined,   include :string | std.RegExp | std.Array<string | std.RegExp>,   exclude :string | std.RegExp | std.Array<string | std.RegExp>}, 'include' | 'exclude' | 'forceEnable' | 'useLegacyWDSSockets'> & @pmmmwh/react-refresh-webpack-plugin.@pmmmwh/react-refresh-webpack-plugin/types/types.OverlayOverrides */
+/* Inlined std.Pick<{  forceEnable :boolean | undefined,   include :string | std.RegExp | std.Array<string | std.RegExp>,   exclude :string | std.RegExp | std.Array<string | std.RegExp>}, 'include' | 'exclude' | 'forceEnable'> & @pmmmwh/react-refresh-webpack-plugin.@pmmmwh/react-refresh-webpack-plugin/types/types.OverlayOverrides */
 @js.native
 trait NormalizedPluginOptions extends js.Object {
   
@@ -19,8 +19,6 @@ trait NormalizedPluginOptions extends js.Object {
     * Modifies how the error overlay integration works in the plugin.
     */
   var overlay: `false` | NormalizedErrorOverlayOptions = js.native
-  
-  var useLegacyWDSSockets: js.UndefOr[Boolean] = js.native
 }
 object NormalizedPluginOptions {
   
@@ -75,11 +73,5 @@ object NormalizedPluginOptions {
     
     @scala.inline
     def deleteForceEnable: Self = this.set("forceEnable", js.undefined)
-    
-    @scala.inline
-    def setUseLegacyWDSSockets(value: Boolean): Self = this.set("useLegacyWDSSockets", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUseLegacyWDSSockets: Self = this.set("useLegacyWDSSockets", js.undefined)
   }
 }

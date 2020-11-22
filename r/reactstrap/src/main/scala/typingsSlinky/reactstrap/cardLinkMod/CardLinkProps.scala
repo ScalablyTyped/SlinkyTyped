@@ -2,11 +2,10 @@ package typingsSlinky.reactstrap.cardLinkMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLAnchorElement
-import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.ReactType
+import typingsSlinky.react.mod.AnchorHTMLAttributes
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
@@ -15,16 +14,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait CardLinkProps
-  extends HTMLAttributes[HTMLElement]
+  extends AnchorHTMLAttributes[HTMLAnchorElement]
      with /* key */ StringDictionary[js.Any] {
   
   var cssModule: js.UndefOr[CSSModule] = js.native
   
-  var href: js.UndefOr[String] = js.native
-  
   var innerRef: js.UndefOr[Ref[HTMLAnchorElement]] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
 }
 object CardLinkProps {
   
@@ -56,12 +53,6 @@ object CardLinkProps {
     def deleteCssModule: Self = this.set("cssModule", js.undefined)
     
     @scala.inline
-    def setHref(value: String): Self = this.set("href", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHref: Self = this.set("href", js.undefined)
-    
-    @scala.inline
     def setInnerRefRefObject(value: ReactRef[HTMLAnchorElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -83,7 +74,7 @@ object CardLinkProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

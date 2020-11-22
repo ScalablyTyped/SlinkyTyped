@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.propsMod.IOptionProps
 import typingsSlinky.blueprintjsCore.propsMod.IProps
 import scala.scalajs.js
@@ -25,7 +26,7 @@ trait IRadioGroupProps extends IProps {
   var `inline`: js.UndefOr[Boolean] = js.native
   
   /** Optional label text to display above the radio buttons. */
-  var label: js.UndefOr[String] = js.native
+  var label: js.UndefOr[ReactElement] = js.native
   
   /**
     * Name of the group, used to link radio buttons together in HTML.
@@ -89,7 +90,10 @@ object IRadioGroupProps {
     def deleteInline: Self = this.set("inline", js.undefined)
     
     @scala.inline
-    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabelReactElement(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)

@@ -27,14 +27,34 @@ trait BLEPeripheralServer extends js.Object {
     * 取消监听已连接的设备请求读当前外围设备的特征值事件
     *
     * 最低基础库： `2.10.3` */
+  def offCharacteristicReadRequest(): Unit = js.native
   def offCharacteristicReadRequest(/** 已连接的设备请求读当前外围设备的特征值事件的回调函数 */
   callback: OffCharacteristicReadRequestCallback): Unit = js.native
+  
+  /** [BLEPeripheralServer.offCharacteristicSubscribed(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-peripheral/BLEPeripheralServer.offCharacteristicSubscribed.html)
+    *
+    * 取消监听特征值订阅事件
+    *
+    * 最低基础库： `2.13.0` */
+  def offCharacteristicSubscribed(): Unit = js.native
+  def offCharacteristicSubscribed(/** 特征值订阅事件的回调函数 */
+  callback: OffCharacteristicSubscribedCallback): Unit = js.native
+  
+  /** [BLEPeripheralServer.offCharacteristicUnsubscribed(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-peripheral/BLEPeripheralServer.offCharacteristicUnsubscribed.html)
+    *
+    * 取消监听取消特征值订阅事件
+    *
+    * 最低基础库： `2.13.0` */
+  def offCharacteristicUnsubscribed(): Unit = js.native
+  def offCharacteristicUnsubscribed(/** 取消特征值订阅事件的回调函数 */
+  callback: OffCharacteristicUnsubscribedCallback): Unit = js.native
   
   /** [BLEPeripheralServer.offCharacteristicWriteRequest(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-peripheral/BLEPeripheralServer.offCharacteristicWriteRequest.html)
     *
     * 取消监听已连接的设备请求写当前外围设备的特征值事件
     *
     * 最低基础库： `2.10.3` */
+  def offCharacteristicWriteRequest(): Unit = js.native
   def offCharacteristicWriteRequest(/** 已连接的设备请求写当前外围设备的特征值事件的回调函数 */
   callback: OffCharacteristicWriteRequestCallback): Unit = js.native
   
@@ -45,6 +65,22 @@ trait BLEPeripheralServer extends js.Object {
     * 最低基础库： `2.10.3` */
   def onCharacteristicReadRequest(/** 已连接的设备请求读当前外围设备的特征值事件的回调函数 */
   callback: OnCharacteristicReadRequestCallback): Unit = js.native
+  
+  /** [BLEPeripheralServer.onCharacteristicSubscribed(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-peripheral/BLEPeripheralServer.onCharacteristicSubscribed.html)
+    *
+    * 监听特征值订阅事件，仅 iOS 支持。
+    *
+    * 最低基础库： `2.13.0` */
+  def onCharacteristicSubscribed(/** 特征值订阅事件的回调函数 */
+  callback: OnCharacteristicSubscribedCallback): Unit = js.native
+  
+  /** [BLEPeripheralServer.onCharacteristicUnsubscribed(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-peripheral/BLEPeripheralServer.onCharacteristicUnsubscribed.html)
+    *
+    * 监听取消特征值订阅事件，仅 iOS 支持。
+    *
+    * 最低基础库： `2.13.0` */
+  def onCharacteristicUnsubscribed(/** 取消特征值订阅事件的回调函数 */
+  callback: OnCharacteristicUnsubscribedCallback): Unit = js.native
   
   /** [BLEPeripheralServer.onCharacteristicWriteRequest(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/bluetooth-peripheral/BLEPeripheralServer.onCharacteristicWriteRequest.html)
     *

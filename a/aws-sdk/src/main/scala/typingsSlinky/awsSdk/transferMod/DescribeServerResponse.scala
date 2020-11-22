@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeServerResponse extends js.Object {
   
   /**
-    * An array containing the properties of a file transfer protocol-enabled server with the ServerID you specified.
+    * An array containing the properties of a server with the ServerID you specified.
     */
   var Server: DescribedServer = js.native
 }

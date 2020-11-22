@@ -5,6 +5,7 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -19,7 +20,6 @@ import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -50,6 +50,9 @@ object Image {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Image] {
+    
+    @scala.inline
+    def Component(value: ReactComponentClass[js.Object]): this.type = set("Component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def ImageComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ImageComponent", value.asInstanceOf[js.Any])
@@ -163,7 +166,7 @@ object Image {
     def onError(value: SyntheticEvent[NodeHandle, ImageErrorEventData] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onLoad(value: SyntheticEvent[NodeHandle, ImageLoadEventData] => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
@@ -175,10 +178,16 @@ object Image {
     def onLoadStart(value: () => Unit): this.type = set("onLoadStart", js.Any.fromFunction0(value))
     
     @scala.inline
+    def onLongPress(value: () => Unit): this.type = set("onLongPress", js.Any.fromFunction0(value))
+    
+    @scala.inline
     def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))
     
     @scala.inline
     def onPartialLoad(value: () => Unit): this.type = set("onPartialLoad", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def onPress(value: () => Unit): this.type = set("onPress", js.Any.fromFunction0(value))
     
     @scala.inline
     def onProgress(value: SyntheticEvent[NodeHandle, ImageProgressEventDataIOS] => Unit): this.type = set("onProgress", js.Any.fromFunction1(value))
@@ -209,6 +218,9 @@ object Image {
     
     @scala.inline
     def transition(value: Boolean): this.type = set("transition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def transitionDuration(value: Double): this.type = set("transitionDuration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])

@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,8 +19,8 @@ class RangeRuleInfo protected () extends RuleInfo {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def maxAttribute: IAttribute | Null = js.native
@@ -38,9 +40,6 @@ class RangeRuleInfo protected () extends RuleInfo {
   
   def minValue: String = js.native
   def minValue_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FRangeRuleInfo: IModel = js.native
   
   def typeOfRange: RangeType = js.native
   def typeOfRange_=(newValue: RangeType): Unit = js.native

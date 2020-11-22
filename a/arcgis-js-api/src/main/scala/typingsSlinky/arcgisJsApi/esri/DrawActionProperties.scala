@@ -11,8 +11,6 @@ trait DrawActionProperties extends js.Object {
     * Controls whether the created geometry will have z coordinates or not.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#hasZ)
-    *
-    * @default true
     */
   var hasZ: js.UndefOr[Double] = js.native
   

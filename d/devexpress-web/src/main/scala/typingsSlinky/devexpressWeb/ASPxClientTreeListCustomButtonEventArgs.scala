@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Provides data for the ASPxClientTreeList.CustomButtonClick event.
   */
 @js.native
-trait ASPxClientTreeListCustomButtonEventArgs extends ASPxClientEventArgs {
+trait ASPxClientTreeListCustomButtonEventArgs extends ASPxClientProcessingModeEventArgs {
   
   /**
     * Gets the value which identifies the custom button.
@@ -28,8 +28,8 @@ trait ASPxClientTreeListCustomButtonEventArgs extends ASPxClientEventArgs {
 object ASPxClientTreeListCustomButtonEventArgs {
   
   @scala.inline
-  def apply(buttonID: String, buttonIndex: Double, nodeKey: String): ASPxClientTreeListCustomButtonEventArgs = {
-    val __obj = js.Dynamic.literal(buttonID = buttonID.asInstanceOf[js.Any], buttonIndex = buttonIndex.asInstanceOf[js.Any], nodeKey = nodeKey.asInstanceOf[js.Any])
+  def apply(buttonID: String, buttonIndex: Double, nodeKey: String, processOnServer: Boolean): ASPxClientTreeListCustomButtonEventArgs = {
+    val __obj = js.Dynamic.literal(buttonID = buttonID.asInstanceOf[js.Any], buttonIndex = buttonIndex.asInstanceOf[js.Any], nodeKey = nodeKey.asInstanceOf[js.Any], processOnServer = processOnServer.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientTreeListCustomButtonEventArgs]
   }
   

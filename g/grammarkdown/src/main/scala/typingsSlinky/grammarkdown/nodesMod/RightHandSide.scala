@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "RightHandSide")
 @js.native
 class RightHandSide ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.RightHandSide] {
+  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.RightHandSide]
+     with ProductionBody {
   def this(constraints: Constraints) = this()
   def this(constraints: js.UndefOr[scala.Nothing], head: SymbolSpan) = this()
   def this(constraints: Constraints, head: SymbolSpan) = this()

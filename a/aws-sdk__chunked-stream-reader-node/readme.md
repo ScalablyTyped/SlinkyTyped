@@ -1,7 +1,7 @@
 
 # Scala.js typings for aws-sdk__chunked-stream-reader-node
 
-Typings are for version 0.1.0-preview.1
+Typings are for version 1.0.0-rc.3
 
 ## Library description:
 Exports a streamReader function that accepts a readable stream, a function to call on each chunk, and a chunk size in bytes to buffer interally before calling the supplied function.

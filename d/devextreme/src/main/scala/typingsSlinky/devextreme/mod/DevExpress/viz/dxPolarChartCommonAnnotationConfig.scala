@@ -1,5 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.SVGElement
+import org.scalajs.dom.raw.SVGGElement
+import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
+import typingsSlinky.devextreme.mod.DevExpress.core.template
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,11 +13,42 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartCommonAnnotationConfig extends BaseChartAnnotationConfig {
   
-  /** @name dxPolarChartCommonAnnotationConfig.angle */
+  /**
+    * [descr:dxPolarChartCommonAnnotationConfig.angle]
+    */
   var angle: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChartCommonAnnotationConfig.radius */
+  /**
+    * [descr:dxPolarChartCommonAnnotationConfig.customizeTooltip]
+    */
+  var customizeTooltip: js.UndefOr[js.Function1[/* annotation */ dxPolarChartAnnotationConfig | js.Any, _]] = js.native
+  
+  /**
+    * [descr:dxPolarChartCommonAnnotationConfig.radius]
+    */
   var radius: js.UndefOr[Double] = js.native
+  
+  /**
+    * [descr:dxPolarChartCommonAnnotationConfig.template]
+    */
+  var template: js.UndefOr[
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
+      /* annotation */ this.type | js.Any, 
+      /* element */ SVGGElement, 
+      String | SVGElement | JQuery
+    ])
+  ] = js.native
+  
+  /**
+    * [descr:dxPolarChartCommonAnnotationConfig.tooltipTemplate]
+    */
+  var tooltipTemplate: js.UndefOr[
+    template | (js.Function2[
+      /* annotation */ dxPolarChartAnnotationConfig | js.Any, 
+      /* element */ dxElement, 
+      String | Element | JQuery
+    ])
+  ] = js.native
 }
 object dxPolarChartCommonAnnotationConfig {
   
@@ -43,9 +80,55 @@ object dxPolarChartCommonAnnotationConfig {
     def deleteAngle: Self = this.set("angle", js.undefined)
     
     @scala.inline
+    def setCustomizeTooltip(value: /* annotation */ dxPolarChartAnnotationConfig | js.Any => _): Self = this.set("customizeTooltip", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteCustomizeTooltip: Self = this.set("customizeTooltip", js.undefined)
+    
+    @scala.inline
     def setRadius(value: Double): Self = this.set("radius", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRadius: Self = this.set("radius", js.undefined)
+    
+    @scala.inline
+    def setTemplateFunction2(
+      value: (/* annotation */ dxPolarChartCommonAnnotationConfig | js.Any, /* element */ SVGGElement) => String | SVGElement | JQuery
+    ): Self = this.set("template", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setTemplateElement(value: Element): Self = this.set("template", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTemplate(
+      value: template | (js.Function2[
+          /* annotation */ dxPolarChartCommonAnnotationConfig | js.Any, 
+          /* element */ SVGGElement, 
+          String | SVGElement | JQuery
+        ])
+    ): Self = this.set("template", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTemplate: Self = this.set("template", js.undefined)
+    
+    @scala.inline
+    def setTooltipTemplateFunction2(
+      value: (/* annotation */ dxPolarChartAnnotationConfig | js.Any, /* element */ dxElement) => String | Element | JQuery
+    ): Self = this.set("tooltipTemplate", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setTooltipTemplateElement(value: Element): Self = this.set("tooltipTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTooltipTemplate(
+      value: template | (js.Function2[
+          /* annotation */ dxPolarChartAnnotationConfig | js.Any, 
+          /* element */ dxElement, 
+          String | Element | JQuery
+        ])
+    ): Self = this.set("tooltipTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTooltipTemplate: Self = this.set("tooltipTemplate", js.undefined)
   }
 }

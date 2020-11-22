@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BrokerInstance extends js.Object {
   
   /**
-    * The URL of the broker's ActiveMQ Web Console.
+    * The URL of the broker's Web Console.
     */
   var ConsoleURL: js.UndefOr[string] = js.native
   
@@ -18,7 +18,7 @@ trait BrokerInstance extends js.Object {
   var Endpoints: js.UndefOr[listOfString] = js.native
   
   /**
-    * The IP address of the Elastic Network Interface (ENI) attached to the broker.
+    * The IP address of the Elastic Network Interface (ENI) attached to the broker. Does not apply to RabbitMQ brokers
     */
   var IpAddress: js.UndefOr[string] = js.native
 }

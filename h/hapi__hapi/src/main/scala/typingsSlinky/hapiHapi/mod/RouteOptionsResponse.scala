@@ -5,7 +5,7 @@ import typingsSlinky.hapiHapi.hapiHapiNumbers.`204`
 import typingsSlinky.hapiHapi.mod.Lifecycle.FailAction
 import typingsSlinky.hapiHapi.mod.Lifecycle.ReturnValue
 import typingsSlinky.hapiHapi.mod.Util.Dictionary
-import typingsSlinky.hapiJoi.mod.ValidationOptions
+import typingsSlinky.joi.mod.ValidationOptions
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -7,10 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SyntheticExpression extends Expression {
   
-  var isSpread: Boolean = js.native
+  val isSpread: Boolean = js.native
   
   @JSName("kind")
-  var kind_SyntheticExpression: typingsSlinky.typescript.mod.SyntaxKind.SyntheticExpression = js.native
+  val kind_SyntheticExpression: typingsSlinky.typescript.mod.SyntaxKind.SyntheticExpression = js.native
   
-  var `type`: Type = js.native
+  val tupleNameSource: js.UndefOr[ParameterDeclaration | NamedTupleMember] = js.native
+  
+  val `type`: Type = js.native
 }

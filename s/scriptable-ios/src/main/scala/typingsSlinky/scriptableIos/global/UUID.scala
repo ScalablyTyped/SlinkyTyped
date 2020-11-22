@@ -13,9 +13,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object UUID extends js.Object {
   
   /**
-    * _Get string value._
+    * _Generate a UUID._
     *
-    * Used for getting the string value of a UUID.
+    * Used for getting the string value of a newly generated UUID.
     * @see https://docs.scriptable.app/uuid/#string
     */
   def string(): String = js.native

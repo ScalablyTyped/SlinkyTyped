@@ -13,7 +13,10 @@ class UpdateNotifier () extends js.Object {
   
   val config: typingsSlinky.configstore.mod.^ = js.native
   
-  /** Check update information */
+  /**
+    * Check update information
+    * @async
+    */
   def fetchInfo(): UpdateInfo | js.Promise[UpdateInfo] = js.native
   
   def notify(customMessage: NotifyOptions): Unit = js.native

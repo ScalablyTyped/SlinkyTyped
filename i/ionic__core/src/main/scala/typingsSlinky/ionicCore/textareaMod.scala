@@ -77,11 +77,14 @@ object textareaMod extends js.Object {
     @JSName("componentDidLoad")
     def componentDidLoad_MTextarea(): Unit = js.native
     
+    @JSName("componentWillLoad")
+    def componentWillLoad_MTextarea(): Unit = js.native
+    
     @JSName("connectedCallback")
     def connectedCallback_MTextarea(): Unit = js.native
     
     /**
-      * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke.
+      * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`.
       */
     var debounce: Double = js.native
     
@@ -110,6 +113,16 @@ object textareaMod extends js.Object {
       */
     var enterkeyhint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
     
+    /**
+      * This is required for a WebKit bug which requires us to
+      * blur and focus an input to properly focus the input in
+      * an item with delegatesFocus. It will no longer be needed
+      * with iOS 14.
+      *
+      * @internal
+      */
+    var fireFocusEvents: Boolean = js.native
+    
     var focusChange: js.Any = js.native
     
     /**
@@ -122,6 +135,8 @@ object textareaMod extends js.Object {
     var hasFocus: Boolean = js.native
     
     var hasValue: js.Any = js.native
+    
+    var inheritedAttributes: js.Any = js.native
     
     var inputId: js.Any = js.native
     
@@ -209,8 +224,15 @@ object textareaMod extends js.Object {
     var runAutoGrow: js.Any = js.native
     
     /**
-      * Sets focus on the specified `ion-textarea`. Use this method instead of the global
-      * `input.focus()`.
+      * Sets blur on the native `textarea` in `ion-textarea`. Use this method instead of the global
+      * `textarea.blur()`.
+      * @internal
+      */
+    def setBlur(): js.Promise[Unit] = js.native
+    
+    /**
+      * Sets focus on the native `textarea` in `ion-textarea`. Use this method instead of the global
+      * `textarea.focus()`.
       */
     def setFocus(): js.Promise[Unit] = js.native
     

@@ -61,7 +61,7 @@ object ReactNativePhoneInput {
     def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onChangePhoneNumber(value: /* number */ Double => Unit): this.type = set("onChangePhoneNumber", js.Any.fromFunction1(value))
+    def onChangePhoneNumber(value: /* number */ String => Unit): this.type = set("onChangePhoneNumber", js.Any.fromFunction1(value))
     
     @scala.inline
     def onPressCancel(value: () => Unit): this.type = set("onPressCancel", js.Any.fromFunction0(value))

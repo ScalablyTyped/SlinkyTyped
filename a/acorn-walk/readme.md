@@ -1,7 +1,7 @@
 
 # Scala.js typings for acorn-walk
 
-Typings are for version 7.2.0
+Typings are for version 8.0.0
 
 ## Library description:
 ECMAScript (ESTree) AST walker

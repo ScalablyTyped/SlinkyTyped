@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("base16", "grayscale")
 @js.native
-object grayscale extends TopLevel[ColorScheme]
+object grayscale extends TopLevel[Base16Theme]

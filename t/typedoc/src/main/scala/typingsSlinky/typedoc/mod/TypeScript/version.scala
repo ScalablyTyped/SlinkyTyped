@@ -9,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("typedoc", "TypeScript.version")
 @js.native
 object version
-  extends TopLevel[/* "3.9" */ String]
+  extends TopLevel[/* "4.1" */ String]

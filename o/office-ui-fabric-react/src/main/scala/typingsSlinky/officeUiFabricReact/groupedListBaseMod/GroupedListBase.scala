@@ -15,9 +15,6 @@ class GroupedListBase protected ()
      with IGroupedList {
   def this(props: IGroupedListProps) = this()
   
-  @JSName("UNSAFE_componentWillReceiveProps")
-  def UNSAFE_componentWillReceiveProps_MGroupedListBase(newProps: IGroupedListProps): Unit = js.native
-  
   var _classNames: js.Any = js.native
   
   var _computeIsSomeGroupExpanded: js.Any = js.native
@@ -70,4 +67,6 @@ class GroupedListBase protected ()
 object GroupedListBase extends js.Object {
   
   var defaultProps: Compact = js.native
+  
+  def getDerivedStateFromProps(nextProps: IGroupedListProps, previousState: IGroupedListState): IGroupedListState = js.native
 }

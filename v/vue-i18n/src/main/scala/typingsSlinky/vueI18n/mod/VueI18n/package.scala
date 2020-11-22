@@ -28,12 +28,15 @@ package object VueI18n {
   
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
+    - typingsSlinky.vueI18n.mod.VueI18n.MessageFunction
     - typingsSlinky.vueI18n.mod.VueI18n.LocaleMessageObject
     - typingsSlinky.vueI18n.mod.VueI18n.LocaleMessageArray
   */
-  type LocaleMessage = typingsSlinky.vueI18n.mod.VueI18n._LocaleMessage | java.lang.String
+  type LocaleMessage = typingsSlinky.vueI18n.mod.VueI18n._LocaleMessage | java.lang.String | typingsSlinky.vueI18n.mod.VueI18n.MessageFunction
   
   type LocaleMessages = org.scalablytyped.runtime.StringDictionary[typingsSlinky.vueI18n.mod.VueI18n.LocaleMessageObject]
+  
+  type MessageFunction = js.Function1[/* ctx */ typingsSlinky.vueI18n.mod.VueI18n.MessageContext, java.lang.String]
   
   type MissingHandler = js.Function4[
     /* locale */ typingsSlinky.vueI18n.mod.VueI18n.Locale, 

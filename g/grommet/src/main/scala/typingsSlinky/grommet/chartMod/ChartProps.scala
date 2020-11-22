@@ -3,28 +3,36 @@ package typingsSlinky.grommet.chartMod
 import typingsSlinky.grommet.anon.Color
 import typingsSlinky.grommet.anon.Height
 import typingsSlinky.grommet.anon.Label
-import typingsSlinky.grommet.anon.Value
+import typingsSlinky.grommet.anon.Opacity
 import typingsSlinky.grommet.anon.Vertical
 import typingsSlinky.grommet.grommetStrings.area
 import typingsSlinky.grommet.grommetStrings.bar
+import typingsSlinky.grommet.grommetStrings.circle
+import typingsSlinky.grommet.grommetStrings.diamond
 import typingsSlinky.grommet.grommetStrings.fill
 import typingsSlinky.grommet.grommetStrings.full
-import typingsSlinky.grommet.grommetStrings.hair
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.line
 import typingsSlinky.grommet.grommetStrings.medium
-import typingsSlinky.grommet.grommetStrings.none
 import typingsSlinky.grommet.grommetStrings.point
 import typingsSlinky.grommet.grommetStrings.small
+import typingsSlinky.grommet.grommetStrings.square
+import typingsSlinky.grommet.grommetStrings.star
+import typingsSlinky.grommet.grommetStrings.strong
+import typingsSlinky.grommet.grommetStrings.triangle
+import typingsSlinky.grommet.grommetStrings.triangleDown
+import typingsSlinky.grommet.grommetStrings.weak
 import typingsSlinky.grommet.grommetStrings.xlarge
 import typingsSlinky.grommet.grommetStrings.xsmall
 import typingsSlinky.grommet.grommetStrings.xxsmall
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
+import typingsSlinky.grommet.utilsMod.ColorType
 import typingsSlinky.grommet.utilsMod.EdgeSizeType
 import typingsSlinky.grommet.utilsMod.GapType
 import typingsSlinky.grommet.utilsMod.GridAreaType
 import typingsSlinky.grommet.utilsMod.MarginType
+import typingsSlinky.grommet.utilsMod.ThicknessType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,9 +44,11 @@ trait ChartProps extends js.Object {
   
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
   
+  var animate: js.UndefOr[Boolean] = js.native
+  
   var bounds: js.UndefOr[js.Array[js.Array[Double]]] = js.native
   
-  var color: js.UndefOr[String | Color | js.Array[Value]] = js.native
+  var color: js.UndefOr[ColorType | js.Array[Color] | Opacity] = js.native
   
   var dash: js.UndefOr[Boolean] = js.native
   
@@ -52,9 +62,13 @@ trait ChartProps extends js.Object {
   
   var onHover: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
   
+  var opacity: js.UndefOr[weak | medium | strong | Boolean | Double] = js.native
+  
   var overflow: js.UndefOr[Boolean] = js.native
   
   var pad: js.UndefOr[EdgeSizeType | Vertical] = js.native
+  
+  var point: js.UndefOr[circle | diamond | square | star | triangle | triangleDown] = js.native
   
   var round: js.UndefOr[Boolean] = js.native
   
@@ -62,7 +76,7 @@ trait ChartProps extends js.Object {
     xxsmall | xsmall | small | medium | large | xlarge | fill | full | Height | String
   ] = js.native
   
-  var thickness: js.UndefOr[hair | xsmall | small | medium | large | xlarge | none | String] = js.native
+  var thickness: js.UndefOr[ThicknessType] = js.native
   
   var `type`: js.UndefOr[bar | line | area | point] = js.native
   
@@ -110,6 +124,12 @@ object ChartProps {
     def deleteAlignSelf: Self = this.set("alignSelf", js.undefined)
     
     @scala.inline
+    def setAnimate(value: Boolean): Self = this.set("animate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnimate: Self = this.set("animate", js.undefined)
+    
+    @scala.inline
     def setBoundsVarargs(value: js.Array[Double]*): Self = this.set("bounds", js.Array(value :_*))
     
     @scala.inline
@@ -119,10 +139,10 @@ object ChartProps {
     def deleteBounds: Self = this.set("bounds", js.undefined)
     
     @scala.inline
-    def setColorVarargs(value: Value*): Self = this.set("color", js.Array(value :_*))
+    def setColorVarargs(value: Color*): Self = this.set("color", js.Array(value :_*))
     
     @scala.inline
-    def setColor(value: String | Color | js.Array[Value]): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: ColorType | js.Array[Color] | Opacity): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
@@ -164,6 +184,12 @@ object ChartProps {
     def deleteOnHover: Self = this.set("onHover", js.undefined)
     
     @scala.inline
+    def setOpacity(value: weak | medium | strong | Boolean | Double): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOpacity: Self = this.set("opacity", js.undefined)
+    
+    @scala.inline
     def setOverflow(value: Boolean): Self = this.set("overflow", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -174,6 +200,12 @@ object ChartProps {
     
     @scala.inline
     def deletePad: Self = this.set("pad", js.undefined)
+    
+    @scala.inline
+    def setPoint(value: circle | diamond | square | star | triangle | triangleDown): Self = this.set("point", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePoint: Self = this.set("point", js.undefined)
     
     @scala.inline
     def setRound(value: Boolean): Self = this.set("round", value.asInstanceOf[js.Any])
@@ -188,7 +220,7 @@ object ChartProps {
     def deleteSize: Self = this.set("size", js.undefined)
     
     @scala.inline
-    def setThickness(value: hair | xsmall | small | medium | large | xlarge | none | String): Self = this.set("thickness", value.asInstanceOf[js.Any])
+    def setThickness(value: ThicknessType): Self = this.set("thickness", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteThickness: Self = this.set("thickness", js.undefined)

@@ -1,5 +1,6 @@
 package typingsSlinky.connectDatadog.mod
 
+import typingsSlinky.hotShots.mod.StatsD
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +10,7 @@ trait Options extends js.Object {
   
   var base_url: js.UndefOr[Boolean] = js.native
   
-  var dogstatsd: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify hotShots.StatsD */ js.Any
-  ] = js.native
+  var dogstatsd: js.UndefOr[StatsD] = js.native
   
   var method: js.UndefOr[Boolean] = js.native
   
@@ -55,9 +54,7 @@ object Options {
     def deleteBase_url: Self = this.set("base_url", js.undefined)
     
     @scala.inline
-    def setDogstatsd(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify hotShots.StatsD */ js.Any
-    ): Self = this.set("dogstatsd", value.asInstanceOf[js.Any])
+    def setDogstatsd(value: StatsD): Self = this.set("dogstatsd", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDogstatsd: Self = this.set("dogstatsd", js.undefined)

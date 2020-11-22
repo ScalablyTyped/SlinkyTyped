@@ -1,5 +1,6 @@
 package typingsSlinky.i18next.mod
 
+import typingsSlinky.i18next.anon.InterpolationOptionskeyst
 import typingsSlinky.i18next.anon.KeySeparator
 import typingsSlinky.i18next.anon.Silent
 import typingsSlinky.i18next.anon.Translation
@@ -22,23 +23,23 @@ trait i18n extends js.Object {
   /**
     * Adds one key/value.
     */
-  def addResource(lng: String, ns: String, key: String, value: String): Unit = js.native
-  def addResource(lng: String, ns: String, key: String, value: String, options: Silent): Unit = js.native
+  def addResource(lng: String, ns: String, key: String, value: String): i18n = js.native
+  def addResource(lng: String, ns: String, key: String, value: String, options: Silent): i18n = js.native
   
   /**
     * Adds a complete bundle.
     * Setting deep param to true will extend existing translations in that file.
     * Setting overwrite to true it will overwrite existing translations in that file.
     */
-  def addResourceBundle(lng: String, ns: String, resources: js.Any): Unit = js.native
-  def addResourceBundle(lng: String, ns: String, resources: js.Any, deep: js.UndefOr[scala.Nothing], overwrite: Boolean): Unit = js.native
-  def addResourceBundle(lng: String, ns: String, resources: js.Any, deep: Boolean): Unit = js.native
-  def addResourceBundle(lng: String, ns: String, resources: js.Any, deep: Boolean, overwrite: Boolean): Unit = js.native
+  def addResourceBundle(lng: String, ns: String, resources: js.Any): i18n = js.native
+  def addResourceBundle(lng: String, ns: String, resources: js.Any, deep: js.UndefOr[scala.Nothing], overwrite: Boolean): i18n = js.native
+  def addResourceBundle(lng: String, ns: String, resources: js.Any, deep: Boolean): i18n = js.native
+  def addResourceBundle(lng: String, ns: String, resources: js.Any, deep: Boolean, overwrite: Boolean): i18n = js.native
   
   /**
     * Adds multiple key/values.
     */
-  def addResources(lng: String, ns: String, resources: js.Any): Unit = js.native
+  def addResources(lng: String, ns: String, resources: js.Any): i18n = js.native
   
   /**
     * Changes the language. The callback will be called as soon translations were loaded or an error occurs while loading.
@@ -95,9 +96,18 @@ trait i18n extends js.Object {
     * Exposes interpolation.format function added on init.
     */
   def format(value: js.Any): String = js.native
+  def format(
+    value: js.Any,
+    format: js.UndefOr[scala.Nothing],
+    lng: js.UndefOr[scala.Nothing],
+    options: InterpolationOptionskeyst
+  ): String = js.native
   def format(value: js.Any, format: js.UndefOr[scala.Nothing], lng: String): String = js.native
+  def format(value: js.Any, format: js.UndefOr[scala.Nothing], lng: String, options: InterpolationOptionskeyst): String = js.native
   def format(value: js.Any, format: String): String = js.native
+  def format(value: js.Any, format: String, lng: js.UndefOr[scala.Nothing], options: InterpolationOptionskeyst): String = js.native
   def format(value: js.Any, format: String, lng: String): String = js.native
+  def format(value: js.Any, format: String, lng: String, options: InterpolationOptionskeyst): String = js.native
   /**
     * Exposes interpolation.format function added on init.
     */
@@ -281,7 +291,7 @@ trait i18n extends js.Object {
   /**
     * Removes an existing bundle.
     */
-  def removeResourceBundle(lng: String, ns: String): Unit = js.native
+  def removeResourceBundle(lng: String, ns: String): i18n = js.native
   
   /**
     * Internal container for all used plugins and implementation details like languageUtils, pluralResolvers, etc.

@@ -9,6 +9,8 @@ trait MlCloseJob[T] extends Generic {
   
   var allow_no_jobs: js.UndefOr[Boolean] = js.native
   
+  var allow_no_match: js.UndefOr[Boolean] = js.native
+  
   var body: js.UndefOr[T] = js.native
   
   var force: js.UndefOr[Boolean] = js.native
@@ -48,6 +50,12 @@ object MlCloseJob {
     
     @scala.inline
     def deleteAllow_no_jobs: Self = this.set("allow_no_jobs", js.undefined)
+    
+    @scala.inline
+    def setAllow_no_match(value: Boolean): Self = this.set("allow_no_match", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllow_no_match: Self = this.set("allow_no_match", js.undefined)
     
     @scala.inline
     def setBody(value: T): Self = this.set("body", value.asInstanceOf[js.Any])

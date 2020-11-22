@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LineRadial_[Datum] extends js.Object {
   
+  def apply(data: js.Array[Datum]): String | Null = js.native
   /**
     * Generates a radial line for the given array of data. Depending on this radial line generator’s associated curve,
     * the given input data may need to be sorted by x-value before being passed to the line generator.
@@ -17,7 +18,7 @@ trait LineRadial_[Datum] extends js.Object {
     *
     * @param data Array of data elements.
     */
-  def apply(data: js.Array[Datum]): String | Null = js.native
+  def apply(data: js.Iterable[Datum]): String | Null = js.native
   
   /**
     * Returns the current angle accessor function, which defaults to a function returning first element of a two-element array of numbers.

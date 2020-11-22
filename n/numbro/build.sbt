@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "numbro"
-version := "2.3.1-8bcd00"
+version := "2.3.2-ce2849"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -1,5 +1,6 @@
 package typingsSlinky.typedoc.mod.TypeScript
 
+import typingsSlinky.typescript.mod.NamedTupleMember
 import typingsSlinky.typescript.mod.TupleTypeNode
 import typingsSlinky.typescript.mod.TypeNode
 import scala.scalajs.js
@@ -10,5 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createTupleTypeNode extends js.Object {
   
-  def apply(elementTypes: js.Array[TypeNode]): TupleTypeNode = js.native
+  /** @deprecated Use `factory.createTupleTypeNode` or the factory supplied by your transformation context instead. */
+  def apply(elements: js.Array[TypeNode | NamedTupleMember]): TupleTypeNode = js.native
 }

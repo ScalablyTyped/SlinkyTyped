@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createNew extends js.Object {
   
+  /** @deprecated Use `factory.createNew` or the factory supplied by your transformation context instead. */
   def apply(expression: Expression): NewExpression = js.native
   def apply(
     expression: Expression,

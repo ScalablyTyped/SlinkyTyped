@@ -23,6 +23,9 @@ object SelectionZone {
        with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.SelectionZone] {
     
     @scala.inline
+    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def componentRef(value: () => Unit): this.type = set("componentRef", js.Any.fromFunction0(value))
     
     @scala.inline

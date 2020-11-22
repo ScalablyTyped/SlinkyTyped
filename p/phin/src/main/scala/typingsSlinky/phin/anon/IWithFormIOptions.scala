@@ -1,6 +1,7 @@
 package typingsSlinky.phin.anon
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.experimental.URL
 import typingsSlinky.node.httpMod.ClientRequestArgs
 import typingsSlinky.phin.phinStrings.none
 import scala.scalajs.js
@@ -35,12 +36,12 @@ trait IWithFormIOptions extends js.Object {
   
   var timeout: js.UndefOr[Double] = js.native
   
-  var url: String = js.native
+  var url: String | URL = js.native
 }
 object IWithFormIOptions {
   
   @scala.inline
-  def apply(form: StringDictionary[String], url: String): IWithFormIOptions = {
+  def apply(form: StringDictionary[String], url: String | URL): IWithFormIOptions = {
     val __obj = js.Dynamic.literal(form = form.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWithFormIOptions]
   }
@@ -64,7 +65,10 @@ object IWithFormIOptions {
     def setForm(value: StringDictionary[String]): Self = this.set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrlURL(value: URL): Self = this.set("url", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUrl(value: String | URL): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCompression(value: Boolean): Self = this.set("compression", value.asInstanceOf[js.Any])

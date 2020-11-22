@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait InternetMessageHeader extends js.Object {
   
   // Represents the key in a key-value pair.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   // The value in a key-value pair.
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[NullableOption[String]] = js.native
 }
 object InternetMessageHeader {
   
@@ -37,15 +37,21 @@ object InternetMessageHeader {
     }
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
+    def setValue(value: NullableOption[String]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

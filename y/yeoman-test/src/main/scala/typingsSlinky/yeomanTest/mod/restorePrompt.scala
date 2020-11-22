@@ -1,5 +1,6 @@
 package typingsSlinky.yeomanTest.mod
 
+import typingsSlinky.yeomanGenerator.mod.GeneratorOptions
 import typingsSlinky.yeomanGenerator.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object restorePrompt extends js.Object {
   
-  def apply(generator: ^): Unit = js.native
+  def apply(generator: ^[GeneratorOptions]): Unit = js.native
 }

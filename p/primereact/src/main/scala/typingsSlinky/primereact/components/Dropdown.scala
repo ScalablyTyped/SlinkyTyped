@@ -1,7 +1,6 @@
 package typingsSlinky.primereact.components
 
 import org.scalajs.dom.raw.Event
-import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.Target
@@ -50,6 +49,9 @@ object Dropdown {
     def editable(value: Boolean): this.type = set("editable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def emptyFilterMessage(value: js.Any): this.type = set("emptyFilterMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def filter(value: Boolean): this.type = set("filter", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -74,7 +76,7 @@ object Dropdown {
     def inputId(value: String): this.type = set("inputId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemTemplate(value: /* option */ js.Any => ReactElement): this.type = set("itemTemplate", js.Any.fromFunction1(value))
+    def itemTemplate(value: /* option */ js.Any => _): this.type = set("itemTemplate", js.Any.fromFunction1(value))
     
     @scala.inline
     def `lazy`(value: Boolean): this.type = set("lazy", value.asInstanceOf[js.Any])
@@ -125,6 +127,9 @@ object Dropdown {
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def resetFilterOnHide(value: Boolean): this.type = set("resetFilterOnHide", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def scrollHeight(value: String): this.type = set("scrollHeight", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -144,6 +149,9 @@ object Dropdown {
     
     @scala.inline
     def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def valueTemplate(value: (/* option */ js.Any, /* props */ js.Object) => _): this.type = set("valueTemplate", js.Any.fromFunction2(value))
   }
   
   def withProps(p: DropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

@@ -33,12 +33,13 @@ class TaskDefinition protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
-    * A list of valid [container definitions]
-    * (http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a
-    * single valid JSON document. Please note that you should only provide values that are part of the container
-    * definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters]
-    * (https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the
-    * official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
+    * A list of valid [container
+    * definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)
+    * provided as a single valid JSON document. Please note that you should only
+    * provide values that are part of the container definition document. For a
+    * detailed description of what parameters are available, see the [Task Definition
+    * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html)
+    * section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
     */
   val containerDefinitions: Output_[String] = js.native
   

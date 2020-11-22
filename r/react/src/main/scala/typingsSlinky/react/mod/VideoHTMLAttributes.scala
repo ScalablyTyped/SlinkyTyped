@@ -9,6 +9,8 @@ trait VideoHTMLAttributes[T] extends MediaHTMLAttributes[T] {
   
   var disablePictureInPicture: js.UndefOr[Boolean] = js.native
   
+  var disableRemotePlayback: js.UndefOr[Boolean] = js.native
+  
   var height: js.UndefOr[Double | String] = js.native
   
   var poster: js.UndefOr[String] = js.native
@@ -43,6 +45,12 @@ object VideoHTMLAttributes {
     
     @scala.inline
     def deleteDisablePictureInPicture: Self = this.set("disablePictureInPicture", js.undefined)
+    
+    @scala.inline
+    def setDisableRemotePlayback(value: Boolean): Self = this.set("disableRemotePlayback", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableRemotePlayback: Self = this.set("disableRemotePlayback", js.undefined)
     
     @scala.inline
     def setHeight(value: Double | String): Self = this.set("height", value.asInstanceOf[js.Any])

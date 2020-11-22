@@ -28,8 +28,8 @@ trait LocationLocationStateprop extends js.Object {
 object LocationLocationStateprop {
   
   @scala.inline
-  def apply(hash: Hash, pathname: Pathname, search: Search): LocationLocationStateprop = {
-    val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any], pathname = pathname.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any])
+  def apply(hash: Hash, pathname: Pathname, search: Search, state: LocationState): LocationLocationStateprop = {
+    val __obj = js.Dynamic.literal(hash = hash.asInstanceOf[js.Any], pathname = pathname.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[LocationLocationStateprop]
   }
   
@@ -58,6 +58,9 @@ object LocationLocationStateprop {
     def setSearch(value: Search): Self = this.set("search", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setState(value: LocationState): Self = this.set("state", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setKey(value: LocationKey): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -68,14 +71,5 @@ object LocationLocationStateprop {
     
     @scala.inline
     def deleteProps: Self = this.set("props", js.undefined)
-    
-    @scala.inline
-    def setState(value: LocationState): Self = this.set("state", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteState: Self = this.set("state", js.undefined)
-    
-    @scala.inline
-    def setStateNull: Self = this.set("state", null)
   }
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IosHomeScreenItem extends js.Object {
   
   // Name of the app
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
 }
 object IosHomeScreenItem {
   
@@ -34,9 +34,12 @@ object IosHomeScreenItem {
     }
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
   }
 }

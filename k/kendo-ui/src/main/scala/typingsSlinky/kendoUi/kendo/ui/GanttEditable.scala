@@ -21,6 +21,8 @@ trait GanttEditable extends js.Object {
   
   var move: js.UndefOr[Boolean] = js.native
   
+  var plannedTasks: js.UndefOr[Boolean] = js.native
+  
   var reorder: js.UndefOr[Boolean] = js.native
   
   var resize: js.UndefOr[Boolean] = js.native
@@ -93,6 +95,12 @@ object GanttEditable {
     
     @scala.inline
     def deleteMove: Self = this.set("move", js.undefined)
+    
+    @scala.inline
+    def setPlannedTasks(value: Boolean): Self = this.set("plannedTasks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePlannedTasks: Self = this.set("plannedTasks", js.undefined)
     
     @scala.inline
     def setReorder(value: Boolean): Self = this.set("reorder", value.asInstanceOf[js.Any])

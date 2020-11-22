@@ -28,7 +28,7 @@ trait GridProps extends js.Object {
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSSLengthUnitT */ js.Any
   ] = js.native
   
-  var overrides: js.UndefOr[typingsSlinky.baseui.anon.Grid] = js.native
+  var overrides: js.UndefOr[GridOverrides] = js.native
 }
 object GridProps {
   
@@ -125,7 +125,7 @@ object GridProps {
     def deleteGridUnit: Self = this.set("gridUnit", js.undefined)
     
     @scala.inline
-    def setOverrides(value: typingsSlinky.baseui.anon.Grid): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: GridOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)

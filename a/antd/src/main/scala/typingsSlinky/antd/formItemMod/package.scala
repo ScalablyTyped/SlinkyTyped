@@ -6,10 +6,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object formItemMod {
   
-  type ChildrenType = typingsSlinky.antd.formItemMod.RenderChildren | slinky.core.facade.ReactElement
+  type ChildrenType[Values] = typingsSlinky.antd.formItemMod.RenderChildren[Values] | slinky.core.facade.ReactElement
   
-  type RenderChildren = js.Function1[
-    /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance, 
+  type RenderChildren[Values] = js.Function1[
+    /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance[Values], 
     slinky.core.facade.ReactElement
   ]
 }

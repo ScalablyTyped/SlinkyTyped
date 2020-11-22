@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateSMBFileShareInput extends js.Object {
   
   /**
+    * The files and folders on this share will only be visible to users with read access.
+    */
+  var AccessBasedEnumeration: js.UndefOr[Boolean] = js.native
+  
+  /**
     * A list of users or groups in the Active Directory that have administrator rights to the file share. A group must be prefixed with the @ character. Acceptable formats include: DOMAIN\User1, user1, @group1, and @DOMAIN\group1. Can only be set if Authentication is set to ActiveDirectory.
     */
   var AdminUserList: js.UndefOr[FileShareUserList] = js.native
@@ -63,6 +68,11 @@ trait UpdateSMBFileShareInput extends js.Object {
   var KMSKey: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.KMSKey] = js.native
   
   /**
+    * The notification policy of the file share.
+    */
+  var NotificationPolicy: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.NotificationPolicy] = js.native
+  
+  /**
     * A value that sets the access control list (ACL) permission for objects in the S3 bucket that a file gateway puts objects into. The default value is private.
     */
   var ObjectACL: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.ObjectACL] = js.native
@@ -112,6 +122,12 @@ object UpdateSMBFileShareInput {
     
     @scala.inline
     def setFileShareARN(value: FileShareARN): Self = this.set("FileShareARN", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAccessBasedEnumeration(value: Boolean): Self = this.set("AccessBasedEnumeration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccessBasedEnumeration: Self = this.set("AccessBasedEnumeration", js.undefined)
     
     @scala.inline
     def setAdminUserListVarargs(value: FileShareUser*): Self = this.set("AdminUserList", js.Array(value :_*))
@@ -178,6 +194,12 @@ object UpdateSMBFileShareInput {
     
     @scala.inline
     def deleteKMSKey: Self = this.set("KMSKey", js.undefined)
+    
+    @scala.inline
+    def setNotificationPolicy(value: NotificationPolicy): Self = this.set("NotificationPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNotificationPolicy: Self = this.set("NotificationPolicy", js.undefined)
     
     @scala.inline
     def setObjectACL(value: ObjectACL): Self = this.set("ObjectACL", value.asInstanceOf[js.Any])

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VpnTunnelOptionsSpecification extends js.Object {
   
   /**
+    * The action to take after DPD timeout occurs. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid Values: clear | none | restart  Default: clear 
+    */
+  var DPDTimeoutAction: js.UndefOr[String] = js.native
+  
+  /**
     * The number of seconds after which a DPD timeout occurs. Constraints: A value between 0 and 30. Default: 30 
     */
   var DPDTimeoutSeconds: js.UndefOr[Integer] = js.native
@@ -18,17 +23,17 @@ trait VpnTunnelOptionsSpecification extends js.Object {
   var IKEVersions: js.UndefOr[IKEVersionsRequestList] = js.native
   
   /**
-    * One or more Diffie-Hellman group numbers that are permitted for the VPN tunnel for phase 1 IKE negotiations. Valid values: 2 | 14 | 15 | 16 | 17 | 18 | 22 | 23 | 24 
+    * One or more Diffie-Hellman group numbers that are permitted for the VPN tunnel for phase 1 IKE negotiations. Valid values: 2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 
     */
   var Phase1DHGroupNumbers: js.UndefOr[Phase1DHGroupNumbersRequestList] = js.native
   
   /**
-    * One or more encryption algorithms that are permitted for the VPN tunnel for phase 1 IKE negotiations. Valid values: AES128 | AES256 
+    * One or more encryption algorithms that are permitted for the VPN tunnel for phase 1 IKE negotiations. Valid values: AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16 
     */
   var Phase1EncryptionAlgorithms: js.UndefOr[Phase1EncryptionAlgorithmsRequestList] = js.native
   
   /**
-    * One or more integrity algorithms that are permitted for the VPN tunnel for phase 1 IKE negotiations. Valid values: SHA1 | SHA2-256 
+    * One or more integrity algorithms that are permitted for the VPN tunnel for phase 1 IKE negotiations. Valid values: SHA1 | SHA2-256 | SHA2-384 | SHA2-512 
     */
   var Phase1IntegrityAlgorithms: js.UndefOr[Phase1IntegrityAlgorithmsRequestList] = js.native
   
@@ -38,17 +43,17 @@ trait VpnTunnelOptionsSpecification extends js.Object {
   var Phase1LifetimeSeconds: js.UndefOr[Integer] = js.native
   
   /**
-    * One or more Diffie-Hellman group numbers that are permitted for the VPN tunnel for phase 2 IKE negotiations. Valid values: 2 | 5 | 14 | 15 | 16 | 17 | 18 | 22 | 23 | 24 
+    * One or more Diffie-Hellman group numbers that are permitted for the VPN tunnel for phase 2 IKE negotiations. Valid values: 2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 
     */
   var Phase2DHGroupNumbers: js.UndefOr[Phase2DHGroupNumbersRequestList] = js.native
   
   /**
-    * One or more encryption algorithms that are permitted for the VPN tunnel for phase 2 IKE negotiations. Valid values: AES128 | AES256 
+    * One or more encryption algorithms that are permitted for the VPN tunnel for phase 2 IKE negotiations. Valid values: AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16 
     */
   var Phase2EncryptionAlgorithms: js.UndefOr[Phase2EncryptionAlgorithmsRequestList] = js.native
   
   /**
-    * One or more integrity algorithms that are permitted for the VPN tunnel for phase 2 IKE negotiations. Valid values: SHA1 | SHA2-256 
+    * One or more integrity algorithms that are permitted for the VPN tunnel for phase 2 IKE negotiations. Valid values: SHA1 | SHA2-256 | SHA2-384 | SHA2-512 
     */
   var Phase2IntegrityAlgorithms: js.UndefOr[Phase2IntegrityAlgorithmsRequestList] = js.native
   
@@ -78,9 +83,19 @@ trait VpnTunnelOptionsSpecification extends js.Object {
   var ReplayWindowSize: js.UndefOr[Integer] = js.native
   
   /**
-    * The range of inside IP addresses for the tunnel. Any specified CIDR blocks must be unique across all VPN connections that use the same virtual private gateway.  Constraints: A size /30 CIDR block from the 169.254.0.0/16 range. The following CIDR blocks are reserved and cannot be used:    169.254.0.0/30     169.254.1.0/30     169.254.2.0/30     169.254.3.0/30     169.254.4.0/30     169.254.5.0/30     169.254.169.252/30   
+    * The action to take when the establishing the tunnel for the VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid Values: add | start  Default: add 
+    */
+  var StartupAction: js.UndefOr[String] = js.native
+  
+  /**
+    * The range of inside IPv4 addresses for the tunnel. Any specified CIDR blocks must be unique across all VPN connections that use the same virtual private gateway.  Constraints: A size /30 CIDR block from the 169.254.0.0/16 range. The following CIDR blocks are reserved and cannot be used:    169.254.0.0/30     169.254.1.0/30     169.254.2.0/30     169.254.3.0/30     169.254.4.0/30     169.254.5.0/30     169.254.169.252/30   
     */
   var TunnelInsideCidr: js.UndefOr[String] = js.native
+  
+  /**
+    * The range of inside IPv6 addresses for the tunnel. Any specified CIDR blocks must be unique across all VPN connections that use the same transit gateway. Constraints: A size /126 CIDR block from the local fd00::/8 range.
+    */
+  var TunnelInsideIpv6Cidr: js.UndefOr[String] = js.native
 }
 object VpnTunnelOptionsSpecification {
   
@@ -104,6 +119,12 @@ object VpnTunnelOptionsSpecification {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDPDTimeoutAction(value: String): Self = this.set("DPDTimeoutAction", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDPDTimeoutAction: Self = this.set("DPDTimeoutAction", js.undefined)
     
     @scala.inline
     def setDPDTimeoutSeconds(value: Integer): Self = this.set("DPDTimeoutSeconds", value.asInstanceOf[js.Any])
@@ -211,9 +232,21 @@ object VpnTunnelOptionsSpecification {
     def deleteReplayWindowSize: Self = this.set("ReplayWindowSize", js.undefined)
     
     @scala.inline
+    def setStartupAction(value: String): Self = this.set("StartupAction", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStartupAction: Self = this.set("StartupAction", js.undefined)
+    
+    @scala.inline
     def setTunnelInsideCidr(value: String): Self = this.set("TunnelInsideCidr", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTunnelInsideCidr: Self = this.set("TunnelInsideCidr", js.undefined)
+    
+    @scala.inline
+    def setTunnelInsideIpv6Cidr(value: String): Self = this.set("TunnelInsideIpv6Cidr", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTunnelInsideIpv6Cidr: Self = this.set("TunnelInsideIpv6Cidr", js.undefined)
   }
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for datastore-level
 
-Typings are for version 0.14
+Typings are for version 1.1
 
 ## Library description:
 Datastore implementation with level(up|down) backend

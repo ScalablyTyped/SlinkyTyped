@@ -18,8 +18,13 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.buttonButtonMod.ButtonProps
+import typingsSlinky.primereact.primereactStrings.`additions removals`
 import typingsSlinky.primereact.primereactStrings.`additions text`
 import typingsSlinky.primereact.primereactStrings.`inline`
+import typingsSlinky.primereact.primereactStrings.`removals additions`
+import typingsSlinky.primereact.primereactStrings.`removals text`
+import typingsSlinky.primereact.primereactStrings.`text additions`
+import typingsSlinky.primereact.primereactStrings.`text removals`
 import typingsSlinky.primereact.primereactStrings.additions
 import typingsSlinky.primereact.primereactStrings.all
 import typingsSlinky.primereact.primereactStrings.ascending
@@ -213,7 +218,9 @@ object Button {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -274,6 +281,12 @@ object Button {
     
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def badge(value: String): this.type = set("badge", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def badgeClassName(value: String): this.type = set("badgeClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def capture(value: Boolean | String): this.type = set("capture", value.asInstanceOf[js.Any])

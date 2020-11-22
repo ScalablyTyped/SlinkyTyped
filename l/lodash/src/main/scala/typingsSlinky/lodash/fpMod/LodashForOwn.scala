@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashForOwn extends LodashConvertible {
+trait LodashForOwn extends js.Object {
   
   def apply[T](iteratee: js.Function1[/* value */ T, _]): LodashForOwn1x1[T] = js.native
   def apply[T](

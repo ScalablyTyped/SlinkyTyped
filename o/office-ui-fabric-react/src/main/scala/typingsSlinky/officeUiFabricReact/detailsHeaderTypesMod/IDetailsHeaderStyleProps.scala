@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod
 
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.detailsRowTypesMod.ICellStyleProps
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

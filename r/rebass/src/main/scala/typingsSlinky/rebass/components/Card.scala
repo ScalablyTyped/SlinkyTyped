@@ -35,7 +35,7 @@ object Card {
     @scala.inline
     def alignSelf(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
           RequiredTheme
         ]
     ): this.type = set("alignSelf", value.asInstanceOf[js.Any])
@@ -88,7 +88,7 @@ object Card {
     @scala.inline
     def display(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
           RequiredTheme
         ]
     ): this.type = set("display", value.asInstanceOf[js.Any])
@@ -98,13 +98,13 @@ object Card {
     
     @scala.inline
     def flexVarargs(
-      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ js.Any) | Null)*
+      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ js.Any) | Null)*
     ): this.type = set("flex", js.Array(value :_*))
     
     @scala.inline
     def flex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ js.Any, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ js.Any, 
           RequiredTheme
         ]
     ): this.type = set("flex", value.asInstanceOf[js.Any])
@@ -123,13 +123,13 @@ object Card {
     
     @scala.inline
     def heightVarargs(
-      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any) | Null)*
+      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ js.Any) | Null)*
     ): this.type = set("height", js.Array(value :_*))
     
     @scala.inline
     def height(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ js.Any, 
           RequiredTheme
         ]
     ): this.type = set("height", value.asInstanceOf[js.Any])
@@ -211,13 +211,13 @@ object Card {
     
     @scala.inline
     def maxHeightVarargs(
-      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ js.Any) | Null)*
+      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ js.Any) | Null)*
     ): this.type = set("maxHeight", js.Array(value :_*))
     
     @scala.inline
     def maxHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ js.Any, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ js.Any, 
           RequiredTheme
         ]
     ): this.type = set("maxHeight", value.asInstanceOf[js.Any])
@@ -227,13 +227,13 @@ object Card {
     
     @scala.inline
     def maxWidthVarargs(
-      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ js.Any) | Null)*
+      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ js.Any) | Null)*
     ): this.type = set("maxWidth", js.Array(value :_*))
     
     @scala.inline
     def maxWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ js.Any, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ js.Any, 
           RequiredTheme
         ]
     ): this.type = set("maxWidth", value.asInstanceOf[js.Any])
@@ -252,13 +252,13 @@ object Card {
     
     @scala.inline
     def minHeightVarargs(
-      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ js.Any) | Null)*
+      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ js.Any) | Null)*
     ): this.type = set("minHeight", js.Array(value :_*))
     
     @scala.inline
     def minHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ js.Any, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ js.Any, 
           RequiredTheme
         ]
     ): this.type = set("minHeight", value.asInstanceOf[js.Any])
@@ -268,13 +268,13 @@ object Card {
     
     @scala.inline
     def minWidthVarargs(
-      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ js.Any) | Null)*
+      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ js.Any) | Null)*
     ): this.type = set("minWidth", js.Array(value :_*))
     
     @scala.inline
     def minWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ js.Any, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ js.Any, 
           RequiredTheme
         ]
     ): this.type = set("minWidth", value.asInstanceOf[js.Any])
@@ -333,7 +333,7 @@ object Card {
     @scala.inline
     def opacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): this.type = set("opacity", value.asInstanceOf[js.Any])
@@ -347,7 +347,7 @@ object Card {
     @scala.inline
     def order(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
           RequiredTheme
         ]
     ): this.type = set("order", value.asInstanceOf[js.Any])
@@ -361,7 +361,7 @@ object Card {
     @scala.inline
     def overflow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflow", value.asInstanceOf[js.Any])
@@ -375,7 +375,7 @@ object Card {
     @scala.inline
     def overflowX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflowX", value.asInstanceOf[js.Any])
@@ -389,7 +389,7 @@ object Card {
     @scala.inline
     def overflowY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflowY", value.asInstanceOf[js.Any])
@@ -525,13 +525,13 @@ object Card {
     
     @scala.inline
     def sizeVarargs(
-      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any) | Null)*
+      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ js.Any) | Null)*
     ): this.type = set("size", js.Array(value :_*))
     
     @scala.inline
     def size(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ js.Any, 
           RequiredTheme
         ]
     ): this.type = set("size", value.asInstanceOf[js.Any])
@@ -559,13 +559,13 @@ object Card {
     
     @scala.inline
     def verticalAlignVarargs(
-      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ js.Any) | Null)*
+      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ js.Any) | Null)*
     ): this.type = set("verticalAlign", js.Array(value :_*))
     
     @scala.inline
     def verticalAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ js.Any, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ js.Any, 
           RequiredTheme
         ]
     ): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
@@ -575,13 +575,13 @@ object Card {
     
     @scala.inline
     def widthVarargs(
-      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ js.Any) | Null)*
+      value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ js.Any) | Null)*
     ): this.type = set("width", js.Array(value :_*))
     
     @scala.inline
     def width(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ js.Any, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ js.Any, 
           RequiredTheme
         ]
     ): this.type = set("width", value.asInstanceOf[js.Any])

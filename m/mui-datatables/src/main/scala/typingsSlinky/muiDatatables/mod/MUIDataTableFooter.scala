@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MUIDataTableFooter extends js.Object {
   
-  var changePage: js.UndefOr[js.Any] = js.native
+  var changePage: js.UndefOr[js.Function1[/* e */ js.Any, _]] = js.native
   
-  var changeRowsPerPage: js.UndefOr[js.Function1[/* args */ js.Any, _]] = js.native
+  var changeRowsPerPage: js.UndefOr[js.Function1[/* e */ js.Any, _]] = js.native
   
-  var options: js.UndefOr[js.Object] = js.native
+  var options: js.UndefOr[MUIDataTableOptions] = js.native
   
   var page: js.UndefOr[Double] = js.native
   
@@ -43,19 +43,19 @@ object MUIDataTableFooter {
     }
     
     @scala.inline
-    def setChangePage(value: js.Any): Self = this.set("changePage", value.asInstanceOf[js.Any])
+    def setChangePage(value: /* e */ js.Any => _): Self = this.set("changePage", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteChangePage: Self = this.set("changePage", js.undefined)
     
     @scala.inline
-    def setChangeRowsPerPage(value: /* args */ js.Any => _): Self = this.set("changeRowsPerPage", js.Any.fromFunction1(value))
+    def setChangeRowsPerPage(value: /* e */ js.Any => _): Self = this.set("changeRowsPerPage", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteChangeRowsPerPage: Self = this.set("changeRowsPerPage", js.undefined)
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: MUIDataTableOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

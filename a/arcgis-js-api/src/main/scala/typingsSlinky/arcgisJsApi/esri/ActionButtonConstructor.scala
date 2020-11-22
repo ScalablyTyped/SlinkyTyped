@@ -9,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ActionButtonConstructor
   extends Instantiable0[ActionButton]
-     with Instantiable1[/* properties */ js.Any, ActionButton]
+     with Instantiable1[/* properties */ ActionButtonProperties, ActionButton]

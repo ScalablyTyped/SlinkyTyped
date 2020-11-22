@@ -21,6 +21,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object activationOptions
   extends TopLevel[
       js.Array[
-        linear | relu_ | elu_ | relu6 | sigmoid | softplus | tanh | softmax_ | selu | hard_sigmoid | softsign
+        linear | relu_ | elu_ | relu6 | selu | sigmoid | softmax_ | softplus | tanh | hard_sigmoid | softsign
       ]
     ]

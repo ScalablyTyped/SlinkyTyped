@@ -23,7 +23,7 @@ trait DescribeAccessPolicyResponse extends js.Object {
   var accessPolicyId: ID = js.native
   
   /**
-    * The AWS SSO identity (user or group) to which this access policy applies.
+    * The identity (AWS SSO user, AWS SSO group, or IAM user) to which this access policy applies.
     */
   var accessPolicyIdentity: Identity = js.native
   

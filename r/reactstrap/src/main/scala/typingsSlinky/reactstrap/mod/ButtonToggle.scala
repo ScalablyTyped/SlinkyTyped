@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "ButtonToggle")
+@JSImport("reactstrap/es", "ButtonToggle")
 @js.native
-class ButtonToggle[T] ()
+class ButtonToggle ()
   extends Component[ButtonToggleProps, js.Object, js.Any]

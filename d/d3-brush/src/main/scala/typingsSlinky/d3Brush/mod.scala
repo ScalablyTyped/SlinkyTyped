@@ -2,7 +2,11 @@ package typingsSlinky.d3Brush
 
 import org.scalajs.dom.raw.SVGGElement
 import typingsSlinky.d3Brush.d3BrushStrings.brush
+import typingsSlinky.d3Brush.d3BrushStrings.center
+import typingsSlinky.d3Brush.d3BrushStrings.drag
 import typingsSlinky.d3Brush.d3BrushStrings.end
+import typingsSlinky.d3Brush.d3BrushStrings.handle
+import typingsSlinky.d3Brush.d3BrushStrings.space
 import typingsSlinky.d3Brush.d3BrushStrings.start
 import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.d3Selection.mod.TransitionLike
@@ -38,6 +42,13 @@ object mod extends js.Object {
     def apply(group: Selection_[SVGGElement, Datum, _, _], args: js.Any*): Unit = js.native
     
     /**
+      * Clear the active selection of the brush on the specified SVG G element(s) selection.
+      *
+      * @param group A D3 selection of SVG G elements.
+      */
+    def clear(group: Selection_[SVGGElement, Datum, _, _]): Unit = js.native
+    
+    /**
       * Returns the current extent accessor.
       */
     def extent(): ValueFn[SVGGElement, Datum, js.Tuple2[js.Tuple2[Double, Double], js.Tuple2[Double, Double]]] = js.native
@@ -70,7 +81,7 @@ object mod extends js.Object {
     /**
       * Returns the current filter function.
       */
-    def filter(): ValueFn[SVGGElement, Datum, Boolean] = js.native
+    def filter(): js.ThisFunction2[/* this */ SVGGElement, /* event */ js.Any, /* d */ Datum, Boolean] = js.native
     /**
       * Sets the filter to the specified filter function and returns the brush.
       *
@@ -79,10 +90,10 @@ object mod extends js.Object {
       * since those buttons are typically intended for other purposes, such as the context menu.
       *
       * @param filterFn A filter function which is evaluated for each selected element,
-      * in order, being passed the current datum (d), the current index (i), and the current group (nodes),
-      * with this as the current DOM element. The function returns a boolean value.
+      * in order, being passed the current event `event` and datum `d`, with the `this` context as the current DOM element.
+      * The function returns a boolean value.
       */
-    def filter(filterFn: ValueFn[SVGGElement, Datum, Boolean]): this.type = js.native
+    def filter(filterFn: js.ThisFunction2[/* this */ SVGGElement, /* event */ js.Any, /* d */ Datum, Boolean]): this.type = js.native
     
     /**
       * Returns the current handle size, which defaults to six.
@@ -109,7 +120,7 @@ object mod extends js.Object {
       * The key modifiers flag determines whether the brush listens to key events during brushing.
       * The default value is true.
       *
-      * @param keyModifiers New value for key modifiers flag.
+      * @param modifiers New value for key modifiers flag.
       */
     def keyModifiers(modifiers: Boolean): this.type = js.native
     
@@ -181,18 +192,9 @@ object mod extends js.Object {
       * start (at the start of a brush gesture, such as on mousedown), brush (when the brush moves, such as on mousemove), or
       * end (at the end of a brush gesture, such as on mouseup.)
       */
-    def on(typenames: String): js.UndefOr[ValueFn[SVGGElement, Datum, Unit]] = js.native
-    /**
-      * Removes the current event listeners for the specified typenames, if any.
-      *
-      * @param typenames The typenames is a string containing one or more typename separated by whitespace.
-      * Each typename is a type, optionally followed by a period (.) and a name, such as "brush.foo"" and "brush.bar";
-      * the name allows multiple listeners to be registered for the same type. The type must be one of the following:
-      * start (at the start of a brush gesture, such as on mousedown), brush (when the brush moves, such as on mousemove), or
-      * end (at the end of a brush gesture, such as on mouseup.)
-      * @param listener Use null to remove the listener.
-      */
-    def on(typenames: String, listener: Null): this.type = js.native
+    def on(typenames: String): js.UndefOr[
+        js.ThisFunction2[/* this */ SVGGElement, /* event */ js.Any, /* d */ Datum, Unit]
+      ] = js.native
     /**
       * Sets the event listener for the specified typenames and returns the brush.
       * If an event listener was already registered for the same type and name,
@@ -205,14 +207,60 @@ object mod extends js.Object {
       * start (at the start of a brush gesture, such as on mousedown), brush (when the brush moves, such as on mousemove), or
       * end (at the end of a brush gesture, such as on mouseup.)
       * @param listener An event listener function which is evaluated for each selected element,
-      * in order, being passed the current datum (d), the current index (i), and the current group (nodes),
-      * with this as the current DOM element.
+      * in order, being passed the current event `event` and datum `d`, with the `this` context as the current DOM element.
       */
-    def on(typenames: String, listener: ValueFn[SVGGElement, Datum, Unit]): this.type = js.native
+    def on(
+      typenames: String,
+      listener: js.ThisFunction2[/* this */ SVGGElement, /* event */ js.Any, /* d */ Datum, Unit]
+    ): this.type = js.native
+    /**
+      * Removes the current event listeners for the specified typenames, if any.
+      *
+      * @param typenames The typenames is a string containing one or more typename separated by whitespace.
+      * Each typename is a type, optionally followed by a period (.) and a name, such as "brush.foo"" and "brush.bar";
+      * the name allows multiple listeners to be registered for the same type. The type must be one of the following:
+      * start (at the start of a brush gesture, such as on mousedown), brush (when the brush moves, such as on mousemove), or
+      * end (at the end of a brush gesture, such as on mouseup.)
+      * @param listener Use null to remove the listener.
+      */
+    def on(typenames: String, listener: Null): this.type = js.native
+    
+    /**
+      * Returns the current touch support detector, which defaults to a function returning true,
+      * if the "ontouchstart" event is supported on the current element.
+      */
+    def touchable(): ValueFn[SVGGElement, Datum, Boolean] = js.native
+    /**
+      * Sets the touch support detector to the specified boolean value and returns the brush.
+      *
+      * Touch event listeners are only registered if the detector returns truthy for the corresponding element when the brush is applied.
+      * The default detector works well for most browsers that are capable of touch input, but not all; Chrome’s mobile device emulator, for example,
+      * fails detection.
+      *
+      * @param touchable A boolean value. true when touch event listeners should be applied to the corresponding element, otherwise false.
+      */
+    def touchable(touchable: Boolean): this.type = js.native
+    /**
+      * Sets the touch support detector to the specified function and returns the drag behavior.
+      *
+      * Touch event listeners are only registered if the detector returns truthy for the corresponding element when the brush is applied.
+      * The default detector works well for most browsers that are capable of touch input, but not all; Chrome’s mobile device emulator, for example,
+      * fails detection.
+      *
+      * @param touchable A touch support detector function, which returns true when touch event listeners should be applied to the corresponding element.
+      * The function is evaluated for each selected element to which the brush was applied, in order, being passed the current datum (d),
+      * the current index (i), and the current group (nodes), with this as the current DOM element. The function returns a boolean value.
+      */
+    def touchable(touchable: ValueFn[SVGGElement, Datum, Boolean]): this.type = js.native
   }
   
   @js.native
   trait D3BrushEvent[Datum] extends js.Object {
+    
+    /**
+      * The mode of the brush.
+      */
+    var mode: drag | space | handle | center = js.native
     
      // Leave failsafe string type for cases like 'brush.foo'
     /**

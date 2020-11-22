@@ -1,6 +1,6 @@
 package typingsSlinky.angularCore.moduleWithProvidersTransformMod
 
-import typingsSlinky.angularCore.collectorMod.ResolvedNgModule
+import typingsSlinky.angularCore.moduleWithProvidersCollectorMod.ResolvedNgModule
 import typingsSlinky.typescript.mod.SourceFile
 import typingsSlinky.typescript.mod.TypeChecker
 import typingsSlinky.typescript.mod.TypeReferenceNode

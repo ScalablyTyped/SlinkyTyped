@@ -1,9 +1,9 @@
 package typingsSlinky.fundamentalReact.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.fundamentalReact.anon.FunctionComponentTileActi
-import typingsSlinky.fundamentalReact.anon.FunctionComponentTileCont
-import typingsSlinky.fundamentalReact.anon.FunctionComponentTileMedi
+import typingsSlinky.fundamentalReact.anon.FCTileContentPropsdisplay
+import typingsSlinky.fundamentalReact.anon.FCTileFooterPropsdisplayN
+import typingsSlinky.fundamentalReact.anon.FCTileHeaderPropsdisplayN
 import typingsSlinky.fundamentalReact.anon.PartialTileProps
 import typingsSlinky.fundamentalReact.anon.WeakValidationMapTileProp
 import typingsSlinky.fundamentalReact.tileMod.TileProps
@@ -20,11 +20,11 @@ object Tile extends js.Object {
   def apply(props: PropsWithChildren[TileProps]): ReactElement | Null = js.native
   def apply(props: PropsWithChildren[TileProps], context: js.Any): ReactElement | Null = js.native
   
-  var Actions: FunctionComponentTileActi = js.native
+  var Content: FCTileContentPropsdisplay = js.native
   
-  var Content: FunctionComponentTileCont = js.native
+  var Footer: FCTileFooterPropsdisplayN = js.native
   
-  var Media: FunctionComponentTileMedi = js.native
+  var Header: FCTileHeaderPropsdisplayN = js.native
   
   var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
   

@@ -38,7 +38,7 @@ trait BackupRule extends js.Object {
   var RuleName: BackupRuleName = js.native
   
   /**
-    * A CRON expression specifying when AWS Backup initiates a backup job.
+    * A CRON expression specifying when AWS Backup initiates a backup job. For more information about cron expressions, see Schedule Expressions for Rules in the Amazon CloudWatch Events User Guide.. Prior to specifying a value for this parameter, we recommend testing your cron expression using one of the many available cron generator and testing tools.
     */
   var ScheduleExpression: js.UndefOr[CronExpression] = js.native
   

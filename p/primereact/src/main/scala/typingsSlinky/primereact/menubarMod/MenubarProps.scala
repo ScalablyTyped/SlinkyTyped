@@ -10,9 +10,13 @@ trait MenubarProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
+  var end: js.UndefOr[js.Function1[/* props */ js.Object, _]] = js.native
+  
   var id: js.UndefOr[String] = js.native
   
   var model: js.UndefOr[js.Array[MenuItem]] = js.native
+  
+  var start: js.UndefOr[js.Function1[/* props */ js.Object, _]] = js.native
   
   var style: js.UndefOr[js.Object] = js.native
 }
@@ -46,6 +50,12 @@ object MenubarProps {
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
+    def setEnd(value: /* props */ js.Object => _): Self = this.set("end", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteEnd: Self = this.set("end", js.undefined)
+    
+    @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -59,6 +69,12 @@ object MenubarProps {
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)
+    
+    @scala.inline
+    def setStart(value: /* props */ js.Object => _): Self = this.set("start", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteStart: Self = this.set("start", js.undefined)
     
     @scala.inline
     def setStyle(value: js.Object): Self = this.set("style", value.asInstanceOf[js.Any])

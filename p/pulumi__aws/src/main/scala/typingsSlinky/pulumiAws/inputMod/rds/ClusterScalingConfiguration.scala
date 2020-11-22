@@ -19,7 +19,7 @@ trait ClusterScalingConfiguration extends js.Object {
   var maxCapacity: js.UndefOr[Input[Double]] = js.native
   
   /**
-    * The minimum capacity. The minimum capacity must be lesser than or equal to the maximum capacity. Valid capacity values are `1`, `2`, `4`, `8`, `16`, `32`, `64`, `128`, and `256`. Defaults to `2`.
+    * The minimum capacity. The minimum capacity must be lesser than or equal to the maximum capacity. Valid capacity values are `1`, `2`, `4`, `8`, `16`, `32`, `64`, `128`, and `256`. Defaults to `1`.
     */
   var minCapacity: js.UndefOr[Input[Double]] = js.native
   

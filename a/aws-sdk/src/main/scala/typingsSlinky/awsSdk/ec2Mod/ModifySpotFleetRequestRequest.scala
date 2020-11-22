@@ -13,6 +13,11 @@ trait ModifySpotFleetRequestRequest extends js.Object {
   var ExcessCapacityTerminationPolicy: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.ExcessCapacityTerminationPolicy] = js.native
   
   /**
+    * The launch template and overrides. You can only use this parameter if you specified a launch template (LaunchTemplateConfigs) in your Spot Fleet request. If you specified LaunchSpecifications in your Spot Fleet request, then omit this parameter.
+    */
+  var LaunchTemplateConfigs: js.UndefOr[LaunchTemplateConfigList] = js.native
+  
+  /**
     * The number of On-Demand Instances in the fleet.
     */
   var OnDemandTargetCapacity: js.UndefOr[Integer] = js.native
@@ -58,6 +63,15 @@ object ModifySpotFleetRequestRequest {
     
     @scala.inline
     def deleteExcessCapacityTerminationPolicy: Self = this.set("ExcessCapacityTerminationPolicy", js.undefined)
+    
+    @scala.inline
+    def setLaunchTemplateConfigsVarargs(value: LaunchTemplateConfig*): Self = this.set("LaunchTemplateConfigs", js.Array(value :_*))
+    
+    @scala.inline
+    def setLaunchTemplateConfigs(value: LaunchTemplateConfigList): Self = this.set("LaunchTemplateConfigs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLaunchTemplateConfigs: Self = this.set("LaunchTemplateConfigs", js.undefined)
     
     @scala.inline
     def setOnDemandTargetCapacity(value: Integer): Self = this.set("OnDemandTargetCapacity", value.asInstanceOf[js.Any])

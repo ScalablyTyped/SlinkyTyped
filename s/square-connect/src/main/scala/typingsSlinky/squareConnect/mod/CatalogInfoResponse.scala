@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class CatalogInfoResponse () extends js.Object {
   
   /**
-    * The set of errors encountered.
+    * Any errors that occurred during the request.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   
   /**
-    * Response limit
+    * Limits that apply to this API.
     */
   var limits: js.UndefOr[CatalogInfoResponseLimits] = js.native
   

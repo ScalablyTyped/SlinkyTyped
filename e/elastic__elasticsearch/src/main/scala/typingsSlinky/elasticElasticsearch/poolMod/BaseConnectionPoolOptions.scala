@@ -3,6 +3,7 @@ package typingsSlinky.elasticElasticsearch.poolMod
 import typingsSlinky.elasticElasticsearch.anon.TypeofConnection
 import typingsSlinky.elasticElasticsearch.connectionMod.AgentOptions
 import typingsSlinky.node.tlsMod.SecureContextOptions
+import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,6 +19,8 @@ trait BaseConnectionPoolOptions extends js.Object {
   
   def emit(event: String, args: js.Any*): Boolean = js.native
   def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  
+  var proxy: js.UndefOr[String | URL_] = js.native
   
   var ssl: js.UndefOr[SecureContextOptions] = js.native
 }

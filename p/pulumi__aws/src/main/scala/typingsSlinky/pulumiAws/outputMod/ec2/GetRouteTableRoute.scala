@@ -33,6 +33,11 @@ trait GetRouteTableRoute extends js.Object {
   var ipv6CidrBlock: String = js.native
   
   /**
+    * The Local Gateway ID.
+    */
+  var localGatewayId: String = js.native
+  
+  /**
     * The NAT Gateway ID.
     */
   var natGatewayId: String = js.native
@@ -48,6 +53,11 @@ trait GetRouteTableRoute extends js.Object {
   var transitGatewayId: String = js.native
   
   /**
+    * The VPC Endpoint ID.
+    */
+  var vpcEndpointId: String = js.native
+  
+  /**
     * The VPC Peering ID.
     */
   var vpcPeeringConnectionId: String = js.native
@@ -61,12 +71,14 @@ object GetRouteTableRoute {
     gatewayId: String,
     instanceId: String,
     ipv6CidrBlock: String,
+    localGatewayId: String,
     natGatewayId: String,
     networkInterfaceId: String,
     transitGatewayId: String,
+    vpcEndpointId: String,
     vpcPeeringConnectionId: String
   ): GetRouteTableRoute = {
-    val __obj = js.Dynamic.literal(cidrBlock = cidrBlock.asInstanceOf[js.Any], egressOnlyGatewayId = egressOnlyGatewayId.asInstanceOf[js.Any], gatewayId = gatewayId.asInstanceOf[js.Any], instanceId = instanceId.asInstanceOf[js.Any], ipv6CidrBlock = ipv6CidrBlock.asInstanceOf[js.Any], natGatewayId = natGatewayId.asInstanceOf[js.Any], networkInterfaceId = networkInterfaceId.asInstanceOf[js.Any], transitGatewayId = transitGatewayId.asInstanceOf[js.Any], vpcPeeringConnectionId = vpcPeeringConnectionId.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(cidrBlock = cidrBlock.asInstanceOf[js.Any], egressOnlyGatewayId = egressOnlyGatewayId.asInstanceOf[js.Any], gatewayId = gatewayId.asInstanceOf[js.Any], instanceId = instanceId.asInstanceOf[js.Any], ipv6CidrBlock = ipv6CidrBlock.asInstanceOf[js.Any], localGatewayId = localGatewayId.asInstanceOf[js.Any], natGatewayId = natGatewayId.asInstanceOf[js.Any], networkInterfaceId = networkInterfaceId.asInstanceOf[js.Any], transitGatewayId = transitGatewayId.asInstanceOf[js.Any], vpcEndpointId = vpcEndpointId.asInstanceOf[js.Any], vpcPeeringConnectionId = vpcPeeringConnectionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRouteTableRoute]
   }
   
@@ -101,6 +113,9 @@ object GetRouteTableRoute {
     def setIpv6CidrBlock(value: String): Self = this.set("ipv6CidrBlock", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setLocalGatewayId(value: String): Self = this.set("localGatewayId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setNatGatewayId(value: String): Self = this.set("natGatewayId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -108,6 +123,9 @@ object GetRouteTableRoute {
     
     @scala.inline
     def setTransitGatewayId(value: String): Self = this.set("transitGatewayId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setVpcEndpointId(value: String): Self = this.set("vpcEndpointId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVpcPeeringConnectionId(value: String): Self = this.set("vpcPeeringConnectionId", value.asInstanceOf[js.Any])

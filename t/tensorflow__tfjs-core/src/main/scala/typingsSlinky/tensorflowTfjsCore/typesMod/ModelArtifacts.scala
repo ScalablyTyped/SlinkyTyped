@@ -33,6 +33,11 @@ trait ModelArtifacts extends js.Object {
   var generatedBy: js.UndefOr[String] = js.native
   
   /**
+    * Initializer for the model.
+    */
+  var modelInitializer: js.UndefOr[js.Object] = js.native
+  
+  /**
     * Model topology.
     *
     * For Keras-style `tf.Model`s, this is a JSON object.
@@ -107,6 +112,12 @@ object ModelArtifacts {
     
     @scala.inline
     def deleteGeneratedBy: Self = this.set("generatedBy", js.undefined)
+    
+    @scala.inline
+    def setModelInitializer(value: js.Object): Self = this.set("modelInitializer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModelInitializer: Self = this.set("modelInitializer", js.undefined)
     
     @scala.inline
     def setModelTopologyArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("modelTopology", value.asInstanceOf[js.Any])

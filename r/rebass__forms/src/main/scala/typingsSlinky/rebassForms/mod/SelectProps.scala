@@ -41,8 +41,13 @@ import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.rebass.mod.SxStyleProp
+import typingsSlinky.rebassForms.rebassFormsStrings.`additions removals`
 import typingsSlinky.rebassForms.rebassFormsStrings.`additions text`
 import typingsSlinky.rebassForms.rebassFormsStrings.`inline`
+import typingsSlinky.rebassForms.rebassFormsStrings.`removals additions`
+import typingsSlinky.rebassForms.rebassFormsStrings.`removals text`
+import typingsSlinky.rebassForms.rebassFormsStrings.`text additions`
+import typingsSlinky.rebassForms.rebassFormsStrings.`text removals`
 import typingsSlinky.rebassForms.rebassFormsStrings.additions
 import typingsSlinky.rebassForms.rebassFormsStrings.all
 import typingsSlinky.rebassForms.rebassFormsStrings.ascending
@@ -57,6 +62,7 @@ import typingsSlinky.rebassForms.rebassFormsStrings.dialog
 import typingsSlinky.rebassForms.rebassFormsStrings.email
 import typingsSlinky.rebassForms.rebassFormsStrings.execute
 import typingsSlinky.rebassForms.rebassFormsStrings.fontSizes
+import typingsSlinky.rebassForms.rebassFormsStrings.fontWeights
 import typingsSlinky.rebassForms.rebassFormsStrings.grammar
 import typingsSlinky.rebassForms.rebassFormsStrings.grid
 import typingsSlinky.rebassForms.rebassFormsStrings.horizontal
@@ -117,7 +123,7 @@ trait SelectProps extends js.Object {
     */
   var alignSelf: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -192,7 +198,9 @@ trait SelectProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -285,7 +293,7 @@ trait SelectProps extends js.Object {
     */
   var display: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -300,7 +308,7 @@ trait SelectProps extends js.Object {
     */
   var flex: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -316,6 +324,15 @@ trait SelectProps extends js.Object {
     */
   var fontSize: js.UndefOr[ResponsiveValue[ThemeValue[fontSizes, RequiredTheme, _], RequiredTheme]] = js.native
   
+  /**
+    * The font-weight CSS property specifies the weight (or boldness) of the font.
+    *
+    * The font weights available to you will depend on the font-family you are using. Some fonts are only available in normal and bold.
+    *
+    * [MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+    */
+  var fontWeight: js.UndefOr[ResponsiveValue[ThemeValue[fontWeights, RequiredTheme, _], RequiredTheme]] = js.native
+  
   var form: js.UndefOr[String] = js.native
   
   /**
@@ -326,7 +343,7 @@ trait SelectProps extends js.Object {
     */
   var height: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -351,7 +368,7 @@ trait SelectProps extends js.Object {
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var lang: js.UndefOr[String] = js.native
   
@@ -387,7 +404,7 @@ trait SelectProps extends js.Object {
     */
   var maxHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -400,7 +417,7 @@ trait SelectProps extends js.Object {
     */
   var maxWidth: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -416,7 +433,7 @@ trait SelectProps extends js.Object {
     */
   var minHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -429,7 +446,7 @@ trait SelectProps extends js.Object {
     */
   var minWidth: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -619,7 +636,7 @@ trait SelectProps extends js.Object {
     */
   var opacity: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -632,7 +649,7 @@ trait SelectProps extends js.Object {
     */
   var order: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -645,7 +662,7 @@ trait SelectProps extends js.Object {
     */
   var overflow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -658,7 +675,7 @@ trait SelectProps extends js.Object {
     */
   var overflowX: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -671,7 +688,7 @@ trait SelectProps extends js.Object {
     */
   var overflowY: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -740,7 +757,7 @@ trait SelectProps extends js.Object {
   
   var size: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -783,7 +800,7 @@ trait SelectProps extends js.Object {
     */
   var verticalAlign: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -800,7 +817,7 @@ trait SelectProps extends js.Object {
     */
   var width: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -846,7 +863,7 @@ object SelectProps {
     @scala.inline
     def setAlignSelf(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
           RequiredTheme
         ]
     ): Self = this.set("alignSelf", value.asInstanceOf[js.Any])
@@ -1068,7 +1085,9 @@ object SelectProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1301,7 +1320,7 @@ object SelectProps {
     @scala.inline
     def setDisplay(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
           RequiredTheme
         ]
     ): Self = this.set("display", value.asInstanceOf[js.Any])
@@ -1324,7 +1343,7 @@ object SelectProps {
     @scala.inline
     def setFlex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("flex", value.asInstanceOf[js.Any])
@@ -1348,6 +1367,18 @@ object SelectProps {
     def setFontSizeNull: Self = this.set("fontSize", null)
     
     @scala.inline
+    def setFontWeightVarargs(value: ((ThemeValue[fontWeights, RequiredTheme, js.Any]) | Null)*): Self = this.set("fontWeight", js.Array(value :_*))
+    
+    @scala.inline
+    def setFontWeight(value: ResponsiveValue[ThemeValue[fontWeights, RequiredTheme, _], RequiredTheme]): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontWeight: Self = this.set("fontWeight", js.undefined)
+    
+    @scala.inline
+    def setFontWeightNull: Self = this.set("fontWeight", null)
+    
+    @scala.inline
     def setForm(value: String): Self = this.set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1359,7 +1390,7 @@ object SelectProps {
     @scala.inline
     def setHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("height", value.asInstanceOf[js.Any])
@@ -1435,6 +1466,9 @@ object SelectProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setLang(value: String): Self = this.set("lang", value.asInstanceOf[js.Any])
@@ -1544,7 +1578,7 @@ object SelectProps {
     @scala.inline
     def setMaxHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("maxHeight", value.asInstanceOf[js.Any])
@@ -1561,7 +1595,7 @@ object SelectProps {
     @scala.inline
     def setMaxWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
@@ -1590,7 +1624,7 @@ object SelectProps {
     @scala.inline
     def setMinHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("minHeight", value.asInstanceOf[js.Any])
@@ -1607,7 +1641,7 @@ object SelectProps {
     @scala.inline
     def setMinWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("minWidth", value.asInstanceOf[js.Any])
@@ -2170,7 +2204,7 @@ object SelectProps {
     @scala.inline
     def setOpacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): Self = this.set("opacity", value.asInstanceOf[js.Any])
@@ -2187,7 +2221,7 @@ object SelectProps {
     @scala.inline
     def setOrder(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
           RequiredTheme
         ]
     ): Self = this.set("order", value.asInstanceOf[js.Any])
@@ -2204,7 +2238,7 @@ object SelectProps {
     @scala.inline
     def setOverflow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflow", value.asInstanceOf[js.Any])
@@ -2221,7 +2255,7 @@ object SelectProps {
     @scala.inline
     def setOverflowX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflowX", value.asInstanceOf[js.Any])
@@ -2238,7 +2272,7 @@ object SelectProps {
     @scala.inline
     def setOverflowY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflowY", value.asInstanceOf[js.Any])
@@ -2492,7 +2526,7 @@ object SelectProps {
     @scala.inline
     def setSize(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("size", value.asInstanceOf[js.Any])
@@ -2605,7 +2639,7 @@ object SelectProps {
     @scala.inline
     def setVerticalAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
@@ -2628,7 +2662,7 @@ object SelectProps {
     @scala.inline
     def setWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("width", value.asInstanceOf[js.Any])

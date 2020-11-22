@@ -10,35 +10,35 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WebMapUpdateFromOptions extends Object {
   
   /**
-    * When `true`, the view's background will not be updated for the webmap. The default is `false` meaning the background will be updated for the webmap if there is a background.
+    * When `true`, the view's background will not be updated for the webmap.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#updateFrom)
     */
   var backgroundExcluded: js.UndefOr[Boolean] = js.native
   
   /**
-    * When `true`, the view's scale will be updated for the webmap. Defaults to `false` meaning view's scale will not be updated for the webmap. It is ignored when `viewpointExcluded` is `true`.
+    * When `true`, the view's scale will be updated for the webmap.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#updateFrom)
     */
   var scalePreserved: js.UndefOr[Boolean] = js.native
   
   /**
-    * When `true`, the thumbnail will not be updated for the webmap. Defaults to `false` meaning the thumbnail will be updated for the webmap.
+    * When `true`, the thumbnail will not be updated for the webmap.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#updateFrom)
     */
   var thumbnailExcluded: js.UndefOr[Boolean] = js.native
   
   /**
-    * The size of the thumbnail. Defaults to 600x400 (ratio 1.5:1). Note that the thumbnail size may currently not be larger than the size of the view.
+    * The size of the thumbnail.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#updateFrom)
     */
   var thumbnailSize: js.UndefOr[WebMapUpdateFromOptionsThumbnailSize] = js.native
   
   /**
-    * When `true`, the initial [viewpoint](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-InitialViewProperties.html#viewpoint) of the view will not be updated for the webmap. Defaults to `false`, meaning the viewpoint will be updated for the webmap. Must set `scalePreserved` to `true` if the view's scale should be updated for the webmap.
+    * When `true`, the initial [viewpoint](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-InitialViewProperties.html#viewpoint) of the view will not be updated for the webmap.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#updateFrom)
     */

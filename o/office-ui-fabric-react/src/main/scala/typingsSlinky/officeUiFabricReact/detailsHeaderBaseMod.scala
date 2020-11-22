@@ -72,8 +72,6 @@ object detailsHeaderBaseMod extends js.Object {
     
     var _onRootMouseMove: js.Any = js.native
     
-    var _onRootRef: js.Any = js.native
-    
     /**
       * Called when the select all toggle is clicked.
       */

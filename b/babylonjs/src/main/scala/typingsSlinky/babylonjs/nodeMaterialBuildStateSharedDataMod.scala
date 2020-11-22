@@ -3,9 +3,12 @@ package typingsSlinky.babylonjs
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.babylonjs.anon.EmitFragment
 import typingsSlinky.babylonjs.anon.NeedAlphaBlending
+import typingsSlinky.babylonjs.currentScreenBlockMod.CurrentScreenBlock
 import typingsSlinky.babylonjs.inputBlockMod.InputBlock
 import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
-import typingsSlinky.babylonjs.reflectionTextureBlockMod.ReflectionTextureBlock
+import typingsSlinky.babylonjs.particleTextureBlockMod.ParticleTextureBlock
+import typingsSlinky.babylonjs.reflectionTextureBaseBlockMod.ReflectionTextureBaseBlock
+import typingsSlinky.babylonjs.refractionBlockMod.RefractionBlock
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.textureBlockMod.TextureBlock
 import scala.scalajs.js
@@ -19,6 +22,11 @@ object nodeMaterialBuildStateSharedDataMod extends js.Object {
   @js.native
   /** Creates a new shared data */
   class NodeMaterialBuildStateSharedData () extends js.Object {
+    
+    /**
+      * Is vertex program allowed to be empty?
+      */
+    var allowEmptyVertexProgram: Boolean = js.native
     
     /**
       * Gets the list of animated inputs
@@ -97,7 +105,9 @@ object nodeMaterialBuildStateSharedDataMod extends js.Object {
     /**
       * Input blocks
       */
-    var textureBlocks: js.Array[ReflectionTextureBlock | TextureBlock] = js.native
+    var textureBlocks: js.Array[
+        TextureBlock | ReflectionTextureBaseBlock | RefractionBlock | CurrentScreenBlock | ParticleTextureBlock
+      ] = js.native
     
     /** List of emitted variables */
     var variableNames: StringDictionary[Double] = js.native

@@ -16,13 +16,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RequiredRule extends js.Object {
   
-  /** @name RequiredRule.message */
+  /**
+    * [descr:RequiredRule.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name RequiredRule.trim */
+  /**
+    * [descr:RequiredRule.trim]
+    */
   var trim: js.UndefOr[Boolean] = js.native
   
-  /** @name RequiredRule.type */
+  /**
+    * [descr:RequiredRule.type]
+    */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native

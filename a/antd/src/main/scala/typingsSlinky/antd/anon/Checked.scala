@@ -1,6 +1,5 @@
 package typingsSlinky.antd.anon
 
-import typingsSlinky.rcTree.interfaceMod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +7,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Checked extends js.Object {
   
-  var checked: js.Array[Key] = js.native
+  var checked: js.Array[typingsSlinky.rcTree.interfaceMod.Key] = js.native
   
-  var halfChecked: js.Array[Key] = js.native
+  var halfChecked: js.Array[typingsSlinky.rcTree.interfaceMod.Key] = js.native
 }
 object Checked {
   
   @scala.inline
-  def apply(checked: js.Array[Key], halfChecked: js.Array[Key]): Checked = {
+  def apply(
+    checked: js.Array[typingsSlinky.rcTree.interfaceMod.Key],
+    halfChecked: js.Array[typingsSlinky.rcTree.interfaceMod.Key]
+  ): Checked = {
     val __obj = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any], halfChecked = halfChecked.asInstanceOf[js.Any])
     __obj.asInstanceOf[Checked]
   }
@@ -36,15 +38,15 @@ object Checked {
     }
     
     @scala.inline
-    def setCheckedVarargs(value: Key*): Self = this.set("checked", js.Array(value :_*))
+    def setCheckedVarargs(value: typingsSlinky.rcTree.interfaceMod.Key*): Self = this.set("checked", js.Array(value :_*))
     
     @scala.inline
-    def setChecked(value: js.Array[Key]): Self = this.set("checked", value.asInstanceOf[js.Any])
+    def setChecked(value: js.Array[typingsSlinky.rcTree.interfaceMod.Key]): Self = this.set("checked", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHalfCheckedVarargs(value: Key*): Self = this.set("halfChecked", js.Array(value :_*))
+    def setHalfCheckedVarargs(value: typingsSlinky.rcTree.interfaceMod.Key*): Self = this.set("halfChecked", js.Array(value :_*))
     
     @scala.inline
-    def setHalfChecked(value: js.Array[Key]): Self = this.set("halfChecked", value.asInstanceOf[js.Any])
+    def setHalfChecked(value: js.Array[typingsSlinky.rcTree.interfaceMod.Key]): Self = this.set("halfChecked", value.asInstanceOf[js.Any])
   }
 }

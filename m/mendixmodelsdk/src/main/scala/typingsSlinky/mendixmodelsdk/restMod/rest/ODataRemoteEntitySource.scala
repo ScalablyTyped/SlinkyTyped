@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.restMod.rest
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.Entity
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.QueryBasedRemoteEntitySource
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,8 +32,8 @@ class ODataRemoteEntitySource protected () extends QueryBasedRemoteEntitySource 
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsEntity")
@@ -46,6 +48,8 @@ class ODataRemoteEntitySource protected () extends QueryBasedRemoteEntitySource 
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 8.11.0: introduced
     */
   def key: ODataKey | Null = js.native
@@ -53,19 +57,20 @@ class ODataRemoteEntitySource protected () extends QueryBasedRemoteEntitySource 
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 8.11.0: introduced
     */
   @JSName("key")
   val key_FODataRemoteEntitySource: IODataKey | Null = js.native
-  
-  @JSName("model")
-  var model_FODataRemoteEntitySource: IModel = js.native
   
   def remoteName: String = js.native
   def remoteName_=(newValue: String): Unit = js.native
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
   def sourceDocument: IConsumedODataService | Null = js.native
   

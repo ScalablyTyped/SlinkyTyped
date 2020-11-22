@@ -14,7 +14,7 @@ trait WorkbookTableRow extends Entity {
     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell
     * that contain an error will return the error string.
     */
-  var values: js.UndefOr[js.Any] = js.native
+  var values: js.UndefOr[NullableOption[_]] = js.native
 }
 object WorkbookTableRow {
   
@@ -46,9 +46,12 @@ object WorkbookTableRow {
     def deleteIndex: Self = this.set("index", js.undefined)
     
     @scala.inline
-    def setValues(value: js.Any): Self = this.set("values", value.asInstanceOf[js.Any])
+    def setValues(value: NullableOption[_]): Self = this.set("values", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValues: Self = this.set("values", js.undefined)
+    
+    @scala.inline
+    def setValuesNull: Self = this.set("values", null)
   }
 }

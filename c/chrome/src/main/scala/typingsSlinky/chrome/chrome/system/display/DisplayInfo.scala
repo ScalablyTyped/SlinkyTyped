@@ -27,7 +27,7 @@ trait DisplayInfo extends js.Object {
   var dpiY: Double = js.native
   
   /**
-    * @requires(CrOS Kiosk app) Only available in Chrome OS Kiosk apps
+    * requires(CrOS Kiosk app) Only available in Chrome OS Kiosk apps
     */
   var edid: js.UndefOr[ManufacturerId] = js.native
   
@@ -47,7 +47,7 @@ trait DisplayInfo extends js.Object {
   var isPrimary: Boolean = js.native
   
   /**
-    * @requires(CrOS) Only available on Chrome OS.
+    * requires(CrOS) Only available on Chrome OS.
     * Identifiers of the displays to which the source display is being mirrored.
     * Empty if no displays are being mirrored. This will be set to the same value
     * for all displays.
@@ -56,7 +56,7 @@ trait DisplayInfo extends js.Object {
   var mirroringDestinationIds: js.Array[String] = js.native
   
   /**
-    * @requires(CrOS) Only working properly on Chrome OS.
+    * requires(CrOS) Only working properly on Chrome OS.
     * Identifier of the display that is being mirrored on the display unit.
     * If mirroring is not in progress, set to an empty string
     * Currently exposed only on ChromeOS.
@@ -65,7 +65,7 @@ trait DisplayInfo extends js.Object {
   var mirroringSourceId: String = js.native
   
   /**
-    * @requires(CrOS) Only available on Chrome OS.
+    * requires(CrOS) Only available on Chrome OS.
     * The list of available display modes.
     * The current mode will have isSelected=true.
     * Only available on Chrome OS.

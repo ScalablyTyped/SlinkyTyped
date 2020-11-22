@@ -2,6 +2,8 @@ package typingsSlinky.pulumiAws.mod
 
 import typingsSlinky.pulumiAws.getRegexPatternSetMod.GetRegexPatternSetArgs
 import typingsSlinky.pulumiAws.getRegexPatternSetMod.GetRegexPatternSetResult
+import typingsSlinky.pulumiAws.getRuleGroupMod.GetRuleGroupArgs
+import typingsSlinky.pulumiAws.getRuleGroupMod.GetRuleGroupResult
 import typingsSlinky.pulumiAws.wafv2GetIpSetMod.GetIpSetArgs
 import typingsSlinky.pulumiAws.wafv2GetIpSetMod.GetIpSetResult
 import typingsSlinky.pulumiAws.wafv2GetWebAclMod.GetWebAclArgs
@@ -10,8 +12,14 @@ import typingsSlinky.pulumiAws.wafv2IpSetMod.IpSetArgs
 import typingsSlinky.pulumiAws.wafv2IpSetMod.IpSetState
 import typingsSlinky.pulumiAws.wafv2RegexPatternSetMod.RegexPatternSetArgs
 import typingsSlinky.pulumiAws.wafv2RegexPatternSetMod.RegexPatternSetState
+import typingsSlinky.pulumiAws.wafv2RuleGroupMod.RuleGroupArgs
+import typingsSlinky.pulumiAws.wafv2RuleGroupMod.RuleGroupState
 import typingsSlinky.pulumiAws.wafv2WebAclAssociationMod.WebAclAssociationArgs
 import typingsSlinky.pulumiAws.wafv2WebAclAssociationMod.WebAclAssociationState
+import typingsSlinky.pulumiAws.wafv2WebAclMod.WebAclArgs
+import typingsSlinky.pulumiAws.wafv2WebAclMod.WebAclState
+import typingsSlinky.pulumiAws.webAclLoggingConfigurationMod.WebAclLoggingConfigurationArgs
+import typingsSlinky.pulumiAws.webAclLoggingConfigurationMod.WebAclLoggingConfigurationState
 import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
@@ -29,6 +37,9 @@ object wafv2 extends js.Object {
   
   def getRegexPatternSet(args: GetRegexPatternSetArgs): js.Promise[GetRegexPatternSetResult] = js.native
   def getRegexPatternSet(args: GetRegexPatternSetArgs, opts: InvokeOptions): js.Promise[GetRegexPatternSetResult] = js.native
+  
+  def getRuleGroup(args: GetRuleGroupArgs): js.Promise[GetRuleGroupResult] = js.native
+  def getRuleGroup(args: GetRuleGroupArgs, opts: InvokeOptions): js.Promise[GetRuleGroupResult] = js.native
   
   def getWebAcl(args: GetWebAclArgs): js.Promise[GetWebAclResult] = js.native
   def getWebAcl(args: GetWebAclArgs, opts: InvokeOptions): js.Promise[GetWebAclResult] = js.native
@@ -110,6 +121,82 @@ object wafv2 extends js.Object {
   }
   
   @js.native
+  class RuleGroup protected ()
+    extends typingsSlinky.pulumiAws.wafv2Mod.RuleGroup {
+    /**
+      * Create a RuleGroup resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: RuleGroupArgs) = this()
+    def this(name: String, args: RuleGroupArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object RuleGroup extends js.Object {
+    
+    /**
+      * Get an existing RuleGroup resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.wafv2RuleGroupMod.RuleGroup = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.wafv2RuleGroupMod.RuleGroup = js.native
+    def get(name: String, id: Input[ID], state: RuleGroupState): typingsSlinky.pulumiAws.wafv2RuleGroupMod.RuleGroup = js.native
+    def get(name: String, id: Input[ID], state: RuleGroupState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.wafv2RuleGroupMod.RuleGroup = js.native
+    
+    /**
+      * Returns true if the given object is an instance of RuleGroup.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/wafv2/ruleGroup.RuleGroup */ Boolean = js.native
+  }
+  
+  @js.native
+  class WebAcl protected ()
+    extends typingsSlinky.pulumiAws.wafv2Mod.WebAcl {
+    /**
+      * Create a WebAcl resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: WebAclArgs) = this()
+    def this(name: String, args: WebAclArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object WebAcl extends js.Object {
+    
+    /**
+      * Get an existing WebAcl resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.wafv2WebAclMod.WebAcl = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.wafv2WebAclMod.WebAcl = js.native
+    def get(name: String, id: Input[ID], state: WebAclState): typingsSlinky.pulumiAws.wafv2WebAclMod.WebAcl = js.native
+    def get(name: String, id: Input[ID], state: WebAclState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.wafv2WebAclMod.WebAcl = js.native
+    
+    /**
+      * Returns true if the given object is an instance of WebAcl.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/wafv2/webAcl.WebAcl */ Boolean = js.native
+  }
+  
+  @js.native
   class WebAclAssociation protected ()
     extends typingsSlinky.pulumiAws.wafv2Mod.WebAclAssociation {
     /**
@@ -145,5 +232,43 @@ object wafv2 extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/wafv2/webAclAssociation.WebAclAssociation */ Boolean = js.native
+  }
+  
+  @js.native
+  class WebAclLoggingConfiguration protected ()
+    extends typingsSlinky.pulumiAws.wafv2Mod.WebAclLoggingConfiguration {
+    /**
+      * Create a WebAclLoggingConfiguration resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: WebAclLoggingConfigurationArgs) = this()
+    def this(name: String, args: WebAclLoggingConfigurationArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object WebAclLoggingConfiguration extends js.Object {
+    
+    /**
+      * Get an existing WebAclLoggingConfiguration resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.webAclLoggingConfigurationMod.WebAclLoggingConfiguration = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.webAclLoggingConfigurationMod.WebAclLoggingConfiguration = js.native
+    def get(name: String, id: Input[ID], state: WebAclLoggingConfigurationState): typingsSlinky.pulumiAws.webAclLoggingConfigurationMod.WebAclLoggingConfiguration = js.native
+    def get(name: String, id: Input[ID], state: WebAclLoggingConfigurationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.webAclLoggingConfigurationMod.WebAclLoggingConfiguration = js.native
+    
+    /**
+      * Returns true if the given object is an instance of WebAclLoggingConfiguration.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/wafv2/webAclLoggingConfiguration.WebAclLoggingConfiguration */ Boolean = js.native
   }
 }

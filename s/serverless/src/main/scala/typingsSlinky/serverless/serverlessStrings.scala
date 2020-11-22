@@ -35,6 +35,12 @@ object serverlessStrings {
   def head: head = "head".asInstanceOf[head]
   
   @scala.inline
+  def lambda: lambda = "lambda".asInstanceOf[lambda]
+  
+  @scala.inline
+  def mock: mock = "mock".asInstanceOf[mock]
+  
+  @scala.inline
   def oidc: oidc = "oidc".asInstanceOf[oidc]
   
   @scala.inline
@@ -81,6 +87,12 @@ object serverlessStrings {
   
   @js.native
   sealed trait head extends HttpMethod
+  
+  @js.native
+  sealed trait lambda extends js.Object
+  
+  @js.native
+  sealed trait mock extends js.Object
   
   @js.native
   sealed trait oidc extends js.Object

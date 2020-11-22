@@ -50,6 +50,9 @@ object Icon {
     
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: HTMLAttributesidclassNameFixedWidth): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

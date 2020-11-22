@@ -4,6 +4,7 @@ import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,21 +20,21 @@ object hdrCubeTextureMod extends js.Object {
       * Instantiates an HDRTexture from the following parameters.
       *
       * @param url The location of the HDR raw data (Panorama stored in RGBE format)
-      * @param scene The scene the texture will be used in
+      * @param sceneOrEngine The scene or engine the texture will be used in
       * @param size The cubemap desired size (the more it increases the longer the generation will be)
       * @param noMipmap Forces to not generate the mipmap if true
       * @param generateHarmonics Specifies whether you want to extract the polynomial harmonics during the generation process
       * @param gammaSpace Specifies if the texture will be use in gamma or linear space (the PBR material requires those texture in linear space, but the standard material would require them in Gamma space)
-      * @param reserved Reserved flag for internal use.
+      * @param prefilterOnLoad Prefilters HDR texture to allow use of this texture as a PBR reflection texture.
       */
     def this(
       url: String,
-      scene: Scene,
+      sceneOrEngine: Scene | ThinEngine,
       size: Double,
       noMipmap: js.UndefOr[Boolean],
       generateHarmonics: js.UndefOr[Boolean],
       gammaSpace: js.UndefOr[Boolean],
-      reserved: js.UndefOr[Boolean],
+      prefilterOnLoad: js.UndefOr[Boolean],
       onLoad: js.UndefOr[Nullable[js.Function0[Unit]]],
       onError: js.UndefOr[
             Nullable[
@@ -53,6 +54,8 @@ object hdrCubeTextureMod extends js.Object {
     var _onError: js.Any = js.native
     
     var _onLoad: js.Any = js.native
+    
+    var _prefilterOnLoad: js.Any = js.native
     
     var _rotationY: Double = js.native
     
@@ -74,12 +77,6 @@ object hdrCubeTextureMod extends js.Object {
       * @example https://www.babylonjs-playground.com/#RNASML
       */
     def boundingBoxSize_=(value: Vector3): Unit = js.native
-    
-    /**
-      * The texture coordinates mode. As this texture is stored in a cube format, please modify carefully.
-      */
-    @JSName("coordinatesMode")
-    var coordinatesMode_FHDRCubeTexture: Double = js.native
     
     /**
       * Sets wether or not the texture is blocking during loading.

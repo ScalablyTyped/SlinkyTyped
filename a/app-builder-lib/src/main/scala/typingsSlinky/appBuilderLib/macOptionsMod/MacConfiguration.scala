@@ -66,6 +66,11 @@ trait MacConfiguration extends PlatformSpecificBuildOptions {
     */
   val entitlementsInherit: js.UndefOr[String | Null] = js.native
   
+  /**
+    * Path to login helper entitlement file.
+    * When using App Sandbox, the the `com.apple.security.inherit` key that is normally in the inherited entitlements cannot be inherited since the login helper is a standalone executable.
+    * Defaults to the value provided for `entitlements`. This option only applies when signing with `entitlements` provided.
+    */
   val entitlementsLoginHelper: js.UndefOr[String | Null] = js.native
   
   /**
@@ -146,6 +151,17 @@ trait MacConfiguration extends PlatformSpecificBuildOptions {
     * Path of [requirements file](https://developer.apple.com/library/mac/documentation/Security/Conceptual/CodeSigningGuide/RequirementLang/RequirementLang.html) used in signing. Not applicable for MAS.
     */
   val requirements: js.UndefOr[String | Null] = js.native
+  
+  /**
+    * Regex or an array of regex's that signal skipping signing a file.
+    */
+  val signIgnore: js.UndefOr[js.Array[String] | String | Null] = js.native
+  
+  /**
+    * Whether to let electron-osx-sign verify the contents or not.
+    * @default true
+    */
+  val strictVerify: js.UndefOr[js.Array[String] | String | Boolean] = js.native
   
   /**
     * The target package type: list of `default`, `dmg`, `mas`, `mas-dev`, `pkg`, `7z`, `zip`, `tar.xz`, `tar.lz`, `tar.gz`, `tar.bz2`, `dir`. Defaults to `default` (dmg and zip for Squirrel.Mac).
@@ -402,6 +418,27 @@ object MacConfiguration {
     
     @scala.inline
     def setRequirementsNull: Self = this.set("requirements", null)
+    
+    @scala.inline
+    def setSignIgnoreVarargs(value: String*): Self = this.set("signIgnore", js.Array(value :_*))
+    
+    @scala.inline
+    def setSignIgnore(value: js.Array[String] | String): Self = this.set("signIgnore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSignIgnore: Self = this.set("signIgnore", js.undefined)
+    
+    @scala.inline
+    def setSignIgnoreNull: Self = this.set("signIgnore", null)
+    
+    @scala.inline
+    def setStrictVerifyVarargs(value: String*): Self = this.set("strictVerify", js.Array(value :_*))
+    
+    @scala.inline
+    def setStrictVerify(value: js.Array[String] | String | Boolean): Self = this.set("strictVerify", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStrictVerify: Self = this.set("strictVerify", js.undefined)
     
     @scala.inline
     def setTargetVarargs(value: (MacOsTargetName | TargetConfiguration)*): Self = this.set("target", js.Array(value :_*))

@@ -115,7 +115,7 @@ object RoutedButton {
     def size(value: small | medium | large): this.type = set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def target(value: _self | _blank | _parent | _top): this.type = set("target", value.asInstanceOf[js.Any])
+    def target(value: _self | _blank | _parent | _top | String): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `type`(value: button | reset | submit): this.type = set("type", value.asInstanceOf[js.Any])

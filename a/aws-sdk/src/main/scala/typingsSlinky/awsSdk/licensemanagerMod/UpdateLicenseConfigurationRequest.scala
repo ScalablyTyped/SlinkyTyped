@@ -33,7 +33,7 @@ trait UpdateLicenseConfigurationRequest extends js.Object {
   var LicenseCountHardLimit: js.UndefOr[BoxBoolean] = js.native
   
   /**
-    * New license rules.
+    * New license rule. The only rule that you can add after you create a license configuration is licenseAffinityToHost.
     */
   var LicenseRules: js.UndefOr[StringList] = js.native
   

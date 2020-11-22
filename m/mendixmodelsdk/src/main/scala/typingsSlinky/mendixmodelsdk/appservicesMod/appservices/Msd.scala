@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.appservicesMod.appservices
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.WsdlDescription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,14 +15,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/gen/appservices", "appservices.Msd")
 @js.native
-class Msd protected () extends Element {
+class Msd protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsConsumedAppService: ConsumedAppService = js.native
@@ -33,9 +35,6 @@ class Msd protected () extends Element {
   
   def metadata: MsdMetadata = js.native
   def metadata_=(newValue: MsdMetadata): Unit = js.native
-  
-  @JSName("model")
-  var model_FMsd: IModel = js.native
   
   def version: MsdVersion = js.native
   def version_=(newValue: MsdVersion): Unit = js.native

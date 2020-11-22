@@ -20,6 +20,9 @@ object sphereMod extends js.Object {
     
     def applyMatrix4(matrix: Matrix4): Sphere = js.native
     
+    /**
+    	 * @default new Vector3()
+    	 */
     var center: Vector3 = js.native
     
     def clampPoint(point: Vector3, target: Vector3): Vector3 = js.native
@@ -49,6 +52,9 @@ object sphereMod extends js.Object {
     
     def makeEmpty(): this.type = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var radius: Double = js.native
     
     def set(center: Vector3, radius: Double): Sphere = js.native

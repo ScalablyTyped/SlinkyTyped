@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@tensorflow/tfjs-backend-webgl", "MathBackendWebGL")
 @js.native
 class MathBackendWebGL ()
-  extends typingsSlinky.tensorflowTfjsBackendWebgl.webglMod.MathBackendWebGL {
+  extends typingsSlinky.tensorflowTfjsBackendWebgl.baseMod.MathBackendWebGL {
   def this(gpgpu: typingsSlinky.tensorflowTfjsBackendWebgl.gpgpuContextMod.GPGPUContext) = this()
 }

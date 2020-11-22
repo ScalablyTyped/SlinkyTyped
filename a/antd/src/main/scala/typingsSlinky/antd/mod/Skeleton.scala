@@ -4,7 +4,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Call
 import typingsSlinky.antd.anon.CallDefaultProps
 import typingsSlinky.antd.anon.DefaultProps
-import typingsSlinky.antd.imageMod.SkeletonImageProps
+import typingsSlinky.antd.skeletonImageMod.SkeletonImageProps
 import typingsSlinky.antd.skeletonSkeletonMod.SkeletonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

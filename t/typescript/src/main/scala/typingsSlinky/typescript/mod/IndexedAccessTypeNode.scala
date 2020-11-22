@@ -7,10 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IndexedAccessTypeNode extends TypeNode {
   
-  var indexType: TypeNode = js.native
+  val indexType: TypeNode = js.native
   
   @JSName("kind")
-  var kind_IndexedAccessTypeNode: typingsSlinky.typescript.mod.SyntaxKind.IndexedAccessType = js.native
+  val kind_IndexedAccessTypeNode: typingsSlinky.typescript.mod.SyntaxKind.IndexedAccessType = js.native
   
-  var objectType: TypeNode = js.native
+  val objectType: TypeNode = js.native
 }

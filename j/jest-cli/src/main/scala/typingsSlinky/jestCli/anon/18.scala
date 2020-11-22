@@ -1,8 +1,8 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliStrings.`Run only tests with a name that matches the regex patternDot`
-import typingsSlinky.jestCli.jestCliStrings.string
-import typingsSlinky.jestCli.jestCliStrings.t
+import typingsSlinky.jestCli.jestCliBooleans.`true`
+import typingsSlinky.jestCli.jestCliStrings.`The glob patterns Jest uses to detect test filesDot`
+import typingsSlinky.jestCli.jestCliStrings.array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,21 +10,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `18` extends js.Object {
   
-  val alias: t = js.native
+  val description: `The glob patterns Jest uses to detect test filesDot` = js.native
   
-  val description: `Run only tests with a name that matches the regex patternDot` = js.native
+  val string: `true` = js.native
   
-  val `type`: string = js.native
+  val `type`: array = js.native
 }
 object `18` {
   
   @scala.inline
-  def apply(
-    alias: t,
-    description: `Run only tests with a name that matches the regex patternDot`,
-    `type`: string
-  ): `18` = {
-    val __obj = js.Dynamic.literal(alias = alias.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any])
+  def apply(description: `The glob patterns Jest uses to detect test filesDot`, string: `true`, `type`: array): `18` = {
+    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], string = string.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`18`]
   }
@@ -45,12 +41,12 @@ object `18` {
     }
     
     @scala.inline
-    def setAlias(value: t): Self = this.set("alias", value.asInstanceOf[js.Any])
+    def setDescription(value: `The glob patterns Jest uses to detect test filesDot`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDescription(value: `Run only tests with a name that matches the regex patternDot`): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setString(value: `true`): Self = this.set("string", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: string): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: array): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

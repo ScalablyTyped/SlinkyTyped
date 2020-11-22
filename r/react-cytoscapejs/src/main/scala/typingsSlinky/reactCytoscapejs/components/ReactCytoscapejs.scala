@@ -1,11 +1,11 @@
 package typingsSlinky.reactCytoscapejs.components
 
-import org.scalajs.dom.raw.Position
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.cytoscape.mod.Core
 import typingsSlinky.cytoscape.mod.ElementDefinition
 import typingsSlinky.cytoscape.mod.LayoutOptions
+import typingsSlinky.cytoscape.mod.Position
 import typingsSlinky.cytoscape.mod.Stylesheet
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactCytoscapejs.mod.CytoscapeComponentProps
@@ -66,6 +66,9 @@ object ReactCytoscapejs {
     
     @scala.inline
     def userZoomingEnabled(value: Boolean): this.type = set("userZoomingEnabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def wheelSensitivity(value: Double): this.type = set("wheelSensitivity", value.asInstanceOf[js.Any])
     
     @scala.inline
     def zoom(value: Double): this.type = set("zoom", value.asInstanceOf[js.Any])

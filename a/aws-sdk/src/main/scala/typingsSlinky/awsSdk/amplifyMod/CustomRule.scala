@@ -18,7 +18,7 @@ trait CustomRule extends js.Object {
   var source: Source = js.native
   
   /**
-    *  The status code for a URL rewrite or redirect rule. 
+    *  The status code for a URL rewrite or redirect rule.   200  Represents a 200 rewrite rule.  301  Represents a 301 (moved pemanently) redirect rule. This and all future requests should be directed to the target URL.   302  Represents a 302 temporary redirect rule.  404  Represents a 404 redirect rule.  404-200  Represents a 404 rewrite rule.  
     */
   var status: js.UndefOr[Status] = js.native
   

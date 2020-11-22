@@ -38,8 +38,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactMdTable.reactMdTableStrings.`additions removals`
 import typingsSlinky.reactMdTable.reactMdTableStrings.`additions text`
 import typingsSlinky.reactMdTable.reactMdTableStrings.`inline`
+import typingsSlinky.reactMdTable.reactMdTableStrings.`removals additions`
+import typingsSlinky.reactMdTable.reactMdTableStrings.`removals text`
+import typingsSlinky.reactMdTable.reactMdTableStrings.`text additions`
+import typingsSlinky.reactMdTable.reactMdTableStrings.`text removals`
 import typingsSlinky.reactMdTable.reactMdTableStrings.additions
 import typingsSlinky.reactMdTable.reactMdTableStrings.all
 import typingsSlinky.reactMdTable.reactMdTableStrings.assertive
@@ -188,7 +193,9 @@ trait TableCheckboxProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -780,7 +787,9 @@ object TableCheckboxProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

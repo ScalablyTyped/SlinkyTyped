@@ -18,14 +18,14 @@ trait MapImageLayerFetchImageOptions extends Object {
   var pixelRatio: js.UndefOr[Double] = js.native
   
   /**
-    * The rotation in degrees of the exported image. Available since ArcGIS Server 10.3.
+    * The rotation in degrees of the exported image.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-MapImageLayer.html#fetchImage)
     */
   var rotation: js.UndefOr[Double] = js.native
   
   /**
-    * An [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) to abort the request. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+    * An [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) to abort the request.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-MapImageLayer.html#fetchImage)
     */

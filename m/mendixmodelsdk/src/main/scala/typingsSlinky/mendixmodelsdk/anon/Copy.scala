@@ -1,7 +1,9 @@
 package typingsSlinky.mendixmodelsdk.anon
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.elementsMod.Element
 import typingsSlinky.mendixmodelsdk.structuresMod.Structure
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import typingsSlinky.mendixmodelsdk.utilsMod.utils.IMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,14 +12,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Copy extends js.Object {
   
-  var copy: Element = js.native
+  var copy: Element[IAbstractModel] = js.native
   
-  var idMap: IMap[Structure] = js.native
+  var idMap: IMap[Structure[IAbstractModel, IContainer | Null]] = js.native
 }
 object Copy {
   
   @scala.inline
-  def apply(copy: Element, idMap: IMap[Structure]): Copy = {
+  def apply(copy: Element[IAbstractModel], idMap: IMap[Structure[IAbstractModel, IContainer | Null]]): Copy = {
     val __obj = js.Dynamic.literal(copy = copy.asInstanceOf[js.Any], idMap = idMap.asInstanceOf[js.Any])
     __obj.asInstanceOf[Copy]
   }
@@ -38,9 +40,9 @@ object Copy {
     }
     
     @scala.inline
-    def setCopy(value: Element): Self = this.set("copy", value.asInstanceOf[js.Any])
+    def setCopy(value: Element[IAbstractModel]): Self = this.set("copy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIdMap(value: IMap[Structure]): Self = this.set("idMap", value.asInstanceOf[js.Any])
+    def setIdMap(value: IMap[Structure[IAbstractModel, IContainer | Null]]): Self = this.set("idMap", value.asInstanceOf[js.Any])
   }
 }

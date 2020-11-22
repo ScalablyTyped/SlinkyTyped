@@ -22,9 +22,14 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.reactMdDialog.reactMdDialogStrings.`additions removals`
 import typingsSlinky.reactMdDialog.reactMdDialogStrings.`additions text`
 import typingsSlinky.reactMdDialog.reactMdDialogStrings.`full-page`
 import typingsSlinky.reactMdDialog.reactMdDialogStrings.`inline`
+import typingsSlinky.reactMdDialog.reactMdDialogStrings.`removals additions`
+import typingsSlinky.reactMdDialog.reactMdDialogStrings.`removals text`
+import typingsSlinky.reactMdDialog.reactMdDialogStrings.`text additions`
+import typingsSlinky.reactMdDialog.reactMdDialogStrings.`text removals`
 import typingsSlinky.reactMdDialog.reactMdDialogStrings.additions
 import typingsSlinky.reactMdDialog.reactMdDialogStrings.alertdialog
 import typingsSlinky.reactMdDialog.reactMdDialogStrings.all
@@ -84,7 +89,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object Dialog {
   
-  object DialogPropsPickDialogProp {
+  object PickBaseDialogPropshidden {
     
     @JSImport("@react-md/dialog", "Dialog")
     @js.native
@@ -207,7 +212,9 @@ object Dialog {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -987,22 +994,17 @@ object Dialog {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactMdDialog.anon.DialogPropsPickDialogProp): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: typingsSlinky.reactMdDialog.anon.PickBaseDialogPropshidden): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
-    def apply(
-      `aria-label`: js.UndefOr[String] with String,
-      id: String,
-      onRequestClose: () => Unit,
-      visible: Boolean
-    ): Builder = {
+    def apply(`aria-label`: String, id: String, onRequestClose: () => Unit, visible: Boolean): Builder = {
       val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
       __props.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdDialog.anon.DialogPropsPickDialogProp]))
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdDialog.anon.PickBaseDialogPropshidden]))
     }
   }
   
-  object DialogPropsPickDialogPropAbout {
+  object PickBaseDialogPropshiddenAbout {
     
     @JSImport("@react-md/dialog", "Dialog")
     @js.native
@@ -1125,7 +1127,9 @@ object Dialog {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -1905,18 +1909,13 @@ object Dialog {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactMdDialog.anon.DialogPropsPickDialogPropAbout): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: typingsSlinky.reactMdDialog.anon.PickBaseDialogPropshiddenAbout): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
-    def apply(
-      `aria-labelledby`: js.UndefOr[String] with String,
-      id: String,
-      onRequestClose: () => Unit,
-      visible: Boolean
-    ): Builder = {
+    def apply(`aria-labelledby`: String, id: String, onRequestClose: () => Unit, visible: Boolean): Builder = {
       val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
       __props.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdDialog.anon.DialogPropsPickDialogPropAbout]))
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdDialog.anon.PickBaseDialogPropshiddenAbout]))
     }
   }
 }

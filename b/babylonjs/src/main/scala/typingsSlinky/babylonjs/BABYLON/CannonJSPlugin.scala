@@ -21,6 +21,8 @@ trait CannonJSPlugin extends IPhysicsEnginePlugin {
   
   var _extendNamespace: js.Any = js.native
   
+  var _firstFrame: js.Any = js.native
+  
   var _fixedTimeStep: js.Any = js.native
   
   var _minus90X: js.Any = js.native
@@ -46,8 +48,6 @@ trait CannonJSPlugin extends IPhysicsEnginePlugin {
   var _updatePhysicsBodyTransformation: js.Any = js.native
   
   var _useDeltaForWorldStep: js.Any = js.native
-  
-  def executeStep(delta: Double): Unit = js.native
   
   def setAngularVelocity(impostor: PhysicsImpostor, velocity: Vector3): Unit = js.native
   

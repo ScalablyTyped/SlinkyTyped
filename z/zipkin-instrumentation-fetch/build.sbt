@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "zipkin-instrumentation-fetch"
-version := "0.11-dt-20200515Z-7bc2df"
+version := "0.11-dt-20200515Z-d67e3b"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "form-data" % "3.0.0-5f101b",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
-  "org.scalablytyped.slinky" %%% "node-fetch" % "2.5-dt-20200515Z-e73f4e",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
-  "org.scalablytyped.slinky" %%% "zipkin" % "0.22.0-acc00f")
+  "org.scalablytyped.slinky" %%% "form-data" % "3.0.0-ee7e6b",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "node-fetch" % "2.5-dt-20200515Z-65e944",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "zipkin" % "0.22.0-45ba00")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

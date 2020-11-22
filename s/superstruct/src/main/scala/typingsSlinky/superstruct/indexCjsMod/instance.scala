@@ -13,8 +13,5 @@ object instance extends js.Object {
   /**
     * Validate that a value is an instance of a class.
     */
-  /**
-    * Validate that a value is an instance of a class.
-    */
   def apply[T /* <: Instantiable */](Class: T): Struct_[InstanceType[T], _] = js.native
 }

@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FilterActivity extends js.Object {
   
   /**
-    * An expression that looks like a SQL WHERE clause that must return a Boolean value.
+    * An expression that looks like a SQL WHERE clause that must return a Boolean value. Messages that satisfy the condition are passed to the next activity. 
     */
   var filter: FilterExpression = js.native
   
   /**
-    * The name of the 'filter' activity.
+    * The name of the filter activity.
     */
   var name: ActivityName = js.native
   

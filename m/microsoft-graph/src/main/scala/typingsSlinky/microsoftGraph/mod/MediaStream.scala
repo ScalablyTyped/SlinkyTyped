@@ -11,7 +11,7 @@ trait MediaStream extends js.Object {
   var direction: js.UndefOr[MediaDirection] = js.native
   
   // The media stream label.
-  var label: js.UndefOr[String] = js.native
+  var label: js.UndefOr[NullableOption[String]] = js.native
   
   // The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
   var mediaType: js.UndefOr[Modality] = js.native
@@ -52,10 +52,13 @@ object MediaStream {
     def deleteDirection: Self = this.set("direction", js.undefined)
     
     @scala.inline
-    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: NullableOption[String]): Self = this.set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
+    
+    @scala.inline
+    def setLabelNull: Self = this.set("label", null)
     
     @scala.inline
     def setMediaType(value: Modality): Self = this.set("mediaType", value.asInstanceOf[js.Any])

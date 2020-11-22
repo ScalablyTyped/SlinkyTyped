@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsData
 
 import org.scalajs.dom.raw.HTMLVideoElement
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor3D
 import typingsSlinky.tensorflowTfjsData.lazyIteratorMod.LazyIterator
 import typingsSlinky.tensorflowTfjsData.typesMod.WebcamConfig
 import scala.scalajs.js

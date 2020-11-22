@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "react-datepicker"
-version := "3.1-dt-20200721Z-729cba"
+version := "3.1-dt-20200802Z-d1f71b"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-fce754",
-  "org.scalablytyped.slinky" %%% "date-fns" % "2.15.0-627b76",
-  "org.scalablytyped.slinky" %%% "popper_dot_js" % "1.16.1-a800bc",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ce652f",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a9854",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.14-23cf0c",
+  "org.scalablytyped.slinky" %%% "date-fns" % "2.16.1-3278a8",
+  "org.scalablytyped.slinky" %%% "popper_dot_js" % "1.16.1-12b8cb",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ed7fbd",
+  "org.scalablytyped.slinky" %%% "react" % "17.0-dt-20201121Z-8f0b52",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

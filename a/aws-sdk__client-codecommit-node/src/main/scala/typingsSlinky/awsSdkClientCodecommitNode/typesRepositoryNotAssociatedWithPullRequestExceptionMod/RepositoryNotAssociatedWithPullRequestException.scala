@@ -2,31 +2,25 @@ package typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNotAssociatedWit
 
 import typingsSlinky.awsSdkClientCodecommitNode.getCommentsForPullRequestExceptionsUnionMod.GetCommentsForPullRequestExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_RepositoryNotAssociatedWithPullRequestExceptionDetails> * / any */ @js.native
 trait RepositoryNotAssociatedWithPullRequestException
-  extends ServiceException[RepositoryNotAssociatedWithPullRequestExceptionDetails]
-     with GetCommentsForPullRequestExceptionsUnion
+  extends GetCommentsForPullRequestExceptionsUnion
      with PostCommentForPullRequestExceptionsUnion {
   
-  @JSName("name")
-  var name_RepositoryNotAssociatedWithPullRequestException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryNotAssociatedWithPullRequestException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryNotAssociatedWithPullRequestException = js.native
 }
 object RepositoryNotAssociatedWithPullRequestException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: RepositoryNotAssociatedWithPullRequestExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryNotAssociatedWithPullRequestException
   ): RepositoryNotAssociatedWithPullRequestException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[RepositoryNotAssociatedWithPullRequestException]
   }
   

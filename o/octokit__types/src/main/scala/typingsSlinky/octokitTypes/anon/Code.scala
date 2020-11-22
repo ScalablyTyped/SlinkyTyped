@@ -9,15 +9,17 @@ trait Code extends js.Object {
   
   var code: String = js.native
   
-  var message: String = js.native
+  var field: String = js.native
   
-  var status: String = js.native
+  var message: js.UndefOr[String] = js.native
+  
+  var resource: String = js.native
 }
 object Code {
   
   @scala.inline
-  def apply(code: String, message: String, status: String): Code = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+  def apply(code: String, field: String, resource: String): Code = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], field = field.asInstanceOf[js.Any], resource = resource.asInstanceOf[js.Any])
     __obj.asInstanceOf[Code]
   }
   
@@ -40,9 +42,15 @@ object Code {
     def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setField(value: String): Self = this.set("field", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setResource(value: String): Self = this.set("resource", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStatus(value: String): Self = this.set("status", value.asInstanceOf[js.Any])
+    def deleteMessage: Self = this.set("message", js.undefined)
   }
 }

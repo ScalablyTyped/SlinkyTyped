@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeUserRequest extends js.Object {
   
   /**
-    * A system-assigned unique identifier for a file transfer protocol-enabled server that has this user assigned.
+    * A system-assigned unique identifier for a server that has this user assigned.
     */
   var ServerId: typingsSlinky.awsSdk.transferMod.ServerId = js.native
   
   /**
-    * The name of the user assigned to one or more file transfer protocol-enabled servers. User names are part of the sign-in credentials to use the AWS Transfer Family service and perform file transfer tasks.
+    * The name of the user assigned to one or more servers. User names are part of the sign-in credentials to use the AWS Transfer Family service and perform file transfer tasks.
     */
   var UserName: typingsSlinky.awsSdk.transferMod.UserName = js.native
 }

@@ -53,7 +53,7 @@ object Plane extends js.Object {
     */
   def FromPositionAndNormal(
     origin: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3],
-    normal: DeepImmutable[typingsSlinky.babylonjs.BABYLON.Vector3]
+    normal: typingsSlinky.babylonjs.BABYLON.Vector3
   ): typingsSlinky.babylonjs.BABYLON.Plane = js.native
   
   /**

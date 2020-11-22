@@ -21,6 +21,9 @@ object ThemeProvider {
     
     @scala.inline
     def theme(value: Theme[T]): this.type = set("theme", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def useDark(value: Boolean): this.type = set("useDark", value.asInstanceOf[js.Any])
   }
   
   def withProps[T](p: ThemeProviderProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))

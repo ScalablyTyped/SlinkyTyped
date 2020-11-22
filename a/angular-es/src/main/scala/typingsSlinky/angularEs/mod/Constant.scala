@@ -11,9 +11,9 @@ object Constant extends js.Object {
   /**
     * Register constant
     *
-    * @param {string} name - constant name
+    * @param name - constant name
     *
-    * @returns {ngESDecorator} - decorated class
+    * @returns decorated class
     */
   def apply(name: String): ngESDecorator = js.native
 }

@@ -109,6 +109,14 @@ trait Worksheet extends ClientObject {
   def copy_None(positionType: None, relativeTo: Worksheet): Worksheet = js.native
   
   /**
+    *
+    * Gets a collection of worksheet-level custom properties.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  val customProperties: WorksheetCustomPropertyCollection = js.native
+  
+  /**
     * Deletes the worksheet from the workbook. Note that if the worksheet's visibility is set to "VeryHidden", the delete operation will fail with an `InvalidOperation` exception. You should first change its visibility to hidden or visible before deleting it.
     *
     * [Api set: ExcelApi 1.1]
@@ -321,7 +329,7 @@ trait Worksheet extends ClientObject {
   
   /**
     *
-    * Occurs when data changed on a specific worksheet.
+    * Occurs when data changes in a specific worksheet.
     *
     * [Api set: ExcelApi 1.7]
     *

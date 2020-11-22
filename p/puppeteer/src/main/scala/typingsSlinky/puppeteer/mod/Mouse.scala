@@ -39,4 +39,26 @@ trait Mouse extends js.Object {
     */
   def up(): js.Promise[Unit] = js.native
   def up(options: MousePressOptions): js.Promise[Unit] = js.native
+  
+  /**
+    * Dispatches a `mousewheel` event.
+    * @param options - Optional: `MouseWheelOptions`.
+    *
+    * @example
+    * An example of zooming into an element:
+    * ```js
+    * await page.goto('https://mdn.mozillademos.org/en-US/docs/Web/API/Element/wheel_event$samples/Scaling_an_element_via_the_wheel?revision=1587366');
+    *
+    * const elem = await page.$('div');
+    * const boundingBox = await elem.boundingBox();
+    * await page.mouse.move(
+    *   boundingBox.x + boundingBox.width / 2,
+    *   boundingBox.y + boundingBox.height / 2
+    * );
+    *
+    * await page.mouse.wheel({ deltaY: -100 })
+    * ```
+    */
+  def wheel(): js.Promise[Unit] = js.native
+  def wheel(options: MouseWheelOptions): js.Promise[Unit] = js.native
 }

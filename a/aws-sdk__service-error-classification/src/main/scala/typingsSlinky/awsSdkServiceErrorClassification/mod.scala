@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkServiceErrorClassification
 
+import typingsSlinky.awsSdkSmithyClient.sdkErrorMod.SdkError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,9 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def isClockSkewError(error: js.Error): Boolean = js.native
+  def isClockSkewError(error: SdkError): Boolean = js.native
   
-  def isStillProcessingError(error: js.Error): Boolean = js.native
+  def isRetryableByTrait(error: SdkError): Boolean = js.native
   
-  def isThrottlingError(error: js.Error): Boolean = js.native
+  def isThrottlingError(error: SdkError): Boolean = js.native
+  
+  def isTransientError(error: SdkError): Boolean = js.native
 }

@@ -37,8 +37,8 @@ trait AboutPanelOptionsOptions extends js.Object {
   var credits: js.UndefOr[String] = js.native
   
   /**
-    * Path to the app's icon. On Linux, will be shown as 64x64 pixels while retaining
-    * aspect ratio.
+    * Path to the app's icon in a JPEG or PNG file format. On Linux, will be shown as
+    * 64x64 pixels while retaining aspect ratio.
     *
     * @platform linux,win32
     */

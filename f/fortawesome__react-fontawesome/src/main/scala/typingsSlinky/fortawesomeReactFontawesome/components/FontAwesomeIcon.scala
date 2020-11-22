@@ -26,10 +26,15 @@ import typingsSlinky.fortawesomeFontawesomeSvgCore.mod.RotateProp
 import typingsSlinky.fortawesomeFontawesomeSvgCore.mod.SizeProp
 import typingsSlinky.fortawesomeFontawesomeSvgCore.mod.Transform
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings._empty
+import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`additions removals`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`additions text`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`after-edge`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`before-edge`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`inline`
+import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`removals additions`
+import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`removals text`
+import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`text additions`
+import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`text removals`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`text-after-edge`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`text-before-edge`
 import typingsSlinky.fortawesomeReactFontawesome.fortawesomeReactFontawesomeStrings.`use-credentials`
@@ -245,7 +250,9 @@ object FontAwesomeIcon {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

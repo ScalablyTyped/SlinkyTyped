@@ -28,7 +28,7 @@ trait Set[T] extends js.Object {
   var iterator: js.Function0[IterableIterator[T]] = js.native
   
   /**
-    * Despite its name, returns an iterable of the values in the set,
+    * Despite its name, returns an iterable of the values in the set.
     */
   def keys(): IterableIterator[T] = js.native
   

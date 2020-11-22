@@ -54,13 +54,6 @@ object utilsMod extends js.Object {
     ios | ipad | iphone | android | phablet | tablet | cordova | capacitor | electron | pwa | mobile | mobileweb | desktop | hybrid
   ] = js.native
   
-  def ionRenderToString(html: String, userAgent: String): js.Promise[String] = js.native
-  def ionRenderToString(
-    html: String,
-    userAgent: String,
-    options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SerializeDocumentOptions */ js.Any
-  ): js.Promise[String] = js.native
-  
   def isCoveredByReact(eventNameSuffix: String): Boolean = js.native
   
   def isPlatform(platform: Platforms): Boolean = js.native

@@ -9,6 +9,8 @@ trait MUIDataTableTextLabelsPagination extends js.Object {
   
   var displayRows: String = js.native
   
+  var jumpToPage: String = js.native
+  
   var next: String = js.native
   
   var previous: String = js.native
@@ -18,8 +20,8 @@ trait MUIDataTableTextLabelsPagination extends js.Object {
 object MUIDataTableTextLabelsPagination {
   
   @scala.inline
-  def apply(displayRows: String, next: String, previous: String, rowsPerPage: String): MUIDataTableTextLabelsPagination = {
-    val __obj = js.Dynamic.literal(displayRows = displayRows.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], previous = previous.asInstanceOf[js.Any], rowsPerPage = rowsPerPage.asInstanceOf[js.Any])
+  def apply(displayRows: String, jumpToPage: String, next: String, previous: String, rowsPerPage: String): MUIDataTableTextLabelsPagination = {
+    val __obj = js.Dynamic.literal(displayRows = displayRows.asInstanceOf[js.Any], jumpToPage = jumpToPage.asInstanceOf[js.Any], next = next.asInstanceOf[js.Any], previous = previous.asInstanceOf[js.Any], rowsPerPage = rowsPerPage.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableTextLabelsPagination]
   }
   
@@ -40,6 +42,9 @@ object MUIDataTableTextLabelsPagination {
     
     @scala.inline
     def setDisplayRows(value: String): Self = this.set("displayRows", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJumpToPage(value: String): Self = this.set("jumpToPage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNext(value: String): Self = this.set("next", value.asInstanceOf[js.Any])

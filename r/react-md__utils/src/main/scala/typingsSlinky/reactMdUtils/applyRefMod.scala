@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object applyRefMod extends js.Object {
   
-  def default[E](): Unit = js.native
-  def default[E](instance: E): Unit = js.native
-  def default[E](instance: E, ref: Ref[E]): Unit = js.native
-  def default[E](instance: Null, ref: Ref[E]): Unit = js.native
+  def applyRef[E](): Unit = js.native
+  def applyRef[E](instance: E): Unit = js.native
+  def applyRef[E](instance: E, ref: Ref[E]): Unit = js.native
+  def applyRef[E](instance: Null, ref: Ref[E]): Unit = js.native
 }

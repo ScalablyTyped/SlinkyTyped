@@ -17,9 +17,6 @@ trait Multipoint
     * Adds a point to the Multipoint.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html#addPoint)
-    *
-    * @param point The point to add to the multipoint. The point can either be a [Point](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html) or an array of numbers representing XY coordinates.
-    *
     */
   def addPoint(point: Point): Multipoint = js.native
   
@@ -27,9 +24,6 @@ trait Multipoint
     * Returns the point at the specified index.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html#getPoint)
-    *
-    * @param index The index of the point in the [points](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html#points) property.
-    *
     */
   def getPoint(index: Double): Point = js.native
   
@@ -41,12 +35,9 @@ trait Multipoint
   var points: js.Array[js.Array[Double]] = js.native
   
   /**
-    * Removes a point from the Multipoint. The index specifies which point to remove.
+    * Removes a point from the Multipoint.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html#removePoint)
-    *
-    * @param index The index of the point to remove.
-    *
     */
   def removePoint(index: Double): Point = js.native
   
@@ -55,10 +46,6 @@ trait Multipoint
     * Updates the point at the specified index.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html#setPoint)
-    *
-    * @param index The index of the point in the [points](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Multipoint.html#points) property.
-    * @param point Point geometry that specifies the new location.
-    *
     */
   def setPoint(index: Double, point: Point): Multipoint = js.native
   

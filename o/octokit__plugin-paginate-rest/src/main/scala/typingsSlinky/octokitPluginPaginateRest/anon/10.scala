@@ -1,6 +1,6 @@
 package typingsSlinky.octokitPluginPaginateRest.anon
 
-import typingsSlinky.octokitTypes.anon.After
+import typingsSlinky.octokitTypes.anon.Checkrunurl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `10` extends js.Object {
   
-  var data: js.Array[After] = js.native
+  var data: js.Array[Checkrunurl] = js.native
 }
 object `10` {
   
   @scala.inline
-  def apply(data: js.Array[After]): `10` = {
+  def apply(data: js.Array[Checkrunurl]): `10` = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[`10`]
   }
@@ -34,9 +34,9 @@ object `10` {
     }
     
     @scala.inline
-    def setDataVarargs(value: After*): Self = this.set("data", js.Array(value :_*))
+    def setDataVarargs(value: Checkrunurl*): Self = this.set("data", js.Array(value :_*))
     
     @scala.inline
-    def setData(value: js.Array[After]): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: js.Array[Checkrunurl]): Self = this.set("data", value.asInstanceOf[js.Any])
   }
 }

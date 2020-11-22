@@ -1,6 +1,7 @@
 package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.reactNativeStrings.clip
 import typingsSlinky.reactNative.reactNativeStrings.head
 import typingsSlinky.reactNative.reactNativeStrings.middle
@@ -73,7 +74,7 @@ trait TextProps
     *
     * {nativeEvent: { layout: {x, y, width, height}}}.
     */
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   /**
     * This function is called on long press.
@@ -88,7 +89,12 @@ trait TextProps
   var onPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
   
   /**
-    * @see https://facebook.github.io/react-native/docs/text.html#style
+    * Invoked on Text layout
+    */
+  var onTextLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextLayoutEventData], Unit]] = js.native
+  
+  /**
+    * @see https://reactnative.dev/docs/text#style
     */
   var style: js.UndefOr[StyleProp[TextStyle]] = js.native
   
@@ -160,7 +166,7 @@ object TextProps {
     def deleteNumberOfLines: Self = this.set("numberOfLines", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -176,6 +182,12 @@ object TextProps {
     
     @scala.inline
     def deleteOnPress: Self = this.set("onPress", js.undefined)
+    
+    @scala.inline
+    def setOnTextLayout(value: SyntheticEvent[NodeHandle, TextLayoutEventData] => Unit): Self = this.set("onTextLayout", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnTextLayout: Self = this.set("onTextLayout", js.undefined)
     
     @scala.inline
     def setStyle(value: StyleProp[TextStyle]): Self = this.set("style", value.asInstanceOf[js.Any])

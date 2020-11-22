@@ -25,5 +25,9 @@ trait RefractionPostProcess extends PostProcess {
     * Please note that you are responsible for disposing the texture if you set it manually
     */
   def refractionTexture: Texture = js.native
+  
+  /** Gets the url used to load the refraction texture */
+  var refractionTextureUrl: String = js.native
+  
   def refractionTexture_=(value: Texture): Unit = js.native
 }

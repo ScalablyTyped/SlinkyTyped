@@ -1,18 +1,16 @@
 package typingsSlinky.jupyterlabLogconsole.tokensMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.phosphorCoreutils.mod.Token
-import typingsSlinky.phosphorDisposable.mod.IDisposable
-import typingsSlinky.phosphorSignaling.mod.ISignal
+import typingsSlinky.luminoCoreutils.mod.Token
+import typingsSlinky.luminoDisposable.mod.IDisposable
+import typingsSlinky.luminoSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@js.native
 trait ILoggerRegistry extends IDisposable {
-  /**
-    * A signal emitted when the logger registry changes.
-    */
-  val registryChanged: ISignal[this.type, ILoggerRegistryChange]
+  
   /**
     * Get the logger for the specified source.
     *
@@ -20,16 +18,20 @@ trait ILoggerRegistry extends IDisposable {
     *
     * @returns The logger for the specified source.
     */
-  def getLogger(source: String): ILogger
+  def getLogger(source: String): ILogger = js.native
+  
   /**
     * Get all loggers registered.
     *
     * @returns The array containing all registered loggers.
     */
-  def getLoggers(): js.Array[ILogger]
+  def getLoggers(): js.Array[ILogger] = js.native
+  
+  /**
+    * A signal emitted when the logger registry changes.
+    */
+  val registryChanged: ISignal[this.type, ILoggerRegistryChange] = js.native
 }
-
 @JSImport("@jupyterlab/logconsole/lib/tokens", "ILoggerRegistry")
 @js.native
 object ILoggerRegistry extends TopLevel[Token[ILoggerRegistry]]
-

@@ -24,8 +24,13 @@ import typingsSlinky.rcTreeSelect.interfaceMod.Key
 import typingsSlinky.rcTreeSelect.interfaceMod.LabelValueType
 import typingsSlinky.rcTreeSelect.interfaceMod.LegacyDataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.SimpleModeConfig
+import typingsSlinky.rcTreeSelect.rcTreeSelectStrings.`additions removals`
 import typingsSlinky.rcTreeSelect.rcTreeSelectStrings.`additions text`
 import typingsSlinky.rcTreeSelect.rcTreeSelectStrings.`inline`
+import typingsSlinky.rcTreeSelect.rcTreeSelectStrings.`removals additions`
+import typingsSlinky.rcTreeSelect.rcTreeSelectStrings.`removals text`
+import typingsSlinky.rcTreeSelect.rcTreeSelectStrings.`text additions`
+import typingsSlinky.rcTreeSelect.rcTreeSelectStrings.`text removals`
 import typingsSlinky.rcTreeSelect.rcTreeSelectStrings.additions
 import typingsSlinky.rcTreeSelect.rcTreeSelectStrings.all
 import typingsSlinky.rcTreeSelect.rcTreeSelectStrings.ascending
@@ -184,7 +189,9 @@ class SharedBuilder_TreeSelectProps1138808573[R <: js.Object, ValueType] (val ar
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

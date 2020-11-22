@@ -18,6 +18,11 @@ trait Channel extends js.Object {
   var creationTime: js.UndefOr[js.Date] = js.native
   
   /**
+    * The last time when a new message arrived in the channel. AWS IoT Analytics updates this value at most once per minute for one channel. Hence, the lastMessageArrivalTime value is an approximation. This feature only applies to messages that arrived in the data store after October 23, 2020. 
+    */
+  var lastMessageArrivalTime: js.UndefOr[js.Date] = js.native
+  
+  /**
     * When the channel was last updated.
     */
   var lastUpdateTime: js.UndefOr[js.Date] = js.native
@@ -38,7 +43,7 @@ trait Channel extends js.Object {
   var status: js.UndefOr[ChannelStatus] = js.native
   
   /**
-    * Where channel data is stored. You may choose one of "serviceManagedS3" or "customerManagedS3" storage. If not specified, the default is "serviceManagedS3". This cannot be changed after creation of the channel.
+    * Where channel data is stored. You can choose one of serviceManagedS3 or customerManagedS3 storage. If not specified, the default is serviceManagedS3. You cannot change this storage option after the channel is created.
     */
   var storage: js.UndefOr[ChannelStorage] = js.native
 }
@@ -76,6 +81,12 @@ object Channel {
     
     @scala.inline
     def deleteCreationTime: Self = this.set("creationTime", js.undefined)
+    
+    @scala.inline
+    def setLastMessageArrivalTime(value: js.Date): Self = this.set("lastMessageArrivalTime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLastMessageArrivalTime: Self = this.set("lastMessageArrivalTime", js.undefined)
     
     @scala.inline
     def setLastUpdateTime(value: js.Date): Self = this.set("lastUpdateTime", value.asInstanceOf[js.Any])

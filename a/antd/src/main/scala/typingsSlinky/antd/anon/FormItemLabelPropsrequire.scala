@@ -1,6 +1,7 @@
 package typingsSlinky.antd.anon
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.formItemLabelMod.LabelTooltipType
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import scala.scalajs.js
@@ -24,6 +25,10 @@ trait FormItemLabelPropsrequire extends js.Object {
   var prefixCls: String = js.native
   
   var required: js.UndefOr[Boolean] = js.native
+  
+  var requiredMark: js.UndefOr[typingsSlinky.antd.formFormMod.RequiredMark] = js.native
+  
+  var tooltip: js.UndefOr[LabelTooltipType] = js.native
 }
 object FormItemLabelPropsrequire {
   
@@ -89,5 +94,20 @@ object FormItemLabelPropsrequire {
     
     @scala.inline
     def deleteRequired: Self = this.set("required", js.undefined)
+    
+    @scala.inline
+    def setRequiredMark(value: typingsSlinky.antd.formFormMod.RequiredMark): Self = this.set("requiredMark", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequiredMark: Self = this.set("requiredMark", js.undefined)
+    
+    @scala.inline
+    def setTooltipReactElement(value: ReactElement): Self = this.set("tooltip", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTooltip(value: LabelTooltipType): Self = this.set("tooltip", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTooltip: Self = this.set("tooltip", js.undefined)
   }
 }

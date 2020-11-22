@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object coreMod {
   
-  type callback = js.Function2[
+  type callback[T] = js.Function2[
     /* err */ js.UndefOr[typingsSlinky.braintreeWeb.coreMod.BraintreeError], 
-    /* data */ js.UndefOr[js.Any], 
+    /* data */ js.UndefOr[T], 
     scala.Unit
   ]
 }

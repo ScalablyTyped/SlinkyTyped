@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Schedule extends js.Object {
   
   /**
-    * The expression that defines when to trigger an update. For more information, see  Schedule Expressions for Rules in the Amazon CloudWatch Events User Guide.
+    * The expression that defines when to trigger an update. For more information, see Schedule Expressions for Rules in the Amazon CloudWatch Events User Guide.
     */
   var expression: js.UndefOr[ScheduleExpression] = js.native
 }

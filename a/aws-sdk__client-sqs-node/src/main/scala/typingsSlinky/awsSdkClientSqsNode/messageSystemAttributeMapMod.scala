@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkClientSqsNode
 
-import typingsSlinky.awsSdkTypes.protocolMod.Map
+import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object messageSystemAttributeMapMod extends js.Object {
   
   @JSName("_MessageSystemAttributeMap")
-  val MessageSystemAttributeMap: Map = js.native
+  val MessageSystemAttributeMap: Map[
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for K */ js.Any, 
+    /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for V */ js.Any
+  ] = js.native
 }

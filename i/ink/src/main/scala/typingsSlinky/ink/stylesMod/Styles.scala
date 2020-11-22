@@ -29,6 +29,7 @@ import typingsSlinky.ink.inkStrings.singleDouble
 import typingsSlinky.ink.inkStrings.stretch
 import typingsSlinky.ink.inkStrings.truncate
 import typingsSlinky.ink.inkStrings.wrap
+import typingsSlinky.typeFest.literalUnionMod.LiteralUnion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -53,7 +54,10 @@ trait Styles extends js.Object {
     * Accepts the same values as `color` in <Text> component.
     */
   val borderColor: js.UndefOr[
-    /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ js.Any
+    LiteralUnion[
+      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ _, 
+      String
+    ]
   ] = js.native
   
   /**
@@ -202,7 +206,10 @@ object Styles {
     
     @scala.inline
     def setBorderColor(
-      value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ js.Any
+      value: LiteralUnion[
+          /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ _, 
+          String
+        ]
     ): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline

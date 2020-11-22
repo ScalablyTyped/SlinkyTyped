@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.messagedefinitionsMod.messagedefinitions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAttribute
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -8,6 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.jsonstructuresMod.jsonstructures.JsonStructure
 import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.Element
 import typingsSlinky.mendixmodelsdk.messagedefinitionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,8 +25,8 @@ class ExposedAttribute protected () extends ExposedMember {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def attribute: IAttribute = js.native
@@ -32,9 +34,6 @@ class ExposedAttribute protected () extends ExposedMember {
   def attributeQualifiedName: String = js.native
   
   def attribute_=(newValue: IAttribute): Unit = js.native
-  
-  @JSName("model")
-  var model_FExposedAttribute: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/messagedefinitions", "messagedefinitions.ExposedAttribute")

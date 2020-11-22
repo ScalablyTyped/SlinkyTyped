@@ -1,0 +1,9 @@
+package typingsSlinky.angularCompiler.outputAstMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@JSImport("@angular/compiler/src/output/output_ast", "LiteralPiece")
+@js.native
+class LiteralPiece () extends MessagePiece

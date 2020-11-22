@@ -7,21 +7,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Updatable extends js.Object {
   
-  var flat: js.UndefOr[Boolean] = js.native
+  var precision: js.UndefOr[H] = js.native
   
-  var radius: js.UndefOr[Double] = js.native
-  
-  var sideOrientation: js.UndefOr[Double] = js.native
-  
-  var subdivisions: js.UndefOr[Double] = js.native
+  var subdivisions: js.UndefOr[H] = js.native
   
   var updatable: js.UndefOr[Boolean] = js.native
+  
+  var xmax: Double = js.native
+  
+  var xmin: Double = js.native
+  
+  var zmax: Double = js.native
+  
+  var zmin: Double = js.native
 }
 object Updatable {
   
   @scala.inline
-  def apply(): Updatable = {
-    val __obj = js.Dynamic.literal()
+  def apply(xmax: Double, xmin: Double, zmax: Double, zmin: Double): Updatable = {
+    val __obj = js.Dynamic.literal(xmax = xmax.asInstanceOf[js.Any], xmin = xmin.asInstanceOf[js.Any], zmax = zmax.asInstanceOf[js.Any], zmin = zmin.asInstanceOf[js.Any])
     __obj.asInstanceOf[Updatable]
   }
   
@@ -41,25 +45,25 @@ object Updatable {
     }
     
     @scala.inline
-    def setFlat(value: Boolean): Self = this.set("flat", value.asInstanceOf[js.Any])
+    def setXmax(value: Double): Self = this.set("xmax", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteFlat: Self = this.set("flat", js.undefined)
+    def setXmin(value: Double): Self = this.set("xmin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRadius(value: Double): Self = this.set("radius", value.asInstanceOf[js.Any])
+    def setZmax(value: Double): Self = this.set("zmax", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRadius: Self = this.set("radius", js.undefined)
+    def setZmin(value: Double): Self = this.set("zmin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSideOrientation(value: Double): Self = this.set("sideOrientation", value.asInstanceOf[js.Any])
+    def setPrecision(value: H): Self = this.set("precision", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteSideOrientation: Self = this.set("sideOrientation", js.undefined)
+    def deletePrecision: Self = this.set("precision", js.undefined)
     
     @scala.inline
-    def setSubdivisions(value: Double): Self = this.set("subdivisions", value.asInstanceOf[js.Any])
+    def setSubdivisions(value: H): Self = this.set("subdivisions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSubdivisions: Self = this.set("subdivisions", js.undefined)

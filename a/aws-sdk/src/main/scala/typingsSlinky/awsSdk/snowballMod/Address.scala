@@ -13,17 +13,17 @@ trait Address extends js.Object {
   var AddressId: js.UndefOr[typingsSlinky.awsSdk.snowballMod.AddressId] = js.native
   
   /**
-    * The city in an address that a Snowball is to be delivered to.
+    * The city in an address that a Snow device is to be delivered to.
     */
   var City: js.UndefOr[String] = js.native
   
   /**
-    * The name of the company to receive a Snowball at an address.
+    * The name of the company to receive a Snow device at an address.
     */
   var Company: js.UndefOr[String] = js.native
   
   /**
-    * The country in an address that a Snowball is to be delivered to.
+    * The country in an address that a Snow device is to be delivered to.
     */
   var Country: js.UndefOr[String] = js.native
   
@@ -38,17 +38,17 @@ trait Address extends js.Object {
   var Landmark: js.UndefOr[String] = js.native
   
   /**
-    * The name of a person to receive a Snowball at an address.
+    * The name of a person to receive a Snow device at an address.
     */
   var Name: js.UndefOr[String] = js.native
   
   /**
-    * The phone number associated with an address that a Snowball is to be delivered to.
+    * The phone number associated with an address that a Snow device is to be delivered to.
     */
   var PhoneNumber: js.UndefOr[String] = js.native
   
   /**
-    * The postal code in an address that a Snowball is to be delivered to.
+    * The postal code in an address that a Snow device is to be delivered to.
     */
   var PostalCode: js.UndefOr[String] = js.native
   
@@ -58,22 +58,22 @@ trait Address extends js.Object {
   var PrefectureOrDistrict: js.UndefOr[String] = js.native
   
   /**
-    * The state or province in an address that a Snowball is to be delivered to.
+    * The state or province in an address that a Snow device is to be delivered to.
     */
   var StateOrProvince: js.UndefOr[String] = js.native
   
   /**
-    * The first line in a street address that a Snowball is to be delivered to.
+    * The first line in a street address that a Snow device is to be delivered to.
     */
   var Street1: js.UndefOr[String] = js.native
   
   /**
-    * The second line in a street address that a Snowball is to be delivered to.
+    * The second line in a street address that a Snow device is to be delivered to.
     */
   var Street2: js.UndefOr[String] = js.native
   
   /**
-    * The third line in a street address that a Snowball is to be delivered to.
+    * The third line in a street address that a Snow device is to be delivered to.
     */
   var Street3: js.UndefOr[String] = js.native
 }

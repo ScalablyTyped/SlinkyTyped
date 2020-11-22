@@ -1,5 +1,6 @@
 package typingsSlinky.docxTemplates.typesMod
 
+import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Image extends js.Object {
   
-  var data: js.typedarray.ArrayBuffer | String = js.native
+  var data: Buffer | js.typedarray.ArrayBuffer | String = js.native
   
-  var extension: String = js.native
+  var extension: ImageExtension = js.native
 }
 object Image {
   
   @scala.inline
-  def apply(data: js.typedarray.ArrayBuffer | String, extension: String): Image = {
+  def apply(data: Buffer | js.typedarray.ArrayBuffer | String, extension: ImageExtension): Image = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], extension = extension.asInstanceOf[js.Any])
     __obj.asInstanceOf[Image]
   }
@@ -38,9 +39,9 @@ object Image {
     def setDataArrayBuffer(value: js.typedarray.ArrayBuffer): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setData(value: js.typedarray.ArrayBuffer | String): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: Buffer | js.typedarray.ArrayBuffer | String): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExtension(value: String): Self = this.set("extension", value.asInstanceOf[js.Any])
+    def setExtension(value: ImageExtension): Self = this.set("extension", value.asInstanceOf[js.Any])
   }
 }

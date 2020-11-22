@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-navigation-stack/lib/typescript/src/vendor/views/GestureHandler.native", JSImport.Namespace)
+@JSImport("react-navigation-stack/lib/typescript/src/vendor/views/GestureHandlerNative", JSImport.Namespace)
 @js.native
 object gestureHandlerNativeMod extends js.Object {
   

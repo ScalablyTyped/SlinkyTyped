@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import typingsSlinky.uifabricStyling.ithemeMod.IPartialTheme
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.fluentuiTheme.themeMod.PartialTheme
+import typingsSlinky.fluentuiTheme.themeMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,6 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createTheme extends js.Object {
   
-  def apply(theme: IPartialTheme): ITheme = js.native
-  def apply(theme: IPartialTheme, depComments: Boolean): ITheme = js.native
+  def apply(): Theme = js.native
+  def apply(theme: js.UndefOr[scala.Nothing], depComments: Boolean): Theme = js.native
+  def apply(theme: PartialTheme): Theme = js.native
+  def apply(theme: PartialTheme, depComments: Boolean): Theme = js.native
 }

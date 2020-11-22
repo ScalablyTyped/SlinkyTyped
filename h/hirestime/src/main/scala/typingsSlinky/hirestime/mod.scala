@@ -8,12 +8,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def apply(): getElapsed = js.native
+  def default(): Elapsor = js.native
+  
+  def hiresTimeBrowserDate(): Elapsor = js.native
+  
+  def hiresTimeBrowserPerformance(): Elapsor = js.native
+  
+  def hirestimeNode(): Elapsor = js.native
   
   @js.native
-  trait getElapsed extends js.Object {
+  trait Elapsor extends js.Object {
     
     def apply(): Double = js.native
+    
+    def microseconds(): Double = js.native
     
     def milliseconds(): Double = js.native
     
@@ -26,5 +34,9 @@ object mod extends js.Object {
     def s(): Double = js.native
     
     def seconds(): Double = js.native
+    
+    def startedAt(): Double = js.native
+    
+    def us(): Double = js.native
   }
 }

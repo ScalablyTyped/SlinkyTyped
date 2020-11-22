@@ -1,0 +1,68 @@
+package typingsSlinky.typeorm
+
+import typingsSlinky.typeorm.anon.ArgsRelationIdMetadataArgs
+import typingsSlinky.typeorm.entityMetadataMod.EntityMetadata
+import typingsSlinky.typeorm.objectLiteralMod.ObjectLiteral
+import typingsSlinky.typeorm.relationMetadataMod.RelationMetadata
+import typingsSlinky.typeorm.selectQueryBuilderMod.SelectQueryBuilder
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@JSImport("typeorm/browser/metadata/RelationIdMetadata", JSImport.Namespace)
+@js.native
+object relationIdMetadataMod extends js.Object {
+  
+  @js.native
+  class RelationIdMetadata protected () extends js.Object {
+    def this(options: ArgsRelationIdMetadataArgs) = this()
+    
+    /**
+      * Alias of the joined (destination) table.
+      */
+    var alias: js.UndefOr[String] = js.native
+    
+    /**
+      * Builds some depend relation id properties.
+      * This builder method should be used only after entity metadata, its properties map and all relations are build.
+      */
+    def build(): Unit = js.native
+    
+    /**
+      * Entity metadata where this column metadata is.
+      */
+    var entityMetadata: EntityMetadata = js.native
+    
+    /**
+      * Target's property name to which this metadata is applied.
+      */
+    var propertyName: String = js.native
+    
+    /**
+      * Extra condition applied to "ON" section of join.
+      */
+    var queryBuilderFactory: js.UndefOr[js.Function1[/* qb */ SelectQueryBuilder[_], SelectQueryBuilder[_]]] = js.native
+    
+    /**
+      * Relation from which ids will be extracted.
+      */
+    var relation: RelationMetadata = js.native
+    
+    /**
+      * Relation name which need to count.
+      */
+    var relationNameOrFactory: String | (js.Function1[/* object */ js.Any, _]) = js.native
+    
+    /**
+      * Sets relation id value from the given entity.
+      *
+      * todo: make it to work in embeds as well.
+      */
+    def setValue(entity: ObjectLiteral): Unit = js.native
+    
+    /**
+      * Target class to which metadata is applied.
+      */
+    var target: js.Function | String = js.native
+  }
+}

@@ -28,11 +28,15 @@ trait RaxConfig extends js.Object {
   
   var data: js.UndefOr[js.Any] = js.native
   
+  var decompress: js.UndefOr[Boolean] = js.native
+  
   var headers: js.UndefOr[js.Any] = js.native
   
   var httpAgent: js.UndefOr[js.Any] = js.native
   
   var httpsAgent: js.UndefOr[js.Any] = js.native
+  
+  var maxBodyLength: js.UndefOr[Double] = js.native
   
   var maxContentLength: js.UndefOr[Double] = js.native
   
@@ -66,7 +70,7 @@ trait RaxConfig extends js.Object {
   
   var url: js.UndefOr[String] = js.native
   
-  var validateStatus: js.UndefOr[js.Function1[/* status */ Double, Boolean]] = js.native
+  var validateStatus: js.UndefOr[(js.Function1[/* status */ Double, Boolean]) | Null] = js.native
   
   var withCredentials: js.UndefOr[Boolean] = js.native
   
@@ -131,6 +135,12 @@ object RaxConfig {
     def deleteData: Self = this.set("data", js.undefined)
     
     @scala.inline
+    def setDecompress(value: Boolean): Self = this.set("decompress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDecompress: Self = this.set("decompress", js.undefined)
+    
+    @scala.inline
     def setHeaders(value: js.Any): Self = this.set("headers", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -147,6 +157,12 @@ object RaxConfig {
     
     @scala.inline
     def deleteHttpsAgent: Self = this.set("httpsAgent", js.undefined)
+    
+    @scala.inline
+    def setMaxBodyLength(value: Double): Self = this.set("maxBodyLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxBodyLength: Self = this.set("maxBodyLength", js.undefined)
     
     @scala.inline
     def setMaxContentLength(value: Double): Self = this.set("maxContentLength", value.asInstanceOf[js.Any])
@@ -258,6 +274,9 @@ object RaxConfig {
     
     @scala.inline
     def deleteValidateStatus: Self = this.set("validateStatus", js.undefined)
+    
+    @scala.inline
+    def setValidateStatusNull: Self = this.set("validateStatus", null)
     
     @scala.inline
     def setWithCredentials(value: Boolean): Self = this.set("withCredentials", value.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.graphqlPlaygroundHtml.renderPlaygroundPageMod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,6 +29,18 @@ trait ISettings extends js.Object {
   @JSName("request.credentials")
   var requestDotcredentials: String = js.native
   
+  @JSName("request.globalHeaders")
+  var requestDotglobalHeaders: StringDictionary[String] = js.native
+  
+  @JSName("schema.polling.enable")
+  var schemaDotpollingDotenable: Boolean = js.native
+  
+  @JSName("schema.polling.endpointFilter")
+  var schemaDotpollingDotendpointFilter: String = js.native
+  
+  @JSName("schema.polling.interval")
+  var schemaDotpollingDotinterval: Double = js.native
+  
   @JSName("tracing.hideTracingResponse")
   var tracingDothideTracingResponse: Boolean = js.native
   
@@ -45,6 +58,10 @@ object ISettings {
     editorDottheme: Theme,
     generalDotbetaUpdates: Boolean,
     requestDotcredentials: String,
+    requestDotglobalHeaders: StringDictionary[String],
+    schemaDotpollingDotenable: Boolean,
+    schemaDotpollingDotendpointFilter: String,
+    schemaDotpollingDotinterval: Double,
     tracingDothideTracingResponse: Boolean,
     tracingDottracingSupported: Boolean
   ): ISettings = {
@@ -56,6 +73,10 @@ object ISettings {
     __obj.updateDynamic("editor.theme")(editorDottheme.asInstanceOf[js.Any])
     __obj.updateDynamic("general.betaUpdates")(generalDotbetaUpdates.asInstanceOf[js.Any])
     __obj.updateDynamic("request.credentials")(requestDotcredentials.asInstanceOf[js.Any])
+    __obj.updateDynamic("request.globalHeaders")(requestDotglobalHeaders.asInstanceOf[js.Any])
+    __obj.updateDynamic("schema.polling.enable")(schemaDotpollingDotenable.asInstanceOf[js.Any])
+    __obj.updateDynamic("schema.polling.endpointFilter")(schemaDotpollingDotendpointFilter.asInstanceOf[js.Any])
+    __obj.updateDynamic("schema.polling.interval")(schemaDotpollingDotinterval.asInstanceOf[js.Any])
     __obj.updateDynamic("tracing.hideTracingResponse")(tracingDothideTracingResponse.asInstanceOf[js.Any])
     __obj.updateDynamic("tracing.tracingSupported")(tracingDottracingSupported.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISettings]
@@ -96,6 +117,18 @@ object ISettings {
     
     @scala.inline
     def setRequestDotcredentials(value: String): Self = this.set("request.credentials", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRequestDotglobalHeaders(value: StringDictionary[String]): Self = this.set("request.globalHeaders", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSchemaDotpollingDotenable(value: Boolean): Self = this.set("schema.polling.enable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSchemaDotpollingDotendpointFilter(value: String): Self = this.set("schema.polling.endpointFilter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSchemaDotpollingDotinterval(value: Double): Self = this.set("schema.polling.interval", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTracingDothideTracingResponse(value: Boolean): Self = this.set("tracing.hideTracingResponse", value.asInstanceOf[js.Any])

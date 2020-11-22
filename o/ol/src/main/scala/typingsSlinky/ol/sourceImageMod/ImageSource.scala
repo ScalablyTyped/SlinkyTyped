@@ -29,6 +29,9 @@ trait ImageSource
     projection: typingsSlinky.ol.projectionMod.default
   ): typingsSlinky.ol.imageBaseMod.default = js.native
   
+  /**
+    * Handle image change events.
+    */
   /* protected */ def handleImageChange(event: typingsSlinky.ol.eventMod.default): Unit = js.native
   
   @JSName("on")

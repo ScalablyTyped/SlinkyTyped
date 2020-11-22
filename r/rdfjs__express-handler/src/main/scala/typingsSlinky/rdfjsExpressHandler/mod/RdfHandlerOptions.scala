@@ -1,10 +1,12 @@
 package typingsSlinky.rdfjsExpressHandler.mod
 
+import typingsSlinky.express.mod.Request_
+import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
+import typingsSlinky.expressServeStaticCore.mod.Query
 import typingsSlinky.rdfJs.mod.DatasetCore
 import typingsSlinky.rdfJs.mod.DatasetCoreFactory
 import typingsSlinky.rdfJs.mod.Quad
 import typingsSlinky.rdfjsExpressHandler.anon.Parsers
-import typingsSlinky.rdfjsExpressHandler.mod.expressAugmentingMod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,7 +46,7 @@ object RdfHandlerOptions {
     }
     
     @scala.inline
-    def setBaseIriFromRequestFunction1(value: /* req */ Request => js.Promise[String] | String): Self = this.set("baseIriFromRequest", js.Any.fromFunction1(value))
+    def setBaseIriFromRequestFunction1(value: /* req */ Request_[ParamsDictionary, js.Any, js.Any, Query] => js.Promise[String] | String): Self = this.set("baseIriFromRequest", js.Any.fromFunction1(value))
     
     @scala.inline
     def setBaseIriFromRequest(value: Boolean | BaseIriFromRequest): Self = this.set("baseIriFromRequest", value.asInstanceOf[js.Any])

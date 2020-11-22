@@ -14,8 +14,6 @@ trait colorCreatePCTrueColorRendererParams extends Object {
     * The number of points per inch in the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-color.html#createPCTrueColorRenderer)
-    *
-    * @default 25
     */
   var density: js.UndefOr[Double] = js.native
   
@@ -27,18 +25,16 @@ trait colorCreatePCTrueColorRendererParams extends Object {
   var layer: PointCloudLayer = js.native
   
   /**
-    * Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+    * Allows for cancelable requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-color.html#createPCTrueColorRenderer)
     */
   var signal: js.UndefOr[AbortSignal] = js.native
   
   /**
-    * The size of each point expressed as a percentage. This value will determine point sizes scaled based on the given `density` of points. When the value is `100%`, the size of each point is set so that it minimizes the number of gaps between neighboring points. Any value above `100%` will allow for points to overlap neighboring points scaled to the given value. Values below `100%` scale point sizes smaller so there appear to be more gaps between points.
+    * The size of each point expressed as a percentage.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-color.html#createPCTrueColorRenderer)
-    *
-    * @default 100%
     */
   var size: js.UndefOr[String] = js.native
 }

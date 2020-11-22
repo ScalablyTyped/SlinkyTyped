@@ -9972,6 +9972,73 @@ trait JQuery_[TElement]
   def parent(): this.type = js.native
   def parent(selector: Selector): this.type = js.native
   
+  def parents(): this.type = js.native
+  def parents(selector: Selector): this.type = js.native
+  
+  /**
+    * Get the ancestors of each element in the current set of matched elements, up to but not including the element matched by the selector, DOM node, or jQuery object.
+    * @param selector_element _&#x40;param_ `selector_element`
+    * <br>
+    * * `selector` — A string containing a selector expression to indicate where to stop matching ancestor elements. <br>
+    * * `element` — A DOM node or jQuery object indicating where to stop matching ancestor elements.
+    * @param filter A string containing a selector expression to match elements against.
+    * @see \`{@link https://api.jquery.com/parentsUntil/ }\`
+    * @since 1.4
+    * @since 1.6
+    * @example ​ ````Find the ancestors of &lt;li class=&quot;item-a&quot;&gt; up to &lt;ul class=&quot;level-1&quot;&gt; and give them a red background color. Also, find ancestors of &lt;li class=&quot;item-2&quot;&gt; that have a class of &quot;yes&quot; up to &lt;ul class=&quot;level-1&quot;&gt; and give them a green border.
+  ```html
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>parentsUntil demo</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+  ​
+  <ul class="level-1 yes">
+    <li class="item-i">I</li>
+    <li class="item-ii">II
+    <ul class="level-2 yes">
+    <li class="item-a">A</li>
+    <li class="item-b">B
+    <ul class="level-3">
+    <li class="item-1">1</li>
+    <li class="item-2">2</li>
+    <li class="item-3">3</li>
+    </ul>
+    </li>
+    <li class="item-c">C</li>
+    </ul>
+    </li>
+    <li class="item-iii">III</li>
+  </ul>
+  ​
+  <script>
+  $( "li.item-a" )
+    .parentsUntil( ".level-1" )
+    .css( "background-color", "red" );
+  ​
+  $( "li.item-2" )
+    .parentsUntil( $( "ul.level-1" ), ".yes" )
+    .css( "border", "3px solid green" );
+  </script>
+  ​
+  </body>
+  </html>
+  ```
+    */
+  def parentsUntil(): this.type = js.native
+  def parentsUntil(selector_element: js.UndefOr[scala.Nothing], filter: Selector): this.type = js.native
+  def parentsUntil(selector_element: JQuery[HTMLElement]): this.type = js.native
+  def parentsUntil(selector_element: Selector): this.type = js.native
+  def parentsUntil(selector_element: Selector, filter: Selector): this.type = js.native
+  def parentsUntil(selector_element: JQuery[HTMLElement], filter: Selector): this.type = js.native
+  def parentsUntil(selector_element: Element): this.type = js.native
+  def parentsUntil(selector_element: Element, filter: Selector): this.type = js.native
+  
+  @JSName("parents")
+  def parents_a(selector: JQuery[a]): JQuery[HTMLAnchorElement] = js.native
   /**
     * Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector.
     * @param selector A string containing a selector expression to match elements against.
@@ -10083,70 +10150,692 @@ trait JQuery_[TElement]
   </html>
   ```
     */
-  def parents(): this.type = js.native
-  def parents(selector: Selector): this.type = js.native
-  
-  /**
-    * Get the ancestors of each element in the current set of matched elements, up to but not including the element matched by the selector, DOM node, or jQuery object.
-    * @param selector_element _&#x40;param_ `selector_element`
-    * <br>
-    * * `selector` — A string containing a selector expression to indicate where to stop matching ancestor elements. <br>
-    * * `element` — A DOM node or jQuery object indicating where to stop matching ancestor elements.
-    * @param filter A string containing a selector expression to match elements against.
-    * @see \`{@link https://api.jquery.com/parentsUntil/ }\`
-    * @since 1.4
-    * @since 1.6
-    * @example ​ ````Find the ancestors of &lt;li class=&quot;item-a&quot;&gt; up to &lt;ul class=&quot;level-1&quot;&gt; and give them a red background color. Also, find ancestors of &lt;li class=&quot;item-2&quot;&gt; that have a class of &quot;yes&quot; up to &lt;ul class=&quot;level-1&quot;&gt; and give them a green border.
-  ```html
-  <!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>parentsUntil demo</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  </head>
-  <body>
-  ​
-  <ul class="level-1 yes">
-    <li class="item-i">I</li>
-    <li class="item-ii">II
-    <ul class="level-2 yes">
-    <li class="item-a">A</li>
-    <li class="item-b">B
-    <ul class="level-3">
-    <li class="item-1">1</li>
-    <li class="item-2">2</li>
-    <li class="item-3">3</li>
-    </ul>
-    </li>
-    <li class="item-c">C</li>
-    </ul>
-    </li>
-    <li class="item-iii">III</li>
-  </ul>
-  ​
-  <script>
-  $( "li.item-a" )
-    .parentsUntil( ".level-1" )
-    .css( "background-color", "red" );
-  ​
-  $( "li.item-2" )
-    .parentsUntil( $( "ul.level-1" ), ".yes" )
-    .css( "border", "3px solid green" );
-  </script>
-  ​
-  </body>
-  </html>
-  ```
-    */
-  def parentsUntil(): this.type = js.native
-  def parentsUntil(selector_element: js.UndefOr[scala.Nothing], filter: Selector): this.type = js.native
-  def parentsUntil(selector_element: JQuery[HTMLElement]): this.type = js.native
-  def parentsUntil(selector_element: Selector): this.type = js.native
-  def parentsUntil(selector_element: Selector, filter: Selector): this.type = js.native
-  def parentsUntil(selector_element: JQuery[HTMLElement], filter: Selector): this.type = js.native
-  def parentsUntil(selector_element: Element): this.type = js.native
-  def parentsUntil(selector_element: Element, filter: Selector): this.type = js.native
+  @JSName("parents")
+  def parents_a(selector: a): JQuery[HTMLAnchorElement] = js.native
+  @JSName("parents")
+  def parents_abbr(selector: JQuery[abbr]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_abbr(selector: abbr): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_address(selector: JQuery[address]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_address(selector: address): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_applet(selector: JQuery[applet]): JQuery[HTMLAppletElement] = js.native
+  @JSName("parents")
+  def parents_applet(selector: applet): JQuery[HTMLAppletElement] = js.native
+  @JSName("parents")
+  def parents_area(selector: JQuery[area]): JQuery[HTMLAreaElement] = js.native
+  @JSName("parents")
+  def parents_area(selector: area): JQuery[HTMLAreaElement] = js.native
+  @JSName("parents")
+  def parents_article(selector: JQuery[article]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_article(selector: article): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_aside(selector: JQuery[aside]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_aside(selector: aside): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_audio(selector: JQuery[audio]): JQuery[HTMLAudioElement] = js.native
+  @JSName("parents")
+  def parents_audio(selector: audio): JQuery[HTMLAudioElement] = js.native
+  @JSName("parents")
+  def parents_b(selector: JQuery[b]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_b(selector: b): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_base(selector: JQuery[base]): JQuery[HTMLBaseElement] = js.native
+  @JSName("parents")
+  def parents_base(selector: base): JQuery[HTMLBaseElement] = js.native
+  @JSName("parents")
+  def parents_basefont(selector: JQuery[basefont]): JQuery[HTMLBaseFontElement] = js.native
+  @JSName("parents")
+  def parents_basefont(selector: basefont): JQuery[HTMLBaseFontElement] = js.native
+  @JSName("parents")
+  def parents_bdi(selector: JQuery[bdi]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_bdi(selector: bdi): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_bdo(selector: JQuery[bdo]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_bdo(selector: bdo): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_blockquote(selector: JQuery[blockquote]): JQuery[HTMLQuoteElement] = js.native
+  @JSName("parents")
+  def parents_blockquote(selector: blockquote): JQuery[HTMLQuoteElement] = js.native
+  @JSName("parents")
+  def parents_body(selector: JQuery[body]): JQuery[HTMLBodyElement] = js.native
+  @JSName("parents")
+  def parents_body(selector: body): JQuery[HTMLBodyElement] = js.native
+  @JSName("parents")
+  def parents_br(selector: JQuery[br]): JQuery[HTMLBRElement] = js.native
+  @JSName("parents")
+  def parents_br(selector: br): JQuery[HTMLBRElement] = js.native
+  @JSName("parents")
+  def parents_button(selector: JQuery[button]): JQuery[HTMLButtonElement] = js.native
+  @JSName("parents")
+  def parents_button(selector: button): JQuery[HTMLButtonElement] = js.native
+  @JSName("parents")
+  def parents_canvas(selector: JQuery[canvas]): JQuery[HTMLCanvasElement] = js.native
+  @JSName("parents")
+  def parents_canvas(selector: canvas): JQuery[HTMLCanvasElement] = js.native
+  @JSName("parents")
+  def parents_caption(selector: JQuery[caption]): JQuery[HTMLTableCaptionElement] = js.native
+  @JSName("parents")
+  def parents_caption(selector: caption): JQuery[HTMLTableCaptionElement] = js.native
+  @JSName("parents")
+  def parents_circle(selector: JQuery[circle]): JQuery[SVGCircleElement] = js.native
+  @JSName("parents")
+  def parents_circle(selector: circle): JQuery[SVGCircleElement] = js.native
+  @JSName("parents")
+  def parents_cite(selector: JQuery[cite]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_cite(selector: cite): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_clipPath(selector: JQuery[clipPath]): JQuery[SVGClipPathElement] = js.native
+  @JSName("parents")
+  def parents_clipPath(selector: clipPath): JQuery[SVGClipPathElement] = js.native
+  @JSName("parents")
+  def parents_code(selector: JQuery[code]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_code(selector: code): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_col(selector: JQuery[col]): JQuery[HTMLTableColElement] = js.native
+  @JSName("parents")
+  def parents_col(selector: col): JQuery[HTMLTableColElement] = js.native
+  @JSName("parents")
+  def parents_colgroup(selector: JQuery[colgroup]): JQuery[HTMLTableColElement] = js.native
+  @JSName("parents")
+  def parents_colgroup(selector: colgroup): JQuery[HTMLTableColElement] = js.native
+  @JSName("parents")
+  def parents_data(selector: JQuery[data]): JQuery[HTMLDataElement] = js.native
+  @JSName("parents")
+  def parents_data(selector: data): JQuery[HTMLDataElement] = js.native
+  @JSName("parents")
+  def parents_datalist(selector: JQuery[datalist]): JQuery[HTMLDataListElement] = js.native
+  @JSName("parents")
+  def parents_datalist(selector: datalist): JQuery[HTMLDataListElement] = js.native
+  @JSName("parents")
+  def parents_dd(selector: JQuery[dd]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_dd(selector: dd): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_defs(selector: JQuery[defs]): JQuery[SVGDefsElement] = js.native
+  @JSName("parents")
+  def parents_defs(selector: defs): JQuery[SVGDefsElement] = js.native
+  @JSName("parents")
+  def parents_del(selector: JQuery[del]): JQuery[HTMLModElement] = js.native
+  @JSName("parents")
+  def parents_del(selector: del): JQuery[HTMLModElement] = js.native
+  @JSName("parents")
+  def parents_desc(selector: JQuery[desc]): JQuery[SVGDescElement] = js.native
+  @JSName("parents")
+  def parents_desc(selector: desc): JQuery[SVGDescElement] = js.native
+  @JSName("parents")
+  def parents_details(selector: JQuery[details]): JQuery[HTMLDetailsElement] = js.native
+  @JSName("parents")
+  def parents_details(selector: details): JQuery[HTMLDetailsElement] = js.native
+  @JSName("parents")
+  def parents_dfn(selector: JQuery[dfn]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_dfn(selector: dfn): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_dialog(selector: JQuery[dialog]): JQuery[HTMLDialogElement] = js.native
+  @JSName("parents")
+  def parents_dialog(selector: dialog): JQuery[HTMLDialogElement] = js.native
+  @JSName("parents")
+  def parents_dir(selector: JQuery[dir]): JQuery[HTMLDirectoryElement] = js.native
+  @JSName("parents")
+  def parents_dir(selector: dir): JQuery[HTMLDirectoryElement] = js.native
+  @JSName("parents")
+  def parents_div(selector: JQuery[div]): JQuery[HTMLDivElement] = js.native
+  @JSName("parents")
+  def parents_div(selector: div): JQuery[HTMLDivElement] = js.native
+  @JSName("parents")
+  def parents_dl(selector: JQuery[dl]): JQuery[HTMLDListElement] = js.native
+  @JSName("parents")
+  def parents_dl(selector: dl): JQuery[HTMLDListElement] = js.native
+  @JSName("parents")
+  def parents_dt(selector: JQuery[dt]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_dt(selector: dt): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_ellipse(selector: JQuery[ellipse]): JQuery[SVGEllipseElement] = js.native
+  @JSName("parents")
+  def parents_ellipse(selector: ellipse): JQuery[SVGEllipseElement] = js.native
+  @JSName("parents")
+  def parents_em(selector: JQuery[em]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_em(selector: em): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_embed(selector: JQuery[embed]): JQuery[HTMLEmbedElement] = js.native
+  @JSName("parents")
+  def parents_embed(selector: embed): JQuery[HTMLEmbedElement] = js.native
+  @JSName("parents")
+  def parents_feBlend(selector: JQuery[feBlend]): JQuery[SVGFEBlendElement] = js.native
+  @JSName("parents")
+  def parents_feBlend(selector: feBlend): JQuery[SVGFEBlendElement] = js.native
+  @JSName("parents")
+  def parents_feColorMatrix(selector: JQuery[feColorMatrix]): JQuery[SVGFEColorMatrixElement] = js.native
+  @JSName("parents")
+  def parents_feColorMatrix(selector: feColorMatrix): JQuery[SVGFEColorMatrixElement] = js.native
+  @JSName("parents")
+  def parents_feComponentTransfer(selector: JQuery[feComponentTransfer]): JQuery[SVGFEComponentTransferElement] = js.native
+  @JSName("parents")
+  def parents_feComponentTransfer(selector: feComponentTransfer): JQuery[SVGFEComponentTransferElement] = js.native
+  @JSName("parents")
+  def parents_feComposite(selector: JQuery[feComposite]): JQuery[SVGFECompositeElement] = js.native
+  @JSName("parents")
+  def parents_feComposite(selector: feComposite): JQuery[SVGFECompositeElement] = js.native
+  @JSName("parents")
+  def parents_feConvolveMatrix(selector: JQuery[feConvolveMatrix]): JQuery[SVGFEConvolveMatrixElement] = js.native
+  @JSName("parents")
+  def parents_feConvolveMatrix(selector: feConvolveMatrix): JQuery[SVGFEConvolveMatrixElement] = js.native
+  @JSName("parents")
+  def parents_feDiffuseLighting(selector: JQuery[feDiffuseLighting]): JQuery[SVGFEDiffuseLightingElement] = js.native
+  @JSName("parents")
+  def parents_feDiffuseLighting(selector: feDiffuseLighting): JQuery[SVGFEDiffuseLightingElement] = js.native
+  @JSName("parents")
+  def parents_feDisplacementMap(selector: JQuery[feDisplacementMap]): JQuery[SVGFEDisplacementMapElement] = js.native
+  @JSName("parents")
+  def parents_feDisplacementMap(selector: feDisplacementMap): JQuery[SVGFEDisplacementMapElement] = js.native
+  @JSName("parents")
+  def parents_feDistantLight(selector: JQuery[feDistantLight]): JQuery[SVGFEDistantLightElement] = js.native
+  @JSName("parents")
+  def parents_feDistantLight(selector: feDistantLight): JQuery[SVGFEDistantLightElement] = js.native
+  @JSName("parents")
+  def parents_feFlood(selector: JQuery[feFlood]): JQuery[SVGFEFloodElement] = js.native
+  @JSName("parents")
+  def parents_feFlood(selector: feFlood): JQuery[SVGFEFloodElement] = js.native
+  @JSName("parents")
+  def parents_feFuncA(selector: JQuery[feFuncA]): JQuery[SVGFEFuncAElement] = js.native
+  @JSName("parents")
+  def parents_feFuncA(selector: feFuncA): JQuery[SVGFEFuncAElement] = js.native
+  @JSName("parents")
+  def parents_feFuncB(selector: JQuery[feFuncB]): JQuery[SVGFEFuncBElement] = js.native
+  @JSName("parents")
+  def parents_feFuncB(selector: feFuncB): JQuery[SVGFEFuncBElement] = js.native
+  @JSName("parents")
+  def parents_feFuncG(selector: JQuery[feFuncG]): JQuery[SVGFEFuncGElement] = js.native
+  @JSName("parents")
+  def parents_feFuncG(selector: feFuncG): JQuery[SVGFEFuncGElement] = js.native
+  @JSName("parents")
+  def parents_feFuncR(selector: JQuery[feFuncR]): JQuery[SVGFEFuncRElement] = js.native
+  @JSName("parents")
+  def parents_feFuncR(selector: feFuncR): JQuery[SVGFEFuncRElement] = js.native
+  @JSName("parents")
+  def parents_feGaussianBlur(selector: JQuery[feGaussianBlur]): JQuery[SVGFEGaussianBlurElement] = js.native
+  @JSName("parents")
+  def parents_feGaussianBlur(selector: feGaussianBlur): JQuery[SVGFEGaussianBlurElement] = js.native
+  @JSName("parents")
+  def parents_feImage(selector: JQuery[feImage]): JQuery[SVGFEImageElement] = js.native
+  @JSName("parents")
+  def parents_feImage(selector: feImage): JQuery[SVGFEImageElement] = js.native
+  @JSName("parents")
+  def parents_feMerge(selector: JQuery[feMerge]): JQuery[SVGFEMergeElement] = js.native
+  @JSName("parents")
+  def parents_feMerge(selector: feMerge): JQuery[SVGFEMergeElement] = js.native
+  @JSName("parents")
+  def parents_feMergeNode(selector: JQuery[feMergeNode]): JQuery[SVGFEMergeNodeElement] = js.native
+  @JSName("parents")
+  def parents_feMergeNode(selector: feMergeNode): JQuery[SVGFEMergeNodeElement] = js.native
+  @JSName("parents")
+  def parents_feMorphology(selector: JQuery[feMorphology]): JQuery[SVGFEMorphologyElement] = js.native
+  @JSName("parents")
+  def parents_feMorphology(selector: feMorphology): JQuery[SVGFEMorphologyElement] = js.native
+  @JSName("parents")
+  def parents_feOffset(selector: JQuery[feOffset]): JQuery[SVGFEOffsetElement] = js.native
+  @JSName("parents")
+  def parents_feOffset(selector: feOffset): JQuery[SVGFEOffsetElement] = js.native
+  @JSName("parents")
+  def parents_fePointLight(selector: JQuery[fePointLight]): JQuery[SVGFEPointLightElement] = js.native
+  @JSName("parents")
+  def parents_fePointLight(selector: fePointLight): JQuery[SVGFEPointLightElement] = js.native
+  @JSName("parents")
+  def parents_feSpecularLighting(selector: JQuery[feSpecularLighting]): JQuery[SVGFESpecularLightingElement] = js.native
+  @JSName("parents")
+  def parents_feSpecularLighting(selector: feSpecularLighting): JQuery[SVGFESpecularLightingElement] = js.native
+  @JSName("parents")
+  def parents_feSpotLight(selector: JQuery[feSpotLight]): JQuery[SVGFESpotLightElement] = js.native
+  @JSName("parents")
+  def parents_feSpotLight(selector: feSpotLight): JQuery[SVGFESpotLightElement] = js.native
+  @JSName("parents")
+  def parents_feTile(selector: JQuery[feTile]): JQuery[SVGFETileElement] = js.native
+  @JSName("parents")
+  def parents_feTile(selector: feTile): JQuery[SVGFETileElement] = js.native
+  @JSName("parents")
+  def parents_feTurbulence(selector: JQuery[feTurbulence]): JQuery[SVGFETurbulenceElement] = js.native
+  @JSName("parents")
+  def parents_feTurbulence(selector: feTurbulence): JQuery[SVGFETurbulenceElement] = js.native
+  @JSName("parents")
+  def parents_fieldset(selector: JQuery[fieldset]): JQuery[HTMLFieldSetElement] = js.native
+  @JSName("parents")
+  def parents_fieldset(selector: fieldset): JQuery[HTMLFieldSetElement] = js.native
+  @JSName("parents")
+  def parents_figcaption(selector: JQuery[figcaption]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_figcaption(selector: figcaption): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_figure(selector: JQuery[figure]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_figure(selector: figure): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_filter(selector: JQuery[filter]): JQuery[SVGFilterElement] = js.native
+  @JSName("parents")
+  def parents_filter(selector: filter): JQuery[SVGFilterElement] = js.native
+  @JSName("parents")
+  def parents_font(selector: JQuery[font]): JQuery[HTMLFontElement] = js.native
+  @JSName("parents")
+  def parents_font(selector: font): JQuery[HTMLFontElement] = js.native
+  @JSName("parents")
+  def parents_footer(selector: JQuery[footer]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_footer(selector: footer): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_foreignObject(selector: JQuery[foreignObject]): JQuery[SVGForeignObjectElement] = js.native
+  @JSName("parents")
+  def parents_foreignObject(selector: foreignObject): JQuery[SVGForeignObjectElement] = js.native
+  @JSName("parents")
+  def parents_form(selector: JQuery[form]): JQuery[HTMLFormElement] = js.native
+  @JSName("parents")
+  def parents_form(selector: form): JQuery[HTMLFormElement] = js.native
+  @JSName("parents")
+  def parents_frame(selector: JQuery[frame]): JQuery[HTMLFrameElement] = js.native
+  @JSName("parents")
+  def parents_frame(selector: frame): JQuery[HTMLFrameElement] = js.native
+  @JSName("parents")
+  def parents_frameset(selector: JQuery[frameset]): JQuery[HTMLFrameSetElement] = js.native
+  @JSName("parents")
+  def parents_frameset(selector: frameset): JQuery[HTMLFrameSetElement] = js.native
+  @JSName("parents")
+  def parents_g(selector: JQuery[g]): JQuery[SVGGElement] = js.native
+  @JSName("parents")
+  def parents_g(selector: g): JQuery[SVGGElement] = js.native
+  @JSName("parents")
+  def parents_h1(selector: JQuery[h1]): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h1(selector: h1): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h2(selector: JQuery[h2]): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h2(selector: h2): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h3(selector: JQuery[h3]): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h3(selector: h3): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h4(selector: JQuery[h4]): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h4(selector: h4): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h5(selector: JQuery[h5]): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h5(selector: h5): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h6(selector: JQuery[h6]): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_h6(selector: h6): JQuery[HTMLHeadingElement] = js.native
+  @JSName("parents")
+  def parents_head(selector: JQuery[head]): JQuery[HTMLHeadElement] = js.native
+  @JSName("parents")
+  def parents_head(selector: head): JQuery[HTMLHeadElement] = js.native
+  @JSName("parents")
+  def parents_header(selector: JQuery[header]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_header(selector: header): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_hgroup(selector: JQuery[hgroup]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_hgroup(selector: hgroup): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_hr(selector: JQuery[hr]): JQuery[HTMLHRElement] = js.native
+  @JSName("parents")
+  def parents_hr(selector: hr): JQuery[HTMLHRElement] = js.native
+  @JSName("parents")
+  def parents_html(selector: JQuery[html]): JQuery[HTMLHtmlElement] = js.native
+  @JSName("parents")
+  def parents_html(selector: html): JQuery[HTMLHtmlElement] = js.native
+  @JSName("parents")
+  def parents_i(selector: JQuery[i]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_i(selector: i): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_iframe(selector: JQuery[iframe]): JQuery[HTMLIFrameElement] = js.native
+  @JSName("parents")
+  def parents_iframe(selector: iframe): JQuery[HTMLIFrameElement] = js.native
+  @JSName("parents")
+  def parents_image(selector: JQuery[image]): JQuery[SVGImageElement] = js.native
+  @JSName("parents")
+  def parents_image(selector: image): JQuery[SVGImageElement] = js.native
+  @JSName("parents")
+  def parents_img(selector: JQuery[img]): JQuery[HTMLImageElement] = js.native
+  @JSName("parents")
+  def parents_img(selector: img): JQuery[HTMLImageElement] = js.native
+  @JSName("parents")
+  def parents_input(selector: JQuery[input]): JQuery[HTMLInputElement] = js.native
+  @JSName("parents")
+  def parents_input(selector: input): JQuery[HTMLInputElement] = js.native
+  @JSName("parents")
+  def parents_ins(selector: JQuery[ins]): JQuery[HTMLModElement] = js.native
+  @JSName("parents")
+  def parents_ins(selector: ins): JQuery[HTMLModElement] = js.native
+  @JSName("parents")
+  def parents_kbd(selector: JQuery[kbd]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_kbd(selector: kbd): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_label(selector: JQuery[label]): JQuery[HTMLLabelElement] = js.native
+  @JSName("parents")
+  def parents_label(selector: label): JQuery[HTMLLabelElement] = js.native
+  @JSName("parents")
+  def parents_legend(selector: JQuery[legend]): JQuery[HTMLLegendElement] = js.native
+  @JSName("parents")
+  def parents_legend(selector: legend): JQuery[HTMLLegendElement] = js.native
+  @JSName("parents")
+  def parents_li(selector: JQuery[li]): JQuery[HTMLLIElement] = js.native
+  @JSName("parents")
+  def parents_li(selector: li): JQuery[HTMLLIElement] = js.native
+  @JSName("parents")
+  def parents_line(selector: JQuery[line]): JQuery[SVGLineElement] = js.native
+  @JSName("parents")
+  def parents_line(selector: line): JQuery[SVGLineElement] = js.native
+  @JSName("parents")
+  def parents_linearGradient(selector: JQuery[linearGradient]): JQuery[SVGLinearGradientElement] = js.native
+  @JSName("parents")
+  def parents_linearGradient(selector: linearGradient): JQuery[SVGLinearGradientElement] = js.native
+  @JSName("parents")
+  def parents_link(selector: JQuery[link]): JQuery[HTMLLinkElement] = js.native
+  @JSName("parents")
+  def parents_link(selector: link): JQuery[HTMLLinkElement] = js.native
+  @JSName("parents")
+  def parents_main(selector: JQuery[main]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_main(selector: main): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_map(selector: JQuery[map]): JQuery[HTMLMapElement] = js.native
+  @JSName("parents")
+  def parents_map(selector: map): JQuery[HTMLMapElement] = js.native
+  @JSName("parents")
+  def parents_mark(selector: JQuery[mark]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_mark(selector: mark): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_marker(selector: JQuery[marker]): JQuery[SVGMarkerElement] = js.native
+  @JSName("parents")
+  def parents_marker(selector: marker): JQuery[SVGMarkerElement] = js.native
+  @JSName("parents")
+  def parents_marquee(selector: JQuery[marquee]): JQuery[HTMLMarqueeElement] = js.native
+  @JSName("parents")
+  def parents_marquee(selector: marquee): JQuery[HTMLMarqueeElement] = js.native
+  @JSName("parents")
+  def parents_mask(selector: JQuery[mask]): JQuery[SVGMaskElement] = js.native
+  @JSName("parents")
+  def parents_mask(selector: mask): JQuery[SVGMaskElement] = js.native
+  @JSName("parents")
+  def parents_menu(selector: JQuery[menu]): JQuery[HTMLMenuElement] = js.native
+  @JSName("parents")
+  def parents_menu(selector: menu): JQuery[HTMLMenuElement] = js.native
+  @JSName("parents")
+  def parents_meta(selector: JQuery[meta]): JQuery[HTMLMetaElement] = js.native
+  @JSName("parents")
+  def parents_meta(selector: meta): JQuery[HTMLMetaElement] = js.native
+  @JSName("parents")
+  def parents_metadata(selector: JQuery[metadata]): JQuery[SVGMetadataElement] = js.native
+  @JSName("parents")
+  def parents_metadata(selector: metadata): JQuery[SVGMetadataElement] = js.native
+  @JSName("parents")
+  def parents_meter(selector: JQuery[meter]): JQuery[HTMLMeterElement] = js.native
+  @JSName("parents")
+  def parents_meter(selector: meter): JQuery[HTMLMeterElement] = js.native
+  @JSName("parents")
+  def parents_nav(selector: JQuery[nav]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_nav(selector: nav): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_noscript(selector: JQuery[noscript]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_noscript(selector: noscript): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_object(selector: JQuery[`object`]): JQuery[HTMLObjectElement] = js.native
+  @JSName("parents")
+  def parents_object(selector: `object`): JQuery[HTMLObjectElement] = js.native
+  @JSName("parents")
+  def parents_ol(selector: JQuery[ol]): JQuery[HTMLOListElement] = js.native
+  @JSName("parents")
+  def parents_ol(selector: ol): JQuery[HTMLOListElement] = js.native
+  @JSName("parents")
+  def parents_optgroup(selector: JQuery[optgroup]): JQuery[HTMLOptGroupElement] = js.native
+  @JSName("parents")
+  def parents_optgroup(selector: optgroup): JQuery[HTMLOptGroupElement] = js.native
+  @JSName("parents")
+  def parents_option(selector: JQuery[option]): JQuery[HTMLOptionElement] = js.native
+  @JSName("parents")
+  def parents_option(selector: option): JQuery[HTMLOptionElement] = js.native
+  @JSName("parents")
+  def parents_output(selector: JQuery[output]): JQuery[HTMLOutputElement] = js.native
+  @JSName("parents")
+  def parents_output(selector: output): JQuery[HTMLOutputElement] = js.native
+  @JSName("parents")
+  def parents_p(selector: JQuery[p]): JQuery[HTMLParagraphElement] = js.native
+  @JSName("parents")
+  def parents_p(selector: p): JQuery[HTMLParagraphElement] = js.native
+  @JSName("parents")
+  def parents_param(selector: JQuery[param]): JQuery[HTMLParamElement] = js.native
+  @JSName("parents")
+  def parents_param(selector: param): JQuery[HTMLParamElement] = js.native
+  @JSName("parents")
+  def parents_path(selector: JQuery[path]): JQuery[SVGPathElement] = js.native
+  @JSName("parents")
+  def parents_path(selector: path): JQuery[SVGPathElement] = js.native
+  @JSName("parents")
+  def parents_pattern(selector: JQuery[pattern]): JQuery[SVGPatternElement] = js.native
+  @JSName("parents")
+  def parents_pattern(selector: pattern): JQuery[SVGPatternElement] = js.native
+  @JSName("parents")
+  def parents_picture(selector: JQuery[picture]): JQuery[HTMLPictureElement] = js.native
+  @JSName("parents")
+  def parents_picture(selector: picture): JQuery[HTMLPictureElement] = js.native
+  @JSName("parents")
+  def parents_polygon(selector: JQuery[polygon]): JQuery[SVGPolygonElement] = js.native
+  @JSName("parents")
+  def parents_polygon(selector: polygon): JQuery[SVGPolygonElement] = js.native
+  @JSName("parents")
+  def parents_polyline(selector: JQuery[polyline]): JQuery[SVGPolylineElement] = js.native
+  @JSName("parents")
+  def parents_polyline(selector: polyline): JQuery[SVGPolylineElement] = js.native
+  @JSName("parents")
+  def parents_pre(selector: JQuery[pre]): JQuery[HTMLPreElement] = js.native
+  @JSName("parents")
+  def parents_pre(selector: pre): JQuery[HTMLPreElement] = js.native
+  @JSName("parents")
+  def parents_progress(selector: JQuery[progress]): JQuery[HTMLProgressElement] = js.native
+  @JSName("parents")
+  def parents_progress(selector: progress): JQuery[HTMLProgressElement] = js.native
+  @JSName("parents")
+  def parents_q(selector: JQuery[q]): JQuery[HTMLQuoteElement] = js.native
+  @JSName("parents")
+  def parents_q(selector: q): JQuery[HTMLQuoteElement] = js.native
+  @JSName("parents")
+  def parents_radialGradient(selector: JQuery[radialGradient]): JQuery[SVGRadialGradientElement] = js.native
+  @JSName("parents")
+  def parents_radialGradient(selector: radialGradient): JQuery[SVGRadialGradientElement] = js.native
+  @JSName("parents")
+  def parents_rect(selector: JQuery[rect]): JQuery[SVGRectElement] = js.native
+  @JSName("parents")
+  def parents_rect(selector: rect): JQuery[SVGRectElement] = js.native
+  @JSName("parents")
+  def parents_rp(selector: JQuery[rp]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_rp(selector: rp): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_rt(selector: JQuery[rt]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_rt(selector: rt): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_ruby(selector: JQuery[ruby]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_ruby(selector: ruby): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_s(selector: JQuery[s]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_s(selector: s): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_samp(selector: JQuery[samp]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_samp(selector: samp): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_script(selector: JQuery[script]): JQuery[HTMLScriptElement] = js.native
+  @JSName("parents")
+  def parents_script(selector: script): JQuery[HTMLScriptElement] = js.native
+  @JSName("parents")
+  def parents_section(selector: JQuery[section]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_section(selector: section): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_select(selector: JQuery[select]): JQuery[HTMLSelectElement] = js.native
+  @JSName("parents")
+  def parents_select(selector: select): JQuery[HTMLSelectElement] = js.native
+  @JSName("parents")
+  def parents_slot(selector: JQuery[slot]): JQuery[HTMLSlotElement] = js.native
+  @JSName("parents")
+  def parents_slot(selector: slot): JQuery[HTMLSlotElement] = js.native
+  @JSName("parents")
+  def parents_small(selector: JQuery[small]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_small(selector: small): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_source(selector: JQuery[source]): JQuery[HTMLSourceElement] = js.native
+  @JSName("parents")
+  def parents_source(selector: source): JQuery[HTMLSourceElement] = js.native
+  @JSName("parents")
+  def parents_span(selector: JQuery[span]): JQuery[HTMLSpanElement] = js.native
+  @JSName("parents")
+  def parents_span(selector: span): JQuery[HTMLSpanElement] = js.native
+  @JSName("parents")
+  def parents_stop(selector: JQuery[stop]): JQuery[SVGStopElement] = js.native
+  @JSName("parents")
+  def parents_stop(selector: stop): JQuery[SVGStopElement] = js.native
+  @JSName("parents")
+  def parents_strong(selector: JQuery[strong]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_strong(selector: strong): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_style(selector: JQuery[style]): JQuery[HTMLStyleElement] = js.native
+  @JSName("parents")
+  def parents_style(selector: style): JQuery[HTMLStyleElement] = js.native
+  @JSName("parents")
+  def parents_sub(selector: JQuery[sub]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_sub(selector: sub): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_summary(selector: JQuery[summary]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_summary(selector: summary): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_sup(selector: JQuery[sup]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_sup(selector: sup): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_svg(selector: JQuery[svg]): JQuery[SVGSVGElement] = js.native
+  @JSName("parents")
+  def parents_svg(selector: svg): JQuery[SVGSVGElement] = js.native
+  @JSName("parents")
+  def parents_switch(selector: JQuery[switch]): JQuery[SVGSwitchElement] = js.native
+  @JSName("parents")
+  def parents_switch(selector: switch): JQuery[SVGSwitchElement] = js.native
+  @JSName("parents")
+  def parents_symbol(selector: JQuery[symbol]): JQuery[SVGSymbolElement] = js.native
+  @JSName("parents")
+  def parents_symbol(selector: symbol): JQuery[SVGSymbolElement] = js.native
+  @JSName("parents")
+  def parents_table(selector: JQuery[table]): JQuery[HTMLTableElement] = js.native
+  @JSName("parents")
+  def parents_table(selector: table): JQuery[HTMLTableElement] = js.native
+  @JSName("parents")
+  def parents_tbody(selector: JQuery[tbody]): JQuery[HTMLTableSectionElement] = js.native
+  @JSName("parents")
+  def parents_tbody(selector: tbody): JQuery[HTMLTableSectionElement] = js.native
+  @JSName("parents")
+  def parents_td(selector: JQuery[td]): JQuery[HTMLTableDataCellElement] = js.native
+  @JSName("parents")
+  def parents_td(selector: td): JQuery[HTMLTableDataCellElement] = js.native
+  @JSName("parents")
+  def parents_template(selector: JQuery[template]): JQuery[HTMLTemplateElement] = js.native
+  @JSName("parents")
+  def parents_template(selector: template): JQuery[HTMLTemplateElement] = js.native
+  @JSName("parents")
+  def parents_text(selector: JQuery[text]): JQuery[SVGTextElement] = js.native
+  @JSName("parents")
+  def parents_text(selector: text): JQuery[SVGTextElement] = js.native
+  @JSName("parents")
+  def parents_textPath(selector: JQuery[textPath]): JQuery[SVGTextPathElement] = js.native
+  @JSName("parents")
+  def parents_textPath(selector: textPath): JQuery[SVGTextPathElement] = js.native
+  @JSName("parents")
+  def parents_textarea(selector: JQuery[textarea]): JQuery[HTMLTextAreaElement] = js.native
+  @JSName("parents")
+  def parents_textarea(selector: textarea): JQuery[HTMLTextAreaElement] = js.native
+  @JSName("parents")
+  def parents_tfoot(selector: JQuery[tfoot]): JQuery[HTMLTableSectionElement] = js.native
+  @JSName("parents")
+  def parents_tfoot(selector: tfoot): JQuery[HTMLTableSectionElement] = js.native
+  @JSName("parents")
+  def parents_th(selector: JQuery[th]): JQuery[HTMLTableHeaderCellElement] = js.native
+  @JSName("parents")
+  def parents_th(selector: th): JQuery[HTMLTableHeaderCellElement] = js.native
+  @JSName("parents")
+  def parents_thead(selector: JQuery[thead]): JQuery[HTMLTableSectionElement] = js.native
+  @JSName("parents")
+  def parents_thead(selector: thead): JQuery[HTMLTableSectionElement] = js.native
+  @JSName("parents")
+  def parents_time(selector: JQuery[time]): JQuery[HTMLTimeElement] = js.native
+  @JSName("parents")
+  def parents_time(selector: time): JQuery[HTMLTimeElement] = js.native
+  @JSName("parents")
+  def parents_title(selector: JQuery[title]): JQuery[HTMLTitleElement] = js.native
+  @JSName("parents")
+  def parents_title(selector: title): JQuery[HTMLTitleElement] = js.native
+  @JSName("parents")
+  def parents_tr(selector: JQuery[tr]): JQuery[HTMLTableRowElement] = js.native
+  @JSName("parents")
+  def parents_tr(selector: tr): JQuery[HTMLTableRowElement] = js.native
+  @JSName("parents")
+  def parents_track(selector: JQuery[track]): JQuery[HTMLTrackElement] = js.native
+  @JSName("parents")
+  def parents_track(selector: track): JQuery[HTMLTrackElement] = js.native
+  @JSName("parents")
+  def parents_tspan(selector: JQuery[tspan]): JQuery[SVGTSpanElement] = js.native
+  @JSName("parents")
+  def parents_tspan(selector: tspan): JQuery[SVGTSpanElement] = js.native
+  @JSName("parents")
+  def parents_u(selector: JQuery[u]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_u(selector: u): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_ul(selector: JQuery[ul]): JQuery[HTMLUListElement] = js.native
+  @JSName("parents")
+  def parents_ul(selector: ul): JQuery[HTMLUListElement] = js.native
+  @JSName("parents")
+  def parents_use(selector: JQuery[use]): JQuery[SVGUseElement] = js.native
+  @JSName("parents")
+  def parents_use(selector: use): JQuery[SVGUseElement] = js.native
+  @JSName("parents")
+  def parents_var(selector: JQuery[`var`]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_var(selector: `var`): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_video(selector: JQuery[video]): JQuery[HTMLVideoElement] = js.native
+  @JSName("parents")
+  def parents_video(selector: video): JQuery[HTMLVideoElement] = js.native
+  @JSName("parents")
+  def parents_view(selector: JQuery[view]): JQuery[SVGViewElement] = js.native
+  @JSName("parents")
+  def parents_view(selector: view): JQuery[SVGViewElement] = js.native
+  @JSName("parents")
+  def parents_wbr(selector: JQuery[wbr]): JQuery[HTMLElement] = js.native
+  @JSName("parents")
+  def parents_wbr(selector: wbr): JQuery[HTMLElement] = js.native
   
   /**
     * Get the current coordinates of the first element in the set of matched elements, relative to the offset parent.

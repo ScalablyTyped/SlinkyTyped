@@ -35,10 +35,10 @@ package object utilsMod {
   /* Rewritten from type alias, can be one of: 
     - scala.Boolean
     - typingsSlinky.grommet.utilsMod.BoxSideType
-    - typingsSlinky.grommet.anon.SizeStyle
-    - js.Array[typingsSlinky.grommet.anon.SizeStyle]
+    - typingsSlinky.grommet.anon.Error
+    - js.Array[typingsSlinky.grommet.anon.Error]
   */
-  type BorderType = typingsSlinky.grommet.utilsMod._BorderType | js.Array[typingsSlinky.grommet.anon.SizeStyle] | scala.Boolean
+  type BorderType = typingsSlinky.grommet.utilsMod._BorderType | js.Array[typingsSlinky.grommet.anon.Error] | scala.Boolean
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.grommet.grommetStrings.xsmall
@@ -91,7 +91,7 @@ package object utilsMod {
   */
   type GapType = typingsSlinky.grommet.utilsMod._GapType | java.lang.String
   
-  type GraphColorsType = js.Array[java.lang.String] | typingsSlinky.grommet.anon.`23`
+  type GraphColorsType = js.Array[java.lang.String] | typingsSlinky.grommet.anon.`28`
   
   type GridAreaType = java.lang.String
   
@@ -305,6 +305,8 @@ package object utilsMod {
   */
   type PolymorphicType = typingsSlinky.grommet.utilsMod._PolymorphicType | slinky.core.ReactComponentClass[js.Any]
   
+  type PropsOf[TComponent] = js.Any
+  
   /* Rewritten from type alias, can be one of: 
     - scala.Boolean
     - typingsSlinky.grommet.grommetStrings.xsmall
@@ -317,4 +319,17 @@ package object utilsMod {
     - typingsSlinky.grommet.anon.Corner
   */
   type RoundType = typingsSlinky.grommet.utilsMod._RoundType | scala.Boolean | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.grommet.grommetStrings.hair
+    - typingsSlinky.grommet.grommetStrings.xsmall
+    - typingsSlinky.grommet.grommetStrings.small
+    - typingsSlinky.grommet.grommetStrings.medium
+    - typingsSlinky.grommet.grommetStrings.large
+    - typingsSlinky.grommet.grommetStrings.xlarge
+    - typingsSlinky.grommet.grommetStrings.none
+    - java.lang.String
+    - scala.Double
+  */
+  type ThicknessType = typingsSlinky.grommet.utilsMod._ThicknessType | java.lang.String | scala.Double
 }

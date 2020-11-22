@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.managedblockchainMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -152,12 +152,12 @@ trait ManagedBlockchain extends Service {
   ): Request[GetProposalOutput, AWSError] = js.native
   
   /**
-    * Returns a listing of all invitations made on the specified network.
+    * Returns a listing of all invitations for the current AWS account.
     */
   def listInvitations(): Request[ListInvitationsOutput, AWSError] = js.native
   def listInvitations(callback: js.Function2[/* err */ AWSError, /* data */ ListInvitationsOutput, Unit]): Request[ListInvitationsOutput, AWSError] = js.native
   /**
-    * Returns a listing of all invitations made on the specified network.
+    * Returns a listing of all invitations for the current AWS account.
     */
   def listInvitations(params: ListInvitationsInput): Request[ListInvitationsOutput, AWSError] = js.native
   def listInvitations(

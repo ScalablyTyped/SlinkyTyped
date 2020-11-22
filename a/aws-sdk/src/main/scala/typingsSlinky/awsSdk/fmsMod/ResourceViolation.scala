@@ -21,6 +21,26 @@ trait ResourceViolation extends js.Object {
     * Violation details for security groups.
     */
   var AwsVPCSecurityGroupViolation: js.UndefOr[typingsSlinky.awsSdk.fmsMod.AwsVPCSecurityGroupViolation] = js.native
+  
+  /**
+    * Violation detail for an Network Firewall policy that indicates that a subnet is not associated with the expected Firewall Manager managed route table. 
+    */
+  var NetworkFirewallMissingExpectedRTViolation: js.UndefOr[typingsSlinky.awsSdk.fmsMod.NetworkFirewallMissingExpectedRTViolation] = js.native
+  
+  /**
+    * Violation detail for an Network Firewall policy that indicates that a subnet has no Firewall Manager managed firewall in its VPC. 
+    */
+  var NetworkFirewallMissingFirewallViolation: js.UndefOr[typingsSlinky.awsSdk.fmsMod.NetworkFirewallMissingFirewallViolation] = js.native
+  
+  /**
+    * Violation detail for an Network Firewall policy that indicates that an Availability Zone is missing the expected Firewall Manager managed subnet.
+    */
+  var NetworkFirewallMissingSubnetViolation: js.UndefOr[typingsSlinky.awsSdk.fmsMod.NetworkFirewallMissingSubnetViolation] = js.native
+  
+  /**
+    * Violation detail for an Network Firewall policy that indicates that a firewall policy in an individual account has been modified in a way that makes it noncompliant. For example, the individual account owner might have deleted a rule group, changed the priority of a stateless rule group, or changed a policy default action.
+    */
+  var NetworkFirewallPolicyModifiedViolation: js.UndefOr[typingsSlinky.awsSdk.fmsMod.NetworkFirewallPolicyModifiedViolation] = js.native
 }
 object ResourceViolation {
   
@@ -62,5 +82,29 @@ object ResourceViolation {
     
     @scala.inline
     def deleteAwsVPCSecurityGroupViolation: Self = this.set("AwsVPCSecurityGroupViolation", js.undefined)
+    
+    @scala.inline
+    def setNetworkFirewallMissingExpectedRTViolation(value: NetworkFirewallMissingExpectedRTViolation): Self = this.set("NetworkFirewallMissingExpectedRTViolation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkFirewallMissingExpectedRTViolation: Self = this.set("NetworkFirewallMissingExpectedRTViolation", js.undefined)
+    
+    @scala.inline
+    def setNetworkFirewallMissingFirewallViolation(value: NetworkFirewallMissingFirewallViolation): Self = this.set("NetworkFirewallMissingFirewallViolation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkFirewallMissingFirewallViolation: Self = this.set("NetworkFirewallMissingFirewallViolation", js.undefined)
+    
+    @scala.inline
+    def setNetworkFirewallMissingSubnetViolation(value: NetworkFirewallMissingSubnetViolation): Self = this.set("NetworkFirewallMissingSubnetViolation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkFirewallMissingSubnetViolation: Self = this.set("NetworkFirewallMissingSubnetViolation", js.undefined)
+    
+    @scala.inline
+    def setNetworkFirewallPolicyModifiedViolation(value: NetworkFirewallPolicyModifiedViolation): Self = this.set("NetworkFirewallPolicyModifiedViolation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkFirewallPolicyModifiedViolation: Self = this.set("NetworkFirewallPolicyModifiedViolation", js.undefined)
   }
 }

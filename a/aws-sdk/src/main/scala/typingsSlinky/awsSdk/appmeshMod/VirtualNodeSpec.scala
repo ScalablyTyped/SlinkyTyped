@@ -18,8 +18,7 @@ trait VirtualNodeSpec extends js.Object {
   var backends: js.UndefOr[Backends] = js.native
   
   /**
-    * The listener that the virtual node is expected to receive inbound traffic from. You can
-    specify one listener.
+    * The listener that the virtual node is expected to receive inbound traffic from. You can specify one listener.
     */
   var listeners: js.UndefOr[Listeners] = js.native
   
@@ -29,9 +28,7 @@ trait VirtualNodeSpec extends js.Object {
   var logging: js.UndefOr[Logging] = js.native
   
   /**
-    * The service discovery information for the virtual node. If your virtual node does not
-    expect ingress traffic, you can omit this parameter. If you specify a
-    listener, then you must specify service discovery information.
+    * The service discovery information for the virtual node. If your virtual node does not expect ingress traffic, you can omit this parameter. If you specify a listener, then you must specify service discovery information.
     */
   var serviceDiscovery: js.UndefOr[ServiceDiscovery] = js.native
 }

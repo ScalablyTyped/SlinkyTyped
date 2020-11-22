@@ -19,7 +19,7 @@ trait MUIDataTableBodyCell extends js.Object {
   
   var dataIndex: js.UndefOr[Double] = js.native
   
-  var options: js.UndefOr[js.Object] = js.native
+  var options: js.UndefOr[MUIDataTableOptions] = js.native
   
   var otherProps: js.UndefOr[js.Any] = js.native
   
@@ -85,7 +85,7 @@ object MUIDataTableBodyCell {
     def deleteDataIndex: Self = this.set("dataIndex", js.undefined)
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: MUIDataTableOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

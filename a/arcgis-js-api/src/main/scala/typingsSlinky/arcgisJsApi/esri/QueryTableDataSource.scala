@@ -23,7 +23,7 @@ trait QueryTableDataSource extends Object {
   var geometryType: point | multipoint | polyline | polygon | multipatch = js.native
   
   /**
-    * The field name(s) containing the unique IDs for each record in the table. This can be a comma separated list if the query table is used in a [JoinTableDataSource](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#JoinDataTableSource).
+    * The field name(s) containing the unique IDs for each record in the table.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html#QueryTableDataSource)
     */

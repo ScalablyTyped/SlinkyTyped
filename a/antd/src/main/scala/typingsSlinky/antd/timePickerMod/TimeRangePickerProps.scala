@@ -8,8 +8,13 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdNumbers.`0`
 import typingsSlinky.antd.antdNumbers.`1`
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -41,13 +46,14 @@ import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.generatePickerMod.PickerLocale
-import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.moment.mod.Moment
+import typingsSlinky.rcPicker.interfaceMod.CustomFormat
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.EventValue
 import typingsSlinky.rcPicker.interfaceMod.Locale
@@ -69,7 +75,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined parent antd.antd/lib/date-picker/generatePicker.RangePickerTimeProps<moment.moment.Moment> */
+/* Inlined parent antd.antd/lib/_util/type.Omit<antd.antd/lib/date-picker/generatePicker.RangePickerTimeProps<moment.moment.Moment>, 'picker'> */
 @js.native
 trait TimeRangePickerProps extends js.Object {
   
@@ -149,7 +155,9 @@ trait TimeRangePickerProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -213,7 +221,7 @@ trait TimeRangePickerProps extends js.Object {
   
   var dropdownClassName: js.UndefOr[String] = js.native
   
-  var format: js.UndefOr[String | js.Array[String]] = js.native
+  var format: js.UndefOr[String | CustomFormat[Moment] | (js.Array[String | CustomFormat[Moment]])] = js.native
   
   var getPopupContainer: js.UndefOr[js.Function1[/* node */ HTMLElement, HTMLElement]] = js.native
   
@@ -278,8 +286,6 @@ trait TimeRangePickerProps extends js.Object {
   
   var panelRender: js.UndefOr[js.Function1[/* originPanel */ ReactElement, ReactElement]] = js.native
   
-  var picker: time = js.native
-  
   var pickerRef: js.UndefOr[MutableRefObject[PickerRefConfig]] = js.native
   
   var placeholder: js.UndefOr[js.Tuple2[String, String]] = js.native
@@ -328,8 +334,8 @@ trait TimeRangePickerProps extends js.Object {
 object TimeRangePickerProps {
   
   @scala.inline
-  def apply(picker: time): TimeRangePickerProps = {
-    val __obj = js.Dynamic.literal(picker = picker.asInstanceOf[js.Any])
+  def apply(): TimeRangePickerProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[TimeRangePickerProps]
   }
   
@@ -347,9 +353,6 @@ object TimeRangePickerProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setPicker(value: time): Self = this.set("picker", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setActivePickerIndex(value: `0` | `1`): Self = this.set("activePickerIndex", value.asInstanceOf[js.Any])
@@ -580,7 +583,9 @@ object TimeRangePickerProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -778,10 +783,13 @@ object TimeRangePickerProps {
     def deleteDropdownClassName: Self = this.set("dropdownClassName", js.undefined)
     
     @scala.inline
-    def setFormatVarargs(value: String*): Self = this.set("format", js.Array(value :_*))
+    def setFormatVarargs(value: (String | CustomFormat[Moment])*): Self = this.set("format", js.Array(value :_*))
     
     @scala.inline
-    def setFormat(value: String | js.Array[String]): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setFormatFunction1(value: Moment => String): Self = this.set("format", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setFormat(value: String | CustomFormat[Moment] | (js.Array[String | CustomFormat[Moment]])): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)

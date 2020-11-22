@@ -11,10 +11,10 @@ trait DateTimeColumn extends js.Object {
     * How the value should be presented in the UX. Must be one of default, friendly, or standard. See below for more details.
     * If unspecified, treated as default.
     */
-  var displayAs: js.UndefOr[String] = js.native
+  var displayAs: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime
-  var format: js.UndefOr[String] = js.native
+  var format: js.UndefOr[NullableOption[String]] = js.native
 }
 object DateTimeColumn {
   
@@ -40,15 +40,21 @@ object DateTimeColumn {
     }
     
     @scala.inline
-    def setDisplayAs(value: String): Self = this.set("displayAs", value.asInstanceOf[js.Any])
+    def setDisplayAs(value: NullableOption[String]): Self = this.set("displayAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayAs: Self = this.set("displayAs", js.undefined)
     
     @scala.inline
-    def setFormat(value: String): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setDisplayAsNull: Self = this.set("displayAs", null)
+    
+    @scala.inline
+    def setFormat(value: NullableOption[String]): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
+    
+    @scala.inline
+    def setFormatNull: Self = this.set("format", null)
   }
 }

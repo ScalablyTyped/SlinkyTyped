@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AlternativeSecurityId extends js.Object {
   
   // For internal use only
-  var identityProvider: js.UndefOr[String] = js.native
+  var identityProvider: js.UndefOr[NullableOption[String]] = js.native
   
   // For internal use only
-  var key: js.UndefOr[Double] = js.native
+  var key: js.UndefOr[NullableOption[Double]] = js.native
   
   // For internal use only
-  var `type`: js.UndefOr[Double] = js.native
+  var `type`: js.UndefOr[NullableOption[Double]] = js.native
 }
 object AlternativeSecurityId {
   
@@ -40,21 +40,30 @@ object AlternativeSecurityId {
     }
     
     @scala.inline
-    def setIdentityProvider(value: String): Self = this.set("identityProvider", value.asInstanceOf[js.Any])
+    def setIdentityProvider(value: NullableOption[String]): Self = this.set("identityProvider", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIdentityProvider: Self = this.set("identityProvider", js.undefined)
     
     @scala.inline
-    def setKey(value: Double): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setIdentityProviderNull: Self = this.set("identityProvider", null)
+    
+    @scala.inline
+    def setKey(value: NullableOption[Double]): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
     
     @scala.inline
-    def setType(value: Double): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setKeyNull: Self = this.set("key", null)
+    
+    @scala.inline
+    def setType(value: NullableOption[Double]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    
+    @scala.inline
+    def setTypeNull: Self = this.set("type", null)
   }
 }

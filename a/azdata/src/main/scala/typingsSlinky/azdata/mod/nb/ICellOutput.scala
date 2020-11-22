@@ -1,11 +1,14 @@
 package typingsSlinky.azdata.mod.nb
 
+import typingsSlinky.azdata.anon.AzdatachartOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ICellOutput extends js.Object {
+  
+  var metadata: js.UndefOr[AzdatachartOptions] = js.native
   
   var output_type: OutputTypeName = js.native
 }
@@ -34,5 +37,11 @@ object ICellOutput {
     
     @scala.inline
     def setOutput_type(value: OutputTypeName): Self = this.set("output_type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMetadata(value: AzdatachartOptions): Self = this.set("metadata", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMetadata: Self = this.set("metadata", js.undefined)
   }
 }

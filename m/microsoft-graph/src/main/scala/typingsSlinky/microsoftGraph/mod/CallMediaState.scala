@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CallMediaState extends js.Object {
   
   // The audio media state. Possible values are: active, inactive.
-  var audio: js.UndefOr[MediaState] = js.native
+  var audio: js.UndefOr[NullableOption[MediaState]] = js.native
 }
 object CallMediaState {
   
@@ -34,9 +34,12 @@ object CallMediaState {
     }
     
     @scala.inline
-    def setAudio(value: MediaState): Self = this.set("audio", value.asInstanceOf[js.Any])
+    def setAudio(value: NullableOption[MediaState]): Self = this.set("audio", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAudio: Self = this.set("audio", js.undefined)
+    
+    @scala.inline
+    def setAudioNull: Self = this.set("audio", null)
   }
 }

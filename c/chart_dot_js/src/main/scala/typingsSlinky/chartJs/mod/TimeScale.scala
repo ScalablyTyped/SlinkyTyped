@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TimeScale extends ChartScales {
   
+  var adapters: js.UndefOr[DateAdapterOptions] = js.native
+  
   var displayFormats: js.UndefOr[TimeDisplayFormat] = js.native
   
   var isoWeekday: js.UndefOr[Boolean] = js.native
@@ -51,6 +53,12 @@ object TimeScale {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAdapters(value: DateAdapterOptions): Self = this.set("adapters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdapters: Self = this.set("adapters", js.undefined)
     
     @scala.inline
     def setDisplayFormats(value: TimeDisplayFormat): Self = this.set("displayFormats", value.asInstanceOf[js.Any])

@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Tab protected ()
   extends typingsSlinky.sharepoint.CUI.Tab {
-  // tslint:disable-next-line: parameters-max-number
   def this(
     ribbon: typingsSlinky.sharepoint.CUI.Ribbon,
     id: String,

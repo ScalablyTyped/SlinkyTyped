@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.anon
 
 import typingsSlinky.babylonjs.BABYLON.Color4
+import typingsSlinky.babylonjs.BABYLON.Vector3
 import typingsSlinky.babylonjs.BABYLON.Vector4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,21 +20,19 @@ trait FaceColorsFaceUV extends js.Object {
   
   var frontUVs: js.UndefOr[Vector4] = js.native
   
-  var height: js.UndefOr[Double] = js.native
+  var holes: js.UndefOr[js.Array[js.Array[Vector3]]] = js.native
+  
+  var shape: js.Array[Vector3] = js.native
   
   var sideOrientation: js.UndefOr[Double] = js.native
   
-  var size: js.UndefOr[Double] = js.native
-  
   var updatable: js.UndefOr[Boolean] = js.native
-  
-  var width: js.UndefOr[Double] = js.native
 }
 object FaceColorsFaceUV {
   
   @scala.inline
-  def apply(): FaceColorsFaceUV = {
-    val __obj = js.Dynamic.literal()
+  def apply(shape: js.Array[Vector3]): FaceColorsFaceUV = {
+    val __obj = js.Dynamic.literal(shape = shape.asInstanceOf[js.Any])
     __obj.asInstanceOf[FaceColorsFaceUV]
   }
   
@@ -51,6 +50,12 @@ object FaceColorsFaceUV {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setShapeVarargs(value: Vector3*): Self = this.set("shape", js.Array(value :_*))
+    
+    @scala.inline
+    def setShape(value: js.Array[Vector3]): Self = this.set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBackUVs(value: Vector4): Self = this.set("backUVs", value.asInstanceOf[js.Any])
@@ -89,10 +94,13 @@ object FaceColorsFaceUV {
     def deleteFrontUVs: Self = this.set("frontUVs", js.undefined)
     
     @scala.inline
-    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    def setHolesVarargs(value: js.Array[Vector3]*): Self = this.set("holes", js.Array(value :_*))
     
     @scala.inline
-    def deleteHeight: Self = this.set("height", js.undefined)
+    def setHoles(value: js.Array[js.Array[Vector3]]): Self = this.set("holes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHoles: Self = this.set("holes", js.undefined)
     
     @scala.inline
     def setSideOrientation(value: Double): Self = this.set("sideOrientation", value.asInstanceOf[js.Any])
@@ -101,21 +109,9 @@ object FaceColorsFaceUV {
     def deleteSideOrientation: Self = this.set("sideOrientation", js.undefined)
     
     @scala.inline
-    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSize: Self = this.set("size", js.undefined)
-    
-    @scala.inline
     def setUpdatable(value: Boolean): Self = this.set("updatable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUpdatable: Self = this.set("updatable", js.undefined)
-    
-    @scala.inline
-    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteWidth: Self = this.set("width", js.undefined)
   }
 }

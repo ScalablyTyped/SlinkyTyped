@@ -13,7 +13,7 @@ trait LoadBalancerAttributes extends js.Object {
   var AccessLog: js.UndefOr[typingsSlinky.awsSdk.elbMod.AccessLog] = js.native
   
   /**
-    * This parameter is reserved.
+    * Any additional attributes.
     */
   var AdditionalAttributes: js.UndefOr[typingsSlinky.awsSdk.elbMod.AdditionalAttributes] = js.native
   

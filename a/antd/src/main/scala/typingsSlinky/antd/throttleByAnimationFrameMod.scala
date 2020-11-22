@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object throttleByAnimationFrameMod extends js.Object {
   
-  def default(fn: js.Function1[/* repeated */ js.Any, Unit]): js.Function1[/* repeated */ js.Any, Unit] = js.native
+  def throttleByAnimationFrame(fn: js.Function1[/* repeated */ js.Any, Unit]): js.Function1[/* repeated */ js.Any, Unit] = js.native
   
   def throttleByAnimationFrameDecorator(): js.Function3[/* target */ js.Any, /* key */ String, /* descriptor */ js.Any, Configurable] = js.native
 }

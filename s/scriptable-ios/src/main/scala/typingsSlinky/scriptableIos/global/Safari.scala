@@ -24,7 +24,7 @@ object Safari extends js.Object {
   /**
     * _Presents a website in-app._
     *
-    * Presents a website without leaving the app. To present a website and leave the app, take a look at the Application type.
+    * Presents a website without leaving the app.
     * @param url - URL of website to present.
     * @param fullscreen - Optional. Set to true to display the web view in fullsceen. This only has an effect when used within the app. Defaults to true.
     * @see https://docs.scriptable.app/safari/#openinapp

@@ -6,6 +6,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.layerTypesMod.ILayerProps
 import typingsSlinky.officeUiFabricReact.modalTypesMod.IDragOptions
 import typingsSlinky.officeUiFabricReact.modalTypesMod.IModal
@@ -16,7 +17,6 @@ import typingsSlinky.officeUiFabricReact.overlayTypesMod.IOverlayProps
 import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.ResponsiveMode
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

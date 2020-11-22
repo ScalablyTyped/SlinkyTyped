@@ -12,7 +12,7 @@ class StandardMaterial protected ()
     * Instantiates a new standard material.
     * This is the default material used in Babylon. It is the best trade off between quality
     * and performances.
-    * @see http://doc.babylonjs.com/babylon101/materials
+    * @see https://doc.babylonjs.com/babylon101/materials
     * @param name Define the name of the material in the scene
     * @param scene Define the scene the material belong to
     */
@@ -40,6 +40,12 @@ object StandardMaterial extends js.Object {
     */
   def ColorGradingTextureEnabled: Boolean = js.native
   def ColorGradingTextureEnabled_=(value: Boolean): Unit = js.native
+  
+  /**
+    * Are detail textures enabled in the application.
+    */
+  def DetailTextureEnabled: Boolean = js.native
+  def DetailTextureEnabled_=(value: Boolean): Unit = js.native
   
   /**
     * Are diffuse textures enabled in the application.

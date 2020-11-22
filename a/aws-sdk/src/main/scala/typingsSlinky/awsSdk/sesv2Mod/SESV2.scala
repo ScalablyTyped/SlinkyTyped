@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.sesv2Mod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -43,6 +43,34 @@ trait SESV2 extends Service {
     params: CreateConfigurationSetEventDestinationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateConfigurationSetEventDestinationResponse, Unit]
   ): Request[CreateConfigurationSetEventDestinationResponse, AWSError] = js.native
+  
+  /**
+    * Creates a contact, which is an end-user who is receiving the email, and adds them to a contact list.
+    */
+  def createContact(): Request[CreateContactResponse, AWSError] = js.native
+  def createContact(callback: js.Function2[/* err */ AWSError, /* data */ CreateContactResponse, Unit]): Request[CreateContactResponse, AWSError] = js.native
+  /**
+    * Creates a contact, which is an end-user who is receiving the email, and adds them to a contact list.
+    */
+  def createContact(params: CreateContactRequest): Request[CreateContactResponse, AWSError] = js.native
+  def createContact(
+    params: CreateContactRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateContactResponse, Unit]
+  ): Request[CreateContactResponse, AWSError] = js.native
+  
+  /**
+    * Creates a contact list.
+    */
+  def createContactList(): Request[CreateContactListResponse, AWSError] = js.native
+  def createContactList(callback: js.Function2[/* err */ AWSError, /* data */ CreateContactListResponse, Unit]): Request[CreateContactListResponse, AWSError] = js.native
+  /**
+    * Creates a contact list.
+    */
+  def createContactList(params: CreateContactListRequest): Request[CreateContactListResponse, AWSError] = js.native
+  def createContactList(
+    params: CreateContactListRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateContactListResponse, Unit]
+  ): Request[CreateContactListResponse, AWSError] = js.native
   
   /**
     * Creates a new custom verification email template. For more information about custom verification email templates, see Using Custom Verification Email Templates in the Amazon SES Developer Guide. You can execute this operation no more than once per second.
@@ -133,6 +161,20 @@ trait SESV2 extends Service {
   ): Request[CreateEmailTemplateResponse, AWSError] = js.native
   
   /**
+    * Creates an import job for a data destination.
+    */
+  def createImportJob(): Request[CreateImportJobResponse, AWSError] = js.native
+  def createImportJob(callback: js.Function2[/* err */ AWSError, /* data */ CreateImportJobResponse, Unit]): Request[CreateImportJobResponse, AWSError] = js.native
+  /**
+    * Creates an import job for a data destination.
+    */
+  def createImportJob(params: CreateImportJobRequest): Request[CreateImportJobResponse, AWSError] = js.native
+  def createImportJob(
+    params: CreateImportJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateImportJobResponse, Unit]
+  ): Request[CreateImportJobResponse, AWSError] = js.native
+  
+  /**
     * Delete an existing configuration set.  Configuration sets are groups of rules that you can apply to the emails you send. You apply a configuration set to an email by including a reference to the configuration set in the headers of the email. When you apply a configuration set to an email, all of the rules in that configuration set are applied to the email.
     */
   def deleteConfigurationSet(): Request[DeleteConfigurationSetResponse, AWSError] = js.native
@@ -161,6 +203,34 @@ trait SESV2 extends Service {
     params: DeleteConfigurationSetEventDestinationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteConfigurationSetEventDestinationResponse, Unit]
   ): Request[DeleteConfigurationSetEventDestinationResponse, AWSError] = js.native
+  
+  /**
+    * Removes a contact from a contact list.
+    */
+  def deleteContact(): Request[DeleteContactResponse, AWSError] = js.native
+  def deleteContact(callback: js.Function2[/* err */ AWSError, /* data */ DeleteContactResponse, Unit]): Request[DeleteContactResponse, AWSError] = js.native
+  /**
+    * Removes a contact from a contact list.
+    */
+  def deleteContact(params: DeleteContactRequest): Request[DeleteContactResponse, AWSError] = js.native
+  def deleteContact(
+    params: DeleteContactRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteContactResponse, Unit]
+  ): Request[DeleteContactResponse, AWSError] = js.native
+  
+  /**
+    * Deletes a contact list and all of the contacts on that list.
+    */
+  def deleteContactList(): Request[DeleteContactListResponse, AWSError] = js.native
+  def deleteContactList(callback: js.Function2[/* err */ AWSError, /* data */ DeleteContactListResponse, Unit]): Request[DeleteContactListResponse, AWSError] = js.native
+  /**
+    * Deletes a contact list and all of the contacts on that list.
+    */
+  def deleteContactList(params: DeleteContactListRequest): Request[DeleteContactListResponse, AWSError] = js.native
+  def deleteContactList(
+    params: DeleteContactListRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteContactListResponse, Unit]
+  ): Request[DeleteContactListResponse, AWSError] = js.native
   
   /**
     * Deletes an existing custom verification email template. For more information about custom verification email templates, see Using Custom Verification Email Templates in the Amazon SES Developer Guide. You can execute this operation no more than once per second.
@@ -305,6 +375,34 @@ trait SESV2 extends Service {
     params: GetConfigurationSetEventDestinationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetConfigurationSetEventDestinationsResponse, Unit]
   ): Request[GetConfigurationSetEventDestinationsResponse, AWSError] = js.native
+  
+  /**
+    * Returns a contact from a contact list.
+    */
+  def getContact(): Request[GetContactResponse, AWSError] = js.native
+  def getContact(callback: js.Function2[/* err */ AWSError, /* data */ GetContactResponse, Unit]): Request[GetContactResponse, AWSError] = js.native
+  /**
+    * Returns a contact from a contact list.
+    */
+  def getContact(params: GetContactRequest): Request[GetContactResponse, AWSError] = js.native
+  def getContact(
+    params: GetContactRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetContactResponse, Unit]
+  ): Request[GetContactResponse, AWSError] = js.native
+  
+  /**
+    * Returns contact list metadata. It does not return any information about the contacts present in the list.
+    */
+  def getContactList(): Request[GetContactListResponse, AWSError] = js.native
+  def getContactList(callback: js.Function2[/* err */ AWSError, /* data */ GetContactListResponse, Unit]): Request[GetContactListResponse, AWSError] = js.native
+  /**
+    * Returns contact list metadata. It does not return any information about the contacts present in the list.
+    */
+  def getContactList(params: GetContactListRequest): Request[GetContactListResponse, AWSError] = js.native
+  def getContactList(
+    params: GetContactListRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetContactListResponse, Unit]
+  ): Request[GetContactListResponse, AWSError] = js.native
   
   /**
     * Returns the custom email verification template for the template name you specify. For more information about custom verification email templates, see Using Custom Verification Email Templates in the Amazon SES Developer Guide. You can execute this operation no more than once per second.
@@ -453,6 +551,20 @@ trait SESV2 extends Service {
   ): Request[GetEmailTemplateResponse, AWSError] = js.native
   
   /**
+    * Provides information about an import job.
+    */
+  def getImportJob(): Request[GetImportJobResponse, AWSError] = js.native
+  def getImportJob(callback: js.Function2[/* err */ AWSError, /* data */ GetImportJobResponse, Unit]): Request[GetImportJobResponse, AWSError] = js.native
+  /**
+    * Provides information about an import job.
+    */
+  def getImportJob(params: GetImportJobRequest): Request[GetImportJobResponse, AWSError] = js.native
+  def getImportJob(
+    params: GetImportJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetImportJobResponse, Unit]
+  ): Request[GetImportJobResponse, AWSError] = js.native
+  
+  /**
     * Retrieves information about a specific email address that's on the suppression list for your account.
     */
   def getSuppressedDestination(): Request[GetSuppressedDestinationResponse, AWSError] = js.native
@@ -479,6 +591,34 @@ trait SESV2 extends Service {
     params: ListConfigurationSetsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListConfigurationSetsResponse, Unit]
   ): Request[ListConfigurationSetsResponse, AWSError] = js.native
+  
+  /**
+    * Lists all of the contact lists available.
+    */
+  def listContactLists(): Request[ListContactListsResponse, AWSError] = js.native
+  def listContactLists(callback: js.Function2[/* err */ AWSError, /* data */ ListContactListsResponse, Unit]): Request[ListContactListsResponse, AWSError] = js.native
+  /**
+    * Lists all of the contact lists available.
+    */
+  def listContactLists(params: ListContactListsRequest): Request[ListContactListsResponse, AWSError] = js.native
+  def listContactLists(
+    params: ListContactListsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListContactListsResponse, Unit]
+  ): Request[ListContactListsResponse, AWSError] = js.native
+  
+  /**
+    * Lists the contacts present in a specific contact list.
+    */
+  def listContacts(): Request[ListContactsResponse, AWSError] = js.native
+  def listContacts(callback: js.Function2[/* err */ AWSError, /* data */ ListContactsResponse, Unit]): Request[ListContactsResponse, AWSError] = js.native
+  /**
+    * Lists the contacts present in a specific contact list.
+    */
+  def listContacts(params: ListContactsRequest): Request[ListContactsResponse, AWSError] = js.native
+  def listContacts(
+    params: ListContactsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListContactsResponse, Unit]
+  ): Request[ListContactsResponse, AWSError] = js.native
   
   /**
     * Lists the existing custom verification email templates for your account in the current AWS Region. For more information about custom verification email templates, see Using Custom Verification Email Templates in the Amazon SES Developer Guide. You can execute this operation no more than once per second.
@@ -567,6 +707,20 @@ trait SESV2 extends Service {
     params: ListEmailTemplatesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListEmailTemplatesResponse, Unit]
   ): Request[ListEmailTemplatesResponse, AWSError] = js.native
+  
+  /**
+    * Lists all of the import jobs.
+    */
+  def listImportJobs(): Request[ListImportJobsResponse, AWSError] = js.native
+  def listImportJobs(callback: js.Function2[/* err */ AWSError, /* data */ ListImportJobsResponse, Unit]): Request[ListImportJobsResponse, AWSError] = js.native
+  /**
+    * Lists all of the import jobs.
+    */
+  def listImportJobs(params: ListImportJobsRequest): Request[ListImportJobsResponse, AWSError] = js.native
+  def listImportJobs(
+    params: ListImportJobsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListImportJobsResponse, Unit]
+  ): Request[ListImportJobsResponse, AWSError] = js.native
   
   /**
     * Retrieves a list of email addresses that are on the suppression list for your account.
@@ -959,6 +1113,34 @@ trait SESV2 extends Service {
     params: UpdateConfigurationSetEventDestinationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateConfigurationSetEventDestinationResponse, Unit]
   ): Request[UpdateConfigurationSetEventDestinationResponse, AWSError] = js.native
+  
+  /**
+    * Updates a contact's preferences for a list. It is not necessary to specify all existing topic preferences in the TopicPreferences object, just the ones that need updating.
+    */
+  def updateContact(): Request[UpdateContactResponse, AWSError] = js.native
+  def updateContact(callback: js.Function2[/* err */ AWSError, /* data */ UpdateContactResponse, Unit]): Request[UpdateContactResponse, AWSError] = js.native
+  /**
+    * Updates a contact's preferences for a list. It is not necessary to specify all existing topic preferences in the TopicPreferences object, just the ones that need updating.
+    */
+  def updateContact(params: UpdateContactRequest): Request[UpdateContactResponse, AWSError] = js.native
+  def updateContact(
+    params: UpdateContactRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateContactResponse, Unit]
+  ): Request[UpdateContactResponse, AWSError] = js.native
+  
+  /**
+    * Updates contact list metadata. This operation does a complete replacement.
+    */
+  def updateContactList(): Request[UpdateContactListResponse, AWSError] = js.native
+  def updateContactList(callback: js.Function2[/* err */ AWSError, /* data */ UpdateContactListResponse, Unit]): Request[UpdateContactListResponse, AWSError] = js.native
+  /**
+    * Updates contact list metadata. This operation does a complete replacement.
+    */
+  def updateContactList(params: UpdateContactListRequest): Request[UpdateContactListResponse, AWSError] = js.native
+  def updateContactList(
+    params: UpdateContactListRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateContactListResponse, Unit]
+  ): Request[UpdateContactListResponse, AWSError] = js.native
   
   /**
     * Updates an existing custom verification email template. For more information about custom verification email templates, see Using Custom Verification Email Templates in the Amazon SES Developer Guide. You can execute this operation no more than once per second.

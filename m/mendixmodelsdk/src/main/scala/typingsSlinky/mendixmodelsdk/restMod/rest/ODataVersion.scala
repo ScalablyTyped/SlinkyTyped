@@ -13,6 +13,8 @@ class ODataVersion () extends AbstractEnum
 @js.native
 object ODataVersion extends js.Object {
   
+  var OData2: ODataVersion = js.native
+  
   var OData3: ODataVersion = js.native
   
   var OData4: ODataVersion = js.native

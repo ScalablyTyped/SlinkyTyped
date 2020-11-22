@@ -1,7 +1,7 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliStrings.`Alias for --env`
-import typingsSlinky.jestCli.jestCliStrings.string
+import typingsSlinky.jestCli.jestCliStrings.`Prevent tests from printing messages through the consoleDot`
+import typingsSlinky.jestCli.jestCliStrings.boolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `14` extends js.Object {
   
-  val description: `Alias for --env` = js.native
+  val default: js.UndefOr[scala.Nothing] = js.native
   
-  val `type`: string = js.native
+  val description: `Prevent tests from printing messages through the consoleDot` = js.native
+  
+  val `type`: boolean = js.native
 }
 object `14` {
   
   @scala.inline
-  def apply(description: `Alias for --env`, `type`: string): `14` = {
+  def apply(description: `Prevent tests from printing messages through the consoleDot`, `type`: boolean): `14` = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`14`]
@@ -38,9 +40,9 @@ object `14` {
     }
     
     @scala.inline
-    def setDescription(value: `Alias for --env`): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: `Prevent tests from printing messages through the consoleDot`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: string): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: boolean): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

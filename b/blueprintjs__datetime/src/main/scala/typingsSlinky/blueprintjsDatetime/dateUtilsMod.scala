@@ -64,4 +64,6 @@ object dateUtilsMod extends js.Object {
   def isTimeInRange(date: js.Date, minDate: js.Date, maxDate: js.Date): Boolean = js.native
   
   def isTimeSameOrAfter(date: js.Date, dateToCompare: js.Date): Boolean = js.native
+  
+  def isToday(date: js.Date): Boolean = js.native
 }

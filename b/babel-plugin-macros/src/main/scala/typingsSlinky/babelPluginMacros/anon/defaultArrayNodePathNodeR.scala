@@ -2,12 +2,12 @@ package typingsSlinky.babelPluginMacros.anon
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.babelCore.mod.NodePath
-import typingsSlinky.babelTraverse.mod.Node
+import typingsSlinky.babelTypes.mod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  default :std.Array<@babel/core.@babel/core.NodePath<@babel/traverse.@babel/traverse.Node>>} & babel-plugin-macros.babel-plugin-macros.References */
+/* Inlined {  default :std.Array<@babel/core.@babel/core.NodePath<@babel/types.@babel/types.Node>>} & babel-plugin-macros.babel-plugin-macros.References */
 @js.native
 trait defaultArrayNodePathNodeR
   extends /* key */ StringDictionary[js.Array[NodePath[Node]]] {

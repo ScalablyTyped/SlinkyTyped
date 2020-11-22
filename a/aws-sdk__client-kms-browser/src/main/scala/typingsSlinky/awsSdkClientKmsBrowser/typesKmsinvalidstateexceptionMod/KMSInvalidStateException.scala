@@ -28,16 +28,14 @@ import typingsSlinky.awsSdkClientKmsBrowser.tagResourceExceptionsUnionMod.TagRes
 import typingsSlinky.awsSdkClientKmsBrowser.untagResourceExceptionsUnionMod.UntagResourceExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.updateAliasExceptionsUnionMod.UpdateAliasExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.updateKeyDescriptionExceptionsUnionMod.UpdateKeyDescriptionExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_KMSInvalidStateExceptionDetails> * / any */ @js.native
 trait KMSInvalidStateException
-  extends ServiceException[KMSInvalidStateExceptionDetails]
-     with CancelKeyDeletionExceptionsUnion
+  extends CancelKeyDeletionExceptionsUnion
      with CreateAliasExceptionsUnion
      with CreateGrantExceptionsUnion
      with DecryptExceptionsUnion
@@ -66,19 +64,13 @@ trait KMSInvalidStateException
      with UpdateAliasExceptionsUnion
      with UpdateKeyDescriptionExceptionsUnion {
   
-  @JSName("name")
-  var name_KMSInvalidStateException: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.KMSInvalidStateException = js.native
+  var name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.KMSInvalidStateException = js.native
 }
 object KMSInvalidStateException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: KMSInvalidStateExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.KMSInvalidStateException
-  ): KMSInvalidStateException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.KMSInvalidStateException): KMSInvalidStateException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[KMSInvalidStateException]
   }
   

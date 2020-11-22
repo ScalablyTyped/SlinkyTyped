@@ -14,6 +14,8 @@ import typingsSlinky.pulumiAws.recorderMod.RecorderArgs
 import typingsSlinky.pulumiAws.recorderMod.RecorderState
 import typingsSlinky.pulumiAws.recorderStatusMod.RecorderStatusArgs
 import typingsSlinky.pulumiAws.recorderStatusMod.RecorderStatusState
+import typingsSlinky.pulumiAws.remediationConfigurationMod.RemediationConfigurationArgs
+import typingsSlinky.pulumiAws.remediationConfigurationMod.RemediationConfigurationState
 import typingsSlinky.pulumiAws.ruleMod.RuleArgs
 import typingsSlinky.pulumiAws.ruleMod.RuleState
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -293,6 +295,44 @@ object cfgMod extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/cfg/recorderStatus.RecorderStatus */ Boolean = js.native
+  }
+  
+  @js.native
+  class RemediationConfiguration protected ()
+    extends typingsSlinky.pulumiAws.remediationConfigurationMod.RemediationConfiguration {
+    /**
+      * Create a RemediationConfiguration resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: RemediationConfigurationArgs) = this()
+    def this(name: String, args: RemediationConfigurationArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object RemediationConfiguration extends js.Object {
+    
+    /**
+      * Get an existing RemediationConfiguration resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.remediationConfigurationMod.RemediationConfiguration = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.remediationConfigurationMod.RemediationConfiguration = js.native
+    def get(name: String, id: Input[ID], state: RemediationConfigurationState): typingsSlinky.pulumiAws.remediationConfigurationMod.RemediationConfiguration = js.native
+    def get(name: String, id: Input[ID], state: RemediationConfigurationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.remediationConfigurationMod.RemediationConfiguration = js.native
+    
+    /**
+      * Returns true if the given object is an instance of RemediationConfiguration.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/cfg/remediationConfiguration.RemediationConfiguration */ Boolean = js.native
   }
   
   @js.native

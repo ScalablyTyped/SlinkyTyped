@@ -10,21 +10,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ImageData protected ()
   extends typingsSlinky.std.ImageData {
-  def this(array: js.typedarray.Uint8ClampedArray, width: Double) = this()
-  def this(width: Double, height: Double) = this()
-  def this(array: js.typedarray.Uint8ClampedArray, width: Double, height: Double) = this()
+  def this(data: js.typedarray.Uint8ClampedArray, sw: Double) = this()
+  def this(sw: Double, sh: Double) = this()
+  def this(data: js.typedarray.Uint8ClampedArray, sw: Double, sh: Double) = this()
 }
 @JSGlobal("ImageData")
 @js.native
 object ImageData
   extends Instantiable2[
-      (/* width */ Double) | (/* array */ js.typedarray.Uint8ClampedArray), 
-      /* width */ Double, 
+      (/* sw */ Double) | (/* data */ js.typedarray.Uint8ClampedArray), 
+      /* sw */ Double, 
       org.scalajs.dom.raw.ImageData
     ]
      with Instantiable3[
-      /* array */ js.typedarray.Uint8ClampedArray, 
-      /* width */ Double, 
-      /* height */ Double, 
+      /* data */ js.typedarray.Uint8ClampedArray, 
+      /* sw */ Double, 
+      /* sh */ Double, 
       org.scalajs.dom.raw.ImageData
     ]

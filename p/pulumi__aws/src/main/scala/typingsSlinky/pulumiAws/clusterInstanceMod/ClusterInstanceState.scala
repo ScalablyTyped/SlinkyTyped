@@ -66,12 +66,12 @@ trait ClusterInstanceState extends js.Object {
   val engineVersion: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The indentifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
+    * The identifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
     */
   val identifier: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Creates a unique identifier beginning with the specified prefix. Conflicts with `identifer`.
+    * Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
     */
   val identifierPrefix: js.UndefOr[Input[String]] = js.native
   

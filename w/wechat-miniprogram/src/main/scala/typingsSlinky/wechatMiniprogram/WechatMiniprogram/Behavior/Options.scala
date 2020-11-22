@@ -3,19 +3,21 @@ package typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Record
 import typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.RelationOption
+import typingsSlinky.wechatMiniprogram.WechatMiniprogram.IAnyObject
+import typingsSlinky.wechatMiniprogram.anon.PartialILifetime
 import typingsSlinky.wechatMiniprogram.anon.PartialPageLifetimes
 import typingsSlinky.wechatMiniprogram.anon.Partialcreatedvoidattache
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<wechat-miniprogram.WechatMiniprogram.Behavior.Data<TData>> & std.Partial<wechat-miniprogram.WechatMiniprogram.Behavior.Property<TProperty>> & std.Partial<wechat-miniprogram.WechatMiniprogram.Behavior.Method<TMethod>> & std.Partial<wechat-miniprogram.WechatMiniprogram.Behavior.OtherOption> & std.Partial<wechat-miniprogram.WechatMiniprogram.Behavior.Lifetimes> & std.ThisType<wechat-miniprogram.WechatMiniprogram.Behavior.Instance<TData, TProperty, TMethod>> */
+/* Inlined std.Partial<wechat-miniprogram.WechatMiniprogram.Behavior.Data<TData>> & std.Partial<wechat-miniprogram.WechatMiniprogram.Behavior.Property<TProperty>> & std.Partial<wechat-miniprogram.WechatMiniprogram.Behavior.Method<TMethod>> & std.Partial<wechat-miniprogram.WechatMiniprogram.Behavior.OtherOption> & std.Partial<wechat-miniprogram.WechatMiniprogram.Behavior.Lifetimes> & std.ThisType<wechat-miniprogram.WechatMiniprogram.Behavior.Instance<TData, TProperty, TMethod, TCustomInstanceProperty>> */
 @js.native
-trait Options[TData /* <: DataOption */, TProperty /* <: PropertyOption */, TMethod /* <: MethodOption */] extends js.Object {
+trait Options[TData /* <: DataOption */, TProperty /* <: PropertyOption */, TMethod /* <: MethodOption */, TCustomInstanceProperty /* <: IAnyObject */] extends js.Object {
   
   var attached: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var behaviors: js.UndefOr[js.Array[String]] = js.native
+  var behaviors: js.UndefOr[js.Array[BehaviorIdentifier]] = js.native
   
   var created: js.UndefOr[js.Function0[Unit]] = js.native
   
@@ -31,7 +33,7 @@ trait Options[TData /* <: DataOption */, TProperty /* <: PropertyOption */, TMet
   
   var lifetimes: js.UndefOr[Partialcreatedvoidattache] = js.native
   
-  var methods: js.UndefOr[TMethod] = js.native
+  var methods: js.UndefOr[TMethod with (js.Object | PartialILifetime)] = js.native
   
   var moved: js.UndefOr[js.Function0[Unit]] = js.native
   
@@ -48,13 +50,13 @@ trait Options[TData /* <: DataOption */, TProperty /* <: PropertyOption */, TMet
 object Options {
   
   @scala.inline
-  def apply[TData /* <: DataOption */, TProperty /* <: PropertyOption */, TMethod /* <: MethodOption */](): Options[TData, TProperty, TMethod] = {
+  def apply[TData /* <: DataOption */, TProperty /* <: PropertyOption */, TMethod /* <: MethodOption */, TCustomInstanceProperty /* <: IAnyObject */](): Options[TData, TProperty, TMethod, TCustomInstanceProperty] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[Options[TData, TProperty, TMethod]]
+    __obj.asInstanceOf[Options[TData, TProperty, TMethod, TCustomInstanceProperty]]
   }
   
   @scala.inline
-  implicit class OptionsOps[Self <: Options[_, _, _], TData /* <: DataOption */, TProperty /* <: PropertyOption */, TMethod /* <: MethodOption */] (val x: Self with (Options[TData, TProperty, TMethod])) extends AnyVal {
+  implicit class OptionsOps[Self <: Options[_, _, _, _], TData /* <: DataOption */, TProperty /* <: PropertyOption */, TMethod /* <: MethodOption */, TCustomInstanceProperty /* <: IAnyObject */] (val x: Self with (Options[TData, TProperty, TMethod, TCustomInstanceProperty])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -75,10 +77,10 @@ object Options {
     def deleteAttached: Self = this.set("attached", js.undefined)
     
     @scala.inline
-    def setBehaviorsVarargs(value: String*): Self = this.set("behaviors", js.Array(value :_*))
+    def setBehaviorsVarargs(value: BehaviorIdentifier*): Self = this.set("behaviors", js.Array(value :_*))
     
     @scala.inline
-    def setBehaviors(value: js.Array[String]): Self = this.set("behaviors", value.asInstanceOf[js.Any])
+    def setBehaviors(value: js.Array[BehaviorIdentifier]): Self = this.set("behaviors", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBehaviors: Self = this.set("behaviors", js.undefined)
@@ -135,7 +137,7 @@ object Options {
     def deleteLifetimes: Self = this.set("lifetimes", js.undefined)
     
     @scala.inline
-    def setMethods(value: TMethod): Self = this.set("methods", value.asInstanceOf[js.Any])
+    def setMethods(value: TMethod with (js.Object | PartialILifetime)): Self = this.set("methods", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMethods: Self = this.set("methods", js.undefined)

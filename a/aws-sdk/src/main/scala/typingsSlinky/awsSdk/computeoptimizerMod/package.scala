@@ -43,6 +43,10 @@ package object computeoptimizerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.Finding_
     - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsCpuMaximum
     - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsMemoryMaximum
+    - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsEbsReadOpsPerSecondMaximum
+    - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsEbsWriteOpsPerSecondMaximum
+    - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsEbsReadBytesPerSecondMaximum
+    - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsEbsWriteBytesPerSecondMaximum
     - typingsSlinky.awsSdk.awsSdkStrings.LookbackPeriodInDays
     - typingsSlinky.awsSdk.awsSdkStrings.CurrentConfigurationInstanceType
     - typingsSlinky.awsSdk.awsSdkStrings.CurrentConfigurationDesiredCapacity
@@ -85,6 +89,10 @@ package object computeoptimizerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.CurrentInstanceType
     - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsCpuMaximum
     - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsMemoryMaximum
+    - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsEbsReadOpsPerSecondMaximum
+    - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsEbsWriteOpsPerSecondMaximum
+    - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsEbsReadBytesPerSecondMaximum
+    - typingsSlinky.awsSdk.awsSdkStrings.UtilizationMetricsEbsWriteBytesPerSecondMaximum
     - typingsSlinky.awsSdk.awsSdkStrings.CurrentOnDemandPrice
     - typingsSlinky.awsSdk.awsSdkStrings.CurrentStandardOneYearNoUpfrontReservedPrice
     - typingsSlinky.awsSdk.awsSdkStrings.CurrentStandardThreeYearNoUpfrontReservedPrice
@@ -195,6 +203,10 @@ package object computeoptimizerMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Cpu_
     - typingsSlinky.awsSdk.awsSdkStrings.Memory_
+    - typingsSlinky.awsSdk.awsSdkStrings.EBS_READ_OPS_PER_SECOND
+    - typingsSlinky.awsSdk.awsSdkStrings.EBS_WRITE_OPS_PER_SECOND
+    - typingsSlinky.awsSdk.awsSdkStrings.EBS_READ_BYTES_PER_SECOND
+    - typingsSlinky.awsSdk.awsSdkStrings.EBS_WRITE_BYTES_PER_SECOND
     - java.lang.String
   */
   type MetricName = typingsSlinky.awsSdk.computeoptimizerMod._MetricName | java.lang.String

@@ -2,7 +2,6 @@ package typingsSlinky.coreJs
 
 import typingsSlinky.coreJs.anon.FnCall
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.PropertyKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -67,8 +66,6 @@ object es6ReflectMod extends js.Object {
   def deleteMetadata(metadataKey: js.Any, target: Object, targetKey: js.Symbol): Boolean = js.native
   
   def deleteProperty(target: js.Any, propertyKey: PropertyKey): Boolean = js.native
-  
-  def enumerate(target: js.Any): IterableIterator[_] = js.native
   
   def get(target: js.Any, propertyKey: PropertyKey): js.Any = js.native
   def get(target: js.Any, propertyKey: PropertyKey, receiver: js.Any): js.Any = js.native

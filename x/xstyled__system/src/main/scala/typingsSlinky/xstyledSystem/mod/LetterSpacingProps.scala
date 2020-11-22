@@ -9,7 +9,7 @@ trait LetterSpacingProps[TLength] extends js.Object {
   
   val letterSpacing: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LetterSpacingProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LetterSpacing<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object LetterSpacingProps {
     }
     
     @scala.inline
+    def setLetterSpacingVarargs(value: js.Any*): Self = this.set("letterSpacing", js.Array(value :_*))
+    
+    @scala.inline
     def setLetterSpacing(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LetterSpacingProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LetterSpacing<TLength> */ _
         ]
     ): Self = this.set("letterSpacing", value.asInstanceOf[js.Any])
     

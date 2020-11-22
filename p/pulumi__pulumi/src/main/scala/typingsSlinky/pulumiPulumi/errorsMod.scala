@@ -10,6 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object errorsMod extends js.Object {
   
+  def isGrpcError(err: js.Error): Boolean = js.native
+  
   @js.native
   class ResourceError protected () extends Error {
     def this(message: String) = this()

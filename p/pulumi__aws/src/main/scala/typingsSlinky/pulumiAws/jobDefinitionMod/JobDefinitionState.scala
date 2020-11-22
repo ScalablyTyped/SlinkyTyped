@@ -44,6 +44,11 @@ trait JobDefinitionState extends js.Object {
   val revision: js.UndefOr[Input[Double]] = js.native
   
   /**
+    * Key-value map of resource tags
+    */
+  val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
+  
+  /**
     * Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
     */
   val timeout: js.UndefOr[Input[JobDefinitionTimeout]] = js.native
@@ -111,6 +116,12 @@ object JobDefinitionState {
     
     @scala.inline
     def deleteRevision: Self = this.set("revision", js.undefined)
+    
+    @scala.inline
+    def setTags(value: Input[StringDictionary[Input[String]]]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
     
     @scala.inline
     def setTimeout(value: Input[JobDefinitionTimeout]): Self = this.set("timeout", value.asInstanceOf[js.Any])

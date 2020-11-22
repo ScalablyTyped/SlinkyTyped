@@ -30,7 +30,7 @@ trait DatePicker extends js.Object {
     * Use this property to specify the initially selected date and time when picking a date, a time or both using date picker. If no date is specified, the current date and time will be
     * selected initially.
     *
-    * Be aware that this property does not hold the selected date after the date picker have been dismissed. The promises returned by `pickTime()`, `pickDate()` and `PickDateAndTime()`
+    * Be aware that this property does not hold the selected date after the date picker has been dismissed. The promises returned by `pickTime()`, `pickDate()` and `PickDateAndTime()`
     * carries the selected date.
     * @see https://docs.scriptable.app/datepicker/#initialdate
     */
@@ -74,7 +74,7 @@ trait DatePicker extends js.Object {
   /**
     * _Presents the date picker displaying day, month and year._
     *
-    * Use the method to pick a date. The date picker will display the a day, month and year. Use the `initialDate` property to set the initially selected date.
+    * Use the method to pick a date. The date picker will display the day, month and year. Use the `initialDate` property to set the initially selected date.
     * @see https://docs.scriptable.app/datepicker/#-pickdate
     */
   def pickDate(): js.Promise[js.Date] = js.native
@@ -82,7 +82,7 @@ trait DatePicker extends js.Object {
   /**
     * _Presents the date picker displaying date and time._
     *
-    * Use the method to pick a date and a time. The date picker will day, month, year, hour, minutes and, depending on the locale of the device, an AM/PM designation. Use the
+    * Use the method to pick a date and a time. The date picker will display the day, month, year, hour, minutes and, depending on the locale of the device, an AM/PM designation. Use the
     * `initialDate` property to set the initially selected date.
     * @see https://docs.scriptable.app/datepicker/#-pickdateandtime
     */

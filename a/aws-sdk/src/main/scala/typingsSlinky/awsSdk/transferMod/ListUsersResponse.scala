@@ -13,7 +13,7 @@ trait ListUsersResponse extends js.Object {
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.transferMod.NextToken] = js.native
   
   /**
-    * A system-assigned unique identifier for a file transfer protocol-enabled server that the users are assigned to.
+    * A system-assigned unique identifier for a server that the users are assigned to.
     */
   var ServerId: typingsSlinky.awsSdk.transferMod.ServerId = js.native
   

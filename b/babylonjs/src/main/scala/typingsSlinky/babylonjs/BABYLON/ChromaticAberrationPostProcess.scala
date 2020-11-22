@@ -26,4 +26,10 @@ trait ChromaticAberrationPostProcess extends PostProcess {
     * The amount the effect will increase for pixels closer to the edge of the screen. (default: 0)
     */
   var radialIntensity: Double = js.native
+  
+  /** The height of the screen to apply the effect on */
+  var screenHeight: Double = js.native
+  
+  /** The width of the screen to apply the effect on */
+  var screenWidth: Double = js.native
 }

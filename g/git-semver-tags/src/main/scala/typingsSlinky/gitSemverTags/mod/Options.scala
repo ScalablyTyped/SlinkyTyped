@@ -20,6 +20,11 @@ trait Options extends js.Object {
   var lernaTags: js.UndefOr[Boolean] = js.native
   
   /**
+    * If given, unstable tags (e.g. `x.x.x-alpha.1`, `x.x.x-rc.2`) will be skipped.
+    */
+  var skipUnstable: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Specify a prefix for the git tag to be ignored from the semver checks.
     */
   var tagPrefix: js.UndefOr[String] = js.native
@@ -58,6 +63,12 @@ object Options {
     
     @scala.inline
     def deleteLernaTags: Self = this.set("lernaTags", js.undefined)
+    
+    @scala.inline
+    def setSkipUnstable(value: Boolean): Self = this.set("skipUnstable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSkipUnstable: Self = this.set("skipUnstable", js.undefined)
     
     @scala.inline
     def setTagPrefix(value: String): Self = this.set("tagPrefix", value.asInstanceOf[js.Any])

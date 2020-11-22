@@ -21,7 +21,7 @@ object IGeometryEditorChildModel {
   def apply(
     destroy: () => Unit,
     editor: IGeometryEditor,
-    events: IEventManager,
+    events: IEventManager[js.Object],
     geometry: IBaseGeometry,
     getParent: () => IGeometryEditorModel,
     getPixels: () => js.Array[Double],

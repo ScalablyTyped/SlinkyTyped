@@ -13,7 +13,7 @@ trait RespondToAuthChallengeRequest extends js.Object {
   var AnalyticsMetadata: js.UndefOr[AnalyticsMetadataType] = js.native
   
   /**
-    * The challenge name. For more information, see .  ADMIN_NO_SRP_AUTH is not a valid value.
+    * The challenge name. For more information, see InitiateAuth.  ADMIN_NO_SRP_AUTH is not a valid value.
     */
   var ChallengeName: ChallengeNameType = js.native
   

@@ -1,6 +1,7 @@
 package typingsSlinky.vegaTypings.configMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.vegaTypings.colorMod.Color
 import typingsSlinky.vegaTypings.encodeMod.SymbolShape
 import typingsSlinky.vegaTypings.scaleMod.RangeRawArray
 import typingsSlinky.vegaTypings.scaleMod.RangeScheme
@@ -16,27 +17,27 @@ trait RangeConfig
   /**
     * Default [color scheme](https://vega.github.io/vega/docs/schemes/) for categorical data.
     */
-  var category: js.UndefOr[RangeScheme | js.Array[String]] = js.native
+  var category: js.UndefOr[RangeScheme | js.Array[Color]] = js.native
   
   /**
     * Default [color scheme](https://vega.github.io/vega/docs/schemes/) for diverging quantitative ramps.
     */
-  var diverging: js.UndefOr[RangeScheme | js.Array[String]] = js.native
+  var diverging: js.UndefOr[RangeScheme | js.Array[Color]] = js.native
   
   /**
     * Default [color scheme](https://vega.github.io/vega/docs/schemes/) for quantitative heatmaps.
     */
-  var heatmap: js.UndefOr[RangeScheme | js.Array[String]] = js.native
+  var heatmap: js.UndefOr[RangeScheme | js.Array[Color]] = js.native
   
   /**
     * Default [color scheme](https://vega.github.io/vega/docs/schemes/) for rank-ordered data.
     */
-  var ordinal: js.UndefOr[RangeScheme | js.Array[String]] = js.native
+  var ordinal: js.UndefOr[RangeScheme | js.Array[Color]] = js.native
   
   /**
     * Default [color scheme](https://vega.github.io/vega/docs/schemes/) for sequential quantitative ramps.
     */
-  var ramp: js.UndefOr[RangeScheme | js.Array[String]] = js.native
+  var ramp: js.UndefOr[RangeScheme | js.Array[Color]] = js.native
   
   /**
     * Array of [symbol](https://vega.github.io/vega/docs/marks/symbol/) names or paths for the default shape palette.
@@ -67,46 +68,46 @@ object RangeConfig {
     }
     
     @scala.inline
-    def setCategoryVarargs(value: (Boolean | Double | Null | RangeRawArray | SignalRef | String)*): Self = this.set("category", js.Array(value :_*))
+    def setCategoryVarargs(value: (Boolean | Color | Double | Null | RangeRawArray | SignalRef | String)*): Self = this.set("category", js.Array(value :_*))
     
     @scala.inline
-    def setCategory(value: RangeScheme | js.Array[String]): Self = this.set("category", value.asInstanceOf[js.Any])
+    def setCategory(value: RangeScheme | js.Array[Color]): Self = this.set("category", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCategory: Self = this.set("category", js.undefined)
     
     @scala.inline
-    def setDivergingVarargs(value: (Boolean | Double | Null | RangeRawArray | SignalRef | String)*): Self = this.set("diverging", js.Array(value :_*))
+    def setDivergingVarargs(value: (Boolean | Color | Double | Null | RangeRawArray | SignalRef | String)*): Self = this.set("diverging", js.Array(value :_*))
     
     @scala.inline
-    def setDiverging(value: RangeScheme | js.Array[String]): Self = this.set("diverging", value.asInstanceOf[js.Any])
+    def setDiverging(value: RangeScheme | js.Array[Color]): Self = this.set("diverging", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDiverging: Self = this.set("diverging", js.undefined)
     
     @scala.inline
-    def setHeatmapVarargs(value: (Boolean | Double | Null | RangeRawArray | SignalRef | String)*): Self = this.set("heatmap", js.Array(value :_*))
+    def setHeatmapVarargs(value: (Boolean | Color | Double | Null | RangeRawArray | SignalRef | String)*): Self = this.set("heatmap", js.Array(value :_*))
     
     @scala.inline
-    def setHeatmap(value: RangeScheme | js.Array[String]): Self = this.set("heatmap", value.asInstanceOf[js.Any])
+    def setHeatmap(value: RangeScheme | js.Array[Color]): Self = this.set("heatmap", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHeatmap: Self = this.set("heatmap", js.undefined)
     
     @scala.inline
-    def setOrdinalVarargs(value: (Boolean | Double | Null | RangeRawArray | SignalRef | String)*): Self = this.set("ordinal", js.Array(value :_*))
+    def setOrdinalVarargs(value: (Boolean | Color | Double | Null | RangeRawArray | SignalRef | String)*): Self = this.set("ordinal", js.Array(value :_*))
     
     @scala.inline
-    def setOrdinal(value: RangeScheme | js.Array[String]): Self = this.set("ordinal", value.asInstanceOf[js.Any])
+    def setOrdinal(value: RangeScheme | js.Array[Color]): Self = this.set("ordinal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrdinal: Self = this.set("ordinal", js.undefined)
     
     @scala.inline
-    def setRampVarargs(value: (Boolean | Double | Null | RangeRawArray | SignalRef | String)*): Self = this.set("ramp", js.Array(value :_*))
+    def setRampVarargs(value: (Boolean | Color | Double | Null | RangeRawArray | SignalRef | String)*): Self = this.set("ramp", js.Array(value :_*))
     
     @scala.inline
-    def setRamp(value: RangeScheme | js.Array[String]): Self = this.set("ramp", value.asInstanceOf[js.Any])
+    def setRamp(value: RangeScheme | js.Array[Color]): Self = this.set("ramp", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRamp: Self = this.set("ramp", js.undefined)

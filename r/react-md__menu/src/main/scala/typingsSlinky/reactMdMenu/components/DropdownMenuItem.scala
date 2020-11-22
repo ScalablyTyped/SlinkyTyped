@@ -30,9 +30,13 @@ import typingsSlinky.reactMdList.listItemAddonMod.ListItemAddonType
 import typingsSlinky.reactMdMenu.defaultMenuItemRendererMod.ValidMenuItem
 import typingsSlinky.reactMdMenu.defaultMenuRendererMod.InjectedMenuProps
 import typingsSlinky.reactMdMenu.dropdownMenuItemMod.DropdownMenuItemProps
-import typingsSlinky.reactMdMenu.menuMod.MenuPositionOptions
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`additions removals`
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.`additions text`
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.`inline`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`removals additions`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`removals text`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`text additions`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`text removals`
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.additions
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.all
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.ascending
@@ -81,7 +85,6 @@ import typingsSlinky.reactMdMenu.reactMdMenuStrings.yes
 import typingsSlinky.reactMdPortal.getContainerMod.PortalInto
 import typingsSlinky.reactMdStates.typesMod.MergableRippleHandlers
 import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
-import typingsSlinky.reactMdUtils.typesMod.PositionAnchor
 import typingsSlinky.reactTransitionGroup.csstransitionMod.CSSTransitionClassNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -105,7 +108,7 @@ object DropdownMenuItem {
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def anchor(value: PositionAnchor): this.type = set("anchor", value.asInstanceOf[js.Any])
+    def anchor(value: js.Any): this.type = set("anchor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
@@ -213,7 +216,9 @@ object DropdownMenuItem {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -267,10 +272,10 @@ object DropdownMenuItem {
     def clickable(value: Boolean): this.type = set("clickable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeOnResize(value: Boolean): this.type = set("closeOnResize", value.asInstanceOf[js.Any])
+    def closeOnResize(value: js.Any): this.type = set("closeOnResize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def closeOnScroll(value: Boolean): this.type = set("closeOnScroll", value.asInstanceOf[js.Any])
+    def closeOnScroll(value: js.Any): this.type = set("closeOnScroll", value.asInstanceOf[js.Any])
     
     @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
@@ -327,6 +332,9 @@ object DropdownMenuItem {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def disabledOpacity(value: Boolean): this.type = set("disabledOpacity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -351,7 +359,7 @@ object DropdownMenuItem {
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
+    def horizontal(value: js.Any): this.type = set("horizontal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
@@ -396,6 +404,9 @@ object DropdownMenuItem {
     def leftAddonType(value: ListItemAddonType): this.type = set("leftAddonType", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def menuClassName(value: String): this.type = set("menuClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def menuLabel(value: String): this.type = set("menuLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -403,6 +414,9 @@ object DropdownMenuItem {
     
     @scala.inline
     def menuRenderer(value: (/* props */ InjectedMenuProps, /* items */ js.Array[ValidMenuItem]) => ReactElement): this.type = set("menuRenderer", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def menuStyle(value: CSSProperties): this.type = set("menuStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLLIElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -666,7 +680,7 @@ object DropdownMenuItem {
     def portalIntoId(value: String): this.type = set("portalIntoId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def positionOptions(value: MenuPositionOptions): this.type = set("positionOptions", value.asInstanceOf[js.Any])
+    def positionOptions(value: js.Any): this.type = set("positionOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])

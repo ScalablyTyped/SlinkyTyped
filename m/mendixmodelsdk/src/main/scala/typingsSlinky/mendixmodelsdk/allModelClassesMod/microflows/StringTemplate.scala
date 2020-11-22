@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.workflowsMod.workflows.UserTask
 import typingsSlinky.mendixmodelsdk.workflowsMod.workflows.Workflow
 import scala.scalajs.js
@@ -20,8 +22,8 @@ class StringTemplate protected ()
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
 /* static members */
@@ -76,7 +78,7 @@ object StringTemplate extends js.Object {
     * of the parent workflows.UserTask element passed as argument.
     *
     * Warning! Can only be used on models with the following Mendix meta model versions:
-    *  8.10.0 and higher
+    *  8.15.0 and higher
     */
   def createInUserTaskUnderDescription(container: UserTask): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
   
@@ -86,7 +88,7 @@ object StringTemplate extends js.Object {
     * of the parent workflows.UserTask element passed as argument.
     *
     * Warning! Can only be used on models with the following Mendix meta model versions:
-    *  8.10.0 and higher
+    *  8.15.0 and higher
     */
   def createInUserTaskUnderSubject(container: UserTask): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
   
@@ -96,7 +98,7 @@ object StringTemplate extends js.Object {
     * of the parent workflows.Workflow element passed as argument.
     *
     * Warning! Can only be used on models with the following Mendix meta model versions:
-    *  8.11.0 and higher
+    *  8.15.0 and higher
     */
   def createInWorkflowUnderSubject(container: Workflow): typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate = js.native
   

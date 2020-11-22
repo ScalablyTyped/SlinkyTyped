@@ -1,6 +1,7 @@
 package typingsSlinky.titanium.global
 
-import typingsSlinky.titanium.Console
+import typingsSlinky.titanium.Titanium.Global
+import typingsSlinky.titanium.mod.global.Console_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,10 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object ^ extends js.Object {
   
   /**
-    * The APIs that reside in the global scope, which may be called without a namespace prefix.
-    */
-  /**
     * Console logging facilities.
     */
-  var console: Console = js.native
+  var console: Console_ = js.native
+  
+  var global: Global = js.native
 }

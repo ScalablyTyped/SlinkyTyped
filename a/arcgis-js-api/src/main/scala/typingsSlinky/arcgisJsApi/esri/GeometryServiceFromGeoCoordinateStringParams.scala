@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GeometryServiceFromGeoCoordinateStringParams extends Object {
   
   /**
-    * Conversion options for mrgs, utm and gars conversion types. See the [ArcGIS REST API documentation](https://developers.arcgis.com/rest/services-reference/from-geocoordinatestring.htm) for possible values and their descriptions.
+    * Conversion options for mrgs, utm and gars conversion types.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-GeometryService.html#fromGeoCoordinateString)
     */
@@ -28,8 +28,6 @@ trait GeometryServiceFromGeoCoordinateStringParams extends Object {
     * The conversion type of the input strings.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-GeometryService.html#fromGeoCoordinateString)
-    *
-    * @default mrgs
     */
   var conversionType: js.UndefOr[mrgs | usng | utm | `geo-ref` | gars | dms | ddm | dd] = js.native
   
@@ -41,7 +39,7 @@ trait GeometryServiceFromGeoCoordinateStringParams extends Object {
   var sr: SpatialReference | String | Double = js.native
   
   /**
-    * An array of formatted strings as specified by `conversionType`. Example: `["01N AA 66021 00000" , "11S NT 00000 62155" , "31U BT 94071 65288"]`
+    * An array of formatted strings as specified by `conversionType`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-GeometryService.html#fromGeoCoordinateString)
     */

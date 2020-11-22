@@ -9,7 +9,7 @@ trait MinHeightProps[TLength] extends js.Object {
   
   val minHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object MinHeightProps {
     }
     
     @scala.inline
+    def setMinHeightVarargs(value: js.Any*): Self = this.set("minHeight", js.Array(value :_*))
+    
+    @scala.inline
     def setMinHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLength> */ _
         ]
     ): Self = this.set("minHeight", value.asInstanceOf[js.Any])
     

@@ -1,6 +1,8 @@
 package typingsSlinky.tensorflowTfjsBackendCpu
 
+import typingsSlinky.tensorflowTfjsBackendCpu.binaryTypesMod.SimpleBinaryKernelImpl
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelConfig
+import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.KernelFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object divMod extends js.Object {
   
+  val div: KernelFunc = js.native
+  
   val divConfig: KernelConfig = js.native
+  
+  val divImpl: SimpleBinaryKernelImpl = js.native
 }

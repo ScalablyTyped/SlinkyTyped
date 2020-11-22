@@ -1,6 +1,7 @@
 package typingsSlinky.elasticApmNode.mod
 
 import typingsSlinky.elasticApmNode.anon.Name
+import typingsSlinky.elasticApmNode.anon.Spanid
 import typingsSlinky.elasticApmNode.mod.AwsLambda.Handler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -50,6 +51,8 @@ trait Agent
   def clearPatches(modules: js.Array[String]): Unit = js.native
   
   var currentSpan: Span | Null = js.native
+  
+  var currentTraceIds: Spanid = js.native
   
   // Distributed Tracing
   var currentTraceparent: String | Null = js.native

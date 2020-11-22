@@ -33,7 +33,7 @@ trait Destination extends js.Object {
   var roleArn: js.UndefOr[RoleArn] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) of the physical target to where the log events are delivered (for example, a Kinesis stream).
+    * The Amazon Resource Name (ARN) of the physical target where the log events are delivered (for example, a Kinesis stream).
     */
   var targetArn: js.UndefOr[TargetArn] = js.native
 }

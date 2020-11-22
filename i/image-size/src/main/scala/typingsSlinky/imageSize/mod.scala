@@ -10,6 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
+  def default(input: String): ISizeCalculationResult = js.native
+  def default(input: String, callback: CallbackFn): Unit = js.native
+  def default(input: Buffer): ISizeCalculationResult = js.native
+  
   def imageSize(input: String): ISizeCalculationResult = js.native
   def imageSize(input: String, callback: CallbackFn): Unit = js.native
   def imageSize(input: Buffer): ISizeCalculationResult = js.native

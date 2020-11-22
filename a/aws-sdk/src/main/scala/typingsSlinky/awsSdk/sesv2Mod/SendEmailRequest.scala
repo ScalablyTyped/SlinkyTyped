@@ -48,6 +48,11 @@ trait SendEmailRequest extends js.Object {
   var FromEmailAddressIdentityArn: js.UndefOr[AmazonResourceName] = js.native
   
   /**
+    * An object used to specify a list or topic to which an email belongs, which will be used when a contact chooses to unsubscribe.
+    */
+  var ListManagementOptions: js.UndefOr[typingsSlinky.awsSdk.sesv2Mod.ListManagementOptions] = js.native
+  
+  /**
     * The "Reply-to" email addresses for the message. When the recipient replies to the message, each Reply-to address receives the reply.
     */
   var ReplyToAddresses: js.UndefOr[EmailAddressList] = js.native
@@ -122,6 +127,12 @@ object SendEmailRequest {
     
     @scala.inline
     def deleteFromEmailAddressIdentityArn: Self = this.set("FromEmailAddressIdentityArn", js.undefined)
+    
+    @scala.inline
+    def setListManagementOptions(value: ListManagementOptions): Self = this.set("ListManagementOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListManagementOptions: Self = this.set("ListManagementOptions", js.undefined)
     
     @scala.inline
     def setReplyToAddressesVarargs(value: EmailAddress*): Self = this.set("ReplyToAddresses", js.Array(value :_*))

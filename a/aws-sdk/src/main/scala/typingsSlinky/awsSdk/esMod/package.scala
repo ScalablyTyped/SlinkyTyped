@@ -12,11 +12,15 @@ package object esMod {
   
   type AdvancedOptions = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.esMod.String]
   
+  type BackendRole = java.lang.String
+  
   type Boolean = scala.Boolean
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.esMod.ClientApiVersions
   
   type CloudWatchLogsLogGroupArn = java.lang.String
+  
+  type CommitMessage = java.lang.String
   
   type CompatibleElasticsearchVersionsList = js.Array[typingsSlinky.awsSdk.esMod.CompatibleVersionsMap]
   
@@ -59,6 +63,8 @@ package object esMod {
   type DomainInfoList = js.Array[typingsSlinky.awsSdk.esMod.DomainInfo]
   
   type DomainName = java.lang.String
+  
+  type DomainNameFqdn = java.lang.String
   
   type DomainNameList = js.Array[typingsSlinky.awsSdk.esMod.DomainName]
   
@@ -209,6 +215,7 @@ package object esMod {
     - typingsSlinky.awsSdk.awsSdkStrings.INDEX_SLOW_LOGS
     - typingsSlinky.awsSdk.awsSdkStrings.SEARCH_SLOW_LOGS
     - typingsSlinky.awsSdk.awsSdkStrings.ES_APPLICATION_LOGS
+    - typingsSlinky.awsSdk.awsSdkStrings.AUDIT_LOGS
     - java.lang.String
   */
   type LogType = typingsSlinky.awsSdk.esMod._LogType | java.lang.String
@@ -271,6 +278,10 @@ package object esMod {
   
   type PackageType = typingsSlinky.awsSdk.awsSdkStrings.`TXT-DICTIONARY` | java.lang.String
   
+  type PackageVersion = java.lang.String
+  
+  type PackageVersionHistoryList = js.Array[typingsSlinky.awsSdk.esMod.PackageVersionHistory]
+  
   type Password = java.lang.String
   
   type PolicyDocument = java.lang.String
@@ -300,6 +311,10 @@ package object esMod {
   type S3BucketName = java.lang.String
   
   type S3Key = java.lang.String
+  
+  type SAMLEntityId = java.lang.String
+  
+  type SAMLMetadata = java.lang.String
   
   type ServiceUrl = java.lang.String
   

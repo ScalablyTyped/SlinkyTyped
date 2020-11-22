@@ -20,7 +20,7 @@ object targetCameraMod extends js.Object {
     /**
       * Instantiates a target camera that takes a mesh or position as a target and continues to look at it while it moves.
       * This is the base of the follow, arc rotate cameras and Free camera
-      * @see http://doc.babylonjs.com/features/cameras
+      * @see https://doc.babylonjs.com/features/cameras
       * @param name Defines the name of the camera in the scene
       * @param position Defines the start position of the camera in the scene
       * @param scene Defines the scene the camera belongs to
@@ -60,10 +60,6 @@ object targetCameraMod extends js.Object {
     
     var _getRigCamPositionAndTarget: js.Any = js.native
     
-    var _globalCurrentTarget: Vector3 = js.native
-    
-    var _globalCurrentUpVector: Vector3 = js.native
-    
     /** @hidden */
     var _initialFocalDistance: Double = js.native
     
@@ -86,6 +82,10 @@ object targetCameraMod extends js.Object {
     var _storedRotationQuaternion: js.Any = js.native
     
     var _tmpQuaternion: js.Any = js.native
+    
+    var _tmpTargetVector: js.Any = js.native
+    
+    var _tmpUpVector: js.Any = js.native
     
     /** @hidden */
     var _transformedReferencePoint: Vector3 = js.native
@@ -119,6 +119,20 @@ object targetCameraMod extends js.Object {
       */
     def getTarget(): Vector3 = js.native
     
+    /** Gets or sets a boolean indicating that the scaling of the parent hierarchy will not be taken in account by the camera */
+    var ignoreParentScaling: Boolean = js.native
+    
+    /**
+      * Speed multiplier for inverse camera panning
+      */
+    var inverseRotationSpeed: Double = js.native
+    
+    /**
+      * Reverses mouselook direction to 'natural' panning as opposed to traditional direct
+      * panning
+      */
+    var invertRotation: Boolean = js.native
+    
     /**
       * Define the current target of the camera as an object or a position.
       */
@@ -150,6 +164,13 @@ object targetCameraMod extends js.Object {
       * Define the current speed of the camera
       */
     var speed: Double = js.native
+    
+    /**
+      * Defines the target point of the camera.
+      * The camera looks towards it form the radius distance.
+      */
+    def target: Vector3 = js.native
+    def target_=(value: Vector3): Unit = js.native
     
     /**
       * When set, the up vector of the camera will be updated by the rotation of the camera

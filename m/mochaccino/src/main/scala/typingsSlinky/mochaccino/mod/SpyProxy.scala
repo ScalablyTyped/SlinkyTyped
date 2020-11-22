@@ -15,7 +15,7 @@ trait SpyProxy extends js.Object {
   
   def callThrough(): Unit = js.native
   
-  def getSubject(): SinonStub = js.native
+  def getSubject(): SinonStub[js.Array[_], _] = js.native
   
   def returnValue(obj: js.Any): Unit = js.native
   
@@ -28,7 +28,7 @@ object SpyProxy {
     and: SpyProxy,
     callFake: js.Function1[/* repeated */ js.Any, _] => Unit,
     callThrough: () => Unit,
-    getSubject: () => SinonStub,
+    getSubject: () => SinonStub[js.Array[_], _],
     returnValue: js.Any => Unit,
     spyProxy: `true`
   ): SpyProxy = {
@@ -61,7 +61,7 @@ object SpyProxy {
     def setCallThrough(value: () => Unit): Self = this.set("callThrough", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGetSubject(value: () => SinonStub): Self = this.set("getSubject", js.Any.fromFunction0(value))
+    def setGetSubject(value: () => SinonStub[js.Array[_], _]): Self = this.set("getSubject", js.Any.fromFunction0(value))
     
     @scala.inline
     def setReturnValue(value: js.Any => Unit): Self = this.set("returnValue", js.Any.fromFunction1(value))

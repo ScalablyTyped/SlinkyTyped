@@ -39,6 +39,16 @@ class CachesIscsiVolume protected () extends CustomResource {
   val gatewayArn: Output_[String] = js.native
   
   /**
+    * Set to `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3.
+    */
+  val kmsEncrypted: Output_[js.UndefOr[Boolean]] = js.native
+  
+  /**
+    * The Amazon Resource Name (ARN) of the AWS KMS key used for Amazon S3 server side encryption. Is required when `kmsEncrypted` is set.
+    */
+  val kmsKey: Output_[js.UndefOr[String]] = js.native
+  
+  /**
     * Logical disk number.
     */
   val lunNumber: Output_[Double] = js.native

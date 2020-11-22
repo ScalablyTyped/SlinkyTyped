@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "Nonterminal")
 @js.native
 class Nonterminal protected ()
-  extends OptionalSymbolBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Nonterminal] {
+  extends OptionalSymbolBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Nonterminal]
+     with OptionalSymbol
+     with _ProseFragment {
   def this(name: Identifier) = this()
   def this(name: Identifier, argumentList: ArgumentList) = this()
   def this(name: Identifier, argumentList: js.UndefOr[scala.Nothing], questionToken: Token[QuestionToken]) = this()

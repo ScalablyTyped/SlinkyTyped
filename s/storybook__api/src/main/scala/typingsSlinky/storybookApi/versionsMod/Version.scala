@@ -1,6 +1,7 @@
 package typingsSlinky.storybookApi.versionsMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.storybookApi.anon.Plain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Version
   extends /* key */ StringDictionary[js.Any] {
   
-  var info: js.UndefOr[String] = js.native
+  var info: js.UndefOr[Plain] = js.native
   
   var version: String = js.native
 }
@@ -40,7 +41,7 @@ object Version {
     def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInfo(value: String): Self = this.set("info", value.asInstanceOf[js.Any])
+    def setInfo(value: Plain): Self = this.set("info", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInfo: Self = this.set("info", js.undefined)

@@ -18,8 +18,13 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antdMobile.antdMobileStrings.`additions removals`
 import typingsSlinky.antdMobile.antdMobileStrings.`additions text`
 import typingsSlinky.antdMobile.antdMobileStrings.`inline`
+import typingsSlinky.antdMobile.antdMobileStrings.`removals additions`
+import typingsSlinky.antdMobile.antdMobileStrings.`removals text`
+import typingsSlinky.antdMobile.antdMobileStrings.`text additions`
+import typingsSlinky.antdMobile.antdMobileStrings.`text removals`
 import typingsSlinky.antdMobile.antdMobileStrings.additions
 import typingsSlinky.antdMobile.antdMobileStrings.all
 import typingsSlinky.antdMobile.antdMobileStrings.ascending
@@ -223,7 +228,9 @@ object InputItem {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

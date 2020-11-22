@@ -92,6 +92,8 @@ object Device extends js.Object {
   
   /**
     * _Whether the device is using dark appearance._
+    *
+    * This API is not supported in widgets.
     * @see https://docs.scriptable.app/device/#isusingdarkappearance
     */
   def isUsingDarkAppearance(): Boolean = js.native

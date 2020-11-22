@@ -14,8 +14,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object themeMod extends js.Object {
   
-  def createColorClasses(): js.UndefOr[CssClassMap] = js.native
-  def createColorClasses(color: Color): js.UndefOr[CssClassMap] = js.native
+  def createColorClasses(color: js.UndefOr[Color], cssClassMap: CssClassMap): CssClassMap = js.native
+  def createColorClasses(color: Null, cssClassMap: CssClassMap): CssClassMap = js.native
   
   def getClassList(): js.Array[String] = js.native
   def getClassList(classes: String): js.Array[String] = js.native

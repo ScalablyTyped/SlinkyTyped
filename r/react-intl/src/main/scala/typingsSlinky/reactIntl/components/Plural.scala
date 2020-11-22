@@ -1,54 +1,39 @@
 package typingsSlinky.reactIntl.components
 
-import slinky.core.facade.ReactRef
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
-import typingsSlinky.react.mod.Ref
-import typingsSlinky.reactIntl.anon.PickPropschildrenotherzer
+import typingsSlinky.react.mod.PropsWithChildren
+import typingsSlinky.reactIntl.componentsInjectIntlMod.WithIntlProps
+import typingsSlinky.reactIntl.componentsPluralMod.Props
+import typingsSlinky.reactIntl.srcTypesMod.IntlShape
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Plural {
-  @JSImport("react-intl/lib/components/plural", JSImport.Default)
+  
+  @JSImport("react-intl/src/components/plural", JSImport.Default)
   @js.native
   object component extends js.Object
   
+  def withProps(p: PropsWithChildren[WithIntlProps[Props]]): SharedBuilder_PropsWithChildren1403840397 = new SharedBuilder_PropsWithChildren1403840397(js.Array(this.component, p.asInstanceOf[js.Any]))
+  
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
-    @scala.inline
-    def few(value: js.Any): this.type = set("few", value.asInstanceOf[js.Any])
-    @scala.inline
-    def format(value: js.Any): this.type = set("format", value.asInstanceOf[js.Any])
-    @scala.inline
-    def forwardedRefRefObject(value: ReactRef[_]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
-    @scala.inline
-    def forwardedRefFunction1(value: /* instance */ js.Any => Unit): this.type = set("forwardedRef", js.Any.fromFunction1(value))
-    @scala.inline
-    def forwardedRef(value: (js.Function1[/* instance */ js.Any, Unit]) | ReactRef[_]): this.type = set("forwardedRef", value.asInstanceOf[js.Any])
-    @scala.inline
-    def forwardedRefNull: this.type = set("forwardedRef", null)
-    @scala.inline
-    def localeMatcher(value: js.Any): this.type = set("localeMatcher", value.asInstanceOf[js.Any])
-    @scala.inline
-    def many(value: js.Any): this.type = set("many", value.asInstanceOf[js.Any])
-    @scala.inline
-    def one(value: js.Any): this.type = set("one", value.asInstanceOf[js.Any])
-    @scala.inline
-    def other(value: js.Any): this.type = set("other", value.asInstanceOf[js.Any])
-    @scala.inline
-    def two(value: js.Any): this.type = set("two", value.asInstanceOf[js.Any])
-    @scala.inline
-    def `type`(value: js.Any): this.type = set("type", value.asInstanceOf[js.Any])
-    @scala.inline
-    def value(value: js.Any): this.type = set("value", value.asInstanceOf[js.Any])
-    @scala.inline
-    def zero(value: js.Any): this.type = set("zero", value.asInstanceOf[js.Any])
+  def apply(intl: IntlShape, value: Double): SharedBuilder_PropsWithChildren1403840397 = {
+    val __props = js.Dynamic.literal(intl = intl.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    new SharedBuilder_PropsWithChildren1403840397(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[WithIntlProps[Props]]]))
   }
   
-  def withProps(p: PickPropschildrenotherzer): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: Plural.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object WrappedComponent {
+    
+    @JSImport("react-intl/src/components/plural", "default.WrappedComponent")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: Props): SharedBuilder_Props_1017889570 = new SharedBuilder_Props_1017889570(js.Array(this.component, p.asInstanceOf[js.Any]))
+    
+    @scala.inline
+    def apply(intl: IntlShape, value: Double): SharedBuilder_Props_1017889570 = {
+      val __props = js.Dynamic.literal(intl = intl.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+      new SharedBuilder_Props_1017889570(js.Array(this.component, __props.asInstanceOf[Props]))
+    }
+  }
 }
-

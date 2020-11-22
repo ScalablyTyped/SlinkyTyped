@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TargetedManagedAppProtection extends ManagedAppProtection {
   
   // Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-  var assignments: js.UndefOr[js.Array[TargetedManagedAppPolicyAssignment]] = js.native
+  var assignments: js.UndefOr[NullableOption[js.Array[TargetedManagedAppPolicyAssignment]]] = js.native
   
   // Indicates if the policy is deployed to any inclusion groups or not.
   var isAssigned: js.UndefOr[Boolean] = js.native
@@ -40,10 +40,13 @@ object TargetedManagedAppProtection {
     def setAssignmentsVarargs(value: TargetedManagedAppPolicyAssignment*): Self = this.set("assignments", js.Array(value :_*))
     
     @scala.inline
-    def setAssignments(value: js.Array[TargetedManagedAppPolicyAssignment]): Self = this.set("assignments", value.asInstanceOf[js.Any])
+    def setAssignments(value: NullableOption[js.Array[TargetedManagedAppPolicyAssignment]]): Self = this.set("assignments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAssignments: Self = this.set("assignments", js.undefined)
+    
+    @scala.inline
+    def setAssignmentsNull: Self = this.set("assignments", null)
     
     @scala.inline
     def setIsAssigned(value: Boolean): Self = this.set("isAssigned", value.asInstanceOf[js.Any])

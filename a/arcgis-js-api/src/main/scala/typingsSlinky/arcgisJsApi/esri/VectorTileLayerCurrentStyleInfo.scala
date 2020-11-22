@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VectorTileLayerCurrentStyleInfo extends Object {
   
   /**
-    * Absolute template URL for font sets included in a style. The URL includes `{fontstack}` and `{range}` tokens.
+    * Absolute template URL for font sets included in a style.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#currentStyleInfo)
     */
@@ -38,7 +38,7 @@ trait VectorTileLayerCurrentStyleInfo extends Object {
   var spriteUrl: String = js.native
   
   /**
-    * Style JSON object for vector tiles. Style object includes `version` of the style specification, `sprite` and `glyphs` properties. It adheres to [version 8 of the Mapbox GL style specification](https://www.mapbox.com/mapbox-gl-js/style-spec/).
+    * Style JSON object for vector tiles.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#currentStyleInfo)
     */

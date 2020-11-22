@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.nodeGroupMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.inputMod.eks.NodeGroupLaunchTemplate
 import typingsSlinky.pulumiAws.inputMod.eks.NodeGroupRemoteAccess
 import typingsSlinky.pulumiAws.inputMod.eks.NodeGroupResource
 import typingsSlinky.pulumiAws.inputMod.eks.NodeGroupScalingConfig
@@ -13,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NodeGroupState extends js.Object {
   
   /**
-    * Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
+    * Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
     */
   val amiType: js.UndefOr[Input[String]] = js.native
   
@@ -46,6 +47,11 @@ trait NodeGroupState extends js.Object {
     * Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
     */
   val labels: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
+  
+  /**
+    * Configuration block with Launch Template settings. Detailed below.
+    */
+  val launchTemplate: js.UndefOr[Input[NodeGroupLaunchTemplate]] = js.native
   
   /**
     * Name of the EKS Node Group.
@@ -92,9 +98,6 @@ trait NodeGroupState extends js.Object {
     */
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
-  /**
-    * Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
-    */
   val version: js.UndefOr[Input[String]] = js.native
 }
 object NodeGroupState {
@@ -161,6 +164,12 @@ object NodeGroupState {
     
     @scala.inline
     def deleteLabels: Self = this.set("labels", js.undefined)
+    
+    @scala.inline
+    def setLaunchTemplate(value: Input[NodeGroupLaunchTemplate]): Self = this.set("launchTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLaunchTemplate: Self = this.set("launchTemplate", js.undefined)
     
     @scala.inline
     def setNodeGroupName(value: Input[String]): Self = this.set("nodeGroupName", value.asInstanceOf[js.Any])

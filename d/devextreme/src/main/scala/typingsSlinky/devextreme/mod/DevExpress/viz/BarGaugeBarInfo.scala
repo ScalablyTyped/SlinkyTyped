@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BarGaugeBarInfo extends js.Object {
   
-  /** @name BarGaugeBarInfo.color */
+  /**
+    * [descr:BarGaugeBarInfo.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name BarGaugeBarInfo.index */
+  /**
+    * [descr:BarGaugeBarInfo.index]
+    */
   var index: js.UndefOr[Double] = js.native
   
-  /** @name BarGaugeBarInfo.value */
+  /**
+    * [descr:BarGaugeBarInfo.value]
+    */
   var value: js.UndefOr[Double] = js.native
 }
 object BarGaugeBarInfo {

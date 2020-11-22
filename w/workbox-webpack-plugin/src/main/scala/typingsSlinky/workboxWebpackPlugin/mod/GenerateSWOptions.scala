@@ -54,9 +54,9 @@ trait GenerateSWOptions extends CommonOptions {
     * Those URL parameters would normally cause the cache lookup to fail, since the URL strings used as cache keys would not be expected to include them.
     *
     * @default [/^utm_/]
-    * @example ignoreUrlParametersMatching: [/./]
+    * @example ignoreURLParametersMatching: [/./]
     */
-  var ignoreUrlParametersMatching: js.UndefOr[js.Array[js.RegExp]] = js.native
+  var ignoreURLParametersMatching: js.UndefOr[js.Array[js.RegExp]] = js.native
   
   /**
     * An required list of JavaScript files that should be passed to
@@ -216,13 +216,13 @@ object GenerateSWOptions {
     def deleteDirectoryIndex: Self = this.set("directoryIndex", js.undefined)
     
     @scala.inline
-    def setIgnoreUrlParametersMatchingVarargs(value: js.RegExp*): Self = this.set("ignoreUrlParametersMatching", js.Array(value :_*))
+    def setIgnoreURLParametersMatchingVarargs(value: js.RegExp*): Self = this.set("ignoreURLParametersMatching", js.Array(value :_*))
     
     @scala.inline
-    def setIgnoreUrlParametersMatching(value: js.Array[js.RegExp]): Self = this.set("ignoreUrlParametersMatching", value.asInstanceOf[js.Any])
+    def setIgnoreURLParametersMatching(value: js.Array[js.RegExp]): Self = this.set("ignoreURLParametersMatching", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteIgnoreUrlParametersMatching: Self = this.set("ignoreUrlParametersMatching", js.undefined)
+    def deleteIgnoreURLParametersMatching: Self = this.set("ignoreURLParametersMatching", js.undefined)
     
     @scala.inline
     def setImportScriptsVarargs(value: String*): Self = this.set("importScripts", js.Array(value :_*))

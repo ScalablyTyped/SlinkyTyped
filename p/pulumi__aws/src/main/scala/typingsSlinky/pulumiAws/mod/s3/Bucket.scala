@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.mod.s3
 
-import typingsSlinky.pulumiAws.bucketMod.BucketArgs
-import typingsSlinky.pulumiAws.bucketMod.BucketState
+import typingsSlinky.pulumiAws.s3BucketMod.BucketArgs
+import typingsSlinky.pulumiAws.s3BucketMod.BucketState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -39,10 +39,10 @@ object Bucket extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
-  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.bucketMod.Bucket = js.native
-  def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.bucketMod.Bucket = js.native
-  def get(name: String, id: Input[ID], state: BucketState): typingsSlinky.pulumiAws.bucketMod.Bucket = js.native
-  def get(name: String, id: Input[ID], state: BucketState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.bucketMod.Bucket = js.native
+  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.s3BucketMod.Bucket = js.native
+  def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.s3BucketMod.Bucket = js.native
+  def get(name: String, id: Input[ID], state: BucketState): typingsSlinky.pulumiAws.s3BucketMod.Bucket = js.native
+  def get(name: String, id: Input[ID], state: BucketState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.s3BucketMod.Bucket = js.native
   
   /**
     * Returns true if the given object is an instance of Bucket.  This is designed to work even

@@ -8,5 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class PolyhedronGeometry protected ()
   extends typingsSlinky.three.mod.PolyhedronGeometry {
+  /**
+  	 * @param vertices
+  	 * @param indices
+  	 * @param [radius=1]
+  	 * @param [detail=0]
+  	 */
   def this(vertices: js.Array[Double], indices: js.Array[Double]) = this()
 }

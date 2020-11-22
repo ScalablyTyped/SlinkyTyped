@@ -231,6 +231,7 @@ object createInterfaceDeclaration extends js.Object {
     heritageClauses: js.UndefOr[scala.Nothing],
     members: js.Array[TypeElement]
   ): InterfaceDeclaration = js.native
+  /** @deprecated Use `factory.createInterfaceDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     decorators: js.Array[Decorator],
     modifiers: js.Array[Modifier],

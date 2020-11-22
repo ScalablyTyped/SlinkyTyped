@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CertificateInfo extends js.Object {
   
-  var domains: CsrDomains = js.native
+  var domains: CertificateDomains = js.native
+  
+  var issuer: CertificateIssuer = js.native
   
   var notAfter: js.Date = js.native
   
@@ -16,8 +18,8 @@ trait CertificateInfo extends js.Object {
 object CertificateInfo {
   
   @scala.inline
-  def apply(domains: CsrDomains, notAfter: js.Date, notBefore: js.Date): CertificateInfo = {
-    val __obj = js.Dynamic.literal(domains = domains.asInstanceOf[js.Any], notAfter = notAfter.asInstanceOf[js.Any], notBefore = notBefore.asInstanceOf[js.Any])
+  def apply(domains: CertificateDomains, issuer: CertificateIssuer, notAfter: js.Date, notBefore: js.Date): CertificateInfo = {
+    val __obj = js.Dynamic.literal(domains = domains.asInstanceOf[js.Any], issuer = issuer.asInstanceOf[js.Any], notAfter = notAfter.asInstanceOf[js.Any], notBefore = notBefore.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateInfo]
   }
   
@@ -37,7 +39,10 @@ object CertificateInfo {
     }
     
     @scala.inline
-    def setDomains(value: CsrDomains): Self = this.set("domains", value.asInstanceOf[js.Any])
+    def setDomains(value: CertificateDomains): Self = this.set("domains", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIssuer(value: CertificateIssuer): Self = this.set("issuer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNotAfter(value: js.Date): Self = this.set("notAfter", value.asInstanceOf[js.Any])

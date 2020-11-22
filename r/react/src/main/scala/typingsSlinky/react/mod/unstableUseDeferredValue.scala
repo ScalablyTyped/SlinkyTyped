@@ -9,5 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object unstableUseDeferredValue extends js.Object {
   
   def apply[T](value: T): T = js.native
-  def apply[T](value: T, config: typingsSlinky.react.experimentalMod.reactAugmentingMod.TimeoutConfig): T = js.native
 }

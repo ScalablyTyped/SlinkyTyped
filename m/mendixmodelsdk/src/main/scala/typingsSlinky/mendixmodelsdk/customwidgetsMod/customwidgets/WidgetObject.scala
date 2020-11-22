@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -8,20 +9,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.ClientTemplate
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/customwidgets", "customwidgets.WidgetObject")
 @js.native
-class WidgetObject protected () extends Element {
+class WidgetObject protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsCustomWidget: CustomWidget = js.native
@@ -34,9 +36,6 @@ class WidgetObject protected () extends Element {
     */
   def labelTemplate: ClientTemplate | Null = js.native
   def labelTemplate_=(newValue: ClientTemplate | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FWidgetObject: IModel = js.native
   
   def properties: IList[WidgetProperty] = js.native
   

@@ -17,7 +17,7 @@ trait SettingStateDeviceSummary extends Entity {
   var errorDeviceCount: js.UndefOr[Double] = js.native
   
   // Name of the InstancePath for the setting
-  var instancePath: js.UndefOr[String] = js.native
+  var instancePath: js.UndefOr[NullableOption[String]] = js.native
   
   // Device NonCompliant count for the setting
   var nonCompliantDeviceCount: js.UndefOr[Double] = js.native
@@ -29,7 +29,7 @@ trait SettingStateDeviceSummary extends Entity {
   var remediatedDeviceCount: js.UndefOr[Double] = js.native
   
   // Name of the setting
-  var settingName: js.UndefOr[String] = js.native
+  var settingName: js.UndefOr[NullableOption[String]] = js.native
   
   // Device Unkown count for the setting
   var unknownDeviceCount: js.UndefOr[Double] = js.native
@@ -76,10 +76,13 @@ object SettingStateDeviceSummary {
     def deleteErrorDeviceCount: Self = this.set("errorDeviceCount", js.undefined)
     
     @scala.inline
-    def setInstancePath(value: String): Self = this.set("instancePath", value.asInstanceOf[js.Any])
+    def setInstancePath(value: NullableOption[String]): Self = this.set("instancePath", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInstancePath: Self = this.set("instancePath", js.undefined)
+    
+    @scala.inline
+    def setInstancePathNull: Self = this.set("instancePath", null)
     
     @scala.inline
     def setNonCompliantDeviceCount(value: Double): Self = this.set("nonCompliantDeviceCount", value.asInstanceOf[js.Any])
@@ -100,10 +103,13 @@ object SettingStateDeviceSummary {
     def deleteRemediatedDeviceCount: Self = this.set("remediatedDeviceCount", js.undefined)
     
     @scala.inline
-    def setSettingName(value: String): Self = this.set("settingName", value.asInstanceOf[js.Any])
+    def setSettingName(value: NullableOption[String]): Self = this.set("settingName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSettingName: Self = this.set("settingName", js.undefined)
+    
+    @scala.inline
+    def setSettingNameNull: Self = this.set("settingName", null)
     
     @scala.inline
     def setUnknownDeviceCount(value: Double): Self = this.set("unknownDeviceCount", value.asInstanceOf[js.Any])

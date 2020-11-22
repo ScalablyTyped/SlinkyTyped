@@ -7,15 +7,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IndexTime extends js.Object {
   
-  var nanoseconds: Double = js.native
+  def nanoseconds(): Double = js.native
   
-  var seconds: Double = js.native
+  def seconds(): Double = js.native
 }
 object IndexTime {
   
   @scala.inline
-  def apply(nanoseconds: Double, seconds: Double): IndexTime = {
-    val __obj = js.Dynamic.literal(nanoseconds = nanoseconds.asInstanceOf[js.Any], seconds = seconds.asInstanceOf[js.Any])
+  def apply(nanoseconds: () => Double, seconds: () => Double): IndexTime = {
+    val __obj = js.Dynamic.literal(nanoseconds = js.Any.fromFunction0(nanoseconds), seconds = js.Any.fromFunction0(seconds))
     __obj.asInstanceOf[IndexTime]
   }
   
@@ -35,9 +35,9 @@ object IndexTime {
     }
     
     @scala.inline
-    def setNanoseconds(value: Double): Self = this.set("nanoseconds", value.asInstanceOf[js.Any])
+    def setNanoseconds(value: () => Double): Self = this.set("nanoseconds", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setSeconds(value: Double): Self = this.set("seconds", value.asInstanceOf[js.Any])
+    def setSeconds(value: () => Double): Self = this.set("seconds", js.Any.fromFunction0(value))
   }
 }

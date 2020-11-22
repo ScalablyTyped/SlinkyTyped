@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.HandleJavaScriptDialogRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowPaintRectsRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `136` extends js.Object {
   
-  var paramsType: js.Array[HandleJavaScriptDialogRequest] = js.native
+  var paramsType: js.Array[SetShowPaintRectsRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `136` {
   
   @scala.inline
-  def apply(paramsType: js.Array[HandleJavaScriptDialogRequest], returnType: Unit): `136` = {
+  def apply(paramsType: js.Array[SetShowPaintRectsRequest], returnType: Unit): `136` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`136`]
   }
@@ -36,10 +36,10 @@ object `136` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: HandleJavaScriptDialogRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetShowPaintRectsRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[HandleJavaScriptDialogRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetShowPaintRectsRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

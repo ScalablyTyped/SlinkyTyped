@@ -28,6 +28,17 @@ trait SimpleListItemProps extends HTMLAttributes[HTMLLIElement] {
   var disabled: js.UndefOr[Boolean] = js.native
   
   /**
+    * Boolean if the list item should apply an opacity value while disabled
+    * instead of overriding the primary and secondary text colors. Enabling this
+    * will allow for the list item addons to also be dimmed.
+    *
+    * This is configured by the `$rmd-list-item-disabled-opacity` variable.
+    *
+    * Note: This does nothing if the `disabled` prop is not enabled.
+    */
+  var disabledOpacity: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Boolean if the left and/or right addons should be "forcefully" wrapped in a
     * `<span>` with the spacing class names applied instead of attempting to
     * clone it into the provided icon element.
@@ -170,6 +181,12 @@ object SimpleListItemProps {
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setDisabledOpacity(value: Boolean): Self = this.set("disabledOpacity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisabledOpacity: Self = this.set("disabledOpacity", js.undefined)
     
     @scala.inline
     def setForceAddonWrap(value: Boolean): Self = this.set("forceAddonWrap", value.asInstanceOf[js.Any])

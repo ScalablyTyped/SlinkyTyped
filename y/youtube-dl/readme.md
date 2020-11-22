@@ -1,7 +1,7 @@
 
 # Scala.js typings for youtube-dl
 
-Typings are for version 1.12
+Typings are for version 3.0
 
 ## Library description:
 youtube-dl driver for node

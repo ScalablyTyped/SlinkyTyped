@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MobileAppContent extends Entity {
   
   // The list of files for this app content version.
-  var files: js.UndefOr[js.Array[MobileAppContentFile]] = js.native
+  var files: js.UndefOr[NullableOption[js.Array[MobileAppContentFile]]] = js.native
 }
 object MobileAppContent {
   
@@ -37,9 +37,12 @@ object MobileAppContent {
     def setFilesVarargs(value: MobileAppContentFile*): Self = this.set("files", js.Array(value :_*))
     
     @scala.inline
-    def setFiles(value: js.Array[MobileAppContentFile]): Self = this.set("files", value.asInstanceOf[js.Any])
+    def setFiles(value: NullableOption[js.Array[MobileAppContentFile]]): Self = this.set("files", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFiles: Self = this.set("files", js.undefined)
+    
+    @scala.inline
+    def setFilesNull: Self = this.set("files", null)
   }
 }

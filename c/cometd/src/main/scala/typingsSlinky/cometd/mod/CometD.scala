@@ -131,6 +131,13 @@ class CometD () extends js.Object {
   def getStatus(): Status = js.native
   
   /**
+    * Gets all registered transport types.
+    *
+    * @return an array of all registered transport types
+    */
+  def getTransportTypes(): js.Array[String] = js.native
+  
+  /**
     * Returns the URL of the Bayeux server.
     *
     * @return the URL of the Bayeux server

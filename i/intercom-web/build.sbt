@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "intercom-web"
-version := "2.8-dt-20200515Z-037f9e"
+version := "2.8-dt-20200904Z-d28b35"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ComplianceManagementPartner extends Entity {
   
   // User groups which enroll Android devices through partner.
-  var androidEnrollmentAssignments: js.UndefOr[js.Array[ComplianceManagementPartnerAssignment]] = js.native
+  var androidEnrollmentAssignments: js.UndefOr[NullableOption[js.Array[ComplianceManagementPartnerAssignment]]] = js.native
   
   // Partner onboarded for Android devices.
   var androidOnboarded: js.UndefOr[Boolean] = js.native
   
   // Partner display name
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // User groups which enroll ios devices through partner.
-  var iosEnrollmentAssignments: js.UndefOr[js.Array[ComplianceManagementPartnerAssignment]] = js.native
+  var iosEnrollmentAssignments: js.UndefOr[NullableOption[js.Array[ComplianceManagementPartnerAssignment]]] = js.native
   
   // Partner onboarded for ios devices.
   var iosOnboarded: js.UndefOr[Boolean] = js.native
@@ -26,7 +26,7 @@ trait ComplianceManagementPartner extends Entity {
   var lastHeartbeatDateTime: js.UndefOr[String] = js.native
   
   // User groups which enroll Mac devices through partner.
-  var macOsEnrollmentAssignments: js.UndefOr[js.Array[ComplianceManagementPartnerAssignment]] = js.native
+  var macOsEnrollmentAssignments: js.UndefOr[NullableOption[js.Array[ComplianceManagementPartnerAssignment]]] = js.native
   
   // Partner onboarded for Mac devices.
   var macOsOnboarded: js.UndefOr[Boolean] = js.native
@@ -61,10 +61,13 @@ object ComplianceManagementPartner {
     def setAndroidEnrollmentAssignmentsVarargs(value: ComplianceManagementPartnerAssignment*): Self = this.set("androidEnrollmentAssignments", js.Array(value :_*))
     
     @scala.inline
-    def setAndroidEnrollmentAssignments(value: js.Array[ComplianceManagementPartnerAssignment]): Self = this.set("androidEnrollmentAssignments", value.asInstanceOf[js.Any])
+    def setAndroidEnrollmentAssignments(value: NullableOption[js.Array[ComplianceManagementPartnerAssignment]]): Self = this.set("androidEnrollmentAssignments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAndroidEnrollmentAssignments: Self = this.set("androidEnrollmentAssignments", js.undefined)
+    
+    @scala.inline
+    def setAndroidEnrollmentAssignmentsNull: Self = this.set("androidEnrollmentAssignments", null)
     
     @scala.inline
     def setAndroidOnboarded(value: Boolean): Self = this.set("androidOnboarded", value.asInstanceOf[js.Any])
@@ -73,19 +76,25 @@ object ComplianceManagementPartner {
     def deleteAndroidOnboarded: Self = this.set("androidOnboarded", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
+    
+    @scala.inline
     def setIosEnrollmentAssignmentsVarargs(value: ComplianceManagementPartnerAssignment*): Self = this.set("iosEnrollmentAssignments", js.Array(value :_*))
     
     @scala.inline
-    def setIosEnrollmentAssignments(value: js.Array[ComplianceManagementPartnerAssignment]): Self = this.set("iosEnrollmentAssignments", value.asInstanceOf[js.Any])
+    def setIosEnrollmentAssignments(value: NullableOption[js.Array[ComplianceManagementPartnerAssignment]]): Self = this.set("iosEnrollmentAssignments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIosEnrollmentAssignments: Self = this.set("iosEnrollmentAssignments", js.undefined)
+    
+    @scala.inline
+    def setIosEnrollmentAssignmentsNull: Self = this.set("iosEnrollmentAssignments", null)
     
     @scala.inline
     def setIosOnboarded(value: Boolean): Self = this.set("iosOnboarded", value.asInstanceOf[js.Any])
@@ -103,10 +112,13 @@ object ComplianceManagementPartner {
     def setMacOsEnrollmentAssignmentsVarargs(value: ComplianceManagementPartnerAssignment*): Self = this.set("macOsEnrollmentAssignments", js.Array(value :_*))
     
     @scala.inline
-    def setMacOsEnrollmentAssignments(value: js.Array[ComplianceManagementPartnerAssignment]): Self = this.set("macOsEnrollmentAssignments", value.asInstanceOf[js.Any])
+    def setMacOsEnrollmentAssignments(value: NullableOption[js.Array[ComplianceManagementPartnerAssignment]]): Self = this.set("macOsEnrollmentAssignments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMacOsEnrollmentAssignments: Self = this.set("macOsEnrollmentAssignments", js.undefined)
+    
+    @scala.inline
+    def setMacOsEnrollmentAssignmentsNull: Self = this.set("macOsEnrollmentAssignments", null)
     
     @scala.inline
     def setMacOsOnboarded(value: Boolean): Self = this.set("macOsOnboarded", value.asInstanceOf[js.Any])

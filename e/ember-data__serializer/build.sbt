@@ -1,32 +1,32 @@
 organization := "org.scalablytyped.slinky"
 name := "ember-data__serializer"
-version := "3.15-dt-20200515Z-8dba63"
-scalaVersion := "2.13.2"
+version := "3.16-dt-20201028Z-3275a5"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "ember" % "3.1-dt-20200515Z-6c95da",
-  "org.scalablytyped.slinky" %%% "ember-data" % "3.1-dt-20200515Z-35c8b2",
-  "org.scalablytyped.slinky" %%% "ember__application" % "3.0-dt-20200515Z-6158f3",
-  "org.scalablytyped.slinky" %%% "ember__array" % "3.0-dt-20200515Z-9eb892",
-  "org.scalablytyped.slinky" %%% "ember__component" % "3.0-dt-20200515Z-30ddb9",
-  "org.scalablytyped.slinky" %%% "ember__controller" % "3.0-dt-20200328Z-028efd",
-  "org.scalablytyped.slinky" %%% "ember__debug" % "3.0-dt-20200515Z-21ae68",
-  "org.scalablytyped.slinky" %%% "ember__engine" % "3.0-dt-20200515Z-a6ce79",
-  "org.scalablytyped.slinky" %%% "ember__error" % "3.0-dt-20200328Z-41a078",
-  "org.scalablytyped.slinky" %%% "ember__object" % "3.1-dt-20200515Z-9c117d",
-  "org.scalablytyped.slinky" %%% "ember__polyfills" % "3.0-dt-20200515Z-9e6921",
-  "org.scalablytyped.slinky" %%% "ember__routing" % "3.0-dt-20200512Z-7a5726",
-  "org.scalablytyped.slinky" %%% "ember__runloop" % "3.0-dt-20200515Z-f82e99",
-  "org.scalablytyped.slinky" %%% "ember__service" % "3.0-dt-20200328Z-7b7f1f",
-  "org.scalablytyped.slinky" %%% "ember__template" % "3.0-dt-20200515Z-e75258",
-  "org.scalablytyped.slinky" %%% "ember__test" % "3.0-dt-20200515Z-13e19b",
-  "org.scalablytyped.slinky" %%% "ember__utils" % "3.0-dt-20200515Z-82e238",
-  "org.scalablytyped.slinky" %%% "jquery" % "3.3-dt-20200515Z-fefef8",
-  "org.scalablytyped.slinky" %%% "rsvp" % "4.0-dt-20200515Z-348428",
-  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20200515Z-0b0d10",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "ember" % "3.16-dt-20201028Z-e6b436",
+  "org.scalablytyped.slinky" %%% "ember-data" % "3.16-dt-20201028Z-0a9c14",
+  "org.scalablytyped.slinky" %%% "ember__application" % "3.16-dt-20201028Z-f19d9b",
+  "org.scalablytyped.slinky" %%% "ember__array" % "3.16-dt-20201028Z-3913ec",
+  "org.scalablytyped.slinky" %%% "ember__component" % "3.16-dt-20201103Z-33fb4e",
+  "org.scalablytyped.slinky" %%% "ember__controller" % "3.16-dt-20201118Z-240fe3",
+  "org.scalablytyped.slinky" %%% "ember__debug" % "3.16-dt-20201028Z-8dabc6",
+  "org.scalablytyped.slinky" %%% "ember__engine" % "3.16-dt-20201028Z-992cf8",
+  "org.scalablytyped.slinky" %%% "ember__error" % "3.16-dt-20201028Z-099516",
+  "org.scalablytyped.slinky" %%% "ember__object" % "3.12-dt-20201028Z-b758bf",
+  "org.scalablytyped.slinky" %%% "ember__polyfills" % "3.12-dt-20201028Z-641cb9",
+  "org.scalablytyped.slinky" %%% "ember__routing" % "3.16-dt-20201106Z-ea44a7",
+  "org.scalablytyped.slinky" %%% "ember__runloop" % "3.16-dt-20201028Z-37f8fc",
+  "org.scalablytyped.slinky" %%% "ember__service" % "3.16-dt-20201028Z-936925",
+  "org.scalablytyped.slinky" %%% "ember__template" % "3.16-dt-20201028Z-0477f3",
+  "org.scalablytyped.slinky" %%% "ember__test" % "3.16-dt-20201028Z-5a9b26",
+  "org.scalablytyped.slinky" %%% "ember__utils" % "3.16-dt-20201028Z-b057f2",
+  "org.scalablytyped.slinky" %%% "jquery" % "3.5-dt-20201028Z-467d08",
+  "org.scalablytyped.slinky" %%% "rsvp" % "4.0-dt-20201028Z-bac857",
+  "org.scalablytyped.slinky" %%% "sizzle" % "2.3-dt-20201002Z-017d7b",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

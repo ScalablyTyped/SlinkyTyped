@@ -14,6 +14,9 @@ trait LedgerKey extends js.Object {
   def account(): LedgerKeyAccount = js.native
   def account(value: LedgerKeyAccount): LedgerKeyAccount = js.native
   
+  def claimableBalance(): LedgerKeyClaimableBalance = js.native
+  def claimableBalance(value: LedgerKeyClaimableBalance): LedgerKeyClaimableBalance = js.native
+  
   def data(): LedgerKeyData = js.native
   def data(value: LedgerKeyData): LedgerKeyData = js.native
   
@@ -33,5 +36,5 @@ trait LedgerKey extends js.Object {
   def trustLine(): LedgerKeyTrustLine = js.native
   def trustLine(value: LedgerKeyTrustLine): LedgerKeyTrustLine = js.native
   
-  def value(): LedgerKeyAccount | LedgerKeyTrustLine | LedgerKeyOffer | LedgerKeyData = js.native
+  def value(): LedgerKeyAccount | LedgerKeyTrustLine | LedgerKeyOffer | LedgerKeyData | LedgerKeyClaimableBalance = js.native
 }

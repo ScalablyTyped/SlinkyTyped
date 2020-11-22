@@ -10,63 +10,59 @@ import typingsSlinky.reactInstantsearchDom.reactInstantsearchDomStrings.aborted
 import typingsSlinky.reactInstantsearchDom.reactInstantsearchDomStrings.network
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait VoiceListeningState extends js.Object {
+  
   var errorCode: js.UndefOr[
     `no-speech` | aborted | `audio-capture` | network | `not-allowed` | `service-not-allowed` | `bad-grammar` | `language-not-supported`
   ] = js.native
+  
   var isSpeechFinal: Boolean = js.native
+  
   var status: Status = js.native
+  
   var transcript: String = js.native
 }
-
 object VoiceListeningState {
+  
   @scala.inline
   def apply(isSpeechFinal: Boolean, status: Status, transcript: String): VoiceListeningState = {
     val __obj = js.Dynamic.literal(isSpeechFinal = isSpeechFinal.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], transcript = transcript.asInstanceOf[js.Any])
     __obj.asInstanceOf[VoiceListeningState]
   }
+  
   @scala.inline
   implicit class VoiceListeningStateOps[Self <: VoiceListeningState] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
-    def withIsSpeechFinal(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("isSpeechFinal")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
-    def withStatus(value: Status): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("status")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setIsSpeechFinal(value: Boolean): Self = this.set("isSpeechFinal", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withTranscript(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("transcript")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setStatus(value: Status): Self = this.set("status", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withErrorCode(
+    def setTranscript(value: String): Self = this.set("transcript", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setErrorCode(
       value: `no-speech` | aborted | `audio-capture` | network | `not-allowed` | `service-not-allowed` | `bad-grammar` | `language-not-supported`
-    ): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(value.asInstanceOf[js.Any])
-        ret
-    }
+    ): Self = this.set("errorCode", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withoutErrorCode: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("errorCode")(js.undefined)
-        ret
-    }
+    def deleteErrorCode: Self = this.set("errorCode", js.undefined)
   }
-  
 }
-

@@ -31,7 +31,7 @@ package object styledComponentsMod {
   
   type CSSProp[T] = java.lang.String | typingsSlinky.styledComponents.styledComponentsMod.CSSObject | typingsSlinky.styledComponents.styledComponentsMod.FlattenInterpolation[typingsSlinky.styledComponents.styledComponentsMod.ThemeProps[T]]
   
-  type CSSProperties = typingsSlinky.csstype.mod.Properties[java.lang.String | scala.Double, java.lang.String with js.Object]
+  type CSSProperties = typingsSlinky.csstype.mod.Properties[java.lang.String | scala.Double]
   
   // Any prop that has a default prop becomes optional, but its type is unchanged
   // Undeclared default props are augmented into the resulting allowable attributes
@@ -60,8 +60,8 @@ package object styledComponentsMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.styledComponents.styledComponentsMod.InterpolationValue
-    - typingsSlinky.styledComponents.styledComponentsMod.FlattenInterpolation[P]
     - typingsSlinky.styledComponents.styledComponentsMod.InterpolationFunction[P]
+    - typingsSlinky.styledComponents.styledComponentsMod.FlattenInterpolation[P]
   */
   type Interpolation[P] = typingsSlinky.styledComponents.styledComponentsMod._Interpolation[P] | java.lang.String | scala.Double | typingsSlinky.styledComponents.styledComponentsMod.FalseyValue
   
@@ -89,7 +89,7 @@ package object styledComponentsMod {
   */
   type SimpleInterpolation = typingsSlinky.styledComponents.styledComponentsMod._SimpleInterpolation | java.lang.String | scala.Double | typingsSlinky.styledComponents.styledComponentsMod.FalseyValue
   
-  type StyledComponent[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */, T /* <: js.Object */, O /* <: js.Object */, A /* <: /* keyof any */ java.lang.String */] = (// the "string" allows this to be used as an object key
+  type StyledComponent[C /* <: java.lang.String | slinky.core.ReactComponentClass[_] */, T /* <: js.Object */, O /* <: js.Object */, A /* <: /* keyof any */ java.lang.String */] = (// the "string" allows this to be used as an object key
   // I really want to avoid this if possible but it's the only way to use nesting with object styles...
   java.lang.String) with (typingsSlinky.styledComponents.styledComponentsMod.StyledComponentBase[C, T, O, A]) with (typingsSlinky.hoistNonReactStatics.mod.NonReactStatics[C, js.Object])
   
@@ -100,7 +100,7 @@ package object styledComponentsMod {
   type StyledComponentInnerOtherProps[C /* <: typingsSlinky.styledComponents.styledComponentsMod.AnyStyledComponent */] = js.Any
   
   type StyledComponentProps[// The Component from whose props are derived
-  C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */, // The Theme from the current context
+  C /* <: java.lang.String | slinky.core.ReactComponentClass[_] */, // The Theme from the current context
   T /* <: js.Object */, // The other props added by the template
   O /* <: js.Object */, // The props that are made optional by .attrs
   A /* <: /* keyof any */ java.lang.String */] = (typingsSlinky.styledComponents.styledComponentsMod.WithOptionalTheme[
@@ -113,7 +113,7 @@ package object styledComponentsMod {
     T
   ]) with typingsSlinky.styledComponents.styledComponentsMod.WithChildrenIfReactComponentClass[C]
   
-  type StyledComponentPropsWithAs[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */, T /* <: js.Object */, O /* <: js.Object */, A /* <: /* keyof any */ java.lang.String */] = (typingsSlinky.styledComponents.styledComponentsMod.StyledComponentProps[C, T, O, A]) with typingsSlinky.styledComponents.anon.As[C]
+  type StyledComponentPropsWithAs[C /* <: java.lang.String | slinky.core.ReactComponentClass[_] */, T /* <: js.Object */, O /* <: js.Object */, A /* <: /* keyof any */ java.lang.String */] = (typingsSlinky.styledComponents.styledComponentsMod.StyledComponentProps[C, T, O, A]) with typingsSlinky.styledComponents.anon.As[C]
   
   type StyledComponentPropsWithRef[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] = typingsSlinky.react.mod.ComponentPropsWithRef[
     C | typingsSlinky.styledComponents.styledComponentsMod.StyledComponentInnerComponent[C]
@@ -126,16 +126,14 @@ package object styledComponentsMod {
     typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[typingsSlinky.styledComponents.styledComponentsMod.DefaultTheme]
   ]
   
-  type StylisPlugin = js.Function9[
+  type StylisPlugin = js.Function7[
     /* context */ scala.Double, 
-    /* content */ java.lang.String, 
     /* selector */ js.Array[java.lang.String], 
     /* parent */ js.Array[java.lang.String], 
+    /* content */ java.lang.String, 
     /* line */ scala.Double, 
     /* column */ scala.Double, 
     /* length */ scala.Double, 
-    /* at */ scala.Double, 
-    /* depth */ scala.Double, 
     java.lang.String | scala.Unit
   ]
   
@@ -158,7 +156,7 @@ package object styledComponentsMod {
   // we need to manually add a `children` field.
   // See https://github.com/DefinitelyTyped/DefinitelyTyped/pull/31945
   // and https://github.com/DefinitelyTyped/DefinitelyTyped/pull/32843
-  type WithChildrenIfReactComponentClass[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] = js.Object | typingsSlinky.styledComponents.anon.Children
+  type WithChildrenIfReactComponentClass[C /* <: java.lang.String | slinky.core.ReactComponentClass[_] */] = js.Object | typingsSlinky.styledComponents.anon.Children
   
   type WithOptionalTheme[P /* <: typingsSlinky.styledComponents.anon.Theme[T] */, T] = P with typingsSlinky.styledComponents.anon.Theme[T]
   

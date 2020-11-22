@@ -3,10 +3,11 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 import typingsSlinky.devextreme.anon.BorderColorColor
 import typingsSlinky.devextreme.anon.BorderWidth
 import typingsSlinky.devextreme.anon.Center
-import typingsSlinky.devextreme.anon.ElementEventJQueryEventModel
 import typingsSlinky.devextreme.anon.Margin
 import typingsSlinky.devextreme.anon.ZoomFactor
-import typingsSlinky.devextreme.anon.`27`
+import typingsSlinky.devextreme.anon.`31`
+import typingsSlinky.devextreme.anon.`32`
+import typingsSlinky.devextreme.anon.`33`
 import typingsSlinky.devextreme.devextremeStrings.equirectangular
 import typingsSlinky.devextreme.devextremeStrings.lambert
 import typingsSlinky.devextreme.devextremeStrings.mercator
@@ -18,67 +19,124 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxVectorMapOptions extends BaseWidgetOptions[dxVectorMap] {
   
-  /** @name dxVectorMap.Options.background */
+  /**
+    * [descr:dxVectorMap.Options.annotations]
+    */
+  var annotations: js.UndefOr[js.Array[dxVectorMapAnnotationConfig | _]] = js.native
+  
+  /**
+    * [descr:dxVectorMap.Options.background]
+    */
   var background: js.UndefOr[BorderColorColor] = js.native
   
-  /** @name dxVectorMap.Options.bounds */
+  /**
+    * [descr:dxVectorMap.Options.bounds]
+    */
   var bounds: js.UndefOr[js.Array[Double]] = js.native
   
-  /** @name dxVectorMap.Options.center */
+  /**
+    * [descr:dxVectorMap.Options.center]
+    */
   var center: js.UndefOr[js.Array[Double]] = js.native
   
-  /** @name dxVectorMap.Options.controlBar */
+  /**
+    * [descr:dxVectorMap.Options.commonAnnotationSettings]
+    */
+  var commonAnnotationSettings: js.UndefOr[dxVectorMapCommonAnnotationConfig] = js.native
+  
+  /**
+    * [descr:dxVectorMap.Options.controlBar]
+    */
   var controlBar: js.UndefOr[Margin] = js.native
   
-  /** @name dxVectorMap.Options.layers */
+  /**
+    * [descr:dxVectorMap.Options.customizeAnnotation]
+    */
+  var customizeAnnotation: js.UndefOr[
+    js.Function1[/* annotation */ dxVectorMapAnnotationConfig | js.Any, dxVectorMapAnnotationConfig]
+  ] = js.native
+  
+  /**
+    * [descr:dxVectorMap.Options.layers]
+    */
   var layers: js.UndefOr[js.Array[BorderWidth] | BorderWidth] = js.native
   
-  /** @name dxVectorMap.Options.legends */
+  /**
+    * [descr:dxVectorMap.Options.legends]
+    */
   var legends: js.UndefOr[js.Array[dxVectorMapLegends]] = js.native
   
-  /** @name dxVectorMap.Options.maxZoomFactor */
+  /**
+    * [descr:dxVectorMap.Options.maxZoomFactor]
+    */
   var maxZoomFactor: js.UndefOr[Double] = js.native
   
-  /** @name dxVectorMap.Options.onCenterChanged */
+  /**
+    * [descr:dxVectorMap.Options.onCenterChanged]
+    */
   var onCenterChanged: js.UndefOr[js.Function1[/* e */ Center, _]] = js.native
   
-  /** @name dxVectorMap.Options.onClick */
-  var onClick: js.UndefOr[(js.Function1[/* e */ ElementEventJQueryEventModel, _]) | String] = js.native
+  /**
+    * [descr:dxVectorMap.Options.onClick]
+    */
+  var onClick: js.UndefOr[(js.Function1[/* e */ `31`, _]) | String] = js.native
   
-  /** @name dxVectorMap.Options.onSelectionChanged */
-  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ `27`, _]] = js.native
+  /**
+    * [descr:dxVectorMap.Options.onSelectionChanged]
+    */
+  var onSelectionChanged: js.UndefOr[js.Function1[/* e */ `32`, _]] = js.native
   
-  /** @name dxVectorMap.Options.onTooltipHidden */
-  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ `27`, _]] = js.native
+  /**
+    * [descr:dxVectorMap.Options.onTooltipHidden]
+    */
+  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ `33`, _]] = js.native
   
-  /** @name dxVectorMap.Options.onTooltipShown */
-  var onTooltipShown: js.UndefOr[js.Function1[/* e */ `27`, _]] = js.native
+  /**
+    * [descr:dxVectorMap.Options.onTooltipShown]
+    */
+  var onTooltipShown: js.UndefOr[js.Function1[/* e */ `33`, _]] = js.native
   
-  /** @name dxVectorMap.Options.onZoomFactorChanged */
+  /**
+    * [descr:dxVectorMap.Options.onZoomFactorChanged]
+    */
   var onZoomFactorChanged: js.UndefOr[js.Function1[/* e */ ZoomFactor, _]] = js.native
   
-  /** @name dxVectorMap.Options.panningEnabled */
+  /**
+    * [descr:dxVectorMap.Options.panningEnabled]
+    */
   var panningEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxVectorMap.Options.projection */
+  /**
+    * [descr:dxVectorMap.Options.projection]
+    */
   var projection: js.UndefOr[
     equirectangular | lambert | mercator | miller | VectorMapProjectionConfig | String | js.Any
   ] = js.native
   
-  /** @name dxVectorMap.Options.tooltip */
+  /**
+    * [descr:dxVectorMap.Options.tooltip]
+    */
   @JSName("tooltip")
   var tooltip_dxVectorMapOptions: js.UndefOr[dxVectorMapTooltip] = js.native
   
-  /** @name dxVectorMap.Options.touchEnabled */
+  /**
+    * [descr:dxVectorMap.Options.touchEnabled]
+    */
   var touchEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxVectorMap.Options.wheelEnabled */
+  /**
+    * [descr:dxVectorMap.Options.wheelEnabled]
+    */
   var wheelEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxVectorMap.Options.zoomFactor */
+  /**
+    * [descr:dxVectorMap.Options.zoomFactor]
+    */
   var zoomFactor: js.UndefOr[Double] = js.native
   
-  /** @name dxVectorMap.Options.zoomingEnabled */
+  /**
+    * [descr:dxVectorMap.Options.zoomingEnabled]
+    */
   var zoomingEnabled: js.UndefOr[Boolean] = js.native
 }
 object dxVectorMapOptions {
@@ -105,6 +163,15 @@ object dxVectorMapOptions {
     }
     
     @scala.inline
+    def setAnnotationsVarargs(value: (dxVectorMapAnnotationConfig | js.Any)*): Self = this.set("annotations", js.Array(value :_*))
+    
+    @scala.inline
+    def setAnnotations(value: js.Array[dxVectorMapAnnotationConfig | _]): Self = this.set("annotations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnnotations: Self = this.set("annotations", js.undefined)
+    
+    @scala.inline
     def setBackground(value: BorderColorColor): Self = this.set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -129,10 +196,22 @@ object dxVectorMapOptions {
     def deleteCenter: Self = this.set("center", js.undefined)
     
     @scala.inline
+    def setCommonAnnotationSettings(value: dxVectorMapCommonAnnotationConfig): Self = this.set("commonAnnotationSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCommonAnnotationSettings: Self = this.set("commonAnnotationSettings", js.undefined)
+    
+    @scala.inline
     def setControlBar(value: Margin): Self = this.set("controlBar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteControlBar: Self = this.set("controlBar", js.undefined)
+    
+    @scala.inline
+    def setCustomizeAnnotation(value: /* annotation */ dxVectorMapAnnotationConfig | js.Any => dxVectorMapAnnotationConfig): Self = this.set("customizeAnnotation", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteCustomizeAnnotation: Self = this.set("customizeAnnotation", js.undefined)
     
     @scala.inline
     def setLayersVarargs(value: BorderWidth*): Self = this.set("layers", js.Array(value :_*))
@@ -165,28 +244,28 @@ object dxVectorMapOptions {
     def deleteOnCenterChanged: Self = this.set("onCenterChanged", js.undefined)
     
     @scala.inline
-    def setOnClickFunction1(value: /* e */ ElementEventJQueryEventModel => _): Self = this.set("onClick", js.Any.fromFunction1(value))
+    def setOnClickFunction1(value: /* e */ `31` => _): Self = this.set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnClick(value: (js.Function1[/* e */ ElementEventJQueryEventModel, _]) | String): Self = this.set("onClick", value.asInstanceOf[js.Any])
+    def setOnClick(value: (js.Function1[/* e */ `31`, _]) | String): Self = this.set("onClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
-    def setOnSelectionChanged(value: /* e */ `27` => _): Self = this.set("onSelectionChanged", js.Any.fromFunction1(value))
+    def setOnSelectionChanged(value: /* e */ `32` => _): Self = this.set("onSelectionChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSelectionChanged: Self = this.set("onSelectionChanged", js.undefined)
     
     @scala.inline
-    def setOnTooltipHidden(value: /* e */ `27` => _): Self = this.set("onTooltipHidden", js.Any.fromFunction1(value))
+    def setOnTooltipHidden(value: /* e */ `33` => _): Self = this.set("onTooltipHidden", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnTooltipHidden: Self = this.set("onTooltipHidden", js.undefined)
     
     @scala.inline
-    def setOnTooltipShown(value: /* e */ `27` => _): Self = this.set("onTooltipShown", js.Any.fromFunction1(value))
+    def setOnTooltipShown(value: /* e */ `33` => _): Self = this.set("onTooltipShown", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnTooltipShown: Self = this.set("onTooltipShown", js.undefined)

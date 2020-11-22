@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.codeactionsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,8 +30,8 @@ class ConcreteEntityType protected () extends EntityType {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsBasicParameterType")
@@ -53,9 +55,6 @@ class ConcreteEntityType protected () extends EntityType {
     */
   @JSName("entity")
   val entity_FConcreteEntityType: IEntity = js.native
-  
-  @JSName("model")
-  var model_FConcreteEntityType: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/codeactions", "codeactions.ConcreteEntityType")

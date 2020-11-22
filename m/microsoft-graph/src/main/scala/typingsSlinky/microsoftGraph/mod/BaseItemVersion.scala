@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BaseItemVersion extends Entity {
   
   // Identity of the user which last modified the version. Read-only.
-  var lastModifiedBy: js.UndefOr[IdentitySet] = js.native
+  var lastModifiedBy: js.UndefOr[NullableOption[IdentitySet]] = js.native
   
   // Date and time the version was last modified. Read-only.
-  var lastModifiedDateTime: js.UndefOr[String] = js.native
+  var lastModifiedDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates the publication status of this particular version. Read-only.
-  var publication: js.UndefOr[PublicationFacet] = js.native
+  var publication: js.UndefOr[NullableOption[PublicationFacet]] = js.native
 }
 object BaseItemVersion {
   
@@ -40,21 +40,30 @@ object BaseItemVersion {
     }
     
     @scala.inline
-    def setLastModifiedBy(value: IdentitySet): Self = this.set("lastModifiedBy", value.asInstanceOf[js.Any])
+    def setLastModifiedBy(value: NullableOption[IdentitySet]): Self = this.set("lastModifiedBy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastModifiedBy: Self = this.set("lastModifiedBy", js.undefined)
     
     @scala.inline
-    def setLastModifiedDateTime(value: String): Self = this.set("lastModifiedDateTime", value.asInstanceOf[js.Any])
+    def setLastModifiedByNull: Self = this.set("lastModifiedBy", null)
+    
+    @scala.inline
+    def setLastModifiedDateTime(value: NullableOption[String]): Self = this.set("lastModifiedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastModifiedDateTime: Self = this.set("lastModifiedDateTime", js.undefined)
     
     @scala.inline
-    def setPublication(value: PublicationFacet): Self = this.set("publication", value.asInstanceOf[js.Any])
+    def setLastModifiedDateTimeNull: Self = this.set("lastModifiedDateTime", null)
+    
+    @scala.inline
+    def setPublication(value: NullableOption[PublicationFacet]): Self = this.set("publication", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePublication: Self = this.set("publication", js.undefined)
+    
+    @scala.inline
+    def setPublicationNull: Self = this.set("publication", null)
   }
 }

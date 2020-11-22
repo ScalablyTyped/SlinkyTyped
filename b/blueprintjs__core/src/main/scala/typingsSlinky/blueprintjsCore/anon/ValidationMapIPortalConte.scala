@@ -1,6 +1,7 @@
 package typingsSlinky.blueprintjsCore.anon
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.blueprintPortalClassName
 import typingsSlinky.blueprintjsCore.contextMod.Validator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ValidationMapIPortalConte extends js.Object {
   
-  var blueprintPortalClassName: js.UndefOr[Validator] = js.native
+  var blueprintPortalClassName: js.UndefOr[
+    Validator[typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.blueprintPortalClassName]
+  ] = js.native
 }
 object ValidationMapIPortalConte {
   
@@ -37,7 +40,7 @@ object ValidationMapIPortalConte {
     
     @scala.inline
     def setBlueprintPortalClassName(
-      value: (/* props */ StringDictionary[js.Any], /* propName */ String, /* componentName */ String, /* location */ String, /* propFullName */ String) => js.Error | Null
+      value: (/* props */ StringDictionary[js.Any], blueprintPortalClassName, /* componentName */ String, /* location */ String, /* propFullName */ String) => js.UndefOr[js.Error]
     ): Self = this.set("blueprintPortalClassName", js.Any.fromFunction5(value))
     
     @scala.inline

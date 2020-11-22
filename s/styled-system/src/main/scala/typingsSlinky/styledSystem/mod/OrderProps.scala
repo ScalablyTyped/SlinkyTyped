@@ -15,7 +15,7 @@ trait OrderProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Objec
     */
   var order: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object OrderProps {
     @scala.inline
     def setOrder(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
           ThemeType
         ]
     ): Self = this.set("order", value.asInstanceOf[js.Any])

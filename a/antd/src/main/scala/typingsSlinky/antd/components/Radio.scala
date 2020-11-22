@@ -1,5 +1,6 @@
 package typingsSlinky.antd.components
 
+import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
@@ -108,7 +109,7 @@ object Radio {
     * / typingsSlinky.std.stdStrings.Pick with js.Any)) with (typingsSlinky.react.mod.RefAttributes[
   typingsSlinky.std.InstanceType[
     typingsSlinky.react.mod.ForwardRefExoticComponent[
-    typingsSlinky.antd.radioInterfaceMod.RadioGroupProps with typingsSlinky.react.mod.RefAttributes[js.Any]
+    typingsSlinky.antd.radioInterfaceMod.RadioGroupProps with typingsSlinky.react.mod.RefAttributes[typingsSlinky.std.HTMLDivElement]
     ]
   ]]) because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree., Couldn't find props for / * import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in K ]: T[P]}
@@ -119,7 +120,9 @@ object Radio {
     @js.native
     object component extends js.Object
     
-    def apply(p: ComponentPropsWithRef[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[js.Any]]]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    def apply(
+      p: ComponentPropsWithRef[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[HTMLDivElement]]]
+    ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
     
     implicit def make(companion: Group.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
   }

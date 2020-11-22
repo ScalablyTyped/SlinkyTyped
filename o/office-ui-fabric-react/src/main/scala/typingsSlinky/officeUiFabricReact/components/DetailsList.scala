@@ -8,6 +8,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.Callback
 import typingsSlinky.officeUiFabricReact.detailsFooterTypesMod.IDetailsFooterProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeaderProps
@@ -31,7 +32,6 @@ import typingsSlinky.officeUiFabricReact.selectionZoneMod.ISelectionZoneProps
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection
@@ -104,6 +104,9 @@ object DetailsList {
     
     @scala.inline
     def constrainMode(value: ConstrainMode): this.type = set("constrainMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def disableResizeObserver(value: Boolean): this.type = set("disableResizeObserver", value.asInstanceOf[js.Any])
     
     @scala.inline
     def disableSelectionZone(value: Boolean): this.type = set("disableSelectionZone", value.asInstanceOf[js.Any])

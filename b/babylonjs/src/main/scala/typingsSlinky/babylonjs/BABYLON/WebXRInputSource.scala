@@ -10,11 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WebXRInputSource extends js.Object {
   
+  var _disposed: js.Any = js.native
+  
   var _options: js.Any = js.native
   
   var _scene: js.Any = js.native
-  
-  var _tmpQuaternion: js.Any = js.native
   
   var _tmpVector: js.Any = js.native
   

@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 
 import typingsSlinky.tensorflowTfjsCore.anon.Indices
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

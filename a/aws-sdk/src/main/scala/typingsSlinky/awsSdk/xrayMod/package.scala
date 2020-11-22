@@ -10,9 +10,13 @@ package object xrayMod {
   
   type AliasNames = js.Array[typingsSlinky.awsSdk.xrayMod.String]
   
+  type AmazonResourceName = java.lang.String
+  
   type AnnotationKey = java.lang.String
   
   type Annotations = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.xrayMod.ValuesWithServiceIds]
+  
+  type AnomalousServiceList = js.Array[typingsSlinky.awsSdk.xrayMod.AnomalousService]
   
   type AttributeKey = java.lang.String
   
@@ -58,6 +62,8 @@ package object xrayMod {
   
   type ErrorRootCauses = js.Array[typingsSlinky.awsSdk.xrayMod.ErrorRootCause]
   
+  type EventSummaryText = java.lang.String
+  
   type FaultRootCauseEntityPath = js.Array[typingsSlinky.awsSdk.xrayMod.FaultRootCauseEntity]
   
   type FaultRootCauseServices = js.Array[typingsSlinky.awsSdk.xrayMod.FaultRootCauseService]
@@ -69,6 +75,10 @@ package object xrayMod {
   type FixedRate = scala.Double
   
   type GetGroupsNextToken = java.lang.String
+  
+  type GetInsightEventsMaxResults = scala.Double
+  
+  type GetInsightSummariesMaxResults = scala.Double
   
   type GroupARN = java.lang.String
   
@@ -83,6 +93,31 @@ package object xrayMod {
   type Host = java.lang.String
   
   type Hostname = java.lang.String
+  
+  type InsightCategory = typingsSlinky.awsSdk.awsSdkStrings.FAULT | java.lang.String
+  
+  type InsightCategoryList = js.Array[typingsSlinky.awsSdk.xrayMod.InsightCategory]
+  
+  type InsightEventList = js.Array[typingsSlinky.awsSdk.xrayMod.InsightEvent]
+  
+  type InsightId = java.lang.String
+  
+  type InsightImpactGraphEdgeList = js.Array[typingsSlinky.awsSdk.xrayMod.InsightImpactGraphEdge]
+  
+  type InsightImpactGraphServiceList = js.Array[typingsSlinky.awsSdk.xrayMod.InsightImpactGraphService]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.CLOSED
+    - java.lang.String
+  */
+  type InsightState = typingsSlinky.awsSdk.xrayMod._InsightState | java.lang.String
+  
+  type InsightStateList = js.Array[typingsSlinky.awsSdk.xrayMod.InsightState]
+  
+  type InsightSummaryList = js.Array[typingsSlinky.awsSdk.xrayMod.InsightSummary]
+  
+  type InsightSummaryText = java.lang.String
   
   type Integer = scala.Double
   
@@ -147,6 +182,14 @@ package object xrayMod {
   
   type String = java.lang.String
   
+  type TagKey = java.lang.String
+  
+  type TagKeyList = js.Array[typingsSlinky.awsSdk.xrayMod.TagKey]
+  
+  type TagList = js.Array[typingsSlinky.awsSdk.xrayMod.Tag]
+  
+  type TagValue = java.lang.String
+  
   type TelemetryRecordList = js.Array[typingsSlinky.awsSdk.xrayMod.TelemetryRecord]
   
   /* Rewritten from type alias, can be one of: 
@@ -159,6 +202,8 @@ package object xrayMod {
   type TimeSeriesServiceStatisticsList = js.Array[typingsSlinky.awsSdk.xrayMod.TimeSeriesServiceStatistics]
   
   type Timestamp = js.Date
+  
+  type Token = java.lang.String
   
   type TraceAvailabilityZones = js.Array[typingsSlinky.awsSdk.xrayMod.AvailabilityZoneDetail]
   

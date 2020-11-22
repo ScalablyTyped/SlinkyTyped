@@ -18,6 +18,11 @@ trait Blob extends Proxy {
   def append(blob: Blob): Unit = js.native
   
   /**
+    * Returns a `Promise` that resolves with the contents of the blob as binary data contained in an `ArrayBuffer`.
+    */
+  def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  
+  /**
     * File object represented by this blob, or `null` if this blob is not
     * associated with a file.
     */
@@ -64,6 +69,18 @@ trait Blob extends Proxy {
     * @deprecated Access <Titanium.Blob.text> instead.
     */
   def getText(): String = js.native
+  
+  /**
+    * Gets the value of the <Titanium.Blob.uprightHeight> property.
+    * @deprecated Access <Titanium.Blob.uprightHeight> instead.
+    */
+  def getUprightHeight(): Double = js.native
+  
+  /**
+    * Gets the value of the <Titanium.Blob.uprightWidth> property.
+    * @deprecated Access <Titanium.Blob.uprightWidth> instead.
+    */
+  def getUprightWidth(): Double = js.native
   
   /**
     * Gets the value of the <Titanium.Blob.width> property.
@@ -140,6 +157,21 @@ trait Blob extends Proxy {
     * UTF-8 string representation of the data in this blob.
     */
   val text: String = js.native
+  
+  /**
+    * Returns an `ArrayBuffer` representation of this blob.
+    */
+  def toArrayBuffer(): js.typedarray.ArrayBuffer = js.native
+  
+  /**
+    * If the blob references an image, this provides the height in pixels after factoring in EXIF orientation.
+    */
+  val uprightHeight: Double = js.native
+  
+  /**
+    * If the blob references an image, this provides the width in pixels after factoring in EXIF orientation.
+    */
+  val uprightWidth: Double = js.native
   
   /**
     * If this blob represents an image, this is the width of the image in pixels.

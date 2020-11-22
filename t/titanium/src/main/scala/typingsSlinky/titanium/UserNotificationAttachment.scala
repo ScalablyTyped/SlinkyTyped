@@ -15,7 +15,7 @@ trait UserNotificationAttachment extends js.Object {
   /**
     * The identifier of this attachment.
     */
-  var identifier: java.lang.String = js.native
+  var identifier: String = js.native
   
   /**
     * An additional dictionary of options to provide.
@@ -26,12 +26,12 @@ trait UserNotificationAttachment extends js.Object {
     * The URL to the attachment's data. If you have obtained this attachment from
     * the notification-center then the URL will be security-scoped.
     */
-  var url: java.lang.String = js.native
+  var url: String = js.native
 }
 object UserNotificationAttachment {
   
   @scala.inline
-  def apply(identifier: java.lang.String, url: java.lang.String): UserNotificationAttachment = {
+  def apply(identifier: String, url: String): UserNotificationAttachment = {
     val __obj = js.Dynamic.literal(identifier = identifier.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[UserNotificationAttachment]
   }
@@ -46,16 +46,16 @@ object UserNotificationAttachment {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setIdentifier(value: java.lang.String): Self = this.set("identifier", value.asInstanceOf[js.Any])
+    def setIdentifier(value: String): Self = this.set("identifier", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUrl(value: java.lang.String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOptions(value: js.Any): Self = this.set("options", value.asInstanceOf[js.Any])

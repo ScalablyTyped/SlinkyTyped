@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait NonNullExpression extends LeftHandSideExpression {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_NonNullExpression: typingsSlinky.typescript.mod.SyntaxKind.NonNullExpression = js.native
+  val kind_NonNullExpression: typingsSlinky.typescript.mod.SyntaxKind.NonNullExpression = js.native
 }

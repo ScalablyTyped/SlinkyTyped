@@ -13,7 +13,7 @@ trait EstimatedResourceSize extends js.Object {
   var estimatedOn: js.UndefOr[js.Date] = js.native
   
   /**
-    * The estimated size of the resource in bytes.
+    * The estimated size of the resource, in bytes.
     */
   var estimatedSizeInBytes: js.UndefOr[SizeInBytes] = js.native
 }

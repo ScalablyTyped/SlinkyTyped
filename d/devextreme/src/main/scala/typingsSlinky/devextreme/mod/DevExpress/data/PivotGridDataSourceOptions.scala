@@ -8,34 +8,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PivotGridDataSourceOptions extends js.Object {
   
-  /** @name PivotGridDataSource.Options.fields */
+  /**
+    * [descr:PivotGridDataSource.Options.fields]
+    */
   var fields: js.UndefOr[js.Array[PivotGridDataSourceField]] = js.native
   
-  /** @name PivotGridDataSource.Options.filter */
+  /**
+    * [descr:PivotGridDataSource.Options.filter]
+    */
   var filter: js.UndefOr[String | js.Array[_] | js.Function] = js.native
   
-  /** @name PivotGridDataSource.Options.onChanged */
+  /**
+    * [descr:PivotGridDataSource.Options.onChanged]
+    */
   var onChanged: js.UndefOr[js.Function] = js.native
   
-  /** @name PivotGridDataSource.Options.onFieldsPrepared */
+  /**
+    * [descr:PivotGridDataSource.Options.onFieldsPrepared]
+    */
   var onFieldsPrepared: js.UndefOr[js.Function1[/* fields */ js.Array[PivotGridDataSourceField], _]] = js.native
   
-  /** @name PivotGridDataSource.Options.onLoadError */
+  /**
+    * [descr:PivotGridDataSource.Options.onLoadError]
+    */
   var onLoadError: js.UndefOr[js.Function1[/* error */ js.Any, _]] = js.native
   
-  /** @name PivotGridDataSource.Options.onLoadingChanged */
+  /**
+    * [descr:PivotGridDataSource.Options.onLoadingChanged]
+    */
   var onLoadingChanged: js.UndefOr[js.Function1[/* isLoading */ Boolean, _]] = js.native
   
-  /** @name PivotGridDataSource.Options.paginate */
+  /**
+    * [descr:PivotGridDataSource.Options.paginate]
+    */
   var paginate: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.remoteOperations */
+  /**
+    * [descr:PivotGridDataSource.Options.remoteOperations]
+    */
   var remoteOperations: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.retrieveFields */
+  /**
+    * [descr:PivotGridDataSource.Options.retrieveFields]
+    */
   var retrieveFields: js.UndefOr[Boolean] = js.native
   
-  /** @name PivotGridDataSource.Options.store */
+  /**
+    * [descr:PivotGridDataSource.Options.store]
+    */
   var store: js.UndefOr[
     Store | StoreOptions[Store] | XmlaStore | XmlaStoreOptions | js.Array[Type] | Type
   ] = js.native

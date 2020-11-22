@@ -12,6 +12,8 @@ trait TestResult extends js.Object {
   
   var errors: js.Array[FormattedError] = js.native
   
+  var errorsDetailed: js.Array[MatcherResults | _] = js.native
+  
   var invocations: Double = js.native
   
   var location: js.UndefOr[Column | Null] = js.native
@@ -25,11 +27,12 @@ object TestResult {
   @scala.inline
   def apply(
     errors: js.Array[FormattedError],
+    errorsDetailed: js.Array[MatcherResults | _],
     invocations: Double,
     status: TestStatus,
     testPath: js.Array[TestName | BlockName]
   ): TestResult = {
-    val __obj = js.Dynamic.literal(errors = errors.asInstanceOf[js.Any], invocations = invocations.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], testPath = testPath.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(errors = errors.asInstanceOf[js.Any], errorsDetailed = errorsDetailed.asInstanceOf[js.Any], invocations = invocations.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], testPath = testPath.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestResult]
   }
   
@@ -53,6 +56,12 @@ object TestResult {
     
     @scala.inline
     def setErrors(value: js.Array[FormattedError]): Self = this.set("errors", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setErrorsDetailedVarargs(value: (MatcherResults | js.Any)*): Self = this.set("errorsDetailed", js.Array(value :_*))
+    
+    @scala.inline
+    def setErrorsDetailed(value: js.Array[MatcherResults | _]): Self = this.set("errorsDetailed", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setInvocations(value: Double): Self = this.set("invocations", value.asInstanceOf[js.Any])

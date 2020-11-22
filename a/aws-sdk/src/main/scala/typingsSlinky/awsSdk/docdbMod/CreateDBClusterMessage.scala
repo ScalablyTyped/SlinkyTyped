@@ -18,12 +18,12 @@ trait CreateDBClusterMessage extends js.Object {
   var BackupRetentionPeriod: js.UndefOr[IntegerOptional] = js.native
   
   /**
-    * The cluster identifier. This parameter is stored as a lowercase string. Constraints:   Must contain from 1 to 63 letters, numbers, or hyphens.   The first character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: my-cluster 
+    * The cluster identifier. This parameter is stored as a lowercase string. Constraints:   Must contain from 1 to 63 letters, numbers, or hyphens.    The first character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.    Example: my-cluster 
     */
   var DBClusterIdentifier: String = js.native
   
   /**
-    *  The name of the cluster parameter group to associate with this cluster.
+    * The name of the cluster parameter group to associate with this cluster.
     */
   var DBClusterParameterGroupName: js.UndefOr[String] = js.native
   
@@ -38,7 +38,7 @@ trait CreateDBClusterMessage extends js.Object {
   var DeletionProtection: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * A list of log types that need to be enabled for exporting to Amazon CloudWatch Logs.
+    * A list of log types that need to be enabled for exporting to Amazon CloudWatch Logs. You can enable audit logs or profiler logs. For more information, see  Auditing Amazon DocumentDB Events and  Profiling Amazon DocumentDB Operations. 
     */
   var EnableCloudwatchLogsExports: js.UndefOr[LogTypeList] = js.native
   
@@ -48,12 +48,12 @@ trait CreateDBClusterMessage extends js.Object {
   var Engine: String = js.native
   
   /**
-    * The version number of the database engine to use.
+    * The version number of the database engine to use. The --engine-version will default to the latest major engine version. For production workloads, we recommend explicitly declaring this parameter with the intended major engine version.
     */
   var EngineVersion: js.UndefOr[String] = js.native
   
   /**
-    * The AWS KMS key identifier for an encrypted cluster. The AWS KMS key identifier is the Amazon Resource Name (ARN) for the AWS KMS encryption key. If you are creating a cluster using the same AWS account that owns the AWS KMS encryption key that is used to encrypt the new cluster, you can use the AWS KMS key alias instead of the ARN for the AWS KMS encryption key. If an encryption key is not specified in KmsKeyId:   If ReplicationSourceIdentifier identifies an encrypted source, then Amazon DocumentDB uses the encryption key that is used to encrypt the source. Otherwise, Amazon DocumentDB uses your default encryption key.    If the StorageEncrypted parameter is true and ReplicationSourceIdentifier is not specified, Amazon DocumentDB uses your default encryption key.   AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS Region. If you create a replica of an encrypted cluster in another AWS Region, you must set KmsKeyId to a KMS key ID that is valid in the destination AWS Region. This key is used to encrypt the replica in that AWS Region.
+    * The AWS KMS key identifier for an encrypted cluster. The AWS KMS key identifier is the Amazon Resource Name (ARN) for the AWS KMS encryption key. If you are creating a cluster using the same AWS account that owns the AWS KMS encryption key that is used to encrypt the new cluster, you can use the AWS KMS key alias instead of the ARN for the AWS KMS encryption key. If an encryption key is not specified in KmsKeyId:    If the StorageEncrypted parameter is true, Amazon DocumentDB uses your default encryption key.    AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS Region.
     */
   var KmsKeyId: js.UndefOr[String] = js.native
   
@@ -63,7 +63,7 @@ trait CreateDBClusterMessage extends js.Object {
   var MasterUserPassword: String = js.native
   
   /**
-    * The name of the master user for the cluster. Constraints:   Must be from 1 to 63 letters or numbers.   The first character must be a letter.   Cannot be a reserved word for the chosen database engine.  
+    * The name of the master user for the cluster. Constraints:   Must be from 1 to 63 letters or numbers.   The first character must be a letter.   Cannot be a reserved word for the chosen database engine.   
     */
   var MasterUsername: String = js.native
   
@@ -73,7 +73,12 @@ trait CreateDBClusterMessage extends js.Object {
   var Port: js.UndefOr[IntegerOptional] = js.native
   
   /**
-    * The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.  The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region.  Constraints:   Must be in the format hh24:mi-hh24:mi.   Must be in Universal Coordinated Time (UTC).   Must not conflict with the preferred maintenance window.   Must be at least 30 minutes.  
+    * Not currently supported. 
+    */
+  var PreSignedUrl: js.UndefOr[String] = js.native
+  
+  /**
+    * The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.  The default is a 30-minute window selected at random from an 8-hour block of time for each AWS Region.  Constraints:   Must be in the format hh24:mi-hh24:mi.   Must be in Universal Coordinated Time (UTC).   Must not conflict with the preferred maintenance window.    Must be at least 30 minutes.  
     */
   var PreferredBackupWindow: js.UndefOr[String] = js.native
   
@@ -93,7 +98,7 @@ trait CreateDBClusterMessage extends js.Object {
   var Tags: js.UndefOr[TagList] = js.native
   
   /**
-    * A list of EC2 VPC security groups to associate with this cluster.
+    * A list of EC2 VPC security groups to associate with this cluster. 
     */
   var VpcSecurityGroupIds: js.UndefOr[VpcSecurityGroupIdList] = js.native
 }
@@ -191,6 +196,12 @@ object CreateDBClusterMessage {
     
     @scala.inline
     def deletePort: Self = this.set("Port", js.undefined)
+    
+    @scala.inline
+    def setPreSignedUrl(value: String): Self = this.set("PreSignedUrl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreSignedUrl: Self = this.set("PreSignedUrl", js.undefined)
     
     @scala.inline
     def setPreferredBackupWindow(value: String): Self = this.set("PreferredBackupWindow", value.asInstanceOf[js.Any])

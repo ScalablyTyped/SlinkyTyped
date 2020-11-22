@@ -16,6 +16,14 @@ object radioMod extends js.Object {
   @js.native
   class Radio () extends ComponentInterface {
     
+    var buttonEl: js.Any = js.native
+    
+    /**
+      * The tabindex of the radio button.
+      * @internal
+      */
+    var buttonTabindex: Double = js.native
+    
     /**
       * If `true`, the radio is selected.
       */
@@ -77,6 +85,12 @@ object radioMod extends js.Object {
     
     @JSName("render")
     def render_MRadio(): js.Any = js.native
+    
+    /** @internal */
+    def setButtonTabindex(value: Double): js.Promise[Unit] = js.native
+    
+    /** @internal */
+    def setFocus(): js.Promise[Unit] = js.native
     
     var updateState: js.Any = js.native
     

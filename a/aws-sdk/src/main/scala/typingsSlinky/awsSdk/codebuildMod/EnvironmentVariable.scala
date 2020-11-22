@@ -13,7 +13,7 @@ trait EnvironmentVariable extends js.Object {
   var name: NonEmptyString = js.native
   
   /**
-    * The type of environment variable. Valid values include:    PARAMETER_STORE: An environment variable stored in Amazon EC2 Systems Manager Parameter Store. To learn how to specify a parameter store environment variable, see  parameter store reference-key in the buildspec file.    PLAINTEXT: An environment variable in plain text format. This is the default value.    SECRETS_MANAGER: An environment variable stored in AWS Secrets Manager. To learn how to specify a secrets manager environment variable, see  secrets manager reference-key in the buildspec file.  
+    * The type of environment variable. Valid values include:    PARAMETER_STORE: An environment variable stored in Amazon EC2 Systems Manager Parameter Store. To learn how to specify a parameter store environment variable, see env/parameter-store in the AWS CodeBuild User Guide.    PLAINTEXT: An environment variable in plain text format. This is the default value.    SECRETS_MANAGER: An environment variable stored in AWS Secrets Manager. To learn how to specify a secrets manager environment variable, see env/secrets-manager in the AWS CodeBuild User Guide.  
     */
   var `type`: js.UndefOr[EnvironmentVariableType] = js.native
   

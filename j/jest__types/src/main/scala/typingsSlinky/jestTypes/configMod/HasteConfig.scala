@@ -7,23 +7,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait HasteConfig extends js.Object {
   
+  /** Whether to hash files using SHA-1. */
   var computeSha1: js.UndefOr[Boolean] = js.native
   
+  /** The platform to use as the default, e.g. 'ios'. */
   var defaultPlatform: js.UndefOr[String | Null] = js.native
   
+  /** Path to a custom implementation of Haste. */
   var hasteImplModulePath: js.UndefOr[String] = js.native
   
+  /** All platforms to target, e.g ['ios', 'android']. */
   var platforms: js.UndefOr[js.Array[String]] = js.native
   
-  var providesModuleNodeModules: js.Array[String] = js.native
-  
+  /** Whether to throw on error on module collision. */
   var throwOnModuleCollision: js.UndefOr[Boolean] = js.native
 }
 object HasteConfig {
   
   @scala.inline
-  def apply(providesModuleNodeModules: js.Array[String]): HasteConfig = {
-    val __obj = js.Dynamic.literal(providesModuleNodeModules = providesModuleNodeModules.asInstanceOf[js.Any])
+  def apply(): HasteConfig = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[HasteConfig]
   }
   
@@ -41,12 +44,6 @@ object HasteConfig {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setProvidesModuleNodeModulesVarargs(value: String*): Self = this.set("providesModuleNodeModules", js.Array(value :_*))
-    
-    @scala.inline
-    def setProvidesModuleNodeModules(value: js.Array[String]): Self = this.set("providesModuleNodeModules", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setComputeSha1(value: Boolean): Self = this.set("computeSha1", value.asInstanceOf[js.Any])

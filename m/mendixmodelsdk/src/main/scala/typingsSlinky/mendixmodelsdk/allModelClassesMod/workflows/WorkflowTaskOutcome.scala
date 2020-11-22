@@ -1,9 +1,11 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod.workflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.workflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +14,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
   *
-  * In version 8.10.0: introduced
+  * @ignore
+  *
+  * In version 8.15.0: introduced
   */
 @JSImport("mendixmodelsdk/dist/gen/all-model-classes", "workflows.WorkflowTaskOutcome")
 @js.native
@@ -23,8 +27,8 @@ class WorkflowTaskOutcome protected ()
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
 /* static members */
@@ -41,11 +45,11 @@ object WorkflowTaskOutcome extends js.Object {
   
   /**
     * Creates and returns a new WorkflowTaskOutcome instance in the SDK and on the server.
-    * The new WorkflowTaskOutcome will be automatically stored in the 'possibleOutcomes' property
+    * The new WorkflowTaskOutcome will be automatically stored in the 'outcomes' property
     * of the parent WorkflowTask element passed as argument.
     *
     * Warning! Can only be used on models with the following Mendix meta model versions:
-    *  8.10.0 and higher
+    *  8.15.0 and higher
     */
   def createIn(container: typingsSlinky.mendixmodelsdk.workflowsMod.workflows.WorkflowTask): typingsSlinky.mendixmodelsdk.workflowsMod.workflows.WorkflowTaskOutcome = js.native
   

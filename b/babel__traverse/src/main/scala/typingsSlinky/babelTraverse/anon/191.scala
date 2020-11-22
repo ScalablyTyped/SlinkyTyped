@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.EnumSymbolBody
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSParameterProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `191` extends js.Object {
   
-  var `type`: EnumSymbolBody = js.native
+  var `type`: TSParameterProperty = js.native
 }
 object `191` {
   
   @scala.inline
-  def apply(`type`: EnumSymbolBody): `191` = {
+  def apply(`type`: TSParameterProperty): `191` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`191`]
@@ -35,6 +35,6 @@ object `191` {
     }
     
     @scala.inline
-    def setType(value: EnumSymbolBody): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSParameterProperty): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

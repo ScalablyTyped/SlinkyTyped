@@ -57,6 +57,11 @@ trait SecurityContext extends js.Object {
   var seLinuxOptions: js.UndefOr[Input[SELinuxOptions]] = js.native
   
   /**
+    * The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options.
+    */
+  var seccompProfile: js.UndefOr[Input[SeccompProfile]] = js.native
+  
+  /**
     * The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
     */
   var windowsOptions: js.UndefOr[Input[WindowsSecurityContextOptions]] = js.native
@@ -137,6 +142,12 @@ object SecurityContext {
     
     @scala.inline
     def deleteSeLinuxOptions: Self = this.set("seLinuxOptions", js.undefined)
+    
+    @scala.inline
+    def setSeccompProfile(value: Input[SeccompProfile]): Self = this.set("seccompProfile", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSeccompProfile: Self = this.set("seccompProfile", js.undefined)
     
     @scala.inline
     def setWindowsOptions(value: Input[WindowsSecurityContextOptions]): Self = this.set("windowsOptions", value.asInstanceOf[js.Any])

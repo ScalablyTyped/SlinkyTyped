@@ -1,7 +1,7 @@
 
 # Scala.js typings for nanoid-dictionary
 
-Typings are for version 3.0
+Typings are for version 4.1
 
 ## Library description:
 Predefined character sets to use with nanoid

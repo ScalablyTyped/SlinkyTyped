@@ -1,7 +1,7 @@
 
 # Scala.js typings for ethersproject__transactions
 
-Typings are for version 5.0.2
+Typings are for version 5.0.7
 
 ## Library description:
 Utilities for decoding and encoding Ethereum transaction for ethers.

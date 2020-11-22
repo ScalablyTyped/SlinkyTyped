@@ -32,7 +32,13 @@ object ionicCoreStrings {
   def B: B = "B".asInstanceOf[B]
   
   @scala.inline
+  def _ael: _ael = "_ael".asInstanceOf[_ael]
+  
+  @scala.inline
   def _forceStatusbarPadding: _forceStatusbarPadding = "_forceStatusbarPadding".asInstanceOf[_forceStatusbarPadding]
+  
+  @scala.inline
+  def _rel: _rel = "_rel".asInstanceOf[_rel]
   
   @scala.inline
   def _testing: _testing = "_testing".asInstanceOf[_testing]
@@ -557,9 +563,6 @@ object ionicCoreStrings {
   def outline: outline = "outline".asInstanceOf[outline]
   
   @scala.inline
-  def parent: parent = "parent".asInstanceOf[parent]
-  
-  @scala.inline
   def password: password = "password".asInstanceOf[password]
   
   @scala.inline
@@ -797,7 +800,13 @@ object ionicCoreStrings {
   sealed trait B extends _KnobName
   
   @js.native
+  sealed trait _ael extends js.Object
+  
+  @js.native
   sealed trait _forceStatusbarPadding extends js.Object
+  
+  @js.native
+  sealed trait _rel extends js.Object
   
   @js.native
   sealed trait _testing extends js.Object
@@ -1348,9 +1357,6 @@ object ionicCoreStrings {
   
   @js.native
   sealed trait outline extends js.Object
-  
-  @js.native
-  sealed trait parent extends ListenTargetOptions
   
   @js.native
   sealed trait password extends TextFieldTypes

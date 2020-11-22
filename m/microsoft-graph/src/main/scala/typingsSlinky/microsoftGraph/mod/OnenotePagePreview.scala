@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait OnenotePagePreview extends js.Object {
   
-  var links: js.UndefOr[OnenotePagePreviewLinks] = js.native
+  var links: js.UndefOr[NullableOption[OnenotePagePreviewLinks]] = js.native
   
-  var previewText: js.UndefOr[String] = js.native
+  var previewText: js.UndefOr[NullableOption[String]] = js.native
 }
 object OnenotePagePreview {
   
@@ -35,15 +35,21 @@ object OnenotePagePreview {
     }
     
     @scala.inline
-    def setLinks(value: OnenotePagePreviewLinks): Self = this.set("links", value.asInstanceOf[js.Any])
+    def setLinks(value: NullableOption[OnenotePagePreviewLinks]): Self = this.set("links", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLinks: Self = this.set("links", js.undefined)
     
     @scala.inline
-    def setPreviewText(value: String): Self = this.set("previewText", value.asInstanceOf[js.Any])
+    def setLinksNull: Self = this.set("links", null)
+    
+    @scala.inline
+    def setPreviewText(value: NullableOption[String]): Self = this.set("previewText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePreviewText: Self = this.set("previewText", js.undefined)
+    
+    @scala.inline
+    def setPreviewTextNull: Self = this.set("previewText", null)
   }
 }

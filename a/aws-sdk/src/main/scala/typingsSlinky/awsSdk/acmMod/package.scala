@@ -102,6 +102,7 @@ package object acmMod {
     - typingsSlinky.awsSdk.awsSdkStrings.PCA_INVALID_ARGS
     - typingsSlinky.awsSdk.awsSdkStrings.PCA_INVALID_DURATION
     - typingsSlinky.awsSdk.awsSdkStrings.PCA_ACCESS_DENIED
+    - typingsSlinky.awsSdk.awsSdkStrings.SLR_NOT_FOUND
     - typingsSlinky.awsSdk.awsSdkStrings.OTHER
     - java.lang.String
   */

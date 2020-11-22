@@ -13,10 +13,9 @@ trait Credentials extends js.Object {
   val accessKeyId: String = js.native
   
   /**
-    * UNIX epoch timestamp (seconds since 1 January, 1970 00:00:00 GMT) when
-    * these credentials will no longer be accepted.
+    * A {Date} when these credentials will no longer be accepted.
     */
-  val expiration: js.UndefOr[Double] = js.native
+  val expiration: js.UndefOr[js.Date] = js.native
   
   /**
     * AWS secret access key
@@ -59,7 +58,7 @@ object Credentials {
     def setSecretAccessKey(value: String): Self = this.set("secretAccessKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExpiration(value: Double): Self = this.set("expiration", value.asInstanceOf[js.Any])
+    def setExpiration(value: js.Date): Self = this.set("expiration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExpiration: Self = this.set("expiration", js.undefined)

@@ -33,6 +33,9 @@ class SignedXml ()
   /* protected */ def ApplySigningCertificate(): js.Promise[Unit] = js.native
   /* protected */ def ApplySigningCertificate(base64string: String): js.Promise[Unit] = js.native
   
+  /* protected */ def ApplySigningCertificateV2(): js.Promise[Unit] = js.native
+  /* protected */ def ApplySigningCertificateV2(base64string: String): js.Promise[Unit] = js.native
+  
   /* protected */ def CreateQualifyingProperties(): Unit = js.native
   
   def LoadXml(value: String, useContainer: Boolean): Unit = js.native

@@ -13,7 +13,7 @@ trait TemplateVersion extends js.Object {
   var CreatedTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * Schema of the dataset identified by the placeholder. The idea is that any dashboard created from the template should be bound to new datasets matching the same schema described through this API. .
+    * Schema of the dataset identified by the placeholder. Any dashboard created from this template should be bound to new datasets matching the same schema described through this API operation.
     */
   var DataSetConfigurations: js.UndefOr[DataSetConfigurationList] = js.native
   
@@ -23,12 +23,17 @@ trait TemplateVersion extends js.Object {
   var Description: js.UndefOr[VersionDescription] = js.native
   
   /**
-    * Errors associated with the template.
+    * Errors associated with this template version.
     */
   var Errors: js.UndefOr[TemplateErrorList] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) of the analysis or template which was used to create this template.
+    * A list of the associated sheets with the unique identifier and name of each sheet.
+    */
+  var Sheets: js.UndefOr[SheetList] = js.native
+  
+  /**
+    * The Amazon Resource Name (ARN) of an analysis or template that was used to create this template.
     */
   var SourceEntityArn: js.UndefOr[Arn] = js.native
   
@@ -38,7 +43,12 @@ trait TemplateVersion extends js.Object {
   var Status: js.UndefOr[ResourceStatus] = js.native
   
   /**
-    * The version number of the template.
+    * The ARN of the theme associated with this version of the template.
+    */
+  var ThemeArn: js.UndefOr[Arn] = js.native
+  
+  /**
+    * The version number of the template version.
     */
   var VersionNumber: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.VersionNumber] = js.native
 }
@@ -96,6 +106,15 @@ object TemplateVersion {
     def deleteErrors: Self = this.set("Errors", js.undefined)
     
     @scala.inline
+    def setSheetsVarargs(value: Sheet*): Self = this.set("Sheets", js.Array(value :_*))
+    
+    @scala.inline
+    def setSheets(value: SheetList): Self = this.set("Sheets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSheets: Self = this.set("Sheets", js.undefined)
+    
+    @scala.inline
     def setSourceEntityArn(value: Arn): Self = this.set("SourceEntityArn", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -106,6 +125,12 @@ object TemplateVersion {
     
     @scala.inline
     def deleteStatus: Self = this.set("Status", js.undefined)
+    
+    @scala.inline
+    def setThemeArn(value: Arn): Self = this.set("ThemeArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThemeArn: Self = this.set("ThemeArn", js.undefined)
     
     @scala.inline
     def setVersionNumber(value: VersionNumber): Self = this.set("VersionNumber", value.asInstanceOf[js.Any])

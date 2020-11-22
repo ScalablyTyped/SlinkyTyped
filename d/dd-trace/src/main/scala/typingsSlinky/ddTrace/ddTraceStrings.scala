@@ -28,6 +28,9 @@ object ddTraceStrings {
   def async_local_storage: async_local_storage = "async_local_storage".asInstanceOf[async_local_storage]
   
   @scala.inline
+  def async_resource: async_resource = "async_resource".asInstanceOf[async_resource]
+  
+  @scala.inline
   def `aws-sdk`: `aws-sdk` = "aws-sdk".asInstanceOf[`aws-sdk`]
   
   @scala.inline
@@ -145,6 +148,9 @@ object ddTraceStrings {
   def `mongodb-core`: `mongodb-core` = "mongodb-core".asInstanceOf[`mongodb-core`]
   
   @scala.inline
+  def mongoose: mongoose = "mongoose".asInstanceOf[mongoose]
+  
+  @scala.inline
   def mysql: mysql = "mysql".asInstanceOf[mysql]
   
   @scala.inline
@@ -239,6 +245,9 @@ object ddTraceStrings {
   
   @js.native
   sealed trait async_local_storage extends js.Object
+  
+  @js.native
+  sealed trait async_resource extends js.Object
   
   @js.native
   sealed trait `aws-sdk` extends js.Object
@@ -356,6 +365,9 @@ object ddTraceStrings {
   
   @js.native
   sealed trait `mongodb-core` extends js.Object
+  
+  @js.native
+  sealed trait mongoose extends js.Object
   
   @js.native
   sealed trait mysql extends js.Object

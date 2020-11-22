@@ -16,22 +16,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StringLengthRule extends js.Object {
   
-  /** @name StringLengthRule.ignoreEmptyValue */
+  /**
+    * [descr:StringLengthRule.ignoreEmptyValue]
+    */
   var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
   
-  /** @name StringLengthRule.max */
+  /**
+    * [descr:StringLengthRule.max]
+    */
   var max: js.UndefOr[Double] = js.native
   
-  /** @name StringLengthRule.message */
+  /**
+    * [descr:StringLengthRule.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name StringLengthRule.min */
+  /**
+    * [descr:StringLengthRule.min]
+    */
   var min: js.UndefOr[Double] = js.native
   
-  /** @name StringLengthRule.trim */
+  /**
+    * [descr:StringLengthRule.trim]
+    */
   var trim: js.UndefOr[Boolean] = js.native
   
-  /** @name StringLengthRule.type */
+  /**
+    * [descr:StringLengthRule.type]
+    */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native

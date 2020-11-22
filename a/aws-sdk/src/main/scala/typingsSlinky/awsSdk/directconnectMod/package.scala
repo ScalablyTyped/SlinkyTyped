@@ -103,7 +103,7 @@ package object directconnectMod {
     - typingsSlinky.awsSdk.awsSdkStrings.associating__
     - typingsSlinky.awsSdk.awsSdkStrings.associated__
     - typingsSlinky.awsSdk.awsSdkStrings.disassociating__
-    - typingsSlinky.awsSdk.awsSdkStrings.disassociated_
+    - typingsSlinky.awsSdk.awsSdkStrings.disassociated__
     - typingsSlinky.awsSdk.awsSdkStrings.updating__
     - java.lang.String
   */

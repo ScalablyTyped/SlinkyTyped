@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsCore.htmlTableMod
 
 import org.scalajs.dom.raw.HTMLTableElement
-import typingsSlinky.blueprintjsCore.htmlMod.IElementRefProps
+import typingsSlinky.blueprintjsCore.propsMod.IElementRefProps
 import typingsSlinky.react.mod.TableHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`

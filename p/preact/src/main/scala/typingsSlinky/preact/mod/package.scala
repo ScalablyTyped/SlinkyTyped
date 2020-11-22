@@ -16,7 +16,7 @@ package object mod {
   
   type ComponentFactory[P] = typingsSlinky.preact.mod.ComponentType[P]
   
-  type ComponentProps[C /* <: typingsSlinky.preact.mod.ComponentType[_] */] = js.Any
+  type ComponentProps[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 161 */ js.Any */] = /* import warning: importer.ImportType#apply Failed type conversion: preact.preact/src/jsx.JSXInternal.IntrinsicElements[C] */ js.Any
   
   type ComponentType[P] = (typingsSlinky.preact.mod.ComponentClass[P, js.Object]) | typingsSlinky.preact.mod.FunctionComponent[P]
   

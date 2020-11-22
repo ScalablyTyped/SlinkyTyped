@@ -13,8 +13,6 @@ trait GroundQueryElevationOptions extends Object {
     * The value that appears in the resulting geometry when there is no data available.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html#queryElevation)
-    *
-    * @default 0
     */
   var noDataValue: js.UndefOr[Double] = js.native
   
@@ -22,8 +20,6 @@ trait GroundQueryElevationOptions extends Object {
     * Indicates whether to return additional sample information for each sampled coordinate.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html#queryElevation)
-    *
-    * @default false
     */
   var returnSampleInfo: js.UndefOr[Boolean] = js.native
 }

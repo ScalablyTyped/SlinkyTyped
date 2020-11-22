@@ -11,13 +11,13 @@ trait WorkbookFormatProtection extends Entity {
     * Indicates if Excel hides the formula for the cells in the range. A null value indicates that the entire range doesn't
     * have uniform formula hidden setting.
     */
-  var formulaHidden: js.UndefOr[Boolean] = js.native
+  var formulaHidden: js.UndefOr[NullableOption[Boolean]] = js.native
   
   /**
     * Indicates if Excel locks the cells in the object. A null value indicates that the entire range doesn't have uniform
     * lock setting.
     */
-  var locked: js.UndefOr[Boolean] = js.native
+  var locked: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object WorkbookFormatProtection {
   
@@ -43,15 +43,21 @@ object WorkbookFormatProtection {
     }
     
     @scala.inline
-    def setFormulaHidden(value: Boolean): Self = this.set("formulaHidden", value.asInstanceOf[js.Any])
+    def setFormulaHidden(value: NullableOption[Boolean]): Self = this.set("formulaHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormulaHidden: Self = this.set("formulaHidden", js.undefined)
     
     @scala.inline
-    def setLocked(value: Boolean): Self = this.set("locked", value.asInstanceOf[js.Any])
+    def setFormulaHiddenNull: Self = this.set("formulaHidden", null)
+    
+    @scala.inline
+    def setLocked(value: NullableOption[Boolean]): Self = this.set("locked", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLocked: Self = this.set("locked", js.undefined)
+    
+    @scala.inline
+    def setLockedNull: Self = this.set("locked", null)
   }
 }

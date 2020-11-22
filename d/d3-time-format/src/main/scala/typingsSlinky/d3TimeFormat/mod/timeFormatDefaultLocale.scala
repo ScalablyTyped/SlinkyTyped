@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object timeFormatDefaultLocale extends js.Object {
   
-  def apply(defaultTimeLocale: TimeLocaleDefinition): TimeLocaleObject = js.native
+  def apply(definition: TimeLocaleDefinition): TimeLocaleObject = js.native
 }

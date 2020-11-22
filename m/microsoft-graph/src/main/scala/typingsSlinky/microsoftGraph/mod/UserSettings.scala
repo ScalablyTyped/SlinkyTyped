@@ -11,7 +11,7 @@ trait UserSettings extends Entity {
   
   var contributionToContentDiscoveryDisabled: js.UndefOr[Boolean] = js.native
   
-  var shiftPreferences: js.UndefOr[ShiftPreferences] = js.native
+  var shiftPreferences: js.UndefOr[NullableOption[ShiftPreferences]] = js.native
 }
 object UserSettings {
   
@@ -49,9 +49,12 @@ object UserSettings {
     def deleteContributionToContentDiscoveryDisabled: Self = this.set("contributionToContentDiscoveryDisabled", js.undefined)
     
     @scala.inline
-    def setShiftPreferences(value: ShiftPreferences): Self = this.set("shiftPreferences", value.asInstanceOf[js.Any])
+    def setShiftPreferences(value: NullableOption[ShiftPreferences]): Self = this.set("shiftPreferences", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShiftPreferences: Self = this.set("shiftPreferences", js.undefined)
+    
+    @scala.inline
+    def setShiftPreferencesNull: Self = this.set("shiftPreferences", null)
   }
 }

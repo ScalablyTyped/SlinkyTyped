@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "Prose")
 @js.native
 class Prose protected ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Prose] {
+  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Prose]
+     with _LexicalSymbol {
   def this(greaterThanToken: Token[GreaterThanToken]) = this()
   def this(greaterThanToken: Token[GreaterThanToken], fragments: js.Array[ProseFragment]) = this()
   

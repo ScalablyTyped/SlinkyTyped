@@ -16,6 +16,13 @@ trait GetBootstrapBrokersResponse extends js.Object {
   
   /**
     * 
+    A string containing one or more DNS names (or IP) and Sasl Scram port pairs.
+    
+    */
+  var BootstrapBrokerStringSaslScram: js.UndefOr[string] = js.native
+  
+  /**
+    * 
     A string containing one or more DNS names (or IP) and TLS port pairs.
     
     */
@@ -49,6 +56,12 @@ object GetBootstrapBrokersResponse {
     
     @scala.inline
     def deleteBootstrapBrokerString: Self = this.set("BootstrapBrokerString", js.undefined)
+    
+    @scala.inline
+    def setBootstrapBrokerStringSaslScram(value: string): Self = this.set("BootstrapBrokerStringSaslScram", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBootstrapBrokerStringSaslScram: Self = this.set("BootstrapBrokerStringSaslScram", js.undefined)
     
     @scala.inline
     def setBootstrapBrokerStringTls(value: string): Self = this.set("BootstrapBrokerStringTls", value.asInstanceOf[js.Any])

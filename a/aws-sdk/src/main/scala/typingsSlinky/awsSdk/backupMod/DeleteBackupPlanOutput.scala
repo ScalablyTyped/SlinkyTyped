@@ -23,7 +23,7 @@ trait DeleteBackupPlanOutput extends js.Object {
   var DeletionDate: js.UndefOr[js.Date] = js.native
   
   /**
-    * Unique, randomly generated, Unicode, UTF-8 encoded strings that are at most 1,024 bytes long. Version Ids cannot be edited.
+    * Unique, randomly generated, Unicode, UTF-8 encoded strings that are at most 1,024 bytes long. Version IDs cannot be edited.
     */
   var VersionId: js.UndefOr[String] = js.native
 }

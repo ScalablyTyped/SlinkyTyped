@@ -1,9 +1,11 @@
 package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuItemProps
 import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenuItem
 import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IContextualMenuProps
+import typingsSlinky.officeUiFabricReact.contextualMenuTypesMod.IMenuItemStyles
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`0`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`10`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`11`
@@ -31,6 +33,8 @@ object libContextualMenuMod extends js.Object {
   val ContextualMenuItem: ReactComponentClass[IContextualMenuItemProps] = js.native
   
   def canAnyMenuItemsCheck(items: js.Array[IContextualMenuItem]): Boolean = js.native
+  
+  def getMenuItemStyles(theme: ITheme): IMenuItemStyles = js.native
   
   def getSubmenuItems(item: IContextualMenuItem): js.UndefOr[js.Array[IContextualMenuItem]] = js.native
   

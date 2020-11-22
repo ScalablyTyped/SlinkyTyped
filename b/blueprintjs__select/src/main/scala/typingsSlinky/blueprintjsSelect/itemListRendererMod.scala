@@ -57,6 +57,12 @@ object itemListRendererMod extends js.Object {
     var query: String = js.native
     
     /**
+      * Call this function to render the "create new item" view component.
+      * @returns null when creating a new item is not available, and undefined if the createNewItemRenderer returns undefined
+      */
+    def renderCreateItem(): js.UndefOr[ReactElement | Null] = js.native
+    
+    /**
       * Call this function to render an item.
       * This retrieves the modifiers for the item and delegates actual rendering
       * to the owner component's `itemRenderer` prop.

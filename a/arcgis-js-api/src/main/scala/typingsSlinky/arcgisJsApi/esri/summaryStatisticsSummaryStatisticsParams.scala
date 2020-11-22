@@ -18,7 +18,7 @@ trait summaryStatisticsSummaryStatisticsParams extends Object {
   var features: js.UndefOr[js.Array[Graphic]] = js.native
   
   /**
-    * The name of the numeric field for which the summary statistics will be generated. This property is ignored if a `valueExpression` is used.
+    * The name of the numeric field for which the summary statistics will be generated.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-summaryStatistics.html#summaryStatistics)
     */
@@ -32,14 +32,14 @@ trait summaryStatisticsSummaryStatisticsParams extends Object {
   var layer: FeatureLayer | SceneLayer | CSVLayer | PointCloudLayer | GeoJSONLayer = js.native
   
   /**
-    * The maximum bounding value for the statistics calculation. Use this in conjunction with `minValue` to generate statistics between lower and upper bounds.
+    * The maximum bounding value for the statistics calculation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-summaryStatistics.html#summaryStatistics)
     */
   var maxValue: js.UndefOr[Double] = js.native
   
   /**
-    * The minimum bounding value for the statistics calculation. Use this in conjunction with `maxValue` to generate statistics between lower and upper bounds.
+    * The minimum bounding value for the statistics calculation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-summaryStatistics.html#summaryStatistics)
     */
@@ -53,7 +53,7 @@ trait summaryStatisticsSummaryStatisticsParams extends Object {
   var normalizationField: js.UndefOr[String] = js.native
   
   /**
-    * Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+    * Allows for cancelable requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-summaryStatistics.html#summaryStatistics)
     */
@@ -67,14 +67,14 @@ trait summaryStatisticsSummaryStatisticsParams extends Object {
   var sqlExpression: js.UndefOr[String] = js.native
   
   /**
-    * A SQL where clause used to filter features for the statistics query. For example, this is useful in situations where you want to avoid dividing by zero as is the case with creating a predominance visualization.
+    * A SQL where clause used to filter features for the statistics query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-summaryStatistics.html#summaryStatistics)
     */
   var sqlWhere: js.UndefOr[String] = js.native
   
   /**
-    * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that returns a number. This expression can reference field values using the `$feature` global variable. This property overrides the `field` property and therefore is used instead of an input `field` value.
+    * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that returns a number.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-summaryStatistics.html#summaryStatistics)
     */

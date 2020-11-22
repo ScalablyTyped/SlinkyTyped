@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.anon
 
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`

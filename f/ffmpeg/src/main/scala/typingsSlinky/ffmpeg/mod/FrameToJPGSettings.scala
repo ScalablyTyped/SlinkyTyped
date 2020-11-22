@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<{  start_time :string | number,   duration_time :string | number,   frame_rate :number,   size :string,   number :number,   every_n_frames :number,   every_n_seconds :number,   every_n_percentage :number,   keep_pixel_aspect_ratio :boolean,   keep_aspect_ration :boolean,   padding_color :string,   file_name :string | undefined}> */
+/* Inlined std.Partial<{  start_time :string | number,   duration_time :string | number,   frame_rate :number,   size :string,   number :number,   every_n_frames :number,   every_n_seconds :number,   every_n_percentage :number,   keep_pixel_aspect_ratio :boolean,   keep_aspect_ration :boolean,   padding_color :string,   file_name :string}> */
 @js.native
 trait FrameToJPGSettings extends js.Object {
   

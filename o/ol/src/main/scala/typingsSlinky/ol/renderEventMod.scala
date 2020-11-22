@@ -16,10 +16,21 @@ object renderEventMod extends js.Object {
   trait RenderEvent
     extends typingsSlinky.ol.eventMod.default {
     
+    /**
+      * Canvas context. Not available when the event is dispatched by the map. Only available
+      * when a Canvas renderer is used, null otherwise.
+      */
     var context: CanvasRenderingContext2D = js.native
     
+    /**
+      * An object representing the current render frame state.
+      */
     var frameState: FrameState = js.native
     
+    /**
+      * Transform from CSS pixels (relative to the top-left corner of the map viewport)
+      * to rendered pixels on this event's context.
+      */
     var inversePixelTransform: Transform = js.native
   }
   

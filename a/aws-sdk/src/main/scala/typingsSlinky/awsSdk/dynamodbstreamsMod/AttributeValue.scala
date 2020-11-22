@@ -8,52 +8,52 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AttributeValue extends js.Object {
   
   /**
-    * A Binary data type.
+    * An attribute of type Binary. For example:  "B": "dGhpcyB0ZXh0IGlzIGJhc2U2NC1lbmNvZGVk" 
     */
   var B: js.UndefOr[BinaryAttributeValue] = js.native
   
   /**
-    * A Boolean data type.
+    * An attribute of type Boolean. For example:  "BOOL": true 
     */
   var BOOL: js.UndefOr[BooleanAttributeValue] = js.native
   
   /**
-    * A Binary Set data type.
+    * An attribute of type Binary Set. For example:  "BS": ["U3Vubnk=", "UmFpbnk=", "U25vd3k="] 
     */
   var BS: js.UndefOr[BinarySetAttributeValue] = js.native
   
   /**
-    * A List data type.
+    * An attribute of type List. For example:  "L": [ {"S": "Cookies"} , {"S": "Coffee"}, {"N", "3.14159"}] 
     */
   var L: js.UndefOr[ListAttributeValue] = js.native
   
   /**
-    * A Map data type.
+    * An attribute of type Map. For example:  "M": {"Name": {"S": "Joe"}, "Age": {"N": "35"}} 
     */
   var M: js.UndefOr[MapAttributeValue] = js.native
   
   /**
-    * A Number data type.
+    * An attribute of type Number. For example:  "N": "123.45"  Numbers are sent across the network to DynamoDB as strings, to maximize compatibility across languages and libraries. However, DynamoDB treats them as number type attributes for mathematical operations.
     */
   var N: js.UndefOr[NumberAttributeValue] = js.native
   
   /**
-    * A Number Set data type.
+    * An attribute of type Number Set. For example:  "NS": ["42.2", "-19", "7.5", "3.14"]  Numbers are sent across the network to DynamoDB as strings, to maximize compatibility across languages and libraries. However, DynamoDB treats them as number type attributes for mathematical operations.
     */
   var NS: js.UndefOr[NumberSetAttributeValue] = js.native
   
   /**
-    * A Null data type.
+    * An attribute of type Null. For example:  "NULL": true 
     */
   var NULL: js.UndefOr[NullAttributeValue] = js.native
   
   /**
-    * A String data type.
+    * An attribute of type String. For example:  "S": "Hello" 
     */
   var S: js.UndefOr[StringAttributeValue] = js.native
   
   /**
-    * A String Set data type.
+    * An attribute of type String Set. For example:  "SS": ["Giraffe", "Hippo" ,"Zebra"] 
     */
   var SS: js.UndefOr[StringSetAttributeValue] = js.native
 }

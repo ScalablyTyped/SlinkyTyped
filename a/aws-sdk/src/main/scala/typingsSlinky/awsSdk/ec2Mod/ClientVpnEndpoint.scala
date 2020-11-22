@@ -23,6 +23,11 @@ trait ClientVpnEndpoint extends js.Object {
   var ClientCidrBlock: js.UndefOr[String] = js.native
   
   /**
+    * The options for managing connection authorization for new client connections.
+    */
+  var ClientConnectOptions: js.UndefOr[ClientConnectResponseOptions] = js.native
+  
+  /**
     * The ID of the Client VPN endpoint.
     */
   var ClientVpnEndpointId: js.UndefOr[String] = js.native
@@ -61,6 +66,11 @@ trait ClientVpnEndpoint extends js.Object {
     * The IDs of the security groups for the target network.
     */
   var SecurityGroupIds: js.UndefOr[ClientVpnSecurityGroupIdSet] = js.native
+  
+  /**
+    * The URL of the self-service portal.
+    */
+  var SelfServicePortalUrl: js.UndefOr[String] = js.native
   
   /**
     * The ARN of the server certificate.
@@ -150,6 +160,12 @@ object ClientVpnEndpoint {
     def deleteClientCidrBlock: Self = this.set("ClientCidrBlock", js.undefined)
     
     @scala.inline
+    def setClientConnectOptions(value: ClientConnectResponseOptions): Self = this.set("ClientConnectOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClientConnectOptions: Self = this.set("ClientConnectOptions", js.undefined)
+    
+    @scala.inline
     def setClientVpnEndpointId(value: String): Self = this.set("ClientVpnEndpointId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -202,6 +218,12 @@ object ClientVpnEndpoint {
     
     @scala.inline
     def deleteSecurityGroupIds: Self = this.set("SecurityGroupIds", js.undefined)
+    
+    @scala.inline
+    def setSelfServicePortalUrl(value: String): Self = this.set("SelfServicePortalUrl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelfServicePortalUrl: Self = this.set("SelfServicePortalUrl", js.undefined)
     
     @scala.inline
     def setServerCertificateArn(value: String): Self = this.set("ServerCertificateArn", value.asInstanceOf[js.Any])

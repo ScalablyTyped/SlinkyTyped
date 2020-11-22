@@ -6,9 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/**
-  * MailParser Attachment object.
-  */
 @js.native
 trait AttachmentStream extends AttachmentCommon {
   

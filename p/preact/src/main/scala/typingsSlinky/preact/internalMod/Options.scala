@@ -53,4 +53,6 @@ trait Options extends Options_ {
   
   /** Bypass effect execution. Currenty only used in devtools for hooks inspection */
   var _skipEffects: js.UndefOr[Boolean] = js.native
+  
+  var _vnodeId: Double = js.native
 }

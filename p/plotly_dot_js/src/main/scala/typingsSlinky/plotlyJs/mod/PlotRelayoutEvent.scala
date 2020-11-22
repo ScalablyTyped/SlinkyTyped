@@ -132,6 +132,8 @@ trait PlotRelayoutEvent extends js.Object {
   
   var subplot: js.UndefOr[String] = js.native
   
+  var template: js.UndefOr[Template] = js.native
+  
   var ternary: js.UndefOr[js.Object] = js.native
   
   var title: js.UndefOr[String | PartialtextstringfontPart] = js.native
@@ -522,6 +524,12 @@ object PlotRelayoutEvent {
     
     @scala.inline
     def deleteSubplot: Self = this.set("subplot", js.undefined)
+    
+    @scala.inline
+    def setTemplate(value: Template): Self = this.set("template", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTemplate: Self = this.set("template", js.undefined)
     
     @scala.inline
     def setTernary(value: js.Object): Self = this.set("ternary", value.asInstanceOf[js.Any])

@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "activex-infopath"
-version := "3.0-dt-20200515Z-067b19"
+version := "3.0-dt-20200515Z-80ed87"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "activex-adodb" % "6.1-dt-20200515Z-650605",
+  "org.scalablytyped.slinky" %%% "activex-adodb" % "6.1-dt-20200515Z-6e0360",
   "org.scalablytyped.slinky" %%% "activex-mshtml" % "4.0-dt-20200515Z-ae8a32",
   "org.scalablytyped.slinky" %%% "activex-msxml2" % "6.0-dt-20200515Z-313484",
-  "org.scalablytyped.slinky" %%% "activex-stdole" % "2.0-dt-20200515Z-45f281",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "activex-stdole" % "2.0-dt-20200515Z-5275b0",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

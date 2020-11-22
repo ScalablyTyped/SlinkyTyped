@@ -11,6 +11,7 @@ import typingsSlinky.antd.antdStrings.PUT
 import typingsSlinky.antd.antdStrings.patch_
 import typingsSlinky.antd.antdStrings.post_
 import typingsSlinky.antd.antdStrings.put_
+import typingsSlinky.antd.draggerMod.DraggerProps
 import typingsSlinky.antd.uploadInterfaceMod.HttpRequestHeader
 import typingsSlinky.antd.uploadInterfaceMod.RcCustomRequestOptions
 import typingsSlinky.antd.uploadInterfaceMod.RcFile
@@ -23,6 +24,8 @@ import typingsSlinky.antd.uploadInterfaceMod.UploadLocale
 import typingsSlinky.antd.uploadInterfaceMod.UploadProps
 import typingsSlinky.antd.uploadInterfaceMod.UploadType
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.PropsWithChildren
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,7 +39,7 @@ object Upload {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Upload] {
+       with StBuildingComponent[tag.type, js.Any with js.Object] {
     
     @scala.inline
     def accept(value: String): this.type = set("accept", value.asInstanceOf[js.Any])
@@ -91,6 +94,11 @@ object Upload {
     
     @scala.inline
     def isImageUrl(value: /* file */ UploadFile[_] => Boolean): this.type = set("isImageUrl", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def itemRender(
+      value: (/* originNode */ ReactElement, /* file */ UploadFile[_], /* fileList */ js.UndefOr[js.Array[UploadFile[js.Any]]]) => ReactElement
+    ): this.type = set("itemRender", js.Any.fromFunction3(value))
     
     @scala.inline
     def listType(value: UploadListType): this.type = set("listType", value.asInstanceOf[js.Any])
@@ -150,7 +158,18 @@ object Upload {
     def withCredentials(value: Boolean): this.type = set("withCredentials", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: UploadProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: PropsWithChildren[UploadProps[js.Any]] with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: Upload.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  
+  object Dragger {
+    
+    @JSImport("antd", "Upload.Dragger")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DraggerProps): SharedBuilder_DraggerProps_1915486784 = new SharedBuilder_DraggerProps_1915486784(js.Array(this.component, p.asInstanceOf[js.Any]))
+    
+    implicit def make(companion: Dragger.type): SharedBuilder_DraggerProps_1915486784 = new SharedBuilder_DraggerProps_1915486784(js.Array(this.component, js.Dictionary.empty))()
+  }
 }

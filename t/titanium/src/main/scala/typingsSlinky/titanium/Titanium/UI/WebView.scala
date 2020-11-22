@@ -1,13 +1,18 @@
 package typingsSlinky.titanium.Titanium.UI
 
 import typingsSlinky.titanium.BackForwardList
+import typingsSlinky.titanium.DataCreationResult
 import typingsSlinky.titanium.OnLinkURLResponse
+import typingsSlinky.titanium.SearchResult
 import typingsSlinky.titanium.SnapshotResult
+import typingsSlinky.titanium.StringSearchOptions
 import typingsSlinky.titanium.Titanium.Blob
 import typingsSlinky.titanium.Titanium.Filesystem.File
 import typingsSlinky.titanium.Titanium.UI.iOS.WebViewConfiguration
+import typingsSlinky.titanium.UserScriptParams
 import typingsSlinky.titanium.titaniumStrings.beforeload
 import typingsSlinky.titanium.titaniumStrings.blacklisturl
+import typingsSlinky.titanium.titaniumStrings.blockedurl
 import typingsSlinky.titanium.titaniumStrings.click
 import typingsSlinky.titanium.titaniumStrings.dblclick
 import typingsSlinky.titanium.titaniumStrings.doubletap
@@ -55,6 +60,11 @@ trait WebView extends View {
     callback: js.ThisFunction1[/* this */ this.type, /* event */ WebViewBlacklisturlEvent, Unit]
   ): Unit = js.native
   @JSName("addEventListener")
+  def addEventListener_blockedurl(
+    name: blockedurl,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ WebViewBlockedurlEvent, Unit]
+  ): Unit = js.native
+  @JSName("addEventListener")
   def addEventListener_error(name: error, callback: js.ThisFunction1[/* this */ this.type, /* event */ WebViewErrorEvent, Unit]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_handleurl(
@@ -97,7 +107,7 @@ trait WebView extends View {
   /**
     * Adds a user script.
     */
-  def addUserScript(source: String, injectionTime: Double, mainFrameOnly: Boolean): Unit = js.native
+  def addUserScript(params: UserScriptParams): Unit = js.native
   
   /**
     * List of allowed URL schemes for the web view.
@@ -127,8 +137,14 @@ trait WebView extends View {
   
   /**
     * An array of url strings to blacklist.
+    * @deprecated Use the <Titanium.UI.WebView.blockedURLs> property instead.
     */
   var blacklistedURLs: js.Array[String] = js.native
+  
+  /**
+    * An array of url strings to be blocked.
+    */
+  var blockedURLs: js.Array[String] = js.native
   
   /**
     * Determines how a cache is used in this web view.
@@ -154,6 +170,16 @@ trait WebView extends View {
     * The configuration for the new web view.
     */
   var configuration: WebViewConfiguration = js.native
+  
+  /**
+    * Create a PDF document representation from the web page currently displayed in the WebView.
+    */
+  def createPDF(callback: js.Function1[/* param0 */ DataCreationResult, Unit]): Unit = js.native
+  
+  /**
+    * Create WebKit web archive data representing the current web content of the WebView.
+    */
+  def createWebArchive(callback: js.Function1[/* param0 */ DataCreationResult, Unit]): Unit = js.native
   
   /**
     * Web content to load.
@@ -189,6 +215,22 @@ trait WebView extends View {
   def evalJS(code: String, callback: js.Function1[/* param0 */ String, Unit]): String = js.native
   
   /**
+    * Searches the page contents for the given string.
+    */
+  def findString(searchString: String): Unit = js.native
+  def findString(
+    searchString: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* param0 */ SearchResult, Unit]
+  ): Unit = js.native
+  def findString(searchString: String, options: StringSearchOptions): Unit = js.native
+  def findString(
+    searchString: String,
+    options: StringSearchOptions,
+    callback: js.Function1[/* param0 */ SearchResult, Unit]
+  ): Unit = js.native
+  
+  /**
     * Fires a synthesized event to any registered listeners.
     */
   @JSName("fireEvent")
@@ -199,6 +241,10 @@ trait WebView extends View {
   def fireEvent_blacklisturl(name: blacklisturl): Unit = js.native
   @JSName("fireEvent")
   def fireEvent_blacklisturl(name: blacklisturl, event: WebViewBlacklisturlEvent): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_blockedurl(name: blockedurl): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_blockedurl(name: blockedurl, event: WebViewBlockedurlEvent): Unit = js.native
   @JSName("fireEvent")
   def fireEvent_click(name: click, event: WebViewClickEvent): Unit = js.native
   @JSName("fireEvent")
@@ -290,9 +336,15 @@ trait WebView extends View {
   
   /**
     * Gets the value of the <Titanium.UI.WebView.blacklistedURLs> property.
-    * @deprecated Access <Titanium.UI.WebView.blacklistedURLs> instead.
+    * @deprecated Use the <Titanium.UI.WebView.blockedURLs> property instead.
     */
   def getBlacklistedURLs(): js.Array[String] = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.WebView.blockedURLs> property.
+    * @deprecated Access <Titanium.UI.WebView.blockedURLs> instead.
+    */
+  def getBlockedURLs(): js.Array[String] = js.native
   
   /**
     * Gets the value of the <Titanium.UI.WebView.cacheMode> property.
@@ -603,6 +655,11 @@ trait WebView extends View {
     callback: js.ThisFunction1[/* this */ this.type, /* event */ WebViewBlacklisturlEvent, Unit]
   ): Unit = js.native
   @JSName("removeEventListener")
+  def removeEventListener_blockedurl(
+    name: blockedurl,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ WebViewBlockedurlEvent, Unit]
+  ): Unit = js.native
+  @JSName("removeEventListener")
   def removeEventListener_error(name: error, callback: js.ThisFunction1[/* this */ this.type, /* event */ WebViewErrorEvent, Unit]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_handleurl(
@@ -709,9 +766,15 @@ trait WebView extends View {
   
   /**
     * Sets the value of the <Titanium.UI.WebView.blacklistedURLs> property.
-    * @deprecated Set the value using <Titanium.UI.WebView.blacklistedURLs> instead.
+    * @deprecated Use the <Titanium.UI.WebView.blockedURLs> property instead.
     */
   def setBlacklistedURLs(blacklistedURLs: js.Array[String]): Unit = js.native
+  
+  /**
+    * Sets the value of the <Titanium.UI.WebView.blockedURLs> property.
+    * @deprecated Set the value using <Titanium.UI.WebView.blockedURLs> instead.
+    */
+  def setBlockedURLs(blockedURLs: js.Array[String]): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.WebView.cacheMode> property.

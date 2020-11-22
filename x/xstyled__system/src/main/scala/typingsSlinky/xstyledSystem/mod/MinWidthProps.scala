@@ -9,7 +9,7 @@ trait MinWidthProps[TLength] extends js.Object {
   
   val minWidth: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object MinWidthProps {
     }
     
     @scala.inline
+    def setMinWidthVarargs(value: js.Any*): Self = this.set("minWidth", js.Array(value :_*))
+    
+    @scala.inline
     def setMinWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLength> */ _
         ]
     ): Self = this.set("minWidth", value.asInstanceOf[js.Any])
     

@@ -5,7 +5,7 @@ import typingsSlinky.electron.electronStrings.data
 import typingsSlinky.electron.electronStrings.end
 import typingsSlinky.electron.electronStrings.error
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ trait IncomingMessage extends EventEmitter {
   @JSName("addListener")
   def addListener_error(event: error, listener: js.Function): this.type = js.native
   
-  var headers: Record[String, js.Array[String]] = js.native
+  var headers: Record[String, String | js.Array[String]] = js.native
   
   var httpVersion: String = js.native
   
@@ -31,7 +31,7 @@ trait IncomingMessage extends EventEmitter {
   
   var httpVersionMinor: Double = js.native
   
-  // Docs: http://electronjs.org/docs/api/incoming-message
+  // Docs: https://electronjs.org/docs/api/incoming-message
   /**
     * Emitted when a request has been canceled during an ongoing HTTP transaction.
     */

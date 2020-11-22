@@ -13,12 +13,12 @@ trait ReplicationTask extends js.Object {
   var CdcStartPosition: js.UndefOr[String] = js.native
   
   /**
-    * Indicates when you want a change data capture (CDC) operation to stop. The value can be either server time or commit time. Server time example: --cdc-stop-position “server_time:3018-02-09T12:12:12” Commit time example: --cdc-stop-position “commit_time: 3018-02-09T12:12:12 “
+    * Indicates when you want a change data capture (CDC) operation to stop. The value can be either server time or commit time. Server time example: --cdc-stop-position “server_time:2018-02-09T12:12:12” Commit time example: --cdc-stop-position “commit_time: 2018-02-09T12:12:12 “
     */
   var CdcStopPosition: js.UndefOr[String] = js.native
   
   /**
-    * The last error (failure) message generated for the replication instance.
+    * The last error (failure) message generated for the replication task.
     */
   var LastFailureMessage: js.UndefOr[String] = js.native
   
@@ -33,7 +33,7 @@ trait ReplicationTask extends js.Object {
   var RecoveryCheckpoint: js.UndefOr[String] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) of the replication instance.
+    * The ARN of the replication instance.
     */
   var ReplicationInstanceArn: js.UndefOr[String] = js.native
   
@@ -68,17 +68,17 @@ trait ReplicationTask extends js.Object {
   var ReplicationTaskStats: js.UndefOr[typingsSlinky.awsSdk.dmsMod.ReplicationTaskStats] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) string that uniquely identifies the endpoint.
+    * The Amazon Resource Name (ARN) that uniquely identifies the endpoint.
     */
   var SourceEndpointArn: js.UndefOr[String] = js.native
   
   /**
-    * The status of the replication task.
+    * The status of the replication task. This response parameter can return one of the following values:    "moving" – The task is being moved in response to running the  MoveReplicationTask  operation.    "creating" – The task is being created in response to running the  CreateReplicationTask  operation.    "deleting" – The task is being deleted in response to running the  DeleteReplicationTask  operation.    "failed" – The task failed to successfully complete the database migration in response to running the  StartReplicationTask  operation.    "failed-move" – The task failed to move in response to running the  MoveReplicationTask  operation.    "modifying" – The task definition is being modified in response to running the  ModifyReplicationTask  operation.    "ready" – The task is in a ready state where it can respond to other task operations, such as  StartReplicationTask  or  DeleteReplicationTask .     "running" – The task is performing a database migration in response to running the  StartReplicationTask  operation.    "starting" – The task is preparing to perform a database migration in response to running the  StartReplicationTask  operation.    "stopped" – The task has stopped in response to running the  StopReplicationTask  operation.    "stopping" – The task is preparing to stop in response to running the  StopReplicationTask  operation.    "testing" – The database migration specified for this task is being tested in response to running either the  StartReplicationTaskAssessmentRun  or the  StartReplicationTaskAssessment  operation.    StartReplicationTaskAssessmentRun  is an improved premigration task assessment operation. The  StartReplicationTaskAssessment  operation assesses data type compatibility only between the source and target database of a given migration task. In contrast,  StartReplicationTaskAssessmentRun  enables you to specify a variety of premigration task assessments in addition to data type compatibility. These assessments include ones for the validity of primary key definitions and likely issues with database migration performance, among others.   
     */
   var Status: js.UndefOr[String] = js.native
   
   /**
-    * The reason the replication task was stopped. This response parameter can return one of the following values:    "STOP_REASON_FULL_LOAD_COMPLETED" – Full-load migration completed.    "STOP_REASON_CACHED_CHANGES_APPLIED" – Change data capture (CDC) load completed.    "STOP_REASON_CACHED_CHANGES_NOT_APPLIED" – In a full-load and CDC migration, the full-load stopped as specified before starting the CDC migration.    "STOP_REASON_SERVER_TIME" – The migration stopped at the specified server time.  
+    * The reason the replication task was stopped. This response parameter can return one of the following values:    "STOP_REASON_FULL_LOAD_COMPLETED" – Full-load migration completed.    "STOP_REASON_CACHED_CHANGES_APPLIED" – Change data capture (CDC) load completed.    "STOP_REASON_CACHED_CHANGES_NOT_APPLIED" – In a full-load and CDC migration, the full load stopped as specified before starting the CDC migration.    "STOP_REASON_SERVER_TIME" – The migration stopped at the specified server time.  
     */
   var StopReason: js.UndefOr[String] = js.native
   
@@ -88,9 +88,14 @@ trait ReplicationTask extends js.Object {
   var TableMappings: js.UndefOr[String] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) string that uniquely identifies the endpoint.
+    * The ARN that uniquely identifies the endpoint.
     */
   var TargetEndpointArn: js.UndefOr[String] = js.native
+  
+  /**
+    * The ARN of the replication instance to which this task is moved in response to running the  MoveReplicationTask  operation. Otherwise, this response parameter isn't a member of the ReplicationTask object.
+    */
+  var TargetReplicationInstanceArn: js.UndefOr[String] = js.native
   
   /**
     * Supplemental information that the task requires to migrate the data for certain source and target endpoints. For more information, see Specifying Supplemental Data for Task Settings in the AWS Database Migration Service User Guide. 
@@ -221,6 +226,12 @@ object ReplicationTask {
     
     @scala.inline
     def deleteTargetEndpointArn: Self = this.set("TargetEndpointArn", js.undefined)
+    
+    @scala.inline
+    def setTargetReplicationInstanceArn(value: String): Self = this.set("TargetReplicationInstanceArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTargetReplicationInstanceArn: Self = this.set("TargetReplicationInstanceArn", js.undefined)
     
     @scala.inline
     def setTaskData(value: String): Self = this.set("TaskData", value.asInstanceOf[js.Any])

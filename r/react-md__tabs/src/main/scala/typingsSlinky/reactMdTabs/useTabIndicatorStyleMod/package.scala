@@ -10,9 +10,12 @@ package object useTabIndicatorStyleMod {
   
   type MergedTabRef = js.Function1[/* instance */ org.scalajs.dom.raw.HTMLDivElement | scala.Null, scala.Unit]
   
-  type ReturnValue = js.Tuple3[
+  type ReturnValue = js.Tuple4[
     typingsSlinky.reactMdTabs.useTabIndicatorStyleMod.CSSProperties, 
     typingsSlinky.reactMdTabs.useTabIndicatorStyleMod.MergedTabRef, 
-    typingsSlinky.react.mod.MutableRefObject[org.scalajs.dom.raw.HTMLDivElement | scala.Null]
+    typingsSlinky.react.mod.MutableRefObject[org.scalajs.dom.raw.HTMLDivElement | scala.Null], 
+    typingsSlinky.reactMdTabs.useTabIndicatorStyleMod.UpdateIndicatorStyles
   ]
+  
+  type UpdateIndicatorStyles = js.Function0[scala.Unit]
 }

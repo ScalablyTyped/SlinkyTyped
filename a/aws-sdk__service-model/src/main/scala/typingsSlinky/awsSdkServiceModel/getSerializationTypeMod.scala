@@ -1,7 +1,6 @@
 package typingsSlinky.awsSdkServiceModel
 
 import typingsSlinky.awsSdkBuildTypes.apiModelMod.Shape
-import typingsSlinky.awsSdkTypes.protocolMod.SerializationType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getSerializationTypeMod extends js.Object {
   
-  def getSerializationType(shape: Shape): SerializationType = js.native
+  def getSerializationType(shape: Shape): js.Any = js.native
 }

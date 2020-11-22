@@ -9,6 +9,7 @@ trait RandomBates_ extends RandomNumberGenerationSource {
   
   /**
     * Returns a function for generating random numbers with a Bates distribution with n independent variables.
+    * The case of fractional n is handled as with d3.randomIrwinHall, and d3.randomBates(0) is equivalent to d3.randomUniform().
     *
     * @param n Number of independent random variables to use.
     */

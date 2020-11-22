@@ -70,6 +70,9 @@ object TimePicker {
     
     @scala.inline
     def value(value: js.Date): this.type = set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def valueNull: this.type = set("value", null)
   }
   
   def withProps(p: ITimePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

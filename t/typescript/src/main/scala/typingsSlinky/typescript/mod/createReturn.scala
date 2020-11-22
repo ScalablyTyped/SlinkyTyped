@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createReturn extends js.Object {
   
+  /** @deprecated Use `factory.createReturn` or the factory supplied by your transformation context instead. */
   def apply(): ReturnStatement = js.native
   def apply(expression: Expression): ReturnStatement = js.native
 }

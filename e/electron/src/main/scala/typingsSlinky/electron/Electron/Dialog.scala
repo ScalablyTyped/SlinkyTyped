@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Dialog extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/dialog
+  // Docs: https://electronjs.org/docs/api/dialog
   /**
     * resolves when the certificate trust dialog is shown.
     *
@@ -90,7 +90,7 @@ trait Dialog extends js.Object {
     *
     * The `browserWindow` argument allows the dialog to attach itself to a parent
     * window, making it modal. If `browserWindow` is not shown dialog will not be
-    * attached to it. In such case It will be displayed as independed window.
+    * attached to it. In such case it will be displayed as an independent window.
     */
   def showMessageBoxSync(browserWindow: BrowserWindow, options: MessageBoxSyncOptions): Double = js.native
   /**
@@ -101,7 +101,7 @@ trait Dialog extends js.Object {
     *
     * The `browserWindow` argument allows the dialog to attach itself to a parent
     * window, making it modal. If `browserWindow` is not shown dialog will not be
-    * attached to it. In such case It will be displayed as independed window.
+    * attached to it. In such case it will be displayed as an independent window.
     */
   def showMessageBoxSync(options: MessageBoxSyncOptions): Double = js.native
   

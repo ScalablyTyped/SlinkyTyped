@@ -1,7 +1,7 @@
 package typingsSlinky.clownface.clownfaceMod
 
 import typingsSlinky.clownface.mod.AnyContext
-import typingsSlinky.clownface.mod.Clownface
+import typingsSlinky.clownface.mod.AnyPointer
 import typingsSlinky.clownface.mod.ClownfaceInit
 import typingsSlinky.clownface.mod.ClownfaceInitWithTerms
 import typingsSlinky.clownface.mod.ClownfaceInitWithValue
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 // tslint:disable-next-line no-unnecessary-class
 @JSImport("clownface/lib/Clownface", JSImport.Namespace)
 @js.native
-class ^[T /* <: AnyContext */, D /* <: DatasetCore[Quad, Quad] */] protected () extends Clownface[T, D] {
+class ^[T /* <: AnyContext */, D /* <: DatasetCore[Quad, Quad] */] protected () extends AnyPointer[T, D] {
   def this(options: ClownfaceInit[D]) = this()
   def this(options: ClownfaceInitWithTerms[T | Term | js.Array[Term], D]) = this()
   def this(options: ClownfaceInitWithValue[D]) = this()

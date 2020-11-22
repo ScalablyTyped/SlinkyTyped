@@ -4,20 +4,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.typescript.mod.TextRange because Already inherited
-- typingsSlinky.typescript.mod.Node because Already inherited
-- typingsSlinky.typescript.mod.Declaration because var conflicts: decorators, end, flags, kind, modifiers, parent, pos. Inlined _declarationBrand */ @js.native
-trait BinaryExpression extends Expression {
-  
-  var _declarationBrand: js.Any = js.native
+@js.native
+trait BinaryExpression
+  extends Expression
+     with Declaration {
   
   @JSName("kind")
-  var kind_BinaryExpression: typingsSlinky.typescript.mod.SyntaxKind.BinaryExpression = js.native
+  val kind_BinaryExpression: typingsSlinky.typescript.mod.SyntaxKind.BinaryExpression = js.native
   
-  var left: Expression = js.native
+  val left: Expression = js.native
   
-  var operatorToken: BinaryOperatorToken = js.native
+  val operatorToken: BinaryOperatorToken = js.native
   
-  var right: Expression = js.native
+  val right: Expression = js.native
 }

@@ -10,6 +10,10 @@ trait OpenstackProviderOptions extends js.Object {
   
   var authUrl: String = js.native
   
+  var domainId: js.UndefOr[String] = js.native
+  
+  var domainName: js.UndefOr[String] = js.native
+  
   var keystoneAuthVersion: js.UndefOr[String] = js.native
   
   var password: String = js.native
@@ -58,6 +62,18 @@ object OpenstackProviderOptions {
     
     @scala.inline
     def setUsername(value: String): Self = this.set("username", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDomainId(value: String): Self = this.set("domainId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDomainId: Self = this.set("domainId", js.undefined)
+    
+    @scala.inline
+    def setDomainName(value: String): Self = this.set("domainName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDomainName: Self = this.set("domainName", js.undefined)
     
     @scala.inline
     def setKeystoneAuthVersion(value: String): Self = this.set("keystoneAuthVersion", value.asInstanceOf[js.Any])

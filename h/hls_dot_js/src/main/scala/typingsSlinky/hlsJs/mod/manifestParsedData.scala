@@ -9,12 +9,12 @@ trait manifestParsedData extends js.Object {
   
   var firstLevel: Double = js.native
   
-  var levels: js.Array[Double] = js.native
+  var levels: js.Array[Level] = js.native
 }
 object manifestParsedData {
   
   @scala.inline
-  def apply(firstLevel: Double, levels: js.Array[Double]): manifestParsedData = {
+  def apply(firstLevel: Double, levels: js.Array[Level]): manifestParsedData = {
     val __obj = js.Dynamic.literal(firstLevel = firstLevel.asInstanceOf[js.Any], levels = levels.asInstanceOf[js.Any])
     __obj.asInstanceOf[manifestParsedData]
   }
@@ -38,9 +38,9 @@ object manifestParsedData {
     def setFirstLevel(value: Double): Self = this.set("firstLevel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLevelsVarargs(value: Double*): Self = this.set("levels", js.Array(value :_*))
+    def setLevelsVarargs(value: Level*): Self = this.set("levels", js.Array(value :_*))
     
     @scala.inline
-    def setLevels(value: js.Array[Double]): Self = this.set("levels", value.asInstanceOf[js.Any])
+    def setLevels(value: js.Array[Level]): Self = this.set("levels", value.asInstanceOf[js.Any])
   }
 }

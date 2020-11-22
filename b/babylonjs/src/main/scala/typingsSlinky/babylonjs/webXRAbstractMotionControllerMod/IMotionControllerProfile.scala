@@ -13,7 +13,7 @@ trait IMotionControllerProfile extends js.Object {
   var fallbackProfileIds: js.Array[String] = js.native
   
   /**
-    * The layout map, with handness as key
+    * The layout map, with handedness as key
     */
   var layouts: IMotionControllerLayoutMap = js.native
   

@@ -1,10 +1,11 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,8 +19,8 @@ abstract class SearchField protected () extends ControlBarItem {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def caption: Text = js.native
@@ -33,9 +34,6 @@ abstract class SearchField protected () extends ControlBarItem {
   
   def defaultValue: String = js.native
   def defaultValue_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FSearchField: IModel = js.native
   
   /**
     * In version 7.21.0: introduced

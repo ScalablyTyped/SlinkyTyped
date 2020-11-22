@@ -2,6 +2,7 @@ package typingsSlinky.titanium.Titanium.UI
 
 import typingsSlinky.titanium.Dimension
 import typingsSlinky.titanium.Padding
+import typingsSlinky.titanium.Titanium.Blob
 import typingsSlinky.titanium.titaniumStrings.click
 import typingsSlinky.titanium.titaniumStrings.dblclick
 import typingsSlinky.titanium.titaniumStrings.doubletap
@@ -72,7 +73,7 @@ trait ScrollableView extends View {
   /**
     * Color for the current page of the paging control, as a color name or hex triplet.
     */
-  var currentPageIndicatorColor: String = js.native
+  var currentPageIndicatorColor: String | Color = js.native
   
   /**
     * Determines whether page bouncing effect is disabled.
@@ -146,7 +147,7 @@ trait ScrollableView extends View {
     * Gets the value of the <Titanium.UI.ScrollableView.currentPageIndicatorColor> property.
     * @deprecated Access <Titanium.UI.ScrollableView.currentPageIndicatorColor> instead.
     */
-  def getCurrentPageIndicatorColor(): String = js.native
+  def getCurrentPageIndicatorColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ScrollableView.disableBounce> property.
@@ -182,7 +183,7 @@ trait ScrollableView extends View {
     * Gets the value of the <Titanium.UI.ScrollableView.pageIndicatorColor> property.
     * @deprecated Access <Titanium.UI.ScrollableView.pageIndicatorColor> instead.
     */
-  def getPageIndicatorColor(): String = js.native
+  def getPageIndicatorColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ScrollableView.pagingControlAlpha> property.
@@ -194,7 +195,7 @@ trait ScrollableView extends View {
     * Gets the value of the <Titanium.UI.ScrollableView.pagingControlColor> property.
     * @deprecated Access <Titanium.UI.ScrollableView.pagingControlColor> instead.
     */
-  def getPagingControlColor(): String = js.native
+  def getPagingControlColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ScrollableView.pagingControlHeight> property.
@@ -213,6 +214,12 @@ trait ScrollableView extends View {
     * @deprecated Access <Titanium.UI.ScrollableView.pagingControlTimeout> instead.
     */
   def getPagingControlTimeout(): Double = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.ScrollableView.preferredIndicatorImage> property.
+    * @deprecated Access <Titanium.UI.ScrollableView.preferredIndicatorImage> instead.
+    */
+  def getPreferredIndicatorImage(): String | Blob = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ScrollableView.scrollingEnabled> property.
@@ -270,7 +277,7 @@ trait ScrollableView extends View {
   /**
     * Color of the paging control, as a color name or hex triplet.
     */
-  var pageIndicatorColor: String = js.native
+  var pageIndicatorColor: String | Color = js.native
   
   /**
     * Alpha value of the paging control.
@@ -280,7 +287,7 @@ trait ScrollableView extends View {
   /**
     * Color of the paging control, as a color name or hex triplet.
     */
-  var pagingControlColor: String = js.native
+  var pagingControlColor: String | Color = js.native
   
   /**
     * Height of the paging control, in pixels.
@@ -296,6 +303,11 @@ trait ScrollableView extends View {
     * Number of milliseconds to wait before hiding the paging control.
     */
   var pagingControlTimeout: Double = js.native
+  
+  /**
+    * The preferred image for indicators, defined using a local filesystem path, or a `Blob` object containing image data.
+    */
+  var preferredIndicatorImage: String | Blob = js.native
   
   @JSName("removeEventListener")
   def removeEventListener_dragend(
@@ -353,6 +365,7 @@ trait ScrollableView extends View {
     * @deprecated Set the value using <Titanium.UI.ScrollableView.currentPageIndicatorColor> instead.
     */
   def setCurrentPageIndicatorColor(currentPageIndicatorColor: String): Unit = js.native
+  def setCurrentPageIndicatorColor(currentPageIndicatorColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ScrollableView.disableBounce> property.
@@ -365,6 +378,12 @@ trait ScrollableView extends View {
     * @deprecated Set the value using <Titanium.UI.ScrollableView.hitRect> instead.
     */
   def setHitRect(hitRect: Dimension): Unit = js.native
+  
+  /**
+    * Sets the indicator image for the specified page.
+    */
+  def setIndicatorImageForPage(image: String, pageNo: Double): Unit = js.native
+  def setIndicatorImageForPage(image: Blob, pageNo: Double): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ScrollableView.overScrollMode> property.
@@ -389,6 +408,7 @@ trait ScrollableView extends View {
     * @deprecated Set the value using <Titanium.UI.ScrollableView.pageIndicatorColor> instead.
     */
   def setPageIndicatorColor(pageIndicatorColor: String): Unit = js.native
+  def setPageIndicatorColor(pageIndicatorColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ScrollableView.pagingControlAlpha> property.
@@ -401,6 +421,7 @@ trait ScrollableView extends View {
     * @deprecated Set the value using <Titanium.UI.ScrollableView.pagingControlColor> instead.
     */
   def setPagingControlColor(pagingControlColor: String): Unit = js.native
+  def setPagingControlColor(pagingControlColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ScrollableView.pagingControlHeight> property.
@@ -419,6 +440,13 @@ trait ScrollableView extends View {
     * @deprecated Set the value using <Titanium.UI.ScrollableView.pagingControlTimeout> instead.
     */
   def setPagingControlTimeout(pagingControlTimeout: Double): Unit = js.native
+  
+  /**
+    * Sets the value of the <Titanium.UI.ScrollableView.preferredIndicatorImage> property.
+    * @deprecated Set the value using <Titanium.UI.ScrollableView.preferredIndicatorImage> instead.
+    */
+  def setPreferredIndicatorImage(preferredIndicatorImage: String): Unit = js.native
+  def setPreferredIndicatorImage(preferredIndicatorImage: Blob): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ScrollableView.scrollingEnabled> property.

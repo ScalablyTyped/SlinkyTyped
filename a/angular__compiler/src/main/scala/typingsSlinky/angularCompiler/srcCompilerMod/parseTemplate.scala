@@ -1,7 +1,7 @@
 package typingsSlinky.angularCompiler.srcCompilerMod
 
-import typingsSlinky.angularCompiler.anon.Errors
 import typingsSlinky.angularCompiler.templateMod.ParseTemplateOptions
+import typingsSlinky.angularCompiler.templateMod.ParsedTemplate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object parseTemplate extends js.Object {
   
-  def apply(template: String, templateUrl: String): Errors = js.native
-  def apply(template: String, templateUrl: String, options: ParseTemplateOptions): Errors = js.native
+  def apply(template: String, templateUrl: String): ParsedTemplate = js.native
+  def apply(template: String, templateUrl: String, options: ParseTemplateOptions): ParsedTemplate = js.native
 }

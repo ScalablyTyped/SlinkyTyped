@@ -11,11 +11,11 @@ trait NamespaceImport
      with TypeOnlyCompatibleAliasDeclaration {
   
   @JSName("kind")
-  var kind_NamespaceImport: typingsSlinky.typescript.mod.SyntaxKind.NamespaceImport = js.native
+  val kind_NamespaceImport: typingsSlinky.typescript.mod.SyntaxKind.NamespaceImport = js.native
   
   @JSName("name")
-  var name_NamespaceImport: Identifier = js.native
+  val name_NamespaceImport: Identifier = js.native
   
   @JSName("parent")
-  var parent_NamespaceImport: ImportClause = js.native
+  val parent_NamespaceImport: ImportClause = js.native
 }

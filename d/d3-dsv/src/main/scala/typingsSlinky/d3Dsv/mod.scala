@@ -11,10 +11,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
+  def autoType[ParsedRow /* <: js.UndefOr[js.Object | Null] */, Columns /* <: String */](// tslint:disable-next-line:no-unnecessary-generics
+  `object`: js.Array[String]): ParsedRow = js.native
+  def autoType[ParsedRow /* <: js.UndefOr[js.Object | Null] */, Columns /* <: String */](// tslint:disable-next-line:no-unnecessary-generics
+  `object`: DSVRowString[Columns]): ParsedRow = js.native
+  
   def csvFormat[T /* <: js.Object */](rows: js.Array[T]): String = js.native
   def csvFormat[T /* <: js.Object */](rows: js.Array[T], columns: js.Array[/* keyof T */ String]): String = js.native
   
+  def csvFormatBody[T /* <: js.Object */](rows: js.Array[T]): String = js.native
+  def csvFormatBody[T /* <: js.Object */](rows: js.Array[T], columns: js.Array[/* keyof T */ String]): String = js.native
+  
+  def csvFormatRow(row: js.Array[String]): String = js.native
+  
   def csvFormatRows(rows: js.Array[js.Array[String]]): String = js.native
+  
+  def csvFormatValue(value: String): String = js.native
   
   def csvParse[Columns /* <: String */](csvString: String): DSVRowArray[Columns] = js.native
   def csvParse[ParsedRow /* <: js.Object */, Columns /* <: String */](
@@ -38,7 +50,14 @@ object mod extends js.Object {
   def tsvFormat[T /* <: js.Object */](rows: js.Array[T]): String = js.native
   def tsvFormat[T /* <: js.Object */](rows: js.Array[T], columns: js.Array[/* keyof T */ String]): String = js.native
   
+  def tsvFormatBody[T /* <: js.Object */](rows: js.Array[T]): String = js.native
+  def tsvFormatBody[T /* <: js.Object */](rows: js.Array[T], columns: js.Array[/* keyof T */ String]): String = js.native
+  
+  def tsvFormatRow(row: js.Array[String]): String = js.native
+  
   def tsvFormatRows(rows: js.Array[js.Array[String]]): String = js.native
+  
+  def tsvFormatValue(value: String): String = js.native
   
   def tsvParse[Columns /* <: String */](tsvString: String): DSVRowArray[Columns] = js.native
   def tsvParse[ParsedRow /* <: js.Object */, Columns /* <: String */](
@@ -76,6 +95,25 @@ object mod extends js.Object {
     def format[T /* <: js.Object */](rows: js.Array[T], columns: js.Array[/* keyof T */ String]): String = js.native
     
     /**
+      * Equivalent to dsv.format, but omits the header row.
+      * This is useful, for example, when appending rows to an existing file.
+      *
+      * @param rows Array of object rows.
+      * @param columns An array of strings representing the column names.
+      */
+    def formatBody[T /* <: js.Object */](rows: js.Array[T]): String = js.native
+    def formatBody[T /* <: js.Object */](rows: js.Array[T], columns: js.Array[/* keyof T */ String]): String = js.native
+    
+    /**
+      * Formats a single array row of strings as delimiter-separated values, returning a string.
+      * Each column within the row will be separated by the delimiter (such as a comma, ,).
+      * Values that contain either the delimiter, a double-quote (") or a newline will be escaped using double-quotes.
+      *
+      * @param row An array of strings representing a row.
+      */
+    def formatRow(row: js.Array[String]): String = js.native
+    
+    /**
       * Formats the specified array of array of string rows as delimiter-separated values, returning a string.
       * This operation is the reverse of dsv.parseRows. Each row will be separated by a newline (\n),
       * and each column within each row will be separated by the delimiter (such as a comma, ,).
@@ -89,12 +127,24 @@ object mod extends js.Object {
     def formatRows(rows: js.Array[js.Array[String]]): String = js.native
     
     /**
+      * Format a single value or string as a delimiter-separated value, returning a string.
+      * A value that contains either the delimiter, a double-quote (") or a newline will be escaped using double-quotes.
+      *
+      * @param value A value.
+      */
+    def formatValue(value: String): String = js.native
+    
+    /**
       * Parses the specified string, which must be in the delimiter-separated values format with the appropriate delimiter, returning an array of objects representing the parsed rows.
       *
       * Unlike dsv.parseRows, this method requires that the first line of the DSV content contains a delimiter-separated list of column names;
       * these column names become the attributes on the returned objects.
       *
       * The returned array also exposes a columns property containing the column names in input order (in contrast to Object.keys, whose iteration order is arbitrary).
+      *
+      * If the column names are not unique, only the last value is returned for each name; to access all values, use dsv.parseRows instead.
+      *
+      * Note: requires unsafe-eval content security policy.
       *
       * @param dsvString A string, which must be in the delimiter-separated values format with the appropriate delimiter.
       */
@@ -107,6 +157,10 @@ object mod extends js.Object {
       * these column names become the attributes on the returned objects.
       *
       * The returned array also exposes a columns property containing the column names in input order (in contrast to Object.keys, whose iteration order is arbitrary).
+      *
+      * If the column names are not unique, only the last value is returned for each name; to access all values, use dsv.parseRows instead.
+      *
+      * Note: requires unsafe-eval content security policy.
       *
       * @param dsvString A string, which must be in the delimiter-separated values format with the appropriate delimiter.
       * @param row A row conversion function which is invoked for each row, being passed an object representing the current row (d),

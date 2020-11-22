@@ -8,6 +8,7 @@ import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.anon.ButtonPropsautoFocusboole
 import typingsSlinky.baseui.baseuiStrings.button
+import typingsSlinky.baseui.baseuiStrings.circle
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -87,7 +88,7 @@ object ModalButton {
     def overrides(value: ButtonOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def shape(value: default_ | pill | round | square): this.type = set("shape", value.asInstanceOf[js.Any])
+    def shape(value: pill | default_ | square | round | circle): this.type = set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def size(value: compact | default_ | large_ | mini): this.type = set("size", value.asInstanceOf[js.Any])

@@ -6,41 +6,94 @@ import typingsSlinky.astTypes.kindsMod.JSXElementKind
 import typingsSlinky.astTypes.kindsMod.JSXExpressionContainerKind
 import typingsSlinky.astTypes.kindsMod.JSXFragmentKind
 import typingsSlinky.astTypes.kindsMod.JSXOpeningFragmentKind
+import typingsSlinky.astTypes.kindsMod.JSXSpreadChildKind
 import typingsSlinky.astTypes.kindsMod.JSXTextKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
 import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@js.native
 trait Children extends js.Object {
+  
   var children: js.UndefOr[
     js.Array[
-      JSXElementKind | JSXExpressionContainerKind | JSXFragmentKind | JSXTextKind | LiteralKind
+      JSXTextKind | JSXExpressionContainerKind | JSXSpreadChildKind | JSXElementKind | JSXFragmentKind | LiteralKind
     ]
-  ] = js.undefined
-  var closingElement: JSXClosingFragmentKind
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var openingElement: JSXOpeningFragmentKind
+  ] = js.native
+  
+  var closingFragment: JSXClosingFragmentKind = js.native
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var openingFragment: JSXOpeningFragmentKind = js.native
 }
-
 object Children {
+  
   @scala.inline
-  def apply(
-    closingElement: JSXClosingFragmentKind,
-    openingElement: JSXOpeningFragmentKind,
-    children: js.Array[
-      JSXElementKind | JSXExpressionContainerKind | JSXFragmentKind | JSXTextKind | LiteralKind
-    ] = null,
-    comments: js.UndefOr[Null | js.Array[CommentKind]] = js.undefined,
-    loc: js.UndefOr[Null | SourceLocationKind] = js.undefined
-  ): Children = {
-    val __obj = js.Dynamic.literal(closingElement = closingElement.asInstanceOf[js.Any], openingElement = openingElement.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])
-    if (!js.isUndefined(comments)) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+  def apply(closingFragment: JSXClosingFragmentKind, openingFragment: JSXOpeningFragmentKind): Children = {
+    val __obj = js.Dynamic.literal(closingFragment = closingFragment.asInstanceOf[js.Any], openingFragment = openingFragment.asInstanceOf[js.Any])
     __obj.asInstanceOf[Children]
   }
+  
+  @scala.inline
+  implicit class ChildrenOps[Self <: Children] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
+    }
+    
+    @scala.inline
+    def setClosingFragment(value: JSXClosingFragmentKind): Self = this.set("closingFragment", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOpeningFragment(value: JSXOpeningFragmentKind): Self = this.set("openingFragment", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setChildrenVarargs(
+      value: (JSXTextKind | JSXExpressionContainerKind | JSXSpreadChildKind | JSXElementKind | JSXFragmentKind | LiteralKind)*
+    ): Self = this.set("children", js.Array(value :_*))
+    
+    @scala.inline
+    def setChildren(
+      value: js.Array[
+          JSXTextKind | JSXExpressionContainerKind | JSXSpreadChildKind | JSXElementKind | JSXFragmentKind | LiteralKind
+        ]
+    ): Self = this.set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    
+    @scala.inline
+    def setCommentsVarargs(value: CommentKind*): Self = this.set("comments", js.Array(value :_*))
+    
+    @scala.inline
+    def setComments(value: js.Array[CommentKind]): Self = this.set("comments", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteComments: Self = this.set("comments", js.undefined)
+    
+    @scala.inline
+    def setCommentsNull: Self = this.set("comments", null)
+    
+    @scala.inline
+    def setLoc(value: SourceLocationKind): Self = this.set("loc", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoc: Self = this.set("loc", js.undefined)
+    
+    @scala.inline
+    def setLocNull: Self = this.set("loc", null)
+  }
 }
-

@@ -23,7 +23,7 @@ trait ListAcceptedPortfolioSharesInput extends js.Object {
   var PageToken: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.PageToken] = js.native
   
   /**
-    * The type of shared portfolios to list. The default is to list imported portfolios.    AWS_ORGANIZATIONS - List portfolios shared by the master account of your organization    AWS_SERVICECATALOG - List default portfolios    IMPORTED - List imported portfolios  
+    * The type of shared portfolios to list. The default is to list imported portfolios.    AWS_ORGANIZATIONS - List portfolios shared by the management account of your organization    AWS_SERVICECATALOG - List default portfolios    IMPORTED - List imported portfolios  
     */
   var PortfolioShareType: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.PortfolioShareType] = js.native
 }

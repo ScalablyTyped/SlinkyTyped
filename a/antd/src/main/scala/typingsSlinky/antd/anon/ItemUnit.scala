@@ -1,5 +1,6 @@
 package typingsSlinky.antd.anon
 
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,9 +12,21 @@ trait ItemUnit extends js.Object {
   
   var itemsUnit: String = js.native
   
-  var notFoundContent: String = js.native
+  var notFoundContent: ReactElement = js.native
+  
+  var remove: String = js.native
+  
+  var removeAll: String = js.native
+  
+  var removeCurrent: String = js.native
   
   var searchPlaceholder: String = js.native
+  
+  var selectAll: String = js.native
+  
+  var selectCurrent: String = js.native
+  
+  var selectInvert: String = js.native
   
   var titles: js.Array[String] = js.native
 }
@@ -23,11 +36,16 @@ object ItemUnit {
   def apply(
     itemUnit: String,
     itemsUnit: String,
-    notFoundContent: String,
+    remove: String,
+    removeAll: String,
+    removeCurrent: String,
     searchPlaceholder: String,
+    selectAll: String,
+    selectCurrent: String,
+    selectInvert: String,
     titles: js.Array[String]
   ): ItemUnit = {
-    val __obj = js.Dynamic.literal(itemUnit = itemUnit.asInstanceOf[js.Any], itemsUnit = itemsUnit.asInstanceOf[js.Any], notFoundContent = notFoundContent.asInstanceOf[js.Any], searchPlaceholder = searchPlaceholder.asInstanceOf[js.Any], titles = titles.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(itemUnit = itemUnit.asInstanceOf[js.Any], itemsUnit = itemsUnit.asInstanceOf[js.Any], remove = remove.asInstanceOf[js.Any], removeAll = removeAll.asInstanceOf[js.Any], removeCurrent = removeCurrent.asInstanceOf[js.Any], searchPlaceholder = searchPlaceholder.asInstanceOf[js.Any], selectAll = selectAll.asInstanceOf[js.Any], selectCurrent = selectCurrent.asInstanceOf[js.Any], selectInvert = selectInvert.asInstanceOf[js.Any], titles = titles.asInstanceOf[js.Any])
     __obj.asInstanceOf[ItemUnit]
   }
   
@@ -53,15 +71,36 @@ object ItemUnit {
     def setItemsUnit(value: String): Self = this.set("itemsUnit", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNotFoundContent(value: String): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    def setRemove(value: String): Self = this.set("remove", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRemoveAll(value: String): Self = this.set("removeAll", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRemoveCurrent(value: String): Self = this.set("removeCurrent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSearchPlaceholder(value: String): Self = this.set("searchPlaceholder", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSelectAll(value: String): Self = this.set("selectAll", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSelectCurrent(value: String): Self = this.set("selectCurrent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSelectInvert(value: String): Self = this.set("selectInvert", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTitlesVarargs(value: String*): Self = this.set("titles", js.Array(value :_*))
     
     @scala.inline
     def setTitles(value: js.Array[String]): Self = this.set("titles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNotFoundContent(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
   }
 }

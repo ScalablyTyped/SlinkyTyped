@@ -19,6 +19,9 @@ object n3Strings {
   def NamedNode: NamedNode = "NamedNode".asInstanceOf[NamedNode]
   
   @scala.inline
+  def Quad: Quad = "Quad".asInstanceOf[Quad]
+  
+  @scala.inline
   def Variable: Variable = "Variable".asInstanceOf[Variable]
   
   @scala.inline
@@ -35,6 +38,9 @@ object n3Strings {
   
   @js.native
   sealed trait NamedNode extends js.Object
+  
+  @js.native
+  sealed trait Quad extends js.Object
   
   @js.native
   sealed trait Variable extends js.Object

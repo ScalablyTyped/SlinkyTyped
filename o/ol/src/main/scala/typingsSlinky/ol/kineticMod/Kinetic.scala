@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Kinetic extends js.Object {
   
+  /**
+    * FIXME empty description for jsdoc
+    */
   def begin(): Unit = js.native
   
   def end(): Boolean = js.native

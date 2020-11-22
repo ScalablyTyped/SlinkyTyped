@@ -2,9 +2,14 @@ package typingsSlinky.tinymce.mod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.Window
 import typingsSlinky.tinymce.mod.settings.Menu
 import typingsSlinky.tinymce.tinymceBooleans.`false`
+import typingsSlinky.tinymce.tinymceStrings.auto
+import typingsSlinky.tinymce.tinymceStrings.fixed
+import typingsSlinky.tinymce.tinymceStrings.relative
+import typingsSlinky.tinymce.tinymceStrings.responsive
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -139,7 +144,7 @@ trait Settings_ extends js.Object {
   
   var hidden_input: js.UndefOr[Boolean] = js.native
   
-  var images_dataimg_filter: js.UndefOr[js.Function1[/* img */ js.Any, Unit]] = js.native
+  var images_dataimg_filter: js.UndefOr[js.Function1[/* img */ HTMLImageElement, Unit]] = js.native
   
   var images_reuse_filename: js.UndefOr[Boolean] = js.native
   
@@ -173,6 +178,8 @@ trait Settings_ extends js.Object {
   var `inline`: js.UndefOr[Boolean] = js.native
   
   var inline_boundaries: js.UndefOr[Boolean] = js.native
+  
+  var inline_boundaries_selector: js.UndefOr[Boolean] = js.native
   
   var insert_button_items: js.UndefOr[String] = js.native
   
@@ -276,9 +283,15 @@ trait Settings_ extends js.Object {
   
   var table_grid: js.UndefOr[Boolean] = js.native
   
+  var table_resize_bars: js.UndefOr[Boolean] = js.native
+  
   var table_row_advtab: js.UndefOr[Boolean] = js.native
   
   var table_row_class_list: js.UndefOr[js.Array[js.Object]] = js.native
+  
+  var table_sizing_mode: js.UndefOr[fixed | relative | responsive | auto] = js.native
+  
+  var table_style_by_css: js.UndefOr[Boolean] = js.native
   
   var table_tab_navigation: js.UndefOr[Boolean] = js.native
   
@@ -691,7 +704,7 @@ object Settings_ {
     def deleteHidden_input: Self = this.set("hidden_input", js.undefined)
     
     @scala.inline
-    def setImages_dataimg_filter(value: /* img */ js.Any => Unit): Self = this.set("images_dataimg_filter", js.Any.fromFunction1(value))
+    def setImages_dataimg_filter(value: /* img */ HTMLImageElement => Unit): Self = this.set("images_dataimg_filter", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteImages_dataimg_filter: Self = this.set("images_dataimg_filter", js.undefined)
@@ -778,6 +791,12 @@ object Settings_ {
     
     @scala.inline
     def deleteInline_boundaries: Self = this.set("inline_boundaries", js.undefined)
+    
+    @scala.inline
+    def setInline_boundaries_selector(value: Boolean): Self = this.set("inline_boundaries_selector", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInline_boundaries_selector: Self = this.set("inline_boundaries_selector", js.undefined)
     
     @scala.inline
     def setInsert_button_items(value: String): Self = this.set("insert_button_items", value.asInstanceOf[js.Any])
@@ -1107,6 +1126,12 @@ object Settings_ {
     def deleteTable_grid: Self = this.set("table_grid", js.undefined)
     
     @scala.inline
+    def setTable_resize_bars(value: Boolean): Self = this.set("table_resize_bars", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTable_resize_bars: Self = this.set("table_resize_bars", js.undefined)
+    
+    @scala.inline
     def setTable_row_advtab(value: Boolean): Self = this.set("table_row_advtab", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1120,6 +1145,18 @@ object Settings_ {
     
     @scala.inline
     def deleteTable_row_class_list: Self = this.set("table_row_class_list", js.undefined)
+    
+    @scala.inline
+    def setTable_sizing_mode(value: fixed | relative | responsive | auto): Self = this.set("table_sizing_mode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTable_sizing_mode: Self = this.set("table_sizing_mode", js.undefined)
+    
+    @scala.inline
+    def setTable_style_by_css(value: Boolean): Self = this.set("table_style_by_css", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTable_style_by_css: Self = this.set("table_style_by_css", js.undefined)
     
     @scala.inline
     def setTable_tab_navigation(value: Boolean): Self = this.set("table_tab_navigation", value.asInstanceOf[js.Any])

@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "InputGroupButtonDropdown")
+@JSImport("reactstrap/es", "InputGroupButtonDropdown")
 @js.native
-class InputGroupButtonDropdown[T] ()
+class InputGroupButtonDropdown ()
   extends Component[InputGroupButtonDropdownProps, js.Object, js.Any]

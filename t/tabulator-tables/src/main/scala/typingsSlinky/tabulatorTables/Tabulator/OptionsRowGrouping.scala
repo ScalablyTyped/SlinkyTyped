@@ -88,9 +88,11 @@ trait OptionsRowGrouping extends js.Object {
     */
   var groupToggleElement: js.UndefOr[arrow | header | `false`] = js.native
   
+  var groupUpdateOnCellEdit: js.UndefOr[Boolean] = js.native
+  
   /** By default Tabulator will create groups for rows based on the values contained in the row data. if you want to explicitly define which field values groups should be created for at each level, you can use the groupValues option.
     This option takes an array of value arrays, each item in the first array should be a list of acceptable field values for groups at that level     */
-  var groupValues: js.UndefOr[js.Array[js.Array[_]]] = js.native
+  var groupValues: js.UndefOr[GroupValuesArg] = js.native
   
   /** The groupVisibilityChanged callback is triggered whenever a group changes between hidden and visible states. */
   var groupVisibilityChanged: js.UndefOr[js.Function2[/* group */ GroupComponent, /* visible */ Boolean, Unit]] = js.native
@@ -251,10 +253,16 @@ object OptionsRowGrouping {
     def deleteGroupToggleElement: Self = this.set("groupToggleElement", js.undefined)
     
     @scala.inline
+    def setGroupUpdateOnCellEdit(value: Boolean): Self = this.set("groupUpdateOnCellEdit", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGroupUpdateOnCellEdit: Self = this.set("groupUpdateOnCellEdit", js.undefined)
+    
+    @scala.inline
     def setGroupValuesVarargs(value: js.Array[js.Any]*): Self = this.set("groupValues", js.Array(value :_*))
     
     @scala.inline
-    def setGroupValues(value: js.Array[js.Array[_]]): Self = this.set("groupValues", value.asInstanceOf[js.Any])
+    def setGroupValues(value: GroupValuesArg): Self = this.set("groupValues", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGroupValues: Self = this.set("groupValues", js.undefined)

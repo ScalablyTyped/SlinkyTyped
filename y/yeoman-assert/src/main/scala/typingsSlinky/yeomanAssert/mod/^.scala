@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
-  def apply(value: js.Any): Unit = js.native
-  def apply(value: js.Any, message: String): Unit = js.native
+  def apply(value: js.Any): /* asserts value */ Boolean = js.native
+  def apply(value: js.Any, message: String): /* asserts value */ Boolean = js.native
 }

@@ -6,5 +6,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object typesMod {
   
-  type Process = js.Function1[/* data */ typingsSlinky.popmotion.typesMod.FrameData, scala.Unit]
+  type AnimationOptions[V] = typingsSlinky.popmotion.typesMod.PlaybackOptions[V] with (typingsSlinky.popmotion.typesMod.DecayOptions | typingsSlinky.popmotion.typesMod.KeyframeOptions[V] | typingsSlinky.popmotion.typesMod.SpringOptions)
+  
+  type Driver = js.Function1[
+    /* update */ typingsSlinky.popmotion.typesMod.Update, 
+    typingsSlinky.popmotion.typesMod.DriverControls
+  ]
+  
+  type Update = js.Function1[/* timestamp */ scala.Double, scala.Unit]
 }

@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("gulp-cheerio", JSImport.Namespace)
 @js.native
-object ^ extends TopLevel[Cheerio]
+object ^ extends TopLevel[GulpCheerio]

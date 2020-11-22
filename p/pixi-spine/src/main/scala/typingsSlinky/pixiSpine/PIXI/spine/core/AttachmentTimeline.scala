@@ -13,6 +13,8 @@ trait AttachmentTimeline extends Timeline {
   
   def getFrameCount(): Double = js.native
   
+  def setAttachment(skeleton: Skeleton, slot: Slot, attachmentName: String): Unit = js.native
+  
   def setFrame(frameIndex: Double, time: Double, attachmentName: String): Unit = js.native
   
   var slotIndex: Double = js.native
@@ -26,10 +28,11 @@ object AttachmentTimeline {
     frames: ArrayLike[Double],
     getFrameCount: () => Double,
     getPropertyId: () => Double,
+    setAttachment: (Skeleton, Slot, String) => Unit,
     setFrame: (Double, Double, String) => Unit,
     slotIndex: Double
   ): AttachmentTimeline = {
-    val __obj = js.Dynamic.literal(apply = js.Any.fromFunction7(apply), attachmentNames = attachmentNames.asInstanceOf[js.Any], frames = frames.asInstanceOf[js.Any], getFrameCount = js.Any.fromFunction0(getFrameCount), getPropertyId = js.Any.fromFunction0(getPropertyId), setFrame = js.Any.fromFunction3(setFrame), slotIndex = slotIndex.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(apply = js.Any.fromFunction7(apply), attachmentNames = attachmentNames.asInstanceOf[js.Any], frames = frames.asInstanceOf[js.Any], getFrameCount = js.Any.fromFunction0(getFrameCount), getPropertyId = js.Any.fromFunction0(getPropertyId), setAttachment = js.Any.fromFunction3(setAttachment), setFrame = js.Any.fromFunction3(setFrame), slotIndex = slotIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttachmentTimeline]
   }
   
@@ -59,6 +62,9 @@ object AttachmentTimeline {
     
     @scala.inline
     def setGetFrameCount(value: () => Double): Self = this.set("getFrameCount", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setSetAttachment(value: (Skeleton, Slot, String) => Unit): Self = this.set("setAttachment", js.Any.fromFunction3(value))
     
     @scala.inline
     def setSetFrame(value: (Double, Double, String) => Unit): Self = this.set("setFrame", js.Any.fromFunction3(value))

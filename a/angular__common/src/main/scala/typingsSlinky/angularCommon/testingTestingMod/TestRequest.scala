@@ -43,10 +43,12 @@ class TestRequest protected () extends js.Object {
   def flush(): Unit = js.native
   def flush(body: String): Unit = js.native
   def flush(body: String, opts: StatusText): Unit = js.native
-  def flush(body: js.Array[String | Double | js.Object | Null]): Unit = js.native
-  def flush(body: js.Array[String | Double | js.Object | Null], opts: StatusText): Unit = js.native
+  def flush(body: js.Array[Boolean | String | Double | js.Object | Null]): Unit = js.native
+  def flush(body: js.Array[Boolean | String | Double | js.Object | Null], opts: StatusText): Unit = js.native
   def flush(body: js.Object): Unit = js.native
   def flush(body: js.Object, opts: StatusText): Unit = js.native
+  def flush(body: Boolean): Unit = js.native
+  def flush(body: Boolean, opts: StatusText): Unit = js.native
   def flush(body: Double): Unit = js.native
   def flush(body: Double, opts: StatusText): Unit = js.native
   def flush(body: Null, opts: StatusText): Unit = js.native

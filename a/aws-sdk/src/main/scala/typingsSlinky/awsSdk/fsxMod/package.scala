@@ -13,11 +13,29 @@ package object fsxMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.FILE_SYSTEM_UPDATE
     - typingsSlinky.awsSdk.awsSdkStrings.STORAGE_OPTIMIZATION
+    - typingsSlinky.awsSdk.awsSdkStrings.FILE_SYSTEM_ALIAS_ASSOCIATION
+    - typingsSlinky.awsSdk.awsSdkStrings.FILE_SYSTEM_ALIAS_DISASSOCIATION
     - java.lang.String
   */
   type AdministrativeActionType = typingsSlinky.awsSdk.fsxMod._AdministrativeActionType | java.lang.String
   
   type AdministrativeActions = js.Array[typingsSlinky.awsSdk.fsxMod.AdministrativeAction]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATE_FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_FAILED
+    - java.lang.String
+  */
+  type AliasLifecycle = typingsSlinky.awsSdk.fsxMod._AliasLifecycle | java.lang.String
+  
+  type Aliases = js.Array[typingsSlinky.awsSdk.fsxMod.Alias]
+  
+  type AlternateDNSName = java.lang.String
+  
+  type AlternateDNSNames = js.Array[typingsSlinky.awsSdk.fsxMod.AlternateDNSName]
   
   type ArchivePath = java.lang.String
   
@@ -38,6 +56,7 @@ package object fsxMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
     - typingsSlinky.awsSdk.awsSdkStrings.CREATING
+    - typingsSlinky.awsSdk.awsSdkStrings.TRANSFERRING
     - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - typingsSlinky.awsSdk.awsSdkStrings.FAILED
     - java.lang.String
@@ -47,6 +66,7 @@ package object fsxMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AUTOMATIC
     - typingsSlinky.awsSdk.awsSdkStrings.USER_INITIATED
+    - typingsSlinky.awsSdk.awsSdkStrings.AWS_BACKUP
     - java.lang.String
   */
   type BackupType = typingsSlinky.awsSdk.fsxMod._BackupType | java.lang.String
@@ -112,6 +132,13 @@ package object fsxMod {
   type DirectoryUserName = java.lang.String
   
   type DnsIps = js.Array[typingsSlinky.awsSdk.fsxMod.IpAddress]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.READ
+    - java.lang.String
+  */
+  type DriveCacheType = typingsSlinky.awsSdk.fsxMod._DriveCacheType | java.lang.String
   
   type EndTime = js.Date
   

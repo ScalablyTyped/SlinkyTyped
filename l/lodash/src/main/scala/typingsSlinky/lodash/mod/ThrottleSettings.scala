@@ -4,17 +4,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// throttle
 @js.native
 trait ThrottleSettings extends js.Object {
   
   /**
-    * If you'd like to disable the leading-edge call, pass this as false.
+    * @see _.leading
     */
   var leading: js.UndefOr[Boolean] = js.native
   
   /**
-    * If you'd like to disable the execution on the trailing-edge, pass false.
+    * @see _.trailing
     */
   var trailing: js.UndefOr[Boolean] = js.native
 }
@@ -36,7 +35,7 @@ object ThrottleSettings {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
+    def set(key: java.lang.String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }

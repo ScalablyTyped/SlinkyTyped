@@ -152,6 +152,8 @@ trait Options extends js.Object {
   
   var rewind: js.UndefOr[Boolean] = js.native
   
+  var rtl: js.UndefOr[Boolean] = js.native
+  
   var rtlClass: js.UndefOr[String] = js.native
   
   var slideBy: js.UndefOr[Double | String] = js.native
@@ -626,6 +628,12 @@ object Options {
     
     @scala.inline
     def deleteRewind: Self = this.set("rewind", js.undefined)
+    
+    @scala.inline
+    def setRtl(value: Boolean): Self = this.set("rtl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRtl: Self = this.set("rtl", js.undefined)
     
     @scala.inline
     def setRtlClass(value: String): Self = this.set("rtlClass", value.asInstanceOf[js.Any])

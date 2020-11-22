@@ -4,17 +4,19 @@ import typingsSlinky.plotlyJs.anon.End
 import typingsSlinky.plotlyJs.anon.PartialDataTitleFont
 import typingsSlinky.plotlyJs.anon.PartialDelta
 import typingsSlinky.plotlyJs.anon.PartialFont
-import typingsSlinky.plotlyJs.anon.PartialGauge
+import typingsSlinky.plotlyJs.anon.PartialGaugeBgcolor
 import typingsSlinky.plotlyJs.anon.PartialHoverLabel
-import typingsSlinky.plotlyJs.anon.PartialPlotMarker
-import typingsSlinky.plotlyJs.anon.PartialPlotNumber
+import typingsSlinky.plotlyJs.anon.PartialPlotMarkerCauto
+import typingsSlinky.plotlyJs.anon.PartialPlotNumberFont
 import typingsSlinky.plotlyJs.anon.PartialScatterLine
 import typingsSlinky.plotlyJs.anon.PartialScatterMarkerLine
 import typingsSlinky.plotlyJs.anon.Partialrowsnumbercolumnsn
 import typingsSlinky.plotlyJs.plotlyJsBooleans.`false`
+import typingsSlinky.plotlyJs.plotlyJsStrings._empty
 import typingsSlinky.plotlyJs.plotlyJsStrings.`bottom center`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`bottom left`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`bottom right`
+import typingsSlinky.plotlyJs.plotlyJsStrings.`infer zero`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`middle center`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`middle left`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`middle right`
@@ -23,6 +25,7 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.`top left`
 import typingsSlinky.plotlyJs.plotlyJsStrings.`top right`
 import typingsSlinky.plotlyJs.plotlyJsStrings.all
 import typingsSlinky.plotlyJs.plotlyJsStrings.area
+import typingsSlinky.plotlyJs.plotlyJsStrings.auto
 import typingsSlinky.plotlyJs.plotlyJsStrings.avg
 import typingsSlinky.plotlyJs.plotlyJsStrings.best
 import typingsSlinky.plotlyJs.plotlyJsStrings.clockwise
@@ -32,6 +35,7 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.delta
 import typingsSlinky.plotlyJs.plotlyJsStrings.diameter
 import typingsSlinky.plotlyJs.plotlyJsStrings.fast
 import typingsSlinky.plotlyJs.plotlyJsStrings.fills
+import typingsSlinky.plotlyJs.plotlyJsStrings.fraction
 import typingsSlinky.plotlyJs.plotlyJsStrings.gauge
 import typingsSlinky.plotlyJs.plotlyJsStrings.gaugePlussigndelta
 import typingsSlinky.plotlyJs.plotlyJsStrings.gaugePlussignnumber
@@ -40,6 +44,7 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.h
 import typingsSlinky.plotlyJs.plotlyJsStrings.hv
 import typingsSlinky.plotlyJs.plotlyJsStrings.hvh
 import typingsSlinky.plotlyJs.plotlyJsStrings.inside
+import typingsSlinky.plotlyJs.plotlyJsStrings.interpolate
 import typingsSlinky.plotlyJs.plotlyJsStrings.label
 import typingsSlinky.plotlyJs.plotlyJsStrings.labelPlussignpercent
 import typingsSlinky.plotlyJs.plotlyJsStrings.labelPlussigntext
@@ -58,6 +63,7 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.name
 import typingsSlinky.plotlyJs.plotlyJsStrings.none
 import typingsSlinky.plotlyJs.plotlyJsStrings.number
 import typingsSlinky.plotlyJs.plotlyJsStrings.numberPlussigndelta
+import typingsSlinky.plotlyJs.plotlyJsStrings.outliers
 import typingsSlinky.plotlyJs.plotlyJsStrings.outside
 import typingsSlinky.plotlyJs.plotlyJsStrings.percent
 import typingsSlinky.plotlyJs.plotlyJsStrings.points
@@ -66,6 +72,7 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.sd
 import typingsSlinky.plotlyJs.plotlyJsStrings.skip
 import typingsSlinky.plotlyJs.plotlyJsStrings.spline
 import typingsSlinky.plotlyJs.plotlyJsStrings.sum
+import typingsSlinky.plotlyJs.plotlyJsStrings.suspectedoutliers
 import typingsSlinky.plotlyJs.plotlyJsStrings.text
 import typingsSlinky.plotlyJs.plotlyJsStrings.textPlussignlines
 import typingsSlinky.plotlyJs.plotlyJsStrings.textPlussignlinesPlussignmarkers
@@ -127,13 +134,15 @@ trait PlotData extends js.Object {
   
   var boxmean: Boolean | sd = js.native
   
+  var boxpoints: all | outliers | suspectedoutliers | `false` = js.native
+  
   var branchvalues: total | remainder = js.native
   
   var colorscale: ColorScale = js.native
   
   var connectgaps: Boolean = js.native
   
-  var customdata: js.Array[Datum] = js.native
+  var customdata: js.Array[js.Array[Datum] | Datum] = js.native
   
   var delta: PartialDelta = js.native
   
@@ -149,7 +158,9 @@ trait PlotData extends js.Object {
   
   var fillcolor: String = js.native
   
-  var gauge: PartialGauge = js.native
+  var gauge: PartialGaugeBgcolor = js.native
+  
+  var groupnorm: _empty | fraction | percent = js.native
   
   var histfunc: count | sum | avg | min | max = js.native
   
@@ -165,11 +176,23 @@ trait PlotData extends js.Object {
   
   var hovertext: String | js.Array[String] = js.native
   
+  var i: TypedArray = js.native
+  
+  var ids: js.Array[String] = js.native
+  
+  var j: TypedArray = js.native
+  
+  var jitter: Double = js.native
+  
+  var k: TypedArray = js.native
+  
   var labels: js.Array[Datum] = js.native
   
   var lat: js.Array[Datum] = js.native
   
   var legendgroup: String = js.native
+  
+  var level: String = js.native
   
   var line: PartialScatterLine = js.native
   
@@ -193,7 +216,7 @@ trait PlotData extends js.Object {
   
   var lon: js.Array[Datum] = js.native
   
-  var marker: PartialPlotMarker = js.native
+  var marker: PartialPlotMarkerCauto = js.native
   
   @JSName("marker.color")
   var markerDotcolor: Color = js.native
@@ -254,7 +277,7 @@ trait PlotData extends js.Object {
   
   var name: String = js.native
   
-  var number: PartialPlotNumber = js.native
+  var number: PartialPlotNumberFont = js.native
   
   var opacity: Double = js.native
   
@@ -262,13 +285,19 @@ trait PlotData extends js.Object {
   
   var parents: js.Array[String] = js.native
   
+  var pointpos: Double = js.native
+  
   var r: js.Array[Datum] = js.native
   
   var rotation: Double = js.native
   
+  var selectedpoints: js.Array[Datum] = js.native
+  
   var showlegend: Boolean = js.native
   
   var showscale: Boolean = js.native
+  
+  var stackgaps: (`infer zero`) | interpolate = js.native
   
   var stackgroup: String = js.native
   
@@ -278,7 +307,7 @@ trait PlotData extends js.Object {
   
   var textinfo: label | labelPlussigntext | labelPlussignvalue | labelPlussignpercent | labelPlussigntextPlussignvalue | labelPlussigntextPlussignpercent | labelPlussignvaluePlussignpercent | text | textPlussignvalue | textPlussignpercent | textPlussignvaluePlussignpercent | value | valuePlussignpercent | percent | none = js.native
   
-  var textposition: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside = js.native
+  var textposition: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside | auto | none = js.native
   
   var theta: js.Array[Datum] = js.native
   
@@ -324,10 +353,11 @@ object PlotData {
   def apply(
     autobinx: Boolean,
     boxmean: Boolean | sd,
+    boxpoints: all | outliers | suspectedoutliers | `false`,
     branchvalues: total | remainder,
     colorscale: ColorScale,
     connectgaps: Boolean,
-    customdata: js.Array[Datum],
+    customdata: js.Array[js.Array[Datum] | Datum],
     delta: PartialDelta,
     direction: clockwise | counterclockwise,
     domain: Partialrowsnumbercolumnsn,
@@ -335,7 +365,8 @@ object PlotData {
     error_y: ErrorBar,
     fill: none | tozeroy | tozerox | tonexty | tonextx | toself | tonext,
     fillcolor: String,
-    gauge: PartialGauge,
+    gauge: PartialGaugeBgcolor,
+    groupnorm: _empty | fraction | percent,
     histfunc: count | sum | avg | min | max,
     hole: Double,
     hoverinfo: all | name | none | skip | text | x | xPlussigntext | xPlussignname | xPlussigny | xPlussignyPlussigntext | xPlussignyPlussignname | xPlussignyPlussignz | xPlussignyPlussignzPlussigntext | xPlussignyPlussignzPlussignname | y | yPlussignname | yPlussignx | yPlussigntext | yPlussignxPlussigntext | yPlussignxPlussignname | yPlussignz | yPlussignzPlussigntext | yPlussignzPlussignname | yPlussignxPlussignz | yPlussignxPlussignzPlussigntext | yPlussignxPlussignzPlussignname | z | zPlussignx | zPlussignxPlussigntext | zPlussignxPlussignname | zPlussignyPlussignx | zPlussignyPlussignxPlussigntext | zPlussignyPlussignxPlussignname | zPlussignxPlussigny | zPlussignxPlussignyPlussigntext | zPlussignxPlussignyPlussignname,
@@ -343,9 +374,15 @@ object PlotData {
     hoveron: points | fills,
     hovertemplate: String | js.Array[String],
     hovertext: String | js.Array[String],
+    i: TypedArray,
+    ids: js.Array[String],
+    j: TypedArray,
+    jitter: Double,
+    k: TypedArray,
     labels: js.Array[Datum],
     lat: js.Array[Datum],
     legendgroup: String,
+    level: String,
     line: PartialScatterLine,
     lineDotcolor: Color,
     lineDotdash: Dash,
@@ -354,7 +391,7 @@ object PlotData {
     lineDotsmoothing: Double,
     lineDotwidth: Double,
     lon: js.Array[Datum],
-    marker: PartialPlotMarker,
+    marker: PartialPlotMarkerCauto,
     markerDotcolor: Color,
     markerDotcolorscale: ColorScale | js.Array[ColorScale],
     markerDotline: PartialScatterMarkerLine,
@@ -375,19 +412,22 @@ object PlotData {
     markerDotsymbol: MarkerSymbol | js.Array[MarkerSymbol],
     mode: lines | markers | text | linesPlussignmarkers | textPlussignmarkers | textPlussignlines | textPlussignlinesPlussignmarkers | none | gauge | number | delta | numberPlussigndelta | gaugePlussignnumber | gaugePlussignnumberPlussigndelta | gaugePlussigndelta,
     name: String,
-    number: PartialPlotNumber,
+    number: PartialPlotNumberFont,
     opacity: Double,
     orientation: v | h,
     parents: js.Array[String],
+    pointpos: Double,
     r: js.Array[Datum],
     rotation: Double,
+    selectedpoints: js.Array[Datum],
     showlegend: Boolean,
     showscale: Boolean,
+    stackgaps: (`infer zero`) | interpolate,
     stackgroup: String,
     text: String | js.Array[String],
     textfont: PartialFont,
     textinfo: label | labelPlussigntext | labelPlussignvalue | labelPlussignpercent | labelPlussigntextPlussignvalue | labelPlussigntextPlussignpercent | labelPlussignvaluePlussignpercent | text | textPlussignvalue | textPlussignpercent | textPlussignvaluePlussignpercent | value | valuePlussignpercent | percent | none,
-    textposition: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside,
+    textposition: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside | auto | none,
     theta: js.Array[Datum],
     title: PartialDataTitleFont,
     transforms: js.Array[DataTransform],
@@ -408,7 +448,7 @@ object PlotData {
     z: (js.Array[(js.Array[js.Array[Datum] | Datum]) | Datum]) | TypedArray,
     zsmooth: fast | best | `false`
   ): PlotData = {
-    val __obj = js.Dynamic.literal(autobinx = autobinx.asInstanceOf[js.Any], boxmean = boxmean.asInstanceOf[js.Any], branchvalues = branchvalues.asInstanceOf[js.Any], colorscale = colorscale.asInstanceOf[js.Any], connectgaps = connectgaps.asInstanceOf[js.Any], customdata = customdata.asInstanceOf[js.Any], delta = delta.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], domain = domain.asInstanceOf[js.Any], error_x = error_x.asInstanceOf[js.Any], error_y = error_y.asInstanceOf[js.Any], fill = fill.asInstanceOf[js.Any], fillcolor = fillcolor.asInstanceOf[js.Any], gauge = gauge.asInstanceOf[js.Any], histfunc = histfunc.asInstanceOf[js.Any], hole = hole.asInstanceOf[js.Any], hoverinfo = hoverinfo.asInstanceOf[js.Any], hoverlabel = hoverlabel.asInstanceOf[js.Any], hoveron = hoveron.asInstanceOf[js.Any], hovertemplate = hovertemplate.asInstanceOf[js.Any], hovertext = hovertext.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], lat = lat.asInstanceOf[js.Any], legendgroup = legendgroup.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], lon = lon.asInstanceOf[js.Any], marker = marker.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], parents = parents.asInstanceOf[js.Any], r = r.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], showlegend = showlegend.asInstanceOf[js.Any], showscale = showscale.asInstanceOf[js.Any], stackgroup = stackgroup.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], textfont = textfont.asInstanceOf[js.Any], textinfo = textinfo.asInstanceOf[js.Any], textposition = textposition.asInstanceOf[js.Any], theta = theta.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], transforms = transforms.asInstanceOf[js.Any], transpose = transpose.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], xaxis = xaxis.asInstanceOf[js.Any], xbins = xbins.asInstanceOf[js.Any], xgap = xgap.asInstanceOf[js.Any], xy = xy.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], yaxis = yaxis.asInstanceOf[js.Any], ygap = ygap.asInstanceOf[js.Any], z = z.asInstanceOf[js.Any], zsmooth = zsmooth.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(autobinx = autobinx.asInstanceOf[js.Any], boxmean = boxmean.asInstanceOf[js.Any], boxpoints = boxpoints.asInstanceOf[js.Any], branchvalues = branchvalues.asInstanceOf[js.Any], colorscale = colorscale.asInstanceOf[js.Any], connectgaps = connectgaps.asInstanceOf[js.Any], customdata = customdata.asInstanceOf[js.Any], delta = delta.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], domain = domain.asInstanceOf[js.Any], error_x = error_x.asInstanceOf[js.Any], error_y = error_y.asInstanceOf[js.Any], fill = fill.asInstanceOf[js.Any], fillcolor = fillcolor.asInstanceOf[js.Any], gauge = gauge.asInstanceOf[js.Any], groupnorm = groupnorm.asInstanceOf[js.Any], histfunc = histfunc.asInstanceOf[js.Any], hole = hole.asInstanceOf[js.Any], hoverinfo = hoverinfo.asInstanceOf[js.Any], hoverlabel = hoverlabel.asInstanceOf[js.Any], hoveron = hoveron.asInstanceOf[js.Any], hovertemplate = hovertemplate.asInstanceOf[js.Any], hovertext = hovertext.asInstanceOf[js.Any], i = i.asInstanceOf[js.Any], ids = ids.asInstanceOf[js.Any], j = j.asInstanceOf[js.Any], jitter = jitter.asInstanceOf[js.Any], k = k.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], lat = lat.asInstanceOf[js.Any], legendgroup = legendgroup.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], lon = lon.asInstanceOf[js.Any], marker = marker.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], number = number.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], orientation = orientation.asInstanceOf[js.Any], parents = parents.asInstanceOf[js.Any], pointpos = pointpos.asInstanceOf[js.Any], r = r.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], selectedpoints = selectedpoints.asInstanceOf[js.Any], showlegend = showlegend.asInstanceOf[js.Any], showscale = showscale.asInstanceOf[js.Any], stackgaps = stackgaps.asInstanceOf[js.Any], stackgroup = stackgroup.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any], textfont = textfont.asInstanceOf[js.Any], textinfo = textinfo.asInstanceOf[js.Any], textposition = textposition.asInstanceOf[js.Any], theta = theta.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], transforms = transforms.asInstanceOf[js.Any], transpose = transpose.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], xaxis = xaxis.asInstanceOf[js.Any], xbins = xbins.asInstanceOf[js.Any], xgap = xgap.asInstanceOf[js.Any], xy = xy.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any], yaxis = yaxis.asInstanceOf[js.Any], ygap = ygap.asInstanceOf[js.Any], z = z.asInstanceOf[js.Any], zsmooth = zsmooth.asInstanceOf[js.Any])
     __obj.updateDynamic("line.color")(lineDotcolor.asInstanceOf[js.Any])
     __obj.updateDynamic("line.dash")(lineDotdash.asInstanceOf[js.Any])
     __obj.updateDynamic("line.shape")(lineDotshape.asInstanceOf[js.Any])
@@ -459,6 +499,9 @@ object PlotData {
     def setBoxmean(value: Boolean | sd): Self = this.set("boxmean", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setBoxpoints(value: all | outliers | suspectedoutliers | `false`): Self = this.set("boxpoints", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setBranchvalues(value: total | remainder): Self = this.set("branchvalues", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -471,10 +514,10 @@ object PlotData {
     def setConnectgaps(value: Boolean): Self = this.set("connectgaps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCustomdataVarargs(value: Datum*): Self = this.set("customdata", js.Array(value :_*))
+    def setCustomdataVarargs(value: (js.Array[Datum] | Datum)*): Self = this.set("customdata", js.Array(value :_*))
     
     @scala.inline
-    def setCustomdata(value: js.Array[Datum]): Self = this.set("customdata", value.asInstanceOf[js.Any])
+    def setCustomdata(value: js.Array[js.Array[Datum] | Datum]): Self = this.set("customdata", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDelta(value: PartialDelta): Self = this.set("delta", value.asInstanceOf[js.Any])
@@ -498,7 +541,10 @@ object PlotData {
     def setFillcolor(value: String): Self = this.set("fillcolor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGauge(value: PartialGauge): Self = this.set("gauge", value.asInstanceOf[js.Any])
+    def setGauge(value: PartialGaugeBgcolor): Self = this.set("gauge", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setGroupnorm(value: _empty | fraction | percent): Self = this.set("groupnorm", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHistfunc(value: count | sum | avg | min | max): Self = this.set("histfunc", value.asInstanceOf[js.Any])
@@ -530,6 +576,105 @@ object PlotData {
     def setHovertext(value: String | js.Array[String]): Self = this.set("hovertext", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setIInt8Array(value: js.typedarray.Int8Array): Self = this.set("i", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = this.set("i", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIFloat64Array(value: js.typedarray.Float64Array): Self = this.set("i", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIUint16Array(value: js.typedarray.Uint16Array): Self = this.set("i", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setI(value: TypedArray): Self = this.set("i", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIFloat32Array(value: js.typedarray.Float32Array): Self = this.set("i", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIUint8Array(value: js.typedarray.Uint8Array): Self = this.set("i", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIInt32Array(value: js.typedarray.Int32Array): Self = this.set("i", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIUint32Array(value: js.typedarray.Uint32Array): Self = this.set("i", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIInt16Array(value: js.typedarray.Int16Array): Self = this.set("i", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIdsVarargs(value: String*): Self = this.set("ids", js.Array(value :_*))
+    
+    @scala.inline
+    def setIds(value: js.Array[String]): Self = this.set("ids", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJInt16Array(value: js.typedarray.Int16Array): Self = this.set("j", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJUint8Array(value: js.typedarray.Uint8Array): Self = this.set("j", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJFloat32Array(value: js.typedarray.Float32Array): Self = this.set("j", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = this.set("j", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJInt32Array(value: js.typedarray.Int32Array): Self = this.set("j", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJ(value: TypedArray): Self = this.set("j", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJFloat64Array(value: js.typedarray.Float64Array): Self = this.set("j", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJInt8Array(value: js.typedarray.Int8Array): Self = this.set("j", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJUint32Array(value: js.typedarray.Uint32Array): Self = this.set("j", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJUint16Array(value: js.typedarray.Uint16Array): Self = this.set("j", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJitter(value: Double): Self = this.set("jitter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setK(value: TypedArray): Self = this.set("k", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKUint32Array(value: js.typedarray.Uint32Array): Self = this.set("k", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKInt32Array(value: js.typedarray.Int32Array): Self = this.set("k", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKUint16Array(value: js.typedarray.Uint16Array): Self = this.set("k", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKFloat32Array(value: js.typedarray.Float32Array): Self = this.set("k", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKInt16Array(value: js.typedarray.Int16Array): Self = this.set("k", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKUint8ClampedArray(value: js.typedarray.Uint8ClampedArray): Self = this.set("k", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKInt8Array(value: js.typedarray.Int8Array): Self = this.set("k", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKUint8Array(value: js.typedarray.Uint8Array): Self = this.set("k", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKFloat64Array(value: js.typedarray.Float64Array): Self = this.set("k", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setLabelsVarargs(value: Datum*): Self = this.set("labels", js.Array(value :_*))
     
     @scala.inline
@@ -543,6 +688,9 @@ object PlotData {
     
     @scala.inline
     def setLegendgroup(value: String): Self = this.set("legendgroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLevel(value: String): Self = this.set("level", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLine(value: PartialScatterLine): Self = this.set("line", value.asInstanceOf[js.Any])
@@ -575,7 +723,7 @@ object PlotData {
     def setLon(value: js.Array[Datum]): Self = this.set("lon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMarker(value: PartialPlotMarker): Self = this.set("marker", value.asInstanceOf[js.Any])
+    def setMarker(value: PartialPlotMarkerCauto): Self = this.set("marker", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMarkerDotcolorVarargs(value: (js.UndefOr[(js.Array[js.UndefOr[String | Double | Null]]) | Double | Null | String])*): Self = this.set("marker.color", js.Array(value :_*))
@@ -661,7 +809,7 @@ object PlotData {
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNumber(value: PartialPlotNumber): Self = this.set("number", value.asInstanceOf[js.Any])
+    def setNumber(value: PartialPlotNumberFont): Self = this.set("number", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOpacity(value: Double): Self = this.set("opacity", value.asInstanceOf[js.Any])
@@ -676,6 +824,9 @@ object PlotData {
     def setParents(value: js.Array[String]): Self = this.set("parents", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setPointpos(value: Double): Self = this.set("pointpos", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setRVarargs(value: Datum*): Self = this.set("r", js.Array(value :_*))
     
     @scala.inline
@@ -685,10 +836,19 @@ object PlotData {
     def setRotation(value: Double): Self = this.set("rotation", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setSelectedpointsVarargs(value: Datum*): Self = this.set("selectedpoints", js.Array(value :_*))
+    
+    @scala.inline
+    def setSelectedpoints(value: js.Array[Datum]): Self = this.set("selectedpoints", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setShowlegend(value: Boolean): Self = this.set("showlegend", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setShowscale(value: Boolean): Self = this.set("showscale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStackgaps(value: (`infer zero`) | interpolate): Self = this.set("stackgaps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStackgroup(value: String): Self = this.set("stackgroup", value.asInstanceOf[js.Any])
@@ -709,7 +869,7 @@ object PlotData {
     
     @scala.inline
     def setTextposition(
-      value: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside
+      value: (`top left`) | (`top center`) | (`top right`) | (`middle left`) | (`middle center`) | (`middle right`) | (`bottom left`) | (`bottom center`) | (`bottom right`) | inside | outside | auto | none
     ): Self = this.set("textposition", value.asInstanceOf[js.Any])
     
     @scala.inline

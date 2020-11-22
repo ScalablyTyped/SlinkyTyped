@@ -1,7 +1,7 @@
 package typingsSlinky.reactRelay.useRefetchableFragmentNodeMod
 
-import typingsSlinky.reactRelay.queryResourceMod.FetchPolicy
-import typingsSlinky.reactRelay.queryResourceMod.RenderPolicy
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.FetchPolicy
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.RenderPolicy
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Variables
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Environment
 import scala.scalajs.js
@@ -21,6 +21,8 @@ trait RefetchState extends js.Object {
   
   var refetchEnvironment: js.UndefOr[Environment | Null] = js.native
   
+  var refetchGeneration: Double = js.native
+  
   var refetchVariables: js.UndefOr[Variables | Null] = js.native
   
   var renderPolicy: js.UndefOr[RenderPolicy] = js.native
@@ -28,8 +30,8 @@ trait RefetchState extends js.Object {
 object RefetchState {
   
   @scala.inline
-  def apply(mirroredEnvironment: Environment, mirroredFragmentIdentifier: String): RefetchState = {
-    val __obj = js.Dynamic.literal(mirroredEnvironment = mirroredEnvironment.asInstanceOf[js.Any], mirroredFragmentIdentifier = mirroredFragmentIdentifier.asInstanceOf[js.Any])
+  def apply(mirroredEnvironment: Environment, mirroredFragmentIdentifier: String, refetchGeneration: Double): RefetchState = {
+    val __obj = js.Dynamic.literal(mirroredEnvironment = mirroredEnvironment.asInstanceOf[js.Any], mirroredFragmentIdentifier = mirroredFragmentIdentifier.asInstanceOf[js.Any], refetchGeneration = refetchGeneration.asInstanceOf[js.Any])
     __obj.asInstanceOf[RefetchState]
   }
   
@@ -53,6 +55,9 @@ object RefetchState {
     
     @scala.inline
     def setMirroredFragmentIdentifier(value: String): Self = this.set("mirroredFragmentIdentifier", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRefetchGeneration(value: Double): Self = this.set("refetchGeneration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFetchPolicy(value: FetchPolicy): Self = this.set("fetchPolicy", value.asInstanceOf[js.Any])

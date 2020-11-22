@@ -12,13 +12,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Uint8ArrayConstructor
   extends Instantiable0[js.typedarray.Uint8Array]
      with Instantiable1[
-      (/* arrayOrArrayBuffer */ ArrayBufferLike) | (/* arrayOrArrayBuffer */ ArrayLike[Double]) | (/* length */ Double) | (/* elements */ js.Iterable[Double]), 
+      (/* array */ ArrayBufferLike) | (/* array */ ArrayLike[Double]) | (/* length */ Double) | (/* elements */ js.Iterable[Double]), 
       js.typedarray.Uint8Array
     ]
      with Instantiable2[/* buffer */ ArrayBufferLike, /* byteOffset */ Double, js.typedarray.Uint8Array]
      with Instantiable3[
       /* buffer */ ArrayBufferLike, 
-      /* byteOffset */ Double, 
+      js.UndefOr[/* byteOffset */ Double], 
       /* length */ Double, 
       js.typedarray.Uint8Array
     ] {

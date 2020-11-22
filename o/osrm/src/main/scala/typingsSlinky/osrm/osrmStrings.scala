@@ -23,6 +23,12 @@ object osrmStrings {
   def depart: depart = "depart".asInstanceOf[depart]
   
   @scala.inline
+  def distance: distance = "distance".asInstanceOf[distance]
+  
+  @scala.inline
+  def duration: duration = "duration".asInstanceOf[duration]
+  
+  @scala.inline
   def `end of road`: `end of road` = ("end of road").asInstanceOf[`end of road`]
   
   @scala.inline
@@ -120,6 +126,12 @@ object osrmStrings {
   
   @js.native
   sealed trait depart extends StepManeuverTypes
+  
+  @js.native
+  sealed trait distance extends js.Object
+  
+  @js.native
+  sealed trait duration extends js.Object
   
   @js.native
   sealed trait `end of road` extends StepManeuverTypes

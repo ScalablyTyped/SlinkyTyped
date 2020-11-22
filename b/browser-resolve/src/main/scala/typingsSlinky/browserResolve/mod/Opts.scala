@@ -1,11 +1,17 @@
 package typingsSlinky.browserResolve.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Opts extends js.Object {
+  
+  /**
+    * directory to begin resolving from
+    */
+  var basedir: js.UndefOr[String] = js.native
   
   /**
     * the 'browser' property to use from package.json
@@ -22,7 +28,17 @@ trait Opts extends js.Object {
     * modules object with id to path mappings to consult before doing manual resolution
     * (use to provide core modules)
     */
-  var modules: js.UndefOr[js.Any] = js.native
+  var modules: js.UndefOr[StringDictionary[String]] = js.native
+  
+  /**
+    * transform the parsed package.json contents before looking at the main field
+    */
+  var packageFilter: js.UndefOr[js.Function2[/* info */ js.Any, /* pkgdir */ String, _]] = js.native
+  
+  /**
+    * require.paths array to use if nothing is found on the normal node_modules recursive walk
+    */
+  var paths: js.UndefOr[js.Array[String]] = js.native
 }
 object Opts {
   
@@ -48,6 +64,12 @@ object Opts {
     }
     
     @scala.inline
+    def setBasedir(value: String): Self = this.set("basedir", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBasedir: Self = this.set("basedir", js.undefined)
+    
+    @scala.inline
     def setBrowser(value: String): Self = this.set("browser", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -60,9 +82,24 @@ object Opts {
     def deleteFilename: Self = this.set("filename", js.undefined)
     
     @scala.inline
-    def setModules(value: js.Any): Self = this.set("modules", value.asInstanceOf[js.Any])
+    def setModules(value: StringDictionary[String]): Self = this.set("modules", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModules: Self = this.set("modules", js.undefined)
+    
+    @scala.inline
+    def setPackageFilter(value: (/* info */ js.Any, /* pkgdir */ String) => _): Self = this.set("packageFilter", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deletePackageFilter: Self = this.set("packageFilter", js.undefined)
+    
+    @scala.inline
+    def setPathsVarargs(value: String*): Self = this.set("paths", js.Array(value :_*))
+    
+    @scala.inline
+    def setPaths(value: js.Array[String]): Self = this.set("paths", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePaths: Self = this.set("paths", js.undefined)
   }
 }

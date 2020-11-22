@@ -20,7 +20,7 @@ trait ListComponentsRequest extends js.Object {
   /**
     * A token to specify where to start paginating. This is the NextToken from a previously truncated response. 
     */
-  var nextToken: js.UndefOr[NonEmptyString] = js.native
+  var nextToken: js.UndefOr[PaginationToken] = js.native
   
   /**
     * The owner defines which components you want to list. By default, this request will only show components owned by your account. You can use this field to specify if you want to view components owned by yourself, by Amazon, or those components that have been shared with you by other customers. 
@@ -66,7 +66,7 @@ object ListComponentsRequest {
     def deleteMaxResults: Self = this.set("maxResults", js.undefined)
     
     @scala.inline
-    def setNextToken(value: NonEmptyString): Self = this.set("nextToken", value.asInstanceOf[js.Any])
+    def setNextToken(value: PaginationToken): Self = this.set("nextToken", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNextToken: Self = this.set("nextToken", js.undefined)

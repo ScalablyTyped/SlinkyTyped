@@ -3,8 +3,6 @@ package typingsSlinky.grammarkdown
 import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.grammarkdown.diagnosticsMod.DiagnosticMessages
 import typingsSlinky.grammarkdown.nodesMod.CommentTrivia
-import typingsSlinky.grammarkdown.nodesMod.HtmlCloseTagTrivia
-import typingsSlinky.grammarkdown.nodesMod.HtmlOpenTagTrivia
 import typingsSlinky.grammarkdown.nodesMod.HtmlTrivia
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind
 import typingsSlinky.prex.mod.CancellationToken
@@ -53,7 +51,7 @@ object scannerMod extends js.Object {
     
     def getDiagnostics(): DiagnosticMessages = js.native
     
-    def getHtmlTrivia(): js.UndefOr[js.Array[HtmlOpenTagTrivia | HtmlCloseTagTrivia]] = js.native
+    def getHtmlTrivia(): js.UndefOr[js.Array[HtmlTrivia]] = js.native
     
     var getIdentifierToken: js.Any = js.native
     
@@ -107,6 +105,8 @@ object scannerMod extends js.Object {
     
     var resetHasPrecedingNonWhitspaceTrivia: js.Any = js.native
     
+    def resetIndent(): Unit = js.native
+    
     def scan(): SyntaxKind = js.native
     
     var scanCharacter: js.Any = js.native
@@ -120,6 +120,8 @@ object scannerMod extends js.Object {
     var scanHtmlTrivia: js.Any = js.native
     
     var scanLine: js.Any = js.native
+    
+    var scanNumber: js.Any = js.native
     
     var scanProse: js.Any = js.native
     

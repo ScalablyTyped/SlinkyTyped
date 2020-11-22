@@ -20,6 +20,8 @@ class InventoryChange () extends js.Object {
   
   /**
     * Contains details about the inventory transfer when `type` is `TRANSFER` and unset for all other types.
+    * @note An `InventoryTransfer` object is read-only and can only be present in a `RetrieveInventoryChangesResponse`
+    * and `BatchRetrieveInventoryChangesResponse` object.
     */
   var transfer: js.UndefOr[InventoryTransfer] = js.native
   

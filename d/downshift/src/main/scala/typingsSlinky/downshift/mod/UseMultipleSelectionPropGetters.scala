@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UseMultipleSelectionPropGetters[Item] extends js.Object {
   
   def getDropdownProps(): js.Any = js.native
+  def getDropdownProps(options: js.UndefOr[scala.Nothing], extraOptions: GetPropsCommonOptions): js.Any = js.native
   def getDropdownProps(options: UseMultipleSelectionGetDropdownProps): js.Any = js.native
+  def getDropdownProps(options: UseMultipleSelectionGetDropdownProps, extraOptions: GetPropsCommonOptions): js.Any = js.native
   
   def getSelectedItemProps(options: UseMultipleSelectionGetSelectedItemPropsOptions[Item]): js.Any = js.native
 }

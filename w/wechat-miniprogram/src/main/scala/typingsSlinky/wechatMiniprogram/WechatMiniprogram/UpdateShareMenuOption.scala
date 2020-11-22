@@ -18,6 +18,11 @@ trait UpdateShareMenuOption extends js.Object {
   /** 接口调用失败的回调函数 */
   var fail: js.UndefOr[UpdateShareMenuFailCallback] = js.native
   
+  /** 是否是私密消息。详见 [小程序私密消息](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share/private-message.html)
+    *
+    * 最低基础库： `2.13.0` */
+  var isPrivateMessage: js.UndefOr[Boolean] = js.native
+  
   /** 是否是动态消息，详见[动态消息](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share/updatable-message.html)
     *
     * 最低基础库： `2.4.0` */
@@ -79,6 +84,12 @@ object UpdateShareMenuOption {
     
     @scala.inline
     def deleteFail: Self = this.set("fail", js.undefined)
+    
+    @scala.inline
+    def setIsPrivateMessage(value: Boolean): Self = this.set("isPrivateMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsPrivateMessage: Self = this.set("isPrivateMessage", js.undefined)
     
     @scala.inline
     def setIsUpdatableMessage(value: Boolean): Self = this.set("isUpdatableMessage", value.asInstanceOf[js.Any])

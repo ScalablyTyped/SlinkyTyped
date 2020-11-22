@@ -1,7 +1,6 @@
 package typingsSlinky.d3.mod
 
 import org.scalajs.dom.raw.SVGFilterElement
-import typingsSlinky.d3.d3Strings.filter
 import typingsSlinky.d3Selection.mod.Selection_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object create_filter extends js.Object {
   
-  def apply(name: filter): Selection_[SVGFilterElement, js.UndefOr[scala.Nothing], Null, js.UndefOr[scala.Nothing]] = js.native
+  def apply(name: typingsSlinky.d3.d3Strings.filter): Selection_[SVGFilterElement, js.UndefOr[scala.Nothing], Null, js.UndefOr[scala.Nothing]] = js.native
 }

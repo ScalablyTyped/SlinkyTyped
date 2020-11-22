@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createDateFormatter extends js.Object {
   
-  def apply(hasConfigL10n: FormatterArgs): js.Function3[/* dateObj */ Date, /* frmt */ String, /* overrideLocale */ js.UndefOr[Locale], String] = js.native
+  def apply(hasConfigL10nIsMobile: FormatterArgs): js.Function3[/* dateObj */ Date, /* frmt */ String, /* overrideLocale */ js.UndefOr[Locale], String] = js.native
 }

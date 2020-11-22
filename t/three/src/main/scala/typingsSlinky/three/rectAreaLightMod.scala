@@ -75,10 +75,16 @@ object rectAreaLightMod extends js.Object {
     def this(color: Color, intensity: Double, width: js.UndefOr[scala.Nothing], height: Double) = this()
     def this(color: Color, intensity: Double, width: Double, height: Double) = this()
     
+    /**
+    	 * @default 10
+    	 */
     var height: Double = js.native
     
     val isRectAreaLight: `true` = js.native
     
+    /**
+    	 * @default 10
+    	 */
     var width: Double = js.native
   }
 }

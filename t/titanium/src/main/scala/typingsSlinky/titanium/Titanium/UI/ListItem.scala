@@ -22,7 +22,7 @@ trait ListItem extends Proxy {
   /**
     * Background color of the view, as a color name or hex triplet.
     */
-  var backgroundColor: String = js.native
+  var backgroundColor: String | Color = js.native
   
   /**
     * Background gradient to render when the item is not selected.
@@ -52,7 +52,7 @@ trait ListItem extends Proxy {
   /**
     * Default text color of the item when not selected, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   /**
     * Specifies custom action items to be shown when when a list item is edited.
@@ -74,13 +74,13 @@ trait ListItem extends Proxy {
     * Gets the value of the <Titanium.UI.ListItem.selectedColor> property.
     * @deprecated Access <Titanium.UI.ListItem.selectedColor> instead.
     */
-  def getSelectedColor(): String = js.native
+  def getSelectedColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ListItem.selectedSubtitleColor> property.
     * @deprecated Access <Titanium.UI.ListItem.selectedSubtitleColor> instead.
     */
-  def getSelectedSubtitleColor(): String = js.native
+  def getSelectedSubtitleColor(): String | Color = js.native
   
   /**
     * Row height in platform-specific units.
@@ -105,7 +105,7 @@ trait ListItem extends Proxy {
   /**
     * Background color of the view, as a color name or hex triplet when item is selected.
     */
-  var selectedBackgroundColor: String = js.native
+  var selectedBackgroundColor: String | Color = js.native
   
   /**
     * Background gradient to render when the item is selected.
@@ -120,12 +120,12 @@ trait ListItem extends Proxy {
   /**
     * Color to use for the item title when the item is selected, as a color name or hex triplet.
     */
-  var selectedColor: String = js.native
+  var selectedColor: String | Color = js.native
   
   /**
     * Color to use for the item subtitle when the item is selected, as a color name or hex triplet.
     */
-  var selectedSubtitleColor: String = js.native
+  var selectedSubtitleColor: String | Color = js.native
   
   /**
     * Selection style constant to control the selection color.
@@ -143,12 +143,14 @@ trait ListItem extends Proxy {
     * @deprecated Set the value using <Titanium.UI.ListItem.selectedColor> instead.
     */
   def setSelectedColor(selectedColor: String): Unit = js.native
+  def setSelectedColor(selectedColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ListItem.selectedSubtitleColor> property.
     * @deprecated Set the value using <Titanium.UI.ListItem.selectedSubtitleColor> instead.
     */
   def setSelectedSubtitleColor(selectedSubtitleColor: String): Unit = js.native
+  def setSelectedSubtitleColor(selectedSubtitleColor: Color): Unit = js.native
   
   /**
     * Subtitle to set in the text area of the item.
@@ -158,7 +160,7 @@ trait ListItem extends Proxy {
   /**
     * Default text color of the subtitle, as a color name or hex triplet.
     */
-  var subtitleColor: String = js.native
+  var subtitleColor: String | Color = js.native
   
   /**
     * Title to set in the text area of the item.

@@ -26,6 +26,8 @@ package object transferMod {
   */
   type EndpointType = typingsSlinky.awsSdk.transferMod._EndpointType | java.lang.String
   
+  type Fips = scala.Boolean
+  
   type HomeDirectory = java.lang.String
   
   type HomeDirectoryMappings = js.Array[typingsSlinky.awsSdk.transferMod.HomeDirectoryMapEntry]
@@ -79,6 +81,18 @@ package object transferMod {
   type Response = java.lang.String
   
   type Role = java.lang.String
+  
+  type SecurityGroupId = java.lang.String
+  
+  type SecurityGroupIds = js.Array[typingsSlinky.awsSdk.transferMod.SecurityGroupId]
+  
+  type SecurityPolicyName = java.lang.String
+  
+  type SecurityPolicyNames = js.Array[typingsSlinky.awsSdk.transferMod.SecurityPolicyName]
+  
+  type SecurityPolicyOption = java.lang.String
+  
+  type SecurityPolicyOptions = js.Array[typingsSlinky.awsSdk.transferMod.SecurityPolicyOption]
   
   type ServerId = java.lang.String
   

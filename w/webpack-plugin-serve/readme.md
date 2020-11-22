@@ -1,7 +1,7 @@
 
 # Scala.js typings for webpack-plugin-serve
 
-Typings are for version 0.10
+Typings are for version 1.2
 
 ## Library description:
 A Development Server in a Webpack Plugin

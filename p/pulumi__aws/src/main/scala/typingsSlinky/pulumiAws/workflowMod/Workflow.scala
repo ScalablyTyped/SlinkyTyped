@@ -26,6 +26,11 @@ class Workflow protected () extends CustomResource {
   def this(name: String, args: WorkflowArgs, opts: CustomResourceOptions) = this()
   
   /**
+    * Amazon Resource Name (ARN) of Glue Workflow
+    */
+  val arn: Output_[String] = js.native
+  
+  /**
     * A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
     */
   val defaultRunProperties: Output_[js.UndefOr[StringDictionary[_]]] = js.native
@@ -36,9 +41,19 @@ class Workflow protected () extends CustomResource {
   val description: Output_[js.UndefOr[String]] = js.native
   
   /**
+    * Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+    */
+  val maxConcurrentRuns: Output_[js.UndefOr[Double]] = js.native
+  
+  /**
     * The name you assign to this workflow.
     */
   val name: Output_[String] = js.native
+  
+  /**
+    * Key-value map of resource tags
+    */
+  val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
 }
 /* static members */
 @JSImport("@pulumi/aws/glue/workflow", "Workflow")

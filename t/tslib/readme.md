@@ -1,7 +1,7 @@
 
 # Scala.js typings for tslib
 
-Typings are for version 2.0.0
+Typings are for version 2.0.3
 
 ## Library description:
 Runtime library for TypeScript helper functions

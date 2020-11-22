@@ -4,12 +4,17 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.inspectModeCancele
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.inspectNodeRequested
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.nodeHighlightRequested
 import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.screenshotRequested
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.GetGridHighlightObjectsForTestRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.GetGridHighlightObjectsForTestResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.GetHighlightObjectForTestRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.GetHighlightObjectForTestResponse
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.GetSourceOrderHighlightObjectForTestRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.GetSourceOrderHighlightObjectForTestResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.HighlightFrameRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.HighlightNodeRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.HighlightQuadRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.HighlightRectRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.HighlightSourceOrderRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.InspectNodeRequestedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.NodeHighlightRequestedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.ScreenshotRequestedEvent
@@ -18,6 +23,7 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetPausedInDebuggerMe
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowAdHighlightsRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowDebugBordersRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowFPSCounterRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowGridOverlaysRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowHingeRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowHitTestBordersRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowLayoutShiftRegionsRequest
@@ -42,9 +48,19 @@ trait OverlayApi extends js.Object {
   def enable(): js.Promise[Unit] = js.native
   
   /**
+    * For Persistent Grid testing.
+    */
+  def getGridHighlightObjectsForTest(params: GetGridHighlightObjectsForTestRequest): js.Promise[GetGridHighlightObjectsForTestResponse] = js.native
+  
+  /**
     * For testing.
     */
   def getHighlightObjectForTest(params: GetHighlightObjectForTestRequest): js.Promise[GetHighlightObjectForTestResponse] = js.native
+  
+  /**
+    * For Source Order Viewer testing.
+    */
+  def getSourceOrderHighlightObjectForTest(params: GetSourceOrderHighlightObjectForTestRequest): js.Promise[GetSourceOrderHighlightObjectForTestResponse] = js.native
   
   /**
     * Hides any highlight.
@@ -71,6 +87,12 @@ trait OverlayApi extends js.Object {
     * Highlights given rectangle. Coordinates are absolute with respect to the main frame viewport.
     */
   def highlightRect(params: HighlightRectRequest): js.Promise[Unit] = js.native
+  
+  /**
+    * Highlights the source order of the children of the DOM node with given id or with the given
+    * JavaScript object wrapper. Either nodeId or objectId must be specified.
+    */
+  def highlightSourceOrder(params: HighlightSourceOrderRequest): js.Promise[Unit] = js.native
   
   /**
     * Fired when user cancels the inspect mode.
@@ -119,6 +141,11 @@ trait OverlayApi extends js.Object {
     * Requests that backend shows the FPS counter
     */
   def setShowFPSCounter(params: SetShowFPSCounterRequest): js.Promise[Unit] = js.native
+  
+  /**
+    * Highlight multiple elements with the CSS Grid overlay.
+    */
+  def setShowGridOverlays(params: SetShowGridOverlaysRequest): js.Promise[Unit] = js.native
   
   /**
     * Add a dual screen device hinge

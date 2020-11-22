@@ -12,6 +12,8 @@ package object requestParamsMod {
   
   type ClusterRemoteInfo = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic
   
+  type DanglingIndicesListDanglingIndices = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic
+  
   type EnrichStats = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic
   
   type GetScriptContext = typingsSlinky.elasticElasticsearch.requestParamsMod.Generic

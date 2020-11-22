@@ -2,6 +2,7 @@ package typingsSlinky.fabric.fabricImplMod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.fabric.anon.Br
 import typingsSlinky.fabric.anon.E
 import typingsSlinky.fabric.anon.Mb
@@ -808,10 +809,10 @@ class Object ()
     * @param {Boolean} [options.enableRetinaScaling] Enable retina scaling for clone image. Introduce in 1.6.4
     * @param {Boolean} [options.withoutTransform] Remove current object transform ( no scale , no angle, no flip, no skew ). Introduced in 2.3.4
     * @param {Boolean} [options.withoutShadow] Remove current object shadow. Introduced in 2.4.2
-    * @return {String} Returns a data: URL containing a representation of the object in the format specified by options.format
+    * @return {HTMLCanvasElement} Returns a new HTMLCanvasElement painted with the current canvas object
     */
-  def toCanvasElement(): String = js.native
-  def toCanvasElement(options: IDataURLOptions): String = js.native
+  def toCanvasElement(): HTMLCanvasElement = js.native
+  def toCanvasElement(options: IDataURLOptions): HTMLCanvasElement = js.native
   
   /**
     * Returns svg clipPath representation of an instance

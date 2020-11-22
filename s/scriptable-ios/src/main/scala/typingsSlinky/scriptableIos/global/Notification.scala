@@ -78,7 +78,7 @@ object Notification extends js.Object {
     *
     * Effectively sets `args.notification` to null.
     *
-    * When a notification scheduled from Scriptable have been tapped to open the app or while the app was open, `args.notification` will have a value until Scriptable is quit. You can
+    * When a notification scheduled from Scriptable has been tapped to open the app or while the app was open, `args.notification` will have a value until Scriptable is quit. You can
     * manually reset the value using `Notification.resetCurrent`.
     * @see https://docs.scriptable.app/notification/#resetcurrent
     */

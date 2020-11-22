@@ -11,12 +11,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class LineDashedMaterial () extends LineBasicMaterial {
   def this(parameters: LineDashedMaterialParameters) = this()
   
+  /**
+  	 * @default 1
+  	 */
   var dashSize: Double = js.native
   
+  /**
+  	 * @default 1
+  	 */
   var gapSize: Double = js.native
   
   val isLineDashedMaterial: `true` = js.native
   
+  /**
+  	 * @default 1
+  	 */
   var scale: Double = js.native
   
   def setValues(parameters: LineDashedMaterialParameters): Unit = js.native

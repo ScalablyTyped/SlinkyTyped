@@ -1,14 +1,15 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `16`[T] extends js.Object {
+trait `16` extends js.Object {
   
-  var component: js.UndefOr[T] = js.native
+  var component: js.UndefOr[dxTreeView] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -17,13 +18,13 @@ trait `16`[T] extends js.Object {
 object `16` {
   
   @scala.inline
-  def apply[T](): `16`[T] = {
+  def apply(): `16` = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[`16`[T]]
+    __obj.asInstanceOf[`16`]
   }
   
   @scala.inline
-  implicit class `16Ops`[Self <: `16`[_], T] (val x: Self with `16`[T]) extends AnyVal {
+  implicit class `16Ops`[Self <: `16`] (val x: Self) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -38,7 +39,7 @@ object `16` {
     }
     
     @scala.inline
-    def setComponent(value: T): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxTreeView): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)

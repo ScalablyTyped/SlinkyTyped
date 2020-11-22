@@ -16,7 +16,7 @@ trait GridRowProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Obj
     */
   var gridRow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRow */ _, 
       ThemeType
     ]
   ] = js.native
@@ -50,7 +50,7 @@ object GridRowProps {
     @scala.inline
     def setGridRow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRow */ _, 
           ThemeType
         ]
     ): Self = this.set("gridRow", value.asInstanceOf[js.Any])

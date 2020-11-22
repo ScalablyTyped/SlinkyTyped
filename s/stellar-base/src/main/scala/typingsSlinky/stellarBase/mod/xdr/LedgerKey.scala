@@ -19,7 +19,9 @@ object LedgerKey extends js.Object {
   
   def account(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerKeyAccount): typingsSlinky.stellarBase.xdrMod.xdr.LedgerKey = js.native
   
-  def datum(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerKeyData): typingsSlinky.stellarBase.xdrMod.xdr.LedgerKey = js.native
+  def claimableBalance(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerKeyClaimableBalance): typingsSlinky.stellarBase.xdrMod.xdr.LedgerKey = js.native
+  
+  def data(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerKeyData): typingsSlinky.stellarBase.xdrMod.xdr.LedgerKey = js.native
   
   def fromXDR(input: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.LedgerKey = js.native
   @JSName("fromXDR")
@@ -38,6 +40,14 @@ object LedgerKey extends js.Object {
   def toXDR(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerKey): Buffer = js.native
   
   def trustline(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerKeyTrustLine): typingsSlinky.stellarBase.xdrMod.xdr.LedgerKey = js.native
+  
+  def validateXDR(input: Buffer): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_base64(input: String, format: base64): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_hex(input: String, format: hex): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_raw(input: Buffer, format: raw): Boolean = js.native
   
   def write(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerKey, io: Buffer): Unit = js.native
 }

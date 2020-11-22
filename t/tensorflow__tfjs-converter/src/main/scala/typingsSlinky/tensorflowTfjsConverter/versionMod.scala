@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object versionMod extends js.Object {
   
-  val version: /* "2.0.1" */ String = js.native
+  val version: /* "2.7.0" */ String = js.native
 }

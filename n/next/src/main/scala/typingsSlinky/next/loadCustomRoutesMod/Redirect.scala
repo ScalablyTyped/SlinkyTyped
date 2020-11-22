@@ -13,6 +13,8 @@ trait Redirect extends js.Object {
   
   var destination: String = js.native
   
+  var locale: js.UndefOr[`false`] = js.native
+  
   var permanent: js.UndefOr[Boolean] = js.native
   
   var source: String = js.native
@@ -53,6 +55,12 @@ object Redirect {
     
     @scala.inline
     def deleteBasePath: Self = this.set("basePath", js.undefined)
+    
+    @scala.inline
+    def setLocale(value: `false`): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
     
     @scala.inline
     def setPermanent(value: Boolean): Self = this.set("permanent", value.asInstanceOf[js.Any])

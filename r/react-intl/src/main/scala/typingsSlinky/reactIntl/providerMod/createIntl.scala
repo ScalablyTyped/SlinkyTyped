@@ -1,15 +1,13 @@
 package typingsSlinky.reactIntl.providerMod
 
-import typingsSlinky.reactIntl.typesMod.IntlCache
-import typingsSlinky.reactIntl.typesMod.IntlShape
+import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-intl/lib/components/provider", "createIntl")
+@JSImport("react-intl/lib/src/components/provider", "createIntl")
 @js.native
-object createIntl extends js.Object {
-  def apply(config: OptionalIntlConfig): IntlShape = js.native
-  def apply(config: OptionalIntlConfig, cache: IntlCache): IntlShape = js.native
-}
-
+object createIntl
+  extends TopLevel[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CreateIntlFn<React.ReactNode, OptionalIntlConfig, IntlShape> */ js.Any
+    ]

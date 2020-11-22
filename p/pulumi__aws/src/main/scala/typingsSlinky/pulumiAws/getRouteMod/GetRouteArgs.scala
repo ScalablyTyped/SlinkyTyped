@@ -33,6 +33,11 @@ trait GetRouteArgs extends js.Object {
   val instanceId: js.UndefOr[String] = js.native
   
   /**
+    * The Local Gateway ID of the Route belonging to the Route Table.
+    */
+  val localGatewayId: js.UndefOr[String] = js.native
+  
+  /**
     * The NAT Gateway ID of the Route belonging to the Route Table.
     */
   val natGatewayId: js.UndefOr[String] = js.native
@@ -112,6 +117,12 @@ object GetRouteArgs {
     
     @scala.inline
     def deleteInstanceId: Self = this.set("instanceId", js.undefined)
+    
+    @scala.inline
+    def setLocalGatewayId(value: String): Self = this.set("localGatewayId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocalGatewayId: Self = this.set("localGatewayId", js.undefined)
     
     @scala.inline
     def setNatGatewayId(value: String): Self = this.set("natGatewayId", value.asInstanceOf[js.Any])

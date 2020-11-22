@@ -11,6 +11,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CacheableLookup extends js.Object {
   
   /**
+  	 * Clears the cache for the given hostname. If the hostname argument is not present, the entire cache will be emptied.
+  	 */
+  def clear(): Unit = js.native
+  def clear(hostname: String): Unit = js.native
+  
+  /**
   	 * Attaches itself to an Agent instance.
   	 */
   def install(agent: Agent): Unit = js.native
@@ -49,15 +55,15 @@ trait CacheableLookup extends js.Object {
   /**
   	 * An asynchronous function which returns cached DNS lookup entries. This is the base for `lookupAsync(hostname, options)` and `lookup(hostname, options, callback)`.
   	 */
-  def query(hostname: String, family: IPFamily): js.Promise[js.Array[EntryObject]] = js.native
+  def query(hostname: String): js.Promise[js.Array[EntryObject]] = js.native
   
   /**
   	 * An asynchronous function which makes a new DNS lookup query and updates the database. This is used by `query(hostname, family)` if no entry in the database is present. Returns an array of objects with `address`, `family`, `ttl` and `expires` properties.
   	 */
-  def queryAndCache(hostname: String, family: IPFamily): js.Promise[js.Array[EntryObject]] = js.native
+  def queryAndCache(hostname: String): js.Promise[js.Array[EntryObject]] = js.native
   
   /**
-  	 * DNS servers used to make the query. Can be overridden - then the new servers will be used.
+  	 * The DNS servers used to make queries. Can be overridden - doing so will clear the cache.
   	 */
   var servers: js.Array[String] = js.native
   
@@ -68,6 +74,8 @@ trait CacheableLookup extends js.Object {
   
   /**
   	 * Updates interface info. For example, you need to run this when you plug or unplug your WiFi driver.
+  	 *
+  	 * **Note:** Running `updateInterfaceInfo()` will trigger `clear()` only on network interface removal.
   	 */
   def updateInterfaceInfo(): Unit = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.controlledTypeScriptSystemMod
 
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,6 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createControlledTypeScriptSystem extends js.Object {
   
-  def apply(): ControlledTypeScriptSystem = js.native
-  def apply(mode: FileSystemMode): ControlledTypeScriptSystem = js.native
+  def apply(typescript: Typeofts): ControlledTypeScriptSystem = js.native
+  def apply(typescript: Typeofts, mode: FileSystemMode): ControlledTypeScriptSystem = js.native
 }

@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookChartFont extends Entity {
   
   // Represents the bold status of font.
-  var bold: js.UndefOr[Boolean] = js.native
+  var bold: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // HTML color code representation of the text color. E.g. #FF0000 represents Red.
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[NullableOption[String]] = js.native
   
   // Represents the italic status of the font.
-  var italic: js.UndefOr[Boolean] = js.native
+  var italic: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // Font name (e.g. 'Calibri')
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   // Size of the font (e.g. 11)
-  var size: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[NullableOption[Double]] = js.native
   
   // Type of underline applied to the font. The possible values are: None, Single.
-  var underline: js.UndefOr[String] = js.native
+  var underline: js.UndefOr[NullableOption[String]] = js.native
 }
 object WorkbookChartFont {
   
@@ -49,39 +49,57 @@ object WorkbookChartFont {
     }
     
     @scala.inline
-    def setBold(value: Boolean): Self = this.set("bold", value.asInstanceOf[js.Any])
+    def setBold(value: NullableOption[Boolean]): Self = this.set("bold", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBold: Self = this.set("bold", js.undefined)
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setBoldNull: Self = this.set("bold", null)
+    
+    @scala.inline
+    def setColor(value: NullableOption[String]): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setItalic(value: Boolean): Self = this.set("italic", value.asInstanceOf[js.Any])
+    def setColorNull: Self = this.set("color", null)
+    
+    @scala.inline
+    def setItalic(value: NullableOption[Boolean]): Self = this.set("italic", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteItalic: Self = this.set("italic", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setItalicNull: Self = this.set("italic", null)
+    
+    @scala.inline
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
+    def setSize(value: NullableOption[Double]): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)
     
     @scala.inline
-    def setUnderline(value: String): Self = this.set("underline", value.asInstanceOf[js.Any])
+    def setSizeNull: Self = this.set("size", null)
+    
+    @scala.inline
+    def setUnderline(value: NullableOption[String]): Self = this.set("underline", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUnderline: Self = this.set("underline", js.undefined)
+    
+    @scala.inline
+    def setUnderlineNull: Self = this.set("underline", null)
   }
 }

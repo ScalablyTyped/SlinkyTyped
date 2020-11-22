@@ -1,6 +1,5 @@
 package typingsSlinky.carbonComponents.headerSubmenuMod
 
-import typingsSlinky.carbonComponents.anon.ShouldBeExpanded
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +16,7 @@ trait HeaderSubmenu extends js.Object {
   
   def _handleKeyDown(event: js.Any): Unit = js.native
   
-  def _setState(hasShouldBeExpandedShouldFocusOnOpen: ShouldBeExpanded): Unit = js.native
+  def _setState(hasShouldBeExpandedShouldFocusOnOpen: js.Any): Unit = js.native
   
   def getCurrentNavigation(): js.Any = js.native
   
@@ -31,7 +30,7 @@ object HeaderSubmenu {
     _getNewState: js.Any => Boolean,
     _handleEvent: js.Any => Unit,
     _handleKeyDown: js.Any => Unit,
-    _setState: ShouldBeExpanded => Unit,
+    _setState: js.Any => Unit,
     getCurrentNavigation: () => js.Any,
     navigate: js.Any => Unit
   ): HeaderSubmenu = {
@@ -67,7 +66,7 @@ object HeaderSubmenu {
     def set_handleKeyDown(value: js.Any => Unit): Self = this.set("_handleKeyDown", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set_setState(value: ShouldBeExpanded => Unit): Self = this.set("_setState", js.Any.fromFunction1(value))
+    def set_setState(value: js.Any => Unit): Self = this.set("_setState", js.Any.fromFunction1(value))
     
     @scala.inline
     def setGetCurrentNavigation(value: () => js.Any): Self = this.set("getCurrentNavigation", js.Any.fromFunction0(value))

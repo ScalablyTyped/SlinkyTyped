@@ -17,7 +17,7 @@ trait IosUpdateConfiguration extends DeviceConfiguration {
   var scheduledInstallDays: js.UndefOr[js.Array[DayOfWeek]] = js.native
   
   // UTC Time Offset indicated in minutes
-  var utcTimeOffsetInMinutes: js.UndefOr[Double] = js.native
+  var utcTimeOffsetInMinutes: js.UndefOr[NullableOption[Double]] = js.native
 }
 object IosUpdateConfiguration {
   
@@ -64,9 +64,12 @@ object IosUpdateConfiguration {
     def deleteScheduledInstallDays: Self = this.set("scheduledInstallDays", js.undefined)
     
     @scala.inline
-    def setUtcTimeOffsetInMinutes(value: Double): Self = this.set("utcTimeOffsetInMinutes", value.asInstanceOf[js.Any])
+    def setUtcTimeOffsetInMinutes(value: NullableOption[Double]): Self = this.set("utcTimeOffsetInMinutes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUtcTimeOffsetInMinutes: Self = this.set("utcTimeOffsetInMinutes", js.undefined)
+    
+    @scala.inline
+    def setUtcTimeOffsetInMinutesNull: Self = this.set("utcTimeOffsetInMinutes", null)
   }
 }

@@ -1,13 +1,19 @@
 package typingsSlinky.grpcGrpcJs.resolverMod
 
-import org.scalablytyped.runtime.Instantiable2
+import org.scalablytyped.runtime.Instantiable3
+import typingsSlinky.grpcGrpcJs.channelOptionsMod.ChannelOptions
 import typingsSlinky.grpcGrpcJs.uriParserMod.GrpcUri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ResolverConstructor extends Instantiable2[/* target */ GrpcUri, /* listener */ ResolverListener, Resolver] {
+trait ResolverConstructor extends Instantiable3[
+      /* target */ GrpcUri, 
+      /* listener */ ResolverListener, 
+      /* channelOptions */ ChannelOptions, 
+      Resolver
+    ] {
   
   /**
     * Get the default authority for a target. This loosely corresponds to that

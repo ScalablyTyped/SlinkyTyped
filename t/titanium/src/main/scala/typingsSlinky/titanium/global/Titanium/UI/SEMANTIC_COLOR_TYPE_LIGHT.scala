@@ -6,7 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Return the light value from the applications colorset.
+  * The value returned by <Titanium.UI.semanticColorType> when the device is in light/normal mode.
+  * @deprecated Use [USER_INTERFACE_STYLE_LIGHT](Titanium.UI.USER_INTERFACE_STYLE_LIGHT) instead.
   */
 @JSGlobal("Titanium.UI.SEMANTIC_COLOR_TYPE_LIGHT")
 @js.native

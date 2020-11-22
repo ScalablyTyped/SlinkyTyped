@@ -134,6 +134,7 @@ object updateClassExpression extends js.Object {
     heritageClauses: js.UndefOr[scala.Nothing],
     members: js.Array[ClassElement]
   ): ClassExpression = js.native
+  /** @deprecated Use `factory.updateClassExpression` or the factory supplied by your transformation context instead. */
   def apply(
     node: ClassExpression,
     modifiers: js.Array[Modifier],

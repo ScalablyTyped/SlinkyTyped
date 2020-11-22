@@ -9,25 +9,39 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ExcelDataGridCell extends js.Object {
   
-  /** @name ExcelDataGridCell.column */
+  /**
+    * [descr:ExcelDataGridCell.column]
+    */
   var column: js.UndefOr[dxDataGridColumn] = js.native
   
-  /** @name ExcelDataGridCell.data */
+  /**
+    * [descr:ExcelDataGridCell.data]
+    */
   var data: js.UndefOr[js.Any] = js.native
   
-  /** @name ExcelDataGridCell.groupIndex */
+  /**
+    * [descr:ExcelDataGridCell.groupIndex]
+    */
   var groupIndex: js.UndefOr[Double] = js.native
   
-  /** @name ExcelDataGridCell.groupSummaryItems */
+  /**
+    * [descr:ExcelDataGridCell.groupSummaryItems]
+    */
   var groupSummaryItems: js.UndefOr[js.Array[NameValue]] = js.native
   
-  /** @name ExcelDataGridCell.rowType */
+  /**
+    * [descr:ExcelDataGridCell.rowType]
+    */
   var rowType: js.UndefOr[String] = js.native
   
-  /** @name ExcelDataGridCell.totalSummaryItemName */
+  /**
+    * [descr:ExcelDataGridCell.totalSummaryItemName]
+    */
   var totalSummaryItemName: js.UndefOr[String] = js.native
   
-  /** @name ExcelDataGridCell.value */
+  /**
+    * [descr:ExcelDataGridCell.value]
+    */
   var value: js.UndefOr[js.Any] = js.native
 }
 object ExcelDataGridCell {

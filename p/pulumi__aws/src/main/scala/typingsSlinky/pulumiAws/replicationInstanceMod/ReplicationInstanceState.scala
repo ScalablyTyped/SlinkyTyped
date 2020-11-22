@@ -15,6 +15,11 @@ trait ReplicationInstanceState extends js.Object {
   val allocatedStorage: js.UndefOr[Input[Double]] = js.native
   
   /**
+    * Indicates that major version upgrades are allowed.
+    */
+  val allowMajorVersionUpgrade: js.UndefOr[Input[Boolean]] = js.native
+  
+  /**
     * Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
     */
   val applyImmediately: js.UndefOr[Input[Boolean]] = js.native
@@ -122,6 +127,12 @@ object ReplicationInstanceState {
     
     @scala.inline
     def deleteAllocatedStorage: Self = this.set("allocatedStorage", js.undefined)
+    
+    @scala.inline
+    def setAllowMajorVersionUpgrade(value: Input[Boolean]): Self = this.set("allowMajorVersionUpgrade", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowMajorVersionUpgrade: Self = this.set("allowMajorVersionUpgrade", js.undefined)
     
     @scala.inline
     def setApplyImmediately(value: Input[Boolean]): Self = this.set("applyImmediately", value.asInstanceOf[js.Any])

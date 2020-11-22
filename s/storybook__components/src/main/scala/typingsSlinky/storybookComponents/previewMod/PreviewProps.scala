@@ -1,5 +1,6 @@
 package typingsSlinky.storybookComponents.previewMod
 
+import typingsSlinky.storybookComponents.actionBarMod.ActionItem
 import typingsSlinky.storybookComponents.sourceMod.SourceProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -7,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait PreviewProps extends js.Object {
+  
+  var additionalActions: js.UndefOr[js.Array[ActionItem]] = js.native
   
   var className: js.UndefOr[String] = js.native
   
@@ -42,6 +45,15 @@ object PreviewProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAdditionalActionsVarargs(value: ActionItem*): Self = this.set("additionalActions", js.Array(value :_*))
+    
+    @scala.inline
+    def setAdditionalActions(value: js.Array[ActionItem]): Self = this.set("additionalActions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdditionalActions: Self = this.set("additionalActions", js.undefined)
     
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])

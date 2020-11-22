@@ -27,8 +27,13 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactNumericInput.mod.BoundsFunctionProp
 import typingsSlinky.reactNumericInput.mod.NumericInputProps
 import typingsSlinky.reactNumericInput.mod.^
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.`additions removals`
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.`additions text`
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.`inline`
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.`removals additions`
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.`removals text`
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.`text additions`
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.`text removals`
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.additions
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.all
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.ascending
@@ -40,8 +45,11 @@ import typingsSlinky.reactNumericInput.reactNumericInputStrings.date
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.decimal
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.descending
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.dialog
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.done
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.email
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.enter
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.execute
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.go
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.grammar
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.grid
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.horizontal
@@ -53,6 +61,7 @@ import typingsSlinky.reactNumericInput.reactNumericInputStrings.location
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.menu
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.mixed
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.move
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.next
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.no
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.none
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.numeric
@@ -62,8 +71,10 @@ import typingsSlinky.reactNumericInput.reactNumericInputStrings.other
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.page
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.polite
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.popup
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.previous
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.removals
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.search
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.send
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.spelling
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.step
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.tel
@@ -209,7 +220,9 @@ object ReactNumericInput {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -306,6 +319,9 @@ object ReactNumericInput {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])

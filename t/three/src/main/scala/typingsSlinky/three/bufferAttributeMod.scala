@@ -46,6 +46,9 @@ object bufferAttributeMod extends js.Object {
     
     def copyVector4sArray(vectors: js.Array[W]): this.type = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var count: Double = js.native
     
     def getW(index: Double): Double = js.native
@@ -61,10 +64,16 @@ object bufferAttributeMod extends js.Object {
     var itemSize: Double = js.native
     
      // array parameter should be TypedArray.
+    /**
+    	 * @default ''
+    	 */
     var name: String = js.native
     
     def needsUpdate_=(value: Boolean): Unit = js.native
     
+    /**
+    	 * @default false
+    	 */
     var normalized: Boolean = js.native
     
     def onUpload(callback: js.Function0[Unit]): this.type = js.native
@@ -96,10 +105,19 @@ object bufferAttributeMod extends js.Object {
     
     def transformDirection(m: Matrix4): this.type = js.native
     
+    /**
+    	 * @default { offset: number; count: number }
+    	 */
     var updateRange: Count = js.native
     
+    /**
+    	 * @default THREE.StaticDrawUsage
+    	 */
     var usage: Usage = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var version: Double = js.native
   }
   

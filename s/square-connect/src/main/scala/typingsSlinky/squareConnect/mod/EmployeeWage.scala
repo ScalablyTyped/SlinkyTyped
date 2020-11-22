@@ -11,7 +11,7 @@ class EmployeeWage () extends js.Object {
   /**
     * The `Employee` that this wage is assigned to.
     */
-  var employee_id: String = js.native
+  var employee_id: js.UndefOr[String] = js.native
   
   /**
     * Can be a custom-set hourly wage or the calculated effective hourly wage based on annual wage and hours worked per

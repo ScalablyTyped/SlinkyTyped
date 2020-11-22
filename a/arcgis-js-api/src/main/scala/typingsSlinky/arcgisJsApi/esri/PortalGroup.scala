@@ -35,33 +35,22 @@ trait PortalGroup extends Accessor {
     * If present, fetches the group's category schema.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#fetchCategorySchema)
-    *
-    * @param options An object with the following properties.
-    * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
-    *
     */
   def fetchCategorySchema(): js.Promise[js.Array[_]] = js.native
   def fetchCategorySchema(options: PortalGroupFetchCategorySchemaOptions): js.Promise[js.Array[_]] = js.native
   
   /**
-    * Fetches the current members of the group. This method is only available to members or administrators of the group. View the ArcGIS REST API documentation for the [Group Users](https://developers.arcgis.com/rest/users-groups-and-items/group-users.htm) for more details.
+    * Fetches the current members of the group.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#fetchMembers)
-    *
-    * @param options An object with the following properties.
-    * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
-    *
     */
   def fetchMembers(): js.Promise[_] = js.native
   def fetchMembers(options: PortalGroupFetchMembersOptions): js.Promise[_] = js.native
   
   /**
-    * Get the URL to the thumbnail image for the group.  Available width sizes: 150, 300 and 600.
+    * Get the URL to the thumbnail image for the group.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#getThumbnailUrl)
-    *
-    * @param width The desired image width.
-    *
     */
   def getThumbnailUrl(): String = js.native
   def getThumbnailUrl(width: Double): String = js.native
@@ -77,8 +66,6 @@ trait PortalGroup extends Accessor {
     * If set to `true`, then users will not be able to apply to join the group.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#isInvitationOnly)
-    *
-    * @default false
     */
   var isInvitationOnly: Boolean = js.native
   
@@ -107,11 +94,6 @@ trait PortalGroup extends Accessor {
     * Executes a query against the group to return an array of [PortalItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html) objects that match the input query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#queryItems)
-    *
-    * @param queryParams The input query parameters defined in [PortalQueryParams](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html).
-    * @param options An object with the following properties.
-    * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
-    *
     */
   def queryItems(): js.Promise[PortalQueryResult] = js.native
   def queryItems(queryParams: js.UndefOr[scala.Nothing], options: PortalGroupQueryItemsOptions): js.Promise[PortalQueryResult] = js.native
@@ -142,7 +124,7 @@ trait PortalGroup extends Accessor {
   val thumbnailUrl: String = js.native
   
   /**
-    * The title of the group. This is the name that is displayed to users. It is also used to refer to the group. Every group must have a title and it must be unique.
+    * The title of the group.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#title)
     */

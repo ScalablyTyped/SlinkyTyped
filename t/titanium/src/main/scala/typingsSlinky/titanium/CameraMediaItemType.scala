@@ -31,7 +31,7 @@ trait CameraMediaItemType extends SuccessResponse {
   /**
     * The type of media, either `MEDIA_TYPE_PHOTO`, `MEDIA_TYPE_LIVEPHOTO` or `MEDIA_TYPE_VIDEO` defined in <Titanium.Media>.
     */
-  var mediaType: js.UndefOr[java.lang.String] = js.native
+  var mediaType: js.UndefOr[String] = js.native
   
   /**
     * Simple object defining the preview image size. This will be undefined when custom camera overlay is not used. Values are assumed to be in pixels.
@@ -56,7 +56,7 @@ object CameraMediaItemType {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -80,7 +80,7 @@ object CameraMediaItemType {
     def deleteMedia: Self = this.set("media", js.undefined)
     
     @scala.inline
-    def setMediaType(value: java.lang.String): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: String): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaType: Self = this.set("mediaType", js.undefined)

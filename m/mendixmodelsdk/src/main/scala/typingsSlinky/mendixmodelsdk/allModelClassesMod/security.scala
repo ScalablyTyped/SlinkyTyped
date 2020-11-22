@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IModule
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IProject
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,8 +27,8 @@ object security extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -39,7 +41,7 @@ object security extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/demo-users relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/demo-users relevant section in reference guide}
     */
   @js.native
   class DemoUser protected ()
@@ -49,8 +51,8 @@ object security extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -84,8 +86,8 @@ object security extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -119,8 +121,8 @@ object security extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -147,7 +149,7 @@ object security extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/module-security relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/module-security relevant section in reference guide}
     */
   @js.native
   class ModuleRole protected ()
@@ -157,8 +159,8 @@ object security extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -185,7 +187,7 @@ object security extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/module-security relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/module-security relevant section in reference guide}
     */
   @js.native
   class ModuleSecurity protected ()
@@ -214,7 +216,7 @@ object security extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/password-policy relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/password-policy relevant section in reference guide}
     */
   @js.native
   class PasswordPolicySettings protected ()
@@ -224,8 +226,8 @@ object security extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -252,7 +254,7 @@ object security extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/project-security relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/project-security relevant section in reference guide}
     */
   @js.native
   class ProjectSecurity protected ()
@@ -295,7 +297,7 @@ object security extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/user-roles relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/user-roles relevant section in reference guide}
     */
   @js.native
   class UserRole protected ()
@@ -305,8 +307,8 @@ object security extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */

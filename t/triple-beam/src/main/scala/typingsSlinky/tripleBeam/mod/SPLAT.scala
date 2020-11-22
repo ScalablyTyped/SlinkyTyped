@@ -7,4 +7,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("triple-beam", "SPLAT")
 @js.native
-object SPLAT extends TopLevel[String]
+object SPLAT
+  extends TopLevel[js.Symbol]

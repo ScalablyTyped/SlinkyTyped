@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
+import typingsSlinky.reactSelect.typesMod.InnerRef
 import typingsSlinky.reactSelect.typesMod.MenuPlacement
 import typingsSlinky.reactSelect.typesMod.MenuPosition
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
@@ -13,7 +14,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-select.react-select/src/types.CommonProps<OptionType> & {  children :react.react.ReactElement, getPortalPlacement (state : react-select.react-select/src/components/Menu.MenuState): void,   innerProps :object,   maxMenuHeight :number,   menuPlacement :react-select.react-select/src/types.MenuPlacement,   menuPosition :react-select.react-select/src/types.MenuPosition,   minMenuHeight :number,   menuShouldScrollIntoView :boolean} */
+/* Inlined react-select.react-select/src/types.CommonProps<OptionType> & {  children :react.react.ReactElement, getPortalPlacement (state : react-select.react-select/src/components/Menu.MenuState): void,   innerProps :object,   innerRef :react-select.react-select/src/types.InnerRef,   maxMenuHeight :number,   menuPlacement :react-select.react-select/src/types.MenuPlacement,   menuPosition :react-select.react-select/src/types.MenuPosition,   minMenuHeight :number,   menuShouldScrollIntoView :boolean} */
 @js.native
 trait MenuProps[OptionType /* <: OptionTypeBase */] extends js.Object {
   
@@ -44,6 +45,9 @@ trait MenuProps[OptionType /* <: OptionTypeBase */] extends js.Object {
   
   /** Props to be passed to the menu wrapper. */
   var innerProps: js.Object = js.native
+  
+  /** Reference to the internal element, consumed by the MenuPlacer component */
+  var innerRef: InnerRef = js.native
   
   var isMulti: Boolean = js.native
   

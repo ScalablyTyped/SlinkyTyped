@@ -241,7 +241,7 @@ package object apigatewayMod {
   type ProviderARN = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.merge
+    - typingsSlinky.awsSdk.awsSdkStrings.merge_
     - typingsSlinky.awsSdk.awsSdkStrings.overwrite_
     - java.lang.String
   */

@@ -4,33 +4,27 @@ import typingsSlinky.awsSdkClientCodecommitNode.createPullRequestExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentReplyExceptionsUnionMod.PostCommentReplyExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ClientRequestTokenRequiredExceptionDetails> * / any */ @js.native
 trait ClientRequestTokenRequiredException
-  extends ServiceException[ClientRequestTokenRequiredExceptionDetails]
-     with CreatePullRequestExceptionsUnion
+  extends CreatePullRequestExceptionsUnion
      with PostCommentForComparedCommitExceptionsUnion
      with PostCommentForPullRequestExceptionsUnion
      with PostCommentReplyExceptionsUnion {
   
-  @JSName("name")
-  var name_ClientRequestTokenRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.ClientRequestTokenRequiredException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.ClientRequestTokenRequiredException = js.native
 }
 object ClientRequestTokenRequiredException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: ClientRequestTokenRequiredExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.ClientRequestTokenRequiredException
   ): ClientRequestTokenRequiredException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientRequestTokenRequiredException]
   }
   

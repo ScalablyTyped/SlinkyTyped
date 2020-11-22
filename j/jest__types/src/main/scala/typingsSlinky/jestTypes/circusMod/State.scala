@@ -15,6 +15,8 @@ trait State extends js.Object {
   
   var hasFocusedTests: Boolean = js.native
   
+  var hasStarted: Boolean = js.native
+  
   var includeTestLocationInResult: Boolean = js.native
   
   var originalGlobalErrorHandlers: js.UndefOr[GlobalErrorHandlers] = js.native
@@ -35,12 +37,13 @@ object State {
   def apply(
     currentDescribeBlock: DescribeBlock,
     hasFocusedTests: Boolean,
+    hasStarted: Boolean,
     includeTestLocationInResult: Boolean,
     rootDescribeBlock: DescribeBlock,
     testTimeout: Double,
     unhandledErrors: js.Array[Exception]
   ): State = {
-    val __obj = js.Dynamic.literal(currentDescribeBlock = currentDescribeBlock.asInstanceOf[js.Any], hasFocusedTests = hasFocusedTests.asInstanceOf[js.Any], includeTestLocationInResult = includeTestLocationInResult.asInstanceOf[js.Any], rootDescribeBlock = rootDescribeBlock.asInstanceOf[js.Any], testTimeout = testTimeout.asInstanceOf[js.Any], unhandledErrors = unhandledErrors.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(currentDescribeBlock = currentDescribeBlock.asInstanceOf[js.Any], hasFocusedTests = hasFocusedTests.asInstanceOf[js.Any], hasStarted = hasStarted.asInstanceOf[js.Any], includeTestLocationInResult = includeTestLocationInResult.asInstanceOf[js.Any], rootDescribeBlock = rootDescribeBlock.asInstanceOf[js.Any], testTimeout = testTimeout.asInstanceOf[js.Any], unhandledErrors = unhandledErrors.asInstanceOf[js.Any])
     __obj.asInstanceOf[State]
   }
   
@@ -64,6 +67,9 @@ object State {
     
     @scala.inline
     def setHasFocusedTests(value: Boolean): Self = this.set("hasFocusedTests", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHasStarted(value: Boolean): Self = this.set("hasStarted", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIncludeTestLocationInResult(value: Boolean): Self = this.set("includeTestLocationInResult", value.asInstanceOf[js.Any])

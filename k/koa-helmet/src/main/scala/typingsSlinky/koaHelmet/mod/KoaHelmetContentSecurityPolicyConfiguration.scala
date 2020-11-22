@@ -7,15 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait KoaHelmetContentSecurityPolicyConfiguration extends js.Object {
   
-  var browserSniff: js.UndefOr[Boolean] = js.native
-  
   var directives: js.UndefOr[KoaHelmetContentSecurityPolicyDirectives] = js.native
   
-  var disableAndroid: js.UndefOr[Boolean] = js.native
-  
   var reportOnly: js.UndefOr[Boolean] = js.native
-  
-  var setAllHeaders: js.UndefOr[Boolean] = js.native
 }
 object KoaHelmetContentSecurityPolicyConfiguration {
   
@@ -41,33 +35,15 @@ object KoaHelmetContentSecurityPolicyConfiguration {
     }
     
     @scala.inline
-    def setBrowserSniff(value: Boolean): Self = this.set("browserSniff", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBrowserSniff: Self = this.set("browserSniff", js.undefined)
-    
-    @scala.inline
     def setDirectives(value: KoaHelmetContentSecurityPolicyDirectives): Self = this.set("directives", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDirectives: Self = this.set("directives", js.undefined)
     
     @scala.inline
-    def setDisableAndroid(value: Boolean): Self = this.set("disableAndroid", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDisableAndroid: Self = this.set("disableAndroid", js.undefined)
-    
-    @scala.inline
     def setReportOnly(value: Boolean): Self = this.set("reportOnly", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReportOnly: Self = this.set("reportOnly", js.undefined)
-    
-    @scala.inline
-    def setSetAllHeaders(value: Boolean): Self = this.set("setAllHeaders", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSetAllHeaders: Self = this.set("setAllHeaders", js.undefined)
   }
 }

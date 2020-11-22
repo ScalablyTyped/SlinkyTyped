@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListLocationsRequest extends js.Object {
   
   /**
+    * You can use API filters to narrow down the list of resources returned by ListLocations. For example, to retrieve all tasks on a specific source location, you can use ListLocations with filter name LocationType S3 and Operator Equals.
+    */
+  var Filters: js.UndefOr[LocationFilters] = js.native
+  
+  /**
     * The maximum number of locations to return.
     */
   var MaxResults: js.UndefOr[typingsSlinky.awsSdk.datasyncMod.MaxResults] = js.native
@@ -39,6 +44,15 @@ object ListLocationsRequest {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setFiltersVarargs(value: LocationFilter*): Self = this.set("Filters", js.Array(value :_*))
+    
+    @scala.inline
+    def setFilters(value: LocationFilters): Self = this.set("Filters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFilters: Self = this.set("Filters", js.undefined)
     
     @scala.inline
     def setMaxResults(value: MaxResults): Self = this.set("MaxResults", value.asInstanceOf[js.Any])

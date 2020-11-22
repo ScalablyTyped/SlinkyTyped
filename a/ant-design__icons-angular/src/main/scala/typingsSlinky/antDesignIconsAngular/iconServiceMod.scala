@@ -128,7 +128,8 @@ object iconServiceMod extends js.Object {
     
     var sanitizer: DomSanitizer = js.native
     
-    var twoToneColor: TwoToneColorPaletteSetter = js.native
+    def twoToneColor: TwoToneColorPaletteSetter = js.native
+    def twoToneColor_=(hasPrimaryColorSecondaryColor: TwoToneColorPaletteSetter): Unit = js.native
     
     /**
       * Call this method to switch to jsonp like loading.

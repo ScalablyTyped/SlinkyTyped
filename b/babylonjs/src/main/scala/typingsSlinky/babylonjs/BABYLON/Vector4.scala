@@ -113,6 +113,15 @@ trait Vector4 extends js.Object {
   def fract(): Vector4 = js.native
   
   /**
+    * Update the current vector from an array
+    * @param array defines the destination array
+    * @param index defines the offset in the destination array
+    * @returns the current Vector3
+    */
+  def fromArray(array: FloatArray): Vector4 = js.native
+  def fromArray(array: FloatArray, index: Double): Vector4 = js.native
+  
+  /**
     * Returns the string "Vector4".
     * @returns "Vector4"
     */

@@ -18,7 +18,7 @@ trait GetRecoveryPointRestoreMetadataOutput extends js.Object {
   var RecoveryPointArn: js.UndefOr[ARN] = js.native
   
   /**
-    * The set of metadata key-value pairs that describes the original configuration of the backed-up resource. These values vary depending on the service that is being restored.
+    * The set of metadata key-value pairs that describe the original configuration of the backed-up resource. These values vary depending on the service that is being restored.
     */
   var RestoreMetadata: js.UndefOr[Metadata] = js.native
 }

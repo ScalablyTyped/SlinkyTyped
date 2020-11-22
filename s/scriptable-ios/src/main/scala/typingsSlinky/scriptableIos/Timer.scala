@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * _A timer that fires after a time interval have elapsed._
+  * _A timer that fires after a time interval has elapsed._
   *
   * Constructs a timer that fires after a specified time interval.
   * @see https://docs.scriptable.app/timer/#-new-timer
@@ -33,7 +33,7 @@ trait Timer extends js.Object {
     * _Schedules the timer._
     *
     * Schedules the timer using its configuration. The supplied function is called when the timer fires. To stop the timer from firing, call the `invalidate()` function.
-    * @param callback - The callback to called when the timer fires.
+    * @param callback - The callback to be called when the timer fires.
     * @see https://docs.scriptable.app/timer/#-schedule
     */
   def schedule(callback: js.Function0[Unit]): Unit = js.native

@@ -1,12 +1,18 @@
 package typingsSlinky.reactToastify.typesMod
 
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactToastify.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ToastOptions extends CommonOptions {
+  
+  /**
+    * An optional css class to set.
+    */
+  var className: js.UndefOr[ToastClassName] = js.native
   
   /**
     * Add a delay in ms before the toast appear.
@@ -71,6 +77,15 @@ object ToastOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("className", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setClassName(value: ToastClassName): Self = this.set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
     def setDelay(value: Double): Self = this.set("delay", value.asInstanceOf[js.Any])

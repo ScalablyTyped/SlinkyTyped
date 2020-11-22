@@ -8,16 +8,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TapeArchive extends js.Object {
   
   /**
-    * The time that the archiving of the virtual tape was completed. The default time stamp format is in the ISO8601 extended YYYY-MM-DD'T'HH:MM:SS'Z' format.
+    * The time that the archiving of the virtual tape was completed. The default timestamp format is in the ISO8601 extended YYYY-MM-DD'T'HH:MM:SS'Z' format.
     */
   var CompletionTime: js.UndefOr[js.Date] = js.native
   
   var KMSKey: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.KMSKey] = js.native
   
   /**
+    * The time that the tape entered the custom tape pool. The default timestamp format is in the ISO8601 extended YYYY-MM-DD'T'HH:MM:SS'Z' format.
+    */
+  var PoolEntryDate: js.UndefOr[js.Date] = js.native
+  
+  /**
     * The ID of the pool that was used to archive the tape. The tapes in this pool are archived in the S3 storage class that is associated with the pool. Valid Values: GLACIER | DEEP_ARCHIVE 
     */
   var PoolId: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.PoolId] = js.native
+  
+  /**
+    * If the archived tape is subject to tape retention lock, the date that the archived tape started being retained.
+    */
+  var RetentionStartDate: js.UndefOr[js.Date] = js.native
   
   /**
     * The Amazon Resource Name (ARN) of the tape gateway that the virtual tape is being retrieved to. The virtual tape is retrieved from the virtual tape shelf (VTS).
@@ -53,6 +63,11 @@ trait TapeArchive extends js.Object {
     * The size, in bytes, of data stored on the virtual tape.  This value is not available for tapes created prior to May 13, 2015. 
     */
   var TapeUsedInBytes: js.UndefOr[TapeUsage] = js.native
+  
+  /**
+    * Set to true if the archived tape is stored as write-once-read-many (WORM).
+    */
+  var Worm: js.UndefOr[scala.Boolean] = js.native
 }
 object TapeArchive {
   
@@ -90,10 +105,22 @@ object TapeArchive {
     def deleteKMSKey: Self = this.set("KMSKey", js.undefined)
     
     @scala.inline
+    def setPoolEntryDate(value: js.Date): Self = this.set("PoolEntryDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePoolEntryDate: Self = this.set("PoolEntryDate", js.undefined)
+    
+    @scala.inline
     def setPoolId(value: PoolId): Self = this.set("PoolId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePoolId: Self = this.set("PoolId", js.undefined)
+    
+    @scala.inline
+    def setRetentionStartDate(value: js.Date): Self = this.set("RetentionStartDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRetentionStartDate: Self = this.set("RetentionStartDate", js.undefined)
     
     @scala.inline
     def setRetrievedTo(value: GatewayARN): Self = this.set("RetrievedTo", value.asInstanceOf[js.Any])
@@ -136,5 +163,11 @@ object TapeArchive {
     
     @scala.inline
     def deleteTapeUsedInBytes: Self = this.set("TapeUsedInBytes", js.undefined)
+    
+    @scala.inline
+    def setWorm(value: scala.Boolean): Self = this.set("Worm", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWorm: Self = this.set("Worm", js.undefined)
   }
 }

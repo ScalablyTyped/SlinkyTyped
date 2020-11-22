@@ -16,8 +16,13 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -55,7 +60,7 @@ import typingsSlinky.antd.antdStrings.search
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.tel
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
@@ -74,6 +79,7 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.DragEventHandler
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.FormEventHandler
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.PointerEventHandler
@@ -165,7 +171,9 @@ trait LinkProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -243,7 +251,7 @@ trait LinkProps extends js.Object {
   
   var inlist: js.UndefOr[js.Any] = js.native
   
-  var inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
+  var inputMode: js.UndefOr[none | text_ | tel | url | email | numeric | decimal | search] = js.native
   
   var is: js.UndefOr[String] = js.native
   
@@ -435,7 +443,7 @@ trait LinkProps extends js.Object {
   
   var radioGroup: js.UndefOr[String] = js.native
   
-  var referrerPolicy: js.UndefOr[String] = js.native
+  var referrerPolicy: js.UndefOr[HTMLAttributeReferrerPolicy] = js.native
   
   var rel: js.UndefOr[String] = js.native
   
@@ -723,7 +731,9 @@ object LinkProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -963,7 +973,7 @@ object LinkProps {
     def deleteInlist: Self = this.set("inlist", js.undefined)
     
     @scala.inline
-    def setInputMode(value: none | text | tel | url | email | numeric | decimal | search): Self = this.set("inputMode", value.asInstanceOf[js.Any])
+    def setInputMode(value: none | text_ | tel | url | email | numeric | decimal | search): Self = this.set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInputMode: Self = this.set("inputMode", js.undefined)
@@ -1539,7 +1549,7 @@ object LinkProps {
     def deleteRadioGroup: Self = this.set("radioGroup", js.undefined)
     
     @scala.inline
-    def setReferrerPolicy(value: String): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    def setReferrerPolicy(value: HTMLAttributeReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)

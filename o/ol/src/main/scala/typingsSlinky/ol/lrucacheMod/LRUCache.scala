@@ -1,7 +1,6 @@
 package typingsSlinky.ol.lrucacheMod
 
 import typingsSlinky.ol.eventsMod.EventsKey
-import typingsSlinky.ol.eventsMod.ListenerFunction
 import typingsSlinky.ol.olStrings.change
 import typingsSlinky.ol.olStrings.error
 import scala.scalajs.js
@@ -13,6 +12,9 @@ trait LRUCache[T] extends js.Object {
   
   def canExpireCache(): Boolean = js.native
   
+  /**
+    * FIXME empty description for jsdoc
+    */
   def clear(): Unit = js.native
   
   def containsKey(key: String): Boolean = js.native
@@ -28,8 +30,8 @@ trait LRUCache[T] extends js.Object {
   
   def getValues(): js.Array[T] = js.native
   
-  def on(`type`: String, listener: ListenerFunction): EventsKey | js.Array[EventsKey] = js.native
-  def on(`type`: js.Array[String], listener: ListenerFunction): EventsKey | js.Array[EventsKey] = js.native
+  def on(`type`: String, listener: js.Function1[/* p0 */ js.Any, _]): EventsKey | js.Array[EventsKey] = js.native
+  def on(`type`: js.Array[String], listener: js.Function1[/* p0 */ js.Any, _]): EventsKey | js.Array[EventsKey] = js.native
   @JSName("on")
   def on_change(`type`: change, listener: js.Function1[/* evt */ typingsSlinky.ol.eventMod.default, Unit]): EventsKey = js.native
   @JSName("on")
@@ -42,6 +44,9 @@ trait LRUCache[T] extends js.Object {
   @JSName("once")
   def once_error(`type`: error, listener: js.Function1[/* evt */ typingsSlinky.ol.eventMod.default, Unit]): EventsKey = js.native
   
+  /**
+    * Get the key of the newest item in the cache.  Throws if the cache is empty.
+    */
   def peekFirstKey(): String = js.native
   
   def peekLast(): T = js.native
@@ -50,12 +55,18 @@ trait LRUCache[T] extends js.Object {
   
   def pop(): T = js.native
   
+  /**
+    * Remove an entry from the cache.
+    */
   def remove(key: String): T = js.native
   
   def replace(key: String, value: T): Unit = js.native
   
   def set(key: String, value: T): Unit = js.native
   
+  /**
+    * Set a maximum number of entries for the cache.
+    */
   def setSize(size: Double): Unit = js.native
   
   def un(`type`: String, listener: js.Function1[/* p0 */ js.Any, _]): Unit = js.native

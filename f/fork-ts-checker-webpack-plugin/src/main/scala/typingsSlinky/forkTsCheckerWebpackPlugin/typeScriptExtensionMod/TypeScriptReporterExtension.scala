@@ -1,5 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.typeScriptExtensionMod
 
+import typingsSlinky.forkTsCheckerWebpackPlugin.dependenciesMod.Dependencies
 import typingsSlinky.forkTsCheckerWebpackPlugin.issueIssueMod.Issue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -7,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait TypeScriptReporterExtension extends js.Object {
+  
+  var extendDependencies: js.UndefOr[js.Function1[/* dependencies */ Dependencies, Dependencies]] = js.native
   
   var extendIssues: js.UndefOr[js.Function1[/* issues */ js.Array[Issue], js.Array[Issue]]] = js.native
 }
@@ -32,6 +35,12 @@ object TypeScriptReporterExtension {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setExtendDependencies(value: /* dependencies */ Dependencies => Dependencies): Self = this.set("extendDependencies", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteExtendDependencies: Self = this.set("extendDependencies", js.undefined)
     
     @scala.inline
     def setExtendIssues(value: /* issues */ js.Array[Issue] => js.Array[Issue]): Self = this.set("extendIssues", js.Any.fromFunction1(value))

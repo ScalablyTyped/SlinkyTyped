@@ -48,7 +48,7 @@ trait Colors extends js.Object {
     * Change the width of the stanford color scale.
     * Defaults to `20`.
     */
-  var scaleWidth: js.UndefOr[scala.Nothing] = js.native
+  var scaleWidth: js.UndefOr[Double] = js.native
   
   /** Show text anywhere inside the chart. */
   var texts: js.UndefOr[js.Array[Content]] = js.native
@@ -132,6 +132,12 @@ object Colors {
     
     @scala.inline
     def deleteScaleValues: Self = this.set("scaleValues", js.undefined)
+    
+    @scala.inline
+    def setScaleWidth(value: Double): Self = this.set("scaleWidth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScaleWidth: Self = this.set("scaleWidth", js.undefined)
     
     @scala.inline
     def setTextsVarargs(value: Content*): Self = this.set("texts", js.Array(value :_*))

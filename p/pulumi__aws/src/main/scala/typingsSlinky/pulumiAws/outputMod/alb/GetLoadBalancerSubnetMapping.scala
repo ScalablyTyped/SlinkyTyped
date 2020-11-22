@@ -7,15 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GetLoadBalancerSubnetMapping extends js.Object {
   
-  var allocationId: js.UndefOr[String] = js.native
+  var allocationId: String = js.native
+  
+  var outpostId: String = js.native
+  
+  var privateIpv4Address: String = js.native
   
   var subnetId: String = js.native
 }
 object GetLoadBalancerSubnetMapping {
   
   @scala.inline
-  def apply(subnetId: String): GetLoadBalancerSubnetMapping = {
-    val __obj = js.Dynamic.literal(subnetId = subnetId.asInstanceOf[js.Any])
+  def apply(allocationId: String, outpostId: String, privateIpv4Address: String, subnetId: String): GetLoadBalancerSubnetMapping = {
+    val __obj = js.Dynamic.literal(allocationId = allocationId.asInstanceOf[js.Any], outpostId = outpostId.asInstanceOf[js.Any], privateIpv4Address = privateIpv4Address.asInstanceOf[js.Any], subnetId = subnetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLoadBalancerSubnetMapping]
   }
   
@@ -35,12 +39,15 @@ object GetLoadBalancerSubnetMapping {
     }
     
     @scala.inline
-    def setSubnetId(value: String): Self = this.set("subnetId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setAllocationId(value: String): Self = this.set("allocationId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAllocationId: Self = this.set("allocationId", js.undefined)
+    def setOutpostId(value: String): Self = this.set("outpostId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPrivateIpv4Address(value: String): Self = this.set("privateIpv4Address", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSubnetId(value: String): Self = this.set("subnetId", value.asInstanceOf[js.Any])
   }
 }

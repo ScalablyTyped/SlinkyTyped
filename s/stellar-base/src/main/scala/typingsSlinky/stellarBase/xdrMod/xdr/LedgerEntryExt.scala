@@ -21,5 +21,8 @@ trait LedgerEntryExt extends js.Object {
   @JSName("toXDR")
   def toXDR_raw(format: raw): Buffer = js.native
   
-  def value(): Unit = js.native
+  def v1(): LedgerEntryExtensionV1 = js.native
+  def v1(value: LedgerEntryExtensionV1): LedgerEntryExtensionV1 = js.native
+  
+  def value(): LedgerEntryExtensionV1 | Unit = js.native
 }

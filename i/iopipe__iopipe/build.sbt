@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "iopipe__iopipe"
-version := "1.12-dt-20190213Z-508c03"
+version := "1.12-dt-20201003Z-508c03"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

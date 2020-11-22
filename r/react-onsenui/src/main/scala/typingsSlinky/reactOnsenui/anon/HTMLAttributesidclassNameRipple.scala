@@ -7,13 +7,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-onsenui.react-onsenui.HTMLAttributes<'id' | 'className' | 'style'> & {  modifier :string | undefined,   disabled :boolean | undefined,   ripple :boolean | undefined,   name :string | undefined,   onClick :(e : react.react.MouseEvent<std.HTMLElement, react.react.NativeMouseEvent> | undefined): void | undefined} */
+/* Inlined react-onsenui.react-onsenui.HTMLAttributes<'id' | 'className' | 'style'> & {  modifier :string | undefined,   disabled :boolean | undefined,   ripple :boolean | undefined,   name :string | undefined,   icon :string | undefined,   onClick :(e : react.react.MouseEvent<std.HTMLElement, react.react.NativeMouseEvent> | undefined): void | undefined} */
 @js.native
 trait HTMLAttributesidclassNameRipple extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
+  
+  var icon: js.UndefOr[String] = js.native
   
   var id: js.UndefOr[String] = js.native
   
@@ -61,6 +63,12 @@ object HTMLAttributesidclassNameRipple {
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setIcon(value: String): Self = this.set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])

@@ -20,6 +20,11 @@ object PickResultType extends js.Object {
   object COMPLETE extends TopLevel[COMPLETE with Double]
   
   @js.native
+  sealed trait DROP extends PickResultType
+  /* 3 */ @js.native
+  object DROP extends TopLevel[DROP with Double]
+  
+  @js.native
   sealed trait QUEUE extends PickResultType
   /* 1 */ @js.native
   object QUEUE extends TopLevel[QUEUE with Double]

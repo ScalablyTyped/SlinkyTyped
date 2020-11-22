@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AssignmentExpression[TOperator /* <: AssignmentOperatorToken */] extends BinaryExpression {
   
   @JSName("left")
-  var left_AssignmentExpression: LeftHandSideExpression = js.native
+  val left_AssignmentExpression: LeftHandSideExpression = js.native
   
   @JSName("operatorToken")
-  var operatorToken_AssignmentExpression: TOperator = js.native
+  val operatorToken_AssignmentExpression: TOperator = js.native
 }

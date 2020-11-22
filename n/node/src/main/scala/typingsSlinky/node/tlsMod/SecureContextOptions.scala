@@ -166,12 +166,25 @@ trait SecureContextOptions extends js.Object {
   var sessionIdContext: js.UndefOr[String] = js.native
   
   /**
+    * The number of seconds after which a TLS session created by the
+    * server will no longer be resumable. See Session Resumption for more
+    * information. Default: 300.
+    */
+  var sessionTimeout: js.UndefOr[Double] = js.native
+  
+  /**
     *  Colon-separated list of supported signature algorithms. The list
     *  can contain digest algorithms (SHA256, MD5 etc.), public key
     *  algorithms (RSA-PSS, ECDSA etc.), combination of both (e.g
     *  'RSA+SHA384') or TLS v1.3 scheme names (e.g. rsa_pss_pss_sha512).
     */
   var sigalgs: js.UndefOr[String] = js.native
+  
+  /**
+    * 48-bytes of cryptographically strong pseudo-random data.
+    * See Session Resumption for more information.
+    */
+  var ticketKeys: js.UndefOr[Buffer] = js.native
 }
 object SecureContextOptions {
   
@@ -320,9 +333,21 @@ object SecureContextOptions {
     def deleteSessionIdContext: Self = this.set("sessionIdContext", js.undefined)
     
     @scala.inline
+    def setSessionTimeout(value: Double): Self = this.set("sessionTimeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSessionTimeout: Self = this.set("sessionTimeout", js.undefined)
+    
+    @scala.inline
     def setSigalgs(value: String): Self = this.set("sigalgs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSigalgs: Self = this.set("sigalgs", js.undefined)
+    
+    @scala.inline
+    def setTicketKeys(value: Buffer): Self = this.set("ticketKeys", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTicketKeys: Self = this.set("ticketKeys", js.undefined)
   }
 }

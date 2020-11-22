@@ -23,6 +23,11 @@ trait LocalGatewayVirtualInterfaceGroup extends js.Object {
   var LocalGatewayVirtualInterfaceIds: js.UndefOr[LocalGatewayVirtualInterfaceIdSet] = js.native
   
   /**
+    * The AWS account ID that owns the local gateway virtual interface group.
+    */
+  var OwnerId: js.UndefOr[String] = js.native
+  
+  /**
     * The tags assigned to the virtual interface group.
     */
   var Tags: js.UndefOr[TagList] = js.native
@@ -70,6 +75,12 @@ object LocalGatewayVirtualInterfaceGroup {
     
     @scala.inline
     def deleteLocalGatewayVirtualInterfaceIds: Self = this.set("LocalGatewayVirtualInterfaceIds", js.undefined)
+    
+    @scala.inline
+    def setOwnerId(value: String): Self = this.set("OwnerId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOwnerId: Self = this.set("OwnerId", js.undefined)
     
     @scala.inline
     def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))

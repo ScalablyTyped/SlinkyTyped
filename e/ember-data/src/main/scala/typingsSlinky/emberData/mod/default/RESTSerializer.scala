@@ -2,7 +2,7 @@ package typingsSlinky.emberData.mod.default
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * Normally, applications will use the `RESTSerializer` by implementing
@@ -12,4 +12,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class RESTSerializer ()
   extends typingsSlinky.emberData.mod.DS.RESTSerializer
-

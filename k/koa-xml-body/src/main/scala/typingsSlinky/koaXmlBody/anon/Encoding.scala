@@ -1,7 +1,7 @@
 package typingsSlinky.koaXmlBody.anon
 
 import typingsSlinky.koa.mod.Context
-import typingsSlinky.xml2js.mod.Options
+import typingsSlinky.xml2js.mod.ParserOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +22,7 @@ trait Encoding extends js.Object {
   var onerror: js.UndefOr[js.Function2[/* err */ js.Error, /* ctx */ Context, Unit]] = js.native
   
   // options which will be used to parse xml. Default is {}. See xml2js Options for details.
-  var xmlOptions: js.UndefOr[Options] = js.native
+  var xmlOptions: js.UndefOr[ParserOptions] = js.native
 }
 object Encoding {
   
@@ -72,7 +72,7 @@ object Encoding {
     def deleteOnerror: Self = this.set("onerror", js.undefined)
     
     @scala.inline
-    def setXmlOptions(value: Options): Self = this.set("xmlOptions", value.asInstanceOf[js.Any])
+    def setXmlOptions(value: ParserOptions): Self = this.set("xmlOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteXmlOptions: Self = this.set("xmlOptions", js.undefined)

@@ -13,6 +13,8 @@ trait Props[T] extends js.Object {
   
   var completers: js.Array[Completer[T]] = js.native
   
+  var isSelected: js.UndefOr[Boolean] = js.native
+  
   var onChange: js.UndefOr[js.Function1[/* value */ Value, Unit]] = js.native
   
   var onReplace: js.UndefOr[js.Function1[/* value */ Value, Unit]] = js.native
@@ -50,6 +52,12 @@ object Props {
     
     @scala.inline
     def setCompleters(value: js.Array[Completer[T]]): Self = this.set("completers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIsSelected(value: Boolean): Self = this.set("isSelected", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsSelected: Self = this.set("isSelected", js.undefined)
     
     @scala.inline
     def setOnChange(value: /* value */ Value => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))

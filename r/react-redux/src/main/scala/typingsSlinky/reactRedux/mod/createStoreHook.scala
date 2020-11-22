@@ -1,8 +1,8 @@
 package typingsSlinky.reactRedux.mod
 
 import typingsSlinky.react.mod.Context
-import typingsSlinky.reactRedux.anon.Fn0
-import typingsSlinky.redux.mod.AnyAction
+import typingsSlinky.redux.mod.Action
+import typingsSlinky.redux.mod.Store
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createStoreHook extends js.Object {
   
-  def apply(): Fn0 = js.native
-  def apply(context: Context[ReactReduxContextValue[_, AnyAction]]): Fn0 = js.native
+  def apply[S, A /* <: Action[_] */](): js.Function0[Store[S, A]] = js.native
+  def apply[S, A /* <: Action[_] */](context: Context[ReactReduxContextValue[S, A]]): js.Function0[Store[S, A]] = js.native
 }

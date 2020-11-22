@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ trait SeriesStatesHoverOptionsObject extends js.Object {
     * (Highcharts, Highstock) Animation setting for hovering the graph in
     * line-type series.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highmaps) The border color of the point in this state.
@@ -33,12 +34,6 @@ trait SeriesStatesHoverOptionsObject extends js.Object {
     * (Highmaps) The color of the shape in this state.
     */
   var color: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
-  
-  /**
-    * (Highcharts, Highstock) The additional connector line width for a hovered
-    * point.
-    */
-  var connectorWidthPlus: js.UndefOr[Double] = js.native
   
   /**
     * (Highstock) Enable separate styles for the hovered series to visualize
@@ -122,7 +117,7 @@ object SeriesStatesHoverOptionsObject {
     }
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)
@@ -150,12 +145,6 @@ object SeriesStatesHoverOptionsObject {
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
-    
-    @scala.inline
-    def setConnectorWidthPlus(value: Double): Self = this.set("connectorWidthPlus", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteConnectorWidthPlus: Self = this.set("connectorWidthPlus", js.undefined)
     
     @scala.inline
     def setEnabled(value: Boolean): Self = this.set("enabled", value.asInstanceOf[js.Any])

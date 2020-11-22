@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-movable
 
-Typings are for version 2.5.1
+Typings are for version 2.5.3
 
 ## Library description:
 Drag and drop lists.

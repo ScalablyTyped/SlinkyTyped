@@ -22,7 +22,7 @@ trait IContextualMenuSection
   /**
     * The optional section title.
     */
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String | IContextualMenuItem] = js.native
   
   /**
     * If set to true, the section will display a divider at the top of the section.
@@ -65,7 +65,7 @@ object IContextualMenuSection {
     def deleteBottomDivider: Self = this.set("bottomDivider", js.undefined)
     
     @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: String | IContextualMenuItem): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)

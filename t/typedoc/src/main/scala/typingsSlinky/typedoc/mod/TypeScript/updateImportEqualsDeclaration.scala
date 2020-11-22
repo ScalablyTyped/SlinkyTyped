@@ -34,6 +34,7 @@ object updateImportEqualsDeclaration extends js.Object {
     name: Identifier,
     moduleReference: ModuleReference
   ): ImportEqualsDeclaration = js.native
+  /** @deprecated Use `factory.updateImportEqualsDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     node: ImportEqualsDeclaration,
     decorators: js.Array[Decorator],

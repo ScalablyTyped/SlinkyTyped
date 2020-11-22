@@ -29,6 +29,8 @@ trait StringLocale extends js.Object {
   var uppercase: js.UndefOr[TestOptionsMessage[js.Object, _]] = js.native
   
   var url: js.UndefOr[TestOptionsMessage[Regex, _]] = js.native
+  
+  var uuid: js.UndefOr[TestOptionsMessage[Regex, _]] = js.native
 }
 object StringLocale {
   
@@ -133,5 +135,14 @@ object StringLocale {
     
     @scala.inline
     def deleteUrl: Self = this.set("url", js.undefined)
+    
+    @scala.inline
+    def setUuidFunction1(value: /* params */ Regex with PartialTestMessageParams => _): Self = this.set("uuid", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setUuid(value: TestOptionsMessage[Regex, _]): Self = this.set("uuid", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUuid: Self = this.set("uuid", js.undefined)
   }
 }

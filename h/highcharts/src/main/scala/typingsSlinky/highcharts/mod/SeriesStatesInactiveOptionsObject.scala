@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,9 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SeriesStatesInactiveOptionsObject extends js.Object {
   
   /**
-    * (Highstock) The animation for entering the inactive state.
+    * (Highstock) Animation when not hovering over the marker.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highstock) Enable or disable the inactive state for a series
@@ -24,7 +25,7 @@ trait SeriesStatesInactiveOptionsObject extends js.Object {
   var linkOpacity: js.UndefOr[Double] = js.native
   
   /**
-    * (Highstock) Opacity of series elements (dataLabels, line, area).
+    * (Highstock) Opacity of inactive markers.
     */
   var opacity: js.UndefOr[Double] = js.native
 }
@@ -52,7 +53,7 @@ object SeriesStatesInactiveOptionsObject {
     }
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)

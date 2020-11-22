@@ -290,6 +290,12 @@ object ASPxClientUtils extends js.Object {
     */
   def StringToShortcutCode(shortcutString: String): Double = js.native
   
+  /**
+    * Adds or removes a class name to an element.
+    * @param element The element.
+    * @param className The class name.
+    * @param toggleState true, to add a class name; otherwise, false.
+    */
   def ToggleClassName(element: js.Any, className: String, toggleState: Boolean): Unit = js.native
   
   /**

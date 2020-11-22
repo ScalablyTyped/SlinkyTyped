@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookChartAreaFormat extends Entity {
   
   // Represents the fill format of an object, which includes background formatting information. Read-only.
-  var fill: js.UndefOr[WorkbookChartFill] = js.native
+  var fill: js.UndefOr[NullableOption[WorkbookChartFill]] = js.native
   
   // Represents the font attributes (font name, font size, color, etc.) for the current object. Read-only.
-  var font: js.UndefOr[WorkbookChartFont] = js.native
+  var font: js.UndefOr[NullableOption[WorkbookChartFont]] = js.native
 }
 object WorkbookChartAreaFormat {
   
@@ -37,15 +37,21 @@ object WorkbookChartAreaFormat {
     }
     
     @scala.inline
-    def setFill(value: WorkbookChartFill): Self = this.set("fill", value.asInstanceOf[js.Any])
+    def setFill(value: NullableOption[WorkbookChartFill]): Self = this.set("fill", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFill: Self = this.set("fill", js.undefined)
     
     @scala.inline
-    def setFont(value: WorkbookChartFont): Self = this.set("font", value.asInstanceOf[js.Any])
+    def setFillNull: Self = this.set("fill", null)
+    
+    @scala.inline
+    def setFont(value: NullableOption[WorkbookChartFont]): Self = this.set("font", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFont: Self = this.set("font", js.undefined)
+    
+    @scala.inline
+    def setFontNull: Self = this.set("font", null)
   }
 }

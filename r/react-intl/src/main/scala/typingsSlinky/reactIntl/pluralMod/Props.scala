@@ -1,50 +1,117 @@
 package typingsSlinky.reactIntl.pluralMod
 
-import slinky.core.TagMod
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactIntl.typesMod.CustomFormatConfig
 import typingsSlinky.reactIntl.typesMod.IntlShape
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped std.Intl.PluralRulesOptions extends 'localeMatcher' ? never : std.Intl.PluralRulesOptions */ trait Props extends CustomFormatConfig {
-  var children: js.UndefOr[js.Function1[/* value */ TagMod[Any], ReactElement | Null]] = js.undefined
-  var few: js.UndefOr[TagMod[Any]] = js.undefined
-  var intl: IntlShape
-  var many: js.UndefOr[TagMod[Any]] = js.undefined
-  var one: js.UndefOr[TagMod[Any]] = js.undefined
-  var other: TagMod[Any]
-  var two: js.UndefOr[TagMod[Any]] = js.undefined
-  var value: Double
-  var zero: js.UndefOr[TagMod[Any]] = js.undefined
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FormatPluralOptions * / any */ @js.native
+trait Props extends js.Object {
+  
+  var children: js.UndefOr[js.Function1[/* value */ ReactElement, ReactElement | Null]] = js.native
+  
+  var few: js.UndefOr[ReactElement] = js.native
+  
+  var intl: IntlShape = js.native
+  
+  var many: js.UndefOr[ReactElement] = js.native
+  
+  var one: js.UndefOr[ReactElement] = js.native
+  
+  var other: ReactElement = js.native
+  
+  var two: js.UndefOr[ReactElement] = js.native
+  
+  var value: Double = js.native
+  
+  var zero: js.UndefOr[ReactElement] = js.native
 }
-
 object Props {
+  
   @scala.inline
-  def apply(
-    intl: IntlShape,
-    value: Double,
-    children: /* value */ TagMod[Any] => ReactElement | Null = null,
-    few: TagMod[Any] = null,
-    format: String = null,
-    many: TagMod[Any] = null,
-    one: TagMod[Any] = null,
-    other: TagMod[Any] = null,
-    two: TagMod[Any] = null,
-    zero: TagMod[Any] = null
-  ): Props = {
+  def apply(intl: IntlShape, value: Double): Props = {
     val __obj = js.Dynamic.literal(intl = intl.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    if (children != null) __obj.updateDynamic("children")(js.Any.fromFunction1(children))
-    if (few != null) __obj.updateDynamic("few")(few.asInstanceOf[js.Any])
-    if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
-    if (many != null) __obj.updateDynamic("many")(many.asInstanceOf[js.Any])
-    if (one != null) __obj.updateDynamic("one")(one.asInstanceOf[js.Any])
-    if (other != null) __obj.updateDynamic("other")(other.asInstanceOf[js.Any])
-    if (two != null) __obj.updateDynamic("two")(two.asInstanceOf[js.Any])
-    if (zero != null) __obj.updateDynamic("zero")(zero.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
+  
+  @scala.inline
+  implicit class PropsOps[Self <: Props] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
+    }
+    
+    @scala.inline
+    def setIntl(value: IntlShape): Self = this.set("intl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setChildren(value: /* value */ ReactElement => ReactElement | Null): Self = this.set("children", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    
+    @scala.inline
+    def setFewReactElement(value: ReactElement): Self = this.set("few", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFew(value: ReactElement): Self = this.set("few", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFew: Self = this.set("few", js.undefined)
+    
+    @scala.inline
+    def setManyReactElement(value: ReactElement): Self = this.set("many", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMany(value: ReactElement): Self = this.set("many", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMany: Self = this.set("many", js.undefined)
+    
+    @scala.inline
+    def setOneReactElement(value: ReactElement): Self = this.set("one", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOne(value: ReactElement): Self = this.set("one", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOne: Self = this.set("one", js.undefined)
+    
+    @scala.inline
+    def setOther(value: ReactElement): Self = this.set("other", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOther: Self = this.set("other", js.undefined)
+    
+    @scala.inline
+    def setTwoReactElement(value: ReactElement): Self = this.set("two", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTwo(value: ReactElement): Self = this.set("two", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTwo: Self = this.set("two", js.undefined)
+    
+    @scala.inline
+    def setZeroReactElement(value: ReactElement): Self = this.set("zero", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setZero(value: ReactElement): Self = this.set("zero", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteZero: Self = this.set("zero", js.undefined)
+  }
 }
-

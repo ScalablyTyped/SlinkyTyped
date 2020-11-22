@@ -25,8 +25,7 @@ trait CultureInfo extends ClientObject {
     *
     * Defines the culturally appropriate format of displaying date and time. This is based on current system culture settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val datetimeFormat: DatetimeFormatInfo = js.native
   

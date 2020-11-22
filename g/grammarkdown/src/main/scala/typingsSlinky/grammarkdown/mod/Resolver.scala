@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.mod
 
+import typingsSlinky.grammarkdown.lineOffsetMapMod.LineOffsetMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Resolver protected ()
   extends typingsSlinky.grammarkdown.checkerMod.Resolver {
   def this(bindings: typingsSlinky.grammarkdown.binderMod.BindingTable) = this()
+  def this(bindings: typingsSlinky.grammarkdown.binderMod.BindingTable, lineOffsetMap: LineOffsetMap) = this()
 }

@@ -13,6 +13,11 @@ trait TransitGatewayRoute extends js.Object {
   var DestinationCidrBlock: js.UndefOr[String] = js.native
   
   /**
+    * The ID of the prefix list used for destination matches.
+    */
+  var PrefixListId: js.UndefOr[PrefixListResourceId] = js.native
+  
+  /**
     * The state of the route.
     */
   var State: js.UndefOr[TransitGatewayRouteState] = js.native
@@ -55,6 +60,12 @@ object TransitGatewayRoute {
     
     @scala.inline
     def deleteDestinationCidrBlock: Self = this.set("DestinationCidrBlock", js.undefined)
+    
+    @scala.inline
+    def setPrefixListId(value: PrefixListResourceId): Self = this.set("PrefixListId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrefixListId: Self = this.set("PrefixListId", js.undefined)
     
     @scala.inline
     def setState(value: TransitGatewayRouteState): Self = this.set("State", value.asInstanceOf[js.Any])

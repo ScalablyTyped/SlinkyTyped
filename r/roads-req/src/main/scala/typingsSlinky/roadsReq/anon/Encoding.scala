@@ -1,5 +1,6 @@
 package typingsSlinky.roadsReq.anon
 
+import typingsSlinky.node.BufferEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Encoding extends js.Object {
   
-  var encoding: String = js.native
+  var encoding: BufferEncoding = js.native
 }
 object Encoding {
   
   @scala.inline
-  def apply(encoding: String): Encoding = {
+  def apply(encoding: BufferEncoding): Encoding = {
     val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[Encoding]
   }
@@ -33,6 +34,6 @@ object Encoding {
     }
     
     @scala.inline
-    def setEncoding(value: String): Self = this.set("encoding", value.asInstanceOf[js.Any])
+    def setEncoding(value: BufferEncoding): Self = this.set("encoding", value.asInstanceOf[js.Any])
   }
 }

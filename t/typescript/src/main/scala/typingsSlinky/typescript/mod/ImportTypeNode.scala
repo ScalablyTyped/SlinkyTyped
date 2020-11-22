@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ImportTypeNode extends NodeWithTypeArguments {
   
-  var argument: TypeNode = js.native
+  val argument: TypeNode = js.native
   
-  var isTypeOf: js.UndefOr[Boolean] = js.native
+  val isTypeOf: Boolean = js.native
   
   @JSName("kind")
-  var kind_ImportTypeNode: ImportType = js.native
+  val kind_ImportTypeNode: ImportType = js.native
   
-  var qualifier: js.UndefOr[EntityName] = js.native
+  val qualifier: js.UndefOr[EntityName] = js.native
 }

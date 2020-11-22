@@ -9,8 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DomainSnapshotOptions extends js.Object {
   
   /**
-    * Hour during which the service takes an automated daily
-    * snapshot of the indices in the domain.
+    * Hour during which the service takes an automated daily snapshot of the indices in the domain.
     */
   var automatedSnapshotStartHour: Input[Double] = js.native
 }

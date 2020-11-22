@@ -21,6 +21,11 @@ trait AdvancedSecurityOptionsInput extends js.Object {
     * Credentials for the master user: username and password, ARN, or both.
     */
   var MasterUserOptions: js.UndefOr[typingsSlinky.awsSdk.esMod.MasterUserOptions] = js.native
+  
+  /**
+    * Specifies the SAML application configuration for the domain.
+    */
+  var SAMLOptions: js.UndefOr[SAMLOptionsInput] = js.native
 }
 object AdvancedSecurityOptionsInput {
   
@@ -62,5 +67,11 @@ object AdvancedSecurityOptionsInput {
     
     @scala.inline
     def deleteMasterUserOptions: Self = this.set("MasterUserOptions", js.undefined)
+    
+    @scala.inline
+    def setSAMLOptions(value: SAMLOptionsInput): Self = this.set("SAMLOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSAMLOptions: Self = this.set("SAMLOptions", js.undefined)
   }
 }

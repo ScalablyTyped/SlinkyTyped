@@ -32,10 +32,5 @@ class SharedBuilder_TooltipTriggerProps102580951[R <: js.Object] (val args: js.A
   def getTriggerRefNull: this.type = set("getTriggerRef", null)
   
   @scala.inline
-  def modifiers(
-    value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Modifiers */ js.Any
-  ): this.type = set("modifiers", value.asInstanceOf[js.Any])
-  
-  @scala.inline
   def tooltipShown(value: Boolean): this.type = set("tooltipShown", value.asInstanceOf[js.Any])
 }

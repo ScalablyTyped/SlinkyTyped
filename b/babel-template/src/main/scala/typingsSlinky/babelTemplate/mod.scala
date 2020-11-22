@@ -13,7 +13,7 @@ object mod extends js.Object {
   def apply(code: String): UseTemplate = js.native
   def apply(code: String, opts: BabylonOptions): UseTemplate = js.native
   
-  type Node = typingsSlinky.babelTypes.mod.Node
+  type Node = typingsSlinky.babelTypes.ts36Mod.Node
   
   type UseTemplate = js.Function1[/* nodes */ js.UndefOr[StringDictionary[Node]], Node]
 }

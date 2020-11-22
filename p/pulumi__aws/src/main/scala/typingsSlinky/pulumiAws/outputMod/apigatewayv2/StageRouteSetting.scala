@@ -20,9 +20,9 @@ trait StageRouteSetting extends js.Object {
   
   /**
     * The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
-    * Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs.
+    * Valid values: `ERROR`, `INFO`, `OFF`. Defaults to `OFF`. Supported only for WebSocket APIs. This provider will only perform drift detection of its value when present in a configuration.
     */
-  var loggingLevel: js.UndefOr[String] = js.native
+  var loggingLevel: String = js.native
   
   /**
     * Route key.
@@ -42,8 +42,8 @@ trait StageRouteSetting extends js.Object {
 object StageRouteSetting {
   
   @scala.inline
-  def apply(routeKey: String): StageRouteSetting = {
-    val __obj = js.Dynamic.literal(routeKey = routeKey.asInstanceOf[js.Any])
+  def apply(loggingLevel: String, routeKey: String): StageRouteSetting = {
+    val __obj = js.Dynamic.literal(loggingLevel = loggingLevel.asInstanceOf[js.Any], routeKey = routeKey.asInstanceOf[js.Any])
     __obj.asInstanceOf[StageRouteSetting]
   }
   
@@ -63,6 +63,9 @@ object StageRouteSetting {
     }
     
     @scala.inline
+    def setLoggingLevel(value: String): Self = this.set("loggingLevel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setRouteKey(value: String): Self = this.set("routeKey", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -76,12 +79,6 @@ object StageRouteSetting {
     
     @scala.inline
     def deleteDetailedMetricsEnabled: Self = this.set("detailedMetricsEnabled", js.undefined)
-    
-    @scala.inline
-    def setLoggingLevel(value: String): Self = this.set("loggingLevel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLoggingLevel: Self = this.set("loggingLevel", js.undefined)
     
     @scala.inline
     def setThrottlingBurstLimit(value: Double): Self = this.set("throttlingBurstLimit", value.asInstanceOf[js.Any])

@@ -46,7 +46,7 @@ trait TypographyProps extends js.Object {
   
   var fontFamily: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -70,7 +70,7 @@ trait TypographyProps extends js.Object {
     */
   var fontStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontStyle */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -151,7 +151,7 @@ trait TypographyProps extends js.Object {
     */
   var opacity: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -205,7 +205,7 @@ trait TypographyProps extends js.Object {
     */
   var textAlign: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextAlignProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextAlign */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -281,7 +281,7 @@ object TypographyProps {
     @scala.inline
     def setFontFamily(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _, 
           RequiredTheme
         ]
     ): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
@@ -310,7 +310,7 @@ object TypographyProps {
     @scala.inline
     def setFontStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontStyle */ _, 
           RequiredTheme
         ]
     ): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
@@ -531,7 +531,7 @@ object TypographyProps {
     @scala.inline
     def setOpacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): Self = this.set("opacity", value.asInstanceOf[js.Any])
@@ -716,7 +716,7 @@ object TypographyProps {
     @scala.inline
     def setTextAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextAlignProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextAlign */ _, 
           RequiredTheme
         ]
     ): Self = this.set("textAlign", value.asInstanceOf[js.Any])

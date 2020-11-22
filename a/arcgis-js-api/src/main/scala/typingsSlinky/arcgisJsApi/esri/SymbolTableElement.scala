@@ -12,14 +12,14 @@ trait SymbolTableElement
      with LegendElement {
   
   /**
-    * An array of each symbol/category/break rendered for the symbol table. For example, this may be individual breaks for a ClassBreaksRenderer, or unique values for a UniqueValueRenderer.
+    * An array of each symbol/category/break rendered for the symbol table.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#SymbolTableElement)
     */
   var infos: js.Array[SymbolTableElementType] = js.native
   
   /**
-    * Only used for renderers set to ImageryLayers. Indicates the type of renderer set on the layer (e.g. `stretched` or `Unique Values`).
+    * Only used for renderers set to ImageryLayers.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#SymbolTableElement)
     */

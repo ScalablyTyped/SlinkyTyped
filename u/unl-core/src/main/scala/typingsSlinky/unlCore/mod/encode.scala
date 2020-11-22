@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object encode extends js.Object {
   
-  def apply(latitude: Double, longitude: Double): String = js.native
-  def apply(latitude: Double, longitude: Double, precision: js.UndefOr[scala.Nothing], options: EncodeOptions): String = js.native
-  def apply(latitude: Double, longitude: Double, precision: Double): String = js.native
-  def apply(latitude: Double, longitude: Double, precision: Double, options: EncodeOptions): String = js.native
+  def apply(lat: Double, lon: Double): String = js.native
+  def apply(lat: Double, lon: Double, precision: js.UndefOr[scala.Nothing], options: EncodeOptions): String = js.native
+  def apply(lat: Double, lon: Double, precision: Double): String = js.native
+  def apply(lat: Double, lon: Double, precision: Double, options: EncodeOptions): String = js.native
 }

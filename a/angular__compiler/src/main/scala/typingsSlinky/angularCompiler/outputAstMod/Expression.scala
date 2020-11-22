@@ -29,7 +29,10 @@ abstract class Expression () extends js.Object {
   def bitwiseAnd(rhs: Expression, sourceSpan: ParseSourceSpan, parens: Boolean): BinaryOperatorExpr = js.native
   
   def callFn(params: js.Array[Expression]): InvokeFunctionExpr = js.native
+  def callFn(params: js.Array[Expression], sourceSpan: js.UndefOr[scala.Nothing], pure: Boolean): InvokeFunctionExpr = js.native
+  def callFn(params: js.Array[Expression], sourceSpan: Null, pure: Boolean): InvokeFunctionExpr = js.native
   def callFn(params: js.Array[Expression], sourceSpan: ParseSourceSpan): InvokeFunctionExpr = js.native
+  def callFn(params: js.Array[Expression], sourceSpan: ParseSourceSpan, pure: Boolean): InvokeFunctionExpr = js.native
   
   def callMethod(name: String, params: js.Array[Expression]): InvokeMethodExpr = js.native
   def callMethod(name: String, params: js.Array[Expression], sourceSpan: ParseSourceSpan): InvokeMethodExpr = js.native

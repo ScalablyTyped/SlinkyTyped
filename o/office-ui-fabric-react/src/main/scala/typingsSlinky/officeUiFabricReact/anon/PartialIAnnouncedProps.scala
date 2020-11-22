@@ -20,8 +20,13 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.officeUiFabricReact.announcedBaseMod.AnnouncedBase
 import typingsSlinky.officeUiFabricReact.announcedTypesMod.IAnnouncedStyles
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions text`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`inline`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals text`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.additions
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.all
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.ascending
@@ -168,7 +173,9 @@ trait PartialIAnnouncedProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -696,7 +703,9 @@ object PartialIAnnouncedProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

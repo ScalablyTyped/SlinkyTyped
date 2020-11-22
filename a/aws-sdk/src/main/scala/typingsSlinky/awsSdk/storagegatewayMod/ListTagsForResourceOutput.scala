@@ -13,7 +13,7 @@ trait ListTagsForResourceOutput extends js.Object {
   var Marker: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.Marker] = js.native
   
   /**
-    * he Amazon Resource Name (ARN) of the resource for which you want to list tags.
+    * The Amazon Resource Name (ARN) of the resource for which you want to list tags.
     */
   var ResourceARN: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.ResourceARN] = js.native
   

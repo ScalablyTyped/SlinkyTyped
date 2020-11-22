@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TeamGuestSettings extends js.Object {
   
   // If set to true, guests can add and update channels.
-  var allowCreateUpdateChannels: js.UndefOr[Boolean] = js.native
+  var allowCreateUpdateChannels: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // If set to true, guests can delete channels.
-  var allowDeleteChannels: js.UndefOr[Boolean] = js.native
+  var allowDeleteChannels: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object TeamGuestSettings {
   
@@ -37,15 +37,21 @@ object TeamGuestSettings {
     }
     
     @scala.inline
-    def setAllowCreateUpdateChannels(value: Boolean): Self = this.set("allowCreateUpdateChannels", value.asInstanceOf[js.Any])
+    def setAllowCreateUpdateChannels(value: NullableOption[Boolean]): Self = this.set("allowCreateUpdateChannels", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAllowCreateUpdateChannels: Self = this.set("allowCreateUpdateChannels", js.undefined)
     
     @scala.inline
-    def setAllowDeleteChannels(value: Boolean): Self = this.set("allowDeleteChannels", value.asInstanceOf[js.Any])
+    def setAllowCreateUpdateChannelsNull: Self = this.set("allowCreateUpdateChannels", null)
+    
+    @scala.inline
+    def setAllowDeleteChannels(value: NullableOption[Boolean]): Self = this.set("allowDeleteChannels", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAllowDeleteChannels: Self = this.set("allowDeleteChannels", js.undefined)
+    
+    @scala.inline
+    def setAllowDeleteChannelsNull: Self = this.set("allowDeleteChannels", null)
   }
 }

@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientDynamodbNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbNode.typesDeleteTableInputMod.DeleteTableInput
 import typingsSlinky.awsSdkClientDynamodbNode.typesDeleteTableOutputMod.DeleteTableOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object deleteTableCommandMod extends js.Object {
           DeleteTableInput, 
           OutputTypesUnion, 
           DeleteTableOutput, 
-          DynamoDBResolvedConfiguration, 
-          Readable
+          DynamoDBResolvedConfiguration
         ] {
     def this(input: DeleteTableInput) = this()
     
-    val middlewareStack: MiddlewareStack[DeleteTableInput, DeleteTableOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DeleteTableInput, DeleteTableOutput] = js.native
   }

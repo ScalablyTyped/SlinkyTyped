@@ -13,7 +13,7 @@ trait MeshPhysicalMaterialParameters extends MeshStandardMaterialParameters {
   
   var clearcoat: js.UndefOr[Double] = js.native
   
-  var clearcoatMap: Texture | Null = js.native
+  var clearcoatMap: js.UndefOr[Texture | Null] = js.native
   
   var clearcoatNormalMap: js.UndefOr[Texture | Null] = js.native
   
@@ -21,7 +21,9 @@ trait MeshPhysicalMaterialParameters extends MeshStandardMaterialParameters {
   
   var clearcoatRoughness: js.UndefOr[Double] = js.native
   
-  var clearcoatRoughnessMap: Texture | Null = js.native
+  var clearcoatRoughnessMap: js.UndefOr[Texture | Null] = js.native
+  
+  var ior: js.UndefOr[Double] = js.native
   
   var reflectivity: js.UndefOr[Double] = js.native
   
@@ -64,6 +66,9 @@ object MeshPhysicalMaterialParameters {
     def setClearcoatMap(value: Texture): Self = this.set("clearcoatMap", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def deleteClearcoatMap: Self = this.set("clearcoatMap", js.undefined)
+    
+    @scala.inline
     def setClearcoatMapNull: Self = this.set("clearcoatMap", null)
     
     @scala.inline
@@ -91,7 +96,16 @@ object MeshPhysicalMaterialParameters {
     def setClearcoatRoughnessMap(value: Texture): Self = this.set("clearcoatRoughnessMap", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def deleteClearcoatRoughnessMap: Self = this.set("clearcoatRoughnessMap", js.undefined)
+    
+    @scala.inline
     def setClearcoatRoughnessMapNull: Self = this.set("clearcoatRoughnessMap", null)
+    
+    @scala.inline
+    def setIor(value: Double): Self = this.set("ior", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIor: Self = this.set("ior", js.undefined)
     
     @scala.inline
     def setReflectivity(value: Double): Self = this.set("reflectivity", value.asInstanceOf[js.Any])

@@ -11,17 +11,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object Position extends js.Object {
   
-  def clone(position: typingsSlinky.grammarkdown.coreMod.Position): typingsSlinky.grammarkdown.coreMod.Position = js.native
+  def clone(position: typingsSlinky.grammarkdown.typesMod.Position): typingsSlinky.grammarkdown.typesMod.Position = js.native
   
   def compare(
-    left: typingsSlinky.grammarkdown.coreMod.Position,
-    right: typingsSlinky.grammarkdown.coreMod.Position
+    left: typingsSlinky.grammarkdown.typesMod.Position,
+    right: typingsSlinky.grammarkdown.typesMod.Position
   ): `1` | `0` | `-1` = js.native
   
-  def create(line: Double, character: Double): typingsSlinky.grammarkdown.coreMod.Position = js.native
+  def create(line: Double, character: Double): typingsSlinky.grammarkdown.typesMod.Position = js.native
   
   def equals(
-    left: typingsSlinky.grammarkdown.coreMod.Position,
-    right: typingsSlinky.grammarkdown.coreMod.Position
+    left: typingsSlinky.grammarkdown.typesMod.Position,
+    right: typingsSlinky.grammarkdown.typesMod.Position
   ): Boolean = js.native
 }

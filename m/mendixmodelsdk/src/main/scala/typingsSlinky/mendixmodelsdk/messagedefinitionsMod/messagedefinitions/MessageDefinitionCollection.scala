@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.messagedefinitionsMod.messagedefinitions
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.messagedefinitionsMod.StructureVersionInfo
@@ -12,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/message-definitions relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/message-definitions relevant section in reference guide}
   *
   * In version 7.6.0: introduced
   */
@@ -42,9 +41,6 @@ class MessageDefinitionCollection protected () extends Document {
   def messageDefinitions: IList[MessageDefinition] = js.native
   @JSName("messageDefinitions")
   val messageDefinitions_FMessageDefinitionCollection: IList[IMessageDefinition] = js.native
-  
-  @JSName("model")
-  var model_FMessageDefinitionCollection: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/messagedefinitions", "messagedefinitions.MessageDefinitionCollection")

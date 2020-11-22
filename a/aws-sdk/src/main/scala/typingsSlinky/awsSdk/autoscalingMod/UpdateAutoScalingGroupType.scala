@@ -18,7 +18,12 @@ trait UpdateAutoScalingGroupType extends js.Object {
   var AvailabilityZones: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.AvailabilityZones] = js.native
   
   /**
-    * The amount of time, in seconds, after a scaling activity completes before another scaling activity can start. The default value is 300. This setting applies when using simple scaling policies, but not when using other scaling policies or scheduled scaling. For more information, see Scaling Cooldowns for Amazon EC2 Auto Scaling in the Amazon EC2 Auto Scaling User Guide.
+    * Enables or disables Capacity Rebalancing. For more information, see Amazon EC2 Auto Scaling Capacity Rebalancing in the Amazon EC2 Auto Scaling User Guide.
+    */
+  var CapacityRebalance: js.UndefOr[CapacityRebalanceEnabled] = js.native
+  
+  /**
+    * The amount of time, in seconds, after a scaling activity completes before another scaling activity can start. The default value is 300. This setting applies when using simple scaling policies, but not when using other scaling policies or scheduled scaling. For more information, see Scaling cooldowns for Amazon EC2 Auto Scaling in the Amazon EC2 Auto Scaling User Guide.
     */
   var DefaultCooldown: js.UndefOr[Cooldown] = js.native
   
@@ -28,7 +33,7 @@ trait UpdateAutoScalingGroupType extends js.Object {
   var DesiredCapacity: js.UndefOr[AutoScalingGroupDesiredCapacity] = js.native
   
   /**
-    * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service. The default value is 0. For more information, see Health Check Grace Period in the Amazon EC2 Auto Scaling User Guide. Required if you are adding an ELB health check.
+    * The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service. The default value is 0. For more information, see Health check grace period in the Amazon EC2 Auto Scaling User Guide. Conditional: Required if you are adding an ELB health check.
     */
   var HealthCheckGracePeriod: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.HealthCheckGracePeriod] = js.native
   
@@ -43,12 +48,12 @@ trait UpdateAutoScalingGroupType extends js.Object {
   var LaunchConfigurationName: js.UndefOr[ResourceName] = js.native
   
   /**
-    * The launch template and version to use to specify the updates. If you specify LaunchTemplate in your update request, you can't specify LaunchConfigurationName or MixedInstancesPolicy. For more information, see LaunchTemplateSpecification in the Amazon EC2 Auto Scaling API Reference.
+    * The launch template and version to use to specify the updates. If you specify LaunchTemplate in your update request, you can't specify LaunchConfigurationName or MixedInstancesPolicy.
     */
   var LaunchTemplate: js.UndefOr[LaunchTemplateSpecification] = js.native
   
   /**
-    * The maximum amount of time, in seconds, that an instance can be in service. The default is null. This parameter is optional, but if you specify a value for it, you must specify a value of at least 604,800 seconds (7 days). To clear a previously set value, specify a new value of 0. For more information, see Replacing Auto Scaling Instances Based on Maximum Instance Lifetime in the Amazon EC2 Auto Scaling User Guide. Valid Range: Minimum value of 0.
+    * The maximum amount of time, in seconds, that an instance can be in service. The default is null. If specified, the value must be either 0 or a number equal to or greater than 86,400 seconds (1 day). To clear a previously set value, specify a new value of 0. For more information, see Replacing Auto Scaling instances based on maximum instance lifetime in the Amazon EC2 Auto Scaling User Guide.
     */
   var MaxInstanceLifetime: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.MaxInstanceLifetime] = js.native
   
@@ -63,32 +68,32 @@ trait UpdateAutoScalingGroupType extends js.Object {
   var MinSize: js.UndefOr[AutoScalingGroupMinSize] = js.native
   
   /**
-    * An embedded object that specifies a mixed instances policy. In your call to UpdateAutoScalingGroup, you can make changes to the policy that is specified. All optional parameters are left unchanged if not specified. For more information, see MixedInstancesPolicy in the Amazon EC2 Auto Scaling API Reference and Auto Scaling Groups with Multiple Instance Types and Purchase Options in the Amazon EC2 Auto Scaling User Guide.
+    * An embedded object that specifies a mixed instances policy. When you make changes to an existing policy, all optional parameters are left unchanged if not specified. For more information, see Auto Scaling groups with multiple instance types and purchase options in the Amazon EC2 Auto Scaling User Guide.
     */
   var MixedInstancesPolicy: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.MixedInstancesPolicy] = js.native
   
   /**
-    * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when scaling in. For more information about preventing instances from terminating on scale in, see Instance Protection in the Amazon EC2 Auto Scaling User Guide.
+    * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when scaling in. For more information about preventing instances from terminating on scale in, see Instance scale-in protection in the Amazon EC2 Auto Scaling User Guide.
     */
   var NewInstancesProtectedFromScaleIn: js.UndefOr[InstanceProtected] = js.native
   
   /**
-    * The name of the placement group into which to launch your instances, if any. A placement group is a logical grouping of instances within a single Availability Zone. You cannot specify multiple Availability Zones and a placement group. For more information, see Placement Groups in the Amazon EC2 User Guide for Linux Instances.
+    * The name of an existing placement group into which to launch your instances, if any. A placement group is a logical grouping of instances within a single Availability Zone. You cannot specify multiple Availability Zones and a placement group. For more information, see Placement Groups in the Amazon EC2 User Guide for Linux Instances.
     */
   var PlacementGroup: js.UndefOr[XmlStringMaxLen255] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other AWS services on your behalf. For more information, see Service-Linked Roles in the Amazon EC2 Auto Scaling User Guide.
+    * The Amazon Resource Name (ARN) of the service-linked role that the Auto Scaling group uses to call other AWS services on your behalf. For more information, see Service-linked roles in the Amazon EC2 Auto Scaling User Guide.
     */
   var ServiceLinkedRoleARN: js.UndefOr[ResourceName] = js.native
   
   /**
-    * A standalone termination policy or a list of termination policies used to select the instance to terminate. The policies are executed in the order that they are listed. For more information, see Controlling Which Instances Auto Scaling Terminates During Scale In in the Amazon EC2 Auto Scaling User Guide.
+    * A policy or a list of policies that are used to select the instances to terminate. The policies are executed in the order that you list them. For more information, see Controlling which Auto Scaling instances terminate during scale in in the Amazon EC2 Auto Scaling User Guide.
     */
   var TerminationPolicies: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.TerminationPolicies] = js.native
   
   /**
-    * A comma-separated list of subnet IDs for virtual private cloud (VPC). If you specify VPCZoneIdentifier with AvailabilityZones, the subnets that you specify for this parameter must reside in those Availability Zones.
+    * A comma-separated list of subnet IDs for a virtual private cloud (VPC). If you specify VPCZoneIdentifier with AvailabilityZones, the subnets that you specify for this parameter must reside in those Availability Zones.
     */
   var VPCZoneIdentifier: js.UndefOr[XmlStringMaxLen2047] = js.native
 }
@@ -126,6 +131,12 @@ object UpdateAutoScalingGroupType {
     
     @scala.inline
     def deleteAvailabilityZones: Self = this.set("AvailabilityZones", js.undefined)
+    
+    @scala.inline
+    def setCapacityRebalance(value: CapacityRebalanceEnabled): Self = this.set("CapacityRebalance", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCapacityRebalance: Self = this.set("CapacityRebalance", js.undefined)
     
     @scala.inline
     def setDefaultCooldown(value: Cooldown): Self = this.set("DefaultCooldown", value.asInstanceOf[js.Any])

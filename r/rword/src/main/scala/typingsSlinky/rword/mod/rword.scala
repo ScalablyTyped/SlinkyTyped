@@ -46,5 +46,5 @@ object rword extends js.Object {
     */
   def shuffle(): Unit = js.native
   
-  val words: js.Array[String] = js.native
+  def words: js.Array[String] = js.native
 }

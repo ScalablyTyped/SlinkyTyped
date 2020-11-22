@@ -69,7 +69,7 @@ trait IRawStyleBase extends IRawFontStyle {
   /**
     * (Moz specific) font smoothing directive.
     */
-  var MozOsxFontSmoothing: js.UndefOr[none | antialiased | grayscale | `subpixel-antialiased`] = js.native
+  var MozOsxFontSmoothing: js.UndefOr[none | antialiased | grayscale | `subpixel-antialiased` | String] = js.native
   
   /**
     * (Ms specific) constrast adjust rule.
@@ -79,7 +79,7 @@ trait IRawStyleBase extends IRawFontStyle {
   /**
     * (Ms specific) scrollbar behavior adjust rule.
     */
-  var MsOverflowStyle: js.UndefOr[auto | none | scrollbar | `-ms-autohiding-scrollbar`] = js.native
+  var MsOverflowStyle: js.UndefOr[auto | none | scrollbar | `-ms-autohiding-scrollbar` | String] = js.native
   
   /**
     * Edge requires the -webkit prefix backdrop-filter.
@@ -89,12 +89,12 @@ trait IRawStyleBase extends IRawFontStyle {
   /**
     * (Webkit specific) font smoothing directive.
     */
-  var WebkitFontSmoothing: js.UndefOr[none | antialiased | grayscale | `subpixel-antialiased`] = js.native
+  var WebkitFontSmoothing: js.UndefOr[none | antialiased | grayscale | `subpixel-antialiased` | String] = js.native
   
   /**
     * (Webkit specific) momentum scrolling on iOS devices
     */
-  var WebkitOverflowScrolling: js.UndefOr[auto | touch] = js.native
+  var WebkitOverflowScrolling: js.UndefOr[auto | touch | String] = js.native
   
   /**
     * (Webkit specific) color of the highlight that appears overa  link while it's being tapped
@@ -105,21 +105,21 @@ trait IRawStyleBase extends IRawFontStyle {
     * (Webkit specific) controls the text inflation algorithm used on some smartphones and tablets.
     * Other browsers will ignore this property.
     */
-  var WebkitTextSizeAdjust: js.UndefOr[none | auto | ICSSPercentageRule | ICSSRule] = js.native
+  var WebkitTextSizeAdjust: js.UndefOr[none | auto | ICSSPercentageRule | ICSSRule | String] = js.native
   
   /**
     * Aligns a flex container's lines within the flex container when there is extra space
     * in the cross-axis, similar to how justify-content aligns individual items within the main-axis.
     */
   var alignContent: js.UndefOr[
-    ICSSRule | `flex-start` | `flex-end` | center | `space-between` | `space-around` | stretch
+    ICSSRule | `flex-start` | `flex-end` | center | `space-between` | `space-around` | stretch | String
   ] = js.native
   
   /**
     * Sets the default alignment in the cross axis for all of the flex container's items,
     * including anonymous flex items, similarly to how justify-content aligns items along the main axis.
     */
-  var alignItems: js.UndefOr[ICSSRule | `flex-start` | `flex-end` | center | baseline | stretch] = js.native
+  var alignItems: js.UndefOr[ICSSRule | `flex-start` | `flex-end` | center | baseline | stretch | String] = js.native
   
   /**
     * Aligns the box (as the alignment subject) within its containing block (as the alignment container)
@@ -129,7 +129,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * https://www.w3.org/TR/css-align-3/#propdef-align-self
     */
   var alignSelf: js.UndefOr[
-    ICSSRule | auto | normal | stretch | ICSSBaselinePositionRule | ICSSOverflowAndSelfPositionRule
+    ICSSRule | auto | normal | stretch | ICSSBaselinePositionRule | ICSSOverflowAndSelfPositionRule | String
   ] = js.native
   
   /**
@@ -179,7 +179,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * The animation-fill-mode CSS property specifies how a CSS animation should apply
     * styles to its target before and after its execution.
     */
-  var animationFillMode: js.UndefOr[ICSSRule | none | forwards | backwards | both] = js.native
+  var animationFillMode: js.UndefOr[ICSSRule | none | forwards | backwards | both | String] = js.native
   
   /**
     * Specifies how many times an animation cycle should play.
@@ -234,7 +234,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * or scrolls along with its containing block.
     * See CSS 3 background-attachment property https://drafts.csswg.org/css-backgrounds-3/#the-background-attachment
     */
-  var backgroundAttachment: js.UndefOr[ICSSRule | scroll | fixed | local] = js.native
+  var backgroundAttachment: js.UndefOr[ICSSRule | scroll | fixed | local | String] = js.native
   
   /**
     * This property describes how the element's background images should blend with each
@@ -254,7 +254,7 @@ trait IRawStyleBase extends IRawFontStyle {
     *
     * \* The `text` value is experimental and should not be used in production code.
     */
-  var backgroundClip: js.UndefOr[ICSSRule | `border-box` | `padding-box` | `content-box` | text] = js.native
+  var backgroundClip: js.UndefOr[ICSSRule | `border-box` | `padding-box` | `content-box` | text | String] = js.native
   
   /**
     * Sets the background color of an element.
@@ -528,7 +528,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * The CSS box-sizing property is used to alter the default CSS box model used to
     * calculate width and height of the elements.
     */
-  var boxSizing: js.UndefOr[ICSSRule | `border-box` | `content-box`] = js.native
+  var boxSizing: js.UndefOr[ICSSRule | `border-box` | `content-box` | String] = js.native
   
   /**
     * The CSS break-after property allows you to force a break on multi-column layouts.
@@ -572,7 +572,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * Describes the number of columns of the element.
     * See CSS 3 column-count property https://www.w3.org/TR/css3-multicol/#cc
     */
-  var columnCount: js.UndefOr[ICSSRule | Double | auto] = js.native
+  var columnCount: js.UndefOr[ICSSRule | Double | auto | String] = js.native
   
   /**
     * Specifies how to fill columns (balanced or sequential).
@@ -672,7 +672,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * W3: https://www.w3.org/TR/css-display-3/#the-display-properties
     * MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/display
     */
-  var display: js.UndefOr[ICSSRule | ICSSDisplayRule] = js.native
+  var display: js.UndefOr[ICSSRule | ICSSDisplayRule | String] = js.native
   
   /**
     * The ‘fill’ property paints the interior of the given graphical element. The area to
@@ -724,7 +724,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * The flex-direction CSS property describes how flex items are placed in the flex
     * container, by setting the direction of the flex container's main axis.
     */
-  var flexDirection: js.UndefOr[ICSSRule | row | `row-reverse` | column | `column-reverse`] = js.native
+  var flexDirection: js.UndefOr[ICSSRule | row | `row-reverse` | column | `column-reverse` | String] = js.native
   
   /**
     * The flex-flow CSS property defines the flex container's main and cross axis. It is
@@ -750,7 +750,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * the direction in which lines are stacked.
     * See CSS flex-wrap property https://drafts.csswg.org/css-flexbox-1/#flex-wrap-property
     */
-  var flexWrap: js.UndefOr[ICSSRule | nowrap | wrap | `wrap-reverse`] = js.native
+  var flexWrap: js.UndefOr[ICSSRule | nowrap | wrap | `wrap-reverse` | String] = js.native
   
   /**
     * Elements which have the style float are floated horizontally. These elements can
@@ -771,7 +771,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * The property which allows authors to opt particular elements out of forced colors mode,
     * restoring full control over the colors to CSS. Currently it's only supported in Edge Chromium.
     */
-  var forcedColorAdjust: js.UndefOr[auto | none] = js.native
+  var forcedColorAdjust: js.UndefOr[auto | none | String] = js.native
   
   /**
     * Lays out one or more grid items bound by 4 grid lines. Shorthand for setting
@@ -932,7 +932,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * https://www.w3.org/TR/css-flexbox-1/#justify-content-property
     */
   var justifyContent: js.UndefOr[
-    ICSSRule | `flex-start` | `flex-end` | center | `space-between` | `space-around` | `space-evenly` | stretch
+    ICSSRule | `flex-start` | `flex-end` | center | `space-between` | `space-around` | `space-evenly` | stretch | String
   ] = js.native
   
   /**
@@ -943,11 +943,11 @@ trait IRawStyleBase extends IRawFontStyle {
     * https://www.w3.org/TR/css-align-3/#propdef-justify-self
     */
   var justifySelf: js.UndefOr[
-    ICSSRule | auto | normal | stretch | ICSSBaselinePositionRule | ICSSOverflowAndSelfPositionRule | left | right | (`safe left`) | (`safe right`) | (`unsafe left`) | (`unsafe right`)
+    ICSSRule | auto | normal | stretch | ICSSBaselinePositionRule | ICSSOverflowAndSelfPositionRule | left | right | (`safe left`) | (`safe right`) | (`unsafe left`) | (`unsafe right`) | String
   ] = js.native
   
   /**
-    * Sets the left position of an element relative to the nearest anscestor that is set
+    * Sets the left position of an element relative to the nearest ancestor that is set
     * to position absolute, relative, or fixed.
     */
   var left: js.UndefOr[ICSSRule | ICSSPixelUnitRule] = js.native
@@ -1123,14 +1123,14 @@ trait IRawStyleBase extends IRawFontStyle {
     * The mix-blend-mode CSS property describes how an element's content should blend
     * with the content of the element's direct parent and the element's background.
     */
-  var mixBlendMode: js.UndefOr[ICSSRule | IMixBlendModes] = js.native
+  var mixBlendMode: js.UndefOr[ICSSRule | IMixBlendModes | String] = js.native
   
   /**
     * The ‘object-fit’ property specifies how the contents of a replaced element should
     * be fitted to the box established by its used height and width.
     * See CSS 3 object-fit property https://www.w3.org/TR/css3-images/#the-object-fit
     */
-  var objectFit: js.UndefOr[ICSSRule | cover | contain | fill | none] = js.native
+  var objectFit: js.UndefOr[ICSSRule | cover | contain | fill | none | String] = js.native
   
   /**
     * Specifies the transparency of an element.
@@ -1143,14 +1143,14 @@ trait IRawStyleBase extends IRawFontStyle {
     * Elements are laid out in the ascending order of the order value.
     * See CSS order property https://drafts.csswg.org/css-flexbox-1/#order-property
     */
-  var order: js.UndefOr[ICSSRule | Double] = js.native
+  var order: js.UndefOr[ICSSRule | Double | String] = js.native
   
   /**
     * In paged media, this property defines the minimum number of lines in
     * a block container that must be left at the bottom of the page.
     * See CSS 3 orphans, widows properties https://drafts.csswg.org/css-break-3/#widows-orphans
     */
-  var orphans: js.UndefOr[ICSSRule | Double] = js.native
+  var orphans: js.UndefOr[ICSSRule | Double | String] = js.native
   
   /**
     * The CSS outline property is a shorthand property for setting one or more of the
@@ -1196,19 +1196,19 @@ trait IRawStyleBase extends IRawFontStyle {
     * overflow-wrap will only create a break if an entire word cannot be placed on its
     * own line without overflowing.
     */
-  var overflowWrap: js.UndefOr[ICSSRule | normal | `break-word`] = js.native
+  var overflowWrap: js.UndefOr[ICSSRule | normal | `break-word` | String] = js.native
   
   /**
     * Controls how extra content exceeding the x-axis of the bounding box of an element
     * is rendered.
     */
-  var overflowX: js.UndefOr[ICSSRule | auto | hidden | scroll | visible] = js.native
+  var overflowX: js.UndefOr[ICSSRule | auto | hidden | scroll | visible | String] = js.native
   
   /**
     * Controls how extra content exceeding the y-axis of the bounding box of an element
     * is rendered.
     */
-  var overflowY: js.UndefOr[ICSSRule | auto | hidden | scroll | visible] = js.native
+  var overflowY: js.UndefOr[ICSSRule | auto | hidden | scroll | visible | String] = js.native
   
   /**
     * The padding optional CSS property sets the required padding space on one to four
@@ -1388,7 +1388,7 @@ trait IRawStyleBase extends IRawFontStyle {
   /**
     * The resize CSS sets whether an element is resizable, and if so, in which direction(s).
     */
-  var resize: js.UndefOr[ICSSRule | none | both | horizontal | vertical | block | `inline`] = js.native
+  var resize: js.UndefOr[ICSSRule | none | both | horizontal | vertical | block | `inline` | String] = js.native
   
   /**
     * The rest-after property determines how long a speech media agent should pause after
@@ -1467,13 +1467,13 @@ trait IRawStyleBase extends IRawFontStyle {
     * SVG: The stroke-linecap attribute defines the shape to be used at the end of open subpaths when they are stroked.
     * See SVG 1.1 https://www.w3.org/TR/SVG/painting.html#LineCaps
     */
-  var strokeLinecap: js.UndefOr[ICSSRule | butt | round | square] = js.native
+  var strokeLinecap: js.UndefOr[ICSSRule | butt | round | square | String] = js.native
   
   /**
     * SVG: Specifies the opacity of the outline on the current object.
     * See SVG 1.1 https://www.w3.org/TR/SVG/painting.html#StrokeOpacityProperty
     */
-  var strokeOpacity: js.UndefOr[ICSSRule | Double] = js.native
+  var strokeOpacity: js.UndefOr[ICSSRule | Double | String] = js.native
   
   /**
     * SVG: Specifies the width of the outline on the current object.
@@ -1729,14 +1729,14 @@ trait IRawStyleBase extends IRawFontStyle {
   var userFocus: js.UndefOr[ICSSRule | String] = js.native
   
   /**
-    * For inputing user content
+    * For inputting user content
     */
   var userInput: js.UndefOr[ICSSRule | String] = js.native
   
   /**
     * Defines the text selection behavior.
     */
-  var userSelect: js.UndefOr[ICSSRule | none | auto | text | all | contain] = js.native
+  var userSelect: js.UndefOr[ICSSRule | none | auto | text | all | contain | String] = js.native
   
   /**
     * The vertical-align property controls how inline elements or text are vertically
@@ -1822,7 +1822,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * See CSS 3 orphans, widows properties
     * https://drafts.csswg.org/css-break-3/#widows-orphans
     */
-  var widows: js.UndefOr[ICSSRule | Double] = js.native
+  var widows: js.UndefOr[ICSSRule | Double | String] = js.native
   
   /**
     * Specifies the width of the content area of an element. The content area of the element
@@ -1874,7 +1874,7 @@ trait IRawStyleBase extends IRawFontStyle {
     * When elements overlap, z-order determines which one covers the other.
     * See CSS 2 z-index property https://www.w3.org/TR/CSS2/visuren.html#z-index
     */
-  var zIndex: js.UndefOr[ICSSRule | auto | Double] = js.native
+  var zIndex: js.UndefOr[ICSSRule | auto | Double | String] = js.native
   
   /**
     * Sets the initial zoom factor of a document defined by `@viewport`.
@@ -1906,7 +1906,7 @@ object IRawStyleBase {
     }
     
     @scala.inline
-    def setMozOsxFontSmoothing(value: none | antialiased | grayscale | `subpixel-antialiased`): Self = this.set("MozOsxFontSmoothing", value.asInstanceOf[js.Any])
+    def setMozOsxFontSmoothing(value: none | antialiased | grayscale | `subpixel-antialiased` | String): Self = this.set("MozOsxFontSmoothing", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMozOsxFontSmoothing: Self = this.set("MozOsxFontSmoothing", js.undefined)
@@ -1918,7 +1918,7 @@ object IRawStyleBase {
     def deleteMsHighContrastAdjust: Self = this.set("MsHighContrastAdjust", js.undefined)
     
     @scala.inline
-    def setMsOverflowStyle(value: auto | none | scrollbar | `-ms-autohiding-scrollbar`): Self = this.set("MsOverflowStyle", value.asInstanceOf[js.Any])
+    def setMsOverflowStyle(value: auto | none | scrollbar | `-ms-autohiding-scrollbar` | String): Self = this.set("MsOverflowStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMsOverflowStyle: Self = this.set("MsOverflowStyle", js.undefined)
@@ -1930,13 +1930,13 @@ object IRawStyleBase {
     def deleteWebkitBackdropFilter: Self = this.set("WebkitBackdropFilter", js.undefined)
     
     @scala.inline
-    def setWebkitFontSmoothing(value: none | antialiased | grayscale | `subpixel-antialiased`): Self = this.set("WebkitFontSmoothing", value.asInstanceOf[js.Any])
+    def setWebkitFontSmoothing(value: none | antialiased | grayscale | `subpixel-antialiased` | String): Self = this.set("WebkitFontSmoothing", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWebkitFontSmoothing: Self = this.set("WebkitFontSmoothing", js.undefined)
     
     @scala.inline
-    def setWebkitOverflowScrolling(value: auto | touch): Self = this.set("WebkitOverflowScrolling", value.asInstanceOf[js.Any])
+    def setWebkitOverflowScrolling(value: auto | touch | String): Self = this.set("WebkitOverflowScrolling", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWebkitOverflowScrolling: Self = this.set("WebkitOverflowScrolling", js.undefined)
@@ -1948,26 +1948,28 @@ object IRawStyleBase {
     def deleteWebkitTapHighlightColor: Self = this.set("WebkitTapHighlightColor", js.undefined)
     
     @scala.inline
-    def setWebkitTextSizeAdjust(value: none | auto | ICSSPercentageRule | ICSSRule): Self = this.set("WebkitTextSizeAdjust", value.asInstanceOf[js.Any])
+    def setWebkitTextSizeAdjust(value: none | auto | ICSSPercentageRule | ICSSRule | String): Self = this.set("WebkitTextSizeAdjust", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWebkitTextSizeAdjust: Self = this.set("WebkitTextSizeAdjust", js.undefined)
     
     @scala.inline
-    def setAlignContent(value: ICSSRule | `flex-start` | `flex-end` | center | `space-between` | `space-around` | stretch): Self = this.set("alignContent", value.asInstanceOf[js.Any])
+    def setAlignContent(
+      value: ICSSRule | `flex-start` | `flex-end` | center | `space-between` | `space-around` | stretch | String
+    ): Self = this.set("alignContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAlignContent: Self = this.set("alignContent", js.undefined)
     
     @scala.inline
-    def setAlignItems(value: ICSSRule | `flex-start` | `flex-end` | center | baseline | stretch): Self = this.set("alignItems", value.asInstanceOf[js.Any])
+    def setAlignItems(value: ICSSRule | `flex-start` | `flex-end` | center | baseline | stretch | String): Self = this.set("alignItems", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAlignItems: Self = this.set("alignItems", js.undefined)
     
     @scala.inline
     def setAlignSelf(
-      value: ICSSRule | auto | normal | stretch | ICSSBaselinePositionRule | ICSSOverflowAndSelfPositionRule
+      value: ICSSRule | auto | normal | stretch | ICSSBaselinePositionRule | ICSSOverflowAndSelfPositionRule | String
     ): Self = this.set("alignSelf", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -2010,7 +2012,7 @@ object IRawStyleBase {
     def deleteAnimationDuration: Self = this.set("animationDuration", js.undefined)
     
     @scala.inline
-    def setAnimationFillMode(value: ICSSRule | none | forwards | backwards | both): Self = this.set("animationFillMode", value.asInstanceOf[js.Any])
+    def setAnimationFillMode(value: ICSSRule | none | forwards | backwards | both | String): Self = this.set("animationFillMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimationFillMode: Self = this.set("animationFillMode", js.undefined)
@@ -2064,7 +2066,7 @@ object IRawStyleBase {
     def deleteBackground: Self = this.set("background", js.undefined)
     
     @scala.inline
-    def setBackgroundAttachment(value: ICSSRule | scroll | fixed | local): Self = this.set("backgroundAttachment", value.asInstanceOf[js.Any])
+    def setBackgroundAttachment(value: ICSSRule | scroll | fixed | local | String): Self = this.set("backgroundAttachment", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundAttachment: Self = this.set("backgroundAttachment", js.undefined)
@@ -2076,7 +2078,7 @@ object IRawStyleBase {
     def deleteBackgroundBlendMode: Self = this.set("backgroundBlendMode", js.undefined)
     
     @scala.inline
-    def setBackgroundClip(value: ICSSRule | `border-box` | `padding-box` | `content-box` | text): Self = this.set("backgroundClip", value.asInstanceOf[js.Any])
+    def setBackgroundClip(value: ICSSRule | `border-box` | `padding-box` | `content-box` | text | String): Self = this.set("backgroundClip", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundClip: Self = this.set("backgroundClip", js.undefined)
@@ -2322,7 +2324,7 @@ object IRawStyleBase {
     def deleteBoxShadow: Self = this.set("boxShadow", js.undefined)
     
     @scala.inline
-    def setBoxSizing(value: ICSSRule | `border-box` | `content-box`): Self = this.set("boxSizing", value.asInstanceOf[js.Any])
+    def setBoxSizing(value: ICSSRule | `border-box` | `content-box` | String): Self = this.set("boxSizing", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBoxSizing: Self = this.set("boxSizing", js.undefined)
@@ -2364,7 +2366,7 @@ object IRawStyleBase {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setColumnCount(value: ICSSRule | Double | auto): Self = this.set("columnCount", value.asInstanceOf[js.Any])
+    def setColumnCount(value: ICSSRule | Double | auto | String): Self = this.set("columnCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColumnCount: Self = this.set("columnCount", js.undefined)
@@ -2460,7 +2462,7 @@ object IRawStyleBase {
     def deleteDirection: Self = this.set("direction", js.undefined)
     
     @scala.inline
-    def setDisplay(value: ICSSRule | ICSSDisplayRule): Self = this.set("display", value.asInstanceOf[js.Any])
+    def setDisplay(value: ICSSRule | ICSSDisplayRule | String): Self = this.set("display", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplay: Self = this.set("display", js.undefined)
@@ -2502,7 +2504,7 @@ object IRawStyleBase {
     def deleteFlexBasis: Self = this.set("flexBasis", js.undefined)
     
     @scala.inline
-    def setFlexDirection(value: ICSSRule | row | `row-reverse` | column | `column-reverse`): Self = this.set("flexDirection", value.asInstanceOf[js.Any])
+    def setFlexDirection(value: ICSSRule | row | `row-reverse` | column | `column-reverse` | String): Self = this.set("flexDirection", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFlexDirection: Self = this.set("flexDirection", js.undefined)
@@ -2526,7 +2528,7 @@ object IRawStyleBase {
     def deleteFlexShrink: Self = this.set("flexShrink", js.undefined)
     
     @scala.inline
-    def setFlexWrap(value: ICSSRule | nowrap | wrap | `wrap-reverse`): Self = this.set("flexWrap", value.asInstanceOf[js.Any])
+    def setFlexWrap(value: ICSSRule | nowrap | wrap | `wrap-reverse` | String): Self = this.set("flexWrap", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFlexWrap: Self = this.set("flexWrap", js.undefined)
@@ -2544,7 +2546,7 @@ object IRawStyleBase {
     def deleteFlowFrom: Self = this.set("flowFrom", js.undefined)
     
     @scala.inline
-    def setForcedColorAdjust(value: auto | none): Self = this.set("forcedColorAdjust", value.asInstanceOf[js.Any])
+    def setForcedColorAdjust(value: auto | none | String): Self = this.set("forcedColorAdjust", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteForcedColorAdjust: Self = this.set("forcedColorAdjust", js.undefined)
@@ -2689,7 +2691,7 @@ object IRawStyleBase {
     
     @scala.inline
     def setJustifyContent(
-      value: ICSSRule | `flex-start` | `flex-end` | center | `space-between` | `space-around` | `space-evenly` | stretch
+      value: ICSSRule | `flex-start` | `flex-end` | center | `space-between` | `space-around` | `space-evenly` | stretch | String
     ): Self = this.set("justifyContent", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -2697,7 +2699,7 @@ object IRawStyleBase {
     
     @scala.inline
     def setJustifySelf(
-      value: ICSSRule | auto | normal | stretch | ICSSBaselinePositionRule | ICSSOverflowAndSelfPositionRule | left | right | (`safe left`) | (`safe right`) | (`unsafe left`) | (`unsafe right`)
+      value: ICSSRule | auto | normal | stretch | ICSSBaselinePositionRule | ICSSOverflowAndSelfPositionRule | left | right | (`safe left`) | (`safe right`) | (`unsafe left`) | (`unsafe right`) | String
     ): Self = this.set("justifySelf", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -2866,13 +2868,13 @@ object IRawStyleBase {
     def deleteMinWidth: Self = this.set("minWidth", js.undefined)
     
     @scala.inline
-    def setMixBlendMode(value: ICSSRule | IMixBlendModes): Self = this.set("mixBlendMode", value.asInstanceOf[js.Any])
+    def setMixBlendMode(value: ICSSRule | IMixBlendModes | String): Self = this.set("mixBlendMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMixBlendMode: Self = this.set("mixBlendMode", js.undefined)
     
     @scala.inline
-    def setObjectFit(value: ICSSRule | cover | contain | fill | none): Self = this.set("objectFit", value.asInstanceOf[js.Any])
+    def setObjectFit(value: ICSSRule | cover | contain | fill | none | String): Self = this.set("objectFit", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteObjectFit: Self = this.set("objectFit", js.undefined)
@@ -2884,13 +2886,13 @@ object IRawStyleBase {
     def deleteOpacity: Self = this.set("opacity", js.undefined)
     
     @scala.inline
-    def setOrder(value: ICSSRule | Double): Self = this.set("order", value.asInstanceOf[js.Any])
+    def setOrder(value: ICSSRule | Double | String): Self = this.set("order", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrder: Self = this.set("order", js.undefined)
     
     @scala.inline
-    def setOrphans(value: ICSSRule | Double): Self = this.set("orphans", value.asInstanceOf[js.Any])
+    def setOrphans(value: ICSSRule | Double | String): Self = this.set("orphans", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrphans: Self = this.set("orphans", js.undefined)
@@ -2926,19 +2928,19 @@ object IRawStyleBase {
     def deleteOverflowStyle: Self = this.set("overflowStyle", js.undefined)
     
     @scala.inline
-    def setOverflowWrap(value: ICSSRule | normal | `break-word`): Self = this.set("overflowWrap", value.asInstanceOf[js.Any])
+    def setOverflowWrap(value: ICSSRule | normal | `break-word` | String): Self = this.set("overflowWrap", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverflowWrap: Self = this.set("overflowWrap", js.undefined)
     
     @scala.inline
-    def setOverflowX(value: ICSSRule | auto | hidden | scroll | visible): Self = this.set("overflowX", value.asInstanceOf[js.Any])
+    def setOverflowX(value: ICSSRule | auto | hidden | scroll | visible | String): Self = this.set("overflowX", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverflowX: Self = this.set("overflowX", js.undefined)
     
     @scala.inline
-    def setOverflowY(value: ICSSRule | auto | hidden | scroll | visible): Self = this.set("overflowY", value.asInstanceOf[js.Any])
+    def setOverflowY(value: ICSSRule | auto | hidden | scroll | visible | String): Self = this.set("overflowY", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverflowY: Self = this.set("overflowY", js.undefined)
@@ -3070,7 +3072,7 @@ object IRawStyleBase {
     def deleteRegionFragment: Self = this.set("regionFragment", js.undefined)
     
     @scala.inline
-    def setResize(value: ICSSRule | none | both | horizontal | vertical | block | `inline`): Self = this.set("resize", value.asInstanceOf[js.Any])
+    def setResize(value: ICSSRule | none | both | horizontal | vertical | block | `inline` | String): Self = this.set("resize", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResize: Self = this.set("resize", js.undefined)
@@ -3136,13 +3138,13 @@ object IRawStyleBase {
     def deleteStroke: Self = this.set("stroke", js.undefined)
     
     @scala.inline
-    def setStrokeLinecap(value: ICSSRule | butt | round | square): Self = this.set("strokeLinecap", value.asInstanceOf[js.Any])
+    def setStrokeLinecap(value: ICSSRule | butt | round | square | String): Self = this.set("strokeLinecap", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStrokeLinecap: Self = this.set("strokeLinecap", js.undefined)
     
     @scala.inline
-    def setStrokeOpacity(value: ICSSRule | Double): Self = this.set("strokeOpacity", value.asInstanceOf[js.Any])
+    def setStrokeOpacity(value: ICSSRule | Double | String): Self = this.set("strokeOpacity", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStrokeOpacity: Self = this.set("strokeOpacity", js.undefined)
@@ -3394,7 +3396,7 @@ object IRawStyleBase {
     def deleteUserInput: Self = this.set("userInput", js.undefined)
     
     @scala.inline
-    def setUserSelect(value: ICSSRule | none | auto | text | all | contain): Self = this.set("userSelect", value.asInstanceOf[js.Any])
+    def setUserSelect(value: ICSSRule | none | auto | text | all | contain | String): Self = this.set("userSelect", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserSelect: Self = this.set("userSelect", js.undefined)
@@ -3466,7 +3468,7 @@ object IRawStyleBase {
     def deleteWhiteSpace: Self = this.set("whiteSpace", js.undefined)
     
     @scala.inline
-    def setWidows(value: ICSSRule | Double): Self = this.set("widows", value.asInstanceOf[js.Any])
+    def setWidows(value: ICSSRule | Double | String): Self = this.set("widows", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWidows: Self = this.set("widows", js.undefined)
@@ -3514,7 +3516,7 @@ object IRawStyleBase {
     def deleteWritingMode: Self = this.set("writingMode", js.undefined)
     
     @scala.inline
-    def setZIndex(value: ICSSRule | auto | Double): Self = this.set("zIndex", value.asInstanceOf[js.Any])
+    def setZIndex(value: ICSSRule | auto | Double | String): Self = this.set("zIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteZIndex: Self = this.set("zIndex", js.undefined)

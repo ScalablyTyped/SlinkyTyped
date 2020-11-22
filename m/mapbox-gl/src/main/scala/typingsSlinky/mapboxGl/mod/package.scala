@@ -17,11 +17,9 @@ package object mod {
     - typingsSlinky.mapboxGl.mod.HeatmapLayout
     - typingsSlinky.mapboxGl.mod.HillshadeLayout
   */
-  type AnyLayout = typingsSlinky.mapboxGl.mod._AnyLayout | typingsSlinky.mapboxGl.mod.BackgroundLayout | typingsSlinky.mapboxGl.mod.FillExtrusionLayout | typingsSlinky.mapboxGl.mod.RasterLayout | typingsSlinky.mapboxGl.mod.CircleLayout | typingsSlinky.mapboxGl.mod.HeatmapLayout | typingsSlinky.mapboxGl.mod.HillshadeLayout
+  type AnyLayout = typingsSlinky.mapboxGl.mod._AnyLayout | typingsSlinky.mapboxGl.mod.BackgroundLayout | typingsSlinky.mapboxGl.mod.FillExtrusionLayout | typingsSlinky.mapboxGl.mod.RasterLayout | typingsSlinky.mapboxGl.mod.HeatmapLayout | typingsSlinky.mapboxGl.mod.HillshadeLayout
   
   type BackgroundLayout = typingsSlinky.mapboxGl.mod.Layout
-  
-  type CircleLayout = typingsSlinky.mapboxGl.mod.Layout
   
   type EventData = org.scalablytyped.runtime.StringDictionary[js.Any]
   
@@ -33,13 +31,22 @@ package object mod {
   
   type HillshadeLayout = typingsSlinky.mapboxGl.mod.Layout
   
-  type LngLatBoundsLike = typingsSlinky.mapboxGl.mod.LngLatBounds | (js.Tuple2[typingsSlinky.mapboxGl.mod.LngLatLike, typingsSlinky.mapboxGl.mod.LngLatLike]) | (js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double])
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.mapboxGl.mod.LngLatBounds
+    - js.Tuple2[typingsSlinky.mapboxGl.mod.LngLatLike, typingsSlinky.mapboxGl.mod.LngLatLike]
+    - js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double]
+    - typingsSlinky.mapboxGl.mod.LngLatLike
+  */
+  type LngLatBoundsLike = typingsSlinky.mapboxGl.mod._LngLatBoundsLike | (js.Tuple2[
+    scala.Double | typingsSlinky.mapboxGl.mod.LngLatLike, 
+    scala.Double | typingsSlinky.mapboxGl.mod.LngLatLike
+  ]) | (js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double])
   
   /* Rewritten from type alias, can be one of: 
+    - js.Tuple2[scala.Double, scala.Double]
     - typingsSlinky.mapboxGl.mod.LngLat
     - typingsSlinky.mapboxGl.anon.Lat
     - typingsSlinky.mapboxGl.anon.Lon
-    - js.Tuple2[scala.Double, scala.Double]
   */
   type LngLatLike = typingsSlinky.mapboxGl.mod._LngLatLike | (js.Tuple2[scala.Double, scala.Double])
   

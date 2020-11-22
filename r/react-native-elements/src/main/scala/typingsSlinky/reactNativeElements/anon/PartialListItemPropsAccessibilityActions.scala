@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeElements.anon
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -11,7 +12,6 @@ import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -110,7 +110,7 @@ trait PartialListItemPropsAccessibilityActions extends js.Object {
   
   var input: js.UndefOr[InputProps] = js.native
   
-  var leftAvatar: js.UndefOr[PartialAvatarPropsAccessory | ReactElement] = js.native
+  var leftAvatar: js.UndefOr[PartialAvatarPropsActiveOpacity | ReactElement] = js.native
   
   var leftElement: js.UndefOr[ReactElement] = js.native
   
@@ -128,7 +128,7 @@ trait PartialListItemPropsAccessibilityActions extends js.Object {
   
   var onHideUnderlay: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   var onLongPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
   
@@ -146,7 +146,7 @@ trait PartialListItemPropsAccessibilityActions extends js.Object {
   
   var pressRetentionOffset: js.UndefOr[Insets] = js.native
   
-  var rightAvatar: js.UndefOr[PartialAvatarPropsAccessory | ReactElement] = js.native
+  var rightAvatar: js.UndefOr[PartialAvatarPropsActiveOpacity | ReactElement] = js.native
   
   var rightContentContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
@@ -455,7 +455,7 @@ object PartialListItemPropsAccessibilityActions {
     def setLeftAvatarReactElement(value: ReactElement): Self = this.set("leftAvatar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLeftAvatar(value: PartialAvatarPropsAccessory | ReactElement): Self = this.set("leftAvatar", value.asInstanceOf[js.Any])
+    def setLeftAvatar(value: PartialAvatarPropsActiveOpacity | ReactElement): Self = this.set("leftAvatar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLeftAvatar: Self = this.set("leftAvatar", js.undefined)
@@ -512,7 +512,7 @@ object PartialListItemPropsAccessibilityActions {
     def deleteOnHideUnderlay: Self = this.set("onHideUnderlay", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -569,7 +569,7 @@ object PartialListItemPropsAccessibilityActions {
     def setRightAvatarReactElement(value: ReactElement): Self = this.set("rightAvatar", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRightAvatar(value: PartialAvatarPropsAccessory | ReactElement): Self = this.set("rightAvatar", value.asInstanceOf[js.Any])
+    def setRightAvatar(value: PartialAvatarPropsActiveOpacity | ReactElement): Self = this.set("rightAvatar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRightAvatar: Self = this.set("rightAvatar", js.undefined)

@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import typingsSlinky.highcharts.highchartsNumbers.`0`
 import typingsSlinky.highcharts.highchartsNumbers.`100`
 import scala.scalajs.js
@@ -41,6 +42,8 @@ trait PlotBubbleOptions extends js.Object {
     * and the animation parameter under the API methods. The following
     * properties are supported:
     *
+    * - `defer`: The animation delay time in milliseconds.
+    *
     * - `duration`: The duration of the animation in milliseconds.
     *
     * - `easing`: Can be a string reference to an easing function set on the
@@ -49,7 +52,7 @@ trait PlotBubbleOptions extends js.Object {
     * Due to poor performance, animation is disabled in old IE browsers for
     * several chart types.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | PlotBubbleAnimationOptions | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highcharts, Highstock) If there are more points in the series than the
@@ -207,18 +210,6 @@ trait PlotBubbleOptions extends js.Object {
     * column is rendered blurry.
     */
   var crisp: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * (Highcharts, Highstock) When the series contains less points than the
-    * crop threshold, all points are drawn, even if the points fall outside the
-    * visible plot area at the current zoom. The advantage of drawing all
-    * points (including markers and columns), is that animation is performed on
-    * updates. On the other hand, when the series contains more points than the
-    * crop threshold, the series data is cropped to only contain points that
-    * fall within the plot area. The advantage of cropping away invisible
-    * points is to increase performance on large series.
-    */
-  var cropThreshold: js.UndefOr[Double] = js.native
   
   /**
     * (Highcharts, Highstock) You can set the cursor to "pointer" if you have
@@ -778,7 +769,7 @@ object PlotBubbleOptions {
     def deleteAllowPointSelect: Self = this.set("allowPointSelect", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PlotBubbleAnimationOptions | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)
@@ -890,12 +881,6 @@ object PlotBubbleOptions {
     
     @scala.inline
     def deleteCrisp: Self = this.set("crisp", js.undefined)
-    
-    @scala.inline
-    def setCropThreshold(value: Double): Self = this.set("cropThreshold", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCropThreshold: Self = this.set("cropThreshold", js.undefined)
     
     @scala.inline
     def setCursor(value: String | CursorValue): Self = this.set("cursor", value.asInstanceOf[js.Any])

@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "UnicodeCharacterRange")
 @js.native
 class UnicodeCharacterRange protected ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.UnicodeCharacterRange] {
+  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.UnicodeCharacterRange]
+     with _LexicalSymbol {
   def this(
     left: UnicodeCharacterLiteral,
     throughKeyword: Token[ThroughKeyword],

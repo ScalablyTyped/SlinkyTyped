@@ -11,25 +11,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class FieldDescriptorProto_ () extends Message {
   
-  def clearDefaultValue(): Unit = js.native
+  def clearDefaultValue(): FieldDescriptorProto = js.native
   
-  def clearExtendee(): Unit = js.native
+  def clearExtendee(): FieldDescriptorProto = js.native
   
-  def clearJsonName(): Unit = js.native
+  def clearJsonName(): FieldDescriptorProto = js.native
   
-  def clearLabel(): Unit = js.native
+  def clearLabel(): FieldDescriptorProto = js.native
   
-  def clearName(): Unit = js.native
+  def clearName(): FieldDescriptorProto = js.native
   
-  def clearNumber(): Unit = js.native
+  def clearNumber(): FieldDescriptorProto = js.native
   
-  def clearOneofIndex(): Unit = js.native
+  def clearOneofIndex(): FieldDescriptorProto = js.native
   
-  def clearOptions(): Unit = js.native
+  def clearOptions(): FieldDescriptorProto = js.native
   
-  def clearType(): Unit = js.native
+  def clearType(): FieldDescriptorProto = js.native
   
-  def clearTypeName(): Unit = js.native
+  def clearTypeName(): FieldDescriptorProto = js.native
   
   def getDefaultValue(): js.UndefOr[String] = js.native
   
@@ -71,24 +71,24 @@ class FieldDescriptorProto_ () extends Message {
   
   def hasTypeName(): Boolean = js.native
   
-  def setDefaultValue(value: String): Unit = js.native
+  def setDefaultValue(value: String): FieldDescriptorProto = js.native
   
-  def setExtendee(value: String): Unit = js.native
+  def setExtendee(value: String): FieldDescriptorProto = js.native
   
-  def setJsonName(value: String): Unit = js.native
+  def setJsonName(value: String): FieldDescriptorProto = js.native
   
-  def setLabel(value: Label): Unit = js.native
+  def setLabel(value: Label): FieldDescriptorProto = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): FieldDescriptorProto = js.native
   
-  def setNumber(value: Double): Unit = js.native
+  def setNumber(value: Double): FieldDescriptorProto = js.native
   
-  def setOneofIndex(value: Double): Unit = js.native
+  def setOneofIndex(value: Double): FieldDescriptorProto = js.native
   
-  def setOptions(): Unit = js.native
-  def setOptions(value: FieldOptions): Unit = js.native
+  def setOptions(): FieldDescriptorProto = js.native
+  def setOptions(value: FieldOptions): FieldDescriptorProto = js.native
   
-  def setType(value: Type): Unit = js.native
+  def setType(value: Type): FieldDescriptorProto = js.native
   
-  def setTypeName(value: String): Unit = js.native
+  def setTypeName(value: String): FieldDescriptorProto = js.native
 }

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Use an ASCII keyboard, with the standard keyboard layout.
+  * Use a keyboard supporting all characters except emoji. Defaults to English letters layout on iOS.
   */
 @JSGlobal("Titanium.UI.KEYBOARD_TYPE_ASCII")
 @js.native

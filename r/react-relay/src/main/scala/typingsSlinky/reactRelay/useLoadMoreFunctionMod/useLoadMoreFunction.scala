@@ -1,5 +1,7 @@
 package typingsSlinky.reactRelay.useLoadMoreFunctionMod
 
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.DisposeFn
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useLoadMoreFunction extends js.Object {
   
-  def apply(args: UseLoadMoreFunctionArgs): js.Tuple3[LoadMoreFn, Boolean, js.Function0[Unit]] = js.native
+  def apply[TQuery /* <: OperationType */](args: UseLoadMoreFunctionArgs): js.Tuple3[LoadMoreFn[TQuery], Boolean, DisposeFn] = js.native
 }

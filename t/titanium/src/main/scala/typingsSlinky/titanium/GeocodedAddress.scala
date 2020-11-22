@@ -14,22 +14,22 @@ trait GeocodedAddress extends js.Object {
   /**
     * Full address.
     */
-  var address: js.UndefOr[java.lang.String] = js.native
+  var address: js.UndefOr[String] = js.native
   
   /**
     * City name.
     */
-  var city: js.UndefOr[java.lang.String] = js.native
+  var city: js.UndefOr[String] = js.native
   
   /**
     * Country name.
     */
-  var country: js.UndefOr[java.lang.String] = js.native
+  var country: js.UndefOr[String] = js.native
   
   /**
     * Country code.
     */
-  var countryCode: js.UndefOr[java.lang.String] = js.native
+  var countryCode: js.UndefOr[String] = js.native
   
   /**
     * Latitude of the geocoded point.
@@ -44,27 +44,27 @@ trait GeocodedAddress extends js.Object {
   /**
     * Postal code
     */
-  var postalCode: js.UndefOr[java.lang.String] = js.native
+  var postalCode: js.UndefOr[String] = js.native
   
   /**
     * First line of region.
     */
-  var region1: js.UndefOr[java.lang.String] = js.native
+  var region1: js.UndefOr[String] = js.native
   
   /**
     * Not used.
     */
-  var region2: js.UndefOr[java.lang.String] = js.native
+  var region2: js.UndefOr[String] = js.native
   
   /**
     * Street name, without street address.
     */
-  var street: js.UndefOr[java.lang.String] = js.native
+  var street: js.UndefOr[String] = js.native
   
   /**
     * Street name.
     */
-  var street1: js.UndefOr[java.lang.String] = js.native
+  var street1: js.UndefOr[String] = js.native
 }
 object GeocodedAddress {
   
@@ -84,31 +84,31 @@ object GeocodedAddress {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setAddress(value: java.lang.String): Self = this.set("address", value.asInstanceOf[js.Any])
+    def setAddress(value: String): Self = this.set("address", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAddress: Self = this.set("address", js.undefined)
     
     @scala.inline
-    def setCity(value: java.lang.String): Self = this.set("city", value.asInstanceOf[js.Any])
+    def setCity(value: String): Self = this.set("city", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCity: Self = this.set("city", js.undefined)
     
     @scala.inline
-    def setCountry(value: java.lang.String): Self = this.set("country", value.asInstanceOf[js.Any])
+    def setCountry(value: String): Self = this.set("country", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCountry: Self = this.set("country", js.undefined)
     
     @scala.inline
-    def setCountryCode(value: java.lang.String): Self = this.set("countryCode", value.asInstanceOf[js.Any])
+    def setCountryCode(value: String): Self = this.set("countryCode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCountryCode: Self = this.set("countryCode", js.undefined)
@@ -126,31 +126,31 @@ object GeocodedAddress {
     def deleteLongitude: Self = this.set("longitude", js.undefined)
     
     @scala.inline
-    def setPostalCode(value: java.lang.String): Self = this.set("postalCode", value.asInstanceOf[js.Any])
+    def setPostalCode(value: String): Self = this.set("postalCode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePostalCode: Self = this.set("postalCode", js.undefined)
     
     @scala.inline
-    def setRegion1(value: java.lang.String): Self = this.set("region1", value.asInstanceOf[js.Any])
+    def setRegion1(value: String): Self = this.set("region1", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRegion1: Self = this.set("region1", js.undefined)
     
     @scala.inline
-    def setRegion2(value: java.lang.String): Self = this.set("region2", value.asInstanceOf[js.Any])
+    def setRegion2(value: String): Self = this.set("region2", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRegion2: Self = this.set("region2", js.undefined)
     
     @scala.inline
-    def setStreet(value: java.lang.String): Self = this.set("street", value.asInstanceOf[js.Any])
+    def setStreet(value: String): Self = this.set("street", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStreet: Self = this.set("street", js.undefined)
     
     @scala.inline
-    def setStreet1(value: java.lang.String): Self = this.set("street1", value.asInstanceOf[js.Any])
+    def setStreet1(value: String): Self = this.set("street1", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStreet1: Self = this.set("street1", js.undefined)

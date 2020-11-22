@@ -19,9 +19,20 @@ class FirebaseFunctions protected () extends js.Object {
   def httpsCallable(name: String, options: HttpsCallableOptions): HttpsCallable = js.native
   
   /**
+    * Modify this instance to communicate with the Cloud Functions emulator.
+    *
+    * Note: this must be called before this instance has been used to do any operations.
+    *
+    * @param host The emulator host (ex: localhost)
+    * @param port The emulator port (ex: 5001)
+    */
+  def useEmulator(host: String, port: Double): Unit = js.native
+  
+  /**
     * Changes this instance to point to a Cloud Functions emulator running
     * locally. See https://firebase.google.com/docs/functions/local-emulator
     *
+    * @deprecated Prefer the useEmulator(host, port) method.
     * @param origin The origin of the local emulator, such as
     * "http://localhost:5005".
     */

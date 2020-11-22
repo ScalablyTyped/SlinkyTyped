@@ -38,6 +38,11 @@ trait Backup extends js.Object {
   var DeleteTimestamp: js.UndefOr[js.Date] = js.native
   
   /**
+    * Specifies whether the service should exempt a backup from the retention policy for the cluster. True exempts a backup from the retention policy. False means the service applies the backup retention policy defined at the cluster.
+    */
+  var NeverExpires: js.UndefOr[Boolean] = js.native
+  
+  /**
     * The identifier (ID) of the source backup from which the new backup was copied.
     */
   var SourceBackup: js.UndefOr[BackupId] = js.native
@@ -112,6 +117,12 @@ object Backup {
     
     @scala.inline
     def deleteDeleteTimestamp: Self = this.set("DeleteTimestamp", js.undefined)
+    
+    @scala.inline
+    def setNeverExpires(value: Boolean): Self = this.set("NeverExpires", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNeverExpires: Self = this.set("NeverExpires", js.undefined)
     
     @scala.inline
     def setSourceBackup(value: BackupId): Self = this.set("SourceBackup", value.asInstanceOf[js.Any])

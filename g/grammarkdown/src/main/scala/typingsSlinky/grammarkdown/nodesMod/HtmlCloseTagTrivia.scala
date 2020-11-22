@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "HtmlCloseTagTrivia")
 @js.native
 class HtmlCloseTagTrivia protected ()
-  extends HtmlTriviaBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.HtmlCloseTagTrivia] {
+  extends HtmlTriviaBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.HtmlCloseTagTrivia]
+     with HtmlTrivia {
   def this(tagName: String) = this()
 }

@@ -1,5 +1,7 @@
 package typingsSlinky.multiaddr.mod
 
+import typingsSlinky.multiaddr.multiaddrStrings.IPv4
+import typingsSlinky.multiaddr.multiaddrStrings.IPv6
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +11,14 @@ trait NodeAddress extends js.Object {
   
   var address: String = js.native
   
-  var family: String = js.native
+  var family: IPv4 | IPv6 = js.native
   
   var port: String = js.native
 }
 object NodeAddress {
   
   @scala.inline
-  def apply(address: String, family: String, port: String): NodeAddress = {
+  def apply(address: String, family: IPv4 | IPv6, port: String): NodeAddress = {
     val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], family = family.asInstanceOf[js.Any], port = port.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeAddress]
   }
@@ -40,7 +42,7 @@ object NodeAddress {
     def setAddress(value: String): Self = this.set("address", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFamily(value: String): Self = this.set("family", value.asInstanceOf[js.Any])
+    def setFamily(value: IPv4 | IPv6): Self = this.set("family", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPort(value: String): Self = this.set("port", value.asInstanceOf[js.Any])

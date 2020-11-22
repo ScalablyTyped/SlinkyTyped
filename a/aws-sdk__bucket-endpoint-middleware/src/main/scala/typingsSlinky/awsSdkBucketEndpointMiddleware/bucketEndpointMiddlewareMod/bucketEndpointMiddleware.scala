@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object bucketEndpointMiddleware extends js.Object {
   
-  def apply(): BuildMiddleware[_, _, _] = js.native
+  def apply(): BuildMiddleware[_, _] = js.native
   def apply(
     hasForcePathStylePreformedBucketEndpointUseAccelerateEndpointUseDualstackEndpoint: bucketEndpointMiddlewareConfiguration
-  ): BuildMiddleware[_, _, _] = js.native
+  ): BuildMiddleware[_, _] = js.native
 }

@@ -9,7 +9,7 @@ trait BorderTopProps[TLength] extends js.Object {
   
   val borderTop: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTop<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BorderTopProps {
     }
     
     @scala.inline
+    def setBorderTopVarargs(value: js.Any*): Self = this.set("borderTop", js.Array(value :_*))
+    
+    @scala.inline
     def setBorderTop(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTop<TLength> */ _
         ]
     ): Self = this.set("borderTop", value.asInstanceOf[js.Any])
     

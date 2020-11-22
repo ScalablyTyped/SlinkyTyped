@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientKinesisBrowser
 
-import typingsSlinky.awsSdkTypes.protocolMod.Structure
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object consumerDescriptionMod extends js.Object {
   
   @JSName("_ConsumerDescription")
-  val ConsumerDescription: Structure = js.native
+  val ConsumerDescription: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _Structure_ */ js.Any = js.native
 }

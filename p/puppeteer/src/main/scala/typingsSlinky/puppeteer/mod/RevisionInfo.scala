@@ -16,7 +16,7 @@ trait RevisionInfo extends js.Object {
   /** whether the revision is locally available on disk */
   var local: Boolean = js.native
   
-  var product: Product = js.native
+  var product: Product_ = js.native
   
   /** The revision the info was created from */
   var revision: String = js.native
@@ -31,7 +31,7 @@ object RevisionInfo {
     executablePath: String,
     folderPath: String,
     local: Boolean,
-    product: Product,
+    product: Product_,
     revision: String,
     url: String
   ): RevisionInfo = {
@@ -64,7 +64,7 @@ object RevisionInfo {
     def setLocal(value: Boolean): Self = this.set("local", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setProduct(value: Product): Self = this.set("product", value.asInstanceOf[js.Any])
+    def setProduct(value: Product_): Self = this.set("product", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRevision(value: String): Self = this.set("revision", value.asInstanceOf[js.Any])

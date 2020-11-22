@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object call extends js.Object {
   
   def apply(method: String, url: String): HTTPResponse = js.native
-  def apply(method: String, url: String, options: js.UndefOr[scala.Nothing], asyncCallback: js.Function): HTTPResponse = js.native
+  def apply(method: String, url: String, options: js.UndefOr[scala.Nothing], asyncCallback: AsyncCallback): HTTPResponse = js.native
   def apply(method: String, url: String, options: Auth): HTTPResponse = js.native
-  def apply(method: String, url: String, options: Auth, asyncCallback: js.Function): HTTPResponse = js.native
+  def apply(method: String, url: String, options: Auth, asyncCallback: AsyncCallback): HTTPResponse = js.native
   def apply(method: String, url: String, options: HTTPRequest): HTTPResponse = js.native
-  def apply(method: String, url: String, options: HTTPRequest, asyncCallback: js.Function): HTTPResponse = js.native
+  def apply(method: String, url: String, options: HTTPRequest, asyncCallback: AsyncCallback): HTTPResponse = js.native
 }

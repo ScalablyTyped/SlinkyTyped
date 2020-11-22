@@ -7,8 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Limiter extends js.Object {
   
+  /**
+    * Get values and header / status code and invoke `fn(err, info)`.
+    */
   def get(fn: js.Function2[/* err */ js.Any, /* info */ LimiterInfo, Unit]): Unit = js.native
   
+  /**
+    * Inspect implementation
+    */
   def inspect(): String = js.native
 }
 object Limiter {

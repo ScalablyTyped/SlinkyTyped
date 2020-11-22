@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ToolbarProps extends js.Object {
+trait ToolbarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] extends js.Object {
   
   var children: js.UndefOr[ReactElement] = js.native
   
@@ -23,5 +23,5 @@ trait ToolbarProps extends js.Object {
   
   var view: View = js.native
   
-  var views: ViewsProps = js.native
+  var views: ViewsProps[TEvent, TResource] = js.native
 }

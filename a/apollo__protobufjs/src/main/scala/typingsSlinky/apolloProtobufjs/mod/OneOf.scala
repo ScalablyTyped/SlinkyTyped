@@ -17,10 +17,14 @@ class OneOf protected () extends ReflectionObject {
     */
   def this(name: String) = this()
   def this(name: String, fieldNames: js.Array[String]) = this()
-  def this(name: String, fieldNames: StringDictionary[js.Any]) = this()
-  def this(name: String, fieldNames: js.UndefOr[scala.Nothing], options: StringDictionary[js.Any]) = this()
-  def this(name: String, fieldNames: js.Array[String], options: StringDictionary[js.Any]) = this()
-  def this(name: String, fieldNames: StringDictionary[js.Any], options: StringDictionary[js.Any]) = this()
+  def this(name: String, fieldNames: StringDictionary[js.UndefOr[js.Any]]) = this()
+  def this(name: String, fieldNames: js.UndefOr[scala.Nothing], options: StringDictionary[js.UndefOr[js.Any]]) = this()
+  def this(name: String, fieldNames: js.Array[String], options: StringDictionary[js.UndefOr[js.Any]]) = this()
+  def this(
+    name: String,
+    fieldNames: StringDictionary[js.UndefOr[js.Any]],
+    options: StringDictionary[js.UndefOr[js.Any]]
+  ) = this()
   def this(
     name: String,
     fieldNames: js.UndefOr[scala.Nothing],
@@ -30,21 +34,26 @@ class OneOf protected () extends ReflectionObject {
   def this(
     name: String,
     fieldNames: js.UndefOr[scala.Nothing],
-    options: StringDictionary[js.Any],
+    options: StringDictionary[js.UndefOr[js.Any]],
     comment: String
   ) = this()
   def this(name: String, fieldNames: js.Array[String], options: js.UndefOr[scala.Nothing], comment: String) = this()
-  def this(name: String, fieldNames: js.Array[String], options: StringDictionary[js.Any], comment: String) = this()
   def this(
     name: String,
-    fieldNames: StringDictionary[js.Any],
+    fieldNames: js.Array[String],
+    options: StringDictionary[js.UndefOr[js.Any]],
+    comment: String
+  ) = this()
+  def this(
+    name: String,
+    fieldNames: StringDictionary[js.UndefOr[js.Any]],
     options: js.UndefOr[scala.Nothing],
     comment: String
   ) = this()
   def this(
     name: String,
-    fieldNames: StringDictionary[js.Any],
-    options: StringDictionary[js.Any],
+    fieldNames: StringDictionary[js.UndefOr[js.Any]],
+    options: StringDictionary[js.UndefOr[js.Any]],
     comment: String
   ) = this()
   

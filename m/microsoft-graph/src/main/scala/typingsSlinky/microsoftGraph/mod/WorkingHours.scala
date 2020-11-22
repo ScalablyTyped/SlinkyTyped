@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkingHours extends js.Object {
   
   // The days of the week on which the user works.
-  var daysOfWeek: js.UndefOr[js.Array[DayOfWeek]] = js.native
+  var daysOfWeek: js.UndefOr[NullableOption[js.Array[DayOfWeek]]] = js.native
   
   // The time of the day that the user stops working.
-  var endTime: js.UndefOr[String] = js.native
+  var endTime: js.UndefOr[NullableOption[String]] = js.native
   
   // The time of the day that the user starts working.
-  var startTime: js.UndefOr[String] = js.native
+  var startTime: js.UndefOr[NullableOption[String]] = js.native
   
   // The time zone to which the working hours apply.
-  var timeZone: js.UndefOr[TimeZoneBase] = js.native
+  var timeZone: js.UndefOr[NullableOption[TimeZoneBase]] = js.native
 }
 object WorkingHours {
   
@@ -46,27 +46,39 @@ object WorkingHours {
     def setDaysOfWeekVarargs(value: DayOfWeek*): Self = this.set("daysOfWeek", js.Array(value :_*))
     
     @scala.inline
-    def setDaysOfWeek(value: js.Array[DayOfWeek]): Self = this.set("daysOfWeek", value.asInstanceOf[js.Any])
+    def setDaysOfWeek(value: NullableOption[js.Array[DayOfWeek]]): Self = this.set("daysOfWeek", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDaysOfWeek: Self = this.set("daysOfWeek", js.undefined)
     
     @scala.inline
-    def setEndTime(value: String): Self = this.set("endTime", value.asInstanceOf[js.Any])
+    def setDaysOfWeekNull: Self = this.set("daysOfWeek", null)
+    
+    @scala.inline
+    def setEndTime(value: NullableOption[String]): Self = this.set("endTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEndTime: Self = this.set("endTime", js.undefined)
     
     @scala.inline
-    def setStartTime(value: String): Self = this.set("startTime", value.asInstanceOf[js.Any])
+    def setEndTimeNull: Self = this.set("endTime", null)
+    
+    @scala.inline
+    def setStartTime(value: NullableOption[String]): Self = this.set("startTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStartTime: Self = this.set("startTime", js.undefined)
     
     @scala.inline
-    def setTimeZone(value: TimeZoneBase): Self = this.set("timeZone", value.asInstanceOf[js.Any])
+    def setStartTimeNull: Self = this.set("startTime", null)
+    
+    @scala.inline
+    def setTimeZone(value: NullableOption[TimeZoneBase]): Self = this.set("timeZone", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTimeZone: Self = this.set("timeZone", js.undefined)
+    
+    @scala.inline
+    def setTimeZoneNull: Self = this.set("timeZone", null)
   }
 }

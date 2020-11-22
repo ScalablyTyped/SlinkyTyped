@@ -1,7 +1,9 @@
 package typingsSlinky.materialToolbar.adapterMod
 
-import typingsSlinky.materialToolbar.anon.FlexibleExpansionRatio
-import typingsSlinky.std.EventListener
+import typingsSlinky.materialBase.typesMod.SpecificEventListener
+import typingsSlinky.materialToolbar.materialToolbarStrings.resize
+import typingsSlinky.materialToolbar.materialToolbarStrings.scroll
+import typingsSlinky.materialToolbar.typesMod.MDCToolbarEventDetail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,9 +13,11 @@ trait MDCToolbarAdapter extends js.Object {
   
   def addClass(className: String): Unit = js.native
   
-  def deregisterResizeHandler(handler: EventListener): Unit = js.native
+  @JSName("deregisterResizeHandler")
+  def deregisterResizeHandler_resize(handler: SpecificEventListener[resize]): Unit = js.native
   
-  def deregisterScrollHandler(handler: EventListener): Unit = js.native
+  @JSName("deregisterScrollHandler")
+  def deregisterScrollHandler_scroll(handler: SpecificEventListener[scroll]): Unit = js.native
   
   def getFirstRowElementOffsetHeight(): Double = js.native
   
@@ -25,11 +29,13 @@ trait MDCToolbarAdapter extends js.Object {
   
   def hasClass(className: String): Boolean = js.native
   
-  def notifyChange(evtData: FlexibleExpansionRatio): Unit = js.native
+  def notifyChange(evtData: MDCToolbarEventDetail): Unit = js.native
   
-  def registerResizeHandler(handler: EventListener): Unit = js.native
+  @JSName("registerResizeHandler")
+  def registerResizeHandler_resize(handler: SpecificEventListener[resize]): Unit = js.native
   
-  def registerScrollHandler(handler: EventListener): Unit = js.native
+  @JSName("registerScrollHandler")
+  def registerScrollHandler_scroll(handler: SpecificEventListener[scroll]): Unit = js.native
   
   def removeClass(className: String): Unit = js.native
   
@@ -46,16 +52,16 @@ object MDCToolbarAdapter {
   @scala.inline
   def apply(
     addClass: String => Unit,
-    deregisterResizeHandler: EventListener => Unit,
-    deregisterScrollHandler: EventListener => Unit,
+    deregisterResizeHandler: SpecificEventListener[resize] => Unit,
+    deregisterScrollHandler: SpecificEventListener[scroll] => Unit,
     getFirstRowElementOffsetHeight: () => Double,
     getOffsetHeight: () => Double,
     getViewportScrollY: () => Double,
     getViewportWidth: () => Double,
     hasClass: String => Boolean,
-    notifyChange: FlexibleExpansionRatio => Unit,
-    registerResizeHandler: EventListener => Unit,
-    registerScrollHandler: EventListener => Unit,
+    notifyChange: MDCToolbarEventDetail => Unit,
+    registerResizeHandler: SpecificEventListener[resize] => Unit,
+    registerScrollHandler: SpecificEventListener[scroll] => Unit,
     removeClass: String => Unit,
     setStyle: (String, String) => Unit,
     setStyleForFixedAdjustElement: (String, String) => Unit,
@@ -85,10 +91,10 @@ object MDCToolbarAdapter {
     def setAddClass(value: String => Unit): Self = this.set("addClass", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setDeregisterResizeHandler(value: EventListener => Unit): Self = this.set("deregisterResizeHandler", js.Any.fromFunction1(value))
+    def setDeregisterResizeHandler(value: SpecificEventListener[resize] => Unit): Self = this.set("deregisterResizeHandler", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setDeregisterScrollHandler(value: EventListener => Unit): Self = this.set("deregisterScrollHandler", js.Any.fromFunction1(value))
+    def setDeregisterScrollHandler(value: SpecificEventListener[scroll] => Unit): Self = this.set("deregisterScrollHandler", js.Any.fromFunction1(value))
     
     @scala.inline
     def setGetFirstRowElementOffsetHeight(value: () => Double): Self = this.set("getFirstRowElementOffsetHeight", js.Any.fromFunction0(value))
@@ -106,13 +112,13 @@ object MDCToolbarAdapter {
     def setHasClass(value: String => Boolean): Self = this.set("hasClass", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setNotifyChange(value: FlexibleExpansionRatio => Unit): Self = this.set("notifyChange", js.Any.fromFunction1(value))
+    def setNotifyChange(value: MDCToolbarEventDetail => Unit): Self = this.set("notifyChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setRegisterResizeHandler(value: EventListener => Unit): Self = this.set("registerResizeHandler", js.Any.fromFunction1(value))
+    def setRegisterResizeHandler(value: SpecificEventListener[resize] => Unit): Self = this.set("registerResizeHandler", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setRegisterScrollHandler(value: EventListener => Unit): Self = this.set("registerScrollHandler", js.Any.fromFunction1(value))
+    def setRegisterScrollHandler(value: SpecificEventListener[scroll] => Unit): Self = this.set("registerScrollHandler", js.Any.fromFunction1(value))
     
     @scala.inline
     def setRemoveClass(value: String => Unit): Self = this.set("removeClass", js.Any.fromFunction1(value))

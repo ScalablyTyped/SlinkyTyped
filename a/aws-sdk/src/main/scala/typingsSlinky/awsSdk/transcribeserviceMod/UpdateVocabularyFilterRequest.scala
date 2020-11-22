@@ -13,7 +13,7 @@ trait UpdateVocabularyFilterRequest extends js.Object {
   var VocabularyFilterFileUri: js.UndefOr[Uri] = js.native
   
   /**
-    * The name of the vocabulary filter to update. If you try to update a vocabulary filter with the same name as a previous vocabulary filter you will receive a ConflictException error.
+    * The name of the vocabulary filter to update. If you try to update a vocabulary filter with the same name as another vocabulary filter, you get a ConflictException error.
     */
   var VocabularyFilterName: typingsSlinky.awsSdk.transcribeserviceMod.VocabularyFilterName = js.native
   

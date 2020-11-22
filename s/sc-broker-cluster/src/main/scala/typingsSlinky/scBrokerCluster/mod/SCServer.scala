@@ -1,6 +1,5 @@
 package typingsSlinky.scBrokerCluster.mod
 
-import typingsSlinky.socketclusterServer.serverMod.CodecEngine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SCServer extends js.Object {
   
-  var codec: CodecEngine = js.native
+  var codec: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CodecEngine */ js.Any = js.native
 }
 object SCServer {
   
   @scala.inline
-  def apply(codec: CodecEngine): SCServer = {
+  def apply(
+    codec: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CodecEngine */ js.Any
+  ): SCServer = {
     val __obj = js.Dynamic.literal(codec = codec.asInstanceOf[js.Any])
     __obj.asInstanceOf[SCServer]
   }
@@ -34,6 +35,8 @@ object SCServer {
     }
     
     @scala.inline
-    def setCodec(value: CodecEngine): Self = this.set("codec", value.asInstanceOf[js.Any])
+    def setCodec(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CodecEngine */ js.Any
+    ): Self = this.set("codec", value.asInstanceOf[js.Any])
   }
 }

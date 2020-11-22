@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class CatalogQuerySortedAttribute () extends js.Object {
   
   /**
-    * The attribute whose value should be used as the sort key.
+    * The attribute whose value is used as the sort key.
     */
   var attribute_name: String = js.native
   

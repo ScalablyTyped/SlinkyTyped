@@ -11,5 +11,5 @@ class SourceContext_ () extends Message {
   
   def getFileName(): String = js.native
   
-  def setFileName(value: String): Unit = js.native
+  def setFileName(value: String): SourceContext = js.native
 }

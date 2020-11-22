@@ -15,6 +15,8 @@ object ScriptElementKindModifier extends js.Object {
   
   /* "declare" */ val ambientModifier: typingsSlinky.typescript.mod.ScriptElementKindModifier.ambientModifier with String = js.native
   
+  /* "deprecated" */ val deprecatedModifier: typingsSlinky.typescript.mod.ScriptElementKindModifier.deprecatedModifier with String = js.native
+  
   /* ".d.ts" */ val dtsModifier: typingsSlinky.typescript.mod.ScriptElementKindModifier.dtsModifier with String = js.native
   
   /* "export" */ val exportedModifier: typingsSlinky.typescript.mod.ScriptElementKindModifier.exportedModifier with String = js.native

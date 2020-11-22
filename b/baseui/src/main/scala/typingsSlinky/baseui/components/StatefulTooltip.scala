@@ -25,7 +25,7 @@ import typingsSlinky.baseui.baseuiStrings.tooltip
 import typingsSlinky.baseui.baseuiStrings.top
 import typingsSlinky.baseui.baseuiStrings.topLeft
 import typingsSlinky.baseui.baseuiStrings.topRight
-import typingsSlinky.baseui.popoverMod.Overrides
+import typingsSlinky.baseui.popoverMod.PopoverOverrides
 import typingsSlinky.baseui.popoverMod.State
 import typingsSlinky.baseui.tooltipMod.StatefulTooltipProps
 import scala.scalajs.js
@@ -98,12 +98,15 @@ object StatefulTooltip {
     def onOpen(value: () => _): this.type = set("onOpen", js.Any.fromFunction0(value))
     
     @scala.inline
-    def overrides(value: Overrides): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: PopoverOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def placement(
       value: topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
     ): this.type = set("placement", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def popoverMargin(value: Double): this.type = set("popoverMargin", value.asInstanceOf[js.Any])
     
     @scala.inline
     def popperOptions(value: js.Any): this.type = set("popperOptions", value.asInstanceOf[js.Any])

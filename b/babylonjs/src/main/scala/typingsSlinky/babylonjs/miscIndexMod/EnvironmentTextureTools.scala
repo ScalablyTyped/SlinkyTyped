@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.miscIndexMod
 
-import typingsSlinky.babylonjs.cubeTextureMod.CubeTexture
+import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.environmentTextureToolsMod.EnvironmentTextureInfo
 import typingsSlinky.babylonjs.internalTextureMod.InternalTexture
 import typingsSlinky.babylonjs.sphericalPolynomialMod.SphericalPolynomial
@@ -23,7 +23,7 @@ object EnvironmentTextureTools extends js.Object {
     * @param texture defines the cube texture to convert in env file
     * @return a promise containing the environment data if succesfull.
     */
-  def CreateEnvTextureAsync(texture: CubeTexture): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def CreateEnvTextureAsync(texture: BaseTexture): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
   /**
     * Creates the ArrayBufferViews used for initializing environment texture image data.

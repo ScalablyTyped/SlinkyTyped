@@ -136,7 +136,7 @@ object global extends js.Object {
   @js.native
   object URL extends js.Object {
     
-    def createObjectURL(blob: Blob): typingsSlinky.reactNative.URL = js.native
+    def createObjectURL(blob: Blob): String = js.native
     
     def revokeObjectURL(url: String): Unit = js.native
   }

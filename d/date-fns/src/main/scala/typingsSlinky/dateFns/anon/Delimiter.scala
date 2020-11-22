@@ -11,6 +11,8 @@ trait Delimiter extends js.Object {
   
   var format: js.UndefOr[js.Array[String]] = js.native
   
+  var locale: js.UndefOr[typingsSlinky.dateFns.mod.Locale] = js.native
+  
   var zero: js.UndefOr[Boolean] = js.native
 }
 object Delimiter {
@@ -50,6 +52,12 @@ object Delimiter {
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
+    
+    @scala.inline
+    def setLocale(value: typingsSlinky.dateFns.mod.Locale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
     
     @scala.inline
     def setZero(value: Boolean): Self = this.set("zero", value.asInstanceOf[js.Any])

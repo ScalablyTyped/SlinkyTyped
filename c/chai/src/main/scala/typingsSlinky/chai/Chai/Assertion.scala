@@ -156,6 +156,11 @@ trait Assertion
   @JSName("false")
   var false_Original: Assertion = js.native
   
+  def finite(`type`: String): Assertion = js.native
+  def finite(`type`: String, message: String): Assertion = js.native
+  @JSName("finite")
+  var finite_Original: Assertion = js.native
+  
   def frozen(`type`: String): Assertion = js.native
   def frozen(`type`: String, message: String): Assertion = js.native
   @JSName("frozen")

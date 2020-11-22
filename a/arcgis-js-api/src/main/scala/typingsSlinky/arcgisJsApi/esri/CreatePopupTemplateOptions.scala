@@ -2,6 +2,7 @@ package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.std.Object
 import typingsSlinky.std.PropertyKey
+import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreatePopupTemplateOptions extends Object {
   
   /**
-    * An array of field types to ignore when creating the popup. System fields such as `Shape_Area` and `Shape_length`, in addition to `geometry`, `blob`, `raster`, `guid` and `xml` field types are automatically ignored.
+    * An array of field types to ignore when creating the popup.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-support-popupUtils.html#CreatePopupTemplateOptions)
     */
@@ -21,7 +22,7 @@ trait CreatePopupTemplateOptions extends Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-support-popupUtils.html#CreatePopupTemplateOptions)
     */
-  var visibleFieldNames: js.UndefOr[js.Any] = js.native
+  var visibleFieldNames: js.UndefOr[Set[String]] = js.native
 }
 object CreatePopupTemplateOptions {
   
@@ -60,7 +61,7 @@ object CreatePopupTemplateOptions {
     def deleteIgnoreFieldTypes: Self = this.set("ignoreFieldTypes", js.undefined)
     
     @scala.inline
-    def setVisibleFieldNames(value: js.Any): Self = this.set("visibleFieldNames", value.asInstanceOf[js.Any])
+    def setVisibleFieldNames(value: Set[String]): Self = this.set("visibleFieldNames", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVisibleFieldNames: Self = this.set("visibleFieldNames", js.undefined)

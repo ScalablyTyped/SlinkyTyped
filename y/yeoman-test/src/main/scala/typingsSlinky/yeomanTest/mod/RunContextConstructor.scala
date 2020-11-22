@@ -2,6 +2,7 @@ package typingsSlinky.yeomanTest.mod
 
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.yeomanGenerator.mod.GeneratorOptions
 import typingsSlinky.yeomanGenerator.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,9 +17,12 @@ trait RunContextConstructor
   *                                      is provided, then namespace is assumed to be
   *                                      'gen:test' in all cases
   */
-Instantiable1[(/* Generator */ Constructor[^]) | (/* Generator */ String), RunContext]
+Instantiable1[
+      (/* Generator */ Constructor[^[GeneratorOptions]]) | (/* Generator */ String), 
+      RunContext
+    ]
      with Instantiable2[
-      (/* Generator */ Constructor[^]) | (/* Generator */ String), 
+      (/* Generator */ Constructor[^[GeneratorOptions]]) | (/* Generator */ String), 
       /* settings */ RunContextSettings, 
       RunContext
     ]

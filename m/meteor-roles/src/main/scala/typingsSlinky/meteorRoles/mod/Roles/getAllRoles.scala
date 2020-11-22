@@ -15,5 +15,5 @@ object getAllRoles extends js.Object {
     * @method getAllRoles
     * @return {Cursor} cursor of existing roles
     */
-  def apply(): Cursor[Role] = js.native
+  def apply(): Cursor[Role, Role] = js.native
 }

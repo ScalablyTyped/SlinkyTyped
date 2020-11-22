@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WindowsInformationProtectionAppLockerFile extends Entity {
   
   // The friendly name
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // File as a byte array
-  var file: js.UndefOr[Double] = js.native
+  var file: js.UndefOr[NullableOption[Double]] = js.native
   
   // SHA256 hash of the file
-  var fileHash: js.UndefOr[String] = js.native
+  var fileHash: js.UndefOr[NullableOption[String]] = js.native
   
   // Version of the entity.
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[NullableOption[String]] = js.native
 }
 object WindowsInformationProtectionAppLockerFile {
   
@@ -43,27 +43,39 @@ object WindowsInformationProtectionAppLockerFile {
     }
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
-    def setFile(value: Double): Self = this.set("file", value.asInstanceOf[js.Any])
+    def setDisplayNameNull: Self = this.set("displayName", null)
+    
+    @scala.inline
+    def setFile(value: NullableOption[Double]): Self = this.set("file", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFile: Self = this.set("file", js.undefined)
     
     @scala.inline
-    def setFileHash(value: String): Self = this.set("fileHash", value.asInstanceOf[js.Any])
+    def setFileNull: Self = this.set("file", null)
+    
+    @scala.inline
+    def setFileHash(value: NullableOption[String]): Self = this.set("fileHash", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFileHash: Self = this.set("fileHash", js.undefined)
     
     @scala.inline
-    def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
+    def setFileHashNull: Self = this.set("fileHash", null)
+    
+    @scala.inline
+    def setVersion(value: NullableOption[String]): Self = this.set("version", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVersion: Self = this.set("version", js.undefined)
+    
+    @scala.inline
+    def setVersionNull: Self = this.set("version", null)
   }
 }

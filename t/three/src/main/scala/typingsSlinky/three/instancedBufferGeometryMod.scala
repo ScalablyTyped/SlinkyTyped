@@ -16,6 +16,9 @@ object instancedBufferGeometryMod extends js.Object {
     @JSName("groups")
     var groups_InstancedBufferGeometry: js.Array[Instances] = js.native
     
+    /**
+    	 * @default Infinity
+    	 */
     var instanceCount: Double = js.native
   }
 }

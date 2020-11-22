@@ -4,8 +4,6 @@ import typingsSlinky.bip174.interfacesMod.KeyValue
 import typingsSlinky.bip174.interfacesMod.PsbtGlobalUpdate
 import typingsSlinky.bip174.interfacesMod.PsbtInputUpdate
 import typingsSlinky.bip174.interfacesMod.PsbtOutputUpdate
-import typingsSlinky.bip174.interfacesMod.TransactionInput
-import typingsSlinky.bip174.interfacesMod.TransactionOutput
 import typingsSlinky.bitcoinjsLib.ecpairMod.Signer
 import typingsSlinky.bitcoinjsLib.ecpairMod.SignerAsync
 import typingsSlinky.bitcoinjsLib.transactionMod.Transaction
@@ -55,11 +53,21 @@ class Psbt () extends js.Object {
   
   def getFeeRate(): Double = js.native
   
+  def getInputType(inputIndex: Double): AllScriptType = js.native
+  
   val inputCount: Double = js.native
+  
+  def inputHasHDKey(inputIndex: Double, root: HDSigner): Boolean = js.native
+  
+  def inputHasPubkey(inputIndex: Double, pubkey: Buffer): Boolean = js.native
   
   var locktime: Double = js.native
   
   var opts: js.Any = js.native
+  
+  def outputHasHDKey(outputIndex: Double, root: HDSigner): Boolean = js.native
+  
+  def outputHasPubkey(outputIndex: Double, pubkey: Buffer): Boolean = js.native
   
   def setInputSequence(inputIndex: Double, sequence: Double): this.type = js.native
   
@@ -107,9 +115,9 @@ class Psbt () extends js.Object {
   
   def toHex(): String = js.native
   
-  val txInputs: js.Array[TransactionInput] = js.native
+  val txInputs: js.Array[PsbtTxInput] = js.native
   
-  val txOutputs: js.Array[TransactionOutput] = js.native
+  val txOutputs: js.Array[PsbtTxOutput] = js.native
   
   def updateGlobal(updateData: PsbtGlobalUpdate): this.type = js.native
   

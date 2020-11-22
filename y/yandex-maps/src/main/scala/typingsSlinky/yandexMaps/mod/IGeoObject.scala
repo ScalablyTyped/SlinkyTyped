@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.yandexMaps.mod.IEventEmitter because Already inherited
 - typingsSlinky.yandexMaps.mod.ICustomizable because var conflicts: events. Inlined options */ @js.native
-trait IGeoObject
+trait IGeoObject[T]
   extends IChild[IControlParent]
      with IParentOnMap {
   
-  var geometry: IGeometry | Null = js.native
+  var geometry: T | Null = js.native
   
   def getOverlay(): js.Promise[IOverlay | Null] = js.native
   

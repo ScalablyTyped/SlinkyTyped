@@ -25,16 +25,12 @@ trait PermissionState extends js.Object {
   val function: js.UndefOr[Input[String | Function]] = js.native
   
   /**
-    * The principal who is getting this permission.
-    * e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
-    * such as `events.amazonaws.com` or `sns.amazonaws.com`.
+    * The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
     */
   val principal: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Query parameter to specify function version or alias name.
-    * The permission will then apply to the specific qualified ARN.
-    * e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
+    * Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
     */
   val qualifier: js.UndefOr[Input[String]] = js.native
   

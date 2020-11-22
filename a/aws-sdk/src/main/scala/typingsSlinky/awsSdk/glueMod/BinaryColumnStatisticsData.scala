@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BinaryColumnStatisticsData extends js.Object {
   
   /**
-    * Average length of the column.
+    * The average bit sequence length in the column.
     */
   var AverageLength: NonNegativeDouble = js.native
   
   /**
-    * Maximum length of the column.
+    * The size of the longest bit sequence in the column.
     */
   var MaximumLength: NonNegativeLong = js.native
   
   /**
-    * Number of nulls.
+    * The number of null values in the column.
     */
   var NumberOfNulls: NonNegativeLong = js.native
 }

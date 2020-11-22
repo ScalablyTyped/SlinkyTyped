@@ -3,7 +3,6 @@ package typingsSlinky.pollyjsCore.mod
 import typingsSlinky.pollyjsCore.anon.Body
 import typingsSlinky.pollyjsCore.anon.Dictkey
 import typingsSlinky.pollyjsCore.anon.DisableSortingHarEntries
-import typingsSlinky.pollyjsCore.anon.TypeofAdapter
 import typingsSlinky.pollyjsCore.anon.TypeofPersister
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +13,11 @@ trait PollyConfig extends js.Object {
   
   var adapterOptions: js.UndefOr[Dictkey] = js.native
   
-  var adapters: js.UndefOr[js.Array[String | TypeofAdapter]] = js.native
+  var adapters: js.UndefOr[
+    js.Array[
+      String | (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Adapter */ _)
+    ]
+  ] = js.native
   
   var expiresIn: js.UndefOr[String | Null] = js.native
   
@@ -70,10 +73,14 @@ object PollyConfig {
     def deleteAdapterOptions: Self = this.set("adapterOptions", js.undefined)
     
     @scala.inline
-    def setAdaptersVarargs(value: (String | TypeofAdapter)*): Self = this.set("adapters", js.Array(value :_*))
+    def setAdaptersVarargs(value: (String | js.Any)*): Self = this.set("adapters", js.Array(value :_*))
     
     @scala.inline
-    def setAdapters(value: js.Array[String | TypeofAdapter]): Self = this.set("adapters", value.asInstanceOf[js.Any])
+    def setAdapters(
+      value: js.Array[
+          String | (/* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Adapter */ _)
+        ]
+    ): Self = this.set("adapters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAdapters: Self = this.set("adapters", js.undefined)

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateGatewayInformationInput extends js.Object {
   
   /**
-    * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that you want to use to monitor and log events in the gateway. For more information, see What is Amazon CloudWatch logs?.
+    * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that you want to use to monitor and log events in the gateway. For more information, see What is Amazon CloudWatch Logs? 
     */
   var CloudWatchLogGroupARN: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.CloudWatchLogGroupARN] = js.native
   

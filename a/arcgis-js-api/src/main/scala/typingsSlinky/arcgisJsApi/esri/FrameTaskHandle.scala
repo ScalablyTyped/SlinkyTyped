@@ -13,8 +13,6 @@ trait FrameTaskHandle extends Object {
     * Pause the execution the frame task at every frame.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-scheduling.html#FrameTaskHandle)
-    *
-    *
     */
   def pause(): Unit = js.native
   
@@ -22,8 +20,6 @@ trait FrameTaskHandle extends Object {
     * Removes the frame task.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-scheduling.html#FrameTaskHandle)
-    *
-    *
     */
   def remove(): Unit = js.native
   
@@ -31,8 +27,6 @@ trait FrameTaskHandle extends Object {
     * Resumes the execution the frame task.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-scheduling.html#FrameTaskHandle)
-    *
-    *
     */
   def resume(): Unit = js.native
 }

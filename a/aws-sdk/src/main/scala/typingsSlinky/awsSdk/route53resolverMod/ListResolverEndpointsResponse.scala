@@ -18,7 +18,7 @@ trait ListResolverEndpointsResponse extends js.Object {
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.NextToken] = js.native
   
   /**
-    * The resolver endpoints that were created by using the current AWS account, and that match the specified filters, if any.
+    * The Resolver endpoints that were created by using the current AWS account, and that match the specified filters, if any.
     */
   var ResolverEndpoints: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.ResolverEndpoints] = js.native
 }

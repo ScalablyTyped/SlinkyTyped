@@ -11,16 +11,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservableArray<any> * / any */ @js.native
 trait CollectionObservable extends js.Object {
   
-  def collection(): Collection[Model[_, ModelSetOptions]] = js.native
-  def collection(colleciton: Collection[Model[_, ModelSetOptions]]): js.Any = js.native
+  def collection(): Collection[Model[_, ModelSetOptions, js.Object]] = js.native
+  def collection(colleciton: Collection[Model[_, ModelSetOptions, js.Object]]): js.Any = js.native
   
   def comparator(comparatorFunction: js.Any): js.Any = js.native
   
   def destroy(): js.Any = js.native
   
-  def filters(id: js.Any): Model[_, ModelSetOptions] = js.native
+  def filters(id: js.Any): Model[_, ModelSetOptions, js.Object] = js.native
   def filters(ids: js.Array[_]): CollectionObservable = js.native
-  def filters(iterator: js.Function1[/* element */ Model[_, ModelSetOptions], Boolean]): CollectionObservable = js.native
+  def filters(iterator: js.Function1[/* element */ Model[_, ModelSetOptions, js.Object], Boolean]): CollectionObservable = js.native
   
   def hasViewModels(): Boolean = js.native
   
@@ -28,5 +28,5 @@ trait CollectionObservable extends js.Object {
   
   def sortAttribute(attr: String): js.Any = js.native
   
-  def viewModelByModel(model: Model[_, ModelSetOptions]): ViewModel = js.native
+  def viewModelByModel(model: Model[_, ModelSetOptions, js.Object]): ViewModel = js.native
 }

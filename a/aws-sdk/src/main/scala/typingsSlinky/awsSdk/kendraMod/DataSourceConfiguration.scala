@@ -8,7 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DataSourceConfiguration extends js.Object {
   
   /**
-    * Provides information necessary to create a connector for a database.
+    * Provides configuration information for connecting to a Confluence data source.
+    */
+  var ConfluenceConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.ConfluenceConfiguration] = js.native
+  
+  /**
+    * Provides information necessary to create a data source connector for a database.
     */
   var DatabaseConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.DatabaseConfiguration] = js.native
   
@@ -18,7 +23,7 @@ trait DataSourceConfiguration extends js.Object {
   var OneDriveConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.OneDriveConfiguration] = js.native
   
   /**
-    * Provides information to create a connector for a document repository in an Amazon S3 bucket.
+    * Provides information to create a data source connector for a document repository in an Amazon S3 bucket.
     */
   var S3Configuration: js.UndefOr[S3DataSourceConfiguration] = js.native
   
@@ -33,7 +38,7 @@ trait DataSourceConfiguration extends js.Object {
   var ServiceNowConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.ServiceNowConfiguration] = js.native
   
   /**
-    * Provides information necessary to create a connector for a Microsoft SharePoint site.
+    * Provides information necessary to create a data source connector for a Microsoft SharePoint site.
     */
   var SharePointConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.SharePointConfiguration] = js.native
 }
@@ -59,6 +64,12 @@ object DataSourceConfiguration {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setConfluenceConfiguration(value: ConfluenceConfiguration): Self = this.set("ConfluenceConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConfluenceConfiguration: Self = this.set("ConfluenceConfiguration", js.undefined)
     
     @scala.inline
     def setDatabaseConfiguration(value: DatabaseConfiguration): Self = this.set("DatabaseConfiguration", value.asInstanceOf[js.Any])

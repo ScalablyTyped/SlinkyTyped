@@ -70,6 +70,11 @@ object lightBlockMod extends js.Object {
     def specularOutput: NodeMaterialConnectionPoint = js.native
     
     /**
+      * Gets the view matrix component
+      */
+    def view: NodeMaterialConnectionPoint = js.native
+    
+    /**
       * Gets the world normal input component
       */
     def worldNormal: NodeMaterialConnectionPoint = js.native

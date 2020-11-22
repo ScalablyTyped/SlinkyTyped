@@ -24,8 +24,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdStates.typesMod.MergableRippleHandlers
+import typingsSlinky.reactMdTabs.reactMdTabsStrings.`additions removals`
 import typingsSlinky.reactMdTabs.reactMdTabsStrings.`additions text`
 import typingsSlinky.reactMdTabs.reactMdTabsStrings.`inline`
+import typingsSlinky.reactMdTabs.reactMdTabsStrings.`removals additions`
+import typingsSlinky.reactMdTabs.reactMdTabsStrings.`removals text`
+import typingsSlinky.reactMdTabs.reactMdTabsStrings.`text additions`
+import typingsSlinky.reactMdTabs.reactMdTabsStrings.`text removals`
 import typingsSlinky.reactMdTabs.reactMdTabsStrings.additions
 import typingsSlinky.reactMdTabs.reactMdTabsStrings.all
 import typingsSlinky.reactMdTabs.reactMdTabsStrings.ascending
@@ -199,7 +204,9 @@ object Tab {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

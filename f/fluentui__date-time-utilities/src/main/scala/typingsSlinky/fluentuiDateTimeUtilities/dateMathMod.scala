@@ -24,6 +24,8 @@ object dateMathMod extends js.Object {
   
   def compareDates(date1: js.Date, date2: js.Date): Boolean = js.native
   
+  def getDatePartHashValue(date: js.Date): Double = js.native
+  
   def getDateRangeArray(date: js.Date, dateRangeType: DateRangeType, firstDayOfWeek: DayOfWeek): js.Array[js.Date] = js.native
   def getDateRangeArray(
     date: js.Date,
@@ -45,6 +47,8 @@ object dateMathMod extends js.Object {
     workWeekDays: js.Array[DayOfWeek],
     daysToSelectInDayView: Double
   ): js.Array[js.Date] = js.native
+  
+  def getEndDateOfWeek(date: js.Date, firstDayOfWeek: DayOfWeek): js.Date = js.native
   
   def getMonthEnd(date: js.Date): js.Date = js.native
   

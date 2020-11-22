@@ -60,7 +60,7 @@ trait GetGroupResult extends js.Object {
   val minSize: Double = js.native
   
   /**
-    * The name of the Auto Scaling group.
+    * Name of the Auto Scaling Group.
     */
   val name: String = js.native
   

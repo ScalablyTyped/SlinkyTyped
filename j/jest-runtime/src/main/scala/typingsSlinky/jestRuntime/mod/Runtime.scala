@@ -57,6 +57,8 @@ trait Runtime extends js.Object {
   
   var _logFormattedReferenceError: js.Any = js.native
   
+  var _mainModule: js.Any = js.native
+  
   var _mockFactories: js.Any = js.native
   
   var _mockMetaDataCache: js.Any = js.native
@@ -91,6 +93,8 @@ trait Runtime extends js.Object {
   
   var _sourceMapRegistry: js.Any = js.native
   
+  var _testPath: js.Any = js.native
+  
   var _transitiveShouldMock: js.Any = js.native
   
   var _unmockList: js.Any = js.native
@@ -106,6 +110,8 @@ trait Runtime extends js.Object {
   def collectV8Coverage(): js.Promise[Unit] = js.native
   
   var constructInjectedModuleParameters: js.Any = js.native
+  
+  var constructModuleWrapperStart: js.Any = js.native
   
   var createScriptFromCode: js.Any = js.native
   
@@ -126,6 +132,8 @@ trait Runtime extends js.Object {
   var handleExecutionError: js.Any = js.native
   
   def isolateModules(fn: js.Function0[Unit]): Unit = js.native
+  
+  var jestGlobals: js.Any = js.native
   
   var jestObjectCaches: js.Any = js.native
   
@@ -171,6 +179,8 @@ trait Runtime extends js.Object {
   
   def restoreAllMocks(): Unit = js.native
   
+  def setGlobalsForRuntime(globals: JestGlobals): Unit = js.native
+  
   def setMock(from: String, moduleName: String, mockFactory: js.Function0[_]): Unit = js.native
   def setMock(from: String, moduleName: String, mockFactory: js.Function0[_], options: Virtual): Unit = js.native
   
@@ -183,7 +193,7 @@ trait Runtime extends js.Object {
   def unstable_importModule(from: Path): js.Promise[Unit] = js.native
   def unstable_importModule(from: Path, moduleName: String): js.Promise[Unit] = js.native
   
-  var unstable_shouldLoadAsEsm: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof imported_shouldLoadAsEsm.default */ js.Any = js.native
+  var unstable_shouldLoadAsEsm: js.Function1[/* path */ Path, Boolean] = js.native
   
   var wrapCodeInModuleWrapper: js.Any = js.native
 }

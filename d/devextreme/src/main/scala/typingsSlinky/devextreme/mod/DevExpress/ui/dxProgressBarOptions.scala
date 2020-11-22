@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.anon.ElementEventJQueryEvent
+import typingsSlinky.devextreme.anon.ComponentElementEventModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,16 +8,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxProgressBarOptions extends dxTrackBarOptions[dxProgressBar] {
   
-  /** @name dxProgressBar.Options.onComplete */
-  var onComplete: js.UndefOr[js.Function1[/* e */ ElementEventJQueryEvent, _]] = js.native
+  /**
+    * [descr:dxProgressBar.Options.onComplete]
+    */
+  var onComplete: js.UndefOr[js.Function1[/* e */ ComponentElementEventModel, _]] = js.native
   
-  /** @name dxProgressBar.Options.showStatus */
+  /**
+    * [descr:dxProgressBar.Options.showStatus]
+    */
   var showStatus: js.UndefOr[Boolean] = js.native
   
-  /** @name dxProgressBar.Options.statusFormat */
+  /**
+    * [descr:dxProgressBar.Options.statusFormat]
+    */
   var statusFormat: js.UndefOr[String | (js.Function2[/* ratio */ Double, /* value */ Double, String])] = js.native
   
-  /** @name dxProgressBar.Options.value */
+  /**
+    * [descr:dxProgressBar.Options.value]
+    */
   @JSName("value")
   var value_dxProgressBarOptions: js.UndefOr[Double] = js.native
 }
@@ -45,7 +53,7 @@ object dxProgressBarOptions {
     }
     
     @scala.inline
-    def setOnComplete(value: /* e */ ElementEventJQueryEvent => _): Self = this.set("onComplete", js.Any.fromFunction1(value))
+    def setOnComplete(value: /* e */ ComponentElementEventModel => _): Self = this.set("onComplete", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnComplete: Self = this.set("onComplete", js.undefined)

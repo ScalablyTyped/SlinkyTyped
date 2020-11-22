@@ -1,6 +1,6 @@
 package typingsSlinky.consola.mod
 
-import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.consola.anon.typeinlogTypeConsolaLogOb
 import typingsSlinky.node.NodeJS.WritableStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,7 +25,7 @@ trait ConsolaOptions extends js.Object {
   
   var throttle: js.UndefOr[Double] = js.native
   
-  var types: js.UndefOr[StringDictionary[ConsolaLogObject]] = js.native
+  var types: js.UndefOr[typeinlogTypeConsolaLogOb] = js.native
 }
 object ConsolaOptions {
   
@@ -69,7 +69,7 @@ object ConsolaOptions {
     def deleteLevel: Self = this.set("level", js.undefined)
     
     @scala.inline
-    def setMockFn(value: (/* type */ String, /* defaults */ ConsolaLogObject) => ConsolaMock): Self = this.set("mockFn", js.Any.fromFunction2(value))
+    def setMockFn(value: (/* type */ logType, /* defaults */ ConsolaLogObject) => ConsolaMock): Self = this.set("mockFn", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteMockFn: Self = this.set("mockFn", js.undefined)
@@ -102,7 +102,7 @@ object ConsolaOptions {
     def deleteThrottle: Self = this.set("throttle", js.undefined)
     
     @scala.inline
-    def setTypes(value: StringDictionary[ConsolaLogObject]): Self = this.set("types", value.asInstanceOf[js.Any])
+    def setTypes(value: typeinlogTypeConsolaLogOb): Self = this.set("types", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTypes: Self = this.set("types", js.undefined)

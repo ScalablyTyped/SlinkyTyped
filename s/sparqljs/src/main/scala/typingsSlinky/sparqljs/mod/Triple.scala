@@ -9,14 +9,18 @@ trait Triple extends js.Object {
   
   var `object`: Term = js.native
   
-  var predicate: PropertyPath | Term = js.native
+  var predicate: IriTerm | VariableTerm | PropertyPath = js.native
   
-  var subject: Term = js.native
+  var subject: IriTerm | BlankTerm | VariableTerm | QuadTerm = js.native
 }
 object Triple {
   
   @scala.inline
-  def apply(`object`: Term, predicate: PropertyPath | Term, subject: Term): Triple = {
+  def apply(
+    `object`: Term,
+    predicate: IriTerm | VariableTerm | PropertyPath,
+    subject: IriTerm | BlankTerm | VariableTerm | QuadTerm
+  ): Triple = {
     val __obj = js.Dynamic.literal(predicate = predicate.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Triple]
@@ -41,9 +45,9 @@ object Triple {
     def setObject(value: Term): Self = this.set("object", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPredicate(value: PropertyPath | Term): Self = this.set("predicate", value.asInstanceOf[js.Any])
+    def setPredicate(value: IriTerm | VariableTerm | PropertyPath): Self = this.set("predicate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSubject(value: Term): Self = this.set("subject", value.asInstanceOf[js.Any])
+    def setSubject(value: IriTerm | BlankTerm | VariableTerm | QuadTerm): Self = this.set("subject", value.asInstanceOf[js.Any])
   }
 }

@@ -27,6 +27,9 @@ object ReactBootstrapTable2Toolkit {
     def bootstrap4(value: Boolean): this.type = set("bootstrap4", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def columnToggle(value: Boolean): this.type = set("columnToggle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def exportCSV(value: Boolean | CSVProps): this.type = set("exportCSV", value.asInstanceOf[js.Any])
     
     @scala.inline

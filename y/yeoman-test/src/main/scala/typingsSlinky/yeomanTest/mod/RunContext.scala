@@ -26,16 +26,7 @@ trait RunContext
   /**
     * Promise `.catch()` duck typing
     */
-  def `catch`[TResult](): js.Promise[String | TResult] = js.native
-  /**
-    * Promise `.catch()` duck typing
-    */
-  def `catch`[TResult](onrejected: js.Function1[/* reason */ js.Any, TResult | js.Thenable[TResult]]): js.Promise[String | TResult] = js.native
-  /**
-    * Promise `.catch()` duck typing
-    */
-  @JSName("catch")
-  var catch_Original: FnCallOnrejected = js.native
+  var `catch`: FnCallOnrejected = js.native
   
   /**
     * Change directory without deleting directory content.
@@ -65,7 +56,7 @@ trait RunContext
   var inDirSet: Boolean = js.native
   
   /**
-    * Cleanup a temporary directy and change the CWD into it
+    * Cleanup a temporary directory and change the CWD into it
     *
     * This method is called automatically when creating a RunContext. Only use it if you need
     * to use the callback.
@@ -80,34 +71,7 @@ trait RunContext
   /**
     * Promise `.then()` duck typing
     */
-  def `then`[TResult1, TResult2](): js.Promise[TResult1 | TResult2] = js.native
-  /**
-    * Promise `.then()` duck typing
-    */
-  def `then`[TResult1, TResult2](
-    onfulfilled: js.UndefOr[scala.Nothing],
-    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
-  ): js.Promise[TResult1 | TResult2] = js.native
-  /**
-    * Promise `.then()` duck typing
-    */
-  def `then`[TResult1, TResult2](onfulfilled: js.Function1[/* value */ String, TResult1 | js.Thenable[TResult1]]): js.Promise[TResult1 | TResult2] = js.native
-  /**
-    * Promise `.then()` duck typing
-    */
-  def `then`[TResult1, TResult2](
-    onfulfilled: js.Function1[/* value */ String, TResult1 | js.Thenable[TResult1]],
-    onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]
-  ): js.Promise[TResult1 | TResult2] = js.native
-  /**
-    * Promise `.then()` duck typing
-    */
-  def `then`[TResult1, TResult2](onfulfilled: Null, onrejected: js.Function1[/* reason */ js.Any, TResult2 | js.Thenable[TResult2]]): js.Promise[TResult1 | TResult2] = js.native
-  /**
-    * Promise `.then()` duck typing
-    */
-  @JSName("then")
-  var then_Original: FnCall = js.native
+  var `then`: FnCall = js.native
   
   /**
     * Return a promise representing the generator run process

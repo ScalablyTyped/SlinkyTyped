@@ -5,8 +5,8 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
+import typingsSlinky.fluentuiDomUtilities.ivirtualelementMod.IVirtualElement
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
-import typingsSlinky.uifabricUtilities.ivirtualelementMod.IVirtualElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,9 +49,16 @@ object domMod extends js.Object {
   def getWindow(): js.UndefOr[Window] = js.native
   def getWindow(rootElement: Element): js.UndefOr[Window] = js.native
   
-  def isVirtualElement(element: HTMLElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
-  def isVirtualElement(element: IVirtualElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
+  def isVirtualElement(element: IVirtualElement): /* is @fluentui/dom-utilities.@fluentui/dom-utilities/lib/IVirtualElement.IVirtualElement */ Boolean = js.native
+  def isVirtualElement(element: HTMLElement): /* is @fluentui/dom-utilities.@fluentui/dom-utilities/lib/IVirtualElement.IVirtualElement */ Boolean = js.native
   
+  def on(element: Document, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): js.Function0[Unit] = js.native
+  def on(
+    element: Document,
+    eventName: String,
+    callback: js.Function1[/* ev */ Event, Unit],
+    options: Boolean
+  ): js.Function0[Unit] = js.native
   def on(element: Element, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): js.Function0[Unit] = js.native
   def on(
     element: Element,
@@ -69,5 +76,6 @@ object domMod extends js.Object {
   
   def setPortalAttribute(element: HTMLElement): Unit = js.native
   
+  def setVirtualParent(child: HTMLElement): Unit = js.native
   def setVirtualParent(child: HTMLElement, parent: HTMLElement): Unit = js.native
 }

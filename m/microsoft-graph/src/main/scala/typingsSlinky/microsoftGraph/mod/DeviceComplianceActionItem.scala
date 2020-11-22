@@ -17,10 +17,10 @@ trait DeviceComplianceActionItem extends Entity {
   var gracePeriodHours: js.UndefOr[Double] = js.native
   
   // A list of group IDs to speicify who to CC this notification message to.
-  var notificationMessageCCList: js.UndefOr[js.Array[String]] = js.native
+  var notificationMessageCCList: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // What notification Message template to use
-  var notificationTemplateId: js.UndefOr[String] = js.native
+  var notificationTemplateId: js.UndefOr[NullableOption[String]] = js.native
 }
 object DeviceComplianceActionItem {
   
@@ -61,15 +61,21 @@ object DeviceComplianceActionItem {
     def setNotificationMessageCCListVarargs(value: String*): Self = this.set("notificationMessageCCList", js.Array(value :_*))
     
     @scala.inline
-    def setNotificationMessageCCList(value: js.Array[String]): Self = this.set("notificationMessageCCList", value.asInstanceOf[js.Any])
+    def setNotificationMessageCCList(value: NullableOption[js.Array[String]]): Self = this.set("notificationMessageCCList", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNotificationMessageCCList: Self = this.set("notificationMessageCCList", js.undefined)
     
     @scala.inline
-    def setNotificationTemplateId(value: String): Self = this.set("notificationTemplateId", value.asInstanceOf[js.Any])
+    def setNotificationMessageCCListNull: Self = this.set("notificationMessageCCList", null)
+    
+    @scala.inline
+    def setNotificationTemplateId(value: NullableOption[String]): Self = this.set("notificationTemplateId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNotificationTemplateId: Self = this.set("notificationTemplateId", js.undefined)
+    
+    @scala.inline
+    def setNotificationTemplateIdNull: Self = this.set("notificationTemplateId", null)
   }
 }

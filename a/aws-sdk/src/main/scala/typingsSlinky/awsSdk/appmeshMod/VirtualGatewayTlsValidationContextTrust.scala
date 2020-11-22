@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VirtualGatewayTlsValidationContextTrust extends js.Object {
   
   /**
-    * A reference to an object that represents a TLS validation context trust for an AWS Certicate Manager (ACM)
-    certificate.
+    * A reference to an object that represents a TLS validation context trust for an AWS Certicate Manager (ACM) certificate.
     */
   var acm: js.UndefOr[VirtualGatewayTlsValidationContextAcmTrust] = js.native
   

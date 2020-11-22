@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object createDateParser extends js.Object {
   
   def apply(hasConfigL10n: Config): js.Function4[
-    /* date */ String | Double | Date, 
+    /* date */ Date | String | Double, 
     /* givenFormat */ js.UndefOr[String], 
     /* timeless */ js.UndefOr[Boolean], 
     /* customLocale */ js.UndefOr[Locale], 

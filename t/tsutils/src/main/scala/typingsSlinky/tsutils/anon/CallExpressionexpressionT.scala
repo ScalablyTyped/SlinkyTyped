@@ -33,15 +33,15 @@ trait CallExpressionexpressionT extends _ImportLike {
   
   var _updateExpressionBrand: js.Any = js.native
   
-  var arguments: NodeArray[Expression] with js.Array[Expression] = js.native
+  val arguments: NodeArray[Expression] with js.Array[Expression] = js.native
   
-  var decorators: js.UndefOr[NodeArray[Decorator]] = js.native
+  val decorators: js.UndefOr[NodeArray[Decorator]] = js.native
   
-  var end: Double = js.native
+  val end: Double = js.native
   
-  var expression: LeftHandSideExpression with (Token[ImportKeyword] | Identifiertextrequire) = js.native
+  val expression: LeftHandSideExpression with (Token[ImportKeyword] | Identifiertextrequire) = js.native
   
-  var flags: NodeFlags = js.native
+  val flags: NodeFlags = js.native
   
   def forEachChild[T](cbNode: js.Function1[/* node */ this.type, js.UndefOr[T]]): js.UndefOr[T] = js.native
   def forEachChild[T](
@@ -89,15 +89,15 @@ trait CallExpressionexpressionT extends _ImportLike {
   def getWidth(): Double = js.native
   def getWidth(sourceFile: SourceFileLike): Double = js.native
   
-  var kind: CallExpression = js.native
+  val kind: CallExpression = js.native
   
-  var modifiers: js.UndefOr[ModifiersArray] = js.native
+  val modifiers: js.UndefOr[ModifiersArray] = js.native
   
-  var parent: Node = js.native
+  val parent: Node = js.native
   
-  var pos: Double = js.native
+  val pos: Double = js.native
   
-  var questionDotToken: js.UndefOr[QuestionDotToken] = js.native
+  val questionDotToken: js.UndefOr[QuestionDotToken] = js.native
   
-  var typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
+  val typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
 }

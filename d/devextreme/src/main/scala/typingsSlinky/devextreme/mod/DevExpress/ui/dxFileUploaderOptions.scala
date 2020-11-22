@@ -1,16 +1,22 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.File
 import typingsSlinky.devextreme.anon.BytesLoaded
+import typingsSlinky.devextreme.anon.DropZoneElement
 import typingsSlinky.devextreme.anon.ElementError
-import typingsSlinky.devextreme.anon.JQueryEventModel
+import typingsSlinky.devextreme.anon.EventFile
+import typingsSlinky.devextreme.anon.FileModel
+import typingsSlinky.devextreme.anon.PreviousValueValue
 import typingsSlinky.devextreme.anon.Request
+import typingsSlinky.devextreme.anon.`4`
 import typingsSlinky.devextreme.devextremeStrings.POST
 import typingsSlinky.devextreme.devextremeStrings.PUT
 import typingsSlinky.devextreme.devextremeStrings.instantly
 import typingsSlinky.devextreme.devextremeStrings.useButtons
 import typingsSlinky.devextreme.devextremeStrings.useForm
 import typingsSlinky.devextreme.mod.DevExpress.fileManagement.UploadInfo
+import typingsSlinky.devextreme.mod.global.JQuery
 import typingsSlinky.devextreme.mod.global.JQueryPromise
 import typingsSlinky.devextreme.mod.global.Promise
 import scala.scalajs.js
@@ -20,7 +26,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFileUploaderOptions extends EditorOptions[dxFileUploader] {
   
-  /** @name dxFileUploader.Options.abortUpload */
+  /**
+    * [descr:dxFileUploader.Options.abortUpload]
+    */
   var abortUpload: js.UndefOr[
     js.Function2[
       /* file */ File, 
@@ -29,88 +37,182 @@ trait dxFileUploaderOptions extends EditorOptions[dxFileUploader] {
     ]
   ] = js.native
   
-  /** @name dxFileUploader.Options.accept */
+  /**
+    * [descr:dxFileUploader.Options.accept]
+    */
   var accept: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.allowCanceling */
+  /**
+    * [descr:dxFileUploader.Options.allowCanceling]
+    */
   var allowCanceling: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFileUploader.Options.allowedFileExtensions */
+  /**
+    * [descr:dxFileUploader.Options.allowedFileExtensions]
+    */
   var allowedFileExtensions: js.UndefOr[js.Array[String]] = js.native
   
-  /** @name dxFileUploader.Options.chunkSize */
+  /**
+    * [descr:dxFileUploader.Options.chunkSize]
+    */
   var chunkSize: js.UndefOr[Double] = js.native
   
-  /** @name dxFileUploader.Options.inputAttr */
+  /**
+    * [descr:dxFileUploader.Options.dialogTrigger]
+    */
+  var dialogTrigger: js.UndefOr[String | Element | JQuery] = js.native
+  
+  /**
+    * [descr:dxFileUploader.Options.dropZone]
+    */
+  var dropZone: js.UndefOr[String | Element | JQuery] = js.native
+  
+  /**
+    * [descr:dxFileUploader.Options.inputAttr]
+    */
   var inputAttr: js.UndefOr[js.Any] = js.native
   
-  /** @name dxFileUploader.Options.invalidFileExtensionMessage */
+  /**
+    * [descr:dxFileUploader.Options.invalidFileExtensionMessage]
+    */
   var invalidFileExtensionMessage: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.invalidMaxFileSizeMessage */
+  /**
+    * [descr:dxFileUploader.Options.invalidMaxFileSizeMessage]
+    */
   var invalidMaxFileSizeMessage: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.invalidMinFileSizeMessage */
+  /**
+    * [descr:dxFileUploader.Options.invalidMinFileSizeMessage]
+    */
   var invalidMinFileSizeMessage: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.labelText */
+  /**
+    * [descr:dxFileUploader.Options.labelText]
+    */
   var labelText: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.maxFileSize */
+  /**
+    * [descr:dxFileUploader.Options.maxFileSize]
+    */
   var maxFileSize: js.UndefOr[Double] = js.native
   
-  /** @name dxFileUploader.Options.minFileSize */
+  /**
+    * [descr:dxFileUploader.Options.minFileSize]
+    */
   var minFileSize: js.UndefOr[Double] = js.native
   
-  /** @name dxFileUploader.Options.multiple */
+  /**
+    * [descr:dxFileUploader.Options.multiple]
+    */
   var multiple: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFileUploader.Options.name */
+  /**
+    * [descr:dxFileUploader.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.onProgress */
+  /**
+    * [descr:dxFileUploader.Options.onBeforeSend]
+    */
+  var onBeforeSend: js.UndefOr[js.Function1[/* e */ Request, _]] = js.native
+  
+  /**
+    * [descr:dxFileUploader.Options.onDropZoneEnter]
+    */
+  var onDropZoneEnter: js.UndefOr[js.Function1[/* e */ DropZoneElement, _]] = js.native
+  
+  /**
+    * [descr:dxFileUploader.Options.onDropZoneLeave]
+    */
+  var onDropZoneLeave: js.UndefOr[js.Function1[/* e */ DropZoneElement, _]] = js.native
+  
+  /**
+    * [descr:dxFileUploader.Options.onFilesUploaded]
+    */
+  var onFilesUploaded: js.UndefOr[js.Function1[/* e */ `4`, _]] = js.native
+  
+  /**
+    * [descr:dxFileUploader.Options.onProgress]
+    */
   var onProgress: js.UndefOr[js.Function1[/* e */ BytesLoaded, _]] = js.native
   
-  /** @name dxFileUploader.Options.onUploadAborted */
-  var onUploadAborted: js.UndefOr[js.Function1[/* e */ Request, _]] = js.native
+  /**
+    * [descr:dxFileUploader.Options.onUploadAborted]
+    */
+  var onUploadAborted: js.UndefOr[js.Function1[/* e */ EventFile, _]] = js.native
   
-  /** @name dxFileUploader.Options.onUploadError */
+  /**
+    * [descr:dxFileUploader.Options.onUploadError]
+    */
   var onUploadError: js.UndefOr[js.Function1[/* e */ ElementError, _]] = js.native
   
-  /** @name dxFileUploader.Options.onUploadStarted */
-  var onUploadStarted: js.UndefOr[js.Function1[/* e */ Request, _]] = js.native
+  /**
+    * [descr:dxFileUploader.Options.onUploadStarted]
+    */
+  var onUploadStarted: js.UndefOr[js.Function1[/* e */ FileModel, _]] = js.native
   
-  /** @name dxFileUploader.Options.onUploaded */
-  var onUploaded: js.UndefOr[js.Function1[/* e */ Request, _]] = js.native
+  /**
+    * [descr:dxFileUploader.Options.onUploaded]
+    */
+  var onUploaded: js.UndefOr[js.Function1[/* e */ EventFile, _]] = js.native
   
-  /** @name dxFileUploader.Options.onValueChanged */
+  /**
+    * [descr:dxFileUploader.Options.onValueChanged]
+    */
   @JSName("onValueChanged")
-  var onValueChanged_dxFileUploaderOptions: js.UndefOr[js.Function1[/* e */ JQueryEventModel, _]] = js.native
+  var onValueChanged_dxFileUploaderOptions: js.UndefOr[js.Function1[/* e */ PreviousValueValue, _]] = js.native
   
-  /** @name dxFileUploader.Options.progress */
+  /**
+    * [descr:dxFileUploader.Options.progress]
+    */
   var progress: js.UndefOr[Double] = js.native
   
-  /** @name dxFileUploader.Options.readyToUploadMessage */
+  /**
+    * [descr:dxFileUploader.Options.readyToUploadMessage]
+    */
   var readyToUploadMessage: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.selectButtonText */
+  /**
+    * [descr:dxFileUploader.Options.selectButtonText]
+    */
   var selectButtonText: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.showFileList */
+  /**
+    * [descr:dxFileUploader.Options.showFileList]
+    */
   var showFileList: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFileUploader.Options.uploadButtonText */
+  /**
+    * [descr:dxFileUploader.Options.uploadAbortedMessage]
+    */
+  var uploadAbortedMessage: js.UndefOr[String] = js.native
+  
+  /**
+    * [descr:dxFileUploader.Options.uploadButtonText]
+    */
   var uploadButtonText: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.uploadChunk */
+  /**
+    * [descr:dxFileUploader.Options.uploadChunk]
+    */
   var uploadChunk: js.UndefOr[
     js.Function2[/* file */ File, /* uploadInfo */ UploadInfo, Promise[_] | JQueryPromise[_] | _]
   ] = js.native
   
-  /** @name dxFileUploader.Options.uploadFailedMessage */
+  /**
+    * [descr:dxFileUploader.Options.uploadCustomData]
+    */
+  var uploadCustomData: js.UndefOr[js.Any] = js.native
+  
+  /**
+    * [descr:dxFileUploader.Options.uploadFailedMessage]
+    */
   var uploadFailedMessage: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.uploadFile */
+  /**
+    * [descr:dxFileUploader.Options.uploadFile]
+    */
   var uploadFile: js.UndefOr[
     js.Function2[
       /* file */ File, 
@@ -119,22 +221,34 @@ trait dxFileUploaderOptions extends EditorOptions[dxFileUploader] {
     ]
   ] = js.native
   
-  /** @name dxFileUploader.Options.uploadHeaders */
+  /**
+    * [descr:dxFileUploader.Options.uploadHeaders]
+    */
   var uploadHeaders: js.UndefOr[js.Any] = js.native
   
-  /** @name dxFileUploader.Options.uploadMethod */
+  /**
+    * [descr:dxFileUploader.Options.uploadMethod]
+    */
   var uploadMethod: js.UndefOr[POST | PUT] = js.native
   
-  /** @name dxFileUploader.Options.uploadMode */
+  /**
+    * [descr:dxFileUploader.Options.uploadMode]
+    */
   var uploadMode: js.UndefOr[instantly | useButtons | useForm] = js.native
   
-  /** @name dxFileUploader.Options.uploadUrl */
+  /**
+    * [descr:dxFileUploader.Options.uploadUrl]
+    */
   var uploadUrl: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.uploadedMessage */
+  /**
+    * [descr:dxFileUploader.Options.uploadedMessage]
+    */
   var uploadedMessage: js.UndefOr[String] = js.native
   
-  /** @name dxFileUploader.Options.value */
+  /**
+    * [descr:dxFileUploader.Options.value]
+    */
   @JSName("value")
   var value_dxFileUploaderOptions: js.UndefOr[js.Array[File]] = js.native
 }
@@ -197,6 +311,24 @@ object dxFileUploaderOptions {
     def deleteChunkSize: Self = this.set("chunkSize", js.undefined)
     
     @scala.inline
+    def setDialogTriggerElement(value: Element): Self = this.set("dialogTrigger", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDialogTrigger(value: String | Element | JQuery): Self = this.set("dialogTrigger", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDialogTrigger: Self = this.set("dialogTrigger", js.undefined)
+    
+    @scala.inline
+    def setDropZoneElement(value: Element): Self = this.set("dropZone", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDropZone(value: String | Element | JQuery): Self = this.set("dropZone", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDropZone: Self = this.set("dropZone", js.undefined)
+    
+    @scala.inline
     def setInputAttr(value: js.Any): Self = this.set("inputAttr", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -251,13 +383,37 @@ object dxFileUploaderOptions {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
+    def setOnBeforeSend(value: /* e */ Request => _): Self = this.set("onBeforeSend", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnBeforeSend: Self = this.set("onBeforeSend", js.undefined)
+    
+    @scala.inline
+    def setOnDropZoneEnter(value: /* e */ DropZoneElement => _): Self = this.set("onDropZoneEnter", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnDropZoneEnter: Self = this.set("onDropZoneEnter", js.undefined)
+    
+    @scala.inline
+    def setOnDropZoneLeave(value: /* e */ DropZoneElement => _): Self = this.set("onDropZoneLeave", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnDropZoneLeave: Self = this.set("onDropZoneLeave", js.undefined)
+    
+    @scala.inline
+    def setOnFilesUploaded(value: /* e */ `4` => _): Self = this.set("onFilesUploaded", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnFilesUploaded: Self = this.set("onFilesUploaded", js.undefined)
+    
+    @scala.inline
     def setOnProgress(value: /* e */ BytesLoaded => _): Self = this.set("onProgress", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnProgress: Self = this.set("onProgress", js.undefined)
     
     @scala.inline
-    def setOnUploadAborted(value: /* e */ Request => _): Self = this.set("onUploadAborted", js.Any.fromFunction1(value))
+    def setOnUploadAborted(value: /* e */ EventFile => _): Self = this.set("onUploadAborted", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnUploadAborted: Self = this.set("onUploadAborted", js.undefined)
@@ -269,19 +425,19 @@ object dxFileUploaderOptions {
     def deleteOnUploadError: Self = this.set("onUploadError", js.undefined)
     
     @scala.inline
-    def setOnUploadStarted(value: /* e */ Request => _): Self = this.set("onUploadStarted", js.Any.fromFunction1(value))
+    def setOnUploadStarted(value: /* e */ FileModel => _): Self = this.set("onUploadStarted", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnUploadStarted: Self = this.set("onUploadStarted", js.undefined)
     
     @scala.inline
-    def setOnUploaded(value: /* e */ Request => _): Self = this.set("onUploaded", js.Any.fromFunction1(value))
+    def setOnUploaded(value: /* e */ EventFile => _): Self = this.set("onUploaded", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnUploaded: Self = this.set("onUploaded", js.undefined)
     
     @scala.inline
-    def setOnValueChanged(value: /* e */ JQueryEventModel => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
+    def setOnValueChanged(value: /* e */ PreviousValueValue => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnValueChanged: Self = this.set("onValueChanged", js.undefined)
@@ -311,6 +467,12 @@ object dxFileUploaderOptions {
     def deleteShowFileList: Self = this.set("showFileList", js.undefined)
     
     @scala.inline
+    def setUploadAbortedMessage(value: String): Self = this.set("uploadAbortedMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUploadAbortedMessage: Self = this.set("uploadAbortedMessage", js.undefined)
+    
+    @scala.inline
     def setUploadButtonText(value: String): Self = this.set("uploadButtonText", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -321,6 +483,12 @@ object dxFileUploaderOptions {
     
     @scala.inline
     def deleteUploadChunk: Self = this.set("uploadChunk", js.undefined)
+    
+    @scala.inline
+    def setUploadCustomData(value: js.Any): Self = this.set("uploadCustomData", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUploadCustomData: Self = this.set("uploadCustomData", js.undefined)
     
     @scala.inline
     def setUploadFailedMessage(value: String): Self = this.set("uploadFailedMessage", value.asInstanceOf[js.Any])

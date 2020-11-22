@@ -6,5 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object srcUtilMod {
   
+  type Byte = scala.Double
+  
   type SyncAsync[T] = T | js.Promise[T]
 }

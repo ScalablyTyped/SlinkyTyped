@@ -13,7 +13,9 @@ object Express extends js.Object {
   trait Request extends js.Object {
     
     def flash(): StringDictionary[js.Array[String]] = js.native
-    def flash(event: String, message: String): js.Any = js.native
-    def flash(message: String): js.Any = js.native
+    def flash(message: String): js.Array[String] = js.native
+    def flash(`type`: String, format: String, args: js.Any*): Double = js.native
+    def flash(`type`: String, message: String): Double = js.native
+    def flash(`type`: String, message: js.Array[String]): Double = js.native
   }
 }

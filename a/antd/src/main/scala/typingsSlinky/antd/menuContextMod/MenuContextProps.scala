@@ -1,7 +1,6 @@
 package typingsSlinky.antd.menuContextMod
 
-import typingsSlinky.antd.antdStrings.ltr
-import typingsSlinky.antd.antdStrings.rtl
+import typingsSlinky.antd.configProviderContextMod.DirectionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +10,7 @@ trait MenuContextProps extends js.Object {
   
   var antdMenuTheme: js.UndefOr[MenuTheme] = js.native
   
-  var direction: js.UndefOr[ltr | rtl] = js.native
+  var direction: js.UndefOr[DirectionType] = js.native
   
   var inlineCollapsed: Boolean = js.native
 }
@@ -48,7 +47,7 @@ object MenuContextProps {
     def deleteAntdMenuTheme: Self = this.set("antdMenuTheme", js.undefined)
     
     @scala.inline
-    def setDirection(value: ltr | rtl): Self = this.set("direction", value.asInstanceOf[js.Any])
+    def setDirection(value: DirectionType): Self = this.set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDirection: Self = this.set("direction", js.undefined)

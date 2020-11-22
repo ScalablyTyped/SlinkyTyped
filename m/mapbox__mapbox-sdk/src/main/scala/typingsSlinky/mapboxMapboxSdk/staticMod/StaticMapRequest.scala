@@ -19,7 +19,9 @@ trait StaticMapRequest extends js.Object {
   
   var logo: js.UndefOr[Boolean] = js.native
   
-  var overlays: js.UndefOr[js.Array[CustomMarkerOverlay | GeoJsonOverlay | PathOverlay]] = js.native
+  var overlays: js.UndefOr[
+    js.Array[CustomMarkerOverlay | SimpleMarkerOverlay | PathOverlay | GeoJsonOverlay]
+  ] = js.native
   
   var ownerId: String = js.native
   
@@ -92,10 +94,10 @@ object StaticMapRequest {
     def deleteLogo: Self = this.set("logo", js.undefined)
     
     @scala.inline
-    def setOverlaysVarargs(value: (CustomMarkerOverlay | GeoJsonOverlay | PathOverlay)*): Self = this.set("overlays", js.Array(value :_*))
+    def setOverlaysVarargs(value: (CustomMarkerOverlay | SimpleMarkerOverlay | PathOverlay | GeoJsonOverlay)*): Self = this.set("overlays", js.Array(value :_*))
     
     @scala.inline
-    def setOverlays(value: js.Array[CustomMarkerOverlay | GeoJsonOverlay | PathOverlay]): Self = this.set("overlays", value.asInstanceOf[js.Any])
+    def setOverlays(value: js.Array[CustomMarkerOverlay | SimpleMarkerOverlay | PathOverlay | GeoJsonOverlay]): Self = this.set("overlays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverlays: Self = this.set("overlays", js.undefined)

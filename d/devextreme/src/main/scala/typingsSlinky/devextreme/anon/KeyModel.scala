@@ -1,7 +1,8 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeList
+import typingsSlinky.devextreme.mod.DevExpress.events.event
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxGantt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,13 +12,13 @@ trait KeyModel extends js.Object {
   
   var cancel: js.UndefOr[Boolean] = js.native
   
-  var column: js.UndefOr[js.Any] = js.native
-  
-  var component: js.UndefOr[dxTreeList] = js.native
+  var component: js.UndefOr[dxGantt] = js.native
   
   var data: js.UndefOr[js.Any] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
+  
+  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
   
   var key: js.UndefOr[js.Any] = js.native
   
@@ -53,13 +54,7 @@ object KeyModel {
     def deleteCancel: Self = this.set("cancel", js.undefined)
     
     @scala.inline
-    def setColumn(value: js.Any): Self = this.set("column", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteColumn: Self = this.set("column", js.undefined)
-    
-    @scala.inline
-    def setComponent(value: dxTreeList): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxGantt): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -75,6 +70,12 @@ object KeyModel {
     
     @scala.inline
     def deleteElement: Self = this.set("element", js.undefined)
+    
+    @scala.inline
+    def setEvent(value: event): Self = this.set("event", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEvent: Self = this.set("event", js.undefined)
     
     @scala.inline
     def setKey(value: js.Any): Self = this.set("key", value.asInstanceOf[js.Any])

@@ -3,6 +3,7 @@ package typingsSlinky.yandexMaps.mod.multiRouter
 import typingsSlinky.yandexMaps.mod.GeoObjectCollection
 import typingsSlinky.yandexMaps.mod.IEventEmitter
 import typingsSlinky.yandexMaps.mod.IGeoObject
+import typingsSlinky.yandexMaps.mod.IGeometry
 import typingsSlinky.yandexMaps.mod.data.Manager
 import typingsSlinky.yandexMaps.mod.geometry.base.LineString
 import typingsSlinky.yandexMaps.mod.geometry.base.Point
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object masstransit extends js.Object {
   
   @js.native
-  class Path () extends IGeoObject {
+  class Path () extends IGeoObject[IGeometry] {
     
     def getSegmentMarkers(): GeoObjectCollection = js.native
     
@@ -44,7 +45,7 @@ object masstransit extends js.Object {
   }
   
   @js.native
-  class Route () extends IGeoObject {
+  class Route () extends IGeoObject[IGeometry] {
     
     def getPaths(): GeoObjectCollection = js.native
     
@@ -83,7 +84,7 @@ object masstransit extends js.Object {
   }
   
   @js.native
-  class TransferSegment () extends IGeoObject {
+  class TransferSegment () extends IGeoObject[IGeometry] {
     
     var model: TransferSegmentModel = js.native
     
@@ -106,7 +107,7 @@ object masstransit extends js.Object {
   }
   
   @js.native
-  class TransportSegment () extends IGeoObject {
+  class TransportSegment () extends IGeoObject[IGeometry] {
     
     var model: TransportSegmentModel = js.native
     
@@ -133,7 +134,7 @@ object masstransit extends js.Object {
   }
   
   @js.native
-  class WalkSegment () extends IGeoObject {
+  class WalkSegment () extends IGeoObject[IGeometry] {
     
     var model: WalkSegmentModel = js.native
     

@@ -8,18 +8,30 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Options extends js.Object {
   
+  /**
+    * The function to call to control the strip behaviour.
+    *
+    * Gives you full control of the output and lets you tweak it.
+    * See the dedicated chapter below called "opts.cb" with explanation and examples.
+    */
+  var cb: js.UndefOr[js.Function1[/* input */ CallbackInput, Unit | Null | `false`]] = js.native
+  
+  /** Used to customise the output of link URL's: to enable the feature, also customise the URL location and wrapping. */
   var dumpLinkHrefsNearby: js.UndefOr[DumpLinkHrefsNearby | `false`] = js.native
   
+  /** These tags will not be removed */
   var ignoreTags: js.UndefOr[js.Array[String]] = js.native
   
+  /** If one or more tag names are given here, only these tags will be stripped, nothing else */
   var onlyStripTags: js.UndefOr[js.Array[String]] = js.native
   
-  var returnRangeOnly: js.UndefOr[Boolean] = js.native
-  
+  /** By default, all escaped HTML entities for example &pound; input will be recursively decoded before HTML-stripping. You can turn it off here if you don't need it. */
   var skipHtmlDecoding: js.UndefOr[Boolean] = js.native
   
+  /** These tags will be removed from the opening tag up to closing tag, including content in-between opening and closing tags. Set it to something falsey to turn it off. */
   var stripTogetherWithTheirContents: js.UndefOr[js.Array[String] | `false`] = js.native
   
+  /** Used mainly in automated setups. It ensures non-spaces are not trimmed from the outer edges of a string. */
   var trimOnlySpaces: js.UndefOr[Boolean] = js.native
 }
 object Options {
@@ -46,6 +58,12 @@ object Options {
     }
     
     @scala.inline
+    def setCb(value: /* input */ CallbackInput => Unit | Null | `false`): Self = this.set("cb", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteCb: Self = this.set("cb", js.undefined)
+    
+    @scala.inline
     def setDumpLinkHrefsNearby(value: DumpLinkHrefsNearby | `false`): Self = this.set("dumpLinkHrefsNearby", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -68,12 +86,6 @@ object Options {
     
     @scala.inline
     def deleteOnlyStripTags: Self = this.set("onlyStripTags", js.undefined)
-    
-    @scala.inline
-    def setReturnRangeOnly(value: Boolean): Self = this.set("returnRangeOnly", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteReturnRangeOnly: Self = this.set("returnRangeOnly", js.undefined)
     
     @scala.inline
     def setSkipHtmlDecoding(value: Boolean): Self = this.set("skipHtmlDecoding", value.asInstanceOf[js.Any])

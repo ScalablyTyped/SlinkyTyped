@@ -9,26 +9,50 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Provides settings for creating a new generator-option.
+  */
 @js.native
 trait OptionConfig extends js.Object {
   
+  /**
+    * The option name alias (example `-h` and --help`).
+    */
   var alias: js.UndefOr[String] = js.native
   
+  /**
+    * The default value.
+    */
   var default: js.UndefOr[js.Any] = js.native
   
+  /**
+    * The description for the option.
+    */
   var description: js.UndefOr[String] = js.native
   
+  /**
+    * A value indicating whether the option should be hidden from the help output.
+    */
   var hide: js.UndefOr[Boolean] = js.native
   
-  var `type`: js.UndefOr[
-    (BooleanConstructor with Instantiable0[typingsSlinky.std.global.Boolean]) | (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number])
-  ] = js.native
+  /**
+    * The storage to persist the option
+    */
+  var storage: js.UndefOr[typingsSlinky.yeomanGenerator.storageMod.^] = js.native
+  
+  /**
+    * The type of the option.
+    */
+  var `type`: (BooleanConstructor with Instantiable0[typingsSlinky.std.global.Boolean]) | (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number]) = js.native
 }
 object OptionConfig {
   
   @scala.inline
-  def apply(): OptionConfig = {
+  def apply(
+    `type`: (BooleanConstructor with Instantiable0[typingsSlinky.std.global.Boolean]) | (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number])
+  ): OptionConfig = {
     val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionConfig]
   }
   
@@ -46,6 +70,11 @@ object OptionConfig {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setType(
+      value: (BooleanConstructor with Instantiable0[typingsSlinky.std.global.Boolean]) | (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number])
+    ): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAlias(value: String): Self = this.set("alias", value.asInstanceOf[js.Any])
@@ -72,11 +101,9 @@ object OptionConfig {
     def deleteHide: Self = this.set("hide", js.undefined)
     
     @scala.inline
-    def setType(
-      value: (BooleanConstructor with Instantiable0[typingsSlinky.std.global.Boolean]) | (StringConstructor with Instantiable0[typingsSlinky.std.global.String]) | (NumberConstructor with Instantiable0[Number])
-    ): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setStorage(value: typingsSlinky.yeomanGenerator.storageMod.^): Self = this.set("storage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteType: Self = this.set("type", js.undefined)
+    def deleteStorage: Self = this.set("storage", js.undefined)
   }
 }

@@ -20,6 +20,7 @@ object textpathMod extends js.Object {
     scale: Double,
     measureAndCacheTextWidth: js.Function3[/* p0 */ String, /* p1 */ String, /* p2 */ StringDictionary[Double], Double],
     font: String,
-    cache: StringDictionary[Double]
+    cache: StringDictionary[Double],
+    rotation: Double
   ): js.Array[js.Array[_]] = js.native
 }

@@ -10,10 +10,10 @@ trait ForInStatement
      with ForInOrOfStatement
      with HasInitializer {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
-  var initializer: ForInitializer = js.native
+  val initializer: ForInitializer = js.native
   
   @JSName("kind")
-  var kind_ForInStatement: typingsSlinky.typescript.mod.SyntaxKind.ForInStatement = js.native
+  val kind_ForInStatement: typingsSlinky.typescript.mod.SyntaxKind.ForInStatement = js.native
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.socketIo.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.socketIo.anon.Ws
+import typingsSlinky.socketIo.anon.GenerateId
 import typingsSlinky.socketIo.socketIoStrings.connect
 import typingsSlinky.socketIo.socketIoStrings.connection
 import scala.scalajs.js
@@ -100,7 +100,7 @@ trait Server extends js.Object {
     */
   def emit(event: String, args: js.Any*): Namespace = js.native
   
-  var engine: Ws = js.native
+  var engine: GenerateId = js.native
   
   /**
     * Gets an array of events for which listeners have been registered

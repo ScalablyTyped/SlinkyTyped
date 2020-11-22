@@ -64,8 +64,14 @@ object animationClipMod extends js.Object {
     def this(name: String, duration: Double, tracks: js.UndefOr[scala.Nothing], blendMode: AnimationBlendMode) = this()
     def this(name: String, duration: Double, tracks: js.Array[KeyframeTrack], blendMode: AnimationBlendMode) = this()
     
+    /**
+    	 * @default THREE.NormalAnimationBlendMode
+    	 */
     var blendMode: AnimationBlendMode = js.native
     
+    /**
+    	 * @default -1
+    	 */
     var duration: Double = js.native
     
     var name: String = js.native
@@ -98,6 +104,6 @@ object animationClipMod extends js.Object {
     
     def parseAnimation(animation: js.Any, bones: js.Array[Bone]): AnimationClip = js.native
     
-    def toJSON(): js.Any = js.native
+    def toJSON(clip: AnimationClip): js.Any = js.native
   }
 }

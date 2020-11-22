@@ -11,10 +11,10 @@ object randomMod extends js.Object {
   @js.native
   object Random extends js.Object {
     
-    // @param array, @return a random element in array
-    def choice(array: js.Array[_]): String = js.native
     // @param str, @return a random char in str
     def choice(str: String): String = js.native
+    // @param array, @return a random element in array
+    def choice[T](array: js.Array[T]): js.UndefOr[T] = js.native
     
     def fraction(): Double = js.native
     

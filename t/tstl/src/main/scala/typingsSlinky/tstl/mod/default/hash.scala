@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object hash extends js.Object {
   
-  def apply(items: js.Any*): Double = js.native
+  def apply(itemList: js.Any*): Double = js.native
 }

@@ -10,34 +10,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPivotGridPivotGridCell extends js.Object {
   
-  /** @name dxPivotGridPivotGridCell.columnPath */
+  /**
+    * [descr:dxPivotGridPivotGridCell.columnPath]
+    */
   var columnPath: js.UndefOr[js.Array[String | Double | js.Date]] = js.native
   
-  /** @name dxPivotGridPivotGridCell.columnType */
+  /**
+    * [descr:dxPivotGridPivotGridCell.columnType]
+    */
   var columnType: js.UndefOr[D | T | GT] = js.native
   
-  /** @name dxPivotGridPivotGridCell.dataIndex */
+  /**
+    * [descr:dxPivotGridPivotGridCell.dataIndex]
+    */
   var dataIndex: js.UndefOr[Double] = js.native
   
-  /** @name dxPivotGridPivotGridCell.expanded */
+  /**
+    * [descr:dxPivotGridPivotGridCell.expanded]
+    */
   var expanded: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGridPivotGridCell.path */
+  /**
+    * [descr:dxPivotGridPivotGridCell.path]
+    */
   var path: js.UndefOr[js.Array[String | Double | js.Date]] = js.native
   
-  /** @name dxPivotGridPivotGridCell.rowPath */
+  /**
+    * [descr:dxPivotGridPivotGridCell.rowPath]
+    */
   var rowPath: js.UndefOr[js.Array[String | Double | js.Date]] = js.native
   
-  /** @name dxPivotGridPivotGridCell.rowType */
+  /**
+    * [descr:dxPivotGridPivotGridCell.rowType]
+    */
   var rowType: js.UndefOr[D | T | GT] = js.native
   
-  /** @name dxPivotGridPivotGridCell.text */
+  /**
+    * [descr:dxPivotGridPivotGridCell.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name dxPivotGridPivotGridCell.type */
+  /**
+    * [descr:dxPivotGridPivotGridCell.type]
+    */
   var `type`: js.UndefOr[D | T | GT] = js.native
   
-  /** @name dxPivotGridPivotGridCell.value */
+  /**
+    * [descr:dxPivotGridPivotGridCell.value]
+    */
   var value: js.UndefOr[js.Any] = js.native
 }
 object dxPivotGridPivotGridCell {

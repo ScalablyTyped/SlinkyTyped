@@ -26,7 +26,7 @@ trait PermissionCheckHandlerHandlerDetails extends js.Object {
   var requestingUrl: String = js.native
   
   /**
-    * The security orign of the `media` check.
+    * The security origin of the `media` check.
     */
   var securityOrigin: String = js.native
 }

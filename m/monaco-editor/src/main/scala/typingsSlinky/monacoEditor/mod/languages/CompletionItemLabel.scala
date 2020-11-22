@@ -13,14 +13,14 @@ trait CompletionItemLabel extends js.Object {
   var name: String = js.native
   
   /**
+    * The parameters without the return type. Render after `name`.
+    */
+  var parameters: js.UndefOr[String] = js.native
+  
+  /**
     * The fully qualified name, like package name or file path. Rendered after `signature`.
     */
   var qualifier: js.UndefOr[String] = js.native
-  
-  /**
-    * The signature without the return type. Render after `name`.
-    */
-  var signature: js.UndefOr[String] = js.native
   
   /**
     * The return-type of a function or type of a property/variable. Rendered rightmost.
@@ -54,16 +54,16 @@ object CompletionItemLabel {
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setParameters(value: String): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParameters: Self = this.set("parameters", js.undefined)
+    
+    @scala.inline
     def setQualifier(value: String): Self = this.set("qualifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteQualifier: Self = this.set("qualifier", js.undefined)
-    
-    @scala.inline
-    def setSignature(value: String): Self = this.set("signature", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSignature: Self = this.set("signature", js.undefined)
     
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])

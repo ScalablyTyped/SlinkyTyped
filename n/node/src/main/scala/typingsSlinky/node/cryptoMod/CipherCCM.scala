@@ -1,6 +1,7 @@
 package typingsSlinky.node.cryptoMod
 
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.anon.PlaintextLength
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,5 +12,5 @@ trait CipherCCM extends Cipher {
   
   def getAuthTag(): Buffer = js.native
   
-  def setAAD(buffer: Buffer, options: PlaintextLength): this.type = js.native
+  def setAAD(buffer: ArrayBufferView, options: PlaintextLength): this.type = js.native
 }

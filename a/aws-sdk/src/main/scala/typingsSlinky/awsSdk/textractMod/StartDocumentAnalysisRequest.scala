@@ -28,9 +28,19 @@ trait StartDocumentAnalysisRequest extends js.Object {
   var JobTag: js.UndefOr[typingsSlinky.awsSdk.textractMod.JobTag] = js.native
   
   /**
+    * The KMS key used to encrypt the inference results. This can be in either Key ID or Key Alias format. When a KMS key is provided, the KMS key will be used for server-side encryption of the objects in the customer bucket. When this parameter is not enabled, the result will be encrypted server side,using SSE-S3.
+    */
+  var KMSKeyId: js.UndefOr[typingsSlinky.awsSdk.textractMod.KMSKeyId] = js.native
+  
+  /**
     * The Amazon SNS topic ARN that you want Amazon Textract to publish the completion status of the operation to. 
     */
   var NotificationChannel: js.UndefOr[typingsSlinky.awsSdk.textractMod.NotificationChannel] = js.native
+  
+  /**
+    * Sets if the output will go to a customer defined bucket. By default, Amazon Textract will save the results internally to be accessed by the GetDocumentAnalysis operation.
+    */
+  var OutputConfig: js.UndefOr[typingsSlinky.awsSdk.textractMod.OutputConfig] = js.native
 }
 object StartDocumentAnalysisRequest {
   
@@ -77,9 +87,21 @@ object StartDocumentAnalysisRequest {
     def deleteJobTag: Self = this.set("JobTag", js.undefined)
     
     @scala.inline
+    def setKMSKeyId(value: KMSKeyId): Self = this.set("KMSKeyId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKMSKeyId: Self = this.set("KMSKeyId", js.undefined)
+    
+    @scala.inline
     def setNotificationChannel(value: NotificationChannel): Self = this.set("NotificationChannel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNotificationChannel: Self = this.set("NotificationChannel", js.undefined)
+    
+    @scala.inline
+    def setOutputConfig(value: OutputConfig): Self = this.set("OutputConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutputConfig: Self = this.set("OutputConfig", js.undefined)
   }
 }

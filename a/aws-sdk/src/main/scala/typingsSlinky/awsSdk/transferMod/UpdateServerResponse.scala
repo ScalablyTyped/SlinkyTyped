@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateServerResponse extends js.Object {
   
   /**
-    * A system-assigned unique identifier for a file transfer protocol-enabled server that the user account is assigned to.
+    * A system-assigned unique identifier for a server that the user account is assigned to.
     */
   var ServerId: typingsSlinky.awsSdk.transferMod.ServerId = js.native
 }

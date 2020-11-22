@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Browser.GrantPermissionsRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Browser.SetPermissionRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `33` extends js.Object {
   
-  var paramsType: js.Array[GrantPermissionsRequest] = js.native
+  var paramsType: js.Array[SetPermissionRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `33` {
   
   @scala.inline
-  def apply(paramsType: js.Array[GrantPermissionsRequest], returnType: Unit): `33` = {
+  def apply(paramsType: js.Array[SetPermissionRequest], returnType: Unit): `33` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`33`]
   }
@@ -36,10 +36,10 @@ object `33` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: GrantPermissionsRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetPermissionRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[GrantPermissionsRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetPermissionRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

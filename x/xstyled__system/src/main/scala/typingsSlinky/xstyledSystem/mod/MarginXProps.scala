@@ -9,7 +9,7 @@ trait MarginXProps[TLength] extends js.Object {
   
   val mx: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginLeftProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginLeft<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object MarginXProps {
     }
     
     @scala.inline
+    def setMxVarargs(value: js.Any*): Self = this.set("mx", js.Array(value :_*))
+    
+    @scala.inline
     def setMx(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginLeftProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginLeft<TLength> */ _
         ]
     ): Self = this.set("mx", value.asInstanceOf[js.Any])
     

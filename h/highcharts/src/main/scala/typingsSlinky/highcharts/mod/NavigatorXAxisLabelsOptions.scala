@@ -170,15 +170,15 @@ trait NavigatorXAxisLabelsOptions extends js.Object {
   var useHTML: js.UndefOr[Boolean] = js.native
   
   /**
-    * (Highstock, Gantt) The x position offset of the label relative to the
-    * tick position on the axis.
+    * (Highstock, Gantt) The x position offset of all labels relative to the
+    * tick positions on the axis.
     */
   var x: js.UndefOr[Double] = js.native
   
   /**
-    * (Highstock, Gantt) The y position offset of the label relative to the
-    * tick position on the axis. The default makes it adapt to the font size on
-    * bottom axis.
+    * (Highstock, Gantt) The y position offset of all labels relative to the
+    * tick positions on the axis. The default makes it adapt to the font size
+    * of the bottom axis.
     */
   var y: js.UndefOr[Double] = js.native
   

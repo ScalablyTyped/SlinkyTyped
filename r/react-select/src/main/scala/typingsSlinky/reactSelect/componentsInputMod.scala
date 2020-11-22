@@ -4,6 +4,7 @@ import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
+import typingsSlinky.reactSelect.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,5 +45,7 @@ object componentsInputMod extends js.Object {
     
     /** Set whether the input should be visible. Does not affect input size. */
     var isHidden: Boolean = js.native
+    
+    var theme: Theme = js.native
   }
 }

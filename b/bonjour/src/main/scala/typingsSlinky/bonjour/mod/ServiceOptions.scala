@@ -1,5 +1,6 @@
 package typingsSlinky.bonjour.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.bonjour.bonjourStrings.tcp
 import typingsSlinky.bonjour.bonjourStrings.udp
 import scala.scalajs.js
@@ -21,7 +22,7 @@ trait ServiceOptions extends js.Object {
   
   var subtypes: js.UndefOr[js.Array[String]] = js.native
   
-  var txt: js.UndefOr[js.Object] = js.native
+  var txt: js.UndefOr[StringDictionary[String]] = js.native
   
   var `type`: String = js.native
 }
@@ -86,7 +87,7 @@ object ServiceOptions {
     def deleteSubtypes: Self = this.set("subtypes", js.undefined)
     
     @scala.inline
-    def setTxt(value: js.Object): Self = this.set("txt", value.asInstanceOf[js.Any])
+    def setTxt(value: StringDictionary[String]): Self = this.set("txt", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTxt: Self = this.set("txt", js.undefined)

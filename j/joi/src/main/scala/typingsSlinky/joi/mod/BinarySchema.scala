@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.joi.mod._SchemaLike because Already inherited
 - typingsSlinky.joi.mod._Schema because Already inherited */ @js.native
 trait BinarySchema extends AnySchema {
   
@@ -18,14 +17,17 @@ trait BinarySchema extends AnySchema {
     * Specifies the exact length of the buffer:
     */
   def length(limit: Double): this.type = js.native
+  def length(limit: Reference): this.type = js.native
   
   /**
     * Specifies the maximum length of the buffer.
     */
   def max(limit: Double): this.type = js.native
+  def max(limit: Reference): this.type = js.native
   
   /**
     * Specifies the minimum length of the buffer.
     */
   def min(limit: Double): this.type = js.native
+  def min(limit: Reference): this.type = js.native
 }

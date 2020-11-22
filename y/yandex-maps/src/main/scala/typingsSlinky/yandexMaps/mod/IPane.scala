@@ -25,7 +25,7 @@ object IPane {
   @scala.inline
   def apply(
     destroy: () => Unit,
-    events: IEventManager,
+    events: IEventManager[js.Object],
     getElement: () => HTMLElement,
     getMap: () => Map_,
     getOverflow: () => visible | hidden,

@@ -6,8 +6,8 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactMdUtils.resizeObserverMod.ResizeObserverProps
-import typingsSlinky.reactMdUtils.useResizeObserverMod.ObservedResizeData
-import typingsSlinky.reactMdUtils.useResizeObserverMod.ResizeObserverTarget
+import typingsSlinky.reactMdUtils.useResizeObserverMod.ResizeObserverElementData
+import typingsSlinky.reactMdUtils.useResizeObserverV1Mod.ResizeObserverTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -57,7 +57,7 @@ object ResizeObserver {
   def withProps(p: ResizeObserverProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(onResize: /* event */ ObservedResizeData => Unit): Builder = {
+  def apply(onResize: /* resizeData */ ResizeObserverElementData[HTMLElement] => Unit): Builder = {
     val __props = js.Dynamic.literal(onResize = js.Any.fromFunction1(onResize))
     new Builder(js.Array(this.component, __props.asInstanceOf[ResizeObserverProps]))
   }

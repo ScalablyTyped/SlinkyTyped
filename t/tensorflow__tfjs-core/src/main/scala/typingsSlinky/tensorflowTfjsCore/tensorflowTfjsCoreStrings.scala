@@ -4,7 +4,7 @@ import typingsSlinky.tensorflowTfjsCore.convUtilMod.PadType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataValues
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.NumericDataType
-import typingsSlinky.tensorflowTfjsCore.fusedUtilMod.Activation
+import typingsSlinky.tensorflowTfjsCore.fusedTypesMod.Activation
 import typingsSlinky.tensorflowTfjsCore.typesMod.WeightGroup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -193,6 +193,9 @@ object tensorflowTfjsCoreStrings {
   def reduceRight: reduceRight = "reduceRight".asInstanceOf[reduceRight]
   
   @scala.inline
+  def reflect: reflect = "reflect".asInstanceOf[reflect]
+  
+  @scala.inline
   def relu: relu = "relu".asInstanceOf[relu]
   
   @scala.inline
@@ -230,6 +233,9 @@ object tensorflowTfjsCoreStrings {
   
   @scala.inline
   def subarray: subarray = "subarray".asInstanceOf[subarray]
+  
+  @scala.inline
+  def symmetric: symmetric = "symmetric".asInstanceOf[symmetric]
   
   @scala.inline
   def uint16: uint16 = "uint16".asInstanceOf[uint16]
@@ -435,6 +441,9 @@ object tensorflowTfjsCoreStrings {
   sealed trait reduceRight extends DataValues
   
   @js.native
+  sealed trait reflect extends js.Object
+  
+  @js.native
   sealed trait relu extends Activation
   
   @js.native
@@ -472,6 +481,9 @@ object tensorflowTfjsCoreStrings {
   
   @js.native
   sealed trait subarray extends DataValues
+  
+  @js.native
+  sealed trait symmetric extends js.Object
   
   @js.native
   sealed trait toLocaleString extends DataValues

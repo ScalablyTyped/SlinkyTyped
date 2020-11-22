@@ -29,7 +29,7 @@ trait ProcessedOptions
   
   /**
     * Emit the file only if it was changed.
-    * Default: `true`.
+    * @default true
     */
   var cache: Boolean = js.native
   
@@ -40,12 +40,12 @@ trait ProcessedOptions
   
   /**
     * Allows to control how chunks should be sorted before they are included to the html.
-    * Default: `'auto'`.
+    * @default 'auto'
     */
   var chunksSortMode: auto | manual | (js.Function2[/* entryNameA */ String, /* entryNameB */ String, Double]) = js.native
   
   /**
-    * List all entries which should not be injeccted
+    * List all entries which should not be injected
     */
   var excludeChunks: js.Array[String] = js.native
   
@@ -56,8 +56,8 @@ trait ProcessedOptions
   
   /**
     * The file to write the HTML to.
-    * Defaults to `index.html`.
     * Supports subdirectories eg: `assets/admin.html`
+    * @default 'index.html'
     */
   var filename: String = js.native
   
@@ -78,13 +78,19 @@ trait ProcessedOptions
   var meta: `false` | (StringDictionary[String | `false` | (StringDictionary[String | Boolean])]) = js.native
   
   /**
-    * HTML Minification options accepts the following valeus:
+    * HTML Minification options accepts the following values:
     * - Set to `false` to disable minifcation
     * - Set to `'auto'` to enable minifcation only for production mode
     * - Set to custom minification according to
-    * @https://github.com/kangax/html-minifier#options-quick-reference
+    * {@link https://github.com/kangax/html-minifier#options-quick-reference}
     */
   var minify: auto | Boolean | MinifyOptions = js.native
+  
+  /**
+    * By default the public path is set to `auto` - that way the html-webpack-plugin will try
+    * to set the publicPath according to the current filename and the webpack publicPath setting
+    */
+  var publicPath: String | auto = js.native
   
   // Inject scripts into head
   /**
@@ -92,7 +98,7 @@ trait ProcessedOptions
     * blocking will result in <script src="..."></script>
     * defer will result in <script defer src="..."></script>
     *
-    * The default behaviour is blocking
+    * @default 'blocking'
     */
   var scriptLoading: blocking | defer = js.native
   
@@ -147,6 +153,7 @@ object ProcessedOptions {
     inject: `false` | `true` | body | head,
     meta: `false` | (StringDictionary[String | `false` | (StringDictionary[String | Boolean])]),
     minify: auto | Boolean | MinifyOptions,
+    publicPath: String | auto,
     scriptLoading: blocking | defer,
     showErrors: Boolean,
     template: String,
@@ -161,7 +168,7 @@ object ProcessedOptions {
     title: String,
     xhtml: Boolean
   ): ProcessedOptions = {
-    val __obj = js.Dynamic.literal(cache = cache.asInstanceOf[js.Any], chunks = chunks.asInstanceOf[js.Any], chunksSortMode = chunksSortMode.asInstanceOf[js.Any], excludeChunks = excludeChunks.asInstanceOf[js.Any], favicon = favicon.asInstanceOf[js.Any], filename = filename.asInstanceOf[js.Any], hash = hash.asInstanceOf[js.Any], inject = inject.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], minify = minify.asInstanceOf[js.Any], scriptLoading = scriptLoading.asInstanceOf[js.Any], showErrors = showErrors.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any], templateContent = templateContent.asInstanceOf[js.Any], templateParameters = templateParameters.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], xhtml = xhtml.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(cache = cache.asInstanceOf[js.Any], chunks = chunks.asInstanceOf[js.Any], chunksSortMode = chunksSortMode.asInstanceOf[js.Any], excludeChunks = excludeChunks.asInstanceOf[js.Any], favicon = favicon.asInstanceOf[js.Any], filename = filename.asInstanceOf[js.Any], hash = hash.asInstanceOf[js.Any], inject = inject.asInstanceOf[js.Any], meta = meta.asInstanceOf[js.Any], minify = minify.asInstanceOf[js.Any], publicPath = publicPath.asInstanceOf[js.Any], scriptLoading = scriptLoading.asInstanceOf[js.Any], showErrors = showErrors.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any], templateContent = templateContent.asInstanceOf[js.Any], templateParameters = templateParameters.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], xhtml = xhtml.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProcessedOptions]
   }
   
@@ -218,6 +225,9 @@ object ProcessedOptions {
     
     @scala.inline
     def setMinify(value: auto | Boolean | MinifyOptions): Self = this.set("minify", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPublicPath(value: String | auto): Self = this.set("publicPath", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setScriptLoading(value: blocking | defer): Self = this.set("scriptLoading", value.asInstanceOf[js.Any])

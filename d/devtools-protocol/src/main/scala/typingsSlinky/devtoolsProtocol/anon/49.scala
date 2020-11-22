@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.RemoveAttributeRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.ScrollIntoViewIfNeededRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `49` extends js.Object {
   
-  var paramsType: js.Array[RemoveAttributeRequest] = js.native
+  var paramsType: js.Array[js.UndefOr[ScrollIntoViewIfNeededRequest]] = js.native
   
   var returnType: Unit = js.native
 }
 object `49` {
   
   @scala.inline
-  def apply(paramsType: js.Array[RemoveAttributeRequest], returnType: Unit): `49` = {
+  def apply(paramsType: js.Array[js.UndefOr[ScrollIntoViewIfNeededRequest]], returnType: Unit): `49` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`49`]
   }
@@ -36,10 +36,10 @@ object `49` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: RemoveAttributeRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: js.UndefOr[ScrollIntoViewIfNeededRequest]*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[RemoveAttributeRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[js.UndefOr[ScrollIntoViewIfNeededRequest]]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

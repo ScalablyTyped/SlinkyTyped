@@ -40,8 +40,7 @@ class Stage protected () extends CustomResource {
   val cacheClusterEnabled: Output_[js.UndefOr[Boolean]] = js.native
   
   /**
-    * The size of the cache cluster for the stage, if enabled.
-    * Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
+    * The size of the cache cluster for the stage, if enabled. Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
     */
   val cacheClusterSize: Output_[js.UndefOr[String]] = js.native
   

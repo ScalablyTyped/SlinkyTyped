@@ -8,12 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Identity extends js.Object {
   
   /**
-    * A group identity.
+    * An AWS SSO group identity.
     */
   var group: js.UndefOr[GroupIdentity] = js.native
   
   /**
-    * A user identity.
+    * An IAM user identity.
+    */
+  var iamUser: js.UndefOr[IAMUserIdentity] = js.native
+  
+  /**
+    * An AWS SSO user identity.
     */
   var user: js.UndefOr[UserIdentity] = js.native
 }
@@ -45,6 +50,12 @@ object Identity {
     
     @scala.inline
     def deleteGroup: Self = this.set("group", js.undefined)
+    
+    @scala.inline
+    def setIamUser(value: IAMUserIdentity): Self = this.set("iamUser", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIamUser: Self = this.set("iamUser", js.undefined)
     
     @scala.inline
     def setUser(value: UserIdentity): Self = this.set("user", value.asInstanceOf[js.Any])

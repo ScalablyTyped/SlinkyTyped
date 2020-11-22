@@ -44,7 +44,7 @@ class Payment () extends js.Object {
   var created_at: js.UndefOr[String] = js.native
   
   /**
-    * An optional customer_id to be entered by the developer when creating a payment.
+    * The `Customer` ID of the customer associated with the payment.
     */
   var customer_id: js.UndefOr[String] = js.native
   
@@ -134,14 +134,14 @@ class Payment () extends js.Object {
   var shipping_address: js.UndefOr[Address] = js.native
   
   /**
-    * The source type for this payment.
+    * The source type for this payment. Current values include: `CARD`.
     */
   var source_type: js.UndefOr[String] = js.native
   
   /**
     * Additional payment information that gets added on the customer's card statement as part of the statement description.
-    * Note that the statement_description_identifier may get truncated on the statement description to fit the
-    * required information including the Square identifier (SQ *) and name of the merchant taking the payment.
+    * Note that the `statement_description_identifier` may get truncated on the statement description to fit the required
+    * information including the Square identifier (SQ *) and name of the merchant taking the payment.
     */
   var statement_description_identifier: js.UndefOr[String] = js.native
   

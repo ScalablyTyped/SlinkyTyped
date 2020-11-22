@@ -1,6 +1,7 @@
 package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.anon.Layout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -45,7 +46,7 @@ trait ImagePropsBase
     *
     * {nativeEvent: { layout: {x, y, width, height} }}.
     */
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   /**
     * Invoked when load completes successfully
@@ -183,7 +184,7 @@ object ImagePropsBase {
     def deleteOnError: Self = this.set("onError", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)

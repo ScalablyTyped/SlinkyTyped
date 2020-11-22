@@ -15,7 +15,7 @@ trait ScaleRangeSliderViewModelProperties extends js.Object {
   var layer: js.UndefOr[LayerProperties] = js.native
   
   /**
-    * The maximum scale of the active scale range. When the maxScale reaches the [maxScaleLimit](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#maxScaleLimit), the maxScale value becomes 0 and there is no maximum scale set.
+    * The maximum scale of the active scale range.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#maxScale)
     */
@@ -29,7 +29,7 @@ trait ScaleRangeSliderViewModelProperties extends js.Object {
   var maxScaleLimit: js.UndefOr[Double] = js.native
   
   /**
-    * The minimum scale of the active scale range. When the minScale reaches the [minScaleLimit](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#minScaleLimit), the minScale value becomes 0 and there is no minimum scale set.
+    * The minimum scale of the active scale range.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#minScale)
     */
@@ -50,7 +50,7 @@ trait ScaleRangeSliderViewModelProperties extends js.Object {
   var sliderViewModel: js.UndefOr[SliderViewModelProperties] = js.native
   
   /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the widget to a specific view.
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#view)
     */

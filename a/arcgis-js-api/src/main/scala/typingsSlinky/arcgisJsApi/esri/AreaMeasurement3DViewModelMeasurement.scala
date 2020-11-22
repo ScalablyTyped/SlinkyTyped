@@ -19,7 +19,7 @@ trait AreaMeasurement3DViewModelMeasurement extends Object {
   var area: MeasurementValue = js.native
   
   /**
-    * Describes the mode in which the measurement was taken. In `euclidean` mode, the area and perimeter length are computed from a flat polygon with straight segments on the perimeter in the [ECEF](https://en.wikipedia.org/wiki/ECEF) coordinate system. In `geodesic` mode, the area and perimeter length are computed from a geodesic polygon on the WGS84 ellipsoid.
+    * Describes the mode in which the measurement was taken.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-AreaMeasurement3D-AreaMeasurement3DViewModel.html#measurement)
     */

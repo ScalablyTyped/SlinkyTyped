@@ -18,7 +18,7 @@ trait TProjectionNode extends TNode {
     * retrieved using LView.node).
     */
   @JSName("parent")
-  var parent_TProjectionNode: ɵangularPackagesCoreCoreBf | TElementContainerNode | Null = js.native
+  var parent_TProjectionNode: ɵangularPackagesCoreCoreBh | TElementContainerNode | Null = js.native
   
   /** Index of the projection node. (See TNode.projection for more info.) */
   @JSName("projection")
@@ -26,6 +26,9 @@ trait TProjectionNode extends TNode {
   
   @JSName("tViews")
   var tViews_TProjectionNode: Null = js.native
+  
+  @JSName("value")
+  var value_TProjectionNode: Null = js.native
 }
 object TProjectionNode {
   
@@ -43,9 +46,10 @@ object TProjectionNode {
     providerIndexes: TNodeProviderIndexes,
     styleBindings: TStylingRange,
     tViews: Null,
-    `type`: TNodeType
+    `type`: TNodeType,
+    value: Null
   ): TProjectionNode = {
-    val __obj = js.Dynamic.literal(child = child.asInstanceOf[js.Any], classBindings = classBindings.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], directiveStylingLast = directiveStylingLast.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], styleBindings = styleBindings.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(child = child.asInstanceOf[js.Any], classBindings = classBindings.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], directiveStylingLast = directiveStylingLast.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], styleBindings = styleBindings.asInstanceOf[js.Any], tViews = tViews.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TProjectionNode]
   }
@@ -75,7 +79,10 @@ object TProjectionNode {
     def setTViews(value: Null): Self = this.set("tViews", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setParent(value: ɵangularPackagesCoreCoreBf | TElementContainerNode): Self = this.set("parent", value.asInstanceOf[js.Any])
+    def setValue(value: Null): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setParent(value: ɵangularPackagesCoreCoreBh | TElementContainerNode): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParentNull: Self = this.set("parent", null)

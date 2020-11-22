@@ -1,6 +1,7 @@
 package typingsSlinky.antd.badgeMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.colorsMod.PresetStatusColorType
 import typingsSlinky.antd.typeMod.LiteralUnion
@@ -32,6 +33,8 @@ trait BadgeProps extends js.Object {
   var scrollNumberPrefixCls: js.UndefOr[String] = js.native
   
   var showZero: js.UndefOr[Boolean] = js.native
+  
+  var size: js.UndefOr[typingsSlinky.antd.antdStrings.default | small] = js.native
   
   var status: js.UndefOr[PresetStatusColorType] = js.native
   
@@ -120,6 +123,12 @@ object BadgeProps {
     
     @scala.inline
     def deleteShowZero: Self = this.set("showZero", js.undefined)
+    
+    @scala.inline
+    def setSize(value: typingsSlinky.antd.antdStrings.default | small): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
     
     @scala.inline
     def setStatus(value: PresetStatusColorType): Self = this.set("status", value.asInstanceOf[js.Any])

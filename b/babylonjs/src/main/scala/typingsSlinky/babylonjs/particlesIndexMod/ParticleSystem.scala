@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.particlesIndexMod
 import typingsSlinky.babylonjs.effectMod.Effect
 import typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,24 +18,33 @@ class ParticleSystem protected ()
     * Particles are often small sprites used to simulate hard-to-reproduce phenomena like fire, smoke, water, or abstract visual effects like magic glitter and faery dust.
     * @param name The name of the particle system
     * @param capacity The max number of particles alive at the same time
-    * @param scene The scene the particle system belongs to
+    * @param sceneOrEngine The scene the particle system belongs to or the engine to use if no scene
     * @param customEffect a custom effect used to change the way particles are rendered by default
     * @param isAnimationSheetEnabled Must be true if using a spritesheet to animate the particles texture
     * @param epsilon Offset used to render the particles
     */
-  def this(name: String, capacity: Double, scene: Scene) = this()
-  def this(name: String, capacity: Double, scene: Scene, customEffect: Nullable[Effect]) = this()
+  def this(name: String, capacity: Double, sceneOrEngine: Scene) = this()
+  def this(name: String, capacity: Double, sceneOrEngine: ThinEngine) = this()
+  def this(name: String, capacity: Double, sceneOrEngine: Scene, customEffect: Nullable[Effect]) = this()
+  def this(name: String, capacity: Double, sceneOrEngine: ThinEngine, customEffect: Nullable[Effect]) = this()
   def this(
     name: String,
     capacity: Double,
-    scene: Scene,
+    sceneOrEngine: Scene,
     customEffect: js.UndefOr[Nullable[Effect]],
     isAnimationSheetEnabled: Boolean
   ) = this()
   def this(
     name: String,
     capacity: Double,
-    scene: Scene,
+    sceneOrEngine: ThinEngine,
+    customEffect: js.UndefOr[Nullable[Effect]],
+    isAnimationSheetEnabled: Boolean
+  ) = this()
+  def this(
+    name: String,
+    capacity: Double,
+    sceneOrEngine: Scene,
     customEffect: js.UndefOr[Nullable[Effect]],
     isAnimationSheetEnabled: js.UndefOr[scala.Nothing],
     epsilon: Double
@@ -42,7 +52,23 @@ class ParticleSystem protected ()
   def this(
     name: String,
     capacity: Double,
-    scene: Scene,
+    sceneOrEngine: Scene,
+    customEffect: js.UndefOr[Nullable[Effect]],
+    isAnimationSheetEnabled: Boolean,
+    epsilon: Double
+  ) = this()
+  def this(
+    name: String,
+    capacity: Double,
+    sceneOrEngine: ThinEngine,
+    customEffect: js.UndefOr[Nullable[Effect]],
+    isAnimationSheetEnabled: js.UndefOr[scala.Nothing],
+    epsilon: Double
+  ) = this()
+  def this(
+    name: String,
+    capacity: Double,
+    sceneOrEngine: ThinEngine,
     customEffect: js.UndefOr[Nullable[Effect]],
     isAnimationSheetEnabled: Boolean,
     epsilon: Double
@@ -71,13 +97,15 @@ object ParticleSystem extends js.Object {
   /**
     * Parses a JSON object to create a particle system.
     * @param parsedParticleSystem The JSON object to parse
-    * @param scene The scene to create the particle system in
+    * @param sceneOrEngine The scene or the engine to create the particle system in
     * @param rootUrl The root url to use to load external dependencies like texture
     * @param doNotStart Ignore the preventAutoStart attribute and does not start
     * @returns the Parsed particle system
     */
-  def Parse(parsedParticleSystem: js.Any, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.particleSystemMod.ParticleSystem = js.native
-  def Parse(parsedParticleSystem: js.Any, scene: Scene, rootUrl: String, doNotStart: Boolean): typingsSlinky.babylonjs.particleSystemMod.ParticleSystem = js.native
+  def Parse(parsedParticleSystem: js.Any, sceneOrEngine: Scene, rootUrl: String): typingsSlinky.babylonjs.particleSystemMod.ParticleSystem = js.native
+  def Parse(parsedParticleSystem: js.Any, sceneOrEngine: Scene, rootUrl: String, doNotStart: Boolean): typingsSlinky.babylonjs.particleSystemMod.ParticleSystem = js.native
+  def Parse(parsedParticleSystem: js.Any, sceneOrEngine: ThinEngine, rootUrl: String): typingsSlinky.babylonjs.particleSystemMod.ParticleSystem = js.native
+  def Parse(parsedParticleSystem: js.Any, sceneOrEngine: ThinEngine, rootUrl: String, doNotStart: Boolean): typingsSlinky.babylonjs.particleSystemMod.ParticleSystem = js.native
   
   /** @hidden */
   def _GetAttributeNamesOrOptions(): js.Array[String] = js.native
@@ -106,8 +134,19 @@ object ParticleSystem extends js.Object {
   def _GetEffectCreationOptions(isAnimationSheetEnabled: Boolean): js.Array[String] = js.native
   
   /** @hidden */
-  def _Parse(parsedParticleSystem: js.Any, particleSystem: IParticleSystem, scene: Scene, rootUrl: String): Unit = js.native
+  def _Parse(
+    parsedParticleSystem: js.Any,
+    particleSystem: IParticleSystem,
+    sceneOrEngine: Scene,
+    rootUrl: String
+  ): Unit = js.native
+  def _Parse(
+    parsedParticleSystem: js.Any,
+    particleSystem: IParticleSystem,
+    sceneOrEngine: ThinEngine,
+    rootUrl: String
+  ): Unit = js.native
   
   /** @hidden */
-  def _Serialize(serializationObject: js.Any, particleSystem: IParticleSystem): Unit = js.native
+  def _Serialize(serializationObject: js.Any, particleSystem: IParticleSystem, serializeTexture: Boolean): Unit = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.jsreportCore.anon
 
+import typingsSlinky.jsreportCore.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ trait PartialRequest extends js.Object {
   
   var data: js.UndefOr[js.Any] = js.native
   
-  var options: js.UndefOr[js.Object] = js.native
+  var options: js.UndefOr[Options] = js.native
   
   var template: js.UndefOr[PartialTemplate] = js.native
 }
@@ -44,7 +45,7 @@ object PartialRequest {
     def deleteData: Self = this.set("data", js.undefined)
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: Options): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

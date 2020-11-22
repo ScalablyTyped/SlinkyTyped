@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.GitGetRefEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.GitGetRefResponseData
+import typingsSlinky.octokitTypes.endpointsMod.GitCreateRefEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.GitCreateRefResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `699` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[GitGetRefEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[GitCreateRefEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[GitGetRefResponseData] = js.native
+  var response: OctokitResponse[GitCreateRefResponseData] = js.native
 }
 object `699` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[GitGetRefEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[GitGetRefResponseData]
+    parameters: RequestParameters with (Omit[GitCreateRefEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[GitCreateRefResponseData]
   ): `699` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`699`]
@@ -46,9 +46,9 @@ object `699` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[GitGetRefEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[GitCreateRefEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[GitGetRefResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[GitCreateRefResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

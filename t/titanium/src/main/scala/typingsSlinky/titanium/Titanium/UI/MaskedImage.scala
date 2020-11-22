@@ -81,7 +81,7 @@ trait MaskedImage extends View {
     * Gets the value of the <Titanium.UI.MaskedImage.tint> property.
     * @deprecated Access <Titanium.UI.MaskedImage.tint> instead.
     */
-  def getTint(): String = js.native
+  def getTint(): String | Color = js.native
   
   /**
     * Image drawn as the Foreground image.
@@ -121,9 +121,10 @@ trait MaskedImage extends View {
     * @deprecated Set the value using <Titanium.UI.MaskedImage.tint> instead.
     */
   def setTint(tint: String): Unit = js.native
+  def setTint(tint: Color): Unit = js.native
   
   /**
     * Color to combine with the image, as a color name or hex triplet.
     */
-  var tint: String = js.native
+  var tint: String | Color = js.native
 }

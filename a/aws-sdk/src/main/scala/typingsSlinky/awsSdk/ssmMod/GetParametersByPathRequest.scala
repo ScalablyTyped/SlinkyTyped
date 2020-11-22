@@ -18,7 +18,7 @@ trait GetParametersByPathRequest extends js.Object {
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.ssmMod.NextToken] = js.native
   
   /**
-    * Filters to limit the request results.
+    * Filters to limit the request results.  For GetParametersByPath, the following filter Key names are supported: Type, KeyId, Label, and DataType. The following Key values are not supported for GetParametersByPath: tag, Name, Path, and Tier. 
     */
   var ParameterFilters: js.UndefOr[ParameterStringFilterList] = js.native
   

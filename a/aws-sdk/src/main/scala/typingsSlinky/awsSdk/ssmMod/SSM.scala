@@ -1,6 +1,8 @@
 package typingsSlinky.awsSdk.ssmMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.anon.GetCommandInvocationReque
+import typingsSlinky.awsSdk.awsSdkStrings.commandExecuted
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -213,12 +215,12 @@ trait SSM extends Service {
   ): Request[DeleteDocumentResult, AWSError] = js.native
   
   /**
-    * Delete a custom inventory type, or the data associated with a custom Inventory type. Deleting a custom inventory type is also referred to as deleting a custom inventory schema.
+    * Delete a custom inventory type or the data associated with a custom Inventory type. Deleting a custom inventory type is also referred to as deleting a custom inventory schema.
     */
   def deleteInventory(): Request[DeleteInventoryResult, AWSError] = js.native
   def deleteInventory(callback: js.Function2[/* err */ AWSError, /* data */ DeleteInventoryResult, Unit]): Request[DeleteInventoryResult, AWSError] = js.native
   /**
-    * Delete a custom inventory type, or the data associated with a custom Inventory type. Deleting a custom inventory type is also referred to as deleting a custom inventory schema.
+    * Delete a custom inventory type or the data associated with a custom Inventory type. Deleting a custom inventory type is also referred to as deleting a custom inventory schema.
     */
   def deleteInventory(params: DeleteInventoryRequest): Request[DeleteInventoryResult, AWSError] = js.native
   def deleteInventory(
@@ -811,12 +813,12 @@ trait SSM extends Service {
   ): Request[DescribePatchGroupsResult, AWSError] = js.native
   
   /**
-    * Lists the properties of available patches organized by product, product family, classification, severity, and other properties of available patches. You can use the reported properties in the filters you specify in requests for actions such as CreatePatchBaseline, UpdatePatchBaseline, DescribeAvailablePatches, and DescribePatchBaselines. The following section lists the properties that can be used in filters for each major operating system type:  WINDOWS  Valid properties: PRODUCT, PRODUCT_FAMILY, CLASSIFICATION, MSRC_SEVERITY  AMAZON_LINUX  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  AMAZON_LINUX_2  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  UBUNTU   Valid properties: PRODUCT, PRIORITY  REDHAT_ENTERPRISE_LINUX  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  SUSE  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  CENTOS  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  
+    * Lists the properties of available patches organized by product, product family, classification, severity, and other properties of available patches. You can use the reported properties in the filters you specify in requests for actions such as CreatePatchBaseline, UpdatePatchBaseline, DescribeAvailablePatches, and DescribePatchBaselines. The following section lists the properties that can be used in filters for each major operating system type:  AMAZON_LINUX  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  AMAZON_LINUX_2  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  CENTOS  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  DEBIAN  Valid properties: PRODUCT, PRIORITY  ORACLE_LINUX  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  REDHAT_ENTERPRISE_LINUX  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  SUSE  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  UBUNTU  Valid properties: PRODUCT, PRIORITY  WINDOWS  Valid properties: PRODUCT, PRODUCT_FAMILY, CLASSIFICATION, MSRC_SEVERITY  
     */
   def describePatchProperties(): Request[DescribePatchPropertiesResult, AWSError] = js.native
   def describePatchProperties(callback: js.Function2[/* err */ AWSError, /* data */ DescribePatchPropertiesResult, Unit]): Request[DescribePatchPropertiesResult, AWSError] = js.native
   /**
-    * Lists the properties of available patches organized by product, product family, classification, severity, and other properties of available patches. You can use the reported properties in the filters you specify in requests for actions such as CreatePatchBaseline, UpdatePatchBaseline, DescribeAvailablePatches, and DescribePatchBaselines. The following section lists the properties that can be used in filters for each major operating system type:  WINDOWS  Valid properties: PRODUCT, PRODUCT_FAMILY, CLASSIFICATION, MSRC_SEVERITY  AMAZON_LINUX  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  AMAZON_LINUX_2  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  UBUNTU   Valid properties: PRODUCT, PRIORITY  REDHAT_ENTERPRISE_LINUX  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  SUSE  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  CENTOS  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  
+    * Lists the properties of available patches organized by product, product family, classification, severity, and other properties of available patches. You can use the reported properties in the filters you specify in requests for actions such as CreatePatchBaseline, UpdatePatchBaseline, DescribeAvailablePatches, and DescribePatchBaselines. The following section lists the properties that can be used in filters for each major operating system type:  AMAZON_LINUX  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  AMAZON_LINUX_2  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  CENTOS  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  DEBIAN  Valid properties: PRODUCT, PRIORITY  ORACLE_LINUX  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  REDHAT_ENTERPRISE_LINUX  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  SUSE  Valid properties: PRODUCT, CLASSIFICATION, SEVERITY  UBUNTU  Valid properties: PRODUCT, PRIORITY  WINDOWS  Valid properties: PRODUCT, PRODUCT_FAMILY, CLASSIFICATION, MSRC_SEVERITY  
     */
   def describePatchProperties(params: DescribePatchPropertiesRequest): Request[DescribePatchPropertiesResult, AWSError] = js.native
   def describePatchProperties(
@@ -853,12 +855,12 @@ trait SSM extends Service {
   ): Request[GetAutomationExecutionResult, AWSError] = js.native
   
   /**
-    * Gets the state of the AWS Systems Manager Change Calendar at an optional, specified time. If you specify a time, GetCalendarState returns the state of the calendar at a specific time, and returns the next time that the Change Calendar state will transition. If you do not specify a time, GetCalendarState assumes the current time. Change Calendar entries have two possible states: OPEN or CLOSED. For more information about Systems Manager Change Calendar, see AWS Systems Manager Change Calendar in the AWS Systems Manager User Guide.
+    * Gets the state of the AWS Systems Manager Change Calendar at an optional, specified time. If you specify a time, GetCalendarState returns the state of the calendar at a specific time, and returns the next time that the Change Calendar state will transition. If you do not specify a time, GetCalendarState assumes the current time. Change Calendar entries have two possible states: OPEN or CLOSED. If you specify more than one calendar in a request, the command returns the status of OPEN only if all calendars in the request are open. If one or more calendars in the request are closed, the status returned is CLOSED. For more information about Systems Manager Change Calendar, see AWS Systems Manager Change Calendar in the AWS Systems Manager User Guide.
     */
   def getCalendarState(): Request[GetCalendarStateResponse, AWSError] = js.native
   def getCalendarState(callback: js.Function2[/* err */ AWSError, /* data */ GetCalendarStateResponse, Unit]): Request[GetCalendarStateResponse, AWSError] = js.native
   /**
-    * Gets the state of the AWS Systems Manager Change Calendar at an optional, specified time. If you specify a time, GetCalendarState returns the state of the calendar at a specific time, and returns the next time that the Change Calendar state will transition. If you do not specify a time, GetCalendarState assumes the current time. Change Calendar entries have two possible states: OPEN or CLOSED. For more information about Systems Manager Change Calendar, see AWS Systems Manager Change Calendar in the AWS Systems Manager User Guide.
+    * Gets the state of the AWS Systems Manager Change Calendar at an optional, specified time. If you specify a time, GetCalendarState returns the state of the calendar at a specific time, and returns the next time that the Change Calendar state will transition. If you do not specify a time, GetCalendarState assumes the current time. Change Calendar entries have two possible states: OPEN or CLOSED. If you specify more than one calendar in a request, the command returns the status of OPEN only if all calendars in the request are open. If one or more calendars in the request are closed, the status returned is CLOSED. For more information about Systems Manager Change Calendar, see AWS Systems Manager Change Calendar in the AWS Systems Manager User Guide.
     */
   def getCalendarState(params: GetCalendarStateRequest): Request[GetCalendarStateResponse, AWSError] = js.native
   def getCalendarState(
@@ -1091,12 +1093,12 @@ trait SSM extends Service {
   ): Request[GetParameterResult, AWSError] = js.native
   
   /**
-    * Query a list of all parameters used by the AWS account.
+    * Retrieves the history of all changes to a parameter.
     */
   def getParameterHistory(): Request[GetParameterHistoryResult, AWSError] = js.native
   def getParameterHistory(callback: js.Function2[/* err */ AWSError, /* data */ GetParameterHistoryResult, Unit]): Request[GetParameterHistoryResult, AWSError] = js.native
   /**
-    * Query a list of all parameters used by the AWS account.
+    * Retrieves the history of all changes to a parameter.
     */
   def getParameterHistory(params: GetParameterHistoryRequest): Request[GetParameterHistoryResult, AWSError] = js.native
   def getParameterHistory(
@@ -1699,12 +1701,12 @@ trait SSM extends Service {
   ): Request[UpdateMaintenanceWindowTargetResult, AWSError] = js.native
   
   /**
-    * Modifies a task assigned to a maintenance window. You can't change the task type, but you can change the following values:   TaskARN. For example, you can change a RUN_COMMAND task from AWS-RunPowerShellScript to AWS-RunShellScript.   ServiceRoleArn   TaskInvocationParameters   Priority   MaxConcurrency   MaxErrors   If a parameter is null, then the corresponding field is not modified. Also, if you set Replace to true, then all fields required by the RegisterTaskWithMaintenanceWindow action are required for this request. Optional fields that aren't specified are set to null.
+    * Modifies a task assigned to a maintenance window. You can't change the task type, but you can change the following values:   TaskARN. For example, you can change a RUN_COMMAND task from AWS-RunPowerShellScript to AWS-RunShellScript.   ServiceRoleArn   TaskInvocationParameters   Priority   MaxConcurrency   MaxErrors   If the value for a parameter in UpdateMaintenanceWindowTask is null, then the corresponding field is not modified. If you set Replace to true, then all fields required by the RegisterTaskWithMaintenanceWindow action are required for this request. Optional fields that aren't specified are set to null.  When you update a maintenance window task that has options specified in TaskInvocationParameters, you must provide again all the TaskInvocationParameters values that you want to retain. The values you do not specify again are removed. For example, suppose that when you registered a Run Command task, you specified TaskInvocationParameters values for Comment, NotificationConfig, and OutputS3BucketName. If you update the maintenance window task and specify only a different OutputS3BucketName value, the values for Comment and NotificationConfig are removed. 
     */
   def updateMaintenanceWindowTask(): Request[UpdateMaintenanceWindowTaskResult, AWSError] = js.native
   def updateMaintenanceWindowTask(callback: js.Function2[/* err */ AWSError, /* data */ UpdateMaintenanceWindowTaskResult, Unit]): Request[UpdateMaintenanceWindowTaskResult, AWSError] = js.native
   /**
-    * Modifies a task assigned to a maintenance window. You can't change the task type, but you can change the following values:   TaskARN. For example, you can change a RUN_COMMAND task from AWS-RunPowerShellScript to AWS-RunShellScript.   ServiceRoleArn   TaskInvocationParameters   Priority   MaxConcurrency   MaxErrors   If a parameter is null, then the corresponding field is not modified. Also, if you set Replace to true, then all fields required by the RegisterTaskWithMaintenanceWindow action are required for this request. Optional fields that aren't specified are set to null.
+    * Modifies a task assigned to a maintenance window. You can't change the task type, but you can change the following values:   TaskARN. For example, you can change a RUN_COMMAND task from AWS-RunPowerShellScript to AWS-RunShellScript.   ServiceRoleArn   TaskInvocationParameters   Priority   MaxConcurrency   MaxErrors   If the value for a parameter in UpdateMaintenanceWindowTask is null, then the corresponding field is not modified. If you set Replace to true, then all fields required by the RegisterTaskWithMaintenanceWindow action are required for this request. Optional fields that aren't specified are set to null.  When you update a maintenance window task that has options specified in TaskInvocationParameters, you must provide again all the TaskInvocationParameters values that you want to retain. The values you do not specify again are removed. For example, suppose that when you registered a Run Command task, you specified TaskInvocationParameters values for Comment, NotificationConfig, and OutputS3BucketName. If you update the maintenance window task and specify only a different OutputS3BucketName value, the values for Comment and NotificationConfig are removed. 
     */
   def updateMaintenanceWindowTask(params: UpdateMaintenanceWindowTaskRequest): Request[UpdateMaintenanceWindowTaskResult, AWSError] = js.native
   def updateMaintenanceWindowTask(
@@ -1781,4 +1783,26 @@ trait SSM extends Service {
     params: UpdateServiceSettingRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateServiceSettingResult, Unit]
   ): Request[UpdateServiceSettingResult, AWSError] = js.native
+  
+  /**
+    * Waits for the commandExecuted state by periodically calling the underlying SSM.getCommandInvocationoperation every 5 seconds (at most 20 times).
+    */
+  @JSName("waitFor")
+  def waitFor_commandExecuted(state: commandExecuted): Request[GetCommandInvocationResult, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_commandExecuted(
+    state: commandExecuted,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetCommandInvocationResult, Unit]
+  ): Request[GetCommandInvocationResult, AWSError] = js.native
+  /**
+    * Waits for the commandExecuted state by periodically calling the underlying SSM.getCommandInvocationoperation every 5 seconds (at most 20 times).
+    */
+  @JSName("waitFor")
+  def waitFor_commandExecuted(state: commandExecuted, params: GetCommandInvocationReque): Request[GetCommandInvocationResult, AWSError] = js.native
+  @JSName("waitFor")
+  def waitFor_commandExecuted(
+    state: commandExecuted,
+    params: GetCommandInvocationReque,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetCommandInvocationResult, Unit]
+  ): Request[GetCommandInvocationResult, AWSError] = js.native
 }

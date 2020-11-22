@@ -10,6 +10,12 @@ trait EqlSearch[T] extends Generic {
   var body: T = js.native
   
   var index: String = js.native
+  
+  var keep_alive: js.UndefOr[String] = js.native
+  
+  var keep_on_completion: js.UndefOr[Boolean] = js.native
+  
+  var wait_for_completion_timeout: js.UndefOr[String] = js.native
 }
 object EqlSearch {
   
@@ -39,5 +45,23 @@ object EqlSearch {
     
     @scala.inline
     def setIndex(value: String): Self = this.set("index", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKeep_alive(value: String): Self = this.set("keep_alive", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKeep_alive: Self = this.set("keep_alive", js.undefined)
+    
+    @scala.inline
+    def setKeep_on_completion(value: Boolean): Self = this.set("keep_on_completion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKeep_on_completion: Self = this.set("keep_on_completion", js.undefined)
+    
+    @scala.inline
+    def setWait_for_completion_timeout(value: String): Self = this.set("wait_for_completion_timeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWait_for_completion_timeout: Self = this.set("wait_for_completion_timeout", js.undefined)
   }
 }

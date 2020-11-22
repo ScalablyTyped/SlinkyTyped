@@ -20,8 +20,8 @@ object OverflowList extends js.Object {
   
   var displayName: String = js.native
   
-  def ofType[T](): Instantiable1[
-    /* props */ IOverflowListProps[T], 
-    typingsSlinky.blueprintjsCore.overflowListMod.OverflowList[T]
+  def ofType[U](): Instantiable1[
+    /* props */ IOverflowListProps[U], 
+    typingsSlinky.blueprintjsCore.overflowListMod.OverflowList[U]
   ] = js.native
 }

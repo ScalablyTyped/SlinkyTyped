@@ -18,10 +18,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object observe extends js.Object {
   
-  def apply(`object`: js.Object, listener: js.Function1[/* change */ IObjectDidChange, Unit]): Lambda = js.native
+  def apply(`object`: js.Object, listener: js.Function1[/* change */ IObjectDidChange[_], Unit]): Lambda = js.native
   def apply(
     `object`: js.Object,
-    listener: js.Function1[/* change */ IObjectDidChange, Unit],
+    listener: js.Function1[/* change */ IObjectDidChange[_], Unit],
     fireImmediately: Boolean
   ): Lambda = js.native
   def apply[T](

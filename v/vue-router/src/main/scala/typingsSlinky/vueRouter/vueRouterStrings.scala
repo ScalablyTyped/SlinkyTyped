@@ -8,7 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object vueRouterStrings {
   
   @scala.inline
+  def VueRouter: VueRouter = "VueRouter".asInstanceOf[VueRouter]
+  
+  @scala.inline
   def `abstract`: `abstract` = "abstract".asInstanceOf[`abstract`]
+  
+  @scala.inline
+  def default: default = "default".asInstanceOf[default]
   
   @scala.inline
   def hash: hash = "hash".asInstanceOf[hash]
@@ -17,7 +23,13 @@ object vueRouterStrings {
   def history: history = "history".asInstanceOf[history]
   
   @js.native
+  sealed trait VueRouter extends js.Object
+  
+  @js.native
   sealed trait `abstract` extends RouterMode
+  
+  @js.native
+  sealed trait default extends js.Object
   
   @js.native
   sealed trait hash extends RouterMode

@@ -1,5 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
+import typingsSlinky.playcanvas.anon.Callback
 import typingsSlinky.playcanvas.pc.callbacks.XrError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,6 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @property camera - Active camera for which XR session is running or null.
   * @property input - provides access to Input Sources.
   * @property hitTest - provides ability to hit test representation of real world geometry of underlying AR system.
+  * @property session - provides access to [XRSession](https://developer.mozilla.org/en-US/docs/Web/API/XRSession) of WebXR
   * @param app - The main application.
   */
 @js.native
@@ -70,6 +72,11 @@ trait XrManager extends EventHandler {
   def isAvailable(`type`: String): Boolean = js.native
   
   /**
+    * provides access to [XRSession](https://developer.mozilla.org/en-US/docs/Web/API/XRSession) of WebXR
+    */
+  var session: js.Any | Null = js.native
+  
+  /**
     * Returns reference space type of currently running XR session or null if no session
     is running. Can be any of pc.XRSPACE_*.
     */
@@ -94,10 +101,12 @@ trait XrManager extends EventHandler {
     * * {@link pc.XRSPACE_LOCALFLOOR}: Local Floor - represents a tracking space with a native origin at the floor in a safe position for the user to stand. The y axis equals 0 at floor level. Floor level value might be estimated by the underlying platform. It is meant for seated or basic local XR sessions.
     * * {@link pc.XRSPACE_BOUNDEDFLOOR}: Bounded Floor - represents a tracking space with its native origin at the floor, where the user is expected to move within a pre-established boundary.
     * * {@link pc.XRSPACE_UNBOUNDED}: Unbounded - represents a tracking space where the user is expected to move freely around their environment, potentially long distances from their starting point.
-    * @param [callback] - Optional callback function called once session is started. The callback has one argument Error - it is null if successfully started XR session.
+    * @param [options] - object with additional options for XR session initialization.
+    * @param [options.optionalFeatures] - Optional features for XRSession start. It is used for getting access to additional WebXR spec extensions.
+    * @param [options.callback] - Optional callback function called once session is started. The callback has one argument Error - it is null if successfully started XR session.
     */
   def start(camera: CameraComponent, `type`: String, spaceType: String): Unit = js.native
-  def start(camera: CameraComponent, `type`: String, spaceType: String, callback: XrError): Unit = js.native
+  def start(camera: CameraComponent, `type`: String, spaceType: String, options: Callback): Unit = js.native
   
   /**
     * True if XR is supported.

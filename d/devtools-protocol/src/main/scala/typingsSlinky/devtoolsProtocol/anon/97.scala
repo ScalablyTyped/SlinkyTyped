@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Input.EmulateTouchFromMouseEventRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Input.DispatchKeyEventRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `97` extends js.Object {
   
-  var paramsType: js.Array[EmulateTouchFromMouseEventRequest] = js.native
+  var paramsType: js.Array[DispatchKeyEventRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `97` {
   
   @scala.inline
-  def apply(paramsType: js.Array[EmulateTouchFromMouseEventRequest], returnType: Unit): `97` = {
+  def apply(paramsType: js.Array[DispatchKeyEventRequest], returnType: Unit): `97` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`97`]
   }
@@ -36,10 +36,10 @@ object `97` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: EmulateTouchFromMouseEventRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: DispatchKeyEventRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[EmulateTouchFromMouseEventRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[DispatchKeyEventRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

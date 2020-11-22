@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object electronPromptStrings {
   
   @scala.inline
-  def ApostropheinputApostrophe: ApostropheinputApostrophe = "'input'".asInstanceOf[ApostropheinputApostrophe]
+  def input: input = "input".asInstanceOf[input]
   
   @scala.inline
   def select: select = "select".asInstanceOf[select]
   
   @js.native
-  sealed trait ApostropheinputApostrophe extends js.Object
+  sealed trait input extends js.Object
   
   @js.native
   sealed trait select extends js.Object

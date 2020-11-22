@@ -23,6 +23,11 @@ trait DescribeFaqResponse extends js.Object {
   var ErrorMessage: js.UndefOr[typingsSlinky.awsSdk.kendraMod.ErrorMessage] = js.native
   
   /**
+    * The file format used by the input files for the FAQ.
+    */
+  var FileFormat: js.UndefOr[FaqFileFormat] = js.native
+  
+  /**
     * The identifier of the FAQ.
     */
   var Id: js.UndefOr[FaqId] = js.native
@@ -94,6 +99,12 @@ object DescribeFaqResponse {
     
     @scala.inline
     def deleteErrorMessage: Self = this.set("ErrorMessage", js.undefined)
+    
+    @scala.inline
+    def setFileFormat(value: FaqFileFormat): Self = this.set("FileFormat", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFileFormat: Self = this.set("FileFormat", js.undefined)
     
     @scala.inline
     def setId(value: FaqId): Self = this.set("Id", value.asInstanceOf[js.Any])

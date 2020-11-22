@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.neptuneMod
 import typingsSlinky.awsSdk.anon.DescribeDBInstancesMessagDBInstanceIdentifier
 import typingsSlinky.awsSdk.awsSdkStrings.dBInstanceAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.dBInstanceDeleted
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -132,6 +132,20 @@ trait Neptune extends Service {
   ): Request[CreateDBClusterResult, AWSError] = js.native
   
   /**
+    * Creates a new custom endpoint and associates it with an Amazon Neptune DB cluster.
+    */
+  def createDBClusterEndpoint(): Request[CreateDBClusterEndpointOutput, AWSError] = js.native
+  def createDBClusterEndpoint(callback: js.Function2[/* err */ AWSError, /* data */ CreateDBClusterEndpointOutput, Unit]): Request[CreateDBClusterEndpointOutput, AWSError] = js.native
+  /**
+    * Creates a new custom endpoint and associates it with an Amazon Neptune DB cluster.
+    */
+  def createDBClusterEndpoint(params: CreateDBClusterEndpointMessage): Request[CreateDBClusterEndpointOutput, AWSError] = js.native
+  def createDBClusterEndpoint(
+    params: CreateDBClusterEndpointMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateDBClusterEndpointOutput, Unit]
+  ): Request[CreateDBClusterEndpointOutput, AWSError] = js.native
+  
+  /**
     * Creates a new DB cluster parameter group. Parameters in a DB cluster parameter group apply to all of the instances in a DB cluster.  A DB cluster parameter group is initially created with the default parameters for the database engine used by instances in the DB cluster. To provide custom values for any of the parameters, you must modify the group after creating it using ModifyDBClusterParameterGroup. Once you've created a DB cluster parameter group, you need to associate it with your DB cluster using ModifyDBCluster. When you associate a new DB cluster parameter group with a running DB cluster, you need to reboot the DB instances in the DB cluster without failover for the new DB cluster parameter group and associated settings to take effect.  After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster that uses that DB cluster parameter group as the default parameter group. This allows Amazon Neptune to fully complete the create action before the DB cluster parameter group is used as the default for a new DB cluster. This is especially important for parameters that are critical when creating the default database for a DB cluster, such as the character set for the default database defined by the character_set_database parameter. You can use the Parameter Groups option of the Amazon Neptune console or the DescribeDBClusterParameters command to verify that your DB cluster parameter group has been created or modified. 
     */
   def createDBClusterParameterGroup(): Request[CreateDBClusterParameterGroupResult, AWSError] = js.native
@@ -230,6 +244,20 @@ trait Neptune extends Service {
   ): Request[DeleteDBClusterResult, AWSError] = js.native
   
   /**
+    * Deletes a custom endpoint and removes it from an Amazon Neptune DB cluster.
+    */
+  def deleteDBClusterEndpoint(): Request[DeleteDBClusterEndpointOutput, AWSError] = js.native
+  def deleteDBClusterEndpoint(callback: js.Function2[/* err */ AWSError, /* data */ DeleteDBClusterEndpointOutput, Unit]): Request[DeleteDBClusterEndpointOutput, AWSError] = js.native
+  /**
+    * Deletes a custom endpoint and removes it from an Amazon Neptune DB cluster.
+    */
+  def deleteDBClusterEndpoint(params: DeleteDBClusterEndpointMessage): Request[DeleteDBClusterEndpointOutput, AWSError] = js.native
+  def deleteDBClusterEndpoint(
+    params: DeleteDBClusterEndpointMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteDBClusterEndpointOutput, Unit]
+  ): Request[DeleteDBClusterEndpointOutput, AWSError] = js.native
+  
+  /**
     * Deletes a specified DB cluster parameter group. The DB cluster parameter group to be deleted can't be associated with any DB clusters.
     */
   def deleteDBClusterParameterGroup(): Request[js.Object, AWSError] = js.native
@@ -312,6 +340,20 @@ trait Neptune extends Service {
     params: DeleteEventSubscriptionMessage,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteEventSubscriptionResult, Unit]
   ): Request[DeleteEventSubscriptionResult, AWSError] = js.native
+  
+  /**
+    * Returns information about endpoints for an Amazon Neptune DB cluster.  This operation can also return information for Amazon RDS clusters and Amazon DocDB clusters. 
+    */
+  def describeDBClusterEndpoints(): Request[DBClusterEndpointMessage, AWSError] = js.native
+  def describeDBClusterEndpoints(callback: js.Function2[/* err */ AWSError, /* data */ DBClusterEndpointMessage, Unit]): Request[DBClusterEndpointMessage, AWSError] = js.native
+  /**
+    * Returns information about endpoints for an Amazon Neptune DB cluster.  This operation can also return information for Amazon RDS clusters and Amazon DocDB clusters. 
+    */
+  def describeDBClusterEndpoints(params: DescribeDBClusterEndpointsMessage): Request[DBClusterEndpointMessage, AWSError] = js.native
+  def describeDBClusterEndpoints(
+    params: DescribeDBClusterEndpointsMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ DBClusterEndpointMessage, Unit]
+  ): Request[DBClusterEndpointMessage, AWSError] = js.native
   
   /**
     *  Returns a list of DBClusterParameterGroup descriptions. If a DBClusterParameterGroupName parameter is specified, the list will contain only the description of the specified DB cluster parameter group.
@@ -612,6 +654,20 @@ trait Neptune extends Service {
     params: ModifyDBClusterMessage,
     callback: js.Function2[/* err */ AWSError, /* data */ ModifyDBClusterResult, Unit]
   ): Request[ModifyDBClusterResult, AWSError] = js.native
+  
+  /**
+    * Modifies the properties of an endpoint in an Amazon Neptune DB cluster.
+    */
+  def modifyDBClusterEndpoint(): Request[ModifyDBClusterEndpointOutput, AWSError] = js.native
+  def modifyDBClusterEndpoint(callback: js.Function2[/* err */ AWSError, /* data */ ModifyDBClusterEndpointOutput, Unit]): Request[ModifyDBClusterEndpointOutput, AWSError] = js.native
+  /**
+    * Modifies the properties of an endpoint in an Amazon Neptune DB cluster.
+    */
+  def modifyDBClusterEndpoint(params: ModifyDBClusterEndpointMessage): Request[ModifyDBClusterEndpointOutput, AWSError] = js.native
+  def modifyDBClusterEndpoint(
+    params: ModifyDBClusterEndpointMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ ModifyDBClusterEndpointOutput, Unit]
+  ): Request[ModifyDBClusterEndpointOutput, AWSError] = js.native
   
   /**
     *  Modifies the parameters of a DB cluster parameter group. To modify more than one parameter, submit a list of the following: ParameterName, ParameterValue, and ApplyMethod. A maximum of 20 parameters can be modified in a single request.  Changes to dynamic parameters are applied immediately. Changes to static parameters require a reboot without failover to the DB cluster associated with the parameter group before the change can take effect.   After you create a DB cluster parameter group, you should wait at least 5 minutes before creating your first DB cluster that uses that DB cluster parameter group as the default parameter group. This allows Amazon Neptune to fully complete the create action before the parameter group is used as the default for a new DB cluster. This is especially important for parameters that are critical when creating the default database for a DB cluster, such as the character set for the default database defined by the character_set_database parameter. You can use the Parameter Groups option of the Amazon Neptune console or the DescribeDBClusterParameters command to verify that your DB cluster parameter group has been created or modified. 

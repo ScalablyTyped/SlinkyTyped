@@ -12,7 +12,7 @@ trait RequestOptions extends ClientRequestArgs {
   
   var asStream: js.UndefOr[Boolean] = js.native
   
-  var body: js.UndefOr[String | Buffer | Readable] = js.native
+  var body: js.UndefOr[String | Buffer | Readable | Null] = js.native
   
   var querystring: js.UndefOr[String] = js.native
 }
@@ -50,6 +50,9 @@ object RequestOptions {
     
     @scala.inline
     def deleteBody: Self = this.set("body", js.undefined)
+    
+    @scala.inline
+    def setBodyNull: Self = this.set("body", null)
     
     @scala.inline
     def setQuerystring(value: String): Self = this.set("querystring", value.asInstanceOf[js.Any])

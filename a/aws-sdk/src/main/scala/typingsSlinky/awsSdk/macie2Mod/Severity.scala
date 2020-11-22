@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Severity extends js.Object {
   
   /**
-    * The textual representation of the severity value, such as Low or High.
+    * The qualitative representation of the finding's severity, ranging from Low (least severe) to High (most severe).
     */
   var description: js.UndefOr[SeverityDescription] = js.native
   
   /**
-    * The numeric score for the severity value, ranging from 0 (least severe) to 4 (most severe).
+    * The numerical representation of the finding's severity, ranging from 1 (least severe) to 3 (most severe).
     */
   var score: js.UndefOr[long] = js.native
 }

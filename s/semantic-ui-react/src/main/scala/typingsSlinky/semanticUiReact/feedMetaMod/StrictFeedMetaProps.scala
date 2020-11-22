@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.feedMetaMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.feedLikeMod.FeedLikeProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -86,7 +85,7 @@ object StrictFeedMetaProps {
     
     @scala.inline
     def setLikeFunction3(
-      value: (/* component */ ReactType[FeedLikeProps], FeedLikeProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, FeedLikeProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("like", js.Any.fromFunction3(value))
     
     @scala.inline

@@ -1,5 +1,7 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStateMod
 
+import typingsSlinky.forkTsCheckerWebpackPlugin.dependenciesMod.Dependencies
+import typingsSlinky.forkTsCheckerWebpackPlugin.issueIssueMod.Issue
 import typingsSlinky.forkTsCheckerWebpackPlugin.reportMod.Report
 import typingsSlinky.tapable.mod.Tap
 import typingsSlinky.tapable.mod.TapType
@@ -10,11 +12,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ForkTsCheckerWebpackPluginState extends js.Object {
   
+  var dependenciesPromise: js.Promise[js.UndefOr[Dependencies]] = js.native
+  
   var initialized: Boolean = js.native
   
-  var removedFiles: js.Array[String] = js.native
+  var issuesPromise: js.Promise[js.UndefOr[js.Array[Issue]]] = js.native
   
-  var report: js.Promise[js.UndefOr[Report]] = js.native
+  var lastDependencies: js.UndefOr[Dependencies] = js.native
+  
+  var reportPromise: js.Promise[js.UndefOr[Report]] = js.native
   
   var watching: Boolean = js.native
   
@@ -24,12 +30,13 @@ object ForkTsCheckerWebpackPluginState {
   
   @scala.inline
   def apply(
+    dependenciesPromise: js.Promise[js.UndefOr[Dependencies]],
     initialized: Boolean,
-    removedFiles: js.Array[String],
-    report: js.Promise[js.UndefOr[Report]],
+    issuesPromise: js.Promise[js.UndefOr[js.Array[Issue]]],
+    reportPromise: js.Promise[js.UndefOr[Report]],
     watching: Boolean
   ): ForkTsCheckerWebpackPluginState = {
-    val __obj = js.Dynamic.literal(initialized = initialized.asInstanceOf[js.Any], removedFiles = removedFiles.asInstanceOf[js.Any], report = report.asInstanceOf[js.Any], watching = watching.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(dependenciesPromise = dependenciesPromise.asInstanceOf[js.Any], initialized = initialized.asInstanceOf[js.Any], issuesPromise = issuesPromise.asInstanceOf[js.Any], reportPromise = reportPromise.asInstanceOf[js.Any], watching = watching.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForkTsCheckerWebpackPluginState]
   }
   
@@ -49,19 +56,25 @@ object ForkTsCheckerWebpackPluginState {
     }
     
     @scala.inline
+    def setDependenciesPromise(value: js.Promise[js.UndefOr[Dependencies]]): Self = this.set("dependenciesPromise", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setInitialized(value: Boolean): Self = this.set("initialized", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRemovedFilesVarargs(value: String*): Self = this.set("removedFiles", js.Array(value :_*))
+    def setIssuesPromise(value: js.Promise[js.UndefOr[js.Array[Issue]]]): Self = this.set("issuesPromise", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRemovedFiles(value: js.Array[String]): Self = this.set("removedFiles", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setReport(value: js.Promise[js.UndefOr[Report]]): Self = this.set("report", value.asInstanceOf[js.Any])
+    def setReportPromise(value: js.Promise[js.UndefOr[Report]]): Self = this.set("reportPromise", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWatching(value: Boolean): Self = this.set("watching", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLastDependencies(value: Dependencies): Self = this.set("lastDependencies", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLastDependencies: Self = this.set("lastDependencies", js.undefined)
     
     @scala.inline
     def setWebpackDevServerDoneTap(value: Tap[TapType, _, _, _, _]): Self = this.set("webpackDevServerDoneTap", value.asInstanceOf[js.Any])

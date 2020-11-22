@@ -6,10 +6,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ConstantMemberType extends IDLInterfaceMemberType {
-  
-  /** A list of extended attributes. */
-  var extAttrs: js.Array[ExtendedAttribute] = js.native
+trait ConstantMemberType
+  extends AbstractBase
+     with IDLCallbackInterfaceMemberType
+     with IDLInterfaceMemberType
+     with IDLInterfaceMixinMemberType {
   
   /** An IDL Type of the constant that represents a simple type, the type name. */
   var idlType: IDLTypeDescription = js.native
@@ -20,10 +21,11 @@ trait ConstantMemberType extends IDLInterfaceMemberType {
   /** Whether its type is nullable. */
   var nullable: Boolean = js.native
   
-  /** The container of this type. */
-  var parent: InterfaceType | InterfaceMixinType = js.native
+  @JSName("parent")
+  var parent_ConstantMemberType: CallbackInterfaceType | InterfaceMixinType | InterfaceType = js.native
   
-  var `type`: const = js.native
+  @JSName("type")
+  var type_ConstantMemberType: const = js.native
   
   /** The constant value */
   var value: ValueDescription = js.native
@@ -36,7 +38,7 @@ object ConstantMemberType {
     idlType: IDLTypeDescription,
     name: String,
     nullable: Boolean,
-    parent: InterfaceType | InterfaceMixinType,
+    parent: CallbackInterfaceType | InterfaceMixinType | InterfaceType,
     `type`: const,
     value: ValueDescription
   ): ConstantMemberType = {
@@ -61,12 +63,6 @@ object ConstantMemberType {
     }
     
     @scala.inline
-    def setExtAttrsVarargs(value: ExtendedAttribute*): Self = this.set("extAttrs", js.Array(value :_*))
-    
-    @scala.inline
-    def setExtAttrs(value: js.Array[ExtendedAttribute]): Self = this.set("extAttrs", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setIdlType(value: IDLTypeDescription): Self = this.set("idlType", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -76,7 +72,7 @@ object ConstantMemberType {
     def setNullable(value: Boolean): Self = this.set("nullable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setParent(value: InterfaceType | InterfaceMixinType): Self = this.set("parent", value.asInstanceOf[js.Any])
+    def setParent(value: CallbackInterfaceType | InterfaceMixinType | InterfaceType): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: const): Self = this.set("type", value.asInstanceOf[js.Any])

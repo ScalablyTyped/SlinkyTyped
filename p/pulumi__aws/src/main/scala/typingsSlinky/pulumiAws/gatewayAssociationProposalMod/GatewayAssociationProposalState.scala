@@ -37,13 +37,6 @@ trait GatewayAssociationProposalState extends js.Object {
     * AWS Account identifier of the Direct Connect Gateway's owner.
     */
   val dxGatewayOwnerAccountId: js.UndefOr[Input[String]] = js.native
-  
-  /**
-    * *Deprecated:* Use `associatedGatewayId` instead. Virtual Gateway identifier to associate with the Direct Connect Gateway.
-    *
-    * @deprecated use 'associated_gateway_id' argument instead
-    */
-  val vpnGatewayId: js.UndefOr[Input[String]] = js.native
 }
 object GatewayAssociationProposalState {
   
@@ -106,11 +99,5 @@ object GatewayAssociationProposalState {
     
     @scala.inline
     def deleteDxGatewayOwnerAccountId: Self = this.set("dxGatewayOwnerAccountId", js.undefined)
-    
-    @scala.inline
-    def setVpnGatewayId(value: Input[String]): Self = this.set("vpnGatewayId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteVpnGatewayId: Self = this.set("vpnGatewayId", js.undefined)
   }
 }

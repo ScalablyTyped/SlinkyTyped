@@ -6,35 +6,29 @@ import typingsSlinky.awsSdkClientCodecommitNode.getFolderExceptionsUnionMod.GetF
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.putFileExceptionsUnionMod.PutFileExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_PathRequiredExceptionDetails> * / any */ @js.native
 trait PathRequiredException
-  extends ServiceException[PathRequiredExceptionDetails]
-     with DeleteFileExceptionsUnion
+  extends DeleteFileExceptionsUnion
      with GetFileExceptionsUnion
      with GetFolderExceptionsUnion
      with PostCommentForComparedCommitExceptionsUnion
      with PostCommentForPullRequestExceptionsUnion
      with PutFileExceptionsUnion {
   
-  @JSName("name")
-  var name_PathRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.PathRequiredException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.PathRequiredException = js.native
 }
 object PathRequiredException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: PathRequiredExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.PathRequiredException
   ): PathRequiredException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[PathRequiredException]
   }
   

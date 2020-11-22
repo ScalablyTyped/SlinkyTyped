@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSConstructorType
+import typingsSlinky.babelTraverse.babelTraverseStrings.JSXClosingFragment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `206` extends js.Object {
   
-  var `type`: TSConstructorType = js.native
+  var `type`: JSXClosingFragment = js.native
 }
 object `206` {
   
   @scala.inline
-  def apply(`type`: TSConstructorType): `206` = {
+  def apply(`type`: JSXClosingFragment): `206` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`206`]
@@ -35,6 +35,6 @@ object `206` {
     }
     
     @scala.inline
-    def setType(value: TSConstructorType): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: JSXClosingFragment): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -10,12 +10,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Snap
   extends typingsSlinky.ol.pointerMod.default {
   
+  /**
+    * Add a feature to the collection of features that we may snap to.
+    */
   def addFeature(feature: typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]): Unit = js.native
   def addFeature(
     feature: typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default],
     opt_listen: Boolean
   ): Unit = js.native
   
+  /**
+    * Remove a feature from the collection of features that we may snap to.
+    */
   def removeFeature(feature: typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]): Unit = js.native
   def removeFeature(
     feature: typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default],

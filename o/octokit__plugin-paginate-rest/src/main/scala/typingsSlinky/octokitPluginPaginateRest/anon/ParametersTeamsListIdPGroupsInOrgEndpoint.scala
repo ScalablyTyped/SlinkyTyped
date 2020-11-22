@@ -12,14 +12,14 @@ trait ParametersTeamsListIdPGroupsInOrgEndpoint extends js.Object {
   
   var parameters: TeamsListIdPGroupsInOrgEndpoint = js.native
   
-  var response: OctokitResponse[TeamsListIdPGroupsInOrgResponseData] with `3` = js.native
+  var response: OctokitResponse[TeamsListIdPGroupsInOrgResponseData] with `7` = js.native
 }
 object ParametersTeamsListIdPGroupsInOrgEndpoint {
   
   @scala.inline
   def apply(
     parameters: TeamsListIdPGroupsInOrgEndpoint,
-    response: OctokitResponse[TeamsListIdPGroupsInOrgResponseData] with `3`
+    response: OctokitResponse[TeamsListIdPGroupsInOrgResponseData] with `7`
   ): ParametersTeamsListIdPGroupsInOrgEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersTeamsListIdPGroupsInOrgEndpoint]
@@ -44,6 +44,6 @@ object ParametersTeamsListIdPGroupsInOrgEndpoint {
     def setParameters(value: TeamsListIdPGroupsInOrgEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[TeamsListIdPGroupsInOrgResponseData] with `3`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[TeamsListIdPGroupsInOrgResponseData] with `7`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

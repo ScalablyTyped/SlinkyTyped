@@ -1,6 +1,7 @@
 package typingsSlinky.titanium.Titanium.UI
 
 import typingsSlinky.titanium.AnimatedOptions
+import typingsSlinky.titanium.SearchBarToken
 import typingsSlinky.titanium.titaniumStrings.`return`
 import typingsSlinky.titanium.titaniumStrings.blur
 import typingsSlinky.titanium.titaniumStrings.bookmark
@@ -71,7 +72,7 @@ trait SearchBar extends View {
   /**
     * Bar color of the search bar view, as a color name or hex triplet.
     */
-  var barColor: String = js.native
+  var barColor: String | Color = js.native
   
   /**
     * Causes the search bar to lose focus.
@@ -86,7 +87,7 @@ trait SearchBar extends View {
   /**
     * Color of the text in this text field, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   /**
     * Background image of the text field in disabled state, specified as a local file path or URL.
@@ -160,6 +161,11 @@ trait SearchBar extends View {
   def focus(): Unit = js.native
   
   /**
+    * Determines whether this SearchBar has focus.
+    */
+  val focused: Boolean = js.native
+  
+  /**
     * Gets the value of the <Titanium.UI.SearchBar.autocapitalization> property.
     * @deprecated Access <Titanium.UI.SearchBar.autocapitalization> instead.
     */
@@ -175,7 +181,7 @@ trait SearchBar extends View {
     * Gets the value of the <Titanium.UI.SearchBar.barColor> property.
     * @deprecated Access <Titanium.UI.SearchBar.barColor> instead.
     */
-  def getBarColor(): String = js.native
+  def getBarColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.SearchBar.cancelButtonTitle> property.
@@ -187,7 +193,7 @@ trait SearchBar extends View {
     * Gets the value of the <Titanium.UI.SearchBar.color> property.
     * @deprecated Access <Titanium.UI.SearchBar.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.SearchBar.fieldBackgroundDisabledImage> property.
@@ -202,6 +208,12 @@ trait SearchBar extends View {
   def getFieldBackgroundImage(): String = js.native
   
   /**
+    * Gets the value of the <Titanium.UI.SearchBar.focused> property.
+    * @deprecated Access <Titanium.UI.SearchBar.focused> instead.
+    */
+  def getFocused(): Boolean = js.native
+  
+  /**
     * Gets the value of the <Titanium.UI.SearchBar.hintText> property.
     * @deprecated Access <Titanium.UI.SearchBar.hintText> instead.
     */
@@ -211,7 +223,7 @@ trait SearchBar extends View {
     * Gets the value of the <Titanium.UI.SearchBar.hintTextColor> property.
     * @deprecated Access <Titanium.UI.SearchBar.hintTextColor> instead.
     */
-  def getHintTextColor(): String = js.native
+  def getHintTextColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.SearchBar.hinttextid> property.
@@ -262,6 +274,12 @@ trait SearchBar extends View {
   def getStyle(): Double = js.native
   
   /**
+    * Gets the value of the <Titanium.UI.SearchBar.tokens> property.
+    * @deprecated Access <Titanium.UI.SearchBar.tokens> instead.
+    */
+  def getTokens(): js.Array[String] = js.native
+  
+  /**
     * Gets the value of the <Titanium.UI.SearchBar.value> property.
     * @deprecated Access <Titanium.UI.SearchBar.value> instead.
     */
@@ -275,13 +293,18 @@ trait SearchBar extends View {
   /**
     * Hint text color to display when the field is empty.
     */
-  var hintTextColor: String = js.native
+  var hintTextColor: String | Color = js.native
   
   /**
     * Key identifying a string from the locale file to use for the
     * [hintText](Titanium.UI.SearchBar.hintText) property.
     */
   var hinttextid: String = js.native
+  
+  /**
+    * Inserts a new search token at the specified index.
+    */
+  def insertTokenAtIndex(token: SearchBarToken, index: Double): Unit = js.native
   
   /**
     * Determines the appearance of the keyboard to be displayed the field is focused.
@@ -331,6 +354,11 @@ trait SearchBar extends View {
   ): Unit = js.native
   
   /**
+    * Removes an existing token at the specified index.
+    */
+  def removeTokenAtIndex(index: Double): Unit = js.native
+  
+  /**
     * Sets the value of the <Titanium.UI.SearchBar.autocapitalization> property.
     * @deprecated Set the value using <Titanium.UI.SearchBar.autocapitalization> instead.
     */
@@ -347,6 +375,7 @@ trait SearchBar extends View {
     * @deprecated Set the value using <Titanium.UI.SearchBar.barColor> instead.
     */
   def setBarColor(barColor: String): Unit = js.native
+  def setBarColor(barColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.SearchBar.cancelButtonTitle> property.
@@ -359,6 +388,7 @@ trait SearchBar extends View {
     * @deprecated Set the value using <Titanium.UI.SearchBar.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.SearchBar.fieldBackgroundDisabledImage> property.
@@ -383,6 +413,7 @@ trait SearchBar extends View {
     * @deprecated Set the value using <Titanium.UI.SearchBar.hintTextColor> instead.
     */
   def setHintTextColor(hintTextColor: String): Unit = js.native
+  def setHintTextColor(hintTextColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.SearchBar.hinttextid> property.
@@ -433,6 +464,12 @@ trait SearchBar extends View {
   def setStyle(style: Double): Unit = js.native
   
   /**
+    * Sets the value of the <Titanium.UI.SearchBar.tokens> property.
+    * @deprecated Set the value using <Titanium.UI.SearchBar.tokens> instead.
+    */
+  def setTokens(tokens: js.Array[String]): Unit = js.native
+  
+  /**
     * Sets the value of the <Titanium.UI.SearchBar.value> property.
     * @deprecated Set the value using <Titanium.UI.SearchBar.value> instead.
     */
@@ -452,6 +489,11 @@ trait SearchBar extends View {
     * Determines the style of the search bar.
     */
   var style: Double = js.native
+  
+  /**
+    * The token of a search text field
+    */
+  var tokens: js.Array[String] = js.native
   
   /**
     * Value of the search bar.

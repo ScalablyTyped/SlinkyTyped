@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FirehoseAction extends js.Object {
   
   /**
+    * Whether to deliver the Kinesis Data Firehose stream as a batch by using  PutRecordBatch . The default value is false. When batchMode is true and the rule's SQL statement evaluates to an Array, each Array element forms one record in the  PutRecordBatch  request. The resulting array can't have more than 500 records.
+    */
+  var batchMode: js.UndefOr[BatchMode] = js.native
+  
+  /**
     * The delivery stream name.
     */
   var deliveryStreamName: DeliveryStreamName = js.native
@@ -50,6 +55,12 @@ object FirehoseAction {
     
     @scala.inline
     def setRoleArn(value: AwsArn): Self = this.set("roleArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBatchMode(value: BatchMode): Self = this.set("batchMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBatchMode: Self = this.set("batchMode", js.undefined)
     
     @scala.inline
     def setSeparator(value: FirehoseSeparator): Self = this.set("separator", value.asInstanceOf[js.Any])

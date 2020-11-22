@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UserPoolClientType extends js.Object {
   
   /**
+    * The time limit, specified by tokenValidityUnits, defaulting to hours, after which the access token is no longer valid and cannot be used.
+    */
+  var AccessTokenValidity: js.UndefOr[AccessTokenValidityType] = js.native
+  
+  /**
     * The allowed OAuth flows. Set to code to initiate a code grant flow, which provides an authorization code as the response. This code can be exchanged for access tokens with the token endpoint. Set to implicit to specify that the client should get the access token (and, optionally, ID token, based on scopes) directly. Set to client_credentials to specify that the client should get the access token (and, optionally, ID token, based on scopes) from the token endpoint using a combination of client and client_secret.
     */
   var AllowedOAuthFlows: js.UndefOr[OAuthFlowsType] = js.native
@@ -63,6 +68,11 @@ trait UserPoolClientType extends js.Object {
   var ExplicitAuthFlows: js.UndefOr[ExplicitAuthFlowsListType] = js.native
   
   /**
+    * The time limit, specified by tokenValidityUnits, defaulting to hours, after which the refresh token is no longer valid and cannot be used.
+    */
+  var IdTokenValidity: js.UndefOr[IdTokenValidityType] = js.native
+  
+  /**
     * The date the user pool client was last modified.
     */
   var LastModifiedDate: js.UndefOr[js.Date] = js.native
@@ -73,7 +83,7 @@ trait UserPoolClientType extends js.Object {
   var LogoutURLs: js.UndefOr[LogoutURLsListType] = js.native
   
   /**
-    * Use this setting to choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to ENABLED and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to LEGACY, those APIs will return a UserNotFoundException exception if the user does not exist in the user pool. Valid values include:    ENABLED - This prevents user existence-related errors.    LEGACY - This represents the old behavior of Cognito where user existence related errors are not prevented.   This setting affects the behavior of following APIs:    AdminInitiateAuth     AdminRespondToAuthChallenge     InitiateAuth     RespondToAuthChallenge     ForgotPassword     ConfirmForgotPassword     ConfirmSignUp     ResendConfirmationCode     After February 15th 2020, the value of PreventUserExistenceErrors will default to ENABLED for newly created user pool clients if no value is provided. 
+    * Use this setting to choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to ENABLED and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to LEGACY, those APIs will return a UserNotFoundException exception if the user does not exist in the user pool. Valid values include:    ENABLED - This prevents user existence-related errors.    LEGACY - This represents the old behavior of Cognito where user existence related errors are not prevented.    After February 15th 2020, the value of PreventUserExistenceErrors will default to ENABLED for newly created user pool clients if no value is provided. 
     */
   var PreventUserExistenceErrors: js.UndefOr[PreventUserExistenceErrorTypes] = js.native
   
@@ -91,6 +101,11 @@ trait UserPoolClientType extends js.Object {
     * A list of provider names for the identity providers that are supported on this client.
     */
   var SupportedIdentityProviders: js.UndefOr[SupportedIdentityProvidersListType] = js.native
+  
+  /**
+    * The time units used to specify the token validity times of their respective token.
+    */
+  var TokenValidityUnits: js.UndefOr[TokenValidityUnitsType] = js.native
   
   /**
     * The user pool ID for the user pool client.
@@ -124,6 +139,12 @@ object UserPoolClientType {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAccessTokenValidity(value: AccessTokenValidityType): Self = this.set("AccessTokenValidity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccessTokenValidity: Self = this.set("AccessTokenValidity", js.undefined)
     
     @scala.inline
     def setAllowedOAuthFlowsVarargs(value: OAuthFlowType*): Self = this.set("AllowedOAuthFlows", js.Array(value :_*))
@@ -204,6 +225,12 @@ object UserPoolClientType {
     def deleteExplicitAuthFlows: Self = this.set("ExplicitAuthFlows", js.undefined)
     
     @scala.inline
+    def setIdTokenValidity(value: IdTokenValidityType): Self = this.set("IdTokenValidity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIdTokenValidity: Self = this.set("IdTokenValidity", js.undefined)
+    
+    @scala.inline
     def setLastModifiedDate(value: js.Date): Self = this.set("LastModifiedDate", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -247,6 +274,12 @@ object UserPoolClientType {
     
     @scala.inline
     def deleteSupportedIdentityProviders: Self = this.set("SupportedIdentityProviders", js.undefined)
+    
+    @scala.inline
+    def setTokenValidityUnits(value: TokenValidityUnitsType): Self = this.set("TokenValidityUnits", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTokenValidityUnits: Self = this.set("TokenValidityUnits", js.undefined)
     
     @scala.inline
     def setUserPoolId(value: UserPoolIdType): Self = this.set("UserPoolId", value.asInstanceOf[js.Any])

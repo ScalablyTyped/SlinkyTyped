@@ -29,7 +29,13 @@ object ProfileKind extends js.Object {
   
   var Phone: ProfileKind = js.native
   
+  var PhoneOffline: ProfileKind = js.native
+  
   var Responsive: ProfileKind = js.native
   
+  var ResponsiveOffline: ProfileKind = js.native
+  
   var Tablet: ProfileKind = js.native
+  
+  var TabletOffline: ProfileKind = js.native
 }

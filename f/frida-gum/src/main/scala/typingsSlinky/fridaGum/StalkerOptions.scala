@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StalkerOptions extends js.Object {
   
   /**
-    * User data to be passed to `StalkerNativeTransformCallback`.
+    * User data to be passed to `StalkerNativeEventCallback` and `StalkerNativeTransformCallback`.
     */
   var data: js.UndefOr[NativePointerValue] = js.native
   
@@ -41,6 +41,19 @@ trait StalkerOptions extends js.Object {
     *                the current time window.
     */
   var onCallSummary: js.UndefOr[js.Function1[/* summary */ StalkerCallSummary, Unit]] = js.native
+  
+  /**
+    * C callback that processes events as they occur, allowing synchronous
+    * processing of events in native code – typically implemented using
+    * CModule.
+    *
+    * This is useful when wanting to implement custom filtering and/or queuing
+    * logic to improve performance, or sacrifice performance in exchange for
+    * reliable event delivery.
+    *
+    * Note that this precludes usage of `onReceive()` and `onCallSummary()`.
+    */
+  var onEvent: js.UndefOr[StalkerNativeEventCallback] = js.native
   
   /**
     * Callback that periodically receives batches of events.
@@ -98,6 +111,12 @@ object StalkerOptions {
     
     @scala.inline
     def deleteOnCallSummary: Self = this.set("onCallSummary", js.undefined)
+    
+    @scala.inline
+    def setOnEvent(value: StalkerNativeEventCallback): Self = this.set("onEvent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOnEvent: Self = this.set("onEvent", js.undefined)
     
     @scala.inline
     def setOnReceive(value: /* events */ ArrayBuffer => Unit): Self = this.set("onReceive", js.Any.fromFunction1(value))

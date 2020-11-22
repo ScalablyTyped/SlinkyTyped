@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait CollectionStatic
-  extends Instantiable0[Collection[js.Object]]
-     with Instantiable1[/* name */ String, Collection[js.Object]]
+  extends Instantiable0[Collection[js.Object, js.Object]]
+     with Instantiable1[/* name */ String, Collection[js.Object, js.Object]]
      with Instantiable2[
       (/* name */ Null) | (/* name */ String), 
-      /* options */ IdGeneration, 
-      Collection[js.Object]
+      /* options */ IdGeneration[js.Object, js.Object], 
+      Collection[js.Object, js.Object]
     ]

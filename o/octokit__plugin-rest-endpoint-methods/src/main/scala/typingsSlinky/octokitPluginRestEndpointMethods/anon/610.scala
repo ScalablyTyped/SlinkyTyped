@@ -3,7 +3,9 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ActivityMarkNotificationsAsReadEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ActivityListStargazersForRepoEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ActivityListStargazersForRepoResponse200Data
+import typingsSlinky.octokitTypes.endpointsMod.ActivityListStargazersForRepoResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -14,16 +16,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `610` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ActivityMarkNotificationsAsReadEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ActivityListStargazersForRepoEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[_] = js.native
+  var response: OctokitResponse[
+    ActivityListStargazersForRepoResponseData | ActivityListStargazersForRepoResponse200Data
+  ] = js.native
 }
 object `610` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ActivityMarkNotificationsAsReadEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[_]
+    parameters: RequestParameters with (Omit[ActivityListStargazersForRepoEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[
+      ActivityListStargazersForRepoResponseData | ActivityListStargazersForRepoResponse200Data
+    ]
   ): `610` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`610`]
@@ -46,10 +52,14 @@ object `610` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[ActivityMarkNotificationsAsReadEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ActivityListStargazersForRepoEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(
+      value: OctokitResponse[
+          ActivityListStargazersForRepoResponseData | ActivityListStargazersForRepoResponse200Data
+        ]
+    ): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

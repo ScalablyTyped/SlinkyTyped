@@ -1,7 +1,7 @@
 
 # Scala.js typings for ardatan__aggregate-error
 
-Typings are for version 0.0.1
+Typings are for version 0.0.6
 
 
 

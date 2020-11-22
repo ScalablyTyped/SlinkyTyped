@@ -1,9 +1,5 @@
 package typingsSlinky.browserfs.anon
 
-import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.node.Buffer
-import typingsSlinky.node.bufferMod.SlowBuffer
-import typingsSlinky.node.bufferMod.TranscodeEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,33 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Typeofbuffer extends js.Object {
   
-  var Buffer: (Instantiable1[/* str */ String, typingsSlinky.node.bufferMod.Buffer]) with TypeofBuffer_ = js.native
-  
-  val INSPECT_MAX_BYTES: Double = js.native
-  
-  var SlowBuffer: (Instantiable1[/* size */ Double, typingsSlinky.node.bufferMod.SlowBuffer]) with Instantiable = js.native
-  
-  val constants: MAXLENGTH = js.native
-  
-  val kMaxLength: Double = js.native
-  
-  val kStringMaxLength: Double = js.native
-  
-  def transcode(source: js.typedarray.Uint8Array, fromEnc: TranscodeEncoding, toEnc: TranscodeEncoding): Buffer = js.native
+  var Buffer: TypeofBuffer_ = js.native
 }
 object Typeofbuffer {
   
   @scala.inline
-  def apply(
-    Buffer: (Instantiable1[/* str */ String, typingsSlinky.node.bufferMod.Buffer]) with TypeofBuffer_,
-    INSPECT_MAX_BYTES: Double,
-    SlowBuffer: (Instantiable1[/* size */ Double, SlowBuffer]) with Instantiable,
-    constants: MAXLENGTH,
-    kMaxLength: Double,
-    kStringMaxLength: Double,
-    transcode: (js.typedarray.Uint8Array, TranscodeEncoding, TranscodeEncoding) => Buffer
-  ): Typeofbuffer = {
-    val __obj = js.Dynamic.literal(Buffer = Buffer.asInstanceOf[js.Any], INSPECT_MAX_BYTES = INSPECT_MAX_BYTES.asInstanceOf[js.Any], SlowBuffer = SlowBuffer.asInstanceOf[js.Any], constants = constants.asInstanceOf[js.Any], kMaxLength = kMaxLength.asInstanceOf[js.Any], kStringMaxLength = kStringMaxLength.asInstanceOf[js.Any], transcode = js.Any.fromFunction3(transcode))
+  def apply(Buffer: TypeofBuffer_): Typeofbuffer = {
+    val __obj = js.Dynamic.literal(Buffer = Buffer.asInstanceOf[js.Any])
     __obj.asInstanceOf[Typeofbuffer]
   }
   
@@ -57,24 +33,6 @@ object Typeofbuffer {
     }
     
     @scala.inline
-    def setBuffer(value: (Instantiable1[/* str */ String, typingsSlinky.node.bufferMod.Buffer]) with TypeofBuffer_): Self = this.set("Buffer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setINSPECT_MAX_BYTES(value: Double): Self = this.set("INSPECT_MAX_BYTES", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSlowBuffer(value: (Instantiable1[/* size */ Double, SlowBuffer]) with Instantiable): Self = this.set("SlowBuffer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setConstants(value: MAXLENGTH): Self = this.set("constants", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setKMaxLength(value: Double): Self = this.set("kMaxLength", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setKStringMaxLength(value: Double): Self = this.set("kStringMaxLength", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTranscode(value: (js.typedarray.Uint8Array, TranscodeEncoding, TranscodeEncoding) => Buffer): Self = this.set("transcode", js.Any.fromFunction3(value))
+    def setBuffer(value: TypeofBuffer_): Self = this.set("Buffer", value.asInstanceOf[js.Any])
   }
 }

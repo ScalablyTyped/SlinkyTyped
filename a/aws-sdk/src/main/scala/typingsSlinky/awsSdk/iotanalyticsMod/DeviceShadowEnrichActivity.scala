@@ -13,7 +13,7 @@ trait DeviceShadowEnrichActivity extends js.Object {
   var attribute: AttributeName = js.native
   
   /**
-    * The name of the 'deviceShadowEnrich' activity.
+    * The name of the deviceShadowEnrich activity.
     */
   var name: ActivityName = js.native
   

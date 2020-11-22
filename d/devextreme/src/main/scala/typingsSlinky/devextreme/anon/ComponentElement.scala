@@ -1,6 +1,7 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
+import typingsSlinky.devextreme.mod.global.JQueryPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,11 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ComponentElement[T] extends js.Object {
   
+  var cancel: js.UndefOr[Boolean] = js.native
+  
+  var changes: js.UndefOr[js.Array[_]] = js.native
+  
   var component: js.UndefOr[T] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
+  
+  var promise: js.UndefOr[typingsSlinky.devextreme.mod.global.Promise[Unit] | JQueryPromise[Unit]] = js.native
 }
 object ComponentElement {
   
@@ -38,6 +45,21 @@ object ComponentElement {
     }
     
     @scala.inline
+    def setCancel(value: Boolean): Self = this.set("cancel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCancel: Self = this.set("cancel", js.undefined)
+    
+    @scala.inline
+    def setChangesVarargs(value: js.Any*): Self = this.set("changes", js.Array(value :_*))
+    
+    @scala.inline
+    def setChanges(value: js.Array[_]): Self = this.set("changes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChanges: Self = this.set("changes", js.undefined)
+    
+    @scala.inline
     def setComponent(value: T): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -54,5 +76,11 @@ object ComponentElement {
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)
+    
+    @scala.inline
+    def setPromise(value: typingsSlinky.devextreme.mod.global.Promise[Unit] | JQueryPromise[Unit]): Self = this.set("promise", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePromise: Self = this.set("promise", js.undefined)
   }
 }

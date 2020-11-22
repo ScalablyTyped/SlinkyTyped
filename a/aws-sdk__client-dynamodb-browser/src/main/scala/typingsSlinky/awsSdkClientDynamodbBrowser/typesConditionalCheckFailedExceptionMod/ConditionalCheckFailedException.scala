@@ -3,32 +3,26 @@ package typingsSlinky.awsSdkClientDynamodbBrowser.typesConditionalCheckFailedExc
 import typingsSlinky.awsSdkClientDynamodbBrowser.deleteItemExceptionsUnionMod.DeleteItemExceptionsUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.putItemExceptionsUnionMod.PutItemExceptionsUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.updateItemExceptionsUnionMod.UpdateItemExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ConditionalCheckFailedExceptionDetails> * / any */ @js.native
 trait ConditionalCheckFailedException
-  extends ServiceException[ConditionalCheckFailedExceptionDetails]
-     with DeleteItemExceptionsUnion
+  extends DeleteItemExceptionsUnion
      with PutItemExceptionsUnion
      with UpdateItemExceptionsUnion {
   
-  @JSName("name")
-  var name_ConditionalCheckFailedException: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.ConditionalCheckFailedException = js.native
+  var name: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.ConditionalCheckFailedException = js.native
 }
 object ConditionalCheckFailedException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: ConditionalCheckFailedExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.ConditionalCheckFailedException
   ): ConditionalCheckFailedException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConditionalCheckFailedException]
   }
   

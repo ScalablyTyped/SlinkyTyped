@@ -9,13 +9,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Conv3DBackpropInputAttrs extends js.Object {
   
+  var inputShape: js.Tuple5[Double, Double, Double, Double, Double] = js.native
+  
   var pad: valid_ | same_ = js.native
+  
+  var strides: (js.Tuple3[Double, Double, Double]) | Double = js.native
 }
 object Conv3DBackpropInputAttrs {
   
   @scala.inline
-  def apply(pad: valid_ | same_): Conv3DBackpropInputAttrs = {
-    val __obj = js.Dynamic.literal(pad = pad.asInstanceOf[js.Any])
+  def apply(
+    inputShape: js.Tuple5[Double, Double, Double, Double, Double],
+    pad: valid_ | same_,
+    strides: (js.Tuple3[Double, Double, Double]) | Double
+  ): Conv3DBackpropInputAttrs = {
+    val __obj = js.Dynamic.literal(inputShape = inputShape.asInstanceOf[js.Any], pad = pad.asInstanceOf[js.Any], strides = strides.asInstanceOf[js.Any])
     __obj.asInstanceOf[Conv3DBackpropInputAttrs]
   }
   
@@ -35,6 +43,12 @@ object Conv3DBackpropInputAttrs {
     }
     
     @scala.inline
+    def setInputShape(value: js.Tuple5[Double, Double, Double, Double, Double]): Self = this.set("inputShape", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setPad(value: valid_ | same_): Self = this.set("pad", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStrides(value: (js.Tuple3[Double, Double, Double]) | Double): Self = this.set("strides", value.asInstanceOf[js.Any])
   }
 }

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Bisector_[T, U] extends js.Object {
   
+  def center(array: ArrayLike[T], x: U): Double = js.native
+  def center(array: ArrayLike[T], x: U, lo: js.UndefOr[scala.Nothing], hi: Double): Double = js.native
+  def center(array: ArrayLike[T], x: U, lo: Double): Double = js.native
+  def center(array: ArrayLike[T], x: U, lo: Double, hi: Double): Double = js.native
+  
   def left(array: ArrayLike[T], x: U): Double = js.native
   def left(array: ArrayLike[T], x: U, lo: js.UndefOr[scala.Nothing], hi: Double): Double = js.native
   def left(array: ArrayLike[T], x: U, lo: Double): Double = js.native

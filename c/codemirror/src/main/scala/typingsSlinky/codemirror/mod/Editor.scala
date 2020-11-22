@@ -46,6 +46,7 @@ import typingsSlinky.codemirror.codemirrorStrings.fixedGutter
 import typingsSlinky.codemirror.codemirrorStrings.flattenSpans
 import typingsSlinky.codemirror.codemirrorStrings.focus
 import typingsSlinky.codemirror.codemirrorStrings.foldGutter
+import typingsSlinky.codemirror.codemirrorStrings.fullScreen
 import typingsSlinky.codemirror.codemirrorStrings.gutterClick
 import typingsSlinky.codemirror.codemirrorStrings.gutterContextMenu
 import typingsSlinky.codemirror.codemirrorStrings.gutters
@@ -266,6 +267,8 @@ trait Editor extends Doc {
   def getOption_flattenSpans(option: flattenSpans): js.UndefOr[Boolean] = js.native
   @JSName("getOption")
   def getOption_foldGutter(option: foldGutter): js.UndefOr[Boolean] = js.native
+  @JSName("getOption")
+  def getOption_fullScreen(option: fullScreen): js.UndefOr[Boolean] = js.native
   @JSName("getOption")
   def getOption_gutters(option: gutters): js.UndefOr[js.Array[String]] = js.native
   @JSName("getOption")
@@ -825,6 +828,10 @@ trait Editor extends Doc {
   def setOption_foldGutter(option: foldGutter): Unit = js.native
   @JSName("setOption")
   def setOption_foldGutter(option: foldGutter, value: Boolean): Unit = js.native
+  @JSName("setOption")
+  def setOption_fullScreen(option: fullScreen): Unit = js.native
+  @JSName("setOption")
+  def setOption_fullScreen(option: fullScreen, value: Boolean): Unit = js.native
   @JSName("setOption")
   def setOption_gutters(option: gutters): Unit = js.native
   @JSName("setOption")

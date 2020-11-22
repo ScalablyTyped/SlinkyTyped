@@ -1,5 +1,6 @@
 package typingsSlinky.angularCompiler.mod
 
+import typingsSlinky.angularCompiler.anon.End
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,5 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class SplitInterpolation protected ()
   extends typingsSlinky.angularCompiler.compilerMod.SplitInterpolation {
-  def this(strings: js.Array[String], expressions: js.Array[String], offsets: js.Array[Double]) = this()
+  def this(
+    strings: js.Array[String],
+    stringSpans: js.Array[End],
+    expressions: js.Array[String],
+    expressionsSpans: js.Array[End],
+    offsets: js.Array[Double]
+  ) = this()
 }

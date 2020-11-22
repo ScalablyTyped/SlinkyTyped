@@ -5,34 +5,26 @@ import typingsSlinky.awsSdkClientKmsBrowser.listGrantsExceptionsUnionMod.ListGra
 import typingsSlinky.awsSdkClientKmsBrowser.listKeysExceptionsUnionMod.ListKeysExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.listResourceTagsExceptionsUnionMod.ListResourceTagsExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.listRetirableGrantsExceptionsUnionMod.ListRetirableGrantsExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidMarkerExceptionDetails> * / any */ @js.native
 trait InvalidMarkerException
-  extends ServiceException[InvalidMarkerExceptionDetails]
-     with ListAliasesExceptionsUnion
+  extends ListAliasesExceptionsUnion
      with ListGrantsExceptionsUnion
      with ListKeysExceptionsUnion
      with ListResourceTagsExceptionsUnion
      with ListRetirableGrantsExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidMarkerException: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidMarkerException = js.native
+  var name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidMarkerException = js.native
 }
 object InvalidMarkerException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidMarkerExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidMarkerException
-  ): InvalidMarkerException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidMarkerException): InvalidMarkerException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidMarkerException]
   }
   

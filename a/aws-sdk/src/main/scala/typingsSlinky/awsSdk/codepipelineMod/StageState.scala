@@ -12,6 +12,8 @@ trait StageState extends js.Object {
     */
   var actionStates: js.UndefOr[ActionStateList] = js.native
   
+  var inboundExecution: js.UndefOr[StageExecution] = js.native
+  
   /**
     * The state of the inbound transition, which is either enabled or disabled.
     */
@@ -58,6 +60,12 @@ object StageState {
     
     @scala.inline
     def deleteActionStates: Self = this.set("actionStates", js.undefined)
+    
+    @scala.inline
+    def setInboundExecution(value: StageExecution): Self = this.set("inboundExecution", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInboundExecution: Self = this.set("inboundExecution", js.undefined)
     
     @scala.inline
     def setInboundTransitionState(value: TransitionState): Self = this.set("inboundTransitionState", value.asInstanceOf[js.Any])

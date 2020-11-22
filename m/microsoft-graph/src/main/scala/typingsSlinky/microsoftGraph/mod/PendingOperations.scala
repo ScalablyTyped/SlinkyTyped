@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PendingOperations extends js.Object {
   
   // A property that indicates that an operation that might update the binary content of a file is pending completion.
-  var pendingContentUpdate: js.UndefOr[PendingContentUpdate] = js.native
+  var pendingContentUpdate: js.UndefOr[NullableOption[PendingContentUpdate]] = js.native
 }
 object PendingOperations {
   
@@ -34,9 +34,12 @@ object PendingOperations {
     }
     
     @scala.inline
-    def setPendingContentUpdate(value: PendingContentUpdate): Self = this.set("pendingContentUpdate", value.asInstanceOf[js.Any])
+    def setPendingContentUpdate(value: NullableOption[PendingContentUpdate]): Self = this.set("pendingContentUpdate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePendingContentUpdate: Self = this.set("pendingContentUpdate", js.undefined)
+    
+    @scala.inline
+    def setPendingContentUpdateNull: Self = this.set("pendingContentUpdate", null)
   }
 }

@@ -20,8 +20,7 @@ trait BookmarkTreeNode extends js.Object {
   var dateGroupModified: js.UndefOr[Double] = js.native
   
   /**
-    * The unique identifier for the node. IDs are unique within the current profile, and they remain valid even
-    * after the browser is restarted.
+    * The unique identifier for the node. IDs are unique within the current profile, and they remain valid even after the browser is restarted.
     */
   var id: String = js.native
   
@@ -38,9 +37,7 @@ trait BookmarkTreeNode extends js.Object {
   var `type`: js.UndefOr[BookmarkTreeNodeType] = js.native
   
   /**
-    * Indicates the reason why this node is unmodifiable. The `managed` value indicates that this node was
-    * configured by the system administrator or by the custodian of a supervised user. Omitted if the node can be
-    * modified by the user and the extension (default).
+    * Indicates the reason why this node is unmodifiable. The `managed` value indicates that this node was configured by the system administrator or by the custodian of a supervised user. Omitted if the node can be modified by the user and the extension (default).
     */
   var unmodifiable: js.UndefOr[BookmarkTreeNodeUnmodifiable] = js.native
   

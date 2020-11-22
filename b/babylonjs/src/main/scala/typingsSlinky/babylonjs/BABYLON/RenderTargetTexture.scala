@@ -30,8 +30,6 @@ trait RenderTargetTexture extends Texture {
   
   var _doNotChangeAspectRatio: Boolean = js.native
   
-  var _engine: Engine = js.native
-  
   /** @hidden */
   var _generateMipMaps: Boolean = js.native
   
@@ -79,7 +77,7 @@ trait RenderTargetTexture extends Texture {
   var _textureMatrix: Matrix = js.native
   
   /** @hidden */
-  var _waitingRenderList: js.Array[String] = js.native
+  var _waitingRenderList: js.UndefOr[js.Array[String]] = js.native
   
   /**
     * Define the camera used to render the texture.
@@ -120,12 +118,6 @@ trait RenderTargetTexture extends Texture {
   def clearPostProcesses(dispose: Boolean): Unit = js.native
   
   /**
-    * Override the default coordinates mode to projection for RTT as it is the most common case for rendered textures.
-    */
-  @JSName("coordinatesMode")
-  var coordinatesMode_FRenderTargetTexture: Double = js.native
-  
-  /**
     * Creates a depth stencil texture.
     * This is only available in WebGL 2 or with the depth texture extension available.
     * @param comparisonFunction Specifies the comparison function to set on the texture. If 0 or undefined, the texture is not in comparison mode
@@ -148,6 +140,11 @@ trait RenderTargetTexture extends Texture {
   def createDepthStencilTexture(comparisonFunction: Double, bilinearFiltering: js.UndefOr[scala.Nothing], generateStencil: Boolean): Unit = js.native
   def createDepthStencilTexture(comparisonFunction: Double, bilinearFiltering: Boolean): Unit = js.native
   def createDepthStencilTexture(comparisonFunction: Double, bilinearFiltering: Boolean, generateStencil: Boolean): Unit = js.native
+  
+  /**
+    * Override the mesh isReady function with your own one.
+    */
+  def customIsReadyFunction(mesh: AbstractMesh, refreshRate: Double): Boolean = js.native
   
   /**
     * Override the render function of the texture with your own one.
@@ -232,9 +229,6 @@ trait RenderTargetTexture extends Texture {
     * Define if the camera viewport should be respected while rendering the texture or if the render should be done to the entire texture.
     */
   var ignoreCameraViewport: Boolean = js.native
-  
-  @JSName("isCube")
-  var isCube_FRenderTargetTexture: Boolean = js.native
   
   /**
     * An event triggered after rendering the texture

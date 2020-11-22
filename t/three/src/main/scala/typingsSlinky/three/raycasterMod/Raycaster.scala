@@ -60,6 +60,7 @@ class Raycaster () extends js.Object {
   /**
   	 * The far factor of the raycaster. This value indicates which objects can be discarded based on the
   	 * distance. This value shouldn't be negative and should be larger than the near property.
+  	 * @default Infinity
   	 */
   var far: Double = js.native
   
@@ -91,15 +92,20 @@ class Raycaster () extends js.Object {
   
   /**
   	 * Used by Raycaster to selectively ignore 3D objects when performing intersection tests.
+  	 * @default new THREE.Layers()
   	 */
   var layers: Layers = js.native
   
   /**
   	 * The near factor of the raycaster. This value indicates which objects can be discarded based on the
   	 * distance. This value shouldn't be negative and should be smaller than the far property.
+  	 * @default 0
   	 */
   var near: Double = js.native
   
+  /**
+  	 * @default { Mesh: {}, Line: { threshold: 1 }, LOD: {}, Points: { threshold: 1 }, Sprite: {} }
+  	 */
   var params: RaycasterParameters = js.native
   
   /** The Ray used for the raycasting. */

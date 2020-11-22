@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object useChannel extends js.Object {
   
   def apply(eventMap: EventMap): js.Function2[/* type */ String, /* repeated */ js.Any, Unit] = js.native
+  def apply(eventMap: EventMap, deps: js.Array[_]): js.Function2[/* type */ String, /* repeated */ js.Any, Unit] = js.native
 }

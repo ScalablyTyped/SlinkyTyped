@@ -26,6 +26,11 @@ trait ReplicationGroupPendingModifiedValues extends js.Object {
     * The status of an online resharding operation.
     */
   var Resharding: js.UndefOr[ReshardingStatus] = js.native
+  
+  /**
+    * The user groups being modified.
+    */
+  var UserGroups: js.UndefOr[UserGroupsUpdateStatus] = js.native
 }
 object ReplicationGroupPendingModifiedValues {
   
@@ -73,5 +78,11 @@ object ReplicationGroupPendingModifiedValues {
     
     @scala.inline
     def deleteResharding: Self = this.set("Resharding", js.undefined)
+    
+    @scala.inline
+    def setUserGroups(value: UserGroupsUpdateStatus): Self = this.set("UserGroups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserGroups: Self = this.set("UserGroups", js.undefined)
   }
 }

@@ -32,6 +32,12 @@ trait Options extends js.Object {
   var equals_FOptions: js.UndefOr[js.Function2[/* a */ js.Any, /* b */ js.Any, Boolean]] = js.native
   
   /**
+  		Ignore changes to objects that become detached from the watched object.
+  		@default false
+  		*/
+  var ignoreDetached: js.UndefOr[Boolean] = js.native
+  
+  /**
   		Setting properties in this array won't trigger the callback.
   		@default undefined
   		*/
@@ -106,6 +112,12 @@ object Options {
     
     @scala.inline
     def deleteEquals: Self = this.set("equals", js.undefined)
+    
+    @scala.inline
+    def setIgnoreDetached(value: Boolean): Self = this.set("ignoreDetached", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIgnoreDetached: Self = this.set("ignoreDetached", js.undefined)
     
     @scala.inline
     def setIgnoreKeysVarargs(value: (String | js.Symbol)*): Self = this.set("ignoreKeys", js.Array(value :_*))

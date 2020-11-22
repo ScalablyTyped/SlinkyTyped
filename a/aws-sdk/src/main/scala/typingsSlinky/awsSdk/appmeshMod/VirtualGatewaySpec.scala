@@ -13,8 +13,7 @@ trait VirtualGatewaySpec extends js.Object {
   var backendDefaults: js.UndefOr[VirtualGatewayBackendDefaults] = js.native
   
   /**
-    * The listeners that the mesh endpoint is expected to receive inbound traffic from. You
-    can specify one listener.
+    * The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
     */
   var listeners: VirtualGatewayListeners = js.native
   

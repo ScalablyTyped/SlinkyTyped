@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Defines the culturally appropriate format of displaying numbers. This is based on current system culture settings.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @JSGlobal("Excel.DatetimeFormatInfo")
 @js.native

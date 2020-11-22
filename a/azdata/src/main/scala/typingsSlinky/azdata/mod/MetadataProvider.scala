@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MetadataProvider extends DataProvider {
   
-  def getDatabases(connectionUri: String): Thenable[js.Array[String]] = js.native
+  def getDatabases(connectionUri: String): Thenable[js.Array[DatabaseInfo | String]] = js.native
   
   def getMetadata(connectionUri: String): Thenable[ProviderMetadata] = js.native
   
@@ -20,7 +20,7 @@ object MetadataProvider {
   
   @scala.inline
   def apply(
-    getDatabases: String => Thenable[js.Array[String]],
+    getDatabases: String => Thenable[js.Array[DatabaseInfo | String]],
     getMetadata: String => Thenable[ProviderMetadata],
     getTableInfo: (String, ObjectMetadata) => Thenable[js.Array[ColumnMetadata]],
     getViewInfo: (String, ObjectMetadata) => Thenable[js.Array[ColumnMetadata]],
@@ -46,7 +46,7 @@ object MetadataProvider {
     }
     
     @scala.inline
-    def setGetDatabases(value: String => Thenable[js.Array[String]]): Self = this.set("getDatabases", js.Any.fromFunction1(value))
+    def setGetDatabases(value: String => Thenable[js.Array[DatabaseInfo | String]]): Self = this.set("getDatabases", js.Any.fromFunction1(value))
     
     @scala.inline
     def setGetMetadata(value: String => Thenable[ProviderMetadata]): Self = this.set("getMetadata", js.Any.fromFunction1(value))

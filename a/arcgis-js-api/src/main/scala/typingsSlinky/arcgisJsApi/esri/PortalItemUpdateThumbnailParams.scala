@@ -18,7 +18,7 @@ trait PortalItemUpdateThumbnailParams extends Object {
   var filename: js.UndefOr[String] = js.native
   
   /**
-    * A URL, Data URI, Blob, or File. The accepted formats are `GIF`, `JPG`, and `PNG`.
+    * A URL, Data URI, Blob, or File.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#updateThumbnail)
     */

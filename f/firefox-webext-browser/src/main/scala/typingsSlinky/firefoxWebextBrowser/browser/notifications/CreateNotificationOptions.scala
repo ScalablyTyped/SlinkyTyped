@@ -1,6 +1,5 @@
 package typingsSlinky.firefoxWebextBrowser.browser.notifications
 
-import typingsSlinky.firefoxWebextBrowser.anon.IconUrl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +14,7 @@ trait CreateNotificationOptions extends js.Object {
     * Text and icons for up to two notification action buttons.
     * @deprecated Unsupported on Firefox at this time.
     */
-  var buttons: js.UndefOr[js.Array[IconUrl]] = js.native
+  var buttons: js.UndefOr[js.Array[CreateNotificationOptionsButtons]] = js.native
   
   /** Alternate notification content with a lower-weight font. */
   var contextMessage: js.UndefOr[String] = js.native
@@ -92,10 +91,10 @@ object CreateNotificationOptions {
     def deleteAppIconMaskUrl: Self = this.set("appIconMaskUrl", js.undefined)
     
     @scala.inline
-    def setButtonsVarargs(value: IconUrl*): Self = this.set("buttons", js.Array(value :_*))
+    def setButtonsVarargs(value: CreateNotificationOptionsButtons*): Self = this.set("buttons", js.Array(value :_*))
     
     @scala.inline
-    def setButtons(value: js.Array[IconUrl]): Self = this.set("buttons", value.asInstanceOf[js.Any])
+    def setButtons(value: js.Array[CreateNotificationOptionsButtons]): Self = this.set("buttons", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteButtons: Self = this.set("buttons", js.undefined)

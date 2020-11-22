@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__overlay
 
-Typings are for version 2.1.2
+Typings are for version 2.4.2
 
 ## Library description:
 A very simple package for dynamically creating overlays.

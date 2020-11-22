@@ -5,6 +5,7 @@ import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
 import typingsSlinky.officeUiFabricReact.positioningTypesMod.ICalloutBeakPositionedInfo
 import typingsSlinky.officeUiFabricReact.positioningTypesMod.IPositionDirectionalHintData
 import typingsSlinky.officeUiFabricReact.positioningTypesMod.IPositionedData
+import typingsSlinky.officeUiFabricReact.utilitiesMod.Rectangle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

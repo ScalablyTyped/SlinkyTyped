@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Certificate extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/certificate
+  // Docs: https://electronjs.org/docs/api/structures/certificate
   /**
     * PEM encoded data
     */

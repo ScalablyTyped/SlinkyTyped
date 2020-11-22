@@ -1,6 +1,7 @@
 package typingsSlinky.blueprintjsCore.hotkeyMod
 
 import org.scalajs.dom.raw.KeyboardEvent
+import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.propsMod.IProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -44,7 +45,7 @@ trait IHotkeyProps extends IProps {
   /**
     * Human-friendly label for the hotkey.
     */
-  var label: String = js.native
+  var label: ReactElement = js.native
   
   /**
     * `keydown` event handler.
@@ -73,8 +74,8 @@ trait IHotkeyProps extends IProps {
 object IHotkeyProps {
   
   @scala.inline
-  def apply(combo: String, label: String): IHotkeyProps = {
-    val __obj = js.Dynamic.literal(combo = combo.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
+  def apply(combo: String): IHotkeyProps = {
+    val __obj = js.Dynamic.literal(combo = combo.asInstanceOf[js.Any])
     __obj.asInstanceOf[IHotkeyProps]
   }
   
@@ -95,9 +96,6 @@ object IHotkeyProps {
     
     @scala.inline
     def setCombo(value: String): Self = this.set("combo", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAllowInInput(value: Boolean): Self = this.set("allowInInput", value.asInstanceOf[js.Any])
@@ -122,6 +120,12 @@ object IHotkeyProps {
     
     @scala.inline
     def deleteGroup: Self = this.set("group", js.undefined)
+    
+    @scala.inline
+    def setLabel(value: ReactElement): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabel: Self = this.set("label", js.undefined)
     
     @scala.inline
     def setOnKeyDown(value: /* e */ KeyboardEvent => _): Self = this.set("onKeyDown", js.Any.fromFunction1(value))

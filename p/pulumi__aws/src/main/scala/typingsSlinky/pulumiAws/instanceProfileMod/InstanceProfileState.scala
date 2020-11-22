@@ -40,13 +40,6 @@ trait InstanceProfileState extends js.Object {
   val role: js.UndefOr[Input[String | Role]] = js.native
   
   /**
-    * A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
-    *
-    * @deprecated Use `role` instead. Only a single role can be passed to an IAM Instance Profile
-    */
-  val roles: js.UndefOr[Input[js.Array[Input[String | Role]]]] = js.native
-  
-  /**
     * The [unique ID][1] assigned by AWS.
     */
   val uniqueId: js.UndefOr[Input[String]] = js.native
@@ -109,15 +102,6 @@ object InstanceProfileState {
     
     @scala.inline
     def deleteRole: Self = this.set("role", js.undefined)
-    
-    @scala.inline
-    def setRolesVarargs(value: (Input[String | Role])*): Self = this.set("roles", js.Array(value :_*))
-    
-    @scala.inline
-    def setRoles(value: Input[js.Array[Input[String | Role]]]): Self = this.set("roles", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRoles: Self = this.set("roles", js.undefined)
     
     @scala.inline
     def setUniqueId(value: Input[String]): Self = this.set("uniqueId", value.asInstanceOf[js.Any])

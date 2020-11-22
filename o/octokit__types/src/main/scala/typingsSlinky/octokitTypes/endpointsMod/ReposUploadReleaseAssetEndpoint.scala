@@ -1,5 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
+import typingsSlinky.node.Buffer
 import typingsSlinky.octokitTypes.anon.ContenttypeString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +17,7 @@ trait ReposUploadReleaseAssetEndpoint extends js.Object {
   /**
     * The raw file data
     */
-  var data: String = js.native
+  var data: String | Buffer = js.native
   
   var headers: ContenttypeString = js.native
   
@@ -55,7 +56,7 @@ object ReposUploadReleaseAssetEndpoint {
   @scala.inline
   def apply(
     baseUrl: String,
-    data: String,
+    data: String | Buffer,
     headers: ContenttypeString,
     owner: String,
     release_id: Double,
@@ -84,7 +85,7 @@ object ReposUploadReleaseAssetEndpoint {
     def setBaseUrl(value: String): Self = this.set("baseUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setData(value: String): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: String | Buffer): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHeaders(value: ContenttypeString): Self = this.set("headers", value.asInstanceOf[js.Any])

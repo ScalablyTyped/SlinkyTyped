@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SecurityVendorInformation extends js.Object {
   
   // Specific provider (product/service - not vendor company); for example, WindowsDefenderATP.
-  var provider: js.UndefOr[String] = js.native
+  var provider: js.UndefOr[NullableOption[String]] = js.native
   
   // Version of the provider or subprovider, if it exists, that generated the alert. Required
-  var providerVersion: js.UndefOr[String] = js.native
+  var providerVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.
-  var subProvider: js.UndefOr[String] = js.native
+  var subProvider: js.UndefOr[NullableOption[String]] = js.native
   
   // Name of the alert vendor (for example, Microsoft, Dell, FireEye). Required
-  var vendor: js.UndefOr[String] = js.native
+  var vendor: js.UndefOr[NullableOption[String]] = js.native
 }
 object SecurityVendorInformation {
   
@@ -43,27 +43,39 @@ object SecurityVendorInformation {
     }
     
     @scala.inline
-    def setProvider(value: String): Self = this.set("provider", value.asInstanceOf[js.Any])
+    def setProvider(value: NullableOption[String]): Self = this.set("provider", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProvider: Self = this.set("provider", js.undefined)
     
     @scala.inline
-    def setProviderVersion(value: String): Self = this.set("providerVersion", value.asInstanceOf[js.Any])
+    def setProviderNull: Self = this.set("provider", null)
+    
+    @scala.inline
+    def setProviderVersion(value: NullableOption[String]): Self = this.set("providerVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProviderVersion: Self = this.set("providerVersion", js.undefined)
     
     @scala.inline
-    def setSubProvider(value: String): Self = this.set("subProvider", value.asInstanceOf[js.Any])
+    def setProviderVersionNull: Self = this.set("providerVersion", null)
+    
+    @scala.inline
+    def setSubProvider(value: NullableOption[String]): Self = this.set("subProvider", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSubProvider: Self = this.set("subProvider", js.undefined)
     
     @scala.inline
-    def setVendor(value: String): Self = this.set("vendor", value.asInstanceOf[js.Any])
+    def setSubProviderNull: Self = this.set("subProvider", null)
+    
+    @scala.inline
+    def setVendor(value: NullableOption[String]): Self = this.set("vendor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVendor: Self = this.set("vendor", js.undefined)
+    
+    @scala.inline
+    def setVendorNull: Self = this.set("vendor", null)
   }
 }

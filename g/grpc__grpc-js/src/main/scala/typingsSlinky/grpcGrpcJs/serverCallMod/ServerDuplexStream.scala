@@ -27,7 +27,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined @grpc/grpc-js.@grpc/grpc-js/build/src/server-call.ServerSurfaceCall & @grpc/grpc-js.@grpc/grpc-js/build/src/object-stream.ObjectReadable<RequestType> & @grpc/grpc-js.@grpc/grpc-js/build/src/object-stream.ObjectWritable<ResponseType> */
+/* Inlined @grpc/grpc-js.@grpc/grpc-js/build/src/server-call.ServerSurfaceCall & @grpc/grpc-js.@grpc/grpc-js/build/src/object-stream.ObjectReadable<RequestType> & @grpc/grpc-js.@grpc/grpc-js/build/src/object-stream.ObjectWritable<ResponseType> & {end (metadata : @grpc/grpc-js.@grpc/grpc-js/build/src/metadata.Metadata | undefined): void} */
 @js.native
 trait ServerDuplexStream[RequestType, ResponseType] extends js.Object {
   
@@ -145,6 +145,7 @@ trait ServerDuplexStream[RequestType, ResponseType] extends js.Object {
   def end(data: String, cb: js.Function0[Unit]): Unit = js.native
   def end(data: js.typedarray.Uint8Array): Unit = js.native
   def end(data: js.typedarray.Uint8Array, cb: js.Function0[Unit]): Unit = js.native
+  def end(metadata: Metadata): Unit = js.native
   def end(str: String, encoding: js.UndefOr[scala.Nothing], cb: js.Function0[Unit]): Unit = js.native
   def end(str: String, encoding: BufferEncoding): Unit = js.native
   def end(str: String, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
@@ -157,8 +158,8 @@ trait ServerDuplexStream[RequestType, ResponseType] extends js.Object {
   
   def isPaused(): Boolean = js.native
   
-  def listenerCount(`type`: String): Double = js.native
-  def listenerCount(`type`: js.Symbol): Double = js.native
+  def listenerCount(event: String): Double = js.native
+  def listenerCount(event: js.Symbol): Double = js.native
   
   def listeners(event: String): js.Array[js.Function] = js.native
   def listeners(event: js.Symbol): js.Array[js.Function] = js.native

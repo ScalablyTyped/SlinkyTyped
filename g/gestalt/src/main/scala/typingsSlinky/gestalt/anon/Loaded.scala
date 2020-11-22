@@ -1,6 +1,5 @@
 package typingsSlinky.gestalt.anon
 
-import org.scalajs.dom.raw.HTMLVideoElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,15 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Loaded extends js.Object {
   
-  var event: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLVideoElement] = js.native
-  
   var loaded: Double = js.native
 }
 object Loaded {
   
   @scala.inline
-  def apply(event: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLVideoElement], loaded: Double): Loaded = {
-    val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], loaded = loaded.asInstanceOf[js.Any])
+  def apply(loaded: Double): Loaded = {
+    val __obj = js.Dynamic.literal(loaded = loaded.asInstanceOf[js.Any])
     __obj.asInstanceOf[Loaded]
   }
   
@@ -34,9 +31,6 @@ object Loaded {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setEvent(value: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLVideoElement]): Self = this.set("event", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLoaded(value: Double): Self = this.set("loaded", value.asInstanceOf[js.Any])

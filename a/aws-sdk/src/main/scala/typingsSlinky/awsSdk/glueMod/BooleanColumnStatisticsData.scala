@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BooleanColumnStatisticsData extends js.Object {
   
   /**
-    * Number of false value.
+    * The number of false values in the column.
     */
   var NumberOfFalses: NonNegativeLong = js.native
   
   /**
-    * Number of nulls.
+    * The number of null values in the column.
     */
   var NumberOfNulls: NonNegativeLong = js.native
   
   /**
-    * Number of true value.
+    * The number of true values in the column.
     */
   var NumberOfTrues: NonNegativeLong = js.native
 }

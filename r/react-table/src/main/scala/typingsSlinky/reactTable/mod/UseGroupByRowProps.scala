@@ -20,6 +20,8 @@ trait UseGroupByRowProps[D /* <: js.Object */] extends js.Object {
   
   var isGrouped: Boolean = js.native
   
+  var leafRows: js.Array[Row[D]] = js.native
+  
   var subRows: js.Array[Row[D]] = js.native
   
   var values: Record[IdType[D], AggregatedValue] = js.native
@@ -34,10 +36,11 @@ object UseGroupByRowProps {
     id: String,
     index: Double,
     isGrouped: Boolean,
+    leafRows: js.Array[Row[D]],
     subRows: js.Array[Row[D]],
     values: Record[IdType[D], AggregatedValue]
   ): UseGroupByRowProps[D] = {
-    val __obj = js.Dynamic.literal(depth = depth.asInstanceOf[js.Any], groupByID = groupByID.asInstanceOf[js.Any], groupByVal = groupByVal.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], isGrouped = isGrouped.asInstanceOf[js.Any], subRows = subRows.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(depth = depth.asInstanceOf[js.Any], groupByID = groupByID.asInstanceOf[js.Any], groupByVal = groupByVal.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], isGrouped = isGrouped.asInstanceOf[js.Any], leafRows = leafRows.asInstanceOf[js.Any], subRows = subRows.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
     __obj.asInstanceOf[UseGroupByRowProps[D]]
   }
   
@@ -73,6 +76,12 @@ object UseGroupByRowProps {
     
     @scala.inline
     def setIsGrouped(value: Boolean): Self = this.set("isGrouped", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLeafRowsVarargs(value: Row[D]*): Self = this.set("leafRows", js.Array(value :_*))
+    
+    @scala.inline
+    def setLeafRows(value: js.Array[Row[D]]): Self = this.set("leafRows", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSubRowsVarargs(value: Row[D]*): Self = this.set("subRows", js.Array(value :_*))

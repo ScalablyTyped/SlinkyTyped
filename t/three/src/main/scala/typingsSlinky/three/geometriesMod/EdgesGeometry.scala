@@ -10,6 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class EdgesGeometry protected ()
   extends typingsSlinky.three.edgesGeometryMod.EdgesGeometry {
+  /**
+  	 * @param geometry
+  	 * @param [thresholdAngle=1]
+  	 */
   def this(geometry: BufferGeometry) = this()
   def this(geometry: Geometry) = this()
   def this(geometry: BufferGeometry, thresholdAngle: Double) = this()

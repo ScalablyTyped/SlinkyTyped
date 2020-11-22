@@ -1,6 +1,7 @@
 package typingsSlinky.firebase.anon
 
-import typingsSlinky.firebase.mod.firestore.DocumentSnapshot
+import typingsSlinky.firebase.mod.firebase.firestore.FirestoreError
+import typingsSlinky.firebase.mod.firebase.firestore.QuerySnapshot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,9 +11,9 @@ trait Next[T] extends js.Object {
   
   var complete: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var error: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
+  var error: js.UndefOr[js.Function1[/* error */ FirestoreError, Unit]] = js.native
   
-  var next: js.UndefOr[js.Function1[/* snapshot */ DocumentSnapshot[T], Unit]] = js.native
+  var next: js.UndefOr[js.Function1[/* snapshot */ QuerySnapshot[T], Unit]] = js.native
 }
 object Next {
   
@@ -44,13 +45,13 @@ object Next {
     def deleteComplete: Self = this.set("complete", js.undefined)
     
     @scala.inline
-    def setError(value: /* error */ js.Error => Unit): Self = this.set("error", js.Any.fromFunction1(value))
+    def setError(value: /* error */ FirestoreError => Unit): Self = this.set("error", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteError: Self = this.set("error", js.undefined)
     
     @scala.inline
-    def setNext(value: /* snapshot */ DocumentSnapshot[T] => Unit): Self = this.set("next", js.Any.fromFunction1(value))
+    def setNext(value: /* snapshot */ QuerySnapshot[T] => Unit): Self = this.set("next", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteNext: Self = this.set("next", js.undefined)

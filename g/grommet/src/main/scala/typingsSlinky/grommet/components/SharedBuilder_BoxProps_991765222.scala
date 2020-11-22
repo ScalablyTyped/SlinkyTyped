@@ -3,10 +3,10 @@ package typingsSlinky.grommet.components
 import slinky.core.ReactComponentClass
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.anon.Delay
+import typingsSlinky.grommet.anon.Error
 import typingsSlinky.grommet.anon.Grow
 import typingsSlinky.grommet.anon.Horizontal
 import typingsSlinky.grommet.anon.Max
-import typingsSlinky.grommet.anon.SizeStyle
 import typingsSlinky.grommet.grommetStrings.`column-reverse`
 import typingsSlinky.grommet.grommetStrings.`row-responsive`
 import typingsSlinky.grommet.grommetStrings.`row-reverse`
@@ -109,7 +109,7 @@ class SharedBuilder_BoxProps_991765222 (val args: js.Array[js.Any])
   def basis(value: BasisType): this.type = set("basis", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def borderVarargs(value: SizeStyle*): this.type = set("border", js.Array(value :_*))
+  def borderVarargs(value: Error*): this.type = set("border", js.Array(value :_*))
   
   @scala.inline
   def border(value: BorderType): this.type = set("border", value.asInstanceOf[js.Any])

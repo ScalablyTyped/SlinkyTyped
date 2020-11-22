@@ -38,7 +38,7 @@ trait ThreeDSecure extends js.Object {
     *   verifyPayload.liabilityShiftPossible; // boolean
     * });
     */
-  def cancelVerifyCard(callback: callback): Unit = js.native
+  def cancelVerifyCard(callback: callback[_]): Unit = js.native
   
   /**
     * braintree.threeDSecure.create({
@@ -46,7 +46,7 @@ trait ThreeDSecure extends js.Object {
     * }, callback);
     */
   def create(options: Version): js.Promise[ThreeDSecure] = js.native
-  def create(options: Version, callback: callback): Unit = js.native
+  def create(options: Version, callback: callback[_]): Unit = js.native
   
   /**
     * Gather the data needed for a 3D Secure lookup call.
@@ -65,7 +65,7 @@ trait ThreeDSecure extends js.Object {
     * });
     */
   def prepareLookup(options: BinNonce): js.Promise[String] = js.native
-  def prepareLookup(options: BinNonce, callback: callback): Unit = js.native
+  def prepareLookup(options: BinNonce, callback: callback[_]): Unit = js.native
   
   /**
     * @description The callback used for options.removeFrame in {@link ThreeDSecure#verifyCard|verifyCard}.
@@ -76,7 +76,7 @@ trait ThreeDSecure extends js.Object {
     * Cleanly tear down anything set up by {@link module:braintree-web/three-d-secure.create|create}
     */
   def teardown(): Unit = js.native
-  def teardown(callback: callback): Unit = js.native
+  def teardown(callback: callback[_]): Unit = js.native
   
   /**
     * Launch the 3D Secure login flow, returning a nonce payload.
@@ -116,5 +116,5 @@ trait ThreeDSecure extends js.Object {
     * });
     */
   def verifyCard(options: AddFrame): js.Promise[ThreeDSecureVerifyPayload] = js.native
-  def verifyCard(options: RemoveFrame, callback: callback): Unit = js.native
+  def verifyCard(options: RemoveFrame, callback: callback[_]): Unit = js.native
 }

@@ -13,7 +13,7 @@ trait Condition extends js.Object {
   var ConditionKey: typingsSlinky.awsSdk.backupMod.ConditionKey = js.native
   
   /**
-    * An operation, such as STRINGEQUALS, that is applied to a key-value pair used to filter resources in a selection.
+    * An operation, such as StringEquals, that is applied to a key-value pair used to filter resources in a selection.
     */
   var ConditionType: typingsSlinky.awsSdk.backupMod.ConditionType = js.native
   

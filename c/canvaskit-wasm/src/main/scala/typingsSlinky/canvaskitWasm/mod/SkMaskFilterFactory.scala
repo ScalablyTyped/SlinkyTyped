@@ -7,12 +7,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SkMaskFilterFactory extends js.Object {
   
-  def MakeBlur(blurStyle: SkBlurStyle, radius: Double, b: Boolean): SkMaskFilter = js.native
+  /**
+    * Create a blur maskfilter
+    * @param style
+    * @param sigma - Standard deviation of the Gaussian blur to apply. Must be > 0.
+    * @param respectCTM - if true the blur's sigma is modified by the CTM.
+    */
+  def MakeBlur(style: BlurStyle, sigma: Double, respectCTM: Boolean): SkMaskFilter = js.native
 }
 object SkMaskFilterFactory {
   
   @scala.inline
-  def apply(MakeBlur: (SkBlurStyle, Double, Boolean) => SkMaskFilter): SkMaskFilterFactory = {
+  def apply(MakeBlur: (BlurStyle, Double, Boolean) => SkMaskFilter): SkMaskFilterFactory = {
     val __obj = js.Dynamic.literal(MakeBlur = js.Any.fromFunction3(MakeBlur))
     __obj.asInstanceOf[SkMaskFilterFactory]
   }
@@ -33,6 +39,6 @@ object SkMaskFilterFactory {
     }
     
     @scala.inline
-    def setMakeBlur(value: (SkBlurStyle, Double, Boolean) => SkMaskFilter): Self = this.set("MakeBlur", js.Any.fromFunction3(value))
+    def setMakeBlur(value: (BlurStyle, Double, Boolean) => SkMaskFilter): Self = this.set("MakeBlur", js.Any.fromFunction3(value))
   }
 }

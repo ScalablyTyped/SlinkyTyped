@@ -16,6 +16,8 @@ trait ExportNamedDeclaration_
      with ModuleDeclaration
      with Statement {
   
+  var assertions: ImportAttribute_ | Null = js.native
+  
   var declaration: Declaration | Null = js.native
   
   var exportKind: `type` | value | Null = js.native
@@ -62,6 +64,12 @@ object ExportNamedDeclaration_ {
     
     @scala.inline
     def setType(value: ExportNamedDeclaration): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAssertions(value: ImportAttribute_): Self = this.set("assertions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAssertionsNull: Self = this.set("assertions", null)
     
     @scala.inline
     def setDeclaration(value: Declaration): Self = this.set("declaration", value.asInstanceOf[js.Any])

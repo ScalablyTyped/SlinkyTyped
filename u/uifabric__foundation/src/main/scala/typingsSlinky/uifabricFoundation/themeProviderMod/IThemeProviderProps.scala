@@ -1,7 +1,7 @@
 package typingsSlinky.uifabricFoundation.themeProviderMod
 
-import typingsSlinky.uifabricStyling.ithemeMod.ISchemeNames
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.fluentuiTheme.ischemeMod.ISchemeNames
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

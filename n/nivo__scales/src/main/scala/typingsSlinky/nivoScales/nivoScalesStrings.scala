@@ -37,6 +37,9 @@ object nivoScalesStrings {
   def second: second = "second".asInstanceOf[second]
   
   @scala.inline
+  def symlog: symlog = "symlog".asInstanceOf[symlog]
+  
+  @scala.inline
   def time: time = "time".asInstanceOf[time]
   
   @scala.inline
@@ -71,6 +74,9 @@ object nivoScalesStrings {
   
   @js.native
   sealed trait second extends js.Object
+  
+  @js.native
+  sealed trait symlog extends js.Object
   
   @js.native
   sealed trait time extends js.Object

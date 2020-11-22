@@ -263,6 +263,9 @@ object ReactFlatpickr {
     def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def enterKeyHint(value: String): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def files(value: FileList): this.type = set("files", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -317,10 +320,10 @@ object ReactFlatpickr {
     def getAttributeNames(value: () => js.Array[String]): this.type = set("getAttributeNames", js.Any.fromFunction0(value))
     
     @scala.inline
-    def getAttributeNode(value: /* name */ String => Attr | Null): this.type = set("getAttributeNode", js.Any.fromFunction1(value))
+    def getAttributeNode(value: /* qualifiedName */ String => Attr | Null): this.type = set("getAttributeNode", js.Any.fromFunction1(value))
     
     @scala.inline
-    def getAttributeNodeNS(value: (/* namespaceURI */ String, /* localName */ String) => Attr | Null): this.type = set("getAttributeNodeNS", js.Any.fromFunction2(value))
+    def getAttributeNodeNS(value: (/* namespace */ String, /* localName */ String) => Attr | Null): this.type = set("getAttributeNodeNS", js.Any.fromFunction2(value))
     
     @scala.inline
     def getBoundingClientRect(value: () => DOMRect): this.type = set("getBoundingClientRect", js.Any.fromFunction0(value))

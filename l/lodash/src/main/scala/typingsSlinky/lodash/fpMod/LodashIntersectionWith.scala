@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashIntersectionWith extends LodashConvertible {
+trait LodashIntersectionWith extends js.Object {
   
   def apply[T1](comparator: __): LodashIntersectionWith1x2[T1] = js.native
   def apply[T1](comparator: __, array: List[T1]): LodashIntersectionWith1x2[T1] = js.native

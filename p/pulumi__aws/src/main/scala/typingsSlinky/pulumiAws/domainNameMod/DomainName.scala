@@ -35,7 +35,7 @@ class DomainName protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
-    * The domain name.
+    * The domain name. Must be between 1 and 512 characters in length.
     */
   val domainName: Output_[String] = js.native
   

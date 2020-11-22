@@ -16,7 +16,8 @@ trait ChartOptionsProps extends js.Object {
     */
   var axes: js.UndefOr[Boolean] = js.native
   
-  def axisProps(): ClassName = js.native
+  /** custom axis props */
+  var axisProps: js.UndefOr[js.Function0[ClassName]] = js.native
   
   /**
     * set caption margin
@@ -25,7 +26,7 @@ trait ChartOptionsProps extends js.Object {
   var captionMargin: js.UndefOr[Double] = js.native
   
   /** custom captions props */
-  def captionProps(): FontFamily = js.native
+  var captionProps: js.UndefOr[js.Function0[FontFamily]] = js.native
   
   /**
     * show captions
@@ -33,7 +34,8 @@ trait ChartOptionsProps extends js.Object {
     */
   var captions: js.UndefOr[Boolean] = js.native
   
-  def dotProps(): ClassName = js.native
+  /** custom dot props */
+  var dotProps: js.UndefOr[js.Function0[ClassName]] = js.native
   
   /**
     * show dots
@@ -41,7 +43,8 @@ trait ChartOptionsProps extends js.Object {
     */
   var dots: js.UndefOr[Boolean] = js.native
   
-  def scaleProps(): Fill = js.native
+  /** custom scale props */
+  var scaleProps: js.UndefOr[js.Function0[Fill]] = js.native
   
   /**
     * show scale circles
@@ -52,16 +55,19 @@ trait ChartOptionsProps extends js.Object {
   /** custom viewBox */
   var setViewBox: js.UndefOr[js.Function1[/* options */ this.type, Double]] = js.native
   
-  def shapeProps(): ClassName = js.native
+  /** custom shape props */
+  var shapeProps: js.UndefOr[js.Function0[ClassName]] = js.native
   
   /**
     * set size
+    *
+    * overwritten by size prop on component
     * @default 300
     */
   var size: js.UndefOr[Double] = js.native
   
   /** custom smoothing fn */
-  def smoothing(points: js.Array[js.Array[js.Any]]): String = js.native
+  var smoothing: js.UndefOr[js.Function1[/* points */ js.Array[js.Array[js.Any]], String]] = js.native
   
   /**
     * where on the axes are the captions
@@ -72,15 +78,8 @@ trait ChartOptionsProps extends js.Object {
 object ChartOptionsProps {
   
   @scala.inline
-  def apply(
-    axisProps: () => ClassName,
-    captionProps: () => FontFamily,
-    dotProps: () => ClassName,
-    scaleProps: () => Fill,
-    shapeProps: () => ClassName,
-    smoothing: js.Array[js.Array[js.Any]] => String
-  ): ChartOptionsProps = {
-    val __obj = js.Dynamic.literal(axisProps = js.Any.fromFunction0(axisProps), captionProps = js.Any.fromFunction0(captionProps), dotProps = js.Any.fromFunction0(dotProps), scaleProps = js.Any.fromFunction0(scaleProps), shapeProps = js.Any.fromFunction0(shapeProps), smoothing = js.Any.fromFunction1(smoothing))
+  def apply(): ChartOptionsProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ChartOptionsProps]
   }
   
@@ -100,28 +99,16 @@ object ChartOptionsProps {
     }
     
     @scala.inline
-    def setAxisProps(value: () => ClassName): Self = this.set("axisProps", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setCaptionProps(value: () => FontFamily): Self = this.set("captionProps", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setDotProps(value: () => ClassName): Self = this.set("dotProps", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setScaleProps(value: () => Fill): Self = this.set("scaleProps", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setShapeProps(value: () => ClassName): Self = this.set("shapeProps", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setSmoothing(value: js.Array[js.Array[js.Any]] => String): Self = this.set("smoothing", js.Any.fromFunction1(value))
-    
-    @scala.inline
     def setAxes(value: Boolean): Self = this.set("axes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAxes: Self = this.set("axes", js.undefined)
+    
+    @scala.inline
+    def setAxisProps(value: () => ClassName): Self = this.set("axisProps", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteAxisProps: Self = this.set("axisProps", js.undefined)
     
     @scala.inline
     def setCaptionMargin(value: Double): Self = this.set("captionMargin", value.asInstanceOf[js.Any])
@@ -130,16 +117,34 @@ object ChartOptionsProps {
     def deleteCaptionMargin: Self = this.set("captionMargin", js.undefined)
     
     @scala.inline
+    def setCaptionProps(value: () => FontFamily): Self = this.set("captionProps", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteCaptionProps: Self = this.set("captionProps", js.undefined)
+    
+    @scala.inline
     def setCaptions(value: Boolean): Self = this.set("captions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCaptions: Self = this.set("captions", js.undefined)
     
     @scala.inline
+    def setDotProps(value: () => ClassName): Self = this.set("dotProps", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteDotProps: Self = this.set("dotProps", js.undefined)
+    
+    @scala.inline
     def setDots(value: Boolean): Self = this.set("dots", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDots: Self = this.set("dots", js.undefined)
+    
+    @scala.inline
+    def setScaleProps(value: () => Fill): Self = this.set("scaleProps", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteScaleProps: Self = this.set("scaleProps", js.undefined)
     
     @scala.inline
     def setScales(value: Double): Self = this.set("scales", value.asInstanceOf[js.Any])
@@ -154,10 +159,22 @@ object ChartOptionsProps {
     def deleteSetViewBox: Self = this.set("setViewBox", js.undefined)
     
     @scala.inline
+    def setShapeProps(value: () => ClassName): Self = this.set("shapeProps", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteShapeProps: Self = this.set("shapeProps", js.undefined)
+    
+    @scala.inline
     def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)
+    
+    @scala.inline
+    def setSmoothing(value: /* points */ js.Array[js.Array[js.Any]] => String): Self = this.set("smoothing", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteSmoothing: Self = this.set("smoothing", js.undefined)
     
     @scala.inline
     def setZoomDistance(value: Double): Self = this.set("zoomDistance", value.asInstanceOf[js.Any])

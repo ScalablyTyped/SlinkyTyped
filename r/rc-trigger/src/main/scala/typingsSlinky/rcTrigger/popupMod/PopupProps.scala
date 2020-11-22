@@ -4,9 +4,10 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.rcTrigger.interfaceMod.AnimationType
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcTrigger.interfaceMod.MobileConfig
 import typingsSlinky.rcTrigger.interfaceMod.Point
 import typingsSlinky.rcTrigger.interfaceMod.StretchType
 import typingsSlinky.rcTrigger.interfaceMod.TransitionNameType
@@ -38,11 +39,13 @@ trait PopupProps extends js.Object {
   
   var maskAnimation: AnimationType = js.native
   
-  var maskMotion: MotionType = js.native
+  var maskMotion: CSSMotionProps = js.native
   
   var maskTransitionName: TransitionNameType = js.native
   
-  var motion: MotionType = js.native
+  var mobile: js.UndefOr[MobileConfig] = js.native
+  
+  var motion: CSSMotionProps = js.native
   
   var onAlign: js.UndefOr[js.Function2[/* element */ HTMLElement, /* align */ AlignType, Unit]] = js.native
   
@@ -74,9 +77,9 @@ object PopupProps {
   def apply(
     animation: AnimationType,
     maskAnimation: AnimationType,
-    maskMotion: MotionType,
+    maskMotion: CSSMotionProps,
     maskTransitionName: TransitionNameType,
-    motion: MotionType,
+    motion: CSSMotionProps,
     prefixCls: String,
     transitionName: TransitionNameType
   ): PopupProps = {
@@ -106,13 +109,13 @@ object PopupProps {
     def setMaskAnimation(value: AnimationType): Self = this.set("maskAnimation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMaskMotion(value: MotionType): Self = this.set("maskMotion", value.asInstanceOf[js.Any])
+    def setMaskMotion(value: CSSMotionProps): Self = this.set("maskMotion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMaskTransitionName(value: TransitionNameType): Self = this.set("maskTransitionName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMotion(value: MotionType): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: CSSMotionProps): Self = this.set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
@@ -164,6 +167,12 @@ object PopupProps {
     
     @scala.inline
     def deleteMask: Self = this.set("mask", js.undefined)
+    
+    @scala.inline
+    def setMobile(value: MobileConfig): Self = this.set("mobile", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMobile: Self = this.set("mobile", js.undefined)
     
     @scala.inline
     def setOnAlign(value: (/* element */ HTMLElement, /* align */ AlignType) => Unit): Self = this.set("onAlign", js.Any.fromFunction2(value))

@@ -2,13 +2,11 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import typingsSlinky.devextreme.anon.ColorCodeField
 import typingsSlinky.devextreme.anon.ElementModelNode
+import typingsSlinky.devextreme.anon.EventModelNode
 import typingsSlinky.devextreme.anon.HeaderHeight
-import typingsSlinky.devextreme.anon.JQueryEventModelNode
 import typingsSlinky.devextreme.anon.ModelRoot
 import typingsSlinky.devextreme.anon.Rect
 import typingsSlinky.devextreme.anon.SelectionStyle
-import typingsSlinky.devextreme.devextremeStrings.ellipsis
-import typingsSlinky.devextreme.devextremeStrings.hide
 import typingsSlinky.devextreme.devextremeStrings.leftBottomRightTop
 import typingsSlinky.devextreme.devextremeStrings.leftTopRightBottom
 import typingsSlinky.devextreme.devextremeStrings.multiple
@@ -28,80 +26,122 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeMapOptions extends BaseWidgetOptions[dxTreeMap] {
   
-  /** @name dxTreeMap.Options.childrenField */
+  /**
+    * [descr:dxTreeMap.Options.childrenField]
+    */
   var childrenField: js.UndefOr[String] = js.native
   
-  /** @name dxTreeMap.Options.colorField */
+  /**
+    * [descr:dxTreeMap.Options.colorField]
+    */
   var colorField: js.UndefOr[String] = js.native
   
-  /** @name dxTreeMap.Options.colorizer */
+  /**
+    * [descr:dxTreeMap.Options.colorizer]
+    */
   var colorizer: js.UndefOr[ColorCodeField] = js.native
   
-  /** @name dxTreeMap.Options.dataSource */
+  /**
+    * [descr:dxTreeMap.Options.dataSource]
+    */
   var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.native
   
-  /** @name dxTreeMap.Options.group */
+  /**
+    * [descr:dxTreeMap.Options.group]
+    */
   var group: js.UndefOr[HeaderHeight] = js.native
   
-  /** @name dxTreeMap.Options.hoverEnabled */
+  /**
+    * [descr:dxTreeMap.Options.hoverEnabled]
+    */
   var hoverEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeMap.Options.idField */
+  /**
+    * [descr:dxTreeMap.Options.idField]
+    */
   var idField: js.UndefOr[String] = js.native
   
-  /** @name dxTreeMap.Options.interactWithGroup */
+  /**
+    * [descr:dxTreeMap.Options.interactWithGroup]
+    */
   var interactWithGroup: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeMap.Options.labelField */
+  /**
+    * [descr:dxTreeMap.Options.labelField]
+    */
   var labelField: js.UndefOr[String] = js.native
   
-  /** @name dxTreeMap.Options.layoutAlgorithm */
+  /**
+    * [descr:dxTreeMap.Options.layoutAlgorithm]
+    */
   var layoutAlgorithm: js.UndefOr[sliceanddice | squarified | strip | (js.Function1[/* e */ Rect, _])] = js.native
   
-  /** @name dxTreeMap.Options.layoutDirection */
+  /**
+    * [descr:dxTreeMap.Options.layoutDirection]
+    */
   var layoutDirection: js.UndefOr[
     leftBottomRightTop | leftTopRightBottom | rightBottomLeftTop | rightTopLeftBottom
   ] = js.native
   
-  /** @name dxTreeMap.Options.maxDepth */
+  /**
+    * [descr:dxTreeMap.Options.maxDepth]
+    */
   var maxDepth: js.UndefOr[Double] = js.native
   
-  /** @name dxTreeMap.Options.onClick */
-  var onClick: js.UndefOr[(js.Function1[/* e */ JQueryEventModelNode, _]) | String] = js.native
+  /**
+    * [descr:dxTreeMap.Options.onClick]
+    */
+  var onClick: js.UndefOr[(js.Function1[/* e */ EventModelNode, _]) | String] = js.native
   
-  /** @name dxTreeMap.Options.onDrill */
+  /**
+    * [descr:dxTreeMap.Options.onDrill]
+    */
   var onDrill: js.UndefOr[js.Function1[/* e */ ElementModelNode, _]] = js.native
   
-  /** @name dxTreeMap.Options.onHoverChanged */
+  /**
+    * [descr:dxTreeMap.Options.onHoverChanged]
+    */
   var onHoverChanged: js.UndefOr[js.Function1[/* e */ ElementModelNode, _]] = js.native
   
-  /** @name dxTreeMap.Options.onNodesInitialized */
+  /**
+    * [descr:dxTreeMap.Options.onNodesInitialized]
+    */
   var onNodesInitialized: js.UndefOr[js.Function1[/* e */ ModelRoot, _]] = js.native
   
-  /** @name dxTreeMap.Options.onNodesRendering */
+  /**
+    * [descr:dxTreeMap.Options.onNodesRendering]
+    */
   var onNodesRendering: js.UndefOr[js.Function1[/* e */ ElementModelNode, _]] = js.native
   
-  /** @name dxTreeMap.Options.onSelectionChanged */
+  /**
+    * [descr:dxTreeMap.Options.onSelectionChanged]
+    */
   var onSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementModelNode, _]] = js.native
   
-  /** @name dxTreeMap.Options.parentField */
+  /**
+    * [descr:dxTreeMap.Options.parentField]
+    */
   var parentField: js.UndefOr[String] = js.native
   
-  /** @deprecated */
-  /** @name dxTreeMap.Options.resolveLabelOverflow */
-  var resolveLabelOverflow: js.UndefOr[ellipsis | hide] = js.native
-  
-  /** @name dxTreeMap.Options.selectionMode */
+  /**
+    * [descr:dxTreeMap.Options.selectionMode]
+    */
   var selectionMode: js.UndefOr[multiple | none | single_] = js.native
   
-  /** @name dxTreeMap.Options.tile */
+  /**
+    * [descr:dxTreeMap.Options.tile]
+    */
   var tile: js.UndefOr[SelectionStyle] = js.native
   
-  /** @name dxTreeMap.Options.tooltip */
+  /**
+    * [descr:dxTreeMap.Options.tooltip]
+    */
   @JSName("tooltip")
   var tooltip_dxTreeMapOptions: js.UndefOr[dxTreeMapTooltip] = js.native
   
-  /** @name dxTreeMap.Options.valueField */
+  /**
+    * [descr:dxTreeMap.Options.valueField]
+    */
   var valueField: js.UndefOr[String] = js.native
 }
 object dxTreeMapOptions {
@@ -206,10 +246,10 @@ object dxTreeMapOptions {
     def deleteMaxDepth: Self = this.set("maxDepth", js.undefined)
     
     @scala.inline
-    def setOnClickFunction1(value: /* e */ JQueryEventModelNode => _): Self = this.set("onClick", js.Any.fromFunction1(value))
+    def setOnClickFunction1(value: /* e */ EventModelNode => _): Self = this.set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnClick(value: (js.Function1[/* e */ JQueryEventModelNode, _]) | String): Self = this.set("onClick", value.asInstanceOf[js.Any])
+    def setOnClick(value: (js.Function1[/* e */ EventModelNode, _]) | String): Self = this.set("onClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnClick: Self = this.set("onClick", js.undefined)
@@ -249,12 +289,6 @@ object dxTreeMapOptions {
     
     @scala.inline
     def deleteParentField: Self = this.set("parentField", js.undefined)
-    
-    @scala.inline
-    def setResolveLabelOverflow(value: ellipsis | hide): Self = this.set("resolveLabelOverflow", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteResolveLabelOverflow: Self = this.set("resolveLabelOverflow", js.undefined)
     
     @scala.inline
     def setSelectionMode(value: multiple | none | single_): Self = this.set("selectionMode", value.asInstanceOf[js.Any])

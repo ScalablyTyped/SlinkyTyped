@@ -126,12 +126,6 @@ trait FunctionArgs extends js.Object {
 object FunctionArgs {
   
   @scala.inline
-  def apply(handler: Input[String], role: Input[ARN], runtime: Input[String]): FunctionArgs = {
-    val __obj = js.Dynamic.literal(handler = handler.asInstanceOf[js.Any], role = role.asInstanceOf[js.Any], runtime = runtime.asInstanceOf[js.Any])
-    __obj.asInstanceOf[FunctionArgs]
-  }
-  
-  @scala.inline
   implicit class FunctionArgsOps[Self <: FunctionArgs] (val x: Self) extends AnyVal {
     
     @scala.inline

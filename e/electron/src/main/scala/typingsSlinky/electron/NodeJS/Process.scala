@@ -6,7 +6,10 @@ import typingsSlinky.electron.Electron.HeapStatistics
 import typingsSlinky.electron.Electron.IOCounters
 import typingsSlinky.electron.Electron.ProcessMemoryInfo
 import typingsSlinky.electron.Electron.SystemMemoryInfo
+import typingsSlinky.electron.electronStrings.browser_
 import typingsSlinky.electron.electronStrings.loaded
+import typingsSlinky.electron.electronStrings.renderer
+import typingsSlinky.electron.electronStrings.worker
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -156,7 +159,7 @@ trait Process extends EventEmitter {
     */
   var noDeprecation: Boolean = js.native
   
-  // Docs: http://electronjs.org/docs/api/process
+  // Docs: https://electronjs.org/docs/api/process
   /**
     * Emitted when Electron has loaded its internal initialization script and is
     * beginning to load the web page or the main script.
@@ -225,11 +228,14 @@ trait Process extends EventEmitter {
   var traceProcessWarnings: Boolean = js.native
   
   /**
-    * A `String` representing the current process's type, can be `"browser"` (i.e.
-    * main process), `"renderer"`, or `"worker"` (i.e. web worker).
+    * A `String` representing the current process's type, can be:
+    * 
+    * * `browser` - The main process
+    * * `renderer` - A renderer process
+  * `worker` - In a web worker
     *
     */
-  val `type`: String = js.native
+  val `type`: browser_ | renderer | worker = js.native
   
   /**
     * A `Boolean`. If the app is running as a Windows Store app (appx), this property

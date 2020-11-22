@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`3`
+import typingsSlinky.octokitTypes.anon.`2`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +14,7 @@ trait ChecksSetSuitesPreferencesEndpoint extends js.Object {
     */
   var auto_trigger_checks: js.UndefOr[js.Array[ChecksSetSuitesPreferencesParamsAutoTriggerChecks]] = js.native
   
-  var mediaType: `3` = js.native
+  var mediaType: `2` = js.native
   
   var owner: String = js.native
   
@@ -23,7 +23,7 @@ trait ChecksSetSuitesPreferencesEndpoint extends js.Object {
 object ChecksSetSuitesPreferencesEndpoint {
   
   @scala.inline
-  def apply(mediaType: `3`, owner: String, repo: String): ChecksSetSuitesPreferencesEndpoint = {
+  def apply(mediaType: `2`, owner: String, repo: String): ChecksSetSuitesPreferencesEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChecksSetSuitesPreferencesEndpoint]
   }
@@ -44,7 +44,7 @@ object ChecksSetSuitesPreferencesEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `3`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `2`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

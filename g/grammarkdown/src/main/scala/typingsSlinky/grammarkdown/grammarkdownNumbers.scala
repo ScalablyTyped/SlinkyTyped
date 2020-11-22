@@ -389,377 +389,625 @@ object grammarkdownNumbers {
   sealed trait `-1` extends js.Object
   
   @js.native
-  sealed trait `0` extends CharacterCodes
+  sealed trait `0`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
   sealed trait `1` extends js.Object
   
   @js.native
-  sealed trait `10` extends CharacterCodes
+  sealed trait `10`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `100` extends CharacterCodes
+  sealed trait `100`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `101` extends CharacterCodes
+  sealed trait `101`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `102` extends CharacterCodes
+  sealed trait `102`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `103` extends CharacterCodes
+  sealed trait `103`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `104` extends CharacterCodes
+  sealed trait `104`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `105` extends CharacterCodes
+  sealed trait `105`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `106` extends CharacterCodes
+  sealed trait `106`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `107` extends CharacterCodes
+  sealed trait `107`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `108` extends CharacterCodes
+  sealed trait `108`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `109` extends CharacterCodes
+  sealed trait `109`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `11` extends CharacterCodes
+  sealed trait `11`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `110` extends CharacterCodes
+  sealed trait `110`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `111` extends CharacterCodes
+  sealed trait `111`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `112` extends CharacterCodes
+  sealed trait `112`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `113` extends CharacterCodes
+  sealed trait `113`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `114` extends CharacterCodes
+  sealed trait `114`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `115` extends CharacterCodes
+  sealed trait `115`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `116` extends CharacterCodes
+  sealed trait `116`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `117` extends CharacterCodes
+  sealed trait `117`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `118` extends CharacterCodes
+  sealed trait `118`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `119` extends CharacterCodes
+  sealed trait `119`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `12` extends CharacterCodes
+  sealed trait `12`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `120` extends CharacterCodes
+  sealed trait `120`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `121` extends CharacterCodes
+  sealed trait `121`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `122` extends CharacterCodes
+  sealed trait `122`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `12288` extends CharacterCodes
+  sealed trait `12288`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `123` extends CharacterCodes
+  sealed trait `123`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `124` extends CharacterCodes
+  sealed trait `124`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `125` extends CharacterCodes
+  sealed trait `125`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `126` extends CharacterCodes
+  sealed trait `126`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `127` extends CharacterCodes
+  sealed trait `127`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `13` extends CharacterCodes
+  sealed trait `13`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `133` extends CharacterCodes
+  sealed trait `133`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `160` extends CharacterCodes
+  sealed trait `160`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `32` extends CharacterCodes
+  sealed trait `32`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `33` extends CharacterCodes
+  sealed trait `33`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `34` extends CharacterCodes
+  sealed trait `34`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `35` extends CharacterCodes
+  sealed trait `35`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `38` extends CharacterCodes
+  sealed trait `38`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `39` extends CharacterCodes
+  sealed trait `39`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `40` extends CharacterCodes
+  sealed trait `40`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `41` extends CharacterCodes
+  sealed trait `41`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `42` extends CharacterCodes
+  sealed trait `42`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `43` extends CharacterCodes
+  sealed trait `43`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `44` extends CharacterCodes
+  sealed trait `44`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `45` extends CharacterCodes
+  sealed trait `45`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `46` extends CharacterCodes
+  sealed trait `46`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `47` extends CharacterCodes
+  sealed trait `47`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `48` extends CharacterCodes
+  sealed trait `48`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `49` extends CharacterCodes
+  sealed trait `49`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `50` extends CharacterCodes
+  sealed trait `50`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `51` extends CharacterCodes
+  sealed trait `51`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `52` extends CharacterCodes
+  sealed trait `52`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `53` extends CharacterCodes
+  sealed trait `53`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `54` extends CharacterCodes
+  sealed trait `54`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `55` extends CharacterCodes
+  sealed trait `55`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `56` extends CharacterCodes
+  sealed trait `56`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `57` extends CharacterCodes
+  sealed trait `57`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `5760` extends CharacterCodes
+  sealed trait `5760`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `58` extends CharacterCodes
+  sealed trait `58`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `59` extends CharacterCodes
+  sealed trait `59`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `60` extends CharacterCodes
+  sealed trait `60`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `61` extends CharacterCodes
+  sealed trait `61`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `62` extends CharacterCodes
+  sealed trait `62`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `63` extends CharacterCodes
+  sealed trait `63`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `64` extends CharacterCodes
+  sealed trait `64`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `65` extends CharacterCodes
+  sealed trait `65`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `65279` extends CharacterCodes
+  sealed trait `65279`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `66` extends CharacterCodes
+  sealed trait `66`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `67` extends CharacterCodes
+  sealed trait `67`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `68` extends CharacterCodes
+  sealed trait `68`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `69` extends CharacterCodes
+  sealed trait `69`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `70` extends CharacterCodes
+  sealed trait `70`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `71` extends CharacterCodes
+  sealed trait `71`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `72` extends CharacterCodes
+  sealed trait `72`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `73` extends CharacterCodes
+  sealed trait `73`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `74` extends CharacterCodes
+  sealed trait `74`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `75` extends CharacterCodes
+  sealed trait `75`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `76` extends CharacterCodes
+  sealed trait `76`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `77` extends CharacterCodes
+  sealed trait `77`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `78` extends CharacterCodes
+  sealed trait `78`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `79` extends CharacterCodes
+  sealed trait `79`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8` extends CharacterCodes
+  sealed trait `8`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `80` extends CharacterCodes
+  sealed trait `80`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `81` extends CharacterCodes
+  sealed trait `81`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8192` extends CharacterCodes
+  sealed trait `8192`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8193` extends CharacterCodes
+  sealed trait `8193`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8194` extends CharacterCodes
+  sealed trait `8194`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8195` extends CharacterCodes
+  sealed trait `8195`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8196` extends CharacterCodes
+  sealed trait `8196`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8197` extends CharacterCodes
+  sealed trait `8197`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8198` extends CharacterCodes
+  sealed trait `8198`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8199` extends CharacterCodes
+  sealed trait `8199`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `82` extends CharacterCodes
+  sealed trait `82`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8200` extends CharacterCodes
+  sealed trait `8200`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8201` extends CharacterCodes
+  sealed trait `8201`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8202` extends CharacterCodes
+  sealed trait `8202`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8203` extends CharacterCodes
+  sealed trait `8203`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8232` extends CharacterCodes
+  sealed trait `8232`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8233` extends CharacterCodes
+  sealed trait `8233`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8239` extends CharacterCodes
+  sealed trait `8239`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8287` extends CharacterCodes
+  sealed trait `8287`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `83` extends CharacterCodes
+  sealed trait `83`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `84` extends CharacterCodes
+  sealed trait `84`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `85` extends CharacterCodes
+  sealed trait `85`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `86` extends CharacterCodes
+  sealed trait `86`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `87` extends CharacterCodes
+  sealed trait `87`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8712` extends CharacterCodes
+  sealed trait `8712`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8713` extends CharacterCodes
+  sealed trait `8713`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `88` extends CharacterCodes
+  sealed trait `88`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `8800` extends CharacterCodes
+  sealed trait `8800`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `89` extends CharacterCodes
+  sealed trait `89`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `9` extends CharacterCodes
+  sealed trait `9`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `90` extends CharacterCodes
+  sealed trait `90`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `91` extends CharacterCodes
+  sealed trait `91`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `92` extends CharacterCodes
+  sealed trait `92`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `93` extends CharacterCodes
+  sealed trait `93`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `95` extends CharacterCodes
+  sealed trait `95`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `96` extends CharacterCodes
+  sealed trait `96`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `97` extends CharacterCodes
+  sealed trait `97`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `98` extends CharacterCodes
+  sealed trait `98`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
   
   @js.native
-  sealed trait `99` extends CharacterCodes
+  sealed trait `99`
+    extends CharacterCodes
+       with typingsSlinky.grammarkdown.grammarkdownMod.CharacterCodes
 }

@@ -6,11 +6,12 @@ import typingsSlinky.astTypes.kindsMod.SpreadElementKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ArrayPattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ArrayPatternBuilder extends js.Object {
+  
   def apply(elements: js.Array[PatternKind | SpreadElementKind | Null]): ArrayPattern = js.native
+  
   def from(params: CommentsElements): ArrayPattern = js.native
 }
-

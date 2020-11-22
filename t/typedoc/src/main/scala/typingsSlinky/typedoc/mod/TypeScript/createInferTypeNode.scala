@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createInferTypeNode extends js.Object {
   
+  /** @deprecated Use `factory.createInferTypeNode` or the factory supplied by your transformation context instead. */
   def apply(typeParameter: TypeParameterDeclaration): InferTypeNode = js.native
 }

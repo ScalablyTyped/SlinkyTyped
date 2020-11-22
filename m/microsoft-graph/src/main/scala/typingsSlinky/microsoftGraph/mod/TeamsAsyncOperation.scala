@@ -7,21 +7,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TeamsAsyncOperation extends Entity {
   
+  // Number of times the operation was attempted before being marked successful or failed.
   var attemptsCount: js.UndefOr[Double] = js.native
   
+  // Time when the operation was created.
   var createdDateTime: js.UndefOr[String] = js.native
   
-  var error: js.UndefOr[OperationError] = js.native
+  // Any error that causes the async operation to fail.
+  var error: js.UndefOr[NullableOption[OperationError]] = js.native
   
+  // Time when the async operation was last updated.
   var lastActionDateTime: js.UndefOr[String] = js.native
   
+  // Denotes which type of operation is being described.
   var operationType: js.UndefOr[TeamsAsyncOperationType] = js.native
   
+  // Operation status.
   var status: js.UndefOr[TeamsAsyncOperationStatus] = js.native
   
-  var targetResourceId: js.UndefOr[String] = js.native
+  // The ID of the object that's created or modified as result of this async operation, typically a team.
+  var targetResourceId: js.UndefOr[NullableOption[String]] = js.native
   
-  var targetResourceLocation: js.UndefOr[String] = js.native
+  /**
+    * The location of the object that's created or modified as result of this async operation. This URL should be treated as
+    * an opaque value and not parsed into its component paths.
+    */
+  var targetResourceLocation: js.UndefOr[NullableOption[String]] = js.native
 }
 object TeamsAsyncOperation {
   
@@ -59,10 +70,13 @@ object TeamsAsyncOperation {
     def deleteCreatedDateTime: Self = this.set("createdDateTime", js.undefined)
     
     @scala.inline
-    def setError(value: OperationError): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setError(value: NullableOption[OperationError]): Self = this.set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteError: Self = this.set("error", js.undefined)
+    
+    @scala.inline
+    def setErrorNull: Self = this.set("error", null)
     
     @scala.inline
     def setLastActionDateTime(value: String): Self = this.set("lastActionDateTime", value.asInstanceOf[js.Any])
@@ -83,15 +97,21 @@ object TeamsAsyncOperation {
     def deleteStatus: Self = this.set("status", js.undefined)
     
     @scala.inline
-    def setTargetResourceId(value: String): Self = this.set("targetResourceId", value.asInstanceOf[js.Any])
+    def setTargetResourceId(value: NullableOption[String]): Self = this.set("targetResourceId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTargetResourceId: Self = this.set("targetResourceId", js.undefined)
     
     @scala.inline
-    def setTargetResourceLocation(value: String): Self = this.set("targetResourceLocation", value.asInstanceOf[js.Any])
+    def setTargetResourceIdNull: Self = this.set("targetResourceId", null)
+    
+    @scala.inline
+    def setTargetResourceLocation(value: NullableOption[String]): Self = this.set("targetResourceLocation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTargetResourceLocation: Self = this.set("targetResourceLocation", js.undefined)
+    
+    @scala.inline
+    def setTargetResourceLocationNull: Self = this.set("targetResourceLocation", null)
   }
 }

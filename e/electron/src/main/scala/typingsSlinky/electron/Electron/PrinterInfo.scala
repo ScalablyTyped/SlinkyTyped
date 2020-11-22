@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PrinterInfo extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/printer-info
+  // Docs: https://electronjs.org/docs/api/structures/printer-info
   /**
     * a longer description of the printer's type.
     */

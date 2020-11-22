@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object formFeedbackMod {
   
-  type FormFeedback[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.formFeedbackMod.FormFeedbackProps]
+  type FormFeedback = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.formFeedbackMod.FormFeedbackProps]
 }

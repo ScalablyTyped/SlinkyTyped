@@ -1,11 +1,12 @@
 package typingsSlinky.httpStatus.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HttpStatusUnofficial extends js.Object {
+trait HttpStatusUnofficial extends /* key */ StringDictionary[String | Double] {
   
   val `103`: String = js.native
   

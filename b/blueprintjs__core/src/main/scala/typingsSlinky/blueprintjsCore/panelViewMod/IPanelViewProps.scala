@@ -12,13 +12,13 @@ trait IPanelViewProps extends js.Object {
     * Callback invoked when the user presses the back button or a panel invokes
     * the `closePanel()` injected prop method.
     */
-  def onClose(removedPanel: IPanel[js.Object]): Unit = js.native
+  def onClose(removedPanel: IPanel[_]): Unit = js.native
   
   /**
     * Callback invoked when a panel invokes the `openPanel(panel)` injected
     * prop method.
     */
-  def onOpen(addedPanel: IPanel[js.Object]): Unit = js.native
+  def onOpen(addedPanel: IPanel[_]): Unit = js.native
   
   /** The panel to be displayed. */
   var panel: IPanel[js.Object] = js.native
@@ -33,8 +33,8 @@ object IPanelViewProps {
   
   @scala.inline
   def apply(
-    onClose: IPanel[js.Object] => Unit,
-    onOpen: IPanel[js.Object] => Unit,
+    onClose: IPanel[_] => Unit,
+    onOpen: IPanel[_] => Unit,
     panel: IPanel[js.Object],
     showHeader: Boolean
   ): IPanelViewProps = {
@@ -58,10 +58,10 @@ object IPanelViewProps {
     }
     
     @scala.inline
-    def setOnClose(value: IPanel[js.Object] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
+    def setOnClose(value: IPanel[_] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnOpen(value: IPanel[js.Object] => Unit): Self = this.set("onOpen", js.Any.fromFunction1(value))
+    def setOnOpen(value: IPanel[_] => Unit): Self = this.set("onOpen", js.Any.fromFunction1(value))
     
     @scala.inline
     def setPanel(value: IPanel[js.Object]): Self = this.set("panel", value.asInstanceOf[js.Any])

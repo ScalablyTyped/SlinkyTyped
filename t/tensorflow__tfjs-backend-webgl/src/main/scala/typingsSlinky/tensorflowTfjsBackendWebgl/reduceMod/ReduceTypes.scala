@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.min
   - typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.sum
   - typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.prod
+  - typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.mean
 */
 trait ReduceTypes extends js.Object
 object ReduceTypes {
@@ -23,6 +24,9 @@ object ReduceTypes {
   
   @scala.inline
   def max: typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.max = "max".asInstanceOf[typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.max]
+  
+  @scala.inline
+  def mean: typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.mean = "mean".asInstanceOf[typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.mean]
   
   @scala.inline
   def min: typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.min = "min".asInstanceOf[typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglStrings.min]

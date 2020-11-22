@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FleetArgs extends js.Object {
   
   /**
-    * The ARN of the Amazon Kinesis data stream that receives the audit events.
+    * The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
     */
   val auditStreamArn: js.UndefOr[Input[String]] = js.native
   

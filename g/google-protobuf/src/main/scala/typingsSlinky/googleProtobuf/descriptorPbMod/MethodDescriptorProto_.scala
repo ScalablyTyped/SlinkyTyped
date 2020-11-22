@@ -9,17 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class MethodDescriptorProto_ () extends Message {
   
-  def clearClientStreaming(): Unit = js.native
+  def clearClientStreaming(): MethodDescriptorProto = js.native
   
-  def clearInputType(): Unit = js.native
+  def clearInputType(): MethodDescriptorProto = js.native
   
-  def clearName(): Unit = js.native
+  def clearName(): MethodDescriptorProto = js.native
   
-  def clearOptions(): Unit = js.native
+  def clearOptions(): MethodDescriptorProto = js.native
   
-  def clearOutputType(): Unit = js.native
+  def clearOutputType(): MethodDescriptorProto = js.native
   
-  def clearServerStreaming(): Unit = js.native
+  def clearServerStreaming(): MethodDescriptorProto = js.native
   
   def getClientStreaming(): js.UndefOr[Boolean] = js.native
   
@@ -45,16 +45,16 @@ class MethodDescriptorProto_ () extends Message {
   
   def hasServerStreaming(): Boolean = js.native
   
-  def setClientStreaming(value: Boolean): Unit = js.native
+  def setClientStreaming(value: Boolean): MethodDescriptorProto = js.native
   
-  def setInputType(value: String): Unit = js.native
+  def setInputType(value: String): MethodDescriptorProto = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): MethodDescriptorProto = js.native
   
-  def setOptions(): Unit = js.native
-  def setOptions(value: MethodOptions): Unit = js.native
+  def setOptions(): MethodDescriptorProto = js.native
+  def setOptions(value: MethodOptions): MethodDescriptorProto = js.native
   
-  def setOutputType(value: String): Unit = js.native
+  def setOutputType(value: String): MethodDescriptorProto = js.native
   
-  def setServerStreaming(value: Boolean): Unit = js.native
+  def setServerStreaming(value: Boolean): MethodDescriptorProto = js.native
 }

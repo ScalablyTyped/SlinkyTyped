@@ -11,22 +11,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DefaultSecurityGroupState extends js.Object {
   
+  /**
+    * The ARN of the security group
+    */
   val arn: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The description of the security group
+    * Description of this egress rule.
     */
   val description: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Can be specified multiple times for each
-    * egress rule. Each egress block supports fields documented below.
+    * Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
     */
   val egress: js.UndefOr[Input[js.Array[Input[DefaultSecurityGroupEgress]]]] = js.native
   
   /**
-    * Can be specified multiple times for each
-    * ingress rule. Each ingress block supports fields documented below.
+    * Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
     */
   val ingress: js.UndefOr[Input[js.Array[Input[DefaultSecurityGroupIngress]]]] = js.native
   
@@ -48,9 +49,7 @@ trait DefaultSecurityGroupState extends js.Object {
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
-    * The VPC ID. **Note that changing
-    * the `vpcId` will _not_ restore any default security group rules that were
-    * modified, added, or removed.** It will be left in its current state
+    * The VPC ID. **Note that changing the `vpcId` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state
     */
   val vpcId: js.UndefOr[Input[String]] = js.native
 }

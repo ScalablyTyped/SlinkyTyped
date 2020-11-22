@@ -25,6 +25,8 @@ package object neptuneMod {
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.neptuneMod.ClientApiVersions
   
+  type DBClusterEndpointList = js.Array[typingsSlinky.awsSdk.neptuneMod.DBClusterEndpoint]
+  
   type DBClusterList = js.Array[typingsSlinky.awsSdk.neptuneMod.DBCluster]
   
   type DBClusterMemberList = js.Array[typingsSlinky.awsSdk.neptuneMod.DBClusterMember]
@@ -115,6 +117,8 @@ package object neptuneMod {
   type SourceType = typingsSlinky.awsSdk.neptuneMod._SourceType | java.lang.String
   
   type String = java.lang.String
+  
+  type StringList = js.Array[typingsSlinky.awsSdk.neptuneMod.String]
   
   type SubnetIdentifierList = js.Array[typingsSlinky.awsSdk.neptuneMod.String]
   

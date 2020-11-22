@@ -25,7 +25,17 @@ object DownloadTaskState extends js.Object {
   object DOWNLOADING extends TopLevel[DOWNLOADING with String]
   
   @js.native
+  sealed trait FAILED extends DownloadTaskState
+  /* "FAILED" */ @js.native
+  object FAILED extends TopLevel[FAILED with String]
+  
+  @js.native
   sealed trait PAUSED extends DownloadTaskState
   /* "PAUSED" */ @js.native
   object PAUSED extends TopLevel[PAUSED with String]
+  
+  @js.native
+  sealed trait STOPPED extends DownloadTaskState
+  /* "STOPPED" */ @js.native
+  object STOPPED extends TopLevel[STOPPED with String]
 }

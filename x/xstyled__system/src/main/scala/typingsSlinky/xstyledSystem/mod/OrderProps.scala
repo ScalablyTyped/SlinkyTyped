@@ -9,7 +9,7 @@ trait OrderProps extends js.Object {
   
   val order: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object OrderProps {
     }
     
     @scala.inline
+    def setOrderVarargs(value: js.Any*): Self = this.set("order", js.Array(value :_*))
+    
+    @scala.inline
     def setOrder(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _
         ]
     ): Self = this.set("order", value.asInstanceOf[js.Any])
     

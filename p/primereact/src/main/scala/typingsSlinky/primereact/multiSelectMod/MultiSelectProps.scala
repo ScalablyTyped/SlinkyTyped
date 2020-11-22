@@ -22,6 +22,8 @@ trait MultiSelectProps extends js.Object {
   
   var disabled: js.UndefOr[Boolean] = js.native
   
+  var emptyFilterMessage: js.UndefOr[js.Any] = js.native
+  
   var filter: js.UndefOr[Boolean] = js.native
   
   var filterBy: js.UndefOr[String] = js.native
@@ -56,9 +58,15 @@ trait MultiSelectProps extends js.Object {
   
   var options: js.UndefOr[js.Array[_]] = js.native
   
+  var panelClassName: js.UndefOr[String] = js.native
+  
+  var panelStyle: js.UndefOr[js.Object] = js.native
+  
   var placeholder: js.UndefOr[String] = js.native
   
   var required: js.UndefOr[Boolean] = js.native
+  
+  var resetFilterOnHide: js.UndefOr[Boolean] = js.native
   
   var scrollHeight: js.UndefOr[String] = js.native
   
@@ -128,6 +136,12 @@ object MultiSelectProps {
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setEmptyFilterMessage(value: js.Any): Self = this.set("emptyFilterMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEmptyFilterMessage: Self = this.set("emptyFilterMessage", js.undefined)
     
     @scala.inline
     def setFilter(value: Boolean): Self = this.set("filter", value.asInstanceOf[js.Any])
@@ -235,6 +249,18 @@ object MultiSelectProps {
     def deleteOptions: Self = this.set("options", js.undefined)
     
     @scala.inline
+    def setPanelClassName(value: String): Self = this.set("panelClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePanelClassName: Self = this.set("panelClassName", js.undefined)
+    
+    @scala.inline
+    def setPanelStyle(value: js.Object): Self = this.set("panelStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePanelStyle: Self = this.set("panelStyle", js.undefined)
+    
+    @scala.inline
     def setPlaceholder(value: String): Self = this.set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -245,6 +271,12 @@ object MultiSelectProps {
     
     @scala.inline
     def deleteRequired: Self = this.set("required", js.undefined)
+    
+    @scala.inline
+    def setResetFilterOnHide(value: Boolean): Self = this.set("resetFilterOnHide", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResetFilterOnHide: Self = this.set("resetFilterOnHide", js.undefined)
     
     @scala.inline
     def setScrollHeight(value: String): Self = this.set("scrollHeight", value.asInstanceOf[js.Any])

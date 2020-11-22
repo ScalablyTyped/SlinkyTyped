@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PolicyBase extends DirectoryObject {
   
   // Description for this policy.
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[NullableOption[String]] = js.native
   
   // Display name for this policy.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
 }
 object PolicyBase {
   
@@ -37,15 +37,21 @@ object PolicyBase {
     }
     
     @scala.inline
-    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: NullableOption[String]): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDescriptionNull: Self = this.set("description", null)
+    
+    @scala.inline
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
   }
 }

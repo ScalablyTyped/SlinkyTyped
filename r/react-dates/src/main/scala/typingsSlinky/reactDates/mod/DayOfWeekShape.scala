@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// shapes/DayOfWeekShape.js
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactDates.reactDatesNumbers.`0`
   - typingsSlinky.reactDates.reactDatesNumbers.`1`

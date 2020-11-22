@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import typingsSlinky.babylonjs.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,6 +30,12 @@ trait NodeMaterial extends PushMaterial {
   
   var _cachedWorldViewProjectionMatrix: js.Any = js.native
   
+  var _checkInternals: js.Any = js.native
+  
+  var _createEffectForParticles: js.Any = js.native
+  
+  var _createEffectForPostProcess: js.Any = js.native
+  
   /** Creates the node editor window. */
   var _createNodeEditor: js.Any = js.native
   
@@ -56,11 +63,19 @@ trait NodeMaterial extends PushMaterial {
   
   var _initializeBlock: js.Any = js.native
   
+  /**
+    * Specifies the mode of the node material
+    * @hidden
+    */
+  var _mode: NodeMaterialModes = js.native
+  
   var _optimizers: js.Any = js.native
   
   var _options: js.Any = js.native
   
   var _prepareDefinesForAttributes: js.Any = js.native
+  
+  var _processDefines: js.Any = js.native
   
   var _removeFragmentOutputNode: js.Any = js.native
   
@@ -104,9 +119,69 @@ trait NodeMaterial extends PushMaterial {
   def clear(): Unit = js.native
   
   /**
+    * A free comment about the material
+    */
+  var comment: String = js.native
+  
+  /**
     * Get a string representing the shaders built by the current node graph
     */
   def compiledShaders: String = js.native
+  
+  /**
+    * Create the effect to be used as the custom effect for a particle system
+    * @param particleSystem Particle system to create the effect for
+    * @param onCompiled defines a function to call when the effect creation is successful
+    * @param onError defines a function to call when the effect creation has failed
+    */
+  def createEffectForParticles(particleSystem: IParticleSystem): Unit = js.native
+  def createEffectForParticles(
+    particleSystem: IParticleSystem,
+    onCompiled: js.UndefOr[scala.Nothing],
+    onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit]
+  ): Unit = js.native
+  def createEffectForParticles(particleSystem: IParticleSystem, onCompiled: js.Function1[/* effect */ Effect, Unit]): Unit = js.native
+  def createEffectForParticles(
+    particleSystem: IParticleSystem,
+    onCompiled: js.Function1[/* effect */ Effect, Unit],
+    onError: js.Function2[/* effect */ Effect, /* errors */ String, Unit]
+  ): Unit = js.native
+  
+  /**
+    * Create the post process effect from the material
+    * @param postProcess The post process to create the effect for
+    */
+  def createEffectForPostProcess(postProcess: PostProcess): Unit = js.native
+  
+  /**
+    * Create a post process from the material
+    * @param camera The camera to apply the render pass to.
+    * @param options The required width/height ratio to downsize to before computing the render pass. (Use 1.0 for full size)
+    * @param samplingMode The sampling mode to be used when computing the pass. (default: 0)
+    * @param engine The engine which the post process will be applied. (default: current engine)
+    * @param reusable If the post process can be reused on the same frame. (default: false)
+    * @param textureType Type of textures used when performing the post process. (default: 0)
+    * @param textureFormat Format of textures used when performing the post process. (default: TEXTUREFORMAT_RGBA)
+    * @returns the post process created
+    */
+  def createPostProcess(
+    camera: Nullable[Camera],
+    options: js.UndefOr[Double | PostProcessOptions],
+    samplingMode: js.UndefOr[Double],
+    engine: js.UndefOr[Engine],
+    reusable: js.UndefOr[Boolean],
+    textureType: js.UndefOr[Double],
+    textureFormat: js.UndefOr[Double]
+  ): Nullable[PostProcess] = js.native
+  
+  /**
+    * Create a new procedural texture based on this node material
+    * @param size defines the size of the texture
+    * @param scene defines the hosting scene
+    * @returns the new procedural texture attached to this node material
+    */
+  def createProceduralTexture(size: Double, scene: Scene): Nullable[ProceduralTexture] = js.native
+  def createProceduralTexture(size: Height, scene: Scene): Nullable[ProceduralTexture] = js.native
   
   /**
     * Launch the node material editor
@@ -159,7 +234,9 @@ trait NodeMaterial extends PushMaterial {
     * Gets the list of texture blocks
     * @returns an array of texture blocks
     */
-  def getTextureBlocks(): js.Array[TextureBlock | ReflectionTextureBlock] = js.native
+  def getTextureBlocks(): js.Array[
+    TextureBlock | ReflectionTextureBaseBlock | RefractionBlock | CurrentScreenBlock | ParticleTextureBlock
+  ] = js.native
   
   /**
     * Gets or sets a boolean indicating that alpha value must be ignored (This will turn alpha blending off even if an alpha value is produced by the material)
@@ -178,17 +255,6 @@ trait NodeMaterial extends PushMaterial {
   def imageProcessingConfiguration_=(value: ImageProcessingConfiguration): Unit = js.native
   
   /**
-    * Get if the submesh is ready to be used and all its information available.
-    * Child classes can use it to update shaders
-    * @param mesh defines the mesh to check
-    * @param subMesh defines which submesh to check
-    * @param useInstances specifies that instances should be used
-    * @returns a boolean indicating that the submesh is ready or not
-    */
-  def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh): Boolean = js.native
-  def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh, useInstances: Boolean): Boolean = js.native
-  
-  /**
     * Loads the current Node Material from a url pointing to a file save by the Node Material Editor
     * @param url defines the url to load from
     * @returns a promise that will fullfil when the material is fully loaded
@@ -199,14 +265,22 @@ trait NodeMaterial extends PushMaterial {
     * Clear the current graph and load a new one from a serialization object
     * @param source defines the JSON representation of the material
     * @param rootUrl defines the root URL to use to load textures and relative dependencies
+    * @param merge defines whether or not the source must be merged or replace the current content
     */
   def loadFromSerialization(source: js.Any): Unit = js.native
+  def loadFromSerialization(source: js.Any, rootUrl: js.UndefOr[scala.Nothing], merge: Boolean): Unit = js.native
   def loadFromSerialization(source: js.Any, rootUrl: String): Unit = js.native
+  def loadFromSerialization(source: js.Any, rootUrl: String, merge: Boolean): Unit = js.native
   
   /**
     * Defines the maximum number of lights that can be used in the material
     */
   var maxSimultaneousLights: Double = js.native
+  
+  /**
+    * Gets the mode property
+    */
+  def mode: NodeMaterialModes = js.native
   
   /**
     * Observable raised when the material is built
@@ -248,6 +322,26 @@ trait NodeMaterial extends PushMaterial {
     * Clear the current material and set it to a default state
     */
   def setToDefault(): Unit = js.native
+  
+  /**
+    * Clear the current material and set it to a default state for particle
+    */
+  def setToDefaultParticle(): Unit = js.native
+  
+  /**
+    * Clear the current material and set it to a default state for post process
+    */
+  def setToDefaultPostProcess(): Unit = js.native
+  
+  /**
+    * Clear the current material and set it to a default state for procedural texture
+    */
+  def setToDefaultProceduralTexture(): Unit = js.native
+  
+  /**
+    * Snippet ID if the material was created from the snippet server
+    */
+  var snippetId: String = js.native
   
   /**
     * Remove an optimizer from the list of optimizers

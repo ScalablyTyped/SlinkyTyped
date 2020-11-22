@@ -10,13 +10,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UploadListProps[T] extends js.Object {
   
-  var downloadIcon: js.UndefOr[ReactElement] = js.native
+  var appendAction: js.UndefOr[ReactElement] = js.native
+  
+  var downloadIcon: js.UndefOr[ReactElement | (js.Function1[/* file */ UploadFile[_], ReactElement])] = js.native
   
   var iconRender: js.UndefOr[
     js.Function2[/* file */ UploadFile[T], /* listType */ js.UndefOr[UploadListType], ReactElement]
   ] = js.native
   
   var isImageUrl: js.UndefOr[js.Function1[/* file */ UploadFile[_], Boolean]] = js.native
+  
+  var itemRender: js.UndefOr[
+    js.Function3[
+      /* originNode */ ReactElement, 
+      /* file */ UploadFile[_], 
+      /* fileList */ js.UndefOr[js.Array[UploadFile[T]]], 
+      ReactElement
+    ]
+  ] = js.native
   
   var items: js.UndefOr[js.Array[UploadFile[T]]] = js.native
   
@@ -36,7 +47,7 @@ trait UploadListProps[T] extends js.Object {
   
   var progress: js.UndefOr[UploadListProgressProps] = js.native
   
-  var removeIcon: js.UndefOr[ReactElement] = js.native
+  var removeIcon: js.UndefOr[ReactElement | (js.Function1[/* file */ UploadFile[_], ReactElement])] = js.native
   
   var showDownloadIcon: js.UndefOr[Boolean] = js.native
   
@@ -71,10 +82,22 @@ object UploadListProps {
     def setLocale(value: UploadLocale): Self = this.set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setAppendActionReactElement(value: ReactElement): Self = this.set("appendAction", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAppendAction(value: ReactElement): Self = this.set("appendAction", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAppendAction: Self = this.set("appendAction", js.undefined)
+    
+    @scala.inline
     def setDownloadIconReactElement(value: ReactElement): Self = this.set("downloadIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDownloadIcon(value: ReactElement): Self = this.set("downloadIcon", value.asInstanceOf[js.Any])
+    def setDownloadIconFunction1(value: /* file */ UploadFile[_] => ReactElement): Self = this.set("downloadIcon", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setDownloadIcon(value: ReactElement | (js.Function1[/* file */ UploadFile[_], ReactElement])): Self = this.set("downloadIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDownloadIcon: Self = this.set("downloadIcon", js.undefined)
@@ -90,6 +113,14 @@ object UploadListProps {
     
     @scala.inline
     def deleteIsImageUrl: Self = this.set("isImageUrl", js.undefined)
+    
+    @scala.inline
+    def setItemRender(
+      value: (/* originNode */ ReactElement, /* file */ UploadFile[_], /* fileList */ js.UndefOr[js.Array[UploadFile[T]]]) => ReactElement
+    ): Self = this.set("itemRender", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def deleteItemRender: Self = this.set("itemRender", js.undefined)
     
     @scala.inline
     def setItemsVarargs(value: UploadFile[T]*): Self = this.set("items", js.Array(value :_*))
@@ -146,7 +177,10 @@ object UploadListProps {
     def setRemoveIconReactElement(value: ReactElement): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRemoveIcon(value: ReactElement): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
+    def setRemoveIconFunction1(value: /* file */ UploadFile[_] => ReactElement): Self = this.set("removeIcon", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setRemoveIcon(value: ReactElement | (js.Function1[/* file */ UploadFile[_], ReactElement])): Self = this.set("removeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRemoveIcon: Self = this.set("removeIcon", js.undefined)

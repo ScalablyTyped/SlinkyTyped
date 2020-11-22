@@ -1,22 +1,23 @@
 package typingsSlinky.jupyterlabHubExtension
 
-import typingsSlinky.jupyterlabApplication.frontendMod.JupyterFrontEnd.IShell
-import typingsSlinky.jupyterlabApplication.mod.JupyterFrontEnd
-import typingsSlinky.phosphorApplication.mod.IPlugin
+import typingsSlinky.jupyterlabApplication.frontendMod.JupyterFrontEndPlugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/hub-extension", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  val default: js.Array[IPlugin[JupyterFrontEnd[IShell], js.Any]] = js.native
+  
+  val default: js.Array[JupyterFrontEndPlugin[js.Any]] = js.native
+  
   @js.native
   object CommandIDs extends js.Object {
+    
     val controlPanel: String = js.native
+    
     val logout: String = js.native
+    
     val restart: String = js.native
   }
-  
 }
-

@@ -35,6 +35,11 @@ class OrderFulfillmentPickupDetails () extends js.Object {
   var canceled_at: js.UndefOr[String] = js.native
   
   /**
+    * Specific details for curbside pickup. Can only be populated if `is_curbside_pickup` is true.
+    */
+  var curbside_pickup_details: js.UndefOr[OrderFulfillmentPickupDetailsCurbsidePickupDetails] = js.native
+  
+  /**
     * The [timestamp](#workingwithdates) indicating when the fulfillment expired.
     * In RFC3339 timestamp format, e.g., "2016-09-04T23:59:33.123Z".
     */
@@ -46,6 +51,11 @@ class OrderFulfillmentPickupDetails () extends js.Object {
     * If `expires_at` is not set, this pickup fulfillment will be automatically accepted when placed.
     */
   var expires_at: js.UndefOr[String] = js.native
+  
+  /**
+    * If true, indicates this pickup order is for curbside pickup, not in-store pickup.
+    */
+  var is_curbside_pickup: js.UndefOr[Boolean] = js.native
   
   /**
     * A note meant to provide additional instructions about the pickup fulfillment displayed in the Square Point of Sale and set by the API.

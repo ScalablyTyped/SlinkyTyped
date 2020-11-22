@@ -6,12 +6,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * E - Extensions to the model constructor options. You can accept additional constructor options
+  * by listing them in the E parameter.
+  */
 @JSImport("backbone", "Model")
 @js.native
-class Model[T, S] () extends js.Object {
+class Model[T, S, E] () extends js.Object {
   def this(attributes: T) = this()
-  def this(attributes: T, options: js.Any) = this()
-  def this(attributes: js.UndefOr[scala.Nothing], options: js.Any) = this()
+  def this(attributes: T, options: CombinedModelConstructorOptions[E, Model[_, ModelSetOptions, js.Object]]) = this()
+  def this(
+    attributes: js.UndefOr[scala.Nothing],
+    options: CombinedModelConstructorOptions[E, Model[_, ModelSetOptions, js.Object]]
+  ) = this()
   
   var _changing: Boolean = js.native
   
@@ -44,7 +51,7 @@ class Model[T, S] () extends js.Object {
   def clear(): js.Any = js.native
   def clear(options: Silenceable): js.Any = js.native
   
-  var collection: Collection[_] = js.native
+  var collection: Collection[this.type] = js.native
   
   /**
     * Default attributes for the model. It can be an object hash or a method returning an object hash.
@@ -81,8 +88,8 @@ class Model[T, S] () extends js.Object {
   
   def initialize(): Unit = js.native
   def initialize(attributes: T): Unit = js.native
-  def initialize(attributes: T, options: js.Any): Unit = js.native
-  def initialize(attributes: js.UndefOr[scala.Nothing], options: js.Any): Unit = js.native
+  def initialize(attributes: T, options: CombinedModelConstructorOptions[E, this.type]): Unit = js.native
+  def initialize(attributes: js.UndefOr[scala.Nothing], options: CombinedModelConstructorOptions[E, this.type]): Unit = js.native
   
   def invert(): js.Any = js.native
   
@@ -116,20 +123,20 @@ class Model[T, S] () extends js.Object {
     */
   def preinitialize(): Unit = js.native
   def preinitialize(attributes: T): Unit = js.native
-  def preinitialize(attributes: T, options: js.Any): Unit = js.native
-  def preinitialize(attributes: js.UndefOr[scala.Nothing], options: js.Any): Unit = js.native
+  def preinitialize(attributes: T, options: CombinedModelConstructorOptions[E, this.type]): Unit = js.native
+  def preinitialize(attributes: js.UndefOr[scala.Nothing], options: CombinedModelConstructorOptions[E, this.type]): Unit = js.native
   
   def previous(attribute: String): js.Any = js.native
   
-  def previousAttributes(): js.Array[_] = js.native
+  def previousAttributes(): js.Any = js.native
   
   def save(): js.Any = js.native
   def save(attributes: js.UndefOr[scala.Nothing], options: ModelSaveOptions): js.Any = js.native
   def save(attributes: js.Any): js.Any = js.native
   def save(attributes: js.Any, options: ModelSaveOptions): js.Any = js.native
   
-  def set(attributeName: Partial[T]): Model[_, ModelSetOptions] = js.native
-  def set(attributeName: Partial[T], options: S): Model[_, ModelSetOptions] = js.native
+  def set(attributeName: Partial[T]): Model[_, ModelSetOptions, js.Object] = js.native
+  def set(attributeName: Partial[T], options: S): Model[_, ModelSetOptions, js.Object] = js.native
   /**
     * For strongly-typed assignment of attributes, use the `set` method only privately in public setter properties.
     * @example
@@ -137,41 +144,40 @@ class Model[T, S] () extends js.Object {
     *    super.set("name", value);
     * }
     **/
-  def set[a /* <: /* keyof T */ String */](attributeName: a): Model[_, ModelSetOptions] = js.native
-  def set[a /* <: /* keyof T */ String */](attributeName: a, value: S): Model[_, ModelSetOptions] = js.native
-  def set[a /* <: /* keyof T */ String */](attributeName: a, value: S, options: S): Model[_, ModelSetOptions] = js.native
-  def set[a /* <: /* keyof T */ String */](attributeName: a, value: js.UndefOr[scala.Nothing], options: S): Model[_, ModelSetOptions] = js.native
+  def set[a /* <: /* keyof T */ String */](attributeName: a): Model[_, ModelSetOptions, js.Object] = js.native
+  def set[a /* <: /* keyof T */ String */](attributeName: a, value: S): Model[_, ModelSetOptions, js.Object] = js.native
+  def set[a /* <: /* keyof T */ String */](attributeName: a, value: S, options: S): Model[_, ModelSetOptions, js.Object] = js.native
+  def set[a /* <: /* keyof T */ String */](attributeName: a, value: js.UndefOr[scala.Nothing], options: S): Model[_, ModelSetOptions, js.Object] = js.native
   def set[a /* <: /* keyof T */ String */](
     attributeName: a,
     value: /* import warning: importer.ImportType#apply Failed type conversion: T[a] */ js.Any
-  ): Model[_, ModelSetOptions] = js.native
+  ): Model[_, ModelSetOptions, js.Object] = js.native
   def set[a /* <: /* keyof T */ String */](
     attributeName: a,
     value: /* import warning: importer.ImportType#apply Failed type conversion: T[a] */ js.Any,
     options: S
-  ): Model[_, ModelSetOptions] = js.native
-  def set[a /* <: /* keyof T */ String */](attributeName: Partial[T], value: S, options: S): Model[_, ModelSetOptions] = js.native
-  def set[a /* <: /* keyof T */ String */](attributeName: Partial[T], value: js.UndefOr[scala.Nothing], options: S): Model[_, ModelSetOptions] = js.native
+  ): Model[_, ModelSetOptions, js.Object] = js.native
+  def set[a /* <: /* keyof T */ String */](attributeName: Partial[T], value: S, options: S): Model[_, ModelSetOptions, js.Object] = js.native
+  def set[a /* <: /* keyof T */ String */](attributeName: Partial[T], value: js.UndefOr[scala.Nothing], options: S): Model[_, ModelSetOptions, js.Object] = js.native
   def set[a /* <: /* keyof T */ String */](
     attributeName: Partial[T],
     value: /* import warning: importer.ImportType#apply Failed type conversion: T[a] */ js.Any
-  ): Model[_, ModelSetOptions] = js.native
+  ): Model[_, ModelSetOptions, js.Object] = js.native
   def set[a /* <: /* keyof T */ String */](
     attributeName: Partial[T],
     value: /* import warning: importer.ImportType#apply Failed type conversion: T[a] */ js.Any,
     options: S
-  ): Model[_, ModelSetOptions] = js.native
+  ): Model[_, ModelSetOptions, js.Object] = js.native
   @JSName("set")
-  def set_a_String[a /* <: /* keyof T */ String */](attributeName: Partial[T]): Model[_, ModelSetOptions] = js.native
+  def set_a_String[a /* <: /* keyof T */ String */](attributeName: Partial[T]): Model[_, ModelSetOptions, js.Object] = js.native
   @JSName("set")
-  def set_a_String[a /* <: /* keyof T */ String */](attributeName: Partial[T], value: S): Model[_, ModelSetOptions] = js.native
+  def set_a_String[a /* <: /* keyof T */ String */](attributeName: Partial[T], value: S): Model[_, ModelSetOptions, js.Object] = js.native
   
-  def unset(attribute: String): Model[_, ModelSetOptions] = js.native
-  def unset(attribute: String, options: Silenceable): Model[_, ModelSetOptions] = js.native
+  def unset(attribute: String): Model[_, ModelSetOptions, js.Object] = js.native
+  def unset(attribute: String, options: Silenceable): Model[_, ModelSetOptions, js.Object] = js.native
   
   /**
     * Returns the relative URL where the model's resource would be located on the server.
-    * @memberof Model
     */
   def url(): String = js.native
   

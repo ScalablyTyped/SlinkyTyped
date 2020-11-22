@@ -64,6 +64,14 @@ object special extends js.Object {
   @JSName("prettier")
   var prettier_Original: Parser_ = js.native
   
+  def react17(content: String, filePath: String, deps: js.Array[String], rootDir: String): Node = js.native
+  @JSName("react17")
+  var react17_Original: Parser_ = js.native
+  
+  def serverless(content: String, filePath: String, deps: js.Array[String], rootDir: String): Node = js.native
+  @JSName("serverless")
+  var serverless_Original: Parser_ = js.native
+  
   def tslint(content: String, filePath: String, deps: js.Array[String], rootDir: String): Node = js.native
   @JSName("tslint")
   var tslint_Original: Parser_ = js.native

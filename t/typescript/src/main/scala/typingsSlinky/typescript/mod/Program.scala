@@ -247,6 +247,8 @@ trait Program extends ScriptReferenceHost {
   def getSyntacticDiagnostics(sourceFile: SourceFile): js.Array[DiagnosticWithLocation] = js.native
   def getSyntacticDiagnostics(sourceFile: SourceFile, cancellationToken: CancellationToken): js.Array[DiagnosticWithLocation] = js.native
   
+  def getTypeCatalog(): js.Array[Type] = js.native
+  
   /**
     * Gets a type checker that can be used to semantically analyze source files in the program.
     */

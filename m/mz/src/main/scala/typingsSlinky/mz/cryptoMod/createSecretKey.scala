@@ -1,6 +1,6 @@
 package typingsSlinky.mz.cryptoMod
 
-import typingsSlinky.node.Buffer
+import typingsSlinky.node.NodeJS.ArrayBufferView
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createSecretKey extends js.Object {
   
-  def apply(key: Buffer): typingsSlinky.node.cryptoMod.KeyObject = js.native
+  def apply(key: ArrayBufferView): typingsSlinky.node.cryptoMod.KeyObject = js.native
 }

@@ -19,7 +19,7 @@ trait ConsolaLogObject extends js.Object {
   
   var tag: js.UndefOr[String] = js.native
   
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[logType] = js.native
 }
 object ConsolaLogObject {
   
@@ -87,7 +87,7 @@ object ConsolaLogObject {
     def deleteTag: Self = this.set("tag", js.undefined)
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: logType): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)

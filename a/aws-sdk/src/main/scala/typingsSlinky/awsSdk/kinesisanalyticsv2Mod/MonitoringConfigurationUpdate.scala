@@ -18,7 +18,7 @@ trait MonitoringConfigurationUpdate extends js.Object {
   var LogLevelUpdate: js.UndefOr[LogLevel] = js.native
   
   /**
-    * Describes updates to the granularity of the CloudWatch Logs for an application.
+    * Describes updates to the granularity of the CloudWatch Logs for an application. The Parallelism level is not recommended for applications with a Parallelism over 64 due to excessive costs.
     */
   var MetricsLevelUpdate: js.UndefOr[MetricsLevel] = js.native
 }

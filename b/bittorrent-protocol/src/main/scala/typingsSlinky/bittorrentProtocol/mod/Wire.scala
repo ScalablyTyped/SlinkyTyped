@@ -24,13 +24,17 @@ import typingsSlinky.bittorrentProtocol.bittorrentProtocolStrings.upload
 import typingsSlinky.bittorrentProtocol.bittorrentProtocolStrings.webSeed
 import typingsSlinky.bittorrentProtocol.bittorrentProtocolStrings.webrtc
 import typingsSlinky.node.Buffer
+import typingsSlinky.node.NodeJS.WritableStream
+import typingsSlinky.node.anon.End
 import typingsSlinky.node.streamMod.Duplex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Wire extends Duplex {
+trait Wire
+  extends Duplex
+     with /* key */ StringDictionary[js.Any] {
   
    // connection type
   val amChoking: Boolean = js.native
@@ -133,6 +137,11 @@ trait Wire extends Duplex {
   val peerRequests: js.Array[Request] = js.native
   
   def piece(index: Double, offset: Double, buffer: Buffer): Unit = js.native
+  
+  /* InferMemberOverrides */
+  override def pipe[T /* <: WritableStream */](destination: T): T = js.native
+  /* InferMemberOverrides */
+  override def pipe[T /* <: WritableStream */](destination: T, options: End): T = js.native
   
   def port(port: Double): Unit = js.native
   

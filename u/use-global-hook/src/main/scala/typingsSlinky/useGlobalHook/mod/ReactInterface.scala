@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// Use an interface so that different versions of React can be used
 @js.native
 trait ReactInterface extends js.Object {
   

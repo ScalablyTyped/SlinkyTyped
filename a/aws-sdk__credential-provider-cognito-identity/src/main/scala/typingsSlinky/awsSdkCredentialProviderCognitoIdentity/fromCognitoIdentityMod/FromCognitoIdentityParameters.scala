@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdkCredentialProviderCognitoIdentity.fromCognitoIdentityMod
 
-import typingsSlinky.awsSdkClientCognitoIdentityBrowser.cognitoIdentityClientMod.CognitoIdentityClient
+import typingsSlinky.awsSdkClientCognitoIdentity.mod.CognitoIdentityClient
 import typingsSlinky.awsSdkCredentialProviderCognitoIdentity.cognitoProviderParametersMod.CognitoProviderParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`

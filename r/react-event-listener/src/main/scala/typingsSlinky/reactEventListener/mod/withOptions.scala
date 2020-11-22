@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object withOptions extends js.Object {
   
-  def apply[T](handler: js.Function1[/* ev */ T, _], options: EventOptions): js.Function1[/* ev */ T, _] = js.native
+  def apply[T, TThis](handler: js.ThisFunction1[/* this */ TThis, /* ev */ T, _], options: EventOptions): js.ThisFunction1[/* this */ TThis, /* ev */ T, _] = js.native
 }

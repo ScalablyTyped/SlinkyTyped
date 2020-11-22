@@ -8,7 +8,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // Base component for plain JS classes
-// tslint:disable-next-line:no-empty-interface
 @JSImport("babel-plugin-react-html-attrs", "Component")
 @js.native
 class Component[P, S, SS] protected () extends ComponentLifecycle[P, S, SS] {

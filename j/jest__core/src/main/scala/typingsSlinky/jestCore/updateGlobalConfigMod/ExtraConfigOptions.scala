@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ExtraConfigOptions extends js.Object {
   
-  var noSCM: js.UndefOr[Boolean | Null] = js.native
+  var noSCM: js.UndefOr[Boolean] = js.native
   
   var passWithNoTests: js.UndefOr[Boolean] = js.native
 }
@@ -40,9 +40,6 @@ object ExtraConfigOptions {
     
     @scala.inline
     def deleteNoSCM: Self = this.set("noSCM", js.undefined)
-    
-    @scala.inline
-    def setNoSCMNull: Self = this.set("noSCM", null)
     
     @scala.inline
     def setPassWithNoTests(value: Boolean): Self = this.set("passWithNoTests", value.asInstanceOf[js.Any])

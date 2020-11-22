@@ -2,7 +2,6 @@ package typingsSlinky.babylonjs
 
 import org.scalablytyped.runtime.NumberDictionary
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
@@ -25,7 +24,7 @@ object cameraInputsManagerMod extends js.Object {
     
     /**
       * Add an input method to a camera
-      * @see http://doc.babylonjs.com/how_to/customizing_camera_inputs
+      * @see https://doc.babylonjs.com/how_to/customizing_camera_inputs
       * @param input camera input method
       */
     def add(input: ICameraInput[TCamera]): Unit = js.native
@@ -35,8 +34,8 @@ object cameraInputsManagerMod extends js.Object {
       * @param element Defines the dom element to collect the events from
       * @param noPreventDefault Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
       */
-    def attachElement(element: HTMLElement): Unit = js.native
-    def attachElement(element: HTMLElement, noPreventDefault: Boolean): Unit = js.native
+    def attachElement(): Unit = js.native
+    def attachElement(noPreventDefault: Boolean): Unit = js.native
     
     /**
       * Attach the input controls to the currently attached dom element to listen the events from.
@@ -53,7 +52,7 @@ object cameraInputsManagerMod extends js.Object {
       * Defines the dom element the camera is collecting inputs from.
       * This is null if the controls have not been attached.
       */
-    var attachedElement: Nullable[HTMLElement] = js.native
+    var attachedToElement: Boolean = js.native
     
     /**
       * Defined the camera the input manager belongs to.
@@ -76,8 +75,8 @@ object cameraInputsManagerMod extends js.Object {
       * @param element Defines the dom element to collect the events from
       * @param disconnect Defines whether the input should be removed from the current list of attached inputs
       */
-    def detachElement(element: HTMLElement): Unit = js.native
-    def detachElement(element: HTMLElement, disconnect: Boolean): Unit = js.native
+    def detachElement(): Unit = js.native
+    def detachElement(disconnect: Boolean): Unit = js.native
     
     /**
       * Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
@@ -125,11 +124,10 @@ object cameraInputsManagerMod extends js.Object {
     
     /**
       * Attach the input controls to a specific dom element to get the input from.
-      * @param element Defines the element the controls should be listened from
       * @param noPreventDefault Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
       */
-    def attachControl(element: HTMLElement): Unit = js.native
-    def attachControl(element: HTMLElement, noPreventDefault: Boolean): Unit = js.native
+    def attachControl(): Unit = js.native
+    def attachControl(noPreventDefault: Boolean): Unit = js.native
     
     /**
       * Defines the camera the input is attached to.
@@ -144,9 +142,8 @@ object cameraInputsManagerMod extends js.Object {
     
     /**
       * Detach the current controls from the specified dom element.
-      * @param element Defines the element to stop listening the inputs from
       */
-    def detachControl(element: Nullable[HTMLElement]): Unit = js.native
+    def detachControl(): Unit = js.native
     
     /**
       * Gets the class name of the current intput.

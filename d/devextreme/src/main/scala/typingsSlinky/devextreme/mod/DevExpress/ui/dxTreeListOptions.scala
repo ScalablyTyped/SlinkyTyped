@@ -1,12 +1,13 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
+import typingsSlinky.devextreme.anon.CancelColumnComponent
 import typingsSlinky.devextreme.anon.CellElementColumn
 import typingsSlinky.devextreme.anon.ColumnIndexComponent
+import typingsSlinky.devextreme.anon.ColumnsComponent
 import typingsSlinky.devextreme.anon.DataDisplayValue
 import typingsSlinky.devextreme.anon.EventType
 import typingsSlinky.devextreme.anon.Grouping
 import typingsSlinky.devextreme.anon.IsHighlighted
-import typingsSlinky.devextreme.anon.KeyModel
 import typingsSlinky.devextreme.anon.Level
 import typingsSlinky.devextreme.anon.ModelRow
 import typingsSlinky.devextreme.anon.Node
@@ -16,7 +17,6 @@ import typingsSlinky.devextreme.anon.ReadOnly
 import typingsSlinky.devextreme.anon.Root
 import typingsSlinky.devextreme.anon.RowRowElement
 import typingsSlinky.devextreme.anon.Target
-import typingsSlinky.devextreme.anon.Values
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.fullBranch
 import typingsSlinky.devextreme.devextremeStrings.matchOnly
@@ -30,107 +30,173 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeListOptions extends GridBaseOptions[dxTreeList] {
   
-  /** @name dxTreeList.Options.autoExpandAll */
+  /**
+    * [descr:dxTreeList.Options.autoExpandAll]
+    */
   var autoExpandAll: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeList.Options.columns */
+  /**
+    * [descr:dxTreeList.Options.columns]
+    */
   @JSName("columns")
   var columns_dxTreeListOptions: js.UndefOr[js.Array[dxTreeListColumn | String]] = js.native
   
-  /** @name dxTreeList.Options.customizeColumns */
+  /**
+    * [descr:dxTreeList.Options.customizeColumns]
+    */
   var customizeColumns: js.UndefOr[js.Function1[/* columns */ js.Array[dxTreeListColumn], _]] = js.native
   
-  /** @name dxTreeList.Options.dataStructure */
+  /**
+    * [descr:dxTreeList.Options.dataStructure]
+    */
   var dataStructure: js.UndefOr[plain | tree] = js.native
   
-  /** @name dxTreeList.Options.editing */
+  /**
+    * [descr:dxTreeList.Options.editing]
+    */
   @JSName("editing")
   var editing_dxTreeListOptions: js.UndefOr[dxTreeListEditing] = js.native
   
-  /** @name dxTreeList.Options.expandNodesOnFiltering */
+  /**
+    * [descr:dxTreeList.Options.expandNodesOnFiltering]
+    */
   var expandNodesOnFiltering: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeList.Options.expandedRowKeys */
+  /**
+    * [descr:dxTreeList.Options.expandedRowKeys]
+    */
   var expandedRowKeys: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name dxTreeList.Options.filterMode */
+  /**
+    * [descr:dxTreeList.Options.filterMode]
+    */
   var filterMode: js.UndefOr[fullBranch | withAncestors | matchOnly] = js.native
   
-  /** @name dxTreeList.Options.hasItemsExpr */
+  /**
+    * [descr:dxTreeList.Options.hasItemsExpr]
+    */
   var hasItemsExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name dxTreeList.Options.itemsExpr */
+  /**
+    * [descr:dxTreeList.Options.itemsExpr]
+    */
   var itemsExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name dxTreeList.Options.keyExpr */
+  /**
+    * [descr:dxTreeList.Options.keyExpr]
+    */
   var keyExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name dxTreeList.Options.onCellClick */
+  /**
+    * [descr:dxTreeList.Options.onCellClick]
+    */
   var onCellClick: js.UndefOr[(js.Function1[/* e */ CellElementColumn, _]) | String] = js.native
   
-  /** @name dxTreeList.Options.onCellDblClick */
+  /**
+    * [descr:dxTreeList.Options.onCellDblClick]
+    */
   var onCellDblClick: js.UndefOr[js.Function1[/* e */ ColumnIndexComponent, _]] = js.native
   
-  /** @name dxTreeList.Options.onCellHoverChanged */
+  /**
+    * [descr:dxTreeList.Options.onCellHoverChanged]
+    */
   var onCellHoverChanged: js.UndefOr[js.Function1[/* e */ EventType, _]] = js.native
   
-  /** @name dxTreeList.Options.onCellPrepared */
+  /**
+    * [descr:dxTreeList.Options.onCellPrepared]
+    */
   var onCellPrepared: js.UndefOr[js.Function1[/* e */ DataDisplayValue, _]] = js.native
   
-  /** @name dxTreeList.Options.onContextMenuPreparing */
+  /**
+    * [descr:dxTreeList.Options.onContextMenuPreparing]
+    */
   var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ Target, _]] = js.native
   
-  /** @name dxTreeList.Options.onEditingStart */
-  var onEditingStart: js.UndefOr[js.Function1[/* e */ KeyModel, _]] = js.native
+  /**
+    * [descr:dxTreeList.Options.onEditingStart]
+    */
+  var onEditingStart: js.UndefOr[js.Function1[/* e */ CancelColumnComponent, _]] = js.native
   
-  /** @name dxTreeList.Options.onEditorPrepared */
+  /**
+    * [descr:dxTreeList.Options.onEditorPrepared]
+    */
   var onEditorPrepared: js.UndefOr[js.Function1[/* options */ ParentType, _]] = js.native
   
-  /** @name dxTreeList.Options.onEditorPreparing */
+  /**
+    * [descr:dxTreeList.Options.onEditorPreparing]
+    */
   var onEditorPreparing: js.UndefOr[js.Function1[/* e */ ReadOnly, _]] = js.native
   
-  /** @name dxTreeList.Options.onFocusedCellChanged */
+  /**
+    * [descr:dxTreeList.Options.onFocusedCellChanged]
+    */
   var onFocusedCellChanged: js.UndefOr[js.Function1[/* e */ ModelRow, _]] = js.native
   
-  /** @name dxTreeList.Options.onFocusedCellChanging */
+  /**
+    * [descr:dxTreeList.Options.onFocusedCellChanging]
+    */
   var onFocusedCellChanging: js.UndefOr[js.Function1[/* e */ IsHighlighted, _]] = js.native
   
-  /** @name dxTreeList.Options.onFocusedRowChanged */
+  /**
+    * [descr:dxTreeList.Options.onFocusedRowChanged]
+    */
   var onFocusedRowChanged: js.UndefOr[js.Function1[/* e */ RowRowElement, _]] = js.native
   
-  /** @name dxTreeList.Options.onFocusedRowChanging */
+  /**
+    * [descr:dxTreeList.Options.onFocusedRowChanging]
+    */
   var onFocusedRowChanging: js.UndefOr[js.Function1[/* e */ PrevRowIndex, _]] = js.native
   
-  /** @name dxTreeList.Options.onNodesInitialized */
+  /**
+    * [descr:dxTreeList.Options.onNodesInitialized]
+    */
   var onNodesInitialized: js.UndefOr[js.Function1[/* e */ Root, _]] = js.native
   
-  /** @name dxTreeList.Options.onRowClick */
+  /**
+    * [descr:dxTreeList.Options.onRowClick]
+    */
   var onRowClick: js.UndefOr[(js.Function1[/* e */ Level, _]) | String] = js.native
   
-  /** @name dxTreeList.Options.onRowDblClick */
-  var onRowDblClick: js.UndefOr[js.Function1[/* e */ Values, _]] = js.native
+  /**
+    * [descr:dxTreeList.Options.onRowDblClick]
+    */
+  var onRowDblClick: js.UndefOr[js.Function1[/* e */ ColumnsComponent, _]] = js.native
   
-  /** @name dxTreeList.Options.onRowPrepared */
+  /**
+    * [descr:dxTreeList.Options.onRowPrepared]
+    */
   var onRowPrepared: js.UndefOr[js.Function1[/* e */ Node, _]] = js.native
   
-  /** @name dxTreeList.Options.paging */
+  /**
+    * [descr:dxTreeList.Options.paging]
+    */
   @JSName("paging")
   var paging_dxTreeListOptions: js.UndefOr[dxTreeListPaging] = js.native
   
-  /** @name dxTreeList.Options.parentIdExpr */
+  /**
+    * [descr:dxTreeList.Options.parentIdExpr]
+    */
   var parentIdExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name dxTreeList.Options.remoteOperations */
+  /**
+    * [descr:dxTreeList.Options.remoteOperations]
+    */
   var remoteOperations: js.UndefOr[Grouping | auto] = js.native
   
-  /** @name dxTreeList.Options.rootValue */
+  /**
+    * [descr:dxTreeList.Options.rootValue]
+    */
   var rootValue: js.UndefOr[js.Any] = js.native
   
-  /** @name dxTreeList.Options.scrolling */
+  /**
+    * [descr:dxTreeList.Options.scrolling]
+    */
   @JSName("scrolling")
   var scrolling_dxTreeListOptions: js.UndefOr[dxTreeListScrolling] = js.native
   
-  /** @name dxTreeList.Options.selection */
+  /**
+    * [descr:dxTreeList.Options.selection]
+    */
   @JSName("selection")
   var selection_dxTreeListOptions: js.UndefOr[dxTreeListSelection] = js.native
 }
@@ -263,7 +329,7 @@ object dxTreeListOptions {
     def deleteOnContextMenuPreparing: Self = this.set("onContextMenuPreparing", js.undefined)
     
     @scala.inline
-    def setOnEditingStart(value: /* e */ KeyModel => _): Self = this.set("onEditingStart", js.Any.fromFunction1(value))
+    def setOnEditingStart(value: /* e */ CancelColumnComponent => _): Self = this.set("onEditingStart", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnEditingStart: Self = this.set("onEditingStart", js.undefined)
@@ -320,7 +386,7 @@ object dxTreeListOptions {
     def deleteOnRowClick: Self = this.set("onRowClick", js.undefined)
     
     @scala.inline
-    def setOnRowDblClick(value: /* e */ Values => _): Self = this.set("onRowDblClick", js.Any.fromFunction1(value))
+    def setOnRowDblClick(value: /* e */ ColumnsComponent => _): Self = this.set("onRowDblClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnRowDblClick: Self = this.set("onRowDblClick", js.undefined)

@@ -23,6 +23,8 @@ trait DialogProps extends js.Object {
   
   var closeOnEscape: js.UndefOr[Boolean] = js.native
   
+  var contentClassName: js.UndefOr[String] = js.native
+  
   var contentStyle: js.UndefOr[js.Object] = js.native
   
   var dismissableMask: js.UndefOr[Boolean] = js.native
@@ -33,7 +35,7 @@ trait DialogProps extends js.Object {
   
   var header: js.UndefOr[js.Any] = js.native
   
-  var iconsTemplate: js.UndefOr[js.Any] = js.native
+  var icons: js.UndefOr[js.Function1[/* props */ js.Object, _]] = js.native
   
   var id: js.UndefOr[String] = js.native
   
@@ -130,6 +132,12 @@ object DialogProps {
     def deleteCloseOnEscape: Self = this.set("closeOnEscape", js.undefined)
     
     @scala.inline
+    def setContentClassName(value: String): Self = this.set("contentClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContentClassName: Self = this.set("contentClassName", js.undefined)
+    
+    @scala.inline
     def setContentStyle(value: js.Object): Self = this.set("contentStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -160,10 +168,10 @@ object DialogProps {
     def deleteHeader: Self = this.set("header", js.undefined)
     
     @scala.inline
-    def setIconsTemplate(value: js.Any): Self = this.set("iconsTemplate", value.asInstanceOf[js.Any])
+    def setIcons(value: /* props */ js.Object => _): Self = this.set("icons", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteIconsTemplate: Self = this.set("iconsTemplate", js.undefined)
+    def deleteIcons: Self = this.set("icons", js.undefined)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])

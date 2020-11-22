@@ -9,13 +9,13 @@ trait MarginBottomProps[TLength] extends js.Object {
   
   val marginBottom: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginBottomProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginBottom<TLength> */ _
     ]
   ] = js.native
   
   val mb: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginBottomProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginBottom<TLength> */ _
     ]
   ] = js.native
 }
@@ -43,9 +43,12 @@ object MarginBottomProps {
     }
     
     @scala.inline
+    def setMarginBottomVarargs(value: js.Any*): Self = this.set("marginBottom", js.Array(value :_*))
+    
+    @scala.inline
     def setMarginBottom(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginBottomProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginBottom<TLength> */ _
         ]
     ): Self = this.set("marginBottom", value.asInstanceOf[js.Any])
     
@@ -53,9 +56,12 @@ object MarginBottomProps {
     def deleteMarginBottom: Self = this.set("marginBottom", js.undefined)
     
     @scala.inline
+    def setMbVarargs(value: js.Any*): Self = this.set("mb", js.Array(value :_*))
+    
+    @scala.inline
     def setMb(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginBottomProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginBottom<TLength> */ _
         ]
     ): Self = this.set("mb", value.asInstanceOf[js.Any])
     

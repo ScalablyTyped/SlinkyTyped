@@ -1,6 +1,5 @@
 package typingsSlinky.baseui.menuMod
 
-import typingsSlinky.baseui.anon.EmptyState
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import scala.scalajs.js
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MenuProps extends BaseMenuPropsT {
   
-  var overrides: js.UndefOr[EmptyState] = js.native
+  var overrides: js.UndefOr[MenuOverrides] = js.native
   
   var size: js.UndefOr[default_ | compact] = js.native
 }
@@ -38,7 +37,7 @@ object MenuProps {
     }
     
     @scala.inline
-    def setOverrides(value: EmptyState): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: MenuOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)

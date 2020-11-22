@@ -9,22 +9,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSliderBaseOptions[T] extends dxTrackBarOptions[T] {
   
-  /** @name dxSliderBase.Options.keyStep */
+  /**
+    * [descr:dxSliderBase.Options.keyStep]
+    */
   var keyStep: js.UndefOr[Double] = js.native
   
-  /** @name dxSliderBase.Options.label */
+  /**
+    * [descr:dxSliderBase.Options.label]
+    */
   var label: js.UndefOr[FormatPosition] = js.native
   
-  /** @name dxSliderBase.Options.name */
+  /**
+    * [descr:dxSliderBase.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxSliderBase.Options.showRange */
+  /**
+    * [descr:dxSliderBase.Options.showRange]
+    */
   var showRange: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSliderBase.Options.step */
+  /**
+    * [descr:dxSliderBase.Options.step]
+    */
   var step: js.UndefOr[Double] = js.native
   
-  /** @name dxSliderBase.Options.tooltip */
+  /**
+    * [descr:dxSliderBase.Options.tooltip]
+    */
   var tooltip: js.UndefOr[ShowMode] = js.native
 }
 object dxSliderBaseOptions {

@@ -180,7 +180,7 @@ object Creatable {
     
     @scala.inline
     def isValidNewOption(
-      value: (/* inputValue */ String, /* value */ ValueType[OptionType], /* options */ OptionsType[OptionType]) => Boolean
+      value: (/* inputValue */ String, /* value */ ValueType[OptionType], /* options */ OptionsType[OptionType] | GroupedOptionsType[OptionType]) => Boolean
     ): this.type = set("isValidNewOption", js.Any.fromFunction3(value))
     
     @scala.inline

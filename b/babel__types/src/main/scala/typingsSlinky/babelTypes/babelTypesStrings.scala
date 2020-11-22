@@ -538,6 +538,9 @@ object babelTypesStrings {
   def Statement: Statement = "Statement".asInstanceOf[Statement]
   
   @scala.inline
+  def StaticBlock: StaticBlock = "StaticBlock".asInstanceOf[StaticBlock]
+  
+  @scala.inline
   def StringLiteral: StringLiteral = "StringLiteral".asInstanceOf[StringLiteral]
   
   @scala.inline
@@ -632,6 +635,9 @@ object babelTypesStrings {
   
   @scala.inline
   def TSIntersectionType: TSIntersectionType = "TSIntersectionType".asInstanceOf[TSIntersectionType]
+  
+  @scala.inline
+  def TSIntrinsicKeyword: TSIntrinsicKeyword = "TSIntrinsicKeyword".asInstanceOf[TSIntrinsicKeyword]
   
   @scala.inline
   def TSLiteralType: TSLiteralType = "TSLiteralType".asInstanceOf[TSLiteralType]
@@ -1459,6 +1465,9 @@ object babelTypesStrings {
   sealed trait Statement extends js.Object
   
   @js.native
+  sealed trait StaticBlock extends js.Object
+  
+  @js.native
   sealed trait StringLiteral extends js.Object
   
   @js.native
@@ -1553,6 +1562,9 @@ object babelTypesStrings {
   
   @js.native
   sealed trait TSIntersectionType extends js.Object
+  
+  @js.native
+  sealed trait TSIntrinsicKeyword extends js.Object
   
   @js.native
   sealed trait TSLiteralType extends js.Object
@@ -1780,13 +1792,17 @@ object babelTypesStrings {
   sealed trait init extends js.Object
   
   @js.native
-  sealed trait inner extends CommentTypeShorthand
+  sealed trait inner
+    extends CommentTypeShorthand
+       with typingsSlinky.babelTypes.indexTs37Mod.CommentTypeShorthand
   
   @js.native
   sealed trait instanceof extends js.Object
   
   @js.native
-  sealed trait leading extends CommentTypeShorthand
+  sealed trait leading
+    extends CommentTypeShorthand
+       with typingsSlinky.babelTypes.indexTs37Mod.CommentTypeShorthand
   
   @js.native
   sealed trait let extends js.Object
@@ -1834,7 +1850,9 @@ object babelTypesStrings {
   sealed trait `throw` extends js.Object
   
   @js.native
-  sealed trait trailing extends CommentTypeShorthand
+  sealed trait trailing
+    extends CommentTypeShorthand
+       with typingsSlinky.babelTypes.indexTs37Mod.CommentTypeShorthand
   
   @js.native
   sealed trait `type` extends js.Object

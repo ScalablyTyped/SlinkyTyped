@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-slider/es/common/Track", JSImport.Namespace)
+@JSImport("rc-slider/lib/common/Track", JSImport.Namespace)
 @js.native
 object trackMod extends js.Object {
   

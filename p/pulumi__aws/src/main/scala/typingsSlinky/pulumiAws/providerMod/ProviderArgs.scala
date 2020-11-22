@@ -1,9 +1,9 @@
 package typingsSlinky.pulumiAws.providerMod
 
+import typingsSlinky.pulumiAws.enumsMod.Region
 import typingsSlinky.pulumiAws.inputMod.ProviderAssumeRole
 import typingsSlinky.pulumiAws.inputMod.ProviderEndpoint
 import typingsSlinky.pulumiAws.inputMod.ProviderIgnoreTags
-import typingsSlinky.pulumiAws.regionMod.Region
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`

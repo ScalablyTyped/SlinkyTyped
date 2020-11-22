@@ -11,5 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ShadowMaterial () extends Material {
   def this(parameters: ShadowMaterialParameters) = this()
   
+  /**
+  	 * @default new THREE.Color( 0x000000 )
+  	 */
   var color: Color = js.native
 }

@@ -6,7 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("yandex-maps", "Polyline")
 @js.native
-class Polyline protected () extends GeoObject_ {
+class Polyline protected ()
+  extends GeoObject_[ILineStringGeometry, js.Object] {
   def this(geometry: js.Array[js.Array[Double]]) = this()
   def this(geometry: js.Object) = this()
   def this(geometry: ILineStringGeometry) = this()

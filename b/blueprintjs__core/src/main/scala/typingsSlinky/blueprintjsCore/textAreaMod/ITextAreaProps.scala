@@ -2,6 +2,7 @@ package typingsSlinky.blueprintjsCore.textAreaMod
 
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import typingsSlinky.blueprintjsCore.propsMod.IIntentProps
+import typingsSlinky.blueprintjsCore.refsMod.IRef
 import typingsSlinky.react.mod.TextareaHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +27,7 @@ trait ITextAreaProps
   /**
     * Ref handler that receives HTML `<textarea>` element backing this component.
     */
-  var inputRef: js.UndefOr[js.Function1[/* ref */ HTMLTextAreaElement | Null, _]] = js.native
+  var inputRef: js.UndefOr[IRef[HTMLTextAreaElement]] = js.native
   
   /**
     * Whether the text area should appear with large styling.
@@ -74,7 +75,10 @@ object ITextAreaProps {
     def deleteGrowVertically: Self = this.set("growVertically", js.undefined)
     
     @scala.inline
-    def setInputRef(value: /* ref */ HTMLTextAreaElement | Null => _): Self = this.set("inputRef", js.Any.fromFunction1(value))
+    def setInputRefFunction1(value: /* ref */ HTMLTextAreaElement | Null => js.Any): Self = this.set("inputRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setInputRef(value: IRef[HTMLTextAreaElement]): Self = this.set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInputRef: Self = this.set("inputRef", js.undefined)

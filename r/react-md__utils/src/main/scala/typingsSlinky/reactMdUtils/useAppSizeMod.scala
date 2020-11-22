@@ -13,5 +13,5 @@ object useAppSizeMod extends js.Object {
   
   val AppSizeContext: Context[AppSizeinitializedboolean] = js.native
   
-  def default(): AppSize = js.native
+  def useAppSize(): AppSize = js.native
 }

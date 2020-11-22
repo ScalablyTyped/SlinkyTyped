@@ -14,9 +14,13 @@ trait AutoLayout extends js.Object {
   
   var autoLayout: js.UndefOr[auto | off | tree | layered | Orientation] = js.native
   
+  var autoSizeEnabled: js.UndefOr[Boolean] = js.native
+  
   var containerChildrenExpr: js.UndefOr[String | (js.Function1[/* data */ js.Any, _])] = js.native
   
   var containerKeyExpr: js.UndefOr[String | (js.Function1[/* data */ js.Any, _])] = js.native
+  
+  var customDataExpr: js.UndefOr[String | (js.Function1[/* data */ js.Any, _])] = js.native
   
   var dataSource: js.UndefOr[
     js.Array[_] | typingsSlinky.devextreme.mod.DevExpress.data.DataSource | DataSourceOptions
@@ -80,6 +84,12 @@ object AutoLayout {
     def deleteAutoLayout: Self = this.set("autoLayout", js.undefined)
     
     @scala.inline
+    def setAutoSizeEnabled(value: Boolean): Self = this.set("autoSizeEnabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoSizeEnabled: Self = this.set("autoSizeEnabled", js.undefined)
+    
+    @scala.inline
     def setContainerChildrenExprFunction1(value: /* data */ js.Any => _): Self = this.set("containerChildrenExpr", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -96,6 +106,15 @@ object AutoLayout {
     
     @scala.inline
     def deleteContainerKeyExpr: Self = this.set("containerKeyExpr", js.undefined)
+    
+    @scala.inline
+    def setCustomDataExprFunction1(value: /* data */ js.Any => _): Self = this.set("customDataExpr", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setCustomDataExpr(value: String | (js.Function1[/* data */ js.Any, _])): Self = this.set("customDataExpr", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomDataExpr: Self = this.set("customDataExpr", js.undefined)
     
     @scala.inline
     def setDataSourceVarargs(value: js.Any*): Self = this.set("dataSource", js.Array(value :_*))

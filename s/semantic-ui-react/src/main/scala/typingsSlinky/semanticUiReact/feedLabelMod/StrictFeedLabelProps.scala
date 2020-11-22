@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.feedLabelMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.HtmlImageProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -90,7 +89,7 @@ object StrictFeedLabelProps {
     
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -104,7 +103,7 @@ object StrictFeedLabelProps {
     
     @scala.inline
     def setImageFunction3(
-      value: (/* component */ ReactType[HtmlImageProps], HtmlImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, HtmlImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("image", js.Any.fromFunction3(value))
     
     @scala.inline

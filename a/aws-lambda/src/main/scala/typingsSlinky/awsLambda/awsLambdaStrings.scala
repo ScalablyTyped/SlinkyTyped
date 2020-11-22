@@ -13,11 +13,13 @@ import typingsSlinky.awsLambda.codepipelineCloudwatchActionMod.CodePipelineActio
 import typingsSlinky.awsLambda.codepipelineCloudwatchActionMod.CodePipelineActionState
 import typingsSlinky.awsLambda.codepipelineCloudwatchPipelineMod.CodePipelineState
 import typingsSlinky.awsLambda.codepipelineCloudwatchStageMod.CodePipelineStageState
+import typingsSlinky.awsLambda.commonMod.ChallengeName
 import typingsSlinky.awsLambda.connectContactFlowMod.ConnectContactFlowChannel
 import typingsSlinky.awsLambda.connectContactFlowMod.ConnectContactFlowInitiationMethod
 import typingsSlinky.awsLambda.kinesisFirehoseTransformationMod.FirehoseRecordTransformationStatus
 import typingsSlinky.awsLambda.s3BatchMod.S3BatchResultResultCode
 import typingsSlinky.awsLambda.sqsMod._SQSMessageAttributeDataType
+import typingsSlinky.awsLambda.userMigrationMod.UserStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,6 +34,9 @@ object awsLambdaStrings {
   
   @scala.inline
   def API: API = "API".asInstanceOf[API]
+  
+  @scala.inline
+  def ARCHIVED: ARCHIVED = "ARCHIVED".asInstanceOf[ARCHIVED]
   
   @scala.inline
   def ARM_CONTAINER: ARM_CONTAINER = "ARM_CONTAINER".asInstanceOf[ARM_CONTAINER]
@@ -91,7 +96,13 @@ object awsLambdaStrings {
   def COMPLETED: COMPLETED = "COMPLETED".asInstanceOf[COMPLETED]
   
   @scala.inline
+  def COMPROMISED: COMPROMISED = "COMPROMISED".asInstanceOf[COMPROMISED]
+  
+  @scala.inline
   def CONFIRMED: CONFIRMED = "CONFIRMED".asInstanceOf[CONFIRMED]
+  
+  @scala.inline
+  def CREATE_TIME: CREATE_TIME = "CREATE_TIME".asInstanceOf[CREATE_TIME]
   
   @scala.inline
   def CUSTOM_CHALLENGE: CUSTOM_CHALLENGE = "CUSTOM_CHALLENGE".asInstanceOf[CUSTOM_CHALLENGE]
@@ -202,6 +213,9 @@ object awsLambdaStrings {
   def FINALIZING: FINALIZING = "FINALIZING".asInstanceOf[FINALIZING]
   
   @scala.inline
+  def FORCE_CHANGE_PASSWORD: FORCE_CHANGE_PASSWORD = "FORCE_CHANGE_PASSWORD".asInstanceOf[FORCE_CHANGE_PASSWORD]
+  
+  @scala.inline
   def Failed_ : Failed_ = "Failed".asInstanceOf[Failed_]
   
   @scala.inline
@@ -245,6 +259,9 @@ object awsLambdaStrings {
   
   @scala.inline
   def LOCAL: LOCAL = "LOCAL".asInstanceOf[LOCAL]
+  
+  @scala.inline
+  def LOG_APPEND_TIME: LOG_APPEND_TIME = "LOG_APPEND_TIME".asInstanceOf[LOG_APPEND_TIME]
   
   @scala.inline
   def MODIFY: MODIFY = "MODIFY".asInstanceOf[MODIFY]
@@ -332,6 +349,9 @@ object awsLambdaStrings {
   
   @scala.inline
   def REQUEST: REQUEST = "REQUEST".asInstanceOf[REQUEST]
+  
+  @scala.inline
+  def RESEND: RESEND = "RESEND".asInstanceOf[RESEND]
   
   @scala.inline
   def RESET_REQUIRED: RESET_REQUIRED = "RESET_REQUIRED".asInstanceOf[RESET_REQUIRED]
@@ -433,6 +453,12 @@ object awsLambdaStrings {
   def TokenGeneration_RefreshTokens: TokenGeneration_RefreshTokens = "TokenGeneration_RefreshTokens".asInstanceOf[TokenGeneration_RefreshTokens]
   
   @scala.inline
+  def UNCONFIRMED: UNCONFIRMED = "UNCONFIRMED".asInstanceOf[UNCONFIRMED]
+  
+  @scala.inline
+  def UNKNOWN: UNKNOWN = "UNKNOWN".asInstanceOf[UNKNOWN]
+  
+  @scala.inline
   def UPLOAD_ARTIFACTS: UPLOAD_ARTIFACTS = "UPLOAD_ARTIFACTS".asInstanceOf[UPLOAD_ARTIFACTS]
   
   @scala.inline
@@ -458,6 +484,9 @@ object awsLambdaStrings {
   
   @scala.inline
   def applicationSlashvndDotamazonawsDotcardDotgeneric: applicationSlashvndDotamazonawsDotcardDotgeneric = "application/vnd.amazonaws.card.generic".asInstanceOf[applicationSlashvndDotamazonawsDotcardDotgeneric]
+  
+  @scala.inline
+  def awsColonkafka: awsColonkafka = "aws:kafka".asInstanceOf[awsColonkafka]
   
   @scala.inline
   def awsDotcodebuild: awsDotcodebuild = "aws.codebuild".asInstanceOf[awsDotcodebuild]
@@ -505,10 +534,13 @@ object awsLambdaStrings {
   sealed trait `1Dot0` extends js.Object
   
   @js.native
-  sealed trait ADMIN_NO_SRP_AUTH extends js.Object
+  sealed trait ADMIN_NO_SRP_AUTH extends ChallengeName
   
   @js.native
   sealed trait API extends ConnectContactFlowInitiationMethod
+  
+  @js.native
+  sealed trait ARCHIVED extends UserStatus
   
   @js.native
   sealed trait ARM_CONTAINER extends CodeBuildEnvironmentType
@@ -571,7 +603,13 @@ object awsLambdaStrings {
   sealed trait COMPLETED extends CodeBuildPhaseType
   
   @js.native
-  sealed trait CONFIRMED extends js.Object
+  sealed trait COMPROMISED extends UserStatus
+  
+  @js.native
+  sealed trait CONFIRMED extends UserStatus
+  
+  @js.native
+  sealed trait CREATE_TIME extends js.Object
   
   @js.native
   sealed trait CUSTOM_CHALLENGE extends js.Object
@@ -634,10 +672,10 @@ object awsLambdaStrings {
   sealed trait CustomPayload extends js.Object
   
   @js.native
-  sealed trait DEVICE_PASSWORD_VERIFIER extends js.Object
+  sealed trait DEVICE_PASSWORD_VERIFIER extends ChallengeName
   
   @js.native
-  sealed trait DEVICE_SRP_AUTH extends js.Object
+  sealed trait DEVICE_SRP_AUTH extends ChallengeName
   
   @js.native
   sealed trait DOWNLOAD_SOURCE extends CodeBuildPhaseType
@@ -687,6 +725,9 @@ object awsLambdaStrings {
   sealed trait FINALIZING extends CodeBuildPhaseType
   
   @js.native
+  sealed trait FORCE_CHANGE_PASSWORD extends UserStatus
+  
+  @js.native
   sealed trait Failed_ extends js.Object
   
   @js.native
@@ -732,6 +773,9 @@ object awsLambdaStrings {
   sealed trait LOCAL extends CodeBuildCacheType
   
   @js.native
+  sealed trait LOG_APPEND_TIME extends js.Object
+  
+  @js.native
   sealed trait MODIFY extends js.Object
   
   @js.native
@@ -765,7 +809,7 @@ object awsLambdaStrings {
   sealed trait PARAMETER_STORE extends CodeBuildEnvironmentVariableType
   
   @js.native
-  sealed trait PASSWORD_VERIFIER extends js.Object
+  sealed trait PASSWORD_VERIFIER extends ChallengeName
   
   @js.native
   sealed trait PLAINTEXT extends CodeBuildEnvironmentVariableType
@@ -819,7 +863,10 @@ object awsLambdaStrings {
   sealed trait REQUEST extends js.Object
   
   @js.native
-  sealed trait RESET_REQUIRED extends js.Object
+  sealed trait RESEND extends js.Object
+  
+  @js.native
+  sealed trait RESET_REQUIRED extends UserStatus
   
   @js.native
   sealed trait RESUMED
@@ -841,10 +888,10 @@ object awsLambdaStrings {
   sealed trait SMS extends js.Object
   
   @js.native
-  sealed trait SMS_MFA extends js.Object
+  sealed trait SMS_MFA extends ChallengeName
   
   @js.native
-  sealed trait SRP_A extends js.Object
+  sealed trait SRP_A extends ChallengeName
   
   @js.native
   sealed trait SSML extends js.Object
@@ -932,6 +979,12 @@ object awsLambdaStrings {
   sealed trait TokenGeneration_RefreshTokens extends js.Object
   
   @js.native
+  sealed trait UNCONFIRMED extends UserStatus
+  
+  @js.native
+  sealed trait UNKNOWN extends UserStatus
+  
+  @js.native
   sealed trait UPLOAD_ARTIFACTS extends CodeBuildPhaseType
   
   @js.native
@@ -957,6 +1010,9 @@ object awsLambdaStrings {
   
   @js.native
   sealed trait applicationSlashvndDotamazonawsDotcardDotgeneric extends js.Object
+  
+  @js.native
+  sealed trait awsColonkafka extends js.Object
   
   @js.native
   sealed trait awsDotcodebuild extends js.Object

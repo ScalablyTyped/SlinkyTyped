@@ -13,8 +13,6 @@ trait meshUtilsCreateElevationSamplerOptions extends Object {
     * The value to use when there is no data available.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-support-meshUtils.html#createElevationSampler)
-    *
-    * @default 0
     */
   var noDataValue: js.UndefOr[Double] = js.native
 }

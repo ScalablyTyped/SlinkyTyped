@@ -11,8 +11,4 @@ class LineSegments[TGeometry /* <: typingsSlinky.three.geometryMod.Geometry | ty
   def this(geometry: TGeometry) = this()
   def this(geometry: TGeometry, material: TMaterial) = this()
   def this(geometry: js.UndefOr[scala.Nothing], material: TMaterial) = this()
-  def this(geometry: TGeometry, material: TMaterial, mode: Double) = this()
-  def this(geometry: TGeometry, material: js.UndefOr[scala.Nothing], mode: Double) = this()
-  def this(geometry: js.UndefOr[scala.Nothing], material: TMaterial, mode: Double) = this()
-  def this(geometry: js.UndefOr[scala.Nothing], material: js.UndefOr[scala.Nothing], mode: Double) = this()
 }

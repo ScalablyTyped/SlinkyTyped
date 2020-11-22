@@ -12,6 +12,8 @@ import typingsSlinky.reactMdAlert.messageQueueContextMod.ToastMessage
 import typingsSlinky.reactMdAlert.messageQueueMod.MessageQueueProps
 import typingsSlinky.reactMdAlert.snackbarMod.SnackbarProps
 import typingsSlinky.reactMdAlert.toastMod.ToastProps
+import typingsSlinky.reactMdTransition.typesMod.TransitionTimeout
+import typingsSlinky.reactTransitionGroup.csstransitionMod.CSSTransitionClassNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,6 +26,10 @@ object mod extends js.Object {
   
   val DEFAULT_MESSAGE_QUEUE_TIMEOUT: /* 5000 */ Double = js.native
   
+  val DEFAULT_TOAST_CLASSNAMES: CSSTransitionClassNames = js.native
+  
+  val DEFAULT_TOAST_TIMEOUT: TransitionTimeout = js.native
+  
   val MessageQueueActionsContext: Context[MessageQueueActions[Message]] = js.native
   
   val MessageQueueContext: Context[js.Array[Message]] = js.native
@@ -32,14 +38,6 @@ object mod extends js.Object {
   
   val Snackbar: ForwardRefExoticComponent[SnackbarProps with RefAttributes[HTMLDivElement]] = js.native
   
-  /**
-    * This is a very low-level component that can be used to animate a new toast in
-    * to a `Snackbar` as it is mainly just a wrapper of the `CSSTransition`
-    * component. If you are using this component, it is generally recommended to
-    * provide the `onEntered` callback as a function to start the hide visibility
-    * timer and the `onExited` callback to remove the current toast from your
-    * queue.
-    */
   val Toast: ForwardRefExoticComponent[ToastProps with RefAttributes[HTMLDivElement]] = js.native
   
   def useAddMessage[M /* <: Message */](): AddMessage[M] = js.native
@@ -53,10 +51,6 @@ object mod extends js.Object {
   @js.native
   object MessageQueue extends js.Object {
     
-    /**
-      * This component is used to be able to create a queue of messages with the `Snackbar` and
-      * `Toast` components with a _fairly_ decent API out of the box.
-      */
     def apply[M /* <: ToastMessage */](hasTimeoutDuplicatesDefaultQueueChildrenProps: MessageQueueProps[M]): ReactElement = js.native
     
     @js.native

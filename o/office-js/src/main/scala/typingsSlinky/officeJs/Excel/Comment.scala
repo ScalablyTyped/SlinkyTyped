@@ -6,6 +6,8 @@ import typingsSlinky.officeJs.Excel.Interfaces.CommentUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.anon.Expand
+import typingsSlinky.officeJs.officeJsStrings.Mention
+import typingsSlinky.officeJs.officeJsStrings.Plain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,6 +44,14 @@ trait Comment extends ClientObject {
     * [Api set: ExcelApi 1.10]
     */
   var content: String = js.native
+  
+  /**
+    *
+    * Gets the content type of the comment.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  val contentType: ContentType | Plain | Mention = js.native
   
   /** The request context associated with the object. This connects the add-in's process to the Office host application's process. */
   @JSName("context")

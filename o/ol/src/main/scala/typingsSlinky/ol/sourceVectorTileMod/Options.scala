@@ -180,7 +180,7 @@ object Options {
     
     @scala.inline
     def setTileUrlFunction(
-      value: (/* p0 */ TileCoord, /* p1 */ Double, /* p2 */ typingsSlinky.ol.projectionMod.default) => String
+      value: (/* p0 */ TileCoord, /* p1 */ Double, /* p2 */ typingsSlinky.ol.projectionMod.default) => js.UndefOr[String]
     ): Self = this.set("tileUrlFunction", js.Any.fromFunction3(value))
     
     @scala.inline

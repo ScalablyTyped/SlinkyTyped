@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.kafkaMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -10,6 +10,42 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait Kafka extends Service {
+  
+  /**
+    * 
+    Associates one or more Scram Secrets with an Amazon MSK cluster.
+    
+    */
+  def batchAssociateScramSecret(): Request[BatchAssociateScramSecretResponse, AWSError] = js.native
+  def batchAssociateScramSecret(callback: js.Function2[/* err */ AWSError, /* data */ BatchAssociateScramSecretResponse, Unit]): Request[BatchAssociateScramSecretResponse, AWSError] = js.native
+  /**
+    * 
+    Associates one or more Scram Secrets with an Amazon MSK cluster.
+    
+    */
+  def batchAssociateScramSecret(params: BatchAssociateScramSecretRequest): Request[BatchAssociateScramSecretResponse, AWSError] = js.native
+  def batchAssociateScramSecret(
+    params: BatchAssociateScramSecretRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ BatchAssociateScramSecretResponse, Unit]
+  ): Request[BatchAssociateScramSecretResponse, AWSError] = js.native
+  
+  /**
+    * 
+    Disassociates one or more Scram Secrets from an Amazon MSK cluster.
+    
+    */
+  def batchDisassociateScramSecret(): Request[BatchDisassociateScramSecretResponse, AWSError] = js.native
+  def batchDisassociateScramSecret(callback: js.Function2[/* err */ AWSError, /* data */ BatchDisassociateScramSecretResponse, Unit]): Request[BatchDisassociateScramSecretResponse, AWSError] = js.native
+  /**
+    * 
+    Disassociates one or more Scram Secrets from an Amazon MSK cluster.
+    
+    */
+  def batchDisassociateScramSecret(params: BatchDisassociateScramSecretRequest): Request[BatchDisassociateScramSecretResponse, AWSError] = js.native
+  def batchDisassociateScramSecret(
+    params: BatchDisassociateScramSecretRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ BatchDisassociateScramSecretResponse, Unit]
+  ): Request[BatchDisassociateScramSecretResponse, AWSError] = js.native
   
   @JSName("config")
   var config_Kafka: ConfigBase with ClientConfiguration = js.native
@@ -67,6 +103,24 @@ trait Kafka extends Service {
     params: DeleteClusterRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteClusterResponse, Unit]
   ): Request[DeleteClusterResponse, AWSError] = js.native
+  
+  /**
+    * 
+    Deletes an MSK Configuration.
+    
+    */
+  def deleteConfiguration(): Request[DeleteConfigurationResponse, AWSError] = js.native
+  def deleteConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ DeleteConfigurationResponse, Unit]): Request[DeleteConfigurationResponse, AWSError] = js.native
+  /**
+    * 
+    Deletes an MSK Configuration.
+    
+    */
+  def deleteConfiguration(params: DeleteConfigurationRequest): Request[DeleteConfigurationResponse, AWSError] = js.native
+  def deleteConfiguration(
+    params: DeleteConfigurationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteConfigurationResponse, Unit]
+  ): Request[DeleteConfigurationResponse, AWSError] = js.native
   
   /**
     * 
@@ -286,6 +340,24 @@ trait Kafka extends Service {
   
   /**
     * 
+    Returns a list of the Scram Secrets associated with an Amazon MSK cluster.
+    
+    */
+  def listScramSecrets(): Request[ListScramSecretsResponse, AWSError] = js.native
+  def listScramSecrets(callback: js.Function2[/* err */ AWSError, /* data */ ListScramSecretsResponse, Unit]): Request[ListScramSecretsResponse, AWSError] = js.native
+  /**
+    * 
+    Returns a list of the Scram Secrets associated with an Amazon MSK cluster.
+    
+    */
+  def listScramSecrets(params: ListScramSecretsRequest): Request[ListScramSecretsResponse, AWSError] = js.native
+  def listScramSecrets(
+    params: ListScramSecretsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListScramSecretsResponse, Unit]
+  ): Request[ListScramSecretsResponse, AWSError] = js.native
+  
+  /**
+    * 
     Returns a list of the tags associated with the specified resource.
     
     */
@@ -420,6 +492,24 @@ trait Kafka extends Service {
     params: UpdateClusterKafkaVersionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateClusterKafkaVersionResponse, Unit]
   ): Request[UpdateClusterKafkaVersionResponse, AWSError] = js.native
+  
+  /**
+    * 
+    Updates an MSK configuration.
+    
+    */
+  def updateConfiguration(): Request[UpdateConfigurationResponse, AWSError] = js.native
+  def updateConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ UpdateConfigurationResponse, Unit]): Request[UpdateConfigurationResponse, AWSError] = js.native
+  /**
+    * 
+    Updates an MSK configuration.
+    
+    */
+  def updateConfiguration(params: UpdateConfigurationRequest): Request[UpdateConfigurationResponse, AWSError] = js.native
+  def updateConfiguration(
+    params: UpdateConfigurationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateConfigurationResponse, Unit]
+  ): Request[UpdateConfigurationResponse, AWSError] = js.native
   
   /**
     * 

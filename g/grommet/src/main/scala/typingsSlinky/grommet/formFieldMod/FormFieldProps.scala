@@ -2,6 +2,7 @@ package typingsSlinky.grommet.formFieldMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.grommet.anon.Message
+import typingsSlinky.grommet.boxMod.BoxProps
 import typingsSlinky.grommet.utilsMod.MarginType
 import typingsSlinky.grommet.utilsMod.PlaceHolderType
 import scala.scalajs.js
@@ -12,6 +13,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FormFieldProps extends js.Object {
   
   var component: js.UndefOr[js.Any] = js.native
+  
+  var contentProps: js.UndefOr[BoxProps] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
   
@@ -70,6 +73,12 @@ object FormFieldProps {
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
+    
+    @scala.inline
+    def setContentProps(value: BoxProps): Self = this.set("contentProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContentProps: Self = this.set("contentProps", js.undefined)
     
     @scala.inline
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])

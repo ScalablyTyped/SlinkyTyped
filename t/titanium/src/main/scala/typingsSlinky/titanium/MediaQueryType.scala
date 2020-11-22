@@ -13,7 +13,7 @@ trait MediaQueryType extends js.Object {
   /**
     * The album artist to filter on. Value should be a String.
     */
-  var albumArtist: js.UndefOr[MediaQueryInfoType | java.lang.String] = js.native
+  var albumArtist: js.UndefOr[MediaQueryInfoType | String] = js.native
   
   /**
     * The album artist persistent ID to filter on. Value should be a Number.
@@ -28,17 +28,17 @@ trait MediaQueryType extends js.Object {
   /**
     * The album title to filter on. Value should be a String.
     */
-  var albumTitle: js.UndefOr[MediaQueryInfoType | java.lang.String] = js.native
+  var albumTitle: js.UndefOr[MediaQueryInfoType | String] = js.native
   
   /**
     * The artist to filter on. Value should be a String.
     */
-  var artist: js.UndefOr[MediaQueryInfoType | java.lang.String] = js.native
+  var artist: js.UndefOr[MediaQueryInfoType | String] = js.native
   
   /**
     * The composer to filter on. Value should be a String.
     */
-  var composer: js.UndefOr[MediaQueryInfoType | java.lang.String] = js.native
+  var composer: js.UndefOr[MediaQueryInfoType | String] = js.native
   
   /**
     * The composer persistent ID to filter on. Value should be a Number.
@@ -48,7 +48,7 @@ trait MediaQueryType extends js.Object {
   /**
     * The genre to filter on. Value should be a String.
     */
-  var genre: js.UndefOr[MediaQueryInfoType | java.lang.String] = js.native
+  var genre: js.UndefOr[MediaQueryInfoType | String] = js.native
   
   /**
     * The genre persistent ID to filter on. Value should be a Number.
@@ -101,12 +101,12 @@ trait MediaQueryType extends js.Object {
   /**
     * The podcast title to filter on. Value should be a String.
     */
-  var podcastTitle: js.UndefOr[MediaQueryInfoType | java.lang.String] = js.native
+  var podcastTitle: js.UndefOr[MediaQueryInfoType | String] = js.native
   
   /**
     * The title to filter on. Value should be a String.
     */
-  var title: js.UndefOr[MediaQueryInfoType | java.lang.String] = js.native
+  var title: js.UndefOr[MediaQueryInfoType | String] = js.native
 }
 object MediaQueryType {
   
@@ -126,13 +126,13 @@ object MediaQueryType {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setAlbumArtist(value: MediaQueryInfoType | java.lang.String): Self = this.set("albumArtist", value.asInstanceOf[js.Any])
+    def setAlbumArtist(value: MediaQueryInfoType | String): Self = this.set("albumArtist", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAlbumArtist: Self = this.set("albumArtist", js.undefined)
@@ -150,19 +150,19 @@ object MediaQueryType {
     def deleteAlbumPersistentID: Self = this.set("albumPersistentID", js.undefined)
     
     @scala.inline
-    def setAlbumTitle(value: MediaQueryInfoType | java.lang.String): Self = this.set("albumTitle", value.asInstanceOf[js.Any])
+    def setAlbumTitle(value: MediaQueryInfoType | String): Self = this.set("albumTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAlbumTitle: Self = this.set("albumTitle", js.undefined)
     
     @scala.inline
-    def setArtist(value: MediaQueryInfoType | java.lang.String): Self = this.set("artist", value.asInstanceOf[js.Any])
+    def setArtist(value: MediaQueryInfoType | String): Self = this.set("artist", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteArtist: Self = this.set("artist", js.undefined)
     
     @scala.inline
-    def setComposer(value: MediaQueryInfoType | java.lang.String): Self = this.set("composer", value.asInstanceOf[js.Any])
+    def setComposer(value: MediaQueryInfoType | String): Self = this.set("composer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComposer: Self = this.set("composer", js.undefined)
@@ -174,7 +174,7 @@ object MediaQueryType {
     def deleteComposerPersistentID: Self = this.set("composerPersistentID", js.undefined)
     
     @scala.inline
-    def setGenre(value: MediaQueryInfoType | java.lang.String): Self = this.set("genre", value.asInstanceOf[js.Any])
+    def setGenre(value: MediaQueryInfoType | String): Self = this.set("genre", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGenre: Self = this.set("genre", js.undefined)
@@ -234,13 +234,13 @@ object MediaQueryType {
     def deletePodcastPersistentID: Self = this.set("podcastPersistentID", js.undefined)
     
     @scala.inline
-    def setPodcastTitle(value: MediaQueryInfoType | java.lang.String): Self = this.set("podcastTitle", value.asInstanceOf[js.Any])
+    def setPodcastTitle(value: MediaQueryInfoType | String): Self = this.set("podcastTitle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePodcastTitle: Self = this.set("podcastTitle", js.undefined)
     
     @scala.inline
-    def setTitle(value: MediaQueryInfoType | java.lang.String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: MediaQueryInfoType | String): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Dataset extends js.Object {
   
   /**
-    * The "DatasetAction" objects that automatically create the data set contents.
+    * The DatasetAction objects that automatically create the data set contents.
     */
   var actions: js.UndefOr[DatasetActions] = js.native
   
@@ -18,7 +18,7 @@ trait Dataset extends js.Object {
   var arn: js.UndefOr[DatasetArn] = js.native
   
   /**
-    * When data set contents are created they are delivered to destinations specified here.
+    * When dataset contents are created they are delivered to destinations specified here.
     */
   var contentDeliveryRules: js.UndefOr[DatasetContentDeliveryRules] = js.native
   
@@ -33,12 +33,17 @@ trait Dataset extends js.Object {
   var lastUpdateTime: js.UndefOr[js.Date] = js.native
   
   /**
+    * A list of data rules that send notifications to Amazon CloudWatch, when data arrives late. To specify lateDataRules, the dataset must use a DeltaTimer filter.
+    */
+  var lateDataRules: js.UndefOr[LateDataRules] = js.native
+  
+  /**
     * The name of the data set.
     */
   var name: js.UndefOr[DatasetName] = js.native
   
   /**
-    * [Optional] How long, in days, message data is kept for the data set.
+    * Optional. How long, in days, message data is kept for the data set.
     */
   var retentionPeriod: js.UndefOr[RetentionPeriod] = js.native
   
@@ -48,12 +53,12 @@ trait Dataset extends js.Object {
   var status: js.UndefOr[DatasetStatus] = js.native
   
   /**
-    * The "DatasetTrigger" objects that specify when the data set is automatically updated.
+    * The DatasetTrigger objects that specify when the data set is automatically updated.
     */
   var triggers: js.UndefOr[DatasetTriggers] = js.native
   
   /**
-    * [Optional] How many versions of data set contents are kept. If not specified or set to null, only the latest version plus the latest succeeded version (if they are different) are kept for the time period specified by the "retentionPeriod" parameter. (For more information, see https://docs.aws.amazon.com/iotanalytics/latest/userguide/getting-started.html#aws-iot-analytics-dataset-versions)
+    * Optional. How many versions of dataset contents are kept. If not specified or set to null, only the latest version plus the latest succeeded version (if they are different) are kept for the time period specified by the retentionPeriod parameter. For more information, see Keeping Multiple Versions of AWS IoT Analytics Data Sets in the AWS IoT Analytics User Guide.
     */
   var versioningConfiguration: js.UndefOr[VersioningConfiguration] = js.native
 }
@@ -115,6 +120,15 @@ object Dataset {
     
     @scala.inline
     def deleteLastUpdateTime: Self = this.set("lastUpdateTime", js.undefined)
+    
+    @scala.inline
+    def setLateDataRulesVarargs(value: LateDataRule*): Self = this.set("lateDataRules", js.Array(value :_*))
+    
+    @scala.inline
+    def setLateDataRules(value: LateDataRules): Self = this.set("lateDataRules", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLateDataRules: Self = this.set("lateDataRules", js.undefined)
     
     @scala.inline
     def setName(value: DatasetName): Self = this.set("name", value.asInstanceOf[js.Any])

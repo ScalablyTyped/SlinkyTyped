@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/core/build/lib/update_global_config", JSImport.Default)
+@JSImport("@jest/core/build/lib/updateGlobalConfig", JSImport.Default)
 @js.native
 object default extends js.Object {
   

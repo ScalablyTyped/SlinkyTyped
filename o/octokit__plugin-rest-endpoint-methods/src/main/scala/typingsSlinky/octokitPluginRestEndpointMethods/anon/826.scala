@@ -3,8 +3,7 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ProjectsGetPermissionForUserEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ProjectsGetPermissionForUserResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ProjectsDeleteEndpoint
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +14,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `826` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ProjectsGetPermissionForUserEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ProjectsDeleteEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ProjectsGetPermissionForUserResponseData] = js.native
+  var response: OctokitResponse[_] = js.native
 }
 object `826` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ProjectsGetPermissionForUserEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ProjectsGetPermissionForUserResponseData]
+    parameters: RequestParameters with (Omit[ProjectsDeleteEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[_]
   ): `826` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`826`]
@@ -46,11 +45,9 @@ object `826` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[ProjectsGetPermissionForUserEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ProjectsDeleteEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ProjectsGetPermissionForUserResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

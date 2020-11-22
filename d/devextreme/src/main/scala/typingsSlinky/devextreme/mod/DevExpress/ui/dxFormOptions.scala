@@ -13,19 +13,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFormOptions extends WidgetOptions[dxForm] {
   
-  /** @name dxForm.Options.alignItemLabels */
+  /**
+    * [descr:dxForm.Options.alignItemLabels]
+    */
   var alignItemLabels: js.UndefOr[Boolean] = js.native
   
-  /** @name dxForm.Options.alignItemLabelsInAllGroups */
+  /**
+    * [descr:dxForm.Options.alignItemLabelsInAllGroups]
+    */
   var alignItemLabelsInAllGroups: js.UndefOr[Boolean] = js.native
   
-  /** @name dxForm.Options.colCount */
+  /**
+    * [descr:dxForm.Options.colCount]
+    */
   var colCount: js.UndefOr[Double | auto] = js.native
   
-  /** @name dxForm.Options.colCountByScreen */
+  /**
+    * [descr:dxForm.Options.colCountByScreen]
+    */
   var colCountByScreen: js.UndefOr[js.Any] = js.native
   
-  /** @name dxForm.Options.customizeItem */
+  /**
+    * [descr:dxForm.Options.customizeItem]
+    */
   var customizeItem: js.UndefOr[
     js.Function1[
       /* item */ dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem, 
@@ -33,59 +43,93 @@ trait dxFormOptions extends WidgetOptions[dxForm] {
     ]
   ] = js.native
   
-  /** @name dxForm.Options.formData */
+  /**
+    * [descr:dxForm.Options.formData]
+    */
   var formData: js.UndefOr[js.Any] = js.native
   
-  /** @name dxForm.Options.items */
+  /**
+    * [descr:dxForm.Options.items]
+    */
   var items: js.UndefOr[
     js.Array[
       dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem
     ]
   ] = js.native
   
-  /** @name dxForm.Options.labelLocation */
+  /**
+    * [descr:dxForm.Options.labelLocation]
+    */
   var labelLocation: js.UndefOr[left | right | top] = js.native
   
-  /** @name dxForm.Options.minColWidth */
+  /**
+    * [descr:dxForm.Options.minColWidth]
+    */
   var minColWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxForm.Options.onEditorEnterKey */
+  /**
+    * [descr:dxForm.Options.onEditorEnterKey]
+    */
   var onEditorEnterKey: js.UndefOr[js.Function1[/* e */ ComponentDataField, _]] = js.native
   
-  /** @name dxForm.Options.onFieldDataChanged */
+  /**
+    * [descr:dxForm.Options.onFieldDataChanged]
+    */
   var onFieldDataChanged: js.UndefOr[js.Function1[/* e */ DataFieldElement, _]] = js.native
   
-  /** @name dxForm.Options.optionalMark */
+  /**
+    * [descr:dxForm.Options.optionalMark]
+    */
   var optionalMark: js.UndefOr[String] = js.native
   
-  /** @name dxForm.Options.readOnly */
+  /**
+    * [descr:dxForm.Options.readOnly]
+    */
   var readOnly: js.UndefOr[Boolean] = js.native
   
-  /** @name dxForm.Options.requiredMark */
+  /**
+    * [descr:dxForm.Options.requiredMark]
+    */
   var requiredMark: js.UndefOr[String] = js.native
   
-  /** @name dxForm.Options.requiredMessage */
+  /**
+    * [descr:dxForm.Options.requiredMessage]
+    */
   var requiredMessage: js.UndefOr[String] = js.native
   
-  /** @name dxForm.Options.screenByWidth */
+  /**
+    * [descr:dxForm.Options.screenByWidth]
+    */
   var screenByWidth: js.UndefOr[js.Function] = js.native
   
-  /** @name dxForm.Options.scrollingEnabled */
+  /**
+    * [descr:dxForm.Options.scrollingEnabled]
+    */
   var scrollingEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxForm.Options.showColonAfterLabel */
+  /**
+    * [descr:dxForm.Options.showColonAfterLabel]
+    */
   var showColonAfterLabel: js.UndefOr[Boolean] = js.native
   
-  /** @name dxForm.Options.showOptionalMark */
+  /**
+    * [descr:dxForm.Options.showOptionalMark]
+    */
   var showOptionalMark: js.UndefOr[Boolean] = js.native
   
-  /** @name dxForm.Options.showRequiredMark */
+  /**
+    * [descr:dxForm.Options.showRequiredMark]
+    */
   var showRequiredMark: js.UndefOr[Boolean] = js.native
   
-  /** @name dxForm.Options.showValidationSummary */
+  /**
+    * [descr:dxForm.Options.showValidationSummary]
+    */
   var showValidationSummary: js.UndefOr[Boolean] = js.native
   
-  /** @name dxForm.Options.validationGroup */
+  /**
+    * [descr:dxForm.Options.validationGroup]
+    */
   var validationGroup: js.UndefOr[String] = js.native
 }
 object dxFormOptions {

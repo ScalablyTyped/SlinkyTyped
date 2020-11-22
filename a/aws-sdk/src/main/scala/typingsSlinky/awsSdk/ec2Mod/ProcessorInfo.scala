@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ProcessorInfo extends js.Object {
   
   /**
-    * A list of architectures supported by the instance type.
+    * The architectures supported by the instance type.
     */
   var SupportedArchitectures: js.UndefOr[ArchitectureTypeList] = js.native
   

@@ -9,6 +9,8 @@ trait AccountSigner extends js.Object {
   
   var key: String = js.native
   
+  var sponsor: js.UndefOr[String] = js.native
+  
   var `type`: String = js.native
   
   var weight: Double = js.native
@@ -45,5 +47,11 @@ object AccountSigner {
     
     @scala.inline
     def setWeight(value: Double): Self = this.set("weight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSponsor(value: String): Self = this.set("sponsor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSponsor: Self = this.set("sponsor", js.undefined)
   }
 }

@@ -23,7 +23,7 @@ trait ListDataItem
     * Template ID configured with the <Titanium.UI.ListView.templates> property or
     * <Titanium.UI.LIST_ITEM_TEMPLATE_DEFAULT>.
     */
-  var template: js.UndefOr[java.lang.String | Double] = js.native
+  var template: js.UndefOr[String | Double] = js.native
 }
 object ListDataItem {
   
@@ -43,7 +43,7 @@ object ListDataItem {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -55,7 +55,7 @@ object ListDataItem {
     def deleteProperties: Self = this.set("properties", js.undefined)
     
     @scala.inline
-    def setTemplate(value: java.lang.String | Double): Self = this.set("template", value.asInstanceOf[js.Any])
+    def setTemplate(value: String | Double): Self = this.set("template", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTemplate: Self = this.set("template", js.undefined)

@@ -13,11 +13,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PlaylistObjectFull extends PlaylistBaseObject {
   
   /**
-    * The playlist description. Only returned for modified, verified playlists, otherwise null.
-    */
-  var description: String | Null = js.native
-  
-  /**
     * Information about the followers of the playlist.
     */
   var followers: FollowersObject = js.native
@@ -69,11 +64,5 @@ object PlaylistObjectFull {
     
     @scala.inline
     def setTracks(value: PagingObject[PlaylistTrackObject]): Self = this.set("tracks", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDescriptionNull: Self = this.set("description", null)
   }
 }

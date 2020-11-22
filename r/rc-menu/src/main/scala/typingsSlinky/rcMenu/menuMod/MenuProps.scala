@@ -17,7 +17,6 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
-import typingsSlinky.rcMenu.anon.Open
 import typingsSlinky.rcMenu.anon.PartialkeyinMenuModeother
 import typingsSlinky.rcMenu.interfaceMod.BuiltinPlacements
 import typingsSlinky.rcMenu.interfaceMod.DestroyEventHandler
@@ -25,13 +24,17 @@ import typingsSlinky.rcMenu.interfaceMod.MenuClickEventHandler
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
 import typingsSlinky.rcMenu.interfaceMod.MenuMode
 import typingsSlinky.rcMenu.interfaceMod.OpenAnimation
-import typingsSlinky.rcMenu.interfaceMod.OpenEventHandler
 import typingsSlinky.rcMenu.interfaceMod.RenderIconType
 import typingsSlinky.rcMenu.interfaceMod.SelectEventHandler
 import typingsSlinky.rcMenu.interfaceMod.SelectInfo
 import typingsSlinky.rcMenu.interfaceMod.TriggerSubMenuAction
+import typingsSlinky.rcMenu.rcMenuStrings.`additions removals`
 import typingsSlinky.rcMenu.rcMenuStrings.`additions text`
 import typingsSlinky.rcMenu.rcMenuStrings.`inline`
+import typingsSlinky.rcMenu.rcMenuStrings.`removals additions`
+import typingsSlinky.rcMenu.rcMenuStrings.`removals text`
+import typingsSlinky.rcMenu.rcMenuStrings.`text additions`
+import typingsSlinky.rcMenu.rcMenuStrings.`text removals`
 import typingsSlinky.rcMenu.rcMenuStrings.additions
 import typingsSlinky.rcMenu.rcMenuStrings.all
 import typingsSlinky.rcMenu.rcMenuStrings.ascending
@@ -77,7 +80,7 @@ import typingsSlinky.rcMenu.rcMenuStrings.tree
 import typingsSlinky.rcMenu.rcMenuStrings.url
 import typingsSlinky.rcMenu.rcMenuStrings.vertical
 import typingsSlinky.rcMenu.rcMenuStrings.yes
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
@@ -181,7 +184,9 @@ trait MenuProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -288,7 +293,7 @@ trait MenuProps extends js.Object {
   var mode: js.UndefOr[MenuMode] = js.native
   
   /** Menu motion define */
-  var motion: js.UndefOr[MotionType] = js.native
+  var motion: js.UndefOr[CSSMotionProps] = js.native
   
   var multiple: js.UndefOr[Boolean] = js.native
   
@@ -392,7 +397,7 @@ trait MenuProps extends js.Object {
   
   var onMouseUp: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
   
-  var onOpenChange: js.UndefOr[OpenEventHandler] = js.native
+  var onOpenChange: js.UndefOr[js.Function1[/* openKeys */ js.Array[Key], Unit]] = js.native
   
   var onPaste: js.UndefOr[ClipboardEventHandler[HTMLDivElement]] = js.native
   
@@ -771,7 +776,9 @@ object MenuProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1107,7 +1114,7 @@ object MenuProps {
     def deleteMode: Self = this.set("mode", js.undefined)
     
     @scala.inline
-    def setMotion(value: MotionType): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: CSSMotionProps): Self = this.set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMotion: Self = this.set("motion", js.undefined)
@@ -1419,7 +1426,7 @@ object MenuProps {
     def deleteOnMouseUp: Self = this.set("onMouseUp", js.undefined)
     
     @scala.inline
-    def setOnOpenChange(value: /* keys */ js.Array[Key] | Open => Unit): Self = this.set("onOpenChange", js.Any.fromFunction1(value))
+    def setOnOpenChange(value: /* openKeys */ js.Array[Key] => Unit): Self = this.set("onOpenChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnOpenChange: Self = this.set("onOpenChange", js.undefined)

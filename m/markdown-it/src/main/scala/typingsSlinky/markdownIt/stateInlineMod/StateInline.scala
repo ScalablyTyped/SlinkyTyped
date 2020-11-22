@@ -68,7 +68,7 @@ trait StateInline extends js.Object {
   
   var tokens: js.Array[typingsSlinky.markdownIt.tokenMod.^] = js.native
   
-  var tokens_meta: js.Array[TokenMata] = js.native
+  var tokens_meta: js.Array[TokenMata | Null] = js.native
 }
 object StateInline {
   
@@ -94,7 +94,7 @@ object StateInline {
     scanDelims: (Double, Boolean) => Scanned,
     src: String,
     tokens: js.Array[typingsSlinky.markdownIt.tokenMod.^],
-    tokens_meta: js.Array[TokenMata]
+    tokens_meta: js.Array[TokenMata | Null]
   ): StateInline = {
     val __obj = js.Dynamic.literal(Token = Token.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], delimiters = delimiters.asInstanceOf[js.Any], env = env.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any], md = md.asInstanceOf[js.Any], pending = pending.asInstanceOf[js.Any], pendingLevel = pendingLevel.asInstanceOf[js.Any], pos = pos.asInstanceOf[js.Any], posMax = posMax.asInstanceOf[js.Any], push = js.Any.fromFunction3(push), pushPending = js.Any.fromFunction0(pushPending), scanDelims = js.Any.fromFunction2(scanDelims), src = src.asInstanceOf[js.Any], tokens = tokens.asInstanceOf[js.Any], tokens_meta = tokens_meta.asInstanceOf[js.Any])
     __obj.asInstanceOf[StateInline]
@@ -174,9 +174,9 @@ object StateInline {
     def setTokens(value: js.Array[typingsSlinky.markdownIt.tokenMod.^]): Self = this.set("tokens", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTokens_metaVarargs(value: TokenMata*): Self = this.set("tokens_meta", js.Array(value :_*))
+    def setTokens_metaVarargs(value: (TokenMata | Null)*): Self = this.set("tokens_meta", js.Array(value :_*))
     
     @scala.inline
-    def setTokens_meta(value: js.Array[TokenMata]): Self = this.set("tokens_meta", value.asInstanceOf[js.Any])
+    def setTokens_meta(value: js.Array[TokenMata | Null]): Self = this.set("tokens_meta", value.asInstanceOf[js.Any])
   }
 }

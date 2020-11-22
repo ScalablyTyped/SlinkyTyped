@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSTypePredicate
+import typingsSlinky.babelTraverse.babelTraverseStrings.BigIntLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `179` extends js.Object {
   
-  var `type`: TSTypePredicate = js.native
+  var `type`: BigIntLiteral = js.native
 }
 object `179` {
   
   @scala.inline
-  def apply(`type`: TSTypePredicate): `179` = {
+  def apply(`type`: BigIntLiteral): `179` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`179`]
@@ -35,6 +35,6 @@ object `179` {
     }
     
     @scala.inline
-    def setType(value: TSTypePredicate): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: BigIntLiteral): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

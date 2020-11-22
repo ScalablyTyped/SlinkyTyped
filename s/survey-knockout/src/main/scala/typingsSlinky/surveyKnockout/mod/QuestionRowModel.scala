@@ -1,5 +1,6 @@
 package typingsSlinky.surveyKnockout.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,11 +14,19 @@ class QuestionRowModel protected () extends Base {
   
   val elements: js.Array[IElement] = js.native
   
+  val id: String = js.native
+  
   val index: Double = js.native
+  
+  var isNeedRender: Boolean = js.native
   
   var panel: PanelModelBase = js.native
   
   def setElementMaxMinWidth(el: IElement): Unit = js.native
+  
+  def startLazyRendering(rowContainerDiv: HTMLElement): Unit = js.native
+  
+  def stopLazyRendering(): Unit = js.native
   
   def updateVisible(): Unit = js.native
   

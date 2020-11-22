@@ -29,41 +29,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object subMeshMod extends js.Object {
   
   @js.native
-  class BaseSubMesh () extends js.Object {
-    
-    /** @hidden */
-    var _materialDefines: Nullable[MaterialDefines] = js.native
-    
-    /** @hidden */
-    var _materialEffect: Nullable[Effect] = js.native
-    
-    /**
-      * Gets associated effect
-      */
-    def effect: Nullable[Effect] = js.native
-    
-    /**
-      * Gets material defines used by the effect associated to the sub mesh
-      */
-    def materialDefines: Nullable[MaterialDefines] = js.native
-    /**
-      * Sets material defines used by the effect associated to the sub mesh
-      */
-    def materialDefines_=(defines: Nullable[MaterialDefines]): Unit = js.native
-    
-    /**
-      * Sets associated effect (effect used to render this submesh)
-      * @param effect defines the effect to associate with
-      * @param defines defines the set of defines used to compile this effect
-      */
-    def setEffect(effect: Nullable[Effect]): Unit = js.native
-    def setEffect(effect: Nullable[Effect], defines: Nullable[MaterialDefines]): Unit = js.native
-  }
-  
-  @js.native
-  class SubMesh protected ()
-    extends BaseSubMesh
-       with ICullable {
+  class SubMesh protected () extends ICullable {
     /**
       * Creates a new submesh
       * @param materialIndex defines the material index to use
@@ -74,6 +40,7 @@ object subMeshMod extends js.Object {
       * @param mesh defines the parent mesh
       * @param renderingMesh defines an optional rendering mesh
       * @param createBoundingBox defines if bounding box should be created for this submesh
+      * @param addToMesh defines a boolean indicating that the submesh must be added to the mesh.subMeshes array (true by default)
       */
     def this(
       /** the material index to use */
@@ -132,12 +99,78 @@ object subMeshMod extends js.Object {
       renderingMesh: Mesh,
       createBoundingBox: Boolean
     ) = this()
+    def this(
+      /** the material index to use */
+    materialIndex: Double,
+      /** vertex index start */
+    verticesStart: Double,
+      /** vertices count */
+    verticesCount: Double,
+      /** index start */
+    indexStart: Double,
+      /** indices count */
+    indexCount: Double,
+      mesh: AbstractMesh,
+      renderingMesh: js.UndefOr[scala.Nothing],
+      createBoundingBox: js.UndefOr[scala.Nothing],
+      addToMesh: Boolean
+    ) = this()
+    def this(
+      /** the material index to use */
+    materialIndex: Double,
+      /** vertex index start */
+    verticesStart: Double,
+      /** vertices count */
+    verticesCount: Double,
+      /** index start */
+    indexStart: Double,
+      /** indices count */
+    indexCount: Double,
+      mesh: AbstractMesh,
+      renderingMesh: js.UndefOr[scala.Nothing],
+      createBoundingBox: Boolean,
+      addToMesh: Boolean
+    ) = this()
+    def this(
+      /** the material index to use */
+    materialIndex: Double,
+      /** vertex index start */
+    verticesStart: Double,
+      /** vertices count */
+    verticesCount: Double,
+      /** index start */
+    indexStart: Double,
+      /** indices count */
+    indexCount: Double,
+      mesh: AbstractMesh,
+      renderingMesh: Mesh,
+      createBoundingBox: js.UndefOr[scala.Nothing],
+      addToMesh: Boolean
+    ) = this()
+    def this(
+      /** the material index to use */
+    materialIndex: Double,
+      /** vertex index start */
+    verticesStart: Double,
+      /** vertices count */
+    verticesCount: Double,
+      /** index start */
+    indexStart: Double,
+      /** indices count */
+    indexCount: Double,
+      mesh: AbstractMesh,
+      renderingMesh: Mesh,
+      createBoundingBox: Boolean,
+      addToMesh: Boolean
+    ) = this()
     
     /**
       * Returns true if this submesh covers the entire parent mesh
       * @ignorenaming
       */
     def IsGlobal: Boolean = js.native
+    
+    var _IsMultiMaterial: js.Any = js.native
     
     /** @hidden */
     var _alphaIndex: Double = js.native
@@ -151,6 +184,9 @@ object subMeshMod extends js.Object {
     
     /** @hidden */
     var _distanceToCamera: Double = js.native
+    
+    /** @hidden */
+    var _effectOverride: Nullable[Effect] = js.native
     
     /**
       * @hidden
@@ -182,6 +218,12 @@ object subMeshMod extends js.Object {
     
     /** @hidden */
     var _linesIndexCount: Double = js.native
+    
+    /** @hidden */
+    var _materialDefines: Nullable[MaterialDefines] = js.native
+    
+    /** @hidden */
+    var _materialEffect: Nullable[Effect] = js.native
     
     var _mesh: js.Any = js.native
     
@@ -218,6 +260,11 @@ object subMeshMod extends js.Object {
     def dispose(): Unit = js.native
     
     /**
+      * Gets associated effect
+      */
+    def effect: Nullable[Effect] = js.native
+    
+    /**
       * Returns the submesh BoudingInfo object
       * @returns current bounding info (or mesh's one if the submesh is global)
       */
@@ -228,6 +275,12 @@ object subMeshMod extends js.Object {
       * @returns the string "SubMesh".
       */
     def getClassName(): String = js.native
+    
+    /**
+      * Returns the effective mesh of the submesh
+      * @returns the effective mesh (could be different from parent mesh)
+      */
+    def getEffectiveMesh(): AbstractMesh = js.native
     
     /**
       * Returns the submesh material
@@ -247,6 +300,12 @@ object subMeshMod extends js.Object {
       */
     def getRenderingMesh(): Mesh = js.native
     
+    /**
+      * Returns the replacement mesh of the submesh
+      * @returns the replacement mesh (could be different from parent mesh)
+      */
+    def getReplacementMesh(): Nullable[AbstractMesh] = js.native
+    
     /** indices count */
     var indexCount: Double = js.native
     
@@ -258,7 +317,7 @@ object subMeshMod extends js.Object {
       * @param ray defines the ray to test
       * @param positions defines mesh's positions array
       * @param indices defines mesh's indices array
-      * @param fastCheck defines if only bounding info should be used
+      * @param fastCheck defines if the first intersection will be used (and not the closest)
       * @param trianglePredicate defines an optional predicate used to select faces when a mesh intersection is detected
       * @returns intersection info or null if no intersection
       */
@@ -278,6 +337,15 @@ object subMeshMod extends js.Object {
       fastCheck: Boolean,
       trianglePredicate: TrianglePickingPredicate
     ): Nullable[IntersectionInfo] = js.native
+    
+    /**
+      * Gets material defines used by the effect associated to the sub mesh
+      */
+    def materialDefines: Nullable[MaterialDefines] = js.native
+    /**
+      * Sets material defines used by the effect associated to the sub mesh
+      */
+    def materialDefines_=(defines: Nullable[MaterialDefines]): Unit = js.native
     
     /** the material index to use */
     var materialIndex: Double = js.native
@@ -303,6 +371,14 @@ object subMeshMod extends js.Object {
       * @returns the SubMesh
       */
     def setBoundingInfo(boundingInfo: BoundingInfo): SubMesh = js.native
+    
+    /**
+      * Sets associated effect (effect used to render this submesh)
+      * @param effect defines the effect to associate with
+      * @param defines defines the set of defines used to compile this effect
+      */
+    def setEffect(effect: Nullable[Effect]): Unit = js.native
+    def setEffect(effect: Nullable[Effect], defines: Nullable[MaterialDefines]): Unit = js.native
     
     /**
       * Updates the submesh BoundingInfo

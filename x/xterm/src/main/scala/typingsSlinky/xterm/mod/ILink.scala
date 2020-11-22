@@ -26,6 +26,11 @@ trait ILink extends js.Object {
   var decorations: js.UndefOr[ILinkDecorations] = js.native
   
   /**
+    * Called when the link is released and no longer used by xterm.js.
+    */
+  var dispose: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  /**
     * Called when the mouse hovers the link. To use this to create a DOM-based hover tooltip,
     * create the hover element within `Terminal.element` and add the `xterm-hover` class to it,
     * that will cause mouse events to not fall through and activate other links.
@@ -88,6 +93,12 @@ object ILink {
     
     @scala.inline
     def deleteDecorations: Self = this.set("decorations", js.undefined)
+    
+    @scala.inline
+    def setDispose(value: () => Unit): Self = this.set("dispose", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteDispose: Self = this.set("dispose", js.undefined)
     
     @scala.inline
     def setHover(value: (/* event */ MouseEvent, /* text */ String) => Unit): Self = this.set("hover", js.Any.fromFunction2(value))

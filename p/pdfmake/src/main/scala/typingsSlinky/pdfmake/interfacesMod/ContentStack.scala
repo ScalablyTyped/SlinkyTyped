@@ -10,6 +10,9 @@ trait ContentStack
      with _Content {
   
   var stack: js.Array[Content] = js.native
+  
+  /** if true, ensures that the contents of the stack are always on the same page */
+  var unbreakable: js.UndefOr[Boolean] = js.native
 }
 object ContentStack {
   
@@ -39,5 +42,11 @@ object ContentStack {
     
     @scala.inline
     def setStack(value: js.Array[Content]): Self = this.set("stack", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUnbreakable(value: Boolean): Self = this.set("unbreakable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnbreakable: Self = this.set("unbreakable", js.undefined)
   }
 }

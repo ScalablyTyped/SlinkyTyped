@@ -17,6 +17,8 @@ object PivotTools extends js.Object {
   
   var _PivotCached: js.Any = js.native
   
+  var _PivotPostMultiplyPivotMatrix: js.Any = js.native
+  
   var _PivotTmpVector: js.Any = js.native
   
   var _PivotTranslation: js.Any = js.native

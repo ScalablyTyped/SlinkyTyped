@@ -38,7 +38,7 @@ trait GlobalReplicationGroup extends js.Object {
   var Engine: js.UndefOr[String] = js.native
   
   /**
-    * The Elasticache Redis engine version. For preview, it is Redis version 5.0.5 only.
+    * The Elasticache Redis engine version.
     */
   var EngineVersion: js.UndefOr[String] = js.native
   

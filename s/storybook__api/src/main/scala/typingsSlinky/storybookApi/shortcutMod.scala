@@ -1,5 +1,6 @@
 package typingsSlinky.storybookApi
 
+import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.storybookApi.shortcutsMod.Event
 import typingsSlinky.storybookApi.shortcutsMod.KeyCollection
 import typingsSlinky.storybookApi.storybookApiStrings.Optionkey
@@ -22,7 +23,7 @@ object shortcutMod extends js.Object {
   
   def eventMatchesShortcut(e: Event, shortcut: KeyCollection): Boolean = js.native
   
-  def eventToShortcut(e: Event): KeyCollection = js.native
+  def eventToShortcut(e: KeyboardEvent): KeyCollection | Null = js.native
   
   def isMacLike(): Boolean = js.native
   

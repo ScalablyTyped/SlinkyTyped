@@ -1,9 +1,9 @@
 package typingsSlinky.uifabricFoundation.libIslotsMod
 
 import slinky.core.ReactComponentClass
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.std.ReturnType
 import typingsSlinky.uifabricMergeStyles.istyleMod.IStyle
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

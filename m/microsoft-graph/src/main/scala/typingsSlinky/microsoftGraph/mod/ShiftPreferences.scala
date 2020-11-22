@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ShiftPreferences extends ChangeTrackedEntity {
   
   // Availability of the user to be scheduled for work and its recurrence pattern.
-  var availability: js.UndefOr[js.Array[ShiftAvailability]] = js.native
+  var availability: js.UndefOr[NullableOption[js.Array[ShiftAvailability]]] = js.native
 }
 object ShiftPreferences {
   
@@ -37,9 +37,12 @@ object ShiftPreferences {
     def setAvailabilityVarargs(value: ShiftAvailability*): Self = this.set("availability", js.Array(value :_*))
     
     @scala.inline
-    def setAvailability(value: js.Array[ShiftAvailability]): Self = this.set("availability", value.asInstanceOf[js.Any])
+    def setAvailability(value: NullableOption[js.Array[ShiftAvailability]]): Self = this.set("availability", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAvailability: Self = this.set("availability", js.undefined)
+    
+    @scala.inline
+    def setAvailabilityNull: Self = this.set("availability", null)
   }
 }

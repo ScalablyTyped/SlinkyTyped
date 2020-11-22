@@ -10,6 +10,10 @@ package object cloudhsmv2Mod {
   
   type BackupPolicy = typingsSlinky.awsSdk.awsSdkStrings.DEFAULT | java.lang.String
   
+  type BackupRetentionType = typingsSlinky.awsSdk.awsSdkStrings.DAYS | java.lang.String
+  
+  type BackupRetentionValue = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CREATE_IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.READY
@@ -20,6 +24,8 @@ package object cloudhsmv2Mod {
   type BackupState = typingsSlinky.awsSdk.cloudhsmv2Mod._BackupState | java.lang.String
   
   type Backups = js.Array[typingsSlinky.awsSdk.cloudhsmv2Mod.Backup]
+  
+  type BackupsMaxSize = scala.Double
   
   type Boolean = scala.Boolean
   
@@ -44,6 +50,8 @@ package object cloudhsmv2Mod {
   type ClusterState = typingsSlinky.awsSdk.cloudhsmv2Mod._ClusterState | java.lang.String
   
   type Clusters = js.Array[typingsSlinky.awsSdk.cloudhsmv2Mod.Cluster]
+  
+  type ClustersMaxSize = scala.Double
   
   type EniId = java.lang.String
   

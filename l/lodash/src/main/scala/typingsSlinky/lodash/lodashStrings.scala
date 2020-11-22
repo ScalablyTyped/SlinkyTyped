@@ -10,13 +10,7 @@ object lodashStrings {
   def ConformsPredicateObject: ConformsPredicateObject = "ConformsPredicateObject".asInstanceOf[ConformsPredicateObject]
   
   @scala.inline
-  def LoDashExplicitWrapper: LoDashExplicitWrapper = "LoDashExplicitWrapper".asInstanceOf[LoDashExplicitWrapper]
-  
-  @scala.inline
   def LoDashFp: LoDashFp = "LoDashFp".asInstanceOf[LoDashFp]
-  
-  @scala.inline
-  def LoDashImplicitWrapper: LoDashImplicitWrapper = "LoDashImplicitWrapper".asInstanceOf[LoDashImplicitWrapper]
   
   @scala.inline
   def LoDashStatic: LoDashStatic = "LoDashStatic".asInstanceOf[LoDashStatic]
@@ -37,7 +31,13 @@ object lodashStrings {
   def LodashMapValues6x1: LodashMapValues6x1 = "LodashMapValues6x1".asInstanceOf[LodashMapValues6x1]
   
   @scala.inline
-  def PartialDeep: PartialDeep = "PartialDeep".asInstanceOf[PartialDeep]
+  def Object: Object = "Object".asInstanceOf[Object]
+  
+  @scala.inline
+  def ObjectChain: ObjectChain = "ObjectChain".asInstanceOf[ObjectChain]
+  
+  @scala.inline
+  def PartialShallow: PartialShallow = "PartialShallow".asInstanceOf[PartialShallow]
   
   @scala.inline
   def _empty: _empty = "".asInstanceOf[_empty]
@@ -52,13 +52,7 @@ object lodashStrings {
   sealed trait ConformsPredicateObject extends js.Object
   
   @js.native
-  sealed trait LoDashExplicitWrapper extends js.Object
-  
-  @js.native
   sealed trait LoDashFp extends js.Object
-  
-  @js.native
-  sealed trait LoDashImplicitWrapper extends js.Object
   
   @js.native
   sealed trait LoDashStatic extends js.Object
@@ -79,7 +73,13 @@ object lodashStrings {
   sealed trait LodashMapValues6x1 extends js.Object
   
   @js.native
-  sealed trait PartialDeep extends js.Object
+  sealed trait Object extends js.Object
+  
+  @js.native
+  sealed trait ObjectChain extends js.Object
+  
+  @js.native
+  sealed trait PartialShallow extends js.Object
   
   @js.native
   sealed trait _empty extends js.Object

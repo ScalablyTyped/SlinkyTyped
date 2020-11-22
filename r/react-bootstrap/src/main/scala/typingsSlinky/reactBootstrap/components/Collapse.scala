@@ -35,6 +35,9 @@ object Collapse {
     def in(value: Boolean): this.type = set("in", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def mountOnEnter(value: Boolean): this.type = set("mountOnEnter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def onEnter(value: /* node */ HTMLElement => _): this.type = set("onEnter", js.Any.fromFunction1(value))
     
     @scala.inline

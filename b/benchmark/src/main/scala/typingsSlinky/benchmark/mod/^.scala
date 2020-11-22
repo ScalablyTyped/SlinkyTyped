@@ -21,14 +21,10 @@ class ^ protected () extends Benchmark {
 @js.native
 object ^ extends js.Object {
   
-  def deepClone[T](value: T): T = js.native
-  
   def each(obj: js.Array[_], callback: js.Function): Unit = js.native
   def each(obj: js.Array[_], callback: js.Function, thisArg: js.Any): Unit = js.native
   def each(obj: js.Object, callback: js.Function): Unit = js.native
   def each(obj: js.Object, callback: js.Function, thisArg: js.Any): Unit = js.native
-  
-  def extend(destination: js.Object, sources: js.Object*): js.Object = js.native
   
   def filter[T](arr: js.Array[T], callback: js.Function1[/* value */ T, _]): js.Array[T] = js.native
   def filter[T](arr: js.Array[T], callback: js.Function1[/* value */ T, _], thisArg: js.Any): js.Array[T] = js.native
@@ -43,12 +39,11 @@ object ^ extends js.Object {
   
   def formatNumber(num: Double): String = js.native
   
-  def hasKey(obj: js.Object, key: String): Boolean = js.native
+  def has(obj: js.Object, path: String): Boolean = js.native
+  def has(obj: js.Object, path: js.Array[_]): Boolean = js.native
   
   def indexOf[T](arr: js.Array[T], value: T): Double = js.native
   def indexOf[T](arr: js.Array[T], value: T, fromIndex: Double): Double = js.native
-  
-  def interpolate(template: String, values: js.Object): String = js.native
   
   def invoke(benches: js.Array[Benchmark], name: String, args: js.Any*): js.Array[_] = js.native
   def invoke(benches: js.Array[Benchmark], name: js.Object, args: js.Any*): js.Array[_] = js.native
@@ -65,10 +60,10 @@ object ^ extends js.Object {
   
   var platform: Platform = js.native
   
-  def pluck[T, K](arr: js.Array[T], key: String): js.Array[K] = js.native
-  
   def reduce[T, K](arr: js.Array[T], callback: js.Function2[/* accumulator */ K, /* value */ T, K]): K = js.native
   def reduce[T, K](arr: js.Array[T], callback: js.Function2[/* accumulator */ K, /* value */ T, K], thisArg: js.Any): K = js.native
+  
+  def runInContext(context: js.Object): js.Function = js.native
   
   var support: Support = js.native
   

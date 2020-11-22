@@ -19,7 +19,7 @@ trait SubstituteDateTimeFormatOptions extends Object {
   var intlOptions: DateTimeFormatOptions = js.native
   
   /**
-    * The type of this format. The value is always `"date"`.
+    * The type of this format.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-intl.html#SubstituteDateTimeFormatOptions)
     */

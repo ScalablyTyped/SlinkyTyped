@@ -35,15 +35,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDataGridOptions extends GridBaseOptions[dxDataGrid] {
   
-  /** @name dxDataGrid.Options.columns */
+  /**
+    * [descr:dxDataGrid.Options.columns]
+    */
   @JSName("columns")
   var columns_dxDataGridOptions: js.UndefOr[js.Array[dxDataGridColumn | String]] = js.native
   
-  /** @name dxDataGrid.Options.customizeColumns */
+  /**
+    * [descr:dxDataGrid.Options.customizeColumns]
+    */
   var customizeColumns: js.UndefOr[js.Function1[/* columns */ js.Array[dxDataGridColumn], _]] = js.native
   
-  /** @deprecated */
-  /** @name dxDataGrid.Options.customizeExportData */
+  /**
+    * [descr:dxDataGrid.Options.customizeExportData]
+    * @deprecated [depNote:dxDataGrid.Options.customizeExportData]
+    */
   var customizeExportData: js.UndefOr[
     js.Function2[
       /* columns */ js.Array[dxDataGridColumn], 
@@ -52,104 +58,166 @@ trait dxDataGridOptions extends GridBaseOptions[dxDataGrid] {
     ]
   ] = js.native
   
-  /** @name dxDataGrid.Options.editing */
+  /**
+    * [descr:dxDataGrid.Options.editing]
+    */
   @JSName("editing")
   var editing_dxDataGridOptions: js.UndefOr[dxDataGridEditing] = js.native
   
-  /** @name dxDataGrid.Options.export */
+  /**
+    * [descr:dxDataGrid.Options.export]
+    */
   var export: js.UndefOr[AllowExportSelectedData] = js.native
   
-  /** @name dxDataGrid.Options.groupPanel */
+  /**
+    * [descr:dxDataGrid.Options.groupPanel]
+    */
   var groupPanel: js.UndefOr[AllowColumnDragging] = js.native
   
-  /** @name dxDataGrid.Options.grouping */
+  /**
+    * [descr:dxDataGrid.Options.grouping]
+    */
   var grouping: js.UndefOr[AllowCollapsing] = js.native
   
-  /** @name dxDataGrid.Options.keyExpr */
+  /**
+    * [descr:dxDataGrid.Options.keyExpr]
+    */
   var keyExpr: js.UndefOr[String | js.Array[String]] = js.native
   
-  /** @name dxDataGrid.Options.masterDetail */
+  /**
+    * [descr:dxDataGrid.Options.masterDetail]
+    */
   var masterDetail: js.UndefOr[AutoExpandAll] = js.native
   
-  /** @name dxDataGrid.Options.onCellClick */
+  /**
+    * [descr:dxDataGrid.Options.onCellClick]
+    */
   var onCellClick: js.UndefOr[(js.Function1[/* e */ CellElement, _]) | String] = js.native
   
-  /** @name dxDataGrid.Options.onCellDblClick */
+  /**
+    * [descr:dxDataGrid.Options.onCellDblClick]
+    */
   var onCellDblClick: js.UndefOr[js.Function1[/* e */ ColumnIndex, _]] = js.native
   
-  /** @name dxDataGrid.Options.onCellHoverChanged */
+  /**
+    * [descr:dxDataGrid.Options.onCellHoverChanged]
+    */
   var onCellHoverChanged: js.UndefOr[js.Function1[/* e */ DisplayValue, _]] = js.native
   
-  /** @name dxDataGrid.Options.onCellPrepared */
+  /**
+    * [descr:dxDataGrid.Options.onCellPrepared]
+    */
   var onCellPrepared: js.UndefOr[js.Function1[/* e */ IsExpanded, _]] = js.native
   
-  /** @name dxDataGrid.Options.onContextMenuPreparing */
+  /**
+    * [descr:dxDataGrid.Options.onContextMenuPreparing]
+    */
   var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ Items, _]] = js.native
   
-  /** @name dxDataGrid.Options.onEditingStart */
+  /**
+    * [descr:dxDataGrid.Options.onEditingStart]
+    */
   var onEditingStart: js.UndefOr[js.Function1[/* e */ CancelColumn, _]] = js.native
   
-  /** @name dxDataGrid.Options.onEditorPrepared */
+  /**
+    * [descr:dxDataGrid.Options.onEditorPrepared]
+    */
   var onEditorPrepared: js.UndefOr[js.Function1[/* options */ DataField, _]] = js.native
   
-  /** @name dxDataGrid.Options.onEditorPreparing */
+  /**
+    * [descr:dxDataGrid.Options.onEditorPreparing]
+    */
   var onEditorPreparing: js.UndefOr[js.Function1[/* e */ Disabled, _]] = js.native
   
-  /** @deprecated */
-  /** @name dxDataGrid.Options.onExported */
+  /**
+    * [descr:dxDataGrid.Options.onExported]
+    * @deprecated [depNote:dxDataGrid.Options.onExported]
+    */
   var onExported: js.UndefOr[js.Function1[/* e */ `0`, _]] = js.native
   
-  /** @name dxDataGrid.Options.onExporting */
+  /**
+    * [descr:dxDataGrid.Options.onExporting]
+    */
   var onExporting: js.UndefOr[js.Function1[/* e */ ElementFileName, _]] = js.native
   
-  /** @deprecated */
-  /** @name dxDataGrid.Options.onFileSaving */
+  /**
+    * [descr:dxDataGrid.Options.onFileSaving]
+    * @deprecated [depNote:dxDataGrid.Options.onFileSaving]
+    */
   var onFileSaving: js.UndefOr[js.Function1[/* e */ Format, _]] = js.native
   
-  /** @name dxDataGrid.Options.onFocusedCellChanged */
+  /**
+    * [descr:dxDataGrid.Options.onFocusedCellChanged]
+    */
   var onFocusedCellChanged: js.UndefOr[js.Function1[/* e */ Row, _]] = js.native
   
-  /** @name dxDataGrid.Options.onFocusedCellChanging */
+  /**
+    * [descr:dxDataGrid.Options.onFocusedCellChanging]
+    */
   var onFocusedCellChanging: js.UndefOr[js.Function1[/* e */ Columns, _]] = js.native
   
-  /** @name dxDataGrid.Options.onFocusedRowChanged */
+  /**
+    * [descr:dxDataGrid.Options.onFocusedRowChanged]
+    */
   var onFocusedRowChanged: js.UndefOr[js.Function1[/* e */ RowElement, _]] = js.native
   
-  /** @name dxDataGrid.Options.onFocusedRowChanging */
+  /**
+    * [descr:dxDataGrid.Options.onFocusedRowChanging]
+    */
   var onFocusedRowChanging: js.UndefOr[js.Function1[/* e */ NewRowIndex, _]] = js.native
   
-  /** @name dxDataGrid.Options.onRowClick */
+  /**
+    * [descr:dxDataGrid.Options.onRowClick]
+    */
   var onRowClick: js.UndefOr[(js.Function1[/* e */ GroupIndex, _]) | String] = js.native
   
-  /** @name dxDataGrid.Options.onRowDblClick */
+  /**
+    * [descr:dxDataGrid.Options.onRowDblClick]
+    */
   var onRowDblClick: js.UndefOr[js.Function1[/* e */ IsNewRow, _]] = js.native
   
-  /** @name dxDataGrid.Options.onRowPrepared */
+  /**
+    * [descr:dxDataGrid.Options.onRowPrepared]
+    */
   var onRowPrepared: js.UndefOr[js.Function1[/* e */ IsSelected, _]] = js.native
   
-  /** @name dxDataGrid.Options.remoteOperations */
+  /**
+    * [descr:dxDataGrid.Options.remoteOperations]
+    */
   var remoteOperations: js.UndefOr[Boolean | Filtering | auto] = js.native
   
-  /** @name dxDataGrid.Options.rowTemplate */
+  /**
+    * [descr:dxDataGrid.Options.rowTemplate]
+    */
   var rowTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* rowElement */ dxElement, /* rowInfo */ js.Any, _])
   ] = js.native
   
-  /** @name dxDataGrid.Options.scrolling */
+  /**
+    * [descr:dxDataGrid.Options.scrolling]
+    */
   @JSName("scrolling")
   var scrolling_dxDataGridOptions: js.UndefOr[dxDataGridScrolling] = js.native
   
-  /** @name dxDataGrid.Options.selectionFilter */
+  /**
+    * [descr:dxDataGrid.Options.selectionFilter]
+    */
   var selectionFilter: js.UndefOr[String | js.Array[_] | js.Function] = js.native
   
-  /** @name dxDataGrid.Options.selection */
+  /**
+    * [descr:dxDataGrid.Options.selection]
+    */
   @JSName("selection")
   var selection_dxDataGridOptions: js.UndefOr[dxDataGridSelection] = js.native
   
-  /** @name dxDataGrid.Options.sortByGroupSummaryInfo */
+  /**
+    * [descr:dxDataGrid.Options.sortByGroupSummaryInfo]
+    */
   var sortByGroupSummaryInfo: js.UndefOr[js.Array[GroupColumn]] = js.native
   
-  /** @name dxDataGrid.Options.summary */
+  /**
+    * [descr:dxDataGrid.Options.summary]
+    */
   var summary: js.UndefOr[CalculateCustomSummary] = js.native
 }
 object dxDataGridOptions {

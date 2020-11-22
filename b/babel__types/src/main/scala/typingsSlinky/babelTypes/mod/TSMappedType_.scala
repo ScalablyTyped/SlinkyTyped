@@ -11,6 +11,8 @@ trait TSMappedType_
   extends TSType
      with BaseNode {
   
+  var nameType: TSType | Null = js.native
+  
   var optional: Boolean | Null = js.native
   
   var readonly: Boolean | Null = js.native
@@ -51,6 +53,12 @@ object TSMappedType_ {
     
     @scala.inline
     def setTypeParameter(value: TSTypeParameter_): Self = this.set("typeParameter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNameType(value: TSType): Self = this.set("nameType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNameTypeNull: Self = this.set("nameType", null)
     
     @scala.inline
     def setOptional(value: Boolean): Self = this.set("optional", value.asInstanceOf[js.Any])

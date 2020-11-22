@@ -10,11 +10,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StreamLayerPurgeOptions extends Object {
   
   /**
-    * Controls the maximum age of a feature in minutes. Features older than specified age will be removed.
+    * Specifies the maximum age of a feature in minutes.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-StreamLayer.html#purgeOptions)
     */
   var age: js.UndefOr[Double] = js.native
+  
+  /**
+    * Specifies the maximum age of a feature in minutes since it arrived in the application.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-StreamLayer.html#purgeOptions)
+    */
+  var ageReceived: js.UndefOr[Double] = js.native
   
   /**
     * Controls the overall maximum number of features.
@@ -24,7 +31,7 @@ trait StreamLayerPurgeOptions extends Object {
   var displayCount: js.UndefOr[Double] = js.native
   
   /**
-    * Controls the maximum number of observations to show within a [track](https://enterprise.arcgis.com/en/geoevent/latest/get-started/essential-geoevent-server-vocabulary.htm#ESRI_SECTION1_F45BBCE9ADFA4E57AF38DD225921EFCD). If [trackIdField](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TimeInfo.html#trackIdField) is not configured on the geoevent service, this property will have no effect. The default is 1.
+    * Controls the maximum number of observations to show within a [track](https://enterprise.arcgis.com/en/geoevent/latest/get-started/essential-geoevent-server-vocabulary.htm#ESRI_SECTION1_F45BBCE9ADFA4E57AF38DD225921EFCD).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-StreamLayer.html#purgeOptions)
     */
@@ -62,6 +69,12 @@ object StreamLayerPurgeOptions {
     
     @scala.inline
     def deleteAge: Self = this.set("age", js.undefined)
+    
+    @scala.inline
+    def setAgeReceived(value: Double): Self = this.set("ageReceived", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAgeReceived: Self = this.set("ageReceived", js.undefined)
     
     @scala.inline
     def setDisplayCount(value: Double): Self = this.set("displayCount", value.asInstanceOf[js.Any])

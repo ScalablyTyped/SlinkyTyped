@@ -38,4 +38,9 @@ object types extends js.Object {
   sealed trait TOOL extends types
   /* "tool" */ @js.native
   object TOOL extends TopLevel[TOOL with String]
+  
+  @js.native
+  sealed trait TOOLEXTRA extends types
+  /* "toolextra" */ @js.native
+  object TOOLEXTRA extends TopLevel[TOOLEXTRA with String]
 }

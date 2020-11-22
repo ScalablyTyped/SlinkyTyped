@@ -8,14 +8,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DOMParser extends js.Object {
   
-  def parseFromString(str: java.lang.String, `type`: org.scalajs.dom.experimental.domparser.SupportedType): org.scalajs.dom.raw.Document = js.native
+  /**
+    * Parses string using either the HTML or XML parser, according to type, and returns the resulting Document. type can be "text/html" (which will invoke the HTML parser), or any of "text/xml", "application/xml", "application/xhtml+xml", or "image/svg+xml" (which will invoke the XML parser).
+    * 
+    * For the XML parser, if string cannot be parsed, then the returned Document will contain elements describing the resulting error.
+    * 
+    * Note that script elements are not evaluated during parsing, and the resulting document's encoding will always be UTF-8.
+    * 
+    * Values other than the above for type will cause a TypeError exception to be thrown.
+    */
+  def parseFromString(string: java.lang.String, `type`: DOMParserSupportedType): org.scalajs.dom.raw.Document = js.native
 }
 object DOMParser {
   
   @scala.inline
-  def apply(
-    parseFromString: (java.lang.String, org.scalajs.dom.experimental.domparser.SupportedType) => org.scalajs.dom.raw.Document
-  ): DOMParser = {
+  def apply(parseFromString: (java.lang.String, DOMParserSupportedType) => org.scalajs.dom.raw.Document): DOMParser = {
     val __obj = js.Dynamic.literal(parseFromString = js.Any.fromFunction2(parseFromString))
     __obj.asInstanceOf[DOMParser]
   }
@@ -36,8 +43,6 @@ object DOMParser {
     }
     
     @scala.inline
-    def setParseFromString(
-      value: (java.lang.String, org.scalajs.dom.experimental.domparser.SupportedType) => org.scalajs.dom.raw.Document
-    ): Self = this.set("parseFromString", js.Any.fromFunction2(value))
+    def setParseFromString(value: (java.lang.String, DOMParserSupportedType) => org.scalajs.dom.raw.Document): Self = this.set("parseFromString", js.Any.fromFunction2(value))
   }
 }

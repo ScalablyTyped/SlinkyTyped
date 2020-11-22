@@ -21,6 +21,8 @@ trait FindNodeModuleConfig extends js.Object {
   var resolver: js.UndefOr[Path | Null] = js.native
   
   var rootDir: js.UndefOr[Path] = js.native
+  
+  var throwIfNotFound: js.UndefOr[Boolean] = js.native
 }
 object FindNodeModuleConfig {
   
@@ -95,5 +97,11 @@ object FindNodeModuleConfig {
     
     @scala.inline
     def deleteRootDir: Self = this.set("rootDir", js.undefined)
+    
+    @scala.inline
+    def setThrowIfNotFound(value: Boolean): Self = this.set("throwIfNotFound", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThrowIfNotFound: Self = this.set("throwIfNotFound", js.undefined)
   }
 }

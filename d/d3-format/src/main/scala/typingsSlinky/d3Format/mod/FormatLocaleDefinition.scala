@@ -23,6 +23,16 @@ trait FormatLocaleDefinition extends js.Object {
   var grouping: js.Array[Double] = js.native
   
   /**
+    * Optional; the minus sign (defaults to "−").
+    */
+  var minus: js.UndefOr[String] = js.native
+  
+  /**
+    * Optional; the not-a-number value (defaults "NaN").
+    */
+  var nan: js.UndefOr[String] = js.native
+  
+  /**
     * An optional array of ten strings to replace the numerals 0-9.
     */
   var numerals: js.UndefOr[js.Array[String]] = js.native
@@ -33,7 +43,7 @@ trait FormatLocaleDefinition extends js.Object {
   var percent: js.UndefOr[String] = js.native
   
   /**
-    * The group separator (e.g., ","). Note that the thousands property is a misnomer, as\
+    * The group separator (e.g., ","). Note that the thousands property is a misnomer, as
     * the grouping definition allows groups other than thousands.
     */
   var thousands: String = js.native
@@ -80,6 +90,18 @@ object FormatLocaleDefinition {
     
     @scala.inline
     def setThousands(value: String): Self = this.set("thousands", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMinus(value: String): Self = this.set("minus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMinus: Self = this.set("minus", js.undefined)
+    
+    @scala.inline
+    def setNan(value: String): Self = this.set("nan", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNan: Self = this.set("nan", js.undefined)
     
     @scala.inline
     def setNumeralsVarargs(value: String*): Self = this.set("numerals", js.Array(value :_*))

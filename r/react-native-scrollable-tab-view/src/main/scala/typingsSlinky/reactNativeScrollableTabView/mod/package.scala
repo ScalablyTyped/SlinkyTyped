@@ -12,7 +12,10 @@ package object mod {
     /* isTabActive */ scala.Boolean, 
     /* onPressHandler */ js.Function1[/* pageNumber */ scala.Double, scala.Unit], 
     /* onLayoutHandler */ js.UndefOr[
-      js.Function1[/* event */ typingsSlinky.reactNative.mod.LayoutChangeEvent, scala.Unit]
+      js.Function1[
+        slinky.core.SyntheticEvent[typingsSlinky.reactNative.mod.NodeHandle, typingsSlinky.reactNative.anon.Layout], 
+        scala.Unit
+      ]
     ], 
     slinky.core.facade.ReactElement
   ]

@@ -15,7 +15,7 @@ trait CreateInstanceExportTaskRequest extends js.Object {
   /**
     * The format and location for an instance export task.
     */
-  var ExportToS3Task: js.UndefOr[ExportToS3TaskSpecification] = js.native
+  var ExportToS3Task: ExportToS3TaskSpecification = js.native
   
   /**
     * The ID of the instance.
@@ -30,13 +30,17 @@ trait CreateInstanceExportTaskRequest extends js.Object {
   /**
     * The target virtualization environment.
     */
-  var TargetEnvironment: js.UndefOr[ExportEnvironment] = js.native
+  var TargetEnvironment: ExportEnvironment = js.native
 }
 object CreateInstanceExportTaskRequest {
   
   @scala.inline
-  def apply(InstanceId: InstanceId): CreateInstanceExportTaskRequest = {
-    val __obj = js.Dynamic.literal(InstanceId = InstanceId.asInstanceOf[js.Any])
+  def apply(
+    ExportToS3Task: ExportToS3TaskSpecification,
+    InstanceId: InstanceId,
+    TargetEnvironment: ExportEnvironment
+  ): CreateInstanceExportTaskRequest = {
+    val __obj = js.Dynamic.literal(ExportToS3Task = ExportToS3Task.asInstanceOf[js.Any], InstanceId = InstanceId.asInstanceOf[js.Any], TargetEnvironment = TargetEnvironment.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateInstanceExportTaskRequest]
   }
   
@@ -56,19 +60,19 @@ object CreateInstanceExportTaskRequest {
     }
     
     @scala.inline
+    def setExportToS3Task(value: ExportToS3TaskSpecification): Self = this.set("ExportToS3Task", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setInstanceId(value: InstanceId): Self = this.set("InstanceId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTargetEnvironment(value: ExportEnvironment): Self = this.set("TargetEnvironment", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDescription(value: String): Self = this.set("Description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("Description", js.undefined)
-    
-    @scala.inline
-    def setExportToS3Task(value: ExportToS3TaskSpecification): Self = this.set("ExportToS3Task", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteExportToS3Task: Self = this.set("ExportToS3Task", js.undefined)
     
     @scala.inline
     def setTagSpecificationsVarargs(value: TagSpecification*): Self = this.set("TagSpecifications", js.Array(value :_*))
@@ -78,11 +82,5 @@ object CreateInstanceExportTaskRequest {
     
     @scala.inline
     def deleteTagSpecifications: Self = this.set("TagSpecifications", js.undefined)
-    
-    @scala.inline
-    def setTargetEnvironment(value: ExportEnvironment): Self = this.set("TargetEnvironment", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTargetEnvironment: Self = this.set("TargetEnvironment", js.undefined)
   }
 }

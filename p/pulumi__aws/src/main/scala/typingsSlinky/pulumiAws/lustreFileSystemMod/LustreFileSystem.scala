@@ -29,9 +29,39 @@ class LustreFileSystem protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
+    * How Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket. see [Auto Import Data Repo](https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html) for more details.
+    */
+  val autoImportPolicy: Output_[String] = js.native
+  
+  /**
+    * The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days. only valid for `PERSISTENT_1` deployment_type.
+    */
+  val automaticBackupRetentionDays: Output_[Double] = js.native
+  
+  /**
+    * A boolean flag indicating whether tags for the file system should be copied to backups. Applicable for `PERSISTENT_1` deployment_type. The default value is false.
+    */
+  val copyTagsToBackups: Output_[js.UndefOr[Boolean]] = js.native
+  
+  /**
+    * A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` deployment_type. Requires `automaticBackupRetentionDays` to be set.
+    */
+  val dailyAutomaticBackupStartTime: Output_[String] = js.native
+  
+  /**
+    * - The filesystem deployment type. One of: `SCRATCH_1`, `SCRATCH_2`, `PERSISTENT_1`.
+    */
+  val deploymentType: Output_[js.UndefOr[String]] = js.native
+  
+  /**
     * DNS name for the file system, e.g. `fs-12345678.fsx.us-west-2.amazonaws.com`
     */
   val dnsName: Output_[String] = js.native
+  
+  /**
+    * - The type of drive cache used by `PERSISTENT_1` filesystems that are provisioned with `HDD` storage_type. Required for `HDD` storage_type, set to either `READ` or `NONE`.
+    */
+  val driveCacheType: Output_[js.UndefOr[String]] = js.native
   
   /**
     * S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with `importPath` argument and the path must use the same Amazon S3 bucket as specified in `importPath`. Set equal to `importPath` to overwrite files on export. Defaults to `s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}`.
@@ -49,7 +79,17 @@ class LustreFileSystem protected () extends CustomResource {
   val importedFileChunkSize: Output_[Double] = js.native
   
   /**
-    * Set of Elastic Network Interface identifiers from which the file system is accessible.
+    * ARN for the KMS Key to encrypt the file system at rest, applicable for `PERSISTENT_1` deployment_type. Defaults to an AWS managed KMS Key.
+    */
+  val kmsKeyId: Output_[String] = js.native
+  
+  /**
+    * The value to be used when mounting the filesystem.
+    */
+  val mountName: Output_[String] = js.native
+  
+  /**
+    * Set of Elastic Network Interface identifiers from which the file system is accessible. As explained in the [documentation](https://docs.aws.amazon.com/fsx/latest/LustreGuide/mounting-on-premises.html), the first network interface returned is the primary network interface.
     */
   val networkInterfaceIds: Output_[js.Array[String]] = js.native
   
@@ -57,6 +97,11 @@ class LustreFileSystem protected () extends CustomResource {
     * AWS account identifier that created the file system.
     */
   val ownerId: Output_[String] = js.native
+  
+  /**
+    * - Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the `PERSISTENT_1` deployment_type. Valid values for `SSD` storageType are 50, 100, 200. Valid values for `HDD` storageType are 12, 40.
+    */
+  val perUnitStorageThroughput: Output_[js.UndefOr[Double]] = js.native
   
   /**
     * A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
@@ -67,6 +112,11 @@ class LustreFileSystem protected () extends CustomResource {
     * The storage capacity (GiB) of the file system. Minimum of `1200`. Storage capacity is provisioned in increments of 3,600 GiB.
     */
   val storageCapacity: Output_[Double] = js.native
+  
+  /**
+    * - The filesystem storage type. Either `SSD` or `HDD`, defaults to `SSD`. `HDD` is only supported on `PERSISTENT_1` deployment types.
+    */
+  val storageType: Output_[js.UndefOr[String]] = js.native
   
   /**
     * A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet's Availability Zone.

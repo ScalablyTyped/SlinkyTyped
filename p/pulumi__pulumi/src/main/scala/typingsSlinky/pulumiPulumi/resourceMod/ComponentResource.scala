@@ -20,11 +20,28 @@ class ComponentResource[TData] protected () extends Resource {
     * @param name The _unique_ name of the resource.
     * @param args Information passed to [initialize] method.
     * @param opts A bag of options that control this resource's behavior.
+    * @param remote True if this is a remote component resource.
     */
   def this(`type`: String, name: String) = this()
   def this(`type`: String, name: String, args: Inputs) = this()
   def this(`type`: String, name: String, args: js.UndefOr[scala.Nothing], opts: ComponentResourceOptions) = this()
   def this(`type`: String, name: String, args: Inputs, opts: ComponentResourceOptions) = this()
+  def this(
+    `type`: String,
+    name: String,
+    args: js.UndefOr[scala.Nothing],
+    opts: js.UndefOr[scala.Nothing],
+    remote: Boolean
+  ) = this()
+  def this(
+    `type`: String,
+    name: String,
+    args: js.UndefOr[scala.Nothing],
+    opts: ComponentResourceOptions,
+    remote: Boolean
+  ) = this()
+  def this(`type`: String, name: String, args: Inputs, opts: js.UndefOr[scala.Nothing], remote: Boolean) = this()
+  def this(`type`: String, name: String, args: Inputs, opts: ComponentResourceOptions, remote: Boolean) = this()
   
   /**
     * Retrieves the data produces by [initialize].  The data is immediately available in a

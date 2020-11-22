@@ -18,7 +18,37 @@ package object securityhubMod {
   
   type AvailabilityZones = js.Array[typingsSlinky.awsSdk.securityhubMod.AvailabilityZone]
   
+  type AwsApiGatewayMethodSettingsList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsApiGatewayMethodSettings]
+  
+  type AwsCertificateManagerCertificateDomainValidationOptions = js.Array[
+    typingsSlinky.awsSdk.securityhubMod.AwsCertificateManagerCertificateDomainValidationOption
+  ]
+  
+  type AwsCertificateManagerCertificateExtendedKeyUsages = js.Array[
+    typingsSlinky.awsSdk.securityhubMod.AwsCertificateManagerCertificateExtendedKeyUsage
+  ]
+  
+  type AwsCertificateManagerCertificateKeyUsages = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsCertificateManagerCertificateKeyUsage]
+  
+  type AwsCloudFrontDistributionCacheBehaviorsItemList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsCloudFrontDistributionCacheBehavior]
+  
+  type AwsCloudFrontDistributionOriginGroupFailoverStatusCodesItemList = js.Array[typingsSlinky.awsSdk.securityhubMod.Integer]
+  
+  type AwsCloudFrontDistributionOriginGroupsItemList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsCloudFrontDistributionOriginGroup]
+  
   type AwsCloudFrontDistributionOriginItemList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsCloudFrontDistributionOriginItem]
+  
+  type AwsDynamoDbTableAttributeDefinitionList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsDynamoDbTableAttributeDefinition]
+  
+  type AwsDynamoDbTableGlobalSecondaryIndexList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsDynamoDbTableGlobalSecondaryIndex]
+  
+  type AwsDynamoDbTableKeySchemaList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsDynamoDbTableKeySchema]
+  
+  type AwsDynamoDbTableLocalSecondaryIndexList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsDynamoDbTableLocalSecondaryIndex]
+  
+  type AwsDynamoDbTableReplicaGlobalSecondaryIndexList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsDynamoDbTableReplicaGlobalSecondaryIndex]
+  
+  type AwsDynamoDbTableReplicaList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsDynamoDbTableReplica]
   
   type AwsEc2NetworkInterfaceSecurityGroupList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsEc2NetworkInterfaceSecurityGroup]
   
@@ -34,6 +64,16 @@ package object securityhubMod {
   
   type AwsEc2VolumeAttachmentList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsEc2VolumeAttachment]
   
+  type AwsElbAppCookieStickinessPolicies = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsElbAppCookieStickinessPolicy]
+  
+  type AwsElbLbCookieStickinessPolicies = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsElbLbCookieStickinessPolicy]
+  
+  type AwsElbLoadBalancerBackendServerDescriptions = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsElbLoadBalancerBackendServerDescription]
+  
+  type AwsElbLoadBalancerInstances = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsElbLoadBalancerInstance]
+  
+  type AwsElbLoadBalancerListenerDescriptions = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsElbLoadBalancerListenerDescription]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Active_
     - typingsSlinky.awsSdk.awsSdkStrings.Inactive_
@@ -41,15 +81,61 @@ package object securityhubMod {
   */
   type AwsIamAccessKeyStatus = typingsSlinky.awsSdk.securityhubMod._AwsIamAccessKeyStatus | java.lang.String
   
+  type AwsIamAttachedManagedPolicyList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsIamAttachedManagedPolicy]
+  
+  type AwsIamGroupPolicyList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsIamGroupPolicy]
+  
+  type AwsIamInstanceProfileList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsIamInstanceProfile]
+  
+  type AwsIamInstanceProfileRoles = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsIamInstanceProfileRole]
+  
+  type AwsIamPolicyVersionList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsIamPolicyVersion]
+  
   type AwsIamRoleAssumeRolePolicyDocument = java.lang.String
+  
+  type AwsIamRolePolicyList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsIamRolePolicy]
+  
+  type AwsIamUserPolicyList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsIamUserPolicy]
   
   type AwsLambdaFunctionLayerList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsLambdaFunctionLayer]
   
   type AwsLambdaLayerVersionNumber = scala.Double
   
+  type AwsRdsDbClusterAssociatedRoles = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbClusterAssociatedRole]
+  
+  type AwsRdsDbClusterMembers = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbClusterMember]
+  
+  type AwsRdsDbClusterOptionGroupMemberships = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbClusterOptionGroupMembership]
+  
+  type AwsRdsDbDomainMemberships = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbDomainMembership]
+  
   type AwsRdsDbInstanceAssociatedRoles = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbInstanceAssociatedRole]
   
   type AwsRdsDbInstanceVpcSecurityGroups = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbInstanceVpcSecurityGroup]
+  
+  type AwsRdsDbOptionGroupMemberships = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbOptionGroupMembership]
+  
+  type AwsRdsDbParameterGroups = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbParameterGroup]
+  
+  type AwsRdsDbProcessorFeatures = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbProcessorFeature]
+  
+  type AwsRdsDbStatusInfos = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbStatusInfo]
+  
+  type AwsRdsDbSubnetGroupSubnets = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRdsDbSubnetGroupSubnet]
+  
+  type AwsRedshiftClusterClusterNodes = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRedshiftClusterClusterNode]
+  
+  type AwsRedshiftClusterClusterParameterGroups = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRedshiftClusterClusterParameterGroup]
+  
+  type AwsRedshiftClusterClusterParameterStatusList = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRedshiftClusterClusterParameterStatus]
+  
+  type AwsRedshiftClusterClusterSecurityGroups = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRedshiftClusterClusterSecurityGroup]
+  
+  type AwsRedshiftClusterDeferredMaintenanceWindows = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRedshiftClusterDeferredMaintenanceWindow]
+  
+  type AwsRedshiftClusterIamRoles = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRedshiftClusterIamRole]
+  
+  type AwsRedshiftClusterVpcSecurityGroups = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsRedshiftClusterVpcSecurityGroup]
   
   type AwsS3BucketServerSideEncryptionRules = js.Array[typingsSlinky.awsSdk.securityhubMod.AwsS3BucketServerSideEncryptionRule]
   
@@ -122,6 +208,8 @@ package object securityhubMod {
   
   type KeywordFilterList = js.Array[typingsSlinky.awsSdk.securityhubMod.KeywordFilter]
   
+  type Long = scala.Double
+  
   type MalwareList = js.Array[typingsSlinky.awsSdk.securityhubMod.Malware]
   
   /* Rewritten from type alias, can be one of: 
@@ -152,7 +240,12 @@ package object securityhubMod {
   */
   type MalwareType = typingsSlinky.awsSdk.securityhubMod._MalwareType | java.lang.String
   
-  type MapFilterComparison = typingsSlinky.awsSdk.awsSdkStrings.EQUALS | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.EQUALS
+    - typingsSlinky.awsSdk.awsSdkStrings.NOT_EQUALS
+    - java.lang.String
+  */
+  type MapFilterComparison = typingsSlinky.awsSdk.securityhubMod._MapFilterComparison | java.lang.String
   
   type MapFilterList = js.Array[typingsSlinky.awsSdk.securityhubMod.MapFilter]
   
@@ -231,6 +324,8 @@ package object securityhubMod {
   */
   type SeverityRating = typingsSlinky.awsSdk.securityhubMod._SeverityRating | java.lang.String
   
+  type SizeBytes = scala.Double
+  
   type SoftwarePackageList = js.Array[typingsSlinky.awsSdk.securityhubMod.SoftwarePackage]
   
   type SortCriteria = js.Array[typingsSlinky.awsSdk.securityhubMod.SortCriterion]
@@ -269,6 +364,8 @@ package object securityhubMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EQUALS
     - typingsSlinky.awsSdk.awsSdkStrings.PREFIX
+    - typingsSlinky.awsSdk.awsSdkStrings.NOT_EQUALS
+    - typingsSlinky.awsSdk.awsSdkStrings.PREFIX_NOT_EQUALS
     - java.lang.String
   */
   type StringFilterComparison = typingsSlinky.awsSdk.securityhubMod._StringFilterComparison | java.lang.String

@@ -16,7 +16,7 @@ trait GridAreaProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Ob
     */
   var gridArea: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAreaProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridArea */ _, 
       ThemeType
     ]
   ] = js.native
@@ -50,7 +50,7 @@ object GridAreaProps {
     @scala.inline
     def setGridArea(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAreaProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridArea */ _, 
           ThemeType
         ]
     ): Self = this.set("gridArea", value.asInstanceOf[js.Any])

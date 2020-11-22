@@ -2,9 +2,8 @@ package typingsSlinky.antd.avatarAvatarMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.circle
-import typingsSlinky.antd.antdStrings.large
-import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.antdStrings.square
+import typingsSlinky.antd.sizeContextMod.AvatarSize
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,10 +32,10 @@ trait AvatarProps extends js.Object {
   /** Shape of avatar, options:`circle`, `square` */
   var shape: js.UndefOr[circle | square] = js.native
   
-  var size: js.UndefOr[large | small | typingsSlinky.antd.antdStrings.default | Double] = js.native
+  var size: js.UndefOr[AvatarSize] = js.native
   
   /** Src of image avatar */
-  var src: js.UndefOr[String] = js.native
+  var src: js.UndefOr[ReactElement] = js.native
   
   /** Srcset of image avatar */
   var srcSet: js.UndefOr[String] = js.native
@@ -127,13 +126,16 @@ object AvatarProps {
     def deleteShape: Self = this.set("shape", js.undefined)
     
     @scala.inline
-    def setSize(value: large | small | typingsSlinky.antd.antdStrings.default | Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setSize(value: AvatarSize): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)
     
     @scala.inline
-    def setSrc(value: String): Self = this.set("src", value.asInstanceOf[js.Any])
+    def setSrcReactElement(value: ReactElement): Self = this.set("src", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSrc(value: ReactElement): Self = this.set("src", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSrc: Self = this.set("src", js.undefined)

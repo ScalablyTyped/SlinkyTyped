@@ -12,7 +12,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IonicConfig extends js.Object {
   
+  var _ael: js.UndefOr[
+    js.Function4[/* el */ js.Any, /* name */ String, /* cb */ js.Any, /* opts */ js.Any, _]
+  ] = js.native
+  
   var _forceStatusbarPadding: js.UndefOr[Boolean] = js.native
+  
+  var _rel: js.UndefOr[
+    js.Function4[/* el */ js.Any, /* name */ String, /* cb */ js.Any, /* opts */ js.Any, _]
+  ] = js.native
   
   var _testing: js.UndefOr[Boolean] = js.native
   
@@ -235,10 +243,22 @@ object IonicConfig {
     }
     
     @scala.inline
+    def set_ael(value: (/* el */ js.Any, /* name */ String, /* cb */ js.Any, /* opts */ js.Any) => _): Self = this.set("_ael", js.Any.fromFunction4(value))
+    
+    @scala.inline
+    def delete_ael: Self = this.set("_ael", js.undefined)
+    
+    @scala.inline
     def set_forceStatusbarPadding(value: Boolean): Self = this.set("_forceStatusbarPadding", value.asInstanceOf[js.Any])
     
     @scala.inline
     def delete_forceStatusbarPadding: Self = this.set("_forceStatusbarPadding", js.undefined)
+    
+    @scala.inline
+    def set_rel(value: (/* el */ js.Any, /* name */ String, /* cb */ js.Any, /* opts */ js.Any) => _): Self = this.set("_rel", js.Any.fromFunction4(value))
+    
+    @scala.inline
+    def delete_rel: Self = this.set("_rel", js.undefined)
     
     @scala.inline
     def set_testing(value: Boolean): Self = this.set("_testing", value.asInstanceOf[js.Any])

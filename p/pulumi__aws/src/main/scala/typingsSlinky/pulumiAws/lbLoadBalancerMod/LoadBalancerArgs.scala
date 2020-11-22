@@ -17,6 +17,11 @@ trait LoadBalancerArgs extends js.Object {
   val accessLogs: js.UndefOr[Input[LoadBalancerAccessLogs]] = js.native
   
   /**
+    * The ID of the customer owned ipv4 pool to use for this load balancer.
+    */
+  val customerOwnedIpv4Pool: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
     */
   val dropInvalidHeaderFields: js.UndefOr[Input[Boolean]] = js.native
@@ -54,7 +59,7 @@ trait LoadBalancerArgs extends js.Object {
   val ipAddressType: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    * The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
     */
   val loadBalancerType: js.UndefOr[Input[String]] = js.native
   
@@ -120,6 +125,12 @@ object LoadBalancerArgs {
     
     @scala.inline
     def deleteAccessLogs: Self = this.set("accessLogs", js.undefined)
+    
+    @scala.inline
+    def setCustomerOwnedIpv4Pool(value: Input[String]): Self = this.set("customerOwnedIpv4Pool", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomerOwnedIpv4Pool: Self = this.set("customerOwnedIpv4Pool", js.undefined)
     
     @scala.inline
     def setDropInvalidHeaderFields(value: Input[Boolean]): Self = this.set("dropInvalidHeaderFields", value.asInstanceOf[js.Any])

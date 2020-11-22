@@ -18,9 +18,6 @@ class DetailsListBase protected ()
      with IDetailsList {
   def this(props: IDetailsListProps) = this()
   
-  @JSName("UNSAFE_componentWillReceiveProps")
-  def UNSAFE_componentWillReceiveProps_MDetailsListBase(newProps: IDetailsListProps): Unit = js.native
-  
   var _activeRows: js.Any = js.native
   
   var _adjustColumns: js.Any = js.native
@@ -40,16 +37,12 @@ class DetailsListBase protected ()
   
   var _getColumnOverride: js.Any = js.native
   
-  var _getColumnReorderProps: js.Any = js.native
-  
-  var _getDetailsFooterProps: js.Any = js.native
+  var _getDerivedStateFromProps: js.Any = js.native
   
   /** Builds a set of columns based on the given columns mixed with the current overrides. */
   var _getFixedColumns: js.Any = js.native
   
   var _getGroupNestingDepth: js.Any = js.native
-  
-  var _getGroupProps: js.Any = js.native
   
   var _getItemKey: js.Any = js.native
   
@@ -63,8 +56,6 @@ class DetailsListBase protected ()
   var _header: js.Any = js.native
   
   var _initialFocusedIndex: js.Any = js.native
-  
-  var _isRightArrow: js.Any = js.native
   
   var _list: js.Any = js.native
   
@@ -93,25 +84,11 @@ class DetailsListBase protected ()
     */
   var _onColumnAutoResized: js.Any = js.native
   
-  var _onColumnDragEnd: js.Any = js.native
-  
   var _onColumnIsSizingChanged: js.Any = js.native
   
   var _onColumnResized: js.Any = js.native
   
-  var _onContentKeyDown: js.Any = js.native
-  
   var _onGroupExpandStateChanged: js.Any = js.native
-  
-  var _onHeaderKeyDown: js.Any = js.native
-  
-  var _onRenderCell: js.Any = js.native
-  
-  var _onRenderDetailsFooter: js.Any = js.native
-  
-  var _onRenderDetailsHeader: js.Any = js.native
-  
-  var _onRenderListCell: js.Any = js.native
   
   /* protected */ def _onRenderRow(props: IDetailsRowProps): ReactElement = js.native
   /* protected */ def _onRenderRow(props: IDetailsRowProps, defaultRender: IRenderFunction[IDetailsRowProps]): ReactElement = js.native
@@ -134,8 +111,6 @@ class DetailsListBase protected ()
   
   var _setFocusToRowIfPending: js.Any = js.native
   
-  var _sumColumnWidths: js.Any = js.native
-  
   @JSName("componentDidUpdate")
   def componentDidUpdate_MDetailsListBase(prevProps: IDetailsListProps, prevState: IDetailsListState): Unit = js.native
   
@@ -154,4 +129,6 @@ class DetailsListBase protected ()
 object DetailsListBase extends js.Object {
   
   var defaultProps: CheckboxVisibility = js.native
+  
+  def getDerivedStateFromProps(nextProps: IDetailsListProps, previousState: IDetailsListState): IDetailsListState = js.native
 }

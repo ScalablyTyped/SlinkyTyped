@@ -1,5 +1,6 @@
 package typingsSlinky.three
 
+import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.shapeMod.Shape
 import typingsSlinky.three.vector2Mod.Vector2
 import scala.scalajs.js
@@ -15,6 +16,14 @@ object shapePathMod extends js.Object {
     
     def bezierCurveTo(aCP1x: Double, aCP1y: Double, aCP2x: Double, aCP2y: Double, aX: Double, aY: Double): this.type = js.native
     
+    /**
+    	 * @default new THREE.Color()
+    	 */
+    var color: Color = js.native
+    
+    /**
+    	 * @default null
+    	 */
     var currentPath: js.Any = js.native
     
     def lineTo(x: Double, y: Double): this.type = js.native
@@ -25,9 +34,17 @@ object shapePathMod extends js.Object {
     
     def splineThru(pts: js.Array[Vector2]): this.type = js.native
     
+    /**
+    	 * @default []
+    	 */
     var subPaths: js.Array[_] = js.native
     
     def toShapes(isCCW: Boolean): js.Array[Shape] = js.native
     def toShapes(isCCW: Boolean, noHoles: Boolean): js.Array[Shape] = js.native
+    
+    /**
+    	 * @default 'ShapePath'
+    	 */
+    var `type`: String = js.native
   }
 }

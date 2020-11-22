@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsCore.backendMod
 
-import typingsSlinky.tensorflowTfjsCore.tensorMod.DataId
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.DataId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

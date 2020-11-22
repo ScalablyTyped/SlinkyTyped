@@ -4,13 +4,13 @@ import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.alpha
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.hue
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.transparency
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

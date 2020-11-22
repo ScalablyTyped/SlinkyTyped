@@ -42,7 +42,7 @@ trait IonCheckbox extends js.Object {
   var name: js.UndefOr[String] = js.native
   
   /**
-    * Emitted when the toggle loses focus.
+    * Emitted when the checkbox loses focus.
     */
   var onIonBlur: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   
@@ -52,12 +52,12 @@ trait IonCheckbox extends js.Object {
   var onIonChange: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   
   /**
-    * Emitted when the toggle has focus.
+    * Emitted when the checkbox has focus.
     */
   var onIonFocus: js.UndefOr[js.Function1[/* event */ CustomEvent, Unit]] = js.native
   
   /**
-    * The value of the toggle does not mean if it's checked or not, use the `checked` property for that.  The value of a toggle is analogous to the value of a `<input type="checkbox">`, it's only used when the toggle participates in a native `<form>`.
+    * The value of the checkbox does not mean if it's checked or not, use the `checked` property for that.  The value of a checkbox is analogous to the value of an `<input type="checkbox">`, it's only used when the checkbox participates in a native `<form>`.
     */
   var value: js.UndefOr[String] = js.native
 }

@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IgnoreErrors extends js.Object {
   
   /**
+    * App ID
+    */
+  var appID: js.UndefOr[String] = js.native
+  
+  /**
     * @default true
     */
   var ignoreErrors: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * Package Name
-    */
-  var packageName: js.UndefOr[String] = js.native
 }
 object IgnoreErrors {
   
@@ -41,15 +41,15 @@ object IgnoreErrors {
     }
     
     @scala.inline
+    def setAppID(value: String): Self = this.set("appID", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAppID: Self = this.set("appID", js.undefined)
+    
+    @scala.inline
     def setIgnoreErrors(value: Boolean): Self = this.set("ignoreErrors", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIgnoreErrors: Self = this.set("ignoreErrors", js.undefined)
-    
-    @scala.inline
-    def setPackageName(value: String): Self = this.set("packageName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePackageName: Self = this.set("packageName", js.undefined)
   }
 }

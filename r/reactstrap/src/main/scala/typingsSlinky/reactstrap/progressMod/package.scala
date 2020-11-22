@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object progressMod {
   
-  type Progress[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.progressMod.ProgressProps]
+  type Progress = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.progressMod.ProgressProps]
 }

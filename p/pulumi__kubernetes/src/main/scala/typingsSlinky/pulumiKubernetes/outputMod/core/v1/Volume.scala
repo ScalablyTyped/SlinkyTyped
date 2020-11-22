@@ -41,7 +41,7 @@ trait Volume extends js.Object {
   var configMap: ConfigMapVolumeSource = js.native
   
   /**
-    * CSI (Container Storage Interface) represents storage that is handled by an external CSI driver (Alpha feature).
+    * CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
     */
   var csi: CSIVolumeSource = js.native
   
@@ -54,6 +54,24 @@ trait Volume extends js.Object {
     * EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
     */
   var emptyDir: EmptyDirVolumeSource = js.native
+  
+  /**
+    * Ephemeral represents a volume that is handled by a cluster storage driver (Alpha feature). The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+    *
+    * Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
+    *    tracking are needed,
+    * c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through
+    *    a PersistentVolumeClaim (see EphemeralVolumeSource for more
+    *    information on the connection between this volume type
+    *    and PersistentVolumeClaim).
+    *
+    * Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.
+    *
+    * Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
+    *
+    * A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+    */
+  var ephemeral: EphemeralVolumeSource = js.native
   
   /**
     * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
@@ -168,6 +186,7 @@ object Volume {
     csi: CSIVolumeSource,
     downwardAPI: DownwardAPIVolumeSource,
     emptyDir: EmptyDirVolumeSource,
+    ephemeral: EphemeralVolumeSource,
     fc: FCVolumeSource,
     flexVolume: FlexVolumeSource,
     flocker: FlockerVolumeSource,
@@ -189,7 +208,7 @@ object Volume {
     storageos: StorageOSVolumeSource,
     vsphereVolume: VsphereVirtualDiskVolumeSource
   ): Volume = {
-    val __obj = js.Dynamic.literal(awsElasticBlockStore = awsElasticBlockStore.asInstanceOf[js.Any], azureDisk = azureDisk.asInstanceOf[js.Any], azureFile = azureFile.asInstanceOf[js.Any], cephfs = cephfs.asInstanceOf[js.Any], cinder = cinder.asInstanceOf[js.Any], configMap = configMap.asInstanceOf[js.Any], csi = csi.asInstanceOf[js.Any], downwardAPI = downwardAPI.asInstanceOf[js.Any], emptyDir = emptyDir.asInstanceOf[js.Any], fc = fc.asInstanceOf[js.Any], flexVolume = flexVolume.asInstanceOf[js.Any], flocker = flocker.asInstanceOf[js.Any], gcePersistentDisk = gcePersistentDisk.asInstanceOf[js.Any], gitRepo = gitRepo.asInstanceOf[js.Any], glusterfs = glusterfs.asInstanceOf[js.Any], hostPath = hostPath.asInstanceOf[js.Any], iscsi = iscsi.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nfs = nfs.asInstanceOf[js.Any], persistentVolumeClaim = persistentVolumeClaim.asInstanceOf[js.Any], photonPersistentDisk = photonPersistentDisk.asInstanceOf[js.Any], portworxVolume = portworxVolume.asInstanceOf[js.Any], projected = projected.asInstanceOf[js.Any], quobyte = quobyte.asInstanceOf[js.Any], rbd = rbd.asInstanceOf[js.Any], scaleIO = scaleIO.asInstanceOf[js.Any], secret = secret.asInstanceOf[js.Any], storageos = storageos.asInstanceOf[js.Any], vsphereVolume = vsphereVolume.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(awsElasticBlockStore = awsElasticBlockStore.asInstanceOf[js.Any], azureDisk = azureDisk.asInstanceOf[js.Any], azureFile = azureFile.asInstanceOf[js.Any], cephfs = cephfs.asInstanceOf[js.Any], cinder = cinder.asInstanceOf[js.Any], configMap = configMap.asInstanceOf[js.Any], csi = csi.asInstanceOf[js.Any], downwardAPI = downwardAPI.asInstanceOf[js.Any], emptyDir = emptyDir.asInstanceOf[js.Any], ephemeral = ephemeral.asInstanceOf[js.Any], fc = fc.asInstanceOf[js.Any], flexVolume = flexVolume.asInstanceOf[js.Any], flocker = flocker.asInstanceOf[js.Any], gcePersistentDisk = gcePersistentDisk.asInstanceOf[js.Any], gitRepo = gitRepo.asInstanceOf[js.Any], glusterfs = glusterfs.asInstanceOf[js.Any], hostPath = hostPath.asInstanceOf[js.Any], iscsi = iscsi.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nfs = nfs.asInstanceOf[js.Any], persistentVolumeClaim = persistentVolumeClaim.asInstanceOf[js.Any], photonPersistentDisk = photonPersistentDisk.asInstanceOf[js.Any], portworxVolume = portworxVolume.asInstanceOf[js.Any], projected = projected.asInstanceOf[js.Any], quobyte = quobyte.asInstanceOf[js.Any], rbd = rbd.asInstanceOf[js.Any], scaleIO = scaleIO.asInstanceOf[js.Any], secret = secret.asInstanceOf[js.Any], storageos = storageos.asInstanceOf[js.Any], vsphereVolume = vsphereVolume.asInstanceOf[js.Any])
     __obj.asInstanceOf[Volume]
   }
   
@@ -234,6 +253,9 @@ object Volume {
     
     @scala.inline
     def setEmptyDir(value: EmptyDirVolumeSource): Self = this.set("emptyDir", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEphemeral(value: EphemeralVolumeSource): Self = this.set("ephemeral", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFc(value: FCVolumeSource): Self = this.set("fc", value.asInstanceOf[js.Any])

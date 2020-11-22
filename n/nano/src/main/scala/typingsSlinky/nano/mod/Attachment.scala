@@ -1,7 +1,7 @@
 package typingsSlinky.nano.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.request.mod.Request
+import typingsSlinky.node.processMod.global.NodeJS.ReadStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +19,7 @@ trait Attachment extends js.Object {
   def get(docname: String, attname: String, params: js.Any): js.Promise[Buffer] = js.native
   def get(docname: String, attname: String, params: js.Any, callback: Callback[Buffer]): js.Promise[Buffer] = js.native
   
-  def getAsStream(docname: String, attname: String): Request = js.native
+  def getAsStream(docname: String, attname: String): ReadStream = js.native
   
   def insert(docname: String, attname: String, att: js.Any, contenttype: String): js.Promise[DocumentInsertResponse] = js.native
   def insert(
@@ -41,7 +41,4 @@ trait Attachment extends js.Object {
   // NodeJS.WritableStream
   def insert(docname: String, attname: String, att: Null, contenttype: String): js.Promise[DocumentInsertResponse] = js.native
   def insert(docname: String, attname: String, att: Null, contenttype: String, params: js.Any): js.Promise[DocumentInsertResponse] = js.native
-  
-  def insertAsStream(docname: String, attname: String, att: js.Any, contenttype: String): Request = js.native
-  def insertAsStream(docname: String, attname: String, att: js.Any, contenttype: String, params: js.Any): Request = js.native
 }

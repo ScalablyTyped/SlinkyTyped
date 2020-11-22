@@ -8,6 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Addon extends js.Object {
   
+  var disabled: js.UndefOr[Boolean] = js.native
+  
+  var hidden: js.UndefOr[Boolean] = js.native
+  
   var id: js.UndefOr[String] = js.native
   
   var `match`: js.UndefOr[js.Function1[/* matchOptions */ MatchOptions, Boolean]] = js.native
@@ -50,6 +54,18 @@ object Addon {
     
     @scala.inline
     def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHidden: Self = this.set("hidden", js.undefined)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])

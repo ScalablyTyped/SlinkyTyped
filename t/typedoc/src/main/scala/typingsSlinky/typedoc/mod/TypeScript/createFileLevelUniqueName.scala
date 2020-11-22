@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createFileLevelUniqueName extends js.Object {
   
-  /** Create a unique name based on the supplied text. This does not consider names injected by the transformer. */
+  /** @deprecated Use `factory.createUniqueName(text, GeneratedIdentifierFlags.Optimistic | GeneratedIdentifierFlags.FileLevel)` or the factory supplied by your transformation context instead. */
   def apply(text: String): Identifier = js.native
 }

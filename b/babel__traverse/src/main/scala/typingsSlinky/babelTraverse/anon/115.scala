@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSTypeQuery
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSPropertySignature
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `115` extends js.Object {
   
-  var `type`: TSTypeQuery = js.native
+  var `type`: TSPropertySignature = js.native
 }
 object `115` {
   
   @scala.inline
-  def apply(`type`: TSTypeQuery): `115` = {
+  def apply(`type`: TSPropertySignature): `115` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`115`]
@@ -35,6 +35,6 @@ object `115` {
     }
     
     @scala.inline
-    def setType(value: TSTypeQuery): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSPropertySignature): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

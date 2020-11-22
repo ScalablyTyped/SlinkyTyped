@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Av1Settings extends js.Object {
   
   /**
-    * Adaptive quantization. Allows intra-frame quantizers to vary to improve visual quality.
+    * Specify the strength of any adaptive quantization filters that you enable. The value that you choose here applies to Spatial adaptive quantization (spatialAdaptiveQuantization).
     */
   var AdaptiveQuantization: js.UndefOr[Av1AdaptiveQuantization] = js.native
   
@@ -18,7 +18,7 @@ trait Av1Settings extends js.Object {
   var FramerateControl: js.UndefOr[Av1FramerateControl] = js.native
   
   /**
-    * Optional. Specify how the transcoder performs framerate conversion. The default behavior is to use duplicate drop conversion.
+    * Choose the method that you want MediaConvert to use when increasing or decreasing the frame rate. We recommend using drop duplicate (DUPLICATE_DROP) for numerically simple conversions, such as 60 fps to 30 fps. For numerically complex conversions, you can use interpolate (INTERPOLATE) to avoid stutter. This results in a smooth picture, but might introduce undesirable video artifacts. For complex frame rate conversions, especially if your source video has already been converted from its original cadence, use FrameFormer (FRAMEFORMER) to do motion-compensated interpolation. FrameFormer chooses the best conversion method frame by frame. Note that using FrameFormer increases the transcoding time and incurs a significant add-on cost.
     */
   var FramerateConversionAlgorithm: js.UndefOr[Av1FramerateConversionAlgorithm] = js.native
   
@@ -63,7 +63,7 @@ trait Av1Settings extends js.Object {
   var Slices: js.UndefOr[integerMin1Max32] = js.native
   
   /**
-    * Adjust quantization within each frame based on spatial variation of content complexity.
+    * Keep the default value, Enabled (ENABLED), to adjust quantization within each frame based on spatial variation of content complexity. When you enable this feature, the encoder uses fewer bits on areas that can sustain more distortion with no noticeable visual degradation and uses more bits on areas where any small distortion will be noticeable. For example, complex textured blocks are encoded with fewer bits and smooth textured blocks are encoded with more bits. Enabling this feature will almost always improve your video quality. Note, though, that this feature doesn't take into account where the viewer's attention is likely to be. If viewers are likely to be focusing their attention on a part of the screen with a lot of complex texture, you might choose to disable this feature. Related setting: When you enable spatial adaptive quantization, set the value for Adaptive quantization (adaptiveQuantization) depending on your content. For homogeneous content, such as cartoons and video games, set it to Low. For content with a wider variety of textures, set it to High or Higher.
     */
   var SpatialAdaptiveQuantization: js.UndefOr[Av1SpatialAdaptiveQuantization] = js.native
 }

@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.OrgsListOutsideCollaboratorsEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.OrgsListOutsideCollaboratorsResponseData
+import typingsSlinky.octokitTypes.endpointsMod.OrgsListBlockedUsersEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.OrgsListBlockedUsersResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `799` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[OrgsListOutsideCollaboratorsEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[OrgsListBlockedUsersEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[OrgsListOutsideCollaboratorsResponseData] = js.native
+  var response: OctokitResponse[OrgsListBlockedUsersResponseData] = js.native
 }
 object `799` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[OrgsListOutsideCollaboratorsEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[OrgsListOutsideCollaboratorsResponseData]
+    parameters: RequestParameters with (Omit[OrgsListBlockedUsersEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[OrgsListBlockedUsersResponseData]
   ): `799` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`799`]
@@ -46,11 +46,9 @@ object `799` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[OrgsListOutsideCollaboratorsEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[OrgsListBlockedUsersEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[OrgsListOutsideCollaboratorsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[OrgsListBlockedUsersResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

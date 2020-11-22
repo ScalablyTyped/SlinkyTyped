@@ -16,7 +16,7 @@ import typingsSlinky.rcMenu.interfaceMod.SelectInfo
 import typingsSlinky.rcMenu.interfaceMod.TriggerSubMenuAction
 import typingsSlinky.rcMenu.rcMenuStrings.ltr
 import typingsSlinky.rcMenu.rcMenuStrings.rtl
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
 import scala.scalajs.js
@@ -63,7 +63,7 @@ trait PartialSubPopupMenuProps extends js.Object {
   
   var mode: js.UndefOr[MenuMode] = js.native
   
-  var motion: js.UndefOr[MotionType] = js.native
+  var motion: js.UndefOr[CSSMotionProps] = js.native
   
   var multiple: js.UndefOr[Boolean] = js.native
   
@@ -256,7 +256,7 @@ object PartialSubPopupMenuProps {
     def deleteMode: Self = this.set("mode", js.undefined)
     
     @scala.inline
-    def setMotion(value: MotionType): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: CSSMotionProps): Self = this.set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMotion: Self = this.set("motion", js.undefined)

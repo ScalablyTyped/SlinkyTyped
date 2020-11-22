@@ -6,14 +6,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.rcFieldForm.interfaceMod.BaseRule
+  - typingsSlinky.rcFieldForm.interfaceMod.AggregationRule
   - typingsSlinky.rcFieldForm.interfaceMod.ArrayRule
 */
 trait RuleObject extends js.Object
 object RuleObject {
   
   @scala.inline
-  def BaseRule(): RuleObject = {
+  def AggregationRule(): RuleObject = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[RuleObject]
   }

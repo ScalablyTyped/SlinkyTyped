@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.SyntheticEvent
+import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.TextareaHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,11 +24,7 @@ trait StrictTextAreaProps extends TextareaHTMLAttributes[HTMLTextAreaElement] {
     */
   @JSName("onChange")
   var onChange_StrictTextAreaProps: js.UndefOr[
-    js.Function2[
-      SyntheticEvent[EventTarget with HTMLTextAreaElement, Event], 
-      /* data */ TextAreaProps, 
-      Unit
-    ]
+    js.Function2[/* event */ ChangeEvent[HTMLTextAreaElement], /* data */ TextAreaProps, Unit]
   ] = js.native
   
   /**
@@ -83,9 +80,7 @@ object StrictTextAreaProps {
     def deleteAs: Self = this.set("as", js.undefined)
     
     @scala.inline
-    def setOnChange(
-      value: (SyntheticEvent[EventTarget with HTMLTextAreaElement, Event], /* data */ TextAreaProps) => Unit
-    ): Self = this.set("onChange", js.Any.fromFunction2(value))
+    def setOnChange(value: (/* event */ ChangeEvent[HTMLTextAreaElement], /* data */ TextAreaProps) => Unit): Self = this.set("onChange", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)

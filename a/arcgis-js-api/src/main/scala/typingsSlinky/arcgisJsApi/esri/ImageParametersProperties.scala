@@ -24,8 +24,6 @@ trait ImageParametersProperties extends js.Object {
     * Dots per inch setting for an module:esri/layersMapImageLayer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#dpi)
-    *
-    * @default 96
     */
   var dpi: js.UndefOr[Double] = js.native
   
@@ -40,8 +38,6 @@ trait ImageParametersProperties extends js.Object {
     * Map image format.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#format)
-    *
-    * @default png8
     */
   var format: js.UndefOr[png | png8 | png24 | png32 | jpg | pdf | bmp | gif | svg] = js.native
   
@@ -60,14 +56,14 @@ trait ImageParametersProperties extends js.Object {
   var imageSpatialReference: js.UndefOr[SpatialReferenceProperties] = js.native
   
   /**
-    * Array of layer definition expressions that allows you to filter the features of individual layers in the exported map image. Layer definitions with semicolons or colons are supported if using a map service published using ArcGIS Server 10 or later.
+    * Array of layer definition expressions that allows you to filter the features of individual layers in the exported map image.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#layerDefinitions)
     */
   var layerDefinitions: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * A list of layer IDs, that represent which layers to include in the exported map. Use in combination with [layerOption](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#layerOption) to specify how layer visibility is handled.
+    * A list of layer IDs, that represent which layers to include in the exported map.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#layerIds)
     */
@@ -84,8 +80,6 @@ trait ImageParametersProperties extends js.Object {
     * Indicates whether or not the background of the dynamic image is transparent.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#transparent)
-    *
-    * @default true
     */
   var transparent: js.UndefOr[Boolean] = js.native
   

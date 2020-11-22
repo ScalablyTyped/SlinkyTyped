@@ -61,6 +61,9 @@ object PhoneInputLite {
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def clearOnEscape(value: Boolean): this.type = set("clearOnEscape", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def clearable(value: Boolean): this.type = set("clearable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -113,6 +116,9 @@ object PhoneInputLite {
     
     @scala.inline
     def maxDropdownWidth(value: String): this.type = set("maxDropdownWidth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
@@ -173,6 +179,9 @@ object PhoneInputLite {
     
     @scala.inline
     def startEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     
     @scala.inline
     def text(value: String): this.type = set("text", value.asInstanceOf[js.Any])

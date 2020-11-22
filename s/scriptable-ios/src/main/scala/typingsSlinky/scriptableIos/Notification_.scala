@@ -67,7 +67,7 @@ trait Notification_ extends js.Object {
   /**
     * _Delivery date of the notification._
     *
-    * If the notification have already been delivered, for example because it was fetched using `Notification.allDelivered()`, the deliveryDate will be populated. Otherwise it will be
+    * If the notification has already been delivered, for example because it was fetched using `Notification.allDelivered()`, the deliveryDate will be populated. Otherwise it will be
     * null.
     *
     * The property cannot be set. In order to specify a future delivery date for a notification, see the `setTriggerDate` function. For recurring notifications, see the `setDailyTrigger`
@@ -217,7 +217,7 @@ trait Notification_ extends js.Object {
   /**
     * _Custom information._
     *
-    * Store any custom information for the information. This can be accessed from the `Notification.opened` property when a script is run from a notification.
+    * Store any custom information for the notification. This can be accessed from the `Notification.opened` property when a script is run from a notification.
     * @see https://docs.scriptable.app/notification/#userinfo
     */
   var userInfo: StringDictionary[js.Any] = js.native

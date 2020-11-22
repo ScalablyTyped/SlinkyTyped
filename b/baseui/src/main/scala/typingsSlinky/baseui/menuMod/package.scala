@@ -18,10 +18,10 @@ package object menuMod {
   
   type ItemsT = typingsSlinky.baseui.menuMod.ArrayItemsT | typingsSlinky.baseui.menuMod.GroupedItemsT
   
-  type OnItemSelect = js.Function1[/* args */ typingsSlinky.baseui.anon.EventItem, js.Any]
+  type OnItemSelect = js.Function1[/* args */ typingsSlinky.baseui.anon.Item, js.Any]
   
   type StateReducer = js.Function3[
-    /* changeType */ typingsSlinky.baseui.baseuiStrings.moveDown | typingsSlinky.baseui.baseuiStrings.moveUp | typingsSlinky.baseui.baseuiStrings.reset | typingsSlinky.baseui.baseuiStrings.click | typingsSlinky.baseui.baseuiStrings.focus | typingsSlinky.baseui.baseuiStrings.mouseEnter, 
+    /* changeType */ typingsSlinky.baseui.baseuiStrings.moveDown | typingsSlinky.baseui.baseuiStrings.moveUp | typingsSlinky.baseui.baseuiStrings.reset | typingsSlinky.baseui.baseuiStrings.enter_ | typingsSlinky.baseui.baseuiStrings.click | typingsSlinky.baseui.baseuiStrings.character | typingsSlinky.baseui.baseuiStrings.focus | typingsSlinky.baseui.baseuiStrings.mouseEnter, 
     /* changes */ typingsSlinky.baseui.menuMod.StatefulContainerState, 
     /* currentState */ typingsSlinky.baseui.menuMod.StatefulContainerState, 
     typingsSlinky.baseui.menuMod.StatefulContainerState

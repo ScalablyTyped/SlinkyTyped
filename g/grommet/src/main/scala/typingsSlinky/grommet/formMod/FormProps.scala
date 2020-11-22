@@ -2,8 +2,8 @@ package typingsSlinky.grommet.formMod
 
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
+import typingsSlinky.grommet.anon.Errors
 import typingsSlinky.grommet.anon.Invalid
 import typingsSlinky.grommet.grommetStrings.blur
 import typingsSlinky.grommet.grommetStrings.submit
@@ -24,7 +24,9 @@ trait FormProps[T] extends js.Object {
   
   var onReset: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, Element], _]] = js.native
   
-  var onSubmit: js.UndefOr[js.Function1[SyntheticEvent[EventTarget with Element, Event], Unit]] = js.native
+  var onSubmit: js.UndefOr[js.Function1[/* event */ FormExtendedEvent[T, Element], Unit]] = js.native
+  
+  var onValidate: js.UndefOr[js.Function1[/* validationResults */ Errors, Unit]] = js.native
   
   var validate: js.UndefOr[blur | submit] = js.native
   
@@ -84,10 +86,16 @@ object FormProps {
     def deleteOnReset: Self = this.set("onReset", js.undefined)
     
     @scala.inline
-    def setOnSubmit(value: SyntheticEvent[EventTarget with Element, Event] => Unit): Self = this.set("onSubmit", js.Any.fromFunction1(value))
+    def setOnSubmit(value: /* event */ FormExtendedEvent[T, Element] => Unit): Self = this.set("onSubmit", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSubmit: Self = this.set("onSubmit", js.undefined)
+    
+    @scala.inline
+    def setOnValidate(value: /* validationResults */ Errors => Unit): Self = this.set("onValidate", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnValidate: Self = this.set("onValidate", js.undefined)
     
     @scala.inline
     def setValidate(value: blur | submit): Self = this.set("validate", value.asInstanceOf[js.Any])

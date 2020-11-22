@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VirtualGatewayListener extends js.Object {
   
   /**
+    * The connection pool information for the virtual gateway listener.
+    */
+  var connectionPool: js.UndefOr[VirtualGatewayConnectionPool] = js.native
+  
+  /**
     * The health check information for the listener.
     */
   var healthCheck: js.UndefOr[VirtualGatewayHealthCheckPolicy] = js.native
@@ -47,6 +52,12 @@ object VirtualGatewayListener {
     
     @scala.inline
     def setPortMapping(value: VirtualGatewayPortMapping): Self = this.set("portMapping", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setConnectionPool(value: VirtualGatewayConnectionPool): Self = this.set("connectionPool", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConnectionPool: Self = this.set("connectionPool", js.undefined)
     
     @scala.inline
     def setHealthCheck(value: VirtualGatewayHealthCheckPolicy): Self = this.set("healthCheck", value.asInstanceOf[js.Any])

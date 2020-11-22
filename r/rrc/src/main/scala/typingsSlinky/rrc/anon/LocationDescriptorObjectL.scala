@@ -72,8 +72,5 @@ object LocationDescriptorObjectL {
     
     @scala.inline
     def deleteState: Self = this.set("state", js.undefined)
-    
-    @scala.inline
-    def setStateNull: Self = this.set("state", null)
   }
 }

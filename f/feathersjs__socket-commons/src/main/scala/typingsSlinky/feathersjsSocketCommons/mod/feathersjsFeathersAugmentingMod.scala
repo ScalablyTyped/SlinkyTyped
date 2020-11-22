@@ -18,11 +18,9 @@ object feathersjsFeathersAugmentingMod extends js.Object {
     
     var channels: js.Array[String] = js.native
     
-    // tslint:disable-next-line void-return
     def publish[T](
       callback: js.Function2[/* data */ T, /* hook */ HookContext[T], Channel | js.Array[Channel] | Unit]
     ): Application[ServiceTypes] = js.native
-    // tslint:disable-next-line void-return
     def publish[T](
       event: String,
       callback: js.Function2[/* data */ T, /* hook */ HookContext[T], Channel | js.Array[Channel] | Unit]

@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait PageableSetSortingOptions[TModel /* <: Model[_, ModelSetOptions] */] extends js.Object {
+trait PageableSetSortingOptions[TModel /* <: Model[_, ModelSetOptions, js.Object] */] extends js.Object {
   
   var full: js.UndefOr[Boolean] = js.native
   
@@ -18,13 +18,13 @@ trait PageableSetSortingOptions[TModel /* <: Model[_, ModelSetOptions] */] exten
 object PageableSetSortingOptions {
   
   @scala.inline
-  def apply[TModel /* <: Model[_, ModelSetOptions] */](): PageableSetSortingOptions[TModel] = {
+  def apply[TModel /* <: Model[_, ModelSetOptions, js.Object] */](): PageableSetSortingOptions[TModel] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[PageableSetSortingOptions[TModel]]
   }
   
   @scala.inline
-  implicit class PageableSetSortingOptionsOps[Self <: PageableSetSortingOptions[_], TModel /* <: Model[_, ModelSetOptions] */] (val x: Self with PageableSetSortingOptions[TModel]) extends AnyVal {
+  implicit class PageableSetSortingOptionsOps[Self <: PageableSetSortingOptions[_], TModel /* <: Model[_, ModelSetOptions, js.Object] */] (val x: Self with PageableSetSortingOptions[TModel]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

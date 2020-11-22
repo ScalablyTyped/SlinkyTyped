@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "bro-fs"
-version := "0.4-dt-20190326Z-d7a615"
+version := "0.4-dt-20190326Z-fcae72"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "filesystem" % "0.0-unknown-dt-20200515Z-0361f6",
-  "org.scalablytyped.slinky" %%% "filewriter" % "0.0-unknown-dt-20200515Z-e97a56",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "filesystem" % "0.0-unknown-dt-20201002Z-6e02c8",
+  "org.scalablytyped.slinky" %%% "filewriter" % "0.0-unknown-dt-20201002Z-d399f2",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

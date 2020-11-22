@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LaunchTemplateTagSpecification extends js.Object {
   
   /**
-    * The type of resource to tag. Valid values are `instance` and `volume`.
+    * The type of resource to tag. Valid values are `instance`, `volume`, `elastic-gpu` and `spot-instances-request`.
     */
   var resourceType: js.UndefOr[Input[String]] = js.native
   

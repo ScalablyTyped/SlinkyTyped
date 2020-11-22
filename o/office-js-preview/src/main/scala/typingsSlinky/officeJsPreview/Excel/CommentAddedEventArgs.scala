@@ -11,8 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Provides information about the comments that raised the "CommentAdded" event.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait CommentAddedEventArgs extends js.Object {
@@ -21,8 +20,7 @@ trait CommentAddedEventArgs extends js.Object {
     *
     * Gets the `CommentDetail` array that contains the comment ID and IDs of its related replies.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var commentDetails: js.Array[CommentDetail] = js.native
   
@@ -30,8 +28,7 @@ trait CommentAddedEventArgs extends js.Object {
     *
     * Specifies the source of the event. See `Excel.EventSource` for details.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var source: EventSource | Local | Remote = js.native
   
@@ -39,8 +36,7 @@ trait CommentAddedEventArgs extends js.Object {
     *
     * Gets the type of the event. See `Excel.EventType` for details.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var `type`: CommentAdded = js.native
   
@@ -48,8 +44,7 @@ trait CommentAddedEventArgs extends js.Object {
     *
     * Gets the ID of the worksheet in which the event happened.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var worksheetId: String = js.native
 }

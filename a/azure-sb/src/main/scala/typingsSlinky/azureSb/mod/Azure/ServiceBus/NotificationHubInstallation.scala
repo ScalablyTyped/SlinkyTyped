@@ -34,6 +34,8 @@ trait NotificationHubInstallation extends js.Object {
   var tags: js.UndefOr[js.Array[String]] = js.native
   
   var templates: js.UndefOr[StringDictionary[Body]] = js.native
+  
+  var userId: js.UndefOr[String] = js.native
 }
 object NotificationHubInstallation {
   
@@ -111,5 +113,11 @@ object NotificationHubInstallation {
     
     @scala.inline
     def deleteTemplates: Self = this.set("templates", js.undefined)
+    
+    @scala.inline
+    def setUserId(value: String): Self = this.set("userId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserId: Self = this.set("userId", js.undefined)
   }
 }

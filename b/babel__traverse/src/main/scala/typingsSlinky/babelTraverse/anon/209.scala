@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSObjectKeyword
+import typingsSlinky.babelTraverse.babelTraverseStrings.IntersectionTypeAnnotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `209` extends js.Object {
   
-  var `type`: TSObjectKeyword = js.native
+  var `type`: IntersectionTypeAnnotation = js.native
 }
 object `209` {
   
   @scala.inline
-  def apply(`type`: TSObjectKeyword): `209` = {
+  def apply(`type`: IntersectionTypeAnnotation): `209` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`209`]
@@ -35,6 +35,6 @@ object `209` {
     }
     
     @scala.inline
-    def setType(value: TSObjectKeyword): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: IntersectionTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -11,14 +11,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class LineBasicMaterial () extends Material {
   def this(parameters: LineBasicMaterialParameters) = this()
   
+  /**
+  	 * @default 0xffffff
+  	 */
   var color: Color = js.native
   
+  /**
+  	 * @default 'round'
+  	 */
   var linecap: String = js.native
   
+  /**
+  	 * @default 'round'
+  	 */
   var linejoin: String = js.native
   
+  /**
+  	 * @default 1
+  	 */
   var linewidth: Double = js.native
   
+  /**
+  	 * @default false
+  	 */
   var morphTargets: Boolean = js.native
   
   def setValues(parameters: LineBasicMaterialParameters): Unit = js.native

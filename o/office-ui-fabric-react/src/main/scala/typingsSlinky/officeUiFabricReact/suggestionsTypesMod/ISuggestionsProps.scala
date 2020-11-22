@@ -3,11 +3,11 @@ package typingsSlinky.officeUiFabricReact.suggestionsTypesMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.personaTypesMod.IPersonaProps
 import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionItemProps
 import typingsSlinky.react.mod.Props
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import typingsSlinky.uifabricUtilities.keyCodesMod.KeyCodes

@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSGlobal("Mongo.Collection")
 @js.native
-class CollectionCls[T] ()
-  extends typingsSlinky.meteor.Mongo.Collection[T] {
+class CollectionCls[T, U] ()
+  extends typingsSlinky.meteor.Mongo.Collection[T, U] {
   def this(name: String) = this()
-  def this(name: String, options: IdGeneration) = this()
-  def this(name: Null, options: IdGeneration) = this()
+  def this(name: String, options: IdGeneration[T, U]) = this()
+  def this(name: Null, options: IdGeneration[T, U]) = this()
 }

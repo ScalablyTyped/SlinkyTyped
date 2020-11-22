@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AttachmentsContentProperties extends ContentProperties {
   
   /**
-    * A string value indicating how to display the attachment.  If `list` is specified, attachments show as links.
+    * A string value indicating how to display the attachment.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-popup-content-AttachmentsContent.html#displayType)
     */

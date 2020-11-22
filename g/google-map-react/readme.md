@@ -1,7 +1,7 @@
 
 # Scala.js typings for google-map-react
 
-Typings are for version 1.1
+Typings are for version 2.1
 
 ## Library description:
 isomorphic google map react component, allows render react components on the google map

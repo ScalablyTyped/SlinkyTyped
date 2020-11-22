@@ -3,6 +3,7 @@ package typingsSlinky.officeUiFabricReact.modalTypesMod
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.iaccessiblepopuppropsMod.IAccessiblePopupProps
 import typingsSlinky.officeUiFabricReact.layerTypesMod.ILayerProps
 import typingsSlinky.officeUiFabricReact.modalBaseMod.ModalBase
@@ -11,7 +12,6 @@ import typingsSlinky.officeUiFabricReact.withResponsiveModeMod.IWithResponsiveMo
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

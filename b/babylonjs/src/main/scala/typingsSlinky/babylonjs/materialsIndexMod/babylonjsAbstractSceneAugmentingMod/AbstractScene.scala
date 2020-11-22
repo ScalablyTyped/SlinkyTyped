@@ -10,7 +10,7 @@ trait AbstractScene extends js.Object {
   
   /**
     * The list of procedural textures added to the scene
-    * @see http://doc.babylonjs.com/how_to/how_to_use_procedural_textures
+    * @see https://doc.babylonjs.com/how_to/how_to_use_procedural_textures
     */
   var proceduralTextures: js.Array[ProceduralTexture] = js.native
 }

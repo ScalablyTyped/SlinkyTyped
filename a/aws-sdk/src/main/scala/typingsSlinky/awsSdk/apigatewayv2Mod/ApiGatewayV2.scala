@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.apigatewayv2Mod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -796,6 +796,20 @@ trait ApiGatewayV2 extends Service {
     params: ReimportApiRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ReimportApiResponse, Unit]
   ): Request[ReimportApiResponse, AWSError] = js.native
+  
+  /**
+    * Resets all authorizer cache entries on a stage. Supported only for HTTP APIs.
+    */
+  def resetAuthorizersCache(): Request[js.Object, AWSError] = js.native
+  def resetAuthorizersCache(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Resets all authorizer cache entries on a stage. Supported only for HTTP APIs.
+    */
+  def resetAuthorizersCache(params: ResetAuthorizersCacheRequest): Request[js.Object, AWSError] = js.native
+  def resetAuthorizersCache(
+    params: ResetAuthorizersCacheRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
   
   /**
     * Creates a new Tag resource to represent a tag.

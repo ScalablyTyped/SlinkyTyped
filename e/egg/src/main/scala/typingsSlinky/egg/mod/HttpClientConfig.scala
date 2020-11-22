@@ -9,6 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait HttpClientConfig extends HttpClientBaseConfig {
   
+  /** DNS cache lookup interval */
+  var dnsCacheLookupInterval: js.UndefOr[Double] = js.native
+  
+  /** DNS cache max age */
+  var dnsCacheMaxLength: js.UndefOr[Double] = js.native
+  
   /** Whether enable dns cache */
   var enableDNSCache: js.UndefOr[Boolean] = js.native
   
@@ -49,6 +55,18 @@ object HttpClientConfig {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDnsCacheLookupInterval(value: Double): Self = this.set("dnsCacheLookupInterval", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDnsCacheLookupInterval: Self = this.set("dnsCacheLookupInterval", js.undefined)
+    
+    @scala.inline
+    def setDnsCacheMaxLength(value: Double): Self = this.set("dnsCacheMaxLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDnsCacheMaxLength: Self = this.set("dnsCacheMaxLength", js.undefined)
     
     @scala.inline
     def setEnableDNSCache(value: Boolean): Self = this.set("enableDNSCache", value.asInstanceOf[js.Any])

@@ -13,8 +13,6 @@ trait DrawAction
     * Indicates if the [redo()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#redo) method can be called on the action instance.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#canRedo)
-    *
-    *
     */
   def canRedo(): Boolean = js.native
   
@@ -22,8 +20,6 @@ trait DrawAction
     * Indicates if the [undo()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#undo) method can be called on the action instance.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#canUndo)
-    *
-    *
     */
   def canUndo(): Boolean = js.native
   
@@ -31,8 +27,6 @@ trait DrawAction
     * Maps the given screen point to a map point.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#getCoordsAndPointFromScreenPoint)
-    *
-    *
     */
   def getCoordsAndPointFromScreenPoint(): js.Any = js.native
   
@@ -40,8 +34,6 @@ trait DrawAction
     * Maps the given screen point to a map point.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#getCoordsFromScreenPoint)
-    *
-    *
     */
   def getCoordsFromScreenPoint(): js.Any = js.native
   
@@ -49,17 +41,13 @@ trait DrawAction
     * Controls whether the created geometry will have z coordinates or not.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#hasZ)
-    *
-    * @default true
     */
   var hasZ: Double = js.native
   
   /**
-    * Incrementally redo actions recorded in the stack. Call [canRedo()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#canRedo) prior to calling this method to check if this method can be called on the action instance. Calling this method will fire the [vertex-add](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#event-vertex-add) or [vertex-remove](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#event-vertex-remove) events depending on the last action.
+    * Incrementally redo actions recorded in the stack.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#redo)
-    *
-    *
     */
   def redo(): Unit = js.native
   
@@ -67,17 +55,13 @@ trait DrawAction
     * Maps the given screen point to a map point.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#screenToMap)
-    *
-    *
     */
   def screenToMap(): js.Any = js.native
   
   /**
-    * Incrementally undo actions recorded in the stack. Call [canUndo()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#canUndo) prior to calling this method to check if this method can be called on the action instance. Calling this method will fire the [vertex-add](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#event-vertex-add) or [vertex-remove](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#event-vertex-remove) events depending on the last action.
+    * Incrementally undo actions recorded in the stack.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-DrawAction.html#undo)
-    *
-    *
     */
   def undo(): Unit = js.native
   

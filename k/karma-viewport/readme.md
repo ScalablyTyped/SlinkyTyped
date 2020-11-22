@@ -1,7 +1,7 @@
 
 # Scala.js typings for karma-viewport
 
-Typings are for version 1.0.6
+Typings are for version 1.0.7
 
 ## Library description:
 A Karma plugin for testing responsive features and layout

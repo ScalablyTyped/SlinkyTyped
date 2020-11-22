@@ -1,7 +1,5 @@
 package typingsSlinky.elasticElasticsearch.requestParamsMod
 
-import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.`false`
-import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.`true`
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.wait_for
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,7 +30,9 @@ trait Update[T] extends Generic {
   
   var lang: js.UndefOr[String] = js.native
   
-  var refresh: js.UndefOr[`true` | `false` | wait_for] = js.native
+  var refresh: js.UndefOr[wait_for | Boolean] = js.native
+  
+  var require_alias: js.UndefOr[Boolean] = js.native
   
   var retry_on_conflict: js.UndefOr[Double] = js.native
   
@@ -140,10 +140,16 @@ object Update {
     def deleteLang: Self = this.set("lang", js.undefined)
     
     @scala.inline
-    def setRefresh(value: `true` | `false` | wait_for): Self = this.set("refresh", value.asInstanceOf[js.Any])
+    def setRefresh(value: wait_for | Boolean): Self = this.set("refresh", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRefresh: Self = this.set("refresh", js.undefined)
+    
+    @scala.inline
+    def setRequire_alias(value: Boolean): Self = this.set("require_alias", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequire_alias: Self = this.set("require_alias", js.undefined)
     
     @scala.inline
     def setRetry_on_conflict(value: Double): Self = this.set("retry_on_conflict", value.asInstanceOf[js.Any])

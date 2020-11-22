@@ -28,8 +28,13 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`additions removals`
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`additions text`
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`inline`
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`removals additions`
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`removals text`
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`text additions`
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.`text removals`
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.additions
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.all
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.ascending
@@ -40,8 +45,11 @@ import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.date
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.decimal
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.descending
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.dialog
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.done
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.email
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.enter
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.execute
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.go
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.grammar
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.grid
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.horizontal
@@ -53,6 +61,7 @@ import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.location
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.menu
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.mixed
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.move
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.next
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.no
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.none
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.numeric
@@ -62,8 +71,10 @@ import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.other
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.page
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.polite
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.popup
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.previous
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.removals
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.search
+import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.send
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.spelling
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.step
 import typingsSlinky.reactMdAutocomplete.reactMdAutocompleteStrings.tel
@@ -227,7 +238,9 @@ object AutoComplete {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -363,6 +376,9 @@ object AutoComplete {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])

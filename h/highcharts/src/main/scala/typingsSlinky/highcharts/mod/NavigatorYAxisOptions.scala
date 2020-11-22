@@ -98,7 +98,9 @@ trait NavigatorYAxisOptions extends js.Object {
     * default string representations used for each unit. For intermediate
     * values, different units may be used, for example the `day` unit can be
     * used on midnight and `hour` unit be used for intermediate values on the
-    * same axis. For an overview of the replacement codes, see dateFormat.
+    * same axis.
+    *
+    * For an overview of the replacement codes, see dateFormat.
     *
     * Defaults to: (see online documentation for example)
     */
@@ -489,7 +491,7 @@ trait NavigatorYAxisOptions extends js.Object {
     * For solid gauges, the Y axis also inherits the concept of data classes
     * from the Highmaps color axis.
     */
-  var stops: js.UndefOr[js.Array[GradientColorStopObject]] = js.native
+  var stops: js.UndefOr[js.Array[js.Tuple2[Double, ColorType]]] = js.native
   
   /**
     * (Highcharts, Highstock, Gantt) The amount of ticks to draw on the axis.
@@ -1033,10 +1035,10 @@ object NavigatorYAxisOptions {
     def deleteStaticScale: Self = this.set("staticScale", js.undefined)
     
     @scala.inline
-    def setStopsVarargs(value: GradientColorStopObject*): Self = this.set("stops", js.Array(value :_*))
+    def setStopsVarargs(value: (js.Tuple2[Double, ColorType])*): Self = this.set("stops", js.Array(value :_*))
     
     @scala.inline
-    def setStops(value: js.Array[GradientColorStopObject]): Self = this.set("stops", value.asInstanceOf[js.Any])
+    def setStops(value: js.Array[js.Tuple2[Double, ColorType]]): Self = this.set("stops", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStops: Self = this.set("stops", js.undefined)

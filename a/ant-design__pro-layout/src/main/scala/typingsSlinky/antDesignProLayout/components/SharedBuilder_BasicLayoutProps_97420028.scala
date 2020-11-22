@@ -101,6 +101,9 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   def formatMessage(value: /* message */ MessageDescriptor => String): this.type = set("formatMessage", js.Any.fromFunction1(value))
   
   @scala.inline
+  def getContainer(value: `false`): this.type = set("getContainer", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def hasSiderMenu(value: Boolean): this.type = set("hasSiderMenu", value.asInstanceOf[js.Any])
   
   @scala.inline
@@ -117,6 +120,9 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   
   @scala.inline
   def headerRender(value: WithFalse[js.Function2[HeaderViewProps, /* defaultDom */ ReactElement, ReactElement]]): this.type = set("headerRender", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def headerTheme(value: MenuTheme): this.type = set("headerTheme", value.asInstanceOf[js.Any])
   
   @scala.inline
   def headerTitleRenderFunction2(value: (HeaderViewProps, /* defaultDom */ ReactElement) => ReactElement): this.type = set("headerTitleRender", js.Any.fromFunction2(value))
@@ -194,6 +200,12 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   
   @scala.inline
   def menuExtraRender(value: WithFalse[js.Function1[SiderMenuProps, ReactElement]]): this.type = set("menuExtraRender", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def menuFooterRenderFunction1(value: /* props */ js.UndefOr[SiderMenuProps] => ReactElement): this.type = set("menuFooterRender", js.Any.fromFunction1(value))
+  
+  @scala.inline
+  def menuFooterRender(value: WithFalse[js.Function1[/* props */ js.UndefOr[SiderMenuProps], ReactElement]]): this.type = set("menuFooterRender", value.asInstanceOf[js.Any])
   
   @scala.inline
   def menuHeaderRenderFunction3(
@@ -295,5 +307,5 @@ class SharedBuilder_BasicLayoutProps_97420028 (val args: js.Array[js.Any])
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+  def title(value: String | `false`): this.type = set("title", value.asInstanceOf[js.Any])
 }

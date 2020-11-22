@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseFirestoreTypes.anon
 
+import typingsSlinky.firebaseFirestoreTypes.mod.FirestoreError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ trait Complete extends js.Object {
   
   var complete: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var error: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
+  var error: js.UndefOr[js.Function1[/* error */ FirestoreError, Unit]] = js.native
   
   var next: js.UndefOr[js.Function1[/* value */ Unit, Unit]] = js.native
 }
@@ -43,7 +44,7 @@ object Complete {
     def deleteComplete: Self = this.set("complete", js.undefined)
     
     @scala.inline
-    def setError(value: /* error */ js.Error => Unit): Self = this.set("error", js.Any.fromFunction1(value))
+    def setError(value: /* error */ FirestoreError => Unit): Self = this.set("error", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteError: Self = this.set("error", js.undefined)

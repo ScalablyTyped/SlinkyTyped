@@ -4,8 +4,8 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.anon.Bottom
+import typingsSlinky.grommet.anon.Key
 import typingsSlinky.grommet.anon.Multiple
-import typingsSlinky.grommet.anon.Reduce
 import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
@@ -154,16 +154,16 @@ object Select {
     def valueReactElement(value: ReactElement): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def valueVarargs(value: (String | js.Object)*): this.type = set("value", js.Array(value :_*))
+    def valueVarargs(value: (String | Double | js.Object)*): this.type = set("value", js.Array(value :_*))
     
     @scala.inline
-    def value(value: String | ReactElement | js.Object | (js.Array[String | js.Object])): this.type = set("value", value.asInstanceOf[js.Any])
+    def value(value: String | ReactElement | js.Object | (js.Array[String | Double | js.Object])): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def valueKeyFunction1(value: /* repeated */ js.Any => _): this.type = set("valueKey", js.Any.fromFunction1(value))
     
     @scala.inline
-    def valueKey(value: String | Reduce | (js.Function1[/* repeated */ js.Any, _])): this.type = set("valueKey", value.asInstanceOf[js.Any])
+    def valueKey(value: String | Key | (js.Function1[/* repeated */ js.Any, _])): this.type = set("valueKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def valueLabelReactElement(value: ReactElement): this.type = set("valueLabel", value.asInstanceOf[js.Any])

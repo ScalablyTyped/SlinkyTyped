@@ -10,11 +10,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxCircularGaugeScale extends BaseGaugeScale {
   
-  /** @name dxCircularGauge.Options.scale.label */
+  /**
+    * [descr:dxCircularGauge.Options.scale.label]
+    */
   @JSName("label")
   var label_dxCircularGaugeScale: js.UndefOr[dxCircularGaugeScaleLabel] = js.native
   
-  /** @name dxCircularGauge.Options.scale.orientation */
+  /**
+    * [descr:dxCircularGauge.Options.scale.orientation]
+    */
   var orientation: js.UndefOr[center | inside | outside] = js.native
 }
 object dxCircularGaugeScale {

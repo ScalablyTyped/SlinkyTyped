@@ -17,14 +17,14 @@ trait BuildingSublayer
   val id: Double = js.native
   
   /**
-    * Indicates if this sublayer is empty. This property is only read from the service. Empty sublayers are not loaded for rendering and applications can choose to hide them in their UI.
+    * Indicates if this sublayer is empty.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-buildingSublayers-BuildingSublayer.html#isEmpty)
     */
   val isEmpty: Boolean = js.native
   
   /**
-    * The modelName is a standard name for each sublayer. For example the sublayer containing the doors in a building has the modelName "Doors". Use this property to retrieve sublayers in a [BuildingSceneLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html).
+    * The modelName is a standard name for each sublayer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-buildingSublayers-BuildingSublayer.html#modelName)
     */
@@ -34,8 +34,6 @@ trait BuildingSublayer
     * Opacity of the sublayer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-buildingSublayers-BuildingSublayer.html#opacity)
-    *
-    * @default 1
     */
   var opacity: Double = js.native
   
@@ -50,8 +48,6 @@ trait BuildingSublayer
     * Indicates if the sublayer is visible in the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-buildingSublayers-BuildingSublayer.html#visible)
-    *
-    * @default true
     */
   var visible: Boolean = js.native
 }

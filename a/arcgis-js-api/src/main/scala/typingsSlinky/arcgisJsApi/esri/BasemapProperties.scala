@@ -36,14 +36,14 @@ trait BasemapProperties extends LoadableProperties {
   var referenceLayers: js.UndefOr[CollectionProperties[LayerProperties]] = js.native
   
   /**
-    * The spatial reference of the Basemap. This indicates the [Projected Coordinate System](https://developers.arcgis.com/rest/services-reference/projected-coordinate-systems.htm) or the [Geographic Coordinate System](https://developers.arcgis.com/rest/services-reference/geographic-coordinate-systems.htm) used to locate geographic features in the map.  When using an [Esri basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap), the default spatial reference is Web Mercator Auxiliary Sphere.
+    * The spatial reference of the Basemap.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html#spatialReference)
     */
   var spatialReference: js.UndefOr[SpatialReferenceProperties] = js.native
   
   /**
-    * The URL pointing to an image that represents the basemap. When using a custom basemap in the [BasemapToggle](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapToggle.html) widget, the image specified here will display in the widget. When the user clicks the image, the map's basemap will update to the basemap associated with the image.
+    * The URL pointing to an image that represents the basemap.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html#thumbnailUrl)
     */

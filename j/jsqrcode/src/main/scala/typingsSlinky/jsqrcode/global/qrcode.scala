@@ -20,7 +20,6 @@ object qrcode extends js.Object {
   
   def binarize(th: Double): js.Array[Boolean] = js.native
   
-  // tslint:disable-next-line:prefer-method-signature
   def callback(result: String): Unit = js.native
   
   def captureToCanvas(): Unit = js.native

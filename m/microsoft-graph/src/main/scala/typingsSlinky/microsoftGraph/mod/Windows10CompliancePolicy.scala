@@ -20,34 +20,34 @@ trait Windows10CompliancePolicy extends DeviceCompliancePolicy {
   var earlyLaunchAntiMalwareDriverEnabled: js.UndefOr[Boolean] = js.native
   
   // Maximum Windows Phone version.
-  var mobileOsMaximumVersion: js.UndefOr[String] = js.native
+  var mobileOsMaximumVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Minimum Windows Phone version.
-  var mobileOsMinimumVersion: js.UndefOr[String] = js.native
+  var mobileOsMinimumVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Maximum Windows 10 version.
-  var osMaximumVersion: js.UndefOr[String] = js.native
+  var osMaximumVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Minimum Windows 10 version.
-  var osMinimumVersion: js.UndefOr[String] = js.native
+  var osMinimumVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates whether or not to block simple password.
   var passwordBlockSimple: js.UndefOr[Boolean] = js.native
   
   // The password expiration in days.
-  var passwordExpirationDays: js.UndefOr[Double] = js.native
+  var passwordExpirationDays: js.UndefOr[NullableOption[Double]] = js.native
   
   // The number of character sets required in the password.
-  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.native
+  var passwordMinimumCharacterSetCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // The minimum password length.
-  var passwordMinimumLength: js.UndefOr[Double] = js.native
+  var passwordMinimumLength: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minutes of inactivity before a password is required.
-  var passwordMinutesOfInactivityBeforeLock: js.UndefOr[Double] = js.native
+  var passwordMinutesOfInactivityBeforeLock: js.UndefOr[NullableOption[Double]] = js.native
   
   // The number of previous passwords to prevent re-use of.
-  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var passwordPreviousPasswordBlockCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // Require a password to unlock Windows device.
   var passwordRequired: js.UndefOr[Boolean] = js.native
@@ -109,28 +109,40 @@ object Windows10CompliancePolicy {
     def deleteEarlyLaunchAntiMalwareDriverEnabled: Self = this.set("earlyLaunchAntiMalwareDriverEnabled", js.undefined)
     
     @scala.inline
-    def setMobileOsMaximumVersion(value: String): Self = this.set("mobileOsMaximumVersion", value.asInstanceOf[js.Any])
+    def setMobileOsMaximumVersion(value: NullableOption[String]): Self = this.set("mobileOsMaximumVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMobileOsMaximumVersion: Self = this.set("mobileOsMaximumVersion", js.undefined)
     
     @scala.inline
-    def setMobileOsMinimumVersion(value: String): Self = this.set("mobileOsMinimumVersion", value.asInstanceOf[js.Any])
+    def setMobileOsMaximumVersionNull: Self = this.set("mobileOsMaximumVersion", null)
+    
+    @scala.inline
+    def setMobileOsMinimumVersion(value: NullableOption[String]): Self = this.set("mobileOsMinimumVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMobileOsMinimumVersion: Self = this.set("mobileOsMinimumVersion", js.undefined)
     
     @scala.inline
-    def setOsMaximumVersion(value: String): Self = this.set("osMaximumVersion", value.asInstanceOf[js.Any])
+    def setMobileOsMinimumVersionNull: Self = this.set("mobileOsMinimumVersion", null)
+    
+    @scala.inline
+    def setOsMaximumVersion(value: NullableOption[String]): Self = this.set("osMaximumVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOsMaximumVersion: Self = this.set("osMaximumVersion", js.undefined)
     
     @scala.inline
-    def setOsMinimumVersion(value: String): Self = this.set("osMinimumVersion", value.asInstanceOf[js.Any])
+    def setOsMaximumVersionNull: Self = this.set("osMaximumVersion", null)
+    
+    @scala.inline
+    def setOsMinimumVersion(value: NullableOption[String]): Self = this.set("osMinimumVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOsMinimumVersion: Self = this.set("osMinimumVersion", js.undefined)
+    
+    @scala.inline
+    def setOsMinimumVersionNull: Self = this.set("osMinimumVersion", null)
     
     @scala.inline
     def setPasswordBlockSimple(value: Boolean): Self = this.set("passwordBlockSimple", value.asInstanceOf[js.Any])
@@ -139,34 +151,49 @@ object Windows10CompliancePolicy {
     def deletePasswordBlockSimple: Self = this.set("passwordBlockSimple", js.undefined)
     
     @scala.inline
-    def setPasswordExpirationDays(value: Double): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDays(value: NullableOption[Double]): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordExpirationDays: Self = this.set("passwordExpirationDays", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumCharacterSetCount(value: Double): Self = this.set("passwordMinimumCharacterSetCount", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDaysNull: Self = this.set("passwordExpirationDays", null)
+    
+    @scala.inline
+    def setPasswordMinimumCharacterSetCount(value: NullableOption[Double]): Self = this.set("passwordMinimumCharacterSetCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumCharacterSetCount: Self = this.set("passwordMinimumCharacterSetCount", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumLength(value: Double): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
+    def setPasswordMinimumCharacterSetCountNull: Self = this.set("passwordMinimumCharacterSetCount", null)
+    
+    @scala.inline
+    def setPasswordMinimumLength(value: NullableOption[Double]): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumLength: Self = this.set("passwordMinimumLength", js.undefined)
     
     @scala.inline
-    def setPasswordMinutesOfInactivityBeforeLock(value: Double): Self = this.set("passwordMinutesOfInactivityBeforeLock", value.asInstanceOf[js.Any])
+    def setPasswordMinimumLengthNull: Self = this.set("passwordMinimumLength", null)
+    
+    @scala.inline
+    def setPasswordMinutesOfInactivityBeforeLock(value: NullableOption[Double]): Self = this.set("passwordMinutesOfInactivityBeforeLock", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinutesOfInactivityBeforeLock: Self = this.set("passwordMinutesOfInactivityBeforeLock", js.undefined)
     
     @scala.inline
-    def setPasswordPreviousPasswordBlockCount(value: Double): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
+    def setPasswordMinutesOfInactivityBeforeLockNull: Self = this.set("passwordMinutesOfInactivityBeforeLock", null)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCount(value: NullableOption[Double]): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordPreviousPasswordBlockCount: Self = this.set("passwordPreviousPasswordBlockCount", js.undefined)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCountNull: Self = this.set("passwordPreviousPasswordBlockCount", null)
     
     @scala.inline
     def setPasswordRequired(value: Boolean): Self = this.set("passwordRequired", value.asInstanceOf[js.Any])

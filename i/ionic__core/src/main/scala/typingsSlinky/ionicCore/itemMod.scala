@@ -32,6 +32,8 @@ object itemMod extends js.Object {
     
     var canActivate: js.Any = js.native
     
+    var clickListener: js.Any = js.native
+    
     /**
       * The color to use from your application's color palette.
       * Default options are: `"primary"`, `"secondary"`, `"tertiary"`, `"success"`, `"warning"`, `"danger"`, `"light"`, `"medium"`, and `"dark"`.
@@ -41,6 +43,11 @@ object itemMod extends js.Object {
     
     @JSName("componentDidLoad")
     def componentDidLoad_MItem(): Unit = js.native
+    
+    @JSName("componentDidUpdate")
+    def componentDidUpdate_MItem(): Unit = js.native
+    
+    var delegateFocus: js.Any = js.native
     
     /**
       * If `true`, a detail arrow will appear on the item. Defaults to `false` unless the `mode`
@@ -53,7 +60,12 @@ object itemMod extends js.Object {
       */
     var detailIcon: String = js.native
     
+    @JSName("disconnectedCallback")
+    def disconnectedCallback_MItem(): Unit = js.native
+    
     var el: HTMLIonItemElement = js.native
+    
+    var getFirstInput: js.Any = js.native
     
     var hasCover: js.Any = js.native
     
@@ -62,6 +74,10 @@ object itemMod extends js.Object {
     def itemStyle(ev: CustomEvent): Unit = js.native
     
     var itemStyles: js.Any = js.native
+    
+    def labelColorChanged(ev: CustomEvent): Unit = js.native
+    
+    var labelColorStyles: js.Any = js.native
     
     /**
       * How the bottom border should be displayed on the item.
@@ -84,5 +100,7 @@ object itemMod extends js.Object {
       * another page using `href`.
       */
     var routerDirection: RouterDirection = js.native
+    
+    var setMultipleInputs: js.Any = js.native
   }
 }

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/node-http-handler/build/set-connection-timeout", JSImport.Namespace)
+@JSImport("@aws-sdk/node-http-handler/dist/cjs/set-connection-timeout", JSImport.Namespace)
 @js.native
 object setConnectionTimeoutMod extends js.Object {
   

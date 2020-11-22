@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNative.reactNativeStrings.active
   - typingsSlinky.reactNative.reactNativeStrings.background
   - typingsSlinky.reactNative.reactNativeStrings.inactive
+  - typingsSlinky.reactNative.reactNativeStrings.unknown
+  - typingsSlinky.reactNative.reactNativeStrings.extension
 */
 trait AppStateStatus extends js.Object
 object AppStateStatus {
@@ -19,5 +21,11 @@ object AppStateStatus {
   def background: typingsSlinky.reactNative.reactNativeStrings.background = "background".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.background]
   
   @scala.inline
+  def extension: typingsSlinky.reactNative.reactNativeStrings.extension = "extension".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.extension]
+  
+  @scala.inline
   def inactive: typingsSlinky.reactNative.reactNativeStrings.inactive = "inactive".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.inactive]
+  
+  @scala.inline
+  def unknown: typingsSlinky.reactNative.reactNativeStrings.unknown = "unknown".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.unknown]
 }

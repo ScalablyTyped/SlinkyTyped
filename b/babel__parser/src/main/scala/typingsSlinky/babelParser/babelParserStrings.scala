@@ -11,6 +11,9 @@ object babelParserStrings {
   def asyncGenerators: asyncGenerators = "asyncGenerators".asInstanceOf[asyncGenerators]
   
   @scala.inline
+  def bar: bar = "bar".asInstanceOf[bar]
+  
+  @scala.inline
   def bigInt: bigInt = "bigInt".asInstanceOf[bigInt]
   
   @scala.inline
@@ -21,6 +24,9 @@ object babelParserStrings {
   
   @scala.inline
   def classProperties: classProperties = "classProperties".asInstanceOf[classProperties]
+  
+  @scala.inline
+  def classStaticBlock: classStaticBlock = "classStaticBlock".asInstanceOf[classStaticBlock]
   
   @scala.inline
   def decimal: decimal = "decimal".asInstanceOf[decimal]
@@ -53,10 +59,19 @@ object babelParserStrings {
   def flowComments: flowComments = "flowComments".asInstanceOf[flowComments]
   
   @scala.inline
+  def fsharp: fsharp = "fsharp".asInstanceOf[fsharp]
+  
+  @scala.inline
   def functionBind: functionBind = "functionBind".asInstanceOf[functionBind]
   
   @scala.inline
   def functionSent: functionSent = "functionSent".asInstanceOf[functionSent]
+  
+  @scala.inline
+  def hash: hash = "hash".asInstanceOf[hash]
+  
+  @scala.inline
+  def importAssertions: importAssertions = "importAssertions".asInstanceOf[importAssertions]
   
   @scala.inline
   def importMeta: importMeta = "importMeta".asInstanceOf[importMeta]
@@ -74,7 +89,7 @@ object babelParserStrings {
   def module: module = "module".asInstanceOf[module]
   
   @scala.inline
-  def moduleAttributes: moduleAttributes = "moduleAttributes".asInstanceOf[moduleAttributes]
+  def moduleStringNames: moduleStringNames = "moduleStringNames".asInstanceOf[moduleStringNames]
   
   @scala.inline
   def nullishCoalescingOperator: nullishCoalescingOperator = "nullishCoalescingOperator".asInstanceOf[nullishCoalescingOperator]
@@ -104,6 +119,9 @@ object babelParserStrings {
   def privateIn: privateIn = "privateIn".asInstanceOf[privateIn]
   
   @scala.inline
+  def recordAndTuple: recordAndTuple = "recordAndTuple".asInstanceOf[recordAndTuple]
+  
+  @scala.inline
   def script: script = "script".asInstanceOf[script]
   
   @scala.inline
@@ -128,6 +146,9 @@ object babelParserStrings {
   sealed trait asyncGenerators extends _ParserPlugin
   
   @js.native
+  sealed trait bar extends js.Object
+  
+  @js.native
   sealed trait bigInt extends _ParserPlugin
   
   @js.native
@@ -138,6 +159,9 @@ object babelParserStrings {
   
   @js.native
   sealed trait classProperties extends _ParserPlugin
+  
+  @js.native
+  sealed trait classStaticBlock extends _ParserPlugin
   
   @js.native
   sealed trait decimal extends _ParserPlugin
@@ -170,10 +194,19 @@ object babelParserStrings {
   sealed trait flowComments extends _ParserPlugin
   
   @js.native
+  sealed trait fsharp extends js.Object
+  
+  @js.native
   sealed trait functionBind extends _ParserPlugin
   
   @js.native
   sealed trait functionSent extends _ParserPlugin
+  
+  @js.native
+  sealed trait hash extends js.Object
+  
+  @js.native
+  sealed trait importAssertions extends _ParserPlugin
   
   @js.native
   sealed trait importMeta extends _ParserPlugin
@@ -191,7 +224,7 @@ object babelParserStrings {
   sealed trait module extends js.Object
   
   @js.native
-  sealed trait moduleAttributes extends _ParserPlugin
+  sealed trait moduleStringNames extends _ParserPlugin
   
   @js.native
   sealed trait nullishCoalescingOperator extends _ParserPlugin
@@ -219,6 +252,9 @@ object babelParserStrings {
   
   @js.native
   sealed trait privateIn extends _ParserPlugin
+  
+  @js.native
+  sealed trait recordAndTuple extends js.Object
   
   @js.native
   sealed trait script extends js.Object

@@ -12,14 +12,12 @@ trait ButtonMenuViewModelProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable-Grid-support-ButtonMenuViewModel.html#items)
     */
-  var items: js.UndefOr[js.Array[ButtonMenuItem]] = js.native
+  var items: js.UndefOr[js.Array[ButtonMenuItemProperties]] = js.native
   
   /**
     * Indicates if the menu content is visible.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable-Grid-support-ButtonMenuViewModel.html#open)
-    *
-    * @default false
     */
   var open: js.UndefOr[Boolean] = js.native
 }
@@ -47,10 +45,10 @@ object ButtonMenuViewModelProperties {
     }
     
     @scala.inline
-    def setItemsVarargs(value: ButtonMenuItem*): Self = this.set("items", js.Array(value :_*))
+    def setItemsVarargs(value: ButtonMenuItemProperties*): Self = this.set("items", js.Array(value :_*))
     
     @scala.inline
-    def setItems(value: js.Array[ButtonMenuItem]): Self = this.set("items", value.asInstanceOf[js.Any])
+    def setItems(value: js.Array[ButtonMenuItemProperties]): Self = this.set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteItems: Self = this.set("items", js.undefined)

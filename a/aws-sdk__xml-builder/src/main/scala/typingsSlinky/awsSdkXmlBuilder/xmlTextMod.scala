@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/xml-builder/build/XmlText", JSImport.Namespace)
+@JSImport("@aws-sdk/xml-builder/dist/cjs/XmlText", JSImport.Namespace)
 @js.native
 object xmlTextMod extends js.Object {
   

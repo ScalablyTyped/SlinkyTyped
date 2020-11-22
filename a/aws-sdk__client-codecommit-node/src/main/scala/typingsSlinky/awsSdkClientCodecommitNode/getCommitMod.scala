@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientCodecommitNode
 
-import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getCommitMod extends js.Object {
   
-  val GetCommit: OperationModel = js.native
+  val GetCommit: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _Operation_ */ js.Any = js.native
 }

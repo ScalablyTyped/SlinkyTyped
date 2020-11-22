@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetSessionEmbedUrlRequest extends js.Object {
   
   /**
-    * The ID for the AWS account that contains the QuickSight session that you're embedding.
+    * The ID for the AWS account associated with your QuickSight subscription.
     */
   var AwsAccountId: typingsSlinky.awsSdk.quicksightMod.AwsAccountId = js.native
   
   /**
-    * The entry point for the embedded session.
+    * The URL you use to access the embedded session. The entry point URL is constrained to the following paths:    /start     /start/analyses     /start/dashboards     /start/favorites     /dashboards/DashboardId  - where DashboardId is the actual ID key from the QuickSight console URL of the dashboard    /analyses/AnalysisId  - where AnalysisId is the actual ID key from the QuickSight console URL of the analysis  
     */
   var EntryPoint: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.EntryPoint] = js.native
   
@@ -23,7 +23,7 @@ trait GetSessionEmbedUrlRequest extends js.Object {
   var SessionLifetimeInMinutes: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.SessionLifetimeInMinutes] = js.native
   
   /**
-    * The Amazon QuickSight user's Amazon Resource Name (ARN), for use with QUICKSIGHT identity type. You can use this for any Amazon QuickSight users in your account (readers, authors, or admins) authenticated as one of the following:   Active Directory (AD) users or group members   Invited nonfederated users   IAM users and IAM role-based sessions authenticated through Federated Single Sign-On using SAML, OpenID Connect, or IAM federation.  
+    * The Amazon QuickSight user's Amazon Resource Name (ARN), for use with QUICKSIGHT identity type. You can use this for any type of Amazon QuickSight users in your account (readers, authors, or admins). They need to be authenticated as one of the following:   Active Directory (AD) users or group members   Invited nonfederated users   IAM users and IAM role-based sessions authenticated through Federated Single Sign-On using SAML, OpenID Connect, or IAM federation   Omit this parameter for users in the third group – IAM users and IAM role-based sessions.
     */
   var UserArn: js.UndefOr[Arn] = js.native
 }

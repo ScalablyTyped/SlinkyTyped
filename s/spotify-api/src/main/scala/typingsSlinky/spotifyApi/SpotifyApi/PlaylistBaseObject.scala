@@ -19,6 +19,11 @@ trait PlaylistBaseObject extends ContextObject {
   var collaborative: Boolean = js.native
   
   /**
+    * The playlist description. Only returned for modified, verified playlists, otherwise null.
+    */
+  var description: String | Null = js.native
+  
+  /**
     * The [Spotify ID](https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids) for the playlist.
     */
   var id: String = js.native
@@ -116,6 +121,12 @@ object PlaylistBaseObject {
     
     @scala.inline
     def setType(value: playlist): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDescriptionNull: Self = this.set("description", null)
     
     @scala.inline
     def setPublic(value: Boolean): Self = this.set("public", value.asInstanceOf[js.Any])

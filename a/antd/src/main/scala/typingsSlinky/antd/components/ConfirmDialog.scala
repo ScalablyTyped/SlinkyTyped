@@ -9,6 +9,7 @@ import typingsSlinky.antd.antdStrings.cancel
 import typingsSlinky.antd.antdStrings.ok
 import typingsSlinky.antd.buttonButtonMod.ButtonProps
 import typingsSlinky.antd.buttonButtonMod.LegacyButtonType
+import typingsSlinky.antd.configProviderContextMod.DirectionType
 import typingsSlinky.antd.confirmDialogMod.ConfirmDialogProps
 import typingsSlinky.antd.modalModalMod.getContainerFunc
 import typingsSlinky.react.mod.CSSProperties
@@ -37,6 +38,9 @@ object ConfirmDialog {
     def autoFocusButtonNull: this.type = set("autoFocusButton", null)
     
     @scala.inline
+    def bodyStyle(value: CSSProperties): this.type = set("bodyStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def cancelButtonProps(value: ButtonProps): this.type = set("cancelButtonProps", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -58,7 +62,7 @@ object ConfirmDialog {
     def content(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
+    def direction(value: DirectionType): this.type = set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def getContainerHTMLElement(value: HTMLElement): this.type = set("getContainer", value.asInstanceOf[js.Any])
@@ -92,6 +96,9 @@ object ConfirmDialog {
     
     @scala.inline
     def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def modalRender(value: /* node */ ReactElement => ReactElement): this.type = set("modalRender", js.Any.fromFunction1(value))
     
     @scala.inline
     def okButtonProps(value: ButtonProps): this.type = set("okButtonProps", value.asInstanceOf[js.Any])

@@ -2,6 +2,7 @@ package typingsSlinky.muiDatatables.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
 import typingsSlinky.muiDatatables.mod.MUIDataTableResize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +23,7 @@ object TableResize {
     def classes(value: js.Object): this.type = set("classes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
+    def options(value: MUIDataTableOptions): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rowSelected(value: Boolean): this.type = set("rowSelected", value.asInstanceOf[js.Any])

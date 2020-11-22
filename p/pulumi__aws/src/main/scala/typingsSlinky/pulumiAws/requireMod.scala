@@ -1,6 +1,6 @@
 package typingsSlinky.pulumiAws
 
-import typingsSlinky.pulumiAws.regionMod.Region
+import typingsSlinky.pulumiAws.enumsMod.Region
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

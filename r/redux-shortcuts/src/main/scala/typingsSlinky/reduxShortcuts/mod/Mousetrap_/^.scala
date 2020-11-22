@@ -2,8 +2,8 @@ package typingsSlinky.reduxShortcuts.mod.Mousetrap_
 
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Element
-import typingsSlinky.mousetrap.MousetrapInstance
-import typingsSlinky.mousetrap.MousetrapStatic
+import typingsSlinky.mousetrap.mod.MousetrapInstance
+import typingsSlinky.mousetrap.mod.MousetrapStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

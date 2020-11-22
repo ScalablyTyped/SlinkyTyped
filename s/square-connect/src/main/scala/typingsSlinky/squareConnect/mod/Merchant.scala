@@ -14,8 +14,7 @@ class Merchant () extends js.Object {
   var business_name: js.UndefOr[String] = js.native
   
   /**
-    * The country code associated with the merchant account, in ISO 3166-1-alpha-2 format.
-    * See [Country](#type-country) for possible values.
+    * The country code associated with the merchant account, in ISO 3166 format. See [Country](#type-country) for possible values.
     */
   var country: String = js.native
   
@@ -33,6 +32,11 @@ class Merchant () extends js.Object {
     * The language code associated with the merchant account, in BCP 47 format.
     */
   var language_code: js.UndefOr[String] = js.native
+  
+  /**
+    * The ID of the main `Location` for this merchant.
+    */
+  var main_location_id: js.UndefOr[String] = js.native
   
   /**
     * The merchant status, active or inactive. See [MerchantStatus](#type-merchantstatus) for possible values

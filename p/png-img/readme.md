@@ -1,7 +1,7 @@
 
 # Scala.js typings for png-img
 
-Typings are for version 2.3
+Typings are for version 3.0
 
 ## Library description:
 PNG Image

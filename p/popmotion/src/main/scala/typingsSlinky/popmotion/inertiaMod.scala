@@ -1,6 +1,7 @@
 package typingsSlinky.popmotion
 
-import typingsSlinky.popmotion.vectorMod.ActionFactory
+import typingsSlinky.popmotion.anon.Stop
+import typingsSlinky.popmotion.typesMod.InertiaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object inertiaMod extends js.Object {
   
-  val default: ActionFactory = js.native
+  def inertia(
+    hasFromVelocityMinMaxPowerTimeConstantBounceStiffnessBounceDampingRestDeltaModifyTargetDriverOnUpdateOnComplete: InertiaOptions
+  ): Stop = js.native
 }

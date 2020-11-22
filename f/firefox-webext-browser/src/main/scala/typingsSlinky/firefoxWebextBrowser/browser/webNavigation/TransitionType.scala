@@ -6,9 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* webNavigation types */
 /**
-  * Cause of the navigation. The same transition types as defined in the history API are used. These are the same
-  * transition types as defined in the history API except with `"start_page"` in place of `"auto_toplevel"` (for
-  * backwards compatibility).
+  * Cause of the navigation. The same transition types as defined in the history API are used. These are the same transition types as defined in the history API except with `"start_page"` in place of `"auto_toplevel"` (for backwards compatibility).
   */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.link

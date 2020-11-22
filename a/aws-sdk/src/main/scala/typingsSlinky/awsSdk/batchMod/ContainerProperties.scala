@@ -18,6 +18,11 @@ trait ContainerProperties extends js.Object {
   var environment: js.UndefOr[EnvironmentVariables] = js.native
   
   /**
+    * The Amazon Resource Name (ARN) of the execution role that AWS Batch can assume. For more information, see AWS Batch execution IAM role.
+    */
+  var executionRoleArn: js.UndefOr[String] = js.native
+  
+  /**
     * The image used to start a container. This string is passed directly to the Docker daemon. Images in the Docker Hub registry are available by default. Other repositories are specified with  repository-url/image:tag . Up to 255 letters (uppercase and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number signs are allowed. This parameter maps to Image in the Create a container section of the Docker Remote API and the IMAGE parameter of docker run.   Images in Amazon ECR repositories use the full registry and repository URI (for example, 012345678910.dkr.ecr.&lt;region-name&gt;.amazonaws.com/&lt;repository-name&gt;).   Images in official repositories on Docker Hub use a single name (for example, ubuntu or mongo).   Images in other repositories on Docker Hub are qualified with an organization name (for example, amazon/amazon-ecs-agent).   Images in other online repositories are qualified further by a domain name (for example, quay.io/assemblyline/ubuntu).  
     */
   var image: js.UndefOr[String] = js.native
@@ -38,7 +43,12 @@ trait ContainerProperties extends js.Object {
   var linuxParameters: js.UndefOr[LinuxParameters] = js.native
   
   /**
-    * The hard limit (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed. This parameter maps to Memory in the Create a container section of the Docker Remote API and the --memory option to docker run. You must specify at least 4 MiB of memory for a job.  If you are trying to maximize your resource utilization by providing your jobs as much memory as possible for a particular instance type, see Memory Management in the AWS Batch User Guide. 
+    * The log configuration specification for the container. This parameter maps to LogConfig in the Create a container section of the Docker Remote API and the --log-driver option to docker run. By default, containers use the same logging driver that the Docker daemon uses. However the container may use a different logging driver than the Docker daemon by specifying a log driver with this parameter in the container definition. To use a different logging driver for a container, the log system must be configured properly on the container instance (or on a different log server for remote logging options). For more information on the options for different supported log drivers, see Configure logging drivers in the Docker documentation.  AWS Batch currently supports a subset of the logging drivers available to the Docker daemon (shown in the LogConfiguration data type).  This parameter requires version 1.18 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log into your container instance and run the following command: sudo docker version | grep "Server API version"   The Amazon ECS container agent running on a container instance must register the logging drivers available on that instance with the ECS_AVAILABLE_LOGGING_DRIVERS environment variable before containers placed on that instance can use these log configuration options. For more information, see Amazon ECS Container Agent Configuration in the Amazon Elastic Container Service Developer Guide. 
+    */
+  var logConfiguration: js.UndefOr[LogConfiguration] = js.native
+  
+  /**
+    * The hard limit (in MiB) of memory to present to the container. If your container attempts to exceed the memory specified here, the container is killed. This parameter maps to Memory in the Create a container section of the Docker Remote API and the --memory option to docker run. You must specify at least 4 MiB of memory for a job. This is required but can be specified in several places for multi-node parallel (MNP) jobs; it must be specified for each node at least once.  If you are trying to maximize your resource utilization by providing your jobs as much memory as possible for a particular instance type, see Memory Management in the AWS Batch User Guide. 
     */
   var memory: js.UndefOr[Integer] = js.native
   
@@ -63,6 +73,11 @@ trait ContainerProperties extends js.Object {
   var resourceRequirements: js.UndefOr[ResourceRequirements] = js.native
   
   /**
+    * The secrets for the container. For more information, see Specifying Sensitive Data in the Amazon Elastic Container Service Developer Guide.
+    */
+  var secrets: js.UndefOr[SecretList] = js.native
+  
+  /**
     * A list of ulimits to set in the container. This parameter maps to Ulimits in the Create a container section of the Docker Remote API and the --ulimit option to docker run.
     */
   var ulimits: js.UndefOr[Ulimits] = js.native
@@ -73,7 +88,7 @@ trait ContainerProperties extends js.Object {
   var user: js.UndefOr[String] = js.native
   
   /**
-    * The number of vCPUs reserved for the container. This parameter maps to CpuShares in the Create a container section of the Docker Remote API and the --cpu-shares option to docker run. Each vCPU is equivalent to 1,024 CPU shares. You must specify at least one vCPU.
+    * The number of vCPUs reserved for the container. This parameter maps to CpuShares in the Create a container section of the Docker Remote API and the --cpu-shares option to docker run. Each vCPU is equivalent to 1,024 CPU shares. You must specify at least one vCPU. This is required but can be specified in several places for multi-node parallel (MNP) jobs; it must be specified for each node at least once.
     */
   var vcpus: js.UndefOr[Integer] = js.native
   
@@ -124,6 +139,12 @@ object ContainerProperties {
     def deleteEnvironment: Self = this.set("environment", js.undefined)
     
     @scala.inline
+    def setExecutionRoleArn(value: String): Self = this.set("executionRoleArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExecutionRoleArn: Self = this.set("executionRoleArn", js.undefined)
+    
+    @scala.inline
     def setImage(value: String): Self = this.set("image", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -146,6 +167,12 @@ object ContainerProperties {
     
     @scala.inline
     def deleteLinuxParameters: Self = this.set("linuxParameters", js.undefined)
+    
+    @scala.inline
+    def setLogConfiguration(value: LogConfiguration): Self = this.set("logConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLogConfiguration: Self = this.set("logConfiguration", js.undefined)
     
     @scala.inline
     def setMemory(value: Integer): Self = this.set("memory", value.asInstanceOf[js.Any])
@@ -182,6 +209,15 @@ object ContainerProperties {
     
     @scala.inline
     def deleteResourceRequirements: Self = this.set("resourceRequirements", js.undefined)
+    
+    @scala.inline
+    def setSecretsVarargs(value: Secret*): Self = this.set("secrets", js.Array(value :_*))
+    
+    @scala.inline
+    def setSecrets(value: SecretList): Self = this.set("secrets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSecrets: Self = this.set("secrets", js.undefined)
     
     @scala.inline
     def setUlimitsVarargs(value: Ulimit*): Self = this.set("ulimits", js.Array(value :_*))

@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LaunchTemplateSpecification extends js.Object {
   
   /**
-    * The ID of the launch template. To get the template ID, use the Amazon EC2 DescribeLaunchTemplates API operation. New launch templates can be created using the Amazon EC2 CreateLaunchTemplate API. You must specify either a template ID or a template name.
+    * The ID of the launch template. To get the template ID, use the Amazon EC2 DescribeLaunchTemplates API operation. New launch templates can be created using the Amazon EC2 CreateLaunchTemplate API. You must specify either a LaunchTemplateId or a LaunchTemplateName.
     */
   var LaunchTemplateId: js.UndefOr[XmlStringMaxLen255] = js.native
   
   /**
-    * The name of the launch template. To get the template name, use the Amazon EC2 DescribeLaunchTemplates API operation. New launch templates can be created using the Amazon EC2 CreateLaunchTemplate API. You must specify either a template ID or a template name.
+    * The name of the launch template. To get the template name, use the Amazon EC2 DescribeLaunchTemplates API operation. New launch templates can be created using the Amazon EC2 CreateLaunchTemplate API. You must specify either a LaunchTemplateId or a LaunchTemplateName.
     */
   var LaunchTemplateName: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.LaunchTemplateName] = js.native
   

@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TryStatement extends Statement {
   
-  var catchClause: js.UndefOr[CatchClause] = js.native
+  val catchClause: js.UndefOr[CatchClause] = js.native
   
-  var finallyBlock: js.UndefOr[Block] = js.native
+  val finallyBlock: js.UndefOr[Block] = js.native
   
   @JSName("kind")
-  var kind_TryStatement: typingsSlinky.typescript.mod.SyntaxKind.TryStatement = js.native
+  val kind_TryStatement: typingsSlinky.typescript.mod.SyntaxKind.TryStatement = js.native
   
-  var tryBlock: Block = js.native
+  val tryBlock: Block = js.native
 }

@@ -26,6 +26,8 @@ trait iOSEventMap extends ProxyEventMap {
   
   var remotenotificationaction: iOSRemotenotificationactionEvent = js.native
   
+  var screenshotcaptured: iOSScreenshotcapturedEvent = js.native
+  
   var sessioncompleted: iOSSessioncompletedEvent = js.native
   
   var sessioneventscompleted: iOSSessioneventscompletedEvent = js.native
@@ -55,6 +57,7 @@ object iOSEventMap {
     localnotificationaction: iOSLocalnotificationactionEvent,
     notification: iOSNotificationEvent,
     remotenotificationaction: iOSRemotenotificationactionEvent,
+    screenshotcaptured: iOSScreenshotcapturedEvent,
     sessioncompleted: iOSSessioncompletedEvent,
     sessioneventscompleted: iOSSessioneventscompletedEvent,
     shortcutitemclick: iOSShortcutitemclickEvent,
@@ -64,7 +67,7 @@ object iOSEventMap {
     usernotificationsettings: iOSUsernotificationsettingsEvent,
     watchkitextensionrequest: iOSWatchkitextensionrequestEvent
   ): iOSEventMap = {
-    val __obj = js.Dynamic.literal(backgroundfetch = backgroundfetch.asInstanceOf[js.Any], backgroundtransfer = backgroundtransfer.asInstanceOf[js.Any], continueactivity = continueactivity.asInstanceOf[js.Any], downloadcompleted = downloadcompleted.asInstanceOf[js.Any], downloadprogress = downloadprogress.asInstanceOf[js.Any], handleurl = handleurl.asInstanceOf[js.Any], localnotificationaction = localnotificationaction.asInstanceOf[js.Any], notification = notification.asInstanceOf[js.Any], remotenotificationaction = remotenotificationaction.asInstanceOf[js.Any], sessioncompleted = sessioncompleted.asInstanceOf[js.Any], sessioneventscompleted = sessioneventscompleted.asInstanceOf[js.Any], shortcutitemclick = shortcutitemclick.asInstanceOf[js.Any], silentpush = silentpush.asInstanceOf[js.Any], traitcollectionchange = traitcollectionchange.asInstanceOf[js.Any], uploadprogress = uploadprogress.asInstanceOf[js.Any], usernotificationsettings = usernotificationsettings.asInstanceOf[js.Any], watchkitextensionrequest = watchkitextensionrequest.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(backgroundfetch = backgroundfetch.asInstanceOf[js.Any], backgroundtransfer = backgroundtransfer.asInstanceOf[js.Any], continueactivity = continueactivity.asInstanceOf[js.Any], downloadcompleted = downloadcompleted.asInstanceOf[js.Any], downloadprogress = downloadprogress.asInstanceOf[js.Any], handleurl = handleurl.asInstanceOf[js.Any], localnotificationaction = localnotificationaction.asInstanceOf[js.Any], notification = notification.asInstanceOf[js.Any], remotenotificationaction = remotenotificationaction.asInstanceOf[js.Any], screenshotcaptured = screenshotcaptured.asInstanceOf[js.Any], sessioncompleted = sessioncompleted.asInstanceOf[js.Any], sessioneventscompleted = sessioneventscompleted.asInstanceOf[js.Any], shortcutitemclick = shortcutitemclick.asInstanceOf[js.Any], silentpush = silentpush.asInstanceOf[js.Any], traitcollectionchange = traitcollectionchange.asInstanceOf[js.Any], uploadprogress = uploadprogress.asInstanceOf[js.Any], usernotificationsettings = usernotificationsettings.asInstanceOf[js.Any], watchkitextensionrequest = watchkitextensionrequest.asInstanceOf[js.Any])
     __obj.asInstanceOf[iOSEventMap]
   }
   
@@ -109,6 +112,9 @@ object iOSEventMap {
     
     @scala.inline
     def setRemotenotificationaction(value: iOSRemotenotificationactionEvent): Self = this.set("remotenotificationaction", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setScreenshotcaptured(value: iOSScreenshotcapturedEvent): Self = this.set("screenshotcaptured", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSessioncompleted(value: iOSSessioncompletedEvent): Self = this.set("sessioncompleted", value.asInstanceOf[js.Any])

@@ -21,6 +21,7 @@ import typingsSlinky.baseui.baseuiStrings.tooltip
 import typingsSlinky.baseui.baseuiStrings.top
 import typingsSlinky.baseui.baseuiStrings.topLeft
 import typingsSlinky.baseui.baseuiStrings.topRight
+import typingsSlinky.baseui.popoverMod.PopoverOverrides
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -69,11 +70,13 @@ trait PopoverPropschildrennever extends js.Object {
   
   var onMouseLeaveDelay: js.UndefOr[Double] = js.native
   
-  var overrides: js.UndefOr[typingsSlinky.baseui.popoverMod.Overrides] = js.native
+  var overrides: js.UndefOr[PopoverOverrides] = js.native
   
   var placement: js.UndefOr[
     topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
   ] = js.native
+  
+  var popoverMargin: js.UndefOr[Double] = js.native
   
   var popperOptions: js.UndefOr[js.Any] = js.native
   
@@ -232,7 +235,7 @@ object PopoverPropschildrennever {
     def deleteOnMouseLeaveDelay: Self = this.set("onMouseLeaveDelay", js.undefined)
     
     @scala.inline
-    def setOverrides(value: typingsSlinky.baseui.popoverMod.Overrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: PopoverOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)
@@ -244,6 +247,12 @@ object PopoverPropschildrennever {
     
     @scala.inline
     def deletePlacement: Self = this.set("placement", js.undefined)
+    
+    @scala.inline
+    def setPopoverMargin(value: Double): Self = this.set("popoverMargin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePopoverMargin: Self = this.set("popoverMargin", js.undefined)
     
     @scala.inline
     def setPopperOptions(value: js.Any): Self = this.set("popperOptions", value.asInstanceOf[js.Any])

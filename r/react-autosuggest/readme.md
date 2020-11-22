@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-autosuggest
 
-Typings are for version 9.3
+Typings are for version 10.0
 
 ## Library description:
 WAI-ARIA compliant React autosuggest component

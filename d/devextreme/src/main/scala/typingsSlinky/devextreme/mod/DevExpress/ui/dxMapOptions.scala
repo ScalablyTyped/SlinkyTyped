@@ -2,8 +2,8 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import typingsSlinky.devextreme.anon.Bing
 import typingsSlinky.devextreme.anon.Color
+import typingsSlinky.devextreme.anon.EventLocation
 import typingsSlinky.devextreme.anon.IconSrc
-import typingsSlinky.devextreme.anon.JQueryEventLocation
 import typingsSlinky.devextreme.anon.ModelOptions
 import typingsSlinky.devextreme.anon.Options
 import typingsSlinky.devextreme.anon.OriginalMap
@@ -21,52 +21,84 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxMapOptions extends WidgetOptions[dxMap] {
   
-  /** @name dxMap.Options.autoAdjust */
+  /**
+    * [descr:dxMap.Options.autoAdjust]
+    */
   var autoAdjust: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMap.Options.center */
+  /**
+    * [descr:dxMap.Options.center]
+    */
   var center: js.UndefOr[js.Any | String | js.Array[Double]] = js.native
   
-  /** @name dxMap.Options.controls */
+  /**
+    * [descr:dxMap.Options.controls]
+    */
   var controls: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMap.Options.key */
+  /**
+    * [descr:dxMap.Options.key]
+    */
   var key: js.UndefOr[String | Bing] = js.native
   
-  /** @name dxMap.Options.markerIconSrc */
+  /**
+    * [descr:dxMap.Options.markerIconSrc]
+    */
   var markerIconSrc: js.UndefOr[String] = js.native
   
-  /** @name dxMap.Options.markers */
+  /**
+    * [descr:dxMap.Options.markers]
+    */
   var markers: js.UndefOr[js.Array[IconSrc]] = js.native
   
-  /** @name dxMap.Options.onClick */
-  var onClick: js.UndefOr[(js.Function1[/* e */ JQueryEventLocation, _]) | String] = js.native
+  /**
+    * [descr:dxMap.Options.onClick]
+    */
+  var onClick: js.UndefOr[(js.Function1[/* e */ EventLocation, _]) | String] = js.native
   
-  /** @name dxMap.Options.onMarkerAdded */
+  /**
+    * [descr:dxMap.Options.onMarkerAdded]
+    */
   var onMarkerAdded: js.UndefOr[js.Function1[/* e */ Options, _]] = js.native
   
-  /** @name dxMap.Options.onMarkerRemoved */
+  /**
+    * [descr:dxMap.Options.onMarkerRemoved]
+    */
   var onMarkerRemoved: js.UndefOr[js.Function1[/* e */ ModelOptions, _]] = js.native
   
-  /** @name dxMap.Options.onReady */
+  /**
+    * [descr:dxMap.Options.onReady]
+    */
   var onReady: js.UndefOr[js.Function1[/* e */ OriginalMap, _]] = js.native
   
-  /** @name dxMap.Options.onRouteAdded */
+  /**
+    * [descr:dxMap.Options.onRouteAdded]
+    */
   var onRouteAdded: js.UndefOr[js.Function1[/* e */ OriginalRoute, _]] = js.native
   
-  /** @name dxMap.Options.onRouteRemoved */
+  /**
+    * [descr:dxMap.Options.onRouteRemoved]
+    */
   var onRouteRemoved: js.UndefOr[js.Function1[/* e */ ModelOptions, _]] = js.native
   
-  /** @name dxMap.Options.provider */
+  /**
+    * [descr:dxMap.Options.provider]
+    */
   var provider: js.UndefOr[bing | google | googleStatic] = js.native
   
-  /** @name dxMap.Options.routes */
+  /**
+    * [descr:dxMap.Options.routes]
+    */
   var routes: js.UndefOr[js.Array[Color]] = js.native
   
-  /** @name dxMap.Options.type */
+  /**
+    * [descr:dxMap.Options.type]
+    */
   var `type`: js.UndefOr[hybrid | roadmap | satellite] = js.native
   
-  /** @name dxMap.Options.zoom */
+  /**
+    * [descr:dxMap.Options.zoom]
+    */
   var zoom: js.UndefOr[Double] = js.native
 }
 object dxMapOptions {
@@ -135,10 +167,10 @@ object dxMapOptions {
     def deleteMarkers: Self = this.set("markers", js.undefined)
     
     @scala.inline
-    def setOnClickFunction1(value: /* e */ JQueryEventLocation => _): Self = this.set("onClick", js.Any.fromFunction1(value))
+    def setOnClickFunction1(value: /* e */ EventLocation => _): Self = this.set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnClick(value: (js.Function1[/* e */ JQueryEventLocation, _]) | String): Self = this.set("onClick", value.asInstanceOf[js.Any])
+    def setOnClick(value: (js.Function1[/* e */ EventLocation, _]) | String): Self = this.set("onClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnClick: Self = this.set("onClick", js.undefined)

@@ -8,11 +8,12 @@ import typingsSlinky.astTypes.kindsMod.RestElementKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSConstructorType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TSConstructorTypeBuilder extends js.Object {
+  
   def apply(parameters: js.Array[IdentifierKind | RestElementKind | ArrayPatternKind | ObjectPatternKind]): TSConstructorType = js.native
+  
   def from(params: Parameters): TSConstructorType = js.native
 }
-

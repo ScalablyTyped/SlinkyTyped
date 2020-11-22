@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/core/build/lib/handle_deprecation_warnings", JSImport.Namespace)
+@JSImport("@jest/core/build/lib/handleDeprecationWarnings", JSImport.Namespace)
 @js.native
 object handleDeprecationWarningsMod extends js.Object {
   

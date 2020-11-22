@@ -1,6 +1,5 @@
 package typingsSlinky.prettier.mod
 
-import typingsSlinky.prettier.anon.RecordBuiltInParserNameBu
 import typingsSlinky.prettier.prettierStrings.`as-needed`
 import typingsSlinky.prettier.prettierStrings.all
 import typingsSlinky.prettier.prettierStrings.always
@@ -15,6 +14,7 @@ import typingsSlinky.prettier.prettierStrings.ignore
 import typingsSlinky.prettier.prettierStrings.lf
 import typingsSlinky.prettier.prettierStrings.never
 import typingsSlinky.prettier.prettierStrings.none
+import typingsSlinky.prettier.prettierStrings.off
 import typingsSlinky.prettier.prettierStrings.preserve
 import typingsSlinky.prettier.prettierStrings.strict
 import scala.scalajs.js
@@ -29,6 +29,10 @@ trait Options extends js.Object {
   
   var bracketSpacing: js.UndefOr[Boolean] = js.native
   
+  var embeddedInHtml: js.UndefOr[Boolean] = js.native
+  
+  var embeddedLanguageFormatting: js.UndefOr[auto | off] = js.native
+  
   var endOfLine: js.UndefOr[auto | lf | crlf | cr] = js.native
   
   var filepath: js.UndefOr[String] = js.native
@@ -41,9 +45,11 @@ trait Options extends js.Object {
   
   var jsxSingleQuote: js.UndefOr[Boolean] = js.native
   
-  var parser: js.UndefOr[BuiltInParserName | CustomParser] = js.native
+  var parentParser: js.UndefOr[String] = js.native
   
-  var plugins: js.UndefOr[js.Array[String | Plugin]] = js.native
+  var parser: js.UndefOr[(LiteralUnion[BuiltInParserName, String]) | CustomParser] = js.native
+  
+  var plugins: js.UndefOr[js.Array[String | Plugin[_]]] = js.native
   
   var printWidth: js.UndefOr[Double] = js.native
   
@@ -105,6 +111,18 @@ object Options {
     def deleteBracketSpacing: Self = this.set("bracketSpacing", js.undefined)
     
     @scala.inline
+    def setEmbeddedInHtml(value: Boolean): Self = this.set("embeddedInHtml", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEmbeddedInHtml: Self = this.set("embeddedInHtml", js.undefined)
+    
+    @scala.inline
+    def setEmbeddedLanguageFormatting(value: auto | off): Self = this.set("embeddedLanguageFormatting", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEmbeddedLanguageFormatting: Self = this.set("embeddedLanguageFormatting", js.undefined)
+    
+    @scala.inline
     def setEndOfLine(value: auto | lf | crlf | cr): Self = this.set("endOfLine", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -141,19 +159,25 @@ object Options {
     def deleteJsxSingleQuote: Self = this.set("jsxSingleQuote", js.undefined)
     
     @scala.inline
-    def setParserFunction3(value: (/* text */ String, /* parsers */ RecordBuiltInParserNameBu, /* options */ Options) => AST): Self = this.set("parser", js.Any.fromFunction3(value))
+    def setParentParser(value: String): Self = this.set("parentParser", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setParser(value: BuiltInParserName | CustomParser): Self = this.set("parser", value.asInstanceOf[js.Any])
+    def deleteParentParser: Self = this.set("parentParser", js.undefined)
+    
+    @scala.inline
+    def setParserFunction3(value: (/* text */ String, /* parsers */ BuiltInParsers, /* options */ Options) => AST): Self = this.set("parser", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setParser(value: (LiteralUnion[BuiltInParserName, String]) | CustomParser): Self = this.set("parser", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteParser: Self = this.set("parser", js.undefined)
     
     @scala.inline
-    def setPluginsVarargs(value: (String | Plugin)*): Self = this.set("plugins", js.Array(value :_*))
+    def setPluginsVarargs(value: (String | Plugin[js.Any])*): Self = this.set("plugins", js.Array(value :_*))
     
     @scala.inline
-    def setPlugins(value: js.Array[String | Plugin]): Self = this.set("plugins", value.asInstanceOf[js.Any])
+    def setPlugins(value: js.Array[String | Plugin[_]]): Self = this.set("plugins", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePlugins: Self = this.set("plugins", js.undefined)

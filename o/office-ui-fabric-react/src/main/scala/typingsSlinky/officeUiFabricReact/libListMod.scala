@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact
 
 import typingsSlinky.officeUiFabricReact.anon.OnRenderCell
+import typingsSlinky.officeUiFabricReact.listListMod.IListState
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`0`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`1`
@@ -24,6 +25,8 @@ object libListMod extends js.Object {
   object List extends js.Object {
     
     var defaultProps: OnRenderCell = js.native
+    
+    def getDerivedStateFromProps[T](nextProps: IListProps[T], previousState: IListState[T]): IListState[T] = js.native
   }
   
   @js.native

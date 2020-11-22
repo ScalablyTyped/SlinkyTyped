@@ -12,8 +12,7 @@ trait DNSRecord extends js.Object {
   var addresses: js.Array[String] = js.native
   
   /**
-    * The canonical hostname for this record. this value is empty if the record was not fetched with the
-    * 'canonical_name' flag.
+    * The canonical hostname for this record. this value is empty if the record was not fetched with the 'canonical_name' flag.
     */
   var canonicalName: js.UndefOr[String] = js.native
   

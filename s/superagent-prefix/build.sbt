@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "superagent-prefix"
-version := "0.0-dt-20200515Z-fb0275"
+version := "0.0-dt-20200515Z-e4c1d4"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "cookiejar" % "2.1-dt-20190116Z-83448f",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
-  "org.scalablytyped.slinky" %%% "superagent" % "4.1-dt-20200627Z-c6139c")
+  "org.scalablytyped.slinky" %%% "cookiejar" % "2.1-dt-20201014Z-25de9c",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "superagent" % "4.1-dt-20200825Z-7fb83c")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

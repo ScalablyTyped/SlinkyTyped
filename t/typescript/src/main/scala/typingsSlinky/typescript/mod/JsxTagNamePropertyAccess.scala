@@ -10,5 +10,5 @@ trait JsxTagNamePropertyAccess
      with JsxTagNameExpression {
   
   @JSName("expression")
-  var expression_JsxTagNamePropertyAccess: JsxTagNameExpression = js.native
+  val expression_JsxTagNamePropertyAccess: JsxTagNameExpression = js.native
 }

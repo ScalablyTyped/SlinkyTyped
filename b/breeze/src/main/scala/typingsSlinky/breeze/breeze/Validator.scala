@@ -15,9 +15,9 @@ trait Validator extends js.Object {
   var name: String = js.native
   
   /** Run this validator against the specified value.
-    @param value {Object} Value to validate
-    @param additionalContext {Object} Any additional contextual information that the Validator can make use of.
-    @return {ValidationError|null} A ValidationError if validation fails, null otherwise        */
+    @param value Value to validate
+    @param additionalContext Any additional contextual information that the Validator can make use of.
+    @return A ValidationError if validation fails, null otherwise        */
   def validate(value: js.Any): ValidationError = js.native
   def validate(value: js.Any, context: js.Any): ValidationError = js.native
 }

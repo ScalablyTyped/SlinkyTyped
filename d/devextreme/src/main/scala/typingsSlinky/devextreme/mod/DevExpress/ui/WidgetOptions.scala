@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.anon.ComponentElement
+import typingsSlinky.devextreme.anon.ElementModel
 import typingsSlinky.devextreme.mod.DevExpress.DOMComponentOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,31 +9,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WidgetOptions[T] extends DOMComponentOptions[T] {
   
-  /** @name Widget.Options.accessKey */
+  /**
+    * [descr:Widget.Options.accessKey]
+    */
   var accessKey: js.UndefOr[String] = js.native
   
-  /** @name Widget.Options.activeStateEnabled */
+  /**
+    * [descr:Widget.Options.activeStateEnabled]
+    */
   var activeStateEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name Widget.Options.disabled */
+  /**
+    * [descr:Widget.Options.disabled]
+    */
   var disabled: js.UndefOr[Boolean] = js.native
   
-  /** @name Widget.Options.focusStateEnabled */
+  /**
+    * [descr:Widget.Options.focusStateEnabled]
+    */
   var focusStateEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name Widget.Options.hint */
+  /**
+    * [descr:Widget.Options.hint]
+    */
   var hint: js.UndefOr[String] = js.native
   
-  /** @name Widget.Options.hoverStateEnabled */
+  /**
+    * [descr:Widget.Options.hoverStateEnabled]
+    */
   var hoverStateEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name Widget.Options.onContentReady */
-  var onContentReady: js.UndefOr[js.Function1[/* e */ ComponentElement[T], _]] = js.native
+  /**
+    * [descr:Widget.Options.onContentReady]
+    */
+  var onContentReady: js.UndefOr[js.Function1[/* e */ ElementModel[T], _]] = js.native
   
-  /** @name Widget.Options.tabIndex */
+  /**
+    * [descr:Widget.Options.tabIndex]
+    */
   var tabIndex: js.UndefOr[Double] = js.native
   
-  /** @name Widget.Options.visible */
+  /**
+    * [descr:Widget.Options.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object WidgetOptions {
@@ -96,7 +114,7 @@ object WidgetOptions {
     def deleteHoverStateEnabled: Self = this.set("hoverStateEnabled", js.undefined)
     
     @scala.inline
-    def setOnContentReady(value: /* e */ ComponentElement[T] => _): Self = this.set("onContentReady", js.Any.fromFunction1(value))
+    def setOnContentReady(value: /* e */ ElementModel[T] => _): Self = this.set("onContentReady", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnContentReady: Self = this.set("onContentReady", js.undefined)

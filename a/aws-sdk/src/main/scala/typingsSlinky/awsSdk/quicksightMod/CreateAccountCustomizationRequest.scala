@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateAccountCustomizationRequest extends js.Object {
   
   /**
-    * The customizations you're adding to the QuickSight subscription for the AWS account. For example, you could add a default theme by setting AccountCustomization to the midnight theme (DefaultTheme="arn:aws:quicksight::aws:theme/MIDNIGHT") or to a custom theme (DefaultTheme="arn:aws:quicksight:us-west-2:111122223333:theme/bdb844d0-0fe9-4d9d-b520-0fe602d93639").
+    * The QuickSight customizations you're adding in the current AWS Region. You can add these to an AWS account and a QuickSight namespace.  For example, you can add a default theme by setting AccountCustomization to the midnight theme: "AccountCustomization": { "DefaultTheme": "arn:aws:quicksight::aws:theme/MIDNIGHT" }. Or, you can add a custom theme by specifying "AccountCustomization": { "DefaultTheme": "arn:aws:quicksight:us-west-2:111122223333:theme/bdb844d0-0fe9-4d9d-b520-0fe602d93639" }. 
     */
   var AccountCustomization: typingsSlinky.awsSdk.quicksightMod.AccountCustomization = js.native
   
@@ -18,9 +18,14 @@ trait CreateAccountCustomizationRequest extends js.Object {
   var AwsAccountId: typingsSlinky.awsSdk.quicksightMod.AwsAccountId = js.native
   
   /**
-    * The namespace associated with the customization that you're creating.
+    * The QuickSight namespace that you want to add customizations to.
     */
   var Namespace: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.Namespace] = js.native
+  
+  /**
+    * A list of the tags that you want to attach to this resource.
+    */
+  var Tags: js.UndefOr[TagList] = js.native
 }
 object CreateAccountCustomizationRequest {
   
@@ -56,5 +61,14 @@ object CreateAccountCustomizationRequest {
     
     @scala.inline
     def deleteNamespace: Self = this.set("Namespace", js.undefined)
+    
+    @scala.inline
+    def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))
+    
+    @scala.inline
+    def setTags(value: TagList): Self = this.set("Tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("Tags", js.undefined)
   }
 }

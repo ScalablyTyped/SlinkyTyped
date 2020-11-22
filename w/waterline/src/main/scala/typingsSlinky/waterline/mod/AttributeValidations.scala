@@ -2,171 +2,341 @@ package typingsSlinky.waterline.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@js.native
 trait AttributeValidations extends js.Object {
-  var after: js.UndefOr[AttributeValidation[String]] = js.undefined
-  var alpha: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var alphanumeric: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var array: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var before: js.UndefOr[AttributeValidation[String]] = js.undefined
-  var boolean: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var contains: js.UndefOr[AttributeValidation[String]] = js.undefined
-  var creditcard: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var date: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var decimal: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var email: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var empty: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  @JSName("equals")
-  var equals_FAttributeValidations: js.UndefOr[AttributeValidation[_]] = js.undefined
-  var falsey: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var finite: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var float: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var hexColor: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var hexadecimal: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var in: js.UndefOr[AttributeValidation[js.Array[String]]] = js.undefined
-  var int: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var integer: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var ip: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var ipv4: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var ipv6: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var is: js.UndefOr[AttributeValidation[js.RegExp]] = js.undefined
-  var len: js.UndefOr[AttributeValidation[Double]] = js.undefined
-  var lowercase: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var max: js.UndefOr[AttributeValidation[Double]] = js.undefined
-  var maxLength: js.UndefOr[AttributeValidation[Double]] = js.undefined
-  var min: js.UndefOr[AttributeValidation[Double]] = js.undefined
-  var minLength: js.UndefOr[AttributeValidation[Double]] = js.undefined
-  var not: js.UndefOr[AttributeValidation[js.RegExp]] = js.undefined
-  var notContains: js.UndefOr[AttributeValidation[String]] = js.undefined
-  var notEmpty: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var notIn: js.UndefOr[AttributeValidation[js.Array[String]]] = js.undefined
-  var notNull: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var notRegex: js.UndefOr[AttributeValidation[js.RegExp]] = js.undefined
-  var `null`: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var number: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var numeric: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var regex: js.UndefOr[AttributeValidation[js.RegExp]] = js.undefined
-  var required: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var string: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var truthy: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var undefined: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var uppercase: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var url: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var urlish: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var uuid: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var uuidv3: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var uuidv4: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
+  
+  var custom: js.UndefOr[AttributeValidation[js.Function]] = js.native
+  
+  var isAfter: js.UndefOr[AttributeValidation[js.Date]] = js.native
+  
+  var isBefore: js.UndefOr[AttributeValidation[js.Date]] = js.native
+  
+  var isBoolean: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var isCreditCard: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var isEmail: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var isHexColor: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var isIP: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var isIn: js.UndefOr[AttributeValidation[js.Array[String]]] = js.native
+  
+  var isInteger: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var isNotEmptyString: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var isNotIn: js.UndefOr[AttributeValidation[js.Array[String]]] = js.native
+  
+  var isNumber: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var isString: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var isURL: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var isUUID: js.UndefOr[AttributeValidation[Boolean]] = js.native
+  
+  var max: js.UndefOr[AttributeValidation[Double]] = js.native
+  
+  var maxLength: js.UndefOr[AttributeValidation[Double]] = js.native
+  
+  var min: js.UndefOr[AttributeValidation[Double]] = js.native
+  
+  var minLength: js.UndefOr[AttributeValidation[Double]] = js.native
+  
+  var regex: js.UndefOr[AttributeValidation[js.RegExp]] = js.native
 }
-
 object AttributeValidations {
+  
   @scala.inline
-  def apply(
-    after: AttributeValidation[String] = null,
-    alpha: AttributeValidation[Boolean] = null,
-    alphanumeric: AttributeValidation[Boolean] = null,
-    array: AttributeValidation[Boolean] = null,
-    before: AttributeValidation[String] = null,
-    boolean: AttributeValidation[Boolean] = null,
-    contains: AttributeValidation[String] = null,
-    creditcard: AttributeValidation[Boolean] = null,
-    date: AttributeValidation[Boolean] = null,
-    decimal: AttributeValidation[Boolean] = null,
-    email: AttributeValidation[Boolean] = null,
-    empty: AttributeValidation[Boolean] = null,
-    equals: AttributeValidation[_] = null,
-    falsey: AttributeValidation[Boolean] = null,
-    finite: AttributeValidation[Boolean] = null,
-    float: AttributeValidation[Boolean] = null,
-    hexColor: AttributeValidation[Boolean] = null,
-    hexadecimal: AttributeValidation[Boolean] = null,
-    in: AttributeValidation[js.Array[String]] = null,
-    int: AttributeValidation[Boolean] = null,
-    integer: AttributeValidation[Boolean] = null,
-    ip: AttributeValidation[Boolean] = null,
-    ipv4: AttributeValidation[Boolean] = null,
-    ipv6: AttributeValidation[Boolean] = null,
-    is: AttributeValidation[js.RegExp] = null,
-    len: AttributeValidation[Double] = null,
-    lowercase: AttributeValidation[Boolean] = null,
-    max: AttributeValidation[Double] = null,
-    maxLength: AttributeValidation[Double] = null,
-    min: AttributeValidation[Double] = null,
-    minLength: AttributeValidation[Double] = null,
-    not: AttributeValidation[js.RegExp] = null,
-    notContains: AttributeValidation[String] = null,
-    notEmpty: AttributeValidation[Boolean] = null,
-    notIn: AttributeValidation[js.Array[String]] = null,
-    notNull: AttributeValidation[Boolean] = null,
-    notRegex: AttributeValidation[js.RegExp] = null,
-    `null`: AttributeValidation[Boolean] = null,
-    number: AttributeValidation[Boolean] = null,
-    numeric: AttributeValidation[Boolean] = null,
-    regex: AttributeValidation[js.RegExp] = null,
-    required: AttributeValidation[Boolean] = null,
-    string: AttributeValidation[Boolean] = null,
-    truthy: AttributeValidation[Boolean] = null,
-    undefined: AttributeValidation[Boolean] = null,
-    uppercase: AttributeValidation[Boolean] = null,
-    url: AttributeValidation[Boolean] = null,
-    urlish: AttributeValidation[Boolean] = null,
-    uuid: AttributeValidation[Boolean] = null,
-    uuidv3: AttributeValidation[Boolean] = null,
-    uuidv4: AttributeValidation[Boolean] = null
-  ): AttributeValidations = {
+  def apply(): AttributeValidations = {
     val __obj = js.Dynamic.literal()
-    if (after != null) __obj.updateDynamic("after")(after.asInstanceOf[js.Any])
-    if (alpha != null) __obj.updateDynamic("alpha")(alpha.asInstanceOf[js.Any])
-    if (alphanumeric != null) __obj.updateDynamic("alphanumeric")(alphanumeric.asInstanceOf[js.Any])
-    if (array != null) __obj.updateDynamic("array")(array.asInstanceOf[js.Any])
-    if (before != null) __obj.updateDynamic("before")(before.asInstanceOf[js.Any])
-    if (boolean != null) __obj.updateDynamic("boolean")(boolean.asInstanceOf[js.Any])
-    if (contains != null) __obj.updateDynamic("contains")(contains.asInstanceOf[js.Any])
-    if (creditcard != null) __obj.updateDynamic("creditcard")(creditcard.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (decimal != null) __obj.updateDynamic("decimal")(decimal.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
-    if (equals != null) __obj.updateDynamic("equals")(equals.asInstanceOf[js.Any])
-    if (falsey != null) __obj.updateDynamic("falsey")(falsey.asInstanceOf[js.Any])
-    if (finite != null) __obj.updateDynamic("finite")(finite.asInstanceOf[js.Any])
-    if (float != null) __obj.updateDynamic("float")(float.asInstanceOf[js.Any])
-    if (hexColor != null) __obj.updateDynamic("hexColor")(hexColor.asInstanceOf[js.Any])
-    if (hexadecimal != null) __obj.updateDynamic("hexadecimal")(hexadecimal.asInstanceOf[js.Any])
-    if (in != null) __obj.updateDynamic("in")(in.asInstanceOf[js.Any])
-    if (int != null) __obj.updateDynamic("int")(int.asInstanceOf[js.Any])
-    if (integer != null) __obj.updateDynamic("integer")(integer.asInstanceOf[js.Any])
-    if (ip != null) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
-    if (ipv4 != null) __obj.updateDynamic("ipv4")(ipv4.asInstanceOf[js.Any])
-    if (ipv6 != null) __obj.updateDynamic("ipv6")(ipv6.asInstanceOf[js.Any])
-    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
-    if (len != null) __obj.updateDynamic("len")(len.asInstanceOf[js.Any])
-    if (lowercase != null) __obj.updateDynamic("lowercase")(lowercase.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
-    if (not != null) __obj.updateDynamic("not")(not.asInstanceOf[js.Any])
-    if (notContains != null) __obj.updateDynamic("notContains")(notContains.asInstanceOf[js.Any])
-    if (notEmpty != null) __obj.updateDynamic("notEmpty")(notEmpty.asInstanceOf[js.Any])
-    if (notIn != null) __obj.updateDynamic("notIn")(notIn.asInstanceOf[js.Any])
-    if (notNull != null) __obj.updateDynamic("notNull")(notNull.asInstanceOf[js.Any])
-    if (notRegex != null) __obj.updateDynamic("notRegex")(notRegex.asInstanceOf[js.Any])
-    if (`null` != null) __obj.updateDynamic("null")(`null`.asInstanceOf[js.Any])
-    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
-    if (numeric != null) __obj.updateDynamic("numeric")(numeric.asInstanceOf[js.Any])
-    if (regex != null) __obj.updateDynamic("regex")(regex.asInstanceOf[js.Any])
-    if (required != null) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
-    if (string != null) __obj.updateDynamic("string")(string.asInstanceOf[js.Any])
-    if (truthy != null) __obj.updateDynamic("truthy")(truthy.asInstanceOf[js.Any])
-    if (undefined != null) __obj.updateDynamic("undefined")(undefined.asInstanceOf[js.Any])
-    if (uppercase != null) __obj.updateDynamic("uppercase")(uppercase.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (urlish != null) __obj.updateDynamic("urlish")(urlish.asInstanceOf[js.Any])
-    if (uuid != null) __obj.updateDynamic("uuid")(uuid.asInstanceOf[js.Any])
-    if (uuidv3 != null) __obj.updateDynamic("uuidv3")(uuidv3.asInstanceOf[js.Any])
-    if (uuidv4 != null) __obj.updateDynamic("uuidv4")(uuidv4.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeValidations]
   }
+  
+  @scala.inline
+  implicit class AttributeValidationsOps[Self <: AttributeValidations] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
+    }
+    
+    @scala.inline
+    def setCustomFunction1(value: /* cb */ js.Function1[js.Function, js.Any] => Unit): Self = this.set("custom", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setCustomFunction0(value: () => js.Function): Self = this.set("custom", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setCustom(value: AttributeValidation[js.Function]): Self = this.set("custom", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustom: Self = this.set("custom", js.undefined)
+    
+    @scala.inline
+    def setIsAfterDate(value: js.Date): Self = this.set("isAfter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIsAfterFunction1(value: /* cb */ js.Function1[js.Date, js.Any] => Unit): Self = this.set("isAfter", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsAfterFunction0(value: () => js.Date): Self = this.set("isAfter", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsAfter(value: AttributeValidation[js.Date]): Self = this.set("isAfter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsAfter: Self = this.set("isAfter", js.undefined)
+    
+    @scala.inline
+    def setIsBeforeDate(value: js.Date): Self = this.set("isBefore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIsBeforeFunction1(value: /* cb */ js.Function1[js.Date, js.Any] => Unit): Self = this.set("isBefore", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsBeforeFunction0(value: () => js.Date): Self = this.set("isBefore", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsBefore(value: AttributeValidation[js.Date]): Self = this.set("isBefore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsBefore: Self = this.set("isBefore", js.undefined)
+    
+    @scala.inline
+    def setIsBooleanFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isBoolean", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsBooleanFunction0(value: () => Boolean): Self = this.set("isBoolean", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsBoolean(value: AttributeValidation[Boolean]): Self = this.set("isBoolean", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsBoolean: Self = this.set("isBoolean", js.undefined)
+    
+    @scala.inline
+    def setIsCreditCardFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isCreditCard", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsCreditCardFunction0(value: () => Boolean): Self = this.set("isCreditCard", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsCreditCard(value: AttributeValidation[Boolean]): Self = this.set("isCreditCard", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsCreditCard: Self = this.set("isCreditCard", js.undefined)
+    
+    @scala.inline
+    def setIsEmailFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isEmail", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsEmailFunction0(value: () => Boolean): Self = this.set("isEmail", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsEmail(value: AttributeValidation[Boolean]): Self = this.set("isEmail", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsEmail: Self = this.set("isEmail", js.undefined)
+    
+    @scala.inline
+    def setIsHexColorFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isHexColor", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsHexColorFunction0(value: () => Boolean): Self = this.set("isHexColor", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsHexColor(value: AttributeValidation[Boolean]): Self = this.set("isHexColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsHexColor: Self = this.set("isHexColor", js.undefined)
+    
+    @scala.inline
+    def setIsIPFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isIP", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsIPFunction0(value: () => Boolean): Self = this.set("isIP", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsIP(value: AttributeValidation[Boolean]): Self = this.set("isIP", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsIP: Self = this.set("isIP", js.undefined)
+    
+    @scala.inline
+    def setIsInVarargs(value: String*): Self = this.set("isIn", js.Array(value :_*))
+    
+    @scala.inline
+    def setIsInFunction1(value: /* cb */ js.Function1[js.Array[String], js.Any] => Unit): Self = this.set("isIn", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsInFunction0(value: () => js.Array[String]): Self = this.set("isIn", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsIn(value: AttributeValidation[js.Array[String]]): Self = this.set("isIn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsIn: Self = this.set("isIn", js.undefined)
+    
+    @scala.inline
+    def setIsIntegerFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isInteger", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsIntegerFunction0(value: () => Boolean): Self = this.set("isInteger", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsInteger(value: AttributeValidation[Boolean]): Self = this.set("isInteger", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsInteger: Self = this.set("isInteger", js.undefined)
+    
+    @scala.inline
+    def setIsNotEmptyStringFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isNotEmptyString", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsNotEmptyStringFunction0(value: () => Boolean): Self = this.set("isNotEmptyString", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsNotEmptyString(value: AttributeValidation[Boolean]): Self = this.set("isNotEmptyString", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsNotEmptyString: Self = this.set("isNotEmptyString", js.undefined)
+    
+    @scala.inline
+    def setIsNotInVarargs(value: String*): Self = this.set("isNotIn", js.Array(value :_*))
+    
+    @scala.inline
+    def setIsNotInFunction1(value: /* cb */ js.Function1[js.Array[String], js.Any] => Unit): Self = this.set("isNotIn", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsNotInFunction0(value: () => js.Array[String]): Self = this.set("isNotIn", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsNotIn(value: AttributeValidation[js.Array[String]]): Self = this.set("isNotIn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsNotIn: Self = this.set("isNotIn", js.undefined)
+    
+    @scala.inline
+    def setIsNumberFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isNumber", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsNumberFunction0(value: () => Boolean): Self = this.set("isNumber", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsNumber(value: AttributeValidation[Boolean]): Self = this.set("isNumber", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsNumber: Self = this.set("isNumber", js.undefined)
+    
+    @scala.inline
+    def setIsStringFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isString", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsStringFunction0(value: () => Boolean): Self = this.set("isString", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsString(value: AttributeValidation[Boolean]): Self = this.set("isString", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsString: Self = this.set("isString", js.undefined)
+    
+    @scala.inline
+    def setIsURLFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isURL", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsURLFunction0(value: () => Boolean): Self = this.set("isURL", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsURL(value: AttributeValidation[Boolean]): Self = this.set("isURL", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsURL: Self = this.set("isURL", js.undefined)
+    
+    @scala.inline
+    def setIsUUIDFunction1(value: /* cb */ js.Function1[Boolean, js.Any] => Unit): Self = this.set("isUUID", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setIsUUIDFunction0(value: () => Boolean): Self = this.set("isUUID", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setIsUUID(value: AttributeValidation[Boolean]): Self = this.set("isUUID", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsUUID: Self = this.set("isUUID", js.undefined)
+    
+    @scala.inline
+    def setMaxFunction1(value: /* cb */ js.Function1[Double, js.Any] => Unit): Self = this.set("max", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setMaxFunction0(value: () => Double): Self = this.set("max", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setMax(value: AttributeValidation[Double]): Self = this.set("max", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMax: Self = this.set("max", js.undefined)
+    
+    @scala.inline
+    def setMaxLengthFunction1(value: /* cb */ js.Function1[Double, js.Any] => Unit): Self = this.set("maxLength", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setMaxLengthFunction0(value: () => Double): Self = this.set("maxLength", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setMaxLength(value: AttributeValidation[Double]): Self = this.set("maxLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxLength: Self = this.set("maxLength", js.undefined)
+    
+    @scala.inline
+    def setMinFunction1(value: /* cb */ js.Function1[Double, js.Any] => Unit): Self = this.set("min", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setMinFunction0(value: () => Double): Self = this.set("min", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setMin(value: AttributeValidation[Double]): Self = this.set("min", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMin: Self = this.set("min", js.undefined)
+    
+    @scala.inline
+    def setMinLengthFunction1(value: /* cb */ js.Function1[Double, js.Any] => Unit): Self = this.set("minLength", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setMinLengthFunction0(value: () => Double): Self = this.set("minLength", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setMinLength(value: AttributeValidation[Double]): Self = this.set("minLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMinLength: Self = this.set("minLength", js.undefined)
+    
+    @scala.inline
+    def setRegexFunction1(value: /* cb */ js.Function1[js.RegExp, js.Any] => Unit): Self = this.set("regex", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setRegexRegExp(value: js.RegExp): Self = this.set("regex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRegexFunction0(value: () => js.RegExp): Self = this.set("regex", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setRegex(value: AttributeValidation[js.RegExp]): Self = this.set("regex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRegex: Self = this.set("regex", js.undefined)
+  }
 }
-

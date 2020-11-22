@@ -254,6 +254,12 @@ trait HTTPClient extends Proxy {
   def getTimeout(): Double = js.native
   
   /**
+    * Gets the value of the <Titanium.Network.HTTPClient.timeoutForResource> property.
+    * @deprecated Access <Titanium.Network.HTTPClient.timeoutForResource> instead.
+    */
+  def getTimeoutForResource(): Double = js.native
+  
+  /**
     * Gets the value of the <Titanium.Network.HTTPClient.tlsVersion> property.
     * @deprecated Access <Titanium.Network.HTTPClient.tlsVersion> instead.
     */
@@ -270,6 +276,12 @@ trait HTTPClient extends Proxy {
     * @deprecated Access <Titanium.Network.HTTPClient.validatesSecureCertificate> instead.
     */
   def getValidatesSecureCertificate(): Boolean = js.native
+  
+  /**
+    * Gets the value of the <Titanium.Network.HTTPClient.waitsForConnectivity> property.
+    * @deprecated Access <Titanium.Network.HTTPClient.waitsForConnectivity> instead.
+    */
+  def getWaitsForConnectivity(): Boolean = js.native
   
   /**
     * Absolute URL of the request.
@@ -438,6 +450,12 @@ trait HTTPClient extends Proxy {
   def setTimeout(timeout: Double): Unit = js.native
   
   /**
+    * Sets the value of the <Titanium.Network.HTTPClient.timeoutForResource> property.
+    * @deprecated Set the value using <Titanium.Network.HTTPClient.timeoutForResource> instead.
+    */
+  def setTimeoutForResource(timeoutForResource: Double): Unit = js.native
+  
+  /**
     * Sets the value of the <Titanium.Network.HTTPClient.tlsVersion> property.
     * @deprecated Set the value using <Titanium.Network.HTTPClient.tlsVersion> instead.
     */
@@ -456,6 +474,12 @@ trait HTTPClient extends Proxy {
   def setValidatesSecureCertificate(validatesSecureCertificate: Boolean): Unit = js.native
   
   /**
+    * Sets the value of the <Titanium.Network.HTTPClient.waitsForConnectivity> property.
+    * @deprecated Set the value using <Titanium.Network.HTTPClient.waitsForConnectivity> instead.
+    */
+  def setWaitsForConnectivity(waitsForConnectivity: Boolean): Unit = js.native
+  
+  /**
     * Response HTTP status code.
     */
   val status: Double = js.native
@@ -471,6 +495,11 @@ trait HTTPClient extends Proxy {
   var timeout: Double = js.native
   
   /**
+    * The maximum amount of time (in milliseconds) that a resource request should be allowed to take.
+    */
+  var timeoutForResource: Double = js.native
+  
+  /**
     * Sets the TLS version to use for handshakes.
     */
   var tlsVersion: Double = js.native
@@ -484,4 +513,9 @@ trait HTTPClient extends Proxy {
     * Determines how SSL certification validation is performed on connection.
     */
   var validatesSecureCertificate: Boolean = js.native
+  
+  /**
+    * A Boolean value that indicates whether the session should wait for connectivity to become available, or fail immediately.
+    */
+  var waitsForConnectivity: Boolean = js.native
 }

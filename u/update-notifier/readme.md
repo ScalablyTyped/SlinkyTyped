@@ -1,7 +1,7 @@
 
 # Scala.js typings for update-notifier
 
-Typings are for version 4.1
+Typings are for version 5.0
 
 ## Library description:
 Update notifications for your CLI app

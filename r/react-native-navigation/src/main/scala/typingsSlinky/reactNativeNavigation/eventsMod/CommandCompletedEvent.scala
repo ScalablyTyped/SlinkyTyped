@@ -12,14 +12,12 @@ trait CommandCompletedEvent extends js.Object {
   var commandName: String = js.native
   
   var completionTime: Double = js.native
-  
-  var params: js.Any = js.native
 }
 object CommandCompletedEvent {
   
   @scala.inline
-  def apply(commandId: String, commandName: String, completionTime: Double, params: js.Any): CommandCompletedEvent = {
-    val __obj = js.Dynamic.literal(commandId = commandId.asInstanceOf[js.Any], commandName = commandName.asInstanceOf[js.Any], completionTime = completionTime.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
+  def apply(commandId: String, commandName: String, completionTime: Double): CommandCompletedEvent = {
+    val __obj = js.Dynamic.literal(commandId = commandId.asInstanceOf[js.Any], commandName = commandName.asInstanceOf[js.Any], completionTime = completionTime.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommandCompletedEvent]
   }
   
@@ -46,8 +44,5 @@ object CommandCompletedEvent {
     
     @scala.inline
     def setCompletionTime(value: Double): Self = this.set("completionTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setParams(value: js.Any): Self = this.set("params", value.asInstanceOf[js.Any])
   }
 }

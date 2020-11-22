@@ -57,7 +57,7 @@ trait OutputOptions extends js.Object {
   
   var inlineDynamicImports: js.UndefOr[Boolean] = js.native
   
-  var interop: js.UndefOr[Boolean] = js.native
+  var interop: js.UndefOr[InteropType | GetInterop] = js.native
   
   var intro: js.UndefOr[String | (js.Function0[String | js.Promise[String]])] = js.native
   
@@ -80,6 +80,8 @@ trait OutputOptions extends js.Object {
   var preferConst: js.UndefOr[Boolean] = js.native
   
   var preserveModules: js.UndefOr[Boolean] = js.native
+  
+  var preserveModulesRoot: js.UndefOr[String] = js.native
   
   var sourcemap: js.UndefOr[Boolean | `inline` | hidden] = js.native
   
@@ -255,7 +257,10 @@ object OutputOptions {
     def deleteInlineDynamicImports: Self = this.set("inlineDynamicImports", js.undefined)
     
     @scala.inline
-    def setInterop(value: Boolean): Self = this.set("interop", value.asInstanceOf[js.Any])
+    def setInteropFunction1(value: /* id */ String | Null => InteropType): Self = this.set("interop", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setInterop(value: InteropType | GetInterop): Self = this.set("interop", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInterop: Self = this.set("interop", js.undefined)
@@ -340,6 +345,12 @@ object OutputOptions {
     
     @scala.inline
     def deletePreserveModules: Self = this.set("preserveModules", js.undefined)
+    
+    @scala.inline
+    def setPreserveModulesRoot(value: String): Self = this.set("preserveModulesRoot", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreserveModulesRoot: Self = this.set("preserveModulesRoot", js.undefined)
     
     @scala.inline
     def setSourcemap(value: Boolean | `inline` | hidden): Self = this.set("sourcemap", value.asInstanceOf[js.Any])

@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateDatasetResponse extends js.Object {
   
   /**
-    * The ARN of the data set.
+    * The ARN of the dataset.
     */
   var datasetArn: js.UndefOr[DatasetArn] = js.native
   
   /**
-    * The name of the data set.
+    * The name of the dataset.
     */
   var datasetName: js.UndefOr[DatasetName] = js.native
   
   /**
-    * How long, in days, data set contents are kept for the data set.
+    * How long, in days, dataset contents are kept for the dataset.
     */
   var retentionPeriod: js.UndefOr[RetentionPeriod] = js.native
 }

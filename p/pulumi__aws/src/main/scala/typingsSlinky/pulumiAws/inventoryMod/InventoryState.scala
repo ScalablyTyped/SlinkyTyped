@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait InventoryState extends js.Object {
   
   /**
-    * The name of the bucket where the inventory configuration will be stored.
+    * The name of the source bucket that inventory lists the objects for.
     */
   val bucket: js.UndefOr[Input[String]] = js.native
   

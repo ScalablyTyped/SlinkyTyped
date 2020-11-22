@@ -4,7 +4,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.dimmerDimmerMod.DimmerProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticSIZES
@@ -52,7 +51,7 @@ class SharedBuilder_ItemImageProps_1694285179 (val args: js.Array[js.Any])
   
   @scala.inline
   def dimmerFunction3(
-    value: (/* component */ ReactType[DimmerProps], DimmerProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, DimmerProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("dimmer", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -81,7 +80,7 @@ class SharedBuilder_ItemImageProps_1694285179 (val args: js.Array[js.Any])
   
   @scala.inline
   def labelFunction3(
-    value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("label", js.Any.fromFunction3(value))
   
   @scala.inline

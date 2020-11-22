@@ -24,14 +24,14 @@ trait predominanceRendererResult extends Object {
   var basemapTheme: String = js.native
   
   /**
-    * An array of objects describing the values or categories excluded from consideration in visualizing data from the given fields. The specification of each object matches that of the objects specified in the `predominantCategoryInfos` property.
+    * An array of objects describing the values or categories excluded from consideration in visualizing data from the given fields.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-predominance.html#RendererResult)
     */
   var excludedCategoryInfos: js.Array[_] = js.native
   
   /**
-    * An opacity visual variable representing the percentage of the total count comprised by the predominant value of all fields. This variable indicates the strength of a particular value's predominance compared to the other values.
+    * An opacity visual variable representing the percentage of the total count comprised by the predominant value of all fields.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-predominance.html#RendererResult)
     */
@@ -52,14 +52,14 @@ trait predominanceRendererResult extends Object {
   var predominantCategoryInfos: js.Array[typeUniqueValueInfo] = js.native
   
   /**
-    * The unique value renderer object representing the predominance visualization. Set this on a layer's `renderer` property to update its visualization.
+    * The unique value renderer object representing the predominance visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-predominance.html#RendererResult)
     */
   var renderer: UniqueValueRenderer = js.native
   
   /**
-    * A size visual variable representing the total count of all fields included in the predominance visualization. This is included if the `includeSizeVariable` parameter is true.
+    * A size visual variable representing the total count of all fields included in the predominance visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-predominance.html#RendererResult)
     */

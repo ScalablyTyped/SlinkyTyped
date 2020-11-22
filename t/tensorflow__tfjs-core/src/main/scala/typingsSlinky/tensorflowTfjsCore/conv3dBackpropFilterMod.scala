@@ -1,9 +1,9 @@
 package typingsSlinky.tensorflowTfjsCore
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor5D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R4
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R5
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor5D
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.valid_
 import scala.scalajs.js

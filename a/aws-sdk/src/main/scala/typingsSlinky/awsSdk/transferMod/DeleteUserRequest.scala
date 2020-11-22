@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteUserRequest extends js.Object {
   
   /**
-    * A system-assigned unique identifier for a file transfer protocol-enabled server instance that has the user assigned to it.
+    * A system-assigned unique identifier for a server instance that has the user assigned to it.
     */
   var ServerId: typingsSlinky.awsSdk.transferMod.ServerId = js.native
   
   /**
-    * A unique string that identifies a user that is being deleted from a file transfer protocol-enabled server.
+    * A unique string that identifies a user that is being deleted from a server.
     */
   var UserName: typingsSlinky.awsSdk.transferMod.UserName = js.native
 }

@@ -1,5 +1,7 @@
 package typingsSlinky.reactSelect.srcAsyncMod
 
+import typingsSlinky.reactSelect.typesMod.GroupType
+import typingsSlinky.reactSelect.typesMod.GroupedOptionsType
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.reactSelect.typesMod.OptionsType
 import scala.scalajs.js
@@ -17,7 +19,7 @@ trait AsyncProps[OptionType /* <: OptionTypeBase */] extends js.Object {
   /* The default set of options to show before the user starts searching. When
     set to `true`, the results for loadOptions('') will be autoloaded.
     Default: false. */
-  var defaultOptions: js.UndefOr[OptionsType[OptionType] | Boolean] = js.native
+  var defaultOptions: js.UndefOr[GroupedOptionsType[OptionType] | OptionsType[OptionType] | Boolean] = js.native
   
   /* Function that returns a promise, which is the set of options to be used
     once the promise resolves. */
@@ -58,10 +60,10 @@ object AsyncProps {
     def deleteCacheOptions: Self = this.set("cacheOptions", js.undefined)
     
     @scala.inline
-    def setDefaultOptionsVarargs(value: OptionType*): Self = this.set("defaultOptions", js.Array(value :_*))
+    def setDefaultOptionsVarargs(value: (GroupType[OptionType] | OptionType)*): Self = this.set("defaultOptions", js.Array(value :_*))
     
     @scala.inline
-    def setDefaultOptions(value: OptionsType[OptionType] | Boolean): Self = this.set("defaultOptions", value.asInstanceOf[js.Any])
+    def setDefaultOptions(value: GroupedOptionsType[OptionType] | OptionsType[OptionType] | Boolean): Self = this.set("defaultOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefaultOptions: Self = this.set("defaultOptions", js.undefined)

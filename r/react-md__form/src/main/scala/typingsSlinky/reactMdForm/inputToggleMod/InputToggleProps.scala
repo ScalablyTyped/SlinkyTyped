@@ -36,8 +36,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactMdForm.reactMdFormStrings.`additions removals`
 import typingsSlinky.reactMdForm.reactMdFormStrings.`additions text`
 import typingsSlinky.reactMdForm.reactMdFormStrings.`inline`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`removals additions`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`removals text`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`text additions`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`text removals`
 import typingsSlinky.reactMdForm.reactMdFormStrings.additions
 import typingsSlinky.reactMdForm.reactMdFormStrings.all
 import typingsSlinky.reactMdForm.reactMdFormStrings.ascending
@@ -48,8 +53,11 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.date
 import typingsSlinky.reactMdForm.reactMdFormStrings.decimal
 import typingsSlinky.reactMdForm.reactMdFormStrings.descending
 import typingsSlinky.reactMdForm.reactMdFormStrings.dialog
+import typingsSlinky.reactMdForm.reactMdFormStrings.done
 import typingsSlinky.reactMdForm.reactMdFormStrings.email
+import typingsSlinky.reactMdForm.reactMdFormStrings.enter
 import typingsSlinky.reactMdForm.reactMdFormStrings.execute
+import typingsSlinky.reactMdForm.reactMdFormStrings.go
 import typingsSlinky.reactMdForm.reactMdFormStrings.grammar
 import typingsSlinky.reactMdForm.reactMdFormStrings.grid
 import typingsSlinky.reactMdForm.reactMdFormStrings.horizontal
@@ -61,6 +69,7 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.location
 import typingsSlinky.reactMdForm.reactMdFormStrings.menu
 import typingsSlinky.reactMdForm.reactMdFormStrings.mixed
 import typingsSlinky.reactMdForm.reactMdFormStrings.move
+import typingsSlinky.reactMdForm.reactMdFormStrings.next
 import typingsSlinky.reactMdForm.reactMdFormStrings.no
 import typingsSlinky.reactMdForm.reactMdFormStrings.none
 import typingsSlinky.reactMdForm.reactMdFormStrings.numeric
@@ -70,8 +79,10 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.other
 import typingsSlinky.reactMdForm.reactMdFormStrings.page
 import typingsSlinky.reactMdForm.reactMdFormStrings.polite
 import typingsSlinky.reactMdForm.reactMdFormStrings.popup
+import typingsSlinky.reactMdForm.reactMdFormStrings.previous
 import typingsSlinky.reactMdForm.reactMdFormStrings.removals
 import typingsSlinky.reactMdForm.reactMdFormStrings.search
+import typingsSlinky.reactMdForm.reactMdFormStrings.send
 import typingsSlinky.reactMdForm.reactMdFormStrings.spelling
 import typingsSlinky.reactMdForm.reactMdFormStrings.step
 import typingsSlinky.reactMdForm.reactMdFormStrings.tel
@@ -170,7 +181,9 @@ trait InputToggleProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -254,6 +267,8 @@ trait InputToggleProps extends js.Object {
   
   var draggable: js.UndefOr[Booleanish] = js.native
   
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
+  
   /**
     * Boolean if the input toggle is currently errored. This will update the
     * label and the input to gain error colors.
@@ -311,7 +326,38 @@ trait InputToggleProps extends js.Object {
   
   var inlist: js.UndefOr[js.Any] = js.native
   
+  /**
+    * An optional `className` to provide to the invisible `<input>` element that
+    * is used to toggle the checked state. This prop does not have many uses and
+    * is really just provided since the `className` is passed to the container
+    * element instead of the `<input>`. However, this can be used to update the
+    * icon styles if needed using the `:checked` state:
+    *
+    * ```scss
+    * .custom-toggle-icon {
+    *   // styles
+    * }
+    *
+    * .custom-input:checked + .custom-toggle-icon {
+    *   // custom checked styles
+    * }
+    * ```
+    *
+    * @since 2.2.0
+    */
+  var inputClassName: js.UndefOr[String] = js.native
+  
   var inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
+  
+  /**
+    * An optional `style` to provide to the invisible `<input>` element that is
+    * used to toggle the checked state. This prop is only available since the
+    * `style` prop is passed to the container element, but you probably shouldn't
+    * really style this element anyways.
+    *
+    * @since 2.2.0
+    */
+  var inputStyle: js.UndefOr[CSSProperties] = js.native
   
   var is: js.UndefOr[String] = js.native
   
@@ -859,7 +905,9 @@ object InputToggleProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1087,6 +1135,12 @@ object InputToggleProps {
     def deleteDraggable: Self = this.set("draggable", js.undefined)
     
     @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
+    
+    @scala.inline
     def setError(value: Boolean): Self = this.set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1180,10 +1234,22 @@ object InputToggleProps {
     def deleteInlist: Self = this.set("inlist", js.undefined)
     
     @scala.inline
+    def setInputClassName(value: String): Self = this.set("inputClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputClassName: Self = this.set("inputClassName", js.undefined)
+    
+    @scala.inline
     def setInputMode(value: none | text | tel | url | email | numeric | decimal | search): Self = this.set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInputMode: Self = this.set("inputMode", js.undefined)
+    
+    @scala.inline
+    def setInputStyle(value: CSSProperties): Self = this.set("inputStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputStyle: Self = this.set("inputStyle", js.undefined)
     
     @scala.inline
     def setIs(value: String): Self = this.set("is", value.asInstanceOf[js.Any])

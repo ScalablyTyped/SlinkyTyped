@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.imageImageMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.dimmerDimmerMod.DimmerProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticSIZES
@@ -167,7 +166,7 @@ object StrictImageProps {
     
     @scala.inline
     def setDimmerFunction3(
-      value: (/* component */ ReactType[DimmerProps], DimmerProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, DimmerProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("dimmer", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -217,7 +216,7 @@ object StrictImageProps {
     
     @scala.inline
     def setLabelFunction3(
-      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("label", js.Any.fromFunction3(value))
     
     @scala.inline

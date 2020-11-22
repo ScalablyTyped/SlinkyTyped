@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BasicArraySchema[E, T /* <: js.UndefOr[js.Array[E] | Null] */] extends Schema[T] {
+trait BasicArraySchema[E, T /* <: js.UndefOr[js.Array[E] | Null] */, C] extends Schema[T, C] {
   
   def compact(): this.type = js.native
   def compact(
@@ -26,7 +26,7 @@ trait BasicArraySchema[E, T /* <: js.UndefOr[js.Array[E] | Null] */] extends Sch
   def equals(arrayOfValues: js.Array[T | Ref_ | Null]): this.type = js.native
   def equals(arrayOfValues: js.Array[T | Ref_ | Null], message: js.UndefOr[TestOptionsMessage[Values, _]]): this.type = js.native
   
-  var innerType: Schema[E] = js.native
+  var innerType: Schema[E, C] = js.native
   
   def max(limit: Double): this.type = js.native
   def max(limit: Double, message: js.UndefOr[TestOptionsMessage[Max, _]]): this.type = js.native
@@ -45,6 +45,10 @@ trait BasicArraySchema[E, T /* <: js.UndefOr[js.Array[E] | Null] */] extends Sch
   def oneOf(arrayOfValues: js.Array[T | Ref_ | Null]): this.type = js.native
   def oneOf(arrayOfValues: js.Array[T | Ref_ | Null], message: js.UndefOr[TestOptionsMessage[Values, _]]): this.type = js.native
   
-  def test(name: String, message: TestOptionsMessage[js.Object, _], test: TestFunction): this.type = js.native
-  def test(options: TestOptions[Record[String, _]]): this.type = js.native
+  def test(
+    name: String,
+    message: TestOptionsMessage[js.Object, _],
+    test: TestFunction[js.UndefOr[T | Null], C]
+  ): this.type = js.native
+  def test(options: TestOptions[Record[String, _], C]): this.type = js.native
 }

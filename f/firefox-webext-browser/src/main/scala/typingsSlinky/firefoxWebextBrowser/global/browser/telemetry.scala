@@ -1,17 +1,16 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firefoxWebextBrowser.anon.AddClientId
-import typingsSlinky.firefoxWebextBrowser.anon.SchemaName
 import typingsSlinky.firefoxWebextBrowser.browser.telemetry.EventData
 import typingsSlinky.firefoxWebextBrowser.browser.telemetry.ScalarData
+import typingsSlinky.firefoxWebextBrowser.browser.telemetry.SubmitEncryptedPingOptions
+import typingsSlinky.firefoxWebextBrowser.browser.telemetry.SubmitPingOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Use the `browser.telemetry` API to send telemetry data to the Mozilla Telemetry service. Restricted to Mozilla
-  * privileged webextensions.
+  * Use the `browser.telemetry` API to send telemetry data to the Mozilla Telemetry service. Restricted to Mozilla privileged webextensions.
   *
   * Permissions: `telemetry`
   *
@@ -73,16 +72,14 @@ object telemetry extends js.Object {
   /**
     * Register new events to record them from addons. See nsITelemetry.idl for more details.
     * @param category The unique category the events are registered in.
-    * @param data An object that contains registration data for 1+ events. Each property name is the category name,
-    *     and the corresponding property value is an object of EventData type.
+    * @param data An object that contains registration data for 1+ events. Each property name is the category name, and the corresponding property value is an object of EventData type.
     */
   def registerEvents(category: String, data: StringDictionary[EventData]): js.Promise[_] = js.native
   
   /**
     * Register new scalars to record them from addons. See nsITelemetry.idl for more details.
     * @param category The unique category the scalars are registered in.
-    * @param data An object that contains registration data for multiple scalars. Each property name is the scalar
-    *     name, and the corresponding property value is an object of ScalarData type.
+    * @param data An object that contains registration data for multiple scalars. Each property name is the scalar name, and the corresponding property value is an object of ScalarData type.
     */
   def registerScalars(category: String, data: StringDictionary[ScalarData]): js.Promise[_] = js.native
   
@@ -111,28 +108,25 @@ object telemetry extends js.Object {
   def scalarSetMaximum(name: String, value: Double): js.Promise[_] = js.native
   
   /**
-    * Enable recording of events in a category. Events default to recording disabled. This allows to toggle recording
-    * for all events in the specified category.
+    * Enable recording of events in a category. Events default to recording disabled. This allows to toggle recording for all events in the specified category.
     * @param category The category name.
     * @param enabled Whether recording is enabled for events in that category.
     */
   def setEventRecordingEnabled(category: String, enabled: Boolean): js.Promise[_] = js.native
   
   /**
-    * Submits a custom ping to the Telemetry back-end, with an encrypted payload. Requires a telemetry entry in the
-    * manifest to be used.
+    * Submits a custom ping to the Telemetry back-end, with an encrypted payload. Requires a telemetry entry in the manifest to be used.
     * @param message The data payload for the ping, which will be encrypted.
     * @param options Options object.
     */
-  def submitEncryptedPing(message: StringDictionary[js.Any], options: SchemaName): js.Promise[_] = js.native
+  def submitEncryptedPing(message: StringDictionary[js.Any], options: SubmitEncryptedPingOptions): js.Promise[_] = js.native
   
   /* telemetry functions */
   /**
-    * Submits a custom ping to the Telemetry back-end. See `submitExternalPing` inside TelemetryController.jsm for
-    * more details.
+    * Submits a custom ping to the Telemetry back-end. See `submitExternalPing` inside TelemetryController.jsm for more details.
     * @param type The type of the ping.
     * @param message The data payload for the ping.
     * @param options Options object.
     */
-  def submitPing(`type`: String, message: StringDictionary[js.Any], options: AddClientId): js.Promise[_] = js.native
+  def submitPing(`type`: String, message: StringDictionary[js.Any], options: SubmitPingOptions): js.Promise[_] = js.native
 }

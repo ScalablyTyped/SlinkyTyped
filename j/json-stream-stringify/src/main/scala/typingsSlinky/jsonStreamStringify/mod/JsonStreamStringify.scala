@@ -9,4 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait JsonStreamStringify extends Readable {
   
   def path(): js.Tuple2[String, Double] = js.native
+  
+  var stack: js.Array[String] = js.native
 }

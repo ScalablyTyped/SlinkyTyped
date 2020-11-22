@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TimeOffItem extends ScheduleEntity {
   
   // ID of the timeOffReason for this timeOffItem. Required.
-  var timeOffReasonId: js.UndefOr[String] = js.native
+  var timeOffReasonId: js.UndefOr[NullableOption[String]] = js.native
 }
 object TimeOffItem {
   
@@ -34,9 +34,12 @@ object TimeOffItem {
     }
     
     @scala.inline
-    def setTimeOffReasonId(value: String): Self = this.set("timeOffReasonId", value.asInstanceOf[js.Any])
+    def setTimeOffReasonId(value: NullableOption[String]): Self = this.set("timeOffReasonId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTimeOffReasonId: Self = this.set("timeOffReasonId", js.undefined)
+    
+    @scala.inline
+    def setTimeOffReasonIdNull: Self = this.set("timeOffReasonId", null)
   }
 }

@@ -25,7 +25,7 @@ trait ManualColumnResize extends Base {
   
   var eventManager: EventManager = js.native
   
-  def getTHFromTargetElement(element: HTMLElement): HTMLElement = js.native
+  def getClosestTHParent(element: HTMLElement): HTMLElement = js.native
   
   var guide: HTMLElement = js.native
   
@@ -33,7 +33,7 @@ trait ManualColumnResize extends Base {
   
   def hideHandleAndGuide(): Unit = js.native
   
-  def loadManualColumnWidths(): Unit = js.native
+  def loadManualColumnWidths(): js.Array[Double | Null] = js.native
   
   var manualColumnWidths: js.Array[_] = js.native
   
@@ -80,7 +80,7 @@ object ManualColumnResize {
     enablePlugin: () => Unit,
     enabled: Boolean,
     eventManager: EventManager,
-    getTHFromTargetElement: HTMLElement => HTMLElement,
+    getClosestTHParent: HTMLElement => HTMLElement,
     guide: HTMLElement,
     handle: HTMLElement,
     hideHandleAndGuide: () => Unit,
@@ -88,7 +88,7 @@ object ManualColumnResize {
     init: () => Unit,
     initialized: Boolean,
     isPluginsReady: Boolean,
-    loadManualColumnWidths: () => Unit,
+    loadManualColumnWidths: () => js.Array[Double | Null],
     manualColumnWidths: js.Array[_],
     newSize: Double | Unit,
     pluginName: String,
@@ -105,10 +105,9 @@ object ManualColumnResize {
     startOffset: Double | Unit,
     startWidth: Double | Unit,
     startY: Double | Unit,
-    t: RecordTranslator,
     updatePlugin: () => Unit
   ): ManualColumnResize = {
-    val __obj = js.Dynamic.literal(addHook = js.Any.fromFunction2(addHook), autoresizeTimeout = autoresizeTimeout.asInstanceOf[js.Any], callOnPluginsReady = js.Any.fromFunction1(callOnPluginsReady), checkIfColumnHeader = js.Any.fromFunction1(checkIfColumnHeader), clearHooks = js.Any.fromFunction0(clearHooks), clearManualSize = js.Any.fromFunction1(clearManualSize), currentCol = currentCol.asInstanceOf[js.Any], currentTH = currentTH.asInstanceOf[js.Any], currentWidth = currentWidth.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), disablePlugin = js.Any.fromFunction0(disablePlugin), enablePlugin = js.Any.fromFunction0(enablePlugin), enabled = enabled.asInstanceOf[js.Any], eventManager = eventManager.asInstanceOf[js.Any], getTHFromTargetElement = js.Any.fromFunction1(getTHFromTargetElement), guide = guide.asInstanceOf[js.Any], handle = handle.asInstanceOf[js.Any], hideHandleAndGuide = js.Any.fromFunction0(hideHandleAndGuide), hot = hot.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), initialized = initialized.asInstanceOf[js.Any], isPluginsReady = isPluginsReady.asInstanceOf[js.Any], loadManualColumnWidths = js.Any.fromFunction0(loadManualColumnWidths), manualColumnWidths = manualColumnWidths.asInstanceOf[js.Any], newSize = newSize.asInstanceOf[js.Any], pluginName = pluginName.asInstanceOf[js.Any], pluginsInitializedCallback = pluginsInitializedCallback.asInstanceOf[js.Any], pressed = pressed.asInstanceOf[js.Any], refreshGuidePosition = js.Any.fromFunction0(refreshGuidePosition), refreshHandlePosition = js.Any.fromFunction0(refreshHandlePosition), removeHooks = js.Any.fromFunction1(removeHooks), saveManualColumnWidths = js.Any.fromFunction0(saveManualColumnWidths), selectedCols = selectedCols.asInstanceOf[js.Any], setManualSize = js.Any.fromFunction2(setManualSize), setupGuidePosition = js.Any.fromFunction0(setupGuidePosition), setupHandlePosition = js.Any.fromFunction1(setupHandlePosition), startOffset = startOffset.asInstanceOf[js.Any], startWidth = startWidth.asInstanceOf[js.Any], startY = startY.asInstanceOf[js.Any], t = t.asInstanceOf[js.Any], updatePlugin = js.Any.fromFunction0(updatePlugin))
+    val __obj = js.Dynamic.literal(addHook = js.Any.fromFunction2(addHook), autoresizeTimeout = autoresizeTimeout.asInstanceOf[js.Any], callOnPluginsReady = js.Any.fromFunction1(callOnPluginsReady), checkIfColumnHeader = js.Any.fromFunction1(checkIfColumnHeader), clearHooks = js.Any.fromFunction0(clearHooks), clearManualSize = js.Any.fromFunction1(clearManualSize), currentCol = currentCol.asInstanceOf[js.Any], currentTH = currentTH.asInstanceOf[js.Any], currentWidth = currentWidth.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), disablePlugin = js.Any.fromFunction0(disablePlugin), enablePlugin = js.Any.fromFunction0(enablePlugin), enabled = enabled.asInstanceOf[js.Any], eventManager = eventManager.asInstanceOf[js.Any], getClosestTHParent = js.Any.fromFunction1(getClosestTHParent), guide = guide.asInstanceOf[js.Any], handle = handle.asInstanceOf[js.Any], hideHandleAndGuide = js.Any.fromFunction0(hideHandleAndGuide), hot = hot.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), initialized = initialized.asInstanceOf[js.Any], isPluginsReady = isPluginsReady.asInstanceOf[js.Any], loadManualColumnWidths = js.Any.fromFunction0(loadManualColumnWidths), manualColumnWidths = manualColumnWidths.asInstanceOf[js.Any], newSize = newSize.asInstanceOf[js.Any], pluginName = pluginName.asInstanceOf[js.Any], pluginsInitializedCallback = pluginsInitializedCallback.asInstanceOf[js.Any], pressed = pressed.asInstanceOf[js.Any], refreshGuidePosition = js.Any.fromFunction0(refreshGuidePosition), refreshHandlePosition = js.Any.fromFunction0(refreshHandlePosition), removeHooks = js.Any.fromFunction1(removeHooks), saveManualColumnWidths = js.Any.fromFunction0(saveManualColumnWidths), selectedCols = selectedCols.asInstanceOf[js.Any], setManualSize = js.Any.fromFunction2(setManualSize), setupGuidePosition = js.Any.fromFunction0(setupGuidePosition), setupHandlePosition = js.Any.fromFunction1(setupHandlePosition), startOffset = startOffset.asInstanceOf[js.Any], startWidth = startWidth.asInstanceOf[js.Any], startY = startY.asInstanceOf[js.Any], updatePlugin = js.Any.fromFunction0(updatePlugin))
     __obj.asInstanceOf[ManualColumnResize]
   }
   
@@ -158,7 +157,7 @@ object ManualColumnResize {
     def setEventManager(value: EventManager): Self = this.set("eventManager", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetTHFromTargetElement(value: HTMLElement => HTMLElement): Self = this.set("getTHFromTargetElement", js.Any.fromFunction1(value))
+    def setGetClosestTHParent(value: HTMLElement => HTMLElement): Self = this.set("getClosestTHParent", js.Any.fromFunction1(value))
     
     @scala.inline
     def setGuide(value: HTMLElement): Self = this.set("guide", value.asInstanceOf[js.Any])
@@ -170,7 +169,7 @@ object ManualColumnResize {
     def setHideHandleAndGuide(value: () => Unit): Self = this.set("hideHandleAndGuide", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setLoadManualColumnWidths(value: () => Unit): Self = this.set("loadManualColumnWidths", js.Any.fromFunction0(value))
+    def setLoadManualColumnWidths(value: () => js.Array[Double | Null]): Self = this.set("loadManualColumnWidths", js.Any.fromFunction0(value))
     
     @scala.inline
     def setManualColumnWidthsVarargs(value: js.Any*): Self = this.set("manualColumnWidths", js.Array(value :_*))

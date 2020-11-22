@@ -3,6 +3,8 @@ package typingsSlinky.twit.mod
 import typingsSlinky.node.Buffer
 import typingsSlinky.twit.anon.Text
 import typingsSlinky.twit.mod.Twitter.ResultType
+import typingsSlinky.twit.twitStrings.`private`
+import typingsSlinky.twit.twitStrings.public
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,11 +14,27 @@ trait Params extends js.Object {
   
   var alt_text: js.UndefOr[Text] = js.native
   
+  var attachment_url: js.UndefOr[String] = js.native
+  
+  var auto_populate_reply_metadata: js.UndefOr[Boolean] = js.native
+  
+  var card_uri: js.UndefOr[String] = js.native
+  
   var count: js.UndefOr[Double] = js.native
   
   var cursor: js.UndefOr[Double | String] = js.native
   
+  var description: js.UndefOr[String] = js.native
+  
+  var display_coordinates: js.UndefOr[Boolean] = js.native
+  
+  var enable_dmcommands: js.UndefOr[Boolean] = js.native
+  
   var exclude_replies: js.UndefOr[Boolean] = js.native
+  
+  var exclude_reply_user_ids: js.UndefOr[String | js.Array[String]] = js.native
+  
+  var fail_dmcommands: js.UndefOr[Boolean] = js.native
   
   var follow: js.UndefOr[Boolean | String | js.Array[String]] = js.native
   
@@ -38,6 +56,8 @@ trait Params extends js.Object {
   
   var lat: js.UndefOr[Double] = js.native
   
+  var list_id: js.UndefOr[Double | String] = js.native
+  
   var locale: js.UndefOr[String] = js.native
   
   var long: js.UndefOr[Double] = js.native
@@ -50,9 +70,15 @@ trait Params extends js.Object {
   
   var media_ids: js.UndefOr[js.Array[String]] = js.native
   
+  var mode: js.UndefOr[public | `private`] = js.native
+  
+  var name: js.UndefOr[String] = js.native
+  
   var owner_screen_name: js.UndefOr[String] = js.native
   
   var page: js.UndefOr[Double] = js.native
+  
+  var place_id: js.UndefOr[String] = js.native
   
   // search/tweets
   var q: js.UndefOr[String] = js.native
@@ -124,6 +150,24 @@ object Params {
     def deleteAlt_text: Self = this.set("alt_text", js.undefined)
     
     @scala.inline
+    def setAttachment_url(value: String): Self = this.set("attachment_url", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAttachment_url: Self = this.set("attachment_url", js.undefined)
+    
+    @scala.inline
+    def setAuto_populate_reply_metadata(value: Boolean): Self = this.set("auto_populate_reply_metadata", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAuto_populate_reply_metadata: Self = this.set("auto_populate_reply_metadata", js.undefined)
+    
+    @scala.inline
+    def setCard_uri(value: String): Self = this.set("card_uri", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCard_uri: Self = this.set("card_uri", js.undefined)
+    
+    @scala.inline
     def setCount(value: Double): Self = this.set("count", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -136,10 +180,43 @@ object Params {
     def deleteCursor: Self = this.set("cursor", js.undefined)
     
     @scala.inline
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
+    
+    @scala.inline
+    def setDisplay_coordinates(value: Boolean): Self = this.set("display_coordinates", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisplay_coordinates: Self = this.set("display_coordinates", js.undefined)
+    
+    @scala.inline
+    def setEnable_dmcommands(value: Boolean): Self = this.set("enable_dmcommands", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnable_dmcommands: Self = this.set("enable_dmcommands", js.undefined)
+    
+    @scala.inline
     def setExclude_replies(value: Boolean): Self = this.set("exclude_replies", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExclude_replies: Self = this.set("exclude_replies", js.undefined)
+    
+    @scala.inline
+    def setExclude_reply_user_idsVarargs(value: String*): Self = this.set("exclude_reply_user_ids", js.Array(value :_*))
+    
+    @scala.inline
+    def setExclude_reply_user_ids(value: String | js.Array[String]): Self = this.set("exclude_reply_user_ids", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExclude_reply_user_ids: Self = this.set("exclude_reply_user_ids", js.undefined)
+    
+    @scala.inline
+    def setFail_dmcommands(value: Boolean): Self = this.set("fail_dmcommands", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFail_dmcommands: Self = this.set("fail_dmcommands", js.undefined)
     
     @scala.inline
     def setFollowVarargs(value: String*): Self = this.set("follow", js.Array(value :_*))
@@ -205,6 +282,12 @@ object Params {
     def deleteLat: Self = this.set("lat", js.undefined)
     
     @scala.inline
+    def setList_id(value: Double | String): Self = this.set("list_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteList_id: Self = this.set("list_id", js.undefined)
+    
+    @scala.inline
     def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -244,6 +327,18 @@ object Params {
     def deleteMedia_ids: Self = this.set("media_ids", js.undefined)
     
     @scala.inline
+    def setMode(value: public | `private`): Self = this.set("mode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
+    
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
     def setOwner_screen_name(value: String): Self = this.set("owner_screen_name", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -254,6 +349,12 @@ object Params {
     
     @scala.inline
     def deletePage: Self = this.set("page", js.undefined)
+    
+    @scala.inline
+    def setPlace_id(value: String): Self = this.set("place_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePlace_id: Self = this.set("place_id", js.undefined)
     
     @scala.inline
     def setQ(value: String): Self = this.set("q", value.asInstanceOf[js.Any])

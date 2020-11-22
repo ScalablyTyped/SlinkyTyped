@@ -1,17 +1,19 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AttributeRef
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/search-bar relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/search-bar relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.RangeSearchField")
 @js.native
@@ -21,8 +23,8 @@ class RangeSearchField protected () extends SearchField {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def includeLower: Boolean = js.native
@@ -45,9 +47,6 @@ class RangeSearchField protected () extends SearchField {
   def lowerBoundRef_=(newValue: AttributeRef | Null): Unit = js.native
   
   def lowerBound_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FRangeSearchField: IModel = js.native
   
   /**
     * The value of this property is conceptually of type paths.LegacyAttributePath.

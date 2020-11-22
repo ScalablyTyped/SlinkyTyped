@@ -1,16 +1,24 @@
 package typingsSlinky.storybookComponents.tooltipLinkListMod
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
+import slinky.core.SyntheticEvent
 import typingsSlinky.storybookComponents.listItemMod.ListItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait Link extends ListItemProps {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped {[ P in std.Exclude<keyof @storybook/components.@storybook/components/dist/tooltip/ListItem.ListItemProps, 'onClick'> ]: @storybook/components.@storybook/components/dist/tooltip/ListItem.ListItemProps[P]} */ @js.native
+trait Link extends js.Object {
   
   var id: String = js.native
   
   var isGatsby: js.UndefOr[Boolean] = js.native
+  
+  var onClick: js.UndefOr[
+    js.Function2[/* event */ SyntheticEvent[Event, Element], /* item */ ListItemProps, Unit]
+  ] = js.native
 }
 object Link {
   
@@ -43,5 +51,11 @@ object Link {
     
     @scala.inline
     def deleteIsGatsby: Self = this.set("isGatsby", js.undefined)
+    
+    @scala.inline
+    def setOnClick(value: (/* event */ SyntheticEvent[Event, Element], /* item */ ListItemProps) => Unit): Self = this.set("onClick", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
   }
 }

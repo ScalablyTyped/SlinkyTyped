@@ -24,7 +24,7 @@ trait ChallengeAnswer extends js.Object {
   
   var privateChallengeParameters: js.UndefOr[StringDictionary[String]] = js.native
   
-  var session: js.UndefOr[js.Array[ChallengeMetadata]] = js.native
+  var session: js.UndefOr[js.Array[ChallengeResult]] = js.native
   
   var userAttributes: StringDictionary[String] = js.native
   
@@ -109,10 +109,10 @@ object ChallengeAnswer {
     def deletePrivateChallengeParameters: Self = this.set("privateChallengeParameters", js.undefined)
     
     @scala.inline
-    def setSessionVarargs(value: ChallengeMetadata*): Self = this.set("session", js.Array(value :_*))
+    def setSessionVarargs(value: ChallengeResult*): Self = this.set("session", js.Array(value :_*))
     
     @scala.inline
-    def setSession(value: js.Array[ChallengeMetadata]): Self = this.set("session", value.asInstanceOf[js.Any])
+    def setSession(value: js.Array[ChallengeResult]): Self = this.set("session", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSession: Self = this.set("session", js.undefined)

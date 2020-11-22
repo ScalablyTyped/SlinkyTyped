@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TransformOptions extends js.Object {
+trait TransformOptions extends CallerTransformOptions {
   
   var instrument: Boolean = js.native
 }

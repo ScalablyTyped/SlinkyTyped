@@ -18,7 +18,7 @@ trait AttackProperty extends js.Object {
   var AttackPropertyIdentifier: js.UndefOr[typingsSlinky.awsSdk.shieldMod.AttackPropertyIdentifier] = js.native
   
   /**
-    * The array of Contributor objects that includes the top five contributors to an attack. 
+    * The array of contributor objects that includes the top five contributors to an attack. 
     */
   var TopContributors: js.UndefOr[typingsSlinky.awsSdk.shieldMod.TopContributors] = js.native
   

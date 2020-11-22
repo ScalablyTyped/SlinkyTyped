@@ -18,10 +18,10 @@ class Data ()
 object Data extends js.Object {
   
   /**
-    * _Creates data from base 64 encoded string._
+    * _Creates data from base64 encoded string._
     *
-    * The supplied string must be base 64 encoded otherwise the function will return null.
-    * @param base64String - Base 64 encoded string to create data from.
+    * The supplied string must be base64 encoded otherwise the function will return null.
+    * @param base64String - Base64 encoded string to create data from.
     * @see https://docs.scriptable.app/data/#frombase64string
     */
   def fromBase64String(base64String: String): typingsSlinky.scriptableIos.Data = js.native

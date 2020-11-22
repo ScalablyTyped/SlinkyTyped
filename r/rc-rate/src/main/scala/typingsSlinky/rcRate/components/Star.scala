@@ -27,7 +27,10 @@ object Star {
     def allowHalf(value: Boolean): this.type = set("allowHalf", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def character(value: StarProps => ReactElement): this.type = set("character", js.Any.fromFunction1(value))
+    def characterReactElement(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def character(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
     
     @scala.inline
     def characterRender(value: (/* origin */ ReactElement, StarProps) => ReactElement): this.type = set("characterRender", js.Any.fromFunction2(value))

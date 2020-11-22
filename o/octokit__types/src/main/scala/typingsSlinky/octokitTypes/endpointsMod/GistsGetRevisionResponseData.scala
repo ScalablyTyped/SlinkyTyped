@@ -3,7 +3,7 @@ package typingsSlinky.octokitTypes.endpointsMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.octokitTypes.anon.Avatarurl
 import typingsSlinky.octokitTypes.anon.Changestatus
-import typingsSlinky.octokitTypes.anon.Dictk
+import typingsSlinky.octokitTypes.anon.Content
 import typingsSlinky.octokitTypes.anon.Updatedat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +22,7 @@ trait GistsGetRevisionResponseData extends js.Object {
   
   var description: String = js.native
   
-  var files: StringDictionary[Dictk] = js.native
+  var files: StringDictionary[Content] = js.native
   
   var forks: js.Array[Updatedat] = js.native
   
@@ -61,7 +61,7 @@ object GistsGetRevisionResponseData {
     commits_url: String,
     created_at: String,
     description: String,
-    files: StringDictionary[Dictk],
+    files: StringDictionary[Content],
     forks: js.Array[Updatedat],
     forks_url: String,
     git_pull_url: String,
@@ -112,7 +112,7 @@ object GistsGetRevisionResponseData {
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFiles(value: StringDictionary[Dictk]): Self = this.set("files", value.asInstanceOf[js.Any])
+    def setFiles(value: StringDictionary[Content]): Self = this.set("files", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setForksVarargs(value: Updatedat*): Self = this.set("forks", js.Array(value :_*))

@@ -1,6 +1,7 @@
 package typingsSlinky.restifyCookies.mod.restifyAugmentingMod
 
 import typingsSlinky.restifyCookies.restifyCookiesStrings.lax
+import typingsSlinky.restifyCookies.restifyCookiesStrings.none
 import typingsSlinky.restifyCookies.restifyCookiesStrings.strict
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,12 +18,11 @@ trait CookieOptions extends js.Object {
   
   var httpOnly: js.UndefOr[Boolean] = js.native
   
-   // tslint:disable-line:prefer-method-signature
   var maxAge: js.UndefOr[Double] = js.native
   
   var path: js.UndefOr[String] = js.native
   
-  var sameSite: js.UndefOr[Boolean | lax | strict] = js.native
+  var sameSite: js.UndefOr[Boolean | lax | strict | none] = js.native
   
   var secure: js.UndefOr[Boolean] = js.native
 }
@@ -86,7 +86,7 @@ object CookieOptions {
     def deletePath: Self = this.set("path", js.undefined)
     
     @scala.inline
-    def setSameSite(value: Boolean | lax | strict): Self = this.set("sameSite", value.asInstanceOf[js.Any])
+    def setSameSite(value: Boolean | lax | strict | none): Self = this.set("sameSite", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSameSite: Self = this.set("sameSite", js.undefined)

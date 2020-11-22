@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ɵɵtemplateRefExtractor extends js.Object {
   
-  def apply(tNode: TNode, currentView: ɵangularPackagesCoreCoreBp): TemplateRef[_] | Null = js.native
+  def apply(tNode: TNode, lView: ɵangularPackagesCoreCoreBv): TemplateRef[_] | Null = js.native
 }

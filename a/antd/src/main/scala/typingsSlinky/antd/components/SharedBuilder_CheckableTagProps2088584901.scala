@@ -1,10 +1,10 @@
 package typingsSlinky.antd.components
 
-import org.scalajs.dom.raw.HTMLElement
-import slinky.web.html.`*`.tag
+import org.scalajs.dom.raw.HTMLSpanElement
+import slinky.web.SyntheticMouseEvent
+import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +21,7 @@ class SharedBuilder_CheckableTagProps2088584901 (val args: js.Array[js.Any])
   def onChange(value: /* checked */ Boolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
   
   @scala.inline
-  def onClick(value: /* e */ MouseEventHandler[HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+  def onClick(value: /* e */ SyntheticMouseEvent[HTMLSpanElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
   
   @scala.inline
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])

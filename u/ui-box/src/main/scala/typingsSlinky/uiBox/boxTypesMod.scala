@@ -21,12 +21,12 @@ object boxTypesMod extends js.Object {
   
   type BoxProps[E /* <: ReactElement */] = (BoxOwnProps[E, js.Object]) with (Without[
     PropsOf[E], 
-    /* keyof ui-box.anon.BoxOwnPropsElementTypeany */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 144 */ js.Any
+    /* keyof ui-box.anon.BoxOwnPropsElementTypeany */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 145 */ js.Any
   ])
   
   type PolymorphicBoxProps[E /* <: ReactElement */, P] = (BoxOwnProps[E, P]) with (Without[
     PropsOf[E], 
-    /* keyof ui-box.anon.BoxOwnPropsElementTypeany & P */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 144 */ js.Any
+    /* keyof ui-box.anon.BoxOwnPropsElementTypeany & P */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 145 */ js.Any
   ]) with P
   
   type PropsOf[E /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] = LibraryManagedAttributes[E, ComponentPropsWithRef[E]]

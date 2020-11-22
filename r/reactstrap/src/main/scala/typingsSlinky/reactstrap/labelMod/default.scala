@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/Label", JSImport.Default)
+@JSImport("reactstrap/es/Label", JSImport.Default)
 @js.native
-class default[T] ()
+class default ()
   extends Component[LabelProps, js.Object, js.Any]

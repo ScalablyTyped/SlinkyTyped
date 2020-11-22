@@ -124,6 +124,9 @@ trait Grid extends Widget {
   def showColumn(column: js.Any): Unit = js.native
   def showColumn(column: Double): Unit = js.native
   
+  def stickColumn(column: String): Unit = js.native
+  def stickColumn(column: Double): Unit = js.native
+  
   var table: JQuery = js.native
   
   var tbody: JQuery = js.native
@@ -132,6 +135,9 @@ trait Grid extends Widget {
   
   def unlockColumn(column: String): Unit = js.native
   def unlockColumn(column: Double): Unit = js.native
+  
+  def unstickColumn(column: String): Unit = js.native
+  def unstickColumn(column: Double): Unit = js.native
   
   var wrapper: JQuery = js.native
 }

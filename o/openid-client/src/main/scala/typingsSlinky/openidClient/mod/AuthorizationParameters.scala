@@ -52,6 +52,8 @@ trait AuthorizationParameters
   
   var scope: js.UndefOr[String] = js.native
   
+  var state: js.UndefOr[String] = js.native
+  
   var ui_locales: js.UndefOr[String] = js.native
 }
 object AuthorizationParameters {
@@ -205,6 +207,12 @@ object AuthorizationParameters {
     
     @scala.inline
     def deleteScope: Self = this.set("scope", js.undefined)
+    
+    @scala.inline
+    def setState(value: String): Self = this.set("state", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteState: Self = this.set("state", js.undefined)
     
     @scala.inline
     def setUi_locales(value: String): Self = this.set("ui_locales", value.asInstanceOf[js.Any])

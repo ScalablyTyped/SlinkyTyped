@@ -7,14 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ConditionalTypeNode extends TypeNode {
   
-  var checkType: TypeNode = js.native
+  val checkType: TypeNode = js.native
   
-  var extendsType: TypeNode = js.native
+  val extendsType: TypeNode = js.native
   
-  var falseType: TypeNode = js.native
+  val falseType: TypeNode = js.native
   
   @JSName("kind")
-  var kind_ConditionalTypeNode: typingsSlinky.typescript.mod.SyntaxKind.ConditionalType = js.native
+  val kind_ConditionalTypeNode: typingsSlinky.typescript.mod.SyntaxKind.ConditionalType = js.native
   
-  var trueType: TypeNode = js.native
+  val trueType: TypeNode = js.native
 }

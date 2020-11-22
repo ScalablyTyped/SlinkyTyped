@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jest-regex-util"
-version := "24.9.0-db444e"
+version := "26.0.0-900533"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

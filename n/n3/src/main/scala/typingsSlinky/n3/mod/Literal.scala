@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Literal protected ()
   extends typingsSlinky.rdfJs.mod.Literal
-     with QuadObject
-     with Term {
+     with _QuadObject
+     with _Term {
   def this(id: String) = this()
   
   val datatypeString: String = js.native
@@ -23,7 +23,7 @@ class Literal protected ()
 @js.native
 object Literal extends js.Object {
   
-  val langStringDatatype: NamedNode = js.native
+  val langStringDatatype: NamedNode[String] = js.native
   
   def subclass(`type`: js.Any): Unit = js.native
 }

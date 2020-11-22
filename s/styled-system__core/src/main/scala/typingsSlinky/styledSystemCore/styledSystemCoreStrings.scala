@@ -217,6 +217,9 @@ object styledSystemCoreStrings {
   def MozOrient: MozOrient = "MozOrient".asInstanceOf[MozOrient]
   
   @scala.inline
+  def MozOsxFontSmoothing: MozOsxFontSmoothing = "MozOsxFontSmoothing".asInstanceOf[MozOsxFontSmoothing]
+  
+  @scala.inline
   def MozOutline: MozOutline = "MozOutline".asInstanceOf[MozOutline]
   
   @scala.inline
@@ -571,6 +574,9 @@ object styledSystemCoreStrings {
   def WebkitFontKerning: WebkitFontKerning = "WebkitFontKerning".asInstanceOf[WebkitFontKerning]
   
   @scala.inline
+  def WebkitFontSmoothing: WebkitFontSmoothing = "WebkitFontSmoothing".asInstanceOf[WebkitFontSmoothing]
+  
+  @scala.inline
   def WebkitFontVariantLigatures: WebkitFontVariantLigatures = "WebkitFontVariantLigatures".asInstanceOf[WebkitFontVariantLigatures]
   
   @scala.inline
@@ -653,6 +659,9 @@ object styledSystemCoreStrings {
   
   @scala.inline
   def WebkitPrintColorAdjust: WebkitPrintColorAdjust = "WebkitPrintColorAdjust".asInstanceOf[WebkitPrintColorAdjust]
+  
+  @scala.inline
+  def WebkitRubyPosition: WebkitRubyPosition = "WebkitRubyPosition".asInstanceOf[WebkitRubyPosition]
   
   @scala.inline
   def WebkitScrollSnapPointsX: WebkitScrollSnapPointsX = "WebkitScrollSnapPointsX".asInstanceOf[WebkitScrollSnapPointsX]
@@ -763,6 +772,9 @@ object styledSystemCoreStrings {
   def alignSelf: alignSelf = "alignSelf".asInstanceOf[alignSelf]
   
   @scala.inline
+  def alignTracks: alignTracks = "alignTracks".asInstanceOf[alignTracks]
+  
+  @scala.inline
   def alignmentBaseline: alignmentBaseline = "alignmentBaseline".asInstanceOf[alignmentBaseline]
   
   @scala.inline
@@ -800,6 +812,9 @@ object styledSystemCoreStrings {
   
   @scala.inline
   def aspectRatio: aspectRatio = "aspectRatio".asInstanceOf[aspectRatio]
+  
+  @scala.inline
+  def azimuth: azimuth = "azimuth".asInstanceOf[azimuth]
   
   @scala.inline
   def backdropFilter: backdropFilter = "backdropFilter".asInstanceOf[backdropFilter]
@@ -1237,6 +1252,9 @@ object styledSystemCoreStrings {
   def fontSizeAdjust: fontSizeAdjust = "fontSizeAdjust".asInstanceOf[fontSizeAdjust]
   
   @scala.inline
+  def fontSmooth: fontSmooth = "fontSmooth".asInstanceOf[fontSmooth]
+  
+  @scala.inline
   def fontStretch: fontStretch = "fontStretch".asInstanceOf[fontStretch]
   
   @scala.inline
@@ -1393,6 +1411,9 @@ object styledSystemCoreStrings {
   def justifySelf: justifySelf = "justifySelf".asInstanceOf[justifySelf]
   
   @scala.inline
+  def justifyTracks: justifyTracks = "justifyTracks".asInstanceOf[justifyTracks]
+  
+  @scala.inline
   def left: left = "left".asInstanceOf[left]
   
   @scala.inline
@@ -1522,6 +1543,12 @@ object styledSystemCoreStrings {
   def maskType: maskType = "maskType".asInstanceOf[maskType]
   
   @scala.inline
+  def masonryAutoFlow: masonryAutoFlow = "masonryAutoFlow".asInstanceOf[masonryAutoFlow]
+  
+  @scala.inline
+  def mathStyle: mathStyle = "mathStyle".asInstanceOf[mathStyle]
+  
+  @scala.inline
   def maxBlockSize: maxBlockSize = "maxBlockSize".asInstanceOf[maxBlockSize]
   
   @scala.inline
@@ -1640,6 +1667,9 @@ object styledSystemCoreStrings {
   
   @scala.inline
   def msImeMode: msImeMode = "msImeMode".asInstanceOf[msImeMode]
+  
+  @scala.inline
+  def msJustifySelf: msJustifySelf = "msJustifySelf".asInstanceOf[msJustifySelf]
   
   @scala.inline
   def msLineBreak: msLineBreak = "msLineBreak".asInstanceOf[msLineBreak]
@@ -2086,6 +2116,9 @@ object styledSystemCoreStrings {
   def scrollbarColor: scrollbarColor = "scrollbarColor".asInstanceOf[scrollbarColor]
   
   @scala.inline
+  def scrollbarGutter: scrollbarGutter = "scrollbarGutter".asInstanceOf[scrollbarGutter]
+  
+  @scala.inline
   def scrollbarTrackColor: scrollbarTrackColor = "scrollbarTrackColor".asInstanceOf[scrollbarTrackColor]
   
   @scala.inline
@@ -2512,6 +2545,9 @@ object styledSystemCoreStrings {
   sealed trait MozOrient extends js.Object
   
   @js.native
+  sealed trait MozOsxFontSmoothing extends js.Object
+  
+  @js.native
   sealed trait MozOutline extends js.Object
   
   @js.native
@@ -2866,6 +2902,9 @@ object styledSystemCoreStrings {
   sealed trait WebkitFontKerning extends js.Object
   
   @js.native
+  sealed trait WebkitFontSmoothing extends js.Object
+  
+  @js.native
   sealed trait WebkitFontVariantLigatures extends js.Object
   
   @js.native
@@ -2948,6 +2987,9 @@ object styledSystemCoreStrings {
   
   @js.native
   sealed trait WebkitPrintColorAdjust extends js.Object
+  
+  @js.native
+  sealed trait WebkitRubyPosition extends js.Object
   
   @js.native
   sealed trait WebkitScrollSnapPointsX extends js.Object
@@ -3058,6 +3100,9 @@ object styledSystemCoreStrings {
   sealed trait alignSelf extends js.Object
   
   @js.native
+  sealed trait alignTracks extends js.Object
+  
+  @js.native
   sealed trait alignmentBaseline extends js.Object
   
   @js.native
@@ -3095,6 +3140,9 @@ object styledSystemCoreStrings {
   
   @js.native
   sealed trait aspectRatio extends js.Object
+  
+  @js.native
+  sealed trait azimuth extends js.Object
   
   @js.native
   sealed trait backdropFilter extends js.Object
@@ -3532,6 +3580,9 @@ object styledSystemCoreStrings {
   sealed trait fontSizeAdjust extends js.Object
   
   @js.native
+  sealed trait fontSmooth extends js.Object
+  
+  @js.native
   sealed trait fontStretch extends js.Object
   
   @js.native
@@ -3688,6 +3739,9 @@ object styledSystemCoreStrings {
   sealed trait justifySelf extends js.Object
   
   @js.native
+  sealed trait justifyTracks extends js.Object
+  
+  @js.native
   sealed trait left extends js.Object
   
   @js.native
@@ -3817,6 +3871,12 @@ object styledSystemCoreStrings {
   sealed trait maskType extends js.Object
   
   @js.native
+  sealed trait masonryAutoFlow extends js.Object
+  
+  @js.native
+  sealed trait mathStyle extends js.Object
+  
+  @js.native
   sealed trait maxBlockSize extends js.Object
   
   @js.native
@@ -3935,6 +3995,9 @@ object styledSystemCoreStrings {
   
   @js.native
   sealed trait msImeMode extends js.Object
+  
+  @js.native
+  sealed trait msJustifySelf extends js.Object
   
   @js.native
   sealed trait msLineBreak extends js.Object
@@ -4379,6 +4442,9 @@ object styledSystemCoreStrings {
   
   @js.native
   sealed trait scrollbarColor extends js.Object
+  
+  @js.native
+  sealed trait scrollbarGutter extends js.Object
   
   @js.native
   sealed trait scrollbarTrackColor extends js.Object

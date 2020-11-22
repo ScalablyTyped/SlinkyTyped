@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object bounds extends js.Object {
   
-  def apply(geohash: String): Bounds_ = js.native
+  def apply(locationId: String): BoundsWithElevation = js.native
 }

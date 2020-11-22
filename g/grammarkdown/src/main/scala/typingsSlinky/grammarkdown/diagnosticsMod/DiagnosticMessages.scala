@@ -2,10 +2,12 @@ package typingsSlinky.grammarkdown.diagnosticsMod
 
 import typingsSlinky.grammarkdown.anon.Detailed
 import typingsSlinky.grammarkdown.anon.DetailedMessage
-import typingsSlinky.grammarkdown.coreMod.Range
+import typingsSlinky.grammarkdown.lineOffsetMapMod.LineOffsetMap
 import typingsSlinky.grammarkdown.nodesMod.Node
 import typingsSlinky.grammarkdown.nodesMod.SourceFile
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind
+import typingsSlinky.grammarkdown.typesMod.Position
+import typingsSlinky.grammarkdown.typesMod.Range
 import typingsSlinky.std.Generator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/diagnostics", "DiagnosticMessages")
 @js.native
 class DiagnosticMessages () extends js.Object {
+  def this(lineOffsetMap: LineOffsetMap) = this()
   
   var compareDiagnostics: js.Any = js.native
   
@@ -45,6 +48,9 @@ class DiagnosticMessages () extends js.Object {
   
   var getDiagnosticErrorLevel: js.Any = js.native
   
+  def getDiagnosticFilename(diagnosticIndex: Double): js.UndefOr[String] = js.native
+  def getDiagnosticFilename(diagnosticIndex: Double, raw: Boolean): js.UndefOr[String] = js.native
+  
   def getDiagnosticInfo(diagnosticIndex: Double): js.UndefOr[DiagnosticInfo] = js.native
   def getDiagnosticInfo(diagnosticIndex: Double, options: DetailedMessage): js.UndefOr[DiagnosticInfo] = js.native
   
@@ -60,7 +66,11 @@ class DiagnosticMessages () extends js.Object {
   
   var getDiagnosticPos: js.Any = js.native
   
+  def getDiagnosticPosition(diagnosticIndex: Double): js.UndefOr[Position] = js.native
+  def getDiagnosticPosition(diagnosticIndex: Double, raw: Boolean): js.UndefOr[Position] = js.native
+  
   def getDiagnosticRange(diagnosticIndex: Double): js.UndefOr[Range] = js.native
+  def getDiagnosticRange(diagnosticIndex: Double, raw: Boolean): js.UndefOr[Range] = js.native
   
   def getDiagnosticSourceFile(diagnosticIndex: Double): js.UndefOr[SourceFile] = js.native
   
@@ -71,6 +81,8 @@ class DiagnosticMessages () extends js.Object {
   
   @JSName(js.Symbol.iterator)
   var iterator: js.Function0[Generator[js.UndefOr[DiagnosticInfo], Unit, _]] = js.native
+  
+  var lineOffsetMap: js.Any = js.native
   
   def report(pos: Double, message: Diagnostic, args: js.Any*): Unit = js.native
   

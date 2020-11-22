@@ -8,7 +8,7 @@ import typingsSlinky.electron.electronStrings.login
 import typingsSlinky.electron.electronStrings.redirect
 import typingsSlinky.electron.electronStrings.response
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -103,7 +103,7 @@ trait ClientRequest extends EventEmitter {
     */
   def getUploadProgress(): UploadProgress = js.native
   
-  // Docs: http://electronjs.org/docs/api/client-request
+  // Docs: https://electronjs.org/docs/api/client-request
   /**
     * Emitted when the `request` is aborted. The `abort` event will not be fired if
     * the `request` is already closed.
@@ -243,6 +243,21 @@ trait ClientRequest extends EventEmitter {
     * lowercasing. It can be called only before first write. Calling this method after
     * the first write will throw an error. If the passed value is not a `String`, its
     * `toString()` method will be called to obtain the final value.
+    *
+    * Certain headers are restricted from being set by apps. These headers are listed
+    * below. More information on restricted headers can be found in Chromium's header
+    * utils.
+    *
+    * * `Content-Length`
+    * * `Host`
+    * * `Trailer` or `Te`
+    * * `Upgrade`
+    * * `Cookie2`
+    * * `Keep-Alive`
+    * * `Transfer-Encoding`
+    *
+    * Additionally, setting the `Connection` header to the value `upgrade` is also
+    * disallowed.
     */
   def setHeader(name: String, value: String): Unit = js.native
   

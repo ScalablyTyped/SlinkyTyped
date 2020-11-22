@@ -37,7 +37,7 @@ class Tender () extends js.Object {
   var cash_details: js.UndefOr[TenderCashDetails] = js.native
   
   /**
-    * The time when the tender was created, in RFC 3339 format.
+    * The timestamp for when the tender was created, in RFC 3339 format.
     */
   var created_at: js.UndefOr[String] = js.native
   

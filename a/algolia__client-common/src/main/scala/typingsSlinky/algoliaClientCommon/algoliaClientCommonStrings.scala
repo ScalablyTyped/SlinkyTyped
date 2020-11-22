@@ -7,10 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object algoliaClientCommonStrings {
   
   @scala.inline
-  def CreateClient: CreateClient = "CreateClient".asInstanceOf[CreateClient]
+  def AddedMethods: AddedMethods = "AddedMethods".asInstanceOf[AddedMethods]
   
   @scala.inline
-  def addMethods: addMethods = "addMethods".asInstanceOf[addMethods]
+  def CreateClient: CreateClient = "CreateClient".asInstanceOf[CreateClient]
   
   @scala.inline
   def headers: headers = "headers".asInstanceOf[headers]
@@ -43,10 +43,10 @@ object algoliaClientCommonStrings {
   def userAgent: userAgent = "userAgent".asInstanceOf[userAgent]
   
   @js.native
-  sealed trait CreateClient extends js.Object
+  sealed trait AddedMethods extends js.Object
   
   @js.native
-  sealed trait addMethods extends js.Object
+  sealed trait CreateClient extends js.Object
   
   @js.native
   sealed trait headers extends js.Object

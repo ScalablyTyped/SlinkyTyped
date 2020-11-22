@@ -25,12 +25,18 @@ object SubEmitter extends js.Object {
   /**
     * Creates a new SubEmitter from a serialized JSON version
     * @param serializationObject defines the JSON object to read from
-    * @param scene defines the hosting scene
+    * @param sceneOrEngine defines the hosting scene or the hosting engine
     * @param rootUrl defines the rootUrl for data loading
     * @returns a new SubEmitter
     */
-  def Parse(serializationObject: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): typingsSlinky.babylonjs.BABYLON.SubEmitter = js.native
+  def Parse(serializationObject: js.Any, sceneOrEngine: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): typingsSlinky.babylonjs.BABYLON.SubEmitter = js.native
+  def Parse(
+    serializationObject: js.Any,
+    sceneOrEngine: typingsSlinky.babylonjs.BABYLON.ThinEngine,
+    rootUrl: String
+  ): typingsSlinky.babylonjs.BABYLON.SubEmitter = js.native
   
   /** @hidden */
-  def _ParseParticleSystem(system: js.Any, scene: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): typingsSlinky.babylonjs.BABYLON.ParticleSystem = js.native
+  def _ParseParticleSystem(system: js.Any, sceneOrEngine: typingsSlinky.babylonjs.BABYLON.Scene, rootUrl: String): typingsSlinky.babylonjs.BABYLON.ParticleSystem = js.native
+  def _ParseParticleSystem(system: js.Any, sceneOrEngine: typingsSlinky.babylonjs.BABYLON.ThinEngine, rootUrl: String): typingsSlinky.babylonjs.BABYLON.ParticleSystem = js.native
 }

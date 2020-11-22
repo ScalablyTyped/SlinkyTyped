@@ -9,15 +9,25 @@ trait DraggedThumbIndex extends js.Object {
   
   var draggedThumbIndex: Double = js.native
   
+  var draggedTrackPos: js.Array[Double] = js.native
+  
   var isChanged: Boolean = js.native
+  
+  var markOffsets: js.Array[scala.Nothing] = js.native
   
   var thumbZIndexes: js.Array[Double] = js.native
 }
 object DraggedThumbIndex {
   
   @scala.inline
-  def apply(draggedThumbIndex: Double, isChanged: Boolean, thumbZIndexes: js.Array[Double]): DraggedThumbIndex = {
-    val __obj = js.Dynamic.literal(draggedThumbIndex = draggedThumbIndex.asInstanceOf[js.Any], isChanged = isChanged.asInstanceOf[js.Any], thumbZIndexes = thumbZIndexes.asInstanceOf[js.Any])
+  def apply(
+    draggedThumbIndex: Double,
+    draggedTrackPos: js.Array[Double],
+    isChanged: Boolean,
+    markOffsets: js.Array[scala.Nothing],
+    thumbZIndexes: js.Array[Double]
+  ): DraggedThumbIndex = {
+    val __obj = js.Dynamic.literal(draggedThumbIndex = draggedThumbIndex.asInstanceOf[js.Any], draggedTrackPos = draggedTrackPos.asInstanceOf[js.Any], isChanged = isChanged.asInstanceOf[js.Any], markOffsets = markOffsets.asInstanceOf[js.Any], thumbZIndexes = thumbZIndexes.asInstanceOf[js.Any])
     __obj.asInstanceOf[DraggedThumbIndex]
   }
   
@@ -40,7 +50,19 @@ object DraggedThumbIndex {
     def setDraggedThumbIndex(value: Double): Self = this.set("draggedThumbIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setDraggedTrackPosVarargs(value: Double*): Self = this.set("draggedTrackPos", js.Array(value :_*))
+    
+    @scala.inline
+    def setDraggedTrackPos(value: js.Array[Double]): Self = this.set("draggedTrackPos", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setIsChanged(value: Boolean): Self = this.set("isChanged", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMarkOffsetsVarargs(value: scala.Nothing*): Self = this.set("markOffsets", js.Array(value :_*))
+    
+    @scala.inline
+    def setMarkOffsets(value: js.Array[scala.Nothing]): Self = this.set("markOffsets", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setThumbZIndexesVarargs(value: Double*): Self = this.set("thumbZIndexes", js.Array(value :_*))

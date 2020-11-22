@@ -25,6 +25,11 @@ object OperationResponseTypeI extends js.Object {
   object allowTrust extends TopLevel[allowTrust with Double]
   
   @js.native
+  sealed trait beginSponsoringFutureReserves extends OperationResponseTypeI
+  /* 16 */ @js.native
+  object beginSponsoringFutureReserves extends TopLevel[beginSponsoringFutureReserves with Double]
+  
+  @js.native
   sealed trait bumpSequence extends OperationResponseTypeI
   /* 11 */ @js.native
   object bumpSequence extends TopLevel[bumpSequence with Double]
@@ -35,14 +40,29 @@ object OperationResponseTypeI extends js.Object {
   object changeTrust extends TopLevel[changeTrust with Double]
   
   @js.native
+  sealed trait claimClaimableBalance extends OperationResponseTypeI
+  /* 15 */ @js.native
+  object claimClaimableBalance extends TopLevel[claimClaimableBalance with Double]
+  
+  @js.native
   sealed trait createAccount extends OperationResponseTypeI
   /* 0 */ @js.native
   object createAccount extends TopLevel[createAccount with Double]
   
   @js.native
+  sealed trait createClaimableBalance extends OperationResponseTypeI
+  /* 14 */ @js.native
+  object createClaimableBalance extends TopLevel[createClaimableBalance with Double]
+  
+  @js.native
   sealed trait createPassiveOffer extends OperationResponseTypeI
   /* 3 */ @js.native
   object createPassiveOffer extends TopLevel[createPassiveOffer with Double]
+  
+  @js.native
+  sealed trait endSponsoringFutureReserves extends OperationResponseTypeI
+  /* 17 */ @js.native
+  object endSponsoringFutureReserves extends TopLevel[endSponsoringFutureReserves with Double]
   
   @js.native
   sealed trait inflation extends OperationResponseTypeI
@@ -78,6 +98,11 @@ object OperationResponseTypeI extends js.Object {
   sealed trait payment extends OperationResponseTypeI
   /* 1 */ @js.native
   object payment extends TopLevel[payment with Double]
+  
+  @js.native
+  sealed trait revokeSponsorship extends OperationResponseTypeI
+  /* 18 */ @js.native
+  object revokeSponsorship extends TopLevel[revokeSponsorship with Double]
   
   @js.native
   sealed trait setOptions extends OperationResponseTypeI

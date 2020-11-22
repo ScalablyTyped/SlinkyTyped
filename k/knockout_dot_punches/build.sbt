@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "knockout_dot_punches"
-version := "0.5.1-dt-20200515Z-76c388"
+version := "0.5.1-dt-20201002Z-76c388"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

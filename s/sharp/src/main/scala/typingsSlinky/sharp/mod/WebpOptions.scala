@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebpOptions extends OutputOptions {
+trait WebpOptions
+  extends OutputOptions
+     with AnimationOptions {
   
   /** Quality of alpha layer, number from 0-100 (optional, default 100) */
   var alphaQuality: js.UndefOr[Double] = js.native

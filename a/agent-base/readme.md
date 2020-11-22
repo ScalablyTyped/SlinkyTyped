@@ -1,7 +1,7 @@
 
 # Scala.js typings for agent-base
 
-Typings are for version 6.0.1
+Typings are for version 6.0.2
 
 ## Library description:
 Turn a function into an `http.Agent` instance

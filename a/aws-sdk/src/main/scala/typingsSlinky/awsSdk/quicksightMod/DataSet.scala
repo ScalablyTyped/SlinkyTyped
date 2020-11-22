@@ -18,6 +18,11 @@ trait DataSet extends js.Object {
   var ColumnGroups: js.UndefOr[ColumnGroupList] = js.native
   
   /**
+    * A set of one or more definitions of a  ColumnLevelPermissionRule .
+    */
+  var ColumnLevelPermissionRules: js.UndefOr[ColumnLevelPermissionRuleList] = js.native
+  
+  /**
     * The amount of SPICE capacity used by this dataset. This is 0 if the dataset isn't imported into SPICE.
     */
   var ConsumedSpiceCapacityInBytes: js.UndefOr[Long_] = js.native
@@ -104,6 +109,15 @@ object DataSet {
     
     @scala.inline
     def deleteColumnGroups: Self = this.set("ColumnGroups", js.undefined)
+    
+    @scala.inline
+    def setColumnLevelPermissionRulesVarargs(value: ColumnLevelPermissionRule*): Self = this.set("ColumnLevelPermissionRules", js.Array(value :_*))
+    
+    @scala.inline
+    def setColumnLevelPermissionRules(value: ColumnLevelPermissionRuleList): Self = this.set("ColumnLevelPermissionRules", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnLevelPermissionRules: Self = this.set("ColumnLevelPermissionRules", js.undefined)
     
     @scala.inline
     def setConsumedSpiceCapacityInBytes(value: Long_): Self = this.set("ConsumedSpiceCapacityInBytes", value.asInstanceOf[js.Any])

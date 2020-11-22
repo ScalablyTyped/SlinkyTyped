@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.appstreamMod
 import typingsSlinky.awsSdk.anon.DescribeFleetsRequestwait
 import typingsSlinky.awsSdk.awsSdkStrings.fleetStarted
 import typingsSlinky.awsSdk.awsSdkStrings.fleetStopped
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service

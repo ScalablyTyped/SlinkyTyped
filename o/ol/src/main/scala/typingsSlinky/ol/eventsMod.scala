@@ -36,8 +36,8 @@ object eventsMod extends js.Object {
   @js.native
   trait EventsKey extends js.Object {
     
-    def listener(p0: default): Unit | Boolean = js.native
-    def listener(p0: Event): Unit | Boolean = js.native
+    def listener(p0: default): Boolean = js.native
+    def listener(p0: Event): Boolean = js.native
     @JSName("listener")
     var listener_Original: ListenerFunction = js.native
     
@@ -49,13 +49,13 @@ object eventsMod extends js.Object {
   @js.native
   trait ListenerObject extends js.Object {
     
-    def handleEvent(p0: default): Unit | Boolean = js.native
-    def handleEvent(p0: Event): Unit | Boolean = js.native
+    def handleEvent(p0: default): Boolean = js.native
+    def handleEvent(p0: Event): Boolean = js.native
     @JSName("handleEvent")
     var handleEvent_Original: ListenerFunction = js.native
   }
   
   type Listener = ListenerFunction | ListenerObject
   
-  type ListenerFunction = js.Function1[/* p0 */ Event | default, Unit | Boolean]
+  type ListenerFunction = js.Function1[/* p0 */ Event | default, Boolean]
 }

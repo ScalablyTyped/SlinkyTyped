@@ -8,9 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * A `StructFailure` represents a single specific failure in validation.
   */
-/**
-  * A `StructFailure` represents a single specific failure in validation.
-  */
 @js.native
 trait StructFailure
   extends /* key */ StringDictionary[js.Any] {

@@ -4,39 +4,47 @@ import org.scalajs.dom.raw.Event
 import typingsSlinky.jupyterlabCells.modelMod.IAttachmentsCellModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/cells/lib/widget", "AttachmentsCell")
 @js.native
 abstract class AttachmentsCell () extends Cell {
+  
   /**
     * Takes in a file object and adds it to
     * the cell attachments
     */
   var _attachFile: js.Any = js.native
+  
   /**
     * Attaches all DataTransferItems (obtained from
     * clipboard or native drop events) to the cell
     */
   var _attachFiles: js.Any = js.native
+  
   var _evtDragOver: js.Any = js.native
+  
   /**
-    * Handle the `'p-drop'` event for the widget.
+    * Handle the `'lm-drop'` event for the widget.
     */
   var _evtDrop: js.Any = js.native
+  
   /**
     * Handle the `drop` event for the widget
     */
   var _evtNativeDrop: js.Any = js.native
+  
   /**
     * Handle the `paste` event for the widget
     */
   var _evtPaste: js.Any = js.native
+  
   /**
-    * The model used by the widget.
+    * Generates a unique URI for a file
+    * while preserving the file extension.
     */
-  @JSName("model")
-  val model_AttachmentsCell: IAttachmentsCellModel = js.native
+  var _generateURI: js.Any = js.native
+  
   /**
     * Handle the DOM events for the widget.
     *
@@ -48,9 +56,16 @@ abstract class AttachmentsCell () extends Cell {
     * not be called directly by user code.
     */
   def handleEvent(event: Event): Unit = js.native
+  
+  /**
+    * The model used by the widget.
+    */
+  @JSName("model")
+  val model_FAttachmentsCell: IAttachmentsCellModel = js.native
+  
   /**
     * Modify the cell source to include a reference to the attachment.
     */
   /* protected */ def updateCellSourceWithAttachment(attachmentName: String): Unit = js.native
+  /* protected */ def updateCellSourceWithAttachment(attachmentName: String, URI: String): Unit = js.native
 }
-

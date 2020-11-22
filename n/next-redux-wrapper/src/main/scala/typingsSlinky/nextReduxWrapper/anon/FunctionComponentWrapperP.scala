@@ -1,7 +1,7 @@
 package typingsSlinky.nextReduxWrapper.anon
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.next.utilsMod.NextPageContext
+import typingsSlinky.next.libUtilsMod.NextPageContext
 import typingsSlinky.nextReduxWrapper.mod.WrapperProps
 import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.ValidationMap

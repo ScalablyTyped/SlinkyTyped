@@ -431,6 +431,10 @@ trait Model extends js.Object {
     */
   var scrollSettings: js.UndefOr[ScrollSettings] = js.native
   
+  /** Triggered after end of vertical and horizontal scrolling.
+    */
+  var scrollStop: js.UndefOr[js.Function1[/* e */ ScrollStopEventArgs, Unit]] = js.native
+  
   /** Gets or sets an object that indicates to customize the selection options in the Spreadsheet.
     */
   var selectionSettings: js.UndefOr[SelectionSettings] = js.native
@@ -1052,6 +1056,12 @@ object Model {
     
     @scala.inline
     def deleteScrollSettings: Self = this.set("scrollSettings", js.undefined)
+    
+    @scala.inline
+    def setScrollStop(value: /* e */ ScrollStopEventArgs => Unit): Self = this.set("scrollStop", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteScrollStop: Self = this.set("scrollStop", js.undefined)
     
     @scala.inline
     def setSelectionSettings(value: SelectionSettings): Self = this.set("selectionSettings", value.asInstanceOf[js.Any])

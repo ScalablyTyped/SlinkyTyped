@@ -2,6 +2,8 @@ package typingsSlinky.handsontable.mod.Handsontable.plugins
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.handsontable.mod._Handsontable.Core
+import typingsSlinky.std.Map
+import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,15 +11,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CollapsibleColumns extends Base {
   
-  var buttonEnabledList: js.Object = js.native
+  var buttonEnabledList: Map[Double, Set[Double]] = js.native
   
   def checkDependencies(): Unit = js.native
+  
+  var collapsableCoordsList: Map[Double, Set[Double]] = js.native
   
   def collapseAll(): Unit = js.native
   
   def collapseSection(coords: js.Object): Unit = js.native
   
-  var collapsedSections: js.Object = js.native
+  var collapsedColumns: js.Array[Double] = js.native
+  
+  var collapsedSections: Map[Double, js.Array[_]] = js.native
   
   var columnHeaderLevelCount: Double = js.native
   
@@ -43,20 +49,22 @@ trait CollapsibleColumns extends Base {
   
   def toggleAllCollapsibleSections(action: String): Unit = js.native
   
-  def toggleCollapsibleSection(coords: js.Object, action: String): Unit = js.native
+  def toggleCollapsibleSection(coords: js.Array[js.Object], action: String): Unit = js.native
 }
 object CollapsibleColumns {
   
   @scala.inline
   def apply(
     addHook: (String, js.Function1[/* repeated */ js.Any, _]) => Unit,
-    buttonEnabledList: js.Object,
+    buttonEnabledList: Map[Double, Set[Double]],
     callOnPluginsReady: js.Function0[Unit] => Unit,
     checkDependencies: () => Unit,
     clearHooks: () => Unit,
+    collapsableCoordsList: Map[Double, Set[Double]],
     collapseAll: () => Unit,
     collapseSection: js.Object => Unit,
-    collapsedSections: js.Object,
+    collapsedColumns: js.Array[Double],
+    collapsedSections: Map[Double, js.Array[_]],
     columnHeaderLevelCount: Double,
     destroy: () => Unit,
     disablePlugin: () => Unit,
@@ -79,12 +87,11 @@ object CollapsibleColumns {
     pluginsInitializedCallback: js.Array[_],
     removeHooks: String => Unit,
     settings: Boolean | js.Array[_],
-    t: RecordTranslator,
     toggleAllCollapsibleSections: String => Unit,
-    toggleCollapsibleSection: (js.Object, String) => Unit,
+    toggleCollapsibleSection: (js.Array[js.Object], String) => Unit,
     updatePlugin: () => Unit
   ): CollapsibleColumns = {
-    val __obj = js.Dynamic.literal(addHook = js.Any.fromFunction2(addHook), buttonEnabledList = buttonEnabledList.asInstanceOf[js.Any], callOnPluginsReady = js.Any.fromFunction1(callOnPluginsReady), checkDependencies = js.Any.fromFunction0(checkDependencies), clearHooks = js.Any.fromFunction0(clearHooks), collapseAll = js.Any.fromFunction0(collapseAll), collapseSection = js.Any.fromFunction1(collapseSection), collapsedSections = collapsedSections.asInstanceOf[js.Any], columnHeaderLevelCount = columnHeaderLevelCount.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), disablePlugin = js.Any.fromFunction0(disablePlugin), enablePlugin = js.Any.fromFunction0(enablePlugin), enabled = enabled.asInstanceOf[js.Any], eventManager = eventManager.asInstanceOf[js.Any], expandAll = js.Any.fromFunction0(expandAll), expandSection = js.Any.fromFunction1(expandSection), generateIndicator = js.Any.fromFunction2(generateIndicator), hiddenColumnsPlugin = hiddenColumnsPlugin.asInstanceOf[js.Any], hot = hot.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), initialized = initialized.asInstanceOf[js.Any], isPluginsReady = isPluginsReady.asInstanceOf[js.Any], markSectionAs = js.Any.fromFunction4(markSectionAs), meetsDependencies = js.Any.fromFunction0(meetsDependencies), nestedHeadersPlugin = nestedHeadersPlugin.asInstanceOf[js.Any], parseSettings = js.Any.fromFunction0(parseSettings), pluginName = pluginName.asInstanceOf[js.Any], pluginsInitializedCallback = pluginsInitializedCallback.asInstanceOf[js.Any], removeHooks = js.Any.fromFunction1(removeHooks), settings = settings.asInstanceOf[js.Any], t = t.asInstanceOf[js.Any], toggleAllCollapsibleSections = js.Any.fromFunction1(toggleAllCollapsibleSections), toggleCollapsibleSection = js.Any.fromFunction2(toggleCollapsibleSection), updatePlugin = js.Any.fromFunction0(updatePlugin))
+    val __obj = js.Dynamic.literal(addHook = js.Any.fromFunction2(addHook), buttonEnabledList = buttonEnabledList.asInstanceOf[js.Any], callOnPluginsReady = js.Any.fromFunction1(callOnPluginsReady), checkDependencies = js.Any.fromFunction0(checkDependencies), clearHooks = js.Any.fromFunction0(clearHooks), collapsableCoordsList = collapsableCoordsList.asInstanceOf[js.Any], collapseAll = js.Any.fromFunction0(collapseAll), collapseSection = js.Any.fromFunction1(collapseSection), collapsedColumns = collapsedColumns.asInstanceOf[js.Any], collapsedSections = collapsedSections.asInstanceOf[js.Any], columnHeaderLevelCount = columnHeaderLevelCount.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), disablePlugin = js.Any.fromFunction0(disablePlugin), enablePlugin = js.Any.fromFunction0(enablePlugin), enabled = enabled.asInstanceOf[js.Any], eventManager = eventManager.asInstanceOf[js.Any], expandAll = js.Any.fromFunction0(expandAll), expandSection = js.Any.fromFunction1(expandSection), generateIndicator = js.Any.fromFunction2(generateIndicator), hiddenColumnsPlugin = hiddenColumnsPlugin.asInstanceOf[js.Any], hot = hot.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), initialized = initialized.asInstanceOf[js.Any], isPluginsReady = isPluginsReady.asInstanceOf[js.Any], markSectionAs = js.Any.fromFunction4(markSectionAs), meetsDependencies = js.Any.fromFunction0(meetsDependencies), nestedHeadersPlugin = nestedHeadersPlugin.asInstanceOf[js.Any], parseSettings = js.Any.fromFunction0(parseSettings), pluginName = pluginName.asInstanceOf[js.Any], pluginsInitializedCallback = pluginsInitializedCallback.asInstanceOf[js.Any], removeHooks = js.Any.fromFunction1(removeHooks), settings = settings.asInstanceOf[js.Any], toggleAllCollapsibleSections = js.Any.fromFunction1(toggleAllCollapsibleSections), toggleCollapsibleSection = js.Any.fromFunction2(toggleCollapsibleSection), updatePlugin = js.Any.fromFunction0(updatePlugin))
     __obj.asInstanceOf[CollapsibleColumns]
   }
   
@@ -104,10 +111,13 @@ object CollapsibleColumns {
     }
     
     @scala.inline
-    def setButtonEnabledList(value: js.Object): Self = this.set("buttonEnabledList", value.asInstanceOf[js.Any])
+    def setButtonEnabledList(value: Map[Double, Set[Double]]): Self = this.set("buttonEnabledList", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCheckDependencies(value: () => Unit): Self = this.set("checkDependencies", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setCollapsableCoordsList(value: Map[Double, Set[Double]]): Self = this.set("collapsableCoordsList", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCollapseAll(value: () => Unit): Self = this.set("collapseAll", js.Any.fromFunction0(value))
@@ -116,7 +126,13 @@ object CollapsibleColumns {
     def setCollapseSection(value: js.Object => Unit): Self = this.set("collapseSection", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setCollapsedSections(value: js.Object): Self = this.set("collapsedSections", value.asInstanceOf[js.Any])
+    def setCollapsedColumnsVarargs(value: Double*): Self = this.set("collapsedColumns", js.Array(value :_*))
+    
+    @scala.inline
+    def setCollapsedColumns(value: js.Array[Double]): Self = this.set("collapsedColumns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCollapsedSections(value: Map[Double, js.Array[_]]): Self = this.set("collapsedSections", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setColumnHeaderLevelCount(value: Double): Self = this.set("columnHeaderLevelCount", value.asInstanceOf[js.Any])
@@ -158,6 +174,6 @@ object CollapsibleColumns {
     def setToggleAllCollapsibleSections(value: String => Unit): Self = this.set("toggleAllCollapsibleSections", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setToggleCollapsibleSection(value: (js.Object, String) => Unit): Self = this.set("toggleCollapsibleSection", js.Any.fromFunction2(value))
+    def setToggleCollapsibleSection(value: (js.Array[js.Object], String) => Unit): Self = this.set("toggleCollapsibleSection", js.Any.fromFunction2(value))
   }
 }

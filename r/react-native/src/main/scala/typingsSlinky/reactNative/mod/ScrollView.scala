@@ -1,6 +1,5 @@
 package typingsSlinky.reactNative.mod
 
-import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.anon.AnimatedBoolean
 import scala.scalajs.js
@@ -13,6 +12,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ScrollView ()
   extends Component[ScrollViewProps, js.Object, js.Any] {
   
+  /**
+    * Displays the scroll indicators momentarily.
+    */
+  def flashScrollIndicators(): Unit = js.native
+  
   // Undocumented
   def getInnerViewNode(): js.Any = js.native
   
@@ -22,7 +26,7 @@ class ScrollView ()
     * implement this method so that they can be composed while providing access
     * to the underlying scroll responder's methods.
     */
-  def getScrollResponder(): ReactElement = js.native
+  def getScrollResponder(): ScrollResponderMixin = js.native
   
   def getScrollableNode(): js.Any = js.native
   
@@ -64,4 +68,12 @@ class ScrollView ()
     * @deprecated Use scrollTo instead
     */
   var scrollWithoutAnimationTo: js.UndefOr[js.Function2[/* y */ Double, /* x */ Double, Unit]] = js.native
+  
+  /**
+    * This function sends props straight to native. They will not participate in
+    * future diff process - this means that if you do not include them in the
+    * next render, they will remain active (see [Direct
+    * Manipulation](https://reactnative.dev/docs/direct-manipulation)).
+    */
+  def setNativeProps(nativeProps: js.Object): Unit = js.native
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.JSXIdentifier
+import typingsSlinky.babelTraverse.babelTraverseStrings.ArrayTypeAnnotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `84` extends js.Object {
   
-  var `type`: JSXIdentifier = js.native
+  var `type`: ArrayTypeAnnotation = js.native
 }
 object `84` {
   
   @scala.inline
-  def apply(`type`: JSXIdentifier): `84` = {
+  def apply(`type`: ArrayTypeAnnotation): `84` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`84`]
@@ -35,6 +35,6 @@ object `84` {
     }
     
     @scala.inline
-    def setType(value: JSXIdentifier): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ArrayTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

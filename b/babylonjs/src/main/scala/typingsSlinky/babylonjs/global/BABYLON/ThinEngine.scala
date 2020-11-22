@@ -13,6 +13,7 @@ import typingsSlinky.babylonjs.ImageBitmap
 import typingsSlinky.babylonjs.WebGLRenderingContext
 import typingsSlinky.babylonjs.anon.Capture
 import typingsSlinky.babylonjs.anon.CaptureConstraint
+import typingsSlinky.std.OffscreenCanvas
 import typingsSlinky.std.WebGL2RenderingContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,41 +30,57 @@ class ThinEngine protected ()
     * @param options defines further options to be sent to the getContext() function
     * @param adaptToDeviceRatio defines whether to adapt to the device's viewport characteristics (default: false)
     */
-  def this(canvasOrContext: Nullable[HTMLCanvasElement | WebGLRenderingContext | WebGL2RenderingContext]) = this()
+  def this(canvasOrContext: Nullable[
+        HTMLCanvasElement | OffscreenCanvas | WebGLRenderingContext | WebGL2RenderingContext
+      ]) = this()
   def this(
-    canvasOrContext: Nullable[HTMLCanvasElement | WebGLRenderingContext | WebGL2RenderingContext],
+    canvasOrContext: Nullable[
+        HTMLCanvasElement | OffscreenCanvas | WebGLRenderingContext | WebGL2RenderingContext
+      ],
     antialias: Boolean
   ) = this()
   def this(
-    canvasOrContext: Nullable[HTMLCanvasElement | WebGLRenderingContext | WebGL2RenderingContext],
+    canvasOrContext: Nullable[
+        HTMLCanvasElement | OffscreenCanvas | WebGLRenderingContext | WebGL2RenderingContext
+      ],
     antialias: js.UndefOr[scala.Nothing],
     options: EngineOptions
   ) = this()
   def this(
-    canvasOrContext: Nullable[HTMLCanvasElement | WebGLRenderingContext | WebGL2RenderingContext],
+    canvasOrContext: Nullable[
+        HTMLCanvasElement | OffscreenCanvas | WebGLRenderingContext | WebGL2RenderingContext
+      ],
     antialias: Boolean,
     options: EngineOptions
   ) = this()
   def this(
-    canvasOrContext: Nullable[HTMLCanvasElement | WebGLRenderingContext | WebGL2RenderingContext],
+    canvasOrContext: Nullable[
+        HTMLCanvasElement | OffscreenCanvas | WebGLRenderingContext | WebGL2RenderingContext
+      ],
     antialias: js.UndefOr[scala.Nothing],
     options: js.UndefOr[scala.Nothing],
     adaptToDeviceRatio: Boolean
   ) = this()
   def this(
-    canvasOrContext: Nullable[HTMLCanvasElement | WebGLRenderingContext | WebGL2RenderingContext],
+    canvasOrContext: Nullable[
+        HTMLCanvasElement | OffscreenCanvas | WebGLRenderingContext | WebGL2RenderingContext
+      ],
     antialias: js.UndefOr[scala.Nothing],
     options: EngineOptions,
     adaptToDeviceRatio: Boolean
   ) = this()
   def this(
-    canvasOrContext: Nullable[HTMLCanvasElement | WebGLRenderingContext | WebGL2RenderingContext],
+    canvasOrContext: Nullable[
+        HTMLCanvasElement | OffscreenCanvas | WebGLRenderingContext | WebGL2RenderingContext
+      ],
     antialias: Boolean,
     options: js.UndefOr[scala.Nothing],
     adaptToDeviceRatio: Boolean
   ) = this()
   def this(
-    canvasOrContext: Nullable[HTMLCanvasElement | WebGLRenderingContext | WebGL2RenderingContext],
+    canvasOrContext: Nullable[
+        HTMLCanvasElement | OffscreenCanvas | WebGLRenderingContext | WebGL2RenderingContext
+      ],
     antialias: Boolean,
     options: EngineOptions,
     adaptToDeviceRatio: Boolean
@@ -105,6 +122,16 @@ object ThinEngine extends js.Object {
     */
   def GetExponentOfTwo(value: Double, max: Double): Double = js.native
   def GetExponentOfTwo(value: Double, max: Double, mode: Double): Double = js.native
+  
+  /**
+    * Gets a boolean indicating if the engine can be instanciated on a performant device (ie. if a webGL context can be found and it does not use a slow implementation)
+    */
+  def HasMajorPerformanceCaveat: Boolean = js.native
+  
+  /**
+    * Gets a boolean indicating if the engine can be instanciated (ie. if a webGL context can be found)
+    */
+  def IsSupported: Boolean = js.native
   
   /**
     * Find the nearest power of two.
@@ -425,10 +452,12 @@ object ThinEngine extends js.Object {
     mimeType: String
   ): Nullable[HTMLImageElement] = js.native
   
+  var _HasMajorPerformanceCaveat: js.Any = js.native
+  
+  var _IsSupported: js.Any = js.native
+  
   /** @hidden */
   var _TextureLoaders: js.Array[IInternalTextureLoader] = js.native
-  
-  var _isSupported: js.Any = js.native
   
   /**
     * Gets a boolean indicating if the engine can be instanciated (ie. if a webGL context can be found)

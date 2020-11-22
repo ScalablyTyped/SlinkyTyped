@@ -45,7 +45,7 @@ trait Nedb[G] extends EventEmitter {
     query: js.Any,
     callback: js.Function2[/* err */ js.Error | Null, /* documents */ js.Array[T], Unit]
   ): Unit = js.native
-  def find[T /* <: G */](query: js.Any, projection: T): Cursor[T] = js.native
+  def find[T /* <: G */](query: js.Any, projection: js.Any): Cursor[T] = js.native
   /**
     * Find all documents matching the query
     * If no callback is passed, we return the cursor so that user can limit, skip and finally exec
@@ -54,7 +54,7 @@ trait Nedb[G] extends EventEmitter {
     */
   def find[T /* <: G */](
     query: js.Any,
-    projection: T,
+    projection: js.Any,
     callback: js.Function2[/* err */ js.Error | Null, /* documents */ js.Array[T], Unit]
   ): Unit = js.native
   
@@ -70,7 +70,7 @@ trait Nedb[G] extends EventEmitter {
     */
   def findOne[T /* <: G */](
     query: js.Any,
-    projection: T,
+    projection: js.Any,
     callback: js.Function2[/* err */ js.Error | Null, /* document */ T, Unit]
   ): Unit = js.native
   

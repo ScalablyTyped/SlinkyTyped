@@ -13,13 +13,15 @@ trait PartialConfig extends js.Object {
   
   var asyncWrapper: js.UndefOr[js.Function1[/* cb */ js.Function1[/* repeated */ js.Any, _], js.Promise[_]]] = js.native
   
+  var computedStyleSupportsPseudoElements: js.UndefOr[Boolean] = js.native
+  
   var defaultHidden: js.UndefOr[Boolean] = js.native
   
   var eventWrapper: js.UndefOr[js.Function1[/* cb */ js.Function1[/* repeated */ js.Any, _], Unit]] = js.native
   
   var getElementError: js.UndefOr[js.Function2[/* message */ String, /* container */ HTMLElement, js.Error]] = js.native
   
-  var showOriginalStrackTrace: js.UndefOr[Boolean] = js.native
+  var showOriginalStackTrace: js.UndefOr[Boolean] = js.native
   
   var testIdAttribute: js.UndefOr[String] = js.native
   
@@ -61,6 +63,12 @@ object PartialConfig {
     def deleteAsyncWrapper: Self = this.set("asyncWrapper", js.undefined)
     
     @scala.inline
+    def setComputedStyleSupportsPseudoElements(value: Boolean): Self = this.set("computedStyleSupportsPseudoElements", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteComputedStyleSupportsPseudoElements: Self = this.set("computedStyleSupportsPseudoElements", js.undefined)
+    
+    @scala.inline
     def setDefaultHidden(value: Boolean): Self = this.set("defaultHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -79,10 +87,10 @@ object PartialConfig {
     def deleteGetElementError: Self = this.set("getElementError", js.undefined)
     
     @scala.inline
-    def setShowOriginalStrackTrace(value: Boolean): Self = this.set("showOriginalStrackTrace", value.asInstanceOf[js.Any])
+    def setShowOriginalStackTrace(value: Boolean): Self = this.set("showOriginalStackTrace", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteShowOriginalStrackTrace: Self = this.set("showOriginalStrackTrace", js.undefined)
+    def deleteShowOriginalStackTrace: Self = this.set("showOriginalStackTrace", js.undefined)
     
     @scala.inline
     def setTestIdAttribute(value: String): Self = this.set("testIdAttribute", value.asInstanceOf[js.Any])

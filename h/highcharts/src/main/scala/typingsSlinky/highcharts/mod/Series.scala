@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import typingsSlinky.highcharts.highchartsStrings._empty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -118,13 +119,13 @@ class Series protected () extends js.Object {
     options: PointOptionsType,
     redraw: js.UndefOr[scala.Nothing],
     shift: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def addPoint(
     options: PointOptionsType,
     redraw: js.UndefOr[scala.Nothing],
     shift: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     withEvent: Boolean
   ): Unit = js.native
   def addPoint(options: PointOptionsType, redraw: js.UndefOr[scala.Nothing], shift: Boolean): Unit = js.native
@@ -147,13 +148,13 @@ class Series protected () extends js.Object {
     options: PointOptionsType,
     redraw: js.UndefOr[scala.Nothing],
     shift: Boolean,
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def addPoint(
     options: PointOptionsType,
     redraw: js.UndefOr[scala.Nothing],
     shift: Boolean,
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     withEvent: Boolean
   ): Unit = js.native
   def addPoint(options: PointOptionsType, redraw: Boolean): Unit = js.native
@@ -176,13 +177,13 @@ class Series protected () extends js.Object {
     options: PointOptionsType,
     redraw: Boolean,
     shift: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def addPoint(
     options: PointOptionsType,
     redraw: Boolean,
     shift: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     withEvent: Boolean
   ): Unit = js.native
   def addPoint(options: PointOptionsType, redraw: Boolean, shift: Boolean): Unit = js.native
@@ -195,12 +196,12 @@ class Series protected () extends js.Object {
   ): Unit = js.native
   def addPoint(options: PointOptionsType, redraw: Boolean, shift: Boolean, animation: Boolean): Unit = js.native
   def addPoint(options: PointOptionsType, redraw: Boolean, shift: Boolean, animation: Boolean, withEvent: Boolean): Unit = js.native
-  def addPoint(options: PointOptionsType, redraw: Boolean, shift: Boolean, animation: AnimationOptionsObject): Unit = js.native
+  def addPoint(options: PointOptionsType, redraw: Boolean, shift: Boolean, animation: PartialAnimationOptionsOb): Unit = js.native
   def addPoint(
     options: PointOptionsType,
     redraw: Boolean,
     shift: Boolean,
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     withEvent: Boolean
   ): Unit = js.native
   
@@ -242,9 +243,18 @@ class Series protected () extends js.Object {
   var data: js.Array[Point] = js.native
   
   /**
-    * Contains the minimum value of the series' data point.
+    * Contains the maximum value of the series' data point. Some series types
+    * like `networkgraph` do not support this property as they lack a
+    * `y`-value.
     */
-  val dataMin: Double = js.native
+  val dataMax: js.UndefOr[Double] = js.native
+  
+  /**
+    * Contains the minimum value of the series' data point. Some series types
+    * like `networkgraph` do not support this property as they lack a
+    * `y`-value.
+    */
+  val dataMin: js.UndefOr[Double] = js.native
   
   /**
     * If implemented in the core, parts of this can probably be shared with
@@ -444,14 +454,14 @@ class Series protected () extends js.Object {
   def remove(redraw: js.UndefOr[scala.Nothing], animation: js.UndefOr[scala.Nothing], withEvent: Boolean): Unit = js.native
   def remove(redraw: js.UndefOr[scala.Nothing], animation: Boolean): Unit = js.native
   def remove(redraw: js.UndefOr[scala.Nothing], animation: Boolean, withEvent: Boolean): Unit = js.native
-  def remove(redraw: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject): Unit = js.native
-  def remove(redraw: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject, withEvent: Boolean): Unit = js.native
+  def remove(redraw: js.UndefOr[scala.Nothing], animation: PartialAnimationOptionsOb): Unit = js.native
+  def remove(redraw: js.UndefOr[scala.Nothing], animation: PartialAnimationOptionsOb, withEvent: Boolean): Unit = js.native
   def remove(redraw: Boolean): Unit = js.native
   def remove(redraw: Boolean, animation: js.UndefOr[scala.Nothing], withEvent: Boolean): Unit = js.native
   def remove(redraw: Boolean, animation: Boolean): Unit = js.native
   def remove(redraw: Boolean, animation: Boolean, withEvent: Boolean): Unit = js.native
-  def remove(redraw: Boolean, animation: AnimationOptionsObject): Unit = js.native
-  def remove(redraw: Boolean, animation: AnimationOptionsObject, withEvent: Boolean): Unit = js.native
+  def remove(redraw: Boolean, animation: PartialAnimationOptionsOb): Unit = js.native
+  def remove(redraw: Boolean, animation: PartialAnimationOptionsOb, withEvent: Boolean): Unit = js.native
   
   /**
     * Remove a point from the series. Unlike the Highcharts.Point#remove
@@ -475,10 +485,10 @@ class Series protected () extends js.Object {
     */
   def removePoint(i: Double): Unit = js.native
   def removePoint(i: Double, redraw: js.UndefOr[scala.Nothing], animation: Boolean): Unit = js.native
-  def removePoint(i: Double, redraw: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject): Unit = js.native
+  def removePoint(i: Double, redraw: js.UndefOr[scala.Nothing], animation: PartialAnimationOptionsOb): Unit = js.native
   def removePoint(i: Double, redraw: Boolean): Unit = js.native
   def removePoint(i: Double, redraw: Boolean, animation: Boolean): Unit = js.native
-  def removePoint(i: Double, redraw: Boolean, animation: AnimationOptionsObject): Unit = js.native
+  def removePoint(i: Double, redraw: Boolean, animation: PartialAnimationOptionsOb): Unit = js.native
   
   /**
     * Render the graph and markers. Called internally when first rendering and
@@ -572,12 +582,12 @@ class Series protected () extends js.Object {
   def setData(
     data: js.Array[PointOptionsType],
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def setData(
     data: js.Array[PointOptionsType],
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     updatePoints: Boolean
   ): Unit = js.native
   def setData(data: js.Array[PointOptionsType], redraw: Boolean): Unit = js.native
@@ -589,11 +599,11 @@ class Series protected () extends js.Object {
   ): Unit = js.native
   def setData(data: js.Array[PointOptionsType], redraw: Boolean, animation: Boolean): Unit = js.native
   def setData(data: js.Array[PointOptionsType], redraw: Boolean, animation: Boolean, updatePoints: Boolean): Unit = js.native
-  def setData(data: js.Array[PointOptionsType], redraw: Boolean, animation: AnimationOptionsObject): Unit = js.native
+  def setData(data: js.Array[PointOptionsType], redraw: Boolean, animation: PartialAnimationOptionsOb): Unit = js.native
   def setData(
     data: js.Array[PointOptionsType],
     redraw: Boolean,
-    animation: AnimationOptionsObject,
+    animation: PartialAnimationOptionsOb,
     updatePoints: Boolean
   ): Unit = js.native
   
@@ -648,8 +658,10 @@ class Series protected () extends js.Object {
     * Sonify a series.
     *
     * @param options
-    *        The options for sonifying this series.
+    *        The options for sonifying this series. If not provided, uses
+    *        options set on chart and series.
     */
+  def sonify(): Unit = js.native
   def sonify(
     options: typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.SonifySeriesOptionsObject
   ): Unit = js.native

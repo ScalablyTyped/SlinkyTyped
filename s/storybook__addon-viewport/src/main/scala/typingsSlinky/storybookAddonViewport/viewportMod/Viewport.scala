@@ -11,8 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Viewport extends js.Object {
   
-  var default: js.UndefOr[Boolean] = js.native
-  
   var name: String = js.native
   
   var styles: Styles = js.native
@@ -48,12 +46,6 @@ object Viewport {
     
     @scala.inline
     def setType(value: desktop | mobile | tablet | other): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDefault(value: Boolean): Self = this.set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDefault: Self = this.set("default", js.undefined)
     
     @scala.inline
     def setStylesFunction1(value: /* s */ ViewportStyles => ViewportStyles): Self = this.set("styles", js.Any.fromFunction1(value))

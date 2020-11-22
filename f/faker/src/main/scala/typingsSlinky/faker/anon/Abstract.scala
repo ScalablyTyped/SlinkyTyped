@@ -35,9 +35,13 @@ trait Abstract extends js.Object {
   def city(width: Double, height: Double): String = js.native
   
   def dataUri(): String = js.native
+  def dataUri(width: js.UndefOr[scala.Nothing], height: js.UndefOr[scala.Nothing], color: String): String = js.native
   def dataUri(width: js.UndefOr[scala.Nothing], height: Double): String = js.native
+  def dataUri(width: js.UndefOr[scala.Nothing], height: Double, color: String): String = js.native
   def dataUri(width: Double): String = js.native
+  def dataUri(width: Double, height: js.UndefOr[scala.Nothing], color: String): String = js.native
   def dataUri(width: Double, height: Double): String = js.native
+  def dataUri(width: Double, height: Double, color: String): String = js.native
   
   def fashion(): String = js.native
   def fashion(width: js.UndefOr[scala.Nothing], height: Double): String = js.native

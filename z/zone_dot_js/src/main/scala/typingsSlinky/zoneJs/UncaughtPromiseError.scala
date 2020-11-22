@@ -14,6 +14,8 @@ trait UncaughtPromiseError extends Error {
   
   var task: Task = js.native
   
+  var throwOriginal: js.UndefOr[Boolean] = js.native
+  
   var zone: Zone = js.native
 }
 object UncaughtPromiseError {
@@ -50,5 +52,11 @@ object UncaughtPromiseError {
     
     @scala.inline
     def setZone(value: Zone): Self = this.set("zone", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setThrowOriginal(value: Boolean): Self = this.set("throwOriginal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThrowOriginal: Self = this.set("throwOriginal", js.undefined)
   }
 }

@@ -25,11 +25,11 @@ trait ImportEqualsDeclarationmo extends _ImportLike {
   
   var _statementBrand: js.Any = js.native
   
-  var decorators: js.UndefOr[NodeArray[Decorator]] = js.native
+  val decorators: js.UndefOr[NodeArray[Decorator]] = js.native
   
-  var end: Double = js.native
+  val end: Double = js.native
   
-  var flags: NodeFlags = js.native
+  val flags: NodeFlags = js.native
   
   def forEachChild[T](cbNode: js.Function1[/* node */ this.type, js.UndefOr[T]]): js.UndefOr[T] = js.native
   def forEachChild[T](
@@ -77,15 +77,15 @@ trait ImportEqualsDeclarationmo extends _ImportLike {
   def getWidth(): Double = js.native
   def getWidth(sourceFile: SourceFileLike): Double = js.native
   
-  var kind: ImportEqualsDeclaration = js.native
+  val kind: ImportEqualsDeclaration = js.native
   
-  var modifiers: js.UndefOr[ModifiersArray] = js.native
+  val modifiers: js.UndefOr[ModifiersArray] = js.native
   
-  var moduleReference: ModuleReference with ExternalModuleReference = js.native
+  val moduleReference: ModuleReference with ExternalModuleReference = js.native
   
-  var name: Identifier = js.native
+  val name: Identifier = js.native
   
-  var parent: SourceFile | ModuleBlock = js.native
+  val parent: SourceFile | ModuleBlock = js.native
   
-  var pos: Double = js.native
+  val pos: Double = js.native
 }

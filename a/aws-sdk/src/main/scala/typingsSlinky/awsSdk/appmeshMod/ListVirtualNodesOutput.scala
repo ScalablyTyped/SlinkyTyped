@@ -8,10 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListVirtualNodesOutput extends js.Object {
   
   /**
-    * The nextToken value to include in a future ListVirtualNodes
-    request. When the results of a ListVirtualNodes request exceed
-    limit, you can use this value to retrieve the next page of results. This
-    value is null when there are no more results to return.
+    * The nextToken value to include in a future ListVirtualNodes request. When the results of a ListVirtualNodes request exceed limit, you can use this value to retrieve the next page of results. This value is null when there are no more results to return.
     */
   var nextToken: js.UndefOr[String] = js.native
   

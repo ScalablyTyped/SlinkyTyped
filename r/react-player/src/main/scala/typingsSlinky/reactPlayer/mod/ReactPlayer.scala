@@ -18,6 +18,8 @@ trait ReactPlayer
   def getInternalPlayer(): js.Object = js.native
   def getInternalPlayer(key: String): js.Object = js.native
   
+  def getSecondsLoaded(): Double = js.native
+  
   def seekTo(amount: Double): Unit = js.native
   @JSName("seekTo")
   def seekTo_fraction(amount: Double, `type`: fraction): Unit = js.native

@@ -40,7 +40,7 @@ trait View
   var allLayerViews: Collection[LayerView] = js.native
   
   /**
-    * Represents an ongoing view animation initialized by [goTo()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#goTo). You may [watch](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Accessor.html#watch) this property to be notified when the view's extent changes .
+    * Represents an ongoing view animation initialized by [goTo()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#goTo).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#animation)
     */
@@ -54,7 +54,7 @@ trait View
   var basemapView: BasemapView = js.native
   
   /**
-    * A fatal [error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) returned when the view loses its WebGL context. Watch this property to properly handle the error and attempt to recover the WebGL context.
+    * A fatal [error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) returned when the view loses its WebGL context.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#fatalError)
     */
@@ -64,8 +64,6 @@ trait View
     * Sets the focus on the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#focus)
-    *
-    *
     */
   def focus(): Unit = js.native
   
@@ -87,8 +85,6 @@ trait View
     * Indication whether the view is being interacted with (for example when panning or by an interactive tool).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#interacting)
-    *
-    * @default false
     */
   val interacting: Boolean = js.native
   
@@ -100,7 +96,7 @@ trait View
   var layerViews: Collection[LayerView] = js.native
   
   /**
-    * An instance of a [Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html) object to display in the view. A view may only display one map at a time. On the other hand, one [Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html) may be viewed by multiple [MapViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) and/or [SceneViews](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) simultaneously.  This property is typically set in the constructor of the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). See the [class description](#) for examples demonstrating the relationship between the map and the view.
+    * An instance of a [Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html) object to display in the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#map)
     */
@@ -110,8 +106,6 @@ trait View
     * Indication whether the view is being navigated (for example when panning).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#navigating)
-    *
-    * @default false
     */
   val navigating: Boolean = js.native
   
@@ -123,14 +117,9 @@ trait View
   var navigation: Navigation = js.native
   
   /**
-    * Registers an event handler on the instance. Call this method to hook an event with a listener. See the [Events summary table](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#events-summary) for a list of listened events.
+    * Registers an event handler on the instance.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#on)
-    *
-    * @param type The name of the event or events to listen for.
-    * @param modifiersOrHandler Additional modifier keys to filter events. Please see [Key Values](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values) for possible values. All the standard key values are supported. Alternatively, if no modifiers are required, the function will call when the event fires.  The following events don't support modifier keys: `blur`, `focus`, `layerview-create`, `layerview-destroy`, `resize`.
-    * @param handler The function to call when the event is fired, if modifiers were specified.
-    *
     */
   def on(`type`: String, modifiersOrHandler: js.Array[String]): js.Any = js.native
   def on(`type`: String, modifiersOrHandler: js.Array[String], handler: js.Function): js.Any = js.native
@@ -238,50 +227,30 @@ trait View
   def on_resize(name: resize, modifiers: js.Array[String], eventHandler: ViewResizeEventHandler): IHandle = js.native
   
   /**
-    * Use the padding property to make the [center](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#center), and [extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#extent), etc. work off a subsection of the full view. This is particularly useful when layering UI elements or semi-transparent content on top of portions of the view. See the [view padding sample](https://developers.arcgis.com/javascript/latest/sample-code/view-padding/index.html) for an example of how this works.
+    * Use the padding property to make the [center](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#center), and [extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#extent), etc.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#padding)
-    *
-    * @default {left: 0, top: 0, right: 0, bottom: 0}
     */
   var padding: ViewPadding = js.native
   
   /**
     * When `true`, this property indicates whether the view successfully satisfied all dependencies, signaling that the following conditions are met.
-    *   * The view has a [map](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#map). If [map](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#map) is a [WebMap](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html) or a [WebScene](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html), then the map or scene must be [loaded](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html#loaded).
-    *   * The view has a [container](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#container) with a size greater than `0`.
-    *   * The view has a [spatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#spatialReference), a [center](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#center), and a [scale](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#scale). These also can be inferred by setting an [extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#extent).
-    *
-    *
-    * When a view becomes ready it will resolve itself and invoke the callback defined in [when()](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#when) where code can execute on a working view. Subsequent changes to a view's readiness would typically be handled by watching `view.ready` and providing logic for cases where the [map](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#map) or [container](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#container) change.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#ready)
-    *
-    * @default false
     */
   val ready: Boolean = js.native
   
   /**
-    * Represents the current value of one pixel in the unit of the view's [spatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#spatialReference). The value of resolution is calculated by dividing the view's [extent width](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#width) by [its width](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#width).
+    * Represents the current value of one pixel in the unit of the view's [spatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#spatialReference).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#resolution)
     */
   val resolution: Double = js.native
   
   /**
-    * The spatial reference of the view. This indicates the [Projected Coordinate System](https://developers.arcgis.com/rest/services-reference/projected-coordinate-systems.htm) or the [Geographic Coordinate System](https://developers.arcgis.com/rest/services-reference/geographic-coordinate-systems.htm) used to locate geographic features in the map. In a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) the following [supported coordinate systems](esri-views-SceneView.html#supported-coordinate-systems) are available.  The spatial reference can either be set explicitly or automatically derived from the following:
-    *   * In the case of a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html), if the [map](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#map) is a [WebScene](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html) instance, the [WebScene.initialViewProperties.spatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html#initialViewProperties) is used.
-    *   * In all other cases, the spatial reference is derived from the first layer that loads in this order:
-    *   * [map.basemap.baseLayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html#baseLayers)
-    *   * [map.layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#layers)
-    *   * [map.ground.layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html#layers)
-    *
-    *
-    * When using an [Esri basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap), the default spatial reference is Web Mercator Auxiliary Sphere.
+    * The spatial reference of the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#spatialReference)
-    *
-    * @default null
     */
   var spatialReference: SpatialReference = js.native
   
@@ -293,11 +262,9 @@ trait View
   val stationary: Boolean = js.native
   
   /**
-    * The view's time extent. Time-aware layers display their temporal data that falls within the view's time extent. Setting the view's time extent is similar to setting the spatial [extent](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#extent) because once the time extent is set, the view updates automatically to conform to the change.
+    * The view's time extent.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#timeExtent)
-    *
-    * @default null
     */
   var timeExtent: TimeExtent = js.native
   
@@ -305,8 +272,6 @@ trait View
     * Call this method to clear any [fatal errors](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#fatalError) resulting from a lost WebGL context.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#tryFatalErrorRecovery)
-    *
-    *
     */
   def tryFatalErrorRecovery(): Unit = js.native
   
@@ -321,108 +286,73 @@ trait View
     * Indicates whether the view is being updated by additional data requests to the network, or by processing received data.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#updating)
-    *
-    * @default false
     */
   val updating: Boolean = js.native
   
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer
-    *
     */
   def whenLayerView(layer: CSVLayer): js.Promise[CSVLayerView] = js.native
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer
-    *
     */
   def whenLayerView(layer: FeatureLayer): js.Promise[FeatureLayerView] = js.native
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer
-    *
     */
   def whenLayerView(layer: GeoJSONLayer): js.Promise[GeoJSONLayerView] = js.native
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer
-    *
     */
   def whenLayerView(layer: GeoRSSLayer): js.Promise[GeoRSSLayerView] = js.native
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer
-    *
     */
   def whenLayerView(layer: GraphicsLayer): js.Promise[GraphicsLayerView] = js.native
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer
-    *
     */
   def whenLayerView(layer: ImageryLayer): js.Promise[ImageryLayerView] = js.native
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer
-    *
     */
   def whenLayerView(layer: KMLLayer): js.Promise[KMLLayerView] = js.native
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer The layer for which to obtain its LayerView.
-    *
     */
   def whenLayerView(layer: Layer): js.Promise[LayerView] = js.native
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer
-    *
     */
   def whenLayerView(layer: PointCloudLayer): js.Promise[PointCloudLayerView] = js.native
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer
-    *
     */
   def whenLayerView(layer: SceneLayer): js.Promise[SceneLayerView] = js.native
   /**
-    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer. The returned promise resolves when the layer view for the given layer has been created, or rejects with an error (for example if the layer is not part of the view, or if the layer type is not supported in this view).
+    * Gets the [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html) created on the view for the given layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#whenLayerView)
-    *
-    * @param layer
-    *
     */
   def whenLayerView(layer: StreamLayer): js.Promise[StreamLayerView] = js.native
 }

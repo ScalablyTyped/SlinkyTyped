@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ObjectFileSystemProviderOptions extends FileSystemProviderBaseOptions[ObjectFileSystemProvider] {
   
-  /** @name ObjectFileSystemProvider.Options.contentExpr */
+  /**
+    * [descr:ObjectFileSystemProvider.Options.contentExpr]
+    */
   var contentExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name ObjectFileSystemProvider.Options.data */
+  /**
+    * [descr:ObjectFileSystemProvider.Options.data]
+    */
   var data: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name ObjectFileSystemProvider.Options.itemsExpr */
+  /**
+    * [descr:ObjectFileSystemProvider.Options.itemsExpr]
+    */
   var itemsExpr: js.UndefOr[String | js.Function] = js.native
 }
 object ObjectFileSystemProviderOptions {

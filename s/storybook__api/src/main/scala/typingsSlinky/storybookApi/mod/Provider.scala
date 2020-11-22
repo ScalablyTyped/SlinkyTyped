@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@storybook/api", "Provider")
 @js.native
 class Provider protected () extends ManagerProvider {
-  def this(props: Props) = this()
+  def this(props: ManagerProviderProps) = this()
 }
 /* static members */
 @JSImport("@storybook/api", "Provider")
@@ -17,5 +17,5 @@ object Provider extends js.Object {
   
   var displayName: String = js.native
   
-  def getDerivedStateFromProps(props: Props, state: State): CustomQueryParams = js.native
+  def getDerivedStateFromProps(props: ManagerProviderProps, state: State): CustomQueryParams = js.native
 }

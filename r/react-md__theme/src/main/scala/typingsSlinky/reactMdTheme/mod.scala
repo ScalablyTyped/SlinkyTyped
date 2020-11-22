@@ -501,6 +501,8 @@ object mod extends js.Object {
     
     var `rmd-theme-background`: String = js.native
     
+    var `rmd-theme-better-contrast-colors`: Boolean = js.native
+    
     var `rmd-theme-color-map`: Rmdamber100 = js.native
     
     var `rmd-theme-colors`: js.Array[String] = js.native

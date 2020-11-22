@@ -12,8 +12,11 @@ trait VibrationStatic extends js.Object {
     */
   def cancel(): Unit = js.native
   
+  def vibrate(): Unit = js.native
+  def vibrate(pattern: js.UndefOr[scala.Nothing], repeat: Boolean): Unit = js.native
   def vibrate(pattern: js.Array[Double]): Unit = js.native
   def vibrate(pattern: js.Array[Double], repeat: Boolean): Unit = js.native
   def vibrate(pattern: Double): Unit = js.native
   def vibrate(pattern: Double, repeat: Boolean): Unit = js.native
+  def vibrate(pattern: Null, repeat: Boolean): Unit = js.native
 }

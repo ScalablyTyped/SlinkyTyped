@@ -2,31 +2,25 @@ package typingsSlinky.awsSdkClientCodecommitNode.typesBeforeCommitIdAndAfterComm
 
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_BeforeCommitIdAndAfterCommitIdAreSameExceptionDetails> * / any */ @js.native
 trait BeforeCommitIdAndAfterCommitIdAreSameException
-  extends ServiceException[BeforeCommitIdAndAfterCommitIdAreSameExceptionDetails]
-     with PostCommentForComparedCommitExceptionsUnion
+  extends PostCommentForComparedCommitExceptionsUnion
      with PostCommentForPullRequestExceptionsUnion {
   
-  @JSName("name")
-  var name_BeforeCommitIdAndAfterCommitIdAreSameException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.BeforeCommitIdAndAfterCommitIdAreSameException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.BeforeCommitIdAndAfterCommitIdAreSameException = js.native
 }
 object BeforeCommitIdAndAfterCommitIdAreSameException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: BeforeCommitIdAndAfterCommitIdAreSameExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.BeforeCommitIdAndAfterCommitIdAreSameException
   ): BeforeCommitIdAndAfterCommitIdAreSameException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeforeCommitIdAndAfterCommitIdAreSameException]
   }
   

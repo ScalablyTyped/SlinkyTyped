@@ -14,6 +14,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TemplateLocals extends js.Object {
   
+  /*******
+    * OOP *
+    *******/
   /**
     * Underscore OOP Wrapper, all Underscore functions that take an object
     * as the first parameter can be invoked through this function.
@@ -24,7 +27,7 @@ trait TemplateLocals extends js.Object {
     * Underscore object
     */
   @JSName("_")
-  def _underscore[V](value: V): Underscore[TypeOfCollection[V], V] = js.native
+  def _underscore[V](value: V): Underscore[TypeOfCollection[V, scala.Nothing], V] = js.native
   /**
     * Underscore object
     */

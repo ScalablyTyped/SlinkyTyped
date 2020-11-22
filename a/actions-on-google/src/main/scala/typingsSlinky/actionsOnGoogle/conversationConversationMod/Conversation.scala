@@ -1,6 +1,7 @@
 package typingsSlinky.actionsOnGoogle.conversationConversationMod
 
 import typingsSlinky.actionsOnGoogle.argumentMod.Arguments
+import typingsSlinky.actionsOnGoogle.canvasMod.Canvas
 import typingsSlinky.actionsOnGoogle.commonMod.JsonObject
 import typingsSlinky.actionsOnGoogle.deviceMod.Device
 import typingsSlinky.actionsOnGoogle.frameworkFrameworkMod.Headers
@@ -84,6 +85,9 @@ class Conversation[TUserStorage] () extends js.Object {
   
   /** @public */
   var available: Available = js.native
+  
+  /** @public */
+  var canvas: Canvas = js.native
   
   /**
     * Have Assistant render the speech response and close the mic.

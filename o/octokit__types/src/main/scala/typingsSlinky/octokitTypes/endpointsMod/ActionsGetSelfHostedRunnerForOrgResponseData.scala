@@ -1,5 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
+import typingsSlinky.octokitTypes.anon.Id
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +12,8 @@ trait ActionsGetSelfHostedRunnerForOrgResponseData extends js.Object {
   
   var id: Double = js.native
   
+  var labels: js.Array[Id] = js.native
+  
   var name: String = js.native
   
   var os: String = js.native
@@ -20,8 +23,8 @@ trait ActionsGetSelfHostedRunnerForOrgResponseData extends js.Object {
 object ActionsGetSelfHostedRunnerForOrgResponseData {
   
   @scala.inline
-  def apply(busy: Boolean, id: Double, name: String, os: String, status: String): ActionsGetSelfHostedRunnerForOrgResponseData = {
-    val __obj = js.Dynamic.literal(busy = busy.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], os = os.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
+  def apply(busy: Boolean, id: Double, labels: js.Array[Id], name: String, os: String, status: String): ActionsGetSelfHostedRunnerForOrgResponseData = {
+    val __obj = js.Dynamic.literal(busy = busy.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], labels = labels.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], os = os.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionsGetSelfHostedRunnerForOrgResponseData]
   }
   
@@ -45,6 +48,12 @@ object ActionsGetSelfHostedRunnerForOrgResponseData {
     
     @scala.inline
     def setId(value: Double): Self = this.set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLabelsVarargs(value: Id*): Self = this.set("labels", js.Array(value :_*))
+    
+    @scala.inline
+    def setLabels(value: js.Array[Id]): Self = this.set("labels", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

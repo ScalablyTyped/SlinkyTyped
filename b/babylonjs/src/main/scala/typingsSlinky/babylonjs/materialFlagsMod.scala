@@ -57,6 +57,12 @@ object materialFlagsMod extends js.Object {
     def ColorGradingTextureEnabled_=(value: Boolean): Unit = js.native
     
     /**
+      * Are detail textures enabled in the application.
+      */
+    def DetailTextureEnabled: Boolean = js.native
+    def DetailTextureEnabled_=(value: Boolean): Unit = js.native
+    
+    /**
       * Are diffuse textures enabled in the application.
       */
     def DiffuseTextureEnabled: Boolean = js.native
@@ -129,6 +135,8 @@ object materialFlagsMod extends js.Object {
     var _ClearCoatTintTextureEnabled: js.Any = js.native
     
     var _ColorGradingTextureEnabled: js.Any = js.native
+    
+    var _DetailTextureEnabled: js.Any = js.native
     
     var _DiffuseTextureEnabled: js.Any = js.native
     

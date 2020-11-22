@@ -4,9 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-//
-// Main options
-// ----------------------------------------------------------------------
 @js.native
 trait MethodsOptions extends js.Object {
   
@@ -38,14 +35,6 @@ trait MethodsOptions extends js.Object {
     */
   // tslint:disable-next-line ban-types
   var download: js.UndefOr[js.Function] = js.native
-  
-  /**
-    * Toggle table fullscreen mode
-    * @param boolean fullscreen - define fullscreen status as true or false
-    * myTable.fullscreen([bool]);
-    */
-  // tslint:disable-next-line ban-types
-  var fullscreen: js.UndefOr[js.Function] = js.native
   
   /** get current cell DOM @param string columnName - str compatible with excel, or as object.    myTable.getCell([string]); */
   // tslint:disable-next-line ban-types
@@ -202,10 +191,6 @@ trait MethodsOptions extends js.Object {
   /** remove all style from a cell @param string columnName - Column name, example: A1, B3, etc    myTable.resetStyle([string]); */
   // tslint:disable-next-line ban-types
   var resetStyle: js.UndefOr[js.Function] = js.native
-  
-  /** search in the table, only if directive is enabled during inialization. @param string - Search for word    myTable.search([string]); */
-  // tslint:disable-next-line ban-types
-  var search: js.UndefOr[js.Function] = js.native
   
   /** Set the data from one column by number @param integer columnNumber - Column number @param array colData - Column data    myTable.setColumnData([int], [array]); */
   // tslint:disable-next-line ban-types
@@ -366,12 +351,6 @@ object MethodsOptions {
     
     @scala.inline
     def deleteDownload: Self = this.set("download", js.undefined)
-    
-    @scala.inline
-    def setFullscreen(value: js.Function): Self = this.set("fullscreen", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteFullscreen: Self = this.set("fullscreen", js.undefined)
     
     @scala.inline
     def setGetCell(value: js.Function): Self = this.set("getCell", value.asInstanceOf[js.Any])
@@ -564,12 +543,6 @@ object MethodsOptions {
     
     @scala.inline
     def deleteResetStyle: Self = this.set("resetStyle", js.undefined)
-    
-    @scala.inline
-    def setSearch(value: js.Function): Self = this.set("search", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSearch: Self = this.set("search", js.undefined)
     
     @scala.inline
     def setSetColumnData(value: js.Function): Self = this.set("setColumnData", value.asInstanceOf[js.Any])

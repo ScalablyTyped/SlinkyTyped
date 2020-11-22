@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ClaimGameServerOutput extends js.Object {
   
   /**
-    * Object that describes the newly claimed game server resource.
+    * Object that describes the newly claimed game server.
     */
   var GameServer: js.UndefOr[typingsSlinky.awsSdk.gameliftMod.GameServer] = js.native
 }

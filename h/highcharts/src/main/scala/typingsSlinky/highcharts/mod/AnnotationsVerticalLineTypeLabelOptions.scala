@@ -73,6 +73,11 @@ trait AnnotationsVerticalLineTypeLabelOptions extends js.Object {
     */
   var formatter: js.UndefOr[FormatterCallbackFunction[Point]] = js.native
   
+  /**
+    * (Highstock) Whether the annotation is visible in the exported data table.
+    */
+  var includeInDataExport: js.UndefOr[Boolean] = js.native
+  
   var offset: js.UndefOr[Double] = js.native
   
   /**
@@ -228,6 +233,12 @@ object AnnotationsVerticalLineTypeLabelOptions {
     
     @scala.inline
     def deleteFormatter: Self = this.set("formatter", js.undefined)
+    
+    @scala.inline
+    def setIncludeInDataExport(value: Boolean): Self = this.set("includeInDataExport", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIncludeInDataExport: Self = this.set("includeInDataExport", js.undefined)
     
     @scala.inline
     def setOffset(value: Double): Self = this.set("offset", value.asInstanceOf[js.Any])

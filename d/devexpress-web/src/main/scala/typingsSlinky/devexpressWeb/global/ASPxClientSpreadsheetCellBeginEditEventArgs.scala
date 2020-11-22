@@ -12,12 +12,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ASPxClientSpreadsheetCellBeginEditEventArgs protected ()
   extends typingsSlinky.devexpressWeb.ASPxClientSpreadsheetCellBeginEditEventArgs {
   /**
-    * Initializes a new instance of the ASPxClientSpreadsheetCellBeginEditEventArgs object. For internal use only.
-    * @param columnIndex Gets the active cell's column index.
-    * @param rowIndex Gets the active cell's row index.
-    * @param formula Gets the active cell's formula.
-    * @param value Gets the active cell's current value.
-    * @param sheetName Gets the current worksheet's name.
+    * Initializes a new instance of the ASPxClientSpreadsheetCellBeginEditEventArgs class with specified settings.
+    * @param columnIndex The active cell's column index.
+    * @param rowIndex The active cell's row index.
+    * @param formula The active cell's formula.
+    * @param value The active cell's current value.
+    * @param displayText The text displayed in the active cell.
+    * @param sheetName The current worksheet's name.
     */
-  def this(columnIndex: Double, rowIndex: Double, formula: String, value: String, sheetName: String) = this()
+  def this(
+    columnIndex: Double,
+    rowIndex: Double,
+    formula: String,
+    value: String,
+    displayText: String,
+    sheetName: String
+  ) = this()
 }

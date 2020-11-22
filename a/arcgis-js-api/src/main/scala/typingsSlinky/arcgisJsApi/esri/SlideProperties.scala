@@ -8,21 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SlideProperties extends js.Object {
   
   /**
-    * The basemap of the scene. Only the [base](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html#baseLayers) and [reference](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html#referenceLayers) layers of the basemap are stored in a slide.  This value can be an instance of [Basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html) or one of the strings listed in the table below.
-    *
-    * Value | Description
-    * ------|------------
-    * streets | ![basemap-streets](https://developers.arcgis.com/javascript/assets/img/apiref/basemap/streets.jpg)
-    * satellite | ![basemap-satellite](https://developers.arcgis.com/javascript/assets/img/apiref/basemap/satellite.jpg)
-    * hybrid | ![basemap-hybrid](https://developers.arcgis.com/javascript/assets/img/apiref/basemap/hybrid.jpg)
-    * topo | ![basemap-topo](https://developers.arcgis.com/javascript/assets/img/apiref/basemap/topo.jpg)
-    * gray | ![basemap-gray](https://developers.arcgis.com/javascript/assets/img/apiref/basemap/gray.jpg)
-    * dark-gray | ![basemap-dark-gray](https://developers.arcgis.com/javascript/assets/img/apiref/basemap/dark-gray.jpg)
-    * oceans | ![basemap-oceans](https://developers.arcgis.com/javascript/assets/img/apiref/basemap/oceans.jpg)
-    * national-geographic | ![basemap-national-geographic](https://developers.arcgis.com/javascript/assets/img/apiref/basemap/national-geographic.jpg)
-    * terrain | ![basemap-terrain](https://developers.arcgis.com/javascript/assets/img/apiref/basemap/terrain.jpg)
-    * osm | ![basemap-osm](https://developers.arcgis.com/javascript/assets/img/apiref/basemap/osm.jpg)
-    *
+    * The basemap of the scene.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Slide.html#basemap)
     */
@@ -40,7 +26,7 @@ trait SlideProperties extends js.Object {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Slide.html#environment)
     */
-  var environment: js.UndefOr[EnvironmentProperties] = js.native
+  var environment: js.UndefOr[SlideEnvironmentProperties] = js.native
   
   /**
     * Ground properties for this slide.
@@ -71,19 +57,14 @@ trait SlideProperties extends js.Object {
   var title: js.UndefOr[SlideTitleProperties | String] = js.native
   
   /**
-    * The viewpoint of the slide. This acts like a bookmark, saving a predefined location or point of view from which to view the scene.
+    * The viewpoint of the slide.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Slide.html#viewpoint)
     */
   var viewpoint: js.UndefOr[ViewpointProperties] = js.native
   
   /**
-    * The visible layers of the scene. This is a collection of objects that stores references (by ID) to the [scene layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebScene.html#layers) and [ground layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html#layers) that are set as `visible` when a slide is applied to a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).  When assigning visible layers, the following types of values will be automatically casted:
-    *   * Array (or [Collection](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Collection.html)) of [Layer instances](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html): `[layerInstance, layerInstance]`
-    *   * Array (or [Collection](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Collection.html)) of [Layer IDs](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-Layer.html#id): `["layer-1", "layer-2"]`
-    *
-    *
-    * The specification for each object in the collection is outlined in the table below.
+    * The visible layers of the scene.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Slide.html#visibleLayers)
     */
@@ -125,7 +106,7 @@ object SlideProperties {
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
-    def setEnvironment(value: EnvironmentProperties): Self = this.set("environment", value.asInstanceOf[js.Any])
+    def setEnvironment(value: SlideEnvironmentProperties): Self = this.set("environment", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnvironment: Self = this.set("environment", js.undefined)

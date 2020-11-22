@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined parent std.Omit<rc-notification.rc-notification/es/Notice.NoticeProps, 'prefixCls' | 'children'> */
+/* Inlined parent std.Omit<rc-notification.rc-notification/es/Notice.NoticeProps, 'prefixCls' | 'children' | 'noticeKey' | 'onClose'> */
 @js.native
 trait NoticeContent extends js.Object {
   
@@ -39,9 +39,7 @@ trait NoticeContent extends js.Object {
   
   var style: js.UndefOr[CSSProperties] = js.native
   
-  var update: js.UndefOr[Boolean] = js.native
-  
-  var updateKey: js.UndefOr[Key] = js.native
+  var updateMark: js.UndefOr[String] = js.native
 }
 object NoticeContent {
   
@@ -148,15 +146,9 @@ object NoticeContent {
     def deleteStyle: Self = this.set("style", js.undefined)
     
     @scala.inline
-    def setUpdate(value: Boolean): Self = this.set("update", value.asInstanceOf[js.Any])
+    def setUpdateMark(value: String): Self = this.set("updateMark", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteUpdate: Self = this.set("update", js.undefined)
-    
-    @scala.inline
-    def setUpdateKey(value: Key): Self = this.set("updateKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUpdateKey: Self = this.set("updateKey", js.undefined)
+    def deleteUpdateMark: Self = this.set("updateMark", js.undefined)
   }
 }

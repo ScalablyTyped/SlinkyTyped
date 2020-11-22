@@ -2,11 +2,12 @@ package typingsSlinky.rsvp.mod
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("rsvp", "all")
 @js.native
 object all extends js.Object {
+  
   def apply[T](values: js.Array[T | js.Thenable[T]]): js.Promise[js.Array[T]] = js.native
   def apply[T](values: js.Iterable[T | js.Thenable[T]]): js.Promise[js.Array[T]] = js.native
   def apply[T1, T2](values: js.Tuple2[T1 | js.Thenable[T1], T2 | js.Thenable[T2]]): js.Promise[js.Tuple2[T1, T2]] = js.native
@@ -84,4 +85,3 @@ object all extends js.Object {
     ]
   ): js.Promise[js.Tuple10[T1, T2, T3, T4, T5, T6, T7, T8, T9, T10]] = js.native
 }
-

@@ -18,6 +18,11 @@ trait VpcEndpointConnection extends js.Object {
   var DnsEntries: js.UndefOr[DnsEntrySet] = js.native
   
   /**
+    * The Amazon Resource Names (ARNs) of the Gateway Load Balancers for the service.
+    */
+  var GatewayLoadBalancerArns: js.UndefOr[ValueStringList] = js.native
+  
+  /**
     * The Amazon Resource Names (ARNs) of the network load balancers for the service.
     */
   var NetworkLoadBalancerArns: js.UndefOr[ValueStringList] = js.native
@@ -79,6 +84,15 @@ object VpcEndpointConnection {
     
     @scala.inline
     def deleteDnsEntries: Self = this.set("DnsEntries", js.undefined)
+    
+    @scala.inline
+    def setGatewayLoadBalancerArnsVarargs(value: String*): Self = this.set("GatewayLoadBalancerArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setGatewayLoadBalancerArns(value: ValueStringList): Self = this.set("GatewayLoadBalancerArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGatewayLoadBalancerArns: Self = this.set("GatewayLoadBalancerArns", js.undefined)
     
     @scala.inline
     def setNetworkLoadBalancerArnsVarargs(value: String*): Self = this.set("NetworkLoadBalancerArns", js.Array(value :_*))

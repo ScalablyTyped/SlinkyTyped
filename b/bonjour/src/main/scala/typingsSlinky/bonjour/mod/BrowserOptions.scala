@@ -1,5 +1,6 @@
 package typingsSlinky.bonjour.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ trait BrowserOptions extends js.Object {
   
   var subtypes: js.UndefOr[js.Array[String]] = js.native
   
-  var txt: js.UndefOr[js.Object] = js.native
+  var txt: js.UndefOr[StringDictionary[String]] = js.native
   
   var `type`: js.UndefOr[String] = js.native
 }
@@ -54,7 +55,7 @@ object BrowserOptions {
     def deleteSubtypes: Self = this.set("subtypes", js.undefined)
     
     @scala.inline
-    def setTxt(value: js.Object): Self = this.set("txt", value.asInstanceOf[js.Any])
+    def setTxt(value: StringDictionary[String]): Self = this.set("txt", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTxt: Self = this.set("txt", js.undefined)

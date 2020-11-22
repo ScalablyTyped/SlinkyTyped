@@ -19,6 +19,22 @@ class ParsedProperty protected ()
     expression: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     `type`: typingsSlinky.angularCompiler.astMod.ParsedPropertyType,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    expression: typingsSlinky.angularCompiler.astMod.ASTWithSource,
+    `type`: typingsSlinky.angularCompiler.astMod.ParsedPropertyType,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: js.UndefOr[scala.Nothing],
+    valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    expression: typingsSlinky.angularCompiler.astMod.ASTWithSource,
+    `type`: typingsSlinky.angularCompiler.astMod.ParsedPropertyType,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
 }

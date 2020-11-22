@@ -63,6 +63,13 @@ class Connection protected () extends EventEmitter {
   def commitTransaction(callback: js.Function1[/* error */ js.Error, Unit]): Unit = js.native
   
   /**
+    * Establish a connection to the server.
+    * @param callback The callback is called when the connection was established or an error occured. If an error occured then err will describe the error.
+    */
+  def connect(): Unit = js.native
+  def connect(callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
+  
+  /**
     * Executes a BulkLoad.
     */
   def execBulkLoad(bulkLoad: BulkLoad): Unit = js.native

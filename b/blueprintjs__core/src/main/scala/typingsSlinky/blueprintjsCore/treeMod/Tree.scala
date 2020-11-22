@@ -50,7 +50,8 @@ object Tree extends js.Object {
   
   var displayName: String = js.native
   
-  def nodeFromPath(path: js.Array[Double], treeNodes: js.Array[ITreeNode[js.Object]]): ITreeNode[js.Object] = js.native
+  def nodeFromPath[U](path: js.Array[Double]): ITreeNode[U] = js.native
+  def nodeFromPath[U](path: js.Array[Double], treeNodes: js.Array[ITreeNode[U]]): ITreeNode[U] = js.native
   
-  def ofType[T](): Instantiable1[/* props */ ITreeProps[T], Tree[T]] = js.native
+  def ofType[U](): Instantiable1[/* props */ ITreeProps[U], Tree[U]] = js.native
 }

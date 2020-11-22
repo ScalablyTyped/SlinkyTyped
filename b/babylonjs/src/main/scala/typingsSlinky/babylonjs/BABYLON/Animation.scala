@@ -233,6 +233,9 @@ trait Animation extends js.Object {
     */
   def sizeInterpolateFunction(startValue: Size, endValue: Size, gradient: Double): Size = js.native
   
+  /** Snippet ID if the animation was created from the snippet server */
+  var snippetId: String = js.native
+  
   /**Property to animate */
   var targetProperty: String = js.native
   

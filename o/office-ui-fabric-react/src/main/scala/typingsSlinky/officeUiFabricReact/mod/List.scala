@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact.mod
 
 import typingsSlinky.officeUiFabricReact.anon.OnRenderCell
+import typingsSlinky.officeUiFabricReact.listListMod.IListState
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,4 +19,6 @@ class List[T] protected ()
 object List extends js.Object {
   
   var defaultProps: OnRenderCell = js.native
+  
+  def getDerivedStateFromProps[T](nextProps: IListProps[T], previousState: IListState[T]): IListState[T] = js.native
 }

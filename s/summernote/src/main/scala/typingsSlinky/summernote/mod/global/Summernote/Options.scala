@@ -49,6 +49,10 @@ trait Options extends js.Object {
   
   var fontNamesIgnoreCheck: js.UndefOr[js.Array[String]] = js.native
   
+  var fontSizeUnits: js.UndefOr[js.Array[fontSizeUnitOptions]] = js.native
+  
+  var fontSizes: js.UndefOr[js.Array[String]] = js.native
+  
   var height: js.UndefOr[Double] = js.native
   
   var hint: js.UndefOr[HintOptions] = js.native
@@ -217,6 +221,24 @@ object Options {
     
     @scala.inline
     def deleteFontNamesIgnoreCheck: Self = this.set("fontNamesIgnoreCheck", js.undefined)
+    
+    @scala.inline
+    def setFontSizeUnitsVarargs(value: fontSizeUnitOptions*): Self = this.set("fontSizeUnits", js.Array(value :_*))
+    
+    @scala.inline
+    def setFontSizeUnits(value: js.Array[fontSizeUnitOptions]): Self = this.set("fontSizeUnits", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontSizeUnits: Self = this.set("fontSizeUnits", js.undefined)
+    
+    @scala.inline
+    def setFontSizesVarargs(value: String*): Self = this.set("fontSizes", js.Array(value :_*))
+    
+    @scala.inline
+    def setFontSizes(value: js.Array[String]): Self = this.set("fontSizes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontSizes: Self = this.set("fontSizes", js.undefined)
     
     @scala.inline
     def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])

@@ -13,7 +13,7 @@ package object mod {
   type EventArgs[T /* <: typingsSlinky.eventemitter3.mod.ValidEventTypes */, K /* <: typingsSlinky.eventemitter3.mod.EventNames[T] */] = typingsSlinky.std.Parameters[typingsSlinky.eventemitter3.mod.EventListener[T, K]]
   
   type EventListener[T /* <: typingsSlinky.eventemitter3.mod.ValidEventTypes */, K /* <: typingsSlinky.eventemitter3.mod.EventNames[T] */] = js.Function1[
-    /* import warning: importer.ImportType#apply Failed type conversion: eventemitter3.eventemitter3.ArgumentMap<std.Exclude<T, string | symbol>>[K] */ /* args */ js.Any, 
+    /* import warning: importer.ImportType#apply Failed type conversion: eventemitter3.eventemitter3.ArgumentMap<std.Exclude<T, string | symbol>>[std.Extract<K, keyof T>] */ /* args */ js.Any, 
     scala.Unit
   ]
   
@@ -21,7 +21,5 @@ package object mod {
   
   type ListenerFn[Args /* <: js.Array[_] */] = js.Function1[/* args */ Args, scala.Unit]
   
-  type ValidEventTypes = java.lang.String | js.Symbol | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in string | symbol ]: std.Array<any> | (args : ...any): void}
-    */ typingsSlinky.eventemitter3.eventemitter3Strings.ValidEventTypes with org.scalablytyped.runtime.TopLevel[js.Any])
+  type ValidEventTypes = java.lang.String | js.Symbol | js.Object
 }

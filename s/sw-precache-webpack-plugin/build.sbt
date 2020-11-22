@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "sw-precache-webpack-plugin"
-version := "0.11-dt-20180507Z-b4e2ce"
+version := "0.11-dt-20180507Z-9bc7b4"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
-  "org.scalablytyped.slinky" %%% "sw-precache" % "5.2-dt-20180504Z-9f2265",
-  "org.scalablytyped.slinky" %%% "sw-toolbox" % "3.6.0-f90f63")
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "sw-precache" % "5.2-dt-20180504Z-03ad67",
+  "org.scalablytyped.slinky" %%% "sw-toolbox" % "3.6.0-1bcd3e")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

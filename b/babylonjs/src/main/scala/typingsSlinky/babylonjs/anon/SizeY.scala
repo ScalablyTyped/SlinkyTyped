@@ -9,11 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SizeY extends js.Object {
   
+  var backUVs: js.UndefOr[Vector4] = js.native
+  
   var custom: js.UndefOr[js.Any] = js.native
   
   var faceColors: js.UndefOr[js.Array[Color4]] = js.native
   
   var faceUV: js.UndefOr[js.Array[Vector4]] = js.native
+  
+  var flat: js.UndefOr[Boolean] = js.native
+  
+  var frontUVs: js.UndefOr[Vector4] = js.native
   
   var sideOrientation: js.UndefOr[Double] = js.native
   
@@ -26,8 +32,6 @@ trait SizeY extends js.Object {
   var sizeZ: js.UndefOr[Double] = js.native
   
   var `type`: js.UndefOr[Double] = js.native
-  
-  var updatable: js.UndefOr[Boolean] = js.native
 }
 object SizeY {
   
@@ -53,6 +57,12 @@ object SizeY {
     }
     
     @scala.inline
+    def setBackUVs(value: Vector4): Self = this.set("backUVs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBackUVs: Self = this.set("backUVs", js.undefined)
+    
+    @scala.inline
     def setCustom(value: js.Any): Self = this.set("custom", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -75,6 +85,18 @@ object SizeY {
     
     @scala.inline
     def deleteFaceUV: Self = this.set("faceUV", js.undefined)
+    
+    @scala.inline
+    def setFlat(value: Boolean): Self = this.set("flat", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFlat: Self = this.set("flat", js.undefined)
+    
+    @scala.inline
+    def setFrontUVs(value: Vector4): Self = this.set("frontUVs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFrontUVs: Self = this.set("frontUVs", js.undefined)
     
     @scala.inline
     def setSideOrientation(value: Double): Self = this.set("sideOrientation", value.asInstanceOf[js.Any])
@@ -111,11 +133,5 @@ object SizeY {
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
-    
-    @scala.inline
-    def setUpdatable(value: Boolean): Self = this.set("updatable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUpdatable: Self = this.set("updatable", js.undefined)
   }
 }

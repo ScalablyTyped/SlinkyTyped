@@ -11,3 +11,10 @@ class Variable protected () extends Const {
   
   val variable: String = js.native
 }
+/* static members */
+@JSImport("survey-knockout", "Variable")
+@js.native
+object Variable extends js.Object {
+  
+  var DisableConversionChar: String = js.native
+}

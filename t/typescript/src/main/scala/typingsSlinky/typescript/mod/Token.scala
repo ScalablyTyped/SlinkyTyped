@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Token[TKind /* <: SyntaxKind */] extends Node {
   
   @JSName("kind")
-  var kind_Token: TKind = js.native
+  val kind_Token: TKind = js.native
 }

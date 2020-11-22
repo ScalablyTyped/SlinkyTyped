@@ -35,8 +35,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`additions removals`
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`additions text`
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`inline`
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`removals additions`
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`removals text`
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`text additions`
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`text removals`
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.additions
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.all
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.ascending
@@ -47,8 +52,11 @@ import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.date
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.decimal
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.descending
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.dialog
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.done
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.email
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.enter
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.execute
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.go
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.grammar
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.grid
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.horizontal
@@ -60,6 +68,7 @@ import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.location
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.menu
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.mixed
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.move
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.next
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.no
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.none
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.numeric
@@ -69,8 +78,10 @@ import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.other
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.page
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.polite
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.popup
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.previous
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.removals
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.search
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.send
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.spelling
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.step
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.tel
@@ -166,7 +177,9 @@ trait Props extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -239,6 +252,8 @@ trait Props extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   
   var draggable: js.UndefOr[Booleanish] = js.native
+  
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
   
   var form: js.UndefOr[String] = js.native
   
@@ -783,7 +798,9 @@ object Props {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -991,6 +1008,12 @@ object Props {
     
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    
+    @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
     
     @scala.inline
     def setForm(value: String): Self = this.set("form", value.asInstanceOf[js.Any])

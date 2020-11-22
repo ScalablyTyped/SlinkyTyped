@@ -35,6 +35,16 @@ class NetworkInterface protected () extends CustomResource {
   val description: Output_[js.UndefOr[String]] = js.native
   
   /**
+    * The number of IPv6 addresses to assign to a network interface. You can't use this option if specifying specific `ipv6Addresses`. If your subnet has the AssignIpv6AddressOnCreation attribute set to `true`, you can specify `0` to override this setting.
+    */
+  val ipv6AddressCount: Output_[Double] = js.native
+  
+  /**
+    * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. You can't use this option if you're specifying `ipv6AddressCount`.
+    */
+  val ipv6Addresses: Output_[js.Array[String]] = js.native
+  
+  /**
     * The MAC address of the network interface.
     */
   val macAddress: Output_[String] = js.native

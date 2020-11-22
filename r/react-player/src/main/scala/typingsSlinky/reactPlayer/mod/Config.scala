@@ -17,6 +17,8 @@ trait Config extends js.Object {
   
   var soundcloud: js.UndefOr[SoundCloudConfig] = js.native
   
+  var twitch: js.UndefOr[TwitchConfig] = js.native
+  
   var vidyard: js.UndefOr[VidyardConfig] = js.native
   
   var vimeo: js.UndefOr[VimeoConfig] = js.native
@@ -77,6 +79,12 @@ object Config {
     
     @scala.inline
     def deleteSoundcloud: Self = this.set("soundcloud", js.undefined)
+    
+    @scala.inline
+    def setTwitch(value: TwitchConfig): Self = this.set("twitch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTwitch: Self = this.set("twitch", js.undefined)
     
     @scala.inline
     def setVidyard(value: VidyardConfig): Self = this.set("vidyard", value.asInstanceOf[js.Any])

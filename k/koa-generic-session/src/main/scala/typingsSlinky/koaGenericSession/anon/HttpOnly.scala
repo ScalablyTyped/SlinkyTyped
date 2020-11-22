@@ -14,6 +14,8 @@ trait HttpOnly extends js.Object {
   
   var maxAge: js.UndefOr[Double | Null] = js.native
   
+  var overwrite: js.UndefOr[Boolean] = js.native
+  
   var path: js.UndefOr[String] = js.native
   
   var rewrite: js.UndefOr[Boolean] = js.native
@@ -61,6 +63,12 @@ object HttpOnly {
     
     @scala.inline
     def setMaxAgeNull: Self = this.set("maxAge", null)
+    
+    @scala.inline
+    def setOverwrite(value: Boolean): Self = this.set("overwrite", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverwrite: Self = this.set("overwrite", js.undefined)
     
     @scala.inline
     def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])

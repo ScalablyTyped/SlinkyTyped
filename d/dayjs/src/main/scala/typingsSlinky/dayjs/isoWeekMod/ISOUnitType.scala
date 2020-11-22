@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.dayjs.dayjsStrings.isoWeek
+  - typingsSlinky.dayjs.dayjsStrings.week
+  - typingsSlinky.dayjs.dayjsStrings.w
   - typingsSlinky.dayjs.dayjsStrings.millisecond
   - typingsSlinky.dayjs.dayjsStrings.second
   - typingsSlinky.dayjs.dayjsStrings.minute
@@ -67,6 +69,12 @@ object ISOUnitType {
   
   @scala.inline
   def second: typingsSlinky.dayjs.dayjsStrings.second = "second".asInstanceOf[typingsSlinky.dayjs.dayjsStrings.second]
+  
+  @scala.inline
+  def w: typingsSlinky.dayjs.dayjsStrings.w = "w".asInstanceOf[typingsSlinky.dayjs.dayjsStrings.w]
+  
+  @scala.inline
+  def week: typingsSlinky.dayjs.dayjsStrings.week = "week".asInstanceOf[typingsSlinky.dayjs.dayjsStrings.week]
   
   @scala.inline
   def y: typingsSlinky.dayjs.dayjsStrings.y = "y".asInstanceOf[typingsSlinky.dayjs.dayjsStrings.y]

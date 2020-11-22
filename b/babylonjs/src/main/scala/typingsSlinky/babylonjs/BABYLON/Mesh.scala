@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import typingsSlinky.babylonjs.anon.DeepImmutableObjectMatrixAdd
 import typingsSlinky.babylonjs.anon.Report
 import typingsSlinky.babylonjs.anon.Sizes
 import scala.scalajs.js
@@ -34,6 +35,9 @@ trait Mesh extends AbstractMesh {
   def _disposeInstanceSpecificData(): Unit = js.native
   
   /** @hidden */
+  def _disposeThinInstanceSpecificData(): Unit = js.native
+  
+  /** @hidden */
   def _draw(subMesh: SubMesh, fillMode: Double): Mesh = js.native
   def _draw(subMesh: SubMesh, fillMode: Double, instancesCount: Double): Mesh = js.native
   
@@ -66,6 +70,7 @@ trait Mesh extends AbstractMesh {
   
   /** @hidden */
   def _processRendering(
+    renderingMesh: AbstractMesh,
     subMesh: SubMesh,
     effect: Effect,
     fillMode: Double,
@@ -79,6 +84,7 @@ trait Mesh extends AbstractMesh {
     ]
   ): Mesh = js.native
   def _processRendering(
+    renderingMesh: AbstractMesh,
     subMesh: SubMesh,
     effect: Effect,
     fillMode: Double,
@@ -102,6 +108,9 @@ trait Mesh extends AbstractMesh {
   def _renderWithInstances(subMesh: SubMesh, fillMode: Double, batch: InstancesBatch, effect: Effect, engine: Engine): Mesh = js.native
   
   /** @hidden */
+  def _renderWithThinInstances(subMesh: SubMesh, fillMode: Double, effect: Effect, engine: Engine): Unit = js.native
+  
+  /** @hidden */
   def _resetPointsArrayCache(): Mesh = js.native
   
   /** @hidden */
@@ -113,7 +122,19 @@ trait Mesh extends AbstractMesh {
   def _syncGeometryWithMorphTargetManager(): Unit = js.native
   
   /** @hidden */
+  var _thinInstanceDataStorage: ThinInstanceDataStorage = js.native
+  
+  /** @hidden */
+  def _thinInstanceInitializeUserStorage(): Unit = js.native
+  
+  /** @hidden */
+  def _thinInstanceUpdateBufferSize(kind: String, numInstances: Double): Unit = js.native
+  
+  /** @hidden */
   var _userInstancedBuffersStorage: Sizes = js.native
+  
+  /** @hidden */
+  var _userThinInstanceBuffersStorage: Sizes = js.native
   
   /** @hidden */
   def addInstance(instance: InstancedMesh): Unit = js.native
@@ -372,7 +393,7 @@ trait Mesh extends AbstractMesh {
     * The mesh World Matrix is then reset.
     * This method returns nothing but really modifies the mesh even if it's originally not set as updatable.
     * Note that, under the hood, this method sets a new VertexBuffer each call.
-    * @see http://doc.babylonjs.com/resources/baking_transformations
+    * @see https://doc.babylonjs.com/resources/baking_transformations
     * @param bakeIndependenlyOfChildren indicates whether to preserve all child nodes' World Matrix during baking
     * @returns the current mesh
     */
@@ -385,7 +406,7 @@ trait Mesh extends AbstractMesh {
     * The mesh normals are modified using the same transformation.
     * Note that, under the hood, this method sets a new VertexBuffer each call.
     * @param transform defines the transform matrix to use
-    * @see http://doc.babylonjs.com/resources/baking_transformations
+    * @see https://doc.babylonjs.com/resources/baking_transformations
     * @returns the current mesh
     */
   def bakeTransformIntoVertices(transform: Matrix): Mesh = js.native
@@ -431,6 +452,13 @@ trait Mesh extends AbstractMesh {
   ): Mesh = js.native
   
   /**
+    * Gets the list of clones of this mesh
+    * The scene must have been constructed with useClonedMeshMap=true for this to work!
+    * Note that useClonedMeshMap=true is the default setting
+    */
+  def cloneMeshMap: Nullable[org.scalablytyped.runtime.StringDictionary[js.UndefOr[Mesh]]] = js.native
+  
+  /**
     * Modify the mesh to get a flat shading rendering.
     * This means each mesh facet will then have its own normals. Usually new vertices are added in the mesh geometry to get this result.
     * Warning : the mesh is really modified even if not set originally as updatable and, under the hood, a new VertexBuffer is allocated.
@@ -448,7 +476,7 @@ trait Mesh extends AbstractMesh {
   
   /**
     * Creates a new InstancedMesh object from the mesh model.
-    * @see http://doc.babylonjs.com/how_to/how_to_use_instances
+    * @see https://doc.babylonjs.com/how_to/how_to_use_instances
     * @param name defines the name of the new instance
     * @returns a new InstancedMesh
     */
@@ -456,7 +484,7 @@ trait Mesh extends AbstractMesh {
   
   /**
     * Gets the delay loading state of the mesh (when delay loading is turned on)
-    * @see http://doc.babylonjs.com/how_to/using_the_incremental_loading_system
+    * @see https://doc.babylonjs.com/how_to/using_the_incremental_loading_system
     */
   var delayLoadState: Double = js.native
   
@@ -464,6 +492,11 @@ trait Mesh extends AbstractMesh {
     * Gets the file containing delay loading data for this mesh
     */
   var delayLoadingFile: String = js.native
+  
+  /**
+    * true to use the edge renderer for all instances of this mesh
+    */
+  var edgesShareWithInstances: Boolean = js.native
   
   /**
     * Inverses facet orientations.
@@ -583,7 +616,7 @@ trait Mesh extends AbstractMesh {
     * Gets the list of instances created from this mesh
     * it is not supposed to be modified manually.
     * Note also that the order of the InstancedMesh wihin the array is not significant and might change.
-    * @see http://doc.babylonjs.com/how_to/how_to_use_instances
+    * @see https://doc.babylonjs.com/how_to/how_to_use_instances
     */
   var instances: js.Array[InstancedMesh] = js.native
   
@@ -647,7 +680,7 @@ trait Mesh extends AbstractMesh {
   
   /**
     * Gets or sets the morph target manager
-    * @see http://doc.babylonjs.com/how_to/how_to_use_morphtargets
+    * @see https://doc.babylonjs.com/how_to/how_to_use_morphtargets
     */
   def morphTargetManager: Nullable[MorphTargetManager] = js.native
   def morphTargetManager_=(value: Nullable[MorphTargetManager]): Unit = js.native
@@ -683,7 +716,7 @@ trait Mesh extends AbstractMesh {
   
   /**
     * User defined function used to change how LOD level selection is done
-    * @see http://doc.babylonjs.com/how_to/how_to_use_lod
+    * @see https://doc.babylonjs.com/how_to/how_to_use_lod
     */
   def onLODLevelSelection(distance: Double, mesh: Mesh, selectedLevel: Nullable[Mesh]): Unit = js.native
   
@@ -867,6 +900,92 @@ trait Mesh extends AbstractMesh {
     */
   def synchronizeInstances(): Mesh = js.native
   
+  def thinInstanceAdd(matrix: js.Array[DeepImmutableObjectMatrixAdd], refresh: Boolean): Double = js.native
+  /**
+    * Creates a new thin instance
+    * @param matrix the matrix or array of matrices (position, rotation, scale) of the thin instance(s) to create
+    * @param refresh true to refresh the underlying gpu buffer (default: true). If you do multiple calls to this method in a row, set refresh to true only for the last call to save performance
+    * @returns the thin instance index number. If you pass an array of matrices, other instance indexes are index+1, index+2, etc
+    */
+  def thinInstanceAdd(matrix: DeepImmutableObjectMatrixAdd, refresh: Boolean): Double = js.native
+  
+  /**
+    * Adds the transformation (matrix) of the current mesh as a thin instance
+    * @param refresh true to refresh the underlying gpu buffer (default: true). If you do multiple calls to this method in a row, set refresh to true only for the last call to save performance
+    * @returns the thin instance index number
+    */
+  def thinInstanceAddSelf(refresh: Boolean): Double = js.native
+  
+  /**
+    * Synchronize the gpu buffers with a thin instance buffer. Call this method if you update later on the buffers passed to thinInstanceSetBuffer
+    * @param kind name of the attribute to update. Use "matrix" to update the buffer of matrices
+    */
+  def thinInstanceBufferUpdated(kind: String): Unit = js.native
+  
+  /**
+    * Gets / sets the number of thin instances to display. Note that you can't set a number higher than what the underlying buffer can handle.
+    */
+  var thinInstanceCount: Double = js.native
+  
+  /**
+    * Gets or sets a boolean defining if we want picking to pick thin instances as well
+    */
+  var thinInstanceEnablePicking: Boolean = js.native
+  
+  /**
+    * Gets the list of world matrices
+    * @return an array containing all the world matrices from the thin instances
+    */
+  def thinInstanceGetWorldMatrices(): js.Array[Matrix] = js.native
+  
+  /**
+    * Applies a partial update to a buffer directly on the GPU
+    * Note that the buffer located on the CPU is NOT updated! It's up to you to update it (or not) with the same data you pass to this method
+    * @param kind name of the attribute to update. Use "matrix" to update the buffer of matrices
+    * @param data the data to set in the GPU buffer
+    * @param offset the offset in the GPU buffer where to update the data
+    */
+  def thinInstancePartialBufferUpdate(kind: String, data: js.typedarray.Float32Array, offset: Double): Unit = js.native
+  
+  /**
+    * Refreshes the bounding info, taking into account all the thin instances defined
+    * @param forceRefreshParentInfo true to force recomputing the mesh bounding info and use it to compute the aggregated bounding info
+    */
+  def thinInstanceRefreshBoundingInfo(forceRefreshParentInfo: Boolean): Unit = js.native
+  
+  /**
+    * Registers a custom attribute to be used with thin instances
+    * @param kind name of the attribute
+    * @param stride size in floats of the attribute
+    */
+  def thinInstanceRegisterAttribute(kind: String, stride: Double): Unit = js.native
+  
+  /**
+    * Sets the value of a custom attribute for a thin instance
+    * @param kind name of the attribute
+    * @param index index of the thin instance
+    * @param value value to set
+    * @param refresh true to refresh the underlying gpu buffer (default: true). If you do multiple calls to this method in a row, set refresh to true only for the last call to save performance
+    */
+  def thinInstanceSetAttributeAt(kind: String, index: Double, value: js.Array[Double], refresh: Boolean): Unit = js.native
+  
+  /**
+    * Sets a buffer to be used with thin instances. This method is a faster way to setup multiple instances than calling thinInstanceAdd repeatedly
+    * @param kind name of the attribute. Use "matrix" to setup the buffer of matrices
+    * @param buffer buffer to set
+    * @param stride size in floats of each value of the buffer
+    * @param staticBuffer indicates that the buffer is static, so that you won't change it after it is set (better performances - false by default)
+    */
+  def thinInstanceSetBuffer(kind: String, buffer: Nullable[js.typedarray.Float32Array], stride: Double, staticBuffer: Boolean): Unit = js.native
+  
+  /**
+    * Sets the matrix of a thin instance
+    * @param index index of the thin instance
+    * @param matrix matrix to set
+    * @param refresh true to refresh the underlying gpu buffer (default: true). If you do multiple calls to this method in a row, set refresh to true only for the last call to save performance
+    */
+  def thinInstanceSetMatrixAt(index: Double, matrix: DeepImmutableObjectMatrixAdd, refresh: Boolean): Unit = js.native
+  
   /**
     * Invert the geometry to move from a right handed system to a left handed one.
     * @returns the current mesh
@@ -895,7 +1014,7 @@ trait Mesh extends AbstractMesh {
   
   /**
     * This method updates the vertex positions of an updatable mesh according to the `positionFunction` returned values.
-    * @see http://doc.babylonjs.com/how_to/how_to_dynamically_morph_a_mesh#other-shapes-updatemeshpositions
+    * @see https://doc.babylonjs.com/how_to/how_to_dynamically_morph_a_mesh#other-shapes-updatemeshpositions
     * @param positionFunction is a simple JS function what is passed the mesh `positions` array. It doesn't need to return anything
     * @param computeNormals is a boolean (default true) to enable/disable the mesh normal recomputation after the vertex position update
     * @returns the current mesh

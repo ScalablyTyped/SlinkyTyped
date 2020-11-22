@@ -9,6 +9,8 @@ trait DefaultOpenAll extends js.Object {
   
   var defaultOpenAll: js.UndefOr[Boolean] = js.native
   
+  var loading: js.UndefOr[Boolean] = js.native
+  
   var locale: js.UndefOr[Boolean] = js.native
 }
 object DefaultOpenAll {
@@ -39,6 +41,12 @@ object DefaultOpenAll {
     
     @scala.inline
     def deleteDefaultOpenAll: Self = this.set("defaultOpenAll", js.undefined)
+    
+    @scala.inline
+    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
     
     @scala.inline
     def setLocale(value: Boolean): Self = this.set("locale", value.asInstanceOf[js.Any])

@@ -17,7 +17,7 @@ trait clustersGetLabelSchemesParams extends Object {
   var layer: FeatureLayer | CSVLayer | GeoJSONLayer = js.native
   
   /**
-    * The renderer to set on the input layer when clustering is enabled. Specify this parameter if the layer's renderer does not match the renderer that will be used when clustering is enabled. This cannot be a [HeatmapRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-HeatmapRenderer.html).
+    * The renderer to set on the input layer when clustering is enabled.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-labels-clusters.html#getLabelSchemes)
     */

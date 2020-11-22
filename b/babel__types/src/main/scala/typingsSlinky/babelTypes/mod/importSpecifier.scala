@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object importSpecifier extends js.Object {
   
   def apply(local: Identifier_, imported: Identifier_): ImportSpecifier_ = js.native
+  def apply(local: Identifier_, imported: StringLiteral_): ImportSpecifier_ = js.native
 }

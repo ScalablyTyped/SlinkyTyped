@@ -1,5 +1,6 @@
 package typingsSlinky.contractProxyKit.mod
 
+import typingsSlinky.ethersprojectAbstractProvider.mod.TransactionResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,9 +12,7 @@ trait TransactionResult extends js.Object {
   
   var promiEvent: js.UndefOr[js.Object] = js.native
   
-  var transactionResponse: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ethers.providers.TransactionResponse */ js.Any
-  ] = js.native
+  var transactionResponse: js.UndefOr[TransactionResponse] = js.native
 }
 object TransactionResult {
   
@@ -48,9 +47,7 @@ object TransactionResult {
     def deletePromiEvent: Self = this.set("promiEvent", js.undefined)
     
     @scala.inline
-    def setTransactionResponse(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ethers.providers.TransactionResponse */ js.Any
-    ): Self = this.set("transactionResponse", value.asInstanceOf[js.Any])
+    def setTransactionResponse(value: TransactionResponse): Self = this.set("transactionResponse", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTransactionResponse: Self = this.set("transactionResponse", js.undefined)

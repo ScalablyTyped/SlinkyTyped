@@ -16,6 +16,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
+  def cardholderName(value: String): Verification = js.native
+  def cardholderName(value: js.Any): Verification = js.native
+  @JSName("cardholderName")
+  var cardholderName_Original: js.Function1[/* value */ String | js.Any, Verification] = js.native
+  
   def creditCardType(cardNumber: String): js.Array[CreditCardType] = js.native
   @JSName("creditCardType")
   var creditCardType_Original: (js.Function1[/* cardNumber */ String, js.Array[CreditCardType]]) with TypeofcreditCardType = js.native

@@ -20,12 +20,12 @@ trait DescribeCertificateAuthorityAuditReportResponse extends js.Object {
   /**
     * Name of the S3 bucket that contains the report.
     */
-  var S3BucketName: js.UndefOr[String] = js.native
+  var S3BucketName: js.UndefOr[typingsSlinky.awsSdk.acmpcaMod.S3BucketName] = js.native
   
   /**
     * S3 key that uniquely identifies the report file in your S3 bucket.
     */
-  var S3Key: js.UndefOr[String] = js.native
+  var S3Key: js.UndefOr[typingsSlinky.awsSdk.acmpcaMod.S3Key] = js.native
 }
 object DescribeCertificateAuthorityAuditReportResponse {
   
@@ -63,13 +63,13 @@ object DescribeCertificateAuthorityAuditReportResponse {
     def deleteCreatedAt: Self = this.set("CreatedAt", js.undefined)
     
     @scala.inline
-    def setS3BucketName(value: String): Self = this.set("S3BucketName", value.asInstanceOf[js.Any])
+    def setS3BucketName(value: S3BucketName): Self = this.set("S3BucketName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteS3BucketName: Self = this.set("S3BucketName", js.undefined)
     
     @scala.inline
-    def setS3Key(value: String): Self = this.set("S3Key", value.asInstanceOf[js.Any])
+    def setS3Key(value: S3Key): Self = this.set("S3Key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteS3Key: Self = this.set("S3Key", js.undefined)

@@ -40,7 +40,7 @@ package object routerMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.vueRouter.routerMod.Position
-    - typingsSlinky.vueRouter.anon.Offset
+    - typingsSlinky.vueRouter.anon.Behavior
     - scala.Unit
   */
   type PositionResult = typingsSlinky.vueRouter.routerMod._PositionResult | scala.Unit

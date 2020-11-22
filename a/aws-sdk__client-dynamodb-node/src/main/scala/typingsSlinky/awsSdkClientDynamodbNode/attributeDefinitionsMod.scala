@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientDynamodbNode
 
-import typingsSlinky.awsSdkTypes.protocolMod.List
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object attributeDefinitionsMod extends js.Object {
   
   @JSName("_AttributeDefinitions")
-  val AttributeDefinitions: List = js.native
+  val AttributeDefinitions: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _List_ */ js.Any = js.native
 }

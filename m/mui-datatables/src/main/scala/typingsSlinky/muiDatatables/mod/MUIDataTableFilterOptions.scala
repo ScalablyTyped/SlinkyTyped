@@ -10,14 +10,21 @@ trait MUIDataTableFilterOptions extends js.Object {
   /**
     * Custom rendering inside the filter dialog.
     * `filterList` must be of the same type in the main column options, that is an array of arrays, where each array corresponds to the filter list for a given column.
-    * {@link https://github.com/gregnb/mui-datatables/blob/master/examples/customize-filter/index.js Example}
+    *
+    * [Example](https://github.com/gregnb/mui-datatables/blob/master/examples/customize-filter/index.js)
     */
   var display: js.UndefOr[
-    js.Function4[
-      /* filterList */ js.Array[String], 
-      /* onChange */ js.Any, 
+    js.Function5[
+      /* filterList */ js.Array[js.Array[String]], 
+      /* onChange */ js.Function3[
+        /* val */ String | js.Array[String], 
+        /* index */ Double, 
+        /* column */ MUIDataTableColumn, 
+        Unit
+      ], 
       /* index */ Double, 
-      /* column */ js.Any, 
+      /* column */ MUIDataTableColumn, 
+      /* filterData */ js.Array[js.Array[String]], 
       Unit
     ]
   ] = js.native
@@ -27,21 +34,23 @@ trait MUIDataTableFilterOptions extends js.Object {
   
   /**
     * custom filter logic.
-    * {@link https://github.com/gregnb/mui-datatables/blob/master/examples/customize-filter/index.js Example}
+    *
+    * [Example](https://github.com/gregnb/mui-datatables/blob/master/examples/customize-filter/index.js)
     */
   var logic: js.UndefOr[js.Function2[/* prop */ String, /* filterValue */ js.Array[_], Boolean]] = js.native
   
   /**
     * Custom names for the filter fields.
-    * {@link https://github.com/gregnb/mui-datatables/blob/master/examples/column-filters/index.js Example}
+    *
+    * [Example](https://github.com/gregnb/mui-datatables/blob/master/examples/column-filters/index.js)
     */
   var names: js.UndefOr[js.Array[String]] = js.native
   
   /**
     * A function to customize filter choices.
     * Use case: changing empty strings to "(empty)" in a dropdown.
-    * {@link https://github.com/gregnb/mui-datatables/blob/master/examples/customize-filter/index.js Example}
     *
+    * [Example](https://github.com/gregnb/mui-datatables/blob/master/examples/customize-filter/index.js)
     */
   var renderValue: js.UndefOr[js.Function1[/* value */ String, String]] = js.native
 }
@@ -70,8 +79,13 @@ object MUIDataTableFilterOptions {
     
     @scala.inline
     def setDisplay(
-      value: (/* filterList */ js.Array[String], /* onChange */ js.Any, /* index */ Double, /* column */ js.Any) => Unit
-    ): Self = this.set("display", js.Any.fromFunction4(value))
+      value: (/* filterList */ js.Array[js.Array[String]], /* onChange */ js.Function3[
+          /* val */ String | js.Array[String], 
+          /* index */ Double, 
+          /* column */ MUIDataTableColumn, 
+          Unit
+        ], /* index */ Double, /* column */ MUIDataTableColumn, /* filterData */ js.Array[js.Array[String]]) => Unit
+    ): Self = this.set("display", js.Any.fromFunction5(value))
     
     @scala.inline
     def deleteDisplay: Self = this.set("display", js.undefined)

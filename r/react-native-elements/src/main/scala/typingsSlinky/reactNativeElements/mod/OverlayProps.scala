@@ -6,6 +6,7 @@ import typingsSlinky.reactNative.mod.ModalBaseProps
 import typingsSlinky.reactNative.mod.ModalPropsAndroid
 import typingsSlinky.reactNative.mod.ModalPropsIOS
 import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.ViewProps
 import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +14,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait OverlayProps
-  extends ModalBaseProps
+  extends ViewProps
+     with ModalBaseProps
      with ModalPropsIOS
      with ModalPropsAndroid {
   

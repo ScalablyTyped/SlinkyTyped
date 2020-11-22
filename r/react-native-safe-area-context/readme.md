@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-native-safe-area-context
 
-Typings are for version 3.0.7
+Typings are for version 3.1.4
 
 ## Library description:
 A flexible way to handle safe area, also works on Android and web.

@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.std.EventTarget because Already inherited
 - typingsSlinky.std.Node because Already inherited
-- typingsSlinky.std.Slotable because Already inherited
+- typingsSlinky.std.Slottable because Already inherited
 - typingsSlinky.std.ParentNode because Already inherited
 - typingsSlinky.std.NonDocumentTypeChildNode because Already inherited
 - typingsSlinky.std.InnerHTML because Already inherited

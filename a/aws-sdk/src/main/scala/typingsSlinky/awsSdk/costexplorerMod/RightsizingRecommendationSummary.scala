@@ -13,7 +13,7 @@ trait RightsizingRecommendationSummary extends js.Object {
   var EstimatedTotalMonthlySavingsAmount: js.UndefOr[GenericString] = js.native
   
   /**
-    *  The currency code that Amazon Web Services used to calculate the savings.
+    *  The currency code that AWS used to calculate the savings.
     */
   var SavingsCurrencyCode: js.UndefOr[GenericString] = js.native
   

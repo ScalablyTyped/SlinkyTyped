@@ -12,7 +12,7 @@ trait PortalBasemapsSourceProperties extends LocalBasemapsSourceProperties {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery-support-PortalBasemapsSource.html#filterFunction)
     */
-  var filterFunction: js.UndefOr[js.Function] = js.native
+  var filterFunction: js.UndefOr[BasemapFilter] = js.native
   
   /**
     * The Portal from which to fetch basemaps.
@@ -22,7 +22,7 @@ trait PortalBasemapsSourceProperties extends LocalBasemapsSourceProperties {
   var portal: js.UndefOr[PortalProperties] = js.native
   
   /**
-    * An object with key-value pairs used to create a custom basemap gallery group query. Note that all parameters will be joined using the `AND` operator. A query string can also be provided for more advanced use cases.
+    * An object with key-value pairs used to create a custom basemap gallery group query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery-support-PortalBasemapsSource.html#query)
     */
@@ -33,7 +33,7 @@ trait PortalBasemapsSourceProperties extends LocalBasemapsSourceProperties {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery-support-PortalBasemapsSource.html#updateBasemapsCallback)
     */
-  var updateBasemapsCallback: js.UndefOr[js.Function] = js.native
+  var updateBasemapsCallback: js.UndefOr[UpdateBasemapsCallback] = js.native
 }
 object PortalBasemapsSourceProperties {
   
@@ -59,7 +59,7 @@ object PortalBasemapsSourceProperties {
     }
     
     @scala.inline
-    def setFilterFunction(value: js.Function): Self = this.set("filterFunction", value.asInstanceOf[js.Any])
+    def setFilterFunction(value: (/* item */ Basemap, /* index */ Double, /* array */ js.Array[Basemap]) => Boolean): Self = this.set("filterFunction", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteFilterFunction: Self = this.set("filterFunction", js.undefined)
@@ -77,7 +77,7 @@ object PortalBasemapsSourceProperties {
     def deleteQuery: Self = this.set("query", js.undefined)
     
     @scala.inline
-    def setUpdateBasemapsCallback(value: js.Function): Self = this.set("updateBasemapsCallback", value.asInstanceOf[js.Any])
+    def setUpdateBasemapsCallback(value: /* items */ js.Array[Basemap] => js.Array[Basemap]): Self = this.set("updateBasemapsCallback", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteUpdateBasemapsCallback: Self = this.set("updateBasemapsCallback", js.undefined)

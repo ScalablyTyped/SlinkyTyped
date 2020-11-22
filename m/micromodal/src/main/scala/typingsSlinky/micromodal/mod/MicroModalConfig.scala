@@ -9,10 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MicroModalConfig extends js.Object {
   
   /**
-    * Set this to true if using css animations to hide the modal. This allows it to wait for the animation to
-    * finish before removing it from the DOM. Default is false
+    * Set this to true if using css animations to hide the modal.
+    * This allows it to wait for the animation to finish before removing it from the DOM. Default is false
     */
   var awaitCloseAnimation: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Set this to true if using css animations to open the modal.
+    * This allows it to wait for the animation to finish before focusing on an element inside the modal. Default is false
+    */
+  var awaitOpenAnimation: js.UndefOr[Boolean] = js.native
   
   /** Custom data attribute to close modal. Default is data-micromodal-close. */
   var closeTrigger: js.UndefOr[String] = js.native
@@ -31,6 +37,9 @@ trait MicroModalConfig extends js.Object {
   
   /** This is fired when the modal is opening. */
   var onShow: js.UndefOr[js.Function1[/* modal */ js.UndefOr[HTMLElement], Unit]] = js.native
+  
+  /** Custom class to be applied when modal is open. Default class is is-open. */
+  var openClass: js.UndefOr[String] = js.native
   
   /** Custom data attribute to open modal. Default is data-micromodal-trigger. */
   var openTrigger: js.UndefOr[String] = js.native
@@ -63,6 +72,12 @@ object MicroModalConfig {
     
     @scala.inline
     def deleteAwaitCloseAnimation: Self = this.set("awaitCloseAnimation", js.undefined)
+    
+    @scala.inline
+    def setAwaitOpenAnimation(value: Boolean): Self = this.set("awaitOpenAnimation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAwaitOpenAnimation: Self = this.set("awaitOpenAnimation", js.undefined)
     
     @scala.inline
     def setCloseTrigger(value: String): Self = this.set("closeTrigger", value.asInstanceOf[js.Any])
@@ -99,6 +114,12 @@ object MicroModalConfig {
     
     @scala.inline
     def deleteOnShow: Self = this.set("onShow", js.undefined)
+    
+    @scala.inline
+    def setOpenClass(value: String): Self = this.set("openClass", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOpenClass: Self = this.set("openClass", js.undefined)
     
     @scala.inline
     def setOpenTrigger(value: String): Self = this.set("openTrigger", value.asInstanceOf[js.Any])

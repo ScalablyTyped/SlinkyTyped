@@ -1,5 +1,6 @@
 package typingsSlinky.nodegit
 
+import typingsSlinky.nodegit.applyMod.Apply.LOCATION
 import typingsSlinky.nodegit.attrMod.Attr.STATES
 import typingsSlinky.nodegit.branchMod.Branch.BRANCH
 import typingsSlinky.nodegit.certMod.Cert.SSH
@@ -452,6 +453,7 @@ object nodegitNumbers {
        with FLAGS
        with FORMAT_EMAIL_FLAGS
        with LOCAL
+       with LOCATION
        with MAP
        with MODE
        with NORMALIZE
@@ -506,6 +508,7 @@ object nodegitNumbers {
        with IGNORE
        with LEVEL
        with LOCAL
+       with LOCATION
        with MAP
        with MODE
        with typingsSlinky.nodegit.revParseMod.Revparse.MODE
@@ -658,6 +661,7 @@ object nodegitNumbers {
        with IGNORE
        with LEVEL
        with LOCAL
+       with LOCATION
        with MAP
        with typingsSlinky.nodegit.revParseMod.Revparse.MODE
        with NORMALIZE

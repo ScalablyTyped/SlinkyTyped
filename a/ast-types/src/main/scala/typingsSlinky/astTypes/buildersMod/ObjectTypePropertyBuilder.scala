@@ -7,12 +7,13 @@ import typingsSlinky.astTypes.kindsMod.LiteralKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectTypeProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ObjectTypePropertyBuilder extends js.Object {
+  
   def apply(key: IdentifierKind, value: FlowTypeKind, optional: Boolean): ObjectTypeProperty = js.native
   def apply(key: LiteralKind, value: FlowTypeKind, optional: Boolean): ObjectTypeProperty = js.native
+  
   def from(params: Variance): ObjectTypeProperty = js.native
 }
-

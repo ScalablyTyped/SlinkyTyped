@@ -1,16 +1,14 @@
 package typingsSlinky.jupyterlabDocumentsearchExtension
 
-import typingsSlinky.jupyterlabApplication.frontendMod.JupyterFrontEnd.IShell
-import typingsSlinky.jupyterlabApplication.mod.JupyterFrontEnd
+import typingsSlinky.jupyterlabApplication.frontendMod.JupyterFrontEndPlugin
 import typingsSlinky.jupyterlabDocumentsearch.tokensMod.ISearchProviderRegistry
-import typingsSlinky.phosphorApplication.mod.IPlugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/documentsearch-extension", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
-  val default: js.Array[IPlugin[JupyterFrontEnd[IShell], ISearchProviderRegistry | Unit]] = js.native
+  
+  val default: js.Array[JupyterFrontEndPlugin[ISearchProviderRegistry | Unit]] = js.native
 }
-

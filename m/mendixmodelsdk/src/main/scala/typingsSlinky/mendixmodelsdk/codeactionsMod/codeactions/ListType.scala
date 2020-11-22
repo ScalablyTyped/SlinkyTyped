@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.codeactionsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,8 +28,8 @@ class ListType protected () extends Type {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsBasicParameterType")
@@ -35,9 +37,6 @@ class ListType protected () extends Type {
   
   @JSName("containerAsCodeAction")
   def containerAsCodeAction_MListType: CodeAction = js.native
-  
-  @JSName("model")
-  var model_FListType: IModel = js.native
   
   def parameter: EntityType = js.native
   def parameter_=(newValue: EntityType): Unit = js.native

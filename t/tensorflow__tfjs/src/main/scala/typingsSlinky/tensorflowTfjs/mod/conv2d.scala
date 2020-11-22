@@ -5,9 +5,9 @@ import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.NHWC
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.same
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.valid
 import typingsSlinky.tensorflowTfjsCore.convUtilMod.ExplicitPadding
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor3D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

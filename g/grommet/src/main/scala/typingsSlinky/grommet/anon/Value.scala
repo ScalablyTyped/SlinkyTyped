@@ -7,15 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Value extends js.Object {
   
-  var color: String = js.native
-  
-  var value: Double | js.Array[Double] = js.native
+  var value: String | js.Array[String] = js.native
 }
 object Value {
   
   @scala.inline
-  def apply(color: String, value: Double | js.Array[Double]): Value = {
-    val __obj = js.Dynamic.literal(color = color.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(value: String | js.Array[String]): Value = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Value]
   }
   
@@ -35,12 +33,9 @@ object Value {
     }
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setValueVarargs(value: String*): Self = this.set("value", js.Array(value :_*))
     
     @scala.inline
-    def setValueVarargs(value: Double*): Self = this.set("value", js.Array(value :_*))
-    
-    @scala.inline
-    def setValue(value: Double | js.Array[Double]): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: String | js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
   }
 }

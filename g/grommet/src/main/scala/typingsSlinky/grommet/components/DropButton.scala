@@ -50,8 +50,13 @@ import typingsSlinky.react.mod.ButtonHTMLAttributes
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -231,7 +236,9 @@ object DropButton {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -723,7 +730,7 @@ object DropButton {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def target(value: _self | _blank | _parent | _top): this.type = set("target", value.asInstanceOf[js.Any])
+    def target(value: _self | _blank | _parent | _top | String): this.type = set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])

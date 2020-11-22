@@ -1,9 +1,9 @@
 package typingsSlinky.officeUiFabricReact.separatorTypesMod
 
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.center
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.end
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.start
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -26,8 +26,6 @@ object materialTextfieldConstantsMod extends js.Object {
     
     var FOCUSED: String = js.native
     
-    var FULLWIDTH: String = js.native
-    
     var HELPER_LINE: String = js.native
     
     var INVALID: String = js.native
@@ -79,6 +77,8 @@ object materialTextfieldConstantsMod extends js.Object {
   object strings extends js.Object {
     
     var ARIA_CONTROLS: String = js.native
+    
+    var ARIA_DESCRIBEDBY: String = js.native
     
     var INPUT_SELECTOR: String = js.native
     

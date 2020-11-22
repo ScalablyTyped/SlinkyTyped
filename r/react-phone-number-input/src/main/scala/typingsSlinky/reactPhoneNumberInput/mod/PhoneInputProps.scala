@@ -40,8 +40,13 @@ import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.reactPhoneNumberInput.anon.Country
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`additions removals`
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`additions text`
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`inline`
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`removals additions`
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`removals text`
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`text additions`
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`text removals`
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.additions
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.all
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.ascending
@@ -52,8 +57,11 @@ import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.date
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.decimal
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.descending
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.dialog
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.done
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.email
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.enter
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.execute
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.go
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.grammar
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.grid
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.horizontal
@@ -65,6 +73,7 @@ import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.location
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.menu
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.mixed
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.move
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.next
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.no
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.none
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.numeric
@@ -74,8 +83,10 @@ import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.other
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.page
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.polite
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.popup
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.previous
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.removals
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.search
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.send
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.spelling
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.step
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.tel
@@ -177,7 +188,9 @@ trait PhoneInputProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -257,7 +270,7 @@ trait PhoneInputProps extends js.Object {
     * Country <select/> component props. Along with the usual DOM properties such as aria-label
     * and tabIndex, some custom properties are supported, such as arrowComponent and unicodeFlags.
     */
-  var countrySelectProps: js.UndefOr[Double] = js.native
+  var countrySelectProps: js.UndefOr[js.Object] = js.native
   
   var crossOrigin: js.UndefOr[String] = js.native
   
@@ -288,6 +301,8 @@ trait PhoneInputProps extends js.Object {
   var displayInitialValueAsLocalNumber: js.UndefOr[Boolean] = js.native
   
   var draggable: js.UndefOr[Booleanish] = js.native
+  
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
   
   var error: js.UndefOr[String] = js.native
   
@@ -927,7 +942,9 @@ object PhoneInputProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1116,7 +1133,7 @@ object PhoneInputProps {
     def deleteCountrySelectComponent: Self = this.set("countrySelectComponent", js.undefined)
     
     @scala.inline
-    def setCountrySelectProps(value: Double): Self = this.set("countrySelectProps", value.asInstanceOf[js.Any])
+    def setCountrySelectProps(value: js.Object): Self = this.set("countrySelectProps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCountrySelectProps: Self = this.set("countrySelectProps", js.undefined)
@@ -1183,6 +1200,12 @@ object PhoneInputProps {
     
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    
+    @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
     
     @scala.inline
     def setError(value: String): Self = this.set("error", value.asInstanceOf[js.Any])

@@ -18,6 +18,16 @@ trait NetworkInterfaceAssociation extends js.Object {
   var AssociationId: js.UndefOr[String] = js.native
   
   /**
+    * The carrier IP address associated with the network interface. This option is only available when the network interface is in a subnet which is associated with a Wavelength Zone.
+    */
+  var CarrierIp: js.UndefOr[String] = js.native
+  
+  /**
+    * The customer-owned IP address associated with the network interface.
+    */
+  var CustomerOwnedIp: js.UndefOr[String] = js.native
+  
+  /**
     * The ID of the Elastic IP address owner.
     */
   var IpOwnerId: js.UndefOr[String] = js.native
@@ -66,6 +76,18 @@ object NetworkInterfaceAssociation {
     
     @scala.inline
     def deleteAssociationId: Self = this.set("AssociationId", js.undefined)
+    
+    @scala.inline
+    def setCarrierIp(value: String): Self = this.set("CarrierIp", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCarrierIp: Self = this.set("CarrierIp", js.undefined)
+    
+    @scala.inline
+    def setCustomerOwnedIp(value: String): Self = this.set("CustomerOwnedIp", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomerOwnedIp: Self = this.set("CustomerOwnedIp", js.undefined)
     
     @scala.inline
     def setIpOwnerId(value: String): Self = this.set("IpOwnerId", value.asInstanceOf[js.Any])

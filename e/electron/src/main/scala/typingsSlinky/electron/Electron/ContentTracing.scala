@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ContentTracing extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/content-tracing
+  // Docs: https://electronjs.org/docs/api/content-tracing
   /**
     * resolves with an array of category groups once all child processes have
     * acknowledged the `getCategories` request

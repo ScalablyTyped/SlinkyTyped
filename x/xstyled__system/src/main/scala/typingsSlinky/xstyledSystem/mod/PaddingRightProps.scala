@@ -9,13 +9,13 @@ trait PaddingRightProps[TLength] extends js.Object {
   
   val paddingRight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingRightProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingRight<TLength> */ _
     ]
   ] = js.native
   
   val pr: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingRightProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingRight<TLength> */ _
     ]
   ] = js.native
 }
@@ -43,9 +43,12 @@ object PaddingRightProps {
     }
     
     @scala.inline
+    def setPaddingRightVarargs(value: js.Any*): Self = this.set("paddingRight", js.Array(value :_*))
+    
+    @scala.inline
     def setPaddingRight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingRightProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingRight<TLength> */ _
         ]
     ): Self = this.set("paddingRight", value.asInstanceOf[js.Any])
     
@@ -53,9 +56,12 @@ object PaddingRightProps {
     def deletePaddingRight: Self = this.set("paddingRight", js.undefined)
     
     @scala.inline
+    def setPrVarargs(value: js.Any*): Self = this.set("pr", js.Array(value :_*))
+    
+    @scala.inline
     def setPr(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingRightProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingRight<TLength> */ _
         ]
     ): Self = this.set("pr", value.asInstanceOf[js.Any])
     

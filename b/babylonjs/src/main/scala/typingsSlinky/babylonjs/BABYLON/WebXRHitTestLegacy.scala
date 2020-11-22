@@ -5,7 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babylonjs.BABYLON.IDisposable because Already inherited
+- typingsSlinky.babylonjs.BABYLON.IWebXRFeature because Already inherited
+- typingsSlinky.babylonjs.BABYLON.IWebXRHitTestFeature because var conflicts: attached, dependsOn, disableAutoAttach, isDisposed, xrNativeFeatureName. Inlined onHitTestResultObservable */ @js.native
 trait WebXRHitTestLegacy extends WebXRAbstractFeature {
   
   var _direction: js.Any = js.native
@@ -28,10 +31,10 @@ trait WebXRHitTestLegacy extends WebXRAbstractFeature {
   /**
     * Triggered when new babylon (transformed) hit test results are available
     */
-  var onHitTestResultObservable: Observable[js.Array[IWebXRHitResult]] = js.native
+  var onHitTestResultObservable: Observable[js.Array[IWebXRLegacyHitResult]] = js.native
   
   /**
     * options to use when constructing this feature
     */
-  val options: IWebXRHitTestOptions = js.native
+  val options: IWebXRLegacyHitTestOptions = js.native
 }

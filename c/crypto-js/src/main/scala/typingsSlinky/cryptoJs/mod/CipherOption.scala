@@ -5,15 +5,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Configuration options.
+  */
 @js.native
 trait CipherOption
-  extends /* option */ StringDictionary[js.Any] {
+  extends /* key */ StringDictionary[js.Any] {
   
-  var iv: js.UndefOr[String | LibWordArray] = js.native
+  var format: js.UndefOr[Format_] = js.native
   
-  var mode: js.UndefOr[Mode] = js.native
-  
-  var padding: js.UndefOr[Padding] = js.native
+  /**
+    * The IV to use for this operation.
+    */
+  var iv: js.UndefOr[WordArray] = js.native
 }
 object CipherOption {
   
@@ -39,21 +43,15 @@ object CipherOption {
     }
     
     @scala.inline
-    def setIv(value: String | LibWordArray): Self = this.set("iv", value.asInstanceOf[js.Any])
+    def setFormat(value: Format_): Self = this.set("format", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFormat: Self = this.set("format", js.undefined)
+    
+    @scala.inline
+    def setIv(value: WordArray): Self = this.set("iv", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIv: Self = this.set("iv", js.undefined)
-    
-    @scala.inline
-    def setMode(value: Mode): Self = this.set("mode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMode: Self = this.set("mode", js.undefined)
-    
-    @scala.inline
-    def setPadding(value: Padding): Self = this.set("padding", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePadding: Self = this.set("padding", js.undefined)
   }
 }

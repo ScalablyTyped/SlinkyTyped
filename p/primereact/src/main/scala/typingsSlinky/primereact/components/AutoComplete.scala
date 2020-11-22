@@ -1,7 +1,6 @@
 package typingsSlinky.primereact.components
 
 import org.scalajs.dom.raw.Event
-import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.anon.OriginalEvent
@@ -67,7 +66,7 @@ object AutoComplete {
     def inputStyle(value: js.Object): this.type = set("inputStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def itemTemplate(value: /* data */ js.Any => js.UndefOr[ReactElement]): this.type = set("itemTemplate", js.Any.fromFunction1(value))
+    def itemTemplate(value: /* data */ js.Any => _): this.type = set("itemTemplate", js.Any.fromFunction1(value))
     
     @scala.inline
     def maxlength(value: Double): this.type = set("maxlength", value.asInstanceOf[js.Any])
@@ -121,6 +120,12 @@ object AutoComplete {
     def onUnselect(value: /* e */ Value => Unit): this.type = set("onUnselect", js.Any.fromFunction1(value))
     
     @scala.inline
+    def panelClassName(value: String): this.type = set("panelClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def panelStyle(value: js.Object): this.type = set("panelStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -130,7 +135,7 @@ object AutoComplete {
     def scrollHeight(value: String): this.type = set("scrollHeight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def selectedItemTemplate(value: /* data */ js.Any => String): this.type = set("selectedItemTemplate", js.Any.fromFunction1(value))
+    def selectedItemTemplate(value: /* data */ js.Any => _): this.type = set("selectedItemTemplate", js.Any.fromFunction1(value))
     
     @scala.inline
     def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])

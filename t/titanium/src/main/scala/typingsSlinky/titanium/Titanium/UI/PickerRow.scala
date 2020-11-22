@@ -30,7 +30,7 @@ trait PickerRow extends View {
   /**
     * Color of the item text, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   @JSName("fireEvent")
   def fireEvent_click(name: click, event: PickerRowClickEvent): Unit = js.native
@@ -74,7 +74,7 @@ trait PickerRow extends View {
     * Gets the value of the <Titanium.UI.PickerRow.color> property.
     * @deprecated Access <Titanium.UI.PickerRow.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.PickerRow.font> property.
@@ -93,6 +93,7 @@ trait PickerRow extends View {
     * @deprecated Set the value using <Titanium.UI.PickerRow.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.PickerRow.font> property.

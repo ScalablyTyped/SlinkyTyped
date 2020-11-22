@@ -43,6 +43,11 @@ trait GetBotResponse extends js.Object {
   var detectSentiment: js.UndefOr[Boolean] = js.native
   
   /**
+    * Indicates whether the bot uses accuracy improvements. true indicates that the bot is using the improvements, otherwise, false.
+    */
+  var enableModelImprovements: js.UndefOr[Boolean] = js.native
+  
+  /**
     * If status is FAILED, Amazon Lex explains why it failed to build the bot.
     */
   var failureReason: js.UndefOr[String] = js.native
@@ -71,6 +76,11 @@ trait GetBotResponse extends js.Object {
     * The name of the bot.
     */
   var name: js.UndefOr[BotName] = js.native
+  
+  /**
+    * The score that determines where Amazon Lex inserts the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent is inserted if the confidence score for all intents is below this value. AMAZON.KendraSearchIntent is only inserted if it is configured for the bot.
+    */
+  var nluIntentConfidenceThreshold: js.UndefOr[ConfidenceThreshold] = js.native
   
   /**
     * The status of the bot.  When the status is BUILDING Amazon Lex is building the bot for testing and use. If the status of the bot is READY_BASIC_TESTING, you can test the bot using the exact utterances specified in the bot's intents. When the bot is ready for full testing or to run, the status is READY. If there was a problem with building the bot, the status is FAILED and the failureReason field explains why the bot did not build. If the bot was saved but not built, the status is NOT_BUILT.
@@ -153,6 +163,12 @@ object GetBotResponse {
     def deleteDetectSentiment: Self = this.set("detectSentiment", js.undefined)
     
     @scala.inline
+    def setEnableModelImprovements(value: Boolean): Self = this.set("enableModelImprovements", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnableModelImprovements: Self = this.set("enableModelImprovements", js.undefined)
+    
+    @scala.inline
     def setFailureReason(value: String): Self = this.set("failureReason", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -190,6 +206,12 @@ object GetBotResponse {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setNluIntentConfidenceThreshold(value: ConfidenceThreshold): Self = this.set("nluIntentConfidenceThreshold", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNluIntentConfidenceThreshold: Self = this.set("nluIntentConfidenceThreshold", js.undefined)
     
     @scala.inline
     def setStatus(value: Status): Self = this.set("status", value.asInstanceOf[js.Any])

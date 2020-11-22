@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.inputMod.glue.CrawlerCatalogTarget
 import typingsSlinky.pulumiAws.inputMod.glue.CrawlerDynamodbTarget
 import typingsSlinky.pulumiAws.inputMod.glue.CrawlerJdbcTarget
+import typingsSlinky.pulumiAws.inputMod.glue.CrawlerMongodbTarget
 import typingsSlinky.pulumiAws.inputMod.glue.CrawlerS3Target
 import typingsSlinky.pulumiAws.inputMod.glue.CrawlerSchemaChangePolicy
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -50,6 +51,11 @@ trait CrawlerState extends js.Object {
     * List of nested JBDC target arguments. See below.
     */
   val jdbcTargets: js.UndefOr[Input[js.Array[Input[CrawlerJdbcTarget]]]] = js.native
+  
+  /**
+    * List nested MongoDB target arguments. See below.
+    */
+  val mongodbTargets: js.UndefOr[Input[js.Array[Input[CrawlerMongodbTarget]]]] = js.native
   
   /**
     * Name of the crawler.
@@ -173,6 +179,15 @@ object CrawlerState {
     
     @scala.inline
     def deleteJdbcTargets: Self = this.set("jdbcTargets", js.undefined)
+    
+    @scala.inline
+    def setMongodbTargetsVarargs(value: Input[CrawlerMongodbTarget]*): Self = this.set("mongodbTargets", js.Array(value :_*))
+    
+    @scala.inline
+    def setMongodbTargets(value: Input[js.Array[Input[CrawlerMongodbTarget]]]): Self = this.set("mongodbTargets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMongodbTargets: Self = this.set("mongodbTargets", js.undefined)
     
     @scala.inline
     def setName(value: Input[String]): Self = this.set("name", value.asInstanceOf[js.Any])

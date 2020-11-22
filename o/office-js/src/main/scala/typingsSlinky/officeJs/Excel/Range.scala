@@ -421,7 +421,7 @@ trait Range extends ClientObject {
   
   /**
     *
-    * Represents the formula in A1-style notation.
+    * Represents the formula in A1-style notation. If a cell has no formula, its value is returned instead.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -429,7 +429,7 @@ trait Range extends ClientObject {
   
   /**
     *
-    * Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German.
+    * Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German. If a cell has no formula, its value is returned instead.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -437,7 +437,7 @@ trait Range extends ClientObject {
   
   /**
     *
-    * Represents the formula in R1C1-style notation.
+    * Represents the formula in R1C1-style notation. If a cell has no formula, its value is returned instead.
     *
     * [Api set: ExcelApi 1.2]
     */
@@ -523,6 +523,13 @@ trait Range extends ClientObject {
   def getColumnsBefore(count: Double): Range = js.native
   
   /**
+    * Returns a WorkbookRangeAreas object that represents the range containing all the direct precedents of a cell in same worksheet or in multiple worksheets.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  def getDirectPrecedents(): WorkbookRangeAreas = js.native
+  
+  /**
     * Gets an object that represents the entire column of the range (for example, if the current range represents cells "B4:E11", its `getEntireColumn` is a range that represents columns "B:E").
     *
     * [Api set: ExcelApi 1.1]
@@ -538,8 +545,7 @@ trait Range extends ClientObject {
   
   /**
     * Renders the range as a base64-encoded png image.
-    * 
-    * **Important**: This API is currently unsupported in Excel for Mac. Visit [OfficeDev/office-js Issue #235](https://github.com/OfficeDev/office-js/issues/235) for the current status.
+    **Important**: This API is currently unsupported in Excel for Mac. Visit {@link https://github.com/OfficeDev/office-js/issues/235 | OfficeDev/office-js Issue #235} for the current status.
     *
     * [Api set: ExcelApi 1.7]
     */
@@ -587,6 +593,13 @@ trait Range extends ClientObject {
   def getLastRow(): Range = js.native
   
   /**
+    * Returns a RangeAreas object that represents the merged areas in this range. Note that if the merged areas count in this range is more than 512, the API will fail to return the result.
+    *
+    * [Api set: ExcelApiOnline 1.1]
+    */
+  def getMergedAreas(): RangeAreas = js.native
+  
+  /**
     * Gets an object which represents a range that's offset from the specified range. The dimension of the returned range will match this range. If the resulting range is forced outside the bounds of the worksheet grid, an error will be thrown.
     *
     * [Api set: ExcelApi 1.1]
@@ -599,7 +612,7 @@ trait Range extends ClientObject {
   /**
     * Gets a scoped collection of PivotTables that overlap with the range.
     *
-    * [Api set: ExcelApiOnline 1.1]
+    * [Api set: ExcelApi 1.12]
     *
     * @param fullyContained If true, returns only PivotTables that are fully contained within the range bounds. The default value is false.
     * @returns
@@ -711,6 +724,36 @@ trait Range extends ClientObject {
   def getSpecialCellsOrNullObject(cellType: SpecialCellType, cellValueType: SpecialCellValueType): RangeAreas = js.native
   
   /**
+    * Gets the range object containing the anchor cell for a cell getting spilled into. Fails if applied to a range with more than one cell.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  def getSpillParent(): Range = js.native
+  
+  /**
+    * Gets the range object containing the anchor cell for a cell getting spilled into.
+    If it is not a spill cell or more than once cells are give, a null object will be returned.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  def getSpillParentOrNullObject(): Range = js.native
+  
+  /**
+    * Gets the range object containing the spill range when called on an anchor cell. Fails if applied to a range with more than one cell.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  def getSpillingToRange(): Range = js.native
+  
+  /**
+    * Gets the range object containing the spill range when called on an anchor cell.
+    If the range is not an anchor cell or spill range can't be found, a null object will be returned.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  def getSpillingToRangeOrNullObject(): Range = js.native
+  
+  /**
     * Returns a Range object that represents the surrounding region for the top-left cell in this range. A surrounding region is a range bounded by any combination of blank rows and blank columns relative to this range.
     *
     * [Api set: ExcelApi 1.7]
@@ -779,6 +822,16 @@ trait Range extends ClientObject {
     */
   @JSName("group")
   def group_ByRows(groupOption: ByRows): Unit = js.native
+  
+  /**
+    *
+    * Represents if all cells have a spill border.
+    Returns true if all cells have a spill border, or false if all cells do not have a spill border.
+    Returns null if there are cells both with and without spill borders within the range.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  val hasSpill: Boolean = js.native
   
   /**
     *
@@ -918,6 +971,14 @@ trait Range extends ClientObject {
   
   /**
     *
+    * Represents the category of number format of each cell.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  val numberFormatCategories: js.Array[js.Array[NumberFormatCategory]] = js.native
+  
+  /**
+    *
     * Represents Excel's number format code for the given range, based on the language settings of the user.​
     Excel does not perform any language or format coercion when getting or setting the `numberFormatLocal` property.
     Any returned text uses the locally-formatted strings based on the language specified in the system settings.
@@ -972,6 +1033,16 @@ trait Range extends ClientObject {
     * [Api set: ExcelApi 1.1]
     */
   val rowIndex: Double = js.native
+  
+  /**
+    *
+    * Represents if ALL the cells would be saved as an array formula.
+    Returns true if ALL cells would be saved as an array formula, or false if ALL cells would NOT be saved as an array formula.
+    Returns null if some cells would be saved as an array formula and some would not be.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  val savedAsArray: Boolean = js.native
   
   /**
     * Selects the specified range in the Excel UI.

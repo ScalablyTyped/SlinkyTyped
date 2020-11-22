@@ -3,10 +3,8 @@ package typingsSlinky.pulumiKubernetes.v3HelmMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiKubernetes.yamlMod.CollectionComponentResource
 import typingsSlinky.pulumiPulumi.mod.CustomResource
-import typingsSlinky.pulumiPulumi.mod.Resource
 import typingsSlinky.pulumiPulumi.outputMod.Output_
 import typingsSlinky.pulumiPulumi.resourceMod.ComponentResourceOptions
-import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,56 +23,8 @@ class Chart protected () extends CollectionComponentResource {
   def this(releaseName: String, config: ChartOpts, opts: ComponentResourceOptions) = this()
   def this(releaseName: String, config: LocalChartOpts, opts: ComponentResourceOptions) = this()
   
-  def parseTemplate(
-    text: String,
-    transformations: js.UndefOr[scala.Nothing],
-    resourcePrefix: js.UndefOr[scala.Nothing],
-    dependsOn: js.Array[Resource]
-  ): Output_[StringDictionary[CustomResource]] = js.native
-  def parseTemplate(
-    text: String,
-    transformations: js.UndefOr[scala.Nothing],
-    resourcePrefix: js.UndefOr[scala.Nothing],
-    dependsOn: js.Array[Resource],
-    defaultNamespace: String
-  ): Output_[StringDictionary[CustomResource]] = js.native
-  def parseTemplate(
-    text: String,
-    transformations: js.UndefOr[scala.Nothing],
-    resourcePrefix: String,
-    dependsOn: js.Array[Resource]
-  ): Output_[StringDictionary[CustomResource]] = js.native
-  def parseTemplate(
-    text: String,
-    transformations: js.UndefOr[scala.Nothing],
-    resourcePrefix: String,
-    dependsOn: js.Array[Resource],
-    defaultNamespace: String
-  ): Output_[StringDictionary[CustomResource]] = js.native
-  def parseTemplate(
-    text: String,
-    transformations: js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]],
-    resourcePrefix: js.UndefOr[scala.Nothing],
-    dependsOn: js.Array[Resource]
-  ): Output_[StringDictionary[CustomResource]] = js.native
-  def parseTemplate(
-    text: String,
-    transformations: js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]],
-    resourcePrefix: js.UndefOr[scala.Nothing],
-    dependsOn: js.Array[Resource],
-    defaultNamespace: String
-  ): Output_[StringDictionary[CustomResource]] = js.native
-  def parseTemplate(
-    text: String,
-    transformations: js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]],
-    resourcePrefix: String,
-    dependsOn: js.Array[Resource]
-  ): Output_[StringDictionary[CustomResource]] = js.native
-  def parseTemplate(
-    text: String,
-    transformations: js.Array[js.Function2[/* o */ _, /* opts */ CustomResourceOptions, Unit]],
-    resourcePrefix: String,
-    dependsOn: js.Array[Resource],
-    defaultNamespace: String
-  ): Output_[StringDictionary[CustomResource]] = js.native
+  def parseChart(config: ChartOpts, releaseName: String): Output_[StringDictionary[CustomResource]] = js.native
+  def parseChart(config: ChartOpts, releaseName: String, opts: ComponentResourceOptions): Output_[StringDictionary[CustomResource]] = js.native
+  def parseChart(config: LocalChartOpts, releaseName: String): Output_[StringDictionary[CustomResource]] = js.native
+  def parseChart(config: LocalChartOpts, releaseName: String, opts: ComponentResourceOptions): Output_[StringDictionary[CustomResource]] = js.native
 }

@@ -17,7 +17,7 @@ trait configWorkers extends Object {
   var loaderConfig: js.UndefOr[configWorkersLoaderConfig] = js.native
   
   /**
-    * The absolute url to the AMD loader used in the worker. The default url points to the AMD loader used by the API.
+    * The absolute url to the AMD loader used in the worker.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#workers)
     */

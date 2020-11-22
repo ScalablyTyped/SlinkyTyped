@@ -88,6 +88,11 @@ trait RunJobFlowInput extends js.Object {
   var NewSupportedProducts: js.UndefOr[NewSupportedProductsList] = js.native
   
   /**
+    * The specified placement group configuration for an Amazon EMR cluster.
+    */
+  var PlacementGroupConfigs: js.UndefOr[PlacementGroupConfigList] = js.native
+  
+  /**
     * The Amazon EMR release label, which determines the version of open-source application packages installed on the cluster. Release labels are in the form emr-x.x.x, where x.x.x is an Amazon EMR release version such as emr-5.14.0. For more information about Amazon EMR release versions and included application versions and features, see https://docs.aws.amazon.com/emr/latest/ReleaseGuide/. The release label applies only to Amazon EMR releases version 4.0 and later. Earlier versions use AmiVersion.
     */
   var ReleaseLabel: js.UndefOr[XmlStringMaxLen256] = js.native
@@ -261,6 +266,15 @@ object RunJobFlowInput {
     
     @scala.inline
     def deleteNewSupportedProducts: Self = this.set("NewSupportedProducts", js.undefined)
+    
+    @scala.inline
+    def setPlacementGroupConfigsVarargs(value: PlacementGroupConfig*): Self = this.set("PlacementGroupConfigs", js.Array(value :_*))
+    
+    @scala.inline
+    def setPlacementGroupConfigs(value: PlacementGroupConfigList): Self = this.set("PlacementGroupConfigs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePlacementGroupConfigs: Self = this.set("PlacementGroupConfigs", js.undefined)
     
     @scala.inline
     def setReleaseLabel(value: XmlStringMaxLen256): Self = this.set("ReleaseLabel", value.asInstanceOf[js.Any])

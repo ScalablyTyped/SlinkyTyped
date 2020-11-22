@@ -3,6 +3,7 @@ package typingsSlinky.yandexMaps.mod.multiRouter
 import typingsSlinky.yandexMaps.mod.GeoObjectCollection
 import typingsSlinky.yandexMaps.mod.IEventEmitter
 import typingsSlinky.yandexMaps.mod.IGeoObject
+import typingsSlinky.yandexMaps.mod.IGeometry
 import typingsSlinky.yandexMaps.mod.data.Manager
 import typingsSlinky.yandexMaps.mod.geometry.base.LineString
 import scala.scalajs.js
@@ -14,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object driving extends js.Object {
   
   @js.native
-  class Path () extends IGeoObject {
+  class Path () extends IGeoObject[IGeometry] {
     
     def getSegments(): GeoObjectCollection = js.native
     
@@ -41,7 +42,7 @@ object driving extends js.Object {
   }
   
   @js.native
-  class Route () extends IGeoObject {
+  class Route () extends IGeoObject[IGeometry] {
     
     def getPaths(): GeoObjectCollection = js.native
   }
@@ -63,7 +64,7 @@ object driving extends js.Object {
   }
   
   @js.native
-  class Segment () extends IGeoObject {
+  class Segment () extends IGeoObject[IGeometry] {
     
     @JSName("properties")
     var properties_Segment: Manager = js.native

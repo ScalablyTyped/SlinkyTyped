@@ -35,6 +35,8 @@ trait PartialIDateRangeInputPro extends js.Object {
   
   var formatDate: js.UndefOr[js.Function2[/* date */ js.Date, /* locale */ js.UndefOr[String], String]] = js.native
   
+  var highlightCurrentDay: js.UndefOr[Boolean] = js.native
+  
   var initialMonth: js.UndefOr[js.Date] = js.native
   
   var invalidDateMessage: js.UndefOr[String] = js.native
@@ -157,6 +159,12 @@ object PartialIDateRangeInputPro {
     
     @scala.inline
     def deleteFormatDate: Self = this.set("formatDate", js.undefined)
+    
+    @scala.inline
+    def setHighlightCurrentDay(value: Boolean): Self = this.set("highlightCurrentDay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHighlightCurrentDay: Self = this.set("highlightCurrentDay", js.undefined)
     
     @scala.inline
     def setInitialMonth(value: js.Date): Self = this.set("initialMonth", value.asInstanceOf[js.Any])

@@ -22,11 +22,28 @@ abstract class CustomResource protected ()
     * @param name The _unique_ name of the resource.
     * @param props The arguments to use to populate the new resource.
     * @param opts A bag of options that control this resource's behavior.
+    * @param dependency True if this is a synthetic resource used internally for dependency tracking.
     */
   def this(t: String, name: String) = this()
   def this(t: String, name: String, props: Inputs) = this()
   def this(t: String, name: String, props: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
   def this(t: String, name: String, props: Inputs, opts: CustomResourceOptions) = this()
+  def this(
+    t: String,
+    name: String,
+    props: js.UndefOr[scala.Nothing],
+    opts: js.UndefOr[scala.Nothing],
+    dependency: Boolean
+  ) = this()
+  def this(
+    t: String,
+    name: String,
+    props: js.UndefOr[scala.Nothing],
+    opts: CustomResourceOptions,
+    dependency: Boolean
+  ) = this()
+  def this(t: String, name: String, props: Inputs, opts: js.UndefOr[scala.Nothing], dependency: Boolean) = this()
+  def this(t: String, name: String, props: Inputs, opts: CustomResourceOptions, dependency: Boolean) = this()
 }
 /* static members */
 @JSImport("@pulumi/pulumi", "CustomResource")

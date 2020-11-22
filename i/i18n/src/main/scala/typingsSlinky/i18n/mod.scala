@@ -190,7 +190,6 @@ object mod extends js.Object {
     * @param locale - The locale to set as default
     * @param [inheritance=false] - Disables inheritance if true
     */
-  // tslint:disable-next-line:unified-signatures
   def setLocale(requestOrResponse: Request, locale: String): Unit = js.native
   def setLocale(requestOrResponse: Request, locale: String, inheritance: Boolean): Unit = js.native
   def setLocale(requestOrResponse: Response, locale: String): Unit = js.native

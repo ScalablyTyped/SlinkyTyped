@@ -8,19 +8,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UploadInfo extends js.Object {
   
-  /** @name UploadInfo.bytesUploaded */
+  /**
+    * [descr:UploadInfo.bytesUploaded]
+    */
   var bytesUploaded: Double = js.native
   
-  /** @name UploadInfo.chunkBlob */
+  /**
+    * [descr:UploadInfo.chunkBlob]
+    */
   var chunkBlob: Blob = js.native
   
-  /** @name UploadInfo.chunkCount */
+  /**
+    * [descr:UploadInfo.chunkCount]
+    */
   var chunkCount: Double = js.native
   
-  /** @name UploadInfo.chunkIndex */
+  /**
+    * [descr:UploadInfo.chunkIndex]
+    */
   var chunkIndex: Double = js.native
   
-  /** @name UploadInfo.customData */
+  /**
+    * [descr:UploadInfo.customData]
+    */
   var customData: js.Any = js.native
 }
 object UploadInfo {

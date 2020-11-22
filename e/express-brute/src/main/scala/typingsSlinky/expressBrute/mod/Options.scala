@@ -1,5 +1,6 @@
 package typingsSlinky.expressBrute.mod
 
+import typingsSlinky.express.mod.NextFunction
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
@@ -17,17 +18,9 @@ trait Options extends js.Object {
   var attachResetToRequest: js.UndefOr[Boolean] = js.native
   
   /**
-    * @summary Gets called with (req, res, next, nextValidRequestDate) when a request is rejected (default: ExpressBrute.FailForbidden)
+    * @summary Gets called with (req, res, next, nextValidRequestDate) when a request is rejected (default: `ExpressBrute.FailForbidden`)
     */
-  var failCallback: js.UndefOr[
-    js.Function4[
-      /* req */ Request_[ParamsDictionary, _, _, Query], 
-      /* res */ Response_[_], 
-      /* next */ js.Function, 
-      /* nextValidRequestDate */ js.Any, 
-      Unit
-    ]
-  ] = js.native
+  var failCallback: js.UndefOr[FailCallback] = js.native
   
   /**
     * @summary The number of retires the user has before they need to start waiting (default: 2)
@@ -37,7 +30,7 @@ trait Options extends js.Object {
   /**
     * @summary Gets called whenever an error occurs with the persistent store from which ExpressBrute cannot recover. It is passed an object containing the properties message (a description of the message), parent (the error raised by the session store), and [key, ip] or [req, res, next] depending on whether or the error occurs during reset or in the middleware itself.
     */
-  var handleStoreError: js.UndefOr[js.Any] = js.native
+  var handleStoreError: js.UndefOr[js.Function] = js.native
   
   /**
     * @summary The length of time (in seconds since the last request) to remember the number of requests that have been made by an IP. By default it will be set to maxWait * the number of attempts before you hit maxWait to discourage simply waiting for the lifetime to expire before resuming an attack. With default values this is about 6 hours.
@@ -90,7 +83,7 @@ object Options {
     
     @scala.inline
     def setFailCallback(
-      value: (/* req */ Request_[ParamsDictionary, _, _, Query], /* res */ Response_[_], /* next */ js.Function, /* nextValidRequestDate */ js.Any) => Unit
+      value: (/* req */ Request_[ParamsDictionary, js.Any, js.Any, Query], /* res */ Response_[js.Any], /* next */ NextFunction, /* nextValidRequestDate */ js.Date) => Unit
     ): Self = this.set("failCallback", js.Any.fromFunction4(value))
     
     @scala.inline
@@ -103,7 +96,7 @@ object Options {
     def deleteFreeRetries: Self = this.set("freeRetries", js.undefined)
     
     @scala.inline
-    def setHandleStoreError(value: js.Any): Self = this.set("handleStoreError", value.asInstanceOf[js.Any])
+    def setHandleStoreError(value: js.Function): Self = this.set("handleStoreError", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHandleStoreError: Self = this.set("handleStoreError", js.undefined)

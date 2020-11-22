@@ -6,8 +6,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("three/src/geometries/Geometries", "PlaneBufferGeometry")
 @js.native
+/**
+	 * @param [width=1] — Width of the sides on the X axis.
+	 * @param [height=1] — Height of the sides on the Y axis.
+	 * @param [widthSegments=1] — Number of segmented faces along the width of the sides.
+	 * @param [heightSegments=1] — Number of segmented faces along the height of the sides.
+	 */
 class PlaneBufferGeometry ()
-  extends typingsSlinky.three.planeGeometryMod.PlaneBufferGeometry {
+  extends typingsSlinky.three.planeBufferGeometryMod.PlaneBufferGeometry {
   def this(width: Double) = this()
   def this(width: js.UndefOr[scala.Nothing], height: Double) = this()
   def this(width: Double, height: Double) = this()

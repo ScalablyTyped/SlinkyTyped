@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GpuDeviceMemoryInfo extends js.Object {
   
   /**
-    * The size (in MiB) for the memory available to the GPU accelerator.
+    * The size of the memory available to the GPU accelerator, in MiB.
     */
   var SizeInMiB: js.UndefOr[GpuDeviceMemorySize] = js.native
 }

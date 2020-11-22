@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait InitParams extends js.Object {
   
-  var appId: String = js.native
+  var appId: js.UndefOr[String] = js.native
   
   var autoLogAppEvents: js.UndefOr[Boolean] = js.native
   
@@ -19,15 +19,15 @@ trait InitParams extends js.Object {
   
   var status: js.UndefOr[Boolean] = js.native
   
-  var version: js.UndefOr[String] = js.native
+  var version: String = js.native
   
   var xfbml: js.UndefOr[Boolean] = js.native
 }
 object InitParams {
   
   @scala.inline
-  def apply(appId: String): InitParams = {
-    val __obj = js.Dynamic.literal(appId = appId.asInstanceOf[js.Any])
+  def apply(version: String): InitParams = {
+    val __obj = js.Dynamic.literal(version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[InitParams]
   }
   
@@ -47,7 +47,13 @@ object InitParams {
     }
     
     @scala.inline
+    def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setAppId(value: String): Self = this.set("appId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAppId: Self = this.set("appId", js.undefined)
     
     @scala.inline
     def setAutoLogAppEvents(value: Boolean): Self = this.set("autoLogAppEvents", value.asInstanceOf[js.Any])
@@ -78,12 +84,6 @@ object InitParams {
     
     @scala.inline
     def deleteStatus: Self = this.set("status", js.undefined)
-    
-    @scala.inline
-    def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteVersion: Self = this.set("version", js.undefined)
     
     @scala.inline
     def setXfbml(value: Boolean): Self = this.set("xfbml", value.asInstanceOf[js.Any])

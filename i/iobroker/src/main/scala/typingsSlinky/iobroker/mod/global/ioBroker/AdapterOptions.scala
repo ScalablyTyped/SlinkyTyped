@@ -1,5 +1,6 @@
 package typingsSlinky.iobroker.mod.global.ioBroker
 
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -45,6 +46,9 @@ trait AdapterOptions extends js.Object {
   
   /** If true, the adapter will have a property `oStates` that contains a live cache of the adapter's states */
   var states: js.UndefOr[Boolean] = js.native
+  
+  /** Whether the adapter should warn if states are set without an corresponding existing object. Default: `true` */
+  var strictObjectChecks: js.UndefOr[Boolean] = js.native
   
   /** if the global system config should be included in the created object. Default: false */
   var systemConfig: js.UndefOr[Boolean] = js.native
@@ -152,6 +156,12 @@ object AdapterOptions {
     
     @scala.inline
     def deleteStates: Self = this.set("states", js.undefined)
+    
+    @scala.inline
+    def setStrictObjectChecks(value: Boolean): Self = this.set("strictObjectChecks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStrictObjectChecks: Self = this.set("strictObjectChecks", js.undefined)
     
     @scala.inline
     def setSystemConfig(value: Boolean): Self = this.set("systemConfig", value.asInstanceOf[js.Any])

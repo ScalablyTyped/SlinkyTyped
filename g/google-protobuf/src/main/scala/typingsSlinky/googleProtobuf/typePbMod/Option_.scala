@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Option_ () extends Message {
   
-  def clearValue(): Unit = js.native
+  def clearValue(): Option = js.native
   
   def getName(): String = js.native
   
@@ -18,8 +18,8 @@ class Option_ () extends Message {
   
   def hasValue(): Boolean = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): Option = js.native
   
-  def setValue(): Unit = js.native
-  def setValue(value: Any): Unit = js.native
+  def setValue(): Option = js.native
+  def setValue(value: Any): Option = js.native
 }

@@ -224,7 +224,7 @@ trait Vec2 extends js.Object {
     a.sub(b);
     
     // Should output [-10, -10]
-    console.log("The result of the addition is: " + a.toString());
+    console.log("The result of the subtraction is: " + a.toString());
     * @param rhs - The vector to add to the specified vector.
     * @returns Self for chaining.
     */
@@ -240,7 +240,7 @@ trait Vec2 extends js.Object {
     r.sub2(a, b);
     
     // Should output [-10, -10]
-    console.log("The result of the addition is: " + r.toString());
+    console.log("The result of the subtraction is: " + r.toString());
     * @param lhs - The first vector operand for the addition.
     * @param rhs - The second vector operand for the addition.
     * @returns Self for chaining.

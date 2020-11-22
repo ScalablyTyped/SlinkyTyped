@@ -1935,6 +1935,10 @@ object mod extends js.Object {
   
   val faVenusMars: IconDefinition = js.native
   
+  val faVest: IconDefinition = js.native
+  
+  val faVestPatches: IconDefinition = js.native
+  
   val faVial: IconDefinition = js.native
   
   val faVials: IconDefinition = js.native

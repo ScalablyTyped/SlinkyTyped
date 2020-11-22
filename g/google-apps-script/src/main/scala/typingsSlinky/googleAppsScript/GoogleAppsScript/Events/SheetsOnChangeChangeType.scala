@@ -4,36 +4,44 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-sealed trait SheetsOnChangeChangeType extends js.Object
-@JSGlobal("GoogleAppsScript.Events.SheetsOnChangeChangeType")
-@js.native
-object SheetsOnChangeChangeType extends js.Object {
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.googleAppsScript.googleAppsScriptStrings.EDIT
+  - typingsSlinky.googleAppsScript.googleAppsScriptStrings.INSERT_ROW
+  - typingsSlinky.googleAppsScript.googleAppsScriptStrings.INSERT_COLUMN
+  - typingsSlinky.googleAppsScript.googleAppsScriptStrings.REMOVE_ROW
+  - typingsSlinky.googleAppsScript.googleAppsScriptStrings.REMOVE_COLUMN
+  - typingsSlinky.googleAppsScript.googleAppsScriptStrings.INSERT_GRID
+  - typingsSlinky.googleAppsScript.googleAppsScriptStrings.REMOVE_GRID
+  - typingsSlinky.googleAppsScript.googleAppsScriptStrings.FORMAT
+  - typingsSlinky.googleAppsScript.googleAppsScriptStrings.OTHER
+*/
+trait SheetsOnChangeChangeType extends js.Object
+object SheetsOnChangeChangeType {
   
-  @js.native
-  sealed trait EDIT extends SheetsOnChangeChangeType
+  @scala.inline
+  def EDIT: typingsSlinky.googleAppsScript.googleAppsScriptStrings.EDIT = "EDIT".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.EDIT]
   
-  @js.native
-  sealed trait FORMAT extends SheetsOnChangeChangeType
+  @scala.inline
+  def FORMAT: typingsSlinky.googleAppsScript.googleAppsScriptStrings.FORMAT = "FORMAT".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.FORMAT]
   
-  @js.native
-  sealed trait INSERT_COLUMN extends SheetsOnChangeChangeType
+  @scala.inline
+  def INSERT_COLUMN: typingsSlinky.googleAppsScript.googleAppsScriptStrings.INSERT_COLUMN = "INSERT_COLUMN".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.INSERT_COLUMN]
   
-  @js.native
-  sealed trait INSERT_GRID extends SheetsOnChangeChangeType
+  @scala.inline
+  def INSERT_GRID: typingsSlinky.googleAppsScript.googleAppsScriptStrings.INSERT_GRID = "INSERT_GRID".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.INSERT_GRID]
   
-  @js.native
-  sealed trait INSERT_ROW extends SheetsOnChangeChangeType
+  @scala.inline
+  def INSERT_ROW: typingsSlinky.googleAppsScript.googleAppsScriptStrings.INSERT_ROW = "INSERT_ROW".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.INSERT_ROW]
   
-  @js.native
-  sealed trait OTHER extends SheetsOnChangeChangeType
+  @scala.inline
+  def OTHER: typingsSlinky.googleAppsScript.googleAppsScriptStrings.OTHER = "OTHER".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.OTHER]
   
-  @js.native
-  sealed trait REMOVE_COLUMN extends SheetsOnChangeChangeType
+  @scala.inline
+  def REMOVE_COLUMN: typingsSlinky.googleAppsScript.googleAppsScriptStrings.REMOVE_COLUMN = "REMOVE_COLUMN".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.REMOVE_COLUMN]
   
-  @js.native
-  sealed trait REMOVE_GRID extends SheetsOnChangeChangeType
+  @scala.inline
+  def REMOVE_GRID: typingsSlinky.googleAppsScript.googleAppsScriptStrings.REMOVE_GRID = "REMOVE_GRID".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.REMOVE_GRID]
   
-  @js.native
-  sealed trait REMOVE_ROW extends SheetsOnChangeChangeType
+  @scala.inline
+  def REMOVE_ROW: typingsSlinky.googleAppsScript.googleAppsScriptStrings.REMOVE_ROW = "REMOVE_ROW".asInstanceOf[typingsSlinky.googleAppsScript.googleAppsScriptStrings.REMOVE_ROW]
 }

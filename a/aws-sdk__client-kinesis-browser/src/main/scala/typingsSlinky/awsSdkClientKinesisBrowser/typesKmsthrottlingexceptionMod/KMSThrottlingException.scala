@@ -4,33 +4,27 @@ import typingsSlinky.awsSdkClientKinesisBrowser.getRecordsExceptionsUnionMod.Get
 import typingsSlinky.awsSdkClientKinesisBrowser.putRecordExceptionsUnionMod.PutRecordExceptionsUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.putRecordsExceptionsUnionMod.PutRecordsExceptionsUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.startStreamEncryptionExceptionsUnionMod.StartStreamEncryptionExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_KMSThrottlingExceptionDetails> * / any */ @js.native
 trait KMSThrottlingException
-  extends ServiceException[KMSThrottlingExceptionDetails]
-     with GetRecordsExceptionsUnion
+  extends GetRecordsExceptionsUnion
      with PutRecordExceptionsUnion
      with PutRecordsExceptionsUnion
      with StartStreamEncryptionExceptionsUnion {
   
-  @JSName("name")
-  var name_KMSThrottlingException: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.KMSThrottlingException = js.native
+  var name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.KMSThrottlingException = js.native
 }
 object KMSThrottlingException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: KMSThrottlingExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.KMSThrottlingException
   ): KMSThrottlingException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[KMSThrottlingException]
   }
   

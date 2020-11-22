@@ -13,7 +13,7 @@ trait IpAddressRequest extends js.Object {
   var Ip: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.Ip] = js.native
   
   /**
-    * The subnet that contains the IP address.
+    * The ID of the subnet that contains the IP address. 
     */
   var SubnetId: typingsSlinky.awsSdk.route53resolverMod.SubnetId = js.native
 }

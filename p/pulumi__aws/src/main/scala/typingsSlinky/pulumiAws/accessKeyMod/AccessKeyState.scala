@@ -8,10 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AccessKeyState extends js.Object {
   
-  /**
-    * The encrypted secret, base64 encoded, if `pgpKey` was specified.
-    * > **NOTE:** The encrypted secret may be decrypted using the command line,
-    */
   val encryptedSecret: js.UndefOr[Input[String]] = js.native
   
   /**
@@ -35,15 +31,6 @@ trait AccessKeyState extends js.Object {
     * the use of the secret key in automation.
     */
   val secret: js.UndefOr[Input[String]] = js.native
-  
-  /**
-    * **DEPRECATED** The secret access key converted into an SES SMTP
-    * password by applying [AWS's documented conversion
-    *
-    * @deprecated AWS SigV2 for SES SMTP passwords isy deprecated.
-  Use 'ses_smtp_password_v4' for region-specific AWS SigV4 signed SES SMTP password instead.
-    */
-  val sesSmtpPassword: js.UndefOr[Input[String]] = js.native
   
   /**
     * The secret access key converted into an SES SMTP
@@ -110,12 +97,6 @@ object AccessKeyState {
     
     @scala.inline
     def deleteSecret: Self = this.set("secret", js.undefined)
-    
-    @scala.inline
-    def setSesSmtpPassword(value: Input[String]): Self = this.set("sesSmtpPassword", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSesSmtpPassword: Self = this.set("sesSmtpPassword", js.undefined)
     
     @scala.inline
     def setSesSmtpPasswordV4(value: Input[String]): Self = this.set("sesSmtpPasswordV4", value.asInstanceOf[js.Any])

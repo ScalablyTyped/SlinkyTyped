@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ProjectParametersTransformation extends Object {
   
   /**
-    * The well-known ID of the datum transformation to apply to the projection. [List of valid IDs for Datum transformations](https://developers.arcgis.com/rest/services-reference/datum-transformations.htm).
+    * The well-known ID of the datum transformation to apply to the projection.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ProjectParameters.html#transformation)
     */
   var wkid: js.UndefOr[Double] = js.native
   
   /**
-    * The well-known text that defines a spatial reference. Many browsers have a limit to the length of a GET request of approximately 2048 characters. When using well-known text to specify the spatial reference you can easily exceed this limit. In these cases, you will need to [setup and use a proxy page](https://developers.arcgis.com/javascript/latest/guide/proxies/index.html).
+    * The well-known text that defines a spatial reference.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-ProjectParameters.html#transformation)
     */

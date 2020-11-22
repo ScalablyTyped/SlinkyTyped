@@ -57,6 +57,8 @@ class RouterLinkActive protected ()
   
   var link: js.Any = js.native
   
+  var linkInputChangesSubscription: js.Any = js.native
+  
   var linkWithHref: js.Any = js.native
   
   var links: QueryList[RouterLink] = js.native
@@ -67,11 +69,13 @@ class RouterLinkActive protected ()
   
   var router: js.Any = js.native
   
+  var routerEventsSubscription: js.Any = js.native
+  
   var routerLinkActiveOptions: Exact = js.native
   
   def routerLinkActive_=(data: js.Array[String] | String): Unit = js.native
   
-  var subscription: js.Any = js.native
+  var subscribeToEachLinkOnChanges: js.Any = js.native
   
   var update: js.Any = js.native
 }

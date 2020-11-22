@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("Electron.remote.TouchBarButton")
 @js.native
 class TouchBarButtonCls protected () extends TouchBarButton {
-  // Docs: http://electronjs.org/docs/api/touch-bar-button
+  // Docs: https://electronjs.org/docs/api/touch-bar-button
   /**
     * TouchBarButton
     */

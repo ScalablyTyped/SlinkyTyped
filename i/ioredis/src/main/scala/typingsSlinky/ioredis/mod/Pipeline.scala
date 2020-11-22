@@ -9,6 +9,7 @@ import typingsSlinky.ioredis.ioredisStrings.MATCH
 import typingsSlinky.ioredis.ioredisStrings.MAXLEN
 import typingsSlinky.ioredis.ioredisStrings.NOSAVE
 import typingsSlinky.ioredis.ioredisStrings.SAVE
+import typingsSlinky.ioredis.ioredisStrings.USAGE
 import typingsSlinky.ioredis.ioredisStrings.WITHSCORES
 import typingsSlinky.ioredis.ioredisStrings.count_
 import typingsSlinky.ioredis.ioredisStrings.group_
@@ -50,6 +51,10 @@ trait Pipeline extends js.Object {
   
   def brpoplpush(source: String, destination: String, timeout: Double): Pipeline = js.native
   def brpoplpush(source: String, destination: String, timeout: Double, callback: Callback[String]): Pipeline = js.native
+  
+  def bzpopmax(args: (String | Double | (Callback[js.Tuple3[String, String, String]]))*): Pipeline = js.native
+  
+  def bzpopmin(args: (String | Double | (Callback[js.Tuple3[String, String, String]]))*): Pipeline = js.native
   
   def client(args: ValueType*): Pipeline = js.native
   
@@ -112,6 +117,9 @@ trait Pipeline extends js.Object {
   def getrange(key: KeyType, start: Double, end: Double): Pipeline = js.native
   def getrange(key: KeyType, start: Double, end: Double, callback: Callback[String]): Pipeline = js.native
   
+  def getrangeBuffer(key: KeyType, start: Double, end: Double): Pipeline = js.native
+  def getrangeBuffer(key: KeyType, start: Double, end: Double, callback: Callback[Buffer]): Pipeline = js.native
+  
   def getset(key: KeyType, value: ValueType): Pipeline = js.native
   def getset(key: KeyType, value: ValueType, callback: Callback[String]): Pipeline = js.native
   
@@ -149,8 +157,14 @@ trait Pipeline extends js.Object {
   def hmset(key: KeyType, data: Map[String, _]): Pipeline = js.native
   def hmset(key: KeyType, data: Map[String, _], callback: Callback[BooleanResponse]): Pipeline = js.native
   
+  def hscan(key: KeyType, cursor: String, args: ValueType*): Pipeline = js.native
   def hscan(key: KeyType, cursor: Double, args: ValueType*): Pipeline = js.native
   
+  def hset(key: KeyType, args: ValueType*): Pipeline = js.native
+  def hset(key: KeyType, data: js.Object): Pipeline = js.native
+  def hset(key: KeyType, data: js.Object, callback: Callback[BooleanResponse]): Pipeline = js.native
+  def hset(key: KeyType, data: Map[String, _]): Pipeline = js.native
+  def hset(key: KeyType, data: Map[String, _], callback: Callback[BooleanResponse]): Pipeline = js.native
   def hset(key: KeyType, field: String, value: ValueType): Pipeline = js.native
   def hset(key: KeyType, field: String, value: ValueType, callback: Callback[BooleanResponse]): Pipeline = js.native
   
@@ -159,6 +173,9 @@ trait Pipeline extends js.Object {
   
   def hsetnx(key: KeyType, field: String, value: ValueType): Pipeline = js.native
   def hsetnx(key: KeyType, field: String, value: ValueType, callback: Callback[BooleanResponse]): Pipeline = js.native
+  
+  def hstrlen(key: KeyType, field: String): Pipeline = js.native
+  def hstrlen(key: KeyType, field: String, callback: Callback[Double]): Pipeline = js.native
   
   def hvals(key: KeyType): Pipeline = js.native
   def hvals(key: KeyType, callback: Callback[js.Array[String]]): Pipeline = js.native
@@ -228,6 +245,11 @@ trait Pipeline extends js.Object {
   def ltrim(key: KeyType, start: Double, stop: Double): Pipeline = js.native
   def ltrim(key: KeyType, start: Double, stop: Double, callback: Callback[Ok]): Pipeline = js.native
   
+  @JSName("memory")
+  def memory_USAGE(argument: USAGE, key: KeyType): Pipeline = js.native
+  @JSName("memory")
+  def memory_USAGE(argument: USAGE, key: KeyType, callback: Callback[Double]): Pipeline = js.native
+  
   def mget(keys: KeyType*): Pipeline = js.native
   
   def migrate(args: ValueType*): Pipeline = js.native
@@ -255,7 +277,7 @@ trait Pipeline extends js.Object {
   
   def `object`(subcommand: String, args: ValueType*): Pipeline = js.native
   
-  val options: RedisOptions = js.native
+  val options: RedisOptions | ClusterOptions = js.native
   
   def persist(key: KeyType): Pipeline = js.native
   def persist(key: KeyType, callback: Callback[BooleanResponse]): Pipeline = js.native
@@ -296,7 +318,7 @@ trait Pipeline extends js.Object {
   def randomkey(): Pipeline = js.native
   def randomkey(callback: Callback[String]): Pipeline = js.native
   
-  val redis: Redis = js.native
+  val redis: Redis | Cluster = js.native
   
   def rename(key: KeyType, newkey: KeyType): Pipeline = js.native
   def rename(key: KeyType, newkey: KeyType, callback: Callback[String]): Pipeline = js.native
@@ -454,6 +476,7 @@ trait Pipeline extends js.Object {
   
   def srem(key: KeyType, members: ValueType*): Pipeline = js.native
   
+  def sscan(key: KeyType, cursor: String, args: ValueType*): Pipeline = js.native
   def sscan(key: KeyType, cursor: Double, args: ValueType*): Pipeline = js.native
   
   def strlen(key: KeyType): Pipeline = js.native
@@ -539,6 +562,12 @@ trait Pipeline extends js.Object {
   def zincrby(key: KeyType, increment: Double, member: String, callback: Callback[String]): Pipeline = js.native
   
   def zinterstore(destination: String, numkeys: Double, key: KeyType, args: String*): Pipeline = js.native
+  
+  def zpopmax(key: KeyType, count: Double): Pipeline = js.native
+  def zpopmax(key: KeyType, count: Double, callback: Callback[js.Array[String]]): Pipeline = js.native
+  
+  def zpopmin(key: KeyType, count: Double): Pipeline = js.native
+  def zpopmin(key: KeyType, count: Double, callback: Callback[js.Array[String]]): Pipeline = js.native
   
   def zrange(key: KeyType, start: Double, stop: Double): Pipeline = js.native
   def zrange(key: KeyType, start: Double, stop: Double, callback: Callback[js.Array[String]]): Pipeline = js.native
@@ -629,6 +658,7 @@ trait Pipeline extends js.Object {
   def zrevrank(key: KeyType, member: String): Pipeline = js.native
   def zrevrank(key: KeyType, member: String, callback: Callback[Double]): Pipeline = js.native
   
+  def zscan(key: KeyType, cursor: String, args: ValueType*): Pipeline = js.native
   def zscan(key: KeyType, cursor: Double, args: ValueType*): Pipeline = js.native
   
   def zscore(key: KeyType, member: String): Pipeline = js.native

@@ -1,6 +1,8 @@
 package typingsSlinky.ecmarkup
 
 import org.scalajs.dom.raw.Document
+import typingsSlinky.ecmarkup.specMod.Spec
+import typingsSlinky.ecmarkup.specMod.Warning
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,11 +11,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object collectNodesMod extends js.Object {
   
-  def collectNodes(sourceText: String, dom: js.Any, document: Document): CollectNodesReturnType = js.native
+  def collectNodes(report: js.Function1[/* e */ Warning, Unit], mainSource: String, spec: Spec, document: Document): CollectNodesReturnType = js.native
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.ecmarkup.anon.Algorithms
-    - typingsSlinky.ecmarkup.anon.Errors
+    - typingsSlinky.ecmarkup.anon.Success
   */
   trait CollectNodesReturnType extends js.Object
 }

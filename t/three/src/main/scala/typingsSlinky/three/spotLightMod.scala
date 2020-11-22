@@ -24,32 +24,41 @@ object spotLightMod extends js.Object {
       decay: js.UndefOr[Double]
     ) = this()
     
-    /*
+    /**
     	 * Maximum extent of the spotlight, in radians, from its direction.
-    	 * Default — Math.PI/2.
+    	 * @default Math.PI / 3.
     	 */
     var angle: Double = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var decay: Double = js.native
     
     /**
     	 * If non-zero, light will attenuate linearly from maximum intensity at light position down to zero at distance.
-    	 * Default — 0.0.
+    	 * @default 0
     	 */
     var distance: Double = js.native
     
     val isSpotLight: `true` = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var penumbra: Double = js.native
     
     var power: Double = js.native
     
+    /**
+    	 * @default new THREE.SpotLightShadow()
+    	 */
     @JSName("shadow")
     var shadow_SpotLight: SpotLightShadow = js.native
     
     /**
     	 * Spotlight focus points at target.position.
-    	 * Default position — (0,0,0).
+    	 * @default new THREE.Object3D()
     	 */
     var target: Object3D = js.native
   }

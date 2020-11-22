@@ -2,9 +2,9 @@ package typingsSlinky.reactNativeVideo.mod
 
 import typingsSlinky.reactNative.mod.ViewProps
 import typingsSlinky.reactNativeVideo.anon.BufferForPlaybackAfterRebufferMs
+import typingsSlinky.reactNativeVideo.anon.Headers
 import typingsSlinky.reactNativeVideo.anon.Language
 import typingsSlinky.reactNativeVideo.anon.Type
-import typingsSlinky.reactNativeVideo.anon.Uri
 import typingsSlinky.reactNativeVideo.anon.Value
 import typingsSlinky.reactNativeVideo.reactNativeVideoStrings.all
 import typingsSlinky.reactNativeVideo.reactNativeVideoStrings.contain
@@ -136,6 +136,8 @@ trait VideoProperties extends ViewProps {
    // via Image#resizeMode
   var posterResizeMode: js.UndefOr[stretch | contain | cover | none] = js.native
   
+  var preventsDisplaySleepDuringVideoPlayback: js.UndefOr[Boolean] = js.native
+  
   var progressUpdateInterval: js.UndefOr[Double] = js.native
   
   var rate: js.UndefOr[Double] = js.native
@@ -163,7 +165,7 @@ trait VideoProperties extends ViewProps {
   
   /* Wrapper component */
   // Opaque type returned by require('./video.mp4')
-  var source: Uri | Double = js.native
+  var source: Headers | Double = js.native
   
   /* Native only */
   var src: js.UndefOr[js.Any] = js.native
@@ -183,7 +185,7 @@ trait VideoProperties extends ViewProps {
 object VideoProperties {
   
   @scala.inline
-  def apply(source: Uri | Double): VideoProperties = {
+  def apply(source: Headers | Double): VideoProperties = {
     val __obj = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[VideoProperties]
   }
@@ -204,7 +206,7 @@ object VideoProperties {
     }
     
     @scala.inline
-    def setSource(value: Uri | Double): Self = this.set("source", value.asInstanceOf[js.Any])
+    def setSource(value: Headers | Double): Self = this.set("source", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAllowsExternalPlayback(value: Boolean): Self = this.set("allowsExternalPlayback", value.asInstanceOf[js.Any])
@@ -541,6 +543,12 @@ object VideoProperties {
     
     @scala.inline
     def deletePosterResizeMode: Self = this.set("posterResizeMode", js.undefined)
+    
+    @scala.inline
+    def setPreventsDisplaySleepDuringVideoPlayback(value: Boolean): Self = this.set("preventsDisplaySleepDuringVideoPlayback", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreventsDisplaySleepDuringVideoPlayback: Self = this.set("preventsDisplaySleepDuringVideoPlayback", js.undefined)
     
     @scala.inline
     def setProgressUpdateInterval(value: Double): Self = this.set("progressUpdateInterval", value.asInstanceOf[js.Any])

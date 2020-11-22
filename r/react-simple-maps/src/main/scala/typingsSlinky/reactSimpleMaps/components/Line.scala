@@ -24,10 +24,15 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactSimpleMaps.mod.LineProps
 import typingsSlinky.reactSimpleMaps.mod.Point
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings._empty
+import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`additions removals`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`additions text`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`after-edge`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`before-edge`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`inline`
+import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`removals additions`
+import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`removals text`
+import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`text additions`
+import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`text removals`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`text-after-edge`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`text-before-edge`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`use-credentials`
@@ -238,7 +243,9 @@ object Line {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

@@ -5,6 +5,7 @@ import typingsSlinky.angularCompiler.expressionConverterMod.LocalResolver
 import typingsSlinky.angularCompiler.outputAstMod.Expression
 import typingsSlinky.angularCompiler.outputAstMod.ReadVarExpr
 import typingsSlinky.angularCompiler.outputAstMod.Statement
+import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,6 +43,7 @@ class BindingScope protected () extends LocalResolver {
   def maybeRestoreView(retrievalLevel: Double, localRefLookup: Boolean): Unit = js.native
   
   def nestedScope(level: Double): BindingScope = js.native
+  def nestedScope(level: Double, globals: Set[String]): BindingScope = js.native
   
   var parent: js.Any = js.native
   

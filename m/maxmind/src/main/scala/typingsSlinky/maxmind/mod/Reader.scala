@@ -1,6 +1,7 @@
 package typingsSlinky.maxmind.mod
 
-import typingsSlinky.maxmind.responseMod.Response
+import typingsSlinky.mmdbLib.responseMod.Response
+import typingsSlinky.mmdbLib.typesMod.ReaderOptions
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("maxmind", "Reader")
 @js.native
 class Reader[T /* <: Response */] protected ()
-  extends typingsSlinky.maxmind.readerMod.default[T] {
+  extends typingsSlinky.mmdbLib.mod.default[T] {
   def this(db: Buffer) = this()
-  def this(db: Buffer, opts: OpenOpts) = this()
+  def this(db: Buffer, opts: ReaderOptions) = this()
 }

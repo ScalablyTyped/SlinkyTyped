@@ -1,9 +1,12 @@
 package typingsSlinky.antDesignProLayout.globalHeaderMod
 
+import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
+import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.PrivateSiderMenuProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@ant-design/pro-layout/lib/GlobalHeader", JSImport.Default)
 @js.native
-class default () extends GlobalHeader
+object default extends TopLevel[ReactComponentClass[GlobalHeaderProps with PrivateSiderMenuProps]]

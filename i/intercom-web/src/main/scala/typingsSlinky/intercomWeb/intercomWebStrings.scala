@@ -41,6 +41,9 @@ object intercomWebStrings {
   def shutdown: shutdown = "shutdown".asInstanceOf[shutdown]
   
   @scala.inline
+  def startTour: startTour = "startTour".asInstanceOf[startTour]
+  
+  @scala.inline
   def trackEvent: trackEvent = "trackEvent".asInstanceOf[trackEvent]
   
   @scala.inline
@@ -78,6 +81,9 @@ object intercomWebStrings {
   
   @js.native
   sealed trait shutdown extends IntercomCommand
+  
+  @js.native
+  sealed trait startTour extends IntercomCommand
   
   @js.native
   sealed trait trackEvent extends IntercomCommand

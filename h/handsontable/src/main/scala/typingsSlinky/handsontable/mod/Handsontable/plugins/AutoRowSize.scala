@@ -58,6 +58,8 @@ trait AutoRowSize extends Base {
   
   def isNeedRecalculate(): Boolean = js.native
   
+  var measuredColumns: Double = js.native
+  
   def recalculateAllRowsHeight(): Unit = js.native
   
   var sampleGenerator: SamplesGenerator = js.native

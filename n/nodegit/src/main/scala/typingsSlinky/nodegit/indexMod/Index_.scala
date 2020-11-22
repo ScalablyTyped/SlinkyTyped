@@ -95,7 +95,7 @@ class Index_ () extends js.Object {
   
   def version(): Double = js.native
   
-  def write(): Double = js.native
+  def write(): js.Promise[Double] = js.native
   
   def writeTree(): js.Promise[Oid] = js.native
   

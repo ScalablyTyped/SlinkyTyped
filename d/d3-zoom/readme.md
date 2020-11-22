@@ -1,7 +1,7 @@
 
 # Scala.js typings for d3-zoom
 
-Typings are for version 1.7
+Typings are for version 2.0
 
 ## Library description:
 Pan and zoom SVG, HTML or Canvas using mouse or touch input.

@@ -25,8 +25,10 @@ package object queryHelpersMod {
   type FindAllBy[Arguments /* <: js.Array[_] */] = typingsSlinky.testingLibraryDom.queryHelpersMod.QueryMethod[
     js.Tuple3[
       /* import warning: importer.ImportType#apply Failed type conversion: Arguments[0] */ js.Any, 
-      /* import warning: importer.ImportType#apply Failed type conversion: Arguments[1] */ js.Any, 
-      typingsSlinky.testingLibraryDom.waitForMod.waitForOptions
+      js.UndefOr[
+        /* import warning: importer.ImportType#apply Failed type conversion: Arguments[1] */ js.Any
+      ], 
+      js.UndefOr[typingsSlinky.testingLibraryDom.waitForMod.waitForOptions]
     ], 
     js.Promise[js.Array[org.scalajs.dom.raw.HTMLElement]]
   ]
@@ -34,8 +36,10 @@ package object queryHelpersMod {
   type FindBy[Arguments /* <: js.Array[_] */] = typingsSlinky.testingLibraryDom.queryHelpersMod.QueryMethod[
     js.Tuple3[
       /* import warning: importer.ImportType#apply Failed type conversion: Arguments[0] */ js.Any, 
-      /* import warning: importer.ImportType#apply Failed type conversion: Arguments[1] */ js.Any, 
-      typingsSlinky.testingLibraryDom.waitForMod.waitForOptions
+      js.UndefOr[
+        /* import warning: importer.ImportType#apply Failed type conversion: Arguments[1] */ js.Any
+      ], 
+      js.UndefOr[typingsSlinky.testingLibraryDom.waitForMod.waitForOptions]
     ], 
     js.Promise[org.scalajs.dom.raw.HTMLElement]
   ]

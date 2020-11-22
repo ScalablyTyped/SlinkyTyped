@@ -103,7 +103,7 @@ trait PodSpec extends js.Object {
   var overhead: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
-    * PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is alpha-level and is only honored by servers that enable the NonPreemptingPriority feature.
+    * PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is beta-level, gated by the NonPreemptingPriority feature-gate.
     */
   var preemptionPolicy: js.UndefOr[Input[String]] = js.native
   
@@ -153,6 +153,11 @@ trait PodSpec extends js.Object {
   var serviceAccountName: js.UndefOr[Input[String]] = js.native
   
   /**
+    * If true the pod's hostname will be configured as the pod's FQDN, rather than the leaf name (the default). In Linux containers, this means setting the FQDN in the hostname field of the kernel (the nodename field of struct utsname). In Windows containers, this means setting the registry value of hostname for the registry key HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters to FQDN. If a pod does not have FQDN, this has no effect. Default to false.
+    */
+  var setHostnameAsFQDN: js.UndefOr[Input[Boolean]] = js.native
+  
+  /**
     * Share a single process namespace between all of the containers in a pod. When this is set containers will be able to view and signal processes from other containers in the same pod, and the first process in each container will not be assigned PID 1. HostPID and ShareProcessNamespace cannot both be set. Optional: Default to false.
     */
   var shareProcessNamespace: js.UndefOr[Input[Boolean]] = js.native
@@ -173,7 +178,7 @@ trait PodSpec extends js.Object {
   var tolerations: js.UndefOr[Input[js.Array[Input[Toleration]]]] = js.native
   
   /**
-    * TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. This field is only honored by clusters that enable the EvenPodsSpread feature. All topologySpreadConstraints are ANDed.
+    * TopologySpreadConstraints describes how a group of pods ought to spread across topology domains. Scheduler will schedule pods in a way which abides by the constraints. All topologySpreadConstraints are ANDed.
     */
   var topologySpreadConstraints: js.UndefOr[Input[js.Array[Input[TopologySpreadConstraint]]]] = js.native
   
@@ -387,6 +392,12 @@ object PodSpec {
     
     @scala.inline
     def deleteServiceAccountName: Self = this.set("serviceAccountName", js.undefined)
+    
+    @scala.inline
+    def setSetHostnameAsFQDN(value: Input[Boolean]): Self = this.set("setHostnameAsFQDN", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSetHostnameAsFQDN: Self = this.set("setHostnameAsFQDN", js.undefined)
     
     @scala.inline
     def setShareProcessNamespace(value: Input[Boolean]): Self = this.set("shareProcessNamespace", value.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-intl
 
-Typings are for version 3.12.1
+Typings are for version 5.10.4
 
 ## Library description:
 Internationalize React apps. This library provides React components and an API to format dates, numbers, and strings, including pluralization and handling translations.

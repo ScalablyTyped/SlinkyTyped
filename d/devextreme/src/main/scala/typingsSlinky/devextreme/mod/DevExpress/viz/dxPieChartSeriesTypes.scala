@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPieChartSeriesTypes extends js.Object {
   
-  /** @name dxPieChartSeriesTypes.CommonPieChartSeries */
+  /**
+    * [descr:dxPieChartSeriesTypes.CommonPieChartSeries]
+    */
   var CommonPieChartSeries: js.UndefOr[dxPieChartSeriesTypesCommonPieChartSeries] = js.native
   
-  /** @name dxPieChartSeriesTypes.DoughnutSeries */
+  /**
+    * [descr:dxPieChartSeriesTypes.DoughnutSeries]
+    */
   var DoughnutSeries: js.UndefOr[js.Any] = js.native
   
-  /** @name dxPieChartSeriesTypes.PieSeries */
+  /**
+    * [descr:dxPieChartSeriesTypes.PieSeries]
+    */
   var PieSeries: js.UndefOr[js.Any] = js.native
 }
 object dxPieChartSeriesTypes {

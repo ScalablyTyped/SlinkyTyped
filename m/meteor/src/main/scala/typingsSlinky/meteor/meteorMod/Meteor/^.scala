@@ -33,5 +33,5 @@ object ^ extends js.Object {
   
   var settings: Settings_ = js.native
   
-  var users: Collection[User_] = js.native
+  var users: Collection[User_, User_] = js.native
 }

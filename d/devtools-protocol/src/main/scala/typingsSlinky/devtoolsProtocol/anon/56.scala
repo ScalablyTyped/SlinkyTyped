@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetInspectedNodeRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetAttributesAsTextRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `56` extends js.Object {
   
-  var paramsType: js.Array[SetInspectedNodeRequest] = js.native
+  var paramsType: js.Array[SetAttributesAsTextRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `56` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetInspectedNodeRequest], returnType: Unit): `56` = {
+  def apply(paramsType: js.Array[SetAttributesAsTextRequest], returnType: Unit): `56` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`56`]
   }
@@ -36,10 +36,10 @@ object `56` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetInspectedNodeRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetAttributesAsTextRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetInspectedNodeRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetAttributesAsTextRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

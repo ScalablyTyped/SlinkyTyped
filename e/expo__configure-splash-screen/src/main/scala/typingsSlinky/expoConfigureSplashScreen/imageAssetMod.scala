@@ -1,5 +1,6 @@
 package typingsSlinky.expoConfigureSplashScreen
 
+import typingsSlinky.expoConfigureSplashScreen.anon.DarkModeImage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object imageAssetMod extends js.Object {
   
   def default(iosProjectPath: String): js.Promise[Unit] = js.native
-  def default(iosProjectPath: String, imagePath: js.UndefOr[scala.Nothing], darkModeImagePath: String): js.Promise[Unit] = js.native
-  def default(iosProjectPath: String, imagePath: String): js.Promise[Unit] = js.native
-  def default(iosProjectPath: String, imagePath: String, darkModeImagePath: String): js.Promise[Unit] = js.native
+  def default(iosProjectPath: String, config: DarkModeImage): js.Promise[Unit] = js.native
 }

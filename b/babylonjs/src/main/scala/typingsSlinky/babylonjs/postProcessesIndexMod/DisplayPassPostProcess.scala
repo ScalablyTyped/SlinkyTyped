@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.postProcessesIndexMod
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -111,4 +112,12 @@ class DisplayPassPostProcess protected ()
     engine: Engine,
     reusable: Boolean
   ) = this()
+}
+/* static members */
+@JSImport("babylonjs/PostProcesses/index", "DisplayPassPostProcess")
+@js.native
+object DisplayPassPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): Nullable[typingsSlinky.babylonjs.displayPassPostProcessMod.DisplayPassPostProcess] = js.native
 }

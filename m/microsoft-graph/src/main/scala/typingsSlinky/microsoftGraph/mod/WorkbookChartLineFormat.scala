@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookChartLineFormat extends Entity {
   
   // HTML color code representing the color of lines in the chart.
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[NullableOption[String]] = js.native
 }
 object WorkbookChartLineFormat {
   
@@ -34,9 +34,12 @@ object WorkbookChartLineFormat {
     }
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: NullableOption[String]): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
+    
+    @scala.inline
+    def setColorNull: Self = this.set("color", null)
   }
 }

@@ -2,6 +2,7 @@ package typingsSlinky.officeUiFabricReact.basePickerTypesMod
 
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.Input
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import typingsSlinky.officeUiFabricReact.libAutofillMod.Autofill
@@ -11,7 +12,6 @@ import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.Props
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -86,10 +86,12 @@ trait IBasePickerProps[T]
   var onChange: js.UndefOr[js.Function1[/* items */ js.UndefOr[js.Array[T]], Unit]] = js.native
   
   /**
-    * A callback to override the default behavior of adding the selected suggestion on dismiss.
+    * A callback to override the default behavior of adding the selected suggestion on dismiss. If it returns true or
+    * nothing, the selected item will be added on dismiss. If false, the selected item will not be added on dismiss.
+    *
     */
   var onDismiss: js.UndefOr[
-    js.Function2[/* ev */ js.UndefOr[js.Any], /* selectedItem */ js.UndefOr[T], Unit]
+    js.Function2[/* ev */ js.UndefOr[js.Any], /* selectedItem */ js.UndefOr[T], Boolean | Unit]
   ] = js.native
   
   /**

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/signature-v4/build/constants", JSImport.Namespace)
+@JSImport("@aws-sdk/signature-v4/dist/cjs/constants", JSImport.Namespace)
 @js.native
 object constantsMod extends js.Object {
   
@@ -21,6 +21,8 @@ object constantsMod extends js.Object {
   val CREDENTIAL_QUERY_PARAM: /* "X-Amz-Credential" */ String = js.native
   
   val DATE_HEADER: /* "date" */ String = js.native
+  
+  val EVENT_ALGORITHM_IDENTIFIER: /* "AWS4-HMAC-SHA256-PAYLOAD" */ String = js.native
   
   val EXPIRES_QUERY_PARAM: /* "X-Amz-Expires" */ String = js.native
   

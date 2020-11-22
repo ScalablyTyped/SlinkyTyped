@@ -48,9 +48,15 @@ trait Options extends js.Object {
   val isEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-  		Text to display before the spinner. No prefix text will be displayed if set to an empty string.
+  		Disable the spinner and all log text. All output is suppressed and `isEnabled` will be considered `false`.
+  		@default false
   		*/
-  val prefixText: js.UndefOr[String] = js.native
+  val isSilent: js.UndefOr[Boolean] = js.native
+  
+  /**
+  		Text or a function that returns text to display before the spinner. No prefix text will be displayed if set to an empty string.
+  		*/
+  val prefixText: js.UndefOr[String | PrefixTextGenerator] = js.native
   
   /**
   		Name of one of the provided spinners. See [`example.js`](https://github.com/BendingBender/ora/blob/master/example.js) in this repo if you want to test out different spinners. On Windows, it will always use the line spinner as the Windows command-line doesn't have proper Unicode support.
@@ -138,7 +144,16 @@ object Options {
     def deleteIsEnabled: Self = this.set("isEnabled", js.undefined)
     
     @scala.inline
-    def setPrefixText(value: String): Self = this.set("prefixText", value.asInstanceOf[js.Any])
+    def setIsSilent(value: Boolean): Self = this.set("isSilent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsSilent: Self = this.set("isSilent", js.undefined)
+    
+    @scala.inline
+    def setPrefixTextFunction0(value: () => String): Self = this.set("prefixText", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setPrefixText(value: String | PrefixTextGenerator): Self = this.set("prefixText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePrefixText: Self = this.set("prefixText", js.undefined)

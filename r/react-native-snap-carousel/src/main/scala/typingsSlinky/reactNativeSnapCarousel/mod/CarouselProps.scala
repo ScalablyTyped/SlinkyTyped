@@ -2,11 +2,11 @@ package typingsSlinky.reactNativeSnapCarousel.mod
 
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.mod.Animated.AnimatedValue
 import typingsSlinky.reactNative.mod.Animated.DecayAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.SpringAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.TimingAnimationConfig
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeScrollEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -210,7 +210,7 @@ trait CarouselProps[T] extends js.Object {
   /**
     * Exposed View callback; invoked on mount and layout changes
     */
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   /**
     * Exposed ScrollView callback; fired while scrolling

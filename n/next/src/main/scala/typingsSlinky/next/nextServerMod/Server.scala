@@ -2,8 +2,7 @@ package typingsSlinky.next.nextServerMod
 
 import typingsSlinky.next.anon.AmpOptimizerConfig
 import typingsSlinky.next.anon.BasePath
-import typingsSlinky.next.anon.HasStaticFallback
-import typingsSlinky.next.anon.Match
+import typingsSlinky.next.anon.FallbackMode
 import typingsSlinky.next.apiUtilsMod.ApiPreviewProps
 import typingsSlinky.next.buildMod.PrerenderManifest
 import typingsSlinky.next.loadCustomRoutesMod.CustomRoutes
@@ -58,7 +57,7 @@ trait Server extends js.Object {
   
   /* protected */ def getCustomRoutes(): CustomRoutes = js.native
   
-  /* protected */ def getDynamicRoutes(): js.Array[Match] = js.native
+  /* protected */ def getDynamicRoutes(): js.Array[DynamicRouteItem] = js.native
   
   var getFilesystemPaths: js.Any = js.native
   
@@ -75,7 +74,7 @@ trait Server extends js.Object {
     js.Promise[Unit]
   ] = js.native
   
-  /* protected */ def getStaticPaths(pathname: String): js.Promise[HasStaticFallback] = js.native
+  /* protected */ def getStaticPaths(pathname: String): js.Promise[FallbackMode] = js.native
   
   /**
     * Resolves `API` request, in development builds on demand
@@ -97,7 +96,7 @@ trait Server extends js.Object {
   
   /* protected */ def isServeableUrl(untrustedFileUrl: String): Boolean = js.native
   
-  var logError: js.Any = js.native
+  def logError(err: js.Error): Unit = js.native
   
   var nextConfig: NextConfig = js.native
   
@@ -133,12 +132,51 @@ trait Server extends js.Object {
   ): js.Promise[Unit] = js.native
   
   def render404(req: IncomingMessage, res: ServerResponse): js.Promise[Unit] = js.native
+  def render404(
+    req: IncomingMessage,
+    res: ServerResponse,
+    parsedUrl: js.UndefOr[scala.Nothing],
+    setHeaders: Boolean
+  ): js.Promise[Unit] = js.native
   def render404(req: IncomingMessage, res: ServerResponse, parsedUrl: UrlWithParsedQuery): js.Promise[Unit] = js.native
+  def render404(req: IncomingMessage, res: ServerResponse, parsedUrl: UrlWithParsedQuery, setHeaders: Boolean): js.Promise[Unit] = js.native
   
   def renderError(err: Null, req: IncomingMessage, res: ServerResponse, pathname: String): js.Promise[Unit] = js.native
+  def renderError(
+    err: Null,
+    req: IncomingMessage,
+    res: ServerResponse,
+    pathname: String,
+    query: js.UndefOr[scala.Nothing],
+    setHeaders: Boolean
+  ): js.Promise[Unit] = js.native
   def renderError(err: Null, req: IncomingMessage, res: ServerResponse, pathname: String, query: ParsedUrlQuery): js.Promise[Unit] = js.native
+  def renderError(
+    err: Null,
+    req: IncomingMessage,
+    res: ServerResponse,
+    pathname: String,
+    query: ParsedUrlQuery,
+    setHeaders: Boolean
+  ): js.Promise[Unit] = js.native
   def renderError(err: js.Error, req: IncomingMessage, res: ServerResponse, pathname: String): js.Promise[Unit] = js.native
+  def renderError(
+    err: js.Error,
+    req: IncomingMessage,
+    res: ServerResponse,
+    pathname: String,
+    query: js.UndefOr[scala.Nothing],
+    setHeaders: Boolean
+  ): js.Promise[Unit] = js.native
   def renderError(err: js.Error, req: IncomingMessage, res: ServerResponse, pathname: String, query: ParsedUrlQuery): js.Promise[Unit] = js.native
+  def renderError(
+    err: js.Error,
+    req: IncomingMessage,
+    res: ServerResponse,
+    pathname: String,
+    query: ParsedUrlQuery,
+    setHeaders: Boolean
+  ): js.Promise[Unit] = js.native
   
   def renderErrorToHTML(err: Null, req: IncomingMessage, res: ServerResponse, _pathname: String): js.Promise[String | Null] = js.native
   def renderErrorToHTML(err: Null, req: IncomingMessage, res: ServerResponse, _pathname: String, query: ParsedUrlQuery): js.Promise[String | Null] = js.native

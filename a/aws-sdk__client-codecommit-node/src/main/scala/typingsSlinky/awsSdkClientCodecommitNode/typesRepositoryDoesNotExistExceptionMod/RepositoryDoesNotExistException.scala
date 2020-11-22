@@ -26,16 +26,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.testRepositoryTriggersExceptions
 import typingsSlinky.awsSdkClientCodecommitNode.updateDefaultBranchExceptionsUnionMod.UpdateDefaultBranchExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updateRepositoryDescriptionExceptionsUnionMod.UpdateRepositoryDescriptionExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updateRepositoryNameExceptionsUnionMod.UpdateRepositoryNameExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_RepositoryDoesNotExistExceptionDetails> * / any */ @js.native
 trait RepositoryDoesNotExistException
-  extends ServiceException[RepositoryDoesNotExistExceptionDetails]
-     with CreateBranchExceptionsUnion
+  extends CreateBranchExceptionsUnion
      with CreatePullRequestExceptionsUnion
      with DeleteBranchExceptionsUnion
      with DeleteFileExceptionsUnion
@@ -62,19 +60,15 @@ trait RepositoryDoesNotExistException
      with UpdateRepositoryDescriptionExceptionsUnion
      with UpdateRepositoryNameExceptionsUnion {
   
-  @JSName("name")
-  var name_RepositoryDoesNotExistException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryDoesNotExistException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryDoesNotExistException = js.native
 }
 object RepositoryDoesNotExistException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: RepositoryDoesNotExistExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryDoesNotExistException
   ): RepositoryDoesNotExistException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[RepositoryDoesNotExistException]
   }
   

@@ -1,6 +1,6 @@
 package typingsSlinky.serveStatic.mod
 
-import typingsSlinky.expressServeStaticCore.mod.Handler
+import typingsSlinky.node.httpMod.ServerResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,6 +14,6 @@ object ^ extends js.Object {
     * The file to serve will be determined by combining req.url with the provided root directory.
     * When a file is not found, instead of sending a 404 response, this module will instead call next() to move on to the next middleware, allowing for stacking and fall-backs.
     */
-  def apply(root: String): Handler = js.native
-  def apply(root: String, options: ServeStaticOptions): Handler = js.native
+  def apply[R /* <: ServerResponse */](root: String): RequestHandler[R] = js.native
+  def apply[R /* <: ServerResponse */](root: String, options: ServeStaticOptions[R]): RequestHandler[R] = js.native
 }

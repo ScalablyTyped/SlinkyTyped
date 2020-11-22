@@ -48,7 +48,7 @@ trait CreateDBInstanceReadReplicaMessage extends js.Object {
   var DeletionProtection: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * The Active Directory directory ID to create the DB instance in. For Oracle DB instances, Amazon RDS can use Kerberos authentication to authenticate users that connect to the DB instance. For more information, see  Using Kerberos Authentication with Amazon RDS for Oracle in the Amazon RDS User Guide. For Microsoft SQL Server DB instances, Amazon RDS can use Windows Authentication to authenticate users that connect to the DB instance. For more information, see  Using Windows Authentication with an Amazon RDS DB Instance Running Microsoft SQL Server in the Amazon RDS User Guide.
+    * The Active Directory directory ID to create the DB instance in. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an Active Directory Domain. For more information, see  Kerberos Authentication in the Amazon RDS User Guide.
     */
   var Domain: js.UndefOr[String] = js.native
   
@@ -63,7 +63,7 @@ trait CreateDBInstanceReadReplicaMessage extends js.Object {
   var EnableCloudwatchLogsExports: js.UndefOr[LogTypeList] = js.native
   
   /**
-    * A value that indicates whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts. By default, mapping is disabled. For information about the supported DB engines, see CreateDBInstance. For more information about IAM database authentication, see  IAM Database Authentication for MySQL and PostgreSQL in the Amazon RDS User Guide. 
+    * A value that indicates whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts. By default, mapping is disabled. For more information about IAM database authentication, see  IAM Database Authentication for MySQL and PostgreSQL in the Amazon RDS User Guide. 
     */
   var EnableIAMDatabaseAuthentication: js.UndefOr[BooleanOptional] = js.native
   
@@ -81,6 +81,11 @@ trait CreateDBInstanceReadReplicaMessage extends js.Object {
     * The AWS KMS key ID for an encrypted read replica. The KMS key ID is the Amazon Resource Name (ARN), KMS key identifier, or the KMS key alias for the KMS encryption key. If you create an encrypted read replica in the same AWS Region as the source DB instance, then you do not have to specify a value for this parameter. The read replica is encrypted with the same KMS key as the source DB instance. If you create an encrypted read replica in a different AWS Region, then you must specify a KMS key for the destination AWS Region. KMS encryption keys are specific to the AWS Region that they are created in, and you can't use encryption keys from one AWS Region in another AWS Region. You can't create an encrypted read replica from an unencrypted DB instance.
     */
   var KmsKeyId: js.UndefOr[String] = js.native
+  
+  /**
+    * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+    */
+  var MaxAllocatedStorage: js.UndefOr[IntegerOptional] = js.native
   
   /**
     * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the read replica. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. If MonitoringRoleArn is specified, then you must also set MonitoringInterval to a value other than 0. Valid Values: 0, 1, 5, 10, 15, 30, 60 
@@ -131,6 +136,11 @@ trait CreateDBInstanceReadReplicaMessage extends js.Object {
     * A value that indicates whether the DB instance is publicly accessible. When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by the security group it uses, and that public access is not permitted if the security group assigned to the DB instance doesn't permit it. When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a private IP address. For more information, see CreateDBInstance.
     */
   var PubliclyAccessible: js.UndefOr[BooleanOptional] = js.native
+  
+  /**
+    * The open mode of the replica database: mounted or read-only.  This parameter is only supported for Oracle DB instances.  Mounted DB replicas are included in Oracle Enterprise Edition. The main use case for mounted replicas is cross-Region disaster recovery. The primary database doesn't use Active Data Guard to transmit information to the mounted replica. Because it doesn't accept user connections, a mounted replica can't serve a read-only workload. You can create a combination of mounted and read-only DB replicas for the same primary DB instance. For more information, see Working with Oracle Read Replicas for Amazon RDS in the Amazon RDS User Guide.
+    */
+  var ReplicaMode: js.UndefOr[typingsSlinky.awsSdk.rdsMod.ReplicaMode] = js.native
   
   /**
     * The identifier of the DB instance that will act as the source for the read replica. Each DB instance can have up to five read replicas. Constraints:   Must be the identifier of an existing MySQL, MariaDB, Oracle, PostgreSQL, or SQL Server DB instance.   Can specify a DB instance that is a MySQL read replica only if the source is running MySQL 5.6 or later.   For the limitations of Oracle read replicas, see Read Replica Limitations with Oracle in the Amazon RDS User Guide.   For the limitations of SQL Server read replicas, see Read Replica Limitations with Microsoft SQL Server in the Amazon RDS User Guide.   Can specify a PostgreSQL DB instance only if the source is running PostgreSQL 9.3.5 or later (9.4.7 and higher for cross-region replication).   The specified DB instance must have automatic backups enabled, that is, its backup retention period must be greater than 0.   If the source DB instance is in the same AWS Region as the read replica, specify a valid DB instance identifier.   If the source DB instance is in a different AWS Region from the read replica, specify a valid DB instance ARN. For more information, see Constructing an ARN for Amazon RDS in the Amazon RDS User Guide. This doesn't apply to SQL Server, which doesn't support cross-region replicas.  
@@ -276,6 +286,12 @@ object CreateDBInstanceReadReplicaMessage {
     def deleteKmsKeyId: Self = this.set("KmsKeyId", js.undefined)
     
     @scala.inline
+    def setMaxAllocatedStorage(value: IntegerOptional): Self = this.set("MaxAllocatedStorage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxAllocatedStorage: Self = this.set("MaxAllocatedStorage", js.undefined)
+    
+    @scala.inline
     def setMonitoringInterval(value: IntegerOptional): Self = this.set("MonitoringInterval", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -337,6 +353,12 @@ object CreateDBInstanceReadReplicaMessage {
     
     @scala.inline
     def deletePubliclyAccessible: Self = this.set("PubliclyAccessible", js.undefined)
+    
+    @scala.inline
+    def setReplicaMode(value: ReplicaMode): Self = this.set("ReplicaMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReplicaMode: Self = this.set("ReplicaMode", js.undefined)
     
     @scala.inline
     def setSourceRegion(value: String): Self = this.set("SourceRegion", value.asInstanceOf[js.Any])

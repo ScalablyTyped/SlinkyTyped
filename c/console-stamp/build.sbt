@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "console-stamp"
-version := "0.2.0-dt-20200515Z-9a140b"
+version := "0.2.0-dt-20201002Z-9a140b"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

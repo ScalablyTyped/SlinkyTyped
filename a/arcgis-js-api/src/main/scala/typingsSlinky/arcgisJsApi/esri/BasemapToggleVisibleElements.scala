@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BasemapToggleVisibleElements extends Object {
   
   /**
-    * Indicates whether to the title will be displayed. Default is `false`.
+    * Indicates whether to the title will be displayed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapToggle.html#VisibleElements)
     */

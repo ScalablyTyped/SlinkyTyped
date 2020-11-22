@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TypeOfExpression extends UnaryExpression {
   
-  var expression: UnaryExpression = js.native
+  val expression: UnaryExpression = js.native
   
   @JSName("kind")
-  var kind_TypeOfExpression: typingsSlinky.typescript.mod.SyntaxKind.TypeOfExpression = js.native
+  val kind_TypeOfExpression: typingsSlinky.typescript.mod.SyntaxKind.TypeOfExpression = js.native
 }

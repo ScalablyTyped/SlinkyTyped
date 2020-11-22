@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** 视频帧数据，若取不到则返回 null。当缓存区满的时候可能暂停取不到数据。 */
+/** 视频帧数据，若取不到则返回 null。当缓冲区为空的时候可能暂停取不到数据。 */
 @js.native
 trait FrameDataOptions extends js.Object {
   

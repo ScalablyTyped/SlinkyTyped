@@ -11,25 +11,31 @@ import typingsSlinky.astTypes.kindsMod.SpecifierKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.ModuleSpecifier, 'type'> */
+@js.native
 trait ExportSpecifier
   extends ASTNode
      with ModuleSpecifierKind
      with NodeKind
      with PrintableKind
      with SpecifierKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var exported: IdentifierKind
-  var id: js.UndefOr[IdentifierKind] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var local: js.UndefOr[IdentifierKind] = js.undefined
-  var name: js.UndefOr[IdentifierKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ExportSpecifier
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var exported: IdentifierKind = js.native
+  
+  var id: js.UndefOr[IdentifierKind | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var local: js.UndefOr[IdentifierKind | Null] = js.native
+  
+  var name: js.UndefOr[IdentifierKind | Null] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ExportSpecifier = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ExportSpecifier")
 @js.native
 object ExportSpecifier extends TopLevel[Type[ExportSpecifier]]
-

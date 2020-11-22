@@ -38,6 +38,9 @@ object AirbnbRating {
     def reviews(value: js.Array[String]): this.type = set("reviews", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def selectedColor(value: String): this.type = set("selectedColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def showRating(value: Boolean): this.type = set("showRating", value.asInstanceOf[js.Any])
     
     @scala.inline

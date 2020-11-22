@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.transferUserMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.outputMod.transfer.UserHomeDirectoryMapping
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -32,6 +33,16 @@ class User protected () extends CustomResource {
     * The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
     */
   val homeDirectory: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+    */
+  val homeDirectoryMappings: Output_[js.UndefOr[js.Array[UserHomeDirectoryMapping]]] = js.native
+  
+  /**
+    * The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
+    */
+  val homeDirectoryType: Output_[js.UndefOr[String]] = js.native
   
   /**
     * An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.

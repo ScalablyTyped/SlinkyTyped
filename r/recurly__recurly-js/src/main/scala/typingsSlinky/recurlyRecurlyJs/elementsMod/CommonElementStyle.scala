@@ -7,38 +7,89 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CommonElementStyle extends js.Object {
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/color|color}
+    */
   var fontColor: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/font-family|font-family}
+    */
   var fontFamily: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings|feature-settings}
+    */
   var fontFeatureSettings: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning|font-kerning}
+    */
   var fontKerning: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/font-size|font-size}
+    */
   var fontSize: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/font-smoothing|font-smoothing}
+    */
   var fontSmooth: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch|font-stretch}
+    */
   var fontStretch: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/font-style|font-style}
+    */
   var fontStyle: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant|font-variant}
+    */
   var fontVariant: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight|font-weight}
+    */
   var fontWeight: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing|letter-spacing}
+    */
   var letterSpacing: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/line-height|line-height}
+    */
   var lineHeight: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/text-align|text-align}
+    */
   var textAlign: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration|text-decoration}
+    */
   var textDecoration: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering|text-rendering}
+    */
   var textRendering: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow|text-shadow}
+    */
   var textShadow: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform|text-transform}
+    */
   var textTransform: js.UndefOr[String] = js.native
 }
 object CommonElementStyle {

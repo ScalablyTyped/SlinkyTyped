@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable
@@ -7,12 +8,13 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/associations relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/associations relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -22,15 +24,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAssociationBase because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsDomainModel, name, `type`, owner, parent, remoteSourceDocument, remoteSourceDocumentQualifiedName, source, capabilities */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.AssociationBase")
 @js.native
 abstract class AssociationBase protected ()
-  extends Element
+  extends Element[IModel]
      with IByNameReferrable {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -59,9 +61,6 @@ abstract class AssociationBase protected ()
   def documentation: String = js.native
   def documentation_=(newValue: String): Unit = js.native
   
-  @JSName("model")
-  var model_FAssociationBase: IModel = js.native
-  
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native
   @JSName("name")
@@ -86,6 +85,8 @@ abstract class AssociationBase protected ()
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 8.10.0: deleted
     * In version 8.3.0: introduced
     */
@@ -98,6 +99,8 @@ abstract class AssociationBase protected ()
   def remoteSourceDocument_=(newValue: IRemoteEntitySourceDocument | Null): Unit = js.native
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     *
     * In version 8.10.0: deleted
     * In version 8.3.0: introduced

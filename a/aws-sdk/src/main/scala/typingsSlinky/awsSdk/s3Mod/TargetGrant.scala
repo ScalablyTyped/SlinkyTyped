@@ -13,7 +13,7 @@ trait TargetGrant extends js.Object {
   var Grantee: js.UndefOr[typingsSlinky.awsSdk.s3Mod.Grantee] = js.native
   
   /**
-    * Logging permissions assigned to the Grantee for the bucket.
+    * Logging permissions assigned to the grantee for the bucket.
     */
   var Permission: js.UndefOr[BucketLogsPermission] = js.native
 }

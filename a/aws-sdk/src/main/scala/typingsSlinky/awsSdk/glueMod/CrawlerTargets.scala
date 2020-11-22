@@ -23,6 +23,11 @@ trait CrawlerTargets extends js.Object {
   var JdbcTargets: js.UndefOr[JdbcTargetList] = js.native
   
   /**
+    * Specifies Amazon DocumentDB or MongoDB targets.
+    */
+  var MongoDBTargets: js.UndefOr[MongoDBTargetList] = js.native
+  
+  /**
     * Specifies Amazon Simple Storage Service (Amazon S3) targets.
     */
   var S3Targets: js.UndefOr[S3TargetList] = js.native
@@ -76,6 +81,15 @@ object CrawlerTargets {
     
     @scala.inline
     def deleteJdbcTargets: Self = this.set("JdbcTargets", js.undefined)
+    
+    @scala.inline
+    def setMongoDBTargetsVarargs(value: MongoDBTarget*): Self = this.set("MongoDBTargets", js.Array(value :_*))
+    
+    @scala.inline
+    def setMongoDBTargets(value: MongoDBTargetList): Self = this.set("MongoDBTargets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMongoDBTargets: Self = this.set("MongoDBTargets", js.undefined)
     
     @scala.inline
     def setS3TargetsVarargs(value: S3Target*): Self = this.set("S3Targets", js.Array(value :_*))

@@ -23,7 +23,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxCalendarOptions extends EditorOptions[dxCalendar] {
   
-  /** @name dxCalendar.Options.cellTemplate */
+  /**
+    * [descr:dxCalendar.Options.cellTemplate]
+    */
   var cellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ Date, 
@@ -33,38 +35,60 @@ trait dxCalendarOptions extends EditorOptions[dxCalendar] {
     ])
   ] = js.native
   
-  /** @name dxCalendar.Options.dateSerializationFormat */
+  /**
+    * [descr:dxCalendar.Options.dateSerializationFormat]
+    */
   var dateSerializationFormat: js.UndefOr[String] = js.native
   
-  /** @name dxCalendar.Options.disabledDates */
+  /**
+    * [descr:dxCalendar.Options.disabledDates]
+    */
   var disabledDates: js.UndefOr[js.Array[js.Date] | (js.Function1[/* data */ View, Boolean])] = js.native
   
-  /** @name dxCalendar.Options.firstDayOfWeek */
+  /**
+    * [descr:dxCalendar.Options.firstDayOfWeek]
+    */
   var firstDayOfWeek: js.UndefOr[`0` | `1` | `2` | `3` | `4` | `5` | `6`] = js.native
   
-  /** @name dxCalendar.Options.max */
+  /**
+    * [descr:dxCalendar.Options.max]
+    */
   var max: js.UndefOr[js.Date | Double | String] = js.native
   
-  /** @name dxCalendar.Options.maxZoomLevel */
+  /**
+    * [descr:dxCalendar.Options.maxZoomLevel]
+    */
   var maxZoomLevel: js.UndefOr[century | decade | month | year] = js.native
   
-  /** @name dxCalendar.Options.min */
+  /**
+    * [descr:dxCalendar.Options.min]
+    */
   var min: js.UndefOr[js.Date | Double | String] = js.native
   
-  /** @name dxCalendar.Options.minZoomLevel */
+  /**
+    * [descr:dxCalendar.Options.minZoomLevel]
+    */
   var minZoomLevel: js.UndefOr[century | decade | month | year] = js.native
   
-  /** @name dxCalendar.Options.name */
+  /**
+    * [descr:dxCalendar.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxCalendar.Options.showTodayButton */
+  /**
+    * [descr:dxCalendar.Options.showTodayButton]
+    */
   var showTodayButton: js.UndefOr[Boolean] = js.native
   
-  /** @name dxCalendar.Options.value */
+  /**
+    * [descr:dxCalendar.Options.value]
+    */
   @JSName("value")
   var value_dxCalendarOptions: js.UndefOr[js.Date | Double | String] = js.native
   
-  /** @name dxCalendar.Options.zoomLevel */
+  /**
+    * [descr:dxCalendar.Options.zoomLevel]
+    */
   var zoomLevel: js.UndefOr[century | decade | month | year] = js.native
 }
 object dxCalendarOptions {

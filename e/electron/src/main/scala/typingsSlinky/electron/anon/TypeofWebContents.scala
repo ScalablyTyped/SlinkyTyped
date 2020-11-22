@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TypeofWebContents extends Instantiable0[WebContents_] {
   
-  // Docs: http://electronjs.org/docs/api/web-contents
+  // Docs: https://electronjs.org/docs/api/web-contents
   /**
     * A WebContents instance with the given ID.
     */

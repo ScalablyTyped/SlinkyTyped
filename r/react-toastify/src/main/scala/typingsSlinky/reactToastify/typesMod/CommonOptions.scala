@@ -5,6 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactToastify.anon.Position
 import typingsSlinky.reactToastify.reactToastifyBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,17 +24,12 @@ trait CommonOptions extends js.Object {
   /**
     * An optional css class to set for the toast content.
     */
-  var bodyClassName: js.UndefOr[ClassName] = js.native
+  var bodyClassName: js.UndefOr[ToastClassName] = js.native
   
   /**
     * An optional inline style to apply for the toast content.
     */
   var bodyStyle: js.UndefOr[CSSProperties] = js.native
-  
-  /**
-    * An optional css class to set.
-    */
-  var className: js.UndefOr[ClassName] = js.native
   
   /**
     * Pass a custom close button.
@@ -97,7 +93,7 @@ trait CommonOptions extends js.Object {
   /**
     * An optional css class to set for the progress bar.
     */
-  var progressClassName: js.UndefOr[ClassName] = js.native
+  var progressClassName: js.UndefOr[ToastClassName] = js.native
   
   /**
     * An optional style to set for the progress bar.
@@ -152,28 +148,19 @@ object CommonOptions {
     def deleteAutoClose: Self = this.set("autoClose", js.undefined)
     
     @scala.inline
-    def setBodyClassName(value: ClassName): Self = this.set("bodyClassName", value.asInstanceOf[js.Any])
+    def setBodyClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("bodyClassName", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setBodyClassName(value: ToastClassName): Self = this.set("bodyClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBodyClassName: Self = this.set("bodyClassName", js.undefined)
-    
-    @scala.inline
-    def setBodyClassNameNull: Self = this.set("bodyClassName", null)
     
     @scala.inline
     def setBodyStyle(value: CSSProperties): Self = this.set("bodyStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBodyStyle: Self = this.set("bodyStyle", js.undefined)
-    
-    @scala.inline
-    def setClassName(value: ClassName): Self = this.set("className", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteClassName: Self = this.set("className", js.undefined)
-    
-    @scala.inline
-    def setClassNameNull: Self = this.set("className", null)
     
     @scala.inline
     def setCloseButtonReactElement(value: ReactElement): Self = this.set("closeButton", value.asInstanceOf[js.Any])
@@ -242,13 +229,13 @@ object CommonOptions {
     def deletePosition: Self = this.set("position", js.undefined)
     
     @scala.inline
-    def setProgressClassName(value: ClassName): Self = this.set("progressClassName", value.asInstanceOf[js.Any])
+    def setProgressClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("progressClassName", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setProgressClassName(value: ToastClassName): Self = this.set("progressClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProgressClassName: Self = this.set("progressClassName", js.undefined)
-    
-    @scala.inline
-    def setProgressClassNameNull: Self = this.set("progressClassName", null)
     
     @scala.inline
     def setProgressStyle(value: CSSProperties): Self = this.set("progressStyle", value.asInstanceOf[js.Any])

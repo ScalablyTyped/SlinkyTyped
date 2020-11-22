@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -21,9 +22,13 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.ReactType
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -78,16 +83,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object InputGroupButtonDropdown {
   
-  @JSImport("reactstrap", "InputGroupButtonDropdown")
+  @JSImport("reactstrap/es", "InputGroupButtonDropdown")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[
           slinky.web.html.`*`.tag.type, 
-          typingsSlinky.reactstrap.mod.InputGroupButtonDropdown[T]
+          typingsSlinky.reactstrap.mod.InputGroupButtonDropdown
         ] {
     
     @scala.inline
@@ -208,7 +213,9 @@ object InputGroupButtonDropdown {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -634,7 +641,7 @@ object InputGroupButtonDropdown {
     def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tag(value: String | ReactType[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: ReactElement): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -655,11 +662,11 @@ object InputGroupButtonDropdown {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: InputGroupButtonDropdownProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: InputGroupButtonDropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply[T](addonType: prepend | append): Builder[T] = {
+  def apply(addonType: prepend | append): Builder = {
     val __props = js.Dynamic.literal(addonType = addonType.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[InputGroupButtonDropdownProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[InputGroupButtonDropdownProps]))
   }
 }

@@ -12,14 +12,39 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Draw
   extends typingsSlinky.ol.pointerMod.default {
   
+  /**
+    * Stop drawing without adding the sketch feature to the target layer.
+    */
   def abortDrawing(): Unit = js.native
   
+  /**
+    * Append coordinates to the end of the geometry that is currently being drawn.
+    * This can be used when drawing LineStrings or Polygons. Coordinates will
+    * either be appended to the current LineString or the outer ring of the current
+    * Polygon.
+    */
   def appendCoordinates(coordinates: LineCoordType): Unit = js.native
   
+  /**
+    * Initiate draw mode by starting from an existing geometry which will
+    * receive new additional points. This only works on features with
+    * LineString geometries, where the interaction will extend lines by adding
+    * points to the end of the coordinates array.
+    * This will change the original feature, instead of drawing a copy.
+    * The function will dispatch a drawstart event.
+    */
   def extend(feature: typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.lineStringMod.default]): Unit = js.native
   
+  /**
+    * Stop drawing and add the sketch feature to the target layer.
+    * The {@link module:ol/interaction/Draw~DrawEventType.DRAWEND} event is
+    * dispatched before inserting the feature.
+    */
   def finishDrawing(): Unit = js.native
   
+  /**
+    * Get the overlay layer that this interaction renders sketch features to.
+    */
   def getOverlay(): typingsSlinky.ol.vectorMod.default = js.native
   
   @JSName("on")
@@ -36,6 +61,9 @@ trait Draw
   @JSName("once")
   def once_drawstart(`type`: drawstart, listener: js.Function1[/* evt */ DrawEvent, Unit]): EventsKey = js.native
   
+  /**
+    * Remove last point of the feature currently being drawn.
+    */
   def removeLastPoint(): Unit = js.native
   
   @JSName("un")

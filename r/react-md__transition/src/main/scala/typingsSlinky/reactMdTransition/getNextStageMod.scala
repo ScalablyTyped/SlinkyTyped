@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getNextStageMod extends js.Object {
   
-  def default(stage: TransitionStage): TransitionStage = js.native
+  def getNextStage(stage: TransitionStage): TransitionStage = js.native
 }

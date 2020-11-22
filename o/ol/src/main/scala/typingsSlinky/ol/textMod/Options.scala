@@ -1,5 +1,6 @@
 package typingsSlinky.ol.textMod
 
+import typingsSlinky.ol.sizeMod.Size
 import typingsSlinky.ol.textPlacementMod.TextPlacement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,7 +33,7 @@ trait Options extends js.Object {
   
   var rotation: js.UndefOr[Double] = js.native
   
-  var scale: js.UndefOr[Double] = js.native
+  var scale: js.UndefOr[Double | Size] = js.native
   
   var stroke: js.UndefOr[typingsSlinky.ol.strokeMod.default] = js.native
   
@@ -141,7 +142,7 @@ object Options {
     def deleteRotation: Self = this.set("rotation", js.undefined)
     
     @scala.inline
-    def setScale(value: Double): Self = this.set("scale", value.asInstanceOf[js.Any])
+    def setScale(value: Double | Size): Self = this.set("scale", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteScale: Self = this.set("scale", js.undefined)

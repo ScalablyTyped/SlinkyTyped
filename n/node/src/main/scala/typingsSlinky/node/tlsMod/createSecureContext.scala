@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createSecureContext extends js.Object {
   
-  def apply(details: SecureContextOptions): SecureContext = js.native
+  def apply(): SecureContext = js.native
+  def apply(options: SecureContextOptions): SecureContext = js.native
 }

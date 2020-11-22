@@ -5,18 +5,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.typescript.mod.TextRange because Already inherited
-- typingsSlinky.typescript.mod.Node because Already inherited
-- typingsSlinky.typescript.mod.Declaration because var conflicts: decorators, end, flags, kind, modifiers, parent, pos. Inlined _declarationBrand */ @js.native
+@js.native
 trait TypeLiteralNode
   extends TypeNode
+     with Declaration
      with ObjectTypeDeclaration {
   
-  var _declarationBrand: js.Any = js.native
-  
   @JSName("kind")
-  var kind_TypeLiteralNode: TypeLiteral = js.native
+  val kind_TypeLiteralNode: TypeLiteral = js.native
   
-  var members: NodeArray[TypeElement] = js.native
+  val members: NodeArray[TypeElement] = js.native
 }

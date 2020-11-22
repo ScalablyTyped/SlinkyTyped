@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait MessageEvent
-  extends CustomEvent[js.Any] {
+  extends CustomEvent[js.UndefOr[scala.Nothing]] {
   
-  var data: /* import warning: importer.ImportType#apply Failed type conversion: reconnectingwebsocket.reconnectingwebsocket.GlobalMessageEvent['data'] */ js.Any = js.native
+  var data: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.MessageEvent * / any['data'] */ js.Any = js.native
   
   @JSName("type")
   var type_MessageEvent: message = js.native

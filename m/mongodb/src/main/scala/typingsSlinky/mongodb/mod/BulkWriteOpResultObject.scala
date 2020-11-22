@@ -1,5 +1,6 @@
 package typingsSlinky.mongodb.mod
 
+import org.scalablytyped.runtime.NumberDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ trait BulkWriteOpResultObject extends js.Object {
   
   var insertedCount: js.UndefOr[scala.Double] = js.native
   
-  var insertedIds: js.UndefOr[js.Any] = js.native
+  var insertedIds: js.UndefOr[NumberDictionary[js.Any]] = js.native
   
   var matchedCount: js.UndefOr[scala.Double] = js.native
   
@@ -21,7 +22,7 @@ trait BulkWriteOpResultObject extends js.Object {
   
   var upsertedCount: js.UndefOr[scala.Double] = js.native
   
-  var upsertedIds: js.UndefOr[js.Any] = js.native
+  var upsertedIds: js.UndefOr[NumberDictionary[js.Any]] = js.native
 }
 object BulkWriteOpResultObject {
   
@@ -59,7 +60,7 @@ object BulkWriteOpResultObject {
     def deleteInsertedCount: Self = this.set("insertedCount", js.undefined)
     
     @scala.inline
-    def setInsertedIds(value: js.Any): Self = this.set("insertedIds", value.asInstanceOf[js.Any])
+    def setInsertedIds(value: NumberDictionary[js.Any]): Self = this.set("insertedIds", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInsertedIds: Self = this.set("insertedIds", js.undefined)
@@ -89,7 +90,7 @@ object BulkWriteOpResultObject {
     def deleteUpsertedCount: Self = this.set("upsertedCount", js.undefined)
     
     @scala.inline
-    def setUpsertedIds(value: js.Any): Self = this.set("upsertedIds", value.asInstanceOf[js.Any])
+    def setUpsertedIds(value: NumberDictionary[js.Any]): Self = this.set("upsertedIds", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUpsertedIds: Self = this.set("upsertedIds", js.undefined)

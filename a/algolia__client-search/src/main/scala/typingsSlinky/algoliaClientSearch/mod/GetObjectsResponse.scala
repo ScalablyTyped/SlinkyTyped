@@ -10,12 +10,12 @@ trait GetObjectsResponse[TObject] extends js.Object {
   /**
     * The list of results.
     */
-  var results: js.Array[TObject with ObjectWithObjectID] = js.native
+  var results: js.Array[(TObject with ObjectWithObjectID) | Null] = js.native
 }
 object GetObjectsResponse {
   
   @scala.inline
-  def apply[TObject](results: js.Array[TObject with ObjectWithObjectID]): GetObjectsResponse[TObject] = {
+  def apply[TObject](results: js.Array[(TObject with ObjectWithObjectID) | Null]): GetObjectsResponse[TObject] = {
     val __obj = js.Dynamic.literal(results = results.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetObjectsResponse[TObject]]
   }
@@ -36,9 +36,9 @@ object GetObjectsResponse {
     }
     
     @scala.inline
-    def setResultsVarargs(value: (TObject with ObjectWithObjectID)*): Self = this.set("results", js.Array(value :_*))
+    def setResultsVarargs(value: ((TObject with ObjectWithObjectID) | Null)*): Self = this.set("results", js.Array(value :_*))
     
     @scala.inline
-    def setResults(value: js.Array[TObject with ObjectWithObjectID]): Self = this.set("results", value.asInstanceOf[js.Any])
+    def setResults(value: js.Array[(TObject with ObjectWithObjectID) | Null]): Self = this.set("results", value.asInstanceOf[js.Any])
   }
 }

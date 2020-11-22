@@ -15,6 +15,7 @@ import typingsSlinky.angularCompiler.t2ApiMod.DirectiveMeta
 import typingsSlinky.angularCompiler.t2ApiMod.Target
 import typingsSlinky.angularCompiler.t2ApiMod.TargetBinder
 import typingsSlinky.std.Map
+import typingsSlinky.std.ReadonlySet
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,6 +38,7 @@ object t2BinderMod extends js.Object {
       exprTargets: Map[AST, Reference | Variable],
       symbols: Map[Reference | Variable, Template],
       nestingLevel: Map[Template, Double],
+      templateEntities: Map[Template | Null, ReadonlySet[Reference | Variable]],
       usedPipes: Set[String]
     ) = this()
     
@@ -51,6 +53,8 @@ object t2BinderMod extends js.Object {
     var references: js.Any = js.native
     
     var symbols: js.Any = js.native
+    
+    var templateEntities: js.Any = js.native
     
     var usedPipes: js.Any = js.native
   }

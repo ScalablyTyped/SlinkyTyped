@@ -1,5 +1,7 @@
 package typingsSlinky.paypalCheckoutComponents
 
+import typingsSlinky.paypalCheckoutComponents.buttonMod.ButtonRenderer
+import typingsSlinky.paypalCheckoutComponents.buttonMod.FundingOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  val Button: typingsSlinky.paypalCheckoutComponents.buttonMod.Button = js.native
+  val Button: ButtonRenderer = js.native
   
   @js.native
   object ButtonColorOption extends js.Object {
@@ -85,6 +87,21 @@ object mod extends js.Object {
     /* "production" */ val Production: typingsSlinky.paypalCheckoutComponents.configurationMod.Environment.Production with String = js.native
     
     /* "sandbox" */ val Sandbox: typingsSlinky.paypalCheckoutComponents.configurationMod.Environment.Sandbox with String = js.native
+  }
+  
+  @js.native
+  object FUNDING extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[FundingOption with Double] = js.native
+    
+    /* 1 */ val CARD: typingsSlinky.paypalCheckoutComponents.buttonMod.FundingOption.CARD with Double = js.native
+    
+    /* 0 */ val CREDIT: typingsSlinky.paypalCheckoutComponents.buttonMod.FundingOption.CREDIT with Double = js.native
+    
+    /* 3 */ val ELV: typingsSlinky.paypalCheckoutComponents.buttonMod.FundingOption.ELV with Double = js.native
+    
+    /* 2 */ val VENMO: typingsSlinky.paypalCheckoutComponents.buttonMod.FundingOption.VENMO with Double = js.native
   }
   
   @js.native

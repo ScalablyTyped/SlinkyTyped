@@ -15,6 +15,16 @@ trait WebXREnterExitUIOptions extends js.Object {
   var customButtons: js.UndefOr[js.Array[WebXREnterExitUIButton]] = js.native
   
   /**
+    * If defined, this function will be executed if the UI encounters an error when entering XR
+    */
+  var onError: js.UndefOr[js.Function1[/* error */ js.Any, Unit]] = js.native
+  
+  /**
+    * A list of optional features to init the session with
+    */
+  var optionalFeatures: js.UndefOr[js.Array[String]] = js.native
+  
+  /**
     * A reference space type to use when creating the default button.
     * Default is local-floor
     */
@@ -24,6 +34,11 @@ trait WebXREnterExitUIOptions extends js.Object {
     * Context to enter xr with
     */
   var renderTarget: js.UndefOr[Nullable[WebXRRenderTarget]] = js.native
+  
+  /**
+    * A list of optional features to init the session with
+    */
+  var requiredFeatures: js.UndefOr[js.Array[String]] = js.native
   
   /**
     * A session mode to use when creating the default button.
@@ -64,6 +79,21 @@ object WebXREnterExitUIOptions {
     def deleteCustomButtons: Self = this.set("customButtons", js.undefined)
     
     @scala.inline
+    def setOnError(value: /* error */ js.Any => Unit): Self = this.set("onError", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnError: Self = this.set("onError", js.undefined)
+    
+    @scala.inline
+    def setOptionalFeaturesVarargs(value: String*): Self = this.set("optionalFeatures", js.Array(value :_*))
+    
+    @scala.inline
+    def setOptionalFeatures(value: js.Array[String]): Self = this.set("optionalFeatures", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOptionalFeatures: Self = this.set("optionalFeatures", js.undefined)
+    
+    @scala.inline
     def setReferenceSpaceType(value: XRReferenceSpaceType): Self = this.set("referenceSpaceType", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -77,6 +107,15 @@ object WebXREnterExitUIOptions {
     
     @scala.inline
     def setRenderTargetNull: Self = this.set("renderTarget", null)
+    
+    @scala.inline
+    def setRequiredFeaturesVarargs(value: String*): Self = this.set("requiredFeatures", js.Array(value :_*))
+    
+    @scala.inline
+    def setRequiredFeatures(value: js.Array[String]): Self = this.set("requiredFeatures", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequiredFeatures: Self = this.set("requiredFeatures", js.undefined)
     
     @scala.inline
     def setSessionMode(value: XRSessionMode): Self = this.set("sessionMode", value.asInstanceOf[js.Any])

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ProjectEnvironment extends js.Object {
   
   /**
-    * The certificate to use with this build project.
+    * The ARN of the Amazon Simple Storage Service (Amazon S3) bucket, path prefix, and object key that contains the PEM-encoded certificate for the build project. For more information, see certificate in the AWS CodeBuild User Guide.
     */
   var certificate: js.UndefOr[String] = js.native
   
@@ -23,7 +23,7 @@ trait ProjectEnvironment extends js.Object {
   var environmentVariables: js.UndefOr[EnvironmentVariables] = js.native
   
   /**
-    * The image tag or image digest that identifies the Docker image to use for this build project. Use the following formats:   For an image tag: registry/repository:tag. For example, to specify an image with the tag "latest," use registry/repository:latest.   For an image digest: registry/repository@digest. For example, to specify an image with the digest "sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf," use registry/repository@sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf.  
+    * The image tag or image digest that identifies the Docker image to use for this build project. Use the following formats:   For an image tag: &lt;registry&gt;/&lt;repository&gt;:&lt;tag&gt;. For example, in the Docker repository that CodeBuild uses to manage its Docker images, this would be aws/codebuild/standard:4.0.    For an image digest: &lt;registry&gt;/&lt;repository&gt;@&lt;digest&gt;. For example, to specify an image with the digest "sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf," use &lt;registry&gt;/&lt;repository&gt;@sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf.  
     */
   var image: NonEmptyString = js.native
   

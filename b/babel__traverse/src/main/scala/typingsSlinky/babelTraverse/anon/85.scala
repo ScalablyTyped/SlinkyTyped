@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.InterpreterDirective
+import typingsSlinky.babelTraverse.babelTraverseStrings.JSXIdentifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `85` extends js.Object {
   
-  var `type`: InterpreterDirective = js.native
+  var `type`: JSXIdentifier = js.native
 }
 object `85` {
   
   @scala.inline
-  def apply(`type`: InterpreterDirective): `85` = {
+  def apply(`type`: JSXIdentifier): `85` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`85`]
@@ -35,6 +35,6 @@ object `85` {
     }
     
     @scala.inline
-    def setType(value: InterpreterDirective): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: JSXIdentifier): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -37,8 +37,8 @@ class CatalogPricingRule () extends js.Object {
   var exclude_strategy: js.UndefOr[String] = js.native
   
   /**
-    * Unique ID for the `CatalogProductSet` that will be matched by this rule. A match rule matches within the entire cart.
-    * A match rule can match multiple times in the cart. If no `ProductSet` is present, the rule will match all products.
+    * Unique ID for the `CatalogProductSet` that will be matched by this rule.
+    * A match rule matches within the entire cart, and can match multiple times. This field will always be set.
     */
   var match_products_id: js.UndefOr[String] = js.native
   

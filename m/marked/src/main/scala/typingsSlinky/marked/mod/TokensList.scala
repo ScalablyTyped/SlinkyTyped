@@ -39,17 +39,34 @@ trait TokensList extends /* n */ NumberDictionary[Token] {
   
   /**
     * Determines whether all the members of an array satisfy the specified test.
-    * @param callbackfn A function that accepts up to three arguments. The every method calls
-    * the callbackfn function for each element in the array until the callbackfn returns a value
+    * @param predicate A function that accepts up to three arguments. The every method calls
+    * the predicate function for each element in the array until the predicate returns a value
     * which is coercible to the Boolean value false, or until the end of the array.
-    * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+    * @param thisArg An object to which the this keyword can refer in the predicate function.
     * If thisArg is omitted, undefined is used as the this value.
     */
-  def every(callbackfn: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _]): Boolean = js.native
+  def every(predicate: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _]): Boolean = js.native
   def every(
-    callbackfn: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _],
+    predicate: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _],
     thisArg: js.Any
   ): Boolean = js.native
+  /**
+    * Determines whether all the members of an array satisfy the specified test.
+    * @param predicate A function that accepts up to three arguments. The every method calls
+    * the predicate function for each element in the array until the predicate returns a value
+    * which is coercible to the Boolean value false, or until the end of the array.
+    * @param thisArg An object to which the this keyword can refer in the predicate function.
+    * If thisArg is omitted, undefined is used as the this value.
+    */
+  @JSName("every")
+  def every_S_Token[S /* <: Token */](
+    predicate: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], /* is S */ Boolean]
+  ): /* is std.Array<S> */ Boolean = js.native
+  @JSName("every")
+  def every_S_Token[S /* <: Token */](
+    predicate: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], /* is S */ Boolean],
+    thisArg: js.Any
+  ): /* is std.Array<S> */ Boolean = js.native
   
   /**
     * Returns the this object after filling the section identified by start and end with value
@@ -66,26 +83,26 @@ trait TokensList extends /* n */ NumberDictionary[Token] {
   
   /**
     * Returns the elements of an array that meet the condition specified in a callback function.
-    * @param callbackfn A function that accepts up to three arguments. The filter method calls the callbackfn function one time for each element in the array.
-    * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+    * @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+    * @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
     */
-  def filter(callbackfn: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _]): js.Array[Token] = js.native
+  def filter(predicate: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _]): js.Array[Token] = js.native
   def filter(
-    callbackfn: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _],
+    predicate: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _],
     thisArg: js.Any
   ): js.Array[Token] = js.native
   /**
     * Returns the elements of an array that meet the condition specified in a callback function.
-    * @param callbackfn A function that accepts up to three arguments. The filter method calls the callbackfn function one time for each element in the array.
-    * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+    * @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+    * @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
     */
   @JSName("filter")
   def filter_S_Token[S /* <: Token */](
-    callbackfn: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], /* is S */ Boolean]
+    predicate: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], /* is S */ Boolean]
   ): js.Array[S] = js.native
   @JSName("filter")
   def filter_S_Token[S /* <: Token */](
-    callbackfn: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], /* is S */ Boolean],
+    predicate: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], /* is S */ Boolean],
     thisArg: js.Any
   ): js.Array[S] = js.native
   
@@ -359,15 +376,15 @@ trait TokensList extends /* n */ NumberDictionary[Token] {
   
   /**
     * Determines whether the specified callback function returns true for any element of an array.
-    * @param callbackfn A function that accepts up to three arguments. The some method calls
-    * the callbackfn function for each element in the array until the callbackfn returns a value
+    * @param predicate A function that accepts up to three arguments. The some method calls
+    * the predicate function for each element in the array until the predicate returns a value
     * which is coercible to the Boolean value true, or until the end of the array.
-    * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+    * @param thisArg An object to which the this keyword can refer in the predicate function.
     * If thisArg is omitted, undefined is used as the this value.
     */
-  def some(callbackfn: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _]): Boolean = js.native
+  def some(predicate: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _]): Boolean = js.native
   def some(
-    callbackfn: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _],
+    predicate: js.Function3[/* value */ Token, /* index */ Double, /* array */ js.Array[Token], _],
     thisArg: js.Any
   ): Boolean = js.native
   

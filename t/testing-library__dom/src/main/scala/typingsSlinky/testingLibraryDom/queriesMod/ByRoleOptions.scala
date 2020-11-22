@@ -23,11 +23,24 @@ trait ByRoleOptions extends MatcherOptions {
   var hidden: js.UndefOr[Boolean] = js.native
   
   /**
+    * Includes elements with the `"heading"` role matching the indicated level,
+    * either by the semantic HTML heading elements `<h1>-<h6>` or matching
+    * the `aria-level` attribute.
+    */
+  var level: js.UndefOr[Double] = js.native
+  
+  /**
     * Only considers  elements with the specified accessible name.
     */
   var name: js.UndefOr[
     String | js.RegExp | (js.Function2[/* accessibleName */ String, /* element */ Element, Boolean])
   ] = js.native
+  
+  /**
+    * If true only includes elements in the query set that are marked as
+    * pressed in the accessibility tree, i.e., `aria-pressed="true"`
+    */
+  var pressed: js.UndefOr[Boolean] = js.native
   
   /**
     * Includes every role used in the `role` attribute
@@ -77,6 +90,12 @@ object ByRoleOptions {
     def deleteHidden: Self = this.set("hidden", js.undefined)
     
     @scala.inline
+    def setLevel(value: Double): Self = this.set("level", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLevel: Self = this.set("level", js.undefined)
+    
+    @scala.inline
     def setNameFunction2(value: (/* accessibleName */ String, /* element */ Element) => Boolean): Self = this.set("name", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -89,6 +108,12 @@ object ByRoleOptions {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setPressed(value: Boolean): Self = this.set("pressed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePressed: Self = this.set("pressed", js.undefined)
     
     @scala.inline
     def setQueryFallbacks(value: Boolean): Self = this.set("queryFallbacks", value.asInstanceOf[js.Any])

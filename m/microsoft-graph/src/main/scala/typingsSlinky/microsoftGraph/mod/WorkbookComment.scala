@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookComment extends Entity {
   
   // The content of comment.
-  var content: js.UndefOr[String] = js.native
+  var content: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates the type for the comment.
   var contentType: js.UndefOr[String] = js.native
   
   // Read-only. Nullable.
-  var replies: js.UndefOr[js.Array[WorkbookCommentReply]] = js.native
+  var replies: js.UndefOr[NullableOption[js.Array[WorkbookCommentReply]]] = js.native
 }
 object WorkbookComment {
   
@@ -40,10 +40,13 @@ object WorkbookComment {
     }
     
     @scala.inline
-    def setContent(value: String): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: NullableOption[String]): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
+    
+    @scala.inline
+    def setContentNull: Self = this.set("content", null)
     
     @scala.inline
     def setContentType(value: String): Self = this.set("contentType", value.asInstanceOf[js.Any])
@@ -55,9 +58,12 @@ object WorkbookComment {
     def setRepliesVarargs(value: WorkbookCommentReply*): Self = this.set("replies", js.Array(value :_*))
     
     @scala.inline
-    def setReplies(value: js.Array[WorkbookCommentReply]): Self = this.set("replies", value.asInstanceOf[js.Any])
+    def setReplies(value: NullableOption[js.Array[WorkbookCommentReply]]): Self = this.set("replies", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReplies: Self = this.set("replies", js.undefined)
+    
+    @scala.inline
+    def setRepliesNull: Self = this.set("replies", null)
   }
 }

@@ -17,6 +17,8 @@ trait RenderedChunk extends PreRenderedChunk {
   
   var implicitlyLoadedBefore: js.Array[String] = js.native
   
+  var importedBindings: StringDictionary[js.Array[String]] = js.native
+  
   var imports: js.Array[String] = js.native
   
   var map: js.UndefOr[SourceMap] = js.native
@@ -31,6 +33,7 @@ object RenderedChunk {
     exports: js.Array[String],
     fileName: String,
     implicitlyLoadedBefore: js.Array[String],
+    importedBindings: StringDictionary[js.Array[String]],
     imports: js.Array[String],
     isDynamicEntry: Boolean,
     isEntry: Boolean,
@@ -40,7 +43,7 @@ object RenderedChunk {
     referencedFiles: js.Array[String],
     `type`: chunk
   ): RenderedChunk = {
-    val __obj = js.Dynamic.literal(dynamicImports = dynamicImports.asInstanceOf[js.Any], exports = exports.asInstanceOf[js.Any], fileName = fileName.asInstanceOf[js.Any], implicitlyLoadedBefore = implicitlyLoadedBefore.asInstanceOf[js.Any], imports = imports.asInstanceOf[js.Any], isDynamicEntry = isDynamicEntry.asInstanceOf[js.Any], isEntry = isEntry.asInstanceOf[js.Any], isImplicitEntry = isImplicitEntry.asInstanceOf[js.Any], modules = modules.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], referencedFiles = referencedFiles.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(dynamicImports = dynamicImports.asInstanceOf[js.Any], exports = exports.asInstanceOf[js.Any], fileName = fileName.asInstanceOf[js.Any], implicitlyLoadedBefore = implicitlyLoadedBefore.asInstanceOf[js.Any], importedBindings = importedBindings.asInstanceOf[js.Any], imports = imports.asInstanceOf[js.Any], isDynamicEntry = isDynamicEntry.asInstanceOf[js.Any], isEntry = isEntry.asInstanceOf[js.Any], isImplicitEntry = isImplicitEntry.asInstanceOf[js.Any], modules = modules.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], referencedFiles = referencedFiles.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[RenderedChunk]
   }
@@ -74,6 +77,9 @@ object RenderedChunk {
     
     @scala.inline
     def setImplicitlyLoadedBefore(value: js.Array[String]): Self = this.set("implicitlyLoadedBefore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setImportedBindings(value: StringDictionary[js.Array[String]]): Self = this.set("importedBindings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setImportsVarargs(value: String*): Self = this.set("imports", js.Array(value :_*))

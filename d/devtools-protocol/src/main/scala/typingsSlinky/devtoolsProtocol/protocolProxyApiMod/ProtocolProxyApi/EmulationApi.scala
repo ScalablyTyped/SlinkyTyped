@@ -11,6 +11,7 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetEmulatedMediaReq
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetEmulatedVisionDeficiencyRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetFocusEmulationEnabledRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetGeolocationOverrideRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetIdleOverrideRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetLocaleOverrideRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetNavigatorOverridesRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetPageScaleFactorRequest
@@ -43,6 +44,11 @@ trait EmulationApi extends js.Object {
     * Clears the overriden Geolocation Position and Error.
     */
   def clearGeolocationOverride(): js.Promise[Unit] = js.native
+  
+  /**
+    * Clears Idle state overrides.
+    */
+  def clearIdleOverride(): js.Promise[Unit] = js.native
   
   /**
     * Notification sent after the virtual time budget for the current VirtualTimePolicy has run out.
@@ -97,6 +103,11 @@ trait EmulationApi extends js.Object {
     * unavailable.
     */
   def setGeolocationOverride(params: SetGeolocationOverrideRequest): js.Promise[Unit] = js.native
+  
+  /**
+    * Overrides the Idle state.
+    */
+  def setIdleOverride(params: SetIdleOverrideRequest): js.Promise[Unit] = js.native
   
   /**
     * Overrides default host system locale with the specified one.
@@ -155,6 +166,7 @@ object EmulationApi {
     canEmulate: () => js.Promise[CanEmulateResponse],
     clearDeviceMetricsOverride: () => js.Promise[Unit],
     clearGeolocationOverride: () => js.Promise[Unit],
+    clearIdleOverride: () => js.Promise[Unit],
     on: (virtualTimeBudgetExpired, js.Function0[Unit]) => Unit,
     resetPageScaleFactor: () => js.Promise[Unit],
     setCPUThrottlingRate: SetCPUThrottlingRateRequest => js.Promise[Unit],
@@ -166,6 +178,7 @@ object EmulationApi {
     setEmulatedVisionDeficiency: SetEmulatedVisionDeficiencyRequest => js.Promise[Unit],
     setFocusEmulationEnabled: SetFocusEmulationEnabledRequest => js.Promise[Unit],
     setGeolocationOverride: SetGeolocationOverrideRequest => js.Promise[Unit],
+    setIdleOverride: SetIdleOverrideRequest => js.Promise[Unit],
     setLocaleOverride: SetLocaleOverrideRequest => js.Promise[Unit],
     setNavigatorOverrides: SetNavigatorOverridesRequest => js.Promise[Unit],
     setPageScaleFactor: SetPageScaleFactorRequest => js.Promise[Unit],
@@ -177,7 +190,7 @@ object EmulationApi {
     setVirtualTimePolicy: SetVirtualTimePolicyRequest => js.Promise[SetVirtualTimePolicyResponse],
     setVisibleSize: SetVisibleSizeRequest => js.Promise[Unit]
   ): EmulationApi = {
-    val __obj = js.Dynamic.literal(canEmulate = js.Any.fromFunction0(canEmulate), clearDeviceMetricsOverride = js.Any.fromFunction0(clearDeviceMetricsOverride), clearGeolocationOverride = js.Any.fromFunction0(clearGeolocationOverride), on = js.Any.fromFunction2(on), resetPageScaleFactor = js.Any.fromFunction0(resetPageScaleFactor), setCPUThrottlingRate = js.Any.fromFunction1(setCPUThrottlingRate), setDefaultBackgroundColorOverride = js.Any.fromFunction1(setDefaultBackgroundColorOverride), setDeviceMetricsOverride = js.Any.fromFunction1(setDeviceMetricsOverride), setDocumentCookieDisabled = js.Any.fromFunction1(setDocumentCookieDisabled), setEmitTouchEventsForMouse = js.Any.fromFunction1(setEmitTouchEventsForMouse), setEmulatedMedia = js.Any.fromFunction1(setEmulatedMedia), setEmulatedVisionDeficiency = js.Any.fromFunction1(setEmulatedVisionDeficiency), setFocusEmulationEnabled = js.Any.fromFunction1(setFocusEmulationEnabled), setGeolocationOverride = js.Any.fromFunction1(setGeolocationOverride), setLocaleOverride = js.Any.fromFunction1(setLocaleOverride), setNavigatorOverrides = js.Any.fromFunction1(setNavigatorOverrides), setPageScaleFactor = js.Any.fromFunction1(setPageScaleFactor), setScriptExecutionDisabled = js.Any.fromFunction1(setScriptExecutionDisabled), setScrollbarsHidden = js.Any.fromFunction1(setScrollbarsHidden), setTimezoneOverride = js.Any.fromFunction1(setTimezoneOverride), setTouchEmulationEnabled = js.Any.fromFunction1(setTouchEmulationEnabled), setUserAgentOverride = js.Any.fromFunction1(setUserAgentOverride), setVirtualTimePolicy = js.Any.fromFunction1(setVirtualTimePolicy), setVisibleSize = js.Any.fromFunction1(setVisibleSize))
+    val __obj = js.Dynamic.literal(canEmulate = js.Any.fromFunction0(canEmulate), clearDeviceMetricsOverride = js.Any.fromFunction0(clearDeviceMetricsOverride), clearGeolocationOverride = js.Any.fromFunction0(clearGeolocationOverride), clearIdleOverride = js.Any.fromFunction0(clearIdleOverride), on = js.Any.fromFunction2(on), resetPageScaleFactor = js.Any.fromFunction0(resetPageScaleFactor), setCPUThrottlingRate = js.Any.fromFunction1(setCPUThrottlingRate), setDefaultBackgroundColorOverride = js.Any.fromFunction1(setDefaultBackgroundColorOverride), setDeviceMetricsOverride = js.Any.fromFunction1(setDeviceMetricsOverride), setDocumentCookieDisabled = js.Any.fromFunction1(setDocumentCookieDisabled), setEmitTouchEventsForMouse = js.Any.fromFunction1(setEmitTouchEventsForMouse), setEmulatedMedia = js.Any.fromFunction1(setEmulatedMedia), setEmulatedVisionDeficiency = js.Any.fromFunction1(setEmulatedVisionDeficiency), setFocusEmulationEnabled = js.Any.fromFunction1(setFocusEmulationEnabled), setGeolocationOverride = js.Any.fromFunction1(setGeolocationOverride), setIdleOverride = js.Any.fromFunction1(setIdleOverride), setLocaleOverride = js.Any.fromFunction1(setLocaleOverride), setNavigatorOverrides = js.Any.fromFunction1(setNavigatorOverrides), setPageScaleFactor = js.Any.fromFunction1(setPageScaleFactor), setScriptExecutionDisabled = js.Any.fromFunction1(setScriptExecutionDisabled), setScrollbarsHidden = js.Any.fromFunction1(setScrollbarsHidden), setTimezoneOverride = js.Any.fromFunction1(setTimezoneOverride), setTouchEmulationEnabled = js.Any.fromFunction1(setTouchEmulationEnabled), setUserAgentOverride = js.Any.fromFunction1(setUserAgentOverride), setVirtualTimePolicy = js.Any.fromFunction1(setVirtualTimePolicy), setVisibleSize = js.Any.fromFunction1(setVisibleSize))
     __obj.asInstanceOf[EmulationApi]
   }
   
@@ -204,6 +217,9 @@ object EmulationApi {
     
     @scala.inline
     def setClearGeolocationOverride(value: () => js.Promise[Unit]): Self = this.set("clearGeolocationOverride", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setClearIdleOverride(value: () => js.Promise[Unit]): Self = this.set("clearIdleOverride", js.Any.fromFunction0(value))
     
     @scala.inline
     def setOn(value: (virtualTimeBudgetExpired, js.Function0[Unit]) => Unit): Self = this.set("on", js.Any.fromFunction2(value))
@@ -237,6 +253,9 @@ object EmulationApi {
     
     @scala.inline
     def setSetGeolocationOverride(value: SetGeolocationOverrideRequest => js.Promise[Unit]): Self = this.set("setGeolocationOverride", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setSetIdleOverride(value: SetIdleOverrideRequest => js.Promise[Unit]): Self = this.set("setIdleOverride", js.Any.fromFunction1(value))
     
     @scala.inline
     def setSetLocaleOverride(value: SetLocaleOverrideRequest => js.Promise[Unit]): Self = this.set("setLocaleOverride", js.Any.fromFunction1(value))

@@ -2,7 +2,7 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.ModelTitleElement
-import typingsSlinky.devextreme.anon.`8`
+import typingsSlinky.devextreme.anon.`10`
 import typingsSlinky.devextreme.devextremeStrings.`left bottom`
 import typingsSlinky.devextreme.devextremeStrings.`left top`
 import typingsSlinky.devextreme.devextremeStrings.`right bottom`
@@ -22,52 +22,80 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPopupOptions[T] extends dxOverlayOptions[T] {
   
-  /** @name dxPopup.Options.animation */
+  /**
+    * [descr:dxPopup.Options.animation]
+    */
   @JSName("animation")
   var animation_dxPopupOptions: js.UndefOr[dxPopupAnimation] = js.native
   
-  /** @name dxPopup.Options.container */
+  /**
+    * [descr:dxPopup.Options.container]
+    */
   var container: js.UndefOr[String | Element | JQuery] = js.native
   
-  /** @name dxPopup.Options.fullScreen */
+  /**
+    * [descr:dxPopup.Options.fullScreen]
+    */
   var fullScreen: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPopup.Options.onResize */
-  var onResize: js.UndefOr[js.Function1[/* e */ `8`[T], _]] = js.native
+  /**
+    * [descr:dxPopup.Options.onResize]
+    */
+  var onResize: js.UndefOr[js.Function1[/* e */ `10`[T], _]] = js.native
   
-  /** @name dxPopup.Options.onResizeEnd */
-  var onResizeEnd: js.UndefOr[js.Function1[/* e */ `8`[T], _]] = js.native
+  /**
+    * [descr:dxPopup.Options.onResizeEnd]
+    */
+  var onResizeEnd: js.UndefOr[js.Function1[/* e */ `10`[T], _]] = js.native
   
-  /** @name dxPopup.Options.onResizeStart */
-  var onResizeStart: js.UndefOr[js.Function1[/* e */ `8`[T], _]] = js.native
+  /**
+    * [descr:dxPopup.Options.onResizeStart]
+    */
+  var onResizeStart: js.UndefOr[js.Function1[/* e */ `10`[T], _]] = js.native
   
-  /** @name dxPopup.Options.onTitleRendered */
+  /**
+    * [descr:dxPopup.Options.onTitleRendered]
+    */
   var onTitleRendered: js.UndefOr[js.Function1[/* e */ ModelTitleElement[T], _]] = js.native
   
-  /** @name dxPopup.Options.position */
+  /**
+    * [descr:dxPopup.Options.position]
+    */
   @JSName("position")
   var position_dxPopupOptions: js.UndefOr[
     bottom | center | left | (`left bottom`) | (`left top`) | right | (`right bottom`) | (`right top`) | top | positionConfig | js.Function
   ] = js.native
   
-  /** @name dxPopup.Options.resizeEnabled */
+  /**
+    * [descr:dxPopup.Options.resizeEnabled]
+    */
   var resizeEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPopup.Options.showCloseButton */
+  /**
+    * [descr:dxPopup.Options.showCloseButton]
+    */
   var showCloseButton: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPopup.Options.showTitle */
+  /**
+    * [descr:dxPopup.Options.showTitle]
+    */
   var showTitle: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPopup.Options.title */
+  /**
+    * [descr:dxPopup.Options.title]
+    */
   var title: js.UndefOr[String] = js.native
   
-  /** @name dxPopup.Options.titleTemplate */
+  /**
+    * [descr:dxPopup.Options.titleTemplate]
+    */
   var titleTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* titleElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxPopup.Options.toolbarItems */
+  /**
+    * [descr:dxPopup.Options.toolbarItems]
+    */
   var toolbarItems: js.UndefOr[js.Array[dxPopupToolbarItem]] = js.native
 }
 object dxPopupOptions {
@@ -115,19 +143,19 @@ object dxPopupOptions {
     def deleteFullScreen: Self = this.set("fullScreen", js.undefined)
     
     @scala.inline
-    def setOnResize(value: /* e */ `8`[T] => _): Self = this.set("onResize", js.Any.fromFunction1(value))
+    def setOnResize(value: /* e */ `10`[T] => _): Self = this.set("onResize", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnResize: Self = this.set("onResize", js.undefined)
     
     @scala.inline
-    def setOnResizeEnd(value: /* e */ `8`[T] => _): Self = this.set("onResizeEnd", js.Any.fromFunction1(value))
+    def setOnResizeEnd(value: /* e */ `10`[T] => _): Self = this.set("onResizeEnd", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnResizeEnd: Self = this.set("onResizeEnd", js.undefined)
     
     @scala.inline
-    def setOnResizeStart(value: /* e */ `8`[T] => _): Self = this.set("onResizeStart", js.Any.fromFunction1(value))
+    def setOnResizeStart(value: /* e */ `10`[T] => _): Self = this.set("onResizeStart", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnResizeStart: Self = this.set("onResizeStart", js.undefined)

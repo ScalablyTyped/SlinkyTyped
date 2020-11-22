@@ -1,6 +1,7 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.utilsMod.GraphColorsType
+import typingsSlinky.grommet.utilsMod.ColorType
+import typingsSlinky.grommet.utilsMod.OpacityType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `7` extends js.Object {
   
-  var colors: js.UndefOr[GraphColorsType] = js.native
+  var color: js.UndefOr[ColorType] = js.native
+  
+  var opacity: js.UndefOr[OpacityType] = js.native
 }
 object `7` {
   
@@ -34,12 +37,15 @@ object `7` {
     }
     
     @scala.inline
-    def setColorsVarargs(value: String*): Self = this.set("colors", js.Array(value :_*))
+    def setColor(value: ColorType): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColors(value: GraphColorsType): Self = this.set("colors", value.asInstanceOf[js.Any])
+    def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def deleteColors: Self = this.set("colors", js.undefined)
+    def setOpacity(value: OpacityType): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOpacity: Self = this.set("opacity", js.undefined)
   }
 }

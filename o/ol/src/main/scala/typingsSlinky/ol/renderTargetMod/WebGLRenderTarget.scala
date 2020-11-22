@@ -9,18 +9,39 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WebGLRenderTarget extends js.Object {
   
+  /**
+    * This will cause following calls to #readAll or #readPixel to download the content of the
+    * render target into memory, which is an expensive operation.
+    * This content will be kept in cache but should be cleared after each new render.
+    */
   def clearCachedData(): Unit = js.native
   
   def getFramebuffer(): WebGLFramebuffer = js.native
   
+  /**
+    * Returns the size of the render target texture
+    */
   def getSize(): js.Array[Double] = js.native
   
   def getTexture(): WebGLTexture = js.native
   
+  /**
+    * Returns the full content of the frame buffer as a series of r, g, b, a components
+    * in the 0-255 range (unsigned byte).
+    */
   def readAll(): js.typedarray.Uint8Array = js.native
   
+  /**
+    * Reads one pixel of the frame buffer as an array of r, g, b, a components
+    * in the 0-255 range (unsigned byte).
+    * If x and/or y are outside of existing data, an array filled with 0 is returned.
+    */
   def readPixel(x: Double, y: Double): js.typedarray.Uint8Array = js.native
   
+  /**
+    * Changes the size of the render target texture. Note: will do nothing if the size
+    * is already the same.
+    */
   def setSize(size: js.Array[Double]): Unit = js.native
 }
 object WebGLRenderTarget {

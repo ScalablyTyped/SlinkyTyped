@@ -24,13 +24,13 @@ trait BindingElementnameIdentif extends js.Object {
   
   var _declarationBrand: js.Any = js.native
   
-  var decorators: js.UndefOr[NodeArray[Decorator]] = js.native
+  val decorators: js.UndefOr[NodeArray[Decorator]] = js.native
   
-  var dotDotDotToken: js.UndefOr[DotDotDotToken] = js.native
+  val dotDotDotToken: js.UndefOr[DotDotDotToken] = js.native
   
-  var end: Double = js.native
+  val end: Double = js.native
   
-  var flags: NodeFlags = js.native
+  val flags: NodeFlags = js.native
   
   def forEachChild[T](cbNode: js.Function1[/* node */ this.type, js.UndefOr[T]]): js.UndefOr[T] = js.native
   def forEachChild[T](
@@ -78,17 +78,17 @@ trait BindingElementnameIdentif extends js.Object {
   def getWidth(): Double = js.native
   def getWidth(sourceFile: SourceFileLike): Double = js.native
   
-  var initializer: js.UndefOr[Expression] = js.native
+  val initializer: js.UndefOr[Expression] = js.native
   
-  var kind: BindingElement = js.native
+  val kind: BindingElement = js.native
   
-  var modifiers: js.UndefOr[ModifiersArray] = js.native
+  val modifiers: js.UndefOr[ModifiersArray] = js.native
   
-  var name: BindingName with Identifier = js.native
+  val name: BindingName with Identifier = js.native
   
-  var parent: BindingPattern = js.native
+  val parent: BindingPattern = js.native
   
-  var pos: Double = js.native
+  val pos: Double = js.native
   
-  var propertyName: js.UndefOr[PropertyName] = js.native
+  val propertyName: js.UndefOr[PropertyName] = js.native
 }

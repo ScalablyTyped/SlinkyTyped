@@ -33,7 +33,7 @@ trait Node extends js.Object {
   var InstanceType: js.UndefOr[InstanceTypeString] = js.native
   
   /**
-    * 
+    * Configuration properties for logging events associated with a peer node owned by a member in a Managed Blockchain network.
     */
   var LogPublishingConfiguration: js.UndefOr[NodeLogPublishingConfiguration] = js.native
   
@@ -46,6 +46,11 @@ trait Node extends js.Object {
     * The unique identifier of the network that the node is in.
     */
   var NetworkId: js.UndefOr[ResourceIdString] = js.native
+  
+  /**
+    * The state database that the node uses. Values are LevelDB or CouchDB.
+    */
+  var StateDB: js.UndefOr[StateDBType] = js.native
   
   /**
     * The status of the node.
@@ -122,6 +127,12 @@ object Node {
     
     @scala.inline
     def deleteNetworkId: Self = this.set("NetworkId", js.undefined)
+    
+    @scala.inline
+    def setStateDB(value: StateDBType): Self = this.set("StateDB", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStateDB: Self = this.set("StateDB", js.undefined)
     
     @scala.inline
     def setStatus(value: NodeStatus): Self = this.set("Status", value.asInstanceOf[js.Any])

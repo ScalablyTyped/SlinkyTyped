@@ -1,7 +1,7 @@
 
 # Scala.js typings for dockerode
 
-Typings are for version 2.5
+Typings are for version 3.2
 
 ## Library description:
 Docker Remote API module.

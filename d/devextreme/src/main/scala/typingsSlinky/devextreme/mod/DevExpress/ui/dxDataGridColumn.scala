@@ -24,51 +24,77 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDataGridColumn extends GridBaseColumn {
   
-  /** @name dxDataGridColumn.allowExporting */
+  /**
+    * [descr:dxDataGridColumn.allowExporting]
+    */
   var allowExporting: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDataGridColumn.allowGrouping */
+  /**
+    * [descr:dxDataGridColumn.allowGrouping]
+    */
   var allowGrouping: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDataGridColumn.autoExpandGroup */
+  /**
+    * [descr:dxDataGridColumn.autoExpandGroup]
+    */
   var autoExpandGroup: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDataGridColumn.buttons */
+  /**
+    * [descr:dxDataGridColumn.buttons]
+    */
   var buttons: js.UndefOr[js.Array[cancel | delete | edit | save | undelete | dxDataGridColumnButton]] = js.native
   
-  /** @name dxDataGridColumn.calculateGroupValue */
+  /**
+    * [descr:dxDataGridColumn.calculateGroupValue]
+    */
   var calculateGroupValue: js.UndefOr[String | (js.Function1[/* rowData */ js.Any, _])] = js.native
   
-  /** @name dxDataGridColumn.cellTemplate */
+  /**
+    * [descr:dxDataGridColumn.cellTemplate]
+    */
   var cellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ OldValue, _])
   ] = js.native
   
-  /** @name dxDataGridColumn.columns */
+  /**
+    * [descr:dxDataGridColumn.columns]
+    */
   var columns: js.UndefOr[js.Array[dxDataGridColumn | String]] = js.native
   
-  /** @name dxDataGridColumn.editCellTemplate */
+  /**
+    * [descr:dxDataGridColumn.editCellTemplate]
+    */
   var editCellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ RowIndex, _])
   ] = js.native
   
-  /** @name dxDataGridColumn.groupCellTemplate */
+  /**
+    * [descr:dxDataGridColumn.groupCellTemplate]
+    */
   var groupCellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* cellElement */ dxElement, /* cellInfo */ GroupContinuedMessage, _])
   ] = js.native
   
-  /** @name dxDataGridColumn.groupIndex */
+  /**
+    * [descr:dxDataGridColumn.groupIndex]
+    */
   var groupIndex: js.UndefOr[Double] = js.native
   
-  /** @name dxDataGridColumn.headerCellTemplate */
+  /**
+    * [descr:dxDataGridColumn.headerCellTemplate]
+    */
   var headerCellTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* columnHeader */ dxElement, /* headerInfo */ ColumnColumnIndex, _])
   ] = js.native
   
-  /** @name dxDataGridColumn.showWhenGrouped */
+  /**
+    * [descr:dxDataGridColumn.showWhenGrouped]
+    */
   var showWhenGrouped: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDataGridColumn.type */
+  /**
+    * [descr:dxDataGridColumn.type]
+    */
   var `type`: js.UndefOr[adaptive | buttons | detailExpand | groupExpand | selection | drag] = js.native
 }
 object dxDataGridColumn {

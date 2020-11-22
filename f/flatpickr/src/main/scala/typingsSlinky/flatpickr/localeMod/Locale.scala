@@ -19,6 +19,8 @@ trait Locale extends js.Object {
   
   var minuteAriaLabel: String = js.native
   
+  var monthAriaLabel: String = js.native
+  
   var months: Shorthand = js.native
   
   def ordinal(nth: Double): String = js.native
@@ -46,6 +48,7 @@ object Locale {
     firstDayOfWeek: Double,
     hourAriaLabel: String,
     minuteAriaLabel: String,
+    monthAriaLabel: String,
     months: Shorthand,
     ordinal: Double => String,
     rangeSeparator: String,
@@ -56,7 +59,7 @@ object Locale {
     weekdays: Longhand,
     yearAriaLabel: String
   ): Locale = {
-    val __obj = js.Dynamic.literal(amPM = amPM.asInstanceOf[js.Any], daysInMonth = daysInMonth.asInstanceOf[js.Any], firstDayOfWeek = firstDayOfWeek.asInstanceOf[js.Any], hourAriaLabel = hourAriaLabel.asInstanceOf[js.Any], minuteAriaLabel = minuteAriaLabel.asInstanceOf[js.Any], months = months.asInstanceOf[js.Any], ordinal = js.Any.fromFunction1(ordinal), rangeSeparator = rangeSeparator.asInstanceOf[js.Any], scrollTitle = scrollTitle.asInstanceOf[js.Any], time_24hr = time_24hr.asInstanceOf[js.Any], toggleTitle = toggleTitle.asInstanceOf[js.Any], weekAbbreviation = weekAbbreviation.asInstanceOf[js.Any], weekdays = weekdays.asInstanceOf[js.Any], yearAriaLabel = yearAriaLabel.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(amPM = amPM.asInstanceOf[js.Any], daysInMonth = daysInMonth.asInstanceOf[js.Any], firstDayOfWeek = firstDayOfWeek.asInstanceOf[js.Any], hourAriaLabel = hourAriaLabel.asInstanceOf[js.Any], minuteAriaLabel = minuteAriaLabel.asInstanceOf[js.Any], monthAriaLabel = monthAriaLabel.asInstanceOf[js.Any], months = months.asInstanceOf[js.Any], ordinal = js.Any.fromFunction1(ordinal), rangeSeparator = rangeSeparator.asInstanceOf[js.Any], scrollTitle = scrollTitle.asInstanceOf[js.Any], time_24hr = time_24hr.asInstanceOf[js.Any], toggleTitle = toggleTitle.asInstanceOf[js.Any], weekAbbreviation = weekAbbreviation.asInstanceOf[js.Any], weekdays = weekdays.asInstanceOf[js.Any], yearAriaLabel = yearAriaLabel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Locale]
   }
   
@@ -91,6 +94,9 @@ object Locale {
     
     @scala.inline
     def setMinuteAriaLabel(value: String): Self = this.set("minuteAriaLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMonthAriaLabel(value: String): Self = this.set("monthAriaLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMonths(value: Shorthand): Self = this.set("months", value.asInstanceOf[js.Any])

@@ -4,8 +4,13 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -37,14 +42,15 @@ import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.generatePickerMod.PickerLocale
-import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.rcPicker.dateBodyMod.DateRender
+import typingsSlinky.rcPicker.interfaceMod.CustomFormat
 import typingsSlinky.rcPicker.interfaceMod.OnPanelChange
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.monthBodyMod.MonthCellRender
@@ -52,10 +58,8 @@ import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
 import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
-import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.MutableRefObject
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.Validator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -140,7 +144,11 @@ trait WeakValidationMapTimePick extends js.Object {
   var `aria-readonly`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
   var `aria-relevant`: js.UndefOr[
-    Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]
+    Validator[
+      js.UndefOr[
+        additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`) | Null
+      ]
+    ]
   ] = js.native
   
   var `aria-required`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
@@ -209,7 +217,11 @@ trait WeakValidationMapTimePick extends js.Object {
   
   var dropdownClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
   
-  var format: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null | String]]] = js.native
+  var format: js.UndefOr[
+    Validator[
+      js.UndefOr[(js.Array[CustomFormat[Moment] | String]) | CustomFormat[Moment] | Null | String]
+    ]
+  ] = js.native
   
   var getPopupContainer: js.UndefOr[
     Validator[js.UndefOr[(js.Function1[/* node */ HTMLElement, HTMLElement]) | Null]]
@@ -223,7 +235,7 @@ trait WeakValidationMapTimePick extends js.Object {
   
   var inputReadOnly: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
-  var key: js.UndefOr[Validator[js.UndefOr[Key | Null]]] = js.native
+  var key: js.UndefOr[Validator[js.UndefOr[typingsSlinky.react.mod.Key | Null]]] = js.native
   
   var locale: js.UndefOr[Validator[js.UndefOr[Null | PickerLocale]]] = js.native
   
@@ -279,7 +291,7 @@ trait WeakValidationMapTimePick extends js.Object {
   
   var prefixCls: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
   
-  var ref: js.UndefOr[Validator[js.UndefOr[Null | Ref[_]]]] = js.native
+  var ref: js.UndefOr[Validator[js.UndefOr[Null | typingsSlinky.react.mod.Ref[_]]]] = js.native
   
   var renderExtraFooter: js.UndefOr[Validator[js.UndefOr[(js.Function1[/* mode */ PanelMode, ReactElement]) | Null]]] = js.native
   
@@ -555,7 +567,13 @@ object WeakValidationMapTimePick {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: Validator[
+          js.UndefOr[
+            additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`) | Null
+          ]
+        ]
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -745,7 +763,11 @@ object WeakValidationMapTimePick {
     def deleteDropdownClassName: Self = this.set("dropdownClassName", js.undefined)
     
     @scala.inline
-    def setFormat(value: Validator[js.UndefOr[js.Array[String] | Null | String]]): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setFormat(
+      value: Validator[
+          js.UndefOr[(js.Array[CustomFormat[Moment] | String]) | CustomFormat[Moment] | Null | String]
+        ]
+    ): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
@@ -781,7 +803,7 @@ object WeakValidationMapTimePick {
     def deleteInputReadOnly: Self = this.set("inputReadOnly", js.undefined)
     
     @scala.inline
-    def setKey(value: Validator[js.UndefOr[Key | Null]]): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setKey(value: Validator[js.UndefOr[typingsSlinky.react.mod.Key | Null]]): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
@@ -937,7 +959,7 @@ object WeakValidationMapTimePick {
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     
     @scala.inline
-    def setRef(value: Validator[js.UndefOr[Null | Ref[_]]]): Self = this.set("ref", value.asInstanceOf[js.Any])
+    def setRef(value: Validator[js.UndefOr[Null | typingsSlinky.react.mod.Ref[_]]]): Self = this.set("ref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRef: Self = this.set("ref", js.undefined)

@@ -3,18 +3,19 @@ package typingsSlinky.reactstrap.colMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.react.mod.ReactType
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ColProps
-  extends AllHTMLAttributes[HTMLDivElement]
-     with ClassAttributes[HTMLDivElement]
+  extends HTMLAttributes[HTMLDivElement]
      with /* key */ StringDictionary[js.Any] {
+  
+  var cssModule: js.UndefOr[CSSModule] = js.native
   
   var lg: js.UndefOr[ColumnProps] = js.native
   
@@ -22,7 +23,7 @@ trait ColProps
   
   var sm: js.UndefOr[ColumnProps] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
   
   // custom widths
   var widths: js.UndefOr[js.Array[String]] = js.native
@@ -55,6 +56,12 @@ object ColProps {
     }
     
     @scala.inline
+    def setCssModule(value: CSSModule): Self = this.set("cssModule", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCssModule: Self = this.set("cssModule", js.undefined)
+    
+    @scala.inline
     def setLg(value: ColumnProps): Self = this.set("lg", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -79,7 +86,7 @@ object ColProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

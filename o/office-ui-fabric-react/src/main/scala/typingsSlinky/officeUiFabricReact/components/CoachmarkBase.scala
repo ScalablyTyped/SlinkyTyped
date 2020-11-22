@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.MouseEvent
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmark
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkProps
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkStyleProps
@@ -13,7 +14,6 @@ import typingsSlinky.officeUiFabricReact.positioningContainerTypesMod.IPositioni
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubble
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

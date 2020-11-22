@@ -3,6 +3,7 @@ package typingsSlinky.officeUiFabricReact.components
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.documentCardImageTypesMod.IDocumentCardImage
 import typingsSlinky.officeUiFabricReact.documentCardImageTypesMod.IDocumentCardImageProps
 import typingsSlinky.officeUiFabricReact.documentCardImageTypesMod.IDocumentCardImageStyleProps
@@ -11,7 +12,6 @@ import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.officeUiFabricReact.imageTypesMod.ImageFit
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

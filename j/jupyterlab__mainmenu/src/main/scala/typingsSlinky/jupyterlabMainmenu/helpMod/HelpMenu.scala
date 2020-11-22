@@ -1,40 +1,29 @@
 package typingsSlinky.jupyterlabMainmenu.helpMod
 
+import typingsSlinky.jupyterlabMainmenu.helpMod.IHelpMenu.IKernelUser
 import typingsSlinky.jupyterlabMainmenu.labmenuMod.JupyterLabMenu
-import typingsSlinky.phosphorWidgets.menuMod.Menu.IOptions
+import typingsSlinky.luminoWidgets.menuMod.Menu.IOptions
+import typingsSlinky.luminoWidgets.mod.Widget
+import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/mainmenu/lib/help", "HelpMenu")
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.luminoDisposable.mod.IDisposable because Already inherited
+- typingsSlinky.jupyterlabMainmenu.labmenuMod.IJupyterLabMenu because Already inherited
+- typingsSlinky.jupyterlabMainmenu.helpMod.IHelpMenu because var conflicts: isDisposed. Inlined kernelUsers */ @JSImport("@jupyterlab/mainmenu/lib/help", "HelpMenu")
 @js.native
-class HelpMenu protected ()
-  extends JupyterLabMenu
-     with IHelpMenu {
+class HelpMenu protected () extends JupyterLabMenu {
   /**
     * Construct the help menu.
     */
   def this(options: IOptions) = this()
+  
   /**
-    * Test whether the object has been disposed.
-    *
-    * #### Notes
-    * This property is always safe to access.
+    * A set of kernel users for the help menu.
+    * This is used to populate additional help
+    * links provided by the kernel of a widget.
     */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
-  /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
+  val kernelUsers: Set[IKernelUser[Widget]] = js.native
 }
-

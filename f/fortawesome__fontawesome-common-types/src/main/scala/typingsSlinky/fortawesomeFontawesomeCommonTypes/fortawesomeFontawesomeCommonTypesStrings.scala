@@ -42,9 +42,6 @@ object fortawesomeFontawesomeCommonTypesStrings {
   def adn: adn = "adn".asInstanceOf[adn]
   
   @scala.inline
-  def adobe: adobe = "adobe".asInstanceOf[adobe]
-  
-  @scala.inline
   def adversal: adversal = "adversal".asInstanceOf[adversal]
   
   @scala.inline
@@ -1417,6 +1414,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   
   @scala.inline
   def `cloud-upload-alt`: `cloud-upload-alt` = "cloud-upload-alt".asInstanceOf[`cloud-upload-alt`]
+  
+  @scala.inline
+  def cloudflare: cloudflare = "cloudflare".asInstanceOf[cloudflare]
   
   @scala.inline
   def clouds: clouds = "clouds".asInstanceOf[clouds]
@@ -2925,6 +2925,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   def grunt: grunt = "grunt".asInstanceOf[grunt]
   
   @scala.inline
+  def guilded: guilded = "guilded".asInstanceOf[guilded]
+  
+  @scala.inline
   def guitar: guitar = "guitar".asInstanceOf[guitar]
   
   @scala.inline
@@ -3189,6 +3192,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   def history: history = "history".asInstanceOf[history]
   
   @scala.inline
+  def hive: hive = "hive".asInstanceOf[hive]
+  
+  @scala.inline
   def `hockey-mask`: `hockey-mask` = "hockey-mask".asInstanceOf[`hockey-mask`]
   
   @scala.inline
@@ -3399,10 +3405,16 @@ object fortawesomeFontawesomeCommonTypesStrings {
   def inhaler: inhaler = "inhaler".asInstanceOf[inhaler]
   
   @scala.inline
+  def innosoft: innosoft = "innosoft".asInstanceOf[innosoft]
+  
+  @scala.inline
   def instagram: instagram = "instagram".asInstanceOf[instagram]
   
   @scala.inline
   def `instagram-square`: `instagram-square` = "instagram-square".asInstanceOf[`instagram-square`]
+  
+  @scala.inline
+  def instalod: instalod = "instalod".asInstanceOf[instalod]
   
   @scala.inline
   def integral: integral = "integral".asInstanceOf[integral]
@@ -4197,6 +4209,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   def octagon: octagon = "octagon".asInstanceOf[octagon]
   
   @scala.inline
+  def `octopus-deploy`: `octopus-deploy` = "octopus-deploy".asInstanceOf[`octopus-deploy`]
+  
+  @scala.inline
   def odnoklassniki: odnoklassniki = "odnoklassniki".asInstanceOf[odnoklassniki]
   
   @scala.inline
@@ -4390,6 +4405,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   
   @scala.inline
   def `pepper-hot`: `pepper-hot` = "pepper-hot".asInstanceOf[`pepper-hot`]
+  
+  @scala.inline
+  def perbyte: perbyte = "perbyte".asInstanceOf[perbyte]
   
   @scala.inline
   def percent: percent = "percent".asInstanceOf[percent]
@@ -6330,6 +6348,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   def `umbrella-beach`: `umbrella-beach` = "umbrella-beach".asInstanceOf[`umbrella-beach`]
   
   @scala.inline
+  def uncharted: uncharted = "uncharted".asInstanceOf[uncharted]
+  
+  @scala.inline
   def underline: underline = "underline".asInstanceOf[underline]
   
   @scala.inline
@@ -6558,6 +6579,12 @@ object fortawesomeFontawesomeCommonTypesStrings {
   def `venus-mars`: `venus-mars` = "venus-mars".asInstanceOf[`venus-mars`]
   
   @scala.inline
+  def vest: vest = "vest".asInstanceOf[vest]
+  
+  @scala.inline
+  def `vest-patches`: `vest-patches` = "vest-patches".asInstanceOf[`vest-patches`]
+  
+  @scala.inline
   def vhs: vhs = "vhs".asInstanceOf[vhs]
   
   @scala.inline
@@ -6699,6 +6726,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   def `watch-fitness`: `watch-fitness` = "watch-fitness".asInstanceOf[`watch-fitness`]
   
   @scala.inline
+  def `watchman-monitoring`: `watchman-monitoring` = "watchman-monitoring".asInstanceOf[`watchman-monitoring`]
+  
+  @scala.inline
   def water: water = "water".asInstanceOf[water]
   
   @scala.inline
@@ -6837,6 +6867,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   def `wizards-of-the-coast`: `wizards-of-the-coast` = "wizards-of-the-coast".asInstanceOf[`wizards-of-the-coast`]
   
   @scala.inline
+  def wodu: wodu = "wodu".asInstanceOf[wodu]
+  
+  @scala.inline
   def `wolf-pack-battalion`: `wolf-pack-battalion` = "wolf-pack-battalion".asInstanceOf[`wolf-pack-battalion`]
   
   @scala.inline
@@ -6949,9 +6982,6 @@ object fortawesomeFontawesomeCommonTypesStrings {
   
   @js.native
   sealed trait adn extends IconName
-  
-  @js.native
-  sealed trait adobe extends IconName
   
   @js.native
   sealed trait adversal extends IconName
@@ -8329,6 +8359,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   
   @js.native
   sealed trait `cloud-upload-alt` extends IconName
+  
+  @js.native
+  sealed trait cloudflare extends IconName
   
   @js.native
   sealed trait clouds extends IconName
@@ -9837,6 +9870,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   sealed trait grunt extends IconName
   
   @js.native
+  sealed trait guilded extends IconName
+  
+  @js.native
   sealed trait guitar extends IconName
   
   @js.native
@@ -10101,6 +10137,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   sealed trait history extends IconName
   
   @js.native
+  sealed trait hive extends IconName
+  
+  @js.native
   sealed trait `hockey-mask` extends IconName
   
   @js.native
@@ -10311,10 +10350,16 @@ object fortawesomeFontawesomeCommonTypesStrings {
   sealed trait inhaler extends IconName
   
   @js.native
+  sealed trait innosoft extends IconName
+  
+  @js.native
   sealed trait instagram extends IconName
   
   @js.native
   sealed trait `instagram-square` extends IconName
+  
+  @js.native
+  sealed trait instalod extends IconName
   
   @js.native
   sealed trait integral extends IconName
@@ -11109,6 +11154,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   sealed trait octagon extends IconName
   
   @js.native
+  sealed trait `octopus-deploy` extends IconName
+  
+  @js.native
   sealed trait odnoklassniki extends IconName
   
   @js.native
@@ -11302,6 +11350,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   
   @js.native
   sealed trait `pepper-hot` extends IconName
+  
+  @js.native
+  sealed trait perbyte extends IconName
   
   @js.native
   sealed trait percent extends IconName
@@ -13242,6 +13293,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   sealed trait `umbrella-beach` extends IconName
   
   @js.native
+  sealed trait uncharted extends IconName
+  
+  @js.native
   sealed trait underline extends IconName
   
   @js.native
@@ -13470,6 +13524,12 @@ object fortawesomeFontawesomeCommonTypesStrings {
   sealed trait `venus-mars` extends IconName
   
   @js.native
+  sealed trait vest extends IconName
+  
+  @js.native
+  sealed trait `vest-patches` extends IconName
+  
+  @js.native
   sealed trait vhs extends IconName
   
   @js.native
@@ -13611,6 +13671,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   sealed trait `watch-fitness` extends IconName
   
   @js.native
+  sealed trait `watchman-monitoring` extends IconName
+  
+  @js.native
   sealed trait water extends IconName
   
   @js.native
@@ -13747,6 +13810,9 @@ object fortawesomeFontawesomeCommonTypesStrings {
   
   @js.native
   sealed trait `wizards-of-the-coast` extends IconName
+  
+  @js.native
+  sealed trait wodu extends IconName
   
   @js.native
   sealed trait `wolf-pack-battalion` extends IconName

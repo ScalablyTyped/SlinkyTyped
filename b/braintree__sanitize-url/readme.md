@@ -1,7 +1,7 @@
 
 # Scala.js typings for braintree__sanitize-url
 
-Typings are for version 4.1.1
+Typings are for version 5.0.0
 
 ## Library description:
 A url sanitizer

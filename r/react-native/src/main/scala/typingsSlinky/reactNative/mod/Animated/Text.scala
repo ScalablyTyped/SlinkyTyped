@@ -13,6 +13,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object Text
   extends TopLevel[
       ReactComponentClass[
-        ComponentProps[Instantiable0[typingsSlinky.reactNative.mod.Text]] | AnimatedProps[ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.Text]]]
+        AnimatedProps[ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.Text]]]
       ]
     ]

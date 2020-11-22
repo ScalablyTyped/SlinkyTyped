@@ -17,9 +17,9 @@ class Texture protected ()
   /**
     * Instantiates a new texture.
     * This represents a texture in babylon. It can be easily loaded from a network, base64 or html input.
-    * @see http://doc.babylonjs.com/babylon101/materials#texture
+    * @see https://doc.babylonjs.com/babylon101/materials#texture
     * @param url defines the url of the picture to load as a texture
-    * @param scene defines the scene or engine the texture will belong to
+    * @param sceneOrEngine defines the scene or engine the texture will belong to
     * @param noMipmap defines if the texture will require mip maps or not
     * @param invertY defines if the texture needs to be inverted on the y axis during loading
     * @param samplingMode defines the sampling mode we want for the texture while fectching from it (Texture.NEAREST_SAMPLINGMODE...)
@@ -29,6 +29,7 @@ class Texture protected ()
     * @param deleteBuffer defines if the buffer we are loading the texture from should be deleted after load
     * @param format defines the format of the texture we are trying to load (Engine.TEXTUREFORMAT_RGBA...)
     * @param mimeType defines an optional mime type information
+    * @param loaderOptions options to be passed to the loader
     */
   def this(
     url: Nullable[String],
@@ -49,7 +50,8 @@ class Texture protected ()
       ],
     deleteBuffer: js.UndefOr[Boolean],
     format: js.UndefOr[Double],
-    mimeType: js.UndefOr[String]
+    mimeType: js.UndefOr[String],
+    loaderOptions: js.UndefOr[js.Any]
   ) = this()
 }
 /* static members */
@@ -102,6 +104,12 @@ object Texture extends js.Object {
   
   /** Equirectangular Fixed coordinates mode */
   val FIXED_EQUIRECTANGULAR_MODE: Double = js.native
+  
+  /**
+    * Gets or sets a general boolean used to indicate that texture buffers must be saved as part of the serialization process.
+    * If no buffer exists, one will be created as base64 string from the internal webgl data.
+    */
+  var ForceSerializeBuffers: Boolean = js.native
   
   /** Inverse Cubic coordinates mode */
   val INVCUBIC_MODE: Double = js.native

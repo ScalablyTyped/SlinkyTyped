@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.mod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.uifabricStyling.ianimationstylesMod.IAnimationVariables
+import typingsSlinky.fluentuiTheme.ianimationstylesMod.IAnimationVariables
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PublicKey extends js.Object {
   
   /**
-    * A time you added a public key to CloudFront.
+    * The date and time when the public key was uploaded.
     */
   var CreatedTime: js.Date = js.native
   
   /**
-    * A unique ID assigned to a public key you've added to CloudFront.
+    * The identifier of the public key.
     */
   var Id: String = js.native
   
   /**
-    * A complex data type for a public key you add to CloudFront to use with features like field-level encryption.
+    * Configuration information about a public key that you can use with signed URLs and signed cookies, or with field-level encryption.
     */
   var PublicKeyConfig: typingsSlinky.awsSdk.cloudfrontMod.PublicKeyConfig = js.native
 }

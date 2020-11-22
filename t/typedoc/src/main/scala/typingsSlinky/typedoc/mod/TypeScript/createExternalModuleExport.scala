@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createExternalModuleExport extends js.Object {
   
+  /** @deprecated Use `factory.createExternalModuleExport` or the factory supplied by your transformation context instead. */
   def apply(exportName: Identifier): ExportDeclaration = js.native
 }

@@ -26,7 +26,7 @@ object babylonjsMeshesAbstractMeshAugmentingMod extends js.Object {
       * @param maxDepth defines the maximum depth to use (no more than 2 levels by default)
       * @returns the new octree
       * @see https://www.babylonjs-playground.com/#NA4OQ#12
-      * @see http://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
+      * @see https://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
       */
     def createOrUpdateSubmeshesOctree(): typingsSlinky.babylonjs.octreeMod.Octree[SubMesh] = js.native
     def createOrUpdateSubmeshesOctree(maxCapacity: js.UndefOr[scala.Nothing], maxDepth: Double): typingsSlinky.babylonjs.octreeMod.Octree[SubMesh] = js.native

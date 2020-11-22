@@ -29,10 +29,10 @@ object Galleria {
     def baseZIndex(value: Double): this.type = set("baseZIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def captionTemplate(value: js.Any): this.type = set("captionTemplate", value.asInstanceOf[js.Any])
+    def caption(value: js.Any): this.type = set("caption", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def changePreviewOnIndicatorHover(value: Boolean): this.type = set("changePreviewOnIndicatorHover", value.asInstanceOf[js.Any])
+    def changeItemOnIndicatorHover(value: Boolean): this.type = set("changeItemOnIndicatorHover", value.asInstanceOf[js.Any])
     
     @scala.inline
     def circular(value: Boolean): this.type = set("circular", value.asInstanceOf[js.Any])
@@ -53,10 +53,13 @@ object Galleria {
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def indicatorItemTemplate(value: js.Any): this.type = set("indicatorItemTemplate", value.asInstanceOf[js.Any])
+    def indicator(value: js.Any): this.type = set("indicator", value.asInstanceOf[js.Any])
     
     @scala.inline
     def indicatorsPosition(value: String): this.type = set("indicatorsPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def item(value: js.Any): this.type = set("item", value.asInstanceOf[js.Any])
     
     @scala.inline
     def numVisible(value: Double): this.type = set("numVisible", value.asInstanceOf[js.Any])
@@ -65,25 +68,22 @@ object Galleria {
     def onItemChange(value: /* e */ IndexNumber => Unit): this.type = set("onItemChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def previewItemTemplate(value: js.Any): this.type = set("previewItemTemplate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def responsiveOptions(value: js.Any): this.type = set("responsiveOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def showIndicators(value: Boolean): this.type = set("showIndicators", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def showIndicatorsOnPreview(value: Boolean): this.type = set("showIndicatorsOnPreview", value.asInstanceOf[js.Any])
+    def showIndicatorsOnItem(value: Boolean): this.type = set("showIndicatorsOnItem", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def showNavButtonsOnPreviewHover(value: Boolean): this.type = set("showNavButtonsOnPreviewHover", value.asInstanceOf[js.Any])
+    def showItemNavigators(value: Boolean): this.type = set("showItemNavigators", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def showPreviewNavButtons(value: Boolean): this.type = set("showPreviewNavButtons", value.asInstanceOf[js.Any])
+    def showItemNavigatorsOnHover(value: Boolean): this.type = set("showItemNavigatorsOnHover", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def showThumbnailNavButtons(value: Boolean): this.type = set("showThumbnailNavButtons", value.asInstanceOf[js.Any])
+    def showThumbnailNavigators(value: Boolean): this.type = set("showThumbnailNavigators", value.asInstanceOf[js.Any])
     
     @scala.inline
     def showThumbnails(value: Boolean): this.type = set("showThumbnails", value.asInstanceOf[js.Any])
@@ -92,7 +92,7 @@ object Galleria {
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def thumbnailItemTemplate(value: js.Any): this.type = set("thumbnailItemTemplate", value.asInstanceOf[js.Any])
+    def thumbnail(value: js.Any): this.type = set("thumbnail", value.asInstanceOf[js.Any])
     
     @scala.inline
     def thumbnailsPosition(value: String): this.type = set("thumbnailsPosition", value.asInstanceOf[js.Any])

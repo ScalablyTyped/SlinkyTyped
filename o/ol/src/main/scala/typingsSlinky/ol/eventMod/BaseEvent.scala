@@ -7,12 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BaseEvent extends js.Object {
   
+  /**
+    * Stop event propagation.
+    */
   def preventDefault(): Unit = js.native
   
+  /**
+    * Stop event propagation.
+    */
   def stopPropagation(): Unit = js.native
   
+  /**
+    * The event target.
+    */
   var target: js.Any = js.native
   
+  /**
+    * The event type.
+    */
   var `type`: String = js.native
 }
 object BaseEvent {

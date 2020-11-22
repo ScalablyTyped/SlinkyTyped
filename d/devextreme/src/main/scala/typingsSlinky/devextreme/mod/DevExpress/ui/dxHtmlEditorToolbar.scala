@@ -13,10 +13,18 @@ import typingsSlinky.devextreme.devextremeStrings.clear
 import typingsSlinky.devextreme.devextremeStrings.codeBlock
 import typingsSlinky.devextreme.devextremeStrings.color
 import typingsSlinky.devextreme.devextremeStrings.decreaseIndent
+import typingsSlinky.devextreme.devextremeStrings.deleteColumn
+import typingsSlinky.devextreme.devextremeStrings.deleteRow
+import typingsSlinky.devextreme.devextremeStrings.deleteTable
 import typingsSlinky.devextreme.devextremeStrings.font
 import typingsSlinky.devextreme.devextremeStrings.header
 import typingsSlinky.devextreme.devextremeStrings.image
 import typingsSlinky.devextreme.devextremeStrings.increaseIndent
+import typingsSlinky.devextreme.devextremeStrings.insertColumnLeft
+import typingsSlinky.devextreme.devextremeStrings.insertColumnRight
+import typingsSlinky.devextreme.devextremeStrings.insertRowAbove
+import typingsSlinky.devextreme.devextremeStrings.insertRowBelow
+import typingsSlinky.devextreme.devextremeStrings.insertTable
 import typingsSlinky.devextreme.devextremeStrings.italic
 import typingsSlinky.devextreme.devextremeStrings.link
 import typingsSlinky.devextreme.devextremeStrings.orderedList
@@ -37,17 +45,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxHtmlEditorToolbar extends js.Object {
   
-  /** @name dxHtmlEditorToolbar.container */
+  /**
+    * [descr:dxHtmlEditorToolbar.container]
+    */
   var container: js.UndefOr[String | Element | JQuery] = js.native
   
-  /** @name dxHtmlEditorToolbar.items */
+  /**
+    * [descr:dxHtmlEditorToolbar.items]
+    */
   var items: js.UndefOr[
     js.Array[
-      dxHtmlEditorToolbarItem | background | bold | color | font | italic | link | image | size | strike | subscript | superscript | underline | blockquote | header | increaseIndent | decreaseIndent | orderedList | bulletList | alignLeft | alignCenter | alignRight | alignJustify | codeBlock | variable | separator | undo | redo | clear
+      dxHtmlEditorToolbarItem | background | bold | color | font | italic | link | image | size | strike | subscript | superscript | underline | blockquote | header | increaseIndent | decreaseIndent | orderedList | bulletList | alignLeft | alignCenter | alignRight | alignJustify | codeBlock | variable | separator | undo | redo | clear | insertTable | insertRowAbove | insertRowBelow | insertColumnLeft | insertColumnRight | deleteColumn | deleteRow | deleteTable
     ]
   ] = js.native
   
-  /** @name dxHtmlEditorToolbar.multiline */
+  /**
+    * [descr:dxHtmlEditorToolbar.multiline]
+    */
   var multiline: js.UndefOr[Boolean] = js.native
 }
 object dxHtmlEditorToolbar {
@@ -84,13 +98,13 @@ object dxHtmlEditorToolbar {
     
     @scala.inline
     def setItemsVarargs(
-      value: (dxHtmlEditorToolbarItem | background | bold | color | font | italic | link | image | size | strike | subscript | superscript | underline | blockquote | header | increaseIndent | decreaseIndent | orderedList | bulletList | alignLeft | alignCenter | alignRight | alignJustify | codeBlock | variable | separator | undo | redo | clear)*
+      value: (dxHtmlEditorToolbarItem | background | bold | color | font | italic | link | image | size | strike | subscript | superscript | underline | blockquote | header | increaseIndent | decreaseIndent | orderedList | bulletList | alignLeft | alignCenter | alignRight | alignJustify | codeBlock | variable | separator | undo | redo | clear | insertTable | insertRowAbove | insertRowBelow | insertColumnLeft | insertColumnRight | deleteColumn | deleteRow | deleteTable)*
     ): Self = this.set("items", js.Array(value :_*))
     
     @scala.inline
     def setItems(
       value: js.Array[
-          dxHtmlEditorToolbarItem | background | bold | color | font | italic | link | image | size | strike | subscript | superscript | underline | blockquote | header | increaseIndent | decreaseIndent | orderedList | bulletList | alignLeft | alignCenter | alignRight | alignJustify | codeBlock | variable | separator | undo | redo | clear
+          dxHtmlEditorToolbarItem | background | bold | color | font | italic | link | image | size | strike | subscript | superscript | underline | blockquote | header | increaseIndent | decreaseIndent | orderedList | bulletList | alignLeft | alignCenter | alignRight | alignJustify | codeBlock | variable | separator | undo | redo | clear | insertTable | insertRowAbove | insertRowBelow | insertColumnLeft | insertColumnRight | deleteColumn | deleteRow | deleteTable
         ]
     ): Self = this.set("items", value.asInstanceOf[js.Any])
     

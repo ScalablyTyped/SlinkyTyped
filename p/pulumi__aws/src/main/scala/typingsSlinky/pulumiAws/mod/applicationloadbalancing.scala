@@ -6,7 +6,6 @@ import typingsSlinky.pulumiAws.applicationloadbalancingGetLoadBalancerMod.GetLoa
 import typingsSlinky.pulumiAws.applicationloadbalancingGetLoadBalancerMod.GetLoadBalancerResult
 import typingsSlinky.pulumiAws.applicationloadbalancingGetTargetGroupMod.GetTargetGroupArgs
 import typingsSlinky.pulumiAws.applicationloadbalancingGetTargetGroupMod.GetTargetGroupResult
-import typingsSlinky.pulumiAws.applicationloadbalancingIpAddressTypeMod.IpAddressType
 import typingsSlinky.pulumiAws.applicationloadbalancingListenerCertificateMod.ListenerCertificateArgs
 import typingsSlinky.pulumiAws.applicationloadbalancingListenerCertificateMod.ListenerCertificateState
 import typingsSlinky.pulumiAws.applicationloadbalancingListenerMod.ListenerArgs
@@ -15,11 +14,16 @@ import typingsSlinky.pulumiAws.applicationloadbalancingListenerRuleMod.ListenerR
 import typingsSlinky.pulumiAws.applicationloadbalancingListenerRuleMod.ListenerRuleState
 import typingsSlinky.pulumiAws.applicationloadbalancingLoadBalancerMod.LoadBalancerArgs
 import typingsSlinky.pulumiAws.applicationloadbalancingLoadBalancerMod.LoadBalancerState
-import typingsSlinky.pulumiAws.applicationloadbalancingLoadBalancerTypeMod.LoadBalancerType
 import typingsSlinky.pulumiAws.applicationloadbalancingTargetGroupAttachmentMod.TargetGroupAttachmentArgs
 import typingsSlinky.pulumiAws.applicationloadbalancingTargetGroupAttachmentMod.TargetGroupAttachmentState
 import typingsSlinky.pulumiAws.applicationloadbalancingTargetGroupMod.TargetGroupArgs
 import typingsSlinky.pulumiAws.applicationloadbalancingTargetGroupMod.TargetGroupState
+import typingsSlinky.pulumiAws.enumsApplicationloadbalancingMod.IpAddressType
+import typingsSlinky.pulumiAws.enumsApplicationloadbalancingMod.LoadBalancerType
+import typingsSlinky.pulumiAws.pulumiAwsStrings.application
+import typingsSlinky.pulumiAws.pulumiAwsStrings.dualstack
+import typingsSlinky.pulumiAws.pulumiAwsStrings.ipv4
+import typingsSlinky.pulumiAws.pulumiAwsStrings.network
 import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
@@ -54,6 +58,14 @@ object applicationloadbalancing extends js.Object {
   def getTargetGroup(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetTargetGroupResult] = js.native
   def getTargetGroup(args: GetTargetGroupArgs): js.Promise[GetTargetGroupResult] = js.native
   def getTargetGroup(args: GetTargetGroupArgs, opts: InvokeOptions): js.Promise[GetTargetGroupResult] = js.native
+  
+  @js.native
+  object IpAddressType extends js.Object {
+    
+    val Dualstack: dualstack = js.native
+    
+    val Ipv4: ipv4 = js.native
+  }
   
   @js.native
   class Listener protected ()
@@ -211,6 +223,14 @@ object applicationloadbalancing extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/applicationloadbalancing/loadBalancer.LoadBalancer */ Boolean = js.native
+  }
+  
+  @js.native
+  object LoadBalancerType extends js.Object {
+    
+    val Application: application = js.native
+    
+    val Network: network = js.native
   }
   
   @js.native

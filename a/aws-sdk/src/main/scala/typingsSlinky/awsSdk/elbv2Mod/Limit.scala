@@ -13,7 +13,7 @@ trait Limit extends js.Object {
   var Max: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.Max] = js.native
   
   /**
-    * The name of the limit. The possible values are:   application-load-balancers   listeners-per-application-load-balancer   listeners-per-network-load-balancer   network-load-balancers   rules-per-application-load-balancer   target-groups   target-groups-per-action-on-application-load-balancer   target-groups-per-action-on-network-load-balancer   target-groups-per-application-load-balancer   targets-per-application-load-balancer   targets-per-availability-zone-per-network-load-balancer   targets-per-network-load-balancer  
+    * The name of the limit. The possible values are:   application-load-balancers   condition-values-per-alb-rule   condition-wildcards-per-alb-rule   gateway-load-balancers   gateway-load-balancers-per-vpc   geneve-target-groups   listeners-per-application-load-balancer   listeners-per-network-load-balancer   network-load-balancers   rules-per-application-load-balancer   target-groups   target-groups-per-action-on-application-load-balancer   target-groups-per-action-on-network-load-balancer   target-groups-per-application-load-balancer   targets-per-application-load-balancer   targets-per-availability-zone-per-gateway-load-balancer   targets-per-availability-zone-per-network-load-balancer   targets-per-network-load-balancer  
     */
   var Name: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.Name] = js.native
 }

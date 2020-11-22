@@ -9,7 +9,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownOnSearchChangeData
 import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownProps
 import typingsSlinky.semanticUiReact.dropdownItemMod.DropdownItemProps
@@ -99,10 +98,10 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def defaultUpward(value: Boolean): this.type = set("defaultUpward", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def defaultValueVarargs(value: Boolean*): this.type = set("defaultValue", js.Array(value :_*))
+  def defaultValueVarargs(value: (Double | String | Boolean)*): this.type = set("defaultValue", js.Array(value :_*))
   
   @scala.inline
-  def defaultValue(value: String | Double | Boolean | js.Array[Boolean]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+  def defaultValue(value: String | Double | Boolean | (js.Array[Double | String | Boolean])): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   
   @scala.inline
   def direction(value: left | right): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -142,7 +141,7 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   
   @scala.inline
   def labelFunction3(
-    value: (/* component */ ReactType[HtmlLabelProps], HtmlLabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, HtmlLabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("label", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -225,9 +224,18 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def scrolling(value: Boolean): this.type = set("scrolling", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def search(
-    value: (/* options */ js.Array[DropdownItemProps], /* value */ String) => js.Array[DropdownItemProps] | Boolean
+  def searchFunction2(
+    value: (/* options */ js.Array[DropdownItemProps], /* value */ String) => js.Array[DropdownItemProps]
   ): this.type = set("search", js.Any.fromFunction2(value))
+  
+  @scala.inline
+  def search(
+    value: Boolean | (js.Function2[
+      /* options */ js.Array[DropdownItemProps], 
+      /* value */ String, 
+      js.Array[DropdownItemProps]
+    ])
+  ): this.type = set("search", value.asInstanceOf[js.Any])
   
   @scala.inline
   def searchInput(value: js.Any): this.type = set("searchInput", value.asInstanceOf[js.Any])
@@ -269,10 +277,10 @@ class SharedBuilder_FormSelectProps1696265872 (val args: js.Array[js.Any])
   def upward(value: Boolean): this.type = set("upward", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
+  def valueVarargs(value: (Boolean | Double | String)*): this.type = set("value", js.Array(value :_*))
   
   @scala.inline
-  def value(value: Boolean | Double | String | js.Array[String]): this.type = set("value", value.asInstanceOf[js.Any])
+  def value(value: Boolean | Double | String | (js.Array[Boolean | Double | String])): this.type = set("value", value.asInstanceOf[js.Any])
   
   @scala.inline
   def width(value: SemanticWIDTHS): this.type = set("width", value.asInstanceOf[js.Any])

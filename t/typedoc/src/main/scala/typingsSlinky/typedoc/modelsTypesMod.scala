@@ -2,6 +2,9 @@ package typingsSlinky.typedoc
 
 import typingsSlinky.typedoc.abstractMod.Reflection
 import typingsSlinky.typedoc.reflectionsDeclarationMod.DeclarationReflection
+import typingsSlinky.typedoc.typedocStrings.keyof
+import typingsSlinky.typedoc.typedocStrings.readonly
+import typingsSlinky.typedoc.typedocStrings.unique
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,6 +52,12 @@ object modelsTypesMod extends js.Object {
   class IntrinsicType protected ()
     extends typingsSlinky.typedoc.typesIntrinsicMod.IntrinsicType {
     def this(name: String) = this()
+  }
+  
+  @js.native
+  class NamedTupleMember protected ()
+    extends typingsSlinky.typedoc.typesTupleMod.NamedTupleMember {
+    def this(name: String, isOptional: Boolean, element: typingsSlinky.typedoc.typesAbstractMod.Type) = this()
   }
   
   @js.native
@@ -118,7 +127,9 @@ object modelsTypesMod extends js.Object {
   @js.native
   class TypeOperatorType protected ()
     extends typingsSlinky.typedoc.typesTypeOperatorMod.TypeOperatorType {
-    def this(target: typingsSlinky.typedoc.typesAbstractMod.Type) = this()
+    def this(target: typingsSlinky.typedoc.typesAbstractMod.Type, operator: keyof) = this()
+    def this(target: typingsSlinky.typedoc.typesAbstractMod.Type, operator: readonly) = this()
+    def this(target: typingsSlinky.typedoc.typesAbstractMod.Type, operator: unique) = this()
   }
   
   @js.native

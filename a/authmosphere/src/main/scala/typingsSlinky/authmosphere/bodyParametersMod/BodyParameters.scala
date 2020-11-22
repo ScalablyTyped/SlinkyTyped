@@ -1,11 +1,16 @@
 package typingsSlinky.authmosphere.bodyParametersMod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined node.NodeJS.Dict<string | number | boolean | std.Array<string> | std.Array<number> | std.Array<boolean> | null> & {  grant_type :string,   username :string | undefined,   password :string | undefined,   code :string | undefined,   redirect_uri :string | undefined,   refresh_token :string | undefined} */
 @js.native
-trait BodyParameters extends js.Object {
+trait BodyParameters
+  extends /* key */ StringDictionary[
+      js.UndefOr[String | Double | Boolean | (js.Array[Boolean | Double | String]) | Null]
+    ] {
   
   var code: js.UndefOr[String] = js.native
   

@@ -12,6 +12,11 @@ object bearertokenMod extends js.Object {
   @js.native
   class BearerCredentialHandler protected () extends IRequestHandler {
     def this(token: String) = this()
+    def this(token: String, allowCrossOriginAuthentication: Boolean) = this()
+    
+    var allowCrossOriginAuthentication: Boolean = js.native
+    
+    var origin: String = js.native
     
     def prepareRequest(options: js.Any): Unit = js.native
     

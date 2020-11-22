@@ -4,7 +4,7 @@ import typingsSlinky.awsSdk.anon.DescribeEndPointStateInpu
 import typingsSlinky.awsSdk.awsSdkStrings.anyInstanceInService
 import typingsSlinky.awsSdk.awsSdkStrings.instanceDeregistered
 import typingsSlinky.awsSdk.awsSdkStrings.instanceInService
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service

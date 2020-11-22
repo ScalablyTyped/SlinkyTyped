@@ -49,6 +49,12 @@ object MultiSlider {
     def labelStepSize(value: Double): this.type = set("labelStepSize", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def labelValuesVarargs(value: Double*): this.type = set("labelValues", js.Array(value :_*))
+    
+    @scala.inline
+    def labelValues(value: js.Array[Double]): this.type = set("labelValues", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("esri/symbols/callouts/Callout3D", JSImport.Namespace)
 @js.native
 /**
-  * When symbols have an offset from their position, it's important to still see what the real location is. This can be achieved with callouts:
+  * When symbols have an offset from their position, it's important to still see what the real location is.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-callouts-Callout3D.html)
   */

@@ -110,6 +110,8 @@ package object elbv2Mod {
   
   type CreatedTime = js.Date
   
+  type CustomerOwnedIpv4Pool = java.lang.String
+  
   type DNSName = java.lang.String
   
   type Default = scala.Boolean
@@ -121,6 +123,8 @@ package object elbv2Mod {
   type FixedResponseActionMessage = java.lang.String
   
   type FixedResponseActionStatusCode = java.lang.String
+  
+  type GrpcCode = java.lang.String
   
   type HealthCheckEnabled = scala.Boolean
   
@@ -135,6 +139,8 @@ package object elbv2Mod {
   type HttpCode = java.lang.String
   
   type HttpHeaderConditionName = java.lang.String
+  
+  type IPv6Address = java.lang.String
   
   type IpAddress = java.lang.String
   
@@ -192,6 +198,7 @@ package object elbv2Mod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.application_
     - typingsSlinky.awsSdk.awsSdkStrings.network_
+    - typingsSlinky.awsSdk.awsSdkStrings.gateway_
     - java.lang.String
   */
   type LoadBalancerTypeEnum = typingsSlinky.awsSdk.elbv2Mod._LoadBalancerTypeEnum | java.lang.String
@@ -203,6 +210,8 @@ package object elbv2Mod {
   type Max = java.lang.String
   
   type Name = java.lang.String
+  
+  type OutpostId = java.lang.String
   
   type PageSize = scala.Double
   
@@ -219,9 +228,12 @@ package object elbv2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.TLS
     - typingsSlinky.awsSdk.awsSdkStrings.UDP
     - typingsSlinky.awsSdk.awsSdkStrings.TCP_UDP
+    - typingsSlinky.awsSdk.awsSdkStrings.GENEVE
     - java.lang.String
   */
   type ProtocolEnum = typingsSlinky.awsSdk.elbv2Mod._ProtocolEnum | java.lang.String
+  
+  type ProtocolVersion = java.lang.String
   
   type QueryStringKeyValuePairList = js.Array[typingsSlinky.awsSdk.elbv2Mod.QueryStringKeyValuePair]
   

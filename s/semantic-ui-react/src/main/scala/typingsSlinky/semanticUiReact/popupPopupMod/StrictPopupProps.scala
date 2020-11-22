@@ -1,14 +1,15 @@
 package typingsSlinky.semanticUiReact.popupPopupMod
 
 import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.popupContentMod.PopupContentProps
 import typingsSlinky.semanticUiReact.popupHeaderMod.PopupHeaderProps
@@ -30,7 +31,6 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.mini
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.small
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.very
-import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -74,17 +74,18 @@ trait StrictPopupProps extends StrictPortalProps {
   /** Invert the colors of the popup */
   var inverted: js.UndefOr[Boolean] = js.native
   
-  /** Offset value to apply to rendered popup. Accepts the following units:
-    * - px or unit-less, interpreted as pixels
-    * - %, percentage relative to the length of the trigger element
-    * - %p, percentage relative to the length of the popup element
-    * - vw, CSS viewport width unit
-    * - vh, CSS viewport height unit
+  /**
+    * Offset values in px unit to apply to rendered popup. The basic offset accepts an
+    * array with two numbers in the form [skidding, distance]:
+    * - `skidding` displaces the Popup along the reference element
+    * - `distance` displaces the Popup away from, or toward, the reference element in the direction of its placement. A positive number displaces it further away, while a negative number lets it overlap the reference.
+    *
+    * @see https://popper.js.org/docs/v2/modifiers/offset/
     */
-  var offset: js.UndefOr[Double | String] = js.native
+  var offset: js.UndefOr[(js.Tuple2[Double, js.UndefOr[Double]]) | PopperOffsetsFunction] = js.native
   
   /** Events triggering the popup. */
-  var on: js.UndefOr[hover | click | focus | js.Array[focus]] = js.native
+  var on: js.UndefOr[hover | click | focus | (js.Array[hover | click | focus])] = js.native
   
   /**
     * Called when a close event happens.
@@ -129,11 +130,14 @@ trait StrictPopupProps extends StrictPortalProps {
   /** Disables automatic repositioning of the component, it will always be placed according to the position value. */
   var pinned: js.UndefOr[Boolean] = js.native
   
+  /** A wrapping element for an actual content that will be used for positioning. */
+  var popper: js.UndefOr[SemanticShorthandItem[HTMLAttributes[HTMLDivElement]]] = js.native
+  
   /** A popup can have dependencies which update will schedule a position update. */
   var popperDependencies: js.UndefOr[js.Array[_]] = js.native
   
-  /** An object containing custom settings for the Popper.js modifiers. */
-  var popperModifiers: js.UndefOr[Record[String, _]] = js.native
+  /** An array containing custom settings for the Popper.js modifiers. */
+  var popperModifiers: js.UndefOr[js.Array[_]] = js.native
   
   /** Position for the popover. */
   var position: js.UndefOr[
@@ -198,7 +202,7 @@ object StrictPopupProps {
     
     @scala.inline
     def setContentFunction3(
-      value: (/* component */ ReactType[PopupContentProps], PopupContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, PopupContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("content", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -248,7 +252,7 @@ object StrictPopupProps {
     
     @scala.inline
     def setHeaderFunction3(
-      value: (/* component */ ReactType[PopupHeaderProps], PopupHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, PopupHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("header", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -276,16 +280,21 @@ object StrictPopupProps {
     def deleteInverted: Self = this.set("inverted", js.undefined)
     
     @scala.inline
-    def setOffset(value: Double | String): Self = this.set("offset", value.asInstanceOf[js.Any])
+    def setOffsetFunction1(
+      value: /* params */ PopperOffsetsFunctionParams => js.Tuple2[js.UndefOr[Double], js.UndefOr[Double]]
+    ): Self = this.set("offset", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setOffset(value: (js.Tuple2[Double, js.UndefOr[Double]]) | PopperOffsetsFunction): Self = this.set("offset", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOffset: Self = this.set("offset", js.undefined)
     
     @scala.inline
-    def setOnVarargs(value: focus*): Self = this.set("on", js.Array(value :_*))
+    def setOnVarargs(value: (hover | click | focus)*): Self = this.set("on", js.Array(value :_*))
     
     @scala.inline
-    def setOn(value: hover | click | focus | js.Array[focus]): Self = this.set("on", value.asInstanceOf[js.Any])
+    def setOn(value: hover | click | focus | (js.Array[hover | click | focus])): Self = this.set("on", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOn: Self = this.set("on", js.undefined)
@@ -321,6 +330,20 @@ object StrictPopupProps {
     def deletePinned: Self = this.set("pinned", js.undefined)
     
     @scala.inline
+    def setPopperReactElement(value: ReactElement): Self = this.set("popper", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPopperFunction3(
+      value: (/* component */ ReactElement, HTMLAttributes[HTMLDivElement], /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("popper", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setPopper(value: SemanticShorthandItem[HTMLAttributes[HTMLDivElement]]): Self = this.set("popper", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePopper: Self = this.set("popper", js.undefined)
+    
+    @scala.inline
     def setPopperDependenciesVarargs(value: js.Any*): Self = this.set("popperDependencies", js.Array(value :_*))
     
     @scala.inline
@@ -330,7 +353,10 @@ object StrictPopupProps {
     def deletePopperDependencies: Self = this.set("popperDependencies", js.undefined)
     
     @scala.inline
-    def setPopperModifiers(value: Record[String, _]): Self = this.set("popperModifiers", value.asInstanceOf[js.Any])
+    def setPopperModifiersVarargs(value: js.Any*): Self = this.set("popperModifiers", js.Array(value :_*))
+    
+    @scala.inline
+    def setPopperModifiers(value: js.Array[_]): Self = this.set("popperModifiers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePopperModifiers: Self = this.set("popperModifiers", js.undefined)

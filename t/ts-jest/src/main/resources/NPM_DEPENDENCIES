@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "ts-jest" : "26.4.4"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "ts-jest" : "26.4.4"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

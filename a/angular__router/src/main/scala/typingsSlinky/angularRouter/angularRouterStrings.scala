@@ -34,6 +34,12 @@ object angularRouterStrings {
   def enabled: enabled = "enabled".asInstanceOf[enabled]
   
   @scala.inline
+  def enabledBlocking: enabledBlocking = "enabledBlocking".asInstanceOf[enabledBlocking]
+  
+  @scala.inline
+  def enabledNonBlocking: enabledNonBlocking = "enabledNonBlocking".asInstanceOf[enabledNonBlocking]
+  
+  @scala.inline
   def hash: hash = "hash".asInstanceOf[hash]
   
   @scala.inline
@@ -47,12 +53,6 @@ object angularRouterStrings {
   
   @scala.inline
   def legacy: legacy = "legacy".asInstanceOf[legacy]
-  
-  @scala.inline
-  def legacy_disabled: legacy_disabled = "legacy_disabled".asInstanceOf[legacy_disabled]
-  
-  @scala.inline
-  def legacy_enabled: legacy_enabled = "legacy_enabled".asInstanceOf[legacy_enabled]
   
   @scala.inline
   def merge: merge = "merge".asInstanceOf[merge]
@@ -109,6 +109,12 @@ object angularRouterStrings {
   sealed trait enabled extends InitialNavigation
   
   @js.native
+  sealed trait enabledBlocking extends InitialNavigation
+  
+  @js.native
+  sealed trait enabledNonBlocking extends InitialNavigation
+  
+  @js.native
   sealed trait hash extends js.Object
   
   @js.native
@@ -122,12 +128,6 @@ object angularRouterStrings {
   
   @js.native
   sealed trait legacy extends js.Object
-  
-  @js.native
-  sealed trait legacy_disabled extends InitialNavigation
-  
-  @js.native
-  sealed trait legacy_enabled extends InitialNavigation
   
   @js.native
   sealed trait merge extends QueryParamsHandling

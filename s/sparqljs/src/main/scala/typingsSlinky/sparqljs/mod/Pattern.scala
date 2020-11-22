@@ -20,8 +20,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.sparqljs.mod.BgpPattern
   - typingsSlinky.sparqljs.mod.BlockPattern
-  - typingsSlinky.sparqljs.mod.GraphPattern
-  - typingsSlinky.sparqljs.mod.ServicePattern
   - typingsSlinky.sparqljs.mod.FilterPattern
   - typingsSlinky.sparqljs.mod.BindPattern
   - typingsSlinky.sparqljs.mod.ValuesPattern
@@ -29,6 +27,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 */
 trait Pattern extends js.Object
 object Pattern {
+  
+  @scala.inline
+  def OptionalPattern(patterns: js.Array[Pattern], `type`: optional): Pattern = {
+    val __obj = js.Dynamic.literal(patterns = patterns.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pattern]
+  }
   
   @scala.inline
   def BindPattern(expression: Expression, `type`: bind, variable: VariableTerm): Pattern = {
@@ -40,6 +45,13 @@ object Pattern {
   @scala.inline
   def BgpPattern(triples: js.Array[Triple], `type`: bgp): Pattern = {
     val __obj = js.Dynamic.literal(triples = triples.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pattern]
+  }
+  
+  @scala.inline
+  def MinusPattern(patterns: js.Array[Pattern], `type`: minus): Pattern = {
+    val __obj = js.Dynamic.literal(patterns = patterns.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pattern]
   }
@@ -59,15 +71,15 @@ object Pattern {
   }
   
   @scala.inline
-  def ValuesPattern(`type`: values, values: js.Array[ValuePatternRow]): Pattern = {
-    val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
+  def UnionPattern(patterns: js.Array[Pattern], `type`: union): Pattern = {
+    val __obj = js.Dynamic.literal(patterns = patterns.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pattern]
   }
   
   @scala.inline
-  def BlockPattern(patterns: js.Array[Pattern], `type`: optional | union | group | minus | graph | service): Pattern = {
-    val __obj = js.Dynamic.literal(patterns = patterns.asInstanceOf[js.Any])
+  def ValuesPattern(`type`: values, values: js.Array[ValuePatternRow]): Pattern = {
+    val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pattern]
   }
@@ -87,6 +99,13 @@ object Pattern {
     variables: js.Array[Variable | Wildcard]
   ): Pattern = {
     val __obj = js.Dynamic.literal(prefixes = prefixes.asInstanceOf[js.Any], queryType = queryType.asInstanceOf[js.Any], variables = variables.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Pattern]
+  }
+  
+  @scala.inline
+  def GroupPattern(patterns: js.Array[Pattern], `type`: group): Pattern = {
+    val __obj = js.Dynamic.literal(patterns = patterns.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pattern]
   }

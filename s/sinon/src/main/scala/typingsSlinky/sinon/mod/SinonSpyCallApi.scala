@@ -1,17 +1,18 @@
 package typingsSlinky.sinon.mod
 
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SinonSpyCallApi extends js.Object {
+trait SinonSpyCallApi[TArgs /* <: js.Array[_] */, TReturnValue] extends js.Object {
   
   // Properties
   /**
     * Array of received arguments.
     */
-  var args: js.Array[_] = js.native
+  var args: TArgs = js.native
   
   /**
     * Like yield, but with an explicit argument number specifying which callback to call.
@@ -41,9 +42,13 @@ trait SinonSpyCallApi extends js.Object {
     * Returns true if spy was called at exactly once with the provided arguments.
     * @param args
     */
-  def calledOnceWith(args: js.Any*): Boolean = js.native
+  def calledOnceWith(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Boolean = js.native
   
-  def calledOnceWithExactly(args: js.Any*): Boolean = js.native
+  def calledOnceWithExactly(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Boolean = js.native
   
   /**
     * Returns true if spy was called at least once with the provided arguments.
@@ -51,19 +56,25 @@ trait SinonSpyCallApi extends js.Object {
     * so a call that received the provided arguments (in the same spots) and possibly others as well will return true.
     * @param args
     */
-  def calledWith(args: js.Any*): Boolean = js.native
+  def calledWith(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Partial<MatchArguments<TArgs>> is not an array type */ args: Partial[MatchArguments[TArgs]]
+  ): Boolean = js.native
   
   /**
     * Returns true if spy was called at least once with the provided arguments and no others.
     */
-  def calledWithExactly(args: js.Any*): Boolean = js.native
+  def calledWithExactly(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Boolean = js.native
   
   /**
     * Returns true if spy was called with matching arguments (and possibly others).
     * This behaves the same as spy.calledWith(sinon.match(arg1), sinon.match(arg2), ...).
     * @param args
     */
-  def calledWithMatch(args: js.Any*): Boolean = js.native
+  def calledWithMatch(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: TArgs
+  ): Boolean = js.native
   
   /**
     * Returns true if spy/stub was called the new operator.
@@ -76,21 +87,26 @@ trait SinonSpyCallApi extends js.Object {
     * Returns true if call did not receive provided arguments.
     * @param args
     */
-  def notCalledWith(args: js.Any*): Boolean = js.native
+  def notCalledWith(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Boolean = js.native
   
   /**
     * Returns true if call did not receive matching arguments.
     * This behaves the same as spyCall.notCalledWith(sinon.match(arg1), sinon.match(arg2), ...).
     * @param args
     */
-  def notCalledWithMatch(args: js.Any*): Boolean = js.native
+  def notCalledWithMatch(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: TArgs
+  ): Boolean = js.native
   
   /**
     * Returns true if spy returned the provided value at least once.
     * Uses deep comparison for objects and arrays. Use spy.returned(sinon.match.same(obj)) for strict comparison (see matchers).
     * @param value
     */
-  def returned(value: js.Any): Boolean = js.native
+  def returned(value: TReturnValue): Boolean = js.native
+  def returned(value: SinonMatcher): Boolean = js.native
   
   /**
     * Returns true if spy threw an exception at least once.

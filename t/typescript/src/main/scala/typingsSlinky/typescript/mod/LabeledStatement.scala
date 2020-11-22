@@ -11,9 +11,9 @@ trait LabeledStatement
      with _HasJSDoc {
   
   @JSName("kind")
-  var kind_LabeledStatement: typingsSlinky.typescript.mod.SyntaxKind.LabeledStatement = js.native
+  val kind_LabeledStatement: typingsSlinky.typescript.mod.SyntaxKind.LabeledStatement = js.native
   
-  var label: Identifier = js.native
+  val label: Identifier = js.native
   
-  var statement: Statement = js.native
+  val statement: Statement = js.native
 }

@@ -14,6 +14,7 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.GetUsageAndQuotaReque
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.GetUsageAndQuotaResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.IndexedDBContentUpdatedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.IndexedDBListUpdatedEvent
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.OverrideQuotaForOriginRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.SetCookiesRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.TrackCacheStorageForOriginRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.TrackIndexedDBForOriginRequest
@@ -75,6 +76,11 @@ trait StorageApi extends js.Object {
     */
   @JSName("on")
   def on_indexedDBListUpdated(event: indexedDBListUpdated, listener: js.Function1[/* params */ IndexedDBListUpdatedEvent, Unit]): Unit = js.native
+  
+  /**
+    * Override quota for the specified origin
+    */
+  def overrideQuotaForOrigin(params: OverrideQuotaForOriginRequest): js.Promise[Unit] = js.native
   
   /**
     * Sets given cookies.

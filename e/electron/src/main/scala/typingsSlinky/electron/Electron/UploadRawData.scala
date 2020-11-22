@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UploadRawData extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/upload-raw-data
+  // Docs: https://electronjs.org/docs/api/structures/upload-raw-data
   /**
     * Data to be uploaded.
     */

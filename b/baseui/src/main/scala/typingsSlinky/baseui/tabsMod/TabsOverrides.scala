@@ -11,6 +11,10 @@ trait TabsOverrides[T] extends js.Object {
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
   ] = js.native
   
+  var Tab: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
+  ] = js.native
+  
   var TabBar: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
   ] = js.native
@@ -49,6 +53,14 @@ object TabsOverrides {
     
     @scala.inline
     def deleteRoot: Self = this.set("Root", js.undefined)
+    
+    @scala.inline
+    def setTab(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<T> */ js.Any
+    ): Self = this.set("Tab", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTab: Self = this.set("Tab", js.undefined)
     
     @scala.inline
     def setTabBar(

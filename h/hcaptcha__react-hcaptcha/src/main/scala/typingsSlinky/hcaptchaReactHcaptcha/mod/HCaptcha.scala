@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait HCaptcha
   extends Component[HCaptchaProps, HCaptchaState, js.Any] {
   
+  def execute(): Unit = js.native
+  
   def removeCaptcha(): Unit = js.native
   
   def renderCaptcha(): Unit = js.native

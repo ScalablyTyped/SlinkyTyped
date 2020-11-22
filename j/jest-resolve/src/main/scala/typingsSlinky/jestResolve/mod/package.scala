@@ -7,4 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object mod {
   
   type BooleanObject = typingsSlinky.std.Record[java.lang.String, scala.Boolean]
+  
+  type ResolverType = typingsSlinky.jestResolve.mod.Resolver
 }

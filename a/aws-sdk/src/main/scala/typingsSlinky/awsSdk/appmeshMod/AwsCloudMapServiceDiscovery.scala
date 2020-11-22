@@ -8,9 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AwsCloudMapServiceDiscovery extends js.Object {
   
   /**
-    * A string map that contains attributes with values that you can use to filter instances
-    by any custom attribute that you specified when you registered the instance. Only instances
-    that match all of the specified key/value pairs will be returned.
+    * A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all of the specified key/value pairs will be returned.
     */
   var attributes: js.UndefOr[AwsCloudMapInstanceAttributes] = js.native
   

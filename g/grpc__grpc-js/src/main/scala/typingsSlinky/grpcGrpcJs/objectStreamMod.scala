@@ -177,8 +177,8 @@ object objectStreamMod extends js.Object {
     
     def isPaused(): Boolean = js.native
     
-    def listenerCount(`type`: String): Double = js.native
-    def listenerCount(`type`: js.Symbol): Double = js.native
+    def listenerCount(event: String): Double = js.native
+    def listenerCount(event: js.Symbol): Double = js.native
     
     def listeners(event: String): js.Array[js.Function] = js.native
     def listeners(event: js.Symbol): js.Array[js.Function] = js.native
@@ -499,8 +499,8 @@ object objectStreamMod extends js.Object {
     
     def isPaused(): Boolean = js.native
     
-    def listenerCount(`type`: String): Double = js.native
-    def listenerCount(`type`: js.Symbol): Double = js.native
+    def listenerCount(event: String): Double = js.native
+    def listenerCount(event: js.Symbol): Double = js.native
     
     def listeners(event: String): js.Array[js.Function] = js.native
     def listeners(event: js.Symbol): js.Array[js.Function] = js.native

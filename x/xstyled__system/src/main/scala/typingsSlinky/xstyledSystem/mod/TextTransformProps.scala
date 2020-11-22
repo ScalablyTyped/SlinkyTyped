@@ -9,7 +9,7 @@ trait TextTransformProps extends js.Object {
   
   val textTransform: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextTransformProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextTransform */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object TextTransformProps {
     }
     
     @scala.inline
+    def setTextTransformVarargs(value: js.Any*): Self = this.set("textTransform", js.Array(value :_*))
+    
+    @scala.inline
     def setTextTransform(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextTransformProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextTransform */ _
         ]
     ): Self = this.set("textTransform", value.asInstanceOf[js.Any])
     

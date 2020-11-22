@@ -14,6 +14,8 @@ trait PlaylistBaseObject extends js.Object {
   
   var collaborative: Boolean = js.native
   
+  var description: String | Null = js.native
+  
   var external_urls: ExternalUrlObject = js.native
   
   var href: String = js.native
@@ -105,5 +107,11 @@ object PlaylistBaseObject {
     
     @scala.inline
     def setUri(value: String): Self = this.set("uri", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDescriptionNull: Self = this.set("description", null)
   }
 }

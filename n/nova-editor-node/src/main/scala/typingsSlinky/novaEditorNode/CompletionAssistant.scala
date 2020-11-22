@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CompletionAssistant extends js.Object {
   
-  def provideCompletionItems(editor: TextEditor, context: CompletionContext): js.Array[CompletionItem] = js.native
+  def provideCompletionItems(editor: TextEditor, context: CompletionContext): AssistantArray[CompletionItem] = js.native
 }
 object CompletionAssistant {
   
   @scala.inline
-  def apply(provideCompletionItems: (TextEditor, CompletionContext) => js.Array[CompletionItem]): CompletionAssistant = {
+  def apply(provideCompletionItems: (TextEditor, CompletionContext) => AssistantArray[CompletionItem]): CompletionAssistant = {
     val __obj = js.Dynamic.literal(provideCompletionItems = js.Any.fromFunction2(provideCompletionItems))
     __obj.asInstanceOf[CompletionAssistant]
   }
@@ -33,6 +33,6 @@ object CompletionAssistant {
     }
     
     @scala.inline
-    def setProvideCompletionItems(value: (TextEditor, CompletionContext) => js.Array[CompletionItem]): Self = this.set("provideCompletionItems", js.Any.fromFunction2(value))
+    def setProvideCompletionItems(value: (TextEditor, CompletionContext) => AssistantArray[CompletionItem]): Self = this.set("provideCompletionItems", js.Any.fromFunction2(value))
   }
 }

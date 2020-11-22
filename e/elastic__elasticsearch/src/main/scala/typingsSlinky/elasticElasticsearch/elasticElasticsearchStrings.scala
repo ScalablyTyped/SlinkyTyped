@@ -64,9 +64,6 @@ object elasticElasticsearchStrings {
   def external_gte: external_gte = "external_gte".asInstanceOf[external_gte]
   
   @scala.inline
-  def `false`: `false` = "false".asInstanceOf[`false`]
-  
-  @scala.inline
   def force: force = "force".asInstanceOf[force]
   
   @scala.inline
@@ -208,9 +205,6 @@ object elasticElasticsearchStrings {
   def tb: tb = "tb".asInstanceOf[tb]
   
   @scala.inline
-  def `true`: `true` = "true".asInstanceOf[`true`]
-  
-  @scala.inline
   def urgent: urgent = "urgent".asInstanceOf[urgent]
   
   @scala.inline
@@ -278,9 +272,6 @@ object elasticElasticsearchStrings {
   
   @js.native
   sealed trait external_gte extends js.Object
-  
-  @js.native
-  sealed trait `false` extends js.Object
   
   @js.native
   sealed trait force extends js.Object
@@ -422,9 +413,6 @@ object elasticElasticsearchStrings {
   
   @js.native
   sealed trait tb extends js.Object
-  
-  @js.native
-  sealed trait `true` extends js.Object
   
   @js.native
   sealed trait urgent extends js.Object

@@ -23,6 +23,8 @@ class PanelModel () extends PanelModelBase {
     */
   def collapse(): Unit = js.native
   
+  val contentId: String = js.native
+  
   /**
     * Expand the Panel
     * @see state

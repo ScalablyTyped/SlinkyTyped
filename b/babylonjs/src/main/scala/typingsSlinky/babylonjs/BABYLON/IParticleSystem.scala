@@ -259,6 +259,9 @@ trait IParticleSystem extends js.Object {
     */
   def createSphereEmitter(radius: Double, radiusRange: Double): SphereParticleEmitter = js.native
   
+  /** Gets or sets a matrix to use to compute projection */
+  var defaultProjectionMatrix: Matrix = js.native
+  
   /**
     * Dispose the particle system and frees its associated resources.
     * @param disposeTexture defines if the particule texture must be disposed as well (true by default)
@@ -287,6 +290,30 @@ trait IParticleSystem extends js.Object {
   var endSpriteCellID: Double = js.native
   
   /**
+    * Fill the defines array according to the current settings of the particle system
+    * @param defines Array to be updated
+    * @param blendMode blend mode to take into account when updating the array
+    */
+  def fillDefines(defines: js.Array[String], blendMode: Double): Unit = js.native
+  
+  /**
+    * Fill the uniforms, attributes and samplers arrays according to the current settings of the particle system
+    * @param uniforms Uniforms array to fill
+    * @param attributes Attributes array to fill
+    * @param samplers Samplers array to fill
+    */
+  def fillUniformsAttributesAndSamplerNames(uniforms: js.Array[String], attributes: js.Array[String], samplers: js.Array[String]): Unit = js.native
+  
+  /** Force the system to rebuild all gradients that need to be resync */
+  def forceRefreshGradients(): Unit = js.native
+  
+  /**
+    * Gets the number of particles active at the same time.
+    * @returns The number of active particles.
+    */
+  def getActiveCount(): Double = js.native
+  
+  /**
     * Gets the current list of alpha remap gradients.
     * You must use addAlphaRemapGradient and removeAlphaRemapGradient to udpate this list
     * @returns the list of alpha remap gradients
@@ -307,6 +334,12 @@ trait IParticleSystem extends js.Object {
   def getCapacity(): Double = js.native
   
   /**
+    * Returns the string "ParticleSystem"
+    * @returns a string containing the class name
+    */
+  def getClassName(): String = js.native
+  
+  /**
     * Gets the current list of color gradients.
     * You must use addColorGradient and removeColorGradient to udpate this list
     * @returns the list of color gradients
@@ -319,6 +352,13 @@ trait IParticleSystem extends js.Object {
     * @returns the list of color remap gradients
     */
   def getColorRemapGradients(): Nullable[js.Array[FactorGradient]] = js.native
+  
+  /**
+    * Gets the custom effect used to render the particles
+    * @param blendMode Blend mode for which the effect should be retrieved
+    * @returns The effect
+    */
+  def getCustomEffect(blendMode: Double): Nullable[Effect] = js.native
   
   /**
     * Gets the current list of drag gradients.
@@ -359,7 +399,7 @@ trait IParticleSystem extends js.Object {
     * Get hosting scene
     * @returns the scene
     */
-  def getScene(): Scene = js.native
+  def getScene(): Nullable[Scene] = js.native
   
   /**
     * Gets the current list of size gradients.
@@ -418,6 +458,12 @@ trait IParticleSystem extends js.Object {
     * @returns True if it has been started, otherwise false.
     */
   def isStarted(): Boolean = js.native
+  
+  /**
+    * Gets a boolean indicating that the system is stopping
+    * @returns true if the system is currently stopping
+    */
+  def isStopping(): Boolean = js.native
   
   /**
     * The layer mask we are rendering the particles through.
@@ -511,6 +557,21 @@ trait IParticleSystem extends js.Object {
   var noiseTexture: Nullable[BaseTexture] = js.native
   
   /**
+    * Observable that will be called just before the particles are drawn
+    */
+  var onBeforeDrawParticlesObservable: Observable[Nullable[Effect]] = js.native
+  
+  /**
+    * An event triggered when the system is disposed
+    */
+  var onDisposeObservable: Observable[IParticleSystem] = js.native
+  
+  /**
+    * An event triggered when the system is stopped
+    */
+  var onStoppedObservable: Observable[IParticleSystem] = js.native
+  
+  /**
     * The particle emitter type defines the emitter used by the particle system.
     * It can be for example box, sphere, or cone...
     */
@@ -519,7 +580,7 @@ trait IParticleSystem extends js.Object {
   /**
     * The texture used to render each particle. (this can be a spritesheet)
     */
-  var particleTexture: Nullable[Texture] = js.native
+  var particleTexture: Nullable[BaseTexture] = js.native
   
   /**
     * Gets or sets a value indicating how many cycles (or frames) must be executed before first rendering (this value has to be set before starting the system). Default is 0
@@ -616,10 +677,21 @@ trait IParticleSystem extends js.Object {
   def reset(): Unit = js.native
   
   /**
-    * Serializes the particle system to a JSON object.
+    * Serializes the particle system to a JSON object
+    * @param serializeTexture defines if the texture must be serialized as well
     * @returns the JSON object
     */
-  def serialize(): js.Any = js.native
+  def serialize(serializeTexture: Boolean): js.Any = js.native
+  
+  /**
+    * Sets the custom effect used to render the particles
+    * @param effect The effect to set
+    * @param blendMode Blend mode for which the effect should be set
+    */
+  def setCustomEffect(effect: Nullable[Effect], blendMode: Double): Unit = js.native
+  
+  /** Snippet ID if the particle system was created from the snippet server */
+  var snippetId: String = js.native
   
   /**
     * If using a spritesheet (isAnimationSheetEnabled) defines the speed of the sprite loop (default is 1 meaning the animation will play once during the entire particle lifetime)
@@ -677,7 +749,12 @@ trait IParticleSystem extends js.Object {
   var updateSpeed: Double = js.native
   
   /** Gets or sets a boolean indicating that ramp gradients must be used
-    * @see http://doc.babylonjs.com/babylon101/particles#ramp-gradients
+    * @see https://doc.babylonjs.com/babylon101/particles#ramp-gradients
     */
   var useRampGradients: Boolean = js.native
+  
+  /**
+    * Gets the name of the particle vertex shader
+    */
+  var vertexShaderName: String = js.native
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for ecmarkup
 
-Typings are for version 3.25.3
+Typings are for version 4.2.1
 
 ## Library description:
 Custom element definitions and core utilities for markup that specifies ECMAScript and related technologies.

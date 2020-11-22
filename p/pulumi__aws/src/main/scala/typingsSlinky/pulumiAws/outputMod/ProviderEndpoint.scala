@@ -67,6 +67,8 @@ trait ProviderEndpoint extends js.Object {
   
   var codepipeline: js.UndefOr[String] = js.native
   
+  var codestarconnections: js.UndefOr[String] = js.native
+  
   var cognitoidentity: js.UndefOr[String] = js.native
   
   var cognitoidp: js.UndefOr[String] = js.native
@@ -141,6 +143,8 @@ trait ProviderEndpoint extends js.Object {
   
   var iam: js.UndefOr[String] = js.native
   
+  var identitystore: js.UndefOr[String] = js.native
+  
   var imagebuilder: js.UndefOr[String] = js.native
   
   var inspector: js.UndefOr[String] = js.native
@@ -154,11 +158,6 @@ trait ProviderEndpoint extends js.Object {
   var kafka: js.UndefOr[String] = js.native
   
   var kinesis: js.UndefOr[String] = js.native
-  
-  /**
-    * @deprecated use `endpoints` configuration block `kinesisanalytics` argument instead
-    */
-  var kinesisAnalytics: js.UndefOr[String] = js.native
   
   var kinesisanalytics: js.UndefOr[String] = js.native
   
@@ -180,6 +179,8 @@ trait ProviderEndpoint extends js.Object {
   
   var macie: js.UndefOr[String] = js.native
   
+  var macie2: js.UndefOr[String] = js.native
+  
   var managedblockchain: js.UndefOr[String] = js.native
   
   var marketplacecatalog: js.UndefOr[String] = js.native
@@ -200,6 +201,8 @@ trait ProviderEndpoint extends js.Object {
   
   var neptune: js.UndefOr[String] = js.native
   
+  var networkfirewall: js.UndefOr[String] = js.native
+  
   var networkmanager: js.UndefOr[String] = js.native
   
   var opsworks: js.UndefOr[String] = js.native
@@ -217,11 +220,6 @@ trait ProviderEndpoint extends js.Object {
   var qldb: js.UndefOr[String] = js.native
   
   var quicksight: js.UndefOr[String] = js.native
-  
-  /**
-    * @deprecated use `endpoints` configuration block `route53` argument instead
-    */
-  var r53: js.UndefOr[String] = js.native
   
   var ram: js.UndefOr[String] = js.native
   
@@ -242,6 +240,8 @@ trait ProviderEndpoint extends js.Object {
   var s3: js.UndefOr[String] = js.native
   
   var s3control: js.UndefOr[String] = js.native
+  
+  var s3outposts: js.UndefOr[String] = js.native
   
   var sagemaker: js.UndefOr[String] = js.native
   
@@ -269,6 +269,8 @@ trait ProviderEndpoint extends js.Object {
   
   var ssm: js.UndefOr[String] = js.native
   
+  var ssoadmin: js.UndefOr[String] = js.native
+  
   var stepfunctions: js.UndefOr[String] = js.native
   
   var storagegateway: js.UndefOr[String] = js.native
@@ -278,6 +280,8 @@ trait ProviderEndpoint extends js.Object {
   var swf: js.UndefOr[String] = js.native
   
   var synthetics: js.UndefOr[String] = js.native
+  
+  var timestreamwrite: js.UndefOr[String] = js.native
   
   var transfer: js.UndefOr[String] = js.native
   
@@ -497,6 +501,12 @@ object ProviderEndpoint {
     
     @scala.inline
     def deleteCodepipeline: Self = this.set("codepipeline", js.undefined)
+    
+    @scala.inline
+    def setCodestarconnections(value: String): Self = this.set("codestarconnections", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCodestarconnections: Self = this.set("codestarconnections", js.undefined)
     
     @scala.inline
     def setCognitoidentity(value: String): Self = this.set("cognitoidentity", value.asInstanceOf[js.Any])
@@ -721,6 +731,12 @@ object ProviderEndpoint {
     def deleteIam: Self = this.set("iam", js.undefined)
     
     @scala.inline
+    def setIdentitystore(value: String): Self = this.set("identitystore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIdentitystore: Self = this.set("identitystore", js.undefined)
+    
+    @scala.inline
     def setImagebuilder(value: String): Self = this.set("imagebuilder", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -763,10 +779,10 @@ object ProviderEndpoint {
     def deleteKinesis: Self = this.set("kinesis", js.undefined)
     
     @scala.inline
-    def setKinesisAnalytics(value: String): Self = this.set("kinesisAnalytics", value.asInstanceOf[js.Any])
+    def setKinesisanalytics(value: String): Self = this.set("kinesisanalytics", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteKinesisAnalytics: Self = this.set("kinesisAnalytics", js.undefined)
+    def deleteKinesisanalytics: Self = this.set("kinesisanalytics", js.undefined)
     
     @scala.inline
     def setKinesisanalyticsv2(value: String): Self = this.set("kinesisanalyticsv2", value.asInstanceOf[js.Any])
@@ -821,6 +837,12 @@ object ProviderEndpoint {
     
     @scala.inline
     def deleteMacie: Self = this.set("macie", js.undefined)
+    
+    @scala.inline
+    def setMacie2(value: String): Self = this.set("macie2", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMacie2: Self = this.set("macie2", js.undefined)
     
     @scala.inline
     def setManagedblockchain(value: String): Self = this.set("managedblockchain", value.asInstanceOf[js.Any])
@@ -883,6 +905,12 @@ object ProviderEndpoint {
     def deleteNeptune: Self = this.set("neptune", js.undefined)
     
     @scala.inline
+    def setNetworkfirewall(value: String): Self = this.set("networkfirewall", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkfirewall: Self = this.set("networkfirewall", js.undefined)
+    
+    @scala.inline
     def setNetworkmanager(value: String): Self = this.set("networkmanager", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -935,12 +963,6 @@ object ProviderEndpoint {
     
     @scala.inline
     def deleteQuicksight: Self = this.set("quicksight", js.undefined)
-    
-    @scala.inline
-    def setR53(value: String): Self = this.set("r53", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteR53: Self = this.set("r53", js.undefined)
     
     @scala.inline
     def setRam(value: String): Self = this.set("ram", value.asInstanceOf[js.Any])
@@ -1001,6 +1023,12 @@ object ProviderEndpoint {
     
     @scala.inline
     def deleteS3control: Self = this.set("s3control", js.undefined)
+    
+    @scala.inline
+    def setS3outposts(value: String): Self = this.set("s3outposts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteS3outposts: Self = this.set("s3outposts", js.undefined)
     
     @scala.inline
     def setSagemaker(value: String): Self = this.set("sagemaker", value.asInstanceOf[js.Any])
@@ -1081,6 +1109,12 @@ object ProviderEndpoint {
     def deleteSsm: Self = this.set("ssm", js.undefined)
     
     @scala.inline
+    def setSsoadmin(value: String): Self = this.set("ssoadmin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSsoadmin: Self = this.set("ssoadmin", js.undefined)
+    
+    @scala.inline
     def setStepfunctions(value: String): Self = this.set("stepfunctions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1109,6 +1143,12 @@ object ProviderEndpoint {
     
     @scala.inline
     def deleteSynthetics: Self = this.set("synthetics", js.undefined)
+    
+    @scala.inline
+    def setTimestreamwrite(value: String): Self = this.set("timestreamwrite", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimestreamwrite: Self = this.set("timestreamwrite", js.undefined)
     
     @scala.inline
     def setTransfer(value: String): Self = this.set("transfer", value.asInstanceOf[js.Any])

@@ -25,8 +25,13 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdForm.checkboxMod.CheckboxProps
+import typingsSlinky.reactMdForm.reactMdFormStrings.`additions removals`
 import typingsSlinky.reactMdForm.reactMdFormStrings.`additions text`
 import typingsSlinky.reactMdForm.reactMdFormStrings.`inline`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`removals additions`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`removals text`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`text additions`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`text removals`
 import typingsSlinky.reactMdForm.reactMdFormStrings.additions
 import typingsSlinky.reactMdForm.reactMdFormStrings.all
 import typingsSlinky.reactMdForm.reactMdFormStrings.ascending
@@ -37,8 +42,11 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.date
 import typingsSlinky.reactMdForm.reactMdFormStrings.decimal
 import typingsSlinky.reactMdForm.reactMdFormStrings.descending
 import typingsSlinky.reactMdForm.reactMdFormStrings.dialog
+import typingsSlinky.reactMdForm.reactMdFormStrings.done
 import typingsSlinky.reactMdForm.reactMdFormStrings.email
+import typingsSlinky.reactMdForm.reactMdFormStrings.enter
 import typingsSlinky.reactMdForm.reactMdFormStrings.execute
+import typingsSlinky.reactMdForm.reactMdFormStrings.go
 import typingsSlinky.reactMdForm.reactMdFormStrings.grammar
 import typingsSlinky.reactMdForm.reactMdFormStrings.grid
 import typingsSlinky.reactMdForm.reactMdFormStrings.horizontal
@@ -50,6 +58,7 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.location
 import typingsSlinky.reactMdForm.reactMdFormStrings.menu
 import typingsSlinky.reactMdForm.reactMdFormStrings.mixed
 import typingsSlinky.reactMdForm.reactMdFormStrings.move
+import typingsSlinky.reactMdForm.reactMdFormStrings.next
 import typingsSlinky.reactMdForm.reactMdFormStrings.no
 import typingsSlinky.reactMdForm.reactMdFormStrings.none
 import typingsSlinky.reactMdForm.reactMdFormStrings.numeric
@@ -59,8 +68,10 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.other
 import typingsSlinky.reactMdForm.reactMdFormStrings.page
 import typingsSlinky.reactMdForm.reactMdFormStrings.polite
 import typingsSlinky.reactMdForm.reactMdFormStrings.popup
+import typingsSlinky.reactMdForm.reactMdFormStrings.previous
 import typingsSlinky.reactMdForm.reactMdFormStrings.removals
 import typingsSlinky.reactMdForm.reactMdFormStrings.search
+import typingsSlinky.reactMdForm.reactMdFormStrings.send
 import typingsSlinky.reactMdForm.reactMdFormStrings.spelling
 import typingsSlinky.reactMdForm.reactMdFormStrings.step
 import typingsSlinky.reactMdForm.reactMdFormStrings.tel
@@ -205,7 +216,9 @@ object Checkbox {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -316,6 +329,9 @@ object Checkbox {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def error(value: Boolean): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -367,7 +383,13 @@ object Checkbox {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def inputClassName(value: String): this.type = set("inputClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def inputStyle(value: CSSProperties): this.type = set("inputStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])

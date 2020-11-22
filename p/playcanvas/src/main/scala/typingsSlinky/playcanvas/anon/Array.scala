@@ -41,6 +41,8 @@ trait Array extends js.Object {
   
   var precision: js.UndefOr[Double] = js.native
   
+  var schema: js.UndefOr[js.Array[js.Object]] = js.native
+  
   var size: js.UndefOr[Double] = js.native
   
   var step: js.UndefOr[Double] = js.native
@@ -152,6 +154,15 @@ object Array {
     
     @scala.inline
     def deletePrecision: Self = this.set("precision", js.undefined)
+    
+    @scala.inline
+    def setSchemaVarargs(value: js.Object*): Self = this.set("schema", js.Array(value :_*))
+    
+    @scala.inline
+    def setSchema(value: js.Array[js.Object]): Self = this.set("schema", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSchema: Self = this.set("schema", js.undefined)
     
     @scala.inline
     def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.azureKustoData.mod
 
+import typingsSlinky.adalNode.mod.UserCodeInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,10 +45,7 @@ object KustoConnectionStringBuilder extends js.Object {
   def withAadDeviceAuthentication(
     connectionString: String,
     authorityId: String,
-    authCallback: js.Function1[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify UserCodeInfo */ /* tokenReponse */ js.Any, 
-      Unit
-    ]
+    authCallback: js.Function1[/* tokenReponse */ UserCodeInfo, Unit]
   ): KustoConnectionStringBuilder = js.native
   
   def withAadManagedIdentities(connectionString: String): KustoConnectionStringBuilder = js.native

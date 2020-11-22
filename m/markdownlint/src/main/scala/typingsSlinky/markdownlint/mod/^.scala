@@ -8,8 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
-  def apply(
-    options: MarkdownlintOptions,
-    callback: js.Function2[/* err */ js.Error | Null, /* result */ MarkdownlintResults, _]
-  ): Unit = js.native
+  /**
+    * Lint specified Markdown files.
+    *
+    * @param {Options} options Configuration options.
+    * @param {LintCallback} callback Callback (err, result) function.
+    * @returns {void}
+    */
+  def apply(options: Options, callback: LintCallback): Unit = js.native
 }

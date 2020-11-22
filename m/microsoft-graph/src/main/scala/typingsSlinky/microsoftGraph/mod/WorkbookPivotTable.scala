@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookPivotTable extends Entity {
   
   // Name of the PivotTable.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   // The worksheet containing the current PivotTable. Read-only.
-  var worksheet: js.UndefOr[WorkbookWorksheet] = js.native
+  var worksheet: js.UndefOr[NullableOption[WorkbookWorksheet]] = js.native
 }
 object WorkbookPivotTable {
   
@@ -37,15 +37,21 @@ object WorkbookPivotTable {
     }
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setWorksheet(value: WorkbookWorksheet): Self = this.set("worksheet", value.asInstanceOf[js.Any])
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
+    def setWorksheet(value: NullableOption[WorkbookWorksheet]): Self = this.set("worksheet", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorksheet: Self = this.set("worksheet", js.undefined)
+    
+    @scala.inline
+    def setWorksheetNull: Self = this.set("worksheet", null)
   }
 }

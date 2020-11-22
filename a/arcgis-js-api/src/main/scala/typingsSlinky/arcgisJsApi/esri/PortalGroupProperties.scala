@@ -42,8 +42,6 @@ trait PortalGroupProperties extends js.Object {
     * If set to `true`, then users will not be able to apply to join the group.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#isInvitationOnly)
-    *
-    * @default false
     */
   var isInvitationOnly: js.UndefOr[Boolean] = js.native
   
@@ -83,7 +81,7 @@ trait PortalGroupProperties extends js.Object {
   var tags: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * The title of the group. This is the name that is displayed to users. It is also used to refer to the group. Every group must have a title and it must be unique.
+    * The title of the group.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html#title)
     */

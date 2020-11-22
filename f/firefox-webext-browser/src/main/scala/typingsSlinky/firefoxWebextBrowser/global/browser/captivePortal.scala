@@ -1,9 +1,9 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.State
-import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.Status
-import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.UndefinedState
+import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.OnConnectivityAvailableStatus
+import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.OnStateChangedDetails
+import typingsSlinky.firefoxWebextBrowser.browser.captivePortal.OnStateChangedDetailsState
 import typingsSlinky.firefoxWebextBrowser.browser.types.Setting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,16 +31,14 @@ object captivePortal extends js.Object {
   /**
     * Returns the current portal state, one of `unknown`, `not_captive`, `unlocked_portal`, `locked_portal`.
     */
-  def getState(): js.Promise[UndefinedState] = js.native
+  def getState(): js.Promise[OnStateChangedDetailsState] = js.native
   
   /**
-    * This notification will be emitted when the captive portal service has determined that we can connect to the
-    * internet. The service will pass either `captive` if there is an unlocked captive portal present, or `clear` if
-    * no captive portal was detected.
+    * This notification will be emitted when the captive portal service has determined that we can connect to the internet. The service will pass either `captive` if there is an unlocked captive portal present, or `clear` if no captive portal was detected.
     */
-  val onConnectivityAvailable: WebExtEvent[js.Function1[/* status */ Status, Unit]] = js.native
+  val onConnectivityAvailable: WebExtEvent[js.Function1[/* status */ OnConnectivityAvailableStatus, Unit]] = js.native
   
   /* captivePortal events */
   /** Fired when the captive portal state changes. */
-  val onStateChanged: WebExtEvent[js.Function1[/* details */ State, Unit]] = js.native
+  val onStateChanged: WebExtEvent[js.Function1[/* details */ OnStateChangedDetails, Unit]] = js.native
 }

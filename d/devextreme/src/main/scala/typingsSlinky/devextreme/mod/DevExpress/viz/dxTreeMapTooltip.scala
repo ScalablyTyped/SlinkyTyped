@@ -12,12 +12,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeMapTooltip extends BaseWidgetTooltip {
   
-  /** @name dxTreeMap.Options.tooltip.contentTemplate */
+  /**
+    * [descr:dxTreeMap.Options.tooltip.contentTemplate]
+    */
   var contentTemplate: js.UndefOr[
     template | (js.Function2[/* info */ NodeValue, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxTreeMap.Options.tooltip.customizeTooltip */
+  /**
+    * [descr:dxTreeMap.Options.tooltip.customizeTooltip]
+    */
   var customizeTooltip: js.UndefOr[js.Function1[/* info */ NodeValue, _]] = js.native
 }
 object dxTreeMapTooltip {

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait dotDensityCreateRendererParamsLegendOptions extends Object {
   
   /**
-    * Indicates the unit represented by each dot in the legend. For example, in a population density map, you might set the value of `people` to this param. The output renderer would display `1 dot = 300 people` in the Legend.
+    * Indicates the unit represented by each dot in the legend.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer)
     */

@@ -273,9 +273,10 @@ trait ProsemirrorNode[S /* <: Schema[_, _] */] extends js.Object {
   ): Unit = js.native
   
   /**
-    * Test whether a mark of the given type occurs in this document
+    * Test whether a given mark or mark type occurs in this document
     * between the two given positions.
     */
+  def rangeHasMark(from: Double, to: Double, `type`: Mark[S]): Boolean = js.native
   def rangeHasMark(from: Double, to: Double, `type`: MarkType[S]): Boolean = js.native
   
   /**

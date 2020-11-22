@@ -38,6 +38,8 @@ trait PartialSocketConnectOptio extends js.Object {
   var timeout: js.UndefOr[Double] = js.native
   
   var transport: js.UndefOr[String] = js.native
+  
+  var vsn: js.UndefOr[String] = js.native
 }
 object PartialSocketConnectOptio {
   
@@ -130,5 +132,11 @@ object PartialSocketConnectOptio {
     
     @scala.inline
     def deleteTransport: Self = this.set("transport", js.undefined)
+    
+    @scala.inline
+    def setVsn(value: String): Self = this.set("vsn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVsn: Self = this.set("vsn", js.undefined)
   }
 }

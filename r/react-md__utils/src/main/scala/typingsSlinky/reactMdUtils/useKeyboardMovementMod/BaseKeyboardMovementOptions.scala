@@ -3,7 +3,7 @@ package typingsSlinky.reactMdUtils.useKeyboardMovementMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.react.mod.KeyboardEventHandler
-import typingsSlinky.reactMdUtils.findMatchIndexMod.FindMatchIndex
+import typingsSlinky.reactMdUtils.findMatchIndexMod.FindMatchIndex_
 import typingsSlinky.reactMdUtils.movementTypesMod.IncrementMovementKey
 import typingsSlinky.reactMdUtils.movementTypesMod.JumpMovementKey
 import typingsSlinky.reactMdUtils.useKeyboardSearchMod.SearchData
@@ -24,7 +24,7 @@ trait BaseKeyboardMovementOptions[D, CE /* <: HTMLElement */, IE /* <: HTMLEleme
     */
   var decrementKeys: js.Array[IncrementMovementKey] = js.native
   
-  var findMatchIndex: js.UndefOr[FindMatchIndex] = js.native
+  var findMatchIndex: js.UndefOr[FindMatchIndex_] = js.native
   
   var getItemValue: js.UndefOr[GetItemValue_[D]] = js.native
   

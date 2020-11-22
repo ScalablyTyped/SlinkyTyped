@@ -9,6 +9,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createTemplateTail extends js.Object {
   
+  def apply(text: js.UndefOr[scala.Nothing], rawText: String): TemplateTail = js.native
+  def apply(
+    text: js.UndefOr[scala.Nothing],
+    rawText: String,
+    templateFlags: typingsSlinky.typescript.mod.TokenFlags
+  ): TemplateTail = js.native
+  /** @deprecated Use `factory.createTemplateTail` or the factory supplied by your transformation context instead. */
   def apply(text: String): TemplateTail = js.native
+  def apply(
+    text: String,
+    rawText: js.UndefOr[scala.Nothing],
+    templateFlags: typingsSlinky.typescript.mod.TokenFlags
+  ): TemplateTail = js.native
   def apply(text: String, rawText: String): TemplateTail = js.native
+  def apply(text: String, rawText: String, templateFlags: typingsSlinky.typescript.mod.TokenFlags): TemplateTail = js.native
 }

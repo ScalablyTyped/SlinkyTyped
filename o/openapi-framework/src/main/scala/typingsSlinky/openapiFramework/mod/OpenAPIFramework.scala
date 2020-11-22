@@ -18,6 +18,8 @@ trait OpenAPIFramework extends IOpenAPIFramework {
   
   var customFormats: js.Any = js.native
   
+  var customKeywords: js.Any = js.native
+  
   var dependencies: js.Any = js.native
   
   var enableObjectCoercion: js.Any = js.native
@@ -58,6 +60,7 @@ object OpenAPIFramework {
     args: OpenAPIFrameworkConstructorArgs,
     basePaths: js.Array[typingsSlinky.openapiFramework.basePathMod.default],
     customFormats: js.Any,
+    customKeywords: js.Any,
     dependencies: js.Any,
     enableObjectCoercion: js.Any,
     errorTransformer: js.Any,
@@ -78,7 +81,7 @@ object OpenAPIFramework {
     validateApiDoc: js.Any,
     validator: js.Any
   ): OpenAPIFramework = {
-    val __obj = js.Dynamic.literal(apiDoc = apiDoc.asInstanceOf[js.Any], args = args.asInstanceOf[js.Any], basePaths = basePaths.asInstanceOf[js.Any], customFormats = customFormats.asInstanceOf[js.Any], dependencies = dependencies.asInstanceOf[js.Any], enableObjectCoercion = enableObjectCoercion.asInstanceOf[js.Any], errorTransformer = errorTransformer.asInstanceOf[js.Any], externalSchemas = externalSchemas.asInstanceOf[js.Any], featureType = featureType.asInstanceOf[js.Any], initialize = js.Any.fromFunction1(initialize), logger = logger.asInstanceOf[js.Any], loggingPrefix = loggingPrefix.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], operations = operations.asInstanceOf[js.Any], originalApiDoc = originalApiDoc.asInstanceOf[js.Any], pathSecurity = pathSecurity.asInstanceOf[js.Any], paths = paths.asInstanceOf[js.Any], pathsIgnore = pathsIgnore.asInstanceOf[js.Any], routesGlob = routesGlob.asInstanceOf[js.Any], routesIndexFileRegExp = routesIndexFileRegExp.asInstanceOf[js.Any], securityHandlers = securityHandlers.asInstanceOf[js.Any], validateApiDoc = validateApiDoc.asInstanceOf[js.Any], validator = validator.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(apiDoc = apiDoc.asInstanceOf[js.Any], args = args.asInstanceOf[js.Any], basePaths = basePaths.asInstanceOf[js.Any], customFormats = customFormats.asInstanceOf[js.Any], customKeywords = customKeywords.asInstanceOf[js.Any], dependencies = dependencies.asInstanceOf[js.Any], enableObjectCoercion = enableObjectCoercion.asInstanceOf[js.Any], errorTransformer = errorTransformer.asInstanceOf[js.Any], externalSchemas = externalSchemas.asInstanceOf[js.Any], featureType = featureType.asInstanceOf[js.Any], initialize = js.Any.fromFunction1(initialize), logger = logger.asInstanceOf[js.Any], loggingPrefix = loggingPrefix.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], operations = operations.asInstanceOf[js.Any], originalApiDoc = originalApiDoc.asInstanceOf[js.Any], pathSecurity = pathSecurity.asInstanceOf[js.Any], paths = paths.asInstanceOf[js.Any], pathsIgnore = pathsIgnore.asInstanceOf[js.Any], routesGlob = routesGlob.asInstanceOf[js.Any], routesIndexFileRegExp = routesIndexFileRegExp.asInstanceOf[js.Any], securityHandlers = securityHandlers.asInstanceOf[js.Any], validateApiDoc = validateApiDoc.asInstanceOf[js.Any], validator = validator.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpenAPIFramework]
   }
   
@@ -111,6 +114,9 @@ object OpenAPIFramework {
     
     @scala.inline
     def setCustomFormats(value: js.Any): Self = this.set("customFormats", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCustomKeywords(value: js.Any): Self = this.set("customKeywords", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDependencies(value: js.Any): Self = this.set("dependencies", value.asInstanceOf[js.Any])

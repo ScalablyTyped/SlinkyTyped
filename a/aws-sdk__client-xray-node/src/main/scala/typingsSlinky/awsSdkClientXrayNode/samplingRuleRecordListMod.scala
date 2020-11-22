@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientXrayNode
 
-import typingsSlinky.awsSdkTypes.protocolMod.List
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object samplingRuleRecordListMod extends js.Object {
   
   @JSName("_SamplingRuleRecordList")
-  val SamplingRuleRecordList: List = js.native
+  val SamplingRuleRecordList: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _List_ */ js.Any = js.native
 }

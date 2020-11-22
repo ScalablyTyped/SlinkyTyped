@@ -16,7 +16,7 @@ object freeCameraMouseInputMod extends js.Object {
   @js.native
   /**
     * Manage the mouse inputs to control the movement of a free camera.
-    * @see http://doc.babylonjs.com/how_to/customizing_camera_inputs
+    * @see https://doc.babylonjs.com/how_to/customizing_camera_inputs
     * @param touchEnabled Defines if touch is enabled or not
     */
   class FreeCameraMouseInput () extends ICameraInput[FreeCamera] {

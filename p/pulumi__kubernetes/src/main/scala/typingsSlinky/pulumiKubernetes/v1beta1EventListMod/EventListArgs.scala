@@ -17,7 +17,7 @@ trait EventListArgs extends js.Object {
   val apiVersion: js.UndefOr[Input[eventsDotk8sDotioSlashv1beta1]] = js.native
   
   /**
-    * Items is a list of schema objects.
+    * items is a list of schema objects.
     */
   val items: Input[js.Array[Input[Event]]] = js.native
   

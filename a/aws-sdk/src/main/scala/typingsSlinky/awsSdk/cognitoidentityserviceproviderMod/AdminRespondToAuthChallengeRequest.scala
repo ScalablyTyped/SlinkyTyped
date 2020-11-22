@@ -13,7 +13,7 @@ trait AdminRespondToAuthChallengeRequest extends js.Object {
   var AnalyticsMetadata: js.UndefOr[AnalyticsMetadataType] = js.native
   
   /**
-    * The challenge name. For more information, see .
+    * The challenge name. For more information, see AdminInitiateAuth.
     */
   var ChallengeName: ChallengeNameType = js.native
   

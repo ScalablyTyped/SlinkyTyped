@@ -1,9 +1,10 @@
 package typingsSlinky.cathoQuantum.components
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.button.tag
+import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.cathoQuantum.anon.BreakpointsColors
@@ -37,6 +38,9 @@ object Modal {
     
     @scala.inline
     def closeButtonAriaLabel(value: String): this.type = set("closeButtonAriaLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def onClick(value: /* e */ SyntheticMouseEvent[Element] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def onClose(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
@@ -88,8 +92,8 @@ object Modal {
     @js.native
     object component extends js.Object
     
-    def withProps(p: js.Object): Default[slinky.web.html.`*`.tag.type, js.Object] = new Default[slinky.web.html.`*`.tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: js.Object): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
     
-    implicit def make(companion: HeaderText.type): Default[slinky.web.html.`*`.tag.type, js.Object] = new Default[slinky.web.html.`*`.tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+    implicit def make(companion: HeaderText.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
   }
 }

@@ -29,8 +29,7 @@ class LogMetricFilter protected () extends CustomResource {
   val logGroupName: Output_[String] = js.native
   
   /**
-    * A block defining collection of information
-    * needed to define how metric data gets emitted. See below.
+    * A block defining collection of information needed to define how metric data gets emitted. See below.
     */
   val metricTransformation: Output_[LogMetricFilterMetricTransformation] = js.native
   

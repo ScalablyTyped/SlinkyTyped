@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/FormFeedback", JSImport.Default)
+@JSImport("reactstrap/es/FormFeedback", JSImport.Default)
 @js.native
-class default[T] ()
+class default ()
   extends Component[FormFeedbackProps, js.Object, js.Any]

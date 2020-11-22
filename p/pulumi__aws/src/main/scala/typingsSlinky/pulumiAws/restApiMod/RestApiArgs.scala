@@ -46,7 +46,7 @@ trait RestApiArgs extends js.Object {
   val name: js.UndefOr[Input[String]] = js.native
   
   /**
-    * JSON formatted policy document that controls access to the API Gateway.
+    * JSON formatted policy document that controls access to the API Gateway. This provider will only perform drift detection of its value when present in a configuration. It is recommended to use the `aws.apigateway.RestApiPolicy` resource instead.
     */
   val policy: js.UndefOr[Input[String]] = js.native
   

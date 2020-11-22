@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AvailabilityZoneMessage extends js.Object {
   
   /**
-    * The message about the Zone.
+    * The message about the Availability Zone, Local Zone, or Wavelength Zone.
     */
   var Message: js.UndefOr[String] = js.native
 }

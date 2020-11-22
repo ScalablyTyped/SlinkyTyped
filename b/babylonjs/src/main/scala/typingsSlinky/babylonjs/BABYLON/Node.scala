@@ -158,7 +158,7 @@ trait Node extends IBehaviorAware[Node] {
   
   /**
     * Gets the list of attached behaviors
-    * @see http://doc.babylonjs.com/features/behaviour
+    * @see https://doc.babylonjs.com/features/behaviour
     */
   def behaviors: js.Array[Behavior[Node]] = js.native
   
@@ -248,7 +248,7 @@ trait Node extends IBehaviorAware[Node] {
   def getChildren(predicate: js.Function1[/* node */ this.type, Boolean], directDescendantsOnly: Boolean): js.Array[Node] = js.native
   
   /**
-    * Gets a string idenfifying the name of the class
+    * Gets a string identifying the name of the class
     * @returns "Node" string
     */
   def getClassName(): String = js.native

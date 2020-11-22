@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object findSizingContainerMod extends js.Object {
   
-  def default(): HTMLElement | Null = js.native
-  def default(el: HTMLElement): HTMLElement | Null = js.native
+  def findSizingContainer(): HTMLElement | Null = js.native
+  def findSizingContainer(el: HTMLElement): HTMLElement | Null = js.native
 }

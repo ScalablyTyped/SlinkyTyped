@@ -1,10 +1,5 @@
 package typingsSlinky.fundamentalReact.anon
 
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`2`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`3`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`4`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`5`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`6`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,13 +10,7 @@ trait PartialTileContentProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
-  var headingLevel: js.UndefOr[`2` | `3` | `4` | `5` | `6`] = js.native
-  
-  var productTile: js.UndefOr[Boolean] = js.native
-  
-  var title: js.UndefOr[String] = js.native
-  
-  var titleProps: js.UndefOr[js.Any] = js.native
+  var twoColumns: js.UndefOr[Boolean] = js.native
 }
 object PartialTileContentProps {
   
@@ -53,27 +42,9 @@ object PartialTileContentProps {
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
-    def setHeadingLevel(value: `2` | `3` | `4` | `5` | `6`): Self = this.set("headingLevel", value.asInstanceOf[js.Any])
+    def setTwoColumns(value: Boolean): Self = this.set("twoColumns", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteHeadingLevel: Self = this.set("headingLevel", js.undefined)
-    
-    @scala.inline
-    def setProductTile(value: Boolean): Self = this.set("productTile", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteProductTile: Self = this.set("productTile", js.undefined)
-    
-    @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTitle: Self = this.set("title", js.undefined)
-    
-    @scala.inline
-    def setTitleProps(value: js.Any): Self = this.set("titleProps", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTitleProps: Self = this.set("titleProps", js.undefined)
+    def deleteTwoColumns: Self = this.set("twoColumns", js.undefined)
   }
 }

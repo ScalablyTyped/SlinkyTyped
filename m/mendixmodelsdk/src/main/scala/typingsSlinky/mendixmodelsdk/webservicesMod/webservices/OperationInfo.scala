@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.webservicesMod.webservices
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,14 +15,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/gen/webservices", "webservices.OperationInfo")
 @js.native
-class OperationInfo protected () extends Element {
+class OperationInfo protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -33,9 +35,6 @@ class OperationInfo protected () extends Element {
   
   def documentation: String = js.native
   def documentation_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FOperationInfo: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

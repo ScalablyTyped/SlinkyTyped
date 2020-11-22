@@ -13,6 +13,20 @@ trait ButtonRemove extends js.Object {
   
   var buttonRemove: String = js.native
   
+  var detailButton: String = js.native
+  
+  var detailButtonExpanded: String = js.native
+  
+  var detailCell: String = js.native
+  
+  var detailIcon: String = js.native
+  
+  var detailIconExpanded: String = js.native
+  
+  var detailPanelCell: String = js.native
+  
+  var headerCell: String = js.native
+  
   var iconAdd: String = js.native
   
   var iconRemove: String = js.native
@@ -26,11 +40,18 @@ object ButtonRemove {
     button: String,
     buttonAdd: String,
     buttonRemove: String,
+    detailButton: String,
+    detailButtonExpanded: String,
+    detailCell: String,
+    detailIcon: String,
+    detailIconExpanded: String,
+    detailPanelCell: String,
+    headerCell: String,
     iconAdd: String,
     iconRemove: String,
     root: String
   ): ButtonRemove = {
-    val __obj = js.Dynamic.literal(button = button.asInstanceOf[js.Any], buttonAdd = buttonAdd.asInstanceOf[js.Any], buttonRemove = buttonRemove.asInstanceOf[js.Any], iconAdd = iconAdd.asInstanceOf[js.Any], iconRemove = iconRemove.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(button = button.asInstanceOf[js.Any], buttonAdd = buttonAdd.asInstanceOf[js.Any], buttonRemove = buttonRemove.asInstanceOf[js.Any], detailButton = detailButton.asInstanceOf[js.Any], detailButtonExpanded = detailButtonExpanded.asInstanceOf[js.Any], detailCell = detailCell.asInstanceOf[js.Any], detailIcon = detailIcon.asInstanceOf[js.Any], detailIconExpanded = detailIconExpanded.asInstanceOf[js.Any], detailPanelCell = detailPanelCell.asInstanceOf[js.Any], headerCell = headerCell.asInstanceOf[js.Any], iconAdd = iconAdd.asInstanceOf[js.Any], iconRemove = iconRemove.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[ButtonRemove]
   }
   
@@ -57,6 +78,27 @@ object ButtonRemove {
     
     @scala.inline
     def setButtonRemove(value: String): Self = this.set("buttonRemove", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDetailButton(value: String): Self = this.set("detailButton", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDetailButtonExpanded(value: String): Self = this.set("detailButtonExpanded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDetailCell(value: String): Self = this.set("detailCell", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDetailIcon(value: String): Self = this.set("detailIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDetailIconExpanded(value: String): Self = this.set("detailIconExpanded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDetailPanelCell(value: String): Self = this.set("detailPanelCell", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHeaderCell(value: String): Self = this.set("headerCell", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIconAdd(value: String): Self = this.set("iconAdd", value.asInstanceOf[js.Any])

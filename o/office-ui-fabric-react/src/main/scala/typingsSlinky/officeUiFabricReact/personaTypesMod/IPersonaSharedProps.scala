@@ -2,12 +2,12 @@ package typingsSlinky.officeUiFabricReact.personaTypesMod
 
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.Available
 import typingsSlinky.officeUiFabricReact.imageTypesMod.ImageLoadState
 import typingsSlinky.officeUiFabricReact.personaBaseMod.PersonaBase
 import typingsSlinky.officeUiFabricReact.personaCoinBaseMod.PersonaCoinBase
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`

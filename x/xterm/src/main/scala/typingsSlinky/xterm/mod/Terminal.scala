@@ -174,10 +174,14 @@ class Terminal () extends IDisposable {
   def getOption_fontFamily(key: fontFamily): String = js.native
   @JSName("getOption")
   def getOption_fontSize(key: fontSize): Double = js.native
+  /**
+    * Retrieves an option's value from the terminal.
+    * @param key The option key.
+    */
   @JSName("getOption")
-  def getOption_fontWeight(key: fontWeight): String = js.native
+  def getOption_fontWeight(key: fontWeight): FontWeight = js.native
   @JSName("getOption")
-  def getOption_fontWeightBold(key: fontWeightBold): String = js.native
+  def getOption_fontWeightBold(key: fontWeightBold): FontWeight = js.native
   @JSName("getOption")
   def getOption_letterSpacing(key: letterSpacing): Double = js.native
   @JSName("getOption")
@@ -643,7 +647,11 @@ class Terminal () extends IDisposable {
   @JSName("setOption")
   def setOption_fontWeight(key: fontWeight): Unit = js.native
   @JSName("setOption")
+  def setOption_fontWeight(key: fontWeight, value: Double): Unit = js.native
+  @JSName("setOption")
   def setOption_fontWeightBold(key: fontWeightBold): Unit = js.native
+  @JSName("setOption")
+  def setOption_fontWeightBold(key: fontWeightBold, value: Double): Unit = js.native
   @JSName("setOption")
   def setOption_letterSpacing(key: letterSpacing, value: Double): Unit = js.native
   @JSName("setOption")

@@ -29,7 +29,7 @@ trait InstanceEbsBlockDevice extends js.Object {
   /**
     * The amount of provisioned
     * [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-    * This must be set with a `volumeType` of `"io1"`.
+    * This must be set with a `volumeType` of `"io1/io2"`.
     */
   var iops: js.UndefOr[Input[Double]] = js.native
   
@@ -51,8 +51,8 @@ trait InstanceEbsBlockDevice extends js.Object {
   var volumeSize: js.UndefOr[Input[Double]] = js.native
   
   /**
-    * The type of volume. Can be `"standard"`, `"gp2"`,
-    * or `"io1"`. (Default: `"gp2"`).
+    * The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`
+    * or `"io2"`. (Default: `"gp2"`).
     */
   var volumeType: js.UndefOr[Input[String]] = js.native
 }

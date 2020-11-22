@@ -28,7 +28,7 @@ trait StreamDescription extends js.Object {
   var KeyId: js.UndefOr[typingsSlinky.awsSdk.kinesisMod.KeyId] = js.native
   
   /**
-    * The current retention period, in hours.
+    * The current retention period, in hours. Minimum value of 24. Maximum value of 168.
     */
   var RetentionPeriodHours: typingsSlinky.awsSdk.kinesisMod.RetentionPeriodHours = js.native
   

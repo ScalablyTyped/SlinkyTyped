@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AdditionalAttribute extends js.Object {
   
   /**
-    * This parameter is reserved.
+    * The name of the attribute. The following attribute is supported.    elb.http.desyncmitigationmode - Determines how the load balancer handles requests that might pose a security risk to your application. The possible values are monitor, defensive, and strictest. The default is defensive.  
     */
   var Key: js.UndefOr[AdditionalAttributeKey] = js.native
   
   /**
-    * This parameter is reserved.
+    * This value of the attribute.
     */
   var Value: js.UndefOr[AdditionalAttributeValue] = js.native
 }

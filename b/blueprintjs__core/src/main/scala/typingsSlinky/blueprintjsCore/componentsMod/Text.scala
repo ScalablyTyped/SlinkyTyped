@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.componentsMod
 
+import typingsSlinky.blueprintjsCore.anon.PartialITextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,6 +13,8 @@ class Text ()
 @JSImport("@blueprintjs/core/lib/esm/components", "Text")
 @js.native
 object Text extends js.Object {
+  
+  var defaultProps: PartialITextProps = js.native
   
   var displayName: String = js.native
 }

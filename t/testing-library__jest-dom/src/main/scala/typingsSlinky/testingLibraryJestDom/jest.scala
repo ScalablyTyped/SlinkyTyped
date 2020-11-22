@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.SVGElement
 import typingsSlinky.std.Record
 import typingsSlinky.std.ReturnType
+import typingsSlinky.testingLibraryJestDom.anon.Exact
 import typingsSlinky.testingLibraryJestDom.anon.NormalizeWhitespace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -295,12 +296,9 @@ object jest extends js.Object {
       * @description
       * Assert whether a string representing a HTML element is contained in another element.
       * @example
-      * <span data-testid="parent">
-      *   <span data-testid="child"></span>
-      * </span>
+      * <span data-testid="parent"><span data-testid="child"></span></span>
       *
-      * const parent = getByTestId('parent')
-      * expect(parent).toContainerHTML(<span data-testid="child"></span>)
+      * expect(getByTestId('parent')).toContainHTML('<span data-testid="child"></span>')
       * @see
       * [testing-library/jest-dom#tocontainhtml](https:github.com/testing-library/jest-dom#tocontainhtml)
       */
@@ -350,11 +348,15 @@ object jest extends js.Object {
       * const noClasses = getByTestId('no-classes')
       * expect(deleteButton).toHaveClass('btn')
       * expect(deleteButton).toHaveClass('btn-danger xs')
+      * expect(deleteButton).toHaveClass('btn xs btn-danger', {exact: true})
+      * expect(deleteButton).not.toHaveClass('btn xs btn-danger', {exact: true})
       * expect(noClasses).not.toHaveClass()
       * @see
       * [testing-library/jest-dom#tohaveclass](https:github.com/testing-library/jest-dom#tohaveclass)
       */
     def toHaveClass(classNames: String*): R = js.native
+    def toHaveClass(classNames: String): R = js.native
+    def toHaveClass(classNames: String, options: Exact): R = js.native
     
     /**
       * @description

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PCTrueColorRendererResult extends Object {
   
   /**
-    * The renderer object configured to represent the true color of each point in the point cloud. This gives the PointCloudLayer a realistic visualization of how it looks in the real world. Set this object on the input layer's `renderer` property to update its visualization.
+    * The renderer object configured to represent the true color of each point in the point cloud.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-color.html#PCTrueColorRendererResult)
     */

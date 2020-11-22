@@ -20,7 +20,7 @@ trait ASN1Subject extends js.Object {
   /**
     * Disambiguating information for the certificate subject.
     */
-  var DistinguishedNameQualifier: js.UndefOr[DistinguishedNameQualifierString] = js.native
+  var DistinguishedNameQualifier: js.UndefOr[ASN1PrintableString64] = js.native
   
   /**
     * Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third.
@@ -60,7 +60,7 @@ trait ASN1Subject extends js.Object {
   /**
     * The certificate serial number.
     */
-  var SerialNumber: js.UndefOr[String64] = js.native
+  var SerialNumber: js.UndefOr[ASN1PrintableString64] = js.native
   
   /**
     * State in which the subject of the certificate is located.
@@ -113,7 +113,7 @@ object ASN1Subject {
     def deleteCountry: Self = this.set("Country", js.undefined)
     
     @scala.inline
-    def setDistinguishedNameQualifier(value: DistinguishedNameQualifierString): Self = this.set("DistinguishedNameQualifier", value.asInstanceOf[js.Any])
+    def setDistinguishedNameQualifier(value: ASN1PrintableString64): Self = this.set("DistinguishedNameQualifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDistinguishedNameQualifier: Self = this.set("DistinguishedNameQualifier", js.undefined)
@@ -161,7 +161,7 @@ object ASN1Subject {
     def deletePseudonym: Self = this.set("Pseudonym", js.undefined)
     
     @scala.inline
-    def setSerialNumber(value: String64): Self = this.set("SerialNumber", value.asInstanceOf[js.Any])
+    def setSerialNumber(value: ASN1PrintableString64): Self = this.set("SerialNumber", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSerialNumber: Self = this.set("SerialNumber", js.undefined)

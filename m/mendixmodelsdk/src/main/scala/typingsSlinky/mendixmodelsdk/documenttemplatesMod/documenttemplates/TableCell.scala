@@ -1,16 +1,18 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/cell-document-template relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/cell-document-template relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.TableCell")
 @js.native
@@ -20,8 +22,8 @@ class TableCell protected () extends DropZone {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def colSpan: Double = js.native
@@ -29,9 +31,6 @@ class TableCell protected () extends DropZone {
   
   def isPartOfSpan: Boolean = js.native
   def isPartOfSpan_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FTableCell: IModel = js.native
   
   def rowSpan: Double = js.native
   def rowSpan_=(newValue: Double): Unit = js.native

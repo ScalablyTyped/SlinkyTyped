@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ModelOptions extends js.Object {
   
-  var columns: js.UndefOr[StringDictionary[String]] = js.native
+  var columns: js.UndefOr[StringDictionary[String | ModelColumnOptions]] = js.native
   
   var keyspace: js.UndefOr[String] = js.native
   
@@ -40,7 +40,7 @@ object ModelOptions {
     }
     
     @scala.inline
-    def setColumns(value: StringDictionary[String]): Self = this.set("columns", value.asInstanceOf[js.Any])
+    def setColumns(value: StringDictionary[String | ModelColumnOptions]): Self = this.set("columns", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColumns: Self = this.set("columns", js.undefined)

@@ -17,7 +17,7 @@ trait IdentityManagerSetRedirectionHandlerHandlerFunction extends Object {
   var resourceUrl: String = js.native
   
   /**
-    * The application URL where the sign-in page redirects after a successful login. To create the return URL, append the application's URL to signInPage as a parameter. The *returnUrlParamName* contains the name of the parameter.
+    * The application URL where the sign-in page redirects after a successful login.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-IdentityManager.html#setRedirectionHandler)
     */

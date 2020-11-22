@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticSIZES
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -208,7 +207,7 @@ object StrictLabelProps {
     
     @scala.inline
     def setDetailFunction3(
-      value: (/* component */ ReactType[LabelDetailProps], LabelDetailProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, LabelDetailProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("detail", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -240,7 +239,7 @@ object StrictLabelProps {
     
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -284,7 +283,7 @@ object StrictLabelProps {
     
     @scala.inline
     def setRemoveIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("removeIcon", js.Any.fromFunction3(value))
     
     @scala.inline

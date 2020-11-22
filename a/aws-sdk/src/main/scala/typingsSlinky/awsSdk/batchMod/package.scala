@@ -79,6 +79,8 @@ package object batchMod {
   
   type EnvironmentVariables = js.Array[typingsSlinky.awsSdk.batchMod.KeyValuePair]
   
+  type EvaluateOnExitList = js.Array[typingsSlinky.awsSdk.batchMod.EvaluateOnExit]
+  
   type Integer = scala.Double
   
   /* Rewritten from type alias, can be one of: 
@@ -128,6 +130,20 @@ package object batchMod {
   
   type JobSummaryList = js.Array[typingsSlinky.awsSdk.batchMod.JobSummary]
   
+  type LogConfigurationOptionsMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.batchMod.String]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`json-file`
+    - typingsSlinky.awsSdk.awsSdkStrings.syslog
+    - typingsSlinky.awsSdk.awsSdkStrings.journald
+    - typingsSlinky.awsSdk.awsSdkStrings.gelf
+    - typingsSlinky.awsSdk.awsSdkStrings.fluentd
+    - typingsSlinky.awsSdk.awsSdkStrings.awslogs
+    - typingsSlinky.awsSdk.awsSdkStrings.splunk
+    - java.lang.String
+  */
+  type LogDriver = typingsSlinky.awsSdk.batchMod._LogDriver | java.lang.String
+  
   type Long = scala.Double
   
   type MountPoints = js.Array[typingsSlinky.awsSdk.batchMod.MountPoint]
@@ -144,11 +160,30 @@ package object batchMod {
   
   type ResourceType = typingsSlinky.awsSdk.awsSdkStrings.GPU | java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.RETRY
+    - typingsSlinky.awsSdk.awsSdkStrings.EXIT
+    - java.lang.String
+  */
+  type RetryAction = typingsSlinky.awsSdk.batchMod._RetryAction | java.lang.String
+  
+  type SecretList = js.Array[typingsSlinky.awsSdk.batchMod.Secret]
+  
   type String = java.lang.String
   
   type StringList = js.Array[typingsSlinky.awsSdk.batchMod.String]
   
+  type TagKey = java.lang.String
+  
+  type TagKeysList = js.Array[typingsSlinky.awsSdk.batchMod.TagKey]
+  
+  type TagValue = java.lang.String
+  
+  type TagrisTagsMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.batchMod.TagValue]
+  
   type TagsMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.batchMod.String]
+  
+  type TmpfsList = js.Array[typingsSlinky.awsSdk.batchMod.Tmpfs]
   
   type Ulimits = js.Array[typingsSlinky.awsSdk.batchMod.Ulimit]
   

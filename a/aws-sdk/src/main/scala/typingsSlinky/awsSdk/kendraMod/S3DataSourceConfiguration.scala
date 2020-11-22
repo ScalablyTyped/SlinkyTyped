@@ -20,9 +20,14 @@ trait S3DataSourceConfiguration extends js.Object {
   var DocumentsMetadataConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.DocumentsMetadataConfiguration] = js.native
   
   /**
-    * A list of glob patterns for documents that should not be indexed. If a document that matches an inclusion prefix also matches an exclusion pattern, the document is not indexed. For more information about glob patterns, see glob (programming) in Wikipedia.
+    * A list of glob patterns for documents that should not be indexed. If a document that matches an inclusion prefix or inclusion pattern also matches an exclusion pattern, the document is not indexed. For more information about glob patterns, see glob (programming) in Wikipedia.
     */
   var ExclusionPatterns: js.UndefOr[DataSourceInclusionsExclusionsStrings] = js.native
+  
+  /**
+    * A list of glob patterns for documents that should be indexed. If a document that matches an inclusion pattern also matches an exclusion pattern, the document is not indexed. For more information about glob patterns, see glob (programming) in Wikipedia.
+    */
+  var InclusionPatterns: js.UndefOr[DataSourceInclusionsExclusionsStrings] = js.native
   
   /**
     * A list of S3 prefixes for the documents that should be included in the index.
@@ -75,6 +80,15 @@ object S3DataSourceConfiguration {
     
     @scala.inline
     def deleteExclusionPatterns: Self = this.set("ExclusionPatterns", js.undefined)
+    
+    @scala.inline
+    def setInclusionPatternsVarargs(value: DataSourceInclusionsExclusionsStringsMember*): Self = this.set("InclusionPatterns", js.Array(value :_*))
+    
+    @scala.inline
+    def setInclusionPatterns(value: DataSourceInclusionsExclusionsStrings): Self = this.set("InclusionPatterns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInclusionPatterns: Self = this.set("InclusionPatterns", js.undefined)
     
     @scala.inline
     def setInclusionPrefixesVarargs(value: DataSourceInclusionsExclusionsStringsMember*): Self = this.set("InclusionPrefixes", js.Array(value :_*))

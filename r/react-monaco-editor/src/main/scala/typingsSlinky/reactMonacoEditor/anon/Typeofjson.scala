@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Typeofjson extends js.Object {
   
-  var jsonDefaults: LanguageServiceDefaults = js.native
+  val jsonDefaults: LanguageServiceDefaults = js.native
 }
 object Typeofjson {
   

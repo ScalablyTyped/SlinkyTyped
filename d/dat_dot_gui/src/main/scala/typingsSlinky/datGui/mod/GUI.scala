@@ -1,5 +1,6 @@
 package typingsSlinky.datGui.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +13,7 @@ class GUI () extends js.Object {
   
   var __controllers: js.Array[GUIController] = js.native
   
-  var __folders: js.Array[GUI] = js.native
+  var __folders: StringDictionary[GUI] = js.native
   
   def add(target: js.Object, propName: String): GUIController = js.native
   def add(target: js.Object, propName: String, items: js.Array[Double | String]): GUIController = js.native

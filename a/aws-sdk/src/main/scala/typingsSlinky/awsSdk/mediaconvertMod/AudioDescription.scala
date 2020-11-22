@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AudioDescription extends js.Object {
   
   /**
+    * When you mimic a multi-channel audio layout with multiple mono-channel tracks, you can tag each channel layout manually. For example, you would tag the tracks that contain your left, right, and center audio with Left (L), Right (R), and Center (C), respectively. When you don't specify a value, MediaConvert labels your track as Center (C) by default. To use audio layout tagging, your output must be in a QuickTime (.mov) container; your audio codec must be AAC, WAV, or AIFF; and you must set up your audio track to have only one channel.
+    */
+  var AudioChannelTaggingSettings: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.AudioChannelTaggingSettings] = js.native
+  
+  /**
     * Advanced audio normalization settings. Ignore these settings unless you need to comply with a loudness standard.
     */
   var AudioNormalizationSettings: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.AudioNormalizationSettings] = js.native
@@ -79,6 +84,12 @@ object AudioDescription {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAudioChannelTaggingSettings(value: AudioChannelTaggingSettings): Self = this.set("AudioChannelTaggingSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAudioChannelTaggingSettings: Self = this.set("AudioChannelTaggingSettings", js.undefined)
     
     @scala.inline
     def setAudioNormalizationSettings(value: AudioNormalizationSettings): Self = this.set("AudioNormalizationSettings", value.asInstanceOf[js.Any])

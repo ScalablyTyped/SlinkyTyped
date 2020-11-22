@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait HistogramCommon[Datum, Value /* <: js.UndefOr[Double | js.Date] */] extends js.Object {
   
-  def apply(data: ArrayLike[Datum]): js.Array[Bin[Datum, Value]] = js.native
+  def apply(data: ArrayLike[Datum]): js.Array[Bin_[Datum, Value]] = js.native
   
   def value(): js.Function3[/* d */ Datum, /* i */ Double, /* data */ ArrayLike[Datum], Value] = js.native
   def value(valueAccessor: js.Function3[/* d */ Datum, /* i */ Double, /* data */ ArrayLike[Datum], Value]): this.type = js.native

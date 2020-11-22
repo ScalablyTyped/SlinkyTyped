@@ -16,9 +16,14 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`datetime-local`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -32,9 +37,12 @@ import typingsSlinky.antd.antdStrings.date
 import typingsSlinky.antd.antdStrings.decimal
 import typingsSlinky.antd.antdStrings.descending
 import typingsSlinky.antd.antdStrings.dialog
+import typingsSlinky.antd.antdStrings.done
 import typingsSlinky.antd.antdStrings.email
+import typingsSlinky.antd.antdStrings.enter
 import typingsSlinky.antd.antdStrings.execute
 import typingsSlinky.antd.antdStrings.file
+import typingsSlinky.antd.antdStrings.go
 import typingsSlinky.antd.antdStrings.grammar
 import typingsSlinky.antd.antdStrings.grid
 import typingsSlinky.antd.antdStrings.hidden
@@ -49,6 +57,7 @@ import typingsSlinky.antd.antdStrings.menu
 import typingsSlinky.antd.antdStrings.mixed
 import typingsSlinky.antd.antdStrings.month
 import typingsSlinky.antd.antdStrings.move
+import typingsSlinky.antd.antdStrings.next
 import typingsSlinky.antd.antdStrings.no
 import typingsSlinky.antd.antdStrings.none
 import typingsSlinky.antd.antdStrings.number
@@ -60,23 +69,25 @@ import typingsSlinky.antd.antdStrings.page
 import typingsSlinky.antd.antdStrings.password
 import typingsSlinky.antd.antdStrings.polite
 import typingsSlinky.antd.antdStrings.popup
+import typingsSlinky.antd.antdStrings.previous
 import typingsSlinky.antd.antdStrings.radio
 import typingsSlinky.antd.antdStrings.range
 import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.reset
 import typingsSlinky.antd.antdStrings.search
+import typingsSlinky.antd.antdStrings.send
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.submit
 import typingsSlinky.antd.antdStrings.tel
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.week
 import typingsSlinky.antd.antdStrings.yes
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
@@ -190,7 +201,9 @@ trait InputProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -258,6 +271,8 @@ trait InputProps extends js.Object {
   
   var draggable: js.UndefOr[Booleanish] = js.native
   
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
+  
   var form: js.UndefOr[String] = js.native
   
   var formAction: js.UndefOr[String] = js.native
@@ -278,7 +293,7 @@ trait InputProps extends js.Object {
   
   var inlist: js.UndefOr[js.Any] = js.native
   
-  var inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
+  var inputMode: js.UndefOr[none | text_ | tel | url | email | numeric | decimal | search] = js.native
   
   var is: js.UndefOr[String] = js.native
   
@@ -518,7 +533,7 @@ trait InputProps extends js.Object {
   
   var `type`: js.UndefOr[
     LiteralUnion[
-      button | checkbox | color | date | `datetime-local` | email | file | hidden | image | month | number | password | radio | range | reset | search | submit | tel | text | time | url | week, 
+      button | checkbox | color | date | `datetime-local` | email | file | hidden | image | month | number | password | radio | range | reset | search | submit | tel | text_ | time | url | week, 
       String
     ]
   ] = js.native
@@ -815,7 +830,9 @@ object InputProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1025,6 +1042,12 @@ object InputProps {
     def deleteDraggable: Self = this.set("draggable", js.undefined)
     
     @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
+    
+    @scala.inline
     def setForm(value: String): Self = this.set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1085,7 +1108,7 @@ object InputProps {
     def deleteInlist: Self = this.set("inlist", js.undefined)
     
     @scala.inline
-    def setInputMode(value: none | text | tel | url | email | numeric | decimal | search): Self = this.set("inputMode", value.asInstanceOf[js.Any])
+    def setInputMode(value: none | text_ | tel | url | email | numeric | decimal | search): Self = this.set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInputMode: Self = this.set("inputMode", js.undefined)
@@ -1807,7 +1830,7 @@ object InputProps {
     @scala.inline
     def setType(
       value: LiteralUnion[
-          button | checkbox | color | date | `datetime-local` | email | file | hidden | image | month | number | password | radio | range | reset | search | submit | tel | text | time | url | week, 
+          button | checkbox | color | date | `datetime-local` | email | file | hidden | image | month | number | password | radio | range | reset | search | submit | tel | text_ | time | url | week, 
           String
         ]
     ): Self = this.set("type", value.asInstanceOf[js.Any])

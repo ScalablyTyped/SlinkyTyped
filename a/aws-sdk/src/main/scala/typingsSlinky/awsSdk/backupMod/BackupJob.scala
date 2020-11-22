@@ -18,9 +18,19 @@ trait BackupJob extends js.Object {
   var BackupJobId: js.UndefOr[String] = js.native
   
   /**
+    * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Valid values: Set to "WindowsVSS”:“enabled" to enable WindowsVSS backup option and create a VSS Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. If you specify an invalid option, you get an InvalidParameterValueException exception.
+    */
+  var BackupOptions: js.UndefOr[typingsSlinky.awsSdk.backupMod.BackupOptions] = js.native
+  
+  /**
     * The size, in bytes, of a backup.
     */
   var BackupSizeInBytes: js.UndefOr[Long_] = js.native
+  
+  /**
+    * Represents the type of backup for a backup job.
+    */
+  var BackupType: js.UndefOr[String] = js.native
   
   /**
     * An Amazon Resource Name (ARN) that uniquely identifies a backup vault; for example, arn:aws:backup:us-east-1:123456789012:vault:aBackupVault.
@@ -78,7 +88,7 @@ trait BackupJob extends js.Object {
   var ResourceArn: js.UndefOr[ARN] = js.native
   
   /**
-    * The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
+    * The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only supported resource type is Amazon EC2.
     */
   var ResourceType: js.UndefOr[typingsSlinky.awsSdk.backupMod.ResourceType] = js.native
   
@@ -133,10 +143,22 @@ object BackupJob {
     def deleteBackupJobId: Self = this.set("BackupJobId", js.undefined)
     
     @scala.inline
+    def setBackupOptions(value: BackupOptions): Self = this.set("BackupOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBackupOptions: Self = this.set("BackupOptions", js.undefined)
+    
+    @scala.inline
     def setBackupSizeInBytes(value: Long_): Self = this.set("BackupSizeInBytes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackupSizeInBytes: Self = this.set("BackupSizeInBytes", js.undefined)
+    
+    @scala.inline
+    def setBackupType(value: String): Self = this.set("BackupType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBackupType: Self = this.set("BackupType", js.undefined)
     
     @scala.inline
     def setBackupVaultArn(value: ARN): Self = this.set("BackupVaultArn", value.asInstanceOf[js.Any])

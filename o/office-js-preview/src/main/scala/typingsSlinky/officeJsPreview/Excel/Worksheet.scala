@@ -112,8 +112,7 @@ trait Worksheet extends ClientObject {
     *
     * Gets a collection of worksheet-level custom properties.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val customProperties: WorksheetCustomPropertyCollection = js.native
   
@@ -339,7 +338,7 @@ trait Worksheet extends ClientObject {
   
   /**
     *
-    * Occurs when data changed on a specific worksheet.
+    * Occurs when data changes in a specific worksheet.
     *
     * [Api set: ExcelApi 1.7]
     *
@@ -570,6 +569,15 @@ trait Worksheet extends ClientObject {
     * [Api set: ExcelApi 1.1]
     */
   val tables: TableCollection = js.native
+  
+  /**
+    *
+    * Returns a collection of tasks that are present in the worksheet.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  val tasks: TaskCollection = js.native
   
   /**
     * Overrides the JavaScript `toJSON()` method in order to provide more useful output when an API object is passed to `JSON.stringify()`. (`JSON.stringify`, in turn, calls the `toJSON` method of the object that is passed to it.)

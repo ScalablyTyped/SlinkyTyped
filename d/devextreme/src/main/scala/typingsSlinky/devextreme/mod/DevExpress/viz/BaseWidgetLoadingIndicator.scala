@@ -4,23 +4,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseWidget.Options.loadingIndicator */
+/**
+  * [descr:BaseWidget.Options.loadingIndicator]
+  */
 @js.native
 trait BaseWidgetLoadingIndicator extends js.Object {
   
-  /** @name BaseWidget.Options.loadingIndicator.backgroundColor */
+  /**
+    * [descr:BaseWidget.Options.loadingIndicator.backgroundColor]
+    */
   var backgroundColor: js.UndefOr[String] = js.native
   
-  /** @name BaseWidget.Options.loadingIndicator.enabled */
+  /**
+    * [descr:BaseWidget.Options.loadingIndicator.enabled]
+    */
   var enabled: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseWidget.Options.loadingIndicator.font */
+  /**
+    * [descr:BaseWidget.Options.loadingIndicator.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name BaseWidget.Options.loadingIndicator.show */
+  /**
+    * [descr:BaseWidget.Options.loadingIndicator.show]
+    */
   var show: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseWidget.Options.loadingIndicator.text */
+  /**
+    * [descr:BaseWidget.Options.loadingIndicator.text]
+    */
   var text: js.UndefOr[String] = js.native
 }
 object BaseWidgetLoadingIndicator {

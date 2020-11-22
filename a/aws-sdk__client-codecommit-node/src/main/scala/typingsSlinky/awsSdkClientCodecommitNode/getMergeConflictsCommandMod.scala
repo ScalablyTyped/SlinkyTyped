@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientCodecommitNode.inputTypesUnionMod.InputTypesUni
 import typingsSlinky.awsSdkClientCodecommitNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientCodecommitNode.typesGetMergeConflictsInputMod.GetMergeConflictsInput
 import typingsSlinky.awsSdkClientCodecommitNode.typesGetMergeConflictsOutputMod.GetMergeConflictsOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object getMergeConflictsCommandMod extends js.Object {
           GetMergeConflictsInput, 
           OutputTypesUnion, 
           GetMergeConflictsOutput, 
-          CodeCommitResolvedConfiguration, 
-          Readable
+          CodeCommitResolvedConfiguration
         ] {
     def this(input: GetMergeConflictsInput) = this()
     
-    val middlewareStack: MiddlewareStack[GetMergeConflictsInput, GetMergeConflictsOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetMergeConflictsInput, GetMergeConflictsOutput] = js.native
   }

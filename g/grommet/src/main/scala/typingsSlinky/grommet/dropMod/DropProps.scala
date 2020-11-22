@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.grommet.anon.Bottom
 import typingsSlinky.grommet.anon.Horizontal
+import typingsSlinky.grommet.grommetStrings.align
 import typingsSlinky.grommet.grommetStrings.auto
 import typingsSlinky.grommet.grommetStrings.hidden
 import typingsSlinky.grommet.grommetStrings.scroll
@@ -33,9 +34,11 @@ trait DropProps extends js.Object {
   
   var restrictFocus: js.UndefOr[Boolean] = js.native
   
-  var stretch: js.UndefOr[Boolean] = js.native
+  var stretch: js.UndefOr[Boolean | align] = js.native
   
   var target: js.UndefOr[js.Object] = js.native
+  
+  var trapFocus: js.UndefOr[Boolean] = js.native
 }
 object DropProps {
   
@@ -109,7 +112,7 @@ object DropProps {
     def deleteRestrictFocus: Self = this.set("restrictFocus", js.undefined)
     
     @scala.inline
-    def setStretch(value: Boolean): Self = this.set("stretch", value.asInstanceOf[js.Any])
+    def setStretch(value: Boolean | align): Self = this.set("stretch", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStretch: Self = this.set("stretch", js.undefined)
@@ -119,5 +122,11 @@ object DropProps {
     
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)
+    
+    @scala.inline
+    def setTrapFocus(value: Boolean): Self = this.set("trapFocus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTrapFocus: Self = this.set("trapFocus", js.undefined)
   }
 }

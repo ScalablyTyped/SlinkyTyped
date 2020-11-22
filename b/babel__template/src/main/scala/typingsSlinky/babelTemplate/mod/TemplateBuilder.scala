@@ -22,9 +22,19 @@ trait TemplateBuilder[T] extends js.Object {
     */
   def apply(tpl: TemplateStringsArray, args: js.Any*): js.Function1[/* arg */ js.UndefOr[PublicReplacements], T] = js.native
   
-  // Allow users to explicitly create templates that produce ASTs, skipping the need for an intermediate function.
+  /**
+    * Allow users to explicitly create templates that produce ASTs,
+    * skipping the need for an intermediate function.
+    *
+    * Does not allow `%%foo%%` style placeholders.
+    */
   def ast(tpl: String): T = js.native
   def ast(tpl: String, opts: TemplateBuilderOptions): T = js.native
-  // Allow users to explicitly create templates that produce ASTs, skipping the need for an intermediate function.
+  /**
+    * Allow users to explicitly create templates that produce ASTs,
+    * skipping the need for an intermediate function.
+    *
+    * Does not allow `%%foo%%` style placeholders.
+    */
   def ast(tpl: TemplateStringsArray, args: js.Any*): T = js.native
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.puppeteer.mod
 
-import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object errors extends js.Object {
   
-  @js.native
-  class TimeoutError () extends Error
+  var TimeoutError: js.Error = js.native
+  
+  var puppeteerErrors: typingsSlinky.puppeteer.anon.TimeoutError = js.native
 }

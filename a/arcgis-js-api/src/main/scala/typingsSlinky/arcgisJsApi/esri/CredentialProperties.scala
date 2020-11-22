@@ -22,7 +22,7 @@ trait CredentialProperties extends js.Object {
   var isAdmin: js.UndefOr[Boolean] = js.native
   
   /**
-    * The Identity Manager's [setOAuthRedirectionHandler](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-IdentityManager.html#setOAuthRedirectionHandler) returns an object that contains a `state` property. This information is returned for this property.
+    * The Identity Manager's [setOAuthRedirectionHandler](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-IdentityManager.html#setOAuthRedirectionHandler) returns an object that contains a `state` property.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-Credential.html#oAuthState)
     */

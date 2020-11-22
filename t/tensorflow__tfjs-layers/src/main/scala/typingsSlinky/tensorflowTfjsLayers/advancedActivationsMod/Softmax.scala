@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.advancedActivationsMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

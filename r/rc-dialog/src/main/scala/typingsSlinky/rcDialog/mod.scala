@@ -1,6 +1,6 @@
 package typingsSlinky.rcDialog
 
-import slinky.core.facade.ReactElement
+import slinky.core.ReactComponentClass
 import typingsSlinky.rcDialog.idialogproptypesMod.IDialogPropTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def default(props: IDialogPropTypes): ReactElement = js.native
+  val default: ReactComponentClass[IDialogPropTypes] = js.native
 }

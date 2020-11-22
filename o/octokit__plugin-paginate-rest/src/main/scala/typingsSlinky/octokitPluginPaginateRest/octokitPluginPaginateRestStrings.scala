@@ -16,6 +16,21 @@ object octokitPluginPaginateRestStrings {
   def `GET Slashauthorizations`: `GET Slashauthorizations` = ("GET /authorizations").asInstanceOf[`GET Slashauthorizations`]
   
   @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups` = ("GET /enterprises/:enterprise/actions/runner-groups").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations` = ("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` = ("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners` = ("GET /enterprises/:enterprise/actions/runners").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads` = ("GET /enterprises/:enterprise/actions/runners/downloads").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`]
+  
+  @scala.inline
   def `GET Slashgists`: `GET Slashgists` = ("GET /gists").asInstanceOf[`GET Slashgists`]
   
   @scala.inline
@@ -56,6 +71,15 @@ object octokitPluginPaginateRestStrings {
   
   @scala.inline
   def `GET Slashorganizations`: `GET Slashorganizations` = ("GET /organizations").asInstanceOf[`GET Slashorganizations`]
+  
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`: `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups` = ("GET /orgs/:org/actions/runner-groups").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`]
+  
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`: `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories` = ("GET /orgs/:org/actions/runner-groups/:runner_group_id/repositories").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`]
+  
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` = ("GET /orgs/:org/actions/runner-groups/:runner_group_id/runners").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`]
   
   @scala.inline
   def `GET SlashorgsSlashColonorgSlashactionsSlashrunners`: `GET SlashorgsSlashColonorgSlashactionsSlashrunners` = ("GET /orgs/:org/actions/runners").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunners`]
@@ -197,6 +221,9 @@ object octokitPluginPaginateRestStrings {
   
   @scala.inline
   def `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`: `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts` = ("GET /repos/:owner/:repo/code-scanning/alerts").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`]
+  
+  @scala.inline
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`: `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses` = ("GET /repos/:owner/:repo/code-scanning/analyses").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`]
   
   @scala.inline
   def `GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators`: `GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators` = ("GET /repos/:owner/:repo/collaborators").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators`]
@@ -508,6 +535,21 @@ object octokitPluginPaginateRestStrings {
   sealed trait `GET Slashauthorizations` extends js.Object
   
   @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads` extends js.Object
+  
+  @js.native
   sealed trait `GET Slashgists` extends js.Object
   
   @js.native
@@ -548,6 +590,15 @@ object octokitPluginPaginateRestStrings {
   
   @js.native
   sealed trait `GET Slashorganizations` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` extends js.Object
   
   @js.native
   sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunners` extends js.Object
@@ -689,6 +740,9 @@ object octokitPluginPaginateRestStrings {
   
   @js.native
   sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses` extends js.Object
   
   @js.native
   sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators` extends js.Object

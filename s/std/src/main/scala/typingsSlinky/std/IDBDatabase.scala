@@ -92,7 +92,7 @@ trait IDBDatabase extends EventTarget {
     * Throws a "InvalidStateError" DOMException if not called within an upgrade transaction.
     */
   def createObjectStore(name: java.lang.String): org.scalajs.dom.raw.IDBObjectStore = js.native
-  def createObjectStore(name: java.lang.String, optionalParameters: IDBObjectStoreParameters): org.scalajs.dom.raw.IDBObjectStore = js.native
+  def createObjectStore(name: java.lang.String, options: IDBObjectStoreParameters): org.scalajs.dom.raw.IDBObjectStore = js.native
   
   /**
     * Deletes the object store with the given name.
@@ -195,6 +195,8 @@ trait IDBDatabase extends EventTarget {
   def transaction(storeNames: java.lang.String, mode: IDBTransactionMode): org.scalajs.dom.raw.IDBTransaction = js.native
   def transaction(storeNames: js.Array[java.lang.String]): org.scalajs.dom.raw.IDBTransaction = js.native
   def transaction(storeNames: js.Array[java.lang.String], mode: IDBTransactionMode): org.scalajs.dom.raw.IDBTransaction = js.native
+  def transaction(storeNames: js.Iterable[java.lang.String]): org.scalajs.dom.raw.IDBTransaction = js.native
+  def transaction(storeNames: js.Iterable[java.lang.String], mode: IDBTransactionMode): org.scalajs.dom.raw.IDBTransaction = js.native
   
   /**
     * Returns the version of the database.

@@ -23,24 +23,24 @@ trait Assertion extends js.Object {
   /**
     * Returns true if the spy was called after anotherSpy.
     */
-  def calledAfter(anotherSpy: SinonSpy): Assertion = js.native
+  def calledAfter(anotherSpy: SinonSpy[js.Array[_], _]): Assertion = js.native
   
   /**
     * Returns true if the spy was called before anotherSpy.
     */
-  def calledBefore(anotherSpy: SinonSpy): Assertion = js.native
+  def calledBefore(anotherSpy: SinonSpy[js.Array[_], _]): Assertion = js.native
   
   /**
     * Returns true if spy was called after anotherSpy, and no spy calls occurred
     * between anotherSpy and spy.
     */
-  def calledImmediatelyAfter(anotherSpy: SinonSpy): Assertion = js.native
+  def calledImmediatelyAfter(anotherSpy: SinonSpy[js.Array[_], _]): Assertion = js.native
   
   /**
     * Returns true if spy was called before anotherSpy, and no spy calls occurred
     * between spy and anotherSpy.
     */
-  def calledImmediatelyBefore(anotherSpy: SinonSpy): Assertion = js.native
+  def calledImmediatelyBefore(anotherSpy: SinonSpy[js.Array[_], _]): Assertion = js.native
   
   /**
     * Returns true if context was this for this call.

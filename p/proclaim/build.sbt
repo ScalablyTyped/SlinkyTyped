@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "proclaim"
-version := "3.6-dt-20200515Z-09bfaf"
+version := "3.6-dt-20201021Z-e0fece"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

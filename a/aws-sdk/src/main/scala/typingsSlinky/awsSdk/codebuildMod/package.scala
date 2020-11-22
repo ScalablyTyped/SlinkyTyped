@@ -267,6 +267,13 @@ package object codebuildMod {
   */
   type ReportGroupSortByType = typingsSlinky.awsSdk.codebuildMod._ReportGroupSortByType | java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - java.lang.String
+  */
+  type ReportGroupStatusType = typingsSlinky.awsSdk.codebuildMod._ReportGroupStatusType | java.lang.String
+  
   type ReportGroups = js.Array[typingsSlinky.awsSdk.codebuildMod.ReportGroup]
   
   /* Rewritten from type alias, can be one of: 

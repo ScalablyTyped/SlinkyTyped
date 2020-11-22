@@ -166,6 +166,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.ReturnStatement
 import typingsSlinky.babelTypes.babelTypesStrings.SequenceExpression
 import typingsSlinky.babelTypes.babelTypesStrings.Slash
 import typingsSlinky.babelTypes.babelTypesStrings.SpreadElement
+import typingsSlinky.babelTypes.babelTypesStrings.StaticBlock
 import typingsSlinky.babelTypes.babelTypesStrings.StringLiteral
 import typingsSlinky.babelTypes.babelTypesStrings.StringLiteralTypeAnnotation
 import typingsSlinky.babelTypes.babelTypesStrings.StringTypeAnnotation
@@ -198,6 +199,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.TSInferType
 import typingsSlinky.babelTypes.babelTypesStrings.TSInterfaceBody
 import typingsSlinky.babelTypes.babelTypesStrings.TSInterfaceDeclaration
 import typingsSlinky.babelTypes.babelTypesStrings.TSIntersectionType
+import typingsSlinky.babelTypes.babelTypesStrings.TSIntrinsicKeyword
 import typingsSlinky.babelTypes.babelTypesStrings.TSLiteralType
 import typingsSlinky.babelTypes.babelTypesStrings.TSMappedType
 import typingsSlinky.babelTypes.babelTypesStrings.TSMethodSignature
@@ -294,8 +296,8 @@ trait _Node extends js.Object
 object _Node {
   
   @scala.inline
-  def ClassPrivateProperty_(key: PrivateName_, `type`: ClassPrivateProperty): _Node = {
-    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+  def ClassPrivateProperty_(key: PrivateName_, static: js.Any, `type`: ClassPrivateProperty): _Node = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Node]
   }
@@ -392,6 +394,13 @@ object _Node {
     `type`: UnaryExpression
   ): _Node = {
     val __obj = js.Dynamic.literal(argument = argument.asInstanceOf[js.Any], operator = operator.asInstanceOf[js.Any], prefix = prefix.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[_Node]
+  }
+  
+  @scala.inline
+  def TSIntrinsicKeyword_(`type`: TSIntrinsicKeyword): _Node = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Node]
   }
@@ -670,6 +679,13 @@ object _Node {
   @scala.inline
   def TryStatement_(block: BlockStatement_, `type`: TryStatement): _Node = {
     val __obj = js.Dynamic.literal(block = block.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[_Node]
+  }
+  
+  @scala.inline
+  def StaticBlock_(body: js.Array[Statement], `type`: StaticBlock): _Node = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Node]
   }
@@ -1030,7 +1046,7 @@ object _Node {
   }
   
   @scala.inline
-  def ExportSpecifier_(exported: Identifier_, local: Identifier_, `type`: ExportSpecifier): _Node = {
+  def ExportSpecifier_(exported: Identifier_ | StringLiteral_, local: Identifier_, `type`: ExportSpecifier): _Node = {
     val __obj = js.Dynamic.literal(exported = exported.asInstanceOf[js.Any], local = local.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Node]
@@ -1485,7 +1501,11 @@ object _Node {
   }
   
   @scala.inline
-  def TemplateLiteral_(expressions: js.Array[Expression], quasis: js.Array[TemplateElement_], `type`: TemplateLiteral): _Node = {
+  def TemplateLiteral_(
+    expressions: js.Array[Expression | TSType],
+    quasis: js.Array[TemplateElement_],
+    `type`: TemplateLiteral
+  ): _Node = {
     val __obj = js.Dynamic.literal(expressions = expressions.asInstanceOf[js.Any], quasis = quasis.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Node]
@@ -1724,7 +1744,7 @@ object _Node {
   }
   
   @scala.inline
-  def ImportSpecifier_(imported: Identifier_, local: Identifier_, `type`: ImportSpecifier): _Node = {
+  def ImportSpecifier_(imported: Identifier_ | StringLiteral_, local: Identifier_, `type`: ImportSpecifier): _Node = {
     val __obj = js.Dynamic.literal(imported = imported.asInstanceOf[js.Any], local = local.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Node]
@@ -2177,7 +2197,7 @@ object _Node {
   }
   
   @scala.inline
-  def ImportAttribute_(key: Identifier_, `type`: ImportAttribute, value: StringLiteral_): _Node = {
+  def ImportAttribute_(key: Identifier_ | StringLiteral_, `type`: ImportAttribute, value: StringLiteral_): _Node = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[_Node]

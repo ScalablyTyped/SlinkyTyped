@@ -18,13 +18,13 @@ trait SMTPServerAuthenticationResponse extends js.Object {
     * and this value is used later with the session data to identify the user.
     * If this value is empty, then the authentication is considered failed
     */
-  var user: js.Any = js.native
+  var user: js.UndefOr[js.Any] = js.native
 }
 object SMTPServerAuthenticationResponse {
   
   @scala.inline
-  def apply(user: js.Any): SMTPServerAuthenticationResponse = {
-    val __obj = js.Dynamic.literal(user = user.asInstanceOf[js.Any])
+  def apply(): SMTPServerAuthenticationResponse = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[SMTPServerAuthenticationResponse]
   }
   
@@ -44,12 +44,15 @@ object SMTPServerAuthenticationResponse {
     }
     
     @scala.inline
-    def setUser(value: js.Any): Self = this.set("user", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setData(value: js.Object): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)
+    
+    @scala.inline
+    def setUser(value: js.Any): Self = this.set("user", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUser: Self = this.set("user", js.undefined)
   }
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.reactNativeFirebaseApp
 
-import typingsSlinky.reactNativeFirebaseApp.ReactNativeFirebase.FirebaseApp
-import typingsSlinky.reactNativeFirebaseApp.Utils.Module
+import typingsSlinky.reactNativeFirebaseApp.mod.ReactNativeFirebase.FirebaseApp
+import typingsSlinky.reactNativeFirebaseApp.mod.Utils_.Module
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,13 +21,13 @@ object anon extends js.Object {
     val SDK_VERSION: String = js.native
   }
   
-  /* Inlined @react-native-firebase/app.ReactNativeFirebase.FirebaseModuleWithStatics<@react-native-firebase/app.Utils.Module, @react-native-firebase/app.Utils.Statics> */
+  /* Inlined @react-native-firebase/app.@react-native-firebase/app.ReactNativeFirebase.FirebaseModuleWithStatics<@react-native-firebase/app.@react-native-firebase/app.Utils.Module, @react-native-firebase/app.@react-native-firebase/app.Utils.Statics> */
   @js.native
   trait FirebaseModuleWithStatics extends js.Object {
     
     def apply(): Module = js.native
     
-    var FilePath: typingsSlinky.reactNativeFirebaseApp.Utils.FilePath = js.native
+    var FilePath: typingsSlinky.reactNativeFirebaseApp.mod.Utils_.FilePath = js.native
     
     /**
       * This React Native Firebase module version.

@@ -25,12 +25,6 @@ trait LookupOptionsalltrue extends js.Object {
   	 * One or more supported getaddrinfo flags. Multiple flags may be passed by bitwise ORing their values.
   	 */
   var hints: js.UndefOr[Double] = js.native
-  
-  /**
-  	 * Throw when there's no match. If set to `false` and it gets no match, it will return `undefined`.
-  	 * @default false
-  	 */
-  var throwNotFound: js.UndefOr[Boolean] = js.native
 }
 object LookupOptionsalltrue {
   
@@ -69,11 +63,5 @@ object LookupOptionsalltrue {
     
     @scala.inline
     def deleteHints: Self = this.set("hints", js.undefined)
-    
-    @scala.inline
-    def setThrowNotFound(value: Boolean): Self = this.set("throwNotFound", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteThrowNotFound: Self = this.set("throwNotFound", js.undefined)
   }
 }

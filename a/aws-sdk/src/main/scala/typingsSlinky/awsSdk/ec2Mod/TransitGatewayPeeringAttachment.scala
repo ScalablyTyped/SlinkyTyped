@@ -23,7 +23,7 @@ trait TransitGatewayPeeringAttachment extends js.Object {
   var RequesterTgwInfo: js.UndefOr[PeeringTgwInfo] = js.native
   
   /**
-    * The state of the transit gateway peering attachment.
+    * The state of the transit gateway peering attachment. Note that the initiating state has been deprecated.
     */
   var State: js.UndefOr[TransitGatewayAttachmentState] = js.native
   

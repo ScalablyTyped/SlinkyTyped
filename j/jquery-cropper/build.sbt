@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery-cropper"
-version := "1.0-dt-20200331Z-afa090"
+version := "1.0-dt-20201002Z-afa090"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

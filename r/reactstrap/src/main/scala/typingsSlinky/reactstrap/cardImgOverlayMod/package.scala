@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object cardImgOverlayMod {
   
-  type CardImgOverlay[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.cardImgOverlayMod.CardImgOverlayProps]
+  type CardImgOverlay = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.cardImgOverlayMod.CardImgOverlayProps]
 }

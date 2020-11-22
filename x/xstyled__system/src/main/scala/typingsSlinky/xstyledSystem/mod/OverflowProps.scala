@@ -9,7 +9,7 @@ trait OverflowProps extends js.Object {
   
   val overflow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object OverflowProps {
     }
     
     @scala.inline
+    def setOverflowVarargs(value: js.Any*): Self = this.set("overflow", js.Array(value :_*))
+    
+    @scala.inline
     def setOverflow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _
         ]
     ): Self = this.set("overflow", value.asInstanceOf[js.Any])
     

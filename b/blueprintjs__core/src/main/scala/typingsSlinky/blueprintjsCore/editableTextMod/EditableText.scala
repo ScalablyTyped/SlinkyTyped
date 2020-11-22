@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("@blueprintjs/core/lib/esm/components/editable-text/editableText", "EditableText")
 @js.native
-class EditableText ()
+class EditableText protected ()
   extends AbstractPureComponent2[IEditableTextProps, IEditableTextState, js.Object] {
   def this(props: IEditableTextProps) = this()
-  def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
   def this(props: IEditableTextProps, context: js.Any) = this()
   
   def cancelEditing(): Unit = js.native

@@ -35,6 +35,9 @@ trait PolicyArgs extends js.Object {
     */
   val metricAggregationType: js.UndefOr[Input[String]] = js.native
   
+  /**
+    * Minimum value to scale by when `adjustmentType` is set to `PercentChangeInCapacity`.
+    */
   val minAdjustmentMagnitude: js.UndefOr[Input[Double]] = js.native
   
   /**

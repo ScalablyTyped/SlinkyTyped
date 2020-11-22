@@ -14,7 +14,15 @@ object updateArrowFunction extends js.Object {
     typeParameters: js.UndefOr[scala.Nothing],
     parameters: js.Array[ParameterDeclaration],
     `type`: js.UndefOr[scala.Nothing],
-    equalsGreaterThanToken: Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsGreaterThanToken],
+    body: ConciseBody
+  ): ArrowFunction = js.native
+  def apply(
+    node: ArrowFunction,
+    modifiers: js.UndefOr[scala.Nothing],
+    typeParameters: js.UndefOr[scala.Nothing],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: js.UndefOr[scala.Nothing],
+    equalsGreaterThanToken: EqualsGreaterThanToken,
     body: ConciseBody
   ): ArrowFunction = js.native
   def apply(
@@ -23,7 +31,15 @@ object updateArrowFunction extends js.Object {
     typeParameters: js.UndefOr[scala.Nothing],
     parameters: js.Array[ParameterDeclaration],
     `type`: TypeNode,
-    equalsGreaterThanToken: Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsGreaterThanToken],
+    body: ConciseBody
+  ): ArrowFunction = js.native
+  def apply(
+    node: ArrowFunction,
+    modifiers: js.UndefOr[scala.Nothing],
+    typeParameters: js.UndefOr[scala.Nothing],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: TypeNode,
+    equalsGreaterThanToken: EqualsGreaterThanToken,
     body: ConciseBody
   ): ArrowFunction = js.native
   def apply(
@@ -32,7 +48,15 @@ object updateArrowFunction extends js.Object {
     typeParameters: js.Array[TypeParameterDeclaration],
     parameters: js.Array[ParameterDeclaration],
     `type`: js.UndefOr[scala.Nothing],
-    equalsGreaterThanToken: Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsGreaterThanToken],
+    body: ConciseBody
+  ): ArrowFunction = js.native
+  def apply(
+    node: ArrowFunction,
+    modifiers: js.UndefOr[scala.Nothing],
+    typeParameters: js.Array[TypeParameterDeclaration],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: js.UndefOr[scala.Nothing],
+    equalsGreaterThanToken: EqualsGreaterThanToken,
     body: ConciseBody
   ): ArrowFunction = js.native
   def apply(
@@ -41,7 +65,15 @@ object updateArrowFunction extends js.Object {
     typeParameters: js.Array[TypeParameterDeclaration],
     parameters: js.Array[ParameterDeclaration],
     `type`: TypeNode,
-    equalsGreaterThanToken: Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsGreaterThanToken],
+    body: ConciseBody
+  ): ArrowFunction = js.native
+  def apply(
+    node: ArrowFunction,
+    modifiers: js.UndefOr[scala.Nothing],
+    typeParameters: js.Array[TypeParameterDeclaration],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: TypeNode,
+    equalsGreaterThanToken: EqualsGreaterThanToken,
     body: ConciseBody
   ): ArrowFunction = js.native
   def apply(
@@ -50,7 +82,15 @@ object updateArrowFunction extends js.Object {
     typeParameters: js.UndefOr[scala.Nothing],
     parameters: js.Array[ParameterDeclaration],
     `type`: js.UndefOr[scala.Nothing],
-    equalsGreaterThanToken: Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsGreaterThanToken],
+    body: ConciseBody
+  ): ArrowFunction = js.native
+  def apply(
+    node: ArrowFunction,
+    modifiers: js.Array[Modifier],
+    typeParameters: js.UndefOr[scala.Nothing],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: js.UndefOr[scala.Nothing],
+    equalsGreaterThanToken: EqualsGreaterThanToken,
     body: ConciseBody
   ): ArrowFunction = js.native
   def apply(
@@ -59,7 +99,15 @@ object updateArrowFunction extends js.Object {
     typeParameters: js.UndefOr[scala.Nothing],
     parameters: js.Array[ParameterDeclaration],
     `type`: TypeNode,
-    equalsGreaterThanToken: Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsGreaterThanToken],
+    body: ConciseBody
+  ): ArrowFunction = js.native
+  def apply(
+    node: ArrowFunction,
+    modifiers: js.Array[Modifier],
+    typeParameters: js.UndefOr[scala.Nothing],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: TypeNode,
+    equalsGreaterThanToken: EqualsGreaterThanToken,
     body: ConciseBody
   ): ArrowFunction = js.native
   def apply(
@@ -68,7 +116,6 @@ object updateArrowFunction extends js.Object {
     typeParameters: js.Array[TypeParameterDeclaration],
     parameters: js.Array[ParameterDeclaration],
     `type`: js.UndefOr[scala.Nothing],
-    equalsGreaterThanToken: Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsGreaterThanToken],
     body: ConciseBody
   ): ArrowFunction = js.native
   def apply(
@@ -76,8 +123,27 @@ object updateArrowFunction extends js.Object {
     modifiers: js.Array[Modifier],
     typeParameters: js.Array[TypeParameterDeclaration],
     parameters: js.Array[ParameterDeclaration],
+    `type`: js.UndefOr[scala.Nothing],
+    equalsGreaterThanToken: EqualsGreaterThanToken,
+    body: ConciseBody
+  ): ArrowFunction = js.native
+  /** @deprecated Use `factory.updateArrowFunction` or the factory supplied by your transformation context instead. */
+  def apply(
+    node: ArrowFunction,
+    modifiers: js.Array[Modifier],
+    typeParameters: js.Array[TypeParameterDeclaration],
+    parameters: js.Array[ParameterDeclaration],
     `type`: TypeNode,
-    equalsGreaterThanToken: Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsGreaterThanToken],
+    body: ConciseBody
+  ): ArrowFunction = js.native
+  /** @deprecated Use `factory.updateArrowFunction` or the factory supplied by your transformation context instead. */
+  def apply(
+    node: ArrowFunction,
+    modifiers: js.Array[Modifier],
+    typeParameters: js.Array[TypeParameterDeclaration],
+    parameters: js.Array[ParameterDeclaration],
+    `type`: TypeNode,
+    equalsGreaterThanToken: EqualsGreaterThanToken,
     body: ConciseBody
   ): ArrowFunction = js.native
 }

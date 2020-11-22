@@ -1,7 +1,7 @@
 
 # Scala.js typings for socks
 
-Typings are for version 2.3.3
+Typings are for version 2.5.0
 
 ## Library description:
 Fully featured SOCKS proxy client supporting SOCKSv4, SOCKSv4a, and SOCKSv5. Includes Bind and Associate functionality.

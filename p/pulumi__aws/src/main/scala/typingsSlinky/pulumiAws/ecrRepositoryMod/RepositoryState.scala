@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.ecrRepositoryMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.inputMod.ecr.RepositoryEncryptionConfiguration
 import typingsSlinky.pulumiAws.inputMod.ecr.RepositoryImageScanningConfiguration
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -14,6 +15,11 @@ trait RepositoryState extends js.Object {
     * Full ARN of the repository.
     */
   val arn: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Encryption configuration for the repository. See below for schema.
+    */
+  val encryptionConfigurations: js.UndefOr[Input[js.Array[Input[RepositoryEncryptionConfiguration]]]] = js.native
   
   /**
     * Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
@@ -73,6 +79,15 @@ object RepositoryState {
     
     @scala.inline
     def deleteArn: Self = this.set("arn", js.undefined)
+    
+    @scala.inline
+    def setEncryptionConfigurationsVarargs(value: Input[RepositoryEncryptionConfiguration]*): Self = this.set("encryptionConfigurations", js.Array(value :_*))
+    
+    @scala.inline
+    def setEncryptionConfigurations(value: Input[js.Array[Input[RepositoryEncryptionConfiguration]]]): Self = this.set("encryptionConfigurations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEncryptionConfigurations: Self = this.set("encryptionConfigurations", js.undefined)
     
     @scala.inline
     def setImageScanningConfiguration(value: Input[RepositoryImageScanningConfiguration]): Self = this.set("imageScanningConfiguration", value.asInstanceOf[js.Any])

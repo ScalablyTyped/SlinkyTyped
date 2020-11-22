@@ -6,20 +6,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FooterProps[RecordType] extends js.Object {
+trait FooterProps extends js.Object {
   
   var children: ReactElement = js.native
 }
 object FooterProps {
   
   @scala.inline
-  def apply[RecordType](): FooterProps[RecordType] = {
+  def apply(): FooterProps = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[FooterProps[RecordType]]
+    __obj.asInstanceOf[FooterProps]
   }
   
   @scala.inline
-  implicit class FooterPropsOps[Self <: FooterProps[_], RecordType] (val x: Self with FooterProps[RecordType]) extends AnyVal {
+  implicit class FooterPropsOps[Self <: FooterProps] (val x: Self) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

@@ -9,12 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GridHighlightConfig extends js.Object {
   
   /**
-    * The cell border color (default: transparent).
+    * The named grid areas border color (Default: transparent).
+    */
+  var areaBorderColor: js.UndefOr[RGBA] = js.native
+  
+  /**
+    * The cell border color (default: transparent). Deprecated, please use rowLineColor and columnLineColor instead.
     */
   var cellBorderColor: js.UndefOr[RGBA] = js.native
   
   /**
-    * Whether the cell border is dashed (default: false).
+    * Whether the cell border is dashed (default: false). Deprecated, please us rowLineDash and columnLineDash instead.
     */
   var cellBorderDash: js.UndefOr[Boolean] = js.native
   
@@ -27,6 +32,21 @@ trait GridHighlightConfig extends js.Object {
     * The column gap hatching fill color (default: transparent).
     */
   var columnHatchColor: js.UndefOr[RGBA] = js.native
+  
+  /**
+    * The column line color (default: transparent).
+    */
+  var columnLineColor: js.UndefOr[RGBA] = js.native
+  
+  /**
+    * Whether column lines are dashed (default: false).
+    */
+  var columnLineDash: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * The grid container background color (Default: transparent).
+    */
+  var gridBackgroundColor: js.UndefOr[RGBA] = js.native
   
   /**
     * The grid container border highlight color (default: transparent).
@@ -49,9 +69,29 @@ trait GridHighlightConfig extends js.Object {
   var rowHatchColor: js.UndefOr[RGBA] = js.native
   
   /**
+    * The row line color (default: transparent).
+    */
+  var rowLineColor: js.UndefOr[RGBA] = js.native
+  
+  /**
+    * Whether row lines are dashed (default: false).
+    */
+  var rowLineDash: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Show area name labels (default: false).
+    */
+  var showAreaNames: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Whether the extension lines from grid cells to the rulers should be shown (default: false).
     */
   var showGridExtensionLines: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Show line name labels (default: false).
+    */
+  var showLineNames: js.UndefOr[Boolean] = js.native
   
   /**
     * Show Negative line number labels (default: false).
@@ -62,6 +102,11 @@ trait GridHighlightConfig extends js.Object {
     * Show Positive line number labels (default: false).
     */
   var showPositiveLineNumbers: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Show track size labels (default: false).
+    */
+  var showTrackSizes: js.UndefOr[Boolean] = js.native
 }
 object GridHighlightConfig {
   
@@ -85,6 +130,12 @@ object GridHighlightConfig {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAreaBorderColor(value: RGBA): Self = this.set("areaBorderColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAreaBorderColor: Self = this.set("areaBorderColor", js.undefined)
     
     @scala.inline
     def setCellBorderColor(value: RGBA): Self = this.set("cellBorderColor", value.asInstanceOf[js.Any])
@@ -111,6 +162,24 @@ object GridHighlightConfig {
     def deleteColumnHatchColor: Self = this.set("columnHatchColor", js.undefined)
     
     @scala.inline
+    def setColumnLineColor(value: RGBA): Self = this.set("columnLineColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnLineColor: Self = this.set("columnLineColor", js.undefined)
+    
+    @scala.inline
+    def setColumnLineDash(value: Boolean): Self = this.set("columnLineDash", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnLineDash: Self = this.set("columnLineDash", js.undefined)
+    
+    @scala.inline
+    def setGridBackgroundColor(value: RGBA): Self = this.set("gridBackgroundColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGridBackgroundColor: Self = this.set("gridBackgroundColor", js.undefined)
+    
+    @scala.inline
     def setGridBorderColor(value: RGBA): Self = this.set("gridBorderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -135,10 +204,34 @@ object GridHighlightConfig {
     def deleteRowHatchColor: Self = this.set("rowHatchColor", js.undefined)
     
     @scala.inline
+    def setRowLineColor(value: RGBA): Self = this.set("rowLineColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRowLineColor: Self = this.set("rowLineColor", js.undefined)
+    
+    @scala.inline
+    def setRowLineDash(value: Boolean): Self = this.set("rowLineDash", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRowLineDash: Self = this.set("rowLineDash", js.undefined)
+    
+    @scala.inline
+    def setShowAreaNames(value: Boolean): Self = this.set("showAreaNames", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShowAreaNames: Self = this.set("showAreaNames", js.undefined)
+    
+    @scala.inline
     def setShowGridExtensionLines(value: Boolean): Self = this.set("showGridExtensionLines", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShowGridExtensionLines: Self = this.set("showGridExtensionLines", js.undefined)
+    
+    @scala.inline
+    def setShowLineNames(value: Boolean): Self = this.set("showLineNames", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShowLineNames: Self = this.set("showLineNames", js.undefined)
     
     @scala.inline
     def setShowNegativeLineNumbers(value: Boolean): Self = this.set("showNegativeLineNumbers", value.asInstanceOf[js.Any])
@@ -151,5 +244,11 @@ object GridHighlightConfig {
     
     @scala.inline
     def deleteShowPositiveLineNumbers: Self = this.set("showPositiveLineNumbers", js.undefined)
+    
+    @scala.inline
+    def setShowTrackSizes(value: Boolean): Self = this.set("showTrackSizes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShowTrackSizes: Self = this.set("showTrackSizes", js.undefined)
   }
 }

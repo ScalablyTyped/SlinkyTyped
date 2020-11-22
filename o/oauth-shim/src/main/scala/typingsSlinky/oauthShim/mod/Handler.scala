@@ -20,7 +20,7 @@ trait Handler
   
   def interpret(
     req: typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query],
-    res: Response[_],
+    res: Response[_, Double],
     next: NextFunction
   ): js.Any = js.native
   @JSName("interpret")
@@ -28,7 +28,7 @@ trait Handler
   
   def proxy(
     req: typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query],
-    res: Response[_],
+    res: Response[_, Double],
     next: NextFunction
   ): js.Any = js.native
   @JSName("proxy")
@@ -36,7 +36,7 @@ trait Handler
   
   def redirect(
     req: typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query],
-    res: Response[_],
+    res: Response[_, Double],
     next: NextFunction
   ): js.Any = js.native
   @JSName("redirect")
@@ -44,7 +44,7 @@ trait Handler
   
   def unhandled(
     req: typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query],
-    res: Response[_],
+    res: Response[_, Double],
     next: NextFunction
   ): js.Any = js.native
   @JSName("unhandled")

@@ -20,8 +20,14 @@ import slinky.web.SyntheticWheelEvent
 import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
 import typingsSlinky.antDesignProLayout.anon.MenuDataItemisUrlboolean
 import typingsSlinky.antDesignProLayout.anon.Pathname
+import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`additions removals`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`additions text`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`inline`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`removals additions`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`removals text`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`text additions`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`text removals`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.additions
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.all
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.ascending
@@ -92,7 +98,7 @@ import typingsSlinky.rcMenu.interfaceMod.RenderIconType
 import typingsSlinky.rcMenu.interfaceMod.SelectEventHandler
 import typingsSlinky.rcMenu.interfaceMod.SelectInfo
 import typingsSlinky.rcMenu.interfaceMod.TriggerSubMenuAction
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
@@ -119,7 +125,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent std.Partial<@ant-design/pro-layout.@ant-design/pro-layout/lib/typings.RouterTypes<@ant-design/pro-layout.@ant-design/pro-layout/lib/typings.Route>> */
-/* Inlined parent std.Omit<antd.antd/lib/menu.MenuProps, 'openKeys' | 'onOpenChange'> */
+/* Inlined parent std.Omit<antd.antd/lib/menu.MenuProps, 'openKeys' | 'onOpenChange' | 'title'> */
 /* Inlined parent std.Partial<@ant-design/pro-layout.@ant-design/pro-layout/lib/defaultSettings.PureSettings> */
 @js.native
 trait BaseMenuProps extends js.Object {
@@ -200,7 +206,9 @@ trait BaseMenuProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -262,6 +270,11 @@ trait BaseMenuProps extends js.Object {
   
   var defaultChecked: js.UndefOr[Boolean] = js.native
   
+  /**
+    *默认的是否展开，会受到 breakpoint 的影响
+    */
+  var defaultCollapsed: js.UndefOr[Boolean] = js.native
+  
   var defaultMotions: js.UndefOr[PartialkeyinMenuModeother] = js.native
   
   var defaultOpenKeys: js.UndefOr[js.Array[String]] = js.native
@@ -293,6 +306,8 @@ trait BaseMenuProps extends js.Object {
   var handleOpenChange: js.UndefOr[js.Function1[/* openKeys */ js.Array[String], Unit]] = js.native
   
   var headerHeight: js.UndefOr[Double] = js.native
+  
+  var headerTheme: js.UndefOr[MenuTheme] = js.native
   
   var hidden: js.UndefOr[Boolean] = js.native
   
@@ -353,7 +368,7 @@ trait BaseMenuProps extends js.Object {
   
   var mode: js.UndefOr[MenuMode] = js.native
   
-  var motion: js.UndefOr[MotionType] = js.native
+  var motion: js.UndefOr[CSSMotionProps] = js.native
   
   var multiple: js.UndefOr[Boolean] = js.native
   
@@ -591,7 +606,7 @@ trait BaseMenuProps extends js.Object {
   
   var theme: js.UndefOr[MenuTheme] = js.native
   
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String | `false`] = js.native
   
   var translate: js.UndefOr[yes | no] = js.native
   
@@ -855,7 +870,9 @@ object BaseMenuProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1044,6 +1061,12 @@ object BaseMenuProps {
     def deleteDefaultChecked: Self = this.set("defaultChecked", js.undefined)
     
     @scala.inline
+    def setDefaultCollapsed(value: Boolean): Self = this.set("defaultCollapsed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultCollapsed: Self = this.set("defaultCollapsed", js.undefined)
+    
+    @scala.inline
     def setDefaultMotions(value: PartialkeyinMenuModeother): Self = this.set("defaultMotions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1153,6 +1176,12 @@ object BaseMenuProps {
     
     @scala.inline
     def deleteHeaderHeight: Self = this.set("headerHeight", js.undefined)
+    
+    @scala.inline
+    def setHeaderTheme(value: MenuTheme): Self = this.set("headerTheme", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderTheme: Self = this.set("headerTheme", js.undefined)
     
     @scala.inline
     def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
@@ -1327,7 +1356,7 @@ object BaseMenuProps {
     def deleteMode: Self = this.set("mode", js.undefined)
     
     @scala.inline
-    def setMotion(value: MotionType): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: CSSMotionProps): Self = this.set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMotion: Self = this.set("motion", js.undefined)
@@ -2039,7 +2068,7 @@ object BaseMenuProps {
     def deleteTheme: Self = this.set("theme", js.undefined)
     
     @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: String | `false`): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)

@@ -1,5 +1,6 @@
 package typingsSlinky.antd
 
+import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.antd.radioButtonMod.RadioButtonProps
@@ -17,7 +18,7 @@ object radioMod extends js.Object {
   
   val Button: ForwardRefExoticComponent[RadioButtonProps with RefAttributes[_]] = js.native
   
-  val Group: ReactComponentClass[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[_]]] = js.native
+  val Group: ReactComponentClass[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[HTMLDivElement]]] = js.native
   
   val default: CompoundedComponent = js.native
   
@@ -26,6 +27,6 @@ object radioMod extends js.Object {
     
     var Button: ForwardRefExoticComponent[RadioButtonProps with RefAttributes[_]] = js.native
     
-    var Group: ReactComponentClass[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[_]]] = js.native
+    var Group: ReactComponentClass[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[HTMLDivElement]]] = js.native
   }
 }

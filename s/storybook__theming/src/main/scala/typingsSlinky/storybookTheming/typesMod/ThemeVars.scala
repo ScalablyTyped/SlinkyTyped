@@ -52,6 +52,8 @@ trait ThemeVars extends js.Object {
   var textColor: js.UndefOr[String] = js.native
   
   var textInverseColor: js.UndefOr[String] = js.native
+  
+  var textMutedColor: js.UndefOr[String] = js.native
 }
 object ThemeVars {
   
@@ -204,5 +206,11 @@ object ThemeVars {
     
     @scala.inline
     def deleteTextInverseColor: Self = this.set("textInverseColor", js.undefined)
+    
+    @scala.inline
+    def setTextMutedColor(value: String): Self = this.set("textMutedColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTextMutedColor: Self = this.set("textMutedColor", js.undefined)
   }
 }

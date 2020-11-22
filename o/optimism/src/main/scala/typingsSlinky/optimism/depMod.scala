@@ -46,7 +46,7 @@ object depMod extends js.Object {
     var iterator: js.Function0[IterableIterator[AnyEntry]] = js.native
     
     /**
-      * Despite its name, returns an iterable of the values in the set,
+      * Despite its name, returns an iterable of the values in the set.
       */
     def keys(): IterableIterator[AnyEntry] = js.native
     

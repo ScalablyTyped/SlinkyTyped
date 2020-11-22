@@ -10,7 +10,7 @@ import typingsSlinky.stellarBase.stellarBaseNumbers.`-7`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`-8`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`-9`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`0`
-import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsBadFlag
+import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsBadFlags
 import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsBadSigner
 import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsCantChange
 import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsInvalidHomeDomain
@@ -18,7 +18,7 @@ import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsInvalidInflation
 import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsLowReserve
 import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsSuccess
 import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsThresholdOutOfRange
-import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsTooManySigner
+import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsTooManySigners
 import typingsSlinky.stellarBase.stellarBaseStrings.setOptionsUnknownFlag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +27,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SetOptionsResultCode extends js.Object {
   
-  val name: setOptionsSuccess | setOptionsLowReserve | setOptionsTooManySigner | setOptionsBadFlag | setOptionsInvalidInflation | setOptionsCantChange | setOptionsUnknownFlag | setOptionsThresholdOutOfRange | setOptionsBadSigner | setOptionsInvalidHomeDomain = js.native
+  val name: setOptionsSuccess | setOptionsLowReserve | setOptionsTooManySigners | setOptionsBadFlags | setOptionsInvalidInflation | setOptionsCantChange | setOptionsUnknownFlag | setOptionsThresholdOutOfRange | setOptionsBadSigner | setOptionsInvalidHomeDomain = js.native
   
   val value: `0` | `-1` | `-2` | `-3` | `-4` | `-5` | `-6` | `-7` | `-8` | `-9` = js.native
 }
@@ -35,7 +35,7 @@ object SetOptionsResultCode {
   
   @scala.inline
   def apply(
-    name: setOptionsSuccess | setOptionsLowReserve | setOptionsTooManySigner | setOptionsBadFlag | setOptionsInvalidInflation | setOptionsCantChange | setOptionsUnknownFlag | setOptionsThresholdOutOfRange | setOptionsBadSigner | setOptionsInvalidHomeDomain,
+    name: setOptionsSuccess | setOptionsLowReserve | setOptionsTooManySigners | setOptionsBadFlags | setOptionsInvalidInflation | setOptionsCantChange | setOptionsUnknownFlag | setOptionsThresholdOutOfRange | setOptionsBadSigner | setOptionsInvalidHomeDomain,
     value: `0` | `-1` | `-2` | `-3` | `-4` | `-5` | `-6` | `-7` | `-8` | `-9`
   ): SetOptionsResultCode = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
@@ -59,7 +59,7 @@ object SetOptionsResultCode {
     
     @scala.inline
     def setName(
-      value: setOptionsSuccess | setOptionsLowReserve | setOptionsTooManySigner | setOptionsBadFlag | setOptionsInvalidInflation | setOptionsCantChange | setOptionsUnknownFlag | setOptionsThresholdOutOfRange | setOptionsBadSigner | setOptionsInvalidHomeDomain
+      value: setOptionsSuccess | setOptionsLowReserve | setOptionsTooManySigners | setOptionsBadFlags | setOptionsInvalidInflation | setOptionsCantChange | setOptionsUnknownFlag | setOptionsThresholdOutOfRange | setOptionsBadSigner | setOptionsInvalidHomeDomain
     ): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline

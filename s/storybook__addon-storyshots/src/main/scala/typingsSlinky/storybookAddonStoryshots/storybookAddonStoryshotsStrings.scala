@@ -8,12 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object storybookAddonStoryshotsStrings {
   
   @scala.inline
-  def DIR: DIR = "DIR".asInstanceOf[DIR]
-  
-  @scala.inline
-  def FILE: FILE = "FILE".asInstanceOf[FILE]
-  
-  @scala.inline
   def angular: angular = "angular".asInstanceOf[angular]
   
   @scala.inline
@@ -21,6 +15,9 @@ object storybookAddonStoryshotsStrings {
   
   @scala.inline
   def preact: preact = "preact".asInstanceOf[preact]
+  
+  @scala.inline
+  def rax: rax = "rax".asInstanceOf[rax]
   
   @scala.inline
   def react: react = "react".asInstanceOf[react]
@@ -37,11 +34,8 @@ object storybookAddonStoryshotsStrings {
   @scala.inline
   def vue: vue = "vue".asInstanceOf[vue]
   
-  @js.native
-  sealed trait DIR extends js.Object
-  
-  @js.native
-  sealed trait FILE extends js.Object
+  @scala.inline
+  def `web-components`: `web-components` = "web-components".asInstanceOf[`web-components`]
   
   @js.native
   sealed trait angular extends SupportedFramework
@@ -51,6 +45,9 @@ object storybookAddonStoryshotsStrings {
   
   @js.native
   sealed trait preact extends SupportedFramework
+  
+  @js.native
+  sealed trait rax extends SupportedFramework
   
   @js.native
   sealed trait react extends SupportedFramework
@@ -66,4 +63,7 @@ object storybookAddonStoryshotsStrings {
   
   @js.native
   sealed trait vue extends SupportedFramework
+  
+  @js.native
+  sealed trait `web-components` extends SupportedFramework
 }

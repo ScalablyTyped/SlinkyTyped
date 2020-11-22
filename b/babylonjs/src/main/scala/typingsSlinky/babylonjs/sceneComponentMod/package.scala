@@ -6,12 +6,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object sceneComponentMod {
   
-  type ActiveMeshStageAction = js.Function2[
-    /* sourceMesh */ typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh, 
-    /* mesh */ typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh, 
-    scala.Unit
-  ]
-  
   type CameraStageAction = js.Function1[/* camera */ typingsSlinky.babylonjs.cameraMod.Camera, scala.Unit]
   
   type CameraStageFrameBufferAction = js.Function1[/* camera */ typingsSlinky.babylonjs.cameraMod.Camera, scala.Boolean]
@@ -45,6 +39,8 @@ package object sceneComponentMod {
     typingsSlinky.babylonjs.typesMod.Nullable[typingsSlinky.babylonjs.pickingInfoMod.PickingInfo]
   ]
   
+  type PreActiveMeshStageAction = js.Function1[/* mesh */ typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh, scala.Unit]
+  
   type RenderTargetStageAction = js.Function1[
     /* renderTarget */ typingsSlinky.babylonjs.renderTargetTextureMod.RenderTargetTexture, 
     scala.Unit
@@ -57,10 +53,11 @@ package object sceneComponentMod {
   
   type RenderingGroupStageAction = js.Function1[/* renderingGroupId */ scala.Double, scala.Unit]
   
-  type RenderingMeshStageAction = js.Function3[
+  type RenderingMeshStageAction = js.Function4[
     /* mesh */ typingsSlinky.babylonjs.meshMod.Mesh, 
     /* subMesh */ typingsSlinky.babylonjs.subMeshMod.SubMesh, 
     /* batch */ typingsSlinky.babylonjs.meshMod.InstancesBatch, 
+    /* effect */ typingsSlinky.babylonjs.typesMod.Nullable[typingsSlinky.babylonjs.effectMod.Effect], 
     scala.Unit
   ]
   

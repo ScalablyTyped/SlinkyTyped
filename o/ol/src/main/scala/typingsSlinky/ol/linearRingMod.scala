@@ -14,6 +14,9 @@ object linearRingMod extends js.Object {
   trait LinearRing
     extends typingsSlinky.ol.simpleGeometryMod.default {
     
+    /**
+      * Return the area of the linear ring on projected plane.
+      */
     def getArea(): Double = js.native
   }
   

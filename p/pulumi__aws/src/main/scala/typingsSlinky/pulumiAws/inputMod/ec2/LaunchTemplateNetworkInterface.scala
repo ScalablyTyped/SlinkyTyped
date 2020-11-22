@@ -16,7 +16,7 @@ trait LaunchTemplateNetworkInterface extends js.Object {
   /**
     * Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
     */
-  var deleteOnTermination: js.UndefOr[Input[Boolean]] = js.native
+  var deleteOnTermination: js.UndefOr[Input[String]] = js.native
   
   /**
     * Description of the network interface.
@@ -98,7 +98,7 @@ object LaunchTemplateNetworkInterface {
     def deleteAssociatePublicIpAddress: Self = this.set("associatePublicIpAddress", js.undefined)
     
     @scala.inline
-    def setDeleteOnTermination(value: Input[Boolean]): Self = this.set("deleteOnTermination", value.asInstanceOf[js.Any])
+    def setDeleteOnTermination(value: Input[String]): Self = this.set("deleteOnTermination", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeleteOnTermination: Self = this.set("deleteOnTermination", js.undefined)

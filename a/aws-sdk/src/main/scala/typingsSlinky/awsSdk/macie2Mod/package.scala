@@ -15,6 +15,8 @@ package object macie2Mod {
   
   type BucketCriteria = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.macie2Mod.BucketCriteriaAdditionalProperties]
   
+  type Cells = js.Array[typingsSlinky.awsSdk.macie2Mod.Cell]
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.macie2Mod.ClientApiVersions
   
   type Criterion = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.macie2Mod.CriterionAdditionalProperties]
@@ -40,6 +42,7 @@ package object macie2Mod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PUBLIC
     - typingsSlinky.awsSdk.awsSdkStrings.NOT_PUBLIC
+    - typingsSlinky.awsSdk.awsSdkStrings.UNKNOWN
     - java.lang.String
   */
   type EffectivePermission = typingsSlinky.awsSdk.macie2Mod._EffectivePermission | java.lang.String
@@ -116,6 +119,22 @@ package object macie2Mod {
   type GroupBy = typingsSlinky.awsSdk.macie2Mod._GroupBy | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.TRUE
+    - typingsSlinky.awsSdk.awsSdkStrings.FALSE
+    - typingsSlinky.awsSdk.awsSdkStrings.UNKNOWN
+    - java.lang.String
+  */
+  type IsDefinedInJob = typingsSlinky.awsSdk.macie2Mod._IsDefinedInJob | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.TRUE
+    - typingsSlinky.awsSdk.awsSdkStrings.FALSE
+    - typingsSlinky.awsSdk.awsSdkStrings.UNKNOWN
+    - java.lang.String
+  */
+  type IsMonitoredByJob = typingsSlinky.awsSdk.macie2Mod._IsMonitoredByJob | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EQ
     - typingsSlinky.awsSdk.awsSdkStrings.GT
     - typingsSlinky.awsSdk.awsSdkStrings.GTE
@@ -133,6 +152,7 @@ package object macie2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.CANCELLED
     - typingsSlinky.awsSdk.awsSdkStrings.COMPLETE
     - typingsSlinky.awsSdk.awsSdkStrings.IDLE
+    - typingsSlinky.awsSdk.awsSdkStrings.USER_PAUSED
     - java.lang.String
   */
   type JobStatus = typingsSlinky.awsSdk.macie2Mod._JobStatus | java.lang.String
@@ -145,6 +165,13 @@ package object macie2Mod {
   type JobType = typingsSlinky.awsSdk.macie2Mod._JobType | java.lang.String
   
   type KeyValuePairList = js.Array[typingsSlinky.awsSdk.macie2Mod.KeyValuePair]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.ERROR
+    - java.lang.String
+  */
+  type LastRunErrorStatusCode = typingsSlinky.awsSdk.macie2Mod._LastRunErrorStatusCode | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.jobType
@@ -179,6 +206,12 @@ package object macie2Mod {
     - java.lang.String
   */
   type OrderBy = typingsSlinky.awsSdk.macie2Mod._OrderBy | java.lang.String
+  
+  type Pages = js.Array[typingsSlinky.awsSdk.macie2Mod.Page]
+  
+  type Ranges = js.Array[typingsSlinky.awsSdk.macie2Mod.Range]
+  
+  type Records = js.Array[typingsSlinky.awsSdk.macie2Mod.Record]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Enabled_
@@ -228,6 +261,7 @@ package object macie2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.EXTERNAL
     - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL
     - typingsSlinky.awsSdk.awsSdkStrings.NOT_SHARED
+    - typingsSlinky.awsSdk.awsSdkStrings.UNKNOWN
     - java.lang.String
   */
   type SharedAccess = typingsSlinky.awsSdk.macie2Mod._SharedAccess | java.lang.String

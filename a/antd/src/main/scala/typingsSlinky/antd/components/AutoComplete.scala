@@ -10,8 +10,13 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -43,15 +48,14 @@ import typingsSlinky.antd.antdStrings.popup
 import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.autoCompleteMod.AutoCompleteProps
 import typingsSlinky.antd.autoCompleteMod.DataSourceItemType
-import typingsSlinky.antd.selectMod.SelectValue
-import typingsSlinky.antd.selectMod.default
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
+import typingsSlinky.antd.selectMod.RefSelectProps
 import typingsSlinky.rcSelect.anon.Mark
 import typingsSlinky.rcSelect.generatorMod.CustomTagProps
 import typingsSlinky.rcSelect.generatorMod.FilterFunc
@@ -78,7 +82,7 @@ object AutoComplete {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[SelectValue]] {
+       with StBuildingComponent[tag.type, RefSelectProps] {
     
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
@@ -192,7 +196,9 @@ object AutoComplete {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -485,7 +491,7 @@ object AutoComplete {
     def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: AutoCompleteProps with RefAttributes[default[SelectValue]]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: AutoCompleteProps with RefAttributes[RefSelectProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: AutoComplete.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   

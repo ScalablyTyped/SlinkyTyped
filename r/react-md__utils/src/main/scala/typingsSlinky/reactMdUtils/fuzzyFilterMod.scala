@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object fuzzyFilterMod extends js.Object {
   
-  def default[T](query: String, searchable: js.Array[T]): js.Array[T] = js.native
-  def default[T](query: String, searchable: js.Array[T], options: SearchOptions[T]): js.Array[T] = js.native
+  def fuzzyFilter[T](query: String, searchable: js.Array[T]): js.Array[T] = js.native
+  def fuzzyFilter[T](query: String, searchable: js.Array[T], options: SearchOptions[T]): js.Array[T] = js.native
 }

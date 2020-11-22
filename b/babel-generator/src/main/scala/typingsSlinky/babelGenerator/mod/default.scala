@@ -1,7 +1,7 @@
 package typingsSlinky.babelGenerator.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.babelTypes.mod.Node
+import typingsSlinky.babelTypes.ts36Mod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

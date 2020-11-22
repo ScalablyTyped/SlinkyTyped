@@ -34,6 +34,8 @@ trait ChartOptionsChartFontOpti extends js.Object {
   
   var cutoutPercentage: js.UndefOr[Double] = js.native
   
+  var defaultColor: js.UndefOr[ChartColor] = js.native
+  
   var defaultFontColor: js.UndefOr[ChartColor] = js.native
   
   var defaultFontFamily: js.UndefOr[String] = js.native
@@ -148,6 +150,21 @@ object ChartOptionsChartFontOpti {
     
     @scala.inline
     def deleteCutoutPercentage: Self = this.set("cutoutPercentage", js.undefined)
+    
+    @scala.inline
+    def setDefaultColorVarargs(value: String*): Self = this.set("defaultColor", js.Array(value :_*))
+    
+    @scala.inline
+    def setDefaultColorCanvasPattern(value: CanvasPattern): Self = this.set("defaultColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDefaultColorCanvasGradient(value: CanvasGradient): Self = this.set("defaultColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDefaultColor(value: ChartColor): Self = this.set("defaultColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultColor: Self = this.set("defaultColor", js.undefined)
     
     @scala.inline
     def setDefaultFontColorVarargs(value: String*): Self = this.set("defaultFontColor", js.Array(value :_*))

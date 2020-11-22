@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait OverloadedSetCommand[T, U, R] extends js.Object {
   
+  def apply(args: Array[String | T]): R = js.native
+  def apply(args: Array[String | T], cb: Callback[U]): R = js.native
   def apply(key: String, arg1: T): R = js.native
   def apply(key: String, arg1: T, arg2: T): R = js.native
   def apply(key: String, arg1: T, arg2: T, arg3: T): R = js.native

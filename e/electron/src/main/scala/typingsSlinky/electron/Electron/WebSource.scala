@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WebSource extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/web-source
+  // Docs: https://electronjs.org/docs/api/structures/web-source
   var code: String = js.native
   
   /**

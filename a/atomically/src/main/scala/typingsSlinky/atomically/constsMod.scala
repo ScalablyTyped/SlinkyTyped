@@ -24,5 +24,7 @@ object constsMod extends js.Object {
   
   val LIMIT_BASENAME_LENGTH: /* 128 */ Double = js.native
   
+  val LIMIT_FILES_DESCRIPTORS: /* 10000 */ Double = js.native
+  
   def NOOP(): Unit = js.native
 }

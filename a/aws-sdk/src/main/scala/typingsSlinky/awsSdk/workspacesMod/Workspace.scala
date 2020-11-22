@@ -13,7 +13,7 @@ trait Workspace extends js.Object {
   var BundleId: js.UndefOr[typingsSlinky.awsSdk.workspacesMod.BundleId] = js.native
   
   /**
-    * The name of the WorkSpace, as seen by the operating system.
+    * The name of the WorkSpace, as seen by the operating system. The format of this name varies. For more information, see  Launch a WorkSpace. 
     */
   var ComputerName: js.UndefOr[typingsSlinky.awsSdk.workspacesMod.ComputerName] = js.native
   
@@ -48,7 +48,7 @@ trait Workspace extends js.Object {
   var RootVolumeEncryptionEnabled: js.UndefOr[BooleanObject] = js.native
   
   /**
-    * The operational state of the WorkSpace.
+    * The operational state of the WorkSpace.  After a WorkSpace is terminated, the TERMINATED state is returned only briefly before the WorkSpace directory metadata is cleaned up, so this state is rarely returned. To confirm that a WorkSpace is terminated, check for the WorkSpace ID by using  DescribeWorkSpaces. If the WorkSpace ID isn't returned, then the WorkSpace has been successfully terminated. 
     */
   var State: js.UndefOr[WorkspaceState] = js.native
   

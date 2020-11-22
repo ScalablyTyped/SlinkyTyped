@@ -33,7 +33,6 @@ trait Options extends js.Object {
   
   var https: js.UndefOr[ServerOptions] = js.native
   
-  // tslint:disable-next-line prefer-method-signature
   var logFn: js.UndefOr[
     js.Function3[/* req */ IncomingMessage, /* res */ ServerResponse, /* err */ js.Error, Unit]
   ] = js.native

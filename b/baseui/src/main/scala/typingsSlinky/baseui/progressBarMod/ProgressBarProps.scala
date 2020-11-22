@@ -1,6 +1,9 @@
 package typingsSlinky.baseui.progressBarMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.baseui.baseuiStrings.large_
+import typingsSlinky.baseui.baseuiStrings.medium_
+import typingsSlinky.baseui.baseuiStrings.small_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,6 +20,10 @@ trait ProgressBarProps extends js.Object {
   var overrides: js.UndefOr[ProgressBarOverrides] = js.native
   
   var showLabel: js.UndefOr[Boolean] = js.native
+  
+  var size: js.UndefOr[small_ | medium_ | large_] = js.native
+  
+  var steps: js.UndefOr[Double] = js.native
   
   var successValue: js.UndefOr[Double] = js.native
   
@@ -77,6 +84,18 @@ object ProgressBarProps {
     
     @scala.inline
     def deleteShowLabel: Self = this.set("showLabel", js.undefined)
+    
+    @scala.inline
+    def setSize(value: small_ | medium_ | large_): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    
+    @scala.inline
+    def setSteps(value: Double): Self = this.set("steps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSteps: Self = this.set("steps", js.undefined)
     
     @scala.inline
     def setSuccessValue(value: Double): Self = this.set("successValue", value.asInstanceOf[js.Any])

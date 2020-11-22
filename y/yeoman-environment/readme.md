@@ -1,7 +1,7 @@
 
 # Scala.js typings for yeoman-environment
 
-Typings are for version 2.3
+Typings are for version 2.10
 
 ## Library description:
 Handles the lifecyle and bootstrapping of generators in a specific environment

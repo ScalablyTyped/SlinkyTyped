@@ -11,15 +11,15 @@ trait EOFToken extends Token {
   
   var done: `true` = js.native
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: EOF = js.native
 }
 object EOFToken {
   
   @scala.inline
-  def apply(done: `true`, name: EOF): EOFToken = {
-    val __obj = js.Dynamic.literal(done = done.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(done: `true`, location: LocationRange, name: EOF): EOFToken = {
+    val __obj = js.Dynamic.literal(done = done.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[EOFToken]
   }
   
@@ -42,12 +42,9 @@ object EOFToken {
     def setDone(value: `true`): Self = this.set("done", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: EOF): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
+    def setName(value: EOF): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

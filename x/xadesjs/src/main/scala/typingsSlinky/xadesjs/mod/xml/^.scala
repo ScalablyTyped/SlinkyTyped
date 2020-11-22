@@ -40,6 +40,10 @@ object ^ extends js.Object {
   
   var CertIDList: Instantiable0[typingsSlinky.xadesjs.xmlMod.CertIDList] = js.native
   
+  var CertIDListV2: Instantiable0[typingsSlinky.xadesjs.xmlMod.CertIDListV2] = js.native
+  
+  var CertV2: Instantiable0[typingsSlinky.xadesjs.xmlMod.CertV2] = js.native
+  
   var CertificateValues: Instantiable0[typingsSlinky.xadesjs.xmlMod.CertificateValues] = js.native
   
   var CertifiedRole: Instantiable0[typingsSlinky.xadesjs.xmlMod.CertifiedRole] = js.native
@@ -181,6 +185,8 @@ object ^ extends js.Object {
   var SignerRole: Instantiable0[typingsSlinky.xadesjs.xmlMod.SignerRole] = js.native
   
   var SigningCertificate: Instantiable0[typingsSlinky.xadesjs.xmlMod.SigningCertificate] = js.native
+  
+  var SigningCertificateV2: Instantiable0[typingsSlinky.xadesjs.xmlMod.SigningCertificateV2] = js.native
   
   var UnsignedDataObjectProperties: Instantiable0[typingsSlinky.xadesjs.xmlMod.UnsignedDataObjectProperties] = js.native
   

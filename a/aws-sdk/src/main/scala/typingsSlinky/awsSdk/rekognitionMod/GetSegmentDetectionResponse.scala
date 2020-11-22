@@ -23,7 +23,7 @@ trait GetSegmentDetectionResponse extends js.Object {
   var NextToken: js.UndefOr[PaginationToken] = js.native
   
   /**
-    * An array of segments detected in a video.
+    * An array of segments detected in a video. The array is sorted by the segment types (TECHNICAL_CUE or SHOT) specified in the SegmentTypes input parameter of StartSegmentDetection. Within each segment type the array is sorted by timestamp values.
     */
   var Segments: js.UndefOr[SegmentDetections] = js.native
   

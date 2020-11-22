@@ -43,7 +43,7 @@ trait ListObjectVersionsOutput extends js.Object {
   var MaxKeys: js.UndefOr[typingsSlinky.awsSdk.s3Mod.MaxKeys] = js.native
   
   /**
-    * Bucket name.
+    * The bucket name.
     */
   var Name: js.UndefOr[BucketName] = js.native
   

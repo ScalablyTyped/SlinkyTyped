@@ -13,12 +13,12 @@ trait GetQueryResultsResponse extends js.Object {
   var results: js.UndefOr[QueryResults] = js.native
   
   /**
-    * Includes the number of log events scanned by the query, the number of log events that matched the query criteria, and the total number of bytes in the log events that were scanned.
+    * Includes the number of log events scanned by the query, the number of log events that matched the query criteria, and the total number of bytes in the log events that were scanned. These values reflect the full raw results of the query.
     */
   var statistics: js.UndefOr[QueryStatistics] = js.native
   
   /**
-    * The status of the most recent running of the query. Possible values are Cancelled, Complete, Failed, Running, Scheduled, Timeout, and Unknown. Queries time out after 15 minutes of execution. To avoid having your queries time out, reduce the time range being searched, or partition your query into a number of queries.
+    * The status of the most recent running of the query. Possible values are Cancelled, Complete, Failed, Running, Scheduled, Timeout, and Unknown. Queries time out after 15 minutes of execution. To avoid having your queries time out, reduce the time range being searched or partition your query into a number of queries.
     */
   var status: js.UndefOr[QueryStatus] = js.native
 }

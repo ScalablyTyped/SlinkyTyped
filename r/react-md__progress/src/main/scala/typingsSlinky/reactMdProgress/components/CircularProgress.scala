@@ -23,8 +23,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdProgress.circularProgressMod.CircularProgressProps
+import typingsSlinky.reactMdProgress.reactMdProgressStrings.`additions removals`
 import typingsSlinky.reactMdProgress.reactMdProgressStrings.`additions text`
 import typingsSlinky.reactMdProgress.reactMdProgressStrings.`inline`
+import typingsSlinky.reactMdProgress.reactMdProgressStrings.`removals additions`
+import typingsSlinky.reactMdProgress.reactMdProgressStrings.`removals text`
+import typingsSlinky.reactMdProgress.reactMdProgressStrings.`text additions`
+import typingsSlinky.reactMdProgress.reactMdProgressStrings.`text removals`
 import typingsSlinky.reactMdProgress.reactMdProgressStrings.additions
 import typingsSlinky.reactMdProgress.reactMdProgressStrings.all
 import typingsSlinky.reactMdProgress.reactMdProgressStrings.ascending
@@ -198,7 +203,9 @@ object CircularProgress {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -598,6 +605,9 @@ object CircularProgress {
     
     @scala.inline
     def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def small(value: Boolean): this.type = set("small", value.asInstanceOf[js.Any])
     
     @scala.inline
     def spellCheck(value: Booleanish): this.type = set("spellCheck", value.asInstanceOf[js.Any])

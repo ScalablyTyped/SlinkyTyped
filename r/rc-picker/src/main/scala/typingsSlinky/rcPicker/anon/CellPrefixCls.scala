@@ -1,6 +1,5 @@
 package typingsSlinky.rcPicker.anon
 
-import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.NullableDateType
 import typingsSlinky.rcPicker.interfaceMod.RangeValue
 import scala.scalajs.js
@@ -12,7 +11,7 @@ trait CellPrefixCls[DateType] extends js.Object {
   
   var cellPrefixCls: String = js.native
   
-  var generateConfig: GenerateConfig[DateType] = js.native
+  var generateConfig: typingsSlinky.rcPicker.generateMod.GenerateConfig[DateType] = js.native
   
   var hoverRangedValue: js.UndefOr[RangeValue[DateType]] = js.native
   
@@ -33,7 +32,7 @@ object CellPrefixCls {
   @scala.inline
   def apply[DateType](
     cellPrefixCls: String,
-    generateConfig: GenerateConfig[DateType],
+    generateConfig: typingsSlinky.rcPicker.generateMod.GenerateConfig[DateType],
     isInView: DateType => Boolean,
     isSameCell: (NullableDateType[DateType], NullableDateType[DateType]) => Boolean,
     offsetCell: (DateType, Double) => DateType
@@ -61,7 +60,7 @@ object CellPrefixCls {
     def setCellPrefixCls(value: String): Self = this.set("cellPrefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGenerateConfig(value: GenerateConfig[DateType]): Self = this.set("generateConfig", value.asInstanceOf[js.Any])
+    def setGenerateConfig(value: typingsSlinky.rcPicker.generateMod.GenerateConfig[DateType]): Self = this.set("generateConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIsInView(value: DateType => Boolean): Self = this.set("isInView", js.Any.fromFunction1(value))

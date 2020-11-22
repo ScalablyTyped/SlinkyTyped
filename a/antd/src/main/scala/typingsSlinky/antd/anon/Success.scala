@@ -1,6 +1,5 @@
 package typingsSlinky.antd.anon
 
-import typingsSlinky.react.mod.ForwardRefExoticComponent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,24 +7,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Success extends js.Object {
   
-  var error: ForwardRefExoticComponent[PickAntdIconPropschildren] = js.native
+  var success: js.UndefOr[Percent] = js.native
   
-  var info: ForwardRefExoticComponent[PickAntdIconPropschildren] = js.native
-  
-  var success: ForwardRefExoticComponent[PickAntdIconPropschildren] = js.native
-  
-  var warning: ForwardRefExoticComponent[PickAntdIconPropschildren] = js.native
+  var successPercent: js.UndefOr[Double] = js.native
 }
 object Success {
   
   @scala.inline
-  def apply(
-    error: ForwardRefExoticComponent[PickAntdIconPropschildren],
-    info: ForwardRefExoticComponent[PickAntdIconPropschildren],
-    success: ForwardRefExoticComponent[PickAntdIconPropschildren],
-    warning: ForwardRefExoticComponent[PickAntdIconPropschildren]
-  ): Success = {
-    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any], warning = warning.asInstanceOf[js.Any])
+  def apply(): Success = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Success]
   }
   
@@ -45,15 +35,15 @@ object Success {
     }
     
     @scala.inline
-    def setError(value: ForwardRefExoticComponent[PickAntdIconPropschildren]): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setSuccess(value: Percent): Self = this.set("success", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInfo(value: ForwardRefExoticComponent[PickAntdIconPropschildren]): Self = this.set("info", value.asInstanceOf[js.Any])
+    def deleteSuccess: Self = this.set("success", js.undefined)
     
     @scala.inline
-    def setSuccess(value: ForwardRefExoticComponent[PickAntdIconPropschildren]): Self = this.set("success", value.asInstanceOf[js.Any])
+    def setSuccessPercent(value: Double): Self = this.set("successPercent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setWarning(value: ForwardRefExoticComponent[PickAntdIconPropschildren]): Self = this.set("warning", value.asInstanceOf[js.Any])
+    def deleteSuccessPercent: Self = this.set("successPercent", js.undefined)
   }
 }

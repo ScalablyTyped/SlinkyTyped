@@ -64,6 +64,9 @@ object ReactNativeInputSpinner {
     def buttonPressStyleNull: this.type = set("buttonPressStyle", null)
     
     @scala.inline
+    def buttonPressTextColor(value: String): this.type = set("buttonPressTextColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def buttonRightDisabled(value: Boolean): this.type = set("buttonRightDisabled", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -113,6 +116,9 @@ object ReactNativeInputSpinner {
     
     @scala.inline
     def height(value: String | Double): this.type = set("height", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def initialValue(value: Double): this.type = set("initialValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inputStyle(value: StyleProp[ViewStyle]): this.type = set("inputStyle", value.asInstanceOf[js.Any])

@@ -17,22 +17,28 @@ object firebaseAnalyticsStrings {
   def config: config = "config".asInstanceOf[config]
   
   @scala.inline
-  def `cookies-not-enabled`: `cookies-not-enabled` = "cookies-not-enabled".asInstanceOf[`cookies-not-enabled`]
+  def `config-fetch-failed`: `config-fetch-failed` = "config-fetch-failed".asInstanceOf[`config-fetch-failed`]
   
   @scala.inline
   def event: event = "event".asInstanceOf[event]
   
   @scala.inline
-  def `indexedDB-unsupported`: `indexedDB-unsupported` = "indexedDB-unsupported".asInstanceOf[`indexedDB-unsupported`]
+  def `fetch-throttle`: `fetch-throttle` = "fetch-throttle".asInstanceOf[`fetch-throttle`]
+  
+  @scala.inline
+  def `indexeddb-unavailable`: `indexeddb-unavailable` = "indexeddb-unavailable".asInstanceOf[`indexeddb-unavailable`]
   
   @scala.inline
   def `interop-component-reg-failed`: `interop-component-reg-failed` = "interop-component-reg-failed".asInstanceOf[`interop-component-reg-failed`]
   
   @scala.inline
-  def `invalid-indexedDB-context`: `invalid-indexedDB-context` = "invalid-indexedDB-context".asInstanceOf[`invalid-indexedDB-context`]
+  def `invalid-analytics-context`: `invalid-analytics-context` = "invalid-analytics-context".asInstanceOf[`invalid-analytics-context`]
   
   @scala.inline
-  def `no-ga-id`: `no-ga-id` = "no-ga-id".asInstanceOf[`no-ga-id`]
+  def `no-api-key`: `no-api-key` = "no-api-key".asInstanceOf[`no-api-key`]
+  
+  @scala.inline
+  def `no-app-id`: `no-app-id` = "no-app-id".asInstanceOf[`no-app-id`]
   
   @scala.inline
   def set: set = "set".asInstanceOf[set]
@@ -47,22 +53,28 @@ object firebaseAnalyticsStrings {
   sealed trait config extends js.Object
   
   @js.native
-  sealed trait `cookies-not-enabled` extends AnalyticsError
+  sealed trait `config-fetch-failed` extends AnalyticsError
   
   @js.native
   sealed trait event extends js.Object
   
   @js.native
-  sealed trait `indexedDB-unsupported` extends AnalyticsError
+  sealed trait `fetch-throttle` extends AnalyticsError
+  
+  @js.native
+  sealed trait `indexeddb-unavailable` extends AnalyticsError
   
   @js.native
   sealed trait `interop-component-reg-failed` extends AnalyticsError
   
   @js.native
-  sealed trait `invalid-indexedDB-context` extends AnalyticsError
+  sealed trait `invalid-analytics-context` extends AnalyticsError
   
   @js.native
-  sealed trait `no-ga-id` extends AnalyticsError
+  sealed trait `no-api-key` extends AnalyticsError
+  
+  @js.native
+  sealed trait `no-app-id` extends AnalyticsError
   
   @js.native
   sealed trait set extends js.Object

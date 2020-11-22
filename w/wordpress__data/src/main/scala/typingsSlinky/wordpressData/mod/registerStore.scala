@@ -1,5 +1,6 @@
 package typingsSlinky.wordpressData.mod
 
+import typingsSlinky.redux.mod.AnyAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object registerStore extends js.Object {
   
-  def apply[T](key: String, config: StoreConfig[T]): Unit = js.native
+  def apply[T](key: String, config: StoreConfig[T]): Store[T, AnyAction] = js.native
 }

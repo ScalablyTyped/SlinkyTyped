@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GenerateChangeSetResponse extends js.Object {
   
   /**
-    * Location of the Amazon S3 object.
+    * The location of the Amazon S3 object.
     */
   var s3Location: js.UndefOr[S3Location] = js.native
 }

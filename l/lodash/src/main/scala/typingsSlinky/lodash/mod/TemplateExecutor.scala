@@ -7,8 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TemplateExecutor extends js.Object {
   
-  def apply(): String = js.native
-  def apply(data: js.Object): String = js.native
+  def apply(): java.lang.String = js.native
+  def apply(data: js.Object): java.lang.String = js.native
   
-  var source: String = js.native
+  /**
+    * @see _.source
+    */
+  var source: java.lang.String = js.native
 }

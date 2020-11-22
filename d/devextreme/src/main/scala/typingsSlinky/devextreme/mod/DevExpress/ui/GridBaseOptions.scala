@@ -5,8 +5,11 @@ import typingsSlinky.devextreme.anon.AllowedPageSizes
 import typingsSlinky.devextreme.anon.ApplyFilter
 import typingsSlinky.devextreme.anon.AscendingText
 import typingsSlinky.devextreme.anon.BrokenRules
+import typingsSlinky.devextreme.anon.CancelChanges
 import typingsSlinky.devextreme.anon.CancelComponent
+import typingsSlinky.devextreme.anon.ChangesComponent
 import typingsSlinky.devextreme.anon.ComponentData
+import typingsSlinky.devextreme.anon.ComponentElement
 import typingsSlinky.devextreme.anon.CurrentDeselectedRowKeys
 import typingsSlinky.devextreme.anon.CustomLoad
 import typingsSlinky.devextreme.anon.CustomizeText
@@ -37,205 +40,359 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GridBaseOptions[T] extends WidgetOptions[T] {
   
-  /** @name GridBase.Options.allowColumnReordering */
+  /**
+    * [descr:GridBase.Options.allowColumnReordering]
+    */
   var allowColumnReordering: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.allowColumnResizing */
+  /**
+    * [descr:GridBase.Options.allowColumnResizing]
+    */
   var allowColumnResizing: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.autoNavigateToFocusedRow */
+  /**
+    * [descr:GridBase.Options.autoNavigateToFocusedRow]
+    */
   var autoNavigateToFocusedRow: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.cacheEnabled */
+  /**
+    * [descr:GridBase.Options.cacheEnabled]
+    */
   var cacheEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.cellHintEnabled */
+  /**
+    * [descr:GridBase.Options.cellHintEnabled]
+    */
   var cellHintEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.columnAutoWidth */
+  /**
+    * [descr:GridBase.Options.columnAutoWidth]
+    */
   var columnAutoWidth: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.columnChooser */
+  /**
+    * [descr:GridBase.Options.columnChooser]
+    */
   var columnChooser: js.UndefOr[EmptyPanelText] = js.native
   
-  /** @name GridBase.Options.columnFixing */
+  /**
+    * [descr:GridBase.Options.columnFixing]
+    */
   var columnFixing: js.UndefOr[Enabled] = js.native
   
-  /** @name GridBase.Options.columnHidingEnabled */
+  /**
+    * [descr:GridBase.Options.columnHidingEnabled]
+    */
   var columnHidingEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.columnMinWidth */
+  /**
+    * [descr:GridBase.Options.columnMinWidth]
+    */
   var columnMinWidth: js.UndefOr[Double] = js.native
   
-  /** @name GridBase.Options.columnResizingMode */
+  /**
+    * [descr:GridBase.Options.columnResizingMode]
+    */
   var columnResizingMode: js.UndefOr[nextColumn | widget] = js.native
   
-  /** @name GridBase.Options.columnWidth */
+  /**
+    * [descr:GridBase.Options.columnWidth]
+    */
   var columnWidth: js.UndefOr[Double] = js.native
   
-  /** @name GridBase.Options.columns */
+  /**
+    * [descr:GridBase.Options.columns]
+    */
   var columns: js.UndefOr[js.Array[GridBaseColumn | String]] = js.native
   
-  /** @name GridBase.Options.dataSource */
+  /**
+    * [descr:GridBase.Options.dataSource]
+    */
   var dataSource: js.UndefOr[String | js.Array[_] | DataSource | DataSourceOptions] = js.native
   
-  /** @name GridBase.Options.dateSerializationFormat */
+  /**
+    * [descr:GridBase.Options.dateSerializationFormat]
+    */
   var dateSerializationFormat: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.editing */
+  /**
+    * [descr:GridBase.Options.editing]
+    */
   var editing: js.UndefOr[GridBaseEditing] = js.native
   
-  /** @name GridBase.Options.errorRowEnabled */
+  /**
+    * [descr:GridBase.Options.errorRowEnabled]
+    */
   var errorRowEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.filterBuilder */
+  /**
+    * [descr:GridBase.Options.filterBuilder]
+    */
   var filterBuilder: js.UndefOr[dxFilterBuilderOptions] = js.native
   
-  /** @name GridBase.Options.filterBuilderPopup */
+  /**
+    * [descr:GridBase.Options.filterBuilderPopup]
+    */
   var filterBuilderPopup: js.UndefOr[dxPopupOptions[dxPopup]] = js.native
   
-  /** @name GridBase.Options.filterPanel */
+  /**
+    * [descr:GridBase.Options.filterPanel]
+    */
   var filterPanel: js.UndefOr[CustomizeText[T]] = js.native
   
-  /** @name GridBase.Options.filterRow */
+  /**
+    * [descr:GridBase.Options.filterRow]
+    */
   var filterRow: js.UndefOr[ApplyFilter] = js.native
   
-  /** @name GridBase.Options.filterSyncEnabled */
+  /**
+    * [descr:GridBase.Options.filterSyncEnabled]
+    */
   var filterSyncEnabled: js.UndefOr[Boolean | auto] = js.native
   
-  /** @name GridBase.Options.filterValue */
+  /**
+    * [descr:GridBase.Options.filterValue]
+    */
   var filterValue: js.UndefOr[String | js.Array[_] | js.Function] = js.native
   
-  /** @name GridBase.Options.focusedColumnIndex */
+  /**
+    * [descr:GridBase.Options.focusedColumnIndex]
+    */
   var focusedColumnIndex: js.UndefOr[Double] = js.native
   
-  /** @name GridBase.Options.focusedRowEnabled */
+  /**
+    * [descr:GridBase.Options.focusedRowEnabled]
+    */
   var focusedRowEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.focusedRowIndex */
+  /**
+    * [descr:GridBase.Options.focusedRowIndex]
+    */
   var focusedRowIndex: js.UndefOr[Double] = js.native
   
-  /** @name GridBase.Options.focusedRowKey */
+  /**
+    * [descr:GridBase.Options.focusedRowKey]
+    */
   var focusedRowKey: js.UndefOr[js.Any] = js.native
   
-  /** @name GridBase.Options.headerFilter */
+  /**
+    * [descr:GridBase.Options.headerFilter]
+    */
   var headerFilter: js.UndefOr[Height] = js.native
   
-  /** @name GridBase.Options.highlightChanges */
+  /**
+    * [descr:GridBase.Options.highlightChanges]
+    */
   var highlightChanges: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.keyboardNavigation */
+  /**
+    * [descr:GridBase.Options.keyboardNavigation]
+    */
   var keyboardNavigation: js.UndefOr[EditOnKeyPress] = js.native
   
-  /** @name GridBase.Options.loadPanel */
+  /**
+    * [descr:GridBase.Options.loadPanel]
+    */
   var loadPanel: js.UndefOr[IndicatorSrc] = js.native
   
-  /** @name GridBase.Options.noDataText */
+  /**
+    * [descr:GridBase.Options.noDataText]
+    */
   var noDataText: js.UndefOr[String] = js.native
   
-  /** @name GridBase.Options.onAdaptiveDetailRowPreparing */
+  /**
+    * [descr:GridBase.Options.onAdaptiveDetailRowPreparing]
+    */
   var onAdaptiveDetailRowPreparing: js.UndefOr[js.Function1[/* e */ FormOptions[T], _]] = js.native
   
-  /** @name GridBase.Options.onDataErrorOccurred */
+  /**
+    * [descr:GridBase.Options.onDataErrorOccurred]
+    */
   var onDataErrorOccurred: js.UndefOr[js.Function1[/* e */ Error[T], _]] = js.native
   
-  /** @name GridBase.Options.onInitNewRow */
+  /**
+    * [descr:GridBase.Options.onEditCanceled]
+    */
+  var onEditCanceled: js.UndefOr[js.Function1[/* e */ ChangesComponent[T], _]] = js.native
+  
+  /**
+    * [descr:GridBase.Options.onEditCanceling]
+    */
+  var onEditCanceling: js.UndefOr[js.Function1[/* e */ CancelChanges[T], _]] = js.native
+  
+  /**
+    * [descr:GridBase.Options.onInitNewRow]
+    */
   var onInitNewRow: js.UndefOr[js.Function1[/* e */ Promise[T], _]] = js.native
   
-  /** @name GridBase.Options.onKeyDown */
+  /**
+    * [descr:GridBase.Options.onKeyDown]
+    */
   var onKeyDown: js.UndefOr[js.Function1[/* e */ Handled[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowCollapsed */
+  /**
+    * [descr:GridBase.Options.onRowCollapsed]
+    */
   var onRowCollapsed: js.UndefOr[js.Function1[/* e */ Key[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowCollapsing */
+  /**
+    * [descr:GridBase.Options.onRowCollapsing]
+    */
   var onRowCollapsing: js.UndefOr[js.Function1[/* e */ CancelComponent[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowExpanded */
+  /**
+    * [descr:GridBase.Options.onRowExpanded]
+    */
   var onRowExpanded: js.UndefOr[js.Function1[/* e */ Key[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowExpanding */
+  /**
+    * [descr:GridBase.Options.onRowExpanding]
+    */
   var onRowExpanding: js.UndefOr[js.Function1[/* e */ CancelComponent[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowInserted */
+  /**
+    * [descr:GridBase.Options.onRowInserted]
+    */
   var onRowInserted: js.UndefOr[js.Function1[/* e */ ComponentData[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowInserting */
+  /**
+    * [descr:GridBase.Options.onRowInserting]
+    */
   var onRowInserting: js.UndefOr[js.Function1[/* e */ DataElement[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowRemoved */
+  /**
+    * [descr:GridBase.Options.onRowRemoved]
+    */
   var onRowRemoved: js.UndefOr[js.Function1[/* e */ ComponentData[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowRemoving */
+  /**
+    * [descr:GridBase.Options.onRowRemoving]
+    */
   var onRowRemoving: js.UndefOr[js.Function1[/* e */ ElementKey[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowUpdated */
+  /**
+    * [descr:GridBase.Options.onRowUpdated]
+    */
   var onRowUpdated: js.UndefOr[js.Function1[/* e */ ComponentData[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowUpdating */
+  /**
+    * [descr:GridBase.Options.onRowUpdating]
+    */
   var onRowUpdating: js.UndefOr[js.Function1[/* e */ NewData[T], _]] = js.native
   
-  /** @name GridBase.Options.onRowValidating */
+  /**
+    * [descr:GridBase.Options.onRowValidating]
+    */
   var onRowValidating: js.UndefOr[js.Function1[/* e */ BrokenRules[T], _]] = js.native
   
-  /** @name GridBase.Options.onSelectionChanged */
+  /**
+    * [descr:GridBase.Options.onSaved]
+    */
+  var onSaved: js.UndefOr[js.Function1[/* e */ ChangesComponent[T], _]] = js.native
+  
+  /**
+    * [descr:GridBase.Options.onSaving]
+    */
+  var onSaving: js.UndefOr[js.Function1[/* e */ ComponentElement[T], _]] = js.native
+  
+  /**
+    * [descr:GridBase.Options.onSelectionChanged]
+    */
   var onSelectionChanged: js.UndefOr[js.Function1[/* e */ CurrentDeselectedRowKeys[T], _]] = js.native
   
-  /** @name GridBase.Options.onToolbarPreparing */
+  /**
+    * [descr:GridBase.Options.onToolbarPreparing]
+    */
   var onToolbarPreparing: js.UndefOr[js.Function1[/* e */ ToolbarOptions[T], _]] = js.native
   
-  /** @name GridBase.Options.pager */
+  /**
+    * [descr:GridBase.Options.pager]
+    */
   var pager: js.UndefOr[AllowedPageSizes] = js.native
   
-  /** @name GridBase.Options.paging */
+  /**
+    * [descr:GridBase.Options.paging]
+    */
   var paging: js.UndefOr[GridBasePaging] = js.native
   
-  /** @name GridBase.Options.renderAsync */
+  /**
+    * [descr:GridBase.Options.renderAsync]
+    */
   var renderAsync: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.repaintChangesOnly */
+  /**
+    * [descr:GridBase.Options.repaintChangesOnly]
+    */
   var repaintChangesOnly: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.rowAlternationEnabled */
+  /**
+    * [descr:GridBase.Options.rowAlternationEnabled]
+    */
   var rowAlternationEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.rowDragging */
+  /**
+    * [descr:GridBase.Options.rowDragging]
+    */
   var rowDragging: js.UndefOr[AllowDropInsideItem] = js.native
   
-  /** @name GridBase.Options.scrolling */
+  /**
+    * [descr:GridBase.Options.scrolling]
+    */
   var scrolling: js.UndefOr[GridBaseScrolling] = js.native
   
-  /** @name GridBase.Options.searchPanel */
+  /**
+    * [descr:GridBase.Options.searchPanel]
+    */
   var searchPanel: js.UndefOr[HighlightCaseSensitive] = js.native
   
-  /** @name GridBase.Options.selectedRowKeys */
+  /**
+    * [descr:GridBase.Options.selectedRowKeys]
+    */
   var selectedRowKeys: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name GridBase.Options.selection */
+  /**
+    * [descr:GridBase.Options.selection]
+    */
   var selection: js.UndefOr[GridBaseSelection] = js.native
   
-  /** @name GridBase.Options.showBorders */
+  /**
+    * [descr:GridBase.Options.showBorders]
+    */
   var showBorders: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.showColumnHeaders */
+  /**
+    * [descr:GridBase.Options.showColumnHeaders]
+    */
   var showColumnHeaders: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.showColumnLines */
+  /**
+    * [descr:GridBase.Options.showColumnLines]
+    */
   var showColumnLines: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.showRowLines */
+  /**
+    * [descr:GridBase.Options.showRowLines]
+    */
   var showRowLines: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.sorting */
+  /**
+    * [descr:GridBase.Options.sorting]
+    */
   var sorting: js.UndefOr[AscendingText] = js.native
   
-  /** @name GridBase.Options.stateStoring */
+  /**
+    * [descr:GridBase.Options.stateStoring]
+    */
   var stateStoring: js.UndefOr[CustomLoad] = js.native
   
-  /** @name GridBase.Options.twoWayBindingEnabled */
+  /**
+    * [descr:GridBase.Options.twoWayBindingEnabled]
+    */
   var twoWayBindingEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.wordWrapEnabled */
+  /**
+    * [descr:GridBase.Options.wordWrapEnabled]
+    */
   var wordWrapEnabled: js.UndefOr[Boolean] = js.native
 }
 object GridBaseOptions {
@@ -475,6 +632,18 @@ object GridBaseOptions {
     def deleteOnDataErrorOccurred: Self = this.set("onDataErrorOccurred", js.undefined)
     
     @scala.inline
+    def setOnEditCanceled(value: /* e */ ChangesComponent[T] => _): Self = this.set("onEditCanceled", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnEditCanceled: Self = this.set("onEditCanceled", js.undefined)
+    
+    @scala.inline
+    def setOnEditCanceling(value: /* e */ CancelChanges[T] => _): Self = this.set("onEditCanceling", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnEditCanceling: Self = this.set("onEditCanceling", js.undefined)
+    
+    @scala.inline
     def setOnInitNewRow(value: /* e */ Promise[T] => _): Self = this.set("onInitNewRow", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -551,6 +720,18 @@ object GridBaseOptions {
     
     @scala.inline
     def deleteOnRowValidating: Self = this.set("onRowValidating", js.undefined)
+    
+    @scala.inline
+    def setOnSaved(value: /* e */ ChangesComponent[T] => _): Self = this.set("onSaved", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnSaved: Self = this.set("onSaved", js.undefined)
+    
+    @scala.inline
+    def setOnSaving(value: /* e */ ComponentElement[T] => _): Self = this.set("onSaving", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnSaving: Self = this.set("onSaving", js.undefined)
     
     @scala.inline
     def setOnSelectionChanged(value: /* e */ CurrentDeselectedRowKeys[T] => _): Self = this.set("onSelectionChanged", js.Any.fromFunction1(value))

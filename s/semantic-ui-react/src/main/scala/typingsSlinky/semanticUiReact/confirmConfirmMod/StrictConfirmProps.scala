@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLAnchorElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.buttonButtonMod.ButtonProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.modalModalMod.StrictModalProps
@@ -69,7 +68,7 @@ object StrictConfirmProps {
     
     @scala.inline
     def setCancelButtonFunction3(
-      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("cancelButton", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -83,7 +82,7 @@ object StrictConfirmProps {
     
     @scala.inline
     def setConfirmButtonFunction3(
-      value: (/* component */ ReactType[ButtonProps], ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ButtonProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("confirmButton", js.Any.fromFunction3(value))
     
     @scala.inline

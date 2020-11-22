@@ -17,6 +17,11 @@ trait IPanel[P] extends js.Object {
   var component: ReactComponentClass[P with IPanelProps] = js.native
   
   /**
+    * HTML title to be passed to the <Text> component
+    */
+  var htmlTitle: js.UndefOr[String] = js.native
+  
+  /**
     * The props passed to the component type when it is rendered. The methods
     * in `IPanelProps` will be injected by `PanelStack`.
     */
@@ -53,6 +58,12 @@ object IPanel {
     
     @scala.inline
     def setComponent(value: ReactComponentClass[P with IPanelProps]): Self = this.set("component", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHtmlTitle(value: String): Self = this.set("htmlTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHtmlTitle: Self = this.set("htmlTitle", js.undefined)
     
     @scala.inline
     def setProps(value: P): Self = this.set("props", value.asInstanceOf[js.Any])

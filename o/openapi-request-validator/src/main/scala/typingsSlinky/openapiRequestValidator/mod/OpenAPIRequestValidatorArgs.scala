@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ajv.mod.ErrorObject
 import typingsSlinky.ajv.mod.FormatDefinition
 import typingsSlinky.ajv.mod.FormatValidator
+import typingsSlinky.ajv.mod.KeywordDefinition
 import typingsSlinky.openapiTypes.mod.IJsonSchema
 import typingsSlinky.openapiTypes.mod.OpenAPI.Parameters
 import typingsSlinky.openapiTypes.mod.OpenAPIV2.Parameter
@@ -22,6 +23,8 @@ trait OpenAPIRequestValidatorArgs extends js.Object {
   
   var customFormats: js.UndefOr[StringDictionary[FormatValidator | FormatDefinition]] = js.native
   
+  var customKeywords: js.UndefOr[StringDictionary[KeywordDefinition]] = js.native
+  
   var errorTransformer: js.UndefOr[
     js.Function2[
       /* openAPIResponseValidatorValidationError */ OpenAPIRequestValidatorError, 
@@ -36,7 +39,7 @@ trait OpenAPIRequestValidatorArgs extends js.Object {
   
   var loggingKey: js.UndefOr[String] = js.native
   
-  var parameters: Parameters = js.native
+  var parameters: js.UndefOr[Parameters] = js.native
   
   var requestBody: js.UndefOr[RequestBodyObject] = js.native
   
@@ -45,8 +48,8 @@ trait OpenAPIRequestValidatorArgs extends js.Object {
 object OpenAPIRequestValidatorArgs {
   
   @scala.inline
-  def apply(parameters: Parameters): OpenAPIRequestValidatorArgs = {
-    val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any])
+  def apply(): OpenAPIRequestValidatorArgs = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[OpenAPIRequestValidatorArgs]
   }
   
@@ -66,14 +69,6 @@ object OpenAPIRequestValidatorArgs {
     }
     
     @scala.inline
-    def setParametersVarargs(
-      value: (Parameter | ParameterObject | ReferenceObject | typingsSlinky.openapiTypes.mod.OpenAPIV2.ReferenceObject)*
-    ): Self = this.set("parameters", js.Array(value :_*))
-    
-    @scala.inline
-    def setParameters(value: Parameters): Self = this.set("parameters", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setComponentSchemasVarargs(value: IJsonSchema*): Self = this.set("componentSchemas", js.Array(value :_*))
     
     @scala.inline
@@ -87,6 +82,12 @@ object OpenAPIRequestValidatorArgs {
     
     @scala.inline
     def deleteCustomFormats: Self = this.set("customFormats", js.undefined)
+    
+    @scala.inline
+    def setCustomKeywords(value: StringDictionary[KeywordDefinition]): Self = this.set("customKeywords", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomKeywords: Self = this.set("customKeywords", js.undefined)
     
     @scala.inline
     def setErrorTransformer(
@@ -113,6 +114,17 @@ object OpenAPIRequestValidatorArgs {
     
     @scala.inline
     def deleteLoggingKey: Self = this.set("loggingKey", js.undefined)
+    
+    @scala.inline
+    def setParametersVarargs(
+      value: (Parameter | ParameterObject | ReferenceObject | typingsSlinky.openapiTypes.mod.OpenAPIV2.ReferenceObject)*
+    ): Self = this.set("parameters", js.Array(value :_*))
+    
+    @scala.inline
+    def setParameters(value: Parameters): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParameters: Self = this.set("parameters", js.undefined)
     
     @scala.inline
     def setRequestBody(value: RequestBodyObject): Self = this.set("requestBody", value.asInstanceOf[js.Any])

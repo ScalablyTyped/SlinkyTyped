@@ -47,104 +47,104 @@ object actionManagerMod extends js.Object {
     
     /**
       * Nothing
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val NothingTrigger: Double = js.native
     
     /**
       * On center pick
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnCenterPickTrigger: Double = js.native
     
     /**
       * On double pick
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnDoublePickTrigger: Double = js.native
     
     /**
       * On every frame
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnEveryFrameTrigger: Double = js.native
     
     /**
       * On intersection enter
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnIntersectionEnterTrigger: Double = js.native
     
     /**
       * On intersection exit
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnIntersectionExitTrigger: Double = js.native
     
     /**
       * On key down
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnKeyDownTrigger: Double = js.native
     
     /**
       * On key up
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnKeyUpTrigger: Double = js.native
     
     /**
       * On left pick
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnLeftPickTrigger: Double = js.native
     
     /**
       * On long press
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnLongPressTrigger: Double = js.native
     
     /**
       * On pick down
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnPickDownTrigger: Double = js.native
     
     /**
       * On pick out.
       * This trigger will only be raised if you also declared a OnPickDown
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnPickOutTrigger: Double = js.native
     
     /**
       * On pick
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnPickTrigger: Double = js.native
     
     /**
       * On pick up
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnPickUpTrigger: Double = js.native
     
     /**
       * On pointer out
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnPointerOutTrigger: Double = js.native
     
     /**
       * On pointer over
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnPointerOverTrigger: Double = js.native
     
     /**
       * On right pick
-      * @see http://doc.babylonjs.com/how_to/how_to_use_actions#triggers
+      * @see https://doc.babylonjs.com/how_to/how_to_use_actions#triggers
       */
     val OnRightPickTrigger: Double = js.native
     

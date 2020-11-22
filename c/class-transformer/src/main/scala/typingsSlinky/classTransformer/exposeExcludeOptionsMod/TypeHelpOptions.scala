@@ -1,5 +1,6 @@
 package typingsSlinky.classTransformer.exposeExcludeOptionsMod
 
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +10,14 @@ trait TypeHelpOptions extends js.Object {
   
   var newObject: js.Any = js.native
   
-  var `object`: js.Object = js.native
+  var `object`: Record[String, _] = js.native
   
   var property: String = js.native
 }
 object TypeHelpOptions {
   
   @scala.inline
-  def apply(newObject: js.Any, `object`: js.Object, property: String): TypeHelpOptions = {
+  def apply(newObject: js.Any, `object`: Record[String, _], property: String): TypeHelpOptions = {
     val __obj = js.Dynamic.literal(newObject = newObject.asInstanceOf[js.Any], property = property.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeHelpOptions]
@@ -41,7 +42,7 @@ object TypeHelpOptions {
     def setNewObject(value: js.Any): Self = this.set("newObject", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setObject(value: js.Object): Self = this.set("object", value.asInstanceOf[js.Any])
+    def setObject(value: Record[String, _]): Self = this.set("object", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setProperty(value: String): Self = this.set("property", value.asInstanceOf[js.Any])

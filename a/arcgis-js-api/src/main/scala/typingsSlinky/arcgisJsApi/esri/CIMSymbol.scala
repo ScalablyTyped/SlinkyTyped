@@ -1,6 +1,7 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.cim
+import typingsSlinky.arcgisJsApi.esri.CIM.CIMSymbolReference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ trait CIMSymbol extends Symbol {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-CIMSymbol.html#data)
     */
-  var data: js.Any = js.native
+  var data: CIMSymbolReference = js.native
   
   /**
     * The symbol type.

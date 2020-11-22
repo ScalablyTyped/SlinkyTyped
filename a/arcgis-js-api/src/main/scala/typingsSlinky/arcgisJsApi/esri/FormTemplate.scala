@@ -17,8 +17,7 @@ trait FormTemplate
   var description: String = js.native
   
   /**
-    * An array of [form element](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-Element.html) objects that represent an ordered list of form elements.  Elements are designed to allow the form author the ability to define the layout for fields when collecting and/or editing data.
-    * > Nested group elements are not supported.
+    * An array of [form element](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-Element.html) objects that represent an ordered list of form elements.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-FormTemplate.html#elements)
     */
@@ -32,7 +31,7 @@ trait FormTemplate
   var expressionInfos: js.Array[ExpressionInfo] = js.native
   
   /**
-    * The string template for defining how to format the title used in a popup. This appears at the top of the form.
+    * The string template for defining how to format the title used in a popup.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-FormTemplate.html#title)
     */

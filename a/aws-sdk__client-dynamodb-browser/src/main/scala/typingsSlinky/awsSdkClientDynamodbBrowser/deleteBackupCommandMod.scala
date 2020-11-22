@@ -1,12 +1,10 @@
 package typingsSlinky.awsSdkClientDynamodbBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientDynamodbBrowser.dynamoDBConfigurationMod.DynamoDBResolvedConfiguration
 import typingsSlinky.awsSdkClientDynamodbBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.typesDeleteBackupInputMod.DeleteBackupInput
 import typingsSlinky.awsSdkClientDynamodbBrowser.typesDeleteBackupOutputMod.DeleteBackupOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
@@ -23,15 +21,12 @@ object deleteBackupCommandMod extends js.Object {
           DeleteBackupInput, 
           OutputTypesUnion, 
           DeleteBackupOutput, 
-          DynamoDBResolvedConfiguration, 
-          Blob
+          DynamoDBResolvedConfiguration
         ] {
     def this(input: DeleteBackupInput) = this()
     
-    val middlewareStack: MiddlewareStack[DeleteBackupInput, DeleteBackupOutput, Blob] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any,
       configuration: DynamoDBResolvedConfiguration
     ): Handler[DeleteBackupInput, DeleteBackupOutput] = js.native
   }

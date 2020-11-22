@@ -23,8 +23,12 @@ object languages extends js.Object {
   
   def registerCallHierarchyProvider(selector: DocumentSelector, provider: CallHierarchyProvider): Disposable = js.native
   
-  def registerCodeActionsProvider(selector: DocumentSelector, provider: CodeActionProvider): Disposable = js.native
-  def registerCodeActionsProvider(selector: DocumentSelector, provider: CodeActionProvider, metadata: CodeActionProviderMetadata): Disposable = js.native
+  def registerCodeActionsProvider(selector: DocumentSelector, provider: CodeActionProvider[CodeAction]): Disposable = js.native
+  def registerCodeActionsProvider(
+    selector: DocumentSelector,
+    provider: CodeActionProvider[CodeAction],
+    metadata: CodeActionProviderMetadata
+  ): Disposable = js.native
   
   def registerCodeLensProvider(selector: DocumentSelector, provider: CodeLensProvider[CodeLens]): Disposable = js.native
   

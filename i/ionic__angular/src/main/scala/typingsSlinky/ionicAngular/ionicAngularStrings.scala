@@ -7,7 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object ionicAngularStrings {
   
   @scala.inline
+  def _ael: _ael = "_ael".asInstanceOf[_ael]
+  
+  @scala.inline
   def _forceStatusbarPadding: _forceStatusbarPadding = "_forceStatusbarPadding".asInstanceOf[_forceStatusbarPadding]
+  
+  @scala.inline
+  def _rel: _rel = "_rel".asInstanceOf[_rel]
   
   @scala.inline
   def _testing: _testing = "_testing".asInstanceOf[_testing]
@@ -187,7 +193,13 @@ object ionicAngularStrings {
   def toastLeave: toastLeave = "toastLeave".asInstanceOf[toastLeave]
   
   @js.native
+  sealed trait _ael extends js.Object
+  
+  @js.native
   sealed trait _forceStatusbarPadding extends js.Object
+  
+  @js.native
+  sealed trait _rel extends js.Object
   
   @js.native
   sealed trait _testing extends js.Object

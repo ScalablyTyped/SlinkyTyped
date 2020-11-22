@@ -33,7 +33,7 @@ class EventList protected () extends CustomResource {
   val apiVersion: Output_[eventsDotk8sDotioSlashv1beta1] = js.native
   
   /**
-    * Items is a list of schema objects.
+    * items is a list of schema objects.
     */
   val items: Output_[js.Array[Event]] = js.native
   

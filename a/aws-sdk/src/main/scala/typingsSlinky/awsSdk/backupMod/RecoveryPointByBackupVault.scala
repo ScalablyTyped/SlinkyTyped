@@ -78,9 +78,14 @@ trait RecoveryPointByBackupVault extends js.Object {
   var ResourceArn: js.UndefOr[ARN] = js.native
   
   /**
-    * The type of AWS resource saved as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
+    * The type of AWS resource saved as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only supported resource type is Amazon EC2.
     */
   var ResourceType: js.UndefOr[typingsSlinky.awsSdk.backupMod.ResourceType] = js.native
+  
+  /**
+    * The backup vault where the recovery point was originally copied from. If the recovery point is restored to the same account this value will be null.
+    */
+  var SourceBackupVaultArn: js.UndefOr[ARN] = js.native
   
   /**
     * A status code specifying the state of the recovery point.
@@ -199,6 +204,12 @@ object RecoveryPointByBackupVault {
     
     @scala.inline
     def deleteResourceType: Self = this.set("ResourceType", js.undefined)
+    
+    @scala.inline
+    def setSourceBackupVaultArn(value: ARN): Self = this.set("SourceBackupVaultArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSourceBackupVaultArn: Self = this.set("SourceBackupVaultArn", js.undefined)
     
     @scala.inline
     def setStatus(value: RecoveryPointStatus): Self = this.set("Status", value.asInstanceOf[js.Any])

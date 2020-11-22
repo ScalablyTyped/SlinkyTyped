@@ -23,8 +23,7 @@ trait GetResolverRulesArgs extends js.Object {
   val ruleType: js.UndefOr[String] = js.native
   
   /**
-    * Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account.
-    * Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
+    * Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account. Valid values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
     */
   val shareStatus: js.UndefOr[String] = js.native
 }

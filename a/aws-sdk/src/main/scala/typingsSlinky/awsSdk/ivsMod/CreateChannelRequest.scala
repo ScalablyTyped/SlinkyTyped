@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateChannelRequest extends js.Object {
   
   /**
+    * Whether the channel is authorized. Default: false.
+    */
+  var authorized: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Channel latency mode. Default: LOW.
     */
   var latencyMode: js.UndefOr[ChannelLatencyMode] = js.native
@@ -49,6 +54,12 @@ object CreateChannelRequest {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAuthorized(value: Boolean): Self = this.set("authorized", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAuthorized: Self = this.set("authorized", js.undefined)
     
     @scala.inline
     def setLatencyMode(value: ChannelLatencyMode): Self = this.set("latencyMode", value.asInstanceOf[js.Any])

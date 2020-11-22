@@ -170,7 +170,7 @@ trait Entity extends GraphNode {
     * @returns All components of specified type in the entity or any of its descendants.
     * Returns empty array if none found.
     */
-  def findComponents(`type`: String): Component = js.native
+  def findComponents(`type`: String): js.Array[Component] = js.native
   
   /**
     * Gets the {@link pc.LayoutChildComponent} attached to this entity. [read only]

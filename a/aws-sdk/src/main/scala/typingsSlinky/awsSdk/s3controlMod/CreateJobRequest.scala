@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateJobRequest extends js.Object {
   
   /**
-    * 
+    * The AWS account ID that creates the job.
     */
   var AccountId: typingsSlinky.awsSdk.s3controlMod.AccountId = js.native
   
@@ -33,7 +33,7 @@ trait CreateJobRequest extends js.Object {
   var Manifest: JobManifest = js.native
   
   /**
-    * The operation that you want this job to perform on each object listed in the manifest. For more information about the available operations, see Available Operations in the Amazon Simple Storage Service Developer Guide.
+    * The operation that you want this job to perform on each object listed in the manifest. For more information about the available operations, see Operations in the Amazon Simple Storage Service Developer Guide.
     */
   var Operation: JobOperation = js.native
   
@@ -48,12 +48,12 @@ trait CreateJobRequest extends js.Object {
   var Report: JobReport = js.native
   
   /**
-    * The Amazon Resource Name (ARN) for the AWS Identity and Access Management (IAM) role that Batch Operations will use to execute this job's operation on each object in the manifest.
+    * The Amazon Resource Name (ARN) for the AWS Identity and Access Management (IAM) role that Batch Operations will use to run this job's operation on each object in the manifest.
     */
   var RoleArn: IAMRoleArn = js.native
   
   /**
-    * A set of tags to associate with the Amazon S3 Batch Operations job. This is an optional parameter. 
+    * A set of tags to associate with the S3 Batch Operations job. This is an optional parameter. 
     */
   var Tags: js.UndefOr[S3TagSet] = js.native
 }

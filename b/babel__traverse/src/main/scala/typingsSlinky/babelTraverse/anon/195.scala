@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ImportNamespaceSpecifier
+import typingsSlinky.babelTraverse.babelTraverseStrings.DoWhileStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `195` extends js.Object {
   
-  var `type`: ImportNamespaceSpecifier = js.native
+  var `type`: DoWhileStatement = js.native
 }
 object `195` {
   
   @scala.inline
-  def apply(`type`: ImportNamespaceSpecifier): `195` = {
+  def apply(`type`: DoWhileStatement): `195` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`195`]
@@ -35,6 +35,6 @@ object `195` {
     }
     
     @scala.inline
-    def setType(value: ImportNamespaceSpecifier): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: DoWhileStatement): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

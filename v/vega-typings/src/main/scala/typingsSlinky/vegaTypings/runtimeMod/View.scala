@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.vegaTypings.anon.Background
 import typingsSlinky.vegaTypings.anon.Data
 import typingsSlinky.vegaTypings.anon.Signals
+import typingsSlinky.vegaTypings.colorMod.Color
 import typingsSlinky.vegaTypings.dataflowMod.Changeset_
 import typingsSlinky.vegaTypings.encodeMod.EncodeEntryName
 import typingsSlinky.vegaTypings.paddingMod.Padding
@@ -31,9 +32,12 @@ class View protected () extends js.Object {
   
   def addSignalListener(name: String, handler: SignalListenerHandler): this.type = js.native
   
+  def background(): Color = js.native
+  def background(s: Color): this.type = js.native
+  
   def change(name: String, changeset: Changeset_): this.type = js.native
   
-  def changeset(): js.Any = js.native
+  def changeset(): Changeset_ = js.native
   
   def container(): HTMLElement | Null = js.native
   
@@ -43,8 +47,16 @@ class View protected () extends js.Object {
   def description(): String = js.native
   def description(s: String): this.type = js.native
   
+  def dirty(item: js.Any): Unit = js.native
+  
+  // Event Handling
+  def events(source: js.Any, `type`: js.Any): js.Any = js.native
+  def events(source: js.Any, `type`: js.Any, filter: js.Function1[/* _ */ js.Any, Boolean]): js.Any = js.native
+  
   def getState(): Signals = js.native
   def getState(options: Data): Signals = js.native
+  
+  def globalCursor(flag: Boolean): js.Any = js.native
   
   def height(): Double = js.native
   def height(h: Double): this.type = js.native
@@ -54,6 +66,7 @@ class View protected () extends js.Object {
   def hover(hoverSet: EncodeEntryName): this.type = js.native
   def hover(hoverSet: EncodeEntryName, leaveSet: EncodeEntryName): this.type = js.native
   
+  // View Configuration
   def initialize(): this.type = js.native
   def initialize(container: js.UndefOr[scala.Nothing], bindContainer: String): this.type = js.native
   def initialize(container: js.UndefOr[scala.Nothing], bindContainer: Element): this.type = js.native
@@ -70,6 +83,7 @@ class View protected () extends js.Object {
   def loader(loader: Loader_): this.type = js.native
   
   def locale(): LocaleFormatters = js.native
+  // Undocumented (https://github.com/vega/vega/issues/2844, https://github.com/vega/vega/issues/2845)
   def locale(locale: LocaleFormatters): this.type = js.native
   
   def logLevel(): Double = js.native
@@ -82,6 +96,8 @@ class View protected () extends js.Object {
   
   def padding(): Padding = js.native
   def padding(p: Padding): this.type = js.native
+  
+  def preventDefault(flag: Boolean): Unit = js.native
   
   def remove(name: String, tuples: js.Any): this.type = js.native
   
@@ -110,15 +126,21 @@ class View protected () extends js.Object {
   def runAfter(callback: js.Function1[/* view */ this.type, Unit], enqueue: Boolean): this.type = js.native
   def runAfter(callback: js.Function1[/* view */ this.type, Unit], enqueue: Boolean, priority: Double): this.type = js.native
   
+  // Dataflow and Rendering
   def runAsync(): js.Promise[View] = js.native
+  
+  // Data and Scales
+  def scale(name: String): js.Any = js.native
   
   def scenegraph(): Scene = js.native
   
   def setState(state: Signals): this.type = js.native
   
   def signal(name: String): SignalValue = js.native
+  // Signals
   def signal(name: String, value: SignalValue): this.type = js.native
   
+  // Image Export
   def toCanvas(): js.Promise[HTMLCanvasElement] = js.native
   def toCanvas(scaleFactor: js.UndefOr[scala.Nothing], options: ToCanvasOptions): js.Promise[HTMLCanvasElement] = js.native
   def toCanvas(scaleFactor: Double): js.Promise[HTMLCanvasElement] = js.native

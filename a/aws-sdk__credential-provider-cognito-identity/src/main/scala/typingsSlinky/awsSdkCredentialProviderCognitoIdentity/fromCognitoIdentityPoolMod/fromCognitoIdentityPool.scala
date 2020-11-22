@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/credential-provider-cognito-identity/build/fromCognitoIdentityPool", "fromCognitoIdentityPool")
+@JSImport("@aws-sdk/credential-provider-cognito-identity/dist/cjs/fromCognitoIdentityPool", "fromCognitoIdentityPool")
 @js.native
 object fromCognitoIdentityPool extends js.Object {
   

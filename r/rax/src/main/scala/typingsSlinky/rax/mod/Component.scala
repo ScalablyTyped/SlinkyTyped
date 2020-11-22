@@ -7,7 +7,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 // Base component for plain JS classes
-// tslint:disable-next-line:no-empty-interface
 @JSImport("rax", "Component")
 @js.native
 class Component[P, S, SS] protected () extends ComponentLifecycle[P, S, SS] {

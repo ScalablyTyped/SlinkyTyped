@@ -14,6 +14,8 @@ class ProcessValue () extends js.Object {
   def getValue(text: String): js.Any = js.native
   def getValue(text: String, values: HashTable[_]): js.Any = js.native
   
+  def getValueInfo(valueInfo: js.Any): Unit = js.native
+  
   def hasValue(text: String): Boolean = js.native
   def hasValue(text: String, values: HashTable[_]): Boolean = js.native
   

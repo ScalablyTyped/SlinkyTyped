@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// defaultPhrases.js
 @js.native
 trait DayPickerPhrases extends js.Object {
   
@@ -17,6 +16,10 @@ trait DayPickerPhrases extends js.Object {
   var chooseAvailableStartDate: js.UndefOr[js.Function1[/* phraseArg */ PhraseArg, String]] = js.native
   
   var dateIsSelected: js.UndefOr[js.Function1[/* phraseArg */ PhraseArg, String]] = js.native
+  
+  var dateIsSelectedAsEndDate: js.UndefOr[js.Function1[/* phraseArg */ PhraseArg, String]] = js.native
+  
+  var dateIsSelectedAsStartDate: js.UndefOr[js.Function1[/* phraseArg */ PhraseArg, String]] = js.native
   
   var dateIsUnavailable: js.UndefOr[js.Function1[/* phraseArg */ PhraseArg, String]] = js.native
   
@@ -51,6 +54,8 @@ trait DayPickerPhrases extends js.Object {
   var questionMark: js.UndefOr[String] = js.native
   
   var returnFocusToInput: js.UndefOr[String] = js.native
+  
+  var roleDescription: js.UndefOr[String] = js.native
   
   var selectFocusedDate: js.UndefOr[String] = js.native
   
@@ -110,6 +115,18 @@ object DayPickerPhrases {
     
     @scala.inline
     def deleteDateIsSelected: Self = this.set("dateIsSelected", js.undefined)
+    
+    @scala.inline
+    def setDateIsSelectedAsEndDate(value: /* phraseArg */ PhraseArg => String): Self = this.set("dateIsSelectedAsEndDate", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteDateIsSelectedAsEndDate: Self = this.set("dateIsSelectedAsEndDate", js.undefined)
+    
+    @scala.inline
+    def setDateIsSelectedAsStartDate(value: /* phraseArg */ PhraseArg => String): Self = this.set("dateIsSelectedAsStartDate", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteDateIsSelectedAsStartDate: Self = this.set("dateIsSelectedAsStartDate", js.undefined)
     
     @scala.inline
     def setDateIsUnavailable(value: /* phraseArg */ PhraseArg => String): Self = this.set("dateIsUnavailable", js.Any.fromFunction1(value))
@@ -212,6 +229,12 @@ object DayPickerPhrases {
     
     @scala.inline
     def deleteReturnFocusToInput: Self = this.set("returnFocusToInput", js.undefined)
+    
+    @scala.inline
+    def setRoleDescription(value: String): Self = this.set("roleDescription", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRoleDescription: Self = this.set("roleDescription", js.undefined)
     
     @scala.inline
     def setSelectFocusedDate(value: String): Self = this.set("selectFocusedDate", value.asInstanceOf[js.Any])

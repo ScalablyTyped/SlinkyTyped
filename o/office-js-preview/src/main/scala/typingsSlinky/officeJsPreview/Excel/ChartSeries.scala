@@ -9,6 +9,7 @@ import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Automatic
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Banner
+import typingsSlinky.officeJsPreview.officeJsPreviewStrings.BubbleSizes
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Categories
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Circle
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Dash
@@ -162,16 +163,17 @@ trait ChartSeries extends ClientObject {
   /**
     * Gets the values from a single dimension of the chart series. These could be either category values or data values, depending on the dimension specified and how the data is mapped for the chart series.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     *
     * @param dimension the dimension of axis where the data from
     */
   def getDimensionValues(dimension: ChartSeriesDimension): ClientResult[js.Array[String]] = js.native
+  @JSName("getDimensionValues")
+  def getDimensionValues_BubbleSizes(dimension: BubbleSizes): ClientResult[js.Array[String]] = js.native
   /**
     * Gets the values from a single dimension of the chart series. These could be either category values or data values, depending on the dimension specified and how the data is mapped for the chart series.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * [Api set: ExcelApi 1.12]
     *
     * @param dimension the dimension of axis where the data from
     */
@@ -341,7 +343,7 @@ trait ChartSeries extends ClientObject {
   
   /**
     *
-    * Specifies the name of a series in a chart.
+    * Specifies the name of a series in a chart. The name's length should not be greater than 255 characters.
     *
     * [Api set: ExcelApi 1.1]
     */

@@ -65,4 +65,6 @@ object ^ extends js.Object {
   	*/
   def mixin(emitteryPropertyName: String): js.Function = js.native
   def mixin(emitteryPropertyName: String, methodNames: js.Array[String]): js.Function = js.native
+  def mixin(emitteryPropertyName: js.Symbol): js.Function = js.native
+  def mixin(emitteryPropertyName: js.Symbol, methodNames: js.Array[String]): js.Function = js.native
 }

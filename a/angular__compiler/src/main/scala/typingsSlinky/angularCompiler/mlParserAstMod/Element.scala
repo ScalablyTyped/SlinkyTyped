@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@angular/compiler/src/ml_parser/ast", "Element")
 @js.native
 class Element protected () extends NodeWithI18n {
-  def this(name: String, attrs: js.Array[Attribute], children: js.Array[Node], sourceSpan: ParseSourceSpan) = this()
   def this(
     name: String,
     attrs: js.Array[Attribute],
@@ -22,78 +21,8 @@ class Element protected () extends NodeWithI18n {
     attrs: js.Array[Attribute],
     children: js.Array[Node],
     sourceSpan: ParseSourceSpan,
-    startSourceSpan: js.UndefOr[scala.Nothing],
-    endSourceSpan: ParseSourceSpan
-  ) = this()
-  def this(
-    name: String,
-    attrs: js.Array[Attribute],
-    children: js.Array[Node],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: ParseSourceSpan
-  ) = this()
-  def this(
-    name: String,
-    attrs: js.Array[Attribute],
-    children: js.Array[Node],
-    sourceSpan: ParseSourceSpan,
     startSourceSpan: ParseSourceSpan,
     endSourceSpan: ParseSourceSpan
-  ) = this()
-  def this(
-    name: String,
-    attrs: js.Array[Attribute],
-    children: js.Array[Node],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: js.UndefOr[scala.Nothing],
-    endSourceSpan: js.UndefOr[scala.Nothing],
-    i18n: I18nMeta
-  ) = this()
-  def this(
-    name: String,
-    attrs: js.Array[Attribute],
-    children: js.Array[Node],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: js.UndefOr[scala.Nothing],
-    endSourceSpan: Null,
-    i18n: I18nMeta
-  ) = this()
-  def this(
-    name: String,
-    attrs: js.Array[Attribute],
-    children: js.Array[Node],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: js.UndefOr[scala.Nothing],
-    endSourceSpan: ParseSourceSpan,
-    i18n: I18nMeta
-  ) = this()
-  def this(
-    name: String,
-    attrs: js.Array[Attribute],
-    children: js.Array[Node],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: js.UndefOr[scala.Nothing],
-    i18n: I18nMeta
-  ) = this()
-  def this(
-    name: String,
-    attrs: js.Array[Attribute],
-    children: js.Array[Node],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: Null,
-    i18n: I18nMeta
-  ) = this()
-  def this(
-    name: String,
-    attrs: js.Array[Attribute],
-    children: js.Array[Node],
-    sourceSpan: ParseSourceSpan,
-    startSourceSpan: Null,
-    endSourceSpan: ParseSourceSpan,
-    i18n: I18nMeta
   ) = this()
   def this(
     name: String,
@@ -131,5 +60,5 @@ class Element protected () extends NodeWithI18n {
   
   var name: String = js.native
   
-  var startSourceSpan: ParseSourceSpan | Null = js.native
+  var startSourceSpan: ParseSourceSpan = js.native
 }

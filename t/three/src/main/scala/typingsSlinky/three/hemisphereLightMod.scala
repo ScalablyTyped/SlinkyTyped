@@ -12,6 +12,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object hemisphereLightMod extends js.Object {
   
   @js.native
+  /**
+  	 * @param skyColor
+  	 * @param groundColor
+  	 * @param [intensity=1]
+  	 */
   class HemisphereLight () extends Light {
     def this(skyColor: String) = this()
     def this(skyColor: Double) = this()
@@ -48,7 +53,5 @@ object hemisphereLightMod extends js.Object {
     var groundColor: Color = js.native
     
     val isHemisphereLight: `true` = js.native
-    
-    var skyColor: Color = js.native
   }
 }

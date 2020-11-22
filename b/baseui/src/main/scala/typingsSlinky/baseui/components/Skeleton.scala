@@ -2,7 +2,7 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.skeletonMod.OverridesT
+import typingsSlinky.baseui.skeletonMod.SkeletonOverrides
 import typingsSlinky.baseui.skeletonMod.SkeletonPropsT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +26,7 @@ object Skeleton {
     def height(value: String): this.type = set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overrides(value: OverridesT): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: SkeletonOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])

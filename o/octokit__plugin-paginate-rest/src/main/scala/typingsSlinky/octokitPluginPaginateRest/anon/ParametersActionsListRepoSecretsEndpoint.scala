@@ -12,14 +12,14 @@ trait ParametersActionsListRepoSecretsEndpoint extends js.Object {
   
   var parameters: ActionsListRepoSecretsEndpoint = js.native
   
-  var response: OctokitResponse[ActionsListRepoSecretsResponseData] with `7` = js.native
+  var response: OctokitResponse[ActionsListRepoSecretsResponseData] with `11` = js.native
 }
 object ParametersActionsListRepoSecretsEndpoint {
   
   @scala.inline
   def apply(
     parameters: ActionsListRepoSecretsEndpoint,
-    response: OctokitResponse[ActionsListRepoSecretsResponseData] with `7`
+    response: OctokitResponse[ActionsListRepoSecretsResponseData] with `11`
   ): ParametersActionsListRepoSecretsEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersActionsListRepoSecretsEndpoint]
@@ -44,6 +44,6 @@ object ParametersActionsListRepoSecretsEndpoint {
     def setParameters(value: ActionsListRepoSecretsEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ActionsListRepoSecretsResponseData] with `7`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ActionsListRepoSecretsResponseData] with `11`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -49,14 +49,19 @@ class VpcEndpointService protected () extends CustomResource {
   val baseEndpointDnsNames: Output_[js.Array[String]] = js.native
   
   /**
+    * Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+    */
+  val gatewayLoadBalancerArns: Output_[js.UndefOr[js.Array[String]]] = js.native
+  
+  /**
     * Whether or not the service manages its VPC endpoints - `true` or `false`.
     */
   val managesVpcEndpoints: Output_[Boolean] = js.native
   
   /**
-    * The ARNs of one or more Network Load Balancers for the endpoint service.
+    * Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
     */
-  val networkLoadBalancerArns: Output_[js.Array[String]] = js.native
+  val networkLoadBalancerArns: Output_[js.UndefOr[js.Array[String]]] = js.native
   
   /**
     * The private DNS name for the service.

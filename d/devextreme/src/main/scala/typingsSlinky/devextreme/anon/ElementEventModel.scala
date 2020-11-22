@@ -2,7 +2,7 @@ package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
-import typingsSlinky.devextreme.mod.DevExpress.viz.dxRangeSelector
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxLookup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ElementEventModel extends js.Object {
   
-  var component: js.UndefOr[dxRangeSelector] = js.native
+  var component: js.UndefOr[dxLookup] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -18,9 +18,9 @@ trait ElementEventModel extends js.Object {
   
   var model: js.UndefOr[js.Any] = js.native
   
-  var previousValue: js.UndefOr[js.Array[Double | String | js.Date]] = js.native
+  var previousValue: js.UndefOr[js.Any] = js.native
   
-  var value: js.UndefOr[js.Array[Double | String | js.Date]] = js.native
+  var value: js.UndefOr[js.Any] = js.native
 }
 object ElementEventModel {
   
@@ -46,7 +46,7 @@ object ElementEventModel {
     }
     
     @scala.inline
-    def setComponent(value: dxRangeSelector): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxLookup): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -70,19 +70,13 @@ object ElementEventModel {
     def deleteModel: Self = this.set("model", js.undefined)
     
     @scala.inline
-    def setPreviousValueVarargs(value: (Double | String | js.Date)*): Self = this.set("previousValue", js.Array(value :_*))
-    
-    @scala.inline
-    def setPreviousValue(value: js.Array[Double | String | js.Date]): Self = this.set("previousValue", value.asInstanceOf[js.Any])
+    def setPreviousValue(value: js.Any): Self = this.set("previousValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePreviousValue: Self = this.set("previousValue", js.undefined)
     
     @scala.inline
-    def setValueVarargs(value: (Double | String | js.Date)*): Self = this.set("value", js.Array(value :_*))
-    
-    @scala.inline
-    def setValue(value: js.Array[Double | String | js.Date]): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)

@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class NamePart_ () extends Message {
   
-  def clearIsExtension(): Unit = js.native
+  def clearIsExtension(): NamePart = js.native
   
-  def clearNamePart(): Unit = js.native
+  def clearNamePart(): NamePart = js.native
   
   def getIsExtension(): js.UndefOr[Boolean] = js.native
   
@@ -21,7 +21,7 @@ class NamePart_ () extends Message {
   
   def hasNamePart(): Boolean = js.native
   
-  def setIsExtension(value: Boolean): Unit = js.native
+  def setIsExtension(value: Boolean): NamePart = js.native
   
-  def setNamePart(value: String): Unit = js.native
+  def setNamePart(value: String): NamePart = js.native
 }

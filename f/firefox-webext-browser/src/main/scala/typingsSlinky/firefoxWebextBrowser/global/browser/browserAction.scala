@@ -1,22 +1,22 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.Color
-import typingsSlinky.firefoxWebextBrowser.anon.ImageData
-import typingsSlinky.firefoxWebextBrowser.anon.Popup
-import typingsSlinky.firefoxWebextBrowser.anon.TabId
-import typingsSlinky.firefoxWebextBrowser.anon.Text
 import typingsSlinky.firefoxWebextBrowser.browser.browserAction.ColorArray
 import typingsSlinky.firefoxWebextBrowser.browser.browserAction.Details
 import typingsSlinky.firefoxWebextBrowser.browser.browserAction.OnClickData
+import typingsSlinky.firefoxWebextBrowser.browser.browserAction.SetBadgeBackgroundColorDetails
+import typingsSlinky.firefoxWebextBrowser.browser.browserAction.SetBadgeTextColorDetails
+import typingsSlinky.firefoxWebextBrowser.browser.browserAction.SetBadgeTextDetails
+import typingsSlinky.firefoxWebextBrowser.browser.browserAction.SetIconDetails
+import typingsSlinky.firefoxWebextBrowser.browser.browserAction.SetPopupDetails
+import typingsSlinky.firefoxWebextBrowser.browser.browserAction.SetTitleDetails
 import typingsSlinky.firefoxWebextBrowser.browser.tabs.Tab
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Use browser actions to put icons in the main browser toolbar, to the right of the address bar. In addition to its
-  * icon, a browser action can also have a tooltip, a badge, and a popup.
+  * Use browser actions to put icons in the main browser toolbar, to the right of the address bar. In addition to its icon, a browser action can also have a tooltip, a badge, and a popup.
   *
   * Manifest keys: `browser_action`
   *
@@ -44,8 +44,7 @@ object browserAction extends js.Object {
   def getBadgeBackgroundColor(details: Details): js.Promise[ColorArray] = js.native
   
   /**
-    * Gets the badge text of the browser action. If no tab nor window is specified is specified, the global badge text
-    * is returned.
+    * Gets the badge text of the browser action. If no tab nor window is specified is specified, the global badge text is returned.
     */
   def getBadgeText(details: Details): js.Promise[String] = js.native
   
@@ -72,46 +71,38 @@ object browserAction extends js.Object {
   
   /**
     * Sets the background color for the badge.
-    * @param details Specifies to which tab or window the value should be set, or from which one it should be
-    *     retrieved. If no tab nor window is specified, the global value is set or retrieved.
+    * @param details Specifies to which tab or window the value should be set, or from which one it should be retrieved. If no tab nor window is specified, the global value is set or retrieved.
     */
-  def setBadgeBackgroundColor(details: Color): js.Promise[Unit] = js.native
+  def setBadgeBackgroundColor(details: SetBadgeBackgroundColorDetails): js.Promise[Unit] = js.native
   
   /**
     * Sets the badge text for the browser action. The badge is displayed on top of the icon.
-    * @param details Specifies to which tab or window the value should be set, or from which one it should be
-    *     retrieved. If no tab nor window is specified, the global value is set or retrieved.
+    * @param details Specifies to which tab or window the value should be set, or from which one it should be retrieved. If no tab nor window is specified, the global value is set or retrieved.
     */
-  def setBadgeText(details: Text): js.Promise[Unit] = js.native
+  def setBadgeText(details: SetBadgeTextDetails): js.Promise[Unit] = js.native
   
   /**
     * Sets the text color for the badge.
-    * @param details Specifies to which tab or window the value should be set, or from which one it should be
-    *     retrieved. If no tab nor window is specified, the global value is set or retrieved.
+    * @param details Specifies to which tab or window the value should be set, or from which one it should be retrieved. If no tab nor window is specified, the global value is set or retrieved.
     */
-  def setBadgeTextColor(details: Color): js.Promise[_] = js.native
+  def setBadgeTextColor(details: SetBadgeTextColorDetails): js.Promise[_] = js.native
   
   /**
-    * Sets the icon for the browser action. The icon can be specified either as the path to an image file or as the
-    * pixel data from a canvas element, or as dictionary of either one of those. Either the **path** or the
-    * **imageData** property must be specified.
-    * @param details Specifies to which tab or window the value should be set, or from which one it should be
-    *     retrieved. If no tab nor window is specified, the global value is set or retrieved.
+    * Sets the icon for the browser action. The icon can be specified either as the path to an image file or as the pixel data from a canvas element, or as dictionary of either one of those. Either the **path** or the **imageData** property must be specified.
+    * @param details Specifies to which tab or window the value should be set, or from which one it should be retrieved. If no tab nor window is specified, the global value is set or retrieved.
     */
-  def setIcon(details: ImageData): js.Promise[Unit] = js.native
+  def setIcon(details: SetIconDetails): js.Promise[Unit] = js.native
   
   /**
     * Sets the html document to be opened as a popup when the user clicks on the browser action's icon.
-    * @param details Specifies to which tab or window the value should be set, or from which one it should be
-    *     retrieved. If no tab nor window is specified, the global value is set or retrieved.
+    * @param details Specifies to which tab or window the value should be set, or from which one it should be retrieved. If no tab nor window is specified, the global value is set or retrieved.
     */
-  def setPopup(details: Popup): js.Promise[Unit] = js.native
+  def setPopup(details: SetPopupDetails): js.Promise[Unit] = js.native
   
   /* browserAction functions */
   /**
     * Sets the title of the browser action. This shows up in the tooltip.
-    * @param details Specifies to which tab or window the value should be set, or from which one it should be
-    *     retrieved. If no tab nor window is specified, the global value is set or retrieved.
+    * @param details Specifies to which tab or window the value should be set, or from which one it should be retrieved. If no tab nor window is specified, the global value is set or retrieved.
     */
-  def setTitle(details: TabId): js.Promise[Unit] = js.native
+  def setTitle(details: SetTitleDetails): js.Promise[Unit] = js.native
 }

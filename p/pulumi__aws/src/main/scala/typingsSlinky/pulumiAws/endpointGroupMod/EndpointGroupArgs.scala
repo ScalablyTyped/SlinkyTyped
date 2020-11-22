@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.endpointGroupMod
 
 import typingsSlinky.pulumiAws.inputMod.globalaccelerator.EndpointGroupEndpointConfiguration
+import typingsSlinky.pulumiAws.inputMod.globalaccelerator.EndpointGroupPortOverride
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,14 +25,8 @@ trait EndpointGroupArgs extends js.Object {
     */
   val healthCheckIntervalSeconds: js.UndefOr[Input[Double]] = js.native
   
-  /**
-    * If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
-    */
   val healthCheckPath: js.UndefOr[Input[String]] = js.native
   
-  /**
-    * The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
-    */
   val healthCheckPort: js.UndefOr[Input[Double]] = js.native
   
   /**
@@ -43,6 +38,11 @@ trait EndpointGroupArgs extends js.Object {
     * The Amazon Resource Name (ARN) of the listener.
     */
   val listenerArn: Input[String] = js.native
+  
+  /**
+    * Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
+    */
+  val portOverrides: js.UndefOr[Input[js.Array[Input[EndpointGroupPortOverride]]]] = js.native
   
   /**
     * The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
@@ -118,6 +118,15 @@ object EndpointGroupArgs {
     
     @scala.inline
     def deleteHealthCheckProtocol: Self = this.set("healthCheckProtocol", js.undefined)
+    
+    @scala.inline
+    def setPortOverridesVarargs(value: Input[EndpointGroupPortOverride]*): Self = this.set("portOverrides", js.Array(value :_*))
+    
+    @scala.inline
+    def setPortOverrides(value: Input[js.Array[Input[EndpointGroupPortOverride]]]): Self = this.set("portOverrides", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePortOverrides: Self = this.set("portOverrides", js.undefined)
     
     @scala.inline
     def setThresholdCount(value: Input[Double]): Self = this.set("thresholdCount", value.asInstanceOf[js.Any])

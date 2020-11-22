@@ -18,7 +18,7 @@ trait UpdateWorkspaceImagePermissionRequest extends js.Object {
   var ImageId: WorkspaceImageId = js.native
   
   /**
-    * The identifier of the AWS account to share or unshare the image with.
+    * The identifier of the AWS account to share or unshare the image with.  Before sharing the image, confirm that you are sharing to the correct AWS account ID. 
     */
   var SharedAccountId: AwsAccount = js.native
 }

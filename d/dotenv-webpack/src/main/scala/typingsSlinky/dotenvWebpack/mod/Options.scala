@@ -16,32 +16,38 @@ trait Options extends js.Object {
   
   /**
     * Adds support for dotenv-defaults. If set to `true`, uses `./.env.defaults`. If a `string`, uses that location for a defaults file.
-    * Read more at https://www.npmjs.com/package/dotenv-defaults. Default: `false`.
+    * Read more at {@link https://www.npmjs.com/package/dotenv-defaults}.
+    * @default false
     */
   var defaults: js.UndefOr[Boolean | String] = js.native
   
   /**
-    * Allows your variables to be "expanded" for reusability within your .env file. Default: `false`.
+    * Allows your variables to be "expanded" for reusability within your .env file.
+    * @default false
     */
   var expand: js.UndefOr[Boolean] = js.native
   
   /**
-    * The path to your environment variables. Default: `'./.env'`.
+    * The path to your environment variables.
+    * @default './.env'.
     */
   var path: js.UndefOr[String] = js.native
   
   /**
-    * If `false` ignore safe-mode, if `true` load `'./.env.example'`, if a `string` load that file as the sample. Default: `false`.
+    * If `false` ignore safe-mode, if `true` load `'./.env.example'`, if a `string` load that file as the sample.
+    * @default false
     */
   var safe: js.UndefOr[Boolean | String] = js.native
   
   /**
-    * If `true`, all warnings will be surpressed. Default: `false`.
+    * If `true`, all warnings will be surpressed.
+    * @default false
     */
   var silent: js.UndefOr[Boolean] = js.native
   
   /**
-    * Set to `true` if you would rather load all system variables as well (useful for CI purposes). Default: `false`.
+    * Set to `true` if you would rather load all system variables as well (useful for CI purposes).
+    * @default false
     */
   var systemvars: js.UndefOr[Boolean] = js.native
 }

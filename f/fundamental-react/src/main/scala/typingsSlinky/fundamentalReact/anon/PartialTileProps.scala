@@ -1,5 +1,8 @@
 package typingsSlinky.fundamentalReact.anon
 
+import org.scalajs.dom.raw.HTMLButtonElement
+import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.s
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,21 +11,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PartialTileProps extends js.Object {
   
-  var active: js.UndefOr[Boolean] = js.native
-  
-  var backgroundImage: js.UndefOr[String] = js.native
-  
   var className: js.UndefOr[String] = js.native
   
-  var disableStyles: js.UndefOr[Boolean] = js.native
+  var isDouble: js.UndefOr[Boolean] = js.native
   
-  var disabled: js.UndefOr[Boolean] = js.native
+  var onClick: js.UndefOr[js.Function1[/* event */ SyntheticMouseEvent[HTMLButtonElement], Unit]] = js.native
   
-  var onClick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
-  
-  var productTile: js.UndefOr[Boolean] = js.native
-  
-  var tabIndex: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[s] = js.native
 }
 object PartialTileProps {
   
@@ -48,51 +43,27 @@ object PartialTileProps {
     }
     
     @scala.inline
-    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteActive: Self = this.set("active", js.undefined)
-    
-    @scala.inline
-    def setBackgroundImage(value: String): Self = this.set("backgroundImage", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBackgroundImage: Self = this.set("backgroundImage", js.undefined)
-    
-    @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
-    def setDisableStyles(value: Boolean): Self = this.set("disableStyles", value.asInstanceOf[js.Any])
+    def setIsDouble(value: Boolean): Self = this.set("isDouble", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDisableStyles: Self = this.set("disableStyles", js.undefined)
+    def deleteIsDouble: Self = this.set("isDouble", js.undefined)
     
     @scala.inline
-    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDisabled: Self = this.set("disabled", js.undefined)
-    
-    @scala.inline
-    def setOnClick(value: /* repeated */ js.Any => _): Self = this.set("onClick", js.Any.fromFunction1(value))
+    def setOnClick(value: /* event */ SyntheticMouseEvent[HTMLButtonElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
-    def setProductTile(value: Boolean): Self = this.set("productTile", value.asInstanceOf[js.Any])
+    def setSize(value: s): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteProductTile: Self = this.set("productTile", js.undefined)
-    
-    @scala.inline
-    def setTabIndex(value: Double): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTabIndex: Self = this.set("tabIndex", js.undefined)
+    def deleteSize: Self = this.set("size", js.undefined)
   }
 }

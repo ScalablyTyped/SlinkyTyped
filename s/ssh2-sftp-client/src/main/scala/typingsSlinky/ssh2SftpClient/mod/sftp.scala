@@ -3,13 +3,11 @@ package typingsSlinky.ssh2SftpClient.mod
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.ssh2.mod.ConnectConfig
 import typingsSlinky.ssh2.mod.SFTPWrapper
 import typingsSlinky.ssh2SftpClient.ssh2SftpClientBooleans.`false`
 import typingsSlinky.ssh2SftpClient.ssh2SftpClientStrings.`-_`
 import typingsSlinky.ssh2SftpClient.ssh2SftpClientStrings.d
 import typingsSlinky.ssh2SftpClient.ssh2SftpClientStrings.l
-import typingsSlinky.ssh2Streams.mod.TransferOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +23,7 @@ trait sftp extends js.Object {
   def chmod(remotePath: String, mode: String): js.Promise[String] = js.native
   def chmod(remotePath: String, mode: Double): js.Promise[String] = js.native
   
-  def connect(options: ConnectConfig): js.Promise[SFTPWrapper] = js.native
+  def connect(options: ConnectOptions): js.Promise[SFTPWrapper] = js.native
   
   def cwd(): js.Promise[String] = js.native
   
@@ -38,17 +36,17 @@ trait sftp extends js.Object {
   def exists(remotePath: String): js.Promise[`false` | d | `-_` | l] = js.native
   
   def fastGet(remoteFilePath: String, localPath: String): js.Promise[String] = js.native
-  def fastGet(remoteFilePath: String, localPath: String, options: TransferOptions): js.Promise[String] = js.native
+  def fastGet(remoteFilePath: String, localPath: String, options: FastGetTransferOptions): js.Promise[String] = js.native
   
   def fastPut(localPath: String, remoteFilePath: String): js.Promise[String] = js.native
-  def fastPut(localPath: String, remoteFilePath: String, options: TransferOptions): js.Promise[String] = js.native
+  def fastPut(localPath: String, remoteFilePath: String, options: FastPutTransferOptions): js.Promise[String] = js.native
   
   def get(path: String): js.Promise[String | WritableStream | Buffer] = js.native
-  def get(path: String, dst: js.UndefOr[scala.Nothing], options: TransferOptions): js.Promise[String | WritableStream | Buffer] = js.native
+  def get(path: String, dst: js.UndefOr[scala.Nothing], options: GetTransferOptions): js.Promise[String | WritableStream | Buffer] = js.native
   def get(path: String, dst: String): js.Promise[String | WritableStream | Buffer] = js.native
-  def get(path: String, dst: String, options: TransferOptions): js.Promise[String | WritableStream | Buffer] = js.native
+  def get(path: String, dst: String, options: GetTransferOptions): js.Promise[String | WritableStream | Buffer] = js.native
   def get(path: String, dst: WritableStream): js.Promise[String | WritableStream | Buffer] = js.native
-  def get(path: String, dst: WritableStream, options: TransferOptions): js.Promise[String | WritableStream | Buffer] = js.native
+  def get(path: String, dst: WritableStream, options: GetTransferOptions): js.Promise[String | WritableStream | Buffer] = js.native
   
   def list(remoteFilePath: String): js.Promise[js.Array[FileInfo]] = js.native
   def list(remoteFilePath: String, pattern: String): js.Promise[js.Array[FileInfo]] = js.native
@@ -58,6 +56,8 @@ trait sftp extends js.Object {
   def mkdir(remoteFilePath: String, recursive: Boolean): js.Promise[String] = js.native
   
   def on(event: String, callback: js.Function1[/* repeated */ js.Any, Unit]): Unit = js.native
+  
+  def posixRename(fromPath: String, toPath: String): js.Promise[String] = js.native
   
   def put(input: String, remoteFilePath: String): js.Promise[String] = js.native
   def put(input: String, remoteFilePath: String, options: TransferOptions): js.Promise[String] = js.native

@@ -12,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BootstrapTableProps[T /* <: js.Object */] extends js.Object {
+trait BootstrapTableProps[T /* <: js.Object */, K] extends js.Object {
   
   var bodyClasses: js.UndefOr[String] = js.native
   
@@ -42,7 +42,7 @@ trait BootstrapTableProps[T /* <: js.Object */] extends js.Object {
   
   var defaultSorted: js.UndefOr[js.Array[Order]] = js.native
   
-  var expandRow: js.UndefOr[ExpandRowProps[T]] = js.native
+  var expandRow: js.UndefOr[ExpandRowProps[T, K]] = js.native
   
   var filter: js.UndefOr[js.Any] = js.native
   
@@ -65,7 +65,7 @@ trait BootstrapTableProps[T /* <: js.Object */] extends js.Object {
     */
   var keyField: String = js.native
   
-  var noDataIndication: js.UndefOr[js.Function0[ReactElement | String]] = js.native
+  var noDataIndication: js.UndefOr[(js.Function0[ReactElement | String]) | ReactElement | String] = js.native
   
   /**
     * This callback function will be called only when data size change by search/filter etc.
@@ -113,13 +113,13 @@ trait BootstrapTableProps[T /* <: js.Object */] extends js.Object {
 object BootstrapTableProps {
   
   @scala.inline
-  def apply[T /* <: js.Object */](columns: js.Array[ColumnDescription[_, _]], data: js.Array[_], keyField: String): BootstrapTableProps[T] = {
+  def apply[T /* <: js.Object */, K](columns: js.Array[ColumnDescription[_, _]], data: js.Array[_], keyField: String): BootstrapTableProps[T, K] = {
     val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], keyField = keyField.asInstanceOf[js.Any])
-    __obj.asInstanceOf[BootstrapTableProps[T]]
+    __obj.asInstanceOf[BootstrapTableProps[T, K]]
   }
   
   @scala.inline
-  implicit class BootstrapTablePropsOps[Self <: BootstrapTableProps[_], T /* <: js.Object */] (val x: Self with BootstrapTableProps[T]) extends AnyVal {
+  implicit class BootstrapTablePropsOps[Self <: BootstrapTableProps[_, _], T /* <: js.Object */, K] (val x: Self with (BootstrapTableProps[T, K])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -209,7 +209,7 @@ object BootstrapTableProps {
     def deleteDefaultSorted: Self = this.set("defaultSorted", js.undefined)
     
     @scala.inline
-    def setExpandRow(value: ExpandRowProps[T]): Self = this.set("expandRow", value.asInstanceOf[js.Any])
+    def setExpandRow(value: ExpandRowProps[T, K]): Self = this.set("expandRow", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExpandRow: Self = this.set("expandRow", js.undefined)
@@ -263,7 +263,13 @@ object BootstrapTableProps {
     def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
-    def setNoDataIndication(value: () => ReactElement | String): Self = this.set("noDataIndication", js.Any.fromFunction0(value))
+    def setNoDataIndicationReactElement(value: ReactElement): Self = this.set("noDataIndication", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNoDataIndicationFunction0(value: () => ReactElement | String): Self = this.set("noDataIndication", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setNoDataIndication(value: (js.Function0[ReactElement | String]) | ReactElement | String): Self = this.set("noDataIndication", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNoDataIndication: Self = this.set("noDataIndication", js.undefined)

@@ -3,7 +3,7 @@ package typingsSlinky.antdMobileRn.carouselIndexNativeMod
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.mod.NativeScrollEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import scala.scalajs.js
@@ -30,9 +30,9 @@ trait Carousel
   
   def loopJump(): Unit = js.native
   
-  def onChildLayout(e: LayoutChangeEvent): Unit = js.native
+  def onChildLayout(e: SyntheticEvent[NodeHandle, Layout]): Unit = js.native
   
-  def onLayout(e: LayoutChangeEvent): Unit = js.native
+  def onLayout(e: SyntheticEvent[NodeHandle, Layout]): Unit = js.native
   
   def onScrollBegin(e: SyntheticEvent[NodeHandle, NativeScrollEvent]): Unit = js.native
   

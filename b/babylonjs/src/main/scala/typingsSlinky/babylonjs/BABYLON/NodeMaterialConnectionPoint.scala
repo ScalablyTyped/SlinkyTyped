@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait NodeMaterialConnectionPoint extends js.Object {
   
+  /** @hidden */
+  var _acceptedConnectionPointType: Nullable[NodeMaterialConnectionPoint] = js.native
+  
   var _associatedVariableName: js.Any = js.native
   
   /** @hidden */
@@ -81,6 +84,13 @@ trait NodeMaterialConnectionPoint extends js.Object {
   def connectedPoint: Nullable[NodeMaterialConnectionPoint] = js.native
   
   /**
+    * Creates a block suitable to be used as an input for this input point.
+    * If null is returned, a block based on the point type will be created.
+    * @returns The returned string parameter is the name of the output point of NodeMaterialBlock (first parameter of the returned array) that can be connected to the input
+    */
+  def createCustomInputBlock(): Nullable[js.Tuple2[NodeMaterialBlock, String]] = js.native
+  
+  /**
     * Gets or sets a string indicating that this uniform must be defined under a #ifdef
     */
   var define: String = js.native
@@ -96,6 +106,11 @@ trait NodeMaterialConnectionPoint extends js.Object {
   def disconnectFrom(endpoint: NodeMaterialConnectionPoint): NodeMaterialConnectionPoint = js.native
   
   /**
+    * Gets or sets the connection point name
+    */
+  var displayName: String = js.native
+  
+  /**
     * Release resources
     */
   def dispose(): Unit = js.native
@@ -107,6 +122,11 @@ trait NodeMaterialConnectionPoint extends js.Object {
     * Gets or sets the additional types excluded by this connection point
     */
   var excludedConnectionPointTypes: js.Array[NodeMaterialBlockConnectionPointTypes] = js.native
+  
+  /**
+    * Gets or sets number indicating the position that the port is exposed to on a frame
+    */
+  var exposedPortPosition: Double = js.native
   
   /**
     * Gets the current class name e.g. "NodeMaterialConnectionPoint"
@@ -121,7 +141,7 @@ trait NodeMaterialConnectionPoint extends js.Object {
   def innerType: NodeMaterialBlockConnectionPointTypes = js.native
   
   /**
-    * Gets a boolean indicating that the current point is connected
+    * Gets a boolean indicating that the current point is connected to another NodeMaterialBlock
     */
   def isConnected: Boolean = js.native
   
@@ -137,6 +157,11 @@ trait NodeMaterialConnectionPoint extends js.Object {
   def isConnectedToInputBlock: Boolean = js.native
   
   /**
+    * Gets or sets a boolean indicating that this connection point is exposed on a frame
+    */
+  var isExposedOnFrame: Boolean = js.native
+  
+  /**
     * Gets or sets a boolean indicating that this connection point can be omitted
     */
   var isOptional: Boolean = js.native
@@ -145,6 +170,9 @@ trait NodeMaterialConnectionPoint extends js.Object {
     * Gets or sets the connection point name
     */
   var name: String = js.native
+  
+  /** Indicates that this connection point needs dual validation before being connected to another point */
+  var needDualDirectionValidation: Boolean = js.native
   
   /**
     * Observable triggered when this point is connected
@@ -156,9 +184,11 @@ trait NodeMaterialConnectionPoint extends js.Object {
   
   /**
     * Serializes this point in a JSON representation
+    * @param isInput defines if the connection point is an input (default is true)
     * @returns the serialized point object
     */
   def serialize(): js.Any = js.native
+  def serialize(isInput: Boolean): js.Any = js.native
   
   /** Get the block connected on the other side of this connection (if any) */
   def sourceBlock: Nullable[NodeMaterialBlock] = js.native

@@ -28,6 +28,8 @@ trait ToastAndroidStatic extends js.Object {
   
   /** `gravity` may be ToastAndroid.TOP, ToastAndroid.BOTTOM, ToastAndroid.CENTER */
   def showWithGravity(message: String, duration: Double, gravity: Double): Unit = js.native
+  
+  def showWithGravityAndOffset(message: String, duration: Double, gravity: Double, xOffset: Double, yOffset: Double): Unit = js.native
 }
 object ToastAndroidStatic {
   
@@ -39,9 +41,10 @@ object ToastAndroidStatic {
     SHORT: Double,
     TOP: Double,
     show: (String, Double) => Unit,
-    showWithGravity: (String, Double, Double) => Unit
+    showWithGravity: (String, Double, Double) => Unit,
+    showWithGravityAndOffset: (String, Double, Double, Double, Double) => Unit
   ): ToastAndroidStatic = {
-    val __obj = js.Dynamic.literal(BOTTOM = BOTTOM.asInstanceOf[js.Any], CENTER = CENTER.asInstanceOf[js.Any], LONG = LONG.asInstanceOf[js.Any], SHORT = SHORT.asInstanceOf[js.Any], TOP = TOP.asInstanceOf[js.Any], show = js.Any.fromFunction2(show), showWithGravity = js.Any.fromFunction3(showWithGravity))
+    val __obj = js.Dynamic.literal(BOTTOM = BOTTOM.asInstanceOf[js.Any], CENTER = CENTER.asInstanceOf[js.Any], LONG = LONG.asInstanceOf[js.Any], SHORT = SHORT.asInstanceOf[js.Any], TOP = TOP.asInstanceOf[js.Any], show = js.Any.fromFunction2(show), showWithGravity = js.Any.fromFunction3(showWithGravity), showWithGravityAndOffset = js.Any.fromFunction5(showWithGravityAndOffset))
     __obj.asInstanceOf[ToastAndroidStatic]
   }
   
@@ -80,5 +83,8 @@ object ToastAndroidStatic {
     
     @scala.inline
     def setShowWithGravity(value: (String, Double, Double) => Unit): Self = this.set("showWithGravity", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setShowWithGravityAndOffset(value: (String, Double, Double, Double, Double) => Unit): Self = this.set("showWithGravityAndOffset", js.Any.fromFunction5(value))
   }
 }

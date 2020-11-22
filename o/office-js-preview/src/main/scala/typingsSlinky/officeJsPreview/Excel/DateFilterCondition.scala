@@ -11,8 +11,7 @@ sealed trait DateFilterCondition extends js.Object
   * Enum representing all accepted conditions by which a date filter can be applied.
   Used to configure the type of PivotFilter that is applied to the field.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @JSGlobal("Excel.DateFilterCondition")
 @js.native

@@ -11,13 +11,15 @@ trait ParseSourceSpan extends js.Object {
   
   var end: js.Any = js.native
   
+  var fullStart: js.Any = js.native
+  
   var start: js.Any = js.native
 }
 object ParseSourceSpan {
   
   @scala.inline
-  def apply(details: js.Any, end: js.Any, start: js.Any): ParseSourceSpan = {
-    val __obj = js.Dynamic.literal(details = details.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+  def apply(details: js.Any, end: js.Any, fullStart: js.Any, start: js.Any): ParseSourceSpan = {
+    val __obj = js.Dynamic.literal(details = details.asInstanceOf[js.Any], end = end.asInstanceOf[js.Any], fullStart = fullStart.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParseSourceSpan]
   }
   
@@ -41,6 +43,9 @@ object ParseSourceSpan {
     
     @scala.inline
     def setEnd(value: js.Any): Self = this.set("end", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFullStart(value: js.Any): Self = this.set("fullStart", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStart(value: js.Any): Self = this.set("start", value.asInstanceOf[js.Any])

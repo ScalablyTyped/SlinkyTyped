@@ -20,18 +20,18 @@ trait String
   extends /* index */ NumberDictionary[java.lang.String] {
   
   /**
-    * Returns an <a> HTML anchor element and sets the name attribute to the text value
+    * Returns an `<a>` HTML anchor element and sets the name attribute to the text value
     * @param name
     */
   def anchor(name: java.lang.String): java.lang.String = js.native
   
-  /** Returns a <big> HTML element */
+  /** Returns a `<big>` HTML element */
   def big(): java.lang.String = js.native
   
-  /** Returns a <blink> HTML element */
+  /** Returns a `<blink>` HTML element */
   def blink(): java.lang.String = js.native
   
-  /** Returns a <b> HTML element */
+  /** Returns a `<b>` HTML element */
   def bold(): java.lang.String = js.native
   
   /**
@@ -69,15 +69,15 @@ trait String
   def endsWith(searchString: java.lang.String): scala.Boolean = js.native
   def endsWith(searchString: java.lang.String, endPosition: Double): scala.Boolean = js.native
   
-  /** Returns a <tt> HTML element */
+  /** Returns a `<tt>` HTML element */
   def fixed(): java.lang.String = js.native
   
-  /** Returns a <font> HTML element and sets the color attribute value */
+  /** Returns a `<font>` HTML element and sets the color attribute value */
   def fontcolor(color: java.lang.String): java.lang.String = js.native
   
-  /** Returns a <font> HTML element and sets the size attribute value */
+  /** Returns a `<font>` HTML element and sets the size attribute value */
   def fontsize(size: java.lang.String): java.lang.String = js.native
-  /** Returns a <font> HTML element and sets the size attribute value */
+  /** Returns a `<font>` HTML element and sets the size attribute value */
   def fontsize(size: Double): java.lang.String = js.native
   
   /**
@@ -98,7 +98,7 @@ trait String
   def indexOf(searchString: java.lang.String): Double = js.native
   def indexOf(searchString: java.lang.String, position: Double): Double = js.native
   
-  /** Returns an <i> HTML element */
+  /** Returns an `<i>` HTML element */
   def italics(): java.lang.String = js.native
   
   /** Iterator */
@@ -116,7 +116,7 @@ trait String
   /** Returns the length of a String object. */
   val length: Double = js.native
   
-  /** Returns an <a> HTML element and sets the href attribute value */
+  /** Returns an `<a>` HTML element and sets the href attribute value */
   def link(url: java.lang.String): java.lang.String = js.native
   
   /**
@@ -288,7 +288,7 @@ trait String
   def slice(start: Double): java.lang.String = js.native
   def slice(start: Double, end: Double): java.lang.String = js.native
   
-  /** Returns a <small> HTML element */
+  /** Returns a `<small>` HTML element */
   def small(): java.lang.String = js.native
   
   /**
@@ -316,10 +316,10 @@ trait String
   def startsWith(searchString: java.lang.String): scala.Boolean = js.native
   def startsWith(searchString: java.lang.String, position: Double): scala.Boolean = js.native
   
-  /** Returns a <strike> HTML element */
+  /** Returns a `<strike>` HTML element */
   def strike(): java.lang.String = js.native
   
-  /** Returns a <sub> HTML element */
+  /** Returns a `<sub>` HTML element */
   def sub(): java.lang.String = js.native
   
   // IE extensions
@@ -340,7 +340,7 @@ trait String
   def substring(start: Double): java.lang.String = js.native
   def substring(start: Double, end: Double): java.lang.String = js.native
   
-  /** Returns a <sup> HTML element */
+  /** Returns a `<sup>` HTML element */
   def sup(): java.lang.String = js.native
   
   /** Converts all alphabetic characters to lowercase, taking into account the host environment's current locale. */

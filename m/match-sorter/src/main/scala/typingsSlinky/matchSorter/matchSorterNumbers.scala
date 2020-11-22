@@ -30,12 +30,6 @@ object matchSorterNumbers {
   @scala.inline
   def `7`: `7` = 7.asInstanceOf[`7`]
   
-  @scala.inline
-  def `8`: `8` = 8.asInstanceOf[`8`]
-  
-  @scala.inline
-  def `9`: `9` = 9.asInstanceOf[`9`]
-  
   @js.native
   sealed trait `0` extends js.Object
   
@@ -59,10 +53,4 @@ object matchSorterNumbers {
   
   @js.native
   sealed trait `7` extends js.Object
-  
-  @js.native
-  sealed trait `8` extends js.Object
-  
-  @js.native
-  sealed trait `9` extends js.Object
 }

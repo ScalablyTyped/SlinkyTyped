@@ -81,6 +81,11 @@ trait RequestOptions extends js.Object {
   var json: js.UndefOr[Boolean] = js.native
   
   /**
+    * IP address. Passed to http/https request. Local interface from which the request should be emitted.
+    */
+  var localAddress: js.UndefOr[String] = js.native
+  
+  /**
     * Enables multipart/form-data encoding. Defaults to false.
     * Use it when uploading files.
     */
@@ -111,6 +116,12 @@ trait RequestOptions extends js.Object {
   var read_timeout: js.UndefOr[Double] = js.native
   
   /**
+    * Returns error if no response headers are received in X milisecs,
+    * counting from when the connection is opened. Defaults to `0` (no response timeout).
+    */
+  var response_timeout: js.UndefOr[Double] = js.native
+  
+  /**
     * When sending streams, this lets manually set the Content-Length header
     * --if the stream's bytecount is known beforehand--,
     * preventing ECONNRESET (socket hang up) errors on some servers that misbehave
@@ -125,6 +136,12 @@ trait RequestOptions extends js.Object {
     * Alias for open_timeout
     */
   var timeout: js.UndefOr[Double] = js.native
+  
+  /**
+    * Anonymous function taking request (or redirect location if following redirects) URI as an argument and modifying it given logic.
+    * It has to return a valid URI string for successful request.
+    */
+  var uri_modifier: js.UndefOr[js.Function1[/* uri */ String, String]] = js.native
   
   /**
     * Sets the 'User-Agent' HTTP header.
@@ -228,6 +245,12 @@ object RequestOptions {
     def deleteJson: Self = this.set("json", js.undefined)
     
     @scala.inline
+    def setLocalAddress(value: String): Self = this.set("localAddress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocalAddress: Self = this.set("localAddress", js.undefined)
+    
+    @scala.inline
     def setMultipart(value: Boolean): Self = this.set("multipart", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -258,6 +281,12 @@ object RequestOptions {
     def deleteRead_timeout: Self = this.set("read_timeout", js.undefined)
     
     @scala.inline
+    def setResponse_timeout(value: Double): Self = this.set("response_timeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResponse_timeout: Self = this.set("response_timeout", js.undefined)
+    
+    @scala.inline
     def setStream_length(value: Double): Self = this.set("stream_length", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -268,6 +297,12 @@ object RequestOptions {
     
     @scala.inline
     def deleteTimeout: Self = this.set("timeout", js.undefined)
+    
+    @scala.inline
+    def setUri_modifier(value: /* uri */ String => String): Self = this.set("uri_modifier", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteUri_modifier: Self = this.set("uri_modifier", js.undefined)
     
     @scala.inline
     def setUser_agent(value: String): Self = this.set("user_agent", value.asInstanceOf[js.Any])

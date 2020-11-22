@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.materialsIndexMod
 
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,9 +16,9 @@ class BaseTexture protected ()
     * Base class of all the textures in babylon.
     * It groups all the common properties the materials, post process, lights... might need
     * in order to make a correct use of the texture.
-    * @param scene Define the scene the texture blongs to
+    * @param sceneOrEngine Define the scene or engine the texture blongs to
     */
-  def this(scene: Nullable[Scene]) = this()
+  def this(sceneOrEngine: Nullable[Scene | ThinEngine]) = this()
 }
 /* static members */
 @JSImport("babylonjs/Materials/index", "BaseTexture")
@@ -39,4 +40,6 @@ object BaseTexture extends js.Object {
     textures: js.Array[typingsSlinky.babylonjs.baseTextureMod.BaseTexture],
     callback: js.Function0[Unit]
   ): Unit = js.native
+  
+  var _isScene: js.Any = js.native
 }

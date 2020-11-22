@@ -1,5 +1,6 @@
 package typingsSlinky.jose.mod.JWS
 
+import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +12,7 @@ trait FlattenedJWS
 object FlattenedJWS {
   
   @scala.inline
-  def apply(payload: String, signature: String): FlattenedJWS = {
+  def apply(payload: String | Buffer, signature: String): FlattenedJWS = {
     val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any], signature = signature.asInstanceOf[js.Any])
     __obj.asInstanceOf[FlattenedJWS]
   }

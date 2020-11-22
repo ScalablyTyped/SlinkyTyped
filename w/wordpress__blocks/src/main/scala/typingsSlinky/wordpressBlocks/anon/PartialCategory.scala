@@ -1,7 +1,6 @@
 package typingsSlinky.wordpressBlocks.anon
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PartialCategory extends js.Object {
   
-  var icon: js.UndefOr[ReactElement | Icon | Null] = js.native
+  var icon: js.UndefOr[
+    ReactElement | typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon | Null
+  ] = js.native
   
   var slug: js.UndefOr[String] = js.native
   
@@ -43,7 +44,7 @@ object PartialCategory {
     def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIcon(value: ReactElement | Icon): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ReactElement | typingsSlinky.wordpressComponents.dashiconMod.Dashicon.Icon): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)

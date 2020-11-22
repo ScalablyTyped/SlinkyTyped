@@ -20,6 +20,11 @@ trait FreeCameraTouchInput extends ICameraInput[FreeCamera] {
   var _pointerPressed: js.Any = js.native
   
   /**
+    * Define if mouse events can be treated as touch events
+    */
+  var allowMouse: Boolean = js.native
+  
+  /**
     * Defines the camera the input is attached to.
     */
   @JSName("camera")

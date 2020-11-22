@@ -13,12 +13,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class MarkerClusterGroup_ ()
   extends FeatureGroup_[js.Any] {
+  def this(options: MarkerClusterGroupOptions) = this()
   
   /*
     * Bulk methods for adding and removing markers and should be favoured over the
     * single versions when doing bulk addition/removal of markers.
     */
   def addLayers(layers: js.Array[Layer]): this.type = js.native
+  def addLayers(layers: js.Array[Layer], skipLayerAddEvent: Boolean): this.type = js.native
   
   /*
     * Returns the array of total markers contained within that cluster.

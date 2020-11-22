@@ -53,7 +53,7 @@ trait SpotFleetLaunchSpecification extends js.Object {
   var Monitoring: js.UndefOr[SpotFleetMonitoring] = js.native
   
   /**
-    * One or more network interfaces. If you specify a network interface, you must specify subnet IDs and security group IDs using the network interface.
+    * One or more network interfaces. If you specify a network interface, you must specify subnet IDs and security group IDs using the network interface.   SpotFleetLaunchSpecification currently does not support Elastic Fabric Adapter (EFA). To specify an EFA, you must use LaunchTemplateConfig. 
     */
   var NetworkInterfaces: js.UndefOr[InstanceNetworkInterfaceSpecificationList] = js.native
   

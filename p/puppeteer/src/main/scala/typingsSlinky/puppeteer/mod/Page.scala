@@ -1,7 +1,7 @@
 package typingsSlinky.puppeteer.mod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.eventsMod.EventEmitter
+import typingsSlinky.puppeteer.anon.IsScreenUnlocked
 import typingsSlinky.puppeteer.puppeteerStrings.close
 import typingsSlinky.puppeteer.puppeteerStrings.console
 import typingsSlinky.puppeteer.puppeteerStrings.dialog
@@ -26,8 +26,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait Page
-  extends EventEmitter
-     with FrameBase {
+  extends FrameBase
+     with EventEmitter {
   
   var accessibility: Accessibility = js.native
   
@@ -67,6 +67,29 @@ trait Page
   
   /** Emulates given device metrics and user agent. This method is a shortcut for `setUserAgent` and `setViewport`.  */
   def emulate(options: EmulateOptions): js.Promise[Unit] = js.native
+  
+  /**
+    * Emulates the idle state.
+    * If no arguments set, clears idle state emulation.
+    *
+    * @example
+    * ```js
+    * // set idle emulation
+    * await page.emulateIdleState({isUserActive: true, isScreenUnlocked: false});
+    *
+    * // do some checks here
+    * ...
+    *
+    * // clear idle emulation
+    * await page.emulateIdleState();
+    * ```
+    *
+    * @param overrides Mock idle state. If not set, clears idle overrides
+    * @param isUserActive Mock isUserActive
+    * @param isScreenUnlocked Mock isScreenUnlocked
+    */
+  def emulateIdleState(): js.Promise[Unit] = js.native
+  def emulateIdleState(overrides: IsScreenUnlocked): js.Promise[Unit] = js.native
   
   /**
     * Given an array of media feature objects, emulates CSS media features on the page.
@@ -123,6 +146,11 @@ trait Page
   
   /** Indicates that the page has been closed. */
   def isClosed(): Boolean = js.native
+  
+  /**
+    * @returns `true` if the page has JavaScript enabled, `false` otherwise.
+    */
+  def isJavaScriptEnabled(): Boolean = js.native
   
   /** Returns the virtual keyboard. */
   var keyboard: Keyboard = js.native

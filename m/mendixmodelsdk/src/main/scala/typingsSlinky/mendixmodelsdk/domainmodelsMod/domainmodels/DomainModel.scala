@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -12,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/domain-model relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/domain-model relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -51,9 +50,6 @@ class DomainModel protected () extends ModuleDocument {
   def entities: IList[Entity] = js.native
   @JSName("entities")
   val entities_FDomainModel: IList[IEntity] = js.native
-  
-  @JSName("model")
-  var model_FDomainModel: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.DomainModel")

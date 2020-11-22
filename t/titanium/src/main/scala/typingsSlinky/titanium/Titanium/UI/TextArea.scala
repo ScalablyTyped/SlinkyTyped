@@ -100,7 +100,7 @@ trait TextArea extends View {
   /**
     * Color of the text in this text area, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   /**
     * Determines whether this field can be edited.
@@ -180,6 +180,11 @@ trait TextArea extends View {
   def focus(): Unit = js.native
   
   /**
+    * Determines whether this TextArea has focus.
+    */
+  val focused: Boolean = js.native
+  
+  /**
     * Font to use for text.
     */
   var font: Font = js.native
@@ -235,7 +240,7 @@ trait TextArea extends View {
     * Gets the value of the <Titanium.UI.TextArea.color> property.
     * @deprecated Access <Titanium.UI.TextArea.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TextArea.editable> property.
@@ -254,6 +259,12 @@ trait TextArea extends View {
     * @deprecated Access <Titanium.UI.TextArea.enableReturnKey> instead.
     */
   def getEnableReturnKey(): Boolean = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.TextArea.focused> property.
+    * @deprecated Access <Titanium.UI.TextArea.focused> instead.
+    */
+  def getFocused(): Boolean = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TextArea.font> property.
@@ -307,7 +318,7 @@ trait TextArea extends View {
     * Gets the value of the <Titanium.UI.TextArea.keyboardToolbarColor> property.
     * @deprecated Access <Titanium.UI.TextArea.keyboardToolbarColor> instead.
     */
-  def getKeyboardToolbarColor(): String = js.native
+  def getKeyboardToolbarColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TextArea.keyboardToolbarHeight> property.
@@ -438,7 +449,7 @@ trait TextArea extends View {
   /**
     * Color of the keyboard toolbar if keyboardToolbar is an array, as a color name or hex triplet.
     */
-  var keyboardToolbarColor: String = js.native
+  var keyboardToolbarColor: String | Color = js.native
   
   /**
     * Height of the keyboard toolbar if keyboardToolbar is an array.
@@ -560,6 +571,7 @@ trait TextArea extends View {
     * @deprecated Set the value using <Titanium.UI.TextArea.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TextArea.editable> property.
@@ -634,6 +646,7 @@ trait TextArea extends View {
     * @deprecated Set the value using <Titanium.UI.TextArea.keyboardToolbarColor> instead.
     */
   def setKeyboardToolbarColor(keyboardToolbarColor: String): Unit = js.native
+  def setKeyboardToolbarColor(keyboardToolbarColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TextArea.keyboardToolbarHeight> property.

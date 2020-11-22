@@ -13,12 +13,12 @@ trait AttributeFilter extends js.Object {
   var AndAllFilters: js.UndefOr[AttributeFilterList] = js.native
   
   /**
-    * Returns true when a document contains all of the specified document attributes. This filter is only appicable to StringListValue metadata.
+    * Returns true when a document contains all of the specified document attributes. This filter is only applicable to StringListValue metadata.
     */
   var ContainsAll: js.UndefOr[DocumentAttribute] = js.native
   
   /**
-    * Returns true when a document contains any of the specified document attributes.This filter is only appicable to StringListValue metadata.
+    * Returns true when a document contains any of the specified document attributes. This filter is only applicable to StringListValue metadata.
     */
   var ContainsAny: js.UndefOr[DocumentAttribute] = js.native
   

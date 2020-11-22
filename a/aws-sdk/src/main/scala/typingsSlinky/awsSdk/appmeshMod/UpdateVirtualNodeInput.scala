@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateVirtualNodeInput extends js.Object {
   
   /**
-    * Unique, case-sensitive identifier that you provide to ensure the idempotency of the
-  request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
+    * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
     */
   var clientToken: js.UndefOr[String] = js.native
   
@@ -19,8 +18,7 @@ trait UpdateVirtualNodeInput extends js.Object {
   var meshName: ResourceName = js.native
   
   /**
-    * The AWS IAM account ID of the service mesh owner. If the account ID is not your own, then it's
-    the ID of the account that shared the mesh with your account. For more information about mesh sharing, see Working with shared meshes.
+    * The AWS IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see Working with shared meshes.
     */
   var meshOwner: js.UndefOr[AccountId] = js.native
   

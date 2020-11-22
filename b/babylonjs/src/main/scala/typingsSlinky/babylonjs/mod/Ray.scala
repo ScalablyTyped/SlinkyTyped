@@ -65,16 +65,14 @@ object Ray extends js.Object {
     * @returns the new ray
     */
   def CreateNewFromTo(
-    origin: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
-    end: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3]
+    origin: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    end: typingsSlinky.babylonjs.mathVectorMod.Vector3
   ): typingsSlinky.babylonjs.rayMod.Ray = js.native
   def CreateNewFromTo(
-    origin: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
-    end: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Vector3],
+    origin: typingsSlinky.babylonjs.mathVectorMod.Vector3,
+    end: typingsSlinky.babylonjs.mathVectorMod.Vector3,
     world: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]
   ): typingsSlinky.babylonjs.rayMod.Ray = js.native
-  
-  val TmpVector3: js.Any = js.native
   
   /**
     * Transforms a ray by a matrix
@@ -104,6 +102,8 @@ object Ray extends js.Object {
     * @returns the new ray
     */
   def Zero(): typingsSlinky.babylonjs.rayMod.Ray = js.native
+  
+  val _TmpVector3: js.Any = js.native
   
   var rayl: js.Any = js.native
   

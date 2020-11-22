@@ -13,5 +13,7 @@ class Application ()
 @js.native
 object Application extends js.Object {
   
+  var SUPPORTED_TS_VERSION: String = js.native
+  
   var VERSION: String = js.native
 }

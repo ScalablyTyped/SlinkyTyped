@@ -1,7 +1,7 @@
 
 # Scala.js typings for postcss-less
 
-Typings are for version 3.1
+Typings are for version 4.0
 
 ## Library description:
 LESS parser for PostCSS

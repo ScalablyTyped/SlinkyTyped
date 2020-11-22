@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /**
   * Handles displaying chart's container in the fullscreen mode.
+  *
+  * **Note**: Fullscreen is not supported on iPhone due to iOS limitations.
   */
 @js.native
 trait Fullscreen extends js.Object {

@@ -5,11 +5,13 @@ import typingsSlinky.reachRouter.mod.NavigateFn
 import typingsSlinky.reachRouter.mod.WindowLocation
 import typingsSlinky.storybookApi.layoutMod.Layout
 import typingsSlinky.storybookApi.layoutMod.UI
+import typingsSlinky.storybookApi.mod.Args
+import typingsSlinky.storybookApi.modulesStoriesMod.ViewMode
 import typingsSlinky.storybookApi.notificationsMod.Notification
+import typingsSlinky.storybookApi.refsMod.Refs
+import typingsSlinky.storybookApi.settingsMod.Settings
 import typingsSlinky.storybookApi.shortcutsMod.Shortcuts
 import typingsSlinky.storybookApi.storiesMod.StoriesHash
-import typingsSlinky.storybookApi.storiesMod.StoryId
-import typingsSlinky.storybookApi.storiesMod.ViewMode
 import typingsSlinky.storybookApi.urlMod.QueryParams
 import typingsSlinky.storybookApi.versionsMod.UnknownEntries
 import typingsSlinky.storybookApi.versionsMod.Versions
@@ -24,9 +26,9 @@ trait Patch extends js.Object {
   
   var customQueryParams: js.UndefOr[QueryParams] = js.native
   
-  var default: js.UndefOr[Boolean] = js.native
-  
   var dismissedVersionNotification: js.UndefOr[String] = js.native
+  
+  var globals: js.UndefOr[Args] = js.native
   
   var lastVersionCheck: js.UndefOr[Double] = js.native
   
@@ -40,21 +42,31 @@ trait Patch extends js.Object {
   
   var path: js.UndefOr[String] = js.native
   
+  var refId: js.UndefOr[String] = js.native
+  
+  var refs: js.UndefOr[Refs] = js.native
+  
+  var releaseNotesViewed: js.UndefOr[js.Array[String]] = js.native
+  
   var selectedPanel: js.UndefOr[String] = js.native
+  
+  var settings: js.UndefOr[Settings] = js.native
   
   var shortcuts: js.UndefOr[Shortcuts] = js.native
   
   var storiesConfigured: js.UndefOr[Boolean] = js.native
   
+  var storiesFailed: js.UndefOr[js.Error] = js.native
+  
   var storiesHash: js.UndefOr[StoriesHash] = js.native
   
-  var storyId: js.UndefOr[StoryId] = js.native
+  var storyId: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify StoryId */ js.Any
+  ] = js.native
   
   var theme: js.UndefOr[ThemeVars] = js.native
   
   var ui: js.UndefOr[UI] = js.native
-  
-  var uri: js.UndefOr[String] = js.native
   
   var versions: js.UndefOr[Versions with UnknownEntries] = js.native
   
@@ -90,16 +102,16 @@ object Patch {
     def deleteCustomQueryParams: Self = this.set("customQueryParams", js.undefined)
     
     @scala.inline
-    def setDefault(value: Boolean): Self = this.set("default", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDefault: Self = this.set("default", js.undefined)
-    
-    @scala.inline
     def setDismissedVersionNotification(value: String): Self = this.set("dismissedVersionNotification", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDismissedVersionNotification: Self = this.set("dismissedVersionNotification", js.undefined)
+    
+    @scala.inline
+    def setGlobals(value: Args): Self = this.set("globals", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGlobals: Self = this.set("globals", js.undefined)
     
     @scala.inline
     def setLastVersionCheck(value: Double): Self = this.set("lastVersionCheck", value.asInstanceOf[js.Any])
@@ -141,10 +153,37 @@ object Patch {
     def deletePath: Self = this.set("path", js.undefined)
     
     @scala.inline
+    def setRefId(value: String): Self = this.set("refId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRefId: Self = this.set("refId", js.undefined)
+    
+    @scala.inline
+    def setRefs(value: Refs): Self = this.set("refs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRefs: Self = this.set("refs", js.undefined)
+    
+    @scala.inline
+    def setReleaseNotesViewedVarargs(value: String*): Self = this.set("releaseNotesViewed", js.Array(value :_*))
+    
+    @scala.inline
+    def setReleaseNotesViewed(value: js.Array[String]): Self = this.set("releaseNotesViewed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReleaseNotesViewed: Self = this.set("releaseNotesViewed", js.undefined)
+    
+    @scala.inline
     def setSelectedPanel(value: String): Self = this.set("selectedPanel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSelectedPanel: Self = this.set("selectedPanel", js.undefined)
+    
+    @scala.inline
+    def setSettings(value: Settings): Self = this.set("settings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSettings: Self = this.set("settings", js.undefined)
     
     @scala.inline
     def setShortcuts(value: Shortcuts): Self = this.set("shortcuts", value.asInstanceOf[js.Any])
@@ -159,13 +198,21 @@ object Patch {
     def deleteStoriesConfigured: Self = this.set("storiesConfigured", js.undefined)
     
     @scala.inline
+    def setStoriesFailed(value: js.Error): Self = this.set("storiesFailed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStoriesFailed: Self = this.set("storiesFailed", js.undefined)
+    
+    @scala.inline
     def setStoriesHash(value: StoriesHash): Self = this.set("storiesHash", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStoriesHash: Self = this.set("storiesHash", js.undefined)
     
     @scala.inline
-    def setStoryId(value: StoryId): Self = this.set("storyId", value.asInstanceOf[js.Any])
+    def setStoryId(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify StoryId */ js.Any
+    ): Self = this.set("storyId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStoryId: Self = this.set("storyId", js.undefined)
@@ -181,12 +228,6 @@ object Patch {
     
     @scala.inline
     def deleteUi: Self = this.set("ui", js.undefined)
-    
-    @scala.inline
-    def setUri(value: String): Self = this.set("uri", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUri: Self = this.set("uri", js.undefined)
     
     @scala.inline
     def setVersions(value: Versions with UnknownEntries): Self = this.set("versions", value.asInstanceOf[js.Any])

@@ -17,7 +17,7 @@ trait SupportingWidgetDefaultsFeatureTemplates extends Object {
   var filterEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * Aids in managing various template items and how they display within the widget. Please refer to [groupBy API reference](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates.html#groupBy) for additional information.
+    * Aids in managing various template items and how they display within the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#SupportingWidgetDefaults)
     */

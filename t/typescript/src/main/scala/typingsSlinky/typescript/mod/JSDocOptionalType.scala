@@ -11,7 +11,7 @@ trait JSDocOptionalType
      with JSDocTypeReferencingNode {
   
   @JSName("kind")
-  var kind_JSDocOptionalType: typingsSlinky.typescript.mod.SyntaxKind.JSDocOptionalType = js.native
+  val kind_JSDocOptionalType: typingsSlinky.typescript.mod.SyntaxKind.JSDocOptionalType = js.native
   
-  var `type`: TypeNode = js.native
+  val `type`: TypeNode = js.native
 }

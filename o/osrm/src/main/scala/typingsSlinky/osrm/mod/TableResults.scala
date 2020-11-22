@@ -9,6 +9,8 @@ trait TableResults extends js.Object {
   
   var destinations: js.Array[Waypoint] = js.native
   
+  var distances: js.UndefOr[js.Array[js.Array[Distance]]] = js.native
+  
   var durations: js.Array[js.Array[Duration]] = js.native
   
   var sources: js.Array[Waypoint] = js.native
@@ -57,5 +59,14 @@ object TableResults {
     
     @scala.inline
     def setSources(value: js.Array[Waypoint]): Self = this.set("sources", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDistancesVarargs(value: js.Array[Distance]*): Self = this.set("distances", js.Array(value :_*))
+    
+    @scala.inline
+    def setDistances(value: js.Array[js.Array[Distance]]): Self = this.set("distances", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDistances: Self = this.set("distances", js.undefined)
   }
 }

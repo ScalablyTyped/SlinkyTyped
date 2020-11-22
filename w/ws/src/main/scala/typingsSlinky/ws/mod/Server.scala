@@ -47,7 +47,7 @@ class Server () extends EventEmitter {
     request: IncomingMessage,
     socket: Socket,
     upgradeHead: Buffer,
-    callback: js.Function1[/* client */ WebSocket, Unit]
+    callback: js.Function2[/* client */ WebSocket, /* request */ IncomingMessage, Unit]
   ): Unit = js.native
   
   def off(event: String, listener: js.ThisFunction1[/* this */ this.type, /* repeated */ js.Any, Unit]): this.type = js.native

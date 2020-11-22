@@ -18,7 +18,7 @@ trait AlignItemsProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.
     */
   var alignItems: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignItemsProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignItems */ _, 
       ThemeType
     ]
   ] = js.native
@@ -52,7 +52,7 @@ object AlignItemsProps {
     @scala.inline
     def setAlignItems(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignItemsProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignItems */ _, 
           ThemeType
         ]
     ): Self = this.set("alignItems", value.asInstanceOf[js.Any])

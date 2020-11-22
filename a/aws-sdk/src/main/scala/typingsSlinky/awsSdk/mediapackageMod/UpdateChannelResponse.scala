@@ -17,12 +17,16 @@ trait UpdateChannelResponse extends js.Object {
     */
   var Description: js.UndefOr[string] = js.native
   
+  var EgressAccessLogs: js.UndefOr[typingsSlinky.awsSdk.mediapackageMod.EgressAccessLogs] = js.native
+  
   var HlsIngest: js.UndefOr[typingsSlinky.awsSdk.mediapackageMod.HlsIngest] = js.native
   
   /**
     * The ID of the Channel.
     */
   var Id: js.UndefOr[string] = js.native
+  
+  var IngressAccessLogs: js.UndefOr[typingsSlinky.awsSdk.mediapackageMod.IngressAccessLogs] = js.native
   
   var Tags: js.UndefOr[typingsSlinky.awsSdk.mediapackageMod.Tags] = js.native
 }
@@ -62,6 +66,12 @@ object UpdateChannelResponse {
     def deleteDescription: Self = this.set("Description", js.undefined)
     
     @scala.inline
+    def setEgressAccessLogs(value: EgressAccessLogs): Self = this.set("EgressAccessLogs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEgressAccessLogs: Self = this.set("EgressAccessLogs", js.undefined)
+    
+    @scala.inline
     def setHlsIngest(value: HlsIngest): Self = this.set("HlsIngest", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -72,6 +82,12 @@ object UpdateChannelResponse {
     
     @scala.inline
     def deleteId: Self = this.set("Id", js.undefined)
+    
+    @scala.inline
+    def setIngressAccessLogs(value: IngressAccessLogs): Self = this.set("IngressAccessLogs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIngressAccessLogs: Self = this.set("IngressAccessLogs", js.undefined)
     
     @scala.inline
     def setTags(value: Tags): Self = this.set("Tags", value.asInstanceOf[js.Any])

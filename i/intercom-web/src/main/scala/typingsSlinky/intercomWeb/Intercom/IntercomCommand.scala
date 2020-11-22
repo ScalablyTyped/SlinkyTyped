@@ -18,6 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.intercomWeb.intercomWebStrings.onActivatorClick
   - typingsSlinky.intercomWeb.intercomWebStrings.trackEvent
   - typingsSlinky.intercomWeb.intercomWebStrings.getVisitorId
+  - typingsSlinky.intercomWeb.intercomWebStrings.startTour
 */
 trait IntercomCommand extends js.Object
 object IntercomCommand {
@@ -54,6 +55,9 @@ object IntercomCommand {
   
   @scala.inline
   def shutdown: typingsSlinky.intercomWeb.intercomWebStrings.shutdown = "shutdown".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.shutdown]
+  
+  @scala.inline
+  def startTour: typingsSlinky.intercomWeb.intercomWebStrings.startTour = "startTour".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.startTour]
   
   @scala.inline
   def trackEvent: typingsSlinky.intercomWeb.intercomWebStrings.trackEvent = "trackEvent".asInstanceOf[typingsSlinky.intercomWeb.intercomWebStrings.trackEvent]

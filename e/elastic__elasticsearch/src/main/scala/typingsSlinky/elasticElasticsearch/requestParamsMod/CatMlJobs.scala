@@ -26,6 +26,8 @@ trait CatMlJobs extends Generic {
   
   var allow_no_jobs: js.UndefOr[Boolean] = js.native
   
+  var allow_no_match: js.UndefOr[Boolean] = js.native
+  
   var bytes: js.UndefOr[b | k | kb | m | mb | g | gb | t | tb | p | pb] = js.native
   
   var format: js.UndefOr[String] = js.native
@@ -70,6 +72,12 @@ object CatMlJobs {
     
     @scala.inline
     def deleteAllow_no_jobs: Self = this.set("allow_no_jobs", js.undefined)
+    
+    @scala.inline
+    def setAllow_no_match(value: Boolean): Self = this.set("allow_no_match", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllow_no_match: Self = this.set("allow_no_match", js.undefined)
     
     @scala.inline
     def setBytes(value: b | k | kb | m | mb | g | gb | t | tb | p | pb): Self = this.set("bytes", value.asInstanceOf[js.Any])

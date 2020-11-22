@@ -19,7 +19,7 @@ object fogExp2Mod extends js.Object {
     
     /**
     	 * Defines how fast the fog will grow dense.
-    	 * Default is 0.00025.
+    	 * @default 0.00025
     	 */
     var density: Double = js.native
     

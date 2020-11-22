@@ -26,14 +26,24 @@ trait VirtualServiceState extends js.Object {
   val lastUpdatedDate: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The name of the service mesh in which to create the virtual service.
+    * The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
     */
   val meshName: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The name to use for the virtual service.
+    * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    */
+  val meshOwner: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The name to use for the virtual service. Must be between 1 and 255 characters in length.
     */
   val name: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The resource owner's AWS account ID.
+    */
+  val resourceOwner: js.UndefOr[Input[String]] = js.native
   
   /**
     * The virtual service specification to apply.
@@ -93,10 +103,22 @@ object VirtualServiceState {
     def deleteMeshName: Self = this.set("meshName", js.undefined)
     
     @scala.inline
+    def setMeshOwner(value: Input[String]): Self = this.set("meshOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMeshOwner: Self = this.set("meshOwner", js.undefined)
+    
+    @scala.inline
     def setName(value: Input[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setResourceOwner(value: Input[String]): Self = this.set("resourceOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResourceOwner: Self = this.set("resourceOwner", js.undefined)
     
     @scala.inline
     def setSpec(value: Input[VirtualServiceSpec]): Self = this.set("spec", value.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.jupyterlabNotebook.panelMod
 
-import typingsSlinky.jupyterlabApputils.clientsessionMod.IClientSession
+import typingsSlinky.jupyterlabApputils.sessioncontextMod.ISessionContext
 import typingsSlinky.jupyterlabDocregistry.defaultMod.DocumentWidget.IOptions
 import typingsSlinky.jupyterlabDocregistry.mod.DocumentWidget
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.Context
@@ -8,10 +8,9 @@ import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.SaveStat
 import typingsSlinky.jupyterlabNotebook.modelMod.INotebookModel
 import typingsSlinky.jupyterlabNotebook.panelMod.NotebookPanel.IConfig
 import typingsSlinky.jupyterlabNotebook.widgetMod.Notebook
-import typingsSlinky.phosphorSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/notebook/lib/panel", "NotebookPanel")
 @js.native
@@ -20,38 +19,48 @@ class NotebookPanel_ protected () extends DocumentWidget[Notebook, INotebookMode
     * Construct a new notebook panel.
     */
   def this(options: IOptions[Notebook, INotebookModel]) = this()
-  var _activated: js.Any = js.native
+  
   /**
     * Whether we are currently in a series of autorestarts we have already
     * notified the user about.
     */
   var _autorestarting: js.Any = js.native
+  
   /**
     * Handle a change in the kernel by updating the document metadata.
     */
   var _onKernelChanged: js.Any = js.native
+  
+  def _onSave(sender: Context, state: SaveState): Unit = js.native
+  
   var _onSessionStatusChanged: js.Any = js.native
+  
   /**
     * Update the kernel language.
     */
   var _updateLanguage: js.Any = js.native
+  
   /**
     * Update the kernel spec.
     */
   var _updateSpec: js.Any = js.native
+  
   /**
-    * A signal emitted when the panel has been activated.
+    * The notebook used by the widget.
     */
-  val activated: ISignal[this.type, Unit] = js.native
+  @JSName("content")
+  val content_FNotebookPanel_ : Notebook = js.native
+  
   /**
     * The model for the widget.
     */
-  val model: INotebookModel = js.native
+  def model: INotebookModel | Null = js.native
+  
   /**
-    * The client session used by the panel.
+    * The session context used by the panel.
     */
-  val session: IClientSession = js.native
-  def _onSave(sender: Context, state: SaveState): Unit = js.native
+  def sessionContext: ISessionContext = js.native
+  
   /**
     * Update the options for the current notebook panel.
     *
@@ -59,4 +68,3 @@ class NotebookPanel_ protected () extends DocumentWidget[Notebook, INotebookMode
     */
   def setConfig(config: IConfig): Unit = js.native
 }
-

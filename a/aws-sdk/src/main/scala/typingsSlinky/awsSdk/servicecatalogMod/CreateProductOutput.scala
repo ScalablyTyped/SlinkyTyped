@@ -13,7 +13,7 @@ trait CreateProductOutput extends js.Object {
   var ProductViewDetail: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.ProductViewDetail] = js.native
   
   /**
-    * Information about the provisioning artifact.
+    * Information about the provisioning artifact. 
     */
   var ProvisioningArtifactDetail: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.ProvisioningArtifactDetail] = js.native
   

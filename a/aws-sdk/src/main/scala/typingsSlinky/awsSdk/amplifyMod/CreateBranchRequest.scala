@@ -58,7 +58,12 @@ trait CreateBranchRequest extends js.Object {
   var enableNotification: js.UndefOr[EnableNotification] = js.native
   
   /**
-    *  Enables pull request preview for this branch. 
+    * Enables performance mode for the branch. Performance mode optimizes for faster hosting performance by keeping content cached at the edge for a longer interval. When performance mode is enabled, hosting configuration or code changes can take up to 10 minutes to roll out. 
+    */
+  var enablePerformanceMode: js.UndefOr[EnablePerformanceMode] = js.native
+  
+  /**
+    *  Enables pull request previews for this branch. 
     */
   var enablePullRequestPreview: js.UndefOr[EnablePullRequestPreview] = js.native
   
@@ -168,6 +173,12 @@ object CreateBranchRequest {
     
     @scala.inline
     def deleteEnableNotification: Self = this.set("enableNotification", js.undefined)
+    
+    @scala.inline
+    def setEnablePerformanceMode(value: EnablePerformanceMode): Self = this.set("enablePerformanceMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnablePerformanceMode: Self = this.set("enablePerformanceMode", js.undefined)
     
     @scala.inline
     def setEnablePullRequestPreview(value: EnablePullRequestPreview): Self = this.set("enablePullRequestPreview", value.asInstanceOf[js.Any])

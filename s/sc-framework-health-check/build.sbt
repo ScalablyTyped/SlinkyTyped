@@ -1,41 +1,35 @@
 organization := "org.scalablytyped.slinky"
 name := "sc-framework-health-check"
-version := "2.0-dt-20200205Z-34073f"
+version := "2.0-dt-20200205Z-e29985"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "ag-channel" % "4.0-dt-20200205Z-684d00",
-  "org.scalablytyped.slinky" %%% "ag-simple-broker" % "4.0-dt-20200205Z-c767d1",
-  "org.scalablytyped.slinky" %%% "async" % "3.2-dt-20200515Z-fc1cff",
-  "org.scalablytyped.slinky" %%% "async-iterable-stream" % "3.0-dt-20200205Z-318974",
-  "org.scalablytyped.slinky" %%% "async-stream-emitter" % "3.0-dt-20200205Z-01c102",
-  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-e4419c",
-  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200515Z-41abee",
-  "org.scalablytyped.slinky" %%% "consumable-stream" % "1.0-dt-20200205Z-22b34c",
-  "org.scalablytyped.slinky" %%% "expirymanager" % "0.9-dt-20181130Z-ffe414",
-  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200706Z-a5f9b2",
-  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200722Z-5cbccc",
-  "org.scalablytyped.slinky" %%% "fleximap" % "0.9-dt-20181205Z-ce6eef",
-  "org.scalablytyped.slinky" %%% "jsonwebtoken" % "8.5-dt-20200513Z-c7f19c",
-  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200722Z-600803",
-  "org.scalablytyped.slinky" %%% "ncom" % "1.0-dt-20200205Z-0ef4b6",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
-  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-524837",
-  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-18f701",
-  "org.scalablytyped.slinky" %%% "sc-auth" % "5.0-dt-20200407Z-30a297",
-  "org.scalablytyped.slinky" %%% "sc-broker" % "8.0-dt-20200519Z-cf2285",
-  "org.scalablytyped.slinky" %%% "sc-broker-cluster" % "9.0-dt-20200205Z-d0c064",
-  "org.scalablytyped.slinky" %%% "sc-channel" % "2.0-dt-20200205Z-0bd8d1",
-  "org.scalablytyped.slinky" %%% "sc-errors" % "1.4-dt-20200205Z-10ac1f",
-  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200519Z-04f03f",
-  "org.scalablytyped.slinky" %%% "socketcluster" % "14.0-dt-20200205Z-1ba7ea",
-  "org.scalablytyped.slinky" %%% "socketcluster-server" % "15.0-dt-20200214Z-455d6d",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
-  "org.scalablytyped.slinky" %%% "stream-demux" % "7.0-dt-20200205Z-af3939",
-  "org.scalablytyped.slinky" %%% "writable-consumable-stream" % "1.1-dt-20200205Z-99f582",
-  "org.scalablytyped.slinky" %%% "ws" % "7.2-dt-20200629Z-5fdf7f")
+  "org.scalablytyped.slinky" %%% "async" % "3.2-dt-20201112Z-e264ed",
+  "org.scalablytyped.slinky" %%% "async-iterable-stream" % "3.0-dt-20200205Z-714ba9",
+  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-288ac7",
+  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20201002Z-8c61d7",
+  "org.scalablytyped.slinky" %%% "consumable-stream" % "1.0-dt-20200205Z-22ff39",
+  "org.scalablytyped.slinky" %%% "expirymanager" % "0.9-dt-20181130Z-3b3214",
+  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20201111Z-3019f6",
+  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200921Z-5d68bc",
+  "org.scalablytyped.slinky" %%% "fleximap" % "0.9-dt-20181205Z-4186d9",
+  "org.scalablytyped.slinky" %%% "jsonwebtoken" % "8.5-dt-20200513Z-373806",
+  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200722Z-6314e7",
+  "org.scalablytyped.slinky" %%% "ncom" % "1.0-dt-20200205Z-255cc0",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20201002Z-ff6847",
+  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20201002Z-f6189b",
+  "org.scalablytyped.slinky" %%% "sc-auth" % "5.0-dt-20200407Z-66949b",
+  "org.scalablytyped.slinky" %%% "sc-broker" % "8.0-dt-20200519Z-f426b9",
+  "org.scalablytyped.slinky" %%% "sc-broker-cluster" % "9.0-dt-20200205Z-23f4a2",
+  "org.scalablytyped.slinky" %%% "sc-channel" % "2.0-dt-20200205Z-e061b1",
+  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20201117Z-ffbd1b",
+  "org.scalablytyped.slinky" %%% "socketcluster" % "14.0-dt-20200205Z-34192c",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "stream-demux" % "7.0-dt-20200902Z-09cc48",
+  "org.scalablytyped.slinky" %%% "writable-consumable-stream" % "1.1-dt-20200205Z-72a4e4")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -10,4 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.ProseMiddle
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.ProseTail
 */
-trait ProseFragmentLiteralKind extends TextContentKind
+trait ProseFragmentLiteralKind
+  extends ProseFragmentKind
+     with TextContentKind

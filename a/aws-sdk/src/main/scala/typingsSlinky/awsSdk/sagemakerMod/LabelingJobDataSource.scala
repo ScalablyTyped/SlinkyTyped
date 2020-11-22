@@ -11,6 +11,11 @@ trait LabelingJobDataSource extends js.Object {
     * The Amazon S3 location of the input data objects.
     */
   var S3DataSource: js.UndefOr[LabelingJobS3DataSource] = js.native
+  
+  /**
+    * An Amazon SNS data source used for streaming labeling jobs.
+    */
+  var SnsDataSource: js.UndefOr[LabelingJobSnsDataSource] = js.native
 }
 object LabelingJobDataSource {
   
@@ -40,5 +45,11 @@ object LabelingJobDataSource {
     
     @scala.inline
     def deleteS3DataSource: Self = this.set("S3DataSource", js.undefined)
+    
+    @scala.inline
+    def setSnsDataSource(value: LabelingJobSnsDataSource): Self = this.set("SnsDataSource", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSnsDataSource: Self = this.set("SnsDataSource", js.undefined)
   }
 }

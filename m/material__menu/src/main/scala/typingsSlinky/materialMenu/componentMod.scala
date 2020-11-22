@@ -3,6 +3,7 @@ package typingsSlinky.materialMenu
 import org.scalajs.dom.raw.Element
 import typingsSlinky.materialBase.componentMod.MDCComponent
 import typingsSlinky.materialList.componentMod.MDCListFactory
+import typingsSlinky.materialList.typesMod.MDCListIndex
 import typingsSlinky.materialMenu.anon.PartialMDCMenuDistance
 import typingsSlinky.materialMenu.constantsMod.DefaultFocusState
 import typingsSlinky.materialMenu.foundationMod.MDCMenuFoundation
@@ -59,6 +60,19 @@ object componentMod extends js.Object {
     
     def quickOpen_=(quickOpen: Boolean): Unit = js.native
     
+    /**
+      * Retrieves the selected index. Only applicable to select menus.
+      * @return The selected index, which is a number for single selection and
+      *     radio lists, and an array of numbers for checkbox lists.
+      */
+    def selectedIndex: MDCListIndex = js.native
+    /**
+      * Sets the selected index of the list. Only applicable to select menus.
+      * @param index The selected index, which is a number for single selection and
+      *     radio lists, and an array of numbers for checkbox lists.
+      */
+    def selectedIndex_=(index: MDCListIndex): Unit = js.native
+    
     def setAbsolutePosition(x: Double, y: Double): Unit = js.native
     
     /**
@@ -97,6 +111,14 @@ object componentMod extends js.Object {
       * @param index Index of list item within menu.
       */
     def setSelectedIndex(index: Double): Unit = js.native
+    
+    /**
+      * Turns on/off the underlying list's single selection mode. Used mainly
+      * by select menu.
+      *
+      * @param singleSelection Whether to enable single selection mode.
+      */
+    def singleSelection_=(singleSelection: Boolean): Unit = js.native
     
     /**
       * @return Whether typeahead logic is currently matching some user prefix.

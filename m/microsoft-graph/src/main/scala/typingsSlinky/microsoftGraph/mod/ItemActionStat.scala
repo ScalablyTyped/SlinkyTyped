@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ItemActionStat extends js.Object {
   
   // The number of times the action took place. Read-only.
-  var actionCount: js.UndefOr[Double] = js.native
+  var actionCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // The number of distinct actors that performed the action. Read-only.
-  var actorCount: js.UndefOr[Double] = js.native
+  var actorCount: js.UndefOr[NullableOption[Double]] = js.native
 }
 object ItemActionStat {
   
@@ -37,15 +37,21 @@ object ItemActionStat {
     }
     
     @scala.inline
-    def setActionCount(value: Double): Self = this.set("actionCount", value.asInstanceOf[js.Any])
+    def setActionCount(value: NullableOption[Double]): Self = this.set("actionCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteActionCount: Self = this.set("actionCount", js.undefined)
     
     @scala.inline
-    def setActorCount(value: Double): Self = this.set("actorCount", value.asInstanceOf[js.Any])
+    def setActionCountNull: Self = this.set("actionCount", null)
+    
+    @scala.inline
+    def setActorCount(value: NullableOption[Double]): Self = this.set("actorCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteActorCount: Self = this.set("actorCount", js.undefined)
+    
+    @scala.inline
+    def setActorCountNull: Self = this.set("actorCount", null)
   }
 }

@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@tensorflow-models/universal-sentence-encoder/dist/use_qna", "version")
 @js.native
 object version
-  extends TopLevel[/* "1.3.0" */ String]
+  extends TopLevel[/* "1.3.2" */ String]

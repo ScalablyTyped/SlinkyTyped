@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLUListElement
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -33,8 +34,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -101,6 +107,9 @@ object List {
     
     @scala.inline
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def action(value: (/* item */ js.Any, /* index */ Double) => Unit): this.type = set("action", js.Any.fromFunction2(value))
     
     @scala.inline
     def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
@@ -211,7 +220,9 @@ object List {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -601,10 +612,10 @@ object List {
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def primaryKeyFunction1(value: /* repeated */ js.Any => _): this.type = set("primaryKey", js.Any.fromFunction1(value))
+    def primaryKeyFunction1(value: /* item */ js.Any => ReactElement): this.type = set("primaryKey", js.Any.fromFunction1(value))
     
     @scala.inline
-    def primaryKey(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("primaryKey", value.asInstanceOf[js.Any])
+    def primaryKey(value: String | (js.Function1[/* item */ js.Any, ReactElement])): this.type = set("primaryKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -622,10 +633,10 @@ object List {
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def secondaryKeyFunction1(value: /* repeated */ js.Any => _): this.type = set("secondaryKey", js.Any.fromFunction1(value))
+    def secondaryKeyFunction1(value: /* item */ js.Any => ReactElement): this.type = set("secondaryKey", js.Any.fromFunction1(value))
     
     @scala.inline
-    def secondaryKey(value: String | (js.Function1[/* repeated */ js.Any, _])): this.type = set("secondaryKey", value.asInstanceOf[js.Any])
+    def secondaryKey(value: String | (js.Function1[/* item */ js.Any, ReactElement])): this.type = set("secondaryKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])

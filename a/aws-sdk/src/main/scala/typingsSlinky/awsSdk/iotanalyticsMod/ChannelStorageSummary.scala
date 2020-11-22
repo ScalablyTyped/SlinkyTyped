@@ -13,7 +13,7 @@ trait ChannelStorageSummary extends js.Object {
   var customerManagedS3: js.UndefOr[CustomerManagedChannelS3StorageSummary] = js.native
   
   /**
-    * Used to store channel data in an S3 bucket managed by the AWS IoT Analytics service.
+    * Used to store channel data in an S3 bucket managed by AWS IoT Analytics.
     */
   var serviceManagedS3: js.UndefOr[ServiceManagedChannelS3StorageSummary] = js.native
 }

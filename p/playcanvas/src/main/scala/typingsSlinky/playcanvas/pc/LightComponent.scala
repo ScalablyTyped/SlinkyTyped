@@ -44,7 +44,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @property outerConeAngle - The angle at which the spotlight cone has faded
   * to nothing. The angle is specified in degrees. Affects spot lights only. Defaults
   * to 45.
-  * @property falloffMode - Controls the rate at which a light attentuates from
+  * @property falloffMode - Controls the rate at which a light attenuates from
   * its position. Can be:
   * * {@link pc.LIGHTFALLOFF_LINEAR}: Linear.
   * * {@link pc.LIGHTFALLOFF_INVERSESQUARED}: Inverse squared.
@@ -164,7 +164,7 @@ trait LightComponent extends Component {
   var cookieScale: Vec2 = js.native
   
   /**
-    * Controls the rate at which a light attentuates from
+    * Controls the rate at which a light attenuates from
     its position. Can be:
     * {@link pc.LIGHTFALLOFF_LINEAR}: Linear.
     * {@link pc.LIGHTFALLOFF_INVERSESQUARED}: Inverse squared.

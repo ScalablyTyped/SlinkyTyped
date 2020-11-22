@@ -18,36 +18,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PolygonDrawAction extends DrawAction {
   
   /**
-    * Completes drawing the polygon geometry and fires the [draw-complete](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolygonDrawAction.html#event-draw-complete) event. Call this method if the drawing logic needs to be completed other than by double-clicking or pressing the "C" key.
+    * Completes drawing the polygon geometry and fires the [draw-complete](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolygonDrawAction.html#event-draw-complete) event.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolygonDrawAction.html#complete)
-    *
-    *
     */
   def complete(): Unit = js.native
   
   /**
-    * Returns the actual z value to be used when drawing geometry. NB: this.defaultZ is the value which was passed to the constructor of the DrawAction the actual defaultZ value may differ, depending on derived draw action implementation.
+    * Returns the actual z value to be used when drawing geometry.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolygonDrawAction.html#getGeometryZValue)
-    *
-    *
     */
   def getGeometryZValue(): Unit = js.native
   
   /**
-    * The drawing mode. It is only relevant when the action is first created. Its value cannot be changed during the action lifecycle.  **Possible Values**
-    *
-    * Value | Description |
-    * ----- | ----------- |
-    * hybrid | Vertices are added while the pointer is clicked or dragged.
-    * freehand | Vertices are added while the pointer is dragged.
-    * click | Vertices are added when the pointer is clicked.
-    *
+    * The drawing mode.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolygonDrawAction.html#mode)
-    *
-    * @default hybrid
     */
   var mode: hybrid | freehand | click = js.native
   

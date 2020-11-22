@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.nfsFileShareMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.outputMod.storagegateway.NfsFileShareCacheAttributes
 import typingsSlinky.pulumiAws.outputMod.storagegateway.NfsFileShareNfsFileShareDefaults
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -30,6 +31,11 @@ class NfsFileShare protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
+    * Refresh cache information. see Cache Attributes for more details.
+    */
+  val cacheAttributes: Output_[js.UndefOr[NfsFileShareCacheAttributes]] = js.native
+  
+  /**
     * The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to `["0.0.0.0/0"]` to not limit access. Minimum 1 item. Maximum 100 items.
     */
   val clientLists: Output_[js.Array[String]] = js.native
@@ -38,6 +44,11 @@ class NfsFileShare protected () extends CustomResource {
     * The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
     */
   val defaultStorageClass: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * The name of the file share. Must be set if an S3 prefix name is set in `locationArn`.
+    */
+  val fileShareName: Output_[String] = js.native
   
   /**
     * ID of the NFS File Share.
@@ -70,7 +81,7 @@ class NfsFileShare protected () extends CustomResource {
   val locationArn: Output_[String] = js.native
   
   /**
-    * Nested argument with file share default values. More information below.
+    * Nested argument with file share default values. More information below. see NFS File Share Defaults for more details.
     */
   val nfsFileShareDefaults: Output_[js.UndefOr[NfsFileShareNfsFileShareDefaults]] = js.native
   

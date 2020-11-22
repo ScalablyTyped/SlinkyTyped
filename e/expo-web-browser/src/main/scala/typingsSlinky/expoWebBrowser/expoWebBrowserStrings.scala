@@ -23,6 +23,9 @@ object expoWebBrowserStrings {
   def failed: failed = "failed".asInstanceOf[failed]
   
   @scala.inline
+  def locked: locked = "locked".asInstanceOf[locked]
+  
+  @scala.inline
   def opened: opened = "opened".asInstanceOf[opened]
   
   @scala.inline
@@ -42,6 +45,9 @@ object expoWebBrowserStrings {
   
   @js.native
   sealed trait failed extends js.Object
+  
+  @js.native
+  sealed trait locked extends WebBrowserResultType
   
   @js.native
   sealed trait opened extends WebBrowserResultType

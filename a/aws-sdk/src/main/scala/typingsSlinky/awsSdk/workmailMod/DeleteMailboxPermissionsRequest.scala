@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteMailboxPermissionsRequest extends js.Object {
   
   /**
-    * The identifier of the member (user or group)that owns the mailbox.
+    * The identifier of the member (user or group) that owns the mailbox.
     */
   var EntityId: WorkMailIdentifier = js.native
   

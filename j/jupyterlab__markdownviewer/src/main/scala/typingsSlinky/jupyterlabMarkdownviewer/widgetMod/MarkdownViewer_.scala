@@ -9,10 +9,10 @@ import typingsSlinky.jupyterlabMarkdownviewer.jupyterlabMarkdownviewerStrings.li
 import typingsSlinky.jupyterlabMarkdownviewer.jupyterlabMarkdownviewerStrings.renderTimeout
 import typingsSlinky.jupyterlabMarkdownviewer.widgetMod.MarkdownViewer.IOptions
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IRenderer
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.luminoWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/markdownviewer/lib/widget", "MarkdownViewer")
 @js.native
@@ -21,31 +21,43 @@ class MarkdownViewer_ protected () extends Widget {
     * Construct a new markdown viewer widget.
     */
   def this(options: IOptions) = this()
+  
   var _config: js.Any = js.native
+  
   var _fragment: js.Any = js.native
+  
   var _isRendering: js.Any = js.native
+  
   var _monitor: js.Any = js.native
+  
   var _ready: js.Any = js.native
+  
   /**
     * Render the mime content.
     */
   var _render: js.Any = js.native
+  
   var _renderRequested: js.Any = js.native
+  
   val context: Context = js.native
+  
   /**
     * A promise that resolves when the markdown viewer is ready.
     */
-  val ready: js.Promise[Unit] = js.native
+  def ready: js.Promise[Unit] = js.native
+  
   val renderer: IRenderer = js.native
+  
   /**
     * Set URI fragment identifier.
     */
   def setFragment(fragment: String): Unit = js.native
-  @JSName("setOption")
-  def setOption_fontFamily(option: fontFamily): Unit = js.native
+  
   /**
     * Set a config option for the markdown viewer.
     */
+  @JSName("setOption")
+  def setOption_fontFamily(option: fontFamily): Unit = js.native
   @JSName("setOption")
   def setOption_fontFamily(option: fontFamily, value: String): Unit = js.native
   @JSName("setOption")
@@ -65,4 +77,3 @@ class MarkdownViewer_ protected () extends Widget {
   @JSName("setOption")
   def setOption_renderTimeout(option: renderTimeout, value: Double): Unit = js.native
 }
-

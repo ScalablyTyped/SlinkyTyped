@@ -33,6 +33,9 @@ object ColProps {
     }
     
     @scala.inline
+    def setColVarargs(value: (String | Double | Boolean)*): Self = this.set("col", js.Array(value :_*))
+    
+    @scala.inline
     def setCol(value: ResponsiveValue[String | Double | Boolean]): Self = this.set("col", value.asInstanceOf[js.Any])
     
     @scala.inline

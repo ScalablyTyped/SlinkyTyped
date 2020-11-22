@@ -43,6 +43,11 @@ trait App extends js.Object {
   var createTime: js.Date = js.native
   
   /**
+    * Describes the custom HTTP headers for the Amplify app.
+    */
+  var customHeaders: js.UndefOr[CustomHeaders] = js.native
+  
+  /**
     *  Describes the custom redirect and rewrite rules for the Amplify app. 
     */
   var customRules: js.UndefOr[CustomRules] = js.native
@@ -215,6 +220,12 @@ object App {
     
     @scala.inline
     def deleteBuildSpec: Self = this.set("buildSpec", js.undefined)
+    
+    @scala.inline
+    def setCustomHeaders(value: CustomHeaders): Self = this.set("customHeaders", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomHeaders: Self = this.set("customHeaders", js.undefined)
     
     @scala.inline
     def setCustomRulesVarargs(value: CustomRule*): Self = this.set("customRules", js.Array(value :_*))

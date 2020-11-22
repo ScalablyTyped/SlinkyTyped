@@ -127,7 +127,7 @@ class Quill protected () extends EventEmitter {
   def removeFormat(index: Double, length: Double, source: Sources): js.Any = js.native
   
   /**
-    * @private Internal API
+    * Internal API
     */
   var root: HTMLDivElement = js.native
   

@@ -48,6 +48,11 @@ trait DefaultRouteTableRoute extends js.Object {
   var transitGatewayId: js.UndefOr[String] = js.native
   
   /**
+    * Identifier of a VPC Endpoint. This route must be removed prior to VPC Endpoint deletion.
+    */
+  var vpcEndpointId: js.UndefOr[String] = js.native
+  
+  /**
     * Identifier of a VPC peering connection.
     */
   var vpcPeeringConnectionId: js.UndefOr[String] = js.native
@@ -122,6 +127,12 @@ object DefaultRouteTableRoute {
     
     @scala.inline
     def deleteTransitGatewayId: Self = this.set("transitGatewayId", js.undefined)
+    
+    @scala.inline
+    def setVpcEndpointId(value: String): Self = this.set("vpcEndpointId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVpcEndpointId: Self = this.set("vpcEndpointId", js.undefined)
     
     @scala.inline
     def setVpcPeeringConnectionId(value: String): Self = this.set("vpcPeeringConnectionId", value.asInstanceOf[js.Any])

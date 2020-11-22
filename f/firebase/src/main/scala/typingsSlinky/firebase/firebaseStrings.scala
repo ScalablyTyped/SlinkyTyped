@@ -1,15 +1,15 @@
 package typingsSlinky.firebase
 
-import typingsSlinky.firebase.mod.analytics.EventNameString
-import typingsSlinky.firebase.mod.database.EventType
-import typingsSlinky.firebase.mod.firestore.DocumentChangeType
-import typingsSlinky.firebase.mod.firestore.FirestoreErrorCode
-import typingsSlinky.firebase.mod.firestore.OrderByDirection
-import typingsSlinky.firebase.mod.firestore.WhereFilterOp
-import typingsSlinky.firebase.mod.functions.FunctionsErrorCode
-import typingsSlinky.firebase.mod.remoteConfig.FetchStatus
-import typingsSlinky.firebase.mod.remoteConfig.LogLevel
-import typingsSlinky.firebase.mod.remoteConfig.ValueSource
+import typingsSlinky.firebase.mod.default.analytics.EventNameString
+import typingsSlinky.firebase.mod.default.firestore.DocumentChangeType
+import typingsSlinky.firebase.mod.default.firestore.FirestoreErrorCode
+import typingsSlinky.firebase.mod.default.firestore.OrderByDirection
+import typingsSlinky.firebase.mod.default.firestore.WhereFilterOp
+import typingsSlinky.firebase.mod.default.functions.FunctionsErrorCode
+import typingsSlinky.firebase.mod.default.remoteConfig.FetchStatus
+import typingsSlinky.firebase.mod.default.remoteConfig.LogLevel
+import typingsSlinky.firebase.mod.default.remoteConfig.ValueSource
+import typingsSlinky.firebase.mod.firebase.database.EventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,6 +18,9 @@ object firebaseStrings {
   
   @scala.inline
   def EqualssignEqualssign: EqualssignEqualssign = "==".asInstanceOf[EqualssignEqualssign]
+  
+  @scala.inline
+  def ExclamationmarkEqualssign: ExclamationmarkEqualssign = "!=".asInstanceOf[ExclamationmarkEqualssign]
   
   @scala.inline
   def Greaterthansign: Greaterthansign = ">".asInstanceOf[Greaterthansign]
@@ -146,6 +149,9 @@ object firebaseStrings {
   def `not-found`: `not-found` = "not-found".asInstanceOf[`not-found`]
   
   @scala.inline
+  def `not-in`: `not-in` = "not-in".asInstanceOf[`not-in`]
+  
+  @scala.inline
   def ok: ok = "ok".asInstanceOf[ok]
   
   @scala.inline
@@ -257,56 +263,93 @@ object firebaseStrings {
   def warn: warn = "warn".asInstanceOf[warn]
   
   @js.native
-  sealed trait EqualssignEqualssign extends WhereFilterOp
+  sealed trait EqualssignEqualssign
+    extends WhereFilterOp
+       with typingsSlinky.firebase.mod.firebase.firestore.WhereFilterOp
   
   @js.native
-  sealed trait Greaterthansign extends WhereFilterOp
+  sealed trait ExclamationmarkEqualssign
+    extends WhereFilterOp
+       with typingsSlinky.firebase.mod.firebase.firestore.WhereFilterOp
   
   @js.native
-  sealed trait GreaterthansignEqualssign extends WhereFilterOp
+  sealed trait Greaterthansign
+    extends WhereFilterOp
+       with typingsSlinky.firebase.mod.firebase.firestore.WhereFilterOp
   
   @js.native
-  sealed trait Lessthansign extends WhereFilterOp
+  sealed trait GreaterthansignEqualssign
+    extends WhereFilterOp
+       with typingsSlinky.firebase.mod.firebase.firestore.WhereFilterOp
   
   @js.native
-  sealed trait LessthansignEqualssign extends WhereFilterOp
+  sealed trait Lessthansign
+    extends WhereFilterOp
+       with typingsSlinky.firebase.mod.firebase.firestore.WhereFilterOp
+  
+  @js.native
+  sealed trait LessthansignEqualssign
+    extends WhereFilterOp
+       with typingsSlinky.firebase.mod.firebase.firestore.WhereFilterOp
   
   @js.native
   sealed trait aborted
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
-  sealed trait add_payment_info extends EventNameString
+  sealed trait add_payment_info
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait add_shipping_info extends EventNameString
+  sealed trait add_shipping_info
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait add_to_cart extends EventNameString
+  sealed trait add_to_cart
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait add_to_wishlist extends EventNameString
+  sealed trait add_to_wishlist
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait added extends DocumentChangeType
+  sealed trait added
+    extends DocumentChangeType
+       with typingsSlinky.firebase.mod.firebase.firestore.DocumentChangeType
   
   @js.native
   sealed trait `already-exists`
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
-  sealed trait `array-contains` extends WhereFilterOp
+  sealed trait `array-contains`
+    extends WhereFilterOp
+       with typingsSlinky.firebase.mod.firebase.firestore.WhereFilterOp
   
   @js.native
-  sealed trait `array-contains-any` extends WhereFilterOp
+  sealed trait `array-contains-any`
+    extends WhereFilterOp
+       with typingsSlinky.firebase.mod.firebase.firestore.WhereFilterOp
   
   @js.native
-  sealed trait asc extends OrderByDirection
+  sealed trait asc
+    extends OrderByDirection
+       with typingsSlinky.firebase.mod.firebase.firestore.OrderByDirection
   
   @js.native
-  sealed trait begin_checkout extends EventNameString
+  sealed trait begin_checkout
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
   sealed trait cache extends js.Object
@@ -314,10 +357,14 @@ object firebaseStrings {
   @js.native
   sealed trait cancelled
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
-  sealed trait checkout_progress extends EventNameString
+  sealed trait checkout_progress
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
   sealed trait child_added extends EventType
@@ -334,73 +381,105 @@ object firebaseStrings {
   @js.native
   sealed trait `data-loss`
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
   sealed trait `deadline-exceeded`
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
   sealed trait debug
     extends LogLevel
-       with typingsSlinky.firebase.mod.LogLevel
-       with typingsSlinky.firebase.mod.firestore.LogLevel
+       with typingsSlinky.firebase.mod.default.firestore.LogLevel
+       with typingsSlinky.firebase.mod.firebase.remoteConfig.LogLevel
+       with typingsSlinky.firebase.mod.firebase.LogLevel
+       with typingsSlinky.firebase.mod.firebase.firestore.LogLevel
   
   @js.native
-  sealed trait default extends ValueSource
+  sealed trait default
+    extends ValueSource
+       with typingsSlinky.firebase.mod.firebase.remoteConfig.ValueSource
   
   @js.native
-  sealed trait desc extends OrderByDirection
+  sealed trait desc
+    extends OrderByDirection
+       with typingsSlinky.firebase.mod.firebase.firestore.OrderByDirection
   
   @js.native
   sealed trait error
     extends LogLevel
-       with typingsSlinky.firebase.mod.LogLevel
-       with typingsSlinky.firebase.mod.firestore.LogLevel
+       with typingsSlinky.firebase.mod.default.firestore.LogLevel
+       with typingsSlinky.firebase.mod.firebase.remoteConfig.LogLevel
+       with typingsSlinky.firebase.mod.firebase.LogLevel
+       with typingsSlinky.firebase.mod.firebase.firestore.LogLevel
   
   @js.native
   sealed trait estimate extends js.Object
   
   @js.native
-  sealed trait exception extends EventNameString
+  sealed trait exception
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
   sealed trait `failed-precondition`
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
-  sealed trait failure extends FetchStatus
+  sealed trait failure
+    extends FetchStatus
+       with typingsSlinky.firebase.mod.firebase.remoteConfig.FetchStatus
   
   @js.native
-  sealed trait generate_lead extends EventNameString
+  sealed trait generate_lead
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait in extends WhereFilterOp
+  sealed trait in
+    extends WhereFilterOp
+       with typingsSlinky.firebase.mod.firebase.firestore.WhereFilterOp
   
   @js.native
   sealed trait info
-    extends typingsSlinky.firebase.mod.LogLevel
+    extends typingsSlinky.firebase.mod.firebase.LogLevel
   
   @js.native
   sealed trait internal
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
   sealed trait `invalid-argument`
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
-  sealed trait login extends EventNameString
+  sealed trait login
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait modified extends DocumentChangeType
+  sealed trait modified
+    extends DocumentChangeType
+       with typingsSlinky.firebase.mod.firebase.firestore.DocumentChangeType
   
   @js.native
-  sealed trait `no-fetch-yet` extends FetchStatus
+  sealed trait `no-fetch-yet`
+    extends FetchStatus
+       with typingsSlinky.firebase.mod.firebase.remoteConfig.FetchStatus
   
   @js.native
   sealed trait none extends js.Object
@@ -408,135 +487,206 @@ object firebaseStrings {
   @js.native
   sealed trait `not-found`
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
-  sealed trait ok extends FunctionsErrorCode
+  sealed trait `not-in`
+    extends WhereFilterOp
+       with typingsSlinky.firebase.mod.firebase.firestore.WhereFilterOp
+  
+  @js.native
+  sealed trait ok
+    extends FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
   sealed trait `out-of-range`
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
-  sealed trait page_view extends EventNameString
+  sealed trait page_view
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
   sealed trait `permission-denied`
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
   sealed trait previous extends js.Object
   
   @js.native
-  sealed trait purchase extends EventNameString
+  sealed trait purchase
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait refund extends EventNameString
+  sealed trait refund
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait remote extends ValueSource
+  sealed trait remote
+    extends ValueSource
+       with typingsSlinky.firebase.mod.firebase.remoteConfig.ValueSource
   
   @js.native
-  sealed trait remove_from_cart extends EventNameString
+  sealed trait remove_from_cart
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait removed extends DocumentChangeType
+  sealed trait removed
+    extends DocumentChangeType
+       with typingsSlinky.firebase.mod.firebase.firestore.DocumentChangeType
   
   @js.native
   sealed trait `resource-exhausted`
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
-  sealed trait screen_view extends EventNameString
+  sealed trait screen_view
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait search extends EventNameString
+  sealed trait search
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait select_content extends EventNameString
+  sealed trait select_content
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait select_item extends EventNameString
+  sealed trait select_item
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait select_promotion extends EventNameString
+  sealed trait select_promotion
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
   sealed trait server extends js.Object
   
   @js.native
-  sealed trait set_checkout_option extends EventNameString
+  sealed trait set_checkout_option
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait share extends EventNameString
+  sealed trait share
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait sign_up extends EventNameString
+  sealed trait sign_up
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
   sealed trait silent
     extends LogLevel
-       with typingsSlinky.firebase.mod.LogLevel
-       with typingsSlinky.firebase.mod.firestore.LogLevel
+       with typingsSlinky.firebase.mod.default.firestore.LogLevel
+       with typingsSlinky.firebase.mod.firebase.remoteConfig.LogLevel
+       with typingsSlinky.firebase.mod.firebase.LogLevel
+       with typingsSlinky.firebase.mod.firebase.firestore.LogLevel
   
   @js.native
-  sealed trait static extends ValueSource
+  sealed trait static
+    extends ValueSource
+       with typingsSlinky.firebase.mod.firebase.remoteConfig.ValueSource
   
   @js.native
-  sealed trait success extends FetchStatus
+  sealed trait success
+    extends FetchStatus
+       with typingsSlinky.firebase.mod.firebase.remoteConfig.FetchStatus
   
   @js.native
-  sealed trait throttle extends FetchStatus
+  sealed trait throttle
+    extends FetchStatus
+       with typingsSlinky.firebase.mod.firebase.remoteConfig.FetchStatus
   
   @js.native
-  sealed trait timing_complete extends EventNameString
+  sealed trait timing_complete
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
   sealed trait unauthenticated
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
   sealed trait unavailable
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
   sealed trait unimplemented
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
   sealed trait unknown
     extends FirestoreErrorCode
+       with typingsSlinky.firebase.mod.firebase.firestore.FirestoreErrorCode
        with FunctionsErrorCode
+       with typingsSlinky.firebase.mod.firebase.functions.FunctionsErrorCode
   
   @js.native
   sealed trait value extends EventType
   
   @js.native
   sealed trait verbose
-    extends typingsSlinky.firebase.mod.LogLevel
+    extends typingsSlinky.firebase.mod.firebase.LogLevel
   
   @js.native
-  sealed trait view_cart extends EventNameString
+  sealed trait view_cart
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait view_item extends EventNameString
+  sealed trait view_item
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait view_item_list extends EventNameString
+  sealed trait view_item_list
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait view_promotion extends EventNameString
+  sealed trait view_promotion
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
-  sealed trait view_search_results extends EventNameString
+  sealed trait view_search_results
+    extends EventNameString
+       with typingsSlinky.firebase.mod.firebase.analytics.EventNameString
   
   @js.native
   sealed trait warn
-    extends typingsSlinky.firebase.mod.LogLevel
+    extends typingsSlinky.firebase.mod.firebase.LogLevel
 }

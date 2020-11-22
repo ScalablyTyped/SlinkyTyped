@@ -35,7 +35,7 @@ class WindowsFileSystem protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
-    * The number of days to retain automatic backups. Minimum of `0` and maximum of `35`. Defaults to `7`. Set to `0` to disable.
+    * The number of days to retain automatic backups. Minimum of `0` and maximum of `90`. Defaults to `7`. Set to `0` to disable.
     */
   val automaticBackupRetentionDays: Output_[js.UndefOr[Double]] = js.native
   
@@ -48,6 +48,11 @@ class WindowsFileSystem protected () extends CustomResource {
     * The preferred time (in `HH:MM` format) to take daily automatic backups, in the UTC time zone.
     */
   val dailyAutomaticBackupStartTime: Output_[String] = js.native
+  
+  /**
+    * Specifies the file system deployment type, valid values are `MULTI_AZ_1`, `SINGLE_AZ_1` and `SINGLE_AZ_2`. Default value is `SINGLE_AZ_1`.
+    */
+  val deploymentType: Output_[js.UndefOr[String]] = js.native
   
   /**
     * DNS name for the file system, e.g. `fs-12345678.corp.example.com` (domain name matching the Active Directory domain name)
@@ -70,6 +75,21 @@ class WindowsFileSystem protected () extends CustomResource {
   val ownerId: Output_[String] = js.native
   
   /**
+    * The IP address of the primary, or preferred, file server.
+    */
+  val preferredFileServerIp: Output_[String] = js.native
+  
+  /**
+    * Specifies the subnet in which you want the preferred file server to be located. Required for when deployment type is `MULTI_AZ_1`.
+    */
+  val preferredSubnetId: Output_[String] = js.native
+  
+  /**
+    * For `MULTI_AZ_1` deployment types, use this endpoint when performing administrative tasks on the file system using Amazon FSx Remote PowerShell. For `SINGLE_AZ_1` deployment types, this is the DNS name of the file system.
+    */
+  val remoteAdministrationEndpoint: Output_[String] = js.native
+  
+  /**
     * A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
     */
   val securityGroupIds: Output_[js.UndefOr[js.Array[String]]] = js.native
@@ -85,14 +105,19 @@ class WindowsFileSystem protected () extends CustomResource {
   val skipFinalBackup: Output_[js.UndefOr[Boolean]] = js.native
   
   /**
-    * Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536.
+    * Storage capacity (GiB) of the file system. Minimum of 32 and maximum of 65536. If the storage type is set to `HDD` the minimum value is 2000.
     */
   val storageCapacity: Output_[Double] = js.native
   
   /**
-    * A list of IDs for the subnets that the file system will be accessible from. File systems support only one subnet. The file server is also launched in that subnet's Availability Zone.
+    * Specifies the storage type, Valid values are `SSD` and `HDD`. `HDD` is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types. Default value is `SSD`.
     */
-  val subnetIds: Output_[String] = js.native
+  val storageType: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * A list of IDs for the subnets that the file system will be accessible from. To specify more than a single subnet set `deploymentType` to `MULTI_AZ_1`.
+    */
+  val subnetIds: Output_[js.Array[String]] = js.native
   
   /**
     * A map of tags to assign to the file system.

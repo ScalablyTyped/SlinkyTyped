@@ -5,20 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FindOneAndUpdateOption extends FindOneAndReplaceOption {
+trait FindOneAndUpdateOption[T] extends FindOneAndReplaceOption[T] {
   
   var arrayFilters: js.UndefOr[js.Array[js.Object]] = js.native
 }
 object FindOneAndUpdateOption {
   
   @scala.inline
-  def apply(): FindOneAndUpdateOption = {
+  def apply[T](): FindOneAndUpdateOption[T] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[FindOneAndUpdateOption]
+    __obj.asInstanceOf[FindOneAndUpdateOption[T]]
   }
   
   @scala.inline
-  implicit class FindOneAndUpdateOptionOps[Self <: FindOneAndUpdateOption] (val x: Self) extends AnyVal {
+  implicit class FindOneAndUpdateOptionOps[Self <: FindOneAndUpdateOption[_], T] (val x: Self with FindOneAndUpdateOption[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

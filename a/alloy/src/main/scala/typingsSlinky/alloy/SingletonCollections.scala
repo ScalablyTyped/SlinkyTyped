@@ -18,12 +18,12 @@ trait SingletonCollections
     *
     * @param name The name of the base model for the collection.
     */
-  def instance(name: String): Collection[Model[_, ModelSetOptions]] = js.native
+  def instance(name: String): Collection[Model[_, ModelSetOptions, js.Object]] = js.native
 }
 object SingletonCollections {
   
   @scala.inline
-  def apply(instance: String => Collection[Model[_, ModelSetOptions]]): SingletonCollections = {
+  def apply(instance: String => Collection[Model[_, ModelSetOptions, js.Object]]): SingletonCollections = {
     val __obj = js.Dynamic.literal(instance = js.Any.fromFunction1(instance))
     __obj.asInstanceOf[SingletonCollections]
   }
@@ -44,6 +44,6 @@ object SingletonCollections {
     }
     
     @scala.inline
-    def setInstance(value: String => Collection[Model[_, ModelSetOptions]]): Self = this.set("instance", js.Any.fromFunction1(value))
+    def setInstance(value: String => Collection[Model[_, ModelSetOptions, js.Object]]): Self = this.set("instance", js.Any.fromFunction1(value))
   }
 }

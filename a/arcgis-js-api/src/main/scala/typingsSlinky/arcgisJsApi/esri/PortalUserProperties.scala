@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PortalUserProperties extends js.Object {
   
   /**
-    * Indicates the level of access of the user. If private, the user descriptive information will not be available to others nor will the username be searchable.
+    * Indicates the level of access of the user.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#access)
     */
@@ -93,21 +93,21 @@ trait PortalUserProperties extends js.Object {
   var region: js.UndefOr[String] = js.native
   
   /**
-    * Defines the user's role in the organization. See [roleId](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#roleId) for more details about when user has a custom role.
+    * Defines the user's role in the organization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#role)
     */
   var role: js.UndefOr[org_admin | org_publisher | org_user] = js.native
   
   /**
-    * The ID of the user's role.  Only set if the user is assigned a custom role.  When present, the [role](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#role) will indicate the "base" role of the custom role based on the privileges the custom role contains. For example, if the custom role contains some publisher privileges, the [role](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#role) will be set to `org_publisher`.
+    * The ID of the user's role.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#roleId)
     */
   var roleId: js.UndefOr[String] = js.native
   
   /**
-    * The JSON used to create the property values when the `PortalUser` is created. Although most commonly used properties are exposed on the `PortalUser` class directly, this provides access to all information returned for the portal user. This property is useful if working in an application built using an older version of the API which requires access to a portal's user properties from a more recent version.
+    * The JSON used to create the property values when the `PortalUser` is created.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html#sourceJSON)
     */

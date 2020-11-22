@@ -13,6 +13,7 @@ import typingsSlinky.bang88ReactNativeDrawerLayout.bang88ReactNativeDrawerLayout
 import typingsSlinky.bang88ReactNativeDrawerLayout.mod.DrawerLayoutProperties
 import typingsSlinky.bang88ReactNativeDrawerLayout.mod.DrawerLayoutSlideEvent
 import typingsSlinky.bang88ReactNativeDrawerLayout.mod.default
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -20,7 +21,6 @@ import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -155,7 +155,7 @@ object ReactNativeDrawerLayout {
     def onDrawerStateChanged(value: /* state */ String => Unit): this.type = set("onDrawerStateChanged", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))

@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("office-ui-fabric-react", "DATA_IS_SCROLLABLE_ATTRIBUTE")
 @js.native
-object DATA_IS_SCROLLABLE_ATTRIBUTE extends TopLevel[/* "@media screen and (-ms-high-contrast: active)" */ String]
+object DATA_IS_SCROLLABLE_ATTRIBUTE extends TopLevel[/* "change" */ String]

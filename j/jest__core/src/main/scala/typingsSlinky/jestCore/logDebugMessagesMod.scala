@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/core/build/lib/log_debug_messages", JSImport.Namespace)
+@JSImport("@jest/core/build/lib/logDebugMessages", JSImport.Namespace)
 @js.native
 object logDebugMessagesMod extends js.Object {
   

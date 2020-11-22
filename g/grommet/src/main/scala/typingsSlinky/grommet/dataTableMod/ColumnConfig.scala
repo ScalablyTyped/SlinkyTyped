@@ -27,6 +27,8 @@ trait ColumnConfig[TRowType] extends js.Object {
   
   var header: js.UndefOr[String | ReactElement | Aggregate] = js.native
   
+  var pin: js.UndefOr[Boolean] = js.native
+  
   var primary: js.UndefOr[Boolean] = js.native
   
   var property: String = js.native
@@ -96,6 +98,12 @@ object ColumnConfig {
     
     @scala.inline
     def deleteHeader: Self = this.set("header", js.undefined)
+    
+    @scala.inline
+    def setPin(value: Boolean): Self = this.set("pin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePin: Self = this.set("pin", js.undefined)
     
     @scala.inline
     def setPrimary(value: Boolean): Self = this.set("primary", value.asInstanceOf[js.Any])

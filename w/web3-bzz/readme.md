@@ -1,7 +1,7 @@
 
 # Scala.js typings for web3-bzz
 
-Typings are for version 1.2.11
+Typings are for version 1.3.0
 
 ## Library description:
 Web3 module to interact with the Swarm network.

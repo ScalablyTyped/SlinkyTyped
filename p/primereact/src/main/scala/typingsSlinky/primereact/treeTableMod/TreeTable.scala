@@ -8,4 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("primereact/components/treetable/TreeTable", "TreeTable")
 @js.native
 class TreeTable ()
-  extends Component[TreeTableProps, js.Any, js.Any]
+  extends Component[TreeTableProps, js.Any, js.Any] {
+  
+  def filter[T](value: T, field: String, mode: String): Unit = js.native
+}

@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import typingsSlinky.highcharts.highchartsNumbers.`0`
 import typingsSlinky.highcharts.highchartsNumbers.`100`
 import scala.scalajs.js
@@ -29,6 +30,8 @@ trait PlotOrganizationOptions extends js.Object {
     * animation parameter under the API methods. The following properties are
     * supported:
     *
+    * - `defer`: The animation delay time in milliseconds.
+    *
     * - `duration`: The duration of the animation in milliseconds.
     *
     * - `easing`: Can be a string reference to an easing function set on the
@@ -37,12 +40,7 @@ trait PlotOrganizationOptions extends js.Object {
     * Due to poor performance, animation is disabled in old IE browsers for
     * several chart types.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
-  
-  /**
-    * (Highcharts) Sets the color blending in the boost module.
-    */
-  var boostBlending: js.UndefOr[OptionsBoostBlendingValue] = js.native
+  var animation: js.UndefOr[Boolean | PlotOrganizationAnimationOptions | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highcharts, Highstock, Gantt) The border color of the node cards.
@@ -507,16 +505,10 @@ object PlotOrganizationOptions {
     def deleteAllAreas: Self = this.set("allAreas", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PlotOrganizationAnimationOptions | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)
-    
-    @scala.inline
-    def setBoostBlending(value: OptionsBoostBlendingValue): Self = this.set("boostBlending", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBoostBlending: Self = this.set("boostBlending", js.undefined)
     
     @scala.inline
     def setBorderColor(value: ColorString): Self = this.set("borderColor", value.asInstanceOf[js.Any])

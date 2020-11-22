@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "use-media-antd-query"
-version := "1.0.2-e183bf"
+version := "1.0.3-1ce481"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "diff-sequences"
-version := "26.0.0-531cb2"
+version := "26.6.2-cb30db"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

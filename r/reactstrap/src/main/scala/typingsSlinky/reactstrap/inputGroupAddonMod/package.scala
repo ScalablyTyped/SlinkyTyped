@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object inputGroupAddonMod {
   
-  type InputGroupAddon[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.inputGroupAddonMod.InputGroupAddonProps]
+  type InputGroupAddon = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.inputGroupAddonMod.InputGroupAddonProps]
 }

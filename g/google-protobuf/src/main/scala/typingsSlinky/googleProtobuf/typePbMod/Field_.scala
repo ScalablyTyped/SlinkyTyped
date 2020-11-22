@@ -16,7 +16,7 @@ class Field_ () extends Message {
   def addOptions(value: Option): Option = js.native
   def addOptions(value: Option, index: Double): Option = js.native
   
-  def clearOptionsList(): Unit = js.native
+  def clearOptionsList(): Field = js.native
   
   def getCardinality(): Cardinality = js.native
   
@@ -38,23 +38,23 @@ class Field_ () extends Message {
   
   def getTypeUrl(): String = js.native
   
-  def setCardinality(value: Cardinality): Unit = js.native
+  def setCardinality(value: Cardinality): Field = js.native
   
-  def setDefaultValue(value: String): Unit = js.native
+  def setDefaultValue(value: String): Field = js.native
   
-  def setJsonName(value: String): Unit = js.native
+  def setJsonName(value: String): Field = js.native
   
-  def setKind(value: Kind): Unit = js.native
+  def setKind(value: Kind): Field = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): Field = js.native
   
-  def setNumber(value: Double): Unit = js.native
+  def setNumber(value: Double): Field = js.native
   
-  def setOneofIndex(value: Double): Unit = js.native
+  def setOneofIndex(value: Double): Field = js.native
   
-  def setOptionsList(value: js.Array[Option]): Unit = js.native
+  def setOptionsList(value: js.Array[Option]): Field = js.native
   
-  def setPacked(value: Boolean): Unit = js.native
+  def setPacked(value: Boolean): Field = js.native
   
-  def setTypeUrl(value: String): Unit = js.native
+  def setTypeUrl(value: String): Field = js.native
 }

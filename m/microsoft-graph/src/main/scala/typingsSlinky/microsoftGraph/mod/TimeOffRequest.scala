@@ -11,16 +11,16 @@ trait TimeOffRequest extends ScheduleChangeRequest {
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example,
     * midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     */
-  var endDateTime: js.UndefOr[String] = js.native
+  var endDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example,
     * midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     */
-  var startDateTime: js.UndefOr[String] = js.native
+  var startDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // The reason for the time off.
-  var timeOffReasonId: js.UndefOr[String] = js.native
+  var timeOffReasonId: js.UndefOr[NullableOption[String]] = js.native
 }
 object TimeOffRequest {
   
@@ -46,21 +46,30 @@ object TimeOffRequest {
     }
     
     @scala.inline
-    def setEndDateTime(value: String): Self = this.set("endDateTime", value.asInstanceOf[js.Any])
+    def setEndDateTime(value: NullableOption[String]): Self = this.set("endDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEndDateTime: Self = this.set("endDateTime", js.undefined)
     
     @scala.inline
-    def setStartDateTime(value: String): Self = this.set("startDateTime", value.asInstanceOf[js.Any])
+    def setEndDateTimeNull: Self = this.set("endDateTime", null)
+    
+    @scala.inline
+    def setStartDateTime(value: NullableOption[String]): Self = this.set("startDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStartDateTime: Self = this.set("startDateTime", js.undefined)
     
     @scala.inline
-    def setTimeOffReasonId(value: String): Self = this.set("timeOffReasonId", value.asInstanceOf[js.Any])
+    def setStartDateTimeNull: Self = this.set("startDateTime", null)
+    
+    @scala.inline
+    def setTimeOffReasonId(value: NullableOption[String]): Self = this.set("timeOffReasonId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTimeOffReasonId: Self = this.set("timeOffReasonId", js.undefined)
+    
+    @scala.inline
+    def setTimeOffReasonIdNull: Self = this.set("timeOffReasonId", null)
   }
 }

@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object createTypePredicateNode extends js.Object {
   
   def apply(parameterName: java.lang.String, `type`: TypeNode): TypePredicateNode = js.native
+  /** @deprecated Use `factory.createTypePredicateNode` or the factory supplied by your transformation context instead. */
   def apply(parameterName: Identifier, `type`: TypeNode): TypePredicateNode = js.native
   def apply(parameterName: ThisTypeNode, `type`: TypeNode): TypePredicateNode = js.native
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for babylonjs
 
-Typings are for version 4.1.0
+Typings are for version 4.2.0
 
 ## Library description:
 Babylon.js is a JavaScript 3D engine based on webgl.

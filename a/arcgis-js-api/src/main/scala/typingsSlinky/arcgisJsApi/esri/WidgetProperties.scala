@@ -9,21 +9,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WidgetProperties extends js.Object {
   
   /**
-    * The ID or node representing the DOM element containing the widget. This property can only be set once. The following examples are all valid use cases when working with widgets.
+    * The ID or node representing the DOM element containing the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Widget.html#container)
     */
   var container: js.UndefOr[String | HTMLElement] = js.native
   
   /**
-    * The unique ID assigned to the widget when the widget is created. If not set by the developer, it will default to the container ID, or if that is not present then it will be automatically generated.
+    * The unique ID assigned to the widget when the widget is created.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Widget.html#id)
     */
   var id: js.UndefOr[String] = js.native
   
   /**
-    * The widget's label.  This property is useful whenever the widget is controlled by another one (e.g. [Expand](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Expand.html))
+    * The widget's label.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Widget.html#label)
     */

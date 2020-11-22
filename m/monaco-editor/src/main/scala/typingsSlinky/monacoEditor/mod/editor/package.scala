@@ -21,7 +21,7 @@ package object editor {
   type ICommandHandler = js.Function1[/* repeated */ js.Any, scala.Unit]
   
   type ICursorStateComputer = js.Function1[
-    /* inverseEditOperations */ js.Array[typingsSlinky.monacoEditor.mod.editor.IIdentifiedSingleEditOperation], 
+    /* inverseEditOperations */ js.Array[typingsSlinky.monacoEditor.mod.editor.IValidEditOperation], 
     js.Array[typingsSlinky.monacoEditor.mod.Selection] | scala.Null
   ]
   

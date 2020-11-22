@@ -1,7 +1,7 @@
 
 # Scala.js typings for dotenv-webpack
 
-Typings are for version 1.8
+Typings are for version 5.0
 
 ## Library description:
 A simple webpack plugin to support dotenv.

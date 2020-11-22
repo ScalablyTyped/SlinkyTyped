@@ -12,12 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object captionMod extends js.Object {
   
-  /**
-    * This component is really just a simple wrapper for applying the `<caption>`
-    * typography styles and probably doesn't have much real use if you don't use
-    * captions.
-    */
-  val default: ForwardRefExoticComponent[CaptionProps with RefAttributes[HTMLTableCaptionElement]] = js.native
+  val Caption: ForwardRefExoticComponent[CaptionProps with RefAttributes[HTMLTableCaptionElement]] = js.native
   
   type CaptionProps = HTMLAttributes[HTMLTableCaptionElement]
 }

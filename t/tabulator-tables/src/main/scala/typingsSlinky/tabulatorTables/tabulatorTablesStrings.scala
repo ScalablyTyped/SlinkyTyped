@@ -11,8 +11,8 @@ import typingsSlinky.tabulatorTables.Tabulator.ScrollToColumnPosition
 import typingsSlinky.tabulatorTables.Tabulator.ScrollToRowPostition
 import typingsSlinky.tabulatorTables.Tabulator.SortDirection
 import typingsSlinky.tabulatorTables.Tabulator.StandardValidatorType
+import typingsSlinky.tabulatorTables.Tabulator.TextDirection
 import typingsSlinky.tabulatorTables.Tabulator.VerticalAlign
-import typingsSlinky.tabulatorTables.Tabulator.VisibleRowRangeLookup
 import typingsSlinky.tabulatorTables.Tabulator._ColumnCalc
 import typingsSlinky.tabulatorTables.Tabulator._Editor
 import typingsSlinky.tabulatorTables.Tabulator._Formatter
@@ -66,6 +66,9 @@ object tabulatorTablesStrings {
   
   @scala.inline
   def asc: asc = "asc".asInstanceOf[asc]
+  
+  @scala.inline
+  def auto: auto = "auto".asInstanceOf[auto]
   
   @scala.inline
   def autocomplete: autocomplete = "autocomplete".asInstanceOf[autocomplete]
@@ -272,6 +275,9 @@ object tabulatorTablesStrings {
   def lookup: lookup = "lookup".asInstanceOf[lookup]
   
   @scala.inline
+  def ltr: ltr = "ltr".asInstanceOf[ltr]
+  
+  @scala.inline
   def manual: manual = "manual".asInstanceOf[manual]
   
   @scala.inline
@@ -365,6 +371,9 @@ object tabulatorTablesStrings {
   def rownum: rownum = "rownum".asInstanceOf[rownum]
   
   @scala.inline
+  def rtl: rtl = "rtl".asInstanceOf[rtl]
+  
+  @scala.inline
   def scroll: scroll = "scroll".asInstanceOf[scroll]
   
   @scala.inline
@@ -452,9 +461,7 @@ object tabulatorTablesStrings {
   sealed trait POST extends HttpMethod
   
   @js.native
-  sealed trait active
-    extends RowRangeLookup
-       with VisibleRowRangeLookup
+  sealed trait active extends RowRangeLookup
   
   @js.native
   sealed trait add extends js.Object
@@ -473,6 +480,9 @@ object tabulatorTablesStrings {
   
   @js.native
   sealed trait asc extends SortDirection
+  
+  @js.native
+  sealed trait auto extends TextDirection
   
   @js.native
   sealed trait autocomplete extends _Editor
@@ -690,6 +700,9 @@ object tabulatorTablesStrings {
   sealed trait lookup extends _Formatter
   
   @js.native
+  sealed trait ltr extends TextDirection
+  
+  @js.native
   sealed trait manual extends js.Object
   
   @js.native
@@ -788,6 +801,9 @@ object tabulatorTablesStrings {
   sealed trait rownum extends _Formatter
   
   @js.native
+  sealed trait rtl extends TextDirection
+  
+  @js.native
   sealed trait scroll extends js.Object
   
   @js.native
@@ -847,9 +863,7 @@ object tabulatorTablesStrings {
   sealed trait update extends js.Object
   
   @js.native
-  sealed trait visible
-    extends RowRangeLookup
-       with VisibleRowRangeLookup
+  sealed trait visible extends RowRangeLookup
   
   @js.native
   sealed trait weeks extends js.Object

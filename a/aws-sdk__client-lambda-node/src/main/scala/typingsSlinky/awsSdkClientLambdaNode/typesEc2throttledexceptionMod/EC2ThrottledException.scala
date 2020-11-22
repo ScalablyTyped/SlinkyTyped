@@ -1,30 +1,21 @@
 package typingsSlinky.awsSdkClientLambdaNode.typesEc2throttledexceptionMod
 
 import typingsSlinky.awsSdkClientLambdaNode.invokeExceptionsUnionMod.InvokeExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait EC2ThrottledException
-  extends ServiceException[EC2ThrottledExceptionDetails]
-     with InvokeExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_EC2ThrottledExceptionDetails> * / any */ @js.native
+trait EC2ThrottledException extends InvokeExceptionsUnion {
   
-  @JSName("name")
-  var name_EC2ThrottledException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.EC2ThrottledException = js.native
+  var name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.EC2ThrottledException = js.native
 }
 object EC2ThrottledException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: EC2ThrottledExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.EC2ThrottledException
-  ): EC2ThrottledException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.EC2ThrottledException): EC2ThrottledException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[EC2ThrottledException]
   }
   

@@ -23,18 +23,18 @@ trait TemplateSettings extends js.Object {
   
   /**
     * An object to import into the template as local variables.
-    **/
+    */
   var imports: js.UndefOr[Dictionary[_]] = js.native
   
   /**
     * The "interpolate" delimiter.
-    **/
+    */
   var interpolate: js.UndefOr[js.RegExp] = js.native
   
   /**
     * Used to reference the data object in the template text.
-    **/
-  var variable: js.UndefOr[String] = js.native
+    */
+  var variable: js.UndefOr[java.lang.String] = js.native
 }
 object TemplateSettings {
   
@@ -54,7 +54,7 @@ object TemplateSettings {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
+    def set(key: java.lang.String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -84,7 +84,7 @@ object TemplateSettings {
     def deleteInterpolate: Self = this.set("interpolate", js.undefined)
     
     @scala.inline
-    def setVariable(value: String): Self = this.set("variable", value.asInstanceOf[js.Any])
+    def setVariable(value: java.lang.String): Self = this.set("variable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVariable: Self = this.set("variable", js.undefined)

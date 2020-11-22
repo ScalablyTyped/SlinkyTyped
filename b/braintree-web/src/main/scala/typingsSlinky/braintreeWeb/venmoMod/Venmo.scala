@@ -14,7 +14,7 @@ trait Venmo extends js.Object {
   var VERSION: String = js.native
   
   def create(options: AllowNewBrowserTab): Unit = js.native
-  def create(options: AllowNewBrowserTab, callback: callback): Unit = js.native
+  def create(options: AllowNewBrowserTab, callback: callback[_]): Unit = js.native
   /**
     * braintree.venmo.create({
     *   client: clientInstance

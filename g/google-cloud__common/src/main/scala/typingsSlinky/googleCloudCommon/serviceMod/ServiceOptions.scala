@@ -1,6 +1,7 @@
 package typingsSlinky.googleCloudCommon.serviceMod
 
 import typingsSlinky.googleAuthLibrary.googleauthMod.GoogleAuthOptions
+import typingsSlinky.googleAuthLibrary.mod.GoogleAuth
 import typingsSlinky.googleCloudCommon.serviceObjectMod.Interceptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ServiceOptions extends GoogleAuthOptions {
+  
+  var authClient: js.UndefOr[GoogleAuth] = js.native
   
   var email: js.UndefOr[String] = js.native
   
@@ -41,6 +44,12 @@ object ServiceOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAuthClient(value: GoogleAuth): Self = this.set("authClient", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAuthClient: Self = this.set("authClient", js.undefined)
     
     @scala.inline
     def setEmail(value: String): Self = this.set("email", value.asInstanceOf[js.Any])

@@ -73,6 +73,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @property enableMarkup - Flag for enabling markup processing. Only works for {@link pc.ELEMENTTYPE_TEXT} types. The only supported tag is `[color]` with a hex color value. E.g `[color="#ff0000"]red text[/color]`
   * @property rangeStart - Index of the first character to render. Only works for {@link pc.ELEMENTTYPE_TEXT} types.
   * @property rangeEnd - Index of the last character to render. Only works for {@link pc.ELEMENTTYPE_TEXT} types.
+  * @property mask - Switch Image Element into a mask. Masks do not render into the scene, but instead limit child elements to only be rendered where this element is rendered.
   * @param system - The ComponentSystem that created this Component.
   * @param entity - The Entity that this Component is attached to.
   */
@@ -196,6 +197,11 @@ trait ElementComponent extends Component {
     * The distance from the left, bottom, right and top edges of the anchor. For example if we are using a split anchor like [0,0,1,1] and the margin is [0,0,0,0] then the component will be the same width and height as its parent.
     */
   var margin: Vec4 = js.native
+  
+  /**
+    * Switch Image Element into a mask. Masks do not render into the scene, but instead limit child elements to only be rendered where this element is rendered.
+    */
+  var mask: Boolean = js.native
   
   /**
     * The material to use when rendering an image. Only works for {@link pc.ELEMENTTYPE_IMAGE} types.

@@ -13,6 +13,9 @@ trait RateLimiter extends js.Object {
   /** Per duration in milliseconds */
   var duration: Double = js.native
   
+  /** Groups jobs with the specified key from the data object passed to the Queue#add ex. "network.handle" */
+  var groupKey: js.UndefOr[String] = js.native
+  
   /** Max numbers of jobs processed */
   var max: Double = js.native
 }
@@ -50,5 +53,11 @@ object RateLimiter {
     
     @scala.inline
     def deleteBounceBack: Self = this.set("bounceBack", js.undefined)
+    
+    @scala.inline
+    def setGroupKey(value: String): Self = this.set("groupKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGroupKey: Self = this.set("groupKey", js.undefined)
   }
 }

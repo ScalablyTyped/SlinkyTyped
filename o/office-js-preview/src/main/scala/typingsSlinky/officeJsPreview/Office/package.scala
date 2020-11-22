@@ -22,6 +22,16 @@ package object Office {
   type Appointment = typingsSlinky.officeJsPreview.Office.Item
   
   /**
+  	 * Used to strongly type the `handler` property of RemoveHandlerOptions.
+  	 */
+  type BindingEventHandler = js.Function1[
+    /* eventArgs */ js.UndefOr[
+      typingsSlinky.officeJsPreview.Office.BindingDataChangedEventArgs | typingsSlinky.officeJsPreview.Office.BindingSelectionChangedEventArgs
+    ], 
+    js.Any
+  ]
+  
+  /**
     * The compose mode of {@link Office.Item | Office.context.mailbox.item}.
     *
     * **Important**: This is an internal Outlook object, not directly exposed through existing interfaces.

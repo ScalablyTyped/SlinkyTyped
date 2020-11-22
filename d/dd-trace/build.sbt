@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "dd-trace"
-version := "0.24.0-31a3df"
+version := "0.28.1-14b9cd"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
-  "org.scalablytyped.slinky" %%% "opentracing" % "0.14.4-13597b",
-  "org.scalablytyped.slinky" %%% "protobufjs" % "6.10.1-704af0",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "opentracing" % "0.14.5-4c933e",
+  "org.scalablytyped.slinky" %%% "protobufjs" % "6.10.2-d4cf69",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

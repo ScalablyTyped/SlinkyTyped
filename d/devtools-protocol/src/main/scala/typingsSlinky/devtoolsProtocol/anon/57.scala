@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetNodeValueRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetFileInputFilesRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `57` extends js.Object {
   
-  var paramsType: js.Array[SetNodeValueRequest] = js.native
+  var paramsType: js.Array[SetFileInputFilesRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `57` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetNodeValueRequest], returnType: Unit): `57` = {
+  def apply(paramsType: js.Array[SetFileInputFilesRequest], returnType: Unit): `57` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`57`]
   }
@@ -36,10 +36,10 @@ object `57` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetNodeValueRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetFileInputFilesRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetNodeValueRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetFileInputFilesRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

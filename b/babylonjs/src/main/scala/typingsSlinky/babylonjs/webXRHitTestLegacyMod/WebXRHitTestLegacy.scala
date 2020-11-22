@@ -12,7 +12,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("babylonjs/XR/features/WebXRHitTestLegacy", "WebXRHitTestLegacy")
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.babylonjs.sceneMod.IDisposable because Already inherited
+- typingsSlinky.babylonjs.webXRFeaturesManagerMod.IWebXRFeature because Already inherited
+- typingsSlinky.babylonjs.webXRHitTestLegacyMod.IWebXRHitTestFeature because var conflicts: attached, dependsOn, disableAutoAttach, isDisposed, xrNativeFeatureName. Inlined onHitTestResultObservable */ @JSImport("babylonjs/XR/features/WebXRHitTestLegacy", "WebXRHitTestLegacy")
 @js.native
 class WebXRHitTestLegacy protected () extends WebXRAbstractFeature {
   /**
@@ -26,7 +29,7 @@ class WebXRHitTestLegacy protected () extends WebXRAbstractFeature {
     /**
     * options to use when constructing this feature
     */
-  options: IWebXRHitTestOptions
+  options: IWebXRLegacyHitTestOptions
   ) = this()
   
   var _direction: js.Any = js.native
@@ -49,12 +52,12 @@ class WebXRHitTestLegacy protected () extends WebXRAbstractFeature {
   /**
     * Triggered when new babylon (transformed) hit test results are available
     */
-  var onHitTestResultObservable: Observable[js.Array[IWebXRHitResult]] = js.native
+  var onHitTestResultObservable: Observable[js.Array[IWebXRLegacyHitResult]] = js.native
   
   /**
     * options to use when constructing this feature
     */
-  val options: IWebXRHitTestOptions = js.native
+  val options: IWebXRLegacyHitTestOptions = js.native
 }
 /* static members */
 @JSImport("babylonjs/XR/features/WebXRHitTestLegacy", "WebXRHitTestLegacy")

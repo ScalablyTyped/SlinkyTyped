@@ -13,33 +13,27 @@ trait SceneViewHighlightOptionsProperties extends Object {
     * The color of the highlight.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#highlightOptions)
-    *
-    * @default #00ffff
     */
   var color: js.UndefOr[Color_ | js.Array[Double] | String] = js.native
   
   /**
-    * The opacity of the fill (area within the halo). This will be multiplied with the opacity specified in `color`.
+    * The opacity of the fill (area within the halo).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#highlightOptions)
-    *
-    * @default 0.25
     */
   var fillOpacity: js.UndefOr[Double] = js.native
   
   /**
-    * An optional color for the halo of the highlight. If unset, the `color` will be used for the halo.
+    * An optional color for the halo of the highlight.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#highlightOptions)
     */
   var haloColor: js.UndefOr[Color_] = js.native
   
   /**
-    * The opacity of the highlight halo. This will be multiplied with the opacity specified in `color`.
+    * The opacity of the highlight halo.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#highlightOptions)
-    *
-    * @default 1
     */
   var haloOpacity: js.UndefOr[Double] = js.native
 }

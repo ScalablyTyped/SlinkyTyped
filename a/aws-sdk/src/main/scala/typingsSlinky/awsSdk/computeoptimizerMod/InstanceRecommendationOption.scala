@@ -18,7 +18,7 @@ trait InstanceRecommendationOption extends js.Object {
   var performanceRisk: js.UndefOr[PerformanceRisk] = js.native
   
   /**
-    * An array of objects that describe the projected utilization metrics of the instance recommendation option.
+    * An array of objects that describe the projected utilization metrics of the instance recommendation option.  The Cpu and Memory metrics are the only projected utilization metrics returned. Additionally, the Memory metric is returned only for resources that have the unified CloudWatch agent installed on them. For more information, see Enabling Memory Utilization with the CloudWatch Agent. 
     */
   var projectedUtilizationMetrics: js.UndefOr[ProjectedUtilizationMetrics] = js.native
   

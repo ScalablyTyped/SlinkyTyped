@@ -23,6 +23,11 @@ trait JobSummary extends js.Object {
   var createdAt: js.UndefOr[Long] = js.native
   
   /**
+    * The Amazon Resource Name (ARN) of the job.
+    */
+  var jobArn: js.UndefOr[String] = js.native
+  
+  /**
     * The ID of the job.
     */
   var jobId: String = js.native
@@ -103,6 +108,12 @@ object JobSummary {
     
     @scala.inline
     def deleteCreatedAt: Self = this.set("createdAt", js.undefined)
+    
+    @scala.inline
+    def setJobArn(value: String): Self = this.set("jobArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJobArn: Self = this.set("jobArn", js.undefined)
     
     @scala.inline
     def setNodeProperties(value: NodePropertiesSummary): Self = this.set("nodeProperties", value.asInstanceOf[js.Any])

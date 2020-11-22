@@ -1,9 +1,10 @@
 package typingsSlinky.reactRelay
 
-import typingsSlinky.reactRelay.anon.NetworkCacheConfig
+import typingsSlinky.reactRelay.anon.FetchPolicy
 import typingsSlinky.relayRuntime.mod.Observable
 import typingsSlinky.relayRuntime.relayModernGraphQLTagMod.GraphQLTaggedNode
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.VariablesOf
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Environment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,20 +14,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object fetchQueryMod extends js.Object {
   
-  @JSName("fetchQuery")
-  def fetchQuery_variables[TQuery /* <: OperationType */](
-    environment: Environment,
-    query: GraphQLTaggedNode,
-    variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any
-  ): Observable[
+  def fetchQuery[TQuery /* <: OperationType */](environment: Environment, query: GraphQLTaggedNode, variables: VariablesOf[TQuery]): Observable[
     /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any
   ] = js.native
-  @JSName("fetchQuery")
-  def fetchQuery_variables[TQuery /* <: OperationType */](
+  def fetchQuery[TQuery /* <: OperationType */](
     environment: Environment,
     query: GraphQLTaggedNode,
-    variables: /* import warning: importer.ImportType#apply Failed type conversion: TQuery['variables'] */ js.Any,
-    options: NetworkCacheConfig
+    variables: VariablesOf[TQuery],
+    options: FetchPolicy
   ): Observable[
     /* import warning: importer.ImportType#apply Failed type conversion: TQuery['response'] */ js.Any
   ] = js.native

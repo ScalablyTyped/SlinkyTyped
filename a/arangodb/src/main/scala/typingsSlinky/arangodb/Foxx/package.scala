@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object Foxx {
   
+  type Configuration = org.scalablytyped.runtime.StringDictionary[js.Any]
+  
+  type Dependencies = org.scalablytyped.runtime.StringDictionary[js.Any]
+  
   type Handler = js.Function2[
     /* req */ typingsSlinky.arangodb.Foxx.Request, 
     /* res */ typingsSlinky.arangodb.Foxx.Response, 

@@ -29,8 +29,13 @@ import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdList.getListItemHeightMod.ListItemHeight
 import typingsSlinky.reactMdList.listItemAddonMod.ListItemAddonPosition
 import typingsSlinky.reactMdList.listItemAddonMod.ListItemAddonType
+import typingsSlinky.reactMdTree.reactMdTreeStrings.`additions removals`
 import typingsSlinky.reactMdTree.reactMdTreeStrings.`additions text`
 import typingsSlinky.reactMdTree.reactMdTreeStrings.`inline`
+import typingsSlinky.reactMdTree.reactMdTreeStrings.`removals additions`
+import typingsSlinky.reactMdTree.reactMdTreeStrings.`removals text`
+import typingsSlinky.reactMdTree.reactMdTreeStrings.`text additions`
+import typingsSlinky.reactMdTree.reactMdTreeStrings.`text removals`
 import typingsSlinky.reactMdTree.reactMdTreeStrings.additions
 import typingsSlinky.reactMdTree.reactMdTreeStrings.all
 import typingsSlinky.reactMdTree.reactMdTreeStrings.ascending
@@ -205,7 +210,9 @@ object TreeItem {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -852,7 +859,9 @@ object TreeItem {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

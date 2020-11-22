@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
+  type IProduce = typingsSlinky.immer.mod.IProduce
+  
   type InitializerFunction[S, A] = js.Function1[/* store */ typingsSlinky.useGlobalHook.mod.Store[S, A], scala.Unit]
   
   type UseGlobal[S, A] = (js.Function0[js.Tuple2[S, A]]) with (js.Function1[/* stateFunc */ js.Function1[/* state */ S, _], js.Tuple2[_, A]]) with (js.Function2[

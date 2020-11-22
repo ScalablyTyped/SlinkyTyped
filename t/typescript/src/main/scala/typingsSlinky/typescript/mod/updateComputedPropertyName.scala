@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateComputedPropertyName extends js.Object {
   
+  /** @deprecated Use `factory.updateComputedPropertyName` or the factory supplied by your transformation context instead. */
   def apply(node: ComputedPropertyName, expression: Expression): ComputedPropertyName = js.native
 }

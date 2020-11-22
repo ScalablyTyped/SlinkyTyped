@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSParenthesizedType
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSBooleanKeyword
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `218` extends js.Object {
   
-  var `type`: TSParenthesizedType = js.native
+  var `type`: TSBooleanKeyword = js.native
 }
 object `218` {
   
   @scala.inline
-  def apply(`type`: TSParenthesizedType): `218` = {
+  def apply(`type`: TSBooleanKeyword): `218` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`218`]
@@ -35,6 +35,6 @@ object `218` {
     }
     
     @scala.inline
-    def setType(value: TSParenthesizedType): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSBooleanKeyword): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -34,6 +34,7 @@ trait TypeChecker extends js.Object {
   def getDefaultFromTypeParameter(`type`: Type): js.UndefOr[Type] = js.native
   
   def getExportSpecifierLocalTargetSymbol(location: ExportSpecifier): js.UndefOr[Symbol] = js.native
+  def getExportSpecifierLocalTargetSymbol(location: Identifier): js.UndefOr[Symbol] = js.native
   
   /**
     * If a symbol is a local symbol with an associated exported symbol, returns the exported symbol.
@@ -92,6 +93,8 @@ trait TypeChecker extends js.Object {
   def getSignaturesOfType(`type`: Type, kind: SignatureKind): js.Array[Signature] = js.native
   
   def getSymbolAtLocation(node: Node): js.UndefOr[Symbol] = js.native
+  
+  def getSymbolOfExpando(node: Node, allowDeclaration: Boolean): js.UndefOr[Symbol] = js.native
   
   def getSymbolsInScope(location: Node, meaning: SymbolFlags): js.Array[Symbol] = js.native
   

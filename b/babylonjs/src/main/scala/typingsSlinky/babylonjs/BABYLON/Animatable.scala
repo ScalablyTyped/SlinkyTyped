@@ -42,7 +42,7 @@ trait Animatable extends js.Object {
   
   /**
     * Disable animation blending
-    * @see http://doc.babylonjs.com/babylon101/animations#animation-blending
+    * @see https://doc.babylonjs.com/babylon101/animations#animation-blending
     */
   def disableBlending(): Unit = js.native
   
@@ -54,7 +54,7 @@ trait Animatable extends js.Object {
   
   /**
     * Allows the animatable to blend with current running animations
-    * @see http://doc.babylonjs.com/babylon101/animations#animation-blending
+    * @see https://doc.babylonjs.com/babylon101/animations#animation-blending
     * @param blendingSpeed defines the blending speed to use
     */
   def enableBlending(blendingSpeed: Double): Unit = js.native
@@ -87,6 +87,9 @@ trait Animatable extends js.Object {
     * @param frame defines the frame to jump to
     */
   def goToFrame(frame: Double): Unit = js.native
+  
+  /** defines whether the animation should be evaluated additively */
+  var isAdditive: Boolean = js.native
   
   /** defines if the animation must loop (default is false)  */
   var loopAnimation: Boolean = js.native

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashShuffle extends LodashConvertible {
+trait LodashShuffle extends js.Object {
   
   def apply[T /* <: js.Object */](): js.Array[
     /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any

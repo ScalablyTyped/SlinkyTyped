@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ManagedAppStatusRaw extends ManagedAppStatus {
   
   // Status report content.
-  var content: js.UndefOr[js.Any] = js.native
+  var content: js.UndefOr[NullableOption[_]] = js.native
 }
 object ManagedAppStatusRaw {
   
@@ -34,9 +34,12 @@ object ManagedAppStatusRaw {
     }
     
     @scala.inline
-    def setContent(value: js.Any): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: NullableOption[_]): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
+    
+    @scala.inline
+    def setContentNull: Self = this.set("content", null)
   }
 }

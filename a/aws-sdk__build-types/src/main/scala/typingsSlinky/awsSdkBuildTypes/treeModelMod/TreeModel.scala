@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkBuildTypes.treeModelMod
 
-import typingsSlinky.awsSdkTypes.protocolMod.ServiceMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +9,7 @@ trait TreeModel
   extends Documented
      with Named {
   
-  var metadata: ServiceMetadata = js.native
+  var metadata: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceMetadata */ js.Any = js.native
   
   var operations: TreeModelOperationMap = js.native
   
@@ -21,7 +20,7 @@ object TreeModel {
   @scala.inline
   def apply(
     documentation: String,
-    metadata: ServiceMetadata,
+    metadata: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceMetadata */ js.Any,
     name: String,
     operations: TreeModelOperationMap,
     shapes: TreeModelShapeMap
@@ -46,7 +45,9 @@ object TreeModel {
     }
     
     @scala.inline
-    def setMetadata(value: ServiceMetadata): Self = this.set("metadata", value.asInstanceOf[js.Any])
+    def setMetadata(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceMetadata */ js.Any
+    ): Self = this.set("metadata", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOperations(value: TreeModelOperationMap): Self = this.set("operations", value.asInstanceOf[js.Any])

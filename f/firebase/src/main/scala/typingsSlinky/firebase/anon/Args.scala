@@ -1,6 +1,6 @@
 package typingsSlinky.firebase.anon
 
-import typingsSlinky.firebase.mod.LogLevel
+import typingsSlinky.firebase.mod.firebase.LogLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

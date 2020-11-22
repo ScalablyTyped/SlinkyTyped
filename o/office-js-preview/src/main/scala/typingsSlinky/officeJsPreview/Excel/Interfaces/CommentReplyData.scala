@@ -40,8 +40,7 @@ trait CommentReplyData extends js.Object {
     *
     * The content type of the reply.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var contentType: js.UndefOr[ContentType | Plain | Mention] = js.native
   

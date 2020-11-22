@@ -18,9 +18,9 @@ trait CreateCanaryRequest extends js.Object {
   var Code: CanaryCodeInput = js.native
   
   /**
-    * The ARN of the IAM role to be used to run the canary. This role must already exist, and must include lambda.amazonaws.com as a principal in the trust policy. The role must also have the following permissions:    s3:PutObject     s3:GetBucketLocation     s3:ListAllMyBuckets     cloudwatch:PutMetricData     logs:CreateLogGroup     logs:CreateLogStream     logs:CreateLogStream   
+    * The ARN of the IAM role to be used to run the canary. This role must already exist, and must include lambda.amazonaws.com as a principal in the trust policy. The role must also have the following permissions:    s3:PutObject     s3:GetBucketLocation     s3:ListAllMyBuckets     cloudwatch:PutMetricData     logs:CreateLogGroup     logs:CreateLogStream     logs:PutLogEvents   
     */
-  var ExecutionRoleArn: Arn = js.native
+  var ExecutionRoleArn: RoleArn = js.native
   
   /**
     * The number of days to retain data about failed runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
@@ -38,7 +38,7 @@ trait CreateCanaryRequest extends js.Object {
   var RunConfig: js.UndefOr[CanaryRunConfigInput] = js.native
   
   /**
-    * Specifies the runtime version to use for the canary. Currently, the only valid value is syn-1.0. For more information about runtime versions, see  Canary Runtime Versions.
+    * Specifies the runtime version to use for the canary. For a list of valid runtime versions and more information about runtime versions, see  Canary Runtime Versions.
     */
   var RuntimeVersion: String = js.native
   
@@ -68,7 +68,7 @@ object CreateCanaryRequest {
   def apply(
     ArtifactS3Location: String,
     Code: CanaryCodeInput,
-    ExecutionRoleArn: Arn,
+    ExecutionRoleArn: RoleArn,
     Name: CanaryName,
     RuntimeVersion: String,
     Schedule: CanaryScheduleInput
@@ -99,7 +99,7 @@ object CreateCanaryRequest {
     def setCode(value: CanaryCodeInput): Self = this.set("Code", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExecutionRoleArn(value: Arn): Self = this.set("ExecutionRoleArn", value.asInstanceOf[js.Any])
+    def setExecutionRoleArn(value: RoleArn): Self = this.set("ExecutionRoleArn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: CanaryName): Self = this.set("Name", value.asInstanceOf[js.Any])

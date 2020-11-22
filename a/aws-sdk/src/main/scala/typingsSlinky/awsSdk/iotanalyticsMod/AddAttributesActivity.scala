@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AddAttributesActivity extends js.Object {
   
   /**
-    * A list of 1-50 "AttributeNameMapping" objects that map an existing attribute to a new attribute.  The existing attributes remain in the message, so if you want to remove the originals, use "RemoveAttributeActivity". 
+    * A list of 1-50 AttributeNameMapping objects that map an existing attribute to a new attribute.  The existing attributes remain in the message, so if you want to remove the originals, use RemoveAttributeActivity. 
     */
   var attributes: AttributeNameMapping = js.native
   
   /**
-    * The name of the 'addAttributes' activity.
+    * The name of the addAttributes activity.
     */
   var name: ActivityName = js.native
   

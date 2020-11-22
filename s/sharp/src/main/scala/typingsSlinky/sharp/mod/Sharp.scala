@@ -520,12 +520,14 @@ trait Sharp extends Duplex {
     * @returns A sharp instance that can be used to chain operations
     */
   def toFormat(format: String): Sharp = js.native
+  def toFormat(format: String, options: GifOptions): Sharp = js.native
   def toFormat(format: String, options: JpegOptions): Sharp = js.native
   def toFormat(format: String, options: OutputOptions): Sharp = js.native
   def toFormat(format: String, options: PngOptions): Sharp = js.native
   def toFormat(format: String, options: TiffOptions): Sharp = js.native
   def toFormat(format: String, options: WebpOptions): Sharp = js.native
   def toFormat(format: AvailableFormatInfo): Sharp = js.native
+  def toFormat(format: AvailableFormatInfo, options: GifOptions): Sharp = js.native
   def toFormat(format: AvailableFormatInfo, options: JpegOptions): Sharp = js.native
   def toFormat(format: AvailableFormatInfo, options: OutputOptions): Sharp = js.native
   def toFormat(format: AvailableFormatInfo, options: PngOptions): Sharp = js.native

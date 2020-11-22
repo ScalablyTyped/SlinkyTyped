@@ -9,9 +9,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Optionsmaptrue extends js.Object {
   
+  /**
+    * Calls dcodeURIComponent on each value
+    * @default true
+    */
   var decodeValues: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Return an object instead of an array
+    * @default false
+    */
   var map: js.UndefOr[Boolean] with `true` = js.native
+  
+  /**
+    * Suppress the warning that is loged when called on a request instead of a response
+    * @default false
+    */
+  var silent: js.UndefOr[Boolean] = js.native
 }
 object Optionsmaptrue {
   
@@ -44,5 +58,11 @@ object Optionsmaptrue {
     
     @scala.inline
     def deleteDecodeValues: Self = this.set("decodeValues", js.undefined)
+    
+    @scala.inline
+    def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSilent: Self = this.set("silent", js.undefined)
   }
 }

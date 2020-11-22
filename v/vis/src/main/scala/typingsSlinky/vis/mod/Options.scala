@@ -11,9 +11,8 @@ trait Options extends js.Object {
   
   var clickToUse: js.UndefOr[Boolean] = js.native
   
-  var configure: js.UndefOr[js.Any] = js.native
+  var configure: js.UndefOr[NetworkConfigure] = js.native
   
-   // http://visjs.org/docs/network/configure.html#
   var edges: js.UndefOr[EdgeOptions] = js.native
   
   var groups: js.UndefOr[js.Any] = js.native
@@ -75,7 +74,7 @@ object Options {
     def deleteClickToUse: Self = this.set("clickToUse", js.undefined)
     
     @scala.inline
-    def setConfigure(value: js.Any): Self = this.set("configure", value.asInstanceOf[js.Any])
+    def setConfigure(value: NetworkConfigure): Self = this.set("configure", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteConfigure: Self = this.set("configure", js.undefined)

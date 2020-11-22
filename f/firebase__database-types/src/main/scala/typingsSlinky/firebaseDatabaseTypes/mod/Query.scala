@@ -25,6 +25,8 @@ trait Query extends js.Object {
   def equalTo(value: Double, key: String): Query = js.native
   def equalTo(value: Null, key: String): Query = js.native
   
+  def get(): js.Promise[DataSnapshot] = js.native
+  
   def isEqual(): Boolean = js.native
   def isEqual(other: Query): Boolean = js.native
   

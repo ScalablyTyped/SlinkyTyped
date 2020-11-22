@@ -1,5 +1,6 @@
 package typingsSlinky.yandexMaps.mod
 
+import typingsSlinky.yandexMaps.mod.util.Storage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("yandex-maps", "layout")
 @js.native
 object layout extends js.Object {
+  
+  val storage: Storage = js.native
   
   @js.native
   object templateBased extends js.Object {

@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object evalHand extends js.Object {
   
-  def apply(cards: js.Array[String]): EvaluatedHand = js.native
+  def apply(cards: js.Array[Double | String]): EvaluatedHand = js.native
 }

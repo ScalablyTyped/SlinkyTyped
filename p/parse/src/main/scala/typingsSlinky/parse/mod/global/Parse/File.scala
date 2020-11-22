@@ -5,6 +5,7 @@ import typingsSlinky.parse.anon.ForceSecure
 import typingsSlinky.parse.anon.Name
 import typingsSlinky.parse.anon.Size
 import typingsSlinky.parse.anon.Uri
+import typingsSlinky.parse.mod.global.Parse.Schema._FieldType
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,7 +41,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("Parse.File")
 @js.native
-class File protected () extends js.Object {
+class File protected () extends _FieldType {
   def this(name: String, data: js.Array[Double]) = this()
   def this(name: String, data: Base64) = this()
   def this(name: String, data: Size) = this()

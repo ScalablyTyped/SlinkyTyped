@@ -26,9 +26,7 @@ import typingsSlinky.gestalt.gestaltStrings.pine
 import typingsSlinky.gestalt.gestaltStrings.purple
 import typingsSlinky.gestalt.gestaltStrings.red
 import typingsSlinky.gestalt.gestaltStrings.right
-import typingsSlinky.gestalt.gestaltStrings.short
 import typingsSlinky.gestalt.gestaltStrings.sm
-import typingsSlinky.gestalt.gestaltStrings.tall
 import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
 import typingsSlinky.gestalt.mod.TextProps
@@ -60,9 +58,6 @@ object Text {
     
     @scala.inline
     def italic(value: Boolean): this.type = set("italic", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def leading(value: short | tall): this.type = set("leading", value.asInstanceOf[js.Any])
     
     @scala.inline
     def overflow(value: normal | breakWord): this.type = set("overflow", value.asInstanceOf[js.Any])

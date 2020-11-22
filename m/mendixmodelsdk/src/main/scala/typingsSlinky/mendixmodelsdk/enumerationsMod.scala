@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates.ConditionSettings
 import typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable
@@ -15,6 +16,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.Document
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
@@ -39,14 +41,14 @@ object enumerationsMod extends js.Object {
       * Interfaces and instance classes for types from the Mendix sub meta model `Enumerations`.
       */
     @js.native
-    class Condition protected () extends Element {
+    class Condition protected () extends Element[IModel] {
       def this(
         model: AbstractModel,
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       def attributeValue: String = js.native
@@ -58,9 +60,6 @@ object enumerationsMod extends js.Object {
       
       def editableVisible: Boolean = js.native
       def editableVisible_=(newValue: Boolean): Unit = js.native
-      
-      @JSName("model")
-      var model_FCondition: IModel = js.native
     }
     /* static members */
     @js.native
@@ -93,7 +92,7 @@ object enumerationsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/enumerations relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/enumerations relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -117,9 +116,6 @@ object enumerationsMod extends js.Object {
       @JSName("containerAsFolderBase")
       def containerAsFolderBase_MEnumeration: FolderBase = js.native
       
-      @JSName("model")
-      var model_FEnumeration: IModel = js.native
-      
       def values: IList[EnumerationValue] = js.native
       @JSName("values")
       val values_FEnumeration: IList[IEnumerationValue] = js.native
@@ -140,7 +136,7 @@ object enumerationsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/enumerations relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/enumerations relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -149,15 +145,15 @@ object enumerationsMod extends js.Object {
     - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
     - typingsSlinky.mendixmodelsdk.enumerationsMod.enumerations.IEnumerationValue because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsEnumeration, name */ @js.native
     class EnumerationValue protected ()
-      extends Element
+      extends Element[IModel]
          with IByNameReferrable {
       def this(
         model: AbstractModel,
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       def caption: Text = js.native
@@ -172,9 +168,6 @@ object enumerationsMod extends js.Object {
       def imageQualifiedName: String | Null = js.native
       
       def image_=(newValue: IImage | Null): Unit = js.native
-      
-      @JSName("model")
-      var model_FEnumerationValue: IModel = js.native
       
       def name: String = js.native
       def name_=(newValue: String): Unit = js.native
@@ -208,7 +201,7 @@ object enumerationsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/enumerations relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/enumerations relevant section in reference guide}
       */
     @js.native
     trait IEnumeration extends IDocument {
@@ -217,7 +210,7 @@ object enumerationsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/enumerations relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/enumerations relevant section in reference guide}
       */
     @js.native
     trait IEnumerationValue

@@ -16,8 +16,13 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals text`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.all
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.ascending
@@ -84,7 +89,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  expanded :boolean | undefined,   glyph :fundamental-react.fundamental-react/lib/Icon/Icon.IconGlyph | undefined,   id :string | undefined,   isSubItem :boolean | undefined,   name :string | undefined,   selected :boolean | undefined,   selectedId :string | undefined,   url :string | undefined,   onClick :(args : ...any): any | undefined,   onItemSelect :(args : ...any): any | undefined} & react.react.HTMLAttributes<std.Element> */
+/* Inlined {  condensed :boolean | undefined,   expanded :boolean | undefined,   expandSubmenuLabel :string | undefined,   glyph :fundamental-react.fundamental-react/lib/Icon/Icon.IconGlyph | undefined,   id :string | undefined,   isSubItem :boolean | undefined,   name :string | undefined,   selected :boolean | undefined,   selectedId :string | undefined,   url :string | undefined,   onClick :(args : ...any): any | undefined,   onItemSelect :(args : ...any): any | undefined} & react.react.HTMLAttributes<std.Element> */
 @js.native
 trait SideNavListItemProps extends js.Object {
   
@@ -270,7 +275,9 @@ trait SideNavListItemProps extends js.Object {
     * Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
     * @see aria-atomic.
     */
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   /** Indicates that user input is required on the element before a form may be submitted. */
   var `aria-required`: js.UndefOr[Boolean] = js.native
@@ -339,6 +346,8 @@ trait SideNavListItemProps extends js.Object {
   
   var color: js.UndefOr[String] = js.native
   
+  var condensed: js.UndefOr[Boolean] = js.native
+  
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   
   var contextMenu: js.UndefOr[String] = js.native
@@ -355,6 +364,8 @@ trait SideNavListItemProps extends js.Object {
   var dir: js.UndefOr[String] = js.native
   
   var draggable: js.UndefOr[Booleanish] = js.native
+  
+  var expandSubmenuLabel: js.UndefOr[String] = js.native
   
   var expanded: js.UndefOr[Boolean] = js.native
   
@@ -871,7 +882,9 @@ object SideNavListItemProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -988,6 +1001,12 @@ object SideNavListItemProps {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
+    def setCondensed(value: Boolean): Self = this.set("condensed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCondensed: Self = this.set("condensed", js.undefined)
+    
+    @scala.inline
     def setContentEditable(value: Booleanish | inherit): Self = this.set("contentEditable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1037,6 +1056,12 @@ object SideNavListItemProps {
     
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    
+    @scala.inline
+    def setExpandSubmenuLabel(value: String): Self = this.set("expandSubmenuLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpandSubmenuLabel: Self = this.set("expandSubmenuLabel", js.undefined)
     
     @scala.inline
     def setExpanded(value: Boolean): Self = this.set("expanded", value.asInstanceOf[js.Any])

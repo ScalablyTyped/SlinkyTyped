@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Product extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/product
+  // Docs: https://electronjs.org/docs/api/structures/product
   /**
     * The total size of the content, in bytes.
     */
@@ -17,6 +17,11 @@ trait Product extends js.Object {
     * A string that identifies the version of the content.
     */
   var contentVersion: String = js.native
+  
+  /**
+    * 3 character code presenting a product's currency based on the ISO 4217 standard.
+    */
+  var currencyCode: String = js.native
   
   /**
     * The locale formatted price of the product.
@@ -56,6 +61,7 @@ object Product {
   def apply(
     contentLengths: js.Array[Double],
     contentVersion: String,
+    currencyCode: String,
     formattedPrice: String,
     isDownloadable: Boolean,
     localizedDescription: String,
@@ -63,7 +69,7 @@ object Product {
     price: Double,
     productIdentifier: String
   ): Product = {
-    val __obj = js.Dynamic.literal(contentLengths = contentLengths.asInstanceOf[js.Any], contentVersion = contentVersion.asInstanceOf[js.Any], formattedPrice = formattedPrice.asInstanceOf[js.Any], isDownloadable = isDownloadable.asInstanceOf[js.Any], localizedDescription = localizedDescription.asInstanceOf[js.Any], localizedTitle = localizedTitle.asInstanceOf[js.Any], price = price.asInstanceOf[js.Any], productIdentifier = productIdentifier.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(contentLengths = contentLengths.asInstanceOf[js.Any], contentVersion = contentVersion.asInstanceOf[js.Any], currencyCode = currencyCode.asInstanceOf[js.Any], formattedPrice = formattedPrice.asInstanceOf[js.Any], isDownloadable = isDownloadable.asInstanceOf[js.Any], localizedDescription = localizedDescription.asInstanceOf[js.Any], localizedTitle = localizedTitle.asInstanceOf[js.Any], price = price.asInstanceOf[js.Any], productIdentifier = productIdentifier.asInstanceOf[js.Any])
     __obj.asInstanceOf[Product]
   }
   
@@ -90,6 +96,9 @@ object Product {
     
     @scala.inline
     def setContentVersion(value: String): Self = this.set("contentVersion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCurrencyCode(value: String): Self = this.set("currencyCode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFormattedPrice(value: String): Self = this.set("formattedPrice", value.asInstanceOf[js.Any])

@@ -17,12 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BuildingSceneLayerElevationInfo extends Object {
   
   /**
-    * Defines how features are placed on the vertical axis (z). Currently only `absolute-height` mode is supported.
-    *
-    * Mode | Description
-    * ------|------------
-    * absolute-height | Features are placed at an absolute elevation (z-value) above sea level. This z-value is determined by summing up the `offset` value and the point's z-value. It doesn't take the elevation of the terrain into account. This is the only supported elevation mode for a [BuildingSceneLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html).
-    *
+    * Defines how features are placed on the vertical axis (z).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html#elevationInfo)
     */
@@ -32,8 +27,6 @@ trait BuildingSceneLayerElevationInfo extends Object {
     * An elevation offset, which is added to the vertical position of each feature.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html#elevationInfo)
-    *
-    * @default 0
     */
   var offset: js.UndefOr[Double] = js.native
   
@@ -41,8 +34,6 @@ trait BuildingSceneLayerElevationInfo extends Object {
     * The unit for `offset` values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html#elevationInfo)
-    *
-    * @default meters
     */
   var unit: js.UndefOr[feet_ | meters_ | kilometers_ | miles_ | `us-feet` | yards] = js.native
 }

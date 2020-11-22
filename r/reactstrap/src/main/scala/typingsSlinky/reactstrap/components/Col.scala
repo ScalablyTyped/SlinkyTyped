@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -21,9 +22,13 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.ReactType
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -69,44 +74,27 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactstrap.colMod.ColProps
 import typingsSlinky.reactstrap.colMod.ColumnProps
+import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Col {
   
-  @JSImport("reactstrap", "Col")
+  @JSImport("reactstrap/es", "Col")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.reactstrap.mod.Col[T]] {
+       with StBuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.reactstrap.mod.Col] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def accept(value: String): this.type = set("accept", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def acceptCharset(value: String): this.type = set("acceptCharset", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def action(value: String): this.type = set("action", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def allowFullScreen(value: Boolean): this.type = set("allowFullScreen", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def allowTransparency(value: Boolean): this.type = set("allowTransparency", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def alt(value: String): this.type = set("alt", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
@@ -214,7 +202,9 @@ object Col {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -253,67 +243,19 @@ object Col {
     def `aria-valuetext`(value: String): this.type = set("aria-valuetext", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def as(value: String): this.type = set("as", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def async(value: Boolean): this.type = set("async", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def autoCapitalize(value: String): this.type = set("autoCapitalize", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
     
     @scala.inline
     def autoCorrect(value: String): this.type = set("autoCorrect", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def autoPlay(value: Boolean): this.type = set("autoPlay", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def capture(value: Boolean | String): this.type = set("capture", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def cellPadding(value: Double | String): this.type = set("cellPadding", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def cellSpacing(value: Double | String): this.type = set("cellSpacing", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def challenge(value: String): this.type = set("challenge", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def charSet(value: String): this.type = set("charSet", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def cite(value: String): this.type = set("cite", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def classID(value: String): this.type = set("classID", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def colSpan(value: Double): this.type = set("colSpan", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def cols(value: Double): this.type = set("cols", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def content(value: String): this.type = set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -322,28 +264,13 @@ object Col {
     def contextMenu(value: String): this.type = set("contextMenu", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def controls(value: Boolean): this.type = set("controls", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def coords(value: String): this.type = set("coords", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def crossOrigin(value: String): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
+    def cssModule(value: CSSModule): this.type = set("cssModule", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dangerouslySetInnerHTML(value: Html): this.type = set("dangerouslySetInnerHTML", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def data(value: String): this.type = set("data", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def dateTime(value: String): this.type = set("dateTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
@@ -355,67 +282,13 @@ object Col {
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defer(value: Boolean): this.type = set("defer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def download(value: js.Any): this.type = set("download", value.asInstanceOf[js.Any])
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def encType(value: String): this.type = set("encType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def formAction(value: String): this.type = set("formAction", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def formEncType(value: String): this.type = set("formEncType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def formMethod(value: String): this.type = set("formMethod", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def formNoValidate(value: Boolean): this.type = set("formNoValidate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def formTarget(value: String): this.type = set("formTarget", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def frameBorder(value: Double | String): this.type = set("frameBorder", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def headers(value: String): this.type = set("headers", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def height(value: Double | String): this.type = set("height", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def high(value: Double): this.type = set("high", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def hrefLang(value: String): this.type = set("hrefLang", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def htmlFor(value: String): this.type = set("htmlFor", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def httpEquiv(value: String): this.type = set("httpEquiv", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -425,9 +298,6 @@ object Col {
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def integrity(value: String): this.type = set("integrity", value.asInstanceOf[js.Any])
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -448,79 +318,13 @@ object Col {
     def itemType(value: String): this.type = set("itemType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def keyParams(value: String): this.type = set("keyParams", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def keyType(value: String): this.type = set("keyType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def kind(value: String): this.type = set("kind", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def label(value: String): this.type = set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
     def lg(value: ColumnProps): this.type = set("lg", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def list(value: String): this.type = set("list", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def low(value: Double): this.type = set("low", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def manifest(value: String): this.type = set("manifest", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def marginHeight(value: Double): this.type = set("marginHeight", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def marginWidth(value: Double): this.type = set("marginWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def max(value: Double | String): this.type = set("max", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def md(value: ColumnProps): this.type = set("md", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def media(value: String): this.type = set("media", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def mediaGroup(value: String): this.type = set("mediaGroup", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def method(value: String): this.type = set("method", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def min(value: Double | String): this.type = set("min", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def minLength(value: Double): this.type = set("minLength", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def muted(value: Boolean): this.type = set("muted", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def noValidate(value: Boolean): this.type = set("noValidate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def nonce(value: String): this.type = set("nonce", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -760,28 +564,10 @@ object Col {
     def onWheel(value: SyntheticWheelEvent[HTMLDivElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def optimum(value: Double): this.type = set("optimum", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def pattern(value: String): this.type = set("pattern", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def playsInline(value: Boolean): this.type = set("playsInline", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def poster(value: String): this.type = set("poster", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def preload(value: String): this.type = set("preload", value.asInstanceOf[js.Any])
     
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
@@ -790,61 +576,16 @@ object Col {
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])
     
     @scala.inline
     def results(value: Double): this.type = set("results", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def reversed(value: Boolean): this.type = set("reversed", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def rowSpan(value: Double): this.type = set("rowSpan", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def sandbox(value: String): this.type = set("sandbox", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def scope(value: String): this.type = set("scope", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def scoped(value: Boolean): this.type = set("scoped", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def scrolling(value: String): this.type = set("scrolling", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def seamless(value: Boolean): this.type = set("seamless", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def shape(value: String): this.type = set("shape", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def sizes(value: String): this.type = set("sizes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
@@ -853,34 +594,10 @@ object Col {
     def sm(value: ColumnProps): this.type = set("sm", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def span(value: Double): this.type = set("span", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def spellCheck(value: Booleanish): this.type = set("spellCheck", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def src(value: String): this.type = set("src", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def srcDoc(value: String): this.type = set("srcDoc", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def srcLang(value: String): this.type = set("srcLang", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def srcSet(value: String): this.type = set("srcSet", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def start(value: Double): this.type = set("start", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def step(value: Double | String): this.type = set("step", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def summary(value: String): this.type = set("summary", value.asInstanceOf[js.Any])
     
     @scala.inline
     def suppressContentEditableWarning(value: Boolean): this.type = set("suppressContentEditableWarning", value.asInstanceOf[js.Any])
@@ -898,10 +615,7 @@ object Col {
     def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tag(value: String | ReactType[_]): this.type = set("tag", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def target(value: String): this.type = set("target", value.asInstanceOf[js.Any])
+    def tag(value: ReactElement): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -910,28 +624,13 @@ object Col {
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
     
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def useMap(value: String): this.type = set("useMap", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
-    
-    @scala.inline
-    def value(value: String | js.Array[String] | Double): this.type = set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
     
     @scala.inline
     def widthsVarargs(value: String*): this.type = set("widths", js.Array(value :_*))
@@ -940,25 +639,13 @@ object Col {
     def widths(value: js.Array[String]): this.type = set("widths", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def wmode(value: String): this.type = set("wmode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def xl(value: ColumnProps): this.type = set("xl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def xs(value: ColumnProps): this.type = set("xs", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: ColProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ColProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply[T](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ColProps]))
-  }
-  
-  implicit def make[T](companion: Col.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: Col.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

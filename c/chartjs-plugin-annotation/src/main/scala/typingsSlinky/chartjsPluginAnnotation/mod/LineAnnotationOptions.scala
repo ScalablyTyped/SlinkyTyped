@@ -12,7 +12,6 @@ trait LineAnnotationOptions
   extends CommonAnnotationOptions
      with AnnotationOptions {
   
-   // value or label
   var borderColor: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Chart.ChartColor */ js.Any
   ] = js.native
@@ -23,8 +22,7 @@ trait LineAnnotationOptions
   
   var borderWidth: js.UndefOr[Double] = js.native
   
-   // value or label
-  var endValue: js.UndefOr[Double | String] = js.native
+  var endValue: js.UndefOr[ChartPointValue] = js.native
   
   var label: js.UndefOr[LineAnnotationLabel] = js.native
   
@@ -35,12 +33,12 @@ trait LineAnnotationOptions
   @JSName("type")
   var type_LineAnnotationOptions: line = js.native
   
-  var value: Double | String = js.native
+  var value: ChartPointValue = js.native
 }
 object LineAnnotationOptions {
   
   @scala.inline
-  def apply(mode: horizontal | vertical, scaleID: String, `type`: line, value: Double | String): LineAnnotationOptions = {
+  def apply(mode: horizontal | vertical, scaleID: String, `type`: line, value: ChartPointValue): LineAnnotationOptions = {
     val __obj = js.Dynamic.literal(mode = mode.asInstanceOf[js.Any], scaleID = scaleID.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LineAnnotationOptions]
@@ -71,7 +69,10 @@ object LineAnnotationOptions {
     def setType(value: line): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: Double | String): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValueDate(value: js.Date): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setValue(value: ChartPointValue): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBorderColor(
@@ -103,7 +104,10 @@ object LineAnnotationOptions {
     def deleteBorderWidth: Self = this.set("borderWidth", js.undefined)
     
     @scala.inline
-    def setEndValue(value: Double | String): Self = this.set("endValue", value.asInstanceOf[js.Any])
+    def setEndValueDate(value: js.Date): Self = this.set("endValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEndValue(value: ChartPointValue): Self = this.set("endValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEndValue: Self = this.set("endValue", js.undefined)

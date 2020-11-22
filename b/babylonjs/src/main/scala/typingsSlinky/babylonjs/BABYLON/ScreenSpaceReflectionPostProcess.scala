@@ -9,7 +9,11 @@ trait ScreenSpaceReflectionPostProcess extends PostProcess {
   
   var _enableSmoothReflections: js.Any = js.native
   
+  var _forceGeometryBuffer: js.Any = js.native
+  
   var _geometryBufferRenderer: js.Any = js.native
+  
+  var _prePassRenderer: js.Any = js.native
   
   var _reflectionSamples: js.Any = js.native
   

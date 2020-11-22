@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "react-ga" : "3.1.2"
+      "react-ga" : "3.2.1"
     }
   ],
   "test-dependencies" : [
     {
-      "react-ga" : "3.1.2"
+      "react-ga" : "3.2.1"
     }
   ],
   "compile-devDependencies" : [

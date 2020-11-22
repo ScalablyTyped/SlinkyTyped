@@ -41,7 +41,7 @@ trait NoteTag extends ClientObject {
   
   /**
     *
-    * Gets the Id of the NoteTag object. Read-only.
+    * Gets the ID of the NoteTag object. Read-only.
     *
     * [Api set: OneNoteApi 1.1]
     */

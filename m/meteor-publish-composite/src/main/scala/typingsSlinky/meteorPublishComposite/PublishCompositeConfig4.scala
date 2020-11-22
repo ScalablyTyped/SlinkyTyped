@@ -12,12 +12,12 @@ trait PublishCompositeConfig4[InLevel1, InLevel2, InLevel3, InLevel4, OutLevel] 
   
   var collectionName: js.UndefOr[String] = js.native
   
-  def find(arg4: InLevel4, arg3: InLevel3, arg2: InLevel2, arg1: InLevel1): Cursor[OutLevel] = js.native
+  def find(arg4: InLevel4, arg3: InLevel3, arg2: InLevel2, arg1: InLevel1): Cursor[OutLevel, OutLevel] = js.native
 }
 object PublishCompositeConfig4 {
   
   @scala.inline
-  def apply[InLevel1, InLevel2, InLevel3, InLevel4, OutLevel](find: (InLevel4, InLevel3, InLevel2, InLevel1) => Cursor[OutLevel]): PublishCompositeConfig4[InLevel1, InLevel2, InLevel3, InLevel4, OutLevel] = {
+  def apply[InLevel1, InLevel2, InLevel3, InLevel4, OutLevel](find: (InLevel4, InLevel3, InLevel2, InLevel1) => Cursor[OutLevel, OutLevel]): PublishCompositeConfig4[InLevel1, InLevel2, InLevel3, InLevel4, OutLevel] = {
     val __obj = js.Dynamic.literal(find = js.Any.fromFunction4(find))
     __obj.asInstanceOf[PublishCompositeConfig4[InLevel1, InLevel2, InLevel3, InLevel4, OutLevel]]
   }
@@ -38,7 +38,7 @@ object PublishCompositeConfig4 {
     }
     
     @scala.inline
-    def setFind(value: (InLevel4, InLevel3, InLevel2, InLevel1) => Cursor[OutLevel]): Self = this.set("find", js.Any.fromFunction4(value))
+    def setFind(value: (InLevel4, InLevel3, InLevel2, InLevel1) => Cursor[OutLevel, OutLevel]): Self = this.set("find", js.Any.fromFunction4(value))
     
     @scala.inline
     def setChildrenVarargs(value: PublishCompositeConfigN*): Self = this.set("children", js.Array(value :_*))

@@ -9,7 +9,7 @@ trait FlexBasisProps[TLength] extends js.Object {
   
   val flexBasis: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexBasisProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexBasis<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object FlexBasisProps {
     }
     
     @scala.inline
+    def setFlexBasisVarargs(value: js.Any*): Self = this.set("flexBasis", js.Array(value :_*))
+    
+    @scala.inline
     def setFlexBasis(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexBasisProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexBasis<TLength> */ _
         ]
     ): Self = this.set("flexBasis", value.asInstanceOf[js.Any])
     

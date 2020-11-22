@@ -16,6 +16,8 @@ trait Options extends js.Object {
   
   var gutter: js.UndefOr[js.Any] = js.native
   
+  var hiddenStyle: js.UndefOr[HiddenOrVisibleStyleOption] = js.native
+  
   var horizontalOrder: js.UndefOr[Boolean] = js.native
   
   var initLayout: js.UndefOr[Boolean] = js.native
@@ -31,9 +33,13 @@ trait Options extends js.Object {
   
   var resize: js.UndefOr[Boolean] = js.native
   
+  var stagger: js.UndefOr[String | Double] = js.native
+  
   var stamp: js.UndefOr[String] = js.native
   
   var transitionDuration: js.UndefOr[js.Any] = js.native
+  
+  var visibleStyle: js.UndefOr[HiddenOrVisibleStyleOption] = js.native
 }
 object Options {
   
@@ -83,6 +89,12 @@ object Options {
     def deleteGutter: Self = this.set("gutter", js.undefined)
     
     @scala.inline
+    def setHiddenStyle(value: HiddenOrVisibleStyleOption): Self = this.set("hiddenStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHiddenStyle: Self = this.set("hiddenStyle", js.undefined)
+    
+    @scala.inline
     def setHorizontalOrder(value: Boolean): Self = this.set("horizontalOrder", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -125,6 +137,12 @@ object Options {
     def deleteResize: Self = this.set("resize", js.undefined)
     
     @scala.inline
+    def setStagger(value: String | Double): Self = this.set("stagger", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStagger: Self = this.set("stagger", js.undefined)
+    
+    @scala.inline
     def setStamp(value: String): Self = this.set("stamp", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -135,5 +153,11 @@ object Options {
     
     @scala.inline
     def deleteTransitionDuration: Self = this.set("transitionDuration", js.undefined)
+    
+    @scala.inline
+    def setVisibleStyle(value: HiddenOrVisibleStyleOption): Self = this.set("visibleStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVisibleStyle: Self = this.set("visibleStyle", js.undefined)
   }
 }

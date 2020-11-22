@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("base16", "threezerotwofour")
 @js.native
-object threezerotwofour extends TopLevel[ColorScheme]
+object threezerotwofour extends TopLevel[Base16Theme]

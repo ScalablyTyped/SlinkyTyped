@@ -30,6 +30,11 @@ object componentMod extends js.Object {
       */
     def getSelectedRowIds(): js.Array[String | Null] = js.native
     
+    /**
+      * Hides progress indicator after data table is finished loading.
+      */
+    def hideProgress(): Unit = js.native
+    
     def initialize(): Unit = js.native
     def initialize(checkboxFactory: MDCCheckboxFactory): Unit = js.native
     
@@ -43,6 +48,11 @@ object componentMod extends js.Object {
       * @param rowIds Array of row ids that needs to be selected.
       */
     def setSelectedRowIds(rowIds: js.Array[String]): Unit = js.native
+    
+    /**
+      * Shows progress indicator when data table is in loading state.
+      */
+    def showProgress(): Unit = js.native
   }
   /* static members */
   @js.native

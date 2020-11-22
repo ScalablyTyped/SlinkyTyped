@@ -11,7 +11,7 @@ trait ChatMessageAttachment extends js.Object {
     * The content of the attachment. If the attachment is a rich card, set the property to the rich card object. This
     * property and contentUrl are mutually exclusive.
     */
-  var content: js.UndefOr[String] = js.native
+  var content: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The media type of the content attachment. It can have the following values: reference: Attachment is a link to another
@@ -32,16 +32,16 @@ trait ChatMessageAttachment extends js.Object {
     * object.application/vnd.microsoft.com.card.receipt: A Receipt card. Set the content property to a ReceiptCard
     * object.application/vnd.microsoft.com.card.signin: A user Sign In card. Set the content property to a SignInCard object.
     */
-  var contentType: js.UndefOr[String] = js.native
+  var contentType: js.UndefOr[NullableOption[String]] = js.native
   
   // URL for the content of the attachment. Supported protocols: http, https, file and data.
-  var contentUrl: js.UndefOr[String] = js.native
+  var contentUrl: js.UndefOr[NullableOption[String]] = js.native
   
   // Read-only. Unique id of the attachment.
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[NullableOption[String]] = js.native
   
   // Name of the attachment.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * URL to a thumbnail image that the channel can use if it supports using an alternative, smaller form of content or
@@ -49,7 +49,7 @@ trait ChatMessageAttachment extends js.Object {
     * document, you might include a thumbnail image that represents the document. The channel could display the thumbnail
     * image instead of the document. When the user clicks the image, the channel would open the document.
     */
-  var thumbnailUrl: js.UndefOr[String] = js.native
+  var thumbnailUrl: js.UndefOr[NullableOption[String]] = js.native
 }
 object ChatMessageAttachment {
   
@@ -75,39 +75,57 @@ object ChatMessageAttachment {
     }
     
     @scala.inline
-    def setContent(value: String): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: NullableOption[String]): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     
     @scala.inline
-    def setContentType(value: String): Self = this.set("contentType", value.asInstanceOf[js.Any])
+    def setContentNull: Self = this.set("content", null)
+    
+    @scala.inline
+    def setContentType(value: NullableOption[String]): Self = this.set("contentType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContentType: Self = this.set("contentType", js.undefined)
     
     @scala.inline
-    def setContentUrl(value: String): Self = this.set("contentUrl", value.asInstanceOf[js.Any])
+    def setContentTypeNull: Self = this.set("contentType", null)
+    
+    @scala.inline
+    def setContentUrl(value: NullableOption[String]): Self = this.set("contentUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContentUrl: Self = this.set("contentUrl", js.undefined)
     
     @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setContentUrlNull: Self = this.set("contentUrl", null)
+    
+    @scala.inline
+    def setId(value: NullableOption[String]): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setIdNull: Self = this.set("id", null)
+    
+    @scala.inline
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setThumbnailUrl(value: String): Self = this.set("thumbnailUrl", value.asInstanceOf[js.Any])
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
+    def setThumbnailUrl(value: NullableOption[String]): Self = this.set("thumbnailUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteThumbnailUrl: Self = this.set("thumbnailUrl", js.undefined)
+    
+    @scala.inline
+    def setThumbnailUrlNull: Self = this.set("thumbnailUrl", null)
   }
 }

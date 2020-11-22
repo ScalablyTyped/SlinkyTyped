@@ -1,8 +1,7 @@
 package typingsSlinky.awsSdkClientPinpointBrowser.pinpointConfigurationMod
 
 import org.scalajs.dom.raw.Blob
-import typingsSlinky.awsSdkTypes.marshallerMod.RequestSerializer
-import typingsSlinky.awsSdkTypes.unmarshallerMod.ResponseParser
+import typingsSlinky.awsSdkTypes.serdeMod.RequestSerializer
 import typingsSlinky.awsSdkTypes.utilMod.Provider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,15 +23,15 @@ trait PinpointResolvableConfiguration extends PinpointConfiguration {
   /**
     * The parser to use when converting HTTP responses to SDK output types
     */
-  var parser: ResponseParser[Blob] = js.native
+  var parser: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.ResponseParser<Blob> */ js.Any = js.native
   
   /**
     * The serializer to use when converting SDK input to HTTP requests
     */
-  def serializer(): js.Promise[RequestSerializer[Blob]] = js.native
+  def serializer(): js.Promise[RequestSerializer[Blob, _]] = js.native
   /**
     * The serializer to use when converting SDK input to HTTP requests
     */
   @JSName("serializer")
-  var serializer_Original: Provider[RequestSerializer[Blob]] = js.native
+  var serializer_Original: Provider[RequestSerializer[Blob, _]] = js.native
 }

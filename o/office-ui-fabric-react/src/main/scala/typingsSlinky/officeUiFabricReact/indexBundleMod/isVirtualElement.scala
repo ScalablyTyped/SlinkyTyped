@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.uifabricUtilities.ivirtualelementMod.IVirtualElement
+import typingsSlinky.fluentuiDomUtilities.ivirtualelementMod.IVirtualElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object isVirtualElement extends js.Object {
   
-  def apply(element: HTMLElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
-  def apply(element: IVirtualElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
+  def apply(element: IVirtualElement): /* is @fluentui/dom-utilities.@fluentui/dom-utilities/lib/IVirtualElement.IVirtualElement */ Boolean = js.native
+  def apply(element: HTMLElement): /* is @fluentui/dom-utilities.@fluentui/dom-utilities/lib/IVirtualElement.IVirtualElement */ Boolean = js.native
 }

@@ -30,23 +30,28 @@ import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
+@js.native
 trait BinaryExpression
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var left: ExpressionKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var operator: EqualssignEqualssign | ExclamationmarkEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssignEqualssign | Lessthansign | LessthansignEqualssign | Greaterthansign | GreaterthansignEqualssign | LessthansignLessthansign | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | Plussign | `-_` | Asterisk | Slash | Percentsign | AsteriskAsterisk | Ampersand | Verticalline | typingsSlinky.astTypes.astTypesStrings.^  | in | instanceof
-  var right: ExpressionKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.BinaryExpression
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var left: ExpressionKind = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var operator: EqualssignEqualssign | ExclamationmarkEqualssign | EqualssignEqualssignEqualssign | ExclamationmarkEqualssignEqualssign | Lessthansign | LessthansignEqualssign | Greaterthansign | GreaterthansignEqualssign | LessthansignLessthansign | GreaterthansignGreaterthansign | GreaterthansignGreaterthansignGreaterthansign | Plussign | `-_` | Asterisk | Slash | Percentsign | Ampersand | Verticalline | typingsSlinky.astTypes.astTypesStrings.^  | in | instanceof | AsteriskAsterisk = js.native
+  
+  var right: ExpressionKind = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.BinaryExpression = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.BinaryExpression")
 @js.native
 object BinaryExpression extends TopLevel[Type[BinaryExpression]]
-

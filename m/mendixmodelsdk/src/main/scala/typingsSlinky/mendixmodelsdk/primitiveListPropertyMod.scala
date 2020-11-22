@@ -1,8 +1,10 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.structuresMod.Structure
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +17,7 @@ object primitiveListPropertyMod extends js.Object {
   class PrimitiveListProperty[T] ()
     extends AbstractProperty[js.Array[T], IList[T]] {
     
-    def deepCopyInto(clone: Structure): Unit = js.native
+    def deepCopyInto(clone: Structure[IAbstractModel, IContainer | Null]): Unit = js.native
     
     var primitiveType: js.Any = js.native
     

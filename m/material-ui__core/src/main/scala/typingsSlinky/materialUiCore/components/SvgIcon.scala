@@ -21,10 +21,15 @@ import slinky.web.svg.svg.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapSvgIco
 import typingsSlinky.materialUiCore.materialUiCoreStrings._empty
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions removals`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`after-edge`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`before-edge`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`removals additions`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`removals text`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`text additions`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`text removals`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`text-after-edge`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`text-before-edge`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`use-credentials`
@@ -249,7 +254,9 @@ object SvgIcon {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

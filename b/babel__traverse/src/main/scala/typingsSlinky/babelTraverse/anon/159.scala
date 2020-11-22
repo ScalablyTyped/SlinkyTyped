@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ForOfStatement
+import typingsSlinky.babelTraverse.babelTraverseStrings.NumberTypeAnnotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `159` extends js.Object {
   
-  var `type`: ForOfStatement = js.native
+  var `type`: NumberTypeAnnotation = js.native
 }
 object `159` {
   
   @scala.inline
-  def apply(`type`: ForOfStatement): `159` = {
+  def apply(`type`: NumberTypeAnnotation): `159` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`159`]
@@ -35,6 +35,6 @@ object `159` {
     }
     
     @scala.inline
-    def setType(value: ForOfStatement): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: NumberTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

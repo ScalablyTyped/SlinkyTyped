@@ -24,8 +24,11 @@ trait Lightmapper extends js.Object {
     * * {@link pc.BAKE_COLOR}: single color lightmap
     * * {@link pc.BAKE_COLORDIR}: single color lightmap + dominant light direction (used for bump/specular)
     *
-    * Only lights with bakeDir=true will be used for generating the dominant light direction.
+    * Only lights with bakeDir=true will be used for generating the dominant light direction. Defaults to
+    * pc.BAKE_COLORDIR.
     */
+  def bake(): Unit = js.native
   def bake(nodes: js.Array[Entity]): Unit = js.native
   def bake(nodes: js.Array[Entity], mode: Double): Unit = js.native
+  def bake(nodes: Null, mode: Double): Unit = js.native
 }

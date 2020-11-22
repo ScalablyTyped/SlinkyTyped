@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProtocolResponseUploadData extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/protocol-response-upload-data
+  // Docs: https://electronjs.org/docs/api/structures/protocol-response-upload-data
   /**
     * MIME type of the content.
     */

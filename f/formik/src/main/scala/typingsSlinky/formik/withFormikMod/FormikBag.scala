@@ -3,6 +3,7 @@ package typingsSlinky.formik.withFormikMod
 import typingsSlinky.formik.typesMod.FormikErrors
 import typingsSlinky.formik.typesMod.FormikState
 import typingsSlinky.formik.typesMod.FormikTouched
+import typingsSlinky.react.mod.SetStateAction
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -52,8 +53,8 @@ trait FormikBag[P, V] extends js.Object {
   def setTouched(touched: FormikTouched[V], shouldValidate: Boolean): Unit = js.native
   
   /** Manually set values object  */
-  def setValues(values: V): Unit = js.native
-  def setValues(values: V, shouldValidate: Boolean): Unit = js.native
+  def setValues(values: SetStateAction[V]): Unit = js.native
+  def setValues(values: SetStateAction[V], shouldValidate: Boolean): Unit = js.native
   
   /** Submit the form imperatively */
   def submitForm(): js.Promise[Unit] = js.native

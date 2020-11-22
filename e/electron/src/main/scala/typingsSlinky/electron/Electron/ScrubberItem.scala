@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ScrubberItem extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/scrubber-item
+  // Docs: https://electronjs.org/docs/api/structures/scrubber-item
   /**
     * The image to appear in this item.
     */

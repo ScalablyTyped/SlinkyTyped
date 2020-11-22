@@ -15,6 +15,6 @@ object mod
         /* hint */ js.UndefOr[
           /* import warning: importer.ImportType#apply Failed type conversion: typeof String */ js.Any
         ], 
-        js.UndefOr[String | Double | Boolean | js.Symbol | Null]
+        js.UndefOr[String | Double | js.BigInt | Boolean | js.Symbol | Null]
       ]) with ES2015
     ]

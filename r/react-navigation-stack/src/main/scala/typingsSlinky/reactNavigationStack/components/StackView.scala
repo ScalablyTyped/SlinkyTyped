@@ -24,6 +24,9 @@ object StackView {
        with StBuildingComponent[tag.type, typingsSlinky.reactNavigationStack.mod.StackView] {
     
     @scala.inline
+    def detachInactiveScreens(value: Boolean): this.type = set("detachInactiveScreens", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def headerMode(value: StackHeaderMode): this.type = set("headerMode", value.asInstanceOf[js.Any])
     
     @scala.inline

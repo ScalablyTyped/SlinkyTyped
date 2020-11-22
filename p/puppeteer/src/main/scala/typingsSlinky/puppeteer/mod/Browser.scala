@@ -1,7 +1,6 @@
 package typingsSlinky.puppeteer.mod
 
 import typingsSlinky.node.childProcessMod.ChildProcess
-import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.puppeteer.puppeteerStrings.disconnected
 import typingsSlinky.puppeteer.puppeteerStrings.targetchanged
 import typingsSlinky.puppeteer.puppeteerStrings.targetcreated

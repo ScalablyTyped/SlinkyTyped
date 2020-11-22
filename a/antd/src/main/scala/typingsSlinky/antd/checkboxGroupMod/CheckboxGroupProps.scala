@@ -1,11 +1,14 @@
 package typingsSlinky.antd.checkboxGroupMod
 
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CheckboxGroupProps extends AbstractCheckboxGroupProps {
+  
+  var children: js.UndefOr[ReactElement] = js.native
   
   var defaultValue: js.UndefOr[js.Array[CheckboxValueType]] = js.native
   
@@ -37,6 +40,15 @@ object CheckboxGroupProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
     def setDefaultValueVarargs(value: CheckboxValueType*): Self = this.set("defaultValue", js.Array(value :_*))

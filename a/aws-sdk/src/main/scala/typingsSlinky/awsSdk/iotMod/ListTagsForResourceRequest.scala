@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListTagsForResourceRequest extends js.Object {
   
   /**
-    * The token to retrieve the next set of results.
+    * To retrieve the next set of results, the nextToken value from a previous response; otherwise null to receive the first set of results.
     */
   var nextToken: js.UndefOr[NextToken] = js.native
   

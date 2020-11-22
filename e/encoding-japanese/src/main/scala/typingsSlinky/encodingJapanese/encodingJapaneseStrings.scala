@@ -1,6 +1,7 @@
 package typingsSlinky.encodingJapanese
 
 import typingsSlinky.encodingJapanese.mod.Encoding
+import typingsSlinky.encodingJapanese.mod.EncodingDetection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -53,40 +54,64 @@ object encodingJapaneseStrings {
   def string: string = "string".asInstanceOf[string]
   
   @js.native
-  sealed trait ASCII extends Encoding
+  sealed trait ASCII
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait AUTO extends Encoding
+  sealed trait AUTO
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait BINARY extends Encoding
+  sealed trait BINARY
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait EUCJP extends Encoding
+  sealed trait EUCJP
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait JIS extends Encoding
+  sealed trait JIS
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait SJIS extends Encoding
+  sealed trait SJIS
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait UNICODE extends Encoding
+  sealed trait UNICODE
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait UTF16 extends Encoding
+  sealed trait UTF16
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait UTF16BE extends Encoding
+  sealed trait UTF16BE
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait UTF16LE extends Encoding
+  sealed trait UTF16LE
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait UTF32 extends Encoding
+  sealed trait UTF32
+    extends Encoding
+       with EncodingDetection
   
   @js.native
-  sealed trait UTF8 extends Encoding
+  sealed trait UTF8
+    extends Encoding
+       with EncodingDetection
   
   @js.native
   sealed trait array extends js.Object

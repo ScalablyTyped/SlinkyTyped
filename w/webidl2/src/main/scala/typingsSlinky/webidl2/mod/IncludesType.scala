@@ -6,24 +6,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IncludesType extends IDLRootType {
-  
-  /** A list of extended attributes. */
-  var extAttrs: js.Array[ExtendedAttribute] = js.native
+trait IncludesType
+  extends AbstractBase
+     with IDLRootType {
   
   /** The interface mixin that is being included by the target. */
   var includes: String = js.native
   
+  @JSName("parent")
+  var parent_IncludesType: Null = js.native
+  
   /** The interface that includes an interface mixin. */
   var target: String = js.native
   
-  var `type`: includes = js.native
+  @JSName("type")
+  var type_IncludesType: includes = js.native
 }
 object IncludesType {
   
   @scala.inline
-  def apply(extAttrs: js.Array[ExtendedAttribute], includes: String, target: String, `type`: includes): IncludesType = {
-    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], includes = includes.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
+  def apply(
+    extAttrs: js.Array[ExtendedAttribute],
+    includes: String,
+    parent: Null,
+    target: String,
+    `type`: includes
+  ): IncludesType = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], includes = includes.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IncludesType]
   }
@@ -44,13 +53,10 @@ object IncludesType {
     }
     
     @scala.inline
-    def setExtAttrsVarargs(value: ExtendedAttribute*): Self = this.set("extAttrs", js.Array(value :_*))
-    
-    @scala.inline
-    def setExtAttrs(value: js.Array[ExtendedAttribute]): Self = this.set("extAttrs", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setIncludes(value: String): Self = this.set("includes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setParent(value: Null): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTarget(value: String): Self = this.set("target", value.asInstanceOf[js.Any])

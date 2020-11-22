@@ -568,6 +568,12 @@ object Android extends js.Object {
     */
   def getBubbleParent(): Boolean = js.native
   
+  def getColorResource(resourceIdOrColorName: String): typingsSlinky.titanium.Titanium.UI.Color = js.native
+  /**
+    * Returns a <Ti.Color> instance for a color defined by the system or user resources (colors.xml)
+    */
+  def getColorResource(resourceIdOrColorName: Double): typingsSlinky.titanium.Titanium.UI.Color = js.native
+  
   /**
     * Gets the value of the <Titanium.UI.Android.lifecycleContainer> property.
     * @deprecated Access <Titanium.UI.Android.lifecycleContainer> instead.

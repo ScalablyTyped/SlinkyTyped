@@ -17,7 +17,7 @@ trait ApplePay extends js.Object {
   var VERSION: String = js.native
   
   def create(options: Client): Unit = js.native
-  def create(options: Client, callback: callback): Unit = js.native
+  def create(options: Client, callback: callback[_]): Unit = js.native
   
   /**
     * Merges a payment request with Braintree defaults
@@ -75,7 +75,7 @@ trait ApplePay extends js.Object {
     *   };
     * });
     */
-  def performValidation(options: DisplayName, callback: callback): Unit = js.native
+  def performValidation(options: DisplayName, callback: callback[_]): Unit = js.native
   
   /**
     * Tokenizes an Apple Pay payment.     * @example
@@ -99,5 +99,5 @@ trait ApplePay extends js.Object {
     *  };
     * });
     */
-  def tokenize(options: Token, callback: callback): Unit = js.native
+  def tokenize(options: Token, callback: callback[_]): Unit = js.native
 }

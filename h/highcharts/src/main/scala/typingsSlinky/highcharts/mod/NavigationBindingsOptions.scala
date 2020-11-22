@@ -102,6 +102,8 @@ trait NavigationBindingsOptions extends js.Object {
   
   /**
     * (Highstock) Displays chart in fullscreen.
+    *
+    * **Note**: Fullscreen is not supported on iPhone due to iOS limitations.
     */
   var fullScreen: js.UndefOr[NavigationBindingsOptionsObject] = js.native
   

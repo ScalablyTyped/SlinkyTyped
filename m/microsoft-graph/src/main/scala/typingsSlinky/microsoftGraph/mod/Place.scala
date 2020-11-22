@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Place extends Entity {
   
   // The street address of the place.
-  var address: js.UndefOr[PhysicalAddress] = js.native
+  var address: js.UndefOr[NullableOption[PhysicalAddress]] = js.native
   
   // The name associated with the place.
   var displayName: js.UndefOr[String] = js.native
   
   // Specifies the place location in latitude, longitude and (optionally) altitude coordinates.
-  var geoCoordinates: js.UndefOr[OutlookGeoCoordinates] = js.native
+  var geoCoordinates: js.UndefOr[NullableOption[OutlookGeoCoordinates]] = js.native
   
   // The phone number of the place.
-  var phone: js.UndefOr[String] = js.native
+  var phone: js.UndefOr[NullableOption[String]] = js.native
 }
 object Place {
   
@@ -43,10 +43,13 @@ object Place {
     }
     
     @scala.inline
-    def setAddress(value: PhysicalAddress): Self = this.set("address", value.asInstanceOf[js.Any])
+    def setAddress(value: NullableOption[PhysicalAddress]): Self = this.set("address", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAddress: Self = this.set("address", js.undefined)
+    
+    @scala.inline
+    def setAddressNull: Self = this.set("address", null)
     
     @scala.inline
     def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
@@ -55,15 +58,21 @@ object Place {
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
-    def setGeoCoordinates(value: OutlookGeoCoordinates): Self = this.set("geoCoordinates", value.asInstanceOf[js.Any])
+    def setGeoCoordinates(value: NullableOption[OutlookGeoCoordinates]): Self = this.set("geoCoordinates", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGeoCoordinates: Self = this.set("geoCoordinates", js.undefined)
     
     @scala.inline
-    def setPhone(value: String): Self = this.set("phone", value.asInstanceOf[js.Any])
+    def setGeoCoordinatesNull: Self = this.set("geoCoordinates", null)
+    
+    @scala.inline
+    def setPhone(value: NullableOption[String]): Self = this.set("phone", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePhone: Self = this.set("phone", js.undefined)
+    
+    @scala.inline
+    def setPhoneNull: Self = this.set("phone", null)
   }
 }

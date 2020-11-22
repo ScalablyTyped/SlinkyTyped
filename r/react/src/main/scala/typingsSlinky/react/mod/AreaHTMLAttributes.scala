@@ -19,6 +19,8 @@ trait AreaHTMLAttributes[T] extends HTMLAttributes[T] {
   
   var media: js.UndefOr[String] = js.native
   
+  var referrerPolicy: js.UndefOr[HTMLAttributeReferrerPolicy] = js.native
+  
   var rel: js.UndefOr[String] = js.native
   
   var shape: js.UndefOr[String] = js.native
@@ -83,6 +85,12 @@ object AreaHTMLAttributes {
     
     @scala.inline
     def deleteMedia: Self = this.set("media", js.undefined)
+    
+    @scala.inline
+    def setReferrerPolicy(value: HTMLAttributeReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)
     
     @scala.inline
     def setRel(value: String): Self = this.set("rel", value.asInstanceOf[js.Any])

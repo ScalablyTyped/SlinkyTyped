@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.AddedItems
 import typingsSlinky.devextreme.anon.Event
 import typingsSlinky.devextreme.anon.ItemData
-import typingsSlinky.devextreme.anon.ItemElement
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
@@ -16,15 +15,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CollectionWidgetOptions[T] extends WidgetOptions[T] {
   
-  /** @name CollectionWidget.Options.dataSource */
+  /**
+    * [descr:CollectionWidget.Options.dataSource]
+    */
   var dataSource: js.UndefOr[
     String | (js.Array[String | CollectionWidgetItem]) | DataSource | DataSourceOptions
   ] = js.native
   
-  /** @name CollectionWidget.Options.itemHoldTimeout */
+  /**
+    * [descr:CollectionWidget.Options.itemHoldTimeout]
+    */
   var itemHoldTimeout: js.UndefOr[Double] = js.native
   
-  /** @name CollectionWidget.Options.itemTemplate */
+  /**
+    * [descr:CollectionWidget.Options.itemTemplate]
+    */
   var itemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -34,40 +39,64 @@ trait CollectionWidgetOptions[T] extends WidgetOptions[T] {
     ])
   ] = js.native
   
-  /** @name CollectionWidget.Options.items */
+  /**
+    * [descr:CollectionWidget.Options.items]
+    */
   var items: js.UndefOr[js.Array[String | CollectionWidgetItem | _]] = js.native
   
-  /** @name CollectionWidget.Options.keyExpr */
+  /**
+    * [descr:CollectionWidget.Options.keyExpr]
+    */
   var keyExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name CollectionWidget.Options.noDataText */
+  /**
+    * [descr:CollectionWidget.Options.noDataText]
+    */
   var noDataText: js.UndefOr[String] = js.native
   
-  /** @name CollectionWidget.Options.onItemClick */
+  /**
+    * [descr:CollectionWidget.Options.onItemClick]
+    */
   var onItemClick: js.UndefOr[(js.Function1[/* e */ Event[T], _]) | String] = js.native
   
-  /** @name CollectionWidget.Options.onItemContextMenu */
+  /**
+    * [descr:CollectionWidget.Options.onItemContextMenu]
+    */
   var onItemContextMenu: js.UndefOr[js.Function1[/* e */ Event[T], _]] = js.native
   
-  /** @name CollectionWidget.Options.onItemHold */
-  var onItemHold: js.UndefOr[js.Function1[/* e */ ItemData[T], _]] = js.native
+  /**
+    * [descr:CollectionWidget.Options.onItemHold]
+    */
+  var onItemHold: js.UndefOr[js.Function1[/* e */ Event[T], _]] = js.native
   
-  /** @name CollectionWidget.Options.onItemRendered */
-  var onItemRendered: js.UndefOr[js.Function1[/* e */ ItemElement[T], _]] = js.native
+  /**
+    * [descr:CollectionWidget.Options.onItemRendered]
+    */
+  var onItemRendered: js.UndefOr[js.Function1[/* e */ ItemData[T], _]] = js.native
   
-  /** @name CollectionWidget.Options.onSelectionChanged */
+  /**
+    * [descr:CollectionWidget.Options.onSelectionChanged]
+    */
   var onSelectionChanged: js.UndefOr[js.Function1[/* e */ AddedItems[T], _]] = js.native
   
-  /** @name CollectionWidget.Options.selectedIndex */
+  /**
+    * [descr:CollectionWidget.Options.selectedIndex]
+    */
   var selectedIndex: js.UndefOr[Double] = js.native
   
-  /** @name CollectionWidget.Options.selectedItem */
+  /**
+    * [descr:CollectionWidget.Options.selectedItem]
+    */
   var selectedItem: js.UndefOr[js.Any] = js.native
   
-  /** @name CollectionWidget.Options.selectedItemKeys */
+  /**
+    * [descr:CollectionWidget.Options.selectedItemKeys]
+    */
   var selectedItemKeys: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name CollectionWidget.Options.selectedItems */
+  /**
+    * [descr:CollectionWidget.Options.selectedItems]
+    */
   var selectedItems: js.UndefOr[js.Array[_]] = js.native
 }
 object CollectionWidgetOptions {
@@ -166,13 +195,13 @@ object CollectionWidgetOptions {
     def deleteOnItemContextMenu: Self = this.set("onItemContextMenu", js.undefined)
     
     @scala.inline
-    def setOnItemHold(value: /* e */ ItemData[T] => _): Self = this.set("onItemHold", js.Any.fromFunction1(value))
+    def setOnItemHold(value: /* e */ Event[T] => _): Self = this.set("onItemHold", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnItemHold: Self = this.set("onItemHold", js.undefined)
     
     @scala.inline
-    def setOnItemRendered(value: /* e */ ItemElement[T] => _): Self = this.set("onItemRendered", js.Any.fromFunction1(value))
+    def setOnItemRendered(value: /* e */ ItemData[T] => _): Self = this.set("onItemRendered", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnItemRendered: Self = this.set("onItemRendered", js.undefined)

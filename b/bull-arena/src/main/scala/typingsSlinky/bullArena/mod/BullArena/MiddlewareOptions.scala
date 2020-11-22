@@ -7,6 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MiddlewareOptions extends js.Object {
   
+  var Bee: js.UndefOr[QueueConstructor] = js.native
+  
+  var Bull: js.UndefOr[QueueConstructor] = js.native
+  
+  var BullMQ: js.UndefOr[QueueConstructor] = js.native
+  
   var queues: js.Array[QueueOptions with ConnectionOptions] = js.native
 }
 object MiddlewareOptions {
@@ -37,5 +43,23 @@ object MiddlewareOptions {
     
     @scala.inline
     def setQueues(value: js.Array[QueueOptions with ConnectionOptions]): Self = this.set("queues", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBee(value: QueueConstructor): Self = this.set("Bee", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBee: Self = this.set("Bee", js.undefined)
+    
+    @scala.inline
+    def setBull(value: QueueConstructor): Self = this.set("Bull", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBull: Self = this.set("Bull", js.undefined)
+    
+    @scala.inline
+    def setBullMQ(value: QueueConstructor): Self = this.set("BullMQ", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBullMQ: Self = this.set("BullMQ", js.undefined)
   }
 }

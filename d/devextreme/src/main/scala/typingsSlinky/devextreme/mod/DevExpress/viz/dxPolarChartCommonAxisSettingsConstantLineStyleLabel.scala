@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartCommonAxisSettingsConstantLineStyleLabel extends js.Object {
   
-  /** @name dxPolarChart.Options.commonAxisSettings.constantLineStyle.label.font */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.constantLineStyle.label.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.constantLineStyle.label.visible */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.constantLineStyle.label.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object dxPolarChartCommonAxisSettingsConstantLineStyleLabel {

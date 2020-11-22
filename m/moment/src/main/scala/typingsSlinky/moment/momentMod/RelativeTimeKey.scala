@@ -18,6 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.moment.momentStrings.d_
   - typingsSlinky.moment.momentStrings.dd
   - typingsSlinky.moment.momentStrings.w_
+  - typingsSlinky.moment.momentStrings.ww
   - typingsSlinky.moment.momentStrings.M
   - typingsSlinky.moment.momentStrings.MM
   - typingsSlinky.moment.momentStrings.y
@@ -58,6 +59,9 @@ object RelativeTimeKey {
   
   @scala.inline
   def w: w_ = "w".asInstanceOf[w_]
+  
+  @scala.inline
+  def ww: typingsSlinky.moment.momentStrings.ww = "ww".asInstanceOf[typingsSlinky.moment.momentStrings.ww]
   
   @scala.inline
   def y: typingsSlinky.moment.momentStrings.y = "y".asInstanceOf[typingsSlinky.moment.momentStrings.y]

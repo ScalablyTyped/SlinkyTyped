@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.mod
 
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.border
-import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
+import typingsSlinky.uifabricMergeStyles.irawstyleMod.IRawStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

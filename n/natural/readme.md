@@ -1,7 +1,7 @@
 
 # Scala.js typings for natural
 
-Typings are for version 0.6
+Typings are for version 2.1
 
 ## Library description:
 General natural language (tokenizing, stemming (English, Russian, Spanish), part-of-speech tagging, sentiment analysis, classification, inflection, phonetics, tfidf, WordNet, jaro-winkler, Levenshtein distance, Dice's Coefficient) facilities for node.

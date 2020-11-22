@@ -2,8 +2,8 @@ package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.same
 import typingsSlinky.tensorflowTfjs.tensorflowTfjsStrings.valid
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.mod
 
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -139,4 +140,17 @@ class ColorCorrectionPostProcess protected ()
     engine: typingsSlinky.babylonjs.engineMod.Engine,
     reusable: Boolean
   ) = this()
+}
+/* static members */
+@JSImport("babylonjs", "ColorCorrectionPostProcess")
+@js.native
+object ColorCorrectionPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(
+    parsedPostProcess: js.Any,
+    targetCamera: typingsSlinky.babylonjs.cameraMod.Camera,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    rootUrl: String
+  ): Nullable[typingsSlinky.babylonjs.colorCorrectionPostProcessMod.ColorCorrectionPostProcess] = js.native
 }

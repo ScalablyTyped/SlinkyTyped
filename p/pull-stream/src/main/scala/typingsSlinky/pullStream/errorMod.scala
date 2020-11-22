@@ -1,5 +1,6 @@
 package typingsSlinky.pullStream
 
+import typingsSlinky.pullStream.mod.EndOrError
 import typingsSlinky.pullStream.mod.Source
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,5 +13,5 @@ object errorMod extends js.Object {
   /**
     * Create a stream with no contents (it just ends immediately).
     */
-  def apply(): Source[scala.Nothing] = js.native
+  def apply(err: EndOrError): Source[scala.Nothing] = js.native
 }

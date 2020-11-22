@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object hexToRGBMod extends js.Object {
   
-  def default(hex: HexString): js.Tuple3[RedBit, GreenBit, BlueBit] = js.native
+  def hexToRGB(hex: HexString): js.Tuple3[RedBit, GreenBit, BlueBit] = js.native
   
   type BlueBit = Double
   

@@ -6,6 +6,8 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.blueprintjsCore.propsMod.IProps
+import typingsSlinky.blueprintjsSelect.blueprintjsSelectStrings.first
+import typingsSlinky.blueprintjsSelect.blueprintjsSelectStrings.last
 import typingsSlinky.blueprintjsSelect.itemListRendererMod.ItemListRenderer
 import typingsSlinky.blueprintjsSelect.itemRendererMod.ItemRenderer
 import typingsSlinky.blueprintjsSelect.listItemsUtilsMod.ICreateNewItem
@@ -46,6 +48,13 @@ object listItemsPropsMod extends js.Object {
       * Item" option. It transforms a query string into an item type.
       */
     var createNewItemFromQuery: js.UndefOr[js.Function1[/* query */ String, T]] = js.native
+    
+    /**
+      * Determines the position of the `createNewItem` within the list: first or
+      * last. Only relevant when `createNewItemRenderer` is defined.
+      * @default 'last'
+      */
+    var createNewItemPosition: js.UndefOr[first | last] = js.native
     
     /**
       * Custom renderer to transform the current query string into a selectable

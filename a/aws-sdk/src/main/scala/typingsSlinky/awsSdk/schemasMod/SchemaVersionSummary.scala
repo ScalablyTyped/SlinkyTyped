@@ -21,6 +21,11 @@ trait SchemaVersionSummary extends js.Object {
     * The version number of the schema.
     */
   var SchemaVersion: js.UndefOr[string] = js.native
+  
+  /**
+    * The type of schema.
+    */
+  var Type: js.UndefOr[typingsSlinky.awsSdk.schemasMod.Type] = js.native
 }
 object SchemaVersionSummary {
   
@@ -62,5 +67,11 @@ object SchemaVersionSummary {
     
     @scala.inline
     def deleteSchemaVersion: Self = this.set("SchemaVersion", js.undefined)
+    
+    @scala.inline
+    def setType(value: Type): Self = this.set("Type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteType: Self = this.set("Type", js.undefined)
   }
 }

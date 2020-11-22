@@ -1,15 +1,13 @@
 package typingsSlinky.fundamentalReact.components
 
-import slinky.web.html.`*`.tag
+import org.scalajs.dom.raw.HTMLButtonElement
+import slinky.web.SyntheticMouseEvent
+import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`2`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`3`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`4`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`5`
-import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`6`
-import typingsSlinky.fundamentalReact.tileMod.TileActionsProps
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.s
 import typingsSlinky.fundamentalReact.tileMod.TileContentProps
-import typingsSlinky.fundamentalReact.tileMod.TileMediaProps
+import typingsSlinky.fundamentalReact.tileMod.TileFooterProps
+import typingsSlinky.fundamentalReact.tileMod.TileHeaderProps
 import typingsSlinky.fundamentalReact.tileMod.TileProps
 import typingsSlinky.react.mod.PropsWithChildren
 import scala.scalajs.js
@@ -28,53 +26,21 @@ object Tile {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def backgroundImage(value: String): this.type = set("backgroundImage", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disableStyles(value: Boolean): this.type = set("disableStyles", value.asInstanceOf[js.Any])
+    def isDouble(value: Boolean): this.type = set("isDouble", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    def onClick(value: /* event */ SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onClick(value: /* repeated */ js.Any => _): this.type = set("onClick", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def productTile(value: Boolean): this.type = set("productTile", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+    def size(value: s): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: PropsWithChildren[TileProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: Tile.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
-  
-  object Actions {
-    
-    @JSImport("fundamental-react", "Tile.Actions")
-    @js.native
-    object component extends js.Object
-    
-    @scala.inline
-    class Builder (val args: js.Array[js.Any])
-      extends AnyVal
-         with StBuildingComponent[tag.type, js.Object] {
-      
-      @scala.inline
-      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-    }
-    
-    def withProps(p: PropsWithChildren[TileActionsProps]): typingsSlinky.fundamentalReact.components.Tile.Actions.Builder = new typingsSlinky.fundamentalReact.components.Tile.Actions.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-    
-    implicit def make(companion: Actions.type): typingsSlinky.fundamentalReact.components.Tile.Actions.Builder = new typingsSlinky.fundamentalReact.components.Tile.Actions.Builder(js.Array(this.component, js.Dictionary.empty))()
-  }
   
   object Content {
     
@@ -85,50 +51,60 @@ object Tile {
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, js.Object] {
+         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
       
       @scala.inline
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def headingLevel(value: `2` | `3` | `4` | `5` | `6`): this.type = set("headingLevel", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def productTile(value: Boolean): this.type = set("productTile", value.asInstanceOf[js.Any])
-      
-      @scala.inline
-      def titleProps(value: js.Any): this.type = set("titleProps", value.asInstanceOf[js.Any])
+      def twoColumns(value: Boolean): this.type = set("twoColumns", value.asInstanceOf[js.Any])
     }
     
     def withProps(p: PropsWithChildren[TileContentProps]): typingsSlinky.fundamentalReact.components.Tile.Content.Builder = new typingsSlinky.fundamentalReact.components.Tile.Content.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
-    @scala.inline
-    def apply(title: String): typingsSlinky.fundamentalReact.components.Tile.Content.Builder = {
-      val __props = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
-      new typingsSlinky.fundamentalReact.components.Tile.Content.Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[TileContentProps]]))
-    }
+    implicit def make(companion: Content.type): typingsSlinky.fundamentalReact.components.Tile.Content.Builder = new typingsSlinky.fundamentalReact.components.Tile.Content.Builder(js.Array(this.component, js.Dictionary.empty))()
   }
   
-  object Media {
+  object Footer {
     
-    @JSImport("fundamental-react", "Tile.Media")
+    @JSImport("fundamental-react", "Tile.Footer")
     @js.native
     object component extends js.Object
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, js.Object] {
+         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
+      
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: PropsWithChildren[TileFooterProps]): typingsSlinky.fundamentalReact.components.Tile.Footer.Builder = new typingsSlinky.fundamentalReact.components.Tile.Footer.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    
+    implicit def make(companion: Footer.type): typingsSlinky.fundamentalReact.components.Tile.Footer.Builder = new typingsSlinky.fundamentalReact.components.Tile.Footer.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Header {
+    
+    @JSImport("fundamental-react", "Tile.Header")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[slinky.web.html.`*`.tag.type, js.Object] {
       
       @scala.inline
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def productTile(value: Boolean): this.type = set("productTile", value.asInstanceOf[js.Any])
+      def subtitle(value: String): this.type = set("subtitle", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: PropsWithChildren[TileMediaProps]): typingsSlinky.fundamentalReact.components.Tile.Media.Builder = new typingsSlinky.fundamentalReact.components.Tile.Media.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: PropsWithChildren[TileHeaderProps]): typingsSlinky.fundamentalReact.components.Tile.Header.Builder = new typingsSlinky.fundamentalReact.components.Tile.Header.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
-    implicit def make(companion: Media.type): typingsSlinky.fundamentalReact.components.Tile.Media.Builder = new typingsSlinky.fundamentalReact.components.Tile.Media.Builder(js.Array(this.component, js.Dictionary.empty))()
+    implicit def make(companion: Header.type): typingsSlinky.fundamentalReact.components.Tile.Header.Builder = new typingsSlinky.fundamentalReact.components.Tile.Header.Builder(js.Array(this.component, js.Dictionary.empty))()
   }
 }

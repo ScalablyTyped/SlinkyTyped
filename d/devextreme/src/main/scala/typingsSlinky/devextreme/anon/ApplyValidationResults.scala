@@ -1,6 +1,5 @@
 package typingsSlinky.devextreme.anon
 
-import typingsSlinky.devextreme.mod.global.JQueryCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +17,7 @@ trait ApplyValidationResults extends js.Object {
   
   var reset: js.UndefOr[js.Function] = js.native
   
-  var validationRequestsCallbacks: js.UndefOr[js.Array[js.Function] | JQueryCallback] = js.native
+  var validationRequestsCallbacks: js.UndefOr[js.Array[js.Function]] = js.native
 }
 object ApplyValidationResults {
   
@@ -77,7 +76,7 @@ object ApplyValidationResults {
     def setValidationRequestsCallbacksVarargs(value: js.Function*): Self = this.set("validationRequestsCallbacks", js.Array(value :_*))
     
     @scala.inline
-    def setValidationRequestsCallbacks(value: js.Array[js.Function] | JQueryCallback): Self = this.set("validationRequestsCallbacks", value.asInstanceOf[js.Any])
+    def setValidationRequestsCallbacks(value: js.Array[js.Function]): Self = this.set("validationRequestsCallbacks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValidationRequestsCallbacks: Self = this.set("validationRequestsCallbacks", js.undefined)

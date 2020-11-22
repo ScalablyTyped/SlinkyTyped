@@ -10,8 +10,9 @@ trait GroupPattern
   extends BlockPattern
      with _Expression {
   
-  @JSName("type")
-  var type_GroupPattern: group = js.native
+  var patterns: js.Array[Pattern] = js.native
+  
+  var `type`: group = js.native
 }
 object GroupPattern {
   
@@ -36,6 +37,12 @@ object GroupPattern {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setPatternsVarargs(value: Pattern*): Self = this.set("patterns", js.Array(value :_*))
+    
+    @scala.inline
+    def setPatterns(value: js.Array[Pattern]): Self = this.set("patterns", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: group): Self = this.set("type", value.asInstanceOf[js.Any])

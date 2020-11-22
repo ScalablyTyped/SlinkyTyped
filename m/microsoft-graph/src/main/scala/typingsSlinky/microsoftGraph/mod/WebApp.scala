@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WebApp extends MobileApp {
   
   // The web app URL.
-  var appUrl: js.UndefOr[String] = js.native
+  var appUrl: js.UndefOr[NullableOption[String]] = js.native
   
   // Whether or not to use managed browser. This property is only applicable for Android and IOS.
   var useManagedBrowser: js.UndefOr[Boolean] = js.native
@@ -37,10 +37,13 @@ object WebApp {
     }
     
     @scala.inline
-    def setAppUrl(value: String): Self = this.set("appUrl", value.asInstanceOf[js.Any])
+    def setAppUrl(value: NullableOption[String]): Self = this.set("appUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAppUrl: Self = this.set("appUrl", js.undefined)
+    
+    @scala.inline
+    def setAppUrlNull: Self = this.set("appUrl", null)
     
     @scala.inline
     def setUseManagedBrowser(value: Boolean): Self = this.set("useManagedBrowser", value.asInstanceOf[js.Any])

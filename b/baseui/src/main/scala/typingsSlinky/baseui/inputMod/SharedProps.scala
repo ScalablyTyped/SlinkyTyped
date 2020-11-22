@@ -29,6 +29,10 @@ trait SharedProps extends js.Object {
   @JSName("$error")
   var $error: Boolean = js.native
   
+  /** Defines if has a clearable or MaskToggleButton at the end */
+  @JSName("$hasIconTrailing")
+  var $hasIconTrailing: Boolean = js.native
+  
   /** Renders UI in 'focus' state */
   @JSName("$isFocused")
   var $isFocused: Boolean = js.native
@@ -55,13 +59,14 @@ object SharedProps {
     $adjoined: /* keyof baseui.baseui/input.ADJOINED */ none | left | right | both,
     $disabled: Boolean,
     $error: Boolean,
+    $hasIconTrailing: Boolean,
     $isFocused: Boolean,
     $position: /* keyof baseui.baseui/input.ENHANCER_POSITION */ start | end,
     $positive: Boolean,
     $required: Boolean,
     $size: /* keyof baseui.baseui/input.SIZE */ mini | default_ | compact | large_
   ): SharedProps = {
-    val __obj = js.Dynamic.literal($adjoined = $adjoined.asInstanceOf[js.Any], $disabled = $disabled.asInstanceOf[js.Any], $error = $error.asInstanceOf[js.Any], $isFocused = $isFocused.asInstanceOf[js.Any], $position = $position.asInstanceOf[js.Any], $positive = $positive.asInstanceOf[js.Any], $required = $required.asInstanceOf[js.Any], $size = $size.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal($adjoined = $adjoined.asInstanceOf[js.Any], $disabled = $disabled.asInstanceOf[js.Any], $error = $error.asInstanceOf[js.Any], $hasIconTrailing = $hasIconTrailing.asInstanceOf[js.Any], $isFocused = $isFocused.asInstanceOf[js.Any], $position = $position.asInstanceOf[js.Any], $positive = $positive.asInstanceOf[js.Any], $required = $required.asInstanceOf[js.Any], $size = $size.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharedProps]
   }
   
@@ -88,6 +93,9 @@ object SharedProps {
     
     @scala.inline
     def set$error(value: Boolean): Self = this.set("$error", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def set$hasIconTrailing(value: Boolean): Self = this.set("$hasIconTrailing", value.asInstanceOf[js.Any])
     
     @scala.inline
     def set$isFocused(value: Boolean): Self = this.set("$isFocused", value.asInstanceOf[js.Any])

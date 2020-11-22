@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PropertyLikeDeclaration extends NamedDeclaration {
   
   @JSName("name")
-  var name_PropertyLikeDeclaration: PropertyName = js.native
+  val name_PropertyLikeDeclaration: PropertyName = js.native
 }

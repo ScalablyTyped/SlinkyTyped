@@ -217,6 +217,7 @@ object mod extends js.Object {
     def later[Target](target: Target, method: RunMethod[Target, _], arg0: js.Any, wait: Double): EmberRunTimer = js.native
     def later[Target](target: Target, method: RunMethod[Target, _], wait: Double): EmberRunTimer = js.native
     
+    def next(method: js.Function0[Unit], args: js.Any*): EmberRunTimer = js.native
     /**
       * Schedules an item to run from within a separate run loop, after
       * control has been returned to the system. This is equivalent to calling
@@ -512,6 +513,7 @@ object mod extends js.Object {
   @js.native
   object next extends js.Object {
     
+    def apply(method: js.Function0[Unit], args: js.Any*): EmberRunTimer = js.native
     def apply[Target](target: Target, method: RunMethod[Target, _], args: js.Any*): EmberRunTimer = js.native
   }
   

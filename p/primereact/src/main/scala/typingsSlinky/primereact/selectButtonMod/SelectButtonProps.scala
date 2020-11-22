@@ -26,6 +26,8 @@ trait SelectButtonProps extends js.Object {
   
   var onChange: js.UndefOr[js.Function1[/* e */ Target, Unit]] = js.native
   
+  var optionDisabled: js.UndefOr[String] = js.native
+  
   var optionLabel: js.UndefOr[String] = js.native
   
   var optionValue: js.UndefOr[String] = js.native
@@ -112,6 +114,12 @@ object SelectButtonProps {
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
+    
+    @scala.inline
+    def setOptionDisabled(value: String): Self = this.set("optionDisabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOptionDisabled: Self = this.set("optionDisabled", js.undefined)
     
     @scala.inline
     def setOptionLabel(value: String): Self = this.set("optionLabel", value.asInstanceOf[js.Any])

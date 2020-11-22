@@ -1,5 +1,6 @@
 package typingsSlinky.grommet.anon
 
+import typingsSlinky.grommet.utilsMod.GraphColorsType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `9` extends js.Object {
   
-  var level: js.UndefOr[String] = js.native
+  var colors: js.UndefOr[GraphColorsType] = js.native
 }
 object `9` {
   
@@ -33,9 +34,12 @@ object `9` {
     }
     
     @scala.inline
-    def setLevel(value: String): Self = this.set("level", value.asInstanceOf[js.Any])
+    def setColorsVarargs(value: String*): Self = this.set("colors", js.Array(value :_*))
     
     @scala.inline
-    def deleteLevel: Self = this.set("level", js.undefined)
+    def setColors(value: GraphColorsType): Self = this.set("colors", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColors: Self = this.set("colors", js.undefined)
   }
 }

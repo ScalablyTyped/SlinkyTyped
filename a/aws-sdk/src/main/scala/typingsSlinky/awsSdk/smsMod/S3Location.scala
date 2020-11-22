@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait S3Location extends js.Object {
   
   /**
-    * Amazon S3 bucket name.
+    * The Amazon S3 bucket name.
     */
-  var bucket: js.UndefOr[BucketName] = js.native
+  var bucket: js.UndefOr[S3BucketName] = js.native
   
   /**
-    * Amazon S3 bucket key.
+    * The Amazon S3 bucket key.
     */
-  var key: js.UndefOr[KeyName] = js.native
+  var key: js.UndefOr[S3KeyName] = js.native
 }
 object S3Location {
   
@@ -41,13 +41,13 @@ object S3Location {
     }
     
     @scala.inline
-    def setBucket(value: BucketName): Self = this.set("bucket", value.asInstanceOf[js.Any])
+    def setBucket(value: S3BucketName): Self = this.set("bucket", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBucket: Self = this.set("bucket", js.undefined)
     
     @scala.inline
-    def setKey(value: KeyName): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setKey(value: S3KeyName): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)

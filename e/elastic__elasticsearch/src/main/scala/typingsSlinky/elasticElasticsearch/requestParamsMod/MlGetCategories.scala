@@ -15,6 +15,8 @@ trait MlGetCategories[T] extends Generic {
   
   var job_id: String = js.native
   
+  var partition_field_value: js.UndefOr[String] = js.native
+  
   var size: js.UndefOr[Double] = js.native
 }
 object MlGetCategories {
@@ -60,6 +62,12 @@ object MlGetCategories {
     
     @scala.inline
     def deleteFrom: Self = this.set("from", js.undefined)
+    
+    @scala.inline
+    def setPartition_field_value(value: String): Self = this.set("partition_field_value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePartition_field_value: Self = this.set("partition_field_value", js.undefined)
     
     @scala.inline
     def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class SymbolInformation protected () extends js.Object {
   /**
-    * ~~Creates a new symbol information object.~~
+    * Creates a new symbol information object.
     *
     * @deprecated Please use the constructor taking a [location](#Location) object.
     *

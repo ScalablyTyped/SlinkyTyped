@@ -9,12 +9,12 @@ trait JsxFragment
   extends PrimaryExpression
      with JsxChild {
   
-  var children: NodeArray[JsxChild] = js.native
+  val children: NodeArray[JsxChild] = js.native
   
-  var closingFragment: JsxClosingFragment = js.native
+  val closingFragment: JsxClosingFragment = js.native
   
   @JSName("kind")
-  var kind_JsxFragment: typingsSlinky.typescript.mod.SyntaxKind.JsxFragment = js.native
+  val kind_JsxFragment: typingsSlinky.typescript.mod.SyntaxKind.JsxFragment = js.native
   
-  var openingFragment: JsxOpeningFragment = js.native
+  val openingFragment: JsxOpeningFragment = js.native
 }

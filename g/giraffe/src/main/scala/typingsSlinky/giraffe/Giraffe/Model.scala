@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.giraffe.Giraffe.GiraffeObject because var conflicts: initialize. Inlined app, appEvents, dataEvents, defaultOptions, beforeInitialize, afterInitialize, dispose, beforeDispose, afterDispose */ @js.native
 trait Model
-  extends typingsSlinky.backbone.mod.Model[js.Any, ModelSetOptions] {
+  extends typingsSlinky.backbone.mod.Model[js.Any, ModelSetOptions, js.Object] {
   
   var afterDispose: js.UndefOr[js.Function0[js.Any]] = js.native
   

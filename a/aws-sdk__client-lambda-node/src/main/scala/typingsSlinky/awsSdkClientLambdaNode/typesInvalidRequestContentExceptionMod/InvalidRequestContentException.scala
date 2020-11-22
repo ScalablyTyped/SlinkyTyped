@@ -2,31 +2,25 @@ package typingsSlinky.awsSdkClientLambdaNode.typesInvalidRequestContentException
 
 import typingsSlinky.awsSdkClientLambdaNode.invokeAsyncExceptionsUnionMod.InvokeAsyncExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.invokeExceptionsUnionMod.InvokeExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidRequestContentExceptionDetails> * / any */ @js.native
 trait InvalidRequestContentException
-  extends ServiceException[InvalidRequestContentExceptionDetails]
-     with InvokeAsyncExceptionsUnion
+  extends InvokeAsyncExceptionsUnion
      with InvokeExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidRequestContentException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.InvalidRequestContentException = js.native
+  var name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.InvalidRequestContentException = js.native
 }
 object InvalidRequestContentException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidRequestContentExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.InvalidRequestContentException
   ): InvalidRequestContentException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidRequestContentException]
   }
   

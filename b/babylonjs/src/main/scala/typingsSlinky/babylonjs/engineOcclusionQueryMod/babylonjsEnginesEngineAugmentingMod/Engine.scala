@@ -34,7 +34,7 @@ trait Engine extends js.Object {
     * @param algorithmType defines the algorithm to use
     * @param query defines the query to use
     * @returns the current engine
-    * @see http://doc.babylonjs.com/features/occlusionquery
+    * @see https://doc.babylonjs.com/features/occlusionquery
     */
   def beginOcclusionQuery(algorithmType: Double, query: WebGLQuery): Engine = js.native
   
@@ -53,7 +53,7 @@ trait Engine extends js.Object {
   
   /**
     * Ends an occlusion query
-    * @see http://doc.babylonjs.com/features/occlusionquery
+    * @see https://doc.babylonjs.com/features/occlusionquery
     * @param algorithmType defines the algorithm to use
     * @returns the current engine
     */

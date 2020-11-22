@@ -54,8 +54,6 @@ object navMod extends js.Object {
     
     def componentDidLoad(): js.Promise[Unit] = js.native
     
-    def componentDidUnload(): Unit = js.native
-    
     def componentWillLoad(): Unit = js.native
     
     /** @internal */
@@ -64,6 +62,8 @@ object navMod extends js.Object {
     var destroyView: js.Any = js.native
     
     var destroyed: js.Any = js.native
+    
+    def disconnectedCallback(): Unit = js.native
     
     var el: HTMLElement = js.native
     

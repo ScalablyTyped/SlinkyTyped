@@ -13,7 +13,7 @@ trait RegisterTargetsInput extends js.Object {
   var TargetGroupArn: typingsSlinky.awsSdk.elbv2Mod.TargetGroupArn = js.native
   
   /**
-    * The targets. To register a target by instance ID, specify the instance ID. To register a target by IP address, specify the IP address. To register a Lambda function, specify the ARN of the Lambda function.
+    * The targets.
     */
   var Targets: TargetDescriptions = js.native
 }

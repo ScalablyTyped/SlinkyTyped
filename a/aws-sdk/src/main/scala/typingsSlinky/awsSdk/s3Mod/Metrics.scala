@@ -10,7 +10,7 @@ trait Metrics extends js.Object {
   /**
     *  A container specifying the time threshold for emitting the s3:Replication:OperationMissedThreshold event. 
     */
-  var EventThreshold: ReplicationTimeValue = js.native
+  var EventThreshold: js.UndefOr[ReplicationTimeValue] = js.native
   
   /**
     *  Specifies whether the replication metrics are enabled. 
@@ -20,8 +20,8 @@ trait Metrics extends js.Object {
 object Metrics {
   
   @scala.inline
-  def apply(EventThreshold: ReplicationTimeValue, Status: MetricsStatus): Metrics = {
-    val __obj = js.Dynamic.literal(EventThreshold = EventThreshold.asInstanceOf[js.Any], Status = Status.asInstanceOf[js.Any])
+  def apply(Status: MetricsStatus): Metrics = {
+    val __obj = js.Dynamic.literal(Status = Status.asInstanceOf[js.Any])
     __obj.asInstanceOf[Metrics]
   }
   
@@ -41,9 +41,12 @@ object Metrics {
     }
     
     @scala.inline
+    def setStatus(value: MetricsStatus): Self = this.set("Status", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setEventThreshold(value: ReplicationTimeValue): Self = this.set("EventThreshold", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStatus(value: MetricsStatus): Self = this.set("Status", value.asInstanceOf[js.Any])
+    def deleteEventThreshold: Self = this.set("EventThreshold", js.undefined)
   }
 }

@@ -13,7 +13,7 @@ trait CreateEndpointGroupRequest extends js.Object {
   var EndpointConfigurations: js.UndefOr[typingsSlinky.awsSdk.globalacceleratorMod.EndpointConfigurations] = js.native
   
   /**
-    * The name of the AWS Region where the endpoint group is located. A listener can have only one endpoint group in a specific Region.
+    * The AWS Region where the endpoint group is located. A listener can have only one endpoint group in a specific Region.
     */
   var EndpointGroupRegion: GenericString = js.native
   
@@ -46,6 +46,11 @@ trait CreateEndpointGroupRequest extends js.Object {
     * The Amazon Resource Name (ARN) of the listener.
     */
   var ListenerArn: GenericString = js.native
+  
+  /**
+    * Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. For example, you can create a port override in which the listener receives user traffic on ports 80 and 443, but your accelerator routes that traffic to ports 1080 and 1443, respectively, on the endpoints. For more information, see  Port overrides in the AWS Global Accelerator Developer Guide.
+    */
+  var PortOverrides: js.UndefOr[typingsSlinky.awsSdk.globalacceleratorMod.PortOverrides] = js.native
   
   /**
     * The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
@@ -121,6 +126,15 @@ object CreateEndpointGroupRequest {
     
     @scala.inline
     def deleteHealthCheckProtocol: Self = this.set("HealthCheckProtocol", js.undefined)
+    
+    @scala.inline
+    def setPortOverridesVarargs(value: PortOverride*): Self = this.set("PortOverrides", js.Array(value :_*))
+    
+    @scala.inline
+    def setPortOverrides(value: PortOverrides): Self = this.set("PortOverrides", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePortOverrides: Self = this.set("PortOverrides", js.undefined)
     
     @scala.inline
     def setThresholdCount(value: ThresholdCount): Self = this.set("ThresholdCount", value.asInstanceOf[js.Any])

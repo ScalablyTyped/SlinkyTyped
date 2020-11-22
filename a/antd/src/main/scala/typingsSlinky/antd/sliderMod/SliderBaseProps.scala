@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SliderBaseProps extends js.Object {
   
+  var autoFocus: js.UndefOr[Boolean] = js.native
+  
   var className: js.UndefOr[String] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
@@ -33,7 +35,7 @@ trait SliderBaseProps extends js.Object {
   
   var reverse: js.UndefOr[Boolean] = js.native
   
-  var step: js.UndefOr[Double | Null] = js.native
+  var step: js.UndefOr[Null | Double] = js.native
   
   var style: js.UndefOr[CSSProperties] = js.native
   
@@ -69,6 +71,12 @@ object SliderBaseProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAutoFocus(value: Boolean): Self = this.set("autoFocus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
     
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])

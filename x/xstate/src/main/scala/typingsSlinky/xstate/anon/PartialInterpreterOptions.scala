@@ -22,7 +22,7 @@ trait PartialInterpreterOptions extends js.Object {
   
   var logger: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.native
   
-  var parent: js.UndefOr[Interpreter[_, _, _, _]] = js.native
+  var parent: js.UndefOr[Interpreter[_, _, _, ContextAny]] = js.native
 }
 object PartialInterpreterOptions {
   
@@ -84,7 +84,7 @@ object PartialInterpreterOptions {
     def deleteLogger: Self = this.set("logger", js.undefined)
     
     @scala.inline
-    def setParent(value: Interpreter[_, _, _, _]): Self = this.set("parent", value.asInstanceOf[js.Any])
+    def setParent(value: Interpreter[_, _, _, ContextAny]): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteParent: Self = this.set("parent", js.undefined)

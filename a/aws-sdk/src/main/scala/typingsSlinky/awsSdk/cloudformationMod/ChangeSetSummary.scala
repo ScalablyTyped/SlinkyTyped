@@ -33,6 +33,21 @@ trait ChangeSetSummary extends js.Object {
   var ExecutionStatus: js.UndefOr[typingsSlinky.awsSdk.cloudformationMod.ExecutionStatus] = js.native
   
   /**
+    * Specifies the current setting of IncludeNestedStacks for the change set.
+    */
+  var IncludeNestedStacks: js.UndefOr[typingsSlinky.awsSdk.cloudformationMod.IncludeNestedStacks] = js.native
+  
+  /**
+    * The parent change set ID.
+    */
+  var ParentChangeSetId: js.UndefOr[ChangeSetId] = js.native
+  
+  /**
+    * The root change set ID.
+    */
+  var RootChangeSetId: js.UndefOr[ChangeSetId] = js.native
+  
+  /**
     * The ID of the stack with which the change set is associated.
     */
   var StackId: js.UndefOr[typingsSlinky.awsSdk.cloudformationMod.StackId] = js.native
@@ -104,6 +119,24 @@ object ChangeSetSummary {
     
     @scala.inline
     def deleteExecutionStatus: Self = this.set("ExecutionStatus", js.undefined)
+    
+    @scala.inline
+    def setIncludeNestedStacks(value: IncludeNestedStacks): Self = this.set("IncludeNestedStacks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIncludeNestedStacks: Self = this.set("IncludeNestedStacks", js.undefined)
+    
+    @scala.inline
+    def setParentChangeSetId(value: ChangeSetId): Self = this.set("ParentChangeSetId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParentChangeSetId: Self = this.set("ParentChangeSetId", js.undefined)
+    
+    @scala.inline
+    def setRootChangeSetId(value: ChangeSetId): Self = this.set("RootChangeSetId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRootChangeSetId: Self = this.set("RootChangeSetId", js.undefined)
     
     @scala.inline
     def setStackId(value: StackId): Self = this.set("StackId", value.asInstanceOf[js.Any])

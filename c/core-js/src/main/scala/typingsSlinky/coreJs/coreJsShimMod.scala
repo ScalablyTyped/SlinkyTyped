@@ -488,7 +488,7 @@ object coreJsShimMod extends js.Object {
       * and a reject callback used to reject the promise with a provided reason or error.
       */
     def this(executor: js.Function2[
-            /* resolve */ js.Function1[/* value */ js.UndefOr[T | js.Thenable[T]], Unit], 
+            /* resolve */ js.Function1[/* value */ T | js.Thenable[T], Unit], 
             /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
             Unit
           ]) = this()
@@ -554,8 +554,6 @@ object coreJsShimMod extends js.Object {
     def deleteMetadata(metadataKey: js.Any, target: Object, targetKey: js.Symbol): Boolean = js.native
     
     def deleteProperty(target: js.Any, propertyKey: PropertyKey): Boolean = js.native
-    
-    def enumerate(target: js.Any): IterableIterator[_] = js.native
     
     def get(target: js.Any, propertyKey: PropertyKey): js.Any = js.native
     def get(target: js.Any, propertyKey: PropertyKey, receiver: js.Any): js.Any = js.native

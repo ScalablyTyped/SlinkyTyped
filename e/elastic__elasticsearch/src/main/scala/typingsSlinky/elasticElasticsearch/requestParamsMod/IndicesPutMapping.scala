@@ -29,6 +29,8 @@ trait IndicesPutMapping[T] extends Generic {
   var timeout: js.UndefOr[String] = js.native
   
   var `type`: js.UndefOr[String] = js.native
+  
+  var write_index_only: js.UndefOr[Boolean] = js.native
 }
 object IndicesPutMapping {
   
@@ -106,5 +108,11 @@ object IndicesPutMapping {
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    
+    @scala.inline
+    def setWrite_index_only(value: Boolean): Self = this.set("write_index_only", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWrite_index_only: Self = this.set("write_index_only", js.undefined)
   }
 }

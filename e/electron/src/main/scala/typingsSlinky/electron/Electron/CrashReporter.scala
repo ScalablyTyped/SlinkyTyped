@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CrashReporter extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/crash-reporter
+  // Docs: https://electronjs.org/docs/api/crash-reporter
   /**
     * Set an extra parameter to be sent with the crash report. The values specified
     * here will be sent in addition to any values set via the `extra` option when
@@ -22,9 +22,16 @@ trait CrashReporter extends js.Object {
     * with crashes that occur in other renderer processes or in the main process.
     *
     * **Note:** Parameters have limits on the length of the keys and values. Key names
-    * must be no longer than 39 bytes, and values must be no longer than 127 bytes.
+    * must be no longer than 39 bytes, and values must be no longer than 20320 bytes.
     * Keys with names longer than the maximum will be silently ignored. Key values
     * longer than the maximum length will be truncated.
+    *
+    * **Note:** On linux values that are longer than 127 bytes will be chunked into
+    * multiple keys, each 127 bytes in length.  E.g. `addExtraParameter('foo',
+    * 'a'.repeat(130))` will result in two chunked keys `foo__1` and `foo__2`, the
+    * first will contain the first 127 bytes and the second will contain the remaining
+    * 3 bytes.  On your crash reporting backend you should stitch together keys in
+    * this format.
     */
   def addExtraParameter(key: String, value: String): Unit = js.native
   
@@ -68,8 +75,8 @@ trait CrashReporter extends js.Object {
   def getUploadedReports(): js.Array[CrashReport] = js.native
   
   /**
-    * Remove a extra parameter from the current set of parameters. Future crashes will
-    * not include this parameter.
+    * Remove an extra parameter from the current set of parameters. Future crashes
+    * will not include this parameter.
     */
   def removeExtraParameter(key: String): Unit = js.native
   

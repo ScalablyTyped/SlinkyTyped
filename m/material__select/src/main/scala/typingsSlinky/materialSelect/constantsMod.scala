@@ -49,8 +49,6 @@ object constantsMod extends js.Object {
     
     var ROOT: String = js.native
     
-    var SELECTED_ITEM_CLASS: String = js.native
-    
     var WITH_LEADING_ICON: String = js.native
   }
   
@@ -67,9 +65,13 @@ object constantsMod extends js.Object {
     
     var ARIA_CONTROLS: String = js.native
     
+    var ARIA_DESCRIBEDBY: String = js.native
+    
     var ARIA_SELECTED_ATTR: String = js.native
     
     var CHANGE_EVENT: String = js.native
+    
+    var HIDDEN_INPUT_SELECTOR: String = js.native
     
     var LABEL_SELECTOR: String = js.native
     
@@ -80,8 +82,6 @@ object constantsMod extends js.Object {
     var MENU_SELECTOR: String = js.native
     
     var OUTLINE_SELECTOR: String = js.native
-    
-    var SELECTED_ITEM_SELECTOR: String = js.native
     
     var SELECTED_TEXT_SELECTOR: String = js.native
     

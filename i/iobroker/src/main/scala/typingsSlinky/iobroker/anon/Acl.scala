@@ -1,12 +1,11 @@
 package typingsSlinky.iobroker.anon
 
-import typingsSlinky.iobroker.mod.global.ioBroker.AnyObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Acl[T /* <: AnyObject */] extends js.Object {
+trait Acl[T] extends js.Object {
   
   var _id: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: T['_id'] */ js.Any
@@ -19,13 +18,13 @@ trait Acl[T /* <: AnyObject */] extends js.Object {
 object Acl {
   
   @scala.inline
-  def apply[T /* <: AnyObject */](): Acl[T] = {
+  def apply[T](): Acl[T] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Acl[T]]
   }
   
   @scala.inline
-  implicit class AclOps[Self <: Acl[_], T /* <: AnyObject */] (val x: Self with Acl[T]) extends AnyVal {
+  implicit class AclOps[Self <: Acl[_], T] (val x: Self with Acl[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

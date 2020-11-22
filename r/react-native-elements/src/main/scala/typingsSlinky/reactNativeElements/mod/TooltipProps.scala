@@ -22,6 +22,11 @@ trait TooltipProps extends js.Object {
   var backgroundColor: js.UndefOr[String] = js.native
   
   /**
+    * Disable auto hiding of tooltip when touching/scrolling anywhere inside the active tooltip popover container. Tooltip closes only when overlay backdrop is pressed (or) highlighted tooltip button is pressed
+    */
+  var closeOnlyOnBackdropPress: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Passes style object to tooltip container
     */
   var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
@@ -131,6 +136,12 @@ object TooltipProps {
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
+    
+    @scala.inline
+    def setCloseOnlyOnBackdropPress(value: Boolean): Self = this.set("closeOnlyOnBackdropPress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCloseOnlyOnBackdropPress: Self = this.set("closeOnlyOnBackdropPress", js.undefined)
     
     @scala.inline
     def setContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("containerStyle", value.asInstanceOf[js.Any])

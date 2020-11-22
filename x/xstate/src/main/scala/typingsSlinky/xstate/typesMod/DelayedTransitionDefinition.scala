@@ -1,5 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import typingsSlinky.xstate.xstateStrings.Asterisk
 import scala.scalajs.js
@@ -18,7 +19,7 @@ object DelayedTransitionDefinition {
     actions: js.Array[ActionObject[TContext, TEvent]],
     delay: Double | String | (DelayExpr[TContext, TEvent]),
     eventType: (/* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any) | typingsSlinky.xstate.typesMod.ActionTypes.NullEvent | Asterisk,
-    source: StateNode[TContext, _, TEvent, _],
+    source: StateNode[TContext, _, TEvent, ContextTContext[TContext]],
     toJSON: () => typingsSlinky.xstate.anon.Actions[TContext, TEvent]
   ): DelayedTransitionDefinition[TContext, TEvent] = {
     val __obj = js.Dynamic.literal(actions = actions.asInstanceOf[js.Any], delay = delay.asInstanceOf[js.Any], eventType = eventType.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any], toJSON = js.Any.fromFunction0(toJSON))

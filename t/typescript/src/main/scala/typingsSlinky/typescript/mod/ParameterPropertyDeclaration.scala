@@ -11,13 +11,13 @@ trait ParameterPropertyDeclaration extends js.Object {
   
   var _declarationBrand: js.Any = js.native
   
-  var decorators: js.UndefOr[NodeArray[Decorator]] = js.native
+  val decorators: js.UndefOr[NodeArray[Decorator]] = js.native
   
-  var dotDotDotToken: js.UndefOr[DotDotDotToken] = js.native
+  val dotDotDotToken: js.UndefOr[DotDotDotToken] = js.native
   
-  var end: Double = js.native
+  val end: Double = js.native
   
-  var flags: NodeFlags = js.native
+  val flags: NodeFlags = js.native
   
   def forEachChild[T](cbNode: js.Function1[/* node */ Node, js.UndefOr[T]]): js.UndefOr[T] = js.native
   def forEachChild[T](
@@ -65,19 +65,19 @@ trait ParameterPropertyDeclaration extends js.Object {
   def getWidth(): Double = js.native
   def getWidth(sourceFile: SourceFileLike): Double = js.native
   
-  var initializer: js.UndefOr[Expression] = js.native
+  val initializer: js.UndefOr[Expression] = js.native
   
-  var kind: Parameter = js.native
+  val kind: Parameter = js.native
   
-  var modifiers: js.UndefOr[ModifiersArray] = js.native
+  val modifiers: js.UndefOr[ModifiersArray] = js.native
   
-  var name: BindingName with Identifier = js.native
+  val name: BindingName with Identifier = js.native
   
-  var parent: SignatureDeclaration with ConstructorDeclaration = js.native
+  val parent: SignatureDeclaration with ConstructorDeclaration = js.native
   
-  var pos: Double = js.native
+  val pos: Double = js.native
   
-  var questionToken: js.UndefOr[QuestionToken] = js.native
+  val questionToken: js.UndefOr[QuestionToken] = js.native
   
-  var `type`: js.UndefOr[TypeNode] = js.native
+  val `type`: js.UndefOr[TypeNode] = js.native
 }

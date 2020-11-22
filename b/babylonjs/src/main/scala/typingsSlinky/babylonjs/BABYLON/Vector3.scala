@@ -7,6 +7,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Vector3 extends js.Object {
   
+  /** @hidden */
+  var _isDirty: Boolean = js.native
+  
+  /** @hidden */
+  var _x: Double = js.native
+  
+  /** @hidden */
+  var _y: Double = js.native
+  
+  /** @hidden */
+  var _z: Double = js.native
+  
   /**
     * Gets a new Vector3, result of the addition the current Vector3 and the given vector
     * @param otherVector defines the second operand
@@ -126,6 +138,15 @@ trait Vector3 extends js.Object {
     * @returns a new Vector3
     */
   def fract(): Vector3 = js.native
+  
+  /**
+    * Update the current vector from an array
+    * @param array defines the destination array
+    * @param index defines the offset in the destination array
+    * @returns the current Vector3
+    */
+  def fromArray(array: FloatArray): Vector3 = js.native
+  def fromArray(array: FloatArray, index: Double): Vector3 = js.native
   
   /**
     * Gets the class name
@@ -272,7 +293,23 @@ trait Vector3 extends js.Object {
     * @param reference define the Vector3 to update
     * @returns the updated Vector3
     */
-  def normalizeToRef(reference: DeepImmutable[Vector3]): Vector3 = js.native
+  def normalizeToRef(reference: Vector3): Vector3 = js.native
+  
+  /**
+    * Projects the current vector3 to a plane along a ray starting from a specified origin and directed towards the point.
+    * @param origin defines the origin of the projection ray
+    * @param plane defines the plane to project to
+    * @returns the projected vector3
+    */
+  def projectOnPlane(plane: Plane, origin: Vector3): Vector3 = js.native
+  
+  /**
+    * Projects the current vector3 to a plane along a ray starting from a specified origin and directed towards the point.
+    * @param origin defines the origin of the projection ray
+    * @param plane defines the plane to project to
+    * @param result defines the Vector3 where to store the result
+    */
+  def projectOnPlaneToRef(plane: Plane, origin: Vector3, result: Vector3): Unit = js.native
   
   /**
     * Reorders the x y z properties of the vector in place
@@ -400,18 +437,15 @@ trait Vector3 extends js.Object {
     */
   def toQuaternion(): Quaternion = js.native
   
-  /**
-    * Defines the first coordinates (on X axis)
-    */
-  var x: Double = js.native
+  /** Gets or sets the x coordinate */
+  def x: Double = js.native
+  def x_=(value: Double): Unit = js.native
   
-  /**
-    * Defines the second coordinates (on Y axis)
-    */
-  var y: Double = js.native
+  /** Gets or sets the y coordinate */
+  def y: Double = js.native
+  def y_=(value: Double): Unit = js.native
   
-  /**
-    * Defines the third coordinates (on Z axis)
-    */
-  var z: Double = js.native
+  /** Gets or sets the z coordinate */
+  def z: Double = js.native
+  def z_=(value: Double): Unit = js.native
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for ink
 
-Typings are for version 3.0.1
+Typings are for version 3.0.8
 
 ## Library description:
 React for CLI

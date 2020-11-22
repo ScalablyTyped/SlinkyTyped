@@ -8,6 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RouteSpec extends js.Object {
   
   /**
+    * The gRPC routing information for the route.
+    */
+  var grpcRoute: js.UndefOr[RouteSpecGrpcRoute] = js.native
+  
+  /**
+    * The HTTP/2 routing information for the route.
+    */
+  var http2Route: js.UndefOr[RouteSpecHttp2Route] = js.native
+  
+  /**
     * The HTTP routing information for the route.
     */
   var httpRoute: js.UndefOr[RouteSpecHttpRoute] = js.native
@@ -45,6 +55,18 @@ object RouteSpec {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setGrpcRoute(value: RouteSpecGrpcRoute): Self = this.set("grpcRoute", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGrpcRoute: Self = this.set("grpcRoute", js.undefined)
+    
+    @scala.inline
+    def setHttp2Route(value: RouteSpecHttp2Route): Self = this.set("http2Route", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHttp2Route: Self = this.set("http2Route", js.undefined)
     
     @scala.inline
     def setHttpRoute(value: RouteSpecHttpRoute): Self = this.set("httpRoute", value.asInstanceOf[js.Any])

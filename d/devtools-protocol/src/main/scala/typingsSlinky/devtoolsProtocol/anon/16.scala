@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Runtime.ReleaseObjectRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Profiler.SetSamplingIntervalRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `16` extends js.Object {
   
-  var paramsType: js.Array[ReleaseObjectRequest] = js.native
+  var paramsType: js.Array[SetSamplingIntervalRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `16` {
   
   @scala.inline
-  def apply(paramsType: js.Array[ReleaseObjectRequest], returnType: Unit): `16` = {
+  def apply(paramsType: js.Array[SetSamplingIntervalRequest], returnType: Unit): `16` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`16`]
   }
@@ -36,10 +36,10 @@ object `16` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: ReleaseObjectRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetSamplingIntervalRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[ReleaseObjectRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetSamplingIntervalRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

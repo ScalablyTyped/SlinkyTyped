@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BookmarksConstructor
   extends /**
-  * The Bookmarks widget allows end users to quickly navigate to a particular area of interest. It displays a list of [bookmarks](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html), which typically are defined inside the [WebMap](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#bookmarks).
+  * The Bookmarks widget allows end users to quickly navigate to a particular area of interest.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html)
   */

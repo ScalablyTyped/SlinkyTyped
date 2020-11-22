@@ -7,12 +7,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ItemAdjustment extends Adjustment {
   
+  /**
+    * Currency code
+    */
   var currency: js.UndefOr[String] = js.native
   
+  /**
+    * Unique identifier. Use this value to modify an adjustment in-place.
+    */
   var id: js.UndefOr[String] = js.native
   
+  /**
+    * Item code reference. If provided, the amount and tax properties will be populated from the given item. An itemCode
+    * may not be used to modify an adjustment in-place.
+    */
   var itemCode: String = js.native
   
+  /**
+    * Number of units
+    */
   var quantity: Double = js.native
 }
 object ItemAdjustment {

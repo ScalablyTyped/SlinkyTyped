@@ -8,10 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxOverlayAnimation extends js.Object {
   
-  /** @name dxOverlay.Options.animation.hide */
+  /**
+    * [descr:dxOverlay.Options.animation.hide]
+    */
   var hide: js.UndefOr[animationConfig] = js.native
   
-  /** @name dxOverlay.Options.animation.show */
+  /**
+    * [descr:dxOverlay.Options.animation.show]
+    */
   var show: js.UndefOr[animationConfig] = js.native
 }
 object dxOverlayAnimation {

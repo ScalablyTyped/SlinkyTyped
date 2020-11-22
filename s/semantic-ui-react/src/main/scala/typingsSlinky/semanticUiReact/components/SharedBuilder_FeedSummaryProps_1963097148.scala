@@ -4,7 +4,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.feedDateMod.FeedDateProps
 import typingsSlinky.semanticUiReact.feedUserMod.FeedUserProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -35,7 +34,7 @@ class SharedBuilder_FeedSummaryProps_1963097148 (val args: js.Array[js.Any])
   
   @scala.inline
   def dateFunction3(
-    value: (/* component */ ReactType[FeedDateProps], FeedDateProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, FeedDateProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("date", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -46,7 +45,7 @@ class SharedBuilder_FeedSummaryProps_1963097148 (val args: js.Array[js.Any])
   
   @scala.inline
   def userFunction3(
-    value: (/* component */ ReactType[FeedUserProps], FeedUserProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, FeedUserProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("user", js.Any.fromFunction3(value))
   
   @scala.inline

@@ -8,23 +8,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PlannerChecklistItem extends js.Object {
   
   // Value is true if the item is checked and false otherwise.
-  var isChecked: js.UndefOr[Boolean] = js.native
+  var isChecked: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // Read-only. User ID by which this is last modified.
-  var lastModifiedBy: js.UndefOr[IdentitySet] = js.native
+  var lastModifiedBy: js.UndefOr[NullableOption[IdentitySet]] = js.native
   
   /**
     * Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using
     * ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this:
     * '2014-01-01T00:00:00Z'
     */
-  var lastModifiedDateTime: js.UndefOr[String] = js.native
+  var lastModifiedDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // Used to set the relative order of items in the checklist. The format is defined as outlined here.
-  var orderHint: js.UndefOr[String] = js.native
+  var orderHint: js.UndefOr[NullableOption[String]] = js.native
   
   // Title of the checklist item
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[NullableOption[String]] = js.native
 }
 object PlannerChecklistItem {
   
@@ -50,33 +50,48 @@ object PlannerChecklistItem {
     }
     
     @scala.inline
-    def setIsChecked(value: Boolean): Self = this.set("isChecked", value.asInstanceOf[js.Any])
+    def setIsChecked(value: NullableOption[Boolean]): Self = this.set("isChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIsChecked: Self = this.set("isChecked", js.undefined)
     
     @scala.inline
-    def setLastModifiedBy(value: IdentitySet): Self = this.set("lastModifiedBy", value.asInstanceOf[js.Any])
+    def setIsCheckedNull: Self = this.set("isChecked", null)
+    
+    @scala.inline
+    def setLastModifiedBy(value: NullableOption[IdentitySet]): Self = this.set("lastModifiedBy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastModifiedBy: Self = this.set("lastModifiedBy", js.undefined)
     
     @scala.inline
-    def setLastModifiedDateTime(value: String): Self = this.set("lastModifiedDateTime", value.asInstanceOf[js.Any])
+    def setLastModifiedByNull: Self = this.set("lastModifiedBy", null)
+    
+    @scala.inline
+    def setLastModifiedDateTime(value: NullableOption[String]): Self = this.set("lastModifiedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastModifiedDateTime: Self = this.set("lastModifiedDateTime", js.undefined)
     
     @scala.inline
-    def setOrderHint(value: String): Self = this.set("orderHint", value.asInstanceOf[js.Any])
+    def setLastModifiedDateTimeNull: Self = this.set("lastModifiedDateTime", null)
+    
+    @scala.inline
+    def setOrderHint(value: NullableOption[String]): Self = this.set("orderHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrderHint: Self = this.set("orderHint", js.undefined)
     
     @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setOrderHintNull: Self = this.set("orderHint", null)
+    
+    @scala.inline
+    def setTitle(value: NullableOption[String]): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
+    
+    @scala.inline
+    def setTitleNull: Self = this.set("title", null)
   }
 }

@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "OneOfSymbol")
 @js.native
 class OneOfSymbol protected ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.OneOfSymbol] {
+  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.OneOfSymbol]
+     with _LexicalSymbol {
   def this(oneKeyword: Token[OneKeyword]) = this()
   def this(oneKeyword: Token[OneKeyword], ofKeyword: Token[OfKeyword]) = this()
   def this(

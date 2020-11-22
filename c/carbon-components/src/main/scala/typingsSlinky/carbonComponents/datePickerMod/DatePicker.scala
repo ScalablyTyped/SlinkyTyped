@@ -1,6 +1,5 @@
 package typingsSlinky.carbonComponents.datePickerMod
 
-import typingsSlinky.carbonComponents.anon.CalendarContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,7 +22,7 @@ trait DatePicker extends js.Object {
   
   def _rightArrowHTML(): String = js.native
   
-  def _updateClassNames(hasCalendarContainerSelectedDates: CalendarContainer): Unit = js.native
+  def _updateClassNames(hasCalendarContainerSelectedDates: js.Any): Unit = js.native
   
   def _updateInputFields(selectedDates: js.Any, `type`: js.Any): Unit = js.native
   
@@ -40,7 +39,7 @@ object DatePicker {
     _initDatePicker: js.Any => js.Any,
     _leftArrowHTML: () => String,
     _rightArrowHTML: () => String,
-    _updateClassNames: CalendarContainer => Unit,
+    _updateClassNames: js.Any => Unit,
     _updateInputFields: (js.Any, js.Any) => Unit,
     release: () => js.Any
   ): DatePicker = {
@@ -85,7 +84,7 @@ object DatePicker {
     def set_rightArrowHTML(value: () => String): Self = this.set("_rightArrowHTML", js.Any.fromFunction0(value))
     
     @scala.inline
-    def set_updateClassNames(value: CalendarContainer => Unit): Self = this.set("_updateClassNames", js.Any.fromFunction1(value))
+    def set_updateClassNames(value: js.Any => Unit): Self = this.set("_updateClassNames", js.Any.fromFunction1(value))
     
     @scala.inline
     def set_updateInputFields(value: (js.Any, js.Any) => Unit): Self = this.set("_updateInputFields", js.Any.fromFunction2(value))

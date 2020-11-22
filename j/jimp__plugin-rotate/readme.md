@@ -1,7 +1,7 @@
 
 # Scala.js typings for jimp__plugin-rotate
 
-Typings are for version 0.14.0
+Typings are for version 0.16.1
 
 ## Library description:
 Rotate an image.

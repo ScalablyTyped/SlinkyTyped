@@ -1,6 +1,5 @@
 package typingsSlinky.carbonComponents.floatingMenuMod
 
-import typingsSlinky.carbonComponents.anon.Direction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getFloatingPosition extends js.Object {
   
-  def apply(hasMenuSizeRefPositionOffsetDirectionScrollXScrollY: Direction): js.Any = js.native
+  def apply(hasMenuSizeRefPositionOffsetDirectionScrollXScrollY: js.Any): js.Any = js.native
 }

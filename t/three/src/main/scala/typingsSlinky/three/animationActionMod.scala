@@ -27,12 +27,18 @@ object animationActionMod extends js.Object {
     
     var blendMode: AnimationBlendMode = js.native
     
+    /**
+    	 * @default false
+    	 */
     var clampWhenFinished: Boolean = js.native
     
     def crossFadeFrom(fadeOutAction: AnimationAction, duration: Double, warp: Boolean): AnimationAction = js.native
     
     def crossFadeTo(fadeInAction: AnimationAction, duration: Double, warp: Boolean): AnimationAction = js.native
     
+    /**
+    	 * @default true
+    	 */
     var enabled: Boolean = js.native
     
     def fadeIn(duration: Double): AnimationAction = js.native
@@ -55,12 +61,21 @@ object animationActionMod extends js.Object {
     
     def isScheduled(): Boolean = js.native
     
+    /**
+    	 * @default THREE.LoopRepeat
+    	 */
     var loop: AnimationActionLoopStyles = js.native
     
+    /**
+    	 * @default false
+    	 */
     var paused: Boolean = js.native
     
     def play(): AnimationAction = js.native
     
+    /**
+    	 * @default Infinity
+    	 */
     var repetitions: Double = js.native
     
     def reset(): AnimationAction = js.native
@@ -83,16 +98,31 @@ object animationActionMod extends js.Object {
     
     def syncWith(action: AnimationAction): AnimationAction = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var time: Double = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var timeScale: Double = js.native
     
     def warp(statTimeScale: Double, endTimeScale: Double, duration: Double): AnimationAction = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var weight: Double = js.native
     
+    /**
+    	 * @default true
+    	 */
     var zeroSlopeAtEnd: Boolean = js.native
     
+    /**
+    	 * @default true
+    	 */
     var zeroSlopeAtStart: Boolean = js.native
   }
 }

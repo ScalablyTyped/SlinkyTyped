@@ -61,7 +61,11 @@ object Literal {
   }
   
   @scala.inline
-  def TemplateLiteral_(expressions: js.Array[Expression], quasis: js.Array[TemplateElement_], `type`: TemplateLiteral): Literal = {
+  def TemplateLiteral_(
+    expressions: js.Array[Expression | TSType],
+    quasis: js.Array[TemplateElement_],
+    `type`: TemplateLiteral
+  ): Literal = {
     val __obj = js.Dynamic.literal(expressions = expressions.asInstanceOf[js.Any], quasis = quasis.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Literal]

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CrashReport extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/crash-report
+  // Docs: https://electronjs.org/docs/api/structures/crash-report
   var date: js.Date = js.native
   
   var id: String = js.native

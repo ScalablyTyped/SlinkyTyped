@@ -24,13 +24,16 @@ trait Body extends js.Object {
     *
     * If the user is running add-ins that implement the
     * {@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-on-send-addins?tabs=windows | on-send feature using `ItemSend` in the manifest},
-    * append on send runs before on-send functionality.
+    * append-on-send runs before on-send functionality.
     *
-    * **Important**: To use `appendOnSendAsync`, the `AppendOnSend` extended permission must be included in the `ExtendedPermissions` node of the manifest.
+    * **Important**: If your add-in implements the on-send feature and calls `appendOnSendAsync` in the `ItemSend` handler,
+    * the `appendOnSendAsync` call returns an error as this scenario is not supported.
+    *
+    * **Important**: To use `appendOnSendAsync`, the `ExtendedPermissions` manifest node must include the `AppendOnSend` extended permission.
     *
     * **Note**: To clear data from a previous `appendOnSendAsync` call, you can call it again with the `data` parameter set to `null`.
     *
-    * [Api set: Mailbox Preview]
+    * [Api set: Mailbox 1.9]
     *
     * @remarks
     *
@@ -50,11 +53,8 @@ trait Body extends js.Object {
     *        `coercionType`: The desired format for the data to be appended. The string in the `data` parameter will be converted to this format.
     * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter
     *                             of type `Office.AsyncResult`. Any errors encountered will be provided in the `asyncResult.error` property.
-    *
-    * @beta
     */
   def appendOnSendAsync(data: String): Unit = js.native
-  def appendOnSendAsync(data: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def appendOnSendAsync(data: String, options: AsyncContextOptions with CoercionTypeOptions): Unit = js.native
   def appendOnSendAsync(
     data: String,
@@ -68,7 +68,6 @@ trait Body extends js.Object {
   ): Unit = js.native
   
   def getAsync(coercionType: String): Unit = js.native
-  def getAsync(coercionType: String, callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]): Unit = js.native
   def getAsync(
     coercionType: String,
     options: js.UndefOr[scala.Nothing],
@@ -104,7 +103,6 @@ trait Body extends js.Object {
     *                             of type Office.AsyncResult. The body is provided in the requested format in the `asyncResult.value` property.
     */
   def getAsync(coercionType: CoercionType): Unit = js.native
-  def getAsync(coercionType: CoercionType, callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]): Unit = js.native
   def getAsync(
     coercionType: CoercionType,
     options: js.UndefOr[scala.Nothing],
@@ -135,7 +133,6 @@ trait Body extends js.Object {
     *                  The content type is returned as one of the `CoercionType` values in the `asyncResult.value` property.
     */
   def getTypeAsync(): Unit = js.native
-  def getTypeAsync(callback: js.Function1[/* asyncResult */ AsyncResult[CoercionType], Unit]): Unit = js.native
   def getTypeAsync(
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[CoercionType], Unit]
@@ -151,6 +148,10 @@ trait Body extends js.Object {
     *
     * The `prependAsync` method inserts the specified string at the beginning of the item body.
     * After insertion, the cursor is returned to its original place, relative to the inserted content.
+    *
+    * When working with HTML-formatted bodies, it's important to note that the client may modify the value passed to `prependAsync` in order to
+    * make it render efficiently with its rendering engine. This means that the value returned from a subsequent call to `Body.getAsync` method
+    * will not necessarily exactly contain the value that was passed in the `prependAsync` method previously.
     *
     * When including links in HTML markup, you can disable online link preview by setting the `id` attribute on the anchor (\<a\>) to "LPNoLP"
     * (see the **Examples** section for a sample).
@@ -175,7 +176,6 @@ trait Body extends js.Object {
     *                             of type `Office.AsyncResult`. Any errors encountered will be provided in the `asyncResult.error` property.
     */
   def prependAsync(data: String): Unit = js.native
-  def prependAsync(data: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def prependAsync(data: String, options: AsyncContextOptions with CoercionTypeOptions): Unit = js.native
   def prependAsync(
     data: String,
@@ -220,7 +220,6 @@ trait Body extends js.Object {
     *                             of type Office.AsyncResult. Any errors encountered will be provided in the `asyncResult.error` property.
     */
   def setAsync(data: String): Unit = js.native
-  def setAsync(data: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def setAsync(data: String, options: AsyncContextOptions with CoercionTypeOptions): Unit = js.native
   def setAsync(
     data: String,
@@ -265,7 +264,6 @@ trait Body extends js.Object {
     *                             of type `Office.AsyncResult`. Any errors encountered will be provided in the `asyncResult.error` property.
     */
   def setSelectedDataAsync(data: String): Unit = js.native
-  def setSelectedDataAsync(data: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def setSelectedDataAsync(data: String, options: AsyncContextOptions with CoercionTypeOptions): Unit = js.native
   def setSelectedDataAsync(
     data: String,
@@ -282,6 +280,13 @@ trait Body extends js.Object {
     * Adds or replaces the signature of the item body.
     *
     * **Important**: In Outlook on the web, `setSignatureAsync` only works on messages.
+    *
+    * **Important**: If your add-in implements the 
+    * {@link https://docs.microsoft.com/office/dev/add-ins/outlook/autolaunch | event-based activation feature using `LaunchEvent` in the manifest},
+    * and calls `setSignatureAsync` in the event handler, the following behavior applies.
+    *
+    * - When the user composes a new item (including reply or forward), the signature is set but doesn't modify the form. This means
+    * if the user closes the form without making other edits, they won't be prompted to save changes.
     *
     * [Api set: Mailbox Preview]
     *
@@ -308,7 +313,6 @@ trait Body extends js.Object {
     * @beta
     */
   def setSignatureAsync(data: String): Unit = js.native
-  def setSignatureAsync(data: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def setSignatureAsync(data: String, options: AsyncContextOptions with CoercionTypeOptions): Unit = js.native
   def setSignatureAsync(
     data: String,

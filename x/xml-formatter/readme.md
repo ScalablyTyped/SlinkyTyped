@@ -1,7 +1,7 @@
 
 # Scala.js typings for xml-formatter
 
-Typings are for version 2.1.3
+Typings are for version 2.4.0
 
 ## Library description:
 Converts XML into a human readable format (pretty print) while respecting the xml:space attribute

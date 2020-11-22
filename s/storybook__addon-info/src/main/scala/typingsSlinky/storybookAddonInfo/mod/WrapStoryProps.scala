@@ -1,5 +1,6 @@
 package typingsSlinky.storybookAddonInfo.mod
 
+import typingsSlinky.storybookAddons.typesMod.Args
 import typingsSlinky.storybookAddons.typesMod.StoryContext
 import typingsSlinky.storybookAddons.typesMod.StoryFn
 import scala.scalajs.js
@@ -51,7 +52,13 @@ object WrapStoryProps {
     def deleteOptions: Self = this.set("options", js.undefined)
     
     @scala.inline
-    def setStoryFn(value: /* p */ js.UndefOr[StoryContext] => _): Self = this.set("storyFn", js.Any.fromFunction1(value))
+    def setStoryFnFunction2(value: (/* a */ js.UndefOr[Args], /* p */ js.UndefOr[StoryContext]) => _): Self = this.set("storyFn", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setStoryFnFunction1(value: /* p */ js.UndefOr[StoryContext] => _): Self = this.set("storyFn", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setStoryFn(value: StoryFn[_]): Self = this.set("storyFn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStoryFn: Self = this.set("storyFn", js.undefined)

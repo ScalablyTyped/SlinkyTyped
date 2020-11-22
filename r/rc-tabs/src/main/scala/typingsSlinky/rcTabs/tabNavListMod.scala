@@ -9,6 +9,7 @@ import typingsSlinky.rcTabs.interfaceMod.AnimatedConfig
 import typingsSlinky.rcTabs.interfaceMod.EditableConfig
 import typingsSlinky.rcTabs.interfaceMod.OnTabScroll
 import typingsSlinky.rcTabs.interfaceMod.RenderTabBar
+import typingsSlinky.rcTabs.interfaceMod.TabBarExtraContent
 import typingsSlinky.rcTabs.interfaceMod.TabPosition
 import typingsSlinky.rcTabs.interfaceMod.TabsLocale
 import typingsSlinky.react.mod.CSSProperties
@@ -38,7 +39,7 @@ object tabNavListMod extends js.Object {
     
     var editable: js.UndefOr[EditableConfig] = js.native
     
-    var extra: js.UndefOr[ReactElement] = js.native
+    var extra: js.UndefOr[TabBarExtraContent] = js.native
     
     var id: String = js.native
     

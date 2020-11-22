@@ -20,13 +20,11 @@ trait TimeInfo
     * The time extent defines the start time and end time for all data in the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TimeInfo.html#fullTimeExtent)
-    *
-    * @default null
     */
   var fullTimeExtent: TimeExtent = js.native
   
   /**
-    * The time interval defines the granularity of the temporal data and allows you to visualize the data at specified intervals using the [time slider widget](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-TimeSlider.html). Usually temporal data is collected at regular intervals such as every hour or every day.
+    * The time interval defines the granularity of the temporal data and allows you to visualize the data at specified intervals using the [time slider widget](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-TimeSlider.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TimeInfo.html#interval)
     */
@@ -40,7 +38,7 @@ trait TimeInfo
   var startField: String = js.native
   
   /**
-    * The name of the field used to join or group discrete locations. For example, for hurricane tracks, trackIdField can be the hurricane name field.
+    * The name of the field used to join or group discrete locations.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TimeInfo.html#trackIdField)
     */

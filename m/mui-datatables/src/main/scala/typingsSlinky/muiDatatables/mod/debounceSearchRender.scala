@@ -13,8 +13,8 @@ object debounceSearchRender extends js.Object {
   def apply(): js.UndefOr[
     js.Function4[
       /* searchText */ String, 
-      /* handleSearch */ js.Any, 
-      /* hideSearch */ js.Any, 
+      /* handleSearch */ js.Function1[/* text */ String, Unit], 
+      /* hideSearch */ js.Function0[Unit], 
       /* options */ js.Any, 
       ReactComponentClass[js.Object] | ReactElement
     ]
@@ -22,8 +22,8 @@ object debounceSearchRender extends js.Object {
   def apply(debounceWait: Double): js.UndefOr[
     js.Function4[
       /* searchText */ String, 
-      /* handleSearch */ js.Any, 
-      /* hideSearch */ js.Any, 
+      /* handleSearch */ js.Function1[/* text */ String, Unit], 
+      /* hideSearch */ js.Function0[Unit], 
       /* options */ js.Any, 
       ReactComponentClass[js.Object] | ReactElement
     ]

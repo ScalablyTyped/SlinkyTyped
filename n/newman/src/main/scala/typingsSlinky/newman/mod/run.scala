@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object run extends js.Object {
   
+  def apply(callback: js.Function2[/* err */ js.Error | Null, /* summary */ NewmanRunSummary, Unit]): EventEmitter = js.native
   def apply(options: NewmanRunOptions): EventEmitter = js.native
   def apply(
     options: NewmanRunOptions,

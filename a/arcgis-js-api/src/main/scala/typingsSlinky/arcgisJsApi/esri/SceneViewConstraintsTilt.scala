@@ -19,11 +19,9 @@ trait SceneViewConstraintsTilt extends AnonymousAccessor {
   var max: js.UndefOr[Double] = js.native
   
   /**
-    * Specifies the mode of the constraint. There are two possible values: `auto` or `manual`. In `auto` mode, the maximum tilt value is automatically determined based on the altitude of the view camera. In `manual` mode, the maximum tilt value is a user defined, constant value. **Note:** The mode automatically changes to `manual` whenever the `max` property is set.
+    * Specifies the mode of the constraint.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#constraints)
-    *
-    * @default auto
     */
   var mode: js.UndefOr[auto | manual] = js.native
 }

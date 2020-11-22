@@ -14,10 +14,19 @@ object multiPointMod extends js.Object {
   trait MultiPoint
     extends typingsSlinky.ol.simpleGeometryMod.default {
     
+    /**
+      * Append the passed point to this multipoint.
+      */
     def appendPoint(point: typingsSlinky.ol.pointMod.default): Unit = js.native
     
+    /**
+      * Return the point at the specified index.
+      */
     def getPoint(index: Double): typingsSlinky.ol.pointMod.default = js.native
     
+    /**
+      * Return the points of this multipoint.
+      */
     def getPoints(): js.Array[typingsSlinky.ol.pointMod.default] = js.native
   }
   

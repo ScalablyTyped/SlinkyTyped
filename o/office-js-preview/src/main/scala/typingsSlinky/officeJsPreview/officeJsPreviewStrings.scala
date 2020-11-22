@@ -235,6 +235,9 @@ object officeJsPreviewStrings {
   def Ascending: Ascending = "Ascending".asInstanceOf[Ascending]
   
   @scala.inline
+  def Assign: Assign = "Assign".asInstanceOf[Assign]
+  
+  @scala.inline
   def AtBottom: AtBottom = "AtBottom".asInstanceOf[AtBottom]
   
   @scala.inline
@@ -398,6 +401,9 @@ object officeJsPreviewStrings {
   
   @scala.inline
   def Bubble3DEffect: Bubble3DEffect = "Bubble3DEffect".asInstanceOf[Bubble3DEffect]
+  
+  @scala.inline
+  def BubbleSizes: BubbleSizes = "BubbleSizes".asInstanceOf[BubbleSizes]
   
   @scala.inline
   def BuildingBlockGallery: BuildingBlockGallery = "BuildingBlockGallery".asInstanceOf[BuildingBlockGallery]
@@ -691,6 +697,9 @@ object officeJsPreviewStrings {
   def County: County = "County".asInstanceOf[County]
   
   @scala.inline
+  def Create: Create = "Create".asInstanceOf[Create]
+  
+  @scala.inline
   def CrissCross: CrissCross = "CrissCross".asInstanceOf[CrissCross]
   
   @scala.inline
@@ -848,6 +857,9 @@ object officeJsPreviewStrings {
   
   @scala.inline
   def Default: Default = "Default".asInstanceOf[Default]
+  
+  @scala.inline
+  def Delete: Delete = "Delete".asInstanceOf[Delete]
   
   @scala.inline
   def Descending: Descending = "Descending".asInstanceOf[Descending]
@@ -1780,6 +1792,9 @@ object officeJsPreviewStrings {
   def JustifyLow: JustifyLow = "JustifyLow".asInstanceOf[JustifyLow]
   
   @scala.inline
+  def KeepSourceFormatting: KeepSourceFormatting = "KeepSourceFormatting".asInstanceOf[KeepSourceFormatting]
+  
+  @scala.inline
   def KorDbNum1: KorDbNum1 = "KorDbNum1".asInstanceOf[KorDbNum1]
   
   @scala.inline
@@ -1931,6 +1946,15 @@ object officeJsPreviewStrings {
   
   @scala.inline
   def LinearTrend: LinearTrend = "LinearTrend".asInstanceOf[LinearTrend]
+  
+  @scala.inline
+  def LinkedDataTypeLinkedDataTypeAdded: LinkedDataTypeLinkedDataTypeAdded = "LinkedDataTypeLinkedDataTypeAdded".asInstanceOf[LinkedDataTypeLinkedDataTypeAdded]
+  
+  @scala.inline
+  def LinkedDataTypeRefreshModeChanged: LinkedDataTypeRefreshModeChanged = "LinkedDataTypeRefreshModeChanged".asInstanceOf[LinkedDataTypeRefreshModeChanged]
+  
+  @scala.inline
+  def LinkedDataTypeRefreshRequestCompleted: LinkedDataTypeRefreshRequestCompleted = "LinkedDataTypeRefreshRequestCompleted".asInstanceOf[LinkedDataTypeRefreshRequestCompleted]
   
   @scala.inline
   def List: List = "List".asInstanceOf[List]
@@ -2341,6 +2365,9 @@ object officeJsPreviewStrings {
   def Off: Off = "Off".asInstanceOf[Off]
   
   @scala.inline
+  def OnLoad: OnLoad = "OnLoad".asInstanceOf[OnLoad]
+  
+  @scala.inline
   def OneCell: OneCell = "OneCell".asInstanceOf[OneCell]
   
   @scala.inline
@@ -2464,6 +2491,9 @@ object officeJsPreviewStrings {
   def Percentile: Percentile = "Percentile".asInstanceOf[Percentile]
   
   @scala.inline
+  def Periodic: Periodic = "Periodic".asInstanceOf[Periodic]
+  
+  @scala.inline
   def PhoneNumber: PhoneNumber = "PhoneNumber".asInstanceOf[PhoneNumber]
   
   @scala.inline
@@ -2551,7 +2581,13 @@ object officeJsPreviewStrings {
   def Primary: Primary = "Primary".asInstanceOf[Primary]
   
   @scala.inline
+  def Priority: Priority = "Priority".asInstanceOf[Priority]
+  
+  @scala.inline
   def Product: Product = "Product".asInstanceOf[Product]
+  
+  @scala.inline
+  def Progress: Progress = "Progress".asInstanceOf[Progress]
   
   @scala.inline
   def Prompt: Prompt = "Prompt".asInstanceOf[Prompt]
@@ -2752,6 +2788,9 @@ object officeJsPreviewStrings {
   def ScaleFromTopLeft: ScaleFromTopLeft = "ScaleFromTopLeft".asInstanceOf[ScaleFromTopLeft]
   
   @scala.inline
+  def Schedule: Schedule = "Schedule".asInstanceOf[Schedule]
+  
+  @scala.inline
   def Second: Second = "Second".asInstanceOf[Second]
   
   @scala.inline
@@ -2789,6 +2828,9 @@ object officeJsPreviewStrings {
   
   @scala.inline
   def Series: Series = "Series".asInstanceOf[Series]
+  
+  @scala.inline
+  def SetTitle: SetTitle = "SetTitle".asInstanceOf[SetTitle]
   
   @scala.inline
   def ShapeActivated: ShapeActivated = "ShapeActivated".asInstanceOf[ShapeActivated]
@@ -3304,7 +3346,19 @@ object officeJsPreviewStrings {
   def UNKNOWN: UNKNOWN = "UNKNOWN".asInstanceOf[UNKNOWN]
   
   @scala.inline
+  def Unassign: Unassign = "Unassign".asInstanceOf[Unassign]
+  
+  @scala.inline
+  def UnassignAll: UnassignAll = "UnassignAll".asInstanceOf[UnassignAll]
+  
+  @scala.inline
   def Undefined: Undefined = "Undefined".asInstanceOf[Undefined]
+  
+  @scala.inline
+  def Undelete: Undelete = "Undelete".asInstanceOf[Undelete]
+  
+  @scala.inline
+  def Undo: Undo = "Undo".asInstanceOf[Undo]
   
   @scala.inline
   def Unhidden: Unhidden = "Unhidden".asInstanceOf[Unhidden]
@@ -3341,6 +3395,9 @@ object officeJsPreviewStrings {
   
   @scala.inline
   def UpperRoman: UpperRoman = "UpperRoman".asInstanceOf[UpperRoman]
+  
+  @scala.inline
+  def UseDestinationTheme: UseDestinationTheme = "UseDestinationTheme".asInstanceOf[UseDestinationTheme]
   
   @scala.inline
   def UturnArrow: UturnArrow = "UturnArrow".asInstanceOf[UturnArrow]
@@ -3784,6 +3841,9 @@ object officeJsPreviewStrings {
   sealed trait Ascending extends js.Object
   
   @js.native
+  sealed trait Assign extends js.Object
+  
+  @js.native
   sealed trait AtBottom extends js.Object
   
   @js.native
@@ -3947,6 +4007,9 @@ object officeJsPreviewStrings {
   
   @js.native
   sealed trait Bubble3DEffect extends js.Object
+  
+  @js.native
+  sealed trait BubbleSizes extends js.Object
   
   @js.native
   sealed trait BuildingBlockGallery extends js.Object
@@ -4240,6 +4303,9 @@ object officeJsPreviewStrings {
   sealed trait County extends js.Object
   
   @js.native
+  sealed trait Create extends js.Object
+  
+  @js.native
   sealed trait CrissCross extends js.Object
   
   @js.native
@@ -4397,6 +4463,9 @@ object officeJsPreviewStrings {
   
   @js.native
   sealed trait Default extends js.Object
+  
+  @js.native
+  sealed trait Delete extends js.Object
   
   @js.native
   sealed trait Descending extends js.Object
@@ -5329,6 +5398,9 @@ object officeJsPreviewStrings {
   sealed trait JustifyLow extends js.Object
   
   @js.native
+  sealed trait KeepSourceFormatting extends js.Object
+  
+  @js.native
   sealed trait KorDbNum1 extends js.Object
   
   @js.native
@@ -5480,6 +5552,15 @@ object officeJsPreviewStrings {
   
   @js.native
   sealed trait LinearTrend extends js.Object
+  
+  @js.native
+  sealed trait LinkedDataTypeLinkedDataTypeAdded extends js.Object
+  
+  @js.native
+  sealed trait LinkedDataTypeRefreshModeChanged extends js.Object
+  
+  @js.native
+  sealed trait LinkedDataTypeRefreshRequestCompleted extends js.Object
   
   @js.native
   sealed trait List extends js.Object
@@ -5890,6 +5971,9 @@ object officeJsPreviewStrings {
   sealed trait Off extends js.Object
   
   @js.native
+  sealed trait OnLoad extends js.Object
+  
+  @js.native
   sealed trait OneCell extends js.Object
   
   @js.native
@@ -6013,6 +6097,9 @@ object officeJsPreviewStrings {
   sealed trait Percentile extends js.Object
   
   @js.native
+  sealed trait Periodic extends js.Object
+  
+  @js.native
   sealed trait PhoneNumber extends js.Object
   
   @js.native
@@ -6100,7 +6187,13 @@ object officeJsPreviewStrings {
   sealed trait Primary extends js.Object
   
   @js.native
+  sealed trait Priority extends js.Object
+  
+  @js.native
   sealed trait Product extends js.Object
+  
+  @js.native
+  sealed trait Progress extends js.Object
   
   @js.native
   sealed trait Prompt extends js.Object
@@ -6301,6 +6394,9 @@ object officeJsPreviewStrings {
   sealed trait ScaleFromTopLeft extends js.Object
   
   @js.native
+  sealed trait Schedule extends js.Object
+  
+  @js.native
   sealed trait Second extends js.Object
   
   @js.native
@@ -6338,6 +6434,9 @@ object officeJsPreviewStrings {
   
   @js.native
   sealed trait Series extends js.Object
+  
+  @js.native
+  sealed trait SetTitle extends js.Object
   
   @js.native
   sealed trait ShapeActivated extends js.Object
@@ -6853,7 +6952,19 @@ object officeJsPreviewStrings {
   sealed trait UNKNOWN extends js.Object
   
   @js.native
+  sealed trait Unassign extends js.Object
+  
+  @js.native
+  sealed trait UnassignAll extends js.Object
+  
+  @js.native
   sealed trait Undefined extends js.Object
+  
+  @js.native
+  sealed trait Undelete extends js.Object
+  
+  @js.native
+  sealed trait Undo extends js.Object
   
   @js.native
   sealed trait Unhidden extends js.Object
@@ -6890,6 +7001,9 @@ object officeJsPreviewStrings {
   
   @js.native
   sealed trait UpperRoman extends js.Object
+  
+  @js.native
+  sealed trait UseDestinationTheme extends js.Object
   
   @js.native
   sealed trait UturnArrow extends js.Object

@@ -7,9 +7,39 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MotionBlurPostProcess extends PostProcess {
   
+  /**
+    * Called on the mode changed (object based or screen based).
+    */
+  var _applyMode: js.Any = js.native
+  
+  var _forceGeometryBuffer: js.Any = js.native
+  
   var _geometryBufferRenderer: js.Any = js.native
   
+  var _invViewProjection: js.Any = js.native
+  
+  var _isObjectBased: js.Any = js.native
+  
   var _motionBlurSamples: js.Any = js.native
+  
+  /**
+    * Called on the effect is applied when the motion blur post-process is in object based mode.
+    */
+  var _onApplyObjectBased: js.Any = js.native
+  
+  /**
+    * Called on the effect is applied when the motion blur post-process is in screen based mode.
+    */
+  var _onApplyScreenBased: js.Any = js.native
+  
+  var _prePassRenderer: js.Any = js.native
+  
+  var _previousViewProjection: js.Any = js.native
+  
+  /**
+    * Called on the effect must be updated (changed mode, samples count, etc.).
+    */
+  var _updateEffect: js.Any = js.native
   
   /**
     * Excludes the given skinned mesh from computing bones velocities.
@@ -17,6 +47,15 @@ trait MotionBlurPostProcess extends PostProcess {
     * @param skinnedMesh The mesh containing the skeleton to ignore when computing the velocity map.
     */
   def excludeSkinnedMesh(skinnedMesh: AbstractMesh): Unit = js.native
+  
+  /**
+    * Gets wether or not the motion blur post-process is in object based mode.
+    */
+  def isObjectBased: Boolean = js.native
+  /**
+    * Sets wether or not the motion blur post-process is in object based mode.
+    */
+  def isObjectBased_=(value: Boolean): Unit = js.native
   
   /**
     * Gets the number of iterations are used for motion blur quality. Default value is equal to 32

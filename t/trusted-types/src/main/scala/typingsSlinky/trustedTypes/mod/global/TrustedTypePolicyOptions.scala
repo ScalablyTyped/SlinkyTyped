@@ -7,13 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TrustedTypePolicyOptions extends js.Object {
   
-  var createHTML: js.UndefOr[js.Function1[/* input */ String, String]] = js.native
+  var createHTML: js.UndefOr[js.Function2[/* input */ String, /* repeated */ js.Any, String]] = js.native
   
-  var createScript: js.UndefOr[js.Function1[/* input */ String, String]] = js.native
+  var createScript: js.UndefOr[js.Function2[/* input */ String, /* repeated */ js.Any, String]] = js.native
   
-  var createScriptURL: js.UndefOr[js.Function1[/* input */ String, String]] = js.native
-  
-  var createURL: js.UndefOr[js.Function1[/* input */ String, String]] = js.native
+  var createScriptURL: js.UndefOr[js.Function2[/* input */ String, /* repeated */ js.Any, String]] = js.native
 }
 object TrustedTypePolicyOptions {
   
@@ -39,27 +37,21 @@ object TrustedTypePolicyOptions {
     }
     
     @scala.inline
-    def setCreateHTML(value: /* input */ String => String): Self = this.set("createHTML", js.Any.fromFunction1(value))
+    def setCreateHTML(value: (/* input */ String, /* repeated */ js.Any) => String): Self = this.set("createHTML", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteCreateHTML: Self = this.set("createHTML", js.undefined)
     
     @scala.inline
-    def setCreateScript(value: /* input */ String => String): Self = this.set("createScript", js.Any.fromFunction1(value))
+    def setCreateScript(value: (/* input */ String, /* repeated */ js.Any) => String): Self = this.set("createScript", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteCreateScript: Self = this.set("createScript", js.undefined)
     
     @scala.inline
-    def setCreateScriptURL(value: /* input */ String => String): Self = this.set("createScriptURL", js.Any.fromFunction1(value))
+    def setCreateScriptURL(value: (/* input */ String, /* repeated */ js.Any) => String): Self = this.set("createScriptURL", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteCreateScriptURL: Self = this.set("createScriptURL", js.undefined)
-    
-    @scala.inline
-    def setCreateURL(value: /* input */ String => String): Self = this.set("createURL", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteCreateURL: Self = this.set("createURL", js.undefined)
   }
 }

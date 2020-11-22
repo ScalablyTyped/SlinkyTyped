@@ -7,8 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PublicKeyCredentialEntity extends js.Object {
   
-  var icon: js.UndefOr[java.lang.String] = js.native
-  
   var name: java.lang.String = js.native
 }
 object PublicKeyCredentialEntity {
@@ -36,11 +34,5 @@ object PublicKeyCredentialEntity {
     
     @scala.inline
     def setName(value: java.lang.String): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIcon(value: java.lang.String): Self = this.set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteIcon: Self = this.set("icon", js.undefined)
   }
 }

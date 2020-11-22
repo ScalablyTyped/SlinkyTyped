@@ -7,6 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Options extends js.Object {
   
+  var embeddedInHtml: Boolean = js.native
+  
+  var parentParser: js.UndefOr[String] = js.native
+  
   /**
     * Specify the line length that the printer will wrap on.
     * @default 80
@@ -28,8 +32,8 @@ trait Options extends js.Object {
 object Options {
   
   @scala.inline
-  def apply(printWidth: Double, tabWidth: Double, useTabs: Boolean): Options = {
-    val __obj = js.Dynamic.literal(printWidth = printWidth.asInstanceOf[js.Any], tabWidth = tabWidth.asInstanceOf[js.Any], useTabs = useTabs.asInstanceOf[js.Any])
+  def apply(embeddedInHtml: Boolean, printWidth: Double, tabWidth: Double, useTabs: Boolean): Options = {
+    val __obj = js.Dynamic.literal(embeddedInHtml = embeddedInHtml.asInstanceOf[js.Any], printWidth = printWidth.asInstanceOf[js.Any], tabWidth = tabWidth.asInstanceOf[js.Any], useTabs = useTabs.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
   
@@ -49,6 +53,9 @@ object Options {
     }
     
     @scala.inline
+    def setEmbeddedInHtml(value: Boolean): Self = this.set("embeddedInHtml", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setPrintWidth(value: Double): Self = this.set("printWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -56,5 +63,11 @@ object Options {
     
     @scala.inline
     def setUseTabs(value: Boolean): Self = this.set("useTabs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setParentParser(value: String): Self = this.set("parentParser", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParentParser: Self = this.set("parentParser", js.undefined)
   }
 }

@@ -10,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Initializes the PBR Material defines.
   */
 class PBRMaterialDefines ()
-  extends typingsSlinky.babylonjs.pbrIndexMod.PBRMaterialDefines
+  extends typingsSlinky.babylonjs.materialsPbrIndexMod.PBRMaterialDefines

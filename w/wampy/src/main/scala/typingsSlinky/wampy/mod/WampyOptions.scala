@@ -1,5 +1,7 @@
 package typingsSlinky.wampy.mod
 
+import typingsSlinky.wampy.wampyStrings.loose
+import typingsSlinky.wampy.wampyStrings.strict
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,6 +36,8 @@ trait WampyOptions extends js.Object {
   var reconnectInterval: js.UndefOr[Double] = js.native
   
   var serializer: js.UndefOr[js.Any] = js.native
+  
+  var urlValidation: js.UndefOr[strict | loose] = js.native
   
   var ws: js.UndefOr[js.Any] = js.native
 }
@@ -146,6 +150,12 @@ object WampyOptions {
     
     @scala.inline
     def deleteSerializer: Self = this.set("serializer", js.undefined)
+    
+    @scala.inline
+    def setUrlValidation(value: strict | loose): Self = this.set("urlValidation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUrlValidation: Self = this.set("urlValidation", js.undefined)
     
     @scala.inline
     def setWs(value: js.Any): Self = this.set("ws", value.asInstanceOf[js.Any])

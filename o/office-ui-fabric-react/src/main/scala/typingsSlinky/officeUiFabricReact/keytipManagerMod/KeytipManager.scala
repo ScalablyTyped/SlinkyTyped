@@ -15,7 +15,7 @@ class KeytipManager () extends js.Object {
     *
     * @param keytipProps - IKeytipProps
     * @param uniqueID - Unique ID, will default to the next unique ID if not passed
-    * @returns {IUniqueKeytip} IUniqueKeytip object
+    * @returns IUniqueKeytip object
     */
   var _getUniqueKtp: js.Any = js.native
   
@@ -23,7 +23,7 @@ class KeytipManager () extends js.Object {
     * Adds the overflowSetSequence to the keytipProps if its parent keytip also has it
     *
     * @param keytipProps - Keytip props to add overflowSetSequence to if necessary
-    * @returns {IKeytipProps} - Modified keytip props, if needed to be modified
+    * @returns - Modified keytip props, if needed to be modified
     */
   def addParentOverflow(keytipProps: IKeytipProps): IKeytipProps = js.native
   
@@ -42,7 +42,7 @@ class KeytipManager () extends js.Object {
   /**
     * Gets all IKeytipProps from this.keytips
     *
-    * @returns {IKeytipProps[]} All keytips stored in the manager
+    * @returns All keytips stored in the manager
     */
   def getKeytips(): js.Array[IKeytipProps] = js.native
   
@@ -61,9 +61,6 @@ class KeytipManager () extends js.Object {
   
   /**
     * Public function to bind for overflow items that have a submenu
-    *
-    * @param overflowButtonSequences
-    * @param keytipSequences
     */
   def menuExecute(overflowButtonSequences: js.Array[String], keytipSequences: js.Array[String]): Unit = js.native
   
@@ -74,7 +71,7 @@ class KeytipManager () extends js.Object {
     *
     * @param keytipProps - Keytip to register
     * @param persisted - T/F if this keytip should be persisted, default is false
-    * @returns {string} Unique ID for this keytip
+    * @returns Unique ID for this keytip
     */
   def register(keytipProps: IKeytipProps): String = js.native
   def register(keytipProps: IKeytipProps, persisted: Boolean): String = js.native
@@ -111,7 +108,7 @@ object KeytipManager extends js.Object {
   /**
     * Static function to get singleton KeytipManager instance
     *
-    * @returns {KeytipManager} Singleton KeytipManager instance
+    * @returns Singleton KeytipManager instance
     */
   def getInstance(): KeytipManager = js.native
 }

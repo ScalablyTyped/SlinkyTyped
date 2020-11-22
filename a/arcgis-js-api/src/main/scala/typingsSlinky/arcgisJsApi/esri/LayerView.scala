@@ -27,17 +27,13 @@ trait LayerView
     * Value is `true` when the layer is updating; for example, if it is in the process of fetching data.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html#updating)
-    *
-    * @default false
     */
   val updating: Boolean = js.native
   
   /**
-    * When `true`, the layer is visible in the view. Set this property to `false` to hide the layer from the view.
+    * When `true`, the layer is visible in the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html#visible)
-    *
-    * @default true
     */
   var visible: Boolean = js.native
 }

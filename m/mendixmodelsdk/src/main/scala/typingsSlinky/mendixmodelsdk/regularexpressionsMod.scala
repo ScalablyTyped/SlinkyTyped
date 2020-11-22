@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.Document
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
@@ -29,13 +28,13 @@ object regularexpressionsMod extends js.Object {
       * Interfaces and instance classes for types from the Mendix sub meta model `RegularExpressions`.
       */
     /**
-      * See: {@link https://docs.mendix.com/refguide7/regular-expressions relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/regular-expressions relevant section in reference guide}
       */
     @js.native
     trait IRegularExpression extends IDocument
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/regular-expressions relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/regular-expressions relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -58,9 +57,6 @@ object regularexpressionsMod extends js.Object {
       
       @JSName("containerAsFolderBase")
       def containerAsFolderBase_MRegularExpression: FolderBase = js.native
-      
-      @JSName("model")
-      var model_FRegularExpression: IModel = js.native
       
       def regEx: String = js.native
       def regEx_=(newValue: String): Unit = js.native

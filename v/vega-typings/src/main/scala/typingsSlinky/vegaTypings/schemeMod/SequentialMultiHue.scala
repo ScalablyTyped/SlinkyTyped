@@ -5,10 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.turbo
   - typingsSlinky.vegaTypings.vegaTypingsStrings.viridis
   - typingsSlinky.vegaTypings.vegaTypingsStrings.inferno
   - typingsSlinky.vegaTypings.vegaTypingsStrings.magma
   - typingsSlinky.vegaTypings.vegaTypingsStrings.plasma
+  - typingsSlinky.vegaTypings.vegaTypingsStrings.cividis
   - typingsSlinky.vegaTypings.vegaTypingsStrings.bluegreen
   - typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-3`
   - typingsSlinky.vegaTypings.vegaTypingsStrings.`bluegreen-4`
@@ -260,6 +262,9 @@ object SequentialMultiHue {
   
   @scala.inline
   def `bluepurple-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-9` = "bluepurple-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`bluepurple-9`]
+  
+  @scala.inline
+  def cividis: typingsSlinky.vegaTypings.vegaTypingsStrings.cividis = "cividis".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.cividis]
   
   @scala.inline
   def darkblue: typingsSlinky.vegaTypings.vegaTypingsStrings.darkblue = "darkblue".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.darkblue]
@@ -725,6 +730,9 @@ object SequentialMultiHue {
   
   @scala.inline
   def `redpurple-9`: typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-9` = "redpurple-9".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.`redpurple-9`]
+  
+  @scala.inline
+  def turbo: typingsSlinky.vegaTypings.vegaTypingsStrings.turbo = "turbo".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.turbo]
   
   @scala.inline
   def viridis: typingsSlinky.vegaTypings.vegaTypingsStrings.viridis = "viridis".asInstanceOf[typingsSlinky.vegaTypings.vegaTypingsStrings.viridis]

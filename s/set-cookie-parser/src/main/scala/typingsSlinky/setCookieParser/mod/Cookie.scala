@@ -7,22 +7,51 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Cookie extends js.Object {
   
+  /**
+    * domain for the cookie,
+    * may begin with "." to indicate the named domain or any subdomain of it
+    */
   var domain: js.UndefOr[String] = js.native
   
+  /**
+    * absolute expiration date for the cookie
+    */
   var expires: js.UndefOr[js.Date] = js.native
   
+  /**
+    * indicates that this cookie should not be accessible to client-side JavaScript
+    */
   var httpOnly: js.UndefOr[Boolean] = js.native
   
+  /**
+    * relative max age of the cookie in seconds from when the client receives it (integer or undefined)
+    * Note: when using with express's res.cookie() method, multiply maxAge by 1000 to convert to miliseconds
+    */
   var maxAge: js.UndefOr[Double] = js.native
   
+  /**
+    * cookie name
+    */
   var name: String = js.native
   
+  /**
+    * cookie path
+    */
   var path: js.UndefOr[String] = js.native
   
+  /**
+    * indicates a cookie ought not to be sent along with cross-site requests
+    */
   var sameSite: js.UndefOr[String] = js.native
   
+  /**
+    * indicates that this cookie should only be sent over HTTPs
+    */
   var secure: js.UndefOr[Boolean] = js.native
   
+  /**
+    * cookie value
+    */
   var value: String = js.native
 }
 object Cookie {

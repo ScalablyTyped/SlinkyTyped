@@ -1292,9 +1292,6 @@ object squareConnectStrings {
   def MU: MU = "MU".asInstanceOf[MU]
   
   @scala.inline
-  def MULTIPLE: MULTIPLE = "MULTIPLE".asInstanceOf[MULTIPLE]
-  
-  @scala.inline
   def MUR: MUR = "MUR".asInstanceOf[MUR]
   
   @scala.inline
@@ -1668,9 +1665,6 @@ object squareConnectStrings {
   
   @scala.inline
   def SI: SI = "SI".asInstanceOf[SI]
-  
-  @scala.inline
-  def SINGLE: SINGLE = "SINGLE".asInstanceOf[SINGLE]
   
   @scala.inline
   def SJ: SJ = "SJ".asInstanceOf[SJ]
@@ -3387,9 +3381,6 @@ object squareConnectStrings {
   sealed trait MU extends CountryType
   
   @js.native
-  sealed trait MULTIPLE extends js.Object
-  
-  @js.native
   sealed trait MUR extends CurrencyType
   
   @js.native
@@ -3769,9 +3760,6 @@ object squareConnectStrings {
   
   @js.native
   sealed trait SI extends CountryType
-  
-  @js.native
-  sealed trait SINGLE extends js.Object
   
   @js.native
   sealed trait SJ extends CountryType

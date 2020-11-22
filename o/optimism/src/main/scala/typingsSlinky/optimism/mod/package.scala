@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type OptimisticWrapperFunction[TArgs /* <: js.Array[_] */, TResult, TKeyArgs /* <: js.Array[_] */] = (js.Function1[/* args */ TArgs, TResult]) with (typingsSlinky.optimism.anon.Peek[TKeyArgs, TResult])
+  type OptimisticWrapperFunction[TArgs /* <: js.Array[_] */, TResult, TKeyArgs /* <: js.Array[_] */] = (js.Function1[/* args */ TArgs, TResult]) with (typingsSlinky.optimism.anon.Forget[TKeyArgs, TResult])
   
   type TCacheKey = js.Any
 }

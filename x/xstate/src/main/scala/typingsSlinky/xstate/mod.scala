@@ -4,10 +4,13 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Partial
 import typingsSlinky.xstate.actorMod.Actor
 import typingsSlinky.xstate.anon.Context
+import typingsSlinky.xstate.anon.ContextTContext
+import typingsSlinky.xstate.anon.ContextValue
 import typingsSlinky.xstate.anon.Fn0
 import typingsSlinky.xstate.anon.Fn1
 import typingsSlinky.xstate.anon.FnCall
 import typingsSlinky.xstate.anon.FnCallActivity
+import typingsSlinky.xstate.anon.FnCallActorRef
 import typingsSlinky.xstate.anon.FnCallConds
 import typingsSlinky.xstate.anon.FnCallErrorDataOptions
 import typingsSlinky.xstate.anon.FnCallEventOptions
@@ -15,6 +18,7 @@ import typingsSlinky.xstate.anon.FnCallExprLabel
 import typingsSlinky.xstate.anon.FnCallGetActions
 import typingsSlinky.xstate.anon.FnCallMachineOptions
 import typingsSlinky.xstate.anon.FnCallTargetOptions
+import typingsSlinky.xstate.anon.Id
 import typingsSlinky.xstate.anon.PartialInterpreterOptions
 import typingsSlinky.xstate.anon.TypeUpdate
 import typingsSlinky.xstate.anon.Value
@@ -34,6 +38,7 @@ import typingsSlinky.xstate.typesMod.DoneEvent
 import typingsSlinky.xstate.typesMod.DoneEventObject
 import typingsSlinky.xstate.typesMod.Event
 import typingsSlinky.xstate.typesMod.EventObject
+import typingsSlinky.xstate.typesMod.Expr
 import typingsSlinky.xstate.typesMod.ExprWithMeta
 import typingsSlinky.xstate.typesMod.InterpreterOptions
 import typingsSlinky.xstate.typesMod.LogAction
@@ -53,6 +58,7 @@ import typingsSlinky.xstate.typesMod.StateMachine
 import typingsSlinky.xstate.typesMod.StateNodeConfig
 import typingsSlinky.xstate.typesMod.StateSchema
 import typingsSlinky.xstate.typesMod.StateValue
+import typingsSlinky.xstate.typesMod.StopAction
 import typingsSlinky.xstate.typesMod.Typestate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -62,37 +68,37 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def Machine[TContext, TEvent /* <: EventObject */](config: MachineConfig[TContext, _, TEvent]): StateMachine[TContext, _, TEvent, _] = js.native
+  def Machine[TContext, TEvent /* <: EventObject */](config: MachineConfig[TContext, _, TEvent]): StateMachine[TContext, _, TEvent, Value[TContext]] = js.native
   def Machine[TContext, TEvent /* <: EventObject */](
     config: MachineConfig[TContext, _, TEvent],
     options: js.UndefOr[scala.Nothing],
     initialContext: TContext
-  ): StateMachine[TContext, _, TEvent, _] = js.native
-  def Machine[TContext, TEvent /* <: EventObject */](config: MachineConfig[TContext, _, TEvent], options: Partial[MachineOptions[TContext, TEvent]]): StateMachine[TContext, _, TEvent, _] = js.native
+  ): StateMachine[TContext, _, TEvent, Value[TContext]] = js.native
+  def Machine[TContext, TEvent /* <: EventObject */](config: MachineConfig[TContext, _, TEvent], options: Partial[MachineOptions[TContext, TEvent]]): StateMachine[TContext, _, TEvent, Value[TContext]] = js.native
   def Machine[TContext, TEvent /* <: EventObject */](
     config: MachineConfig[TContext, _, TEvent],
     options: Partial[MachineOptions[TContext, TEvent]],
     initialContext: TContext
-  ): StateMachine[TContext, _, TEvent, _] = js.native
+  ): StateMachine[TContext, _, TEvent, Value[TContext]] = js.native
   @JSName("Machine")
-  def Machine_TContextTStateSchema_StateSchemaWildcardTEvent_EventObject[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */](config: MachineConfig[TContext, TStateSchema, TEvent]): StateMachine[TContext, TStateSchema, TEvent, _] = js.native
+  def Machine_TContextTStateSchema_StateSchemaWildcardTEvent_EventObject[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */](config: MachineConfig[TContext, TStateSchema, TEvent]): StateMachine[TContext, TStateSchema, TEvent, ContextValue[TContext]] = js.native
   @JSName("Machine")
   def Machine_TContextTStateSchema_StateSchemaWildcardTEvent_EventObject[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */](
     config: MachineConfig[TContext, TStateSchema, TEvent],
     options: js.UndefOr[scala.Nothing],
     initialContext: TContext
-  ): StateMachine[TContext, TStateSchema, TEvent, _] = js.native
+  ): StateMachine[TContext, TStateSchema, TEvent, ContextValue[TContext]] = js.native
   @JSName("Machine")
   def Machine_TContextTStateSchema_StateSchemaWildcardTEvent_EventObject[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */](
     config: MachineConfig[TContext, TStateSchema, TEvent],
     options: Partial[MachineOptions[TContext, TEvent]]
-  ): StateMachine[TContext, TStateSchema, TEvent, _] = js.native
+  ): StateMachine[TContext, TStateSchema, TEvent, ContextValue[TContext]] = js.native
   @JSName("Machine")
   def Machine_TContextTStateSchema_StateSchemaWildcardTEvent_EventObject[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: EventObject */](
     config: MachineConfig[TContext, TStateSchema, TEvent],
     options: Partial[MachineOptions[TContext, TEvent]],
     initialContext: TContext
-  ): StateMachine[TContext, TStateSchema, TEvent, _] = js.native
+  ): StateMachine[TContext, TStateSchema, TEvent, ContextValue[TContext]] = js.native
   
   def assign[TContext, TEvent /* <: EventObject */](assignment: Assigner[TContext, TEvent]): AssignAction[TContext, TEvent] = js.native
   def assign[TContext, TEvent /* <: EventObject */](assignment: PropertyAssigner[TContext, TEvent]): AssignAction[TContext, TEvent] = js.native
@@ -122,7 +128,7 @@ object mod extends js.Object {
   def mapState(stateMap: StringDictionary[js.Any], stateId: String): js.Any = js.native
   
   def matchState[T, TContext, TEvent /* <: EventObject */](
-    state: typingsSlinky.xstate.stateMod.State[TContext, TEvent, _, Context[TContext]],
+    state: typingsSlinky.xstate.stateMod.State[TContext, TEvent, _, ContextTContext[TContext]],
     patterns: js.Array[StatePatternTuple[T, TContext, TEvent]],
     defaultValue: ValueFromStateGetter[T, TContext, TEvent]
   ): T = js.native
@@ -150,9 +156,9 @@ object mod extends js.Object {
   def spawn(entity: Spawnable): Actor[_, AnyEventObject] = js.native
   def spawn(entity: Spawnable, nameOrOptions: String): Actor[_, AnyEventObject] = js.native
   def spawn(entity: Spawnable, nameOrOptions: SpawnOptions): Actor[_, AnyEventObject] = js.native
-  def spawn[TC, TE /* <: EventObject */](entity: StateMachine[TC, _, TE, _]): typingsSlinky.xstate.interpreterMod.Interpreter[TC, _, TE, _] = js.native
-  def spawn[TC, TE /* <: EventObject */](entity: StateMachine[TC, _, TE, _], nameOrOptions: String): typingsSlinky.xstate.interpreterMod.Interpreter[TC, _, TE, _] = js.native
-  def spawn[TC, TE /* <: EventObject */](entity: StateMachine[TC, _, TE, _], nameOrOptions: SpawnOptions): typingsSlinky.xstate.interpreterMod.Interpreter[TC, _, TE, _] = js.native
+  def spawn[TC, TE /* <: EventObject */](entity: StateMachine[TC, _, TE, Context[TC]]): Actor[typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]], TE] = js.native
+  def spawn[TC, TE /* <: EventObject */](entity: StateMachine[TC, _, TE, Context[TC]], nameOrOptions: String): Actor[typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]], TE] = js.native
+  def spawn[TC, TE /* <: EventObject */](entity: StateMachine[TC, _, TE, Context[TC]], nameOrOptions: SpawnOptions): Actor[typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]], TE] = js.native
   
   @js.native
   object ActionTypes extends js.Object {
@@ -238,6 +244,19 @@ object mod extends js.Object {
   }
   
   @js.native
+  object InterpreterStatus extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.xstate.interpreterMod.InterpreterStatus with Double] = js.native
+    
+    /* 0 */ val NotStarted: typingsSlinky.xstate.interpreterMod.InterpreterStatus.NotStarted with Double = js.native
+    
+    /* 1 */ val Running: typingsSlinky.xstate.interpreterMod.InterpreterStatus.Running with Double = js.native
+    
+    /* 2 */ val Stopped: typingsSlinky.xstate.interpreterMod.InterpreterStatus.Stopped with Double = js.native
+  }
+  
+  @js.native
   object SpecialTargets extends js.Object {
     
     @JSBracketAccess
@@ -273,25 +292,25 @@ object mod extends js.Object {
       * Creates a new State instance for the given `config`.
       * @param config The state config
       */
-    def create[TC, TE /* <: EventObject */](config: StateConfig[TC, TE]): typingsSlinky.xstate.stateMod.State[TC, TE, _, Value[TC]] = js.native
+    def create[TC, TE /* <: EventObject */](config: StateConfig[TC, TE]): typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]] = js.native
     
     /**
       * Creates a new State instance for the given `stateValue` and `context`.
       * @param stateValue
       * @param context
       */
-    def from[TC, TE /* <: EventObject */](stateValue: typingsSlinky.xstate.stateMod.State[TC, TE, _, Value[TC]]): typingsSlinky.xstate.stateMod.State[TC, TE, _, Value[TC]] = js.native
-    def from[TC, TE /* <: EventObject */](stateValue: typingsSlinky.xstate.stateMod.State[TC, TE, _, Value[TC]], context: TC): typingsSlinky.xstate.stateMod.State[TC, TE, _, Value[TC]] = js.native
-    def from[TC, TE /* <: EventObject */](stateValue: StateValue): typingsSlinky.xstate.stateMod.State[TC, TE, _, Value[TC]] = js.native
-    def from[TC, TE /* <: EventObject */](stateValue: StateValue, context: TC): typingsSlinky.xstate.stateMod.State[TC, TE, _, Value[TC]] = js.native
+    def from[TC, TE /* <: EventObject */](stateValue: typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]]): typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]] = js.native
+    def from[TC, TE /* <: EventObject */](stateValue: typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]], context: TC): typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]] = js.native
+    def from[TC, TE /* <: EventObject */](stateValue: StateValue): typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]] = js.native
+    def from[TC, TE /* <: EventObject */](stateValue: StateValue, context: TC): typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]] = js.native
     
     /**
       * Creates a new `State` instance for the given `stateValue` and `context` with no actions (side-effects).
       * @param stateValue
       * @param context
       */
-    def inert[TC, TE /* <: EventObject */](stateValue: typingsSlinky.xstate.stateMod.State[TC, TE, _, Value[TC]], context: TC): typingsSlinky.xstate.stateMod.State[TC, TE, _, Value[TC]] = js.native
-    def inert[TC, TE /* <: EventObject */](stateValue: StateValue, context: TC): typingsSlinky.xstate.stateMod.State[TC, TE, _, Value[TC]] = js.native
+    def inert[TC, TE /* <: EventObject */](stateValue: typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]], context: TC): typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]] = js.native
+    def inert[TC, TE /* <: EventObject */](stateValue: StateValue, context: TC): typingsSlinky.xstate.stateMod.State[TC, TE, _, Context[TC]] = js.native
   }
   
   @js.native
@@ -398,7 +417,7 @@ object mod extends js.Object {
     @JSName("pure")
     var pure_Original: FnCallGetActions = js.native
     
-    def raise[TContext, TEvent /* <: EventObject */](event: Event[TEvent]): RaiseAction[TEvent] | (SendAction[TContext, TEvent, TEvent]) = js.native
+    def raise[TContext, TEvent /* <: EventObject */](event: Event[TEvent]): RaiseAction[TEvent] | (SendAction[TContext, AnyEventObject, TEvent]) = js.native
     @JSName("raise")
     var raise_Original: FnCall = js.native
     
@@ -433,9 +452,10 @@ object mod extends js.Object {
     @JSName("start")
     var start_Original: FnCallActivity = js.native
     
-    def stop[TContext, TEvent /* <: EventObject */](activity: String): ActivityActionObject[TContext, TEvent] = js.native
-    def stop[TContext, TEvent /* <: EventObject */](activity: ActivityDefinition[TContext, TEvent]): ActivityActionObject[TContext, TEvent] = js.native
+    def stop[TContext, TEvent /* <: EventObject */](actorRef: String): StopAction[TContext, TEvent] = js.native
+    def stop[TContext, TEvent /* <: EventObject */](actorRef: ActivityDefinition[TContext, TEvent]): StopAction[TContext, TEvent] = js.native
+    def stop[TContext, TEvent /* <: EventObject */](actorRef: Expr[TContext, TEvent, String | Id]): StopAction[TContext, TEvent] = js.native
     @JSName("stop")
-    var stop_Original: FnCallActivity = js.native
+    var stop_Original: FnCallActorRef = js.native
   }
 }

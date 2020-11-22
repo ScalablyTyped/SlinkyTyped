@@ -9,6 +9,8 @@ trait KnobManagerOptions extends js.Object {
   
   var disableDebounce: js.UndefOr[Boolean] = js.native
   
+  var disableForceUpdate: js.UndefOr[Boolean] = js.native
+  
   var escapeHTML: js.UndefOr[Boolean] = js.native
 }
 object KnobManagerOptions {
@@ -39,6 +41,12 @@ object KnobManagerOptions {
     
     @scala.inline
     def deleteDisableDebounce: Self = this.set("disableDebounce", js.undefined)
+    
+    @scala.inline
+    def setDisableForceUpdate(value: Boolean): Self = this.set("disableForceUpdate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableForceUpdate: Self = this.set("disableForceUpdate", js.undefined)
     
     @scala.inline
     def setEscapeHTML(value: Boolean): Self = this.set("escapeHTML", value.asInstanceOf[js.Any])

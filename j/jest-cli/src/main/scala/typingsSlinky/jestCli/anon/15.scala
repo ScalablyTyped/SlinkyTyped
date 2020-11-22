@@ -1,6 +1,6 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliStrings.`Exit code of GraveaccentjestGraveaccent command if the test run failed`
+import typingsSlinky.jestCli.jestCliStrings.`Alias for --env`
 import typingsSlinky.jestCli.jestCliStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,17 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `15` extends js.Object {
   
-  val description: `Exit code of GraveaccentjestGraveaccent command if the test run failed` = js.native
+  val description: `Alias for --env` = js.native
   
   val `type`: string = js.native
 }
 object `15` {
   
   @scala.inline
-  def apply(
-    description: `Exit code of GraveaccentjestGraveaccent command if the test run failed`,
-    `type`: string
-  ): `15` = {
+  def apply(description: `Alias for --env`, `type`: string): `15` = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`15`]
@@ -41,7 +38,7 @@ object `15` {
     }
     
     @scala.inline
-    def setDescription(value: `Exit code of GraveaccentjestGraveaccent command if the test run failed`): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: `Alias for --env`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: string): Self = this.set("type", value.asInstanceOf[js.Any])

@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.endpointConfigurationMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.outputMod.sagemaker.EndpointConfigurationDataCaptureConfig
 import typingsSlinky.pulumiAws.outputMod.sagemaker.EndpointConfigurationProductionVariant
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -28,6 +29,11 @@ class EndpointConfiguration protected () extends CustomResource {
     * The Amazon Resource Name (ARN) assigned by AWS to this endpoint configuration.
     */
   val arn: Output_[String] = js.native
+  
+  /**
+    * Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
+    */
+  val dataCaptureConfig: Output_[js.UndefOr[EndpointConfigurationDataCaptureConfig]] = js.native
   
   /**
     * Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "clean-stack"
-version := "3.0.0-5fb2ae"
+version := "3.0.1-5ce2a3"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

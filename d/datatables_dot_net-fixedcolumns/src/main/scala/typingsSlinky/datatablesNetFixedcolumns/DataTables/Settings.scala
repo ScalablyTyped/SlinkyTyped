@@ -7,8 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Settings extends js.Object {
   
-  /*
-    * FixedColumns extension options
+  /**
+    * @description Enable and configure the FixedColumns extension for DataTables.
+    * @see {@link https://datatables.net/reference/option/fixedColumns}
     */
   var fixedColumns: js.UndefOr[Boolean | FixedColumnsSettings] = js.native
 }

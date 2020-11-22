@@ -63,7 +63,7 @@ object EnumDWTFileFormat extends js.Object {
   /* 13 */ @js.native
   object TWFF_JPX extends TopLevel[TWFF_JPX with Double]
   
-  /** A file format from Adobe. 1.91 NB: this is not PDF/A  */
+  /** A file format from Adobe. 1.91 NB= this is not PDF/A  */
   @js.native
   sealed trait TWFF_PDF extends EnumDWTFileFormat
   /* 10 */ @js.native

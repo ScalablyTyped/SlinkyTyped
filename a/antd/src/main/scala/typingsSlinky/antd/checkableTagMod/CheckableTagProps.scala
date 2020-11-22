@@ -1,8 +1,8 @@
 package typingsSlinky.antd.checkableTagMod
 
-import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLSpanElement
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,13 +10,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CheckableTagProps extends js.Object {
   
+  /**
+    * @description       it is an absolute controlled component and has no uncontrolled mode.
+    * @description.zh-CN 该组件为完全受控组件，不支持非受控用法。
+    */
   var checked: Boolean = js.native
   
   var className: js.UndefOr[String] = js.native
   
   var onChange: js.UndefOr[js.Function1[/* checked */ Boolean, Unit]] = js.native
   
-  var onClick: js.UndefOr[js.Function1[/* e */ MouseEventHandler[HTMLElement], Unit]] = js.native
+  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLSpanElement], Unit]] = js.native
   
   var prefixCls: js.UndefOr[String] = js.native
   
@@ -61,7 +65,7 @@ object CheckableTagProps {
     def deleteOnChange: Self = this.set("onChange", js.undefined)
     
     @scala.inline
-    def setOnClick(value: /* e */ MouseEventHandler[HTMLElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
+    def setOnClick(value: /* e */ SyntheticMouseEvent[HTMLSpanElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClick: Self = this.set("onClick", js.undefined)

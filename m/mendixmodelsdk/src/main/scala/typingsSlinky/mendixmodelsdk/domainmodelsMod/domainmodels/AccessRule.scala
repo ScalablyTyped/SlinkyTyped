@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -9,6 +10,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.securityMod.security.AccessRuleContainerBase
 import typingsSlinky.mendixmodelsdk.securityMod.security.IModuleRole
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,18 +19,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Interfaces and instance classes for types from the Mendix sub meta model `DomainModels`.
   */
 /**
-  * See: {@link https://docs.mendix.com/refguide7/access-rules relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/access-rules relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.AccessRule")
 @js.native
-class AccessRule protected () extends Element {
+class AccessRule protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def allowCreate: Boolean = js.native
@@ -48,9 +50,6 @@ class AccessRule protected () extends Element {
   def documentation_=(newValue: String): Unit = js.native
   
   def memberAccesses: IList[MemberAccess] = js.native
-  
-  @JSName("model")
-  var model_FAccessRule: IModel = js.native
   
   def moduleRoles: IList[IModuleRole] = js.native
   

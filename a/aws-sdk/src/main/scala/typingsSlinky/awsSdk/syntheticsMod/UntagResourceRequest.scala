@@ -10,7 +10,7 @@ trait UntagResourceRequest extends js.Object {
   /**
     * The ARN of the canary that you're removing tags from. The ARN format of a canary is arn:aws:synthetics:Region:account-id:canary:canary-name .
     */
-  var ResourceArn: Arn = js.native
+  var ResourceArn: CanaryArn = js.native
   
   /**
     * The list of tag keys to remove from the resource.
@@ -20,7 +20,7 @@ trait UntagResourceRequest extends js.Object {
 object UntagResourceRequest {
   
   @scala.inline
-  def apply(ResourceArn: Arn, TagKeys: TagKeyList): UntagResourceRequest = {
+  def apply(ResourceArn: CanaryArn, TagKeys: TagKeyList): UntagResourceRequest = {
     val __obj = js.Dynamic.literal(ResourceArn = ResourceArn.asInstanceOf[js.Any], TagKeys = TagKeys.asInstanceOf[js.Any])
     __obj.asInstanceOf[UntagResourceRequest]
   }
@@ -41,7 +41,7 @@ object UntagResourceRequest {
     }
     
     @scala.inline
-    def setResourceArn(value: Arn): Self = this.set("ResourceArn", value.asInstanceOf[js.Any])
+    def setResourceArn(value: CanaryArn): Self = this.set("ResourceArn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTagKeysVarargs(value: TagKey*): Self = this.set("TagKeys", js.Array(value :_*))

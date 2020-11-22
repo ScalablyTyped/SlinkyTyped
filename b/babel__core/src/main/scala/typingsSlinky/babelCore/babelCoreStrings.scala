@@ -546,6 +546,9 @@ object babelCoreStrings {
   def Statement: Statement = "Statement".asInstanceOf[Statement]
   
   @scala.inline
+  def StaticBlock: StaticBlock = "StaticBlock".asInstanceOf[StaticBlock]
+  
+  @scala.inline
   def StringLiteral: StringLiteral = "StringLiteral".asInstanceOf[StringLiteral]
   
   @scala.inline
@@ -640,6 +643,9 @@ object babelCoreStrings {
   
   @scala.inline
   def TSIntersectionType: TSIntersectionType = "TSIntersectionType".asInstanceOf[TSIntersectionType]
+  
+  @scala.inline
+  def TSIntrinsicKeyword: TSIntrinsicKeyword = "TSIntrinsicKeyword".asInstanceOf[TSIntrinsicKeyword]
   
   @scala.inline
   def TSLiteralType: TSLiteralType = "TSLiteralType".asInstanceOf[TSLiteralType]
@@ -925,6 +931,9 @@ object babelCoreStrings {
   
   @scala.inline
   def `throw`: `throw` = "throw".asInstanceOf[`throw`]
+  
+  @scala.inline
+  def traverse: traverse = "traverse".asInstanceOf[traverse]
   
   @scala.inline
   def typeof: typeof = "typeof".asInstanceOf[typeof]
@@ -1482,6 +1491,9 @@ object babelCoreStrings {
   sealed trait Statement extends js.Object
   
   @js.native
+  sealed trait StaticBlock extends js.Object
+  
+  @js.native
   sealed trait StringLiteral extends js.Object
   
   @js.native
@@ -1576,6 +1588,9 @@ object babelCoreStrings {
   
   @js.native
   sealed trait TSIntersectionType extends js.Object
+  
+  @js.native
+  sealed trait TSIntrinsicKeyword extends js.Object
   
   @js.native
   sealed trait TSLiteralType extends js.Object
@@ -1861,6 +1876,9 @@ object babelCoreStrings {
   
   @js.native
   sealed trait `throw` extends js.Object
+  
+  @js.native
+  sealed trait traverse extends js.Object
   
   @js.native
   sealed trait typeof extends js.Object

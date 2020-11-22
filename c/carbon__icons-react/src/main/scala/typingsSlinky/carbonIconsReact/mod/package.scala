@@ -6,8 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type CarbonIconType = js.Function1[
-    /* props */ typingsSlinky.carbonIconsReact.mod.CarbonIconProps, 
-    typingsSlinky.react.mod.FunctionComponentElement[typingsSlinky.carbonIconsReact.mod.CarbonIconProps]
+  type CarbonIconType = typingsSlinky.react.mod.ForwardRefExoticComponent[
+    typingsSlinky.carbonIconsReact.mod.CarbonIconProps with typingsSlinky.react.mod.RefAttributes[org.scalajs.dom.raw.SVGSVGElement]
   ]
 }

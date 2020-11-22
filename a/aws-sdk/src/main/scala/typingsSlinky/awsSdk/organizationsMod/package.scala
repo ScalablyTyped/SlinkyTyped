@@ -60,6 +60,8 @@ package object organizationsMod {
     - typingsSlinky.awsSdk.awsSdkStrings.CONCURRENT_ACCOUNT_MODIFICATION
     - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL_FAILURE
     - typingsSlinky.awsSdk.awsSdkStrings.GOVCLOUD_ACCOUNT_ALREADY_EXISTS
+    - typingsSlinky.awsSdk.awsSdkStrings.MISSING_BUSINESS_VALIDATION
+    - typingsSlinky.awsSdk.awsSdkStrings.MISSING_PAYMENT_INSTRUMENT
     - java.lang.String
   */
   type CreateAccountFailureReason = typingsSlinky.awsSdk.organizationsMod._CreateAccountFailureReason | java.lang.String

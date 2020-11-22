@@ -33,6 +33,11 @@ trait CreateStateMachineInput extends js.Object {
   var tags: js.UndefOr[TagList] = js.native
   
   /**
+    * Selects whether AWS X-Ray tracing is enabled.
+    */
+  var tracingConfiguration: js.UndefOr[TracingConfiguration] = js.native
+  
+  /**
     * Determines whether a Standard or Express state machine is created. The default is STANDARD. You cannot update the type of a state machine once it has been created.
     */
   var `type`: js.UndefOr[StateMachineType] = js.native
@@ -83,6 +88,12 @@ object CreateStateMachineInput {
     
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)
+    
+    @scala.inline
+    def setTracingConfiguration(value: TracingConfiguration): Self = this.set("tracingConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTracingConfiguration: Self = this.set("tracingConfiguration", js.undefined)
     
     @scala.inline
     def setType(value: StateMachineType): Self = this.set("type", value.asInstanceOf[js.Any])

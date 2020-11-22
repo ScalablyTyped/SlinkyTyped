@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.s3Mod
 
-import typingsSlinky.pulumiAws.cannedAclMod.CannedAcl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,19 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
-  var AuthenticatedReadAcl: CannedAcl = js.native
+  var AuthenticatedReadAcl: typingsSlinky.pulumiAws.enumsS3Mod.CannedAcl = js.native
   
-  var AwsExecReadAcl: CannedAcl = js.native
+  var AwsExecReadAcl: typingsSlinky.pulumiAws.enumsS3Mod.CannedAcl = js.native
   
-  var BucketOwnerFullControlAcl: CannedAcl = js.native
+  var BucketOwnerFullControlAcl: typingsSlinky.pulumiAws.enumsS3Mod.CannedAcl = js.native
   
-  var BucketOwnerReadAcl: CannedAcl = js.native
+  var BucketOwnerReadAcl: typingsSlinky.pulumiAws.enumsS3Mod.CannedAcl = js.native
   
-  var LogDeliveryWriteAcl: CannedAcl = js.native
+  var LogDeliveryWriteAcl: typingsSlinky.pulumiAws.enumsS3Mod.CannedAcl = js.native
   
-  var PrivateAcl: CannedAcl = js.native
+  var PrivateAcl: typingsSlinky.pulumiAws.enumsS3Mod.CannedAcl = js.native
   
-  var PublicReadAcl: CannedAcl = js.native
+  var PublicReadAcl: typingsSlinky.pulumiAws.enumsS3Mod.CannedAcl = js.native
   
-  var PublicReadWriteAcl: CannedAcl = js.native
+  var PublicReadWriteAcl: typingsSlinky.pulumiAws.enumsS3Mod.CannedAcl = js.native
 }

@@ -36,9 +36,22 @@ trait UserOptions extends js.Object {
   var data: js.UndefOr[ReportData | QueryResolver] = js.native
   
   /**
+    * Custom error handler to catch any errors that may occur evaluating commands in the template. The value returned from this handler will be inserted into the template instead.
+    */
+  var errorHandler: js.UndefOr[ErrorHandler] = js.native
+  
+  /**
     * Whether to fail on the first error encountered in the template. Defaults to true. Can be used to collect all errors in a template (e.g. misspelled commands) before failing.
     */
   var failFast: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * MS Word usually autocorrects JS string literal quotes with unicode 'smart' quotes ('curly' quotes). E.g. 'aubergine' -> ‘aubergine’.
+    * This causes an error when evaluating commands containing these smart quotes, as they are not valid JavaScript.
+    * If you set fixSmartQuotes to 'true', these smart quotes will automatically get replaced with straight quotes (') before command evaluation.
+    * Defaults to false.
+    */
+  var fixSmartQuotes: js.UndefOr[Boolean] = js.native
   
   /**
     * Can be used to change the delimiter in generated XML.
@@ -125,10 +138,22 @@ object UserOptions {
     def deleteData: Self = this.set("data", js.undefined)
     
     @scala.inline
+    def setErrorHandler(value: (/* e */ js.Error, /* raw_code */ js.UndefOr[String]) => js.Any): Self = this.set("errorHandler", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteErrorHandler: Self = this.set("errorHandler", js.undefined)
+    
+    @scala.inline
     def setFailFast(value: Boolean): Self = this.set("failFast", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFailFast: Self = this.set("failFast", js.undefined)
+    
+    @scala.inline
+    def setFixSmartQuotes(value: Boolean): Self = this.set("fixSmartQuotes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFixSmartQuotes: Self = this.set("fixSmartQuotes", js.undefined)
     
     @scala.inline
     def setLiteralXmlDelimiter(value: String): Self = this.set("literalXmlDelimiter", value.asInstanceOf[js.Any])

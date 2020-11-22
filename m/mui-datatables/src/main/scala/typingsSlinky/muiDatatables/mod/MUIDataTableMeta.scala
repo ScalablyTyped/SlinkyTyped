@@ -11,6 +11,8 @@ trait MUIDataTableMeta extends js.Object {
   
   var columnIndex: Double = js.native
   
+  var currentTableData: js.Array[MUIDataTableCurrentData] = js.native
+  
   var rowData: js.Array[_] = js.native
   
   var rowIndex: Double = js.native
@@ -25,12 +27,13 @@ object MUIDataTableMeta {
   def apply(
     columnData: MUIDataTableColumnState,
     columnIndex: Double,
+    currentTableData: js.Array[MUIDataTableCurrentData],
     rowData: js.Array[_],
     rowIndex: Double,
     tableData: js.Array[MUIDataTableData],
     tableState: MUIDataTableState
   ): MUIDataTableMeta = {
-    val __obj = js.Dynamic.literal(columnData = columnData.asInstanceOf[js.Any], columnIndex = columnIndex.asInstanceOf[js.Any], rowData = rowData.asInstanceOf[js.Any], rowIndex = rowIndex.asInstanceOf[js.Any], tableData = tableData.asInstanceOf[js.Any], tableState = tableState.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(columnData = columnData.asInstanceOf[js.Any], columnIndex = columnIndex.asInstanceOf[js.Any], currentTableData = currentTableData.asInstanceOf[js.Any], rowData = rowData.asInstanceOf[js.Any], rowIndex = rowIndex.asInstanceOf[js.Any], tableData = tableData.asInstanceOf[js.Any], tableState = tableState.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableMeta]
   }
   
@@ -54,6 +57,12 @@ object MUIDataTableMeta {
     
     @scala.inline
     def setColumnIndex(value: Double): Self = this.set("columnIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCurrentTableDataVarargs(value: MUIDataTableCurrentData*): Self = this.set("currentTableData", js.Array(value :_*))
+    
+    @scala.inline
+    def setCurrentTableData(value: js.Array[MUIDataTableCurrentData]): Self = this.set("currentTableData", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRowDataVarargs(value: js.Any*): Self = this.set("rowData", js.Array(value :_*))

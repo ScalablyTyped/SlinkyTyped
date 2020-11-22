@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.mod
 
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,7 @@ class RawTexture protected ()
     * @param width define the width of the texture
     * @param height define the height of the texture
     * @param format define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
-    * @param scene  define the scene the texture belongs to
+    * @param sceneOrEngine defines the scene or engine the texture will belong to
     * @param generateMipMaps define whether mip maps should be generated or not
     * @param invertY define if the data should be flipped on Y when uploaded to the GPU
     * @param samplingMode define the texture sampling mode (Texture.xxx_SAMPLINGMODE)
@@ -31,7 +32,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ]
   ) = this()
   def this(
     data: js.typedarray.ArrayBufferView,
@@ -41,7 +44,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: Boolean
   ) = this()
   def this(
@@ -52,7 +57,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean
   ) = this()
@@ -64,7 +71,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: Boolean,
     invertY: Boolean
   ) = this()
@@ -76,7 +85,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -89,7 +100,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double
@@ -102,7 +115,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -115,7 +130,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double
@@ -128,7 +145,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -142,7 +161,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double,
@@ -156,7 +177,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -170,7 +193,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double,
@@ -184,7 +209,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -198,7 +225,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double,
@@ -212,7 +241,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -226,7 +257,9 @@ class RawTexture protected ()
     * Define the format of the data (RGB, RGBA... Engine.TEXTUREFORMAT_xxx)
     */
   format: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+        typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+      ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double,
@@ -243,7 +276,7 @@ object RawTexture extends js.Object {
     * @param data Define the texture data
     * @param width Define the width of the texture
     * @param height Define the height of the texture
-    * @param scene Define the scene the texture belongs to
+    * @param sceneOrEngine defines the scene or engine the texture will belong to
     * @param generateMipMaps Define whether or not to create mip maps for the texture
     * @param invertY define if the data should be flipped on Y when uploaded to the GPU
     * @param samplingMode define the texture sampling mode (Texture.xxx_SAMPLINGMODE)
@@ -253,13 +286,17 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ]
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateAlphaTexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -268,7 +305,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -276,7 +315,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double
@@ -285,14 +326,18 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateAlphaTexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -301,7 +346,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -309,7 +356,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double
@@ -320,7 +369,7 @@ object RawTexture extends js.Object {
     * @param data Define the texture data
     * @param width Define the width of the texture
     * @param height Define the height of the texture
-    * @param scene Define the scene the texture belongs to
+    * @param sceneOrEngine defines the scene or engine the texture will belong to
     * @param generateMipMaps Define whether or not to create mip maps for the texture
     * @param invertY define if the data should be flipped on Y when uploaded to the GPU
     * @param samplingMode define the texture sampling mode (Texture.xxx_SAMPLINGMODE)
@@ -330,13 +379,17 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ]
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateLuminanceAlphaTexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -345,7 +398,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -353,7 +408,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double
@@ -362,14 +419,18 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateLuminanceAlphaTexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -378,7 +439,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -386,7 +449,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double
@@ -397,7 +462,7 @@ object RawTexture extends js.Object {
     * @param data Define the texture data
     * @param width Define the width of the texture
     * @param height Define the height of the texture
-    * @param scene Define the scene the texture belongs to
+    * @param sceneOrEngine defines the scene or engine the texture will belong to
     * @param generateMipMaps Define whether or not to create mip maps for the texture
     * @param invertY define if the data should be flipped on Y when uploaded to the GPU
     * @param samplingMode define the texture sampling mode (Texture.xxx_SAMPLINGMODE)
@@ -407,13 +472,17 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ]
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateLuminanceTexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -422,7 +491,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -430,7 +501,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double
@@ -439,14 +512,18 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateLuminanceTexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -455,7 +532,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -463,7 +542,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double
@@ -474,7 +555,7 @@ object RawTexture extends js.Object {
     * @param data Define the texture data
     * @param width Define the width of the texture
     * @param height Define the height of the texture
-    * @param scene Define the scene the texture belongs to
+    * @param sceneOrEngine defines the scene or engine the texture will belong to
     * @param generateMipMaps Define whether or not to create mip maps for the texture
     * @param invertY define if the data should be flipped on Y when uploaded to the GPU
     * @param samplingMode define the texture sampling mode (Texture.xxx_SAMPLINGMODE)
@@ -485,13 +566,17 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ]
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateRGBATexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -501,7 +586,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -510,7 +597,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double,
@@ -520,7 +609,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -528,7 +619,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -538,7 +631,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double
@@ -547,7 +642,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double,
@@ -557,14 +654,18 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateRGBATexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -574,7 +675,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -583,7 +686,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double,
@@ -593,7 +698,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -601,7 +708,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -611,7 +720,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double
@@ -620,7 +731,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double,
@@ -632,7 +745,7 @@ object RawTexture extends js.Object {
     * @param data Define the texture data
     * @param width Define the width of the texture
     * @param height Define the height of the texture
-    * @param scene Define the scene the texture belongs to
+    * @param sceneOrEngine defines the scene or engine the texture will belong to
     * @param generateMipMaps Define whether or not to create mip maps for the texture
     * @param invertY define if the data should be flipped on Y when uploaded to the GPU
     * @param samplingMode define the texture sampling mode (Texture.xxx_SAMPLINGMODE)
@@ -643,13 +756,17 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ]
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateRGBTexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -659,7 +776,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -668,7 +787,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double,
@@ -678,7 +799,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -686,7 +809,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -696,7 +821,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double
@@ -705,7 +832,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double,
@@ -715,14 +844,18 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateRGBTexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -732,7 +865,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -741,7 +876,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double,
@@ -751,7 +888,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -759,7 +898,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -769,7 +910,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double
@@ -778,7 +921,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double,
@@ -790,7 +935,7 @@ object RawTexture extends js.Object {
     * @param data Define the texture data
     * @param width Define the width of the texture
     * @param height Define the height of the texture
-    * @param scene Define the scene the texture belongs to
+    * @param sceneOrEngine defines the scene or engine the texture will belong to
     * @param generateMipMaps Define whether or not to create mip maps for the texture
     * @param invertY define if the data should be flipped on Y when uploaded to the GPU
     * @param samplingMode define the texture sampling mode (Texture.xxx_SAMPLINGMODE)
@@ -801,13 +946,17 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ]
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateRTexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -817,7 +966,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -826,7 +977,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double,
@@ -836,7 +989,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -844,7 +999,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -854,7 +1011,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double
@@ -863,7 +1022,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: js.UndefOr[scala.Nothing],
     invertY: Boolean,
     samplingMode: Double,
@@ -873,14 +1034,18 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
   def CreateRTexture(
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: js.UndefOr[scala.Nothing],
@@ -890,7 +1055,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double
@@ -899,7 +1066,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: js.UndefOr[scala.Nothing],
     samplingMode: Double,
@@ -909,7 +1078,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean
   ): typingsSlinky.babylonjs.rawTextureMod.RawTexture = js.native
@@ -917,7 +1088,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: js.UndefOr[scala.Nothing],
@@ -927,7 +1100,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double
@@ -936,7 +1111,9 @@ object RawTexture extends js.Object {
     data: js.typedarray.ArrayBufferView,
     width: Double,
     height: Double,
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    sceneOrEngine: Nullable[
+      typingsSlinky.babylonjs.sceneMod.Scene | typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+    ],
     generateMipMaps: Boolean,
     invertY: Boolean,
     samplingMode: Double,

@@ -29,7 +29,6 @@ import typingsSlinky.reactRouter.mod.WithRouterStatics
 import typingsSlinky.reactRouter.mod.`match`
 import typingsSlinky.reactRouterDom.mod.BrowserRouterProps
 import typingsSlinky.reactRouterDom.mod.HashRouterProps
-import typingsSlinky.reactRouterDom.mod.LinkProps
 import typingsSlinky.reactRouterDom.mod.NavLinkProps
 import typingsSlinky.reactRouterRedux.mod.ConnectedRouterProps
 import typingsSlinky.reactRouterRedux.mod.RouterAction
@@ -38,6 +37,7 @@ import typingsSlinky.redux.mod.AnyAction
 import typingsSlinky.redux.mod.Dispatch
 import typingsSlinky.redux.mod.Middleware
 import typingsSlinky.redux.mod.Reducer
+import typingsSlinky.std.Parameters
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -48,8 +48,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object routerMod extends js.Object {
   
   def Link[S](
-    // TODO: Define this as ...params: Parameters<Link<S>> when only TypeScript >= 3.1 support is needed.
-  props: PropsWithoutRef[LinkProps[S]] with RefAttributes[HTMLAnchorElement]
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param params because its type Parameters<Link<S>> is not an array type */ params: Parameters[typingsSlinky.reactRouterDom.mod.Link[S]]
   ): ReturnType[typingsSlinky.reactRouterDom.mod.Link[S]] = js.native
   
   def NavLink[S](

@@ -2,7 +2,7 @@ package typingsSlinky.wordpressComponents.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.wordpressComponents.anon.Hex
+import typingsSlinky.wordpressComponents.colorPickerMod.ColorPicker.OnChangeCompleteValue
 import typingsSlinky.wordpressComponents.colorPickerMod.ColorPicker.Props
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,14 +20,20 @@ object ColorPicker {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def disableAlpha(value: Boolean): this.type = set("disableAlpha", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def oldHue(value: Double): this.type = set("oldHue", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: Props): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(color: String, onChangeComplete: Hex => Unit): Builder = {
-    val __props = js.Dynamic.literal(color = color.asInstanceOf[js.Any], onChangeComplete = js.Any.fromFunction1(onChangeComplete))
+  def apply(onChangeComplete: OnChangeCompleteValue => Unit): Builder = {
+    val __props = js.Dynamic.literal(onChangeComplete = js.Any.fromFunction1(onChangeComplete))
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }

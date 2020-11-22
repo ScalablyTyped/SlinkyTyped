@@ -33,6 +33,14 @@ package object dmsMod {
   
   type CertificateWallet = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.dmsMod.Blob | java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.default__
+    - typingsSlinky.awsSdk.awsSdkStrings.char
+    - typingsSlinky.awsSdk.awsSdkStrings.byte
+    - java.lang.String
+  */
+  type CharLengthSemantics = typingsSlinky.awsSdk.dmsMod._CharLengthSemantics | java.lang.String
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.dmsMod.ClientApiVersions
   
   /* Rewritten from type alias, can be one of: 
@@ -46,10 +54,29 @@ package object dmsMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.csv__
-    - typingsSlinky.awsSdk.awsSdkStrings.parquet_
+    - typingsSlinky.awsSdk.awsSdkStrings.parquet__
     - java.lang.String
   */
   type DataFormatValue = typingsSlinky.awsSdk.dmsMod._DataFormatValue | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SLASH
+    - typingsSlinky.awsSdk.awsSdkStrings.UNDERSCORE
+    - typingsSlinky.awsSdk.awsSdkStrings.DASH
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - java.lang.String
+  */
+  type DatePartitionDelimiterValue = typingsSlinky.awsSdk.dmsMod._DatePartitionDelimiterValue | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.YYYYMMDD
+    - typingsSlinky.awsSdk.awsSdkStrings.YYYYMMDDHH
+    - typingsSlinky.awsSdk.awsSdkStrings.YYYYMM
+    - typingsSlinky.awsSdk.awsSdkStrings.MMYYYYDD
+    - typingsSlinky.awsSdk.awsSdkStrings.DDMMYYYY
+    - java.lang.String
+  */
+  type DatePartitionSequenceValue = typingsSlinky.awsSdk.dmsMod._DatePartitionSequenceValue | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.none__
@@ -180,6 +207,14 @@ package object dmsMod {
   
   type ReplicationTaskList = js.Array[typingsSlinky.awsSdk.dmsMod.ReplicationTask]
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`rely-on-sql-server-replication-agent`
+    - typingsSlinky.awsSdk.awsSdkStrings.`exclusive-automatic-truncation`
+    - typingsSlinky.awsSdk.awsSdkStrings.`shared-automatic-truncation`
+    - java.lang.String
+  */
+  type SafeguardPolicy = typingsSlinky.awsSdk.dmsMod._SafeguardPolicy | java.lang.String
+  
   type SchemaList = js.Array[typingsSlinky.awsSdk.dmsMod.String]
   
   type SecretString = java.lang.String
@@ -211,6 +246,13 @@ package object dmsMod {
   type TableStatisticsList = js.Array[typingsSlinky.awsSdk.dmsMod.TableStatistics]
   
   type TagList = js.Array[typingsSlinky.awsSdk.dmsMod.Tag]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`specific-database`
+    - typingsSlinky.awsSdk.awsSdkStrings.`multiple-databases`
+    - java.lang.String
+  */
+  type TargetDbType = typingsSlinky.awsSdk.dmsMod._TargetDbType | java.lang.String
   
   type VpcSecurityGroupIdList = js.Array[typingsSlinky.awsSdk.dmsMod.String]
   

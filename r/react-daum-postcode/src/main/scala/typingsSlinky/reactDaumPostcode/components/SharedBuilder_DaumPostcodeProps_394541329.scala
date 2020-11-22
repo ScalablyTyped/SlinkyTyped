@@ -3,6 +3,7 @@ package typingsSlinky.reactDaumPostcode.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactDaumPostcode.mod.SearchData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -52,6 +53,9 @@ class SharedBuilder_DaumPostcodeProps_394541329[R <: js.Object] (val args: js.Ar
   def maxSuggestItems(value: Double): this.type = set("maxSuggestItems", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def onSearch(value: /* data */ SearchData => Unit): this.type = set("onSearch", js.Any.fromFunction1(value))
+  
+  @scala.inline
   def pleaseReadGuide(value: Double): this.type = set("pleaseReadGuide", value.asInstanceOf[js.Any])
   
   @scala.inline
@@ -80,7 +84,4 @@ class SharedBuilder_DaumPostcodeProps_394541329[R <: js.Object] (val args: js.Ar
   
   @scala.inline
   def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
-  
-  @scala.inline
-  def zonecodeOnly(value: Boolean): this.type = set("zonecodeOnly", value.asInstanceOf[js.Any])
 }

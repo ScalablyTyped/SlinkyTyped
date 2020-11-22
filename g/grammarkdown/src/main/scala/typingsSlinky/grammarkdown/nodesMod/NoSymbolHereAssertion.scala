@@ -14,7 +14,8 @@ class NoSymbolHereAssertion protected ()
   extends AssertionBase[
       typingsSlinky.grammarkdown.tokensMod.SyntaxKind.NoSymbolHereAssertion, 
       OpenBracketToken
-    ] {
+    ]
+     with Assertion {
   def this(openBracketToken: Token[OpenBracketToken], noKeyword: Token[NoKeyword]) = this()
   def this(
     openBracketToken: Token[OpenBracketToken],

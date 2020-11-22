@@ -15,10 +15,10 @@ trait Reference extends Query {
   
   var parent: Reference | Null = js.native
   
-  def push(): Reference = js.native
-  def push(value: js.UndefOr[scala.Nothing], onComplete: js.Function1[/* a */ js.Error | Null, _]): Reference = js.native
-  def push(value: js.Any): Reference = js.native
-  def push(value: js.Any, onComplete: js.Function1[/* a */ js.Error | Null, _]): Reference = js.native
+  def push(): ThenableReference = js.native
+  def push(value: js.UndefOr[scala.Nothing], onComplete: js.Function1[/* a */ js.Error | Null, _]): ThenableReference = js.native
+  def push(value: js.Any): ThenableReference = js.native
+  def push(value: js.Any, onComplete: js.Function1[/* a */ js.Error | Null, _]): ThenableReference = js.native
   
   def remove(): js.Promise[_] = js.native
   def remove(onComplete: js.Function1[/* a */ js.Error | Null, _]): js.Promise[_] = js.native

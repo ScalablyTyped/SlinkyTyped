@@ -6,5 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object Operation {
   
+  type EndSponsoringFutureReserves_ = typingsSlinky.stellarBase.mod.Operation.BaseOperation[typingsSlinky.stellarBase.mod.OperationType.EndSponsoringFutureReserves]
+  
   type Inflation_ = typingsSlinky.stellarBase.mod.Operation.BaseOperation[typingsSlinky.stellarBase.mod.OperationType.Inflation]
 }

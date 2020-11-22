@@ -10,6 +10,8 @@ trait ProgressBarProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
+  var color: js.UndefOr[String] = js.native
+  
   var displayValueTemplate: js.UndefOr[js.Function1[/* value */ js.Any, ReactElement]] = js.native
   
   var id: js.UndefOr[String] = js.native
@@ -52,6 +54,12 @@ object ProgressBarProps {
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
+    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
     def setDisplayValueTemplate(value: /* value */ js.Any => ReactElement): Self = this.set("displayValueTemplate", js.Any.fromFunction1(value))

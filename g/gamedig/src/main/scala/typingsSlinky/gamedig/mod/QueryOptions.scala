@@ -11,6 +11,8 @@ trait QueryOptions extends js.Object {
   
   var debug: js.UndefOr[Boolean] = js.native
   
+  var givenPortOnly: js.UndefOr[Boolean] = js.native
+  
   var host: String = js.native
   
   var maxAttempts: js.UndefOr[Double] = js.native
@@ -62,6 +64,12 @@ object QueryOptions {
     
     @scala.inline
     def deleteDebug: Self = this.set("debug", js.undefined)
+    
+    @scala.inline
+    def setGivenPortOnly(value: Boolean): Self = this.set("givenPortOnly", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGivenPortOnly: Self = this.set("givenPortOnly", js.undefined)
     
     @scala.inline
     def setMaxAttempts(value: Double): Self = this.set("maxAttempts", value.asInstanceOf[js.Any])

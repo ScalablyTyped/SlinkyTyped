@@ -5,14 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait StandardPropertiesFallback[TLength, TTime]
-  extends StandardLonghandPropertiesFallback[TLength, TTime]
-     with StandardShorthandPropertiesFallback[TLength, TTime]
+trait StandardPropertiesFallback[TLength]
+  extends StandardLonghandPropertiesFallback[TLength]
+     with StandardShorthandPropertiesFallback[TLength]
 object StandardPropertiesFallback {
   
   @scala.inline
-  def apply[TLength, TTime](): StandardPropertiesFallback[TLength, TTime] = {
+  def apply[TLength](): StandardPropertiesFallback[TLength] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[StandardPropertiesFallback[TLength, TTime]]
+    __obj.asInstanceOf[StandardPropertiesFallback[TLength]]
   }
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxScrollView
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxPivotGrid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `9` extends js.Object {
   
-  var component: js.UndefOr[dxScrollView] = js.native
+  var component: js.UndefOr[dxPivotGrid] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -39,7 +39,7 @@ object `9` {
     }
     
     @scala.inline
-    def setComponent(value: dxScrollView): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxPivotGrid): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)

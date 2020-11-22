@@ -1,7 +1,7 @@
 
 # Scala.js typings for d3-drag
 
-Typings are for version 1.2
+Typings are for version 2.0
 
 ## Library description:
 Drag and drop SVG, HTML or Canvas using mouse or touch input.

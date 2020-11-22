@@ -276,7 +276,7 @@ trait LegendOptions extends js.Object {
     * a number is set, it translates to pixels. Since v7.0.2 it allows setting
     * a percent string of the full chart width, for example `40%`.
     *
-    * Defaults to the full chart width from legends below or above the chart,
+    * Defaults to the full chart width for legends below or above the chart,
     * half the chart width for legends to the left and right.
     */
   var width: js.UndefOr[Double | String] = js.native

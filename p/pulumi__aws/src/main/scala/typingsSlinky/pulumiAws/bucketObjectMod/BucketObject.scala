@@ -26,7 +26,7 @@ class BucketObject protected () extends CustomResource {
   def this(name: String, args: BucketObjectArgs, opts: CustomResourceOptions) = this()
   
   /**
-    * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to "private".
+    * The [canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
     */
   val acl: Output_[js.UndefOr[String]] = js.native
   
@@ -87,13 +87,7 @@ class BucketObject protected () extends CustomResource {
     */
   val key: Output_[String] = js.native
   
-  /**
-    * Specifies the AWS KMS Key ARN to use for object encryption.
-    * This value is a fully qualified **ARN** of the KMS Key. If using `aws.kms.Key`,
-    * use the exported `arn` attribute:
-    * `kmsKeyId = "${aws_kms_key.foo.arn}"`
-    */
-  val kmsKeyId: Output_[js.UndefOr[String]] = js.native
+  val kmsKeyId: Output_[String] = js.native
   
   /**
     * A map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).

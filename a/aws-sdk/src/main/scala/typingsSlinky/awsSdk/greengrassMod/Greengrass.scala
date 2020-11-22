@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.greengrassMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -787,6 +787,20 @@ trait Greengrass extends Service {
   ): Request[GetSubscriptionDefinitionVersionResponse, AWSError] = js.native
   
   /**
+    * Get the runtime configuration of a thing.
+    */
+  def getThingRuntimeConfiguration(): Request[GetThingRuntimeConfigurationResponse, AWSError] = js.native
+  def getThingRuntimeConfiguration(callback: js.Function2[/* err */ AWSError, /* data */ GetThingRuntimeConfigurationResponse, Unit]): Request[GetThingRuntimeConfigurationResponse, AWSError] = js.native
+  /**
+    * Get the runtime configuration of a thing.
+    */
+  def getThingRuntimeConfiguration(params: GetThingRuntimeConfigurationRequest): Request[GetThingRuntimeConfigurationResponse, AWSError] = js.native
+  def getThingRuntimeConfiguration(
+    params: GetThingRuntimeConfigurationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetThingRuntimeConfigurationResponse, Unit]
+  ): Request[GetThingRuntimeConfigurationResponse, AWSError] = js.native
+  
+  /**
     * Gets a paginated list of the deployments that have been started in a bulk deployment operation, and their current deployment status.
     */
   def listBulkDeploymentDetailedReports(): Request[ListBulkDeploymentDetailedReportsResponse, AWSError] = js.native
@@ -1300,4 +1314,20 @@ trait Greengrass extends Service {
     params: UpdateSubscriptionDefinitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateSubscriptionDefinitionResponse, Unit]
   ): Request[UpdateSubscriptionDefinitionResponse, AWSError] = js.native
+  
+  /**
+    * Updates the runtime configuration of a thing.
+    */
+  def updateThingRuntimeConfiguration(): Request[UpdateThingRuntimeConfigurationResponse, AWSError] = js.native
+  def updateThingRuntimeConfiguration(
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateThingRuntimeConfigurationResponse, Unit]
+  ): Request[UpdateThingRuntimeConfigurationResponse, AWSError] = js.native
+  /**
+    * Updates the runtime configuration of a thing.
+    */
+  def updateThingRuntimeConfiguration(params: UpdateThingRuntimeConfigurationRequest): Request[UpdateThingRuntimeConfigurationResponse, AWSError] = js.native
+  def updateThingRuntimeConfiguration(
+    params: UpdateThingRuntimeConfigurationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateThingRuntimeConfigurationResponse, Unit]
+  ): Request[UpdateThingRuntimeConfigurationResponse, AWSError] = js.native
 }

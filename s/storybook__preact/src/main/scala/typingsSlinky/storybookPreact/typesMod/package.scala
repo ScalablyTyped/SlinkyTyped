@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object typesMod {
   
-  type StoryFnPreactReturnType = java.lang.String | org.scalajs.dom.raw.Node | slinky.core.facade.ReactElement
+  type StoryFnPreactReturnType = java.lang.String | org.scalajs.dom.raw.Node | typingsSlinky.preact.jsxMod.JSXInternal.Element
 }

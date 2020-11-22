@@ -57,6 +57,8 @@ package object forecastserviceMod {
   
   type ErrorMessage = java.lang.String
   
+  type ErrorMetrics = js.Array[typingsSlinky.awsSdk.forecastserviceMod.ErrorMetric]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SUMMARY
     - typingsSlinky.awsSdk.awsSdkStrings.COMPUTED

@@ -162,7 +162,7 @@ trait ChildProcess extends EventEmitter {
     callback: js.Function1[/* error */ js.Error | Null, Unit]
   ): Boolean = js.native
   
-  val signalCode: Double | Null = js.native
+  val signalCode: Signals | Null = js.native
   
   val spawnargs: js.Array[String] = js.native
   

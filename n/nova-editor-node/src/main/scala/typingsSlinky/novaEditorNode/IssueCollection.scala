@@ -14,9 +14,9 @@ trait IssueCollection extends js.Object {
   
   def dispose(): Unit = js.native
   
-  def get(uri: String): Unit = js.native
+  def get(uri: String): js.Array[Issue] = js.native
   
-  def has(uri: String): Unit = js.native
+  def has(uri: String): Boolean = js.native
   
   var name: String = js.native
   
@@ -31,8 +31,8 @@ object IssueCollection {
     append: (String, js.Array[Issue]) => Unit,
     clear: () => Unit,
     dispose: () => Unit,
-    get: String => Unit,
-    has: String => Unit,
+    get: String => js.Array[Issue],
+    has: String => Boolean,
     name: String,
     remove: String => Unit,
     set: (String, js.Array[Issue]) => Unit
@@ -66,10 +66,10 @@ object IssueCollection {
     def setDispose(value: () => Unit): Self = this.set("dispose", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGet(value: String => Unit): Self = this.set("get", js.Any.fromFunction1(value))
+    def setGet(value: String => js.Array[Issue]): Self = this.set("get", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setHas(value: String => Unit): Self = this.set("has", js.Any.fromFunction1(value))
+    def setHas(value: String => Boolean): Self = this.set("has", js.Any.fromFunction1(value))
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

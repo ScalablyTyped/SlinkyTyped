@@ -14,6 +14,8 @@ trait AllowOverlap extends js.Object {
   
   var disabled: Boolean = js.native
   
+  var draggableTrack: Boolean = js.native
+  
   var max: Double = js.native
   
   var min: Double = js.native
@@ -29,12 +31,13 @@ object AllowOverlap {
     allowOverlap: Boolean,
     direction: Direction,
     disabled: Boolean,
+    draggableTrack: Boolean,
     max: Double,
     min: Double,
     rtl: Boolean,
     step: Double
   ): AllowOverlap = {
-    val __obj = js.Dynamic.literal(allowOverlap = allowOverlap.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], max = max.asInstanceOf[js.Any], min = min.asInstanceOf[js.Any], rtl = rtl.asInstanceOf[js.Any], step = step.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(allowOverlap = allowOverlap.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], draggableTrack = draggableTrack.asInstanceOf[js.Any], max = max.asInstanceOf[js.Any], min = min.asInstanceOf[js.Any], rtl = rtl.asInstanceOf[js.Any], step = step.asInstanceOf[js.Any])
     __obj.asInstanceOf[AllowOverlap]
   }
   
@@ -61,6 +64,9 @@ object AllowOverlap {
     
     @scala.inline
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDraggableTrack(value: Boolean): Self = this.set("draggableTrack", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])

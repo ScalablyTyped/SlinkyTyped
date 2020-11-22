@@ -18,6 +18,8 @@ trait Options extends js.Object {
   
   var crossOrigin: js.UndefOr[String] = js.native
   
+  var imageSmoothing: js.UndefOr[Boolean] = js.native
+  
   var jsonp: js.UndefOr[Boolean] = js.native
   
   var reprojectionErrorThreshold: js.UndefOr[Double] = js.native
@@ -80,6 +82,12 @@ object Options {
     
     @scala.inline
     def deleteCrossOrigin: Self = this.set("crossOrigin", js.undefined)
+    
+    @scala.inline
+    def setImageSmoothing(value: Boolean): Self = this.set("imageSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImageSmoothing: Self = this.set("imageSmoothing", js.undefined)
     
     @scala.inline
     def setJsonp(value: Boolean): Self = this.set("jsonp", value.asInstanceOf[js.Any])

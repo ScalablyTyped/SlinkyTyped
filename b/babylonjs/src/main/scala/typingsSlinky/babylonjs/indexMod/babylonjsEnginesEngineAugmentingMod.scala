@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.HTMLCanvasElement
 import typingsSlinky.babylonjs.WebGLProgram
 import typingsSlinky.babylonjs.engineMod.IDisplayChangedEventArgs
 import typingsSlinky.babylonjs.engineWebVRMod.IVRPresentationAttributes
+import typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.typesMod.int
 import typingsSlinky.babylonjs.webVRCameraMod.WebVROptions
@@ -30,6 +31,9 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
     
     /** @hidden */
     def _deleteTimeQuery(query: WebGLQuery): Unit = js.native
+    
+    /** @hidden */
+    var _excludedCompressedTextures: js.Array[String] = js.native
     
     /** @hidden */
     def _getGlAlgorithmType(algorithmType: Double): Double = js.native
@@ -68,6 +72,9 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
     var _onVrDisplayPresentChange: Nullable[js.Function0[Unit]] = js.native
     
     /** @hidden */
+    var _textureFormatInUse: String = js.native
+    
+    /** @hidden */
     var _vrDisplay: js.Any = js.native
     
     /** @hidden */
@@ -90,7 +97,7 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       * @param algorithmType defines the algorithm to use
       * @param query defines the query to use
       * @returns the current engine
-      * @see http://doc.babylonjs.com/features/occlusionquery
+      * @see https://doc.babylonjs.com/features/occlusionquery
       */
     def beginOcclusionQuery(algorithmType: Double, query: WebGLQuery): typingsSlinky.babylonjs.engineOcclusionQueryMod.babylonjsEnginesEngineAugmentingMod.Engine = js.native
     
@@ -120,7 +127,8 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
     
     /**
       * Create an effect to use with particle systems.
-      * Please note that some parameters like animation sheets or not being billboard are not supported in this configuration
+      * Please note that some parameters like animation sheets or not being billboard are not supported in this configuration, except if you pass
+      * the particle system for which you want to create a custom effect in the last parameter
       * @param fragmentName defines the base name of the effect (The name of file without .fragment.fx)
       * @param uniformsNames defines a list of attribute names
       * @param samplers defines an array of string used to represent textures
@@ -128,6 +136,7 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       * @param fallbacks defines the list of potential fallbacks to use if shader conmpilation fails
       * @param onCompiled defines a function to call when the effect creation is successful
       * @param onError defines a function to call when the effect creation has failed
+      * @param particleSystem the particle system you want to create the effect for
       * @returns the new Effect
       */
     def createEffectForParticles(fragmentName: String, uniformsNames: js.Array[String], samplers: js.Array[String], defines: String): typingsSlinky.babylonjs.effectMod.Effect = js.native
@@ -138,7 +147,27 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       defines: String,
       fallbacks: js.UndefOr[scala.Nothing],
       onCompiled: js.UndefOr[scala.Nothing],
+      onError: js.UndefOr[scala.Nothing],
+      particleSystem: IParticleSystem
+    ): typingsSlinky.babylonjs.effectMod.Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: js.UndefOr[scala.Nothing],
+      onCompiled: js.UndefOr[scala.Nothing],
       onError: js.Function2[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, /* errors */ String, Unit]
+    ): typingsSlinky.babylonjs.effectMod.Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: js.UndefOr[scala.Nothing],
+      onCompiled: js.UndefOr[scala.Nothing],
+      onError: js.Function2[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, /* errors */ String, Unit],
+      particleSystem: IParticleSystem
     ): typingsSlinky.babylonjs.effectMod.Effect = js.native
     def createEffectForParticles(
       fragmentName: String,
@@ -155,7 +184,27 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       defines: String,
       fallbacks: js.UndefOr[scala.Nothing],
       onCompiled: js.Function1[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, Unit],
+      onError: js.UndefOr[scala.Nothing],
+      particleSystem: IParticleSystem
+    ): typingsSlinky.babylonjs.effectMod.Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: js.UndefOr[scala.Nothing],
+      onCompiled: js.Function1[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, Unit],
       onError: js.Function2[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, /* errors */ String, Unit]
+    ): typingsSlinky.babylonjs.effectMod.Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: js.UndefOr[scala.Nothing],
+      onCompiled: js.Function1[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, Unit],
+      onError: js.Function2[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, /* errors */ String, Unit],
+      particleSystem: IParticleSystem
     ): typingsSlinky.babylonjs.effectMod.Effect = js.native
     def createEffectForParticles(
       fragmentName: String,
@@ -171,7 +220,27 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       defines: String,
       fallbacks: typingsSlinky.babylonjs.effectFallbacksMod.EffectFallbacks,
       onCompiled: js.UndefOr[scala.Nothing],
+      onError: js.UndefOr[scala.Nothing],
+      particleSystem: IParticleSystem
+    ): typingsSlinky.babylonjs.effectMod.Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: typingsSlinky.babylonjs.effectFallbacksMod.EffectFallbacks,
+      onCompiled: js.UndefOr[scala.Nothing],
       onError: js.Function2[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, /* errors */ String, Unit]
+    ): typingsSlinky.babylonjs.effectMod.Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: typingsSlinky.babylonjs.effectFallbacksMod.EffectFallbacks,
+      onCompiled: js.UndefOr[scala.Nothing],
+      onError: js.Function2[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, /* errors */ String, Unit],
+      particleSystem: IParticleSystem
     ): typingsSlinky.babylonjs.effectMod.Effect = js.native
     def createEffectForParticles(
       fragmentName: String,
@@ -188,7 +257,27 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       defines: String,
       fallbacks: typingsSlinky.babylonjs.effectFallbacksMod.EffectFallbacks,
       onCompiled: js.Function1[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, Unit],
+      onError: js.UndefOr[scala.Nothing],
+      particleSystem: IParticleSystem
+    ): typingsSlinky.babylonjs.effectMod.Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: typingsSlinky.babylonjs.effectFallbacksMod.EffectFallbacks,
+      onCompiled: js.Function1[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, Unit],
       onError: js.Function2[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, /* errors */ String, Unit]
+    ): typingsSlinky.babylonjs.effectMod.Effect = js.native
+    def createEffectForParticles(
+      fragmentName: String,
+      uniformsNames: js.Array[String],
+      samplers: js.Array[String],
+      defines: String,
+      fallbacks: typingsSlinky.babylonjs.effectFallbacksMod.EffectFallbacks,
+      onCompiled: js.Function1[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, Unit],
+      onError: js.Function2[/* effect */ typingsSlinky.babylonjs.effectMod.Effect, /* errors */ String, Unit],
+      particleSystem: IParticleSystem
     ): typingsSlinky.babylonjs.effectMod.Effect = js.native
     
     /**
@@ -204,185 +293,6 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       * @return the new query
       */
     def createQuery(): WebGLQuery = js.native
-    
-    /**
-      * Creates a new raw cube texture
-      * @param data defines the array of data to use to create each face
-      * @param size defines the size of the textures
-      * @param format defines the format of the data
-      * @param type defines the type of the data (like Engine.TEXTURETYPE_UNSIGNED_INT)
-      * @param generateMipMaps  defines if the engine should generate the mip levels
-      * @param invertY defines if data must be stored with Y axis inverted
-      * @param samplingMode defines the required sampling mode (like Texture.NEAREST_SAMPLINGMODE)
-      * @param compression defines the compression used (null by default)
-      * @returns the cube texture as an InternalTexture
-      */
-    def createRawCubeTexture(
-      data: Nullable[js.Array[js.typedarray.ArrayBufferView]],
-      size: Double,
-      format: Double,
-      `type`: Double,
-      generateMipMaps: Boolean,
-      invertY: Boolean,
-      samplingMode: Double,
-      compression: Nullable[String]
-    ): typingsSlinky.babylonjs.internalTextureMod.InternalTexture = js.native
-    
-    /**
-      * Creates a new raw cube texture from a specified url
-      * @param url defines the url where the data is located
-      * @param scene defines the current scene
-      * @param size defines the size of the textures
-      * @param format defines the format of the data
-      * @param type defines the type fo the data (like Engine.TEXTURETYPE_UNSIGNED_INT)
-      * @param noMipmap defines if the engine should avoid generating the mip levels
-      * @param callback defines a callback used to extract texture data from loaded data
-      * @param mipmapGenerator defines to provide an optional tool to generate mip levels
-      * @param onLoad defines a callback called when texture is loaded
-      * @param onError defines a callback called if there is an error
-      * @returns the cube texture as an InternalTexture
-      */
-    def createRawCubeTextureFromUrl(
-      url: String,
-      scene: typingsSlinky.babylonjs.sceneMod.Scene,
-      size: Double,
-      format: Double,
-      `type`: Double,
-      noMipmap: Boolean,
-      callback: js.Function1[
-          /* ArrayBuffer */ js.typedarray.ArrayBuffer, 
-          Nullable[js.Array[js.typedarray.ArrayBufferView]]
-        ],
-      mipmapGenerator: Nullable[
-          js.Function1[
-            /* faces */ js.Array[js.typedarray.ArrayBufferView], 
-            js.Array[js.Array[js.typedarray.ArrayBufferView]]
-          ]
-        ],
-      onLoad: Nullable[js.Function0[Unit]],
-      onError: Nullable[
-          js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-        ]
-    ): typingsSlinky.babylonjs.internalTextureMod.InternalTexture = js.native
-    /**
-      * Creates a new raw cube texture from a specified url
-      * @param url defines the url where the data is located
-      * @param scene defines the current scene
-      * @param size defines the size of the textures
-      * @param format defines the format of the data
-      * @param type defines the type fo the data (like Engine.TEXTURETYPE_UNSIGNED_INT)
-      * @param noMipmap defines if the engine should avoid generating the mip levels
-      * @param callback defines a callback used to extract texture data from loaded data
-      * @param mipmapGenerator defines to provide an optional tool to generate mip levels
-      * @param onLoad defines a callback called when texture is loaded
-      * @param onError defines a callback called if there is an error
-      * @param samplingMode defines the required sampling mode (like Texture.NEAREST_SAMPLINGMODE)
-      * @param invertY defines if data must be stored with Y axis inverted
-      * @returns the cube texture as an InternalTexture
-      */
-    def createRawCubeTextureFromUrl(
-      url: String,
-      scene: typingsSlinky.babylonjs.sceneMod.Scene,
-      size: Double,
-      format: Double,
-      `type`: Double,
-      noMipmap: Boolean,
-      callback: js.Function1[
-          /* ArrayBuffer */ js.typedarray.ArrayBuffer, 
-          Nullable[js.Array[js.typedarray.ArrayBufferView]]
-        ],
-      mipmapGenerator: Nullable[
-          js.Function1[
-            /* faces */ js.Array[js.typedarray.ArrayBufferView], 
-            js.Array[js.Array[js.typedarray.ArrayBufferView]]
-          ]
-        ],
-      onLoad: Nullable[js.Function0[Unit]],
-      onError: Nullable[
-          js.Function2[/* message */ js.UndefOr[String], /* exception */ js.UndefOr[_], Unit]
-        ],
-      samplingMode: Double,
-      invertY: Boolean
-    ): typingsSlinky.babylonjs.internalTextureMod.InternalTexture = js.native
-    
-    /**
-      * Creates a raw texture
-      * @param data defines the data to store in the texture
-      * @param width defines the width of the texture
-      * @param height defines the height of the texture
-      * @param format defines the format of the data
-      * @param generateMipMaps defines if the engine should generate the mip levels
-      * @param invertY defines if data must be stored with Y axis inverted
-      * @param samplingMode defines the required sampling mode (Texture.NEAREST_SAMPLINGMODE by default)
-      * @param compression defines the compression used (null by default)
-      * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
-      * @returns the raw texture inside an InternalTexture
-      */
-    def createRawTexture(
-      data: Nullable[js.typedarray.ArrayBufferView],
-      width: Double,
-      height: Double,
-      format: Double,
-      generateMipMaps: Boolean,
-      invertY: Boolean,
-      samplingMode: Double,
-      compression: Nullable[String],
-      `type`: Double
-    ): typingsSlinky.babylonjs.internalTextureMod.InternalTexture = js.native
-    
-    /**
-      * Creates a new raw 2D array texture
-      * @param data defines the data used to create the texture
-      * @param width defines the width of the texture
-      * @param height defines the height of the texture
-      * @param depth defines the number of layers of the texture
-      * @param format defines the format of the texture
-      * @param generateMipMaps defines if the engine must generate mip levels
-      * @param invertY defines if data must be stored with Y axis inverted
-      * @param samplingMode defines the required sampling mode (like Texture.NEAREST_SAMPLINGMODE)
-      * @param compression defines the compressed used (can be null)
-      * @param textureType defines the compressed used (can be null)
-      * @returns a new raw 2D array texture (stored in an InternalTexture)
-      */
-    def createRawTexture2DArray(
-      data: Nullable[js.typedarray.ArrayBufferView],
-      width: Double,
-      height: Double,
-      depth: Double,
-      format: Double,
-      generateMipMaps: Boolean,
-      invertY: Boolean,
-      samplingMode: Double,
-      compression: Nullable[String],
-      textureType: Double
-    ): typingsSlinky.babylonjs.internalTextureMod.InternalTexture = js.native
-    
-    /**
-      * Creates a new raw 3D texture
-      * @param data defines the data used to create the texture
-      * @param width defines the width of the texture
-      * @param height defines the height of the texture
-      * @param depth defines the depth of the texture
-      * @param format defines the format of the texture
-      * @param generateMipMaps defines if the engine must generate mip levels
-      * @param invertY defines if data must be stored with Y axis inverted
-      * @param samplingMode defines the required sampling mode (like Texture.NEAREST_SAMPLINGMODE)
-      * @param compression defines the compressed used (can be null)
-      * @param textureType defines the compressed used (can be null)
-      * @returns a new raw 3D texture (stored in an InternalTexture)
-      */
-    def createRawTexture3D(
-      data: Nullable[js.typedarray.ArrayBufferView],
-      width: Double,
-      height: Double,
-      depth: Double,
-      format: Double,
-      generateMipMaps: Boolean,
-      invertY: Boolean,
-      samplingMode: Double,
-      compression: Nullable[String],
-      textureType: Double
-    ): typingsSlinky.babylonjs.internalTextureMod.InternalTexture = js.native
     
     /**
       * Creates a webGL transform feedback object
@@ -408,13 +318,13 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
       * Call this function to switch to webVR mode
       * Will do nothing if webVR is not supported or if there is no webVR device
       * @param options the webvr options provided to the camera. mainly used for multiview
-      * @see http://doc.babylonjs.com/how_to/webvr_camera
+      * @see https://doc.babylonjs.com/how_to/webvr_camera
       */
     def enableVR(options: WebVROptions): Unit = js.native
     
     /**
       * Ends an occlusion query
-      * @see http://doc.babylonjs.com/features/occlusionquery
+      * @see https://doc.babylonjs.com/features/occlusionquery
       * @param algorithmType defines the algorithm to use
       * @returns the current engine
       */
@@ -503,6 +413,36 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
     def registerView(canvas: HTMLCanvasElement, camera: typingsSlinky.babylonjs.cameraMod.Camera): typingsSlinky.babylonjs.engineViewsMod.EngineView = js.native
     
     /**
+      * Set the compressed texture extensions or file names to skip.
+      *
+      * @param skippedFiles defines the list of those texture files you want to skip
+      * Example: [".dds", ".env", "myfile.png"]
+      */
+    def setCompressedTextureExclusions(skippedFiles: js.Array[String]): Unit = js.native
+    
+    /**
+      * Set the compressed texture format to use, based on the formats you have, and the formats
+      * supported by the hardware / browser.
+      *
+      * Khronos Texture Container (.ktx) files are used to support this.  This format has the
+      * advantage of being specifically designed for OpenGL.  Header elements directly correspond
+      * to API arguments needed to compressed textures.  This puts the burden on the container
+      * generator to house the arcane code for determining these for current & future formats.
+      *
+      * for description see https://www.khronos.org/opengles/sdk/tools/KTX/
+      * for file layout see https://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/
+      *
+      * Note: The result of this call is not taken into account when a texture is base64.
+      *
+      * @param formatsAvailable defines the list of those format families you have created
+      * on your server.  Syntax: '-' + format family + '.ktx'.  (Case and order do not matter.)
+      *
+      * Current families are astc, dxt, pvrtc, etc2, & etc1.
+      * @returns The extension selected.
+      */
+    def setTextureFormatToUse(formatsAvailable: js.Array[String]): Nullable[String] = js.native
+    
+    /**
       * Specify the varyings to use with transform feedback
       * @param program defines the associated webGL program
       * @param value defines the list of strings representing the varying names
@@ -517,156 +457,21 @@ object babylonjsEnginesEngineAugmentingMod extends js.Object {
     def startTimeQuery(): Nullable[typingsSlinky.babylonjs.timeTokenMod.TimeToken] = js.native
     
     /**
+      * Gets the texture format in use
+      */
+    val textureFormatInUse: Nullable[String] = js.native
+    
+    /**
+      * Gets the list of texture formats supported
+      */
+    val texturesSupported: js.Array[String] = js.native
+    
+    /**
       * Remove a registered child canvas
       * @param canvas defines the canvas to remove
       * @returns the current engine
       */
     def unRegisterView(canvas: HTMLCanvasElement): typingsSlinky.babylonjs.engineViewsMod.babylonjsEnginesEngineAugmentingMod.Engine = js.native
-    
-    /**
-      * Update a raw cube texture
-      * @param texture defines the texture to udpdate
-      * @param data defines the data to store
-      * @param format defines the data format
-      * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
-      * @param invertY defines if data must be stored with Y axis inverted
-      */
-    def updateRawCubeTexture(
-      texture: typingsSlinky.babylonjs.internalTextureMod.InternalTexture,
-      data: js.Array[js.typedarray.ArrayBufferView],
-      format: Double,
-      `type`: Double,
-      invertY: Boolean
-    ): Unit = js.native
-    /**
-      * Update a raw cube texture
-      * @param texture defines the texture to udpdate
-      * @param data defines the data to store
-      * @param format defines the data format
-      * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
-      * @param invertY defines if data must be stored with Y axis inverted
-      * @param compression defines the compression used (null by default)
-      */
-    def updateRawCubeTexture(
-      texture: typingsSlinky.babylonjs.internalTextureMod.InternalTexture,
-      data: js.Array[js.typedarray.ArrayBufferView],
-      format: Double,
-      `type`: Double,
-      invertY: Boolean,
-      compression: Nullable[String]
-    ): Unit = js.native
-    /**
-      * Update a raw cube texture
-      * @param texture defines the texture to udpdate
-      * @param data defines the data to store
-      * @param format defines the data format
-      * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
-      * @param invertY defines if data must be stored with Y axis inverted
-      * @param compression defines the compression used (null by default)
-      * @param level defines which level of the texture to update
-      */
-    def updateRawCubeTexture(
-      texture: typingsSlinky.babylonjs.internalTextureMod.InternalTexture,
-      data: js.Array[js.typedarray.ArrayBufferView],
-      format: Double,
-      `type`: Double,
-      invertY: Boolean,
-      compression: Nullable[String],
-      level: Double
-    ): Unit = js.native
-    
-    /**
-      * Update a raw texture
-      * @param texture defines the texture to update
-      * @param data defines the data to store in the texture
-      * @param format defines the format of the data
-      * @param invertY defines if data must be stored with Y axis inverted
-      */
-    def updateRawTexture(
-      texture: Nullable[typingsSlinky.babylonjs.internalTextureMod.InternalTexture],
-      data: Nullable[js.typedarray.ArrayBufferView],
-      format: Double,
-      invertY: Boolean
-    ): Unit = js.native
-    /**
-      * Update a raw texture
-      * @param texture defines the texture to update
-      * @param data defines the data to store in the texture
-      * @param format defines the format of the data
-      * @param invertY defines if data must be stored with Y axis inverted
-      * @param compression defines the compression used (null by default)
-      * @param type defines the type fo the data (Engine.TEXTURETYPE_UNSIGNED_INT by default)
-      */
-    def updateRawTexture(
-      texture: Nullable[typingsSlinky.babylonjs.internalTextureMod.InternalTexture],
-      data: Nullable[js.typedarray.ArrayBufferView],
-      format: Double,
-      invertY: Boolean,
-      compression: Nullable[String],
-      `type`: Double
-    ): Unit = js.native
-    
-    /**
-      * Update a raw 2D array texture
-      * @param texture defines the texture to update
-      * @param data defines the data to store
-      * @param format defines the data format
-      * @param invertY defines if data must be stored with Y axis inverted
-      */
-    def updateRawTexture2DArray(
-      texture: typingsSlinky.babylonjs.internalTextureMod.InternalTexture,
-      data: Nullable[js.typedarray.ArrayBufferView],
-      format: Double,
-      invertY: Boolean
-    ): Unit = js.native
-    /**
-      * Update a raw 2D array texture
-      * @param texture defines the texture to update
-      * @param data defines the data to store
-      * @param format defines the data format
-      * @param invertY defines if data must be stored with Y axis inverted
-      * @param compression defines the used compression (can be null)
-      * @param textureType defines the texture Type (Engine.TEXTURETYPE_UNSIGNED_INT, Engine.TEXTURETYPE_FLOAT...)
-      */
-    def updateRawTexture2DArray(
-      texture: typingsSlinky.babylonjs.internalTextureMod.InternalTexture,
-      data: Nullable[js.typedarray.ArrayBufferView],
-      format: Double,
-      invertY: Boolean,
-      compression: Nullable[String],
-      textureType: Double
-    ): Unit = js.native
-    
-    /**
-      * Update a raw 3D texture
-      * @param texture defines the texture to update
-      * @param data defines the data to store
-      * @param format defines the data format
-      * @param invertY defines if data must be stored with Y axis inverted
-      */
-    def updateRawTexture3D(
-      texture: typingsSlinky.babylonjs.internalTextureMod.InternalTexture,
-      data: Nullable[js.typedarray.ArrayBufferView],
-      format: Double,
-      invertY: Boolean
-    ): Unit = js.native
-    /**
-      * Update a raw 3D texture
-      * @param texture defines the texture to update
-      * @param data defines the data to store
-      * @param format defines the data format
-      * @param invertY defines if data must be stored with Y axis inverted
-      * @param compression defines the used compression (can be null)
-      * @param textureType defines the texture Type (Engine.TEXTURETYPE_UNSIGNED_INT, Engine.TEXTURETYPE_FLOAT...)
-      */
-    def updateRawTexture3D(
-      texture: typingsSlinky.babylonjs.internalTextureMod.InternalTexture,
-      data: Nullable[js.typedarray.ArrayBufferView],
-      format: Double,
-      invertY: Boolean,
-      compression: Nullable[String],
-      textureType: Double
-    ): Unit = js.native
     
     /** Gets or sets the list of views */
     var views: js.Array[typingsSlinky.babylonjs.engineViewsMod.EngineView] = js.native

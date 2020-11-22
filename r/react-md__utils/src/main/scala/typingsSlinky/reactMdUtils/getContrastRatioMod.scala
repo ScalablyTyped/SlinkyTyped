@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getContrastRatioMod extends js.Object {
   
-  def default(background: HexString, foreground: HexString): Double = js.native
+  def getContrastRatio(background: HexString, foreground: HexString): Double = js.native
 }

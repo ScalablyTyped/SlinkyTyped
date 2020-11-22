@@ -23,7 +23,7 @@ trait MovSettings extends js.Object {
   var Mpeg2FourCCControl: js.UndefOr[MovMpeg2FourCCControl] = js.native
   
   /**
-    * If set to OMNEON, inserts Omneon-compatible padding
+    * To make this output compatible with Omenon, keep the default value, OMNEON. Unless you need Omneon compatibility, set this value to NONE. When you keep the default value, OMNEON, MediaConvert increases the length of the edit list atom. This might cause file rejections when a recipient of the output file doesn't expct this extra padding.
     */
   var PaddingControl: js.UndefOr[MovPaddingControl] = js.native
   

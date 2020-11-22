@@ -19,8 +19,7 @@ trait Resource extends js.Object {
   /**
     * Sets the content of the resource.
     * @param content New content of the resource. Only resources with the text type are currently supported.
-    * @param commit True if the user has finished editing the resource, and the new content of the resource should
-    *     be persisted; false if this is a minor change sent in progress of the user editing the resource.
+    * @param commit True if the user has finished editing the resource, and the new content of the resource should be persisted; false if this is a minor change sent in progress of the user editing the resource.
     * @deprecated Unsupported on Firefox at this time.
     */
   var setContent: js.UndefOr[

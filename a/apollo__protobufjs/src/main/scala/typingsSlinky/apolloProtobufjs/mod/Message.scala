@@ -22,7 +22,7 @@ class Message[T /* <: js.Object */] () extends js.Object {
     * Converts this message to JSON.
     * @returns JSON object
     */
-  def toJSON(): StringDictionary[js.Any] = js.native
+  def toJSON(): StringDictionary[js.UndefOr[js.Any]] = js.native
 }
 /* static members */
 @JSImport("@apollo/protobufjs", "Message")
@@ -39,7 +39,7 @@ object Message extends js.Object {
     * @returns Message instance
     */
   def create[T /* <: Message[T] */](): Message[T] = js.native
-  def create[T /* <: Message[T] */](properties: StringDictionary[js.Any]): Message[T] = js.native
+  def create[T /* <: Message[T] */](properties: StringDictionary[js.UndefOr[js.Any]]): Message[T] = js.native
   
   /**
     * Decodes a message of this type.
@@ -65,8 +65,8 @@ object Message extends js.Object {
     */
   def encode[T /* <: Message[T] */](message: T): Writer = js.native
   def encode[T /* <: Message[T] */](message: T, writer: Writer): Writer = js.native
-  def encode[T /* <: Message[T] */](message: StringDictionary[js.Any]): Writer = js.native
-  def encode[T /* <: Message[T] */](message: StringDictionary[js.Any], writer: Writer): Writer = js.native
+  def encode[T /* <: Message[T] */](message: StringDictionary[js.UndefOr[js.Any]]): Writer = js.native
+  def encode[T /* <: Message[T] */](message: StringDictionary[js.UndefOr[js.Any]], writer: Writer): Writer = js.native
   
   /**
     * Encodes a message of this type preceeded by its length as a varint.
@@ -76,15 +76,15 @@ object Message extends js.Object {
     */
   def encodeDelimited[T /* <: Message[T] */](message: T): Writer = js.native
   def encodeDelimited[T /* <: Message[T] */](message: T, writer: Writer): Writer = js.native
-  def encodeDelimited[T /* <: Message[T] */](message: StringDictionary[js.Any]): Writer = js.native
-  def encodeDelimited[T /* <: Message[T] */](message: StringDictionary[js.Any], writer: Writer): Writer = js.native
+  def encodeDelimited[T /* <: Message[T] */](message: StringDictionary[js.UndefOr[js.Any]]): Writer = js.native
+  def encodeDelimited[T /* <: Message[T] */](message: StringDictionary[js.UndefOr[js.Any]], writer: Writer): Writer = js.native
   
   /**
     * Creates a new message of this type from a plain object. Also converts values to their respective internal types.
     * @param object Plain object
     * @returns Message instance
     */
-  def fromObject[T /* <: Message[T] */](`object`: StringDictionary[js.Any]): T = js.native
+  def fromObject[T /* <: Message[T] */](`object`: StringDictionary[js.UndefOr[js.Any]]): T = js.native
   
   /**
     * Creates a plain object from a message of this type. Also converts values to other types if specified.
@@ -92,13 +92,13 @@ object Message extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
-  def toObject[T /* <: Message[T] */](message: T): StringDictionary[js.Any] = js.native
-  def toObject[T /* <: Message[T] */](message: T, options: IConversionOptions): StringDictionary[js.Any] = js.native
+  def toObject[T /* <: Message[T] */](message: T): StringDictionary[js.UndefOr[js.Any]] = js.native
+  def toObject[T /* <: Message[T] */](message: T, options: IConversionOptions): StringDictionary[js.UndefOr[js.Any]] = js.native
   
   /**
     * Verifies a message of this type.
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
-  def verify(message: StringDictionary[js.Any]): String | Null = js.native
+  def verify(message: StringDictionary[js.UndefOr[js.Any]]): String | Null = js.native
 }

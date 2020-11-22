@@ -3828,15 +3828,18 @@ object mod extends js.Object {
   def scrollbarSize(recalc: Boolean): Double = js.native
   
   def style(node: HTMLElement, property: PartialRecordPropertystri): Unit = js.native
-  def style[T /* <: HyphenProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.PropertiesHyphen<string & {} | 0, string & {}>[T] */ js.Any = js.native
+  def style[T /* <: HyphenProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.PropertiesHyphen<string | 0>[T] */ js.Any = js.native
   @JSName("style")
-  def style_T_CamelProperty[T /* <: CamelProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.Properties<string & {} | 0, string & {}>[T] */ js.Any = js.native
+  def style_T_CamelProperty[T /* <: CamelProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.Properties<string | 0>[T] */ js.Any = js.native
   
   def toggleClass(element: Element, className: String): Unit = js.native
   def toggleClass(element: SVGElement, className: String): Unit = js.native
   
   def transitionEnd(element: HTMLElement, handler: Listener): js.Function0[Unit] = js.native
+  def transitionEnd(element: HTMLElement, handler: Listener, duration: js.UndefOr[scala.Nothing], padding: Double): js.Function0[Unit] = js.native
   def transitionEnd(element: HTMLElement, handler: Listener, duration: Double): js.Function0[Unit] = js.native
+  def transitionEnd(element: HTMLElement, handler: Listener, duration: Double, padding: Double): js.Function0[Unit] = js.native
+  def transitionEnd(element: HTMLElement, handler: Listener, duration: Null, padding: Double): js.Function0[Unit] = js.native
   
   def width(node: HTMLElement): Double = js.native
   def width(node: HTMLElement, client: Boolean): Double = js.native
@@ -7604,11 +7607,11 @@ object mod extends js.Object {
     var scrollbarSize_Original: js.Function1[/* recalc */ js.UndefOr[Boolean], Double] = js.native
     
     def style(node: HTMLElement, property: PartialRecordPropertystri): Unit = js.native
-    def style[T /* <: HyphenProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.PropertiesHyphen<string & {} | 0, string & {}>[T] */ js.Any = js.native
+    def style[T /* <: HyphenProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.PropertiesHyphen<string | 0>[T] */ js.Any = js.native
     @JSName("style")
     var style_Original: FnCallNodeProperty = js.native
     @JSName("style")
-    def style_T_CamelProperty[T /* <: CamelProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.Properties<string & {} | 0, string & {}>[T] */ js.Any = js.native
+    def style_T_CamelProperty[T /* <: CamelProperty */](node: HTMLElement, property: T): /* import warning: importer.ImportType#apply Failed type conversion: csstype.csstype.Properties<string | 0>[T] */ js.Any = js.native
     
     def toggleClass(element: Element, className: String): Unit = js.native
     def toggleClass(element: SVGElement, className: String): Unit = js.native
@@ -7616,12 +7619,16 @@ object mod extends js.Object {
     var toggleClass_Original: js.Function2[/* element */ Element | SVGElement, /* className */ String, Unit] = js.native
     
     def transitionEnd(element: HTMLElement, handler: Listener): js.Function0[Unit] = js.native
+    def transitionEnd(element: HTMLElement, handler: Listener, duration: js.UndefOr[scala.Nothing], padding: Double): js.Function0[Unit] = js.native
     def transitionEnd(element: HTMLElement, handler: Listener, duration: Double): js.Function0[Unit] = js.native
+    def transitionEnd(element: HTMLElement, handler: Listener, duration: Double, padding: Double): js.Function0[Unit] = js.native
+    def transitionEnd(element: HTMLElement, handler: Listener, duration: Null, padding: Double): js.Function0[Unit] = js.native
     @JSName("transitionEnd")
-    var transitionEnd_Original: js.Function3[
+    var transitionEnd_Original: js.Function4[
         /* element */ HTMLElement, 
         /* handler */ Listener, 
-        /* duration */ js.UndefOr[Double], 
+        /* duration */ js.UndefOr[Double | Null], 
+        /* padding */ js.UndefOr[Double], 
         js.Function0[Unit]
       ] = js.native
     

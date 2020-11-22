@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.materialMod.Material
 import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.subMeshMod.SubMesh
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,17 +23,12 @@ object pushMaterialMod extends js.Object {
     
     /* protected */ def _afterBind(mesh: Mesh, effect: Nullable[Effect]): Unit = js.native
     
+    /* protected */ def _isReadyForSubMesh(subMesh: SubMesh): Boolean = js.native
+    
     /* protected */ def _mustRebind(scene: Scene, effect: Effect): Boolean = js.native
     /* protected */ def _mustRebind(scene: Scene, effect: Effect, visibility: Double): Boolean = js.native
     
     var _normalMatrix: Matrix = js.native
-    
-    /**
-      * Gets or sets a boolean indicating that the material is allowed to do shader hot swapping.
-      * This means that the material can keep using a previous shader while a new one is being compiled.
-      * This is mostly used when shader parallel compilation is supported (true by default)
-      */
-    var allowShaderHotSwapping: Boolean = js.native
     
     /**
       * Binds the given normal matrix to the active effect

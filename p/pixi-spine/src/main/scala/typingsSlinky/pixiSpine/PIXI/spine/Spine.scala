@@ -40,6 +40,14 @@ trait Spine extends js.Object {
   
   def hackAttachmentGroups(nameSuffix: String, group: js.Any, outGroup: js.Any): js.Array[js.Array[_]] = js.native
   
+  def hackTextureAttachment(slotName: String, attachmentName: String, texture: js.Any): Boolean = js.native
+  def hackTextureAttachment(
+    slotName: String,
+    attachmentName: String,
+    texture: js.Any,
+    size: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PIXI.Rectangle */ js.Any
+  ): Boolean = js.native
+  
   def hackTextureBySlotIndex(slotIndex: Double): Boolean = js.native
   def hackTextureBySlotIndex(
     slotIndex: Double,

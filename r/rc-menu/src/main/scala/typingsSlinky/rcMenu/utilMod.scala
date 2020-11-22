@@ -17,6 +17,7 @@ object utilMod extends js.Object {
   def getMenuIdFromSubMenuEventKey(eventKey: String): Key = js.native
   
   def getWidth(elem: HTMLElement): Double = js.native
+  def getWidth(elem: HTMLElement, includeMargin: Boolean): Double = js.native
   
   def isMobileDevice(): Boolean = js.native
   
@@ -30,12 +31,12 @@ object utilMod extends js.Object {
   
   def setStyle(
     elem: HTMLElement,
-    styleProperty: /* keyof react.react.CSSProperties */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 765 */ js.Any,
+    styleProperty: /* keyof react.react.CSSProperties */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 776 */ js.Any,
     value: String
   ): Unit = js.native
   def setStyle(
     elem: HTMLElement,
-    styleProperty: /* keyof react.react.CSSProperties */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 765 */ js.Any,
+    styleProperty: /* keyof react.react.CSSProperties */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 776 */ js.Any,
     value: Double
   ): Unit = js.native
 }

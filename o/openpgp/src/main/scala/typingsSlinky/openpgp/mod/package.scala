@@ -10,7 +10,6 @@ package object mod {
   
   type Integer = scala.Double
   
-  // Declare to fix type issue
   type NodeStream = typingsSlinky.node.streamMod.^
   
   type ReadableStream[T] = js.Any

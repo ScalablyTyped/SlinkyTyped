@@ -15,7 +15,7 @@ trait ListImageRecipesResponse extends js.Object {
   /**
     * The next token used for paginated responses. When this is not empty, there are additional elements that the service has not included in this request. Use this token with the next request to retrieve additional objects. 
     */
-  var nextToken: js.UndefOr[NonEmptyString] = js.native
+  var nextToken: js.UndefOr[PaginationToken] = js.native
   
   /**
     * The request ID that uniquely identifies this request. 
@@ -55,7 +55,7 @@ object ListImageRecipesResponse {
     def deleteImageRecipeSummaryList: Self = this.set("imageRecipeSummaryList", js.undefined)
     
     @scala.inline
-    def setNextToken(value: NonEmptyString): Self = this.set("nextToken", value.asInstanceOf[js.Any])
+    def setNextToken(value: PaginationToken): Self = this.set("nextToken", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNextToken: Self = this.set("nextToken", js.undefined)

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ActionExecution extends js.Object {
   
   /**
+    * ID of the workflow action execution in the current stage. Use the GetPipelineState action to retrieve the current action execution details of the current stage.  For older executions, this field might be empty. The action execution ID is available for executions run on or after March 2020. 
+    */
+  var actionExecutionId: js.UndefOr[ActionExecutionId] = js.native
+  
+  /**
     * The details of an error returned by a URL external to AWS.
     */
   var errorDetails: js.UndefOr[ErrorDetails] = js.native
@@ -74,6 +79,12 @@ object ActionExecution {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setActionExecutionId(value: ActionExecutionId): Self = this.set("actionExecutionId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteActionExecutionId: Self = this.set("actionExecutionId", js.undefined)
     
     @scala.inline
     def setErrorDetails(value: ErrorDetails): Self = this.set("errorDetails", value.asInstanceOf[js.Any])

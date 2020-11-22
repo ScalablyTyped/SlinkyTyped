@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-native-community__viewpager
 
-Typings are for version 1.1.7
+Typings are for version 4.2.0
 
 ## Library description:
 React Native ViewPager native view

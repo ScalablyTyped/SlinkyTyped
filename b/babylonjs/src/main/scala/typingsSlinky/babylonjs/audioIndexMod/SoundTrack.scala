@@ -12,7 +12,7 @@ class SoundTrack protected ()
   extends typingsSlinky.babylonjs.soundTrackMod.SoundTrack {
   /**
     * Creates a new sound track.
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#using-sound-tracks
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#using-sound-tracks
     * @param scene Define the scene the sound track belongs to
     * @param options
     */

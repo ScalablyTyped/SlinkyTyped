@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -24,6 +25,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.GroupBox
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.Header
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.IFormBase
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.ILayoutParameter
+import typingsSlinky.mendixmodelsdk.pagesMod.pages.IPage
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.Icon
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.Layout
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.LayoutCallArgument
@@ -42,6 +44,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.Widget
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
@@ -68,19 +71,24 @@ object nativepagesMod extends js.Object {
     /**
       * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
       *
+      * @ignore
+      *
       * In version 8.0.0: introduced
       */
     @js.native
-    class BottomBarItem protected () extends Element {
+    class BottomBarItem protected () extends Element[IModel] {
       def this(
         model: AbstractModel,
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
+      /**
+        * In version 8.15.0: deleted
+        */
       def action: ClientAction = js.native
       def action_=(newValue: ClientAction): Unit = js.native
       
@@ -92,8 +100,14 @@ object nativepagesMod extends js.Object {
       def icon: Icon | Null = js.native
       def icon_=(newValue: Icon | Null): Unit = js.native
       
-      @JSName("model")
-      var model_FBottomBarItem: IModel = js.native
+      /**
+        * In version 8.15.0: introduced
+        */
+      def page: IPage | Null = js.native
+      
+      def pageQualifiedName: String | Null = js.native
+      
+      def page_=(newValue: IPage | Null): Unit = js.native
     }
     /* static members */
     @js.native
@@ -124,6 +138,8 @@ object nativepagesMod extends js.Object {
     /**
       * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
       *
+      * @ignore
+      *
       * In version 8.0.0: deleted
       * In version 7.21.0: introduced
       */
@@ -133,6 +149,8 @@ object nativepagesMod extends js.Object {
     /**
       * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
       *
+      * @ignore
+      *
       * In version 8.0.0: deleted
       * In version 7.21.0: introduced
       */
@@ -141,6 +159,8 @@ object nativepagesMod extends js.Object {
     
     /**
       * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
+      *
+      * @ignore
       *
       * In version 8.0.0: deleted
       * In version 7.21.0: introduced
@@ -174,9 +194,6 @@ object nativepagesMod extends js.Object {
       def headerWidget: Widget | Null = js.native
       def headerWidget_=(newValue: Widget | Null): Unit = js.native
       
-      @JSName("model")
-      var model_FNativeLayout: IModel = js.native
-      
       def widgets: IList[Widget] = js.native
     }
     /* static members */
@@ -197,24 +214,23 @@ object nativepagesMod extends js.Object {
     /**
       * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
       *
+      * @ignore
+      *
       * In version 8.0.0: deleted
       * In version 7.23.0: introduced
       */
     @js.native
-    class NativeLayoutCallArgument protected () extends Element {
+    class NativeLayoutCallArgument protected () extends Element[IModel] {
       def this(
         model: AbstractModel,
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       def containerAsNativePage: NativePage = js.native
-      
-      @JSName("model")
-      var model_FNativeLayoutCallArgument: IModel = js.native
       
       def parameter: ILayoutParameter = js.native
       
@@ -253,6 +269,8 @@ object nativepagesMod extends js.Object {
     /**
       * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
       *
+      * @ignore
+      *
       * In version 8.0.0: deleted
       * In version 7.21.0: introduced
       */
@@ -279,6 +297,8 @@ object nativepagesMod extends js.Object {
       /**
         * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
         *
+        * @ignore
+        *
         * In version 7.23.0: introduced
         */
       def arguments: IList[NativeLayoutCallArgument] = js.native
@@ -288,15 +308,14 @@ object nativepagesMod extends js.Object {
       
       /**
         * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+        *
+        * @ignore
         */
       def layout: INativeLayout = js.native
       
       def layoutQualifiedName: String = js.native
       
       def layout_=(newValue: INativeLayout): Unit = js.native
-      
-      @JSName("model")
-      var model_FNativePage: IModel = js.native
     }
     /* static members */
     @js.native
@@ -316,6 +335,8 @@ object nativepagesMod extends js.Object {
     /**
       * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
       *
+      * @ignore
+      *
       * In version 8.0.0: deleted
       * In version 7.23.0: introduced
       */
@@ -326,15 +347,14 @@ object nativepagesMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
-      
-      @JSName("model")
-      var model_FNativePageClientAction: IModel = js.native
       
       /**
         * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+        *
+        * @ignore
         */
       def page: INativePage | Null = js.native
       
@@ -491,6 +511,8 @@ object nativepagesMod extends js.Object {
     /**
       * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
       *
+      * @ignore
+      *
       * In version 8.0.0: deleted
       * In version 7.23.0: introduced
       */
@@ -501,12 +523,9 @@ object nativepagesMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
-      
-      @JSName("model")
-      var model_FNativePlaceholder: IModel = js.native
     }
     /* static members */
     @js.native

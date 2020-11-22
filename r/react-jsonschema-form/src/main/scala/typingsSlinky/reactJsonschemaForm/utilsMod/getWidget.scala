@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getWidget extends js.Object {
   
-  def apply(schema: JSONSchema6, widget: Widget): Widget | js.Error = js.native
-  def apply(schema: JSONSchema6, widget: Widget, registeredWidgets: StringDictionary[Widget]): Widget | js.Error = js.native
+  def apply(schema: JSONSchema6, widget: String): Widget = js.native
+  def apply(schema: JSONSchema6, widget: String, registeredWidgets: StringDictionary[Widget]): Widget = js.native
+  def apply(schema: JSONSchema6, widget: Widget): Widget = js.native
+  def apply(schema: JSONSchema6, widget: Widget, registeredWidgets: StringDictionary[Widget]): Widget = js.native
 }

@@ -73,7 +73,7 @@ object Photos extends js.Object {
   /**
     * _Removes latest photos._
     *
-    * Before removing the photo, an alert is shown prompting you to confirm the removal.
+    * Before removing the photos, an alert is shown prompting you to confirm the removal.
     * @param count - Number of photos to remove.
     * @see https://docs.scriptable.app/photos/#removelatestphotos
     */
@@ -90,7 +90,7 @@ object Photos extends js.Object {
   /**
     * _Removes latest screenshots._
     *
-    * Before removing the screenshot, an alert is shown prompting you to confirm the removal.
+    * Before removing the screenshots, an alert is shown prompting you to confirm the removal.
     * @param count - Number of screenshots to remove.
     * @see https://docs.scriptable.app/photos/#removelatestscreenshots
     */

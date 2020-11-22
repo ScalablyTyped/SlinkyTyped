@@ -5,12 +5,16 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antDesignProLayout.anon.PageHeaderPropschildrenRe
 import typingsSlinky.antDesignProLayout.anon.TabPanePropskeyReactTextu
 import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
 import typingsSlinky.antDesignProLayout.pageContainerMod.PageContainerProps
+import typingsSlinky.antDesignProLayout.typingsMod.WithFalse
+import typingsSlinky.antd.affixMod.AffixProps
 import typingsSlinky.antd.avatarAvatarMod.AvatarProps
 import typingsSlinky.antd.breadcrumbBreadcrumbMod.BreadcrumbProps
 import typingsSlinky.antd.tabsMod.TabsProps
+import typingsSlinky.rcTabs.interfaceMod.TabBarExtraContent
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,6 +24,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class SharedBuilder_PageContainerProps470028446 (val args: js.Array[js.Any])
   extends AnyVal
      with StBuildingComponent[tag.type, scala.Nothing] {
+  
+  @scala.inline
+  def affixProps(value: AffixProps): this.type = set("affixProps", value.asInstanceOf[js.Any])
   
   @scala.inline
   def avatar(value: AvatarProps): this.type = set("avatar", value.asInstanceOf[js.Any])
@@ -55,6 +62,12 @@ class SharedBuilder_PageContainerProps470028446 (val args: js.Array[js.Any])
   def extraContent(value: ReactElement): this.type = set("extraContent", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def fixHeader(value: Boolean): this.type = set("fixHeader", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def fixedHeader(value: Boolean): this.type = set("fixedHeader", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def footerVarargs(value: ReactElement*): this.type = set("footer", js.Array(value :_*))
   
   @scala.inline
@@ -64,13 +77,22 @@ class SharedBuilder_PageContainerProps470028446 (val args: js.Array[js.Any])
   def ghost(value: Boolean): this.type = set("ghost", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def header(value: PageHeaderPropschildrenRe): this.type = set("header", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def onBack(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onBack", js.Any.fromFunction1(value))
   
   @scala.inline
   def onTabChange(value: /* activeKey */ String => Unit): this.type = set("onTabChange", js.Any.fromFunction1(value))
   
   @scala.inline
-  def pageHeaderRender(value: PageContainerProps => ReactElement): this.type = set("pageHeaderRender", js.Any.fromFunction1(value))
+  def pageHeaderRenderFunction1(value: PageContainerProps => ReactElement): this.type = set("pageHeaderRender", js.Any.fromFunction1(value))
+  
+  @scala.inline
+  def pageHeaderRender(value: WithFalse[js.Function1[PageContainerProps, ReactElement]]): this.type = set("pageHeaderRender", value.asInstanceOf[js.Any])
   
   @scala.inline
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
@@ -91,7 +113,7 @@ class SharedBuilder_PageContainerProps470028446 (val args: js.Array[js.Any])
   def tabBarExtraContentReactElement(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def tabBarExtraContent(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
+  def tabBarExtraContent(value: TabBarExtraContent): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
   
   @scala.inline
   def tabListVarargs(value: TabPanePropskeyReactTextu*): this.type = set("tabList", js.Array(value :_*))

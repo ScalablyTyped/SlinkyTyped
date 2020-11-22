@@ -19,14 +19,17 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.popperJs.mod.Modifiers
-import typingsSlinky.popperJs.mod.Placement
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -81,14 +84,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object UncontrolledTooltip {
   
-  @JSImport("reactstrap", "UncontrolledTooltip")
+  @JSImport("reactstrap/es", "UncontrolledTooltip")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.UncontrolledTooltip[T]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.UncontrolledTooltip] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -202,7 +205,9 @@ object UncontrolledTooltip {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -352,7 +357,9 @@ object UncontrolledTooltip {
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def modifiers(value: Modifiers): this.type = set("modifiers", value.asInstanceOf[js.Any])
+    def modifiers(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Modifiers */ js.Any
+    ): this.type = set("modifiers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -595,7 +602,9 @@ object UncontrolledTooltip {
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def placement(value: Placement): this.type = set("placement", value.asInstanceOf[js.Any])
+    def placement(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Placement */ js.Any
+    ): this.type = set("placement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def popperClassName(value: String): this.type = set("popperClassName", value.asInstanceOf[js.Any])
@@ -655,11 +664,11 @@ object UncontrolledTooltip {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: UncontrolledTooltipProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: UncontrolledTooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply[T](target: String | HTMLElement | ReactRef[HTMLElement]): Builder[T] = {
+  def apply(target: String | HTMLElement | ReactRef[HTMLElement]): Builder = {
     val __props = js.Dynamic.literal(target = target.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[UncontrolledTooltipProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[UncontrolledTooltipProps]))
   }
 }

@@ -5,7 +5,6 @@ import typingsSlinky.convertUnits.convertUnitsStrings.Kb_
 import typingsSlinky.convertUnits.convertUnitsStrings.Mb_
 import typingsSlinky.convertUnits.convertUnitsStrings.Tb_
 import typingsSlinky.convertUnits.convertUnitsStrings.b_
-import typingsSlinky.convertUnits.convertUnitsStrings.km_
 import typingsSlinky.convertUnits.convertUnitsStrings.mHz_
 import typingsSlinky.convertUnits.convertUnitsStrings.mVAR_
 import typingsSlinky.convertUnits.convertUnitsStrings.mVARh_
@@ -20,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.convertUnits.convertUnitsStrings.mm
   - typingsSlinky.convertUnits.convertUnitsStrings.cm
   - typingsSlinky.convertUnits.convertUnitsStrings.m
-  - typingsSlinky.convertUnits.convertUnitsStrings.km_
+  - typingsSlinky.convertUnits.convertUnitsStrings.km
   - typingsSlinky.convertUnits.convertUnitsStrings.in
   - typingsSlinky.convertUnits.convertUnitsStrings.`ft-us`
   - typingsSlinky.convertUnits.convertUnitsStrings.ft
@@ -159,7 +158,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.convertUnits.convertUnitsStrings.kA
   - typingsSlinky.convertUnits.convertUnitsStrings.W
   - typingsSlinky.convertUnits.convertUnitsStrings.mW_
-  - typingsSlinky.convertUnits.convertUnitsStrings.kM
+  - typingsSlinky.convertUnits.convertUnitsStrings.kW
   - typingsSlinky.convertUnits.convertUnitsStrings.MW
   - typingsSlinky.convertUnits.convertUnitsStrings.GW
   - typingsSlinky.convertUnits.convertUnitsStrings.VA
@@ -452,9 +451,6 @@ object unit {
   def kJ: typingsSlinky.convertUnits.convertUnitsStrings.kJ = "kJ".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kJ]
   
   @scala.inline
-  def kM: typingsSlinky.convertUnits.convertUnitsStrings.kM = "kM".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kM]
-  
-  @scala.inline
   def kPa: typingsSlinky.convertUnits.convertUnitsStrings.kPa = "kPa".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kPa]
   
   @scala.inline
@@ -468,6 +464,9 @@ object unit {
   
   @scala.inline
   def kVARh: typingsSlinky.convertUnits.convertUnitsStrings.kVARh = "kVARh".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kVARh]
+  
+  @scala.inline
+  def kW: typingsSlinky.convertUnits.convertUnitsStrings.kW = "kW".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kW]
   
   @scala.inline
   def kWh: typingsSlinky.convertUnits.convertUnitsStrings.kWh = "kWh".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.kWh]
@@ -488,7 +487,7 @@ object unit {
   def klSlashs: typingsSlinky.convertUnits.convertUnitsStrings.klSlashs = "kl/s".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.klSlashs]
   
   @scala.inline
-  def km: km_ = "km".asInstanceOf[km_]
+  def km: typingsSlinky.convertUnits.convertUnitsStrings.km = "km".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.km]
   
   @scala.inline
   def km2: typingsSlinky.convertUnits.convertUnitsStrings.km2 = "km2".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.km2]

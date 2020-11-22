@@ -38,6 +38,8 @@ class SurveyElement protected ()
   /* InferMemberOverrides */
   override def getType(): String = js.native
   
+  /* protected */ def getValidName(name: String): String = js.native
+  
   var isContentElement: Boolean = js.native
   
   /**
@@ -101,4 +103,8 @@ object SurveyElement extends js.Object {
   def GetFirstNonTextElement(elements: js.Any, removeSpaces: Boolean): js.Any = js.native
   
   def ScrollElementToTop(elementId: String): Boolean = js.native
+  
+  def createProgressInfo(): IProgressInfo = js.native
+  
+  def getProgressInfoByElements(children: js.Array[SurveyElement], isRequired: Boolean): IProgressInfo = js.native
 }

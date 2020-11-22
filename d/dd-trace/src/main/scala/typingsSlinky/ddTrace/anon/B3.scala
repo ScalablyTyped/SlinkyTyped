@@ -19,6 +19,12 @@ trait B3 extends js.Object {
   var distributedTracingOriginWhitelist: js.UndefOr[js.Array[String | js.RegExp]] = js.native
   
   /**
+    * Whether to enable the experimental `getRumData` method.
+    * @default false
+    */
+  var enableGetRumData: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Whether to write traces to log output, rather than send to an agent
     * @default false
     */
@@ -33,7 +39,7 @@ trait B3 extends js.Object {
   /**
     * Configuration of the priority sampler. Supports a global config and rules by span name or service name. The first matching rule is applied, and if no rule matches it falls back to the global config or on the rates provided by the agent if there is no global config.
     */
-  var sampler: js.UndefOr[RateLimit] = js.native
+  var sampler: js.UndefOr[Rules] = js.native
 }
 object B3 {
   
@@ -74,6 +80,12 @@ object B3 {
     def deleteDistributedTracingOriginWhitelist: Self = this.set("distributedTracingOriginWhitelist", js.undefined)
     
     @scala.inline
+    def setEnableGetRumData(value: Boolean): Self = this.set("enableGetRumData", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnableGetRumData: Self = this.set("enableGetRumData", js.undefined)
+    
+    @scala.inline
     def setExporter(value: log | browser | agent): Self = this.set("exporter", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -86,7 +98,7 @@ object B3 {
     def deleteRuntimeId: Self = this.set("runtimeId", js.undefined)
     
     @scala.inline
-    def setSampler(value: RateLimit): Self = this.set("sampler", value.asInstanceOf[js.Any])
+    def setSampler(value: Rules): Self = this.set("sampler", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSampler: Self = this.set("sampler", js.undefined)

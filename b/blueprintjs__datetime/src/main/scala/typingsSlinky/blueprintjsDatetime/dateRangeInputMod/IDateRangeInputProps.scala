@@ -8,7 +8,6 @@ import typingsSlinky.blueprintjsDatetime.blueprintjsDatetimeBooleans.`false`
 import typingsSlinky.blueprintjsDatetime.datePickerCoreMod.IDatePickerBaseProps
 import typingsSlinky.blueprintjsDatetime.dateRangeMod.DateRange
 import typingsSlinky.blueprintjsDatetime.shortcutsMod.IDateRangeShortcut
-import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -39,16 +38,6 @@ trait IDateRangeInputProps
     * @default true
     */
   var contiguousCalendarMonths: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * Props to pass to ReactDayPicker. See API documentation
-    * [here](http://react-day-picker.js.org/api/DayPicker).
-    *
-    * The following props are managed by the component and cannot be configured:
-    * `canChangeMonth`, `captionElement`, `numberOfMonths`, `fromMonth` (use
-    * `minDate`), `month` (use `initialMonth`), `toMonth` (use `maxDate`).
-    */
-  var dayPickerProps: js.UndefOr[DayPickerProps] = js.native
   
   /**
     * The default date range to be used in the component when uncontrolled.

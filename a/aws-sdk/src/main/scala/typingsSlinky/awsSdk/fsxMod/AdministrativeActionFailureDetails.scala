@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AdministrativeActionFailureDetails extends js.Object {
   
   /**
-    * Error message providing details about the failure.
+    * Error message providing details about the failed administrative action.
     */
   var Message: js.UndefOr[ErrorMessage] = js.native
 }

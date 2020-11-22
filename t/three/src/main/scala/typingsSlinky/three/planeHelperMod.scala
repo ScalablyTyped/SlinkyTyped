@@ -16,6 +16,11 @@ object planeHelperMod extends js.Object {
   @js.native
   class PlaneHelper protected ()
     extends LineSegments[Geometry | BufferGeometry, Material | js.Array[Material]] {
+    /**
+    	 * @param plane
+    	 * @param [size=1]
+    	 * @param [hex=0xffff00]
+    	 */
     def this(plane: Plane) = this()
     def this(plane: Plane, size: Double) = this()
     def this(plane: Plane, size: js.UndefOr[scala.Nothing], hex: Double) = this()
@@ -23,6 +28,9 @@ object planeHelperMod extends js.Object {
     
     var plane: Plane = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var size: Double = js.native
   }
 }

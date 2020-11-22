@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateVTLDeviceTypeInput extends js.Object {
   
   /**
-    * The type of medium changer you want to select. Valid Values: STK-L700 | AWS-Gateway-VTL 
+    * The type of medium changer you want to select. Valid Values: STK-L700 | AWS-Gateway-VTL | IBM-03584L32-0402 
     */
   var DeviceType: typingsSlinky.awsSdk.storagegatewayMod.DeviceType = js.native
   

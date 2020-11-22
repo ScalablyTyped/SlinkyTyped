@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
-import typingsSlinky.reactNative.mod.ImageRequireSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,12 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OptionsTopBarBackButton extends js.Object {
   
   /**
+    * Overrides the text that's read by the screen reader when the user interacts with the back button
+    * #### (Android specific)
+    */
+  var accessibilityLabel: js.UndefOr[String] = js.native
+  
+  /**
     * Back button icon and text color
     */
   var color: js.UndefOr[Color] = js.native
   
   /**
-    * Set subtitle font family
+    * Set the font family for the back button
+    * #### (iOS specific)
     */
   var fontFamily: js.UndefOr[FontFamily] = js.native
   
@@ -24,9 +30,21 @@ trait OptionsTopBarBackButton extends js.Object {
   var fontSize: js.UndefOr[Double] = js.native
   
   /**
+    * Set the font style for a text
+    */
+  var fontStyle: js.UndefOr[FontStyle] = js.native
+  
+  /**
+    * Specifies font weight. The values 'normal' and 'bold' are supported
+    * for most fonts. Not all fonts have a variant for each of the numeric
+    * values, in that case the closest one is chosen.
+    */
+  var fontWeight: js.UndefOr[FontWeight] = js.native
+  
+  /**
     * Image to show as the back button
     */
-  var icon: js.UndefOr[ImageRequireSource] = js.native
+  var icon: js.UndefOr[ImageResource] = js.native
   
   /**
     * Button id for reference press event
@@ -81,6 +99,12 @@ object OptionsTopBarBackButton {
     }
     
     @scala.inline
+    def setAccessibilityLabel(value: String): Self = this.set("accessibilityLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccessibilityLabel: Self = this.set("accessibilityLabel", js.undefined)
+    
+    @scala.inline
     def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -99,7 +123,19 @@ object OptionsTopBarBackButton {
     def deleteFontSize: Self = this.set("fontSize", js.undefined)
     
     @scala.inline
-    def setIcon(value: ImageRequireSource): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setFontStyle(value: FontStyle): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
+    
+    @scala.inline
+    def setFontWeight(value: FontWeight): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontWeight: Self = this.set("fontWeight", js.undefined)
+    
+    @scala.inline
+    def setIcon(value: ImageResource): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)

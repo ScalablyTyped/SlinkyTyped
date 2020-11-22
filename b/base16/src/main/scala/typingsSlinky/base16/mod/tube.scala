@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("base16", "tube")
 @js.native
-object tube extends TopLevel[ColorScheme]
+object tube extends TopLevel[Base16Theme]

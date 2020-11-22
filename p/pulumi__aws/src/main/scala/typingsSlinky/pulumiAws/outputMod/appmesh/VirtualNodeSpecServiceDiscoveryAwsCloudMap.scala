@@ -15,12 +15,12 @@ trait VirtualNodeSpecServiceDiscoveryAwsCloudMap extends js.Object {
   
   /**
     * The name of the AWS Cloud Map namespace to use.
-    * Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace.
+    * Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace. Must be between 1 and 1024 characters in length.
     */
   var namespaceName: String = js.native
   
   /**
-    * The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service.
+    * The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service. Must be between 1 and 1024 characters in length.
     */
   var serviceName: String = js.native
 }

@@ -1,6 +1,7 @@
 package typingsSlinky.storybookComponents.tabsMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.std.Record
 import typingsSlinky.storybookComponents.anon.OnSelect
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +12,7 @@ trait TabsProps extends js.Object {
   
   var absolute: js.UndefOr[Boolean] = js.native
   
-  var actions: js.UndefOr[OnSelect] = js.native
+  var actions: js.UndefOr[OnSelect with (Record[String, _])] = js.native
   
   var backgroundColor: js.UndefOr[String] = js.native
   
@@ -53,7 +54,7 @@ object TabsProps {
     def deleteAbsolute: Self = this.set("absolute", js.undefined)
     
     @scala.inline
-    def setActions(value: OnSelect): Self = this.set("actions", value.asInstanceOf[js.Any])
+    def setActions(value: OnSelect with (Record[String, _])): Self = this.set("actions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteActions: Self = this.set("actions", js.undefined)

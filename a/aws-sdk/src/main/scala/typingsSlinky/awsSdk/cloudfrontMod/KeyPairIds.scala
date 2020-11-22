@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait KeyPairIds extends js.Object {
   
   /**
-    * A complex type that lists the active CloudFront key pairs, if any, that are associated with AwsAccountNumber. For more information, see ActiveTrustedSigners.
+    * A list of CloudFront key pair identifiers.
     */
   var Items: js.UndefOr[KeyPairIdList] = js.native
   
   /**
-    * The number of active CloudFront key pairs for AwsAccountNumber. For more information, see ActiveTrustedSigners.
+    * The number of key pair identifiers in the list.
     */
   var Quantity: integer = js.native
 }

@@ -10,11 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PathSymbol3DLayerMaterialProperties extends Object {
   
   /**
-    * The color of the path. This can be autocast with an array of rgb(a) values, named string, hex string or an hsl(a) string, an object with `r`, `g`, `b`, and `a` properties, or a [Color](https://developers.arcgis.com/javascript/latest/api-reference/esri-Color.html) object.
+    * The color of the path.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#material)
-    *
-    * @default white
     */
   var color: js.UndefOr[Color_ | js.Array[Double] | String] = js.native
 }

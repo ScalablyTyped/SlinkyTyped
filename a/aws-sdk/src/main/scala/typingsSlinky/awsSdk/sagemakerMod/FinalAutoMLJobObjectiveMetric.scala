@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FinalAutoMLJobObjectiveMetric extends js.Object {
   
   /**
-    * The name of the metric.
+    * The name of the metric with the best result. For a description of the possible objective metrics, see AutoMLJobObjective$MetricName.
     */
   var MetricName: AutoMLMetricEnum = js.native
   
   /**
-    * The metric type used.
+    * The type of metric with the best result.
     */
   var Type: js.UndefOr[AutoMLJobObjectiveType] = js.native
   
   /**
-    * The value of the metric.
+    * The value of the metric with the best result.
     */
   var Value: MetricValue = js.native
 }

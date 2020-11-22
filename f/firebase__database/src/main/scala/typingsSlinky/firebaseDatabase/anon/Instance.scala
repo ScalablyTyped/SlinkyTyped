@@ -5,22 +5,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Instance extends js.Object {
+trait Instance[T] extends js.Object {
   
-  var instance: typingsSlinky.firebaseDatabase.databaseMod.Database = js.native
+  var instance: typingsSlinky.firebaseDatabaseTypes.mod.Database = js.native
   
-  var namespace: DataSnapshot = js.native
+  var namespace: T = js.native
 }
 object Instance {
   
   @scala.inline
-  def apply(instance: typingsSlinky.firebaseDatabase.databaseMod.Database, namespace: DataSnapshot): Instance = {
+  def apply[T](instance: typingsSlinky.firebaseDatabaseTypes.mod.Database, namespace: T): Instance[T] = {
     val __obj = js.Dynamic.literal(instance = instance.asInstanceOf[js.Any], namespace = namespace.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Instance]
+    __obj.asInstanceOf[Instance[T]]
   }
   
   @scala.inline
-  implicit class InstanceOps[Self <: Instance] (val x: Self) extends AnyVal {
+  implicit class InstanceOps[Self <: Instance[_], T] (val x: Self with Instance[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -35,9 +35,9 @@ object Instance {
     }
     
     @scala.inline
-    def setInstance(value: typingsSlinky.firebaseDatabase.databaseMod.Database): Self = this.set("instance", value.asInstanceOf[js.Any])
+    def setInstance(value: typingsSlinky.firebaseDatabaseTypes.mod.Database): Self = this.set("instance", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNamespace(value: DataSnapshot): Self = this.set("namespace", value.asInstanceOf[js.Any])
+    def setNamespace(value: T): Self = this.set("namespace", value.asInstanceOf[js.Any])
   }
 }

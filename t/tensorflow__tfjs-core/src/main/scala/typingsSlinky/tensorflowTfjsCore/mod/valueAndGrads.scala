@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore.mod
 
-import typingsSlinky.tensorflowTfjsCore.anon.GradsValue
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.anon.Grads
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,11 +38,12 @@ object valueAndGrads extends js.Object {
     * console.log('db');
     * db.print();
     * ```
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def apply[O /* <: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] */](f: js.Function1[/* repeated */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], O]): js.Function2[
     /* args */ js.Array[Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]], 
     /* dy */ js.UndefOr[O], 
-    GradsValue[O]
+    Grads[O]
   ] = js.native
 }

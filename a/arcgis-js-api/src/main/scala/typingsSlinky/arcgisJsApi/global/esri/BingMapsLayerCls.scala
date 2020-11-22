@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("__esri.BingMapsLayer")
 @js.native
 /**
-  * This layer supports Microsoft's Bing tiled map content. Three map styles are supported - `road`, `aerial` and `hybrid`. Please note that a valid [Bing Maps key](https://msdn.microsoft.com/en-us/library/ff428642.aspx) is required to use this layer.
+  * This layer supports Microsoft's Bing tiled map content.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BingMapsLayer.html)
   */

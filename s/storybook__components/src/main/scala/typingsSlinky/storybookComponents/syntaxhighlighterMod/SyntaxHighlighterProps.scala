@@ -1,5 +1,6 @@
 package typingsSlinky.storybookComponents.syntaxhighlighterMod
 
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,6 +19,8 @@ trait SyntaxHighlighterProps extends js.Object {
   var language: String = js.native
   
   var padded: js.UndefOr[Boolean] = js.native
+  
+  var renderer: js.UndefOr[js.Function1[/* props */ SyntaxHighlighterRendererProps, ReactElement]] = js.native
 }
 object SyntaxHighlighterProps {
   
@@ -74,5 +77,11 @@ object SyntaxHighlighterProps {
     
     @scala.inline
     def deletePadded: Self = this.set("padded", js.undefined)
+    
+    @scala.inline
+    def setRenderer(value: /* props */ SyntaxHighlighterRendererProps => ReactElement): Self = this.set("renderer", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteRenderer: Self = this.set("renderer", js.undefined)
   }
 }

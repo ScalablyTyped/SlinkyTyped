@@ -2,11 +2,11 @@ package typingsSlinky.tensorflowTfjsLayers.containerMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Set
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.mod.serialization.Serializable
 import typingsSlinky.tensorflowTfjsCore.serializationMod.ConfigDict
 import typingsSlinky.tensorflowTfjsCore.serializationMod.SerializableConstructor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
@@ -51,8 +51,7 @@ abstract class Container protected () extends Layer {
     * @param index Index of layer.
     * @returns A Layer instance.
     * @throws ValueError: In case of invalid layer name or index.
-    */
-  /**
+    *
     * @doc {
     *    heading: 'Layers',
     *    subheading: 'Classes',

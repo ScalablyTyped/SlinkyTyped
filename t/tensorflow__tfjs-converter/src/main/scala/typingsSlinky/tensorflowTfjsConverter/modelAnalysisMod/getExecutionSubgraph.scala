@@ -12,4 +12,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object getExecutionSubgraph extends js.Object {
   
   def apply(inputs: NamedTensorMap, outputs: js.Array[Node], weightMap: NamedTensorsMap): ExecutionInfo = js.native
+  def apply(
+    inputs: NamedTensorMap,
+    outputs: js.Array[Node],
+    weightMap: NamedTensorsMap,
+    initNodes: js.Array[Node]
+  ): ExecutionInfo = js.native
 }

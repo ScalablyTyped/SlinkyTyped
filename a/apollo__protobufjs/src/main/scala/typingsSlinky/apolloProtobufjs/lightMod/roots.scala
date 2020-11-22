@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@apollo/protobufjs/light", "roots")
 @js.native
 object roots
-  extends /* k */ StringDictionary[typingsSlinky.apolloProtobufjs.mod.Root]
+  extends /* k */ StringDictionary[js.UndefOr[typingsSlinky.apolloProtobufjs.mod.Root]]

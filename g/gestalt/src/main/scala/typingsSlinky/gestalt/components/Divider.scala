@@ -1,7 +1,5 @@
 package typingsSlinky.gestalt.components
 
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +10,7 @@ object Divider {
   @js.native
   object component extends js.Object
   
-  def withProps(p: js.Object): Default[tag.type, typingsSlinky.gestalt.mod.Divider] = new Default[tag.type, typingsSlinky.gestalt.mod.Divider](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: js.Object): SharedBuilder_Object_159303587[typingsSlinky.gestalt.mod.Divider] = new SharedBuilder_Object_159303587[typingsSlinky.gestalt.mod.Divider](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make(companion: Divider.type): Default[tag.type, typingsSlinky.gestalt.mod.Divider] = new Default[tag.type, typingsSlinky.gestalt.mod.Divider](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: Divider.type): SharedBuilder_Object_159303587[typingsSlinky.gestalt.mod.Divider] = new SharedBuilder_Object_159303587[typingsSlinky.gestalt.mod.Divider](js.Array(this.component, js.Dictionary.empty))()
 }

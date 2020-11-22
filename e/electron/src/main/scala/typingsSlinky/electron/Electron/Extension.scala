@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Extension extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/extension
+  // Docs: https://electronjs.org/docs/api/structures/extension
   var id: String = js.native
   
   /**

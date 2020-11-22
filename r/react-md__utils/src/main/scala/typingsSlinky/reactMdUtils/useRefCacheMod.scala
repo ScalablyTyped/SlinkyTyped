@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useRefCacheMod extends js.Object {
   
-  def default[T](cacheable: T): MutableRefObject[T] = js.native
+  def useRefCache[T](cacheable: T): MutableRefObject[T] = js.native
 }

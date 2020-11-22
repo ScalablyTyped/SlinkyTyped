@@ -1,5 +1,6 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin
 
+import typingsSlinky.forkTsCheckerWebpackPlugin.anon.Typeofts
 import typingsSlinky.forkTsCheckerWebpackPlugin.controlledTypeScriptSystemMod.ControlledTypeScriptSystem
 import typingsSlinky.forkTsCheckerWebpackPlugin.typeScriptExtensionMod.TypeScriptHostExtension
 import typingsSlinky.typescript.mod.BuilderProgram
@@ -18,6 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object controlledWatchSolutionBuilderHostMod extends js.Object {
   
   def createControlledWatchSolutionBuilderHost[TProgram /* <: BuilderProgram */](
+    typescript: Typeofts,
     parsedCommandLine: ParsedCommandLine,
     system: ControlledTypeScriptSystem,
     createProgram: js.UndefOr[CreateProgram_[TProgram]],

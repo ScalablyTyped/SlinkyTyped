@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "carbon__colors"
-version := "0.0-dt-20190206Z-7d748b"
+version := "0.0-dt-20200925Z-7d748b"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

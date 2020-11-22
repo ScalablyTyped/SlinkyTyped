@@ -25,11 +25,15 @@ object directionalLightMod extends js.Object {
     
     val isDirectionalLight: `true` = js.native
     
+    /**
+    	 * @default new THREE.DirectionalLightShadow()
+    	 */
     @JSName("shadow")
     var shadow_DirectionalLight: DirectionalLightShadow = js.native
     
     /**
     	 * Target used for shadow camera orientation.
+    	 * @default new THREE.Object3D()
     	 */
     var target: Object3D = js.native
   }

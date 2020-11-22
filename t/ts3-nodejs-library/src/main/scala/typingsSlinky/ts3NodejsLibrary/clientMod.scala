@@ -67,7 +67,7 @@ object clientMod extends js.Object {
     
     def connectionClientIp: String = js.native
     
-    def country: String = js.native
+    def country: js.UndefOr[String] = js.native
     
     /**
       * Adds a set of specified permissions to a client.
@@ -125,6 +125,8 @@ object clientMod extends js.Object {
       * @param properties the properties to change
       */
     def edit(properties: ClientEdit): js.Promise[js.Array[js.Any]] = js.native
+    
+    def estimatedLocation: js.UndefOr[String] = js.native
     
     def flagTalking: Boolean = js.native
     

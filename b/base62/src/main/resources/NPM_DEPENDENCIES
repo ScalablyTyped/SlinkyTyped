@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "base62" : "1.2.8"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "base62" : "1.2.8"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

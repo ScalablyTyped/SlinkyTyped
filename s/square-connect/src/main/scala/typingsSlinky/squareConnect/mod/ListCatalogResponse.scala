@@ -15,7 +15,7 @@ class ListCatalogResponse () extends js.Object {
   var cursor: js.UndefOr[String] = js.native
   
   /**
-    * Information on any errors encountered.
+    * Any errors that occurred during the request.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   

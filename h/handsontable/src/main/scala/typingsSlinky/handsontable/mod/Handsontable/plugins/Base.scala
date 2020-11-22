@@ -36,8 +36,6 @@ trait Base extends js.Object {
   
   def removeHooks(name: String): Unit = js.native
   
-  var t: RecordTranslator = js.native
-  
   def updatePlugin(): Unit = js.native
 }
 object Base {
@@ -58,10 +56,9 @@ object Base {
     pluginName: String,
     pluginsInitializedCallback: js.Array[_],
     removeHooks: String => Unit,
-    t: RecordTranslator,
     updatePlugin: () => Unit
   ): Base = {
-    val __obj = js.Dynamic.literal(addHook = js.Any.fromFunction2(addHook), callOnPluginsReady = js.Any.fromFunction1(callOnPluginsReady), clearHooks = js.Any.fromFunction0(clearHooks), destroy = js.Any.fromFunction0(destroy), disablePlugin = js.Any.fromFunction0(disablePlugin), enablePlugin = js.Any.fromFunction0(enablePlugin), enabled = enabled.asInstanceOf[js.Any], hot = hot.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), initialized = initialized.asInstanceOf[js.Any], isPluginsReady = isPluginsReady.asInstanceOf[js.Any], pluginName = pluginName.asInstanceOf[js.Any], pluginsInitializedCallback = pluginsInitializedCallback.asInstanceOf[js.Any], removeHooks = js.Any.fromFunction1(removeHooks), t = t.asInstanceOf[js.Any], updatePlugin = js.Any.fromFunction0(updatePlugin))
+    val __obj = js.Dynamic.literal(addHook = js.Any.fromFunction2(addHook), callOnPluginsReady = js.Any.fromFunction1(callOnPluginsReady), clearHooks = js.Any.fromFunction0(clearHooks), destroy = js.Any.fromFunction0(destroy), disablePlugin = js.Any.fromFunction0(disablePlugin), enablePlugin = js.Any.fromFunction0(enablePlugin), enabled = enabled.asInstanceOf[js.Any], hot = hot.asInstanceOf[js.Any], init = js.Any.fromFunction0(init), initialized = initialized.asInstanceOf[js.Any], isPluginsReady = isPluginsReady.asInstanceOf[js.Any], pluginName = pluginName.asInstanceOf[js.Any], pluginsInitializedCallback = pluginsInitializedCallback.asInstanceOf[js.Any], removeHooks = js.Any.fromFunction1(removeHooks), updatePlugin = js.Any.fromFunction0(updatePlugin))
     __obj.asInstanceOf[Base]
   }
   
@@ -124,9 +121,6 @@ object Base {
     
     @scala.inline
     def setRemoveHooks(value: String => Unit): Self = this.set("removeHooks", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setT(value: RecordTranslator): Self = this.set("t", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUpdatePlugin(value: () => Unit): Self = this.set("updatePlugin", js.Any.fromFunction0(value))

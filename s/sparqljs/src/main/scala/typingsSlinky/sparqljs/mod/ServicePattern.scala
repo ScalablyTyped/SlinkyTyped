@@ -5,16 +5,16 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.sparqljs.mod.Pattern because Already inherited */ @js.native
+@js.native
 trait ServicePattern extends BlockPattern {
   
   var name: IriTerm = js.native
   
+  var patterns: js.Array[Pattern] = js.native
+  
   var silent: Boolean = js.native
   
-  @JSName("type")
-  var type_ServicePattern: service = js.native
+  var `type`: service = js.native
 }
 object ServicePattern {
   
@@ -42,6 +42,12 @@ object ServicePattern {
     
     @scala.inline
     def setName(value: IriTerm): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPatternsVarargs(value: Pattern*): Self = this.set("patterns", js.Array(value :_*))
+    
+    @scala.inline
+    def setPatterns(value: js.Array[Pattern]): Self = this.set("patterns", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])

@@ -9,6 +9,9 @@ trait DescribeQueryDefinitionsResponse extends js.Object {
   
   var nextToken: js.UndefOr[NextToken] = js.native
   
+  /**
+    * The list of query definitions that match your request.
+    */
   var queryDefinitions: js.UndefOr[QueryDefinitionList] = js.native
 }
 object DescribeQueryDefinitionsResponse {

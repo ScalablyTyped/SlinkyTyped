@@ -16,14 +16,18 @@ package object mod {
     scala.Boolean
   ]
   
-  type FallbackLng = java.lang.String | js.Array[java.lang.String] | typingsSlinky.i18next.mod.FallbackLngObjList
+  type FallbackLng = java.lang.String | js.Array[java.lang.String] | typingsSlinky.i18next.mod.FallbackLngObjList | (js.Function1[
+    /* code */ java.lang.String, 
+    java.lang.String | js.Array[java.lang.String] | typingsSlinky.i18next.mod.FallbackLngObjList
+  ])
   
   type FallbackLngObjList = org.scalablytyped.runtime.StringDictionary[js.Array[java.lang.String]]
   
-  type FormatFunction = js.Function3[
+  type FormatFunction = js.Function4[
     /* value */ js.Any, 
     /* format */ js.UndefOr[java.lang.String], 
     /* lng */ js.UndefOr[java.lang.String], 
+    /* options */ js.UndefOr[typingsSlinky.i18next.anon.InterpolationOptionskeyst], 
     java.lang.String
   ]
   

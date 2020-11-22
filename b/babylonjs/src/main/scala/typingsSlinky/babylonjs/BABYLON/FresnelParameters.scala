@@ -15,6 +15,13 @@ trait FresnelParameters extends js.Object {
   var bias: Double = js.native
   
   /**
+    * Determines equality between FresnelParameters objects
+    * @param otherFresnelParameters defines the second operand
+    * @returns true if the power, bias, leftColor, rightColor and isEnabled values are equal to the given ones
+    */
+  def equals(otherFresnelParameters: DeepImmutable[FresnelParameters]): Boolean = js.native
+  
+  /**
     * Define if the fresnel effect is enable or not.
     */
   def isEnabled: Boolean = js.native
@@ -39,5 +46,5 @@ trait FresnelParameters extends js.Object {
     * Serializes the current fresnel parameters to a JSON representation.
     * @return the JSON serialization
     */
-  def serialize(): js.Any = js.native
+  def serialize(): IFresnelParametersSerialized = js.native
 }

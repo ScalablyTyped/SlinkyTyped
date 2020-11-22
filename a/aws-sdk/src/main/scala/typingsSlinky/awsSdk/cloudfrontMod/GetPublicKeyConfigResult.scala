@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetPublicKeyConfigResult extends js.Object {
   
   /**
-    * The current version of the public key configuration. For example: E2QWRUHAPOMQZL.
+    * The identifier for this version of the public key configuration.
     */
   var ETag: js.UndefOr[String] = js.native
   
   /**
-    * Return the result for the public key configuration.
+    * A public key configuration.
     */
   var PublicKeyConfig: js.UndefOr[typingsSlinky.awsSdk.cloudfrontMod.PublicKeyConfig] = js.native
 }

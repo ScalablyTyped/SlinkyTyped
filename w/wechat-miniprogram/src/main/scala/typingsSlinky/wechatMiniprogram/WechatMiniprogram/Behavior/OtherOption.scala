@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait OtherOption extends js.Object {
   
-  var behaviors: js.Array[String] = js.native
+  var behaviors: js.Array[BehaviorIdentifier] = js.native
   
   var definitionFilter: js.UndefOr[typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component.DefinitionFilter] = js.native
   
@@ -28,7 +28,7 @@ object OtherOption {
   
   @scala.inline
   def apply(
-    behaviors: js.Array[String],
+    behaviors: js.Array[BehaviorIdentifier],
     observers: Record[String, js.Function1[/* repeated */ _, _]],
     relations: StringDictionary[RelationOption]
   ): OtherOption = {
@@ -52,10 +52,10 @@ object OtherOption {
     }
     
     @scala.inline
-    def setBehaviorsVarargs(value: String*): Self = this.set("behaviors", js.Array(value :_*))
+    def setBehaviorsVarargs(value: BehaviorIdentifier*): Self = this.set("behaviors", js.Array(value :_*))
     
     @scala.inline
-    def setBehaviors(value: js.Array[String]): Self = this.set("behaviors", value.asInstanceOf[js.Any])
+    def setBehaviors(value: js.Array[BehaviorIdentifier]): Self = this.set("behaviors", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setObservers(value: Record[String, js.Function1[/* repeated */ _, _]]): Self = this.set("observers", value.asInstanceOf[js.Any])

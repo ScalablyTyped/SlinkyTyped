@@ -15,7 +15,7 @@ trait InternalHooks extends js.Object {
   
   def registerField(entity: FieldEntity): js.Function0[Unit] = js.native
   
-  def setCallbacks(callbacks: Callbacks): Unit = js.native
+  def setCallbacks(callbacks: Callbacks[_]): Unit = js.native
   
   def setInitialValues(values: Store, init: Boolean): Unit = js.native
   

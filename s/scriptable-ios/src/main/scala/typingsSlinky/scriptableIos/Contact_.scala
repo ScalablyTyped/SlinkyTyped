@@ -220,7 +220,7 @@ trait Contact_ extends js.Object {
   var isURLAddressesAvailable: Boolean = js.native
   
   /**
-    * _The contact's job title._
+    * _The contacts job title._
     * @see https://docs.scriptable.app/contact/#jobtitle
     */
   var jobTitle: String = js.native
@@ -246,7 +246,7 @@ trait Contact_ extends js.Object {
   /**
     * _Note for the contact._
     *
-    * For security reasons, a contact's notes cannot be accessed in Siri, the Shortcuts app and in a notification.
+    * For security reasons, a contacts notes cannot be accessed in Siri, the Shortcuts app and in a notification.
     * @see https://docs.scriptable.app/contact/#note
     */
   var note: String = js.native
@@ -293,7 +293,7 @@ trait Contact_ extends js.Object {
     *       "country": "United States of America"
     *     }
     *
-    * The identifier uniquely identifies the phone number on this device. The label is a description of the phone number and the value holds the phone number itself.
+    * The identifier uniquely identifies the postal address on this device. The label is a description of the postal address.
     *
     * When updating this property, you must set the entire array of postal addresses that you would like to store on the contact. The "identifier" key is optional.
     * @see https://docs.scriptable.app/contact/#postaladdresses

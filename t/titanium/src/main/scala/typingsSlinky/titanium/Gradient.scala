@@ -23,7 +23,7 @@ trait Gradient extends js.Object {
   /**
     * An array of colors, as a color name or hex triplet.
     */
-  var colors: js.UndefOr[js.Array[GradientColorRef | java.lang.String]] = js.native
+  var colors: js.UndefOr[js.Array[GradientColorRef | String]] = js.native
   
   /**
     * End point for the gradient.
@@ -48,7 +48,7 @@ trait Gradient extends js.Object {
   /**
     * Type of gradient, either 'linear' or 'radial'.
     */
-  var `type`: js.UndefOr[java.lang.String] = js.native
+  var `type`: js.UndefOr[String] = js.native
 }
 object Gradient {
   
@@ -68,7 +68,7 @@ object Gradient {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -86,10 +86,10 @@ object Gradient {
     def deleteBackfillStart: Self = this.set("backfillStart", js.undefined)
     
     @scala.inline
-    def setColorsVarargs(value: (GradientColorRef | java.lang.String)*): Self = this.set("colors", js.Array(value :_*))
+    def setColorsVarargs(value: (GradientColorRef | String)*): Self = this.set("colors", js.Array(value :_*))
     
     @scala.inline
-    def setColors(value: js.Array[GradientColorRef | java.lang.String]): Self = this.set("colors", value.asInstanceOf[js.Any])
+    def setColors(value: js.Array[GradientColorRef | String]): Self = this.set("colors", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColors: Self = this.set("colors", js.undefined)
@@ -119,7 +119,7 @@ object Gradient {
     def deleteStartRadius: Self = this.set("startRadius", js.undefined)
     
     @scala.inline
-    def setType(value: java.lang.String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)

@@ -1,15 +1,16 @@
 package typingsSlinky.authmosphere
 
-import typingsSlinky.authmosphere.anon.Accesstoken
 import typingsSlinky.authmosphere.loggerMod.Logger
 import typingsSlinky.authmosphere.oauthconfigMod.CredentialsClientConfig
 import typingsSlinky.authmosphere.oauthconfigMod.CredentialsUserClientConfig
 import typingsSlinky.authmosphere.oauthconfigMod.CredentialsUserConfig
 import typingsSlinky.authmosphere.oauthconfigMod.OAuthConfig
+import typingsSlinky.authmosphere.tokenMod.Token
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -60,11 +61,13 @@ object utilsMod extends js.Object {
   
   def isAuthorizationCodeGrantConfig(config: OAuthConfig): /* is authmosphere.authmosphere/lib/src/types/OAuthConfig.AuthorizationCodeGrantConfig */ Boolean = js.native
   
-  def isCredentialsClientConfig(options: js.Any): /* is authmosphere.authmosphere/lib/src/types/OAuthConfig.CredentialsClientConfig */ Boolean = js.native
+  def isCredentialsClientConfig(options: Record[String, _]): /* is authmosphere.authmosphere/lib/src/types/OAuthConfig.CredentialsClientConfig */ Boolean = js.native
   
-  def isCredentialsDirConfig(options: js.Any): /* is authmosphere.authmosphere/lib/src/types/OAuthConfig.CredentialsDirConfig */ Boolean = js.native
+  def isCredentialsDirConfig(options: Record[String, _]): /* is authmosphere.authmosphere/lib/src/types/OAuthConfig.CredentialsDirConfig */ Boolean = js.native
   
-  def isPasswordGrantNoCredentialsDir(options: js.Any): /* is authmosphere.authmosphere/lib/src/types/OAuthConfig.CredentialsUserClientConfig */ Boolean = js.native
+  def isCredentialsUserConfig(options: Record[String, _]): /* is authmosphere.authmosphere/lib/src/types/OAuthConfig.CredentialsUserConfig */ Boolean = js.native
+  
+  def isPasswordGrantNoCredentialsDir(options: Record[String, _]): /* is authmosphere.authmosphere/lib/src/types/OAuthConfig.CredentialsUserClientConfig */ Boolean = js.native
   
   def isRefreshGrantConfig(config: OAuthConfig): /* is authmosphere.authmosphere/lib/src/types/OAuthConfig.RefreshGrantConfig */ Boolean = js.native
   
@@ -79,7 +82,7 @@ object utilsMod extends js.Object {
     * @param req
     * @returns {function(any): undefined}
     */
-  def setTokeninfo(req: Request_[ParamsDictionary, _, _, Query]): js.Function1[/* data */ Accesstoken, Unit] = js.native
+  def setTokeninfo(req: Request_[ParamsDictionary, _, _, Query]): js.Function1[/* data */ Token[Record[String, _]], Unit] = js.native
   
   /**
     * Validates options object and throws TypeError if mandatory options is not specified.

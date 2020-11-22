@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateMeshInput extends js.Object {
   
   /**
-    * Unique, case-sensitive identifier that you provide to ensure the idempotency of the
-  request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
+    * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
     */
   var clientToken: js.UndefOr[String] = js.native
   

@@ -36,6 +36,16 @@ trait UpdateIndexRequest extends js.Object {
     * A new IAM role that gives Amazon Kendra permission to access your Amazon CloudWatch logs.
     */
   var RoleArn: js.UndefOr[typingsSlinky.awsSdk.kendraMod.RoleArn] = js.native
+  
+  /**
+    * The user user token context policy.
+    */
+  var UserContextPolicy: js.UndefOr[typingsSlinky.awsSdk.kendraMod.UserContextPolicy] = js.native
+  
+  /**
+    * The user token configuration.
+    */
+  var UserTokenConfigurations: js.UndefOr[UserTokenConfigurationList] = js.native
 }
 object UpdateIndexRequest {
   
@@ -95,5 +105,20 @@ object UpdateIndexRequest {
     
     @scala.inline
     def deleteRoleArn: Self = this.set("RoleArn", js.undefined)
+    
+    @scala.inline
+    def setUserContextPolicy(value: UserContextPolicy): Self = this.set("UserContextPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserContextPolicy: Self = this.set("UserContextPolicy", js.undefined)
+    
+    @scala.inline
+    def setUserTokenConfigurationsVarargs(value: UserTokenConfiguration*): Self = this.set("UserTokenConfigurations", js.Array(value :_*))
+    
+    @scala.inline
+    def setUserTokenConfigurations(value: UserTokenConfigurationList): Self = this.set("UserTokenConfigurations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserTokenConfigurations: Self = this.set("UserTokenConfigurations", js.undefined)
   }
 }

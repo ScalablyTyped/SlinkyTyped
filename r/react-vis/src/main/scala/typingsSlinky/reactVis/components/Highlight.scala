@@ -6,9 +6,11 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactVis.mod.AnimationParam
+import typingsSlinky.reactVis.mod.HighlightArea
 import typingsSlinky.reactVis.mod.HighlightProps
 import typingsSlinky.reactVis.mod.LineMarkSeriesPoint
 import typingsSlinky.reactVis.mod.RVNearestXData
+import typingsSlinky.reactVis.mod.RVNearestXYData
 import typingsSlinky.reactVis.mod.Scale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -91,6 +93,9 @@ object Highlight {
     def data(value: js.Array[LineMarkSeriesPoint | js.Array[_]]): this.type = set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def drag(value: Boolean): this.type = set("drag", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def enableX(value: Boolean): this.type = set("enableX", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -153,10 +158,40 @@ object Highlight {
     def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def highlightHeight(value: Double): this.type = set("highlightHeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def highlightWidth(value: Double): this.type = set("highlightWidth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def highlightX(value: String | Double): this.type = set("highlightX", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def highlightY(value: String | Double): this.type = set("highlightY", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def onBrush(value: /* area */ HighlightArea | Null => Unit): this.type = set("onBrush", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onBrushEnd(value: /* area */ HighlightArea | Null => Unit): this.type = set("onBrushEnd", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onBrushStart(value: /* area */ HighlightArea | Null => Unit): this.type = set("onBrushStart", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onDrag(value: /* area */ HighlightArea | Null => Unit): this.type = set("onDrag", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onDragEnd(value: /* area */ HighlightArea | Null => Unit): this.type = set("onDragEnd", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onDragStart(value: /* area */ HighlightArea | Null => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def onNearestX(value: (LineMarkSeriesPoint, /* data */ RVNearestXData[LineMarkSeriesPoint]) => Unit): this.type = set("onNearestX", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onNearestXY(value: (LineMarkSeriesPoint, /* data */ RVNearestXData[LineMarkSeriesPoint]) => Unit): this.type = set("onNearestXY", js.Any.fromFunction2(value))
+    def onNearestXY(value: (LineMarkSeriesPoint, /* data */ RVNearestXYData[LineMarkSeriesPoint]) => Unit): this.type = set("onNearestXY", js.Any.fromFunction2(value))
     
     @scala.inline
     def onSeriesClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onSeriesClick", js.Any.fromFunction1(value))
@@ -320,20 +355,5 @@ object Highlight {
   
   def withProps(p: HighlightProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply(
-    highlightHeight: Double,
-    highlightWidth: Double,
-    highlightX: String | Double,
-    highlightY: String | Double,
-    onBrush: js.Any => js.Any,
-    onBrushEnd: js.Any => js.Any,
-    onBrushStart: js.Any => js.Any,
-    onDrag: js.Any => js.Any,
-    onDragEnd: js.Any => js.Any,
-    onDragStart: js.Any => js.Any
-  ): Builder = {
-    val __props = js.Dynamic.literal(highlightHeight = highlightHeight.asInstanceOf[js.Any], highlightWidth = highlightWidth.asInstanceOf[js.Any], highlightX = highlightX.asInstanceOf[js.Any], highlightY = highlightY.asInstanceOf[js.Any], onBrush = js.Any.fromFunction1(onBrush), onBrushEnd = js.Any.fromFunction1(onBrushEnd), onBrushStart = js.Any.fromFunction1(onBrushStart), onDrag = js.Any.fromFunction1(onDrag), onDragEnd = js.Any.fromFunction1(onDragEnd), onDragStart = js.Any.fromFunction1(onDragStart))
-    new Builder(js.Array(this.component, __props.asInstanceOf[HighlightProps]))
-  }
+  implicit def make(companion: Highlight.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

@@ -50,6 +50,8 @@ trait HeadingProps extends js.Object {
   
   var children: js.UndefOr[ReactElement] = js.native
   
+  var className: js.UndefOr[String] = js.native
+  
   var color: js.UndefOr[Responsive[String]] = js.native
   
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/display */
@@ -284,6 +286,12 @@ object HeadingProps {
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
+    
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
     def setColorVarargs(value: String*): Self = this.set("color", js.Array(value :_*))

@@ -1,6 +1,6 @@
 package typingsSlinky.expoConfigureSplashScreen
 
-import typingsSlinky.expoConfigureSplashScreen.anon.PartialStatusBarOptions
+import typingsSlinky.expoConfigureSplashScreen.anon.`6`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object infoPlistMod extends js.Object {
   
   def default(iosProjectPath: String): js.Promise[Unit] = js.native
-  def default(iosProjectPath: String, hasStatusBarHiddenStatusBarStyle: PartialStatusBarOptions): js.Promise[Unit] = js.native
+  def default(iosProjectPath: String, config: `6`): js.Promise[Unit] = js.native
 }

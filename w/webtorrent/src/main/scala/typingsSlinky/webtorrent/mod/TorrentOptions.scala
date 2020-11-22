@@ -14,9 +14,9 @@ trait TorrentOptions extends js.Object {
   
   var maxWebConns: js.UndefOr[Double] = js.native
   
-  var name: js.UndefOr[String] = js.native
-  
   var path: js.UndefOr[String] = js.native
+  
+  var `private`: js.UndefOr[Boolean] = js.native
   
   var store: js.UndefOr[js.Function2[/* chunkLength */ Double, /* storeOpts */ Files, _]] = js.native
 }
@@ -65,16 +65,16 @@ object TorrentOptions {
     def deleteMaxWebConns: Self = this.set("maxWebConns", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteName: Self = this.set("name", js.undefined)
-    
-    @scala.inline
     def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)
+    
+    @scala.inline
+    def setPrivate(value: Boolean): Self = this.set("private", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrivate: Self = this.set("private", js.undefined)
     
     @scala.inline
     def setStore(value: (/* chunkLength */ Double, /* storeOpts */ Files) => _): Self = this.set("store", js.Any.fromFunction2(value))

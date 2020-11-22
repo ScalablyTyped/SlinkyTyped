@@ -1,7 +1,7 @@
 
 # Scala.js typings for bull-arena
 
-Typings are for version 2.6
+Typings are for version 3.0
 
 ## Library description:
 An interactive UI dashboard for Bee Queue

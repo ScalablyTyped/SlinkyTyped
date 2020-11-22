@@ -6,6 +6,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("three", "CatmullRomCurve3")
 @js.native
+/**
+	 * @param [points=[]]
+	 * @param [closed=false]
+	 * @param [curveType='centripetal']
+	 * @param [tension=0.5]
+	 */
 class CatmullRomCurve3 ()
   extends typingsSlinky.three.curvesMod.CatmullRomCurve3 {
   def this(points: js.Array[typingsSlinky.three.vector3Mod.Vector3]) = this()

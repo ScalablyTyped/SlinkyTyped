@@ -13,13 +13,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxHtmlEditorMention extends js.Object {
   
-  /** @name dxHtmlEditorMention.dataSource */
+  /**
+    * [descr:dxHtmlEditorMention.dataSource]
+    */
   var dataSource: js.UndefOr[js.Array[String] | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxHtmlEditorMention.displayExpr */
+  /**
+    * [descr:dxHtmlEditorMention.displayExpr]
+    */
   var displayExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String])] = js.native
   
-  /** @name dxHtmlEditorMention.itemTemplate */
+  /**
+    * [descr:dxHtmlEditorMention.itemTemplate]
+    */
   var itemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -29,24 +35,36 @@ trait dxHtmlEditorMention extends js.Object {
     ])
   ] = js.native
   
-  /** @name dxHtmlEditorMention.marker */
+  /**
+    * [descr:dxHtmlEditorMention.marker]
+    */
   var marker: js.UndefOr[String] = js.native
   
-  /** @name dxHtmlEditorMention.minSearchLength */
+  /**
+    * [descr:dxHtmlEditorMention.minSearchLength]
+    */
   var minSearchLength: js.UndefOr[Double] = js.native
   
-  /** @name dxHtmlEditorMention.searchExpr */
+  /**
+    * [descr:dxHtmlEditorMention.searchExpr]
+    */
   var searchExpr: js.UndefOr[String | js.Function | (js.Array[String | js.Function])] = js.native
   
-  /** @name dxHtmlEditorMention.searchTimeout */
+  /**
+    * [descr:dxHtmlEditorMention.searchTimeout]
+    */
   var searchTimeout: js.UndefOr[Double] = js.native
   
-  /** @name dxHtmlEditorMention.template */
+  /**
+    * [descr:dxHtmlEditorMention.template]
+    */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* mentionData */ Id, /* contentElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxHtmlEditorMention.valueExpr */
+  /**
+    * [descr:dxHtmlEditorMention.valueExpr]
+    */
   var valueExpr: js.UndefOr[String | js.Function] = js.native
 }
 object dxHtmlEditorMention {

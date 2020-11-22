@@ -9,8 +9,6 @@ trait Tree extends js.Object {
   
   var author: EmailName = js.native
   
-  var comment_count: Double = js.native
-  
   var committer: EmailName = js.native
   
   var message: String = js.native
@@ -26,14 +24,13 @@ object Tree {
   @scala.inline
   def apply(
     author: EmailName,
-    comment_count: Double,
     committer: EmailName,
     message: String,
     tree: ShaUrl,
     url: String,
     verification: Payload
   ): Tree = {
-    val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], comment_count = comment_count.asInstanceOf[js.Any], committer = committer.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], tree = tree.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], verification = verification.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], committer = committer.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], tree = tree.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], verification = verification.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tree]
   }
   
@@ -54,9 +51,6 @@ object Tree {
     
     @scala.inline
     def setAuthor(value: EmailName): Self = this.set("author", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setComment_count(value: Double): Self = this.set("comment_count", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCommitter(value: EmailName): Self = this.set("committer", value.asInstanceOf[js.Any])

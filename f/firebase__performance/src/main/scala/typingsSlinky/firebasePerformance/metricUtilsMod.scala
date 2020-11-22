@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object metricUtilsMod extends js.Object {
   
+  def convertMetricValueToInteger(providedValue: Double): Double = js.native
+  
   def isValidMetricName(name: String): Boolean = js.native
   def isValidMetricName(name: String, traceName: String): Boolean = js.native
 }

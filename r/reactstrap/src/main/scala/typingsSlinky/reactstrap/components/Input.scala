@@ -3,8 +3,10 @@ package typingsSlinky.reactstrap.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
+import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
@@ -23,10 +25,14 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -37,8 +43,11 @@ import typingsSlinky.react.reactStrings.date
 import typingsSlinky.react.reactStrings.decimal
 import typingsSlinky.react.reactStrings.descending
 import typingsSlinky.react.reactStrings.dialog
+import typingsSlinky.react.reactStrings.done
 import typingsSlinky.react.reactStrings.email
+import typingsSlinky.react.reactStrings.enter
 import typingsSlinky.react.reactStrings.execute
+import typingsSlinky.react.reactStrings.go
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
@@ -50,6 +59,7 @@ import typingsSlinky.react.reactStrings.location
 import typingsSlinky.react.reactStrings.menu
 import typingsSlinky.react.reactStrings.mixed
 import typingsSlinky.react.reactStrings.move
+import typingsSlinky.react.reactStrings.next
 import typingsSlinky.react.reactStrings.no
 import typingsSlinky.react.reactStrings.none
 import typingsSlinky.react.reactStrings.numeric
@@ -59,8 +69,10 @@ import typingsSlinky.react.reactStrings.other
 import typingsSlinky.react.reactStrings.page
 import typingsSlinky.react.reactStrings.polite
 import typingsSlinky.react.reactStrings.popup
+import typingsSlinky.react.reactStrings.previous
 import typingsSlinky.react.reactStrings.removals
 import typingsSlinky.react.reactStrings.search
+import typingsSlinky.react.reactStrings.send
 import typingsSlinky.react.reactStrings.spelling
 import typingsSlinky.react.reactStrings.step
 import typingsSlinky.react.reactStrings.tel
@@ -81,14 +93,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object Input {
   
-  @JSImport("reactstrap", "Input")
+  @JSImport("reactstrap/es", "Input")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.reactstrap.mod.Input[T]] {
+       with StBuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.reactstrap.mod.Input] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -211,7 +223,9 @@ object Input {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -316,6 +330,9 @@ object Input {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -346,13 +363,13 @@ object Input {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[HTMLInputElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefRefObject(value: ReactRef[HTMLInputElement | HTMLTextAreaElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    def innerRefFunction1(value: /* instance */ HTMLInputElement | HTMLTextAreaElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: Ref[HTMLInputElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: Ref[HTMLInputElement | HTMLTextAreaElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefNull: this.type = set("innerRef", null)
@@ -691,9 +708,6 @@ object Input {
     def src(value: String): this.type = set("src", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def state(value: String): this.type = set("state", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def step(value: Double | String): this.type = set("step", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -715,7 +729,7 @@ object Input {
     def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tag(value: String | ReactType[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tag(value: ReactElement): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -748,13 +762,7 @@ object Input {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: InputProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply[T](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[InputProps]))
-  }
-  
-  implicit def make[T](companion: Input.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: Input.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

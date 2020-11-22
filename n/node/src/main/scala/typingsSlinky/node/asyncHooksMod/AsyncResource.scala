@@ -30,6 +30,12 @@ class AsyncResource protected () extends js.Object {
   def asyncId(): Double = js.native
   
   /**
+    * Binds the given function to execute to this `AsyncResource`'s scope.
+    * @param fn The function to bind to the current `AsyncResource`.
+    */
+  def bind[Func /* <: js.Function1[/* repeated */ js.Any, _] */](fn: Func): Func with typingsSlinky.node.anon.AsyncResource = js.native
+  
+  /**
     * Call AsyncHooks destroy callbacks.
     */
   def emitDestroy(): Unit = js.native
@@ -56,4 +62,17 @@ class AsyncResource protected () extends js.Object {
     * @return the trigger ID for this AsyncResource instance.
     */
   def triggerAsyncId(): Double = js.native
+}
+/* static members */
+@JSImport("async_hooks", "AsyncResource")
+@js.native
+object AsyncResource extends js.Object {
+  
+  /**
+    * Binds the given function to the current execution context.
+    * @param fn The function to bind to the current execution context.
+    * @param type An optional name to associate with the underlying `AsyncResource`.
+    */
+  def bind[Func /* <: js.Function1[/* repeated */ js.Any, _] */](fn: Func): Func with typingsSlinky.node.anon.AsyncResource = js.native
+  def bind[Func /* <: js.Function1[/* repeated */ js.Any, _] */](fn: Func, `type`: String): Func with typingsSlinky.node.anon.AsyncResource = js.native
 }

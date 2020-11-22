@@ -30,6 +30,9 @@ object axiosStrings {
   def POST: POST = "POST".asInstanceOf[POST]
   
   @scala.inline
+  def PURGE: PURGE = "PURGE".asInstanceOf[PURGE]
+  
+  @scala.inline
   def PUT: PUT = "PUT".asInstanceOf[PUT]
   
   @scala.inline
@@ -69,6 +72,9 @@ object axiosStrings {
   def post_ : post_ = "post".asInstanceOf[post_]
   
   @scala.inline
+  def purge_ : purge_ = "purge".asInstanceOf[purge_]
+  
+  @scala.inline
   def put_ : put_ = "put".asInstanceOf[put_]
   
   @scala.inline
@@ -100,6 +106,9 @@ object axiosStrings {
   
   @js.native
   sealed trait POST extends Method
+  
+  @js.native
+  sealed trait PURGE extends Method
   
   @js.native
   sealed trait PUT extends Method
@@ -139,6 +148,9 @@ object axiosStrings {
   
   @js.native
   sealed trait post_ extends Method
+  
+  @js.native
+  sealed trait purge_ extends Method
   
   @js.native
   sealed trait put_ extends Method

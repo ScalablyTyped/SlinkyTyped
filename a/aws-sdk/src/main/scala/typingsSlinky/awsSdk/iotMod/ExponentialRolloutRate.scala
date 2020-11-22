@@ -13,12 +13,12 @@ trait ExponentialRolloutRate extends js.Object {
   var baseRatePerMinute: RolloutRatePerMinute = js.native
   
   /**
-    * The exponential factor to increase the rate of rollout for a job.
+    * The exponential factor to increase the rate of rollout for a job. AWS IoT supports up to one digit after the decimal (for example, 1.5, but not 1.55).
     */
   var incrementFactor: IncrementFactor = js.native
   
   /**
-    * The criteria to initiate the increase in rate of rollout for a job. AWS IoT supports up to one digit after the decimal (for example, 1.5, but not 1.55).
+    * The criteria to initiate the increase in rate of rollout for a job.
     */
   var rateIncreaseCriteria: RateIncreaseCriteria = js.native
 }

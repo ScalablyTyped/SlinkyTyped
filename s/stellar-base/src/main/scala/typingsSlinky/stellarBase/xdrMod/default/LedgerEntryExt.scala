@@ -19,6 +19,8 @@ object LedgerEntryExt extends js.Object {
   
   def `0`(): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryExt = js.native
   
+  def `1`(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryExtensionV1): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryExt = js.native
+  
   def fromXDR(input: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryExt = js.native
   @JSName("fromXDR")
   def fromXDR_base64(input: String, format: base64): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryExt = js.native
@@ -32,6 +34,14 @@ object LedgerEntryExt extends js.Object {
   def read(io: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryExt = js.native
   
   def toXDR(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryExt): Buffer = js.native
+  
+  def validateXDR(input: Buffer): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_base64(input: String, format: base64): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_hex(input: String, format: hex): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_raw(input: Buffer, format: raw): Boolean = js.native
   
   def write(value: typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryExt, io: Buffer): Unit = js.native
 }

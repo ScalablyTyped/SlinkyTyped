@@ -8,9 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SetSubnetsOutput extends js.Object {
   
   /**
-    * Information about the subnet and Availability Zone.
+    * Information about the subnets.
     */
   var AvailabilityZones: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.AvailabilityZones] = js.native
+  
+  /**
+    * [Network Load Balancers] The IP address type.
+    */
+  var IpAddressType: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.IpAddressType] = js.native
 }
 object SetSubnetsOutput {
   
@@ -43,5 +48,11 @@ object SetSubnetsOutput {
     
     @scala.inline
     def deleteAvailabilityZones: Self = this.set("AvailabilityZones", js.undefined)
+    
+    @scala.inline
+    def setIpAddressType(value: IpAddressType): Self = this.set("IpAddressType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIpAddressType: Self = this.set("IpAddressType", js.undefined)
   }
 }

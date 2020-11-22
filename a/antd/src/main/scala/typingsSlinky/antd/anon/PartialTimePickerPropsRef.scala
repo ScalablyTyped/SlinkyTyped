@@ -7,8 +7,13 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -40,14 +45,15 @@ import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.generatePickerMod.PickerLocale
-import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.moment.mod.Moment
 import typingsSlinky.rcPicker.dateBodyMod.DateRender
+import typingsSlinky.rcPicker.interfaceMod.CustomFormat
 import typingsSlinky.rcPicker.interfaceMod.OnPanelChange
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.monthBodyMod.MonthCellRender
@@ -55,10 +61,8 @@ import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
 import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
-import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.MutableRefObject
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -141,7 +145,9 @@ trait PartialTimePickerPropsRef extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -203,7 +209,7 @@ trait PartialTimePickerPropsRef extends js.Object {
   
   var dropdownClassName: js.UndefOr[String] = js.native
   
-  var format: js.UndefOr[String | js.Array[String]] = js.native
+  var format: js.UndefOr[String | CustomFormat[Moment] | (js.Array[String | CustomFormat[Moment]])] = js.native
   
   var getPopupContainer: js.UndefOr[js.Function1[/* node */ HTMLElement, HTMLElement]] = js.native
   
@@ -215,7 +221,7 @@ trait PartialTimePickerPropsRef extends js.Object {
   
   var inputReadOnly: js.UndefOr[Boolean] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[typingsSlinky.react.mod.Key | Null] = js.native
   
   var locale: js.UndefOr[PickerLocale] = js.native
   
@@ -267,7 +273,7 @@ trait PartialTimePickerPropsRef extends js.Object {
   
   var prefixCls: js.UndefOr[String] = js.native
   
-  var ref: js.UndefOr[Ref[_]] = js.native
+  var ref: js.UndefOr[typingsSlinky.react.mod.Ref[_]] = js.native
   
   var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, ReactElement]] = js.native
   
@@ -543,7 +549,9 @@ object PartialTimePickerPropsRef {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -732,10 +740,13 @@ object PartialTimePickerPropsRef {
     def deleteDropdownClassName: Self = this.set("dropdownClassName", js.undefined)
     
     @scala.inline
-    def setFormatVarargs(value: String*): Self = this.set("format", js.Array(value :_*))
+    def setFormatVarargs(value: (String | CustomFormat[Moment])*): Self = this.set("format", js.Array(value :_*))
     
     @scala.inline
-    def setFormat(value: String | js.Array[String]): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setFormatFunction1(value: Moment => String): Self = this.set("format", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setFormat(value: String | CustomFormat[Moment] | (js.Array[String | CustomFormat[Moment]])): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
@@ -771,10 +782,13 @@ object PartialTimePickerPropsRef {
     def deleteInputReadOnly: Self = this.set("inputReadOnly", js.undefined)
     
     @scala.inline
-    def setKey(value: Key): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setKey(value: typingsSlinky.react.mod.Key): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setLocale(value: PickerLocale): Self = this.set("locale", value.asInstanceOf[js.Any])
@@ -933,7 +947,7 @@ object PartialTimePickerPropsRef {
     def setRefFunction1(value: /* instance */ _ | Null => Unit): Self = this.set("ref", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setRef(value: Ref[_]): Self = this.set("ref", value.asInstanceOf[js.Any])
+    def setRef(value: typingsSlinky.react.mod.Ref[_]): Self = this.set("ref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRef: Self = this.set("ref", js.undefined)

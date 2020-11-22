@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.tableTableMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -223,7 +222,7 @@ object StrictTableProps {
     
     @scala.inline
     def setFooterRowFunction3(
-      value: (/* component */ ReactType[TableRowProps], TableRowProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, TableRowProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("footerRow", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -237,7 +236,7 @@ object StrictTableProps {
     
     @scala.inline
     def setHeaderRowFunction3(
-      value: (/* component */ ReactType[TableRowProps], TableRowProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, TableRowProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("headerRow", js.Any.fromFunction3(value))
     
     @scala.inline

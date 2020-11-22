@@ -271,6 +271,9 @@ object cytoscapeStrings {
   def hexagon: hexagon = "hexagon".asInstanceOf[hexagon]
   
   @scala.inline
+  def hidden: hidden = "hidden".asInstanceOf[hidden]
+  
+  @scala.inline
   def hollow: hollow = "hollow".asInstanceOf[hollow]
   
   @scala.inline
@@ -823,6 +826,9 @@ object cytoscapeStrings {
   
   @js.native
   sealed trait hexagon extends NodeShape
+  
+  @js.native
+  sealed trait hidden extends js.Object
   
   @js.native
   sealed trait hollow extends ArrowFill

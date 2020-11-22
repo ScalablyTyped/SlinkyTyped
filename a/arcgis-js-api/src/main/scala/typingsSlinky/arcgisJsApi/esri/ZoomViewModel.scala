@@ -27,8 +27,6 @@ trait ZoomViewModel extends Accessor {
     * The current state of the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Zoom-ZoomViewModel.html#state)
-    *
-    * @default disabled
     */
   val state: disabled | ready = js.native
   
@@ -43,8 +41,6 @@ trait ZoomViewModel extends Accessor {
     * Zooms the view in by an LOD factor of 0.5.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Zoom-ZoomViewModel.html#zoomIn)
-    *
-    *
     */
   def zoomIn(): Unit = js.native
   
@@ -52,8 +48,6 @@ trait ZoomViewModel extends Accessor {
     * Zooms the view out by an LOD factor of 2.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Zoom-ZoomViewModel.html#zoomOut)
-    *
-    *
     */
   def zoomOut(): Unit = js.native
 }

@@ -61,8 +61,7 @@ class Router protected () extends js.Object {
     * segments, followed by the parameters for each segment.
     * The fragments are applied to the current URL tree or the one provided  in the `relativeTo`
     * property of the options object, if supplied.
-    * @param navigationExtras Options that control the navigation strategy. This function
-    * only uses properties in `NavigationExtras` that would change the provided URL.
+    * @param navigationExtras Options that control the navigation strategy.
     * @returns The new URL tree.
     *
     * @usageNotes
@@ -100,7 +99,7 @@ class Router protected () extends js.Object {
     * ```
     */
   def createUrlTree(commands: js.Array[_]): UrlTree = js.native
-  def createUrlTree(commands: js.Array[_], navigationExtras: NavigationExtras): UrlTree = js.native
+  def createUrlTree(commands: js.Array[_], navigationExtras: UrlCreationOptions): UrlTree = js.native
   
   var currentNavigation: js.Any = js.native
   
@@ -124,6 +123,9 @@ class Router protected () extends js.Object {
     */
   val events: Observable_[Event] = js.native
   
+  /** Extracts router-related information from a `PopStateEvent`. */
+  var extractLocationChangeInfoFromEvent: js.Any = js.native
+  
   /** The current Navigation object if one exists */
   def getCurrentNavigation(): Navigation | Null = js.native
   
@@ -139,6 +141,12 @@ class Router protected () extends js.Object {
   def isActive(url: UrlTree, exact: Boolean): Boolean = js.native
   
   var isNgZoneEnabled: js.Any = js.native
+  
+  /**
+    * Tracks the previously seen location change from the location subscription so we can compare
+    * the two latest to see if they are duplicates. See setUpLocationChangeListener.
+    */
+  var lastLocationChangeInfo: js.Any = js.native
   
   var lastSuccessfulId: js.Any = js.native
   
@@ -195,8 +203,6 @@ class Router protected () extends js.Object {
     * @param url An absolute path for a defined route. The function does not apply any delta to the
     *     current URL.
     * @param extras An object containing properties that modify the navigation strategy.
-    * The function ignores any properties in the `NavigationExtras` that would change the
-    * provided URL.
     *
     * @returns A Promise that resolves to 'true' when navigation succeeds,
     * to 'false' when navigation fails, or is rejected on error.
@@ -216,9 +222,9 @@ class Router protected () extends js.Object {
     *
     */
   def navigateByUrl(url: String): js.Promise[Boolean] = js.native
-  def navigateByUrl(url: String, extras: NavigationExtras): js.Promise[Boolean] = js.native
+  def navigateByUrl(url: String, extras: NavigationBehaviorOptions): js.Promise[Boolean] = js.native
   def navigateByUrl(url: UrlTree): js.Promise[Boolean] = js.native
-  def navigateByUrl(url: UrlTree, extras: NavigationExtras): js.Promise[Boolean] = js.native
+  def navigateByUrl(url: UrlTree, extras: NavigationBehaviorOptions): js.Promise[Boolean] = js.native
   
   /**
     * True if at least one navigation event has occurred,
@@ -232,7 +238,7 @@ class Router protected () extends js.Object {
   
   var ngModule: js.Any = js.native
   
-  /** @docsNotRequired */
+  /** @nodoc */
   def ngOnDestroy(): Unit = js.native
   
   /**
@@ -314,11 +320,21 @@ class Router protected () extends js.Object {
   var setTransition: js.Any = js.native
   
   /**
-    * Sets up the location change listener.
+    * Sets up the location change listener. This listener detects navigations triggered from outside
+    * the Router (the browser back/forward buttons, for example) and schedules a corresponding Router
+    * navigation so that the correct events, guards, etc. are triggered.
     */
   def setUpLocationChangeListener(): Unit = js.native
   
   var setupNavigations: js.Any = js.native
+  
+  /**
+    * Determines whether two events triggered by the Location subscription are due to the same
+    * navigation. The location subscription can fire two events (popstate and hashchange) for a
+    * single navigation. The second one should be ignored, that is, we should not schedule another
+    * navigation in the Router.
+    */
+  var shouldScheduleNavigation: js.Any = js.native
   
   val transitions: js.Any = js.native
   

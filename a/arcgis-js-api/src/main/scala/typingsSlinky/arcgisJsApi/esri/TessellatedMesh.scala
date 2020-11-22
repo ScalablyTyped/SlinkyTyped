@@ -17,7 +17,7 @@ trait TessellatedMesh extends Object {
   var indices: js.Array[Double] = js.native
   
   /**
-    * The vertices that make up the mesh. Each element is a module:esri/views/2d/layers/BaseLayerViewGL2D#MeshVertex.
+    * The vertices that make up the mesh.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#TessellatedMesh)
     */

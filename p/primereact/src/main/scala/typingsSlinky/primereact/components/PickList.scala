@@ -55,9 +55,6 @@ object PickList {
     def onTargetSelect(value: /* e */ Value => Unit): this.type = set("onTargetSelect", js.Any.fromFunction1(value))
     
     @scala.inline
-    def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def showSourceControls(value: Boolean): this.type = set("showSourceControls", value.asInstanceOf[js.Any])
     
     @scala.inline

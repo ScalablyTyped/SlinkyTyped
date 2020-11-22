@@ -13,7 +13,7 @@ trait AssetHierarchy extends js.Object {
   var id: js.UndefOr[ID] = js.native
   
   /**
-    * The hierarchy name provided in the CreateAssetModel or UpdateAssetModel API.
+    * The hierarchy name provided in the CreateAssetModel or UpdateAssetModel API operation.
     */
   var name: Name = js.native
 }

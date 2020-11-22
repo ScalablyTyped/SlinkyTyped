@@ -12,7 +12,7 @@ trait TemplateLiteral_
      with BaseNode
      with Literal {
   
-  var expressions: js.Array[Expression] = js.native
+  var expressions: js.Array[Expression | TSType] = js.native
   
   var quasis: js.Array[TemplateElement_] = js.native
   
@@ -22,7 +22,11 @@ trait TemplateLiteral_
 object TemplateLiteral_ {
   
   @scala.inline
-  def apply(expressions: js.Array[Expression], quasis: js.Array[TemplateElement_], `type`: TemplateLiteral): TemplateLiteral_ = {
+  def apply(
+    expressions: js.Array[Expression | TSType],
+    quasis: js.Array[TemplateElement_],
+    `type`: TemplateLiteral
+  ): TemplateLiteral_ = {
     val __obj = js.Dynamic.literal(expressions = expressions.asInstanceOf[js.Any], quasis = quasis.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TemplateLiteral_]
@@ -44,10 +48,10 @@ object TemplateLiteral_ {
     }
     
     @scala.inline
-    def setExpressionsVarargs(value: Expression*): Self = this.set("expressions", js.Array(value :_*))
+    def setExpressionsVarargs(value: (Expression | TSType)*): Self = this.set("expressions", js.Array(value :_*))
     
     @scala.inline
-    def setExpressions(value: js.Array[Expression]): Self = this.set("expressions", value.asInstanceOf[js.Any])
+    def setExpressions(value: js.Array[Expression | TSType]): Self = this.set("expressions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setQuasisVarargs(value: TemplateElement_ *): Self = this.set("quasis", js.Array(value :_*))

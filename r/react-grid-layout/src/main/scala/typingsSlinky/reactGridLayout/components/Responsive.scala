@@ -1,15 +1,17 @@
 package typingsSlinky.reactGridLayout.components
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactGridLayout.anon.E
 import typingsSlinky.reactGridLayout.anon.H
 import typingsSlinky.reactGridLayout.mod.Layout
 import typingsSlinky.reactGridLayout.mod.Layouts
+import typingsSlinky.reactGridLayout.mod.ResizeHandle
 import typingsSlinky.reactGridLayout.mod.ResponsiveProps
 import typingsSlinky.reactGridLayout.reactGridLayoutStrings.horizontal
 import typingsSlinky.reactGridLayout.reactGridLayoutStrings.vertical
@@ -53,6 +55,9 @@ object Responsive {
     def droppingItem(value: H): this.type = set("droppingItem", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def isBounded(value: Boolean): this.type = set("isBounded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def isDraggable(value: Boolean): this.type = set("isDraggable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -89,7 +94,7 @@ object Responsive {
     ): this.type = set("onDragStop", js.Any.fromFunction6(value))
     
     @scala.inline
-    def onDrop(value: /* elemParams */ E => Unit): this.type = set("onDrop", js.Any.fromFunction1(value))
+    def onDrop(value: (/* layout */ js.Array[Layout], /* item */ Layout, /* e */ Event) => Unit): this.type = set("onDrop", js.Any.fromFunction3(value))
     
     @scala.inline
     def onLayoutChange(value: (/* currentLayout */ js.Array[Layout], /* allLayouts */ Layouts) => Unit): this.type = set("onLayoutChange", js.Any.fromFunction2(value))
@@ -116,6 +121,21 @@ object Responsive {
     
     @scala.inline
     def preventCollision(value: Boolean): this.type = set("preventCollision", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def resizeHandleReactElement(value: ReactElement): this.type = set("resizeHandle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def resizeHandleFunction1(value: /* resizeHandle */ ResizeHandle => ReactElement): this.type = set("resizeHandle", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def resizeHandle(value: ReactElement | (js.Function1[/* resizeHandle */ ResizeHandle, ReactElement])): this.type = set("resizeHandle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def resizeHandlesVarargs(value: ResizeHandle*): this.type = set("resizeHandles", js.Array(value :_*))
+    
+    @scala.inline
+    def resizeHandles(value: js.Array[ResizeHandle]): this.type = set("resizeHandles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rowHeight(value: Double): this.type = set("rowHeight", value.asInstanceOf[js.Any])

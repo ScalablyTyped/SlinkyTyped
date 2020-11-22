@@ -545,7 +545,7 @@ trait PlotFlagsOptions extends js.Object {
     *
     * This option is set by default to 1 if data sorting is enabled.
     */
-  var pointRange: js.UndefOr[Double] = js.native
+  var pointRange: js.UndefOr[Double | Null] = js.native
   
   /**
     * (Highcharts, Highstock, Gantt) If no x values are given for the points in
@@ -1138,6 +1138,9 @@ object PlotFlagsOptions {
     
     @scala.inline
     def deletePointRange: Self = this.set("pointRange", js.undefined)
+    
+    @scala.inline
+    def setPointRangeNull: Self = this.set("pointRange", null)
     
     @scala.inline
     def setPointStart(value: Double): Self = this.set("pointStart", value.asInstanceOf[js.Any])

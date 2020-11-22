@@ -2,6 +2,16 @@ package typingsSlinky.jestGlobals
 
 import typingsSlinky.expect.typesMod.Expect
 import typingsSlinky.jestEnvironment.mod.Jest
+import typingsSlinky.jestGlobals.anon.FnCall
+import typingsSlinky.jestGlobals.anon.FnCallFnTimeout
+import typingsSlinky.jestTypes.anon.ItBaseconcurrentItConcurr
+import typingsSlinky.jestTypes.globalMod.BlockFn
+import typingsSlinky.jestTypes.globalMod.BlockName
+import typingsSlinky.jestTypes.globalMod.Describe
+import typingsSlinky.jestTypes.globalMod.DescribeBase
+import typingsSlinky.jestTypes.globalMod.HookBase
+import typingsSlinky.jestTypes.globalMod.ItBase
+import typingsSlinky.jestTypes.globalMod.ItConcurrent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,31 +20,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  val afterAll: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['afterAll'] */ js.Any = js.native
+  val afterAll: HookBase with FnCallFnTimeout = js.native
   
-  val afterEach: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['afterEach'] */ js.Any = js.native
+  val afterEach: HookBase with FnCallFnTimeout = js.native
   
-  val beforeAll: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['beforeAll'] */ js.Any = js.native
+  val beforeAll: HookBase with FnCallFnTimeout = js.native
   
-  val beforeEach: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['beforeEach'] */ js.Any = js.native
+  val beforeEach: HookBase with FnCallFnTimeout = js.native
   
-  val describe: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['describe'] */ js.Any = js.native
+  val describe: Describe with (js.Function2[/* blockName */ BlockName, /* blockFn */ BlockFn, Unit]) = js.native
   
   val expect: Expect = js.native
   
-  val fdescribe: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['fdescribe'] */ js.Any = js.native
+  val fdescribe: DescribeBase with (js.Function2[/* blockName */ BlockName, /* blockFn */ BlockFn, Unit]) = js.native
   
-  val fit: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['fit'] */ js.Any = js.native
+  val fit: ItBaseconcurrentItConcurr with FnCall = js.native
   
-  val it: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['it'] */ js.Any = js.native
+  val it: ItConcurrent with FnCall = js.native
   
   val jest: Jest = js.native
   
-  val test: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['test'] */ js.Any = js.native
+  val test: ItConcurrent with FnCall = js.native
   
-  val xdescribe: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['xdescribe'] */ js.Any = js.native
+  val xdescribe: DescribeBase with (js.Function2[/* blockName */ BlockName, /* blockFn */ BlockFn, Unit]) = js.native
   
-  val xit: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['xit'] */ js.Any = js.native
+  val xit: ItBase with FnCall = js.native
   
-  val xtest: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Global.GlobalAdditions * / any['xtest'] */ js.Any = js.native
+  val xtest: ItBase with FnCall = js.native
 }

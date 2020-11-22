@@ -2,6 +2,7 @@ package typingsSlinky.highcharts.anon
 
 import typingsSlinky.highcharts.mod.AnnotationControlPointOptionsObject
 import typingsSlinky.highcharts.mod.AnnotationDraggableValue
+import typingsSlinky.highcharts.mod.AnnotationsAnimationOptions
 import typingsSlinky.highcharts.mod.AnnotationsCrookedLineOptions
 import typingsSlinky.highcharts.mod.AnnotationsElliottWaveOptions
 import typingsSlinky.highcharts.mod.AnnotationsEventsOptions
@@ -22,6 +23,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Inlined std.Partial<highcharts.highcharts.AnnotationsOptions> */
 @js.native
 trait PartialAnnotationsOptions extends js.Object {
+  
+  var animation: js.UndefOr[Boolean | AnnotationsAnimationOptions | PartialAnimationOptionsOb] = js.native
   
   var controlPointOptions: js.UndefOr[AnnotationControlPointOptionsObject] = js.native
   
@@ -81,6 +84,12 @@ object PartialAnnotationsOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAnimation(value: Boolean | AnnotationsAnimationOptions | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnimation: Self = this.set("animation", js.undefined)
     
     @scala.inline
     def setControlPointOptions(value: AnnotationControlPointOptionsObject): Self = this.set("controlPointOptions", value.asInstanceOf[js.Any])

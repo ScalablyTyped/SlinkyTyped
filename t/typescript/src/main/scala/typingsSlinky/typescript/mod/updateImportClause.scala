@@ -26,5 +26,6 @@ object updateImportClause extends js.Object {
     namedBindings: js.UndefOr[scala.Nothing],
     isTypeOnly: Boolean
   ): ImportClause = js.native
+  /** @deprecated Use `factory.updateImportClause` or the factory supplied by your transformation context instead. */
   def apply(node: ImportClause, name: Identifier, namedBindings: NamedImportBindings, isTypeOnly: Boolean): ImportClause = js.native
 }

@@ -13,7 +13,7 @@ trait ListDeploymentJobsResponse extends js.Object {
   var deploymentJobs: js.UndefOr[DeploymentJobs] = js.native
   
   /**
-    * The nextToken value to include in a future ListDeploymentJobs request. When the results of a ListDeploymentJobs request exceed maxResults, this value can be used to retrieve the next page of results. This value is null when there are no more results to return. 
+    * If the previous paginated request did not return all of the remaining results, the response object's nextToken parameter value is set to a token. To retrieve the next set of results, call ListDeploymentJobs again and assign that token to the request object's nextToken parameter. If there are no remaining results, the previous response object's NextToken parameter is set to null. 
     */
   var nextToken: js.UndefOr[PaginationToken] = js.native
 }

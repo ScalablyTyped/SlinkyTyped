@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.arcgisJsApi.esri.CIM.CIMSymbolReference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ trait CIMSymbolProperties extends SymbolProperties {
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-CIMSymbol.html#data)
     */
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[CIMSymbolReference] = js.native
 }
 object CIMSymbolProperties {
   
@@ -38,7 +39,7 @@ object CIMSymbolProperties {
     }
     
     @scala.inline
-    def setData(value: js.Any): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: CIMSymbolReference): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)

@@ -14,7 +14,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.devextreme.mod.DevExpress.ui.DataExpressionMixinOptions because var conflicts: value. Inlined dataSource, displayExpr, itemTemplate, items, valueExpr */ @js.native
 trait dxDropDownBoxOptions extends dxDropDownEditorOptions[dxDropDownBox] {
   
-  /** @name dxDropDownBox.Options.contentTemplate */
+  /**
+    * [descr:dxDropDownBox.Options.contentTemplate]
+    */
   var contentTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
       /* templateData */ ComponentValue, 
@@ -23,21 +25,31 @@ trait dxDropDownBoxOptions extends dxDropDownEditorOptions[dxDropDownBox] {
     ])
   ] = js.native
   
-  /** @name DataExpressionMixin.Options.dataSource */
+  /**
+    * [descr:DataExpressionMixin.Options.dataSource]
+    */
   var dataSource: js.UndefOr[String | (js.Array[CollectionWidgetItem | _]) | DataSource | DataSourceOptions] = js.native
   
-  /** @name DataExpressionMixin.Options.displayExpr */
+  /**
+    * [descr:DataExpressionMixin.Options.displayExpr]
+    */
   var displayExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String])] = js.native
   
-  /** @name dxDropDownBox.Options.displayValueFormatter */
+  /**
+    * [descr:dxDropDownBox.Options.displayValueFormatter]
+    */
   var displayValueFormatter: js.UndefOr[js.Function1[/* value */ String | js.Array[_], String]] = js.native
   
-  /** @name dxDropDownBox.Options.fieldTemplate */
+  /**
+    * [descr:dxDropDownBox.Options.fieldTemplate]
+    */
   var fieldTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* value */ js.Any, /* fieldElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name DataExpressionMixin.Options.itemTemplate */
+  /**
+    * [descr:DataExpressionMixin.Options.itemTemplate]
+    */
   var itemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -47,10 +59,14 @@ trait dxDropDownBoxOptions extends dxDropDownEditorOptions[dxDropDownBox] {
     ])
   ] = js.native
   
-  /** @name DataExpressionMixin.Options.items */
+  /**
+    * [descr:DataExpressionMixin.Options.items]
+    */
   var items: js.UndefOr[js.Array[CollectionWidgetItem | _]] = js.native
   
-  /** @name DataExpressionMixin.Options.valueExpr */
+  /**
+    * [descr:DataExpressionMixin.Options.valueExpr]
+    */
   var valueExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String | Double | Boolean])] = js.native
 }
 object dxDropDownBoxOptions {

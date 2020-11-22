@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.UntrackCacheStorageForOriginRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.ServiceWorker.UpdateRegistrationRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `180` extends js.Object {
   
-  var paramsType: js.Array[UntrackCacheStorageForOriginRequest] = js.native
+  var paramsType: js.Array[UpdateRegistrationRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `180` {
   
   @scala.inline
-  def apply(paramsType: js.Array[UntrackCacheStorageForOriginRequest], returnType: Unit): `180` = {
+  def apply(paramsType: js.Array[UpdateRegistrationRequest], returnType: Unit): `180` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`180`]
   }
@@ -36,10 +36,10 @@ object `180` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: UntrackCacheStorageForOriginRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: UpdateRegistrationRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[UntrackCacheStorageForOriginRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[UpdateRegistrationRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

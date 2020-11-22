@@ -27,6 +27,7 @@ import typingsSlinky.ink.inkStrings.singleDouble
 import typingsSlinky.ink.inkStrings.stretch
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.Ref
+import typingsSlinky.typeFest.literalUnionMod.LiteralUnion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,7 +41,10 @@ trait readonlymarginnumberundef extends js.Object {
   var alignSelf: js.UndefOr[`flex-start` | center | `flex-end` | auto] = js.native
   
   var borderColor: js.UndefOr[
-    /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ js.Any
+    LiteralUnion[
+      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ _, 
+      String
+    ]
   ] = js.native
   
   var borderStyle: js.UndefOr[single | double | round | bold | singleDouble | doubleSingle | classic] = js.native
@@ -61,7 +65,7 @@ trait readonlymarginnumberundef extends js.Object {
   
   var justifyContent: js.UndefOr[`flex-start` | `flex-end` | `space-between` | `space-around` | center] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   /**
     * Margin on all sides. Equivalent to setting `marginTop`, `marginBottom`, `marginLeft` and `marginRight`.
@@ -168,7 +172,10 @@ object readonlymarginnumberundef {
     
     @scala.inline
     def setBorderColor(
-      value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ js.Any
+      value: LiteralUnion[
+          /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ _, 
+          String
+        ]
     ): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -236,6 +243,9 @@ object readonlymarginnumberundef {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setMargin(value: Double): Self = this.set("margin", value.asInstanceOf[js.Any])

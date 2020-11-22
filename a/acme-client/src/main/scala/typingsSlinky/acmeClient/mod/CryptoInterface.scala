@@ -22,6 +22,8 @@ trait CryptoInterface extends js.Object {
     input: CertificateBuffer | CertificateString | CsrBuffer | CsrString | PrivateKeyBuffer | PrivateKeyString | PublicKeyBuffer | PublicKeyString
   ): js.Promise[Buffer] = js.native
   
+  def getPemBody(str: String): String = js.native
+  
   def getPublicExponent(
     input: CertificateBuffer | CertificateString | CsrBuffer | CsrString | PrivateKeyBuffer | PrivateKeyString | PublicKeyBuffer | PublicKeyString
   ): js.Promise[Buffer] = js.native
@@ -29,6 +31,8 @@ trait CryptoInterface extends js.Object {
   def readCertificateInfo(cert: CertificateBuffer): js.Promise[CertificateInfo] = js.native
   def readCertificateInfo(cert: CertificateString): js.Promise[CertificateInfo] = js.native
   
-  def readCsrDomains(csr: CsrBuffer): js.Promise[CsrDomains] = js.native
-  def readCsrDomains(csr: CsrString): js.Promise[CsrDomains] = js.native
+  def readCsrDomains(csr: CsrBuffer): js.Promise[CertificateDomains] = js.native
+  def readCsrDomains(csr: CsrString): js.Promise[CertificateDomains] = js.native
+  
+  def splitPemChain(str: String): js.Array[String] = js.native
 }

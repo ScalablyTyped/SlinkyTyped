@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "SourceFile")
 @js.native
 class SourceFile protected ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.SourceFile] {
+  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.SourceFile]
+     with Declaration {
   def this(filename: String, text: String, elements: js.Array[SourceElement]) = this()
   
   val elements: js.Array[SourceElement] = js.native

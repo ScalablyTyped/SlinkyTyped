@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseStorage.anon
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.firebaseStorage.mod.firebaseAppTypesAugmentingMod.FirebaseApp
+import typingsSlinky.firebaseStorage.compatMod.firebaseAppTypesAugmentingMod.FirebaseApp
 import typingsSlinky.firebaseStorageTypes.mod.FirebaseStorage
 import scala.scalajs.js
 import scala.scalajs.js.`|`

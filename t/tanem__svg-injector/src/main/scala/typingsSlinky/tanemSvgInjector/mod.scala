@@ -11,5 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object mod extends js.Object {
   
   def SVGInjector(elements: Elements): Unit = js.native
-  def SVGInjector(elements: Elements, hasAfterAllAfterEachBeforeEachEvalScriptsRenumerateIRIElements: OptionalArgs): Unit = js.native
+  def SVGInjector(
+    elements: Elements,
+    hasAfterAllAfterEachBeforeEachCacheRequestsEvalScriptsRenumerateIRIElements: OptionalArgs
+  ): Unit = js.native
 }

@@ -11,22 +11,22 @@ class ɵRender3ComponentRef[T] protected () extends ComponentRef[T] {
     componentType: Type[T],
     instance: T,
     location: ElementRef[_],
-    _rootLView: ɵangularPackagesCoreCoreBp,
+    _rootLView: ɵangularPackagesCoreCoreBv,
     _tNode: TContainerNode
   ) = this()
   def this(
     componentType: Type[T],
     instance: T,
     location: ElementRef[_],
-    _rootLView: ɵangularPackagesCoreCoreBp,
+    _rootLView: ɵangularPackagesCoreCoreBv,
     _tNode: TElementContainerNode
   ) = this()
   def this(
     componentType: Type[T],
     instance: T,
     location: ElementRef[_],
-    _rootLView: ɵangularPackagesCoreCoreBp,
-    _tNode: ɵangularPackagesCoreCoreBf
+    _rootLView: ɵangularPackagesCoreCoreBv,
+    _tNode: ɵangularPackagesCoreCoreBh
   ) = this()
   
   var _rootLView: js.Any = js.native

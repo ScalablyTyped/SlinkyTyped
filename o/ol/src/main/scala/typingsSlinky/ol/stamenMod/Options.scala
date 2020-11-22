@@ -11,6 +11,8 @@ trait Options extends js.Object {
   
   var cacheSize: js.UndefOr[Double] = js.native
   
+  var imageSmoothing: js.UndefOr[Boolean] = js.native
+  
   var layer: String = js.native
   
   var maxZoom: js.UndefOr[Double] = js.native
@@ -58,6 +60,12 @@ object Options {
     
     @scala.inline
     def deleteCacheSize: Self = this.set("cacheSize", js.undefined)
+    
+    @scala.inline
+    def setImageSmoothing(value: Boolean): Self = this.set("imageSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImageSmoothing: Self = this.set("imageSmoothing", js.undefined)
     
     @scala.inline
     def setMaxZoom(value: Double): Self = this.set("maxZoom", value.asInstanceOf[js.Any])

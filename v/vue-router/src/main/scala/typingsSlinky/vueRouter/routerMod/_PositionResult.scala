@@ -14,7 +14,7 @@ object _PositionResult {
   }
   
   @scala.inline
-  def Offset(selector: String): _PositionResult = {
+  def Behavior(selector: String): _PositionResult = {
     val __obj = js.Dynamic.literal(selector = selector.asInstanceOf[js.Any])
     __obj.asInstanceOf[_PositionResult]
   }

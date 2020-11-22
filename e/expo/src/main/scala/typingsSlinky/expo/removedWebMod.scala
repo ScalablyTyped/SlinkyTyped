@@ -138,6 +138,8 @@ object removedWebMod extends js.Object {
   
   val Speech: Null = js.native
   
+  val SplashScreen: Null = js.native
+  
   val StoreReview: Null = js.native
   
   val Svg: Null = js.native
@@ -147,6 +149,8 @@ object removedWebMod extends js.Object {
   val Transition: Null = js.native
   
   val Transitioning: Null = js.native
+  
+  val Updates: Null = js.native
   
   val Video: Null = js.native
   

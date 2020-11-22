@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashMultiply extends LodashConvertible {
+trait LodashMultiply extends js.Object {
   
   def apply(multiplier: Double): LodashMultiply1x1 = js.native
   def apply(multiplier: Double, multiplicand: Double): Double = js.native

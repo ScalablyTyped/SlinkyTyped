@@ -8,6 +8,7 @@ import typingsSlinky.reactSelect.typesMod.ClassNamesState
 import typingsSlinky.reactSelect.typesMod.InnerRef
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.reactSelect.typesMod.OptionsType
+import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.reactSelect.typesMod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -69,6 +70,8 @@ trait OptionProps[OptionType /* <: OptionTypeBase */] extends js.Object {
   var selectProps: Props[OptionType] = js.native
   
   def setValue(value: ValueType[OptionType], action: ActionTypes): Unit = js.native
+  
+  var theme: Theme = js.native
   
   /* Type is used by the menu to determine whether this is an option or a group.
     In the case of option this is always `option`. */

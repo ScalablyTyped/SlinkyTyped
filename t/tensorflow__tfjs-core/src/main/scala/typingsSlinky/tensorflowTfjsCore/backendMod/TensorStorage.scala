@@ -1,9 +1,9 @@
 package typingsSlinky.tensorflowTfjsCore.backendMod
 
 import typingsSlinky.tensorflowTfjsCore.anon.Unreliable
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.DataId
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.BackendValues
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.tensorMod.DataId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

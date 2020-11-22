@@ -13,7 +13,7 @@ trait MUIDataTableHeadCell extends js.Object {
   
   var hint: String = js.native
   
-  var options: js.Object = js.native
+  var options: MUIDataTableOptions = js.native
   
   var sort: Boolean = js.native
   
@@ -26,7 +26,7 @@ trait MUIDataTableHeadCell extends js.Object {
 object MUIDataTableHeadCell {
   
   @scala.inline
-  def apply(hint: String, options: js.Object, sort: Boolean, toggleSort: js.Any => js.Any): MUIDataTableHeadCell = {
+  def apply(hint: String, options: MUIDataTableOptions, sort: Boolean, toggleSort: js.Any => js.Any): MUIDataTableHeadCell = {
     val __obj = js.Dynamic.literal(hint = hint.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], sort = sort.asInstanceOf[js.Any], toggleSort = js.Any.fromFunction1(toggleSort))
     __obj.asInstanceOf[MUIDataTableHeadCell]
   }
@@ -50,7 +50,7 @@ object MUIDataTableHeadCell {
     def setHint(value: String): Self = this.set("hint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: MUIDataTableOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSort(value: Boolean): Self = this.set("sort", value.asInstanceOf[js.Any])

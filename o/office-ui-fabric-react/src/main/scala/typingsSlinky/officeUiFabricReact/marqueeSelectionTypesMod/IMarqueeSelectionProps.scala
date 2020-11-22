@@ -3,10 +3,10 @@ package typingsSlinky.officeUiFabricReact.marqueeSelectionTypesMod
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunction
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection

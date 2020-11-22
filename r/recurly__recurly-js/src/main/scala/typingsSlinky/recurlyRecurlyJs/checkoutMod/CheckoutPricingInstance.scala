@@ -11,6 +11,9 @@ trait CheckoutPricingInstance
   extends PricingInstance[CheckoutPricingPromise]
      with CheckoutPricingMethods {
   
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-checkoutpricingattach|CheckoutPricing.attach}
+    */
   def attach(element: String): Unit = js.native
   def attach(element: HTMLElement): Unit = js.native
 }

@@ -9,15 +9,15 @@ trait Kount extends js.Object {
   
   var client: typingsSlinky.braintreeWeb.clientMod.Client = js.native
   
-  var kount: Boolean = js.native
+  var kount: js.UndefOr[Boolean] = js.native
   
-  var paypal: Boolean = js.native
+  var paypal: js.UndefOr[Boolean] = js.native
 }
 object Kount {
   
   @scala.inline
-  def apply(client: typingsSlinky.braintreeWeb.clientMod.Client, kount: Boolean, paypal: Boolean): Kount = {
-    val __obj = js.Dynamic.literal(client = client.asInstanceOf[js.Any], kount = kount.asInstanceOf[js.Any], paypal = paypal.asInstanceOf[js.Any])
+  def apply(client: typingsSlinky.braintreeWeb.clientMod.Client): Kount = {
+    val __obj = js.Dynamic.literal(client = client.asInstanceOf[js.Any])
     __obj.asInstanceOf[Kount]
   }
   
@@ -43,6 +43,12 @@ object Kount {
     def setKount(value: Boolean): Self = this.set("kount", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def deleteKount: Self = this.set("kount", js.undefined)
+    
+    @scala.inline
     def setPaypal(value: Boolean): Self = this.set("paypal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePaypal: Self = this.set("paypal", js.undefined)
   }
 }

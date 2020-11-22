@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -13,6 +14,7 @@ import typingsSlinky.mendixmodelsdk.projectsMod.projects.Document
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IDocument
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
@@ -37,13 +39,13 @@ object menusMod extends js.Object {
       * Interfaces and instance classes for types from the Mendix sub meta model `Menus`.
       */
     /**
-      * See: {@link https://docs.mendix.com/refguide7/menu relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/menu relevant section in reference guide}
       */
     @js.native
     trait IMenuDocument extends IDocument
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/menu relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/menu relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -69,9 +71,6 @@ object menusMod extends js.Object {
       
       def itemCollection: MenuItemCollection = js.native
       def itemCollection_=(newValue: MenuItemCollection): Unit = js.native
-      
-      @JSName("model")
-      var model_FMenuDocument: IModel = js.native
     }
     /* static members */
     @js.native
@@ -89,7 +88,7 @@ object menusMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/menu relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/menu relevant section in reference guide}
       */
     @js.native
     class MenuItem protected () extends MenuItemContainer {
@@ -98,8 +97,8 @@ object menusMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       def action: ClientAction = js.native
@@ -116,9 +115,6 @@ object menusMod extends js.Object {
       
       def icon: Icon | Null = js.native
       def icon_=(newValue: Icon | Null): Unit = js.native
-      
-      @JSName("model")
-      var model_FMenuItem: IModel = js.native
     }
     /* static members */
     @js.native
@@ -150,12 +146,9 @@ object menusMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
-      
-      @JSName("model")
-      var model_FMenuItemCollection: IModel = js.native
     }
     /* static members */
     @js.native
@@ -188,14 +181,14 @@ object menusMod extends js.Object {
     }
     
     @js.native
-    abstract class MenuItemContainer protected () extends Element {
+    abstract class MenuItemContainer protected () extends Element[IModel] {
       def this(
         model: AbstractModel,
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
       
       def containerAsMenuDocument: MenuDocument = js.native
@@ -205,9 +198,6 @@ object menusMod extends js.Object {
       def containerAsNavigationProfile: NavigationProfile = js.native
       
       def items: IList[MenuItem] = js.native
-      
-      @JSName("model")
-      var model_FMenuItemContainer: IModel = js.native
     }
     /* static members */
     @js.native

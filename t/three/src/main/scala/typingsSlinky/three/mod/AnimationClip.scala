@@ -96,5 +96,5 @@ object AnimationClip extends js.Object {
   
   def parseAnimation(animation: js.Any, bones: js.Array[typingsSlinky.three.boneMod.Bone]): typingsSlinky.three.animationClipMod.AnimationClip = js.native
   
-  def toJSON(): js.Any = js.native
+  def toJSON(clip: typingsSlinky.three.animationClipMod.AnimationClip): js.Any = js.native
 }

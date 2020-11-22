@@ -28,6 +28,11 @@ trait CacheNode extends js.Object {
   var CustomerAvailabilityZone: js.UndefOr[String] = js.native
   
   /**
+    * The customer outpost ARN of the cache node.
+    */
+  var CustomerOutpostArn: js.UndefOr[String] = js.native
+  
+  /**
     * The hostname for connecting to this cache node.
     */
   var Endpoint: js.UndefOr[typingsSlinky.awsSdk.elasticacheMod.Endpoint] = js.native
@@ -88,6 +93,12 @@ object CacheNode {
     
     @scala.inline
     def deleteCustomerAvailabilityZone: Self = this.set("CustomerAvailabilityZone", js.undefined)
+    
+    @scala.inline
+    def setCustomerOutpostArn(value: String): Self = this.set("CustomerOutpostArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomerOutpostArn: Self = this.set("CustomerOutpostArn", js.undefined)
     
     @scala.inline
     def setEndpoint(value: Endpoint): Self = this.set("Endpoint", value.asInstanceOf[js.Any])

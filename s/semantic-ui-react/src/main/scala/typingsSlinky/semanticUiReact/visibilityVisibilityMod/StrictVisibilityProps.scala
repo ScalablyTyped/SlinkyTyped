@@ -35,7 +35,7 @@ trait StrictVisibilityProps extends js.Object {
     * Value that context should be adjusted in pixels. Useful for making content appear below content fixed to the
     * page.
     */
-  var offset: js.UndefOr[Double | String | js.Array[String]] = js.native
+  var offset: js.UndefOr[Double | String | (js.Array[Double | String])] = js.native
   
   /**
     * Element's bottom edge has passed top of screen.
@@ -220,10 +220,10 @@ object StrictVisibilityProps {
     def deleteFireOnMount: Self = this.set("fireOnMount", js.undefined)
     
     @scala.inline
-    def setOffsetVarargs(value: String*): Self = this.set("offset", js.Array(value :_*))
+    def setOffsetVarargs(value: (Double | String)*): Self = this.set("offset", js.Array(value :_*))
     
     @scala.inline
-    def setOffset(value: Double | String | js.Array[String]): Self = this.set("offset", value.asInstanceOf[js.Any])
+    def setOffset(value: Double | String | (js.Array[Double | String])): Self = this.set("offset", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOffset: Self = this.set("offset", js.undefined)

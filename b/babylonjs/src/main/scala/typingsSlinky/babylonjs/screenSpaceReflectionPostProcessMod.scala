@@ -26,7 +26,8 @@ object screenSpaceReflectionPostProcessMod extends js.Object {
       * @param engine The engine which the post process will be applied. (default: current engine)
       * @param reusable If the post process can be reused on the same frame. (default: false)
       * @param textureType Type of textures used when performing the post process. (default: 0)
-      * @param blockCompilation If compilation of the shader should not be done in the constructor. The updateEffect method can be used to compile the shader at a later time. (default: false)
+      * @param blockCompilation If compilation of the shader should not be done in the constructor. The updateEffect method can be used to compile the shader at a later time. (default: true)
+      * @param forceGeometryBuffer If this post process should use geometry buffer instead of prepass (default: false)
       */
     def this(
       name: String,
@@ -37,12 +38,17 @@ object screenSpaceReflectionPostProcessMod extends js.Object {
       engine: js.UndefOr[Engine],
       reusable: js.UndefOr[Boolean],
       textureType: js.UndefOr[Double],
-      blockCompilation: js.UndefOr[Boolean]
+      blockCompilation: js.UndefOr[Boolean],
+      forceGeometryBuffer: js.UndefOr[Boolean]
     ) = this()
     
     var _enableSmoothReflections: js.Any = js.native
     
+    var _forceGeometryBuffer: js.Any = js.native
+    
     var _geometryBufferRenderer: js.Any = js.native
+    
+    var _prePassRenderer: js.Any = js.native
     
     var _reflectionSamples: js.Any = js.native
     
@@ -104,5 +110,12 @@ object screenSpaceReflectionPostProcessMod extends js.Object {
       * Gets or sets a reflection threshold mainly used to adjust the reflection's height.
       */
     var threshold: Double = js.native
+  }
+  /* static members */
+  @js.native
+  object ScreenSpaceReflectionPostProcess extends js.Object {
+    
+    /** @hidden */
+    def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): ScreenSpaceReflectionPostProcess = js.native
   }
 }

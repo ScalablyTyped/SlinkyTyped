@@ -1,5 +1,6 @@
 package typingsSlinky.reactScrollspy.components
 
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -37,7 +38,7 @@ object ReactScrollspy {
     def offset(value: Double): this.type = set("offset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onUpdate(value: /* item */ String => Unit): this.type = set("onUpdate", js.Any.fromFunction1(value))
+    def onUpdate(value: /* item */ HTMLElement => Unit): this.type = set("onUpdate", js.Any.fromFunction1(value))
     
     @scala.inline
     def rootEl(value: String): this.type = set("rootEl", value.asInstanceOf[js.Any])

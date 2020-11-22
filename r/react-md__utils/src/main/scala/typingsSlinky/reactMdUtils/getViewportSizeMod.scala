@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getViewportSizeMod extends js.Object {
   
-  @JSName("default")
-  def default_height(direction: height): Double = js.native
-  @JSName("default")
-  def default_width(direction: width): Double = js.native
+  @JSName("getViewportSize")
+  def getViewportSize_height(direction: height): Double = js.native
+  @JSName("getViewportSize")
+  def getViewportSize_width(direction: width): Double = js.native
 }

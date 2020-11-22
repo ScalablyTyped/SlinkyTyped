@@ -4,7 +4,6 @@ import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
 import typingsSlinky.devextreme.mod.DevExpress.viz.dxFunnel
 import typingsSlinky.devextreme.mod.DevExpress.viz.dxFunnelItem
-import typingsSlinky.devextreme.mod.global.JQueryEventObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,8 +18,6 @@ trait EventItem extends js.Object {
   var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
   
   var item: js.UndefOr[dxFunnelItem] = js.native
-  
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
 }
@@ -70,12 +67,6 @@ object EventItem {
     
     @scala.inline
     def deleteItem: Self = this.set("item", js.undefined)
-    
-    @scala.inline
-    def setJQueryEvent(value: JQueryEventObject): Self = this.set("jQueryEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteJQueryEvent: Self = this.set("jQueryEvent", js.undefined)
     
     @scala.inline
     def setModel(value: js.Any): Self = this.set("model", value.asInstanceOf[js.Any])

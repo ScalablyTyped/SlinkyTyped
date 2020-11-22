@@ -8,13 +8,14 @@ import typingsSlinky.astTypes.kindsMod.PatternKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.PropertyPattern
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PropertyPatternBuilder extends js.Object {
+  
   def apply(key: ExpressionKind, pattern: PatternKind): PropertyPattern = js.native
   def apply(key: IdentifierKind, pattern: PatternKind): PropertyPattern = js.native
   def apply(key: LiteralKind, pattern: PatternKind): PropertyPattern = js.native
+  
   def from(params: Key): PropertyPattern = js.native
 }
-

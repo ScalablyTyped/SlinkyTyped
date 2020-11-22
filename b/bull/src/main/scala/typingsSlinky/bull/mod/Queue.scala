@@ -173,10 +173,10 @@ trait Queue[T] extends EventEmitter {
     * Returns a object with the logs according to the start and end arguments. The returned count
     * value is the total amount of logs, useful for implementing pagination.
     */
-  def getJobLogs(jobId: String): js.Promise[Count] = js.native
-  def getJobLogs(jobId: String, start: js.UndefOr[scala.Nothing], end: Double): js.Promise[Count] = js.native
-  def getJobLogs(jobId: String, start: Double): js.Promise[Count] = js.native
-  def getJobLogs(jobId: String, start: Double, end: Double): js.Promise[Count] = js.native
+  def getJobLogs(jobId: JobId): js.Promise[Count] = js.native
+  def getJobLogs(jobId: JobId, start: js.UndefOr[scala.Nothing], end: Double): js.Promise[Count] = js.native
+  def getJobLogs(jobId: JobId, start: Double): js.Promise[Count] = js.native
+  def getJobLogs(jobId: JobId, start: Double, end: Double): js.Promise[Count] = js.native
   
   /**
     * Returns a promise that will return an array of job instances of the given job statuses.

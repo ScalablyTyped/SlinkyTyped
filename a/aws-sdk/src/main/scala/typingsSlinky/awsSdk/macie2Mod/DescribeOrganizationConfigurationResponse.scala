@@ -13,7 +13,7 @@ trait DescribeOrganizationConfigurationResponse extends js.Object {
   var autoEnable: js.UndefOr[boolean] = js.native
   
   /**
-    * Specifies whether the maximum number of Amazon Macie member accounts are already associated with the AWS organization.
+    * Specifies whether the maximum number of Amazon Macie member accounts are part of the AWS organization.
     */
   var maxAccountLimitReached: js.UndefOr[boolean] = js.native
 }

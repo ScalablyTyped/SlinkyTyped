@@ -2,31 +2,25 @@ package typingsSlinky.awsSdkClientCodecommitNode.typesTitleRequiredExceptionMod
 
 import typingsSlinky.awsSdkClientCodecommitNode.createPullRequestExceptionsUnionMod.CreatePullRequestExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestTitleExceptionsUnionMod.UpdatePullRequestTitleExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_TitleRequiredExceptionDetails> * / any */ @js.native
 trait TitleRequiredException
-  extends ServiceException[TitleRequiredExceptionDetails]
-     with CreatePullRequestExceptionsUnion
+  extends CreatePullRequestExceptionsUnion
      with UpdatePullRequestTitleExceptionsUnion {
   
-  @JSName("name")
-  var name_TitleRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.TitleRequiredException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.TitleRequiredException = js.native
 }
 object TitleRequiredException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: TitleRequiredExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.TitleRequiredException
   ): TitleRequiredException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[TitleRequiredException]
   }
   

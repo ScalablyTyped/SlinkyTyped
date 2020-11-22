@@ -288,7 +288,7 @@ trait ChartSeriesData extends js.Object {
   
   /**
     *
-    * Specifies the name of a series in a chart.
+    * Specifies the name of a series in a chart. The name's length should not be greater than 255 characters.
     *
     * [Api set: ExcelApi 1.1]
     */

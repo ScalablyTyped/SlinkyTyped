@@ -8,7 +8,7 @@ package object styleStyleMod {
   
   type GeometryFunction = js.Function1[
     /* p0 */ typingsSlinky.ol.olFeatureMod.FeatureLike, 
-    typingsSlinky.ol.geometryMod.default | typingsSlinky.ol.renderFeatureMod.default
+    js.UndefOr[typingsSlinky.ol.geometryMod.default | typingsSlinky.ol.renderFeatureMod.default]
   ]
   
   type RenderFunction = js.Function2[
@@ -22,7 +22,7 @@ package object styleStyleMod {
   type StyleFunction = js.Function2[
     /* p0 */ typingsSlinky.ol.olFeatureMod.FeatureLike, 
     /* p1 */ scala.Double, 
-    typingsSlinky.ol.styleStyleMod.Style | js.Array[typingsSlinky.ol.styleStyleMod.Style] | scala.Unit
+    typingsSlinky.ol.styleStyleMod.Style | js.Array[typingsSlinky.ol.styleStyleMod.Style]
   ]
   
   type StyleLike = typingsSlinky.ol.styleStyleMod.Style | js.Array[typingsSlinky.ol.styleStyleMod.Style] | typingsSlinky.ol.styleStyleMod.StyleFunction

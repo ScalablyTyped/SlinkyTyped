@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`6`
+import typingsSlinky.octokitTypes.anon.`5`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ trait IssuesListEventsForTimelineEndpoint extends js.Object {
   
   var issue_number: Double = js.native
   
-  var mediaType: `6` = js.native
+  var mediaType: `5` = js.native
   
   var owner: String = js.native
   
@@ -30,7 +30,7 @@ trait IssuesListEventsForTimelineEndpoint extends js.Object {
 object IssuesListEventsForTimelineEndpoint {
   
   @scala.inline
-  def apply(issue_number: Double, mediaType: `6`, owner: String, repo: String): IssuesListEventsForTimelineEndpoint = {
+  def apply(issue_number: Double, mediaType: `5`, owner: String, repo: String): IssuesListEventsForTimelineEndpoint = {
     val __obj = js.Dynamic.literal(issue_number = issue_number.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[IssuesListEventsForTimelineEndpoint]
   }
@@ -54,7 +54,7 @@ object IssuesListEventsForTimelineEndpoint {
     def setIssue_number(value: Double): Self = this.set("issue_number", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `6`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `5`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

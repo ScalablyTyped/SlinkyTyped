@@ -13,7 +13,7 @@ trait DescribeInsightRulesOutput extends js.Object {
   var InsightRules: js.UndefOr[typingsSlinky.awsSdk.cloudwatchMod.InsightRules] = js.native
   
   /**
-    * Reserved for future use.
+    * If this parameter is present, it is a token that marks the start of the next batch of returned results. 
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.cloudwatchMod.NextToken] = js.native
 }

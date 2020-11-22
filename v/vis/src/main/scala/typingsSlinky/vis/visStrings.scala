@@ -94,6 +94,12 @@ object visStrings {
   def contextmenu: contextmenu = "contextmenu".asInstanceOf[contextmenu]
   
   @scala.inline
+  def controlNodeDragEnd: controlNodeDragEnd = "controlNodeDragEnd".asInstanceOf[controlNodeDragEnd]
+  
+  @scala.inline
+  def controlNodeDragging: controlNodeDragging = "controlNodeDragging".asInstanceOf[controlNodeDragging]
+  
+  @scala.inline
   def `current-time`: `current-time` = "current-time".asInstanceOf[`current-time`]
   
   @scala.inline
@@ -413,6 +419,12 @@ object visStrings {
   
   @js.native
   sealed trait contextmenu extends TimelineEvents
+  
+  @js.native
+  sealed trait controlNodeDragEnd extends NetworkEvents
+  
+  @js.native
+  sealed trait controlNodeDragging extends NetworkEvents
   
   @js.native
   sealed trait `current-time` extends TimelineEventPropertiesResultWhatType

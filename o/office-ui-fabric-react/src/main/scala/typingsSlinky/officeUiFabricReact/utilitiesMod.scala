@@ -9,6 +9,7 @@ import org.scalajs.dom.raw.Window
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiDomUtilities.ivirtualelementMod.IVirtualElement
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactBooleans.`false`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`100`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`101`
@@ -111,6 +112,9 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`99`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactNumbers.`9`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`data-no-horizontal-wrap`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`data-no-vertical-wrap`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.localStorage
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.none
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.sessionStorage
 import typingsSlinky.react.mod.ComponentClass
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.ForwardRefExoticComponent
@@ -146,7 +150,6 @@ import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import typingsSlinky.uifabricUtilities.isizeMod.ISize
-import typingsSlinky.uifabricUtilities.ivirtualelementMod.IVirtualElement
 import typingsSlinky.uifabricUtilities.mathMod.IFitContentToBoundsOptions
 import typingsSlinky.uifabricUtilities.pointMod.Point
 import typingsSlinky.uifabricUtilities.selectionSelectionMod.ISelectionOptions
@@ -230,6 +233,19 @@ object utilitiesMod extends js.Object {
   def createArray[T](size: Double, getItem: js.Function1[/* index */ Double, T]): js.Array[T] = js.native
   
   def createMemoizer[F /* <: js.Function1[/* input */ js.Any, _] */](getValue: F): F = js.native
+  
+  def createMergedRef[TType, TValue](): js.Function1[
+    /* repeated */ js.UndefOr[
+      (js.Function1[/* instance */ TType | TValue | Null, Unit]) | (ReactRef[TType | TValue | Null]) | Null
+    ], 
+    js.Function1[/* newValue */ TType | TValue | Null, Unit]
+  ] = js.native
+  def createMergedRef[TType, TValue](value: TValue): js.Function1[
+    /* repeated */ js.UndefOr[
+      (js.Function1[/* instance */ TType | TValue | Null, Unit]) | (ReactRef[TType | TValue | Null]) | Null
+    ], 
+    js.Function1[/* newValue */ TType | TValue | Null, Unit]
+  ] = js.native
   
   def css(args: ICssInput*): String = js.native
   
@@ -330,6 +346,12 @@ object utilitiesMod extends js.Object {
   def getInitials(displayName: Null, isRtl: Boolean, allowPhoneInitials: Boolean): String = js.native
   
   def getLanguage(): String | Null = js.native
+  @JSName("getLanguage")
+  def getLanguage_localStorage(persistenceType: localStorage): String | Null = js.native
+  @JSName("getLanguage")
+  def getLanguage_none(persistenceType: none): String | Null = js.native
+  @JSName("getLanguage")
+  def getLanguage_sessionStorage(persistenceType: sessionStorage): String | Null = js.native
   
   def getLastFocusable(rootElement: HTMLElement, currentElement: HTMLElement): HTMLElement | Null = js.native
   def getLastFocusable(rootElement: HTMLElement, currentElement: HTMLElement, includeElementsInFocusZones: Boolean): HTMLElement | Null = js.native
@@ -349,15 +371,8 @@ object utilitiesMod extends js.Object {
     checkNode: Boolean
   ): HTMLElement | Null = js.native
   
-  def getNativeElementProps[TAttributes /* <: HTMLAttributes[_] */](
-    tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 116 */ js.Any,
-    props: js.Object
-  ): TAttributes = js.native
-  def getNativeElementProps[TAttributes /* <: HTMLAttributes[_] */](
-    tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 116 */ js.Any,
-    props: js.Object,
-    excludedPropNames: js.Array[String]
-  ): TAttributes = js.native
+  def getNativeElementProps[TAttributes /* <: HTMLAttributes[_] */](tagName: String, props: js.Object): TAttributes = js.native
+  def getNativeElementProps[TAttributes /* <: HTMLAttributes[_] */](tagName: String, props: js.Object, excludedPropNames: js.Array[String]): TAttributes = js.native
   
   def getNativeProps[T /* <: Record[String, _] */](props: Record[String, _], allowedPropNames: js.Array[String]): T = js.native
   def getNativeProps[T /* <: Record[String, _] */](props: Record[String, _], allowedPropNames: js.Array[String], excludedPropNames: js.Array[String]): T = js.native
@@ -463,8 +478,8 @@ object utilitiesMod extends js.Object {
   def isMac(): Boolean = js.native
   def isMac(reset: Boolean): Boolean = js.native
   
-  def isVirtualElement(element: HTMLElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
-  def isVirtualElement(element: IVirtualElement): /* is @uifabric/utilities.@uifabric/utilities/lib/dom/IVirtualElement.IVirtualElement */ Boolean = js.native
+  def isVirtualElement(element: IVirtualElement): /* is @fluentui/dom-utilities.@fluentui/dom-utilities/lib/IVirtualElement.IVirtualElement */ Boolean = js.native
+  def isVirtualElement(element: HTMLElement): /* is @fluentui/dom-utilities.@fluentui/dom-utilities/lib/IVirtualElement.IVirtualElement */ Boolean = js.native
   
   val labelProperties: Record[String, Double] = js.native
   
@@ -514,6 +529,15 @@ object utilitiesMod extends js.Object {
   
   val olProperties: Record[String, Double] = js.native
   
+  def omit[TObj /* <: Record[String, _] */](obj: TObj, exclusions: js.Array[/* keyof TObj */ String]): TObj = js.native
+  
+  def on(element: Document, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): js.Function0[Unit] = js.native
+  def on(
+    element: Document,
+    eventName: String,
+    callback: js.Function1[/* ev */ Event, Unit],
+    options: Boolean
+  ): js.Function0[Unit] = js.native
   def on(element: Element, eventName: String, callback: js.Function1[/* ev */ Event, Unit]): js.Function0[Unit] = js.native
   def on(
     element: Element,
@@ -558,6 +582,12 @@ object utilitiesMod extends js.Object {
   
   def setLanguage(language: String): Unit = js.native
   def setLanguage(language: String, avoidPersisting: Boolean): Unit = js.native
+  @JSName("setLanguage")
+  def setLanguage_localStorage(language: String, persistenceType: localStorage): Unit = js.native
+  @JSName("setLanguage")
+  def setLanguage_none(language: String, persistenceType: none): Unit = js.native
+  @JSName("setLanguage")
+  def setLanguage_sessionStorage(language: String, persistenceType: sessionStorage): Unit = js.native
   
   def setMemoizeWeakMap(weakMap: js.Any): Unit = js.native
   
@@ -568,6 +598,7 @@ object utilitiesMod extends js.Object {
   
   def setSSR(isEnabled: Boolean): Unit = js.native
   
+  def setVirtualParent(child: HTMLElement): Unit = js.native
   def setVirtualParent(child: HTMLElement, parent: HTMLElement): Unit = js.native
   
   def setWarningCallback(): Unit = js.native

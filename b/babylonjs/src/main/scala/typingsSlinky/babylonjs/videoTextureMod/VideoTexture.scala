@@ -397,8 +397,6 @@ class VideoTexture protected () extends Texture {
   
   var _displayingPosterTexture: js.Any = js.native
   
-  var _engine: js.Any = js.native
-  
   var _frameId: js.Any = js.native
   
   var _generateMipMaps: js.Any = js.native

@@ -1,5 +1,7 @@
 package typingsSlinky.cathoQuantum.cardMod
 
+import org.scalajs.dom.raw.Element
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.cathoQuantum.anon.`7`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -7,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait Props extends js.Object {
+  
+  var onClick: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[Element], Unit]] = js.native
   
   var theme: js.UndefOr[`7`] = js.native
 }
@@ -32,6 +36,12 @@ object Props {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setOnClick(value: /* e */ SyntheticMouseEvent[Element] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
     def setTheme(value: `7`): Self = this.set("theme", value.asInstanceOf[js.Any])

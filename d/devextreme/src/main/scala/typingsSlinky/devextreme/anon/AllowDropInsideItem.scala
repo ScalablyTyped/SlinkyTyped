@@ -33,7 +33,7 @@ trait AllowDropInsideItem extends js.Object {
   
   var dragTemplate: js.UndefOr[
     template | (js.Function2[
-      /* dragInfo */ ItemDataItemElement, 
+      /* dragInfo */ ItemElement, 
       /* containerElement */ dxElement, 
       String | org.scalajs.dom.raw.Element | JQuery
     ])
@@ -146,7 +146,7 @@ object AllowDropInsideItem {
     
     @scala.inline
     def setDragTemplateFunction2(
-      value: (/* dragInfo */ ItemDataItemElement, /* containerElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
+      value: (/* dragInfo */ ItemElement, /* containerElement */ dxElement) => String | org.scalajs.dom.raw.Element | JQuery
     ): Self = this.set("dragTemplate", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -155,7 +155,7 @@ object AllowDropInsideItem {
     @scala.inline
     def setDragTemplate(
       value: template | (js.Function2[
-          /* dragInfo */ ItemDataItemElement, 
+          /* dragInfo */ ItemElement, 
           /* containerElement */ dxElement, 
           String | org.scalajs.dom.raw.Element | JQuery
         ])

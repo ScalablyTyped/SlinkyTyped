@@ -11,6 +11,5 @@ object validateMod extends js.Object {
   
   def isValid(elm: HTMLElement): Boolean = js.native
   
-  def validateContent(): String = js.native
   def validateContent(svgContent: String): String = js.native
 }

@@ -1,5 +1,7 @@
 package typingsSlinky.osrm.mod
 
+import typingsSlinky.osrm.osrmStrings.distance
+import typingsSlinky.osrm.osrmStrings.duration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +13,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait TableOptions extends Options {
+  
+  /**
+    * specify which table results to return.
+    */
+  var annotations: js.UndefOr[js.Array[duration | distance]] = js.native
   
   /**
     * to use location with given index as destination. Default is to use all.
@@ -44,6 +51,15 @@ object TableOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAnnotationsVarargs(value: (duration | distance)*): Self = this.set("annotations", js.Array(value :_*))
+    
+    @scala.inline
+    def setAnnotations(value: js.Array[duration | distance]): Self = this.set("annotations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnnotations: Self = this.set("annotations", js.undefined)
     
     @scala.inline
     def setDestinationsVarargs(value: Double*): Self = this.set("destinations", js.Array(value :_*))

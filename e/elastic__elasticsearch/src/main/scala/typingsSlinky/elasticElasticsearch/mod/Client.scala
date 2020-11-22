@@ -1,35 +1,46 @@
 package typingsSlinky.elasticElasticsearch.mod
 
-import typingsSlinky.elasticElasticsearch.anon.AckWatch
-import typingsSlinky.elasticElasticsearch.anon.Aliases
-import typingsSlinky.elasticElasticsearch.anon.AllocationExplain
-import typingsSlinky.elasticElasticsearch.anon.Analyze
-import typingsSlinky.elasticElasticsearch.anon.Authenticate
-import typingsSlinky.elasticElasticsearch.anon.Cancel
-import typingsSlinky.elasticElasticsearch.anon.Certificates
-import typingsSlinky.elasticElasticsearch.anon.CleanupRepository
-import typingsSlinky.elasticElasticsearch.anon.ClearCache
-import typingsSlinky.elasticElasticsearch.anon.ClearCursor
-import typingsSlinky.elasticElasticsearch.anon.CloseJob
-import typingsSlinky.elasticElasticsearch.anon.Delete
-import typingsSlinky.elasticElasticsearch.anon.DeleteAutoFollowPattern
-import typingsSlinky.elasticElasticsearch.anon.DeleteAutoscalingPolicy
-import typingsSlinky.elasticElasticsearch.anon.DeleteJob
-import typingsSlinky.elasticElasticsearch.anon.DeleteLifecycle_
-import typingsSlinky.elasticElasticsearch.anon.DeletePipeline
-import typingsSlinky.elasticElasticsearch.anon.DeletePolicy
-import typingsSlinky.elasticElasticsearch.anon.DeleteTransform
+import typingsSlinky.elasticElasticsearch.anon.Ackwatch
+import typingsSlinky.elasticElasticsearch.anon.Addblock
+import typingsSlinky.elasticElasticsearch.anon.Allocation
+import typingsSlinky.elasticElasticsearch.anon.Allocationexplain
+import typingsSlinky.elasticElasticsearch.anon.ChangePassword
+import typingsSlinky.elasticElasticsearch.anon.Cleanuprepository
+import typingsSlinky.elasticElasticsearch.anon.Clearcache
+import typingsSlinky.elasticElasticsearch.anon.Clearcursor
+import typingsSlinky.elasticElasticsearch.anon.Closejob
+import typingsSlinky.elasticElasticsearch.anon.Deleteautofollowpattern
+import typingsSlinky.elasticElasticsearch.anon.Deleteautoscalingpolicy
+import typingsSlinky.elasticElasticsearch.anon.Deletedanglingindex
+import typingsSlinky.elasticElasticsearch.anon.Deletejob
 import typingsSlinky.elasticElasticsearch.anon.Deletelifecycle
-import typingsSlinky.elasticElasticsearch.anon.Deprecations
-import typingsSlinky.elasticElasticsearch.anon.Explore
+import typingsSlinky.elasticElasticsearch.anon.Deletepipeline
+import typingsSlinky.elasticElasticsearch.anon.Deletepolicy
+import typingsSlinky.elasticElasticsearch.anon.Deletetransform
+import typingsSlinky.elasticElasticsearch.anon.ExecuteRetention
 import typingsSlinky.elasticElasticsearch.anon.Force
-import typingsSlinky.elasticElasticsearch.anon.HotThreads
+import typingsSlinky.elasticElasticsearch.anon.GetTrialStatus
+import typingsSlinky.elasticElasticsearch.anon.Hotthreads
+import typingsSlinky.elasticElasticsearch.anon.List
 import typingsSlinky.elasticElasticsearch.anon.Search
+import typingsSlinky.elasticElasticsearch.anon.Submit
+import typingsSlinky.elasticElasticsearch.anon.Usage
+import typingsSlinky.elasticElasticsearch.anon.`0`
+import typingsSlinky.elasticElasticsearch.anon.`1`
+import typingsSlinky.elasticElasticsearch.anon.`2`
+import typingsSlinky.elasticElasticsearch.anon.`3`
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.request
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.response
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.resurrect
+import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.sniff
 import typingsSlinky.elasticElasticsearch.helpersMod.default
+import typingsSlinky.elasticElasticsearch.poolMod.ResurrectEvent
 import typingsSlinky.elasticElasticsearch.requestParamsMod.Bulk
 import typingsSlinky.elasticElasticsearch.requestParamsMod.ClearScroll
+import typingsSlinky.elasticElasticsearch.requestParamsMod.ClosePointInTime
 import typingsSlinky.elasticElasticsearch.requestParamsMod.Count
 import typingsSlinky.elasticElasticsearch.requestParamsMod.Create
+import typingsSlinky.elasticElasticsearch.requestParamsMod.Delete
 import typingsSlinky.elasticElasticsearch.requestParamsMod.DeleteByQuery
 import typingsSlinky.elasticElasticsearch.requestParamsMod.DeleteByQueryRethrottle
 import typingsSlinky.elasticElasticsearch.requestParamsMod.DeleteScript
@@ -48,6 +59,7 @@ import typingsSlinky.elasticElasticsearch.requestParamsMod.Mget
 import typingsSlinky.elasticElasticsearch.requestParamsMod.Msearch
 import typingsSlinky.elasticElasticsearch.requestParamsMod.MsearchTemplate
 import typingsSlinky.elasticElasticsearch.requestParamsMod.Mtermvectors
+import typingsSlinky.elasticElasticsearch.requestParamsMod.OpenPointInTime
 import typingsSlinky.elasticElasticsearch.requestParamsMod.Ping
 import typingsSlinky.elasticElasticsearch.requestParamsMod.PutScript
 import typingsSlinky.elasticElasticsearch.requestParamsMod.RankEval
@@ -62,8 +74,11 @@ import typingsSlinky.elasticElasticsearch.requestParamsMod.Termvectors
 import typingsSlinky.elasticElasticsearch.requestParamsMod.Update
 import typingsSlinky.elasticElasticsearch.requestParamsMod.UpdateByQuery
 import typingsSlinky.elasticElasticsearch.requestParamsMod.UpdateByQueryRethrottle
+import typingsSlinky.elasticElasticsearch.transportMod.ApiError
 import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
+import typingsSlinky.elasticElasticsearch.transportMod.Context
 import typingsSlinky.elasticElasticsearch.transportMod.RequestBody
+import typingsSlinky.elasticElasticsearch.transportMod.RequestEvent
 import typingsSlinky.elasticElasticsearch.transportMod.RequestNDBody
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestCallback
 import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
@@ -75,15 +90,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("@elastic/elasticsearch", "Client")
 @js.native
-class Client () extends EventEmitter {
+class Client () extends js.Object {
   def this(opts: ClientOptions) = this()
   
-  var asyncSearch: Delete = js.native
+  var asyncSearch: Submit = js.native
   
   /* GENERATED */
-  var async_search: Delete = js.native
+  var async_search: Submit = js.native
   
-  var autoscaling: DeleteAutoscalingPolicy = js.native
+  var autoscaling: Deleteautoscalingpolicy = js.native
   
   def bulk[TResponse, TRequestBody /* <: RequestNDBody[js.Array[Record[String, _]]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def bulk[TResponse, TRequestBody /* <: RequestNDBody[js.Array[Record[String, _]]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
@@ -97,9 +112,9 @@ class Client () extends EventEmitter {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
   
-  var cat: Aliases = js.native
+  var cat: Allocation = js.native
   
-  var ccr: DeleteAutoFollowPattern = js.native
+  var ccr: Deleteautofollowpattern = js.native
   
   def child(): Client = js.native
   def child(opts: ClientOptions): Client = js.native
@@ -131,7 +146,36 @@ class Client () extends EventEmitter {
   def close(): js.Promise[Unit] | Unit = js.native
   def close(callback: js.Function): js.Promise[Unit] | Unit = js.native
   
-  var cluster: AllocationExplain = js.native
+  def closePointInTime[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def closePointInTime[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def closePointInTime[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def closePointInTime[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClosePointInTime[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def closePointInTime[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClosePointInTime[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def closePointInTime[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClosePointInTime[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def closePointInTime[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: ClosePointInTime[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  
+  @JSName("close")
+  def close_Promise(): js.Promise[Unit] = js.native
+  @JSName("close")
+  def close_Unit(callback: js.Function): Unit = js.native
+  
+  def close_point_in_time[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def close_point_in_time[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def close_point_in_time[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def close_point_in_time[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClosePointInTime[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def close_point_in_time[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClosePointInTime[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def close_point_in_time[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: ClosePointInTime[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def close_point_in_time[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: ClosePointInTime[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  
+  var cluster: Allocationexplain = js.native
   
   var connectionPool: typingsSlinky.elasticElasticsearch.poolMod.ConnectionPool = js.native
   
@@ -159,23 +203,17 @@ class Client () extends EventEmitter {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
   
+  var danglingIndices: Deletedanglingindex = js.native
+  
+  var dangling_indices: Deletedanglingindex = js.native
+  
   def delete[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   def delete[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def delete[TResponse, TContext](params: typingsSlinky.elasticElasticsearch.requestParamsMod.Delete): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def delete[TResponse, TContext](
-    params: typingsSlinky.elasticElasticsearch.requestParamsMod.Delete,
-    callback: callbackFn[TResponse, TContext]
-  ): TransportRequestCallback = js.native
-  def delete[TResponse, TContext](
-    params: typingsSlinky.elasticElasticsearch.requestParamsMod.Delete,
-    options: TransportRequestOptions
-  ): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def delete[TResponse, TContext](
-    params: typingsSlinky.elasticElasticsearch.requestParamsMod.Delete,
-    options: TransportRequestOptions,
-    callback: callbackFn[TResponse, TContext]
-  ): TransportRequestCallback = js.native
+  def delete[TResponse, TContext](params: Delete): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def delete[TResponse, TContext](params: Delete, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def delete[TResponse, TContext](params: Delete, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def delete[TResponse, TContext](params: Delete, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   
   def deleteByQuery[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def deleteByQuery[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
@@ -241,7 +279,10 @@ class Client () extends EventEmitter {
   def delete_script[TResponse, TContext](params: DeleteScript, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def delete_script[TResponse, TContext](params: DeleteScript, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   
-  var enrich: DeletePolicy = js.native
+  def emit(event: String, args: js.Any*): Boolean = js.native
+  def emit(event: js.Symbol, args: js.Any*): Boolean = js.native
+  
+  var enrich: Deletepolicy = js.native
   
   var eql: Search = js.native
   
@@ -283,24 +324,30 @@ class Client () extends EventEmitter {
   
   def extend(method: String, fn: extendsCallback): Unit = js.native
   def extend(method: String, opts: Force, fn: extendsCallback): Unit = js.native
-  @JSName("extend")
-  var extend_Original: ClientExtends = js.native
   
-  def fieldCaps[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def fieldCaps[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
-  def fieldCaps[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def fieldCaps[TResponse, TContext](params: FieldCaps): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def fieldCaps[TResponse, TContext](params: FieldCaps, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
-  def fieldCaps[TResponse, TContext](params: FieldCaps, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def fieldCaps[TResponse, TContext](params: FieldCaps, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def fieldCaps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def fieldCaps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def fieldCaps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def fieldCaps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: FieldCaps[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def fieldCaps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: FieldCaps[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def fieldCaps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: FieldCaps[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def fieldCaps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: FieldCaps[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
   
-  def field_caps[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def field_caps[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
-  def field_caps[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def field_caps[TResponse, TContext](params: FieldCaps): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def field_caps[TResponse, TContext](params: FieldCaps, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
-  def field_caps[TResponse, TContext](params: FieldCaps, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
-  def field_caps[TResponse, TContext](params: FieldCaps, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def field_caps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def field_caps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def field_caps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def field_caps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: FieldCaps[TRequestBody]): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def field_caps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: FieldCaps[TRequestBody], callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def field_caps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](params: FieldCaps[TRequestBody], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def field_caps[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](
+    params: FieldCaps[TRequestBody],
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
   
   def get[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
@@ -390,11 +437,11 @@ class Client () extends EventEmitter {
   def get_source[TResponse, TContext](params: GetSource, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def get_source[TResponse, TContext](params: GetSource, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   
-  var graph: Explore = js.native
+  var graph: `0` = js.native
   
   var helpers: default = js.native
   
-  var ilm: DeleteLifecycle_ = js.native
+  var ilm: Deletelifecycle = js.native
   
   def index[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def index[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
@@ -408,7 +455,7 @@ class Client () extends EventEmitter {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
   
-  var indices: Analyze = js.native
+  var indices: Addblock = js.native
   
   def info[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def info[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
@@ -418,9 +465,9 @@ class Client () extends EventEmitter {
   def info[TResponse, TContext](params: Info, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def info[TResponse, TContext](params: Info, options: TransportRequestOptions, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
   
-  var ingest: DeletePipeline = js.native
+  var ingest: Deletepipeline = js.native
   
-  var license: typingsSlinky.elasticElasticsearch.anon.Get = js.native
+  var license: GetTrialStatus = js.native
   
   def mget[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def mget[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
@@ -434,11 +481,11 @@ class Client () extends EventEmitter {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
   
-  var migration: Deprecations = js.native
+  var migration: `1` = js.native
   
-  var ml: CloseJob = js.native
+  var ml: Closejob = js.native
   
-  var monitoring: typingsSlinky.elasticElasticsearch.anon.Bulk = js.native
+  var monitoring: `2` = js.native
   
   def msearch[TResponse, TRequestBody /* <: RequestNDBody[js.Array[Record[String, _]]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def msearch[TResponse, TRequestBody /* <: RequestNDBody[js.Array[Record[String, _]]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
@@ -488,7 +535,70 @@ class Client () extends EventEmitter {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
   
-  var nodes: HotThreads = js.native
+  var nodes: Hotthreads = js.native
+  
+  def off(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  def off(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
+  
+  @JSName("on")
+  def on_request(
+    event: request,
+    listener: js.Function2[/* err */ ApiError, /* meta */ RequestEvent[Record[String, _], Context], Unit]
+  ): this.type = js.native
+  @JSName("on")
+  def on_response(
+    event: response,
+    listener: js.Function2[/* err */ ApiError, /* meta */ RequestEvent[Record[String, _], Context], Unit]
+  ): this.type = js.native
+  @JSName("on")
+  def on_resurrect(event: resurrect, listener: js.Function2[/* err */ Null, /* meta */ ResurrectEvent, Unit]): this.type = js.native
+  @JSName("on")
+  def on_sniff(
+    event: sniff,
+    listener: js.Function2[/* err */ ApiError, /* meta */ RequestEvent[Record[String, _], Context], Unit]
+  ): this.type = js.native
+  
+  @JSName("once")
+  def once_request(
+    event: request,
+    listener: js.Function2[/* err */ ApiError, /* meta */ RequestEvent[Record[String, _], Context], Unit]
+  ): this.type = js.native
+  @JSName("once")
+  def once_response(
+    event: response,
+    listener: js.Function2[/* err */ ApiError, /* meta */ RequestEvent[Record[String, _], Context], Unit]
+  ): this.type = js.native
+  @JSName("once")
+  def once_resurrect(event: resurrect, listener: js.Function2[/* err */ Null, /* meta */ ResurrectEvent, Unit]): this.type = js.native
+  @JSName("once")
+  def once_sniff(
+    event: sniff,
+    listener: js.Function2[/* err */ ApiError, /* meta */ RequestEvent[Record[String, _], Context], Unit]
+  ): this.type = js.native
+  
+  def openPointInTime[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def openPointInTime[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def openPointInTime[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def openPointInTime[TResponse, TContext](params: OpenPointInTime): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def openPointInTime[TResponse, TContext](params: OpenPointInTime, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def openPointInTime[TResponse, TContext](params: OpenPointInTime, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def openPointInTime[TResponse, TContext](
+    params: OpenPointInTime,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
+  
+  def open_point_in_time[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def open_point_in_time[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def open_point_in_time[TResponse, TContext](params: js.UndefOr[scala.Nothing], options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def open_point_in_time[TResponse, TContext](params: OpenPointInTime): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def open_point_in_time[TResponse, TContext](params: OpenPointInTime, callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
+  def open_point_in_time[TResponse, TContext](params: OpenPointInTime, options: TransportRequestOptions): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
+  def open_point_in_time[TResponse, TContext](
+    params: OpenPointInTime,
+    options: TransportRequestOptions,
+    callback: callbackFn[TResponse, TContext]
+  ): TransportRequestCallback = js.native
   
   def ping[TResponse, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def ping[TResponse, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
@@ -606,7 +716,7 @@ class Client () extends EventEmitter {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
   
-  var rollup: DeleteJob = js.native
+  var rollup: Deletejob = js.native
   
   def scriptsPainlessExecute[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def scriptsPainlessExecute[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
@@ -702,23 +812,23 @@ class Client () extends EventEmitter {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
   
-  var searchableSnapshots: ClearCache = js.native
+  var searchableSnapshots: Clearcache = js.native
   
-  var searchable_snapshots: ClearCache = js.native
+  var searchable_snapshots: Clearcache = js.native
   
-  var security: Authenticate = js.native
+  var security: ChangePassword = js.native
   
   var serializer: typingsSlinky.elasticElasticsearch.serializerMod.default = js.native
   
-  var slm: Deletelifecycle = js.native
+  var slm: ExecuteRetention = js.native
   
-  var snapshot: CleanupRepository = js.native
+  var snapshot: Cleanuprepository = js.native
   
-  var sql: ClearCursor = js.native
+  var sql: Clearcursor = js.native
   
-  var ssl: Certificates = js.native
+  var ssl: `3` = js.native
   
-  var tasks: Cancel = js.native
+  var tasks: List = js.native
   
   def termvectors[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](): TransportRequestPromise[ApiResponse[TResponse, TContext]] = js.native
   def termvectors[TResponse, TRequestBody /* <: RequestBody[Record[String, _]] */, TContext](callback: callbackFn[TResponse, TContext]): TransportRequestCallback = js.native
@@ -732,7 +842,7 @@ class Client () extends EventEmitter {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
   
-  var transform: DeleteTransform = js.native
+  var transform: Deletetransform = js.native
   
   var transport: typingsSlinky.elasticElasticsearch.transportMod.default = js.native
   
@@ -796,7 +906,7 @@ class Client () extends EventEmitter {
     callback: callbackFn[TResponse, TContext]
   ): TransportRequestCallback = js.native
   
-  var watcher: AckWatch = js.native
+  var watcher: Ackwatch = js.native
   
-  var xpack: typingsSlinky.elasticElasticsearch.anon.Info = js.native
+  var xpack: Usage = js.native
 }

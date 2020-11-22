@@ -1,15 +1,26 @@
 package typingsSlinky.kurentoClient.mod
 
 import org.scalajs.dom.experimental.webrtc.RTCIceCandidate
+import typingsSlinky.kurentoClient.anon.EventDataChannelClosechan
+import typingsSlinky.kurentoClient.anon.EventDataChannelOpenchann
+import typingsSlinky.kurentoClient.anon.EventIceCandidateFoundcan
+import typingsSlinky.kurentoClient.anon.EventIceComponentStateCha
+import typingsSlinky.kurentoClient.anon.EventIceGatheringDone
+import typingsSlinky.kurentoClient.anon.EventNewCandidatePairSele
+import typingsSlinky.kurentoClient.anon.EventOnIceCandidatecandid
+import typingsSlinky.kurentoClient.kurentoClientStrings.DataChannelClose
+import typingsSlinky.kurentoClient.kurentoClientStrings.DataChannelOpen
+import typingsSlinky.kurentoClient.kurentoClientStrings.IceCandidateFound
+import typingsSlinky.kurentoClient.kurentoClientStrings.IceComponentStateChange
+import typingsSlinky.kurentoClient.kurentoClientStrings.IceGatheringDone
+import typingsSlinky.kurentoClient.kurentoClientStrings.NewCandidatePairSelected
+import typingsSlinky.kurentoClient.kurentoClientStrings.OnIceCandidate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait WebRtcEndpoint
-  extends ClientInstance
-     with MediaObject
-     with MediaElement {
+trait WebRtcEndpoint extends BaseRtpEndpoint {
   
   def addIceCandidate(candidate: RTCIceCandidate): js.Promise[Unit] = js.native
   def addIceCandidate(candidate: RTCIceCandidate, callback: Callback[Unit]): js.Promise[Unit] = js.native
@@ -29,9 +40,6 @@ trait WebRtcEndpoint
   def gatherCandidates(): js.Promise[Unit] = js.native
   def gatherCandidates(callback: Callback[Unit]): js.Promise[Unit] = js.native
   
-  def getConnectionState(): js.Promise[_] = js.native
-  def getConnectionState(callback: Callback[_]): js.Promise[_] = js.native
-  
   def getICECandidatePairs(): js.Promise[_] = js.native
   def getICECandidatePairs(callback: Callback[_]): js.Promise[_] = js.native
   
@@ -50,9 +58,6 @@ trait WebRtcEndpoint
   def getMaxVideoSendBandwidth(): js.Promise[Double] = js.native
   def getMaxVideoSendBandwidth(callback: Callback[Double]): js.Promise[Double] = js.native
   
-  def getMediaState(): js.Promise[_] = js.native
-  def getMediaState(callback: Callback[Double]): js.Promise[_] = js.native
-  
   def getMinOutputBitrate(): js.Promise[Double] = js.native
   def getMinOutputBitrate(callback: Callback[Double]): js.Promise[Double] = js.native
   
@@ -70,6 +75,28 @@ trait WebRtcEndpoint
   
   def getTurnUrl(): js.Promise[String] = js.native
   def getTurnUrl(callback: Callback[String]): js.Promise[String] = js.native
+  
+  @JSName("on")
+  def on_DataChannelClose(event: DataChannelClose, callback: js.Function1[/* event */ EventDataChannelClosechan, Unit]): WebRtcEndpoint = js.native
+  @JSName("on")
+  def on_DataChannelOpen(event: DataChannelOpen, callback: js.Function1[/* event */ EventDataChannelOpenchann, Unit]): WebRtcEndpoint = js.native
+  @JSName("on")
+  def on_IceCandidateFound(event: IceCandidateFound, callback: js.Function1[/* event */ EventIceCandidateFoundcan, Unit]): WebRtcEndpoint = js.native
+  @JSName("on")
+  def on_IceComponentStateChange(
+    event: IceComponentStateChange,
+    callback: js.Function1[/* event */ EventIceComponentStateCha, Unit]
+  ): WebRtcEndpoint = js.native
+  @JSName("on")
+  def on_IceGatheringDone(event: IceGatheringDone, callback: js.Function1[/* event */ EventIceGatheringDone, Unit]): WebRtcEndpoint = js.native
+  @JSName("on")
+  def on_NewCandidatePairSelected(
+    event: NewCandidatePairSelected,
+    callback: js.Function1[/* event */ EventNewCandidatePairSele, Unit]
+  ): WebRtcEndpoint = js.native
+  // Deprecated. See https://doc-kurento.readthedocs.io/en/stable/_static/client-jsdoc/module-elements.html#event:OnIceCandidate
+  @JSName("on")
+  def on_OnIceCandidate(event: OnIceCandidate, callback: js.Function1[/* event */ EventOnIceCandidatecandid, Unit]): WebRtcEndpoint = js.native
   
   def processOffer(offer: String): js.Promise[String] = js.native
   def processOffer(offer: String, callback: Callback[String]): js.Promise[String] = js.native

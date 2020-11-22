@@ -92,8 +92,6 @@ trait YAxisScrollbarOptions extends js.Object {
     */
   var size: js.UndefOr[Double] = js.native
   
-  var step: js.UndefOr[Double] = js.native
-  
   /**
     * (Highstock) The color of the track background.
     */
@@ -237,12 +235,6 @@ object YAxisScrollbarOptions {
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)
-    
-    @scala.inline
-    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStep: Self = this.set("step", js.undefined)
     
     @scala.inline
     def setTrackBackgroundColor(value: ColorString | GradientColorObject | PatternObject): Self = this.set("trackBackgroundColor", value.asInstanceOf[js.Any])

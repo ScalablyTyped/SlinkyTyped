@@ -1,7 +1,11 @@
 package typingsSlinky.pulumiAws.mod
 
+import typingsSlinky.pulumiAws.codeRepositoryMod.CodeRepositoryArgs
+import typingsSlinky.pulumiAws.codeRepositoryMod.CodeRepositoryState
 import typingsSlinky.pulumiAws.endpointConfigurationMod.EndpointConfigurationArgs
 import typingsSlinky.pulumiAws.endpointConfigurationMod.EndpointConfigurationState
+import typingsSlinky.pulumiAws.getPrebuiltEcrImageMod.GetPrebuiltEcrImageArgs
+import typingsSlinky.pulumiAws.getPrebuiltEcrImageMod.GetPrebuiltEcrImageResult
 import typingsSlinky.pulumiAws.notebookInstanceLifecycleConfigurationMod.NotebookInstanceLifecycleConfigurationArgs
 import typingsSlinky.pulumiAws.notebookInstanceLifecycleConfigurationMod.NotebookInstanceLifecycleConfigurationState
 import typingsSlinky.pulumiAws.notebookInstanceMod.NotebookInstanceArgs
@@ -10,6 +14,7 @@ import typingsSlinky.pulumiAws.sagemakerEndpointMod.EndpointArgs
 import typingsSlinky.pulumiAws.sagemakerEndpointMod.EndpointState
 import typingsSlinky.pulumiAws.sagemakerModelMod.ModelArgs
 import typingsSlinky.pulumiAws.sagemakerModelMod.ModelState
+import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -20,6 +25,47 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@pulumi/aws", "sagemaker")
 @js.native
 object sagemaker extends js.Object {
+  
+  def getPrebuiltEcrImage(args: GetPrebuiltEcrImageArgs): js.Promise[GetPrebuiltEcrImageResult] = js.native
+  def getPrebuiltEcrImage(args: GetPrebuiltEcrImageArgs, opts: InvokeOptions): js.Promise[GetPrebuiltEcrImageResult] = js.native
+  
+  @js.native
+  class CodeRepository protected ()
+    extends typingsSlinky.pulumiAws.sagemakerMod.CodeRepository {
+    /**
+      * Create a CodeRepository resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: CodeRepositoryArgs) = this()
+    def this(name: String, args: CodeRepositoryArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object CodeRepository extends js.Object {
+    
+    /**
+      * Get an existing CodeRepository resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.codeRepositoryMod.CodeRepository = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.codeRepositoryMod.CodeRepository = js.native
+    def get(name: String, id: Input[ID], state: CodeRepositoryState): typingsSlinky.pulumiAws.codeRepositoryMod.CodeRepository = js.native
+    def get(name: String, id: Input[ID], state: CodeRepositoryState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.codeRepositoryMod.CodeRepository = js.native
+    
+    /**
+      * Returns true if the given object is an instance of CodeRepository.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/sagemaker/codeRepository.CodeRepository */ Boolean = js.native
+  }
   
   @js.native
   class Endpoint protected ()

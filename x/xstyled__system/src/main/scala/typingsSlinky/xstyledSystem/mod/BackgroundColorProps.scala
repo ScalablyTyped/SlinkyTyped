@@ -9,13 +9,13 @@ trait BackgroundColorProps[TLength] extends js.Object {
   
   val backgroundColor: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Background<TLength> */ _
     ]
   ] = js.native
   
   val bg: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Background<TLength> */ _
     ]
   ] = js.native
 }
@@ -43,9 +43,12 @@ object BackgroundColorProps {
     }
     
     @scala.inline
+    def setBackgroundColorVarargs(value: js.Any*): Self = this.set("backgroundColor", js.Array(value :_*))
+    
+    @scala.inline
     def setBackgroundColor(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Background<TLength> */ _
         ]
     ): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     
@@ -53,9 +56,12 @@ object BackgroundColorProps {
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
     
     @scala.inline
+    def setBgVarargs(value: js.Any*): Self = this.set("bg", js.Array(value :_*))
+    
+    @scala.inline
     def setBg(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Background<TLength> */ _
         ]
     ): Self = this.set("bg", value.asInstanceOf[js.Any])
     

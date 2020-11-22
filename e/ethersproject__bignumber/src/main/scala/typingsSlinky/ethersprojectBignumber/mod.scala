@@ -10,6 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
+  @JSName("_base16To36")
+  def base16To36(value: String): String = js.native
+  
+  @JSName("_base36To16")
+  def base36To16(value: String): String = js.native
+  
   def formatFixed(value: BigNumberish): String = js.native
   def formatFixed(value: BigNumberish, decimals: String): String = js.native
   def formatFixed(value: BigNumberish, decimals: BigNumberish): String = js.native

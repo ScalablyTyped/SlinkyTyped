@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.sideNavigationMod
 
-import typingsSlinky.baseui.anon.EventSyntheticEvent
+import typingsSlinky.baseui.anon.EventItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +16,7 @@ trait NavigationProps extends js.Object {
   
   var mapItem: js.UndefOr[js.Function1[/* item */ Item, Item]] = js.native
   
-  var onChange: js.UndefOr[js.Function1[/* args */ EventSyntheticEvent, _]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* args */ EventItem, _]] = js.native
   
   var overrides: js.UndefOr[NavigationOverrides] = js.native
 }
@@ -68,7 +68,7 @@ object NavigationProps {
     def deleteMapItem: Self = this.set("mapItem", js.undefined)
     
     @scala.inline
-    def setOnChange(value: /* args */ EventSyntheticEvent => _): Self = this.set("onChange", js.Any.fromFunction1(value))
+    def setOnChange(value: /* args */ EventItem => _): Self = this.set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)

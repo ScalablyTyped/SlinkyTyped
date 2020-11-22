@@ -2,6 +2,7 @@ package typingsSlinky.reactNativeElements.anon
 
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -11,32 +12,37 @@ import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.BackgroundPropType
 import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.TargetedEvent
+import typingsSlinky.reactNative.mod.TextLayoutEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.mod.IconType
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.`no-hide-descendants`
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.all
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.assertive
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.auto
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.balanced
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.button
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.clip
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.email
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.head
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.highQuality
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.link
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.middle
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.no
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.none
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.phoneNumber
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.polite
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.radiobutton_checked
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.radiobutton_unchecked
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.simple
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.tail
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.yes
+import typingsSlinky.reactNativeVectorIcons.iconMod.IconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -91,6 +97,8 @@ trait PartialIconProps extends js.Object {
   
   var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
+  var dataDetectorType: js.UndefOr[Null | phoneNumber | link | email | none | all] = js.native
+  
   var delayLongPress: js.UndefOr[Double] = js.native
   
   var delayPressIn: js.UndefOr[Double] = js.native
@@ -106,6 +114,8 @@ trait PartialIconProps extends js.Object {
   var hasTVPreferredFocus: js.UndefOr[Boolean] = js.native
   
   var hitSlop: js.UndefOr[Insets] = js.native
+  
+  var iconProps: js.UndefOr[IconProps] = js.native
   
   var iconStyle: js.UndefOr[TextStyle] = js.native
   
@@ -135,7 +145,7 @@ trait PartialIconProps extends js.Object {
   
   var onHideUnderlay: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   var onLongPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
   
@@ -148,6 +158,8 @@ trait PartialIconProps extends js.Object {
   var onPressOut: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
   
   var onShowUnderlay: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  var onTextLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextLayoutEventData], Unit]] = js.native
   
   var pressRetentionOffset: js.UndefOr[Insets] = js.native
   
@@ -354,6 +366,15 @@ object PartialIconProps {
     def setContainerStyleNull: Self = this.set("containerStyle", null)
     
     @scala.inline
+    def setDataDetectorType(value: phoneNumber | link | email | none | all): Self = this.set("dataDetectorType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataDetectorType: Self = this.set("dataDetectorType", js.undefined)
+    
+    @scala.inline
+    def setDataDetectorTypeNull: Self = this.set("dataDetectorType", null)
+    
+    @scala.inline
     def setDelayLongPress(value: Double): Self = this.set("delayLongPress", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -406,6 +427,12 @@ object PartialIconProps {
     
     @scala.inline
     def deleteHitSlop: Self = this.set("hitSlop", js.undefined)
+    
+    @scala.inline
+    def setIconProps(value: IconProps): Self = this.set("iconProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIconProps: Self = this.set("iconProps", js.undefined)
     
     @scala.inline
     def setIconStyle(value: TextStyle): Self = this.set("iconStyle", value.asInstanceOf[js.Any])
@@ -495,7 +522,7 @@ object PartialIconProps {
     def deleteOnHideUnderlay: Self = this.set("onHideUnderlay", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -535,6 +562,12 @@ object PartialIconProps {
     
     @scala.inline
     def deleteOnShowUnderlay: Self = this.set("onShowUnderlay", js.undefined)
+    
+    @scala.inline
+    def setOnTextLayout(value: SyntheticEvent[NodeHandle, TextLayoutEventData] => Unit): Self = this.set("onTextLayout", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnTextLayout: Self = this.set("onTextLayout", js.undefined)
     
     @scala.inline
     def setPressRetentionOffset(value: Insets): Self = this.set("pressRetentionOffset", value.asInstanceOf[js.Any])

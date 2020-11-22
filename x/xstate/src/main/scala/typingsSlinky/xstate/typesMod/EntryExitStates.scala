@@ -1,6 +1,7 @@
 package typingsSlinky.xstate.typesMod
 
 import typingsSlinky.std.Set
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,16 +10,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EntryExitStates[TContext] extends js.Object {
   
-  var entry: Set[StateNode[TContext, _, EventObject, _]] = js.native
+  var entry: Set[StateNode[TContext, _, EventObject, ContextTContext[TContext]]] = js.native
   
-  var exit: Set[StateNode[TContext, _, EventObject, _]] = js.native
+  var exit: Set[StateNode[TContext, _, EventObject, ContextTContext[TContext]]] = js.native
 }
 object EntryExitStates {
   
   @scala.inline
   def apply[TContext](
-    entry: Set[StateNode[TContext, _, EventObject, _]],
-    exit: Set[StateNode[TContext, _, EventObject, _]]
+    entry: Set[StateNode[TContext, _, EventObject, ContextTContext[TContext]]],
+    exit: Set[StateNode[TContext, _, EventObject, ContextTContext[TContext]]]
   ): EntryExitStates[TContext] = {
     val __obj = js.Dynamic.literal(entry = entry.asInstanceOf[js.Any], exit = exit.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntryExitStates[TContext]]
@@ -40,9 +41,9 @@ object EntryExitStates {
     }
     
     @scala.inline
-    def setEntry(value: Set[StateNode[TContext, _, EventObject, _]]): Self = this.set("entry", value.asInstanceOf[js.Any])
+    def setEntry(value: Set[StateNode[TContext, _, EventObject, ContextTContext[TContext]]]): Self = this.set("entry", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExit(value: Set[StateNode[TContext, _, EventObject, _]]): Self = this.set("exit", value.asInstanceOf[js.Any])
+    def setExit(value: Set[StateNode[TContext, _, EventObject, ContextTContext[TContext]]]): Self = this.set("exit", value.asInstanceOf[js.Any])
   }
 }

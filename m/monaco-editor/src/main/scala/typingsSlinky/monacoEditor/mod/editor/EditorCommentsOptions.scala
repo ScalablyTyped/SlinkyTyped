@@ -8,13 +8,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EditorCommentsOptions extends js.Object {
   
+  val ignoreEmptyLines: Boolean = js.native
+  
   val insertSpace: Boolean = js.native
 }
 object EditorCommentsOptions {
   
   @scala.inline
-  def apply(insertSpace: Boolean): EditorCommentsOptions = {
-    val __obj = js.Dynamic.literal(insertSpace = insertSpace.asInstanceOf[js.Any])
+  def apply(ignoreEmptyLines: Boolean, insertSpace: Boolean): EditorCommentsOptions = {
+    val __obj = js.Dynamic.literal(ignoreEmptyLines = ignoreEmptyLines.asInstanceOf[js.Any], insertSpace = insertSpace.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorCommentsOptions]
   }
   
@@ -32,6 +34,9 @@ object EditorCommentsOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setIgnoreEmptyLines(value: Boolean): Self = this.set("ignoreEmptyLines", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setInsertSpace(value: Boolean): Self = this.set("insertSpace", value.asInstanceOf[js.Any])

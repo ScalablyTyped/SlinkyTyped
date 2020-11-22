@@ -393,6 +393,7 @@ package object wafv2Mod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.APPLICATION_LOAD_BALANCER
     - typingsSlinky.awsSdk.awsSdkStrings.API_GATEWAY
+    - typingsSlinky.awsSdk.awsSdkStrings.APPSYNC
     - java.lang.String
   */
   type ResourceType = typingsSlinky.awsSdk.wafv2Mod._ResourceType | java.lang.String

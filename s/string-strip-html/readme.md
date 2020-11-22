@@ -1,7 +1,7 @@
 
 # Scala.js typings for string-strip-html
 
-Typings are for version 4.3
+Typings are for version 5.0
 
 ## Library description:
 Strips HTML tags from strings. Detects legit unencoded brackets.

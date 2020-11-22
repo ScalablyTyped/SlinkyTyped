@@ -1,13 +1,14 @@
 package typingsSlinky.formatjsIntlDatetimeformat
 
-import typingsSlinky.formatjsIntlDatetimeformat.typesMod.DateTimeFormatOptions
+import typingsSlinky.formatjsEcma402Abstract.typesDateTimeMod.DateTimeFormatOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@formatjs/intl-datetimeformat/src/to_locale_string", JSImport.Namespace)
+@JSImport("@formatjs/intl-datetimeformat/lib/src/to_locale_string", JSImport.Namespace)
 @js.native
 object toLocaleStringMod extends js.Object {
+  
   def toLocaleDateString(): String = js.native
   def toLocaleDateString(x: js.UndefOr[scala.Nothing], locales: js.UndefOr[scala.Nothing], options: DateTimeFormatOptions): String = js.native
   def toLocaleDateString(x: js.UndefOr[scala.Nothing], locales: String): String = js.native
@@ -26,6 +27,7 @@ object toLocaleStringMod extends js.Object {
   def toLocaleDateString(x: js.Date, locales: String, options: DateTimeFormatOptions): String = js.native
   def toLocaleDateString(x: js.Date, locales: js.Array[String]): String = js.native
   def toLocaleDateString(x: js.Date, locales: js.Array[String], options: DateTimeFormatOptions): String = js.native
+  
   def toLocaleString(x: js.UndefOr[scala.Nothing], locales: js.UndefOr[scala.Nothing], options: DateTimeFormatOptions): String = js.native
   def toLocaleString(x: js.UndefOr[scala.Nothing], locales: String): String = js.native
   def toLocaleString(x: js.UndefOr[scala.Nothing], locales: String, options: DateTimeFormatOptions): String = js.native
@@ -43,6 +45,7 @@ object toLocaleStringMod extends js.Object {
   def toLocaleString(x: js.Date, locales: String, options: DateTimeFormatOptions): String = js.native
   def toLocaleString(x: js.Date, locales: js.Array[String]): String = js.native
   def toLocaleString(x: js.Date, locales: js.Array[String], options: DateTimeFormatOptions): String = js.native
+  
   def toLocaleTimeString(): String = js.native
   def toLocaleTimeString(x: js.UndefOr[scala.Nothing], locales: js.UndefOr[scala.Nothing], options: DateTimeFormatOptions): String = js.native
   def toLocaleTimeString(x: js.UndefOr[scala.Nothing], locales: String): String = js.native
@@ -62,4 +65,3 @@ object toLocaleStringMod extends js.Object {
   def toLocaleTimeString(x: js.Date, locales: js.Array[String]): String = js.native
   def toLocaleTimeString(x: js.Date, locales: js.Array[String], options: DateTimeFormatOptions): String = js.native
 }
-

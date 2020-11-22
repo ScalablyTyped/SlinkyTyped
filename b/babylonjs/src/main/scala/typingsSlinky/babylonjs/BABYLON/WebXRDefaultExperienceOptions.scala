@@ -35,9 +35,20 @@ trait WebXRDefaultExperienceOptions extends js.Object {
   var inputOptions: js.UndefOr[IWebXRInputOptions] = js.native
   
   /**
+    * A list of optional features to init the session with
+    * If set to true, all features we support will be added
+    */
+  var optionalFeatures: js.UndefOr[Boolean | js.Array[String]] = js.native
+  
+  /**
     * optional configuration for the output canvas
     */
   var outputCanvasOptions: js.UndefOr[WebXRManagedOutputCanvasOptions] = js.native
+  
+  /**
+    * An optional rendering group id that will be set globally for teleportation, pointer selection and default controller meshes
+    */
+  var renderingGroupId: js.UndefOr[Double] = js.native
   
   /**
     * optional UI options. This can be used among other to change session mode and reference space type
@@ -106,10 +117,25 @@ object WebXRDefaultExperienceOptions {
     def deleteInputOptions: Self = this.set("inputOptions", js.undefined)
     
     @scala.inline
+    def setOptionalFeaturesVarargs(value: String*): Self = this.set("optionalFeatures", js.Array(value :_*))
+    
+    @scala.inline
+    def setOptionalFeatures(value: Boolean | js.Array[String]): Self = this.set("optionalFeatures", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOptionalFeatures: Self = this.set("optionalFeatures", js.undefined)
+    
+    @scala.inline
     def setOutputCanvasOptions(value: WebXRManagedOutputCanvasOptions): Self = this.set("outputCanvasOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOutputCanvasOptions: Self = this.set("outputCanvasOptions", js.undefined)
+    
+    @scala.inline
+    def setRenderingGroupId(value: Double): Self = this.set("renderingGroupId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRenderingGroupId: Self = this.set("renderingGroupId", js.undefined)
     
     @scala.inline
     def setUiOptions(value: WebXREnterExitUIOptions): Self = this.set("uiOptions", value.asInstanceOf[js.Any])

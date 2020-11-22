@@ -18,8 +18,13 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.formik.anon.PickDetailedHTMLPropsForm
+import typingsSlinky.formik.formikStrings.`additions removals`
 import typingsSlinky.formik.formikStrings.`additions text`
 import typingsSlinky.formik.formikStrings.`inline`
+import typingsSlinky.formik.formikStrings.`removals additions`
+import typingsSlinky.formik.formikStrings.`removals text`
+import typingsSlinky.formik.formikStrings.`text additions`
+import typingsSlinky.formik.formikStrings.`text removals`
 import typingsSlinky.formik.formikStrings.additions
 import typingsSlinky.formik.formikStrings.all
 import typingsSlinky.formik.formikStrings.ascending
@@ -200,7 +205,9 @@ object Form {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

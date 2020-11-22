@@ -12,9 +12,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class DepthTexture protected ()
   extends typingsSlinky.three.mod.DepthTexture {
+  /**
+  	 * @param width
+  	 * @param height
+  	 * @param type
+  	 * @param [mapping=THREE.Texture.DEFAULT_MAPPING]
+  	 * @param [wrapS=THREE.ClampToEdgeWrapping]
+  	 * @param [wrapT=THREE.ClampToEdgeWrapping]
+  	 * @param [magFilter=THREE.NearestFilter]
+  	 * @param [minFilter=THREE.NearestFilter]
+  	 * @param [anisotropy=1]
+  	 */
   def this(
     width: Double,
-    heighht: Double,
+    height: Double,
     `type`: js.UndefOr[TextureDataType],
     mapping: js.UndefOr[Mapping],
     wrapS: js.UndefOr[Wrapping],

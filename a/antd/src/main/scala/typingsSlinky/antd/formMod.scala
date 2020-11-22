@@ -2,13 +2,13 @@ package typingsSlinky.antd
 
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.Children
+import typingsSlinky.antd.anon.FnCall
+import typingsSlinky.antd.anon.FnCallProps
+import typingsSlinky.antd.errorListMod.ErrorListProps
 import typingsSlinky.antd.formContextMod.FormProviderProps
 import typingsSlinky.antd.formFormMod.FormProps
-import typingsSlinky.antd.formItemMod.FormItemProps
 import typingsSlinky.antd.formListMod.FormListProps
-import typingsSlinky.antd.useFormMod.FormInstance
-import typingsSlinky.react.mod.ForwardRefExoticComponent
-import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,12 +17,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object formMod extends js.Object {
   
-  val default: Form = js.native
+  val default: FormInterface = js.native
   
   @js.native
-  trait Form extends ForwardRefExoticComponent[FormProps with RefAttributes[FormInstance]] {
+  trait FormInterface extends InternalFormType {
     
-    var Item: js.Function1[/* props */ FormItemProps, ReactElement] = js.native
+    var ErrorList: js.Function1[/* hasErrorsHelpOnDomErrorVisibleChange */ ErrorListProps, ReactElement] = js.native
+    
+    var Item: FnCallProps = js.native
     
     var List: ReactComponentClass[FormListProps] = js.native
     
@@ -31,8 +33,12 @@ object formMod extends js.Object {
     /** @deprecated Only for warning usage. Do not use. */
     def create(): Unit = js.native
     
-    var useForm: js.Function1[/* form */ js.UndefOr[FormInstance], js.Array[FormInstance]] = js.native
+    var useForm: FnCall = js.native
   }
   
-  type InternalForm = ForwardRefExoticComponent[FormProps with RefAttributes[FormInstance]]
+  @js.native
+  trait InternalFormType extends js.Object {
+    
+    def apply[Values](props: Children[Values] with FormProps[Values]): ReactElement = js.native
+  }
 }

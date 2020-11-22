@@ -53,7 +53,7 @@ trait CreateDBClusterMessage extends js.Object {
   var EnableCloudwatchLogsExports: js.UndefOr[LogTypeList] = js.native
   
   /**
-    * True to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts, and otherwise false. Default: false 
+    * Not supported by Neptune.
     */
   var EnableIAMDatabaseAuthentication: js.UndefOr[BooleanOptional] = js.native
   
@@ -63,7 +63,7 @@ trait CreateDBClusterMessage extends js.Object {
   var Engine: String = js.native
   
   /**
-    * The version number of the database engine to use. Currently, setting this parameter has no effect. Example: 1.0.1 
+    * The version number of the database engine to use for the new DB cluster. Example: 1.0.2.1 
     */
   var EngineVersion: js.UndefOr[String] = js.native
   

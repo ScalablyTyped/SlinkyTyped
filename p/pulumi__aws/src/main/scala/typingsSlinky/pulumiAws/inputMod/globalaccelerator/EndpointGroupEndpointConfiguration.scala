@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EndpointGroupEndpointConfiguration extends js.Object {
   
+  var clientIpPreservationEnabled: js.UndefOr[Input[Boolean]] = js.native
+  
   /**
     * An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.
     */
@@ -40,6 +42,12 @@ object EndpointGroupEndpointConfiguration {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setClientIpPreservationEnabled(value: Input[Boolean]): Self = this.set("clientIpPreservationEnabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClientIpPreservationEnabled: Self = this.set("clientIpPreservationEnabled", js.undefined)
     
     @scala.inline
     def setEndpointId(value: Input[String]): Self = this.set("endpointId", value.asInstanceOf[js.Any])

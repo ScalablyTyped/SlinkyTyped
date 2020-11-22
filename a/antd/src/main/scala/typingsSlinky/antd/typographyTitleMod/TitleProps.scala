@@ -5,6 +5,7 @@ import typingsSlinky.antd.antdNumbers.`1`
 import typingsSlinky.antd.antdNumbers.`2`
 import typingsSlinky.antd.antdNumbers.`3`
 import typingsSlinky.antd.antdNumbers.`4`
+import typingsSlinky.antd.antdNumbers.`5`
 import typingsSlinky.antd.baseMod.BaseType
 import typingsSlinky.antd.baseMod.CopyConfig
 import typingsSlinky.antd.baseMod.EditConfig
@@ -14,7 +15,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined antd.antd/lib/_util/type.Omit<antd.antd/lib/typography/Base.BlockProps & {  level :[1, 2, 3, 4][number] | undefined}, 'strong'> */
+/* Inlined antd.antd/lib/_util/type.Omit<antd.antd/lib/typography/Base.BlockProps & {  level :[1, 2, 3, 4, 5][number] | undefined}, 'strong'> */
 @js.native
 trait TitleProps extends js.Object {
   
@@ -40,7 +41,7 @@ trait TitleProps extends js.Object {
   
   var keyboard: js.UndefOr[Boolean] = js.native
   
-  var level: js.UndefOr[`1` | `2` | `3` | `4`] = js.native
+  var level: js.UndefOr[`1` | `2` | `3` | `4` | `5`] = js.native
   
   var mark: js.UndefOr[Boolean] = js.native
   
@@ -147,7 +148,7 @@ object TitleProps {
     def deleteKeyboard: Self = this.set("keyboard", js.undefined)
     
     @scala.inline
-    def setLevel(value: `1` | `2` | `3` | `4`): Self = this.set("level", value.asInstanceOf[js.Any])
+    def setLevel(value: `1` | `2` | `3` | `4` | `5`): Self = this.set("level", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLevel: Self = this.set("level", js.undefined)

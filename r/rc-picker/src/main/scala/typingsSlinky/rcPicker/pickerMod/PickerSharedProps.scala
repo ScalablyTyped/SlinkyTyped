@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.rcPicker.interfaceMod.CustomFormat
 import typingsSlinky.rcPicker.rcPickerStrings.ltr
 import typingsSlinky.rcPicker.rcPickerStrings.rtl
 import typingsSlinky.rcTrigger.interfaceMod.AlignType
@@ -39,7 +40,7 @@ trait PickerSharedProps[DateType] extends AriaAttributes {
   
   var dropdownClassName: js.UndefOr[String] = js.native
   
-  var format: js.UndefOr[String | js.Array[String]] = js.native
+  var format: js.UndefOr[String | CustomFormat[DateType] | (js.Array[String | CustomFormat[DateType]])] = js.native
   
   var getPopupContainer: js.UndefOr[js.Function1[/* node */ HTMLElement, HTMLElement]] = js.native
   
@@ -178,10 +179,13 @@ object PickerSharedProps {
     def deleteDropdownClassName: Self = this.set("dropdownClassName", js.undefined)
     
     @scala.inline
-    def setFormatVarargs(value: String*): Self = this.set("format", js.Array(value :_*))
+    def setFormatVarargs(value: (String | CustomFormat[DateType])*): Self = this.set("format", js.Array(value :_*))
     
     @scala.inline
-    def setFormat(value: String | js.Array[String]): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setFormatFunction1(value: DateType => String): Self = this.set("format", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setFormat(value: String | CustomFormat[DateType] | (js.Array[String | CustomFormat[DateType]])): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)

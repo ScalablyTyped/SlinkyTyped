@@ -16,6 +16,11 @@ trait FacetResult extends js.Object {
     * An array of key/value pairs, where the key is the value of the attribute and the count is the number of documents that share the key value.
     */
   var DocumentAttributeValueCountPairs: js.UndefOr[DocumentAttributeValueCountPairList] = js.native
+  
+  /**
+    * The data type of the facet value. This is the same as the type defined for the index field when it was created.
+    */
+  var DocumentAttributeValueType: js.UndefOr[typingsSlinky.awsSdk.kendraMod.DocumentAttributeValueType] = js.native
 }
 object FacetResult {
   
@@ -54,5 +59,11 @@ object FacetResult {
     
     @scala.inline
     def deleteDocumentAttributeValueCountPairs: Self = this.set("DocumentAttributeValueCountPairs", js.undefined)
+    
+    @scala.inline
+    def setDocumentAttributeValueType(value: DocumentAttributeValueType): Self = this.set("DocumentAttributeValueType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDocumentAttributeValueType: Self = this.set("DocumentAttributeValueType", js.undefined)
   }
 }

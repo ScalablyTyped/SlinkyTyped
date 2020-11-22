@@ -14,19 +14,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait TransferProps extends js.Object {
+trait TransferProps[RecordType] extends js.Object {
   
-  var children: js.UndefOr[js.Function1[/* props */ TransferListBodyProps, ReactElement]] = js.native
+  var children: js.UndefOr[js.Function1[/* props */ TransferListBodyProps[RecordType], ReactElement]] = js.native
   
   var className: js.UndefOr[String] = js.native
   
-  var dataSource: js.Array[TransferItem] = js.native
+  var dataSource: js.Array[RecordType] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
   
-  var filterOption: js.UndefOr[js.Function2[/* inputValue */ String, /* item */ TransferItem, Boolean]] = js.native
+  var filterOption: js.UndefOr[js.Function2[/* inputValue */ String, /* item */ RecordType, Boolean]] = js.native
   
-  var footer: js.UndefOr[js.Function1[/* props */ TransferListProps, ReactElement]] = js.native
+  var footer: js.UndefOr[js.Function1[/* props */ TransferListProps[RecordType], ReactElement]] = js.native
   
   var listStyle: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties = js.native
   
@@ -35,7 +35,7 @@ trait TransferProps extends js.Object {
   var onChange: js.UndefOr[
     js.Function3[
       /* targetKeys */ js.Array[String], 
-      /* direction */ String, 
+      /* direction */ TransferDirection, 
       /* moveKeys */ js.Array[String], 
       Unit
     ]
@@ -69,9 +69,9 @@ trait TransferProps extends js.Object {
   
   var prefixCls: js.UndefOr[String] = js.native
   
-  var render: js.UndefOr[TransferRender] = js.native
+  var render: js.UndefOr[TransferRender[RecordType]] = js.native
   
-  var rowKey: js.UndefOr[js.Function1[/* record */ TransferItem, String]] = js.native
+  var rowKey: js.UndefOr[js.Function1[/* record */ RecordType, String]] = js.native
   
   var selectAllLabels: js.UndefOr[js.Array[SelectAllLabel]] = js.native
   
@@ -90,16 +90,16 @@ trait TransferProps extends js.Object {
 object TransferProps {
   
   @scala.inline
-  def apply(
-    dataSource: js.Array[TransferItem],
+  def apply[RecordType](
+    dataSource: js.Array[RecordType],
     listStyle: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties
-  ): TransferProps = {
+  ): TransferProps[RecordType] = {
     val __obj = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], listStyle = listStyle.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TransferProps]
+    __obj.asInstanceOf[TransferProps[RecordType]]
   }
   
   @scala.inline
-  implicit class TransferPropsOps[Self <: TransferProps] (val x: Self) extends AnyVal {
+  implicit class TransferPropsOps[Self <: TransferProps[_], RecordType] (val x: Self with TransferProps[RecordType]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -114,10 +114,10 @@ object TransferProps {
     }
     
     @scala.inline
-    def setDataSourceVarargs(value: TransferItem*): Self = this.set("dataSource", js.Array(value :_*))
+    def setDataSourceVarargs(value: RecordType*): Self = this.set("dataSource", js.Array(value :_*))
     
     @scala.inline
-    def setDataSource(value: js.Array[TransferItem]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
+    def setDataSource(value: js.Array[RecordType]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setListStyleFunction1(value: /* style */ ListStyle => CSSProperties): Self = this.set("listStyle", js.Any.fromFunction1(value))
@@ -126,7 +126,7 @@ object TransferProps {
     def setListStyle(value: (js.Function1[/* style */ ListStyle, CSSProperties]) | CSSProperties): Self = this.set("listStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildren(value: /* props */ TransferListBodyProps => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildren(value: /* props */ TransferListBodyProps[RecordType] => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
@@ -144,13 +144,13 @@ object TransferProps {
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     
     @scala.inline
-    def setFilterOption(value: (/* inputValue */ String, /* item */ TransferItem) => Boolean): Self = this.set("filterOption", js.Any.fromFunction2(value))
+    def setFilterOption(value: (/* inputValue */ String, /* item */ RecordType) => Boolean): Self = this.set("filterOption", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteFilterOption: Self = this.set("filterOption", js.undefined)
     
     @scala.inline
-    def setFooter(value: /* props */ TransferListProps => ReactElement): Self = this.set("footer", js.Any.fromFunction1(value))
+    def setFooter(value: /* props */ TransferListProps[RecordType] => ReactElement): Self = this.set("footer", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteFooter: Self = this.set("footer", js.undefined)
@@ -163,7 +163,7 @@ object TransferProps {
     
     @scala.inline
     def setOnChange(
-      value: (/* targetKeys */ js.Array[String], /* direction */ String, /* moveKeys */ js.Array[String]) => Unit
+      value: (/* targetKeys */ js.Array[String], /* direction */ TransferDirection, /* moveKeys */ js.Array[String]) => Unit
     ): Self = this.set("onChange", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -225,13 +225,13 @@ object TransferProps {
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     
     @scala.inline
-    def setRender(value: /* item */ TransferItem => RenderResult): Self = this.set("render", js.Any.fromFunction1(value))
+    def setRender(value: RecordType => RenderResult): Self = this.set("render", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRender: Self = this.set("render", js.undefined)
     
     @scala.inline
-    def setRowKey(value: /* record */ TransferItem => String): Self = this.set("rowKey", js.Any.fromFunction1(value))
+    def setRowKey(value: /* record */ RecordType => String): Self = this.set("rowKey", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRowKey: Self = this.set("rowKey", js.undefined)

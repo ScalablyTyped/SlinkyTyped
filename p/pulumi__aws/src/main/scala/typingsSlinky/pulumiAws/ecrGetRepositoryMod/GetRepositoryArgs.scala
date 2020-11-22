@@ -14,6 +14,11 @@ trait GetRepositoryArgs extends js.Object {
   val name: String = js.native
   
   /**
+    * The registry ID where the repository was created.
+    */
+  val registryId: js.UndefOr[String] = js.native
+  
+  /**
     * A map of tags assigned to the resource.
     */
   val tags: js.UndefOr[StringDictionary[String]] = js.native
@@ -43,6 +48,12 @@ object GetRepositoryArgs {
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRegistryId(value: String): Self = this.set("registryId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRegistryId: Self = this.set("registryId", js.undefined)
     
     @scala.inline
     def setTags(value: StringDictionary[String]): Self = this.set("tags", value.asInstanceOf[js.Any])

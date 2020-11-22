@@ -18,6 +18,16 @@ trait IEditorFindOptions extends js.Object {
   var autoFindInSelection: js.UndefOr[never | always | multiline] = js.native
   
   /**
+    * Controls whether the cursor should move to find matches while typing.
+    */
+  var cursorMoveOnType: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Controls whether the search automatically restarts from the beginning (or the end) when no further matches can be found
+    */
+  var loop: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Controls if we seed search string in the Find Widget with editor selection.
     */
   var seedSearchStringFromSelection: js.UndefOr[Boolean] = js.native
@@ -56,6 +66,18 @@ object IEditorFindOptions {
     
     @scala.inline
     def deleteAutoFindInSelection: Self = this.set("autoFindInSelection", js.undefined)
+    
+    @scala.inline
+    def setCursorMoveOnType(value: Boolean): Self = this.set("cursorMoveOnType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCursorMoveOnType: Self = this.set("cursorMoveOnType", js.undefined)
+    
+    @scala.inline
+    def setLoop(value: Boolean): Self = this.set("loop", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoop: Self = this.set("loop", js.undefined)
     
     @scala.inline
     def setSeedSearchStringFromSelection(value: Boolean): Self = this.set("seedSearchStringFromSelection", value.asInstanceOf[js.Any])

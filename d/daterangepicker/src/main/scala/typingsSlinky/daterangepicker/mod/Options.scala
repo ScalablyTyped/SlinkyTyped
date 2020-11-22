@@ -1,14 +1,15 @@
 package typingsSlinky.daterangepicker.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Element
+import typingsSlinky.daterangepicker.daterangepickerBooleans.`false`
 import typingsSlinky.daterangepicker.daterangepickerStrings.auto
 import typingsSlinky.daterangepicker.daterangepickerStrings.center
 import typingsSlinky.daterangepicker.daterangepickerStrings.down
 import typingsSlinky.daterangepicker.daterangepickerStrings.left
 import typingsSlinky.daterangepicker.daterangepickerStrings.right
 import typingsSlinky.daterangepicker.daterangepickerStrings.up
-import typingsSlinky.moment.mod.Duration_
-import typingsSlinky.moment.mod.MomentInput
+import typingsSlinky.moment.mod.DurationInputArg1
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -61,7 +62,9 @@ trait Options extends js.Object {
   /**
     * A function that is passed each date in the two calendars before they are displayed, and may return a string or array of CSS class names to apply to that date's calendar cell.
     */
-  var isCustomDate: js.UndefOr[js.Function1[/* date */ DateOrString, js.UndefOr[String | js.Array[String]]]] = js.native
+  var isCustomDate: js.UndefOr[
+    js.Function1[/* date */ DateOrString, js.UndefOr[String | js.Array[String] | `false`]]
+  ] = js.native
   
   /**
     * A function that is passed each date in the two calendars before they are displayed, and may return true or false to indicate whether that date should be available for selection or not.
@@ -91,7 +94,7 @@ trait Options extends js.Object {
   /**
     * The maximum span between the selected start and end dates. Can have any property you can add to a moment object (i.e. days, months)
     */
-  var maxSpan: js.UndefOr[MomentInput | Duration_] = js.native
+  var maxSpan: js.UndefOr[DurationInputArg1] = js.native
   
   /**
     * The maximum year shown in the dropdowns when `showDropdowns` is set to true.
@@ -116,7 +119,7 @@ trait Options extends js.Object {
   /**
     * jQuery selector of the parent element that the date range picker will be added to, if not provided this will be 'body'
     */
-  var parentEl: js.UndefOr[String] = js.native
+  var parentEl: js.UndefOr[Element | String] = js.native
   
   /**
     * Set predefined date ranges the user can select from.Each key is the label for the range, and its value an array with two dates representing the bounds of the range.
@@ -251,7 +254,7 @@ object Options {
     def deleteEndDate: Self = this.set("endDate", js.undefined)
     
     @scala.inline
-    def setIsCustomDate(value: /* date */ DateOrString => js.UndefOr[String | js.Array[String]]): Self = this.set("isCustomDate", js.Any.fromFunction1(value))
+    def setIsCustomDate(value: /* date */ DateOrString => js.UndefOr[String | js.Array[String] | `false`]): Self = this.set("isCustomDate", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteIsCustomDate: Self = this.set("isCustomDate", js.undefined)
@@ -284,13 +287,7 @@ object Options {
     def deleteMaxDate: Self = this.set("maxDate", js.undefined)
     
     @scala.inline
-    def setMaxSpanVarargs(value: (Double | String)*): Self = this.set("maxSpan", js.Array(value :_*))
-    
-    @scala.inline
-    def setMaxSpanDate(value: js.Date): Self = this.set("maxSpan", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMaxSpan(value: MomentInput | Duration_): Self = this.set("maxSpan", value.asInstanceOf[js.Any])
+    def setMaxSpan(value: DurationInputArg1): Self = this.set("maxSpan", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaxSpan: Self = this.set("maxSpan", js.undefined)
@@ -323,7 +320,10 @@ object Options {
     def deleteOpens: Self = this.set("opens", js.undefined)
     
     @scala.inline
-    def setParentEl(value: String): Self = this.set("parentEl", value.asInstanceOf[js.Any])
+    def setParentElElement(value: Element): Self = this.set("parentEl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setParentEl(value: Element | String): Self = this.set("parentEl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteParentEl: Self = this.set("parentEl", js.undefined)

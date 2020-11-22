@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
-  def apply(profile: Profile, userAgent: String): HafasClient = js.native
+  def apply(commonProfile: Profile, userAgent: String): HafasClient = js.native
+  def apply(commonProfile: Profile, userAgent: String, opt: js.Any): HafasClient = js.native
 }

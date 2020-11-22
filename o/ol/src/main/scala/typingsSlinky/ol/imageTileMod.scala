@@ -19,6 +19,9 @@ object imageTileMod extends js.Object {
   trait ImageTile
     extends typingsSlinky.ol.olTileMod.default {
     
+    /**
+      * Get the HTML image element for this tile (may be a Canvas, Image, or Video).
+      */
     def getImage(): HTMLCanvasElement | HTMLImageElement | HTMLVideoElement = js.native
   }
   

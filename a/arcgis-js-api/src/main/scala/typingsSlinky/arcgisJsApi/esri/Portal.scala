@@ -19,7 +19,7 @@ trait Portal
      with Loadable {
   
   /**
-    * The access level of the organization. When public, anonymous users can access the organization. When private, access is restricted to only members of the organization.
+    * The access level of the organization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#access)
     */
@@ -35,16 +35,7 @@ trait Portal
   /**
     * The authentication mode for handling authentication when the user attempts to access a secure resource.
     *
-    * Possible Value | Description
-    * ---------------|------------
-    * anonymous | An error will be returned when a secure resource is requested.
-    * auto | The user will be signed in when a secure resource is requested.
-    * immediate | The user will be signed in when the Portal is loaded.
-    *
-    *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#authMode)
-    *
-    * @default auto
     */
   var authMode: anonymous | auto | immediate = js.native
   
@@ -56,7 +47,7 @@ trait Portal
   var authorizedCrossOriginDomains: js.Array[String] = js.native
   
   /**
-    * The query that defines the basemaps that should be displayed in the [BasemapGallery](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery.html) when [useVectorBasemaps](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#useVectorBasemaps) is not true. The [fetchBasemaps()](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#fetchBasemaps) method does this automatically.
+    * The query that defines the basemaps that should be displayed in the [BasemapGallery](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery.html) when [useVectorBasemaps](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#useVectorBasemaps) is not true.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#basemapGalleryGroupQuery)
     */
@@ -98,20 +89,16 @@ trait Portal
   var canProvisionDirectPurchase: Boolean = js.native
   
   /**
-    * When `true`, the organization's public items, groups and users are included in search queries. When `false`, no public items outside of the organization are included. However, public items which are part of the organization are included.
+    * When `true`, the organization's public items, groups and users are included in search queries.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#canSearchPublic)
-    *
-    * @default true
     */
   var canSearchPublic: Boolean = js.native
   
   /**
-    * The Bing key can be shared to the public and is returned as part of a portal's description call (`/sharing/rest/portals/<orgid>`). This requires the access of the portal to be set to public. The canShareBingPublic property is not returned publicly but only shown to users within the organization.
+    * The Bing key can be shared to the public and is returned as part of a portal's description call (`/sharing/rest/portals/<orgid>`).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#canShareBingPublic)
-    *
-    * @default false
     */
   var canShareBingPublic: Boolean = js.native
   
@@ -119,8 +106,6 @@ trait Portal
     * When `true`, members of the organization can share resources outside the organization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#canSharePublic)
-    *
-    * @default false
     */
   var canSharePublic: Boolean = js.native
   
@@ -128,8 +113,6 @@ trait Portal
     * Indicates whether to allow an organization with an enterprise IDP configured to be able to turn on or off the ArcGIS sign in.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#canSignInArcGIS)
-    *
-    * @default false
     */
   var canSignInArcGIS: Boolean = js.native
   
@@ -137,8 +120,6 @@ trait Portal
     * Indicates whether to allow an organization with an enterprise IDP configured to be able to turn on or off the enterprise sign in.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#canSignInIDP)
-    *
-    * @default false
     */
   var canSignInIDP: Boolean = js.native
   
@@ -150,11 +131,9 @@ trait Portal
   var colorSetsGroupQuery: String = js.native
   
   /**
-    * Indicates whether to allow the organization to disable commenting. When commentsEnabled is false, comments are hidden and not removed. numComments are set to zero for all items in the organization. Calls to add a comment and view comments will fail. If the organization re-enables comments, the comments display and numComments are restored.
+    * Indicates whether to allow the organization to disable commenting.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#commentsEnabled)
-    *
-    * @default false
     */
   var commentsEnabled: Boolean = js.native
   
@@ -162,8 +141,6 @@ trait Portal
     * A helper function that returns an instance of the portal's [ClosestFacilityTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-ClosestFacilityTask.html) [helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createClosestFacilityTask)
-    *
-    *
     */
   def createClosestFacilityTask(): js.Promise[ClosestFacilityTask] = js.native
   
@@ -171,8 +148,6 @@ trait Portal
     * A helper function that returns an array of [ElevationsLayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html) derived from the Portal's [Limited Error Raster Compression (LERC) elevation helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createElevationLayers)
-    *
-    *
     */
   def createElevationLayers(): js.Promise[js.Array[ElevationLayer]] = js.native
   
@@ -180,8 +155,6 @@ trait Portal
     * A helper function that returns an instance of the portal's [GeometryService](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-GeometryService.html) [helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createGeometryService)
-    *
-    *
     */
   def createGeometryService(): js.Promise[GeometryService] = js.native
   
@@ -189,8 +162,6 @@ trait Portal
     * A helper function that returns an instance of the portal's [PrintTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-PrintTask.html) [helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createPrintTask)
-    *
-    *
     */
   def createPrintTask(): js.Promise[PrintTask] = js.native
   
@@ -198,8 +169,6 @@ trait Portal
     * A helper function that returns an instance of the portal's [RouteTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-RouteTask.html) [helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createRouteTask)
-    *
-    *
     */
   def createRouteTask(): js.Promise[RouteTask] = js.native
   
@@ -207,8 +176,6 @@ trait Portal
     * A helper function that returns an instance of the portal's [ServiceAreaTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-ServiceAreaTask.html) [helper service](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createServiceAreaTask)
-    *
-    *
     */
   def createServiceAreaTask(): js.Promise[ServiceAreaTask] = js.native
   
@@ -234,21 +201,21 @@ trait Portal
   var customBaseUrl: String = js.native
   
   /**
-    * The default basemap to use for the portal. Used in the map viewer.
+    * The default basemap to use for the portal.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#defaultBasemap)
     */
   var defaultBasemap: Basemap = js.native
   
   /**
-    * The default extent to use for the portal. Used in the map viewer. The extent will be in the default basemap's spatial reference.
+    * The default extent to use for the portal.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#defaultExtent)
     */
   var defaultExtent: Extent = js.native
   
   /**
-    * The default vector basemap to use for the portal. Used in the map viewer.
+    * The default vector basemap to use for the portal.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#defaultVectorBasemap)
     */
@@ -265,34 +232,27 @@ trait Portal
     * Boolean value indicating whether to opt-in to the [Esri User Experience Improvement (EUEI) program](https://doc.arcgis.com/en/arcgis-online/reference/faq.htm#ESRI_QUESTIONANSWER_AED97F28DCD84F7682623C2FA9E5CE49).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#eueiEnabled)
-    *
-    * @default null
     */
   var eueiEnabled: Boolean = js.native
   
   /**
-    * The featured groups for the portal. Returns an array of objects that provide access to the owner and title for each featured group. Each item in this array has the following specification:
+    * The featured groups for the portal.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#featuredGroups)
     */
   var featuredGroups: js.Array[PortalFeaturedGroups] = js.native
   
   /**
-    * The query that defines the featured group. If null, then the most viewed items in the organization will be the featured items.
+    * The query that defines the featured group.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#featuredItemsGroupQuery)
     */
   var featuredItemsGroupQuery: String = js.native
   
   /**
-    * Fetches the [basemaps](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html) that are displayed in the [BasemapGallery](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery.html). When [useVectorBasemaps](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#useVectorBasemaps) is `true`, the basemaps will be based on [vectorBasemapGalleryGroupQuery](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#vectorBasemapGalleryGroupQuery).  Otherwise, it is based on [basemapGalleryGroupQuery](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#basemapGalleryGroupQuery).
+    * Fetches the [basemaps](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html) that are displayed in the [BasemapGallery](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#fetchBasemaps)
-    *
-    * @param basemapGalleryGroupQuery When provided, this argument is used to fetch basemaps based on input query parameters.
-    * @param options An object with the following properties.
-    * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
-    *
     */
   def fetchBasemaps(): js.Promise[js.Array[Basemap]] = js.native
   def fetchBasemaps(basemapGalleryGroupQuery: js.UndefOr[scala.Nothing], options: PortalFetchBasemapsOptions): js.Promise[js.Array[Basemap]] = js.native
@@ -303,10 +263,6 @@ trait Portal
     * If present, fetches the organization's category schema.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#fetchCategorySchema)
-    *
-    * @param options An object with the following properties.
-    * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
-    *
     */
   def fetchCategorySchema(): js.Promise[js.Array[_]] = js.native
   def fetchCategorySchema(options: PortalFetchCategorySchemaOptions): js.Promise[js.Array[_]] = js.native
@@ -315,10 +271,6 @@ trait Portal
     * Fetches the featured groups in the Portal.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#fetchFeaturedGroups)
-    *
-    * @param options An object with the following properties.
-    * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
-    *
     */
   def fetchFeaturedGroups(): js.Promise[js.Array[PortalGroup]] = js.native
   def fetchFeaturedGroups(options: PortalFetchFeaturedGroupsOptions): js.Promise[js.Array[PortalGroup]] = js.native
@@ -327,16 +279,12 @@ trait Portal
     * Fetches and returns the associated regions with the portal instance.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#fetchRegions)
-    *
-    * @param options An object with the following properties.
-    * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
-    *
     */
   def fetchRegions(): js.Promise[js.Array[_]] = js.native
   def fetchRegions(options: PortalFetchRegionsOptions): js.Promise[js.Array[_]] = js.native
   
   /**
-    * The query that identifies the group containing features items for the gallery. Set a Group ID or, if null, then the most viewed items in your organization are displayed in the gallery.
+    * The query that identifies the group containing features items for the gallery.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#galleryTemplatesGroupQuery)
     */
@@ -346,13 +294,11 @@ trait Portal
     * Indicates whether the organization has content categories.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#hasCategorySchema)
-    *
-    * @default false
     */
   var hasCategorySchema: Boolean = js.native
   
   /**
-    * Helper services provided by the portal. This is useful in instances where helper services are needed but may not be available using the given helper methods [createClosestFacilityTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createClosestFacilityTask), [createElevationLayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createElevationLayers), [createGeometryService](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createGeometryService), [createPrintTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createPrintTask), [createRouteTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createRouteTask), and [createServiceAreaTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#createServiceAreaTask).  For additional information about helper services, see the [about utility services](https://enterprise.arcgis.com/en/portal/latest/administer/windows/about-utility-services.htm) topic from the ArcGIS Server documentation.
+    * Helper services provided by the portal.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#helperServices)
     */
@@ -366,7 +312,7 @@ trait Portal
   var homePageFeaturedContent: String = js.native
   
   /**
-    * The number of featured items that can be displayed on the home page. The max is 100. Accepts integers only.
+    * The number of featured items that can be displayed on the home page.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#homePageFeaturedContentCount)
     */
@@ -387,7 +333,7 @@ trait Portal
   var httpsPort: Double = js.native
   
   /**
-    * The id of the organization that owns this portal. If `null` then this is the default portal for anonymous and non-organizational users.
+    * The id of the organization that owns this portal.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#id)
     */
@@ -415,7 +361,7 @@ trait Portal
   var isPortal: Boolean = js.native
   
   /**
-    * Indicates if the portal is in read-only mode. When `true`, content cannot be created, modified, or deleted on the Portal.
+    * Indicates if the portal is in read-only mode.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#isReadOnly)
     */
@@ -429,16 +375,14 @@ trait Portal
   var layerTemplatesGroupQuery: String = js.native
   
   /**
-    * Indicates whether the portal's resources have loaded. When `true`, all the properties of the object can be accessed.
+    * Indicates whether the portal's resources have loaded.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#loaded)
-    *
-    * @default false
     */
   val loaded: Boolean = js.native
   
   /**
-    * The maximum validity in minutes of tokens issued for users of the organization. -1 is the default and is a special value that indicates infinite timeout or permanent tokens. For tokens granted using OAuth 2.0 authorization grant, it represents the maximum validity of refresh tokens. For access tokens, the maximum validity is the lower of two weeks or this value.
+    * The maximum validity in minutes of tokens issued for users of the organization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#maxTokenExpirationMinutes)
     */
@@ -473,7 +417,7 @@ trait Portal
   var portalMode: multitenant | singletenant = js.native
   
   /**
-    * Properties specific to the organization, for example the "contact us" link. If the organization is public, the properties are visible to the anonymous user.
+    * Properties specific to the organization, for example the "contact us" link.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#portalProperties)
     */
@@ -483,11 +427,6 @@ trait Portal
     * Executes a query against the Portal to return an array of [PortalGroup](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalGroup.html) objects that match the input query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#queryGroups)
-    *
-    * @param queryParams The input query parameters defined in [PortalQueryParams](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html).
-    * @param options An object with the following properties.
-    * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
-    *
     */
   def queryGroups(queryParams: PortalQueryParams): js.Promise[PortalQueryResult] = js.native
   def queryGroups(queryParams: PortalQueryParamsProperties): js.Promise[PortalQueryResult] = js.native
@@ -498,11 +437,6 @@ trait Portal
     * Executes a query against the Portal to return an array of [PortalItem](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html) objects that match the input query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#queryItems)
-    *
-    * @param queryParams The input query parameters defined in [PortalQueryParams](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html).
-    * @param options An object with the following properties.
-    * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
-    *
     */
   def queryItems(queryParams: PortalQueryParams): js.Promise[PortalQueryResult] = js.native
   def queryItems(queryParams: PortalQueryParamsProperties): js.Promise[PortalQueryResult] = js.native
@@ -513,11 +447,6 @@ trait Portal
     * Executes a query against the Portal to return an array of [PortalUser](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalUser.html) objects that match the input query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#queryUsers)
-    *
-    * @param queryParams The input query parameters defined in [PortalQueryParams](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalQueryParams.html).
-    * @param options An object with the following properties.
-    * @param options.signal Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
-    *
     */
   def queryUsers(queryParams: PortalQueryParams): js.Promise[PortalQueryResult] = js.native
   def queryUsers(queryParams: PortalQueryParamsProperties): js.Promise[PortalQueryResult] = js.native
@@ -553,7 +482,7 @@ trait Portal
   var showHomePageDescription: Boolean = js.native
   
   /**
-    * The JSON used to create the property values when the `Portal` is loaded. Although most commonly used properties are exposed on the `Portal` class directly, this provides access to all information returned by the portal. This property is useful if working in an application built using an older version of the API which requires access to portal properties from a more recent version.
+    * The JSON used to create the property values when the `Portal` is loaded.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#sourceJSON)
     */
@@ -563,8 +492,6 @@ trait Portal
     * Indicates whether hosted services are supported.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#supportsHostedServices)
-    *
-    * @default false
     */
   var supportsHostedServices: Boolean = js.native
   
@@ -590,18 +517,16 @@ trait Portal
   val thumbnailUrl: String = js.native
   
   /**
-    * Sets the units of measure for the organization's users. The user default is derived from the organization's [region](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#region).
+    * Sets the units of measure for the organization's users.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#units)
     */
   var units: english | metric = js.native
   
   /**
-    * The URL to the portal instance. Setting the location of the portal instance via [esriConfig.portalUrl](https://developers.arcgis.com/javascript/latest/api-reference/esri-config.html#portalUrl) should be used in favor of setting it directly on this property.  If using an on-premise portal, the syntax should look similar to: `https://www.example.com/arcgis`
+    * The URL to the portal instance.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#url)
-    *
-    * @default {@link module:esri/config#portalUrl esriConfig.portalUrl}
     */
   var url: String = js.native
   
@@ -613,14 +538,14 @@ trait Portal
   var urlKey: String = js.native
   
   /**
-    * When `true`, only simple where clauses that are compliant with SQL92 can be used when querying layers and tables. The recommended security setting is true.
+    * When `true`, only simple where clauses that are compliant with SQL92 can be used when querying layers and tables.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#useStandardizedQuery)
     */
   var useStandardizedQuery: Boolean = js.native
   
   /**
-    * When `true`, the organization has opted in to use the vector tile basemaps, and (a) [vectorBasemapGalleryGroupQuery](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#vectorBasemapGalleryGroupQuery) should be used instead of [basemapGalleryGroupQuery](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#basemapGalleryGroupQuery), while (b) [defaultVectorBasemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#defaultVectorBasemap) should be used instead of [defaultBasemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#defaultBasemap). The [fetchBasemaps()](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#fetchBasemaps) method automatically uses vectorBasemapGalleryGroupQuery.
+    * When `true`, the organization has opted in to use the vector tile basemaps, and (a) [vectorBasemapGalleryGroupQuery](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#vectorBasemapGalleryGroupQuery) should be used instead of [basemapGalleryGroupQuery](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#basemapGalleryGroupQuery), while (b) [defaultVectorBasemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#defaultVectorBasemap) should be used instead of [defaultBasemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#defaultBasemap).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#useVectorBasemaps)
     */
@@ -634,7 +559,7 @@ trait Portal
   var user: PortalUser = js.native
   
   /**
-    * The query that defines the vector tiles basemaps that should be displayed in the [BasemapGallery](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery.html) when [useVectorBasemaps](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#useVectorBasemaps) is true. The [fetchBasemaps()](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#fetchBasemaps) method does this automatically.
+    * The query that defines the vector tiles basemaps that should be displayed in the [BasemapGallery](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BasemapGallery.html) when [useVectorBasemaps](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#useVectorBasemaps) is true.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-Portal.html#vectorBasemapGalleryGroupQuery)
     */

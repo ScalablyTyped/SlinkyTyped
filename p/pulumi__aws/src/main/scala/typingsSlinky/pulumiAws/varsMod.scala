@@ -1,9 +1,9 @@
 package typingsSlinky.pulumiAws
 
+import typingsSlinky.pulumiAws.enumsMod.Region
 import typingsSlinky.pulumiAws.outputMod.config.AssumeRole
 import typingsSlinky.pulumiAws.outputMod.config.Endpoints
 import typingsSlinky.pulumiAws.outputMod.config.IgnoreTags
-import typingsSlinky.pulumiAws.regionMod.Region
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

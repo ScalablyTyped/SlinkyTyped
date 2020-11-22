@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ShiftFilter () extends js.Object {
   
   /**
-    * Fetch shifts for the specified employee.
+    * Fetch shifts for the specified employees. DEPRECATED at version 2020-08-26. Use `team_member_ids` instead.
     */
   var employee_ids: js.UndefOr[js.Array[String]] = js.native
   
@@ -23,7 +23,7 @@ class ShiftFilter () extends js.Object {
   /**
     * Fetch shifts for the specified location.
     */
-  var location_ids: js.UndefOr[js.Array[String]] = js.native
+  var location_ids: js.Array[String] = js.native
   
   /**
     * Fetch `Shift`s that start in the time range - Inclusive.
@@ -34,6 +34,11 @@ class ShiftFilter () extends js.Object {
     * Fetch a `Shift` instance by `Shift.status`. See [ShiftFilterStatus](#type-shiftfilterstatus) for possible values.
     */
   var status: js.UndefOr[OPEN | CLOSED] = js.native
+  
+  /**
+    * Fetch shifts for the specified team members. Replaced `employee_ids` at version \"2020-08-26\"
+    */
+  var team_member_ids: js.Array[String] = js.native
   
   /**
     * Fetch the `Shift`s based on workday date range.

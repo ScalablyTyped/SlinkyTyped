@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Represents a scoped collection of PivotTables. The PivotTables are sorted based on the location of the PivotTable's top-left corner. They are ordered top to bottom and then left to right.
   *
-  * [Api set: ExcelApiOnline 1.1]
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait PivotTableScopedCollectionLoadOptions extends js.Object {
@@ -18,6 +18,14 @@ trait PivotTableScopedCollectionLoadOptions extends js.Object {
     */
   @JSName("$all")
   var $all: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
+    * For EACH ITEM in the collection: Specifies if the PivotTable allows the application of multiple PivotFilters on a given PivotField in the table.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var allowMultipleFiltersPerField: js.UndefOr[Boolean] = js.native
   
   /**
     *
@@ -95,6 +103,12 @@ object PivotTableScopedCollectionLoadOptions {
     
     @scala.inline
     def delete$all: Self = this.set("$all", js.undefined)
+    
+    @scala.inline
+    def setAllowMultipleFiltersPerField(value: Boolean): Self = this.set("allowMultipleFiltersPerField", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowMultipleFiltersPerField: Self = this.set("allowMultipleFiltersPerField", js.undefined)
     
     @scala.inline
     def setEnableDataValueEditing(value: Boolean): Self = this.set("enableDataValueEditing", value.asInstanceOf[js.Any])

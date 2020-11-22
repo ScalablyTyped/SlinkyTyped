@@ -24,7 +24,7 @@ object mod extends js.Object {
   
   var emDash: InputRule[js.Any] = js.native
   
-  def inputRules[S /* <: Schema[_, _] */](config: Rules[S]): Plugin[S, _] = js.native
+  def inputRules[S /* <: Schema[_, _] */](config: Rules[S]): Plugin[_, S] = js.native
   
   var openDoubleQuote: InputRule[js.Any] = js.native
   

@@ -19,13 +19,13 @@ trait Scene extends js.Object {
   
   /**
     * Gets or sets if audio support is enabled
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     */
   var audioEnabled: Boolean = js.native
   
   /**
     * Gets or sets custom audio listener position provider
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     */
   var audioListenerPositionProvider: Nullable[js.Function0[Vector3]] = js.native
   
@@ -43,7 +43,7 @@ trait Scene extends js.Object {
   
   /**
     * Gets or sets if audio will be output to headphones
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     */
   var headphone: Boolean = js.native
   
@@ -55,7 +55,7 @@ trait Scene extends js.Object {
   
   /**
     * The list of sound tracks added to the scene
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     */
   var soundTracks: Nullable[js.Array[SoundTrack]] = js.native
 }

@@ -7,17 +7,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartArgumentAxisConstantLines extends dxChartCommonAxisSettingsConstantLineStyle {
   
-  /** @name dxChart.Options.argumentAxis.constantLines.displayBehindSeries */
+  /**
+    * [descr:dxChart.Options.argumentAxis.constantLines.displayBehindSeries]
+    */
   var displayBehindSeries: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.argumentAxis.constantLines.extendAxis */
+  /**
+    * [descr:dxChart.Options.argumentAxis.constantLines.extendAxis]
+    */
   var extendAxis: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.argumentAxis.constantLines.label */
+  /**
+    * [descr:dxChart.Options.argumentAxis.constantLines.label]
+    */
   @JSName("label")
   var label_dxChartArgumentAxisConstantLines: js.UndefOr[dxChartArgumentAxisConstantLinesLabel] = js.native
   
-  /** @name dxChart.Options.argumentAxis.constantLines.value */
+  /**
+    * [descr:dxChart.Options.argumentAxis.constantLines.value]
+    */
   var value: js.UndefOr[Double | js.Date | String] = js.native
 }
 object dxChartArgumentAxisConstantLines {

@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.getComputeEnvironmentMod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -45,6 +46,11 @@ trait GetComputeEnvironmentResult extends js.Object {
   val statusReason: String = js.native
   
   /**
+    * Key-value map of resource tags
+    */
+  val tags: StringDictionary[String] = js.native
+  
+  /**
     * The type of the compute environment (for example, `MANAGED` or `UNMANAGED`).
     */
   val `type`: String = js.native
@@ -61,9 +67,10 @@ object GetComputeEnvironmentResult {
     state: String,
     status: String,
     statusReason: String,
+    tags: StringDictionary[String],
     `type`: String
   ): GetComputeEnvironmentResult = {
-    val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], computeEnvironmentName = computeEnvironmentName.asInstanceOf[js.Any], ecsClusterArn = ecsClusterArn.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], serviceRole = serviceRole.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], statusReason = statusReason.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any], computeEnvironmentName = computeEnvironmentName.asInstanceOf[js.Any], ecsClusterArn = ecsClusterArn.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], serviceRole = serviceRole.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any], statusReason = statusReason.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetComputeEnvironmentResult]
   }
@@ -106,6 +113,9 @@ object GetComputeEnvironmentResult {
     
     @scala.inline
     def setStatusReason(value: String): Self = this.set("statusReason", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTags(value: StringDictionary[String]): Self = this.set("tags", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])

@@ -13,7 +13,7 @@ trait LoggingConfiguration extends js.Object {
   var destinations: js.UndefOr[LogDestinationList] = js.native
   
   /**
-    * Determines whether execution data is included in your log. When set to FALSE, data is excluded.
+    * Determines whether execution data is included in your log. When set to false, data is excluded.
     */
   var includeExecutionData: js.UndefOr[IncludeExecutionData] = js.native
   

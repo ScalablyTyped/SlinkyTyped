@@ -22,6 +22,7 @@ import typingsSlinky.ink.inkStrings.row
 import typingsSlinky.ink.inkStrings.single
 import typingsSlinky.ink.inkStrings.singleDouble
 import typingsSlinky.ink.inkStrings.stretch
+import typingsSlinky.typeFest.literalUnionMod.LiteralUnion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,10 @@ trait Props extends js.Object {
   var alignSelf: js.UndefOr[`flex-start` | center | `flex-end` | auto] = js.native
   
   var borderColor: js.UndefOr[
-    /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ js.Any
+    LiteralUnion[
+      /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ _, 
+      String
+    ]
   ] = js.native
   
   var borderStyle: js.UndefOr[single | double | round | bold | singleDouble | doubleSingle | classic] = js.native
@@ -157,7 +161,10 @@ object Props {
     
     @scala.inline
     def setBorderColor(
-      value: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ js.Any
+      value: LiteralUnion[
+          /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ForegroundColor */ _, 
+          String
+        ]
     ): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline

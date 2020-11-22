@@ -1,25 +1,27 @@
 package typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/customwidgets", "customwidgets.WidgetReturnType")
 @js.native
-class WidgetReturnType protected () extends Element {
+class WidgetReturnType protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsWidgetValueType: WidgetValueType = js.native
@@ -29,9 +31,6 @@ class WidgetReturnType protected () extends Element {
   
   def isList: Boolean = js.native
   def isList_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FWidgetReturnType: IModel = js.native
   
   def `type`: WidgetReturnTypeEnum = js.native
   def type_=(newValue: WidgetReturnTypeEnum): Unit = js.native

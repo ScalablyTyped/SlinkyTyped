@@ -1,7 +1,7 @@
 package typingsSlinky.storybookAddonKnobs
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.storybookAddonKnobs.anon.GroupId
+import typingsSlinky.storybookAddonKnobs.anon.DisableDebounce
 import typingsSlinky.storybookAddonKnobs.anon.HideLabel
 import typingsSlinky.storybookAddonKnobs.anon.PickArrayTypeKnobvaluesep
 import typingsSlinky.storybookAddonKnobs.anon.PickBooleanTypeKnobvalue
@@ -28,7 +28,7 @@ object typeDefsMod extends js.Object {
     HideLabel | PickArrayTypeKnobvaluesep | PickBooleanTypeKnobvalue | PickColorTypeKnobvalue | PickDateTypeKnobvalue | PickFileTypeKnobvalueacce | PickNumberTypeKnobvaluera | PickObjectTypeKnobanyvalu | PickOptionsTypeKnobanyopt | PickRadiosTypeKnobvalueop | PickSelectTypeKnobSelectT | PickTextTypeKnobvalue
   ]
   
-  type KnobPlus[T /* <: KnobType */, K] = K with GroupId[T]
+  type KnobPlus[T /* <: KnobType */, K] = K with DisableDebounce[T]
   
   type Mutable[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {-readonly [ P in keyof T ]: T[P] extends std.Array<infer U>? std.Array<any> : T[P]}

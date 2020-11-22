@@ -1,17 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "ionic__react"
-version := "5.3.1-4d4348"
+version := "5.5.0-d1ba9d"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-fce754",
-  "org.scalablytyped.slinky" %%% "ionic__core" % "5.3.1-b197ec",
-  "org.scalablytyped.slinky" %%% "ionicons" % "5.1.2-d94ddd",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ce652f",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a9854",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.14-23cf0c",
+  "org.scalablytyped.slinky" %%% "ionic__core" % "5.5.0-f4a631",
+  "org.scalablytyped.slinky" %%% "ionicons" % "5.2.3-599384",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ed7fbd",
+  "org.scalablytyped.slinky" %%% "react" % "17.0-dt-20201121Z-8f0b52",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "swiper" % "5.4-dt-20201028Z-55f01f")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

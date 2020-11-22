@@ -7,6 +7,7 @@ import typingsSlinky.gestalt.gestaltStrings.down
 import typingsSlinky.gestalt.gestaltStrings.left
 import typingsSlinky.gestalt.gestaltStrings.right
 import typingsSlinky.gestalt.gestaltStrings.up
+import typingsSlinky.gestalt.mod.Indexable
 import typingsSlinky.gestalt.mod.TooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,6 +35,9 @@ object Tooltip {
     
     @scala.inline
     def link(value: ReactElement): this.type = set("link", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def zIndex(value: Indexable): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

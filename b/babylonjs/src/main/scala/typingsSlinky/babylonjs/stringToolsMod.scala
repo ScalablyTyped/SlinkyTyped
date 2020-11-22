@@ -39,6 +39,14 @@ object stringToolsMod extends js.Object {
     def EndsWith(str: String, suffix: String): Boolean = js.native
     
     /**
+      * Converts a number to string and pads with preceeding zeroes until it is of specified length.
+      * @param num the number to convert and pad
+      * @param length the expected length of the string
+      * @returns the padded string
+      */
+    def PadNumber(num: Double, length: Double): String = js.native
+    
+    /**
       * Checks for a matching suffix at the beginning of a string (for ES5 and lower)
       * @param str Source string
       * @param suffix Suffix to search for in the source string

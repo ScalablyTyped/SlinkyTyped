@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.expressionsMod.expressions.Expression
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,14 +18,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.WebServiceOperationParameterMapping")
 @js.native
-abstract class WebServiceOperationParameterMapping protected () extends Element {
+abstract class WebServiceOperationParameterMapping protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -33,6 +35,8 @@ abstract class WebServiceOperationParameterMapping protected () extends Element 
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     *
     * In version 7.9.0: introduced
     */
@@ -47,9 +51,6 @@ abstract class WebServiceOperationParameterMapping protected () extends Element 
   
   def isChecked: Boolean = js.native
   def isChecked_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FWebServiceOperationParameterMapping: IModel = js.native
   
   def parameterName: String = js.native
   def parameterName_=(newValue: String): Unit = js.native

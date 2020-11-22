@@ -1,8 +1,6 @@
 package typingsSlinky.highcharts.anon
 
 import typingsSlinky.highcharts.mod.AnnotationControlPointPositionerFunction
-import typingsSlinky.highcharts.mod.AnnotationsControlPointStyleOptions
-import typingsSlinky.highcharts.mod.NavigationAnnotationsControlPointStyleOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,19 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PartialAnnotationControlP extends js.Object {
   
-  var height: js.UndefOr[Double] = js.native
-  
   var positioner: js.UndefOr[AnnotationControlPointPositionerFunction] = js.native
-  
-  var style: js.UndefOr[
-    AnnotationsControlPointStyleOptions | NavigationAnnotationsControlPointStyleOptions
-  ] = js.native
-  
-  var symbol: js.UndefOr[String] = js.native
-  
-  var visible: js.UndefOr[Boolean] = js.native
-  
-  var width: js.UndefOr[Double] = js.native
 }
 object PartialAnnotationControlP {
   
@@ -49,39 +35,9 @@ object PartialAnnotationControlP {
     }
     
     @scala.inline
-    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHeight: Self = this.set("height", js.undefined)
-    
-    @scala.inline
     def setPositioner(value: AnnotationControlPointPositionerFunction): Self = this.set("positioner", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePositioner: Self = this.set("positioner", js.undefined)
-    
-    @scala.inline
-    def setStyle(value: AnnotationsControlPointStyleOptions | NavigationAnnotationsControlPointStyleOptions): Self = this.set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStyle: Self = this.set("style", js.undefined)
-    
-    @scala.inline
-    def setSymbol(value: String): Self = this.set("symbol", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSymbol: Self = this.set("symbol", js.undefined)
-    
-    @scala.inline
-    def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteVisible: Self = this.set("visible", js.undefined)
-    
-    @scala.inline
-    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteWidth: Self = this.set("width", js.undefined)
   }
 }

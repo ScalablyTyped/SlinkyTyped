@@ -4,7 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.AreaSeries.label */
+/**
+  * [descr:dxChartSeriesTypes.AreaSeries.label]
+  */
 @js.native
 trait dxChartSeriesTypesAreaSeriesLabel extends dxChartSeriesTypesCommonSeriesLabel
 object dxChartSeriesTypesAreaSeriesLabel {

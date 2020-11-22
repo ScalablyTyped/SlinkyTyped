@@ -1,6 +1,5 @@
 package typingsSlinky.reactRelay.useRefetchableFragmentNodeMod
 
-import typingsSlinky.reactRelay.queryResourceMod.RenderPolicy
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Environment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,8 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait InternalOptions extends Options {
   
   var __environment: js.UndefOr[Environment] = js.native
-  
-  var renderPolicy: js.UndefOr[RenderPolicy] = js.native
 }
 object InternalOptions {
   
@@ -41,11 +38,5 @@ object InternalOptions {
     
     @scala.inline
     def delete__environment: Self = this.set("__environment", js.undefined)
-    
-    @scala.inline
-    def setRenderPolicy(value: RenderPolicy): Self = this.set("renderPolicy", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRenderPolicy: Self = this.set("renderPolicy", js.undefined)
   }
 }

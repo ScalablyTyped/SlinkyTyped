@@ -25,6 +25,8 @@ trait ModalProps extends js.Object {
   
   var closeable: js.UndefOr[Boolean] = js.native
   
+  var focusLock: js.UndefOr[Boolean] = js.native
+  
   var isOpen: js.UndefOr[Boolean] = js.native
   
   var mountNode: js.UndefOr[HTMLElement] = js.native
@@ -88,6 +90,12 @@ object ModalProps {
     
     @scala.inline
     def deleteCloseable: Self = this.set("closeable", js.undefined)
+    
+    @scala.inline
+    def setFocusLock(value: Boolean): Self = this.set("focusLock", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFocusLock: Self = this.set("focusLock", js.undefined)
     
     @scala.inline
     def setIsOpen(value: Boolean): Self = this.set("isOpen", value.asInstanceOf[js.Any])

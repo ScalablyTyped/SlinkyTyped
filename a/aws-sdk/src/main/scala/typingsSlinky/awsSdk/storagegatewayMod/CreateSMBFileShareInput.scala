@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateSMBFileShareInput extends js.Object {
   
   /**
+    * The files and folders on this share will only be visible to users with read access.
+    */
+  var AccessBasedEnumeration: js.UndefOr[Boolean] = js.native
+  
+  /**
     * A list of users or groups in the Active Directory that will be granted administrator privileges on the file share. These users can do all file operations as the super-user. Acceptable formats include: DOMAIN\User1, user1, @group1, and @DOMAIN\group1.  Use this option very carefully, because any user in this list can do anything they like on the file share, regardless of file permissions. 
     */
   var AdminUserList: js.UndefOr[FileShareUserList] = js.native
@@ -76,6 +81,11 @@ trait CreateSMBFileShareInput extends js.Object {
     * The ARN of the backend storage used for storing file data. A prefix name can be added to the S3 bucket name. It must end with a "/".
     */
   var LocationARN: typingsSlinky.awsSdk.storagegatewayMod.LocationARN = js.native
+  
+  /**
+    * The notification policy of the file share.
+    */
+  var NotificationPolicy: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.NotificationPolicy] = js.native
   
   /**
     * A value that sets the access control list (ACL) permission for objects in the S3 bucket that a file gateway puts objects into. The default value is private.
@@ -148,6 +158,12 @@ object CreateSMBFileShareInput {
     def setRole(value: Role): Self = this.set("Role", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setAccessBasedEnumeration(value: Boolean): Self = this.set("AccessBasedEnumeration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccessBasedEnumeration: Self = this.set("AccessBasedEnumeration", js.undefined)
+    
+    @scala.inline
     def setAdminUserListVarargs(value: FileShareUser*): Self = this.set("AdminUserList", js.Array(value :_*))
     
     @scala.inline
@@ -218,6 +234,12 @@ object CreateSMBFileShareInput {
     
     @scala.inline
     def deleteKMSKey: Self = this.set("KMSKey", js.undefined)
+    
+    @scala.inline
+    def setNotificationPolicy(value: NotificationPolicy): Self = this.set("NotificationPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNotificationPolicy: Self = this.set("NotificationPolicy", js.undefined)
     
     @scala.inline
     def setObjectACL(value: ObjectACL): Self = this.set("ObjectACL", value.asInstanceOf[js.Any])

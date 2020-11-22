@@ -13,7 +13,7 @@ trait Precision extends js.Object {
     *
     * @default
     * "true"
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.animation
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.animation
     */
   var animation: js.UndefOr[Boolean] = js.native
   
@@ -24,14 +24,14 @@ trait Precision extends js.Object {
     *
     * For example:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-line.line.markLine)
+    * [see doc](https://echarts.apache.org/en/option.html#series-map.map.markLine)
     *
     * See
     * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
     * for more information.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.animationDelay
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.animationDelay
     */
   var animationDelay: js.UndefOr[js.Function | Double] = js.native
   
@@ -41,14 +41,14 @@ trait Precision extends js.Object {
     *
     * For example:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-line.line.markLine)
+    * [see doc](https://echarts.apache.org/en/option.html#series-map.map.markLine)
     *
     * See
     * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
     * for more information.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.animationDelayUpdate
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.animationDelayUpdate
     */
   var animationDelayUpdate: js.UndefOr[js.Function | Double] = js.native
   
@@ -56,12 +56,12 @@ trait Precision extends js.Object {
     * Duration of the first animation, which supports callback
     * function for different data to have different animation effect:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-line.line.markLine)
+    * [see doc](https://echarts.apache.org/en/option.html#series-map.map.markLine)
     *
     *
     * @default
     * 1000
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.animationDuration
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.animationDuration
     */
   var animationDuration: js.UndefOr[js.Function | Double] = js.native
   
@@ -69,12 +69,12 @@ trait Precision extends js.Object {
     * Time for animation to complete, which supports callback function
     * for different data to have different animation effect:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-line.line.markLine)
+    * [see doc](https://echarts.apache.org/en/option.html#series-map.map.markLine)
     *
     *
     * @default
     * 300
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.animationDurationUpdate
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.animationDurationUpdate
     */
   var animationDurationUpdate: js.UndefOr[js.Function | Double] = js.native
   
@@ -87,7 +87,7 @@ trait Precision extends js.Object {
     *
     * @default
     * "cubicOut"
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.animationEasing
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.animationEasing
     */
   var animationEasing: js.UndefOr[String] = js.native
   
@@ -97,7 +97,7 @@ trait Precision extends js.Object {
     *
     * @default
     * "cubicOut"
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.animationEasingUpdate
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.animationEasingUpdate
     */
   var animationEasingUpdate: js.UndefOr[String] = js.native
   
@@ -109,7 +109,7 @@ trait Precision extends js.Object {
     *
     * @default
     * 2000
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.animationThreshold
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.animationThreshold
     */
   var animationThreshold: js.UndefOr[Double] = js.native
   
@@ -122,51 +122,31 @@ trait Precision extends js.Object {
     * and ending point.
     *
     * 1. Assign coordinate according to container with
-    * [x](https://echarts.apache.org/en/option.html#series-line.markLine.data.0.x)
+    * [x](https://echarts.apache.org/en/option.html#series-map.markLine.data.0.x)
     * ,
-    * [y](https://echarts.apache.org/en/option.html#series-line.markLine.data.0.y)
+    * [y](https://echarts.apache.org/en/option.html#series-map.markLine.data.0.y)
     * attribute, in which pixel values and percentage are supported.
     *
     * 2. Assign coordinate position with
-    * [coord](https://echarts.apache.org/en/option.html#series-line.markLine.data.0.coord)
+    * [coord](https://echarts.apache.org/en/option.html#series-map.markLine.data.0.coord)
     * attribute, in which `'min'`, `'max'`, `'average'` are supported
     * for each dimension.
-    *
-    * 3. Use
-    * [type](https://echarts.apache.org/en/option.html#series-line.markLine.data.0.type)
-    * attribute to mark the maximum and minimum values in the series,
-    * in which
-    * [valueIndex](https://echarts.apache.org/en/option.html#series-line.markLine.data.0.valueIndex)
-    * or
-    * [valueDim](https://echarts.apache.org/en/option.html#series-line.markLine.data.0.valueDim)
-    * can be used to assign the dimension.
-    *
-    * 4.
-    * You may also create a mark line in Cartesian coordinate at
-    * a specific position in X or Y axis by assigning `xAxis` or
-    * `yAxis`. See
-    * [scatter-weight](https://echarts.apache.org/examples/en/editor.html?c=scatter-weight)
-    * for example.
     *
     * When multiple attributes exist, priority is as the above
     * order.
     *
-    * You may also set the type of mark line through `type`, stating
-    * whether it is for the maximum value or average value.
-    * Likewise, dimensions can be assigned through `valueIndex`.
-    *
-    * [see doc](https://echarts.apache.org/en/option.html#series-line.line.markLine)
+    * [see doc](https://echarts.apache.org/en/option.html#series-map.map.markLine)
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.data
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.data
     */
-  var data: js.UndefOr[`9`] = js.native
+  var data: js.UndefOr[`12`] = js.native
   
   /**
     * Mark line text.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.label
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.label
     */
   var label: js.UndefOr[Position] = js.native
   
@@ -174,9 +154,9 @@ trait Precision extends js.Object {
     * Mark line style.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.lineStyle
     */
-  var lineStyle: js.UndefOr[ColorCurveness] = js.native
+  var lineStyle: js.UndefOr[Curveness] = js.native
   
   /**
     * Precison of marking line value, which is useful when displaying
@@ -185,7 +165,7 @@ trait Precision extends js.Object {
     *
     * @default
     * 2
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.precision
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.precision
     */
   var precision: js.UndefOr[Double] = js.native
   
@@ -195,7 +175,7 @@ trait Precision extends js.Object {
     * mouse events.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.silent
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.silent
     */
   var silent: js.UndefOr[Boolean] = js.native
   
@@ -203,11 +183,11 @@ trait Precision extends js.Object {
     * Symbol type at the two ends of the mark line.
     * It can be an array for two ends, or assigned seperately.
     * See
-    * [data.symbol](https://echarts.apache.org/en/option.html#series-line.markLine.data.0.symbol)
+    * [data.symbol](https://echarts.apache.org/en/option.html#series-map.markLine.data.0.symbol)
     * for more format information.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.symbol
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.symbol
     */
   var symbol: js.UndefOr[js.Array[_] | String] = js.native
   
@@ -219,7 +199,7 @@ trait Precision extends js.Object {
     * as normal `symbolSize`.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.symbolSize
+    * @see https://echarts.apache.org/en/option.html#series-map.markLine.symbolSize
     */
   var symbolSize: js.UndefOr[js.Array[_] | Double] = js.native
 }
@@ -295,7 +275,7 @@ object Precision {
     def deleteAnimationThreshold: Self = this.set("animationThreshold", js.undefined)
     
     @scala.inline
-    def setData(value: `9`): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: `12`): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)
@@ -307,7 +287,7 @@ object Precision {
     def deleteLabel: Self = this.set("label", js.undefined)
     
     @scala.inline
-    def setLineStyle(value: ColorCurveness): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
+    def setLineStyle(value: Curveness): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLineStyle: Self = this.set("lineStyle", js.undefined)

@@ -66,5 +66,5 @@ object ^ extends js.Object {
     * @param {boolean} logic is not logic applied
     * @return {RangeValue} computed value and it's exclusive flag
     */
-  def getRangeValue(values: js.Array[RangeValue], logic: Boolean): js.Tuple2[Double, Boolean] = js.native
+  def getRangeValue(values: js.Array[js.Tuple2[Double, Boolean]], logic: Boolean): js.Tuple2[Double, Boolean] = js.native
 }

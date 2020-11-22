@@ -16,8 +16,13 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.rcSwitch.rcSwitchStrings.`additions removals`
 import typingsSlinky.rcSwitch.rcSwitchStrings.`additions text`
 import typingsSlinky.rcSwitch.rcSwitchStrings.`inline`
+import typingsSlinky.rcSwitch.rcSwitchStrings.`removals additions`
+import typingsSlinky.rcSwitch.rcSwitchStrings.`removals text`
+import typingsSlinky.rcSwitch.rcSwitchStrings.`text additions`
+import typingsSlinky.rcSwitch.rcSwitchStrings.`text removals`
 import typingsSlinky.rcSwitch.rcSwitchStrings.additions
 import typingsSlinky.rcSwitch.rcSwitchStrings.all
 import typingsSlinky.rcSwitch.rcSwitchStrings.ascending
@@ -161,7 +166,9 @@ trait SwitchProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -243,7 +250,7 @@ trait SwitchProps extends js.Object {
   
   var lang: js.UndefOr[String] = js.native
   
-  var loadingIcon: ReactElement = js.native
+  var loadingIcon: js.UndefOr[ReactElement] = js.native
   
   var onAbort: js.UndefOr[ReactEventHandler[HTMLButtonElement]] = js.native
   
@@ -691,7 +698,9 @@ object SwitchProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -944,6 +953,9 @@ object SwitchProps {
     
     @scala.inline
     def deleteLang: Self = this.set("lang", js.undefined)
+    
+    @scala.inline
+    def setLoadingIconReactElement(value: ReactElement): Self = this.set("loadingIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLoadingIcon(value: ReactElement): Self = this.set("loadingIcon", value.asInstanceOf[js.Any])

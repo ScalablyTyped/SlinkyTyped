@@ -11,22 +11,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDeferRenderingOptions extends WidgetOptions[dxDeferRendering] {
   
-  /** @name dxDeferRendering.Options.animation */
+  /**
+    * [descr:dxDeferRendering.Options.animation]
+    */
   var animation: js.UndefOr[animationConfig] = js.native
   
-  /** @name dxDeferRendering.Options.onRendered */
+  /**
+    * [descr:dxDeferRendering.Options.onRendered]
+    */
   var onRendered: js.UndefOr[js.Function1[/* e */ `1`, _]] = js.native
   
-  /** @name dxDeferRendering.Options.onShown */
+  /**
+    * [descr:dxDeferRendering.Options.onShown]
+    */
   var onShown: js.UndefOr[js.Function1[/* e */ `1`, _]] = js.native
   
-  /** @name dxDeferRendering.Options.renderWhen */
+  /**
+    * [descr:dxDeferRendering.Options.renderWhen]
+    */
   var renderWhen: js.UndefOr[Promise[Unit] | JQueryPromise[Unit] | Boolean] = js.native
   
-  /** @name dxDeferRendering.Options.showLoadIndicator */
+  /**
+    * [descr:dxDeferRendering.Options.showLoadIndicator]
+    */
   var showLoadIndicator: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDeferRendering.Options.staggerItemSelector */
+  /**
+    * [descr:dxDeferRendering.Options.staggerItemSelector]
+    */
   var staggerItemSelector: js.UndefOr[String] = js.native
 }
 object dxDeferRenderingOptions {

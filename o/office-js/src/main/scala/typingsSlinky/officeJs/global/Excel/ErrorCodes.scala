@@ -17,7 +17,11 @@ object ErrorCodes extends js.Object {
   
   /* "Conflict" */ val conflict: typingsSlinky.officeJs.Excel.ErrorCodes.conflict with String = js.native
   
+  /* "FilteredRangeConflict" */ val filteredRangeConflict: typingsSlinky.officeJs.Excel.ErrorCodes.filteredRangeConflict with String = js.native
+  
   /* "GeneralException" */ val generalException: typingsSlinky.officeJs.Excel.ErrorCodes.generalException with String = js.native
+  
+  /* "InactiveWorkbook" */ val inactiveWorkbook: typingsSlinky.officeJs.Excel.ErrorCodes.inactiveWorkbook with String = js.native
   
   /* "InsertDeleteConflict" */ val insertDeleteConflict: typingsSlinky.officeJs.Excel.ErrorCodes.insertDeleteConflict with String = js.native
   
@@ -40,6 +44,8 @@ object ErrorCodes extends js.Object {
   /* "NonBlankCellOffSheet" */ val nonBlankCellOffSheet: typingsSlinky.officeJs.Excel.ErrorCodes.nonBlankCellOffSheet with String = js.native
   
   /* "NotImplemented" */ val notImplemented: typingsSlinky.officeJs.Excel.ErrorCodes.notImplemented with String = js.native
+  
+  /* "PivotTableRangeConflict" */ val pivotTableRangeConflict: typingsSlinky.officeJs.Excel.ErrorCodes.pivotTableRangeConflict with String = js.native
   
   /* "RangeExceedsLimit" */ val rangeExceedsLimit: typingsSlinky.officeJs.Excel.ErrorCodes.rangeExceedsLimit with String = js.native
   

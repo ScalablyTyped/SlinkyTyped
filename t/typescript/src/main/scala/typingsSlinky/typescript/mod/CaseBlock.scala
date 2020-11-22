@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CaseBlock extends Node {
   
-  var clauses: NodeArray[CaseOrDefaultClause] = js.native
+  val clauses: NodeArray[CaseOrDefaultClause] = js.native
   
   @JSName("kind")
-  var kind_CaseBlock: typingsSlinky.typescript.mod.SyntaxKind.CaseBlock = js.native
+  val kind_CaseBlock: typingsSlinky.typescript.mod.SyntaxKind.CaseBlock = js.native
   
   @JSName("parent")
-  var parent_CaseBlock: SwitchStatement = js.native
+  val parent_CaseBlock: SwitchStatement = js.native
 }

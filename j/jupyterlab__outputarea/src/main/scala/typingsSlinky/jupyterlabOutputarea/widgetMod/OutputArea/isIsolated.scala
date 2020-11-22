@@ -1,13 +1,13 @@
 package typingsSlinky.jupyterlabOutputarea.widgetMod.OutputArea
 
-import typingsSlinky.phosphorCoreutils.jsonMod.ReadonlyJSONObject
+import typingsSlinky.luminoCoreutils.jsonMod.ReadonlyPartialJSONObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/outputarea/lib/widget", "OutputArea.isIsolated")
 @js.native
 object isIsolated extends js.Object {
-  def apply(mimeType: String, metadata: ReadonlyJSONObject): Boolean = js.native
+  
+  def apply(mimeType: String, metadata: ReadonlyPartialJSONObject): Boolean = js.native
 }
-

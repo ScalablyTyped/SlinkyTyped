@@ -22,6 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.slice_join
   - typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.spectral
   - typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.transformation
+  - typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.hash_table
 */
 trait Category extends js.Object
 object Category {
@@ -52,6 +53,9 @@ object Category {
   
   @scala.inline
   def graph: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.graph = "graph".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.graph]
+  
+  @scala.inline
+  def hash_table: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.hash_table = "hash_table".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.hash_table]
   
   @scala.inline
   def image: typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.image = "image".asInstanceOf[typingsSlinky.tensorflowTfjsConverter.tensorflowTfjsConverterStrings.image]

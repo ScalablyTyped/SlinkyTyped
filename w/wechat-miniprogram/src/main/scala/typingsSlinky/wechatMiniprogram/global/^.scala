@@ -2,6 +2,7 @@ package typingsSlinky.wechatMiniprogram.global
 
 import typingsSlinky.wechatMiniprogram.WechatMiniprogram.App.Constructor
 import typingsSlinky.wechatMiniprogram.WechatMiniprogram.App.GetApp
+import typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.GetCurrentPages
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,5 +42,5 @@ object ^ extends js.Object {
     *  - __不要尝试修改页面栈，会导致路由以及页面状态错误。__
     *  - 不要在 `App.onLaunch` 的时候调用 `getCurrentPages()`，此时 `page` 还没有生成。
     */
-  var getCurrentPages: typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.getCurrentPages = js.native
+  var getCurrentPages: GetCurrentPages = js.native
 }

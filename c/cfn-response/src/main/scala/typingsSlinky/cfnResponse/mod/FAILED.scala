@@ -7,4 +7,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("cfn-response", "FAILED")
 @js.native
-object FAILED extends TopLevel[ResponseStatus]
+object FAILED
+  extends TopLevel[typingsSlinky.cfnResponse.cfnResponseStrings.FAILED]

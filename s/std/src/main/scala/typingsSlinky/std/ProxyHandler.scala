@@ -27,8 +27,6 @@ trait ProxyHandler[T /* <: js.Object */] extends js.Object {
   
   var deleteProperty: js.UndefOr[js.Function2[/* target */ T, /* p */ PropertyKey, scala.Boolean]] = js.native
   
-  var enumerate: js.UndefOr[js.Function1[/* target */ T, js.Array[PropertyKey]]] = js.native
-  
   var get: js.UndefOr[js.Function3[/* target */ T, /* p */ PropertyKey, /* receiver */ js.Any, _]] = js.native
   
   var getOwnPropertyDescriptor: js.UndefOr[
@@ -105,12 +103,6 @@ object ProxyHandler {
     
     @scala.inline
     def deleteDeleteProperty: Self = this.set("deleteProperty", js.undefined)
-    
-    @scala.inline
-    def setEnumerate(value: /* target */ T => js.Array[PropertyKey]): Self = this.set("enumerate", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteEnumerate: Self = this.set("enumerate", js.undefined)
     
     @scala.inline
     def setGet(value: (/* target */ T, /* p */ PropertyKey, /* receiver */ js.Any) => _): Self = this.set("get", js.Any.fromFunction3(value))

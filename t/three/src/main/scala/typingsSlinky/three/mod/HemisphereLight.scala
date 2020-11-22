@@ -6,6 +6,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("three", "HemisphereLight")
 @js.native
+/**
+	 * @param skyColor
+	 * @param groundColor
+	 * @param [intensity=1]
+	 */
 class HemisphereLight ()
   extends typingsSlinky.three.hemisphereLightMod.HemisphereLight {
   def this(skyColor: String) = this()

@@ -15,6 +15,9 @@ object loaderMod extends js.Object {
   class Loader () extends js.Object {
     def this(manager: LoadingManager) = this()
     
+    /**
+    	 * @default 'anonymous'
+    	 */
     var crossOrigin: String = js.native
     
     /*
@@ -26,10 +29,19 @@ object loaderMod extends js.Object {
     
     var manager: LoadingManager = js.native
     
+    /**
+    	 * @default ''
+    	 */
     var path: String = js.native
     
+    /**
+    	 * @default {}
+    	 */
     var requestHeader: StringDictionary[String] = js.native
     
+    /**
+    	 * @default ''
+    	 */
     var resourcePath: String = js.native
     
     def setCrossOrigin(crossOrigin: String): this.type = js.native
@@ -39,5 +51,12 @@ object loaderMod extends js.Object {
     def setRequestHeader(requestHeader: StringDictionary[String]): this.type = js.native
     
     def setResourcePath(resourcePath: String): this.type = js.native
+    
+    def setWithCredentials(value: Boolean): this.type = js.native
+    
+    /**
+    	 * @default: false
+    	 */
+    var withCredentials: Boolean = js.native
   }
 }

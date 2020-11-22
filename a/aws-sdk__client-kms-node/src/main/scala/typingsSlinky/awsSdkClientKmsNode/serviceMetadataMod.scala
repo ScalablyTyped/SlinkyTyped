@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object serviceMetadataMod extends js.Object {
   
-  val ServiceMetadata: typingsSlinky.awsSdkTypes.protocolMod.ServiceMetadata = js.native
+  val ServiceMetadata: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _ServiceMetadata_ */ js.Any = js.native
   
   val clientVersion: String = js.native
 }

@@ -9,31 +9,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ODataContextOptions extends js.Object {
   
-  /** @name ODataContext.Options.beforeSend */
+  /**
+    * [descr:ODataContext.Options.beforeSend]
+    */
   var beforeSend: js.UndefOr[js.Function1[/* options */ Async, _]] = js.native
   
-  /** @name ODataContext.Options.deserializeDates */
+  /**
+    * [descr:ODataContext.Options.deserializeDates]
+    */
   var deserializeDates: js.UndefOr[Boolean] = js.native
   
-  /** @name ODataContext.Options.entities */
+  /**
+    * [descr:ODataContext.Options.entities]
+    */
   var entities: js.UndefOr[js.Any] = js.native
   
-  /** @name ODataContext.Options.errorHandler */
+  /**
+    * [descr:ODataContext.Options.errorHandler]
+    */
   var errorHandler: js.UndefOr[js.Function1[/* e */ ErrorDetails, _]] = js.native
   
-  /** @name ODataContext.Options.filterToLower */
+  /**
+    * [descr:ODataContext.Options.filterToLower]
+    */
   var filterToLower: js.UndefOr[Boolean] = js.native
   
-  /** @name ODataContext.Options.jsonp */
+  /**
+    * [descr:ODataContext.Options.jsonp]
+    */
   var jsonp: js.UndefOr[Boolean] = js.native
   
-  /** @name ODataContext.Options.url */
+  /**
+    * [descr:ODataContext.Options.url]
+    */
   var url: js.UndefOr[String] = js.native
   
-  /** @name ODataContext.Options.version */
+  /**
+    * [descr:ODataContext.Options.version]
+    */
   var version: js.UndefOr[Double] = js.native
   
-  /** @name ODataContext.Options.withCredentials */
+  /**
+    * [descr:ODataContext.Options.withCredentials]
+    */
   var withCredentials: js.UndefOr[Boolean] = js.native
 }
 object ODataContextOptions {

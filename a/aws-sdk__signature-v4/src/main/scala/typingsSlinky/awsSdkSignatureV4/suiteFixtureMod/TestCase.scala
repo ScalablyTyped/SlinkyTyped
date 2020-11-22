@@ -12,12 +12,12 @@ trait TestCase extends js.Object {
   
   var name: String = js.native
   
-  var request: HttpRequest[String] = js.native
+  var request: HttpRequest = js.native
 }
 object TestCase {
   
   @scala.inline
-  def apply(authorization: String, name: String, request: HttpRequest[String]): TestCase = {
+  def apply(authorization: String, name: String, request: HttpRequest): TestCase = {
     val __obj = js.Dynamic.literal(authorization = authorization.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any])
     __obj.asInstanceOf[TestCase]
   }
@@ -44,6 +44,6 @@ object TestCase {
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRequest(value: HttpRequest[String]): Self = this.set("request", value.asInstanceOf[js.Any])
+    def setRequest(value: HttpRequest): Self = this.set("request", value.asInstanceOf[js.Any])
   }
 }

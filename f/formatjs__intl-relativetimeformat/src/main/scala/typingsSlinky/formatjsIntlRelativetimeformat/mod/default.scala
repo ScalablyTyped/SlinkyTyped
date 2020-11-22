@@ -1,5 +1,8 @@
 package typingsSlinky.formatjsIntlRelativetimeformat.mod
 
+import typingsSlinky.formatjsEcma402Abstract.typesRelativeTimeMod.IntlRelativeTimeFormatOptions
+import typingsSlinky.formatjsEcma402Abstract.typesRelativeTimeMod.LocaleFieldsData
+import typingsSlinky.formatjsEcma402Abstract.typesRelativeTimeMod.RelativeTimeLocaleData
 import typingsSlinky.formatjsIntlRelativetimeformat.anon.PickIntlRelativeTimeForma
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -20,9 +23,7 @@ class default () extends RelativeTimeFormat {
 @js.native
 object default extends js.Object {
   
-  val __INTERNAL_SLOT_MAP__ : js.Any = js.native
-  
-  def __addLocaleData(data: RelativeTimeLocaleData*): scala.Unit = js.native
+  def __addLocaleData(data: RelativeTimeLocaleData*): Unit = js.native
   
   var __defaultLocale: js.Any = js.native
   

@@ -13,8 +13,6 @@ trait ConversionInfo extends Object {
     * A function that takes a point and returns a [position](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#Position).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#ConversionInfo)
-    *
-    *
     */
   def convert(): Unit = js.native
   
@@ -22,8 +20,6 @@ trait ConversionInfo extends Object {
     * A function that takes a string and returns a Point.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-CoordinateConversion-support-Format.html#ConversionInfo)
-    *
-    *
     */
   def reverseConvert(): Unit = js.native
 }

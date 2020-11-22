@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.angularCompiler.astMod.AstVisitor because Already inherited
-- typingsSlinky.angularCompiler.parserMod.SimpleExpressionChecker because var conflicts: visit, visitASTWithSource. Inlined errors */ @js.native
+- typingsSlinky.angularCompiler.parserMod.SimpleExpressionChecker because var conflicts: visit, visitASTWithSource, visitThisReceiver, visitUnary. Inlined errors */ @js.native
 trait IvySimpleExpressionChecker extends RecursiveAstVisitor {
   
   var errors: js.Array[String] = js.native

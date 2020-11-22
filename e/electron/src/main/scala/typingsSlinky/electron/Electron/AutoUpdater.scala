@@ -48,7 +48,7 @@ trait AutoUpdater extends EventEmitter {
     */
   def getFeedURL(): String = js.native
   
-  // Docs: http://electronjs.org/docs/api/auto-updater
+  // Docs: https://electronjs.org/docs/api/auto-updater
   /**
     * This event is emitted after a user calls `quitAndInstall()`.
     *

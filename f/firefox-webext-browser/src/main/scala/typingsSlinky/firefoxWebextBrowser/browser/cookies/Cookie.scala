@@ -12,8 +12,7 @@ trait Cookie extends js.Object {
   var domain: String = js.native
   
   /**
-    * The expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session
-    * cookies.
+    * The expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.
     */
   var expirationDate: js.UndefOr[Double] = js.native
   

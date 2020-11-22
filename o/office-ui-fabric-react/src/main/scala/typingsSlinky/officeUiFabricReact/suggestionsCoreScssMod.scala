@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object suggestionsCoreScssMod extends js.Object {
   
-  val suggestionsContainer: /* "suggestionsContainer_d6f75437" */ String = js.native
+  val suggestionsContainer: /* "suggestionsContainer_25237e7f" */ String = js.native
 }

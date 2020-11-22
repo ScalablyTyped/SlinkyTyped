@@ -16,7 +16,7 @@ trait Aborted[TContext] extends js.Object {
   
   var context: TContext = js.native
   
-  var name: String = js.native
+  var name: String | js.Symbol = js.native
   
   var request: Options = js.native
   
@@ -30,7 +30,7 @@ object Aborted {
     attempts: Double,
     connection: default,
     context: TContext,
-    name: String,
+    name: String | js.Symbol,
     request: Options
   ): Aborted[TContext] = {
     val __obj = js.Dynamic.literal(aborted = aborted.asInstanceOf[js.Any], attempts = attempts.asInstanceOf[js.Any], connection = connection.asInstanceOf[js.Any], context = context.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], request = request.asInstanceOf[js.Any])
@@ -65,7 +65,7 @@ object Aborted {
     def setContext(value: TContext): Self = this.set("context", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: String | js.Symbol): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRequest(value: Options): Self = this.set("request", value.asInstanceOf[js.Any])

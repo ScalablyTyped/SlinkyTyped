@@ -55,6 +55,9 @@ trait Pubnub extends js.Object {
   def decrypt(data: js.Object, customCipherKey: String): js.Any = js.native
   def decrypt(data: js.Object, customCipherKey: String, options: CryptoParameters): js.Any = js.native
   
+  def deleteFile(params: FileInputParameters): js.Promise[DeleteFileResponse] = js.native
+  def deleteFile(params: FileInputParameters, callback: StatusCallback): Unit = js.native
+  
   def deleteMessages(params: DeleteMessagesParameters): js.Promise[Unit] = js.native
   def deleteMessages(params: DeleteMessagesParameters, callback: StatusCallback): Unit = js.native
   
@@ -76,6 +79,9 @@ trait Pubnub extends js.Object {
     */
   def deleteUser(userId: String, callback: Callback[DeleteUserResponse]): Unit = js.native
   
+  def downloadFile(params: DownloadFileParameters): js.Promise[_] = js.native
+  def downloadFile(params: DownloadFileParameters, callback: Callback[_]): Unit = js.native
+  
   // utilities
   def encrypt(data: String): String = js.native
   def encrypt(data: String, customCipherKey: js.UndefOr[scala.Nothing], options: CryptoParameters): String = js.native
@@ -87,6 +93,8 @@ trait Pubnub extends js.Object {
   
   def fire(params: FireParameters): js.Promise[PublishResponse] = js.native
   def fire(params: FireParameters, callback: Callback[PublishResponse]): Unit = js.native
+  
+  def getFileUrl(params: FileInputParameters): String = js.native
   
   def getFilterExpression(): String = js.native
   
@@ -182,6 +190,10 @@ trait Pubnub extends js.Object {
     */
   def leaveSpaces(params: LeaveSpacesParameters, callback: Callback[GetMembershipsResponse]): Unit = js.native
   
+  def listFiles(params: ListFilesParameters): js.Promise[ListFilesResponse] = js.native
+  // files
+  def listFiles(params: ListFilesParameters, callback: Callback[ListFilesResponse]): Unit = js.native
+  
   def messageCounts(params: MessageCountsParameters): js.Promise[MessageCountsResponse] = js.native
   def messageCounts(params: MessageCountsParameters, callback: Callback[MessageCountsResponse]): Unit = js.native
   
@@ -191,6 +203,9 @@ trait Pubnub extends js.Object {
   def publish(params: PublishParameters): js.Promise[PublishResponse] = js.native
   // publish
   def publish(params: PublishParameters, callback: Callback[PublishResponse]): Unit = js.native
+  
+  def publishFile(params: PublishFileParameters): js.Promise[PublishFileResponse] = js.native
+  def publishFile(params: PublishFileParameters, callback: Callback[PublishFileResponse]): Unit = js.native
   
   var push: Push = js.native
   
@@ -209,6 +224,9 @@ trait Pubnub extends js.Object {
   
   def removeMessageAction(params: RemoveMessageActionParameters): js.Promise[`0`] = js.native
   def removeMessageAction(params: RemoveMessageActionParameters, callback: Callback[`0`]): Unit = js.native
+  
+  def sendFile(params: SendFileParameters): js.Promise[SendFileResponse] = js.native
+  def sendFile(params: SendFileParameters, callback: Callback[SendFileResponse]): Unit = js.native
   
   def setAuthKey(authKey: String): Unit = js.native
   

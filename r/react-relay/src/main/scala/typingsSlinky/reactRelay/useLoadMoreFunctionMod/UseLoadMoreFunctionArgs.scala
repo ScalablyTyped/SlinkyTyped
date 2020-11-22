@@ -5,7 +5,6 @@ import typingsSlinky.relayRuntime.readerNodeMod.ReaderPaginationMetadata
 import typingsSlinky.relayRuntime.relayConcreteNodeMod.ConcreteRequest
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponse
 import typingsSlinky.relayRuntime.relayObservableMod.Observer
-import typingsSlinky.relayRuntime.relayStoreTypesMod.RequestDescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,9 +24,9 @@ trait UseLoadMoreFunctionArgs extends js.Object {
   
   var fragmentNode: ReaderFragment = js.native
   
-  var fragmentOwner: RequestDescriptor | (js.Array[RequestDescriptor | Null]) | Null = js.native
+  var fragmentRef: js.Any = js.native
   
-  var fragmentRefPathInResponse: js.Array[String | Double] = js.native
+  var identifierField: js.UndefOr[String | Null] = js.native
   
   var observer: Observer[GraphQLResponse] = js.native
   
@@ -47,13 +46,13 @@ object UseLoadMoreFunctionArgs {
     fragmentData: js.Any,
     fragmentIdentifier: String,
     fragmentNode: ReaderFragment,
-    fragmentRefPathInResponse: js.Array[String | Double],
+    fragmentRef: js.Any,
     observer: Observer[GraphQLResponse],
     onReset: () => Unit,
     paginationMetadata: ReaderPaginationMetadata,
     paginationRequest: ConcreteRequest
   ): UseLoadMoreFunctionArgs = {
-    val __obj = js.Dynamic.literal(componentDisplayName = componentDisplayName.asInstanceOf[js.Any], connectionPathInFragmentData = connectionPathInFragmentData.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], fragmentData = fragmentData.asInstanceOf[js.Any], fragmentIdentifier = fragmentIdentifier.asInstanceOf[js.Any], fragmentNode = fragmentNode.asInstanceOf[js.Any], fragmentRefPathInResponse = fragmentRefPathInResponse.asInstanceOf[js.Any], observer = observer.asInstanceOf[js.Any], onReset = js.Any.fromFunction0(onReset), paginationMetadata = paginationMetadata.asInstanceOf[js.Any], paginationRequest = paginationRequest.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(componentDisplayName = componentDisplayName.asInstanceOf[js.Any], connectionPathInFragmentData = connectionPathInFragmentData.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], fragmentData = fragmentData.asInstanceOf[js.Any], fragmentIdentifier = fragmentIdentifier.asInstanceOf[js.Any], fragmentNode = fragmentNode.asInstanceOf[js.Any], fragmentRef = fragmentRef.asInstanceOf[js.Any], observer = observer.asInstanceOf[js.Any], onReset = js.Any.fromFunction0(onReset), paginationMetadata = paginationMetadata.asInstanceOf[js.Any], paginationRequest = paginationRequest.asInstanceOf[js.Any])
     __obj.asInstanceOf[UseLoadMoreFunctionArgs]
   }
   
@@ -94,10 +93,7 @@ object UseLoadMoreFunctionArgs {
     def setFragmentNode(value: ReaderFragment): Self = this.set("fragmentNode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFragmentRefPathInResponseVarargs(value: (String | Double)*): Self = this.set("fragmentRefPathInResponse", js.Array(value :_*))
-    
-    @scala.inline
-    def setFragmentRefPathInResponse(value: js.Array[String | Double]): Self = this.set("fragmentRefPathInResponse", value.asInstanceOf[js.Any])
+    def setFragmentRef(value: js.Any): Self = this.set("fragmentRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setObserver(value: Observer[GraphQLResponse]): Self = this.set("observer", value.asInstanceOf[js.Any])
@@ -112,12 +108,12 @@ object UseLoadMoreFunctionArgs {
     def setPaginationRequest(value: ConcreteRequest): Self = this.set("paginationRequest", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFragmentOwnerVarargs(value: (RequestDescriptor | Null)*): Self = this.set("fragmentOwner", js.Array(value :_*))
+    def setIdentifierField(value: String): Self = this.set("identifierField", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFragmentOwner(value: RequestDescriptor | (js.Array[RequestDescriptor | Null])): Self = this.set("fragmentOwner", value.asInstanceOf[js.Any])
+    def deleteIdentifierField: Self = this.set("identifierField", js.undefined)
     
     @scala.inline
-    def setFragmentOwnerNull: Self = this.set("fragmentOwner", null)
+    def setIdentifierFieldNull: Self = this.set("identifierField", null)
   }
 }

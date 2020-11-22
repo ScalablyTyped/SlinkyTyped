@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.ruleGroupMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.inputMod.wafregional.RuleGroupActivatedRule
+import typingsSlinky.pulumiAws.inputMod.networkfirewall.RuleGroupRuleGroup
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,29 +11,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RuleGroupState extends js.Object {
   
   /**
-    * A list of activated rules, see below
-    */
-  val activatedRules: js.UndefOr[Input[js.Array[Input[RuleGroupActivatedRule]]]] = js.native
-  
-  /**
-    * The ARN of the WAF Regional Rule Group.
+    * The Amazon Resource Name (ARN) that identifies the rule group.
     */
   val arn: js.UndefOr[Input[String]] = js.native
   
   /**
-    * A friendly name for the metrics from the rule group
+    * The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
     */
-  val metricName: js.UndefOr[Input[String]] = js.native
+  val capacity: js.UndefOr[Input[Double]] = js.native
   
   /**
-    * A friendly name of the rule group
+    * A friendly description of the rule group.
+    */
+  val description: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * A friendly name of the rule group.
     */
   val name: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Key-value map of resource tags
+    * A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
+    */
+  val ruleGroup: js.UndefOr[Input[RuleGroupRuleGroup]] = js.native
+  
+  /**
+    * The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `ruleGroup` is specified.
+    */
+  val rules: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * A map of key:value pairs to associate with the resource.
     */
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
+  
+  /**
+    * Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
+    */
+  val `type`: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * A string token used when updating the rule group.
+    */
+  val updateToken: js.UndefOr[Input[String]] = js.native
 }
 object RuleGroupState {
   
@@ -59,25 +79,22 @@ object RuleGroupState {
     }
     
     @scala.inline
-    def setActivatedRulesVarargs(value: Input[RuleGroupActivatedRule]*): Self = this.set("activatedRules", js.Array(value :_*))
-    
-    @scala.inline
-    def setActivatedRules(value: Input[js.Array[Input[RuleGroupActivatedRule]]]): Self = this.set("activatedRules", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteActivatedRules: Self = this.set("activatedRules", js.undefined)
-    
-    @scala.inline
     def setArn(value: Input[String]): Self = this.set("arn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteArn: Self = this.set("arn", js.undefined)
     
     @scala.inline
-    def setMetricName(value: Input[String]): Self = this.set("metricName", value.asInstanceOf[js.Any])
+    def setCapacity(value: Input[Double]): Self = this.set("capacity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteMetricName: Self = this.set("metricName", js.undefined)
+    def deleteCapacity: Self = this.set("capacity", js.undefined)
+    
+    @scala.inline
+    def setDescription(value: Input[String]): Self = this.set("description", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
     def setName(value: Input[String]): Self = this.set("name", value.asInstanceOf[js.Any])
@@ -86,9 +103,33 @@ object RuleGroupState {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
+    def setRuleGroup(value: Input[RuleGroupRuleGroup]): Self = this.set("ruleGroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRuleGroup: Self = this.set("ruleGroup", js.undefined)
+    
+    @scala.inline
+    def setRules(value: Input[String]): Self = this.set("rules", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRules: Self = this.set("rules", js.undefined)
+    
+    @scala.inline
     def setTags(value: Input[StringDictionary[Input[String]]]): Self = this.set("tags", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)
+    
+    @scala.inline
+    def setType(value: Input[String]): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteType: Self = this.set("type", js.undefined)
+    
+    @scala.inline
+    def setUpdateToken(value: Input[String]): Self = this.set("updateToken", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUpdateToken: Self = this.set("updateToken", js.undefined)
   }
 }

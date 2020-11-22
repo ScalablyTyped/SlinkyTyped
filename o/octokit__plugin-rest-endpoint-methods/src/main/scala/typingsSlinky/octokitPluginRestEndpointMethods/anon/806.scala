@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.OrgsRemoveOutsideCollaboratorEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.OrgsRemoveOutsideCollaboratorResponseData
+import typingsSlinky.octokitTypes.endpointsMod.OrgsListPendingInvitationsEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.OrgsListPendingInvitationsResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `806` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[OrgsRemoveOutsideCollaboratorEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[OrgsListPendingInvitationsEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[OrgsRemoveOutsideCollaboratorResponseData] = js.native
+  var response: OctokitResponse[OrgsListPendingInvitationsResponseData] = js.native
 }
 object `806` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[OrgsRemoveOutsideCollaboratorEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[OrgsRemoveOutsideCollaboratorResponseData]
+    parameters: RequestParameters with (Omit[OrgsListPendingInvitationsEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[OrgsListPendingInvitationsResponseData]
   ): `806` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`806`]
@@ -47,10 +47,10 @@ object `806` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[OrgsRemoveOutsideCollaboratorEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[OrgsListPendingInvitationsEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[OrgsRemoveOutsideCollaboratorResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[OrgsListPendingInvitationsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

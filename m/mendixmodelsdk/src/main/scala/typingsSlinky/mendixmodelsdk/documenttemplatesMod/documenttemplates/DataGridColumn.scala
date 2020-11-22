@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AttributeRef
@@ -8,24 +9,25 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.FormattingInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/columns-document-template relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/columns-document-template relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.DataGridColumn")
 @js.native
-class DataGridColumn protected () extends Element {
+class DataGridColumn protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -52,9 +54,6 @@ class DataGridColumn protected () extends Element {
   
   def formattingInfo: FormattingInfo = js.native
   def formattingInfo_=(newValue: FormattingInfo): Unit = js.native
-  
-  @JSName("model")
-  var model_FDataGridColumn: IModel = js.native
   
   def oddRowsCell: DataGridCell = js.native
   def oddRowsCell_=(newValue: DataGridCell): Unit = js.native

@@ -1,8 +1,5 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.octokitTypesStrings.`gh-pages`
-import typingsSlinky.octokitTypes.octokitTypesStrings.`master Slashdocs`
-import typingsSlinky.octokitTypes.octokitTypesStrings.master
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,15 +17,15 @@ trait ReposUpdateInformationAboutPagesSiteEndpoint extends js.Object {
   var repo: String = js.native
   
   /**
-    * Update the source for the repository. Must include the branch name, and may optionally specify the subdirectory `/docs`. Possible values are `"gh-pages"`, `"master"`, and `"master /docs"`.
+    * Update the source for the repository. Must include the branch name and path.
     */
-  var source: js.UndefOr[`gh-pages` | master | (`master Slashdocs`)] = js.native
+  var source: ReposUpdateInformationAboutPagesSiteParamsSource = js.native
 }
 object ReposUpdateInformationAboutPagesSiteEndpoint {
   
   @scala.inline
-  def apply(owner: String, repo: String): ReposUpdateInformationAboutPagesSiteEndpoint = {
-    val __obj = js.Dynamic.literal(owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
+  def apply(owner: String, repo: String, source: ReposUpdateInformationAboutPagesSiteParamsSource): ReposUpdateInformationAboutPagesSiteEndpoint = {
+    val __obj = js.Dynamic.literal(owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any], source = source.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposUpdateInformationAboutPagesSiteEndpoint]
   }
   
@@ -54,15 +51,12 @@ object ReposUpdateInformationAboutPagesSiteEndpoint {
     def setRepo(value: String): Self = this.set("repo", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setSource(value: ReposUpdateInformationAboutPagesSiteParamsSource): Self = this.set("source", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setCname(value: String): Self = this.set("cname", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCname: Self = this.set("cname", js.undefined)
-    
-    @scala.inline
-    def setSource(value: `gh-pages` | master | (`master Slashdocs`)): Self = this.set("source", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSource: Self = this.set("source", js.undefined)
   }
 }

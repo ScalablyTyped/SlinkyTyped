@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.iotMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -227,6 +227,20 @@ trait Iot extends Service {
   ): Request[ConfirmTopicRuleDestinationResponse, AWSError] = js.native
   
   /**
+    *  Creates a Device Defender audit suppression. 
+    */
+  def createAuditSuppression(): Request[CreateAuditSuppressionResponse, AWSError] = js.native
+  def createAuditSuppression(callback: js.Function2[/* err */ AWSError, /* data */ CreateAuditSuppressionResponse, Unit]): Request[CreateAuditSuppressionResponse, AWSError] = js.native
+  /**
+    *  Creates a Device Defender audit suppression. 
+    */
+  def createAuditSuppression(params: CreateAuditSuppressionRequest): Request[CreateAuditSuppressionResponse, AWSError] = js.native
+  def createAuditSuppression(
+    params: CreateAuditSuppressionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateAuditSuppressionResponse, Unit]
+  ): Request[CreateAuditSuppressionResponse, AWSError] = js.native
+  
+  /**
     * Creates an authorizer.
     */
   def createAuthorizer(): Request[CreateAuthorizerResponse, AWSError] = js.native
@@ -339,12 +353,12 @@ trait Iot extends Service {
   ): Request[CreateKeysAndCertificateResponse, AWSError] = js.native
   
   /**
-    * Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask. Each mitigation action can apply only one type of change.
+    * Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask. Only certain types of mitigation actions can be applied to specific check names. For more information, see Mitigation actions. Each mitigation action can apply only one type of change.
     */
   def createMitigationAction(): Request[CreateMitigationActionResponse, AWSError] = js.native
   def createMitigationAction(callback: js.Function2[/* err */ AWSError, /* data */ CreateMitigationActionResponse, Unit]): Request[CreateMitigationActionResponse, AWSError] = js.native
   /**
-    * Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask. Each mitigation action can apply only one type of change.
+    * Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask. Only certain types of mitigation actions can be applied to specific check names. For more information, see Mitigation actions. Each mitigation action can apply only one type of change.
     */
   def createMitigationAction(params: CreateMitigationActionRequest): Request[CreateMitigationActionResponse, AWSError] = js.native
   def createMitigationAction(
@@ -579,6 +593,20 @@ trait Iot extends Service {
     params: DeleteAccountAuditConfigurationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteAccountAuditConfigurationResponse, Unit]
   ): Request[DeleteAccountAuditConfigurationResponse, AWSError] = js.native
+  
+  /**
+    *  Deletes a Device Defender audit suppression. 
+    */
+  def deleteAuditSuppression(): Request[DeleteAuditSuppressionResponse, AWSError] = js.native
+  def deleteAuditSuppression(callback: js.Function2[/* err */ AWSError, /* data */ DeleteAuditSuppressionResponse, Unit]): Request[DeleteAuditSuppressionResponse, AWSError] = js.native
+  /**
+    *  Deletes a Device Defender audit suppression. 
+    */
+  def deleteAuditSuppression(params: DeleteAuditSuppressionRequest): Request[DeleteAuditSuppressionResponse, AWSError] = js.native
+  def deleteAuditSuppression(
+    params: DeleteAuditSuppressionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteAuditSuppressionResponse, Unit]
+  ): Request[DeleteAuditSuppressionResponse, AWSError] = js.native
   
   /**
     * Deletes an authorizer.
@@ -1002,6 +1030,20 @@ trait Iot extends Service {
     params: DescribeAuditMitigationActionsTaskRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeAuditMitigationActionsTaskResponse, Unit]
   ): Request[DescribeAuditMitigationActionsTaskResponse, AWSError] = js.native
+  
+  /**
+    *  Gets information about a Device Defender audit suppression. 
+    */
+  def describeAuditSuppression(): Request[DescribeAuditSuppressionResponse, AWSError] = js.native
+  def describeAuditSuppression(callback: js.Function2[/* err */ AWSError, /* data */ DescribeAuditSuppressionResponse, Unit]): Request[DescribeAuditSuppressionResponse, AWSError] = js.native
+  /**
+    *  Gets information about a Device Defender audit suppression. 
+    */
+  def describeAuditSuppression(params: DescribeAuditSuppressionRequest): Request[DescribeAuditSuppressionResponse, AWSError] = js.native
+  def describeAuditSuppression(
+    params: DescribeAuditSuppressionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeAuditSuppressionResponse, Unit]
+  ): Request[DescribeAuditSuppressionResponse, AWSError] = js.native
   
   /**
     * Gets information about a Device Defender audit.
@@ -1650,12 +1692,12 @@ trait Iot extends Service {
   ): Request[ListAttachedPoliciesResponse, AWSError] = js.native
   
   /**
-    * Lists the findings (results) of a Device Defender audit or of the audits performed during a specified time period. (Findings are retained for 180 days.)
+    * Lists the findings (results) of a Device Defender audit or of the audits performed during a specified time period. (Findings are retained for 90 days.)
     */
   def listAuditFindings(): Request[ListAuditFindingsResponse, AWSError] = js.native
   def listAuditFindings(callback: js.Function2[/* err */ AWSError, /* data */ ListAuditFindingsResponse, Unit]): Request[ListAuditFindingsResponse, AWSError] = js.native
   /**
-    * Lists the findings (results) of a Device Defender audit or of the audits performed during a specified time period. (Findings are retained for 180 days.)
+    * Lists the findings (results) of a Device Defender audit or of the audits performed during a specified time period. (Findings are retained for 90 days.)
     */
   def listAuditFindings(params: ListAuditFindingsRequest): Request[ListAuditFindingsResponse, AWSError] = js.native
   def listAuditFindings(
@@ -1694,6 +1736,20 @@ trait Iot extends Service {
     params: ListAuditMitigationActionsTasksRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListAuditMitigationActionsTasksResponse, Unit]
   ): Request[ListAuditMitigationActionsTasksResponse, AWSError] = js.native
+  
+  /**
+    *  Lists your Device Defender audit listings. 
+    */
+  def listAuditSuppressions(): Request[ListAuditSuppressionsResponse, AWSError] = js.native
+  def listAuditSuppressions(callback: js.Function2[/* err */ AWSError, /* data */ ListAuditSuppressionsResponse, Unit]): Request[ListAuditSuppressionsResponse, AWSError] = js.native
+  /**
+    *  Lists your Device Defender audit listings. 
+    */
+  def listAuditSuppressions(params: ListAuditSuppressionsRequest): Request[ListAuditSuppressionsResponse, AWSError] = js.native
+  def listAuditSuppressions(
+    params: ListAuditSuppressionsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListAuditSuppressionsResponse, Unit]
+  ): Request[ListAuditSuppressionsResponse, AWSError] = js.native
   
   /**
     * Lists the Device Defender audits that have been performed during a given time period.
@@ -2204,12 +2260,12 @@ trait Iot extends Service {
   ): Request[ListThingTypesResponse, AWSError] = js.native
   
   /**
-    * Lists your things. Use the attributeName and attributeValue parameters to filter your things. For example, calling ListThings with attributeName=Color and attributeValue=Red retrieves all things in the registry that contain an attribute Color with the value Red. 
+    * Lists your things. Use the attributeName and attributeValue parameters to filter your things. For example, calling ListThings with attributeName=Color and attributeValue=Red retrieves all things in the registry that contain an attribute Color with the value Red.   You will not be charged for calling this API if an Access denied error is returned. You will also not be charged if no attributes or pagination token was provided in request and no pagination token and no results were returned. 
     */
   def listThings(): Request[ListThingsResponse, AWSError] = js.native
   def listThings(callback: js.Function2[/* err */ AWSError, /* data */ ListThingsResponse, Unit]): Request[ListThingsResponse, AWSError] = js.native
   /**
-    * Lists your things. Use the attributeName and attributeValue parameters to filter your things. For example, calling ListThings with attributeName=Color and attributeValue=Red retrieves all things in the registry that contain an attribute Color with the value Red. 
+    * Lists your things. Use the attributeName and attributeValue parameters to filter your things. For example, calling ListThings with attributeName=Color and attributeValue=Red retrieves all things in the registry that contain an attribute Color with the value Red.   You will not be charged for calling this API if an Access denied error is returned. You will also not be charged if no attributes or pagination token was provided in request and no pagination token and no results were returned. 
     */
   def listThings(params: ListThingsRequest): Request[ListThingsResponse, AWSError] = js.native
   def listThings(
@@ -2642,6 +2698,20 @@ trait Iot extends Service {
   ): Request[UpdateAccountAuditConfigurationResponse, AWSError] = js.native
   
   /**
+    *  Updates a Device Defender audit suppression. 
+    */
+  def updateAuditSuppression(): Request[UpdateAuditSuppressionResponse, AWSError] = js.native
+  def updateAuditSuppression(callback: js.Function2[/* err */ AWSError, /* data */ UpdateAuditSuppressionResponse, Unit]): Request[UpdateAuditSuppressionResponse, AWSError] = js.native
+  /**
+    *  Updates a Device Defender audit suppression. 
+    */
+  def updateAuditSuppression(params: UpdateAuditSuppressionRequest): Request[UpdateAuditSuppressionResponse, AWSError] = js.native
+  def updateAuditSuppression(
+    params: UpdateAuditSuppressionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateAuditSuppressionResponse, Unit]
+  ): Request[UpdateAuditSuppressionResponse, AWSError] = js.native
+  
+  /**
     * Updates an authorizer.
     */
   def updateAuthorizer(): Request[UpdateAuthorizerResponse, AWSError] = js.native
@@ -2684,12 +2754,12 @@ trait Iot extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
-    * Updates the status of the specified certificate. This operation is idempotent. Moving a certificate from the ACTIVE state (including REVOKED) will not disconnect currently connected devices, but these devices will be unable to reconnect. The ACTIVE state is required to authenticate devices connecting to AWS IoT using a certificate.
+    * Updates the status of the specified certificate. This operation is idempotent. Certificates must be in the ACTIVE state to authenticate devices that use a certificate to connect to AWS IoT. Within a few minutes of updating a certificate from the ACTIVE state to any other state, AWS IoT disconnects all devices that used that certificate to connect. Devices cannot use a certificate that is not in the ACTIVE state to reconnect.
     */
   def updateCertificate(): Request[js.Object, AWSError] = js.native
   def updateCertificate(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Updates the status of the specified certificate. This operation is idempotent. Moving a certificate from the ACTIVE state (including REVOKED) will not disconnect currently connected devices, but these devices will be unable to reconnect. The ACTIVE state is required to authenticate devices connecting to AWS IoT using a certificate.
+    * Updates the status of the specified certificate. This operation is idempotent. Certificates must be in the ACTIVE state to authenticate devices that use a certificate to connect to AWS IoT. Within a few minutes of updating a certificate from the ACTIVE state to any other state, AWS IoT disconnects all devices that used that certificate to connect. Devices cannot use a certificate that is not in the ACTIVE state to reconnect.
     */
   def updateCertificate(params: UpdateCertificateRequest): Request[js.Object, AWSError] = js.native
   def updateCertificate(

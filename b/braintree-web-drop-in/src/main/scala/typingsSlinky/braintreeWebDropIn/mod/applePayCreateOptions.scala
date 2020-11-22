@@ -1,5 +1,9 @@
 package typingsSlinky.braintreeWebDropIn.mod
 
+import typingsSlinky.braintreeWeb.applePayMod.ApplePayPaymentRequest
+import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.`white-outline`
+import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.black
+import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.white
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,16 +13,16 @@ trait applePayCreateOptions extends js.Object {
   
   var applePaySessionVersion: js.UndefOr[Double] = js.native
   
-  var buttonStyle: js.UndefOr[String] = js.native
+  var buttonStyle: js.UndefOr[black | white | `white-outline`] = js.native
   
   var displayName: String = js.native
   
-  var paymentRequest: js.Any = js.native
+  var paymentRequest: ApplePayPaymentRequest = js.native
 }
 object applePayCreateOptions {
   
   @scala.inline
-  def apply(displayName: String, paymentRequest: js.Any): applePayCreateOptions = {
+  def apply(displayName: String, paymentRequest: ApplePayPaymentRequest): applePayCreateOptions = {
     val __obj = js.Dynamic.literal(displayName = displayName.asInstanceOf[js.Any], paymentRequest = paymentRequest.asInstanceOf[js.Any])
     __obj.asInstanceOf[applePayCreateOptions]
   }
@@ -42,7 +46,7 @@ object applePayCreateOptions {
     def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPaymentRequest(value: js.Any): Self = this.set("paymentRequest", value.asInstanceOf[js.Any])
+    def setPaymentRequest(value: ApplePayPaymentRequest): Self = this.set("paymentRequest", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setApplePaySessionVersion(value: Double): Self = this.set("applePaySessionVersion", value.asInstanceOf[js.Any])
@@ -51,7 +55,7 @@ object applePayCreateOptions {
     def deleteApplePaySessionVersion: Self = this.set("applePaySessionVersion", js.undefined)
     
     @scala.inline
-    def setButtonStyle(value: String): Self = this.set("buttonStyle", value.asInstanceOf[js.Any])
+    def setButtonStyle(value: black | white | `white-outline`): Self = this.set("buttonStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteButtonStyle: Self = this.set("buttonStyle", js.undefined)

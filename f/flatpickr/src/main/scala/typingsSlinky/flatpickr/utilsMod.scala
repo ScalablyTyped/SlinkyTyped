@@ -22,7 +22,9 @@ object utilsMod extends js.Object {
   def int(bool: Boolean): `1` | `0` = js.native
   
   def pad(number: String): String = js.native
+  def pad(number: String, length: Double): String = js.native
   def pad(number: Double): String = js.native
+  def pad(number: Double, length: Double): String = js.native
   
   /* Inlined std.MouseEvent & {  delta :number,   type :'increment'} */
   @js.native

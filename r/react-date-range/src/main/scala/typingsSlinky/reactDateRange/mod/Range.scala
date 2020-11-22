@@ -1,18 +1,17 @@
 package typingsSlinky.reactDateRange.mod
 
-import typingsSlinky.moment.mod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Range extends js.Object {
+trait Range extends _OnChangeProps {
   
   /** default: today */
-  var endDate: js.UndefOr[Moment] = js.native
+  var endDate: js.UndefOr[js.Date] = js.native
   
   /** default: today */
-  var startDate: js.UndefOr[Moment] = js.native
+  var startDate: js.UndefOr[js.Date] = js.native
 }
 object Range {
   
@@ -38,13 +37,13 @@ object Range {
     }
     
     @scala.inline
-    def setEndDate(value: Moment): Self = this.set("endDate", value.asInstanceOf[js.Any])
+    def setEndDate(value: js.Date): Self = this.set("endDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEndDate: Self = this.set("endDate", js.undefined)
     
     @scala.inline
-    def setStartDate(value: Moment): Self = this.set("startDate", value.asInstanceOf[js.Any])
+    def setStartDate(value: js.Date): Self = this.set("startDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStartDate: Self = this.set("startDate", js.undefined)

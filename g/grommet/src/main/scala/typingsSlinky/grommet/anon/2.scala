@@ -1,6 +1,5 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.utilsMod.BorderType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +7,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `2` extends js.Object {
   
-  var border: js.UndefOr[BorderType] = js.native
+  var `1`: js.UndefOr[Font] = js.native
+  
+  var `2`: js.UndefOr[Font] = js.native
+  
+  var `3`: js.UndefOr[Font] = js.native
+  
+  var `4`: js.UndefOr[Font] = js.native
+  
+  var `5`: js.UndefOr[Font] = js.native
+  
+  var `6`: js.UndefOr[Font] = js.native
 }
 object `2` {
   
@@ -34,12 +43,39 @@ object `2` {
     }
     
     @scala.inline
-    def setBorderVarargs(value: SizeStyle*): Self = this.set("border", js.Array(value :_*))
+    def set1(value: Font): Self = this.set("1", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBorder(value: BorderType): Self = this.set("border", value.asInstanceOf[js.Any])
+    def delete1: Self = this.set("1", js.undefined)
     
     @scala.inline
-    def deleteBorder: Self = this.set("border", js.undefined)
+    def set2(value: Font): Self = this.set("2", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def delete2: Self = this.set("2", js.undefined)
+    
+    @scala.inline
+    def set3(value: Font): Self = this.set("3", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def delete3: Self = this.set("3", js.undefined)
+    
+    @scala.inline
+    def set4(value: Font): Self = this.set("4", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def delete4: Self = this.set("4", js.undefined)
+    
+    @scala.inline
+    def set5(value: Font): Self = this.set("5", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def delete5: Self = this.set("5", js.undefined)
+    
+    @scala.inline
+    def set6(value: Font): Self = this.set("6", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def delete6: Self = this.set("6", js.undefined)
   }
 }

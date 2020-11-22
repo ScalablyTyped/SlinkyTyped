@@ -13,6 +13,9 @@ object hafasClientStrings {
   def FeatureCollection: FeatureCollection = "FeatureCollection".asInstanceOf[FeatureCollection]
   
   @scala.inline
+  def Point: Point = "Point".asInstanceOf[Point]
+  
+  @scala.inline
   def aircraft: aircraft = "aircraft".asInstanceOf[aircraft]
   
   @scala.inline
@@ -23,6 +26,9 @@ object hafasClientStrings {
   
   @scala.inline
   def car: car = "car".asInstanceOf[car]
+  
+  @scala.inline
+  def `foreign-id`: `foreign-id` = "foreign-id".asInstanceOf[`foreign-id`]
   
   @scala.inline
   def gondola: gondola = "gondola".asInstanceOf[gondola]
@@ -37,13 +43,13 @@ object hafasClientStrings {
   def line: line = "line".asInstanceOf[line]
   
   @scala.inline
+  def `local-fare-zone`: `local-fare-zone` = "local-fare-zone".asInstanceOf[`local-fare-zone`]
+  
+  @scala.inline
   def location: location = "location".asInstanceOf[location]
   
   @scala.inline
   def operator: operator = "operator".asInstanceOf[operator]
-  
-  @scala.inline
-  def point: point = "point".asInstanceOf[point]
   
   @scala.inline
   def region: region = "region".asInstanceOf[region]
@@ -58,7 +64,16 @@ object hafasClientStrings {
   def station: station = "station".asInstanceOf[station]
   
   @scala.inline
+  def status: status = "status".asInstanceOf[status]
+  
+  @scala.inline
   def stop: stop = "stop".asInstanceOf[stop]
+  
+  @scala.inline
+  def `stop-dhid`: `stop-dhid` = "stop-dhid".asInstanceOf[`stop-dhid`]
+  
+  @scala.inline
+  def `stop-website`: `stop-website` = "stop-website".asInstanceOf[`stop-website`]
   
   @scala.inline
   def taxi: taxi = "taxi".asInstanceOf[taxi]
@@ -67,7 +82,13 @@ object hafasClientStrings {
   def train: train = "train".asInstanceOf[train]
   
   @scala.inline
+  def `transit-authority`: `transit-authority` = "transit-authority".asInstanceOf[`transit-authority`]
+  
+  @scala.inline
   def walking: walking = "walking".asInstanceOf[walking]
+  
+  @scala.inline
+  def warning: warning = "warning".asInstanceOf[warning]
   
   @scala.inline
   def watercraft: watercraft = "watercraft".asInstanceOf[watercraft]
@@ -77,6 +98,9 @@ object hafasClientStrings {
   
   @js.native
   sealed trait FeatureCollection extends js.Object
+  
+  @js.native
+  sealed trait Point extends js.Object
   
   @js.native
   sealed trait aircraft extends js.Object
@@ -91,6 +115,9 @@ object hafasClientStrings {
   sealed trait car extends js.Object
   
   @js.native
+  sealed trait `foreign-id` extends js.Object
+  
+  @js.native
   sealed trait gondola extends js.Object
   
   @js.native
@@ -103,13 +130,13 @@ object hafasClientStrings {
   sealed trait line extends js.Object
   
   @js.native
+  sealed trait `local-fare-zone` extends js.Object
+  
+  @js.native
   sealed trait location extends js.Object
   
   @js.native
   sealed trait operator extends js.Object
-  
-  @js.native
-  sealed trait point extends js.Object
   
   @js.native
   sealed trait region extends js.Object
@@ -124,7 +151,16 @@ object hafasClientStrings {
   sealed trait station extends js.Object
   
   @js.native
+  sealed trait status extends js.Object
+  
+  @js.native
   sealed trait stop extends js.Object
+  
+  @js.native
+  sealed trait `stop-dhid` extends js.Object
+  
+  @js.native
+  sealed trait `stop-website` extends js.Object
   
   @js.native
   sealed trait taxi extends js.Object
@@ -133,7 +169,13 @@ object hafasClientStrings {
   sealed trait train extends js.Object
   
   @js.native
+  sealed trait `transit-authority` extends js.Object
+  
+  @js.native
   sealed trait walking extends js.Object
+  
+  @js.native
+  sealed trait warning extends js.Object
   
   @js.native
   sealed trait watercraft extends js.Object

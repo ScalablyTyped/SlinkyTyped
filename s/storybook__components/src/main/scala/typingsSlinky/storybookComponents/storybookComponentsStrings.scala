@@ -1,9 +1,12 @@
 package typingsSlinky.storybookComponents
 
+import typingsSlinky.storybookComponents.controlsTypesMod.ControlType
+import typingsSlinky.storybookComponents.controlsTypesMod.OptionsControlType
 import typingsSlinky.storybookComponents.iconsMod.IconKey
 import typingsSlinky.storybookComponents.inputMod.Alignments
 import typingsSlinky.storybookComponents.inputMod.Sizes
 import typingsSlinky.storybookComponents.inputMod.ValidationStates
+import typingsSlinky.storybookComponents.sectionRowMod.Level
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,10 +23,19 @@ object storybookComponentsStrings {
   def abbr: abbr = "abbr".asInstanceOf[abbr]
   
   @scala.inline
+  def accessibility: accessibility = "accessibility".asInstanceOf[accessibility]
+  
+  @scala.inline
+  def accessibilityalt: accessibilityalt = "accessibilityalt".asInstanceOf[accessibilityalt]
+  
+  @scala.inline
   def add: add = "add".asInstanceOf[add]
   
   @scala.inline
   def additions: additions = "additions".asInstanceOf[additions]
+  
+  @scala.inline
+  def `additions removals`: `additions removals` = ("additions removals").asInstanceOf[`additions removals`]
   
   @scala.inline
   def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
@@ -36,6 +48,9 @@ object storybookComponentsStrings {
   
   @scala.inline
   def alert: alert = "alert".asInstanceOf[alert]
+  
+  @scala.inline
+  def align: align = "align".asInstanceOf[align]
   
   @scala.inline
   def all: all = "all".asInstanceOf[all]
@@ -54,6 +69,9 @@ object storybookComponentsStrings {
   
   @scala.inline
   def area: area = "area".asInstanceOf[area]
+  
+  @scala.inline
+  def array: array = "array".asInstanceOf[array]
   
   @scala.inline
   def arrowdown: arrowdown = "arrowdown".asInstanceOf[arrowdown]
@@ -143,6 +161,9 @@ object storybookComponentsStrings {
   def bookmarkhollow: bookmarkhollow = "bookmarkhollow".asInstanceOf[bookmarkhollow]
   
   @scala.inline
+  def boolean: boolean = "boolean".asInstanceOf[boolean]
+  
+  @scala.inline
   def border: border = "border".asInstanceOf[border]
   
   @scala.inline
@@ -194,7 +215,7 @@ object storybookComponentsStrings {
   def chevrondown: chevrondown = "chevrondown".asInstanceOf[chevrondown]
   
   @scala.inline
-  def chroma: chroma = "chroma".asInstanceOf[chroma]
+  def chromatic: chromatic = "chromatic".asInstanceOf[chromatic]
   
   @scala.inline
   def circle: circle = "circle".asInstanceOf[circle]
@@ -230,6 +251,12 @@ object storybookComponentsStrings {
   def colgroup: colgroup = "colgroup".asInstanceOf[colgroup]
   
   @scala.inline
+  def collapse: collapse = "collapse".asInstanceOf[collapse]
+  
+  @scala.inline
+  def color: color = "color".asInstanceOf[color]
+  
+  @scala.inline
   def comment: comment = "comment".asInstanceOf[comment]
   
   @scala.inline
@@ -240,6 +267,9 @@ object storybookComponentsStrings {
   
   @scala.inline
   def component: component = "component".asInstanceOf[component]
+  
+  @scala.inline
+  def contrast: contrast = "contrast".asInstanceOf[contrast]
   
   @scala.inline
   def copy: copy = "copy".asInstanceOf[copy]
@@ -566,6 +596,9 @@ object storybookComponentsStrings {
   def hearthollow: hearthollow = "hearthollow".asInstanceOf[hearthollow]
   
   @scala.inline
+  def height: height = "height".asInstanceOf[height]
+  
+  @scala.inline
   def hgroup: hgroup = "hgroup".asInstanceOf[hgroup]
   
   @scala.inline
@@ -608,6 +641,12 @@ object storybookComponentsStrings {
   def `inline`: `inline` = "inline".asInstanceOf[`inline`]
   
   @scala.inline
+  def `inline-check`: `inline-check` = "inline-check".asInstanceOf[`inline-check`]
+  
+  @scala.inline
+  def `inline-radio`: `inline-radio` = "inline-radio".asInstanceOf[`inline-radio`]
+  
+  @scala.inline
   def input: input = "input".asInstanceOf[input]
   
   @scala.inline
@@ -647,6 +686,9 @@ object storybookComponentsStrings {
   def lightning: lightning = "lightning".asInstanceOf[lightning]
   
   @scala.inline
+  def lightningoff: lightningoff = "lightningoff".asInstanceOf[lightningoff]
+  
+  @scala.inline
   def line: line = "line".asInstanceOf[line]
   
   @scala.inline
@@ -681,6 +723,9 @@ object storybookComponentsStrings {
   
   @scala.inline
   def marker: marker = "marker".asInstanceOf[marker]
+  
+  @scala.inline
+  def markup: markup = "markup".asInstanceOf[markup]
   
   @scala.inline
   def mask: mask = "mask".asInstanceOf[mask]
@@ -731,6 +776,9 @@ object storybookComponentsStrings {
   def mpath: mpath = "mpath".asInstanceOf[mpath]
   
   @scala.inline
+  def `multi-select`: `multi-select` = "multi-select".asInstanceOf[`multi-select`]
+  
+  @scala.inline
   def nav: nav = "nav".asInstanceOf[nav]
   
   @scala.inline
@@ -750,6 +798,9 @@ object storybookComponentsStrings {
   
   @scala.inline
   def noscript: noscript = "noscript".asInstanceOf[noscript]
+  
+  @scala.inline
+  def number: number = "number".asInstanceOf[number]
   
   @scala.inline
   def numeric: numeric = "numeric".asInstanceOf[numeric]
@@ -783,6 +834,9 @@ object storybookComponentsStrings {
   
   @scala.inline
   def outbox: outbox = "outbox".asInstanceOf[outbox]
+  
+  @scala.inline
+  def outline: outline = "outline".asInstanceOf[outline]
   
   @scala.inline
   def output: output = "output".asInstanceOf[output]
@@ -881,6 +935,12 @@ object storybookComponentsStrings {
   def radialGradient: radialGradient = "radialGradient".asInstanceOf[radialGradient]
   
   @scala.inline
+  def radio: radio = "radio".asInstanceOf[radio]
+  
+  @scala.inline
+  def range: range = "range".asInstanceOf[range]
+  
+  @scala.inline
   def rect: rect = "rect".asInstanceOf[rect]
   
   @scala.inline
@@ -893,6 +953,12 @@ object storybookComponentsStrings {
   def removals: removals = "removals".asInstanceOf[removals]
   
   @scala.inline
+  def `removals additions`: `removals additions` = ("removals additions").asInstanceOf[`removals additions`]
+  
+  @scala.inline
+  def `removals text`: `removals text` = ("removals text").asInstanceOf[`removals text`]
+  
+  @scala.inline
   def reply: reply = "reply".asInstanceOf[reply]
   
   @scala.inline
@@ -900,6 +966,9 @@ object storybookComponentsStrings {
   
   @scala.inline
   def requestchange: requestchange = "requestchange".asInstanceOf[requestchange]
+  
+  @scala.inline
+  def reset: reset = "reset".asInstanceOf[reset]
   
   @scala.inline
   def `right-click`: `right-click` = "right-click".asInstanceOf[`right-click`]
@@ -944,6 +1013,9 @@ object storybookComponentsStrings {
   def share: share = "share".asInstanceOf[share]
   
   @scala.inline
+  def sharealt: sharealt = "sharealt".asInstanceOf[sharealt]
+  
+  @scala.inline
   def shield: shield = "shield".asInstanceOf[shield]
   
   @scala.inline
@@ -951,6 +1023,9 @@ object storybookComponentsStrings {
   
   @scala.inline
   def sidebaralt: sidebaralt = "sidebaralt".asInstanceOf[sidebaralt]
+  
+  @scala.inline
+  def size: size = "size".asInstanceOf[size]
   
   @scala.inline
   def slot: slot = "slot".asInstanceOf[slot]
@@ -996,6 +1071,12 @@ object storybookComponentsStrings {
   
   @scala.inline
   def sub: sub = "sub".asInstanceOf[sub]
+  
+  @scala.inline
+  def submit: submit = "submit".asInstanceOf[submit]
+  
+  @scala.inline
+  def subsection: subsection = "subsection".asInstanceOf[subsection]
   
   @scala.inline
   def subtract: subtract = "subtract".asInstanceOf[subtract]
@@ -1049,6 +1130,12 @@ object storybookComponentsStrings {
   def text: text = "text".asInstanceOf[text]
   
   @scala.inline
+  def `text additions`: `text additions` = ("text additions").asInstanceOf[`text additions`]
+  
+  @scala.inline
+  def `text removals`: `text removals` = ("text removals").asInstanceOf[`text removals`]
+  
+  @scala.inline
   def textPath: textPath = "textPath".asInstanceOf[textPath]
   
   @scala.inline
@@ -1062,6 +1149,9 @@ object storybookComponentsStrings {
   
   @scala.inline
   def thead: thead = "thead".asInstanceOf[thead]
+  
+  @scala.inline
+  def theme: theme = "theme".asInstanceOf[theme]
   
   @scala.inline
   def thumbsup: thumbsup = "thumbsup".asInstanceOf[thumbsup]
@@ -1107,6 +1197,9 @@ object storybookComponentsStrings {
   
   @scala.inline
   def undo: undo = "undo".asInstanceOf[undo]
+  
+  @scala.inline
+  def unfold: unfold = "unfold".asInstanceOf[unfold]
   
   @scala.inline
   def unlock: unlock = "unlock".asInstanceOf[unlock]
@@ -1190,10 +1283,19 @@ object storybookComponentsStrings {
   sealed trait abbr extends js.Object
   
   @js.native
+  sealed trait accessibility extends IconKey
+  
+  @js.native
+  sealed trait accessibilityalt extends IconKey
+  
+  @js.native
   sealed trait add extends IconKey
   
   @js.native
   sealed trait additions extends js.Object
+  
+  @js.native
+  sealed trait `additions removals` extends js.Object
   
   @js.native
   sealed trait `additions text` extends js.Object
@@ -1206,6 +1308,9 @@ object storybookComponentsStrings {
   
   @js.native
   sealed trait alert extends IconKey
+  
+  @js.native
+  sealed trait align extends js.Object
   
   @js.native
   sealed trait all extends js.Object
@@ -1224,6 +1329,9 @@ object storybookComponentsStrings {
   
   @js.native
   sealed trait area extends js.Object
+  
+  @js.native
+  sealed trait array extends ControlType
   
   @js.native
   sealed trait arrowdown extends IconKey
@@ -1313,6 +1421,9 @@ object storybookComponentsStrings {
   sealed trait bookmarkhollow extends IconKey
   
   @js.native
+  sealed trait boolean extends ControlType
+  
+  @js.native
   sealed trait border extends js.Object
   
   @js.native
@@ -1358,13 +1469,16 @@ object storybookComponentsStrings {
   sealed trait certificate extends IconKey
   
   @js.native
-  sealed trait check extends IconKey
+  sealed trait check
+    extends ControlType
+       with IconKey
+       with OptionsControlType
   
   @js.native
   sealed trait chevrondown extends IconKey
   
   @js.native
-  sealed trait chroma extends IconKey
+  sealed trait chromatic extends IconKey
   
   @js.native
   sealed trait circle extends IconKey
@@ -1400,6 +1514,12 @@ object storybookComponentsStrings {
   sealed trait colgroup extends js.Object
   
   @js.native
+  sealed trait collapse extends IconKey
+  
+  @js.native
+  sealed trait color extends ControlType
+  
+  @js.native
   sealed trait comment extends IconKey
   
   @js.native
@@ -1410,6 +1530,9 @@ object storybookComponentsStrings {
   
   @js.native
   sealed trait component extends IconKey
+  
+  @js.native
+  sealed trait contrast extends IconKey
   
   @js.native
   sealed trait copy extends IconKey
@@ -1448,7 +1571,7 @@ object storybookComponentsStrings {
   sealed trait datalist extends js.Object
   
   @js.native
-  sealed trait date extends js.Object
+  sealed trait date extends ControlType
   
   @js.native
   sealed trait dd extends js.Object
@@ -1736,6 +1859,9 @@ object storybookComponentsStrings {
   sealed trait hearthollow extends IconKey
   
   @js.native
+  sealed trait height extends js.Object
+  
+  @js.native
   sealed trait hgroup extends js.Object
   
   @js.native
@@ -1778,6 +1904,16 @@ object storybookComponentsStrings {
   sealed trait `inline` extends js.Object
   
   @js.native
+  sealed trait `inline-check`
+    extends ControlType
+       with OptionsControlType
+  
+  @js.native
+  sealed trait `inline-radio`
+    extends ControlType
+       with OptionsControlType
+  
+  @js.native
   sealed trait input extends js.Object
   
   @js.native
@@ -1817,6 +1953,9 @@ object storybookComponentsStrings {
   sealed trait lightning extends IconKey
   
   @js.native
+  sealed trait lightningoff extends IconKey
+  
+  @js.native
   sealed trait line extends js.Object
   
   @js.native
@@ -1851,6 +1990,9 @@ object storybookComponentsStrings {
   
   @js.native
   sealed trait marker extends js.Object
+  
+  @js.native
+  sealed trait markup extends IconKey
   
   @js.native
   sealed trait mask extends js.Object
@@ -1901,6 +2043,11 @@ object storybookComponentsStrings {
   sealed trait mpath extends js.Object
   
   @js.native
+  sealed trait `multi-select`
+    extends ControlType
+       with OptionsControlType
+  
+  @js.native
   sealed trait nav extends js.Object
   
   @js.native
@@ -1922,13 +2069,16 @@ object storybookComponentsStrings {
   sealed trait noscript extends js.Object
   
   @js.native
+  sealed trait number extends ControlType
+  
+  @js.native
   sealed trait numeric extends js.Object
   
   @js.native
   sealed trait nut extends IconKey
   
   @js.native
-  sealed trait `object` extends js.Object
+  sealed trait `object` extends ControlType
   
   @js.native
   sealed trait off extends js.Object
@@ -1953,6 +2103,9 @@ object storybookComponentsStrings {
   
   @js.native
   sealed trait outbox extends IconKey
+  
+  @js.native
+  sealed trait outline extends IconKey
   
   @js.native
   sealed trait output extends js.Object
@@ -2051,6 +2204,14 @@ object storybookComponentsStrings {
   sealed trait radialGradient extends js.Object
   
   @js.native
+  sealed trait radio
+    extends ControlType
+       with OptionsControlType
+  
+  @js.native
+  sealed trait range extends ControlType
+  
+  @js.native
   sealed trait rect extends js.Object
   
   @js.native
@@ -2063,6 +2224,12 @@ object storybookComponentsStrings {
   sealed trait removals extends js.Object
   
   @js.native
+  sealed trait `removals additions` extends js.Object
+  
+  @js.native
+  sealed trait `removals text` extends js.Object
+  
+  @js.native
   sealed trait reply extends IconKey
   
   @js.native
@@ -2070,6 +2237,9 @@ object storybookComponentsStrings {
   
   @js.native
   sealed trait requestchange extends IconKey
+  
+  @js.native
+  sealed trait reset extends js.Object
   
   @js.native
   sealed trait `right-click` extends js.Object
@@ -2105,13 +2275,18 @@ object storybookComponentsStrings {
   sealed trait secondary extends js.Object
   
   @js.native
-  sealed trait section extends js.Object
+  sealed trait section extends Level
   
   @js.native
-  sealed trait select extends js.Object
+  sealed trait select
+    extends ControlType
+       with OptionsControlType
   
   @js.native
   sealed trait share extends IconKey
+  
+  @js.native
+  sealed trait sharealt extends IconKey
   
   @js.native
   sealed trait shield extends IconKey
@@ -2121,6 +2296,9 @@ object storybookComponentsStrings {
   
   @js.native
   sealed trait sidebaralt extends IconKey
+  
+  @js.native
+  sealed trait size extends js.Object
   
   @js.native
   sealed trait slot extends js.Object
@@ -2166,6 +2344,12 @@ object storybookComponentsStrings {
   
   @js.native
   sealed trait sub extends js.Object
+  
+  @js.native
+  sealed trait submit extends js.Object
+  
+  @js.native
+  sealed trait subsection extends Level
   
   @js.native
   sealed trait subtract extends IconKey
@@ -2216,7 +2400,13 @@ object storybookComponentsStrings {
   sealed trait tertiary extends js.Object
   
   @js.native
-  sealed trait text extends js.Object
+  sealed trait text extends ControlType
+  
+  @js.native
+  sealed trait `text additions` extends js.Object
+  
+  @js.native
+  sealed trait `text removals` extends js.Object
   
   @js.native
   sealed trait textPath extends js.Object
@@ -2232,6 +2422,9 @@ object storybookComponentsStrings {
   
   @js.native
   sealed trait thead extends js.Object
+  
+  @js.native
+  sealed trait theme extends js.Object
   
   @js.native
   sealed trait thumbsup extends IconKey
@@ -2277,6 +2470,9 @@ object storybookComponentsStrings {
   
   @js.native
   sealed trait undo extends IconKey
+  
+  @js.native
+  sealed trait unfold extends IconKey
   
   @js.native
   sealed trait unlock extends IconKey

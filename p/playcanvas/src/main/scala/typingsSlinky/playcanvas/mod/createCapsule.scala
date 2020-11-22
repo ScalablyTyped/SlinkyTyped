@@ -13,7 +13,7 @@ object createCapsule extends js.Object {
     * Creates a procedural capsule-shaped mesh.
     *
     * The size, shape and tesselation properties of the capsule can be controlled via function
-    * parameters. By default, the function will create a capsule standing vertically centred
+    * parameters. By default, the function will create a capsule standing vertically centered
     * on the XZ-plane with a radius of 0.25, a height of 1.0, 1 height segment and 10 cap
     * segments.
     *

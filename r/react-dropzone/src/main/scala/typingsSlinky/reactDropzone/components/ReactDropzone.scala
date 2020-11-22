@@ -44,6 +44,9 @@ object ReactDropzone {
     def getFilesFromEvent(value: /* event */ DropEvent => js.Promise[js.Array[File | DataTransferItem]]): this.type = set("getFilesFromEvent", js.Any.fromFunction1(value))
     
     @scala.inline
+    def maxFiles(value: Double): this.type = set("maxFiles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def maxSize(value: Double): this.type = set("maxSize", value.asInstanceOf[js.Any])
     
     @scala.inline

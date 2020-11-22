@@ -38,7 +38,7 @@ object requestMod extends js.Object {
       * appropriate value (if the request is finished before you call this method,
       * but the promise has not yet been resolved), so don't just assume it will be
       * rejected if you call this function.
-      * @param appDelete True if the cancelation came from the app being deleted.
+      * @param appDelete - True if the cancelation came from the app being deleted.
       */
     def cancel(): Unit = js.native
     def cancel(appDelete: Boolean): Unit = js.native

@@ -18,8 +18,13 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignIcons.twoTonePrimaryColorMod.TwoToneColor
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -57,7 +62,7 @@ import typingsSlinky.antd.antdStrings.search
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.tel
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
@@ -206,7 +211,9 @@ class SharedBuilder_PickAntdIconPropschildren_1258851850[R <: js.Object] (val ar
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -416,7 +423,7 @@ class SharedBuilder_PickAntdIconPropschildren_1258851850[R <: js.Object] (val ar
   def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
+  def inputMode(value: none | text_ | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
   
   @scala.inline
   def integrity(value: String): this.type = set("integrity", value.asInstanceOf[js.Any])

@@ -133,7 +133,7 @@ class ScanApi () extends js.Object {
     * error, data, response
     */
   def scanWebsite(
-    input: String,
+    input: WebsiteScanRequest,
     callback: js.Function3[/* error */ js.Any, /* data */ WebsiteScanResult, /* response */ js.Any, _]
   ): js.Any = js.native
   /**

@@ -20,10 +20,10 @@ import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.ContainsFocus
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutContentStyleProps
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutContentStyles
-import typingsSlinky.officeUiFabricReact.calloutTypesMod.Target
 import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
 import typingsSlinky.officeUiFabricReact.focusTrapCalloutTypesMod.IFocusTrapCalloutProps
 import typingsSlinky.officeUiFabricReact.focusTrapZoneTypesMod.IFocusTrapZoneProps
@@ -33,8 +33,13 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -80,7 +85,7 @@ import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.uifabricReactHooks.useTargetMod.Target
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -212,7 +217,9 @@ object FocusTrapCallout {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -338,6 +345,9 @@ object FocusTrapCallout {
     
     @scala.inline
     def directionalHintForRTL(value: DirectionalHint): this.type = set("directionalHintForRTL", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dismissOnTargetClick(value: Boolean): this.type = set("dismissOnTargetClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def doNotLayer(value: Boolean): this.type = set("doNotLayer", value.asInstanceOf[js.Any])
@@ -655,6 +665,11 @@ object FocusTrapCallout {
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def preventDismissOnEvent(
+      value: /* ev */ Event | SyntheticFocusEvent[Element] | SyntheticKeyboardEvent[Element] | SyntheticMouseEvent[Element] => Boolean
+    ): this.type = set("preventDismissOnEvent", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def preventDismissOnLostFocus(value: Boolean): this.type = set("preventDismissOnLostFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -683,6 +698,9 @@ object FocusTrapCallout {
     
     @scala.inline
     def setInitialFocus(value: Boolean): this.type = set("setInitialFocus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def shouldDismissOnWindowFocus(value: Boolean): this.type = set("shouldDismissOnWindowFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
     def shouldRestoreFocus(value: Boolean): this.type = set("shouldRestoreFocus", value.asInstanceOf[js.Any])

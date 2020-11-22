@@ -32,25 +32,29 @@ trait WebSocket extends EventEmitter {
   
   var OPEN: Double = js.native
   
-  def addEventListener(method: String): Unit = js.native
   def addEventListener(method: String, listener: js.Function0[Unit]): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_close(method: close): Unit = js.native
+  def addEventListener(method: String, listener: js.Function0[Unit], options: EventListenerOptions): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_close(method: close, cb: js.Function1[/* event */ Code, Unit]): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_error(method: error): Unit = js.native
+  def addEventListener_close(method: close, cb: js.Function1[/* event */ Code, Unit], options: EventListenerOptions): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_error(method: error, cb: js.Function1[/* event */ Error, Unit]): Unit = js.native
-  // HTML5 WebSocket events
   @JSName("addEventListener")
-  def addEventListener_message(method: message): Unit = js.native
+  def addEventListener_error(method: error, cb: js.Function1[/* event */ Error, Unit], options: EventListenerOptions): Unit = js.native
+  // HTML5 WebSocket events
   @JSName("addEventListener")
   def addEventListener_message(method: message, cb: js.Function1[/* event */ typingsSlinky.ws.anon.Data, Unit]): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_open(method: open): Unit = js.native
+  def addEventListener_message(
+    method: message,
+    cb: js.Function1[/* event */ typingsSlinky.ws.anon.Data, Unit],
+    options: EventListenerOptions
+  ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_open(method: open, cb: js.Function1[/* event */ Target, Unit]): Unit = js.native
+  @JSName("addEventListener")
+  def addEventListener_open(method: open, cb: js.Function1[/* event */ Target, Unit], options: EventListenerOptions): Unit = js.native
   
   @JSName("addListener")
   def addListener_close(event: close, listener: js.Function2[/* code */ Double, /* message */ String, Unit]): this.type = js.native

@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetRuntimeCallStatsResponse extends js.Object {
   
   /**
-    * Collected counter information.
+    * Collected runtime call counter information.
     */
-  var result: js.Array[CounterInfo] = js.native
+  var result: js.Array[RuntimeCallCounterInfo] = js.native
 }
 object GetRuntimeCallStatsResponse {
   
   @scala.inline
-  def apply(result: js.Array[CounterInfo]): GetRuntimeCallStatsResponse = {
+  def apply(result: js.Array[RuntimeCallCounterInfo]): GetRuntimeCallStatsResponse = {
     val __obj = js.Dynamic.literal(result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRuntimeCallStatsResponse]
   }
@@ -36,9 +36,9 @@ object GetRuntimeCallStatsResponse {
     }
     
     @scala.inline
-    def setResultVarargs(value: CounterInfo*): Self = this.set("result", js.Array(value :_*))
+    def setResultVarargs(value: RuntimeCallCounterInfo*): Self = this.set("result", js.Array(value :_*))
     
     @scala.inline
-    def setResult(value: js.Array[CounterInfo]): Self = this.set("result", value.asInstanceOf[js.Any])
+    def setResult(value: js.Array[RuntimeCallCounterInfo]): Self = this.set("result", value.asInstanceOf[js.Any])
   }
 }

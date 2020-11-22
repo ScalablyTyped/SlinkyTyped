@@ -23,7 +23,7 @@ trait UserSettings extends js.Object {
   var KernelGatewayAppSettings: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.KernelGatewayAppSettings] = js.native
   
   /**
-    * The security groups.
+    * The security groups for the Amazon Virtual Private Cloud (VPC) that Studio uses for communication. Optional when the CreateDomain.AppNetworkAccessType parameter is set to PublicInternetOnly. Required when the CreateDomain.AppNetworkAccessType parameter is set to VpcOnly.
     */
   var SecurityGroups: js.UndefOr[SecurityGroupIds] = js.native
   

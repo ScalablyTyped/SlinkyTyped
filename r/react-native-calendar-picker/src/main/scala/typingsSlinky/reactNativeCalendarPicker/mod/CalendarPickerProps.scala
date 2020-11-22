@@ -10,8 +10,6 @@ import typingsSlinky.reactNativeCalendarPicker.anon.Style
 import typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.END_DATE
 import typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.START_DATE
 import typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.circle
-import typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.customDates
-import typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.dayOfWeek
 import typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.square
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,19 +24,9 @@ trait CalendarPickerProps extends js.Object {
   
   var customDatesStyles: js.UndefOr[js.Array[CustomDateStyle] | CustomDatesStylesFunc] = js.native
   
-  /**
-    * @deprecated Use customDatesStyles & customDayHeaderStyles callbacks to style individual dates, days of week, and/or header.
-    */
-  var customDatesStylesPriority: js.UndefOr[dayOfWeek | customDates] = js.native
-  
   var customDayHeaderStyles: js.UndefOr[CustomDayHeaderStylesFunc] = js.native
   
   var dayLabelsWrapper: js.UndefOr[StyleProp[ViewStyle]] = js.native
-  
-  /**
-    * @deprecated Use customDatesStyles & customDayHeaderStyles callbacks to style individual dates, days of week, and/or header.
-    */
-  var dayOfWeekStyles: js.UndefOr[DayOfWeekStyle] = js.native
   
   var dayShape: js.UndefOr[circle | square] = js.native
   
@@ -48,11 +36,11 @@ trait CalendarPickerProps extends js.Object {
   
   var enableDateChange: js.UndefOr[Boolean] = js.native
   
-  var enableSwipe: js.UndefOr[Boolean] = js.native
-  
   var headingLevel: js.UndefOr[Double] = js.native
   
   var height: js.UndefOr[Double] = js.native
+  
+  var horizontal: js.UndefOr[Boolean] = js.native
   
   var initialDate: js.UndefOr[js.Date] = js.native
   
@@ -78,8 +66,6 @@ trait CalendarPickerProps extends js.Object {
   
   var onMonthChange: js.UndefOr[DateChangedCallback] = js.native
   
-  var onSwipe: js.UndefOr[SwipeCallback] = js.native
-  
   var previousComponent: js.UndefOr[ReactElement] = js.native
   
   var previousTitle: js.UndefOr[String] = js.native
@@ -89,6 +75,8 @@ trait CalendarPickerProps extends js.Object {
   var restrictMonthNavigation: js.UndefOr[Boolean] = js.native
   
   var scaleFactor: js.UndefOr[Double] = js.native
+  
+  var scrollable: js.UndefOr[Boolean] = js.native
   
   var selectedDayColor: js.UndefOr[String] = js.native
   
@@ -109,8 +97,6 @@ trait CalendarPickerProps extends js.Object {
   var showDayStragglers: js.UndefOr[Boolean] = js.native
   
   var startFromMonday: js.UndefOr[Boolean] = js.native
-  
-  var swipeConfig: js.UndefOr[SwipeConfig] = js.native
   
   var textStyle: js.UndefOr[StyleProp[TextStyle]] = js.native
   
@@ -170,12 +156,6 @@ object CalendarPickerProps {
     def deleteCustomDatesStyles: Self = this.set("customDatesStyles", js.undefined)
     
     @scala.inline
-    def setCustomDatesStylesPriority(value: dayOfWeek | customDates): Self = this.set("customDatesStylesPriority", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCustomDatesStylesPriority: Self = this.set("customDatesStylesPriority", js.undefined)
-    
-    @scala.inline
     def setCustomDayHeaderStyles(value: /* date */ CustomDayHeaderStylesFuncDateArg => Style): Self = this.set("customDayHeaderStyles", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -189,12 +169,6 @@ object CalendarPickerProps {
     
     @scala.inline
     def setDayLabelsWrapperNull: Self = this.set("dayLabelsWrapper", null)
-    
-    @scala.inline
-    def setDayOfWeekStyles(value: DayOfWeekStyle): Self = this.set("dayOfWeekStyles", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDayOfWeekStyles: Self = this.set("dayOfWeekStyles", js.undefined)
     
     @scala.inline
     def setDayShape(value: circle | square): Self = this.set("dayShape", value.asInstanceOf[js.Any])
@@ -230,12 +204,6 @@ object CalendarPickerProps {
     def deleteEnableDateChange: Self = this.set("enableDateChange", js.undefined)
     
     @scala.inline
-    def setEnableSwipe(value: Boolean): Self = this.set("enableSwipe", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteEnableSwipe: Self = this.set("enableSwipe", js.undefined)
-    
-    @scala.inline
     def setHeadingLevel(value: Double): Self = this.set("headingLevel", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -246,6 +214,12 @@ object CalendarPickerProps {
     
     @scala.inline
     def deleteHeight: Self = this.set("height", js.undefined)
+    
+    @scala.inline
+    def setHorizontal(value: Boolean): Self = this.set("horizontal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHorizontal: Self = this.set("horizontal", js.undefined)
     
     @scala.inline
     def setInitialDate(value: js.Date): Self = this.set("initialDate", value.asInstanceOf[js.Any])
@@ -326,22 +300,16 @@ object CalendarPickerProps {
     def setNextTitleStyleNull: Self = this.set("nextTitleStyle", null)
     
     @scala.inline
-    def setOnDateChange(value: (/* date */ Moment, /* type */ js.UndefOr[START_DATE | END_DATE]) => Unit): Self = this.set("onDateChange", js.Any.fromFunction2(value))
+    def setOnDateChange(value: (/* date */ Moment, /* type */ START_DATE | END_DATE) => Unit): Self = this.set("onDateChange", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnDateChange: Self = this.set("onDateChange", js.undefined)
     
     @scala.inline
-    def setOnMonthChange(value: (/* date */ Moment, /* type */ js.UndefOr[START_DATE | END_DATE]) => Unit): Self = this.set("onMonthChange", js.Any.fromFunction2(value))
+    def setOnMonthChange(value: (/* date */ Moment, /* type */ START_DATE | END_DATE) => Unit): Self = this.set("onMonthChange", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnMonthChange: Self = this.set("onMonthChange", js.undefined)
-    
-    @scala.inline
-    def setOnSwipe(value: /* swipeDirection */ SwipeDirection => Unit): Self = this.set("onSwipe", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnSwipe: Self = this.set("onSwipe", js.undefined)
     
     @scala.inline
     def setPreviousComponentReactElement(value: ReactElement): Self = this.set("previousComponent", value.asInstanceOf[js.Any])
@@ -378,6 +346,12 @@ object CalendarPickerProps {
     
     @scala.inline
     def deleteScaleFactor: Self = this.set("scaleFactor", js.undefined)
+    
+    @scala.inline
+    def setScrollable(value: Boolean): Self = this.set("scrollable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScrollable: Self = this.set("scrollable", js.undefined)
     
     @scala.inline
     def setSelectedDayColor(value: String): Self = this.set("selectedDayColor", value.asInstanceOf[js.Any])
@@ -450,12 +424,6 @@ object CalendarPickerProps {
     
     @scala.inline
     def deleteStartFromMonday: Self = this.set("startFromMonday", js.undefined)
-    
-    @scala.inline
-    def setSwipeConfig(value: SwipeConfig): Self = this.set("swipeConfig", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSwipeConfig: Self = this.set("swipeConfig", js.undefined)
     
     @scala.inline
     def setTextStyle(value: StyleProp[TextStyle]): Self = this.set("textStyle", value.asInstanceOf[js.Any])

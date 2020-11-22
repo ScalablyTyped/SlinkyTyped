@@ -107,6 +107,7 @@ object updateGetAccessor extends js.Object {
     `type`: TypeNode,
     body: Block
   ): GetAccessorDeclaration = js.native
+  /** @deprecated Use `factory.updateGetAccessorDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     node: GetAccessorDeclaration,
     decorators: js.Array[Decorator],

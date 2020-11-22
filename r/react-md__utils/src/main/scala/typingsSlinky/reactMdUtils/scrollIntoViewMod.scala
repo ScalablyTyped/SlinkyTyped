@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object scrollIntoViewMod extends js.Object {
   
-  def default(): Unit = js.native
-  def default(container: Null, element: HTMLElement): Unit = js.native
-  def default(container: HTMLElement): Unit = js.native
-  def default(container: HTMLElement, element: HTMLElement): Unit = js.native
+  def scrollIntoView(): Unit = js.native
+  def scrollIntoView(container: Null, element: HTMLElement): Unit = js.native
+  def scrollIntoView(container: HTMLElement): Unit = js.native
+  def scrollIntoView(container: HTMLElement, element: HTMLElement): Unit = js.native
 }

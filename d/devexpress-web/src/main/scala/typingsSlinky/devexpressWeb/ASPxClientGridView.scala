@@ -329,7 +329,7 @@ trait ASPxClientGridView extends ASPxClientGridBase {
   def GetEditFormLayoutItemByColumn(column: Double): ASPxClientLayoutItem = js.native
   /**
     * Returns the form layout item. The form layout item.
-    * @param column The column, its index or field name.
+    * @param column The column, its index or name.
     */
   def GetEditFormLayoutItemByColumn(column: ASPxClientGridViewColumn): ASPxClientLayoutItem = js.native
   

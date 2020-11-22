@@ -13,17 +13,17 @@ trait Content extends js.Object {
   
   var border: js.UndefOr[BorderType] = js.native
   
-  var content: js.UndefOr[Pad] = js.native
+  var content: js.UndefOr[Margin] = js.native
   
   var disabled: js.UndefOr[BackgroundBorder] = js.native
   
-  var error: js.UndefOr[Margin] = js.native
+  var error: js.UndefOr[Icon] = js.native
   
-  var focus: js.UndefOr[`4`] = js.native
+  var focus: js.UndefOr[`6`] = js.native
   
   var help: js.UndefOr[ColorMargin] = js.native
   
-  var info: js.UndefOr[ColorMargin] = js.native
+  var info: js.UndefOr[ColorContainer] = js.native
   
   var label: js.UndefOr[TextProps] = js.native
   
@@ -55,7 +55,7 @@ object Content {
     }
     
     @scala.inline
-    def setBorderVarargs(value: SizeStyle*): Self = this.set("border", js.Array(value :_*))
+    def setBorderVarargs(value: Error*): Self = this.set("border", js.Array(value :_*))
     
     @scala.inline
     def setBorder(value: BorderType): Self = this.set("border", value.asInstanceOf[js.Any])
@@ -64,7 +64,7 @@ object Content {
     def deleteBorder: Self = this.set("border", js.undefined)
     
     @scala.inline
-    def setContent(value: Pad): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: Margin): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
@@ -76,13 +76,13 @@ object Content {
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     
     @scala.inline
-    def setError(value: Margin): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setError(value: Icon): Self = this.set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteError: Self = this.set("error", js.undefined)
     
     @scala.inline
-    def setFocus(value: `4`): Self = this.set("focus", value.asInstanceOf[js.Any])
+    def setFocus(value: `6`): Self = this.set("focus", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFocus: Self = this.set("focus", js.undefined)
@@ -94,7 +94,7 @@ object Content {
     def deleteHelp: Self = this.set("help", js.undefined)
     
     @scala.inline
-    def setInfo(value: ColorMargin): Self = this.set("info", value.asInstanceOf[js.Any])
+    def setInfo(value: ColorContainer): Self = this.set("info", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInfo: Self = this.set("info", js.undefined)

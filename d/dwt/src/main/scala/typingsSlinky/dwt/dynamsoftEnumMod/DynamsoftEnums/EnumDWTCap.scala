@@ -157,7 +157,7 @@ object EnumDWTCap extends js.Object {
   
   /**
     * The date and time of the device's clock.
-    * Managed in the form "YYYY/MM/DD HH:mm:SS:sss" where YYYY is the year, MM is the
+    * Managed in the form "YYYY/MM/DD HH=mm=SS=sss" where YYYY is the year, MM is the
     * numerical month, DD is the numerical day, HH is the hour, mm is the minute, SS is the second,
     * and sss is the millisecond.
     */
@@ -209,14 +209,14 @@ object EnumDWTCap extends js.Object {
   /**
     * Helps the Application determine any special actions it may need to take when negotiating
     * frames with the Source. Allowed values are listed in <see cref="TWCapFeederAlignment"/>.
-    * TWFA_NONE: The alignment is free-floating. Applications should assume
+    * TWFA_NONE= The alignment is free-floating. Applications should assume
     * that the origin for frames is on the left.
-    * TWFA_LEFT: The alignment is to the left.
-    * TWFA_CENTER: The alignment is centered. This means that the paper will
+    * TWFA_LEFT= The alignment is to the left.
+    * TWFA_CENTER= The alignment is centered. This means that the paper will
     * be fed in the middle of the ICAP_PHYSICALWIDTH of the
     * device. If this is set, then the Application should calculate
     * any frames with a left offset of zero.
-    * TWFA_RIGHT: The alignment is to the right.
+    * TWFA_RIGHT= The alignment is to the right.
     */
   @js.native
   sealed trait CAP_FEEDERALIGNMENT extends EnumDWTCap
@@ -350,7 +350,7 @@ object EnumDWTCap extends js.Object {
   
   /**
     * Specifies the appropriate current CAP_PRINTER device mode.
-    * Note:
+    * Note=
     * O TWPM_SINGLESTRING specifies that the printed text will consist of a single string.
     * O TWPM _MULTISTRING specifies that the printed text will consist of an enumerated list of
     * strings to be printed in order.
@@ -465,7 +465,7 @@ object EnumDWTCap extends js.Object {
   
   /**
     * The date and time the image was acquired.
-    * Stored in the form "YYYY/MM/DD HH:mm:SS.sss" where YYYY is the year, MM is the
+    * Stored in the form "YYYY/MM/DD HH=mm=SS.sss" where YYYY is the year, MM is the
     * numerical month, DD is the numerical day, HH is the hour, mm is the minute, SS is the second,
     * and sss is the millisecond.
     */
@@ -602,7 +602,7 @@ object EnumDWTCap extends js.Object {
   
   /**
     * Specifies the pixel bit depths for the Current value of ICAP_PIXELTYPE. For example, when
-    * using ICAP_PIXELTYPE:TWPT_GRAY, this capability specifies whether this is 8-bit gray or 4-bit gray.
+    * using ICAP_PIXELTYPE=TWPT_GRAY, this capability specifies whether this is 8-bit gray or 4-bit gray.
     * This depth applies to all the data channels (for instance, the R, G, and B channels will all have
     * this same bit depth for RGB data).
     */
@@ -613,7 +613,7 @@ object EnumDWTCap extends js.Object {
   
   /**
     * Specifies the Reduction Method the Source should use to reduce the bit depth of the data. Most
-    * commonly used with ICAP_PIXELTYPE:TWPT_BW to reduce gray data to black and white.
+    * commonly used with ICAP_PIXELTYPE=TWPT_BW to reduce gray data to black and white.
     */
   @js.native
   sealed trait ICAP_BITDEPTHREDUCTION extends EnumDWTCap
@@ -661,7 +661,7 @@ object EnumDWTCap extends js.Object {
   /**
     * Allows the application and Source to identify which compression schemes they have in
     * common for Buffered Memory and File transfers.
-    * Note for File transfers:
+    * Note for File transfers=
     * Since only certain file formats support compression, this capability must be negotiated after
     * setting the desired file format with ICAP_IMAGEFILEFORMAT.
     */
@@ -1019,7 +1019,7 @@ object EnumDWTCap extends js.Object {
   
   /**
     * Specifies the dividing line between black and white. This is the value the Source will use to
-    * threshold, if needed, when ICAP_PIXELTYPE:TWPT_BW.
+    * threshold, if needed, when ICAP_PIXELTYPE=TWPT_BW.
     * The value is normalized so there are no units of measure associated with this ICAP.
     */
   @js.native
@@ -1041,7 +1041,7 @@ object EnumDWTCap extends js.Object {
   
   /**
     * If TRUE the Source will issue a MSG_XFERREADY before starting the scan.
-    * Note: The Source may need to scan the image before initiating the transfer.
+    * Note= The Source may need to scan the image before initiating the transfer.
     * This is the case if the scanned image is rotated or merged with another scanned image.
     */
   @js.native

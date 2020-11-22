@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Fetch.ContinueRequestRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Target.SetRemoteLocationsRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `197` extends js.Object {
   
-  var paramsType: js.Array[ContinueRequestRequest] = js.native
+  var paramsType: js.Array[SetRemoteLocationsRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `197` {
   
   @scala.inline
-  def apply(paramsType: js.Array[ContinueRequestRequest], returnType: Unit): `197` = {
+  def apply(paramsType: js.Array[SetRemoteLocationsRequest], returnType: Unit): `197` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`197`]
   }
@@ -36,10 +36,10 @@ object `197` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: ContinueRequestRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetRemoteLocationsRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[ContinueRequestRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetRemoteLocationsRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

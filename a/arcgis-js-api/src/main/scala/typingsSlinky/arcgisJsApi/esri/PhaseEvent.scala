@@ -17,7 +17,7 @@ trait PhaseEvent extends Object {
   var deltaTime: Double = js.native
   
   /**
-    * The amount of time spent within the current animation frame. This can be used for budgeting (e.g. some tasks may already have run).
+    * The amount of time spent within the current animation frame.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-scheduling.html#PhaseEvent)
     */

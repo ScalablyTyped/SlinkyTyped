@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DataTransfer extends js.Object {
   
   /**
-    * The number of bytes transferred between a Snowball and Amazon S3.
+    * The number of bytes transferred between a Snow device and Amazon S3.
     */
   var BytesTransferred: js.UndefOr[Long] = js.native
   
   /**
-    * The number of objects transferred between a Snowball and Amazon S3.
+    * The number of objects transferred between a Snow device and Amazon S3.
     */
   var ObjectsTransferred: js.UndefOr[Long] = js.native
   
   /**
-    * The total bytes of data for a transfer between a Snowball and Amazon S3. This value is set to 0 (zero) until all the keys that will be transferred have been listed.
+    * The total bytes of data for a transfer between a Snow device and Amazon S3. This value is set to 0 (zero) until all the keys that will be transferred have been listed.
     */
   var TotalBytes: js.UndefOr[Long] = js.native
   
   /**
-    * The total number of objects for a transfer between a Snowball and Amazon S3. This value is set to 0 (zero) until all the keys that will be transferred have been listed.
+    * The total number of objects for a transfer between a Snow device and Amazon S3. This value is set to 0 (zero) until all the keys that will be transferred have been listed.
     */
   var TotalObjects: js.UndefOr[Long] = js.native
 }

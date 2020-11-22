@@ -1,5 +1,10 @@
 package typingsSlinky.grommet.anon
 
+import typingsSlinky.grommet.grommetStrings.medium
+import typingsSlinky.grommet.grommetStrings.strong
+import typingsSlinky.grommet.grommetStrings.weak
+import typingsSlinky.grommet.utilsMod.ColorType
+import typingsSlinky.grommet.utilsMod.ThicknessType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,11 +12,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Label extends js.Object {
   
+  var color: js.UndefOr[ColorType] = js.native
+  
   var label: js.UndefOr[String] = js.native
   
   var onClick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
   
   var onHover: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  
+  var opacity: js.UndefOr[weak | medium | strong | Boolean | Double] = js.native
+  
+  var thickness: js.UndefOr[ThicknessType] = js.native
   
   var value: Double | js.Array[Double] = js.native
 }
@@ -45,6 +56,12 @@ object Label {
     def setValue(value: Double | js.Array[Double]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setColor(value: ColorType): Self = this.set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
+    
+    @scala.inline
     def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -61,5 +78,17 @@ object Label {
     
     @scala.inline
     def deleteOnHover: Self = this.set("onHover", js.undefined)
+    
+    @scala.inline
+    def setOpacity(value: weak | medium | strong | Boolean | Double): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOpacity: Self = this.set("opacity", js.undefined)
+    
+    @scala.inline
+    def setThickness(value: ThicknessType): Self = this.set("thickness", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThickness: Self = this.set("thickness", js.undefined)
   }
 }

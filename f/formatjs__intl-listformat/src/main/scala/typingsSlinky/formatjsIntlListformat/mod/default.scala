@@ -1,5 +1,7 @@
 package typingsSlinky.formatjsIntlListformat.mod
 
+import typingsSlinky.formatjsEcma402Abstract.typesListMod.ListPatternFieldsData
+import typingsSlinky.formatjsEcma402Abstract.typesListMod.ListPatternLocaleData
 import typingsSlinky.formatjsIntlListformat.anon.PickIntlListFormatOptions
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -30,7 +32,7 @@ object default extends js.Object {
   
   var getDefaultLocale: js.Any = js.native
   
-  var localeData: Record[String, ListPatternFieldsData] = js.native
+  var localeData: Record[String, js.UndefOr[ListPatternFieldsData]] = js.native
   
   var polyfilled: Boolean = js.native
   

@@ -103,8 +103,8 @@ trait SeriesTooltipOptionsObject extends js.Object {
   
   /**
     * (Highstock) The HTML of the point's line in the tooltip. Variables are
-    * enclosed by curly brackets. Available variables are point.x, point.y,
-    * series. name and series.color and other properties on the same form.
+    * enclosed by curly brackets. Available variables are `point.x`, `point.y`,
+    * `series.name` and `series.color` and other properties on the same form.
     * Furthermore, `point.y` can be extended by the `tooltip.valuePrefix` and
     * `tooltip.valueSuffix` variables. This can also be overridden for each
     * series, which makes it a good hook for displaying units.
@@ -120,12 +120,6 @@ trait SeriesTooltipOptionsObject extends js.Object {
     * flexibility.
     */
   var pointFormatter: js.UndefOr[FormatterCallbackFunction[Point]] = js.native
-  
-  /**
-    * (Highstock) Prevents the tooltip from switching or closing, when touched
-    * or pointed.
-    */
-  var stickOnContact: js.UndefOr[Boolean] = js.native
   
   /**
     * (Highstock) Number of decimals in indicator series.
@@ -257,12 +251,6 @@ object SeriesTooltipOptionsObject {
     
     @scala.inline
     def deletePointFormatter: Self = this.set("pointFormatter", js.undefined)
-    
-    @scala.inline
-    def setStickOnContact(value: Boolean): Self = this.set("stickOnContact", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStickOnContact: Self = this.set("stickOnContact", js.undefined)
     
     @scala.inline
     def setValueDecimals(value: Double): Self = this.set("valueDecimals", value.asInstanceOf[js.Any])

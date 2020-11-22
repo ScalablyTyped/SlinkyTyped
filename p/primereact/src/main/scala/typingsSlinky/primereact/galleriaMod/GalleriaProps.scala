@@ -14,9 +14,9 @@ trait GalleriaProps extends js.Object {
   
   var baseZIndex: js.UndefOr[Double] = js.native
   
-  var captionTemplate: js.UndefOr[js.Any] = js.native
+  var caption: js.UndefOr[js.Any] = js.native
   
-  var changePreviewOnIndicatorHover: js.UndefOr[Boolean] = js.native
+  var changeItemOnIndicatorHover: js.UndefOr[Boolean] = js.native
   
   var circular: js.UndefOr[Boolean] = js.native
   
@@ -30,33 +30,33 @@ trait GalleriaProps extends js.Object {
   
   var id: js.UndefOr[String] = js.native
   
-  var indicatorItemTemplate: js.UndefOr[js.Any] = js.native
+  var indicator: js.UndefOr[js.Any] = js.native
   
   var indicatorsPosition: js.UndefOr[String] = js.native
+  
+  var item: js.UndefOr[js.Any] = js.native
   
   var numVisible: js.UndefOr[Double] = js.native
   
   var onItemChange: js.UndefOr[js.Function1[/* e */ IndexNumber, Unit]] = js.native
   
-  var previewItemTemplate: js.UndefOr[js.Any] = js.native
-  
   var responsiveOptions: js.UndefOr[js.Any] = js.native
   
   var showIndicators: js.UndefOr[Boolean] = js.native
   
-  var showIndicatorsOnPreview: js.UndefOr[Boolean] = js.native
+  var showIndicatorsOnItem: js.UndefOr[Boolean] = js.native
   
-  var showNavButtonsOnPreviewHover: js.UndefOr[Boolean] = js.native
+  var showItemNavigators: js.UndefOr[Boolean] = js.native
   
-  var showPreviewNavButtons: js.UndefOr[Boolean] = js.native
+  var showItemNavigatorsOnHover: js.UndefOr[Boolean] = js.native
   
-  var showThumbnailNavButtons: js.UndefOr[Boolean] = js.native
+  var showThumbnailNavigators: js.UndefOr[Boolean] = js.native
   
   var showThumbnails: js.UndefOr[Boolean] = js.native
   
   var style: js.UndefOr[js.Object] = js.native
   
-  var thumbnailItemTemplate: js.UndefOr[js.Any] = js.native
+  var thumbnail: js.UndefOr[js.Any] = js.native
   
   var thumbnailsPosition: js.UndefOr[String] = js.native
   
@@ -106,16 +106,16 @@ object GalleriaProps {
     def deleteBaseZIndex: Self = this.set("baseZIndex", js.undefined)
     
     @scala.inline
-    def setCaptionTemplate(value: js.Any): Self = this.set("captionTemplate", value.asInstanceOf[js.Any])
+    def setCaption(value: js.Any): Self = this.set("caption", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteCaptionTemplate: Self = this.set("captionTemplate", js.undefined)
+    def deleteCaption: Self = this.set("caption", js.undefined)
     
     @scala.inline
-    def setChangePreviewOnIndicatorHover(value: Boolean): Self = this.set("changePreviewOnIndicatorHover", value.asInstanceOf[js.Any])
+    def setChangeItemOnIndicatorHover(value: Boolean): Self = this.set("changeItemOnIndicatorHover", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteChangePreviewOnIndicatorHover: Self = this.set("changePreviewOnIndicatorHover", js.undefined)
+    def deleteChangeItemOnIndicatorHover: Self = this.set("changeItemOnIndicatorHover", js.undefined)
     
     @scala.inline
     def setCircular(value: Boolean): Self = this.set("circular", value.asInstanceOf[js.Any])
@@ -154,16 +154,22 @@ object GalleriaProps {
     def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
-    def setIndicatorItemTemplate(value: js.Any): Self = this.set("indicatorItemTemplate", value.asInstanceOf[js.Any])
+    def setIndicator(value: js.Any): Self = this.set("indicator", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteIndicatorItemTemplate: Self = this.set("indicatorItemTemplate", js.undefined)
+    def deleteIndicator: Self = this.set("indicator", js.undefined)
     
     @scala.inline
     def setIndicatorsPosition(value: String): Self = this.set("indicatorsPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIndicatorsPosition: Self = this.set("indicatorsPosition", js.undefined)
+    
+    @scala.inline
+    def setItem(value: js.Any): Self = this.set("item", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteItem: Self = this.set("item", js.undefined)
     
     @scala.inline
     def setNumVisible(value: Double): Self = this.set("numVisible", value.asInstanceOf[js.Any])
@@ -178,12 +184,6 @@ object GalleriaProps {
     def deleteOnItemChange: Self = this.set("onItemChange", js.undefined)
     
     @scala.inline
-    def setPreviewItemTemplate(value: js.Any): Self = this.set("previewItemTemplate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePreviewItemTemplate: Self = this.set("previewItemTemplate", js.undefined)
-    
-    @scala.inline
     def setResponsiveOptions(value: js.Any): Self = this.set("responsiveOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -196,28 +196,28 @@ object GalleriaProps {
     def deleteShowIndicators: Self = this.set("showIndicators", js.undefined)
     
     @scala.inline
-    def setShowIndicatorsOnPreview(value: Boolean): Self = this.set("showIndicatorsOnPreview", value.asInstanceOf[js.Any])
+    def setShowIndicatorsOnItem(value: Boolean): Self = this.set("showIndicatorsOnItem", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteShowIndicatorsOnPreview: Self = this.set("showIndicatorsOnPreview", js.undefined)
+    def deleteShowIndicatorsOnItem: Self = this.set("showIndicatorsOnItem", js.undefined)
     
     @scala.inline
-    def setShowNavButtonsOnPreviewHover(value: Boolean): Self = this.set("showNavButtonsOnPreviewHover", value.asInstanceOf[js.Any])
+    def setShowItemNavigators(value: Boolean): Self = this.set("showItemNavigators", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteShowNavButtonsOnPreviewHover: Self = this.set("showNavButtonsOnPreviewHover", js.undefined)
+    def deleteShowItemNavigators: Self = this.set("showItemNavigators", js.undefined)
     
     @scala.inline
-    def setShowPreviewNavButtons(value: Boolean): Self = this.set("showPreviewNavButtons", value.asInstanceOf[js.Any])
+    def setShowItemNavigatorsOnHover(value: Boolean): Self = this.set("showItemNavigatorsOnHover", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteShowPreviewNavButtons: Self = this.set("showPreviewNavButtons", js.undefined)
+    def deleteShowItemNavigatorsOnHover: Self = this.set("showItemNavigatorsOnHover", js.undefined)
     
     @scala.inline
-    def setShowThumbnailNavButtons(value: Boolean): Self = this.set("showThumbnailNavButtons", value.asInstanceOf[js.Any])
+    def setShowThumbnailNavigators(value: Boolean): Self = this.set("showThumbnailNavigators", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteShowThumbnailNavButtons: Self = this.set("showThumbnailNavButtons", js.undefined)
+    def deleteShowThumbnailNavigators: Self = this.set("showThumbnailNavigators", js.undefined)
     
     @scala.inline
     def setShowThumbnails(value: Boolean): Self = this.set("showThumbnails", value.asInstanceOf[js.Any])
@@ -232,10 +232,10 @@ object GalleriaProps {
     def deleteStyle: Self = this.set("style", js.undefined)
     
     @scala.inline
-    def setThumbnailItemTemplate(value: js.Any): Self = this.set("thumbnailItemTemplate", value.asInstanceOf[js.Any])
+    def setThumbnail(value: js.Any): Self = this.set("thumbnail", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteThumbnailItemTemplate: Self = this.set("thumbnailItemTemplate", js.undefined)
+    def deleteThumbnail: Self = this.set("thumbnail", js.undefined)
     
     @scala.inline
     def setThumbnailsPosition(value: String): Self = this.set("thumbnailsPosition", value.asInstanceOf[js.Any])

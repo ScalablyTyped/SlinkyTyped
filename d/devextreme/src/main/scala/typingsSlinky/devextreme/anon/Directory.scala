@@ -1,7 +1,6 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxFileManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +11,7 @@ trait Directory extends js.Object {
   
   var component: js.UndefOr[dxFileManager] = js.native
   
-  var directory: js.UndefOr[FileSystemItem] = js.native
+  var directory: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -48,7 +47,7 @@ object Directory {
     def deleteComponent: Self = this.set("component", js.undefined)
     
     @scala.inline
-    def setDirectory(value: FileSystemItem): Self = this.set("directory", value.asInstanceOf[js.Any])
+    def setDirectory(value: typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem): Self = this.set("directory", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDirectory: Self = this.set("directory", js.undefined)

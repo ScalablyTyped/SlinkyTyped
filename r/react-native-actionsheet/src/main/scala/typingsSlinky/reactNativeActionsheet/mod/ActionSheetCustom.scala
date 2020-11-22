@@ -10,5 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ActionSheetCustom ()
   extends Component[ActionSheetCustomProps, js.Object, js.Any] {
   
+  def hide(): Unit = js.native
+  def hide(index: Double): Unit = js.native
+  
   def show(): Unit = js.native
 }

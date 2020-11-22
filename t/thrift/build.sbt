@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "thrift"
-version := "0.10-dt-20200515Z-33ad8f"
+version := "0.10-dt-20200817Z-d27297"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
-  "org.scalablytyped.slinky" %%% "node-int64" % "v0.4.0-dt-20200515Z-947618",
-  "org.scalablytyped.slinky" %%% "q" % "1.5-dt-20200515Z-fdd177",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "node-int64" % "v0.4.0-dt-20201002Z-64f650",
+  "org.scalablytyped.slinky" %%% "q" % "1.5-dt-20201002Z-d8d3a2",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

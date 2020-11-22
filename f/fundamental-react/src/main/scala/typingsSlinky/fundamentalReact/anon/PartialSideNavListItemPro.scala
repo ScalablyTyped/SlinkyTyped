@@ -16,8 +16,13 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals text`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.all
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.ascending
@@ -162,7 +167,9 @@ trait PartialSideNavListItemPro extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -200,6 +207,8 @@ trait PartialSideNavListItemPro extends js.Object {
   
   var color: js.UndefOr[String] = js.native
   
+  var condensed: js.UndefOr[Boolean] = js.native
+  
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   
   var contextMenu: js.UndefOr[String] = js.native
@@ -215,6 +224,8 @@ trait PartialSideNavListItemPro extends js.Object {
   var dir: js.UndefOr[String] = js.native
   
   var draggable: js.UndefOr[Booleanish] = js.native
+  
+  var expandSubmenuLabel: js.UndefOr[String] = js.native
   
   var expanded: js.UndefOr[Boolean] = js.native
   
@@ -696,7 +707,9 @@ object PartialSideNavListItemPro {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -813,6 +826,12 @@ object PartialSideNavListItemPro {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
+    def setCondensed(value: Boolean): Self = this.set("condensed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCondensed: Self = this.set("condensed", js.undefined)
+    
+    @scala.inline
     def setContentEditable(value: Booleanish | inherit): Self = this.set("contentEditable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -862,6 +881,12 @@ object PartialSideNavListItemPro {
     
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    
+    @scala.inline
+    def setExpandSubmenuLabel(value: String): Self = this.set("expandSubmenuLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpandSubmenuLabel: Self = this.set("expandSubmenuLabel", js.undefined)
     
     @scala.inline
     def setExpanded(value: Boolean): Self = this.set("expanded", value.asInstanceOf[js.Any])

@@ -12,15 +12,15 @@ trait Input extends RollupWatcherEvent {
   
   var code: BUNDLE_START = js.native
   
-  var input: InputOption = js.native
+  var input: js.UndefOr[InputOption] = js.native
   
   var output: js.Array[String] = js.native
 }
 object Input {
   
   @scala.inline
-  def apply(code: BUNDLE_START, input: InputOption, output: js.Array[String]): Input = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any])
+  def apply(code: BUNDLE_START, output: js.Array[String]): Input = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any])
     __obj.asInstanceOf[Input]
   }
   
@@ -43,15 +43,18 @@ object Input {
     def setCode(value: BUNDLE_START): Self = this.set("code", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setOutputVarargs(value: String*): Self = this.set("output", js.Array(value :_*))
+    
+    @scala.inline
+    def setOutput(value: js.Array[String]): Self = this.set("output", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setInputVarargs(value: String*): Self = this.set("input", js.Array(value :_*))
     
     @scala.inline
     def setInput(value: InputOption): Self = this.set("input", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOutputVarargs(value: String*): Self = this.set("output", js.Array(value :_*))
-    
-    @scala.inline
-    def setOutput(value: js.Array[String]): Self = this.set("output", value.asInstanceOf[js.Any])
+    def deleteInput: Self = this.set("input", js.undefined)
   }
 }

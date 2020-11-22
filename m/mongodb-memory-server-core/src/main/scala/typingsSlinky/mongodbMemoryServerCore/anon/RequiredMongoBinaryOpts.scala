@@ -10,6 +10,8 @@ trait RequiredMongoBinaryOpts extends js.Object {
   
   var arch: String = js.native
   
+  var checkMD5: Boolean = js.native
+  
   var downloadDir: String = js.native
   
   var platform: String = js.native
@@ -19,8 +21,8 @@ trait RequiredMongoBinaryOpts extends js.Object {
 object RequiredMongoBinaryOpts {
   
   @scala.inline
-  def apply(arch: String, downloadDir: String, platform: String, version: String): RequiredMongoBinaryOpts = {
-    val __obj = js.Dynamic.literal(arch = arch.asInstanceOf[js.Any], downloadDir = downloadDir.asInstanceOf[js.Any], platform = platform.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
+  def apply(arch: String, checkMD5: Boolean, downloadDir: String, platform: String, version: String): RequiredMongoBinaryOpts = {
+    val __obj = js.Dynamic.literal(arch = arch.asInstanceOf[js.Any], checkMD5 = checkMD5.asInstanceOf[js.Any], downloadDir = downloadDir.asInstanceOf[js.Any], platform = platform.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequiredMongoBinaryOpts]
   }
   
@@ -41,6 +43,9 @@ object RequiredMongoBinaryOpts {
     
     @scala.inline
     def setArch(value: String): Self = this.set("arch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCheckMD5(value: Boolean): Self = this.set("checkMD5", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDownloadDir(value: String): Self = this.set("downloadDir", value.asInstanceOf[js.Any])

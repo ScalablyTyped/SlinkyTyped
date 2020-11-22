@@ -6,15 +6,19 @@ import typingsSlinky.jupyterlabFilebrowser.crumbsMod.BreadCrumbs.IOptions
 import typingsSlinky.jupyterlabFilebrowser.opendialogMod.FileDialog.IDirectoryOptions
 import typingsSlinky.jupyterlabFilebrowser.opendialogMod.FileDialog.IFileOptions
 import typingsSlinky.jupyterlabServices.contentsMod.Contents.IModel
-import typingsSlinky.jupyterlabUiComponents.interfacesMod.IIconRegistry
-import typingsSlinky.phosphorCoreutils.mod.Token
+import typingsSlinky.luminoCoreutils.mod.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/filebrowser", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
+  val CHUNK_SIZE: Double = js.native
+  
+  val LARGE_FILE_SIZE: Double = js.native
+  
   @js.native
   class BreadCrumbs protected ()
     extends typingsSlinky.jupyterlabFilebrowser.crumbsMod.BreadCrumbs {
@@ -35,6 +39,21 @@ object mod extends js.Object {
       * @param model - The file browser view model.
       */
     def this(options: typingsSlinky.jupyterlabFilebrowser.listingMod.DirListing.IOptions) = this()
+  }
+  @js.native
+  object DirListing extends js.Object {
+    
+    /**
+      * The default `IRenderer` instance.
+      */
+    val defaultRenderer: typingsSlinky.jupyterlabFilebrowser.listingMod.DirListing.Renderer = js.native
+    
+    /**
+      * The default implementation of an `IRenderer`.
+      */
+    @js.native
+    class Renderer ()
+      extends typingsSlinky.jupyterlabFilebrowser.listingMod.DirListing.Renderer
   }
   
   @js.native
@@ -58,46 +77,8 @@ object mod extends js.Object {
   }
   
   @js.native
-  class FileUploadStatus protected ()
-    extends typingsSlinky.jupyterlabFilebrowser.uploadstatusMod.FileUploadStatus {
-    /**
-      * Construct a new FileUpload status item.
-      */
-    def this(opts: typingsSlinky.jupyterlabFilebrowser.uploadstatusMod.FileUploadStatus.IOptions) = this()
-  }
-  
-  @js.native
-  class FilterFileBrowserModel protected ()
-    extends typingsSlinky.jupyterlabFilebrowser.modelMod.FilterFileBrowserModel {
-    def this(options: typingsSlinky.jupyterlabFilebrowser.modelMod.FilterFileBrowserModel.IOptions) = this()
-  }
-  
-  @js.native
-  class Uploader protected ()
-    extends typingsSlinky.jupyterlabFilebrowser.uploadMod.Uploader {
-    /**
-      * Construct a new file browser buttons widget.
-      */
-    def this(options: typingsSlinky.jupyterlabFilebrowser.uploadMod.Uploader.IOptions) = this()
-  }
-  
-  val CHUNK_SIZE: Double = js.native
-  val LARGE_FILE_SIZE: Double = js.native
-  @js.native
-  object DirListing extends js.Object {
-    /**
-      * The default implementation of an `IRenderer`.
-      */
-    @js.native
-    class Renderer protected ()
-      extends typingsSlinky.jupyterlabFilebrowser.listingMod.DirListing.Renderer {
-      def this(icoReg: IIconRegistry) = this()
-    }
-    
-  }
-  
-  @js.native
   object FileDialog extends js.Object {
+    
     /**
       * Create and show a open directory dialog.
       *
@@ -109,6 +90,7 @@ object mod extends js.Object {
       * @returns A promise that resolves with whether the dialog was accepted.
       */
     def getExistingDirectory(options: IDirectoryOptions): js.Promise[IResult[js.Array[IModel]]] = js.native
+    
     /**
       * Create and show a open files dialog.
       *
@@ -123,24 +105,45 @@ object mod extends js.Object {
   }
   
   @js.native
+  class FileUploadStatus protected ()
+    extends typingsSlinky.jupyterlabFilebrowser.uploadstatusMod.FileUploadStatus {
+    /**
+      * Construct a new FileUpload status item.
+      */
+    def this(opts: typingsSlinky.jupyterlabFilebrowser.uploadstatusMod.FileUploadStatus.IOptions) = this()
+  }
+  @js.native
   object FileUploadStatus extends js.Object {
+    
     /**
       * The VDomModel for the FileUpload renderer.
       */
     @js.native
+    /**
+      * Construct a new model.
+      */
     class Model ()
       extends typingsSlinky.jupyterlabFilebrowser.uploadstatusMod.FileUploadStatus.Model {
-      /**
-        * Construct a new model.
-        */
       def this(browserModel: FileBrowserModel) = this()
     }
-    
+  }
+  
+  @js.native
+  class FilterFileBrowserModel protected ()
+    extends typingsSlinky.jupyterlabFilebrowser.modelMod.FilterFileBrowserModel {
+    def this(options: typingsSlinky.jupyterlabFilebrowser.modelMod.FilterFileBrowserModel.IOptions) = this()
   }
   
   @js.native
   object IFileBrowserFactory
     extends TopLevel[Token[typingsSlinky.jupyterlabFilebrowser.tokensMod.IFileBrowserFactory]]
   
+  @js.native
+  class Uploader protected ()
+    extends typingsSlinky.jupyterlabFilebrowser.uploadMod.Uploader {
+    /**
+      * Construct a new file browser buttons widget.
+      */
+    def this(options: typingsSlinky.jupyterlabFilebrowser.uploadMod.Uploader.IOptions) = this()
+  }
 }
-

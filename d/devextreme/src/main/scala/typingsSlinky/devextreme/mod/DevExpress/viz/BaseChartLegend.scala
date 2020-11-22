@@ -9,16 +9,22 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseChart.Options.legend */
+/**
+  * [descr:BaseChart.Options.legend]
+  */
 @js.native
 trait BaseChartLegend extends BaseLegend {
   
-  /** @name BaseChart.Options.legend.customizeItems */
+  /**
+    * [descr:BaseChart.Options.legend.customizeItems]
+    */
   var customizeItems: js.UndefOr[
     js.Function1[/* items */ js.Array[BaseChartLegendItem], js.Array[BaseChartLegendItem]]
   ] = js.native
   
-  /** @name BaseChart.Options.legend.markerTemplate */
+  /**
+    * [descr:BaseChart.Options.legend.markerTemplate]
+    */
   var markerTemplate: js.UndefOr[
     template | (js.Function2[
       /* legendItem */ BaseChartLegendItem, 

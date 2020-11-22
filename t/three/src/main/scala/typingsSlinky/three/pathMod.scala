@@ -45,6 +45,9 @@ object pathMod extends js.Object {
     
     def bezierCurveTo(aCP1x: Double, aCP1y: Double, aCP2x: Double, aCP2y: Double, aX: Double, aY: Double): this.type = js.native
     
+    /**
+    	 * @default new THREE.Vector2()
+    	 */
     var currentPoint: Vector2 = js.native
     
     def ellipse(

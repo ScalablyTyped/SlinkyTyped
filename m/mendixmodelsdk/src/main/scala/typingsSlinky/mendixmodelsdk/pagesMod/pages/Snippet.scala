@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -12,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/snippet relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/snippet relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -47,9 +46,6 @@ class Snippet protected () extends FormBase {
   def entity_=(newValue: IEntity | Null): Unit = js.native
   @JSName("entity")
   val entity_FSnippet: IEntity | Null = js.native
-  
-  @JSName("model")
-  var model_FSnippet: IModel = js.native
   
   /**
     * In version 8.4.0: added public

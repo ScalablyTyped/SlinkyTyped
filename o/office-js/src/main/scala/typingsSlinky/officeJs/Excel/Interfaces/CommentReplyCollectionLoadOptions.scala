@@ -45,6 +45,14 @@ trait CommentReplyCollectionLoadOptions extends js.Object {
   
   /**
     *
+    * For EACH ITEM in the collection: The content type of the reply.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var contentType: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
     * For EACH ITEM in the collection: Gets the creation time of the comment reply.
     *
     * [Api set: ExcelApi 1.10]
@@ -129,6 +137,12 @@ object CommentReplyCollectionLoadOptions {
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
+    
+    @scala.inline
+    def setContentType(value: Boolean): Self = this.set("contentType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContentType: Self = this.set("contentType", js.undefined)
     
     @scala.inline
     def setCreationDate(value: Boolean): Self = this.set("creationDate", value.asInstanceOf[js.Any])

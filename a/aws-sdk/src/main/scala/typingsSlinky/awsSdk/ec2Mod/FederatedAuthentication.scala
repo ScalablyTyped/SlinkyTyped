@@ -11,6 +11,11 @@ trait FederatedAuthentication extends js.Object {
     * The Amazon Resource Name (ARN) of the IAM SAML identity provider.
     */
   var SamlProviderArn: js.UndefOr[String] = js.native
+  
+  /**
+    * The Amazon Resource Name (ARN) of the IAM SAML identity provider for the self-service portal.
+    */
+  var SelfServiceSamlProviderArn: js.UndefOr[String] = js.native
 }
 object FederatedAuthentication {
   
@@ -40,5 +45,11 @@ object FederatedAuthentication {
     
     @scala.inline
     def deleteSamlProviderArn: Self = this.set("SamlProviderArn", js.undefined)
+    
+    @scala.inline
+    def setSelfServiceSamlProviderArn(value: String): Self = this.set("SelfServiceSamlProviderArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelfServiceSamlProviderArn: Self = this.set("SelfServiceSamlProviderArn", js.undefined)
   }
 }

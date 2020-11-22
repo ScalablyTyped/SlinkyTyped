@@ -147,6 +147,7 @@ object createClassExpression extends js.Object {
     heritageClauses: js.UndefOr[scala.Nothing],
     members: js.Array[ClassElement]
   ): ClassExpression = js.native
+  /** @deprecated Use `factory.createClassExpression` or the factory supplied by your transformation context instead. */
   def apply(
     modifiers: js.Array[Modifier],
     name: String,

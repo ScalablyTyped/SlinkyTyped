@@ -1,7 +1,7 @@
 
 # Scala.js typings for axios-mock-adapter
 
-Typings are for version 1.18.2
+Typings are for version 1.19.0
 
 ## Library description:
 Axios adapter that allows to easily mock requests

@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-slider
 
-Typings are for version 9.3.1
+Typings are for version 9.6.3
 
 ## Library description:
 Slider UI component for React

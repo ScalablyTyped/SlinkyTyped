@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object merge extends js.Object {
   
-  def apply[T](arrays: js.Iterable[js.Iterable[T]]): js.Array[T] = js.native
+  def apply[T](iterables: js.Iterable[js.Iterable[T]]): js.Array[T] = js.native
 }

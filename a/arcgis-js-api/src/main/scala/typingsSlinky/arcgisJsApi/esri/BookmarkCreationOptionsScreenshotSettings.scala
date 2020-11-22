@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BookmarkCreationOptionsScreenshotSettings extends Object {
   
   /**
-    * Used to take a screenshot of a subregion of the view. Defaults to the whole view.
+    * Used to take a screenshot of a subregion of the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions)
     */
   var area: js.UndefOr[BookmarkCreationOptionsScreenshotSettingsArea] = js.native
   
   /**
-    * The height (in pixels) of the screenshot. Default is `128px`.
+    * The height (in pixels) of the screenshot.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions)
     */
@@ -31,7 +31,7 @@ trait BookmarkCreationOptionsScreenshotSettings extends Object {
   var layers: js.UndefOr[js.Array[Layer]] = js.native
   
   /**
-    * The width (in pixels) of the screenshot. Default is `128px`.
+    * The width (in pixels) of the screenshot.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions)
     */

@@ -1,6 +1,6 @@
 package typingsSlinky.monacoEditor.mod.editor
 
-import typingsSlinky.monacoEditor.mod.Range
+import typingsSlinky.monacoEditor.mod.IRange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +17,7 @@ trait IIdentifiedSingleEditOperation extends js.Object {
   /**
     * The range to replace. This can be empty to emulate a simple insert.
     */
-  var range: Range = js.native
+  var range: IRange = js.native
   
   /**
     * The text to replace with. This can be null to emulate a simple delete.
@@ -27,7 +27,7 @@ trait IIdentifiedSingleEditOperation extends js.Object {
 object IIdentifiedSingleEditOperation {
   
   @scala.inline
-  def apply(range: Range): IIdentifiedSingleEditOperation = {
+  def apply(range: IRange): IIdentifiedSingleEditOperation = {
     val __obj = js.Dynamic.literal(range = range.asInstanceOf[js.Any])
     __obj.asInstanceOf[IIdentifiedSingleEditOperation]
   }
@@ -48,7 +48,7 @@ object IIdentifiedSingleEditOperation {
     }
     
     @scala.inline
-    def setRange(value: Range): Self = this.set("range", value.asInstanceOf[js.Any])
+    def setRange(value: IRange): Self = this.set("range", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setForceMoveMarkers(value: Boolean): Self = this.set("forceMoveMarkers", value.asInstanceOf[js.Any])

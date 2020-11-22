@@ -11,13 +11,13 @@ trait OutlookCategory extends Entity {
     * A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note
     * below.
     */
-  var color: js.UndefOr[CategoryColor] = js.native
+  var color: js.UndefOr[NullableOption[CategoryColor]] = js.native
   
   /**
     * A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be
     * changed. Read-only.
     */
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
 }
 object OutlookCategory {
   
@@ -43,15 +43,21 @@ object OutlookCategory {
     }
     
     @scala.inline
-    def setColor(value: CategoryColor): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: NullableOption[CategoryColor]): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setColorNull: Self = this.set("color", null)
+    
+    @scala.inline
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
   }
 }

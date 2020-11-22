@@ -18,7 +18,7 @@ trait TargetDescription extends js.Object {
   var Id: TargetId = js.native
   
   /**
-    * The port on which the target is listening. Not used if the target is a Lambda function.
+    * The port on which the target is listening. If the target group protocol is GENEVE, the supported port is 6081. Not used if the target is a Lambda function.
     */
   var Port: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.Port] = js.native
 }

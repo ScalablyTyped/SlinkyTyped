@@ -9,7 +9,7 @@ trait BackgroundSizeProps[TLength] extends js.Object {
   
   val backgroundSize: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundSizeProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundSize<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BackgroundSizeProps {
     }
     
     @scala.inline
+    def setBackgroundSizeVarargs(value: js.Any*): Self = this.set("backgroundSize", js.Array(value :_*))
+    
+    @scala.inline
     def setBackgroundSize(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundSizeProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundSize<TLength> */ _
         ]
     ): Self = this.set("backgroundSize", value.asInstanceOf[js.Any])
     

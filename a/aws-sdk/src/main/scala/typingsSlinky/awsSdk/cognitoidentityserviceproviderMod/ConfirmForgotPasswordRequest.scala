@@ -23,7 +23,7 @@ trait ConfirmForgotPasswordRequest extends js.Object {
   var ClientMetadata: js.UndefOr[ClientMetadataType] = js.native
   
   /**
-    * The confirmation code sent by a user's request to retrieve a forgotten password. For more information, see 
+    * The confirmation code sent by a user's request to retrieve a forgotten password. For more information, see ForgotPassword.
     */
   var ConfirmationCode: ConfirmationCodeType = js.native
   

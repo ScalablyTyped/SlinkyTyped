@@ -12,5 +12,5 @@ trait UnparsedTextLike
      with UnparsedSourceText {
   
   @JSName("kind")
-  var kind_UnparsedTextLike: UnparsedText | UnparsedInternalText = js.native
+  val kind_UnparsedTextLike: UnparsedText | UnparsedInternalText = js.native
 }

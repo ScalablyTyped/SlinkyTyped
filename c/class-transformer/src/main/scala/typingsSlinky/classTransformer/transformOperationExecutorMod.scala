@@ -1,8 +1,9 @@
 package typingsSlinky.classTransformer
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.classTransformer.classTransformOptionsMod.ClassTransformOptions
+import typingsSlinky.classTransformer.transformationTypeEnumMod.TransformationType
 import typingsSlinky.classTransformer.typeMetadataMod.TypeMetadata
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -53,14 +54,14 @@ object transformOperationExecutorMod extends js.Object {
     ): js.Any = js.native
     def transform(
       source: js.Any,
-      value: js.Array[js.Object],
+      value: js.Array[Record[String, _]],
       targetType: js.Function,
       arrayType: js.Function,
       isMap: Boolean
     ): js.Any = js.native
     def transform(
       source: js.Any,
-      value: js.Array[js.Object],
+      value: js.Array[Record[String, _]],
       targetType: js.Function,
       arrayType: js.Function,
       isMap: Boolean,
@@ -68,46 +69,58 @@ object transformOperationExecutorMod extends js.Object {
     ): js.Any = js.native
     def transform(
       source: js.Any,
-      value: js.Array[js.Object],
+      value: js.Array[Record[String, _]],
       targetType: TypeMetadata,
       arrayType: js.Function,
       isMap: Boolean
     ): js.Any = js.native
     def transform(
       source: js.Any,
-      value: js.Array[js.Object],
+      value: js.Array[Record[String, _]],
       targetType: TypeMetadata,
       arrayType: js.Function,
       isMap: Boolean,
       level: Double
     ): js.Any = js.native
-    def transform(source: js.Any, value: js.Object, targetType: js.Function, arrayType: js.Function, isMap: Boolean): js.Any = js.native
     def transform(
       source: js.Any,
-      value: js.Object,
+      value: Record[String, _],
       targetType: js.Function,
       arrayType: js.Function,
-      isMap: Boolean,
-      level: Double
+      isMap: Boolean
     ): js.Any = js.native
-    def transform(source: js.Any, value: js.Object, targetType: TypeMetadata, arrayType: js.Function, isMap: Boolean): js.Any = js.native
     def transform(
       source: js.Any,
-      value: js.Object,
+      value: Record[String, _],
+      targetType: js.Function,
+      arrayType: js.Function,
+      isMap: Boolean,
+      level: Double
+    ): js.Any = js.native
+    def transform(
+      source: js.Any,
+      value: Record[String, _],
+      targetType: TypeMetadata,
+      arrayType: js.Function,
+      isMap: Boolean
+    ): js.Any = js.native
+    def transform(
+      source: js.Any,
+      value: Record[String, _],
       targetType: TypeMetadata,
       arrayType: js.Function,
       isMap: Boolean,
       level: Double
     ): js.Any = js.native
     def transform(
-      source: js.Array[js.Object],
+      source: js.Array[Record[String, _]],
       value: js.Any,
       targetType: js.Function,
       arrayType: js.Function,
       isMap: Boolean
     ): js.Any = js.native
     def transform(
-      source: js.Array[js.Object],
+      source: js.Array[Record[String, _]],
       value: js.Any,
       targetType: js.Function,
       arrayType: js.Function,
@@ -115,92 +128,14 @@ object transformOperationExecutorMod extends js.Object {
       level: Double
     ): js.Any = js.native
     def transform(
-      source: js.Array[js.Object],
+      source: js.Array[Record[String, _]],
       value: js.Any,
       targetType: TypeMetadata,
       arrayType: js.Function,
       isMap: Boolean
     ): js.Any = js.native
     def transform(
-      source: js.Array[js.Object],
-      value: js.Any,
-      targetType: TypeMetadata,
-      arrayType: js.Function,
-      isMap: Boolean,
-      level: Double
-    ): js.Any = js.native
-    def transform(
-      source: js.Array[js.Object],
-      value: js.Array[js.Object],
-      targetType: js.Function,
-      arrayType: js.Function,
-      isMap: Boolean
-    ): js.Any = js.native
-    def transform(
-      source: js.Array[js.Object],
-      value: js.Array[js.Object],
-      targetType: js.Function,
-      arrayType: js.Function,
-      isMap: Boolean,
-      level: Double
-    ): js.Any = js.native
-    def transform(
-      source: js.Array[js.Object],
-      value: js.Array[js.Object],
-      targetType: TypeMetadata,
-      arrayType: js.Function,
-      isMap: Boolean
-    ): js.Any = js.native
-    def transform(
-      source: js.Array[js.Object],
-      value: js.Array[js.Object],
-      targetType: TypeMetadata,
-      arrayType: js.Function,
-      isMap: Boolean,
-      level: Double
-    ): js.Any = js.native
-    def transform(
-      source: js.Array[js.Object],
-      value: js.Object,
-      targetType: js.Function,
-      arrayType: js.Function,
-      isMap: Boolean
-    ): js.Any = js.native
-    def transform(
-      source: js.Array[js.Object],
-      value: js.Object,
-      targetType: js.Function,
-      arrayType: js.Function,
-      isMap: Boolean,
-      level: Double
-    ): js.Any = js.native
-    def transform(
-      source: js.Array[js.Object],
-      value: js.Object,
-      targetType: TypeMetadata,
-      arrayType: js.Function,
-      isMap: Boolean
-    ): js.Any = js.native
-    def transform(
-      source: js.Array[js.Object],
-      value: js.Object,
-      targetType: TypeMetadata,
-      arrayType: js.Function,
-      isMap: Boolean,
-      level: Double
-    ): js.Any = js.native
-    def transform(source: js.Object, value: js.Any, targetType: js.Function, arrayType: js.Function, isMap: Boolean): js.Any = js.native
-    def transform(
-      source: js.Object,
-      value: js.Any,
-      targetType: js.Function,
-      arrayType: js.Function,
-      isMap: Boolean,
-      level: Double
-    ): js.Any = js.native
-    def transform(source: js.Object, value: js.Any, targetType: TypeMetadata, arrayType: js.Function, isMap: Boolean): js.Any = js.native
-    def transform(
-      source: js.Object,
+      source: js.Array[Record[String, _]],
       value: js.Any,
       targetType: TypeMetadata,
       arrayType: js.Function,
@@ -208,60 +143,150 @@ object transformOperationExecutorMod extends js.Object {
       level: Double
     ): js.Any = js.native
     def transform(
-      source: js.Object,
-      value: js.Array[js.Object],
+      source: js.Array[Record[String, _]],
+      value: js.Array[Record[String, _]],
       targetType: js.Function,
       arrayType: js.Function,
       isMap: Boolean
     ): js.Any = js.native
     def transform(
-      source: js.Object,
-      value: js.Array[js.Object],
-      targetType: js.Function,
-      arrayType: js.Function,
-      isMap: Boolean,
-      level: Double
-    ): js.Any = js.native
-    def transform(
-      source: js.Object,
-      value: js.Array[js.Object],
-      targetType: TypeMetadata,
-      arrayType: js.Function,
-      isMap: Boolean
-    ): js.Any = js.native
-    def transform(
-      source: js.Object,
-      value: js.Array[js.Object],
-      targetType: TypeMetadata,
-      arrayType: js.Function,
-      isMap: Boolean,
-      level: Double
-    ): js.Any = js.native
-    def transform(
-      source: js.Object,
-      value: js.Object,
-      targetType: js.Function,
-      arrayType: js.Function,
-      isMap: Boolean
-    ): js.Any = js.native
-    def transform(
-      source: js.Object,
-      value: js.Object,
+      source: js.Array[Record[String, _]],
+      value: js.Array[Record[String, _]],
       targetType: js.Function,
       arrayType: js.Function,
       isMap: Boolean,
       level: Double
     ): js.Any = js.native
     def transform(
-      source: js.Object,
-      value: js.Object,
+      source: js.Array[Record[String, _]],
+      value: js.Array[Record[String, _]],
       targetType: TypeMetadata,
       arrayType: js.Function,
       isMap: Boolean
     ): js.Any = js.native
     def transform(
-      source: js.Object,
-      value: js.Object,
+      source: js.Array[Record[String, _]],
+      value: js.Array[Record[String, _]],
+      targetType: TypeMetadata,
+      arrayType: js.Function,
+      isMap: Boolean,
+      level: Double
+    ): js.Any = js.native
+    def transform(
+      source: js.Array[Record[String, _]],
+      value: Record[String, _],
+      targetType: js.Function,
+      arrayType: js.Function,
+      isMap: Boolean
+    ): js.Any = js.native
+    def transform(
+      source: js.Array[Record[String, _]],
+      value: Record[String, _],
+      targetType: js.Function,
+      arrayType: js.Function,
+      isMap: Boolean,
+      level: Double
+    ): js.Any = js.native
+    def transform(
+      source: js.Array[Record[String, _]],
+      value: Record[String, _],
+      targetType: TypeMetadata,
+      arrayType: js.Function,
+      isMap: Boolean
+    ): js.Any = js.native
+    def transform(
+      source: js.Array[Record[String, _]],
+      value: Record[String, _],
+      targetType: TypeMetadata,
+      arrayType: js.Function,
+      isMap: Boolean,
+      level: Double
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: js.Any,
+      targetType: js.Function,
+      arrayType: js.Function,
+      isMap: Boolean
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: js.Any,
+      targetType: js.Function,
+      arrayType: js.Function,
+      isMap: Boolean,
+      level: Double
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: js.Any,
+      targetType: TypeMetadata,
+      arrayType: js.Function,
+      isMap: Boolean
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: js.Any,
+      targetType: TypeMetadata,
+      arrayType: js.Function,
+      isMap: Boolean,
+      level: Double
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: js.Array[Record[String, _]],
+      targetType: js.Function,
+      arrayType: js.Function,
+      isMap: Boolean
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: js.Array[Record[String, _]],
+      targetType: js.Function,
+      arrayType: js.Function,
+      isMap: Boolean,
+      level: Double
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: js.Array[Record[String, _]],
+      targetType: TypeMetadata,
+      arrayType: js.Function,
+      isMap: Boolean
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: js.Array[Record[String, _]],
+      targetType: TypeMetadata,
+      arrayType: js.Function,
+      isMap: Boolean,
+      level: Double
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: Record[String, _],
+      targetType: js.Function,
+      arrayType: js.Function,
+      isMap: Boolean
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: Record[String, _],
+      targetType: js.Function,
+      arrayType: js.Function,
+      isMap: Boolean,
+      level: Double
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: Record[String, _],
+      targetType: TypeMetadata,
+      arrayType: js.Function,
+      isMap: Boolean
+    ): js.Any = js.native
+    def transform(
+      source: Record[String, _],
+      value: Record[String, _],
       targetType: TypeMetadata,
       arrayType: js.Function,
       isMap: Boolean,
@@ -269,29 +294,5 @@ object transformOperationExecutorMod extends js.Object {
     ): js.Any = js.native
     
     var transformationType: js.Any = js.native
-  }
-  
-  @js.native
-  sealed trait TransformationType extends js.Object
-  @js.native
-  object TransformationType extends js.Object {
-    
-    @JSBracketAccess
-    def apply(value: Double): js.UndefOr[TransformationType with Double] = js.native
-    
-    @js.native
-    sealed trait CLASS_TO_CLASS extends TransformationType
-    /* 2 */ @js.native
-    object CLASS_TO_CLASS extends TopLevel[CLASS_TO_CLASS with Double]
-    
-    @js.native
-    sealed trait CLASS_TO_PLAIN extends TransformationType
-    /* 1 */ @js.native
-    object CLASS_TO_PLAIN extends TopLevel[CLASS_TO_PLAIN with Double]
-    
-    @js.native
-    sealed trait PLAIN_TO_CLASS extends TransformationType
-    /* 0 */ @js.native
-    object PLAIN_TO_CLASS extends TopLevel[PLAIN_TO_CLASS with Double]
   }
 }

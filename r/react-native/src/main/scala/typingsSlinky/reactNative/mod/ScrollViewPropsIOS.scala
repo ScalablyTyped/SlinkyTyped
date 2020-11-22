@@ -1,14 +1,16 @@
 package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.anon.AutoscrollToTopThreshold
 import typingsSlinky.reactNative.reactNativeStrings.always
 import typingsSlinky.reactNative.reactNativeStrings.automatic
 import typingsSlinky.reactNative.reactNativeStrings.black
+import typingsSlinky.reactNative.reactNativeStrings.center
 import typingsSlinky.reactNative.reactNativeStrings.default
-import typingsSlinky.reactNative.reactNativeStrings.fast
+import typingsSlinky.reactNative.reactNativeStrings.end
 import typingsSlinky.reactNative.reactNativeStrings.never
-import typingsSlinky.reactNative.reactNativeStrings.normal_
 import typingsSlinky.reactNative.reactNativeStrings.scrollableAxes
+import typingsSlinky.reactNative.reactNativeStrings.start
 import typingsSlinky.reactNative.reactNativeStrings.white
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -88,14 +90,6 @@ trait ScrollViewPropsIOS extends js.Object {
   var contentOffset: js.UndefOr[PointPropType] = js.native
   
   /**
-    * A floating-point number that determines how quickly the scroll view
-    * decelerates after the user lifts their finger. Reasonable choices include
-    *   - Normal: 0.998 (the default)
-    *   - Fast: 0.9
-    */
-  var decelerationRate: js.UndefOr[fast | normal_ | Double] = js.native
-  
-  /**
     * When true the ScrollView will try to lock to only vertical or horizontal
     * scrolling while dragging.  The default value is false.
     */
@@ -110,6 +104,30 @@ trait ScrollViewPropsIOS extends js.Object {
     *   a black content background.
     */
   var indicatorStyle: js.UndefOr[default | black | white] = js.native
+  
+  /**
+    * When set, the scroll view will adjust the scroll position so that the first child
+    * that is currently visible and at or beyond minIndexForVisible will not change position.
+    * This is useful for lists that are loading content in both directions, e.g. a chat thread,
+    * where new messages coming in might otherwise cause the scroll position to jump. A value
+    * of 0 is common, but other values such as 1 can be used to skip loading spinners or other
+    * content that should not maintain position.
+    *
+    * The optional autoscrollToTopThreshold can be used to make the content automatically scroll
+    * to the top after making the adjustment if the user was within the threshold of the top
+    * before the adjustment was made. This is also useful for chat-like applications where you
+    * want to see new messages scroll into place, but not if the user has scrolled up a ways and
+    * it would be disruptive to scroll a bunch.
+    *
+    * Caveat 1: Reordering elements in the scrollview with this enabled will probably cause
+    * jumpiness and jank. It can be fixed, but there are currently no plans to do so. For now,
+    * don't re-order the content of any ScrollViews or Lists that use this feature.
+    *
+    * Caveat 2: This uses contentOffset and frame.origin in native code to compute visibility.
+    * Occlusion, transforms, and other complexity won't be taken into account as to whether
+    * content is "visible" or not.
+    */
+  var maintainVisibleContentPosition: js.UndefOr[Null | AutoscrollToTopThreshold] = js.native
   
   /**
     * The maximum allowed zoom scale. The default value is 1.0.
@@ -169,13 +187,12 @@ trait ScrollViewPropsIOS extends js.Object {
   var scrollsToTop: js.UndefOr[Boolean] = js.native
   
   /**
-    * An array of child indices determining which children get docked to the
-    * top of the screen when scrolling. For example passing
-    * `stickyHeaderIndices={[0]}` will cause the first child to be fixed to the
-    * top of the scroll view. This property is not supported in conjunction
-    * with `horizontal={true}`.
+    * When `snapToInterval` is set, `snapToAlignment` will define the relationship of the the snapping to the scroll view.
+    *      - `start` (the default) will align the snap at the left (horizontal) or top (vertical)
+    *      - `center` will align the snap in the center
+    *      - `end` will align the snap at the right (horizontal) or bottom (vertical)
     */
-  var stickyHeaderIndices: js.UndefOr[js.Array[Double]] = js.native
+  var snapToAlignment: js.UndefOr[start | center | end] = js.native
   
   /**
     * The current scale of the scroll view content. The default value is 1.0.
@@ -266,12 +283,6 @@ object ScrollViewPropsIOS {
     def deleteContentOffset: Self = this.set("contentOffset", js.undefined)
     
     @scala.inline
-    def setDecelerationRate(value: fast | normal_ | Double): Self = this.set("decelerationRate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDecelerationRate: Self = this.set("decelerationRate", js.undefined)
-    
-    @scala.inline
     def setDirectionalLockEnabled(value: Boolean): Self = this.set("directionalLockEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -282,6 +293,15 @@ object ScrollViewPropsIOS {
     
     @scala.inline
     def deleteIndicatorStyle: Self = this.set("indicatorStyle", js.undefined)
+    
+    @scala.inline
+    def setMaintainVisibleContentPosition(value: AutoscrollToTopThreshold): Self = this.set("maintainVisibleContentPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaintainVisibleContentPosition: Self = this.set("maintainVisibleContentPosition", js.undefined)
+    
+    @scala.inline
+    def setMaintainVisibleContentPositionNull: Self = this.set("maintainVisibleContentPosition", null)
     
     @scala.inline
     def setMaximumZoomScale(value: Double): Self = this.set("maximumZoomScale", value.asInstanceOf[js.Any])
@@ -338,13 +358,10 @@ object ScrollViewPropsIOS {
     def deleteScrollsToTop: Self = this.set("scrollsToTop", js.undefined)
     
     @scala.inline
-    def setStickyHeaderIndicesVarargs(value: Double*): Self = this.set("stickyHeaderIndices", js.Array(value :_*))
+    def setSnapToAlignment(value: start | center | end): Self = this.set("snapToAlignment", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStickyHeaderIndices(value: js.Array[Double]): Self = this.set("stickyHeaderIndices", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStickyHeaderIndices: Self = this.set("stickyHeaderIndices", js.undefined)
+    def deleteSnapToAlignment: Self = this.set("snapToAlignment", js.undefined)
     
     @scala.inline
     def setZoomScale(value: Double): Self = this.set("zoomScale", value.asInstanceOf[js.Any])

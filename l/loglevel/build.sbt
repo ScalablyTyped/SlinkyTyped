@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "loglevel"
-version := "1.6.8-f97ad1"
+version := "1.7.0-f12b84"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

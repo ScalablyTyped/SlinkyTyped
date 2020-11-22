@@ -12,6 +12,11 @@ trait StepIntoRequest extends js.Object {
     * before next pause.
     */
   var breakOnAsyncCall: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * The skipList specifies location ranges that should be skipped on step into.
+    */
+  var skipList: js.UndefOr[js.Array[LocationRange]] = js.native
 }
 object StepIntoRequest {
   
@@ -41,5 +46,14 @@ object StepIntoRequest {
     
     @scala.inline
     def deleteBreakOnAsyncCall: Self = this.set("breakOnAsyncCall", js.undefined)
+    
+    @scala.inline
+    def setSkipListVarargs(value: LocationRange*): Self = this.set("skipList", js.Array(value :_*))
+    
+    @scala.inline
+    def setSkipList(value: js.Array[LocationRange]): Self = this.set("skipList", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSkipList: Self = this.set("skipList", js.undefined)
   }
 }

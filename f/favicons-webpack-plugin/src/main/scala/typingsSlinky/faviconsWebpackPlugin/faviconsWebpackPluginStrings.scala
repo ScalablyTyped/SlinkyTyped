@@ -1,6 +1,5 @@
 package typingsSlinky.faviconsWebpackPlugin
 
-import typingsSlinky.faviconsWebpackPlugin.mod.Mode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -68,7 +67,7 @@ object faviconsWebpackPluginStrings {
   sealed trait landscape extends js.Object
   
   @js.native
-  sealed trait light extends Mode
+  sealed trait light extends js.Object
   
   @js.native
   sealed trait `minimal-ui` extends js.Object
@@ -83,5 +82,5 @@ object faviconsWebpackPluginStrings {
   sealed trait standalone extends js.Object
   
   @js.native
-  sealed trait webapp extends Mode
+  sealed trait webapp extends js.Object
 }

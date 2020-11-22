@@ -78,3 +78,12 @@ class AudioSceneComponent protected () extends ISceneSerializableComponent {
     */
   def switchAudioModeForNormalSpeakers(): Unit = js.native
 }
+/* static members */
+@JSImport("babylonjs/Audio/audioSceneComponent", "AudioSceneComponent")
+@js.native
+object AudioSceneComponent extends js.Object {
+  
+  var _CameraDirectionLH: js.Any = js.native
+  
+  var _CameraDirectionRH: js.Any = js.native
+}

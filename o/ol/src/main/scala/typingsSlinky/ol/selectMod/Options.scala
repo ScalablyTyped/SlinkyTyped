@@ -127,7 +127,7 @@ object Options {
     def deleteRemoveCondition: Self = this.set("removeCondition", js.undefined)
     
     @scala.inline
-    def setStyleFunction2(value: (/* p0 */ FeatureLike, /* p1 */ Double) => Style | js.Array[Style] | Unit): Self = this.set("style", js.Any.fromFunction2(value))
+    def setStyleFunction2(value: (/* p0 */ FeatureLike, /* p1 */ Double) => Style | js.Array[Style]): Self = this.set("style", js.Any.fromFunction2(value))
     
     @scala.inline
     def setStyleVarargs(value: Style*): Self = this.set("style", js.Array(value :_*))

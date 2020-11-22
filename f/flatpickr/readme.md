@@ -1,7 +1,7 @@
 
 # Scala.js typings for flatpickr
 
-Typings are for version 4.6.3
+Typings are for version 4.6.6
 
 ## Library description:
 A lightweight, powerful javascript datetime picker

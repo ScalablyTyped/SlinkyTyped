@@ -14,6 +14,11 @@ trait DomHandlerOptions extends js.Object {
   var normalizeWhitespace: js.UndefOr[Boolean] = js.native
   
   /***
+    * Adds DOM level 1 properties to all elements.
+    */
+  var withDomLvl1: js.UndefOr[Boolean] = js.native
+  
+  /***
     * Indicates whether a endIndex property will be added to nodes.
     * When the parser is used in a non-streaming fashion, endIndex is an integer
     * indicating the position of the end of the node in the document.
@@ -57,6 +62,12 @@ object DomHandlerOptions {
     
     @scala.inline
     def deleteNormalizeWhitespace: Self = this.set("normalizeWhitespace", js.undefined)
+    
+    @scala.inline
+    def setWithDomLvl1(value: Boolean): Self = this.set("withDomLvl1", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWithDomLvl1: Self = this.set("withDomLvl1", js.undefined)
     
     @scala.inline
     def setWithEndIndices(value: Boolean): Self = this.set("withEndIndices", value.asInstanceOf[js.Any])

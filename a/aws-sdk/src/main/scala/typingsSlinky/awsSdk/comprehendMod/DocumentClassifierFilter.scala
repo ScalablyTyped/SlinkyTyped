@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DocumentClassifierFilter extends js.Object {
   
   /**
-    * Filters the list of classifiers based on status. 
+    * Filters the list of classifiers based on status.
     */
   var Status: js.UndefOr[ModelStatus] = js.native
   

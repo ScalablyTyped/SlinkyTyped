@@ -11,7 +11,11 @@ trait MlGetTrainedModels extends Generic {
   
   var decompress_definition: js.UndefOr[Boolean] = js.native
   
+  var for_export: js.UndefOr[Boolean] = js.native
+  
   var from: js.UndefOr[Double] = js.native
+  
+  var include: js.UndefOr[String] = js.native
   
   var include_model_definition: js.UndefOr[Boolean] = js.native
   
@@ -57,10 +61,22 @@ object MlGetTrainedModels {
     def deleteDecompress_definition: Self = this.set("decompress_definition", js.undefined)
     
     @scala.inline
+    def setFor_export(value: Boolean): Self = this.set("for_export", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFor_export: Self = this.set("for_export", js.undefined)
+    
+    @scala.inline
     def setFrom(value: Double): Self = this.set("from", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFrom: Self = this.set("from", js.undefined)
+    
+    @scala.inline
+    def setInclude(value: String): Self = this.set("include", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInclude: Self = this.set("include", js.undefined)
     
     @scala.inline
     def setInclude_model_definition(value: Boolean): Self = this.set("include_model_definition", value.asInstanceOf[js.Any])

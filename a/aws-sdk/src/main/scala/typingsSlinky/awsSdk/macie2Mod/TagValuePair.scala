@@ -13,7 +13,7 @@ trait TagValuePair extends js.Object {
   var key: js.UndefOr[string] = js.native
   
   /**
-    * The tag value, associated with the specified tag key, to use in the condition.
+    * The tag value, associated with the specified tag key (key), to use in the condition. To specify only a tag key for a condition, specify the tag key for the key property and set this value to an empty string.
     */
   var value: js.UndefOr[string] = js.native
 }

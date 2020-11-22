@@ -21,6 +21,9 @@ object cylindricalMod extends js.Object {
     
     def copy(other: Cylindrical): this.type = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var radius: Double = js.native
     
     def set(radius: Double, theta: Double, y: Double): this.type = js.native
@@ -29,8 +32,14 @@ object cylindricalMod extends js.Object {
     
     def setFromVector3(vec3: Vector3): this.type = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var theta: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var y: Double = js.native
   }
 }

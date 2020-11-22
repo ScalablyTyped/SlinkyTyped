@@ -1,6 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
-import typingsSlinky.xstate.anon.Context
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateMod.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,12 +17,12 @@ trait Segment[TContext, TEvent /* <: EventObject */] extends js.Object {
   /**
     * From state.
     */
-  var state: State[TContext, TEvent, _, Context[TContext]] = js.native
+  var state: State[TContext, TEvent, _, ContextTContext[TContext]] = js.native
 }
 object Segment {
   
   @scala.inline
-  def apply[TContext, TEvent /* <: EventObject */](event: TEvent, state: State[TContext, TEvent, _, Context[TContext]]): Segment[TContext, TEvent] = {
+  def apply[TContext, TEvent /* <: EventObject */](event: TEvent, state: State[TContext, TEvent, _, ContextTContext[TContext]]): Segment[TContext, TEvent] = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[Segment[TContext, TEvent]]
   }
@@ -46,6 +46,6 @@ object Segment {
     def setEvent(value: TEvent): Self = this.set("event", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setState(value: State[TContext, TEvent, _, Context[TContext]]): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setState(value: State[TContext, TEvent, _, ContextTContext[TContext]]): Self = this.set("state", value.asInstanceOf[js.Any])
   }
 }

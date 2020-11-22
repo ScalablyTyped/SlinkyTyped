@@ -27,11 +27,6 @@ trait AppointmentRead extends Item {
   def addHandlerAsync(
     eventType: String,
     handler: js.Any,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
-  def addHandlerAsync(
-    eventType: String,
-    handler: js.Any,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
@@ -64,11 +59,6 @@ trait AppointmentRead extends Item {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def addHandlerAsync(eventType: EventType, handler: js.Any): Unit = js.native
-  def addHandlerAsync(
-    eventType: EventType,
-    handler: js.Any,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
   def addHandlerAsync(
     eventType: EventType,
     handler: js.Any,
@@ -186,7 +176,7 @@ trait AppointmentRead extends Item {
     *
     * **Note**: This method is not supported in Outlook on iOS or Android.
     *
-    * [Api set: Mailbox Preview]
+    * [Api set: Mailbox 1.9]
     *
     * @remarks
     *
@@ -200,8 +190,6 @@ trait AppointmentRead extends Item {
     *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
     * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter,
     *                `asyncResult`, which is an `Office.AsyncResult` object.
-    *
-    * @beta
     */
   def displayReplyAllFormAsync(formData: String): Unit = js.native
   def displayReplyAllFormAsync(
@@ -264,7 +252,7 @@ trait AppointmentRead extends Item {
     *
     * **Note**: This method is not supported in Outlook on iOS or Android.
     *
-    * [Api set: Mailbox Preview]
+    * [Api set: Mailbox 1.9]
     *
     * @remarks
     *
@@ -278,8 +266,6 @@ trait AppointmentRead extends Item {
     *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
     * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter,
     *                `asyncResult`, which is an `Office.AsyncResult` object.
-    *
-    * @beta
     */
   def displayReplyFormAsync(formData: String): Unit = js.native
   def displayReplyFormAsync(
@@ -371,10 +357,6 @@ trait AppointmentRead extends Item {
     *                 an error code with the reason for the failure.
     */
   def getAttachmentContentAsync(attachmentId: String): Unit = js.native
-  def getAttachmentContentAsync(
-    attachmentId: String,
-    callback: js.Function1[/* asyncResult */ AsyncResult[AttachmentContent], Unit]
-  ): Unit = js.native
   def getAttachmentContentAsync(
     attachmentId: String,
     options: js.UndefOr[scala.Nothing],
@@ -514,7 +496,6 @@ trait AppointmentRead extends Item {
     * @beta
     */
   def getInitializationContextAsync(): Unit = js.native
-  def getInitializationContextAsync(callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]): Unit = js.native
   def getInitializationContextAsync(
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
@@ -626,7 +607,10 @@ trait AppointmentRead extends Item {
   /**
     * Gets the properties of an appointment or message in a shared folder, calendar, or mailbox.
     *
-    * **Note**: This method is not supported in Outlook on Mac, iOS, or Android.
+    * For more information around using this API, see the
+    * {@link https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access | delegate access} article.
+    *
+    * **Note**: This method is not supported in Outlook on iOS or Android.
     *
     * [Api set: Mailbox 1.8]
     *
@@ -644,7 +628,10 @@ trait AppointmentRead extends Item {
   /**
     * Gets the properties of an appointment or message in a shared folder, calendar, or mailbox.
     *
-    * **Note**: This method is not supported in Outlook on Mac, iOS, or Android.
+    * For more information around using this API, see the
+    * {@link https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access | delegate access} article.
+    *
+    * **Note**: This method is not supported in Outlook on iOS or Android.
     *
     * [Api set: Mailbox 1.8]
     *
@@ -815,10 +802,16 @@ trait AppointmentRead extends Item {
   var notificationMessages: NotificationMessages = js.native
   
   /**
-    * Provides access to the optional attendees of an event. The type of object and level of access depends on the mode of the current item.
+    * Provides access to the optional attendees of an event. The type of object and level of access depend on the mode of the current item.
     *
-    * The `optionalAttendees` property returns an array that contains an {@link Office.EmailAddressDetails | EmailAddressDetails} object for each optional attendee to
-    * the meeting. By default, the collection is limited to a maximum of 100 members. However, on Windows and Mac, you can get 500 members maximum.
+    * The `optionalAttendees` property returns an array that contains an {@link Office.EmailAddressDetails | EmailAddressDetails} object for
+    * each optional attendee to the meeting. Collection size limits:
+    *
+    * - Windows: 500 members
+    *
+    * - Mac: 100 members
+    *
+    * - Other: No limit
     *
     * @remarks
     *
@@ -861,7 +854,6 @@ trait AppointmentRead extends Item {
   var recurrence: Recurrence = js.native
   
   def removeHandlerAsync(eventType: String): Unit = js.native
-  def removeHandlerAsync(eventType: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeHandlerAsync(
     eventType: String,
     options: js.UndefOr[scala.Nothing],
@@ -893,7 +885,6 @@ trait AppointmentRead extends Item {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def removeHandlerAsync(eventType: EventType): Unit = js.native
-  def removeHandlerAsync(eventType: EventType, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeHandlerAsync(
     eventType: EventType,
     options: js.UndefOr[scala.Nothing],
@@ -907,11 +898,16 @@ trait AppointmentRead extends Item {
   ): Unit = js.native
   
   /**
-    * Provides access to the required attendees of an event. The type of object and level of access depends on the mode of the current item.
+    * Provides access to the required attendees of an event. The type of object and level of access depend on the mode of the current item.
     *
-    * The `requiredAttendees` property returns an array that contains an {@link Office.EmailAddressDetails | EmailAddressDetails} object
-    * for each required attendee to the meeting. By default, the collection is limited to a maximum of 100 members.
-    * However, on Windows and Mac, you can get 500 members maximum.
+    * The `requiredAttendees` property returns an array that contains an {@link Office.EmailAddressDetails | EmailAddressDetails} object for
+    * each required attendee to the meeting. Collection size limits:
+    *
+    * - Windows: 500 members
+    *
+    * - Mac: 100 members
+    *
+    * - Other: No limit
     *
     * @remarks
     *

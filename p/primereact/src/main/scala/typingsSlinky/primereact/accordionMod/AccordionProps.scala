@@ -12,6 +12,10 @@ trait AccordionProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
+  var collapseIcon: js.UndefOr[String] = js.native
+  
+  var expandIcon: js.UndefOr[String] = js.native
+  
   var id: js.UndefOr[String] = js.native
   
   var multiple: js.UndefOr[Boolean] = js.native
@@ -58,6 +62,18 @@ object AccordionProps {
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
+    def setCollapseIcon(value: String): Self = this.set("collapseIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCollapseIcon: Self = this.set("collapseIcon", js.undefined)
+    
+    @scala.inline
+    def setExpandIcon(value: String): Self = this.set("expandIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpandIcon: Self = this.set("expandIcon", js.undefined)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])

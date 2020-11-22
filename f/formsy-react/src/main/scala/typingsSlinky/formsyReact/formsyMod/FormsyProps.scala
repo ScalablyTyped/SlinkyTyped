@@ -1,8 +1,11 @@
 package typingsSlinky.formsyReact.formsyMod
 
+import org.scalajs.dom.raw.Event
+import slinky.core.SyntheticEvent
 import typingsSlinky.formsyReact.interfacesMod.IModel
 import typingsSlinky.formsyReact.interfacesMod.IResetModel
 import typingsSlinky.formsyReact.interfacesMod.IUpdateInputsWithError
+import typingsSlinky.react.mod.FormHTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +19,7 @@ trait FormsyProps extends FormHTMLAttributesCleaned {
   
   def onChange(model: IModel, isChanged: Boolean): Unit = js.native
   
-  def onInvalidSubmit(model: IModel, resetModel: IResetModel, updateInputsWithError: IUpdateInputsWithError): Unit = js.native
+  var onInvalidSubmit: OnSubmitCallback = js.native
   
   @JSName("onInvalid")
   def onInvalid_MFormsyProps(): Unit = js.native
@@ -24,25 +27,11 @@ trait FormsyProps extends FormHTMLAttributesCleaned {
   @JSName("onReset")
   var onReset_FormsyProps: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onSubmit: js.UndefOr[
-    js.Function3[
-      /* model */ IModel, 
-      /* resetModel */ IResetModel, 
-      /* updateInputsWithError */ IUpdateInputsWithError, 
-      Unit
-    ]
-  ] = js.native
+  var onSubmit: js.UndefOr[OnSubmitCallback] = js.native
   
   def onValid(): Unit = js.native
   
-  var onValidSubmit: js.UndefOr[
-    js.Function3[
-      /* model */ IModel, 
-      /* resetModel */ IResetModel, 
-      /* updateInputsWithError */ IUpdateInputsWithError, 
-      Unit
-    ]
-  ] = js.native
+  var onValidSubmit: js.UndefOr[OnSubmitCallback] = js.native
   
   var preventDefaultSubmit: js.UndefOr[Boolean] = js.native
   
@@ -57,10 +46,10 @@ object FormsyProps {
     disabled: Boolean,
     onChange: (IModel, Boolean) => Unit,
     onInvalid: () => Unit,
-    onInvalidSubmit: (IModel, IResetModel, IUpdateInputsWithError) => Unit,
+    onInvalidSubmit: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError, /* event */ SyntheticEvent[Event, FormHTMLAttributes[js.Any]]) => Unit,
     onValid: () => Unit
   ): FormsyProps = {
-    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], onChange = js.Any.fromFunction2(onChange), onInvalid = js.Any.fromFunction0(onInvalid), onInvalidSubmit = js.Any.fromFunction3(onInvalidSubmit), onValid = js.Any.fromFunction0(onValid))
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], onChange = js.Any.fromFunction2(onChange), onInvalid = js.Any.fromFunction0(onInvalid), onInvalidSubmit = js.Any.fromFunction4(onInvalidSubmit), onValid = js.Any.fromFunction0(onValid))
     __obj.asInstanceOf[FormsyProps]
   }
   
@@ -89,7 +78,9 @@ object FormsyProps {
     def setOnInvalid(value: () => Unit): Self = this.set("onInvalid", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setOnInvalidSubmit(value: (IModel, IResetModel, IUpdateInputsWithError) => Unit): Self = this.set("onInvalidSubmit", js.Any.fromFunction3(value))
+    def setOnInvalidSubmit(
+      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError, /* event */ SyntheticEvent[Event, FormHTMLAttributes[js.Any]]) => Unit
+    ): Self = this.set("onInvalidSubmit", js.Any.fromFunction4(value))
     
     @scala.inline
     def setOnValid(value: () => Unit): Self = this.set("onValid", js.Any.fromFunction0(value))
@@ -108,16 +99,16 @@ object FormsyProps {
     
     @scala.inline
     def setOnSubmit(
-      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError) => Unit
-    ): Self = this.set("onSubmit", js.Any.fromFunction3(value))
+      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError, /* event */ SyntheticEvent[Event, FormHTMLAttributes[js.Any]]) => Unit
+    ): Self = this.set("onSubmit", js.Any.fromFunction4(value))
     
     @scala.inline
     def deleteOnSubmit: Self = this.set("onSubmit", js.undefined)
     
     @scala.inline
     def setOnValidSubmit(
-      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError) => Unit
-    ): Self = this.set("onValidSubmit", js.Any.fromFunction3(value))
+      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError, /* event */ SyntheticEvent[Event, FormHTMLAttributes[js.Any]]) => Unit
+    ): Self = this.set("onValidSubmit", js.Any.fromFunction4(value))
     
     @scala.inline
     def deleteOnValidSubmit: Self = this.set("onValidSubmit", js.undefined)

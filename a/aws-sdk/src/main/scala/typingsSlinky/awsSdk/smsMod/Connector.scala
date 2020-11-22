@@ -18,7 +18,7 @@ trait Connector extends js.Object {
   var capabilityList: js.UndefOr[ConnectorCapabilityList] = js.native
   
   /**
-    * The identifier of the connector.
+    * The ID of the connector.
     */
   var connectorId: js.UndefOr[ConnectorId] = js.native
   
@@ -43,7 +43,7 @@ trait Connector extends js.Object {
   var version: js.UndefOr[ConnectorVersion] = js.native
   
   /**
-    * The identifier of the VM manager.
+    * The ID of the VM manager.
     */
   var vmManagerId: js.UndefOr[VmManagerId] = js.native
   

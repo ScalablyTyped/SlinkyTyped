@@ -5,6 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.Ref
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -12,7 +13,6 @@ import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -66,7 +66,7 @@ trait ViewPropsenabledbooleanla extends js.Object {
   var accessibilityHint: js.UndefOr[String] = js.native
   
   /**
-    * https://facebook.github.io/react-native/docs/accessibility#accessibilityignoresinvertcolorsios
+    * https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
     * @platform ios
     */
   var accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.native
@@ -176,7 +176,7 @@ trait ViewPropsenabledbooleanla extends js.Object {
     */
   var isTVSelectable: js.UndefOr[Boolean] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var layout: Width = js.native
   
@@ -223,7 +223,7 @@ trait ViewPropsenabledbooleanla extends js.Object {
     *
     * {nativeEvent: { layout: {x, y, width, height}}}.
     */
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   /**
     * When accessible is true, the system will invoke this function when the user performs the magic tap gesture.
@@ -589,6 +589,9 @@ object ViewPropsenabledbooleanla {
     def deleteKey: Self = this.set("key", js.undefined)
     
     @scala.inline
+    def setKeyNull: Self = this.set("key", null)
+    
+    @scala.inline
     def setNativeID(value: String): Self = this.set("nativeID", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -619,7 +622,7 @@ object ViewPropsenabledbooleanla {
     def deleteOnAccessibilityTap: Self = this.set("onAccessibilityTap", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)

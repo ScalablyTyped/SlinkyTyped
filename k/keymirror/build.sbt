@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "keymirror"
-version := "0.1.1-dt-20200515Z-7beddb"
+version := "0.1.1-dt-20201002Z-7beddb"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

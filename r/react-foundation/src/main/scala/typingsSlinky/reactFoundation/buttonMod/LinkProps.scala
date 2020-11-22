@@ -5,6 +5,7 @@ import typingsSlinky.react.mod.AriaAttributes
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DOMAttributes
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.reactStrings.decimal
 import typingsSlinky.react.reactStrings.email
 import typingsSlinky.react.reactStrings.inherit
@@ -111,7 +112,7 @@ trait LinkProps
   // Unknown
   var radioGroup: js.UndefOr[String] = js.native
   
-  var referrerPolicy: js.UndefOr[String] = js.native
+  var referrerPolicy: js.UndefOr[HTMLAttributeReferrerPolicy] = js.native
   
   var rel: js.UndefOr[String] = js.native
   
@@ -376,7 +377,7 @@ object LinkProps {
     def deleteRadioGroup: Self = this.set("radioGroup", js.undefined)
     
     @scala.inline
-    def setReferrerPolicy(value: String): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    def setReferrerPolicy(value: HTMLAttributeReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)

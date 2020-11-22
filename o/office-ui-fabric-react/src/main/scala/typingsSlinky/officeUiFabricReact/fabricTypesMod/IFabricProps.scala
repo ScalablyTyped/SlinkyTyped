@@ -4,13 +4,13 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.auto
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.ltr
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.rtl
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

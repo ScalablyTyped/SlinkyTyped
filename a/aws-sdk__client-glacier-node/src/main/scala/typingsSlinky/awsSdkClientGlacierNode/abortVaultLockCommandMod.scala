@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientGlacierNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientGlacierNode.typesAbortVaultLockInputMod.AbortVaultLockInput
 import typingsSlinky.awsSdkClientGlacierNode.typesAbortVaultLockOutputMod.AbortVaultLockOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object abortVaultLockCommandMod extends js.Object {
           AbortVaultLockInput, 
           OutputTypesUnion, 
           AbortVaultLockOutput, 
-          GlacierResolvedConfiguration, 
-          Readable
+          GlacierResolvedConfiguration
         ] {
     def this(input: AbortVaultLockInput) = this()
     
-    val middlewareStack: MiddlewareStack[AbortVaultLockInput, AbortVaultLockOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: GlacierResolvedConfiguration
     ): Handler[AbortVaultLockInput, AbortVaultLockOutput] = js.native
   }

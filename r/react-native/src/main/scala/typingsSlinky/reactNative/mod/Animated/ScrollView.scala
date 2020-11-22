@@ -13,6 +13,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object ScrollView
   extends TopLevel[
       ReactComponentClass[
-        ComponentProps[Instantiable0[typingsSlinky.reactNative.mod.ScrollView]] | AnimatedProps[ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.ScrollView]]]
+        AnimatedProps[ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.ScrollView]]]
       ]
     ]

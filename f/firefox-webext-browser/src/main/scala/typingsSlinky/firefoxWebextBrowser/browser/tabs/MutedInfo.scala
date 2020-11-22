@@ -9,14 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MutedInfo extends js.Object {
   
   /**
-    * The ID of the extension that changed the muted state. Not set if an extension was not the reason the muted
-    * state last changed.
+    * The ID of the extension that changed the muted state. Not set if an extension was not the reason the muted state last changed.
     */
   var extensionId: js.UndefOr[String] = js.native
   
   /**
-    * Whether the tab is prevented from playing sound (but hasn't necessarily recently produced sound). Equivalent
-    * to whether the muted audio indicator is showing.
+    * Whether the tab is prevented from playing sound (but hasn't necessarily recently produced sound). Equivalent to whether the muted audio indicator is showing.
     */
   var muted: Boolean = js.native
   

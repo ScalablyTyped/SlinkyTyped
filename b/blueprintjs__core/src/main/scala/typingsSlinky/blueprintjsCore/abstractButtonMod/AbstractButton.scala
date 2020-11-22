@@ -2,6 +2,7 @@ package typingsSlinky.blueprintjsCore.abstractButtonMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.blueprintjsCore.anon.ClassName
 import typingsSlinky.blueprintjsCore.anon.IsActive
@@ -23,6 +24,8 @@ abstract class AbstractButton[H /* <: HTMLAttributes[HTMLElement] */] ()
   
   /* protected */ def getCommonButtonProps(): ClassName[H] = js.native
   
+  /* protected */ def handleBlur(e: SyntheticFocusEvent[_]): Unit = js.native
+  
   /* protected */ def handleKeyDown(e: SyntheticKeyboardEvent[_]): Unit = js.native
   
   /* protected */ def handleKeyUp(e: SyntheticKeyboardEvent[_]): Unit = js.native
@@ -31,11 +34,4 @@ abstract class AbstractButton[H /* <: HTMLAttributes[HTMLElement] */] ()
   
   @JSName("state")
   var state_AbstractButton: IsActive = js.native
-}
-/* static members */
-@JSImport("@blueprintjs/core/lib/esm/components/button/abstractButton", "AbstractButton")
-@js.native
-object AbstractButton extends js.Object {
-  
-  def getDerivedStateFromProps(props: IButtonProps, state: IButtonState): IsActive = js.native
 }

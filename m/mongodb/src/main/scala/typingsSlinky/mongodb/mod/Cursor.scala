@@ -20,6 +20,8 @@ class Cursor[T] () extends Readable {
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Cursor.html#batchSize */
   def batchSize(value: scala.Double): Cursor[T] = js.native
   
+  def bufferedCount(): scala.Double = js.native
+  
    // still returns the same type
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Cursor.html#close */
   def close(): js.Promise[CursorResult] = js.native
@@ -88,13 +90,13 @@ class Cursor[T] () extends Readable {
   def next(): js.Promise[T | Null] = js.native
   def next(callback: MongoCallback[T | Null]): Unit = js.native
   
-  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Cursor.html#project */
-  def project(value: js.Object): Cursor[T] = js.native
+  /** http://mongodb.github.io/node-mongodb-native/3.6/api/Cursor.html#project */
+  def project(value: SchemaMember[T, ProjectionOperators | scala.Double | Boolean | _]): Cursor[T] = js.native
   
   var readPreference: ReadPreference = js.native
   
-  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Cursor.html#next */
-  def returnKey(returnKey: js.Object): Cursor[T] = js.native
+  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Cursor.html#returnKey */
+  def returnKey(returnKey: Boolean): Cursor[T] = js.native
   
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Cursor.html#rewind */
   def rewind(): Unit = js.native
@@ -106,7 +108,7 @@ class Cursor[T] () extends Readable {
   def setReadPreference(readPreference: ReadPreferenceOrMode): Cursor[T] = js.native
   
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Cursor.html#showRecordId */
-  def showRecordId(showRecordId: js.Object): Cursor[T] = js.native
+  def showRecordId(showRecordId: Boolean): Cursor[T] = js.native
   
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Cursor.html#skip */
   def skip(value: scala.Double): Cursor[T] = js.native
@@ -114,13 +116,13 @@ class Cursor[T] () extends Readable {
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Cursor.html#snapshot */
   def snapshot(snapshot: js.Object): Cursor[T] = js.native
   
-  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Cursor.html#sort */
+  /** http://mongodb.github.io/node-mongodb-native/3.6/api/Cursor.html#sort */
   def sort(keyOrList: String): Cursor[T] = js.native
   def sort(keyOrList: String, direction: scala.Double): Cursor[T] = js.native
-  def sort(keyOrList: js.Array[js.Object]): Cursor[T] = js.native
-  def sort(keyOrList: js.Array[js.Object], direction: scala.Double): Cursor[T] = js.native
-  def sort(keyOrList: js.Object): Cursor[T] = js.native
-  def sort(keyOrList: js.Object, direction: scala.Double): Cursor[T] = js.native
+  def sort(keyOrList: js.Array[js.Tuple2[String, scala.Double]]): Cursor[T] = js.native
+  def sort(keyOrList: js.Array[js.Tuple2[String, scala.Double]], direction: scala.Double): Cursor[T] = js.native
+  def sort(keyOrList: SortOptionObject[T]): Cursor[T] = js.native
+  def sort(keyOrList: SortOptionObject[T], direction: scala.Double): Cursor[T] = js.native
   
   var sortValue: String = js.native
   

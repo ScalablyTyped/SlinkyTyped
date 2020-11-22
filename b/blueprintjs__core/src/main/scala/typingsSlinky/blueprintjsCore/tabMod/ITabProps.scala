@@ -16,8 +16,13 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`additions removals`
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`additions text`
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`inline`
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`removals additions`
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`removals text`
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`text additions`
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`text removals`
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.additions
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.all
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.ascending
@@ -162,7 +167,9 @@ trait ITabProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -711,7 +718,9 @@ object ITabProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

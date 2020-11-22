@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -12,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/document-templates relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/document-templates relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -57,9 +56,6 @@ class DocumentTemplate protected () extends Document {
   
   def marginTopInInch: Double = js.native
   def marginTopInInch_=(newValue: Double): Unit = js.native
-  
-  @JSName("model")
-  var model_FDocumentTemplate: IModel = js.native
   
   def pageHeight: String = js.native
   def pageHeight_=(newValue: String): Unit = js.native

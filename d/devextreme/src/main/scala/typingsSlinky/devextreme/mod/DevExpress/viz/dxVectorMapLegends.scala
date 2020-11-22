@@ -16,24 +16,36 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxVectorMapLegends extends BaseLegend {
   
-  /** @name dxVectorMap.Options.legends.customizeHint */
+  /**
+    * [descr:dxVectorMap.Options.legends.customizeHint]
+    */
   var customizeHint: js.UndefOr[js.Function1[/* itemInfo */ ColorEnd, String]] = js.native
   
-  /** @name dxVectorMap.Options.legends.customizeItems */
+  /**
+    * [descr:dxVectorMap.Options.legends.customizeItems]
+    */
   var customizeItems: js.UndefOr[
     js.Function1[/* items */ js.Array[VectorMapLegendItem], js.Array[VectorMapLegendItem]]
   ] = js.native
   
-  /** @name dxVectorMap.Options.legends.customizeText */
+  /**
+    * [descr:dxVectorMap.Options.legends.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* itemInfo */ ColorEnd, String]] = js.native
   
-  /** @name dxVectorMap.Options.legends.markerColor */
+  /**
+    * [descr:dxVectorMap.Options.legends.markerColor]
+    */
   var markerColor: js.UndefOr[String] = js.native
   
-  /** @name dxVectorMap.Options.legends.markerShape */
+  /**
+    * [descr:dxVectorMap.Options.legends.markerShape]
+    */
   var markerShape: js.UndefOr[circle | square] = js.native
   
-  /** @name dxVectorMap.Options.legends.markerTemplate */
+  /**
+    * [descr:dxVectorMap.Options.legends.markerTemplate]
+    */
   var markerTemplate: js.UndefOr[
     template | (js.Function2[
       /* legendItem */ VectorMapLegendItem, 
@@ -42,7 +54,9 @@ trait dxVectorMapLegends extends BaseLegend {
     ])
   ] = js.native
   
-  /** @name dxVectorMap.Options.legends.source */
+  /**
+    * [descr:dxVectorMap.Options.legends.source]
+    */
   var source: js.UndefOr[Layer] = js.native
 }
 object dxVectorMapLegends {

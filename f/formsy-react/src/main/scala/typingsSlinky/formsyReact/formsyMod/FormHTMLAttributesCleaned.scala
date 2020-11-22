@@ -16,8 +16,13 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.formsyReact.formsyReactStrings.`additions removals`
 import typingsSlinky.formsyReact.formsyReactStrings.`additions text`
 import typingsSlinky.formsyReact.formsyReactStrings.`inline`
+import typingsSlinky.formsyReact.formsyReactStrings.`removals additions`
+import typingsSlinky.formsyReact.formsyReactStrings.`removals text`
+import typingsSlinky.formsyReact.formsyReactStrings.`text additions`
+import typingsSlinky.formsyReact.formsyReactStrings.`text removals`
 import typingsSlinky.formsyReact.formsyReactStrings.additions
 import typingsSlinky.formsyReact.formsyReactStrings.all
 import typingsSlinky.formsyReact.formsyReactStrings.ascending
@@ -165,7 +170,9 @@ trait FormHTMLAttributesCleaned extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -703,7 +710,9 @@ object FormHTMLAttributesCleaned {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

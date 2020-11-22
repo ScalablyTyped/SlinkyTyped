@@ -1,8 +1,9 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.baseMod.ExtendType
 import typingsSlinky.grommet.utilsMod.BackgroundType
+import typingsSlinky.grommet.utilsMod.BorderType
 import typingsSlinky.grommet.utilsMod.GapType
+import typingsSlinky.grommet.utilsMod.PadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,13 +13,15 @@ trait Gap extends js.Object {
   
   var background: js.UndefOr[BackgroundType] = js.native
   
-  var extend: js.UndefOr[ExtendType] = js.native
+  var border: js.UndefOr[BorderType] = js.native
+  
+  var font: js.UndefOr[SizeWeight] = js.native
   
   var gap: js.UndefOr[GapType] = js.native
   
-  var header: js.UndefOr[BorderExtend] = js.native
+  var hover: js.UndefOr[`5`] = js.native
   
-  var panel: js.UndefOr[`10`] = js.native
+  var pad: js.UndefOr[PadType] = js.native
 }
 object Gap {
   
@@ -50,13 +53,19 @@ object Gap {
     def deleteBackground: Self = this.set("background", js.undefined)
     
     @scala.inline
-    def setExtendFunction1(value: /* args */ js.Any => Unit): Self = this.set("extend", js.Any.fromFunction1(value))
+    def setBorderVarargs(value: Error*): Self = this.set("border", js.Array(value :_*))
     
     @scala.inline
-    def setExtend(value: ExtendType): Self = this.set("extend", value.asInstanceOf[js.Any])
+    def setBorder(value: BorderType): Self = this.set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteExtend: Self = this.set("extend", js.undefined)
+    def deleteBorder: Self = this.set("border", js.undefined)
+    
+    @scala.inline
+    def setFont(value: SizeWeight): Self = this.set("font", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFont: Self = this.set("font", js.undefined)
     
     @scala.inline
     def setGap(value: GapType): Self = this.set("gap", value.asInstanceOf[js.Any])
@@ -65,15 +74,15 @@ object Gap {
     def deleteGap: Self = this.set("gap", js.undefined)
     
     @scala.inline
-    def setHeader(value: BorderExtend): Self = this.set("header", value.asInstanceOf[js.Any])
+    def setHover(value: `5`): Self = this.set("hover", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteHeader: Self = this.set("header", js.undefined)
+    def deleteHover: Self = this.set("hover", js.undefined)
     
     @scala.inline
-    def setPanel(value: `10`): Self = this.set("panel", value.asInstanceOf[js.Any])
+    def setPad(value: PadType): Self = this.set("pad", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deletePanel: Self = this.set("panel", js.undefined)
+    def deletePad: Self = this.set("pad", js.undefined)
   }
 }

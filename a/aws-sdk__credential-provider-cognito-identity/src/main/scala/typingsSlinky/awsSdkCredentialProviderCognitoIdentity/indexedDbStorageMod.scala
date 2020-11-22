@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/credential-provider-cognito-identity/build/IndexedDbStorage", JSImport.Namespace)
+@JSImport("@aws-sdk/credential-provider-cognito-identity/dist/cjs/IndexedDbStorage", JSImport.Namespace)
 @js.native
 object indexedDbStorageMod extends js.Object {
   

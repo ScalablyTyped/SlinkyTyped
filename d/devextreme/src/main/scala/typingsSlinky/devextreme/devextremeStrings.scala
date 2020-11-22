@@ -39,9 +39,6 @@ object devextremeStrings {
   def Decimal: Decimal = "Decimal".asInstanceOf[Decimal]
   
   @scala.inline
-  def Default: Default = "Default".asInstanceOf[Default]
-  
-  @scala.inline
   def Equalssign: Equalssign = "=".asInstanceOf[Equalssign]
   
   @scala.inline
@@ -156,6 +153,12 @@ object devextremeStrings {
   def add: add = "add".asInstanceOf[add]
   
   @scala.inline
+  def addShape: addShape = "addShape".asInstanceOf[addShape]
+  
+  @scala.inline
+  def addShapeFromToolbox: addShapeFromToolbox = "addShapeFromToolbox".asInstanceOf[addShapeFromToolbox]
+  
+  @scala.inline
   def addTask: addTask = "addTask".asInstanceOf[addTask]
   
   @scala.inline
@@ -267,6 +270,12 @@ object devextremeStrings {
   def before: before = "before".asInstanceOf[before]
   
   @scala.inline
+  def beforeChangeConnectorText: beforeChangeConnectorText = "beforeChangeConnectorText".asInstanceOf[beforeChangeConnectorText]
+  
+  @scala.inline
+  def beforeChangeShapeText: beforeChangeShapeText = "beforeChangeShapeText".asInstanceOf[beforeChangeShapeText]
+  
+  @scala.inline
   def between: between = "between".asInstanceOf[between]
   
   @scala.inline
@@ -295,9 +304,6 @@ object devextremeStrings {
   
   @scala.inline
   def bottom: bottom = "bottom".asInstanceOf[bottom]
-  
-  @scala.inline
-  def bottomToolbar: bottomToolbar = "bottomToolbar".asInstanceOf[bottomToolbar]
   
   @scala.inline
   def breakWord: breakWord = "breakWord".asInstanceOf[breakWord]
@@ -355,6 +361,18 @@ object devextremeStrings {
   
   @scala.inline
   def century: century = "century".asInstanceOf[century]
+  
+  @scala.inline
+  def changeConnection: changeConnection = "changeConnection".asInstanceOf[changeConnection]
+  
+  @scala.inline
+  def changeConnectorPoints: changeConnectorPoints = "changeConnectorPoints".asInstanceOf[changeConnectorPoints]
+  
+  @scala.inline
+  def changeConnectorText: changeConnectorText = "changeConnectorText".asInstanceOf[changeConnectorText]
+  
+  @scala.inline
+  def changeShapeText: changeShapeText = "changeShapeText".asInstanceOf[changeShapeText]
   
   @scala.inline
   def circle: circle = "circle".asInstanceOf[circle]
@@ -528,7 +546,7 @@ object devextremeStrings {
   def decreaseIndent: decreaseIndent = "decreaseIndent".asInstanceOf[decreaseIndent]
   
   @scala.inline
-  def default_ : default_ = "default".asInstanceOf[default_]
+  def default: default = "default".asInstanceOf[default]
   
   @scala.inline
   def delay: delay = "delay".asInstanceOf[delay]
@@ -537,7 +555,25 @@ object devextremeStrings {
   def delete: delete = "delete".asInstanceOf[delete]
   
   @scala.inline
+  def deleteColumn: deleteColumn = "deleteColumn".asInstanceOf[deleteColumn]
+  
+  @scala.inline
+  def deleteConnector: deleteConnector = "deleteConnector".asInstanceOf[deleteConnector]
+  
+  @scala.inline
+  def deleteDependency: deleteDependency = "deleteDependency".asInstanceOf[deleteDependency]
+  
+  @scala.inline
+  def deleteRow: deleteRow = "deleteRow".asInstanceOf[deleteRow]
+  
+  @scala.inline
+  def deleteShape: deleteShape = "deleteShape".asInstanceOf[deleteShape]
+  
+  @scala.inline
   def deleteShapeImage: deleteShapeImage = "deleteShapeImage".asInstanceOf[deleteShapeImage]
+  
+  @scala.inline
+  def deleteTable: deleteTable = "deleteTable".asInstanceOf[deleteTable]
   
   @scala.inline
   def deleteTask: deleteTask = "deleteTask".asInstanceOf[deleteTask]
@@ -990,7 +1026,22 @@ object devextremeStrings {
   def info: info = "info".asInstanceOf[info]
   
   @scala.inline
+  def insertColumnLeft: insertColumnLeft = "insertColumnLeft".asInstanceOf[insertColumnLeft]
+  
+  @scala.inline
+  def insertColumnRight: insertColumnRight = "insertColumnRight".asInstanceOf[insertColumnRight]
+  
+  @scala.inline
+  def insertRowAbove: insertRowAbove = "insertRowAbove".asInstanceOf[insertRowAbove]
+  
+  @scala.inline
+  def insertRowBelow: insertRowBelow = "insertRowBelow".asInstanceOf[insertRowBelow]
+  
+  @scala.inline
   def insertShapeImage: insertShapeImage = "insertShapeImage".asInstanceOf[insertShapeImage]
+  
+  @scala.inline
+  def insertTable: insertTable = "insertTable".asInstanceOf[insertTable]
   
   @scala.inline
   def inside: inside = "inside".asInstanceOf[inside]
@@ -1011,9 +1062,6 @@ object devextremeStrings {
   def ios: ios = "ios".asInstanceOf[ios]
   
   @scala.inline
-  def ios7Dotdefault: ios7Dotdefault = "ios7.default".asInstanceOf[ios7Dotdefault]
-  
-  @scala.inline
   def isblank: isblank = "isblank".asInstanceOf[isblank]
   
   @scala.inline
@@ -1021,6 +1069,9 @@ object devextremeStrings {
   
   @scala.inline
   def italic: italic = "italic".asInstanceOf[italic]
+  
+  @scala.inline
+  def itemView: itemView = "itemView".asInstanceOf[itemView]
   
   @scala.inline
   def jpg: jpg = "jpg".asInstanceOf[jpg]
@@ -1236,13 +1287,13 @@ object devextremeStrings {
   def months: months = "months".asInstanceOf[months]
   
   @scala.inline
-  def mouse: mouse = "mouse".asInstanceOf[mouse]
-  
-  @scala.inline
   def move: move = "move".asInstanceOf[move]
   
   @scala.inline
   def moveFocus: moveFocus = "moveFocus".asInstanceOf[moveFocus]
+  
+  @scala.inline
+  def moveShape: moveShape = "moveShape".asInstanceOf[moveShape]
   
   @scala.inline
   def multiple: multiple = "multiple".asInstanceOf[multiple]
@@ -1252,6 +1303,9 @@ object devextremeStrings {
   
   @scala.inline
   def native: native = "native".asInstanceOf[native]
+  
+  @scala.inline
+  def navPane: navPane = "navPane".asInstanceOf[navPane]
   
   @scala.inline
   def nearestPoint: nearestPoint = "nearestPoint".asInstanceOf[nearestPoint]
@@ -1516,6 +1570,9 @@ object devextremeStrings {
   
   @scala.inline
   def reshape: reshape = "reshape".asInstanceOf[reshape]
+  
+  @scala.inline
+  def resizeShape: resizeShape = "resizeShape".asInstanceOf[resizeShape]
   
   @scala.inline
   def rhombus: rhombus = "rhombus".asInstanceOf[rhombus]
@@ -1812,6 +1869,9 @@ object devextremeStrings {
   def target: target = "target".asInstanceOf[target]
   
   @scala.inline
+  def taskDetails: taskDetails = "taskDetails".asInstanceOf[taskDetails]
+  
+  @scala.inline
   def tel: tel = "tel".asInstanceOf[tel]
   
   @scala.inline
@@ -1864,12 +1924,6 @@ object devextremeStrings {
   
   @scala.inline
   def topN: topN = "topN".asInstanceOf[topN]
-  
-  @scala.inline
-  def topToolbar: topToolbar = "topToolbar".asInstanceOf[topToolbar]
-  
-  @scala.inline
-  def touch: touch = "touch".asInstanceOf[touch]
   
   @scala.inline
   def tree: tree = "tree".asInstanceOf[tree]
@@ -2034,9 +2088,6 @@ object devextremeStrings {
   sealed trait Decimal extends js.Object
   
   @js.native
-  sealed trait Default extends js.Object
-  
-  @js.native
   sealed trait Equalssign extends js.Object
   
   @js.native
@@ -2151,6 +2202,12 @@ object devextremeStrings {
   sealed trait add extends js.Object
   
   @js.native
+  sealed trait addShape extends js.Object
+  
+  @js.native
+  sealed trait addShapeFromToolbox extends js.Object
+  
+  @js.native
   sealed trait addTask extends js.Object
   
   @js.native
@@ -2262,6 +2319,12 @@ object devextremeStrings {
   sealed trait before extends js.Object
   
   @js.native
+  sealed trait beforeChangeConnectorText extends js.Object
+  
+  @js.native
+  sealed trait beforeChangeShapeText extends js.Object
+  
+  @js.native
   sealed trait between extends js.Object
   
   @js.native
@@ -2290,9 +2353,6 @@ object devextremeStrings {
   
   @js.native
   sealed trait bottom extends js.Object
-  
-  @js.native
-  sealed trait bottomToolbar extends js.Object
   
   @js.native
   sealed trait breakWord extends js.Object
@@ -2350,6 +2410,18 @@ object devextremeStrings {
   
   @js.native
   sealed trait century extends js.Object
+  
+  @js.native
+  sealed trait changeConnection extends js.Object
+  
+  @js.native
+  sealed trait changeConnectorPoints extends js.Object
+  
+  @js.native
+  sealed trait changeConnectorText extends js.Object
+  
+  @js.native
+  sealed trait changeShapeText extends js.Object
   
   @js.native
   sealed trait circle extends js.Object
@@ -2525,7 +2597,7 @@ object devextremeStrings {
   sealed trait decreaseIndent extends js.Object
   
   @js.native
-  sealed trait default_ extends js.Object
+  sealed trait default extends js.Object
   
   @js.native
   sealed trait delay extends js.Object
@@ -2534,7 +2606,25 @@ object devextremeStrings {
   sealed trait delete extends js.Object
   
   @js.native
+  sealed trait deleteColumn extends js.Object
+  
+  @js.native
+  sealed trait deleteConnector extends js.Object
+  
+  @js.native
+  sealed trait deleteDependency extends js.Object
+  
+  @js.native
+  sealed trait deleteRow extends js.Object
+  
+  @js.native
+  sealed trait deleteShape extends js.Object
+  
+  @js.native
   sealed trait deleteShapeImage extends js.Object
+  
+  @js.native
+  sealed trait deleteTable extends js.Object
   
   @js.native
   sealed trait deleteTask extends js.Object
@@ -2989,7 +3079,22 @@ object devextremeStrings {
   sealed trait info extends js.Object
   
   @js.native
+  sealed trait insertColumnLeft extends js.Object
+  
+  @js.native
+  sealed trait insertColumnRight extends js.Object
+  
+  @js.native
+  sealed trait insertRowAbove extends js.Object
+  
+  @js.native
+  sealed trait insertRowBelow extends js.Object
+  
+  @js.native
   sealed trait insertShapeImage extends js.Object
+  
+  @js.native
+  sealed trait insertTable extends js.Object
   
   @js.native
   sealed trait inside extends js.Object
@@ -3010,9 +3115,6 @@ object devextremeStrings {
   sealed trait ios extends js.Object
   
   @js.native
-  sealed trait ios7Dotdefault extends js.Object
-  
-  @js.native
   sealed trait isblank extends js.Object
   
   @js.native
@@ -3020,6 +3122,9 @@ object devextremeStrings {
   
   @js.native
   sealed trait italic extends js.Object
+  
+  @js.native
+  sealed trait itemView extends js.Object
   
   @js.native
   sealed trait jpg extends js.Object
@@ -3241,13 +3346,13 @@ object devextremeStrings {
   sealed trait months extends js.Object
   
   @js.native
-  sealed trait mouse extends js.Object
-  
-  @js.native
   sealed trait move extends js.Object
   
   @js.native
   sealed trait moveFocus extends js.Object
+  
+  @js.native
+  sealed trait moveShape extends js.Object
   
   @js.native
   sealed trait multiple extends js.Object
@@ -3257,6 +3362,9 @@ object devextremeStrings {
   
   @js.native
   sealed trait native extends js.Object
+  
+  @js.native
+  sealed trait navPane extends js.Object
   
   @js.native
   sealed trait nearestPoint extends js.Object
@@ -3523,6 +3631,9 @@ object devextremeStrings {
   
   @js.native
   sealed trait reshape extends js.Object
+  
+  @js.native
+  sealed trait resizeShape extends js.Object
   
   @js.native
   sealed trait rhombus extends js.Object
@@ -3821,6 +3932,9 @@ object devextremeStrings {
   sealed trait target extends js.Object
   
   @js.native
+  sealed trait taskDetails extends js.Object
+  
+  @js.native
   sealed trait tel extends js.Object
   
   @js.native
@@ -3873,12 +3987,6 @@ object devextremeStrings {
   
   @js.native
   sealed trait topN extends js.Object
-  
-  @js.native
-  sealed trait topToolbar extends js.Object
-  
-  @js.native
-  sealed trait touch extends js.Object
   
   @js.native
   sealed trait tree extends js.Object

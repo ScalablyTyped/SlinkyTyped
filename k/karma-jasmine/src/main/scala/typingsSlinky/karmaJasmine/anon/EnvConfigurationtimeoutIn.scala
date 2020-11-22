@@ -8,8 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EnvConfigurationtimeoutIn extends js.Object {
   
-  var Promise: js.UndefOr[js.Function] = js.native
-  
   var failFast: js.UndefOr[Boolean] = js.native
   
   var failSpecWithNoExpectations: js.UndefOr[Boolean] = js.native
@@ -17,6 +15,8 @@ trait EnvConfigurationtimeoutIn extends js.Object {
   var hideDisabled: js.UndefOr[Boolean] = js.native
   
   var oneFailurePerSpec: js.UndefOr[Boolean] = js.native
+  
+  var promise: js.UndefOr[js.Function] = js.native
   
   var random: js.UndefOr[Boolean] = js.native
   
@@ -51,12 +51,6 @@ object EnvConfigurationtimeoutIn {
     }
     
     @scala.inline
-    def setPromise(value: js.Function): Self = this.set("Promise", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePromise: Self = this.set("Promise", js.undefined)
-    
-    @scala.inline
     def setFailFast(value: Boolean): Self = this.set("failFast", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -79,6 +73,12 @@ object EnvConfigurationtimeoutIn {
     
     @scala.inline
     def deleteOneFailurePerSpec: Self = this.set("oneFailurePerSpec", js.undefined)
+    
+    @scala.inline
+    def setPromise(value: js.Function): Self = this.set("promise", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePromise: Self = this.set("promise", js.undefined)
     
     @scala.inline
     def setRandom(value: Boolean): Self = this.set("random", value.asInstanceOf[js.Any])

@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.xrm.xrmStrings.lookup
   - typingsSlinky.xrm.xrmStrings.memo
   - typingsSlinky.xrm.xrmStrings.money
-  - typingsSlinky.xrm.xrmStrings.multioptionset
+  - typingsSlinky.xrm.xrmStrings.multiselectoptionset
   - typingsSlinky.xrm.xrmStrings.optionset
   - typingsSlinky.xrm.xrmStrings.string
 */
@@ -49,7 +49,7 @@ object AttributeType {
   def money: typingsSlinky.xrm.xrmStrings.money = "money".asInstanceOf[typingsSlinky.xrm.xrmStrings.money]
   
   @scala.inline
-  def multioptionset: typingsSlinky.xrm.xrmStrings.multioptionset = "multioptionset".asInstanceOf[typingsSlinky.xrm.xrmStrings.multioptionset]
+  def multiselectoptionset: typingsSlinky.xrm.xrmStrings.multiselectoptionset = "multiselectoptionset".asInstanceOf[typingsSlinky.xrm.xrmStrings.multiselectoptionset]
   
   @scala.inline
   def optionset: typingsSlinky.xrm.xrmStrings.optionset = "optionset".asInstanceOf[typingsSlinky.xrm.xrmStrings.optionset]

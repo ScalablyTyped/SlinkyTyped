@@ -289,7 +289,7 @@ object webTwainBufferMod extends js.Object {
       * [Deprecation] Return how many images are selected.
       * [Alternative] Read the length of SelectedImagesIndices instead.
       */
-    val SelectedImagesCount: Double = js.native
+    var SelectedImagesCount: Double = js.native
     
     /**
       * Return the indices of the selected images.

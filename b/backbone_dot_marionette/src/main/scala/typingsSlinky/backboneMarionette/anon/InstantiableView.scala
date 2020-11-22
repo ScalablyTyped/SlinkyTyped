@@ -9,5 +9,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InstantiableView[TModel /* <: Model[_, ModelSetOptions] */]
+trait InstantiableView[TModel /* <: Model[_, ModelSetOptions, js.Object] */]
   extends Instantiable1[/* args (repeated) */ js.Any, View[TModel]]

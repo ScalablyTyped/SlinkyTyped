@@ -1,7 +1,7 @@
 
 # Scala.js typings for http-link-header
 
-Typings are for version 1.0.2
+Typings are for version 1.0
 
 ## Library description:
 Parse & format HTTP link headers according to RFC 8288

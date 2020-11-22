@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

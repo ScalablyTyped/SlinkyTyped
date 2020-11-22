@@ -11,15 +11,14 @@ import typingsSlinky.tensorflowTfjsBackendWebgl.tensorflowTfjsBackendWebglString
 import typingsSlinky.tensorflowTfjsBackendWebgl.texUtilMod.TextureData
 import typingsSlinky.tensorflowTfjsBackendWebgl.textureManagerMod.TextureManager
 import typingsSlinky.tensorflowTfjsCore.backendMod.KernelBackend
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor2D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.BackendValues
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.DataId
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.TensorInfo
 import typingsSlinky.tensorflowTfjsCore.mod.DataStorage
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -88,12 +87,6 @@ class MathBackendWebGL () extends KernelBackend {
     preventEagerUnpackingOfOutput: Boolean
   ): K = js.native
   
-  /**
-    * Computes a complex binary operation that can be decomposed into a simple
-    * binary operation on both the real and imagary parts.
-    */
-  var complexSeparableBinaryOp: js.Any = js.native
-  
   var computeBytes: js.Any = js.native
   
   var conv2dByMatMul: js.Any = js.native
@@ -125,6 +118,9 @@ class MathBackendWebGL () extends KernelBackend {
   
   var dataRefCount: js.Any = js.native
   
+  /** Decrease refCount of a `TextureData`. */
+  def decRef(dataId: DataId): Unit = js.native
+  
   var decode: js.Any = js.native
   
   @JSName("depthToSpace")
@@ -132,13 +128,13 @@ class MathBackendWebGL () extends KernelBackend {
   @JSName("depthToSpace")
   def depthToSpace_NHWC(x: Tensor4D, blockSize: Double, dataFormat: NHWC): Tensor4D = js.native
   
+  def disposeIntermediateTensorInfo(tensorInfo: TensorInfo): Unit = js.native
+  
   var disposed: js.Any = js.native
   
   var downloadWaitMs: js.Any = js.native
   
   var endTimer: js.Any = js.native
-  
-  var fftImpl: js.Any = js.native
   
   var floatPrecisionValue: js.Any = js.native
   
@@ -166,11 +162,15 @@ class MathBackendWebGL () extends KernelBackend {
   
   var gpgpuCreatedLocally: js.Any = js.native
   
+  /** Increase refCount of a `TextureData`. */
+  def incRef(dataId: DataId): Unit = js.native
+  
   var makeComplexComponentTensorInfo: js.Any = js.native
   
   var makeOutput: js.Any = js.native
   
   def makeTensorInfo(shape: js.Array[Double], dtype: DataType): TensorInfo = js.native
+  def makeTensorInfo(shape: js.Array[Double], dtype: DataType, values: BackendValues): TensorInfo = js.native
   
   var numBytesInGPU: js.Any = js.native
   
@@ -195,11 +195,6 @@ class MathBackendWebGL () extends KernelBackend {
   var reduce: js.Any = js.native
   
   var releaseGPUData: js.Any = js.native
-  
-  def reshape[R /* <: Rank */](
-    x: Tensor[Rank],
-    shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any
-  ): Tensor[R] = js.native
   
   def runWebGLProgram(program: GPGPUProgram, inputs: js.Array[TensorInfo], outputDtype: DataType): TensorInfo = js.native
   def runWebGLProgram(
@@ -236,11 +231,15 @@ class MathBackendWebGL () extends KernelBackend {
   
   var textureManager: js.Any = js.native
   
+  var tryRunOnCpuOrThrow: js.Any = js.native
+  
   var unpackTensor: js.Any = js.native
   
   var uploadToGPU: js.Any = js.native
   
   var uploadWaitMs: js.Any = js.native
+  
+  var warnedAboutCPUBackend: js.Any = js.native
   
   var warnedAboutMemory: js.Any = js.native
 }

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PutSessionResponse extends js.Object {
   
   /**
+    * A list of active contexts for the session.
+    */
+  var activeContexts: js.UndefOr[ActiveContextsString] = js.native
+  
+  /**
     * The audio version of the message to convey to the user.
     */
   var audioStream: js.UndefOr[BlobStream] = js.native
@@ -79,6 +84,12 @@ object PutSessionResponse {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setActiveContexts(value: ActiveContextsString): Self = this.set("activeContexts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteActiveContexts: Self = this.set("activeContexts", js.undefined)
     
     @scala.inline
     def setAudioStreamUint8Array(value: js.typedarray.Uint8Array): Self = this.set("audioStream", value.asInstanceOf[js.Any])

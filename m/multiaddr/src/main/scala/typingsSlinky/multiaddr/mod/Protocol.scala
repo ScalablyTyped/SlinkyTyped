@@ -7,21 +7,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Protocol extends js.Object {
   
-  var code: Code = js.native
+  var code: Double = js.native
   
   var name: String = js.native
   
-  var path: Boolean = js.native
+  var path: js.UndefOr[Boolean] = js.native
   
-  var resolvable: Boolean = js.native
+  var resolvable: js.UndefOr[Boolean] = js.native
   
-  var size: Size = js.native
+  var size: Double = js.native
 }
 object Protocol {
   
   @scala.inline
-  def apply(code: Code, name: String, path: Boolean, resolvable: Boolean, size: Size): Protocol = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], resolvable = resolvable.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
+  def apply(code: Double, name: String, size: Double): Protocol = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[Protocol]
   }
   
@@ -41,18 +41,24 @@ object Protocol {
     }
     
     @scala.inline
-    def setCode(value: Code): Self = this.set("code", value.asInstanceOf[js.Any])
+    def setCode(value: Double): Self = this.set("code", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setPath(value: Boolean): Self = this.set("path", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePath: Self = this.set("path", js.undefined)
     
     @scala.inline
     def setResolvable(value: Boolean): Self = this.set("resolvable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSize(value: Size): Self = this.set("size", value.asInstanceOf[js.Any])
+    def deleteResolvable: Self = this.set("resolvable", js.undefined)
   }
 }

@@ -80,7 +80,6 @@ trait Recurrence extends js.Object {
     *                `asyncResult`, which is an `Office.AsyncResult` object. The `value` property of the result is a `Recurrence` object.
     */
   def getAsync(): Unit = js.native
-  def getAsync(callback: js.Function1[/* asyncResult */ AsyncResult[this.type], Unit]): Unit = js.native
   def getAsync(
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[this.type], Unit]
@@ -169,7 +168,6 @@ trait Recurrence extends js.Object {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def setAsync(recurrencePattern: Recurrence): Unit = js.native
-  def setAsync(recurrencePattern: Recurrence, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def setAsync(
     recurrencePattern: Recurrence,
     options: js.UndefOr[scala.Nothing],

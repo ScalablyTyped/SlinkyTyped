@@ -64,7 +64,7 @@ object args extends js.Object {
   /**
     * _Query parameters from a URL scheme._
     *
-    * Query parameters are supplied to a script when running it from a URL scheme. See the documentation on Scriptables URL schems for more information.
+    * Query parameters are supplied to a script when running it from a URL scheme. See the documentation on Scriptables URL schemes for more information.
     * @see https://docs.scriptable.app/args/#queryparameters
     */
   var queryParameters: StringDictionary[String] = js.native
@@ -72,7 +72,7 @@ object args extends js.Object {
   /**
     * _Parameter passed to a Shortcut._
     *
-    * When creating a shortcut using the Shortcuts app, you can pass an input parameter that is passed to your script and that can be read using `args.shortcutParameter`.
+    * When creating a shortcut using the Shortcuts app, you can pass an input parameter that can be read in your script using `args.shortcutParameter`.
     *
     * This parameter can be any text, list, dictionary or file and will be exposed in your script using the appropriate type. When passing a file, the "Run Script" action will attempt to
     * read the file as JSON or a plain text. If the file cannot be read as JSON or a plain text, a path to the file will be passed as the input parameter.
@@ -81,7 +81,7 @@ object args extends js.Object {
   var shortcutParameter: js.Any = js.native
   
   /**
-    * _URLs supplied by a share sheet or a shortcut action.._
+    * _URLs supplied by a share sheet or a shortcut action._
     *
     * All URLs passed to the script from a share sheet or a shortcut action.
     *
@@ -89,4 +89,14 @@ object args extends js.Object {
     * @see https://docs.scriptable.app/args/#urls
     */
   var urls: js.Array[String] = js.native
+  
+  /**
+    * _Parameter passed to a widget._
+    *
+    * When creating a widget on the Home screen, you can define a parameter that can be read in your script using `args.widgetParameter`.
+    *
+    * The parameter can be used to differentiate the behavior of multiple widgets.
+    * @see https://docs.scriptable.app/args/#widgetparameter
+    */
+  var widgetParameter: js.Any = js.native
 }

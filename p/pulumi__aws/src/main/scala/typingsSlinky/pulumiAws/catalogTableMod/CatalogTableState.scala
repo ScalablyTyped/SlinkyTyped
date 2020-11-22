@@ -47,7 +47,7 @@ trait CatalogTableState extends js.Object {
   val parameters: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
-    * A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+    * A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
     */
   val partitionKeys: js.UndefOr[Input[js.Array[Input[CatalogTablePartitionKey]]]] = js.native
   
@@ -62,7 +62,7 @@ trait CatalogTableState extends js.Object {
   val storageDescriptor: js.UndefOr[Input[CatalogTableStorageDescriptor]] = js.native
   
   /**
-    * The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
+    * The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
     */
   val tableType: js.UndefOr[Input[String]] = js.native
   

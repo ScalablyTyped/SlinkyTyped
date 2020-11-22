@@ -1,5 +1,6 @@
 package typingsSlinky.xstyledStyledComponents
 
+import typingsSlinky.xstyledStyledComponents.mod.BreakpointName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -298,6 +299,9 @@ object xstyledStyledComponentsStrings {
   def legend: legend = "legend".asInstanceOf[legend]
   
   @scala.inline
+  def lg: lg = "lg".asInstanceOf[lg]
+  
+  @scala.inline
   def li: li = "li".asInstanceOf[li]
   
   @scala.inline
@@ -323,6 +327,9 @@ object xstyledStyledComponentsStrings {
   
   @scala.inline
   def mask: mask = "mask".asInstanceOf[mask]
+  
+  @scala.inline
+  def md: md = "md".asInstanceOf[md]
   
   @scala.inline
   def menu: menu = "menu".asInstanceOf[menu]
@@ -430,6 +437,9 @@ object xstyledStyledComponentsStrings {
   def slot: slot = "slot".asInstanceOf[slot]
   
   @scala.inline
+  def sm: sm = "sm".asInstanceOf[sm]
+  
+  @scala.inline
   def small: small = "small".asInstanceOf[small]
   
   @scala.inline
@@ -533,6 +543,12 @@ object xstyledStyledComponentsStrings {
   
   @scala.inline
   def webview: webview = "webview".asInstanceOf[webview]
+  
+  @scala.inline
+  def xl: xl = "xl".asInstanceOf[xl]
+  
+  @scala.inline
+  def xs: xs = "xs".asInstanceOf[xs]
   
   @js.native
   sealed trait WithBreakpointArgs extends js.Object
@@ -826,6 +842,9 @@ object xstyledStyledComponentsStrings {
   sealed trait legend extends js.Object
   
   @js.native
+  sealed trait lg extends BreakpointName
+  
+  @js.native
   sealed trait li extends js.Object
   
   @js.native
@@ -851,6 +870,9 @@ object xstyledStyledComponentsStrings {
   
   @js.native
   sealed trait mask extends js.Object
+  
+  @js.native
+  sealed trait md extends BreakpointName
   
   @js.native
   sealed trait menu extends js.Object
@@ -958,6 +980,9 @@ object xstyledStyledComponentsStrings {
   sealed trait slot extends js.Object
   
   @js.native
+  sealed trait sm extends BreakpointName
+  
+  @js.native
   sealed trait small extends js.Object
   
   @js.native
@@ -1061,4 +1086,10 @@ object xstyledStyledComponentsStrings {
   
   @js.native
   sealed trait webview extends js.Object
+  
+  @js.native
+  sealed trait xl extends BreakpointName
+  
+  @js.native
+  sealed trait xs extends BreakpointName
 }

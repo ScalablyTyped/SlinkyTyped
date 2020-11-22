@@ -7,8 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxBarGauge extends BaseWidget {
   
-  /** @name dxBarGauge.values() */
+  /**
+    * [descr:dxBarGauge.values()]
+    */
   def values(): js.Array[Double] = js.native
-  /** @name dxBarGauge.values(newValues) */
+  /**
+    * [descr:dxBarGauge.values(newValues)]
+    */
   def values(values: js.Array[Double]): Unit = js.native
 }

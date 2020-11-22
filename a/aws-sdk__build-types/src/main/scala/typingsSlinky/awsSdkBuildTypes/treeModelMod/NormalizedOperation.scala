@@ -2,7 +2,6 @@ package typingsSlinky.awsSdkBuildTypes.treeModelMod
 
 import typingsSlinky.awsSdkBuildTypes.apiModelMod.Operation
 import typingsSlinky.awsSdkBuildTypes.apiModelMod.StructureMember
-import typingsSlinky.awsSdkTypes.protocolMod.HttpTrait
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +23,7 @@ object NormalizedOperation {
   @scala.inline
   def apply(
     errors: js.Array[StructureMember],
-    http: HttpTrait,
+    http: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpTrait */ js.Any,
     input: StructureMember,
     name: String,
     output: StructureMember

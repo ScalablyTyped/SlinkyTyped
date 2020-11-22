@@ -39,7 +39,7 @@ class Map_ protected () extends IEventEmitter {
   def destroy(): Unit = js.native
   
   @JSName("events")
-  var events_Map_ : typingsSlinky.yandexMaps.mod.event.Manager = js.native
+  var events_Map_ : typingsSlinky.yandexMaps.mod.event.Manager[js.Object] = js.native
   
   var geoObjects: GeoObjects = js.native
   

@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ɵangularPackagesCoreCoreP extends js.Object {
   
-  def apply(): IterableDiffers = js.native
+  def apply(nativeNode: js.Any): DebugNode | Null = js.native
 }

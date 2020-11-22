@@ -1,10 +1,11 @@
 package typingsSlinky.authmosphere
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.authmosphere.anon.Token
 import typingsSlinky.authmosphere.getTokenInfoMod.GetTokenInfo
 import typingsSlinky.authmosphere.loggerMod.Logger
 import typingsSlinky.authmosphere.oauthconfigMod.OAuthConfig
+import typingsSlinky.authmosphere.tokenMod.Token
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,8 +41,8 @@ object oauthToolingMod extends js.Object {
     * @param logger - optional logger
     * @returns {Promise<T>}
     */
-  def getAccessToken(options: OAuthConfig): js.Promise[Token] = js.native
-  def getAccessToken(options: OAuthConfig, logger: Logger): js.Promise[Token] = js.native
+  def getAccessToken(options: OAuthConfig): js.Promise[Token[Record[String, _]]] = js.native
+  def getAccessToken(options: OAuthConfig, logger: Logger): js.Promise[Token[Record[String, _]]] = js.native
   
   /**
     * Makes a request to the `tokenInfoUrl` to validate the given `accessToken`.
@@ -56,5 +57,5 @@ object oauthToolingMod extends js.Object {
     *
     * @returns { Promise<Token<T>> }
     */
-  val getTokenInfo: GetTokenInfo[js.Object] = js.native
+  val getTokenInfo: GetTokenInfo[Record[String, js.Any]] = js.native
 }

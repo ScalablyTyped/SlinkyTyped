@@ -1,5 +1,6 @@
 package typingsSlinky.novaEditorNode
 
+import typingsSlinky.novaEditorNode.anon.CURRENT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,6 +23,8 @@ trait FileSystem extends js.Object {
   var X_OK: FileSystemBitField = js.native
   
   def access(path: String, modes: Double): Boolean = js.native
+  
+  var constants: CURRENT = js.native
   
   def copy(src: String, dest: String): Unit = js.native
   

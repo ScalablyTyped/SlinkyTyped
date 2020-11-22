@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PrivacyProfile extends js.Object {
   
   // A valid smtp email address for the privacy statement contact. Not required.
-  var contactEmail: js.UndefOr[String] = js.native
+  var contactEmail: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the
     * company's privacy statement. Not required.
     */
-  var statementUrl: js.UndefOr[String] = js.native
+  var statementUrl: js.UndefOr[NullableOption[String]] = js.native
 }
 object PrivacyProfile {
   
@@ -40,15 +40,21 @@ object PrivacyProfile {
     }
     
     @scala.inline
-    def setContactEmail(value: String): Self = this.set("contactEmail", value.asInstanceOf[js.Any])
+    def setContactEmail(value: NullableOption[String]): Self = this.set("contactEmail", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContactEmail: Self = this.set("contactEmail", js.undefined)
     
     @scala.inline
-    def setStatementUrl(value: String): Self = this.set("statementUrl", value.asInstanceOf[js.Any])
+    def setContactEmailNull: Self = this.set("contactEmail", null)
+    
+    @scala.inline
+    def setStatementUrl(value: NullableOption[String]): Self = this.set("statementUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStatementUrl: Self = this.set("statementUrl", js.undefined)
+    
+    @scala.inline
+    def setStatementUrlNull: Self = this.set("statementUrl", null)
   }
 }

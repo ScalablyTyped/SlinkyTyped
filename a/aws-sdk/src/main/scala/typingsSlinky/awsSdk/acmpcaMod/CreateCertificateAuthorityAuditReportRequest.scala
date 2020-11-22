@@ -20,7 +20,7 @@ trait CreateCertificateAuthorityAuditReportRequest extends js.Object {
   /**
     * The name of the S3 bucket that will contain the audit report.
     */
-  var S3BucketName: String = js.native
+  var S3BucketName: typingsSlinky.awsSdk.acmpcaMod.S3BucketName = js.native
 }
 object CreateCertificateAuthorityAuditReportRequest {
   
@@ -28,7 +28,7 @@ object CreateCertificateAuthorityAuditReportRequest {
   def apply(
     AuditReportResponseFormat: AuditReportResponseFormat,
     CertificateAuthorityArn: Arn,
-    S3BucketName: String
+    S3BucketName: S3BucketName
   ): CreateCertificateAuthorityAuditReportRequest = {
     val __obj = js.Dynamic.literal(AuditReportResponseFormat = AuditReportResponseFormat.asInstanceOf[js.Any], CertificateAuthorityArn = CertificateAuthorityArn.asInstanceOf[js.Any], S3BucketName = S3BucketName.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateCertificateAuthorityAuditReportRequest]
@@ -56,6 +56,6 @@ object CreateCertificateAuthorityAuditReportRequest {
     def setCertificateAuthorityArn(value: Arn): Self = this.set("CertificateAuthorityArn", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setS3BucketName(value: String): Self = this.set("S3BucketName", value.asInstanceOf[js.Any])
+    def setS3BucketName(value: S3BucketName): Self = this.set("S3BucketName", value.asInstanceOf[js.Any])
   }
 }

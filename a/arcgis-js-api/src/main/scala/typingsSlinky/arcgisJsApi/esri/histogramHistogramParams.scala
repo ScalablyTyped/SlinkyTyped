@@ -15,15 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait histogramHistogramParams extends Object {
   
   /**
-    * The method for classifying the data. See the table below for a list of possible values.
-    *
-    * | Possible Value | Description |
-    * |---------------|------------ |
-    * | natural-breaks | Data values that cluster are placed into a single class. Class breaks occur where gaps exist between clusters. You should use this method if your data is unevenly distributed; that is, many features have the same or similar values and there are gaps between groups of values. |
-    * | equal-interval | Each class has an equal range of values; in other words, the difference between the high and low value is equal for each class. You should use this method if your data is evenly distributed and you want to emphasize the difference in values between the features. |
-    * | quantile | Each class has roughly the same number of features. If your data is evenly distributed and you want to emphasize the difference in relative position between features, you should use the quantile classification method. If, for example, the point values are divided into five classes, points in the highest class would fall into the top fifth of all points.  |
-    * | standard-deviation | Class breaks are placed above and below the mean value at intervals of `1`, `0.5`, or `0.25` standard deviations until all the data values are included in a class.  |
-    *
+    * The method for classifying the data.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-histogram.html#histogram)
     */
@@ -37,7 +29,7 @@ trait histogramHistogramParams extends Object {
   var features: js.UndefOr[js.Array[Graphic]] = js.native
   
   /**
-    * The name of the numeric field for which the histogram will be generated. This property is ignored if a `valueExpression` is used.
+    * The name of the numeric field for which the histogram will be generated.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-histogram.html#histogram)
     */
@@ -51,14 +43,14 @@ trait histogramHistogramParams extends Object {
   var layer: FeatureLayer | SceneLayer | CSVLayer | PointCloudLayer | GeoJSONLayer = js.native
   
   /**
-    * The maximum bounding value for the histogram. Use this in conjunction with `minValue` to generate a histogram between custom lower and upper bounds.
+    * The maximum bounding value for the histogram.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-histogram.html#histogram)
     */
   var maxValue: js.UndefOr[Double] = js.native
   
   /**
-    * The minimum bounding value for the histogram. Use this in conjunction with `maxValue` to generate a histogram between custom lower and upper bounds.
+    * The minimum bounding value for the histogram.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-histogram.html#histogram)
     */
@@ -75,13 +67,11 @@ trait histogramHistogramParams extends Object {
     * Indicates the number of classes to generate for the histogram.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-histogram.html#histogram)
-    *
-    * @default 10
     */
   var numBins: js.UndefOr[Double] = js.native
   
   /**
-    * Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+    * Allows for cancelable requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-histogram.html#histogram)
     */
@@ -95,21 +85,21 @@ trait histogramHistogramParams extends Object {
   var sqlExpression: js.UndefOr[String] = js.native
   
   /**
-    * A SQL where clause used to filter features for the statistics query. For example, this is useful in situations where you want to avoid dividing by zero as is the case with creating a predominance visualization.
+    * A SQL where clause used to filter features for the statistics query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-histogram.html#histogram)
     */
   var sqlWhere: js.UndefOr[String] = js.native
   
   /**
-    * When `classificationMethod = "standard-deviation"`, this sets the interval at which each class break should be set (e.g. `0.25`, `0.33`, `0.5`, `1`).
+    * When `classificationMethod = "standard-deviation"`, this sets the interval at which each class break should be set (e.g.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-histogram.html#histogram)
     */
   var standardDeviationInterval: js.UndefOr[Double] = js.native
   
   /**
-    * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that returns a number. This expression can reference field values using the `$feature` global variable. This property overrides the `field` property and therefore is used instead of an input `field` value.
+    * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that returns a number.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-histogram.html#histogram)
     */

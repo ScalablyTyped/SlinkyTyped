@@ -9,6 +9,7 @@ import typingsSlinky.node.http2Mod.ServerOptions
 import typingsSlinky.webpackPluginServe.anon.Address
 import typingsSlinky.webpackPluginServe.anon.App
 import typingsSlinky.webpackPluginServe.anon.Level
+import typingsSlinky.webpackPluginServe.webpackPluginServeStrings.`refresh-on-failure`
 import typingsSlinky.webpackPluginServe.webpackPluginServeStrings.minimal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +24,7 @@ trait WebpackPluginServeOptions extends js.Object {
   
   var historyFallback: js.UndefOr[Boolean | Options] = js.native
   
-  var hmr: js.UndefOr[Boolean] = js.native
+  var hmr: js.UndefOr[Boolean | `refresh-on-failure`] = js.native
   
   var host: js.UndefOr[String | js.Promise[String]] = js.native
   
@@ -93,7 +94,7 @@ object WebpackPluginServeOptions {
     def deleteHistoryFallback: Self = this.set("historyFallback", js.undefined)
     
     @scala.inline
-    def setHmr(value: Boolean): Self = this.set("hmr", value.asInstanceOf[js.Any])
+    def setHmr(value: Boolean | `refresh-on-failure`): Self = this.set("hmr", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHmr: Self = this.set("hmr", js.undefined)

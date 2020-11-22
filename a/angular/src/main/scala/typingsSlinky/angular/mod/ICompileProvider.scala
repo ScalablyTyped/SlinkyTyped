@@ -9,7 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ICompileProvider extends IServiceProvider {
   
+  def aHrefSanitizationTrustedUrlList(): js.RegExp = js.native
+  def aHrefSanitizationTrustedUrlList(regexp: js.RegExp): ICompileProvider = js.native
+  
+  /** @deprecated The old name of aHrefSanitizationTrustedUrlList. Kept for compatibility. */
   def aHrefSanitizationWhitelist(): js.RegExp = js.native
+  /** @deprecated The old name of aHrefSanitizationTrustedUrlList. Kept for compatibility. */
   def aHrefSanitizationWhitelist(regexp: js.RegExp): ICompileProvider = js.native
   
   /**
@@ -44,7 +49,12 @@ trait ICompileProvider extends IServiceProvider {
     `object`: StringDictionary[Injectable[IDirectiveFactory[TScope, TElement, TAttributes, TController]]]
   ): ICompileProvider = js.native
   
+  def imgSrcSanitizationTrustedUrlList(): js.RegExp = js.native
+  def imgSrcSanitizationTrustedUrlList(regexp: js.RegExp): ICompileProvider = js.native
+  
+  /** @deprecated The old name of imgSrcSanitizationTrustedUrlList. Kept for compatibility. */
   def imgSrcSanitizationWhitelist(): js.RegExp = js.native
+  /** @deprecated The old name of imgSrcSanitizationTrustedUrlList. Kept for compatibility. */
   def imgSrcSanitizationWhitelist(regexp: js.RegExp): ICompileProvider = js.native
   
   /**

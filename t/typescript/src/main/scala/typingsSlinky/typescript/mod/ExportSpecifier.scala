@@ -10,13 +10,13 @@ trait ExportSpecifier
      with ImportOrExportSpecifier {
   
   @JSName("kind")
-  var kind_ExportSpecifier: typingsSlinky.typescript.mod.SyntaxKind.ExportSpecifier = js.native
+  val kind_ExportSpecifier: typingsSlinky.typescript.mod.SyntaxKind.ExportSpecifier = js.native
   
   @JSName("name")
-  var name_ExportSpecifier: Identifier = js.native
+  val name_ExportSpecifier: Identifier = js.native
   
   @JSName("parent")
-  var parent_ExportSpecifier: NamedExports = js.native
+  val parent_ExportSpecifier: NamedExports = js.native
   
-  var propertyName: js.UndefOr[Identifier] = js.native
+  val propertyName: js.UndefOr[Identifier] = js.native
 }

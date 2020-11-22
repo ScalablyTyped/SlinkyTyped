@@ -11,10 +11,10 @@ trait ModuleBlock
      with NamespaceBody {
   
   @JSName("kind")
-  var kind_ModuleBlock: typingsSlinky.typescript.mod.SyntaxKind.ModuleBlock = js.native
+  val kind_ModuleBlock: typingsSlinky.typescript.mod.SyntaxKind.ModuleBlock = js.native
   
   @JSName("parent")
-  var parent_ModuleBlock: ModuleDeclaration = js.native
+  val parent_ModuleBlock: ModuleDeclaration = js.native
   
-  var statements: NodeArray[Statement] = js.native
+  val statements: NodeArray[Statement] = js.native
 }

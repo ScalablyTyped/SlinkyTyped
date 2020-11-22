@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.indexMod
 
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMinimalMotionControllerObject
-import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandness
+import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandedness
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +13,7 @@ class WebXRMicrosoftMixedRealityController protected ()
   def this(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     gamepadObject: IMinimalMotionControllerObject,
-    handness: MotionControllerHandness
+    handedness: MotionControllerHandedness
   ) = this()
 }
 /* static members */

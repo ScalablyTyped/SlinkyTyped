@@ -7,9 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AssignedLabel extends js.Object {
   
-  var displayName: js.UndefOr[String] = js.native
+  // The display name of the label. Read-only.
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
-  var labelId: js.UndefOr[String] = js.native
+  // The unique identifier of the label.
+  var labelId: js.UndefOr[NullableOption[String]] = js.native
 }
 object AssignedLabel {
   
@@ -35,15 +37,21 @@ object AssignedLabel {
     }
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
-    def setLabelId(value: String): Self = this.set("labelId", value.asInstanceOf[js.Any])
+    def setDisplayNameNull: Self = this.set("displayName", null)
+    
+    @scala.inline
+    def setLabelId(value: NullableOption[String]): Self = this.set("labelId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLabelId: Self = this.set("labelId", js.undefined)
+    
+    @scala.inline
+    def setLabelIdNull: Self = this.set("labelId", null)
   }
 }

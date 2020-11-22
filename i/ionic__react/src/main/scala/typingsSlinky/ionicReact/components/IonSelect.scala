@@ -21,8 +21,13 @@ import typingsSlinky.ionicCore.componentsMod.global.HTMLIonSelectElement
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectCompareFn
 import typingsSlinky.ionicCore.selectInterfaceMod.SelectInterface
 import typingsSlinky.ionicReact.anon.IonSelectPickHTMLAttribut
+import typingsSlinky.ionicReact.ionicReactStrings.`additions removals`
 import typingsSlinky.ionicReact.ionicReactStrings.`additions text`
 import typingsSlinky.ionicReact.ionicReactStrings.`inline`
+import typingsSlinky.ionicReact.ionicReactStrings.`removals additions`
+import typingsSlinky.ionicReact.ionicReactStrings.`removals text`
+import typingsSlinky.ionicReact.ionicReactStrings.`text additions`
+import typingsSlinky.ionicReact.ionicReactStrings.`text removals`
 import typingsSlinky.ionicReact.ionicReactStrings.additions
 import typingsSlinky.ionicReact.ionicReactStrings.all
 import typingsSlinky.ionicReact.ionicReactStrings.ascending
@@ -198,7 +203,9 @@ object IonSelect {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

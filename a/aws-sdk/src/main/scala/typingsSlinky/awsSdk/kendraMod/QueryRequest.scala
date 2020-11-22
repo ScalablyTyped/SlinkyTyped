@@ -51,6 +51,11 @@ trait QueryRequest extends js.Object {
     * Provides information that determines how the results of the query are sorted. You can set the field that Amazon Kendra should sort the results on, and specify whether the results should be sorted in ascending or descending order. In the case of ties in sorting the results, the results are sorted by relevance. If you don't provide sorting configuration, the results are sorted by the relevance that Amazon Kendra determines for the result.
     */
   var SortingConfiguration: js.UndefOr[typingsSlinky.awsSdk.kendraMod.SortingConfiguration] = js.native
+  
+  /**
+    * The user context token.
+    */
+  var UserContext: js.UndefOr[typingsSlinky.awsSdk.kendraMod.UserContext] = js.native
 }
 object QueryRequest {
   
@@ -128,5 +133,11 @@ object QueryRequest {
     
     @scala.inline
     def deleteSortingConfiguration: Self = this.set("SortingConfiguration", js.undefined)
+    
+    @scala.inline
+    def setUserContext(value: UserContext): Self = this.set("UserContext", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserContext: Self = this.set("UserContext", js.undefined)
   }
 }

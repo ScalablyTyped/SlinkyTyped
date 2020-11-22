@@ -9,7 +9,7 @@ trait FlexProps[TLength] extends js.Object {
   
   val flex: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object FlexProps {
     }
     
     @scala.inline
+    def setFlexVarargs(value: js.Any*): Self = this.set("flex", js.Array(value :_*))
+    
+    @scala.inline
     def setFlex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLength> */ _
         ]
     ): Self = this.set("flex", value.asInstanceOf[js.Any])
     

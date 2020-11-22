@@ -23,6 +23,9 @@ object Menubar {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def end(value: /* props */ js.Object => _): this.type = set("end", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -30,6 +33,9 @@ object Menubar {
     
     @scala.inline
     def model(value: js.Array[MenuItem]): this.type = set("model", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def start(value: /* props */ js.Object => _): this.type = set("start", js.Any.fromFunction1(value))
     
     @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])

@@ -26,11 +26,11 @@ object wiaAriaMod extends js.Object {
   
   val DATA_RMD_NOSCROLL: /* "data-rmd-noscroll" */ String = js.native
   
-  /**
-    * The `FocusContainer` is a wrapper for a few of the accessibility hooks to
-    * maintain focus within an element.
-    */
   val FocusContainer: ForwardRefExoticComponent[FocusContainerProps with RefAttributes[HTMLDivElement]] = js.native
+  
+  def disable(element: HTMLElement): Unit = js.native
+  
+  def enable(element: HTMLElement): Unit = js.native
   
   def extractTextContent(stringOrElement: String): String = js.native
   def extractTextContent(stringOrElement: String, fontIconQuerySelector: String): String = js.native

@@ -1,7 +1,7 @@
 
 # Scala.js typings for constantinople
 
-Typings are for version 3.1.2
+Typings are for version 4.0.1
 
 ## Library description:
 Determine whether a JavaScript expression evaluates to a constant

@@ -14,16 +14,16 @@ trait Endpoint extends DirectoryObject {
   var capability: js.UndefOr[String] = js.native
   
   // Application id of the publishing underlying service. Not nullable. Read-only.
-  var providerId: js.UndefOr[String] = js.native
+  var providerId: js.UndefOr[NullableOption[String]] = js.native
   
   // Name of the publishing underlying service. Read-only.
-  var providerName: js.UndefOr[String] = js.native
+  var providerName: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable.
     * Read-only.
     */
-  var providerResourceId: js.UndefOr[String] = js.native
+  var providerResourceId: js.UndefOr[NullableOption[String]] = js.native
   
   // URL of the published resource. Not nullable. Read-only.
   var uri: js.UndefOr[String] = js.native
@@ -58,22 +58,31 @@ object Endpoint {
     def deleteCapability: Self = this.set("capability", js.undefined)
     
     @scala.inline
-    def setProviderId(value: String): Self = this.set("providerId", value.asInstanceOf[js.Any])
+    def setProviderId(value: NullableOption[String]): Self = this.set("providerId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProviderId: Self = this.set("providerId", js.undefined)
     
     @scala.inline
-    def setProviderName(value: String): Self = this.set("providerName", value.asInstanceOf[js.Any])
+    def setProviderIdNull: Self = this.set("providerId", null)
+    
+    @scala.inline
+    def setProviderName(value: NullableOption[String]): Self = this.set("providerName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProviderName: Self = this.set("providerName", js.undefined)
     
     @scala.inline
-    def setProviderResourceId(value: String): Self = this.set("providerResourceId", value.asInstanceOf[js.Any])
+    def setProviderNameNull: Self = this.set("providerName", null)
+    
+    @scala.inline
+    def setProviderResourceId(value: NullableOption[String]): Self = this.set("providerResourceId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProviderResourceId: Self = this.set("providerResourceId", js.undefined)
+    
+    @scala.inline
+    def setProviderResourceIdNull: Self = this.set("providerResourceId", null)
     
     @scala.inline
     def setUri(value: String): Self = this.set("uri", value.asInstanceOf[js.Any])

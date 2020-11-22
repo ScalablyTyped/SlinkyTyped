@@ -56,16 +56,19 @@ trait NativeMethods extends js.Object {
     */
   def measureInWindow(callback: MeasureInWindowOnSuccessCallback): Unit = js.native
   
+  def measureLayout(
+    relativeToNativeComponentRef: Double,
+    onSuccess: MeasureLayoutOnSuccessCallback,
+    onFail: js.Function0[Unit]
+  ): Unit = js.native
   /**
     * Like [`measure()`](#measure), but measures the view relative an ancestor,
-    * specified as `relativeToNativeNode`. This means that the returned x, y
+    * specified as `relativeToNativeComponentRef`. This means that the returned x, y
     * are relative to the origin x, y of the ancestor view.
-    *
-    * As always, to obtain a native node handle for a component, you can use
-    * `React.findNodeHandle(component)`.
+    * _Can also be called with a relativeNativeNodeHandle but is deprecated._
     */
   def measureLayout(
-    relativeToNativeNode: Double,
+    relativeToNativeComponentRef: HostComponent[_],
     onSuccess: MeasureLayoutOnSuccessCallback,
     onFail: js.Function0[Unit]
   ): Unit = js.native
@@ -76,60 +79,7 @@ trait NativeMethods extends js.Object {
     * This function sends props straight to native. They will not participate in
     * future diff process - this means that if you do not include them in the
     * next render, they will remain active (see [Direct
-    * Manipulation](docs/direct-manipulation.html)).
+    * Manipulation](https://reactnative.dev/docs/direct-manipulation)).
     */
   def setNativeProps(nativeProps: js.Object): Unit = js.native
-}
-object NativeMethods {
-  
-  @scala.inline
-  def apply(
-    blur: () => Unit,
-    focus: () => Unit,
-    measure: MeasureOnSuccessCallback => Unit,
-    measureInWindow: MeasureInWindowOnSuccessCallback => Unit,
-    measureLayout: (Double, MeasureLayoutOnSuccessCallback, js.Function0[Unit]) => Unit,
-    refs: StringDictionary[ReactComponentClass[_]],
-    setNativeProps: js.Object => Unit
-  ): NativeMethods = {
-    val __obj = js.Dynamic.literal(blur = js.Any.fromFunction0(blur), focus = js.Any.fromFunction0(focus), measure = js.Any.fromFunction1(measure), measureInWindow = js.Any.fromFunction1(measureInWindow), measureLayout = js.Any.fromFunction3(measureLayout), refs = refs.asInstanceOf[js.Any], setNativeProps = js.Any.fromFunction1(setNativeProps))
-    __obj.asInstanceOf[NativeMethods]
-  }
-  
-  @scala.inline
-  implicit class NativeMethodsOps[Self <: NativeMethods] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setBlur(value: () => Unit): Self = this.set("blur", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setFocus(value: () => Unit): Self = this.set("focus", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setMeasure(value: MeasureOnSuccessCallback => Unit): Self = this.set("measure", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setMeasureInWindow(value: MeasureInWindowOnSuccessCallback => Unit): Self = this.set("measureInWindow", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setMeasureLayout(value: (Double, MeasureLayoutOnSuccessCallback, js.Function0[Unit]) => Unit): Self = this.set("measureLayout", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def setRefs(value: StringDictionary[ReactComponentClass[_]]): Self = this.set("refs", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSetNativeProps(value: js.Object => Unit): Self = this.set("setNativeProps", js.Any.fromFunction1(value))
-  }
 }

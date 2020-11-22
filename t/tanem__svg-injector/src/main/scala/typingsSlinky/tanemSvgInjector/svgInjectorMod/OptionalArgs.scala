@@ -18,6 +18,8 @@ trait OptionalArgs extends js.Object {
   
   var beforeEach: js.UndefOr[BeforeEach] = js.native
   
+  var cacheRequests: js.UndefOr[Boolean] = js.native
+  
   var evalScripts: js.UndefOr[EvalScripts] = js.native
   
   var renumerateIRIElements: js.UndefOr[Boolean] = js.native
@@ -62,6 +64,12 @@ object OptionalArgs {
     
     @scala.inline
     def deleteBeforeEach: Self = this.set("beforeEach", js.undefined)
+    
+    @scala.inline
+    def setCacheRequests(value: Boolean): Self = this.set("cacheRequests", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCacheRequests: Self = this.set("cacheRequests", js.undefined)
     
     @scala.inline
     def setEvalScripts(value: EvalScripts): Self = this.set("evalScripts", value.asInstanceOf[js.Any])

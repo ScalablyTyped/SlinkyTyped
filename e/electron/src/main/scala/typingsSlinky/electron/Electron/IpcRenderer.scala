@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IpcRenderer extends EventEmitter {
   
-  // Docs: http://electronjs.org/docs/api/ipc-renderer
+  // Docs: https://electronjs.org/docs/api/ipc-renderer
   /**
     * Resolves with the response from the main process.
     *
@@ -29,8 +29,8 @@ trait IpcRenderer extends EventEmitter {
     *
     * If you need to transfer a `MessagePort` to the main process, use
     * `ipcRenderer.postMessage`.
-    * 
-  If you do not need a respons to the message, consider using `ipcRenderer.send`.
+    *
+    * If you do not need a response to the message, consider using `ipcRenderer.send`.
     */
   def invoke(channel: String, args: js.Any*): js.Promise[_] = js.native
   

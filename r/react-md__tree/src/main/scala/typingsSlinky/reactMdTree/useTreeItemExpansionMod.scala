@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useTreeItemExpansionMod extends js.Object {
   
-  def default(defaultExpandedIds: js.Function0[ExpandedIds]): TreeItemExpansion = js.native
-  def default(defaultExpandedIds: ExpandedIds): TreeItemExpansion = js.native
+  def useTreeItemExpansion(defaultExpandedIds: js.Function0[ExpandedIds]): TreeItemExpansion = js.native
+  def useTreeItemExpansion(defaultExpandedIds: ExpandedIds): TreeItemExpansion = js.native
 }

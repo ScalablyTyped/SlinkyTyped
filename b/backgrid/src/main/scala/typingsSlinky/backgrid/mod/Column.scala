@@ -9,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("backgrid", "Column")
 @js.native
 class Column ()
-  extends Model[js.Any, ModelSetOptions]
+  extends Model[js.Any, ModelSetOptions, js.Object]

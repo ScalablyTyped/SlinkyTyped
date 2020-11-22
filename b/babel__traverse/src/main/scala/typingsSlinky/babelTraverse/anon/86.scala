@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.BinaryExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.InterpreterDirective
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `86` extends js.Object {
   
-  var `type`: BinaryExpression = js.native
+  var `type`: InterpreterDirective = js.native
 }
 object `86` {
   
   @scala.inline
-  def apply(`type`: BinaryExpression): `86` = {
+  def apply(`type`: InterpreterDirective): `86` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`86`]
@@ -35,6 +35,6 @@ object `86` {
     }
     
     @scala.inline
-    def setType(value: BinaryExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: InterpreterDirective): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -4,6 +4,8 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.FormItemLabelPropsrequire
+import typingsSlinky.antd.formFormMod.RequiredMark
+import typingsSlinky.antd.formItemLabelMod.LabelTooltipType
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import scala.scalajs.js
@@ -41,6 +43,15 @@ object FormItemLabel {
     
     @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def requiredMark(value: RequiredMark): this.type = set("requiredMark", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def tooltipReactElement(value: ReactElement): this.type = set("tooltip", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def tooltip(value: LabelTooltipType): this.type = set("tooltip", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FormItemLabelPropsrequire): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

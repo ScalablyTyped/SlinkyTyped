@@ -7,30 +7,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Message extends js.Object {
   
-  var author: EmailName = js.native
-  
-  var committer: EmailName = js.native
+  var code: String = js.native
   
   var message: String = js.native
   
-  var tree: ShaUrl = js.native
-  
-  var url: String = js.native
-  
-  var verification: Payload = js.native
+  var status: String = js.native
 }
 object Message {
   
   @scala.inline
-  def apply(
-    author: EmailName,
-    committer: EmailName,
-    message: String,
-    tree: ShaUrl,
-    url: String,
-    verification: Payload
-  ): Message = {
-    val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], committer = committer.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], tree = tree.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], verification = verification.asInstanceOf[js.Any])
+  def apply(code: String, message: String, status: String): Message = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[Message]
   }
   
@@ -50,21 +37,12 @@ object Message {
     }
     
     @scala.inline
-    def setAuthor(value: EmailName): Self = this.set("author", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setCommitter(value: EmailName): Self = this.set("committer", value.asInstanceOf[js.Any])
+    def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTree(value: ShaUrl): Self = this.set("tree", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVerification(value: Payload): Self = this.set("verification", value.asInstanceOf[js.Any])
+    def setStatus(value: String): Self = this.set("status", value.asInstanceOf[js.Any])
   }
 }

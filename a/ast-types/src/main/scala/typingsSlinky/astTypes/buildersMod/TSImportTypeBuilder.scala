@@ -8,11 +8,17 @@ import typingsSlinky.astTypes.kindsMod.TSTypeParameterInstantiationKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSImportType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TSImportTypeBuilder extends js.Object {
+  
   def apply(argument: StringLiteralKind): TSImportType = js.native
+  def apply(
+    argument: StringLiteralKind,
+    qualifier: js.UndefOr[scala.Nothing],
+    typeParameters: TSTypeParameterInstantiationKind
+  ): TSImportType = js.native
   def apply(argument: StringLiteralKind, qualifier: IdentifierKind): TSImportType = js.native
   def apply(
     argument: StringLiteralKind,
@@ -25,6 +31,6 @@ trait TSImportTypeBuilder extends js.Object {
     qualifier: TSQualifiedNameKind,
     typeParameters: TSTypeParameterInstantiationKind
   ): TSImportType = js.native
+  
   def from(params: Qualifier): TSImportType = js.native
 }
-

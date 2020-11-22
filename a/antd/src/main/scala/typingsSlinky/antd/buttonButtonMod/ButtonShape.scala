@@ -6,7 +6,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.antd.antdStrings.circle
-  - typingsSlinky.antd.antdStrings.`circle-outline`
   - typingsSlinky.antd.antdStrings.round
 */
 trait ButtonShape extends js.Object

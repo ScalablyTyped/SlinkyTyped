@@ -44,6 +44,8 @@ trait PaymentCardProps extends js.Object {
   
   var autoFocus: js.UndefOr[Boolean] = js.native
   
+  var clearOnEscape: js.UndefOr[Boolean] = js.native
+  
   var clearable: js.UndefOr[Boolean] = js.native
   
   var `data-baseweb`: js.UndefOr[String] = js.native
@@ -61,6 +63,8 @@ trait PaymentCardProps extends js.Object {
   var inputRef: js.UndefOr[Ref[HTMLInputElement]] = js.native
   
   var max: js.UndefOr[Double] = js.native
+  
+  var maxLength: js.UndefOr[Double] = js.native
   
   var min: js.UndefOr[Double] = js.native
   
@@ -93,6 +97,8 @@ trait PaymentCardProps extends js.Object {
   var size: js.UndefOr[mini | default_ | compact | large_] = js.native
   
   var startEnhancer: js.UndefOr[(js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement] = js.native
+  
+  var step: js.UndefOr[Double] = js.native
   
   var `type`: js.UndefOr[String] = js.native
   
@@ -167,6 +173,12 @@ object PaymentCardProps {
     def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
     
     @scala.inline
+    def setClearOnEscape(value: Boolean): Self = this.set("clearOnEscape", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClearOnEscape: Self = this.set("clearOnEscape", js.undefined)
+    
+    @scala.inline
     def setClearable(value: Boolean): Self = this.set("clearable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -234,6 +246,12 @@ object PaymentCardProps {
     
     @scala.inline
     def deleteMax: Self = this.set("max", js.undefined)
+    
+    @scala.inline
+    def setMaxLength(value: Double): Self = this.set("maxLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxLength: Self = this.set("maxLength", js.undefined)
     
     @scala.inline
     def setMin(value: Double): Self = this.set("min", value.asInstanceOf[js.Any])
@@ -330,6 +348,12 @@ object PaymentCardProps {
     
     @scala.inline
     def deleteStartEnhancer: Self = this.set("startEnhancer", js.undefined)
+    
+    @scala.inline
+    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStep: Self = this.set("step", js.undefined)
     
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])

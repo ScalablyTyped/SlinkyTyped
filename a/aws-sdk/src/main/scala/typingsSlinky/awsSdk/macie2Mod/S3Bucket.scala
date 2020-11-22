@@ -18,7 +18,7 @@ trait S3Bucket extends js.Object {
   var createdAt: js.UndefOr[js.Date] = js.native
   
   /**
-    * The server-side encryption settings for the bucket.
+    * The type of server-side encryption that's used by default to encrypt objects in the bucket.
     */
   var defaultServerSideEncryption: js.UndefOr[ServerSideEncryption] = js.native
   

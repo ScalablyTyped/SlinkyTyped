@@ -35,5 +35,13 @@ object AllowTrustOpAsset extends js.Object {
   
   def toXDR(value: typingsSlinky.stellarBase.xdrMod.xdr.AllowTrustOpAsset): Buffer = js.native
   
+  def validateXDR(input: Buffer): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_base64(input: String, format: base64): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_hex(input: String, format: hex): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_raw(input: Buffer, format: raw): Boolean = js.native
+  
   def write(value: typingsSlinky.stellarBase.xdrMod.xdr.AllowTrustOpAsset, io: Buffer): Unit = js.native
 }

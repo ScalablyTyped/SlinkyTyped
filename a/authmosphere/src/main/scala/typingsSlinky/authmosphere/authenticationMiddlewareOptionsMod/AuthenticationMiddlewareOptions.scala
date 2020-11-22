@@ -8,6 +8,7 @@ import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AuthenticationMiddlewareOptions extends js.Object {
   
-  var getTokenInfo: js.UndefOr[GetTokenInfo[js.Object]] = js.native
+  var getTokenInfo: js.UndefOr[GetTokenInfo[Record[String, _]]] = js.native
   
   var logger: js.UndefOr[Logger] = js.native
   
@@ -55,7 +56,7 @@ object AuthenticationMiddlewareOptions {
     
     @scala.inline
     def setGetTokenInfo(
-      value: (/* tokenInfoUrl */ String, /* accessToken */ String, /* logger */ js.UndefOr[Logger]) => js.Promise[Token[js.Object]]
+      value: (/* tokenInfoUrl */ String, /* accessToken */ String, /* logger */ js.UndefOr[Logger]) => js.Promise[Token[Record[String, _]]]
     ): Self = this.set("getTokenInfo", js.Any.fromFunction3(value))
     
     @scala.inline

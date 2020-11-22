@@ -176,7 +176,7 @@ class ReplicationGroup protected () extends CustomResource {
   val subnetGroupName: Output_[String] = js.native
   
   /**
-    * A map of tags to assign to the resource
+    * A map of tags to assign to the resource. Adding tags to this resource will add or overwrite any existing tags on the clusters in the replication group and not to the group itself.
     */
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   

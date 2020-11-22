@@ -19,8 +19,13 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reachMenuButton.mod.MenuButtonProps
+import typingsSlinky.reachMenuButton.reachMenuButtonStrings.`additions removals`
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.`additions text`
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.`inline`
+import typingsSlinky.reachMenuButton.reachMenuButtonStrings.`removals additions`
+import typingsSlinky.reachMenuButton.reachMenuButtonStrings.`removals text`
+import typingsSlinky.reachMenuButton.reachMenuButtonStrings.`text additions`
+import typingsSlinky.reachMenuButton.reachMenuButtonStrings.`text removals`
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.additions
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.all
 import typingsSlinky.reachMenuButton.reachMenuButtonStrings.ascending
@@ -215,7 +220,9 @@ object MenuButton {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

@@ -1,6 +1,7 @@
 package typingsSlinky.superstruct
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Record
 import typingsSlinky.superstruct.structMod.Struct
 import typingsSlinky.superstruct.structMod.StructContext
@@ -14,7 +15,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object utilsMod extends js.Object {
   
-  def toFailures(result: StructResult, context: StructContext): js.Iterable[StructFailure] = js.native
+  def iteratorShift[T](input: js.Iterator[T]): js.UndefOr[T] = js.native
+  
+  def toFailures(result: StructResult, context: StructContext): IterableIterator[StructFailure] = js.native
   
   type StructRecord[T] = Record[String, Struct[T, js.Any]]
   

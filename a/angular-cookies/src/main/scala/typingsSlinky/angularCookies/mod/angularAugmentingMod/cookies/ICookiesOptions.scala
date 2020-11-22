@@ -31,6 +31,12 @@ trait ICookiesOptions extends js.Object {
   var path: js.UndefOr[String] = js.native
   
   /**
+    * Prevents the browser from sending the cookie along with cross-site requests.
+    * Accepts the values "lax" and "strict".
+    */
+  var samesite: js.UndefOr[String] = js.native
+  
+  /**
     * The cookie will be available only in secured connection.
     */
   var secure: js.UndefOr[Boolean] = js.native
@@ -78,6 +84,12 @@ object ICookiesOptions {
     
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)
+    
+    @scala.inline
+    def setSamesite(value: String): Self = this.set("samesite", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSamesite: Self = this.set("samesite", js.undefined)
     
     @scala.inline
     def setSecure(value: Boolean): Self = this.set("secure", value.asInstanceOf[js.Any])

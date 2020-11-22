@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetCertificateResult extends js.Object {
   
   /**
-    * Set to the ARN of the found certificate, suitable for referencing in other resources that support ACM certificates.
+    * Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
     */
   val arn: String = js.native
   

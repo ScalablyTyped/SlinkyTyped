@@ -17,7 +17,7 @@ trait HeatmapScheme extends Object {
   var colors: js.Array[Color_] = js.native
   
   /**
-    * The unique id of the color scheme to usee in the visualization. The id is assigned based on the following template: `<themeName>/<basemapName>/<schemeName>`.
+    * The unique id of the color scheme to usee in the visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-heatmap.html#HeatmapScheme)
     */

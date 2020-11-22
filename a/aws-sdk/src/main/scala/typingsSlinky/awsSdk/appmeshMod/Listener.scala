@@ -8,9 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Listener extends js.Object {
   
   /**
+    * The connection pool information for the listener.
+    */
+  var connectionPool: js.UndefOr[VirtualNodeConnectionPool] = js.native
+  
+  /**
     * The health check information for the listener.
     */
   var healthCheck: js.UndefOr[HealthCheckPolicy] = js.native
+  
+  /**
+    * The outlier detection information for the listener.
+    */
+  var outlierDetection: js.UndefOr[OutlierDetection] = js.native
   
   /**
     * The port mapping information for the listener.
@@ -54,10 +64,22 @@ object Listener {
     def setPortMapping(value: PortMapping): Self = this.set("portMapping", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setConnectionPool(value: VirtualNodeConnectionPool): Self = this.set("connectionPool", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConnectionPool: Self = this.set("connectionPool", js.undefined)
+    
+    @scala.inline
     def setHealthCheck(value: HealthCheckPolicy): Self = this.set("healthCheck", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHealthCheck: Self = this.set("healthCheck", js.undefined)
+    
+    @scala.inline
+    def setOutlierDetection(value: OutlierDetection): Self = this.set("outlierDetection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutlierDetection: Self = this.set("outlierDetection", js.undefined)
     
     @scala.inline
     def setTimeout(value: ListenerTimeout): Self = this.set("timeout", value.asInstanceOf[js.Any])

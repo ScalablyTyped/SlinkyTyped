@@ -13,27 +13,41 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxToastOptions extends dxOverlayOptions[dxToast] {
   
-  /** @name dxToast.Options.animation */
+  /**
+    * [descr:dxToast.Options.animation]
+    */
   @JSName("animation")
   var animation_dxToastOptions: js.UndefOr[dxToastAnimation] = js.native
   
-  /** @name dxToast.Options.closeOnClick */
+  /**
+    * [descr:dxToast.Options.closeOnClick]
+    */
   var closeOnClick: js.UndefOr[Boolean] = js.native
   
-  /** @name dxToast.Options.closeOnSwipe */
+  /**
+    * [descr:dxToast.Options.closeOnSwipe]
+    */
   var closeOnSwipe: js.UndefOr[Boolean] = js.native
   
-  /** @name dxToast.Options.displayTime */
+  /**
+    * [descr:dxToast.Options.displayTime]
+    */
   var displayTime: js.UndefOr[Double] = js.native
   
-  /** @name dxToast.Options.message */
+  /**
+    * [descr:dxToast.Options.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name dxToast.Options.position */
+  /**
+    * [descr:dxToast.Options.position]
+    */
   @JSName("position")
   var position_dxToastOptions: js.UndefOr[positionConfig | String] = js.native
   
-  /** @name dxToast.Options.type */
+  /**
+    * [descr:dxToast.Options.type]
+    */
   var `type`: js.UndefOr[custom | error | info | success | warning] = js.native
 }
 object dxToastOptions {

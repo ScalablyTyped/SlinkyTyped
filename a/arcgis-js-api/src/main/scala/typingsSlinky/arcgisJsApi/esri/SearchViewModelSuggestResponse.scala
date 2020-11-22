@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SearchViewModelSuggestResponse extends Object {
   
   /**
-    * The index of the source from which suggestions are obtained. This value is `-1` when all sources are selected.
+    * The index of the source from which suggestions are obtained.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search-SearchViewModel.html#SuggestResponse)
     */
@@ -31,7 +31,7 @@ trait SearchViewModelSuggestResponse extends Object {
   var numResults: Double = js.native
   
   /**
-    * An array of objects representing the results of suggest. See object specification table below for more information about the result object.
+    * An array of objects representing the results of suggest.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search-SearchViewModel.html#SuggestResponse)
     */

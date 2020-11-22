@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateNonNullChain extends js.Object {
   
+  /** @deprecated Use `factory.updateNonNullChain` or the factory supplied by your transformation context instead. */
   def apply(node: NonNullChain, expression: Expression): NonNullChain = js.native
 }

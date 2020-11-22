@@ -20,7 +20,7 @@ trait PutConformancePackRequest extends js.Object {
   /**
     * AWS Config stores intermediate files while processing conformance pack template.
     */
-  var DeliveryS3Bucket: typingsSlinky.awsSdk.configserviceMod.DeliveryS3Bucket = js.native
+  var DeliveryS3Bucket: js.UndefOr[typingsSlinky.awsSdk.configserviceMod.DeliveryS3Bucket] = js.native
   
   /**
     * The prefix for the Amazon S3 bucket. 
@@ -40,8 +40,8 @@ trait PutConformancePackRequest extends js.Object {
 object PutConformancePackRequest {
   
   @scala.inline
-  def apply(ConformancePackName: ConformancePackName, DeliveryS3Bucket: DeliveryS3Bucket): PutConformancePackRequest = {
-    val __obj = js.Dynamic.literal(ConformancePackName = ConformancePackName.asInstanceOf[js.Any], DeliveryS3Bucket = DeliveryS3Bucket.asInstanceOf[js.Any])
+  def apply(ConformancePackName: ConformancePackName): PutConformancePackRequest = {
+    val __obj = js.Dynamic.literal(ConformancePackName = ConformancePackName.asInstanceOf[js.Any])
     __obj.asInstanceOf[PutConformancePackRequest]
   }
   
@@ -64,9 +64,6 @@ object PutConformancePackRequest {
     def setConformancePackName(value: ConformancePackName): Self = this.set("ConformancePackName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDeliveryS3Bucket(value: DeliveryS3Bucket): Self = this.set("DeliveryS3Bucket", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setConformancePackInputParametersVarargs(value: ConformancePackInputParameter*): Self = this.set("ConformancePackInputParameters", js.Array(value :_*))
     
     @scala.inline
@@ -74,6 +71,12 @@ object PutConformancePackRequest {
     
     @scala.inline
     def deleteConformancePackInputParameters: Self = this.set("ConformancePackInputParameters", js.undefined)
+    
+    @scala.inline
+    def setDeliveryS3Bucket(value: DeliveryS3Bucket): Self = this.set("DeliveryS3Bucket", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeliveryS3Bucket: Self = this.set("DeliveryS3Bucket", js.undefined)
     
     @scala.inline
     def setDeliveryS3KeyPrefix(value: DeliveryS3KeyPrefix): Self = this.set("DeliveryS3KeyPrefix", value.asInstanceOf[js.Any])

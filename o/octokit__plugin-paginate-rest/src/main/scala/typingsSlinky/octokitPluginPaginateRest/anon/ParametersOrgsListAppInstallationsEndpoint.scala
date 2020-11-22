@@ -12,14 +12,14 @@ trait ParametersOrgsListAppInstallationsEndpoint extends js.Object {
   
   var parameters: OrgsListAppInstallationsEndpoint = js.native
   
-  var response: OctokitResponse[OrgsListAppInstallationsResponseData] with `2` = js.native
+  var response: OctokitResponse[OrgsListAppInstallationsResponseData] with `6` = js.native
 }
 object ParametersOrgsListAppInstallationsEndpoint {
   
   @scala.inline
   def apply(
     parameters: OrgsListAppInstallationsEndpoint,
-    response: OctokitResponse[OrgsListAppInstallationsResponseData] with `2`
+    response: OctokitResponse[OrgsListAppInstallationsResponseData] with `6`
   ): ParametersOrgsListAppInstallationsEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersOrgsListAppInstallationsEndpoint]
@@ -44,6 +44,6 @@ object ParametersOrgsListAppInstallationsEndpoint {
     def setParameters(value: OrgsListAppInstallationsEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[OrgsListAppInstallationsResponseData] with `2`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[OrgsListAppInstallationsResponseData] with `6`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -8,9 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResourceChange extends js.Object {
   
   /**
-    * The action that AWS CloudFormation takes on the resource, such as Add (adds a new resource), Modify (changes a resource), or Remove (deletes a resource).
+    * The action that AWS CloudFormation takes on the resource, such as Add (adds a new resource), Modify (changes a resource), Remove (deletes a resource), Import (imports a resource), or Dynamic (exact action for the resource cannot be determined).
     */
   var Action: js.UndefOr[ChangeAction] = js.native
+  
+  /**
+    * The change set ID of the nested change set.
+    */
+  var ChangeSetId: js.UndefOr[typingsSlinky.awsSdk.cloudformationMod.ChangeSetId] = js.native
   
   /**
     * For the Modify action, a list of ResourceChangeDetail structures that describes the changes that AWS CloudFormation will make to the resource. 
@@ -70,6 +75,12 @@ object ResourceChange {
     
     @scala.inline
     def deleteAction: Self = this.set("Action", js.undefined)
+    
+    @scala.inline
+    def setChangeSetId(value: ChangeSetId): Self = this.set("ChangeSetId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChangeSetId: Self = this.set("ChangeSetId", js.undefined)
     
     @scala.inline
     def setDetailsVarargs(value: ResourceChangeDetail*): Self = this.set("Details", js.Array(value :_*))

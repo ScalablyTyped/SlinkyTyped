@@ -21,7 +21,9 @@ trait PostCssPluginOptions extends js.Object {
   
   var extract: js.UndefOr[Boolean | String] = js.native
   
-  var inject: js.UndefOr[Boolean | InsertAt] = js.native
+  var inject: js.UndefOr[
+    Boolean | InsertAt | (js.Function2[/* cssVariableName */ String, /* fileId */ String, String])
+  ] = js.native
   
   var loaders: js.UndefOr[js.Array[_]] = js.native
   
@@ -31,19 +33,19 @@ trait PostCssPluginOptions extends js.Object {
   
   var name: js.UndefOr[js.Array[_ | js.Array[_]]] = js.native
   
-  var namedExports: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | Boolean]] = js.native
+  var namedExports: js.UndefOr[(js.Function1[/* name */ String, String]) | Boolean] = js.native
   
   var onImport: js.UndefOr[js.Function1[/* id */ js.Any, Unit]] = js.native
   
-  var parser: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | String]] = js.native
+  var parser: js.UndefOr[(js.Function1[/* repeated */ js.Any, Unit]) | String] = js.native
   
   var plugins: js.UndefOr[js.Array[_]] = js.native
   
   var sourceMap: js.UndefOr[Boolean | `inline`] = js.native
   
-  var stringifier: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | String]] = js.native
+  var stringifier: js.UndefOr[(js.Function1[/* repeated */ js.Any, Unit]) | String] = js.native
   
-  var syntax: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit | String]] = js.native
+  var syntax: js.UndefOr[(js.Function1[/* repeated */ js.Any, Unit]) | String] = js.native
 }
 object PostCssPluginOptions {
   
@@ -102,7 +104,12 @@ object PostCssPluginOptions {
     def deleteExtract: Self = this.set("extract", js.undefined)
     
     @scala.inline
-    def setInject(value: Boolean | InsertAt): Self = this.set("inject", value.asInstanceOf[js.Any])
+    def setInjectFunction2(value: (/* cssVariableName */ String, /* fileId */ String) => String): Self = this.set("inject", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setInject(
+      value: Boolean | InsertAt | (js.Function2[/* cssVariableName */ String, /* fileId */ String, String])
+    ): Self = this.set("inject", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInject: Self = this.set("inject", js.undefined)
@@ -138,7 +145,10 @@ object PostCssPluginOptions {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setNamedExports(value: /* repeated */ js.Any => Unit | Boolean): Self = this.set("namedExports", js.Any.fromFunction1(value))
+    def setNamedExportsFunction1(value: /* name */ String => String): Self = this.set("namedExports", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setNamedExports(value: (js.Function1[/* name */ String, String]) | Boolean): Self = this.set("namedExports", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNamedExports: Self = this.set("namedExports", js.undefined)
@@ -150,7 +160,10 @@ object PostCssPluginOptions {
     def deleteOnImport: Self = this.set("onImport", js.undefined)
     
     @scala.inline
-    def setParser(value: /* repeated */ js.Any => Unit | String): Self = this.set("parser", js.Any.fromFunction1(value))
+    def setParserFunction1(value: /* repeated */ js.Any => Unit): Self = this.set("parser", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setParser(value: (js.Function1[/* repeated */ js.Any, Unit]) | String): Self = this.set("parser", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteParser: Self = this.set("parser", js.undefined)
@@ -171,13 +184,19 @@ object PostCssPluginOptions {
     def deleteSourceMap: Self = this.set("sourceMap", js.undefined)
     
     @scala.inline
-    def setStringifier(value: /* repeated */ js.Any => Unit | String): Self = this.set("stringifier", js.Any.fromFunction1(value))
+    def setStringifierFunction1(value: /* repeated */ js.Any => Unit): Self = this.set("stringifier", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setStringifier(value: (js.Function1[/* repeated */ js.Any, Unit]) | String): Self = this.set("stringifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStringifier: Self = this.set("stringifier", js.undefined)
     
     @scala.inline
-    def setSyntax(value: /* repeated */ js.Any => Unit | String): Self = this.set("syntax", js.Any.fromFunction1(value))
+    def setSyntaxFunction1(value: /* repeated */ js.Any => Unit): Self = this.set("syntax", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setSyntax(value: (js.Function1[/* repeated */ js.Any, Unit]) | String): Self = this.set("syntax", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSyntax: Self = this.set("syntax", js.undefined)

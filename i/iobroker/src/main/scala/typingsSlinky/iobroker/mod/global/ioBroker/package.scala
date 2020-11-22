@@ -10,20 +10,20 @@ package object ioBroker {
   type CallbackReturnTypeOf[T /* <: js.Function1[/* repeated */ js.Any, _] */] = typingsSlinky.iobroker.mod.global.ioBroker.SecondParameterOf[T]
   
   type ChownFileCallback = js.Function3[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[typingsSlinky.node.NodeJS.ErrnoException | scala.Null], 
     /* entries */ js.UndefOr[js.Array[typingsSlinky.iobroker.mod.global.ioBroker.ChownFileResult]], 
     /* id */ js.UndefOr[java.lang.String], 
     scala.Unit
   ]
   
   type ChownObjectCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
-    /* list */ js.UndefOr[js.Array[typingsSlinky.iobroker.mod.global.ioBroker.Object]], 
+    /* err */ js.UndefOr[typingsSlinky.node.NodeJS.ErrnoException | scala.Null], 
+    /* list */ js.UndefOr[js.Array[typingsSlinky.iobroker.objectsMod.global.ioBroker.Object]], 
     scala.Unit
   ]
   
   type DeleteStateCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* id */ js.UndefOr[java.lang.String], 
     scala.Unit
   ]
@@ -34,29 +34,35 @@ package object ioBroker {
   
   type EnumList = java.lang.String | js.Array[java.lang.String]
   
-  type ErrorCallback = js.Function1[/* err */ js.UndefOr[java.lang.String], scala.Unit]
+  /** Special variant of ErrorCallback for methods where Node.js returns an ErrnoException */
+  type ErrnoCallback = js.Function1[
+    /* err */ js.UndefOr[typingsSlinky.node.NodeJS.ErrnoException | scala.Null], 
+    scala.Unit
+  ]
+  
+  type ErrorCallback = js.Function1[/* err */ js.UndefOr[js.Error | scala.Null], scala.Unit]
   
   type ErrorHandler = js.Function1[/* err */ js.Error, scala.Boolean]
   
   type ExtendObjectCallback = js.Function3[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* result */ js.UndefOr[typingsSlinky.iobroker.anon.Value], 
     /* id */ js.UndefOr[java.lang.String], 
     scala.Unit
   ]
   
   type FindObjectCallback = js.Function3[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* id */ js.UndefOr[java.lang.String], 
     /* name */ js.UndefOr[java.lang.String], 
     scala.Unit
   ]
   
   // TODO: Redefine callbacks as subclass of GenericCallback
-  type GenericCallback[T] = js.Function2[/* err */ java.lang.String | scala.Null, /* result */ js.UndefOr[T], scala.Unit]
+  type GenericCallback[T] = js.Function2[/* err */ js.UndefOr[js.Error | scala.Null], /* result */ js.UndefOr[T], scala.Unit]
   
   type GetBinaryStateCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* state */ js.UndefOr[typingsSlinky.node.Buffer], 
     scala.Unit
   ]
@@ -66,13 +72,13 @@ package object ioBroker {
   ]
   
   type GetConfigKeysCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* list */ js.UndefOr[js.Array[java.lang.String]], 
     scala.Unit
   ]
   
   type GetEnumCallback = js.Function3[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* enums */ js.UndefOr[
       typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod.global.ioBroker.Enum]
     ], 
@@ -81,7 +87,7 @@ package object ioBroker {
   ]
   
   type GetEnumsCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* result */ js.UndefOr[
       org.scalablytyped.runtime.StringDictionary[
         typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod.global.ioBroker.Enum]
@@ -95,9 +101,9 @@ package object ioBroker {
   ]
   
   type GetHistoryCallback = js.Function4[
-    /* err */ java.lang.String | scala.Null, 
-    /* result */ typingsSlinky.iobroker.mod.global.ioBroker.GetHistoryResult, 
-    /* step */ scala.Double, 
+    /* err */ js.Error | scala.Null, 
+    /* result */ js.UndefOr[typingsSlinky.iobroker.mod.global.ioBroker.GetHistoryResult], 
+    /* step */ js.UndefOr[scala.Double], 
     /* sessionId */ js.UndefOr[java.lang.String], 
     scala.Unit
   ]
@@ -105,13 +111,13 @@ package object ioBroker {
   type GetHistoryResult = js.Array[typingsSlinky.iobroker.anon.Stateidstringundefined]
   
   type GetObjectCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
-    /* obj */ js.UndefOr[typingsSlinky.iobroker.mod.global.ioBroker.Object | scala.Null], 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
+    /* obj */ js.UndefOr[typingsSlinky.iobroker.objectsMod.global.ioBroker.Object | scala.Null], 
     scala.Unit
   ]
   
   type GetObjectListCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* result */ js.UndefOr[typingsSlinky.iobroker.anon.RowsArray], 
     scala.Unit
   ]
@@ -128,7 +134,7 @@ package object ioBroker {
   ]
   
   type GetObjectViewCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* result */ js.UndefOr[typingsSlinky.iobroker.anon.Rows], 
     scala.Unit
   ]
@@ -138,16 +144,16 @@ package object ioBroker {
   ]
   
   type GetObjectsCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* objects */ js.UndefOr[
-      typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod.global.ioBroker.Object]
+      typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.objectsMod.global.ioBroker.Object]
     ], 
     scala.Unit
   ]
   
   // This is a version used by GetDevices/GetChannelsOf/GetStatesOf
-  type GetObjectsCallback3[T /* <: typingsSlinky.iobroker.mod.global.ioBroker.BaseObject */] = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+  type GetObjectsCallback3[T /* <: typingsSlinky.iobroker.objectsMod.global.ioBroker.BaseObject */] = js.Function2[
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* result */ js.UndefOr[js.Array[T]], 
     scala.Unit
   ]
@@ -159,7 +165,7 @@ package object ioBroker {
   type GetSessionCallback = js.Function1[/* session */ typingsSlinky.iobroker.mod.global.ioBroker.Session, scala.Unit]
   
   type GetStateCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.Error | scala.Null, 
     /* state */ js.UndefOr[typingsSlinky.iobroker.mod.global.ioBroker.State | scala.Null], 
     scala.Unit
   ]
@@ -169,14 +175,18 @@ package object ioBroker {
   ]
   
   type GetStatesCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
-    /* states */ typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod.global.ioBroker.State], 
+    /* err */ js.Error | scala.Null, 
+    /* states */ js.UndefOr[
+      typingsSlinky.std.Record[java.lang.String, typingsSlinky.iobroker.mod.global.ioBroker.State]
+    ], 
     scala.Unit
   ]
   
   type GetStatesPromise = js.Promise[
     typingsSlinky.iobroker.mod.global.ioBroker.CallbackReturnTypeOf[typingsSlinky.iobroker.mod.global.ioBroker.GetStatesCallback]
   ]
+  
+  type Interval = scala.Double with typingsSlinky.iobroker.anon.`0`
   
   type Log = js.Any
   
@@ -198,27 +208,16 @@ package object ioBroker {
     js.UndefOr[scala.Null]
   ]
   
-  // For all objects that are exposed to the user we need to tone the strictness down.
-  // Otherwise, every operation on objects becomes a pain to work with
-  type Object = typingsSlinky.iobroker.mod.global.ioBroker.AnyObject with typingsSlinky.iobroker.anon.Common
-  
   type ObjectChangeHandler = js.Function2[
     /* id */ java.lang.String, 
-    /* obj */ js.UndefOr[typingsSlinky.iobroker.mod.global.ioBroker.Object | scala.Null], 
+    /* obj */ js.UndefOr[typingsSlinky.iobroker.objectsMod.global.ioBroker.Object | scala.Null], 
     scala.Unit | js.Promise[scala.Unit]
   ]
-  
-  // Objects are JSON-serializable
-  type ObjectField = java.lang.String | scala.Double | scala.Boolean | scala.Null | (js.Array[
-    /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias iobroker.iobroker.<global>.ioBroker.ObjectField */ js.Object
-  ]) | (org.scalablytyped.runtime.StringDictionary[
-    /* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias iobroker.iobroker.<global>.ioBroker.ObjectField */ js.Object
-  ])
   
   type Plugin = typingsSlinky.std.Record[java.lang.String, js.Any]
   
   type ReadDirCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[typingsSlinky.node.NodeJS.ErrnoException | scala.Null], 
     /* entries */ js.UndefOr[js.Array[typingsSlinky.iobroker.mod.global.ioBroker.ReadDirResult]], 
     scala.Unit
   ]
@@ -228,7 +227,7 @@ package object ioBroker {
   ]
   
   type ReadFileCallback = js.Function3[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[typingsSlinky.node.NodeJS.ErrnoException | scala.Null], 
     /* file */ js.UndefOr[typingsSlinky.node.Buffer | java.lang.String], 
     /* mimeType */ js.UndefOr[java.lang.String], 
     scala.Unit
@@ -240,7 +239,7 @@ package object ioBroker {
   type ReadyHandler = js.Function0[scala.Unit | js.Promise[scala.Unit]]
   
   type RmCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[typingsSlinky.node.NodeJS.ErrnoException | scala.Null], 
     /* entries */ js.UndefOr[js.Array[typingsSlinky.iobroker.mod.global.ioBroker.RmResult]], 
     scala.Unit
   ]
@@ -250,7 +249,7 @@ package object ioBroker {
   type Session = js.Any
   
   type SetObjectCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* obj */ js.UndefOr[typingsSlinky.iobroker.anon.IdString], 
     scala.Unit
   ]
@@ -260,15 +259,15 @@ package object ioBroker {
   ]
   
   type SetStateCallback = js.Function2[
-    /* err */ java.lang.String | scala.Null, 
+    /* err */ js.UndefOr[js.Error | scala.Null], 
     /* id */ js.UndefOr[java.lang.String], 
     scala.Unit
   ]
   
   type SetStateChangedCallback = js.Function3[
-    /* err */ java.lang.String | scala.Null, 
-    /* id */ java.lang.String, 
-    /* notChanged */ scala.Boolean, 
+    /* err */ js.Error | scala.Null, 
+    /* id */ js.UndefOr[java.lang.String], 
+    /* notChanged */ js.UndefOr[scala.Boolean], 
     scala.Unit
   ]
   
@@ -280,19 +279,13 @@ package object ioBroker {
     typingsSlinky.iobroker.mod.global.ioBroker.NonNullCallbackReturnTypeOf[typingsSlinky.iobroker.mod.global.ioBroker.SetStateCallback]
   ]
   
-  type SettableObjectWorker[T /* <: typingsSlinky.iobroker.mod.global.ioBroker.AnyObject */] = (typingsSlinky.std.Pick[
-    T, 
-    typingsSlinky.std.Exclude[
-      /* keyof T */ java.lang.String, 
-      typingsSlinky.iobroker.iobrokerStrings._id | typingsSlinky.iobroker.iobrokerStrings.acl
-    ]
-  ]) with typingsSlinky.iobroker.anon.Acl[T]
-  
   type StateChangeHandler = js.Function2[
     /* id */ java.lang.String, 
     /* obj */ js.UndefOr[typingsSlinky.iobroker.mod.global.ioBroker.State | scala.Null], 
     scala.Unit | js.Promise[scala.Unit]
   ]
+  
+  type Timeout = scala.Double with typingsSlinky.iobroker.anon.IoBrokerBrand
   
   type UnloadHandler = js.Function1[
     /* callback */ typingsSlinky.iobroker.mod.global.ioBroker.EmptyCallback, 

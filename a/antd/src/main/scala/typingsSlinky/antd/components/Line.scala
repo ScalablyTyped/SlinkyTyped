@@ -14,6 +14,7 @@ import typingsSlinky.antd.antdStrings.round
 import typingsSlinky.antd.antdStrings.square
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.top
+import typingsSlinky.antd.configProviderContextMod.DirectionType
 import typingsSlinky.antd.lineMod.LineProps
 import typingsSlinky.antd.progressProgressMod.ProgressGradient
 import typingsSlinky.antd.progressProgressMod.ProgressSize
@@ -37,6 +38,9 @@ object Line {
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def direction(value: DirectionType): this.type = set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def format(value: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => ReactElement): this.type = set("format", js.Any.fromFunction2(value))

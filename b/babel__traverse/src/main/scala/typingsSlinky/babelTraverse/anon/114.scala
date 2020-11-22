@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ExistsTypeAnnotation
+import typingsSlinky.babelTraverse.babelTraverseStrings.EnumBooleanMember
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `114` extends js.Object {
   
-  var `type`: ExistsTypeAnnotation = js.native
+  var `type`: EnumBooleanMember = js.native
 }
 object `114` {
   
   @scala.inline
-  def apply(`type`: ExistsTypeAnnotation): `114` = {
+  def apply(`type`: EnumBooleanMember): `114` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`114`]
@@ -35,6 +35,6 @@ object `114` {
     }
     
     @scala.inline
-    def setType(value: ExistsTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: EnumBooleanMember): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

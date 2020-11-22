@@ -461,7 +461,9 @@ object ReactDatepicker {
   def withProps(p: ReactDatePickerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(onChange: (js.UndefOr[js.Date | Null], js.UndefOr[SyntheticEvent[Event, _]]) => Unit): Builder = {
+  def apply(
+    onChange: (js.UndefOr[js.Date | Null | (js.Tuple2[js.Date, js.Date])], js.UndefOr[SyntheticEvent[Event, _]]) => Unit
+  ): Builder = {
     val __props = js.Dynamic.literal(onChange = js.Any.fromFunction2(onChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[ReactDatePickerProps]))
   }

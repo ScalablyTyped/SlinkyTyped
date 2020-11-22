@@ -1,21 +1,20 @@
 package typingsSlinky.storybookRouter.routerMod
 
+import typingsSlinky.storybookRouter.utilsMod.StoryData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Other extends js.Object {
+trait Other extends StoryData {
   
-  var storyId: js.UndefOr[String] = js.native
-  
-  var viewMode: js.UndefOr[String] = js.native
+  var path: String = js.native
 }
 object Other {
   
   @scala.inline
-  def apply(): Other = {
-    val __obj = js.Dynamic.literal()
+  def apply(path: String): Other = {
+    val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any])
     __obj.asInstanceOf[Other]
   }
   
@@ -35,15 +34,6 @@ object Other {
     }
     
     @scala.inline
-    def setStoryId(value: String): Self = this.set("storyId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStoryId: Self = this.set("storyId", js.undefined)
-    
-    @scala.inline
-    def setViewMode(value: String): Self = this.set("viewMode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteViewMode: Self = this.set("viewMode", js.undefined)
+    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
   }
 }

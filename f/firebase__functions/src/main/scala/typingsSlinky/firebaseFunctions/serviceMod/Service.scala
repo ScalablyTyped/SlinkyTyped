@@ -1,12 +1,16 @@
 package typingsSlinky.firebaseFunctions.serviceMod
 
+import org.scalajs.dom.experimental.RequestInit
+import org.scalajs.dom.experimental.Response
 import typingsSlinky.firebaseAppTypes.privateMod.FirebaseService
 import typingsSlinky.firebaseAuthInteropTypes.mod.FirebaseAuthInternalName
 import typingsSlinky.firebaseComponent.mod.Provider
 import typingsSlinky.firebaseFunctions.anon.Delete
+import typingsSlinky.firebaseFunctions.anon.FnCall
 import typingsSlinky.firebaseFunctions.mod.FirebaseApp
 import typingsSlinky.firebaseFunctionsTypes.mod.FirebaseFunctions
 import typingsSlinky.firebaseMessagingTypes.mod.FirebaseMessagingName
+import typingsSlinky.std.RequestInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,21 +20,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Service protected ()
   extends FirebaseFunctions
      with FirebaseService {
-  /**
-    * Creates a new Functions service for the given app and (optional) region.
-    * @param app_ The FirebaseApp to use.
-    * @param region_ The region to call functions in.
-    */
-  def this(
-    app_ : FirebaseApp,
-    authProvider: Provider[FirebaseAuthInternalName],
-    messagingProvider: Provider[FirebaseMessagingName]
-  ) = this()
   def this(
     app_ : FirebaseApp,
     authProvider: Provider[FirebaseAuthInternalName],
     messagingProvider: Provider[FirebaseMessagingName],
-    region_ : String
+    regionOrCustomDomain_ : js.UndefOr[scala.Nothing],
+    fetchImpl: FnCall
+  ) = this()
+  /**
+    * Creates a new Functions service for the given app and (optional) region or custom domain.
+    * @param app_ The FirebaseApp to use.
+    * @param regionOrCustomDomain_ one of:
+    *   a) A region to call functions from, such as us-central1
+    *   b) A custom domain to use as a functions prefix, such as https://mydomain.com
+    */
+  def this(
+    app_ : FirebaseApp,
+    authProvider: Provider[FirebaseAuthInternalName],
+    messagingProvider: Provider[FirebaseMessagingName],
+    regionOrCustomDomain_ : String,
+    fetchImpl: FnCall
   ) = this()
   
   @JSName("INTERNAL")
@@ -58,9 +67,14 @@ class Service protected ()
   
   val contextProvider: js.Any = js.native
   
+  var customDomain: js.Any = js.native
+  
   var deleteService: js.Any = js.native
   
   var emulatorOrigin: js.Any = js.native
+  
+  def fetchImpl(input: RequestInfo): js.Promise[Response] = js.native
+  def fetchImpl(input: RequestInfo, init: RequestInit): js.Promise[Response] = js.native
   
   /**
     * Does an HTTP POST and returns the completed response.
@@ -71,7 +85,7 @@ class Service protected ()
     */
   var postJSON: js.Any = js.native
   
-  var region_ : js.Any = js.native
+  var region: js.Any = js.native
   
   val serializer: js.Any = js.native
 }

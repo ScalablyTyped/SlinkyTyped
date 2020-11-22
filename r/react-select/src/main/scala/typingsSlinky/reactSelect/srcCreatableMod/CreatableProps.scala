@@ -3,6 +3,7 @@ package typingsSlinky.reactSelect.srcCreatableMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactSelect.reactSelectStrings.first
 import typingsSlinky.reactSelect.reactSelectStrings.last
+import typingsSlinky.reactSelect.typesMod.GroupedOptionsType
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.reactSelect.typesMod.OptionsType
 import typingsSlinky.reactSelect.typesMod.ValueType
@@ -37,7 +38,7 @@ trait CreatableProps[OptionType /* <: OptionTypeBase */] extends js.Object {
     js.Function3[
       /* inputValue */ String, 
       /* value */ ValueType[OptionType], 
-      /* options */ OptionsType[OptionType], 
+      /* options */ OptionsType[OptionType] | GroupedOptionsType[OptionType], 
       Boolean
     ]
   ] = js.native
@@ -96,7 +97,7 @@ object CreatableProps {
     
     @scala.inline
     def setIsValidNewOption(
-      value: (/* inputValue */ String, /* value */ ValueType[OptionType], /* options */ OptionsType[OptionType]) => Boolean
+      value: (/* inputValue */ String, /* value */ ValueType[OptionType], /* options */ OptionsType[OptionType] | GroupedOptionsType[OptionType]) => Boolean
     ): Self = this.set("isValidNewOption", js.Any.fromFunction3(value))
     
     @scala.inline

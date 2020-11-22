@@ -1,5 +1,6 @@
 package typingsSlinky.spotifyWebApiNode.mod
 
+import typingsSlinky.spotifyApi.SpotifyApi.AddToQueueResponse
 import typingsSlinky.spotifyApi.SpotifyApi.AddTracksToPlaylistResponse
 import typingsSlinky.spotifyApi.SpotifyApi.AlbumTracksResponse
 import typingsSlinky.spotifyApi.SpotifyApi.ArtistsAlbumsResponse
@@ -75,6 +76,15 @@ trait SpotifyWebApi extends js.Object {
     * @returns A promise that if successful returns null, otherwise an error. Not returned if a callback is given.
     */
   def addToMySavedTracks(trackIds: js.Array[String], callback: Callback[SaveTracksForUserResponse]): Unit = js.native
+  
+  /**
+    * Add track or episode to device queue
+    * @param uri URI of the track or episode to add
+    * @param options Options, being device_id.
+    * @returns A promise that if successful returns null, otherwise an error.
+    */
+  def addToQueue(uri: String): js.Promise[Response[AddToQueueResponse]] = js.native
+  def addToQueue(uri: String, options: DeviceOptions): js.Promise[Response[AddToQueueResponse]] = js.native
   
   def addTracksToPlaylist(playlistId: String, tracks: js.Array[String]): js.Promise[Response[AddTracksToPlaylistResponse]] = js.native
   def addTracksToPlaylist(playlistId: String, tracks: js.Array[String], options: PositionOptions): js.Promise[Response[AddTracksToPlaylistResponse]] = js.native

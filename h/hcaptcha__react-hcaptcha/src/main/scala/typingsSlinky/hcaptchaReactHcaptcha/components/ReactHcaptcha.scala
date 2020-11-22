@@ -40,6 +40,9 @@ object ReactHcaptcha {
     def onVerify(value: /* token */ String => _): this.type = set("onVerify", js.Any.fromFunction1(value))
     
     @scala.inline
+    def reCaptchaCompat(value: Boolean): this.type = set("reCaptchaCompat", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def size(value: normal | compact | invisible): this.type = set("size", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -23,6 +23,11 @@ trait MeterUsageRequest extends js.Object {
   var Timestamp: js.Date = js.native
   
   /**
+    * The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the UsageQuantity of the MeterUsage request, and each UsageAllocation must have a unique set of tags (include no tags).
+    */
+  var UsageAllocations: js.UndefOr[typingsSlinky.awsSdk.marketplacemeteringMod.UsageAllocations] = js.native
+  
+  /**
     * It will be one of the fcp dimension name provided during the publishing of the product.
     */
   var UsageDimension: typingsSlinky.awsSdk.marketplacemeteringMod.UsageDimension = js.native
@@ -69,6 +74,15 @@ object MeterUsageRequest {
     
     @scala.inline
     def deleteDryRun: Self = this.set("DryRun", js.undefined)
+    
+    @scala.inline
+    def setUsageAllocationsVarargs(value: UsageAllocation*): Self = this.set("UsageAllocations", js.Array(value :_*))
+    
+    @scala.inline
+    def setUsageAllocations(value: UsageAllocations): Self = this.set("UsageAllocations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUsageAllocations: Self = this.set("UsageAllocations", js.undefined)
     
     @scala.inline
     def setUsageQuantity(value: UsageQuantity): Self = this.set("UsageQuantity", value.asInstanceOf[js.Any])

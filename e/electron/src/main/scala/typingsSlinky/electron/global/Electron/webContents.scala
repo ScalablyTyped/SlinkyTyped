@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object webContents
   extends Instantiable0[typingsSlinky.electron.Electron.WebContents_] {
   
-  // Docs: http://electronjs.org/docs/api/web-contents
+  // Docs: https://electronjs.org/docs/api/web-contents
   /**
     * A WebContents instance with the given ID.
     */

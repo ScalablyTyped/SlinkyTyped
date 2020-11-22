@@ -1,7 +1,7 @@
 
 # Scala.js typings for nightwatch
 
-Typings are for version 1.1
+Typings are for version 1.3
 
 ## Library description:
 Easy to use Node.js based End-to-End testing solution for browser based apps and websites, using the W3C WebDriver API.

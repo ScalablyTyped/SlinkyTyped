@@ -1,6 +1,6 @@
 package typingsSlinky.storybookComponents
 
-import typingsSlinky.emotionSerialize.mod.Interpolation
+import typingsSlinky.emotionSerialize.mod.CSSObject
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object scrollAreaStylesMod extends js.Object {
   
-  def getScrollAreaStyles(theme: Theme): Interpolation[js.UndefOr[scala.Nothing]] = js.native
+  def getScrollAreaStyles(theme: Theme): CSSObject = js.native
 }

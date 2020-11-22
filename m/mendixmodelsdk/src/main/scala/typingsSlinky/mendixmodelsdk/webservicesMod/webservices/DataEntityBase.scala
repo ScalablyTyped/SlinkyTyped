@@ -1,11 +1,12 @@
 package typingsSlinky.mendixmodelsdk.webservicesMod.webservices
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,8 +20,8 @@ abstract class DataEntityBase protected () extends DataMember {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def childMembers: IList[DataMember] = js.native
@@ -33,9 +34,6 @@ abstract class DataEntityBase protected () extends DataMember {
   
   def exposedItemName: String = js.native
   def exposedItemName_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FDataEntityBase: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/webservices", "webservices.DataEntityBase")

@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ClassImplements
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSRestType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `205` extends js.Object {
   
-  var `type`: ClassImplements = js.native
+  var `type`: TSRestType = js.native
 }
 object `205` {
   
   @scala.inline
-  def apply(`type`: ClassImplements): `205` = {
+  def apply(`type`: TSRestType): `205` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`205`]
@@ -35,6 +35,6 @@ object `205` {
     }
     
     @scala.inline
-    def setType(value: ClassImplements): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSRestType): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

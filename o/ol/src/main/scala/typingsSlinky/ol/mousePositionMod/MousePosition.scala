@@ -1,6 +1,7 @@
 package typingsSlinky.ol.mousePositionMod
 
 import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.ol.coordinateMod.CoordinateFormat
 import typingsSlinky.ol.eventsMod.EventsKey
 import typingsSlinky.ol.objectMod.ObjectEvent
@@ -15,11 +16,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MousePosition
   extends typingsSlinky.ol.controlControlMod.default {
   
-  def getCoordinateFormat(): CoordinateFormat = js.native
+  /**
+    * Return the coordinate format type used to render the current position or
+    * undefined.
+    */
+  def getCoordinateFormat(): js.UndefOr[CoordinateFormat] = js.native
   
-  def getProjection(): typingsSlinky.ol.projectionMod.default = js.native
+  /**
+    * Return the projection that is used to report the mouse position.
+    */
+  def getProjection(): js.UndefOr[typingsSlinky.ol.projectionMod.default] = js.native
   
-  /* protected */ def handleMouseMove(event: Event): Unit = js.native
+  /* protected */ def handleMouseMove(event: MouseEvent): Unit = js.native
   
   /* protected */ def handleMouseOut(event: Event): Unit = js.native
   
@@ -33,8 +41,14 @@ trait MousePosition
   @JSName("once")
   def once_changeprojection(`type`: changeColonprojection, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   
+  /**
+    * Set the coordinate format type used to render the current position.
+    */
   def setCoordinateFormat(format: CoordinateFormat): Unit = js.native
   
+  /**
+    * Set the projection that is used to report the mouse position.
+    */
   def setProjection(projection: ProjectionLike): Unit = js.native
   
   @JSName("un")

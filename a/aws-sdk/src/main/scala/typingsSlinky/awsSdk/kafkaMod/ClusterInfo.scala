@@ -72,7 +72,7 @@ trait ClusterInfo extends js.Object {
   
   /**
     * 
-    Specifies which metrics are gathered for the MSK cluster. This property has three possible values: DEFAULT, PER_BROKER, and PER_TOPIC_PER_BROKER. For a list of the metrics associated with each of these three levels of monitoring, see Monitoring.
+    Specifies which metrics are gathered for the MSK cluster. This property has the following possible values: DEFAULT, PER_BROKER, PER_TOPIC_PER_BROKER, and PER_TOPIC_PER_PARTITION. For a list of the metrics associated with each of these levels of monitoring, see Monitoring.
     
     */
   var EnhancedMonitoring: js.UndefOr[typingsSlinky.awsSdk.kafkaMod.EnhancedMonitoring] = js.native
@@ -115,6 +115,13 @@ trait ClusterInfo extends js.Object {
     
     */
   var ZookeeperConnectString: js.UndefOr[string] = js.native
+  
+  /**
+    * 
+    The connection string to use to connect to zookeeper cluster on Tls port.
+    
+    */
+  var ZookeeperConnectStringTls: js.UndefOr[string] = js.native
 }
 object ClusterInfo {
   
@@ -240,5 +247,11 @@ object ClusterInfo {
     
     @scala.inline
     def deleteZookeeperConnectString: Self = this.set("ZookeeperConnectString", js.undefined)
+    
+    @scala.inline
+    def setZookeeperConnectStringTls(value: string): Self = this.set("ZookeeperConnectStringTls", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteZookeeperConnectStringTls: Self = this.set("ZookeeperConnectStringTls", js.undefined)
   }
 }

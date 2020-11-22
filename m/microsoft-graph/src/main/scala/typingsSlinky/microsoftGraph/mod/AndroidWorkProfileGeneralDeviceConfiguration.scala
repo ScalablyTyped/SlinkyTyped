@@ -14,16 +14,16 @@ trait AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration {
   var passwordBlockTrustAgents: js.UndefOr[Boolean] = js.native
   
   // Number of days before the password expires. Valid values 1 to 365
-  var passwordExpirationDays: js.UndefOr[Double] = js.native
+  var passwordExpirationDays: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum length of passwords. Valid values 4 to 16
-  var passwordMinimumLength: js.UndefOr[Double] = js.native
+  var passwordMinimumLength: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minutes of inactivity before the screen times out.
-  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.native
+  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[NullableOption[Double]] = js.native
   
   // Number of previous passwords to block. Valid values 0 to 24
-  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var passwordPreviousPasswordBlockCount: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * Type of password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required, atLeastNumeric,
@@ -32,7 +32,7 @@ trait AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration {
   var passwordRequiredType: js.UndefOr[AndroidWorkProfileRequiredPasswordType] = js.native
   
   // Number of sign in failures allowed before factory reset. Valid values 1 to 16
-  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.native
+  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[NullableOption[Double]] = js.native
   
   // Require the Android Verify apps feature is turned on.
   var securityRequireVerifyApps: js.UndefOr[Boolean] = js.native
@@ -77,34 +77,34 @@ trait AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration {
   var workProfilePasswordBlockTrustAgents: js.UndefOr[Boolean] = js.native
   
   // Number of days before the work profile password expires. Valid values 1 to 365
-  var workProfilePasswordExpirationDays: js.UndefOr[Double] = js.native
+  var workProfilePasswordExpirationDays: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum # of letter characters required in work profile password. Valid values 1 to 10
-  var workProfilePasswordMinLetterCharacters: js.UndefOr[Double] = js.native
+  var workProfilePasswordMinLetterCharacters: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum # of lower-case characters required in work profile password. Valid values 1 to 10
-  var workProfilePasswordMinLowerCaseCharacters: js.UndefOr[Double] = js.native
+  var workProfilePasswordMinLowerCaseCharacters: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
-  var workProfilePasswordMinNonLetterCharacters: js.UndefOr[Double] = js.native
+  var workProfilePasswordMinNonLetterCharacters: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum # of numeric characters required in work profile password. Valid values 1 to 10
-  var workProfilePasswordMinNumericCharacters: js.UndefOr[Double] = js.native
+  var workProfilePasswordMinNumericCharacters: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum # of symbols required in work profile password. Valid values 1 to 10
-  var workProfilePasswordMinSymbolCharacters: js.UndefOr[Double] = js.native
+  var workProfilePasswordMinSymbolCharacters: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
-  var workProfilePasswordMinUpperCaseCharacters: js.UndefOr[Double] = js.native
+  var workProfilePasswordMinUpperCaseCharacters: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum length of work profile password. Valid values 4 to 16
-  var workProfilePasswordMinimumLength: js.UndefOr[Double] = js.native
+  var workProfilePasswordMinimumLength: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minutes of inactivity before the screen times out.
-  var workProfilePasswordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.native
+  var workProfilePasswordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[NullableOption[Double]] = js.native
   
   // Number of previous work profile passwords to block. Valid values 0 to 24
-  var workProfilePasswordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var workProfilePasswordPreviousPasswordBlockCount: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * Type of work profile password that is required. Possible values are: deviceDefault, lowSecurityBiometric, required,
@@ -113,7 +113,7 @@ trait AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration {
   var workProfilePasswordRequiredType: js.UndefOr[AndroidWorkProfileRequiredPasswordType] = js.native
   
   // Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
-  var workProfilePasswordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.native
+  var workProfilePasswordSignInFailureCountBeforeFactoryReset: js.UndefOr[NullableOption[Double]] = js.native
   
   // Password is required or not for work profile
   var workProfileRequirePassword: js.UndefOr[Boolean] = js.native
@@ -154,28 +154,40 @@ object AndroidWorkProfileGeneralDeviceConfiguration {
     def deletePasswordBlockTrustAgents: Self = this.set("passwordBlockTrustAgents", js.undefined)
     
     @scala.inline
-    def setPasswordExpirationDays(value: Double): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDays(value: NullableOption[Double]): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordExpirationDays: Self = this.set("passwordExpirationDays", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumLength(value: Double): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDaysNull: Self = this.set("passwordExpirationDays", null)
+    
+    @scala.inline
+    def setPasswordMinimumLength(value: NullableOption[Double]): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumLength: Self = this.set("passwordMinimumLength", js.undefined)
     
     @scala.inline
-    def setPasswordMinutesOfInactivityBeforeScreenTimeout(value: Double): Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
+    def setPasswordMinimumLengthNull: Self = this.set("passwordMinimumLength", null)
+    
+    @scala.inline
+    def setPasswordMinutesOfInactivityBeforeScreenTimeout(value: NullableOption[Double]): Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinutesOfInactivityBeforeScreenTimeout: Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", js.undefined)
     
     @scala.inline
-    def setPasswordPreviousPasswordBlockCount(value: Double): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
+    def setPasswordMinutesOfInactivityBeforeScreenTimeoutNull: Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", null)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCount(value: NullableOption[Double]): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordPreviousPasswordBlockCount: Self = this.set("passwordPreviousPasswordBlockCount", js.undefined)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCountNull: Self = this.set("passwordPreviousPasswordBlockCount", null)
     
     @scala.inline
     def setPasswordRequiredType(value: AndroidWorkProfileRequiredPasswordType): Self = this.set("passwordRequiredType", value.asInstanceOf[js.Any])
@@ -184,10 +196,13 @@ object AndroidWorkProfileGeneralDeviceConfiguration {
     def deletePasswordRequiredType: Self = this.set("passwordRequiredType", js.undefined)
     
     @scala.inline
-    def setPasswordSignInFailureCountBeforeFactoryReset(value: Double): Self = this.set("passwordSignInFailureCountBeforeFactoryReset", value.asInstanceOf[js.Any])
+    def setPasswordSignInFailureCountBeforeFactoryReset(value: NullableOption[Double]): Self = this.set("passwordSignInFailureCountBeforeFactoryReset", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordSignInFailureCountBeforeFactoryReset: Self = this.set("passwordSignInFailureCountBeforeFactoryReset", js.undefined)
+    
+    @scala.inline
+    def setPasswordSignInFailureCountBeforeFactoryResetNull: Self = this.set("passwordSignInFailureCountBeforeFactoryReset", null)
     
     @scala.inline
     def setSecurityRequireVerifyApps(value: Boolean): Self = this.set("securityRequireVerifyApps", value.asInstanceOf[js.Any])
@@ -268,64 +283,94 @@ object AndroidWorkProfileGeneralDeviceConfiguration {
     def deleteWorkProfilePasswordBlockTrustAgents: Self = this.set("workProfilePasswordBlockTrustAgents", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordExpirationDays(value: Double): Self = this.set("workProfilePasswordExpirationDays", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordExpirationDays(value: NullableOption[Double]): Self = this.set("workProfilePasswordExpirationDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordExpirationDays: Self = this.set("workProfilePasswordExpirationDays", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordMinLetterCharacters(value: Double): Self = this.set("workProfilePasswordMinLetterCharacters", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordExpirationDaysNull: Self = this.set("workProfilePasswordExpirationDays", null)
+    
+    @scala.inline
+    def setWorkProfilePasswordMinLetterCharacters(value: NullableOption[Double]): Self = this.set("workProfilePasswordMinLetterCharacters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordMinLetterCharacters: Self = this.set("workProfilePasswordMinLetterCharacters", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordMinLowerCaseCharacters(value: Double): Self = this.set("workProfilePasswordMinLowerCaseCharacters", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordMinLetterCharactersNull: Self = this.set("workProfilePasswordMinLetterCharacters", null)
+    
+    @scala.inline
+    def setWorkProfilePasswordMinLowerCaseCharacters(value: NullableOption[Double]): Self = this.set("workProfilePasswordMinLowerCaseCharacters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordMinLowerCaseCharacters: Self = this.set("workProfilePasswordMinLowerCaseCharacters", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordMinNonLetterCharacters(value: Double): Self = this.set("workProfilePasswordMinNonLetterCharacters", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordMinLowerCaseCharactersNull: Self = this.set("workProfilePasswordMinLowerCaseCharacters", null)
+    
+    @scala.inline
+    def setWorkProfilePasswordMinNonLetterCharacters(value: NullableOption[Double]): Self = this.set("workProfilePasswordMinNonLetterCharacters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordMinNonLetterCharacters: Self = this.set("workProfilePasswordMinNonLetterCharacters", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordMinNumericCharacters(value: Double): Self = this.set("workProfilePasswordMinNumericCharacters", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordMinNonLetterCharactersNull: Self = this.set("workProfilePasswordMinNonLetterCharacters", null)
+    
+    @scala.inline
+    def setWorkProfilePasswordMinNumericCharacters(value: NullableOption[Double]): Self = this.set("workProfilePasswordMinNumericCharacters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordMinNumericCharacters: Self = this.set("workProfilePasswordMinNumericCharacters", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordMinSymbolCharacters(value: Double): Self = this.set("workProfilePasswordMinSymbolCharacters", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordMinNumericCharactersNull: Self = this.set("workProfilePasswordMinNumericCharacters", null)
+    
+    @scala.inline
+    def setWorkProfilePasswordMinSymbolCharacters(value: NullableOption[Double]): Self = this.set("workProfilePasswordMinSymbolCharacters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordMinSymbolCharacters: Self = this.set("workProfilePasswordMinSymbolCharacters", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordMinUpperCaseCharacters(value: Double): Self = this.set("workProfilePasswordMinUpperCaseCharacters", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordMinSymbolCharactersNull: Self = this.set("workProfilePasswordMinSymbolCharacters", null)
+    
+    @scala.inline
+    def setWorkProfilePasswordMinUpperCaseCharacters(value: NullableOption[Double]): Self = this.set("workProfilePasswordMinUpperCaseCharacters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordMinUpperCaseCharacters: Self = this.set("workProfilePasswordMinUpperCaseCharacters", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordMinimumLength(value: Double): Self = this.set("workProfilePasswordMinimumLength", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordMinUpperCaseCharactersNull: Self = this.set("workProfilePasswordMinUpperCaseCharacters", null)
+    
+    @scala.inline
+    def setWorkProfilePasswordMinimumLength(value: NullableOption[Double]): Self = this.set("workProfilePasswordMinimumLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordMinimumLength: Self = this.set("workProfilePasswordMinimumLength", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(value: Double): Self = this.set("workProfilePasswordMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordMinimumLengthNull: Self = this.set("workProfilePasswordMinimumLength", null)
+    
+    @scala.inline
+    def setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(value: NullableOption[Double]): Self = this.set("workProfilePasswordMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout: Self = this.set("workProfilePasswordMinutesOfInactivityBeforeScreenTimeout", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordPreviousPasswordBlockCount(value: Double): Self = this.set("workProfilePasswordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeoutNull: Self = this.set("workProfilePasswordMinutesOfInactivityBeforeScreenTimeout", null)
+    
+    @scala.inline
+    def setWorkProfilePasswordPreviousPasswordBlockCount(value: NullableOption[Double]): Self = this.set("workProfilePasswordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordPreviousPasswordBlockCount: Self = this.set("workProfilePasswordPreviousPasswordBlockCount", js.undefined)
+    
+    @scala.inline
+    def setWorkProfilePasswordPreviousPasswordBlockCountNull: Self = this.set("workProfilePasswordPreviousPasswordBlockCount", null)
     
     @scala.inline
     def setWorkProfilePasswordRequiredType(value: AndroidWorkProfileRequiredPasswordType): Self = this.set("workProfilePasswordRequiredType", value.asInstanceOf[js.Any])
@@ -334,10 +379,13 @@ object AndroidWorkProfileGeneralDeviceConfiguration {
     def deleteWorkProfilePasswordRequiredType: Self = this.set("workProfilePasswordRequiredType", js.undefined)
     
     @scala.inline
-    def setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(value: Double): Self = this.set("workProfilePasswordSignInFailureCountBeforeFactoryReset", value.asInstanceOf[js.Any])
+    def setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(value: NullableOption[Double]): Self = this.set("workProfilePasswordSignInFailureCountBeforeFactoryReset", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkProfilePasswordSignInFailureCountBeforeFactoryReset: Self = this.set("workProfilePasswordSignInFailureCountBeforeFactoryReset", js.undefined)
+    
+    @scala.inline
+    def setWorkProfilePasswordSignInFailureCountBeforeFactoryResetNull: Self = this.set("workProfilePasswordSignInFailureCountBeforeFactoryReset", null)
     
     @scala.inline
     def setWorkProfileRequirePassword(value: Boolean): Self = this.set("workProfileRequirePassword", value.asInstanceOf[js.Any])

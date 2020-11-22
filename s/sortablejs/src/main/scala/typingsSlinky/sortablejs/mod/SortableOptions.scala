@@ -195,7 +195,7 @@ trait SortableOptions extends js.Object {
     * Event when you move an item in the list or between lists
     */
   var onMove: js.UndefOr[
-    js.Function2[/* evt */ MoveEvent, /* originalEvent */ Event, Boolean | `-1` | `1`]
+    js.Function2[/* evt */ MoveEvent, /* originalEvent */ Event, Boolean | `-1` | `1` | Unit]
   ] = js.native
   
   /**
@@ -479,7 +479,7 @@ object SortableOptions {
     def deleteOnFilter: Self = this.set("onFilter", js.undefined)
     
     @scala.inline
-    def setOnMove(value: (/* evt */ MoveEvent, /* originalEvent */ Event) => Boolean | `-1` | `1`): Self = this.set("onMove", js.Any.fromFunction2(value))
+    def setOnMove(value: (/* evt */ MoveEvent, /* originalEvent */ Event) => Boolean | `-1` | `1` | Unit): Self = this.set("onMove", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnMove: Self = this.set("onMove", js.undefined)

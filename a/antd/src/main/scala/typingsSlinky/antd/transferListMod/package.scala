@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object transferListMod {
   
-  type RenderListFunction = js.Function1[
-    /* props */ typingsSlinky.antd.listBodyMod.TransferListBodyProps, 
+  type RenderListFunction[T] = js.Function1[
+    /* props */ typingsSlinky.antd.listBodyMod.TransferListBodyProps[T], 
     slinky.core.facade.ReactElement
   ]
 }

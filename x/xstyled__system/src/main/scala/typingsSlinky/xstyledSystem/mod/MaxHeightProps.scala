@@ -9,7 +9,7 @@ trait MaxHeightProps[TLength] extends js.Object {
   
   val maxHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object MaxHeightProps {
     }
     
     @scala.inline
+    def setMaxHeightVarargs(value: js.Any*): Self = this.set("maxHeight", js.Array(value :_*))
+    
+    @scala.inline
     def setMaxHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLength> */ _
         ]
     ): Self = this.set("maxHeight", value.asInstanceOf[js.Any])
     

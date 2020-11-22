@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SendTaskSuccessInput extends js.Object {
   
   /**
-    * The JSON output of the task.
+    * The JSON output of the task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
     */
   var output: SensitiveData = js.native
   

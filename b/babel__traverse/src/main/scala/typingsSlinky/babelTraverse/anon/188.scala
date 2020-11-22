@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.JSXText
+import typingsSlinky.babelTraverse.babelTraverseStrings.FunctionExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `188` extends js.Object {
   
-  var `type`: JSXText = js.native
+  var `type`: FunctionExpression = js.native
 }
 object `188` {
   
   @scala.inline
-  def apply(`type`: JSXText): `188` = {
+  def apply(`type`: FunctionExpression): `188` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`188`]
@@ -35,6 +35,6 @@ object `188` {
     }
     
     @scala.inline
-    def setType(value: JSXText): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: FunctionExpression): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

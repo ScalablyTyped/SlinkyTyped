@@ -67,8 +67,16 @@ object physicsPluginsIndexMod extends js.Object {
   @js.native
   class OimoJSPlugin ()
     extends typingsSlinky.babylonjs.oimoJSPluginMod.OimoJSPlugin {
-    def this(iterations: Double) = this()
-    def this(iterations: js.UndefOr[scala.Nothing], oimoInjection: js.Any) = this()
-    def this(iterations: Double, oimoInjection: js.Any) = this()
+    def this(_useDeltaForWorldStep: Boolean) = this()
+    def this(_useDeltaForWorldStep: js.UndefOr[scala.Nothing], iterations: Double) = this()
+    def this(_useDeltaForWorldStep: Boolean, iterations: Double) = this()
+    def this(
+      _useDeltaForWorldStep: js.UndefOr[scala.Nothing],
+      iterations: js.UndefOr[scala.Nothing],
+      oimoInjection: js.Any
+    ) = this()
+    def this(_useDeltaForWorldStep: js.UndefOr[scala.Nothing], iterations: Double, oimoInjection: js.Any) = this()
+    def this(_useDeltaForWorldStep: Boolean, iterations: js.UndefOr[scala.Nothing], oimoInjection: js.Any) = this()
+    def this(_useDeltaForWorldStep: Boolean, iterations: Double, oimoInjection: js.Any) = this()
   }
 }

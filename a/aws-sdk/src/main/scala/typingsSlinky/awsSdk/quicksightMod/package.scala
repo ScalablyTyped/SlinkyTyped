@@ -12,6 +12,31 @@ package object quicksightMod {
   
   type AliasName = java.lang.String
   
+  type AnalysisErrorList = js.Array[typingsSlinky.awsSdk.quicksightMod.AnalysisError]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACCESS_DENIED
+    - typingsSlinky.awsSdk.awsSdkStrings.SOURCE_NOT_FOUND
+    - typingsSlinky.awsSdk.awsSdkStrings.DATA_SET_NOT_FOUND
+    - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL_FAILURE
+    - typingsSlinky.awsSdk.awsSdkStrings.PARAMETER_VALUE_INCOMPATIBLE
+    - typingsSlinky.awsSdk.awsSdkStrings.PARAMETER_TYPE_INVALID
+    - typingsSlinky.awsSdk.awsSdkStrings.PARAMETER_NOT_FOUND
+    - typingsSlinky.awsSdk.awsSdkStrings.COLUMN_TYPE_MISMATCH
+    - typingsSlinky.awsSdk.awsSdkStrings.COLUMN_GEOGRAPHIC_ROLE_MISMATCH
+    - typingsSlinky.awsSdk.awsSdkStrings.COLUMN_REPLACEMENT_MISSING
+    - java.lang.String
+  */
+  type AnalysisErrorType = typingsSlinky.awsSdk.quicksightMod._AnalysisErrorType | java.lang.String
+  
+  type AnalysisFilterAttribute = typingsSlinky.awsSdk.awsSdkStrings.QUICKSIGHT_USER | java.lang.String
+  
+  type AnalysisName = java.lang.String
+  
+  type AnalysisSearchFilterList = js.Array[typingsSlinky.awsSdk.quicksightMod.AnalysisSearchFilter]
+  
+  type AnalysisSummaryList = js.Array[typingsSlinky.awsSdk.quicksightMod.AnalysisSummary]
+  
   type Arn = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
@@ -47,6 +72,8 @@ package object quicksightMod {
   */
   type ColumnDataType = typingsSlinky.awsSdk.quicksightMod._ColumnDataType | java.lang.String
   
+  type ColumnDescriptiveText = java.lang.String
+  
   type ColumnGroupColumnSchemaList = js.Array[typingsSlinky.awsSdk.quicksightMod.ColumnGroupColumnSchema]
   
   type ColumnGroupList = js.Array[typingsSlinky.awsSdk.quicksightMod.ColumnGroup]
@@ -57,9 +84,13 @@ package object quicksightMod {
   
   type ColumnId = java.lang.String
   
+  type ColumnLevelPermissionRuleList = js.Array[typingsSlinky.awsSdk.quicksightMod.ColumnLevelPermissionRule]
+  
   type ColumnList = js.Array[typingsSlinky.awsSdk.quicksightMod.ColumnName]
   
   type ColumnName = java.lang.String
+  
+  type ColumnNameList = js.Array[typingsSlinky.awsSdk.quicksightMod.String]
   
   type ColumnSchemaList = js.Array[typingsSlinky.awsSdk.quicksightMod.ColumnSchema]
   
@@ -155,6 +186,7 @@ package object quicksightMod {
     - typingsSlinky.awsSdk.awsSdkStrings.JIRA
     - typingsSlinky.awsSdk.awsSdkStrings.MARIADB
     - typingsSlinky.awsSdk.awsSdkStrings.MYSQL
+    - typingsSlinky.awsSdk.awsSdkStrings.ORACLE
     - typingsSlinky.awsSdk.awsSdkStrings.POSTGRESQL
     - typingsSlinky.awsSdk.awsSdkStrings.PRESTO
     - typingsSlinky.awsSdk.awsSdkStrings.REDSHIFT
@@ -166,6 +198,7 @@ package object quicksightMod {
     - typingsSlinky.awsSdk.awsSdkStrings.SQLSERVER
     - typingsSlinky.awsSdk.awsSdkStrings.TERADATA
     - typingsSlinky.awsSdk.awsSdkStrings.TWITTER
+    - typingsSlinky.awsSdk.awsSdkStrings.TIMESTREAM
     - java.lang.String
   */
   type DataSourceType = typingsSlinky.awsSdk.quicksightMod._DataSourceType | java.lang.String
@@ -415,9 +448,13 @@ package object quicksightMod {
   
   type Principal = java.lang.String
   
+  type PrincipalList = js.Array[typingsSlinky.awsSdk.quicksightMod.String]
+  
   type ProjectedColumnList = js.Array[typingsSlinky.awsSdk.quicksightMod.String]
   
   type Query = java.lang.String
+  
+  type RecoveryWindowInDays = scala.Double
   
   type RelationalTableName = java.lang.String
   
@@ -436,6 +473,7 @@ package object quicksightMod {
     - typingsSlinky.awsSdk.awsSdkStrings.UPDATE_IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.UPDATE_SUCCESSFUL
     - typingsSlinky.awsSdk.awsSdkStrings.UPDATE_FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
     - java.lang.String
   */
   type ResourceStatus = typingsSlinky.awsSdk.quicksightMod._ResourceStatus | java.lang.String
@@ -458,6 +496,8 @@ package object quicksightMod {
   type S3Key = java.lang.String
   
   type SessionLifetimeInMinutes = scala.Double
+  
+  type SheetList = js.Array[typingsSlinky.awsSdk.quicksightMod.Sheet]
   
   type SiteBaseUrl = java.lang.String
   
@@ -487,6 +527,7 @@ package object quicksightMod {
     - typingsSlinky.awsSdk.awsSdkStrings.SOURCE_NOT_FOUND
     - typingsSlinky.awsSdk.awsSdkStrings.DATA_SET_NOT_FOUND
     - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL_FAILURE
+    - typingsSlinky.awsSdk.awsSdkStrings.ACCESS_DENIED
     - java.lang.String
   */
   type TemplateErrorType = typingsSlinky.awsSdk.quicksightMod._TemplateErrorType | java.lang.String

@@ -3,11 +3,12 @@ package typingsSlinky.rcTrigger.mod
 import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.rcTrigger.interfaceMod.ActionType
 import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.rcTrigger.interfaceMod.AnimationType
 import typingsSlinky.rcTrigger.interfaceMod.BuildInPlacements
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcTrigger.interfaceMod.MobileConfig
 import typingsSlinky.rcTrigger.interfaceMod.TransitionNameType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
@@ -63,11 +64,15 @@ trait TriggerProps extends js.Object {
   
   var maskClosable: js.UndefOr[Boolean] = js.native
   
-  /** Set mask motion. You can ref `rc-animate` for more info. */
-  var maskMotion: js.UndefOr[MotionType] = js.native
+  /** Set mask motion. You can ref `rc-motion` for more info. */
+  var maskMotion: js.UndefOr[CSSMotionProps] = js.native
   
   /** @deprecated Please us `maskMotion` instead. */
   var maskTransitionName: js.UndefOr[TransitionNameType] = js.native
+  
+  /** @private Bump fixed position at bottom in mobile.
+    * This is internal usage currently, do not use in your prod */
+  var mobile: js.UndefOr[MobileConfig] = js.native
   
   var mouseEnterDelay: js.UndefOr[Double] = js.native
   
@@ -86,8 +91,8 @@ trait TriggerProps extends js.Object {
   
   var popupClassName: js.UndefOr[String] = js.native
   
-  /** Set popup motion. You can ref `rc-animate` for more info. */
-  var popupMotion: js.UndefOr[MotionType] = js.native
+  /** Set popup motion. You can ref `rc-motion` for more info. */
+  var popupMotion: js.UndefOr[CSSMotionProps] = js.native
   
   var popupPlacement: js.UndefOr[String] = js.native
   
@@ -253,7 +258,7 @@ object TriggerProps {
     def deleteMaskClosable: Self = this.set("maskClosable", js.undefined)
     
     @scala.inline
-    def setMaskMotion(value: MotionType): Self = this.set("maskMotion", value.asInstanceOf[js.Any])
+    def setMaskMotion(value: CSSMotionProps): Self = this.set("maskMotion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaskMotion: Self = this.set("maskMotion", js.undefined)
@@ -263,6 +268,12 @@ object TriggerProps {
     
     @scala.inline
     def deleteMaskTransitionName: Self = this.set("maskTransitionName", js.undefined)
+    
+    @scala.inline
+    def setMobile(value: MobileConfig): Self = this.set("mobile", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMobile: Self = this.set("mobile", js.undefined)
     
     @scala.inline
     def setMouseEnterDelay(value: Double): Self = this.set("mouseEnterDelay", value.asInstanceOf[js.Any])
@@ -319,7 +330,7 @@ object TriggerProps {
     def deletePopupClassName: Self = this.set("popupClassName", js.undefined)
     
     @scala.inline
-    def setPopupMotion(value: MotionType): Self = this.set("popupMotion", value.asInstanceOf[js.Any])
+    def setPopupMotion(value: CSSMotionProps): Self = this.set("popupMotion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePopupMotion: Self = this.set("popupMotion", js.undefined)

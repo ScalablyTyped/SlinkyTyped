@@ -16,6 +16,11 @@ trait ListCertificateAuthoritiesRequest extends js.Object {
     * Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the NextToken parameter from the response you just received.
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.acmpcaMod.NextToken] = js.native
+  
+  /**
+    * Use this parameter to filter the returned set of certificate authorities based on their owner. The default is SELF.
+    */
+  var ResourceOwner: js.UndefOr[typingsSlinky.awsSdk.acmpcaMod.ResourceOwner] = js.native
 }
 object ListCertificateAuthoritiesRequest {
   
@@ -51,5 +56,11 @@ object ListCertificateAuthoritiesRequest {
     
     @scala.inline
     def deleteNextToken: Self = this.set("NextToken", js.undefined)
+    
+    @scala.inline
+    def setResourceOwner(value: ResourceOwner): Self = this.set("ResourceOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResourceOwner: Self = this.set("ResourceOwner", js.undefined)
   }
 }

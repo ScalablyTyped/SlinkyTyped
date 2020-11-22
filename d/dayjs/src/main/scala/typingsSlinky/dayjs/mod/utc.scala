@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object utc extends js.Object {
   
-  def apply(): typingsSlinky.dayjs.utcMod.dayjsAugmentingMod.Dayjs = js.native
-  def apply(config: js.UndefOr[ConfigType], format: String): typingsSlinky.dayjs.utcMod.dayjsAugmentingMod.Dayjs = js.native
-  def apply(config: ConfigType): typingsSlinky.dayjs.utcMod.dayjsAugmentingMod.Dayjs = js.native
+  def apply(): typingsSlinky.dayjs.pluginUtcMod.dayjsAugmentingMod.Dayjs = js.native
+  def apply(config: js.UndefOr[ConfigType], format: String): typingsSlinky.dayjs.pluginUtcMod.dayjsAugmentingMod.Dayjs = js.native
+  def apply(config: ConfigType): typingsSlinky.dayjs.pluginUtcMod.dayjsAugmentingMod.Dayjs = js.native
 }

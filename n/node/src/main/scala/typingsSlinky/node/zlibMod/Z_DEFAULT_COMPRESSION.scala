@@ -5,9 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/**
-  * @deprecated
-  */
+/** @deprecated Use `constants.Z_DEFAULT_COMPRESSION` */
 @JSImport("zlib", "Z_DEFAULT_COMPRESSION")
 @js.native
 object Z_DEFAULT_COMPRESSION extends TopLevel[Double]

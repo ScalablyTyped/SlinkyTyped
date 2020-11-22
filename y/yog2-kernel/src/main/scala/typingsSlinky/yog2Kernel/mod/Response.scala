@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait Response
-  extends typingsSlinky.expressServeStaticCore.mod.Response[js.Any] {
+  extends typingsSlinky.expressServeStaticCore.mod.Response[js.Any, Double] {
   
   var bigpipe: BigPipe = js.native
 }

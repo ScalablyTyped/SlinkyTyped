@@ -56,37 +56,37 @@ trait RealtimePresenceCallbacks extends RealtimePresenceBase {
   def subscribe(
     presenceOrListener: js.Array[PresenceAction],
     listener: js.UndefOr[scala.Nothing],
-    callbackWhenAttached: standardCallback
+    callbackWhenAttached: errorCallback
   ): Unit = js.native
   def subscribe(presenceOrListener: js.Array[PresenceAction], listener: messageCallback[PresenceMessage]): Unit = js.native
   def subscribe(
     presenceOrListener: js.Array[PresenceAction],
     listener: messageCallback[PresenceMessage],
-    callbackWhenAttached: standardCallback
+    callbackWhenAttached: errorCallback
   ): Unit = js.native
   def subscribe(presenceOrListener: PresenceAction): Unit = js.native
   def subscribe(
     presenceOrListener: PresenceAction,
     listener: js.UndefOr[scala.Nothing],
-    callbackWhenAttached: standardCallback
+    callbackWhenAttached: errorCallback
   ): Unit = js.native
   def subscribe(presenceOrListener: PresenceAction, listener: messageCallback[PresenceMessage]): Unit = js.native
   def subscribe(
     presenceOrListener: PresenceAction,
     listener: messageCallback[PresenceMessage],
-    callbackWhenAttached: standardCallback
+    callbackWhenAttached: errorCallback
   ): Unit = js.native
   def subscribe(presenceOrListener: messageCallback[PresenceMessage]): Unit = js.native
   def subscribe(
     presenceOrListener: messageCallback[PresenceMessage],
     listener: js.UndefOr[scala.Nothing],
-    callbackWhenAttached: standardCallback
+    callbackWhenAttached: errorCallback
   ): Unit = js.native
   def subscribe(presenceOrListener: messageCallback[PresenceMessage], listener: messageCallback[PresenceMessage]): Unit = js.native
   def subscribe(
     presenceOrListener: messageCallback[PresenceMessage],
     listener: messageCallback[PresenceMessage],
-    callbackWhenAttached: standardCallback
+    callbackWhenAttached: errorCallback
   ): Unit = js.native
   
   def update(): Unit = js.native

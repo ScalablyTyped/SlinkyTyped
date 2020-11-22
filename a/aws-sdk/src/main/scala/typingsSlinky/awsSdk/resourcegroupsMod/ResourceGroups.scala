@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.resourcegroupsMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -135,12 +135,12 @@ trait ResourceGroups extends Service {
   ): Request[ListGroupsOutput, AWSError] = js.native
   
   /**
-    * Returns a list of AWS resource identifiers that matches tne specified query. The query uses the same format as a resource query in a CreateGroup or UpdateGroupQuery operation.
+    * Returns a list of AWS resource identifiers that matches the specified query. The query uses the same format as a resource query in a CreateGroup or UpdateGroupQuery operation.
     */
   def searchResources(): Request[SearchResourcesOutput, AWSError] = js.native
   def searchResources(callback: js.Function2[/* err */ AWSError, /* data */ SearchResourcesOutput, Unit]): Request[SearchResourcesOutput, AWSError] = js.native
   /**
-    * Returns a list of AWS resource identifiers that matches tne specified query. The query uses the same format as a resource query in a CreateGroup or UpdateGroupQuery operation.
+    * Returns a list of AWS resource identifiers that matches the specified query. The query uses the same format as a resource query in a CreateGroup or UpdateGroupQuery operation.
     */
   def searchResources(params: SearchResourcesInput): Request[SearchResourcesOutput, AWSError] = js.native
   def searchResources(

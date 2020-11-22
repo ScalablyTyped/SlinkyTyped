@@ -21,8 +21,6 @@ trait AttributionViewModel extends Accessor {
     * The view model's state.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attribution-AttributionViewModel.html#state)
-    *
-    * @default disabled
     */
   val state: disabled | ready | loading = js.native
   

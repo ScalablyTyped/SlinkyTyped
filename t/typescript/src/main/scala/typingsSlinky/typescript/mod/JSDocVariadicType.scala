@@ -11,7 +11,7 @@ trait JSDocVariadicType
      with JSDocTypeReferencingNode {
   
   @JSName("kind")
-  var kind_JSDocVariadicType: typingsSlinky.typescript.mod.SyntaxKind.JSDocVariadicType = js.native
+  val kind_JSDocVariadicType: typingsSlinky.typescript.mod.SyntaxKind.JSDocVariadicType = js.native
   
-  var `type`: TypeNode = js.native
+  val `type`: TypeNode = js.native
 }

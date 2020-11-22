@@ -9,7 +9,7 @@ trait BackgroundImageProps extends js.Object {
   
   val backgroundImage: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundImageProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundImage */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BackgroundImageProps {
     }
     
     @scala.inline
+    def setBackgroundImageVarargs(value: js.Any*): Self = this.set("backgroundImage", js.Array(value :_*))
+    
+    @scala.inline
     def setBackgroundImage(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundImageProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundImage */ _
         ]
     ): Self = this.set("backgroundImage", value.asInstanceOf[js.Any])
     

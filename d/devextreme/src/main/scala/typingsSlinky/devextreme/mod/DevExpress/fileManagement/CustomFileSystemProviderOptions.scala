@@ -10,7 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CustomFileSystemProviderOptions extends FileSystemProviderBaseOptions[CustomFileSystemProvider] {
   
-  /** @name CustomFileSystemProvider.Options.abortFileUpload */
+  /**
+    * [descr:CustomFileSystemProvider.Options.abortFileUpload]
+    */
   var abortFileUpload: js.UndefOr[
     js.Function3[
       /* file */ File, 
@@ -20,7 +22,9 @@ trait CustomFileSystemProviderOptions extends FileSystemProviderBaseOptions[Cust
     ]
   ] = js.native
   
-  /** @name CustomFileSystemProvider.Options.copyItem */
+  /**
+    * [descr:CustomFileSystemProvider.Options.copyItem]
+    */
   var copyItem: js.UndefOr[
     js.Function2[
       /* item */ FileSystemItem, 
@@ -29,7 +33,9 @@ trait CustomFileSystemProviderOptions extends FileSystemProviderBaseOptions[Cust
     ]
   ] = js.native
   
-  /** @name CustomFileSystemProvider.Options.createDirectory */
+  /**
+    * [descr:CustomFileSystemProvider.Options.createDirectory]
+    */
   var createDirectory: js.UndefOr[
     js.Function2[
       /* parentDirectory */ FileSystemItem, 
@@ -38,13 +44,19 @@ trait CustomFileSystemProviderOptions extends FileSystemProviderBaseOptions[Cust
     ]
   ] = js.native
   
-  /** @name CustomFileSystemProvider.Options.deleteItem */
+  /**
+    * [descr:CustomFileSystemProvider.Options.deleteItem]
+    */
   var deleteItem: js.UndefOr[js.Function1[/* item */ FileSystemItem, Promise[_] | JQueryPromise[_] | _]] = js.native
   
-  /** @name CustomFileSystemProvider.Options.downloadItems */
+  /**
+    * [descr:CustomFileSystemProvider.Options.downloadItems]
+    */
   var downloadItems: js.UndefOr[js.Function1[/* items */ js.Array[FileSystemItem], _]] = js.native
   
-  /** @name CustomFileSystemProvider.Options.getItems */
+  /**
+    * [descr:CustomFileSystemProvider.Options.getItems]
+    */
   var getItems: js.UndefOr[
     js.Function1[
       /* parentDirectory */ FileSystemItem, 
@@ -52,15 +64,21 @@ trait CustomFileSystemProviderOptions extends FileSystemProviderBaseOptions[Cust
     ]
   ] = js.native
   
-  /** @name CustomFileSystemProvider.Options.getItemsContent */
+  /**
+    * [descr:CustomFileSystemProvider.Options.getItemsContent]
+    */
   var getItemsContent: js.UndefOr[
     js.Function1[/* items */ js.Array[FileSystemItem], Promise[_] | JQueryPromise[_] | _]
   ] = js.native
   
-  /** @name CustomFileSystemProvider.Options.hasSubDirectoriesExpr */
+  /**
+    * [descr:CustomFileSystemProvider.Options.hasSubDirectoriesExpr]
+    */
   var hasSubDirectoriesExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name CustomFileSystemProvider.Options.moveItem */
+  /**
+    * [descr:CustomFileSystemProvider.Options.moveItem]
+    */
   var moveItem: js.UndefOr[
     js.Function2[
       /* item */ FileSystemItem, 
@@ -69,12 +87,16 @@ trait CustomFileSystemProviderOptions extends FileSystemProviderBaseOptions[Cust
     ]
   ] = js.native
   
-  /** @name CustomFileSystemProvider.Options.renameItem */
+  /**
+    * [descr:CustomFileSystemProvider.Options.renameItem]
+    */
   var renameItem: js.UndefOr[
     js.Function2[/* item */ FileSystemItem, /* newName */ String, Promise[_] | JQueryPromise[_] | _]
   ] = js.native
   
-  /** @name CustomFileSystemProvider.Options.uploadFileChunk */
+  /**
+    * [descr:CustomFileSystemProvider.Options.uploadFileChunk]
+    */
   var uploadFileChunk: js.UndefOr[
     js.Function3[
       /* file */ File, 

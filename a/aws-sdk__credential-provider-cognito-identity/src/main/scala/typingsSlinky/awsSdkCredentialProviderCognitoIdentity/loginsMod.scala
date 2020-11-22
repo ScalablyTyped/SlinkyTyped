@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/credential-provider-cognito-identity/build/Logins", JSImport.Namespace)
+@JSImport("@aws-sdk/credential-provider-cognito-identity/dist/cjs/Logins", JSImport.Namespace)
 @js.native
 object loginsMod extends js.Object {
   

@@ -23,7 +23,7 @@ class CatalogTax () extends js.Object {
   var calculation_phase: js.UndefOr[TAX_SUBTOTAL_PHASE | TAX_TOTAL_PHASE] = js.native
   
   /**
-    * If `true`, the tax will be shown as enabled in the Square Point of Sale app.
+    * A Boolean flag to indicate whether the tax is displayed as enabled (`true`) in the Square Point of Sale app or not (`false`).
     */
   var enabled: js.UndefOr[Boolean] = js.native
   
@@ -33,7 +33,7 @@ class CatalogTax () extends js.Object {
   var inclusion_type: js.UndefOr[TaxType] = js.native
   
   /**
-    * The tax's name. Searchable. This field has max length of 255 Unicode code points.
+    * The tax's name. This is a searchable attribute for use in applicable query filters, and its value length is of Unicode code points.
     */
   var name: js.UndefOr[String] = js.native
   

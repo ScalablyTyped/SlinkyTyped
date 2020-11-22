@@ -1,13 +1,13 @@
 package typingsSlinky.reactRelay.useRefetchableFragmentNodeMod
 
-import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.reactRelay.helpersMod.KeyType
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.OperationType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ReturnTypeNode[TQuery /* <: OperationType */, TKey /* <: StringDictionary[js.Any] | Null */, TOptions] extends js.Object {
+trait ReturnTypeNode[TQuery /* <: OperationType */, TKey /* <: KeyType[_] | Null */, TOptions] extends js.Object {
   
   def disableStoreUpdates(): Unit = js.native
   
@@ -22,7 +22,7 @@ trait ReturnTypeNode[TQuery /* <: OperationType */, TKey /* <: StringDictionary[
 object ReturnTypeNode {
   
   @scala.inline
-  def apply[TQuery /* <: OperationType */, TKey /* <: StringDictionary[js.Any] | Null */, TOptions](
+  def apply[TQuery /* <: OperationType */, TKey /* <: KeyType[_] | Null */, TOptions](
     disableStoreUpdates: () => Unit,
     enableStoreUpdates: () => Unit,
     fragmentData: js.Any,
@@ -34,7 +34,7 @@ object ReturnTypeNode {
   }
   
   @scala.inline
-  implicit class ReturnTypeNodeOps[Self <: ReturnTypeNode[_, _, _], TQuery /* <: OperationType */, TKey /* <: StringDictionary[js.Any] | Null */, TOptions] (val x: Self with (ReturnTypeNode[TQuery, TKey, TOptions])) extends AnyVal {
+  implicit class ReturnTypeNodeOps[Self <: ReturnTypeNode[_, _, _], TQuery /* <: OperationType */, TKey /* <: KeyType[_] | Null */, TOptions] (val x: Self with (ReturnTypeNode[TQuery, TKey, TOptions])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

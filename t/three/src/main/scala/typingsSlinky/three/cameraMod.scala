@@ -21,16 +21,19 @@ object cameraMod extends js.Object {
     
     /**
     	 * This is the inverse of matrixWorld. MatrixWorld contains the Matrix which has the world transform of the Camera.
+    	 * @default new THREE.Matrix4()
     	 */
     var matrixWorldInverse: Matrix4 = js.native
     
     /**
     	 * This is the matrix which contains the projection.
+    	 * @default new THREE.Matrix4()
     	 */
     var projectionMatrix: Matrix4 = js.native
     
     /**
     	 * This is the inverse of projectionMatrix.
+    	 * @default new THREE.Matrix4()
     	 */
     var projectionMatrixInverse: Matrix4 = js.native
   }

@@ -2,14 +2,15 @@ package typingsSlinky.jupyterlabCells.celldragutilsMod.CellDragUtils
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.jupyterlabCells.widgetMod.Cell
-import typingsSlinky.jupyterlabCoreutils.nbformatMod.nbformat.ICell
+import typingsSlinky.jupyterlabNbformat.mod.ICell
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/cells/lib/celldragutils", "CellDragUtils.createCellDragImage")
 @js.native
 object createCellDragImage extends js.Object {
+  
   /**
     * Create an image for the cell(s) to be dragged
     *
@@ -18,4 +19,3 @@ object createCellDragImage extends js.Object {
     */
   def apply(activeCell: Cell, selectedCells: js.Array[ICell]): HTMLElement = js.native
 }
-

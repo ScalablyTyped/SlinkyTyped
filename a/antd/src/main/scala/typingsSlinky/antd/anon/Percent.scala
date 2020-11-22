@@ -7,13 +7,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Percent extends js.Object {
   
-  var percent: Double = js.native
+  var percent: js.UndefOr[Double] = js.native
+  
+  var progress: js.UndefOr[Double] = js.native
 }
 object Percent {
   
   @scala.inline
-  def apply(percent: Double): Percent = {
-    val __obj = js.Dynamic.literal(percent = percent.asInstanceOf[js.Any])
+  def apply(): Percent = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Percent]
   }
   
@@ -34,5 +36,14 @@ object Percent {
     
     @scala.inline
     def setPercent(value: Double): Self = this.set("percent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePercent: Self = this.set("percent", js.undefined)
+    
+    @scala.inline
+    def setProgress(value: Double): Self = this.set("progress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProgress: Self = this.set("progress", js.undefined)
   }
 }

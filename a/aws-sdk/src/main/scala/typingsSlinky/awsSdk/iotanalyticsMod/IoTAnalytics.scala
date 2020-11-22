@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.iotanalyticsMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -57,12 +57,12 @@ trait IoTAnalytics extends Service {
   ): Request[CreateChannelResponse, AWSError] = js.native
   
   /**
-    * Creates a data set. A data set stores data retrieved from a data store by applying a "queryAction" (a SQL query) or a "containerAction" (executing a containerized application). This operation creates the skeleton of a data set. The data set can be populated manually by calling "CreateDatasetContent" or automatically according to a "trigger" you specify.
+    * Creates a dataset. A dataset stores data retrieved from a data store by applying a queryAction (a SQL query) or a containerAction (executing a containerized application). This operation creates the skeleton of a dataset. The dataset can be populated manually by calling CreateDatasetContent or automatically according to a trigger you specify.
     */
   def createDataset(): Request[CreateDatasetResponse, AWSError] = js.native
   def createDataset(callback: js.Function2[/* err */ AWSError, /* data */ CreateDatasetResponse, Unit]): Request[CreateDatasetResponse, AWSError] = js.native
   /**
-    * Creates a data set. A data set stores data retrieved from a data store by applying a "queryAction" (a SQL query) or a "containerAction" (executing a containerized application). This operation creates the skeleton of a data set. The data set can be populated manually by calling "CreateDatasetContent" or automatically according to a "trigger" you specify.
+    * Creates a dataset. A dataset stores data retrieved from a data store by applying a queryAction (a SQL query) or a containerAction (executing a containerized application). This operation creates the skeleton of a dataset. The dataset can be populated manually by calling CreateDatasetContent or automatically according to a trigger you specify.
     */
   def createDataset(params: CreateDatasetRequest): Request[CreateDatasetResponse, AWSError] = js.native
   def createDataset(
@@ -71,12 +71,12 @@ trait IoTAnalytics extends Service {
   ): Request[CreateDatasetResponse, AWSError] = js.native
   
   /**
-    * Creates the content of a data set by applying a "queryAction" (a SQL query) or a "containerAction" (executing a containerized application).
+    * Creates the content of a data set by applying a queryAction (a SQL query) or a containerAction (executing a containerized application).
     */
   def createDatasetContent(): Request[CreateDatasetContentResponse, AWSError] = js.native
   def createDatasetContent(callback: js.Function2[/* err */ AWSError, /* data */ CreateDatasetContentResponse, Unit]): Request[CreateDatasetContentResponse, AWSError] = js.native
   /**
-    * Creates the content of a data set by applying a "queryAction" (a SQL query) or a "containerAction" (executing a containerized application).
+    * Creates the content of a data set by applying a queryAction (a SQL query) or a containerAction (executing a containerized application).
     */
   def createDatasetContent(params: CreateDatasetContentRequest): Request[CreateDatasetContentResponse, AWSError] = js.native
   def createDatasetContent(
@@ -127,12 +127,12 @@ trait IoTAnalytics extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
-    * Deletes the specified data set. You do not have to delete the content of the data set before you perform this operation.
+    * Deletes the specified dataset. You do not have to delete the content of the dataset before you perform this operation.
     */
   def deleteDataset(): Request[js.Object, AWSError] = js.native
   def deleteDataset(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Deletes the specified data set. You do not have to delete the content of the data set before you perform this operation.
+    * Deletes the specified dataset. You do not have to delete the content of the dataset before you perform this operation.
     */
   def deleteDataset(params: DeleteDatasetRequest): Request[js.Object, AWSError] = js.native
   def deleteDataset(
@@ -141,12 +141,12 @@ trait IoTAnalytics extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
-    * Deletes the content of the specified data set.
+    * Deletes the content of the specified dataset.
     */
   def deleteDatasetContent(): Request[js.Object, AWSError] = js.native
   def deleteDatasetContent(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Deletes the content of the specified data set.
+    * Deletes the content of the specified dataset.
     */
   def deleteDatasetContent(params: DeleteDatasetContentRequest): Request[js.Object, AWSError] = js.native
   def deleteDatasetContent(
@@ -197,12 +197,12 @@ trait IoTAnalytics extends Service {
   ): Request[DescribeChannelResponse, AWSError] = js.native
   
   /**
-    * Retrieves information about a data set.
+    * Retrieves information about a dataset.
     */
   def describeDataset(): Request[DescribeDatasetResponse, AWSError] = js.native
   def describeDataset(callback: js.Function2[/* err */ AWSError, /* data */ DescribeDatasetResponse, Unit]): Request[DescribeDatasetResponse, AWSError] = js.native
   /**
-    * Retrieves information about a data set.
+    * Retrieves information about a dataset.
     */
   def describeDataset(params: DescribeDatasetRequest): Request[DescribeDatasetResponse, AWSError] = js.native
   def describeDataset(
@@ -253,12 +253,12 @@ trait IoTAnalytics extends Service {
   ): Request[DescribePipelineResponse, AWSError] = js.native
   
   /**
-    * Retrieves the contents of a data set as pre-signed URIs.
+    * Retrieves the contents of a data set as presigned URIs.
     */
   def getDatasetContent(): Request[GetDatasetContentResponse, AWSError] = js.native
   def getDatasetContent(callback: js.Function2[/* err */ AWSError, /* data */ GetDatasetContentResponse, Unit]): Request[GetDatasetContentResponse, AWSError] = js.native
   /**
-    * Retrieves the contents of a data set as pre-signed URIs.
+    * Retrieves the contents of a data set as presigned URIs.
     */
   def getDatasetContent(params: GetDatasetContentRequest): Request[GetDatasetContentResponse, AWSError] = js.native
   def getDatasetContent(
@@ -337,12 +337,12 @@ trait IoTAnalytics extends Service {
   ): Request[ListPipelinesResponse, AWSError] = js.native
   
   /**
-    * Lists the tags (metadata) which you have assigned to the resource.
+    * Lists the tags (metadata) that you have assigned to the resource.
     */
   def listTagsForResource(): Request[ListTagsForResourceResponse, AWSError] = js.native
   def listTagsForResource(callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]): Request[ListTagsForResourceResponse, AWSError] = js.native
   /**
-    * Lists the tags (metadata) which you have assigned to the resource.
+    * Lists the tags (metadata) that you have assigned to the resource.
     */
   def listTagsForResource(params: ListTagsForResourceRequest): Request[ListTagsForResourceResponse, AWSError] = js.native
   def listTagsForResource(
@@ -351,12 +351,12 @@ trait IoTAnalytics extends Service {
   ): Request[ListTagsForResourceResponse, AWSError] = js.native
   
   /**
-    * Sets or updates the AWS IoT Analytics logging options. Note that if you update the value of any loggingOptions field, it takes up to one minute for the change to take effect. Also, if you change the policy attached to the role you specified in the roleArn field (for example, to correct an invalid policy) it takes up to 5 minutes for that change to take effect. 
+    * Sets or updates the AWS IoT Analytics logging options. If you update the value of any loggingOptions field, it takes up to one minute for the change to take effect. Also, if you change the policy attached to the role you specified in the roleArn field (for example, to correct an invalid policy), it takes up to five minutes for that change to take effect. 
     */
   def putLoggingOptions(): Request[js.Object, AWSError] = js.native
   def putLoggingOptions(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Sets or updates the AWS IoT Analytics logging options. Note that if you update the value of any loggingOptions field, it takes up to one minute for the change to take effect. Also, if you change the policy attached to the role you specified in the roleArn field (for example, to correct an invalid policy) it takes up to 5 minutes for that change to take effect. 
+    * Sets or updates the AWS IoT Analytics logging options. If you update the value of any loggingOptions field, it takes up to one minute for the change to take effect. Also, if you change the policy attached to the role you specified in the roleArn field (for example, to correct an invalid policy), it takes up to five minutes for that change to take effect. 
     */
   def putLoggingOptions(params: PutLoggingOptionsRequest): Request[js.Object, AWSError] = js.native
   def putLoggingOptions(
@@ -407,12 +407,12 @@ trait IoTAnalytics extends Service {
   ): Request[StartPipelineReprocessingResponse, AWSError] = js.native
   
   /**
-    * Adds to or modifies the tags of the given resource. Tags are metadata which can be used to manage a resource.
+    * Adds to or modifies the tags of the given resource. Tags are metadata that can be used to manage a resource.
     */
   def tagResource(): Request[TagResourceResponse, AWSError] = js.native
   def tagResource(callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]): Request[TagResourceResponse, AWSError] = js.native
   /**
-    * Adds to or modifies the tags of the given resource. Tags are metadata which can be used to manage a resource.
+    * Adds to or modifies the tags of the given resource. Tags are metadata that can be used to manage a resource.
     */
   def tagResource(params: TagResourceRequest): Request[TagResourceResponse, AWSError] = js.native
   def tagResource(

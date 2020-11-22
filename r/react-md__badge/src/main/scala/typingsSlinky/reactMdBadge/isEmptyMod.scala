@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object isEmptyMod extends js.Object {
   
-  def default(children: ReactElement, disableNullOnZero: Boolean): Boolean = js.native
+  def isEmpty(children: ReactElement, disableNullOnZero: Boolean): Boolean = js.native
 }

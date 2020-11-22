@@ -9,4 +9,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ActionToggleConstructor
   extends Instantiable0[ActionToggle]
-     with Instantiable1[/* properties */ js.Any, ActionToggle]
+     with Instantiable1[/* properties */ ActionToggleProperties, ActionToggle]

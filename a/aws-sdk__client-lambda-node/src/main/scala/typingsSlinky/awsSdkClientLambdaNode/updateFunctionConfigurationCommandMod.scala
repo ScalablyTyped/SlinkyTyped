@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientLambdaNode.lambdaConfigurationMod.LambdaResolve
 import typingsSlinky.awsSdkClientLambdaNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientLambdaNode.typesUpdateFunctionConfigurationInputMod.UpdateFunctionConfigurationInput
 import typingsSlinky.awsSdkClientLambdaNode.typesUpdateFunctionConfigurationOutputMod.UpdateFunctionConfigurationOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object updateFunctionConfigurationCommandMod extends js.Object {
           UpdateFunctionConfigurationInput, 
           OutputTypesUnion, 
           UpdateFunctionConfigurationOutput, 
-          LambdaResolvedConfiguration, 
-          Readable
+          LambdaResolvedConfiguration
         ] {
     def this(input: UpdateFunctionConfigurationInput) = this()
     
-    val middlewareStack: MiddlewareStack[UpdateFunctionConfigurationInput, UpdateFunctionConfigurationOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: LambdaResolvedConfiguration
     ): Handler[UpdateFunctionConfigurationInput, UpdateFunctionConfigurationOutput] = js.native
   }

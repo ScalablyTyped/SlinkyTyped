@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Base[Value /* <: js.UndefOr[String] */, ParentType /* <: js.UndefOr[Container[String]] */] extends js.Object {
+trait Base[Value /* <: js.UndefOr[String] */, ParentType /* <: js.UndefOr[Container[String, Node]] */] extends js.Object {
   
   /**
     * Some non-standard syntax doesn't follow normal escaping rules for css.
@@ -76,7 +76,7 @@ trait Base[Value /* <: js.UndefOr[String] */, ParentType /* <: js.UndefOr[Contai
 object Base {
   
   @scala.inline
-  def apply[Value /* <: js.UndefOr[String] */, ParentType /* <: js.UndefOr[Container[String]] */](
+  def apply[Value /* <: js.UndefOr[String] */, ParentType /* <: js.UndefOr[Container[String, Node]] */](
     appendToPropertyAndEscape: (String, js.Any, String) => Unit,
     clone: StringDictionary[js.Any] => Node,
     isAtPosition: (Double, Double) => js.UndefOr[Boolean],
@@ -100,7 +100,7 @@ object Base {
   }
   
   @scala.inline
-  implicit class BaseOps[Self <: Base[_, _], Value /* <: js.UndefOr[String] */, ParentType /* <: js.UndefOr[Container[String]] */] (val x: Self with (Base[Value, ParentType])) extends AnyVal {
+  implicit class BaseOps[Self <: Base[_, _], Value /* <: js.UndefOr[String] */, ParentType /* <: js.UndefOr[Container[String, Node]] */] (val x: Self with (Base[Value, ParentType])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

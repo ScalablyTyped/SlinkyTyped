@@ -8,8 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ResolverConfig extends js.Object {
   
-  var browser: js.UndefOr[Boolean] = js.native
-  
   var defaultPlatform: js.UndefOr[String | Null] = js.native
   
   var extensions: js.Array[String] = js.native
@@ -20,7 +18,7 @@ trait ResolverConfig extends js.Object {
   
   var moduleNameMapper: js.UndefOr[js.Array[ModuleNameMapperConfig] | Null] = js.native
   
-  var modulePaths: js.Array[Path] = js.native
+  var modulePaths: js.UndefOr[js.Array[Path]] = js.native
   
   var platforms: js.UndefOr[js.Array[String]] = js.native
   
@@ -35,10 +33,9 @@ object ResolverConfig {
     extensions: js.Array[String],
     hasCoreModules: Boolean,
     moduleDirectories: js.Array[String],
-    modulePaths: js.Array[Path],
     rootDir: Path
   ): ResolverConfig = {
-    val __obj = js.Dynamic.literal(extensions = extensions.asInstanceOf[js.Any], hasCoreModules = hasCoreModules.asInstanceOf[js.Any], moduleDirectories = moduleDirectories.asInstanceOf[js.Any], modulePaths = modulePaths.asInstanceOf[js.Any], rootDir = rootDir.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(extensions = extensions.asInstanceOf[js.Any], hasCoreModules = hasCoreModules.asInstanceOf[js.Any], moduleDirectories = moduleDirectories.asInstanceOf[js.Any], rootDir = rootDir.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResolverConfig]
   }
   
@@ -73,19 +70,7 @@ object ResolverConfig {
     def setModuleDirectories(value: js.Array[String]): Self = this.set("moduleDirectories", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setModulePathsVarargs(value: Path*): Self = this.set("modulePaths", js.Array(value :_*))
-    
-    @scala.inline
-    def setModulePaths(value: js.Array[Path]): Self = this.set("modulePaths", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setRootDir(value: Path): Self = this.set("rootDir", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBrowser(value: Boolean): Self = this.set("browser", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBrowser: Self = this.set("browser", js.undefined)
     
     @scala.inline
     def setDefaultPlatform(value: String): Self = this.set("defaultPlatform", value.asInstanceOf[js.Any])
@@ -107,6 +92,15 @@ object ResolverConfig {
     
     @scala.inline
     def setModuleNameMapperNull: Self = this.set("moduleNameMapper", null)
+    
+    @scala.inline
+    def setModulePathsVarargs(value: Path*): Self = this.set("modulePaths", js.Array(value :_*))
+    
+    @scala.inline
+    def setModulePaths(value: js.Array[Path]): Self = this.set("modulePaths", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModulePaths: Self = this.set("modulePaths", js.undefined)
     
     @scala.inline
     def setPlatformsVarargs(value: String*): Self = this.set("platforms", js.Array(value :_*))

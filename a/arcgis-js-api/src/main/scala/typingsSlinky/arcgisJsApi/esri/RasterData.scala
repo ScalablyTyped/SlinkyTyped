@@ -17,7 +17,7 @@ trait RasterData
   var format: String = js.native
   
   /**
-    * The ID of the uploaded file returned as a result of the upload operation. For ArcGIS Server 10.1 and greater, this class can be used to specify an uploaded item as input by specifying the ItemID.
+    * The ID of the uploaded file returned as a result of the upload operation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RasterData.html#itemId)
     */

@@ -1,5 +1,6 @@
 package typingsSlinky.ol.interactionExtentMod
 
+import typingsSlinky.ol.conditionMod.Condition
 import typingsSlinky.ol.olFeatureMod.FeatureLike
 import typingsSlinky.ol.styleStyleMod.Style
 import typingsSlinky.ol.styleStyleMod.StyleLike
@@ -11,6 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Options extends js.Object {
   
   var boxStyle: js.UndefOr[StyleLike] = js.native
+  
+  var condition: js.UndefOr[Condition] = js.native
   
   var extent: js.UndefOr[typingsSlinky.ol.extentMod.Extent] = js.native
   
@@ -44,7 +47,7 @@ object Options {
     }
     
     @scala.inline
-    def setBoxStyleFunction2(value: (/* p0 */ FeatureLike, /* p1 */ Double) => Style | js.Array[Style] | Unit): Self = this.set("boxStyle", js.Any.fromFunction2(value))
+    def setBoxStyleFunction2(value: (/* p0 */ FeatureLike, /* p1 */ Double) => Style | js.Array[Style]): Self = this.set("boxStyle", js.Any.fromFunction2(value))
     
     @scala.inline
     def setBoxStyleVarargs(value: Style*): Self = this.set("boxStyle", js.Array(value :_*))
@@ -54,6 +57,12 @@ object Options {
     
     @scala.inline
     def deleteBoxStyle: Self = this.set("boxStyle", js.undefined)
+    
+    @scala.inline
+    def setCondition(value: Condition): Self = this.set("condition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCondition: Self = this.set("condition", js.undefined)
     
     @scala.inline
     def setExtent(value: typingsSlinky.ol.extentMod.Extent): Self = this.set("extent", value.asInstanceOf[js.Any])
@@ -68,7 +77,7 @@ object Options {
     def deletePixelTolerance: Self = this.set("pixelTolerance", js.undefined)
     
     @scala.inline
-    def setPointerStyleFunction2(value: (/* p0 */ FeatureLike, /* p1 */ Double) => Style | js.Array[Style] | Unit): Self = this.set("pointerStyle", js.Any.fromFunction2(value))
+    def setPointerStyleFunction2(value: (/* p0 */ FeatureLike, /* p1 */ Double) => Style | js.Array[Style]): Self = this.set("pointerStyle", js.Any.fromFunction2(value))
     
     @scala.inline
     def setPointerStyleVarargs(value: Style*): Self = this.set("pointerStyle", js.Array(value :_*))

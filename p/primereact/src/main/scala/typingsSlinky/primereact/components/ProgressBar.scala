@@ -23,6 +23,9 @@ object ProgressBar {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def displayValueTemplate(value: /* value */ js.Any => ReactElement): this.type = set("displayValueTemplate", js.Any.fromFunction1(value))
     
     @scala.inline

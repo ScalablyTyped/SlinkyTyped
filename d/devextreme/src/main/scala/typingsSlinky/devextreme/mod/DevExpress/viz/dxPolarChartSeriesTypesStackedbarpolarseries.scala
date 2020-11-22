@@ -11,15 +11,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartSeriesTypesStackedbarpolarseries extends dxPolarChartSeriesTypesCommonPolarChartSeries {
   
-  /** @name dxPolarChartSeriesTypes.stackedbarpolarseries.hoverMode */
+  /**
+    * [descr:dxPolarChartSeriesTypes.stackedbarpolarseries.hoverMode]
+    */
   @JSName("hoverMode")
   var hoverMode_dxPolarChartSeriesTypesStackedbarpolarseries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.native
   
-  /** @name dxPolarChartSeriesTypes.stackedbarpolarseries.label */
+  /**
+    * [descr:dxPolarChartSeriesTypes.stackedbarpolarseries.label]
+    */
   @JSName("label")
   var label_dxPolarChartSeriesTypesStackedbarpolarseries: js.UndefOr[dxPolarChartSeriesTypesStackedbarpolarseriesLabel] = js.native
   
-  /** @name dxPolarChartSeriesTypes.stackedbarpolarseries.selectionMode */
+  /**
+    * [descr:dxPolarChartSeriesTypes.stackedbarpolarseries.selectionMode]
+    */
   @JSName("selectionMode")
   var selectionMode_dxPolarChartSeriesTypesStackedbarpolarseries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.native
 }

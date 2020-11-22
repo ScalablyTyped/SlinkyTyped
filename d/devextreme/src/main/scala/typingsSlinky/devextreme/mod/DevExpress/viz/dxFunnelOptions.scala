@@ -7,7 +7,6 @@ import typingsSlinky.devextreme.anon.ItemModel
 import typingsSlinky.devextreme.anon.KeepLabels
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
-import typingsSlinky.devextreme.devextremeStrings.Default
 import typingsSlinky.devextreme.devextremeStrings.Material
 import typingsSlinky.devextreme.devextremeStrings.Ocean
 import typingsSlinky.devextreme.devextremeStrings.Office
@@ -40,76 +39,122 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFunnelOptions extends BaseWidgetOptions[dxFunnel] {
   
-  /** @name dxFunnel.Options.adaptiveLayout */
+  /**
+    * [descr:dxFunnel.Options.adaptiveLayout]
+    */
   var adaptiveLayout: js.UndefOr[KeepLabels] = js.native
   
-  /** @name dxFunnel.Options.algorithm */
+  /**
+    * [descr:dxFunnel.Options.algorithm]
+    */
   var algorithm: js.UndefOr[dynamicHeight | dynamicSlope] = js.native
   
-  /** @name dxFunnel.Options.argumentField */
+  /**
+    * [descr:dxFunnel.Options.argumentField]
+    */
   var argumentField: js.UndefOr[String] = js.native
   
-  /** @name dxFunnel.Options.colorField */
+  /**
+    * [descr:dxFunnel.Options.colorField]
+    */
   var colorField: js.UndefOr[String] = js.native
   
-  /** @name dxFunnel.Options.dataSource */
+  /**
+    * [descr:dxFunnel.Options.dataSource]
+    */
   var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.native
   
-  /** @name dxFunnel.Options.hoverEnabled */
+  /**
+    * [descr:dxFunnel.Options.hoverEnabled]
+    */
   var hoverEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFunnel.Options.inverted */
+  /**
+    * [descr:dxFunnel.Options.inverted]
+    */
   var inverted: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFunnel.Options.item */
+  /**
+    * [descr:dxFunnel.Options.item]
+    */
   var item: js.UndefOr[HoverStyle] = js.native
   
-  /** @name dxFunnel.Options.label */
+  /**
+    * [descr:dxFunnel.Options.label]
+    */
   var label: js.UndefOr[Connector] = js.native
   
-  /** @name dxFunnel.Options.legend */
+  /**
+    * [descr:dxFunnel.Options.legend]
+    */
   var legend: js.UndefOr[dxFunnelLegend] = js.native
   
-  /** @name dxFunnel.Options.neckHeight */
+  /**
+    * [descr:dxFunnel.Options.neckHeight]
+    */
   var neckHeight: js.UndefOr[Double] = js.native
   
-  /** @name dxFunnel.Options.neckWidth */
+  /**
+    * [descr:dxFunnel.Options.neckWidth]
+    */
   var neckWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxFunnel.Options.onHoverChanged */
+  /**
+    * [descr:dxFunnel.Options.onHoverChanged]
+    */
   var onHoverChanged: js.UndefOr[js.Function1[/* e */ ItemModel, _]] = js.native
   
-  /** @name dxFunnel.Options.onItemClick */
+  /**
+    * [descr:dxFunnel.Options.onItemClick]
+    */
   var onItemClick: js.UndefOr[(js.Function1[/* e */ EventItem, _]) | String] = js.native
   
-  /** @name dxFunnel.Options.onLegendClick */
+  /**
+    * [descr:dxFunnel.Options.onLegendClick]
+    */
   var onLegendClick: js.UndefOr[(js.Function1[/* e */ EventItem, _]) | String] = js.native
   
-  /** @name dxFunnel.Options.onSelectionChanged */
+  /**
+    * [descr:dxFunnel.Options.onSelectionChanged]
+    */
   var onSelectionChanged: js.UndefOr[js.Function1[/* e */ ItemModel, _]] = js.native
   
-  /** @name dxFunnel.Options.palette */
+  /**
+    * [descr:dxFunnel.Options.palette]
+    */
   var palette: js.UndefOr[
-    js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+    js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
   ] = js.native
   
-  /** @name dxFunnel.Options.paletteExtensionMode */
+  /**
+    * [descr:dxFunnel.Options.paletteExtensionMode]
+    */
   var paletteExtensionMode: js.UndefOr[alternate | blend | extrapolate] = js.native
   
-  /** @name dxFunnel.Options.resolveLabelOverlapping */
+  /**
+    * [descr:dxFunnel.Options.resolveLabelOverlapping]
+    */
   var resolveLabelOverlapping: js.UndefOr[hide | none | shift] = js.native
   
-  /** @name dxFunnel.Options.selectionMode */
+  /**
+    * [descr:dxFunnel.Options.selectionMode]
+    */
   var selectionMode: js.UndefOr[multiple | none | single_] = js.native
   
-  /** @name dxFunnel.Options.sortData */
+  /**
+    * [descr:dxFunnel.Options.sortData]
+    */
   var sortData: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFunnel.Options.tooltip */
+  /**
+    * [descr:dxFunnel.Options.tooltip]
+    */
   @JSName("tooltip")
   var tooltip_dxFunnelOptions: js.UndefOr[dxFunnelTooltip] = js.native
   
-  /** @name dxFunnel.Options.valueField */
+  /**
+    * [descr:dxFunnel.Options.valueField]
+    */
   var valueField: js.UndefOr[String] = js.native
 }
 object dxFunnelOptions {
@@ -245,7 +290,7 @@ object dxFunnelOptions {
     
     @scala.inline
     def setPalette(
-      value: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+      value: js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
     ): Self = this.set("palette", value.asInstanceOf[js.Any])
     
     @scala.inline

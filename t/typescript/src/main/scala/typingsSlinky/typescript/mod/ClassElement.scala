@@ -10,5 +10,5 @@ trait ClassElement extends NamedDeclaration {
   var _classElementBrand: js.Any = js.native
   
   @JSName("name")
-  var name_ClassElement: js.UndefOr[PropertyName] = js.native
+  val name_ClassElement: js.UndefOr[PropertyName] = js.native
 }

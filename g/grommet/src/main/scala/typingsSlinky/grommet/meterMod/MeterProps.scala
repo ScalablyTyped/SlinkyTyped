@@ -1,7 +1,7 @@
 package typingsSlinky.grommet.meterMod
 
-import typingsSlinky.grommet.anon.ColorOpacity
 import typingsSlinky.grommet.anon.Highlight
+import typingsSlinky.grommet.anon.`1`
 import typingsSlinky.grommet.grommetStrings.bar
 import typingsSlinky.grommet.grommetStrings.circle
 import typingsSlinky.grommet.grommetStrings.full
@@ -25,7 +25,7 @@ trait MeterProps extends js.Object {
   
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
   
-  var background: js.UndefOr[String | ColorOpacity] = js.native
+  var background: js.UndefOr[String | `1`] = js.native
   
   var gridArea: js.UndefOr[GridAreaType] = js.native
   
@@ -79,7 +79,7 @@ object MeterProps {
     def deleteAlignSelf: Self = this.set("alignSelf", js.undefined)
     
     @scala.inline
-    def setBackground(value: String | ColorOpacity): Self = this.set("background", value.asInstanceOf[js.Any])
+    def setBackground(value: String | `1`): Self = this.set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackground: Self = this.set("background", js.undefined)

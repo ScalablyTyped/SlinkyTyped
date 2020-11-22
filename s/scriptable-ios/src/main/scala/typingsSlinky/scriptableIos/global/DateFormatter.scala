@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * _Converts between texts and strings._
+  * _Converts between dates and strings._
   *
   * To convert between dates and their textual representation, use the `string()` and `date()` functions.
   * @see https://docs.scriptable.app/dateformatter/#-new-dateformatter
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("DateFormatter")
 @js.native
 /**
-  * _Converts between texts and strings._
+  * _Converts between dates and strings._
   *
   * To convert between dates and their textual representation, use the `string()` and `date()` functions.
   * @see https://docs.scriptable.app/dateformatter/#-new-dateformatter

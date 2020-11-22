@@ -36,7 +36,7 @@ class Analyzer protected () extends CustomResource {
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
   /**
-    * Type of Analyzer. Valid value is currently only `ACCOUNT`. Defaults to `ACCOUNT`.
+    * Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
     */
   val `type`: Output_[js.UndefOr[String]] = js.native
 }

@@ -8,12 +8,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UriOptions extends js.Object {
   
   /**
-    * Allow relative URIs. Defaults to `false`.
+    * Allows unencoded square brackets inside the query string.
+    * This is NOT RFC 3986 compliant but query strings like abc[]=123&abc[]=456 are very common these days.
+    *
+    * @default false
+    */
+  var allowQuerySquareBrackets: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Allow relative URIs.
+    *
+    * @default false
     */
   var allowRelative: js.UndefOr[Boolean] = js.native
   
   /**
-    * Restrict only relative URIs. Defaults to `false`.
+    * Validate the domain component using the options specified in `string.domain()`.
+    */
+  var domain: js.UndefOr[DomainOptions] = js.native
+  
+  /**
+    * Restrict only relative URIs.
+    *
+    * @default false
     */
   var relativeOnly: js.UndefOr[Boolean] = js.native
   
@@ -47,10 +64,22 @@ object UriOptions {
     }
     
     @scala.inline
+    def setAllowQuerySquareBrackets(value: Boolean): Self = this.set("allowQuerySquareBrackets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowQuerySquareBrackets: Self = this.set("allowQuerySquareBrackets", js.undefined)
+    
+    @scala.inline
     def setAllowRelative(value: Boolean): Self = this.set("allowRelative", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAllowRelative: Self = this.set("allowRelative", js.undefined)
+    
+    @scala.inline
+    def setDomain(value: DomainOptions): Self = this.set("domain", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDomain: Self = this.set("domain", js.undefined)
     
     @scala.inline
     def setRelativeOnly(value: Boolean): Self = this.set("relativeOnly", value.asInstanceOf[js.Any])

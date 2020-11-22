@@ -9,7 +9,7 @@ package object listMod {
   /* Rewritten from type alias, can be one of: 
     - scala.Boolean
     - typingsSlinky.grommet.listMod.SideType
-    - typingsSlinky.grommet.anon.Side
+    - typingsSlinky.grommet.anon.Size
   */
   type BorderType = typingsSlinky.grommet.listMod._BorderType | scala.Boolean
   

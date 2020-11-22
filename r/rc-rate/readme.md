@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-rate
 
-Typings are for version 2.8.2
+Typings are for version 2.9.1
 
 ## Library description:
 React Star Rate Component

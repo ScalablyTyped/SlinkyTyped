@@ -8,36 +8,56 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BaseGaugeOptions[T] extends BaseWidgetOptions[T] {
   
-  /** @name BaseGauge.Options.animation */
+  /**
+    * [descr:BaseGauge.Options.animation]
+    */
   var animation: js.UndefOr[BaseGaugeAnimation] = js.native
   
-  /** @name BaseGauge.Options.containerBackgroundColor */
+  /**
+    * [descr:BaseGauge.Options.containerBackgroundColor]
+    */
   var containerBackgroundColor: js.UndefOr[String] = js.native
   
-  /** @name BaseGauge.Options.loadingIndicator */
+  /**
+    * [descr:BaseGauge.Options.loadingIndicator]
+    */
   @JSName("loadingIndicator")
   var loadingIndicator_BaseGaugeOptions: js.UndefOr[BaseGaugeLoadingIndicator] = js.native
   
-  /** @name BaseGauge.Options.onTooltipHidden */
+  /**
+    * [descr:BaseGauge.Options.onTooltipHidden]
+    */
   var onTooltipHidden: js.UndefOr[js.Function1[/* e */ ComponentElementModelTarget[T], _]] = js.native
   
-  /** @name BaseGauge.Options.onTooltipShown */
+  /**
+    * [descr:BaseGauge.Options.onTooltipShown]
+    */
   var onTooltipShown: js.UndefOr[js.Function1[/* e */ ComponentElementModelTarget[T], _]] = js.native
   
-  /** @name BaseGauge.Options.rangeContainer */
+  /**
+    * [descr:BaseGauge.Options.rangeContainer]
+    */
   var rangeContainer: js.UndefOr[BaseGaugeRangeContainer] = js.native
   
-  /** @name BaseGauge.Options.scale */
+  /**
+    * [descr:BaseGauge.Options.scale]
+    */
   var scale: js.UndefOr[BaseGaugeScale] = js.native
   
-  /** @name BaseGauge.Options.subvalues */
+  /**
+    * [descr:BaseGauge.Options.subvalues]
+    */
   var subvalues: js.UndefOr[js.Array[Double]] = js.native
   
-  /** @name BaseGauge.Options.tooltip */
+  /**
+    * [descr:BaseGauge.Options.tooltip]
+    */
   @JSName("tooltip")
   var tooltip_BaseGaugeOptions: js.UndefOr[BaseGaugeTooltip] = js.native
   
-  /** @name BaseGauge.Options.value */
+  /**
+    * [descr:BaseGauge.Options.value]
+    */
   var value: js.UndefOr[Double] = js.native
 }
 object BaseGaugeOptions {

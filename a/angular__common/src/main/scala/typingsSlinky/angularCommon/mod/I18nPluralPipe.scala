@@ -13,6 +13,8 @@ class I18nPluralPipe protected () extends PipeTransform {
   
   var _localization: js.Any = js.native
   
+  def transform(value: js.UndefOr[scala.Nothing], pluralMap: StringDictionary[String]): String = js.native
+  def transform(value: js.UndefOr[scala.Nothing], pluralMap: StringDictionary[String], locale: String): String = js.native
   /**
     * @param value the number to be formatted
     * @param pluralMap an object that mimics the ICU format, see
@@ -22,4 +24,6 @@ class I18nPluralPipe protected () extends PipeTransform {
     */
   def transform(value: Double, pluralMap: StringDictionary[String]): String = js.native
   def transform(value: Double, pluralMap: StringDictionary[String], locale: String): String = js.native
+  def transform(value: Null, pluralMap: StringDictionary[String]): String = js.native
+  def transform(value: Null, pluralMap: StringDictionary[String], locale: String): String = js.native
 }

@@ -21,14 +21,19 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapToolti
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions removals`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`bottom-end`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`bottom-start`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`left-end`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`left-start`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`removals additions`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`removals text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`right-end`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`right-start`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`text additions`
+import typingsSlinky.materialUiCore.materialUiCoreStrings.`text removals`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`top-end`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`top-start`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -228,7 +233,9 @@ object Tooltip {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

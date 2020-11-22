@@ -11,7 +11,7 @@ trait DOMOutputSpecArray extends js.Object {
   
   var `0`: String = js.native
   
-  var `1`: js.UndefOr[DOMOutputSpec | `0` | StringDictionary[String]] = js.native
+  var `1`: js.UndefOr[DOMOutputSpec | `0` | (StringDictionary[js.UndefOr[String | Null]])] = js.native
   
   var `2`: js.UndefOr[DOMOutputSpec | `0`] = js.native
   
@@ -60,7 +60,7 @@ object DOMOutputSpecArray {
     def set1Node(value: org.scalajs.dom.raw.Node): Self = this.set("1", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set1(value: DOMOutputSpec | `0` | StringDictionary[String]): Self = this.set("1", value.asInstanceOf[js.Any])
+    def set1(value: DOMOutputSpec | `0` | (StringDictionary[js.UndefOr[String | Null]])): Self = this.set("1", value.asInstanceOf[js.Any])
     
     @scala.inline
     def delete1: Self = this.set("1", js.undefined)

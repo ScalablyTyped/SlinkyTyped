@@ -1,16 +1,18 @@
 package typingsSlinky.iobroker.anon
 
-import typingsSlinky.iobroker.mod.global.ioBroker.CommonType
+import typingsSlinky.iobroker.iobrokerBooleans.`true`
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.CommonType
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.StringOrTranslated
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<iobroker.iobroker.<global>.ioBroker.StateCommon> */
+/* Inlined std.Partial<iobroker.iobroker/objects.<global>.ioBroker.StateCommon> */
 @js.native
 trait PartialStateCommon extends js.Object {
   
-  var alias: js.UndefOr[Id] = js.native
+  var alias: js.UndefOr[Read] = js.native
   
   var custom: js.UndefOr[Record[String, _]] = js.native
   
@@ -18,7 +20,11 @@ trait PartialStateCommon extends js.Object {
   
   var defAck: js.UndefOr[Boolean] = js.native
   
-  var desc: js.UndefOr[String] = js.native
+  var desc: js.UndefOr[StringOrTranslated] = js.native
+  
+  var dontDelete: js.UndefOr[`true`] = js.native
+  
+  var expert: js.UndefOr[`true`] = js.native
   
   var history: js.UndefOr[js.Any] = js.native
   
@@ -28,13 +34,17 @@ trait PartialStateCommon extends js.Object {
   
   var min: js.UndefOr[Double] = js.native
   
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[StringOrTranslated] = js.native
   
   var read: js.UndefOr[Boolean] = js.native
   
   var role: js.UndefOr[String] = js.native
   
+  var smartName: js.UndefOr[String | langinLanguagesstringsmar] = js.native
+  
   var states: js.UndefOr[(Record[String, String]) | String] = js.native
+  
+  var step: js.UndefOr[Double] = js.native
   
   var `type`: js.UndefOr[CommonType] = js.native
   
@@ -68,7 +78,7 @@ object PartialStateCommon {
     }
     
     @scala.inline
-    def setAlias(value: Id): Self = this.set("alias", value.asInstanceOf[js.Any])
+    def setAlias(value: Read): Self = this.set("alias", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAlias: Self = this.set("alias", js.undefined)
@@ -92,10 +102,22 @@ object PartialStateCommon {
     def deleteDefAck: Self = this.set("defAck", js.undefined)
     
     @scala.inline
-    def setDesc(value: String): Self = this.set("desc", value.asInstanceOf[js.Any])
+    def setDesc(value: StringOrTranslated): Self = this.set("desc", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDesc: Self = this.set("desc", js.undefined)
+    
+    @scala.inline
+    def setDontDelete(value: `true`): Self = this.set("dontDelete", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDontDelete: Self = this.set("dontDelete", js.undefined)
+    
+    @scala.inline
+    def setExpert(value: `true`): Self = this.set("expert", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpert: Self = this.set("expert", js.undefined)
     
     @scala.inline
     def setHistory(value: js.Any): Self = this.set("history", value.asInstanceOf[js.Any])
@@ -122,7 +144,7 @@ object PartialStateCommon {
     def deleteMin: Self = this.set("min", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: StringOrTranslated): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
@@ -140,10 +162,22 @@ object PartialStateCommon {
     def deleteRole: Self = this.set("role", js.undefined)
     
     @scala.inline
+    def setSmartName(value: String | langinLanguagesstringsmar): Self = this.set("smartName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSmartName: Self = this.set("smartName", js.undefined)
+    
+    @scala.inline
     def setStates(value: (Record[String, String]) | String): Self = this.set("states", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStates: Self = this.set("states", js.undefined)
+    
+    @scala.inline
+    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStep: Self = this.set("step", js.undefined)
     
     @scala.inline
     def setType(value: CommonType): Self = this.set("type", value.asInstanceOf[js.Any])

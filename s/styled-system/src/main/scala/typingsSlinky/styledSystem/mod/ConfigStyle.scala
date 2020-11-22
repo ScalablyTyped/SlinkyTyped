@@ -16,13 +16,13 @@ trait ConfigStyle extends js.Object {
     */
   var properties: js.UndefOr[
     js.Array[
-      /* keyof csstype.csstype.Properties<string & {} | 0, string & {}> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 765 */ js.Any
+      /* keyof csstype.csstype.Properties<string | 0> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 776 */ js.Any
     ]
   ] = js.native
   
   /** The CSS property to use in the returned style object (overridden by `properties` if present). */
   var property: js.UndefOr[
-    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 766 */ js.Any
+    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 777 */ js.Any
   ] = js.native
   
   /** A string referencing a key in the `theme` object. */
@@ -65,13 +65,13 @@ object ConfigStyle {
     
     @scala.inline
     def setPropertiesVarargs(
-      value: (/* keyof csstype.csstype.Properties<string & {} | 0, string & {}> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 765 */ js.Any)*
+      value: (/* keyof csstype.csstype.Properties<string | 0> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 776 */ js.Any)*
     ): Self = this.set("properties", js.Array(value :_*))
     
     @scala.inline
     def setProperties(
       value: js.Array[
-          /* keyof csstype.csstype.Properties<string & {} | 0, string & {}> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 765 */ js.Any
+          /* keyof csstype.csstype.Properties<string | 0> */ /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 776 */ js.Any
         ]
     ): Self = this.set("properties", value.asInstanceOf[js.Any])
     
@@ -79,7 +79,7 @@ object ConfigStyle {
     def deleteProperties: Self = this.set("properties", js.undefined)
     
     @scala.inline
-    def setProperty(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 766 */ js.Any): Self = this.set("property", value.asInstanceOf[js.Any])
+    def setProperty(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 777 */ js.Any): Self = this.set("property", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProperty: Self = this.set("property", js.undefined)

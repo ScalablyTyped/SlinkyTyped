@@ -14,6 +14,8 @@ trait ApiGateway extends js.Object {
   
   var description: js.UndefOr[String] = js.native
   
+  var metrics: js.UndefOr[Boolean] = js.native
+  
   var minimumCompressionSize: js.UndefOr[Double | String] = js.native
   
   var restApiId: js.UndefOr[String] = js.native
@@ -21,6 +23,8 @@ trait ApiGateway extends js.Object {
   var restApiResources: js.UndefOr[StringDictionary[String]] = js.native
   
   var restApiRootResourceId: js.UndefOr[String] = js.native
+  
+  var shouldStartNameWithService: js.UndefOr[Boolean] = js.native
   
   var websocketApiId: js.UndefOr[js.Any] = js.native
 }
@@ -69,6 +73,12 @@ object ApiGateway {
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
+    def setMetrics(value: Boolean): Self = this.set("metrics", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMetrics: Self = this.set("metrics", js.undefined)
+    
+    @scala.inline
     def setMinimumCompressionSize(value: Double | String): Self = this.set("minimumCompressionSize", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -91,6 +101,12 @@ object ApiGateway {
     
     @scala.inline
     def deleteRestApiRootResourceId: Self = this.set("restApiRootResourceId", js.undefined)
+    
+    @scala.inline
+    def setShouldStartNameWithService(value: Boolean): Self = this.set("shouldStartNameWithService", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShouldStartNameWithService: Self = this.set("shouldStartNameWithService", js.undefined)
     
     @scala.inline
     def setWebsocketApiId(value: js.Any): Self = this.set("websocketApiId", value.asInstanceOf[js.Any])

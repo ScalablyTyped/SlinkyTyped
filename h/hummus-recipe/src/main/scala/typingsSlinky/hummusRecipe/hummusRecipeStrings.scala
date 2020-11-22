@@ -80,6 +80,12 @@ object hummusRecipeStrings {
   def Underline: Underline = "Underline".asInstanceOf[Underline]
   
   @scala.inline
+  def cmyk: cmyk = "cmyk".asInstanceOf[cmyk]
+  
+  @scala.inline
+  def grey: grey = "grey".asInstanceOf[grey]
+  
+  @scala.inline
   def hidden: hidden = "hidden".asInstanceOf[hidden]
   
   @scala.inline
@@ -102,6 +108,9 @@ object hummusRecipeStrings {
   
   @scala.inline
   def readonly: readonly = "readonly".asInstanceOf[readonly]
+  
+  @scala.inline
+  def rgb: rgb = "rgb".asInstanceOf[rgb]
   
   @scala.inline
   def togglenoview: togglenoview = "togglenoview".asInstanceOf[togglenoview]
@@ -176,6 +185,12 @@ object hummusRecipeStrings {
   sealed trait Underline extends AnnotSubtype
   
   @js.native
+  sealed trait cmyk extends js.Object
+  
+  @js.native
+  sealed trait grey extends js.Object
+  
+  @js.native
   sealed trait hidden
     extends AnnotOptionsFlag
        with CommentOptionsFlag
@@ -214,6 +229,9 @@ object hummusRecipeStrings {
   sealed trait readonly
     extends AnnotOptionsFlag
        with CommentOptionsFlag
+  
+  @js.native
+  sealed trait rgb extends js.Object
   
   @js.native
   sealed trait togglenoview

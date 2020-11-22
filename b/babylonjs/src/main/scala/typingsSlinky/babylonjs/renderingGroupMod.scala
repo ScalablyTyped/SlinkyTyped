@@ -6,6 +6,7 @@ import typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem
 import typingsSlinky.babylonjs.materialMod.Material
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.smartArrayMod.SmartArray
+import typingsSlinky.babylonjs.smartArrayMod.SmartArrayNoDuplicate
 import typingsSlinky.babylonjs.spriteManagerMod.ISpriteManager
 import typingsSlinky.babylonjs.subMeshMod.SubMesh
 import typingsSlinky.babylonjs.typesMod.Nullable
@@ -53,7 +54,7 @@ object renderingGroupMod extends js.Object {
     var _depthOnlySubMeshes: js.Any = js.native
     
     /** @hidden */
-    var _edgesRenderers: SmartArray[IEdgesRenderer] = js.native
+    var _edgesRenderers: SmartArrayNoDuplicate[IEdgesRenderer] = js.native
     
     var _opaqueSortCompareFn: js.Any = js.native
     

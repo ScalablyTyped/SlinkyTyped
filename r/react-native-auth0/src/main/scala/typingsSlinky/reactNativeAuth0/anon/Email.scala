@@ -11,6 +11,10 @@ trait Email extends js.Object {
   
   var emailVerified: Boolean = js.native
   
+  var familyName: String = js.native
+  
+  var givenName: String = js.native
+  
   var name: String = js.native
   
   var nickname: String = js.native
@@ -27,13 +31,15 @@ object Email {
   def apply(
     email: String,
     emailVerified: Boolean,
+    familyName: String,
+    givenName: String,
     name: String,
     nickname: String,
     picture: String,
     sub: String,
     updatedAt: String
   ): Email = {
-    val __obj = js.Dynamic.literal(email = email.asInstanceOf[js.Any], emailVerified = emailVerified.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nickname = nickname.asInstanceOf[js.Any], picture = picture.asInstanceOf[js.Any], sub = sub.asInstanceOf[js.Any], updatedAt = updatedAt.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(email = email.asInstanceOf[js.Any], emailVerified = emailVerified.asInstanceOf[js.Any], familyName = familyName.asInstanceOf[js.Any], givenName = givenName.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nickname = nickname.asInstanceOf[js.Any], picture = picture.asInstanceOf[js.Any], sub = sub.asInstanceOf[js.Any], updatedAt = updatedAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[Email]
   }
   
@@ -57,6 +63,12 @@ object Email {
     
     @scala.inline
     def setEmailVerified(value: Boolean): Self = this.set("emailVerified", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFamilyName(value: String): Self = this.set("familyName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setGivenName(value: String): Self = this.set("givenName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

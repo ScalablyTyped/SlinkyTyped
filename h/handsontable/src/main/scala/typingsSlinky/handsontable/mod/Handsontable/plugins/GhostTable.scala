@@ -2,7 +2,7 @@ package typingsSlinky.handsontable.mod.Handsontable.plugins
 
 import org.scalajs.dom.raw.DocumentFragment
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.handsontable.mod.Handsontable.DefaultSettings
+import typingsSlinky.handsontable.mod.Handsontable.GridSettings
 import typingsSlinky.handsontable.mod._Handsontable.Core
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -67,7 +67,7 @@ trait GhostTable extends js.Object {
   
   def setSetting(name: String, value: js.Any): Unit = js.native
   
-  def setSettings(settings: DefaultSettings): Unit = js.native
+  def setSettings(settings: GridSettings): Unit = js.native
   
   var settings: js.Object = js.native
 }

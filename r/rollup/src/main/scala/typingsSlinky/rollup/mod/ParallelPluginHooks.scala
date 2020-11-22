@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.rollup.rollupStrings.buildStart
   - typingsSlinky.rollup.rollupStrings.footer
   - typingsSlinky.rollup.rollupStrings.intro
+  - typingsSlinky.rollup.rollupStrings.moduleParsed
   - typingsSlinky.rollup.rollupStrings.outro
   - typingsSlinky.rollup.rollupStrings.renderError
   - typingsSlinky.rollup.rollupStrings.renderStart
@@ -32,6 +33,9 @@ object ParallelPluginHooks {
   
   @scala.inline
   def intro: typingsSlinky.rollup.rollupStrings.intro = "intro".asInstanceOf[typingsSlinky.rollup.rollupStrings.intro]
+  
+  @scala.inline
+  def moduleParsed: typingsSlinky.rollup.rollupStrings.moduleParsed = "moduleParsed".asInstanceOf[typingsSlinky.rollup.rollupStrings.moduleParsed]
   
   @scala.inline
   def outro: typingsSlinky.rollup.rollupStrings.outro = "outro".asInstanceOf[typingsSlinky.rollup.rollupStrings.outro]

@@ -35,12 +35,17 @@ trait VpcEndpointServiceState extends js.Object {
   val baseEndpointDnsNames: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
   /**
+    * Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
+    */
+  val gatewayLoadBalancerArns: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  
+  /**
     * Whether or not the service manages its VPC endpoints - `true` or `false`.
     */
   val managesVpcEndpoints: js.UndefOr[Input[Boolean]] = js.native
   
   /**
-    * The ARNs of one or more Network Load Balancers for the endpoint service.
+    * Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
     */
   val networkLoadBalancerArns: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
@@ -130,6 +135,15 @@ object VpcEndpointServiceState {
     
     @scala.inline
     def deleteBaseEndpointDnsNames: Self = this.set("baseEndpointDnsNames", js.undefined)
+    
+    @scala.inline
+    def setGatewayLoadBalancerArnsVarargs(value: Input[String]*): Self = this.set("gatewayLoadBalancerArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setGatewayLoadBalancerArns(value: Input[js.Array[Input[String]]]): Self = this.set("gatewayLoadBalancerArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGatewayLoadBalancerArns: Self = this.set("gatewayLoadBalancerArns", js.undefined)
     
     @scala.inline
     def setManagesVpcEndpoints(value: Input[Boolean]): Self = this.set("managesVpcEndpoints", value.asInstanceOf[js.Any])

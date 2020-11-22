@@ -21,6 +21,8 @@ trait PartialDataTitleFont extends js.Object {
     (`top left`) | (`top center`) | (`top right`) | (`middle center`) | (`bottom left`) | (`bottom center`) | (`bottom right`)
   ] = js.native
   
+  var standoff: js.UndefOr[Double] = js.native
+  
   var text: js.UndefOr[String] = js.native
 }
 object PartialDataTitleFont {
@@ -59,6 +61,12 @@ object PartialDataTitleFont {
     
     @scala.inline
     def deletePosition: Self = this.set("position", js.undefined)
+    
+    @scala.inline
+    def setStandoff(value: Double): Self = this.set("standoff", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStandoff: Self = this.set("standoff", js.undefined)
     
     @scala.inline
     def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])

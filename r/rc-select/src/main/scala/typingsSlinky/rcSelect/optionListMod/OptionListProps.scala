@@ -6,6 +6,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.rcSelect.anon.Selected
 import typingsSlinky.rcSelect.generatorMod.FlattenOptionsType
 import typingsSlinky.rcSelect.generatorMod.RawValueType
+import typingsSlinky.rcSelect.interfaceMod.OnActiveValue
 import typingsSlinky.rcSelect.interfaceMod.RenderNode
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.UIEventHandler
@@ -36,7 +37,7 @@ trait OptionListProps[OptionsType /* <: js.Array[js.Object] */] extends js.Objec
   var notFoundContent: js.UndefOr[ReactElement] = js.native
   
   /** Tell Select that some value is now active to make accessibility work */
-  def onActiveValue(value: RawValueType, index: Double): Unit = js.native
+  var onActiveValue: OnActiveValue = js.native
   
   /** Tell Select that mouse enter the popup to force re-render */
   var onMouseEnter: js.UndefOr[MouseEventHandler[Element]] = js.native

@@ -3,6 +3,7 @@ package typingsSlinky.testingLibraryDom
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDocument
 import typingsSlinky.prettyFormat.mod.OptionsReceived
+import typingsSlinky.prettyFormat.typesMod.NewPlugin
 import typingsSlinky.testingLibraryDom.testingLibraryDomBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,4 +38,34 @@ object prettyDomMod extends js.Object {
   def prettyDOM(dom: HTMLDocument, maxLength: js.UndefOr[scala.Nothing], options: OptionsReceived): String | `false` = js.native
   def prettyDOM(dom: HTMLDocument, maxLength: Double): String | `false` = js.native
   def prettyDOM(dom: HTMLDocument, maxLength: Double, options: OptionsReceived): String | `false` = js.native
+  
+  @js.native
+  object prettyFormat extends js.Object {
+    
+    /**
+      * Returns a presentation string of your `val` object
+      * @param val any potential JavaScript object
+      * @param options Custom settings
+      */
+    def apply(`val`: js.Any): String = js.native
+    def apply(`val`: js.Any, options: typingsSlinky.prettyFormat.typesMod.OptionsReceived): String = js.native
+    
+    @js.native
+    object plugins extends js.Object {
+      
+      var AsymmetricMatcher: NewPlugin = js.native
+      
+      var ConvertAnsi: NewPlugin = js.native
+      
+      var DOMCollection: NewPlugin = js.native
+      
+      var DOMElement: NewPlugin = js.native
+      
+      var Immutable: NewPlugin = js.native
+      
+      var ReactElement: NewPlugin = js.native
+      
+      var ReactTestComponent: NewPlugin = js.native
+    }
+  }
 }

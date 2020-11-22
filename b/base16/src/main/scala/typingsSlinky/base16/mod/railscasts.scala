@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("base16", "railscasts")
 @js.native
-object railscasts extends TopLevel[ColorScheme]
+object railscasts extends TopLevel[Base16Theme]

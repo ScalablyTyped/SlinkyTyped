@@ -66,7 +66,7 @@ trait IRawFontStyle extends js.Object {
     * See CSS 3 font-size-adjust property
     * https://www.w3.org/TR/css-fonts-3/#propdef-font-size-adjust
     */
-  var fontSizeAdjust: js.UndefOr[ICSSRule | none | Double] = js.native
+  var fontSizeAdjust: js.UndefOr[ICSSRule | none | Double | String] = js.native
   
   /**
     * Allows you to expand or condense the widths for a normal, condensed, or expanded
@@ -75,7 +75,7 @@ trait IRawFontStyle extends js.Object {
     * https://drafts.csswg.org/css-fonts-3/#propdef-font-stretch
     */
   var fontStretch: js.UndefOr[
-    ICSSRule | normal | `ultra-condensed` | `extra-condensed` | condensed | `semi-condensed` | `semi-expanded` | expanded | `extra-expanded` | `ultra-expanded`
+    ICSSRule | normal | `ultra-condensed` | `extra-condensed` | condensed | `semi-condensed` | `semi-expanded` | expanded | `extra-expanded` | `ultra-expanded` | String
   ] = js.native
   
   /**
@@ -85,7 +85,7 @@ trait IRawFontStyle extends js.Object {
     * sloping the glyphs of the regular face.
     * See CSS 3 font-style property https://www.w3.org/TR/css-fonts-3/#propdef-font-style
     */
-  var fontStyle: js.UndefOr[ICSSRule | normal | italic | oblique] = js.native
+  var fontStyle: js.UndefOr[ICSSRule | normal | italic | oblique | String] = js.native
   
   /**
     * This value specifies whether the user agent is allowed to synthesize bold or
@@ -109,7 +109,7 @@ trait IRawFontStyle extends js.Object {
     * Specifies the weight or boldness of the font.
     * See CSS 3 'font-weight' property https://www.w3.org/TR/css-fonts-3/#propdef-font-weight
     */
-  var fontWeight: js.UndefOr[IFontWeight] = js.native
+  var fontWeight: js.UndefOr[IFontWeight | String] = js.native
 }
 object IRawFontStyle {
   
@@ -161,21 +161,21 @@ object IRawFontStyle {
     def deleteFontSize: Self = this.set("fontSize", js.undefined)
     
     @scala.inline
-    def setFontSizeAdjust(value: ICSSRule | none | Double): Self = this.set("fontSizeAdjust", value.asInstanceOf[js.Any])
+    def setFontSizeAdjust(value: ICSSRule | none | Double | String): Self = this.set("fontSizeAdjust", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontSizeAdjust: Self = this.set("fontSizeAdjust", js.undefined)
     
     @scala.inline
     def setFontStretch(
-      value: ICSSRule | normal | `ultra-condensed` | `extra-condensed` | condensed | `semi-condensed` | `semi-expanded` | expanded | `extra-expanded` | `ultra-expanded`
+      value: ICSSRule | normal | `ultra-condensed` | `extra-condensed` | condensed | `semi-condensed` | `semi-expanded` | expanded | `extra-expanded` | `ultra-expanded` | String
     ): Self = this.set("fontStretch", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontStretch: Self = this.set("fontStretch", js.undefined)
     
     @scala.inline
-    def setFontStyle(value: ICSSRule | normal | italic | oblique): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
+    def setFontStyle(value: ICSSRule | normal | italic | oblique | String): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
@@ -199,7 +199,7 @@ object IRawFontStyle {
     def deleteFontVariantAlternates: Self = this.set("fontVariantAlternates", js.undefined)
     
     @scala.inline
-    def setFontWeight(value: IFontWeight): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
+    def setFontWeight(value: IFontWeight | String): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontWeight: Self = this.set("fontWeight", js.undefined)

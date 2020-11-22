@@ -12,8 +12,8 @@ import typingsSlinky.devextreme.anon.FileNameModel
 import typingsSlinky.devextreme.anon.IgnoreExcelErrors
 import typingsSlinky.devextreme.anon.Mode
 import typingsSlinky.devextreme.anon.SearchTimeout
-import typingsSlinky.devextreme.anon.ShowIndicator
-import typingsSlinky.devextreme.anon.`7`
+import typingsSlinky.devextreme.anon.Shading
+import typingsSlinky.devextreme.anon.`9`
 import typingsSlinky.devextreme.devextremeStrings.both
 import typingsSlinky.devextreme.devextremeStrings.column
 import typingsSlinky.devextreme.devextremeStrings.columns
@@ -31,91 +31,151 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPivotGridOptions extends WidgetOptions[dxPivotGrid] {
   
-  /** @name dxPivotGrid.Options.allowExpandAll */
+  /**
+    * [descr:dxPivotGrid.Options.allowExpandAll]
+    */
   var allowExpandAll: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGrid.Options.allowFiltering */
+  /**
+    * [descr:dxPivotGrid.Options.allowFiltering]
+    */
   var allowFiltering: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGrid.Options.allowSorting */
+  /**
+    * [descr:dxPivotGrid.Options.allowSorting]
+    */
   var allowSorting: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGrid.Options.allowSortingBySummary */
+  /**
+    * [descr:dxPivotGrid.Options.allowSortingBySummary]
+    */
   var allowSortingBySummary: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGrid.Options.dataFieldArea */
+  /**
+    * [descr:dxPivotGrid.Options.dataFieldArea]
+    */
   var dataFieldArea: js.UndefOr[column | row] = js.native
   
-  /** @name dxPivotGrid.Options.dataSource */
+  /**
+    * [descr:dxPivotGrid.Options.dataSource]
+    */
   var dataSource: js.UndefOr[js.Array[_] | PivotGridDataSource | PivotGridDataSourceOptions] = js.native
   
-  /** @name dxPivotGrid.Options.export */
+  /**
+    * [descr:dxPivotGrid.Options.export]
+    */
   var export: js.UndefOr[IgnoreExcelErrors] = js.native
   
-  /** @name dxPivotGrid.Options.fieldChooser */
+  /**
+    * [descr:dxPivotGrid.Options.fieldChooser]
+    */
   var fieldChooser: js.UndefOr[ApplyChangesMode] = js.native
   
-  /** @name dxPivotGrid.Options.fieldPanel */
+  /**
+    * [descr:dxPivotGrid.Options.fieldPanel]
+    */
   var fieldPanel: js.UndefOr[AllowFieldDragging] = js.native
   
-  /** @name dxPivotGrid.Options.headerFilter */
+  /**
+    * [descr:dxPivotGrid.Options.headerFilter]
+    */
   var headerFilter: js.UndefOr[SearchTimeout] = js.native
   
-  /** @name dxPivotGrid.Options.hideEmptySummaryCells */
+  /**
+    * [descr:dxPivotGrid.Options.hideEmptySummaryCells]
+    */
   var hideEmptySummaryCells: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGrid.Options.loadPanel */
-  var loadPanel: js.UndefOr[ShowIndicator] = js.native
+  /**
+    * [descr:dxPivotGrid.Options.loadPanel]
+    */
+  var loadPanel: js.UndefOr[Shading] = js.native
   
-  /** @name dxPivotGrid.Options.onCellClick */
+  /**
+    * [descr:dxPivotGrid.Options.onCellClick]
+    */
   var onCellClick: js.UndefOr[js.Function1[/* e */ Area, _]] = js.native
   
-  /** @name dxPivotGrid.Options.onCellPrepared */
+  /**
+    * [descr:dxPivotGrid.Options.onCellPrepared]
+    */
   var onCellPrepared: js.UndefOr[js.Function1[/* e */ Cell, _]] = js.native
   
-  /** @name dxPivotGrid.Options.onContextMenuPreparing */
+  /**
+    * [descr:dxPivotGrid.Options.onContextMenuPreparing]
+    */
   var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ ColumnFields, _]] = js.native
   
-  /** @name dxPivotGrid.Options.onExported */
-  var onExported: js.UndefOr[js.Function1[/* e */ `7`, _]] = js.native
+  /**
+    * [descr:dxPivotGrid.Options.onExported]
+    * @deprecated [depNote:dxPivotGrid.Options.onExported]
+    */
+  var onExported: js.UndefOr[js.Function1[/* e */ `9`, _]] = js.native
   
-  /** @name dxPivotGrid.Options.onExporting */
+  /**
+    * [descr:dxPivotGrid.Options.onExporting]
+    */
   var onExporting: js.UndefOr[js.Function1[/* e */ FileNameModel, _]] = js.native
   
-  /** @name dxPivotGrid.Options.onFileSaving */
+  /**
+    * [descr:dxPivotGrid.Options.onFileSaving]
+    * @deprecated [depNote:dxPivotGrid.Options.onFileSaving]
+    */
   var onFileSaving: js.UndefOr[js.Function1[/* e */ FileNameFormat, _]] = js.native
   
-  /** @name dxPivotGrid.Options.rowHeaderLayout */
+  /**
+    * [descr:dxPivotGrid.Options.rowHeaderLayout]
+    */
   var rowHeaderLayout: js.UndefOr[standard | tree] = js.native
   
-  /** @name dxPivotGrid.Options.scrolling */
+  /**
+    * [descr:dxPivotGrid.Options.scrolling]
+    */
   var scrolling: js.UndefOr[Mode] = js.native
   
-  /** @name dxPivotGrid.Options.showBorders */
+  /**
+    * [descr:dxPivotGrid.Options.showBorders]
+    */
   var showBorders: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGrid.Options.showColumnGrandTotals */
+  /**
+    * [descr:dxPivotGrid.Options.showColumnGrandTotals]
+    */
   var showColumnGrandTotals: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGrid.Options.showColumnTotals */
+  /**
+    * [descr:dxPivotGrid.Options.showColumnTotals]
+    */
   var showColumnTotals: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGrid.Options.showRowGrandTotals */
+  /**
+    * [descr:dxPivotGrid.Options.showRowGrandTotals]
+    */
   var showRowGrandTotals: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGrid.Options.showRowTotals */
+  /**
+    * [descr:dxPivotGrid.Options.showRowTotals]
+    */
   var showRowTotals: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGrid.Options.showTotalsPrior */
+  /**
+    * [descr:dxPivotGrid.Options.showTotalsPrior]
+    */
   var showTotalsPrior: js.UndefOr[both | columns | none | rows] = js.native
   
-  /** @name dxPivotGrid.Options.stateStoring */
+  /**
+    * [descr:dxPivotGrid.Options.stateStoring]
+    */
   var stateStoring: js.UndefOr[CustomLoad] = js.native
   
-  /** @name dxPivotGrid.Options.texts */
+  /**
+    * [descr:dxPivotGrid.Options.texts]
+    */
   var texts: js.UndefOr[CollapseAll] = js.native
   
-  /** @name dxPivotGrid.Options.wordWrapEnabled */
+  /**
+    * [descr:dxPivotGrid.Options.wordWrapEnabled]
+    */
   var wordWrapEnabled: js.UndefOr[Boolean] = js.native
 }
 object dxPivotGridOptions {
@@ -211,7 +271,7 @@ object dxPivotGridOptions {
     def deleteHideEmptySummaryCells: Self = this.set("hideEmptySummaryCells", js.undefined)
     
     @scala.inline
-    def setLoadPanel(value: ShowIndicator): Self = this.set("loadPanel", value.asInstanceOf[js.Any])
+    def setLoadPanel(value: Shading): Self = this.set("loadPanel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLoadPanel: Self = this.set("loadPanel", js.undefined)
@@ -235,7 +295,7 @@ object dxPivotGridOptions {
     def deleteOnContextMenuPreparing: Self = this.set("onContextMenuPreparing", js.undefined)
     
     @scala.inline
-    def setOnExported(value: /* e */ `7` => _): Self = this.set("onExported", js.Any.fromFunction1(value))
+    def setOnExported(value: /* e */ `9` => _): Self = this.set("onExported", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnExported: Self = this.set("onExported", js.undefined)

@@ -1,9 +1,11 @@
 package typingsSlinky.mockFs
 
 import typingsSlinky.mockFs.directoryMod.^
+import typingsSlinky.mockFs.filesystemMod.DirectoryItem
 import typingsSlinky.mockFs.filesystemMod.DirectoryItems
 import typingsSlinky.mockFs.filesystemMod.DirectoryOptions
 import typingsSlinky.mockFs.filesystemMod.FileOptions
+import typingsSlinky.mockFs.filesystemMod.LoaderOptions
 import typingsSlinky.mockFs.filesystemMod.Options
 import typingsSlinky.mockFs.filesystemMod.SymlinkOptions
 import scala.scalajs.js
@@ -33,6 +35,15 @@ object mod extends js.Object {
   def apply(config: DirectoryItems, options: Options): Unit = js.native
   
   /**
+    * Temporarily bypass the mocked file system and load directly from the real file system.
+    *
+    * @example
+    * const filePath = '/path/file.json';
+    * const data = mock.bypass(() => fs.readFileSync(filePath, 'utf-8'));
+    */
+  def bypass[T](fn: js.Function0[T]): T = js.native
+  
+  /**
     * Create a directory factory.
     */
   def directory(): js.Function0[^] = js.native
@@ -49,6 +60,12 @@ object mod extends js.Object {
     * If fs hasn't currently been replaced, this will return an empty object
     */
   def getMockRoot(): ^  | js.Object = js.native
+  
+  /**
+    * Load a real file/folder into the mock file system.
+    */
+  def load(path: String): DirectoryItem = js.native
+  def load(path: String, options: LoaderOptions): DirectoryItem = js.native
   
   /**
     * Restore the fs bindings for the real file system.

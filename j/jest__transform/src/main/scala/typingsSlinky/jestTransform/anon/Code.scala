@@ -1,5 +1,6 @@
 package typingsSlinky.jestTransform.anon
 
+import typingsSlinky.jestTransform.typesMod.FixedRawSourceMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,15 +10,13 @@ trait Code extends js.Object {
   
   var code: String = js.native
   
-  var mapCoverage: Boolean = js.native
-  
-  var sourceMapPath: String | Null = js.native
+  var map: js.UndefOr[FixedRawSourceMap | String | Null] = js.native
 }
 object Code {
   
   @scala.inline
-  def apply(code: String, mapCoverage: Boolean): Code = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], mapCoverage = mapCoverage.asInstanceOf[js.Any])
+  def apply(code: String): Code = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
     __obj.asInstanceOf[Code]
   }
   
@@ -40,12 +39,12 @@ object Code {
     def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMapCoverage(value: Boolean): Self = this.set("mapCoverage", value.asInstanceOf[js.Any])
+    def setMap(value: FixedRawSourceMap | String): Self = this.set("map", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSourceMapPath(value: String): Self = this.set("sourceMapPath", value.asInstanceOf[js.Any])
+    def deleteMap: Self = this.set("map", js.undefined)
     
     @scala.inline
-    def setSourceMapPathNull: Self = this.set("sourceMapPath", null)
+    def setMapNull: Self = this.set("map", null)
   }
 }

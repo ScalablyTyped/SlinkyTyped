@@ -46,6 +46,8 @@ trait StatefulTextareaProps extends js.Object {
   
   var children: js.UndefOr[ReactElement] with js.UndefOr[scala.Nothing] = js.native
   
+  var clearOnEscape: js.UndefOr[Boolean] = js.native
+  
   var clearable: js.UndefOr[Boolean] = js.native
   
   var `data-baseweb`: js.UndefOr[String] = js.native
@@ -63,6 +65,8 @@ trait StatefulTextareaProps extends js.Object {
   var inputRef: js.UndefOr[Ref[HTMLTextAreaElement]] = js.native
   
   var max: js.UndefOr[Double] = js.native
+  
+  var maxLength: js.UndefOr[Double] = js.native
   
   var min: js.UndefOr[Double] = js.native
   
@@ -95,6 +99,8 @@ trait StatefulTextareaProps extends js.Object {
   var size: js.UndefOr[mini | default_ | compact | large_] = js.native
   
   var stateReducer: js.UndefOr[js.Function3[change_, /* nextState */ State, /* currentState */ State, State]] = js.native
+  
+  var step: js.UndefOr[Double] = js.native
   
   var `type`: js.UndefOr[String] = js.native
   
@@ -177,6 +183,12 @@ object StatefulTextareaProps {
     def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
     
     @scala.inline
+    def setClearOnEscape(value: Boolean): Self = this.set("clearOnEscape", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClearOnEscape: Self = this.set("clearOnEscape", js.undefined)
+    
+    @scala.inline
     def setClearable(value: Boolean): Self = this.set("clearable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -238,6 +250,12 @@ object StatefulTextareaProps {
     
     @scala.inline
     def deleteMax: Self = this.set("max", js.undefined)
+    
+    @scala.inline
+    def setMaxLength(value: Double): Self = this.set("maxLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxLength: Self = this.set("maxLength", js.undefined)
     
     @scala.inline
     def setMin(value: Double): Self = this.set("min", value.asInstanceOf[js.Any])
@@ -328,6 +346,12 @@ object StatefulTextareaProps {
     
     @scala.inline
     def deleteStateReducer: Self = this.set("stateReducer", js.undefined)
+    
+    @scala.inline
+    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStep: Self = this.set("step", js.undefined)
     
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])

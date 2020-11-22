@@ -35,7 +35,9 @@ trait ProceduralRenderer3 extends Renderer3 {
   var destroyNode: js.UndefOr[(js.Function1[/* node */ RNode, Unit]) | Null] = js.native
   
   def insertBefore(parent: RNode, newChild: RNode): Unit = js.native
+  def insertBefore(parent: RNode, newChild: RNode, refChild: Null, isMove: Boolean): Unit = js.native
   def insertBefore(parent: RNode, newChild: RNode, refChild: RNode): Unit = js.native
+  def insertBefore(parent: RNode, newChild: RNode, refChild: RNode, isMove: Boolean): Unit = js.native
   
   def listen(
     target: GlobalTargetName,

@@ -60,7 +60,7 @@ trait RegisterTaskDefinitionRequest extends js.Object {
   var proxyConfiguration: js.UndefOr[ProxyConfiguration] = js.native
   
   /**
-    * The launch type required by the task. If no value is specified, it defaults to EC2.
+    * The task launch type that Amazon ECS should validate the task definition against. This ensures that the task definition parameters are compatible with the specified launch type. If no value is specified, it defaults to EC2.
     */
   var requiresCompatibilities: js.UndefOr[CompatibilityList] = js.native
   

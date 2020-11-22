@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-pdf/dist/entry.webpack", JSImport.Namespace)
+@JSImport("react-pdf/dist/esm/entry.webpack", JSImport.Namespace)
 @js.native
 object entryWebpackMod extends js.Object {
   

@@ -8,7 +8,7 @@ import typingsSlinky.antd.anon.ScrollToFirstRowOnChange
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.spinMod.SpinProps
 import typingsSlinky.antd.tableInterfaceMod.ColumnGroupType
 import typingsSlinky.antd.tableInterfaceMod.ColumnType
@@ -22,6 +22,7 @@ import typingsSlinky.antd.tableInterfaceMod.TableRowSelection
 import typingsSlinky.antd.tableTableMod.TableProps
 import typingsSlinky.rcTable.anon.X
 import typingsSlinky.rcTable.footerCellMod.SummaryCellProps
+import typingsSlinky.rcTable.interfaceMod.AlignType
 import typingsSlinky.rcTable.interfaceMod.ExpandableConfig
 import typingsSlinky.rcTable.interfaceMod.GetRowKey
 import typingsSlinky.rcTable.interfaceMod.Key
@@ -29,6 +30,7 @@ import typingsSlinky.rcTable.interfaceMod.RenderExpandIconProps
 import typingsSlinky.rcTable.interfaceMod.RowClassName
 import typingsSlinky.rcTable.interfaceMod.TableComponents
 import typingsSlinky.rcTable.interfaceMod.TableLayout
+import typingsSlinky.rcTable.interfaceMod.TableSticky
 import typingsSlinky.rcTable.rowMod.FooterRowProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
@@ -190,6 +192,9 @@ object Table {
     def sortDirections(value: js.Array[SortOrder]): this.type = set("sortDirections", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def sticky(value: Boolean | TableSticky): this.type = set("sticky", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -247,6 +252,9 @@ object Table {
          with StBuildingComponent[tag.type, js.Object] {
       
       @scala.inline
+      def align(value: AlignType): this.type = set("align", value.asInstanceOf[js.Any])
+      
+      @scala.inline
       def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
       
       @scala.inline
@@ -256,12 +264,12 @@ object Table {
       def rowSpan(value: Double): this.type = set("rowSpan", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: /* hasClassNameIndexChildrenColSpanRowSpan */ SummaryCellProps): typingsSlinky.antd.components.Table.Cell.Builder = new typingsSlinky.antd.components.Table.Cell.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: /* hasClassNameIndexChildrenColSpanRowSpanAlign */ SummaryCellProps): typingsSlinky.antd.components.Table.Cell.Builder = new typingsSlinky.antd.components.Table.Cell.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
     def apply(index: Double): typingsSlinky.antd.components.Table.Cell.Builder = {
       val __props = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
-      new typingsSlinky.antd.components.Table.Cell.Builder(js.Array(this.component, __props.asInstanceOf[/* hasClassNameIndexChildrenColSpanRowSpan */ SummaryCellProps]))
+      new typingsSlinky.antd.components.Table.Cell.Builder(js.Array(this.component, __props.asInstanceOf[/* hasClassNameIndexChildrenColSpanRowSpanAlign */ SummaryCellProps]))
     }
   }
 }

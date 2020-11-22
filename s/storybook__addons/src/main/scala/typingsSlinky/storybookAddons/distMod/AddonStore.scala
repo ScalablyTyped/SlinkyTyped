@@ -1,7 +1,7 @@
 package typingsSlinky.storybookAddons.distMod
 
+import typingsSlinky.storybookAddons.typesMod.Types_
 import typingsSlinky.storybookApi.mod.API
-import typingsSlinky.storybookChannels.mod.Channel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,11 +20,11 @@ class AddonStore () extends js.Object {
   
   var elements: js.Any = js.native
   
-  def getChannel(): Channel = js.native
+  def getChannel(): typingsSlinky.storybookChannels.mod.Channel = js.native
   
   def getConfig(): Config = js.native
   
-  def getElements(`type`: String): Collection = js.native
+  def getElements(`type`: Types_): Collection = js.native
   
   def hasChannel(): Boolean = js.native
   
@@ -34,13 +34,13 @@ class AddonStore () extends js.Object {
   
   var promise: js.Any = js.native
   
-  def ready(): js.Promise[Channel] = js.native
+  def ready(): js.Promise[typingsSlinky.storybookChannels.mod.Channel] = js.native
   
   def register(name: String, registerCallback: js.Function1[/* api */ API, Unit]): Unit = js.native
   
   var resolve: js.Any = js.native
   
-  def setChannel(channel: Channel): Unit = js.native
+  def setChannel(channel: typingsSlinky.storybookChannels.mod.Channel): Unit = js.native
   
   def setConfig(value: Config): Unit = js.native
 }

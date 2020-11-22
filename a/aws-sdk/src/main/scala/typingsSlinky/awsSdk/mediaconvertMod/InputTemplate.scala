@@ -38,7 +38,7 @@ trait InputTemplate extends js.Object {
   var DenoiseFilter: js.UndefOr[InputDenoiseFilter] = js.native
   
   /**
-    * Use Filter enable (InputFilterEnable) to specify how the transcoding service applies the denoise and deblock filters. You must also enable the filters separately, with Denoise (InputDenoiseFilter) and Deblock (InputDeblockFilter). * Auto - The transcoding service determines whether to apply filtering, depending on input type and quality. * Disable - The input is not filtered. This is true even if you use the API to enable them in (InputDeblockFilter) and (InputDeblockFilter). * Force - The in put is filtered regardless of input type.
+    * Specify how the transcoding service applies the denoise and deblock filters. You must also enable the filters separately, with Denoise (InputDenoiseFilter) and Deblock (InputDeblockFilter). * Auto - The transcoding service determines whether to apply filtering, depending on input type and quality. * Disable - The input is not filtered. This is true even if you use the API to enable them in (InputDeblockFilter) and (InputDeblockFilter). * Force - The input is filtered regardless of input type.
     */
   var FilterEnable: js.UndefOr[InputFilterEnable] = js.native
   
@@ -56,6 +56,11 @@ trait InputTemplate extends js.Object {
     * (InputClippings) contains sets of start and end times that together specify a portion of the input to be used in the outputs. If you provide only a start time, the clip will be the entire input from that point to the end. If you provide only an end time, it will be the entire input up to that point. When you specify more than one input clip, the transcoding service creates the job outputs by stringing the clips together in the order you specify them.
     */
   var InputClippings: js.UndefOr[listOfInputClipping] = js.native
+  
+  /**
+    * When you have a progressive segmented frame (PsF) input, use this setting to flag the input as PsF. MediaConvert doesn't automatically detect PsF. Therefore, flagging your input as PsF results in better preservation of video quality when you do deinterlacing and frame rate conversion. If you don't specify, the default value is Auto (AUTO). Auto is the correct setting for all inputs that are not PsF. Don't set this value to PsF when your input is interlaced. Doing so creates horizontal interlacing artifacts.
+    */
+  var InputScanType: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.InputScanType] = js.native
   
   /**
     * Use Selection placement (position) to define the video area in your output frame. The area outside of the rectangle that you specify here is black. If you specify a value here, it will override any value that you specify in the output setting Selection placement (position). If you specify a value here, this will override any AFD values in your input, even if you set Respond to AFD (RespondToAfd) to Respond (RESPOND). If you specify a value here, this will ignore anything that you specify for the setting Scaling Behavior (scalingBehavior).
@@ -172,6 +177,12 @@ object InputTemplate {
     
     @scala.inline
     def deleteInputClippings: Self = this.set("InputClippings", js.undefined)
+    
+    @scala.inline
+    def setInputScanType(value: InputScanType): Self = this.set("InputScanType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputScanType: Self = this.set("InputScanType", js.undefined)
     
     @scala.inline
     def setPosition(value: Rectangle): Self = this.set("Position", value.asInstanceOf[js.Any])

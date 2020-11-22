@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Animation.SetPausedRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Animation.SeekAnimationsRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `25` extends js.Object {
   
-  var paramsType: js.Array[SetPausedRequest] = js.native
+  var paramsType: js.Array[SeekAnimationsRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `25` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetPausedRequest], returnType: Unit): `25` = {
+  def apply(paramsType: js.Array[SeekAnimationsRequest], returnType: Unit): `25` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`25`]
   }
@@ -36,10 +36,10 @@ object `25` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetPausedRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SeekAnimationsRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetPausedRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SeekAnimationsRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

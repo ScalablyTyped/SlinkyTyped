@@ -318,6 +318,7 @@ object updateFunctionExpression extends js.Object {
     `type`: js.UndefOr[scala.Nothing],
     body: Block
   ): FunctionExpression = js.native
+  /** @deprecated Use `factory.updateFunctionExpression` or the factory supplied by your transformation context instead. */
   def apply(
     node: FunctionExpression,
     modifiers: js.Array[Modifier],

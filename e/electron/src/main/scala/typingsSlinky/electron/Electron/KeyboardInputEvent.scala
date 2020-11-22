@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait KeyboardInputEvent extends InputEvent {
   
-  // Docs: http://electronjs.org/docs/api/structures/keyboard-input-event
+  // Docs: https://electronjs.org/docs/api/structures/keyboard-input-event
   /**
     * The character that will be sent as the keyboard event. Should only use the valid
     * key codes in Accelerator.

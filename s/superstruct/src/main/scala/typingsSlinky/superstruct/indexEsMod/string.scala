@@ -11,8 +11,5 @@ object string extends js.Object {
   /**
     * Validate that a value is a string.
     */
-  /**
-    * Validate that a value is a string.
-    */
   def apply(): Struct_[String, _] = js.native
 }

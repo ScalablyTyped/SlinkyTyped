@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("@blueprintjs/core", "EditableText")
 @js.native
-class EditableText ()
+class EditableText protected ()
   extends typingsSlinky.blueprintjsCore.componentsMod.EditableText {
   def this(props: IEditableTextProps) = this()
-  def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
   def this(props: IEditableTextProps, context: js.Any) = this()
 }
 /* static members */

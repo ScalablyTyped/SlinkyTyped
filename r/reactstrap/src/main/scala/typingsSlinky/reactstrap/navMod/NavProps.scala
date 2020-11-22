@@ -3,9 +3,8 @@ package typingsSlinky.reactstrap.navMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLUListElement
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.react.mod.ReactType
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,8 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait NavProps
-  extends AllHTMLAttributes[HTMLUListElement]
-     with ClassAttributes[HTMLUListElement]
+  extends HTMLAttributes[HTMLUListElement]
      with /* key */ StringDictionary[js.Any] {
   
   var card: js.UndefOr[Boolean] = js.native
@@ -33,7 +31,7 @@ trait NavProps
   
   var tabs: js.UndefOr[Boolean] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
   
   var vertical: js.UndefOr[Boolean | String] = js.native
 }
@@ -115,7 +113,7 @@ object NavProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

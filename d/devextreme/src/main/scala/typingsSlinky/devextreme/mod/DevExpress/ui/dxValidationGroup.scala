@@ -8,9 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxValidationGroup extends DOMComponent {
   
-  /** @name dxValidationGroup.reset() */
+  /**
+    * [descr:dxValidationGroup.reset()]
+    */
   def reset(): Unit = js.native
   
-  /** @name dxValidationGroup.validate() */
+  /**
+    * [descr:dxValidationGroup.validate()]
+    */
   def validate(): dxValidationGroupResult = js.native
 }

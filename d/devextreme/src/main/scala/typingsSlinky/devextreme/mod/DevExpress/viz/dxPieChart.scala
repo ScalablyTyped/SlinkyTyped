@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPieChart extends BaseChart {
   
-  /** @name dxPieChart.getInnerRadius() */
+  /**
+    * [descr:dxPieChart.getInnerRadius()]
+    */
   def getInnerRadius(): Double = js.native
 }

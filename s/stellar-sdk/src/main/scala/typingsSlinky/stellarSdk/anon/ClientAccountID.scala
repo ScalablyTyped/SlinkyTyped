@@ -13,13 +13,19 @@ trait ClientAccountID extends js.Object {
   
   var clientAccountID: String = js.native
   
+  var matchedHomeDomain: String = js.native
+  
   var tx: Transaction[Memo[MemoType], js.Array[Operation]] = js.native
 }
 object ClientAccountID {
   
   @scala.inline
-  def apply(clientAccountID: String, tx: Transaction[Memo[MemoType], js.Array[Operation]]): ClientAccountID = {
-    val __obj = js.Dynamic.literal(clientAccountID = clientAccountID.asInstanceOf[js.Any], tx = tx.asInstanceOf[js.Any])
+  def apply(
+    clientAccountID: String,
+    matchedHomeDomain: String,
+    tx: Transaction[Memo[MemoType], js.Array[Operation]]
+  ): ClientAccountID = {
+    val __obj = js.Dynamic.literal(clientAccountID = clientAccountID.asInstanceOf[js.Any], matchedHomeDomain = matchedHomeDomain.asInstanceOf[js.Any], tx = tx.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientAccountID]
   }
   
@@ -40,6 +46,9 @@ object ClientAccountID {
     
     @scala.inline
     def setClientAccountID(value: String): Self = this.set("clientAccountID", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMatchedHomeDomain(value: String): Self = this.set("matchedHomeDomain", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTx(value: Transaction[Memo[MemoType], js.Array[Operation]]): Self = this.set("tx", value.asInstanceOf[js.Any])

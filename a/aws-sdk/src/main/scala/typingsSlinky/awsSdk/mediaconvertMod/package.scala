@@ -158,6 +158,26 @@ package object mediaconvertMod {
   type AntiAlias = typingsSlinky.awsSdk.mediaconvertMod._AntiAlias | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.L
+    - typingsSlinky.awsSdk.awsSdkStrings.R
+    - typingsSlinky.awsSdk.awsSdkStrings.C
+    - typingsSlinky.awsSdk.awsSdkStrings.LFE
+    - typingsSlinky.awsSdk.awsSdkStrings.LS
+    - typingsSlinky.awsSdk.awsSdkStrings.RS
+    - typingsSlinky.awsSdk.awsSdkStrings.LC
+    - typingsSlinky.awsSdk.awsSdkStrings.RC
+    - typingsSlinky.awsSdk.awsSdkStrings.CS
+    - typingsSlinky.awsSdk.awsSdkStrings.LSD
+    - typingsSlinky.awsSdk.awsSdkStrings.RSD
+    - typingsSlinky.awsSdk.awsSdkStrings.TCS
+    - typingsSlinky.awsSdk.awsSdkStrings.VHL
+    - typingsSlinky.awsSdk.awsSdkStrings.VHC
+    - typingsSlinky.awsSdk.awsSdkStrings.VHR
+    - java.lang.String
+  */
+  type AudioChannelTag = typingsSlinky.awsSdk.mediaconvertMod._AudioChannelTag | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AAC
     - typingsSlinky.awsSdk.awsSdkStrings.MP2
     - typingsSlinky.awsSdk.awsSdkStrings.MP3
@@ -253,6 +273,7 @@ package object mediaconvertMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DUPLICATE_DROP
     - typingsSlinky.awsSdk.awsSdkStrings.INTERPOLATE
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAMEFORMER
     - java.lang.String
   */
   type Av1FramerateConversionAlgorithm = typingsSlinky.awsSdk.mediaconvertMod._Av1FramerateConversionAlgorithm | java.lang.String
@@ -265,6 +286,53 @@ package object mediaconvertMod {
     - java.lang.String
   */
   type Av1SpatialAdaptiveQuantization = typingsSlinky.awsSdk.mediaconvertMod._Av1SpatialAdaptiveQuantization | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CLASS_50
+    - typingsSlinky.awsSdk.awsSdkStrings.CLASS_100
+    - typingsSlinky.awsSdk.awsSdkStrings.CLASS_200
+    - java.lang.String
+  */
+  type AvcIntraClass = typingsSlinky.awsSdk.mediaconvertMod._AvcIntraClass | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INITIALIZE_FROM_SOURCE
+    - typingsSlinky.awsSdk.awsSdkStrings.SPECIFIED
+    - java.lang.String
+  */
+  type AvcIntraFramerateControl = typingsSlinky.awsSdk.mediaconvertMod._AvcIntraFramerateControl | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DUPLICATE_DROP
+    - typingsSlinky.awsSdk.awsSdkStrings.INTERPOLATE
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAMEFORMER
+    - java.lang.String
+  */
+  type AvcIntraFramerateConversionAlgorithm = typingsSlinky.awsSdk.mediaconvertMod._AvcIntraFramerateConversionAlgorithm | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PROGRESSIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.TOP_FIELD
+    - typingsSlinky.awsSdk.awsSdkStrings.BOTTOM_FIELD
+    - typingsSlinky.awsSdk.awsSdkStrings.FOLLOW_TOP_FIELD
+    - typingsSlinky.awsSdk.awsSdkStrings.FOLLOW_BOTTOM_FIELD
+    - java.lang.String
+  */
+  type AvcIntraInterlaceMode = typingsSlinky.awsSdk.mediaconvertMod._AvcIntraInterlaceMode | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
+    - java.lang.String
+  */
+  type AvcIntraSlowPal = typingsSlinky.awsSdk.mediaconvertMod._AvcIntraSlowPal | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.HARD
+    - java.lang.String
+  */
+  type AvcIntraTelecine = typingsSlinky.awsSdk.mediaconvertMod._AvcIntraTelecine | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.QUEUE
@@ -882,6 +950,7 @@ package object mediaconvertMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.OFF
+    - typingsSlinky.awsSdk.awsSdkStrings.AUTO
     - typingsSlinky.awsSdk.awsSdkStrings.LOW
     - typingsSlinky.awsSdk.awsSdkStrings.MEDIUM
     - typingsSlinky.awsSdk.awsSdkStrings.HIGH
@@ -962,6 +1031,7 @@ package object mediaconvertMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DUPLICATE_DROP
     - typingsSlinky.awsSdk.awsSdkStrings.INTERPOLATE
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAMEFORMER
     - java.lang.String
   */
   type H264FramerateConversionAlgorithm = typingsSlinky.awsSdk.mediaconvertMod._H264FramerateConversionAlgorithm | java.lang.String
@@ -1145,6 +1215,7 @@ package object mediaconvertMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DUPLICATE_DROP
     - typingsSlinky.awsSdk.awsSdkStrings.INTERPOLATE
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAMEFORMER
     - java.lang.String
   */
   type H265FramerateConversionAlgorithm = typingsSlinky.awsSdk.mediaconvertMod._H265FramerateConversionAlgorithm | java.lang.String
@@ -1282,6 +1353,13 @@ package object mediaconvertMod {
     - java.lang.String
   */
   type HlsAudioOnlyContainer = typingsSlinky.awsSdk.mediaconvertMod._HlsAudioOnlyContainer | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INCLUDE
+    - typingsSlinky.awsSdk.awsSdkStrings.EXCLUDE
+    - java.lang.String
+  */
+  type HlsAudioOnlyHeader = typingsSlinky.awsSdk.mediaconvertMod._HlsAudioOnlyHeader | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT
@@ -1451,6 +1529,13 @@ package object mediaconvertMod {
     - java.lang.String
   */
   type InputRotate = typingsSlinky.awsSdk.mediaconvertMod._InputRotate | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AUTO
+    - typingsSlinky.awsSdk.awsSdkStrings.PSF
+    - java.lang.String
+  */
+  type InputScanType = typingsSlinky.awsSdk.mediaconvertMod._InputScanType | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EMBEDDED
@@ -1932,6 +2017,7 @@ package object mediaconvertMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DUPLICATE_DROP
     - typingsSlinky.awsSdk.awsSdkStrings.INTERPOLATE
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAMEFORMER
     - java.lang.String
   */
   type Mpeg2FramerateConversionAlgorithm = typingsSlinky.awsSdk.mediaconvertMod._Mpeg2FramerateConversionAlgorithm | java.lang.String
@@ -2049,6 +2135,36 @@ package object mediaconvertMod {
   type MxfAfdSignaling = typingsSlinky.awsSdk.mediaconvertMod._MxfAfdSignaling | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.D_10
+    - typingsSlinky.awsSdk.awsSdkStrings.XDCAM
+    - typingsSlinky.awsSdk.awsSdkStrings.OP1A
+    - java.lang.String
+  */
+  type MxfProfile = typingsSlinky.awsSdk.mediaconvertMod._MxfProfile | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NAES2_AND_NW
+    - typingsSlinky.awsSdk.awsSdkStrings.CBET
+    - typingsSlinky.awsSdk.awsSdkStrings.NAES2_AND_NW_AND_CBET
+    - java.lang.String
+  */
+  type NielsenActiveWatermarkProcessType = typingsSlinky.awsSdk.mediaconvertMod._NielsenActiveWatermarkProcessType | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CLEAN
+    - typingsSlinky.awsSdk.awsSdkStrings.WATERMARKED
+    - java.lang.String
+  */
+  type NielsenSourceWatermarkStatusType = typingsSlinky.awsSdk.mediaconvertMod._NielsenSourceWatermarkStatusType | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.RESERVE_UNIQUE_TICS_PER_TRACK
+    - typingsSlinky.awsSdk.awsSdkStrings.SAME_TICS_PER_TRACK
+    - java.lang.String
+  */
+  type NielsenUniqueTicPerAudioTrackType = typingsSlinky.awsSdk.mediaconvertMod._NielsenUniqueTicPerAudioTrackType | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
     - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
     - typingsSlinky.awsSdk.awsSdkStrings.AUTO
@@ -2129,6 +2245,7 @@ package object mediaconvertMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DUPLICATE_DROP
     - typingsSlinky.awsSdk.awsSdkStrings.INTERPOLATE
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAMEFORMER
     - java.lang.String
   */
   type ProresFramerateConversionAlgorithm = typingsSlinky.awsSdk.mediaconvertMod._ProresFramerateConversionAlgorithm | java.lang.String
@@ -2314,12 +2431,58 @@ package object mediaconvertMod {
   type Type = typingsSlinky.awsSdk.mediaconvertMod._Type | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.FRAME_CAPTURE
+    - typingsSlinky.awsSdk.awsSdkStrings.CLASS_145_8BIT
+    - typingsSlinky.awsSdk.awsSdkStrings.CLASS_220_8BIT
+    - typingsSlinky.awsSdk.awsSdkStrings.CLASS_220_10BIT
+    - java.lang.String
+  */
+  type Vc3Class = typingsSlinky.awsSdk.mediaconvertMod._Vc3Class | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INITIALIZE_FROM_SOURCE
+    - typingsSlinky.awsSdk.awsSdkStrings.SPECIFIED
+    - java.lang.String
+  */
+  type Vc3FramerateControl = typingsSlinky.awsSdk.mediaconvertMod._Vc3FramerateControl | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DUPLICATE_DROP
+    - typingsSlinky.awsSdk.awsSdkStrings.INTERPOLATE
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAMEFORMER
+    - java.lang.String
+  */
+  type Vc3FramerateConversionAlgorithm = typingsSlinky.awsSdk.mediaconvertMod._Vc3FramerateConversionAlgorithm | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INTERLACED
+    - typingsSlinky.awsSdk.awsSdkStrings.PROGRESSIVE
+    - java.lang.String
+  */
+  type Vc3InterlaceMode = typingsSlinky.awsSdk.mediaconvertMod._Vc3InterlaceMode | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
+    - java.lang.String
+  */
+  type Vc3SlowPal = typingsSlinky.awsSdk.mediaconvertMod._Vc3SlowPal | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.HARD
+    - java.lang.String
+  */
+  type Vc3Telecine = typingsSlinky.awsSdk.mediaconvertMod._Vc3Telecine | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AV1
+    - typingsSlinky.awsSdk.awsSdkStrings.AVC_INTRA
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAME_CAPTURE
     - typingsSlinky.awsSdk.awsSdkStrings.H_264
     - typingsSlinky.awsSdk.awsSdkStrings.H_265
     - typingsSlinky.awsSdk.awsSdkStrings.MPEG2
     - typingsSlinky.awsSdk.awsSdkStrings.PRORES
+    - typingsSlinky.awsSdk.awsSdkStrings.VC3
     - typingsSlinky.awsSdk.awsSdkStrings.VP8
     - typingsSlinky.awsSdk.awsSdkStrings.VP9
     - java.lang.String
@@ -2343,6 +2506,7 @@ package object mediaconvertMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DUPLICATE_DROP
     - typingsSlinky.awsSdk.awsSdkStrings.INTERPOLATE
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAMEFORMER
     - java.lang.String
   */
   type Vp8FramerateConversionAlgorithm = typingsSlinky.awsSdk.mediaconvertMod._Vp8FramerateConversionAlgorithm | java.lang.String
@@ -2373,6 +2537,7 @@ package object mediaconvertMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DUPLICATE_DROP
     - typingsSlinky.awsSdk.awsSdkStrings.INTERPOLATE
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAMEFORMER
     - java.lang.String
   */
   type Vp9FramerateConversionAlgorithm = typingsSlinky.awsSdk.mediaconvertMod._Vp9FramerateConversionAlgorithm | java.lang.String
@@ -2477,6 +2642,8 @@ package object mediaconvertMod {
   
   type integerMin0Max50000 = scala.Double
   
+  type integerMin0Max65534 = scala.Double
+  
   type integerMin0Max65535 = scala.Double
   
   type integerMin0Max7 = scala.Double
@@ -2488,6 +2655,8 @@ package object mediaconvertMod {
   type integerMin0Max96 = scala.Double
   
   type integerMin0Max99 = scala.Double
+  
+  type integerMin100000Max100000000 = scala.Double
   
   type integerMin1000Max1152000000 = scala.Double
   
@@ -2562,6 +2731,8 @@ package object mediaconvertMod {
   type integerMin32Max8192 = scala.Double
   
   type integerMin384000Max768000 = scala.Double
+  
+  type integerMin3Max15 = scala.Double
   
   type integerMin48000Max48000 = scala.Double
   
@@ -2699,7 +2870,11 @@ package object mediaconvertMod {
   
   type stringMin1Max100000 = java.lang.String
   
+  type stringMin1Max20 = java.lang.String
+  
   type stringMin1Max256 = java.lang.String
+  
+  type stringMin1Max50 = java.lang.String
   
   type stringMin24Max512PatternAZaZ0902 = java.lang.String
   
@@ -2723,6 +2898,8 @@ package object mediaconvertMod {
   
   type stringPattern09aFAF809aFAF409aFAF409aFAF409aFAF12 = java.lang.String
   
+  type stringPattern0xAFaF0908190908 = java.lang.String
+  
   type stringPatternAZaZ0902 = java.lang.String
   
   type stringPatternAZaZ0932 = java.lang.String
@@ -2743,9 +2920,9 @@ package object mediaconvertMod {
   
   type stringPatternS3ASSETMAPXml = java.lang.String
   
-  type stringPatternS3MM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8WWEEBBMMLLCCHHGGXXFFMMPPEEGG2MMXXFFMMPPEEGG2MMXXFFHHDDWWAAVVYY4MMXXMMLLHttpsMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8WWEEBBMMLLCCHHGGXXFFM = java.lang.String
+  type stringPatternS3MM2PPMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMKKAAMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8WWEEBBMMLLCCHHGGXXFFMMPPEEGG2MMXXFFMMPPEEGG2MMXXFFHHDDWWAAVVYY4MMXXMMLLHttpsMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMKKAAMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8WWEE = java.lang.String
   
-  type stringPatternS3WWEEBBMMMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8LLCCHHGGXXFFMMPPEEGG2MMXXFFMMPPEEGG2MMXXFFHHDDWWAAVVYY4MMAAAACCAAIIFFFFMMPP2AACC3EECC3DDTTSSEEHttpsMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VV = java.lang.String
+  type stringPatternS3MM2PPWWEEBBMMMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMKKAAMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVVGGXXFFMM1VV3GG2VVMMFFMM3UU8LLCCHHGGXXFFMMPPEEGG2MMXXFFMMPPEEGG2MMXXFFHHDDWWAAVVYY4MMAAAACCAAIIFFFFMMPP2AACC3EECC3DDTTSSEEHttpsMM2VVMMPPEEGGMMPP3AAVVIIMMPP4FFLLVVMMPPTTMMPPGGMM4VVTTRRPPFF4VVMM2TTSSTTSS264HH264MMKKVVMMKKAAMMOOVVMMTTSSMM2TTWWMMVVAASSFFVVOOBB3GGPP3GGPPPPMMXXFFDDIIVVXXXXVVIIDDRRAAWWDDVV = java.lang.String
   
   type stringPatternSNManifestConfirmConditionNotificationNS = java.lang.String
   

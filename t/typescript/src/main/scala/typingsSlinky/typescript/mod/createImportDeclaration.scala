@@ -50,6 +50,7 @@ object createImportDeclaration extends js.Object {
     importClause: js.UndefOr[scala.Nothing],
     moduleSpecifier: Expression
   ): ImportDeclaration = js.native
+  /** @deprecated Use `factory.createImportDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     decorators: js.Array[Decorator],
     modifiers: js.Array[Modifier],

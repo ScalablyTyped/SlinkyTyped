@@ -1,7 +1,7 @@
 
 # Scala.js typings for abab
 
-Typings are for version 2.0.4
+Typings are for version 2.0.5
 
 ## Library description:
 WHATWG spec-compliant implementations of window.atob and window.btoa.

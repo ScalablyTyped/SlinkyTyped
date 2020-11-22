@@ -6,7 +6,7 @@ import typingsSlinky.electron.electronStrings.done
 import typingsSlinky.electron.electronStrings.interrupted
 import typingsSlinky.electron.electronStrings.progressing
 import typingsSlinky.electron.electronStrings.updated
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -121,7 +121,7 @@ trait DownloadItem extends EventEmitter {
     */
   def isPaused(): Boolean = js.native
   
-  // Docs: http://electronjs.org/docs/api/download-item
+  // Docs: https://electronjs.org/docs/api/download-item
   /**
     * Emitted when the download is in a terminal state. This includes a completed
     * download, a cancelled download (via `downloadItem.cancel()`), and interrupted

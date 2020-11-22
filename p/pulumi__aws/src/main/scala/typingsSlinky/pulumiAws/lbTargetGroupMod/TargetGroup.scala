@@ -73,7 +73,7 @@ class TargetGroup protected () extends CustomResource {
   val port: Output_[js.UndefOr[Double]] = js.native
   
   /**
-    * The protocol to use for routing traffic to the targets. Should be one of "TCP", "TLS", "UDP", "TCP_UDP", "HTTP" or "HTTPS". Required when `targetType` is `instance` or `ip`. Does not apply when `targetType` is `lambda`.
+    * The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `targetType` is `instance` or `ip`. Does not apply when `targetType` is `lambda`.
     */
   val protocol: Output_[js.UndefOr[String]] = js.native
   
@@ -88,7 +88,7 @@ class TargetGroup protected () extends CustomResource {
   val slowStart: Output_[js.UndefOr[Double]] = js.native
   
   /**
-    * A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if used with Load Balancers of type `Application`
+    * A Stickiness block. Stickiness blocks are documented below.
     */
   val stickiness: Output_[TargetGroupStickiness] = js.native
   

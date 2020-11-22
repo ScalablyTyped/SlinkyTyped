@@ -35,11 +35,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MeasurementViewModel extends Accessor {
   
   /**
-    * Specifies the current measurement tool to display. Setting its value to `area` activates the area measurement tool and it works for both [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) and [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). To measure distance in a [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) set the property to `distance` and in a [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) set it to `direct-line`. If this property is not set, the widget will not be displayed.
+    * Specifies the current measurement tool to display.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Measurement-MeasurementViewModel.html#activeTool)
-    *
-    * @default null
     */
   var activeTool: area | distance | `direct-line` = js.native
   
@@ -67,17 +65,7 @@ trait MeasurementViewModel extends Accessor {
   /**
     * The ViewModel's state.
     *
-    * Value       | Description
-    * ------------|-------------
-    * disabled    | not ready yet
-    * ready       | ready for measuring
-    * measuring   | measuring has started
-    * measured    | measuring has finished
-    *
-    *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Measurement-MeasurementViewModel.html#state)
-    *
-    * @default disabled
     */
   val state: disabled | ready | measuring | measured = js.native
   

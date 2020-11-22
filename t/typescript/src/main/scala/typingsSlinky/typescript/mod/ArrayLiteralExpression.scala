@@ -10,10 +10,11 @@ trait ArrayLiteralExpression
      with ArrayBindingOrAssignmentPattern
      with AssignmentPattern
      with DestructuringPattern
-     with _BindingOrAssignmentElement {
+     with JsonObjectExpression
+     with _ArrayBindingOrAssignmentElement {
   
-  var elements: NodeArray[Expression] = js.native
+  val elements: NodeArray[Expression] = js.native
   
   @JSName("kind")
-  var kind_ArrayLiteralExpression: typingsSlinky.typescript.mod.SyntaxKind.ArrayLiteralExpression = js.native
+  val kind_ArrayLiteralExpression: typingsSlinky.typescript.mod.SyntaxKind.ArrayLiteralExpression = js.native
 }

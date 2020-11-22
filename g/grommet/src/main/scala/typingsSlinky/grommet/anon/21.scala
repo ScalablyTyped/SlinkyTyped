@@ -1,6 +1,6 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.baseMod.ExtendType
+import typingsSlinky.grommet.utilsMod.OpacityType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,9 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `21` extends js.Object {
   
-  var extend: js.UndefOr[ExtendType] = js.native
-  
-  var size: js.UndefOr[LargeMedium] = js.native
+  var opacity: js.UndefOr[OpacityType] = js.native
 }
 object `21` {
   
@@ -36,18 +34,9 @@ object `21` {
     }
     
     @scala.inline
-    def setExtendFunction1(value: /* args */ js.Any => Unit): Self = this.set("extend", js.Any.fromFunction1(value))
+    def setOpacity(value: OpacityType): Self = this.set("opacity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExtend(value: ExtendType): Self = this.set("extend", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteExtend: Self = this.set("extend", js.undefined)
-    
-    @scala.inline
-    def setSize(value: LargeMedium): Self = this.set("size", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSize: Self = this.set("size", js.undefined)
+    def deleteOpacity: Self = this.set("opacity", js.undefined)
   }
 }

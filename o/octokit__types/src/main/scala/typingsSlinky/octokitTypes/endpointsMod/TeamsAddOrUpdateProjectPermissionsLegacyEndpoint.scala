@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`8`
+import typingsSlinky.octokitTypes.anon.`7`
 import typingsSlinky.octokitTypes.octokitTypesStrings.admin
 import typingsSlinky.octokitTypes.octokitTypesStrings.read
 import typingsSlinky.octokitTypes.octokitTypesStrings.write
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TeamsAddOrUpdateProjectPermissionsLegacyEndpoint extends js.Object {
   
-  var mediaType: `8` = js.native
+  var mediaType: `7` = js.native
   
   /**
     * The permission to grant to the team for this project. Can be one of:
@@ -30,7 +30,7 @@ trait TeamsAddOrUpdateProjectPermissionsLegacyEndpoint extends js.Object {
 object TeamsAddOrUpdateProjectPermissionsLegacyEndpoint {
   
   @scala.inline
-  def apply(mediaType: `8`, project_id: Double, team_id: Double): TeamsAddOrUpdateProjectPermissionsLegacyEndpoint = {
+  def apply(mediaType: `7`, project_id: Double, team_id: Double): TeamsAddOrUpdateProjectPermissionsLegacyEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], project_id = project_id.asInstanceOf[js.Any], team_id = team_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsAddOrUpdateProjectPermissionsLegacyEndpoint]
   }
@@ -51,7 +51,7 @@ object TeamsAddOrUpdateProjectPermissionsLegacyEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setProject_id(value: Double): Self = this.set("project_id", value.asInstanceOf[js.Any])

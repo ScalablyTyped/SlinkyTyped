@@ -2,8 +2,8 @@ package typingsSlinky.materialLinearProgress
 
 import typingsSlinky.materialBase.foundationMod.MDCFoundation
 import typingsSlinky.materialLinearProgress.adapterMod.MDCLinearProgressAdapter
+import typingsSlinky.materialLinearProgress.anon.ANIMATIONREADYCLASS
 import typingsSlinky.materialLinearProgress.anon.ARIAVALUENOW
-import typingsSlinky.materialLinearProgress.anon.CLOSEDCLASS
 import typingsSlinky.materialLinearProgress.anon.PartialMDCLinearProgressA
 import typingsSlinky.materialProgressIndicator.foundationMod.MDCProgressIndicatorFoundation
 import scala.scalajs.js
@@ -24,6 +24,13 @@ object foundationMod extends js.Object {
     
     def getProgress(): Double = js.native
     
+    /**
+      * Handles the transitionend event emitted after `close()` is called and the
+      * opacity fades out. This is so that animations are removed only after the
+      * progress indicator is completely hidden.
+      */
+    def handleTransitionEnd(): Unit = js.native
+    
     def setBuffer(value: Double): Unit = js.native
     
     def setReverse(isReversed: Boolean): Unit = js.native
@@ -32,7 +39,7 @@ object foundationMod extends js.Object {
   @js.native
   object MDCLinearProgressFoundation extends js.Object {
     
-    def cssClasses: CLOSEDCLASS = js.native
+    def cssClasses: ANIMATIONREADYCLASS = js.native
     
     def defaultAdapter: MDCLinearProgressAdapter = js.native
     
@@ -47,7 +54,7 @@ object foundationMod extends js.Object {
   @js.native
   object default extends js.Object {
     
-    def cssClasses: CLOSEDCLASS = js.native
+    def cssClasses: ANIMATIONREADYCLASS = js.native
     
     def defaultAdapter: MDCLinearProgressAdapter = js.native
     

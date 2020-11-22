@@ -2,12 +2,11 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.Color
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.ColorProperty
 import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.MjmlTextProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
-import typingsSlinky.mjmlReact.mod.RequiredChildrenProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,10 +26,10 @@ object MjmlText {
     def align(value: String): this.type = set("align", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def color(value: Color): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: ColorProperty): this.type = set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerBackgroundColor(value: BackgroundColor): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
+    def containerBackgroundColor(value: BackgroundColorProperty): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])
@@ -78,7 +77,7 @@ object MjmlText {
     def textTransform(value: String): this.type = set("textTransform", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MjmlTextProps with RequiredChildrenProps with PaddingProps with ClassNameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: MjmlTextProps with PaddingProps with ClassNameProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: MjmlText.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

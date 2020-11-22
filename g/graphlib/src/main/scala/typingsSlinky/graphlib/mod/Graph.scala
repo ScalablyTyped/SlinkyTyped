@@ -321,7 +321,7 @@ class Graph () extends js.Object {
     * @argument label - label value.
     * @returns the graph, allowing this to be chained with other functions.
     */
-  def setGraph(label: String): Graph = js.native
+  def setGraph(label: js.Any): Graph = js.native
   
   /**
     * Creates or updates the value for the node v in the graph. If label is supplied

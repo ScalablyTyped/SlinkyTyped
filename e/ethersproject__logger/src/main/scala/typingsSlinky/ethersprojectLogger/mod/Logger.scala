@@ -58,6 +58,8 @@ object Logger extends js.Object {
   
   var errors: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ErrorCode */ js.Any = js.native
   
+  def from(version: String): Logger = js.native
+  
   def globalLogger(): Logger = js.native
   
   var levels: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof LogLevel */ js.Any = js.native

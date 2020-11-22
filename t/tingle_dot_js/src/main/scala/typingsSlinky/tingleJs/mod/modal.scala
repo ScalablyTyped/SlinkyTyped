@@ -1,9 +1,9 @@
 package typingsSlinky.tingleJs.mod
 
-import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.MouseEvent
+import org.scalajs.dom.raw.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -43,7 +43,7 @@ class modal () extends js.Object {
   def open(): Unit = js.native
   
   def setContent(content: String): Unit = js.native
-  def setContent(content: Element): Unit = js.native
+  def setContent(content: Node): Unit = js.native
   
   def setFooterContent(content: String): Unit = js.native
   

@@ -1,7 +1,6 @@
 package typingsSlinky.gestalt.mod
 
 import typingsSlinky.gestalt.anon.ActiveTabIndex
-import typingsSlinky.gestalt.anon.Href
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import scala.scalajs.js
@@ -17,14 +16,18 @@ trait TabsProps extends js.Object {
   
   var size: js.UndefOr[md | lg] = js.native
   
-  var tabs: js.Array[Href] = js.native
+  var tabs: js.Array[typingsSlinky.gestalt.anon.Text] = js.native
   
   var wrap: js.UndefOr[Boolean] = js.native
 }
 object TabsProps {
   
   @scala.inline
-  def apply(activeTabIndex: Double, onChange: ActiveTabIndex => Unit, tabs: js.Array[Href]): TabsProps = {
+  def apply(
+    activeTabIndex: Double,
+    onChange: ActiveTabIndex => Unit,
+    tabs: js.Array[typingsSlinky.gestalt.anon.Text]
+  ): TabsProps = {
     val __obj = js.Dynamic.literal(activeTabIndex = activeTabIndex.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), tabs = tabs.asInstanceOf[js.Any])
     __obj.asInstanceOf[TabsProps]
   }
@@ -51,10 +54,10 @@ object TabsProps {
     def setOnChange(value: ActiveTabIndex => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setTabsVarargs(value: Href*): Self = this.set("tabs", js.Array(value :_*))
+    def setTabsVarargs(value: typingsSlinky.gestalt.anon.Text*): Self = this.set("tabs", js.Array(value :_*))
     
     @scala.inline
-    def setTabs(value: js.Array[Href]): Self = this.set("tabs", value.asInstanceOf[js.Any])
+    def setTabs(value: js.Array[typingsSlinky.gestalt.anon.Text]): Self = this.set("tabs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSize(value: md | lg): Self = this.set("size", value.asInstanceOf[js.Any])

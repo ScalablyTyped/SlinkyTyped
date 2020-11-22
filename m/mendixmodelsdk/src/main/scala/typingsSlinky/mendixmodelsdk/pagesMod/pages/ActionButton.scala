@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -9,12 +10,13 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayout
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallArgument
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/button-widgets relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/button-widgets relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.ActionButton")
 @js.native
@@ -24,8 +26,8 @@ class ActionButton protected () extends Button {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def action: ClientAction = js.native
@@ -36,9 +38,6 @@ class ActionButton protected () extends Button {
     */
   def disabledDuringAction: Boolean = js.native
   def disabledDuringAction_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FActionButton: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.ActionButton")

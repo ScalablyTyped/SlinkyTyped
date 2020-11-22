@@ -5,10 +5,12 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.AutoscrollToTopThreshold
 import typingsSlinky.reactNative.anon.AverageItemLength
 import typingsSlinky.reactNative.anon.Changed
 import typingsSlinky.reactNative.anon.DistanceFromEnd
 import typingsSlinky.reactNative.anon.Index
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.anon.Section
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
@@ -18,7 +20,6 @@ import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeScrollEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
@@ -71,9 +72,9 @@ object SectionList {
   object component extends js.Object
   
   @scala.inline
-  class Builder[SectionT] (val args: js.Array[js.Any])
+  class Builder[ItemT, SectionT] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNavigation.mod.SectionList[SectionT]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNavigation.mod.SectionList[ItemT, SectionT]] {
     
     @scala.inline
     def CellRendererComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
@@ -274,13 +275,15 @@ object SectionList {
     def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def getItem(value: (/* data */ js.Any, /* index */ Double) => SectionT): this.type = set("getItem", js.Any.fromFunction2(value))
+    def getItem(value: (/* data */ js.Any, /* index */ Double) => ItemT): this.type = set("getItem", js.Any.fromFunction2(value))
     
     @scala.inline
     def getItemCount(value: /* data */ js.Any => Double): this.type = set("getItemCount", js.Any.fromFunction1(value))
     
     @scala.inline
-    def getItemLayout(value: (/* data */ js.Array[SectionListData[SectionT]] | Null, /* index */ Double) => Index): this.type = set("getItemLayout", js.Any.fromFunction2(value))
+    def getItemLayout(
+      value: (/* data */ (js.Array[SectionListData[ItemT, SectionT]]) | Null, /* index */ Double) => Index
+    ): this.type = set("getItemLayout", js.Any.fromFunction2(value))
     
     @scala.inline
     def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
@@ -322,7 +325,7 @@ object SectionList {
     def isTVSelectable(value: Boolean): this.type = set("isTVSelectable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def keyExtractor(value: (SectionT, /* index */ Double) => String): this.type = set("keyExtractor", js.Any.fromFunction2(value))
+    def keyExtractor(value: (ItemT, /* index */ Double) => String): this.type = set("keyExtractor", js.Any.fromFunction2(value))
     
     @scala.inline
     def keyboardDismissMode(value: none | interactive | `on-drag`): this.type = set("keyboardDismissMode", value.asInstanceOf[js.Any])
@@ -335,6 +338,12 @@ object SectionList {
     
     @scala.inline
     def listKey(value: String): this.type = set("listKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maintainVisibleContentPosition(value: AutoscrollToTopThreshold): this.type = set("maintainVisibleContentPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maintainVisibleContentPositionNull: this.type = set("maintainVisibleContentPosition", null)
     
     @scala.inline
     def maxToRenderPerBatch(value: Double): this.type = set("maxToRenderPerBatch", value.asInstanceOf[js.Any])
@@ -379,7 +388,7 @@ object SectionList {
     def onEndReachedThresholdNull: this.type = set("onEndReachedThreshold", null)
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))
@@ -502,16 +511,16 @@ object SectionList {
     def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderItem(value: /* info */ SectionListRenderItemInfo[SectionT] => ReactElement | Null): this.type = set("renderItem", js.Any.fromFunction1(value))
+    def renderItem(value: /* info */ SectionListRenderItemInfo[ItemT, SectionT] => ReactElement | Null): this.type = set("renderItem", js.Any.fromFunction1(value))
     
     @scala.inline
     def renderScrollComponent(value: /* props */ ScrollViewProps => ReactElement): this.type = set("renderScrollComponent", js.Any.fromFunction1(value))
     
     @scala.inline
-    def renderSectionFooter(value: /* info */ Section[SectionT] => ReactElement | Null): this.type = set("renderSectionFooter", js.Any.fromFunction1(value))
+    def renderSectionFooter(value: /* info */ Section[ItemT, SectionT] => ReactElement | Null): this.type = set("renderSectionFooter", js.Any.fromFunction1(value))
     
     @scala.inline
-    def renderSectionHeader(value: /* info */ Section[SectionT] => ReactElement | Null): this.type = set("renderSectionHeader", js.Any.fromFunction1(value))
+    def renderSectionHeader(value: /* info */ Section[ItemT, SectionT] => ReactElement | Null): this.type = set("renderSectionHeader", js.Any.fromFunction1(value))
     
     @scala.inline
     def renderToHardwareTextureAndroid(value: Boolean): this.type = set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])
@@ -613,11 +622,11 @@ object SectionList {
     def zoomScale(value: Double): this.type = set("zoomScale", value.asInstanceOf[js.Any])
   }
   
-  def withProps[SectionT](p: SectionListProps[SectionT]): Builder[SectionT] = new Builder[SectionT](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[ItemT, SectionT](p: SectionListProps[ItemT, SectionT]): Builder[ItemT, SectionT] = new Builder[ItemT, SectionT](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply[SectionT](sections: js.Array[SectionListData[SectionT]]): Builder[SectionT] = {
+  def apply[ItemT, SectionT](sections: js.Array[SectionListData[ItemT, SectionT]]): Builder[ItemT, SectionT] = {
     val __props = js.Dynamic.literal(sections = sections.asInstanceOf[js.Any])
-    new Builder[SectionT](js.Array(this.component, __props.asInstanceOf[SectionListProps[SectionT]]))
+    new Builder[ItemT, SectionT](js.Array(this.component, __props.asInstanceOf[SectionListProps[ItemT, SectionT]]))
   }
 }

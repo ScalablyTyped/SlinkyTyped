@@ -11,11 +11,11 @@ object errorsMod extends js.Object {
   
   @js.native
   class CommandExecutionError protected () extends Error {
-    def this(msg: String, command: String) = this()
+    def this(err: js.Error, command: String) = this()
     
     var command: String = js.native
     
-    var msg: String = js.native
+    var err: js.Error = js.native
   }
   
   @js.native

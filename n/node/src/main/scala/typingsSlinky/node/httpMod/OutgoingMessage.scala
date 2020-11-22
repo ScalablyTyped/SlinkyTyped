@@ -19,7 +19,7 @@ class OutgoingMessage () extends Writable {
   /**
     * @deprecate Use `socket` instead.
     */
-  var connection: Socket = js.native
+  var connection: Socket | Null = js.native
   
   /**
     * @deprecated Use `writableEnded` instead.
@@ -51,7 +51,7 @@ class OutgoingMessage () extends Writable {
   
   var shouldKeepAlive: Boolean = js.native
   
-  var socket: Socket = js.native
+  var socket: Socket | Null = js.native
   
   var upgrading: Boolean = js.native
   

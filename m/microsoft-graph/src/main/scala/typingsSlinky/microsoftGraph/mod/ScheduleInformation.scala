@@ -12,22 +12,22 @@ trait ScheduleInformation extends js.Object {
     * Availability during each time slot is indicated with: 0= free, 1= tentative, 2= busy, 3= out of office, 4= working
     * elsewhere.
     */
-  var availabilityView: js.UndefOr[String] = js.native
+  var availabilityView: js.UndefOr[NullableOption[String]] = js.native
   
   // Error information from attempting to get the availability of the user, distribution list, or resource.
-  var error: js.UndefOr[FreeBusyError] = js.native
+  var error: js.UndefOr[NullableOption[FreeBusyError]] = js.native
   
   // An SMTP address of the user, distribution list, or resource, identifying an instance of scheduleInformation.
-  var scheduleId: js.UndefOr[String] = js.native
+  var scheduleId: js.UndefOr[NullableOption[String]] = js.native
   
   // Contains the items that describe the availability of the user or resource.
-  var scheduleItems: js.UndefOr[js.Array[ScheduleItem]] = js.native
+  var scheduleItems: js.UndefOr[NullableOption[js.Array[ScheduleItem]]] = js.native
   
   /**
     * The days of the week and hours in a specific time zone that the user works. These are set as part of the user's
     * mailboxSettings.
     */
-  var workingHours: js.UndefOr[WorkingHours] = js.native
+  var workingHours: js.UndefOr[NullableOption[WorkingHours]] = js.native
 }
 object ScheduleInformation {
   
@@ -53,36 +53,51 @@ object ScheduleInformation {
     }
     
     @scala.inline
-    def setAvailabilityView(value: String): Self = this.set("availabilityView", value.asInstanceOf[js.Any])
+    def setAvailabilityView(value: NullableOption[String]): Self = this.set("availabilityView", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAvailabilityView: Self = this.set("availabilityView", js.undefined)
     
     @scala.inline
-    def setError(value: FreeBusyError): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setAvailabilityViewNull: Self = this.set("availabilityView", null)
+    
+    @scala.inline
+    def setError(value: NullableOption[FreeBusyError]): Self = this.set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteError: Self = this.set("error", js.undefined)
     
     @scala.inline
-    def setScheduleId(value: String): Self = this.set("scheduleId", value.asInstanceOf[js.Any])
+    def setErrorNull: Self = this.set("error", null)
+    
+    @scala.inline
+    def setScheduleId(value: NullableOption[String]): Self = this.set("scheduleId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteScheduleId: Self = this.set("scheduleId", js.undefined)
     
     @scala.inline
+    def setScheduleIdNull: Self = this.set("scheduleId", null)
+    
+    @scala.inline
     def setScheduleItemsVarargs(value: ScheduleItem*): Self = this.set("scheduleItems", js.Array(value :_*))
     
     @scala.inline
-    def setScheduleItems(value: js.Array[ScheduleItem]): Self = this.set("scheduleItems", value.asInstanceOf[js.Any])
+    def setScheduleItems(value: NullableOption[js.Array[ScheduleItem]]): Self = this.set("scheduleItems", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteScheduleItems: Self = this.set("scheduleItems", js.undefined)
     
     @scala.inline
-    def setWorkingHours(value: WorkingHours): Self = this.set("workingHours", value.asInstanceOf[js.Any])
+    def setScheduleItemsNull: Self = this.set("scheduleItems", null)
+    
+    @scala.inline
+    def setWorkingHours(value: NullableOption[WorkingHours]): Self = this.set("workingHours", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorkingHours: Self = this.set("workingHours", js.undefined)
+    
+    @scala.inline
+    def setWorkingHoursNull: Self = this.set("workingHours", null)
   }
 }

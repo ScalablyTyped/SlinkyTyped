@@ -10,23 +10,13 @@ trait GetAvailabilityZonesResult extends js.Object {
   
   val allAvailabilityZones: js.UndefOr[Boolean] = js.native
   
-  /**
-    * @deprecated use `exclude_names` instead
-    */
-  val blacklistedNames: js.UndefOr[js.Array[String]] = js.native
-  
-  /**
-    * @deprecated use `exclude_zone_ids` instead
-    */
-  val blacklistedZoneIds: js.UndefOr[js.Array[String]] = js.native
-  
   val excludeNames: js.UndefOr[js.Array[String]] = js.native
   
   val excludeZoneIds: js.UndefOr[js.Array[String]] = js.native
   
   val filters: js.UndefOr[js.Array[GetAvailabilityZonesFilter]] = js.native
   
-  val groupNames: js.UndefOr[js.Array[String]] = js.native
+  val groupNames: js.Array[String] = js.native
   
   /**
     * The provider-assigned unique ID for this managed resource.
@@ -48,8 +38,8 @@ trait GetAvailabilityZonesResult extends js.Object {
 object GetAvailabilityZonesResult {
   
   @scala.inline
-  def apply(id: String, names: js.Array[String], zoneIds: js.Array[String]): GetAvailabilityZonesResult = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any], zoneIds = zoneIds.asInstanceOf[js.Any])
+  def apply(groupNames: js.Array[String], id: String, names: js.Array[String], zoneIds: js.Array[String]): GetAvailabilityZonesResult = {
+    val __obj = js.Dynamic.literal(groupNames = groupNames.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any], zoneIds = zoneIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAvailabilityZonesResult]
   }
   
@@ -67,6 +57,12 @@ object GetAvailabilityZonesResult {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setGroupNamesVarargs(value: String*): Self = this.set("groupNames", js.Array(value :_*))
+    
+    @scala.inline
+    def setGroupNames(value: js.Array[String]): Self = this.set("groupNames", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
@@ -88,24 +84,6 @@ object GetAvailabilityZonesResult {
     
     @scala.inline
     def deleteAllAvailabilityZones: Self = this.set("allAvailabilityZones", js.undefined)
-    
-    @scala.inline
-    def setBlacklistedNamesVarargs(value: String*): Self = this.set("blacklistedNames", js.Array(value :_*))
-    
-    @scala.inline
-    def setBlacklistedNames(value: js.Array[String]): Self = this.set("blacklistedNames", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBlacklistedNames: Self = this.set("blacklistedNames", js.undefined)
-    
-    @scala.inline
-    def setBlacklistedZoneIdsVarargs(value: String*): Self = this.set("blacklistedZoneIds", js.Array(value :_*))
-    
-    @scala.inline
-    def setBlacklistedZoneIds(value: js.Array[String]): Self = this.set("blacklistedZoneIds", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBlacklistedZoneIds: Self = this.set("blacklistedZoneIds", js.undefined)
     
     @scala.inline
     def setExcludeNamesVarargs(value: String*): Self = this.set("excludeNames", js.Array(value :_*))
@@ -133,15 +111,6 @@ object GetAvailabilityZonesResult {
     
     @scala.inline
     def deleteFilters: Self = this.set("filters", js.undefined)
-    
-    @scala.inline
-    def setGroupNamesVarargs(value: String*): Self = this.set("groupNames", js.Array(value :_*))
-    
-    @scala.inline
-    def setGroupNames(value: js.Array[String]): Self = this.set("groupNames", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteGroupNames: Self = this.set("groupNames", js.undefined)
     
     @scala.inline
     def setState(value: String): Self = this.set("state", value.asInstanceOf[js.Any])

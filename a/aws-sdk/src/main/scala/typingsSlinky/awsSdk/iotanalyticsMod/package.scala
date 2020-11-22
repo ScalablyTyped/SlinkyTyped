@@ -128,6 +128,10 @@ package object iotanalyticsMod {
   
   type LambdaName = java.lang.String
   
+  type LateDataRuleName = java.lang.String
+  
+  type LateDataRules = js.Array[typingsSlinky.awsSdk.iotanalyticsMod.LateDataRule]
+  
   type LogResult = java.lang.String
   
   type LoggingEnabled = scala.Boolean
@@ -192,6 +196,8 @@ package object iotanalyticsMod {
   type S3KeyPrefix = java.lang.String
   
   type ScheduleExpression = java.lang.String
+  
+  type SessionTimeoutInMinutes = scala.Double
   
   type SizeInBytes = scala.Double
   

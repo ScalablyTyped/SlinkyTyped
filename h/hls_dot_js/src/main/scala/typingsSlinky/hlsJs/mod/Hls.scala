@@ -17,6 +17,18 @@ trait Hls extends js.Object {
   def attachMedia(mediaElement: HTMLMediaElement): Unit = js.native
   
   /**
+    * get/set : audio track id (returned by).
+    * Returns -1 if no track is selected.
+    * Set to -1 to play default audio track.
+    */
+  var audioTrack: Double = js.native
+  
+  /**
+    * get : array of audio tracks exposed in manifest
+    */
+  val audioTracks: js.Array[HlsAudioTrack] = js.native
+  
+  /**
     * capping/max level (index of level) that could be used by ABR Controller. Defaults to -1
     * which means no limit
     * set: max level value that could be used by the ABR Controller
@@ -560,7 +572,7 @@ trait Hls extends js.Object {
   /**
     * get : array of subtitle tracks exposed in manifest
     */
-  val subtitleTracks: js.Array[_] = js.native
+  val subtitleTracks: js.Array[SubtitleTrack] = js.native
   
   /**
     * if media error are still raised after calling hls.recoverMediaError(), calling this method, could be useful to workaround audio codec mismatch.

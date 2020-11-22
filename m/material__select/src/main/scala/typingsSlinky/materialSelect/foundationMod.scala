@@ -106,13 +106,16 @@ object foundationMod extends js.Object {
     def setRequired(isRequired: Boolean): Unit = js.native
     
     def setSelectedIndex(index: Double): Unit = js.native
+    def setSelectedIndex(index: Double, closeMenu: js.UndefOr[scala.Nothing], skipNotify: Boolean): Unit = js.native
     def setSelectedIndex(index: Double, closeMenu: Boolean): Unit = js.native
+    def setSelectedIndex(index: Double, closeMenu: Boolean, skipNotify: Boolean): Unit = js.native
     
     def setUseDefaultValidation(useDefaultValidation: Boolean): Unit = js.native
     
     def setValid(isValid: Boolean): Unit = js.native
     
     def setValue(value: String): Unit = js.native
+    def setValue(value: String, skipNotify: Boolean): Unit = js.native
   }
   /* static members */
   @js.native

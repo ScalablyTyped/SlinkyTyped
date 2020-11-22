@@ -14,8 +14,6 @@ trait PointCloudValueFilter extends PointCloudFilter {
     * Whether points should be included or excluded from the filter.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-pointCloudFilters-PointCloudValueFilter.html#mode)
-    *
-    * @default "exclude"
     */
   var mode: include | exclude = js.native
   

@@ -7,16 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxListItem extends CollectionWidgetItem {
   
-  /** @name dxListItem.badge */
+  /**
+    * [descr:dxListItem.badge]
+    */
   var badge: js.UndefOr[String] = js.native
   
-  /** @name dxListItem.icon */
+  /**
+    * [descr:dxListItem.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxListItem.key */
+  /**
+    * [descr:dxListItem.key]
+    */
   var key: js.UndefOr[String] = js.native
   
-  /** @name dxListItem.showChevron */
+  /**
+    * [descr:dxListItem.showChevron]
+    */
   var showChevron: js.UndefOr[Boolean] = js.native
 }
 object dxListItem {

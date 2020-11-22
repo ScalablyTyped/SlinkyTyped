@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateBreak extends js.Object {
   
+  /** @deprecated Use `factory.updateBreak` or the factory supplied by your transformation context instead. */
   def apply(node: BreakStatement): BreakStatement = js.native
   def apply(node: BreakStatement, label: Identifier): BreakStatement = js.native
 }

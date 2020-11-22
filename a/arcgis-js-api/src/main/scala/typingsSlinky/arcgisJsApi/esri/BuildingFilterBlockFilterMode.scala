@@ -13,18 +13,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BuildingFilterBlockFilterMode extends Object {
   
   /**
-    * Defines the type of edges used to display a [BuildingSceneLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html) filtered in `wire-frame` mode. This property can only be used with `filterMode` of type `wire-frame`.
+    * Defines the type of edges used to display a [BuildingSceneLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html) filtered in `wire-frame` mode.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-BuildingFilter.html#BuildingFilterBlock)
     */
   var edges: js.UndefOr[SolidEdges3D | SketchEdges3D] = js.native
   
   /**
-    * Defines how features are drawn while the filter is active. `solid` mode renders the features with the original texture. With `wire-frame` mode, only the edges of the features are shown. `x-ray` renders elements semi-transparent with white color. To ensure performance on client applications, it is not recommended to declare multiple filter blocks with the same filter mode.
+    * Defines how features are drawn while the filter is active.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-BuildingFilter.html#BuildingFilterBlock)
-    *
-    * @default solid
     */
   var `type`: js.UndefOr[solid | `wire-frame` | `x-ray`] = js.native
 }

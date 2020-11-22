@@ -1,7 +1,11 @@
 package typingsSlinky.grommet.anon
 
+import slinky.core.ReactComponentClass
+import typingsSlinky.grommet.baseMod.ExtendProps
 import typingsSlinky.grommet.baseMod.ExtendType
+import typingsSlinky.grommet.baseMod.ExtendValue
 import typingsSlinky.grommet.utilsMod.ColorType
+import typingsSlinky.grommet.utilsMod.PropsOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +15,7 @@ trait FontWeight extends js.Object {
   
   var color: js.UndefOr[ColorType] = js.native
   
-  var extend: js.UndefOr[ExtendType] = js.native
+  var extend: js.UndefOr[ExtendType[PropsOf[ReactComponentClass[AnchorPropsOmitDetailedHT]]]] = js.native
   
   var fontWeight: js.UndefOr[Double] = js.native
   
@@ -49,10 +53,12 @@ object FontWeight {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setExtendFunction1(value: /* args */ js.Any => Unit): Self = this.set("extend", js.Any.fromFunction1(value))
+    def setExtendFunction1(
+      value: /* props */ ExtendProps[PropsOf[ReactComponentClass[AnchorPropsOmitDetailedHT]]] => ExtendValue[PropsOf[ReactComponentClass[AnchorPropsOmitDetailedHT]]]
+    ): Self = this.set("extend", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setExtend(value: ExtendType): Self = this.set("extend", value.asInstanceOf[js.Any])
+    def setExtend(value: ExtendType[PropsOf[ReactComponentClass[AnchorPropsOmitDetailedHT]]]): Self = this.set("extend", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExtend: Self = this.set("extend", js.undefined)

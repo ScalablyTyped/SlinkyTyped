@@ -475,7 +475,7 @@ class TeamSpeak_ protected () extends EventEmitter {
     * displays a list of clients matching a given name pattern
     * @param pattern the pattern to search clients
     */
-  def clientFind(pattern: String): js.Promise[ClientFind] = js.native
+  def clientFind(pattern: String): js.Promise[js.Array[ClientFind]] = js.native
   
   /**
     * displays the database ID matching the unique identifier specified by cluid
@@ -518,8 +518,10 @@ class TeamSpeak_ protected () extends EventEmitter {
     * @param client the client id
     * @param reasonid the reasonid
     * @param reasonmsg the message the client should receive when getting kicked
+    * @param continueOnError ignore errors
     */
   def clientKick(client: ClientType, reasonid: ReasonIdentifier, reasonmsg: String): js.Promise[js.Array[js.Any]] = js.native
+  def clientKick(client: ClientType, reasonid: ReasonIdentifier, reasonmsg: String, continueOnError: Boolean): js.Promise[js.Array[js.Any]] = js.native
   
   /**
     * Lists all Clients with a given Filter
@@ -532,9 +534,12 @@ class TeamSpeak_ protected () extends EventEmitter {
     * @param client the client id
     * @param channel channel id in which the client should get moved
     * @param cpw the channel password
+    * @param continueOnError ignore errors
     */
   def clientMove(client: ClientType, channel: ChannelType): js.Promise[js.Array[js.Any]] = js.native
+  def clientMove(client: ClientType, channel: ChannelType, cpw: js.UndefOr[scala.Nothing], continueOnError: Boolean): js.Promise[js.Array[js.Any]] = js.native
   def clientMove(client: ClientType, channel: ChannelType, cpw: String): js.Promise[js.Array[js.Any]] = js.native
+  def clientMove(client: ClientType, channel: ChannelType, cpw: String, continueOnError: Boolean): js.Promise[js.Array[js.Any]] = js.native
   
   /**
     * Displays a list of permissions defined for a client
@@ -677,20 +682,71 @@ class TeamSpeak_ protected () extends EventEmitter {
     * @param salt if a password has been set provide the salt from the response
     * @param password the password which has been set while saving
     * @param keepfiles wether it should keep the file mapping
+    * @param version of the snapshot with 0 the version of the current teamspeak server is being used
     */
   def deploySnapshot(data: String): js.Promise[js.Array[js.Any]] = js.native
   def deploySnapshot(
     data: String,
     salt: js.UndefOr[scala.Nothing],
     password: js.UndefOr[scala.Nothing],
+    keepfiles: js.UndefOr[scala.Nothing],
+    version: String
+  ): js.Promise[js.Array[js.Any]] = js.native
+  def deploySnapshot(
+    data: String,
+    salt: js.UndefOr[scala.Nothing],
+    password: js.UndefOr[scala.Nothing],
     keepfiles: Boolean
   ): js.Promise[js.Array[js.Any]] = js.native
+  def deploySnapshot(
+    data: String,
+    salt: js.UndefOr[scala.Nothing],
+    password: js.UndefOr[scala.Nothing],
+    keepfiles: Boolean,
+    version: String
+  ): js.Promise[js.Array[js.Any]] = js.native
   def deploySnapshot(data: String, salt: js.UndefOr[scala.Nothing], password: String): js.Promise[js.Array[js.Any]] = js.native
+  def deploySnapshot(
+    data: String,
+    salt: js.UndefOr[scala.Nothing],
+    password: String,
+    keepfiles: js.UndefOr[scala.Nothing],
+    version: String
+  ): js.Promise[js.Array[js.Any]] = js.native
   def deploySnapshot(data: String, salt: js.UndefOr[scala.Nothing], password: String, keepfiles: Boolean): js.Promise[js.Array[js.Any]] = js.native
+  def deploySnapshot(
+    data: String,
+    salt: js.UndefOr[scala.Nothing],
+    password: String,
+    keepfiles: Boolean,
+    version: String
+  ): js.Promise[js.Array[js.Any]] = js.native
   def deploySnapshot(data: String, salt: String): js.Promise[js.Array[js.Any]] = js.native
+  def deploySnapshot(
+    data: String,
+    salt: String,
+    password: js.UndefOr[scala.Nothing],
+    keepfiles: js.UndefOr[scala.Nothing],
+    version: String
+  ): js.Promise[js.Array[js.Any]] = js.native
   def deploySnapshot(data: String, salt: String, password: js.UndefOr[scala.Nothing], keepfiles: Boolean): js.Promise[js.Array[js.Any]] = js.native
+  def deploySnapshot(
+    data: String,
+    salt: String,
+    password: js.UndefOr[scala.Nothing],
+    keepfiles: Boolean,
+    version: String
+  ): js.Promise[js.Array[js.Any]] = js.native
   def deploySnapshot(data: String, salt: String, password: String): js.Promise[js.Array[js.Any]] = js.native
+  def deploySnapshot(
+    data: String,
+    salt: String,
+    password: String,
+    keepfiles: js.UndefOr[scala.Nothing],
+    version: String
+  ): js.Promise[js.Array[js.Any]] = js.native
   def deploySnapshot(data: String, salt: String, password: String, keepfiles: Boolean): js.Promise[js.Array[js.Any]] = js.native
+  def deploySnapshot(data: String, salt: String, password: String, keepfiles: Boolean, version: String): js.Promise[js.Array[js.Any]] = js.native
   
   /**
     * returns the file in the channel with the given path
@@ -1020,6 +1076,8 @@ class TeamSpeak_ protected () extends EventEmitter {
     * @param logmsg message to log
     */
   def logAdd(loglevel: LogLevel, logmsg: String): js.Promise[js.Array[js.Any]] = js.native
+  
+  def logQueryTiming(): js.Promise[js.Array[js.Any]] = js.native
   
   /**
     * Displays a specified number of entries from the servers log.
@@ -1578,6 +1636,8 @@ class TeamSpeak_ protected () extends EventEmitter {
     */
   def serverTempPasswordList(): js.Promise[js.Array[ServerTempPasswordEntry]] = js.native
   
+  var serverVersion: js.Any = js.native
+  
   var servergroups: js.Any = js.native
   
   var servers: js.Any = js.native
@@ -1651,8 +1711,12 @@ class TeamSpeak_ protected () extends EventEmitter {
   def useBySid(server: ServerType): js.Promise[js.Array[js.Any]] = js.native
   def useBySid(server: ServerType, clientNickname: String): js.Promise[js.Array[js.Any]] = js.native
   
-  /** Displays the servers version information including platform and build number. */
-  def version(): js.Promise[Version] = js.native
+  /**
+    * Displays the servers version information including platform and build number.
+    * @param refresh if this parameter has been set it will send a command to the server otherwise will use the cached info
+    */
+  def version(): js.Promise[js.UndefOr[Version]] = js.native
+  def version(refresh: Boolean): js.Promise[js.UndefOr[Version]] = js.native
   
   /** returns information about your current ServerQuery connection including your loginname, etc. */
   def whoami(): js.Promise[Whoami] = js.native

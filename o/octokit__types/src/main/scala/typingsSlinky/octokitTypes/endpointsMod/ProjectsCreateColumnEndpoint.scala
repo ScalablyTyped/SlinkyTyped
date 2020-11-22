@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`8`
+import typingsSlinky.octokitTypes.anon.`7`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProjectsCreateColumnEndpoint extends js.Object {
   
-  var mediaType: `8` = js.native
+  var mediaType: `7` = js.native
   
   /**
     * The name of the column.
@@ -21,7 +21,7 @@ trait ProjectsCreateColumnEndpoint extends js.Object {
 object ProjectsCreateColumnEndpoint {
   
   @scala.inline
-  def apply(mediaType: `8`, name: String, project_id: Double): ProjectsCreateColumnEndpoint = {
+  def apply(mediaType: `7`, name: String, project_id: Double): ProjectsCreateColumnEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], project_id = project_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsCreateColumnEndpoint]
   }
@@ -42,7 +42,7 @@ object ProjectsCreateColumnEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

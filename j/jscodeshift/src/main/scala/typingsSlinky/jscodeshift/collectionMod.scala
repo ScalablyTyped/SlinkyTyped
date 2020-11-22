@@ -6,6 +6,7 @@ import typingsSlinky.jscodeshift.nodeMod.MutationMethods
 import typingsSlinky.jscodeshift.nodeMod.TraversalMethods
 import typingsSlinky.jscodeshift.variableDeclaratorMod.GlobalMethods
 import typingsSlinky.jscodeshift.variableDeclaratorMod.TransformMethods
+import typingsSlinky.recast.optionsMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -163,9 +164,7 @@ object collectionMod extends js.Object {
       * @param options directly passed to recast's printer
       */
     def toSource(): String = js.native
-    def toSource(
-      options: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify recast.Options */ js.Any
-    ): String = js.native
+    def toSource(options: Options): String = js.native
   }
   
   type ASTPath[N] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify recast.NodePath<N, N> */ js.Any

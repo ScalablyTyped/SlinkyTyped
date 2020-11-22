@@ -20,7 +20,7 @@ trait Dataset extends js.Object {
   
   var Literal: LiteralExt = js.native
   
-  var NamedNode: NamedNodeExt = js.native
+  var NamedNode: NamedNodeExt[String] = js.native
   
   var Quad: QuadExt = js.native
   
@@ -35,7 +35,7 @@ object Dataset {
     BlankNode: BlankNodeExt,
     Dataset: DatasetExt,
     Literal: LiteralExt,
-    NamedNode: NamedNodeExt,
+    NamedNode: NamedNodeExt[String],
     Quad: QuadExt,
     Variable: VariableExt,
     defaultGraph: DefaultGraphExt
@@ -69,7 +69,7 @@ object Dataset {
     def setLiteral(value: LiteralExt): Self = this.set("Literal", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNamedNode(value: NamedNodeExt): Self = this.set("NamedNode", value.asInstanceOf[js.Any])
+    def setNamedNode(value: NamedNodeExt[String]): Self = this.set("NamedNode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setQuad(value: QuadExt): Self = this.set("Quad", value.asInstanceOf[js.Any])

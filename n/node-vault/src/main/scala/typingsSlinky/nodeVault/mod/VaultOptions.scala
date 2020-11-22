@@ -22,6 +22,12 @@ trait VaultOptions extends js.Object {
   
   var mustache: js.UndefOr[js.Any] = js.native
   
+  var namespace: js.UndefOr[String] = js.native
+  
+  var noCustomHTTPVerbs: js.UndefOr[Boolean] = js.native
+  
+  var pathPrefix: js.UndefOr[String] = js.native
+  
   var `request-promise`: js.UndefOr[js.Any] = js.native
   
   var requestOptions: js.UndefOr[CoreOptions] = js.native
@@ -91,6 +97,24 @@ object VaultOptions {
     
     @scala.inline
     def deleteMustache: Self = this.set("mustache", js.undefined)
+    
+    @scala.inline
+    def setNamespace(value: String): Self = this.set("namespace", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNamespace: Self = this.set("namespace", js.undefined)
+    
+    @scala.inline
+    def setNoCustomHTTPVerbs(value: Boolean): Self = this.set("noCustomHTTPVerbs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNoCustomHTTPVerbs: Self = this.set("noCustomHTTPVerbs", js.undefined)
+    
+    @scala.inline
+    def setPathPrefix(value: String): Self = this.set("pathPrefix", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePathPrefix: Self = this.set("pathPrefix", js.undefined)
     
     @scala.inline
     def `setRequest-promise`(value: js.Any): Self = this.set("request-promise", value.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`10`
+import typingsSlinky.octokitTypes.anon.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ trait ReactionsDeleteForIssueEndpoint extends js.Object {
   
   var issue_number: Double = js.native
   
-  var mediaType: `10` = js.native
+  var mediaType: `9` = js.native
   
   var owner: String = js.native
   
@@ -22,7 +22,7 @@ trait ReactionsDeleteForIssueEndpoint extends js.Object {
 object ReactionsDeleteForIssueEndpoint {
   
   @scala.inline
-  def apply(issue_number: Double, mediaType: `10`, owner: String, reaction_id: Double, repo: String): ReactionsDeleteForIssueEndpoint = {
+  def apply(issue_number: Double, mediaType: `9`, owner: String, reaction_id: Double, repo: String): ReactionsDeleteForIssueEndpoint = {
     val __obj = js.Dynamic.literal(issue_number = issue_number.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], reaction_id = reaction_id.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactionsDeleteForIssueEndpoint]
   }
@@ -46,7 +46,7 @@ object ReactionsDeleteForIssueEndpoint {
     def setIssue_number(value: Double): Self = this.set("issue_number", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `10`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `9`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

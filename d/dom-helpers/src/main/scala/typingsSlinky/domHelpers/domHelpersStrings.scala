@@ -221,6 +221,9 @@ object domHelpersStrings {
   def `-moz-orient`: `-moz-orient` = "-moz-orient".asInstanceOf[`-moz-orient`]
   
   @scala.inline
+  def `-moz-osx-font-smoothing`: `-moz-osx-font-smoothing` = "-moz-osx-font-smoothing".asInstanceOf[`-moz-osx-font-smoothing`]
+  
+  @scala.inline
   def `-moz-outline`: `-moz-outline` = "-moz-outline".asInstanceOf[`-moz-outline`]
   
   @scala.inline
@@ -399,6 +402,9 @@ object domHelpersStrings {
   
   @scala.inline
   def `-ms-ime-mode`: `-ms-ime-mode` = "-ms-ime-mode".asInstanceOf[`-ms-ime-mode`]
+  
+  @scala.inline
+  def `-ms-justify-self`: `-ms-justify-self` = "-ms-justify-self".asInstanceOf[`-ms-justify-self`]
   
   @scala.inline
   def `-ms-line-break`: `-ms-line-break` = "-ms-line-break".asInstanceOf[`-ms-line-break`]
@@ -785,6 +791,9 @@ object domHelpersStrings {
   def `-webkit-font-kerning`: `-webkit-font-kerning` = "-webkit-font-kerning".asInstanceOf[`-webkit-font-kerning`]
   
   @scala.inline
+  def `-webkit-font-smoothing`: `-webkit-font-smoothing` = "-webkit-font-smoothing".asInstanceOf[`-webkit-font-smoothing`]
+  
+  @scala.inline
   def `-webkit-font-variant-ligatures`: `-webkit-font-variant-ligatures` = "-webkit-font-variant-ligatures".asInstanceOf[`-webkit-font-variant-ligatures`]
   
   @scala.inline
@@ -867,6 +876,9 @@ object domHelpersStrings {
   
   @scala.inline
   def `-webkit-print-color-adjust`: `-webkit-print-color-adjust` = "-webkit-print-color-adjust".asInstanceOf[`-webkit-print-color-adjust`]
+  
+  @scala.inline
+  def `-webkit-ruby-position`: `-webkit-ruby-position` = "-webkit-ruby-position".asInstanceOf[`-webkit-ruby-position`]
   
   @scala.inline
   def `-webkit-scroll-snap-points-x`: `-webkit-scroll-snap-points-x` = "-webkit-scroll-snap-points-x".asInstanceOf[`-webkit-scroll-snap-points-x`]
@@ -1176,6 +1188,9 @@ object domHelpersStrings {
   
   @scala.inline
   def MozOrient: MozOrient = "MozOrient".asInstanceOf[MozOrient]
+  
+  @scala.inline
+  def MozOsxFontSmoothing: MozOsxFontSmoothing = "MozOsxFontSmoothing".asInstanceOf[MozOsxFontSmoothing]
   
   @scala.inline
   def MozOutline: MozOutline = "MozOutline".asInstanceOf[MozOutline]
@@ -1532,6 +1547,9 @@ object domHelpersStrings {
   def WebkitFontKerning: WebkitFontKerning = "WebkitFontKerning".asInstanceOf[WebkitFontKerning]
   
   @scala.inline
+  def WebkitFontSmoothing: WebkitFontSmoothing = "WebkitFontSmoothing".asInstanceOf[WebkitFontSmoothing]
+  
+  @scala.inline
   def WebkitFontVariantLigatures: WebkitFontVariantLigatures = "WebkitFontVariantLigatures".asInstanceOf[WebkitFontVariantLigatures]
   
   @scala.inline
@@ -1614,6 +1632,9 @@ object domHelpersStrings {
   
   @scala.inline
   def WebkitPrintColorAdjust: WebkitPrintColorAdjust = "WebkitPrintColorAdjust".asInstanceOf[WebkitPrintColorAdjust]
+  
+  @scala.inline
+  def WebkitRubyPosition: WebkitRubyPosition = "WebkitRubyPosition".asInstanceOf[WebkitRubyPosition]
   
   @scala.inline
   def WebkitScrollSnapPointsX: WebkitScrollSnapPointsX = "WebkitScrollSnapPointsX".asInstanceOf[WebkitScrollSnapPointsX]
@@ -1727,6 +1748,9 @@ object domHelpersStrings {
   def `align-self`: `align-self` = "align-self".asInstanceOf[`align-self`]
   
   @scala.inline
+  def `align-tracks`: `align-tracks` = "align-tracks".asInstanceOf[`align-tracks`]
+  
+  @scala.inline
   def alignContent: alignContent = "alignContent".asInstanceOf[alignContent]
   
   @scala.inline
@@ -1734,6 +1758,9 @@ object domHelpersStrings {
   
   @scala.inline
   def alignSelf: alignSelf = "alignSelf".asInstanceOf[alignSelf]
+  
+  @scala.inline
+  def alignTracks: alignTracks = "alignTracks".asInstanceOf[alignTracks]
   
   @scala.inline
   def `alignment-baseline`: `alignment-baseline` = "alignment-baseline".asInstanceOf[`alignment-baseline`]
@@ -1818,6 +1845,9 @@ object domHelpersStrings {
   
   @scala.inline
   def auxclick: auxclick = "auxclick".asInstanceOf[auxclick]
+  
+  @scala.inline
+  def azimuth: azimuth = "azimuth".asInstanceOf[azimuth]
   
   @scala.inline
   def `backdrop-filter`: `backdrop-filter` = "backdrop-filter".asInstanceOf[`backdrop-filter`]
@@ -2708,6 +2738,9 @@ object domHelpersStrings {
   def `font-size-adjust`: `font-size-adjust` = "font-size-adjust".asInstanceOf[`font-size-adjust`]
   
   @scala.inline
+  def `font-smooth`: `font-smooth` = "font-smooth".asInstanceOf[`font-smooth`]
+  
+  @scala.inline
   def `font-stretch`: `font-stretch` = "font-stretch".asInstanceOf[`font-stretch`]
   
   @scala.inline
@@ -2763,6 +2796,9 @@ object domHelpersStrings {
   
   @scala.inline
   def fontSizeAdjust: fontSizeAdjust = "fontSizeAdjust".asInstanceOf[fontSizeAdjust]
+  
+  @scala.inline
+  def fontSmooth: fontSmooth = "fontSmooth".asInstanceOf[fontSmooth]
   
   @scala.inline
   def fontStretch: fontStretch = "fontStretch".asInstanceOf[fontStretch]
@@ -3029,6 +3065,9 @@ object domHelpersStrings {
   def `justify-self`: `justify-self` = "justify-self".asInstanceOf[`justify-self`]
   
   @scala.inline
+  def `justify-tracks`: `justify-tracks` = "justify-tracks".asInstanceOf[`justify-tracks`]
+  
+  @scala.inline
   def justifyContent: justifyContent = "justifyContent".asInstanceOf[justifyContent]
   
   @scala.inline
@@ -3036,6 +3075,9 @@ object domHelpersStrings {
   
   @scala.inline
   def justifySelf: justifySelf = "justifySelf".asInstanceOf[justifySelf]
+  
+  @scala.inline
+  def justifyTracks: justifyTracks = "justifyTracks".asInstanceOf[justifyTracks]
   
   @scala.inline
   def keydown: keydown = "keydown".asInstanceOf[keydown]
@@ -3311,6 +3353,18 @@ object domHelpersStrings {
   def maskType: maskType = "maskType".asInstanceOf[maskType]
   
   @scala.inline
+  def `masonry-auto-flow`: `masonry-auto-flow` = "masonry-auto-flow".asInstanceOf[`masonry-auto-flow`]
+  
+  @scala.inline
+  def masonryAutoFlow: masonryAutoFlow = "masonryAutoFlow".asInstanceOf[masonryAutoFlow]
+  
+  @scala.inline
+  def `math-style`: `math-style` = "math-style".asInstanceOf[`math-style`]
+  
+  @scala.inline
+  def mathStyle: mathStyle = "mathStyle".asInstanceOf[mathStyle]
+  
+  @scala.inline
   def matrix: matrix = "matrix".asInstanceOf[matrix]
   
   @scala.inline
@@ -3495,6 +3549,9 @@ object domHelpersStrings {
   
   @scala.inline
   def msImeMode: msImeMode = "msImeMode".asInstanceOf[msImeMode]
+  
+  @scala.inline
+  def msJustifySelf: msJustifySelf = "msJustifySelf".asInstanceOf[msJustifySelf]
   
   @scala.inline
   def msLineBreak: msLineBreak = "msLineBreak".asInstanceOf[msLineBreak]
@@ -4289,6 +4346,9 @@ object domHelpersStrings {
   def `scrollbar-color`: `scrollbar-color` = "scrollbar-color".asInstanceOf[`scrollbar-color`]
   
   @scala.inline
+  def `scrollbar-gutter`: `scrollbar-gutter` = "scrollbar-gutter".asInstanceOf[`scrollbar-gutter`]
+  
+  @scala.inline
   def `scrollbar-track-color`: `scrollbar-track-color` = "scrollbar-track-color".asInstanceOf[`scrollbar-track-color`]
   
   @scala.inline
@@ -4296,6 +4356,9 @@ object domHelpersStrings {
   
   @scala.inline
   def scrollbarColor: scrollbarColor = "scrollbarColor".asInstanceOf[scrollbarColor]
+  
+  @scala.inline
+  def scrollbarGutter: scrollbarGutter = "scrollbarGutter".asInstanceOf[scrollbarGutter]
   
   @scala.inline
   def scrollbarTrackColor: scrollbarTrackColor = "scrollbarTrackColor".asInstanceOf[scrollbarTrackColor]
@@ -5207,6 +5270,9 @@ object domHelpersStrings {
   sealed trait `-moz-orient` extends HyphenProperty
   
   @js.native
+  sealed trait `-moz-osx-font-smoothing` extends HyphenProperty
+  
+  @js.native
   sealed trait `-moz-outline` extends HyphenProperty
   
   @js.native
@@ -5385,6 +5451,9 @@ object domHelpersStrings {
   
   @js.native
   sealed trait `-ms-ime-mode` extends HyphenProperty
+  
+  @js.native
+  sealed trait `-ms-justify-self` extends HyphenProperty
   
   @js.native
   sealed trait `-ms-line-break` extends HyphenProperty
@@ -5771,6 +5840,9 @@ object domHelpersStrings {
   sealed trait `-webkit-font-kerning` extends HyphenProperty
   
   @js.native
+  sealed trait `-webkit-font-smoothing` extends HyphenProperty
+  
+  @js.native
   sealed trait `-webkit-font-variant-ligatures` extends HyphenProperty
   
   @js.native
@@ -5853,6 +5925,9 @@ object domHelpersStrings {
   
   @js.native
   sealed trait `-webkit-print-color-adjust` extends HyphenProperty
+  
+  @js.native
+  sealed trait `-webkit-ruby-position` extends HyphenProperty
   
   @js.native
   sealed trait `-webkit-scroll-snap-points-x` extends HyphenProperty
@@ -6162,6 +6237,9 @@ object domHelpersStrings {
   
   @js.native
   sealed trait MozOrient extends CamelProperty
+  
+  @js.native
+  sealed trait MozOsxFontSmoothing extends CamelProperty
   
   @js.native
   sealed trait MozOutline extends CamelProperty
@@ -6518,6 +6596,9 @@ object domHelpersStrings {
   sealed trait WebkitFontKerning extends CamelProperty
   
   @js.native
+  sealed trait WebkitFontSmoothing extends CamelProperty
+  
+  @js.native
   sealed trait WebkitFontVariantLigatures extends CamelProperty
   
   @js.native
@@ -6600,6 +6681,9 @@ object domHelpersStrings {
   
   @js.native
   sealed trait WebkitPrintColorAdjust extends CamelProperty
+  
+  @js.native
+  sealed trait WebkitRubyPosition extends CamelProperty
   
   @js.native
   sealed trait WebkitScrollSnapPointsX extends CamelProperty
@@ -6713,6 +6797,9 @@ object domHelpersStrings {
   sealed trait `align-self` extends HyphenProperty
   
   @js.native
+  sealed trait `align-tracks` extends HyphenProperty
+  
+  @js.native
   sealed trait alignContent
     extends CamelProperty
        with Styles
@@ -6726,6 +6813,9 @@ object domHelpersStrings {
   sealed trait alignSelf
     extends CamelProperty
        with Styles
+  
+  @js.native
+  sealed trait alignTracks extends CamelProperty
   
   @js.native
   sealed trait `alignment-baseline` extends HyphenProperty
@@ -6836,6 +6926,11 @@ object domHelpersStrings {
   
   @js.native
   sealed trait auxclick extends js.Object
+  
+  @js.native
+  sealed trait azimuth
+    extends CamelProperty
+       with HyphenProperty
   
   @js.native
   sealed trait `backdrop-filter` extends HyphenProperty
@@ -7964,6 +8059,9 @@ object domHelpersStrings {
   sealed trait `font-size-adjust` extends HyphenProperty
   
   @js.native
+  sealed trait `font-smooth` extends HyphenProperty
+  
+  @js.native
   sealed trait `font-stretch` extends HyphenProperty
   
   @js.native
@@ -8029,6 +8127,9 @@ object domHelpersStrings {
   sealed trait fontSizeAdjust
     extends CamelProperty
        with Styles
+  
+  @js.native
+  sealed trait fontSmooth extends CamelProperty
   
   @js.native
   sealed trait fontStretch
@@ -8373,6 +8474,9 @@ object domHelpersStrings {
   sealed trait `justify-self` extends HyphenProperty
   
   @js.native
+  sealed trait `justify-tracks` extends HyphenProperty
+  
+  @js.native
   sealed trait justifyContent
     extends CamelProperty
        with Styles
@@ -8386,6 +8490,9 @@ object domHelpersStrings {
   sealed trait justifySelf
     extends CamelProperty
        with Styles
+  
+  @js.native
+  sealed trait justifyTracks extends CamelProperty
   
   @js.native
   sealed trait keydown extends js.Object
@@ -8723,6 +8830,18 @@ object domHelpersStrings {
        with Styles
   
   @js.native
+  sealed trait `masonry-auto-flow` extends HyphenProperty
+  
+  @js.native
+  sealed trait masonryAutoFlow extends CamelProperty
+  
+  @js.native
+  sealed trait `math-style` extends HyphenProperty
+  
+  @js.native
+  sealed trait mathStyle extends CamelProperty
+  
+  @js.native
   sealed trait matrix extends TransformValue
   
   @js.native
@@ -8925,6 +9044,9 @@ object domHelpersStrings {
   
   @js.native
   sealed trait msImeMode extends CamelProperty
+  
+  @js.native
+  sealed trait msJustifySelf extends CamelProperty
   
   @js.native
   sealed trait msLineBreak extends CamelProperty
@@ -9273,19 +9395,29 @@ object domHelpersStrings {
   sealed trait `overscroll-behavior-y` extends HyphenProperty
   
   @js.native
-  sealed trait overscrollBehavior extends CamelProperty
+  sealed trait overscrollBehavior
+    extends CamelProperty
+       with Styles
   
   @js.native
-  sealed trait overscrollBehaviorBlock extends CamelProperty
+  sealed trait overscrollBehaviorBlock
+    extends CamelProperty
+       with Styles
   
   @js.native
-  sealed trait overscrollBehaviorInline extends CamelProperty
+  sealed trait overscrollBehaviorInline
+    extends CamelProperty
+       with Styles
   
   @js.native
-  sealed trait overscrollBehaviorX extends CamelProperty
+  sealed trait overscrollBehaviorX
+    extends CamelProperty
+       with Styles
   
   @js.native
-  sealed trait overscrollBehaviorY extends CamelProperty
+  sealed trait overscrollBehaviorY
+    extends CamelProperty
+       with Styles
   
   @js.native
   sealed trait padding
@@ -9825,6 +9957,9 @@ object domHelpersStrings {
   sealed trait `scrollbar-color` extends HyphenProperty
   
   @js.native
+  sealed trait `scrollbar-gutter` extends HyphenProperty
+  
+  @js.native
   sealed trait `scrollbar-track-color` extends HyphenProperty
   
   @js.native
@@ -9832,6 +9967,9 @@ object domHelpersStrings {
   
   @js.native
   sealed trait scrollbarColor extends CamelProperty
+  
+  @js.native
+  sealed trait scrollbarGutter extends CamelProperty
   
   @js.native
   sealed trait scrollbarTrackColor extends CamelProperty

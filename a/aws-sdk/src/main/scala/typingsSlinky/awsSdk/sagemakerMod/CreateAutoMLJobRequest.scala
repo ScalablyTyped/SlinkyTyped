@@ -13,22 +13,22 @@ trait CreateAutoMLJobRequest extends js.Object {
   var AutoMLJobConfig: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.AutoMLJobConfig] = js.native
   
   /**
-    * Identifies an AutoPilot job. Must be unique to your account and is case-insensitive.
+    * Identifies an Autopilot job. Must be unique to your account and is case-insensitive.
     */
   var AutoMLJobName: typingsSlinky.awsSdk.sagemakerMod.AutoMLJobName = js.native
   
   /**
-    * Defines the job's objective. You provide a MetricName and AutoML will infer minimize or maximize. If this is not provided, the most commonly used ObjectiveMetric for problem type will be selected.
+    * Defines the objective of a an AutoML job. You provide a AutoMLJobObjective$MetricName and Autopilot infers whether to minimize or maximize it. If a metric is not specified, the most commonly used ObjectiveMetric for problem type is automaically selected.
     */
   var AutoMLJobObjective: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.AutoMLJobObjective] = js.native
   
   /**
-    * This will generate possible candidates without training a model. A candidate is a combination of data preprocessors, algorithms, and algorithm parameter settings.
+    * Generates possible candidates without training a model. A candidate is a combination of data preprocessors, algorithms, and algorithm parameter settings.
     */
   var GenerateCandidateDefinitionsOnly: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.GenerateCandidateDefinitionsOnly] = js.native
   
   /**
-    * Similar to InputDataConfig supported by Tuning. Format(s) supported: CSV. Minimum of 1000 rows.
+    * Similar to InputDataConfig supported by Tuning. Format(s) supported: CSV. Minimum of 500 rows.
     */
   var InputDataConfig: AutoMLInputDataConfig = js.native
   
@@ -43,7 +43,7 @@ trait CreateAutoMLJobRequest extends js.Object {
   var ProblemType: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.ProblemType] = js.native
   
   /**
-    * The ARN of the role that will be used to access the data.
+    * The ARN of the role that is used to access the data.
     */
   var RoleArn: typingsSlinky.awsSdk.sagemakerMod.RoleArn = js.native
   

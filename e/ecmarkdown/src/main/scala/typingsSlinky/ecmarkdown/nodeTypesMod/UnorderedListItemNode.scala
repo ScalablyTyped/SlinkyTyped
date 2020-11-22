@@ -12,7 +12,7 @@ trait UnorderedListItemNode extends Node {
   
   var id: String | Null = js.native
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: `unordered-list-item` = js.native
   
@@ -21,8 +21,8 @@ trait UnorderedListItemNode extends Node {
 object UnorderedListItemNode {
   
   @scala.inline
-  def apply(contents: js.Array[FragmentNode], name: `unordered-list-item`): UnorderedListItemNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(contents: js.Array[FragmentNode], location: LocationRange, name: `unordered-list-item`): UnorderedListItemNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnorderedListItemNode]
   }
   
@@ -48,6 +48,9 @@ object UnorderedListItemNode {
     def setContents(value: js.Array[FragmentNode]): Self = this.set("contents", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setName(value: `unordered-list-item`): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -55,12 +58,6 @@ object UnorderedListItemNode {
     
     @scala.inline
     def setIdNull: Self = this.set("id", null)
-    
-    @scala.inline
-    def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
     
     @scala.inline
     def setSublist(value: ListNode): Self = this.set("sublist", value.asInstanceOf[js.Any])

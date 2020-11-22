@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResourcePermission extends js.Object {
   
   /**
-    * The action to grant or revoke permissions on, for example "quicksight:DescribeDashboard".
+    * The IAM action to grant or revoke permissions on.
     */
   var Actions: ActionList = js.native
   
   /**
-    * The Amazon Resource Name (ARN) of the principal. This can be one of the following:   The ARN of an Amazon QuickSight user, group, or namespace. (This is most common.)   The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this option only to share resources (templates) across AWS accounts. (This is less common.)   
+    * The Amazon Resource Name (ARN) of the principal. This can be one of the following:   The ARN of an Amazon QuickSight user or group associated with a data source or dataset. (This is common.)   The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme. (This is common.)   The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN. Use this option only to share resources (templates) across AWS accounts. (This is less common.)   
     */
   var Principal: typingsSlinky.awsSdk.quicksightMod.Principal = js.native
 }

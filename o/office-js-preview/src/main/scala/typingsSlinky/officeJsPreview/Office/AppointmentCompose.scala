@@ -65,11 +65,6 @@ trait AppointmentCompose extends Item {
   def addFileAttachmentAsync(
     uri: String,
     attachmentName: String,
-    callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
-  ): Unit = js.native
-  def addFileAttachmentAsync(
-    uri: String,
-    attachmentName: String,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
   ): Unit = js.native
@@ -124,11 +119,6 @@ trait AppointmentCompose extends Item {
   def addFileAttachmentFromBase64Async(
     base64File: String,
     attachmentName: String,
-    callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
-  ): Unit = js.native
-  def addFileAttachmentFromBase64Async(
-    base64File: String,
-    attachmentName: String,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
   ): Unit = js.native
@@ -141,11 +131,6 @@ trait AppointmentCompose extends Item {
   ): Unit = js.native
   
   def addHandlerAsync(eventType: String, handler: js.Any): Unit = js.native
-  def addHandlerAsync(
-    eventType: String,
-    handler: js.Any,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
   def addHandlerAsync(
     eventType: String,
     handler: js.Any,
@@ -181,11 +166,6 @@ trait AppointmentCompose extends Item {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def addHandlerAsync(eventType: EventType, handler: js.Any): Unit = js.native
-  def addHandlerAsync(
-    eventType: EventType,
-    handler: js.Any,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
   def addHandlerAsync(
     eventType: EventType,
     handler: js.Any,
@@ -236,11 +216,6 @@ trait AppointmentCompose extends Item {
     *                 an `Error` object that provides a description of the error.
     */
   def addItemAttachmentAsync(itemId: js.Any, attachmentName: String): Unit = js.native
-  def addItemAttachmentAsync(
-    itemId: js.Any,
-    attachmentName: String,
-    callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
-  ): Unit = js.native
   def addItemAttachmentAsync(
     itemId: js.Any,
     attachmentName: String,
@@ -326,7 +301,6 @@ trait AppointmentCompose extends Item {
     * @beta
     */
   def disableClientSignatureAsync(): Unit = js.native
-  def disableClientSignatureAsync(callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def disableClientSignatureAsync(
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
@@ -342,6 +316,8 @@ trait AppointmentCompose extends Item {
     *
     * When you use the `Time.setAsync` method to set the end time, you should use the `convertToUtcClientTime` method to convert the local time on
     * the client to UTC for the server.
+    *
+    * **Important**: In the Windows client, you can't use this property to update the end of a recurrence.
     *
     * @remarks
     *
@@ -399,10 +375,6 @@ trait AppointmentCompose extends Item {
   def getAttachmentContentAsync(attachmentId: String): Unit = js.native
   def getAttachmentContentAsync(
     attachmentId: String,
-    callback: js.Function1[/* asyncResult */ AsyncResult[AttachmentContent], Unit]
-  ): Unit = js.native
-  def getAttachmentContentAsync(
-    attachmentId: String,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[AttachmentContent], Unit]
   ): Unit = js.native
@@ -431,7 +403,6 @@ trait AppointmentCompose extends Item {
     *                 the failure.
     */
   def getAttachmentsAsync(): Unit = js.native
-  def getAttachmentsAsync(callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetailsCompose]], Unit]): Unit = js.native
   def getAttachmentsAsync(
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetailsCompose]], Unit]
@@ -469,7 +440,6 @@ trait AppointmentCompose extends Item {
     * @beta
     */
   def getInitializationContextAsync(): Unit = js.native
-  def getInitializationContextAsync(callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]): Unit = js.native
   def getInitializationContextAsync(
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
@@ -598,7 +568,10 @@ trait AppointmentCompose extends Item {
   /**
     * Gets the properties of an appointment or message in a shared folder, calendar, or mailbox.
     *
-    * **Note**: This method is not supported in Outlook on Mac, iOS, or Android.
+    * For more information around using this API, see the
+    * {@link https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access | delegate access} article.
+    *
+    * **Note**: This method is not supported in Outlook on iOS or Android.
     *
     * [Api set: Mailbox 1.8]
     *
@@ -616,7 +589,10 @@ trait AppointmentCompose extends Item {
   /**
     * Gets the properties of an appointment or message in a shared folder, calendar, or mailbox.
     *
-    * **Note**: This method is not supported in Outlook on Mac, iOS, or Android.
+    * For more information around using this API, see the
+    * {@link https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access | delegate access} article.
+    *
+    * **Note**: This method is not supported in Outlook on iOS or Android.
     *
     * [Api set: Mailbox 1.8]
     *
@@ -763,14 +739,11 @@ trait AppointmentCompose extends Item {
   var notificationMessages: NotificationMessages = js.native
   
   /**
-    * Provides access to the optional attendees of an event. The type of object and level of access depends on the mode of the current item.
+    * Provides access to the optional attendees of an event. The type of object and level of access depend on the mode of the current item.
     *
-    * The `optionalAttendees` property returns a {@link Office.Recipients | Recipients} object that provides methods to get or update the optional attendees
-    * for a meeting. By default, the collection is limited to a maximum of 100 members. However, on Windows and Mac, the following limits apply.
-    *
-    * - Get 500 members maximum.
-    *
-    * - Set a maximum of 100 members per call, up to 500 members total.
+    * The `optionalAttendees` property returns a `Recipients` object that provides methods to get or update the
+    * optional attendees for a meeting. However, depending on the client/platform (i.e., Windows, Mac, etc.), limits may apply on how many
+    * recipients you can get or update. See the {@link Office.Recipients | Recipients} object for more details.
     *
     * @remarks
     *
@@ -845,7 +818,6 @@ trait AppointmentCompose extends Item {
     *                 If removing the attachment fails, the `asyncResult.error` property will contain an error code with the reason for the failure.
     */
   def removeAttachmentAsync(attachmentId: String): Unit = js.native
-  def removeAttachmentAsync(attachmentId: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeAttachmentAsync(
     attachmentId: String,
     options: js.UndefOr[scala.Nothing],
@@ -859,7 +831,6 @@ trait AppointmentCompose extends Item {
   ): Unit = js.native
   
   def removeHandlerAsync(eventType: String): Unit = js.native
-  def removeHandlerAsync(eventType: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeHandlerAsync(
     eventType: String,
     options: js.UndefOr[scala.Nothing],
@@ -891,7 +862,6 @@ trait AppointmentCompose extends Item {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def removeHandlerAsync(eventType: EventType): Unit = js.native
-  def removeHandlerAsync(eventType: EventType, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeHandlerAsync(
     eventType: EventType,
     options: js.UndefOr[scala.Nothing],
@@ -905,14 +875,11 @@ trait AppointmentCompose extends Item {
   ): Unit = js.native
   
   /**
-    * Provides access to the required attendees of an event. The type of object and level of access depends on the mode of the current item.
+    * Provides access to the required attendees of an event. The type of object and level of access depend on the mode of the current item.
     *
-    * The `requiredAttendees` property returns a {@link Office.Recipients | Recipients} object that provides methods to get or update the required attendees
-    * for a meeting. By default, the collection is limited to a maximum of 100 members. However, on Windows and Mac, the following limits apply.
-    *
-    * - Get 500 members maximum.
-    *
-    * - Set a maximum of 100 members per call, up to 500 members total.
+    * The `requiredAttendees` property returns a `Recipients` object that provides methods to get or update the
+    * required attendees for a meeting. However, depending on the client/platform (i.e., Windows, Mac, etc.), limits may apply on how many
+    * recipients you can get or update. See the {@link Office.Recipients | Recipients} object for more details.
     *
     * @remarks
     *
@@ -1034,6 +1001,21 @@ trait AppointmentCompose extends Item {
   var seriesId: String = js.native
   
   /**
+    * Manages the {@link Office.SessionData | SessionData} of an item in Compose mode.
+    *
+    * [Api set: Mailbox Preview]
+    *
+    * @remarks
+    *
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
+    *
+    * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Appointment Organizer
+    *
+    * @beta
+    */
+  var sessionData: SessionData = js.native
+  
+  /**
     * Asynchronously inserts data into the body or subject of a message.
     *
     * The `setSelectedDataAsync` method inserts the specified string at the cursor location in the subject or body of the item, or, if text is
@@ -1067,7 +1049,6 @@ trait AppointmentCompose extends Item {
     *                 type `Office.AsyncResult`.
     */
   def setSelectedDataAsync(data: String): Unit = js.native
-  def setSelectedDataAsync(data: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def setSelectedDataAsync(data: String, options: AsyncContextOptions with CoercionTypeOptions): Unit = js.native
   def setSelectedDataAsync(
     data: String,
@@ -1088,6 +1069,8 @@ trait AppointmentCompose extends Item {
     *
     * When you use the `Time.setAsync` method to set the start time, you should use the `convertToUtcClientTime` method to convert the local time on
     * the client to UTC for the server.
+    *
+    * **Important**: In the Windows client, you can't use this property to update the start of a recurrence.
     *
     * @remarks
     *

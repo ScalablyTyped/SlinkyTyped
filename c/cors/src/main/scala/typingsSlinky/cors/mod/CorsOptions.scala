@@ -15,12 +15,24 @@ trait CorsOptions extends js.Object {
   
   var maxAge: js.UndefOr[Double] = js.native
   
+  /**
+    * @default 'GET,HEAD,PUT,PATCH,POST,DELETE'
+    */
   var methods: js.UndefOr[String | js.Array[String]] = js.native
   
+  /**
+    * @default 204
+    */
   var optionsSuccessStatus: js.UndefOr[Double] = js.native
   
+  /**
+    * @default '*''
+    */
   var origin: js.UndefOr[Boolean | String | js.RegExp | (js.Array[String | js.RegExp]) | CustomOrigin] = js.native
   
+  /**
+    * @default false
+    */
   var preflightContinue: js.UndefOr[Boolean] = js.native
 }
 object CorsOptions {

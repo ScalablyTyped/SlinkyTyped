@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ExpandedRowProps[RecordType] extends js.Object {
+trait ExpandedRowProps extends js.Object {
   
   var cellComponent: CustomizeComponent = js.native
   
@@ -35,7 +35,7 @@ trait ExpandedRowProps[RecordType] extends js.Object {
 object ExpandedRowProps {
   
   @scala.inline
-  def apply[RecordType](
+  def apply(
     cellComponent: CustomizeComponent,
     className: String,
     colSpan: Double,
@@ -46,13 +46,13 @@ object ExpandedRowProps {
     fixHeader: Boolean,
     horizonScroll: Boolean,
     prefixCls: String
-  ): ExpandedRowProps[RecordType] = {
+  ): ExpandedRowProps = {
     val __obj = js.Dynamic.literal(cellComponent = cellComponent.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], colSpan = colSpan.asInstanceOf[js.Any], component = component.asInstanceOf[js.Any], componentWidth = componentWidth.asInstanceOf[js.Any], expanded = expanded.asInstanceOf[js.Any], fixColumn = fixColumn.asInstanceOf[js.Any], fixHeader = fixHeader.asInstanceOf[js.Any], horizonScroll = horizonScroll.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
-    __obj.asInstanceOf[ExpandedRowProps[RecordType]]
+    __obj.asInstanceOf[ExpandedRowProps]
   }
   
   @scala.inline
-  implicit class ExpandedRowPropsOps[Self <: ExpandedRowProps[_], RecordType] (val x: Self with ExpandedRowProps[RecordType]) extends AnyVal {
+  implicit class ExpandedRowPropsOps[Self <: ExpandedRowProps] (val x: Self) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

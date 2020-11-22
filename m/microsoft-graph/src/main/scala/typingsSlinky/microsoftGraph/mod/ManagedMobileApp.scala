@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ManagedMobileApp extends Entity {
   
   // The identifier for an app with it's operating system type.
-  var mobileAppIdentifier: js.UndefOr[MobileAppIdentifier] = js.native
+  var mobileAppIdentifier: js.UndefOr[NullableOption[MobileAppIdentifier]] = js.native
   
   // Version of the entity.
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[NullableOption[String]] = js.native
 }
 object ManagedMobileApp {
   
@@ -37,15 +37,21 @@ object ManagedMobileApp {
     }
     
     @scala.inline
-    def setMobileAppIdentifier(value: MobileAppIdentifier): Self = this.set("mobileAppIdentifier", value.asInstanceOf[js.Any])
+    def setMobileAppIdentifier(value: NullableOption[MobileAppIdentifier]): Self = this.set("mobileAppIdentifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMobileAppIdentifier: Self = this.set("mobileAppIdentifier", js.undefined)
     
     @scala.inline
-    def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
+    def setMobileAppIdentifierNull: Self = this.set("mobileAppIdentifier", null)
+    
+    @scala.inline
+    def setVersion(value: NullableOption[String]): Self = this.set("version", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVersion: Self = this.set("version", js.undefined)
+    
+    @scala.inline
+    def setVersionNull: Self = this.set("version", null)
   }
 }

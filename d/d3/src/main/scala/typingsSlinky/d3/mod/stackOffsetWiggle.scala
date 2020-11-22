@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object stackOffsetWiggle extends js.Object {
   
-  def apply(series: Series[_, _], order: js.Array[Double]): Unit = js.native
+  def apply(series: Series[_, _], order: js.Iterable[Double]): Unit = js.native
 }

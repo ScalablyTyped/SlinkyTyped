@@ -41,7 +41,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fileType.fileTypeStrings.videoSlashvndDotavi
   - typingsSlinky.fileType.fileTypeStrings.audioSlashvndDotwave
   - typingsSlinky.fileType.fileTypeStrings.audioSlashqcelp
-  - typingsSlinky.fileType.fileTypeStrings.`audioSlashx-ms-wma`
+  - typingsSlinky.fileType.fileTypeStrings.`audioSlashx-ms-asf`
   - typingsSlinky.fileType.fileTypeStrings.`videoSlashx-ms-asf`
   - typingsSlinky.fileType.fileTypeStrings.`applicationSlashvndDotms-asf`
   - typingsSlinky.fileType.fileTypeStrings.videoSlashmpeg
@@ -80,7 +80,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-rpm`
   - typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-compress`
   - typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-lzip`
-  - typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-msi`
+  - typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-cfb`
   - typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-mie`
   - typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-apache-arrow`
   - typingsSlinky.fileType.fileTypeStrings.applicationSlashmxf
@@ -131,6 +131,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-lzh-compressed`
   - typingsSlinky.fileType.fileTypeStrings.`applicationSlashpgp-encrypted`
   - typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-asar`
+  - typingsSlinky.fileType.fileTypeStrings.modelSlashstl
 */
 trait MimeType extends js.Object
 object MimeType {
@@ -220,6 +221,9 @@ object MimeType {
   def `applicationSlashx-bzip2`: typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-bzip2` = "application/x-bzip2".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-bzip2`]
   
   @scala.inline
+  def `applicationSlashx-cfb`: typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-cfb` = "application/x-cfb".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-cfb`]
+  
+  @scala.inline
   def `applicationSlashx-compress`: typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-compress` = "application/x-compress".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-compress`]
   
   @scala.inline
@@ -248,9 +252,6 @@ object MimeType {
   
   @scala.inline
   def `applicationSlashx-msdownload`: typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-msdownload` = "application/x-msdownload".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-msdownload`]
-  
-  @scala.inline
-  def `applicationSlashx-msi`: typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-msi` = "application/x-msi".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-msi`]
   
   @scala.inline
   def `applicationSlashx-nintendo-nes-rom`: typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-nintendo-nes-rom` = "application/x-nintendo-nes-rom".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`applicationSlashx-nintendo-nes-rom`]
@@ -343,7 +344,7 @@ object MimeType {
   def `audioSlashx-m4a`: typingsSlinky.fileType.fileTypeStrings.`audioSlashx-m4a` = "audio/x-m4a".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`audioSlashx-m4a`]
   
   @scala.inline
-  def `audioSlashx-ms-wma`: typingsSlinky.fileType.fileTypeStrings.`audioSlashx-ms-wma` = "audio/x-ms-wma".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`audioSlashx-ms-wma`]
+  def `audioSlashx-ms-asf`: typingsSlinky.fileType.fileTypeStrings.`audioSlashx-ms-asf` = "audio/x-ms-asf".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`audioSlashx-ms-asf`]
   
   @scala.inline
   def `audioSlashx-musepack`: typingsSlinky.fileType.fileTypeStrings.`audioSlashx-musepack` = "audio/x-musepack".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`audioSlashx-musepack`]
@@ -464,6 +465,9 @@ object MimeType {
   
   @scala.inline
   def `modelSlashgltf-binary`: typingsSlinky.fileType.fileTypeStrings.`modelSlashgltf-binary` = "model/gltf-binary".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.`modelSlashgltf-binary`]
+  
+  @scala.inline
+  def modelSlashstl: typingsSlinky.fileType.fileTypeStrings.modelSlashstl = "model/stl".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.modelSlashstl]
   
   @scala.inline
   def textSlashcalendar: typingsSlinky.fileType.fileTypeStrings.textSlashcalendar = "text/calendar".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.textSlashcalendar]

@@ -11,7 +11,7 @@ trait TeamClassSettings extends js.Object {
     * If set to true, enables sending of weekly assignments digest emails to parents/guardians, provided the tenant admin has
     * enabled the setting globally.
     */
-  var notifyGuardiansAboutAssignments: js.UndefOr[Boolean] = js.native
+  var notifyGuardiansAboutAssignments: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object TeamClassSettings {
   
@@ -37,9 +37,12 @@ object TeamClassSettings {
     }
     
     @scala.inline
-    def setNotifyGuardiansAboutAssignments(value: Boolean): Self = this.set("notifyGuardiansAboutAssignments", value.asInstanceOf[js.Any])
+    def setNotifyGuardiansAboutAssignments(value: NullableOption[Boolean]): Self = this.set("notifyGuardiansAboutAssignments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNotifyGuardiansAboutAssignments: Self = this.set("notifyGuardiansAboutAssignments", js.undefined)
+    
+    @scala.inline
+    def setNotifyGuardiansAboutAssignmentsNull: Self = this.set("notifyGuardiansAboutAssignments", null)
   }
 }

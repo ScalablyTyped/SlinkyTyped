@@ -503,12 +503,12 @@ object xrmStrings {
        with typingsSlinky.xrm.Xrm.Attributes.AttributeType
   
   @js.native
-  sealed trait multioptionset
-    extends AttributeType
-       with typingsSlinky.xrm.Xrm.Attributes.AttributeType
+  sealed trait multioptionset extends AttributeType
   
   @js.native
-  sealed trait multiselectoptionset extends StandardControlType
+  sealed trait multiselectoptionset
+    extends typingsSlinky.xrm.Xrm.Attributes.AttributeType
+       with StandardControlType
   
   @js.native
   sealed trait never

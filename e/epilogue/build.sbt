@@ -1,26 +1,26 @@
 organization := "org.scalablytyped.slinky"
 name := "epilogue"
-version := "0.7-dt-20200227Z-300b9f"
-scalaVersion := "2.13.2"
+version := "0.7-dt-20200227Z-70285d"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20200520Z-6ce100",
-  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-3172ef",
-  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200515Z-49be3e",
-  "org.scalablytyped.slinky" %%% "continuation-local-storage" % "3.2-dt-20200515Z-e376bc",
-  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200515Z-35525e",
-  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200515Z-f4fc10",
-  "org.scalablytyped.slinky" %%% "lodash" % "4.14-dt-20200519Z-08d73a",
-  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200515Z-2900a9",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-8e6135",
-  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-0a4f98",
-  "org.scalablytyped.slinky" %%% "sequelize" % "4.28.0-dt-20200515Z-4711d6",
-  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200519Z-85de9b",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
-  "org.scalablytyped.slinky" %%% "validator" % "13.0-dt-20200407Z-4ccb27")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20201028Z-64939d",
+  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-288ac7",
+  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20201002Z-8c61d7",
+  "org.scalablytyped.slinky" %%% "continuation-local-storage" % "3.2-dt-20201002Z-8c3815",
+  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20201111Z-3019f6",
+  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200921Z-5d68bc",
+  "org.scalablytyped.slinky" %%% "lodash" % "4.14-dt-20201105Z-cc83da",
+  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200722Z-6314e7",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20201002Z-ff6847",
+  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20201002Z-f6189b",
+  "org.scalablytyped.slinky" %%% "sequelize" % "4.28.0-dt-20201002Z-7cde05",
+  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20201117Z-ffbd1b",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "validator" % "13.1-dt-20200624Z-cf8f99")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

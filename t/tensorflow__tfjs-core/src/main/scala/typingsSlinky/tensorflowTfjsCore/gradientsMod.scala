@@ -1,14 +1,14 @@
 package typingsSlinky.tensorflowTfjsCore
 
 import typingsSlinky.tensorflowTfjsCore.anon.Grad
-import typingsSlinky.tensorflowTfjsCore.anon.GradsValue
+import typingsSlinky.tensorflowTfjsCore.anon.Grads
 import typingsSlinky.tensorflowTfjsCore.anon.Value
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Variable
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
 import typingsSlinky.tensorflowTfjsCore.engineMod.CustomGradientFunc
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Variable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -54,8 +54,9 @@ object gradientsMod extends js.Object {
     * @param f The function to evaluate in forward mode, which should return
     *     `{value: Tensor, gradFunc: (dy, saved) => Tensor[]}`, where `gradFunc`
     *     returns the custom gradients of `f` with respect to its inputs.
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def customGrad[T /* <: Tensor[Rank] */](f: CustomGradientFunc[T]): js.Function1[/* repeated */ Tensor[Rank], T] = js.native
   
   /**
@@ -89,8 +90,9 @@ object gradientsMod extends js.Object {
     * ```
     *
     * @param f The function f(x), to compute gradient for.
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def grad(f: js.Function1[/* x */ Tensor[Rank], Tensor[Rank]]): js.Function2[
     /* x */ TensorLike | Tensor[Rank], 
     /* dy */ js.UndefOr[TensorLike | Tensor[Rank]], 
@@ -123,8 +125,9 @@ object gradientsMod extends js.Object {
     * ```
     *
     * @param f The function `f(x1, x2,...)` to compute gradients for.
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def grads(f: js.Function1[/* repeated */ Tensor[Rank], Tensor[Rank]]): js.Function2[
     /* args */ js.Array[Tensor[Rank] | TensorLike], 
     /* dy */ js.UndefOr[Tensor[Rank] | TensorLike], 
@@ -153,8 +156,9 @@ object gradientsMod extends js.Object {
     * console.log('grad');
     * grad.print();
     * ```
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def valueAndGrad[I /* <: Tensor[Rank] */, O /* <: Tensor[Rank] */](f: js.Function1[/* x */ I, O]): js.Function2[/* x */ I, /* dy */ js.UndefOr[O], Grad[O, I]] = js.native
   
   /**
@@ -185,9 +189,10 @@ object gradientsMod extends js.Object {
     * console.log('db');
     * db.print();
     * ```
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
-  def valueAndGrads[O /* <: Tensor[Rank] */](f: js.Function1[/* repeated */ Tensor[Rank], O]): js.Function2[/* args */ js.Array[Tensor[Rank]], /* dy */ js.UndefOr[O], GradsValue[O]] = js.native
+  def valueAndGrads[O /* <: Tensor[Rank] */](f: js.Function1[/* repeated */ Tensor[Rank], O]): js.Function2[/* args */ js.Array[Tensor[Rank]], /* dy */ js.UndefOr[O], Grads[O]] = js.native
   
   /**
     * Computes and returns the gradient of f(x) with respect to the list of
@@ -216,8 +221,9 @@ object gradientsMod extends js.Object {
     *     If the `varList` argument is provided explicitly and contains a subset of
     *     non-trainable variables, this map in the return value will contain keys
     *     that map the names of the non-trainable variables to `null`.
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def variableGrads(f: js.Function0[Scalar]): Value = js.native
   def variableGrads(f: js.Function0[Scalar], varList: js.Array[Variable[Rank]]): Value = js.native
 }

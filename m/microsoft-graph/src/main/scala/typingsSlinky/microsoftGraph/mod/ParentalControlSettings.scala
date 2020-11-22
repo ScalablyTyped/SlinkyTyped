@@ -11,7 +11,7 @@ trait ParentalControlSettings extends js.Object {
     * Specifies the two-letter ISO country codes. Access to the application will be blocked for minors from the countries
     * specified in this list.
     */
-  var countriesBlockedForMinors: js.UndefOr[js.Array[String]] = js.native
+  var countriesBlockedForMinors: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   /**
     * Specifies the legal age group rule that applies to users of the app. Can be set to one of the following values:
@@ -21,7 +21,7 @@ trait ParentalControlSettings extends js.Object {
     * rules.RequireConsentForKidsRequires parental consent for ages below 14, regardless of country minor
     * rules.BlockMinorsBlocks minors from using the app.
     */
-  var legalAgeGroupRule: js.UndefOr[String] = js.native
+  var legalAgeGroupRule: js.UndefOr[NullableOption[String]] = js.native
 }
 object ParentalControlSettings {
   
@@ -50,15 +50,21 @@ object ParentalControlSettings {
     def setCountriesBlockedForMinorsVarargs(value: String*): Self = this.set("countriesBlockedForMinors", js.Array(value :_*))
     
     @scala.inline
-    def setCountriesBlockedForMinors(value: js.Array[String]): Self = this.set("countriesBlockedForMinors", value.asInstanceOf[js.Any])
+    def setCountriesBlockedForMinors(value: NullableOption[js.Array[String]]): Self = this.set("countriesBlockedForMinors", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCountriesBlockedForMinors: Self = this.set("countriesBlockedForMinors", js.undefined)
     
     @scala.inline
-    def setLegalAgeGroupRule(value: String): Self = this.set("legalAgeGroupRule", value.asInstanceOf[js.Any])
+    def setCountriesBlockedForMinorsNull: Self = this.set("countriesBlockedForMinors", null)
+    
+    @scala.inline
+    def setLegalAgeGroupRule(value: NullableOption[String]): Self = this.set("legalAgeGroupRule", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLegalAgeGroupRule: Self = this.set("legalAgeGroupRule", js.undefined)
+    
+    @scala.inline
+    def setLegalAgeGroupRuleNull: Self = this.set("legalAgeGroupRule", null)
   }
 }

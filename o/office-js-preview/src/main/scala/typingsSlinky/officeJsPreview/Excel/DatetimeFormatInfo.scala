@@ -12,8 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Defines the culturally appropriate format of displaying numbers. This is based on current system culture settings.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait DatetimeFormatInfo extends ClientObject {
@@ -26,8 +25,7 @@ trait DatetimeFormatInfo extends ClientObject {
     *
     * Gets the string used as the date separator. This is based on current system settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val dateSeparator: String = js.native
   
@@ -46,8 +44,7 @@ trait DatetimeFormatInfo extends ClientObject {
     *
     * Gets the format string for a long date value. This is based on current system settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val longDatePattern: String = js.native
   
@@ -55,8 +52,7 @@ trait DatetimeFormatInfo extends ClientObject {
     *
     * Gets the format string for a long time value. This is based on current system settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val longTimePattern: String = js.native
   
@@ -64,8 +60,7 @@ trait DatetimeFormatInfo extends ClientObject {
     *
     * Gets the format string for a short date value. This is based on current system settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val shortDatePattern: String = js.native
   
@@ -73,8 +68,7 @@ trait DatetimeFormatInfo extends ClientObject {
     *
     * Gets the string used as the time separator. This is based on current system settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val timeSeparator: String = js.native
   

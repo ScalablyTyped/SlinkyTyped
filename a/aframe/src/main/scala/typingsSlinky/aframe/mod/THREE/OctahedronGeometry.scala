@@ -6,5 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("aframe", "THREE.OctahedronGeometry")
 @js.native
+/**
+	 * @param [radius=1]
+	 * @param [detail=0]
+	 */
 class OctahedronGeometry ()
   extends typingsSlinky.three.mod.OctahedronGeometry

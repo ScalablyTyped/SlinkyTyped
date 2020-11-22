@@ -65,6 +65,6 @@ object omnibarMod extends js.Object {
     
     var displayName: String = js.native
     
-    def ofType[T](): Instantiable1[/* props */ IOmnibarProps[T], Omnibar[T]] = js.native
+    def ofType[U](): Instantiable1[/* props */ IOmnibarProps[U], Omnibar[U]] = js.native
   }
 }

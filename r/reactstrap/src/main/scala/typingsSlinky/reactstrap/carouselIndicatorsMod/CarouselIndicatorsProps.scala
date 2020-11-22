@@ -2,8 +2,7 @@ package typingsSlinky.reactstrap.carouselIndicatorsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,8 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait CarouselIndicatorsProps
-  extends AllHTMLAttributes[HTMLElement]
-     with ClassAttributes[HTMLElement]
+  extends HTMLAttributes[HTMLElement]
      with /* key */ StringDictionary[js.Any] {
   
   var activeIndex: Double = js.native

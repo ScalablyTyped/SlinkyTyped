@@ -4,7 +4,7 @@ import typingsSlinky.jupyterlabRendermime.registryMod.RenderMimeRegistry.IOption
 import typingsSlinky.jupyterlabRendermime.tokensMod.IRenderMimeRegistry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/rendermime/lib/registry", "RenderMimeRegistry")
 @js.native
@@ -15,9 +15,18 @@ import scala.scalajs.js.annotation._
   */
 class RenderMimeRegistry_ () extends IRenderMimeRegistry {
   def this(options: IOptions) = this()
+  
   var _factories: js.Any = js.native
+  
   var _id: js.Any = js.native
+  
   var _ranks: js.Any = js.native
+  
   var _types: js.Any = js.native
+  
+  /**
+    * The ordered list of mimeTypes.
+    */
+  @JSName("mimeTypes")
+  def mimeTypes_MRenderMimeRegistry_ : js.Array[String] = js.native
 }
-

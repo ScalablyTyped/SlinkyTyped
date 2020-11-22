@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.projectsMod.projects
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IDomainModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.projectsMod.StructureVersionInfo
@@ -10,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/modules relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/modules relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
@@ -18,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.unitsMod.IAbstractUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.unitsMod.IStructuralUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase because Already inherited
-- typingsSlinky.mendixmodelsdk.projectsMod.projects.IModule because var conflicts: containerAsFolderBase, containerAsProject, documents, folders, id, isLoaded, model, structureTypeName, unit. Inlined sortIndex, name, domainModel, moduleSecurity, fromAppStore, isReusableComponent, appStoreGuid, appStoreVersionGuid, appStoreVersion */ @JSImport("mendixmodelsdk/dist/gen/projects", "projects.Module")
+- typingsSlinky.mendixmodelsdk.projectsMod.projects.IModule because var conflicts: containerAsFolderBase, containerAsProject, documents, folders, id, isLoaded, model, structureTypeName, unit. Inlined sortIndex, name, domainModel, moduleSecurity, fromAppStore, isReusableComponent, appStoreGuid, appStoreVersionGuid, appStoreVersion, appStorePackageId */ @JSImport("mendixmodelsdk/dist/gen/projects", "projects.Module")
 @js.native
 class Module protected () extends FolderBase {
   def this(
@@ -33,6 +32,17 @@ class Module protected () extends FolderBase {
   def appStoreGuid_=(newValue: String): Unit = js.native
   @JSName("appStoreGuid")
   var appStoreGuid_FModule: String = js.native
+  
+  /**
+    * In version 8.13.0: introduced
+    */
+  def appStorePackageId: Double = js.native
+  def appStorePackageId_=(newValue: Double): Unit = js.native
+  /**
+    * In version 8.13.0: introduced
+    */
+  @JSName("appStorePackageId")
+  var appStorePackageId_FModule: Double = js.native
   
   def appStoreVersion: String = js.native
   
@@ -71,9 +81,6 @@ class Module protected () extends FolderBase {
     */
   @JSName("isReusableComponent")
   var isReusableComponent_FModule: Boolean = js.native
-  
-  @JSName("model")
-  var model_FModule: IModel = js.native
   
   def moduleSecurity: IModuleSecurity = js.native
   def moduleSecurity_=(newValue: IModuleSecurity): Unit = js.native

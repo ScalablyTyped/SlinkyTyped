@@ -30,7 +30,7 @@ object Steps {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Steps] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])

@@ -12,6 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createImmediatelyInvokedFunctionExpression extends js.Object {
   
+  /** @deprecated Use `factory.createImmediatelyInvokedFunctionExpression` or the factory supplied by your transformation context instead. */
   def apply(statements: js.Array[Statement]): CallExpression = js.native
+  /** @deprecated Use `factory.createImmediatelyInvokedFunctionExpression` or the factory supplied by your transformation context instead. */
   def apply(statements: js.Array[Statement], param: ParameterDeclaration, paramValue: Expression): CallExpression = js.native
 }

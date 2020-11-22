@@ -1,7 +1,5 @@
 package typingsSlinky.jestTransform
 
-import typingsSlinky.jestTransform.anon.Code
-import typingsSlinky.jestTransform.jestTransformStrings.ObjectDotLessthansignanonymousGreaterthansign
 import typingsSlinky.jestTransform.typesMod.Options
 import typingsSlinky.jestTransform.typesMod.TransformResult
 import typingsSlinky.jestTypes.configMod.Path
@@ -14,6 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object scriptTransformerMod extends js.Object {
   
+  def createTranspilingRequire(config: ProjectConfig): js.Function2[/* resolverPath */ String, /* applyInteropRequireDefault */ js.UndefOr[Boolean], _] = js.native
+  
   @js.native
   trait ScriptTransformer extends js.Object {
     
@@ -24,8 +24,6 @@ object scriptTransformerMod extends js.Object {
     var _getCacheKey: js.Any = js.native
     
     var _getFileCachePath: js.Any = js.native
-    
-    var _getRealPath: js.Any = js.native
     
     var _getTransformPath: js.Any = js.native
     
@@ -60,17 +58,26 @@ object scriptTransformerMod extends js.Object {
     
     def transformJson(filename: Path, options: Options, fileSource: String): String = js.native
     
-    def transformSource(filepath: Path, content: String, instrument: Boolean): Code = js.native
+    def transformSource(filepath: Path, content: String, instrument: Boolean): TransformResult = js.native
+    def transformSource(
+      filepath: Path,
+      content: String,
+      instrument: Boolean,
+      supportsDynamicImport: js.UndefOr[scala.Nothing],
+      supportsStaticESM: Boolean
+    ): TransformResult = js.native
+    def transformSource(filepath: Path, content: String, instrument: Boolean, supportsDynamicImport: Boolean): TransformResult = js.native
+    def transformSource(
+      filepath: Path,
+      content: String,
+      instrument: Boolean,
+      supportsDynamicImport: Boolean,
+      supportsStaticESM: Boolean
+    ): TransformResult = js.native
   }
   
   @js.native
   class default protected () extends ScriptTransformer {
     def this(config: ProjectConfig) = this()
-  }
-  /* static members */
-  @js.native
-  object default extends js.Object {
-    
-    var EVAL_RESULT_VARIABLE: ObjectDotLessthansignanonymousGreaterthansign = js.native
   }
 }

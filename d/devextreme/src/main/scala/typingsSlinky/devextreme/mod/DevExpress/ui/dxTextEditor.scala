@@ -7,9 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTextEditor extends Editor {
   
-  /** @name dxTextEditor.blur() */
+  /**
+    * [descr:dxTextEditor.blur()]
+    */
   def blur(): Unit = js.native
   
-  /** @name dxTextEditor.getButton(name) */
+  /**
+    * [descr:dxTextEditor.getButton(name)]
+    */
   def getButton(name: String): js.UndefOr[dxButton] = js.native
 }

@@ -37,10 +37,6 @@ class Survey () extends SurveyModel {
   
   var koIsLastPage: js.Any = js.native
   
-  var koProgress: js.Any = js.native
-  
-  var koProgressText: js.Any = js.native
-  
   var koState: js.Any = js.native
   
   var koTimerInfoText: js.Any = js.native

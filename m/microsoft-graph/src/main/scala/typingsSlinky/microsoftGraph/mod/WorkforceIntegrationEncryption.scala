@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkforceIntegrationEncryption extends js.Object {
   
   // Possible values are: sharedSecret, unknownFutureValue.
-  var protocol: js.UndefOr[WorkforceIntegrationEncryptionProtocol] = js.native
+  var protocol: js.UndefOr[NullableOption[WorkforceIntegrationEncryptionProtocol]] = js.native
   
   // Encryption shared secret.
-  var secret: js.UndefOr[String] = js.native
+  var secret: js.UndefOr[NullableOption[String]] = js.native
 }
 object WorkforceIntegrationEncryption {
   
@@ -37,15 +37,21 @@ object WorkforceIntegrationEncryption {
     }
     
     @scala.inline
-    def setProtocol(value: WorkforceIntegrationEncryptionProtocol): Self = this.set("protocol", value.asInstanceOf[js.Any])
+    def setProtocol(value: NullableOption[WorkforceIntegrationEncryptionProtocol]): Self = this.set("protocol", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProtocol: Self = this.set("protocol", js.undefined)
     
     @scala.inline
-    def setSecret(value: String): Self = this.set("secret", value.asInstanceOf[js.Any])
+    def setProtocolNull: Self = this.set("protocol", null)
+    
+    @scala.inline
+    def setSecret(value: NullableOption[String]): Self = this.set("secret", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSecret: Self = this.set("secret", js.undefined)
+    
+    @scala.inline
+    def setSecretNull: Self = this.set("secret", null)
   }
 }

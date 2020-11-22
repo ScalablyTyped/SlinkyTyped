@@ -4,6 +4,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.layoutGridMod.ALIGNMENT
 import typingsSlinky.baseui.layoutGridMod.BEHAVIOR
+import typingsSlinky.baseui.layoutGridMod.GridOverrides
 import typingsSlinky.baseui.layoutGridMod.GridProps
 import typingsSlinky.baseui.layoutGridMod.Responsive
 import scala.scalajs.js
@@ -63,7 +64,7 @@ object Grid {
     ): this.type = set("gridUnit", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overrides(value: typingsSlinky.baseui.anon.Grid): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: GridOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: GridProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

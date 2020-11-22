@@ -18,10 +18,10 @@ object useNestedTreeListMod extends js.Object {
   def buildTree[T /* <: BaseTreeItem */](parentId: TreeItemId, items: js.Array[T]): js.UndefOr[js.Array[NestedTreeItem[T]]] = js.native
   def buildTree[T /* <: BaseTreeItem */](parentId: TreeItemId, items: js.Array[T], sort: TreeItemSorter[T]): js.UndefOr[js.Array[NestedTreeItem[T]]] = js.native
   
-  def default[T /* <: BaseTreeItem */](tree: TreeData[T]): js.Array[NestedTreeItem[T]] = js.native
-  def default[T /* <: BaseTreeItem */](tree: TreeData[T], sort: js.UndefOr[scala.Nothing], rootId: TreeItemId): js.Array[NestedTreeItem[T]] = js.native
-  def default[T /* <: BaseTreeItem */](tree: TreeData[T], sort: TreeItemSorter[T]): js.Array[NestedTreeItem[T]] = js.native
-  def default[T /* <: BaseTreeItem */](tree: TreeData[T], sort: TreeItemSorter[T], rootId: TreeItemId): js.Array[NestedTreeItem[T]] = js.native
+  def useNestedTreeList[T /* <: BaseTreeItem */](tree: TreeData[T]): js.Array[NestedTreeItem[T]] = js.native
+  def useNestedTreeList[T /* <: BaseTreeItem */](tree: TreeData[T], sort: js.UndefOr[scala.Nothing], rootId: TreeItemId): js.Array[NestedTreeItem[T]] = js.native
+  def useNestedTreeList[T /* <: BaseTreeItem */](tree: TreeData[T], sort: TreeItemSorter[T]): js.Array[NestedTreeItem[T]] = js.native
+  def useNestedTreeList[T /* <: BaseTreeItem */](tree: TreeData[T], sort: TreeItemSorter[T], rootId: TreeItemId): js.Array[NestedTreeItem[T]] = js.native
   
   type NestedTreeItem[T /* <: BaseTreeItem */] = T with ChildItems
 }

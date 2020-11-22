@@ -35,7 +35,7 @@ object vendorMod extends js.Object {
   val Header: ReactComponentClass[StackHeaderProps] = js.native
   
   def HeaderBackButton(
-    hasDisabledAllowFontScalingBackImageLabelLabelStyleLabelVisibleOnLabelLayoutOnPressPressColorAndroidScreenLayoutTintColorTitleLayoutTruncatedLabelAccessibilityLabel: Props
+    hasDisabledAllowFontScalingBackImageLabelLabelStyleLabelVisibleOnLabelLayoutOnPressPressColorAndroidScreenLayoutTintColorTitleLayoutTruncatedLabelAccessibilityLabelStyle: Props
   ): ReactElement = js.native
   
   def HeaderBackground(hasStyleRest: typingsSlinky.reactNavigationStack.headerBackgroundMod.Props): ReactElement = js.native

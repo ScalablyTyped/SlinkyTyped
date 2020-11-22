@@ -32,16 +32,14 @@ import typingsSlinky.awsSdkClientKmsNode.revokeGrantExceptionsUnionMod.RevokeGra
 import typingsSlinky.awsSdkClientKmsNode.scheduleKeyDeletionExceptionsUnionMod.ScheduleKeyDeletionExceptionsUnion
 import typingsSlinky.awsSdkClientKmsNode.updateAliasExceptionsUnionMod.UpdateAliasExceptionsUnion
 import typingsSlinky.awsSdkClientKmsNode.updateKeyDescriptionExceptionsUnionMod.UpdateKeyDescriptionExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_DependencyTimeoutExceptionDetails> * / any */ @js.native
 trait DependencyTimeoutException
-  extends ServiceException[DependencyTimeoutExceptionDetails]
-     with CancelKeyDeletionExceptionsUnion
+  extends CancelKeyDeletionExceptionsUnion
      with CreateAliasExceptionsUnion
      with CreateGrantExceptionsUnion
      with CreateKeyExceptionsUnion
@@ -74,19 +72,13 @@ trait DependencyTimeoutException
      with UpdateAliasExceptionsUnion
      with UpdateKeyDescriptionExceptionsUnion {
   
-  @JSName("name")
-  var name_DependencyTimeoutException: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.DependencyTimeoutException = js.native
+  var name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.DependencyTimeoutException = js.native
 }
 object DependencyTimeoutException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: DependencyTimeoutExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.DependencyTimeoutException
-  ): DependencyTimeoutException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.DependencyTimeoutException): DependencyTimeoutException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[DependencyTimeoutException]
   }
   

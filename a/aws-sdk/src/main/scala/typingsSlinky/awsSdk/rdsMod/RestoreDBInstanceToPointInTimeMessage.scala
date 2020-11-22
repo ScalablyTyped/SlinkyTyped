@@ -48,7 +48,7 @@ trait RestoreDBInstanceToPointInTimeMessage extends js.Object {
   var DeletionProtection: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * Specify the Active Directory directory ID to restore the DB instance in. The domain must be created prior to this operation. Currently, only Microsoft SQL Server and Oracle DB instances can be created in an Active Directory Domain.  For Microsoft SQL Server DB instances, Amazon RDS can use Windows Authentication to authenticate users that connect to the DB instance. For more information, see  Using Windows Authentication with an Amazon RDS DB Instance Running Microsoft SQL Server in the Amazon RDS User Guide. For Oracle DB instances, Amazon RDS can use Kerberos authentication to authenticate users that connect to the DB instance. For more information, see  Using Kerberos Authentication with Amazon RDS for Oracle in the Amazon RDS User Guide.
+    * Specify the Active Directory directory ID to restore the DB instance in. The domain must be created prior to this operation. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an Active Directory Domain. For more information, see  Kerberos Authentication in the Amazon RDS User Guide.
     */
   var Domain: js.UndefOr[String] = js.native
   
@@ -63,7 +63,7 @@ trait RestoreDBInstanceToPointInTimeMessage extends js.Object {
   var EnableCloudwatchLogsExports: js.UndefOr[LogTypeList] = js.native
   
   /**
-    * A value that indicates whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts. By default, mapping is disabled. For information about the supported DB engines, see CreateDBInstance. For more information about IAM database authentication, see  IAM Database Authentication for MySQL and PostgreSQL in the Amazon RDS User Guide. 
+    * A value that indicates whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts. By default, mapping is disabled. For more information about IAM database authentication, see  IAM Database Authentication for MySQL and PostgreSQL in the Amazon RDS User Guide. 
     */
   var EnableIAMDatabaseAuthentication: js.UndefOr[BooleanOptional] = js.native
   
@@ -81,6 +81,11 @@ trait RestoreDBInstanceToPointInTimeMessage extends js.Object {
     * License model information for the restored DB instance. Default: Same as source.  Valid values: license-included | bring-your-own-license | general-public-license 
     */
   var LicenseModel: js.UndefOr[String] = js.native
+  
+  /**
+    * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+    */
+  var MaxAllocatedStorage: js.UndefOr[IntegerOptional] = js.native
   
   /**
     * A value that indicates whether the DB instance is a Multi-AZ deployment. Constraint: You can't specify the AvailabilityZone parameter if the DB instance is a Multi-AZ deployment.
@@ -277,6 +282,12 @@ object RestoreDBInstanceToPointInTimeMessage {
     
     @scala.inline
     def deleteLicenseModel: Self = this.set("LicenseModel", js.undefined)
+    
+    @scala.inline
+    def setMaxAllocatedStorage(value: IntegerOptional): Self = this.set("MaxAllocatedStorage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxAllocatedStorage: Self = this.set("MaxAllocatedStorage", js.undefined)
     
     @scala.inline
     def setMultiAZ(value: BooleanOptional): Self = this.set("MultiAZ", value.asInstanceOf[js.Any])

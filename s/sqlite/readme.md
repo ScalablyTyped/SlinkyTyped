@@ -1,7 +1,7 @@
 
 # Scala.js typings for sqlite
 
-Typings are for version 4.0.12
+Typings are for version 4.0.17
 
 ## Library description:
 SQLite client for Node.js applications with SQL-based migrations API

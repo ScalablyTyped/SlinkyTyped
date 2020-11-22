@@ -24,56 +24,63 @@ trait FragmentNode extends js.Object
 object FragmentNode {
   
   @scala.inline
-  def OpaqueTagNode(contents: String, name: opaqueTag): FragmentNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def OpaqueTagNode(contents: String, location: LocationRange, name: opaqueTag): FragmentNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FragmentNode]
   }
   
   @scala.inline
-  def StarNode(contents: js.Array[FragmentNode], name: star): FragmentNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def StarNode(contents: js.Array[FragmentNode], location: LocationRange, name: star): FragmentNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FragmentNode]
   }
   
   @scala.inline
-  def TagNode(contents: String, name: tag): FragmentNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def TagNode(contents: String, location: LocationRange, name: tag): FragmentNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FragmentNode]
   }
   
   @scala.inline
-  def TextNode(contents: String, name: text): FragmentNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def TextNode(contents: String, location: LocationRange, name: text): FragmentNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FragmentNode]
   }
   
   @scala.inline
-  def TickNode(contents: js.Array[FragmentNode], name: tick): FragmentNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def TickNode(contents: js.Array[FragmentNode], location: LocationRange, name: tick): FragmentNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FragmentNode]
   }
   
   @scala.inline
-  def CommentNode(contents: String, name: comment): FragmentNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def CommentNode(contents: String, location: LocationRange, name: comment): FragmentNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FragmentNode]
   }
   
   @scala.inline
-  def UnderscoreNode(contents: js.Array[FragmentNode], name: underscore): FragmentNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def UnderscoreNode(contents: js.Array[FragmentNode], location: LocationRange, name: underscore): FragmentNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FragmentNode]
   }
   
   @scala.inline
-  def TildeNode(contents: js.Array[FragmentNode], name: tilde): FragmentNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def TildeNode(contents: js.Array[FragmentNode], location: LocationRange, name: tilde): FragmentNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[FragmentNode]
   }
   
   @scala.inline
-  def PipeNode(contents: Null, name: pipe, nonTerminal: String, optional: Boolean, params: String): FragmentNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nonTerminal = nonTerminal.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
+  def PipeNode(
+    contents: Null,
+    location: LocationRange,
+    name: pipe,
+    nonTerminal: String,
+    optional: Boolean,
+    params: String
+  ): FragmentNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], nonTerminal = nonTerminal.asInstanceOf[js.Any], optional = optional.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
     __obj.asInstanceOf[FragmentNode]
   }
 }

@@ -17,7 +17,7 @@ trait IosNetworkUsageRule extends js.Object {
     * Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500
     * elements.
     */
-  var managedApps: js.UndefOr[js.Array[AppListItem]] = js.native
+  var managedApps: js.UndefOr[NullableOption[js.Array[AppListItem]]] = js.native
 }
 object IosNetworkUsageRule {
   
@@ -58,9 +58,12 @@ object IosNetworkUsageRule {
     def setManagedAppsVarargs(value: AppListItem*): Self = this.set("managedApps", js.Array(value :_*))
     
     @scala.inline
-    def setManagedApps(value: js.Array[AppListItem]): Self = this.set("managedApps", value.asInstanceOf[js.Any])
+    def setManagedApps(value: NullableOption[js.Array[AppListItem]]): Self = this.set("managedApps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteManagedApps: Self = this.set("managedApps", js.undefined)
+    
+    @scala.inline
+    def setManagedAppsNull: Self = this.set("managedApps", null)
   }
 }

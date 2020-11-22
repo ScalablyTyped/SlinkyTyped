@@ -16,10 +16,10 @@ trait PropertySignature
   var initializer: js.UndefOr[Expression] = js.native
   
   @JSName("kind")
-  var kind_PropertySignature: typingsSlinky.typescript.mod.SyntaxKind.PropertySignature = js.native
+  val kind_PropertySignature: typingsSlinky.typescript.mod.SyntaxKind.PropertySignature = js.native
   
   @JSName("name")
-  var name_PropertySignature: PropertyName = js.native
+  val name_PropertySignature: PropertyName = js.native
   
-  var `type`: js.UndefOr[TypeNode] = js.native
+  val `type`: js.UndefOr[TypeNode] = js.native
 }

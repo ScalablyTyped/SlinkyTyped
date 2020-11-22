@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListDatabasesResult extends js.Object {
   
   var databaseNames: js.Array[String] = js.native
+  
+  var databases: js.UndefOr[js.Array[DatabaseInfo]] = js.native
 }
 object ListDatabasesResult {
   
@@ -37,5 +39,14 @@ object ListDatabasesResult {
     
     @scala.inline
     def setDatabaseNames(value: js.Array[String]): Self = this.set("databaseNames", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDatabasesVarargs(value: DatabaseInfo*): Self = this.set("databases", js.Array(value :_*))
+    
+    @scala.inline
+    def setDatabases(value: js.Array[DatabaseInfo]): Self = this.set("databases", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDatabases: Self = this.set("databases", js.undefined)
   }
 }

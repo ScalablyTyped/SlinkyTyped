@@ -18,9 +18,9 @@ trait FlatbushClass extends js.Object {
   val IndexArrayType: TypedArrayConstructor = js.native
   
   /**
-    * Adds a given rectangle to the index.
+    * Adds a given rectangle to the index. Returns a zero-based, incremental number that represents the newly added rectangle.
     */
-  def add(minX: Double, minY: Double, maxX: Double, maxY: Double): Unit = js.native
+  def add(minX: Double, minY: Double, maxX: Double, maxY: Double): Double = js.native
   
   /**
     * array buffer that holds the index

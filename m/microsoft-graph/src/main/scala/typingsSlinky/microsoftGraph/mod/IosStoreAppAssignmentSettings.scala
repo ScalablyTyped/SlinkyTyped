@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings {
   
   // The VPN Configuration Id to apply for this app.
-  var vpnConfigurationId: js.UndefOr[String] = js.native
+  var vpnConfigurationId: js.UndefOr[NullableOption[String]] = js.native
 }
 object IosStoreAppAssignmentSettings {
   
@@ -34,9 +34,12 @@ object IosStoreAppAssignmentSettings {
     }
     
     @scala.inline
-    def setVpnConfigurationId(value: String): Self = this.set("vpnConfigurationId", value.asInstanceOf[js.Any])
+    def setVpnConfigurationId(value: NullableOption[String]): Self = this.set("vpnConfigurationId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVpnConfigurationId: Self = this.set("vpnConfigurationId", js.undefined)
+    
+    @scala.inline
+    def setVpnConfigurationIdNull: Self = this.set("vpnConfigurationId", null)
   }
 }

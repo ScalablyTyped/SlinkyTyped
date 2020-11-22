@@ -16,6 +16,12 @@ package object personalizeruntimeMod {
   
   type Context = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.personalizeruntimeMod.AttributeValue]
   
+  type FilterAttributeName = java.lang.String
+  
+  type FilterAttributeValue = java.lang.String
+  
+  type FilterValues = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.personalizeruntimeMod.FilterAttributeValue]
+  
   type InputList = js.Array[typingsSlinky.awsSdk.personalizeruntimeMod.ItemID]
   
   type ItemID = java.lang.String
@@ -23,6 +29,8 @@ package object personalizeruntimeMod {
   type ItemList = js.Array[typingsSlinky.awsSdk.personalizeruntimeMod.PredictedItem]
   
   type NumResults = scala.Double
+  
+  type RecommendationID = java.lang.String
   
   type Score = scala.Double
   

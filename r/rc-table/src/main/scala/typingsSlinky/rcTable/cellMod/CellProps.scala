@@ -51,6 +51,8 @@ trait CellProps[RecordType /* <: DefaultRecordType */] extends js.Object {
   /** `record` index. Not `column` index. */
   var index: js.UndefOr[Double] = js.native
   
+  var isSticky: js.UndefOr[Boolean] = js.native
+  
   var lastFixLeft: js.UndefOr[Boolean] = js.native
   
   var lastFixRight: js.UndefOr[Boolean] = js.native
@@ -195,6 +197,12 @@ object CellProps {
     
     @scala.inline
     def deleteIndex: Self = this.set("index", js.undefined)
+    
+    @scala.inline
+    def setIsSticky(value: Boolean): Self = this.set("isSticky", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsSticky: Self = this.set("isSticky", js.undefined)
     
     @scala.inline
     def setLastFixLeft(value: Boolean): Self = this.set("lastFixLeft", value.asInstanceOf[js.Any])

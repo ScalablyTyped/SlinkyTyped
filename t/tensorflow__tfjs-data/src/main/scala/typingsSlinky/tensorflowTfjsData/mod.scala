@@ -34,7 +34,7 @@ object mod extends js.Object {
   def microphone(microphoneConfig: MicrophoneConfig): js.Promise[MicrophoneIterator] = js.native
   
   @JSName("version_data")
-  val versionData: /* "2.0.1" */ String = js.native
+  val versionData: /* "2.7.0" */ String = js.native
   
   def webcam(): js.Promise[WebcamIterator] = js.native
   def webcam(webcamVideoElement: js.UndefOr[scala.Nothing], webcamConfig: WebcamConfig): js.Promise[WebcamIterator] = js.native

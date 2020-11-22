@@ -10,7 +10,7 @@ trait GetManualChunkApi extends js.Object {
   
   def getModuleIds(): IterableIterator[String] = js.native
   
-  def getModuleInfo(moduleId: String): ModuleInfo = js.native
+  def getModuleInfo(moduleId: String): ModuleInfo | Null = js.native
   @JSName("getModuleInfo")
   var getModuleInfo_Original: GetModuleInfo = js.native
 }

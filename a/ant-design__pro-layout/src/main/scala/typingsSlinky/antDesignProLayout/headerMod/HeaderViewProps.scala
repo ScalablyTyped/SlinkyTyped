@@ -1,7 +1,10 @@
 package typingsSlinky.antDesignProLayout.headerMod
 
+import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
+import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.mix
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.side
@@ -15,7 +18,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<@ant-design/pro-layout.@ant-design/pro-layout/lib/defaultSettings.PureSettings> & @ant-design/pro-layout.@ant-design/pro-layout/lib/GlobalHeader.GlobalHeaderProps & {  isMobile :boolean | undefined,   collapsed :boolean | undefined,   logo :react.react.ReactNode | undefined,   headerRender :@ant-design/pro-layout.@ant-design/pro-layout/lib/typings.WithFalse<(props : @ant-design/pro-layout.@ant-design/pro-layout/lib/Header.HeaderViewProps, defaultDom : react.react.ReactNode): react.react.ReactNode> | undefined,   headerTitleRender :@ant-design/pro-layout.@ant-design/pro-layout/lib/typings.WithFalse<(props : @ant-design/pro-layout.@ant-design/pro-layout/lib/Header.HeaderViewProps, defaultDom : react.react.ReactNode): react.react.ReactNode> | undefined,   headerContentRender :@ant-design/pro-layout.@ant-design/pro-layout/lib/typings.WithFalse<(props : @ant-design/pro-layout.@ant-design/pro-layout/lib/Header.HeaderViewProps): react.react.ReactNode> | undefined,   siderWidth :number | undefined,   hasSiderMenu :boolean | undefined} */
+/* Inlined @ant-design/pro-layout.@ant-design/pro-layout/lib/GlobalHeader.GlobalHeaderProps & {  isMobile :boolean | undefined,   collapsed :boolean | undefined,   logo :react.react.ReactNode | undefined,   headerRender :@ant-design/pro-layout.@ant-design/pro-layout/lib/typings.WithFalse<(props : @ant-design/pro-layout.@ant-design/pro-layout/lib/Header.HeaderViewProps, defaultDom : react.react.ReactNode): react.react.ReactNode> | undefined,   headerTitleRender :@ant-design/pro-layout.@ant-design/pro-layout/lib/typings.WithFalse<(props : @ant-design/pro-layout.@ant-design/pro-layout/lib/Header.HeaderViewProps, defaultDom : react.react.ReactNode): react.react.ReactNode> | undefined,   headerContentRender :@ant-design/pro-layout.@ant-design/pro-layout/lib/typings.WithFalse<(props : @ant-design/pro-layout.@ant-design/pro-layout/lib/Header.HeaderViewProps): react.react.ReactNode> | undefined,   siderWidth :number | undefined,   hasSiderMenu :boolean | undefined} */
 @js.native
 trait HeaderViewProps extends js.Object {
   
@@ -42,6 +45,8 @@ trait HeaderViewProps extends js.Object {
   var headerRender: js.UndefOr[
     WithFalse[js.Function2[/* props */ this.type, /* defaultDom */ ReactElement, ReactElement]]
   ] = js.native
+  
+  var headerTheme: js.UndefOr[MenuTheme] = js.native
   
   var headerTitleRender: js.UndefOr[
     WithFalse[js.Function2[/* props */ this.type, /* defaultDom */ ReactElement, ReactElement]]
@@ -78,6 +83,8 @@ trait HeaderViewProps extends js.Object {
   
   var onCollapse: js.UndefOr[js.Function1[/* collapsed */ Boolean, Unit]] = js.native
   
+  var onMenuHeaderClick: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLDivElement], Unit]] = js.native
+  
   var prefixCls: js.UndefOr[String] = js.native
   
   var primaryColor: js.UndefOr[String] = js.native
@@ -90,7 +97,7 @@ trait HeaderViewProps extends js.Object {
   
   var style: js.UndefOr[CSSProperties] = js.native
   
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String | `false`] = js.native
 }
 object HeaderViewProps {
   
@@ -191,6 +198,12 @@ object HeaderViewProps {
     def deleteHeaderRender: Self = this.set("headerRender", js.undefined)
     
     @scala.inline
+    def setHeaderTheme(value: MenuTheme): Self = this.set("headerTheme", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderTheme: Self = this.set("headerTheme", js.undefined)
+    
+    @scala.inline
     def setHeaderTitleRenderFunction2(value: (HeaderViewProps, /* defaultDom */ ReactElement) => ReactElement): Self = this.set("headerTitleRender", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -283,6 +296,12 @@ object HeaderViewProps {
     def deleteOnCollapse: Self = this.set("onCollapse", js.undefined)
     
     @scala.inline
+    def setOnMenuHeaderClick(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMenuHeaderClick", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnMenuHeaderClick: Self = this.set("onMenuHeaderClick", js.undefined)
+    
+    @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -322,7 +341,7 @@ object HeaderViewProps {
     def deleteStyle: Self = this.set("style", js.undefined)
     
     @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: String | `false`): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)

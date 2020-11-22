@@ -2,13 +2,14 @@ package typingsSlinky.rcSlider.sliderMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcSlider.anon.AriaLabel
+import typingsSlinky.rcSlider.interfaceMod.GenericSliderProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SliderProps extends js.Object {
+trait SliderProps extends GenericSliderProps {
   
   var ariaLabelForHandle: js.UndefOr[String] = js.native
   
@@ -18,17 +19,10 @@ trait SliderProps extends js.Object {
   
   var defaultValue: js.UndefOr[Double] = js.native
   
-  var disabled: js.UndefOr[Boolean] = js.native
+  var handle: js.UndefOr[js.Function1[/* props */ AriaLabel, ReactElement]] = js.native
   
-  def handle(props: AriaLabel): ReactElement = js.native
-  
-  var handleStyle: js.UndefOr[CSSProperties] = js.native
-  
-  var included: js.UndefOr[Boolean] = js.native
-  
-  var max: js.UndefOr[Double] = js.native
-  
-  var min: js.UndefOr[Double] = js.native
+  @JSName("handleStyle")
+  var handleStyle_SliderProps: js.UndefOr[CSSProperties] = js.native
   
   var minimumTrackStyle: js.UndefOr[CSSProperties] = js.native
   
@@ -38,27 +32,20 @@ trait SliderProps extends js.Object {
   
   var onChange: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
   
-  var prefixCls: js.UndefOr[String] = js.native
-  
-  var reverse: js.UndefOr[Boolean] = js.native
-  
   var startPoint: js.UndefOr[Double] = js.native
-  
-  var step: js.UndefOr[Double] = js.native
   
   var tabIndex: js.UndefOr[Double] = js.native
   
-  var trackStyle: js.UndefOr[CSSProperties] = js.native
+  @JSName("trackStyle")
+  var trackStyle_SliderProps: js.UndefOr[CSSProperties] = js.native
   
   var value: js.UndefOr[Double] = js.native
-  
-  var vertical: js.UndefOr[Boolean] = js.native
 }
 object SliderProps {
   
   @scala.inline
-  def apply(handle: AriaLabel => ReactElement): SliderProps = {
-    val __obj = js.Dynamic.literal(handle = js.Any.fromFunction1(handle))
+  def apply(): SliderProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[SliderProps]
   }
   
@@ -76,9 +63,6 @@ object SliderProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setHandle(value: AriaLabel => ReactElement): Self = this.set("handle", js.Any.fromFunction1(value))
     
     @scala.inline
     def setAriaLabelForHandle(value: String): Self = this.set("ariaLabelForHandle", value.asInstanceOf[js.Any])
@@ -105,34 +89,16 @@ object SliderProps {
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
     
     @scala.inline
-    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    def setHandle(value: /* props */ AriaLabel => ReactElement): Self = this.set("handle", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    def deleteHandle: Self = this.set("handle", js.undefined)
     
     @scala.inline
     def setHandleStyle(value: CSSProperties): Self = this.set("handleStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHandleStyle: Self = this.set("handleStyle", js.undefined)
-    
-    @scala.inline
-    def setIncluded(value: Boolean): Self = this.set("included", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteIncluded: Self = this.set("included", js.undefined)
-    
-    @scala.inline
-    def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMax: Self = this.set("max", js.undefined)
-    
-    @scala.inline
-    def setMin(value: Double): Self = this.set("min", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMin: Self = this.set("min", js.undefined)
     
     @scala.inline
     def setMinimumTrackStyle(value: CSSProperties): Self = this.set("minimumTrackStyle", value.asInstanceOf[js.Any])
@@ -159,28 +125,10 @@ object SliderProps {
     def deleteOnChange: Self = this.set("onChange", js.undefined)
     
     @scala.inline
-    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
-    
-    @scala.inline
-    def setReverse(value: Boolean): Self = this.set("reverse", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteReverse: Self = this.set("reverse", js.undefined)
-    
-    @scala.inline
     def setStartPoint(value: Double): Self = this.set("startPoint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStartPoint: Self = this.set("startPoint", js.undefined)
-    
-    @scala.inline
-    def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStep: Self = this.set("step", js.undefined)
     
     @scala.inline
     def setTabIndex(value: Double): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
@@ -199,11 +147,5 @@ object SliderProps {
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
-    
-    @scala.inline
-    def setVertical(value: Boolean): Self = this.set("vertical", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteVertical: Self = this.set("vertical", js.undefined)
   }
 }

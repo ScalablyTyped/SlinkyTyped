@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VirtualNodeSpecLoggingAccessLogFile extends js.Object {
   
   /**
-    * The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out.
+    * The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
     */
   var path: Input[String] = js.native
 }

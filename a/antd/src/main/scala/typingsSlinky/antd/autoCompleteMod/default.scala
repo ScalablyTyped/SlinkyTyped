@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("antd/lib/auto-complete", JSImport.Default)
 @js.native
-object default extends TopLevel[RefAutoComplete]
+object default extends TopLevel[RefAutoCompleteWithOption]

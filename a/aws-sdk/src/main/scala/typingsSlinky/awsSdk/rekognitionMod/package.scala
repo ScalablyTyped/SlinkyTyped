@@ -19,6 +19,17 @@ package object rekognitionMod {
   
   type AudioMetadataList = js.Array[typingsSlinky.awsSdk.rekognitionMod.AudioMetadata]
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.FACE
+    - typingsSlinky.awsSdk.awsSdkStrings.HEAD
+    - typingsSlinky.awsSdk.awsSdkStrings.LEFT_HAND
+    - typingsSlinky.awsSdk.awsSdkStrings.RIGHT_HAND
+    - java.lang.String
+  */
+  type BodyPart = typingsSlinky.awsSdk.rekognitionMod._BodyPart | java.lang.String
+  
+  type BodyParts = js.Array[typingsSlinky.awsSdk.rekognitionMod.ProtectiveEquipmentBodyPart]
+  
   type Boolean = scala.Boolean
   
   type BoundingBoxHeight = scala.Double
@@ -89,6 +100,8 @@ package object rekognitionMod {
   type EmotionName = typingsSlinky.awsSdk.rekognitionMod._EmotionName | java.lang.String
   
   type Emotions = js.Array[typingsSlinky.awsSdk.rekognitionMod.Emotion]
+  
+  type EquipmentDetections = js.Array[typingsSlinky.awsSdk.rekognitionMod.EquipmentDetection]
   
   type ExtendedPaginationToken = java.lang.String
   
@@ -284,6 +297,20 @@ package object rekognitionMod {
   type ProjectVersionsPageSize = scala.Double
   
   type ProjectsPageSize = scala.Double
+  
+  type ProtectiveEquipmentPersonIds = js.Array[typingsSlinky.awsSdk.rekognitionMod.UInteger]
+  
+  type ProtectiveEquipmentPersons = js.Array[typingsSlinky.awsSdk.rekognitionMod.ProtectiveEquipmentPerson]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.FACE_COVER
+    - typingsSlinky.awsSdk.awsSdkStrings.HAND_COVER
+    - typingsSlinky.awsSdk.awsSdkStrings.HEAD_COVER
+    - java.lang.String
+  */
+  type ProtectiveEquipmentType = typingsSlinky.awsSdk.rekognitionMod._ProtectiveEquipmentType | java.lang.String
+  
+  type ProtectiveEquipmentTypes = js.Array[typingsSlinky.awsSdk.rekognitionMod.ProtectiveEquipmentType]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.NONE

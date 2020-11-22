@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DoStatement extends IterationStatement {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_DoStatement: typingsSlinky.typescript.mod.SyntaxKind.DoStatement = js.native
+  val kind_DoStatement: typingsSlinky.typescript.mod.SyntaxKind.DoStatement = js.native
 }

@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "Production")
 @js.native
 class Production protected ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Production] {
+  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Production]
+     with Declaration
+     with SourceElement {
   def this(name: Identifier) = this()
   def this(name: Identifier, parameterList: ParameterList) = this()
   def this(

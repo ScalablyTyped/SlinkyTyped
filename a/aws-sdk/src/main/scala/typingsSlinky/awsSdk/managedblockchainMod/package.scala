@@ -122,6 +122,13 @@ package object managedblockchainMod {
   
   type ResourceIdString = java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.LevelDB
+    - typingsSlinky.awsSdk.awsSdkStrings.CouchDB
+    - java.lang.String
+  */
+  type StateDBType = typingsSlinky.awsSdk.managedblockchainMod._StateDBType | java.lang.String
+  
   type String = java.lang.String
   
   /* Rewritten from type alias, can be one of: 

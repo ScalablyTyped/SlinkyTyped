@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AccessPoint extends js.Object {
   
   /**
+    * The ARN for the access point.
+    */
+  var AccessPointArn: js.UndefOr[S3AccessPointArn] = js.native
+  
+  /**
     * The name of the bucket associated with this access point.
     */
   var Bucket: BucketName = js.native
@@ -58,6 +63,12 @@ object AccessPoint {
     
     @scala.inline
     def setNetworkOrigin(value: NetworkOrigin): Self = this.set("NetworkOrigin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAccessPointArn(value: S3AccessPointArn): Self = this.set("AccessPointArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccessPointArn: Self = this.set("AccessPointArn", js.undefined)
     
     @scala.inline
     def setVpcConfiguration(value: VpcConfiguration): Self = this.set("VpcConfiguration", value.asInstanceOf[js.Any])

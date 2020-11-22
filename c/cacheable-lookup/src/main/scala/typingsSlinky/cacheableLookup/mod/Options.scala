@@ -1,6 +1,6 @@
 package typingsSlinky.cacheableLookup.mod
 
-import typingsSlinky.keyv.mod.^
+import typingsSlinky.cacheableLookup.anon.Typeoflookup
 import typingsSlinky.node.dnsMod.Resolver
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,10 +10,36 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Options extends js.Object {
   
   /**
-  	 * A Keyv adapter which stores the cache.
-  	 * @default new Map()
+  	 * Custom cache instance. If `undefined`, it will create a new one.
+  	 * @default undefined
   	 */
-  var cacheAdapter: js.UndefOr[^[_]] = js.native
+  var cache: js.UndefOr[CacheInstance] = js.native
+  
+  /**
+  	 * The time how long it needs to remember failed queries (TTL in seconds).
+  	 *
+  	 * **Note**: This option is independent, `options.maxTtl` does not affect this.
+  	 * @default 0.15
+  	 */
+  var errorTtl: js.UndefOr[Double] = js.native
+  
+  /**
+  	 * When the DNS server responds with `ENOTFOUND` or `ENODATA` and the OS reports that the entry is available,
+  	 * it will use `dns.lookup(...)` directly for the requested hostnames for the specified amount of time (in seconds).
+  	 *
+  	 * If you don't query internal hostnames (such as `localhost`, `database.local` etc.),
+  	 * it is strongly recommended to set this value to `0`.
+  	 * @default 3600
+  	 */
+  var fallbackDuration: js.UndefOr[Double] = js.native
+  
+  /**
+  	 * The fallback function to use when the DNS server responds with `ENOTFOUND` or `ENODATA`.
+  	 *
+  	 * **Note**: This has no effect if the `fallbackDuration` option is less than `1`.
+  	 * @default dns.lookup
+  	 */
+  var lookup: js.UndefOr[Typeoflookup] = js.native
   
   /**
   	 * Limits the cache time (TTL). If set to `0`, it will make a new DNS query each time.
@@ -23,9 +49,9 @@ trait Options extends js.Object {
   
   /**
   	 * DNS Resolver used to make DNS queries.
-  	 * @default new dns.Resolver()
+  	 * @default new dns.promises.Resolver()
   	 */
-  var resolver: js.UndefOr[Resolver] = js.native
+  var resolver: js.UndefOr[Resolver | AsyncResolver] = js.native
 }
 object Options {
   
@@ -51,10 +77,28 @@ object Options {
     }
     
     @scala.inline
-    def setCacheAdapter(value: ^[_]): Self = this.set("cacheAdapter", value.asInstanceOf[js.Any])
+    def setCache(value: CacheInstance): Self = this.set("cache", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteCacheAdapter: Self = this.set("cacheAdapter", js.undefined)
+    def deleteCache: Self = this.set("cache", js.undefined)
+    
+    @scala.inline
+    def setErrorTtl(value: Double): Self = this.set("errorTtl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorTtl: Self = this.set("errorTtl", js.undefined)
+    
+    @scala.inline
+    def setFallbackDuration(value: Double): Self = this.set("fallbackDuration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFallbackDuration: Self = this.set("fallbackDuration", js.undefined)
+    
+    @scala.inline
+    def setLookup(value: Typeoflookup): Self = this.set("lookup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLookup: Self = this.set("lookup", js.undefined)
     
     @scala.inline
     def setMaxTtl(value: Double): Self = this.set("maxTtl", value.asInstanceOf[js.Any])
@@ -63,7 +107,7 @@ object Options {
     def deleteMaxTtl: Self = this.set("maxTtl", js.undefined)
     
     @scala.inline
-    def setResolver(value: Resolver): Self = this.set("resolver", value.asInstanceOf[js.Any])
+    def setResolver(value: Resolver | AsyncResolver): Self = this.set("resolver", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResolver: Self = this.set("resolver", js.undefined)

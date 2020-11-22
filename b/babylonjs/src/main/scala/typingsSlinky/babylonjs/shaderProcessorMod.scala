@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.fileRequestMod.IFileRequest
 import typingsSlinky.babylonjs.fileToolsMod.LoadFileError
 import typingsSlinky.babylonjs.iofflineproviderMod.IOfflineProvider
 import typingsSlinky.babylonjs.shaderProcessingOptionsMod.ProcessingOptions
+import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.webRequestMod.WebRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +24,8 @@ object shaderProcessorMod extends js.Object {
     def Process(
       sourceCode: String,
       options: ProcessingOptions,
-      callback: js.Function1[/* migratedCode */ String, Unit]
+      callback: js.Function1[/* migratedCode */ String, Unit],
+      engine: ThinEngine
     ): Unit = js.native
     
     var _BuildExpression: js.Any = js.native

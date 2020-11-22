@@ -11,16 +11,16 @@ trait WindowsInformationProtectionApp extends js.Object {
   var denied: js.UndefOr[Boolean] = js.native
   
   // The app's description.
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[NullableOption[String]] = js.native
   
   // App display name.
   var displayName: js.UndefOr[String] = js.native
   
   // The product name.
-  var productName: js.UndefOr[String] = js.native
+  var productName: js.UndefOr[NullableOption[String]] = js.native
   
   // The publisher name
-  var publisherName: js.UndefOr[String] = js.native
+  var publisherName: js.UndefOr[NullableOption[String]] = js.native
 }
 object WindowsInformationProtectionApp {
   
@@ -52,10 +52,13 @@ object WindowsInformationProtectionApp {
     def deleteDenied: Self = this.set("denied", js.undefined)
     
     @scala.inline
-    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: NullableOption[String]): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
+    
+    @scala.inline
+    def setDescriptionNull: Self = this.set("description", null)
     
     @scala.inline
     def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
@@ -64,15 +67,21 @@ object WindowsInformationProtectionApp {
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
-    def setProductName(value: String): Self = this.set("productName", value.asInstanceOf[js.Any])
+    def setProductName(value: NullableOption[String]): Self = this.set("productName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProductName: Self = this.set("productName", js.undefined)
     
     @scala.inline
-    def setPublisherName(value: String): Self = this.set("publisherName", value.asInstanceOf[js.Any])
+    def setProductNameNull: Self = this.set("productName", null)
+    
+    @scala.inline
+    def setPublisherName(value: NullableOption[String]): Self = this.set("publisherName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePublisherName: Self = this.set("publisherName", js.undefined)
+    
+    @scala.inline
+    def setPublisherNameNull: Self = this.set("publisherName", null)
   }
 }

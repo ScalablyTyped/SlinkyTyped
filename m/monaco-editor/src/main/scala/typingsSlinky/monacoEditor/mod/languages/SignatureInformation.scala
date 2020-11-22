@@ -9,6 +9,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SignatureInformation extends js.Object {
   
   /**
+    * Index of the active parameter.
+    *
+    * If provided, this is used in place of `SignatureHelp.activeSignature`.
+    */
+  var activeParameter: js.UndefOr[Double] = js.native
+  
+  /**
     * The human-readable doc-comment of this signature. Will be shown
     * in the UI but can be omitted.
     */
@@ -56,6 +63,12 @@ object SignatureInformation {
     
     @scala.inline
     def setParameters(value: js.Array[ParameterInformation]): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setActiveParameter(value: Double): Self = this.set("activeParameter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteActiveParameter: Self = this.set("activeParameter", js.undefined)
     
     @scala.inline
     def setDocumentation(value: String | IMarkdownString): Self = this.set("documentation", value.asInstanceOf[js.Any])

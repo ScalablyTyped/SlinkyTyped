@@ -16,7 +16,7 @@ object InferencePriority extends js.Object {
   
   @js.native
   sealed trait AlwaysStrict extends InferencePriority
-  /* 256 */ @js.native
+  /* 512 */ @js.native
   object AlwaysStrict extends TopLevel[AlwaysStrict with Double]
   
   @js.native
@@ -26,27 +26,27 @@ object InferencePriority extends js.Object {
   
   @js.native
   sealed trait ContravariantConditional extends InferencePriority
-  /* 16 */ @js.native
+  /* 32 */ @js.native
   object ContravariantConditional extends TopLevel[ContravariantConditional with Double]
   
   @js.native
   sealed trait HomomorphicMappedType extends InferencePriority
-  /* 2 */ @js.native
+  /* 4 */ @js.native
   object HomomorphicMappedType extends TopLevel[HomomorphicMappedType with Double]
   
   @js.native
   sealed trait LiteralKeyof extends InferencePriority
-  /* 64 */ @js.native
+  /* 128 */ @js.native
   object LiteralKeyof extends TopLevel[LiteralKeyof with Double]
   
   @js.native
   sealed trait MappedTypeConstraint extends InferencePriority
-  /* 8 */ @js.native
+  /* 16 */ @js.native
   object MappedTypeConstraint extends TopLevel[MappedTypeConstraint with Double]
   
   @js.native
   sealed trait MaxValue extends InferencePriority
-  /* 512 */ @js.native
+  /* 1024 */ @js.native
   object MaxValue extends TopLevel[MaxValue with Double]
   
   @js.native
@@ -56,21 +56,26 @@ object InferencePriority extends js.Object {
   
   @js.native
   sealed trait NoConstraints extends InferencePriority
-  /* 128 */ @js.native
+  /* 256 */ @js.native
   object NoConstraints extends TopLevel[NoConstraints with Double]
   
   @js.native
   sealed trait PartialHomomorphicMappedType extends InferencePriority
-  /* 4 */ @js.native
+  /* 8 */ @js.native
   object PartialHomomorphicMappedType extends TopLevel[PartialHomomorphicMappedType with Double]
   
   @js.native
   sealed trait PriorityImpliesCombination extends InferencePriority
-  /* 104 */ @js.native
+  /* 208 */ @js.native
   object PriorityImpliesCombination extends TopLevel[PriorityImpliesCombination with Double]
   
   @js.native
   sealed trait ReturnType extends InferencePriority
-  /* 32 */ @js.native
+  /* 64 */ @js.native
   object ReturnType extends TopLevel[ReturnType with Double]
+  
+  @js.native
+  sealed trait SpeculativeTuple extends InferencePriority
+  /* 2 */ @js.native
+  object SpeculativeTuple extends TopLevel[SpeculativeTuple with Double]
 }

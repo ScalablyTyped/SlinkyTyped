@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ItemAttachment extends Attachment {
   
   // The attached message or event. Navigation property.
-  var item: js.UndefOr[OutlookItem] = js.native
+  var item: js.UndefOr[NullableOption[OutlookItem]] = js.native
 }
 object ItemAttachment {
   
@@ -34,9 +34,12 @@ object ItemAttachment {
     }
     
     @scala.inline
-    def setItem(value: OutlookItem): Self = this.set("item", value.asInstanceOf[js.Any])
+    def setItem(value: NullableOption[OutlookItem]): Self = this.set("item", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteItem: Self = this.set("item", js.undefined)
+    
+    @scala.inline
+    def setItemNull: Self = this.set("item", null)
   }
 }

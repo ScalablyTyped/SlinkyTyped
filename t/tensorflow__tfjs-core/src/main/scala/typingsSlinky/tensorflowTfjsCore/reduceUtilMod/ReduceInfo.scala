@@ -11,13 +11,15 @@ trait ReduceInfo extends js.Object {
   
   var inSize: Double = js.native
   
+  var outSize: Double = js.native
+  
   var windowSize: Double = js.native
 }
 object ReduceInfo {
   
   @scala.inline
-  def apply(batchSize: Double, inSize: Double, windowSize: Double): ReduceInfo = {
-    val __obj = js.Dynamic.literal(batchSize = batchSize.asInstanceOf[js.Any], inSize = inSize.asInstanceOf[js.Any], windowSize = windowSize.asInstanceOf[js.Any])
+  def apply(batchSize: Double, inSize: Double, outSize: Double, windowSize: Double): ReduceInfo = {
+    val __obj = js.Dynamic.literal(batchSize = batchSize.asInstanceOf[js.Any], inSize = inSize.asInstanceOf[js.Any], outSize = outSize.asInstanceOf[js.Any], windowSize = windowSize.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReduceInfo]
   }
   
@@ -41,6 +43,9 @@ object ReduceInfo {
     
     @scala.inline
     def setInSize(value: Double): Self = this.set("inSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOutSize(value: Double): Self = this.set("outSize", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWindowSize(value: Double): Self = this.set("windowSize", value.asInstanceOf[js.Any])

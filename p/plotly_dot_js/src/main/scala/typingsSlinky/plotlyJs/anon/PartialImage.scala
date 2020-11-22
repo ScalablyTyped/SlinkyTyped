@@ -1,5 +1,7 @@
 package typingsSlinky.plotlyJs.anon
 
+import typingsSlinky.plotlyJs.mod.XAxisName
+import typingsSlinky.plotlyJs.mod.YAxisName
 import typingsSlinky.plotlyJs.plotlyJsStrings.above
 import typingsSlinky.plotlyJs.plotlyJsStrings.below
 import typingsSlinky.plotlyJs.plotlyJsStrings.bottom
@@ -12,8 +14,6 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.paper
 import typingsSlinky.plotlyJs.plotlyJsStrings.right
 import typingsSlinky.plotlyJs.plotlyJsStrings.stretch
 import typingsSlinky.plotlyJs.plotlyJsStrings.top
-import typingsSlinky.plotlyJs.plotlyJsStrings.x
-import typingsSlinky.plotlyJs.plotlyJsStrings.y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,13 +40,13 @@ trait PartialImage extends js.Object {
   
   var xanchor: js.UndefOr[left | center | right] = js.native
   
-  var xref: js.UndefOr[paper | x] = js.native
+  var xref: js.UndefOr[paper | XAxisName] = js.native
   
   var y: js.UndefOr[Double | String] = js.native
   
   var yanchor: js.UndefOr[top | middle | bottom] = js.native
   
-  var yref: js.UndefOr[paper | y] = js.native
+  var yref: js.UndefOr[paper | YAxisName] = js.native
 }
 object PartialImage {
   
@@ -126,7 +126,7 @@ object PartialImage {
     def deleteXanchor: Self = this.set("xanchor", js.undefined)
     
     @scala.inline
-    def setXref(value: paper | typingsSlinky.plotlyJs.plotlyJsStrings.x): Self = this.set("xref", value.asInstanceOf[js.Any])
+    def setXref(value: paper | XAxisName): Self = this.set("xref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteXref: Self = this.set("xref", js.undefined)
@@ -144,7 +144,7 @@ object PartialImage {
     def deleteYanchor: Self = this.set("yanchor", js.undefined)
     
     @scala.inline
-    def setYref(value: paper | y): Self = this.set("yref", value.asInstanceOf[js.Any])
+    def setYref(value: paper | YAxisName): Self = this.set("yref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteYref: Self = this.set("yref", js.undefined)

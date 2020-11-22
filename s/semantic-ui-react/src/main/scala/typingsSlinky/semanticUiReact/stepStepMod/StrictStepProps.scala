@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLAnchorElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
@@ -137,7 +136,7 @@ object StrictStepProps {
     
     @scala.inline
     def setDescriptionFunction3(
-      value: (/* component */ ReactType[StepDescriptionProps], StepDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, StepDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("description", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -163,7 +162,7 @@ object StrictStepProps {
     
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -195,7 +194,7 @@ object StrictStepProps {
     
     @scala.inline
     def setTitleFunction3(
-      value: (/* component */ ReactType[StepTitleProps], StepTitleProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, StepTitleProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("title", js.Any.fromFunction3(value))
     
     @scala.inline

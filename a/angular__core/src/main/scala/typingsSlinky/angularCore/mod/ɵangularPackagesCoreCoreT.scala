@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ɵangularPackagesCoreCoreT extends js.Object {
   
-  def apply(ngZone: NgZone): js.Function1[/* fn */ js.Function0[Unit], Unit] = js.native
+  def apply(): IterableDiffers = js.native
 }

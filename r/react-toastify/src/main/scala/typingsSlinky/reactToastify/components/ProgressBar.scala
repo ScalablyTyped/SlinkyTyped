@@ -3,7 +3,9 @@ package typingsSlinky.reactToastify.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactToastify.anon.Position
 import typingsSlinky.reactToastify.progressBarMod.ProgressBarProps
+import typingsSlinky.reactToastify.typesMod.ToastClassName
 import typingsSlinky.reactToastify.typesMod.TypeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,10 +23,10 @@ object ProgressBar {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    def classNameFunction1(value: /* context */ js.UndefOr[Position] => String): this.type = set("className", js.Any.fromFunction1(value))
     
     @scala.inline
-    def classNameNull: this.type = set("className", null)
+    def className(value: ToastClassName): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
     def controlledProgress(value: Boolean): this.type = set("controlledProgress", value.asInstanceOf[js.Any])

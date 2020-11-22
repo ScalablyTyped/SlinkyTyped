@@ -20,34 +20,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait animationConfig extends js.Object {
   
-  /** @name animationConfig.complete */
+  /**
+    * [descr:animationConfig.complete]
+    */
   var complete: js.UndefOr[js.Function2[/* $element */ dxElement, /* config */ js.Any, _]] = js.native
   
-  /** @name animationConfig.delay */
+  /**
+    * [descr:animationConfig.delay]
+    */
   var delay: js.UndefOr[Double] = js.native
   
-  /** @name animationConfig.direction */
+  /**
+    * [descr:animationConfig.direction]
+    */
   var direction: js.UndefOr[bottom | left | right | top] = js.native
   
-  /** @name animationConfig.duration */
+  /**
+    * [descr:animationConfig.duration]
+    */
   var duration: js.UndefOr[Double] = js.native
   
-  /** @name animationConfig.easing */
+  /**
+    * [descr:animationConfig.easing]
+    */
   var easing: js.UndefOr[String] = js.native
   
-  /** @name animationConfig.from */
+  /**
+    * [descr:animationConfig.from]
+    */
   var from: js.UndefOr[Double | String | js.Any] = js.native
   
-  /** @name animationConfig.staggerDelay */
+  /**
+    * [descr:animationConfig.staggerDelay]
+    */
   var staggerDelay: js.UndefOr[Double] = js.native
   
-  /** @name animationConfig.start */
+  /**
+    * [descr:animationConfig.start]
+    */
   var start: js.UndefOr[js.Function2[/* $element */ dxElement, /* config */ js.Any, _]] = js.native
   
-  /** @name animationConfig.to */
+  /**
+    * [descr:animationConfig.to]
+    */
   var to: js.UndefOr[Double | String | js.Any] = js.native
   
-  /** @name animationConfig.type */
+  /**
+    * [descr:animationConfig.type]
+    */
   var `type`: js.UndefOr[css | fade | fadeIn | fadeOut | pop | slide | slideIn | slideOut] = js.native
 }
 object animationConfig {

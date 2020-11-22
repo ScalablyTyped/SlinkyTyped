@@ -55,6 +55,11 @@ object Effect extends js.Object {
   var IncludesShadersStore: org.scalablytyped.runtime.StringDictionary[String] = js.native
   
   /**
+    * Enable logging of the shader code when a compilation error occurs
+    */
+  var LogShaderCodeOnCompilationError: Boolean = js.native
+  
+  /**
     * This function will add a new shader to the shader store
     * @param name the name of the shader
     * @param pixelShader optional pixel shader content

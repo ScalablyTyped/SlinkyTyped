@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteResolverRuleRequest extends js.Object {
   
   /**
-    * The ID of the resolver rule that you want to delete.
+    * The ID of the Resolver rule that you want to delete.
     */
   var ResolverRuleId: ResourceId = js.native
 }

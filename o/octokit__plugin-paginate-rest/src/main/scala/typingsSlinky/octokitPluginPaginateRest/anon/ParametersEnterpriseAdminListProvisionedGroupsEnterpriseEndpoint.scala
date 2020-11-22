@@ -12,14 +12,14 @@ trait ParametersEnterpriseAdminListProvisionedGroupsEnterpriseEndpoint extends j
   
   var parameters: EnterpriseAdminListProvisionedGroupsEnterpriseEndpoint = js.native
   
-  var response: OctokitResponse[EnterpriseAdminListProvisionedGroupsEnterpriseResponseData] with `12` = js.native
+  var response: OctokitResponse[EnterpriseAdminListProvisionedGroupsEnterpriseResponseData] with `16` = js.native
 }
 object ParametersEnterpriseAdminListProvisionedGroupsEnterpriseEndpoint {
   
   @scala.inline
   def apply(
     parameters: EnterpriseAdminListProvisionedGroupsEnterpriseEndpoint,
-    response: OctokitResponse[EnterpriseAdminListProvisionedGroupsEnterpriseResponseData] with `12`
+    response: OctokitResponse[EnterpriseAdminListProvisionedGroupsEnterpriseResponseData] with `16`
   ): ParametersEnterpriseAdminListProvisionedGroupsEnterpriseEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersEnterpriseAdminListProvisionedGroupsEnterpriseEndpoint]
@@ -44,6 +44,6 @@ object ParametersEnterpriseAdminListProvisionedGroupsEnterpriseEndpoint {
     def setParameters(value: EnterpriseAdminListProvisionedGroupsEnterpriseEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[EnterpriseAdminListProvisionedGroupsEnterpriseResponseData] with `12`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[EnterpriseAdminListProvisionedGroupsEnterpriseResponseData] with `16`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -16,11 +16,9 @@ trait UI extends js.Object {
   /**
     * Adds an event handler to the object using the specified event type.
     *
-    * @beta
-    *
     * @remarks
     *
-    * **Requirement set**: TBD
+    * **Requirement set**: {@link https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets | DialogApi 1.2}
     *
     * You can add multiple event handlers for the specified event type as long as the name of each event handler function is unique.
     *
@@ -29,21 +27,24 @@ trait UI extends js.Object {
     * @param options Optional. Provides an option for preserving context data of any type, unchanged, for use in a callback.
     * @param callback Optional. A function that is invoked when the handler registration returns, whose only parameter is of type {@link Office.AsyncResult}.
     */
-  def addHandlerAsync(eventType: EventType, handler: js.Function1[/* result */ js.Any, Unit]): Unit = js.native
   def addHandlerAsync(
     eventType: EventType,
-    handler: js.Function1[/* result */ js.Any, Unit],
+    handler: js.Function1[/* result */ DialogParentMessageReceivedEventArgs, Unit]
+  ): Unit = js.native
+  def addHandlerAsync(
+    eventType: EventType,
+    handler: js.Function1[/* result */ DialogParentMessageReceivedEventArgs, Unit],
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* result */ AsyncResult[Unit], Unit]
   ): Unit = js.native
   def addHandlerAsync(
     eventType: EventType,
-    handler: js.Function1[/* result */ js.Any, Unit],
+    handler: js.Function1[/* result */ DialogParentMessageReceivedEventArgs, Unit],
     options: AsyncContextOptions
   ): Unit = js.native
   def addHandlerAsync(
     eventType: EventType,
-    handler: js.Function1[/* result */ js.Any, Unit],
+    handler: js.Function1[/* result */ DialogParentMessageReceivedEventArgs, Unit],
     options: AsyncContextOptions,
     callback: js.Function1[/* result */ AsyncResult[Unit], Unit]
   ): Unit = js.native
@@ -53,9 +54,13 @@ trait UI extends js.Object {
     *
     * @remarks
     *
-    * **Hosts**: Excel, Word, PowerPoint, Outlook (Minimum requirement set: Mailbox 1.5)
+    * **Hosts**: Excel, Outlook (Minimum requirement set: Mailbox 1.5), PowerPoint, Word
     *
-    * **Requirement set**: {@link https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets | DialogApi}
+    * **Requirement sets**: 
+    * 
+    * - {@link https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/dialog-api-requirement-sets | DialogApi}
+    * 
+    * - {@link https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets | Mailbox 1.5}
     *
     * The behavior of this method is specified by the following:
     *
@@ -73,7 +78,7 @@ trait UI extends js.Object {
     *
     * @remarks
     *
-    * **Hosts**: Word, Excel, Outlook, PowerPoint
+    * **Hosts**: Excel, Outlook, PowerPoint, Word
     *
     * **Requirement sets**:
     *
@@ -81,7 +86,7 @@ trait UI extends js.Object {
     *
     * - {@link https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/outlook-api-requirement-sets | Mailbox 1.4}
     *
-    * This method is available in the DialogApi requirement set for Word, Excel, or PowerPoint add-ins, and in the Mailbox requirement set 1.4
+    * This method is available in the DialogApi requirement set for Excel, PowerPoint, or Word add-ins, and in the Mailbox requirement set 1.4
     * for Outlook. For more on how to specify a requirement set in your manifest, see
     * {@link https://docs.microsoft.com/office/dev/add-ins/develop/specify-office-hosts-and-api-requirements | Specify Office hosts and API requirements}.
     *
@@ -193,4 +198,15 @@ trait UI extends js.Object {
     * @param message Accepts a message from the dialog to deliver to the add-in. In addition to a boolean, anything that can serialized to a string including JSON and XML can be sent.
     */
   def messageParent(message: Boolean): Unit = js.native
+  
+  /**
+    * Opens a browser window and loads the specified URL. 
+    * 
+    * @remarks
+    * 
+    * **Requirement set**: {@link https://docs.microsoft.com/office/dev/add-ins/reference/requirement-sets/open-browser-window-api-requirement-sets | OpenBrowserWindowApi 1.1}
+    *  
+    * @param url The full URL to be opened including protocol (e.g., https), and port number, if any.
+    */
+  def openBrowserWindow(url: String): Unit = js.native
 }

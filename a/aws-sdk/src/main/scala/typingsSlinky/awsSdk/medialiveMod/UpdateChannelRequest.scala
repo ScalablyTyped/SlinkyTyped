@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateChannelRequest extends js.Object {
   
   /**
+    * Specification of CDI inputs for this channel
+    */
+  var CdiInputSpecification: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.CdiInputSpecification] = js.native
+  
+  /**
     * channel ID
     */
   var ChannelId: string = js.native
@@ -25,7 +30,7 @@ trait UpdateChannelRequest extends js.Object {
   var InputAttachments: js.UndefOr[listOfInputAttachment] = js.native
   
   /**
-    * Specification of input for this channel (max. bitrate, resolution, codec, etc.)
+    * Specification of network and file inputs for this channel
     */
   var InputSpecification: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.InputSpecification] = js.native
   
@@ -69,6 +74,12 @@ object UpdateChannelRequest {
     
     @scala.inline
     def setChannelId(value: string): Self = this.set("ChannelId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCdiInputSpecification(value: CdiInputSpecification): Self = this.set("CdiInputSpecification", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCdiInputSpecification: Self = this.set("CdiInputSpecification", js.undefined)
     
     @scala.inline
     def setDestinationsVarargs(value: OutputDestination*): Self = this.set("Destinations", js.Array(value :_*))

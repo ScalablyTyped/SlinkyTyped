@@ -36,6 +36,7 @@ object IndicatorsContainer {
     getStyles: (String, js.Any) => js.Object,
     getValue: () => ValueType[js.Any],
     hasValue: Boolean,
+    isDisabled: Boolean,
     isMulti: Boolean,
     isRtl: Boolean,
     options: OptionsType[js.Any],
@@ -43,7 +44,7 @@ object IndicatorsContainer {
     selectProps: Props[js.Any],
     setValue: (ValueType[js.Any], ActionTypes) => Unit
   ): Builder = {
-    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], isRtl = isRtl.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
+    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], isDisabled = isDisabled.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], isRtl = isRtl.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
     new Builder(js.Array(this.component, __props.asInstanceOf[IndicatorContainerProps[js.Any]]))
   }
 }

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-syntax-highlighter/dist/esm/languages/hljs/gml", JSImport.Namespace)
+@JSImport("react-syntax-highlighter/dist/cjs/styles/hljs/gml", JSImport.Namespace)
 @js.native
 object hljsGmlMod extends js.Object {
   

@@ -1,5 +1,8 @@
 package typingsSlinky.monacoEditor.mod.editor
 
+import typingsSlinky.monacoEditor.monacoEditorBooleans.`false`
+import typingsSlinky.monacoEditor.monacoEditorBooleans.`true`
+import typingsSlinky.monacoEditor.monacoEditorStrings.configuredByTheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,6 +36,16 @@ trait IGlobalEditorOptions extends js.Object {
   var maxTokenizationLineLength: js.UndefOr[Double] = js.native
   
   /**
+    * Controls whether the semanticHighlighting is shown for the languages that support it.
+    * true: semanticHighlighting is enabled for all themes
+    * false: semanticHighlighting is disabled for all themes
+    * 'configuredByTheme': semanticHighlighting is controlled by the current color theme's semanticHighlighting setting.
+    * Defaults to 'byTheme'.
+    */
+  @JSName("semanticHighlighting.enabled")
+  var semanticHighlightingDotenabled: js.UndefOr[`true` | `false` | configuredByTheme] = js.native
+  
+  /**
     * Keep peek editors open even when double clicking their content or when hitting `Escape`.
     * Defaults to false.
     */
@@ -44,6 +57,14 @@ trait IGlobalEditorOptions extends js.Object {
     * Defaults to 4.
     */
   var tabSize: js.UndefOr[Double] = js.native
+  
+  /**
+    * Theme to be used for rendering.
+    * The current out-of-the-box available themes are: 'vs' (default), 'vs-dark', 'hc-black'.
+    * You can create custom themes via `monaco.editor.defineTheme`.
+    * To switch a theme, use `monaco.editor.setTheme`
+    */
+  var theme: js.UndefOr[String] = js.native
   
   /**
     * Remove trailing auto inserted whitespace.
@@ -105,6 +126,12 @@ object IGlobalEditorOptions {
     def deleteMaxTokenizationLineLength: Self = this.set("maxTokenizationLineLength", js.undefined)
     
     @scala.inline
+    def setSemanticHighlightingDotenabled(value: `true` | `false` | configuredByTheme): Self = this.set("semanticHighlighting.enabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSemanticHighlightingDotenabled: Self = this.set("semanticHighlighting.enabled", js.undefined)
+    
+    @scala.inline
     def setStablePeek(value: Boolean): Self = this.set("stablePeek", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -115,6 +142,12 @@ object IGlobalEditorOptions {
     
     @scala.inline
     def deleteTabSize: Self = this.set("tabSize", js.undefined)
+    
+    @scala.inline
+    def setTheme(value: String): Self = this.set("theme", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTheme: Self = this.set("theme", js.undefined)
     
     @scala.inline
     def setTrimAutoWhitespace(value: Boolean): Self = this.set("trimAutoWhitespace", value.asInstanceOf[js.Any])

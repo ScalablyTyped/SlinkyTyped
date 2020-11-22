@@ -11,11 +11,13 @@ import typingsSlinky.grammarkdown.nodesMod.Import
 import typingsSlinky.grammarkdown.nodesMod.InvalidAssertion
 import typingsSlinky.grammarkdown.nodesMod.InvalidSymbol
 import typingsSlinky.grammarkdown.nodesMod.LexicalGoalAssertion
+import typingsSlinky.grammarkdown.nodesMod.Line
 import typingsSlinky.grammarkdown.nodesMod.LinkReference
 import typingsSlinky.grammarkdown.nodesMod.LookaheadAssertion
 import typingsSlinky.grammarkdown.nodesMod.NoSymbolHereAssertion
 import typingsSlinky.grammarkdown.nodesMod.Node
 import typingsSlinky.grammarkdown.nodesMod.Nonterminal
+import typingsSlinky.grammarkdown.nodesMod.NumberLiteral
 import typingsSlinky.grammarkdown.nodesMod.OneOfList
 import typingsSlinky.grammarkdown.nodesMod.OneOfSymbol
 import typingsSlinky.grammarkdown.nodesMod.Parameter
@@ -81,6 +83,8 @@ object visitorMod extends js.Object {
     
     def visitLexicalGoalAssertion(node: LexicalGoalAssertion): LexicalGoalAssertion = js.native
     
+    def visitLine(node: Line): Line = js.native
+    
     def visitLinkReference(node: LinkReference): LinkReference = js.native
     
     def visitLookaheadAssertion(node: LookaheadAssertion): LookaheadAssertion = js.native
@@ -88,6 +92,8 @@ object visitorMod extends js.Object {
     def visitNoSymbolHereAssertion(node: NoSymbolHereAssertion): NoSymbolHereAssertion = js.native
     
     def visitNonterminal(node: Nonterminal): Nonterminal = js.native
+    
+    def visitNumberLiteral(node: NumberLiteral): NumberLiteral = js.native
     
     def visitOneOfList(node: OneOfList): OneOfList = js.native
     

@@ -27,7 +27,7 @@ trait PayPal extends js.Object {
     * });
     */
   def create(options: Client): js.Promise[PayPal] = js.native
-  def create(options: Client, callback: callback): Unit = js.native
+  def create(options: Client, callback: callback[PayPal]): Unit = js.native
   
   /**
     * Cleanly tear down anything set up by `create`.
@@ -105,6 +105,6 @@ trait PayPal extends js.Object {
     *   });
     * });
     */
-  def tokenize(options: BillingAgreementDescription): js.Promise[PayPalTokenizeReturn] = js.native
-  def tokenize(options: BillingAgreementDescription, callback: callback): PayPalTokenizeReturn = js.native
+  def tokenize(options: BillingAgreementDescription): js.Promise[PayPalTokenizePayload] = js.native
+  def tokenize(options: BillingAgreementDescription, callback: callback[PayPalTokenizePayload]): PayPalTokenizeReturn = js.native
 }

@@ -22,6 +22,8 @@ trait Bundle[InputData] extends js.Object {
   
   var meta: IsFillingDynamicDropdown = js.native
   
+  var outputData: js.UndefOr[js.Object] = js.native
+  
   var rawRequest: js.UndefOr[PartialmethodHttpMethodqu] = js.native
   
   var subscribeData: js.UndefOr[Id] = js.native
@@ -73,6 +75,12 @@ object Bundle {
     
     @scala.inline
     def deleteCleanedRequest: Self = this.set("cleanedRequest", js.undefined)
+    
+    @scala.inline
+    def setOutputData(value: js.Object): Self = this.set("outputData", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutputData: Self = this.set("outputData", js.undefined)
     
     @scala.inline
     def setRawRequest(value: PartialmethodHttpMethodqu): Self = this.set("rawRequest", value.asInstanceOf[js.Any])

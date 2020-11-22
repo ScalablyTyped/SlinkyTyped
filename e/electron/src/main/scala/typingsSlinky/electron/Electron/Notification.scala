@@ -10,7 +10,7 @@ import typingsSlinky.electron.electronStrings.never
 import typingsSlinky.electron.electronStrings.normal
 import typingsSlinky.electron.electronStrings.reply
 import typingsSlinky.electron.electronStrings.show
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,7 +42,7 @@ trait Notification extends EventEmitter {
   
   var hasReply: Boolean = js.native
   
-  // Docs: http://electronjs.org/docs/api/notification
+  // Docs: https://electronjs.org/docs/api/notification
   @JSName("on")
   def on_action(event: action, listener: js.Function2[/* event */ Event, /* index */ Double, Unit]): this.type = js.native
   /**

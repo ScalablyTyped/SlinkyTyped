@@ -4,13 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined parent std.Pick<joi.joi.DataUriOptions, 'paddingRequired'> */
 @js.native
 trait Base64Options extends js.Object {
   
-  /**
-    * optional parameter defaulting to true which will require = padding if true or make padding optional if false
-    */
   var paddingRequired: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * if true, uses the URI-safe base64 format which replaces `+` with `-` and `\` with `_`.
+    *
+    * @default false
+    */
+  var urlSafe: js.UndefOr[Boolean] = js.native
 }
 object Base64Options {
   
@@ -40,5 +45,11 @@ object Base64Options {
     
     @scala.inline
     def deletePaddingRequired: Self = this.set("paddingRequired", js.undefined)
+    
+    @scala.inline
+    def setUrlSafe(value: Boolean): Self = this.set("urlSafe", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUrlSafe: Self = this.set("urlSafe", js.undefined)
   }
 }

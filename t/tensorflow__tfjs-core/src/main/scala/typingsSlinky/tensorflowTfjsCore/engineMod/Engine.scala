@@ -3,17 +3,17 @@ package typingsSlinky.tensorflowTfjsCore.engineMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.tensorflowTfjsCore.anon.Factory
-import typingsSlinky.tensorflowTfjsCore.anon.Grads
+import typingsSlinky.tensorflowTfjsCore.anon.GradsValue
 import typingsSlinky.tensorflowTfjsCore.backendMod.DataMover
 import typingsSlinky.tensorflowTfjsCore.backendMod.KernelBackend
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.DataId
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.TensorTracker
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataValues
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.environmentMod.Environment
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.NamedAttrMap
-import typingsSlinky.tensorflowTfjsCore.tensorMod.DataId
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.TensorTracker
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.GradSaveFunc
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedVariableMap
@@ -94,15 +94,15 @@ class Engine protected ()
     * was not a function of that `x`. It also takes optional dy to multiply the
     * gradient, which defaults to `1`.
     */
-  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]]): Grads[T] = js.native
-  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]], dy: T): Grads[T] = js.native
-  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]], dy: T, allowNoGradients: Boolean): Grads[T] = js.native
+  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]]): GradsValue[T] = js.native
+  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]], dy: T): GradsValue[T] = js.native
+  def gradients[T /* <: Tensor[Rank] */](f: js.Function0[T], xs: js.Array[Tensor[Rank]], dy: T, allowNoGradients: Boolean): GradsValue[T] = js.native
   def gradients[T /* <: Tensor[Rank] */](
     f: js.Function0[T],
     xs: js.Array[Tensor[Rank]],
     dy: js.UndefOr[scala.Nothing],
     allowNoGradients: Boolean
-  ): Grads[T] = js.native
+  ): GradsValue[T] = js.native
   
   def incRef(a: Tensor[Rank], backend: KernelBackend): Unit = js.native
   
@@ -140,7 +140,7 @@ class Engine protected ()
   
   var pendingBackendInitId: js.Any = js.native
   
-  def profile(query: js.Function0[TensorContainer]): js.Promise[ProfileInfo] = js.native
+  def profile(query: js.Function0[TensorContainer | js.Promise[TensorContainer]]): js.Promise[ProfileInfo] = js.native
   
   var profiler: js.Any = js.native
   

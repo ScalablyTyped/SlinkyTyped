@@ -13,6 +13,9 @@ object reactstrapStrings {
   def additions: additions = "additions".asInstanceOf[additions]
   
   @scala.inline
+  def `additions removals`: `additions removals` = ("additions removals").asInstanceOf[`additions removals`]
+  
+  @scala.inline
   def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   
   @scala.inline
@@ -64,16 +67,25 @@ object reactstrapStrings {
   def dialog: dialog = "dialog".asInstanceOf[dialog]
   
   @scala.inline
+  def done: done = "done".asInstanceOf[done]
+  
+  @scala.inline
   def down: down = "down".asInstanceOf[down]
   
   @scala.inline
   def email: email = "email".asInstanceOf[email]
   
   @scala.inline
+  def enter: enter = "enter".asInstanceOf[enter]
+  
+  @scala.inline
   def execute: execute = "execute".asInstanceOf[execute]
   
   @scala.inline
   def file: file = "file".asInstanceOf[file]
+  
+  @scala.inline
+  def go: go = "go".asInstanceOf[go]
   
   @scala.inline
   def grammar: grammar = "grammar".asInstanceOf[grammar]
@@ -172,6 +184,9 @@ object reactstrapStrings {
   def prev: prev = "prev".asInstanceOf[prev]
   
   @scala.inline
+  def previous: previous = "previous".asInstanceOf[previous]
+  
+  @scala.inline
   def radio: radio = "radio".asInstanceOf[radio]
   
   @scala.inline
@@ -179,6 +194,12 @@ object reactstrapStrings {
   
   @scala.inline
   def removals: removals = "removals".asInstanceOf[removals]
+  
+  @scala.inline
+  def `removals additions`: `removals additions` = ("removals additions").asInstanceOf[`removals additions`]
+  
+  @scala.inline
+  def `removals text`: `removals text` = ("removals text").asInstanceOf[`removals text`]
   
   @scala.inline
   def reset: reset = "reset".asInstanceOf[reset]
@@ -191,6 +212,9 @@ object reactstrapStrings {
   
   @scala.inline
   def select: select = "select".asInstanceOf[select]
+  
+  @scala.inline
+  def send: send = "send".asInstanceOf[send]
   
   @scala.inline
   def sm: sm = "sm".asInstanceOf[sm]
@@ -215,6 +239,12 @@ object reactstrapStrings {
   
   @scala.inline
   def text: text = "text".asInstanceOf[text]
+  
+  @scala.inline
+  def `text additions`: `text additions` = ("text additions").asInstanceOf[`text additions`]
+  
+  @scala.inline
+  def `text removals`: `text removals` = ("text removals").asInstanceOf[`text removals`]
   
   @scala.inline
   def textarea: textarea = "textarea".asInstanceOf[textarea]
@@ -242,6 +272,9 @@ object reactstrapStrings {
   
   @js.native
   sealed trait additions extends js.Object
+  
+  @js.native
+  sealed trait `additions removals` extends js.Object
   
   @js.native
   sealed trait `additions text` extends js.Object
@@ -297,10 +330,16 @@ object reactstrapStrings {
   sealed trait dialog extends js.Object
   
   @js.native
+  sealed trait done extends js.Object
+  
+  @js.native
   sealed trait down extends Direction
   
   @js.native
   sealed trait email extends InputType
+  
+  @js.native
+  sealed trait enter extends js.Object
   
   @js.native
   sealed trait execute extends js.Object
@@ -309,6 +348,9 @@ object reactstrapStrings {
   sealed trait file
     extends CustomInputType
        with InputType
+  
+  @js.native
+  sealed trait go extends js.Object
   
   @js.native
   sealed trait grammar extends js.Object
@@ -407,6 +449,9 @@ object reactstrapStrings {
   sealed trait prev extends js.Object
   
   @js.native
+  sealed trait previous extends js.Object
+  
+  @js.native
   sealed trait radio
     extends CustomInputType
        with InputType
@@ -418,6 +463,12 @@ object reactstrapStrings {
   
   @js.native
   sealed trait removals extends js.Object
+  
+  @js.native
+  sealed trait `removals additions` extends js.Object
+  
+  @js.native
+  sealed trait `removals text` extends js.Object
   
   @js.native
   sealed trait reset extends InputType
@@ -432,6 +483,9 @@ object reactstrapStrings {
   sealed trait select
     extends CustomInputType
        with InputType
+  
+  @js.native
+  sealed trait send extends js.Object
   
   @js.native
   sealed trait sm extends js.Object
@@ -456,6 +510,12 @@ object reactstrapStrings {
   
   @js.native
   sealed trait text extends InputType
+  
+  @js.native
+  sealed trait `text additions` extends js.Object
+  
+  @js.native
+  sealed trait `text removals` extends js.Object
   
   @js.native
   sealed trait textarea extends InputType

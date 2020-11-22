@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PostTextRequest extends js.Object {
   
   /**
+    * A list of contexts active for the request. A context can be activated when a previous intent is fulfilled, or by including the context in the request, If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the session. If you specify an empty list, all contexts for the session are cleared.
+    */
+  var activeContexts: js.UndefOr[ActiveContextsList] = js.native
+  
+  /**
     * The alias of the Amazon Lex bot.
     */
   var botAlias: BotAlias = js.native
@@ -71,6 +76,15 @@ object PostTextRequest {
     
     @scala.inline
     def setUserId(value: UserId): Self = this.set("userId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setActiveContextsVarargs(value: ActiveContext*): Self = this.set("activeContexts", js.Array(value :_*))
+    
+    @scala.inline
+    def setActiveContexts(value: ActiveContextsList): Self = this.set("activeContexts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteActiveContexts: Self = this.set("activeContexts", js.undefined)
     
     @scala.inline
     def setRequestAttributes(value: StringMap): Self = this.set("requestAttributes", value.asInstanceOf[js.Any])

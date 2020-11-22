@@ -30,11 +30,6 @@ trait Mailbox extends js.Object {
   def addHandlerAsync(
     eventType: String,
     handler: js.Function1[/* type */ EventType, Unit],
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
-  def addHandlerAsync(
-    eventType: String,
-    handler: js.Function1[/* type */ EventType, Unit],
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
@@ -66,11 +61,6 @@ trait Mailbox extends js.Object {
     *                 type `Office.AsyncResult`.
     */
   def addHandlerAsync(eventType: EventType, handler: js.Function1[/* type */ EventType, Unit]): Unit = js.native
-  def addHandlerAsync(
-    eventType: EventType,
-    handler: js.Function1[/* type */ EventType, Unit],
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
   def addHandlerAsync(
     eventType: EventType,
     handler: js.Function1[/* type */ EventType, Unit],
@@ -249,7 +239,7 @@ trait Mailbox extends js.Object {
     *
     * **Note**: This method is not supported in Outlook on iOS or Android.
     *
-    * [Api set: Mailbox Preview]
+    * [Api set: Mailbox 1.9]
     *
     * @remarks
     *
@@ -262,8 +252,6 @@ trait Mailbox extends js.Object {
     *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
     * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter,
     *                `asyncResult`, which is an `Office.AsyncResult` object.
-    *
-    * @beta
     */
   def displayAppointmentFormAsync(itemId: String): Unit = js.native
   def displayAppointmentFormAsync(
@@ -319,7 +307,7 @@ trait Mailbox extends js.Object {
     *
     * **Note**: This method is not supported in Outlook on iOS or Android.
     *
-    * [Api set: Mailbox Preview]
+    * [Api set: Mailbox 1.9]
     *
     * @remarks
     *
@@ -332,8 +320,6 @@ trait Mailbox extends js.Object {
     *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
     * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter,
     *                `asyncResult`, which is an `Office.AsyncResult` object.
-    *
-    * @beta
     */
   def displayMessageFormAsync(itemId: String): Unit = js.native
   def displayMessageFormAsync(
@@ -394,7 +380,7 @@ trait Mailbox extends js.Object {
     *
     * **Note**: This method is not supported in Outlook on iOS or Android.
     *
-    * [Api set: Mailbox Preview]
+    * [Api set: Mailbox 1.9]
     *
     * @remarks
     *
@@ -407,8 +393,6 @@ trait Mailbox extends js.Object {
     *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
     * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter,
     *                `asyncResult`, which is an `Office.AsyncResult` object.
-    *
-    * @beta
     */
   def displayNewAppointmentFormAsync(parameters: AppointmentForm): Unit = js.native
   def displayNewAppointmentFormAsync(
@@ -442,13 +426,13 @@ trait Mailbox extends js.Object {
     * @param parameters - A dictionary containing all values to be filled in for the user in the new form. All parameters are optional.
     *
     *        `toRecipients`: An array of strings containing the email addresses or an array containing an {@link Office.EmailAddressDetails | EmailAddressDetails} object
-    *        for each of the recipients on the To line. The array is limited to a maximum of 100 entries.
+    *        for each of the recipients on the **To** line. The array is limited to a maximum of 100 entries.
     *
     *        `ccRecipients`: An array of strings containing the email addresses or an array containing an {@link Office.EmailAddressDetails | EmailAddressDetails} object
-    *        for each of the recipients on the Cc line. The array is limited to a maximum of 100 entries.
+    *        for each of the recipients on the **Cc** line. The array is limited to a maximum of 100 entries.
     *
     *        `bccRecipients`: An array of strings containing the email addresses or an array containing an {@link Office.EmailAddressDetails | EmailAddressDetails} object
-    *        for each of the recipients on the Bcc line. The array is limited to a maximum of 100 entries.
+    *        for each of the recipients on the **Bcc** line. The array is limited to a maximum of 100 entries.
     *
     *        `subject`: A string containing the subject of the message. The string is limited to a maximum of 255 characters.
     *
@@ -478,7 +462,7 @@ trait Mailbox extends js.Object {
     *
     * If any of the parameters exceed the specified size limits, or if an unknown parameter name is specified, an exception is thrown.
     *
-    * [Api set: Mailbox Preview]
+    * [Api set: Mailbox 1.9]
     *
     * @remarks
     *
@@ -489,13 +473,13 @@ trait Mailbox extends js.Object {
     * @param parameters - A dictionary containing all values to be filled in for the user in the new form. All parameters are optional.
     *
     *        `toRecipients`: An array of strings containing the email addresses or an array containing an {@link Office.EmailAddressDetails | EmailAddressDetails} object
-    *        for each of the recipients on the To line. The array is limited to a maximum of 100 entries.
+    *        for each of the recipients on the **To** line. The array is limited to a maximum of 100 entries.
     *
     *        `ccRecipients`: An array of strings containing the email addresses or an array containing an {@link Office.EmailAddressDetails | EmailAddressDetails} object
-    *        for each of the recipients on the Cc line. The array is limited to a maximum of 100 entries.
+    *        for each of the recipients on the **Cc** line. The array is limited to a maximum of 100 entries.
     *
     *        `bccRecipients`: An array of strings containing the email addresses or an array containing an {@link Office.EmailAddressDetails | EmailAddressDetails} object
-    *        for each of the recipients on the Bcc line. The array is limited to a maximum of 100 entries.
+    *        for each of the recipients on the **Bcc** line. The array is limited to a maximum of 100 entries.
     *
     *        `subject`: A string containing the subject of the message. The string is limited to a maximum of 255 characters.
     *
@@ -518,8 +502,6 @@ trait Mailbox extends js.Object {
     *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
     * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter,
     *                `asyncResult`, which is an `Office.AsyncResult` object.
-    *
-    * @beta
     */
   def displayNewMessageFormAsync(parameters: js.Any): Unit = js.native
   def displayNewMessageFormAsync(
@@ -793,7 +775,6 @@ trait Mailbox extends js.Object {
   var masterCategories: MasterCategories = js.native
   
   def removeHandlerAsync(eventType: String): Unit = js.native
-  def removeHandlerAsync(eventType: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeHandlerAsync(
     eventType: String,
     options: js.UndefOr[scala.Nothing],
@@ -824,7 +805,6 @@ trait Mailbox extends js.Object {
     *                 type `Office.AsyncResult`.
     */
   def removeHandlerAsync(eventType: EventType): Unit = js.native
-  def removeHandlerAsync(eventType: EventType, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeHandlerAsync(
     eventType: EventType,
     options: js.UndefOr[scala.Nothing],

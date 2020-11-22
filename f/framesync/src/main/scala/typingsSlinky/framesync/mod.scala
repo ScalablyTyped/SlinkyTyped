@@ -12,18 +12,32 @@ object mod extends js.Object {
   
   def getFrameData(): Delta = js.native
   
-  /* import warning: parser.TsParser#tsDeclVar Dropped IArray(cancelSync) */ @js.native
-  object default extends js.Object {
+  @js.native
+  object cancelSync extends js.Object {
     
-    def fixedUpdate(process: Process): Process = js.native
-    def fixedUpdate(process: Process, keepAlive: js.UndefOr[scala.Nothing], immediate: Boolean): Process = js.native
-    def fixedUpdate(process: Process, keepAlive: Boolean): Process = js.native
-    def fixedUpdate(process: Process, keepAlive: Boolean, immediate: Boolean): Process = js.native
+    def postRender(process: Process): Unit = js.native
+    
+    def preRender(process: Process): Unit = js.native
+    
+    def read(process: Process): Unit = js.native
+    
+    def render(process: Process): Unit = js.native
+    
+    def update(process: Process): Unit = js.native
+  }
+  
+  @js.native
+  object default extends js.Object {
     
     def postRender(process: Process): Process = js.native
     def postRender(process: Process, keepAlive: js.UndefOr[scala.Nothing], immediate: Boolean): Process = js.native
     def postRender(process: Process, keepAlive: Boolean): Process = js.native
     def postRender(process: Process, keepAlive: Boolean, immediate: Boolean): Process = js.native
+    
+    def preRender(process: Process): Process = js.native
+    def preRender(process: Process, keepAlive: js.UndefOr[scala.Nothing], immediate: Boolean): Process = js.native
+    def preRender(process: Process, keepAlive: Boolean): Process = js.native
+    def preRender(process: Process, keepAlive: Boolean, immediate: Boolean): Process = js.native
     
     def read(process: Process): Process = js.native
     def read(process: Process, keepAlive: js.UndefOr[scala.Nothing], immediate: Boolean): Process = js.native

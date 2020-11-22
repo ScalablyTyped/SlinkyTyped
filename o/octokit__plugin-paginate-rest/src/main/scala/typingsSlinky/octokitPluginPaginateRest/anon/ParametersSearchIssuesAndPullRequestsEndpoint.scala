@@ -12,14 +12,14 @@ trait ParametersSearchIssuesAndPullRequestsEndpoint extends js.Object {
   
   var parameters: SearchIssuesAndPullRequestsEndpoint = js.native
   
-  var response: OctokitResponse[SearchIssuesAndPullRequestsResponseData] with `15` = js.native
+  var response: OctokitResponse[SearchIssuesAndPullRequestsResponseData] with `19` = js.native
 }
 object ParametersSearchIssuesAndPullRequestsEndpoint {
   
   @scala.inline
   def apply(
     parameters: SearchIssuesAndPullRequestsEndpoint,
-    response: OctokitResponse[SearchIssuesAndPullRequestsResponseData] with `15`
+    response: OctokitResponse[SearchIssuesAndPullRequestsResponseData] with `19`
   ): ParametersSearchIssuesAndPullRequestsEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersSearchIssuesAndPullRequestsEndpoint]
@@ -44,6 +44,6 @@ object ParametersSearchIssuesAndPullRequestsEndpoint {
     def setParameters(value: SearchIssuesAndPullRequestsEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[SearchIssuesAndPullRequestsResponseData] with `15`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[SearchIssuesAndPullRequestsResponseData] with `19`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

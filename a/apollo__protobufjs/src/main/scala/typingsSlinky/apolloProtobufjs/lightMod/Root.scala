@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 class Root ()
   extends typingsSlinky.apolloProtobufjs.mod.Root {
-  def this(options: StringDictionary[js.Any]) = this()
+  def this(options: StringDictionary[js.UndefOr[js.Any]]) = this()
 }
 /* static members */
 @JSImport("@apollo/protobufjs/light", "Root")

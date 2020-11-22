@@ -2,7 +2,6 @@ package typingsSlinky.awsSdkBuildTypes.treeModelMod
 
 import typingsSlinky.awsSdkBuildTypes.apiModelMod.ApiModel
 import typingsSlinky.awsSdkBuildTypes.apiModelMod.ShapeMap
-import typingsSlinky.awsSdkTypes.protocolMod.ServiceMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +15,11 @@ trait NormalizedModel extends ApiModel {
 object NormalizedModel {
   
   @scala.inline
-  def apply(metadata: ServiceMetadata, operations: NormalizedOperationMap, shapes: ShapeMap): NormalizedModel = {
+  def apply(
+    metadata: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceMetadata */ js.Any,
+    operations: NormalizedOperationMap,
+    shapes: ShapeMap
+  ): NormalizedModel = {
     val __obj = js.Dynamic.literal(metadata = metadata.asInstanceOf[js.Any], operations = operations.asInstanceOf[js.Any], shapes = shapes.asInstanceOf[js.Any])
     __obj.asInstanceOf[NormalizedModel]
   }

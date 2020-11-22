@@ -48,6 +48,11 @@ trait DescribePredictorResponse extends js.Object {
   var ForecastHorizon: js.UndefOr[Integer] = js.native
   
   /**
+    * The forecast types used during predictor training. Default value is ["0.1","0.5","0.9"] 
+    */
+  var ForecastTypes: js.UndefOr[typingsSlinky.awsSdk.forecastserviceMod.ForecastTypes] = js.native
+  
+  /**
     * The hyperparameter override values for the algorithm.
     */
   var HPOConfig: js.UndefOr[HyperParameterTuningJobConfig] = js.native
@@ -98,7 +103,7 @@ trait DescribePredictorResponse extends js.Object {
   var Status: js.UndefOr[typingsSlinky.awsSdk.forecastserviceMod.Status] = js.native
   
   /**
-    * The default training parameters or overrides selected during model training. If using the AutoML algorithm or if HPO is turned on while using the DeepAR+ algorithms, the optimized values for the chosen hyperparameters are returned. For more information, see aws-forecast-choosing-recipes.
+    * The default training parameters or overrides selected during model training. When running AutoML or choosing HPO with CNN-QR or DeepAR+, the optimized values for the chosen hyperparameters are returned. For more information, see aws-forecast-choosing-recipes.
     */
   var TrainingParameters: js.UndefOr[typingsSlinky.awsSdk.forecastserviceMod.TrainingParameters] = js.native
 }
@@ -178,6 +183,15 @@ object DescribePredictorResponse {
     
     @scala.inline
     def deleteForecastHorizon: Self = this.set("ForecastHorizon", js.undefined)
+    
+    @scala.inline
+    def setForecastTypesVarargs(value: ForecastType*): Self = this.set("ForecastTypes", js.Array(value :_*))
+    
+    @scala.inline
+    def setForecastTypes(value: ForecastTypes): Self = this.set("ForecastTypes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteForecastTypes: Self = this.set("ForecastTypes", js.undefined)
     
     @scala.inline
     def setHPOConfig(value: HyperParameterTuningJobConfig): Self = this.set("HPOConfig", value.asInstanceOf[js.Any])

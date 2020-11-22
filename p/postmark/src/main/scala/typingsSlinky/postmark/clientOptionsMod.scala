@@ -71,6 +71,11 @@ object clientOptionsMod extends js.Object {
       object OPTIONS extends TopLevel[OPTIONS with String]
       
       @js.native
+      sealed trait PATCH extends HttpMethod
+      /* "PATCH" */ @js.native
+      object PATCH extends TopLevel[PATCH with String]
+      
+      @js.native
       sealed trait POST extends HttpMethod
       /* "POST" */ @js.native
       object POST extends TopLevel[POST with String]

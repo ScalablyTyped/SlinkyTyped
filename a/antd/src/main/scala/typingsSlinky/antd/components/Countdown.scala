@@ -46,6 +46,9 @@ object Countdown {
     def groupSeparator(value: String): this.type = set("groupSeparator", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def onFinish(value: () => Unit): this.type = set("onFinish", js.Any.fromFunction0(value))
     
     @scala.inline

@@ -15,7 +15,6 @@ trait PGStoreOptions extends js.Object {
    // not typed to avoid dependency to "pg-promise" module (which includes its own types)
   var conString: js.UndefOr[String] = js.native
   
-  // tslint:disable-next-line:prefer-method-signature
   var errorLog: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.native
   
   var pgPromise: js.UndefOr[js.Object] = js.native

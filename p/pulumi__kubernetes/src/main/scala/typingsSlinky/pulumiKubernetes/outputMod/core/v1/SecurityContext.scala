@@ -56,6 +56,11 @@ trait SecurityContext extends js.Object {
   var seLinuxOptions: SELinuxOptions = js.native
   
   /**
+    * The seccomp options to use by this container. If seccomp options are provided at both the pod & container level, the container options override the pod options.
+    */
+  var seccompProfile: SeccompProfile = js.native
+  
+  /**
     * The Windows specific settings applied to all containers. If unspecified, the options from the PodSecurityContext will be used. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
     */
   var windowsOptions: WindowsSecurityContextOptions = js.native
@@ -73,9 +78,10 @@ object SecurityContext {
     runAsNonRoot: Boolean,
     runAsUser: Double,
     seLinuxOptions: SELinuxOptions,
+    seccompProfile: SeccompProfile,
     windowsOptions: WindowsSecurityContextOptions
   ): SecurityContext = {
-    val __obj = js.Dynamic.literal(allowPrivilegeEscalation = allowPrivilegeEscalation.asInstanceOf[js.Any], capabilities = capabilities.asInstanceOf[js.Any], privileged = privileged.asInstanceOf[js.Any], procMount = procMount.asInstanceOf[js.Any], readOnlyRootFilesystem = readOnlyRootFilesystem.asInstanceOf[js.Any], runAsGroup = runAsGroup.asInstanceOf[js.Any], runAsNonRoot = runAsNonRoot.asInstanceOf[js.Any], runAsUser = runAsUser.asInstanceOf[js.Any], seLinuxOptions = seLinuxOptions.asInstanceOf[js.Any], windowsOptions = windowsOptions.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(allowPrivilegeEscalation = allowPrivilegeEscalation.asInstanceOf[js.Any], capabilities = capabilities.asInstanceOf[js.Any], privileged = privileged.asInstanceOf[js.Any], procMount = procMount.asInstanceOf[js.Any], readOnlyRootFilesystem = readOnlyRootFilesystem.asInstanceOf[js.Any], runAsGroup = runAsGroup.asInstanceOf[js.Any], runAsNonRoot = runAsNonRoot.asInstanceOf[js.Any], runAsUser = runAsUser.asInstanceOf[js.Any], seLinuxOptions = seLinuxOptions.asInstanceOf[js.Any], seccompProfile = seccompProfile.asInstanceOf[js.Any], windowsOptions = windowsOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[SecurityContext]
   }
   
@@ -120,6 +126,9 @@ object SecurityContext {
     
     @scala.inline
     def setSeLinuxOptions(value: SELinuxOptions): Self = this.set("seLinuxOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSeccompProfile(value: SeccompProfile): Self = this.set("seccompProfile", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWindowsOptions(value: WindowsSecurityContextOptions): Self = this.set("windowsOptions", value.asInstanceOf[js.Any])

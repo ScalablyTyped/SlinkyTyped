@@ -2,7 +2,7 @@ package typingsSlinky.chaiEnzyme
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.chai.Chai.ChaiPlugin
-import typingsSlinky.cheerio.Cheerio
+import typingsSlinky.cheerio.cheerio.Cheerio
 import typingsSlinky.enzyme.mod.ReactWrapper
 import typingsSlinky.enzyme.mod.ShallowWrapper
 import scala.scalajs.js

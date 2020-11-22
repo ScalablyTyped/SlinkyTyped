@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createTypeParameterDeclaration extends js.Object {
   
+  /** @deprecated Use `factory.createTypeParameterDeclaration` or the factory supplied by your transformation context instead. */
   def apply(name: java.lang.String): TypeParameterDeclaration = js.native
   def apply(name: java.lang.String, constraint: js.UndefOr[scala.Nothing], defaultType: TypeNode): TypeParameterDeclaration = js.native
   def apply(name: java.lang.String, constraint: TypeNode): TypeParameterDeclaration = js.native

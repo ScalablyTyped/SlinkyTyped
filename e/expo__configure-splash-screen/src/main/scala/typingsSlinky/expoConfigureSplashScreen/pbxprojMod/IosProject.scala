@@ -16,7 +16,7 @@ trait IosProject extends js.Object {
   /**
     * pbxProject reference that allows to modify `.pbxproj` file.
     */
-  var pbxProject: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PbxProject */ js.Any = js.native
+  var pbxProject: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify XcodeProject */ js.Any = js.native
   
   var projectName: String = js.native
   
@@ -30,7 +30,7 @@ object IosProject {
   @scala.inline
   def apply(
     applicationNativeTarget: Target,
-    pbxProject: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PbxProject */ js.Any,
+    pbxProject: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify XcodeProject */ js.Any,
     projectName: String,
     projectPath: String
   ): IosProject = {
@@ -58,7 +58,7 @@ object IosProject {
     
     @scala.inline
     def setPbxProject(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PbxProject */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify XcodeProject */ js.Any
     ): Self = this.set("pbxProject", value.asInstanceOf[js.Any])
     
     @scala.inline

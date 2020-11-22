@@ -13,7 +13,7 @@ trait ObjectIdentity extends js.Object {
     * other Azure AD organization, this will be the domain of the federated organization, for example contoso.com.Supports
     * $filter. 512 character limit.
     */
-  var issuer: js.UndefOr[String] = js.native
+  var issuer: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Specifies the unique identifier assigned to the user by the issuer. The combination of issuer and issuerAssignedId must
@@ -22,7 +22,7 @@ trait ObjectIdentity extends js.Object {
     * emailAddress1) issuerAssignedId must be a valid email addressuserName, issuerAssignedId must be a valid local part of
     * an email addressSupports $filter. 512 character limit.
     */
-  var issuerAssignedId: js.UndefOr[String] = js.native
+  var issuerAssignedId: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Specifies the user sign-in types in your directory, such as emailAddress, userName or federated. Here, federated
@@ -30,7 +30,7 @@ trait ObjectIdentity extends js.Object {
     * validation is enforced on issuerAssignedId when the sign-in type is set to emailAddress or userName. This property can
     * also be set to any custom string.
     */
-  var signInType: js.UndefOr[String] = js.native
+  var signInType: js.UndefOr[NullableOption[String]] = js.native
 }
 object ObjectIdentity {
   
@@ -56,21 +56,30 @@ object ObjectIdentity {
     }
     
     @scala.inline
-    def setIssuer(value: String): Self = this.set("issuer", value.asInstanceOf[js.Any])
+    def setIssuer(value: NullableOption[String]): Self = this.set("issuer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIssuer: Self = this.set("issuer", js.undefined)
     
     @scala.inline
-    def setIssuerAssignedId(value: String): Self = this.set("issuerAssignedId", value.asInstanceOf[js.Any])
+    def setIssuerNull: Self = this.set("issuer", null)
+    
+    @scala.inline
+    def setIssuerAssignedId(value: NullableOption[String]): Self = this.set("issuerAssignedId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIssuerAssignedId: Self = this.set("issuerAssignedId", js.undefined)
     
     @scala.inline
-    def setSignInType(value: String): Self = this.set("signInType", value.asInstanceOf[js.Any])
+    def setIssuerAssignedIdNull: Self = this.set("issuerAssignedId", null)
+    
+    @scala.inline
+    def setSignInType(value: NullableOption[String]): Self = this.set("signInType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSignInType: Self = this.set("signInType", js.undefined)
+    
+    @scala.inline
+    def setSignInTypeNull: Self = this.set("signInType", null)
   }
 }

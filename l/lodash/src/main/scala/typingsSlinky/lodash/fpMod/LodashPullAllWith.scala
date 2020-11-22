@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashPullAllWith extends LodashConvertible {
+trait LodashPullAllWith extends js.Object {
   
   def apply[T](comparator: Comparator[T]): LodashPullAllWith1x1[T] = js.native
   def apply[T](comparator: Comparator[T], values: List[T]): LodashPullAllWith1x3[T] = js.native

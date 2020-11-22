@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VersioningConfiguration extends js.Object {
   
   /**
-    * How many versions of data set contents will be kept. The "unlimited" parameter must be false.
+    * How many versions of dataset contents are kept. The unlimited parameter must be false.
     */
   var maxVersions: js.UndefOr[MaxVersions] = js.native
   
   /**
-    * If true, unlimited versions of data set contents will be kept.
+    * If true, unlimited versions of dataset contents are kept.
     */
   var unlimited: js.UndefOr[UnlimitedVersioning] = js.native
 }

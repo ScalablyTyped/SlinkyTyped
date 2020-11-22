@@ -33,7 +33,7 @@ trait Budget extends js.Object {
   var CostFilters: js.UndefOr[typingsSlinky.awsSdk.budgetsMod.CostFilters] = js.native
   
   /**
-    * The types of costs that are included in this COST budget.  USAGE, RI_UTILIZATION, RI_COVERAGE, Savings_Plans_Utilization, and Savings_Plans_Coverage budgets do not have CostTypes.
+    * The types of costs that are included in this COST budget.  USAGE, RI_UTILIZATION, RI_COVERAGE, SAVINGS_PLANS_UTILIZATION, and SAVINGS_PLANS_COVERAGE budgets do not have CostTypes.
     */
   var CostTypes: js.UndefOr[typingsSlinky.awsSdk.budgetsMod.CostTypes] = js.native
   
@@ -53,7 +53,7 @@ trait Budget extends js.Object {
   var TimePeriod: js.UndefOr[typingsSlinky.awsSdk.budgetsMod.TimePeriod] = js.native
   
   /**
-    * The length of time until a budget resets the actual and forecasted spend. DAILY is available only for RI_UTILIZATION, RI_COVERAGE, Savings_Plans_Utilization, and Savings_Plans_Coverage budgets.
+    * The length of time until a budget resets the actual and forecasted spend.
     */
   var TimeUnit: typingsSlinky.awsSdk.budgetsMod.TimeUnit = js.native
 }

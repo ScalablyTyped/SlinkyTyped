@@ -26,7 +26,7 @@ trait ViewportColumnsCalculator extends js.Object {
   
   var startColumn: Double | Null = js.native
   
-  var startPosition: Double = js.native
+  var startPosition: Double | Null = js.native
   
   var startRow: js.UndefOr[Double] = js.native
   
@@ -49,14 +49,13 @@ object ViewportColumnsCalculator {
     getStretchedColumnWidth: (Double, Double) => Double | Null,
     needVerifyLastColumnWidth: Boolean,
     refreshStretching: Double => Unit,
-    startPosition: Double,
     stretch: none | all | last,
     stretchAllColumnsWidth: js.Array[Double],
     stretchAllRatio: Double,
     stretchLastWidth: Double,
     totalTargetWidth: Double
   ): ViewportColumnsCalculator = {
-    val __obj = js.Dynamic.literal(calculate = js.Any.fromFunction0(calculate), count = count.asInstanceOf[js.Any], getStretchedColumnWidth = js.Any.fromFunction2(getStretchedColumnWidth), needVerifyLastColumnWidth = needVerifyLastColumnWidth.asInstanceOf[js.Any], refreshStretching = js.Any.fromFunction1(refreshStretching), startPosition = startPosition.asInstanceOf[js.Any], stretch = stretch.asInstanceOf[js.Any], stretchAllColumnsWidth = stretchAllColumnsWidth.asInstanceOf[js.Any], stretchAllRatio = stretchAllRatio.asInstanceOf[js.Any], stretchLastWidth = stretchLastWidth.asInstanceOf[js.Any], totalTargetWidth = totalTargetWidth.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(calculate = js.Any.fromFunction0(calculate), count = count.asInstanceOf[js.Any], getStretchedColumnWidth = js.Any.fromFunction2(getStretchedColumnWidth), needVerifyLastColumnWidth = needVerifyLastColumnWidth.asInstanceOf[js.Any], refreshStretching = js.Any.fromFunction1(refreshStretching), stretch = stretch.asInstanceOf[js.Any], stretchAllColumnsWidth = stretchAllColumnsWidth.asInstanceOf[js.Any], stretchAllRatio = stretchAllRatio.asInstanceOf[js.Any], stretchLastWidth = stretchLastWidth.asInstanceOf[js.Any], totalTargetWidth = totalTargetWidth.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewportColumnsCalculator]
   }
   
@@ -89,9 +88,6 @@ object ViewportColumnsCalculator {
     
     @scala.inline
     def setRefreshStretching(value: Double => Unit): Self = this.set("refreshStretching", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setStartPosition(value: Double): Self = this.set("startPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStretch(value: none | all | last): Self = this.set("stretch", value.asInstanceOf[js.Any])
@@ -128,6 +124,12 @@ object ViewportColumnsCalculator {
     
     @scala.inline
     def setStartColumnNull: Self = this.set("startColumn", null)
+    
+    @scala.inline
+    def setStartPosition(value: Double): Self = this.set("startPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStartPositionNull: Self = this.set("startPosition", null)
     
     @scala.inline
     def setStartRow(value: Double): Self = this.set("startRow", value.asInstanceOf[js.Any])

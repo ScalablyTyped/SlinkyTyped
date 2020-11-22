@@ -20,6 +20,8 @@ trait CollapseProps
   
   var in: js.UndefOr[Boolean] = js.native
   
+  var mountOnEnter: js.UndefOr[Boolean] = js.native
+  
   var timeout: js.UndefOr[Double] = js.native
   
   var transitionAppear: js.UndefOr[Boolean] = js.native
@@ -69,6 +71,12 @@ object CollapseProps {
     
     @scala.inline
     def deleteIn: Self = this.set("in", js.undefined)
+    
+    @scala.inline
+    def setMountOnEnter(value: Boolean): Self = this.set("mountOnEnter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMountOnEnter: Self = this.set("mountOnEnter", js.undefined)
     
     @scala.inline
     def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])

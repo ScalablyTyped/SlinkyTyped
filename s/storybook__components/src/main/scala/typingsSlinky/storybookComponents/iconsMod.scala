@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object iconsMod extends js.Object {
   
-  /* keyof @storybook/components.anon.Add */ /* Rewritten from type alias, can be one of: 
+  /* keyof @storybook/components.anon.Accessibility */ /* Rewritten from type alias, can be one of: 
     - typingsSlinky.storybookComponents.storybookComponentsStrings.mobile
     - typingsSlinky.storybookComponents.storybookComponentsStrings.watch
     - typingsSlinky.storybookComponents.storybookComponentsStrings.tablet
@@ -46,6 +46,7 @@ object iconsMod extends js.Object {
     - typingsSlinky.storybookComponents.storybookComponentsStrings.redirect
     - typingsSlinky.storybookComponents.storybookComponentsStrings.expand
     - typingsSlinky.storybookComponents.storybookComponentsStrings.expandalt
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.collapse
     - typingsSlinky.storybookComponents.storybookComponentsStrings.grow
     - typingsSlinky.storybookComponents.storybookComponentsStrings.arrowleft
     - typingsSlinky.storybookComponents.storybookComponentsStrings.arrowup
@@ -111,6 +112,7 @@ object iconsMod extends js.Object {
     - typingsSlinky.storybookComponents.storybookComponentsStrings.timer
     - typingsSlinky.storybookComponents.storybookComponentsStrings.time
     - typingsSlinky.storybookComponents.storybookComponentsStrings.lightning
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.lightningoff
     - typingsSlinky.storybookComponents.storybookComponentsStrings.dashboard
     - typingsSlinky.storybookComponents.storybookComponentsStrings.hourglass
     - typingsSlinky.storybookComponents.storybookComponentsStrings.play
@@ -147,7 +149,7 @@ object iconsMod extends js.Object {
     - typingsSlinky.storybookComponents.storybookComponentsStrings.branch
     - typingsSlinky.storybookComponents.storybookComponentsStrings.merge
     - typingsSlinky.storybookComponents.storybookComponentsStrings.pullrequest
-    - typingsSlinky.storybookComponents.storybookComponentsStrings.chroma
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.chromatic
     - typingsSlinky.storybookComponents.storybookComponentsStrings.twitter
     - typingsSlinky.storybookComponents.storybookComponentsStrings.google
     - typingsSlinky.storybookComponents.storybookComponentsStrings.gdrive
@@ -160,11 +162,22 @@ object iconsMod extends js.Object {
     - typingsSlinky.storybookComponents.storybookComponentsStrings.bitbucket
     - typingsSlinky.storybookComponents.storybookComponentsStrings.gitlab
     - typingsSlinky.storybookComponents.storybookComponentsStrings.discord
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.contrast
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.unfold
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.sharealt
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.accessibility
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.accessibilityalt
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.markup
+    - typingsSlinky.storybookComponents.storybookComponentsStrings.outline
   */
   trait IconKey extends js.Object
   
   @js.native
   object default extends js.Object {
+    
+    var accessibility: String = js.native
+    
+    var accessibilityalt: String = js.native
     
     var add: String = js.native
     
@@ -226,7 +239,7 @@ object iconsMod extends js.Object {
     
     var chevrondown: String = js.native
     
-    var chroma: String = js.native
+    var chromatic: String = js.native
     
     var circle: String = js.native
     
@@ -238,6 +251,8 @@ object iconsMod extends js.Object {
     
     var cog: String = js.native
     
+    var collapse: String = js.native
+    
     var comment: String = js.native
     
     var commit: String = js.native
@@ -245,6 +260,8 @@ object iconsMod extends js.Object {
     var compass: String = js.native
     
     var component: String = js.native
+    
+    var contrast: String = js.native
     
     var copy: String = js.native
     
@@ -334,6 +351,8 @@ object iconsMod extends js.Object {
     
     var lightning: String = js.native
     
+    var lightningoff: String = js.native
+    
     var link: String = js.native
     
     var listunordered: String = js.native
@@ -341,6 +360,8 @@ object iconsMod extends js.Object {
     var location: String = js.native
     
     var lock: String = js.native
+    
+    var markup: String = js.native
     
     var medium: String = js.native
     
@@ -357,6 +378,8 @@ object iconsMod extends js.Object {
     var nut: String = js.native
     
     var outbox: String = js.native
+    
+    var outline: String = js.native
     
     var paintbrush: String = js.native
     
@@ -402,6 +425,8 @@ object iconsMod extends js.Object {
     
     var share: String = js.native
     
+    var sharealt: String = js.native
+    
     var shield: String = js.native
     
     var sidebar: String = js.native
@@ -441,6 +466,8 @@ object iconsMod extends js.Object {
     var twitter: String = js.native
     
     var undo: String = js.native
+    
+    var unfold: String = js.native
     
     var unlock: String = js.native
     
@@ -472,6 +499,10 @@ object iconsMod extends js.Object {
   @js.native
   object icons extends js.Object {
     
+    var accessibility: String = js.native
+    
+    var accessibilityalt: String = js.native
+    
     var add: String = js.native
     
     var admin: String = js.native
@@ -532,7 +563,7 @@ object iconsMod extends js.Object {
     
     var chevrondown: String = js.native
     
-    var chroma: String = js.native
+    var chromatic: String = js.native
     
     var circle: String = js.native
     
@@ -544,6 +575,8 @@ object iconsMod extends js.Object {
     
     var cog: String = js.native
     
+    var collapse: String = js.native
+    
     var comment: String = js.native
     
     var commit: String = js.native
@@ -551,6 +584,8 @@ object iconsMod extends js.Object {
     var compass: String = js.native
     
     var component: String = js.native
+    
+    var contrast: String = js.native
     
     var copy: String = js.native
     
@@ -640,6 +675,8 @@ object iconsMod extends js.Object {
     
     var lightning: String = js.native
     
+    var lightningoff: String = js.native
+    
     var link: String = js.native
     
     var listunordered: String = js.native
@@ -647,6 +684,8 @@ object iconsMod extends js.Object {
     var location: String = js.native
     
     var lock: String = js.native
+    
+    var markup: String = js.native
     
     var medium: String = js.native
     
@@ -663,6 +702,8 @@ object iconsMod extends js.Object {
     var nut: String = js.native
     
     var outbox: String = js.native
+    
+    var outline: String = js.native
     
     var paintbrush: String = js.native
     
@@ -708,6 +749,8 @@ object iconsMod extends js.Object {
     
     var share: String = js.native
     
+    var sharealt: String = js.native
+    
     var shield: String = js.native
     
     var sidebar: String = js.native
@@ -747,6 +790,8 @@ object iconsMod extends js.Object {
     var twitter: String = js.native
     
     var undo: String = js.native
+    
+    var unfold: String = js.native
     
     var unlock: String = js.native
     

@@ -12,14 +12,14 @@ object localizedString extends js.Object {
   
   def apply(
     metaBlock: I18nMeta,
-    messageParts: js.Array[String],
-    placeholderNames: js.Array[String],
+    messageParts: js.Array[LiteralPiece],
+    placeholderNames: js.Array[PlaceholderPiece],
     expressions: js.Array[Expression]
   ): LocalizedString_ = js.native
   def apply(
     metaBlock: I18nMeta,
-    messageParts: js.Array[String],
-    placeholderNames: js.Array[String],
+    messageParts: js.Array[LiteralPiece],
+    placeholderNames: js.Array[PlaceholderPiece],
     expressions: js.Array[Expression],
     sourceSpan: ParseSourceSpan
   ): LocalizedString_ = js.native

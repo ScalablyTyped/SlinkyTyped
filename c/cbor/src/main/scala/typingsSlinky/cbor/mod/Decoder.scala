@@ -28,6 +28,12 @@ object Decoder extends js.Object {
   def decodeAll(input: Buffer, options: String, cb: decodeAllCallback): Unit = js.native
   def decodeAll(input: Buffer, options: DecodeOptions): js.Promise[_] = js.native
   def decodeAll(input: Buffer, options: DecodeOptions, cb: decodeAllCallback): Unit = js.native
+  def decodeAll(input: js.typedarray.ArrayBufferView): js.Promise[_] = js.native
+  def decodeAll(input: js.typedarray.ArrayBufferView, cb: decodeAllCallback): Unit = js.native
+  def decodeAll(input: js.typedarray.ArrayBufferView, options: String): js.Promise[_] = js.native
+  def decodeAll(input: js.typedarray.ArrayBufferView, options: String, cb: decodeAllCallback): Unit = js.native
+  def decodeAll(input: js.typedarray.ArrayBufferView, options: DecodeOptions): js.Promise[_] = js.native
+  def decodeAll(input: js.typedarray.ArrayBufferView, options: DecodeOptions, cb: decodeAllCallback): Unit = js.native
   
   def decodeAllSync(input: String): js.Array[_] = js.native
   def decodeAllSync(input: String, options: String): js.Array[_] = js.native
@@ -35,6 +41,9 @@ object Decoder extends js.Object {
   def decodeAllSync(input: Buffer): js.Array[_] = js.native
   def decodeAllSync(input: Buffer, options: String): js.Array[_] = js.native
   def decodeAllSync(input: Buffer, options: DecodeOptions): js.Array[_] = js.native
+  def decodeAllSync(input: js.typedarray.ArrayBufferView): js.Array[_] = js.native
+  def decodeAllSync(input: js.typedarray.ArrayBufferView, options: String): js.Array[_] = js.native
+  def decodeAllSync(input: js.typedarray.ArrayBufferView, options: DecodeOptions): js.Array[_] = js.native
   
   def decodeFirst(input: String): js.Promise[_] = js.native
   def decodeFirst(input: String, cb: decodeCallback): Unit = js.native
@@ -48,6 +57,12 @@ object Decoder extends js.Object {
   def decodeFirst(input: Buffer, options: String, cb: decodeCallback): Unit = js.native
   def decodeFirst(input: Buffer, options: DecodeOptions): js.Promise[_] = js.native
   def decodeFirst(input: Buffer, options: DecodeOptions, cb: decodeCallback): Unit = js.native
+  def decodeFirst(input: js.typedarray.ArrayBufferView): js.Promise[_] = js.native
+  def decodeFirst(input: js.typedarray.ArrayBufferView, cb: decodeCallback): Unit = js.native
+  def decodeFirst(input: js.typedarray.ArrayBufferView, options: String): js.Promise[_] = js.native
+  def decodeFirst(input: js.typedarray.ArrayBufferView, options: String, cb: decodeCallback): Unit = js.native
+  def decodeFirst(input: js.typedarray.ArrayBufferView, options: DecodeOptions): js.Promise[_] = js.native
+  def decodeFirst(input: js.typedarray.ArrayBufferView, options: DecodeOptions, cb: decodeCallback): Unit = js.native
   
   def decodeFirstSync(input: String): js.Any = js.native
   def decodeFirstSync(input: String, options: String): js.Any = js.native
@@ -55,6 +70,9 @@ object Decoder extends js.Object {
   def decodeFirstSync(input: Buffer): js.Any = js.native
   def decodeFirstSync(input: Buffer, options: String): js.Any = js.native
   def decodeFirstSync(input: Buffer, options: DecodeOptions): js.Any = js.native
+  def decodeFirstSync(input: js.typedarray.ArrayBufferView): js.Any = js.native
+  def decodeFirstSync(input: js.typedarray.ArrayBufferView, options: String): js.Any = js.native
+  def decodeFirstSync(input: js.typedarray.ArrayBufferView, options: DecodeOptions): js.Any = js.native
   
   def nullcheck(`val`: js.Any): js.Any = js.native
 }

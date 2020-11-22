@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getFuzzyRegExpMod extends js.Object {
   
-  def default(query: String): js.RegExp = js.native
+  def getFuzzyRegExp(query: String): js.RegExp = js.native
 }

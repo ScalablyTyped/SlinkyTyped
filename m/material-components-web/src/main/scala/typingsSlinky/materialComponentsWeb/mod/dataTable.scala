@@ -83,6 +83,8 @@ object dataTable extends js.Object {
     
     var IN_PROGRESS: String = js.native
     
+    var LINEAR_PROGRESS: String = js.native
+    
     var PAGINATION_ROWS_PER_PAGE_LABEL: String = js.native
     
     var PAGINATION_ROWS_PER_PAGE_SELECT: String = js.native
@@ -100,6 +102,8 @@ object dataTable extends js.Object {
     var SORT_ICON_BUTTON: String = js.native
     
     var SORT_STATUS_LABEL: String = js.native
+    
+    var TABLE_CONTAINER: String = js.native
   }
   
   @js.native

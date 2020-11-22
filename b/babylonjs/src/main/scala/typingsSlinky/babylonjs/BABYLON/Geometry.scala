@@ -48,6 +48,8 @@ trait Geometry extends IGetSetVerticesData {
   /** @hidden */
   var _positions: Nullable[js.Array[Vector3]] = js.native
   
+  var _positionsCache: js.Any = js.native
+  
   var _queueLoad: js.Any = js.native
   
   /** @hidden */
@@ -206,6 +208,9 @@ trait Geometry extends IGetSetVerticesData {
   def load(scene: Scene): Unit = js.native
   def load(scene: Scene, onLoaded: js.Function0[Unit]): Unit = js.native
   
+  /** Get the list of meshes using this geometry */
+  def meshes: js.Array[Mesh] = js.native
+  
   var notifyUpdate: js.Any = js.native
   
   /**
@@ -309,4 +314,10 @@ trait Geometry extends IGetSetVerticesData {
     */
   def updateVerticesDataDirectly(kind: String, data: DataArray, offset: Double): Unit = js.native
   def updateVerticesDataDirectly(kind: String, data: DataArray, offset: Double, useBytes: Boolean): Unit = js.native
+  
+  /**
+    * If set to true (false by defaut), the bounding info applied to the meshes sharing this geometry will be the bounding info defined at the class level
+    * and won't be computed based on the vertex positions (which is what we get when useBoundingInfoFromGeometry = false)
+    */
+  var useBoundingInfoFromGeometry: Boolean = js.native
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PutBotRequest extends js.Object {
   
   /**
-    * When Amazon Lex can't understand the user's input in context, it tries to elicit the information a few times. After that, Amazon Lex sends the message defined in abortStatement to the user, and then aborts the conversation. To set the number of retries, use the valueElicitationPrompt field for the slot type.  For example, in a pizza ordering bot, Amazon Lex might ask a user "What type of crust would you like?" If the user's response is not one of the expected responses (for example, "thin crust, "deep dish," etc.), Amazon Lex tries to elicit a correct response a few more times.  For example, in a pizza ordering application, OrderPizza might be one of the intents. This intent might require the CrustType slot. You specify the valueElicitationPrompt field when you create the CrustType slot. If you have defined a fallback intent the abort statement will not be sent to the user, the fallback intent is used instead. For more information, see  AMAZON.FallbackIntent.
+    * When Amazon Lex can't understand the user's input in context, it tries to elicit the information a few times. After that, Amazon Lex sends the message defined in abortStatement to the user, and then cancels the conversation. To set the number of retries, use the valueElicitationPrompt field for the slot type.  For example, in a pizza ordering bot, Amazon Lex might ask a user "What type of crust would you like?" If the user's response is not one of the expected responses (for example, "thin crust, "deep dish," etc.), Amazon Lex tries to elicit a correct response a few more times.  For example, in a pizza ordering application, OrderPizza might be one of the intents. This intent might require the CrustType slot. You specify the valueElicitationPrompt field when you create the CrustType slot. If you have defined a fallback intent the cancel statement will not be sent to the user, the fallback intent is used instead. For more information, see  AMAZON.FallbackIntent.
     */
   var abortStatement: js.UndefOr[Statement] = js.native
   
@@ -43,6 +43,11 @@ trait PutBotRequest extends js.Object {
   var detectSentiment: js.UndefOr[Boolean] = js.native
   
   /**
+    * Set to true to enable access to natural language understanding improvements.  When you set the enableModelImprovements parameter to true you can use the nluIntentConfidenceThreshold parameter to configure confidence scores. For more information, see Confidence Scores. You can only set the enableModelImprovements parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. The Regions where you can set the enableModelImprovements parameter to true are:   US East (N. Virginia) (us-east-1)   US West (Oregon) (us-west-2)   Asia Pacific (Sydney) (ap-southeast-2)   EU (Ireland) (eu-west-1)   In other Regions, the enableModelImprovements parameter is set to true by default. In these Regions setting the parameter to false throws a ValidationException exception.
+    */
+  var enableModelImprovements: js.UndefOr[Boolean] = js.native
+  
+  /**
     * The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. A user interaction session remains active for the amount of time specified. If no conversation occurs during this time, the session expires and Amazon Lex deletes any data provided before the timeout. For example, suppose that a user chooses the OrderPizza intent, but gets sidetracked halfway through placing an order. If the user doesn't complete the order within the specified time, Amazon Lex discards the slot information that it gathered, and the user must start over. If you don't include the idleSessionTTLInSeconds element in a PutBot operation request, Amazon Lex uses the default value. This is also true if the request replaces an existing bot. The default is 300 seconds (5 minutes).
     */
   var idleSessionTTLInSeconds: js.UndefOr[SessionTTL] = js.native
@@ -61,6 +66,11 @@ trait PutBotRequest extends js.Object {
     * The name of the bot. The name is not case sensitive. 
     */
   var name: BotName = js.native
+  
+  /**
+    * Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. You must set the enableModelImprovements parameter to true to use confidence scores in the following regions.   US East (N. Virginia) (us-east-1)   US West (Oregon) (us-west-2)   Asia Pacific (Sydney) (ap-southeast-2)   EU (Ireland) (eu-west-1)   In other Regions, the enableModelImprovements parameter is set to true by default. For example, suppose a bot is configured with the confidence threshold of 0.80 and the AMAZON.FallbackIntent. Amazon Lex returns three alternative intents with the following confidence scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the PostText operation would be:   AMAZON.FallbackIntent   IntentA   IntentB   IntentC  
+    */
+  var nluIntentConfidenceThreshold: js.UndefOr[ConfidenceThreshold] = js.native
   
   /**
     * If you set the processBehavior element to BUILD, Amazon Lex builds the bot so that it can be run. If you set the element to SAVE Amazon Lex saves the bot, but doesn't build it.  If you don't specify this value, the default value is BUILD.
@@ -146,6 +156,12 @@ object PutBotRequest {
     def deleteDetectSentiment: Self = this.set("detectSentiment", js.undefined)
     
     @scala.inline
+    def setEnableModelImprovements(value: Boolean): Self = this.set("enableModelImprovements", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnableModelImprovements: Self = this.set("enableModelImprovements", js.undefined)
+    
+    @scala.inline
     def setIdleSessionTTLInSeconds(value: SessionTTL): Self = this.set("idleSessionTTLInSeconds", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -159,6 +175,12 @@ object PutBotRequest {
     
     @scala.inline
     def deleteIntents: Self = this.set("intents", js.undefined)
+    
+    @scala.inline
+    def setNluIntentConfidenceThreshold(value: ConfidenceThreshold): Self = this.set("nluIntentConfidenceThreshold", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNluIntentConfidenceThreshold: Self = this.set("nluIntentConfidenceThreshold", js.undefined)
     
     @scala.inline
     def setProcessBehavior(value: ProcessBehavior): Self = this.set("processBehavior", value.asInstanceOf[js.Any])

@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.iparticleemittertypeMod.IParticleEmitterType
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,10 +18,11 @@ object meshParticleEmitterMod extends js.Object {
     * @param mesh defines the mesh to use as source
     */
   class MeshParticleEmitter () extends IParticleEmitterType {
-    def this(/** Defines the mesh to use as source */
-    mesh: AbstractMesh) = this()
+    def this(mesh: Nullable[AbstractMesh]) = this()
     
     var _indices: js.Any = js.native
+    
+    var _mesh: js.Any = js.native
     
     var _normals: js.Any = js.native
     
@@ -39,7 +41,8 @@ object meshParticleEmitterMod extends js.Object {
     var direction2: Vector3 = js.native
     
     /** Defines the mesh to use as source */
-    var mesh: js.UndefOr[AbstractMesh] = js.native
+    def mesh: Nullable[AbstractMesh] = js.native
+    def mesh_=(value: Nullable[AbstractMesh]): Unit = js.native
     
     /**
       * Gets or sets a boolean indicating that particle directions must be built from mesh face normals

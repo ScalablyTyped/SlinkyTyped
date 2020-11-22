@@ -24,6 +24,7 @@ import typingsSlinky.pulumiAws.anon.TypeofAppConfig
 import typingsSlinky.pulumiAws.anon.TypeofAppMesh
 import typingsSlinky.pulumiAws.anon.TypeofAppStream
 import typingsSlinky.pulumiAws.anon.TypeofAppSync
+import typingsSlinky.pulumiAws.anon.TypeofAppflow
 import typingsSlinky.pulumiAws.anon.TypeofApplicationAutoScal
 import typingsSlinky.pulumiAws.anon.TypeofApplicationInsights
 import typingsSlinky.pulumiAws.anon.TypeofAthena
@@ -32,6 +33,7 @@ import typingsSlinky.pulumiAws.anon.TypeofAutoScaling
 import typingsSlinky.pulumiAws.anon.TypeofAutoScalingPlans
 import typingsSlinky.pulumiAws.anon.TypeofBackup
 import typingsSlinky.pulumiAws.anon.TypeofBatch
+import typingsSlinky.pulumiAws.anon.TypeofBraket
 import typingsSlinky.pulumiAws.anon.TypeofBudgets
 import typingsSlinky.pulumiAws.anon.TypeofCUR
 import typingsSlinky.pulumiAws.anon.TypeofChime
@@ -72,6 +74,7 @@ import typingsSlinky.pulumiAws.anon.TypeofCredentials
 import typingsSlinky.pulumiAws.anon.TypeofDAX
 import typingsSlinky.pulumiAws.anon.TypeofDLM
 import typingsSlinky.pulumiAws.anon.TypeofDMS
+import typingsSlinky.pulumiAws.anon.TypeofDataBrew
 import typingsSlinky.pulumiAws.anon.TypeofDataExchange
 import typingsSlinky.pulumiAws.anon.TypeofDataPipeline
 import typingsSlinky.pulumiAws.anon.TypeofDataSync
@@ -117,6 +120,7 @@ import typingsSlinky.pulumiAws.anon.TypeofHealth
 import typingsSlinky.pulumiAws.anon.TypeofHoneycode
 import typingsSlinky.pulumiAws.anon.TypeofIAM
 import typingsSlinky.pulumiAws.anon.TypeofIVS
+import typingsSlinky.pulumiAws.anon.TypeofIdentityStore
 import typingsSlinky.pulumiAws.anon.TypeofImagebuilder
 import typingsSlinky.pulumiAws.anon.TypeofImportExport
 import typingsSlinky.pulumiAws.anon.TypeofInspector
@@ -171,6 +175,7 @@ import typingsSlinky.pulumiAws.anon.TypeofMigrationHubConfig
 import typingsSlinky.pulumiAws.anon.TypeofMobile
 import typingsSlinky.pulumiAws.anon.TypeofMobileAnalytics
 import typingsSlinky.pulumiAws.anon.TypeofNeptune
+import typingsSlinky.pulumiAws.anon.TypeofNetworkFirewall
 import typingsSlinky.pulumiAws.anon.TypeofNetworkManager
 import typingsSlinky.pulumiAws.anon.TypeofOpsWorks
 import typingsSlinky.pulumiAws.anon.TypeofOpsWorksCM
@@ -192,6 +197,7 @@ import typingsSlinky.pulumiAws.anon.TypeofRAM
 import typingsSlinky.pulumiAws.anon.TypeofRDS
 import typingsSlinky.pulumiAws.anon.TypeofRDSDataService
 import typingsSlinky.pulumiAws.anon.TypeofRedshift
+import typingsSlinky.pulumiAws.anon.TypeofRedshiftData
 import typingsSlinky.pulumiAws.anon.TypeofRekognition
 import typingsSlinky.pulumiAws.anon.TypeofResourceGroups
 import typingsSlinky.pulumiAws.anon.TypeofResourceGroupsTaggi
@@ -201,6 +207,7 @@ import typingsSlinky.pulumiAws.anon.TypeofRoute53Domains
 import typingsSlinky.pulumiAws.anon.TypeofRoute53Resolver
 import typingsSlinky.pulumiAws.anon.TypeofS3
 import typingsSlinky.pulumiAws.anon.TypeofS3Control
+import typingsSlinky.pulumiAws.anon.TypeofS3Outposts
 import typingsSlinky.pulumiAws.anon.TypeofSES
 import typingsSlinky.pulumiAws.anon.TypeofSESV2
 import typingsSlinky.pulumiAws.anon.TypeofSMS
@@ -208,6 +215,7 @@ import typingsSlinky.pulumiAws.anon.TypeofSNS
 import typingsSlinky.pulumiAws.anon.TypeofSQS
 import typingsSlinky.pulumiAws.anon.TypeofSSM
 import typingsSlinky.pulumiAws.anon.TypeofSSO
+import typingsSlinky.pulumiAws.anon.TypeofSSOAdmin
 import typingsSlinky.pulumiAws.anon.TypeofSSOOIDC
 import typingsSlinky.pulumiAws.anon.TypeofSTS
 import typingsSlinky.pulumiAws.anon.TypeofSWF
@@ -219,6 +227,7 @@ import typingsSlinky.pulumiAws.anon.TypeofSecretsManager
 import typingsSlinky.pulumiAws.anon.TypeofSecurityHub
 import typingsSlinky.pulumiAws.anon.TypeofServerlessApplicati
 import typingsSlinky.pulumiAws.anon.TypeofServiceCatalog
+import typingsSlinky.pulumiAws.anon.TypeofServiceCatalogAppRe
 import typingsSlinky.pulumiAws.anon.TypeofServiceDiscovery
 import typingsSlinky.pulumiAws.anon.TypeofServiceQuotas
 import typingsSlinky.pulumiAws.anon.TypeofShield
@@ -230,6 +239,8 @@ import typingsSlinky.pulumiAws.anon.TypeofStorageGateway
 import typingsSlinky.pulumiAws.anon.TypeofSupport
 import typingsSlinky.pulumiAws.anon.TypeofSynthetics
 import typingsSlinky.pulumiAws.anon.TypeofTextract
+import typingsSlinky.pulumiAws.anon.TypeofTimestreamQuery
+import typingsSlinky.pulumiAws.anon.TypeofTimestreamWrite
 import typingsSlinky.pulumiAws.anon.TypeofTranscribeService
 import typingsSlinky.pulumiAws.anon.TypeofTransfer
 import typingsSlinky.pulumiAws.anon.TypeofTranslate
@@ -277,8 +288,6 @@ object pulumiAwsAugmentingMod extends js.Object {
     
     var APIGateway: Instantiable0[typingsSlinky.awsSdk.mod.APIGateway] | TypeofAPIGateway = js.native
     
-    var AWSError: Instantiable0[typingsSlinky.awsSdk.mod.AWSError] = js.native
-    
     var AccessAnalyzer: Instantiable0[typingsSlinky.awsSdk.mod.AccessAnalyzer] | TypeofAccessAnalyzer = js.native
     
     var AlexaForBusiness: Instantiable0[typingsSlinky.awsSdk.mod.AlexaForBusiness] | TypeofAlexaForBusiness = js.native
@@ -297,6 +306,8 @@ object pulumiAwsAugmentingMod extends js.Object {
     
     var AppSync: Instantiable0[typingsSlinky.awsSdk.mod.AppSync] | TypeofAppSync = js.native
     
+    var Appflow: Instantiable0[typingsSlinky.awsSdk.mod.Appflow] | TypeofAppflow = js.native
+    
     var ApplicationAutoScaling: Instantiable0[typingsSlinky.awsSdk.mod.ApplicationAutoScaling] | TypeofApplicationAutoScal = js.native
     
     var ApplicationInsights: Instantiable0[typingsSlinky.awsSdk.mod.ApplicationInsights] | TypeofApplicationInsights = js.native
@@ -312,6 +323,8 @@ object pulumiAwsAugmentingMod extends js.Object {
     var Backup: Instantiable0[typingsSlinky.awsSdk.mod.Backup] | TypeofBackup = js.native
     
     var Batch: Instantiable0[typingsSlinky.awsSdk.mod.Batch] | TypeofBatch = js.native
+    
+    var Braket: Instantiable0[typingsSlinky.awsSdk.mod.Braket] | TypeofBraket = js.native
     
     var Budgets: Instantiable0[typingsSlinky.awsSdk.budgetsMod.Budgets] | TypeofBudgets = js.native
     
@@ -391,6 +404,8 @@ object pulumiAwsAugmentingMod extends js.Object {
     
     var ConfigService: Instantiable0[typingsSlinky.awsSdk.mod.ConfigService] | TypeofConfigService = js.native
     
+    var ConfigurationOptions: Instantiable0[typingsSlinky.awsSdk.mod.ConfigurationOptions] = js.native
+    
     var Connect: Instantiable0[typingsSlinky.awsSdk.mod.Connect] | TypeofConnect = js.native
     
     var ConnectParticipant: Instantiable0[typingsSlinky.awsSdk.mod.ConnectParticipant] | TypeofConnectParticipant = js.native
@@ -406,6 +421,8 @@ object pulumiAwsAugmentingMod extends js.Object {
     var DLM: Instantiable0[typingsSlinky.awsSdk.mod.DLM] | TypeofDLM = js.native
     
     var DMS: Instantiable0[typingsSlinky.awsSdk.mod.DMS] | TypeofDMS = js.native
+    
+    var DataBrew: Instantiable0[typingsSlinky.awsSdk.mod.DataBrew] | TypeofDataBrew = js.native
     
     var DataExchange: Instantiable0[typingsSlinky.awsSdk.mod.DataExchange] | TypeofDataExchange = js.native
     
@@ -510,6 +527,8 @@ object pulumiAwsAugmentingMod extends js.Object {
     var IAM: Instantiable0[typingsSlinky.awsSdk.mod.IAM] | TypeofIAM = js.native
     
     var IVS: Instantiable0[typingsSlinky.awsSdk.mod.IVS] | TypeofIVS = js.native
+    
+    var IdentityStore: Instantiable0[typingsSlinky.awsSdk.mod.IdentityStore] | TypeofIdentityStore = js.native
     
     var Imagebuilder: Instantiable0[typingsSlinky.awsSdk.mod.Imagebuilder] | TypeofImagebuilder = js.native
     
@@ -621,6 +640,8 @@ object pulumiAwsAugmentingMod extends js.Object {
     
     var Neptune: Instantiable0[typingsSlinky.awsSdk.mod.Neptune] | TypeofNeptune = js.native
     
+    var NetworkFirewall: Instantiable0[typingsSlinky.awsSdk.mod.NetworkFirewall] | TypeofNetworkFirewall = js.native
+    
     var NetworkManager: Instantiable0[typingsSlinky.awsSdk.mod.NetworkManager] | TypeofNetworkManager = js.native
     
     var OpsWorks: Instantiable0[typingsSlinky.awsSdk.mod.OpsWorks] | TypeofOpsWorks = js.native
@@ -665,6 +686,8 @@ object pulumiAwsAugmentingMod extends js.Object {
     
     var Redshift: Instantiable0[typingsSlinky.awsSdk.mod.Redshift] | TypeofRedshift = js.native
     
+    var RedshiftData: Instantiable0[typingsSlinky.awsSdk.mod.RedshiftData] | TypeofRedshiftData = js.native
+    
     var Rekognition: Instantiable0[typingsSlinky.awsSdk.mod.Rekognition] | TypeofRekognition = js.native
     
     var RemoteCredentials: Instantiable0[typingsSlinky.awsSdk.mod.RemoteCredentials] = js.native
@@ -693,6 +716,8 @@ object pulumiAwsAugmentingMod extends js.Object {
     
     var S3Control: Instantiable0[typingsSlinky.awsSdk.mod.S3Control] | TypeofS3Control = js.native
     
+    var S3Outposts: Instantiable0[typingsSlinky.awsSdk.mod.S3Outposts] | TypeofS3Outposts = js.native
+    
     var SAMLCredentials: Instantiable1[/* params */ SAMLCredentialsParams, typingsSlinky.awsSdk.mod.SAMLCredentials] = js.native
     
     var SES: Instantiable0[typingsSlinky.awsSdk.mod.SES] | TypeofSES = js.native
@@ -708,6 +733,8 @@ object pulumiAwsAugmentingMod extends js.Object {
     var SSM: Instantiable0[typingsSlinky.awsSdk.mod.SSM] | TypeofSSM = js.native
     
     var SSO: Instantiable0[typingsSlinky.awsSdk.mod.SSO] | TypeofSSO = js.native
+    
+    var SSOAdmin: Instantiable0[typingsSlinky.awsSdk.mod.SSOAdmin] | TypeofSSOAdmin = js.native
     
     var SSOOIDC: Instantiable0[typingsSlinky.awsSdk.mod.SSOOIDC] | TypeofSSOOIDC = js.native
     
@@ -732,6 +759,8 @@ object pulumiAwsAugmentingMod extends js.Object {
     var Service: Instantiable0[typingsSlinky.awsSdk.mod.Service] = js.native
     
     var ServiceCatalog: Instantiable0[typingsSlinky.awsSdk.mod.ServiceCatalog] | TypeofServiceCatalog = js.native
+    
+    var ServiceCatalogAppRegistry: Instantiable0[typingsSlinky.awsSdk.mod.ServiceCatalogAppRegistry] | TypeofServiceCatalogAppRe = js.native
     
     var ServiceDiscovery: Instantiable0[typingsSlinky.awsSdk.mod.ServiceDiscovery] | TypeofServiceDiscovery = js.native
     
@@ -762,6 +791,10 @@ object pulumiAwsAugmentingMod extends js.Object {
       ]) = js.native
     
     var Textract: Instantiable0[typingsSlinky.awsSdk.mod.Textract] | TypeofTextract = js.native
+    
+    var TimestreamQuery: Instantiable0[typingsSlinky.awsSdk.mod.TimestreamQuery] | TypeofTimestreamQuery = js.native
+    
+    var TimestreamWrite: Instantiable0[typingsSlinky.awsSdk.mod.TimestreamWrite] | TypeofTimestreamWrite = js.native
     
     var TokenFileWebIdentityCredentials: Instantiable0[typingsSlinky.awsSdk.mod.TokenFileWebIdentityCredentials] = js.native
     

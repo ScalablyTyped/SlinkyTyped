@@ -13,23 +13,27 @@ trait Options extends js.Object {
   /**
     * Current working directory where the branch name is
     * tested
+    * @default ''
     */
   var cwd: js.UndefOr[String] = js.native
   
   /**
     * Extra arguments to pass to git
+    * @default []
     */
   var gitArgs: js.UndefOr[js.Array[String]] = js.native
   
   /**
     * Path to the repository (i.e.
     * <code>--git-dir=</code> option to <code>git</code>).
+    * @default ''
     */
   var gitDir: js.UndefOr[String] = js.native
   
   /**
     * Git binary name or path to use (default:
     * <code>'git'</code>).
+    * @default 'git'
     */
   var gitPath: js.UndefOr[String] = js.native
 }

@@ -12,12 +12,12 @@ trait CalloutProps extends js.Object {
     * Remove in next release.
     * @deprecated In favor of private `_defaultCalloutProps`.
     */
-  var calloutProps: BeakWidth = js.native
+  var calloutProps: DirectionalHint = js.native
 }
 object CalloutProps {
   
   @scala.inline
-  def apply(calloutProps: BeakWidth): CalloutProps = {
+  def apply(calloutProps: DirectionalHint): CalloutProps = {
     val __obj = js.Dynamic.literal(calloutProps = calloutProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalloutProps]
   }
@@ -38,6 +38,6 @@ object CalloutProps {
     }
     
     @scala.inline
-    def setCalloutProps(value: BeakWidth): Self = this.set("calloutProps", value.asInstanceOf[js.Any])
+    def setCalloutProps(value: DirectionalHint): Self = this.set("calloutProps", value.asInstanceOf[js.Any])
   }
 }

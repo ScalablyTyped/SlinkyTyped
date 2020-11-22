@@ -76,6 +76,8 @@ object EventType extends js.Object {
   
   /* "WorksheetFormatChanged" */ val worksheetFormatChanged: typingsSlinky.officeJsPreview.Excel.EventType.worksheetFormatChanged with String = js.native
   
+  /* "WorksheetFormulaChanged" */ val worksheetFormulaChanged: typingsSlinky.officeJsPreview.Excel.EventType.worksheetFormulaChanged with String = js.native
+  
   /* "WorksheetRowHiddenChanged" */ val worksheetRowHiddenChanged: typingsSlinky.officeJsPreview.Excel.EventType.worksheetRowHiddenChanged with String = js.native
   
   /* "WorksheetRowSorted" */ val worksheetRowSorted: typingsSlinky.officeJsPreview.Excel.EventType.worksheetRowSorted with String = js.native

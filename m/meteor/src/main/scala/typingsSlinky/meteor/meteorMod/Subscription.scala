@@ -24,7 +24,7 @@ trait Subscription extends js.Object {
   
   def stop(): Unit = js.native
   
-  var userId: String = js.native
+  var userId: String | Null = js.native
 }
 object Subscription {
   
@@ -37,10 +37,9 @@ object Subscription {
     onStop: js.Function => Unit,
     ready: () => Unit,
     removed: (String, String) => Unit,
-    stop: () => Unit,
-    userId: String
+    stop: () => Unit
   ): Subscription = {
-    val __obj = js.Dynamic.literal(added = js.Any.fromFunction3(added), changed = js.Any.fromFunction3(changed), connection = connection.asInstanceOf[js.Any], error = js.Any.fromFunction1(error), onStop = js.Any.fromFunction1(onStop), ready = js.Any.fromFunction0(ready), removed = js.Any.fromFunction2(removed), stop = js.Any.fromFunction0(stop), userId = userId.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(added = js.Any.fromFunction3(added), changed = js.Any.fromFunction3(changed), connection = connection.asInstanceOf[js.Any], error = js.Any.fromFunction1(error), onStop = js.Any.fromFunction1(onStop), ready = js.Any.fromFunction0(ready), removed = js.Any.fromFunction2(removed), stop = js.Any.fromFunction0(stop))
     __obj.asInstanceOf[Subscription]
   }
   
@@ -85,5 +84,8 @@ object Subscription {
     
     @scala.inline
     def setUserId(value: String): Self = this.set("userId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUserIdNull: Self = this.set("userId", null)
   }
 }

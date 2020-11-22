@@ -18,13 +18,16 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.table.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.anon.Direction
+import typingsSlinky.grommet.anon.DirectionProperty
+import typingsSlinky.grommet.anon.Error
 import typingsSlinky.grommet.anon.Expand
-import typingsSlinky.grommet.anon.SizeStyle
 import typingsSlinky.grommet.dataTableMod.ColumnConfig
 import typingsSlinky.grommet.dataTableMod.DataTableProps
 import typingsSlinky.grommet.dataTableMod.KeyPress
 import typingsSlinky.grommet.dataTableMod.MouseClick
 import typingsSlinky.grommet.dataTableMod.Sections
+import typingsSlinky.grommet.grommetStrings.footer
+import typingsSlinky.grommet.grommetStrings.header
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.small
@@ -42,8 +45,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.TableHTMLAttributes
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -220,7 +228,9 @@ object DataTable {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -269,14 +279,19 @@ object DataTable {
     
     @scala.inline
     def background(
-      value: BackgroundType | (Sections[BackgroundType | js.Array[String], BackgroundType, BackgroundType])
+      value: BackgroundType | (Sections[
+          BackgroundType | js.Array[String], 
+          BackgroundType, 
+          BackgroundType, 
+          BackgroundType | js.Array[String]
+        ])
     ): this.type = set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderVarargs(value: SizeStyle*): this.type = set("border", js.Array(value :_*))
+    def borderVarargs(value: Error*): this.type = set("border", js.Array(value :_*))
     
     @scala.inline
-    def border(value: BorderType | (Sections[BorderType, BorderType, BorderType])): this.type = set("border", value.asInstanceOf[js.Any])
+    def border(value: BorderType | (Sections[BorderType, BorderType, BorderType, BorderType])): this.type = set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
     def cellPadding(value: Double | String): this.type = set("cellPadding", value.asInstanceOf[js.Any])
@@ -328,6 +343,11 @@ object DataTable {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def fill(
+      value: Boolean | typingsSlinky.grommet.grommetStrings.vertical | typingsSlinky.grommet.grommetStrings.horizontal
+    ): this.type = set("fill", value.asInstanceOf[js.Any])
     
     @scala.inline
     def gridArea(value: GridAreaType): this.type = set("gridArea", value.asInstanceOf[js.Any])
@@ -579,10 +599,10 @@ object DataTable {
     def onSeeking(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSelect(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: /* select */ js.Array[String | Double] => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSort(value: /* sort */ Direction => Unit): this.type = set("onSort", js.Any.fromFunction1(value))
+    def onSort(value: /* sort */ DirectionProperty => Unit): this.type = set("onSort", js.Any.fromFunction1(value))
     
     @scala.inline
     def onStalled(value: SyntheticEvent[Event, HTMLTableElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
@@ -621,7 +641,10 @@ object DataTable {
     def onWheel(value: SyntheticWheelEvent[HTMLTableElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def pad(value: PadType | (Sections[PadType, PadType, PadType])): this.type = set("pad", value.asInstanceOf[js.Any])
+    def pad(value: PadType | (Sections[PadType, PadType, PadType, PadType])): this.type = set("pad", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def pin(value: Boolean | header | footer): this.type = set("pin", value.asInstanceOf[js.Any])
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -655,6 +678,12 @@ object DataTable {
     
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def selectVarargs(value: (String | Double)*): this.type = set("select", js.Array(value :_*))
+    
+    @scala.inline
+    def select(value: js.Array[String | Double]): this.type = set("select", value.asInstanceOf[js.Any])
     
     @scala.inline
     def size(value: small | medium | large | xlarge | String): this.type = set("size", value.asInstanceOf[js.Any])

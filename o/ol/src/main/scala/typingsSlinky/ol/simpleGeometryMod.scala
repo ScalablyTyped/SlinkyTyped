@@ -24,12 +24,21 @@ object simpleGeometryMod extends js.Object {
     
     def getCoordinates(): js.Array[_] = js.native
     
+    /**
+      * Return the first coordinate of the geometry.
+      */
     def getFirstCoordinate(): Coordinate = js.native
     
     def getFlatCoordinates(): js.Array[Double] = js.native
     
+    /**
+      * Return the last coordinate of the geometry.
+      */
     def getLastCoordinate(): Coordinate = js.native
     
+    /**
+      * Return the {@link module:ol/geom/GeometryLayout layout} of the geometry.
+      */
     def getLayout(): GeometryLayout = js.native
     
     /* protected */ def getSimplifiedGeometryInternal(squaredTolerance: Double): SimpleGeometry = js.native

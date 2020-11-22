@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposSetAdminBranchProtectionEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposSetAdminBranchProtectionResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposRemoveStatusCheckContextsEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposRemoveStatusCheckContextsResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `1007` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposSetAdminBranchProtectionEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposRemoveStatusCheckContextsEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposSetAdminBranchProtectionResponseData] = js.native
+  var response: OctokitResponse[ReposRemoveStatusCheckContextsResponseData] = js.native
 }
 object `1007` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposSetAdminBranchProtectionEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposSetAdminBranchProtectionResponseData]
+    parameters: RequestParameters with (Omit[ReposRemoveStatusCheckContextsEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposRemoveStatusCheckContextsResponseData]
   ): `1007` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1007`]
@@ -47,10 +47,10 @@ object `1007` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[ReposSetAdminBranchProtectionEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ReposRemoveStatusCheckContextsEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposSetAdminBranchProtectionResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReposRemoveStatusCheckContextsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

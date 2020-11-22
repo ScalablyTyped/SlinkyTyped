@@ -43,6 +43,11 @@ trait DomainDescription extends js.Object {
   var repositoryCount: js.UndefOr[Integer] = js.native
   
   /**
+    * The Amazon Resource Name (ARN) of the Amazon S3 bucket that is used to store package assets in the domain.
+    */
+  var s3BucketArn: js.UndefOr[Arn] = js.native
+  
+  /**
     *  The current status of a domain. The valid values are     Active     Deleted   
     */
   var status: js.UndefOr[DomainStatus] = js.native
@@ -111,6 +116,12 @@ object DomainDescription {
     
     @scala.inline
     def deleteRepositoryCount: Self = this.set("repositoryCount", js.undefined)
+    
+    @scala.inline
+    def setS3BucketArn(value: Arn): Self = this.set("s3BucketArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteS3BucketArn: Self = this.set("s3BucketArn", js.undefined)
     
     @scala.inline
     def setStatus(value: DomainStatus): Self = this.set("status", value.asInstanceOf[js.Any])

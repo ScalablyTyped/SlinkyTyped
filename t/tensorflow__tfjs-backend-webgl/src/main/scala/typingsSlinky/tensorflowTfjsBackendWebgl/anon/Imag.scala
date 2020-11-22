@@ -1,7 +1,6 @@
 package typingsSlinky.tensorflowTfjsBackendWebgl.anon
 
-import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.TensorInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Imag extends js.Object {
   
-  var imag: Tensor[Rank] = js.native
+  var imag: TensorInfo = js.native
   
-  var real: Tensor[Rank] = js.native
+  var real: TensorInfo = js.native
 }
 object Imag {
   
   @scala.inline
-  def apply(imag: Tensor[Rank], real: Tensor[Rank]): Imag = {
+  def apply(imag: TensorInfo, real: TensorInfo): Imag = {
     val __obj = js.Dynamic.literal(imag = imag.asInstanceOf[js.Any], real = real.asInstanceOf[js.Any])
     __obj.asInstanceOf[Imag]
   }
@@ -37,9 +36,9 @@ object Imag {
     }
     
     @scala.inline
-    def setImag(value: Tensor[Rank]): Self = this.set("imag", value.asInstanceOf[js.Any])
+    def setImag(value: TensorInfo): Self = this.set("imag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setReal(value: Tensor[Rank]): Self = this.set("real", value.asInstanceOf[js.Any])
+    def setReal(value: TensorInfo): Self = this.set("real", value.asInstanceOf[js.Any])
   }
 }

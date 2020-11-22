@@ -18,7 +18,7 @@ trait ChapInfo extends js.Object {
   var SecretToAuthenticateInitiator: js.UndefOr[ChapSecret] = js.native
   
   /**
-    * The secret key that the target must provide to participate in mutual CHAP with the initiator (e.g. Windows client).
+    * The secret key that the target must provide to participate in mutual CHAP with the initiator (e.g., Windows client).
     */
   var SecretToAuthenticateTarget: js.UndefOr[ChapSecret] = js.native
   

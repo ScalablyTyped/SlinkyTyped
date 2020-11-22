@@ -8,4 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("sinon-chrome", "loadTimes")
 @js.native
-object loadTimes extends TopLevel[SinonSpy]
+object loadTimes
+  extends TopLevel[SinonSpy[js.Array[js.Any], js.Any]]

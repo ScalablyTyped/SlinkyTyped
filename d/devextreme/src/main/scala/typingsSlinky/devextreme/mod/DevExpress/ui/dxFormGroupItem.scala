@@ -16,46 +16,70 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFormGroupItem extends js.Object {
   
-  /** @name dxFormGroupItem.alignItemLabels */
+  /**
+    * [descr:dxFormGroupItem.alignItemLabels]
+    */
   var alignItemLabels: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFormGroupItem.caption */
+  /**
+    * [descr:dxFormGroupItem.caption]
+    */
   var caption: js.UndefOr[String] = js.native
   
-  /** @name dxFormGroupItem.colCount */
+  /**
+    * [descr:dxFormGroupItem.colCount]
+    */
   var colCount: js.UndefOr[Double] = js.native
   
-  /** @name dxFormGroupItem.colCountByScreen */
+  /**
+    * [descr:dxFormGroupItem.colCountByScreen]
+    */
   var colCountByScreen: js.UndefOr[js.Any] = js.native
   
-  /** @name dxFormGroupItem.colSpan */
+  /**
+    * [descr:dxFormGroupItem.colSpan]
+    */
   var colSpan: js.UndefOr[Double] = js.native
   
-  /** @name dxFormGroupItem.cssClass */
+  /**
+    * [descr:dxFormGroupItem.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name dxFormGroupItem.itemType */
+  /**
+    * [descr:dxFormGroupItem.itemType]
+    */
   var itemType: js.UndefOr[empty | group | simple | tabbed | button] = js.native
   
-  /** @name dxFormGroupItem.items */
+  /**
+    * [descr:dxFormGroupItem.items]
+    */
   var items: js.UndefOr[
     js.Array[
       dxFormSimpleItem | dxFormGroupItem | dxFormTabbedItem | dxFormEmptyItem | dxFormButtonItem
     ]
   ] = js.native
   
-  /** @name dxFormGroupItem.name */
+  /**
+    * [descr:dxFormGroupItem.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxFormGroupItem.template */
+  /**
+    * [descr:dxFormGroupItem.template]
+    */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* data */ FormData, /* itemElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxFormGroupItem.visible */
+  /**
+    * [descr:dxFormGroupItem.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFormGroupItem.visibleIndex */
+  /**
+    * [descr:dxFormGroupItem.visibleIndex]
+    */
   var visibleIndex: js.UndefOr[Double] = js.native
 }
 object dxFormGroupItem {

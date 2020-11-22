@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "angular-clipboard"
-version := "v1.5-dt-20200515Z-0a6f47"
+version := "v1.5-dt-20200922Z-0a6f47"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

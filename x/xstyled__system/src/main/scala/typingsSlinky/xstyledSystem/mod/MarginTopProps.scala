@@ -9,13 +9,13 @@ trait MarginTopProps[TLength] extends js.Object {
   
   val marginTop: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginTopProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginTop<TLength> */ _
     ]
   ] = js.native
   
   val mt: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginTopProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginTop<TLength> */ _
     ]
   ] = js.native
 }
@@ -43,9 +43,12 @@ object MarginTopProps {
     }
     
     @scala.inline
+    def setMarginTopVarargs(value: js.Any*): Self = this.set("marginTop", js.Array(value :_*))
+    
+    @scala.inline
     def setMarginTop(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginTopProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginTop<TLength> */ _
         ]
     ): Self = this.set("marginTop", value.asInstanceOf[js.Any])
     
@@ -53,9 +56,12 @@ object MarginTopProps {
     def deleteMarginTop: Self = this.set("marginTop", js.undefined)
     
     @scala.inline
+    def setMtVarargs(value: js.Any*): Self = this.set("mt", js.Array(value :_*))
+    
+    @scala.inline
     def setMt(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginTopProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginTop<TLength> */ _
         ]
     ): Self = this.set("mt", value.asInstanceOf[js.Any])
     

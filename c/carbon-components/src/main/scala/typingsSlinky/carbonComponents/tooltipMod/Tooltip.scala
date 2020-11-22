@@ -1,6 +1,5 @@
 package typingsSlinky.carbonComponents.tooltipMod
 
-import typingsSlinky.carbonComponents.anon.Details
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - Dropped any */ @js.native
 trait Tooltip extends js.Object {
   
-  def _handleClick(hasRelatedTargetTypeHadContextMenuDetails: Details): Unit = js.native
+  def _handleClick(hasRelatedTargetTypeHadContextMenuDetails: js.Any): Unit = js.native
   
   var _hasContextMenu: Boolean = js.native
   
@@ -23,7 +22,7 @@ object Tooltip {
   
   @scala.inline
   def apply(
-    _handleClick: Details => Unit,
+    _handleClick: js.Any => Unit,
     _hasContextMenu: Boolean,
     _hookOn: js.Any => Unit,
     changeState: (js.Any, js.Any, js.Any) => Unit,
@@ -49,7 +48,7 @@ object Tooltip {
     }
     
     @scala.inline
-    def set_handleClick(value: Details => Unit): Self = this.set("_handleClick", js.Any.fromFunction1(value))
+    def set_handleClick(value: js.Any => Unit): Self = this.set("_handleClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def set_hasContextMenu(value: Boolean): Self = this.set("_hasContextMenu", value.asInstanceOf[js.Any])

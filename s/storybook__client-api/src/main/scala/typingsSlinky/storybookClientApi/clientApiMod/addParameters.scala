@@ -10,4 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object addParameters extends js.Object {
   
   def apply(parameters: Parameters): Unit = js.native
+  def apply(parameters: Parameters, deprecationWarning: Boolean): Unit = js.native
 }

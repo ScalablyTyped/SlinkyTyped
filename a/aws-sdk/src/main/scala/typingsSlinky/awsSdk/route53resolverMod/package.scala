@@ -14,7 +14,11 @@ package object route53resolverMod {
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.route53resolverMod.ClientApiVersions
   
+  type Count = scala.Double
+  
   type CreatorRequestId = java.lang.String
+  
+  type DestinationArn = java.lang.String
   
   type DomainName = java.lang.String
   
@@ -78,6 +82,44 @@ package object route53resolverMod {
   type ResolverEndpoints = js.Array[typingsSlinky.awsSdk.route53resolverMod.ResolverEndpoint]
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.DESTINATION_NOT_FOUND
+    - typingsSlinky.awsSdk.awsSdkStrings.ACCESS_DENIED
+    - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL_SERVICE_ERROR
+    - java.lang.String
+  */
+  type ResolverQueryLogConfigAssociationError = typingsSlinky.awsSdk.route53resolverMod._ResolverQueryLogConfigAssociationError | java.lang.String
+  
+  type ResolverQueryLogConfigAssociationErrorMessage = java.lang.String
+  
+  type ResolverQueryLogConfigAssociationList = js.Array[typingsSlinky.awsSdk.route53resolverMod.ResolverQueryLogConfigAssociation]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTION_NEEDED
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - java.lang.String
+  */
+  type ResolverQueryLogConfigAssociationStatus = typingsSlinky.awsSdk.route53resolverMod._ResolverQueryLogConfigAssociationStatus | java.lang.String
+  
+  type ResolverQueryLogConfigList = js.Array[typingsSlinky.awsSdk.route53resolverMod.ResolverQueryLogConfig]
+  
+  type ResolverQueryLogConfigName = java.lang.String
+  
+  type ResolverQueryLogConfigPolicy = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATED
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - java.lang.String
+  */
+  type ResolverQueryLogConfigStatus = typingsSlinky.awsSdk.route53resolverMod._ResolverQueryLogConfigStatus | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CREATING
     - typingsSlinky.awsSdk.awsSdkStrings.COMPLETE
     - typingsSlinky.awsSdk.awsSdkStrings.DELETING
@@ -123,6 +165,15 @@ package object route53resolverMod {
     - java.lang.String
   */
   type ShareStatus = typingsSlinky.awsSdk.route53resolverMod._ShareStatus | java.lang.String
+  
+  type SortByKey = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ASCENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.DESCENDING
+    - java.lang.String
+  */
+  type SortOrder = typingsSlinky.awsSdk.route53resolverMod._SortOrder | java.lang.String
   
   type StatusMessage = java.lang.String
   

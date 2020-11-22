@@ -67,6 +67,12 @@ trait Typeofjest extends js.Object {
   def clearAllTimers(): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
   
   /**
+    * Use the automatic mocking system to generate a mocked version of the given module.
+    */
+  // tslint:disable-next-line: no-unnecessary-generics
+  def createMockFromModule[T](moduleName: String): T = js.native
+  
+  /**
     * Indicates that the module system should never return a mocked version
     * of the specified module, including all of the specificied module's dependencies.
     */
@@ -108,6 +114,7 @@ trait Typeofjest extends js.Object {
   def fn_TY_ArrayWildcard[T, Y /* <: js.Array[_] */](): Mock_[T, Y] = js.native
   
   /**
+    * (renamed to `createMockFromModule` in Jest 26.0.0+)
     * Use the automatic mocking system to generate a mocked version of the given module.
     */
   // tslint:disable-next-line: no-unnecessary-generics

@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object sign extends js.Object {
   
   def apply(algorithm: js.UndefOr[scala.Nothing], data: ArrayBufferView, key: KeyLike): Buffer = js.native
+  def apply(algorithm: js.UndefOr[scala.Nothing], data: ArrayBufferView, key: SignKeyObjectInput): Buffer = js.native
   def apply(algorithm: js.UndefOr[scala.Nothing], data: ArrayBufferView, key: SignPrivateKeyInput): Buffer = js.native
   /**
     * Calculates and returns the signature for `data` using the given private key and
@@ -21,7 +22,9 @@ object sign extends js.Object {
     * passed to [`crypto.createPrivateKey()`][].
     */
   def apply(algorithm: String, data: ArrayBufferView, key: KeyLike): Buffer = js.native
+  def apply(algorithm: String, data: ArrayBufferView, key: SignKeyObjectInput): Buffer = js.native
   def apply(algorithm: String, data: ArrayBufferView, key: SignPrivateKeyInput): Buffer = js.native
   def apply(algorithm: Null, data: ArrayBufferView, key: KeyLike): Buffer = js.native
+  def apply(algorithm: Null, data: ArrayBufferView, key: SignKeyObjectInput): Buffer = js.native
   def apply(algorithm: Null, data: ArrayBufferView, key: SignPrivateKeyInput): Buffer = js.native
 }

@@ -12,6 +12,8 @@ trait Options extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
+  var dpi: js.UndefOr[Double] = js.native
+  
   var minWidth: js.UndefOr[Double] = js.native
   
   var render: js.UndefOr[js.Function1[/* p0 */ typingsSlinky.ol.mapEventMod.default, Unit]] = js.native
@@ -58,6 +60,12 @@ object Options {
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
+    def setDpi(value: Double): Self = this.set("dpi", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDpi: Self = this.set("dpi", js.undefined)
     
     @scala.inline
     def setMinWidth(value: Double): Self = this.set("minWidth", value.asInstanceOf[js.Any])

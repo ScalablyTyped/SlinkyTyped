@@ -13,6 +13,11 @@ trait WorkflowRun extends js.Object {
   var CompletedOn: js.UndefOr[js.Date] = js.native
   
   /**
+    * This error message describes any error that may have occurred in starting the workflow run. Currently the only error message is "Concurrent runs exceeded for workflow: foo."
+    */
+  var ErrorMessage: js.UndefOr[ErrorString] = js.native
+  
+  /**
     * The graph representing all the AWS Glue components that belong to the workflow as nodes and directed connections between them as edges.
     */
   var Graph: js.UndefOr[WorkflowGraph] = js.native
@@ -80,6 +85,12 @@ object WorkflowRun {
     
     @scala.inline
     def deleteCompletedOn: Self = this.set("CompletedOn", js.undefined)
+    
+    @scala.inline
+    def setErrorMessage(value: ErrorString): Self = this.set("ErrorMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorMessage: Self = this.set("ErrorMessage", js.undefined)
     
     @scala.inline
     def setGraph(value: WorkflowGraph): Self = this.set("Graph", value.asInstanceOf[js.Any])

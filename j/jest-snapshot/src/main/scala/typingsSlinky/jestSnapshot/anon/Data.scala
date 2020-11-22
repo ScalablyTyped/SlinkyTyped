@@ -1,6 +1,6 @@
 package typingsSlinky.jestSnapshot.anon
 
-import typingsSlinky.std.Record
+import typingsSlinky.jestSnapshot.typesMod.SnapshotData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Data extends js.Object {
   
-  var data: Record[String, String] = js.native
+  var data: SnapshotData = js.native
   
   var dirty: Boolean = js.native
 }
 object Data {
   
   @scala.inline
-  def apply(data: Record[String, String], dirty: Boolean): Data = {
+  def apply(data: SnapshotData, dirty: Boolean): Data = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], dirty = dirty.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data]
   }
@@ -36,7 +36,7 @@ object Data {
     }
     
     @scala.inline
-    def setData(value: Record[String, String]): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: SnapshotData): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDirty(value: Boolean): Self = this.set("dirty", value.asInstanceOf[js.Any])

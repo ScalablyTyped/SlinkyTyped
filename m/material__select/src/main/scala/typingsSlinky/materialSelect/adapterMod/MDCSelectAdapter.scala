@@ -20,11 +20,6 @@ trait MDCSelectAdapter extends js.Object {
   def addClass(className: String): Unit = js.native
   
   /**
-    * Adds the class name on the menu item at the given index.
-    */
-  def addClassAtIndex(index: Double, className: String): Unit = js.native
-  
-  /**
     * Adds class to the menu element.
     */
   def addMenuClass(className: String): Unit = js.native
@@ -65,11 +60,6 @@ trait MDCSelectAdapter extends js.Object {
   def getLabelWidth(): Double = js.native
   
   /**
-    * Returns the given attribute on the the menu item element.
-    */
-  def getMenuItemAttr(menuItem: Element, attr: String): String | Null = js.native
-  
-  /**
     * Returns the number of menu items.
     */
   def getMenuItemCount(): Double = js.native
@@ -90,9 +80,9 @@ trait MDCSelectAdapter extends js.Object {
   def getSelectAnchorAttr(attr: String): String | Null = js.native
   
   /**
-    * Returns the selected menu item element.
+    * Returns the selected index.
     */
-  def getSelectedMenuItem(): Element | Null = js.native
+  def getSelectedIndex(): Double = js.native
   
   /**
     * Returns true if the select anchor element contains the given class name.
@@ -140,11 +130,6 @@ trait MDCSelectAdapter extends js.Object {
   def removeClass(className: String): Unit = js.native
   
   /**
-    * Removes the class name on the menu item at the given index.
-    */
-  def removeClassAtIndex(index: Double, className: String): Unit = js.native
-  
-  /**
     * Removes a class from the menu element.
     */
   def removeMenuClass(className: String): Unit = js.native
@@ -153,11 +138,6 @@ trait MDCSelectAdapter extends js.Object {
     * Removes the given attribute on the select anchor element.
     */
   def removeSelectAnchorAttr(attr: String): Unit = js.native
-  
-  /**
-    * Sets the attribute on the menu item at the given index.
-    */
-  def setAttributeAtIndex(index: Double, attributeName: String, attributeValue: String): Unit = js.native
   
   /**
     * Styles the label as required, if the label exists.
@@ -190,6 +170,11 @@ trait MDCSelectAdapter extends js.Object {
   def setSelectAnchorAttr(attr: String, value: String): Unit = js.native
   
   /**
+    * Sets the selected index in the menu.
+    */
+  def setSelectedIndex(index: Double): Unit = js.native
+  
+  /**
     * Sets the text content of the selectedText element to the given string.
     */
   def setSelectedText(text: String): Unit = js.native
@@ -206,7 +191,6 @@ object MDCSelectAdapter {
   def apply(
     activateBottomLine: () => Unit,
     addClass: String => Unit,
-    addClassAtIndex: (Double, String) => Unit,
     addMenuClass: String => Unit,
     closeMenu: () => Unit,
     closeOutline: () => Unit,
@@ -215,12 +199,11 @@ object MDCSelectAdapter {
     focusMenuItemAtIndex: Double => Unit,
     getAnchorElement: () => Element | Null,
     getLabelWidth: () => Double,
-    getMenuItemAttr: (Element, String) => String | Null,
     getMenuItemCount: () => Double,
     getMenuItemTextAtIndex: Double => String,
     getMenuItemValues: () => js.Array[String],
     getSelectAnchorAttr: String => String | Null,
-    getSelectedMenuItem: () => Element | Null,
+    getSelectedIndex: () => Double,
     hasClass: String => Boolean,
     hasLabel: () => Boolean,
     hasOutline: () => Boolean,
@@ -230,20 +213,19 @@ object MDCSelectAdapter {
     notifyChange: String => Unit,
     openMenu: () => Unit,
     removeClass: String => Unit,
-    removeClassAtIndex: (Double, String) => Unit,
     removeMenuClass: String => Unit,
     removeSelectAnchorAttr: String => Unit,
-    setAttributeAtIndex: (Double, String, String) => Unit,
     setLabelRequired: Boolean => Unit,
     setMenuAnchorCorner: Corner => Unit,
     setMenuAnchorElement: Element => Unit,
     setMenuWrapFocus: Boolean => Unit,
     setRippleCenter: Double => Unit,
     setSelectAnchorAttr: (String, String) => Unit,
+    setSelectedIndex: Double => Unit,
     setSelectedText: String => Unit,
     typeaheadMatchItem: (String, Double) => Double
   ): MDCSelectAdapter = {
-    val __obj = js.Dynamic.literal(activateBottomLine = js.Any.fromFunction0(activateBottomLine), addClass = js.Any.fromFunction1(addClass), addClassAtIndex = js.Any.fromFunction2(addClassAtIndex), addMenuClass = js.Any.fromFunction1(addMenuClass), closeMenu = js.Any.fromFunction0(closeMenu), closeOutline = js.Any.fromFunction0(closeOutline), deactivateBottomLine = js.Any.fromFunction0(deactivateBottomLine), floatLabel = js.Any.fromFunction1(floatLabel), focusMenuItemAtIndex = js.Any.fromFunction1(focusMenuItemAtIndex), getAnchorElement = js.Any.fromFunction0(getAnchorElement), getLabelWidth = js.Any.fromFunction0(getLabelWidth), getMenuItemAttr = js.Any.fromFunction2(getMenuItemAttr), getMenuItemCount = js.Any.fromFunction0(getMenuItemCount), getMenuItemTextAtIndex = js.Any.fromFunction1(getMenuItemTextAtIndex), getMenuItemValues = js.Any.fromFunction0(getMenuItemValues), getSelectAnchorAttr = js.Any.fromFunction1(getSelectAnchorAttr), getSelectedMenuItem = js.Any.fromFunction0(getSelectedMenuItem), hasClass = js.Any.fromFunction1(hasClass), hasLabel = js.Any.fromFunction0(hasLabel), hasOutline = js.Any.fromFunction0(hasOutline), isSelectAnchorFocused = js.Any.fromFunction0(isSelectAnchorFocused), isTypeaheadInProgress = js.Any.fromFunction0(isTypeaheadInProgress), notchOutline = js.Any.fromFunction1(notchOutline), notifyChange = js.Any.fromFunction1(notifyChange), openMenu = js.Any.fromFunction0(openMenu), removeClass = js.Any.fromFunction1(removeClass), removeClassAtIndex = js.Any.fromFunction2(removeClassAtIndex), removeMenuClass = js.Any.fromFunction1(removeMenuClass), removeSelectAnchorAttr = js.Any.fromFunction1(removeSelectAnchorAttr), setAttributeAtIndex = js.Any.fromFunction3(setAttributeAtIndex), setLabelRequired = js.Any.fromFunction1(setLabelRequired), setMenuAnchorCorner = js.Any.fromFunction1(setMenuAnchorCorner), setMenuAnchorElement = js.Any.fromFunction1(setMenuAnchorElement), setMenuWrapFocus = js.Any.fromFunction1(setMenuWrapFocus), setRippleCenter = js.Any.fromFunction1(setRippleCenter), setSelectAnchorAttr = js.Any.fromFunction2(setSelectAnchorAttr), setSelectedText = js.Any.fromFunction1(setSelectedText), typeaheadMatchItem = js.Any.fromFunction2(typeaheadMatchItem))
+    val __obj = js.Dynamic.literal(activateBottomLine = js.Any.fromFunction0(activateBottomLine), addClass = js.Any.fromFunction1(addClass), addMenuClass = js.Any.fromFunction1(addMenuClass), closeMenu = js.Any.fromFunction0(closeMenu), closeOutline = js.Any.fromFunction0(closeOutline), deactivateBottomLine = js.Any.fromFunction0(deactivateBottomLine), floatLabel = js.Any.fromFunction1(floatLabel), focusMenuItemAtIndex = js.Any.fromFunction1(focusMenuItemAtIndex), getAnchorElement = js.Any.fromFunction0(getAnchorElement), getLabelWidth = js.Any.fromFunction0(getLabelWidth), getMenuItemCount = js.Any.fromFunction0(getMenuItemCount), getMenuItemTextAtIndex = js.Any.fromFunction1(getMenuItemTextAtIndex), getMenuItemValues = js.Any.fromFunction0(getMenuItemValues), getSelectAnchorAttr = js.Any.fromFunction1(getSelectAnchorAttr), getSelectedIndex = js.Any.fromFunction0(getSelectedIndex), hasClass = js.Any.fromFunction1(hasClass), hasLabel = js.Any.fromFunction0(hasLabel), hasOutline = js.Any.fromFunction0(hasOutline), isSelectAnchorFocused = js.Any.fromFunction0(isSelectAnchorFocused), isTypeaheadInProgress = js.Any.fromFunction0(isTypeaheadInProgress), notchOutline = js.Any.fromFunction1(notchOutline), notifyChange = js.Any.fromFunction1(notifyChange), openMenu = js.Any.fromFunction0(openMenu), removeClass = js.Any.fromFunction1(removeClass), removeMenuClass = js.Any.fromFunction1(removeMenuClass), removeSelectAnchorAttr = js.Any.fromFunction1(removeSelectAnchorAttr), setLabelRequired = js.Any.fromFunction1(setLabelRequired), setMenuAnchorCorner = js.Any.fromFunction1(setMenuAnchorCorner), setMenuAnchorElement = js.Any.fromFunction1(setMenuAnchorElement), setMenuWrapFocus = js.Any.fromFunction1(setMenuWrapFocus), setRippleCenter = js.Any.fromFunction1(setRippleCenter), setSelectAnchorAttr = js.Any.fromFunction2(setSelectAnchorAttr), setSelectedIndex = js.Any.fromFunction1(setSelectedIndex), setSelectedText = js.Any.fromFunction1(setSelectedText), typeaheadMatchItem = js.Any.fromFunction2(typeaheadMatchItem))
     __obj.asInstanceOf[MDCSelectAdapter]
   }
   
@@ -267,9 +249,6 @@ object MDCSelectAdapter {
     
     @scala.inline
     def setAddClass(value: String => Unit): Self = this.set("addClass", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setAddClassAtIndex(value: (Double, String) => Unit): Self = this.set("addClassAtIndex", js.Any.fromFunction2(value))
     
     @scala.inline
     def setAddMenuClass(value: String => Unit): Self = this.set("addMenuClass", js.Any.fromFunction1(value))
@@ -296,9 +275,6 @@ object MDCSelectAdapter {
     def setGetLabelWidth(value: () => Double): Self = this.set("getLabelWidth", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGetMenuItemAttr(value: (Element, String) => String | Null): Self = this.set("getMenuItemAttr", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def setGetMenuItemCount(value: () => Double): Self = this.set("getMenuItemCount", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -311,7 +287,7 @@ object MDCSelectAdapter {
     def setGetSelectAnchorAttr(value: String => String | Null): Self = this.set("getSelectAnchorAttr", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setGetSelectedMenuItem(value: () => Element | Null): Self = this.set("getSelectedMenuItem", js.Any.fromFunction0(value))
+    def setGetSelectedIndex(value: () => Double): Self = this.set("getSelectedIndex", js.Any.fromFunction0(value))
     
     @scala.inline
     def setHasClass(value: String => Boolean): Self = this.set("hasClass", js.Any.fromFunction1(value))
@@ -341,16 +317,10 @@ object MDCSelectAdapter {
     def setRemoveClass(value: String => Unit): Self = this.set("removeClass", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setRemoveClassAtIndex(value: (Double, String) => Unit): Self = this.set("removeClassAtIndex", js.Any.fromFunction2(value))
-    
-    @scala.inline
     def setRemoveMenuClass(value: String => Unit): Self = this.set("removeMenuClass", js.Any.fromFunction1(value))
     
     @scala.inline
     def setRemoveSelectAnchorAttr(value: String => Unit): Self = this.set("removeSelectAnchorAttr", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setSetAttributeAtIndex(value: (Double, String, String) => Unit): Self = this.set("setAttributeAtIndex", js.Any.fromFunction3(value))
     
     @scala.inline
     def setSetLabelRequired(value: Boolean => Unit): Self = this.set("setLabelRequired", js.Any.fromFunction1(value))
@@ -369,6 +339,9 @@ object MDCSelectAdapter {
     
     @scala.inline
     def setSetSelectAnchorAttr(value: (String, String) => Unit): Self = this.set("setSelectAnchorAttr", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setSetSelectedIndex(value: Double => Unit): Self = this.set("setSelectedIndex", js.Any.fromFunction1(value))
     
     @scala.inline
     def setSetSelectedText(value: String => Unit): Self = this.set("setSelectedText", js.Any.fromFunction1(value))

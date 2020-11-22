@@ -1,6 +1,5 @@
 package typingsSlinky.arangodb.Foxx
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.arangodb.ArangoDB.Collection
 import typingsSlinky.arangodb.anon.PartialDocumentationRoute
 import typingsSlinky.arangodb.arangodbBooleans.`false`
@@ -24,7 +23,7 @@ trait Context extends js.Object {
   
   var collectionPrefix: String = js.native
   
-  var configuration: StringDictionary[js.Any] = js.native
+  var configuration: Configuration = js.native
   
   def createDocumentationRouter(): Router = js.native
   def createDocumentationRouter(opts: String): Router = js.native
@@ -32,7 +31,7 @@ trait Context extends js.Object {
   @JSName("createDocumentationRouter")
   def createDocumentationRouter_false(opts: js.Function2[/* req */ Request, /* res */ Response, Unit | `false`]): Router = js.native
   
-  var dependencies: StringDictionary[js.Any] = js.native
+  var dependencies: Dependencies = js.native
   
   def file(name: String): Buffer = js.native
   def file(name: String, encoding: String): String = js.native

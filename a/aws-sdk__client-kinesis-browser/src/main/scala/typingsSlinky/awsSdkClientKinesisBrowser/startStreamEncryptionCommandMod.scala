@@ -1,12 +1,10 @@
 package typingsSlinky.awsSdkClientKinesisBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientKinesisBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.kinesisConfigurationMod.KinesisResolvedConfiguration
 import typingsSlinky.awsSdkClientKinesisBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.typesStartStreamEncryptionInputMod.StartStreamEncryptionInput
 import typingsSlinky.awsSdkClientKinesisBrowser.typesStartStreamEncryptionOutputMod.StartStreamEncryptionOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
@@ -23,15 +21,12 @@ object startStreamEncryptionCommandMod extends js.Object {
           StartStreamEncryptionInput, 
           OutputTypesUnion, 
           StartStreamEncryptionOutput, 
-          KinesisResolvedConfiguration, 
-          Blob
+          KinesisResolvedConfiguration
         ] {
     def this(input: StartStreamEncryptionInput) = this()
     
-    val middlewareStack: MiddlewareStack[StartStreamEncryptionInput, StartStreamEncryptionOutput, Blob] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any,
       configuration: KinesisResolvedConfiguration
     ): Handler[StartStreamEncryptionInput, StartStreamEncryptionOutput] = js.native
   }

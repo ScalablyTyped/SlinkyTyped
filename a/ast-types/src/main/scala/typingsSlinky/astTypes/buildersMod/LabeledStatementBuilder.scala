@@ -6,11 +6,12 @@ import typingsSlinky.astTypes.kindsMod.StatementKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.LabeledStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LabeledStatementBuilder extends js.Object {
+  
   def apply(label: IdentifierKind, body: StatementKind): LabeledStatement = js.native
+  
   def from(params: Label): LabeledStatement = js.native
 }
-

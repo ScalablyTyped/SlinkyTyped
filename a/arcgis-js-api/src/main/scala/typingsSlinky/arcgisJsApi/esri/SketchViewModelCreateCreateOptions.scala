@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SketchViewModelCreateCreateOptions extends Object {
   
   /**
-    * The default z-value of the newly created geometry. Ignored when `hasZ` is `false` or the layer's elevation mode is set to `absolute-height`.
+    * The default z-value of the newly created geometry.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#create)
     */
@@ -27,14 +27,7 @@ trait SketchViewModelCreateCreateOptions extends Object {
   var hasZ: js.UndefOr[Boolean] = js.native
   
   /**
-    * Specifies how the graphic can be created. The create mode applies only when creating `polygon`, `polyline`, `rectangle` and `circle` geometries.
-    *
-    * Value | Description |
-    * ----- | ----------- |
-    * hybrid | Vertices are added while the pointer is clicked or dragged. Applies to and is the default for `polygon` and `polyline`.
-    * freehand | Vertices are added while the pointer is dragged. Applies to `polygon`, `polyline` `rectangle` and `circle`. Default for `rectangle` and `circle`.
-    * click | Vertices are added when the pointer is clicked.
-    *
+    * Specifies how the graphic can be created.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html#create)
     */

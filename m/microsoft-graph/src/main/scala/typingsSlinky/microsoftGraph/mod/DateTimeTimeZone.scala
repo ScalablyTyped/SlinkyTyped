@@ -14,7 +14,7 @@ trait DateTimeTimeZone extends js.Object {
   var dateTime: js.UndefOr[String] = js.native
   
   // Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values.
-  var timeZone: js.UndefOr[String] = js.native
+  var timeZone: js.UndefOr[NullableOption[String]] = js.native
 }
 object DateTimeTimeZone {
   
@@ -46,9 +46,12 @@ object DateTimeTimeZone {
     def deleteDateTime: Self = this.set("dateTime", js.undefined)
     
     @scala.inline
-    def setTimeZone(value: String): Self = this.set("timeZone", value.asInstanceOf[js.Any])
+    def setTimeZone(value: NullableOption[String]): Self = this.set("timeZone", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTimeZone: Self = this.set("timeZone", js.undefined)
+    
+    @scala.inline
+    def setTimeZoneNull: Self = this.set("timeZone", null)
   }
 }

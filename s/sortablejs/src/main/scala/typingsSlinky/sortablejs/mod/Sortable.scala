@@ -92,7 +92,7 @@ trait Sortable extends js.Object {
   
   def option(
     name: onMove,
-    value: js.Function2[/* evt */ MoveEvent, /* originalEvent */ Event, Boolean | `-1` | `1`]
+    value: js.Function2[/* evt */ MoveEvent, /* originalEvent */ Event, Boolean | `-1` | `1` | Unit]
   ): Unit = js.native
   def option(
     name: scrollFn,
@@ -349,7 +349,7 @@ trait Sortable extends js.Object {
   def option_onFilter_Unit(name: onFilter): Unit = js.native
   @JSName("option")
   def option_onMove(name: onMove): js.UndefOr[
-    js.Function2[/* evt */ MoveEvent, /* originalEvent */ Event, Boolean | `-1` | `1`]
+    js.Function2[/* evt */ MoveEvent, /* originalEvent */ Event, Boolean | `-1` | `1` | Unit]
   ] = js.native
   @JSName("option")
   def option_onMove_Unit(name: onMove): Unit = js.native

@@ -6,14 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("n3", "NamedNode")
 @js.native
-class NamedNode protected ()
-  extends typingsSlinky.rdfJs.mod.NamedNode[String]
-     with QuadGraph
-     with QuadObject
-     with QuadSubject
-     with Quad_Predicate
-     with Term {
-  def this(iri: String) = this()
+class NamedNode[Iri /* <: String */] protected ()
+  extends typingsSlinky.rdfJs.mod.NamedNode[Iri] {
+  def this(iri: Iri) = this()
   
   val id: String = js.native
   

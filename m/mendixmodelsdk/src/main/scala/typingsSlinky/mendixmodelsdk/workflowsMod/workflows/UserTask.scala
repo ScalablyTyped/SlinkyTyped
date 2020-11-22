@@ -1,12 +1,13 @@
 package typingsSlinky.mendixmodelsdk.workflowsMod.workflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.StringTemplate
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.IPage
-import typingsSlinky.mendixmodelsdk.securityMod.security.IUserRole
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.workflowsMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,17 +16,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
   *
-  * In version 8.10.0: introduced
+  * @ignore
+  *
+  * In version 8.15.0: introduced
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
-- typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable because Already inherited
 - typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IWorkflowActivity because Already inherited
 - typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IWorkflowTask because Already inherited
-- typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IUserTask because var conflicts: containerAsWorkflow, id, isLoaded, model, name, possibleOutcomes, qualifiedName, structureTypeName, unit. Inlined  */ @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.UserTask")
+- typingsSlinky.mendixmodelsdk.workflowsMod.workflows.IUserTask because var conflicts: containerAsFlow, id, isLoaded, model, outcomes, structureTypeName, unit. Inlined page, pageQualifiedName */ @JSImport("mendixmodelsdk/dist/gen/workflows", "workflows.UserTask")
 @js.native
 class UserTask protected () extends WorkflowTask {
   def this(
@@ -33,41 +35,39 @@ class UserTask protected () extends WorkflowTask {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
-  @JSName("containerAsWorkflow")
-  def containerAsWorkflow_MUserTask: Workflow = js.native
+  @JSName("containerAsFlow")
+  def containerAsFlow_MUserTask: Flow = js.native
   
   def description: StringTemplate = js.native
   def description_=(newValue: StringTemplate): Unit = js.native
   
-  @JSName("model")
-  var model_FUserTask: IModel = js.native
+  /**
+    * The value of this property is conceptually of type microflowExpressions.MicroflowExpression.
+    */
+  def dueDate: String = js.native
+  def dueDate_=(newValue: String): Unit = js.native
   
   def page: IPage | Null = js.native
   
   def pageQualifiedName: String | Null = js.native
+  @JSName("pageQualifiedName")
+  val pageQualifiedName_FUserTask: String | Null = js.native
   
   def page_=(newValue: IPage | Null): Unit = js.native
+  @JSName("page")
+  val page_FUserTask: IPage | Null = js.native
   
   def subject: StringTemplate = js.native
   def subject_=(newValue: StringTemplate): Unit = js.native
   
   /**
-    * In version 8.11.0: deleted
-    */
-  def userRole: IUserRole | Null = js.native
-  
-  def userRoleQualifiedName: String | Null = js.native
-  
-  def userRole_=(newValue: IUserRole | Null): Unit = js.native
-  
-  /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
-    * In version 8.11.0: introduced
+    * @ignore
     */
   def userSource: UserSource = js.native
   def userSource_=(newValue: UserSource): Unit = js.native
@@ -87,12 +87,12 @@ object UserTask extends js.Object {
   /**
     * Creates and returns a new UserTask instance in the SDK and on the server.
     * The new UserTask will be automatically stored in the 'activities' property
-    * of the parent Workflow element passed as argument.
+    * of the parent Flow element passed as argument.
     *
     * Warning! Can only be used on models with the following Mendix meta model versions:
-    *  8.10.0 and higher
+    *  8.15.0 and higher
     */
-  def createIn(container: Workflow): UserTask = js.native
+  def createIn(container: Flow): UserTask = js.native
   
   var structureTypeName: String = js.native
   

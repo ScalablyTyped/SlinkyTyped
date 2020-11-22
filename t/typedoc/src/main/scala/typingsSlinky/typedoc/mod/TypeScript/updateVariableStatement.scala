@@ -16,5 +16,6 @@ object updateVariableStatement extends js.Object {
     modifiers: js.UndefOr[scala.Nothing],
     declarationList: VariableDeclarationList
   ): VariableStatement = js.native
+  /** @deprecated Use `factory.updateVariableStatement` or the factory supplied by your transformation context instead. */
   def apply(node: VariableStatement, modifiers: js.Array[Modifier], declarationList: VariableDeclarationList): VariableStatement = js.native
 }

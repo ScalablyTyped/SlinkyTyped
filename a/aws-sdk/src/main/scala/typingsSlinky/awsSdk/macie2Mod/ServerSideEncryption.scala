@@ -13,7 +13,7 @@ trait ServerSideEncryption extends js.Object {
   var encryptionType: js.UndefOr[EncryptionType] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) master key that's used to encrypt the bucket or object. This value is null if KMS isn't used to encrypt the bucket or object.
+    * The unique identifier for the AWS Key Management Service (AWS KMS) master key that's used to encrypt the bucket or object. This value is null if AWS KMS isn't used to encrypt the bucket or object.
     */
   var kmsMasterKeyId: js.UndefOr[string] = js.native
 }

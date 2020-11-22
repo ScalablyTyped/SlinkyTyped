@@ -14,8 +14,14 @@ object multiPolygonMod extends js.Object {
   trait MultiPolygon
     extends typingsSlinky.ol.simpleGeometryMod.default {
     
+    /**
+      * Append the passed polygon to this multipolygon.
+      */
     def appendPolygon(polygon: typingsSlinky.ol.polygonMod.default): Unit = js.native
     
+    /**
+      * Return the area of the multipolygon on projected plane.
+      */
     def getArea(): Double = js.native
     
     def getCoordinates(opt_right: Boolean): js.Array[js.Array[js.Array[Coordinate]]] = js.native
@@ -24,12 +30,21 @@ object multiPolygonMod extends js.Object {
     
     def getFlatInteriorPoints(): js.Array[Double] = js.native
     
+    /**
+      * Return the interior points as {@link module:ol/geom/MultiPoint multipoint}.
+      */
     def getInteriorPoints(): typingsSlinky.ol.multiPointMod.default = js.native
     
     def getOrientedFlatCoordinates(): js.Array[Double] = js.native
     
+    /**
+      * Return the polygon at the specified index.
+      */
     def getPolygon(index: Double): typingsSlinky.ol.polygonMod.default = js.native
     
+    /**
+      * Return the polygons of this multipolygon.
+      */
     def getPolygons(): js.Array[typingsSlinky.ol.polygonMod.default] = js.native
   }
   

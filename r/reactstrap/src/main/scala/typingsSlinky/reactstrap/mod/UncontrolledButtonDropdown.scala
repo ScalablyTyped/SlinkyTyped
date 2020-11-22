@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "UncontrolledButtonDropdown")
+@JSImport("reactstrap/es", "UncontrolledButtonDropdown")
 @js.native
-class UncontrolledButtonDropdown[T] ()
+class UncontrolledButtonDropdown ()
   extends Component[UncontrolledDropdownProps, js.Object, js.Any]

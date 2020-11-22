@@ -1,6 +1,5 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
-import org.scalablytyped.runtime.NumberDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +12,7 @@ trait ThemeManifest extends js.Object {
   
   var default_locale: js.UndefOr[String] = js.native
   
-  var icons: js.UndefOr[NumberDictionary[String]] = js.native
+  var icons: js.UndefOr[ThemeManifestIcons] = js.native
   
   var theme: ThemeType = js.native
   
@@ -58,7 +57,7 @@ object ThemeManifest {
     def deleteDefault_locale: Self = this.set("default_locale", js.undefined)
     
     @scala.inline
-    def setIcons(value: NumberDictionary[String]): Self = this.set("icons", value.asInstanceOf[js.Any])
+    def setIcons(value: ThemeManifestIcons): Self = this.set("icons", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcons: Self = this.set("icons", js.undefined)

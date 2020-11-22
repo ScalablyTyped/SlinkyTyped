@@ -11,12 +11,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VirtualRouterArgs extends js.Object {
   
   /**
-    * The name of the service mesh in which to create the virtual router.
+    * The name of the service mesh in which to create the virtual router. Must be between 1 and 255 characters in length.
     */
   val meshName: Input[String] = js.native
   
   /**
-    * The name to use for the virtual router.
+    * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    */
+  val meshOwner: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The name to use for the virtual router. Must be between 1 and 255 characters in length.
     */
   val name: js.UndefOr[Input[String]] = js.native
   
@@ -58,6 +63,12 @@ object VirtualRouterArgs {
     
     @scala.inline
     def setSpec(value: Input[VirtualRouterSpec]): Self = this.set("spec", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMeshOwner(value: Input[String]): Self = this.set("meshOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMeshOwner: Self = this.set("meshOwner", js.undefined)
     
     @scala.inline
     def setName(value: Input[String]): Self = this.set("name", value.asInstanceOf[js.Any])

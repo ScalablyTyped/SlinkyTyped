@@ -14,6 +14,4 @@ object mod extends js.Object {
   val INITIAL_VIEWPORTS: ViewportMap = js.native
   
   val MINIMAL_VIEWPORTS: ViewportMap = js.native
-  
-  def configureViewport(): Unit = js.native
 }

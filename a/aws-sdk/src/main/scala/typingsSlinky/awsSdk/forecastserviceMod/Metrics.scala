@@ -8,7 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Metrics extends js.Object {
   
   /**
-    * The root mean square error (RMSE).
+    *  Provides detailed error metrics on forecast type, root-mean square-error (RMSE), and weighted average percentage error (WAPE). 
+    */
+  var ErrorMetrics: js.UndefOr[typingsSlinky.awsSdk.forecastserviceMod.ErrorMetrics] = js.native
+  
+  /**
+    * The root-mean-square error (RMSE).
     */
   var RMSE: js.UndefOr[Double] = js.native
   
@@ -39,6 +44,15 @@ object Metrics {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setErrorMetricsVarargs(value: ErrorMetric*): Self = this.set("ErrorMetrics", js.Array(value :_*))
+    
+    @scala.inline
+    def setErrorMetrics(value: ErrorMetrics): Self = this.set("ErrorMetrics", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorMetrics: Self = this.set("ErrorMetrics", js.undefined)
     
     @scala.inline
     def setRMSE(value: Double): Self = this.set("RMSE", value.asInstanceOf[js.Any])

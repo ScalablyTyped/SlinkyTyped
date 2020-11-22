@@ -1,9 +1,9 @@
 package typingsSlinky.pulumiAws.mod
 
-import typingsSlinky.pulumiAws.domainMod.DomainArgs
-import typingsSlinky.pulumiAws.domainMod.DomainState
 import typingsSlinky.pulumiAws.domainPolicyMod.DomainPolicyArgs
 import typingsSlinky.pulumiAws.domainPolicyMod.DomainPolicyState
+import typingsSlinky.pulumiAws.elasticsearchDomainMod.DomainArgs
+import typingsSlinky.pulumiAws.elasticsearchDomainMod.DomainState
 import typingsSlinky.pulumiAws.getDomainMod.GetDomainArgs
 import typingsSlinky.pulumiAws.getDomainMod.GetDomainResult
 import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
@@ -49,10 +49,10 @@ object elasticsearch extends js.Object {
       * @param state Any extra arguments used during the lookup.
       * @param opts Optional settings to control the behavior of the CustomResource.
       */
-    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.domainMod.Domain = js.native
-    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.domainMod.Domain = js.native
-    def get(name: String, id: Input[ID], state: DomainState): typingsSlinky.pulumiAws.domainMod.Domain = js.native
-    def get(name: String, id: Input[ID], state: DomainState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.domainMod.Domain = js.native
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.elasticsearchDomainMod.Domain = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.elasticsearchDomainMod.Domain = js.native
+    def get(name: String, id: Input[ID], state: DomainState): typingsSlinky.pulumiAws.elasticsearchDomainMod.Domain = js.native
+    def get(name: String, id: Input[ID], state: DomainState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.elasticsearchDomainMod.Domain = js.native
     
     /**
       * Returns true if the given object is an instance of Domain.  This is designed to work even

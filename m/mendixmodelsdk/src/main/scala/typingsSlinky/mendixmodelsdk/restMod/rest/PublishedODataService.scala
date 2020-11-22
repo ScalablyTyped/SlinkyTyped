@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.restMod.rest
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
@@ -14,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/published-odata-services relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/published-odata-services relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -62,9 +61,6 @@ class PublishedODataService protected () extends Document {
     */
   def description: String = js.native
   def description_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FPublishedODataService: IModel = js.native
   
   def namespace: String = js.native
   def namespace_=(newValue: String): Unit = js.native

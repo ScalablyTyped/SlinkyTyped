@@ -8,6 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class TorusKnotGeometry protected ()
   extends typingsSlinky.three.torusKnotGeometryMod.TorusKnotGeometry {
+  /**
+  	 * @param [radius=1]
+  	 * @param [tube=0.4]
+  	 * @param [radialSegments=64]
+  	 * @param [tubularSegments=8]
+  	 * @param [p=2]
+  	 * @param [q=3]
+  	 */
   def this(
     radius: js.UndefOr[Double],
     tube: js.UndefOr[Double],

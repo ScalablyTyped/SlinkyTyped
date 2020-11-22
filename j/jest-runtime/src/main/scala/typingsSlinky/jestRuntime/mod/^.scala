@@ -4,7 +4,9 @@ import typingsSlinky.jestEnvironment.mod.JestEnvironment
 import typingsSlinky.jestHasteMap.mod.ModuleMap
 import typingsSlinky.jestRuntime.anon.Console
 import typingsSlinky.jestRuntime.anon.Recordcacheconfigdebugver
+import typingsSlinky.jestTransform.typesMod.ShouldInstrumentOptions
 import typingsSlinky.jestTypes.configMod.Argv
+import typingsSlinky.jestTypes.configMod.Path
 import typingsSlinky.jestTypes.configMod.ProjectConfig
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -26,14 +28,46 @@ class ^ protected () extends Runtime {
     environment: JestEnvironment,
     resolver: typingsSlinky.jestResolve.mod.^,
     cacheFS: js.UndefOr[scala.Nothing],
-    coverageOptions: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ShouldInstrumentOptions */ js.Any
+    coverageOptions: ShouldInstrumentOptions
   ) = this()
   def this(
     config: ProjectConfig,
     environment: JestEnvironment,
     resolver: typingsSlinky.jestResolve.mod.^,
     cacheFS: Record[String, String],
-    coverageOptions: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ShouldInstrumentOptions */ js.Any
+    coverageOptions: ShouldInstrumentOptions
+  ) = this()
+  def this(
+    config: ProjectConfig,
+    environment: JestEnvironment,
+    resolver: typingsSlinky.jestResolve.mod.^,
+    cacheFS: js.UndefOr[scala.Nothing],
+    coverageOptions: js.UndefOr[scala.Nothing],
+    testPath: Path
+  ) = this()
+  def this(
+    config: ProjectConfig,
+    environment: JestEnvironment,
+    resolver: typingsSlinky.jestResolve.mod.^,
+    cacheFS: js.UndefOr[scala.Nothing],
+    coverageOptions: ShouldInstrumentOptions,
+    testPath: Path
+  ) = this()
+  def this(
+    config: ProjectConfig,
+    environment: JestEnvironment,
+    resolver: typingsSlinky.jestResolve.mod.^,
+    cacheFS: Record[String, String],
+    coverageOptions: js.UndefOr[scala.Nothing],
+    testPath: Path
+  ) = this()
+  def this(
+    config: ProjectConfig,
+    environment: JestEnvironment,
+    resolver: typingsSlinky.jestResolve.mod.^,
+    cacheFS: Record[String, String],
+    coverageOptions: ShouldInstrumentOptions,
+    testPath: Path
   ) = this()
 }
 @JSImport("jest-runtime", JSImport.Namespace)
@@ -54,5 +88,10 @@ object ^ extends js.Object {
   def runCLI(args: Argv): js.Promise[Unit] = js.native
   def runCLI(args: Argv, info: js.Array[String]): js.Promise[Unit] = js.native
   
-  var shouldInstrument: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof shouldInstrument */ js.Any = js.native
+  var shouldInstrument: js.Function3[
+    /* filename */ Path, 
+    /* options */ ShouldInstrumentOptions, 
+    /* config */ ProjectConfig, 
+    Boolean
+  ] = js.native
 }

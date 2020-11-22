@@ -1,30 +1,26 @@
 package typingsSlinky.webidl2.mod
 
-import typingsSlinky.webidl2.webidl2Strings.`callback interface`
 import typingsSlinky.webidl2.webidl2Strings.interface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InterfaceType extends IDLRootType {
-  
-  /** A list of extended attributes. */
-  var extAttrs: js.Array[ExtendedAttribute] = js.native
+trait InterfaceType
+  extends AbstractContainer
+     with IDLRootType {
   
   /** A string giving the name of an interface this one inherits from, null otherwise. */
   var inheritance: String | Null = js.native
   
-  /** An array of interface members (attributes, operations, etc.). Empty if there are none. */
-  var members: js.Array[IDLInterfaceMemberType] = js.native
+  @JSName("members")
+  var members_InterfaceType: js.Array[IDLInterfaceMemberType] = js.native
   
-  /** The name of the interface */
-  var name: String = js.native
+  @JSName("parent")
+  var parent_InterfaceType: Null = js.native
   
-  /** A boolean indicating whether it's a partial interface. */
-  var partial: Boolean = js.native
-  
-  var `type`: interface | (`callback interface`) = js.native
+  @JSName("type")
+  var type_InterfaceType: interface = js.native
 }
 object InterfaceType {
   
@@ -33,10 +29,11 @@ object InterfaceType {
     extAttrs: js.Array[ExtendedAttribute],
     members: js.Array[IDLInterfaceMemberType],
     name: String,
+    parent: Null,
     partial: Boolean,
-    `type`: interface | (`callback interface`)
+    `type`: interface
   ): InterfaceType = {
-    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[InterfaceType]
   }
@@ -57,25 +54,16 @@ object InterfaceType {
     }
     
     @scala.inline
-    def setExtAttrsVarargs(value: ExtendedAttribute*): Self = this.set("extAttrs", js.Array(value :_*))
-    
-    @scala.inline
-    def setExtAttrs(value: js.Array[ExtendedAttribute]): Self = this.set("extAttrs", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setMembersVarargs(value: IDLInterfaceMemberType*): Self = this.set("members", js.Array(value :_*))
     
     @scala.inline
     def setMembers(value: js.Array[IDLInterfaceMemberType]): Self = this.set("members", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setParent(value: Null): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPartial(value: Boolean): Self = this.set("partial", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setType(value: interface | (`callback interface`)): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: interface): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setInheritance(value: String): Self = this.set("inheritance", value.asInstanceOf[js.Any])

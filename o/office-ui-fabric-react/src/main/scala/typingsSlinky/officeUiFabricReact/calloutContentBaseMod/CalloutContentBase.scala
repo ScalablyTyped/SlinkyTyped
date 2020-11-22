@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.officeUiFabricReact.anon.DirectionalHint
+import typingsSlinky.officeUiFabricReact.anon.BeakWidth
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -50,6 +50,8 @@ class CalloutContentBase protected ()
   /* protected */ def _dismissOnResize(ev: Event): Unit = js.native
   
   /* protected */ def _dismissOnScroll(ev: Event): Unit = js.native
+  
+  var _dismissOnTargetWindowBlur: js.Any = js.native
   
   var _disposables: js.Any = js.native
   
@@ -117,5 +119,5 @@ class CalloutContentBase protected ()
 @js.native
 object CalloutContentBase extends js.Object {
   
-  var defaultProps: DirectionalHint = js.native
+  var defaultProps: BeakWidth = js.native
 }

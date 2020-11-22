@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object withActionsMod extends js.Object {
   
-  def createDecorator(actionsFn: js.Any): js.Function1[/* repeated */ js.Any, js.Function1[/* storyFn */ js.Function0[_], _]] = js.native
-  
-  def withActions(args: js.Any*): js.Function1[/* storyFn */ js.Function0[_], _] = js.native
+  def withActions(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type any is not an array type */ args: js.Any
+  ): js.Any = js.native
 }

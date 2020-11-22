@@ -10,8 +10,6 @@ package object mod {
     /* localVue */ typingsSlinky.vue.vueMod.VueConstructor[typingsSlinky.vue.vueMod.Vue], 
     /* store */ typingsSlinky.vuex.mod.Store[js.Any], 
     /* router */ typingsSlinky.vueRouter.mod.default, 
-    (typingsSlinky.std.Partial[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ThisTypedMountOptions<V> */ js.Any
-    ]) | scala.Unit
+    typingsSlinky.std.Partial[typingsSlinky.vueTestUtils.mod.ThisTypedMountOptions[V]] | scala.Unit
   ]
 }

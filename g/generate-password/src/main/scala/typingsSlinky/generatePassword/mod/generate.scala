@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object generate extends js.Object {
   
   def apply(): String = js.native
-  def apply(options: GenerateOptions): String = js.native
+  def apply(options: Options): String = js.native
 }

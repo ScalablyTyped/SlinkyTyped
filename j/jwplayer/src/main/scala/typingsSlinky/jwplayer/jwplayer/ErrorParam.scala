@@ -1,5 +1,6 @@
 package typingsSlinky.jwplayer.jwplayer
 
+import typingsSlinky.jwplayer.jwplayerStrings.error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,13 +8,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ErrorParam extends js.Object {
   
+  var code: Double = js.native
+  
   var message: String = js.native
+  
+  var sourceError: js.Object | Null = js.native
+  
+  var `type`: error = js.native
 }
 object ErrorParam {
   
   @scala.inline
-  def apply(message: String): ErrorParam = {
-    val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
+  def apply(code: Double, message: String, `type`: error): ErrorParam = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorParam]
   }
   
@@ -33,6 +41,18 @@ object ErrorParam {
     }
     
     @scala.inline
+    def setCode(value: Double): Self = this.set("code", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setType(value: error): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSourceError(value: js.Object): Self = this.set("sourceError", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSourceErrorNull: Self = this.set("sourceError", null)
   }
 }

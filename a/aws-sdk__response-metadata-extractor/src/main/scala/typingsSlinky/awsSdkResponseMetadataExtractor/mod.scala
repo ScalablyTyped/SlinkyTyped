@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def extractMetadata(httpResponse: HttpResponse[_]): ResponseMetadata = js.native
+  def extractMetadata(httpResponse: HttpResponse): ResponseMetadata = js.native
 }

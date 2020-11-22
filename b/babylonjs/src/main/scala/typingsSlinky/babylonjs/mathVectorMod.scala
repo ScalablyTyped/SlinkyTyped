@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.anon.DownDegrees
 import typingsSlinky.babylonjs.mathLikeMod.IPlaneLike
+import typingsSlinky.babylonjs.mathPlaneMod.Plane
 import typingsSlinky.babylonjs.mathViewportMod.Viewport
 import typingsSlinky.babylonjs.typesMod.DeepImmutable
 import typingsSlinky.babylonjs.typesMod.FloatArray
@@ -78,10 +79,10 @@ object mathVectorMod extends js.Object {
     def addTranslationFromFloats(x: Double, y: Double, z: Double): Matrix = js.native
     
     /**
-      * Returns the matrix as a Float32Array
+      * Returns the matrix as a Float32Array or Array<number>
       * @returns the matrix underlying array.
       */
-    def asArray(): DeepImmutable[js.typedarray.Float32Array] = js.native
+    def asArray(): DeepImmutable[js.typedarray.Float32Array | js.Array[Double]] = js.native
     
     /**
       * Copy the current matrix from the given one
@@ -90,6 +91,8 @@ object mathVectorMod extends js.Object {
       */
     def copyFrom(other: DeepImmutable[Matrix]): Matrix = js.native
     
+    def copyToArray(array: js.Array[Double]): Matrix = js.native
+    def copyToArray(array: js.Array[Double], offset: Double): Matrix = js.native
     /**
       * Populates the given array from the starting index with the current matrix values
       * @param array defines the target array
@@ -201,7 +204,7 @@ object mathVectorMod extends js.Object {
     /**
       * Gets the internal data of the matrix
       */
-    def m: DeepImmutable[js.typedarray.Float32Array] = js.native
+    def m: DeepImmutable[js.typedarray.Float32Array | js.Array[Double]] = js.native
     
     /**
       * Multiply two matrices
@@ -218,6 +221,7 @@ object mathVectorMod extends js.Object {
       */
     def multiplyAtIndex(index: Double, value: Double): Matrix = js.native
     
+    def multiplyToArray(other: DeepImmutable[Matrix], result: js.Array[Double], offset: Double): Matrix = js.native
     /**
       * Sets the Float32Array "result" from the given index "offset" with the multiplication of the current matrix and the given one
       * @param other defines the second operand
@@ -306,10 +310,10 @@ object mathVectorMod extends js.Object {
     def setTranslationFromFloats(x: Double, y: Double, z: Double): Matrix = js.native
     
     /**
-      * Returns the matrix as a Float32Array
+      * Returns the matrix as a Float32Array or Array<number>
       * @returns the matrix underlying array
       */
-    def toArray(): DeepImmutable[js.typedarray.Float32Array] = js.native
+    def toArray(): DeepImmutable[js.typedarray.Float32Array | js.Array[Double]] = js.native
     
     /**
       * Writes to the given matrix a normal matrix, computed from this one (using values from identity matrix for fourth row and column).
@@ -431,7 +435,12 @@ object mathVectorMod extends js.Object {
       * @param scale defines the scaling factor
       * @param result defines the target matrix
       */
-    def FromFloat32ArrayToRefScaled(array: DeepImmutable[js.typedarray.Float32Array], offset: Double, scale: Double, result: Matrix): Unit = js.native
+    def FromFloat32ArrayToRefScaled(
+      array: DeepImmutable[js.typedarray.Float32Array | js.Array[Double]],
+      offset: Double,
+      scale: Double,
+      result: Matrix
+    ): Unit = js.native
     
     /**
       * Creates a rotation matrix from a quaternion and stores it in a target matrix
@@ -538,14 +547,14 @@ object mathVectorMod extends js.Object {
       * @param matrix defines the matrix to use
       * @returns a new Float32Array array with 4 elements : the 2x2 matrix extracted from the given matrix
       */
-    def GetAsMatrix2x2(matrix: DeepImmutable[Matrix]): js.typedarray.Float32Array = js.native
+    def GetAsMatrix2x2(matrix: DeepImmutable[Matrix]): js.typedarray.Float32Array | js.Array[Double] = js.native
     
     /**
       * Extracts a 3x3 matrix from a given matrix and store the result in a Float32Array
       * @param matrix defines the matrix to use
       * @returns a new Float32Array array with 9 elements : the 3x3 matrix extracted from the given matrix
       */
-    def GetAsMatrix3x3(matrix: DeepImmutable[Matrix]): js.typedarray.Float32Array = js.native
+    def GetAsMatrix3x3(matrix: DeepImmutable[Matrix]): js.typedarray.Float32Array | js.Array[Double] = js.native
     
     /**
       * Computes a complete transformation matrix
@@ -935,7 +944,7 @@ object mathVectorMod extends js.Object {
       * Creates a rotation matrix
       * @param yaw defines the yaw angle in radians (Y axis)
       * @param pitch defines the pitch angle in radians (X axis)
-      * @param roll defines the roll angle in radians (X axis)
+      * @param roll defines the roll angle in radians (Z axis)
       * @returns the new rotation matrix
       */
     def RotationYawPitchRoll(yaw: Double, pitch: Double, roll: Double): Matrix = js.native
@@ -944,7 +953,7 @@ object mathVectorMod extends js.Object {
       * Creates a rotation matrix and stores it in a given matrix
       * @param yaw defines the yaw angle in radians (Y axis)
       * @param pitch defines the pitch angle in radians (X axis)
-      * @param roll defines the roll angle in radians (X axis)
+      * @param roll defines the roll angle in radians (Z axis)
       * @param result defines the target matrix
       */
     def RotationYawPitchRollToRef(yaw: Double, pitch: Double, roll: Double, result: Matrix): Unit = js.native
@@ -1014,6 +1023,11 @@ object mathVectorMod extends js.Object {
     def TransposeToRef(matrix: DeepImmutable[Matrix], result: Matrix): Unit = js.native
     
     /**
+      * Gets the precision of matrix computations
+      */
+    def Use64Bits: Boolean = js.native
+    
+    /**
       * Creates a new zero matrix
       * @returns a new zero matrix
       */
@@ -1033,132 +1047,41 @@ object mathVectorMod extends js.Object {
     * @param w defines the fourth component (1.0 by default)
     */
   class Quaternion () extends js.Object {
-    def this(/** defines the first component (0 by default) */
-    x: Double) = this()
+    def this(x: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
+    def this(x: Double, y: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], z: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double, z: Double) = this()
+    def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double) = this()
+    def this(x: Double, y: Double, z: Double) = this()
     def this(
-      /** defines the first component (0 by default) */
-    x: js.UndefOr[scala.Nothing],
-      /** defines the second component (0 by default) */
-    y: Double
+      x: js.UndefOr[scala.Nothing],
+      y: js.UndefOr[scala.Nothing],
+      z: js.UndefOr[scala.Nothing],
+      w: Double
     ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: Double,
-      /** defines the second component (0 by default) */
-    y: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: js.UndefOr[scala.Nothing],
-      /** defines the second component (0 by default) */
-    y: js.UndefOr[scala.Nothing],
-      /** defines the third component (0 by default) */
-    z: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: js.UndefOr[scala.Nothing],
-      /** defines the second component (0 by default) */
-    y: Double,
-      /** defines the third component (0 by default) */
-    z: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: Double,
-      /** defines the second component (0 by default) */
-    y: js.UndefOr[scala.Nothing],
-      /** defines the third component (0 by default) */
-    z: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: Double,
-      /** defines the second component (0 by default) */
-    y: Double,
-      /** defines the third component (0 by default) */
-    z: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: js.UndefOr[scala.Nothing],
-      /** defines the second component (0 by default) */
-    y: js.UndefOr[scala.Nothing],
-      /** defines the third component (0 by default) */
-    z: js.UndefOr[scala.Nothing],
-      /** defines the fourth component (1.0 by default) */
-    w: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: js.UndefOr[scala.Nothing],
-      /** defines the second component (0 by default) */
-    y: js.UndefOr[scala.Nothing],
-      /** defines the third component (0 by default) */
-    z: Double,
-      /** defines the fourth component (1.0 by default) */
-    w: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: js.UndefOr[scala.Nothing],
-      /** defines the second component (0 by default) */
-    y: Double,
-      /** defines the third component (0 by default) */
-    z: js.UndefOr[scala.Nothing],
-      /** defines the fourth component (1.0 by default) */
-    w: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: js.UndefOr[scala.Nothing],
-      /** defines the second component (0 by default) */
-    y: Double,
-      /** defines the third component (0 by default) */
-    z: Double,
-      /** defines the fourth component (1.0 by default) */
-    w: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: Double,
-      /** defines the second component (0 by default) */
-    y: js.UndefOr[scala.Nothing],
-      /** defines the third component (0 by default) */
-    z: js.UndefOr[scala.Nothing],
-      /** defines the fourth component (1.0 by default) */
-    w: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: Double,
-      /** defines the second component (0 by default) */
-    y: js.UndefOr[scala.Nothing],
-      /** defines the third component (0 by default) */
-    z: Double,
-      /** defines the fourth component (1.0 by default) */
-    w: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: Double,
-      /** defines the second component (0 by default) */
-    y: Double,
-      /** defines the third component (0 by default) */
-    z: js.UndefOr[scala.Nothing],
-      /** defines the fourth component (1.0 by default) */
-    w: Double
-    ) = this()
-    def this(
-      /** defines the first component (0 by default) */
-    x: Double,
-      /** defines the second component (0 by default) */
-    y: Double,
-      /** defines the third component (0 by default) */
-    z: Double,
-      /** defines the fourth component (1.0 by default) */
-    w: Double
-    ) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], z: Double, w: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double, z: js.UndefOr[scala.Nothing], w: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double, z: Double, w: Double) = this()
+    def this(x: Double, y: js.UndefOr[scala.Nothing], z: js.UndefOr[scala.Nothing], w: Double) = this()
+    def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double, w: Double) = this()
+    def this(x: Double, y: Double, z: js.UndefOr[scala.Nothing], w: Double) = this()
+    def this(x: Double, y: Double, z: Double, w: Double) = this()
+    
+    /** @hidden */
+    var _isDirty: Boolean = js.native
+    
+    /** @hidden */
+    var _w: Double = js.native
+    
+    /** @hidden */
+    var _x: Double = js.native
+    
+    /** @hidden */
+    var _y: Double = js.native
+    
+    /** @hidden */
+    var _z: Double = js.native
     
     /**
       * Adds two quaternions
@@ -1334,7 +1257,7 @@ object mathVectorMod extends js.Object {
     
     /**
       * Returns a new Vector3 set with the Euler angles translated from the current quaternion
-      * @param order is a reserved parameter and is ignore for now
+      * @param order is a reserved parameter and is ignored for now
       * @returns a new Vector3 containing the Euler angles
       */
     def toEulerAngles(): Vector3 = js.native
@@ -1343,7 +1266,6 @@ object mathVectorMod extends js.Object {
     /**
       * Sets the given vector3 "result" with the Euler angles translated from the current quaternion
       * @param result defines the vector which will be filled with the Euler angles
-      * @param order is a reserved parameter and is ignore for now
       * @returns the current unchanged quaternion
       */
     def toEulerAnglesToRef(result: Vector3): Quaternion = js.native
@@ -1355,17 +1277,21 @@ object mathVectorMod extends js.Object {
       */
     def toRotationMatrix(result: Matrix): Quaternion = js.native
     
-    /** defines the fourth component (1.0 by default) */
-    var w: Double = js.native
+    /** Gets or sets the w coordinate */
+    def w: Double = js.native
+    def w_=(value: Double): Unit = js.native
     
-    /** defines the first component (0 by default) */
-    var x: Double = js.native
+    /** Gets or sets the x coordinate */
+    def x: Double = js.native
+    def x_=(value: Double): Unit = js.native
     
-    /** defines the second component (0 by default) */
-    var y: Double = js.native
+    /** Gets or sets the y coordinate */
+    def y: Double = js.native
+    def y_=(value: Double): Unit = js.native
     
-    /** defines the third component (0 by default) */
-    var z: Double = js.native
+    /** Gets or sets the z coordinate */
+    def z: Double = js.native
+    def z_=(value: Double): Unit = js.native
   }
   /* static members */
   @js.native
@@ -1395,6 +1321,14 @@ object mathVectorMod extends js.Object {
       */
     def FromArray(array: DeepImmutable[ArrayLike[Double]]): Quaternion = js.native
     def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): Quaternion = js.native
+    
+    /**
+      * Updates the given quaternion "result" from the starting index of the given array.
+      * @param array the array to pull values from
+      * @param offset the offset into the array to start at
+      * @param result the quaternion to store the result in
+      */
+    def FromArrayToRef(array: DeepImmutable[ArrayLike[Double]], offset: Double, result: Quaternion): Unit = js.native
     
     /**
       * Create a quaternion from Euler rotation angles
@@ -1730,6 +1664,15 @@ object mathVectorMod extends js.Object {
       * @returns a new Vector2
       */
     def fract(): Vector2 = js.native
+    
+    /**
+      * Update the current vector from an array
+      * @param array defines the destination array
+      * @param index defines the offset in the destination array
+      * @returns the current Vector3
+      */
+    def fromArray(array: FloatArray): Vector2 = js.native
+    def fromArray(array: FloatArray, index: Double): Vector2 = js.native
     
     /**
       * Gets class name
@@ -2076,86 +2019,25 @@ object mathVectorMod extends js.Object {
     * @param z defines the third coordinates (on Z axis)
     */
   class Vector3 () extends js.Object {
-    def this(/**
-      * Defines the first coordinates (on X axis)
-      */
-    x: Double) = this()
-    def this(
-      /**
-      * Defines the first coordinates (on X axis)
-      */
-    x: js.UndefOr[scala.Nothing],
-      /**
-      * Defines the second coordinates (on Y axis)
-      */
-    y: Double
-    ) = this()
-    def this(
-      /**
-      * Defines the first coordinates (on X axis)
-      */
-    x: Double,
-      /**
-      * Defines the second coordinates (on Y axis)
-      */
-    y: Double
-    ) = this()
-    def this(
-      /**
-      * Defines the first coordinates (on X axis)
-      */
-    x: js.UndefOr[scala.Nothing],
-      /**
-      * Defines the second coordinates (on Y axis)
-      */
-    y: js.UndefOr[scala.Nothing],
-      /**
-      * Defines the third coordinates (on Z axis)
-      */
-    z: Double
-    ) = this()
-    def this(
-      /**
-      * Defines the first coordinates (on X axis)
-      */
-    x: js.UndefOr[scala.Nothing],
-      /**
-      * Defines the second coordinates (on Y axis)
-      */
-    y: Double,
-      /**
-      * Defines the third coordinates (on Z axis)
-      */
-    z: Double
-    ) = this()
-    def this(
-      /**
-      * Defines the first coordinates (on X axis)
-      */
-    x: Double,
-      /**
-      * Defines the second coordinates (on Y axis)
-      */
-    y: js.UndefOr[scala.Nothing],
-      /**
-      * Defines the third coordinates (on Z axis)
-      */
-    z: Double
-    ) = this()
-    def this(
-      /**
-      * Defines the first coordinates (on X axis)
-      */
-    x: Double,
-      /**
-      * Defines the second coordinates (on Y axis)
-      */
-    y: Double,
-      /**
-      * Defines the third coordinates (on Z axis)
-      */
-    z: Double
-    ) = this()
+    def this(x: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
+    def this(x: Double, y: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], z: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double, z: Double) = this()
+    def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double) = this()
+    def this(x: Double, y: Double, z: Double) = this()
+    
+    /** @hidden */
+    var _isDirty: Boolean = js.native
+    
+    /** @hidden */
+    var _x: Double = js.native
+    
+    /** @hidden */
+    var _y: Double = js.native
+    
+    /** @hidden */
+    var _z: Double = js.native
     
     /**
       * Gets a new Vector3, result of the addition the current Vector3 and the given vector
@@ -2276,6 +2158,15 @@ object mathVectorMod extends js.Object {
       * @returns a new Vector3
       */
     def fract(): Vector3 = js.native
+    
+    /**
+      * Update the current vector from an array
+      * @param array defines the destination array
+      * @param index defines the offset in the destination array
+      * @returns the current Vector3
+      */
+    def fromArray(array: FloatArray): Vector3 = js.native
+    def fromArray(array: FloatArray, index: Double): Vector3 = js.native
     
     /**
       * Gets the class name
@@ -2422,7 +2313,23 @@ object mathVectorMod extends js.Object {
       * @param reference define the Vector3 to update
       * @returns the updated Vector3
       */
-    def normalizeToRef(reference: DeepImmutable[Vector3]): Vector3 = js.native
+    def normalizeToRef(reference: Vector3): Vector3 = js.native
+    
+    /**
+      * Projects the current vector3 to a plane along a ray starting from a specified origin and directed towards the point.
+      * @param origin defines the origin of the projection ray
+      * @param plane defines the plane to project to
+      * @returns the projected vector3
+      */
+    def projectOnPlane(plane: Plane, origin: Vector3): Vector3 = js.native
+    
+    /**
+      * Projects the current vector3 to a plane along a ray starting from a specified origin and directed towards the point.
+      * @param origin defines the origin of the projection ray
+      * @param plane defines the plane to project to
+      * @param result defines the Vector3 where to store the result
+      */
+    def projectOnPlaneToRef(plane: Plane, origin: Vector3, result: Vector3): Unit = js.native
     
     /**
       * Reorders the x y z properties of the vector in place
@@ -2550,20 +2457,17 @@ object mathVectorMod extends js.Object {
       */
     def toQuaternion(): Quaternion = js.native
     
-    /**
-      * Defines the first coordinates (on X axis)
-      */
-    var x: Double = js.native
+    /** Gets or sets the x coordinate */
+    def x: Double = js.native
+    def x_=(value: Double): Unit = js.native
     
-    /**
-      * Defines the second coordinates (on Y axis)
-      */
-    var y: Double = js.native
+    /** Gets or sets the y coordinate */
+    def y: Double = js.native
+    def y_=(value: Double): Unit = js.native
     
-    /**
-      * Defines the third coordinates (on Z axis)
-      */
-    var z: Double = js.native
+    /** Gets or sets the z coordinate */
+    def z: Double = js.native
+    def z_=(value: Double): Unit = js.native
   }
   /* static members */
   @js.native
@@ -2571,9 +2475,11 @@ object mathVectorMod extends js.Object {
     
     /**
       * Returns a new Vector3 set to (0.0, 0.0, -1.0)
+      * @param rightHandedSystem is the scene right-handed (negative-z)
       * @returns a new forward Vector3
       */
     def Backward(): Vector3 = js.native
+    def Backward(rightHandedSystem: Boolean): Vector3 = js.native
     
     /**
       * Returns a new Vector3 located for "amount" on the CatmullRom interpolation spline defined by the vectors "value1", "value2", "value3", "value4"
@@ -2651,7 +2557,7 @@ object mathVectorMod extends js.Object {
       * @param right defines the right operand
       * @param result defines the Vector3 where to store the result
       */
-    def CrossToRef(left: Vector3, right: Vector3, result: Vector3): Unit = js.native
+    def CrossToRef(left: DeepImmutable[Vector3], right: DeepImmutable[Vector3], result: Vector3): Unit = js.native
     
     /**
       * Returns the distance between the vectors "value1" and "value2"
@@ -2685,9 +2591,11 @@ object mathVectorMod extends js.Object {
     
     /**
       * Returns a new Vector3 set to (0.0, 0.0, 1.0)
+      * @param rightHandedSystem is the scene right-handed (negative z)
       * @returns a new forward Vector3
       */
     def Forward(): Vector3 = js.native
+    def Forward(rightHandedSystem: Boolean): Vector3 = js.native
     
     /**
       * Returns a new Vector3 set from the index "offset" of the given array
@@ -2848,6 +2756,23 @@ object mathVectorMod extends js.Object {
       world: DeepImmutable[Matrix],
       transform: DeepImmutable[Matrix],
       viewport: DeepImmutable[Viewport]
+    ): Vector3 = js.native
+    
+    /**
+      * Project a Vector3 onto screen space to reference
+      * @param vector defines the Vector3 to project
+      * @param world defines the world matrix to use
+      * @param transform defines the transform (view x projection) matrix to use
+      * @param viewport defines the screen viewport to use
+      * @param result the vector in which the screen space will be stored
+      * @returns the new Vector3
+      */
+    def ProjectToRef(
+      vector: DeepImmutable[Vector3],
+      world: DeepImmutable[Matrix],
+      transform: DeepImmutable[Matrix],
+      viewport: DeepImmutable[Viewport],
+      result: DeepImmutable[Vector3]
     ): Vector3 = js.native
     
     /**
@@ -3174,6 +3099,15 @@ object mathVectorMod extends js.Object {
       * @returns a new Vector4
       */
     def fract(): Vector4 = js.native
+    
+    /**
+      * Update the current vector from an array
+      * @param array defines the destination array
+      * @param index defines the offset in the destination array
+      * @returns the current Vector3
+      */
+    def fromArray(array: FloatArray): Vector4 = js.native
+    def fromArray(array: FloatArray, index: Double): Vector4 = js.native
     
     /**
       * Returns the string "Vector4".

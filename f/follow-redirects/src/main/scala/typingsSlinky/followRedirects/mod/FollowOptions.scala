@@ -10,7 +10,13 @@ trait FollowOptions[Options] extends js.Object {
   
   var agents: js.UndefOr[Http] = js.native
   
-  var beforeRedirect: js.UndefOr[js.Function1[/* options */ Options with FollowOptions[Options], Unit]] = js.native
+  var beforeRedirect: js.UndefOr[
+    js.Function2[
+      /* options */ Options with FollowOptions[Options], 
+      /* responseDetails */ ResponseDetails, 
+      Unit
+    ]
+  ] = js.native
   
   var followRedirects: js.UndefOr[Boolean] = js.native
   
@@ -50,7 +56,9 @@ object FollowOptions {
     def deleteAgents: Self = this.set("agents", js.undefined)
     
     @scala.inline
-    def setBeforeRedirect(value: /* options */ Options with FollowOptions[Options] => Unit): Self = this.set("beforeRedirect", js.Any.fromFunction1(value))
+    def setBeforeRedirect(
+      value: (/* options */ Options with FollowOptions[Options], /* responseDetails */ ResponseDetails) => Unit
+    ): Self = this.set("beforeRedirect", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteBeforeRedirect: Self = this.set("beforeRedirect", js.undefined)

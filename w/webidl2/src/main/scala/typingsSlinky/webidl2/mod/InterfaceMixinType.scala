@@ -6,33 +6,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InterfaceMixinType extends IDLRootType {
+trait InterfaceMixinType
+  extends AbstractContainer
+     with IDLRootType {
   
-  /** A list of extended attributes. */
-  var extAttrs: js.Array[ExtendedAttribute] = js.native
+  var inheritance: Null = js.native
   
-  /** An array of interface members (attributes, operations, etc.). Empty if there are none. */
-  var members: js.Array[IDLInterfaceMemberType] = js.native
+  @JSName("members")
+  var members_InterfaceMixinType: js.Array[IDLInterfaceMixinMemberType] = js.native
   
-  /** The name of the interface mixin */
-  var name: String = js.native
+  @JSName("parent")
+  var parent_InterfaceMixinType: Null = js.native
   
-  /** A boolean indicating whether it's a partial interface mixin. */
-  var partial: Boolean = js.native
-  
-  var `type`: `interface mixin` = js.native
+  @JSName("type")
+  var type_InterfaceMixinType: `interface mixin` = js.native
 }
 object InterfaceMixinType {
   
   @scala.inline
   def apply(
     extAttrs: js.Array[ExtendedAttribute],
-    members: js.Array[IDLInterfaceMemberType],
+    inheritance: Null,
+    members: js.Array[IDLInterfaceMixinMemberType],
     name: String,
+    parent: Null,
     partial: Boolean,
     `type`: `interface mixin`
   ): InterfaceMixinType = {
-    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], inheritance = inheritance.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[InterfaceMixinType]
   }
@@ -53,22 +54,16 @@ object InterfaceMixinType {
     }
     
     @scala.inline
-    def setExtAttrsVarargs(value: ExtendedAttribute*): Self = this.set("extAttrs", js.Array(value :_*))
+    def setInheritance(value: Null): Self = this.set("inheritance", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExtAttrs(value: js.Array[ExtendedAttribute]): Self = this.set("extAttrs", value.asInstanceOf[js.Any])
+    def setMembersVarargs(value: IDLInterfaceMixinMemberType*): Self = this.set("members", js.Array(value :_*))
     
     @scala.inline
-    def setMembersVarargs(value: IDLInterfaceMemberType*): Self = this.set("members", js.Array(value :_*))
+    def setMembers(value: js.Array[IDLInterfaceMixinMemberType]): Self = this.set("members", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMembers(value: js.Array[IDLInterfaceMemberType]): Self = this.set("members", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPartial(value: Boolean): Self = this.set("partial", value.asInstanceOf[js.Any])
+    def setParent(value: Null): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: `interface mixin`): Self = this.set("type", value.asInstanceOf[js.Any])

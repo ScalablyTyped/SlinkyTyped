@@ -15,7 +15,7 @@ object ModifierFlags extends js.Object {
   
   /* 28 */ val AccessibilityModifier: typingsSlinky.typescript.mod.ModifierFlags.AccessibilityModifier with Double = js.native
   
-  /* 3071 */ val All: typingsSlinky.typescript.mod.ModifierFlags.All with Double = js.native
+  /* 11263 */ val All: typingsSlinky.typescript.mod.ModifierFlags.All with Double = js.native
   
   /* 2 */ val Ambient: typingsSlinky.typescript.mod.ModifierFlags.Ambient with Double = js.native
   
@@ -25,11 +25,15 @@ object ModifierFlags extends js.Object {
   
   /* 512 */ val Default: typingsSlinky.typescript.mod.ModifierFlags.Default with Double = js.native
   
+  /* 8192 */ val Deprecated: typingsSlinky.typescript.mod.ModifierFlags.Deprecated with Double = js.native
+  
   /* 1 */ val Export: typingsSlinky.typescript.mod.ModifierFlags.Export with Double = js.native
   
   /* 513 */ val ExportDefault: typingsSlinky.typescript.mod.ModifierFlags.ExportDefault with Double = js.native
   
   /* 536870912 */ val HasComputedFlags: typingsSlinky.typescript.mod.ModifierFlags.HasComputedFlags with Double = js.native
+  
+  /* 4096 */ val HasComputedJSDocModifiers: typingsSlinky.typescript.mod.ModifierFlags.HasComputedJSDocModifiers with Double = js.native
   
   /* 24 */ val NonPublicAccessibilityModifier: typingsSlinky.typescript.mod.ModifierFlags.NonPublicAccessibilityModifier with Double = js.native
   

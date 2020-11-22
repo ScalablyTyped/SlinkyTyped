@@ -14,7 +14,7 @@ trait InviteAccepterState extends js.Object {
   val detectorId: js.UndefOr[Input[String]] = js.native
   
   /**
-    * AWS account ID for master account.
+    * AWS account ID for primary account.
     */
   val masterAccountId: js.UndefOr[Input[String]] = js.native
 }

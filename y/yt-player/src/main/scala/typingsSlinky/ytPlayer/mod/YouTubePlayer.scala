@@ -80,7 +80,9 @@ trait YouTubePlayer extends EventEmitter {
     * This should be the first function called on a new Player instance.
     */
   def load(videoId: String): Unit = js.native
+  def load(videoId: String, autoplay: js.UndefOr[scala.Nothing], start: Double): Unit = js.native
   def load(videoId: String, autoplay: Boolean): Unit = js.native
+  def load(videoId: String, autoplay: Boolean, start: Double): Unit = js.native
   
   /** Mutes the player. */
   def mute(): Unit = js.native

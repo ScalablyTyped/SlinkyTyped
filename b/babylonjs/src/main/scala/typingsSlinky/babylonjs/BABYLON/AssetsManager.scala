@@ -30,6 +30,16 @@ trait AssetsManager extends js.Object {
   def addBinaryFileTask(taskName: String, url: String): BinaryFileAssetTask = js.native
   
   /**
+    * Add a ContainerAssetTask to the list of active tasks
+    * @param taskName defines the name of the new task
+    * @param meshesNames defines the name of meshes to load
+    * @param rootUrl defines the root url to use to locate files
+    * @param sceneFilename defines the filename of the scene file
+    * @returns a new ContainerAssetTask object
+    */
+  def addContainerTask(taskName: String, meshesNames: js.Any, rootUrl: String, sceneFilename: String): ContainerAssetTask = js.native
+  
+  /**
     * Add a CubeTextureAssetTask to the list of active tasks
     * @param taskName defines the name of the new task
     * @param url defines the url of the file to load
@@ -355,7 +365,7 @@ trait AssetsManager extends js.Object {
   
   /**
     * Gets or sets a boolean defining if the AssetsManager should use the default loading screen
-    * @see http://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
+    * @see https://doc.babylonjs.com/how_to/creating_a_custom_loading_screen
     */
   var useDefaultLoadingScreen: Boolean = js.native
 }

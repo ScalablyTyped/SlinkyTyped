@@ -9,11 +9,11 @@ trait Decorator
   extends Node
      with CallLikeExpression {
   
-  var expression: LeftHandSideExpression = js.native
+  val expression: LeftHandSideExpression = js.native
   
   @JSName("kind")
-  var kind_Decorator: typingsSlinky.typescript.mod.SyntaxKind.Decorator = js.native
+  val kind_Decorator: typingsSlinky.typescript.mod.SyntaxKind.Decorator = js.native
   
   @JSName("parent")
-  var parent_Decorator: NamedDeclaration = js.native
+  val parent_Decorator: NamedDeclaration = js.native
 }

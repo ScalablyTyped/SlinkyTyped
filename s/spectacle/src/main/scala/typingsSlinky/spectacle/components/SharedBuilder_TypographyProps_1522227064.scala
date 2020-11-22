@@ -53,7 +53,7 @@ class SharedBuilder_TypographyProps_1522227064 (val args: js.Array[js.Any])
   @scala.inline
   def fontFamily(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _, 
       RequiredTheme
     ]
   ): this.type = set("fontFamily", value.asInstanceOf[js.Any])
@@ -76,7 +76,7 @@ class SharedBuilder_TypographyProps_1522227064 (val args: js.Array[js.Any])
   @scala.inline
   def fontStyle(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontStyle */ _, 
       RequiredTheme
     ]
   ): this.type = set("fontStyle", value.asInstanceOf[js.Any])
@@ -243,7 +243,7 @@ class SharedBuilder_TypographyProps_1522227064 (val args: js.Array[js.Any])
   @scala.inline
   def opacity(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
       RequiredTheme
     ]
   ): this.type = set("opacity", value.asInstanceOf[js.Any])
@@ -383,7 +383,7 @@ class SharedBuilder_TypographyProps_1522227064 (val args: js.Array[js.Any])
   @scala.inline
   def textAlign(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextAlignProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextAlign */ _, 
       RequiredTheme
     ]
   ): this.type = set("textAlign", value.asInstanceOf[js.Any])

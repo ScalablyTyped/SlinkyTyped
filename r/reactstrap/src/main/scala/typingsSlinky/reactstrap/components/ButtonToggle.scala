@@ -22,8 +22,13 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactstrap.buttonToggleMod.ButtonToggleProps
+import typingsSlinky.reactstrap.reactstrapStrings.`additions removals`
 import typingsSlinky.reactstrap.reactstrapStrings.`additions text`
 import typingsSlinky.reactstrap.reactstrapStrings.`inline`
+import typingsSlinky.reactstrap.reactstrapStrings.`removals additions`
+import typingsSlinky.reactstrap.reactstrapStrings.`removals text`
+import typingsSlinky.reactstrap.reactstrapStrings.`text additions`
+import typingsSlinky.reactstrap.reactstrapStrings.`text removals`
 import typingsSlinky.reactstrap.reactstrapStrings.additions
 import typingsSlinky.reactstrap.reactstrapStrings.all
 import typingsSlinky.reactstrap.reactstrapStrings.ascending
@@ -76,14 +81,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object ButtonToggle {
   
-  @JSImport("reactstrap", "ButtonToggle")
+  @JSImport("reactstrap/es", "ButtonToggle")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.ButtonToggle[T]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.ButtonToggle] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -197,7 +202,9 @@ object ButtonToggle {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -353,7 +360,7 @@ object ButtonToggle {
     def onBeforeInput(value: SyntheticEvent[EventTarget with HTMLButtonElement, Event] => Unit): this.type = set("onBeforeInput", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onBlur(value: SyntheticFocusEvent[_] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+    def onBlur(value: SyntheticFocusEvent[HTMLButtonElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
     
     @scala.inline
     def onCanPlay(value: SyntheticEvent[Event, HTMLButtonElement] => Unit): this.type = set("onCanPlay", js.Any.fromFunction1(value))
@@ -365,7 +372,7 @@ object ButtonToggle {
     def onChange(value: SyntheticEvent[EventTarget with HTMLButtonElement, Event] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onClick(value: SyntheticMouseEvent[_] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
+    def onClick(value: SyntheticMouseEvent[HTMLButtonElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def onCompositionEnd(value: SyntheticCompositionEvent[HTMLButtonElement] => Unit): this.type = set("onCompositionEnd", js.Any.fromFunction1(value))
@@ -428,7 +435,7 @@ object ButtonToggle {
     def onError(value: SyntheticEvent[Event, HTMLButtonElement] => Unit): this.type = set("onError", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onFocus(value: SyntheticFocusEvent[_] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+    def onFocus(value: SyntheticFocusEvent[HTMLButtonElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
     
     @scala.inline
     def onInput(value: SyntheticEvent[EventTarget with HTMLButtonElement, Event] => Unit): this.type = set("onInput", js.Any.fromFunction1(value))
@@ -638,13 +645,7 @@ object ButtonToggle {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: ButtonToggleProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ButtonToggleProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply[T](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[ButtonToggleProps]))
-  }
-  
-  implicit def make[T](companion: ButtonToggle.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: ButtonToggle.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

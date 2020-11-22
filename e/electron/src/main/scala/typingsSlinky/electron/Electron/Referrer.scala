@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Referrer extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/referrer
+  // Docs: https://electronjs.org/docs/api/structures/referrer
   /**
     * Can be `default`, `unsafe-url`, `no-referrer-when-downgrade`, `no-referrer`,
     * `origin`, `strict-origin-when-cross-origin`, `same-origin` or `strict-origin`.

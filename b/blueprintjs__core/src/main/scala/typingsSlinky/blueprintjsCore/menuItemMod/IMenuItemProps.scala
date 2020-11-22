@@ -25,6 +25,11 @@ trait IMenuItemProps
   var children: js.UndefOr[ReactElement] = js.native
   
   /**
+    * HTML title to be passed to the <Text> component
+    */
+  var htmlTitle: js.UndefOr[String] = js.native
+  
+  /**
     * Right-aligned label text content, useful for displaying hotkeys.
     *
     * This prop actually supports JSX elements, but TypeScript will throw an error because
@@ -116,6 +121,12 @@ object IMenuItemProps {
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
+    
+    @scala.inline
+    def setHtmlTitle(value: String): Self = this.set("htmlTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHtmlTitle: Self = this.set("htmlTitle", js.undefined)
     
     @scala.inline
     def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])

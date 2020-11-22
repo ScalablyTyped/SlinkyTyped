@@ -1,7 +1,7 @@
 
 # Scala.js typings for signature_pad
 
-Typings are for version 2.3
+Typings are for version 3.0.0-beta.4
 
 ## Library description:
 Library for drawing smooth signatures.
@@ -24,7 +24,7 @@ Library for drawing smooth signatures.
 
 
 ## Note
-This library has been generated from typescript code from [DefinitelyTyped](https://definitelytyped.org).
+This library has been generated from typescript code from first party type definitions.
 
 Provided with :purple_heart: from [ScalablyTyped](https://github.com/oyvindberg/ScalablyTyped)
 

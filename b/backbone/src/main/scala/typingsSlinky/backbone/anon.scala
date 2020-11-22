@@ -9,6 +9,7 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLSelectElement
 import org.scalajs.dom.raw.Window
 import typingsSlinky.backbone.mod.Collection
+import typingsSlinky.backbone.mod.CombinedModelConstructorOptions
 import typingsSlinky.backbone.mod.History_
 import typingsSlinky.backbone.mod.Model
 import typingsSlinky.backbone.mod.ModelSetOptions
@@ -34,12 +35,12 @@ object anon extends js.Object {
   
   @js.native
   trait TypeofCollection
-    extends Instantiable0[Collection[Model[js.Any, ModelSetOptions]]]
+    extends Instantiable0[Collection[Model[js.Any, ModelSetOptions, js.Object]]]
        with Instantiable1[
           /* models */ js.Array[
             (/* import warning: RewrittenClass.unapply cls was tparam TModel */ js.Any) | js.Object
           ], 
-          Collection[Model[js.Any, ModelSetOptions]]
+          Collection[Model[js.Any, ModelSetOptions, js.Object]]
         ]
        with Instantiable2[
           js.UndefOr[
@@ -48,7 +49,7 @@ object anon extends js.Object {
             ]
           ], 
           /* options */ js.Any, 
-          Collection[Model[js.Any, ModelSetOptions]]
+          Collection[Model[js.Any, ModelSetOptions, js.Object]]
         ] {
     
     /**
@@ -66,17 +67,20 @@ object anon extends js.Object {
   
   @js.native
   trait TypeofModel
-    extends Instantiable0[Model[js.Object, js.Object]]
+    extends Instantiable0[Model[js.Object, js.Object, js.Object]]
        with Instantiable1[
           /* import warning: RewrittenClass.unapply cls was tparam T */ /* attributes */ js.Any, 
-          Model[js.Object, js.Object]
+          Model[js.Object, js.Object, js.Object]
         ]
        with Instantiable2[
           js.UndefOr[
             /* import warning: RewrittenClass.unapply cls was tparam T */ /* attributes */ js.Any
           ], 
-          /* options */ js.Any, 
-          Model[js.Object, js.Object]
+          /* options */ CombinedModelConstructorOptions[
+            /* import warning: RewrittenClass.unapply cls was tparam E */ js.Any, 
+            Model[js.Any, ModelSetOptions, js.Object]
+          ], 
+          Model[js.Object, js.Object, js.Object]
         ] {
     
     /**
@@ -100,10 +104,10 @@ object anon extends js.Object {
   
   @js.native
   trait TypeofView
-    extends Instantiable0[View[Model[js.Any, ModelSetOptions]]]
+    extends Instantiable0[View[Model[js.Any, ModelSetOptions, js.Object]]]
        with Instantiable1[
           /* options */ ViewOptions[/* import warning: RewrittenClass.unapply cls was tparam TModel */ js.Any], 
-          View[Model[js.Any, ModelSetOptions]]
+          View[Model[js.Any, ModelSetOptions, js.Object]]
         ] {
     
     /**
@@ -304,6 +308,10 @@ object anon extends js.Object {
     
     var History: TypeofHistory = js.native
     
+    /**
+      * E - Extensions to the model constructor options. You can accept additional constructor options
+      * by listing them in the E parameter.
+      */
     var Model: TypeofModel = js.native
     
     var ModelBase: Instantiable0[typingsSlinky.backbone.mod.ModelBase] = js.native
@@ -324,10 +332,14 @@ object anon extends js.Object {
     // Utility
     def noConflict(): /* import warning: importer.ImportType#apply Failed type conversion: typeof Backbone */ js.Any = js.native
     
-    def sync(method: String, model: Collection[Model[_, ModelSetOptions]]): js.Any = js.native
-    def sync(method: String, model: Collection[Model[_, ModelSetOptions]], options: JQueryAjaxSettings): js.Any = js.native
+    def sync(method: String, model: Collection[Model[_, ModelSetOptions, js.Object]]): js.Any = js.native
+    def sync(
+      method: String,
+      model: Collection[Model[_, ModelSetOptions, js.Object]],
+      options: JQueryAjaxSettings
+    ): js.Any = js.native
     // SYNC
-    def sync(method: String, model: Model[_, ModelSetOptions]): js.Any = js.native
-    def sync(method: String, model: Model[_, ModelSetOptions], options: JQueryAjaxSettings): js.Any = js.native
+    def sync(method: String, model: Model[_, ModelSetOptions, js.Object]): js.Any = js.native
+    def sync(method: String, model: Model[_, ModelSetOptions, js.Object], options: JQueryAjaxSettings): js.Any = js.native
   }
 }

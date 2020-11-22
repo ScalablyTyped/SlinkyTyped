@@ -7,10 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DescribeQueryDefinitionsRequest extends js.Object {
   
+  /**
+    * Limits the number of returned query definitions to the specified number.
+    */
   var maxResults: js.UndefOr[QueryListMaxResults] = js.native
   
   var nextToken: js.UndefOr[NextToken] = js.native
   
+  /**
+    * Use this parameter to filter your results to only the query definitions that have names that start with the prefix you specify.
+    */
   var queryDefinitionNamePrefix: js.UndefOr[QueryDefinitionName] = js.native
 }
 object DescribeQueryDefinitionsRequest {

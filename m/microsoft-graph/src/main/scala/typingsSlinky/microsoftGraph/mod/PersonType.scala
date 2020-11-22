@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PersonType extends js.Object {
   
   // The type of data source, such as Person.
-  var `class`: js.UndefOr[String] = js.native
+  var `class`: js.UndefOr[NullableOption[String]] = js.native
   
   // The secondary type of data source, such as OrganizationUser.
-  var subclass: js.UndefOr[String] = js.native
+  var subclass: js.UndefOr[NullableOption[String]] = js.native
 }
 object PersonType {
   
@@ -37,15 +37,21 @@ object PersonType {
     }
     
     @scala.inline
-    def setClass(value: String): Self = this.set("class", value.asInstanceOf[js.Any])
+    def setClass(value: NullableOption[String]): Self = this.set("class", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClass: Self = this.set("class", js.undefined)
     
     @scala.inline
-    def setSubclass(value: String): Self = this.set("subclass", value.asInstanceOf[js.Any])
+    def setClassNull: Self = this.set("class", null)
+    
+    @scala.inline
+    def setSubclass(value: NullableOption[String]): Self = this.set("subclass", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSubclass: Self = this.set("subclass", js.undefined)
+    
+    @scala.inline
+    def setSubclassNull: Self = this.set("subclass", null)
   }
 }

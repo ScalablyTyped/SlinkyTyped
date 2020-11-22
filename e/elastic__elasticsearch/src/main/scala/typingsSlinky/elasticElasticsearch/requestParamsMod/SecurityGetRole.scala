@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SecurityGetRole extends Generic {
   
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[String | js.Array[String]] = js.native
 }
 object SecurityGetRole {
   
@@ -33,7 +33,10 @@ object SecurityGetRole {
     }
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setNameVarargs(value: String*): Self = this.set("name", js.Array(value :_*))
+    
+    @scala.inline
+    def setName(value: String | js.Array[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)

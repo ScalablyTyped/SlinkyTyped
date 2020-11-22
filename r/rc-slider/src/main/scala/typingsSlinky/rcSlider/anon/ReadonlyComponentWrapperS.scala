@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Readonly<rc-slider.rc-slider/es/createSliderWithTooltip.ComponentWrapperState> */
+/* Inlined std.Readonly<rc-slider.rc-slider/lib/createSliderWithTooltip.ComponentWrapperState> */
 @js.native
 trait ReadonlyComponentWrapperS extends js.Object {
   

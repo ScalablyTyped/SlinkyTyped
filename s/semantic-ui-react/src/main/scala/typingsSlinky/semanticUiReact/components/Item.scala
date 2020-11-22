@@ -4,7 +4,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.dimmerDimmerMod.DimmerProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticSIZES
@@ -55,7 +54,7 @@ object Item {
     
     @scala.inline
     def descriptionFunction3(
-      value: (/* component */ ReactType[ItemDescriptionProps], ItemDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ItemDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("description", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -66,7 +65,7 @@ object Item {
     
     @scala.inline
     def extraFunction3(
-      value: (/* component */ ReactType[ItemExtraProps], ItemExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ItemExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("extra", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -77,7 +76,7 @@ object Item {
     
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactType[ItemHeaderProps], ItemHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ItemHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -88,7 +87,7 @@ object Item {
     
     @scala.inline
     def imageFunction3(
-      value: (/* component */ ReactType[ItemImageProps], ItemImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ItemImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("image", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -99,7 +98,7 @@ object Item {
     
     @scala.inline
     def metaFunction3(
-      value: (/* component */ ReactType[ItemMetaProps], ItemMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ItemMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("meta", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -138,7 +137,7 @@ object Item {
       
       @scala.inline
       def descriptionFunction3(
-        value: (/* component */ ReactType[ItemDescriptionProps], ItemDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+        value: (/* component */ ReactElement, ItemDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
       ): this.type = set("description", js.Any.fromFunction3(value))
       
       @scala.inline
@@ -149,7 +148,7 @@ object Item {
       
       @scala.inline
       def extraFunction3(
-        value: (/* component */ ReactType[ItemExtraProps], ItemExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+        value: (/* component */ ReactElement, ItemExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
       ): this.type = set("extra", js.Any.fromFunction3(value))
       
       @scala.inline
@@ -160,7 +159,7 @@ object Item {
       
       @scala.inline
       def headerFunction3(
-        value: (/* component */ ReactType[ItemHeaderProps], ItemHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+        value: (/* component */ ReactElement, ItemHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
       ): this.type = set("header", js.Any.fromFunction3(value))
       
       @scala.inline
@@ -171,7 +170,7 @@ object Item {
       
       @scala.inline
       def metaFunction3(
-        value: (/* component */ ReactType[ItemMetaProps], ItemMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+        value: (/* component */ ReactElement, ItemMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
       ): this.type = set("meta", js.Any.fromFunction3(value))
       
       @scala.inline
@@ -237,7 +236,7 @@ object Item {
       
       @scala.inline
       def dimmerFunction3(
-        value: (/* component */ ReactType[DimmerProps], DimmerProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+        value: (/* component */ ReactElement, DimmerProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
       ): this.type = set("dimmer", js.Any.fromFunction3(value))
       
       @scala.inline
@@ -266,7 +265,7 @@ object Item {
       
       @scala.inline
       def labelFunction3(
-        value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+        value: (/* component */ ReactElement, LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
       ): this.type = set("label", js.Any.fromFunction3(value))
       
       @scala.inline

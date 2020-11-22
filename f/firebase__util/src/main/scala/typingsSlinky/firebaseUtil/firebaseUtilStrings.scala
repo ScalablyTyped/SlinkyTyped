@@ -13,9 +13,6 @@ object firebaseUtilStrings {
   def ErrorMap: ErrorMap = "ErrorMap".asInstanceOf[ErrorMap]
   
   @scala.inline
-  def FirebaseError: FirebaseError = "FirebaseError".asInstanceOf[FirebaseError]
-  
-  @scala.inline
   def map: map = "map".asInstanceOf[map]
   
   @js.native
@@ -23,9 +20,6 @@ object firebaseUtilStrings {
   
   @js.native
   sealed trait ErrorMap extends js.Object
-  
-  @js.native
-  sealed trait FirebaseError extends js.Object
   
   @js.native
   sealed trait map extends js.Object

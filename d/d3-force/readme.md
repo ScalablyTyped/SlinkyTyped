@@ -1,7 +1,7 @@
 
 # Scala.js typings for d3-force
 
-Typings are for version 1.2
+Typings are for version 2.1
 
 ## Library description:
 Force-directed graph layout using velocity Verlet integration.

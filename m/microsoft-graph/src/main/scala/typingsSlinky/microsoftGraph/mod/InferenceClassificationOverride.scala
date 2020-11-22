@@ -11,10 +11,10 @@ trait InferenceClassificationOverride extends Entity {
     * Specifies how incoming messages from a specific sender should always be classified as. The possible values are:
     * focused, other.
     */
-  var classifyAs: js.UndefOr[InferenceClassificationType] = js.native
+  var classifyAs: js.UndefOr[NullableOption[InferenceClassificationType]] = js.native
   
   // The email address information of the sender for whom the override is created.
-  var senderEmailAddress: js.UndefOr[EmailAddress] = js.native
+  var senderEmailAddress: js.UndefOr[NullableOption[EmailAddress]] = js.native
 }
 object InferenceClassificationOverride {
   
@@ -40,15 +40,21 @@ object InferenceClassificationOverride {
     }
     
     @scala.inline
-    def setClassifyAs(value: InferenceClassificationType): Self = this.set("classifyAs", value.asInstanceOf[js.Any])
+    def setClassifyAs(value: NullableOption[InferenceClassificationType]): Self = this.set("classifyAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClassifyAs: Self = this.set("classifyAs", js.undefined)
     
     @scala.inline
-    def setSenderEmailAddress(value: EmailAddress): Self = this.set("senderEmailAddress", value.asInstanceOf[js.Any])
+    def setClassifyAsNull: Self = this.set("classifyAs", null)
+    
+    @scala.inline
+    def setSenderEmailAddress(value: NullableOption[EmailAddress]): Self = this.set("senderEmailAddress", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSenderEmailAddress: Self = this.set("senderEmailAddress", js.undefined)
+    
+    @scala.inline
+    def setSenderEmailAddressNull: Self = this.set("senderEmailAddress", null)
   }
 }

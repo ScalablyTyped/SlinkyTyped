@@ -20,6 +20,8 @@ object OperandMaker extends js.Object {
   
   def isSpaceString(str: String): Boolean = js.native
   
+  def isTwoValueEquals(x: js.Any, y: js.Any): Boolean = js.native
+  
   def operatorToString(operatorName: String): String = js.native
   
   def safeToString(operand: Operand, func: js.Function1[/* op */ Operand, String]): String = js.native

@@ -23,12 +23,17 @@ trait CreateVpcEndpointServiceConfigurationRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * The Amazon Resource Names (ARNs) of one or more Network Load Balancers for your service.
+    * The Amazon Resource Names (ARNs) of one or more Gateway Load Balancers.
     */
-  var NetworkLoadBalancerArns: ValueStringList = js.native
+  var GatewayLoadBalancerArns: js.UndefOr[ValueStringList] = js.native
   
   /**
-    * The private DNS name to assign to the VPC endpoint service.
+    * The Amazon Resource Names (ARNs) of one or more Network Load Balancers for your service.
+    */
+  var NetworkLoadBalancerArns: js.UndefOr[ValueStringList] = js.native
+  
+  /**
+    * (Interface endpoint configuration) The private DNS name to assign to the VPC endpoint service.
     */
   var PrivateDnsName: js.UndefOr[String] = js.native
   
@@ -40,8 +45,8 @@ trait CreateVpcEndpointServiceConfigurationRequest extends js.Object {
 object CreateVpcEndpointServiceConfigurationRequest {
   
   @scala.inline
-  def apply(NetworkLoadBalancerArns: ValueStringList): CreateVpcEndpointServiceConfigurationRequest = {
-    val __obj = js.Dynamic.literal(NetworkLoadBalancerArns = NetworkLoadBalancerArns.asInstanceOf[js.Any])
+  def apply(): CreateVpcEndpointServiceConfigurationRequest = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CreateVpcEndpointServiceConfigurationRequest]
   }
   
@@ -61,12 +66,6 @@ object CreateVpcEndpointServiceConfigurationRequest {
     }
     
     @scala.inline
-    def setNetworkLoadBalancerArnsVarargs(value: String*): Self = this.set("NetworkLoadBalancerArns", js.Array(value :_*))
-    
-    @scala.inline
-    def setNetworkLoadBalancerArns(value: ValueStringList): Self = this.set("NetworkLoadBalancerArns", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setAcceptanceRequired(value: Boolean): Self = this.set("AcceptanceRequired", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -83,6 +82,24 @@ object CreateVpcEndpointServiceConfigurationRequest {
     
     @scala.inline
     def deleteDryRun: Self = this.set("DryRun", js.undefined)
+    
+    @scala.inline
+    def setGatewayLoadBalancerArnsVarargs(value: String*): Self = this.set("GatewayLoadBalancerArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setGatewayLoadBalancerArns(value: ValueStringList): Self = this.set("GatewayLoadBalancerArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGatewayLoadBalancerArns: Self = this.set("GatewayLoadBalancerArns", js.undefined)
+    
+    @scala.inline
+    def setNetworkLoadBalancerArnsVarargs(value: String*): Self = this.set("NetworkLoadBalancerArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setNetworkLoadBalancerArns(value: ValueStringList): Self = this.set("NetworkLoadBalancerArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkLoadBalancerArns: Self = this.set("NetworkLoadBalancerArns", js.undefined)
     
     @scala.inline
     def setPrivateDnsName(value: String): Self = this.set("PrivateDnsName", value.asInstanceOf[js.Any])

@@ -55,6 +55,8 @@ class GroupedListSection protected ()
   
   var _root: js.Any = js.native
   
+  var _subGroupRefs: js.Any = js.native
+  
   /**
     * update groupIsDropping state based on the input value, which is used to change style during drag and drop
     *

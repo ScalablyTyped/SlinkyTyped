@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.effectFallbacksMod.EffectFallbacks
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.subMeshMod.SubMesh
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.uniformBufferMod.UniformBuffer
 import scala.scalajs.js
@@ -20,6 +21,8 @@ class PBRSheenConfiguration protected () extends js.Object {
     */
   def this(markAllSubMeshesAsTexturesDirty: js.Function0[Unit]) = this()
   
+  var _albedoScaling: js.Any = js.native
+  
   /** @hidden */
   var _internalMarkAllSubMeshesAsTexturesDirty: js.Any = js.native
   
@@ -30,15 +33,30 @@ class PBRSheenConfiguration protected () extends js.Object {
   /** @hidden */
   def _markAllSubMeshesAsTexturesDirty(): Unit = js.native
   
+  var _roughness: js.Any = js.native
+  
   var _texture: js.Any = js.native
+  
+  var _textureRoughness: js.Any = js.native
+  
+  var _useRoughnessFromMainTexture: js.Any = js.native
+  
+  /**
+    * If true, the sheen effect is layered above the base BRDF with the albedo-scaling technique.
+    * It allows the strength of the sheen effect to not depend on the base color of the material,
+    * making it easier to setup and tweak the effect
+    */
+  var albedoScaling: Boolean = js.native
   
   /**
     * Binds the material data.
     * @param uniformBuffer defines the Uniform buffer to fill in.
     * @param scene defines the scene the material belongs to.
     * @param isFrozen defines wether the material is frozen or not.
+    * @param subMesh the submesh to bind data for
     */
   def bindForSubMesh(uniformBuffer: UniformBuffer, scene: Scene, isFrozen: Boolean): Unit = js.native
+  def bindForSubMesh(uniformBuffer: UniformBuffer, scene: Scene, isFrozen: Boolean, subMesh: SubMesh): Unit = js.native
   
   /**
     * Defines the sheen color.
@@ -122,6 +140,13 @@ class PBRSheenConfiguration protected () extends js.Object {
   def prepareDefines(defines: IMaterialSheenDefines, scene: Scene): Unit = js.native
   
   /**
+    * Defines the sheen roughness.
+    * It is not taken into account if linkSheenWithAlbedo is true.
+    * To stay backward compatible, material roughness is used instead if sheen roughness = null
+    */
+  var roughness: Nullable[Double] = js.native
+  
+  /**
     * Serializes this BRDF configuration.
     * @returns - An object with the serialized config.
     */
@@ -130,9 +155,22 @@ class PBRSheenConfiguration protected () extends js.Object {
   /**
     * Stores the sheen tint values in a texture.
     * rgb is tint
-    * a is a intensity
+    * a is a intensity or roughness if the roughness property has been defined and useRoughnessFromTexture is true (in that case, textureRoughness won't be used)
+    * If the roughness property has been defined and useRoughnessFromTexture is false then the alpha channel is not used to modulate roughness
     */
   var texture: Nullable[BaseTexture] = js.native
+  
+  /**
+    * Stores the sheen roughness in a texture.
+    * alpha channel is the roughness. This texture won't be used if the texture property is not empty and useRoughnessFromTexture is true
+    */
+  var textureRoughness: Nullable[BaseTexture] = js.native
+  
+  /**
+    * Indicates that the alpha channel of the texture property will be used for roughness.
+    * Has no effect if the roughness (and texture!) property is not defined
+    */
+  var useRoughnessFromMainTexture: Boolean = js.native
 }
 /* static members */
 @JSImport("babylonjs/Materials/PBR/pbrSheenConfiguration", "PBRSheenConfiguration")

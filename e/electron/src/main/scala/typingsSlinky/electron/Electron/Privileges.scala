@@ -35,6 +35,11 @@ trait Privileges extends js.Object {
   /**
     * Default false.
     */
+  var stream: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Default false.
+    */
   var supportFetchAPI: js.UndefOr[Boolean] = js.native
 }
 object Privileges {
@@ -89,6 +94,12 @@ object Privileges {
     
     @scala.inline
     def deleteStandard: Self = this.set("standard", js.undefined)
+    
+    @scala.inline
+    def setStream(value: Boolean): Self = this.set("stream", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStream: Self = this.set("stream", js.undefined)
     
     @scala.inline
     def setSupportFetchAPI(value: Boolean): Self = this.set("supportFetchAPI", value.asInstanceOf[js.Any])

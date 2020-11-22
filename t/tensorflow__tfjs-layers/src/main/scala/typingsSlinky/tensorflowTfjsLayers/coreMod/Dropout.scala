@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.coreMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import scala.scalajs.js

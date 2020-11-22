@@ -251,6 +251,15 @@ package object medialiveMod {
   type BurnInTeletextGridControl = typingsSlinky.awsSdk.medialiveMod._BurnInTeletextGridControl | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SD
+    - typingsSlinky.awsSdk.awsSdkStrings.HD
+    - typingsSlinky.awsSdk.awsSdkStrings.FHD
+    - typingsSlinky.awsSdk.awsSdkStrings.UHD
+    - java.lang.String
+  */
+  type CdiInputResolution = typingsSlinky.awsSdk.medialiveMod._CdiInputResolution | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.STANDARD
     - typingsSlinky.awsSdk.awsSdkStrings.SINGLE_PIPELINE
     - java.lang.String
@@ -283,6 +292,13 @@ package object medialiveMod {
     - java.lang.String
   */
   type DeviceSettingsSyncState = typingsSlinky.awsSdk.medialiveMod._DeviceSettingsSyncState | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.UP_TO_DATE
+    - typingsSlinky.awsSdk.awsSdkStrings.NOT_UP_TO_DATE
+    - java.lang.String
+  */
+  type DeviceUpdateStatus = typingsSlinky.awsSdk.medialiveMod._DeviceUpdateStatus | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SDT_FOLLOW
@@ -901,6 +917,13 @@ package object medialiveMod {
   type HlsDirectoryStructure = typingsSlinky.awsSdk.medialiveMod._HlsDirectoryStructure | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INSERT
+    - typingsSlinky.awsSdk.awsSdkStrings.NEVER_INSERT
+    - java.lang.String
+  */
+  type HlsDiscontinuityTags = typingsSlinky.awsSdk.medialiveMod._HlsDiscontinuityTags | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AES128
     - typingsSlinky.awsSdk.awsSdkStrings.SAMPLE_AES
     - java.lang.String
@@ -920,6 +943,13 @@ package object medialiveMod {
     - java.lang.String
   */
   type HlsId3SegmentTaggingState = typingsSlinky.awsSdk.medialiveMod._HlsId3SegmentTaggingState | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AUTO
+    - typingsSlinky.awsSdk.awsSdkStrings.SUPPRESS
+    - java.lang.String
+  */
+  type HlsIncompleteSegmentBehavior = typingsSlinky.awsSdk.medialiveMod._HlsIncompleteSegmentBehavior | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EXCLUDE
@@ -1097,6 +1127,13 @@ package object medialiveMod {
   
   type InputDeviceThumbnail = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.medialiveMod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.OUTGOING
+    - typingsSlinky.awsSdk.awsSdkStrings.INCOMING
+    - java.lang.String
+  */
+  type InputDeviceTransferType = typingsSlinky.awsSdk.medialiveMod._InputDeviceTransferType | java.lang.String
+  
   type InputDeviceType = typingsSlinky.awsSdk.awsSdkStrings.HD | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
@@ -1215,6 +1252,7 @@ package object medialiveMod {
     - typingsSlinky.awsSdk.awsSdkStrings.MP4_FILE
     - typingsSlinky.awsSdk.awsSdkStrings.MEDIACONNECT
     - typingsSlinky.awsSdk.awsSdkStrings.INPUT_DEVICE
+    - typingsSlinky.awsSdk.awsSdkStrings.AWS_CDI
     - java.lang.String
   */
   type InputType = typingsSlinky.awsSdk.medialiveMod._InputType | java.lang.String
@@ -1411,6 +1449,65 @@ package object medialiveMod {
   type Mp2CodingMode = typingsSlinky.awsSdk.medialiveMod._Mp2CodingMode | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AUTO
+    - typingsSlinky.awsSdk.awsSdkStrings.HIGH
+    - typingsSlinky.awsSdk.awsSdkStrings.LOW
+    - typingsSlinky.awsSdk.awsSdkStrings.MEDIUM
+    - typingsSlinky.awsSdk.awsSdkStrings.OFF
+    - java.lang.String
+  */
+  type Mpeg2AdaptiveQuantization = typingsSlinky.awsSdk.medialiveMod._Mpeg2AdaptiveQuantization | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.IGNORE
+    - typingsSlinky.awsSdk.awsSdkStrings.INSERT
+    - java.lang.String
+  */
+  type Mpeg2ColorMetadata = typingsSlinky.awsSdk.medialiveMod._Mpeg2ColorMetadata | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AUTO
+    - typingsSlinky.awsSdk.awsSdkStrings.PASSTHROUGH
+    - java.lang.String
+  */
+  type Mpeg2ColorSpace = typingsSlinky.awsSdk.medialiveMod._Mpeg2ColorSpace | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISPLAYRATIO16X9
+    - typingsSlinky.awsSdk.awsSdkStrings.DISPLAYRATIO4X3
+    - java.lang.String
+  */
+  type Mpeg2DisplayRatio = typingsSlinky.awsSdk.medialiveMod._Mpeg2DisplayRatio | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.FRAMES
+    - typingsSlinky.awsSdk.awsSdkStrings.SECONDS
+    - java.lang.String
+  */
+  type Mpeg2GopSizeUnits = typingsSlinky.awsSdk.medialiveMod._Mpeg2GopSizeUnits | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INTERLACED
+    - typingsSlinky.awsSdk.awsSdkStrings.PROGRESSIVE
+    - java.lang.String
+  */
+  type Mpeg2ScanType = typingsSlinky.awsSdk.medialiveMod._Mpeg2ScanType | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DYNAMIC
+    - typingsSlinky.awsSdk.awsSdkStrings.FIXED
+    - java.lang.String
+  */
+  type Mpeg2SubGopLength = typingsSlinky.awsSdk.medialiveMod._Mpeg2SubGopLength | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.GOP_TIMECODE
+    - java.lang.String
+  */
+  type Mpeg2TimecodeInsertionBehavior = typingsSlinky.awsSdk.medialiveMod._Mpeg2TimecodeInsertionBehavior | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.HEV1
     - typingsSlinky.awsSdk.awsSdkStrings.HVC1
     - java.lang.String
@@ -1469,6 +1566,7 @@ package object medialiveMod {
     - typingsSlinky.awsSdk.awsSdkStrings.AVC
     - typingsSlinky.awsSdk.awsSdkStrings.HEVC
     - typingsSlinky.awsSdk.awsSdkStrings.AUDIO
+    - typingsSlinky.awsSdk.awsSdkStrings.LINK
     - java.lang.String
   */
   type ReservationCodec = typingsSlinky.awsSdk.medialiveMod._ReservationCodec | java.lang.String
@@ -1529,6 +1627,8 @@ package object medialiveMod {
     - java.lang.String
   */
   type ReservationVideoQuality = typingsSlinky.awsSdk.medialiveMod._ReservationVideoQuality | java.lang.String
+  
+  type RtmpAdMarkers = typingsSlinky.awsSdk.awsSdkStrings.ON_CUE_POINT_SCTE35 | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DISCONNECT_IMMEDIATELY
@@ -1775,6 +1875,15 @@ package object medialiveMod {
   type VideoSelectorColorSpaceUsage = typingsSlinky.awsSdk.medialiveMod._VideoSelectorColorSpaceUsage | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CODING_MODE_1_0
+    - typingsSlinky.awsSdk.awsSdkStrings.CODING_MODE_2_0
+    - typingsSlinky.awsSdk.awsSdkStrings.CODING_MODE_4_0
+    - typingsSlinky.awsSdk.awsSdkStrings.CODING_MODE_8_0
+    - java.lang.String
+  */
+  type WavCodingMode = typingsSlinky.awsSdk.medialiveMod._WavCodingMode | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2017-10-14`
     - typingsSlinky.awsSdk.awsSdkStrings.latest_
     - java.lang.String
@@ -1831,6 +1940,8 @@ package object medialiveMod {
   
   type integerMin1 = scala.Double
   
+  type integerMin100 = scala.Double
+  
   type integerMin1000 = scala.Double
   
   type integerMin1000000Max100000000 = scala.Double
@@ -1840,8 +1951,6 @@ package object medialiveMod {
   type integerMin100000Max40000000 = scala.Double
   
   type integerMin100000Max80000000 = scala.Double
-  
-  type integerMin1000Max3000 = scala.Double
   
   type integerMin1000Max30000 = scala.Double
   
@@ -1879,9 +1988,13 @@ package object medialiveMod {
   
   type integerMin4Max20 = scala.Double
   
+  type integerMin800Max3000 = scala.Double
+  
   type integerMin96Max600 = scala.Double
   
   type integerMinNegative1000Max1000 = scala.Double
+  
+  type integerMinNegative5Max5 = scala.Double
   
   type integerMinNegative60Max6 = scala.Double
   
@@ -1895,6 +2008,10 @@ package object medialiveMod {
   
   type listOfAudioTrack = js.Array[typingsSlinky.awsSdk.medialiveMod.AudioTrack]
   
+  type listOfBatchFailedResultModel = js.Array[typingsSlinky.awsSdk.medialiveMod.BatchFailedResultModel]
+  
+  type listOfBatchSuccessfulResultModel = js.Array[typingsSlinky.awsSdk.medialiveMod.BatchSuccessfulResultModel]
+  
   type listOfCaptionDescription = js.Array[typingsSlinky.awsSdk.medialiveMod.CaptionDescription]
   
   type listOfCaptionLanguageMapping = js.Array[typingsSlinky.awsSdk.medialiveMod.CaptionLanguageMapping]
@@ -1904,6 +2021,8 @@ package object medialiveMod {
   type listOfChannelEgressEndpoint = js.Array[typingsSlinky.awsSdk.medialiveMod.ChannelEgressEndpoint]
   
   type listOfChannelSummary = js.Array[typingsSlinky.awsSdk.medialiveMod.ChannelSummary]
+  
+  type listOfFailoverCondition = js.Array[typingsSlinky.awsSdk.medialiveMod.FailoverCondition]
   
   type listOfHlsAdMarkers = js.Array[typingsSlinky.awsSdk.medialiveMod.HlsAdMarkers]
   
@@ -1943,6 +2062,8 @@ package object medialiveMod {
   
   type listOfMultiplexOutputDestination = js.Array[typingsSlinky.awsSdk.medialiveMod.MultiplexOutputDestination]
   
+  type listOfMultiplexProgramPipelineDetail = js.Array[typingsSlinky.awsSdk.medialiveMod.MultiplexProgramPipelineDetail]
+  
   type listOfMultiplexProgramSummary = js.Array[typingsSlinky.awsSdk.medialiveMod.MultiplexProgramSummary]
   
   type listOfMultiplexSummary = js.Array[typingsSlinky.awsSdk.medialiveMod.MultiplexSummary]
@@ -1963,11 +2084,15 @@ package object medialiveMod {
   
   type listOfReservation = js.Array[typingsSlinky.awsSdk.medialiveMod.Reservation]
   
+  type listOfRtmpAdMarkers = js.Array[typingsSlinky.awsSdk.medialiveMod.RtmpAdMarkers]
+  
   type listOfScheduleAction = js.Array[typingsSlinky.awsSdk.medialiveMod.ScheduleAction]
   
   type listOfScte35Descriptor = js.Array[typingsSlinky.awsSdk.medialiveMod.Scte35Descriptor]
   
   type listOfString = js.Array[typingsSlinky.awsSdk.medialiveMod.string]
+  
+  type listOfTransferringInputDeviceSummary = js.Array[typingsSlinky.awsSdk.medialiveMod.TransferringInputDeviceSummary]
   
   type listOfVideoDescription = js.Array[typingsSlinky.awsSdk.medialiveMod.VideoDescription]
   

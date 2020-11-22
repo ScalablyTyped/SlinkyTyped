@@ -7,6 +7,7 @@ import org.scalajs.dom.raw.TouchEvent
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
+import typingsSlinky.reResizable.anon.As
 import typingsSlinky.reResizable.anon.Height
 import typingsSlinky.reResizable.anon.HeightWidth
 import typingsSlinky.reResizable.anon.MaxHeight
@@ -29,7 +30,7 @@ class Resizable protected ()
   extends Component[ResizableProps, State, js.Any] {
   def this(props: ResizableProps) = this()
   
-  def base: js.UndefOr[HTMLElement] = js.native
+  def appendBase(): HTMLDivElement | Null = js.native
   
   def bindEvents(): Unit = js.native
   
@@ -67,8 +68,8 @@ class Resizable protected ()
   def onMouseUp(event: MouseEvent): Unit = js.native
   def onMouseUp(event: TouchEvent): Unit = js.native
   
-  def onResizeStart(event: SyntheticMouseEvent[HTMLDivElement], direction: Direction): Unit = js.native
-  def onResizeStart(event: SyntheticTouchEvent[HTMLDivElement], direction: Direction): Unit = js.native
+  def onResizeStart(event: SyntheticMouseEvent[HTMLElement], direction: Direction): Unit = js.native
+  def onResizeStart(event: SyntheticTouchEvent[HTMLElement], direction: Direction): Unit = js.native
   
   var parentLeft: Double = js.native
   
@@ -81,11 +82,13 @@ class Resizable protected ()
   var ratio: Double = js.native
   
   def ref(): Unit = js.native
-  def ref(c: HTMLDivElement): Unit = js.native
+  def ref(c: HTMLElement): Unit = js.native
+  
+  def removeBase(base: HTMLElement): Unit = js.native
   
   def renderResizer(): ReactElement | Null = js.native
   
-  var resizable: HTMLDivElement | Null = js.native
+  var resizable: HTMLElement | Null = js.native
   
   var resizableLeft: Double = js.native
   
@@ -112,5 +115,5 @@ class Resizable protected ()
 @js.native
 object Resizable extends js.Object {
   
-  var defaultProps: typingsSlinky.reResizable.anon.Enable = js.native
+  var defaultProps: As = js.native
 }

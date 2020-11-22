@@ -1,5 +1,7 @@
 package typingsSlinky.chartJs.mod
 
+import org.scalajs.dom.raw.CanvasGradient
+import org.scalajs.dom.raw.CanvasPattern
 import org.scalajs.dom.raw.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +17,8 @@ trait ChartOptions extends js.Object {
   var circumference: js.UndefOr[Double] = js.native
   
   var cutoutPercentage: js.UndefOr[Double] = js.native
+  
+  var defaultColor: js.UndefOr[ChartColor] = js.native
   
   var devicePixelRatio: js.UndefOr[Double] = js.native
   
@@ -112,6 +116,21 @@ object ChartOptions {
     
     @scala.inline
     def deleteCutoutPercentage: Self = this.set("cutoutPercentage", js.undefined)
+    
+    @scala.inline
+    def setDefaultColorVarargs(value: String*): Self = this.set("defaultColor", js.Array(value :_*))
+    
+    @scala.inline
+    def setDefaultColorCanvasPattern(value: CanvasPattern): Self = this.set("defaultColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDefaultColorCanvasGradient(value: CanvasGradient): Self = this.set("defaultColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDefaultColor(value: ChartColor): Self = this.set("defaultColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultColor: Self = this.set("defaultColor", js.undefined)
     
     @scala.inline
     def setDevicePixelRatio(value: Double): Self = this.set("devicePixelRatio", value.asInstanceOf[js.Any])

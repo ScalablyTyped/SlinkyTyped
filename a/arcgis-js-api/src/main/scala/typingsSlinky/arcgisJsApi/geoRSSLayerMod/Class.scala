@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("esri/layers/GeoRSSLayer", JSImport.Namespace)
 @js.native
 /**
-  * The GeoRSSLayer class is used to create a layer based on [GeoRSS](http://www.georss.org/). GeoRSS is a way to add geographic information to an RSS feed. The GeoRSSLayer supports both `GeoRSS-Simple` and `GeoRSS GML` encodings, and multiple geometry types.
+  * The GeoRSSLayer class is used to create a layer based on [GeoRSS](https://www.ogc.org/standards/georss).
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoRSSLayer.html)
   */

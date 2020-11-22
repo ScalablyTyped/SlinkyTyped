@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StopServerRequest extends js.Object {
   
   /**
-    * A system-assigned unique identifier for a file transfer protocol-enabled server that you stopped.
+    * A system-assigned unique identifier for a server that you stopped.
     */
   var ServerId: typingsSlinky.awsSdk.transferMod.ServerId = js.native
 }

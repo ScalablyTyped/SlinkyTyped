@@ -9,7 +9,7 @@ trait BoxShadowProps extends js.Object {
   
   val boxShadow: js.UndefOr[
     ResponsiveValue[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ _) | Double
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ _) | Double
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BoxShadowProps {
     }
     
     @scala.inline
+    def setBoxShadowVarargs(value: (js.Any | Double)*): Self = this.set("boxShadow", js.Array(value :_*))
+    
+    @scala.inline
     def setBoxShadow(
       value: ResponsiveValue[
-          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ _) | Double
+          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ _) | Double
         ]
     ): Self = this.set("boxShadow", value.asInstanceOf[js.Any])
     

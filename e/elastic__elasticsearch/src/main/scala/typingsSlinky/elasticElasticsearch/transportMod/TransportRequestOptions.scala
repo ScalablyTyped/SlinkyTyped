@@ -13,7 +13,7 @@ trait TransportRequestOptions extends js.Object {
   
   var compression: js.UndefOr[gzip] = js.native
   
-  var context: js.UndefOr[js.Any] = js.native
+  var context: js.UndefOr[Context] = js.native
   
   var headers: js.UndefOr[Record[String, _]] = js.native
   
@@ -67,10 +67,13 @@ object TransportRequestOptions {
     def deleteCompression: Self = this.set("compression", js.undefined)
     
     @scala.inline
-    def setContext(value: js.Any): Self = this.set("context", value.asInstanceOf[js.Any])
+    def setContext(value: Context): Self = this.set("context", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContext: Self = this.set("context", js.undefined)
+    
+    @scala.inline
+    def setContextNull: Self = this.set("context", null)
     
     @scala.inline
     def setHeaders(value: Record[String, _]): Self = this.set("headers", value.asInstanceOf[js.Any])

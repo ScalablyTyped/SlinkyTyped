@@ -1,5 +1,6 @@
 package typingsSlinky.iobroker.mod.global.ioBroker
 
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.EvaluatedFileACL
 import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`

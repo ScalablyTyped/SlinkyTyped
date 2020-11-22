@@ -14,12 +14,14 @@ object vectorTileLayerMod extends js.Object {
   trait CanvasVectorTileLayerRenderer
     extends typingsSlinky.ol.tileLayerMod.default {
     
+    def isDrawableTile(tile: typingsSlinky.ol.vectorRenderTileMod.default): Boolean = js.native
+    
     def prepareTile(
       tile: typingsSlinky.ol.vectorRenderTileMod.default,
       pixelRatio: Double,
       projection: typingsSlinky.ol.projectionMod.default,
       queue: Boolean
-    ): Boolean = js.native
+    ): js.UndefOr[Boolean] = js.native
     
     def renderFeature(
       feature: FeatureLike,

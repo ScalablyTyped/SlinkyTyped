@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GetSignedUrlConfigInternal extends js.Object {
   
+  var accessibleAt: js.UndefOr[js.Date] = js.native
+  
   var bucket: String = js.native
   
   var cname: js.UndefOr[String] = js.native
@@ -57,6 +59,12 @@ object GetSignedUrlConfigInternal {
     
     @scala.inline
     def setMethod(value: String): Self = this.set("method", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAccessibleAt(value: js.Date): Self = this.set("accessibleAt", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccessibleAt: Self = this.set("accessibleAt", js.undefined)
     
     @scala.inline
     def setCname(value: String): Self = this.set("cname", value.asInstanceOf[js.Any])

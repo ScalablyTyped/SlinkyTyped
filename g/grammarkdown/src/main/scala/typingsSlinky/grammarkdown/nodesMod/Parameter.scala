@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "Parameter")
 @js.native
 class Parameter protected ()
-  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Parameter] {
+  extends Node[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Parameter]
+     with Declaration {
   def this(name: Identifier) = this()
   
   val name: Identifier = js.native

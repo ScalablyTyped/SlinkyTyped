@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "@jupyterlab/extensionmanager" : "1.2.9"
+      "@jupyterlab/extensionmanager" : "2.2.6"
     }
   ],
   "test-dependencies" : [
     {
-      "@jupyterlab/extensionmanager" : "1.2.9"
+      "@jupyterlab/extensionmanager" : "2.2.6"
     }
   ],
   "compile-devDependencies" : [

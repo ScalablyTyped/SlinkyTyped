@@ -8,19 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createMappedTypeNode extends js.Object {
   
+  /** @deprecated Use `factory.createMappedTypeNode` or the factory supplied by your transformation context instead. */
   def apply(
-    readonlyToken: js.UndefOr[MinusToken | PlusToken | ReadonlyToken],
-    typeParameter: TypeParameterDeclaration
-  ): MappedTypeNode = js.native
-  def apply(
-    readonlyToken: js.UndefOr[MinusToken | PlusToken | ReadonlyToken],
+    readonlyToken: js.UndefOr[ReadonlyKeyword | PlusToken | MinusToken],
     typeParameter: TypeParameterDeclaration,
-    questionToken: MinusToken | PlusToken | QuestionToken
-  ): MappedTypeNode = js.native
-  def apply(
-    readonlyToken: js.UndefOr[MinusToken | PlusToken | ReadonlyToken],
-    typeParameter: TypeParameterDeclaration,
-    questionToken: js.UndefOr[MinusToken | PlusToken | QuestionToken],
-    `type`: TypeNode
+    nameType: js.UndefOr[TypeNode],
+    questionToken: js.UndefOr[QuestionToken | PlusToken | MinusToken],
+    `type`: js.UndefOr[TypeNode]
   ): MappedTypeNode = js.native
 }

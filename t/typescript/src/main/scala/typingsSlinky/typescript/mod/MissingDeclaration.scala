@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MissingDeclaration extends DeclarationStatement {
   
   @JSName("kind")
-  var kind_MissingDeclaration: typingsSlinky.typescript.mod.SyntaxKind.MissingDeclaration = js.native
+  val kind_MissingDeclaration: typingsSlinky.typescript.mod.SyntaxKind.MissingDeclaration = js.native
   
   @JSName("name")
-  var name_MissingDeclaration: js.UndefOr[Identifier] = js.native
+  val name_MissingDeclaration: js.UndefOr[Identifier] = js.native
 }

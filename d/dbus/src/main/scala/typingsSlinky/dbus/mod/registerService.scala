@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object registerService extends js.Object {
   
+  def apply(busName: busType): DBusService = js.native
   def apply(busName: busType, serviceName: String): DBusService = js.native
 }

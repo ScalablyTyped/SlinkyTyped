@@ -3,6 +3,7 @@ package typingsSlinky.babelTraverse.mod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.babelTraverse.anon.Id
 import typingsSlinky.babelTypes.mod.Identifier_
+import typingsSlinky.babelTypes.mod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -73,7 +74,7 @@ class Scope protected () extends js.Object {
   
   def hasUid(name: String): Boolean = js.native
   
-  var hub: Hub = js.native
+  var hub: HubInterface = js.native
   
   def isPure(node: Node): Boolean = js.native
   def isPure(node: Node, constantsOnly: Boolean): Boolean = js.native

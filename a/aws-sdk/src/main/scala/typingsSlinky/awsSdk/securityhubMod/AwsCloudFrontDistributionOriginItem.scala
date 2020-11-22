@@ -21,6 +21,11 @@ trait AwsCloudFrontDistributionOriginItem extends js.Object {
     * An optional element that causes CloudFront to request your content from a directory in your Amazon S3 bucket or your custom origin.
     */
   var OriginPath: js.UndefOr[NonEmptyString] = js.native
+  
+  /**
+    * An origin that is an S3 bucket that is not configured with static website hosting.
+    */
+  var S3OriginConfig: js.UndefOr[AwsCloudFrontDistributionOriginS3OriginConfig] = js.native
 }
 object AwsCloudFrontDistributionOriginItem {
   
@@ -62,5 +67,11 @@ object AwsCloudFrontDistributionOriginItem {
     
     @scala.inline
     def deleteOriginPath: Self = this.set("OriginPath", js.undefined)
+    
+    @scala.inline
+    def setS3OriginConfig(value: AwsCloudFrontDistributionOriginS3OriginConfig): Self = this.set("S3OriginConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteS3OriginConfig: Self = this.set("S3OriginConfig", js.undefined)
   }
 }

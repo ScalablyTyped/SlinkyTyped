@@ -18,7 +18,7 @@ trait CreatePortfolioShareInput extends js.Object {
   var AccountId: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.AccountId] = js.native
   
   /**
-    * The organization node to whom you are going to share. If OrganizationNode is passed in, PortfolioShare will be created for the node and its children (when applies), and a PortfolioShareToken will be returned in the output in order for the administrator to monitor the status of the PortfolioShare creation process.
+    * The organization node to whom you are going to share. If OrganizationNode is passed in, PortfolioShare will be created for the node an ListOrganizationPortfolioAccessd its children (when applies), and a PortfolioShareToken will be returned in the output in order for the administrator to monitor the status of the PortfolioShare creation process.
     */
   var OrganizationNode: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.OrganizationNode] = js.native
   

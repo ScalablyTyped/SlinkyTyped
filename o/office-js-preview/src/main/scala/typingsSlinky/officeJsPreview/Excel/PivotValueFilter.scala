@@ -21,8 +21,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Configurable template for a value filter to apply to a PivotField.
   The `condition` defines what criteria need to be set in order for the filter to operate.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait PivotValueFilter extends js.Object {
@@ -32,8 +31,7 @@ trait PivotValueFilter extends js.Object {
     * The comparator is the static value to which other values are compared. The type of comparison is defined by the condition.
     For example, if comparator is "50" and condition is "GreaterThan", all item values that are not greater than 50 will be removed by the filter.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var comparator: js.UndefOr[Double] = js.native
   
@@ -41,8 +39,7 @@ trait PivotValueFilter extends js.Object {
     *
     * Specifies the condition for the filter, which defines the necessary filtering criteria.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var condition: ValueFilterCondition | Unknown_ | Equals | GreaterThan | GreaterThanOrEqualTo | LessThan | LessThanOrEqualTo | Between | TopN | BottomN = js.native
   
@@ -50,8 +47,7 @@ trait PivotValueFilter extends js.Object {
     *
     * If true, filter *excludes* items that meet criteria. The default is false (filter to include items that meet criteria).
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var exclusive: js.UndefOr[Boolean] = js.native
   
@@ -59,8 +55,7 @@ trait PivotValueFilter extends js.Object {
     *
     * The lower-bound of the range for the `Between` filter condition.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var lowerBound: js.UndefOr[Double] = js.native
   
@@ -68,8 +63,7 @@ trait PivotValueFilter extends js.Object {
     *
     * Specifies if the filter is for the top/bottom N items, top/bottom N percent, or top/bottom N sum.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var selectionType: js.UndefOr[TopBottomSelectionType | Items | Percent | Sum] = js.native
   
@@ -77,8 +71,7 @@ trait PivotValueFilter extends js.Object {
     *
     * The "N" threshold number of items, percent, or sum to be filtered for a Top/Bottom filter condition.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var threshold: js.UndefOr[Double] = js.native
   
@@ -86,8 +79,7 @@ trait PivotValueFilter extends js.Object {
     *
     * The upper-bound of the range for the `Between` filter condition.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var upperBound: js.UndefOr[Double] = js.native
   
@@ -95,8 +87,7 @@ trait PivotValueFilter extends js.Object {
     *
     * Name of the chosen "value" in the field by which to filter.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var value: String = js.native
 }

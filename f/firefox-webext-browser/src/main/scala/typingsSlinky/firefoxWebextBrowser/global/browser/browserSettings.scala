@@ -27,8 +27,7 @@ object browserSettings extends js.Object {
   val closeTabsByDoubleClick: Setting = js.native
   
   /**
-    * Controls after which mouse event context menus popup. This setting's value is of type ContextMenuMouseEvent,
-    * which has possible values of `mouseup` and `mousedown`.
+    * Controls after which mouse event context menus popup. This setting's value is of type ContextMenuMouseEvent, which has possible values of `mouseup` and `mousedown`.
     */
   val contextMenuShowEvent: Setting = js.native
   
@@ -39,8 +38,7 @@ object browserSettings extends js.Object {
   val homepageOverride: Setting = js.native
   
   /**
-    * Controls the behaviour of image animation in the browser. This setting's value is of type
-    * ImageAnimationBehavior, defaulting to `normal`.
+    * Controls the behaviour of image animation in the browser. This setting's value is of type ImageAnimationBehavior, defaulting to `normal`.
     */
   val imageAnimationBehavior: Setting = js.native
   
@@ -48,9 +46,7 @@ object browserSettings extends js.Object {
   val newTabPageOverride: Setting = js.native
   
   /**
-    * Controls where new tabs are opened. `afterCurrent` will open all new tabs next to the current tab,
-    * `relatedAfterCurrent` will open only related tabs next to the current tab, and `atEnd` will open all tabs at the
-    * end of the tab strip. The default is `relatedAfterCurrent`.
+    * Controls where new tabs are opened. `afterCurrent` will open all new tabs next to the current tab, `relatedAfterCurrent` will open only related tabs next to the current tab, and `atEnd` will open all tabs at the end of the tab strip. The default is `relatedAfterCurrent`.
     */
   val newTabPosition: Setting = js.native
   
@@ -76,8 +72,7 @@ object browserSettings extends js.Object {
   val zoomFullPage: Setting = js.native
   
   /**
-    * This boolean setting controls whether zoom is applied on a per-site basis or to the current tab only. If
-    * privacy.resistFingerprinting is true, this setting has no effect and zoom is applied to the current tab only.
+    * This boolean setting controls whether zoom is applied on a per-site basis or to the current tab only. If privacy.resistFingerprinting is true, this setting has no effect and zoom is applied to the current tab only.
     */
   val zoomSiteSpecific: Setting = js.native
 }

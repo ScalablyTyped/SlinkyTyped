@@ -17,7 +17,7 @@ import typingsSlinky.electron.electronStrings.`mouse-up`
 import typingsSlinky.electron.electronStrings.`right-click`
 import typingsSlinky.electron.electronStrings.click
 import typingsSlinky.electron.electronStrings.drop
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -130,7 +130,7 @@ trait Tray extends EventEmitter {
     */
   def isDestroyed(): Boolean = js.native
   
-  // Docs: http://electronjs.org/docs/api/tray
+  // Docs: https://electronjs.org/docs/api/tray
   /**
     * Emitted when the tray balloon is clicked.
     *
@@ -425,6 +425,7 @@ trait Tray extends EventEmitter {
     * @platform darwin
     */
   def setTitle(title: String): Unit = js.native
+  def setTitle(title: String, options: TitleOptions): Unit = js.native
   
   /**
     * Sets the hover text for this tray icon.

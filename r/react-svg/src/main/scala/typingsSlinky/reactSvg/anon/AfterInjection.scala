@@ -19,6 +19,8 @@ trait AfterInjection extends js.Object {
   
   var renumerateIRIElements: Boolean = js.native
   
+  var useRequestCache: Boolean = js.native
+  
   var wrapper: String = js.native
 }
 object AfterInjection {
@@ -31,9 +33,10 @@ object AfterInjection {
     fallback: Null,
     loading: Null,
     renumerateIRIElements: Boolean,
+    useRequestCache: Boolean,
     wrapper: String
   ): AfterInjection = {
-    val __obj = js.Dynamic.literal(afterInjection = js.Any.fromFunction0(afterInjection), beforeInjection = js.Any.fromFunction0(beforeInjection), evalScripts = evalScripts.asInstanceOf[js.Any], fallback = fallback.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any], renumerateIRIElements = renumerateIRIElements.asInstanceOf[js.Any], wrapper = wrapper.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(afterInjection = js.Any.fromFunction0(afterInjection), beforeInjection = js.Any.fromFunction0(beforeInjection), evalScripts = evalScripts.asInstanceOf[js.Any], fallback = fallback.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any], renumerateIRIElements = renumerateIRIElements.asInstanceOf[js.Any], useRequestCache = useRequestCache.asInstanceOf[js.Any], wrapper = wrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[AfterInjection]
   }
   
@@ -69,6 +72,9 @@ object AfterInjection {
     
     @scala.inline
     def setRenumerateIRIElements(value: Boolean): Self = this.set("renumerateIRIElements", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUseRequestCache(value: Boolean): Self = this.set("useRequestCache", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWrapper(value: String): Self = this.set("wrapper", value.asInstanceOf[js.Any])

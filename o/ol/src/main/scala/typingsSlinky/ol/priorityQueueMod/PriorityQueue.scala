@@ -7,10 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PriorityQueue[T] extends js.Object {
   
+  /**
+    * FIXME empty description for jsdoc
+    */
   def clear(): Unit = js.native
   
+  /**
+    * Remove and return the highest-priority element. O(log N).
+    */
   def dequeue(): T = js.native
   
+  /**
+    * Enqueue an element. O(log N).
+    */
   def enqueue(element: T): Boolean = js.native
   
   def getCount(): Double = js.native
@@ -21,6 +30,9 @@ trait PriorityQueue[T] extends js.Object {
   
   def isQueued(element: T): Boolean = js.native
   
+  /**
+    * FIXME empty description for jsdoc
+    */
   def reprioritize(): Unit = js.native
 }
 object PriorityQueue {

@@ -1,15 +1,17 @@
 package typingsSlinky.rcSlider.sliderMod
 
+import typingsSlinky.rcSlider.interfaceMod.GenericSliderState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SliderState extends js.Object {
+trait SliderState extends GenericSliderState {
   
   var dragging: Boolean = js.native
   
-  var value: Double = js.native
+  @JSName("value")
+  var value_SliderState: Double = js.native
 }
 object SliderState {
   

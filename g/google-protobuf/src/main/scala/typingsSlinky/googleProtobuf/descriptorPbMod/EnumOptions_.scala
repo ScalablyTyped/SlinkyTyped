@@ -14,11 +14,11 @@ class EnumOptions_ () extends Message {
   def addUninterpretedOption(value: UninterpretedOption): UninterpretedOption = js.native
   def addUninterpretedOption(value: UninterpretedOption, index: Double): UninterpretedOption = js.native
   
-  def clearAllowAlias(): Unit = js.native
+  def clearAllowAlias(): EnumOptions = js.native
   
-  def clearDeprecated(): Unit = js.native
+  def clearDeprecated(): EnumOptions = js.native
   
-  def clearUninterpretedOptionList(): Unit = js.native
+  def clearUninterpretedOptionList(): EnumOptions = js.native
   
   def getAllowAlias(): js.UndefOr[Boolean] = js.native
   
@@ -30,9 +30,9 @@ class EnumOptions_ () extends Message {
   
   def hasDeprecated(): Boolean = js.native
   
-  def setAllowAlias(value: Boolean): Unit = js.native
+  def setAllowAlias(value: Boolean): EnumOptions = js.native
   
-  def setDeprecated(value: Boolean): Unit = js.native
+  def setDeprecated(value: Boolean): EnumOptions = js.native
   
-  def setUninterpretedOptionList(value: js.Array[UninterpretedOption]): Unit = js.native
+  def setUninterpretedOptionList(value: js.Array[UninterpretedOption]): EnumOptions = js.native
 }

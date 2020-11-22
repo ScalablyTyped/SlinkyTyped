@@ -21,8 +21,6 @@ trait TimeIntervalProperties extends js.Object {
     * Temporal units.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-TimeInterval.html#unit)
-    *
-    * @default milliseconds
     */
   var unit: js.UndefOr[
     milliseconds | seconds | minutes | hours | days | weeks | months | years | decades | centuries
@@ -32,8 +30,6 @@ trait TimeIntervalProperties extends js.Object {
     * The numerical value of the time extent.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-TimeInterval.html#value)
-    *
-    * @default 0
     */
   var value: js.UndefOr[Double] = js.native
 }

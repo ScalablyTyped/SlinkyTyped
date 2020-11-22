@@ -21,15 +21,21 @@ object storage extends js.Object {
   trait StubbedStorageArea extends js.Object {
     
     // Methods
-    def clear(args: js.Any*): js.Any = js.native
+    def clear(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("clear")
     var clear_Original: SinonChromeStub = js.native
     
     // Methods
-    def get(args: js.Any*): js.Any = js.native
+    def get(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     
     // Methods
-    def getBytesInUse(args: js.Any*): js.Any = js.native
+    def getBytesInUse(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("getBytesInUse")
     var getBytesInUse_Original: SinonChromeStub = js.native
     
@@ -37,12 +43,16 @@ object storage extends js.Object {
     var get_Original: SinonChromeStub = js.native
     
     // Methods
-    def remove(args: js.Any*): js.Any = js.native
+    def remove(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("remove")
     var remove_Original: SinonChromeStub = js.native
     
     // Methods
-    def set(args: js.Any*): js.Any = js.native
+    def set(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("set")
     var set_Original: SinonChromeStub = js.native
   }

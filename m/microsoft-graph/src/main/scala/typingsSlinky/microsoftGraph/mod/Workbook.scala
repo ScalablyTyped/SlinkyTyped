@@ -7,20 +7,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Workbook extends Entity {
   
-  var application: js.UndefOr[WorkbookApplication] = js.native
+  var application: js.UndefOr[NullableOption[WorkbookApplication]] = js.native
   
-  var comments: js.UndefOr[js.Array[WorkbookComment]] = js.native
+  var comments: js.UndefOr[NullableOption[js.Array[WorkbookComment]]] = js.native
   
-  var functions: js.UndefOr[WorkbookFunctions] = js.native
+  var functions: js.UndefOr[NullableOption[WorkbookFunctions]] = js.native
   
   // Represents a collection of workbook scoped named items (named ranges and constants). Read-only.
-  var names: js.UndefOr[js.Array[WorkbookNamedItem]] = js.native
+  var names: js.UndefOr[NullableOption[js.Array[WorkbookNamedItem]]] = js.native
+  
+  /**
+    * The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a
+    * long-running operation if the Location header is returned in the response. Read-only.
+    */
+  var operations: js.UndefOr[NullableOption[js.Array[WorkbookOperation]]] = js.native
   
   // Represents a collection of tables associated with the workbook. Read-only.
-  var tables: js.UndefOr[js.Array[WorkbookTable]] = js.native
+  var tables: js.UndefOr[NullableOption[js.Array[WorkbookTable]]] = js.native
   
   // Represents a collection of worksheets associated with the workbook. Read-only.
-  var worksheets: js.UndefOr[js.Array[WorkbookWorksheet]] = js.native
+  var worksheets: js.UndefOr[NullableOption[js.Array[WorkbookWorksheet]]] = js.native
 }
 object Workbook {
   
@@ -46,51 +52,81 @@ object Workbook {
     }
     
     @scala.inline
-    def setApplication(value: WorkbookApplication): Self = this.set("application", value.asInstanceOf[js.Any])
+    def setApplication(value: NullableOption[WorkbookApplication]): Self = this.set("application", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteApplication: Self = this.set("application", js.undefined)
     
     @scala.inline
+    def setApplicationNull: Self = this.set("application", null)
+    
+    @scala.inline
     def setCommentsVarargs(value: WorkbookComment*): Self = this.set("comments", js.Array(value :_*))
     
     @scala.inline
-    def setComments(value: js.Array[WorkbookComment]): Self = this.set("comments", value.asInstanceOf[js.Any])
+    def setComments(value: NullableOption[js.Array[WorkbookComment]]): Self = this.set("comments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComments: Self = this.set("comments", js.undefined)
     
     @scala.inline
-    def setFunctions(value: WorkbookFunctions): Self = this.set("functions", value.asInstanceOf[js.Any])
+    def setCommentsNull: Self = this.set("comments", null)
+    
+    @scala.inline
+    def setFunctions(value: NullableOption[WorkbookFunctions]): Self = this.set("functions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFunctions: Self = this.set("functions", js.undefined)
     
     @scala.inline
+    def setFunctionsNull: Self = this.set("functions", null)
+    
+    @scala.inline
     def setNamesVarargs(value: WorkbookNamedItem*): Self = this.set("names", js.Array(value :_*))
     
     @scala.inline
-    def setNames(value: js.Array[WorkbookNamedItem]): Self = this.set("names", value.asInstanceOf[js.Any])
+    def setNames(value: NullableOption[js.Array[WorkbookNamedItem]]): Self = this.set("names", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNames: Self = this.set("names", js.undefined)
     
     @scala.inline
+    def setNamesNull: Self = this.set("names", null)
+    
+    @scala.inline
+    def setOperationsVarargs(value: WorkbookOperation*): Self = this.set("operations", js.Array(value :_*))
+    
+    @scala.inline
+    def setOperations(value: NullableOption[js.Array[WorkbookOperation]]): Self = this.set("operations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOperations: Self = this.set("operations", js.undefined)
+    
+    @scala.inline
+    def setOperationsNull: Self = this.set("operations", null)
+    
+    @scala.inline
     def setTablesVarargs(value: WorkbookTable*): Self = this.set("tables", js.Array(value :_*))
     
     @scala.inline
-    def setTables(value: js.Array[WorkbookTable]): Self = this.set("tables", value.asInstanceOf[js.Any])
+    def setTables(value: NullableOption[js.Array[WorkbookTable]]): Self = this.set("tables", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTables: Self = this.set("tables", js.undefined)
     
     @scala.inline
+    def setTablesNull: Self = this.set("tables", null)
+    
+    @scala.inline
     def setWorksheetsVarargs(value: WorkbookWorksheet*): Self = this.set("worksheets", js.Array(value :_*))
     
     @scala.inline
-    def setWorksheets(value: js.Array[WorkbookWorksheet]): Self = this.set("worksheets", value.asInstanceOf[js.Any])
+    def setWorksheets(value: NullableOption[js.Array[WorkbookWorksheet]]): Self = this.set("worksheets", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorksheets: Self = this.set("worksheets", js.undefined)
+    
+    @scala.inline
+    def setWorksheetsNull: Self = this.set("worksheets", null)
   }
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`13`
+import typingsSlinky.octokitTypes.anon.`12`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ReposDeletePagesSiteEndpoint extends js.Object {
   
-  var mediaType: `13` = js.native
+  var mediaType: `12` = js.native
   
   var owner: String = js.native
   
@@ -18,7 +18,7 @@ trait ReposDeletePagesSiteEndpoint extends js.Object {
 object ReposDeletePagesSiteEndpoint {
   
   @scala.inline
-  def apply(mediaType: `13`, owner: String, repo: String): ReposDeletePagesSiteEndpoint = {
+  def apply(mediaType: `12`, owner: String, repo: String): ReposDeletePagesSiteEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposDeletePagesSiteEndpoint]
   }
@@ -39,7 +39,7 @@ object ReposDeletePagesSiteEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `13`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `12`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.xrayMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import scala.scalajs.js
@@ -125,6 +125,62 @@ trait XRay extends Service {
   ): Request[GetGroupsResult, AWSError] = js.native
   
   /**
+    * Retrieves the summary information of an insight. This includes impact to clients and root cause services, the top anomalous services, the category, the state of the insight, and the start and end time of the insight.
+    */
+  def getInsight(): Request[GetInsightResult, AWSError] = js.native
+  def getInsight(callback: js.Function2[/* err */ AWSError, /* data */ GetInsightResult, Unit]): Request[GetInsightResult, AWSError] = js.native
+  /**
+    * Retrieves the summary information of an insight. This includes impact to clients and root cause services, the top anomalous services, the category, the state of the insight, and the start and end time of the insight.
+    */
+  def getInsight(params: GetInsightRequest): Request[GetInsightResult, AWSError] = js.native
+  def getInsight(
+    params: GetInsightRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetInsightResult, Unit]
+  ): Request[GetInsightResult, AWSError] = js.native
+  
+  /**
+    * X-Ray reevaluates insights periodically until they're resolved, and records each intermediate state as an event. You can review an insight's events in the Impact Timeline on the Inspect page in the X-Ray console.
+    */
+  def getInsightEvents(): Request[GetInsightEventsResult, AWSError] = js.native
+  def getInsightEvents(callback: js.Function2[/* err */ AWSError, /* data */ GetInsightEventsResult, Unit]): Request[GetInsightEventsResult, AWSError] = js.native
+  /**
+    * X-Ray reevaluates insights periodically until they're resolved, and records each intermediate state as an event. You can review an insight's events in the Impact Timeline on the Inspect page in the X-Ray console.
+    */
+  def getInsightEvents(params: GetInsightEventsRequest): Request[GetInsightEventsResult, AWSError] = js.native
+  def getInsightEvents(
+    params: GetInsightEventsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetInsightEventsResult, Unit]
+  ): Request[GetInsightEventsResult, AWSError] = js.native
+  
+  /**
+    * Retrieves a service graph structure filtered by the specified insight. The service graph is limited to only structural information. For a complete service graph, use this API with the GetServiceGraph API.
+    */
+  def getInsightImpactGraph(): Request[GetInsightImpactGraphResult, AWSError] = js.native
+  def getInsightImpactGraph(callback: js.Function2[/* err */ AWSError, /* data */ GetInsightImpactGraphResult, Unit]): Request[GetInsightImpactGraphResult, AWSError] = js.native
+  /**
+    * Retrieves a service graph structure filtered by the specified insight. The service graph is limited to only structural information. For a complete service graph, use this API with the GetServiceGraph API.
+    */
+  def getInsightImpactGraph(params: GetInsightImpactGraphRequest): Request[GetInsightImpactGraphResult, AWSError] = js.native
+  def getInsightImpactGraph(
+    params: GetInsightImpactGraphRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetInsightImpactGraphResult, Unit]
+  ): Request[GetInsightImpactGraphResult, AWSError] = js.native
+  
+  /**
+    * Retrieves the summaries of all insights in the specified group matching the provided filter values.
+    */
+  def getInsightSummaries(): Request[GetInsightSummariesResult, AWSError] = js.native
+  def getInsightSummaries(callback: js.Function2[/* err */ AWSError, /* data */ GetInsightSummariesResult, Unit]): Request[GetInsightSummariesResult, AWSError] = js.native
+  /**
+    * Retrieves the summaries of all insights in the specified group matching the provided filter values.
+    */
+  def getInsightSummaries(params: GetInsightSummariesRequest): Request[GetInsightSummariesResult, AWSError] = js.native
+  def getInsightSummaries(
+    params: GetInsightSummariesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetInsightSummariesResult, Unit]
+  ): Request[GetInsightSummariesResult, AWSError] = js.native
+  
+  /**
     * Retrieves all sampling rules.
     */
   def getSamplingRules(): Request[GetSamplingRulesResult, AWSError] = js.native
@@ -223,6 +279,20 @@ trait XRay extends Service {
   ): Request[GetTraceSummariesResult, AWSError] = js.native
   
   /**
+    * Returns a list of tags that are applied to the specified AWS X-Ray group or sampling rule.
+    */
+  def listTagsForResource(): Request[ListTagsForResourceResponse, AWSError] = js.native
+  def listTagsForResource(callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]): Request[ListTagsForResourceResponse, AWSError] = js.native
+  /**
+    * Returns a list of tags that are applied to the specified AWS X-Ray group or sampling rule.
+    */
+  def listTagsForResource(params: ListTagsForResourceRequest): Request[ListTagsForResourceResponse, AWSError] = js.native
+  def listTagsForResource(
+    params: ListTagsForResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
+  ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
+  /**
     * Updates the encryption configuration for X-Ray data.
     */
   def putEncryptionConfig(): Request[PutEncryptionConfigResult, AWSError] = js.native
@@ -251,18 +321,46 @@ trait XRay extends Service {
   ): Request[PutTelemetryRecordsResult, AWSError] = js.native
   
   /**
-    * Uploads segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon, which uploads them in batches. A segment document can be a completed segment, an in-progress segment, or an array of subsegments. Segments must include the following fields. For the full segment document schema, see AWS X-Ray Segment Documents in the AWS X-Ray Developer Guide.  Required Segment Document Fields     name - The name of the service that handled the request.    id - A 64-bit identifier for the segment, unique among segments in the same trace, in 16 hexadecimal digits.    trace_id - A unique identifier that connects all segments and subsegments originating from a single client request.    start_time - Time the segment or subsegment was created, in floating point seconds in epoch time, accurate to milliseconds. For example, 1480615200.010 or 1.480615200010E9.    end_time - Time the segment or subsegment was closed. For example, 1480615200.090 or 1.480615200090E9. Specify either an end_time or in_progress.    in_progress - Set to true instead of specifying an end_time to record that a segment has been started, but is not complete. Send an in progress segment when your application receives a request that will take a long time to serve, to trace the fact that the request was received. When the response is sent, send the complete segment to overwrite the in-progress segment.   A trace_id consists of three numbers separated by hyphens. For example, 1-58406520-a006649127e371903a2de979. This includes:  Trace ID Format    The version number, i.e. 1.   The time of the original request, in Unix epoch time, in 8 hexadecimal digits. For example, 10:00AM December 2nd, 2016 PST in epoch time is 1480615200 seconds, or 58406520 in hexadecimal.   A 96-bit identifier for the trace, globally unique, in 24 hexadecimal digits.  
+    * Uploads segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon, which uploads them in batches. A segment document can be a completed segment, an in-progress segment, or an array of subsegments. Segments must include the following fields. For the full segment document schema, see AWS X-Ray Segment Documents in the AWS X-Ray Developer Guide.  Required segment document fields     name - The name of the service that handled the request.    id - A 64-bit identifier for the segment, unique among segments in the same trace, in 16 hexadecimal digits.    trace_id - A unique identifier that connects all segments and subsegments originating from a single client request.    start_time - Time the segment or subsegment was created, in floating point seconds in epoch time, accurate to milliseconds. For example, 1480615200.010 or 1.480615200010E9.    end_time - Time the segment or subsegment was closed. For example, 1480615200.090 or 1.480615200090E9. Specify either an end_time or in_progress.    in_progress - Set to true instead of specifying an end_time to record that a segment has been started, but is not complete. Send an in-progress segment when your application receives a request that will take a long time to serve, to trace that the request was received. When the response is sent, send the complete segment to overwrite the in-progress segment.   A trace_id consists of three numbers separated by hyphens. For example, 1-58406520-a006649127e371903a2de979. This includes:  Trace ID Format    The version number, for instance, 1.   The time of the original request, in Unix epoch time, in 8 hexadecimal digits. For example, 10:00AM December 2nd, 2016 PST in epoch time is 1480615200 seconds, or 58406520 in hexadecimal.   A 96-bit identifier for the trace, globally unique, in 24 hexadecimal digits.  
     */
   def putTraceSegments(): Request[PutTraceSegmentsResult, AWSError] = js.native
   def putTraceSegments(callback: js.Function2[/* err */ AWSError, /* data */ PutTraceSegmentsResult, Unit]): Request[PutTraceSegmentsResult, AWSError] = js.native
   /**
-    * Uploads segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon, which uploads them in batches. A segment document can be a completed segment, an in-progress segment, or an array of subsegments. Segments must include the following fields. For the full segment document schema, see AWS X-Ray Segment Documents in the AWS X-Ray Developer Guide.  Required Segment Document Fields     name - The name of the service that handled the request.    id - A 64-bit identifier for the segment, unique among segments in the same trace, in 16 hexadecimal digits.    trace_id - A unique identifier that connects all segments and subsegments originating from a single client request.    start_time - Time the segment or subsegment was created, in floating point seconds in epoch time, accurate to milliseconds. For example, 1480615200.010 or 1.480615200010E9.    end_time - Time the segment or subsegment was closed. For example, 1480615200.090 or 1.480615200090E9. Specify either an end_time or in_progress.    in_progress - Set to true instead of specifying an end_time to record that a segment has been started, but is not complete. Send an in progress segment when your application receives a request that will take a long time to serve, to trace the fact that the request was received. When the response is sent, send the complete segment to overwrite the in-progress segment.   A trace_id consists of three numbers separated by hyphens. For example, 1-58406520-a006649127e371903a2de979. This includes:  Trace ID Format    The version number, i.e. 1.   The time of the original request, in Unix epoch time, in 8 hexadecimal digits. For example, 10:00AM December 2nd, 2016 PST in epoch time is 1480615200 seconds, or 58406520 in hexadecimal.   A 96-bit identifier for the trace, globally unique, in 24 hexadecimal digits.  
+    * Uploads segment documents to AWS X-Ray. The X-Ray SDK generates segment documents and sends them to the X-Ray daemon, which uploads them in batches. A segment document can be a completed segment, an in-progress segment, or an array of subsegments. Segments must include the following fields. For the full segment document schema, see AWS X-Ray Segment Documents in the AWS X-Ray Developer Guide.  Required segment document fields     name - The name of the service that handled the request.    id - A 64-bit identifier for the segment, unique among segments in the same trace, in 16 hexadecimal digits.    trace_id - A unique identifier that connects all segments and subsegments originating from a single client request.    start_time - Time the segment or subsegment was created, in floating point seconds in epoch time, accurate to milliseconds. For example, 1480615200.010 or 1.480615200010E9.    end_time - Time the segment or subsegment was closed. For example, 1480615200.090 or 1.480615200090E9. Specify either an end_time or in_progress.    in_progress - Set to true instead of specifying an end_time to record that a segment has been started, but is not complete. Send an in-progress segment when your application receives a request that will take a long time to serve, to trace that the request was received. When the response is sent, send the complete segment to overwrite the in-progress segment.   A trace_id consists of three numbers separated by hyphens. For example, 1-58406520-a006649127e371903a2de979. This includes:  Trace ID Format    The version number, for instance, 1.   The time of the original request, in Unix epoch time, in 8 hexadecimal digits. For example, 10:00AM December 2nd, 2016 PST in epoch time is 1480615200 seconds, or 58406520 in hexadecimal.   A 96-bit identifier for the trace, globally unique, in 24 hexadecimal digits.  
     */
   def putTraceSegments(params: PutTraceSegmentsRequest): Request[PutTraceSegmentsResult, AWSError] = js.native
   def putTraceSegments(
     params: PutTraceSegmentsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutTraceSegmentsResult, Unit]
   ): Request[PutTraceSegmentsResult, AWSError] = js.native
+  
+  /**
+    * Applies tags to an existing AWS X-Ray group or sampling rule.
+    */
+  def tagResource(): Request[TagResourceResponse, AWSError] = js.native
+  def tagResource(callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]): Request[TagResourceResponse, AWSError] = js.native
+  /**
+    * Applies tags to an existing AWS X-Ray group or sampling rule.
+    */
+  def tagResource(params: TagResourceRequest): Request[TagResourceResponse, AWSError] = js.native
+  def tagResource(
+    params: TagResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]
+  ): Request[TagResourceResponse, AWSError] = js.native
+  
+  /**
+    * Removes tags from an AWS X-Ray group or sampling rule. You cannot edit or delete system tags (those with an aws: prefix).
+    */
+  def untagResource(): Request[UntagResourceResponse, AWSError] = js.native
+  def untagResource(callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]): Request[UntagResourceResponse, AWSError] = js.native
+  /**
+    * Removes tags from an AWS X-Ray group or sampling rule. You cannot edit or delete system tags (those with an aws: prefix).
+    */
+  def untagResource(params: UntagResourceRequest): Request[UntagResourceResponse, AWSError] = js.native
+  def untagResource(
+    params: UntagResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]
+  ): Request[UntagResourceResponse, AWSError] = js.native
   
   /**
     * Updates a group resource.

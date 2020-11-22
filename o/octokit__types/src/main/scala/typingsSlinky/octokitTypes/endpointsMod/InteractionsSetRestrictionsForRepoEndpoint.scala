@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`5`
+import typingsSlinky.octokitTypes.anon.`4`
 import typingsSlinky.octokitTypes.octokitTypesStrings.collaborators_only
 import typingsSlinky.octokitTypes.octokitTypesStrings.contributors_only
 import typingsSlinky.octokitTypes.octokitTypesStrings.existing_users
@@ -17,7 +17,7 @@ trait InteractionsSetRestrictionsForRepoEndpoint extends js.Object {
     */
   var limit: existing_users | contributors_only | collaborators_only = js.native
   
-  var mediaType: `5` = js.native
+  var mediaType: `4` = js.native
   
   var owner: String = js.native
   
@@ -28,7 +28,7 @@ object InteractionsSetRestrictionsForRepoEndpoint {
   @scala.inline
   def apply(
     limit: existing_users | contributors_only | collaborators_only,
-    mediaType: `5`,
+    mediaType: `4`,
     owner: String,
     repo: String
   ): InteractionsSetRestrictionsForRepoEndpoint = {
@@ -55,7 +55,7 @@ object InteractionsSetRestrictionsForRepoEndpoint {
     def setLimit(value: existing_users | contributors_only | collaborators_only): Self = this.set("limit", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `5`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `4`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait S3SetObjectRetentionOperation extends js.Object {
   
   /**
-    * Indicates if the operation should be applied to objects in the Batch Operations job even if they have Governance-type Object Lock in place.
+    * Indicates if the action should be applied to objects in the Batch Operations job even if they have Object Lock  GOVERNANCE type in place.
     */
   var BypassGovernanceRetention: js.UndefOr[Boolean] = js.native
   
   /**
-    * Amazon S3 object lock Retention contains the retention mode to be applied to all objects in the Batch Operations job.
+    * Contains the Object Lock retention mode to be applied to all objects in the Batch Operations job. For more information, see Using S3 Object Lock retention with S3 Batch Operations in the Amazon Simple Storage Service Developer Guide.
     */
   var Retention: S3Retention = js.native
 }

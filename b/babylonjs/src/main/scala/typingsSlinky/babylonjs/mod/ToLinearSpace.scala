@@ -7,4 +7,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("babylonjs", "ToLinearSpace")
 @js.native
-object ToLinearSpace extends TopLevel[Double]
+object ToLinearSpace
+  extends TopLevel[/* 2.2 */ Double]

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -34,6 +35,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.VerticalFlow
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.WebLayoutContent
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.Widget
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,8 +51,8 @@ class CustomWidget protected () extends Widget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -76,9 +78,6 @@ class CustomWidget protected () extends Widget {
     */
   def labelTemplate: ClientTemplate | Null = js.native
   def labelTemplate_=(newValue: ClientTemplate | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FCustomWidget: IModel = js.native
   
   def `object`: WidgetObject | Null = js.native
   def object_=(newValue: WidgetObject | Null): Unit = js.native

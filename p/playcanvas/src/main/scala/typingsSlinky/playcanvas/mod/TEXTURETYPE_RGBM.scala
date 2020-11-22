@@ -10,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("playcanvas", "TEXTURETYPE_RGBM")
 @js.native
-object TEXTURETYPE_RGBM extends TopLevel[Double]
+object TEXTURETYPE_RGBM extends TopLevel[String]

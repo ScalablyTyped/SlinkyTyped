@@ -1,7 +1,9 @@
 package typingsSlinky.ionicCore
 
+import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.UIEvent
+import typingsSlinky.ionicCore.anon.Label
 import typingsSlinky.ionicCore.anon.X
 import typingsSlinky.ionicCore.componentsMod.global.HTMLIonLabelElement
 import typingsSlinky.ionicCore.mod.Side
@@ -14,6 +16,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@ionic/core/dist/types/utils/helpers", JSImport.Namespace)
 @js.native
 object helpersMod extends js.Object {
+  
+  def addEventListener(el: js.Any, eventName: String, callback: js.Any): js.Any = js.native
+  def addEventListener(el: js.Any, eventName: String, callback: js.Any, opts: js.Any): js.Any = js.native
   
   def assert(actual: js.Any, reason: String): Unit = js.native
   
@@ -28,10 +33,15 @@ object helpersMod extends js.Object {
   
   def findItemLabel(componentEl: HTMLElement): HTMLIonLabelElement | Null = js.native
   
+  def getAriaLabel(componentEl: HTMLElement, inputId: String): Label = js.native
+  
   def getElementRoot(el: HTMLElement): HTMLElement | ShadowRoot = js.native
   def getElementRoot(el: HTMLElement, fallback: HTMLElement): HTMLElement | ShadowRoot = js.native
   
   def hasShadowDom(el: HTMLElement): Boolean = js.native
+  
+  def inheritAttributes(el: HTMLElement): StringDictionary[js.Any] = js.native
+  def inheritAttributes(el: HTMLElement, attributes: js.Array[String]): StringDictionary[js.Any] = js.native
   
   def isEndSide(side: Side): Boolean = js.native
   
@@ -40,6 +50,9 @@ object helpersMod extends js.Object {
   def pointerCoord(ev: js.Any): X = js.native
   
   def raf(h: js.Any): js.Any = js.native
+  
+  def removeEventListener(el: js.Any, eventName: String, callback: js.Any): js.Any = js.native
+  def removeEventListener(el: js.Any, eventName: String, callback: js.Any, opts: js.Any): js.Any = js.native
   
   def renderHiddenInput(
     always: Boolean,

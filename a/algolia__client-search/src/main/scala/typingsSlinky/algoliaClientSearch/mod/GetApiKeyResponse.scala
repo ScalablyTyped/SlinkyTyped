@@ -49,6 +49,13 @@ trait GetApiKeyResponse extends js.Object {
   var referers: js.UndefOr[js.Array[String]] = js.native
   
   /**
+    * IPv4 network allowed to use the generated key.
+    * This is used for more protection against API key leaking and reuse.
+    * Note that you can only provide a single source, but you can specify a range of IPs (e.g., 192.168.1.0/24).
+    */
+  var restrictSources: js.UndefOr[String] = js.native
+  
+  /**
     * A Unix timestamp used to define the expiration date of the API key.
     */
   var validity: Double = js.native
@@ -137,5 +144,11 @@ object GetApiKeyResponse {
     
     @scala.inline
     def deleteReferers: Self = this.set("referers", js.undefined)
+    
+    @scala.inline
+    def setRestrictSources(value: String): Self = this.set("restrictSources", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRestrictSources: Self = this.set("restrictSources", js.undefined)
   }
 }

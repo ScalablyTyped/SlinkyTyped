@@ -2,10 +2,9 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import typingsSlinky.devextreme.anon.ConnectorColor
 import typingsSlinky.devextreme.anon.EndAngle
-import typingsSlinky.devextreme.anon.`18`
+import typingsSlinky.devextreme.anon.`21`
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
-import typingsSlinky.devextreme.devextremeStrings.Default
 import typingsSlinky.devextreme.devextremeStrings.Material
 import typingsSlinky.devextreme.devextremeStrings.Ocean
 import typingsSlinky.devextreme.devextremeStrings.Office
@@ -31,62 +30,98 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxBarGaugeOptions extends BaseWidgetOptions[dxBarGauge] {
   
-  /** @name dxBarGauge.Options.animation */
+  /**
+    * [descr:dxBarGauge.Options.animation]
+    */
   var animation: js.UndefOr[js.Any] = js.native
   
-  /** @name dxBarGauge.Options.backgroundColor */
+  /**
+    * [descr:dxBarGauge.Options.backgroundColor]
+    */
   var backgroundColor: js.UndefOr[String] = js.native
   
-  /** @name dxBarGauge.Options.barSpacing */
+  /**
+    * [descr:dxBarGauge.Options.barSpacing]
+    */
   var barSpacing: js.UndefOr[Double] = js.native
   
-  /** @name dxBarGauge.Options.baseValue */
+  /**
+    * [descr:dxBarGauge.Options.baseValue]
+    */
   var baseValue: js.UndefOr[Double] = js.native
   
-  /** @name dxBarGauge.Options.endValue */
+  /**
+    * [descr:dxBarGauge.Options.endValue]
+    */
   var endValue: js.UndefOr[Double] = js.native
   
-  /** @name dxBarGauge.Options.geometry */
+  /**
+    * [descr:dxBarGauge.Options.geometry]
+    */
   var geometry: js.UndefOr[EndAngle] = js.native
   
-  /** @name dxBarGauge.Options.label */
+  /**
+    * [descr:dxBarGauge.Options.label]
+    */
   var label: js.UndefOr[ConnectorColor] = js.native
   
-  /** @name dxBarGauge.Options.legend */
+  /**
+    * [descr:dxBarGauge.Options.legend]
+    */
   var legend: js.UndefOr[dxBarGaugeLegend] = js.native
   
-  /** @name dxBarGauge.Options.loadingIndicator */
+  /**
+    * [descr:dxBarGauge.Options.loadingIndicator]
+    */
   @JSName("loadingIndicator")
   var loadingIndicator_dxBarGaugeOptions: js.UndefOr[dxBarGaugeLoadingIndicator] = js.native
   
-  /** @name dxBarGauge.Options.onTooltipHidden */
-  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ `18`, _]] = js.native
+  /**
+    * [descr:dxBarGauge.Options.onTooltipHidden]
+    */
+  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ `21`, _]] = js.native
   
-  /** @name dxBarGauge.Options.onTooltipShown */
-  var onTooltipShown: js.UndefOr[js.Function1[/* e */ `18`, _]] = js.native
+  /**
+    * [descr:dxBarGauge.Options.onTooltipShown]
+    */
+  var onTooltipShown: js.UndefOr[js.Function1[/* e */ `21`, _]] = js.native
   
-  /** @name dxBarGauge.Options.palette */
+  /**
+    * [descr:dxBarGauge.Options.palette]
+    */
   var palette: js.UndefOr[
-    js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+    js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
   ] = js.native
   
-  /** @name dxBarGauge.Options.paletteExtensionMode */
+  /**
+    * [descr:dxBarGauge.Options.paletteExtensionMode]
+    */
   var paletteExtensionMode: js.UndefOr[alternate | blend | extrapolate] = js.native
   
-  /** @name dxBarGauge.Options.relativeInnerRadius */
+  /**
+    * [descr:dxBarGauge.Options.relativeInnerRadius]
+    */
   var relativeInnerRadius: js.UndefOr[Double] = js.native
   
-  /** @name dxBarGauge.Options.resolveLabelOverlapping */
+  /**
+    * [descr:dxBarGauge.Options.resolveLabelOverlapping]
+    */
   var resolveLabelOverlapping: js.UndefOr[hide | none] = js.native
   
-  /** @name dxBarGauge.Options.startValue */
+  /**
+    * [descr:dxBarGauge.Options.startValue]
+    */
   var startValue: js.UndefOr[Double] = js.native
   
-  /** @name dxBarGauge.Options.tooltip */
+  /**
+    * [descr:dxBarGauge.Options.tooltip]
+    */
   @JSName("tooltip")
   var tooltip_dxBarGaugeOptions: js.UndefOr[dxBarGaugeTooltip] = js.native
   
-  /** @name dxBarGauge.Options.values */
+  /**
+    * [descr:dxBarGauge.Options.values]
+    */
   var values: js.UndefOr[js.Array[Double]] = js.native
 }
 object dxBarGaugeOptions {
@@ -167,13 +202,13 @@ object dxBarGaugeOptions {
     def deleteLoadingIndicator: Self = this.set("loadingIndicator", js.undefined)
     
     @scala.inline
-    def setOnTooltipHidden(value: /* e */ `18` => _): Self = this.set("onTooltipHidden", js.Any.fromFunction1(value))
+    def setOnTooltipHidden(value: /* e */ `21` => _): Self = this.set("onTooltipHidden", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnTooltipHidden: Self = this.set("onTooltipHidden", js.undefined)
     
     @scala.inline
-    def setOnTooltipShown(value: /* e */ `18` => _): Self = this.set("onTooltipShown", js.Any.fromFunction1(value))
+    def setOnTooltipShown(value: /* e */ `21` => _): Self = this.set("onTooltipShown", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnTooltipShown: Self = this.set("onTooltipShown", js.undefined)
@@ -183,7 +218,7 @@ object dxBarGaugeOptions {
     
     @scala.inline
     def setPalette(
-      value: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+      value: js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
     ): Self = this.set("palette", value.asInstanceOf[js.Any])
     
     @scala.inline

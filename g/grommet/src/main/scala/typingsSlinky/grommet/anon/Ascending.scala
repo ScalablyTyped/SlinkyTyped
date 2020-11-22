@@ -14,6 +14,8 @@ trait Ascending extends js.Object {
   var descending: js.UndefOr[js.Any] = js.native
   
   var expand: js.UndefOr[js.Any] = js.native
+  
+  var sortable: js.UndefOr[js.Any] = js.native
 }
 object Ascending {
   
@@ -61,5 +63,11 @@ object Ascending {
     
     @scala.inline
     def deleteExpand: Self = this.set("expand", js.undefined)
+    
+    @scala.inline
+    def setSortable(value: js.Any): Self = this.set("sortable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSortable: Self = this.set("sortable", js.undefined)
   }
 }

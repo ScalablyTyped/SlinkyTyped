@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LoggerOptions extends js.Object {
   
+  var devServer: js.UndefOr[Boolean] = js.native
+  
   var infrastructure: js.UndefOr[LoggerType | Logger] = js.native
   
   var issues: js.UndefOr[LoggerType | Logger] = js.native
@@ -35,6 +37,12 @@ object LoggerOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDevServer(value: Boolean): Self = this.set("devServer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDevServer: Self = this.set("devServer", js.undefined)
     
     @scala.inline
     def setInfrastructure(value: LoggerType | Logger): Self = this.set("infrastructure", value.asInstanceOf[js.Any])

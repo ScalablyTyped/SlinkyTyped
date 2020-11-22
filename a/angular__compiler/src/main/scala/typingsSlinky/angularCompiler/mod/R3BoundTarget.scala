@@ -10,6 +10,7 @@ import typingsSlinky.angularCompiler.r3AstMod.Variable
 import typingsSlinky.angularCompiler.t2ApiMod.DirectiveMeta
 import typingsSlinky.angularCompiler.t2ApiMod.Target
 import typingsSlinky.std.Map
+import typingsSlinky.std.ReadonlySet
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,6 +34,7 @@ class R3BoundTarget[DirectiveT /* <: DirectiveMeta */] protected ()
     exprTargets: Map[typingsSlinky.angularCompiler.astMod.AST, Reference | Variable],
     symbols: Map[Reference | Variable, Template],
     nestingLevel: Map[Template, Double],
+    templateEntities: Map[Template | Null, ReadonlySet[Reference | Variable]],
     usedPipes: Set[String]
   ) = this()
 }

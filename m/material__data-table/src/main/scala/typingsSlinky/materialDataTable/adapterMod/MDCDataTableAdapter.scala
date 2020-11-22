@@ -75,14 +75,14 @@ trait MDCDataTableAdapter extends js.Object {
   def getSelectedRowCount(): Double = js.native
   
   /**
-    * @return Returns computed styles height of table's body element.
+    * @return Returns computed styles height of table container element.
     */
-  def getTableBodyHeight(): String = js.native
+  def getTableContainerHeight(): Double = js.native
   
   /**
     * @return Returns computed styles height of table's header element.
     */
-  def getTableHeaderHeight(): String = js.native
+  def getTableHeaderHeight(): Double = js.native
   
   /**
     * @param rowIndex Index of row element.
@@ -227,8 +227,8 @@ object MDCDataTableAdapter {
     getRowIdAtIndex: Double => String | Null,
     getRowIndexByChildElement: Element => Double,
     getSelectedRowCount: () => Double,
-    getTableBodyHeight: () => String,
-    getTableHeaderHeight: () => String,
+    getTableContainerHeight: () => Double,
+    getTableHeaderHeight: () => Double,
     isCheckboxAtRowIndexChecked: Double => Boolean,
     isHeaderRowCheckboxChecked: () => Boolean,
     isRowsSelectable: () => Boolean,
@@ -250,7 +250,7 @@ object MDCDataTableAdapter {
     setRowCheckboxCheckedAtIndex: (Double, Boolean) => Unit,
     setSortStatusLabelByHeaderCellIndex: (Double, SortValue) => Unit
   ): MDCDataTableAdapter = {
-    val __obj = js.Dynamic.literal(addClass = js.Any.fromFunction1(addClass), addClassAtRowIndex = js.Any.fromFunction2(addClassAtRowIndex), getAttributeByHeaderCellIndex = js.Any.fromFunction2(getAttributeByHeaderCellIndex), getHeaderCellCount = js.Any.fromFunction0(getHeaderCellCount), getHeaderCellElements = js.Any.fromFunction0(getHeaderCellElements), getRowCount = js.Any.fromFunction0(getRowCount), getRowElements = js.Any.fromFunction0(getRowElements), getRowIdAtIndex = js.Any.fromFunction1(getRowIdAtIndex), getRowIndexByChildElement = js.Any.fromFunction1(getRowIndexByChildElement), getSelectedRowCount = js.Any.fromFunction0(getSelectedRowCount), getTableBodyHeight = js.Any.fromFunction0(getTableBodyHeight), getTableHeaderHeight = js.Any.fromFunction0(getTableHeaderHeight), isCheckboxAtRowIndexChecked = js.Any.fromFunction1(isCheckboxAtRowIndexChecked), isHeaderRowCheckboxChecked = js.Any.fromFunction0(isHeaderRowCheckboxChecked), isRowsSelectable = js.Any.fromFunction0(isRowsSelectable), notifyRowSelectionChanged = js.Any.fromFunction1(notifyRowSelectionChanged), notifySelectedAll = js.Any.fromFunction0(notifySelectedAll), notifySortAction = js.Any.fromFunction1(notifySortAction), notifyUnselectedAll = js.Any.fromFunction0(notifyUnselectedAll), registerHeaderRowCheckbox = js.Any.fromFunction0(registerHeaderRowCheckbox), registerRowCheckboxes = js.Any.fromFunction0(registerRowCheckboxes), removeClass = js.Any.fromFunction1(removeClass), removeClassAtRowIndex = js.Any.fromFunction2(removeClassAtRowIndex), removeClassNameByHeaderCellIndex = js.Any.fromFunction2(removeClassNameByHeaderCellIndex), setAttributeAtRowIndex = js.Any.fromFunction3(setAttributeAtRowIndex), setAttributeByHeaderCellIndex = js.Any.fromFunction3(setAttributeByHeaderCellIndex), setClassNameByHeaderCellIndex = js.Any.fromFunction2(setClassNameByHeaderCellIndex), setHeaderRowCheckboxChecked = js.Any.fromFunction1(setHeaderRowCheckboxChecked), setHeaderRowCheckboxIndeterminate = js.Any.fromFunction1(setHeaderRowCheckboxIndeterminate), setProgressIndicatorStyles = js.Any.fromFunction1(setProgressIndicatorStyles), setRowCheckboxCheckedAtIndex = js.Any.fromFunction2(setRowCheckboxCheckedAtIndex), setSortStatusLabelByHeaderCellIndex = js.Any.fromFunction2(setSortStatusLabelByHeaderCellIndex))
+    val __obj = js.Dynamic.literal(addClass = js.Any.fromFunction1(addClass), addClassAtRowIndex = js.Any.fromFunction2(addClassAtRowIndex), getAttributeByHeaderCellIndex = js.Any.fromFunction2(getAttributeByHeaderCellIndex), getHeaderCellCount = js.Any.fromFunction0(getHeaderCellCount), getHeaderCellElements = js.Any.fromFunction0(getHeaderCellElements), getRowCount = js.Any.fromFunction0(getRowCount), getRowElements = js.Any.fromFunction0(getRowElements), getRowIdAtIndex = js.Any.fromFunction1(getRowIdAtIndex), getRowIndexByChildElement = js.Any.fromFunction1(getRowIndexByChildElement), getSelectedRowCount = js.Any.fromFunction0(getSelectedRowCount), getTableContainerHeight = js.Any.fromFunction0(getTableContainerHeight), getTableHeaderHeight = js.Any.fromFunction0(getTableHeaderHeight), isCheckboxAtRowIndexChecked = js.Any.fromFunction1(isCheckboxAtRowIndexChecked), isHeaderRowCheckboxChecked = js.Any.fromFunction0(isHeaderRowCheckboxChecked), isRowsSelectable = js.Any.fromFunction0(isRowsSelectable), notifyRowSelectionChanged = js.Any.fromFunction1(notifyRowSelectionChanged), notifySelectedAll = js.Any.fromFunction0(notifySelectedAll), notifySortAction = js.Any.fromFunction1(notifySortAction), notifyUnselectedAll = js.Any.fromFunction0(notifyUnselectedAll), registerHeaderRowCheckbox = js.Any.fromFunction0(registerHeaderRowCheckbox), registerRowCheckboxes = js.Any.fromFunction0(registerRowCheckboxes), removeClass = js.Any.fromFunction1(removeClass), removeClassAtRowIndex = js.Any.fromFunction2(removeClassAtRowIndex), removeClassNameByHeaderCellIndex = js.Any.fromFunction2(removeClassNameByHeaderCellIndex), setAttributeAtRowIndex = js.Any.fromFunction3(setAttributeAtRowIndex), setAttributeByHeaderCellIndex = js.Any.fromFunction3(setAttributeByHeaderCellIndex), setClassNameByHeaderCellIndex = js.Any.fromFunction2(setClassNameByHeaderCellIndex), setHeaderRowCheckboxChecked = js.Any.fromFunction1(setHeaderRowCheckboxChecked), setHeaderRowCheckboxIndeterminate = js.Any.fromFunction1(setHeaderRowCheckboxIndeterminate), setProgressIndicatorStyles = js.Any.fromFunction1(setProgressIndicatorStyles), setRowCheckboxCheckedAtIndex = js.Any.fromFunction2(setRowCheckboxCheckedAtIndex), setSortStatusLabelByHeaderCellIndex = js.Any.fromFunction2(setSortStatusLabelByHeaderCellIndex))
     __obj.asInstanceOf[MDCDataTableAdapter]
   }
   
@@ -300,10 +300,10 @@ object MDCDataTableAdapter {
     def setGetSelectedRowCount(value: () => Double): Self = this.set("getSelectedRowCount", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGetTableBodyHeight(value: () => String): Self = this.set("getTableBodyHeight", js.Any.fromFunction0(value))
+    def setGetTableContainerHeight(value: () => Double): Self = this.set("getTableContainerHeight", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGetTableHeaderHeight(value: () => String): Self = this.set("getTableHeaderHeight", js.Any.fromFunction0(value))
+    def setGetTableHeaderHeight(value: () => Double): Self = this.set("getTableHeaderHeight", js.Any.fromFunction0(value))
     
     @scala.inline
     def setIsCheckboxAtRowIndexChecked(value: Double => Boolean): Self = this.set("isCheckboxAtRowIndexChecked", js.Any.fromFunction1(value))

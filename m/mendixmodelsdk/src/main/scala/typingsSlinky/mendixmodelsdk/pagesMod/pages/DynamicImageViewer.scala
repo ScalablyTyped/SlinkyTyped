@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.imagesMod.images.IImage
@@ -10,12 +11,13 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayout
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallArgument
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/image-viewer relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/image-viewer relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.DynamicImageViewer")
 @js.native
@@ -25,8 +27,8 @@ class DynamicImageViewer protected () extends EntityWidget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -53,9 +55,6 @@ class DynamicImageViewer protected () extends EntityWidget {
   def heightUnit_=(newValue: ImageSizeUnit): Unit = js.native
   
   def height_=(newValue: Double): Unit = js.native
-  
-  @JSName("model")
-  var model_FDynamicImageViewer: IModel = js.native
   
   /**
     * In version 7.18.0: deleted

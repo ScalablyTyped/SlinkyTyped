@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Attributes extends js.Object {
   
-  var attributes: StringDictionary[StringDictionary[String]] = js.native
+  var attributes: StringDictionary[js.UndefOr[StringDictionary[String]]] = js.native
   
   var forceUpdate: (/* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Instance * / any['forceUpdate'] */ js.Any) | Null = js.native
   
@@ -22,7 +22,10 @@ trait Attributes extends js.Object {
 object Attributes {
   
   @scala.inline
-  def apply(attributes: StringDictionary[StringDictionary[String]], styles: StringDictionary[CSSProperties]): Attributes = {
+  def apply(
+    attributes: StringDictionary[js.UndefOr[StringDictionary[String]]],
+    styles: StringDictionary[CSSProperties]
+  ): Attributes = {
     val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], styles = styles.asInstanceOf[js.Any])
     __obj.asInstanceOf[Attributes]
   }
@@ -43,7 +46,7 @@ object Attributes {
     }
     
     @scala.inline
-    def setAttributes(value: StringDictionary[StringDictionary[String]]): Self = this.set("attributes", value.asInstanceOf[js.Any])
+    def setAttributes(value: StringDictionary[js.UndefOr[StringDictionary[String]]]): Self = this.set("attributes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStyles(value: StringDictionary[CSSProperties]): Self = this.set("styles", value.asInstanceOf[js.Any])

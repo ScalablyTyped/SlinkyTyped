@@ -1,41 +1,31 @@
 package typingsSlinky.framesync.typesMod
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-sealed trait StepId extends js.Object
-@JSImport("framesync/lib/types", "StepId")
-@js.native
-object StepId extends js.Object {
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.framesync.framesyncStrings.read
+  - typingsSlinky.framesync.framesyncStrings.update
+  - typingsSlinky.framesync.framesyncStrings.preRender
+  - typingsSlinky.framesync.framesyncStrings.render
+  - typingsSlinky.framesync.framesyncStrings.postRender
+*/
+trait StepId extends js.Object
+object StepId {
   
-  @JSBracketAccess
-  def apply(value: String): js.UndefOr[StepId with String] = js.native
+  @scala.inline
+  def postRender: typingsSlinky.framesync.framesyncStrings.postRender = "postRender".asInstanceOf[typingsSlinky.framesync.framesyncStrings.postRender]
   
-  @js.native
-  sealed trait FixedUpdate extends StepId
-  /* "fixedUpdate" */ @js.native
-  object FixedUpdate extends TopLevel[FixedUpdate with String]
+  @scala.inline
+  def preRender: typingsSlinky.framesync.framesyncStrings.preRender = "preRender".asInstanceOf[typingsSlinky.framesync.framesyncStrings.preRender]
   
-  @js.native
-  sealed trait PostRender extends StepId
-  /* "postRender" */ @js.native
-  object PostRender extends TopLevel[PostRender with String]
+  @scala.inline
+  def read: typingsSlinky.framesync.framesyncStrings.read = "read".asInstanceOf[typingsSlinky.framesync.framesyncStrings.read]
   
-  @js.native
-  sealed trait Read extends StepId
-  /* "read" */ @js.native
-  object Read extends TopLevel[Read with String]
+  @scala.inline
+  def render: typingsSlinky.framesync.framesyncStrings.render = "render".asInstanceOf[typingsSlinky.framesync.framesyncStrings.render]
   
-  @js.native
-  sealed trait Render extends StepId
-  /* "render" */ @js.native
-  object Render extends TopLevel[Render with String]
-  
-  @js.native
-  sealed trait Update extends StepId
-  /* "update" */ @js.native
-  object Update extends TopLevel[Update with String]
+  @scala.inline
+  def update: typingsSlinky.framesync.framesyncStrings.update = "update".asInstanceOf[typingsSlinky.framesync.framesyncStrings.update]
 }

@@ -5,11 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent typedoc.typedoc/dist/lib/serialization/schema.Type */
-/* Inlined parent typedoc.typedoc/dist/lib/serialization/schema.S<typedoc.typedoc/dist/lib/models.TypeParameterType, 'type' | 'name' | 'constraint'> */
+/* Inlined parent typedoc.typedoc/dist/lib/serialization/schema.S<typedoc.typedoc/dist/lib/models.TypeParameterType, 'type' | 'name' | 'constraint' | 'default'> */
 @js.native
 trait TypeParameterType extends SomeType {
   
   var constraint: js.UndefOr[
+    ModelToObject[js.UndefOr[typingsSlinky.typedoc.typesAbstractMod.Type]] | typingsSlinky.typedoc.typesAbstractMod.Type
+  ] = js.native
+  
+  var default: js.UndefOr[
     ModelToObject[js.UndefOr[typingsSlinky.typedoc.typesAbstractMod.Type]] | typingsSlinky.typedoc.typesAbstractMod.Type
   ] = js.native
   
@@ -63,5 +67,16 @@ object TypeParameterType {
     
     @scala.inline
     def deleteConstraint: Self = this.set("constraint", js.undefined)
+    
+    @scala.inline
+    def setDefaultVarargs(value: _ModelToObject[js.Any]*): Self = this.set("default", js.Array(value :_*))
+    
+    @scala.inline
+    def setDefault(
+      value: ModelToObject[js.UndefOr[typingsSlinky.typedoc.typesAbstractMod.Type]] | typingsSlinky.typedoc.typesAbstractMod.Type
+    ): Self = this.set("default", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefault: Self = this.set("default", js.undefined)
   }
 }

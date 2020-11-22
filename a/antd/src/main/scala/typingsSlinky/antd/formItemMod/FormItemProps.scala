@@ -11,12 +11,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FormItemProps
+trait FormItemProps[Values]
   extends FormItemLabelProps
      with FormItemInputProps
      with RcFieldProps {
   
-  var children: js.UndefOr[ChildrenType] = js.native
+  var children: js.UndefOr[ChildrenType[Values]] = js.native
   
   var className: js.UndefOr[String] = js.native
   
@@ -42,13 +42,13 @@ trait FormItemProps
 object FormItemProps {
   
   @scala.inline
-  def apply(): FormItemProps = {
+  def apply[Values](): FormItemProps[Values] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[FormItemProps]
+    __obj.asInstanceOf[FormItemProps[Values]]
   }
   
   @scala.inline
-  implicit class FormItemPropsOps[Self <: FormItemProps] (val x: Self) extends AnyVal {
+  implicit class FormItemPropsOps[Self <: FormItemProps[_], Values] (val x: Self with FormItemProps[Values]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -66,10 +66,10 @@ object FormItemProps {
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenFunction1(value: /* form */ FormInstance => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildrenFunction1(value: /* form */ FormInstance[Values] => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setChildren(value: ChildrenType): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ChildrenType[Values]): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

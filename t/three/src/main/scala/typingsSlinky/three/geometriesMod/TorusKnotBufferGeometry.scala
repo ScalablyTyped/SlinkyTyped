@@ -7,7 +7,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("three/src/geometries/Geometries", "TorusKnotBufferGeometry")
 @js.native
 class TorusKnotBufferGeometry protected ()
-  extends typingsSlinky.three.torusKnotGeometryMod.TorusKnotBufferGeometry {
+  extends typingsSlinky.three.torusKnotBufferGeometryMod.TorusKnotBufferGeometry {
+  /**
+  	 * @param [radius=1]
+  	 * @param [tube=0.4]
+  	 * @param [radialSegments=64]
+  	 * @param [tubularSegments=8]
+  	 * @param [p=2]
+  	 * @param [q=3]
+  	 */
   def this(
     radius: js.UndefOr[Double],
     tube: js.UndefOr[Double],

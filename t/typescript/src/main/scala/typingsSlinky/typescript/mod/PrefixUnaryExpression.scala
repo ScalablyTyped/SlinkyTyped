@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PrefixUnaryExpression extends UpdateExpression {
   
   @JSName("kind")
-  var kind_PrefixUnaryExpression: typingsSlinky.typescript.mod.SyntaxKind.PrefixUnaryExpression = js.native
+  val kind_PrefixUnaryExpression: typingsSlinky.typescript.mod.SyntaxKind.PrefixUnaryExpression = js.native
   
-  var operand: UnaryExpression = js.native
+  val operand: UnaryExpression = js.native
   
-  var operator: PrefixUnaryOperator = js.native
+  val operator: PrefixUnaryOperator = js.native
 }

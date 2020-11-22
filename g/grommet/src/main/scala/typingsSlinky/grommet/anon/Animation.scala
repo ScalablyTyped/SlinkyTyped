@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Animation extends js.Object {
   
-  var active: js.UndefOr[`6`] = js.native
+  var active: js.UndefOr[`8`] = js.native
   
   var animation: js.UndefOr[Jiggle] = js.native
   
@@ -33,7 +33,7 @@ trait Animation extends js.Object {
   
   var font: js.UndefOr[Face] = js.native
   
-  var graph: js.UndefOr[`7`] = js.native
+  var graph: js.UndefOr[`9`] = js.native
   
   var hover: js.UndefOr[BackgroundColor] = js.native
   
@@ -71,7 +71,7 @@ object Animation {
     }
     
     @scala.inline
-    def setActive(value: `6`): Self = this.set("active", value.asInstanceOf[js.Any])
+    def setActive(value: `8`): Self = this.set("active", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteActive: Self = this.set("active", js.undefined)
@@ -149,7 +149,7 @@ object Animation {
     def deleteFont: Self = this.set("font", js.undefined)
     
     @scala.inline
-    def setGraph(value: `7`): Self = this.set("graph", value.asInstanceOf[js.Any])
+    def setGraph(value: `9`): Self = this.set("graph", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGraph: Self = this.set("graph", js.undefined)

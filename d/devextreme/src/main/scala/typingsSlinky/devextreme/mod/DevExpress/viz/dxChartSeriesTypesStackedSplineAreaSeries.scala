@@ -8,27 +8,39 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.StackedSplineAreaSeries */
+/**
+  * [descr:dxChartSeriesTypes.StackedSplineAreaSeries]
+  */
 @js.native
 trait dxChartSeriesTypesStackedSplineAreaSeries extends dxChartSeriesTypesCommonSeries {
   
-  /** @name dxChartSeriesTypes.StackedSplineAreaSeries.aggregation */
+  /**
+    * [descr:dxChartSeriesTypes.StackedSplineAreaSeries.aggregation]
+    */
   @JSName("aggregation")
   var aggregation_dxChartSeriesTypesStackedSplineAreaSeries: js.UndefOr[dxChartSeriesTypesStackedSplineAreaSeriesAggregation] = js.native
   
-  /** @name dxChartSeriesTypes.StackedSplineAreaSeries.hoverMode */
+  /**
+    * [descr:dxChartSeriesTypes.StackedSplineAreaSeries.hoverMode]
+    */
   @JSName("hoverMode")
   var hoverMode_dxChartSeriesTypesStackedSplineAreaSeries: js.UndefOr[nearestPoint | includePoints | excludePoints | none] = js.native
   
-  /** @name dxChartSeriesTypes.StackedSplineAreaSeries.label */
+  /**
+    * [descr:dxChartSeriesTypes.StackedSplineAreaSeries.label]
+    */
   @JSName("label")
   var label_dxChartSeriesTypesStackedSplineAreaSeries: js.UndefOr[dxChartSeriesTypesStackedSplineAreaSeriesLabel] = js.native
   
-  /** @name dxChartSeriesTypes.StackedSplineAreaSeries.point */
+  /**
+    * [descr:dxChartSeriesTypes.StackedSplineAreaSeries.point]
+    */
   @JSName("point")
   var point_dxChartSeriesTypesStackedSplineAreaSeries: js.UndefOr[dxChartSeriesTypesStackedSplineAreaSeriesPoint] = js.native
   
-  /** @name dxChartSeriesTypes.StackedSplineAreaSeries.selectionMode */
+  /**
+    * [descr:dxChartSeriesTypes.StackedSplineAreaSeries.selectionMode]
+    */
   @JSName("selectionMode")
   var selectionMode_dxChartSeriesTypesStackedSplineAreaSeries: js.UndefOr[includePoints | excludePoints | none] = js.native
 }

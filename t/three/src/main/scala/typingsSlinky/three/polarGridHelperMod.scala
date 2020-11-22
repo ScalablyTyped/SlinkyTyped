@@ -16,6 +16,14 @@ object polarGridHelperMod extends js.Object {
   @js.native
   class PolarGridHelper protected ()
     extends LineSegments[Geometry | BufferGeometry, Material | js.Array[Material]] {
+    /**
+    	 * @param [radius=10]
+    	 * @param [radials=16]
+    	 * @param [circles=8]
+    	 * @param [divisions=64]
+    	 * @param [color1=0x444444]
+    	 * @param [color2=0x888888]
+    	 */
     def this(radius: Double, radials: Double, circles: Double, divisions: Double) = this()
     def this(radius: Double, radials: Double, circles: Double, divisions: Double, color1: String) = this()
     def this(radius: Double, radials: Double, circles: Double, divisions: Double, color1: Double) = this()

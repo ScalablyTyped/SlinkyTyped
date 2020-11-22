@@ -18,6 +18,8 @@ package object mod {
   */
   type CalendarMarkingProps = typingsSlinky.reactNativeCalendars.mod._CalendarMarkingProps | js.Object
   
+  type CalendarProps = typingsSlinky.reactNativeCalendars.mod.CalendarMarkingProps with typingsSlinky.reactNativeCalendars.mod.CalendarBaseProps with typingsSlinky.reactNativeCalendars.anon.EnableSwipeMonths
+  
   type CalendarThemeIdStyle = org.scalablytyped.runtime.StringDictionary[
     typingsSlinky.reactNative.mod.ViewStyle | typingsSlinky.reactNative.mod.TextStyle
   ]

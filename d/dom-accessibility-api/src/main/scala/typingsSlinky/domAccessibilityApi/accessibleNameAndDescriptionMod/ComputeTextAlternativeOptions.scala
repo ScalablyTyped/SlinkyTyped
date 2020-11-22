@@ -11,6 +11,12 @@ trait ComputeTextAlternativeOptions extends js.Object {
   
   var compute: js.UndefOr[description | name] = js.native
   
+  /**
+    * Set to true if window.computedStyle supports the second argument.
+    * This should be false in JSDOM. Otherwise JSDOM will log console errors.
+    */
+  var computedStyleSupportsPseudoElements: js.UndefOr[Boolean] = js.native
+  
   var getComputedStyle: js.UndefOr[
     /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof window.getComputedStyle */ js.Any
   ] = js.native
@@ -43,6 +49,12 @@ object ComputeTextAlternativeOptions {
     
     @scala.inline
     def deleteCompute: Self = this.set("compute", js.undefined)
+    
+    @scala.inline
+    def setComputedStyleSupportsPseudoElements(value: Boolean): Self = this.set("computedStyleSupportsPseudoElements", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteComputedStyleSupportsPseudoElements: Self = this.set("computedStyleSupportsPseudoElements", js.undefined)
     
     @scala.inline
     def setGetComputedStyle(

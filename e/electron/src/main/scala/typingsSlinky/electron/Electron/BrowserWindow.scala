@@ -24,6 +24,7 @@ import typingsSlinky.electron.electronStrings.`scroll-touch-end`
 import typingsSlinky.electron.electronStrings.`session-end`
 import typingsSlinky.electron.electronStrings.`sheet-begin`
 import typingsSlinky.electron.electronStrings.`sheet-end`
+import typingsSlinky.electron.electronStrings.`system-context-menu`
 import typingsSlinky.electron.electronStrings.`torn-off-menu`
 import typingsSlinky.electron.electronStrings.`ultra-dark`
 import typingsSlinky.electron.electronStrings.`under-page`
@@ -49,6 +50,7 @@ import typingsSlinky.electron.electronStrings.moved
 import typingsSlinky.electron.electronStrings.normal
 import typingsSlinky.electron.electronStrings.popover
 import typingsSlinky.electron.electronStrings.resize
+import typingsSlinky.electron.electronStrings.resized
 import typingsSlinky.electron.electronStrings.responsive
 import typingsSlinky.electron.electronStrings.restore
 import typingsSlinky.electron.electronStrings.selection
@@ -63,7 +65,7 @@ import typingsSlinky.electron.electronStrings.unmaximize
 import typingsSlinky.electron.electronStrings.unresponsive
 import typingsSlinky.electron.electronStrings.window
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -125,6 +127,8 @@ trait BrowserWindow extends EventEmitter {
   @JSName("addListener")
   def addListener_resize(event: resize, listener: js.Function): this.type = js.native
   @JSName("addListener")
+  def addListener_resized(event: resized, listener: js.Function): this.type = js.native
+  @JSName("addListener")
   def addListener_responsive(event: responsive, listener: js.Function): this.type = js.native
   @JSName("addListener")
   def addListener_restore(event: restore, listener: js.Function): this.type = js.native
@@ -146,6 +150,8 @@ trait BrowserWindow extends EventEmitter {
   def addListener_show(event: show, listener: js.Function): this.type = js.native
   @JSName("addListener")
   def addListener_swipe(event: swipe, listener: js.Function2[/* event */ Event, /* direction */ String, Unit]): this.type = js.native
+  @JSName("addListener")
+  def addListener_systemcontextmenu(event: `system-context-menu`, listener: js.Function2[/* event */ Event, /* point */ Point, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_unmaximize(event: unmaximize, listener: js.Function): this.type = js.native
   @JSName("addListener")
@@ -594,7 +600,7 @@ trait BrowserWindow extends EventEmitter {
     */
   def moveTop(): Unit = js.native
   
-  // Docs: http://electronjs.org/docs/api/browser-window
+  // Docs: https://electronjs.org/docs/api/browser-window
   /**
     * Emitted when the window is set or unset to show always on top of other windows.
     */
@@ -692,15 +698,15 @@ trait BrowserWindow extends EventEmitter {
   def on_minimize(event: minimize, listener: js.Function): this.type = js.native
   /**
     * Emitted when the window is being moved to a new position.
-    * 
-  __Note__: On macOS this event is an alias of `moved`.
     */
   @JSName("on")
   def on_move(event: move, listener: js.Function): this.type = js.native
   /**
     * Emitted once when the window is moved to a new position.
+    * 
+  __Note__: On macOS this event is an alias of `move`.
     *
-    * @platform darwin
+    * @platform darwin,win32
     */
   @JSName("on")
   def on_moved(event: moved, listener: js.Function): this.type = js.native
@@ -736,6 +742,17 @@ trait BrowserWindow extends EventEmitter {
     */
   @JSName("on")
   def on_resize(event: resize, listener: js.Function): this.type = js.native
+  /**
+    * Emitted once when the window has finished being resized.
+    *
+    * This is usually emitted when the window has been resized manually. On macOS,
+    * resizing the window with `setBounds`/`setSize` and setting the `animate`
+    * parameter to `true` will also emit this event once resizing has finished.
+    *
+    * @platform darwin,win32
+    */
+  @JSName("on")
+  def on_resized(event: resized, listener: js.Function): this.type = js.native
   /**
     * Emitted when the unresponsive web page becomes responsive again.
     */
@@ -821,6 +838,18 @@ trait BrowserWindow extends EventEmitter {
   @JSName("on")
   def on_swipe(event: swipe, listener: js.Function2[/* event */ Event, /* direction */ String, Unit]): this.type = js.native
   /**
+    * Emitted when the system context menu is triggered on the window, this is
+    * normally only triggered when the user right clicks on the non-client area of
+    * your window.  This is the window titlebar or any area you have declared as
+    * `-webkit-app-region: drag` in a frameless window.
+    * 
+  Calling `event.preventDefault()` will prevent the menu from being displayed.
+    *
+    * @platform win32
+    */
+  @JSName("on")
+  def on_systemcontextmenu(event: `system-context-menu`, listener: js.Function2[/* event */ Event, /* point */ Point, Unit]): this.type = js.native
+  /**
     * Emitted when the window exits from a maximized state.
     */
   @JSName("on")
@@ -898,6 +927,8 @@ trait BrowserWindow extends EventEmitter {
   @JSName("once")
   def once_resize(event: resize, listener: js.Function): this.type = js.native
   @JSName("once")
+  def once_resized(event: resized, listener: js.Function): this.type = js.native
+  @JSName("once")
   def once_responsive(event: responsive, listener: js.Function): this.type = js.native
   @JSName("once")
   def once_restore(event: restore, listener: js.Function): this.type = js.native
@@ -919,6 +950,8 @@ trait BrowserWindow extends EventEmitter {
   def once_show(event: show, listener: js.Function): this.type = js.native
   @JSName("once")
   def once_swipe(event: swipe, listener: js.Function2[/* event */ Event, /* direction */ String, Unit]): this.type = js.native
+  @JSName("once")
+  def once_systemcontextmenu(event: `system-context-menu`, listener: js.Function2[/* event */ Event, /* point */ Point, Unit]): this.type = js.native
   @JSName("once")
   def once_unmaximize(event: unmaximize, listener: js.Function): this.type = js.native
   @JSName("once")
@@ -988,6 +1021,8 @@ trait BrowserWindow extends EventEmitter {
   @JSName("removeListener")
   def removeListener_resize(event: resize, listener: js.Function): this.type = js.native
   @JSName("removeListener")
+  def removeListener_resized(event: resized, listener: js.Function): this.type = js.native
+  @JSName("removeListener")
   def removeListener_responsive(event: responsive, listener: js.Function): this.type = js.native
   @JSName("removeListener")
   def removeListener_restore(event: restore, listener: js.Function): this.type = js.native
@@ -1009,6 +1044,8 @@ trait BrowserWindow extends EventEmitter {
   def removeListener_show(event: show, listener: js.Function): this.type = js.native
   @JSName("removeListener")
   def removeListener_swipe(event: swipe, listener: js.Function2[/* event */ Event, /* direction */ String, Unit]): this.type = js.native
+  @JSName("removeListener")
+  def removeListener_systemcontextmenu(event: `system-context-menu`, listener: js.Function2[/* event */ Event, /* point */ Point, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_unmaximize(event: unmaximize, listener: js.Function): this.type = js.native
   @JSName("removeListener")
@@ -1463,7 +1500,6 @@ trait BrowserWindow extends EventEmitter {
     * **Note:** The TouchBar API is currently experimental and may change or be
     * removed in future Electron releases.
     *
-    * @experimental
     * @platform darwin
     */
   def setTouchBar(): Unit = js.native
@@ -1532,6 +1568,7 @@ trait BrowserWindow extends EventEmitter {
   **Note:** This API does nothing on Windows.
     */
   def setVisibleOnAllWorkspaces(visible: Boolean): Unit = js.native
+  def setVisibleOnAllWorkspaces(visible: Boolean, options: VisibleOnAllWorkspacesOptions): Unit = js.native
   
   /**
     * Sets whether the window traffic light buttons should be visible.

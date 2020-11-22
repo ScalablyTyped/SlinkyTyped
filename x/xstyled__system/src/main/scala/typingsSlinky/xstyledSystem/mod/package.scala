@@ -14,7 +14,7 @@ package object mod {
     T | (/* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias @xstyled/system.@xstyled/system.ObjectOrArray<T> */ js.Object)
   ])
   
-  type ResponsiveValue[T] = T | org.scalablytyped.runtime.StringDictionary[T]
+  type ResponsiveValue[T] = T | js.Array[T] | org.scalablytyped.runtime.StringDictionary[T]
   
   type StyledSystemLength = java.lang.String | scala.Double
   

@@ -18,12 +18,12 @@ trait Origin extends js.Object {
   var ConnectionTimeout: js.UndefOr[integer] = js.native
   
   /**
-    * A list of HTTP header names and values that CloudFront adds to requests it sends to the origin. For more information, see Adding Custom Headers to Origin Requests in the Amazon CloudFront Developer Guide.
+    * A list of HTTP header names and values that CloudFront adds to the requests that it sends to the origin. For more information, see Adding Custom Headers to Origin Requests in the Amazon CloudFront Developer Guide.
     */
   var CustomHeaders: js.UndefOr[typingsSlinky.awsSdk.cloudfrontMod.CustomHeaders] = js.native
   
   /**
-    * Use this type to specify an origin that is a content container or HTTP server, including an Amazon S3 bucket that is configured with static website hosting. To specify an Amazon S3 bucket that is  not  configured with static website hosting, use the S3OriginConfig type instead.
+    * Use this type to specify an origin that is not an Amazon S3 bucket, with one exception. If the Amazon S3 bucket is configured with static website hosting, use this type. If the Amazon S3 bucket is not configured with static website hosting, use the S3OriginConfig type instead.
     */
   var CustomOriginConfig: js.UndefOr[typingsSlinky.awsSdk.cloudfrontMod.CustomOriginConfig] = js.native
   
@@ -43,7 +43,12 @@ trait Origin extends js.Object {
   var OriginPath: js.UndefOr[String] = js.native
   
   /**
-    * Use this type to specify an origin that is an Amazon S3 bucket that is  not  configured with static website hosting. To specify any other type of origin, including an Amazon S3 bucket that is configured with static website hosting, use the CustomOriginConfig type instead.
+    * CloudFront Origin Shield. Using Origin Shield can help reduce the load on your origin. For more information, see Using Origin Shield in the Amazon CloudFront Developer Guide.
+    */
+  var OriginShield: js.UndefOr[typingsSlinky.awsSdk.cloudfrontMod.OriginShield] = js.native
+  
+  /**
+    * Use this type to specify an origin that is an Amazon S3 bucket that is not configured with static website hosting. To specify any other type of origin, including an Amazon S3 bucket that is configured with static website hosting, use the CustomOriginConfig type instead.
     */
   var S3OriginConfig: js.UndefOr[typingsSlinky.awsSdk.cloudfrontMod.S3OriginConfig] = js.native
 }
@@ -105,6 +110,12 @@ object Origin {
     
     @scala.inline
     def deleteOriginPath: Self = this.set("OriginPath", js.undefined)
+    
+    @scala.inline
+    def setOriginShield(value: OriginShield): Self = this.set("OriginShield", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOriginShield: Self = this.set("OriginShield", js.undefined)
     
     @scala.inline
     def setS3OriginConfig(value: S3OriginConfig): Self = this.set("S3OriginConfig", value.asInstanceOf[js.Any])

@@ -12,37 +12,59 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartSeriesTypesCommonPolarChartSeriesLabel extends js.Object {
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.argumentFormat */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.argumentFormat]
+    */
   var argumentFormat: js.UndefOr[format] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.backgroundColor */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.backgroundColor]
+    */
   var backgroundColor: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.border */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.border]
+    */
   var border: js.UndefOr[ColorDashStyle] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.connector */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.connector]
+    */
   var connector: js.UndefOr[ColorVisible] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.customizeText */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* pointInfo */ js.Any, String]] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.font */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.format */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.format]
+    */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.position */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.position]
+    */
   var position: js.UndefOr[inside | outside] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.rotationAngle */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.rotationAngle]
+    */
   var rotationAngle: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.showForZeroValues */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.showForZeroValues]
+    */
   var showForZeroValues: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label.visible */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object dxPolarChartSeriesTypesCommonPolarChartSeriesLabel {

@@ -13,9 +13,14 @@ trait AwsKmsKeyDetails extends js.Object {
   var AWSAccountId: js.UndefOr[NonEmptyString] = js.native
   
   /**
-    * The date and time when the CMK was created.
+    * Indicates when the CMK was created. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var CreationDate: js.UndefOr[Double] = js.native
+  
+  /**
+    * A description of the key.
+    */
+  var Description: js.UndefOr[NonEmptyString] = js.native
   
   /**
     * The globally unique identifier for the CMK.
@@ -71,6 +76,12 @@ object AwsKmsKeyDetails {
     
     @scala.inline
     def deleteCreationDate: Self = this.set("CreationDate", js.undefined)
+    
+    @scala.inline
+    def setDescription(value: NonEmptyString): Self = this.set("Description", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDescription: Self = this.set("Description", js.undefined)
     
     @scala.inline
     def setKeyId(value: NonEmptyString): Self = this.set("KeyId", value.asInstanceOf[js.Any])

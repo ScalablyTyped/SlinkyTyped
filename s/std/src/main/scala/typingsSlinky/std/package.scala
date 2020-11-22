@@ -6,17 +6,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object std {
   
-  type AAGUID = typingsSlinky.std.BufferSource
-  
   type AlgorithmIdentifier = java.lang.String | org.scalajs.dom.crypto.Algorithm
   
   type ArrayBufferLike = typingsSlinky.std.SharedArrayBuffer | js.typedarray.ArrayBuffer
   
   type AudioWorklet = typingsSlinky.std.Worklet
-  
-  type AuthenticationExtensionsSupported = js.Array[java.lang.String]
-  
-  type AuthenticatorSelectionList = js.Array[typingsSlinky.std.AAGUID]
   
   type AutoKeyword = typingsSlinky.std.stdStrings.auto
   
@@ -46,6 +40,11 @@ package object std {
     - typingsSlinky.std.OffscreenCanvas
   */
   type CanvasImageSource = typingsSlinky.std._CanvasImageSource | typingsSlinky.std.HTMLOrSVGImageElement | org.scalajs.dom.raw.HTMLVideoElement | org.scalajs.dom.raw.HTMLCanvasElement
+  
+  /**
+    * Convert first character of string literal type to uppercase
+    */
+  type Capitalize[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ js.Any
   
   /** The ChannelMergerNode interface, often used in conjunction with its opposite, ChannelSplitterNode, reunites different mono inputs into a single output. Each input is used to fill a channel of the output. This is useful for accessing each channels separately, e.g. for performing channel mixing where gain must be separately controlled on each channel. */
   type ChannelMergerNode = org.scalajs.dom.raw.AudioNode
@@ -182,6 +181,11 @@ package object std {
   
   type LineAndPositionSetting = scala.Double | typingsSlinky.std.AutoKeyword
   
+  /**
+    * Convert string literal type to lowercase
+    */
+  type Lowercase[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ js.Any
+  
   type MSCredentialType = typingsSlinky.std.stdStrings.FIDO_2_0
   
   type MSLaunchUriCallback = js.Function0[scala.Unit]
@@ -296,13 +300,13 @@ package object std {
   {[ P in K ]: T[P]}
     */ typingsSlinky.std.stdStrings.Pick with org.scalablytyped.runtime.TopLevel[T]
   
-  type PositionCallback = js.Function1[/* position */ org.scalajs.dom.raw.Position, scala.Unit]
+  type PositionCallback = js.Function1[/* position */ typingsSlinky.std.GeolocationPosition, scala.Unit]
   
-  type PositionErrorCallback = js.Function1[/* positionError */ org.scalajs.dom.raw.PositionError, scala.Unit]
+  type PositionErrorCallback = js.Function1[/* positionError */ typingsSlinky.std.GeolocationPositionError, scala.Unit]
   
   type PromiseConstructorLike = org.scalablytyped.runtime.Instantiable1[
     /* executor */ js.Function2[
-      /* resolve */ js.Function1[/* value */ js.UndefOr[js.Object | js.Thenable[js.Object]], scala.Unit], 
+      /* resolve */ js.Function1[/* value */ js.Object | js.Thenable[js.Object], scala.Unit], 
       /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], scala.Unit], 
       scala.Unit
     ], 
@@ -437,6 +441,16 @@ package object std {
   type URIError = js.Error
   
   type Uint32List = js.typedarray.Uint32Array | js.Array[typingsSlinky.std.GLuint]
+  
+  /**
+    * Convert first character of string literal type to lowercase
+    */
+  type Uncapitalize[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ js.Any
+  
+  /**
+    * Convert string literal type to uppercase
+    */
+  type Uppercase[S /* <: java.lang.String */] = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify intrinsic */ js.Any
   
   type UvmEntries = js.Array[typingsSlinky.std.UvmEntry]
   

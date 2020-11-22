@@ -8,28 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait HttpRetryPolicy extends js.Object {
   
   /**
-    * Specify at least one of the following values. 
-    
-    
-    
-    server-error – HTTP status codes 500, 501,
-    502, 503, 504, 505, 506, 507, 508, 510, and 511
-    
-    
-    
-    gateway-error – HTTP status codes 502,
-    503, and 504
-    
-    
-    
-    client-error – HTTP status code 409
-    
-    
-    
-    stream-error – Retry on refused
-    stream
-    
-    
+    * Specify at least one of the following values.    server-error – HTTP status codes 500, 501, 502, 503, 504, 505, 506, 507, 508, 510, and 511    gateway-error – HTTP status codes 502, 503, and 504    client-error – HTTP status code 409    stream-error – Retry on refused stream  
     */
   var httpRetryEvents: js.UndefOr[HttpRetryPolicyEvents] = js.native
   
@@ -39,12 +18,12 @@ trait HttpRetryPolicy extends js.Object {
   var maxRetries: MaxRetries = js.native
   
   /**
-    * An object that represents a duration of time.
+    * The timeout for each retry attempt.
     */
   var perRetryTimeout: Duration = js.native
   
   /**
-    * Specify a valid value.
+    * Specify a valid value. The event occurs before any processing of a request has started and is encountered when the upstream is temporarily or permanently unavailable.
     */
   var tcpRetryEvents: js.UndefOr[TcpRetryPolicyEvents] = js.native
 }

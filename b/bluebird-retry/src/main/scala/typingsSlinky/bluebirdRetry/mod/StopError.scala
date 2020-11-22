@@ -3,14 +3,8 @@ package typingsSlinky.bluebirdRetry.mod
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("bluebird-retry", "StopError")
 @js.native
-class StopError () extends Error {
-  /* CompleteClass */
-  override var message: String = js.native
-  /* CompleteClass */
-  override var name: String = js.native
-}
-
+class StopError () extends Error

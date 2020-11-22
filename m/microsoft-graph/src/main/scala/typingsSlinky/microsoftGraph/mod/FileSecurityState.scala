@@ -8,19 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FileSecurityState extends js.Object {
   
   // Complex type containing file hashes (cryptographic and location-sensitive).
-  var fileHash: js.UndefOr[FileHash] = js.native
+  var fileHash: js.UndefOr[NullableOption[FileHash]] = js.native
   
   // File name (without path).
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   // Full file path of the file/imageFile.
-  var path: js.UndefOr[String] = js.native
+  var path: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a
     * percentage.
     */
-  var riskScore: js.UndefOr[String] = js.native
+  var riskScore: js.UndefOr[NullableOption[String]] = js.native
 }
 object FileSecurityState {
   
@@ -46,27 +46,39 @@ object FileSecurityState {
     }
     
     @scala.inline
-    def setFileHash(value: FileHash): Self = this.set("fileHash", value.asInstanceOf[js.Any])
+    def setFileHash(value: NullableOption[FileHash]): Self = this.set("fileHash", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFileHash: Self = this.set("fileHash", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setFileHashNull: Self = this.set("fileHash", null)
+    
+    @scala.inline
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
+    def setPath(value: NullableOption[String]): Self = this.set("path", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)
     
     @scala.inline
-    def setRiskScore(value: String): Self = this.set("riskScore", value.asInstanceOf[js.Any])
+    def setPathNull: Self = this.set("path", null)
+    
+    @scala.inline
+    def setRiskScore(value: NullableOption[String]): Self = this.set("riskScore", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRiskScore: Self = this.set("riskScore", js.undefined)
+    
+    @scala.inline
+    def setRiskScoreNull: Self = this.set("riskScore", null)
   }
 }

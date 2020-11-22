@@ -20,6 +20,8 @@ trait RecursivePartialPartialAi extends js.Object {
   
   var reviews: js.UndefOr[RecursivePartial[js.UndefOr[js.Array[String]]]] = js.native
   
+  var selectedColor: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
+  
   var showRating: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
   
   var size: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
@@ -78,6 +80,12 @@ object RecursivePartialPartialAi {
     
     @scala.inline
     def deleteReviews: Self = this.set("reviews", js.undefined)
+    
+    @scala.inline
+    def setSelectedColor(value: RecursivePartial[js.UndefOr[String]]): Self = this.set("selectedColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelectedColor: Self = this.set("selectedColor", js.undefined)
     
     @scala.inline
     def setShowRating(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("showRating", value.asInstanceOf[js.Any])

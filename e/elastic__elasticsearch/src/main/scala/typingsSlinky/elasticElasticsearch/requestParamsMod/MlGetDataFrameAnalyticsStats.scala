@@ -14,6 +14,8 @@ trait MlGetDataFrameAnalyticsStats extends Generic {
   var id: js.UndefOr[String] = js.native
   
   var size: js.UndefOr[Double] = js.native
+  
+  var verbose: js.UndefOr[Boolean] = js.native
 }
 object MlGetDataFrameAnalyticsStats {
   
@@ -61,5 +63,11 @@ object MlGetDataFrameAnalyticsStats {
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)
+    
+    @scala.inline
+    def setVerbose(value: Boolean): Self = this.set("verbose", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVerbose: Self = this.set("verbose", js.undefined)
   }
 }

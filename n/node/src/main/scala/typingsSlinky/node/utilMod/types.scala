@@ -18,9 +18,9 @@ object types extends js.Object {
   
   def isAsyncFunction(`object`: js.Any): Boolean = js.native
   
-  def isBigInt64Array(value: js.Any): Boolean = js.native
+  def isBigInt64Array(value: js.Any): /* is std.BigInt64Array */ Boolean = js.native
   
-  def isBigUint64Array(value: js.Any): Boolean = js.native
+  def isBigUint64Array(value: js.Any): /* is std.BigUint64Array */ Boolean = js.native
   
   def isBooleanObject(`object`: js.Any): /* is std.Boolean */ Boolean = js.native
   

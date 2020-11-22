@@ -10,7 +10,7 @@ trait IStream extends js.Object {
   var update: js.UndefOr[
     js.Function3[
       /* chunk */ js.Any, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BufferEncoding */ /* encoding */ js.Any, 
+      /* encoding */ BufferEncoding, 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
@@ -19,7 +19,7 @@ trait IStream extends js.Object {
   var write: js.UndefOr[
     js.Function3[
       /* chunk */ js.Any, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BufferEncoding */ /* encoding */ js.Any, 
+      /* encoding */ BufferEncoding, 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
@@ -50,7 +50,7 @@ object IStream {
     
     @scala.inline
     def setUpdate(
-      value: (/* chunk */ js.Any, /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BufferEncoding */ /* encoding */ js.Any, /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]) => Unit
+      value: (/* chunk */ js.Any, /* encoding */ BufferEncoding, /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]) => Unit
     ): Self = this.set("update", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -58,7 +58,7 @@ object IStream {
     
     @scala.inline
     def setWrite(
-      value: (/* chunk */ js.Any, /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BufferEncoding */ /* encoding */ js.Any, /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]) => Unit
+      value: (/* chunk */ js.Any, /* encoding */ BufferEncoding, /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]) => Unit
     ): Self = this.set("write", js.Any.fromFunction3(value))
     
     @scala.inline

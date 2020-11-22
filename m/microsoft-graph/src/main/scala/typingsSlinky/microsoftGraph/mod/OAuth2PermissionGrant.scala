@@ -19,13 +19,13 @@ trait OAuth2PermissionGrant extends Entity {
     * specific user. Consent on behalf of all users can be granted by an administrator. Non-admin users may be authorized to
     * consent on behalf of themselves in some cases, for some delegated permissions. Required. Supports $filter (eq only).
     */
-  var consentType: js.UndefOr[String] = js.native
+  var consentType: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If
     * consentType is AllPrincipals this value is null. Required when consentType is Principal.
     */
-  var principalId: js.UndefOr[String] = js.native
+  var principalId: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The id of the resource service principal to which access is authorized. This identifies the API which the client is
@@ -39,7 +39,7 @@ trait OAuth2PermissionGrant extends Entity {
     * value field of one of the delegated permissions defined by the API, listed in the publishedPermissionScopes property of
     * the resource service principal.
     */
-  var scope: js.UndefOr[String] = js.native
+  var scope: js.UndefOr[NullableOption[String]] = js.native
 }
 object OAuth2PermissionGrant {
   
@@ -71,16 +71,22 @@ object OAuth2PermissionGrant {
     def deleteClientId: Self = this.set("clientId", js.undefined)
     
     @scala.inline
-    def setConsentType(value: String): Self = this.set("consentType", value.asInstanceOf[js.Any])
+    def setConsentType(value: NullableOption[String]): Self = this.set("consentType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteConsentType: Self = this.set("consentType", js.undefined)
     
     @scala.inline
-    def setPrincipalId(value: String): Self = this.set("principalId", value.asInstanceOf[js.Any])
+    def setConsentTypeNull: Self = this.set("consentType", null)
+    
+    @scala.inline
+    def setPrincipalId(value: NullableOption[String]): Self = this.set("principalId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePrincipalId: Self = this.set("principalId", js.undefined)
+    
+    @scala.inline
+    def setPrincipalIdNull: Self = this.set("principalId", null)
     
     @scala.inline
     def setResourceId(value: String): Self = this.set("resourceId", value.asInstanceOf[js.Any])
@@ -89,9 +95,12 @@ object OAuth2PermissionGrant {
     def deleteResourceId: Self = this.set("resourceId", js.undefined)
     
     @scala.inline
-    def setScope(value: String): Self = this.set("scope", value.asInstanceOf[js.Any])
+    def setScope(value: NullableOption[String]): Self = this.set("scope", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteScope: Self = this.set("scope", js.undefined)
+    
+    @scala.inline
+    def setScopeNull: Self = this.set("scope", null)
   }
 }

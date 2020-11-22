@@ -11,16 +11,14 @@ trait ValidationErrorItem extends js.Object {
   
   var message: String = js.native
   
-  var options: js.UndefOr[ValidationOptions] = js.native
-  
-  var path: js.Array[String] = js.native
+  var path: js.Array[String | Double] = js.native
   
   var `type`: String = js.native
 }
 object ValidationErrorItem {
   
   @scala.inline
-  def apply(message: String, path: js.Array[String], `type`: String): ValidationErrorItem = {
+  def apply(message: String, path: js.Array[String | Double], `type`: String): ValidationErrorItem = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidationErrorItem]
@@ -45,10 +43,10 @@ object ValidationErrorItem {
     def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPathVarargs(value: String*): Self = this.set("path", js.Array(value :_*))
+    def setPathVarargs(value: (String | Double)*): Self = this.set("path", js.Array(value :_*))
     
     @scala.inline
-    def setPath(value: js.Array[String]): Self = this.set("path", value.asInstanceOf[js.Any])
+    def setPath(value: js.Array[String | Double]): Self = this.set("path", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
@@ -58,11 +56,5 @@ object ValidationErrorItem {
     
     @scala.inline
     def deleteContext: Self = this.set("context", js.undefined)
-    
-    @scala.inline
-    def setOptions(value: ValidationOptions): Self = this.set("options", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOptions: Self = this.set("options", js.undefined)
   }
 }

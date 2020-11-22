@@ -8,8 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BingMaps
   extends typingsSlinky.ol.tileImageMod.default {
   
+  /**
+    * Get the api key used for this source.
+    */
   def getApiKey(): String = js.native
   
+  /**
+    * Get the imagery set associated with this source.
+    */
   def getImagerySet(): String = js.native
   
   def handleImageryMetadataResponse(response: BingMapsImageryMetadataResponse): Unit = js.native

@@ -4,6 +4,7 @@ import typingsSlinky.mobx.interceptUtilsMod.IInterceptable
 import typingsSlinky.mobx.listenUtilsMod.IListenable
 import typingsSlinky.mobx.modifiersMod.IEnhancer
 import typingsSlinky.mobx.utilsMod.Lambda
+import typingsSlinky.std.IterableIterator
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -47,6 +48,9 @@ class ObservableMap[K, V] ()
   @JSName("enhancer")
   var enhancer_Original: IEnhancer[V] = js.native
   
+  @JSName(js.Symbol.iterator)
+  var iterator_ObservableMap: js.Function0[IterableIterator[IMapEntry[K, V]]] = js.native
+  
   def merge(other: js.Any): ObservableMap[K, V] = js.native
   def merge(other: IKeyValueMap[V]): ObservableMap[K, V] = js.native
   /** Merge another object into this object, returns this. */
@@ -65,6 +69,9 @@ class ObservableMap[K, V] ()
   def replace(values: js.Any): ObservableMap[K, V] = js.native
   def replace(values: IKeyValueMap[V]): ObservableMap[K, V] = js.native
   def replace(values: ObservableMap[K, V]): ObservableMap[K, V] = js.native
+  
+  @JSName("size")
+  def size_MObservableMap: Double = js.native
   
   /**
     * Returns a shallow non observable object clone of this map.

@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.Callback
 import typingsSlinky.officeUiFabricReact.detailsFooterTypesMod.IDetailsFooterProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeaderProps
@@ -19,7 +20,6 @@ import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.officeUiFabricReact.withViewportMod.IWithViewportProps
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey

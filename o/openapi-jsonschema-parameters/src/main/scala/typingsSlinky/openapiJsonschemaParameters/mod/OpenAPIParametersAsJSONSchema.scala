@@ -10,6 +10,8 @@ trait OpenAPIParametersAsJSONSchema extends js.Object {
   
   var body: js.UndefOr[IJsonSchema] = js.native
   
+  var cookie: js.UndefOr[IJsonSchema] = js.native
+  
   var formData: js.UndefOr[IJsonSchema] = js.native
   
   var headers: js.UndefOr[IJsonSchema] = js.native
@@ -46,6 +48,12 @@ object OpenAPIParametersAsJSONSchema {
     
     @scala.inline
     def deleteBody: Self = this.set("body", js.undefined)
+    
+    @scala.inline
+    def setCookie(value: IJsonSchema): Self = this.set("cookie", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCookie: Self = this.set("cookie", js.undefined)
     
     @scala.inline
     def setFormData(value: IJsonSchema): Self = this.set("formData", value.asInstanceOf[js.Any])

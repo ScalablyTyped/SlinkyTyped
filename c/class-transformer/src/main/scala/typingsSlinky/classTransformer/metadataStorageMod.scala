@@ -6,7 +6,7 @@ import typingsSlinky.classTransformer.classTransformerStrings.none
 import typingsSlinky.classTransformer.excludeMetadataMod.ExcludeMetadata
 import typingsSlinky.classTransformer.exposeMetadataMod.ExposeMetadata
 import typingsSlinky.classTransformer.transformMetadataMod.TransformMetadata
-import typingsSlinky.classTransformer.transformOperationExecutorMod.TransformationType
+import typingsSlinky.classTransformer.transformationTypeEnumMod.TransformationType
 import typingsSlinky.classTransformer.typeMetadataMod.TypeMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,9 +1,11 @@
 package typingsSlinky.storybookAddonStoryshotsPuppeteer.anon
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.jestImageSnapshot.mod.MatchImageSnapshotOptions
 import typingsSlinky.puppeteer.mod.Base64ScreenShotOptions
 import typingsSlinky.puppeteer.mod.Browser
 import typingsSlinky.puppeteer.mod.DirectNavigationOptions
+import typingsSlinky.puppeteer.mod.ElementHandle
 import typingsSlinky.puppeteer.mod.Page
 import typingsSlinky.storybookAddonStoryshotsPuppeteer.configMod.Options
 import scala.scalajs.js
@@ -14,9 +16,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PartialImageSnapshotConfi extends js.Object {
   
-  var afterScreenshot: js.UndefOr[js.Function1[/* options */ Context, Unit]] = js.native
+  var afterScreenshot: js.UndefOr[js.Function1[/* options */ Context, js.Promise[Unit]]] = js.native
   
-  var beforeScreenshot: js.UndefOr[js.Function2[/* page */ Page, /* options */ Options, Unit]] = js.native
+  var beforeScreenshot: js.UndefOr[
+    js.Function2[/* page */ Page, /* options */ Options, js.Promise[Unit | ElementHandle[Element]]]
+  ] = js.native
   
   var chromeExecutablePath: js.UndefOr[String] = js.native
   
@@ -60,13 +64,13 @@ object PartialImageSnapshotConfi {
     }
     
     @scala.inline
-    def setAfterScreenshot(value: /* options */ Context => Unit): Self = this.set("afterScreenshot", js.Any.fromFunction1(value))
+    def setAfterScreenshot(value: /* options */ Context => js.Promise[Unit]): Self = this.set("afterScreenshot", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteAfterScreenshot: Self = this.set("afterScreenshot", js.undefined)
     
     @scala.inline
-    def setBeforeScreenshot(value: (/* page */ Page, /* options */ Options) => Unit): Self = this.set("beforeScreenshot", js.Any.fromFunction2(value))
+    def setBeforeScreenshot(value: (/* page */ Page, /* options */ Options) => js.Promise[Unit | ElementHandle[Element]]): Self = this.set("beforeScreenshot", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteBeforeScreenshot: Self = this.set("beforeScreenshot", js.undefined)

@@ -1,5 +1,9 @@
 package typingsSlinky.reactDropzone.mod
 
+import typingsSlinky.reactDropzone.reactDropzoneStrings.`file-invalid-type`
+import typingsSlinky.reactDropzone.reactDropzoneStrings.`file-too-large`
+import typingsSlinky.reactDropzone.reactDropzoneStrings.`file-too-small`
+import typingsSlinky.reactDropzone.reactDropzoneStrings.`too-many-files`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,14 +11,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FileError extends js.Object {
   
-  var code: String = js.native
+  var code: `file-too-large` | `file-too-small` | `too-many-files` | `file-invalid-type` = js.native
   
   var message: String = js.native
 }
 object FileError {
   
   @scala.inline
-  def apply(code: String, message: String): FileError = {
+  def apply(
+    code: `file-too-large` | `file-too-small` | `too-many-files` | `file-invalid-type`,
+    message: String
+  ): FileError = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any])
     __obj.asInstanceOf[FileError]
   }
@@ -35,7 +42,7 @@ object FileError {
     }
     
     @scala.inline
-    def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])
+    def setCode(value: `file-too-large` | `file-too-small` | `too-many-files` | `file-invalid-type`): Self = this.set("code", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])

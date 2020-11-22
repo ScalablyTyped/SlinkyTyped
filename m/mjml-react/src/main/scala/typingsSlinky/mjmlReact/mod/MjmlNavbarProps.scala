@@ -1,6 +1,6 @@
 package typingsSlinky.mjmlReact.mod
 
-import typingsSlinky.csstype.mod.Property.Color
+import typingsSlinky.csstype.mod.ColorProperty
 import typingsSlinky.mjmlReact.mjmlReactStrings.hamburger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ trait MjmlNavbarProps extends js.Object {
   
   var icoClose: js.UndefOr[String] = js.native
   
-  var icoColor: js.UndefOr[Color] = js.native
+  var icoColor: js.UndefOr[ColorProperty] = js.native
   
   var icoFontSize: js.UndefOr[String] = js.native
   
@@ -95,7 +95,7 @@ object MjmlNavbarProps {
     def deleteIcoClose: Self = this.set("icoClose", js.undefined)
     
     @scala.inline
-    def setIcoColor(value: Color): Self = this.set("icoColor", value.asInstanceOf[js.Any])
+    def setIcoColor(value: ColorProperty): Self = this.set("icoColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcoColor: Self = this.set("icoColor", js.undefined)

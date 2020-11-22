@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateJsxElement extends js.Object {
   
+  /** @deprecated Use `factory.updateJsxElement` or the factory supplied by your transformation context instead. */
   def apply(
     node: JsxElement,
     openingElement: JsxOpeningElement,

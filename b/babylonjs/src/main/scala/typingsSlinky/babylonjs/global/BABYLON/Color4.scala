@@ -265,6 +265,23 @@ object Color4 extends js.Object {
   def FromArray(array: DeepImmutable[ArrayLike[Double]]): typingsSlinky.babylonjs.BABYLON.Color4 = js.native
   def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): typingsSlinky.babylonjs.BABYLON.Color4 = js.native
   
+  def FromArrayToRef(
+    array: DeepImmutable[ArrayLike[Double]],
+    offset: js.UndefOr[scala.Nothing],
+    result: typingsSlinky.babylonjs.BABYLON.Color4
+  ): Unit = js.native
+  /**
+    * Creates a new Color4 from the starting index element of the given array
+    * @param array defines the source array to read from
+    * @param offset defines the offset in the source array
+    * @param result defines the target Color4 object
+    */
+  def FromArrayToRef(
+    array: DeepImmutable[ArrayLike[Double]],
+    offset: Double,
+    result: typingsSlinky.babylonjs.BABYLON.Color4
+  ): Unit = js.native
+  
   /**
     * Creates a new Color4 from a Color3 and an alpha value
     * @param color3 defines the source Color3 to read from

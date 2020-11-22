@@ -10,7 +10,7 @@ trait SunburstPoint extends AbstractSeriesPoint {
   
   var children: js.UndefOr[js.Array[SunburstPoint]] = js.native
   
-  var color: js.UndefOr[Double] = js.native
+  var color: js.UndefOr[Double | String] = js.native
   
   var dontRotateLabel: js.UndefOr[Boolean] = js.native
   
@@ -18,15 +18,15 @@ trait SunburstPoint extends AbstractSeriesPoint {
   
   var labelStyle: js.UndefOr[CSSProperties] = js.native
   
-  var size: Double = js.native
+  var size: js.UndefOr[Double] = js.native
   
   var title: String = js.native
 }
 object SunburstPoint {
   
   @scala.inline
-  def apply(size: Double, title: String): SunburstPoint = {
-    val __obj = js.Dynamic.literal(size = size.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+  def apply(title: String): SunburstPoint = {
+    val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[SunburstPoint]
   }
   
@@ -46,9 +46,6 @@ object SunburstPoint {
     }
     
     @scala.inline
-    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -61,7 +58,7 @@ object SunburstPoint {
     def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
-    def setColor(value: Double): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: Double | String): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
@@ -83,5 +80,11 @@ object SunburstPoint {
     
     @scala.inline
     def deleteLabelStyle: Self = this.set("labelStyle", js.undefined)
+    
+    @scala.inline
+    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
   }
 }

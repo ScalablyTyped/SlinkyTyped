@@ -12,13 +12,11 @@ trait MomentElementViewModelProperties extends js.Object {
     * The current state of the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-MomentElementViewModel.html#state)
-    *
-    * @default ready
     */
   var state: js.UndefOr[ready] = js.native
   
   /**
-    * The selected date. If not provided, it is set to the current day of the year.
+    * The selected date.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-MomentElementViewModel.html#value)
     */

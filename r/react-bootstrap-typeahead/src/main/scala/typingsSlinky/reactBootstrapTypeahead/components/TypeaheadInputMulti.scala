@@ -28,7 +28,12 @@ import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenuProps
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMulitInputWithHocProps
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings._empty
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.`additions removals`
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.`additions text`
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.`removals additions`
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.`removals text`
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.`text additions`
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.`text removals`
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.additions
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.all
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.ascending
@@ -38,8 +43,11 @@ import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.copy
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.date
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.decimal
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.descending
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.done
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.email
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.enter
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.execute
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.go
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.grammar
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.horizontal
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.inherit
@@ -50,6 +58,7 @@ import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.list
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.location
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.mixed
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.move
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.next
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.no
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.none
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.numeric
@@ -59,8 +68,10 @@ import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.othe
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.page
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.polite
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.popup
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.previous
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.removals
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.search
+import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.send
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.spelling
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.step
 import typingsSlinky.reactBootstrapTypeahead.reactBootstrapTypeaheadStrings.tel
@@ -187,7 +198,9 @@ object TypeaheadInputMulti {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -278,6 +291,9 @@ object TypeaheadInputMulti {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])

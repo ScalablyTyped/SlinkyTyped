@@ -2,7 +2,7 @@ package typingsSlinky.electron.Electron
 
 import typingsSlinky.electron.electronStrings.detach
 import typingsSlinky.electron.electronStrings.message
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,7 +40,7 @@ trait Debugger extends EventEmitter {
     */
   def isAttached(): Boolean = js.native
   
-  // Docs: http://electronjs.org/docs/api/debugger
+  // Docs: https://electronjs.org/docs/api/debugger
   /**
     * Emitted when the debugging session is terminated. This happens either when
     * `webContents` is closed or devtools is invoked for the attached `webContents`.

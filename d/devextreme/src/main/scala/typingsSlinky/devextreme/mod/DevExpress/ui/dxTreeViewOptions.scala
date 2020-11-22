@@ -2,11 +2,10 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import typingsSlinky.devextreme.anon.ComponentElementModelValue
 import typingsSlinky.devextreme.anon.ElementItemElement
-import typingsSlinky.devextreme.anon.EventItemDataItemElement
 import typingsSlinky.devextreme.anon.ItemDataItemElementItemIndex
 import typingsSlinky.devextreme.anon.ItemElementItemIndexModel
 import typingsSlinky.devextreme.anon.ModelNode
-import typingsSlinky.devextreme.anon.`13`
+import typingsSlinky.devextreme.anon.`16`
 import typingsSlinky.devextreme.devextremeStrings.both
 import typingsSlinky.devextreme.devextremeStrings.click
 import typingsSlinky.devextreme.devextremeStrings.dblclick_
@@ -32,97 +31,153 @@ trait dxTreeViewOptions
   extends HierarchicalCollectionWidgetOptions[dxTreeView]
      with SearchBoxMixinOptions[dxTreeView] {
   
-  /** @name dxTreeView.Options.animationEnabled */
+  /**
+    * [descr:dxTreeView.Options.animationEnabled]
+    */
   var animationEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeView.Options.createChildren */
+  /**
+    * [descr:dxTreeView.Options.createChildren]
+    */
   var createChildren: js.UndefOr[
     js.Function1[/* parentNode */ dxTreeViewNode, Promise[_] | JQueryPromise[_] | js.Array[_]]
   ] = js.native
   
-  /** @name dxTreeView.Options.dataSource */
+  /**
+    * [descr:dxTreeView.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxTreeViewOptions: js.UndefOr[String | js.Array[dxTreeViewItem] | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxTreeView.Options.dataStructure */
+  /**
+    * [descr:dxTreeView.Options.dataStructure]
+    */
   var dataStructure: js.UndefOr[plain | tree] = js.native
   
-  /** @name dxTreeView.Options.expandAllEnabled */
+  /**
+    * [descr:dxTreeView.Options.expandAllEnabled]
+    */
   var expandAllEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeView.Options.expandEvent */
+  /**
+    * [descr:dxTreeView.Options.expandEvent]
+    */
   var expandEvent: js.UndefOr[dblclick_ | click] = js.native
   
-  /** @name dxTreeView.Options.expandNodesRecursive */
+  /**
+    * [descr:dxTreeView.Options.expandNodesRecursive]
+    */
   var expandNodesRecursive: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeView.Options.expandedExpr */
+  /**
+    * [descr:dxTreeView.Options.expandedExpr]
+    */
   var expandedExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name dxTreeView.Options.hasItemsExpr */
+  /**
+    * [descr:dxTreeView.Options.hasItemsExpr]
+    */
   var hasItemsExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name dxTreeView.Options.items */
+  /**
+    * [descr:dxTreeView.Options.items]
+    */
   @JSName("items")
   var items_dxTreeViewOptions: js.UndefOr[js.Array[dxTreeViewItem]] = js.native
   
-  /** @name dxTreeView.Options.onItemClick */
+  /**
+    * [descr:dxTreeView.Options.onItemClick]
+    */
   @JSName("onItemClick")
   var onItemClick_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ModelNode, _]] = js.native
   
-  /** @name dxTreeView.Options.onItemCollapsed */
-  var onItemCollapsed: js.UndefOr[js.Function1[/* e */ EventItemDataItemElement, _]] = js.native
+  /**
+    * [descr:dxTreeView.Options.onItemCollapsed]
+    */
+  var onItemCollapsed: js.UndefOr[js.Function1[/* e */ ItemDataItemElementItemIndex, _]] = js.native
   
-  /** @name dxTreeView.Options.onItemContextMenu */
+  /**
+    * [descr:dxTreeView.Options.onItemContextMenu]
+    */
   @JSName("onItemContextMenu")
   var onItemContextMenu_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ModelNode, _]] = js.native
   
-  /** @name dxTreeView.Options.onItemExpanded */
-  var onItemExpanded: js.UndefOr[js.Function1[/* e */ EventItemDataItemElement, _]] = js.native
+  /**
+    * [descr:dxTreeView.Options.onItemExpanded]
+    */
+  var onItemExpanded: js.UndefOr[js.Function1[/* e */ ItemDataItemElementItemIndex, _]] = js.native
   
-  /** @name dxTreeView.Options.onItemHold */
+  /**
+    * [descr:dxTreeView.Options.onItemHold]
+    */
   @JSName("onItemHold")
   var onItemHold_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ItemDataItemElementItemIndex, _]] = js.native
   
-  /** @name dxTreeView.Options.onItemRendered */
+  /**
+    * [descr:dxTreeView.Options.onItemRendered]
+    */
   @JSName("onItemRendered")
   var onItemRendered_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ ItemElementItemIndexModel, _]] = js.native
   
-  /** @name dxTreeView.Options.onItemSelectionChanged */
+  /**
+    * [descr:dxTreeView.Options.onItemSelectionChanged]
+    */
   var onItemSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementItemElement, _]] = js.native
   
-  /** @name dxTreeView.Options.onSelectAllValueChanged */
+  /**
+    * [descr:dxTreeView.Options.onSelectAllValueChanged]
+    */
   var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ ComponentElementModelValue, _]] = js.native
   
-  /** @name dxTreeView.Options.onSelectionChanged */
+  /**
+    * [descr:dxTreeView.Options.onSelectionChanged]
+    */
   @JSName("onSelectionChanged")
-  var onSelectionChanged_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ `13`, _]] = js.native
+  var onSelectionChanged_dxTreeViewOptions: js.UndefOr[js.Function1[/* e */ `16`, _]] = js.native
   
-  /** @name dxTreeView.Options.parentIdExpr */
+  /**
+    * [descr:dxTreeView.Options.parentIdExpr]
+    */
   var parentIdExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name dxTreeView.Options.rootValue */
+  /**
+    * [descr:dxTreeView.Options.rootValue]
+    */
   var rootValue: js.UndefOr[js.Any] = js.native
   
-  /** @name dxTreeView.Options.scrollDirection */
+  /**
+    * [descr:dxTreeView.Options.scrollDirection]
+    */
   var scrollDirection: js.UndefOr[both | horizontal | vertical] = js.native
   
-  /** @name dxTreeView.Options.selectAllText */
+  /**
+    * [descr:dxTreeView.Options.selectAllText]
+    */
   var selectAllText: js.UndefOr[String] = js.native
   
-  /** @name dxTreeView.Options.selectByClick */
+  /**
+    * [descr:dxTreeView.Options.selectByClick]
+    */
   var selectByClick: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeView.Options.selectNodesRecursive */
+  /**
+    * [descr:dxTreeView.Options.selectNodesRecursive]
+    */
   var selectNodesRecursive: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeView.Options.selectionMode */
+  /**
+    * [descr:dxTreeView.Options.selectionMode]
+    */
   var selectionMode: js.UndefOr[multiple | single_] = js.native
   
-  /** @name dxTreeView.Options.showCheckBoxesMode */
+  /**
+    * [descr:dxTreeView.Options.showCheckBoxesMode]
+    */
   var showCheckBoxesMode: js.UndefOr[none | normal | selectAll] = js.native
   
-  /** @name dxTreeView.Options.virtualModeEnabled */
+  /**
+    * [descr:dxTreeView.Options.virtualModeEnabled]
+    */
   var virtualModeEnabled: js.UndefOr[Boolean] = js.native
 }
 object dxTreeViewOptions {
@@ -221,7 +276,7 @@ object dxTreeViewOptions {
     def deleteOnItemClick: Self = this.set("onItemClick", js.undefined)
     
     @scala.inline
-    def setOnItemCollapsed(value: /* e */ EventItemDataItemElement => _): Self = this.set("onItemCollapsed", js.Any.fromFunction1(value))
+    def setOnItemCollapsed(value: /* e */ ItemDataItemElementItemIndex => _): Self = this.set("onItemCollapsed", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnItemCollapsed: Self = this.set("onItemCollapsed", js.undefined)
@@ -233,7 +288,7 @@ object dxTreeViewOptions {
     def deleteOnItemContextMenu: Self = this.set("onItemContextMenu", js.undefined)
     
     @scala.inline
-    def setOnItemExpanded(value: /* e */ EventItemDataItemElement => _): Self = this.set("onItemExpanded", js.Any.fromFunction1(value))
+    def setOnItemExpanded(value: /* e */ ItemDataItemElementItemIndex => _): Self = this.set("onItemExpanded", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnItemExpanded: Self = this.set("onItemExpanded", js.undefined)
@@ -263,7 +318,7 @@ object dxTreeViewOptions {
     def deleteOnSelectAllValueChanged: Self = this.set("onSelectAllValueChanged", js.undefined)
     
     @scala.inline
-    def setOnSelectionChanged(value: /* e */ `13` => _): Self = this.set("onSelectionChanged", js.Any.fromFunction1(value))
+    def setOnSelectionChanged(value: /* e */ `16` => _): Self = this.set("onSelectionChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSelectionChanged: Self = this.set("onSelectionChanged", js.undefined)

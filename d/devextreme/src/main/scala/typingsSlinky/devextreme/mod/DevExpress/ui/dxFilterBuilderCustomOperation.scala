@@ -18,7 +18,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFilterBuilderCustomOperation extends js.Object {
   
-  /** @name dxFilterBuilderCustomOperation.calculateFilterExpression */
+  /**
+    * [descr:dxFilterBuilderCustomOperation.calculateFilterExpression]
+    */
   var calculateFilterExpression: js.UndefOr[
     js.Function2[
       /* filterValue */ js.Any, 
@@ -27,27 +29,41 @@ trait dxFilterBuilderCustomOperation extends js.Object {
     ]
   ] = js.native
   
-  /** @name dxFilterBuilderCustomOperation.caption */
+  /**
+    * [descr:dxFilterBuilderCustomOperation.caption]
+    */
   var caption: js.UndefOr[String] = js.native
   
-  /** @name dxFilterBuilderCustomOperation.customizeText */
+  /**
+    * [descr:dxFilterBuilderCustomOperation.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* fieldInfo */ Field, String]] = js.native
   
-  /** @name dxFilterBuilderCustomOperation.dataTypes */
+  /**
+    * [descr:dxFilterBuilderCustomOperation.dataTypes]
+    */
   var dataTypes: js.UndefOr[js.Array[string_ | number | date | boolean_ | `object` | datetime]] = js.native
   
-  /** @name dxFilterBuilderCustomOperation.editorTemplate */
+  /**
+    * [descr:dxFilterBuilderCustomOperation.editorTemplate]
+    */
   var editorTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* conditionInfo */ SetValue, /* container */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxFilterBuilderCustomOperation.hasValue */
+  /**
+    * [descr:dxFilterBuilderCustomOperation.hasValue]
+    */
   var hasValue: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFilterBuilderCustomOperation.icon */
+  /**
+    * [descr:dxFilterBuilderCustomOperation.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxFilterBuilderCustomOperation.name */
+  /**
+    * [descr:dxFilterBuilderCustomOperation.name]
+    */
   var name: js.UndefOr[String] = js.native
 }
 object dxFilterBuilderCustomOperation {

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookWorksheetProtection extends Entity {
   
   // Sheet protection options. Read-only.
-  var options: js.UndefOr[WorkbookWorksheetProtectionOptions] = js.native
+  var options: js.UndefOr[NullableOption[WorkbookWorksheetProtectionOptions]] = js.native
   
   // Indicates if the worksheet is protected. Read-only.
   var `protected`: js.UndefOr[Boolean] = js.native
@@ -37,10 +37,13 @@ object WorkbookWorksheetProtection {
     }
     
     @scala.inline
-    def setOptions(value: WorkbookWorksheetProtectionOptions): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: NullableOption[WorkbookWorksheetProtectionOptions]): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)
+    
+    @scala.inline
+    def setOptionsNull: Self = this.set("options", null)
     
     @scala.inline
     def setProtected(value: Boolean): Self = this.set("protected", value.asInstanceOf[js.Any])

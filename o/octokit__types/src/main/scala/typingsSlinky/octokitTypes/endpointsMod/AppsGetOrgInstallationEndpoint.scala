@@ -1,15 +1,11 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  org :string} & @octokit/types.@octokit/types/dist-types/generated/Endpoints.RequiredPreview<'machine-man'> */
 @js.native
 trait AppsGetOrgInstallationEndpoint extends js.Object {
-  
-  var mediaType: `1` = js.native
   
   @JSName("org")
   var org_ : String = js.native
@@ -17,8 +13,8 @@ trait AppsGetOrgInstallationEndpoint extends js.Object {
 object AppsGetOrgInstallationEndpoint {
   
   @scala.inline
-  def apply(mediaType: `1`, org_ : String): AppsGetOrgInstallationEndpoint = {
-    val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any])
+  def apply(org_ : String): AppsGetOrgInstallationEndpoint = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppsGetOrgInstallationEndpoint]
   }
@@ -37,9 +33,6 @@ object AppsGetOrgInstallationEndpoint {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setMediaType(value: `1`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOrg_(value: String): Self = this.set("org", value.asInstanceOf[js.Any])

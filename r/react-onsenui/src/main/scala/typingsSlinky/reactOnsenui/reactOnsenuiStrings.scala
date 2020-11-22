@@ -256,10 +256,16 @@ object reactOnsenuiStrings {
   def draggable: draggable = "draggable".asInstanceOf[draggable]
   
   @scala.inline
+  def enterKeyHint: enterKeyHint = "enterKeyHint".asInstanceOf[enterKeyHint]
+  
+  @scala.inline
   def fade: fade = "fade".asInstanceOf[fade]
   
   @scala.inline
   def fall: fall = "fall".asInstanceOf[fall]
+  
+  @scala.inline
+  def force: force = "force".asInstanceOf[force]
   
   @scala.inline
   def form: form = "form".asInstanceOf[form]
@@ -955,10 +961,16 @@ object reactOnsenuiStrings {
   sealed trait draggable extends js.Object
   
   @js.native
+  sealed trait enterKeyHint extends js.Object
+  
+  @js.native
   sealed trait fade extends _NavigatorAnimationTypes
   
   @js.native
   sealed trait fall extends js.Object
+  
+  @js.native
+  sealed trait force extends js.Object
   
   @js.native
   sealed trait form extends js.Object

@@ -1,16 +1,18 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/show-message relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/show-message relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.ShowMessageAction")
 @js.native
@@ -20,15 +22,12 @@ class ShowMessageAction protected () extends MicroflowAction {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def blocking: Boolean = js.native
   def blocking_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FShowMessageAction: IModel = js.native
   
   def template: TextTemplate = js.native
   def template_=(newValue: TextTemplate): Unit = js.native

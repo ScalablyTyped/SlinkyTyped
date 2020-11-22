@@ -38,6 +38,14 @@ trait WorksheetData extends js.Object {
   
   /**
     *
+    * Gets a collection of worksheet-level custom properties.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var customProperties: js.UndefOr[js.Array[WorksheetCustomPropertyData]] = js.native
+  
+  /**
+    *
     * Determines if Excel should recalculate the worksheet when necessary.
     True if Excel recalculates the worksheet when necessary. False if Excel doesn't recalculate the sheet.
     *
@@ -238,6 +246,15 @@ object WorksheetData {
     
     @scala.inline
     def deleteComments: Self = this.set("comments", js.undefined)
+    
+    @scala.inline
+    def setCustomPropertiesVarargs(value: WorksheetCustomPropertyData*): Self = this.set("customProperties", js.Array(value :_*))
+    
+    @scala.inline
+    def setCustomProperties(value: js.Array[WorksheetCustomPropertyData]): Self = this.set("customProperties", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomProperties: Self = this.set("customProperties", js.undefined)
     
     @scala.inline
     def setEnableCalculation(value: Boolean): Self = this.set("enableCalculation", value.asInstanceOf[js.Any])

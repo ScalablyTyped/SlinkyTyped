@@ -1,5 +1,6 @@
 package typingsSlinky.muiDatatables.mod
 
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,15 +10,15 @@ trait MUIDataTableTextLabelsBody extends js.Object {
   
   def columnHeaderTooltip(column: MUIDataTableColumn): String = js.native
   
-  var noMatch: String = js.native
+  var noMatch: String | ReactElement = js.native
   
   var toolTip: String = js.native
 }
 object MUIDataTableTextLabelsBody {
   
   @scala.inline
-  def apply(columnHeaderTooltip: MUIDataTableColumn => String, noMatch: String, toolTip: String): MUIDataTableTextLabelsBody = {
-    val __obj = js.Dynamic.literal(columnHeaderTooltip = js.Any.fromFunction1(columnHeaderTooltip), noMatch = noMatch.asInstanceOf[js.Any], toolTip = toolTip.asInstanceOf[js.Any])
+  def apply(columnHeaderTooltip: MUIDataTableColumn => String, toolTip: String): MUIDataTableTextLabelsBody = {
+    val __obj = js.Dynamic.literal(columnHeaderTooltip = js.Any.fromFunction1(columnHeaderTooltip), toolTip = toolTip.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableTextLabelsBody]
   }
   
@@ -40,9 +41,15 @@ object MUIDataTableTextLabelsBody {
     def setColumnHeaderTooltip(value: MUIDataTableColumn => String): Self = this.set("columnHeaderTooltip", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setNoMatch(value: String): Self = this.set("noMatch", value.asInstanceOf[js.Any])
+    def setToolTip(value: String): Self = this.set("toolTip", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setToolTip(value: String): Self = this.set("toolTip", value.asInstanceOf[js.Any])
+    def setNoMatchReactElement(value: ReactElement): Self = this.set("noMatch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNoMatch(value: String | ReactElement): Self = this.set("noMatch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNoMatch: Self = this.set("noMatch", js.undefined)
   }
 }

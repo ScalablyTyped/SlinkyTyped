@@ -16,7 +16,7 @@ trait FleetState extends js.Object {
   val arn: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The ARN of the Amazon Kinesis data stream that receives the audit events.
+    * The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
     */
   val auditStreamArn: js.UndefOr[Input[String]] = js.native
   

@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object defaultGetItemLabelMod extends js.Object {
   
-  def default(item: UnknownTreeItem, labelKey: String): ReactElement = js.native
+  def defaultGetItemLabel(item: UnknownTreeItem, labelKey: String): ReactElement = js.native
 }

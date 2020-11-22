@@ -23,6 +23,9 @@ trait CreateIndexOptions extends js.Object {
   
   var name: js.UndefOr[String] = js.native
   
+  /**
+    * @deprecated should be parameter of IndexColumn
+    */
   var opclass: js.UndefOr[Name] = js.native
   
   var unique: js.UndefOr[Boolean] = js.native

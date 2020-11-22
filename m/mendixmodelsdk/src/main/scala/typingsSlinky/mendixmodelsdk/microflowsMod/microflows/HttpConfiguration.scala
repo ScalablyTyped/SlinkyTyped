@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.expressionsMod.expressions.Expression
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -9,20 +10,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.restMod.rest.ConsumedODataService
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.HttpConfiguration")
 @js.native
-class HttpConfiguration protected () extends Element {
+class HttpConfiguration protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -44,6 +46,8 @@ class HttpConfiguration protected () extends Element {
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     *
     * In version 7.9.0: introduced
     */
@@ -73,9 +77,6 @@ class HttpConfiguration protected () extends Element {
   def httpMethod: HttpMethod = js.native
   def httpMethod_=(newValue: HttpMethod): Unit = js.native
   
-  @JSName("model")
-  var model_FHttpConfiguration: IModel = js.native
-  
   /**
     * In version 7.7.0: introduced
     */
@@ -88,6 +89,8 @@ class HttpConfiguration protected () extends Element {
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 7.9.0: introduced
     */
   def password: Expression = js.native
@@ -98,6 +101,8 @@ class HttpConfiguration protected () extends Element {
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     *
     * In version 7.9.0: introduced
     */

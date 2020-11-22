@@ -6,7 +6,7 @@ import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMinimalMotionCo
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMotionControllerLayout
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMotionControllerProfile
 import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerComponentType
-import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandness
+import typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.MotionControllerHandedness
 import typingsSlinky.babylonjs.webXRMotionControllerManagerMod.MotionControllerConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,7 @@ object motionControllerIndexMod extends js.Object {
       * @param scene the scene to which the model of the controller will be added
       * @param layout The profile layout to load
       * @param gamepadObject The gamepad object correlating to this controller
-      * @param handness handness (left/right/none) of this controller
+      * @param handedness handedness (left/right/none) of this controller
       * @param _doNotLoadControllerMesh set this flag to ignore the mesh loading
       */
     def this(
@@ -35,9 +35,9 @@ object motionControllerIndexMod extends js.Object {
       */
     gamepadObject: IMinimalMotionControllerObject,
       /**
-      * handness (left/right/none) of this controller
+      * handedness (left/right/none) of this controller
       */
-    handness: MotionControllerHandness
+    handedness: MotionControllerHandedness
     ) = this()
     def this(
       scene: Scene,
@@ -47,9 +47,9 @@ object motionControllerIndexMod extends js.Object {
       */
     gamepadObject: IMinimalMotionControllerObject,
       /**
-      * handness (left/right/none) of this controller
+      * handedness (left/right/none) of this controller
       */
-    handness: MotionControllerHandness,
+    handedness: MotionControllerHandedness,
       _doNotLoadControllerMesh: Boolean
     ) = this()
   }
@@ -145,7 +145,11 @@ object motionControllerIndexMod extends js.Object {
   @js.native
   class WebXRGenericTriggerMotionController protected ()
     extends typingsSlinky.babylonjs.webXRGenericMotionControllerMod.WebXRGenericTriggerMotionController {
-    def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
+    def this(
+      scene: Scene,
+      gamepadObject: IMinimalMotionControllerObject,
+      handedness: MotionControllerHandedness
+    ) = this()
   }
   /* static members */
   @js.native
@@ -164,9 +168,13 @@ object motionControllerIndexMod extends js.Object {
       * Create a new Vive motion controller object
       * @param scene the scene to use to create this controller
       * @param gamepadObject the corresponding gamepad object
-      * @param handness the handness of the controller
+      * @param handedness the handedness of the controller
       */
-    def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
+    def this(
+      scene: Scene,
+      gamepadObject: IMinimalMotionControllerObject,
+      handedness: MotionControllerHandedness
+    ) = this()
   }
   /* static members */
   @js.native
@@ -186,7 +194,11 @@ object motionControllerIndexMod extends js.Object {
   @js.native
   class WebXRMicrosoftMixedRealityController protected ()
     extends typingsSlinky.babylonjs.webXRMicrosoftMixedRealityControllerMod.WebXRMicrosoftMixedRealityController {
-    def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
+    def this(
+      scene: Scene,
+      gamepadObject: IMinimalMotionControllerObject,
+      handedness: MotionControllerHandedness
+    ) = this()
   }
   /* static members */
   @js.native
@@ -308,24 +320,28 @@ object motionControllerIndexMod extends js.Object {
   @js.native
   class WebXROculusTouchMotionController protected ()
     extends typingsSlinky.babylonjs.webXROculusTouchMotionControllerMod.WebXROculusTouchMotionController {
-    def this(scene: Scene, gamepadObject: IMinimalMotionControllerObject, handness: MotionControllerHandness) = this()
     def this(
       scene: Scene,
       gamepadObject: IMinimalMotionControllerObject,
-      handness: MotionControllerHandness,
+      handedness: MotionControllerHandedness
+    ) = this()
+    def this(
+      scene: Scene,
+      gamepadObject: IMinimalMotionControllerObject,
+      handedness: MotionControllerHandedness,
       legacyMapping: Boolean
     ) = this()
     def this(
       scene: Scene,
       gamepadObject: IMinimalMotionControllerObject,
-      handness: MotionControllerHandness,
+      handedness: MotionControllerHandedness,
       legacyMapping: js.UndefOr[scala.Nothing],
       _forceLegacyControllers: Boolean
     ) = this()
     def this(
       scene: Scene,
       gamepadObject: IMinimalMotionControllerObject,
-      handness: MotionControllerHandness,
+      handedness: MotionControllerHandedness,
       legacyMapping: Boolean,
       _forceLegacyControllers: Boolean
     ) = this()

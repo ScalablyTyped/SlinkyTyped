@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.anon.EventModel
+import typingsSlinky.devextreme.anon.ComponentElementEvent
 import typingsSlinky.devextreme.devextremeStrings.html
 import typingsSlinky.devextreme.devextremeStrings.markdown
 import scala.scalajs.js
@@ -10,34 +10,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxHtmlEditorOptions extends EditorOptions[dxHtmlEditor] {
   
-  /** @name dxHtmlEditor.Options.customizeModules */
+  /**
+    * [descr:dxHtmlEditor.Options.customizeModules]
+    */
   var customizeModules: js.UndefOr[js.Function1[/* config */ js.Any, _]] = js.native
   
-  /** @name dxHtmlEditor.Options.mediaResizing */
+  /**
+    * [descr:dxHtmlEditor.Options.mediaResizing]
+    */
   var mediaResizing: js.UndefOr[dxHtmlEditorMediaResizing] = js.native
   
-  /** @name dxHtmlEditor.Options.mentions */
+  /**
+    * [descr:dxHtmlEditor.Options.mentions]
+    */
   var mentions: js.UndefOr[js.Array[dxHtmlEditorMention]] = js.native
   
-  /** @name dxHtmlEditor.Options.name */
+  /**
+    * [descr:dxHtmlEditor.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxHtmlEditor.Options.onFocusIn */
-  var onFocusIn: js.UndefOr[js.Function1[/* e */ EventModel, _]] = js.native
+  /**
+    * [descr:dxHtmlEditor.Options.onFocusIn]
+    */
+  var onFocusIn: js.UndefOr[js.Function1[/* e */ ComponentElementEvent, _]] = js.native
   
-  /** @name dxHtmlEditor.Options.onFocusOut */
-  var onFocusOut: js.UndefOr[js.Function1[/* e */ EventModel, _]] = js.native
+  /**
+    * [descr:dxHtmlEditor.Options.onFocusOut]
+    */
+  var onFocusOut: js.UndefOr[js.Function1[/* e */ ComponentElementEvent, _]] = js.native
   
-  /** @name dxHtmlEditor.Options.placeholder */
+  /**
+    * [descr:dxHtmlEditor.Options.placeholder]
+    */
   var placeholder: js.UndefOr[String] = js.native
   
-  /** @name dxHtmlEditor.Options.toolbar */
+  /**
+    * [descr:dxHtmlEditor.Options.toolbar]
+    */
   var toolbar: js.UndefOr[dxHtmlEditorToolbar] = js.native
   
-  /** @name dxHtmlEditor.Options.valueType */
+  /**
+    * [descr:dxHtmlEditor.Options.valueType]
+    */
   var valueType: js.UndefOr[html | markdown] = js.native
   
-  /** @name dxHtmlEditor.Options.variables */
+  /**
+    * [descr:dxHtmlEditor.Options.variables]
+    */
   var variables: js.UndefOr[dxHtmlEditorVariables] = js.native
 }
 object dxHtmlEditorOptions {
@@ -91,13 +111,13 @@ object dxHtmlEditorOptions {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setOnFocusIn(value: /* e */ EventModel => _): Self = this.set("onFocusIn", js.Any.fromFunction1(value))
+    def setOnFocusIn(value: /* e */ ComponentElementEvent => _): Self = this.set("onFocusIn", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnFocusIn: Self = this.set("onFocusIn", js.undefined)
     
     @scala.inline
-    def setOnFocusOut(value: /* e */ EventModel => _): Self = this.set("onFocusOut", js.Any.fromFunction1(value))
+    def setOnFocusOut(value: /* e */ ComponentElementEvent => _): Self = this.set("onFocusOut", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnFocusOut: Self = this.set("onFocusOut", js.undefined)

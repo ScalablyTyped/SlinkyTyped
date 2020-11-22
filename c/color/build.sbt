@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "color"
-version := "3.0-dt-20200515Z-5220ab"
+version := "3.0-dt-20200923Z-c8f3ab"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,7 +8,7 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.6",
   "org.scalablytyped.slinky" %%% "color-convert" % "1.9-dt-20200515Z-13f7bc",
   "org.scalablytyped.slinky" %%% "color-name" % "1.1-dt-20200515Z-224c10",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

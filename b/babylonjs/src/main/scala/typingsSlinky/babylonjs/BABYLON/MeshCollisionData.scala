@@ -15,6 +15,8 @@ trait MeshCollisionData extends js.Object {
   
   var _collisionMask: Double = js.native
   
+  var _collisionResponse: Boolean = js.native
+  
   var _diffPositionForCollisions: Vector3 = js.native
   
   var _oldPositionForCollisions: Vector3 = js.native
@@ -22,6 +24,8 @@ trait MeshCollisionData extends js.Object {
   var _onCollideObserver: Nullable[Observer[AbstractMesh]] = js.native
   
   var _onCollisionPositionChangeObserver: Nullable[Observer[Vector3]] = js.native
+  
+  var _surroundingMeshes: Nullable[js.Array[AbstractMesh]] = js.native
 }
 object MeshCollisionData {
   
@@ -30,10 +34,11 @@ object MeshCollisionData {
     _checkCollisions: Boolean,
     _collisionGroup: Double,
     _collisionMask: Double,
+    _collisionResponse: Boolean,
     _diffPositionForCollisions: Vector3,
     _oldPositionForCollisions: Vector3
   ): MeshCollisionData = {
-    val __obj = js.Dynamic.literal(_checkCollisions = _checkCollisions.asInstanceOf[js.Any], _collisionGroup = _collisionGroup.asInstanceOf[js.Any], _collisionMask = _collisionMask.asInstanceOf[js.Any], _diffPositionForCollisions = _diffPositionForCollisions.asInstanceOf[js.Any], _oldPositionForCollisions = _oldPositionForCollisions.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(_checkCollisions = _checkCollisions.asInstanceOf[js.Any], _collisionGroup = _collisionGroup.asInstanceOf[js.Any], _collisionMask = _collisionMask.asInstanceOf[js.Any], _collisionResponse = _collisionResponse.asInstanceOf[js.Any], _diffPositionForCollisions = _diffPositionForCollisions.asInstanceOf[js.Any], _oldPositionForCollisions = _oldPositionForCollisions.asInstanceOf[js.Any])
     __obj.asInstanceOf[MeshCollisionData]
   }
   
@@ -62,6 +67,9 @@ object MeshCollisionData {
     def set_collisionMask(value: Double): Self = this.set("_collisionMask", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def set_collisionResponse(value: Boolean): Self = this.set("_collisionResponse", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def set_diffPositionForCollisions(value: Vector3): Self = this.set("_diffPositionForCollisions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -84,5 +92,14 @@ object MeshCollisionData {
     
     @scala.inline
     def set_onCollisionPositionChangeObserverNull: Self = this.set("_onCollisionPositionChangeObserver", null)
+    
+    @scala.inline
+    def set_surroundingMeshesVarargs(value: AbstractMesh*): Self = this.set("_surroundingMeshes", js.Array(value :_*))
+    
+    @scala.inline
+    def set_surroundingMeshes(value: Nullable[js.Array[AbstractMesh]]): Self = this.set("_surroundingMeshes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def set_surroundingMeshesNull: Self = this.set("_surroundingMeshes", null)
   }
 }

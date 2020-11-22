@@ -7,9 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ArrayStore extends Store {
   
-  /** @name ArrayStore.clear() */
+  /**
+    * [descr:ArrayStore.clear()]
+    */
   def clear(): Unit = js.native
   
-  /** @name ArrayStore.createQuery() */
+  /**
+    * [descr:ArrayStore.createQuery()]
+    */
   def createQuery(): js.Any = js.native
 }

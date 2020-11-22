@@ -15,6 +15,8 @@ object contextualMenuItemBaseMod extends js.Object {
     extends Component[IContextualMenuItemProps, js.Object, js.Any] {
     def this(props: IContextualMenuItemProps) = this()
     
+    var _renderLayout: js.Any = js.native
+    
     def dismissMenu(): Unit = js.native
     def dismissMenu(dismissAll: Boolean): Unit = js.native
     

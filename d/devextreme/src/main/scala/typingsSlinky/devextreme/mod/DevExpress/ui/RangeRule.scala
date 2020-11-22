@@ -16,22 +16,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RangeRule extends js.Object {
   
-  /** @name RangeRule.ignoreEmptyValue */
+  /**
+    * [descr:RangeRule.ignoreEmptyValue]
+    */
   var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
   
-  /** @name RangeRule.max */
+  /**
+    * [descr:RangeRule.max]
+    */
   var max: js.UndefOr[js.Date | Double] = js.native
   
-  /** @name RangeRule.message */
+  /**
+    * [descr:RangeRule.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name RangeRule.min */
+  /**
+    * [descr:RangeRule.min]
+    */
   var min: js.UndefOr[js.Date | Double] = js.native
   
-  /** @name RangeRule.reevaluate */
+  /**
+    * [descr:RangeRule.reevaluate]
+    */
   var reevaluate: js.UndefOr[Boolean] = js.native
   
-  /** @name RangeRule.type */
+  /**
+    * [descr:RangeRule.type]
+    */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native

@@ -12,4 +12,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("playcanvas", "TEXTURETYPE_SWIZZLEGGGR")
 @js.native
-object TEXTURETYPE_SWIZZLEGGGR extends TopLevel[Double]
+object TEXTURETYPE_SWIZZLEGGGR extends TopLevel[String]

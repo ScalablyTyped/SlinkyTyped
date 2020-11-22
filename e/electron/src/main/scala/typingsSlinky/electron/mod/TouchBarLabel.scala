@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class TouchBarLabel protected ()
   extends typingsSlinky.electron.Electron.TouchBarLabel {
-  // Docs: http://electronjs.org/docs/api/touch-bar-label
+  // Docs: https://electronjs.org/docs/api/touch-bar-label
   /**
     * TouchBarLabel
     */

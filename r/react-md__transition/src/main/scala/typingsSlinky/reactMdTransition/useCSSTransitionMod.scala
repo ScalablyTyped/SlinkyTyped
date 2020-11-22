@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useCSSTransitionMod extends js.Object {
   
-  def default[E /* <: HTMLElement */](
+  def useCSSTransition[E /* <: HTMLElement */](
     hasAppearTemporaryTimeoutTransitionInOnEnterOnEnteringOnEnteredOnExitOnExitingOnExitedClassNameClassNamesRef: CSSTransitionOptions[E]
   ): CSSTransitionReturnValue[E] = js.native
   

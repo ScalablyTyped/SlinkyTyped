@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "ListGroup")
+@JSImport("reactstrap/es", "ListGroup")
 @js.native
-class ListGroup[T] ()
+class ListGroup ()
   extends Component[ListGroupProps, js.Object, js.Any]

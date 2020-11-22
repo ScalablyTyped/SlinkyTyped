@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rcloader"
-version := "0.0-unknown-dt-20200515Z-5e45ec"
+version := "0.0-unknown-dt-20201002Z-5e45ec"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

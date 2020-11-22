@@ -91,6 +91,14 @@ trait EditorConfiguration extends js.Object {
   /** Provides an option foldGutter, which can be used to create a gutter with markers indicating the blocks that can be folded. */
   var foldGutter: js.UndefOr[Boolean] = js.native
   
+  /**
+    * When set to true, will make the editor full-screen (as in, taking up the whole browser window).
+    * Depends on fullscreen.css
+    * @see {@link https://codemirror.net/doc/manual.html#addon_fullscreen}
+    * @default false
+    */
+  var fullScreen: js.UndefOr[Boolean] = js.native
+  
   /** Can be used to add extra gutters (beyond or instead of the line number gutter).
     Should be an array of CSS class names, each of which defines a width (and optionally a background),
     and which will be used to draw the background of the gutters.
@@ -409,6 +417,12 @@ object EditorConfiguration {
     
     @scala.inline
     def deleteFoldGutter: Self = this.set("foldGutter", js.undefined)
+    
+    @scala.inline
+    def setFullScreen(value: Boolean): Self = this.set("fullScreen", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFullScreen: Self = this.set("fullScreen", js.undefined)
     
     @scala.inline
     def setGuttersVarargs(value: String*): Self = this.set("gutters", js.Array(value :_*))

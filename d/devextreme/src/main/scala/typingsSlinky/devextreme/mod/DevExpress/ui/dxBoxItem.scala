@@ -8,16 +8,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxBoxItem extends CollectionWidgetItem {
   
-  /** @name dxBoxItem.baseSize */
+  /**
+    * [descr:dxBoxItem.baseSize]
+    */
   var baseSize: js.UndefOr[Double | auto] = js.native
   
-  /** @name dxBoxItem.box */
+  /**
+    * [descr:dxBoxItem.box]
+    */
   var box: js.UndefOr[dxBoxOptions] = js.native
   
-  /** @name dxBoxItem.ratio */
+  /**
+    * [descr:dxBoxItem.ratio]
+    */
   var ratio: js.UndefOr[Double] = js.native
   
-  /** @name dxBoxItem.shrink */
+  /**
+    * [descr:dxBoxItem.shrink]
+    */
   var shrink: js.UndefOr[Double] = js.native
 }
 object dxBoxItem {

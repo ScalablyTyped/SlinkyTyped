@@ -9,6 +9,7 @@ import typingsSlinky.reactNavigationStack.anon.Bottom
 import typingsSlinky.reactNavigationStack.anon.Close
 import typingsSlinky.reactNavigationStack.anon.Horizontal
 import typingsSlinky.reactNavigationStack.anon.Style
+import typingsSlinky.reactNavigationStack.anon.StyleWithAnimatedValue
 import typingsSlinky.reactNavigationStack.anon.TintColor
 import typingsSlinky.reactNavigationStack.anon.TintColorString
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.center
@@ -19,7 +20,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.StackHeaderOptions & std.Partial<react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.TransitionPreset> & {  title :string | undefined,   header :(props : react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.StackHeaderProps): react.react.ReactNode | undefined,   headerShown :boolean | undefined,   cardShadowEnabled :boolean | undefined,   cardOverlayEnabled :boolean | undefined,   cardOverlay :(props : {  style :react-native.react-native.StyleProp<react-native.react-native.ViewStyle>}): react.react.ReactNode | undefined,   cardStyle :react-native.react-native.StyleProp<react-native.react-native.ViewStyle> | undefined,   animationEnabled :boolean | undefined,   animationTypeForReplace :'push' | 'pop' | undefined,   gestureEnabled :boolean | undefined,   gestureResponseDistance :{  vertical :number | undefined,   horizontal :number | undefined} | undefined,   gestureVelocityImpact :number | undefined,   safeAreaInsets :{  top :number | undefined,   right :number | undefined,   bottom :number | undefined,   left :number | undefined} | undefined,   onTransitionStart :(props : react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.TransitionCallbackProps): void | undefined,   onTransitionEnd :(props : react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.TransitionCallbackProps): void | undefined} */
+/* Inlined react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.StackHeaderOptions & std.Partial<react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.TransitionPreset> & {  title :string | undefined,   header :(props : react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.StackHeaderProps): react.react.ReactNode | undefined,   headerShown :boolean | undefined,   cardShadowEnabled :boolean | undefined,   cardOverlayEnabled :boolean | undefined,   cardOverlay :(props : {  style :react-native.react-native.Animated.WithAnimatedValue<react-native.react-native.StyleProp<react-native.react-native.ViewStyle>>}): react.react.ReactNode | undefined,   cardStyle :react-native.react-native.StyleProp<react-native.react-native.ViewStyle> | undefined,   animationEnabled :boolean | undefined,   animationTypeForReplace :'push' | 'pop' | undefined,   gestureEnabled :boolean | undefined,   gestureResponseDistance :{  vertical :number | undefined,   horizontal :number | undefined} | undefined,   gestureVelocityImpact :number | undefined,   safeAreaInsets :{  top :number | undefined,   right :number | undefined,   bottom :number | undefined,   left :number | undefined} | undefined,   detachPreviousScreen :boolean | undefined,   onTransitionStart :(props : react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.TransitionCallbackProps): void | undefined,   onTransitionEnd :(props : react-navigation-stack.react-navigation-stack/lib/typescript/src/vendor/types.TransitionCallbackProps): void | undefined} */
 @js.native
 trait StackNavigationOptions extends js.Object {
   
@@ -39,7 +40,7 @@ trait StackNavigationOptions extends js.Object {
   /**
     * Function that returns a React Element to display as a overlay for the card.
     */
-  var cardOverlay: js.UndefOr[js.Function1[/* props */ Style, ReactElement]] = js.native
+  var cardOverlay: js.UndefOr[js.Function1[/* props */ StyleWithAnimatedValue, ReactElement]] = js.native
   
   /**
     * Whether to have a semi-transparent dark overlay visible under the card during transitions.
@@ -65,6 +66,14 @@ trait StackNavigationOptions extends js.Object {
   
   var cardStyleInterpolator: js.UndefOr[StackCardStyleInterpolator] = js.native
   
+  /**
+    * Whether to detach the previous screen from the view hierarchy to save memory.
+    * Set it to `false` if you need the previous screen to be seen through the active screen.
+    * Only applicable if `detachInactiveScreens` isn't set to `false`.
+    * Defaults to `false` for the last screen when mode='modal', otherwise `true`.
+    */
+  var detachPreviousScreen: js.UndefOr[Boolean] = js.native
+  
   var gestureDirection: js.UndefOr[GestureDirection] = js.native
   
   /**
@@ -89,6 +98,11 @@ trait StackNavigationOptions extends js.Object {
     * Function that given `HeaderProps` returns a React Element to display as a header.
     */
   var header: js.UndefOr[js.Function1[/* props */ StackHeaderProps, ReactElement]] = js.native
+  
+  /**
+    * Accessibility label for the header back button.
+    */
+  var headerBackAccessibilityLabel: js.UndefOr[String] = js.native
   
   /**
     * Whether back button title font should scale to respect Text Size accessibility settings. Defaults to `false`.
@@ -207,9 +221,7 @@ trait StackNavigationOptions extends js.Object {
   /**
     * Style object for the title component.
     */
-  var headerTitleStyle: js.UndefOr[
-    /* import warning: importer.ImportType#apply Failed type conversion: react.react.ComponentProps<react-native.react-native.Animated.AnimatedComponent<new (): react-native.react-native.Text>>['style'] */ js.Any
-  ] = js.native
+  var headerTitleStyle: js.UndefOr[WithAnimatedValue[StyleProp[TextStyle]]] = js.native
   
   /**
     * Defaults to `false`. If `true`, the header will not have a background unless you explicitly provide it with `headerBackground`.
@@ -277,7 +289,7 @@ object StackNavigationOptions {
     def deleteAnimationTypeForReplace: Self = this.set("animationTypeForReplace", js.undefined)
     
     @scala.inline
-    def setCardOverlay(value: /* props */ Style => ReactElement): Self = this.set("cardOverlay", js.Any.fromFunction1(value))
+    def setCardOverlay(value: /* props */ StyleWithAnimatedValue => ReactElement): Self = this.set("cardOverlay", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCardOverlay: Self = this.set("cardOverlay", js.undefined)
@@ -310,6 +322,12 @@ object StackNavigationOptions {
     def deleteCardStyleInterpolator: Self = this.set("cardStyleInterpolator", js.undefined)
     
     @scala.inline
+    def setDetachPreviousScreen(value: Boolean): Self = this.set("detachPreviousScreen", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDetachPreviousScreen: Self = this.set("detachPreviousScreen", js.undefined)
+    
+    @scala.inline
     def setGestureDirection(value: GestureDirection): Self = this.set("gestureDirection", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -338,6 +356,12 @@ object StackNavigationOptions {
     
     @scala.inline
     def deleteHeader: Self = this.set("header", js.undefined)
+    
+    @scala.inline
+    def setHeaderBackAccessibilityLabel(value: String): Self = this.set("headerBackAccessibilityLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderBackAccessibilityLabel: Self = this.set("headerBackAccessibilityLabel", js.undefined)
     
     @scala.inline
     def setHeaderBackAllowFontScaling(value: Boolean): Self = this.set("headerBackAllowFontScaling", value.asInstanceOf[js.Any])
@@ -391,6 +415,9 @@ object StackNavigationOptions {
     def deleteHeaderLeftContainerStyle: Self = this.set("headerLeftContainerStyle", js.undefined)
     
     @scala.inline
+    def setHeaderLeftContainerStyleNull: Self = this.set("headerLeftContainerStyle", null)
+    
+    @scala.inline
     def setHeaderPressColorAndroid(value: String): Self = this.set("headerPressColorAndroid", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -409,6 +436,9 @@ object StackNavigationOptions {
     def deleteHeaderRightContainerStyle: Self = this.set("headerRightContainerStyle", js.undefined)
     
     @scala.inline
+    def setHeaderRightContainerStyleNull: Self = this.set("headerRightContainerStyle", null)
+    
+    @scala.inline
     def setHeaderShown(value: Boolean): Self = this.set("headerShown", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -425,6 +455,9 @@ object StackNavigationOptions {
     
     @scala.inline
     def deleteHeaderStyle: Self = this.set("headerStyle", js.undefined)
+    
+    @scala.inline
+    def setHeaderStyleNull: Self = this.set("headerStyle", null)
     
     @scala.inline
     def setHeaderStyleInterpolator(value: /* props */ StackHeaderInterpolationProps => StackHeaderInterpolatedStyle): Self = this.set("headerStyleInterpolator", js.Any.fromFunction1(value))
@@ -466,12 +499,16 @@ object StackNavigationOptions {
     def deleteHeaderTitleContainerStyle: Self = this.set("headerTitleContainerStyle", js.undefined)
     
     @scala.inline
-    def setHeaderTitleStyle(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: react.react.ComponentProps<react-native.react-native.Animated.AnimatedComponent<new (): react-native.react-native.Text>>['style'] */ js.Any
-    ): Self = this.set("headerTitleStyle", value.asInstanceOf[js.Any])
+    def setHeaderTitleContainerStyleNull: Self = this.set("headerTitleContainerStyle", null)
+    
+    @scala.inline
+    def setHeaderTitleStyle(value: WithAnimatedValue[StyleProp[TextStyle]]): Self = this.set("headerTitleStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHeaderTitleStyle: Self = this.set("headerTitleStyle", js.undefined)
+    
+    @scala.inline
+    def setHeaderTitleStyleNull: Self = this.set("headerTitleStyle", null)
     
     @scala.inline
     def setHeaderTransparent(value: Boolean): Self = this.set("headerTransparent", value.asInstanceOf[js.Any])

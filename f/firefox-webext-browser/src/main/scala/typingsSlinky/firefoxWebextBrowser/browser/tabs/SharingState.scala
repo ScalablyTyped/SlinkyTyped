@@ -15,8 +15,7 @@ trait SharingState extends js.Object {
   var microphone: Boolean = js.native
   
   /**
-    * If the tab is sharing the screen the value will be one of "Screen", "Window", or "Application", or undefined
-    * if not screen sharing.
+    * If the tab is sharing the screen the value will be one of "Screen", "Window", or "Application", or undefined if not screen sharing.
     */
   var screen: js.UndefOr[String] = js.native
 }

@@ -18,5 +18,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.stellarSdk.serverApiMod.ServerApi.ManageDataOperationRecord
   - typingsSlinky.stellarSdk.serverApiMod.ServerApi.BumpSequenceOperationRecord
   - typingsSlinky.stellarSdk.serverApiMod.ServerApi.PathPaymentStrictSendOperationRecord
+  - typingsSlinky.stellarSdk.serverApiMod.ServerApi.CreateClaimableBalanceOperationRecord
+  - typingsSlinky.stellarSdk.serverApiMod.ServerApi.ClaimClaimableBalanceOperationRecord
+  - typingsSlinky.stellarSdk.serverApiMod.ServerApi.BeginSponsoringFutureReservesOperationRecord
+  - typingsSlinky.stellarSdk.serverApiMod.ServerApi.EndSponsoringFutureReservesOperationRecord
+  - typingsSlinky.stellarSdk.serverApiMod.ServerApi.RevokeSponsorshipOperationRecord
 */
 trait OperationRecord extends js.Object

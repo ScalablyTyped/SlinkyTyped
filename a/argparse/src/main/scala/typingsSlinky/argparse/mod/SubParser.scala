@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class SubParser () extends js.Object {
   
-  def addParser(name: String): ArgumentParser = js.native
-  def addParser(name: String, options: SubArgumentParserOptions): ArgumentParser = js.native
+  def add_parser(name: String): ArgumentParser = js.native
+  def add_parser(name: String, options: SubArgumentParserOptions): ArgumentParser = js.native
 }

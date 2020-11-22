@@ -23,7 +23,7 @@ trait CreateLabelingJobRequest extends js.Object {
   var LabelAttributeName: typingsSlinky.awsSdk.sagemakerMod.LabelAttributeName = js.native
   
   /**
-    * The S3 URL of the file that defines the categories used to label the data objects. For 3D point cloud task types, see Create a Labeling Category Configuration File for 3D Point Cloud Labeling Jobs.  For all other built-in task types and custom tasks, your label category configuration file must be a JSON file in the following format. Identify the labels you want to use by replacing label_1, label_2,...,label_n with your label categories.  {    "document-version": "2018-11-28"    "labels": [    {    "label": "label_1"    },    {    "label": "label_2"    },    ...    {    "label": "label_n"    }    ]   } 
+    * The S3 URI of the file that defines the categories used to label the data objects. For 3D point cloud task types, see Create a Labeling Category Configuration File for 3D Point Cloud Labeling Jobs.  For all other built-in task types and custom tasks, your label category configuration file must be a JSON file in the following format. Identify the labels you want to use by replacing label_1, label_2,...,label_n with your label categories.  {    "document-version": "2018-11-28"    "labels": [    {    "label": "label_1"    },    {    "label": "label_2"    },    ...    {    "label": "label_n"    }    ]   } 
     */
   var LabelCategoryConfigS3Uri: js.UndefOr[S3Uri] = js.native
   

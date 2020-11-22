@@ -29,7 +29,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.ionicCore.componentsMod.Components.IonInput because var conflicts: autocapitalize, autofocus, spellcheck. Inlined accept, autocomplete, autocorrect, clearInput, clearOnEdit, color, debounce, disabled, enterkeyhint, getInputElement, inputmode, max, maxlength, min, minlength, mode, multiple, name, pattern, placeholder, readonly, required, setFocus, size, step, `type`, value */ @js.native
+- typingsSlinky.ionicCore.componentsMod.Components.IonInput because var conflicts: autocapitalize, autofocus, spellcheck. Inlined accept, autocomplete, autocorrect, clearInput, clearOnEdit, color, debounce, disabled, enterkeyhint, fireFocusEvents, getInputElement, inputmode, max, maxlength, min, minlength, mode, multiple, name, pattern, placeholder, readonly, required, setBlur, setFocus, size, step, `type`, value */ @js.native
 trait HTMLIonInputElement extends HTMLStencilElement {
   
   /**
@@ -63,7 +63,7 @@ trait HTMLIonInputElement extends HTMLStencilElement {
   var color: js.UndefOr[Color] = js.native
   
   /**
-    * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke.
+    * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`.
     */
   var debounce: Double = js.native
   
@@ -76,6 +76,11 @@ trait HTMLIonInputElement extends HTMLStencilElement {
     * A hint to the browser for which enter key to display. Possible values: `"enter"`, `"done"`, `"go"`, `"next"`, `"previous"`, `"search"`, and `"send"`.
     */
   var enterkeyhint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
+  
+  /**
+    * This is required for a WebKit bug which requires us to blur and focus an input to properly focus the input in an item with delegatesFocus. It will no longer be needed with iOS 14.
+    */
+  var fireFocusEvents: Boolean = js.native
   
   /**
     * Returns the native `<input>` element used under the hood.
@@ -143,7 +148,12 @@ trait HTMLIonInputElement extends HTMLStencilElement {
   var required: Boolean = js.native
   
   /**
-    * Sets focus on the specified `ion-input`. Use this method instead of the global `input.focus()`.
+    * Sets blur on the native `input` in `ion-input`. Use this method instead of the global `input.blur()`.
+    */
+  def setBlur(): js.Promise[Unit] = js.native
+  
+  /**
+    * Sets focus on the native `input` in `ion-input`. Use this method instead of the global `input.focus()`.
     */
   def setFocus(): js.Promise[Unit] = js.native
   

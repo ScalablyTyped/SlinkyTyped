@@ -8,9 +8,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PostContentResponse extends js.Object {
   
   /**
+    * A list of active contexts for the session. A context can be set when an intent is fulfilled or by calling the PostContent, PostText, or PutSession operation. You can use a context to control the intents that can follow up an intent, or to modify the operation of your application.
+    */
+  var activeContexts: js.UndefOr[ActiveContextsString] = js.native
+  
+  /**
+    * One to four alternative intents that may be applicable to the user's intent. Each alternative includes a score that indicates how confident Amazon Lex is that the intent matches the user's intent. The intents are sorted by the confidence score.
+    */
+  var alternativeIntents: js.UndefOr[String] = js.native
+  
+  /**
     * The prompt (or statement) to convey to the user. This is based on the bot configuration and context. For example, if Amazon Lex did not understand the user intent, it sends the clarificationPrompt configured for the bot. If the intent requires confirmation before taking the fulfillment action, it sends the confirmationPrompt. Another example: Suppose that the Lambda function successfully fulfilled the intent, and sent a message to convey to the user. Then Amazon Lex sends that message in the response. 
     */
   var audioStream: js.UndefOr[BlobStream] = js.native
+  
+  /**
+    * The version of the bot that responded to the conversation. You can use this information to help determine if one version of a bot is performing better than another version.
+    */
+  var botVersion: js.UndefOr[BotVersion] = js.native
   
   /**
     * Content type as specified in the Accept HTTP header in the request.
@@ -43,7 +58,12 @@ trait PostContentResponse extends js.Object {
   var messageFormat: js.UndefOr[MessageFormatType] = js.native
   
   /**
-    * The sentiment expressed in and utterance. When the bot is configured to send utterances to Amazon Comprehend for sentiment analysis, this field contains the result of the analysis.
+    * Provides a score that indicates how confident Amazon Lex is that the returned intent is the one that matches the user's intent. The score is between 0.0 and 1.0. The score is a relative score, not an absolute score. The score may change based on improvements to Amazon Lex. 
+    */
+  var nluIntentConfidence: js.UndefOr[String] = js.native
+  
+  /**
+    * The sentiment expressed in an utterance. When the bot is configured to send utterances to Amazon Comprehend for sentiment analysis, this field contains the result of the analysis.
     */
   var sentimentResponse: js.UndefOr[String] = js.native
   
@@ -91,6 +111,18 @@ object PostContentResponse {
     }
     
     @scala.inline
+    def setActiveContexts(value: ActiveContextsString): Self = this.set("activeContexts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteActiveContexts: Self = this.set("activeContexts", js.undefined)
+    
+    @scala.inline
+    def setAlternativeIntents(value: String): Self = this.set("alternativeIntents", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAlternativeIntents: Self = this.set("alternativeIntents", js.undefined)
+    
+    @scala.inline
     def setAudioStreamUint8Array(value: js.typedarray.Uint8Array): Self = this.set("audioStream", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -98,6 +130,12 @@ object PostContentResponse {
     
     @scala.inline
     def deleteAudioStream: Self = this.set("audioStream", js.undefined)
+    
+    @scala.inline
+    def setBotVersion(value: BotVersion): Self = this.set("botVersion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBotVersion: Self = this.set("botVersion", js.undefined)
     
     @scala.inline
     def setContentType(value: HttpContentType): Self = this.set("contentType", value.asInstanceOf[js.Any])
@@ -134,6 +172,12 @@ object PostContentResponse {
     
     @scala.inline
     def deleteMessageFormat: Self = this.set("messageFormat", js.undefined)
+    
+    @scala.inline
+    def setNluIntentConfidence(value: String): Self = this.set("nluIntentConfidence", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNluIntentConfidence: Self = this.set("nluIntentConfidence", js.undefined)
     
     @scala.inline
     def setSentimentResponse(value: String): Self = this.set("sentimentResponse", value.asInstanceOf[js.Any])

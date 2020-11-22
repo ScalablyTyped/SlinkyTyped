@@ -9,6 +9,9 @@ trait Cpu extends js.Object {
   
   var cpu: js.UndefOr[Boolean] = js.native
   
+  /** @default true */
+  var heap: js.UndefOr[Boolean] = js.native
+  
   var load: js.UndefOr[Boolean] = js.native
   
   var mem: js.UndefOr[Boolean] = js.native
@@ -47,6 +50,12 @@ object Cpu {
     
     @scala.inline
     def deleteCpu: Self = this.set("cpu", js.undefined)
+    
+    @scala.inline
+    def setHeap(value: Boolean): Self = this.set("heap", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeap: Self = this.set("heap", js.undefined)
     
     @scala.inline
     def setLoad(value: Boolean): Self = this.set("load", value.asInstanceOf[js.Any])

@@ -48,12 +48,22 @@ trait ASPxClientPivotGrid extends ASPxClientControl {
   def ChangeCustomizationFieldsVisibility(): Unit = js.native
   
   /**
+    * Enables or disables the current filter displayed in the Filter Panel.
+    */
+  def ChangeFilterEnabled(): Unit = js.native
+  
+  /**
     * Enables or disables the current filter applied by the Filter Editor (Prefilter).
     */
   def ChangePrefilterEnabled(): Unit = js.native
   
   /**
-    * Clears the filter expression applied using the Prefilter (Filter Editor).
+    * Clears the filter expression displayed in the Filter Panel.
+    */
+  def ClearFilter(): Unit = js.native
+  
+  /**
+    * Clears the filter expression displayed in the Filter Panel.
     */
   def ClearPrefilter(): Unit = js.native
   
@@ -75,12 +85,22 @@ trait ASPxClientPivotGrid extends ASPxClientControl {
   /**
     * Hides the Filter Editor.
     */
+  def HideFilterEditor(): Unit = js.native
+  
+  /**
+    * Hides the Filter Editor.
+    */
   def HidePrefilter(): Unit = js.native
   
   /**
     * Indicates whether the Defer Layout Update check box is enabled.
     */
   def IsDeferUpdatesChecked(): Boolean = js.native
+  
+  /**
+    * Indicates whether the Filter Editor is visible.
+    */
+  def IsFilterEditorVisible(): Boolean = js.native
   
   /**
     * Indicates whether the Filter Editor (Prefilter) is visible.
@@ -105,6 +125,11 @@ trait ASPxClientPivotGrid extends ASPxClientControl {
     * @param value true to display the customization form; false to hide the customization form.
     */
   def SetCustomizationFieldsVisibility(value: Boolean): Unit = js.native
+  
+  /**
+    * Shows the Filter Editor.
+    */
+  def ShowFilterEditor(): Unit = js.native
   
   /**
     * Shows the Filter Editor.

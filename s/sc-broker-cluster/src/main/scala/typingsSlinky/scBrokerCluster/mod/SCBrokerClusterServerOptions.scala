@@ -1,6 +1,5 @@
 package typingsSlinky.scBrokerCluster.mod
 
-import typingsSlinky.socketclusterServer.serverMod.AGServerOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +9,9 @@ trait SCBrokerClusterServerOptions extends js.Object {
   
   var appBrokerControllerPath: js.UndefOr[String] = js.native
   
-  var brokerOptions: js.UndefOr[AGServerOptions] = js.native
+  var brokerOptions: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGServerOptions */ js.Any
+  ] = js.native
   
   var brokers: js.Array[String] = js.native
   
@@ -69,7 +70,9 @@ object SCBrokerClusterServerOptions {
     def deleteAppBrokerControllerPath: Self = this.set("appBrokerControllerPath", js.undefined)
     
     @scala.inline
-    def setBrokerOptions(value: AGServerOptions): Self = this.set("brokerOptions", value.asInstanceOf[js.Any])
+    def setBrokerOptions(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AGServerOptions */ js.Any
+    ): Self = this.set("brokerOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBrokerOptions: Self = this.set("brokerOptions", js.undefined)

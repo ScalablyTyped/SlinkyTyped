@@ -4,7 +4,8 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.input
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
+import typingsSlinky.antd.configProviderContextMod.DirectionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ trait BasicProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
-  var direction: js.UndefOr[js.Any] = js.native
+  var direction: js.UndefOr[DirectionType] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
   
@@ -31,7 +32,7 @@ trait BasicProps extends js.Object {
   
   def handleReset(event: SyntheticMouseEvent[HTMLElement]): Unit = js.native
   
-  var inputType: text | input = js.native
+  var inputType: text_ | input = js.native
   
   var prefixCls: String = js.native
   
@@ -48,7 +49,7 @@ object BasicProps {
     bordered: Boolean,
     element: ReactElement,
     handleReset: SyntheticMouseEvent[HTMLElement] => Unit,
-    inputType: text | input,
+    inputType: text_ | input,
     prefixCls: String
   ): BasicProps = {
     val __obj = js.Dynamic.literal(bordered = bordered.asInstanceOf[js.Any], element = element.asInstanceOf[js.Any], handleReset = js.Any.fromFunction1(handleReset), inputType = inputType.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
@@ -80,7 +81,7 @@ object BasicProps {
     def setHandleReset(value: SyntheticMouseEvent[HTMLElement] => Unit): Self = this.set("handleReset", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setInputType(value: text | input): Self = this.set("inputType", value.asInstanceOf[js.Any])
+    def setInputType(value: text_ | input): Self = this.set("inputType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
@@ -98,7 +99,7 @@ object BasicProps {
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
-    def setDirection(value: js.Any): Self = this.set("direction", value.asInstanceOf[js.Any])
+    def setDirection(value: DirectionType): Self = this.set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDirection: Self = this.set("direction", js.undefined)

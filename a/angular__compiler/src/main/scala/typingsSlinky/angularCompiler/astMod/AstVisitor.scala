@@ -56,6 +56,18 @@ trait AstVisitor extends js.Object {
   def visitSafeMethodCall(ast: SafeMethodCall, context: js.Any): js.Any = js.native
   
   def visitSafePropertyRead(ast: SafePropertyRead, context: js.Any): js.Any = js.native
+  
+  /**
+    * The `visitThisReceiver` method is declared as optional for backwards compatibility.
+    * In an upcoming major release, this method will be made required.
+    */
+  var visitThisReceiver: js.UndefOr[js.Function2[/* ast */ ThisReceiver, /* context */ js.Any, _]] = js.native
+  
+  /**
+    * The `visitUnary` method is declared as optional for backwards compatibility. In an upcoming
+    * major release, this method will be made required.
+    */
+  var visitUnary: js.UndefOr[js.Function2[/* ast */ Unary, /* context */ js.Any, _]] = js.native
 }
 object AstVisitor {
   
@@ -172,5 +184,17 @@ object AstVisitor {
     
     @scala.inline
     def deleteVisitASTWithSource: Self = this.set("visitASTWithSource", js.undefined)
+    
+    @scala.inline
+    def setVisitThisReceiver(value: (/* ast */ ThisReceiver, /* context */ js.Any) => _): Self = this.set("visitThisReceiver", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteVisitThisReceiver: Self = this.set("visitThisReceiver", js.undefined)
+    
+    @scala.inline
+    def setVisitUnary(value: (/* ast */ Unary, /* context */ js.Any) => _): Self = this.set("visitUnary", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteVisitUnary: Self = this.set("visitUnary", js.undefined)
   }
 }

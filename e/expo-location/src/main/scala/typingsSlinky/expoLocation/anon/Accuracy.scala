@@ -7,30 +7,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Accuracy extends js.Object {
   
-  var accuracy: Double = js.native
+  var accuracy: Double | Null = js.native
   
-  var altitude: Double = js.native
+  var altitude: Double | Null = js.native
   
-  var heading: Double = js.native
+  var altitudeAccuracy: Double | Null = js.native
+  
+  var heading: Double | Null = js.native
   
   var latitude: Double = js.native
   
   var longitude: Double = js.native
   
-  var speed: Double = js.native
+  var speed: Double | Null = js.native
 }
 object Accuracy {
   
   @scala.inline
-  def apply(
-    accuracy: Double,
-    altitude: Double,
-    heading: Double,
-    latitude: Double,
-    longitude: Double,
-    speed: Double
-  ): Accuracy = {
-    val __obj = js.Dynamic.literal(accuracy = accuracy.asInstanceOf[js.Any], altitude = altitude.asInstanceOf[js.Any], heading = heading.asInstanceOf[js.Any], latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any], speed = speed.asInstanceOf[js.Any])
+  def apply(latitude: Double, longitude: Double): Accuracy = {
+    val __obj = js.Dynamic.literal(latitude = latitude.asInstanceOf[js.Any], longitude = longitude.asInstanceOf[js.Any])
     __obj.asInstanceOf[Accuracy]
   }
   
@@ -50,21 +45,39 @@ object Accuracy {
     }
     
     @scala.inline
-    def setAccuracy(value: Double): Self = this.set("accuracy", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAltitude(value: Double): Self = this.set("altitude", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setHeading(value: Double): Self = this.set("heading", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setLatitude(value: Double): Self = this.set("latitude", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLongitude(value: Double): Self = this.set("longitude", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setAccuracy(value: Double): Self = this.set("accuracy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAccuracyNull: Self = this.set("accuracy", null)
+    
+    @scala.inline
+    def setAltitude(value: Double): Self = this.set("altitude", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAltitudeNull: Self = this.set("altitude", null)
+    
+    @scala.inline
+    def setAltitudeAccuracy(value: Double): Self = this.set("altitudeAccuracy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAltitudeAccuracyNull: Self = this.set("altitudeAccuracy", null)
+    
+    @scala.inline
+    def setHeading(value: Double): Self = this.set("heading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHeadingNull: Self = this.set("heading", null)
+    
+    @scala.inline
     def setSpeed(value: Double): Self = this.set("speed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSpeedNull: Self = this.set("speed", null)
   }
 }

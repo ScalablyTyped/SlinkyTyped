@@ -7,15 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MigrationFile extends js.Object {
   
-  var down: js.UndefOr[String] = js.native
-  
   var filename: String = js.native
   
   var id: Double = js.native
   
   var name: String = js.native
-  
-  var up: js.UndefOr[String] = js.native
 }
 object MigrationFile {
   
@@ -48,17 +44,5 @@ object MigrationFile {
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDown(value: String): Self = this.set("down", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDown: Self = this.set("down", js.undefined)
-    
-    @scala.inline
-    def setUp(value: String): Self = this.set("up", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUp: Self = this.set("up", js.undefined)
   }
 }

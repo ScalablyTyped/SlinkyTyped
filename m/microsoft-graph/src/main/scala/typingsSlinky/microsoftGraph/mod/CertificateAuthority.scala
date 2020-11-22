@@ -11,13 +11,13 @@ trait CertificateAuthority extends js.Object {
   var certificate: js.UndefOr[Double] = js.native
   
   // The URL of the certificate revocation list.
-  var certificateRevocationListUrl: js.UndefOr[String] = js.native
+  var certificateRevocationListUrl: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was
     * created.
     */
-  var deltaCertificateRevocationListUrl: js.UndefOr[String] = js.native
+  var deltaCertificateRevocationListUrl: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate
@@ -61,16 +61,22 @@ object CertificateAuthority {
     def deleteCertificate: Self = this.set("certificate", js.undefined)
     
     @scala.inline
-    def setCertificateRevocationListUrl(value: String): Self = this.set("certificateRevocationListUrl", value.asInstanceOf[js.Any])
+    def setCertificateRevocationListUrl(value: NullableOption[String]): Self = this.set("certificateRevocationListUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCertificateRevocationListUrl: Self = this.set("certificateRevocationListUrl", js.undefined)
     
     @scala.inline
-    def setDeltaCertificateRevocationListUrl(value: String): Self = this.set("deltaCertificateRevocationListUrl", value.asInstanceOf[js.Any])
+    def setCertificateRevocationListUrlNull: Self = this.set("certificateRevocationListUrl", null)
+    
+    @scala.inline
+    def setDeltaCertificateRevocationListUrl(value: NullableOption[String]): Self = this.set("deltaCertificateRevocationListUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeltaCertificateRevocationListUrl: Self = this.set("deltaCertificateRevocationListUrl", js.undefined)
+    
+    @scala.inline
+    def setDeltaCertificateRevocationListUrlNull: Self = this.set("deltaCertificateRevocationListUrl", null)
     
     @scala.inline
     def setIsRootAuthority(value: Boolean): Self = this.set("isRootAuthority", value.asInstanceOf[js.Any])

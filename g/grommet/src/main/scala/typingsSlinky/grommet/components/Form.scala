@@ -18,10 +18,13 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.grommet.anon.Errors
 import typingsSlinky.grommet.anon.Invalid
+import typingsSlinky.grommet.formMod.FormExtendedEvent
 import typingsSlinky.grommet.formMod.FormProps
 import typingsSlinky.grommet.grommetStrings.blur
 import typingsSlinky.grommet.grommetStrings.onChange
+import typingsSlinky.grommet.grommetStrings.onSubmit
 import typingsSlinky.grommet.grommetStrings.submit
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -29,8 +32,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.FormHTMLAttributes
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -208,7 +216,9 @@ object Form {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -550,7 +560,7 @@ object Form {
     def onStalled(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSubmit(value: SyntheticEvent[EventTarget with Element, Event] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
+    def onSubmit(value: /* event */ FormExtendedEvent[js.Any, Element] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))
     
     @scala.inline
     def onSuspend(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onSuspend", js.Any.fromFunction1(value))
@@ -572,6 +582,9 @@ object Form {
     
     @scala.inline
     def onTransitionEnd(value: SyntheticTransitionEvent[HTMLFormElement] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onValidate(value: /* validationResults */ Errors => Unit): this.type = set("onValidate", js.Any.fromFunction1(value))
     
     @scala.inline
     def onVolumeChange(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
@@ -650,7 +663,10 @@ object Form {
   }
   
   def withProps(
-    p: FormProps[js.Any] with (Omit[DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], onChange])
+    p: FormProps[js.Any] with (Omit[
+      DetailedHTMLProps[FormHTMLAttributes[HTMLFormElement], HTMLFormElement], 
+      onChange | onSubmit
+    ])
   ): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()

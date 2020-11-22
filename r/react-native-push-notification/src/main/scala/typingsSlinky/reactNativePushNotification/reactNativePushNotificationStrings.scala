@@ -1,9 +1,5 @@
 package typingsSlinky.reactNativePushNotification
 
-import typingsSlinky.reactNativePushNotification.mod.ImportanceType
-import typingsSlinky.reactNativePushNotification.mod.PriorityType
-import typingsSlinky.reactNativePushNotification.mod.RepeatType
-import typingsSlinky.reactNativePushNotification.mod.VisibilityType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -71,60 +67,50 @@ object reactNativePushNotificationStrings {
   sealed trait badge extends js.Object
   
   @js.native
-  sealed trait day extends RepeatType
+  sealed trait day extends js.Object
   
   @js.native
-  sealed trait default
-    extends ImportanceType
-       with PriorityType
+  sealed trait default extends js.Object
   
   @js.native
-  sealed trait high
-    extends ImportanceType
-       with PriorityType
+  sealed trait high extends js.Object
   
   @js.native
-  sealed trait hour extends RepeatType
+  sealed trait hour extends js.Object
   
   @js.native
-  sealed trait low
-    extends ImportanceType
-       with PriorityType
+  sealed trait low extends js.Object
   
   @js.native
-  sealed trait max
-    extends ImportanceType
-       with PriorityType
+  sealed trait max extends js.Object
   
   @js.native
-  sealed trait min
-    extends ImportanceType
-       with PriorityType
+  sealed trait min extends js.Object
   
   @js.native
-  sealed trait minute extends RepeatType
+  sealed trait minute extends js.Object
   
   @js.native
-  sealed trait none extends ImportanceType
+  sealed trait none extends js.Object
   
   @js.native
-  sealed trait `private` extends VisibilityType
+  sealed trait `private` extends js.Object
   
   @js.native
-  sealed trait public extends VisibilityType
+  sealed trait public extends js.Object
   
   @js.native
-  sealed trait secret extends VisibilityType
+  sealed trait secret extends js.Object
   
   @js.native
   sealed trait sound extends js.Object
   
   @js.native
-  sealed trait time extends RepeatType
+  sealed trait time extends js.Object
   
   @js.native
-  sealed trait unspecified extends ImportanceType
+  sealed trait unspecified extends js.Object
   
   @js.native
-  sealed trait week extends RepeatType
+  sealed trait week extends js.Object
 }

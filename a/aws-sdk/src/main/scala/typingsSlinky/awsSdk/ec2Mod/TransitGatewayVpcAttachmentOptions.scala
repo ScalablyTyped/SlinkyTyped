@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TransitGatewayVpcAttachmentOptions extends js.Object {
   
   /**
+    * Indicates whether appliance mode support is enabled.
+    */
+  var ApplianceModeSupport: js.UndefOr[ApplianceModeSupportValue] = js.native
+  
+  /**
     * Indicates whether DNS support is enabled.
     */
   var DnsSupport: js.UndefOr[DnsSupportValue] = js.native
@@ -39,6 +44,12 @@ object TransitGatewayVpcAttachmentOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setApplianceModeSupport(value: ApplianceModeSupportValue): Self = this.set("ApplianceModeSupport", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteApplianceModeSupport: Self = this.set("ApplianceModeSupport", js.undefined)
     
     @scala.inline
     def setDnsSupport(value: DnsSupportValue): Self = this.set("DnsSupport", value.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "pretty-bytes"
-version := "5.3.0-d2c4fb"
+version := "5.4.1-676cfc"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

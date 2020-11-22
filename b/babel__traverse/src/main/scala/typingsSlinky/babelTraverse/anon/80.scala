@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.MetaProperty
+import typingsSlinky.babelTraverse.babelTraverseStrings.Decorator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `80` extends js.Object {
   
-  var `type`: MetaProperty = js.native
+  var `type`: Decorator = js.native
 }
 object `80` {
   
   @scala.inline
-  def apply(`type`: MetaProperty): `80` = {
+  def apply(`type`: Decorator): `80` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`80`]
@@ -35,6 +35,6 @@ object `80` {
     }
     
     @scala.inline
-    def setType(value: MetaProperty): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: Decorator): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

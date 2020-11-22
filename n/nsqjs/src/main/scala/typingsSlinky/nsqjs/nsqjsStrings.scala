@@ -22,6 +22,9 @@ object nsqjsStrings {
   def message: message = "message".asInstanceOf[message]
   
   @scala.inline
+  def not_ready: not_ready = "not_ready".asInstanceOf[not_ready]
+  
+  @scala.inline
   def nsqd_closed: nsqd_closed = "nsqd_closed".asInstanceOf[nsqd_closed]
   
   @scala.inline
@@ -47,6 +50,9 @@ object nsqjsStrings {
   
   @js.native
   sealed trait message extends js.Object
+  
+  @js.native
+  sealed trait not_ready extends js.Object
   
   @js.native
   sealed trait nsqd_closed extends js.Object

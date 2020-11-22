@@ -100,6 +100,9 @@ object mapboxMapboxSdkStrings {
   def json: json = "json".asInstanceOf[json]
   
   @scala.inline
+  def large: large = "large".asInstanceOf[large]
+  
+  @scala.inline
   def last: last = "last".asInstanceOf[last]
   
   @scala.inline
@@ -200,6 +203,9 @@ object mapboxMapboxSdkStrings {
   
   @scala.inline
   def `slight right`: `slight right` = ("slight right").asInstanceOf[`slight right`]
+  
+  @scala.inline
+  def small: small = "small".asInstanceOf[small]
   
   @scala.inline
   def speed: speed = "speed".asInstanceOf[speed]
@@ -325,6 +331,9 @@ object mapboxMapboxSdkStrings {
   sealed trait json extends js.Object
   
   @js.native
+  sealed trait large extends js.Object
+  
+  @js.native
   sealed trait last extends js.Object
   
   @js.native
@@ -429,6 +438,9 @@ object mapboxMapboxSdkStrings {
   
   @js.native
   sealed trait `slight right` extends ManeuverModifier
+  
+  @js.native
+  sealed trait small extends js.Object
   
   @js.native
   sealed trait speed extends DirectionsAnnotation

@@ -38,6 +38,8 @@ package object storagegatewayMod {
   
   type BandwidthDownloadRateLimit = scala.Double
   
+  type BandwidthRateLimitIntervals = js.Array[typingsSlinky.awsSdk.storagegatewayMod.BandwidthRateLimitInterval]
+  
   type BandwidthType = java.lang.String
   
   type BandwidthUploadRateLimit = scala.Double
@@ -70,6 +72,8 @@ package object storagegatewayMod {
   type DayOfMonth = scala.Double
   
   type DayOfWeek = scala.Double
+  
+  type DaysOfWeek = js.Array[typingsSlinky.awsSdk.storagegatewayMod.DayOfWeek]
   
   type DeprecationDate = java.lang.String
   
@@ -198,6 +202,8 @@ package object storagegatewayMod {
   
   type NotificationId = java.lang.String
   
+  type NotificationPolicy = java.lang.String
+  
   type NumTapesToCreate = scala.Double
   
   /* Rewritten from type alias, can be one of: 
@@ -220,7 +226,22 @@ package object storagegatewayMod {
   
   type PermissionMode = java.lang.String
   
+  type PoolARN = java.lang.String
+  
+  type PoolARNs = js.Array[typingsSlinky.awsSdk.storagegatewayMod.PoolARN]
+  
   type PoolId = java.lang.String
+  
+  type PoolInfos = js.Array[typingsSlinky.awsSdk.storagegatewayMod.PoolInfo]
+  
+  type PoolName = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETED
+    - java.lang.String
+  */
+  type PoolStatus = typingsSlinky.awsSdk.storagegatewayMod._PoolStatus | java.lang.String
   
   type PositiveIntObject = scala.Double
   
@@ -229,6 +250,16 @@ package object storagegatewayMod {
   type RegionId = java.lang.String
   
   type ResourceARN = java.lang.String
+  
+  type RetentionLockTimeInDays = scala.Double
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPLIANCE
+    - typingsSlinky.awsSdk.awsSdkStrings.GOVERNANCE
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - java.lang.String
+  */
+  type RetentionLockType = typingsSlinky.awsSdk.storagegatewayMod._RetentionLockType | java.lang.String
   
   type Role = java.lang.String
   
@@ -287,6 +318,13 @@ package object storagegatewayMod {
   type TapeSize = scala.Double
   
   type TapeStatus = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DEEP_ARCHIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.GLACIER
+    - java.lang.String
+  */
+  type TapeStorageClass = typingsSlinky.awsSdk.storagegatewayMod._TapeStorageClass | java.lang.String
   
   type TapeUsage = scala.Double
   

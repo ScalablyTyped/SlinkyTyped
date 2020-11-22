@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,15 +29,12 @@ class BasicParameterType protected () extends ParameterType {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsJavaActionParameter")
   def containerAsJavaActionParameter_MBasicParameterType: JavaActionParameter = js.native
-  
-  @JSName("model")
-  var model_FBasicParameterType: IModel = js.native
   
   def `type`: Type = js.native
   def type_=(newValue: Type): Unit = js.native

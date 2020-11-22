@@ -12,6 +12,13 @@ trait SuspenseProps extends js.Object {
   
   /** A fallback react tree to show when a Suspense child (like React.lazy) suspends */
   var fallback: NonNullable[slinky.core.facade.ReactElement] | Null = js.native
+  
+  /**
+    * The presence of this prop indicates that the content is computationally expensive to render.
+    * In other words, the tree is CPU bound and not I/O bound (e.g. due to fetching data).
+    * @see {@link https://github.com/facebook/react/pull/19936}
+    */
+  var unstable_expectedLoadTime: js.UndefOr[Double] = js.native
 }
 object SuspenseProps {
   
@@ -50,5 +57,11 @@ object SuspenseProps {
     
     @scala.inline
     def setFallbackNull: Self = this.set("fallback", null)
+    
+    @scala.inline
+    def setUnstable_expectedLoadTime(value: Double): Self = this.set("unstable_expectedLoadTime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnstable_expectedLoadTime: Self = this.set("unstable_expectedLoadTime", js.undefined)
   }
 }

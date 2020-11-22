@@ -52,6 +52,7 @@ object updateConstructor extends js.Object {
     parameters: js.Array[ParameterDeclaration],
     body: Block
   ): ConstructorDeclaration = js.native
+  /** @deprecated Use `factory.updateConstructorDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     node: ConstructorDeclaration,
     decorators: js.Array[Decorator],

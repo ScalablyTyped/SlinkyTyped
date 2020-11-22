@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type GrpcCall = typingsSlinky.grpc.mod.ServerUnaryCall[js.Any] | typingsSlinky.grpc.mod.ServerReadableStream[js.Any] | typingsSlinky.grpc.mod.ServerWriteableStream[js.Any] | (typingsSlinky.grpc.mod.ServerDuplexStream[js.Any, js.Any])
+  type GrpcCall = typingsSlinky.grpc.mod.ServerUnaryCall[js.Any] | typingsSlinky.grpc.mod.ServerReadableStream[js.Any] | (typingsSlinky.grpc.mod.ServerWriteableStream[js.Any, js.Any]) | (typingsSlinky.grpc.mod.ServerDuplexStream[js.Any, js.Any])
   
   type GrpcRequest = js.Any
   

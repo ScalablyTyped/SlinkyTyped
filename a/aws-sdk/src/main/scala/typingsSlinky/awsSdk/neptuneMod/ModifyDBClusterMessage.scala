@@ -43,7 +43,7 @@ trait ModifyDBClusterMessage extends js.Object {
   var EnableIAMDatabaseAuthentication: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * The version number of the database engine. Currently, setting this parameter has no effect. To upgrade your database engine to the most recent release, use the ApplyPendingMaintenanceAction API. For a list of valid engine versions, see CreateDBInstance, or call DescribeDBEngineVersions.
+    * The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless the ApplyImmediately parameter is set to true. For a list of valid engine versions, see Engine Releases for Amazon Neptune, or call DescribeDBEngineVersions.
     */
   var EngineVersion: js.UndefOr[String] = js.native
   

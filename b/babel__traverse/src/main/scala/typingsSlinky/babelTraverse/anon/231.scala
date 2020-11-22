@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.EnumNumberBody
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSIntersectionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `231` extends js.Object {
   
-  var `type`: EnumNumberBody = js.native
+  var `type`: TSIntersectionType = js.native
 }
 object `231` {
   
   @scala.inline
-  def apply(`type`: EnumNumberBody): `231` = {
+  def apply(`type`: TSIntersectionType): `231` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`231`]
@@ -35,6 +35,6 @@ object `231` {
     }
     
     @scala.inline
-    def setType(value: EnumNumberBody): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSIntersectionType): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

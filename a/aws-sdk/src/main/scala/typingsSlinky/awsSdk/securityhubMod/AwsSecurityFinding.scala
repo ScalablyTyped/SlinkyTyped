@@ -23,7 +23,7 @@ trait AwsSecurityFinding extends js.Object {
   var Confidence: js.UndefOr[Integer] = js.native
   
   /**
-    * An ISO8601-formatted timestamp that indicates when the security-findings provider created the potential security issue that a finding captured.
+    * Indicates when the security-findings provider created the potential security issue that a finding captured. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var CreatedAt: NonEmptyString = js.native
   
@@ -38,7 +38,7 @@ trait AwsSecurityFinding extends js.Object {
   var Description: NonEmptyString = js.native
   
   /**
-    * An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential security issue that a finding captured.
+    * Indicates when the security-findings provider first observed the potential security issue that a finding captured. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var FirstObservedAt: js.UndefOr[NonEmptyString] = js.native
   
@@ -53,7 +53,7 @@ trait AwsSecurityFinding extends js.Object {
   var Id: NonEmptyString = js.native
   
   /**
-    * An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the potential security issue that a finding captured.
+    * Indicates when the security-findings provider most recently observed the potential security issue that a finding captured. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var LastObservedAt: js.UndefOr[NonEmptyString] = js.native
   
@@ -76,6 +76,11 @@ trait AwsSecurityFinding extends js.Object {
     * A user-defined note added to a finding.
     */
   var Note: js.UndefOr[typingsSlinky.awsSdk.securityhubMod.Note] = js.native
+  
+  /**
+    * Provides an overview of the patch compliance status for an instance against a selected compliance standard.
+    */
+  var PatchSummary: js.UndefOr[typingsSlinky.awsSdk.securityhubMod.PatchSummary] = js.native
   
   /**
     * The details of process-related information about a finding.
@@ -143,7 +148,7 @@ trait AwsSecurityFinding extends js.Object {
   var Types: TypeList = js.native
   
   /**
-    * An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding record. 
+    * Indicates when the security-findings provider last updated the finding record. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var UpdatedAt: NonEmptyString = js.native
   
@@ -309,6 +314,12 @@ object AwsSecurityFinding {
     
     @scala.inline
     def deleteNote: Self = this.set("Note", js.undefined)
+    
+    @scala.inline
+    def setPatchSummary(value: PatchSummary): Self = this.set("PatchSummary", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePatchSummary: Self = this.set("PatchSummary", js.undefined)
     
     @scala.inline
     def setProcess(value: ProcessDetails): Self = this.set("Process", value.asInstanceOf[js.Any])

@@ -17,6 +17,11 @@ trait Label extends js.Object {
   var label: js.UndefOr[LabelOptionsWithThreshold] = js.native
   
   /**
+    * Sets the angular separation between each adjacent arc.
+    */
+  var padAngle: js.UndefOr[Double] = js.native
+  
+  /**
     * Set title of donut chart.
     */
   var title: js.UndefOr[String] = js.native
@@ -60,6 +65,12 @@ object Label {
     
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
+    
+    @scala.inline
+    def setPadAngle(value: Double): Self = this.set("padAngle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePadAngle: Self = this.set("padAngle", js.undefined)
     
     @scala.inline
     def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])

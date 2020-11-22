@@ -46,7 +46,7 @@ object Background {
     def deleteBackground: Self = this.set("background", js.undefined)
     
     @scala.inline
-    def setBorderVarargs(value: SizeStyle*): Self = this.set("border", js.Array(value :_*))
+    def setBorderVarargs(value: Error*): Self = this.set("border", js.Array(value :_*))
     
     @scala.inline
     def setBorder(value: BorderType): Self = this.set("border", value.asInstanceOf[js.Any])

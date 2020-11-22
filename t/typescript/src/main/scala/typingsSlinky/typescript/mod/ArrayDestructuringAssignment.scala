@@ -10,5 +10,5 @@ trait ArrayDestructuringAssignment
      with DestructuringAssignment {
   
   @JSName("left")
-  var left_ArrayDestructuringAssignment: ArrayLiteralExpression = js.native
+  val left_ArrayDestructuringAssignment: ArrayLiteralExpression = js.native
 }

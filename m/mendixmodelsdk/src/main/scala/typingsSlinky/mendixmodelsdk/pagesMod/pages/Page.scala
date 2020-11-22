@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
@@ -13,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/page relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/page relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -81,9 +80,6 @@ class Page protected () extends FormBase {
   
   def markAsUsed: Boolean = js.native
   def markAsUsed_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FPage: IModel = js.native
   
   /**
     * In version 6.7.0: introduced

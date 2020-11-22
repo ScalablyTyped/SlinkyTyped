@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait NodeArray[T /* <: Node */]
   extends ReadonlyArray[T]
-     with TextRange {
+     with ReadonlyTextRange {
   
   var hasTrailingComma: js.UndefOr[Boolean] = js.native
 }

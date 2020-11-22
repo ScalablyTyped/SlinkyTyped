@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.computeEnvironmentMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.inputMod.batch.ComputeEnvironmentComputeResources
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -33,6 +34,11 @@ trait ComputeEnvironmentArgs extends js.Object {
     * The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
     */
   val state: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Key-value pair tags to be applied to resources that are launched in the compute environment.
+    */
+  val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
     * The type of compute environment. Valid items are `EC2` or `SPOT`.
@@ -92,5 +98,11 @@ object ComputeEnvironmentArgs {
     
     @scala.inline
     def deleteState: Self = this.set("state", js.undefined)
+    
+    @scala.inline
+    def setTags(value: Input[StringDictionary[Input[String]]]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
   }
 }

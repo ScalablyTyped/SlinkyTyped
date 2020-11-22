@@ -11,7 +11,7 @@ trait SkeletonPropsT extends js.Object {
   
   var height: js.UndefOr[String] = js.native
   
-  var overrides: js.UndefOr[OverridesT] = js.native
+  var overrides: js.UndefOr[SkeletonOverrides] = js.native
   
   var rows: js.UndefOr[Double] = js.native
   
@@ -53,7 +53,7 @@ object SkeletonPropsT {
     def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
-    def setOverrides(value: OverridesT): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: SkeletonOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)

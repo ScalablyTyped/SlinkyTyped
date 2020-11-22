@@ -45,6 +45,7 @@ package object groundstationMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
     - typingsSlinky.awsSdk.awsSdkStrings.AWS_CANCELLED
+    - typingsSlinky.awsSdk.awsSdkStrings.AWS_FAILED
     - typingsSlinky.awsSdk.awsSdkStrings.CANCELLED
     - typingsSlinky.awsSdk.awsSdkStrings.CANCELLING
     - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED

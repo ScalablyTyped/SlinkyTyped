@@ -1,5 +1,6 @@
 package typingsSlinky.vueRouter.routerMod
 
+import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.vue.pluginMod.PluginFunction
 import typingsSlinky.vue.vueMod.Vue
 import typingsSlinky.vue.vueMod.VueConstructor
@@ -42,6 +43,8 @@ class VueRouter () extends js.Object {
   def onReady(cb: js.Function): Unit = js.native
   def onReady(cb: js.Function, errorCb: ErrorHandler): Unit = js.native
   
+  var options: RouterOptions = js.native
+  
   def push(location: RawLocation): Unit = js.native
   def push(location: RawLocation, onComplete: js.UndefOr[scala.Nothing], onAbort: ErrorHandler): Unit = js.native
   def push(location: RawLocation, onComplete: js.Function): Unit = js.native
@@ -66,8 +69,17 @@ class VueRouter () extends js.Object {
 @js.native
 object VueRouter extends js.Object {
   
+  var NavigationFailureType: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ k in keyof / * import warning: ResolveTypeQueries.resolve Couldn't resolve typeof NavigationFailureType * / any ]: vue-router.vue-router/types/router.NavigationFailureType}
+    */ typingsSlinky.vueRouter.vueRouterStrings.VueRouter with TopLevel[js.Any] = js.native
+  
   def install(Vue: VueConstructor[Vue]): Unit = js.native
   def install(Vue: VueConstructor[Vue], options: scala.Nothing): Unit = js.native
   @JSName("install")
   var install_Original: PluginFunction[scala.Nothing] = js.native
+  
+  def isNavigationFailure(error: js.Any): /* is vue-router.vue-router/types/router.NavigationFailure */ Boolean = js.native
+  def isNavigationFailure(error: js.Any, `type`: Double): /* is vue-router.vue-router/types/router.NavigationFailure */ Boolean = js.native
+  
+  var version: String = js.native
 }

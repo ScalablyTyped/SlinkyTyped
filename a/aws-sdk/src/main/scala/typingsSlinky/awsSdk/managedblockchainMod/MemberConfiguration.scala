@@ -18,7 +18,7 @@ trait MemberConfiguration extends js.Object {
   var FrameworkConfiguration: MemberFrameworkConfiguration = js.native
   
   /**
-    * 
+    * Configuration properties for logging events associated with a member of a Managed Blockchain network.
     */
   var LogPublishingConfiguration: js.UndefOr[MemberLogPublishingConfiguration] = js.native
   

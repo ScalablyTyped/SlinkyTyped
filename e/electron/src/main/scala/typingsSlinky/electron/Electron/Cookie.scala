@@ -1,5 +1,9 @@
 package typingsSlinky.electron.Electron
 
+import typingsSlinky.electron.electronStrings.lax
+import typingsSlinky.electron.electronStrings.no_restriction
+import typingsSlinky.electron.electronStrings.strict
+import typingsSlinky.electron.electronStrings.unspecified
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Cookie extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/cookie
+  // Docs: https://electronjs.org/docs/api/structures/cookie
   /**
     * The domain of the cookie; this will be normalized with a preceding dot so that
     * it's also valid for subdomains.
@@ -42,6 +46,12 @@ trait Cookie extends js.Object {
   var path: js.UndefOr[String] = js.native
   
   /**
+    * The Same Site policy applied to this cookie.  Can be `unspecified`,
+    * `no_restriction`, `lax` or `strict`.
+    */
+  var sameSite: unspecified | no_restriction | lax | strict = js.native
+  
+  /**
     * Whether the cookie is marked as secure.
     */
   var secure: js.UndefOr[Boolean] = js.native
@@ -60,8 +70,8 @@ trait Cookie extends js.Object {
 object Cookie {
   
   @scala.inline
-  def apply(name: String, value: String): Cookie = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(name: String, sameSite: unspecified | no_restriction | lax | strict, value: String): Cookie = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], sameSite = sameSite.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Cookie]
   }
   
@@ -82,6 +92,9 @@ object Cookie {
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSameSite(value: unspecified | no_restriction | lax | strict): Self = this.set("sameSite", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])

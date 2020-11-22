@@ -12,7 +12,6 @@ package object AMap {
   
   type Circle[ExtraData] = typingsSlinky.amapJsApi.AMap.Circle_[ExtraData]
   
-  // tslint:disable-next-line;
   /**
     * 圆点标记
     */

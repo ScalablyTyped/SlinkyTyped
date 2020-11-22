@@ -42,11 +42,11 @@ trait Leg extends js.Object {
   
   var origin: Station | Stop = js.native
   
-  var plannedArrival: String = js.native
+  var plannedArrival: js.UndefOr[String] = js.native
   
   var plannedArrivalPlatform: js.UndefOr[String] = js.native
   
-  var plannedDeparture: String = js.native
+  var plannedDeparture: js.UndefOr[String] = js.native
   
   var plannedDeparturePlatform: js.UndefOr[String] = js.native
   
@@ -54,11 +54,19 @@ trait Leg extends js.Object {
   
   var price: js.UndefOr[Price] = js.native
   
+  var prognosedArrival: js.UndefOr[String] = js.native
+  
+  var prognosedArrivalPlatform: js.UndefOr[String] = js.native
+  
+  var prognosedDeparture: js.UndefOr[String] = js.native
+  
+  var prognosedDeparturePlatform: js.UndefOr[String] = js.native
+  
   var public: js.UndefOr[Boolean] = js.native
   
   var reachable: js.UndefOr[Boolean] = js.native
   
-  var remarks: js.UndefOr[js.Array[Hint]] = js.native
+  var remarks: js.UndefOr[js.Array[Hint | Warning]] = js.native
   
   var schedule: js.UndefOr[Double] = js.native
   
@@ -73,13 +81,8 @@ trait Leg extends js.Object {
 object Leg {
   
   @scala.inline
-  def apply(
-    destination: Station | Stop,
-    origin: Station | Stop,
-    plannedArrival: String,
-    plannedDeparture: String
-  ): Leg = {
-    val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any], plannedArrival = plannedArrival.asInstanceOf[js.Any], plannedDeparture = plannedDeparture.asInstanceOf[js.Any])
+  def apply(destination: Station | Stop, origin: Station | Stop): Leg = {
+    val __obj = js.Dynamic.literal(destination = destination.asInstanceOf[js.Any], origin = origin.asInstanceOf[js.Any])
     __obj.asInstanceOf[Leg]
   }
   
@@ -103,12 +106,6 @@ object Leg {
     
     @scala.inline
     def setOrigin(value: Station | Stop): Self = this.set("origin", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPlannedArrival(value: String): Self = this.set("plannedArrival", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPlannedDeparture(value: String): Self = this.set("plannedDeparture", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAlternativesVarargs(value: Alternative*): Self = this.set("alternatives", js.Array(value :_*))
@@ -198,10 +195,22 @@ object Leg {
     def deleteOperator: Self = this.set("operator", js.undefined)
     
     @scala.inline
+    def setPlannedArrival(value: String): Self = this.set("plannedArrival", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePlannedArrival: Self = this.set("plannedArrival", js.undefined)
+    
+    @scala.inline
     def setPlannedArrivalPlatform(value: String): Self = this.set("plannedArrivalPlatform", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePlannedArrivalPlatform: Self = this.set("plannedArrivalPlatform", js.undefined)
+    
+    @scala.inline
+    def setPlannedDeparture(value: String): Self = this.set("plannedDeparture", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePlannedDeparture: Self = this.set("plannedDeparture", js.undefined)
     
     @scala.inline
     def setPlannedDeparturePlatform(value: String): Self = this.set("plannedDeparturePlatform", value.asInstanceOf[js.Any])
@@ -222,6 +231,30 @@ object Leg {
     def deletePrice: Self = this.set("price", js.undefined)
     
     @scala.inline
+    def setPrognosedArrival(value: String): Self = this.set("prognosedArrival", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrognosedArrival: Self = this.set("prognosedArrival", js.undefined)
+    
+    @scala.inline
+    def setPrognosedArrivalPlatform(value: String): Self = this.set("prognosedArrivalPlatform", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrognosedArrivalPlatform: Self = this.set("prognosedArrivalPlatform", js.undefined)
+    
+    @scala.inline
+    def setPrognosedDeparture(value: String): Self = this.set("prognosedDeparture", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrognosedDeparture: Self = this.set("prognosedDeparture", js.undefined)
+    
+    @scala.inline
+    def setPrognosedDeparturePlatform(value: String): Self = this.set("prognosedDeparturePlatform", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrognosedDeparturePlatform: Self = this.set("prognosedDeparturePlatform", js.undefined)
+    
+    @scala.inline
     def setPublic(value: Boolean): Self = this.set("public", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -234,10 +267,10 @@ object Leg {
     def deleteReachable: Self = this.set("reachable", js.undefined)
     
     @scala.inline
-    def setRemarksVarargs(value: Hint*): Self = this.set("remarks", js.Array(value :_*))
+    def setRemarksVarargs(value: (Hint | Warning)*): Self = this.set("remarks", js.Array(value :_*))
     
     @scala.inline
-    def setRemarks(value: js.Array[Hint]): Self = this.set("remarks", value.asInstanceOf[js.Any])
+    def setRemarks(value: js.Array[Hint | Warning]): Self = this.set("remarks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRemarks: Self = this.set("remarks", js.undefined)

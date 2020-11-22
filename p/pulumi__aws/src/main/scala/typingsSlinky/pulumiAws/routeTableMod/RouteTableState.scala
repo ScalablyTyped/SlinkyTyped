@@ -10,6 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RouteTableState extends js.Object {
   
   /**
+    * EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+    */
+  val arn: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * Boolean whether this is the default association route table for the EC2 Transit Gateway.
     */
   val defaultAssociationRouteTable: js.UndefOr[Input[Boolean]] = js.native
@@ -51,6 +56,12 @@ object RouteTableState {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setArn(value: Input[String]): Self = this.set("arn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteArn: Self = this.set("arn", js.undefined)
     
     @scala.inline
     def setDefaultAssociationRouteTable(value: Input[Boolean]): Self = this.set("defaultAssociationRouteTable", value.asInstanceOf[js.Any])

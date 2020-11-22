@@ -37,8 +37,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.`additions removals`
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.`additions text`
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.`inline`
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.`removals additions`
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.`removals text`
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.`text additions`
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.`text removals`
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.additions
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.all
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.ascending
@@ -50,8 +55,11 @@ import typingsSlinky.reactNumericInput.reactNumericInputStrings.date
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.decimal
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.descending
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.dialog
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.done
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.email
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.enter
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.execute
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.go
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.grammar
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.grid
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.horizontal
@@ -63,6 +71,7 @@ import typingsSlinky.reactNumericInput.reactNumericInputStrings.location
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.menu
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.mixed
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.move
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.next
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.no
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.none
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.numeric
@@ -72,8 +81,10 @@ import typingsSlinky.reactNumericInput.reactNumericInputStrings.other
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.page
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.polite
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.popup
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.previous
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.removals
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.search
+import typingsSlinky.reactNumericInput.reactNumericInputStrings.send
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.spelling
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.step
 import typingsSlinky.reactNumericInput.reactNumericInputStrings.tel
@@ -171,7 +182,9 @@ trait NumericInputProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -238,6 +251,8 @@ trait NumericInputProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   
   var draggable: js.UndefOr[Booleanish] = js.native
+  
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
   
   var form: js.UndefOr[String] = js.native
   
@@ -798,7 +813,9 @@ object NumericInputProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1003,6 +1020,12 @@ object NumericInputProps {
     
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    
+    @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
     
     @scala.inline
     def setForm(value: String): Self = this.set("form", value.asInstanceOf[js.Any])

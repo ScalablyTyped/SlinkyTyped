@@ -1,10 +1,11 @@
 package typingsSlinky.authmosphere
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.authmosphere.anon.Token
 import typingsSlinky.authmosphere.oauthconfigMod.TokenCacheOAuthConfig
 import typingsSlinky.authmosphere.tokenCacheConfigMod.CacheConfig
 import typingsSlinky.authmosphere.tokenCacheConfigMod.TokenCacheOptions
+import typingsSlinky.authmosphere.tokenMod.Token
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,8 +43,6 @@ object tokenCacheMod extends js.Object {
       options: TokenCacheOptions
     ) = this()
     
-    var _tokens: js.Any = js.native
-    
     var cacheConfig: js.Any = js.native
     
     /**
@@ -53,7 +52,7 @@ object tokenCacheMod extends js.Object {
       * @param tokenName
       * @returns {Promise<Token>}
       */
-    def get(tokenName: String): js.Promise[Token] = js.native
+    def get(tokenName: String): js.Promise[Token[Record[String, _]]] = js.native
     
     /**
       * Checks whether a valid token for the given name is present.
@@ -88,7 +87,7 @@ object tokenCacheMod extends js.Object {
       * @param tokenName
       * @returns {Promise<Token>}
       */
-    def refreshToken(tokenName: String): js.Promise[Token] = js.native
+    def refreshToken(tokenName: String): js.Promise[Token[Record[String, _]]] = js.native
     
     /**
       * The resolveAccessTokenFactory function, creates a function,
@@ -100,7 +99,9 @@ object tokenCacheMod extends js.Object {
     def resolveAccessTokenFactory(key: String): js.Function0[js.Promise[String]] = js.native
     
     var tokenConfig: js.Any = js.native
+    
+    var tokenMap: js.Any = js.native
   }
   
-  type TokenMap = StringDictionary[js.UndefOr[Token]]
+  type TokenMap = StringDictionary[js.UndefOr[Token[Record[String, js.Any]]]]
 }

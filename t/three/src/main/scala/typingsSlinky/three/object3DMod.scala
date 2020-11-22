@@ -27,8 +27,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object object3DMod extends js.Object {
   
-  var Object3DIdCount: Double = js.native
-  
   @js.native
   class Object3D () extends EventDispatcher {
     
@@ -51,13 +49,20 @@ object object3DMod extends js.Object {
     
     /**
     	 * Gets rendered into shadow map.
+    	 * @default false
     	 */
     var castShadow: Boolean = js.native
     
     /**
     	 * Array with object's children.
+    	 * @default []
     	 */
     var children: js.Array[Object3D] = js.native
+    
+    /**
+    	 * Removes all child objects.
+    	 */
+    def clear(): this.type = js.native
     
     def clone(recursive: Boolean): this.type = js.native
     
@@ -84,6 +89,7 @@ object object3DMod extends js.Object {
     
     /**
     	 * When this is set, it checks every frame if the object is in the frustum of the camera. Otherwise the object gets drawn every frame even if it isn't visible.
+    	 * @default true
     	 */
     var frustumCulled: Boolean = js.native
     
@@ -120,6 +126,9 @@ object object3DMod extends js.Object {
     	 */
     val isObject3D: `true` = js.native
     
+    /**
+    	 * @default new THREE.Layers()
+    	 */
     var layers: Layers = js.native
     
     /**
@@ -143,31 +152,42 @@ object object3DMod extends js.Object {
     
     /**
     	 * Local transform.
+    	 * @default new THREE.Matrix4()
     	 */
     var matrix: Matrix4 = js.native
     
     /**
     	 * When this is set, it calculates the matrix of position, (rotation or quaternion) and scale every frame and also recalculates the matrixWorld property.
+    	 * @default THREE.Object3D.DefaultMatrixAutoUpdate
     	 */
     var matrixAutoUpdate: Boolean = js.native
     
     /**
     	 * The global transform of the object. If the Object3d has no parent, then it's identical to the local transform.
+    	 * @default new THREE.Matrix4()
     	 */
     var matrixWorld: Matrix4 = js.native
     
     /**
     	 * When this is set, it calculates the matrixWorld in that frame and resets this property to false.
+    	 * @default false
     	 */
     var matrixWorldNeedsUpdate: Boolean = js.native
     
+    /**
+    	 * @default new THREE.Matrix4()
+    	 */
     val modelViewMatrix: Matrix4 = js.native
     
     /**
     	 * Optional name of the object (doesn't need to be unique).
+    	 * @default ''
     	 */
     var name: String = js.native
     
+    /**
+    	 * @default new THREE.Matrix3()
+    	 */
     val normalMatrix: Matrix3 = js.native
     
     def onAfterRender(
@@ -212,16 +232,19 @@ object object3DMod extends js.Object {
     
     /**
     	 * Object's parent in the scene graph.
+    	 * @default null
     	 */
     var parent: Object3D | Null = js.native
     
     /**
     	 * Object's local position.
+    	 * @default new THREE.Vector3()
     	 */
     val position: Vector3 = js.native
     
     /**
     	 * Global rotation.
+    	 * @default new THREE.Quaternion()
     	 */
     val quaternion: Quaternion = js.native
     
@@ -229,6 +252,7 @@ object object3DMod extends js.Object {
     
     /**
     	 * Material gets baked in shadow receiving.
+    	 * @default false
     	 */
     var receiveShadow: Boolean = js.native
     
@@ -239,6 +263,7 @@ object object3DMod extends js.Object {
     
     /**
     	 * Overrides the default rendering order of scene graph objects, from lowest to highest renderOrder. Opaque and transparent objects remain sorted independently though. When this property is set for an instance of Group, all descendants objects will be sorted and rendered together.
+    	 * @default 0
     	 */
     var renderOrder: Double = js.native
     
@@ -276,11 +301,13 @@ object object3DMod extends js.Object {
     
     /**
     	 * Object's local rotation (Euler angles), in radians.
+    	 * @default new THREE.Euler()
     	 */
     val rotation: Euler = js.native
     
     /**
     	 * Object's local scale.
+    	 * @default new THREE.Vector3()
     	 */
     val scale: Vector3 = js.native
     
@@ -337,10 +364,14 @@ object object3DMod extends js.Object {
     
     def traverseVisible(callback: js.Function1[/* object */ this.type, _]): Unit = js.native
     
+    /**
+    	 * @default 'Object3D'
+    	 */
     var `type`: String = js.native
     
     /**
     	 * Up direction.
+    	 * @default THREE.Object3D.DefaultUp.clone()
     	 */
     var up: Vector3 = js.native
     
@@ -359,6 +390,7 @@ object object3DMod extends js.Object {
     
     /**
     	 * An object that can be used to store custom data about the Object3d. It should not hold references to functions as these will not be cloned.
+    	 * @default {}
     	 */
     var userData: StringDictionary[js.Any] = js.native
     
@@ -369,6 +401,7 @@ object object3DMod extends js.Object {
     
     /**
     	 * Object gets rendered if true.
+    	 * @default true
     	 */
     var visible: Boolean = js.native
     

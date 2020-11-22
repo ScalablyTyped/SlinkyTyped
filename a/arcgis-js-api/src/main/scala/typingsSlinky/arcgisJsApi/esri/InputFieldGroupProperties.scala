@@ -19,11 +19,9 @@ trait InputFieldGroupProperties extends js.Object {
   var initialState: js.UndefOr[expanded | collapsed] = js.native
   
   /**
-    * Arcade expression to determine whether this group is visible or not
+    * Arcade expression to determine whether this group is visible or not.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputFieldGroup.html#visibilityExpression)
-    *
-    * @default null
     */
   var visibilityExpression: js.UndefOr[String] = js.native
 }

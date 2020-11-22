@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Request extends js.Object {
   
   /**
-    * The CP code used for reporting.
+    * The cpcode used for reporting.
     */
   val cpCode: Double = js.native
   
   /**
-    * Object containing properties specifying the device characteristics. The
+    * Object containing properties specifying the device characteristics. This
     * value of this property will be null if the contract associated with the
     * request does not have entitlements for EDC.
     */
@@ -46,7 +46,7 @@ trait Request extends js.Object {
   val scheme: String = js.native
   
   /**
-    * The relative URL of the incoming request. This includes the path as well
+    * The Relative URL of the incoming request. This includes the path as well
     * as the query string.
     */
   val url: String = js.native

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Nodegroup extends js.Object {
   
   /**
-    * The AMI type associated with your node group. GPU instance types should use the AL2_x86_64_GPU AMI type, which uses the Amazon EKS-optimized Linux AMI with GPU support. Non-GPU instances should use the AL2_x86_64 AMI type, which uses the Amazon EKS-optimized Linux AMI.
+    * If the node group was deployed using a launch template with a custom AMI, then this is CUSTOM. For node groups that weren't deployed using a launch template, this is the AMI type that was specified in the node group configuration.
     */
   var amiType: js.UndefOr[AMITypes] = js.native
   
@@ -23,7 +23,7 @@ trait Nodegroup extends js.Object {
   var createdAt: js.UndefOr[js.Date] = js.native
   
   /**
-    * The root device disk size (in GiB) for your node group instances. The default disk size is 20 GiB.
+    * If the node group wasn't deployed with a launch template, then this is the disk size in the node group configuration. If the node group was deployed with a launch template, then this is null.
     */
   var diskSize: js.UndefOr[BoxedInteger] = js.native
   
@@ -33,7 +33,7 @@ trait Nodegroup extends js.Object {
   var health: js.UndefOr[NodegroupHealth] = js.native
   
   /**
-    * The instance types associated with your node group.
+    * If the node group wasn't deployed with a launch template, then this is the instance type that is associated with the node group. If the node group was deployed with a launch template, then this is null.
     */
   var instanceTypes: js.UndefOr[StringList] = js.native
   
@@ -43,12 +43,17 @@ trait Nodegroup extends js.Object {
   var labels: js.UndefOr[labelsMap] = js.native
   
   /**
+    * If a launch template was used to create the node group, then this is the launch template that was used.
+    */
+  var launchTemplate: js.UndefOr[LaunchTemplateSpecification] = js.native
+  
+  /**
     * The Unix epoch timestamp in seconds for when the managed node group was last modified.
     */
   var modifiedAt: js.UndefOr[js.Date] = js.native
   
   /**
-    * The IAM role associated with your node group. The Amazon EKS worker node kubelet daemon makes calls to AWS APIs on your behalf. Worker nodes receive permissions for these API calls through an IAM instance profile and associated policies. Before you can launch worker nodes and register them into a cluster, you must create an IAM role for those worker nodes to use when they are launched. For more information, see Amazon EKS Worker Node IAM Role in the  Amazon EKS User Guide .
+    * The IAM role associated with your node group. The Amazon EKS worker node kubelet daemon makes calls to AWS APIs on your behalf. Worker nodes receive permissions for these API calls through an IAM instance profile and associated policies.
     */
   var nodeRole: js.UndefOr[String] = js.native
   
@@ -63,12 +68,12 @@ trait Nodegroup extends js.Object {
   var nodegroupName: js.UndefOr[String] = js.native
   
   /**
-    * The AMI version of the managed node group. For more information, see Amazon EKS-Optimized Linux AMI Versions  in the Amazon EKS User Guide.
+    * If the node group was deployed using a launch template with a custom AMI, then this is the AMI ID that was specified in the launch template. For node groups that weren't deployed using a launch template, this is the version of the Amazon EKS-optimized AMI that the node group was deployed with.
     */
   var releaseVersion: js.UndefOr[String] = js.native
   
   /**
-    * The remote access (SSH) configuration that is associated with the node group.
+    * If the node group wasn't deployed with a launch template, then this is the remote access configuration that is associated with the node group. If the node group was deployed with a launch template, then this is null.
     */
   var remoteAccess: js.UndefOr[RemoteAccessConfig] = js.native
   
@@ -88,7 +93,7 @@ trait Nodegroup extends js.Object {
   var status: js.UndefOr[NodegroupStatus] = js.native
   
   /**
-    * The subnets allowed for the Auto Scaling group that is associated with your node group. These subnets must have the following tag: kubernetes.io/cluster/CLUSTER_NAME, where CLUSTER_NAME is replaced with the name of your cluster.
+    * The subnets that were specified for the Auto Scaling group that is associated with your node group.
     */
   var subnets: js.UndefOr[StringList] = js.native
   
@@ -169,6 +174,12 @@ object Nodegroup {
     
     @scala.inline
     def deleteLabels: Self = this.set("labels", js.undefined)
+    
+    @scala.inline
+    def setLaunchTemplate(value: LaunchTemplateSpecification): Self = this.set("launchTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLaunchTemplate: Self = this.set("launchTemplate", js.undefined)
     
     @scala.inline
     def setModifiedAt(value: js.Date): Self = this.set("modifiedAt", value.asInstanceOf[js.Any])

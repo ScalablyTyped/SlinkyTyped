@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.comprehendMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -287,6 +287,22 @@ trait Comprehend extends Service {
   ): Request[DescribeKeyPhrasesDetectionJobResponse, AWSError] = js.native
   
   /**
+    * Gets the properties associated with a PII entities detection job. For example, you can use this operation to get the job status.
+    */
+  def describePiiEntitiesDetectionJob(): Request[DescribePiiEntitiesDetectionJobResponse, AWSError] = js.native
+  def describePiiEntitiesDetectionJob(
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribePiiEntitiesDetectionJobResponse, Unit]
+  ): Request[DescribePiiEntitiesDetectionJobResponse, AWSError] = js.native
+  /**
+    * Gets the properties associated with a PII entities detection job. For example, you can use this operation to get the job status.
+    */
+  def describePiiEntitiesDetectionJob(params: DescribePiiEntitiesDetectionJobRequest): Request[DescribePiiEntitiesDetectionJobResponse, AWSError] = js.native
+  def describePiiEntitiesDetectionJob(
+    params: DescribePiiEntitiesDetectionJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribePiiEntitiesDetectionJobResponse, Unit]
+  ): Request[DescribePiiEntitiesDetectionJobResponse, AWSError] = js.native
+  
+  /**
     * Gets the properties associated with a sentiment detection job. Use this operation to get the status of a detection job.
     */
   def describeSentimentDetectionJob(): Request[DescribeSentimentDetectionJobResponse, AWSError] = js.native
@@ -355,6 +371,20 @@ trait Comprehend extends Service {
     params: DetectKeyPhrasesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DetectKeyPhrasesResponse, Unit]
   ): Request[DetectKeyPhrasesResponse, AWSError] = js.native
+  
+  /**
+    * Inspects the input text for entities that contain personally identifiable information (PII) and returns information about them.
+    */
+  def detectPiiEntities(): Request[DetectPiiEntitiesResponse, AWSError] = js.native
+  def detectPiiEntities(callback: js.Function2[/* err */ AWSError, /* data */ DetectPiiEntitiesResponse, Unit]): Request[DetectPiiEntitiesResponse, AWSError] = js.native
+  /**
+    * Inspects the input text for entities that contain personally identifiable information (PII) and returns information about them.
+    */
+  def detectPiiEntities(params: DetectPiiEntitiesRequest): Request[DetectPiiEntitiesResponse, AWSError] = js.native
+  def detectPiiEntities(
+    params: DetectPiiEntitiesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DetectPiiEntitiesResponse, Unit]
+  ): Request[DetectPiiEntitiesResponse, AWSError] = js.native
   
   /**
     * Inspects text and returns an inference of the prevailing sentiment (POSITIVE, NEUTRAL, MIXED, or NEGATIVE). 
@@ -487,6 +517,20 @@ trait Comprehend extends Service {
   ): Request[ListKeyPhrasesDetectionJobsResponse, AWSError] = js.native
   
   /**
+    * Gets a list of the PII entity detection jobs that you have submitted.
+    */
+  def listPiiEntitiesDetectionJobs(): Request[ListPiiEntitiesDetectionJobsResponse, AWSError] = js.native
+  def listPiiEntitiesDetectionJobs(callback: js.Function2[/* err */ AWSError, /* data */ ListPiiEntitiesDetectionJobsResponse, Unit]): Request[ListPiiEntitiesDetectionJobsResponse, AWSError] = js.native
+  /**
+    * Gets a list of the PII entity detection jobs that you have submitted.
+    */
+  def listPiiEntitiesDetectionJobs(params: ListPiiEntitiesDetectionJobsRequest): Request[ListPiiEntitiesDetectionJobsResponse, AWSError] = js.native
+  def listPiiEntitiesDetectionJobs(
+    params: ListPiiEntitiesDetectionJobsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListPiiEntitiesDetectionJobsResponse, Unit]
+  ): Request[ListPiiEntitiesDetectionJobsResponse, AWSError] = js.native
+  
+  /**
     * Gets a list of sentiment detection jobs that you have submitted.
     */
   def listSentimentDetectionJobs(): Request[ListSentimentDetectionJobsResponse, AWSError] = js.native
@@ -589,6 +633,20 @@ trait Comprehend extends Service {
   ): Request[StartKeyPhrasesDetectionJobResponse, AWSError] = js.native
   
   /**
+    * Starts an asynchronous PII entity detection job for a collection of documents.
+    */
+  def startPiiEntitiesDetectionJob(): Request[StartPiiEntitiesDetectionJobResponse, AWSError] = js.native
+  def startPiiEntitiesDetectionJob(callback: js.Function2[/* err */ AWSError, /* data */ StartPiiEntitiesDetectionJobResponse, Unit]): Request[StartPiiEntitiesDetectionJobResponse, AWSError] = js.native
+  /**
+    * Starts an asynchronous PII entity detection job for a collection of documents.
+    */
+  def startPiiEntitiesDetectionJob(params: StartPiiEntitiesDetectionJobRequest): Request[StartPiiEntitiesDetectionJobResponse, AWSError] = js.native
+  def startPiiEntitiesDetectionJob(
+    params: StartPiiEntitiesDetectionJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ StartPiiEntitiesDetectionJobResponse, Unit]
+  ): Request[StartPiiEntitiesDetectionJobResponse, AWSError] = js.native
+  
+  /**
     * Starts an asynchronous sentiment detection job for a collection of documents. use the operation to track the status of a job.
     */
   def startSentimentDetectionJob(): Request[StartSentimentDetectionJobResponse, AWSError] = js.native
@@ -659,6 +717,20 @@ trait Comprehend extends Service {
     params: StopKeyPhrasesDetectionJobRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopKeyPhrasesDetectionJobResponse, Unit]
   ): Request[StopKeyPhrasesDetectionJobResponse, AWSError] = js.native
+  
+  /**
+    * Stops a PII entities detection job in progress.
+    */
+  def stopPiiEntitiesDetectionJob(): Request[StopPiiEntitiesDetectionJobResponse, AWSError] = js.native
+  def stopPiiEntitiesDetectionJob(callback: js.Function2[/* err */ AWSError, /* data */ StopPiiEntitiesDetectionJobResponse, Unit]): Request[StopPiiEntitiesDetectionJobResponse, AWSError] = js.native
+  /**
+    * Stops a PII entities detection job in progress.
+    */
+  def stopPiiEntitiesDetectionJob(params: StopPiiEntitiesDetectionJobRequest): Request[StopPiiEntitiesDetectionJobResponse, AWSError] = js.native
+  def stopPiiEntitiesDetectionJob(
+    params: StopPiiEntitiesDetectionJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ StopPiiEntitiesDetectionJobResponse, Unit]
+  ): Request[StopPiiEntitiesDetectionJobResponse, AWSError] = js.native
   
   /**
     * Stops a sentiment detection job in progress. If the job state is IN_PROGRESS the job is marked for termination and put into the STOP_REQUESTED state. If the job completes before it can be stopped, it is put into the COMPLETED state; otherwise the job is be stopped and put into the STOPPED state. If the job is in the COMPLETED or FAILED state when you call the StopDominantLanguageDetectionJob operation, the operation returns a 400 Internal Request Exception.  When a job is stopped, any documents already processed are written to the output location.

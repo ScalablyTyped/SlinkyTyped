@@ -6,7 +6,7 @@ import typingsSlinky.awsSdk.awsSdkStrings.cacheClusterAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.cacheClusterDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.replicationGroupAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.replicationGroupDeleted
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -205,6 +205,31 @@ trait ElastiCache extends Service {
   ): Request[CreateSnapshotResult, AWSError] = js.native
   
   /**
+    * For Redis engine version 6.x onwards: Creates a Redis user. For more information, see Using Role Based Access Control (RBAC).
+    */
+  def createUser(): Request[User, AWSError] = js.native
+  def createUser(callback: js.Function2[/* err */ AWSError, /* data */ User, Unit]): Request[User, AWSError] = js.native
+  /**
+    * For Redis engine version 6.x onwards: Creates a Redis user. For more information, see Using Role Based Access Control (RBAC).
+    */
+  def createUser(params: CreateUserMessage): Request[User, AWSError] = js.native
+  def createUser(params: CreateUserMessage, callback: js.Function2[/* err */ AWSError, /* data */ User, Unit]): Request[User, AWSError] = js.native
+  
+  /**
+    * For Redis engine version 6.x onwards: Creates a Redis user group. For more information, see Using Role Based Access Control (RBAC) 
+    */
+  def createUserGroup(): Request[UserGroup, AWSError] = js.native
+  def createUserGroup(callback: js.Function2[/* err */ AWSError, /* data */ UserGroup, Unit]): Request[UserGroup, AWSError] = js.native
+  /**
+    * For Redis engine version 6.x onwards: Creates a Redis user group. For more information, see Using Role Based Access Control (RBAC) 
+    */
+  def createUserGroup(params: CreateUserGroupMessage): Request[UserGroup, AWSError] = js.native
+  def createUserGroup(
+    params: CreateUserGroupMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ UserGroup, Unit]
+  ): Request[UserGroup, AWSError] = js.native
+  
+  /**
     * Decreases the number of node groups in a Global Datastore
     */
   def decreaseNodeGroupsInGlobalReplicationGroup(): Request[DecreaseNodeGroupsInGlobalReplicationGroupResult, AWSError] = js.native
@@ -339,6 +364,31 @@ trait ElastiCache extends Service {
     params: DeleteSnapshotMessage,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteSnapshotResult, Unit]
   ): Request[DeleteSnapshotResult, AWSError] = js.native
+  
+  /**
+    * For Redis engine version 6.x onwards: Deletes a user. The user will be removed from all user groups and in turn removed from all replication groups. For more information, see Using Role Based Access Control (RBAC). 
+    */
+  def deleteUser(): Request[User, AWSError] = js.native
+  def deleteUser(callback: js.Function2[/* err */ AWSError, /* data */ User, Unit]): Request[User, AWSError] = js.native
+  /**
+    * For Redis engine version 6.x onwards: Deletes a user. The user will be removed from all user groups and in turn removed from all replication groups. For more information, see Using Role Based Access Control (RBAC). 
+    */
+  def deleteUser(params: DeleteUserMessage): Request[User, AWSError] = js.native
+  def deleteUser(params: DeleteUserMessage, callback: js.Function2[/* err */ AWSError, /* data */ User, Unit]): Request[User, AWSError] = js.native
+  
+  /**
+    * For Redis engine version 6.x onwards: Deletes a ser group. The user group must first be disassociated from the replcation group before it can be deleted. For more information, see Using Role Based Access Control (RBAC). 
+    */
+  def deleteUserGroup(): Request[UserGroup, AWSError] = js.native
+  def deleteUserGroup(callback: js.Function2[/* err */ AWSError, /* data */ UserGroup, Unit]): Request[UserGroup, AWSError] = js.native
+  /**
+    * For Redis engine version 6.x onwards: Deletes a ser group. The user group must first be disassociated from the replcation group before it can be deleted. For more information, see Using Role Based Access Control (RBAC). 
+    */
+  def deleteUserGroup(params: DeleteUserGroupMessage): Request[UserGroup, AWSError] = js.native
+  def deleteUserGroup(
+    params: DeleteUserGroupMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ UserGroup, Unit]
+  ): Request[UserGroup, AWSError] = js.native
   
   /**
     * Returns information about all provisioned clusters if no cluster identifier is specified, or about a specific cache cluster if a cluster identifier is supplied. By default, abbreviated information about the clusters is returned. You can use the optional ShowCacheNodeInfo flag to retrieve detailed information about the cache nodes associated with the clusters. These details include the DNS address and port for the cache node endpoint. If the cluster is in the creating state, only cluster-level information is displayed until all of the nodes are successfully provisioned. If the cluster is in the deleting state, only cluster-level information is displayed. If cache nodes are currently being added to the cluster, node endpoint information and creation time for the additional nodes are not displayed until they are completely provisioned. When the cluster state is available, the cluster is ready for use. If cache nodes are currently being removed from the cluster, no endpoint information for the removed nodes is displayed.
@@ -551,6 +601,34 @@ trait ElastiCache extends Service {
   ): Request[UpdateActionsMessage, AWSError] = js.native
   
   /**
+    * Returns a list of user groups.
+    */
+  def describeUserGroups(): Request[DescribeUserGroupsResult, AWSError] = js.native
+  def describeUserGroups(callback: js.Function2[/* err */ AWSError, /* data */ DescribeUserGroupsResult, Unit]): Request[DescribeUserGroupsResult, AWSError] = js.native
+  /**
+    * Returns a list of user groups.
+    */
+  def describeUserGroups(params: DescribeUserGroupsMessage): Request[DescribeUserGroupsResult, AWSError] = js.native
+  def describeUserGroups(
+    params: DescribeUserGroupsMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeUserGroupsResult, Unit]
+  ): Request[DescribeUserGroupsResult, AWSError] = js.native
+  
+  /**
+    * Returns a list of users.
+    */
+  def describeUsers(): Request[DescribeUsersResult, AWSError] = js.native
+  def describeUsers(callback: js.Function2[/* err */ AWSError, /* data */ DescribeUsersResult, Unit]): Request[DescribeUsersResult, AWSError] = js.native
+  /**
+    * Returns a list of users.
+    */
+  def describeUsers(params: DescribeUsersMessage): Request[DescribeUsersResult, AWSError] = js.native
+  def describeUsers(
+    params: DescribeUsersMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeUsersResult, Unit]
+  ): Request[DescribeUsersResult, AWSError] = js.native
+  
+  /**
     * Remove a secondary cluster from the Global Datastore using the Global Datastore name. The secondary cluster will no longer receive updates from the primary cluster, but will remain as a standalone cluster in that AWS region.
     */
   def disassociateGlobalReplicationGroup(): Request[DisassociateGlobalReplicationGroupResult, AWSError] = js.native
@@ -733,6 +811,31 @@ trait ElastiCache extends Service {
   ): Request[ModifyReplicationGroupShardConfigurationResult, AWSError] = js.native
   
   /**
+    * Changes user password(s) and/or access string.
+    */
+  def modifyUser(): Request[User, AWSError] = js.native
+  def modifyUser(callback: js.Function2[/* err */ AWSError, /* data */ User, Unit]): Request[User, AWSError] = js.native
+  /**
+    * Changes user password(s) and/or access string.
+    */
+  def modifyUser(params: ModifyUserMessage): Request[User, AWSError] = js.native
+  def modifyUser(params: ModifyUserMessage, callback: js.Function2[/* err */ AWSError, /* data */ User, Unit]): Request[User, AWSError] = js.native
+  
+  /**
+    * Changes the list of users that belong to the user group.
+    */
+  def modifyUserGroup(): Request[UserGroup, AWSError] = js.native
+  def modifyUserGroup(callback: js.Function2[/* err */ AWSError, /* data */ UserGroup, Unit]): Request[UserGroup, AWSError] = js.native
+  /**
+    * Changes the list of users that belong to the user group.
+    */
+  def modifyUserGroup(params: ModifyUserGroupMessage): Request[UserGroup, AWSError] = js.native
+  def modifyUserGroup(
+    params: ModifyUserGroupMessage,
+    callback: js.Function2[/* err */ AWSError, /* data */ UserGroup, Unit]
+  ): Request[UserGroup, AWSError] = js.native
+  
+  /**
     * Allows you to purchase a reserved cache node offering.
     */
   def purchaseReservedCacheNodesOffering(): Request[PurchaseReservedCacheNodesOfferingResult, AWSError] = js.native
@@ -835,12 +938,12 @@ trait ElastiCache extends Service {
   ): Request[StartMigrationResponse, AWSError] = js.native
   
   /**
-    * Represents the input of a TestFailover operation which test automatic failover on a specified node group (called shard in the console) in a replication group (called cluster in the console).  Note the following    A customer can use this operation to test automatic failover on up to 5 shards (called node groups in the ElastiCache API and AWS CLI) in any rolling 24-hour period.   If calling this operation on shards in different clusters (called replication groups in the API and CLI), the calls can be made concurrently.     If calling this operation multiple times on different shards in the same Redis (cluster mode enabled) replication group, the first node replacement must complete before a subsequent call can be made.   To determine whether the node replacement is complete you can check Events using the Amazon ElastiCache console, the AWS CLI, or the ElastiCache API. Look for the following automatic failover related events, listed here in order of occurrance:   Replication group message: Test Failover API called for node group &lt;node-group-id&gt;    Cache cluster message: Failover from master node &lt;primary-node-id&gt; to replica node &lt;node-id&gt; completed    Replication group message: Failover from master node &lt;primary-node-id&gt; to replica node &lt;node-id&gt; completed    Cache cluster message: Recovering cache nodes &lt;node-id&gt;    Cache cluster message: Finished recovery for cache nodes &lt;node-id&gt;    For more information see:    Viewing ElastiCache Events in the ElastiCache User Guide     DescribeEvents in the ElastiCache API Reference     Also see, Testing Multi-AZ  in the ElastiCache User Guide.
+    * Represents the input of a TestFailover operation which test automatic failover on a specified node group (called shard in the console) in a replication group (called cluster in the console).  Note the following    A customer can use this operation to test automatic failover on up to 5 shards (called node groups in the ElastiCache API and AWS CLI) in any rolling 24-hour period.   If calling this operation on shards in different clusters (called replication groups in the API and CLI), the calls can be made concurrently.     If calling this operation multiple times on different shards in the same Redis (cluster mode enabled) replication group, the first node replacement must complete before a subsequent call can be made.   To determine whether the node replacement is complete you can check Events using the Amazon ElastiCache console, the AWS CLI, or the ElastiCache API. Look for the following automatic failover related events, listed here in order of occurrance:   Replication group message: Test Failover API called for node group &lt;node-group-id&gt;    Cache cluster message: Failover from primary node &lt;primary-node-id&gt; to replica node &lt;node-id&gt; completed    Replication group message: Failover from primary node &lt;primary-node-id&gt; to replica node &lt;node-id&gt; completed    Cache cluster message: Recovering cache nodes &lt;node-id&gt;    Cache cluster message: Finished recovery for cache nodes &lt;node-id&gt;    For more information see:    Viewing ElastiCache Events in the ElastiCache User Guide     DescribeEvents in the ElastiCache API Reference     Also see, Testing Multi-AZ  in the ElastiCache User Guide.
     */
   def testFailover(): Request[TestFailoverResult, AWSError] = js.native
   def testFailover(callback: js.Function2[/* err */ AWSError, /* data */ TestFailoverResult, Unit]): Request[TestFailoverResult, AWSError] = js.native
   /**
-    * Represents the input of a TestFailover operation which test automatic failover on a specified node group (called shard in the console) in a replication group (called cluster in the console).  Note the following    A customer can use this operation to test automatic failover on up to 5 shards (called node groups in the ElastiCache API and AWS CLI) in any rolling 24-hour period.   If calling this operation on shards in different clusters (called replication groups in the API and CLI), the calls can be made concurrently.     If calling this operation multiple times on different shards in the same Redis (cluster mode enabled) replication group, the first node replacement must complete before a subsequent call can be made.   To determine whether the node replacement is complete you can check Events using the Amazon ElastiCache console, the AWS CLI, or the ElastiCache API. Look for the following automatic failover related events, listed here in order of occurrance:   Replication group message: Test Failover API called for node group &lt;node-group-id&gt;    Cache cluster message: Failover from master node &lt;primary-node-id&gt; to replica node &lt;node-id&gt; completed    Replication group message: Failover from master node &lt;primary-node-id&gt; to replica node &lt;node-id&gt; completed    Cache cluster message: Recovering cache nodes &lt;node-id&gt;    Cache cluster message: Finished recovery for cache nodes &lt;node-id&gt;    For more information see:    Viewing ElastiCache Events in the ElastiCache User Guide     DescribeEvents in the ElastiCache API Reference     Also see, Testing Multi-AZ  in the ElastiCache User Guide.
+    * Represents the input of a TestFailover operation which test automatic failover on a specified node group (called shard in the console) in a replication group (called cluster in the console).  Note the following    A customer can use this operation to test automatic failover on up to 5 shards (called node groups in the ElastiCache API and AWS CLI) in any rolling 24-hour period.   If calling this operation on shards in different clusters (called replication groups in the API and CLI), the calls can be made concurrently.     If calling this operation multiple times on different shards in the same Redis (cluster mode enabled) replication group, the first node replacement must complete before a subsequent call can be made.   To determine whether the node replacement is complete you can check Events using the Amazon ElastiCache console, the AWS CLI, or the ElastiCache API. Look for the following automatic failover related events, listed here in order of occurrance:   Replication group message: Test Failover API called for node group &lt;node-group-id&gt;    Cache cluster message: Failover from primary node &lt;primary-node-id&gt; to replica node &lt;node-id&gt; completed    Replication group message: Failover from primary node &lt;primary-node-id&gt; to replica node &lt;node-id&gt; completed    Cache cluster message: Recovering cache nodes &lt;node-id&gt;    Cache cluster message: Finished recovery for cache nodes &lt;node-id&gt;    For more information see:    Viewing ElastiCache Events in the ElastiCache User Guide     DescribeEvents in the ElastiCache API Reference     Also see, Testing Multi-AZ  in the ElastiCache User Guide.
     */
   def testFailover(params: TestFailoverMessage): Request[TestFailoverResult, AWSError] = js.native
   def testFailover(

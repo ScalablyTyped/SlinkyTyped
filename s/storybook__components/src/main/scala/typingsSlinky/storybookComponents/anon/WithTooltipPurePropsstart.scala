@@ -1,8 +1,7 @@
 package typingsSlinky.storybookComponents.anon
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.popperJs.mod.Modifiers
-import typingsSlinky.popperJs.mod.Placement
+import typingsSlinky.std.Partial
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`right-click`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.click
 import typingsSlinky.storybookComponents.storybookComponentsStrings.hover
@@ -22,13 +21,21 @@ trait WithTooltipPurePropsstart extends js.Object {
   
   var hasChrome: js.UndefOr[Boolean] = js.native
   
-  var modifiers: js.UndefOr[Modifiers] = js.native
+  var modifiers: js.UndefOr[
+    js.Array[
+      Partial[
+        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Modifier<string, {}> */ _
+      ]
+    ]
+  ] = js.native
   
   var onDoubleClick: js.UndefOr[js.Function0[Unit]] = js.native
   
   var onVisibilityChange: js.UndefOr[js.Function1[/* visibility */ Boolean, Unit]] = js.native
   
-  var placement: js.UndefOr[Placement] = js.native
+  var placement: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any
+  ] = js.native
   
   var startOpen: js.UndefOr[Boolean] = js.native
   
@@ -82,7 +89,16 @@ object WithTooltipPurePropsstart {
     def deleteHasChrome: Self = this.set("hasChrome", js.undefined)
     
     @scala.inline
-    def setModifiers(value: Modifiers): Self = this.set("modifiers", value.asInstanceOf[js.Any])
+    def setModifiersVarargs(value: Partial[js.Any]*): Self = this.set("modifiers", js.Array(value :_*))
+    
+    @scala.inline
+    def setModifiers(
+      value: js.Array[
+          Partial[
+            /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Modifier<string, {}> */ _
+          ]
+        ]
+    ): Self = this.set("modifiers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModifiers: Self = this.set("modifiers", js.undefined)
@@ -100,7 +116,9 @@ object WithTooltipPurePropsstart {
     def deleteOnVisibilityChange: Self = this.set("onVisibilityChange", js.undefined)
     
     @scala.inline
-    def setPlacement(value: Placement): Self = this.set("placement", value.asInstanceOf[js.Any])
+    def setPlacement(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any
+    ): Self = this.set("placement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePlacement: Self = this.set("placement", js.undefined)

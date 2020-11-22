@@ -8,14 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BaseTileLayerProperties
   extends LayerProperties
      with ScaleRangeLayerProperties
-     with RefreshableLayerProperties {
+     with RefreshableLayerProperties
+     with BlendLayerProperties {
   
   /**
     * The spatial reference of the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BaseTileLayer.html#spatialReference)
-    *
-    * @default {@link module:esri/geometry/SpatialReference#WebMercator SpatialReference.WebMercator}
     */
   var spatialReference: js.UndefOr[SpatialReferenceProperties] = js.native
   

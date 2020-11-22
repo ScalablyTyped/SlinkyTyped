@@ -69,6 +69,39 @@ object Material extends js.Object {
   val LineStripDrawMode: Double = js.native
   
   /**
+    * MaterialTransparencyMode: Pixels are blended (according to the alpha mode) with the already drawn pixels in the current frame buffer.
+    */
+  val MATERIAL_ALPHABLEND: Double = js.native
+  
+  /**
+    * MaterialTransparencyMode: Alpha Test mode, pixel are discarded below a certain threshold defined by the alpha cutoff value.
+    */
+  val MATERIAL_ALPHATEST: Double = js.native
+  
+  /**
+    * MaterialTransparencyMode: Pixels are blended (according to the alpha mode) with the already drawn pixels in the current frame buffer.
+    * They are also discarded below the alpha cutoff threshold to improve performances.
+    */
+  val MATERIAL_ALPHATESTANDBLEND: Double = js.native
+  
+  /**
+    * The Reoriented Normal Mapping method is used to blend normals.
+    * Details of the algorithm can be found here: https://blog.selfshadow.com/publications/blending-in-detail/
+    */
+  val MATERIAL_NORMALBLENDMETHOD_RNM: Double = js.native
+  
+  /**
+    * The Whiteout method is used to blend normals.
+    * Details of the algorithm can be found here: https://blog.selfshadow.com/publications/blending-in-detail/
+    */
+  val MATERIAL_NORMALBLENDMETHOD_WHITEOUT: Double = js.native
+  
+  /**
+    * MaterialTransparencyMode: No transparency mode, Alpha channel is not use.
+    */
+  val MATERIAL_OPAQUE: Double = js.native
+  
+  /**
     * The dirty misc flag value
     */
   val MiscDirtyFlag: Double = js.native
@@ -91,6 +124,11 @@ object Material extends js.Object {
     * Returns the point list draw mode
     */
   val PointListDrawMode: Double = js.native
+  
+  /**
+    * The dirty prepass flag value
+    */
+  val PrePassDirtyFlag: Double = js.native
   
   /**
     * The dirty texture flag value
@@ -132,6 +170,8 @@ object Material extends js.Object {
   val _LightsDirtyCallBack: js.Any = js.native
   
   val _MiscDirtyCallBack: js.Any = js.native
+  
+  val _PrePassDirtyCallBack: js.Any = js.native
   
   val _RunDirtyCallBacks: js.Any = js.native
   

@@ -10,7 +10,7 @@ trait TagResourceRequest extends js.Object {
   /**
     * The ARN of the canary that you're adding tags to. The ARN format of a canary is arn:aws:synthetics:Region:account-id:canary:canary-name .
     */
-  var ResourceArn: Arn = js.native
+  var ResourceArn: CanaryArn = js.native
   
   /**
     * The list of key-value pairs to associate with the canary.
@@ -20,7 +20,7 @@ trait TagResourceRequest extends js.Object {
 object TagResourceRequest {
   
   @scala.inline
-  def apply(ResourceArn: Arn, Tags: TagMap): TagResourceRequest = {
+  def apply(ResourceArn: CanaryArn, Tags: TagMap): TagResourceRequest = {
     val __obj = js.Dynamic.literal(ResourceArn = ResourceArn.asInstanceOf[js.Any], Tags = Tags.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagResourceRequest]
   }
@@ -41,7 +41,7 @@ object TagResourceRequest {
     }
     
     @scala.inline
-    def setResourceArn(value: Arn): Self = this.set("ResourceArn", value.asInstanceOf[js.Any])
+    def setResourceArn(value: CanaryArn): Self = this.set("ResourceArn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTags(value: TagMap): Self = this.set("Tags", value.asInstanceOf[js.Any])

@@ -10,22 +10,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SearchBoxMixinOptions[T] extends js.Object {
   
-  /** @name SearchBoxMixin.Options.searchEditorOptions */
+  /**
+    * [descr:SearchBoxMixin.Options.searchEditorOptions]
+    */
   var searchEditorOptions: js.UndefOr[dxTextBoxOptions[dxTextBox]] = js.native
   
-  /** @name SearchBoxMixin.Options.searchEnabled */
+  /**
+    * [descr:SearchBoxMixin.Options.searchEnabled]
+    */
   var searchEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name SearchBoxMixin.Options.searchExpr */
+  /**
+    * [descr:SearchBoxMixin.Options.searchExpr]
+    */
   var searchExpr: js.UndefOr[String | js.Function | (js.Array[String | js.Function])] = js.native
   
-  /** @name SearchBoxMixin.Options.searchMode */
+  /**
+    * [descr:SearchBoxMixin.Options.searchMode]
+    */
   var searchMode: js.UndefOr[contains | startswith | equals] = js.native
   
-  /** @name SearchBoxMixin.Options.searchTimeout */
+  /**
+    * [descr:SearchBoxMixin.Options.searchTimeout]
+    */
   var searchTimeout: js.UndefOr[Double] = js.native
   
-  /** @name SearchBoxMixin.Options.searchValue */
+  /**
+    * [descr:SearchBoxMixin.Options.searchValue]
+    */
   var searchValue: js.UndefOr[String] = js.native
 }
 object SearchBoxMixinOptions {

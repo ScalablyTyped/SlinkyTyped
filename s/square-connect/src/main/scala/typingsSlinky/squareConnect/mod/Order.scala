@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Order () extends js.Object {
   
   /**
-    * Timestamp for when the order was closed. In RFC 3339 format, e.g., "2016-09-04T23:59:33.123Z".
+    * Timestamp for when the order reached a terminal [state](#property-state). In RFC 3339 format, e.g., \"2016-09-04T23:59:33.123Z\".
     */
   var closed_at: js.UndefOr[String] = js.native
   
@@ -74,6 +74,13 @@ class Order () extends js.Object {
   var net_amounts: js.UndefOr[OrderMoneyAmounts] = js.native
   
   /**
+    * Pricing options for an order. The options affect how the order's price is calculated.
+    * They can be used, for example, to apply automatic price adjustments that are based on pre-configured
+    * [pricing rules](https://developer.squareup.com/docs/reference/square/objects/CatalogPricingRule).
+    */
+  var pricing_options: js.UndefOr[OrderPricingOptions] = js.native
+  
+  /**
     * A client specified identifier to associate an entity in another system with this order.
     */
   var reference_id: js.UndefOr[String] = js.native
@@ -93,6 +100,11 @@ class Order () extends js.Object {
     * There will be exactly one `Return` object per sale Order being referenced.
     */
   var returns: js.UndefOr[js.Array[OrderReturn]] = js.native
+  
+  /**
+    * A set-like list of rewards that have been added to the order.
+    */
+  var rewards: js.UndefOr[js.Array[OrderReward]] = js.native
   
   /**
     * A positive or negative rounding adjustment to the total of the order, commonly used to apply Cash Rounding when
@@ -143,7 +155,7 @@ class Order () extends js.Object {
   /**
     * The total amount of money collected in service charges for the order.
     * @note `total_service_charge_money` is the sum of `applied_money` fields for each individual service charge.
-    * Therefore, `total_service_charge_money` will only include inclusive tax amounts, not additive tax amounts.
+    *  Therefore, `total_service_charge_money` will only include inclusive tax amounts, not additive tax amounts.
     */
   var total_service_charge_money: js.UndefOr[Money] = js.native
   
@@ -151,6 +163,11 @@ class Order () extends js.Object {
     * The total tax amount of money to collect for the order.
     */
   var total_tax_money: js.UndefOr[Money] = js.native
+  
+  /**
+    * The total tip amount of money to collect for the order.
+    */
+  var total_tip_money: js.UndefOr[Money] = js.native
   
   /**
     * Timestamp for when the order was last updated. In RFC 3339 format, e.g., "2016-09-04T23:59:33.123Z".

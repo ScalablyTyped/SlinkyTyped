@@ -18,9 +18,7 @@ package object mod {
   
   type DateChangedCallback = js.Function2[
     /* date */ typingsSlinky.moment.mod.Moment, 
-    /* type */ js.UndefOr[
-      typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.START_DATE | typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.END_DATE
-    ], 
+    /* type */ typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.START_DATE | typingsSlinky.reactNativeCalendarPicker.reactNativeCalendarPickerStrings.END_DATE, 
     scala.Unit
   ]
   
@@ -28,8 +26,5 @@ package object mod {
   
   type MomentParsable = typingsSlinky.moment.mod.MomentInput
   
-  type SwipeCallback = js.Function1[
-    /* swipeDirection */ typingsSlinky.reactNativeCalendarPicker.mod.SwipeDirection, 
-    scala.Unit
-  ]
+  type MonthChangedCallback = js.Function1[/* date */ typingsSlinky.moment.mod.Moment, scala.Unit]
 }

@@ -8,32 +8,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResolverRuleAssociation extends js.Object {
   
   /**
-    * The ID of the association between a resolver rule and a VPC. Resolver assigns this value when you submit an AssociateResolverRule request.
+    * The ID of the association between a Resolver rule and a VPC. Resolver assigns this value when you submit an AssociateResolverRule request.
     */
   var Id: js.UndefOr[ResourceId] = js.native
   
   /**
-    * The name of an association between a resolver rule and a VPC.
+    * The name of an association between a Resolver rule and a VPC.
     */
   var Name: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.Name] = js.native
   
   /**
-    * The ID of the resolver rule that you associated with the VPC that is specified by VPCId.
+    * The ID of the Resolver rule that you associated with the VPC that is specified by VPCId.
     */
   var ResolverRuleId: js.UndefOr[ResourceId] = js.native
   
   /**
-    * A code that specifies the current status of the association between a resolver rule and a VPC.
+    * A code that specifies the current status of the association between a Resolver rule and a VPC.
     */
   var Status: js.UndefOr[ResolverRuleAssociationStatus] = js.native
   
   /**
-    * A detailed description of the status of the association between a resolver rule and a VPC.
+    * A detailed description of the status of the association between a Resolver rule and a VPC.
     */
   var StatusMessage: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.StatusMessage] = js.native
   
   /**
-    * The ID of the VPC that you associated the resolver rule with.
+    * The ID of the VPC that you associated the Resolver rule with.
     */
   var VPCId: js.UndefOr[ResourceId] = js.native
 }

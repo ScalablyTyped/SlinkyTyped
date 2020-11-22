@@ -13,19 +13,22 @@ class FormGroupDirective protected ()
   extends ControlContainer
      with Form
      with OnChanges {
-  def this(_validators: js.Array[_], _asyncValidators: js.Array[_]) = this()
-  
-  var _asyncValidators: js.Any = js.native
+  def this(
+    validators: js.Array[Validator | ValidatorFn],
+    asyncValidators: js.Array[AsyncValidator | AsyncValidatorFn]
+  ) = this()
   
   var _checkFormPresent: js.Any = js.native
   
+  /**
+    * Reference to an old form group input value, which is needed to cleanup old instance in case it
+    * was replaced with a new one.
+    */
   var _oldForm: js.Any = js.native
   
   var _updateRegistrations: js.Any = js.native
   
   var _updateValidators: js.Any = js.native
-  
-  var _validators: js.Any = js.native
   
   /**
     * @description
@@ -49,6 +52,8 @@ class FormGroupDirective protected ()
     * @param dir The `FormGroupName` directive instance.
     */
   def addFormGroup(dir: FormGroupName): Unit = js.native
+  
+  var asyncValidators: js.Any = js.native
   
   /**
     * @description
@@ -151,4 +156,6 @@ class FormGroupDirective protected ()
     * @param value The new value for the directive's control.
     */
   def updateModel(dir: FormControlName, value: js.Any): Unit = js.native
+  
+  var validators: js.Any = js.native
 }

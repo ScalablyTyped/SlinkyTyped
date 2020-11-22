@@ -9,7 +9,7 @@ trait MaxWidthProps[TLength] extends js.Object {
   
   val maxWidth: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object MaxWidthProps {
     }
     
     @scala.inline
+    def setMaxWidthVarargs(value: js.Any*): Self = this.set("maxWidth", js.Array(value :_*))
+    
+    @scala.inline
     def setMaxWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLength> */ _
         ]
     ): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
     

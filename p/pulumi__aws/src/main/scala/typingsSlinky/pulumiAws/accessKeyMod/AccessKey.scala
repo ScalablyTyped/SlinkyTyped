@@ -22,10 +22,6 @@ class AccessKey protected () extends CustomResource {
   def this(name: String, args: AccessKeyArgs) = this()
   def this(name: String, args: AccessKeyArgs, opts: CustomResourceOptions) = this()
   
-  /**
-    * The encrypted secret, base64 encoded, if `pgpKey` was specified.
-    * > **NOTE:** The encrypted secret may be decrypted using the command line,
-    */
   val encryptedSecret: Output_[String] = js.native
   
   /**
@@ -49,15 +45,6 @@ class AccessKey protected () extends CustomResource {
     * the use of the secret key in automation.
     */
   val secret: Output_[String] = js.native
-  
-  /**
-    * **DEPRECATED** The secret access key converted into an SES SMTP
-    * password by applying [AWS's documented conversion
-    *
-    * @deprecated AWS SigV2 for SES SMTP passwords isy deprecated.
-  Use 'ses_smtp_password_v4' for region-specific AWS SigV4 signed SES SMTP password instead.
-    */
-  val sesSmtpPassword: Output_[String] = js.native
   
   /**
     * The secret access key converted into an SES SMTP

@@ -2,8 +2,8 @@ package typingsSlinky.uifabricStyling.iconsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.facade.ReactElement
+import typingsSlinky.uifabricMergeStyles.irawstyleMod.IRawStyle
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.IFontFace
-import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

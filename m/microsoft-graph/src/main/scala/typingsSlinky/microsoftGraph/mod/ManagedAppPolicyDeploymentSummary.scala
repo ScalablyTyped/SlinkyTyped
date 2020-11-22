@@ -11,16 +11,16 @@ trait ManagedAppPolicyDeploymentSummary extends Entity {
   var configurationDeployedUserCount: js.UndefOr[Double] = js.native
   
   // Not yet documented
-  var configurationDeploymentSummaryPerApp: js.UndefOr[js.Array[ManagedAppPolicyDeploymentSummaryPerApp]] = js.native
+  var configurationDeploymentSummaryPerApp: js.UndefOr[NullableOption[js.Array[ManagedAppPolicyDeploymentSummaryPerApp]]] = js.native
   
   // Not yet documented
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // Not yet documented
   var lastRefreshTime: js.UndefOr[String] = js.native
   
   // Version of the entity.
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[NullableOption[String]] = js.native
 }
 object ManagedAppPolicyDeploymentSummary {
   
@@ -55,16 +55,22 @@ object ManagedAppPolicyDeploymentSummary {
     def setConfigurationDeploymentSummaryPerAppVarargs(value: ManagedAppPolicyDeploymentSummaryPerApp*): Self = this.set("configurationDeploymentSummaryPerApp", js.Array(value :_*))
     
     @scala.inline
-    def setConfigurationDeploymentSummaryPerApp(value: js.Array[ManagedAppPolicyDeploymentSummaryPerApp]): Self = this.set("configurationDeploymentSummaryPerApp", value.asInstanceOf[js.Any])
+    def setConfigurationDeploymentSummaryPerApp(value: NullableOption[js.Array[ManagedAppPolicyDeploymentSummaryPerApp]]): Self = this.set("configurationDeploymentSummaryPerApp", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteConfigurationDeploymentSummaryPerApp: Self = this.set("configurationDeploymentSummaryPerApp", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setConfigurationDeploymentSummaryPerAppNull: Self = this.set("configurationDeploymentSummaryPerApp", null)
+    
+    @scala.inline
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
     
     @scala.inline
     def setLastRefreshTime(value: String): Self = this.set("lastRefreshTime", value.asInstanceOf[js.Any])
@@ -73,9 +79,12 @@ object ManagedAppPolicyDeploymentSummary {
     def deleteLastRefreshTime: Self = this.set("lastRefreshTime", js.undefined)
     
     @scala.inline
-    def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
+    def setVersion(value: NullableOption[String]): Self = this.set("version", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVersion: Self = this.set("version", js.undefined)
+    
+    @scala.inline
+    def setVersionNull: Self = this.set("version", null)
   }
 }

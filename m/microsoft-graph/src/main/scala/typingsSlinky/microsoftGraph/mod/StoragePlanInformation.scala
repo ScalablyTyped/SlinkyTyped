@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StoragePlanInformation extends js.Object {
   
   // Indicates whether there are higher storage quota plans available. Read-only.
-  var upgradeAvailable: js.UndefOr[Boolean] = js.native
+  var upgradeAvailable: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object StoragePlanInformation {
   
@@ -34,9 +34,12 @@ object StoragePlanInformation {
     }
     
     @scala.inline
-    def setUpgradeAvailable(value: Boolean): Self = this.set("upgradeAvailable", value.asInstanceOf[js.Any])
+    def setUpgradeAvailable(value: NullableOption[Boolean]): Self = this.set("upgradeAvailable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUpgradeAvailable: Self = this.set("upgradeAvailable", js.undefined)
+    
+    @scala.inline
+    def setUpgradeAvailableNull: Self = this.set("upgradeAvailable", null)
   }
 }

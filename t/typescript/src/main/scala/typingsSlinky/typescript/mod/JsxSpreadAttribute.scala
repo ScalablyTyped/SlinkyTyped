@@ -9,11 +9,11 @@ trait JsxSpreadAttribute
   extends ObjectLiteralElement
      with JsxAttributeLike {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_JsxSpreadAttribute: typingsSlinky.typescript.mod.SyntaxKind.JsxSpreadAttribute = js.native
+  val kind_JsxSpreadAttribute: typingsSlinky.typescript.mod.SyntaxKind.JsxSpreadAttribute = js.native
   
   @JSName("parent")
-  var parent_JsxSpreadAttribute: JsxAttributes = js.native
+  val parent_JsxSpreadAttribute: JsxAttributes = js.native
 }

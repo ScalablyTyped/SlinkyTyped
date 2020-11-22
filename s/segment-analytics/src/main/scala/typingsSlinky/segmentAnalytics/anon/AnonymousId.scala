@@ -10,7 +10,8 @@ trait AnonymousId extends js.Object {
   def anonymousId(): String = js.native
   def anonymousId(newId: String): String = js.native
   
-  def id(): String = js.native
+  def id(): js.UndefOr[String | Null] = js.native
+  def id(newId: String): js.UndefOr[String | Null] = js.native
   
   def logout(): Unit = js.native
   

@@ -13,6 +13,11 @@ trait Cluster extends js.Object {
   var BackupPolicy: js.UndefOr[typingsSlinky.awsSdk.cloudhsmv2Mod.BackupPolicy] = js.native
   
   /**
+    * A policy that defines how the service retains backups.
+    */
+  var BackupRetentionPolicy: js.UndefOr[typingsSlinky.awsSdk.cloudhsmv2Mod.BackupRetentionPolicy] = js.native
+  
+  /**
     * Contains one or more certificates or a certificate signing request (CSR).
     */
   var Certificates: js.UndefOr[typingsSlinky.awsSdk.cloudhsmv2Mod.Certificates] = js.native
@@ -105,6 +110,12 @@ object Cluster {
     
     @scala.inline
     def deleteBackupPolicy: Self = this.set("BackupPolicy", js.undefined)
+    
+    @scala.inline
+    def setBackupRetentionPolicy(value: BackupRetentionPolicy): Self = this.set("BackupRetentionPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBackupRetentionPolicy: Self = this.set("BackupRetentionPolicy", js.undefined)
     
     @scala.inline
     def setCertificates(value: Certificates): Self = this.set("Certificates", value.asInstanceOf[js.Any])

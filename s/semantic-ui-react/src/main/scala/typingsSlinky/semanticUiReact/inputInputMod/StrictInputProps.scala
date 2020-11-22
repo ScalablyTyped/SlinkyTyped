@@ -5,7 +5,6 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.InputHTMLAttributes
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.HtmlInputrops
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.labelLabelMod.LabelProps
@@ -151,7 +150,7 @@ object StrictInputProps {
     
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, InputProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -171,7 +170,7 @@ object StrictInputProps {
     
     @scala.inline
     def setInputFunction3(
-      value: (/* component */ ReactType[HtmlInputrops], HtmlInputrops, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, HtmlInputrops, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("input", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -191,7 +190,7 @@ object StrictInputProps {
     
     @scala.inline
     def setLabelFunction3(
-      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("label", js.Any.fromFunction3(value))
     
     @scala.inline

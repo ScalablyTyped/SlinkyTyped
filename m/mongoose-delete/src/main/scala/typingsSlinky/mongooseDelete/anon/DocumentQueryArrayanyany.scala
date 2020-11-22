@@ -47,7 +47,9 @@ trait DocumentQueryArrayanyany extends js.Object {
   @JSName("$where")
   def $where(js_ : js.Function): this.type = js.native
   
+  def all(path: String, `val`: js.Array[_]): this.type = js.native
   def all(path: String, `val`: Double): this.type = js.native
+  def all(`val`: js.Array[_]): this.type = js.native
   /**
     * Specifies an $all query condition.
     * When called with one argument, the most recent path passed to where() is used.

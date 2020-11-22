@@ -6,7 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("yandex-maps", "Polygon")
 @js.native
-class Polygon protected () extends GeoObject_ {
+class Polygon protected ()
+  extends GeoObject_[IPolygonGeometry, js.Object] {
   def this(geometry: js.Array[js.Array[js.Array[Double]]]) = this()
   def this(geometry: js.Object) = this()
   def this(geometry: IPolygonGeometry) = this()

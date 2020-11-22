@@ -86,6 +86,8 @@ object highDynamicRangeIndexMod extends js.Object {
       */
     def RGBE_ReadPixels(uint8array: js.typedarray.Uint8Array, hdrInfo: HDRInfo): js.typedarray.Float32Array = js.native
     
+    var RGBE_ReadPixels_NOT_RLE: js.Any = js.native
+    
     var RGBE_ReadPixels_RLE: js.Any = js.native
     
     var Rgbe2float: js.Any = js.native

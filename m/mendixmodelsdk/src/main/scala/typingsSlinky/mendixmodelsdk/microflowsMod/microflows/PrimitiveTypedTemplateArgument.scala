@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,8 +22,8 @@ class PrimitiveTypedTemplateArgument protected () extends TypedTemplateArgument 
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -29,9 +31,6 @@ class PrimitiveTypedTemplateArgument protected () extends TypedTemplateArgument 
     */
   def expression: String = js.native
   def expression_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FPrimitiveTypedTemplateArgument: IModel = js.native
   
   def `type`: TypedTemplateArgumentType = js.native
   def type_=(newValue: TypedTemplateArgumentType): Unit = js.native

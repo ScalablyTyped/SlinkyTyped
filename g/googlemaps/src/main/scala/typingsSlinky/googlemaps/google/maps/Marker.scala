@@ -1,6 +1,27 @@
 package typingsSlinky.googlemaps.google.maps
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.googlemaps.googlemapsStrings.animation_changed
+import typingsSlinky.googlemaps.googlemapsStrings.click
+import typingsSlinky.googlemaps.googlemapsStrings.clickable_changed
+import typingsSlinky.googlemaps.googlemapsStrings.cursor_changed
+import typingsSlinky.googlemaps.googlemapsStrings.dblclick
+import typingsSlinky.googlemaps.googlemapsStrings.drag
+import typingsSlinky.googlemaps.googlemapsStrings.dragend
+import typingsSlinky.googlemaps.googlemapsStrings.draggable_changed
+import typingsSlinky.googlemaps.googlemapsStrings.dragstart
+import typingsSlinky.googlemaps.googlemapsStrings.flat_changed
+import typingsSlinky.googlemaps.googlemapsStrings.icon_changed
+import typingsSlinky.googlemaps.googlemapsStrings.mousedown
+import typingsSlinky.googlemaps.googlemapsStrings.mouseout
+import typingsSlinky.googlemaps.googlemapsStrings.mouseover
+import typingsSlinky.googlemaps.googlemapsStrings.mouseup
+import typingsSlinky.googlemaps.googlemapsStrings.position_changed
+import typingsSlinky.googlemaps.googlemapsStrings.rightclick
+import typingsSlinky.googlemaps.googlemapsStrings.shape_changed
+import typingsSlinky.googlemaps.googlemapsStrings.title_changed
+import typingsSlinky.googlemaps.googlemapsStrings.visible_changed
+import typingsSlinky.googlemaps.googlemapsStrings.zindex_changed
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,10 +32,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Marker extends MVCObject {
   
-  def addListener(eventName: MarkerChangeOptionEventNames, handler: js.ThisFunction0[/* this */ this.type, Unit]): MapsEventListener = js.native
-  def addListener(
-    eventName: MarkerMouseEventNames,
-    handler: js.ThisFunction1[/* this */ this.type, /* event */ MouseEvent, Unit]
+  /**
+    * @see {@link MarkerHandlerMap#animation_changed animation_changed} event
+    * @see {@link MarkerHandlerMap#click click} event
+    * @see {@link MarkerHandlerMap#clickable_changed clickable_changed} event
+    * @see {@link MarkerHandlerMap#cursor_changed cursor_changed} event
+    * @see {@link MarkerHandlerMap#dblclick dblclick} event
+    * @see {@link MarkerHandlerMap#drag drag} event
+    * @see {@link MarkerHandlerMap#dragend dragend} event
+    * @see {@link MarkerHandlerMap#draggable_changed draggable_changed} event
+    * @see {@link MarkerHandlerMap#dragstart dragstart} event
+    * @see {@link MarkerHandlerMap#flat_changed flat_changed} event
+    * @see {@link MarkerHandlerMap#icon_changed icon_changed} event
+    * @see {@link MarkerHandlerMap#mousedown mousedown} event
+    * @see {@link MarkerHandlerMap#mouseout mouseout} event
+    * @see {@link MarkerHandlerMap#mouseover mouseover} event
+    * @see {@link MarkerHandlerMap#mouseup mouseup} event
+    * @see {@link MarkerHandlerMap#position_changed position_changed} event
+    * @see {@link MarkerHandlerMap#rightclick rightclick} event
+    * @see {@link MarkerHandlerMap#shape_changed shape_changed} event
+    * @see {@link MarkerHandlerMap#title_changed title_changed} event
+    * @see {@link MarkerHandlerMap#visible_changed visible_changed} event
+    * @see {@link MarkerHandlerMap#zindex_changed zindex_changed} event
+    */
+  def addListener[N /* <: /* keyof googlemaps.google.maps.MarkerHandlerMap<this> */ animation_changed | click | clickable_changed | cursor_changed | dblclick | drag | dragend | draggable_changed | dragstart | flat_changed | icon_changed | mousedown | mouseout | mouseover | mouseup | position_changed | rightclick | shape_changed | title_changed | visible_changed | zindex_changed */](
+    eventName: N,
+    handler: /* import warning: importer.ImportType#apply Failed type conversion: googlemaps.google.maps.MarkerHandlerMap<this>[N] */ js.Any
   ): MapsEventListener = js.native
   
   /** @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#Marker.getAnimation Maps JavaScript API} */

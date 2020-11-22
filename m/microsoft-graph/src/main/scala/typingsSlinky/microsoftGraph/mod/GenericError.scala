@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GenericError extends js.Object {
   
   // The error code.
-  var code: js.UndefOr[String] = js.native
+  var code: js.UndefOr[NullableOption[String]] = js.native
   
   // The error message.
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[NullableOption[String]] = js.native
 }
 object GenericError {
   
@@ -37,15 +37,21 @@ object GenericError {
     }
     
     @scala.inline
-    def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])
+    def setCode(value: NullableOption[String]): Self = this.set("code", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCode: Self = this.set("code", js.undefined)
     
     @scala.inline
-    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setCodeNull: Self = this.set("code", null)
+    
+    @scala.inline
+    def setMessage(value: NullableOption[String]): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
+    
+    @scala.inline
+    def setMessageNull: Self = this.set("message", null)
   }
 }

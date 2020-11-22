@@ -4,11 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.StepAreaSeries.hoverStyle */
+/**
+  * [descr:dxChartSeriesTypes.StepAreaSeries.hoverStyle]
+  */
 @js.native
 trait dxChartSeriesTypesStepAreaSeriesHoverStyle extends dxChartSeriesTypesCommonSeriesHoverStyle {
   
-  /** @name dxChartSeriesTypes.StepAreaSeries.hoverStyle.border */
+  /**
+    * [descr:dxChartSeriesTypes.StepAreaSeries.hoverStyle.border]
+    */
   @JSName("border")
   var border_dxChartSeriesTypesStepAreaSeriesHoverStyle: js.UndefOr[dxChartSeriesTypesStepAreaSeriesHoverStyleBorder] = js.native
 }

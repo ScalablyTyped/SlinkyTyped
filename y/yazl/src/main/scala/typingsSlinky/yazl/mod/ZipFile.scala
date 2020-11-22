@@ -1,7 +1,7 @@
 package typingsSlinky.yazl.mod
 
+import typingsSlinky.buffer.mod.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.node.bufferMod.Buffer
 import typingsSlinky.yazl.anon.PartialDirectoryOptions
 import typingsSlinky.yazl.anon.PartialOptions
 import typingsSlinky.yazl.anon.PartialReadStreamOptions

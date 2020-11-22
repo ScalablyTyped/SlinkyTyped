@@ -24,6 +24,8 @@ trait ChartPointOptions extends js.Object {
   var pointStyle: js.UndefOr[PointStyle] = js.native
   
   var radius: js.UndefOr[Double] = js.native
+  
+  var rotation: js.UndefOr[Double] = js.native
 }
 object ChartPointOptions {
   
@@ -113,5 +115,11 @@ object ChartPointOptions {
     
     @scala.inline
     def deleteRadius: Self = this.set("radius", js.undefined)
+    
+    @scala.inline
+    def setRotation(value: Double): Self = this.set("rotation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRotation: Self = this.set("rotation", js.undefined)
   }
 }

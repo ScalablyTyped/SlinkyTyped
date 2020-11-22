@@ -16,7 +16,7 @@ trait DisplayProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Obj
     */
   var display: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
       ThemeType
     ]
   ] = js.native
@@ -50,7 +50,7 @@ object DisplayProps {
     @scala.inline
     def setDisplay(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
           ThemeType
         ]
     ): Self = this.set("display", value.asInstanceOf[js.Any])

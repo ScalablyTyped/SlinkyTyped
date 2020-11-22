@@ -6,5 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSGlobal("AFRAME.THREE.TetrahedronBufferGeometry")
 @js.native
+/**
+	 * @param [radius=1]
+	 * @param [detail=0]
+	 */
 class TetrahedronBufferGeometry ()
   extends typingsSlinky.three.mod.TetrahedronBufferGeometry

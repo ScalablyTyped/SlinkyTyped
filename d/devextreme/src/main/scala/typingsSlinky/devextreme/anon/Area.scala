@@ -5,7 +5,6 @@ import typingsSlinky.devextreme.mod.DevExpress.data.PivotGridDataSourceField
 import typingsSlinky.devextreme.mod.DevExpress.events.event
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxPivotGrid
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxPivotGridPivotGridCell
-import typingsSlinky.devextreme.mod.global.JQueryEventObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,8 +31,6 @@ trait Area extends js.Object {
   var element: js.UndefOr[dxElement] = js.native
   
   var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
-  
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
   
@@ -129,12 +126,6 @@ object Area {
     
     @scala.inline
     def deleteEvent: Self = this.set("event", js.undefined)
-    
-    @scala.inline
-    def setJQueryEvent(value: JQueryEventObject): Self = this.set("jQueryEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteJQueryEvent: Self = this.set("jQueryEvent", js.undefined)
     
     @scala.inline
     def setModel(value: js.Any): Self = this.set("model", value.asInstanceOf[js.Any])

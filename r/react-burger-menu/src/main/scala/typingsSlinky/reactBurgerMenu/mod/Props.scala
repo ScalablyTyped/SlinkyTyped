@@ -54,6 +54,12 @@ trait Props extends js.Object {
   
   var noTransition: js.UndefOr[Boolean] = js.native
   
+  var onClose: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  var onIconHoverChange: js.UndefOr[js.Function1[/* state */ HoverState, Unit]] = js.native
+  
+  var onOpen: js.UndefOr[js.Function0[Unit]] = js.native
+  
   var onStateChange: js.UndefOr[js.Function1[/* state */ State, Unit]] = js.native
   
   // TODO (Rajab) This can be improved, though I do not know how. From PropTypes:
@@ -229,6 +235,24 @@ object Props {
     
     @scala.inline
     def deleteNoTransition: Self = this.set("noTransition", js.undefined)
+    
+    @scala.inline
+    def setOnClose(value: () => Unit): Self = this.set("onClose", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteOnClose: Self = this.set("onClose", js.undefined)
+    
+    @scala.inline
+    def setOnIconHoverChange(value: /* state */ HoverState => Unit): Self = this.set("onIconHoverChange", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnIconHoverChange: Self = this.set("onIconHoverChange", js.undefined)
+    
+    @scala.inline
+    def setOnOpen(value: () => Unit): Self = this.set("onOpen", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteOnOpen: Self = this.set("onOpen", js.undefined)
     
     @scala.inline
     def setOnStateChange(value: /* state */ State => Unit): Self = this.set("onStateChange", js.Any.fromFunction1(value))

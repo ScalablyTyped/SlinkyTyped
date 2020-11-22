@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object labelMod {
   
-  type Label[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.labelMod.LabelProps]
+  type Label = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.labelMod.LabelProps]
 }

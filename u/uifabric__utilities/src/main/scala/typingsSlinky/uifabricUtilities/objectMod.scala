@@ -1,5 +1,6 @@
 package typingsSlinky.uifabricUtilities
 
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,6 +21,8 @@ object objectMod extends js.Object {
       js.UndefOr[T]
     ]
   ): js.UndefOr[js.Array[js.UndefOr[T]]] = js.native
+  
+  def omit[TObj /* <: Record[String, _] */](obj: TObj, exclusions: js.Array[/* keyof TObj */ String]): TObj = js.native
   
   def shallowCompare[TA /* <: js.Any */, TB /* <: js.Any */](a: TA, b: TB): Boolean = js.native
   

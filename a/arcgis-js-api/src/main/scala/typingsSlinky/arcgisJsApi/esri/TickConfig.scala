@@ -33,28 +33,21 @@ trait TickConfig extends Object {
   var labelsVisible: js.UndefOr[Boolean] = js.native
   
   /**
-    * The mode or method of positioning ticks along the slider track. See the table below for a list of possible values.
-    *
-    * Possible Value | Description
-    * ---------------|------------
-    * count | Places a fixed number of ticks (provided in the `values` property) at equal distances from each other below the slider track.
-    * percent | When set, and a single number is set on the `values` property, ticks will be placed at the specified percentage interval along the length of the slider. For example, when `mode` is percent and `values` is `5`, then 20 ticks will be placed below the slider track (at 5-percent intervals from each other). If an array of `values` is provided, the values are interpreted as percentages along the slider. So if `values` is `[10, 50, 90]`, then three ticks will be placed below the track; one at the midway point, and two 10 percent of the length from either end of the slider.
-    * position | Indicates that ticks will only be placed at the values specified in the `values` property.
-    *
+    * The mode or method of positioning ticks along the slider track.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slider.html#TickConfig)
     */
   var mode: count | percent | position = js.native
   
   /**
-    * Callback that fires for each tick. You can override default behaviors and styles with this property.
+    * Callback that fires for each tick.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slider.html#TickConfig)
     */
   var tickCreatedFunction: js.UndefOr[TickCreatedFunction] = js.native
   
   /**
-    * Indicates where ticks will be rendered below the track. See the description for `mode` for more information about how this property is interpreted by each mode.
+    * Indicates where ticks will be rendered below the track.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slider.html#TickConfig)
     */

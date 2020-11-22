@@ -30,7 +30,7 @@ trait GetRestrictionsForOrg extends js.Object {
     * Shows which group of GitHub users can interact with this organization and when the restriction expires. If there are no restrictions, you will see an empty response.
     */
   @JSName("getRestrictionsForOrg")
-  var getRestrictionsForOrg_Original: `156` = js.native
+  var getRestrictionsForOrg_Original: `159` = js.native
   
   /**
     * Shows which group of GitHub users can interact with this repository and when the restriction expires. If there are no restrictions, you will see an empty response.
@@ -50,7 +50,7 @@ trait GetRestrictionsForOrg extends js.Object {
     * Shows which group of GitHub users can interact with this repository and when the restriction expires. If there are no restrictions, you will see an empty response.
     */
   @JSName("getRestrictionsForRepo")
-  var getRestrictionsForRepo_Original: `157` = js.native
+  var getRestrictionsForRepo_Original: `160` = js.native
   
   /**
     * Removes all interaction restrictions from public repositories in the given organization. You must be an organization owner to remove restrictions.
@@ -70,7 +70,7 @@ trait GetRestrictionsForOrg extends js.Object {
     * Removes all interaction restrictions from public repositories in the given organization. You must be an organization owner to remove restrictions.
     */
   @JSName("removeRestrictionsForOrg")
-  var removeRestrictionsForOrg_Original: `158` = js.native
+  var removeRestrictionsForOrg_Original: `161` = js.native
   
   /**
     * Removes all interaction restrictions from the given repository. You must have owner or admin access to remove restrictions.
@@ -90,7 +90,7 @@ trait GetRestrictionsForOrg extends js.Object {
     * Removes all interaction restrictions from the given repository. You must have owner or admin access to remove restrictions.
     */
   @JSName("removeRestrictionsForRepo")
-  var removeRestrictionsForRepo_Original: `159` = js.native
+  var removeRestrictionsForRepo_Original: `162` = js.native
   
   /**
     * Temporarily restricts interactions to certain GitHub users in any public repository in the given organization. You must be an organization owner to set these restrictions.
@@ -110,7 +110,7 @@ trait GetRestrictionsForOrg extends js.Object {
     * Temporarily restricts interactions to certain GitHub users in any public repository in the given organization. You must be an organization owner to set these restrictions.
     */
   @JSName("setRestrictionsForOrg")
-  var setRestrictionsForOrg_Original: `160` = js.native
+  var setRestrictionsForOrg_Original: `163` = js.native
   
   /**
     * Temporarily restricts interactions to certain GitHub users within the given repository. You must have owner or admin access to set restrictions.
@@ -130,5 +130,5 @@ trait GetRestrictionsForOrg extends js.Object {
     * Temporarily restricts interactions to certain GitHub users within the given repository. You must have owner or admin access to set restrictions.
     */
   @JSName("setRestrictionsForRepo")
-  var setRestrictionsForRepo_Original: `161` = js.native
+  var setRestrictionsForRepo_Original: `164` = js.native
 }

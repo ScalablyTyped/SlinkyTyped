@@ -13,6 +13,11 @@ trait PostContentRequest extends js.Object {
   var accept: js.UndefOr[Accept] = js.native
   
   /**
+    * A list of contexts active for the request. A context can be activated when a previous intent is fulfilled, or by including the context in the request, If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the session. If you specify an empty list, all contexts for the session are cleared.
+    */
+  var activeContexts: js.UndefOr[ActiveContextsString] = js.native
+  
+  /**
     * Alias of the Amazon Lex bot.
     */
   var botAlias: BotAlias = js.native
@@ -99,6 +104,12 @@ object PostContentRequest {
     
     @scala.inline
     def deleteAccept: Self = this.set("accept", js.undefined)
+    
+    @scala.inline
+    def setActiveContexts(value: ActiveContextsString): Self = this.set("activeContexts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteActiveContexts: Self = this.set("activeContexts", js.undefined)
     
     @scala.inline
     def setRequestAttributes(value: AttributesString): Self = this.set("requestAttributes", value.asInstanceOf[js.Any])

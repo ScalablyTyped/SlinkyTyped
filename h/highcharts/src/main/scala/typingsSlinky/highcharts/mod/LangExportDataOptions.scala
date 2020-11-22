@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LangExportDataOptions extends js.Object {
   
   /**
+    * (Highcharts, Highstock, Highmaps, Gantt) The annotation column title.
+    */
+  var annotationHeader: js.UndefOr[String] = js.native
+  
+  /**
     * (Highcharts, Highstock, Highmaps, Gantt) The category column title when
     * axis type set to "datetime".
     */
@@ -40,6 +45,12 @@ object LangExportDataOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAnnotationHeader(value: String): Self = this.set("annotationHeader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnnotationHeader: Self = this.set("annotationHeader", js.undefined)
     
     @scala.inline
     def setCategoryDatetimeHeader(value: String): Self = this.set("categoryDatetimeHeader", value.asInstanceOf[js.Any])

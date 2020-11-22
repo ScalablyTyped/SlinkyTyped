@@ -7,14 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ModuleNameMapperConfig extends js.Object {
   
-  var moduleName: String = js.native
+  var moduleName: String | js.Array[String] = js.native
   
   var regex: js.RegExp = js.native
 }
 object ModuleNameMapperConfig {
   
   @scala.inline
-  def apply(moduleName: String, regex: js.RegExp): ModuleNameMapperConfig = {
+  def apply(moduleName: String | js.Array[String], regex: js.RegExp): ModuleNameMapperConfig = {
     val __obj = js.Dynamic.literal(moduleName = moduleName.asInstanceOf[js.Any], regex = regex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModuleNameMapperConfig]
   }
@@ -35,7 +35,10 @@ object ModuleNameMapperConfig {
     }
     
     @scala.inline
-    def setModuleName(value: String): Self = this.set("moduleName", value.asInstanceOf[js.Any])
+    def setModuleNameVarargs(value: String*): Self = this.set("moduleName", js.Array(value :_*))
+    
+    @scala.inline
+    def setModuleName(value: String | js.Array[String]): Self = this.set("moduleName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRegex(value: js.RegExp): Self = this.set("regex", value.asInstanceOf[js.Any])

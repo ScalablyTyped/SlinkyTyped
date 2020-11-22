@@ -26,6 +26,8 @@ object labelMod extends js.Object {
       */
     var color: js.UndefOr[Color] = js.native
     
+    def colorChanged(): Unit = js.native
+    
     @JSName("componentDidLoad")
     def componentDidLoad_MLabel(): Unit = js.native
     
@@ -34,7 +36,17 @@ object labelMod extends js.Object {
     
     var el: HTMLElement = js.native
     
+    var emitColor: js.Any = js.native
+    
     var emitStyle: js.Any = js.native
+    
+    var inRange: js.Any = js.native
+    
+    /**
+      * Emitted when the color changes.
+      * @internal
+      */
+    var ionColor: EventEmitter[StyleEventDetail] = js.native
     
     /**
       * Emitted when the styles change.

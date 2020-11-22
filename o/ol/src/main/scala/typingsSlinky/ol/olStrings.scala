@@ -202,9 +202,6 @@ object olStrings {
   def getValues: getValues = "getValues".asInstanceOf[getValues]
   
   @scala.inline
-  def image: image = "image".asInstanceOf[image]
-  
-  @scala.inline
   def imageloadend: imageloadend = "imageloadend".asInstanceOf[imageloadend]
   
   @scala.inline
@@ -227,9 +224,6 @@ object olStrings {
   
   @scala.inline
   def movestart: movestart = "movestart".asInstanceOf[movestart]
-  
-  @scala.inline
-  def pixel: pixel = "pixel".asInstanceOf[pixel]
   
   @scala.inline
   def pointerdrag: pointerdrag = "pointerdrag".asInstanceOf[pointerdrag]
@@ -490,9 +484,6 @@ object olStrings {
   sealed trait getValues extends js.Object
   
   @js.native
-  sealed trait image extends js.Object
-  
-  @js.native
   sealed trait imageloadend extends js.Object
   
   @js.native
@@ -515,9 +506,6 @@ object olStrings {
   
   @js.native
   sealed trait movestart extends js.Object
-  
-  @js.native
-  sealed trait pixel extends js.Object
   
   @js.native
   sealed trait pointerdrag extends js.Object

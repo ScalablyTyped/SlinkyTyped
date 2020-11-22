@@ -11,9 +11,9 @@ object Controller extends js.Object {
   /**
     * Register controller
     *
-    * @param {string} name - controller name
+    * @param name - controller name
     *
-    * @returns {ngESDecorator} - decorated class
+    * @returns decorated class
     */
   def apply(name: String): ngESDecorator = js.native
 }

@@ -16,7 +16,7 @@ trait TextShadowProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.
     */
   var textShadow: js.UndefOr[
     ResponsiveValue[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextShadowProperty */ _) | Double, 
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextShadow */ _) | Double, 
       ThemeType
     ]
   ] = js.native
@@ -50,7 +50,7 @@ object TextShadowProps {
     @scala.inline
     def setTextShadow(
       value: ResponsiveValue[
-          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextShadowProperty */ _) | Double, 
+          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextShadow */ _) | Double, 
           ThemeType
         ]
     ): Self = this.set("textShadow", value.asInstanceOf[js.Any])

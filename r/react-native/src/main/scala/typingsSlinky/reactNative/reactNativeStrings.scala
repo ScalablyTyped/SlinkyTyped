@@ -6,6 +6,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AlertType
 import typingsSlinky.reactNative.mod.Animated.ExtrapolateType
+import typingsSlinky.reactNative.mod.Animated.NonAnimatedProps
 import typingsSlinky.reactNative.mod.AppStateEvent
 import typingsSlinky.reactNative.mod.AppStateStatus
 import typingsSlinky.reactNative.mod.CameraRollAssetType
@@ -147,7 +148,7 @@ object reactNativeStrings {
   def Videos: Videos = "Videos".asInstanceOf[Videos]
   
   @scala.inline
-  def WithAnimatedValue: WithAnimatedValue = "WithAnimatedValue".asInstanceOf[WithAnimatedValue]
+  def WithAnimatedObject: WithAnimatedObject = "WithAnimatedObject".asInstanceOf[WithAnimatedObject]
   
   @scala.inline
   def _empty: _empty = "".asInstanceOf[_empty]
@@ -516,6 +517,9 @@ object reactNativeStrings {
   def extend: extend = "extend".asInstanceOf[extend]
   
   @scala.inline
+  def extension: extension = "extension".asInstanceOf[extension]
+  
+  @scala.inline
   def fade: fade = "fade".asInstanceOf[fade]
   
   @scala.inline
@@ -816,6 +820,9 @@ object reactNativeStrings {
   def nameSuffix: nameSuffix = "nameSuffix".asInstanceOf[nameSuffix]
   
   @scala.inline
+  def native: native = "native".asInstanceOf[native]
+  
+  @scala.inline
   def navigate: navigate = "navigate".asInstanceOf[navigate]
   
   @scala.inline
@@ -982,6 +989,9 @@ object reactNativeStrings {
   
   @scala.inline
   def reduceTransparencyChanged: reduceTransparencyChanged = "reduceTransparencyChanged".asInstanceOf[reduceTransparencyChanged]
+  
+  @scala.inline
+  def ref: ref = "ref".asInstanceOf[ref]
   
   @scala.inline
   def register: register = "register".asInstanceOf[register]
@@ -1173,6 +1183,9 @@ object reactNativeStrings {
   def `underline line-through`: `underline line-through` = ("underline line-through").asInstanceOf[`underline line-through`]
   
   @scala.inline
+  def unknown: unknown = "unknown".asInstanceOf[unknown]
+  
+  @scala.inline
   def `unless-editing`: `unless-editing` = "unless-editing".asInstanceOf[`unless-editing`]
   
   @scala.inline
@@ -1352,7 +1365,7 @@ object reactNativeStrings {
   sealed trait Videos extends CameraRollAssetType
   
   @js.native
-  sealed trait WithAnimatedValue extends js.Object
+  sealed trait WithAnimatedObject extends js.Object
   
   @js.native
   sealed trait _empty extends XMLHttpRequestResponseType
@@ -1741,6 +1754,9 @@ object reactNativeStrings {
   sealed trait extend extends ExtrapolateType
   
   @js.native
+  sealed trait extension extends AppStateStatus
+  
+  @js.native
   sealed trait fade extends StatusBarAnimation
   
   @js.native
@@ -1895,7 +1911,9 @@ object reactNativeStrings {
   sealed trait justify extends js.Object
   
   @js.native
-  sealed trait key extends AccessibilityTrait
+  sealed trait key
+    extends AccessibilityTrait
+       with NonAnimatedProps
   
   @js.native
   sealed trait keyboard extends KeyboardEventEasing
@@ -2052,6 +2070,9 @@ object reactNativeStrings {
   
   @js.native
   sealed trait nameSuffix extends js.Object
+  
+  @js.native
+  sealed trait native extends PlatformOSType
   
   @js.native
   sealed trait navigate extends RequestMode
@@ -2230,6 +2251,9 @@ object reactNativeStrings {
   
   @js.native
   sealed trait reduceTransparencyChanged extends AccessibilityChangeEventName
+  
+  @js.native
+  sealed trait ref extends NonAnimatedProps
   
   @js.native
   sealed trait register extends PushNotificationEventName
@@ -2436,6 +2460,9 @@ object reactNativeStrings {
   
   @js.native
   sealed trait `underline line-through` extends js.Object
+  
+  @js.native
+  sealed trait unknown extends AppStateStatus
   
   @js.native
   sealed trait `unless-editing` extends js.Object

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AwsEc2NetworkInterfaceAttachment extends js.Object {
   
   /**
-    * The timestamp indicating when the attachment initiated.
+    * Indicates when the attachment initiated. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var AttachTime: js.UndefOr[NonEmptyString] = js.native
   

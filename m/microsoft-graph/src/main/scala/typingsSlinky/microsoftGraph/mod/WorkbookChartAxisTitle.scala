@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookChartAxisTitle extends Entity {
   
   // Represents the formatting of chart axis title. Read-only.
-  var format: js.UndefOr[WorkbookChartAxisTitleFormat] = js.native
+  var format: js.UndefOr[NullableOption[WorkbookChartAxisTitleFormat]] = js.native
   
   // Represents the axis title.
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[NullableOption[String]] = js.native
   
   // A boolean that specifies the visibility of an axis title.
   var visible: js.UndefOr[Boolean] = js.native
@@ -40,16 +40,22 @@ object WorkbookChartAxisTitle {
     }
     
     @scala.inline
-    def setFormat(value: WorkbookChartAxisTitleFormat): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setFormat(value: NullableOption[WorkbookChartAxisTitleFormat]): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
     
     @scala.inline
-    def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])
+    def setFormatNull: Self = this.set("format", null)
+    
+    @scala.inline
+    def setText(value: NullableOption[String]): Self = this.set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteText: Self = this.set("text", js.undefined)
+    
+    @scala.inline
+    def setTextNull: Self = this.set("text", null)
     
     @scala.inline
     def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])

@@ -12,15 +12,15 @@ trait TildeNode
   
   var contents: js.Array[FragmentNode] = js.native
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: tilde = js.native
 }
 object TildeNode {
   
   @scala.inline
-  def apply(contents: js.Array[FragmentNode], name: tilde): TildeNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(contents: js.Array[FragmentNode], location: LocationRange, name: tilde): TildeNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[TildeNode]
   }
   
@@ -46,12 +46,9 @@ object TildeNode {
     def setContents(value: js.Array[FragmentNode]): Self = this.set("contents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: tilde): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
+    def setName(value: tilde): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

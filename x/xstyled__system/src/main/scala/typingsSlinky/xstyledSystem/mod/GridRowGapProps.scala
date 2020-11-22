@@ -9,7 +9,7 @@ trait GridRowGapProps[TLength] extends js.Object {
   
   val gridRowGap: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowGapProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRowGap<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object GridRowGapProps {
     }
     
     @scala.inline
+    def setGridRowGapVarargs(value: js.Any*): Self = this.set("gridRowGap", js.Array(value :_*))
+    
+    @scala.inline
     def setGridRowGap(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridRowGapProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridRowGap<TLength> */ _
         ]
     ): Self = this.set("gridRowGap", value.asInstanceOf[js.Any])
     

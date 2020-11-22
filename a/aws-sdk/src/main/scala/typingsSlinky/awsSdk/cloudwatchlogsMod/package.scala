@@ -29,7 +29,7 @@ package object cloudwatchlogsMod {
   type Destinations = js.Array[typingsSlinky.awsSdk.cloudwatchlogsMod.Destination]
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.Random
+    - typingsSlinky.awsSdk.awsSdkStrings.Random_
     - typingsSlinky.awsSdk.awsSdkStrings.ByLogStream
     - java.lang.String
   */

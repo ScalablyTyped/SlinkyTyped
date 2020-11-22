@@ -7,8 +7,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("dockerode", "Service")
 @js.native
-class Service protected () extends js.Object {
+class Service protected () extends Meta {
   def this(modem: js.Any, id: String) = this()
+  
+  var Endpoint: js.UndefOr[typingsSlinky.dockerode.mod.Endpoint] = js.native
+  
+  var ID: String = js.native
+  
+  var JobStatus: js.UndefOr[typingsSlinky.dockerode.mod.JobStatus] = js.native
+  
+  var PreviousSpec: js.UndefOr[ServiceSpec] = js.native
+  
+  var ServiceStatus: js.UndefOr[typingsSlinky.dockerode.mod.ServiceStatus] = js.native
+  
+  var Spec: js.UndefOr[ServiceSpec] = js.native
+  
+  var UpdateStatus: js.UndefOr[typingsSlinky.dockerode.mod.UpdateStatus] = js.native
   
   var id: String = js.native
   

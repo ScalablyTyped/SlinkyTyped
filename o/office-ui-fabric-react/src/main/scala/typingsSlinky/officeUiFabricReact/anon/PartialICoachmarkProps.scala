@@ -3,6 +3,7 @@ package typingsSlinky.officeUiFabricReact.anon
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.coachmarkBaseMod.CoachmarkBase
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmark
 import typingsSlinky.officeUiFabricReact.coachmarkTypesMod.ICoachmarkStyleProps
@@ -12,7 +13,6 @@ import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubble
 import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -58,7 +58,7 @@ trait PartialICoachmarkProps extends js.Object {
   
   var isPositionForced: js.UndefOr[Boolean] = js.native
   
-  var key: js.UndefOr[typingsSlinky.react.mod.Key] = js.native
+  var key: js.UndefOr[typingsSlinky.react.mod.Key | Null] = js.native
   
   var mouseProximityOffset: js.UndefOr[Double] = js.native
   
@@ -232,6 +232,9 @@ object PartialICoachmarkProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setMouseProximityOffset(value: Double): Self = this.set("mouseProximityOffset", value.asInstanceOf[js.Any])

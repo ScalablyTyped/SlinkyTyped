@@ -26,11 +26,6 @@ trait MessageRead extends Item {
   def addHandlerAsync(
     eventType: String,
     handler: js.Any,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
-  def addHandlerAsync(
-    eventType: String,
-    handler: js.Any,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
@@ -63,11 +58,6 @@ trait MessageRead extends Item {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def addHandlerAsync(eventType: EventType, handler: js.Any): Unit = js.native
-  def addHandlerAsync(
-    eventType: EventType,
-    handler: js.Any,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
   def addHandlerAsync(
     eventType: EventType,
     handler: js.Any,
@@ -125,12 +115,19 @@ trait MessageRead extends Item {
   var categories: Categories = js.native
   
   /**
-    * Provides access to the Cc (carbon copy) recipients of a message. The type of object and level of access depends on the mode of the
+    * Provides access to the Cc (carbon copy) recipients of a message. The type of object and level of access depend on the mode of the
     * current item.
     *
-    * The `cc` property returns an array that contains an `EmailAddressDetails` object for each recipient listed on the Cc line of the message.
-    * By default, the collection is limited to a maximum of 100 members. However, in Outlook on the web, you can get 20 members maximum, while
-    * on Windows and Mac, you can get 500 members maximum.
+    * The `cc` property returns an array that contains an {@link Office.EmailAddressDetails | EmailAddressDetails} object for
+    * each recipient listed on the **Cc** line of the message. Collection size limits:
+    *
+    * - Windows: 500 members
+    *
+    * - Mac: 100 members
+    *
+    * - Web browser: 20 members
+    *
+    * - Other: No limit
     *
     * @remarks
     *
@@ -220,7 +217,7 @@ trait MessageRead extends Item {
     *
     * **Note**: This method is not supported in Outlook on iOS or Android.
     *
-    * [Api set: Mailbox Preview]
+    * [Api set: Mailbox 1.9]
     *
     * @remarks
     *
@@ -234,8 +231,6 @@ trait MessageRead extends Item {
     *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
     * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter,
     *                `asyncResult`, which is an `Office.AsyncResult` object.
-    *
-    * @beta
     */
   def displayReplyAllFormAsync(formData: String): Unit = js.native
   def displayReplyAllFormAsync(
@@ -298,7 +293,7 @@ trait MessageRead extends Item {
     *
     * **Note**: This method is not supported in Outlook on iOS or Android.
     *
-    * [Api set: Mailbox Preview]
+    * [Api set: Mailbox 1.9]
     *
     * @remarks
     *
@@ -312,8 +307,6 @@ trait MessageRead extends Item {
     *        `asyncContext`: Developers can provide any object they wish to access in the callback method.
     * @param callback - Optional. When the method completes, the function passed in the `callback` parameter is called with a single parameter,
     *                `asyncResult`, which is an `Office.AsyncResult` object.
-    *
-    * @beta
     */
   def displayReplyFormAsync(formData: String): Unit = js.native
   def displayReplyFormAsync(
@@ -395,7 +388,6 @@ trait MessageRead extends Item {
     *                If the call fails, the `asyncResult.error` property will contain an error code with the reason for the failure.
     */
   def getAllInternetHeadersAsync(): Unit = js.native
-  def getAllInternetHeadersAsync(callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]): Unit = js.native
   def getAllInternetHeadersAsync(
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
@@ -435,10 +427,6 @@ trait MessageRead extends Item {
     *                an error code with the reason for the failure.
     */
   def getAttachmentContentAsync(attachmentId: String): Unit = js.native
-  def getAttachmentContentAsync(
-    attachmentId: String,
-    callback: js.Function1[/* asyncResult */ AsyncResult[AttachmentContent], Unit]
-  ): Unit = js.native
   def getAttachmentContentAsync(
     attachmentId: String,
     options: js.UndefOr[scala.Nothing],
@@ -580,7 +568,6 @@ trait MessageRead extends Item {
     * @beta
     */
   def getInitializationContextAsync(): Unit = js.native
-  def getInitializationContextAsync(callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]): Unit = js.native
   def getInitializationContextAsync(
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
@@ -692,7 +679,10 @@ trait MessageRead extends Item {
   /**
     * Gets the properties of an appointment or message in a shared folder, calendar, or mailbox.
     *
-    * **Note**: This method is not supported in Outlook on Mac, iOS, or Android.
+    * For more information around using this API, see the
+    * {@link https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access | delegate access} article.
+    *
+    * **Note**: This method is not supported in Outlook on iOS or Android.
     *
     * [Api set: Mailbox 1.8]
     *
@@ -709,7 +699,10 @@ trait MessageRead extends Item {
   /**
     * Gets the properties of an appointment or message in a shared folder, calendar, or mailbox.
     *
-    * **Note**: This method is not supported in Outlook on Mac, iOS, or Android.
+    * For more information around using this API, see the
+    * {@link https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access | delegate access} article.
+    *
+    * **Note**: This method is not supported in Outlook on iOS or Android.
     *
     * [Api set: Mailbox 1.8]
     *
@@ -731,6 +724,10 @@ trait MessageRead extends Item {
   
   /**
     * Gets the internet message identifier for an email message.
+    *
+    * **Important**: In the **Sent Items** folder, the `internetMessageId` may not be available yet on recently sent items. In that case,
+    * consider using {@link https://docs.microsoft.com/office/dev/add-ins/outlook/web-services | Exchange Web Services} to get this
+    * {@link https://docs.microsoft.com/exchange/client-developer/web-service-reference/internetmessageid | property from the server}.
     *
     * @remarks
     *
@@ -900,7 +897,6 @@ trait MessageRead extends Item {
   var recurrence: Recurrence = js.native
   
   def removeHandlerAsync(eventType: String): Unit = js.native
-  def removeHandlerAsync(eventType: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeHandlerAsync(
     eventType: String,
     options: js.UndefOr[scala.Nothing],
@@ -932,7 +928,6 @@ trait MessageRead extends Item {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def removeHandlerAsync(eventType: EventType): Unit = js.native
-  def removeHandlerAsync(eventType: EventType, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeHandlerAsync(
     eventType: EventType,
     options: js.UndefOr[scala.Nothing],
@@ -1015,12 +1010,19 @@ trait MessageRead extends Item {
   var subject: String = js.native
   
   /**
-    * Provides access to the recipients on the To line of a message. The type of object and level of access depends on the mode of the
+    * Provides access to the recipients on the **To** line of a message. The type of object and level of access depend on the mode of the
     * current item.
     *
-    * The `to` property returns an array that contains an `EmailAddressDetails` object for each recipient listed on the To line of the message.
-    * By default, the collection is limited to a maximum of 100 members. However, in Outlook on the web, you can get 20 members maximum, while
-    * on Windows and Mac, you can get 500 members maximum.
+    * The `to` property returns an array that contains an {@link Office.EmailAddressDetails | EmailAddressDetails} object for
+    * each recipient listed on the **To** line of the message. Collection size limits:
+    *
+    * - Windows: 500 members
+    *
+    * - Mac: 100 members
+    *
+    * - Web browser: 20 members
+    *
+    * - Other: No limit
     *
     * @remarks
     *

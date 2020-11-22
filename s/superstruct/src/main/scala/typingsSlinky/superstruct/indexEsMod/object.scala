@@ -13,9 +13,6 @@ object `object` extends js.Object {
   /**
     * Validate that an object with specific entry values.
     */
-  /**
-    * Validate that an object with specific entry values.
-    */
   def apply[V /* <: StructRecord[_] */](): Struct_[Record[String, _], _] = js.native
   def apply[V /* <: StructRecord[_] */](Structs: V): Struct_[
     OptionalizeObject[

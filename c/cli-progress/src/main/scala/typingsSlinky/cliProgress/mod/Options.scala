@@ -41,6 +41,13 @@ trait Options extends js.Object {
   /** display progress bars with 'total' of zero(0) as empty, not full (default: false) */
   var emptyOnZero: js.UndefOr[Boolean] = js.native
   
+  /**
+    *  trigger an eta calculation update during asynchronous rendering trigger using the current value
+    * - should only be used for long running processes in conjunction with lof `fps` values and large `etaBuffer`
+    * @default false
+    */
+  var etaAsynchronousUpdate: js.UndefOr[Boolean] = js.native
+  
   /** number of updates with which to calculate the eta; higher numbers give a more stable eta (default: 10) */
   var etaBuffer: js.UndefOr[Double] = js.native
   
@@ -188,6 +195,12 @@ object Options {
     
     @scala.inline
     def deleteEmptyOnZero: Self = this.set("emptyOnZero", js.undefined)
+    
+    @scala.inline
+    def setEtaAsynchronousUpdate(value: Boolean): Self = this.set("etaAsynchronousUpdate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEtaAsynchronousUpdate: Self = this.set("etaAsynchronousUpdate", js.undefined)
     
     @scala.inline
     def setEtaBuffer(value: Double): Self = this.set("etaBuffer", value.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.restMod.rest
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,12 +8,15 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
+  *
+  * @ignore
   *
   * In version 8.9.0: introduced
   */
@@ -23,29 +27,30 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
 - typingsSlinky.mendixmodelsdk.restMod.rest.IODataKey because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsODataRemoteEntitySource, parts */ @JSImport("mendixmodelsdk/dist/gen/rest", "rest.ODataKey")
 @js.native
-class ODataKey protected () extends Element {
+class ODataKey protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsODataRemoteEntitySource: ODataRemoteEntitySource = js.native
   @JSName("containerAsODataRemoteEntitySource")
   val containerAsODataRemoteEntitySource_FODataKey: IODataRemoteEntitySource = js.native
   
-  @JSName("model")
-  var model_FODataKey: IModel = js.native
-  
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
   def parts: IList[ODataKeyPart] = js.native
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
   @JSName("parts")
   val parts_FODataKey: IList[IODataKeyPart] = js.native

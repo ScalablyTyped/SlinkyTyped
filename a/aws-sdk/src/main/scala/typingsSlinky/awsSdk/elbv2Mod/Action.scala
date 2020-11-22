@@ -28,7 +28,7 @@ trait Action extends js.Object {
   var ForwardConfig: js.UndefOr[ForwardActionConfig] = js.native
   
   /**
-    * The order for the action. This value is required for rules with multiple actions. The action with the lowest value for order is performed first. The last action to be performed must be one of the following types of actions: a forward, fixed-response, or redirect.
+    * The order for the action. This value is required for rules with multiple actions. The action with the lowest value for order is performed first.
     */
   var Order: js.UndefOr[ActionOrder] = js.native
   

@@ -4,7 +4,6 @@ import typingsSlinky.uirouterAngularjs.uirouterAngularjsStrings.onEnter
 import typingsSlinky.uirouterAngularjs.uirouterAngularjsStrings.onExit
 import typingsSlinky.uirouterAngularjs.uirouterAngularjsStrings.onRetain
 import typingsSlinky.uirouterCore.mod.StateObject
-import typingsSlinky.uirouterCore.stateBuilderMod.BuilderFunction
 import typingsSlinky.uirouterCore.transitionInterfaceMod.TransitionStateHookFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,9 +14,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object onEnterExitRetainMod extends js.Object {
   
   @JSName("getStateHookBuilder")
-  def getStateHookBuilder_onEnter(hookName: onEnter): js.Function2[/* stateObject */ StateObject, /* parentFn */ BuilderFunction, TransitionStateHookFn] = js.native
+  def getStateHookBuilder_onEnter(hookName: onEnter): js.Function1[/* stateObject */ StateObject, TransitionStateHookFn] = js.native
   @JSName("getStateHookBuilder")
-  def getStateHookBuilder_onExit(hookName: onExit): js.Function2[/* stateObject */ StateObject, /* parentFn */ BuilderFunction, TransitionStateHookFn] = js.native
+  def getStateHookBuilder_onExit(hookName: onExit): js.Function1[/* stateObject */ StateObject, TransitionStateHookFn] = js.native
   @JSName("getStateHookBuilder")
-  def getStateHookBuilder_onRetain(hookName: onRetain): js.Function2[/* stateObject */ StateObject, /* parentFn */ BuilderFunction, TransitionStateHookFn] = js.native
+  def getStateHookBuilder_onRetain(hookName: onRetain): js.Function1[/* stateObject */ StateObject, TransitionStateHookFn] = js.native
 }

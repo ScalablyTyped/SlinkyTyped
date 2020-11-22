@@ -41,6 +41,8 @@ object ClientOptions extends js.Object {
     
     /* "OPTIONS" */ val OPTIONS: typingsSlinky.postmark.clientOptionsMod.ClientOptions.HttpMethod.OPTIONS with String = js.native
     
+    /* "PATCH" */ val PATCH: typingsSlinky.postmark.clientOptionsMod.ClientOptions.HttpMethod.PATCH with String = js.native
+    
     /* "POST" */ val POST: typingsSlinky.postmark.clientOptionsMod.ClientOptions.HttpMethod.POST with String = js.native
     
     /* "PUT" */ val PUT: typingsSlinky.postmark.clientOptionsMod.ClientOptions.HttpMethod.PUT with String = js.native

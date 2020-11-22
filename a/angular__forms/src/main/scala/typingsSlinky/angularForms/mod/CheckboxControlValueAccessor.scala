@@ -16,37 +16,32 @@ class CheckboxControlValueAccessor protected () extends ControlValueAccessor {
   var _renderer: js.Any = js.native
   
   /**
-    * @description
     * The registered callback function called when a change event occurs on the input element.
+    * @nodoc
     */
   def onChange(_underscore: js.Any): Unit = js.native
   
   /**
-    * @description
     * The registered callback function called when a blur event occurs on the input element.
+    * @nodoc
     */
   def onTouched(): Unit = js.native
   
   /**
-    * @description
     * Registers a function called when the control value changes.
-    *
-    * @param fn The callback function
+    * @nodoc
     */
   def registerOnChange(fn: js.Function1[/* _ */ js.Any, js.Object]): Unit = js.native
   
   /**
-    * @description
     * Registers a function called when the control is touched.
-    *
-    * @param fn The callback function
+    * @nodoc
     */
   def registerOnTouched(fn: js.Function0[js.Object]): Unit = js.native
   
   /**
     * Sets the "disabled" property on the input element.
-    *
-    * @param isDisabled The disabled value
+    * @nodoc
     */
   @JSName("setDisabledState")
   def setDisabledState_MCheckboxControlValueAccessor(isDisabled: Boolean): Unit = js.native

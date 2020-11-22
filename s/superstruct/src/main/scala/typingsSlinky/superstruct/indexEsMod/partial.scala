@@ -12,9 +12,6 @@ object partial extends js.Object {
   /**
     * Validate that a partial object with specific entry values.
     */
-  /**
-    * Validate that a partial object with specific entry values.
-    */
   def apply[T, V /* <: StructRecord[_] */](Structs: V): Struct_[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof V ]:? superstruct.superstruct/lib/index.es.StructType<V[K]>}

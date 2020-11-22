@@ -323,9 +323,6 @@ object convertUnitsStrings {
   def kJ: kJ = "kJ".asInstanceOf[kJ]
   
   @scala.inline
-  def kM: kM = "kM".asInstanceOf[kM]
-  
-  @scala.inline
   def kPa: kPa = "kPa".asInstanceOf[kPa]
   
   @scala.inline
@@ -339,6 +336,9 @@ object convertUnitsStrings {
   
   @scala.inline
   def kVARh: kVARh = "kVARh".asInstanceOf[kVARh]
+  
+  @scala.inline
+  def kW: kW = "kW".asInstanceOf[kW]
   
   @scala.inline
   def kWh: kWh = "kWh".asInstanceOf[kWh]
@@ -359,6 +359,9 @@ object convertUnitsStrings {
   def klSlashs: klSlashs = "kl/s".asInstanceOf[klSlashs]
   
   @scala.inline
+  def km: km = "km".asInstanceOf[km]
+  
+  @scala.inline
   def km2: km2 = "km2".asInstanceOf[km2]
   
   @scala.inline
@@ -369,9 +372,6 @@ object convertUnitsStrings {
   
   @scala.inline
   def kmSlashh: kmSlashh = "km/h".asInstanceOf[kmSlashh]
-  
-  @scala.inline
-  def km_ : km_ = "km".asInstanceOf[km_]
   
   @scala.inline
   def knot: knot = "knot".asInstanceOf[knot]
@@ -1089,11 +1089,6 @@ object convertUnitsStrings {
        with unit
   
   @js.native
-  sealed trait kM
-    extends uPower
-       with unit
-  
-  @js.native
   sealed trait kPa
     extends uPressure
        with unit
@@ -1116,6 +1111,11 @@ object convertUnitsStrings {
   @js.native
   sealed trait kVARh
     extends uReactiveEnergy
+       with unit
+  
+  @js.native
+  sealed trait kW
+    extends uPower
        with unit
   
   @js.native
@@ -1149,6 +1149,11 @@ object convertUnitsStrings {
        with unit
   
   @js.native
+  sealed trait km
+    extends uDistance
+       with unit
+  
+  @js.native
   sealed trait km2
     extends uArea
        with unit
@@ -1166,11 +1171,6 @@ object convertUnitsStrings {
   @js.native
   sealed trait kmSlashh
     extends uSpeed
-       with unit
-  
-  @js.native
-  sealed trait km_
-    extends uDistance
        with unit
   
   @js.native

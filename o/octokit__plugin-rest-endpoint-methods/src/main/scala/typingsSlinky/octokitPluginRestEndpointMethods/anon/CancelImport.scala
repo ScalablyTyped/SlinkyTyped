@@ -30,7 +30,7 @@ trait CancelImport extends js.Object {
     * Stop an import for a repository.
     */
   @JSName("cancelImport")
-  var cancelImport_Original: `207` = js.native
+  var cancelImport_Original: `210` = js.native
   
   /**
     * Deletes a previous migration archive. Downloadable migration archives are automatically deleted after seven days. Migration metadata, which is returned in the [List user migrations](https://developer.github.com/v3/migrations/users/#list-user-migrations) and [Get a user migration status](https://developer.github.com/v3/migrations/users/#get-a-user-migration-status) endpoints, will continue to be available even after an archive is deleted.
@@ -50,7 +50,7 @@ trait CancelImport extends js.Object {
     * Deletes a previous migration archive. Downloadable migration archives are automatically deleted after seven days. Migration metadata, which is returned in the [List user migrations](https://developer.github.com/v3/migrations/users/#list-user-migrations) and [Get a user migration status](https://developer.github.com/v3/migrations/users/#get-a-user-migration-status) endpoints, will continue to be available even after an archive is deleted.
     */
   @JSName("deleteArchiveForAuthenticatedUser")
-  var deleteArchiveForAuthenticatedUser_Original: `208` = js.native
+  var deleteArchiveForAuthenticatedUser_Original: `211` = js.native
   
   /**
     * Deletes a previous migration archive. Migration archives are automatically deleted after seven days.
@@ -70,7 +70,7 @@ trait CancelImport extends js.Object {
     * Deletes a previous migration archive. Migration archives are automatically deleted after seven days.
     */
   @JSName("deleteArchiveForOrg")
-  var deleteArchiveForOrg_Original: `209` = js.native
+  var deleteArchiveForOrg_Original: `212` = js.native
   
   /**
     * Fetches the URL to a migration archive.
@@ -90,7 +90,7 @@ trait CancelImport extends js.Object {
     * Fetches the URL to a migration archive.
     */
   @JSName("downloadArchiveForOrg")
-  var downloadArchiveForOrg_Original: `210` = js.native
+  var downloadArchiveForOrg_Original: `213` = js.native
   
   /**
     * Fetches the URL to download the migration archive as a `tar.gz` file. Depending on the resources your repository uses, the migration archive can contain JSON files with data for these objects:
@@ -150,7 +150,7 @@ trait CancelImport extends js.Object {
     * The archive will also contain an `attachments` directory that includes all attachment files uploaded to GitHub.com and a `repositories` directory that contains the repository's Git data.
     */
   @JSName("getArchiveForAuthenticatedUser")
-  var getArchiveForAuthenticatedUser_Original: `211` = js.native
+  var getArchiveForAuthenticatedUser_Original: `214` = js.native
   
   /**
     * Each type of source control system represents authors in a different way. For example, a Git commit author has a display name and an email address, but a Subversion commit author just has a username. The GitHub Importer will make the author information valid, but the author might not be correct. For example, it will change the bare Subversion username `hubot` into something like `hubot <hubot@12341234-abab-fefe-8787-fedcba987654>`.
@@ -174,7 +174,7 @@ trait CancelImport extends js.Object {
     * This endpoint and the [Map a commit author](https://developer.github.com/v3/migrations/source_imports/#map-a-commit-author) endpoint allow you to provide correct Git author information.
     */
   @JSName("getCommitAuthors")
-  var getCommitAuthors_Original: `212` = js.native
+  var getCommitAuthors_Original: `215` = js.native
   
   /**
     * View the progress of an import.
@@ -260,7 +260,7 @@ trait CancelImport extends js.Object {
     * *   `large_files_count` - the total number of files larger than 100MB found in the originating repository. To see a list of these files, make a "Get Large Files" request.
     */
   @JSName("getImportStatus")
-  var getImportStatus_Original: `213` = js.native
+  var getImportStatus_Original: `216` = js.native
   
   /**
     * List files larger than 100MB found during the import
@@ -280,7 +280,7 @@ trait CancelImport extends js.Object {
     * List files larger than 100MB found during the import
     */
   @JSName("getLargeFiles")
-  var getLargeFiles_Original: `214` = js.native
+  var getLargeFiles_Original: `217` = js.native
   
   /**
     * Fetches a single user migration. The response includes the `state` of the migration, which can be one of the following values:
@@ -314,7 +314,7 @@ trait CancelImport extends js.Object {
     * Once the migration has been `exported` you can [download the migration archive](https://developer.github.com/v3/migrations/users/#download-a-user-migration-archive).
     */
   @JSName("getStatusForAuthenticatedUser")
-  var getStatusForAuthenticatedUser_Original: `215` = js.native
+  var getStatusForAuthenticatedUser_Original: `218` = js.native
   
   /**
     * Fetches the status of a migration.
@@ -348,7 +348,7 @@ trait CancelImport extends js.Object {
     * *   `failed`, which means the migration failed.
     */
   @JSName("getStatusForOrg")
-  var getStatusForOrg_Original: `216` = js.native
+  var getStatusForOrg_Original: `219` = js.native
   
   /**
     * Lists all migrations a user has started.
@@ -368,7 +368,7 @@ trait CancelImport extends js.Object {
     * Lists all migrations a user has started.
     */
   @JSName("listForAuthenticatedUser")
-  var listForAuthenticatedUser_Original: `217` = js.native
+  var listForAuthenticatedUser_Original: `220` = js.native
   
   /**
     * Lists the most recent migrations.
@@ -388,7 +388,7 @@ trait CancelImport extends js.Object {
     * Lists the most recent migrations.
     */
   @JSName("listForOrg")
-  var listForOrg_Original: `218` = js.native
+  var listForOrg_Original: `221` = js.native
   
   /**
     * List all the repositories for this organization migration.
@@ -408,7 +408,7 @@ trait CancelImport extends js.Object {
     * List all the repositories for this organization migration.
     */
   @JSName("listReposForOrg")
-  var listReposForOrg_Original: `219` = js.native
+  var listReposForOrg_Original: `222` = js.native
   
   /**
     * Lists all the repositories for this user migration.
@@ -428,7 +428,7 @@ trait CancelImport extends js.Object {
     * Lists all the repositories for this user migration.
     */
   @JSName("listReposForUser")
-  var listReposForUser_Original: `220` = js.native
+  var listReposForUser_Original: `223` = js.native
   
   /**
     * Update an author's identity for the import. Your application can continue updating authors any time before you push new commits to the repository.
@@ -448,7 +448,7 @@ trait CancelImport extends js.Object {
     * Update an author's identity for the import. Your application can continue updating authors any time before you push new commits to the repository.
     */
   @JSName("mapCommitAuthor")
-  var mapCommitAuthor_Original: `221` = js.native
+  var mapCommitAuthor_Original: `224` = js.native
   
   /**
     * You can import repositories from Subversion, Mercurial, and TFS that include files larger than 100MB. This ability is powered by [Git LFS](https://git-lfs.github.com). You can learn more about our LFS feature and working with large files [on our help site](https://docs.github.com/articles/versioning-large-files/).
@@ -468,7 +468,7 @@ trait CancelImport extends js.Object {
     * You can import repositories from Subversion, Mercurial, and TFS that include files larger than 100MB. This ability is powered by [Git LFS](https://git-lfs.github.com). You can learn more about our LFS feature and working with large files [on our help site](https://docs.github.com/articles/versioning-large-files/).
     */
   @JSName("setLfsPreference")
-  var setLfsPreference_Original: `222` = js.native
+  var setLfsPreference_Original: `225` = js.native
   
   /**
     * Initiates the generation of a user migration archive.
@@ -488,7 +488,7 @@ trait CancelImport extends js.Object {
     * Initiates the generation of a user migration archive.
     */
   @JSName("startForAuthenticatedUser")
-  var startForAuthenticatedUser_Original: `223` = js.native
+  var startForAuthenticatedUser_Original: `226` = js.native
   
   /**
     * Initiates the generation of a migration archive.
@@ -508,7 +508,7 @@ trait CancelImport extends js.Object {
     * Initiates the generation of a migration archive.
     */
   @JSName("startForOrg")
-  var startForOrg_Original: `224` = js.native
+  var startForOrg_Original: `227` = js.native
   
   /**
     * Start a source import to a GitHub repository using GitHub Importer.
@@ -528,7 +528,7 @@ trait CancelImport extends js.Object {
     * Start a source import to a GitHub repository using GitHub Importer.
     */
   @JSName("startImport")
-  var startImport_Original: `225` = js.native
+  var startImport_Original: `228` = js.native
   
   /**
     * Unlocks a repository. You can lock repositories when you [start a user migration](https://developer.github.com/v3/migrations/users/#start-a-user-migration). Once the migration is complete you can unlock each repository to begin using it again or [delete the repository](https://developer.github.com/v3/repos/#delete-a-repository) if you no longer need the source data. Returns a status of `404 Not Found` if the repository is not locked.
@@ -548,7 +548,7 @@ trait CancelImport extends js.Object {
     * Unlocks a repository. You can lock repositories when you [start a user migration](https://developer.github.com/v3/migrations/users/#start-a-user-migration). Once the migration is complete you can unlock each repository to begin using it again or [delete the repository](https://developer.github.com/v3/repos/#delete-a-repository) if you no longer need the source data. Returns a status of `404 Not Found` if the repository is not locked.
     */
   @JSName("unlockRepoForAuthenticatedUser")
-  var unlockRepoForAuthenticatedUser_Original: `226` = js.native
+  var unlockRepoForAuthenticatedUser_Original: `229` = js.native
   
   /**
     * Unlocks a repository that was locked for migration. You should unlock each migrated repository and [delete them](https://developer.github.com/v3/repos/#delete-a-repository) when the migration is complete and you no longer need the source data.
@@ -568,7 +568,7 @@ trait CancelImport extends js.Object {
     * Unlocks a repository that was locked for migration. You should unlock each migrated repository and [delete them](https://developer.github.com/v3/repos/#delete-a-repository) when the migration is complete and you no longer need the source data.
     */
   @JSName("unlockRepoForOrg")
-  var unlockRepoForOrg_Original: `227` = js.native
+  var unlockRepoForOrg_Original: `230` = js.native
   
   /**
     * An import can be updated with credentials or a project choice by passing in the appropriate parameters in this API
@@ -590,5 +590,5 @@ trait CancelImport extends js.Object {
     * request. If no parameters are provided, the import will be restarted.
     */
   @JSName("updateImport")
-  var updateImport_Original: `228` = js.native
+  var updateImport_Original: `231` = js.native
 }

@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `8`[T] extends js.Object {
   
+  var cancel: js.UndefOr[Boolean] = js.native
+  
   var component: js.UndefOr[T] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
@@ -36,6 +38,12 @@ object `8` {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setCancel(value: Boolean): Self = this.set("cancel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCancel: Self = this.set("cancel", js.undefined)
     
     @scala.inline
     def setComponent(value: T): Self = this.set("component", value.asInstanceOf[js.Any])

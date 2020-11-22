@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Server extends js.Object {
   
   /**
-    * The identifier of the replication job.
+    * The ID of the replication job.
     */
   var replicationJobId: js.UndefOr[ReplicationJobId] = js.native
   
@@ -18,7 +18,7 @@ trait Server extends js.Object {
   var replicationJobTerminated: js.UndefOr[ReplicationJobTerminated] = js.native
   
   /**
-    * The identifier of the server.
+    * The ID of the server.
     */
   var serverId: js.UndefOr[ServerId] = js.native
   

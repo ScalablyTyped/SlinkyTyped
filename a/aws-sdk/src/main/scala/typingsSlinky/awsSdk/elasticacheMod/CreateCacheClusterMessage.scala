@@ -28,7 +28,7 @@ trait CreateCacheClusterMessage extends js.Object {
   var CacheClusterId: String = js.native
   
   /**
-    * The compute and memory capacity of the nodes in the node group (shard). The following node types are supported by ElastiCache. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts.   General purpose:   Current generation:   M5 node types: cache.m5.large, cache.m5.xlarge, cache.m5.2xlarge, cache.m5.4xlarge, cache.m5.12xlarge, cache.m5.24xlarge   M4 node types: cache.m4.large, cache.m4.xlarge, cache.m4.2xlarge, cache.m4.4xlarge, cache.m4.10xlarge   T3 node types: cache.t3.micro, cache.t3.small, cache.t3.medium   T2 node types: cache.t2.micro, cache.t2.small, cache.t2.medium    Previous generation: (not recommended)  T1 node types: cache.t1.micro   M1 node types: cache.m1.small, cache.m1.medium, cache.m1.large, cache.m1.xlarge   M3 node types: cache.m3.medium, cache.m3.large, cache.m3.xlarge, cache.m3.2xlarge      Compute optimized:   Previous generation: (not recommended)  C1 node types: cache.c1.xlarge      Memory optimized:   Current generation:   R5 node types: cache.r5.large, cache.r5.xlarge, cache.r5.2xlarge, cache.r5.4xlarge, cache.r5.12xlarge, cache.r5.24xlarge   R4 node types: cache.r4.large, cache.r4.xlarge, cache.r4.2xlarge, cache.r4.4xlarge, cache.r4.8xlarge, cache.r4.16xlarge    Previous generation: (not recommended)  M2 node types: cache.m2.xlarge, cache.m2.2xlarge, cache.m2.4xlarge   R3 node types: cache.r3.large, cache.r3.xlarge, cache.r3.2xlarge, cache.r3.4xlarge, cache.r3.8xlarge       Additional node type info    All current generation instance types are created in Amazon VPC by default.   Redis append-only files (AOF) are not supported for T1 or T2 instances.   Redis Multi-AZ with automatic failover is not supported on T1 instances.   Redis configuration variables appendonly and appendfsync are not supported on Redis version 2.8.22 and later.  
+    * The compute and memory capacity of the nodes in the node group (shard). The following node types are supported by ElastiCache. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts.   General purpose:   Current generation:   M6g node types (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).  cache.m6g.large, cache.m6g.xlarge, cache.m6g.2xlarge, cache.m6g.4xlarge, cache.m6g.8xlarge, cache.m6g.12xlarge, cache.m6g.16xlarge   At this time, M6g node types are available in the following regions: us-east-1, us-west-2, us-east-2, eu-central-1, eu-west-1 and ap-northeast-1.   M5 node types: cache.m5.large, cache.m5.xlarge, cache.m5.2xlarge, cache.m5.4xlarge, cache.m5.12xlarge, cache.m5.24xlarge   M4 node types: cache.m4.large, cache.m4.xlarge, cache.m4.2xlarge, cache.m4.4xlarge, cache.m4.10xlarge   T3 node types: cache.t3.micro, cache.t3.small, cache.t3.medium   T2 node types: cache.t2.micro, cache.t2.small, cache.t2.medium    Previous generation: (not recommended)  T1 node types: cache.t1.micro   M1 node types: cache.m1.small, cache.m1.medium, cache.m1.large, cache.m1.xlarge   M3 node types: cache.m3.medium, cache.m3.large, cache.m3.xlarge, cache.m3.2xlarge      Compute optimized:   Previous generation: (not recommended)  C1 node types: cache.c1.xlarge      Memory optimized:   Current generation:   R6g node types (available only for Redis engine version 5.0.6 onward and for Memcached engine version 1.5.16 onward).  cache.r6g.large, cache.r6g.xlarge, cache.r6g.2xlarge, cache.r6g.4xlarge, cache.r6g.8xlarge, cache.r6g.12xlarge, cache.r6g.16xlarge   At this time, R6g node types are available in the following regions: us-east-1, us-west-2, us-east-2, eu-central-1, eu-west-1 and ap-northeast-1.   R5 node types: cache.r5.large, cache.r5.xlarge, cache.r5.2xlarge, cache.r5.4xlarge, cache.r5.12xlarge, cache.r5.24xlarge   R4 node types: cache.r4.large, cache.r4.xlarge, cache.r4.2xlarge, cache.r4.4xlarge, cache.r4.8xlarge, cache.r4.16xlarge    Previous generation: (not recommended)  M2 node types: cache.m2.xlarge, cache.m2.2xlarge, cache.m2.4xlarge   R3 node types: cache.r3.large, cache.r3.xlarge, cache.r3.2xlarge, cache.r3.4xlarge, cache.r3.8xlarge       Additional node type info    All current generation instance types are created in Amazon VPC by default.   Redis append-only files (AOF) are not supported for T1 or T2 instances.   Redis Multi-AZ with automatic failover is not supported on T1 instances.   Redis configuration variables appendonly and appendfsync are not supported on Redis version 2.8.22 and later.  
     */
   var CacheNodeType: js.UndefOr[String] = js.native
   
@@ -68,6 +68,11 @@ trait CreateCacheClusterMessage extends js.Object {
   var NumCacheNodes: js.UndefOr[IntegerOptional] = js.native
   
   /**
+    * Specifies whether the nodes in the cluster are created in a single outpost or across multiple outposts.
+    */
+  var OutpostMode: js.UndefOr[typingsSlinky.awsSdk.elasticacheMod.OutpostMode] = js.native
+  
+  /**
     * The port number on which each of the cache nodes accepts connections.
     */
   var Port: js.UndefOr[IntegerOptional] = js.native
@@ -86,6 +91,16 @@ trait CreateCacheClusterMessage extends js.Object {
     * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Valid values for ddd are: Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Valid values for ddd are:    sun     mon     tue     wed     thu     fri     sat    Example: sun:23:00-mon:01:30 
     */
   var PreferredMaintenanceWindow: js.UndefOr[String] = js.native
+  
+  /**
+    * The outpost ARN in which the cache cluster is created.
+    */
+  var PreferredOutpostArn: js.UndefOr[String] = js.native
+  
+  /**
+    * The outpost ARNs in which the cache cluster is created.
+    */
+  var PreferredOutpostArns: js.UndefOr[PreferredOutpostArnList] = js.native
   
   /**
     * The ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group. If the specified replication group is Multi-AZ enabled and the Availability Zone is not specified, the cluster is created in Availability Zones that provide the best spread of read replicas across Availability Zones.  This parameter is only valid if the Engine parameter is redis. 
@@ -218,6 +233,12 @@ object CreateCacheClusterMessage {
     def deleteNumCacheNodes: Self = this.set("NumCacheNodes", js.undefined)
     
     @scala.inline
+    def setOutpostMode(value: OutpostMode): Self = this.set("OutpostMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutpostMode: Self = this.set("OutpostMode", js.undefined)
+    
+    @scala.inline
     def setPort(value: IntegerOptional): Self = this.set("Port", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -243,6 +264,21 @@ object CreateCacheClusterMessage {
     
     @scala.inline
     def deletePreferredMaintenanceWindow: Self = this.set("PreferredMaintenanceWindow", js.undefined)
+    
+    @scala.inline
+    def setPreferredOutpostArn(value: String): Self = this.set("PreferredOutpostArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreferredOutpostArn: Self = this.set("PreferredOutpostArn", js.undefined)
+    
+    @scala.inline
+    def setPreferredOutpostArnsVarargs(value: String*): Self = this.set("PreferredOutpostArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setPreferredOutpostArns(value: PreferredOutpostArnList): Self = this.set("PreferredOutpostArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreferredOutpostArns: Self = this.set("PreferredOutpostArns", js.undefined)
     
     @scala.inline
     def setReplicationGroupId(value: String): Self = this.set("ReplicationGroupId", value.asInstanceOf[js.Any])

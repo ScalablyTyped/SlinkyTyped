@@ -1,5 +1,10 @@
 package typingsSlinky.gestalt.anon
 
+import org.scalajs.dom.raw.HTMLAnchorElement
+import org.scalajs.dom.raw.HTMLButtonElement
+import slinky.web.SyntheticKeyboardEvent
+import slinky.web.SyntheticMouseEvent
+import typingsSlinky.gestalt.mod.AbstractEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,15 +12,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Href extends js.Object {
   
+  var accessibilityLabel: js.UndefOr[String] = js.native
+  
   var href: String = js.native
   
-  var text: js.Any = js.native
+  var label: String = js.native
+  
+  var onClick: js.UndefOr[
+    AbstractEventHandler[
+      (SyntheticMouseEvent[HTMLAnchorElement | HTMLButtonElement]) | (SyntheticKeyboardEvent[HTMLAnchorElement | HTMLButtonElement]), 
+      js.Object
+    ]
+  ] = js.native
 }
 object Href {
   
   @scala.inline
-  def apply(href: String, text: js.Any): Href = {
-    val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
+  def apply(href: String, label: String): Href = {
+    val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
     __obj.asInstanceOf[Href]
   }
   
@@ -38,6 +52,22 @@ object Href {
     def setHref(value: String): Self = this.set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setText(value: js.Any): Self = this.set("text", value.asInstanceOf[js.Any])
+    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAccessibilityLabel(value: String): Self = this.set("accessibilityLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccessibilityLabel: Self = this.set("accessibilityLabel", js.undefined)
+    
+    @scala.inline
+    def setOnClick(
+      value: /* arg */ js.Object with (Event[
+          (SyntheticMouseEvent[HTMLAnchorElement | HTMLButtonElement]) | (SyntheticKeyboardEvent[HTMLAnchorElement | HTMLButtonElement])
+        ]) => Unit
+    ): Self = this.set("onClick", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnClick: Self = this.set("onClick", js.undefined)
   }
 }

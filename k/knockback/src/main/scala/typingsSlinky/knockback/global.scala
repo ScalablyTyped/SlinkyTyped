@@ -43,7 +43,7 @@ object global extends js.Object {
       def useOptionsOrCreate(
         options: js.Any,
         emitter: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any,
-        obj: Model[_, ModelSetOptions],
+        obj: Model[_, ModelSetOptions, js.Object],
         callback_options: js.Any
       ): js.Any = js.native
     }
@@ -83,7 +83,7 @@ object global extends js.Object {
     @js.native
     class Store protected ()
       extends typingsSlinky.knockback.Knockback.Store {
-      def this(model: Model[_, ModelSetOptions], options: StoreOptions) = this()
+      def this(model: Model[_, ModelSetOptions, js.Object], options: StoreOptions) = this()
     }
     /* static members */
     @js.native
@@ -105,9 +105,9 @@ object global extends js.Object {
     @js.native
     class ViewModel ()
       extends typingsSlinky.knockback.Knockback.ViewModel {
-      def this(model: Model[_, ModelSetOptions]) = this()
+      def this(model: Model[_, ModelSetOptions, js.Object]) = this()
       def this(model: js.UndefOr[scala.Nothing], options: ViewModelOptions) = this()
-      def this(model: Model[_, ModelSetOptions], options: ViewModelOptions) = this()
+      def this(model: Model[_, ModelSetOptions, js.Object], options: ViewModelOptions) = this()
       def this(
         model: js.UndefOr[scala.Nothing],
         options: js.UndefOr[scala.Nothing],
@@ -119,12 +119,12 @@ object global extends js.Object {
         viewModel: typingsSlinky.knockback.Knockback.ViewModel
       ) = this()
       def this(
-        model: Model[_, ModelSetOptions],
+        model: Model[_, ModelSetOptions, js.Object],
         options: js.UndefOr[scala.Nothing],
         viewModel: typingsSlinky.knockback.Knockback.ViewModel
       ) = this()
       def this(
-        model: Model[_, ModelSetOptions],
+        model: Model[_, ModelSetOptions, js.Object],
         options: ViewModelOptions,
         viewModel: typingsSlinky.knockback.Knockback.ViewModel
       ) = this()

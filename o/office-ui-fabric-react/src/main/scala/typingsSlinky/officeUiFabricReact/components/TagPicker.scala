@@ -6,6 +6,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.Input
 import typingsSlinky.officeUiFabricReact.basePickerTypesMod.IBasePicker
 import typingsSlinky.officeUiFabricReact.basePickerTypesMod.IBasePickerProps
@@ -21,7 +22,6 @@ import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
 import typingsSlinky.officeUiFabricReact.tagPickerTypesMod.ITag
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -85,7 +85,7 @@ object TagPicker {
     def onChange(value: /* items */ js.UndefOr[js.Array[ITag]] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onDismiss(value: (/* ev */ js.UndefOr[js.Any], /* selectedItem */ js.UndefOr[ITag]) => Unit): this.type = set("onDismiss", js.Any.fromFunction2(value))
+    def onDismiss(value: (/* ev */ js.UndefOr[js.Any], /* selectedItem */ js.UndefOr[ITag]) => Boolean | Unit): this.type = set("onDismiss", js.Any.fromFunction2(value))
     
     @scala.inline
     def onEmptyInputFocus(

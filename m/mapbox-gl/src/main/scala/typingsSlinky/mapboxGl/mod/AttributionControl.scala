@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mapbox-gl", "AttributionControl")
 @js.native
-class AttributionControl () extends Evented {
+class AttributionControl () extends Control {
   def this(options: Compact) = this()
 }

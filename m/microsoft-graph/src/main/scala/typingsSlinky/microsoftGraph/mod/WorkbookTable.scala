@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookTable extends Entity {
   
   // Represents a collection of all the columns in the table. Read-only.
-  var columns: js.UndefOr[js.Array[WorkbookTableColumn]] = js.native
+  var columns: js.UndefOr[NullableOption[js.Array[WorkbookTableColumn]]] = js.native
   
   // Indicates whether the first column contains special formatting.
   var highlightFirstColumn: js.UndefOr[Boolean] = js.native
@@ -20,13 +20,13 @@ trait WorkbookTable extends Entity {
     * Legacy Id used in older Excle clients. The value of the identifier remains the same even when the table is renamed.
     * This property should be interpreted as an opaque string value and should not be parsed to any other type. Read-only.
     */
-  var legacyId: js.UndefOr[String] = js.native
+  var legacyId: js.UndefOr[NullableOption[String]] = js.native
   
   // Name of the table.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   // Represents a collection of all the rows in the table. Read-only.
-  var rows: js.UndefOr[js.Array[WorkbookTableRow]] = js.native
+  var rows: js.UndefOr[NullableOption[js.Array[WorkbookTableRow]]] = js.native
   
   /**
     * Indicates whether the columns show banded formatting in which odd columns are highlighted differently from even ones to
@@ -53,17 +53,17 @@ trait WorkbookTable extends Entity {
   var showTotals: js.UndefOr[Boolean] = js.native
   
   // Represents the sorting for the table. Read-only.
-  var sort: js.UndefOr[WorkbookTableSort] = js.native
+  var sort: js.UndefOr[NullableOption[WorkbookTableSort]] = js.native
   
   /**
     * Constant value that represents the Table style. The possible values are: TableStyleLight1 thru TableStyleLight21,
     * TableStyleMedium1 thru TableStyleMedium28, TableStyleStyleDark1 thru TableStyleStyleDark11. A custom user-defined style
     * present in the workbook can also be specified.
     */
-  var style: js.UndefOr[String] = js.native
+  var style: js.UndefOr[NullableOption[String]] = js.native
   
   // The worksheet containing the current table. Read-only.
-  var worksheet: js.UndefOr[WorkbookWorksheet] = js.native
+  var worksheet: js.UndefOr[NullableOption[WorkbookWorksheet]] = js.native
 }
 object WorkbookTable {
   
@@ -92,10 +92,13 @@ object WorkbookTable {
     def setColumnsVarargs(value: WorkbookTableColumn*): Self = this.set("columns", js.Array(value :_*))
     
     @scala.inline
-    def setColumns(value: js.Array[WorkbookTableColumn]): Self = this.set("columns", value.asInstanceOf[js.Any])
+    def setColumns(value: NullableOption[js.Array[WorkbookTableColumn]]): Self = this.set("columns", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColumns: Self = this.set("columns", js.undefined)
+    
+    @scala.inline
+    def setColumnsNull: Self = this.set("columns", null)
     
     @scala.inline
     def setHighlightFirstColumn(value: Boolean): Self = this.set("highlightFirstColumn", value.asInstanceOf[js.Any])
@@ -110,25 +113,34 @@ object WorkbookTable {
     def deleteHighlightLastColumn: Self = this.set("highlightLastColumn", js.undefined)
     
     @scala.inline
-    def setLegacyId(value: String): Self = this.set("legacyId", value.asInstanceOf[js.Any])
+    def setLegacyId(value: NullableOption[String]): Self = this.set("legacyId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLegacyId: Self = this.set("legacyId", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setLegacyIdNull: Self = this.set("legacyId", null)
+    
+    @scala.inline
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
     def setRowsVarargs(value: WorkbookTableRow*): Self = this.set("rows", js.Array(value :_*))
     
     @scala.inline
-    def setRows(value: js.Array[WorkbookTableRow]): Self = this.set("rows", value.asInstanceOf[js.Any])
+    def setRows(value: NullableOption[js.Array[WorkbookTableRow]]): Self = this.set("rows", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRows: Self = this.set("rows", js.undefined)
+    
+    @scala.inline
+    def setRowsNull: Self = this.set("rows", null)
     
     @scala.inline
     def setShowBandedColumns(value: Boolean): Self = this.set("showBandedColumns", value.asInstanceOf[js.Any])
@@ -161,21 +173,30 @@ object WorkbookTable {
     def deleteShowTotals: Self = this.set("showTotals", js.undefined)
     
     @scala.inline
-    def setSort(value: WorkbookTableSort): Self = this.set("sort", value.asInstanceOf[js.Any])
+    def setSort(value: NullableOption[WorkbookTableSort]): Self = this.set("sort", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSort: Self = this.set("sort", js.undefined)
     
     @scala.inline
-    def setStyle(value: String): Self = this.set("style", value.asInstanceOf[js.Any])
+    def setSortNull: Self = this.set("sort", null)
+    
+    @scala.inline
+    def setStyle(value: NullableOption[String]): Self = this.set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
     
     @scala.inline
-    def setWorksheet(value: WorkbookWorksheet): Self = this.set("worksheet", value.asInstanceOf[js.Any])
+    def setStyleNull: Self = this.set("style", null)
+    
+    @scala.inline
+    def setWorksheet(value: NullableOption[WorkbookWorksheet]): Self = this.set("worksheet", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorksheet: Self = this.set("worksheet", js.undefined)
+    
+    @scala.inline
+    def setWorksheetNull: Self = this.set("worksheet", null)
   }
 }

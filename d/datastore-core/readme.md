@@ -1,7 +1,7 @@
 
 # Scala.js typings for datastore-core
 
-Typings are for version 0.7
+Typings are for version 1.1
 
 ## Library description:
 Wrapper implmentation for interface-datastore

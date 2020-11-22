@@ -17,6 +17,7 @@ object updateElementAccessChain extends js.Object {
     questionDotToken: js.UndefOr[scala.Nothing],
     argumentExpression: Expression
   ): ElementAccessChain = js.native
+  /** @deprecated Use `factory.updateElementAccessChain` or the factory supplied by your transformation context instead. */
   def apply(
     node: ElementAccessChain,
     expression: Expression,

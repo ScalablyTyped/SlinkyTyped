@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResourceAction extends js.Object {
   
   // Allowed Actions
-  var allowedResourceActions: js.UndefOr[js.Array[String]] = js.native
+  var allowedResourceActions: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // Not Allowed Actions
-  var notAllowedResourceActions: js.UndefOr[js.Array[String]] = js.native
+  var notAllowedResourceActions: js.UndefOr[NullableOption[js.Array[String]]] = js.native
 }
 object ResourceAction {
   
@@ -40,18 +40,24 @@ object ResourceAction {
     def setAllowedResourceActionsVarargs(value: String*): Self = this.set("allowedResourceActions", js.Array(value :_*))
     
     @scala.inline
-    def setAllowedResourceActions(value: js.Array[String]): Self = this.set("allowedResourceActions", value.asInstanceOf[js.Any])
+    def setAllowedResourceActions(value: NullableOption[js.Array[String]]): Self = this.set("allowedResourceActions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAllowedResourceActions: Self = this.set("allowedResourceActions", js.undefined)
     
     @scala.inline
+    def setAllowedResourceActionsNull: Self = this.set("allowedResourceActions", null)
+    
+    @scala.inline
     def setNotAllowedResourceActionsVarargs(value: String*): Self = this.set("notAllowedResourceActions", js.Array(value :_*))
     
     @scala.inline
-    def setNotAllowedResourceActions(value: js.Array[String]): Self = this.set("notAllowedResourceActions", value.asInstanceOf[js.Any])
+    def setNotAllowedResourceActions(value: NullableOption[js.Array[String]]): Self = this.set("notAllowedResourceActions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNotAllowedResourceActions: Self = this.set("notAllowedResourceActions", js.undefined)
+    
+    @scala.inline
+    def setNotAllowedResourceActionsNull: Self = this.set("notAllowedResourceActions", null)
   }
 }

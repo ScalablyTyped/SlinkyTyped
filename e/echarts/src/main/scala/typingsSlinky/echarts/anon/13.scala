@@ -8,18 +8,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait `13` extends js.Object {
   
   /**
-    * Data of the starting point.
+    * Specify the left-top point.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-map.markLine.data.0
+    * @see https://echarts.apache.org/en/option.html#series-map.markArea.data.0
     */
   var `0`: js.UndefOr[ValueDim] = js.native
   
   /**
-    * Data of the ending point.
+    * Specify the right-bottom point.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-map.markLine.data.1
+    * @see https://echarts.apache.org/en/option.html#series-map.markArea.data.1
     */
   var `1`: js.UndefOr[ValueDim] = js.native
 }

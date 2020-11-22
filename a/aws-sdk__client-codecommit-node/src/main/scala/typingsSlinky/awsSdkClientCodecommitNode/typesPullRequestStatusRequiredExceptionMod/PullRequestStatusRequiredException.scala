@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientCodecommitNode.typesPullRequestStatusRequiredExceptionMod
 
 import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestStatusExceptionsUnionMod.UpdatePullRequestStatusExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait PullRequestStatusRequiredException
-  extends ServiceException[PullRequestStatusRequiredExceptionDetails]
-     with UpdatePullRequestStatusExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_PullRequestStatusRequiredExceptionDetails> * / any */ @js.native
+trait PullRequestStatusRequiredException extends UpdatePullRequestStatusExceptionsUnion {
   
-  @JSName("name")
-  var name_PullRequestStatusRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.PullRequestStatusRequiredException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.PullRequestStatusRequiredException = js.native
 }
 object PullRequestStatusRequiredException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: PullRequestStatusRequiredExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.PullRequestStatusRequiredException
   ): PullRequestStatusRequiredException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullRequestStatusRequiredException]
   }
   

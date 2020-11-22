@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.computeEnvironmentMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.inputMod.batch.ComputeEnvironmentComputeResources
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -53,6 +54,11 @@ trait ComputeEnvironmentState extends js.Object {
     * A short, human-readable string to provide additional details about the current status of the compute environment.
     */
   val statusReason: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Key-value pair tags to be applied to resources that are launched in the compute environment.
+    */
+  val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
     * The type of compute environment. Valid items are `EC2` or `SPOT`.
@@ -135,6 +141,12 @@ object ComputeEnvironmentState {
     
     @scala.inline
     def deleteStatusReason: Self = this.set("statusReason", js.undefined)
+    
+    @scala.inline
+    def setTags(value: Input[StringDictionary[Input[String]]]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
     
     @scala.inline
     def setType(value: Input[String]): Self = this.set("type", value.asInstanceOf[js.Any])

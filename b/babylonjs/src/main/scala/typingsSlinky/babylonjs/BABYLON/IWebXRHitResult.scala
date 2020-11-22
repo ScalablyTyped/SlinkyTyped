@@ -1,28 +1,50 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.XRHitResult
+import typingsSlinky.babylonjs.XRHitTestResult
+import typingsSlinky.babylonjs.XRInputSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IWebXRHitResult extends js.Object {
+trait IWebXRHitResult extends IWebXRLegacyHitResult {
   
   /**
-    * Transformation matrix that can be applied to a node that will put it in the hit point location
+    * The input source that generated this hit test (if transient)
     */
-  var transformationMatrix: Matrix = js.native
+  var inputSource: js.UndefOr[XRInputSource] = js.native
+  
+  /**
+    * Is this a transient hit test
+    */
+  var isTransient: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Position of the hit test result
+    */
+  var position: Vector3 = js.native
+  
+  /**
+    * Rotation of the hit test result
+    */
+  var rotationQuaternion: Quaternion = js.native
   
   /**
     * The native hit test result
     */
-  var xrHitResult: XRHitResult = js.native
+  @JSName("xrHitResult")
+  var xrHitResult_IWebXRHitResult: XRHitTestResult = js.native
 }
 object IWebXRHitResult {
   
   @scala.inline
-  def apply(transformationMatrix: Matrix, xrHitResult: XRHitResult): IWebXRHitResult = {
-    val __obj = js.Dynamic.literal(transformationMatrix = transformationMatrix.asInstanceOf[js.Any], xrHitResult = xrHitResult.asInstanceOf[js.Any])
+  def apply(
+    position: Vector3,
+    rotationQuaternion: Quaternion,
+    transformationMatrix: Matrix,
+    xrHitResult: XRHitTestResult
+  ): IWebXRHitResult = {
+    val __obj = js.Dynamic.literal(position = position.asInstanceOf[js.Any], rotationQuaternion = rotationQuaternion.asInstanceOf[js.Any], transformationMatrix = transformationMatrix.asInstanceOf[js.Any], xrHitResult = xrHitResult.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWebXRHitResult]
   }
   
@@ -42,9 +64,24 @@ object IWebXRHitResult {
     }
     
     @scala.inline
-    def setTransformationMatrix(value: Matrix): Self = this.set("transformationMatrix", value.asInstanceOf[js.Any])
+    def setPosition(value: Vector3): Self = this.set("position", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setXrHitResult(value: XRHitResult): Self = this.set("xrHitResult", value.asInstanceOf[js.Any])
+    def setRotationQuaternion(value: Quaternion): Self = this.set("rotationQuaternion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setXrHitResult(value: XRHitTestResult): Self = this.set("xrHitResult", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInputSource(value: XRInputSource): Self = this.set("inputSource", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputSource: Self = this.set("inputSource", js.undefined)
+    
+    @scala.inline
+    def setIsTransient(value: Boolean): Self = this.set("isTransient", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsTransient: Self = this.set("isTransient", js.undefined)
   }
 }

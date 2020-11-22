@@ -982,7 +982,9 @@ trait CanvasContext extends js.Object {
   ctx.fillRect(10, 10, 150, 75)
   ctx.draw()
   ```
-  * ![](@program/dev/image/canvas/fill-rect.png) */
+  * ![](@program/dev/image/canvas/fill-rect.png)
+  * @deprecated 基础库版本 [1.9.90](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 起已废弃，请使用 [CanvasContext.fillStyle](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 替换
+  *  */
   def setFillStyle(/** 填充的颜色，默认颜色为 black。 */
   color: String): Unit = js.native
   def setFillStyle(/** 填充的颜色，默认颜色为 black。 */
@@ -1007,7 +1009,9 @@ trait CanvasContext extends js.Object {
   ctx.fillText('50', 90, 90)
   ctx.draw()
   ```
-  * ![](@program/dev/image/canvas/font-size.png) */
+  * ![](@program/dev/image/canvas/font-size.png)
+  * @deprecated 基础库版本 [1.9.90](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 起已废弃，请使用 [CanvasContext.font](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 替换
+  *  */
   def setFontSize(/** 字体的字号 */
   fontSize: Double): Unit = js.native
   
@@ -1029,7 +1033,9 @@ trait CanvasContext extends js.Object {
   ctx.fillRect(100, 100, 150, 100)
   ctx.draw()
   ```
-  * ![](@program/dev/image/canvas/global-alpha.png) */
+  * ![](@program/dev/image/canvas/global-alpha.png)
+  * @deprecated 基础库版本 [1.9.90](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 起已废弃，请使用 [CanvasContext.globalAlpha](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 替换
+  *  */
   def setGlobalAlpha(/** 透明度。范围 0-1，0 表示完全透明，1 表示完全不透明。 */
   alpha: Double): Unit = js.native
   
@@ -1066,7 +1072,9 @@ trait CanvasContext extends js.Object {
   ctx.stroke()
   ctx.draw()
   ```
-  * ![](@program/dev/image/canvas/line-cap.png) */
+  * ![](@program/dev/image/canvas/line-cap.png)
+  * @deprecated 基础库版本 [1.9.90](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 起已废弃，请使用 [CanvasContext.lineCap](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 替换
+  *  */
   @JSName("setLineCap")
   def setLineCap_butt(
     /** 线条的结束端点样式
@@ -1116,7 +1124,9 @@ trait CanvasContext extends js.Object {
   ```
   * ![](@program/dev/image/canvas/set-line-dash.png)
   *
-  * 最低基础库： `1.6.0` */
+  * 最低基础库： `1.6.0`
+  * @deprecated 基础库版本 [1.9.90](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 起已废弃，请使用 [CanvasContext.lineDashOffset](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 替换
+  *  */
   def setLineDash(/** 一组描述交替绘制线段和间距（坐标空间单位）长度的数字 */
   pattern: js.Array[Double], /** 虚线偏移量 */
   offset: Double): Unit = js.native
@@ -1158,7 +1168,9 @@ trait CanvasContext extends js.Object {
   ctx.stroke()
   ctx.draw()
   ```
-  * ![](@program/dev/image/canvas/line-join.png) */
+  * ![](@program/dev/image/canvas/line-join.png)
+  * @deprecated 基础库版本 [1.9.90](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 起已废弃，请使用 [CanvasContext.lineJoin](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 替换
+  *  */
   @JSName("setLineJoin")
   def setLineJoin_bevel(
     /** 线条的结束交点样式
@@ -1221,7 +1233,9 @@ trait CanvasContext extends js.Object {
   ctx.draw()
   ```
   *
-  * ![](@program/dev/image/canvas/line-width.png) */
+  * ![](@program/dev/image/canvas/line-width.png)
+  * @deprecated 基础库版本 [1.9.90](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 起已废弃，请使用 [CanvasContext.lineWidth](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 替换
+  *  */
   def setLineWidth(/** 线条的宽度，单位px */
   lineWidth: Double): Unit = js.native
   
@@ -1268,7 +1282,9 @@ trait CanvasContext extends js.Object {
   ctx.stroke()
   ctx.draw()
   ```
-  * ![](@program/dev/image/canvas/miter-limit.png) */
+  * ![](@program/dev/image/canvas/miter-limit.png)
+  * @deprecated 基础库版本 [1.9.90](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 起已废弃，请使用 [CanvasContext.miterLimit](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 替换
+  *  */
   def setMiterLimit(/** 最大斜接长度 */
   miterLimit: Double): Unit = js.native
   
@@ -1286,7 +1302,9 @@ trait CanvasContext extends js.Object {
   ctx.fillRect(10, 10, 150, 75)
   ctx.draw()
   ```
-  * ![](@program/dev/image/canvas/shadow.png) */
+  * ![](@program/dev/image/canvas/shadow.png)
+  * @deprecated 基础库版本 [1.9.90](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 起已废弃，请使用 [CanvasContext.shadowOffsetX|CanvasContext.shadowOffsetY|CanvasContext.shadowColor|CanvasContext.shadowBlur](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 替换
+  *  */
   def setShadow(
     /** 阴影相对于形状在水平方向的偏移，默认值为 0。 */
   offsetX: Double,
@@ -1311,7 +1329,9 @@ trait CanvasContext extends js.Object {
   ctx.strokeRect(10, 10, 150, 75)
   ctx.draw()
   ```
-  * ![](@program/dev/image/canvas/stroke-rect.png) */
+  * ![](@program/dev/image/canvas/stroke-rect.png)
+  * @deprecated 基础库版本 [1.9.90](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 起已废弃，请使用 [CanvasContext.strokeStyle](https://developers.weixin.qq.com/miniprogram/dev/api/canvas/CanvasContext.html) 替换
+  *  */
   def setStrokeStyle(/** 描边的颜色，默认颜色为 black。 */
   color: String): Unit = js.native
   def setStrokeStyle(/** 描边的颜色，默认颜色为 black。 */

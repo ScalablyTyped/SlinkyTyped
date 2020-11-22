@@ -18,7 +18,7 @@ trait EbsOptimizedInfo extends js.Object {
   var BaselineIops: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.BaselineIops] = js.native
   
   /**
-    * The baseline throughput performance for an EBS-optimized instance type, in MBps.
+    * The baseline throughput performance for an EBS-optimized instance type, in MB/s.
     */
   var BaselineThroughputInMBps: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.BaselineThroughputInMBps] = js.native
   
@@ -33,7 +33,7 @@ trait EbsOptimizedInfo extends js.Object {
   var MaximumIops: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.MaximumIops] = js.native
   
   /**
-    * The maximum throughput performance for an EBS-optimized instance type, in MBps.
+    * The maximum throughput performance for an EBS-optimized instance type, in MB/s.
     */
   var MaximumThroughputInMBps: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.MaximumThroughputInMBps] = js.native
 }

@@ -9,15 +9,16 @@ import typingsSlinky.astTypes.kindsMod.SpreadPropertyKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.ObjectExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ObjectExpressionBuilder extends js.Object {
+  
   def apply(
     properties: js.Array[
       PropertyKind | ObjectMethodKind | ObjectPropertyKind | SpreadPropertyKind | SpreadElementKind
     ]
   ): ObjectExpression = js.native
+  
   def from(params: Properties): ObjectExpression = js.native
 }
-

@@ -13,10 +13,8 @@ class RequiredValidator () extends Validator {
   var _required: js.Any = js.native
   
   /**
-    * @description
     * Registers a callback function to call when the validator inputs change.
-    *
-    * @param fn The callback function
+    * @nodoc
     */
   @JSName("registerOnValidatorChange")
   def registerOnValidatorChange_MRequiredValidator(fn: js.Function0[Unit]): Unit = js.native

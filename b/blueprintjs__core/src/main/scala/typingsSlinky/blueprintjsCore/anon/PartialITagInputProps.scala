@@ -69,7 +69,7 @@ trait PartialITagInputProps extends js.Object {
     ]
   ] = js.native
   
-  var onRemove: js.UndefOr[js.Function2[/* value */ String, /* index */ Double, Unit]] = js.native
+  var onRemove: js.UndefOr[js.Function2[/* value */ ReactElement, /* index */ Double, Unit]] = js.native
   
   var placeholder: js.UndefOr[String] = js.native
   
@@ -209,7 +209,7 @@ object PartialITagInputProps {
     def deleteOnKeyUp: Self = this.set("onKeyUp", js.undefined)
     
     @scala.inline
-    def setOnRemove(value: (/* value */ String, /* index */ Double) => Unit): Self = this.set("onRemove", js.Any.fromFunction2(value))
+    def setOnRemove(value: (/* value */ ReactElement, /* index */ Double) => Unit): Self = this.set("onRemove", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnRemove: Self = this.set("onRemove", js.undefined)

@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AssociateResolverRuleRequest extends js.Object {
   
   /**
-    * A name for the association that you're creating between a resolver rule and a VPC.
+    * A name for the association that you're creating between a Resolver rule and a VPC.
     */
   var Name: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.Name] = js.native
   
   /**
-    * The ID of the resolver rule that you want to associate with the VPC. To list the existing resolver rules, use ListResolverRules.
+    * The ID of the Resolver rule that you want to associate with the VPC. To list the existing Resolver rules, use ListResolverRules.
     */
   var ResolverRuleId: ResourceId = js.native
   
   /**
-    * The ID of the VPC that you want to associate the resolver rule with.
+    * The ID of the VPC that you want to associate the Resolver rule with.
     */
   var VPCId: ResourceId = js.native
 }

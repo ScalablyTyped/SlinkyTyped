@@ -4,16 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/**
-  * Address details.
-  */
 @js.native
 trait EmailAddress extends js.Object {
   
   /**
     * The email address.
     */
-  var address: String = js.native
+  var address: js.UndefOr[String] = js.native
   
   /**
     * An array of grouped addresses.
@@ -28,8 +25,8 @@ trait EmailAddress extends js.Object {
 object EmailAddress {
   
   @scala.inline
-  def apply(address: String, name: String): EmailAddress = {
-    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: String): EmailAddress = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[EmailAddress]
   }
   
@@ -49,10 +46,13 @@ object EmailAddress {
     }
     
     @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setAddress(value: String): Self = this.set("address", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def deleteAddress: Self = this.set("address", js.undefined)
     
     @scala.inline
     def setGroupVarargs(value: EmailAddress*): Self = this.set("group", js.Array(value :_*))

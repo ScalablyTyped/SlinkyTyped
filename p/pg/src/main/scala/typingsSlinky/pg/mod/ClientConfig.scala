@@ -14,6 +14,8 @@ trait ClientConfig extends js.Object {
   
   var connectionString: js.UndefOr[String] = js.native
   
+  var connectionTimeoutMillis: js.UndefOr[Double] = js.native
+  
   var database: js.UndefOr[String] = js.native
   
   var host: js.UndefOr[String] = js.native
@@ -26,7 +28,7 @@ trait ClientConfig extends js.Object {
   
   var parseInputDatesAsUTC: js.UndefOr[Boolean] = js.native
   
-  var password: js.UndefOr[String] = js.native
+  var password: js.UndefOr[String | (js.Function0[String | js.Promise[String]])] = js.native
   
   var port: js.UndefOr[Double] = js.native
   
@@ -76,6 +78,12 @@ object ClientConfig {
     def deleteConnectionString: Self = this.set("connectionString", js.undefined)
     
     @scala.inline
+    def setConnectionTimeoutMillis(value: Double): Self = this.set("connectionTimeoutMillis", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConnectionTimeoutMillis: Self = this.set("connectionTimeoutMillis", js.undefined)
+    
+    @scala.inline
     def setDatabase(value: String): Self = this.set("database", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -112,7 +120,10 @@ object ClientConfig {
     def deleteParseInputDatesAsUTC: Self = this.set("parseInputDatesAsUTC", js.undefined)
     
     @scala.inline
-    def setPassword(value: String): Self = this.set("password", value.asInstanceOf[js.Any])
+    def setPasswordFunction0(value: () => String | js.Promise[String]): Self = this.set("password", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setPassword(value: String | (js.Function0[String | js.Promise[String]])): Self = this.set("password", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePassword: Self = this.set("password", js.undefined)

@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`10`
+import typingsSlinky.octokitTypes.anon.`9`
 import typingsSlinky.octokitTypes.octokitTypesStrings.Plussign1
 import typingsSlinky.octokitTypes.octokitTypesStrings.`-1`
 import typingsSlinky.octokitTypes.octokitTypesStrings.confused
@@ -24,7 +24,7 @@ trait ReactionsListForIssueCommentEndpoint extends js.Object {
     */
   var content: js.UndefOr[Plussign1 | `-1` | laugh | confused | heart | hooray | rocket | eyes] = js.native
   
-  var mediaType: `10` = js.native
+  var mediaType: `9` = js.native
   
   var owner: String = js.native
   
@@ -43,7 +43,7 @@ trait ReactionsListForIssueCommentEndpoint extends js.Object {
 object ReactionsListForIssueCommentEndpoint {
   
   @scala.inline
-  def apply(comment_id: Double, mediaType: `10`, owner: String, repo: String): ReactionsListForIssueCommentEndpoint = {
+  def apply(comment_id: Double, mediaType: `9`, owner: String, repo: String): ReactionsListForIssueCommentEndpoint = {
     val __obj = js.Dynamic.literal(comment_id = comment_id.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactionsListForIssueCommentEndpoint]
   }
@@ -67,7 +67,7 @@ object ReactionsListForIssueCommentEndpoint {
     def setComment_id(value: Double): Self = this.set("comment_id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `10`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `9`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

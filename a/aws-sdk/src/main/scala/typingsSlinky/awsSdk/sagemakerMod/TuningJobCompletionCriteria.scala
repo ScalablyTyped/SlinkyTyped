@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TuningJobCompletionCriteria extends js.Object {
   
   /**
-    * The objective metric's value.
+    * The value of the objective metric.
     */
   var TargetObjectiveMetricValue: typingsSlinky.awsSdk.sagemakerMod.TargetObjectiveMetricValue = js.native
 }

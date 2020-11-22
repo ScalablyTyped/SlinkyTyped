@@ -39,13 +39,11 @@ trait CanvasCameraOptions extends js.Object {
   /**
     * Function, optional, default : null, callback executed after a frame has been drawn. frame contains the canvas element, the image element, the tracking data.
     */
-  // tslint:disable-next-line:prefer-method-signature
   var onAfterDraw: js.UndefOr[js.Function1[/* frame */ js.UndefOr[Frame], Unit]] = js.native
   
   /**
     * Function, optional, default : null, callback executed before a frame has been drawn. frame contains the canvas element, the image element, the tracking data.
     */
-  // tslint:disable-next-line:prefer-method-signature
   var onBeforeDraw: js.UndefOr[js.Function1[/* frame */ js.UndefOr[Frame], Unit]] = js.native
   
   /**

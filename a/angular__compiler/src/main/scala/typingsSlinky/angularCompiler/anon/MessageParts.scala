@@ -1,5 +1,7 @@
 package typingsSlinky.angularCompiler.anon
 
+import typingsSlinky.angularCompiler.outputAstMod.LiteralPiece
+import typingsSlinky.angularCompiler.outputAstMod.PlaceholderPiece
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,14 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MessageParts extends js.Object {
   
-  var messageParts: js.Array[String] = js.native
+  var messageParts: js.Array[LiteralPiece] = js.native
   
-  var placeHolders: js.Array[String] = js.native
+  var placeHolders: js.Array[PlaceholderPiece] = js.native
 }
 object MessageParts {
   
   @scala.inline
-  def apply(messageParts: js.Array[String], placeHolders: js.Array[String]): MessageParts = {
+  def apply(messageParts: js.Array[LiteralPiece], placeHolders: js.Array[PlaceholderPiece]): MessageParts = {
     val __obj = js.Dynamic.literal(messageParts = messageParts.asInstanceOf[js.Any], placeHolders = placeHolders.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageParts]
   }
@@ -35,15 +37,15 @@ object MessageParts {
     }
     
     @scala.inline
-    def setMessagePartsVarargs(value: String*): Self = this.set("messageParts", js.Array(value :_*))
+    def setMessagePartsVarargs(value: LiteralPiece*): Self = this.set("messageParts", js.Array(value :_*))
     
     @scala.inline
-    def setMessageParts(value: js.Array[String]): Self = this.set("messageParts", value.asInstanceOf[js.Any])
+    def setMessageParts(value: js.Array[LiteralPiece]): Self = this.set("messageParts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPlaceHoldersVarargs(value: String*): Self = this.set("placeHolders", js.Array(value :_*))
+    def setPlaceHoldersVarargs(value: PlaceholderPiece*): Self = this.set("placeHolders", js.Array(value :_*))
     
     @scala.inline
-    def setPlaceHolders(value: js.Array[String]): Self = this.set("placeHolders", value.asInstanceOf[js.Any])
+    def setPlaceHolders(value: js.Array[PlaceholderPiece]): Self = this.set("placeHolders", value.asInstanceOf[js.Any])
   }
 }

@@ -20,13 +20,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * * {@link pc.XRHAND_RIGHT}: Right - indicates that input source is meant to be held in right hand.
   * @property profiles - List of input profile names indicating both the prefered visual representation and behavior of the input source.
   * @property grip - If input source can be held, then it will have node with its world transformation, that can be used to position and rotate virtual joystics based on it.
+  * @property hand - If input source is a tracked hand, then it will point to {@link pc.XrHand} otherwise it is null.
   * @property gamepad - If input source has buttons, triggers, thumbstick or touchpad, then this object provides access to its states.
   * @property selecting - True if input source is in active primary action between selectstart and selectend events.
   * @property elementInput - Set to true to allow input source to interact with Element components. Defaults to true.
   * @property elementEntity - If {@link pc.XrInputSource#elementInput} is true, this property will hold entity with Element component at which this input source is hovering, or null if not hovering over any element.
   * @property hitTestSources - list of active {@link pc.XrHitTestSource} created by this input source.
   * @param manager - WebXR Manager.
-  * @param xrInputSource - XRInputSource object that is created by WebXR API.
+  * @param xrInputSource - [XRInputSource]{@link https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource} object that is created by WebXR API.
   */
 @JSImport("playcanvas", "XrInputSource")
 @js.native

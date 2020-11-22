@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object navbarTogglerMod {
   
-  type NavbarToggler[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.navbarTogglerMod.NavbarTogglerProps]
+  type NavbarToggler = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.navbarTogglerMod.NavbarTogglerProps]
 }

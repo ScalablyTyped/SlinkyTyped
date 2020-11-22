@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("babylonjs/Materials/index", "PBRMetallicRoughnessMaterial")
 @js.native
 class PBRMetallicRoughnessMaterial protected ()
-  extends typingsSlinky.babylonjs.pbrIndexMod.PBRMetallicRoughnessMaterial {
+  extends typingsSlinky.babylonjs.materialsPbrIndexMod.PBRMetallicRoughnessMaterial {
   /**
     * Instantiates a new PBRMetalRoughnessMaterial instance.
     *

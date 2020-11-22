@@ -27,12 +27,12 @@ trait SinonApi extends js.Object {
   /**
     * Creates a basic fake, with no behavior
     */
-  def fake(): SinonSpy = js.native
+  def fake(): SinonSpy[js.Array[_], _] = js.native
   /**
     * Wraps an existing Function to record all interactions, while leaving it up to the func to provide the behavior.
     * This is useful when complex behavior not covered by the sinon.fake.* methods is required or when wrapping an existing function or method.
     */
-  def fake(fn: js.Function): SinonSpy = js.native
+  def fake(fn: js.Function): SinonSpy[js.Array[_], _] = js.native
   
   var fakeServer: SinonFakeServerStatic = js.native
   
@@ -66,5 +66,5 @@ trait SinonApi extends js.Object {
   @JSName("match")
   var match_Original: SinonMatch = js.native
   
-  def spyCall(args: js.Any*): SinonSpyCall = js.native
+  def spyCall(args: js.Any*): SinonSpyCall[js.Array[_], _] = js.native
 }

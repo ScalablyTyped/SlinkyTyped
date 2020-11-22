@@ -24,9 +24,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -37,8 +41,11 @@ import typingsSlinky.react.reactStrings.date
 import typingsSlinky.react.reactStrings.decimal
 import typingsSlinky.react.reactStrings.descending
 import typingsSlinky.react.reactStrings.dialog
+import typingsSlinky.react.reactStrings.done
 import typingsSlinky.react.reactStrings.email
+import typingsSlinky.react.reactStrings.enter
 import typingsSlinky.react.reactStrings.execute
+import typingsSlinky.react.reactStrings.go
 import typingsSlinky.react.reactStrings.grammar
 import typingsSlinky.react.reactStrings.grid
 import typingsSlinky.react.reactStrings.horizontal
@@ -50,6 +57,7 @@ import typingsSlinky.react.reactStrings.location
 import typingsSlinky.react.reactStrings.menu
 import typingsSlinky.react.reactStrings.mixed
 import typingsSlinky.react.reactStrings.move
+import typingsSlinky.react.reactStrings.next
 import typingsSlinky.react.reactStrings.no
 import typingsSlinky.react.reactStrings.none
 import typingsSlinky.react.reactStrings.numeric
@@ -59,8 +67,10 @@ import typingsSlinky.react.reactStrings.other
 import typingsSlinky.react.reactStrings.page
 import typingsSlinky.react.reactStrings.polite
 import typingsSlinky.react.reactStrings.popup
+import typingsSlinky.react.reactStrings.previous
 import typingsSlinky.react.reactStrings.removals
 import typingsSlinky.react.reactStrings.search
+import typingsSlinky.react.reactStrings.send
 import typingsSlinky.react.reactStrings.spelling
 import typingsSlinky.react.reactStrings.step
 import typingsSlinky.react.reactStrings.tel
@@ -219,7 +229,9 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -330,6 +342,9 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def error(value: js.Any): this.type = set("error", value.asInstanceOf[js.Any])
   
   @scala.inline
@@ -367,7 +382,7 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   
   @scala.inline
   def iconFunction3(
-    value: (/* component */ ReactType[InputProps], InputProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, InputProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("icon", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -390,7 +405,7 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   
   @scala.inline
   def inputFunction3(
-    value: (/* component */ ReactType[HtmlInputrops], HtmlInputrops, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, HtmlInputrops, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("input", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -425,7 +440,7 @@ class SharedBuilder_FormInputProps_1386816201 (val args: js.Array[js.Any])
   
   @scala.inline
   def labelFunction3(
-    value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("label", js.Any.fromFunction3(value))
   
   @scala.inline

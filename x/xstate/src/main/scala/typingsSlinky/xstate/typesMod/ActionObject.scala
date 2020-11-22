@@ -7,8 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ActionObject[TContext, TEvent /* <: EventObject */]
-  extends /* other */ StringDictionary[js.Any]
-     with _Action[TContext, TEvent] {
+  extends /* option */ StringDictionary[js.Any] {
   
   /**
     * The implementation for executing the action.

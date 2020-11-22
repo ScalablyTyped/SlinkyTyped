@@ -1,7 +1,9 @@
 package typingsSlinky.baseui.anon
 
-import typingsSlinky.baseui.appNavBarMod.MainNavItemT
-import typingsSlinky.baseui.appNavBarMod.UserNavItemT
+import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.KeyboardEvent
+import slinky.core.SyntheticEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,12 +11,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Item extends js.Object {
   
-  var item: MainNavItemT | UserNavItemT = js.native
+  var event: js.UndefOr[(SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) | KeyboardEvent] = js.native
+  
+  var item: js.Any = js.native
 }
 object Item {
   
   @scala.inline
-  def apply(item: MainNavItemT | UserNavItemT): Item = {
+  def apply(item: js.Any): Item = {
     val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
     __obj.asInstanceOf[Item]
   }
@@ -35,6 +39,18 @@ object Item {
     }
     
     @scala.inline
-    def setItem(value: MainNavItemT | UserNavItemT): Self = this.set("item", value.asInstanceOf[js.Any])
+    def setItem(value: js.Any): Self = this.set("item", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEventKeyboardEvent(value: KeyboardEvent): Self = this.set("event", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEventBaseSyntheticEvent(value: SyntheticEvent[EventTarget with HTMLElement, org.scalajs.dom.raw.Event]): Self = this.set("event", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEvent(value: (SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) | KeyboardEvent): Self = this.set("event", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEvent: Self = this.set("event", js.undefined)
   }
 }

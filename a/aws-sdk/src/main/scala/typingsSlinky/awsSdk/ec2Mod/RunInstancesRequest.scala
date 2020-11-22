@@ -63,7 +63,12 @@ trait RunInstancesRequest extends js.Object {
   var ElasticInferenceAccelerators: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.ElasticInferenceAccelerators] = js.native
   
   /**
-    * Indicates whether an instance is enabled for hibernation. For more information, see Hibernate your instance in the Amazon Elastic Compute Cloud User Guide.
+    * Indicates whether the instance is enabled for AWS Nitro Enclaves. For more information, see  What is AWS Nitro Enclaves? in the AWS Nitro Enclaves User Guide. You can't enable AWS Nitro Enclaves and hibernation on the same instance.
+    */
+  var EnclaveOptions: js.UndefOr[EnclaveOptionsRequest] = js.native
+  
+  /**
+    * Indicates whether an instance is enabled for hibernation. For more information, see Hibernate your instance in the Amazon Elastic Compute Cloud User Guide. You can't enable hibernation and AWS Nitro Enclaves on the same instance.
     */
   var HibernationOptions: js.UndefOr[HibernationOptionsRequest] = js.native
   
@@ -290,6 +295,12 @@ object RunInstancesRequest {
     
     @scala.inline
     def deleteElasticInferenceAccelerators: Self = this.set("ElasticInferenceAccelerators", js.undefined)
+    
+    @scala.inline
+    def setEnclaveOptions(value: EnclaveOptionsRequest): Self = this.set("EnclaveOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnclaveOptions: Self = this.set("EnclaveOptions", js.undefined)
     
     @scala.inline
     def setHibernationOptions(value: HibernationOptionsRequest): Self = this.set("HibernationOptions", value.asInstanceOf[js.Any])

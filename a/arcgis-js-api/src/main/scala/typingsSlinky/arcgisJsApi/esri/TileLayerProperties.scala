@@ -11,7 +11,8 @@ trait TileLayerProperties
   extends LayerProperties
      with RefreshableLayerProperties
      with ScaleRangeLayerProperties
-     with PortalLayerProperties {
+     with PortalLayerProperties
+     with BlendLayerProperties {
   
   /**
     * The copyright text as defined by the service.
@@ -24,22 +25,18 @@ trait TileLayerProperties
     * Indicates whether the layer will be included in the legend.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISMapService.html#legendEnabled)
-    *
-    * @default true
     */
   var legendEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * Resampling is enabled by default in 2D [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) and 3D [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). This means that tile images are resampled at a lower level of detail and displayed at levels where tiles may not be available. Setting this property to `false` disables this behavior. Instead, if a tile is not available, a transparent image is displayed.
+    * Resampling is enabled by default in 2D [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) and 3D [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html#resampling)
-    *
-    * @default true
     */
   var resampling: js.UndefOr[Boolean] = js.native
   
   /**
-    * The [tiled map service's metadata JSON](https://developers.arcgis.com/rest/services-reference/map-service.htm) exposed by the ArcGIS REST API. While most commonly used [properties](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html#properties-summary) are exposed on the TileLayer class directly, this property gives access to all information returned by the tiled map service. This property is useful if working in an application built using an older version of the API which requires access to tiled map service properties from a more recent version.
+    * The [tiled map service's metadata JSON](https://developers.arcgis.com/rest/services-reference/map-service.htm) exposed by the ArcGIS REST API.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html#sourceJSON)
     */
@@ -60,7 +57,7 @@ trait TileLayerProperties
   var tileServers: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * The URL of the REST endpoint of the layer. The URL may either point to a resource on ArcGIS Enterprise or ArcGIS Online.
+    * The URL of the REST endpoint of the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html#url)
     */

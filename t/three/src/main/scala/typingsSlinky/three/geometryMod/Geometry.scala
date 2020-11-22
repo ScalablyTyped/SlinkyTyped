@@ -38,11 +38,13 @@ class Geometry () extends EventDispatcher {
   
   /**
   	 * Bounding box.
+  	 * @default null
   	 */
   var boundingBox: Box3 | Null = js.native
   
   /**
   	 * Bounding sphere.
+  	 * @default null
   	 */
   var boundingSphere: Sphere | Null = js.native
   
@@ -53,11 +55,13 @@ class Geometry () extends EventDispatcher {
   	 * Used in ParticleSystem, Line and Ribbon.
   	 * Meshes use per-face-use-of-vertex colors embedded directly in faces.
   	 * To signal an update in this array, Geometry.colorsNeedUpdate needs to be set to true.
+  	 * @default []
   	 */
   var colors: js.Array[Color] = js.native
   
   /**
   	 * Set to true if the colors array has been updated.
+  	 * @default false
   	 */
   var colorsNeedUpdate: Boolean = js.native
   
@@ -104,6 +108,7 @@ class Geometry () extends EventDispatcher {
   
   /**
   	 * Set to true if the faces array has been updated.
+  	 * @default false
   	 */
   var elementsNeedUpdate: Boolean = js.native
   
@@ -111,6 +116,7 @@ class Geometry () extends EventDispatcher {
   	 * Array of face UV layers.
   	 * Each UV layer is an array of UV matching order and number of vertices in faces.
   	 * To signal an update in this array, Geometry.uvsNeedUpdate needs to be set to true.
+  	 * @default [[]]
   	 */
   var faceVertexUvs: js.Array[js.Array[js.Array[Vector2]]] = js.native
   
@@ -118,6 +124,7 @@ class Geometry () extends EventDispatcher {
   	 * Array of triangles or/and quads.
   	 * The array of faces describe how each vertex in the model is connected with each other.
   	 * To signal an update in this array, Geometry.elementsNeedUpdate needs to be set to true.
+  	 * @default []
   	 */
   var faces: js.Array[Face3] = js.native
   
@@ -125,6 +132,7 @@ class Geometry () extends EventDispatcher {
   
   /**
   	 *
+  	 * @default false
   	 */
   var groupsNeedUpdate: Boolean = js.native
   
@@ -136,12 +144,13 @@ class Geometry () extends EventDispatcher {
   val isGeometry: `true` = js.native
   
   /**
-  	 *
+  	 * @default []
   	 */
   var lineDistances: js.Array[Double] = js.native
   
   /**
   	 * Set to true if the linedistances array has been updated.
+  	 * @default false
   	 */
   var lineDistancesNeedUpdate: Boolean = js.native
   
@@ -164,6 +173,7 @@ class Geometry () extends EventDispatcher {
   	 * Array of morph normals. Morph normals have similar structure as morph targets, each normal set is a Javascript object:
   	 *
   	 *		 morphNormal = { name: "NormalName", normals: [ new THREE.Vector3(), ... ] }
+  	 * @default []
   	 */
   var morphNormals: js.Array[MorphNormals] = js.native
   
@@ -173,11 +183,13 @@ class Geometry () extends EventDispatcher {
   	 *		 { name: "targetName", vertices: [ new THREE.Vector3(), ... ] }
   	 *
   	 * Morph vertices match number and order of primary vertices.
+  	 * @default []
   	 */
   var morphTargets: js.Array[MorphTarget] = js.native
   
   /**
   	 * Name for this geometry. Default is an empty string.
+  	 * @default ''
   	 */
   var name: String = js.native
   
@@ -185,6 +197,7 @@ class Geometry () extends EventDispatcher {
   
   /**
   	 * Set to true if the normals array has been updated.
+  	 * @default false
   	 */
   var normalsNeedUpdate: Boolean = js.native
   
@@ -200,11 +213,13 @@ class Geometry () extends EventDispatcher {
   
   /**
   	 * Array of skinning indices, matching number and order of vertices.
+  	 * @default []
   	 */
   var skinIndices: js.Array[Vector4] = js.native
   
   /**
   	 * Array of skinning weights, matching number and order of vertices.
+  	 * @default []
   	 */
   var skinWeights: js.Array[Vector4] = js.native
   
@@ -214,23 +229,29 @@ class Geometry () extends EventDispatcher {
   
   def translate(x: Double, y: Double, z: Double): Geometry = js.native
   
+  /**
+  	 * @default 'Geometry'
+  	 */
   var `type`: String = js.native
   
   var uuid: String = js.native
   
   /**
   	 * Set to true if the uvs array has been updated.
+  	 * @default false
   	 */
   var uvsNeedUpdate: Boolean = js.native
   
   /**
   	 * The array of vertices hold every position of points of the model.
   	 * To signal an update in this array, Geometry.verticesNeedUpdate needs to be set to true.
+  	 * @default []
   	 */
   var vertices: js.Array[Vector3] = js.native
   
   /**
   	 * Set to true if the vertices array has been updated.
+  	 * @default false
   	 */
   var verticesNeedUpdate: Boolean = js.native
 }

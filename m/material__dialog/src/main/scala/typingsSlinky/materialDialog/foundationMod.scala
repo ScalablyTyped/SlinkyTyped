@@ -29,6 +29,8 @@ object foundationMod extends js.Object {
     
     def getScrimClickAction(): String = js.native
     
+    def getSuppressDefaultPressSelector(): String = js.native
+    
     /** Handles click on the dialog root element. */
     def handleClick(evt: MouseEvent): Unit = js.native
     
@@ -49,6 +51,8 @@ object foundationMod extends js.Object {
     def setEscapeKeyAction(action: String): Unit = js.native
     
     def setScrimClickAction(action: String): Unit = js.native
+    
+    def setSuppressDefaultPressSelector(selector: String): Unit = js.native
   }
   /* static members */
   @js.native

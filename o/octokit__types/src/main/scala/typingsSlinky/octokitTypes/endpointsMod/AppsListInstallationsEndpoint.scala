@@ -1,15 +1,11 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  per_page :number | undefined,   page :number | undefined} & @octokit/types.@octokit/types/dist-types/generated/Endpoints.RequiredPreview<'machine-man'> */
 @js.native
 trait AppsListInstallationsEndpoint extends js.Object {
-  
-  var mediaType: `1` = js.native
   
   /**
     * Page number of the results to fetch.
@@ -24,8 +20,8 @@ trait AppsListInstallationsEndpoint extends js.Object {
 object AppsListInstallationsEndpoint {
   
   @scala.inline
-  def apply(mediaType: `1`): AppsListInstallationsEndpoint = {
-    val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any])
+  def apply(): AppsListInstallationsEndpoint = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[AppsListInstallationsEndpoint]
   }
   
@@ -43,9 +39,6 @@ object AppsListInstallationsEndpoint {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setMediaType(value: `1`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPage(value: Double): Self = this.set("page", value.asInstanceOf[js.Any])

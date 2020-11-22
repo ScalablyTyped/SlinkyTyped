@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkRemoveSensitiveLogs
 
-import typingsSlinky.awsSdkTypes.protocolMod.Member
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def removeSensitiveLogs(obj: js.Any, member: Member): String = js.native
+  def removeSensitiveLogs(
+    obj: js.Any,
+    member: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Member */ js.Any
+  ): String = js.native
 }

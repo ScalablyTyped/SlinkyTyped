@@ -6,9 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type callbackFn[Response, Context] = js.Function2[
+  type callbackFn[TResponse, TContext] = js.Function2[
     /* err */ typingsSlinky.elasticElasticsearch.transportMod.ApiError, 
-    /* result */ typingsSlinky.elasticElasticsearch.transportMod.ApiResponse[Response, Context], 
+    /* result */ typingsSlinky.elasticElasticsearch.transportMod.ApiResponse[TResponse, TContext], 
     scala.Unit
   ]
   

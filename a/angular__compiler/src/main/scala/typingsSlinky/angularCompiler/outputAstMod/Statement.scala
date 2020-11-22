@@ -11,7 +11,30 @@ abstract class Statement () extends js.Object {
   def this(modifiers: js.Array[StmtModifier]) = this()
   def this(modifiers: js.UndefOr[scala.Nothing], sourceSpan: ParseSourceSpan) = this()
   def this(modifiers: js.Array[StmtModifier], sourceSpan: ParseSourceSpan) = this()
-  def this(modifiers: Null, sourceSpan: ParseSourceSpan) = this()
+  def this(
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(modifiers: js.UndefOr[scala.Nothing], sourceSpan: Null, leadingComments: js.Array[LeadingComment_]) = this()
+  def this(
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: ParseSourceSpan,
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(
+    modifiers: js.Array[StmtModifier],
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(modifiers: js.Array[StmtModifier], sourceSpan: Null, leadingComments: js.Array[LeadingComment_]) = this()
+  def this(
+    modifiers: js.Array[StmtModifier],
+    sourceSpan: ParseSourceSpan,
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  
+  def addLeadingComment(leadingComment: LeadingComment_): Unit = js.native
   
   def hasModifier(modifier: StmtModifier): Boolean = js.native
   
@@ -20,6 +43,8 @@ abstract class Statement () extends js.Object {
     * Note: We don't check Types nor ParseSourceSpans nor function arguments.
     */
   def isEquivalent(stmt: Statement): Boolean = js.native
+  
+  var leadingComments: js.UndefOr[js.Array[LeadingComment_]] = js.native
   
   var modifiers: js.Array[StmtModifier] = js.native
   

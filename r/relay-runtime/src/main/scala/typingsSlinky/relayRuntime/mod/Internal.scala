@@ -1,6 +1,5 @@
 package typingsSlinky.relayRuntime.mod
 
-import typingsSlinky.relayRuntime.anon.NetworkCacheConfig
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.GraphQLResponse
 import typingsSlinky.relayRuntime.relayObservableMod.RelayObservable
 import typingsSlinky.relayRuntime.relayStoreTypesMod.OperationDescriptor
@@ -15,11 +14,6 @@ trait Internal extends js.Object {
   def fetchQuery(
     environment: typingsSlinky.relayRuntime.relayStoreTypesMod.Environment,
     operation: OperationDescriptor
-  ): RelayObservable[GraphQLResponse] = js.native
-  def fetchQuery(
-    environment: typingsSlinky.relayRuntime.relayStoreTypesMod.Environment,
-    operation: OperationDescriptor,
-    options: NetworkCacheConfig
   ): RelayObservable[GraphQLResponse] = js.native
   
   def fetchQueryDeduped(
@@ -36,10 +30,9 @@ trait Internal extends js.Object {
   ] = js.native
   
   @JSName("fetchQuery")
-  var fetchQuery_Original: js.Function3[
+  var fetchQuery_Original: js.Function2[
     /* environment */ typingsSlinky.relayRuntime.relayStoreTypesMod.Environment, 
     /* operation */ OperationDescriptor, 
-    /* options */ js.UndefOr[NetworkCacheConfig], 
     RelayObservable[GraphQLResponse]
   ] = js.native
   

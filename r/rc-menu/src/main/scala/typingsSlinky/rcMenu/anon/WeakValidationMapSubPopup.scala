@@ -12,7 +12,7 @@ import typingsSlinky.rcMenu.interfaceMod.SelectEventHandler
 import typingsSlinky.rcMenu.interfaceMod.TriggerSubMenuAction
 import typingsSlinky.rcMenu.rcMenuStrings.ltr
 import typingsSlinky.rcMenu.rcMenuStrings.rtl
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.react.mod.Validator
@@ -62,7 +62,7 @@ trait WeakValidationMapSubPopup extends js.Object {
   
   var mode: js.UndefOr[Validator[js.UndefOr[MenuMode | Null]]] = js.native
   
-  var motion: js.UndefOr[Validator[js.UndefOr[MotionType | Null]]] = js.native
+  var motion: js.UndefOr[Validator[js.UndefOr[CSSMotionProps | Null]]] = js.native
   
   var multiple: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
@@ -234,7 +234,7 @@ object WeakValidationMapSubPopup {
     def deleteMode: Self = this.set("mode", js.undefined)
     
     @scala.inline
-    def setMotion(value: Validator[js.UndefOr[MotionType | Null]]): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: Validator[js.UndefOr[CSSMotionProps | Null]]): Self = this.set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMotion: Self = this.set("motion", js.undefined)

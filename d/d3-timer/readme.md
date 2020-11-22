@@ -1,7 +1,7 @@
 
 # Scala.js typings for d3-timer
 
-Typings are for version 1.0
+Typings are for version 2.0
 
 ## Library description:
 An efficient queue capable of managing thousands of concurrent animations.

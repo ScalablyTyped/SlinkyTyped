@@ -18,15 +18,15 @@ class Location_ () extends Message {
   def addSpan(value: Double): Double = js.native
   def addSpan(value: Double, index: Double): Double = js.native
   
-  def clearLeadingComments(): Unit = js.native
+  def clearLeadingComments(): Location = js.native
   
-  def clearLeadingDetachedCommentsList(): Unit = js.native
+  def clearLeadingDetachedCommentsList(): Location = js.native
   
-  def clearPathList(): Unit = js.native
+  def clearPathList(): Location = js.native
   
-  def clearSpanList(): Unit = js.native
+  def clearSpanList(): Location = js.native
   
-  def clearTrailingComments(): Unit = js.native
+  def clearTrailingComments(): Location = js.native
   
   def getLeadingComments(): js.UndefOr[String] = js.native
   
@@ -42,13 +42,13 @@ class Location_ () extends Message {
   
   def hasTrailingComments(): Boolean = js.native
   
-  def setLeadingComments(value: String): Unit = js.native
+  def setLeadingComments(value: String): Location = js.native
   
-  def setLeadingDetachedCommentsList(value: js.Array[String]): Unit = js.native
+  def setLeadingDetachedCommentsList(value: js.Array[String]): Location = js.native
   
-  def setPathList(value: js.Array[Double]): Unit = js.native
+  def setPathList(value: js.Array[Double]): Location = js.native
   
-  def setSpanList(value: js.Array[Double]): Unit = js.native
+  def setSpanList(value: js.Array[Double]): Location = js.native
   
-  def setTrailingComments(value: String): Unit = js.native
+  def setTrailingComments(value: String): Location = js.native
 }

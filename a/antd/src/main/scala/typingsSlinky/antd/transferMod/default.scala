@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("antd/lib/transfer", JSImport.Default)
 @js.native
-class default protected () extends Transfer {
-  def this(props: TransferProps) = this()
+class default[RecordType /* <: TransferItem */] protected () extends Transfer[RecordType] {
+  def this(props: TransferProps[RecordType]) = this()
 }
 /* static members */
 @JSImport("antd/lib/transfer", JSImport.Default)
@@ -29,5 +29,5 @@ object default extends js.Object {
   
   var defaultProps: typingsSlinky.antd.anon.ListStyle = js.native
   
-  def getDerivedStateFromProps(hasSelectedKeysTargetKeysPaginationChildren: TransferProps): SourceSelectedKeys | Null = js.native
+  def getDerivedStateFromProps[T](hasSelectedKeysTargetKeysPaginationChildren: TransferProps[T]): SourceSelectedKeys | Null = js.native
 }

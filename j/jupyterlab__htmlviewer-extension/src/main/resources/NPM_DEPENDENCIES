@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "@jupyterlab/htmlviewer-extension" : "1.2.8"
+      "@jupyterlab/htmlviewer-extension" : "2.2.6"
     }
   ],
   "test-dependencies" : [
     {
-      "@jupyterlab/htmlviewer-extension" : "1.2.8"
+      "@jupyterlab/htmlviewer-extension" : "2.2.6"
     }
   ],
   "compile-devDependencies" : [

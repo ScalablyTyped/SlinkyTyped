@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeviceConfigurationAssignment extends Entity {
   
   // The assignment target for the device configuration.
-  var target: js.UndefOr[DeviceAndAppManagementAssignmentTarget] = js.native
+  var target: js.UndefOr[NullableOption[DeviceAndAppManagementAssignmentTarget]] = js.native
 }
 object DeviceConfigurationAssignment {
   
@@ -34,9 +34,12 @@ object DeviceConfigurationAssignment {
     }
     
     @scala.inline
-    def setTarget(value: DeviceAndAppManagementAssignmentTarget): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setTarget(value: NullableOption[DeviceAndAppManagementAssignmentTarget]): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)
+    
+    @scala.inline
+    def setTargetNull: Self = this.set("target", null)
   }
 }

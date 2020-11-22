@@ -10,6 +10,7 @@ import typingsSlinky.cytoscape.cytoscapeStrings.contain
 import typingsSlinky.cytoscape.cytoscapeStrings.cover
 import typingsSlinky.cytoscape.cytoscapeStrings.displayed
 import typingsSlinky.cytoscape.cytoscapeStrings.ellipsis
+import typingsSlinky.cytoscape.cytoscapeStrings.hidden
 import typingsSlinky.cytoscape.cytoscapeStrings.left
 import typingsSlinky.cytoscape.cytoscapeStrings.no
 import typingsSlinky.cytoscape.cytoscapeStrings.none
@@ -297,7 +298,7 @@ trait Node extends js.Object {
   
   var `transition-timing-function`: js.UndefOr[TransitionTimingFunction] = js.native
   
-  var visibility: js.UndefOr[PropertyValue[NodeSingular, none | visible]] = js.native
+  var visibility: js.UndefOr[PropertyValue[NodeSingular, hidden | visible]] = js.native
   
   /**
     * The width of the node’s body.
@@ -1094,10 +1095,10 @@ object Node {
     def `deleteTransition-timing-function`: Self = this.set("transition-timing-function", js.undefined)
     
     @scala.inline
-    def setVisibilityFunction1(value: NodeSingular => none | visible): Self = this.set("visibility", js.Any.fromFunction1(value))
+    def setVisibilityFunction1(value: NodeSingular => hidden | visible): Self = this.set("visibility", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setVisibility(value: PropertyValue[NodeSingular, none | visible]): Self = this.set("visibility", value.asInstanceOf[js.Any])
+    def setVisibility(value: PropertyValue[NodeSingular, hidden | visible]): Self = this.set("visibility", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVisibility: Self = this.set("visibility", js.undefined)

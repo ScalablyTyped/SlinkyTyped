@@ -8,17 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait XRInputSource extends js.Object {
   
-  var gamepad: js.UndefOr[Gamepad] = js.native
+  val gamepad: js.UndefOr[Gamepad] = js.native
   
-  var gripSpace: js.UndefOr[EventTarget] = js.native
+  val gripSpace: js.UndefOr[EventTarget] = js.native
   
-  var handedness: XRHandedness = js.native
+  val hand: js.UndefOr[XRHand] = js.native
   
-  var profiles: js.Array[String] = js.native
+  val handedness: XRHandedness = js.native
   
-  var targetRayMode: XRTargetRayMode = js.native
+  val profiles: js.Array[String] = js.native
   
-  var targetRaySpace: EventTarget = js.native
+  val targetRayMode: XRTargetRayMode = js.native
+  
+  val targetRaySpace: EventTarget = js.native
 }
 object XRInputSource {
   
@@ -74,5 +76,11 @@ object XRInputSource {
     
     @scala.inline
     def deleteGripSpace: Self = this.set("gripSpace", js.undefined)
+    
+    @scala.inline
+    def setHand(value: XRHand): Self = this.set("hand", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHand: Self = this.set("hand", js.undefined)
   }
 }

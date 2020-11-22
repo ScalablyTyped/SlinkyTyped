@@ -49,6 +49,11 @@ trait Props extends js.Object {
   val dimColor: js.UndefOr[Boolean] = js.native
   
   /**
+    * Inverse background and foreground colors.
+    */
+  val inverse: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Make the text italic.
     */
   val italic: js.UndefOr[Boolean] = js.native
@@ -137,6 +142,12 @@ object Props {
     
     @scala.inline
     def deleteDimColor: Self = this.set("dimColor", js.undefined)
+    
+    @scala.inline
+    def setInverse(value: Boolean): Self = this.set("inverse", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInverse: Self = this.set("inverse", js.undefined)
     
     @scala.inline
     def setItalic(value: Boolean): Self = this.set("italic", value.asInstanceOf[js.Any])

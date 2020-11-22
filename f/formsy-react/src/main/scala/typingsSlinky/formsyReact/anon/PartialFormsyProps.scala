@@ -16,8 +16,14 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.formsyReact.formsyMod.OnSubmitCallback
+import typingsSlinky.formsyReact.formsyReactStrings.`additions removals`
 import typingsSlinky.formsyReact.formsyReactStrings.`additions text`
 import typingsSlinky.formsyReact.formsyReactStrings.`inline`
+import typingsSlinky.formsyReact.formsyReactStrings.`removals additions`
+import typingsSlinky.formsyReact.formsyReactStrings.`removals text`
+import typingsSlinky.formsyReact.formsyReactStrings.`text additions`
+import typingsSlinky.formsyReact.formsyReactStrings.`text removals`
 import typingsSlinky.formsyReact.formsyReactStrings.additions
 import typingsSlinky.formsyReact.formsyReactStrings.all
 import typingsSlinky.formsyReact.formsyReactStrings.ascending
@@ -74,6 +80,7 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.DragEventHandler
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.FormEventHandler
+import typingsSlinky.react.mod.FormHTMLAttributes
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.PointerEventHandler
@@ -168,7 +175,9 @@ trait PartialFormsyProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -326,14 +335,7 @@ trait PartialFormsyProps extends js.Object {
   
   var onInvalid: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onInvalidSubmit: js.UndefOr[
-    js.Function3[
-      /* model */ IModel, 
-      /* resetModel */ IResetModel, 
-      /* updateInputsWithError */ IUpdateInputsWithError, 
-      Unit
-    ]
-  ] = js.native
+  var onInvalidSubmit: js.UndefOr[OnSubmitCallback] = js.native
   
   var onKeyDown: js.UndefOr[KeyboardEventHandler[HTMLFormElement]] = js.native
   
@@ -403,14 +405,7 @@ trait PartialFormsyProps extends js.Object {
   
   var onStalled: js.UndefOr[ReactEventHandler[HTMLFormElement]] = js.native
   
-  var onSubmit: js.UndefOr[
-    js.Function3[
-      /* model */ IModel, 
-      /* resetModel */ IResetModel, 
-      /* updateInputsWithError */ IUpdateInputsWithError, 
-      Unit
-    ]
-  ] = js.native
+  var onSubmit: js.UndefOr[OnSubmitCallback] = js.native
   
   var onSuspend: js.UndefOr[ReactEventHandler[HTMLFormElement]] = js.native
   
@@ -428,14 +423,7 @@ trait PartialFormsyProps extends js.Object {
   
   var onValid: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onValidSubmit: js.UndefOr[
-    js.Function3[
-      /* model */ IModel, 
-      /* resetModel */ IResetModel, 
-      /* updateInputsWithError */ IUpdateInputsWithError, 
-      Unit
-    ]
-  ] = js.native
+  var onValidSubmit: js.UndefOr[OnSubmitCallback] = js.native
   
   var onVolumeChange: js.UndefOr[ReactEventHandler[HTMLFormElement]] = js.native
   
@@ -747,7 +735,9 @@ object PartialFormsyProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1231,8 +1221,8 @@ object PartialFormsyProps {
     
     @scala.inline
     def setOnInvalidSubmit(
-      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError) => Unit
-    ): Self = this.set("onInvalidSubmit", js.Any.fromFunction3(value))
+      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError, /* event */ SyntheticEvent[Event, FormHTMLAttributes[js.Any]]) => Unit
+    ): Self = this.set("onInvalidSubmit", js.Any.fromFunction4(value))
     
     @scala.inline
     def deleteOnInvalidSubmit: Self = this.set("onInvalidSubmit", js.undefined)
@@ -1443,8 +1433,8 @@ object PartialFormsyProps {
     
     @scala.inline
     def setOnSubmit(
-      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError) => Unit
-    ): Self = this.set("onSubmit", js.Any.fromFunction3(value))
+      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError, /* event */ SyntheticEvent[Event, FormHTMLAttributes[js.Any]]) => Unit
+    ): Self = this.set("onSubmit", js.Any.fromFunction4(value))
     
     @scala.inline
     def deleteOnSubmit: Self = this.set("onSubmit", js.undefined)
@@ -1499,8 +1489,8 @@ object PartialFormsyProps {
     
     @scala.inline
     def setOnValidSubmit(
-      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError) => Unit
-    ): Self = this.set("onValidSubmit", js.Any.fromFunction3(value))
+      value: (/* model */ IModel, /* resetModel */ IResetModel, /* updateInputsWithError */ IUpdateInputsWithError, /* event */ SyntheticEvent[Event, FormHTMLAttributes[js.Any]]) => Unit
+    ): Self = this.set("onValidSubmit", js.Any.fromFunction4(value))
     
     @scala.inline
     def deleteOnValidSubmit: Self = this.set("onValidSubmit", js.undefined)

@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkBuildTypes.apiModelMod
 
-import typingsSlinky.awsSdkTypes.protocolMod.XmlNamespace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +11,9 @@ trait StructureMember extends Member {
   
   var streaming: js.UndefOr[scala.Boolean] = js.native
   
-  var xmlNamespace: js.UndefOr[XmlNamespace | java.lang.String] = js.native
+  var xmlNamespace: js.UndefOr[
+    (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify XmlNamespace */ js.Any) | java.lang.String
+  ] = js.native
 }
 object StructureMember {
   
@@ -50,7 +51,9 @@ object StructureMember {
     def deleteStreaming: Self = this.set("streaming", js.undefined)
     
     @scala.inline
-    def setXmlNamespace(value: XmlNamespace | java.lang.String): Self = this.set("xmlNamespace", value.asInstanceOf[js.Any])
+    def setXmlNamespace(
+      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify XmlNamespace */ js.Any) | java.lang.String
+    ): Self = this.set("xmlNamespace", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteXmlNamespace: Self = this.set("xmlNamespace", js.undefined)

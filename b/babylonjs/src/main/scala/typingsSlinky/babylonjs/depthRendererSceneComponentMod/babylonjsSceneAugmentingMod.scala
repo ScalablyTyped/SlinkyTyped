@@ -30,10 +30,17 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * Creates a depth renderer a given camera which contains a depth map which can be used for post processing.
       * @param camera The camera to create the depth renderer on (default: scene's active camera)
       * @param storeNonLinearDepth Defines whether the depth is stored linearly like in Babylon Shadows or directly like glFragCoord.z
+      * @param force32bitsFloat Forces 32 bits float when supported (else 16 bits float is prioritized over 32 bits float if supported)
       * @returns the created depth renderer
       */
     def enableDepthRenderer(): DepthRenderer = js.native
+    def enableDepthRenderer(
+      camera: js.UndefOr[Nullable[Camera]],
+      storeNonLinearDepth: js.UndefOr[scala.Nothing],
+      force32bitsFloat: Boolean
+    ): DepthRenderer = js.native
     def enableDepthRenderer(camera: js.UndefOr[Nullable[Camera]], storeNonLinearDepth: Boolean): DepthRenderer = js.native
+    def enableDepthRenderer(camera: js.UndefOr[Nullable[Camera]], storeNonLinearDepth: Boolean, force32bitsFloat: Boolean): DepthRenderer = js.native
     def enableDepthRenderer(camera: Nullable[Camera]): DepthRenderer = js.native
   }
 }

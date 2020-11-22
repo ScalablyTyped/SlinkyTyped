@@ -3,6 +3,7 @@ package typingsSlinky.antd.groupMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.bottom
 import typingsSlinky.antd.antdStrings.top
+import typingsSlinky.antd.sizeContextMod.AvatarSize
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,6 +23,8 @@ trait GroupProps extends js.Object {
   var maxStyle: js.UndefOr[CSSProperties] = js.native
   
   var prefixCls: js.UndefOr[String] = js.native
+  
+  var size: js.UndefOr[AvatarSize] = js.native
   
   var style: js.UndefOr[CSSProperties] = js.native
 }
@@ -86,6 +89,12 @@ object GroupProps {
     
     @scala.inline
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    
+    @scala.inline
+    def setSize(value: AvatarSize): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
     
     @scala.inline
     def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])

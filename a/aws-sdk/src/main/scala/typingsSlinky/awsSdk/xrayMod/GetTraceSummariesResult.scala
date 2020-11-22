@@ -13,7 +13,7 @@ trait GetTraceSummariesResult extends js.Object {
   var ApproximateTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * If the requested time frame contained more than one page of results, you can use this token to retrieve the next page. The first page contains the most most recent results, closest to the end of the time frame.
+    * If the requested time frame contained more than one page of results, you can use this token to retrieve the next page. The first page contains the most recent results, closest to the end of the time frame.
     */
   var NextToken: js.UndefOr[String] = js.native
   

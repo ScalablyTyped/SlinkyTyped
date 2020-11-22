@@ -19,8 +19,6 @@ object toggleMod extends js.Object {
     
     var activated: Boolean = js.native
     
-    var buttonEl: js.Any = js.native
-    
     /**
       * If `true`, the toggle is selected.
       */
@@ -54,6 +52,8 @@ object toggleMod extends js.Object {
     var el: HTMLElement = js.native
     
     var emitStyle: js.Any = js.native
+    
+    var focusEl: js.Any = js.native
     
     var gesture: js.Any = js.native
     

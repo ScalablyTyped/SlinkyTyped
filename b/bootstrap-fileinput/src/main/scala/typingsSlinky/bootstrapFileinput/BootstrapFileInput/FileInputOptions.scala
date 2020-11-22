@@ -142,8 +142,10 @@ trait FileInputOptions extends js.Object {
     * The ajax delete action will send the following data to server via POST:
     *     key: the key setting as setup in initialPreviewConfig['key']
     *     any other extra data passed as key: value pairs either via initialPreviewConfig['extra'] OR deleteExtraData if former is not set.
+    * You can also set deleteUrl as a function callback which will return a string. In that case, the function will get executed every time at runtime.
+    * This will enable you to set a dynamically changing url based on runtime conditions.
     */
-  var deleteUrl: js.UndefOr[String] = js.native
+  var deleteUrl: js.UndefOr[String | js.Function0[String]] = js.native
   
   /**
     * whether to enable a drag and drop zone for dragging and dropping files to.
@@ -869,8 +871,20 @@ trait FileInputOptions extends js.Object {
     *     This is MANDATORY if you want to use advanced features like drag & drop, append/remove files, selectively upload files via ajax etc.
     *     The plugin automatically send $_FILES data to the server with the input `name` attribute as the key if provided.
     *     If input name is not set, the key defaults to file-data.
+    * You can also set uploadUrl as a function callback which will return a string. In that case, the function will get executed at runtime
+    * just before every ajax call. This will enable you to set a dynamic upload url based on runtime / dynamic conditions.
     */
-  var uploadUrl: js.UndefOr[String] = js.native
+  var uploadUrl: js.UndefOr[String | js.Function0[String]] = js.native
+  
+  /**
+    * the URL for the ajax upload processing action applicable when each individual file thumbnail is separately uploaded. Defaults to null.
+    * If this is not set, this will default to the uploadUrl setting. This property is useful for synchronous uploads when uploadAsync is
+    * set to false, and you want to set a different server action for batch upload via uploadUrl, but a different server action for single
+    * file thumbnail upload via uploadUrlThumb.
+    * You can also set uploadThumbUrl as a function callback which will return a string. In that case, the function will get executed at
+    * runtime just before every ajax call. This will enable you to set a dynamic upload thumbnail url based on runtime / dynamic conditions.
+    */
+  var uploadUrlThumb: js.UndefOr[String | js.Function0[String]] = js.native
   
   /**
     * whether to include initial preview file count (server uploaded files) in validating minFileCount and maxFileCount.
@@ -1020,7 +1034,10 @@ object FileInputOptions {
     def deleteDeleteExtraData: Self = this.set("deleteExtraData", js.undefined)
     
     @scala.inline
-    def setDeleteUrl(value: String): Self = this.set("deleteUrl", value.asInstanceOf[js.Any])
+    def setDeleteUrlFunction0(value: () => String): Self = this.set("deleteUrl", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setDeleteUrl(value: String | js.Function0[String]): Self = this.set("deleteUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeleteUrl: Self = this.set("deleteUrl", js.undefined)
@@ -1637,10 +1654,22 @@ object FileInputOptions {
     def deleteUploadTitle: Self = this.set("uploadTitle", js.undefined)
     
     @scala.inline
-    def setUploadUrl(value: String): Self = this.set("uploadUrl", value.asInstanceOf[js.Any])
+    def setUploadUrlFunction0(value: () => String): Self = this.set("uploadUrl", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setUploadUrl(value: String | js.Function0[String]): Self = this.set("uploadUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUploadUrl: Self = this.set("uploadUrl", js.undefined)
+    
+    @scala.inline
+    def setUploadUrlThumbFunction0(value: () => String): Self = this.set("uploadUrlThumb", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setUploadUrlThumb(value: String | js.Function0[String]): Self = this.set("uploadUrlThumb", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUploadUrlThumb: Self = this.set("uploadUrlThumb", js.undefined)
     
     @scala.inline
     def setValidateInitialCount(value: Boolean): Self = this.set("validateInitialCount", value.asInstanceOf[js.Any])

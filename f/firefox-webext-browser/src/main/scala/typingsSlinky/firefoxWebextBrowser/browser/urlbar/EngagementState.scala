@@ -6,10 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* urlbar types */
 /**
-  * The state of an engagement made with the urlbar by the user. `start`: The user has started an engagement.
-  * `engagement`: The user has completed an engagement by picking a result. `abandonment`: The user has abandoned
-  * their engagement, for example by blurring the urlbar. `discard`: The engagement ended in a way that should be
-  * ignored by listeners.
+  * The state of an engagement made with the urlbar by the user. `start`: The user has started an engagement. `engagement`: The user has completed an engagement by picking a result. `abandonment`: The user has abandoned their engagement, for example by blurring the urlbar. `discard`: The engagement ended in a way that should be ignored by listeners.
   */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.start

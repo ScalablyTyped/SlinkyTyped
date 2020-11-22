@@ -18,7 +18,7 @@ object IMapObjectCollection {
   @scala.inline
   def apply(
     add: js.Object => IMapObjectCollection,
-    events: IEventManager,
+    events: IEventManager[js.Object],
     getIterator: () => IIterator,
     getMap: () => Map_,
     options: IOptionManager,

@@ -9,6 +9,7 @@ trait BaseDynamicLayerProperties
   extends LayerProperties
      with ScaleRangeLayerProperties
      with RefreshableLayerProperties
+     with BlendLayerProperties
 object BaseDynamicLayerProperties {
   
   @scala.inline

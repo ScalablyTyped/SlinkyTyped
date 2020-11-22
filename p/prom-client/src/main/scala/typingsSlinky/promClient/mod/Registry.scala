@@ -32,7 +32,7 @@ class Registry () extends js.Object {
   	 * Get a single metric
   	 * @param name The name of the metric
   	 */
-  def getSingleMetric(name: String): Metric_ = js.native
+  def getSingleMetric[T /* <: String */](name: String): Metric_[T] = js.native
   
   /**
   	 * Get a string representation of a single metric by name
@@ -44,13 +44,12 @@ class Registry () extends js.Object {
   	 * Get string representation for all metrics
   	 */
   def metrics(): String = js.native
-  def metrics(opts: MetricsOpts): String = js.native
   
   /**
   	 * Register metric to register
   	 * @param metric Metric to add to register
   	 */
-  def registerMetric(metric: Metric_): Unit = js.native
+  def registerMetric[T /* <: String */](metric: Metric_[T]): Unit = js.native
   
   /**
   	 * Remove a single metric

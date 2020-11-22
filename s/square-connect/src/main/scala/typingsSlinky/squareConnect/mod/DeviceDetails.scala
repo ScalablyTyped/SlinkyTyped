@@ -14,6 +14,11 @@ class DeviceDetails () extends js.Object {
   var device_id: js.UndefOr[String] = js.native
   
   /**
+    * Square-issued installation ID for the device.
+    */
+  var device_installation_id: js.UndefOr[String] = js.native
+  
+  /**
     * The name of the device set by the merchant.
     */
   var device_name: js.UndefOr[String] = js.native

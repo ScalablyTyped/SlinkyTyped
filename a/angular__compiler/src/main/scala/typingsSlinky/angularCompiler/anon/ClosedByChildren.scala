@@ -19,6 +19,8 @@ trait ClosedByChildren extends js.Object {
   var implicitNamespacePrefix: js.UndefOr[String] = js.native
   
   var isVoid: js.UndefOr[Boolean] = js.native
+  
+  var preventNamespaceInheritance: js.UndefOr[Boolean] = js.native
 }
 object ClosedByChildren {
   
@@ -81,5 +83,11 @@ object ClosedByChildren {
     
     @scala.inline
     def deleteIsVoid: Self = this.set("isVoid", js.undefined)
+    
+    @scala.inline
+    def setPreventNamespaceInheritance(value: Boolean): Self = this.set("preventNamespaceInheritance", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreventNamespaceInheritance: Self = this.set("preventNamespaceInheritance", js.undefined)
   }
 }

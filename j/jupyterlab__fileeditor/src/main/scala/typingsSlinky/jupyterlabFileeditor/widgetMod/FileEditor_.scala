@@ -5,10 +5,10 @@ import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IEditor
 import typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.IModel
 import typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry.Context
 import typingsSlinky.jupyterlabFileeditor.widgetMod.FileEditor.IOptions
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.luminoWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/fileeditor/lib/widget", "FileEditor")
 @js.native
@@ -17,27 +17,30 @@ class FileEditor_ protected () extends Widget {
     * Construct a new editor widget.
     */
   def this(options: IOptions) = this()
+  
   var _context: Context = js.native
+  
   /**
     * Ensure that the widget has focus.
     */
   var _ensureFocus: js.Any = js.native
+  
   var _mimeTypeService: js.Any = js.native
+  
   /**
     * Handle a change to the path.
     */
   var _onPathChanged: js.Any = js.native
+  
   /**
     * Get the context for the editor widget.
     */
-  val context: Context = js.native
+  def context: Context = js.native
+  
   var editor: IEditor = js.native
+  
   var editorWidget: js.Any = js.native
-  var model: IModel = js.native
-  /**
-    * A promise that resolves when the file editor is ready.
-    */
-  val ready: js.Promise[Unit] = js.native
+  
   /**
     * Handle the DOM events for the widget.
     *
@@ -49,5 +52,11 @@ class FileEditor_ protected () extends Widget {
     * not be called directly by user code.
     */
   def handleEvent(event: Event): Unit = js.native
+  
+  var model: IModel = js.native
+  
+  /**
+    * A promise that resolves when the file editor is ready.
+    */
+  def ready: js.Promise[Unit] = js.native
 }
-

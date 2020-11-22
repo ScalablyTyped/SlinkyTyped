@@ -18,9 +18,9 @@ trait PutEventsRequestEntry extends js.Object {
   var DetailType: js.UndefOr[String] = js.native
   
   /**
-    * The event bus that will receive the event. Only the rules that are associated with this event bus will be able to match the event.
+    * The name or ARN of the event bus to receive the event. Only the rules that are associated with this event bus are used to match the event. If you omit this, the default event bus is used.
     */
-  var EventBusName: js.UndefOr[NonPartnerEventBusName] = js.native
+  var EventBusName: js.UndefOr[NonPartnerEventBusNameOrArn] = js.native
   
   /**
     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number, including zero, may be present.
@@ -73,7 +73,7 @@ object PutEventsRequestEntry {
     def deleteDetailType: Self = this.set("DetailType", js.undefined)
     
     @scala.inline
-    def setEventBusName(value: NonPartnerEventBusName): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
+    def setEventBusName(value: NonPartnerEventBusNameOrArn): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEventBusName: Self = this.set("EventBusName", js.undefined)

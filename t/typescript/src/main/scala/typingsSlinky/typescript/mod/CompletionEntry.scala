@@ -14,6 +14,8 @@ trait CompletionEntry extends js.Object {
   
   var isFromUncheckedFile: js.UndefOr[`true`] = js.native
   
+  var isPackageJsonImport: js.UndefOr[`true`] = js.native
+  
   var isRecommended: js.UndefOr[`true`] = js.native
   
   var kind: ScriptElementKind = js.native
@@ -82,6 +84,12 @@ object CompletionEntry {
     
     @scala.inline
     def deleteIsFromUncheckedFile: Self = this.set("isFromUncheckedFile", js.undefined)
+    
+    @scala.inline
+    def setIsPackageJsonImport(value: `true`): Self = this.set("isPackageJsonImport", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsPackageJsonImport: Self = this.set("isPackageJsonImport", js.undefined)
     
     @scala.inline
     def setIsRecommended(value: `true`): Self = this.set("isRecommended", value.asInstanceOf[js.Any])

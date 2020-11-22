@@ -51,15 +51,11 @@ object History extends js.Object {
   
   type LocationListener[S] = js.Function2[/* location */ Location[S], /* action */ Action, Unit]
   
-  type LocationState = PoorMansUnknown
+  type LocationState = js.Any
   
   type Path = String
   
   type Pathname = String
-  
-  // The value type here is a "poor man's `unknown`". When these types support TypeScript
-  // 3.0+, we can replace this with `unknown`.
-  type PoorMansUnknown = js.UndefOr[js.Object | Null]
   
   type Search = String
   

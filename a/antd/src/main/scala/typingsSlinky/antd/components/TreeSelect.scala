@@ -4,14 +4,21 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.anon.`1`
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -43,11 +50,12 @@ import typingsSlinky.antd.antdStrings.popup
 import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
+import typingsSlinky.antd.treeSelectMod.RefTreeSelectProps
 import typingsSlinky.antd.treeSelectMod.TreeSelectProps
 import typingsSlinky.rcSelect.anon.Mark
 import typingsSlinky.rcSelect.generatorMod.CustomTagProps
@@ -57,6 +65,7 @@ import typingsSlinky.rcTree.interfaceMod.IconType
 import typingsSlinky.rcTree.treeNodeMod.TreeNodeProps
 import typingsSlinky.rcTreeSelect.interfaceMod.ChangeEventExtra
 import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
+import typingsSlinky.rcTreeSelect.interfaceMod.DefaultValueType
 import typingsSlinky.rcTreeSelect.interfaceMod.Key
 import typingsSlinky.rcTreeSelect.interfaceMod.LabelValueType
 import typingsSlinky.rcTreeSelect.interfaceMod.LegacyDataNode
@@ -74,9 +83,9 @@ object TreeSelect {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder[T /* <: DefaultValueType */] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.TreeSelect[T]] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
@@ -190,7 +199,9 @@ object TreeSelect {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -410,6 +421,20 @@ object TreeSelect {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def refRefObject(value: ReactRef[RefTreeSelectProps]): this.type = set("ref", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def refFunction1(value: /* instance */ RefTreeSelectProps | Null => Unit): this.type = set("ref", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def ref(
+      value: (js.Function1[/* instance */ RefTreeSelectProps | Null, Unit]) | ReactRef[RefTreeSelectProps]
+    ): this.type = set("ref", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def refNull: this.type = set("ref", null)
+    
+    @scala.inline
     def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -533,15 +558,15 @@ object TreeSelect {
     def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: TreeSelectProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[T /* <: DefaultValueType */](p: TreeSelectProps[T] with `1`): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply[T](): Builder[T] = {
+  def apply[T /* <: DefaultValueType */](): Builder[T] = {
     val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[TreeSelectProps[T]]))
+    new Builder[T](js.Array(this.component, __props.asInstanceOf[TreeSelectProps[T] with `1`]))
   }
   
-  implicit def make[T](companion: TreeSelect.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[T /* <: DefaultValueType */](companion: TreeSelect.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
   
   object TreeNode {
     

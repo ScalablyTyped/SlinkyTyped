@@ -1,5 +1,8 @@
 package typingsSlinky.storybookClientApi.typesMod
 
+import typingsSlinky.storybookAddons.typesMod.DecorateStoryFunction
+import typingsSlinky.storybookAddons.typesMod.DecoratorFunction
+import typingsSlinky.storybookAddons.typesMod.StoryFn
 import typingsSlinky.storybookClientApi.storyStoreMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,7 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ClientApiParams extends js.Object {
   
-  var decorateStory: js.UndefOr[js.Function2[/* storyFn */ js.Any, /* decorators */ js.Any, _]] = js.native
+  var decorateStory: js.UndefOr[DecorateStoryFunction[_]] = js.native
+  
+  var noStoryModuleAddMethodHotDispose: js.UndefOr[Boolean] = js.native
   
   var storyStore: default = js.native
 }
@@ -39,9 +44,15 @@ object ClientApiParams {
     def setStoryStore(value: default): Self = this.set("storyStore", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDecorateStory(value: (/* storyFn */ js.Any, /* decorators */ js.Any) => _): Self = this.set("decorateStory", js.Any.fromFunction2(value))
+    def setDecorateStory(value: (/* storyFn */ StoryFn[_], /* decorators */ js.Array[DecoratorFunction[_]]) => StoryFn[_]): Self = this.set("decorateStory", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteDecorateStory: Self = this.set("decorateStory", js.undefined)
+    
+    @scala.inline
+    def setNoStoryModuleAddMethodHotDispose(value: Boolean): Self = this.set("noStoryModuleAddMethodHotDispose", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNoStoryModuleAddMethodHotDispose: Self = this.set("noStoryModuleAddMethodHotDispose", js.undefined)
   }
 }

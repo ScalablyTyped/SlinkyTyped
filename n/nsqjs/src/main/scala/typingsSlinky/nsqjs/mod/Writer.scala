@@ -1,5 +1,6 @@
 package typingsSlinky.nsqjs.mod
 
+import typingsSlinky.node.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.nsqjs.nsqjsStrings.closed
 import typingsSlinky.nsqjs.nsqjsStrings.error
@@ -14,9 +15,38 @@ class Writer protected () extends EventEmitter {
   def this(nsqdHost: String, nsqdPort: Double) = this()
   def this(nsqdHost: String, nsqdPort: Double, options: ConnectionConfigOptions) = this()
   
-  def close(): js.Any = js.native
+  def close(): Unit = js.native
   
-  def connect(): js.Any = js.native
+  def connect(): Unit = js.native
+  
+  def deferPublish(topic: String, msgs: String, timeMs: Double): Unit = js.native
+  def deferPublish(
+    topic: String,
+    msgs: String,
+    timeMs: Double,
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
+  def deferPublish(topic: String, msgs: js.Array[Buffer | js.Object | String], timeMs: Double): Unit = js.native
+  def deferPublish(
+    topic: String,
+    msgs: js.Array[Buffer | js.Object | String],
+    timeMs: Double,
+    callback: js.Function1[js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
+  def deferPublish(topic: String, msgs: js.Object, timeMs: Double): Unit = js.native
+  def deferPublish(
+    topic: String,
+    msgs: js.Object,
+    timeMs: Double,
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
+  def deferPublish(topic: String, msgs: Buffer, timeMs: Double): Unit = js.native
+  def deferPublish(
+    topic: String,
+    msgs: Buffer,
+    timeMs: Double,
+    callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
   
   val nsqdHost: String = js.native
   
@@ -29,8 +59,18 @@ class Writer protected () extends EventEmitter {
   @JSName("on")
   def on_ready(event: ready, listener: js.Function0[Unit]): this.type = js.native
   
-  def publish(topic: String, msgs: js.Any): js.Any = js.native
-  def publish(topic: String, msgs: js.Any, listener: js.Function1[/* err */ js.Error, Unit]): js.Any = js.native
+  def publish(topic: String, msgs: String): Unit = js.native
+  def publish(topic: String, msgs: String, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
+  def publish(topic: String, msgs: js.Array[Buffer | js.Object | String]): Unit = js.native
+  def publish(
+    topic: String,
+    msgs: js.Array[Buffer | js.Object | String],
+    callback: js.Function1[js.UndefOr[js.Error], Unit]
+  ): Unit = js.native
+  def publish(topic: String, msgs: js.Object): Unit = js.native
+  def publish(topic: String, msgs: js.Object, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
+  def publish(topic: String, msgs: Buffer): Unit = js.native
+  def publish(topic: String, msgs: Buffer, callback: js.Function1[/* err */ js.UndefOr[js.Error], Unit]): Unit = js.native
 }
 /* static members */
 @JSImport("nsqjs", "Writer")

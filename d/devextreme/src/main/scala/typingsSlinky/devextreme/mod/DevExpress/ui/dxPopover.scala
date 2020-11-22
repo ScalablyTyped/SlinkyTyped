@@ -11,7 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPopover extends dxOverlay {
   
-  /** @name dxPopover.show(target) */
+  /**
+    * [descr:dxPopover.show(target)]
+    */
   def show(target: String): Promise[Boolean] with JQueryPromise[Boolean] = js.native
   def show(target: JQuery): Promise[Boolean] with JQueryPromise[Boolean] = js.native
   def show(target: Element): Promise[Boolean] with JQueryPromise[Boolean] = js.native

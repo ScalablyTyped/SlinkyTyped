@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.animationsIndexMod
 
+import typingsSlinky.babylonjs.anon.AdditiveAnimations
 import typingsSlinky.babylonjs.anon.Animations
-import typingsSlinky.babylonjs.anon.OriginalValue
 import typingsSlinky.babylonjs.mathVectorMod.Quaternion
 import typingsSlinky.babylonjs.nodeMod.Node
 import typingsSlinky.babylonjs.typesMod.Nullable
@@ -21,10 +21,10 @@ object babylonjsSceneAugmentingMod extends js.Object {
     def _processLateAnimationBindings(): Unit = js.native
     
     /** @hidden */
-    def _processLateAnimationBindingsForMatrices(holder: Animations): js.Any = js.native
+    def _processLateAnimationBindingsForMatrices(holder: AdditiveAnimations): js.Any = js.native
     
     /** @hidden */
-    def _processLateAnimationBindingsForQuaternions(holder: OriginalValue, refQuaternion: Quaternion): Quaternion = js.native
+    def _processLateAnimationBindingsForQuaternions(holder: Animations, refQuaternion: Quaternion): Quaternion = js.native
     
     /** @hidden */
     def _registerTargetForLateAnimationBinding(
@@ -44,6 +44,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @param stopCurrent defines if the current animations must be stopped first (true by default)
       * @param targetMask defines if the target should be animate if animations are present (this is called recursively on descendant animatables regardless of return value)
       * @param onAnimationLoop defines the callback to call when an animation loops
+      * @param isAdditive defines whether the animation should be evaluated additively (false by default)
       * @returns the animatable object created for this animation
       */
     def beginAnimation(
@@ -56,7 +57,8 @@ object babylonjsSceneAugmentingMod extends js.Object {
       animatable: js.UndefOr[typingsSlinky.babylonjs.animatableMod.Animatable],
       stopCurrent: js.UndefOr[Boolean],
       targetMask: js.UndefOr[js.Function1[/* target */ js.Any, Boolean]],
-      onAnimationLoop: js.UndefOr[js.Function0[Unit]]
+      onAnimationLoop: js.UndefOr[js.Function0[Unit]],
+      isAdditive: js.UndefOr[Boolean]
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     
     /**
@@ -69,6 +71,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @param speedRatio defines the speed ratio to apply to all animations
       * @param onAnimationEnd defines the callback to call when an animation ends (will be called once per node)
       * @param onAnimationLoop defines the callback to call when an animation loops
+      * @param isAdditive defines whether the animation should be evaluated additively (false by default)
       * @returns the list of created animatables
       */
     def beginDirectAnimation(
@@ -85,7 +88,29 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: js.UndefOr[scala.Nothing],
       speedRatio: js.UndefOr[scala.Nothing],
       onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.UndefOr[scala.Nothing],
       onAnimationLoop: js.Function0[Unit]
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     def beginDirectAnimation(
       target: js.Any,
@@ -104,6 +129,17 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: js.UndefOr[scala.Nothing],
       speedRatio: js.UndefOr[scala.Nothing],
       onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.Function0[Unit],
       onAnimationLoop: js.Function0[Unit]
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     def beginDirectAnimation(
@@ -112,7 +148,29 @@ object babylonjsSceneAugmentingMod extends js.Object {
       from: Double,
       to: Double,
       loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
       speedRatio: Double
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     def beginDirectAnimation(
       target: js.Any,
@@ -131,6 +189,17 @@ object babylonjsSceneAugmentingMod extends js.Object {
       to: Double,
       loop: js.UndefOr[scala.Nothing],
       speedRatio: Double,
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
       onAnimationEnd: js.Function0[Unit]
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     def beginDirectAnimation(
@@ -141,7 +210,29 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: js.UndefOr[scala.Nothing],
       speedRatio: Double,
       onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
+      onAnimationEnd: js.Function0[Unit],
       onAnimationLoop: js.Function0[Unit]
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
+      onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     def beginDirectAnimation(
       target: js.Any,
@@ -158,7 +249,29 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: Boolean,
       speedRatio: js.UndefOr[scala.Nothing],
       onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.UndefOr[scala.Nothing],
       onAnimationLoop: js.Function0[Unit]
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     def beginDirectAnimation(
       target: js.Any,
@@ -177,6 +290,17 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: Boolean,
       speedRatio: js.UndefOr[scala.Nothing],
       onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.Function0[Unit],
       onAnimationLoop: js.Function0[Unit]
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     def beginDirectAnimation(
@@ -185,7 +309,29 @@ object babylonjsSceneAugmentingMod extends js.Object {
       from: Double,
       to: Double,
       loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
       speedRatio: Double
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: Double,
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     def beginDirectAnimation(
       target: js.Any,
@@ -204,6 +350,17 @@ object babylonjsSceneAugmentingMod extends js.Object {
       to: Double,
       loop: Boolean,
       speedRatio: Double,
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: Double,
       onAnimationEnd: js.Function0[Unit]
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     def beginDirectAnimation(
@@ -214,7 +371,29 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: Boolean,
       speedRatio: Double,
       onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: Double,
+      onAnimationEnd: js.Function0[Unit],
       onAnimationLoop: js.Function0[Unit]
+    ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
+    def beginDirectAnimation(
+      target: js.Any,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: Double,
+      onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     
     /**
@@ -228,6 +407,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @param speedRatio defines the speed ratio to apply to all animations
       * @param onAnimationEnd defines the callback to call when an animation ends (will be called once per node)
       * @param onAnimationLoop defines the callback to call when an animation loops
+      * @param isAdditive defines whether the animation should be evaluated additively (false by default)
       * @returns the list of animatables created for all nodes
       */
     def beginDirectHierarchyAnimation(
@@ -246,7 +426,31 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: js.UndefOr[scala.Nothing],
       speedRatio: js.UndefOr[scala.Nothing],
       onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.UndefOr[scala.Nothing],
       onAnimationLoop: js.Function0[Unit]
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     def beginDirectHierarchyAnimation(
       target: Node,
@@ -267,6 +471,18 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: js.UndefOr[scala.Nothing],
       speedRatio: js.UndefOr[scala.Nothing],
       onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.Function0[Unit],
       onAnimationLoop: js.Function0[Unit]
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     def beginDirectHierarchyAnimation(
@@ -276,7 +492,31 @@ object babylonjsSceneAugmentingMod extends js.Object {
       from: Double,
       to: Double,
       loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
       speedRatio: Double
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     def beginDirectHierarchyAnimation(
       target: Node,
@@ -297,6 +537,18 @@ object babylonjsSceneAugmentingMod extends js.Object {
       to: Double,
       loop: js.UndefOr[scala.Nothing],
       speedRatio: Double,
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
       onAnimationEnd: js.Function0[Unit]
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     def beginDirectHierarchyAnimation(
@@ -308,7 +560,31 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: js.UndefOr[scala.Nothing],
       speedRatio: Double,
       onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
+      onAnimationEnd: js.Function0[Unit],
       onAnimationLoop: js.Function0[Unit]
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
+      onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     def beginDirectHierarchyAnimation(
       target: Node,
@@ -327,7 +603,31 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: Boolean,
       speedRatio: js.UndefOr[scala.Nothing],
       onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.UndefOr[scala.Nothing],
       onAnimationLoop: js.Function0[Unit]
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     def beginDirectHierarchyAnimation(
       target: Node,
@@ -348,6 +648,18 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: Boolean,
       speedRatio: js.UndefOr[scala.Nothing],
       onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.Function0[Unit],
       onAnimationLoop: js.Function0[Unit]
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     def beginDirectHierarchyAnimation(
@@ -357,7 +669,31 @@ object babylonjsSceneAugmentingMod extends js.Object {
       from: Double,
       to: Double,
       loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
       speedRatio: Double
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: Double,
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     def beginDirectHierarchyAnimation(
       target: Node,
@@ -378,6 +714,18 @@ object babylonjsSceneAugmentingMod extends js.Object {
       to: Double,
       loop: Boolean,
       speedRatio: Double,
+      onAnimationEnd: js.UndefOr[scala.Nothing],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: Double,
       onAnimationEnd: js.Function0[Unit]
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     def beginDirectHierarchyAnimation(
@@ -389,7 +737,31 @@ object babylonjsSceneAugmentingMod extends js.Object {
       loop: Boolean,
       speedRatio: Double,
       onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: Double,
+      onAnimationEnd: js.Function0[Unit],
       onAnimationLoop: js.Function0[Unit]
+    ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
+    def beginDirectHierarchyAnimation(
+      target: Node,
+      directDescendantsOnly: Boolean,
+      animations: js.Array[typingsSlinky.babylonjs.animationMod.Animation],
+      from: Double,
+      to: Double,
+      loop: Boolean,
+      speedRatio: Double,
+      onAnimationEnd: js.Function0[Unit],
+      onAnimationLoop: js.Function0[Unit],
+      isAdditive: Boolean
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     
     /**
@@ -405,6 +777,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @param stopCurrent defines if the current animations must be stopped first (true by default)
       * @param targetMask defines if the target should be animated if animations are present (this is called recursively on descendant animatables regardless of return value)
       * @param onAnimationLoop defines the callback to call when an animation loops
+      * @param isAdditive defines whether the animation should be evaluated additively (false by default)
       * @returns the list of created animatables
       */
     def beginHierarchyAnimation(
@@ -418,7 +791,8 @@ object babylonjsSceneAugmentingMod extends js.Object {
       animatable: js.UndefOr[typingsSlinky.babylonjs.animatableMod.Animatable],
       stopCurrent: js.UndefOr[Boolean],
       targetMask: js.UndefOr[js.Function1[/* target */ js.Any, Boolean]],
-      onAnimationLoop: js.UndefOr[js.Function0[Unit]]
+      onAnimationLoop: js.UndefOr[js.Function0[Unit]],
+      isAdditive: js.UndefOr[Boolean]
     ): js.Array[typingsSlinky.babylonjs.animatableMod.Animatable] = js.native
     
     /**
@@ -433,6 +807,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
       * @param animatable defines an animatable object. If not provided a new one will be created from the given params
       * @param targetMask defines if the target should be animated if animations are present (this is called recursively on descendant animatables regardless of return value)
       * @param onAnimationLoop defines the callback to call when an animation loops
+      * @param isAdditive defines whether the animation should be evaluated additively (false by default)
       * @returns the animatable object created for this animation
       */
     def beginWeightedAnimation(
@@ -445,7 +820,8 @@ object babylonjsSceneAugmentingMod extends js.Object {
       onAnimationEnd: js.UndefOr[js.Function0[Unit]],
       animatable: js.UndefOr[typingsSlinky.babylonjs.animatableMod.Animatable],
       targetMask: js.UndefOr[js.Function1[/* target */ js.Any, Boolean]],
-      onAnimationLoop: js.UndefOr[js.Function0[Unit]]
+      onAnimationLoop: js.UndefOr[js.Function0[Unit]],
+      isAdditive: js.UndefOr[Boolean]
     ): typingsSlinky.babylonjs.animatableMod.Animatable = js.native
     
     /**

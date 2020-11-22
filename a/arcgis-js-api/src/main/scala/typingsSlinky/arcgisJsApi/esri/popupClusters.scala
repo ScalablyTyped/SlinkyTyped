@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * This object contains helper methods for generating popup templates to be set on a layer's [FeatureReductionCluster](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#popupTemplate). The suggested popup templates will include summary information about features in the cluster based on the layer's renderer. For example, in a layer visualizing population, the cluster popup template will include the number of features in the cluster and the average population of features in the cluster.
+  * This object contains helper methods for generating popup templates to be set on a layer's [FeatureReductionCluster](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#popupTemplate).
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-popup-clusters.html)
   */
@@ -13,14 +13,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait popupClusters extends js.Object {
   
   /**
-    * Returns one or more suggested default [popupTemplates](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) for a given layer's [FeatureReductionCluster](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#popupTemplate) configuration. The cluster popup will contain  information describing features in the cluster, including the number of features in the cluster and summary statistics based on fields and expressions used in the layer's renderer.
+    * Returns one or more suggested default [popupTemplates](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) for a given layer's [FeatureReductionCluster](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#popupTemplate) configuration.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-popup-clusters.html#getTemplates)
-    *
-    * @param params See the table below for details of each parameter that may be passed to this function.
-    * @param params.layer The point layer that is or will be clustered.
-    * @param params.renderer Specify the renderer to be used on the layer when `featureReduction` is enabled if it will be different than the renderer already set on the layer.
-    *
     */
   def getTemplates(params: clustersGetTemplatesParams): js.Promise[Templates_] = js.native
 }

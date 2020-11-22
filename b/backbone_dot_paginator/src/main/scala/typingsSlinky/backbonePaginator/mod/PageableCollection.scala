@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("backbone", "PageableCollection")
 @js.native
-class PageableCollection[TModel /* <: Model[_, ModelSetOptions] */] () extends Collection[TModel] {
+class PageableCollection[TModel /* <: Model[_, ModelSetOptions, js.Object] */] () extends Collection[TModel] {
   def this(models: js.Array[TModel]) = this()
   def this(models: js.UndefOr[scala.Nothing], options: PageableInitialOptions) = this()
   def this(models: js.Array[TModel], options: PageableInitialOptions) = this()

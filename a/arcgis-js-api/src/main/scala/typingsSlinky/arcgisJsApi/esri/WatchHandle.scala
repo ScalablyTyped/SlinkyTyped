@@ -13,8 +13,6 @@ trait WatchHandle extends Object {
     * Removes the watch handle.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Accessor.html#WatchHandle)
-    *
-    *
     */
   def remove(): Unit = js.native
 }

@@ -9,6 +9,8 @@ trait ARIACONTROLS extends js.Object {
   
   var ARIA_CONTROLS: String = js.native
   
+  var ARIA_DESCRIBEDBY: String = js.native
+  
   var INPUT_SELECTOR: String = js.native
   
   var LABEL_SELECTOR: String = js.native
@@ -30,6 +32,7 @@ object ARIACONTROLS {
   @scala.inline
   def apply(
     ARIA_CONTROLS: String,
+    ARIA_DESCRIBEDBY: String,
     INPUT_SELECTOR: String,
     LABEL_SELECTOR: String,
     LEADING_ICON_SELECTOR: String,
@@ -39,7 +42,7 @@ object ARIACONTROLS {
     SUFFIX_SELECTOR: String,
     TRAILING_ICON_SELECTOR: String
   ): ARIACONTROLS = {
-    val __obj = js.Dynamic.literal(ARIA_CONTROLS = ARIA_CONTROLS.asInstanceOf[js.Any], INPUT_SELECTOR = INPUT_SELECTOR.asInstanceOf[js.Any], LABEL_SELECTOR = LABEL_SELECTOR.asInstanceOf[js.Any], LEADING_ICON_SELECTOR = LEADING_ICON_SELECTOR.asInstanceOf[js.Any], LINE_RIPPLE_SELECTOR = LINE_RIPPLE_SELECTOR.asInstanceOf[js.Any], OUTLINE_SELECTOR = OUTLINE_SELECTOR.asInstanceOf[js.Any], PREFIX_SELECTOR = PREFIX_SELECTOR.asInstanceOf[js.Any], SUFFIX_SELECTOR = SUFFIX_SELECTOR.asInstanceOf[js.Any], TRAILING_ICON_SELECTOR = TRAILING_ICON_SELECTOR.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(ARIA_CONTROLS = ARIA_CONTROLS.asInstanceOf[js.Any], ARIA_DESCRIBEDBY = ARIA_DESCRIBEDBY.asInstanceOf[js.Any], INPUT_SELECTOR = INPUT_SELECTOR.asInstanceOf[js.Any], LABEL_SELECTOR = LABEL_SELECTOR.asInstanceOf[js.Any], LEADING_ICON_SELECTOR = LEADING_ICON_SELECTOR.asInstanceOf[js.Any], LINE_RIPPLE_SELECTOR = LINE_RIPPLE_SELECTOR.asInstanceOf[js.Any], OUTLINE_SELECTOR = OUTLINE_SELECTOR.asInstanceOf[js.Any], PREFIX_SELECTOR = PREFIX_SELECTOR.asInstanceOf[js.Any], SUFFIX_SELECTOR = SUFFIX_SELECTOR.asInstanceOf[js.Any], TRAILING_ICON_SELECTOR = TRAILING_ICON_SELECTOR.asInstanceOf[js.Any])
     __obj.asInstanceOf[ARIACONTROLS]
   }
   
@@ -60,6 +63,9 @@ object ARIACONTROLS {
     
     @scala.inline
     def setARIA_CONTROLS(value: String): Self = this.set("ARIA_CONTROLS", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setARIA_DESCRIBEDBY(value: String): Self = this.set("ARIA_DESCRIBEDBY", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setINPUT_SELECTOR(value: String): Self = this.set("INPUT_SELECTOR", value.asInstanceOf[js.Any])

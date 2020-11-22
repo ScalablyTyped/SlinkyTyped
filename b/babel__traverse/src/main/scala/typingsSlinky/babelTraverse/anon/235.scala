@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.GenericTypeAnnotation
+import typingsSlinky.babelTraverse.babelTraverseStrings.DeclareClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `235` extends js.Object {
   
-  var `type`: GenericTypeAnnotation = js.native
+  var `type`: DeclareClass = js.native
 }
 object `235` {
   
   @scala.inline
-  def apply(`type`: GenericTypeAnnotation): `235` = {
+  def apply(`type`: DeclareClass): `235` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`235`]
@@ -35,6 +35,6 @@ object `235` {
     }
     
     @scala.inline
-    def setType(value: GenericTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: DeclareClass): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

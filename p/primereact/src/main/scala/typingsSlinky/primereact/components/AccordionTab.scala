@@ -35,6 +35,9 @@ object AccordionTab {
     
     @scala.inline
     def headerStyle(value: js.Object): this.type = set("headerStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def headerTemplate(value: js.Any): this.type = set("headerTemplate", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: AccordionTabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

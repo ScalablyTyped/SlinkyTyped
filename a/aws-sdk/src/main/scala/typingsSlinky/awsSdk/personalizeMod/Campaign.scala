@@ -13,6 +13,11 @@ trait Campaign extends js.Object {
   var campaignArn: js.UndefOr[Arn] = js.native
   
   /**
+    * The configuration details of a campaign.
+    */
+  var campaignConfig: js.UndefOr[CampaignConfig] = js.native
+  
+  /**
     * The date and time (in Unix format) that the campaign was created.
     */
   var creationDateTime: js.UndefOr[js.Date] = js.native
@@ -77,6 +82,12 @@ object Campaign {
     
     @scala.inline
     def deleteCampaignArn: Self = this.set("campaignArn", js.undefined)
+    
+    @scala.inline
+    def setCampaignConfig(value: CampaignConfig): Self = this.set("campaignConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCampaignConfig: Self = this.set("campaignConfig", js.undefined)
     
     @scala.inline
     def setCreationDateTime(value: js.Date): Self = this.set("creationDateTime", value.asInstanceOf[js.Any])

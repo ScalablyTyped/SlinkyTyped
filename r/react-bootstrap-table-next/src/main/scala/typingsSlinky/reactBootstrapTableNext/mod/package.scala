@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type BootstrapTable[T /* <: js.Object */] = slinky.core.ReactComponentClass[typingsSlinky.reactBootstrapTableNext.mod.BootstrapTableProps[T]]
+  type BootstrapTable[T /* <: js.Object */, K] = slinky.core.ReactComponentClass[typingsSlinky.reactBootstrapTableNext.mod.BootstrapTableProps[T, K]]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.left
@@ -24,6 +24,14 @@ package object mod {
     /* rowIndex */ scala.Double, 
     /* formatExtraData */ E, 
     slinky.core.facade.ReactElement | java.lang.String | scala.Boolean | typingsSlinky.react.mod.ReactText
+  ]
+  
+  type ColumnSortCaret[T /* <: js.Object */, E] = js.Function2[
+    /* order */ js.UndefOr[
+      typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.asc | typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.desc
+    ], 
+    /* column */ typingsSlinky.reactBootstrapTableNext.mod.ColumnDescription[T, E], 
+    slinky.core.facade.ReactElement | java.lang.String | scala.Null
   ]
   
   type ColumnSortFunc[T, E /* <: /* keyof T */ java.lang.String */] = js.Function6[
@@ -44,6 +52,14 @@ package object mod {
     /* components */ typingsSlinky.reactBootstrapTableNext.anon.FilterElement, 
     slinky.core.facade.ReactElement | java.lang.String | scala.Double | typingsSlinky.react.mod.ReactText
   ]
+  
+  type HeaderSortingClasses[T /* <: js.Object */, E] = java.lang.String | (js.Function4[
+    /* column */ typingsSlinky.reactBootstrapTableNext.mod.ColumnDescription[T, E], 
+    /* sortOrder */ typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.asc | typingsSlinky.reactBootstrapTableNext.reactBootstrapTableNextStrings.desc, 
+    /* isLastSorting */ scala.Boolean, 
+    /* colIndex */ scala.Double, 
+    java.lang.String
+  ])
   
   type RowEventHandler[T] = js.Function3[
     /* e */ slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, org.scalajs.dom.raw.Element], 

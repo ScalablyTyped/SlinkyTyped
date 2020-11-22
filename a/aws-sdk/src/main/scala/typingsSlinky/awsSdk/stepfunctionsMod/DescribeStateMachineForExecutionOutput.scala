@@ -30,6 +30,11 @@ trait DescribeStateMachineForExecutionOutput extends js.Object {
   var stateMachineArn: Arn = js.native
   
   /**
+    * Selects whether AWS X-Ray tracing is enabled.
+    */
+  var tracingConfiguration: js.UndefOr[TracingConfiguration] = js.native
+  
+  /**
     * The date and time the state machine associated with an execution was updated. For a newly created state machine, this is the creation date.
     */
   var updateDate: js.Date = js.native
@@ -77,5 +82,11 @@ object DescribeStateMachineForExecutionOutput {
     
     @scala.inline
     def deleteLoggingConfiguration: Self = this.set("loggingConfiguration", js.undefined)
+    
+    @scala.inline
+    def setTracingConfiguration(value: TracingConfiguration): Self = this.set("tracingConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTracingConfiguration: Self = this.set("tracingConfiguration", js.undefined)
   }
 }

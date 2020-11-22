@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object roleHelpersMod extends js.Object {
   
+  def computeHeadingLevel(element: Element): js.UndefOr[Double] = js.native
+  
   def getRoles(container: HTMLElement): StringDictionary[js.Array[HTMLElement]] = js.native
   
   def isInaccessible(element: Element): Boolean = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`5`
+import typingsSlinky.octokitTypes.anon.`4`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait InteractionsRemoveRestrictionsForOrgEndpoint extends js.Object {
   
-  var mediaType: `5` = js.native
+  var mediaType: `4` = js.native
   
   @JSName("org")
   var org_ : String = js.native
@@ -17,7 +17,7 @@ trait InteractionsRemoveRestrictionsForOrgEndpoint extends js.Object {
 object InteractionsRemoveRestrictionsForOrgEndpoint {
   
   @scala.inline
-  def apply(mediaType: `5`, org_ : String): InteractionsRemoveRestrictionsForOrgEndpoint = {
+  def apply(mediaType: `4`, org_ : String): InteractionsRemoveRestrictionsForOrgEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any])
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[InteractionsRemoveRestrictionsForOrgEndpoint]
@@ -39,7 +39,7 @@ object InteractionsRemoveRestrictionsForOrgEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `5`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `4`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOrg_(value: String): Self = this.set("org", value.asInstanceOf[js.Any])

@@ -13,8 +13,6 @@ trait SceneViewEnvironmentLightingProperties extends Object {
     * Indicates whether to show ambient occlusion shading.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#environment)
-    *
-    * @default false
     */
   var ambientOcclusionEnabled: js.UndefOr[Boolean] = js.native
   
@@ -22,35 +20,27 @@ trait SceneViewEnvironmentLightingProperties extends Object {
     * Indicates whether the date and time of the simulated sun is automatically updated to maintain the current time of day while the camera changes.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#environment)
-    *
-    * @default true
     */
   var cameraTrackingEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * The current date and time of the simulated sun. When setting the date, specifying the time zone is important, otherwise the time zone of the browser will be used. This might lead to different lighting for users in different time zones.
+    * The current date and time of the simulated sun.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#environment)
-    *
-    * @default new Date("March 15, 2019 12:00:00 UTC")
     */
   var date: js.UndefOr[DateProperties] = js.native
   
   /**
-    * Indicates whether to show shadows cast by the sun. Shadows are only displayed for real world 3D objects. Terrain doesn't cast shadows. In local scenes at small zoom levels, shadows are not displayed. For more control on which 3D objects cast shadows use the `castShadows` property available on [ObjectSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ObjectSymbol3DLayer.html#castShadows), [FillSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-FillSymbol3DLayer.html#castShadows), [ExtrudeSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ExtrudeSymbol3DLayer.html#castShadows), and [PathSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PathSymbol3DLayer.html#castShadows).
+    * Indicates whether to show shadows cast by the sun.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#environment)
-    *
-    * @default false
     */
   var directShadowsEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * Indicates whether polygons that use [WaterSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-WaterSymbol3DLayer.html) display reflections of surrounding terrain, buildings and other 3D objects. This property is used in [Realistic water visualization sample](https://developers.arcgis.com/javascript/latest/sample-code/visualization-realistic-water/index.html).
+    * Indicates whether polygons that use [WaterSymbol3DLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-WaterSymbol3DLayer.html) display reflections of surrounding terrain, buildings and other 3D objects.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#environment)
-    *
-    * @default false
     */
   var waterReflectionEnabled: js.UndefOr[Boolean] = js.native
 }

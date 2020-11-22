@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AssertionError extends Error {
   
+  /**
+    * Error code. The meaning of the code can be found on
+    * https://openlayers.org/en/latest/doc/errors/ (replace latest with
+    * the version found in the OpenLayers script's header comment if a version
+    * other than the latest is used).
+    */
   var code: Double = js.native
 }
 object AssertionError {

@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object typesMod {
   
+  type ErrorHandler = js.Function2[/* e */ js.Error, /* raw_code */ js.UndefOr[java.lang.String], js.Any]
+  
   type Htmls = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   
   type Images = org.scalablytyped.runtime.StringDictionary[typingsSlinky.docxTemplates.typesMod.Image]

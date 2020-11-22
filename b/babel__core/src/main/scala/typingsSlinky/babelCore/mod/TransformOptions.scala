@@ -319,12 +319,12 @@ trait TransformOptions extends js.Object {
       /* pluginAlias */ String, 
       /* visitorType */ enter | exit, 
       /* callback */ js.Function2[
-        /* path */ typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTraverse.mod.Node], 
+        /* path */ typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node], 
         /* state */ js.Any, 
         Unit
       ], 
       js.Function2[
-        /* path */ typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTraverse.mod.Node], 
+        /* path */ typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node], 
         /* state */ _, 
         Unit
       ]
@@ -756,11 +756,11 @@ object TransformOptions {
     @scala.inline
     def setWrapPluginVisitorMethod(
       value: (/* pluginAlias */ String, /* visitorType */ enter | exit, /* callback */ js.Function2[
-          /* path */ typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTraverse.mod.Node], 
+          /* path */ typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node], 
           /* state */ js.Any, 
           Unit
         ]) => js.Function2[
-          /* path */ typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTraverse.mod.Node], 
+          /* path */ typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTypes.mod.Node], 
           /* state */ _, 
           Unit
         ]

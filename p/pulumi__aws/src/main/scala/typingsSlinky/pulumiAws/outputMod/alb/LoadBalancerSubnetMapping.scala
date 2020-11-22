@@ -12,6 +12,13 @@ trait LoadBalancerSubnetMapping extends js.Object {
     */
   var allocationId: js.UndefOr[String] = js.native
   
+  var outpostId: String = js.native
+  
+  /**
+    * A private ipv4 address within the subnet to assign to the internal-facing load balancer.
+    */
+  var privateIpv4Address: js.UndefOr[String] = js.native
+  
   /**
     * The id of the subnet of which to attach to the load balancer. You can specify only one subnet per Availability Zone.
     */
@@ -20,8 +27,8 @@ trait LoadBalancerSubnetMapping extends js.Object {
 object LoadBalancerSubnetMapping {
   
   @scala.inline
-  def apply(subnetId: String): LoadBalancerSubnetMapping = {
-    val __obj = js.Dynamic.literal(subnetId = subnetId.asInstanceOf[js.Any])
+  def apply(outpostId: String, subnetId: String): LoadBalancerSubnetMapping = {
+    val __obj = js.Dynamic.literal(outpostId = outpostId.asInstanceOf[js.Any], subnetId = subnetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[LoadBalancerSubnetMapping]
   }
   
@@ -41,6 +48,9 @@ object LoadBalancerSubnetMapping {
     }
     
     @scala.inline
+    def setOutpostId(value: String): Self = this.set("outpostId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setSubnetId(value: String): Self = this.set("subnetId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -48,5 +58,11 @@ object LoadBalancerSubnetMapping {
     
     @scala.inline
     def deleteAllocationId: Self = this.set("allocationId", js.undefined)
+    
+    @scala.inline
+    def setPrivateIpv4Address(value: String): Self = this.set("privateIpv4Address", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrivateIpv4Address: Self = this.set("privateIpv4Address", js.undefined)
   }
 }

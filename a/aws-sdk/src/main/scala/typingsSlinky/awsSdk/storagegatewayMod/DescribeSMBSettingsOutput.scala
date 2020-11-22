@@ -17,6 +17,11 @@ trait DescribeSMBSettingsOutput extends js.Object {
     */
   var DomainName: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.DomainName] = js.native
   
+  /**
+    * The shares on this gateway appear when listing shares.
+    */
+  var FileSharesVisible: js.UndefOr[Boolean] = js.native
+  
   var GatewayARN: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.GatewayARN] = js.native
   
   /**
@@ -63,6 +68,12 @@ object DescribeSMBSettingsOutput {
     
     @scala.inline
     def deleteDomainName: Self = this.set("DomainName", js.undefined)
+    
+    @scala.inline
+    def setFileSharesVisible(value: Boolean): Self = this.set("FileSharesVisible", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFileSharesVisible: Self = this.set("FileSharesVisible", js.undefined)
     
     @scala.inline
     def setGatewayARN(value: GatewayARN): Self = this.set("GatewayARN", value.asInstanceOf[js.Any])

@@ -34,7 +34,7 @@ trait ClockProps extends js.Object {
   
   var margin: js.UndefOr[MarginType] = js.native
   
-  var onChange: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* time */ String, Unit]] = js.native
   
   var precision: js.UndefOr[hours | minutes | seconds] = js.native
   
@@ -100,7 +100,7 @@ object ClockProps {
     def deleteMargin: Self = this.set("margin", js.undefined)
     
     @scala.inline
-    def setOnChange(value: /* repeated */ js.Any => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    def setOnChange(value: /* time */ String => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)

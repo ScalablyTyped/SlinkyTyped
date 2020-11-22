@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Terminal ()
   extends OptionalSymbolBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Terminal]
-     with TextContent {
+     with TextContent
+     with OptionalSymbol
+     with _ProseFragment {
   def this(text: String) = this()
   def this(text: js.UndefOr[scala.Nothing], questionToken: Token[QuestionToken]) = this()
   def this(text: String, questionToken: Token[QuestionToken]) = this()

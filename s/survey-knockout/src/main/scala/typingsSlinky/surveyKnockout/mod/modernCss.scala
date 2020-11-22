@@ -2,19 +2,19 @@ package typingsSlinky.surveyKnockout.mod
 
 import typingsSlinky.surveyKnockout.anon.Body
 import typingsSlinky.surveyKnockout.anon.ButtonPrev
+import typingsSlinky.surveyKnockout.anon.Cell
 import typingsSlinky.surveyKnockout.anon.CellTextDisabled
 import typingsSlinky.surveyKnockout.anon.ClearButtonControls
 import typingsSlinky.surveyKnockout.anon.Complete
 import typingsSlinky.surveyKnockout.anon.ContentLeft
 import typingsSlinky.surveyKnockout.anon.Description
+import typingsSlinky.surveyKnockout.anon.DetailCell
 import typingsSlinky.surveyKnockout.anon.Disabled
 import typingsSlinky.surveyKnockout.anon.DisabledLabel
 import typingsSlinky.surveyKnockout.anon.Error
 import typingsSlinky.surveyKnockout.anon.FileInput
 import typingsSlinky.surveyKnockout.anon.Footer
-import typingsSlinky.surveyKnockout.anon.HeaderCell
 import typingsSlinky.surveyKnockout.anon.Icon
-import typingsSlinky.surveyKnockout.anon.IconAdd
 import typingsSlinky.surveyKnockout.anon.Image
 import typingsSlinky.surveyKnockout.anon.ItemDisabled
 import typingsSlinky.surveyKnockout.anon.ItemHover
@@ -71,9 +71,9 @@ object modernCss extends js.Object {
   
   var matrix: CellTextDisabled = js.native
   
-  var matrixdropdown: HeaderCell = js.native
+  var matrixdropdown: Cell = js.native
   
-  var matrixdynamic: IconAdd = js.native
+  var matrixdynamic: DetailCell = js.native
   
   var multipletext: Row = js.native
   

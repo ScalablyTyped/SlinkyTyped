@@ -19,8 +19,13 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`additions removals`
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`additions text`
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`inline`
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`removals additions`
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`removals text`
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`text additions`
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.`text removals`
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.additions
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.all
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.ascending
@@ -197,7 +202,9 @@ object TabTitle {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

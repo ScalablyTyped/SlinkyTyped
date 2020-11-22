@@ -1,7 +1,7 @@
 
 # Scala.js typings for devtools-protocol
 
-Typings are for version 0.0.781568
+Typings are for version 0.0.818844
 
 ## Library description:
 The Chrome DevTools Protocol JSON

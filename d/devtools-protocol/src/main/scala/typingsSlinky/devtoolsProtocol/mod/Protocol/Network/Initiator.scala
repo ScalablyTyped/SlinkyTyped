@@ -14,6 +14,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Initiator extends js.Object {
   
   /**
+    * Initiator column number, set for Parser type or for Script type (when script is importing
+    * module) (0-based).
+    */
+  var columnNumber: js.UndefOr[Double] = js.native
+  
+  /**
     * Initiator line number, set for Parser type or for Script type (when script is importing
     * module) (0-based).
     */
@@ -60,6 +66,12 @@ object Initiator {
     
     @scala.inline
     def setType(value: parser | script_ | preload | SignedExchange | other_): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setColumnNumber(value: Double): Self = this.set("columnNumber", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnNumber: Self = this.set("columnNumber", js.undefined)
     
     @scala.inline
     def setLineNumber(value: Double): Self = this.set("lineNumber", value.asInstanceOf[js.Any])

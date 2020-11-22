@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.restMod.rest
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,35 +8,33 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/published-rest-resource relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/published-rest-resource relevant section in reference guide}
   *
   * In version 7.11.0: removed experimental
   * In version 7.7.0: introduced
   */
 @JSImport("mendixmodelsdk/dist/gen/rest", "rest.PublishedRestServiceResource")
 @js.native
-class PublishedRestServiceResource protected () extends Element {
+class PublishedRestServiceResource protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsPublishedRestService: PublishedRestService = js.native
   
   def documentation: String = js.native
   def documentation_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FPublishedRestServiceResource: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

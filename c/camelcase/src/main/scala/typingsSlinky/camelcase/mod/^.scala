@@ -27,6 +27,10 @@ object ^ extends js.Object {
   //=> 'FooBar'
   camelCase('--foo.bar', {pascalCase: false});
   //=> 'fooBar'
+  camelCase('Foo-BAR', {preserveConsecutiveUppercase: true});
+  //=> 'fooBAR'
+  camelCase('fooBAR', {pascalCase: true, preserveConsecutiveUppercase: true}));
+  //=> 'FooBAR'
   camelCase('foo bar');
   //=> 'fooBar'
   console.log(process.argv[3]);
@@ -37,6 +41,10 @@ object ^ extends js.Object {
   //=> 'fooBar'
   camelCase(['__foo__', '--bar'], {pascalCase: true});
   //=> 'FooBar'
+  camelCase(['foo', 'BAR'], {pascalCase: true, preserveConsecutiveUppercase: true})
+  //=> 'FooBAR'
+  camelCase('lorem-ipsum', {locale: 'en-US'});
+  //=> 'loremIpsum'
   ```
   */
   def apply(input: String): String = js.native

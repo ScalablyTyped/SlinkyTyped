@@ -26,16 +26,10 @@ trait InfoWindow extends MVCObject {
     * @see {@link InfoWindowHandlerMap#position_changed position_changed} event
     * @see {@link InfoWindowHandlerMap#zindex_changed zindex_changed} event
     */
-  @JSName("addListener")
-  def addListener_closeclick(eventName: closeclick, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_contentchanged(eventName: content_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_domready(eventName: domready, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_positionchanged(eventName: position_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_zindexchanged(eventName: zindex_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
+  def addListener[N /* <: /* keyof googlemaps.google.maps.InfoWindowHandlerMap<this> */ closeclick | content_changed | domready | position_changed | zindex_changed */](
+    eventName: N,
+    handler: /* import warning: importer.ImportType#apply Failed type conversion: googlemaps.google.maps.InfoWindowHandlerMap<this>[N] */ js.Any
+  ): MapsEventListener = js.native
   
   /**
     * Closes this {@link InfoWindow} by removing it from the DOM structure.

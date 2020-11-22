@@ -18,7 +18,7 @@ trait GetAuthorizationTokenRequest extends js.Object {
   var domainOwner: js.UndefOr[AccountId] = js.native
   
   /**
-    * The time, in seconds, that the generated authorization token is valid.
+    * The time, in seconds, that the generated authorization token is valid. Valid values are 0 and any number between 900 (15 minutes) and 43200 (12 hours). A value of 0 will set the expiration of the authorization token to the same expiration of the user's role's temporary credentials.
     */
   var durationSeconds: js.UndefOr[AuthorizationTokenDurationSeconds] = js.native
 }

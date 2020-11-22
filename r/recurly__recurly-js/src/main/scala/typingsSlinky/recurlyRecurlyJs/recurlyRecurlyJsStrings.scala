@@ -17,6 +17,12 @@ object recurlyRecurlyJsStrings {
   def attach: attach = "attach".asInstanceOf[attach]
   
   @scala.inline
+  def bacs: bacs = "bacs".asInstanceOf[bacs]
+  
+  @scala.inline
+  def becs: becs = "becs".asInstanceOf[becs]
+  
+  @scala.inline
   def blur: blur = "blur".asInstanceOf[blur]
   
   @scala.inline
@@ -95,10 +101,18 @@ object recurlyRecurlyJsStrings {
   sealed trait attach extends ElementEvent
   
   @js.native
+  sealed trait bacs extends js.Object
+  
+  @js.native
+  sealed trait becs extends js.Object
+  
+  @js.native
   sealed trait blur extends ElementEvent
   
   @js.native
-  sealed trait cancel extends ApplePayEvent
+  sealed trait cancel
+    extends ApplePayEvent
+       with PayPalEvent
   
   @js.native
   sealed trait change
@@ -127,7 +141,9 @@ object recurlyRecurlyJsStrings {
   sealed trait paymentAuthorized extends ApplePayEvent
   
   @js.native
-  sealed trait ready extends ApplePayEvent
+  sealed trait ready
+    extends ApplePayEvent
+       with PayPalEvent
   
   @js.native
   sealed trait remove extends ElementEvent

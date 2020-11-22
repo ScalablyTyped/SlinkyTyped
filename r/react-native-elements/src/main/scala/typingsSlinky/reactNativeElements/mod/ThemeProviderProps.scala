@@ -11,6 +11,8 @@ trait ThemeProviderProps[T] extends js.Object {
   var children: ReactElement = js.native
   
   var theme: js.UndefOr[Theme[T]] = js.native
+  
+  var useDark: js.UndefOr[Boolean] = js.native
 }
 object ThemeProviderProps {
   
@@ -46,5 +48,11 @@ object ThemeProviderProps {
     
     @scala.inline
     def deleteTheme: Self = this.set("theme", js.undefined)
+    
+    @scala.inline
+    def setUseDark(value: Boolean): Self = this.set("useDark", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUseDark: Self = this.set("useDark", js.undefined)
   }
 }

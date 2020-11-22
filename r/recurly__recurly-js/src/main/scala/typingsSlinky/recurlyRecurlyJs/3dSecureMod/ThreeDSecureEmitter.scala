@@ -9,5 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ThreeDSecureEmitter extends Emitter[ThreeDSecureEvent] {
   
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-threedsecureattach|ThreeDSecure.attach}
+    */
   def attach(el: HTMLElement): Unit = js.native
 }

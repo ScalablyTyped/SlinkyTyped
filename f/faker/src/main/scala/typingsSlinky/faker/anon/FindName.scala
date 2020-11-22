@@ -30,6 +30,9 @@ trait FindName extends js.Object {
   def lastName(): String = js.native
   def lastName(gender: Double): String = js.native
   
+  def middleName(): String = js.native
+  def middleName(gender: Double): String = js.native
+  
   def prefix(): String = js.native
   
   def suffix(): String = js.native

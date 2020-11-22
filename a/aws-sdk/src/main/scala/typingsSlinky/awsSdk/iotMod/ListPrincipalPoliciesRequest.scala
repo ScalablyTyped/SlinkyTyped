@@ -23,7 +23,7 @@ trait ListPrincipalPoliciesRequest extends js.Object {
   var pageSize: js.UndefOr[PageSize] = js.native
   
   /**
-    * The principal.
+    * The principal. Valid principals are CertificateArn (arn:aws:iot:region:accountId:cert/certificateId), thingGroupArn (arn:aws:iot:region:accountId:thinggroup/groupName) and CognitoId (region:id).
     */
   var principal: Principal = js.native
 }

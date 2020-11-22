@@ -9,7 +9,7 @@ trait FillLayout
   extends Layout
      with _AnyLayout {
   
-  var `fill-sort-key`: js.UndefOr[Double] = js.native
+  var `fill-sort-key`: js.UndefOr[Double | Expression] = js.native
 }
 object FillLayout {
   
@@ -35,7 +35,7 @@ object FillLayout {
     }
     
     @scala.inline
-    def `setFill-sort-key`(value: Double): Self = this.set("fill-sort-key", value.asInstanceOf[js.Any])
+    def `setFill-sort-key`(value: Double | Expression): Self = this.set("fill-sort-key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteFill-sort-key`: Self = this.set("fill-sort-key", js.undefined)

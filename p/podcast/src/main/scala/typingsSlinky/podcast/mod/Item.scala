@@ -28,7 +28,7 @@ trait Item extends js.Object {
   
   var itunesAuthor: js.UndefOr[String] = js.native
   
-  var itunesDuration: js.UndefOr[Double] = js.native
+  var itunesDuration: js.UndefOr[Double | String] = js.native
   
   var itunesEpisode: js.UndefOr[Double] = js.native
   
@@ -141,7 +141,7 @@ object Item {
     def deleteItunesAuthor: Self = this.set("itunesAuthor", js.undefined)
     
     @scala.inline
-    def setItunesDuration(value: Double): Self = this.set("itunesDuration", value.asInstanceOf[js.Any])
+    def setItunesDuration(value: Double | String): Self = this.set("itunesDuration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteItunesDuration: Self = this.set("itunesDuration", js.undefined)

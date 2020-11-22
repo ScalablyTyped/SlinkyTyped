@@ -1,7 +1,7 @@
 package typingsSlinky.reactBootstrapTypeahead.anon
 
-import typingsSlinky.csstype.mod.Property.BoxSizing
-import typingsSlinky.csstype.mod.Property.Width
+import typingsSlinky.csstype.mod.BoxSizingProperty
+import typingsSlinky.csstype.mod.WidthProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PickCSSPropertiesboxSizin extends js.Object {
   
-  var boxSizing: js.UndefOr[BoxSizing] = js.native
+  var boxSizing: js.UndefOr[BoxSizingProperty] = js.native
   
-  var width: js.UndefOr[Width[String | Double]] = js.native
+  var width: js.UndefOr[WidthProperty[String | Double]] = js.native
 }
 object PickCSSPropertiesboxSizin {
   
@@ -38,13 +38,13 @@ object PickCSSPropertiesboxSizin {
     }
     
     @scala.inline
-    def setBoxSizing(value: BoxSizing): Self = this.set("boxSizing", value.asInstanceOf[js.Any])
+    def setBoxSizing(value: BoxSizingProperty): Self = this.set("boxSizing", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBoxSizing: Self = this.set("boxSizing", js.undefined)
     
     @scala.inline
-    def setWidth(value: Width[String | Double]): Self = this.set("width", value.asInstanceOf[js.Any])
+    def setWidth(value: WidthProperty[String | Double]): Self = this.set("width", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWidth: Self = this.set("width", js.undefined)

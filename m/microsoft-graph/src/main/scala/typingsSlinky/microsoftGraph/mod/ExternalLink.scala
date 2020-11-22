@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ExternalLink extends js.Object {
   
   // The url of the link.
-  var href: js.UndefOr[String] = js.native
+  var href: js.UndefOr[NullableOption[String]] = js.native
 }
 object ExternalLink {
   
@@ -34,9 +34,12 @@ object ExternalLink {
     }
     
     @scala.inline
-    def setHref(value: String): Self = this.set("href", value.asInstanceOf[js.Any])
+    def setHref(value: NullableOption[String]): Self = this.set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHref: Self = this.set("href", js.undefined)
+    
+    @scala.inline
+    def setHrefNull: Self = this.set("href", null)
   }
 }

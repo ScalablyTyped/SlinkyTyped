@@ -31,7 +31,6 @@ object mod extends js.Object {
     * @param peekSize max content peek size, default is 512
     * @return charset, lower case, e.g.: utf8, gbk, gb2312, .... If can\'t guess, return null
     */
-  // tslint:disable-next-line strict-export-declare-modifiers
   def apply(obj: String): String | Null = js.native
   def apply(obj: String, data: js.UndefOr[scala.Nothing], peekSize: Double): String | Null = js.native
   def apply(obj: String, data: Buffer): String | Null = js.native

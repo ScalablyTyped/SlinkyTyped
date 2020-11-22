@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ImportWorkspaceImageRequest extends js.Object {
   
   /**
+    * If specified, the version of Microsoft Office to subscribe to. Valid only for Windows 10 BYOL images. For more information about subscribing to Office for BYOL images, see  Bring Your Own Windows Desktop Licenses.  Although this parameter is an array, only one item is allowed at this time. 
+    */
+  var Applications: js.UndefOr[ApplicationList] = js.native
+  
+  /**
     * The identifier of the EC2 image.
     */
   var Ec2ImageId: typingsSlinky.awsSdk.workspacesMod.Ec2ImageId = js.native
@@ -23,7 +28,7 @@ trait ImportWorkspaceImageRequest extends js.Object {
   var ImageName: WorkspaceImageName = js.native
   
   /**
-    * The ingestion process to be used when importing the image.
+    * The ingestion process to be used when importing the image. For non-GPU-enabled bundles (bundles other than Graphics or GraphicsPro), specify BYOL_REGULAR.
     */
   var IngestionProcess: WorkspaceImageIngestionProcess = js.native
   
@@ -71,6 +76,15 @@ object ImportWorkspaceImageRequest {
     
     @scala.inline
     def setIngestionProcess(value: WorkspaceImageIngestionProcess): Self = this.set("IngestionProcess", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setApplicationsVarargs(value: Application*): Self = this.set("Applications", js.Array(value :_*))
+    
+    @scala.inline
+    def setApplications(value: ApplicationList): Self = this.set("Applications", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteApplications: Self = this.set("Applications", js.undefined)
     
     @scala.inline
     def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))

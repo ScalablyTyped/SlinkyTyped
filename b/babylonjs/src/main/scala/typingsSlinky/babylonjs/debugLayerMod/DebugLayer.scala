@@ -12,7 +12,7 @@ class DebugLayer protected () extends js.Object {
     * Instantiates a new debug layer.
     * The debug layer (aka Inspector) is the go to tool in order to better understand
     * what is happening in your scene
-    * @see http://doc.babylonjs.com/features/playground_debuglayer
+    * @see https://doc.babylonjs.com/features/playground_debuglayer
     * @param scene Defines the scene to inspect
     */
   def this(scene: Scene) = this()
@@ -48,10 +48,16 @@ class DebugLayer protected () extends js.Object {
   /**
     * Select a specific entity in the scene explorer and highlight a specific block in that entity property grid
     * @param entity defines the entity to select
-    * @param lineContainerTitle defines the specific block to highlight
+    * @param lineContainerTitles defines the specific blocks to highlight (could be a string or an array of strings)
     */
   def select(entity: js.Any): Unit = js.native
-  def select(entity: js.Any, lineContainerTitle: String): Unit = js.native
+  def select(entity: js.Any, lineContainerTitles: String): Unit = js.native
+  def select(entity: js.Any, lineContainerTitles: js.Array[String]): Unit = js.native
+  
+  /**
+    * Update the scene in the inspector
+    */
+  def setAsActiveScene(): Unit = js.native
   
   /**
     * Launch the debugLayer.

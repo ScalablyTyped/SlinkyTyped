@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeElements.anon
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -19,26 +20,30 @@ import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.TargetedEvent
+import typingsSlinky.reactNative.mod.TextLayoutEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeElements.mod.IconType
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.`no-hide-descendants`
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.all
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.assertive
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.auto
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.balanced
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.button
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.clip
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.email
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.head
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.highQuality
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.link
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.middle
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.no
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.none
+import typingsSlinky.reactNativeElements.reactNativeElementsStrings.phoneNumber
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.polite
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.radiobutton_checked
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.radiobutton_unchecked
@@ -47,6 +52,7 @@ import typingsSlinky.reactNativeElements.reactNativeElementsStrings.scale
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.simple
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.tail
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.yes
+import typingsSlinky.reactNativeVectorIcons.iconMod.IconProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -117,6 +123,8 @@ trait PartialIconPropsPartialIm extends js.Object {
   
   var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
+  var dataDetectorType: js.UndefOr[Null | phoneNumber | link | email | none | all] = js.native
+  
   var defaultSource: js.UndefOr[ImageURISource | Double] = js.native
   
   var delayLongPress: js.UndefOr[Double] = js.native
@@ -138,6 +146,8 @@ trait PartialIconPropsPartialIm extends js.Object {
   var height: js.UndefOr[Double] = js.native
   
   var hitSlop: js.UndefOr[Insets] = js.native
+  
+  var iconProps: js.UndefOr[IconProps] = js.native
   
   var iconStyle: js.UndefOr[TextStyle] = js.native
   
@@ -171,7 +181,7 @@ trait PartialIconPropsPartialIm extends js.Object {
   
   var onHideUnderlay: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   var onLoad: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ImageLoadEventData], Unit]] = js.native
   
@@ -179,13 +189,13 @@ trait PartialIconPropsPartialIm extends js.Object {
   
   var onLoadStart: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onLongPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
+  var onLongPress: (js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]) with js.UndefOr[js.Function0[Unit]] = js.native
   
   var onMagicTap: js.UndefOr[js.Function0[Unit]] = js.native
   
   var onPartialLoad: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onPress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
+  var onPress: (js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]) with js.UndefOr[js.Function0[Unit]] = js.native
   
   var onPressIn: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]] = js.native
   
@@ -194,6 +204,8 @@ trait PartialIconPropsPartialIm extends js.Object {
   var onProgress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ImageProgressEventDataIOS], Unit]] = js.native
   
   var onShowUnderlay: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  var onTextLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextLayoutEventData], Unit]] = js.native
   
   var placeholderStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
@@ -233,6 +245,8 @@ trait PartialIconPropsPartialIm extends js.Object {
   
   var transition: js.UndefOr[Boolean] = js.native
   
+  var transitionDuration: js.UndefOr[Double] = js.native
+  
   var tvParallaxProperties: js.UndefOr[TVParallaxProperties] = js.native
   
   var `type`: js.UndefOr[IconType] = js.native
@@ -246,8 +260,12 @@ trait PartialIconPropsPartialIm extends js.Object {
 object PartialIconPropsPartialIm {
   
   @scala.inline
-  def apply(style: (js.UndefOr[ViewStyle | TextStyle]) with js.UndefOr[StyleProp[ImageStyle]]): PartialIconPropsPartialIm = {
-    val __obj = js.Dynamic.literal(style = style.asInstanceOf[js.Any])
+  def apply(
+    onLongPress: (js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]) with js.UndefOr[js.Function0[Unit]],
+    onPress: (js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]) with js.UndefOr[js.Function0[Unit]],
+    style: (js.UndefOr[ViewStyle | TextStyle]) with js.UndefOr[StyleProp[ImageStyle]]
+  ): PartialIconPropsPartialIm = {
+    val __obj = js.Dynamic.literal(onLongPress = onLongPress.asInstanceOf[js.Any], onPress = onPress.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any])
     __obj.asInstanceOf[PartialIconPropsPartialIm]
   }
   
@@ -265,6 +283,16 @@ object PartialIconPropsPartialIm {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setOnLongPress(
+      value: (js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]) with js.UndefOr[js.Function0[Unit]]
+    ): Self = this.set("onLongPress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOnPress(
+      value: (js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]) with js.UndefOr[js.Function0[Unit]]
+    ): Self = this.set("onPress", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStyle(value: (js.UndefOr[ViewStyle | TextStyle]) with js.UndefOr[StyleProp[ImageStyle]]): Self = this.set("style", value.asInstanceOf[js.Any])
@@ -471,6 +499,15 @@ object PartialIconPropsPartialIm {
     def setContainerStyleNull: Self = this.set("containerStyle", null)
     
     @scala.inline
+    def setDataDetectorType(value: phoneNumber | link | email | none | all): Self = this.set("dataDetectorType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataDetectorType: Self = this.set("dataDetectorType", js.undefined)
+    
+    @scala.inline
+    def setDataDetectorTypeNull: Self = this.set("dataDetectorType", null)
+    
+    @scala.inline
     def setDefaultSource(value: ImageURISource | Double): Self = this.set("defaultSource", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -541,6 +578,12 @@ object PartialIconPropsPartialIm {
     
     @scala.inline
     def deleteHitSlop: Self = this.set("hitSlop", js.undefined)
+    
+    @scala.inline
+    def setIconProps(value: IconProps): Self = this.set("iconProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIconProps: Self = this.set("iconProps", js.undefined)
     
     @scala.inline
     def setIconStyle(value: TextStyle): Self = this.set("iconStyle", value.asInstanceOf[js.Any])
@@ -642,7 +685,7 @@ object PartialIconPropsPartialIm {
     def deleteOnHideUnderlay: Self = this.set("onHideUnderlay", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -666,12 +709,6 @@ object PartialIconPropsPartialIm {
     def deleteOnLoadStart: Self = this.set("onLoadStart", js.undefined)
     
     @scala.inline
-    def setOnLongPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = this.set("onLongPress", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnLongPress: Self = this.set("onLongPress", js.undefined)
-    
-    @scala.inline
     def setOnMagicTap(value: () => Unit): Self = this.set("onMagicTap", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -682,12 +719,6 @@ object PartialIconPropsPartialIm {
     
     @scala.inline
     def deleteOnPartialLoad: Self = this.set("onPartialLoad", js.undefined)
-    
-    @scala.inline
-    def setOnPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = this.set("onPress", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnPress: Self = this.set("onPress", js.undefined)
     
     @scala.inline
     def setOnPressIn(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): Self = this.set("onPressIn", js.Any.fromFunction1(value))
@@ -712,6 +743,12 @@ object PartialIconPropsPartialIm {
     
     @scala.inline
     def deleteOnShowUnderlay: Self = this.set("onShowUnderlay", js.undefined)
+    
+    @scala.inline
+    def setOnTextLayout(value: SyntheticEvent[NodeHandle, TextLayoutEventData] => Unit): Self = this.set("onTextLayout", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnTextLayout: Self = this.set("onTextLayout", js.undefined)
     
     @scala.inline
     def setPlaceholderStyle(value: StyleProp[ViewStyle]): Self = this.set("placeholderStyle", value.asInstanceOf[js.Any])
@@ -829,6 +866,12 @@ object PartialIconPropsPartialIm {
     
     @scala.inline
     def deleteTransition: Self = this.set("transition", js.undefined)
+    
+    @scala.inline
+    def setTransitionDuration(value: Double): Self = this.set("transitionDuration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTransitionDuration: Self = this.set("transitionDuration", js.undefined)
     
     @scala.inline
     def setTvParallaxProperties(value: TVParallaxProperties): Self = this.set("tvParallaxProperties", value.asInstanceOf[js.Any])

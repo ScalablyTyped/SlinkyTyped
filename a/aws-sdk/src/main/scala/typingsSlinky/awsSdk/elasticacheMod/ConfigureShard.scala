@@ -21,6 +21,11 @@ trait ConfigureShard extends js.Object {
     * A list of PreferredAvailabilityZone strings that specify which availability zones the replication group's nodes are to be in. The nummber of PreferredAvailabilityZone values must equal the value of NewReplicaCount plus 1 to account for the primary node. If this member of ReplicaConfiguration is omitted, ElastiCache for Redis selects the availability zone for each of the replicas.
     */
   var PreferredAvailabilityZones: js.UndefOr[PreferredAvailabilityZoneList] = js.native
+  
+  /**
+    * The outpost ARNs in which the cache cluster is created.
+    */
+  var PreferredOutpostArns: js.UndefOr[PreferredOutpostArnList] = js.native
 }
 object ConfigureShard {
   
@@ -59,5 +64,14 @@ object ConfigureShard {
     
     @scala.inline
     def deletePreferredAvailabilityZones: Self = this.set("PreferredAvailabilityZones", js.undefined)
+    
+    @scala.inline
+    def setPreferredOutpostArnsVarargs(value: String*): Self = this.set("PreferredOutpostArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setPreferredOutpostArns(value: PreferredOutpostArnList): Self = this.set("PreferredOutpostArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreferredOutpostArns: Self = this.set("PreferredOutpostArns", js.undefined)
   }
 }

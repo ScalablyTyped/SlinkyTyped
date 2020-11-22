@@ -19,6 +19,8 @@ trait ConnectionOptions extends js.Object {
   
   var id: js.UndefOr[String] = js.native
   
+  var proxy: js.UndefOr[String | URL_] = js.native
+  
   var roles: js.UndefOr[ConnectionRoles] = js.native
   
   var ssl: js.UndefOr[typingsSlinky.node.tlsMod.ConnectionOptions] = js.native
@@ -54,7 +56,7 @@ object ConnectionOptions {
     def setUrl(value: URL_): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAgentFunction0(value: () => js.Any): Self = this.set("agent", js.Any.fromFunction0(value))
+    def setAgentFunction1(value: /* opts */ ConnectionOptions => js.Any): Self = this.set("agent", js.Any.fromFunction1(value))
     
     @scala.inline
     def setAgent(value: AgentOptions | agentFn): Self = this.set("agent", value.asInstanceOf[js.Any])
@@ -79,6 +81,12 @@ object ConnectionOptions {
     
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
+    
+    @scala.inline
+    def setProxy(value: String | URL_): Self = this.set("proxy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProxy: Self = this.set("proxy", js.undefined)
     
     @scala.inline
     def setRoles(value: ConnectionRoles): Self = this.set("roles", value.asInstanceOf[js.Any])

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Parseable extends js.Object {
   
-  var parse: js.UndefOr[js.Any] = js.native
+  var parse: js.UndefOr[Boolean] = js.native
 }
 object Parseable {
   
@@ -33,7 +33,7 @@ object Parseable {
     }
     
     @scala.inline
-    def setParse(value: js.Any): Self = this.set("parse", value.asInstanceOf[js.Any])
+    def setParse(value: Boolean): Self = this.set("parse", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteParse: Self = this.set("parse", js.undefined)

@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/types/build/crypto", JSImport.Namespace)
+@JSImport("@aws-sdk/types/dist/cjs/crypto", JSImport.Namespace)
 @js.native
 object cryptoMod extends js.Object {
   

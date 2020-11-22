@@ -21,7 +21,6 @@ trait VideoMetadataResult extends js.Object {
   
   var seconds: Double = js.native
   
-  /** @deprecated */
   var thumbnail: String = js.native
   
   var timestamp: String = js.native

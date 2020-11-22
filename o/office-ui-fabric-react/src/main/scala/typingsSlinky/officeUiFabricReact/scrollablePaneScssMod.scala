@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object scrollablePaneScssMod extends js.Object {
   
-  val root: /* "root_a32d3702" */ String = js.native
+  val root: /* "root_1dee20ec" */ String = js.native
   
-  val stickyAbove: /* "stickyAbove_a32d3702" */ String = js.native
+  val stickyAbove: /* "stickyAbove_1dee20ec" */ String = js.native
   
-  val stickyBelow: /* "stickyBelow_a32d3702" */ String = js.native
+  val stickyBelow: /* "stickyBelow_1dee20ec" */ String = js.native
 }

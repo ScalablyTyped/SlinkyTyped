@@ -62,16 +62,7 @@ object SVGAttributes {
     
     @scala.inline
     def setDVarargs(
-      value: (js.Tuple8[
-          SVGPathCommand, 
-          js.UndefOr[Double], 
-          js.UndefOr[Double], 
-          js.UndefOr[Double], 
-          js.UndefOr[Double], 
-          js.UndefOr[Double], 
-          js.UndefOr[Double], 
-          js.UndefOr[Double]
-        ])*
+      value: (js.Array[SVGPathCommand] | (js.Tuple2[SVGPathCommand, Double]) | (js.Tuple3[SVGPathCommand, Double, Double]) | (js.Tuple5[SVGPathCommand, Double, Double, Double, Double]) | (js.Tuple7[SVGPathCommand, Double, Double, Double, Double, Double, Double]) | (js.Tuple8[SVGPathCommand, Double, Double, Double, Double, Double, Double, Double]))*
     ): Self = this.set("d", js.Array(value :_*))
     
     @scala.inline

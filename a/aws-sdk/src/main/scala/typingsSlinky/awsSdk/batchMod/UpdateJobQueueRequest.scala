@@ -23,7 +23,7 @@ trait UpdateJobQueueRequest extends js.Object {
   var priority: js.UndefOr[Integer] = js.native
   
   /**
-    * Describes the queue's ability to accept new jobs.
+    * Describes the queue's ability to accept new jobs. If the job queue state is ENABLED, it is able to accept jobs. If the job queue state is DISABLED, new jobs cannot be added to the queue, but jobs already in the queue can finish.
     */
   var state: js.UndefOr[JQState] = js.native
 }

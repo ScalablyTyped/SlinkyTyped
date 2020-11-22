@@ -51,6 +51,11 @@ trait CreateTapesInput extends js.Object {
     * The size, in bytes, of the virtual tapes that you want to create.  The size must be aligned by gigabyte (1024*1024*1024 bytes). 
     */
   var TapeSizeInBytes: TapeSize = js.native
+  
+  /**
+    * Set to TRUE if the tape you are creating is to be configured as a write-once-read-many (WORM) tape.
+    */
+  var Worm: js.UndefOr[scala.Boolean] = js.native
 }
 object CreateTapesInput {
   
@@ -122,5 +127,11 @@ object CreateTapesInput {
     
     @scala.inline
     def deleteTags: Self = this.set("Tags", js.undefined)
+    
+    @scala.inline
+    def setWorm(value: scala.Boolean): Self = this.set("Worm", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWorm: Self = this.set("Worm", js.undefined)
   }
 }

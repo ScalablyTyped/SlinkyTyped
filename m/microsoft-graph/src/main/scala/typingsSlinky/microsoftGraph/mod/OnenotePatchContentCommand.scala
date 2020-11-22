@@ -14,13 +14,13 @@ trait OnenotePatchContentCommand extends js.Object {
     * A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary
     * data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
     */
-  var content: js.UndefOr[String] = js.native
+  var content: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The location to add the supplied content, relative to the target element. The possible values are: after (default) or
     * before.
     */
-  var position: js.UndefOr[OnenotePatchInsertPosition] = js.native
+  var position: js.UndefOr[NullableOption[OnenotePatchInsertPosition]] = js.native
   
   /**
     * The element to update. Must be the #&amp;lt;data-id&amp;gt; or the generated &amp;lt;id&amp;gt; of the element, or the
@@ -58,16 +58,22 @@ object OnenotePatchContentCommand {
     def deleteAction: Self = this.set("action", js.undefined)
     
     @scala.inline
-    def setContent(value: String): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: NullableOption[String]): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     
     @scala.inline
-    def setPosition(value: OnenotePatchInsertPosition): Self = this.set("position", value.asInstanceOf[js.Any])
+    def setContentNull: Self = this.set("content", null)
+    
+    @scala.inline
+    def setPosition(value: NullableOption[OnenotePatchInsertPosition]): Self = this.set("position", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePosition: Self = this.set("position", js.undefined)
+    
+    @scala.inline
+    def setPositionNull: Self = this.set("position", null)
     
     @scala.inline
     def setTarget(value: String): Self = this.set("target", value.asInstanceOf[js.Any])

@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StringColumnStatisticsData extends js.Object {
   
   /**
-    * Average value of the column.
+    * The average string length in the column.
     */
   var AverageLength: NonNegativeDouble = js.native
   
   /**
-    * Maximum value of the column.
+    * The size of the longest string in the column.
     */
   var MaximumLength: NonNegativeLong = js.native
   
   /**
-    * Number of distinct values.
+    * The number of distinct values in a column.
     */
   var NumberOfDistinctValues: NonNegativeLong = js.native
   
   /**
-    * Number of nulls.
+    * The number of null values in the column.
     */
   var NumberOfNulls: NonNegativeLong = js.native
 }

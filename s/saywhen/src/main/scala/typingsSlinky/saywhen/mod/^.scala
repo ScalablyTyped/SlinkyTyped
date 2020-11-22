@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
-  def apply[T /* <: Func */](spy: T with Spy): CallHandler[T] = js.native
+  def apply[T /* <: Func */](spy: T with Spy[typingsSlinky.jasmine.jasmine.Func]): CallHandler[T] = js.native
 }

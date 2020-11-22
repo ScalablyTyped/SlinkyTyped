@@ -1,7 +1,7 @@
 package typingsSlinky.expect.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.expect.anon.Error
+import typingsSlinky.expect.anon.PartialMatcherState
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,7 @@ trait Expect extends /* id */ StringDictionary[AsymmetricMatcher] {
   
   def extend(arg0: js.Any): Unit = js.native
   
-  def extractExpectedAssertionsErrors(): js.Array[Error] = js.native
+  def extractExpectedAssertionsErrors(): ExpectedAssertionsErrors = js.native
   
   def getState(): MatcherState = js.native
   
@@ -34,7 +34,7 @@ trait Expect extends /* id */ StringDictionary[AsymmetricMatcher] {
   
   def objectContaining(sample: Record[String, _]): AsymmetricMatcher = js.native
   
-  def setState(arg0: js.Any): Unit = js.native
+  def setState(state: PartialMatcherState): Unit = js.native
   
   def stringContaining(expected: String): AsymmetricMatcher = js.native
   

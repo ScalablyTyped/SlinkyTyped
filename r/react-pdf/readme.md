@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-pdf
 
-Typings are for version 4.0
+Typings are for version 5.0
 
 ## Library description:
 Display PDFs in your React app as easily as if they were images.

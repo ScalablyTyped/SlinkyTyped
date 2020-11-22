@@ -16,7 +16,7 @@ class Method_ () extends Message {
   def addOptions(value: Option): Option = js.native
   def addOptions(value: Option, index: Double): Option = js.native
   
-  def clearOptionsList(): Unit = js.native
+  def clearOptionsList(): Method = js.native
   
   def getName(): String = js.native
   
@@ -32,17 +32,17 @@ class Method_ () extends Message {
   
   def getSyntax(): Syntax = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): Method = js.native
   
-  def setOptionsList(value: js.Array[Option]): Unit = js.native
+  def setOptionsList(value: js.Array[Option]): Method = js.native
   
-  def setRequestStreaming(value: Boolean): Unit = js.native
+  def setRequestStreaming(value: Boolean): Method = js.native
   
-  def setRequestTypeUrl(value: String): Unit = js.native
+  def setRequestTypeUrl(value: String): Method = js.native
   
-  def setResponseStreaming(value: Boolean): Unit = js.native
+  def setResponseStreaming(value: Boolean): Method = js.native
   
-  def setResponseTypeUrl(value: String): Unit = js.native
+  def setResponseTypeUrl(value: String): Method = js.native
   
-  def setSyntax(value: Syntax): Unit = js.native
+  def setSyntax(value: Syntax): Method = js.native
 }

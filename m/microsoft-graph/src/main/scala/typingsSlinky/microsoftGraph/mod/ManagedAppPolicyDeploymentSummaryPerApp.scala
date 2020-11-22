@@ -11,7 +11,7 @@ trait ManagedAppPolicyDeploymentSummaryPerApp extends js.Object {
   var configurationAppliedUserCount: js.UndefOr[Double] = js.native
   
   // Deployment of an app.
-  var mobileAppIdentifier: js.UndefOr[MobileAppIdentifier] = js.native
+  var mobileAppIdentifier: js.UndefOr[NullableOption[MobileAppIdentifier]] = js.native
 }
 object ManagedAppPolicyDeploymentSummaryPerApp {
   
@@ -43,9 +43,12 @@ object ManagedAppPolicyDeploymentSummaryPerApp {
     def deleteConfigurationAppliedUserCount: Self = this.set("configurationAppliedUserCount", js.undefined)
     
     @scala.inline
-    def setMobileAppIdentifier(value: MobileAppIdentifier): Self = this.set("mobileAppIdentifier", value.asInstanceOf[js.Any])
+    def setMobileAppIdentifier(value: NullableOption[MobileAppIdentifier]): Self = this.set("mobileAppIdentifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMobileAppIdentifier: Self = this.set("mobileAppIdentifier", js.undefined)
+    
+    @scala.inline
+    def setMobileAppIdentifierNull: Self = this.set("mobileAppIdentifier", null)
   }
 }

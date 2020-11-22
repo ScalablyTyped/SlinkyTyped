@@ -21,6 +21,9 @@ object lightProbeMod extends js.Object {
     
     val isLightProbe: `true` = js.native
     
+    /**
+    	 * @default new THREE.SphericalHarmonics3()
+    	 */
     var sh: SphericalHarmonics3 = js.native
   }
 }

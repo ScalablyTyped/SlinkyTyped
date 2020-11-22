@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeviceEnrollmentConfiguration extends Entity {
   
   // The list of group assignments for the device configuration profile.
-  var assignments: js.UndefOr[js.Array[EnrollmentConfigurationAssignment]] = js.native
+  var assignments: js.UndefOr[NullableOption[js.Array[EnrollmentConfigurationAssignment]]] = js.native
   
   // Not yet documented
   var createdDateTime: js.UndefOr[String] = js.native
   
   // Not yet documented
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[NullableOption[String]] = js.native
   
   // Not yet documented
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // Not yet documented
   var lastModifiedDateTime: js.UndefOr[String] = js.native
@@ -55,10 +55,13 @@ object DeviceEnrollmentConfiguration {
     def setAssignmentsVarargs(value: EnrollmentConfigurationAssignment*): Self = this.set("assignments", js.Array(value :_*))
     
     @scala.inline
-    def setAssignments(value: js.Array[EnrollmentConfigurationAssignment]): Self = this.set("assignments", value.asInstanceOf[js.Any])
+    def setAssignments(value: NullableOption[js.Array[EnrollmentConfigurationAssignment]]): Self = this.set("assignments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAssignments: Self = this.set("assignments", js.undefined)
+    
+    @scala.inline
+    def setAssignmentsNull: Self = this.set("assignments", null)
     
     @scala.inline
     def setCreatedDateTime(value: String): Self = this.set("createdDateTime", value.asInstanceOf[js.Any])
@@ -67,16 +70,22 @@ object DeviceEnrollmentConfiguration {
     def deleteCreatedDateTime: Self = this.set("createdDateTime", js.undefined)
     
     @scala.inline
-    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: NullableOption[String]): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDescriptionNull: Self = this.set("description", null)
+    
+    @scala.inline
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
     
     @scala.inline
     def setLastModifiedDateTime(value: String): Self = this.set("lastModifiedDateTime", value.asInstanceOf[js.Any])

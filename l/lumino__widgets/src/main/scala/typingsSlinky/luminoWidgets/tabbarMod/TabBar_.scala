@@ -60,6 +60,11 @@ class TabBar_[T] () extends Widget {
   var _dragData: js.Any = js.native
   
   /**
+    * Handle the `'dblclick'` event for the tab bar.
+    */
+  var _evtDblClick: js.Any = js.native
+  
+  /**
     * Handle the `'keydown'` event for the tab bar.
     */
   var _evtKeyDown: js.Any = js.native
@@ -102,6 +107,8 @@ class TabBar_[T] () extends Widget {
   var _tabMoved: js.Any = js.native
   
   var _titles: js.Any = js.native
+  
+  var _titlesEditable: js.Any = js.native
   
   /**
     * Add a tab to the end of the tab bar.
@@ -325,4 +332,14 @@ class TabBar_[T] () extends Widget {
     * A read-only array of the titles in the tab bar.
     */
   val titles: js.Array[Title[T]] = js.native
+  
+  /**
+    * Whether the titles can be user-edited.
+    *
+    */
+  /**
+    * Set whether titles can be user edited.
+    *
+    */
+  var titlesEditable: Boolean = js.native
 }

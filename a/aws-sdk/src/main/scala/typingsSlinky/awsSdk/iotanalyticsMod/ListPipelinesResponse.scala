@@ -13,7 +13,7 @@ trait ListPipelinesResponse extends js.Object {
   var nextToken: js.UndefOr[NextToken] = js.native
   
   /**
-    * A list of "PipelineSummary" objects.
+    * A list of PipelineSummary objects.
     */
   var pipelineSummaries: js.UndefOr[PipelineSummaries] = js.native
 }

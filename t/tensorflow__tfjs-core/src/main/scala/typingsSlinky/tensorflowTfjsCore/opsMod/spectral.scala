@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore.opsMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,11 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object spectral extends js.Object {
   
-  val fft: js.Function1[/* input */ Tensor[Rank], Tensor[Rank]] = js.native
+  def fft(input: Tensor[Rank]): Tensor[Rank] = js.native
   
-  val ifft: js.Function1[/* input */ Tensor[Rank], Tensor[Rank]] = js.native
+  def ifft(input: Tensor[Rank]): Tensor[Rank] = js.native
   
-  val irfft: js.Function1[/* input */ Tensor[Rank], Tensor[Rank]] = js.native
+  def irfft(input: Tensor[Rank]): Tensor[Rank] = js.native
   
-  val rfft: js.Function2[/* input */ Tensor[Rank], /* fftLength */ js.UndefOr[Double], Tensor[Rank]] = js.native
+  def rfft(input: Tensor[Rank]): Tensor[Rank] = js.native
+  def rfft(input: Tensor[Rank], fftLength: Double): Tensor[Rank] = js.native
 }

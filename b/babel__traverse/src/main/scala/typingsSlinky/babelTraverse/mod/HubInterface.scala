@@ -1,6 +1,7 @@
 package typingsSlinky.babelTraverse.mod
 
-import typingsSlinky.std.ErrorConstructor
+import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.babelTypes.mod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ trait HubInterface extends js.Object {
   
   def addHelper(name: String): js.Any = js.native
   
-  def buildError(node: js.Any, msg: String, Error: ErrorConstructor): js.Error = js.native
+  def buildError[E /* <: js.Error */](node: Node, msg: String, Error: Instantiable1[/* message */ js.UndefOr[String], E]): E = js.native
   
   def getCode(): js.UndefOr[String] = js.native
   
@@ -21,7 +22,7 @@ object HubInterface {
   @scala.inline
   def apply(
     addHelper: String => js.Any,
-    buildError: (js.Any, String, ErrorConstructor) => js.Error,
+    buildError: (Node, String, Instantiable1[/* message */ js.UndefOr[String], js.Any]) => js.Any,
     getCode: () => js.UndefOr[String],
     getScope: () => js.UndefOr[Scope]
   ): HubInterface = {
@@ -48,7 +49,7 @@ object HubInterface {
     def setAddHelper(value: String => js.Any): Self = this.set("addHelper", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setBuildError(value: (js.Any, String, ErrorConstructor) => js.Error): Self = this.set("buildError", js.Any.fromFunction3(value))
+    def setBuildError(value: (Node, String, Instantiable1[/* message */ js.UndefOr[String], js.Any]) => js.Any): Self = this.set("buildError", js.Any.fromFunction3(value))
     
     @scala.inline
     def setGetCode(value: () => js.UndefOr[String]): Self = this.set("getCode", js.Any.fromFunction0(value))

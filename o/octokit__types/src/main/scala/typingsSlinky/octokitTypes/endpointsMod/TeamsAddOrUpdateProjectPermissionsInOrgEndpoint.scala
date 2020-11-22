@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`8`
+import typingsSlinky.octokitTypes.anon.`7`
 import typingsSlinky.octokitTypes.octokitTypesStrings.admin
 import typingsSlinky.octokitTypes.octokitTypesStrings.read
 import typingsSlinky.octokitTypes.octokitTypesStrings.write
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TeamsAddOrUpdateProjectPermissionsInOrgEndpoint extends js.Object {
   
-  var mediaType: `8` = js.native
+  var mediaType: `7` = js.native
   
   @JSName("org")
   var org_ : String = js.native
@@ -33,7 +33,7 @@ trait TeamsAddOrUpdateProjectPermissionsInOrgEndpoint extends js.Object {
 object TeamsAddOrUpdateProjectPermissionsInOrgEndpoint {
   
   @scala.inline
-  def apply(mediaType: `8`, org_ : String, project_id: Double, team_slug: String): TeamsAddOrUpdateProjectPermissionsInOrgEndpoint = {
+  def apply(mediaType: `7`, org_ : String, project_id: Double, team_slug: String): TeamsAddOrUpdateProjectPermissionsInOrgEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], project_id = project_id.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[TeamsAddOrUpdateProjectPermissionsInOrgEndpoint]
@@ -55,7 +55,7 @@ object TeamsAddOrUpdateProjectPermissionsInOrgEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOrg_(value: String): Self = this.set("org", value.asInstanceOf[js.Any])

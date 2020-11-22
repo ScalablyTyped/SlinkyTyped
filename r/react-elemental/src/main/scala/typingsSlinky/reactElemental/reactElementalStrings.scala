@@ -18,6 +18,9 @@ object reactElementalStrings {
   def additions: additions = "additions".asInstanceOf[additions]
   
   @scala.inline
+  def `additions removals`: `additions removals` = ("additions removals").asInstanceOf[`additions removals`]
+  
+  @scala.inline
   def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   
   @scala.inline
@@ -57,7 +60,13 @@ object reactElementalStrings {
   def dialog: dialog = "dialog".asInstanceOf[dialog]
   
   @scala.inline
+  def done: done = "done".asInstanceOf[done]
+  
+  @scala.inline
   def email: email = "email".asInstanceOf[email]
+  
+  @scala.inline
+  def enter: enter = "enter".asInstanceOf[enter]
   
   @scala.inline
   def error: error = "error".asInstanceOf[error]
@@ -67,6 +76,9 @@ object reactElementalStrings {
   
   @scala.inline
   def gamma: gamma = "gamma".asInstanceOf[gamma]
+  
+  @scala.inline
+  def go: go = "go".asInstanceOf[go]
   
   @scala.inline
   def grammar: grammar = "grammar".asInstanceOf[grammar]
@@ -108,6 +120,9 @@ object reactElementalStrings {
   def move: move = "move".asInstanceOf[move]
   
   @scala.inline
+  def next: next = "next".asInstanceOf[next]
+  
+  @scala.inline
   def no: no = "no".asInstanceOf[no]
   
   @scala.inline
@@ -138,13 +153,25 @@ object reactElementalStrings {
   def popup: popup = "popup".asInstanceOf[popup]
   
   @scala.inline
+  def previous: previous = "previous".asInstanceOf[previous]
+  
+  @scala.inline
   def regular: regular = "regular".asInstanceOf[regular]
   
   @scala.inline
   def removals: removals = "removals".asInstanceOf[removals]
   
   @scala.inline
+  def `removals additions`: `removals additions` = ("removals additions").asInstanceOf[`removals additions`]
+  
+  @scala.inline
+  def `removals text`: `removals text` = ("removals text").asInstanceOf[`removals text`]
+  
+  @scala.inline
   def search: search = "search".asInstanceOf[search]
+  
+  @scala.inline
+  def send: send = "send".asInstanceOf[send]
   
   @scala.inline
   def spelling: spelling = "spelling".asInstanceOf[spelling]
@@ -160,6 +187,12 @@ object reactElementalStrings {
   
   @scala.inline
   def text: text = "text".asInstanceOf[text]
+  
+  @scala.inline
+  def `text additions`: `text additions` = ("text additions").asInstanceOf[`text additions`]
+  
+  @scala.inline
+  def `text removals`: `text removals` = ("text removals").asInstanceOf[`text removals`]
   
   @scala.inline
   def time: time = "time".asInstanceOf[time]
@@ -184,6 +217,9 @@ object reactElementalStrings {
   
   @js.native
   sealed trait additions extends js.Object
+  
+  @js.native
+  sealed trait `additions removals` extends js.Object
   
   @js.native
   sealed trait `additions text` extends js.Object
@@ -239,7 +275,13 @@ object reactElementalStrings {
   sealed trait dialog extends js.Object
   
   @js.native
+  sealed trait done extends js.Object
+  
+  @js.native
   sealed trait email extends js.Object
+  
+  @js.native
+  sealed trait enter extends js.Object
   
   @js.native
   sealed trait error extends AlertType
@@ -253,6 +295,9 @@ object reactElementalStrings {
        with ModalSize
        with PulsatorSize
        with SpinnerSize
+  
+  @js.native
+  sealed trait go extends js.Object
   
   @js.native
   sealed trait grammar extends js.Object
@@ -294,6 +339,9 @@ object reactElementalStrings {
   sealed trait move extends js.Object
   
   @js.native
+  sealed trait next extends js.Object
+  
+  @js.native
   sealed trait no extends js.Object
   
   @js.native
@@ -324,13 +372,25 @@ object reactElementalStrings {
   sealed trait popup extends js.Object
   
   @js.native
+  sealed trait previous extends js.Object
+  
+  @js.native
   sealed trait regular extends LinkType
   
   @js.native
   sealed trait removals extends js.Object
   
   @js.native
+  sealed trait `removals additions` extends js.Object
+  
+  @js.native
+  sealed trait `removals text` extends js.Object
+  
+  @js.native
   sealed trait search extends js.Object
+  
+  @js.native
+  sealed trait send extends js.Object
   
   @js.native
   sealed trait spelling extends js.Object
@@ -346,6 +406,12 @@ object reactElementalStrings {
   
   @js.native
   sealed trait text extends js.Object
+  
+  @js.native
+  sealed trait `text additions` extends js.Object
+  
+  @js.native
+  sealed trait `text removals` extends js.Object
   
   @js.native
   sealed trait time extends js.Object

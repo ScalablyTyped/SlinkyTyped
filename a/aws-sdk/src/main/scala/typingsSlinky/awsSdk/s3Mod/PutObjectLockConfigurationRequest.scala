@@ -13,9 +13,14 @@ trait PutObjectLockConfigurationRequest extends js.Object {
   var Bucket: BucketName = js.native
   
   /**
-    * The MD5 hash for the request body.
+    * The MD5 hash for the request body. For requests made using the AWS Command Line Interface (CLI) or AWS SDKs, this field is calculated automatically.
     */
   var ContentMD5: js.UndefOr[typingsSlinky.awsSdk.s3Mod.ContentMD5] = js.native
+  
+  /**
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
   
   /**
     * The Object Lock configuration that you want to apply to the specified bucket.
@@ -60,6 +65,12 @@ object PutObjectLockConfigurationRequest {
     
     @scala.inline
     def deleteContentMD5: Self = this.set("ContentMD5", js.undefined)
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
     
     @scala.inline
     def setObjectLockConfiguration(value: ObjectLockConfiguration): Self = this.set("ObjectLockConfiguration", value.asInstanceOf[js.Any])

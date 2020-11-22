@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "request-promise"
-version := "4.1-dt-20200515Z-514dbf"
-scalaVersion := "2.13.2"
+version := "4.1-dt-20200515Z-176e21"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20200520Z-6ce100",
-  "org.scalablytyped.slinky" %%% "caseless" % "0.12-dt-20200515Z-1a0aa4",
-  "org.scalablytyped.slinky" %%% "form-data" % "2.5.1-cb3aa6",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "request" % "2.48-dt-20200515Z-b47420",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0",
-  "org.scalablytyped.slinky" %%% "tough-cookie" % "4.0-dt-20200515Z-6402f6")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20201028Z-64939d",
+  "org.scalablytyped.slinky" %%% "caseless" % "0.12-dt-20200515Z-da01e2",
+  "org.scalablytyped.slinky" %%% "form-data" % "3.0.0-ee7e6b",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "request" % "2.48-dt-20200515Z-8a4c09",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "tough-cookie" % "4.0-dt-20201002Z-9a7324")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

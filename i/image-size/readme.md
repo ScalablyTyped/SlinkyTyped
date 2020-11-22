@@ -1,7 +1,7 @@
 
 # Scala.js typings for image-size
 
-Typings are for version 0.8.3
+Typings are for version 0.9.3
 
 ## Library description:
 get dimensions of any image file

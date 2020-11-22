@@ -13,6 +13,14 @@ trait Parser[T] extends js.Object {
   def ap[U](otherParser: Parser[js.Function1[/* t */ T, U]]): Parser[U] = js.native
   
   /**
+    * Passes the result of `parser` to the function `condition`,
+    * which returns a boolean. If the the condition is false, returns
+    * a failed parse with the given `message`. Else it returns the
+    * original result of `parser`.
+    */
+  def assert(condition: js.Function1[/* result */ T, Boolean], message: String): Parser[T] = js.native
+  
+  /**
     * expects parser at least n times. Yields an array of the results.
     */
   def atLeast(n: Double): Parser[js.Array[T]] = js.native
@@ -138,7 +146,6 @@ trait Parser[T] extends js.Object {
     * expects anotherParser to follow parser, and yields the result of anotherParser.
     * NB: the result of parser here is ignored.
     */
-  // tslint:disable-next-line:unified-signatures
   def `then`[U](anotherParser: Parser[U]): Parser[U] = js.native
   /**
     * returns a new parser which tries parser, and on success calls the given function

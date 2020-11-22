@@ -24,6 +24,7 @@ class VertexBuffer protected ()
     * @param normalized whether the data contains normalized data (optional)
     * @param useBytes set to true if stride and offset are in bytes (optional)
     * @param divisor defines the instance divisor to use (1 by default)
+    * @param takeBufferOwnership defines if the buffer should be released when the vertex buffer is disposed
     */
   def this(
     engine: js.Any,
@@ -38,7 +39,8 @@ class VertexBuffer protected ()
     `type`: js.UndefOr[Double],
     normalized: js.UndefOr[Boolean],
     useBytes: js.UndefOr[Boolean],
-    divisor: js.UndefOr[Double]
+    divisor: js.UndefOr[Double],
+    takeBufferOwnership: js.UndefOr[Boolean]
   ) = this()
 }
 /* static members */

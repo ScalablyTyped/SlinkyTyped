@@ -1,5 +1,6 @@
 package typingsSlinky.pullStream
 
+import typingsSlinky.pullStream.mod.EndOrError
 import typingsSlinky.pullStream.mod.Sink
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,11 +15,11 @@ object reduceMod extends js.Object {
     */
   def apply[T, U](
     reducer: js.Function2[/* acc */ U | Null, /* data */ T, U],
-    cb: js.Function2[/* err */ js.Error | Null, /* result */ U, _]
+    cb: js.Function2[/* err */ EndOrError, /* result */ U, _]
   ): Sink[T] = js.native
   def apply[T, U](
     reducer: js.Function2[/* acc */ U, /* data */ T, U],
     initial: U,
-    cb: js.Function2[/* err */ js.Error | Null, /* result */ U, _]
+    cb: js.Function2[/* err */ EndOrError, /* result */ U, _]
   ): Sink[T] = js.native
 }

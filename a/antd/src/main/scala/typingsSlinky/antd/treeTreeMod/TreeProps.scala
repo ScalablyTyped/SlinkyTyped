@@ -1,7 +1,7 @@
 package typingsSlinky.antd.treeTreeMod
 
-import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
@@ -9,12 +9,15 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.anon.Checked
 import typingsSlinky.antd.anon.ShowLeafIcon
-import typingsSlinky.rcTree.anon.DragNode
 import typingsSlinky.rcTree.anon.Event
 import typingsSlinky.rcTree.anon.EventNode
 import typingsSlinky.rcTree.anon.Expanded
-import typingsSlinky.rcTree.anon.ExpandedKeys
 import typingsSlinky.rcTree.anon.Node
+import typingsSlinky.rcTree.anon.NodeDragEventParamsHTMLDi
+import typingsSlinky.rcTree.anon.NodeDragEventParamsHTMLDiDragNode
+import typingsSlinky.rcTree.contextTypesMod.NodeDragEventParams
+import typingsSlinky.rcTree.contextTypesMod.NodeMouseEventHandler
+import typingsSlinky.rcTree.contextTypesMod.NodeMouseEventParams
 import typingsSlinky.rcTree.interfaceMod.DataNode
 import typingsSlinky.rcTree.interfaceMod.EventDataNode
 import typingsSlinky.rcTree.interfaceMod.Key
@@ -22,6 +25,7 @@ import typingsSlinky.rcTree.treeMod.CheckInfo
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.KeyboardEventHandler
+import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -108,25 +112,23 @@ trait TreeProps extends js.Object {
     ]
   ] = js.native
   
-  var onClick: js.UndefOr[
-    js.Function2[/* e */ SyntheticMouseEvent[Element], /* treeNode */ EventDataNode, Unit]
-  ] = js.native
+  var onClick: js.UndefOr[NodeMouseEventHandler[HTMLSpanElement]] = js.native
   
-  var onDoubleClick: js.UndefOr[
-    js.Function2[/* e */ SyntheticMouseEvent[Element], /* treeNode */ EventDataNode, Unit]
-  ] = js.native
+  var onContextMenu: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
   
-  var onDragEnd: js.UndefOr[js.Function1[/* info */ EventNode, Unit]] = js.native
+  var onDoubleClick: js.UndefOr[NodeMouseEventHandler[HTMLSpanElement]] = js.native
   
-  var onDragEnter: js.UndefOr[js.Function1[/* info */ ExpandedKeys, Unit]] = js.native
+  var onDragEnd: js.UndefOr[js.Function1[/* info */ NodeDragEventParams[HTMLDivElement], Unit]] = js.native
   
-  var onDragLeave: js.UndefOr[js.Function1[/* info */ EventNode, Unit]] = js.native
+  var onDragEnter: js.UndefOr[js.Function1[/* info */ NodeDragEventParamsHTMLDi, Unit]] = js.native
   
-  var onDragOver: js.UndefOr[js.Function1[/* info */ EventNode, Unit]] = js.native
+  var onDragLeave: js.UndefOr[js.Function1[/* info */ NodeDragEventParams[HTMLDivElement], Unit]] = js.native
   
-  var onDragStart: js.UndefOr[js.Function1[/* info */ EventNode, Unit]] = js.native
+  var onDragOver: js.UndefOr[js.Function1[/* info */ NodeDragEventParams[HTMLDivElement], Unit]] = js.native
   
-  var onDrop: js.UndefOr[js.Function1[/* info */ DragNode, Unit]] = js.native
+  var onDragStart: js.UndefOr[js.Function1[/* info */ NodeDragEventParams[HTMLDivElement], Unit]] = js.native
+  
+  var onDrop: js.UndefOr[js.Function1[/* info */ NodeDragEventParamsHTMLDiDragNode, Unit]] = js.native
   
   var onExpand: js.UndefOr[js.Function2[/* expandedKeys */ js.Array[Key], /* info */ Expanded, Unit]] = js.native
   
@@ -136,9 +138,9 @@ trait TreeProps extends js.Object {
   
   var onLoad: js.UndefOr[js.Function2[/* loadedKeys */ js.Array[Key], /* info */ Node, Unit]] = js.native
   
-  var onMouseEnter: js.UndefOr[js.Function1[/* info */ EventNode, Unit]] = js.native
+  var onMouseEnter: js.UndefOr[js.Function1[/* info */ NodeMouseEventParams[HTMLSpanElement], Unit]] = js.native
   
-  var onMouseLeave: js.UndefOr[js.Function1[/* info */ EventNode, Unit]] = js.native
+  var onMouseLeave: js.UndefOr[js.Function1[/* info */ NodeMouseEventParams[HTMLSpanElement], Unit]] = js.native
   
   var onRightClick: js.UndefOr[js.Function1[/* info */ EventNode, Unit]] = js.native
   
@@ -388,49 +390,55 @@ object TreeProps {
     def deleteOnCheck: Self = this.set("onCheck", js.undefined)
     
     @scala.inline
-    def setOnClick(value: (/* e */ SyntheticMouseEvent[Element], /* treeNode */ EventDataNode) => Unit): Self = this.set("onClick", js.Any.fromFunction2(value))
+    def setOnClick(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): Self = this.set("onClick", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
-    def setOnDoubleClick(value: (/* e */ SyntheticMouseEvent[Element], /* treeNode */ EventDataNode) => Unit): Self = this.set("onDoubleClick", js.Any.fromFunction2(value))
+    def setOnContextMenu(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onContextMenu", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnContextMenu: Self = this.set("onContextMenu", js.undefined)
+    
+    @scala.inline
+    def setOnDoubleClick(value: (/* e */ SyntheticMouseEvent[HTMLSpanElement], /* node */ EventDataNode) => Unit): Self = this.set("onDoubleClick", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnDoubleClick: Self = this.set("onDoubleClick", js.undefined)
     
     @scala.inline
-    def setOnDragEnd(value: /* info */ EventNode => Unit): Self = this.set("onDragEnd", js.Any.fromFunction1(value))
+    def setOnDragEnd(value: /* info */ NodeDragEventParams[HTMLDivElement] => Unit): Self = this.set("onDragEnd", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnDragEnd: Self = this.set("onDragEnd", js.undefined)
     
     @scala.inline
-    def setOnDragEnter(value: /* info */ ExpandedKeys => Unit): Self = this.set("onDragEnter", js.Any.fromFunction1(value))
+    def setOnDragEnter(value: /* info */ NodeDragEventParamsHTMLDi => Unit): Self = this.set("onDragEnter", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnDragEnter: Self = this.set("onDragEnter", js.undefined)
     
     @scala.inline
-    def setOnDragLeave(value: /* info */ EventNode => Unit): Self = this.set("onDragLeave", js.Any.fromFunction1(value))
+    def setOnDragLeave(value: /* info */ NodeDragEventParams[HTMLDivElement] => Unit): Self = this.set("onDragLeave", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnDragLeave: Self = this.set("onDragLeave", js.undefined)
     
     @scala.inline
-    def setOnDragOver(value: /* info */ EventNode => Unit): Self = this.set("onDragOver", js.Any.fromFunction1(value))
+    def setOnDragOver(value: /* info */ NodeDragEventParams[HTMLDivElement] => Unit): Self = this.set("onDragOver", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnDragOver: Self = this.set("onDragOver", js.undefined)
     
     @scala.inline
-    def setOnDragStart(value: /* info */ EventNode => Unit): Self = this.set("onDragStart", js.Any.fromFunction1(value))
+    def setOnDragStart(value: /* info */ NodeDragEventParams[HTMLDivElement] => Unit): Self = this.set("onDragStart", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnDragStart: Self = this.set("onDragStart", js.undefined)
     
     @scala.inline
-    def setOnDrop(value: /* info */ DragNode => Unit): Self = this.set("onDrop", js.Any.fromFunction1(value))
+    def setOnDrop(value: /* info */ NodeDragEventParamsHTMLDiDragNode => Unit): Self = this.set("onDrop", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnDrop: Self = this.set("onDrop", js.undefined)
@@ -460,13 +468,13 @@ object TreeProps {
     def deleteOnLoad: Self = this.set("onLoad", js.undefined)
     
     @scala.inline
-    def setOnMouseEnter(value: /* info */ EventNode => Unit): Self = this.set("onMouseEnter", js.Any.fromFunction1(value))
+    def setOnMouseEnter(value: /* info */ NodeMouseEventParams[HTMLSpanElement] => Unit): Self = this.set("onMouseEnter", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnMouseEnter: Self = this.set("onMouseEnter", js.undefined)
     
     @scala.inline
-    def setOnMouseLeave(value: /* info */ EventNode => Unit): Self = this.set("onMouseLeave", js.Any.fromFunction1(value))
+    def setOnMouseLeave(value: /* info */ NodeMouseEventParams[HTMLSpanElement] => Unit): Self = this.set("onMouseLeave", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnMouseLeave: Self = this.set("onMouseLeave", js.undefined)

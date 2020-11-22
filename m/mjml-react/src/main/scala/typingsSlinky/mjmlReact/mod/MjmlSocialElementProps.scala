@@ -1,7 +1,7 @@
 package typingsSlinky.mjmlReact.mod
 
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.Color
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.ColorProperty
 import typingsSlinky.mjmlReact.mjmlReactStrings.`facebook-noshare`
 import typingsSlinky.mjmlReact.mjmlReactStrings.`google-noshare`
 import typingsSlinky.mjmlReact.mjmlReactStrings.`linkedin-noshare`
@@ -38,11 +38,11 @@ trait MjmlSocialElementProps extends js.Object {
   
   var alt: js.UndefOr[String] = js.native
   
-  var backgroundColor: js.UndefOr[BackgroundColor] = js.native
+  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
   
   var borderRadius: js.UndefOr[String | Double] = js.native
   
-  var color: js.UndefOr[Color] = js.native
+  var color: js.UndefOr[ColorProperty] = js.native
   
   var fontFamily: js.UndefOr[String] = js.native
   
@@ -100,7 +100,7 @@ object MjmlSocialElementProps {
     def deleteAlt: Self = this.set("alt", js.undefined)
     
     @scala.inline
-    def setBackgroundColor(value: BackgroundColor): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColor(value: BackgroundColorProperty): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
@@ -112,7 +112,7 @@ object MjmlSocialElementProps {
     def deleteBorderRadius: Self = this.set("borderRadius", js.undefined)
     
     @scala.inline
-    def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: ColorProperty): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)

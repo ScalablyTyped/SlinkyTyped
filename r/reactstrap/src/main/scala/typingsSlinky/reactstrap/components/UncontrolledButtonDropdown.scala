@@ -7,17 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object UncontrolledButtonDropdown {
   
-  @JSImport("reactstrap", "UncontrolledButtonDropdown")
+  @JSImport("reactstrap/es", "UncontrolledButtonDropdown")
   @js.native
   object component extends js.Object
   
-  def withProps[T](p: UncontrolledDropdownProps): SharedBuilder_UncontrolledDropdownProps515465412[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[T], T] = new SharedBuilder_UncontrolledDropdownProps515465412[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[T], T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: UncontrolledDropdownProps): SharedBuilder_UncontrolledDropdownProps_1802600603[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown] = new SharedBuilder_UncontrolledDropdownProps_1802600603[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply[T](): SharedBuilder_UncontrolledDropdownProps515465412[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[T], T] = {
-    val __props = js.Dynamic.literal()
-    new SharedBuilder_UncontrolledDropdownProps515465412[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[T], T](js.Array(this.component, __props.asInstanceOf[UncontrolledDropdownProps]))
-  }
-  
-  implicit def make[T](companion: UncontrolledButtonDropdown.type): SharedBuilder_UncontrolledDropdownProps515465412[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[T], T] = new SharedBuilder_UncontrolledDropdownProps515465412[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown[T], T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: UncontrolledButtonDropdown.type): SharedBuilder_UncontrolledDropdownProps_1802600603[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown] = new SharedBuilder_UncontrolledDropdownProps_1802600603[typingsSlinky.reactstrap.mod.UncontrolledButtonDropdown](js.Array(this.component, js.Dictionary.empty))()
 }

@@ -13,7 +13,7 @@ trait ComplianceViolator extends js.Object {
   var ResourceId: js.UndefOr[typingsSlinky.awsSdk.fmsMod.ResourceId] = js.native
   
   /**
-    * The resource type. This is in the format shown in the AWS Resource Types Reference. For example: AWS::ElasticLoadBalancingV2::LoadBalancer or AWS::CloudFront::Distribution.
+    * The resource type. This is in the format shown in the AWS Resource Types Reference. For example: AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::CloudFront::Distribution, or AWS::NetworkFirewall::FirewallPolicy.
     */
   var ResourceType: js.UndefOr[typingsSlinky.awsSdk.fmsMod.ResourceType] = js.native
   

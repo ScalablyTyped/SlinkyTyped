@@ -11,10 +11,10 @@ trait EnumDeclaration
      with _HasJSDoc {
   
   @JSName("kind")
-  var kind_EnumDeclaration: typingsSlinky.typescript.mod.SyntaxKind.EnumDeclaration = js.native
+  val kind_EnumDeclaration: typingsSlinky.typescript.mod.SyntaxKind.EnumDeclaration = js.native
   
-  var members: NodeArray[EnumMember] = js.native
+  val members: NodeArray[EnumMember] = js.native
   
   @JSName("name")
-  var name_EnumDeclaration: Identifier = js.native
+  val name_EnumDeclaration: Identifier = js.native
 }

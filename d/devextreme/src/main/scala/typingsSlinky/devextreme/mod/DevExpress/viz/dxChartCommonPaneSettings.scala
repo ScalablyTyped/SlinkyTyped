@@ -8,10 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartCommonPaneSettings extends js.Object {
   
-  /** @name dxChart.Options.commonPaneSettings.backgroundColor */
+  /**
+    * [descr:dxChart.Options.commonPaneSettings.backgroundColor]
+    */
   var backgroundColor: js.UndefOr[String] = js.native
   
-  /** @name dxChart.Options.commonPaneSettings.border */
+  /**
+    * [descr:dxChart.Options.commonPaneSettings.border]
+    */
   var border: js.UndefOr[Left] = js.native
 }
 object dxChartCommonPaneSettings {

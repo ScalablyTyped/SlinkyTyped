@@ -3,7 +3,7 @@ package typingsSlinky.jupyterlabNotebook.mod
 import typingsSlinky.jupyterlabNotebook.modelfactoryMod.NotebookModelFactory.IOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/notebook", "NotebookModelFactory")
 @js.native
@@ -14,4 +14,3 @@ class NotebookModelFactory protected ()
     */
   def this(options: IOptions) = this()
 }
-

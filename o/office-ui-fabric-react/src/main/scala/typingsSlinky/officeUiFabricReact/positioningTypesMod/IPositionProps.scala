@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.MouseEvent
 import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
+import typingsSlinky.uifabricUtilities.pointMod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -47,7 +48,7 @@ trait IPositionProps extends js.Object {
   /** The gap between the callout and the target */
   var gapSpace: js.UndefOr[Double] = js.native
   
-  var target: js.UndefOr[Element | MouseEvent | IPoint] = js.native
+  var target: js.UndefOr[Element | MouseEvent | Point] = js.native
 }
 object IPositionProps {
   
@@ -121,7 +122,7 @@ object IPositionProps {
     def setTargetMouseEvent(value: MouseEvent): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTarget(value: Element | MouseEvent | IPoint): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setTarget(value: Element | MouseEvent | Point): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)

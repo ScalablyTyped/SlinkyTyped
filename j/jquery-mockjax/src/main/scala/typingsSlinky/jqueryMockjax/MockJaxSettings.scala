@@ -25,7 +25,7 @@ trait MockJaxSettings extends js.Object {
   
   var logger: js.UndefOr[MockJaxStandardLogger | MockJaxCustomLogger] = js.native
   
-  var logging: js.UndefOr[Boolean] = js.native
+  var logging: js.UndefOr[Boolean | Double] = js.native
   
   var namespace: js.UndefOr[String] = js.native
   
@@ -142,7 +142,7 @@ object MockJaxSettings {
     def deleteLogger: Self = this.set("logger", js.undefined)
     
     @scala.inline
-    def setLogging(value: Boolean): Self = this.set("logging", value.asInstanceOf[js.Any])
+    def setLogging(value: Boolean | Double): Self = this.set("logging", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLogging: Self = this.set("logging", js.undefined)

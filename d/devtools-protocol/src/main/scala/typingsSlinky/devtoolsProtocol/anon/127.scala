@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowDebugBordersRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.HighlightQuadRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `127` extends js.Object {
   
-  var paramsType: js.Array[SetShowDebugBordersRequest] = js.native
+  var paramsType: js.Array[HighlightQuadRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `127` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetShowDebugBordersRequest], returnType: Unit): `127` = {
+  def apply(paramsType: js.Array[HighlightQuadRequest], returnType: Unit): `127` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`127`]
   }
@@ -36,10 +36,10 @@ object `127` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetShowDebugBordersRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: HighlightQuadRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetShowDebugBordersRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[HighlightQuadRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

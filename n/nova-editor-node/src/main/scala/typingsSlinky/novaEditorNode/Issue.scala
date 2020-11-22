@@ -18,6 +18,8 @@ trait Issue extends js.Object {
   
   var line: js.UndefOr[Double] = js.native
   
+  var message: String = js.native
+  
   var severity: IssueSeverity = js.native
   
   var source: String | Null = js.native
@@ -27,8 +29,8 @@ trait Issue extends js.Object {
 object Issue {
   
   @scala.inline
-  def apply(code: Double | String, severity: IssueSeverity): Issue = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], severity = severity.asInstanceOf[js.Any])
+  def apply(code: Double | String, message: String, severity: IssueSeverity): Issue = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], severity = severity.asInstanceOf[js.Any])
     __obj.asInstanceOf[Issue]
   }
   
@@ -49,6 +51,9 @@ object Issue {
     
     @scala.inline
     def setCode(value: Double | String): Self = this.set("code", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSeverity(value: IssueSeverity): Self = this.set("severity", value.asInstanceOf[js.Any])

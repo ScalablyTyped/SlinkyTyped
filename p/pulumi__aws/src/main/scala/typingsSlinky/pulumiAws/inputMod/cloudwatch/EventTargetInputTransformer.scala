@@ -11,12 +11,12 @@ trait EventTargetInputTransformer extends js.Object {
   
   /**
     * Key value pairs specified in the form of JSONPath (for example, time = $.time)
+    * * You can have as many as 10 key-value pairs.
+    * * You must use JSON dot notation, not bracket notation.
+    * * The keys can't start with "AWS".
     */
   var inputPaths: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
-  /**
-    * Structure containing the template body.
-    */
   var inputTemplate: Input[String] = js.native
 }
 object EventTargetInputTransformer {

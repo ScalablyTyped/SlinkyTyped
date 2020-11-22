@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object dropdownToggleMod {
   
-  type DropdownToggle[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.dropdownToggleMod.DropdownToggleProps]
+  type DropdownToggle = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.dropdownToggleMod.DropdownToggleProps]
 }

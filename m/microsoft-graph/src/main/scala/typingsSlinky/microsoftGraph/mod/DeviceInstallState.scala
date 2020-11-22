@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeviceInstallState extends Entity {
   
   // Device Id.
-  var deviceId: js.UndefOr[String] = js.native
+  var deviceId: js.UndefOr[NullableOption[String]] = js.native
   
   // Device name.
-  var deviceName: js.UndefOr[String] = js.native
+  var deviceName: js.UndefOr[NullableOption[String]] = js.native
   
   // The error code for install failures.
-  var errorCode: js.UndefOr[String] = js.native
+  var errorCode: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The install state of the eBook. Possible values are: notApplicable, installed, failed, notInstalled, uninstallFailed,
@@ -26,13 +26,13 @@ trait DeviceInstallState extends Entity {
   var lastSyncDateTime: js.UndefOr[String] = js.native
   
   // OS Description.
-  var osDescription: js.UndefOr[String] = js.native
+  var osDescription: js.UndefOr[NullableOption[String]] = js.native
   
   // OS Version.
-  var osVersion: js.UndefOr[String] = js.native
+  var osVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Device User Name.
-  var userName: js.UndefOr[String] = js.native
+  var userName: js.UndefOr[NullableOption[String]] = js.native
 }
 object DeviceInstallState {
   
@@ -58,22 +58,31 @@ object DeviceInstallState {
     }
     
     @scala.inline
-    def setDeviceId(value: String): Self = this.set("deviceId", value.asInstanceOf[js.Any])
+    def setDeviceId(value: NullableOption[String]): Self = this.set("deviceId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceId: Self = this.set("deviceId", js.undefined)
     
     @scala.inline
-    def setDeviceName(value: String): Self = this.set("deviceName", value.asInstanceOf[js.Any])
+    def setDeviceIdNull: Self = this.set("deviceId", null)
+    
+    @scala.inline
+    def setDeviceName(value: NullableOption[String]): Self = this.set("deviceName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceName: Self = this.set("deviceName", js.undefined)
     
     @scala.inline
-    def setErrorCode(value: String): Self = this.set("errorCode", value.asInstanceOf[js.Any])
+    def setDeviceNameNull: Self = this.set("deviceName", null)
+    
+    @scala.inline
+    def setErrorCode(value: NullableOption[String]): Self = this.set("errorCode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteErrorCode: Self = this.set("errorCode", js.undefined)
+    
+    @scala.inline
+    def setErrorCodeNull: Self = this.set("errorCode", null)
     
     @scala.inline
     def setInstallState(value: InstallState): Self = this.set("installState", value.asInstanceOf[js.Any])
@@ -88,21 +97,30 @@ object DeviceInstallState {
     def deleteLastSyncDateTime: Self = this.set("lastSyncDateTime", js.undefined)
     
     @scala.inline
-    def setOsDescription(value: String): Self = this.set("osDescription", value.asInstanceOf[js.Any])
+    def setOsDescription(value: NullableOption[String]): Self = this.set("osDescription", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOsDescription: Self = this.set("osDescription", js.undefined)
     
     @scala.inline
-    def setOsVersion(value: String): Self = this.set("osVersion", value.asInstanceOf[js.Any])
+    def setOsDescriptionNull: Self = this.set("osDescription", null)
+    
+    @scala.inline
+    def setOsVersion(value: NullableOption[String]): Self = this.set("osVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOsVersion: Self = this.set("osVersion", js.undefined)
     
     @scala.inline
-    def setUserName(value: String): Self = this.set("userName", value.asInstanceOf[js.Any])
+    def setOsVersionNull: Self = this.set("osVersion", null)
+    
+    @scala.inline
+    def setUserName(value: NullableOption[String]): Self = this.set("userName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserName: Self = this.set("userName", js.undefined)
+    
+    @scala.inline
+    def setUserNameNull: Self = this.set("userName", null)
   }
 }

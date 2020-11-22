@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createPostfix extends js.Object {
   
+  /** @deprecated Use `factory.createPostfix` or the factory supplied by your transformation context instead. */
   def apply(operand: Expression, operator: PostfixUnaryOperator): PostfixUnaryExpression = js.native
 }

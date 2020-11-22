@@ -8,11 +8,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DebugSessionOptions extends js.Object {
   
   /**
+    * Controls if the debug session's parent session is shown in the CALL STACK view even if it has only a single child.
+    * By default, the debug session will never hide its parent.
+    * If compact is true, debug sessions with a single child are hidden in the CALL STACK view to make the tree more compact.
+    */
+  var compact: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Controls whether this session should have a separate debug console or share it
     * with the parent session. Has no effect for sessions which do not have a parent session.
     * Defaults to Separate.
     */
   var consoleMode: js.UndefOr[DebugConsoleMode] = js.native
+  
+  /**
+    * Controls whether this session should run without debugging, thus ignoring breakpoints.
+    * When this property is not specified, the value from the parent session (if there is one) is used.
+    */
+  var noDebug: js.UndefOr[Boolean] = js.native
   
   /**
     * When specified the newly created debug session is registered as a "child" session of this
@@ -44,10 +57,22 @@ object DebugSessionOptions {
     }
     
     @scala.inline
+    def setCompact(value: Boolean): Self = this.set("compact", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCompact: Self = this.set("compact", js.undefined)
+    
+    @scala.inline
     def setConsoleMode(value: DebugConsoleMode): Self = this.set("consoleMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteConsoleMode: Self = this.set("consoleMode", js.undefined)
+    
+    @scala.inline
+    def setNoDebug(value: Boolean): Self = this.set("noDebug", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNoDebug: Self = this.set("noDebug", js.undefined)
     
     @scala.inline
     def setParentSession(value: DebugSession): Self = this.set("parentSession", value.asInstanceOf[js.Any])

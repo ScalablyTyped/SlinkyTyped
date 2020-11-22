@@ -9,6 +9,13 @@ trait ClientAuthentication extends js.Object {
   
   /**
     * 
+    Details for ClientAuthentication using SASL.
+    
+    */
+  var Sasl: js.UndefOr[typingsSlinky.awsSdk.kafkaMod.Sasl] = js.native
+  
+  /**
+    * 
     Details for ClientAuthentication using TLS.
     
     */
@@ -36,6 +43,12 @@ object ClientAuthentication {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setSasl(value: Sasl): Self = this.set("Sasl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSasl: Self = this.set("Sasl", js.undefined)
     
     @scala.inline
     def setTls(value: Tls): Self = this.set("Tls", value.asInstanceOf[js.Any])

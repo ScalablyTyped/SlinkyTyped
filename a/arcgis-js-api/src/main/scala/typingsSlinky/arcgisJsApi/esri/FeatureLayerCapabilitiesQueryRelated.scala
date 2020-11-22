@@ -17,14 +17,14 @@ trait FeatureLayerCapabilitiesQueryRelated extends Object {
   var supportsCount: Boolean = js.native
   
   /**
-    * Indicates if the related features or records returned in the query response can be ordered by one or more fields. Requires ArcGIS Server service 10.3 or greater.
+    * Indicates if the related features or records returned in the query response can be ordered by one or more fields.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#capabilities)
     */
   var supportsOrderBy: Boolean = js.native
   
   /**
-    * Indicates if the query response supports pagination for related features or records. Requires ArcGIS Server service 10.3 or greater.
+    * Indicates if the query response supports pagination for related features or records.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#capabilities)
     */

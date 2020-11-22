@@ -13,7 +13,7 @@ trait ListGameServerGroupsOutput extends js.Object {
   var GameServerGroups: js.UndefOr[typingsSlinky.awsSdk.gameliftMod.GameServerGroups] = js.native
   
   /**
-    * A token that indicates where to resume retrieving results on the next call to this action. If no token is returned, these results represent the end of the list.
+    * A token that indicates where to resume retrieving results on the next call to this operation. If no token is returned, these results represent the end of the list.
     */
   var NextToken: js.UndefOr[NonZeroAndMaxString] = js.native
 }

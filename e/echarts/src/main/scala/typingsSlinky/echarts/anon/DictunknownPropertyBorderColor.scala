@@ -21,7 +21,7 @@ trait DictunknownPropertyBorderColor
     * "#000"
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.borderColor
     */
-  var borderColor: js.UndefOr[String] = js.native
+  var borderColor: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
   /**
     * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
@@ -70,7 +70,7 @@ trait DictunknownPropertyBorderColor
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.color
     */
-  var color: js.UndefOr[String | js.Function] = js.native
+  var color: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color | js.Function] = js.native
   
   /**
     * Opacity of the component.
@@ -102,7 +102,7 @@ trait DictunknownPropertyBorderColor
     *
     * @see https://echarts.apache.org/en/option.html#series-pie.itemStyle.shadowColor
     */
-  var shadowColor: js.UndefOr[String] = js.native
+  var shadowColor: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
   /**
     * Offset distance on the horizontal direction of shadow.
@@ -144,7 +144,7 @@ object DictunknownPropertyBorderColor {
     }
     
     @scala.inline
-    def setBorderColor(value: String): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    def setBorderColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBorderColor: Self = this.set("borderColor", js.undefined)
@@ -162,7 +162,7 @@ object DictunknownPropertyBorderColor {
     def deleteBorderWidth: Self = this.set("borderWidth", js.undefined)
     
     @scala.inline
-    def setColor(value: String | js.Function): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: typingsSlinky.echarts.echarts.EChartOption.Color | js.Function): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
@@ -180,7 +180,7 @@ object DictunknownPropertyBorderColor {
     def deleteShadowBlur: Self = this.set("shadowBlur", js.undefined)
     
     @scala.inline
-    def setShadowColor(value: String): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
+    def setShadowColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShadowColor: Self = this.set("shadowColor", js.undefined)

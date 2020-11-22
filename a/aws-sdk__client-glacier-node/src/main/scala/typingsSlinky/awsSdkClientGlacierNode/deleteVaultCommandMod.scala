@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientGlacierNode.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientGlacierNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientGlacierNode.typesDeleteVaultInputMod.DeleteVaultInput
 import typingsSlinky.awsSdkClientGlacierNode.typesDeleteVaultOutputMod.DeleteVaultOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object deleteVaultCommandMod extends js.Object {
           DeleteVaultInput, 
           OutputTypesUnion, 
           DeleteVaultOutput, 
-          GlacierResolvedConfiguration, 
-          Readable
+          GlacierResolvedConfiguration
         ] {
     def this(input: DeleteVaultInput) = this()
     
-    val middlewareStack: MiddlewareStack[DeleteVaultInput, DeleteVaultOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: GlacierResolvedConfiguration
     ): Handler[DeleteVaultInput, DeleteVaultOutput] = js.native
   }

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PortalItemUpdateParams extends Object {
   
   /**
-    * **Optional**. The component used to stream the data represented by the item to the client.
+    * **Optional**.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#update)
     */

@@ -2,6 +2,7 @@ package typingsSlinky.fundamentalReact.menuMod
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLLIElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
@@ -16,8 +17,13 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals text`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.all
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.ascending
@@ -83,7 +89,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  addon :string | undefined,   addonBefore :string | undefined,   addonProps :any | undefined,   className :string | undefined,   isLink :boolean | undefined,   onclick :(args : ...any): any | undefined,   url :string | undefined,   urlProps :any | undefined} & react.react.HTMLAttributes<std.HTMLLIElement> */
+/* Inlined {  active :boolean | undefined,   addonAfter :string | undefined,   addonBefore :string | undefined,   addonProps :any | undefined,   className :string | undefined,   disabled :boolean | undefined,   isLink :boolean | undefined,   onClick :(event : react.react.MouseEvent<std.HTMLButtonElement, std.MouseEvent>): void | undefined,   selected :boolean | undefined,   separator :boolean | undefined,   url :string | undefined,   urlProps :any | undefined} & react.react.HTMLAttributes<std.HTMLLIElement> */
 @js.native
 trait MenuItemProps extends js.Object {
   
@@ -93,7 +99,9 @@ trait MenuItemProps extends js.Object {
   // Standard HTML Attributes
   var accessKey: js.UndefOr[String] = js.native
   
-  var addon: js.UndefOr[String] = js.native
+  var active: js.UndefOr[Boolean] = js.native
+  
+  var addonAfter: js.UndefOr[String] = js.native
   
   var addonBefore: js.UndefOr[String] = js.native
   
@@ -275,7 +283,9 @@ trait MenuItemProps extends js.Object {
     * Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
     * @see aria-atomic.
     */
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   /** Indicates that user input is required on the element before a form may be submitted. */
   var `aria-required`: js.UndefOr[Boolean] = js.native
@@ -359,6 +369,8 @@ trait MenuItemProps extends js.Object {
   
   var dir: js.UndefOr[String] = js.native
   
+  var disabled: js.UndefOr[Boolean] = js.native
+  
   var draggable: js.UndefOr[Booleanish] = js.native
   
   var hidden: js.UndefOr[Boolean] = js.native
@@ -418,7 +430,7 @@ trait MenuItemProps extends js.Object {
   // Form Events
   var onChange: js.UndefOr[FormEventHandler[HTMLLIElement]] = js.native
   
-  var onClick: js.UndefOr[MouseEventHandler[HTMLLIElement]] = js.native
+  var onClick: (js.UndefOr[js.Function1[/* event */ SyntheticMouseEvent[HTMLButtonElement], Unit]]) with js.UndefOr[MouseEventHandler[HTMLLIElement]] = js.native
   
   // Composition Events
   var onCompositionEnd: js.UndefOr[CompositionEventHandler[HTMLLIElement]] = js.native
@@ -568,8 +580,6 @@ trait MenuItemProps extends js.Object {
   // Wheel Events
   var onWheel: js.UndefOr[WheelEventHandler[HTMLLIElement]] = js.native
   
-  var onclick: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
-  
   var placeholder: js.UndefOr[String] = js.native
   
   var prefix: js.UndefOr[String] = js.native
@@ -588,6 +598,10 @@ trait MenuItemProps extends js.Object {
   var role: js.UndefOr[String] = js.native
   
   var security: js.UndefOr[String] = js.native
+  
+  var selected: js.UndefOr[Boolean] = js.native
+  
+  var separator: js.UndefOr[Boolean] = js.native
   
   var slot: js.UndefOr[String] = js.native
   
@@ -618,8 +632,10 @@ trait MenuItemProps extends js.Object {
 object MenuItemProps {
   
   @scala.inline
-  def apply(): MenuItemProps = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    onClick: (js.UndefOr[js.Function1[/* event */ SyntheticMouseEvent[HTMLButtonElement], Unit]]) with js.UndefOr[MouseEventHandler[HTMLLIElement]]
+  ): MenuItemProps = {
+    val __obj = js.Dynamic.literal(onClick = onClick.asInstanceOf[js.Any])
     __obj.asInstanceOf[MenuItemProps]
   }
   
@@ -639,6 +655,11 @@ object MenuItemProps {
     }
     
     @scala.inline
+    def setOnClick(
+      value: (js.UndefOr[js.Function1[/* event */ SyntheticMouseEvent[HTMLButtonElement], Unit]]) with js.UndefOr[MouseEventHandler[HTMLLIElement]]
+    ): Self = this.set("onClick", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setAbout(value: String): Self = this.set("about", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -651,10 +672,16 @@ object MenuItemProps {
     def deleteAccessKey: Self = this.set("accessKey", js.undefined)
     
     @scala.inline
-    def setAddon(value: String): Self = this.set("addon", value.asInstanceOf[js.Any])
+    def setActive(value: Boolean): Self = this.set("active", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAddon: Self = this.set("addon", js.undefined)
+    def deleteActive: Self = this.set("active", js.undefined)
+    
+    @scala.inline
+    def setAddonAfter(value: String): Self = this.set("addonAfter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAddonAfter: Self = this.set("addonAfter", js.undefined)
     
     @scala.inline
     def setAddonBefore(value: String): Self = this.set("addonBefore", value.asInstanceOf[js.Any])
@@ -879,7 +906,9 @@ object MenuItemProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1041,6 +1070,12 @@ object MenuItemProps {
     def deleteDir: Self = this.set("dir", js.undefined)
     
     @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
     def setDraggable(value: Booleanish): Self = this.set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1177,12 +1212,6 @@ object MenuItemProps {
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
-    
-    @scala.inline
-    def setOnClick(value: SyntheticMouseEvent[HTMLLIElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
     def setOnCompositionEnd(value: SyntheticCompositionEvent[HTMLLIElement] => Unit): Self = this.set("onCompositionEnd", js.Any.fromFunction1(value))
@@ -1639,6 +1668,18 @@ object MenuItemProps {
     
     @scala.inline
     def deleteSecurity: Self = this.set("security", js.undefined)
+    
+    @scala.inline
+    def setSelected(value: Boolean): Self = this.set("selected", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelected: Self = this.set("selected", js.undefined)
+    
+    @scala.inline
+    def setSeparator(value: Boolean): Self = this.set("separator", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSeparator: Self = this.set("separator", js.undefined)
     
     @scala.inline
     def setSlot(value: String): Self = this.set("slot", value.asInstanceOf[js.Any])

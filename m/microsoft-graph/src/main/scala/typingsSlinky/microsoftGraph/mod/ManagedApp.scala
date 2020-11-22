@@ -11,7 +11,7 @@ trait ManagedApp extends MobileApp {
   var appAvailability: js.UndefOr[ManagedAppAvailability] = js.native
   
   // The Application's version.
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[NullableOption[String]] = js.native
 }
 object ManagedApp {
   
@@ -43,9 +43,12 @@ object ManagedApp {
     def deleteAppAvailability: Self = this.set("appAvailability", js.undefined)
     
     @scala.inline
-    def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
+    def setVersion(value: NullableOption[String]): Self = this.set("version", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVersion: Self = this.set("version", js.undefined)
+    
+    @scala.inline
+    def setVersionNull: Self = this.set("version", null)
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.settingsMod.settings
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.constantsMod.constants.IConstant
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,20 +8,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.settingsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/settings", "settings.ConstantValue")
 @js.native
-class ConstantValue protected () extends Element {
+class ConstantValue protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def constant: IConstant = js.native
@@ -30,9 +32,6 @@ class ConstantValue protected () extends Element {
   def constant_=(newValue: IConstant): Unit = js.native
   
   def containerAsConfiguration: Configuration = js.native
-  
-  @JSName("model")
-  var model_FConstantValue: IModel = js.native
   
   def value: String = js.native
   def value_=(newValue: String): Unit = js.native

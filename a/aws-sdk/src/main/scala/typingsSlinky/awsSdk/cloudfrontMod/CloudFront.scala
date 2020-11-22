@@ -6,7 +6,7 @@ import typingsSlinky.awsSdk.anon.GetStreamingDistributionR
 import typingsSlinky.awsSdk.awsSdkStrings.distributionDeployed
 import typingsSlinky.awsSdk.awsSdkStrings.invalidationCompleted
 import typingsSlinky.awsSdk.awsSdkStrings.streamingDistributionDeployed
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.servicesCloudfrontMod.CloudFrontCustomizations
@@ -21,12 +21,12 @@ trait CloudFront extends CloudFrontCustomizations {
   var config_CloudFront: ConfigBase with ClientConfiguration = js.native
   
   /**
-    * Creates a cache policy. After you create a cache policy, you can attach it to one or more cache behaviors. When it’s attached to a cache behavior, the cache policy determines the following:   The values that CloudFront includes in the cache key. These values can include HTTP headers, cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that it can return to the viewer.   The default, minimum, and maximum time to live (TTL) values that you want objects to stay in the CloudFront cache.   The headers, cookies, and query strings that are included in the cache key are automatically included in requests that CloudFront sends to the origin. CloudFront sends a request when it can’t find an object in its cache that matches the request’s cache key. If you want to send values to the origin but not include them in the cache key, use CreateOriginRequestPolicy. For more information about cache policies, see Controlling the cache key in the Amazon CloudFront Developer Guide.
+    * Creates a cache policy. After you create a cache policy, you can attach it to one or more cache behaviors. When it’s attached to a cache behavior, the cache policy determines the following:   The values that CloudFront includes in the cache key. These values can include HTTP headers, cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that it can return to the viewer.   The default, minimum, and maximum time to live (TTL) values that you want objects to stay in the CloudFront cache.   The headers, cookies, and query strings that are included in the cache key are automatically included in requests that CloudFront sends to the origin. CloudFront sends a request when it can’t find an object in its cache that matches the request’s cache key. If you want to send values to the origin but not include them in the cache key, use OriginRequestPolicy. For more information about cache policies, see Controlling the cache key in the Amazon CloudFront Developer Guide.
     */
   def createCachePolicy(): Request[CreateCachePolicyResult, AWSError] = js.native
   def createCachePolicy(callback: js.Function2[/* err */ AWSError, /* data */ CreateCachePolicyResult, Unit]): Request[CreateCachePolicyResult, AWSError] = js.native
   /**
-    * Creates a cache policy. After you create a cache policy, you can attach it to one or more cache behaviors. When it’s attached to a cache behavior, the cache policy determines the following:   The values that CloudFront includes in the cache key. These values can include HTTP headers, cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that it can return to the viewer.   The default, minimum, and maximum time to live (TTL) values that you want objects to stay in the CloudFront cache.   The headers, cookies, and query strings that are included in the cache key are automatically included in requests that CloudFront sends to the origin. CloudFront sends a request when it can’t find an object in its cache that matches the request’s cache key. If you want to send values to the origin but not include them in the cache key, use CreateOriginRequestPolicy. For more information about cache policies, see Controlling the cache key in the Amazon CloudFront Developer Guide.
+    * Creates a cache policy. After you create a cache policy, you can attach it to one or more cache behaviors. When it’s attached to a cache behavior, the cache policy determines the following:   The values that CloudFront includes in the cache key. These values can include HTTP headers, cookies, and URL query strings. CloudFront uses the cache key to find an object in its cache that it can return to the viewer.   The default, minimum, and maximum time to live (TTL) values that you want objects to stay in the CloudFront cache.   The headers, cookies, and query strings that are included in the cache key are automatically included in requests that CloudFront sends to the origin. CloudFront sends a request when it can’t find an object in its cache that matches the request’s cache key. If you want to send values to the origin but not include them in the cache key, use OriginRequestPolicy. For more information about cache policies, see Controlling the cache key in the Amazon CloudFront Developer Guide.
     */
   def createCachePolicy(params: CreateCachePolicyRequest): Request[CreateCachePolicyResult, AWSError] = js.native
   def createCachePolicy(
@@ -125,12 +125,40 @@ trait CloudFront extends CloudFrontCustomizations {
   ): Request[CreateInvalidationResult, AWSError] = js.native
   
   /**
-    * Creates an origin request policy. After you create an origin request policy, you can attach it to one or more cache behaviors. When it’s attached to a cache behavior, the origin request policy determines the values that CloudFront includes in requests that it sends to the origin. Each request that CloudFront sends to the origin includes the following:   The request body and the URL path (without the domain name) from the viewer request.   The headers that CloudFront automatically includes in every origin request, including Host, User-Agent, and X-Amz-Cf-Id.   All HTTP headers, cookies, and URL query strings that are specified in the cache policy or the origin request policy. These can include items from the viewer request and, in the case of headers, additional ones that are added by CloudFront.   CloudFront sends a request when it can’t find a valid object in its cache that matches the request. If you want to send values to the origin and also include them in the cache key, use CreateCachePolicy. For more information about origin request policies, see Controlling origin requests in the Amazon CloudFront Developer Guide.
+    * Creates a key group that you can use with CloudFront signed URLs and signed cookies. To create a key group, you must specify at least one public key for the key group. After you create a key group, you can reference it from one or more cache behaviors. When you reference a key group in a cache behavior, CloudFront requires signed URLs or signed cookies for all requests that match the cache behavior. The URLs or cookies must be signed with a private key whose corresponding public key is in the key group. The signed URL or cookie contains information about which public key CloudFront should use to verify the signature. For more information, see Serving private content in the Amazon CloudFront Developer Guide.
+    */
+  def createKeyGroup(): Request[CreateKeyGroupResult, AWSError] = js.native
+  def createKeyGroup(callback: js.Function2[/* err */ AWSError, /* data */ CreateKeyGroupResult, Unit]): Request[CreateKeyGroupResult, AWSError] = js.native
+  /**
+    * Creates a key group that you can use with CloudFront signed URLs and signed cookies. To create a key group, you must specify at least one public key for the key group. After you create a key group, you can reference it from one or more cache behaviors. When you reference a key group in a cache behavior, CloudFront requires signed URLs or signed cookies for all requests that match the cache behavior. The URLs or cookies must be signed with a private key whose corresponding public key is in the key group. The signed URL or cookie contains information about which public key CloudFront should use to verify the signature. For more information, see Serving private content in the Amazon CloudFront Developer Guide.
+    */
+  def createKeyGroup(params: CreateKeyGroupRequest): Request[CreateKeyGroupResult, AWSError] = js.native
+  def createKeyGroup(
+    params: CreateKeyGroupRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateKeyGroupResult, Unit]
+  ): Request[CreateKeyGroupResult, AWSError] = js.native
+  
+  /**
+    * Enables additional CloudWatch metrics for the specified CloudFront distribution. The additional metrics incur an additional cost. For more information, see Viewing additional CloudFront distribution metrics in the Amazon CloudFront Developer Guide.
+    */
+  def createMonitoringSubscription(): Request[CreateMonitoringSubscriptionResult, AWSError] = js.native
+  def createMonitoringSubscription(callback: js.Function2[/* err */ AWSError, /* data */ CreateMonitoringSubscriptionResult, Unit]): Request[CreateMonitoringSubscriptionResult, AWSError] = js.native
+  /**
+    * Enables additional CloudWatch metrics for the specified CloudFront distribution. The additional metrics incur an additional cost. For more information, see Viewing additional CloudFront distribution metrics in the Amazon CloudFront Developer Guide.
+    */
+  def createMonitoringSubscription(params: CreateMonitoringSubscriptionRequest): Request[CreateMonitoringSubscriptionResult, AWSError] = js.native
+  def createMonitoringSubscription(
+    params: CreateMonitoringSubscriptionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateMonitoringSubscriptionResult, Unit]
+  ): Request[CreateMonitoringSubscriptionResult, AWSError] = js.native
+  
+  /**
+    * Creates an origin request policy. After you create an origin request policy, you can attach it to one or more cache behaviors. When it’s attached to a cache behavior, the origin request policy determines the values that CloudFront includes in requests that it sends to the origin. Each request that CloudFront sends to the origin includes the following:   The request body and the URL path (without the domain name) from the viewer request.   The headers that CloudFront automatically includes in every origin request, including Host, User-Agent, and X-Amz-Cf-Id.   All HTTP headers, cookies, and URL query strings that are specified in the cache policy or the origin request policy. These can include items from the viewer request and, in the case of headers, additional ones that are added by CloudFront.   CloudFront sends a request when it can’t find a valid object in its cache that matches the request. If you want to send values to the origin and also include them in the cache key, use CachePolicy. For more information about origin request policies, see Controlling origin requests in the Amazon CloudFront Developer Guide.
     */
   def createOriginRequestPolicy(): Request[CreateOriginRequestPolicyResult, AWSError] = js.native
   def createOriginRequestPolicy(callback: js.Function2[/* err */ AWSError, /* data */ CreateOriginRequestPolicyResult, Unit]): Request[CreateOriginRequestPolicyResult, AWSError] = js.native
   /**
-    * Creates an origin request policy. After you create an origin request policy, you can attach it to one or more cache behaviors. When it’s attached to a cache behavior, the origin request policy determines the values that CloudFront includes in requests that it sends to the origin. Each request that CloudFront sends to the origin includes the following:   The request body and the URL path (without the domain name) from the viewer request.   The headers that CloudFront automatically includes in every origin request, including Host, User-Agent, and X-Amz-Cf-Id.   All HTTP headers, cookies, and URL query strings that are specified in the cache policy or the origin request policy. These can include items from the viewer request and, in the case of headers, additional ones that are added by CloudFront.   CloudFront sends a request when it can’t find a valid object in its cache that matches the request. If you want to send values to the origin and also include them in the cache key, use CreateCachePolicy. For more information about origin request policies, see Controlling origin requests in the Amazon CloudFront Developer Guide.
+    * Creates an origin request policy. After you create an origin request policy, you can attach it to one or more cache behaviors. When it’s attached to a cache behavior, the origin request policy determines the values that CloudFront includes in requests that it sends to the origin. Each request that CloudFront sends to the origin includes the following:   The request body and the URL path (without the domain name) from the viewer request.   The headers that CloudFront automatically includes in every origin request, including Host, User-Agent, and X-Amz-Cf-Id.   All HTTP headers, cookies, and URL query strings that are specified in the cache policy or the origin request policy. These can include items from the viewer request and, in the case of headers, additional ones that are added by CloudFront.   CloudFront sends a request when it can’t find a valid object in its cache that matches the request. If you want to send values to the origin and also include them in the cache key, use CachePolicy. For more information about origin request policies, see Controlling origin requests in the Amazon CloudFront Developer Guide.
     */
   def createOriginRequestPolicy(params: CreateOriginRequestPolicyRequest): Request[CreateOriginRequestPolicyResult, AWSError] = js.native
   def createOriginRequestPolicy(
@@ -139,18 +167,32 @@ trait CloudFront extends CloudFrontCustomizations {
   ): Request[CreateOriginRequestPolicyResult, AWSError] = js.native
   
   /**
-    * Add a new public key to CloudFront to use, for example, for field-level encryption. You can add a maximum of 10 public keys with one AWS account.
+    * Uploads a public key to CloudFront that you can use with signed URLs and signed cookies, or with field-level encryption.
     */
   def createPublicKey(): Request[CreatePublicKeyResult, AWSError] = js.native
   def createPublicKey(callback: js.Function2[/* err */ AWSError, /* data */ CreatePublicKeyResult, Unit]): Request[CreatePublicKeyResult, AWSError] = js.native
   /**
-    * Add a new public key to CloudFront to use, for example, for field-level encryption. You can add a maximum of 10 public keys with one AWS account.
+    * Uploads a public key to CloudFront that you can use with signed URLs and signed cookies, or with field-level encryption.
     */
   def createPublicKey(params: CreatePublicKeyRequest): Request[CreatePublicKeyResult, AWSError] = js.native
   def createPublicKey(
     params: CreatePublicKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreatePublicKeyResult, Unit]
   ): Request[CreatePublicKeyResult, AWSError] = js.native
+  
+  /**
+    * Creates a real-time log configuration. After you create a real-time log configuration, you can attach it to one or more cache behaviors to send real-time log data to the specified Amazon Kinesis data stream. For more information about real-time log configurations, see Real-time logs in the Amazon CloudFront Developer Guide.
+    */
+  def createRealtimeLogConfig(): Request[CreateRealtimeLogConfigResult, AWSError] = js.native
+  def createRealtimeLogConfig(callback: js.Function2[/* err */ AWSError, /* data */ CreateRealtimeLogConfigResult, Unit]): Request[CreateRealtimeLogConfigResult, AWSError] = js.native
+  /**
+    * Creates a real-time log configuration. After you create a real-time log configuration, you can attach it to one or more cache behaviors to send real-time log data to the specified Amazon Kinesis data stream. For more information about real-time log configurations, see Real-time logs in the Amazon CloudFront Developer Guide.
+    */
+  def createRealtimeLogConfig(params: CreateRealtimeLogConfigRequest): Request[CreateRealtimeLogConfigResult, AWSError] = js.native
+  def createRealtimeLogConfig(
+    params: CreateRealtimeLogConfigRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateRealtimeLogConfigResult, Unit]
+  ): Request[CreateRealtimeLogConfigResult, AWSError] = js.native
   
   /**
     * Creates a new RTMP distribution. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams media files using the Adobe Real-Time Messaging Protocol (RTMP) instead of serving files using HTTP.  To create a new distribution, submit a POST request to the CloudFront API version/distribution resource. The request body must include a document with a StreamingDistributionConfig element. The response echoes the StreamingDistributionConfig element and returns other information about the RTMP distribution. To get the status of your request, use the GET StreamingDistribution API action. When the value of Enabled is true and the value of Status is Deployed, your distribution is ready. A distribution usually deploys in less than 15 minutes. For more information about web distributions, see Working with RTMP Distributions in the Amazon CloudFront Developer Guide.  Beginning with the 2012-05-05 version of the CloudFront API, we made substantial changes to the format of the XML document that you include in the request body when you create or update a web distribution or an RTMP distribution, and when you invalidate objects. With previous versions of the API, we discovered that it was too easy to accidentally delete one or more values for an element that accepts multiple values, for example, CNAMEs and trusted signers. Our changes for the 2012-05-05 release are intended to prevent these accidental deletions and to notify you when there's a mismatch between the number of values you say you're specifying in the Quantity element and the number of values specified. 
@@ -253,6 +295,34 @@ trait CloudFront extends CloudFrontCustomizations {
   ): Request[js.Object, AWSError] = js.native
   
   /**
+    * Deletes a key group. You cannot delete a key group that is referenced in a cache behavior. First update your distributions to remove the key group from all cache behaviors, then delete the key group. To delete a key group, you must provide the key group’s identifier and version. To get these values, use ListKeyGroups followed by GetKeyGroup or GetKeyGroupConfig.
+    */
+  def deleteKeyGroup(): Request[js.Object, AWSError] = js.native
+  def deleteKeyGroup(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Deletes a key group. You cannot delete a key group that is referenced in a cache behavior. First update your distributions to remove the key group from all cache behaviors, then delete the key group. To delete a key group, you must provide the key group’s identifier and version. To get these values, use ListKeyGroups followed by GetKeyGroup or GetKeyGroupConfig.
+    */
+  def deleteKeyGroup(params: DeleteKeyGroupRequest): Request[js.Object, AWSError] = js.native
+  def deleteKeyGroup(
+    params: DeleteKeyGroupRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
+  
+  /**
+    * Disables additional CloudWatch metrics for the specified CloudFront distribution.
+    */
+  def deleteMonitoringSubscription(): Request[DeleteMonitoringSubscriptionResult, AWSError] = js.native
+  def deleteMonitoringSubscription(callback: js.Function2[/* err */ AWSError, /* data */ DeleteMonitoringSubscriptionResult, Unit]): Request[DeleteMonitoringSubscriptionResult, AWSError] = js.native
+  /**
+    * Disables additional CloudWatch metrics for the specified CloudFront distribution.
+    */
+  def deleteMonitoringSubscription(params: DeleteMonitoringSubscriptionRequest): Request[DeleteMonitoringSubscriptionResult, AWSError] = js.native
+  def deleteMonitoringSubscription(
+    params: DeleteMonitoringSubscriptionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteMonitoringSubscriptionResult, Unit]
+  ): Request[DeleteMonitoringSubscriptionResult, AWSError] = js.native
+  
+  /**
     * Deletes an origin request policy. You cannot delete an origin request policy if it’s attached to any cache behaviors. First update your distributions to remove the origin request policy from all cache behaviors, then delete the origin request policy. To delete an origin request policy, you must provide the policy’s identifier and version. To get the identifier, you can use ListOriginRequestPolicies or GetOriginRequestPolicy.
     */
   def deleteOriginRequestPolicy(): Request[js.Object, AWSError] = js.native
@@ -277,6 +347,20 @@ trait CloudFront extends CloudFrontCustomizations {
   def deletePublicKey(params: DeletePublicKeyRequest): Request[js.Object, AWSError] = js.native
   def deletePublicKey(
     params: DeletePublicKeyRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
+  ): Request[js.Object, AWSError] = js.native
+  
+  /**
+    * Deletes a real-time log configuration. You cannot delete a real-time log configuration if it’s attached to a cache behavior. First update your distributions to remove the real-time log configuration from all cache behaviors, then delete the real-time log configuration. To delete a real-time log configuration, you can provide the configuration’s name or its Amazon Resource Name (ARN). You must provide at least one. If you provide both, CloudFront uses the name to identify the real-time log configuration to delete.
+    */
+  def deleteRealtimeLogConfig(): Request[js.Object, AWSError] = js.native
+  def deleteRealtimeLogConfig(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Deletes a real-time log configuration. You cannot delete a real-time log configuration if it’s attached to a cache behavior. First update your distributions to remove the real-time log configuration from all cache behaviors, then delete the real-time log configuration. To delete a real-time log configuration, you can provide the configuration’s name or its Amazon Resource Name (ARN). You must provide at least one. If you provide both, CloudFront uses the name to identify the real-time log configuration to delete.
+    */
+  def deleteRealtimeLogConfig(params: DeleteRealtimeLogConfigRequest): Request[js.Object, AWSError] = js.native
+  def deleteRealtimeLogConfig(
+    params: DeleteRealtimeLogConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
   
@@ -455,6 +539,48 @@ trait CloudFront extends CloudFrontCustomizations {
   ): Request[GetInvalidationResult, AWSError] = js.native
   
   /**
+    * Gets a key group, including the date and time when the key group was last modified. To get a key group, you must provide the key group’s identifier. If the key group is referenced in a distribution’s cache behavior, you can get the key group’s identifier using ListDistributions or GetDistribution. If the key group is not referenced in a cache behavior, you can get the identifier using ListKeyGroups.
+    */
+  def getKeyGroup(): Request[GetKeyGroupResult, AWSError] = js.native
+  def getKeyGroup(callback: js.Function2[/* err */ AWSError, /* data */ GetKeyGroupResult, Unit]): Request[GetKeyGroupResult, AWSError] = js.native
+  /**
+    * Gets a key group, including the date and time when the key group was last modified. To get a key group, you must provide the key group’s identifier. If the key group is referenced in a distribution’s cache behavior, you can get the key group’s identifier using ListDistributions or GetDistribution. If the key group is not referenced in a cache behavior, you can get the identifier using ListKeyGroups.
+    */
+  def getKeyGroup(params: GetKeyGroupRequest): Request[GetKeyGroupResult, AWSError] = js.native
+  def getKeyGroup(
+    params: GetKeyGroupRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetKeyGroupResult, Unit]
+  ): Request[GetKeyGroupResult, AWSError] = js.native
+  
+  /**
+    * Gets a key group configuration. To get a key group configuration, you must provide the key group’s identifier. If the key group is referenced in a distribution’s cache behavior, you can get the key group’s identifier using ListDistributions or GetDistribution. If the key group is not referenced in a cache behavior, you can get the identifier using ListKeyGroups.
+    */
+  def getKeyGroupConfig(): Request[GetKeyGroupConfigResult, AWSError] = js.native
+  def getKeyGroupConfig(callback: js.Function2[/* err */ AWSError, /* data */ GetKeyGroupConfigResult, Unit]): Request[GetKeyGroupConfigResult, AWSError] = js.native
+  /**
+    * Gets a key group configuration. To get a key group configuration, you must provide the key group’s identifier. If the key group is referenced in a distribution’s cache behavior, you can get the key group’s identifier using ListDistributions or GetDistribution. If the key group is not referenced in a cache behavior, you can get the identifier using ListKeyGroups.
+    */
+  def getKeyGroupConfig(params: GetKeyGroupConfigRequest): Request[GetKeyGroupConfigResult, AWSError] = js.native
+  def getKeyGroupConfig(
+    params: GetKeyGroupConfigRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetKeyGroupConfigResult, Unit]
+  ): Request[GetKeyGroupConfigResult, AWSError] = js.native
+  
+  /**
+    * Gets information about whether additional CloudWatch metrics are enabled for the specified CloudFront distribution.
+    */
+  def getMonitoringSubscription(): Request[GetMonitoringSubscriptionResult, AWSError] = js.native
+  def getMonitoringSubscription(callback: js.Function2[/* err */ AWSError, /* data */ GetMonitoringSubscriptionResult, Unit]): Request[GetMonitoringSubscriptionResult, AWSError] = js.native
+  /**
+    * Gets information about whether additional CloudWatch metrics are enabled for the specified CloudFront distribution.
+    */
+  def getMonitoringSubscription(params: GetMonitoringSubscriptionRequest): Request[GetMonitoringSubscriptionResult, AWSError] = js.native
+  def getMonitoringSubscription(
+    params: GetMonitoringSubscriptionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetMonitoringSubscriptionResult, Unit]
+  ): Request[GetMonitoringSubscriptionResult, AWSError] = js.native
+  
+  /**
     * Gets an origin request policy, including the following metadata:   The policy’s identifier.   The date and time when the policy was last modified.   To get an origin request policy, you must provide the policy’s identifier. If the origin request policy is attached to a distribution’s cache behavior, you can get the policy’s identifier using ListDistributions or GetDistribution. If the origin request policy is not attached to a cache behavior, you can get the identifier using ListOriginRequestPolicies.
     */
   def getOriginRequestPolicy(): Request[GetOriginRequestPolicyResult, AWSError] = js.native
@@ -483,12 +609,12 @@ trait CloudFront extends CloudFrontCustomizations {
   ): Request[GetOriginRequestPolicyConfigResult, AWSError] = js.native
   
   /**
-    * Get the public key information.
+    * Gets a public key.
     */
   def getPublicKey(): Request[GetPublicKeyResult, AWSError] = js.native
   def getPublicKey(callback: js.Function2[/* err */ AWSError, /* data */ GetPublicKeyResult, Unit]): Request[GetPublicKeyResult, AWSError] = js.native
   /**
-    * Get the public key information.
+    * Gets a public key.
     */
   def getPublicKey(params: GetPublicKeyRequest): Request[GetPublicKeyResult, AWSError] = js.native
   def getPublicKey(
@@ -497,18 +623,32 @@ trait CloudFront extends CloudFrontCustomizations {
   ): Request[GetPublicKeyResult, AWSError] = js.native
   
   /**
-    * Return public key configuration informaation
+    * Gets a public key configuration.
     */
   def getPublicKeyConfig(): Request[GetPublicKeyConfigResult, AWSError] = js.native
   def getPublicKeyConfig(callback: js.Function2[/* err */ AWSError, /* data */ GetPublicKeyConfigResult, Unit]): Request[GetPublicKeyConfigResult, AWSError] = js.native
   /**
-    * Return public key configuration informaation
+    * Gets a public key configuration.
     */
   def getPublicKeyConfig(params: GetPublicKeyConfigRequest): Request[GetPublicKeyConfigResult, AWSError] = js.native
   def getPublicKeyConfig(
     params: GetPublicKeyConfigRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetPublicKeyConfigResult, Unit]
   ): Request[GetPublicKeyConfigResult, AWSError] = js.native
+  
+  /**
+    * Gets a real-time log configuration. To get a real-time log configuration, you can provide the configuration’s name or its Amazon Resource Name (ARN). You must provide at least one. If you provide both, CloudFront uses the name to identify the real-time log configuration to get.
+    */
+  def getRealtimeLogConfig(): Request[GetRealtimeLogConfigResult, AWSError] = js.native
+  def getRealtimeLogConfig(callback: js.Function2[/* err */ AWSError, /* data */ GetRealtimeLogConfigResult, Unit]): Request[GetRealtimeLogConfigResult, AWSError] = js.native
+  /**
+    * Gets a real-time log configuration. To get a real-time log configuration, you can provide the configuration’s name or its Amazon Resource Name (ARN). You must provide at least one. If you provide both, CloudFront uses the name to identify the real-time log configuration to get.
+    */
+  def getRealtimeLogConfig(params: GetRealtimeLogConfigRequest): Request[GetRealtimeLogConfigResult, AWSError] = js.native
+  def getRealtimeLogConfig(
+    params: GetRealtimeLogConfigRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetRealtimeLogConfigResult, Unit]
+  ): Request[GetRealtimeLogConfigResult, AWSError] = js.native
   
   /**
     * Gets information about a specified RTMP distribution, including the distribution configuration.
@@ -599,6 +739,20 @@ trait CloudFront extends CloudFrontCustomizations {
   ): Request[ListDistributionsByCachePolicyIdResult, AWSError] = js.native
   
   /**
+    * Gets a list of distribution IDs for distributions that have a cache behavior that references the specified key group. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request.
+    */
+  def listDistributionsByKeyGroup(): Request[ListDistributionsByKeyGroupResult, AWSError] = js.native
+  def listDistributionsByKeyGroup(callback: js.Function2[/* err */ AWSError, /* data */ ListDistributionsByKeyGroupResult, Unit]): Request[ListDistributionsByKeyGroupResult, AWSError] = js.native
+  /**
+    * Gets a list of distribution IDs for distributions that have a cache behavior that references the specified key group. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request.
+    */
+  def listDistributionsByKeyGroup(params: ListDistributionsByKeyGroupRequest): Request[ListDistributionsByKeyGroupResult, AWSError] = js.native
+  def listDistributionsByKeyGroup(
+    params: ListDistributionsByKeyGroupRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListDistributionsByKeyGroupResult, Unit]
+  ): Request[ListDistributionsByKeyGroupResult, AWSError] = js.native
+  
+  /**
     * Gets a list of distribution IDs for distributions that have a cache behavior that’s associated with the specified origin request policy. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request.
     */
   def listDistributionsByOriginRequestPolicyId(): Request[ListDistributionsByOriginRequestPolicyIdResult, AWSError] = js.native
@@ -613,6 +767,22 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListDistributionsByOriginRequestPolicyIdRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListDistributionsByOriginRequestPolicyIdResult, Unit]
   ): Request[ListDistributionsByOriginRequestPolicyIdResult, AWSError] = js.native
+  
+  /**
+    * Gets a list of distributions that have a cache behavior that’s associated with the specified real-time log configuration. You can specify the real-time log configuration by its name or its Amazon Resource Name (ARN). You must provide at least one. If you provide both, CloudFront uses the name to identify the real-time log configuration to list distributions for. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request. 
+    */
+  def listDistributionsByRealtimeLogConfig(): Request[ListDistributionsByRealtimeLogConfigResult, AWSError] = js.native
+  def listDistributionsByRealtimeLogConfig(
+    callback: js.Function2[/* err */ AWSError, /* data */ ListDistributionsByRealtimeLogConfigResult, Unit]
+  ): Request[ListDistributionsByRealtimeLogConfigResult, AWSError] = js.native
+  /**
+    * Gets a list of distributions that have a cache behavior that’s associated with the specified real-time log configuration. You can specify the real-time log configuration by its name or its Amazon Resource Name (ARN). You must provide at least one. If you provide both, CloudFront uses the name to identify the real-time log configuration to list distributions for. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request. 
+    */
+  def listDistributionsByRealtimeLogConfig(params: ListDistributionsByRealtimeLogConfigRequest): Request[ListDistributionsByRealtimeLogConfigResult, AWSError] = js.native
+  def listDistributionsByRealtimeLogConfig(
+    params: ListDistributionsByRealtimeLogConfigRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListDistributionsByRealtimeLogConfigResult, Unit]
+  ): Request[ListDistributionsByRealtimeLogConfigResult, AWSError] = js.native
   
   /**
     * List the distributions that are associated with a specified AWS WAF web ACL. 
@@ -673,6 +843,20 @@ trait CloudFront extends CloudFrontCustomizations {
   ): Request[ListInvalidationsResult, AWSError] = js.native
   
   /**
+    * Gets a list of key groups. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request.
+    */
+  def listKeyGroups(): Request[ListKeyGroupsResult, AWSError] = js.native
+  def listKeyGroups(callback: js.Function2[/* err */ AWSError, /* data */ ListKeyGroupsResult, Unit]): Request[ListKeyGroupsResult, AWSError] = js.native
+  /**
+    * Gets a list of key groups. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request.
+    */
+  def listKeyGroups(params: ListKeyGroupsRequest): Request[ListKeyGroupsResult, AWSError] = js.native
+  def listKeyGroups(
+    params: ListKeyGroupsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListKeyGroupsResult, Unit]
+  ): Request[ListKeyGroupsResult, AWSError] = js.native
+  
+  /**
     * Gets a list of origin request policies. You can optionally apply a filter to return only the managed policies created by AWS, or only the custom policies created in your AWS account. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request.
     */
   def listOriginRequestPolicies(): Request[ListOriginRequestPoliciesResult, AWSError] = js.native
@@ -699,6 +883,20 @@ trait CloudFront extends CloudFrontCustomizations {
     params: ListPublicKeysRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListPublicKeysResult, Unit]
   ): Request[ListPublicKeysResult, AWSError] = js.native
+  
+  /**
+    * Gets a list of real-time log configurations. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request. 
+    */
+  def listRealtimeLogConfigs(): Request[ListRealtimeLogConfigsResult, AWSError] = js.native
+  def listRealtimeLogConfigs(callback: js.Function2[/* err */ AWSError, /* data */ ListRealtimeLogConfigsResult, Unit]): Request[ListRealtimeLogConfigsResult, AWSError] = js.native
+  /**
+    * Gets a list of real-time log configurations. You can optionally specify the maximum number of items to receive in the response. If the total number of items in the list exceeds the maximum that you specify, or the default maximum, the response is paginated. To get the next page of items, send a subsequent request that specifies the NextMarker value from the current response as the Marker value in the subsequent request. 
+    */
+  def listRealtimeLogConfigs(params: ListRealtimeLogConfigsRequest): Request[ListRealtimeLogConfigsResult, AWSError] = js.native
+  def listRealtimeLogConfigs(
+    params: ListRealtimeLogConfigsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListRealtimeLogConfigsResult, Unit]
+  ): Request[ListRealtimeLogConfigsResult, AWSError] = js.native
   
   /**
     * List streaming distributions. 
@@ -830,6 +1028,20 @@ trait CloudFront extends CloudFrontCustomizations {
   ): Request[UpdateFieldLevelEncryptionProfileResult, AWSError] = js.native
   
   /**
+    * Updates a key group. When you update a key group, all the fields are updated with the values provided in the request. You cannot update some fields independent of others. To update a key group:   Get the current key group with GetKeyGroup or GetKeyGroupConfig.   Locally modify the fields in the key group that you want to update. For example, add or remove public key IDs.   Call UpdateKeyGroup with the entire key group object, including the fields that you modified and those that you didn’t.  
+    */
+  def updateKeyGroup(): Request[UpdateKeyGroupResult, AWSError] = js.native
+  def updateKeyGroup(callback: js.Function2[/* err */ AWSError, /* data */ UpdateKeyGroupResult, Unit]): Request[UpdateKeyGroupResult, AWSError] = js.native
+  /**
+    * Updates a key group. When you update a key group, all the fields are updated with the values provided in the request. You cannot update some fields independent of others. To update a key group:   Get the current key group with GetKeyGroup or GetKeyGroupConfig.   Locally modify the fields in the key group that you want to update. For example, add or remove public key IDs.   Call UpdateKeyGroup with the entire key group object, including the fields that you modified and those that you didn’t.  
+    */
+  def updateKeyGroup(params: UpdateKeyGroupRequest): Request[UpdateKeyGroupResult, AWSError] = js.native
+  def updateKeyGroup(
+    params: UpdateKeyGroupRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateKeyGroupResult, Unit]
+  ): Request[UpdateKeyGroupResult, AWSError] = js.native
+  
+  /**
     * Updates an origin request policy configuration. When you update an origin request policy configuration, all the fields are updated with the values provided in the request. You cannot update some fields independent of others. To update an origin request policy configuration:   Use GetOriginRequestPolicyConfig to get the current configuration.   Locally modify the fields in the origin request policy configuration that you want to update.   Call UpdateOriginRequestPolicy by providing the entire origin request policy configuration, including the fields that you modified and those that you didn’t.  
     */
   def updateOriginRequestPolicy(): Request[UpdateOriginRequestPolicyResult, AWSError] = js.native
@@ -856,6 +1068,20 @@ trait CloudFront extends CloudFrontCustomizations {
     params: UpdatePublicKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdatePublicKeyResult, Unit]
   ): Request[UpdatePublicKeyResult, AWSError] = js.native
+  
+  /**
+    * Updates a real-time log configuration. When you update a real-time log configuration, all the parameters are updated with the values provided in the request. You cannot update some parameters independent of others. To update a real-time log configuration:   Call GetRealtimeLogConfig to get the current real-time log configuration.   Locally modify the parameters in the real-time log configuration that you want to update.   Call this API (UpdateRealtimeLogConfig) by providing the entire real-time log configuration, including the parameters that you modified and those that you didn’t.   You cannot update a real-time log configuration’s Name or ARN.
+    */
+  def updateRealtimeLogConfig(): Request[UpdateRealtimeLogConfigResult, AWSError] = js.native
+  def updateRealtimeLogConfig(callback: js.Function2[/* err */ AWSError, /* data */ UpdateRealtimeLogConfigResult, Unit]): Request[UpdateRealtimeLogConfigResult, AWSError] = js.native
+  /**
+    * Updates a real-time log configuration. When you update a real-time log configuration, all the parameters are updated with the values provided in the request. You cannot update some parameters independent of others. To update a real-time log configuration:   Call GetRealtimeLogConfig to get the current real-time log configuration.   Locally modify the parameters in the real-time log configuration that you want to update.   Call this API (UpdateRealtimeLogConfig) by providing the entire real-time log configuration, including the parameters that you modified and those that you didn’t.   You cannot update a real-time log configuration’s Name or ARN.
+    */
+  def updateRealtimeLogConfig(params: UpdateRealtimeLogConfigRequest): Request[UpdateRealtimeLogConfigResult, AWSError] = js.native
+  def updateRealtimeLogConfig(
+    params: UpdateRealtimeLogConfigRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateRealtimeLogConfigResult, Unit]
+  ): Request[UpdateRealtimeLogConfigResult, AWSError] = js.native
   
   /**
     * Update a streaming distribution. 

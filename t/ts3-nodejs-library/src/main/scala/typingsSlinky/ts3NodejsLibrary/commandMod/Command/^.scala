@@ -2,6 +2,7 @@ package typingsSlinky.ts3NodejsLibrary.commandMod.Command
 
 import typingsSlinky.ts3NodejsLibrary.anon.Key
 import typingsSlinky.ts3NodejsLibrary.anon.PickParserArgumentraw
+import typingsSlinky.ts3NodejsLibrary.responseTypesMod.Version
 import typingsSlinky.ts3NodejsLibrary.teamSpeakQueryMod.TeamSpeakQuery.Response
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +25,13 @@ object ^ extends js.Object {
     * @param data snapshot string
     * @param cmd command object
     */
-  def buildSnapshotDeploy(data: String, cmd: typingsSlinky.ts3NodejsLibrary.commandMod.Command): String = js.native
+  def buildSnapshotDeploy(data: String, cmd: typingsSlinky.ts3NodejsLibrary.commandMod.Command, hasVersion: Version): String = js.native
+  def buildSnapshotDeploy(
+    data: String,
+    cmd: typingsSlinky.ts3NodejsLibrary.commandMod.Command,
+    hasVersion: Version,
+    snapshotVersion: String
+  ): String = js.native
   
   /** escapes a string */
   def escape(str: String): String = js.native
@@ -49,6 +56,13 @@ object ^ extends js.Object {
     * retrieves the default parsers
     */
   def getParsers(): Parsers = js.native
+  
+  /**
+    * checks if a version string has a minimum of x
+    * @param minimum minimum the version string should have
+    * @param version version string to compare
+    */
+  def minVersion(minimum: String, version: String): Boolean = js.native
   
   /**
     * parses a query response
@@ -77,7 +91,7 @@ object ^ extends js.Object {
   def parseRecursive(value: String): Response = js.native
   
   /**
-    *
+    * parses a snapshot create request
     * @param param0 the custom snapshot response parser
     */
   def parseSnapshotCreate(hasRaw: PickParserArgumentraw): Response = js.native

@@ -1,12 +1,10 @@
 package typingsSlinky.awsSdkClientCognitoIdentityBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.cognitoIdentityConfigurationMod.CognitoIdentityResolvedConfiguration
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesGetCredentialsForIdentityInputMod.GetCredentialsForIdentityInput
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesGetCredentialsForIdentityOutputMod.GetCredentialsForIdentityOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
@@ -23,15 +21,12 @@ object getCredentialsForIdentityCommandMod extends js.Object {
           GetCredentialsForIdentityInput, 
           OutputTypesUnion, 
           GetCredentialsForIdentityOutput, 
-          CognitoIdentityResolvedConfiguration, 
-          Blob
+          CognitoIdentityResolvedConfiguration
         ] {
     def this(input: GetCredentialsForIdentityInput) = this()
     
-    val middlewareStack: MiddlewareStack[GetCredentialsForIdentityInput, GetCredentialsForIdentityOutput, Blob] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any,
       configuration: CognitoIdentityResolvedConfiguration
     ): Handler[GetCredentialsForIdentityInput, GetCredentialsForIdentityOutput] = js.native
   }

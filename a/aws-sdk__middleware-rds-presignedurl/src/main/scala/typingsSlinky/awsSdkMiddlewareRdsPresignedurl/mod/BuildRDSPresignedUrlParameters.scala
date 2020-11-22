@@ -2,7 +2,6 @@ package typingsSlinky.awsSdkMiddlewareRdsPresignedurl.mod
 
 import typingsSlinky.awsSdkTypes.credentialsMod.Credentials
 import typingsSlinky.awsSdkTypes.cryptoMod.HashConstructor
-import typingsSlinky.awsSdkTypes.httpMod.HttpEndpoint
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import typingsSlinky.awsSdkTypes.utilMod.Provider
@@ -26,7 +25,9 @@ trait BuildRDSPresignedUrlParameters extends js.Object {
   /**
     * Endpoint provider of the original request.
     */
-  var endpoint: Provider[HttpEndpoint] = js.native
+  var endpoint: Provider[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpEndpoint */ _
+  ] = js.native
   
   /**
     * Region provider used to sign the presigned URL
@@ -56,7 +57,9 @@ object BuildRDSPresignedUrlParameters {
   def apply(
     base64Encoder: /* input */ js.typedarray.Uint8Array => String,
     credentials: () => js.Promise[Credentials],
-    endpoint: () => js.Promise[HttpEndpoint],
+    endpoint: () => js.Promise[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpEndpoint */ _
+    ],
     region: () => js.Promise[String],
     sha256: HashConstructor,
     sourceIdentifierKey: String,
@@ -88,7 +91,11 @@ object BuildRDSPresignedUrlParameters {
     def setCredentials(value: () => js.Promise[Credentials]): Self = this.set("credentials", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setEndpoint(value: () => js.Promise[HttpEndpoint]): Self = this.set("endpoint", js.Any.fromFunction0(value))
+    def setEndpoint(
+      value: () => js.Promise[
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpEndpoint */ _
+        ]
+    ): Self = this.set("endpoint", js.Any.fromFunction0(value))
     
     @scala.inline
     def setRegion(value: () => js.Promise[String]): Self = this.set("region", js.Any.fromFunction0(value))

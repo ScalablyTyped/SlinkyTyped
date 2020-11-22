@@ -14,18 +14,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSankeyTooltip extends BaseWidgetTooltip {
   
-  /** @name dxSankey.Options.tooltip.customizeLinkTooltip */
+  /**
+    * [descr:dxSankey.Options.tooltip.customizeLinkTooltip]
+    */
   var customizeLinkTooltip: js.UndefOr[js.Function1[/* info */ Source, _]] = js.native
   
-  /** @name dxSankey.Options.tooltip.customizeNodeTooltip */
+  /**
+    * [descr:dxSankey.Options.tooltip.customizeNodeTooltip]
+    */
   var customizeNodeTooltip: js.UndefOr[js.Function1[/* info */ WeightIn, _]] = js.native
   
-  /** @name dxSankey.Options.tooltip.linkTooltipTemplate */
+  /**
+    * [descr:dxSankey.Options.tooltip.linkTooltipTemplate]
+    */
   var linkTooltipTemplate: js.UndefOr[
     template | (js.Function2[/* info */ Source, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxSankey.Options.tooltip.nodeTooltipTemplate */
+  /**
+    * [descr:dxSankey.Options.tooltip.nodeTooltipTemplate]
+    */
   var nodeTooltipTemplate: js.UndefOr[
     template | (js.Function2[/* info */ WeightOut, /* element */ dxElement, String | Element | JQuery])
   ] = js.native

@@ -1,15 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "fs-extra-promise"
-version := "1.0-dt-20200515Z-af44ea"
-scalaVersion := "2.13.2"
+version := "1.0-dt-20200515Z-b6e278"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20200520Z-6ce100",
-  "org.scalablytyped.slinky" %%% "fs-extra" % "9.0-dt-20200519Z-97cccb",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200519Z-fa178d",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20201028Z-64939d",
+  "org.scalablytyped.slinky" %%% "fs-extra" % "9.0-dt-20201111Z-757cdd",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

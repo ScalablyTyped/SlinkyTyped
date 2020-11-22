@@ -11,7 +11,7 @@ import typingsSlinky.angularCore.mod.HostBindingsFunction
 import typingsSlinky.angularCore.mod.PipeTypesOrFactory
 import typingsSlinky.angularCore.mod.SchemaMetadata
 import typingsSlinky.angularCore.mod.TAttributes
-import typingsSlinky.angularCore.mod.TConstants
+import typingsSlinky.angularCore.mod.TConstantsOrFactory
 import typingsSlinky.angularCore.mod.Type
 import typingsSlinky.angularCore.mod.ViewEncapsulation
 import typingsSlinky.angularCore.mod.ViewQueriesFunction
@@ -34,7 +34,7 @@ trait ChangeDetection[T] extends js.Object {
     * Constants for the nodes in the component's view.
     * Includes attribute arrays, local definition arrays etc.
     */
-  var consts: js.UndefOr[TConstants] = js.native
+  var consts: js.UndefOr[TConstantsOrFactory] = js.native
   
   /**
     * Function to create instances of content queries associated with a given directive.

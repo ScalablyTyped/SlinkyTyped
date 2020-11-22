@@ -11,6 +11,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ASPxClientSpellCheckerAfterCheckEventArgs protected ()
   extends typingsSlinky.devexpressWeb.ASPxClientSpellCheckerAfterCheckEventArgs {
+  /**
+    * Initializes a new instance of the class.
+    * @param controlId The control ID.
+    * @param checkedText The checked text.
+    * @param reason Specifies whether spell checking is finished or stopped by the user.
+    */
   def this(controlId: String, checkedText: String) = this()
   def this(controlId: String, checkedText: String, reason: String) = this()
 }

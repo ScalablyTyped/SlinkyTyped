@@ -16,7 +16,7 @@ trait GridColumnProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.
     */
   var gridColumn: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridColumnProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridColumn */ _, 
       ThemeType
     ]
   ] = js.native
@@ -50,7 +50,7 @@ object GridColumnProps {
     @scala.inline
     def setGridColumn(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridColumnProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridColumn */ _, 
           ThemeType
         ]
     ): Self = this.set("gridColumn", value.asInstanceOf[js.Any])

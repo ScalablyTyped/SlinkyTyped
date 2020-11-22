@@ -1,21 +1,22 @@
 package typingsSlinky.reactIntl.providerMod
 
-import typingsSlinky.reactIntl.anon.PartialState
-import typingsSlinky.reactIntl.anon.PickIntlConfigformatsmess
+import typingsSlinky.reactIntl.anon.PartialStateCache
+import typingsSlinky.reactIntl.anon.PickIntlConfigtimeZonefor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-intl/lib/components/provider", JSImport.Default)
+@JSImport("react-intl/lib/src/components/provider", JSImport.Default)
 @js.native
 class default () extends IntlProvider
-
 /* static members */
-@JSImport("react-intl/lib/components/provider", JSImport.Default)
+@JSImport("react-intl/lib/src/components/provider", JSImport.Default)
 @js.native
 object default extends js.Object {
-  var defaultProps: PickIntlConfigformatsmess = js.native
+  
+  var defaultProps: PickIntlConfigtimeZonefor = js.native
+  
   var displayName: String = js.native
-  def getDerivedStateFromProps(props: OptionalIntlConfig, hasPrevConfigCache: State): PartialState | Null = js.native
+  
+  def getDerivedStateFromProps(props: OptionalIntlConfig, hasPrevConfigCache: State): PartialStateCache | Null = js.native
 }
-

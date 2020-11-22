@@ -1,6 +1,6 @@
 package typingsSlinky.mendixmodelsdk.mappingsMod.mappings
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.DataType
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAttribute
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -8,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.mappingsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.xmlschemasMod.xmlschemas.XmlPrimitiveType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,8 +22,8 @@ abstract class ValueMappingElement protected () extends MappingElement {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def attribute: IAttribute | Null = js.native
@@ -57,9 +58,6 @@ abstract class ValueMappingElement protected () extends MappingElement {
   
   def maxLength: Double = js.native
   def maxLength_=(newValue: Double): Unit = js.native
-  
-  @JSName("model")
-  var model_FValueMappingElement: IModel = js.native
   
   def totalDigits: Double = js.native
   def totalDigits_=(newValue: Double): Unit = js.native

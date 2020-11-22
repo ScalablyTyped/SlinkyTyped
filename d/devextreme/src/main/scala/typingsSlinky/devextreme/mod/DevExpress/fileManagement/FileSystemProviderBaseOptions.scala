@@ -7,22 +7,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FileSystemProviderBaseOptions[T] extends js.Object {
   
-  /** @name FileSystemProviderBase.Options.dateModifiedExpr */
+  /**
+    * [descr:FileSystemProviderBase.Options.dateModifiedExpr]
+    */
   var dateModifiedExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name FileSystemProviderBase.Options.isDirectoryExpr */
+  /**
+    * [descr:FileSystemProviderBase.Options.isDirectoryExpr]
+    */
   var isDirectoryExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name FileSystemProviderBase.Options.keyExpr */
+  /**
+    * [descr:FileSystemProviderBase.Options.keyExpr]
+    */
   var keyExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name FileSystemProviderBase.Options.nameExpr */
+  /**
+    * [descr:FileSystemProviderBase.Options.nameExpr]
+    */
   var nameExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name FileSystemProviderBase.Options.sizeExpr */
+  /**
+    * [descr:FileSystemProviderBase.Options.sizeExpr]
+    */
   var sizeExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name FileSystemProviderBase.Options.thumbnailExpr */
+  /**
+    * [descr:FileSystemProviderBase.Options.thumbnailExpr]
+    */
   var thumbnailExpr: js.UndefOr[String | js.Function] = js.native
 }
 object FileSystemProviderBaseOptions {

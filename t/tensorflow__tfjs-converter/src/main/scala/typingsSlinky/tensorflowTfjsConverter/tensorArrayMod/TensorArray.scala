@@ -1,8 +1,9 @@
 package typingsSlinky.tensorflowTfjsConverter.tensorArrayMod
 
+import typingsSlinky.std.Set
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,9 +24,10 @@ class TensorArray protected () extends js.Object {
   val clearAfterRead: Boolean = js.native
   
   /**
-    * Close the current TensorArray.
+    * Dispose the tensors and idTensor and mark the TensoryArray as closed.
     */
   def clearAndClose(): Unit = js.native
+  def clearAndClose(keepIds: Set[Double]): Unit = js.native
   
   val closed: Boolean = js.native
   
@@ -57,6 +59,8 @@ class TensorArray protected () extends js.Object {
   def gather(indices: js.Array[Double], dtype: DataType): Tensor[Rank] = js.native
   
   val id: Double = js.native
+  
+  val idTensor: Tensor[Rank] = js.native
   
   val identicalElementShapes: Boolean = js.native
   
@@ -106,11 +110,4 @@ class TensorArray protected () extends js.Object {
     * Helper method to write multiple tensors to the specified indices.
     */
   def writeMany(indices: js.Array[Double], tensors: js.Array[Tensor[Rank]]): Unit = js.native
-}
-/* static members */
-@JSImport("@tensorflow/tfjs-converter/dist/executor/tensor_array", "TensorArray")
-@js.native
-object TensorArray extends js.Object {
-  
-  var nextId: js.Any = js.native
 }

@@ -13,6 +13,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object colorsMod extends js.Object {
   
+  val AAA_CONTRAST_RATIO: /* 7 */ Double = js.native
+  
+  val LARGE_TEXT_CONTRAST_RATIO: /* 3 */ Double = js.native
+  
+  val NORMAL_TEXT_CONTRAST_RATIO: /* 4.5 */ Double = js.native
+  
   def getContrastRatio(background: HexString, foreground: HexString): Double = js.native
   
   def hexToRGB(hex: HexString): js.Tuple3[RedBit, GreenBit, BlueBit] = js.native

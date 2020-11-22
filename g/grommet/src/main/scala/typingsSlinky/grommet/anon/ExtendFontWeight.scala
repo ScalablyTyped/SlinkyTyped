@@ -1,6 +1,9 @@
 package typingsSlinky.grommet.anon
 
+import typingsSlinky.grommet.baseMod.ExtendProps
 import typingsSlinky.grommet.baseMod.ExtendType
+import typingsSlinky.grommet.baseMod.ExtendValue
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,9 +11,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ExtendFontWeight extends js.Object {
   
-  var extend: js.UndefOr[ExtendType] = js.native
+  var extend: js.UndefOr[ExtendType[Record[String, _]]] = js.native
   
   var fontWeight: js.UndefOr[Double] = js.native
+  
+  var size: js.UndefOr[DictxLarge] = js.native
 }
 object ExtendFontWeight {
   
@@ -36,10 +41,10 @@ object ExtendFontWeight {
     }
     
     @scala.inline
-    def setExtendFunction1(value: /* args */ js.Any => Unit): Self = this.set("extend", js.Any.fromFunction1(value))
+    def setExtendFunction1(value: /* props */ ExtendProps[Record[String, _]] => ExtendValue[Record[String, _]]): Self = this.set("extend", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setExtend(value: ExtendType): Self = this.set("extend", value.asInstanceOf[js.Any])
+    def setExtend(value: ExtendType[Record[String, _]]): Self = this.set("extend", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExtend: Self = this.set("extend", js.undefined)
@@ -49,5 +54,11 @@ object ExtendFontWeight {
     
     @scala.inline
     def deleteFontWeight: Self = this.set("fontWeight", js.undefined)
+    
+    @scala.inline
+    def setSize(value: DictxLarge): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
   }
 }

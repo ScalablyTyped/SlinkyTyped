@@ -1,7 +1,6 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxFileManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +13,7 @@ trait File extends js.Object {
   
   var element: js.UndefOr[dxElement] = js.native
   
-  var file: js.UndefOr[FileSystemItem] = js.native
+  var file: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
 }
@@ -54,7 +53,7 @@ object File {
     def deleteElement: Self = this.set("element", js.undefined)
     
     @scala.inline
-    def setFile(value: FileSystemItem): Self = this.set("file", value.asInstanceOf[js.Any])
+    def setFile(value: typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem): Self = this.set("file", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFile: Self = this.set("file", js.undefined)

@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.webservicesMod.webservices
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
@@ -10,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/published-web-services relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/published-web-services relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -35,9 +34,6 @@ class PublishedWebService protected () extends PublishedServiceBase {
   
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MPublishedWebService: FolderBase = js.native
-  
-  @JSName("model")
-  var model_FPublishedWebService: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/webservices", "webservices.PublishedWebService")

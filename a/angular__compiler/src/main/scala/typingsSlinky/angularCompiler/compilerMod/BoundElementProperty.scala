@@ -33,6 +33,35 @@ class BoundElementProperty protected ()
     value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     unit: String,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
+    unit: Null,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
+    unit: String,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: js.UndefOr[scala.Nothing],
+    valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
+    unit: String,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(
@@ -42,6 +71,17 @@ class BoundElementProperty protected ()
     value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
     unit: Null,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: js.UndefOr[scala.Nothing],
+    valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: typingsSlinky.angularCompiler.astMod.ASTWithSource,
+    unit: Null,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
 }

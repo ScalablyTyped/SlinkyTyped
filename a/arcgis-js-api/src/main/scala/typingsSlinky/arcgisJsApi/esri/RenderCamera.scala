@@ -53,7 +53,7 @@ trait RenderCamera extends Object {
   var near: Double = js.native
   
   /**
-    * The render pixel ratio. This can be used to adjust screen sizes so that they correctly match up to CSS pixel sizes when rendered in HiDPI.
+    * The render pixel ratio.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderCamera)
     */

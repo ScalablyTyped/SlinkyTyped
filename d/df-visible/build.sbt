@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "df-visible"
-version := "0.0-unknown-dt-20200515Z-7a49cb"
+version := "0.0-unknown-dt-20201002Z-7a49cb"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

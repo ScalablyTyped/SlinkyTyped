@@ -24,8 +24,9 @@ object canvasLayerMod extends js.Object {
     
     var container: HTMLElement = js.native
     
-    var context: CanvasRenderingContext2D = js.native
-    
+    /**
+      * Creates a transform for rendering to an element that will be rotated after rendering.
+      */
     /* protected */ def getRenderTransform(
       center: Coordinate,
       resolution: Double,
@@ -36,8 +37,16 @@ object canvasLayerMod extends js.Object {
       offsetX: Double
     ): Transform = js.native
     
+    /**
+      * The transform for viewport CSS pixels to rendered pixels.  This transform must
+      * be set when rendering a frame and may be used by other functions after rendering.
+      */
     var inversePixelTransform: Transform = js.native
     
+    /**
+      * The transform for rendered pixels to viewport CSS pixels.  This transform must
+      * be set when rendering a frame and may be used by other functions after rendering.
+      */
     var pixelTransform: Transform = js.native
     
     /* protected */ def postRender(context: CanvasRenderingContext2D, frameState: FrameState): Unit = js.native
@@ -46,6 +55,15 @@ object canvasLayerMod extends js.Object {
     
     var renderedResolution: Double = js.native
     
+    /**
+      * A temporary transform.  The values in this transform should only be used in a
+      * function that sets the values.
+      */
+    var tempTransform: Transform = js.native
+    
+    /**
+      * Get a rendering container from an existing target, if compatible.
+      */
     def useContainer(target: HTMLElement, transform: String, opacity: Double): Unit = js.native
   }
   

@@ -11,6 +11,4 @@ package object mod {
   type FilenameFn = js.Function1[/* fileData */ typingsSlinky.terserWebpackPlugin.mod.FileData, java.lang.String]
   
   type FormatFn = js.Function1[/* input */ java.lang.String, java.lang.String]
-  
-  type TerserPlugin = typingsSlinky.std.Plugin
 }

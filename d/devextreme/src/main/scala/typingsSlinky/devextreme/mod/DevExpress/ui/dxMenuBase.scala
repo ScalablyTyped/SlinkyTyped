@@ -8,9 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxMenuBase extends CollectionWidget {
   
-  /** @name dxMenuBase.selectItem(itemElement) */
+  /**
+    * [descr:dxMenuBase.selectItem(itemElement)]
+    */
   def selectItem(itemElement: Element): Unit = js.native
   
-  /** @name dxMenuBase.unselectItem(itemElement) */
+  /**
+    * [descr:dxMenuBase.unselectItem(itemElement)]
+    */
   def unselectItem(itemElement: Element): Unit = js.native
 }

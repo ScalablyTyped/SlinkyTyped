@@ -14,7 +14,7 @@ import typingsSlinky.awsSdk.awsSdkStrings.multiplexCreated
 import typingsSlinky.awsSdk.awsSdkStrings.multiplexDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.multiplexRunning
 import typingsSlinky.awsSdk.awsSdkStrings.multiplexStopped
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -24,6 +24,62 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait MediaLive extends Service {
+  
+  /**
+    * Accept an incoming input device transfer. The ownership of the device will transfer to your AWS account.
+    */
+  def acceptInputDeviceTransfer(): Request[AcceptInputDeviceTransferResponse, AWSError] = js.native
+  def acceptInputDeviceTransfer(callback: js.Function2[/* err */ AWSError, /* data */ AcceptInputDeviceTransferResponse, Unit]): Request[AcceptInputDeviceTransferResponse, AWSError] = js.native
+  /**
+    * Accept an incoming input device transfer. The ownership of the device will transfer to your AWS account.
+    */
+  def acceptInputDeviceTransfer(params: AcceptInputDeviceTransferRequest): Request[AcceptInputDeviceTransferResponse, AWSError] = js.native
+  def acceptInputDeviceTransfer(
+    params: AcceptInputDeviceTransferRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ AcceptInputDeviceTransferResponse, Unit]
+  ): Request[AcceptInputDeviceTransferResponse, AWSError] = js.native
+  
+  /**
+    * Starts delete of resources.
+    */
+  def batchDelete(): Request[BatchDeleteResponse, AWSError] = js.native
+  def batchDelete(callback: js.Function2[/* err */ AWSError, /* data */ BatchDeleteResponse, Unit]): Request[BatchDeleteResponse, AWSError] = js.native
+  /**
+    * Starts delete of resources.
+    */
+  def batchDelete(params: BatchDeleteRequest): Request[BatchDeleteResponse, AWSError] = js.native
+  def batchDelete(
+    params: BatchDeleteRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ BatchDeleteResponse, Unit]
+  ): Request[BatchDeleteResponse, AWSError] = js.native
+  
+  /**
+    * Starts existing resources
+    */
+  def batchStart(): Request[BatchStartResponse, AWSError] = js.native
+  def batchStart(callback: js.Function2[/* err */ AWSError, /* data */ BatchStartResponse, Unit]): Request[BatchStartResponse, AWSError] = js.native
+  /**
+    * Starts existing resources
+    */
+  def batchStart(params: BatchStartRequest): Request[BatchStartResponse, AWSError] = js.native
+  def batchStart(
+    params: BatchStartRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ BatchStartResponse, Unit]
+  ): Request[BatchStartResponse, AWSError] = js.native
+  
+  /**
+    * Stops running resources
+    */
+  def batchStop(): Request[BatchStopResponse, AWSError] = js.native
+  def batchStop(callback: js.Function2[/* err */ AWSError, /* data */ BatchStopResponse, Unit]): Request[BatchStopResponse, AWSError] = js.native
+  /**
+    * Stops running resources
+    */
+  def batchStop(params: BatchStopRequest): Request[BatchStopResponse, AWSError] = js.native
+  def batchStop(
+    params: BatchStopRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ BatchStopResponse, Unit]
+  ): Request[BatchStopResponse, AWSError] = js.native
   
   /**
     * Update a channel schedule
@@ -38,6 +94,20 @@ trait MediaLive extends Service {
     params: BatchUpdateScheduleRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ BatchUpdateScheduleResponse, Unit]
   ): Request[BatchUpdateScheduleResponse, AWSError] = js.native
+  
+  /**
+    * Cancel an input device transfer that you have requested.
+    */
+  def cancelInputDeviceTransfer(): Request[CancelInputDeviceTransferResponse, AWSError] = js.native
+  def cancelInputDeviceTransfer(callback: js.Function2[/* err */ AWSError, /* data */ CancelInputDeviceTransferResponse, Unit]): Request[CancelInputDeviceTransferResponse, AWSError] = js.native
+  /**
+    * Cancel an input device transfer that you have requested.
+    */
+  def cancelInputDeviceTransfer(params: CancelInputDeviceTransferRequest): Request[CancelInputDeviceTransferResponse, AWSError] = js.native
+  def cancelInputDeviceTransfer(
+    params: CancelInputDeviceTransferRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CancelInputDeviceTransferResponse, Unit]
+  ): Request[CancelInputDeviceTransferResponse, AWSError] = js.native
   
   @JSName("config")
   var config_MediaLive: ConfigBase with ClientConfiguration = js.native
@@ -387,6 +457,20 @@ trait MediaLive extends Service {
   ): Request[ListChannelsResponse, AWSError] = js.native
   
   /**
+    * List input devices that are currently being transferred. List input devices that you are transferring from your AWS account or input devices that another AWS account is transferring to you.
+    */
+  def listInputDeviceTransfers(): Request[ListInputDeviceTransfersResponse, AWSError] = js.native
+  def listInputDeviceTransfers(callback: js.Function2[/* err */ AWSError, /* data */ ListInputDeviceTransfersResponse, Unit]): Request[ListInputDeviceTransfersResponse, AWSError] = js.native
+  /**
+    * List input devices that are currently being transferred. List input devices that you are transferring from your AWS account or input devices that another AWS account is transferring to you.
+    */
+  def listInputDeviceTransfers(params: ListInputDeviceTransfersRequest): Request[ListInputDeviceTransfersResponse, AWSError] = js.native
+  def listInputDeviceTransfers(
+    params: ListInputDeviceTransfersRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListInputDeviceTransfersResponse, Unit]
+  ): Request[ListInputDeviceTransfersResponse, AWSError] = js.native
+  
+  /**
     * List input devices
     */
   def listInputDevices(): Request[ListInputDevicesResponse, AWSError] = js.native
@@ -513,6 +597,20 @@ trait MediaLive extends Service {
   ): Request[PurchaseOfferingResponse, AWSError] = js.native
   
   /**
+    * Reject the transfer of the specified input device to your AWS account.
+    */
+  def rejectInputDeviceTransfer(): Request[RejectInputDeviceTransferResponse, AWSError] = js.native
+  def rejectInputDeviceTransfer(callback: js.Function2[/* err */ AWSError, /* data */ RejectInputDeviceTransferResponse, Unit]): Request[RejectInputDeviceTransferResponse, AWSError] = js.native
+  /**
+    * Reject the transfer of the specified input device to your AWS account.
+    */
+  def rejectInputDeviceTransfer(params: RejectInputDeviceTransferRequest): Request[RejectInputDeviceTransferResponse, AWSError] = js.native
+  def rejectInputDeviceTransfer(
+    params: RejectInputDeviceTransferRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ RejectInputDeviceTransferResponse, Unit]
+  ): Request[RejectInputDeviceTransferResponse, AWSError] = js.native
+  
+  /**
     * Starts an existing channel
     */
   def startChannel(): Request[StartChannelResponse, AWSError] = js.native
@@ -567,6 +665,20 @@ trait MediaLive extends Service {
     params: StopMultiplexRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ StopMultiplexResponse, Unit]
   ): Request[StopMultiplexResponse, AWSError] = js.native
+  
+  /**
+    * Start an input device transfer to another AWS account. After you make the request, the other account must accept or reject the transfer.
+    */
+  def transferInputDevice(): Request[TransferInputDeviceResponse, AWSError] = js.native
+  def transferInputDevice(callback: js.Function2[/* err */ AWSError, /* data */ TransferInputDeviceResponse, Unit]): Request[TransferInputDeviceResponse, AWSError] = js.native
+  /**
+    * Start an input device transfer to another AWS account. After you make the request, the other account must accept or reject the transfer.
+    */
+  def transferInputDevice(params: TransferInputDeviceRequest): Request[TransferInputDeviceResponse, AWSError] = js.native
+  def transferInputDevice(
+    params: TransferInputDeviceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ TransferInputDeviceResponse, Unit]
+  ): Request[TransferInputDeviceResponse, AWSError] = js.native
   
   /**
     * Updates a channel.

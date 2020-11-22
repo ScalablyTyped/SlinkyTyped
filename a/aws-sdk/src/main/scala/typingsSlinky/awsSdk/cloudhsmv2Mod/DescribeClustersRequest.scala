@@ -15,7 +15,7 @@ trait DescribeClustersRequest extends js.Object {
   /**
     * The maximum number of clusters to return in the response. When there are more clusters than the number you specify, the response contains a NextToken value.
     */
-  var MaxResults: js.UndefOr[MaxSize] = js.native
+  var MaxResults: js.UndefOr[ClustersMaxSize] = js.native
   
   /**
     * The NextToken value that you received in the previous response. Use this value to get more clusters.
@@ -52,7 +52,7 @@ object DescribeClustersRequest {
     def deleteFilters: Self = this.set("Filters", js.undefined)
     
     @scala.inline
-    def setMaxResults(value: MaxSize): Self = this.set("MaxResults", value.asInstanceOf[js.Any])
+    def setMaxResults(value: ClustersMaxSize): Self = this.set("MaxResults", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaxResults: Self = this.set("MaxResults", js.undefined)

@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PointProperties extends GeometryProperties {
   
   /**
-    * The latitude of the point. If the spatial reference is Web Mercator, the latitude will be given in WGS84. In any geographic spatial reference, the latitude will equal the [y](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html#y) coordinate. In all other cases the latitude will be null.
+    * The latitude of the point.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html#latitude)
     */
   var latitude: js.UndefOr[Double] = js.native
   
   /**
-    * The longitude of the point. If the spatial reference is Web Mercator, the longitude will be given in WGS84. In any geographic spatial reference, the longitude will equal the [x](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html#x) coordinate. In all other cases the longitude will be null.
+    * The longitude of the point.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html#longitude)
     */
@@ -23,11 +23,8 @@ trait PointProperties extends GeometryProperties {
   
   /**
     * The m-coordinate of the point in map units.
-    * > **M-values** (measure) allow attribute values to be stored at the vertex of a point. A common usage for storing a measurement in the vertices along a linear feature are [linear referencing](https://desktop.arcgis.com/en/arcmap/latest/extensions/roads-and-highways/advanced-linear-referencing-multiple-linear-referencing-methods.htm) applications.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html#m)
-    *
-    * @default undefined
     */
   var m: js.UndefOr[Double] = js.native
   
@@ -35,8 +32,6 @@ trait PointProperties extends GeometryProperties {
     * The x-coordinate (easting) of the point in map units.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html#x)
-    *
-    * @default 0
     */
   var x: js.UndefOr[Double] = js.native
   
@@ -44,18 +39,13 @@ trait PointProperties extends GeometryProperties {
     * The y-coordinate (northing) of the point in map units.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html#y)
-    *
-    * @default 0
     */
   var y: js.UndefOr[Double] = js.native
   
   /**
     * The z-coordinate (or elevation) of the point in map units.
-    * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Point.html#z)
-    *
-    * @default undefined
     */
   var z: js.UndefOr[Double] = js.native
 }

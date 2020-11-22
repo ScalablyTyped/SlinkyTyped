@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientSqsNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientSqsNode.sqsconfigurationMod.SQSResolvedConfiguration
 import typingsSlinky.awsSdkClientSqsNode.typesListQueueTagsInputMod.ListQueueTagsInput
 import typingsSlinky.awsSdkClientSqsNode.typesListQueueTagsOutputMod.ListQueueTagsOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object listQueueTagsCommandMod extends js.Object {
           ListQueueTagsInput, 
           OutputTypesUnion, 
           ListQueueTagsOutput, 
-          SQSResolvedConfiguration, 
-          Readable
+          SQSResolvedConfiguration
         ] {
     def this(input: ListQueueTagsInput) = this()
     
-    val middlewareStack: MiddlewareStack[ListQueueTagsInput, ListQueueTagsOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: SQSResolvedConfiguration
     ): Handler[ListQueueTagsInput, ListQueueTagsOutput] = js.native
   }

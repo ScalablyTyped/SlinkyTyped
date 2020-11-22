@@ -9,7 +9,7 @@ trait TextShadowProps extends js.Object {
   
   val textShadow: js.UndefOr[
     ResponsiveValue[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextShadowProperty */ _) | Double
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextShadow */ _) | Double
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object TextShadowProps {
     }
     
     @scala.inline
+    def setTextShadowVarargs(value: (js.Any | Double)*): Self = this.set("textShadow", js.Array(value :_*))
+    
+    @scala.inline
     def setTextShadow(
       value: ResponsiveValue[
-          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextShadowProperty */ _) | Double
+          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextShadow */ _) | Double
         ]
     ): Self = this.set("textShadow", value.asInstanceOf[js.Any])
     

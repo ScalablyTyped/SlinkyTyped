@@ -13,7 +13,7 @@ trait Group extends js.Object {
   var FilterExpression: js.UndefOr[String] = js.native
   
   /**
-    * The ARN of the group generated based on the GroupName.
+    * The Amazon Resource Name (ARN) of the group generated based on the GroupName.
     */
   var GroupARN: js.UndefOr[String] = js.native
   
@@ -21,6 +21,11 @@ trait Group extends js.Object {
     * The unique case-sensitive name of the group.
     */
   var GroupName: js.UndefOr[String] = js.native
+  
+  /**
+    * The structure containing configurations related to insights.   The InsightsEnabled boolean can be set to true to enable insights for the group or false to disable insights for the group.   The NotifcationsEnabled boolean can be set to true to enable insights notifications through Amazon EventBridge for the group.  
+    */
+  var InsightsConfiguration: js.UndefOr[typingsSlinky.awsSdk.xrayMod.InsightsConfiguration] = js.native
 }
 object Group {
   
@@ -62,5 +67,11 @@ object Group {
     
     @scala.inline
     def deleteGroupName: Self = this.set("GroupName", js.undefined)
+    
+    @scala.inline
+    def setInsightsConfiguration(value: InsightsConfiguration): Self = this.set("InsightsConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInsightsConfiguration: Self = this.set("InsightsConfiguration", js.undefined)
   }
 }

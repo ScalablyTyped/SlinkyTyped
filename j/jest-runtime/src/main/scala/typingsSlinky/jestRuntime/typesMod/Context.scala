@@ -2,6 +2,7 @@ package typingsSlinky.jestRuntime.typesMod
 
 import typingsSlinky.jestHasteMap.mod.FS
 import typingsSlinky.jestHasteMap.mod.ModuleMap
+import typingsSlinky.jestResolve.mod.ResolverType
 import typingsSlinky.jestTypes.configMod.ProjectConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,17 +17,12 @@ trait Context extends js.Object {
   
   var moduleMap: ModuleMap = js.native
   
-  var resolver: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResolverType */ js.Any = js.native
+  var resolver: ResolverType = js.native
 }
 object Context {
   
   @scala.inline
-  def apply(
-    config: ProjectConfig,
-    hasteFS: FS,
-    moduleMap: ModuleMap,
-    resolver: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResolverType */ js.Any
-  ): Context = {
+  def apply(config: ProjectConfig, hasteFS: FS, moduleMap: ModuleMap, resolver: ResolverType): Context = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], hasteFS = hasteFS.asInstanceOf[js.Any], moduleMap = moduleMap.asInstanceOf[js.Any], resolver = resolver.asInstanceOf[js.Any])
     __obj.asInstanceOf[Context]
   }
@@ -56,8 +52,6 @@ object Context {
     def setModuleMap(value: ModuleMap): Self = this.set("moduleMap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResolver(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResolverType */ js.Any
-    ): Self = this.set("resolver", value.asInstanceOf[js.Any])
+    def setResolver(value: ResolverType): Self = this.set("resolver", value.asInstanceOf[js.Any])
   }
 }

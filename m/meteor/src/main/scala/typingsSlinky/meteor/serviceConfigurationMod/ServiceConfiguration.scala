@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ServiceConfiguration extends js.Object {
   
-  var configurations: Collection[Configuration] = js.native
+  var configurations: Collection[Configuration, Configuration] = js.native
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-native-zeroconf
 
-Typings are for version 0.11
+Typings are for version 0.12
 
 ## Library description:
 A Zeroconf discovery utility for react-native

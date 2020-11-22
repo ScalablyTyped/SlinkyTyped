@@ -10,14 +10,12 @@ trait Duration extends js.Object {
   var duration: Double = js.native
   
   def onClose(): Unit = js.native
-  
-  var style: Right = js.native
 }
 object Duration {
   
   @scala.inline
-  def apply(duration: Double, onClose: () => Unit, style: Right): Duration = {
-    val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], onClose = js.Any.fromFunction0(onClose), style = style.asInstanceOf[js.Any])
+  def apply(duration: Double, onClose: () => Unit): Duration = {
+    val __obj = js.Dynamic.literal(duration = duration.asInstanceOf[js.Any], onClose = js.Any.fromFunction0(onClose))
     __obj.asInstanceOf[Duration]
   }
   
@@ -41,8 +39,5 @@ object Duration {
     
     @scala.inline
     def setOnClose(value: () => Unit): Self = this.set("onClose", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setStyle(value: Right): Self = this.set("style", value.asInstanceOf[js.Any])
   }
 }

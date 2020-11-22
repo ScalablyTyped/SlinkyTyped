@@ -18,7 +18,7 @@ trait DeleteFleetsRequest extends js.Object {
   var FleetIds: FleetIdSet = js.native
   
   /**
-    * Indicates whether to terminate instances for an EC2 Fleet if it is deleted successfully.
+    * Indicates whether to terminate the instances when the EC2 Fleet is deleted. The default is to terminate the instances. To let the instances continue to run after the EC2 Fleet is deleted, specify NoTerminateInstances. Supported only for fleets of type maintain and request. For instant fleets, you cannot specify NoTerminateInstances. A deleted instant fleet with running instances is not supported.
     */
   var TerminateInstances: Boolean = js.native
 }

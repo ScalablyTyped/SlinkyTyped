@@ -10,11 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ContentChildDecorator
   extends Instantiable1[
-      (/* selector */ js.Function) | (/* selector */ String) | (/* selector */ Type[js.Any]), 
+      (/* selector */ js.Function) | (/* selector */ InjectionToken[js.Any]) | (/* selector */ String) | (/* selector */ Type[js.Any]), 
       ContentChild
     ]
      with Instantiable2[
-      (/* selector */ js.Function) | (/* selector */ String) | (/* selector */ Type[js.Any]), 
+      (/* selector */ js.Function) | (/* selector */ InjectionToken[js.Any]) | (/* selector */ String) | (/* selector */ Type[js.Any]), 
       /* opts */ Read, 
       ContentChild
     ] {
@@ -23,6 +23,8 @@ trait ContentChildDecorator
   def apply(selector: String, opts: Read): js.Any = js.native
   def apply(selector: js.Function): js.Any = js.native
   def apply(selector: js.Function, opts: Read): js.Any = js.native
+  def apply(selector: InjectionToken[_]): js.Any = js.native
+  def apply(selector: InjectionToken[_], opts: Read): js.Any = js.native
   /**
     * Parameter decorator that configures a content query.
     *

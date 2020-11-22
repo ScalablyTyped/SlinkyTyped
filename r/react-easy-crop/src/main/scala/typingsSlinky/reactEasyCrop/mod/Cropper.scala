@@ -11,6 +11,7 @@ import org.scalajs.dom.raw.WheelEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactEasyCrop.anon.CroppedAreaPercentages
 import typingsSlinky.reactEasyCrop.anon.X
 import typingsSlinky.reactEasyCrop.typesMod.MediaSize
 import typingsSlinky.reactEasyCrop.typesMod.Point
@@ -21,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait Cropper
-  extends Component[Props, State, js.Any] {
+  extends Component[CropperProps, State, js.Any] {
   
   def cleanEvents(): Unit = js.native
   
@@ -31,7 +32,7 @@ trait Cropper
   def componentDidMount_MCropper(): Unit = js.native
   
   @JSName("componentDidUpdate")
-  def componentDidUpdate_MCropper(prevProps: Props): Unit = js.native
+  def componentDidUpdate_MCropper(prevProps: CropperProps): Unit = js.native
   
   @JSName("componentWillUnmount")
   def componentWillUnmount_MCropper(): Unit = js.native
@@ -46,9 +47,13 @@ trait Cropper
   
   var dragStartPosition: Point = js.native
   
+  def emitCropAreaChange(): Unit = js.native
+  
   def emitCropData(): Unit = js.native
   
   def getAspect(): Double = js.native
+  
+  def getCropData(): CroppedAreaPercentages | Null = js.native
   
   def getPointOnContainer(hasXY: Point): X = js.native
   

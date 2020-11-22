@@ -13,12 +13,12 @@ trait DBClusterParameterGroup extends js.Object {
   var DBClusterParameterGroupArn: js.UndefOr[String] = js.native
   
   /**
-    * Provides the name of the DB cluster parameter group.
+    * The name of the DB cluster parameter group.
     */
   var DBClusterParameterGroupName: js.UndefOr[String] = js.native
   
   /**
-    * Provides the name of the DB parameter group family that this DB cluster parameter group is compatible with.
+    * The name of the DB parameter group family that this DB cluster parameter group is compatible with.
     */
   var DBParameterGroupFamily: js.UndefOr[String] = js.native
   

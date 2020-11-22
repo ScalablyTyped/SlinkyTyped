@@ -16,10 +16,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Heatmap
   extends typingsSlinky.ol.vectorMod.default {
   
+  /**
+    * Return the blur size in pixels.
+    */
   def getBlur(): Double = js.native
   
+  /**
+    * Return the gradient colors as array of strings.
+    */
   def getGradient(): js.Array[String] = js.native
   
+  /**
+    * Return the size of the radius in pixels.
+    */
   def getRadius(): Double = js.native
   
   @JSName("on")
@@ -66,10 +75,19 @@ trait Heatmap
     listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
   ): EventsKey = js.native
   
+  /**
+    * Set the blur size in pixels.
+    */
   def setBlur(blur: Double): Unit = js.native
   
+  /**
+    * Set the gradient colors as array of strings.
+    */
   def setGradient(colors: js.Array[String]): Unit = js.native
   
+  /**
+    * Set the size of the radius in pixels.
+    */
   def setRadius(radius: Double): Unit = js.native
   
   @JSName("un")

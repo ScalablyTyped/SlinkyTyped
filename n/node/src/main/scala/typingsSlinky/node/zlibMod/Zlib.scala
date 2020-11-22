@@ -16,9 +16,8 @@ trait Zlib extends js.Object {
   def close(callback: js.Function0[Unit]): Unit = js.native
   
   def flush(): Unit = js.native
+  def flush(callback: js.Function0[Unit]): Unit = js.native
   def flush(kind: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): Unit = js.native
-  def flush(kind: js.Function0[Unit]): Unit = js.native
-  def flush(kind: js.Function0[Unit], callback: js.Function0[Unit]): Unit = js.native
   def flush(kind: Double): Unit = js.native
   def flush(kind: Double, callback: js.Function0[Unit]): Unit = js.native
   

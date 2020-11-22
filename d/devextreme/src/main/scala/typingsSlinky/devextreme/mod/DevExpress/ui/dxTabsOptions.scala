@@ -11,31 +11,47 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTabsOptions[T] extends CollectionWidgetOptions[T] {
   
-  /** @name dxTabs.Options.dataSource */
+  /**
+    * [descr:dxTabs.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxTabsOptions: js.UndefOr[String | (js.Array[String | dxTabsItem | _]) | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxTabs.Options.items */
+  /**
+    * [descr:dxTabs.Options.items]
+    */
   @JSName("items")
   var items_dxTabsOptions: js.UndefOr[js.Array[String | dxTabsItem | _]] = js.native
   
-  /** @name dxTabs.Options.repaintChangesOnly */
+  /**
+    * [descr:dxTabs.Options.repaintChangesOnly]
+    */
   var repaintChangesOnly: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTabs.Options.scrollByContent */
+  /**
+    * [descr:dxTabs.Options.scrollByContent]
+    */
   var scrollByContent: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTabs.Options.scrollingEnabled */
+  /**
+    * [descr:dxTabs.Options.scrollingEnabled]
+    */
   var scrollingEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTabs.Options.selectedItems */
+  /**
+    * [descr:dxTabs.Options.selectedItems]
+    */
   @JSName("selectedItems")
   var selectedItems_dxTabsOptions: js.UndefOr[js.Array[String | Double | _]] = js.native
   
-  /** @name dxTabs.Options.selectionMode */
+  /**
+    * [descr:dxTabs.Options.selectionMode]
+    */
   var selectionMode: js.UndefOr[multiple | single_] = js.native
   
-  /** @name dxTabs.Options.showNavButtons */
+  /**
+    * [descr:dxTabs.Options.showNavButtons]
+    */
   var showNavButtons: js.UndefOr[Boolean] = js.native
 }
 object dxTabsOptions {

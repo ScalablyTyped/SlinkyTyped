@@ -11,9 +11,6 @@ object refinement extends js.Object {
   /**
     * Augment a `Struct` to add an additional refinement to the validation.
     */
-  /**
-    * Augment a `Struct` to add an additional refinement to the validation.
-    */
   def apply[T](
     struct: Struct_[T, _],
     `type`: String,

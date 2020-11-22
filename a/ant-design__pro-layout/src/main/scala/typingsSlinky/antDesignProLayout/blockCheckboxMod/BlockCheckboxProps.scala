@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BlockCheckboxProps extends js.Object {
   
+  var configType: String = js.native
+  
   var list: js.UndefOr[js.Array[Key]] = js.native
   
   def onChange(key: String): Unit = js.native
@@ -19,8 +21,8 @@ trait BlockCheckboxProps extends js.Object {
 object BlockCheckboxProps {
   
   @scala.inline
-  def apply(onChange: String => Unit, prefixCls: String, value: String): BlockCheckboxProps = {
-    val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange), prefixCls = prefixCls.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(configType: String, onChange: String => Unit, prefixCls: String, value: String): BlockCheckboxProps = {
+    val __obj = js.Dynamic.literal(configType = configType.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), prefixCls = prefixCls.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockCheckboxProps]
   }
   
@@ -38,6 +40,9 @@ object BlockCheckboxProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setConfigType(value: String): Self = this.set("configType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOnChange(value: String => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))

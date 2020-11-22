@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait audioTracksUpdatedData extends js.Object {
   
-  var audioTracks: js.Array[AudioTrack] = js.native
+  var audioTracks: js.Array[HlsAudioTrack] = js.native
 }
 object audioTracksUpdatedData {
   
   @scala.inline
-  def apply(audioTracks: js.Array[AudioTrack]): audioTracksUpdatedData = {
+  def apply(audioTracks: js.Array[HlsAudioTrack]): audioTracksUpdatedData = {
     val __obj = js.Dynamic.literal(audioTracks = audioTracks.asInstanceOf[js.Any])
     __obj.asInstanceOf[audioTracksUpdatedData]
   }
@@ -33,9 +33,9 @@ object audioTracksUpdatedData {
     }
     
     @scala.inline
-    def setAudioTracksVarargs(value: AudioTrack*): Self = this.set("audioTracks", js.Array(value :_*))
+    def setAudioTracksVarargs(value: HlsAudioTrack*): Self = this.set("audioTracks", js.Array(value :_*))
     
     @scala.inline
-    def setAudioTracks(value: js.Array[AudioTrack]): Self = this.set("audioTracks", value.asInstanceOf[js.Any])
+    def setAudioTracks(value: js.Array[HlsAudioTrack]): Self = this.set("audioTracks", value.asInstanceOf[js.Any])
   }
 }

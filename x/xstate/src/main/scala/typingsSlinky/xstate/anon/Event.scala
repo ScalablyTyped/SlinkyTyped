@@ -1,25 +1,27 @@
 package typingsSlinky.xstate.anon
 
-import typingsSlinky.xstate.xstateStrings._empty
+import typingsSlinky.xstate.typesMod.EventObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Event extends js.Object {
+trait Event[TEvent /* <: EventObject */] extends js.Object {
   
-  var event: _empty = js.native
+  var event: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any = js.native
 }
 object Event {
   
   @scala.inline
-  def apply(event: _empty): Event = {
+  def apply[TEvent /* <: EventObject */](
+    event: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any
+  ): Event[TEvent] = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Event]
+    __obj.asInstanceOf[Event[TEvent]]
   }
   
   @scala.inline
-  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
+  implicit class EventOps[Self <: Event[_], TEvent /* <: EventObject */] (val x: Self with Event[TEvent]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -34,6 +36,8 @@ object Event {
     }
     
     @scala.inline
-    def setEvent(value: _empty): Self = this.set("event", value.asInstanceOf[js.Any])
+    def setEvent(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any
+    ): Self = this.set("event", value.asInstanceOf[js.Any])
   }
 }

@@ -6,6 +6,7 @@ import typingsSlinky.express.mod.Response_
 import typingsSlinky.expressServeStaticCore.mod.Express
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
+import typingsSlinky.serveStatic.mod.RequestHandlerConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,4 +28,9 @@ object ^ extends js.Object {
   var request: Request_[ParamsDictionary, js.Any, js.Any, Query] = js.native
   
   var response: Response_[js.Any] = js.native
+  
+  /**
+    * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
+    */
+  var static: RequestHandlerConstructor[Response_[js.Any]] = js.native
 }

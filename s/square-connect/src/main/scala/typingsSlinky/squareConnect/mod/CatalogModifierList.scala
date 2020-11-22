@@ -1,7 +1,5 @@
 package typingsSlinky.squareConnect.mod
 
-import typingsSlinky.squareConnect.squareConnectStrings.MULTIPLE
-import typingsSlinky.squareConnect.squareConnectStrings.SINGLE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,18 +15,19 @@ class CatalogModifierList () extends js.Object {
   var modifiers: js.UndefOr[js.Array[CatalogObject]] = js.native
   
   /**
-    * A searchable name for the `CatalogModifierList`. This field has max length of 255 Unicode code points.
+    * The name for the `CatalogModifierList` instance.
+    * This is a searchable attribute for use in applicable query filters, and its value length is of Unicode code points.
     */
   var name: js.UndefOr[String] = js.native
   
   /**
-    * Determines where this `CatalogModifierList` appears in a list of `CatalogModifierList` values.
+    * Determines where this modifier list appears in a list of `CatalogModifierList` values.
     */
   var ordinal: js.UndefOr[Double] = js.native
   
   /**
-    * Indicates whether multiple options from the `CatalogModifierList` can be applied to a single `CatalogItem`.
-    * See [CatalogModifierListSelectionType](#type-catalogmodifierlistselectiontype) for possible values.
+    * Indicates whether multiple options from the modifier list can be applied to a single `CatalogItem`.
+    * See [CatalogModifierListSelectionType](#type-catalogmodifierlistselectiontype) for possible values
     */
-  var selection_type: js.UndefOr[SINGLE | MULTIPLE] = js.native
+  var selection_type: js.UndefOr[String] = js.native
 }

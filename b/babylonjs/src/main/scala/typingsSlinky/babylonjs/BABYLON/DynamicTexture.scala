@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DynamicTexture extends Texture {
   
+  var _IsCanvasElement: js.Any = js.native
+  
   var _canvas: js.Any = js.native
   
   var _context: js.Any = js.native
-  
-  var _engine: js.Any = js.native
   
   var _generateMipMaps: js.Any = js.native
   
@@ -23,154 +23,6 @@ trait DynamicTexture extends Texture {
     */
   def clear(): Unit = js.native
   
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: js.UndefOr[scala.Nothing],
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean,
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: Double,
-    font: String,
-    color: String,
-    clearColor: String
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: Double,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: js.UndefOr[scala.Nothing],
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: Double,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: Double,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean,
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: Null,
-    font: String,
-    color: String,
-    clearColor: String
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: Null,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: js.UndefOr[scala.Nothing],
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: Null,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: js.UndefOr[scala.Nothing],
-    y: Null,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean,
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Double,
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Double,
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: js.UndefOr[scala.Nothing],
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Double,
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Double,
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean,
-    update: Boolean
-  ): Unit = js.native
   /**
     * Draws text onto the texture
     * @param text defines the text to be drawn
@@ -182,154 +34,15 @@ trait DynamicTexture extends Texture {
     * @param invertY defines the direction for the Y axis (default is true - y increases downwards)
     * @param update defines whether texture is immediately update (default is true)
     */
-  def drawText(text: String, x: Double, y: Double, font: String, color: String, clearColor: String): Unit = js.native
   def drawText(
     text: String,
-    x: Double,
-    y: Double,
+    x: js.UndefOr[Double | Null],
+    y: js.UndefOr[Double | Null],
     font: String,
-    color: String,
+    color: String | Null,
     clearColor: String,
-    invertY: js.UndefOr[scala.Nothing],
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Double,
-    y: Double,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Double,
-    y: Double,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean,
-    update: Boolean
-  ): Unit = js.native
-  def drawText(text: String, x: Double, y: Null, font: String, color: String, clearColor: String): Unit = js.native
-  def drawText(
-    text: String,
-    x: Double,
-    y: Null,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: js.UndefOr[scala.Nothing],
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Double,
-    y: Null,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Double,
-    y: Null,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean,
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Null,
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Null,
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: js.UndefOr[scala.Nothing],
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Null,
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Null,
-    y: js.UndefOr[scala.Nothing],
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean,
-    update: Boolean
-  ): Unit = js.native
-  def drawText(text: String, x: Null, y: Double, font: String, color: String, clearColor: String): Unit = js.native
-  def drawText(
-    text: String,
-    x: Null,
-    y: Double,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: js.UndefOr[scala.Nothing],
-    update: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Null,
-    y: Double,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean
-  ): Unit = js.native
-  def drawText(
-    text: String,
-    x: Null,
-    y: Double,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean,
-    update: Boolean
-  ): Unit = js.native
-  def drawText(text: String, x: Null, y: Null, font: String, color: String, clearColor: String): Unit = js.native
-  def drawText(
-    text: String,
-    x: Null,
-    y: Null,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: js.UndefOr[scala.Nothing],
-    update: Boolean
-  ): Unit = js.native
-  def drawText(text: String, x: Null, y: Null, font: String, color: String, clearColor: String, invertY: Boolean): Unit = js.native
-  def drawText(
-    text: String,
-    x: Null,
-    y: Null,
-    font: String,
-    color: String,
-    clearColor: String,
-    invertY: Boolean,
-    update: Boolean
+    invertY: js.UndefOr[Boolean],
+    update: js.UndefOr[Boolean]
   ): Unit = js.native
   
   /**

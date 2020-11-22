@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListItemVersion extends BaseItemVersion {
   
   // A collection of the fields and values for this version of the list item.
-  var fields: js.UndefOr[FieldValueSet] = js.native
+  var fields: js.UndefOr[NullableOption[FieldValueSet]] = js.native
 }
 object ListItemVersion {
   
@@ -34,9 +34,12 @@ object ListItemVersion {
     }
     
     @scala.inline
-    def setFields(value: FieldValueSet): Self = this.set("fields", value.asInstanceOf[js.Any])
+    def setFields(value: NullableOption[FieldValueSet]): Self = this.set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFields: Self = this.set("fields", js.undefined)
+    
+    @scala.inline
+    def setFieldsNull: Self = this.set("fields", null)
   }
 }

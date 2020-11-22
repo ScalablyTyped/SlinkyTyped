@@ -1,7 +1,7 @@
 
 # Scala.js typings for yeoman-generator
 
-Typings are for version 3.1
+Typings are for version 4.11
 
 ## Library description:
 Rails-inspired generator system that provides scaffolding for your apps

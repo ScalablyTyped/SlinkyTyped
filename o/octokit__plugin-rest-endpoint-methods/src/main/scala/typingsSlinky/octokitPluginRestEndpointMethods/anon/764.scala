@@ -3,8 +3,7 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.MigrationsGetLargeFilesEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.MigrationsGetLargeFilesResponseData
+import typingsSlinky.octokitTypes.endpointsMod.MigrationsDeleteArchiveForAuthenticatedUserEndpoint
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +14,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `764` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[MigrationsGetLargeFilesEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[MigrationsDeleteArchiveForAuthenticatedUserEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[MigrationsGetLargeFilesResponseData] = js.native
+  var response: OctokitResponse[_] = js.native
 }
 object `764` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[MigrationsGetLargeFilesEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[MigrationsGetLargeFilesResponseData]
+    parameters: RequestParameters with (Omit[MigrationsDeleteArchiveForAuthenticatedUserEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[_]
   ): `764` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`764`]
@@ -47,10 +46,10 @@ object `764` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[MigrationsGetLargeFilesEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[MigrationsDeleteArchiveForAuthenticatedUserEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[MigrationsGetLargeFilesResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

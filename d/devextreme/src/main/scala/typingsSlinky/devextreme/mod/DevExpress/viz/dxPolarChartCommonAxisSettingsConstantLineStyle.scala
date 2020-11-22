@@ -11,16 +11,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartCommonAxisSettingsConstantLineStyle extends js.Object {
   
-  /** @name dxPolarChart.Options.commonAxisSettings.constantLineStyle.color */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.constantLineStyle.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.constantLineStyle.dashStyle */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.constantLineStyle.dashStyle]
+    */
   var dashStyle: js.UndefOr[dash | dot | longDash | solid] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.constantLineStyle.label */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.constantLineStyle.label]
+    */
   var label: js.UndefOr[dxPolarChartCommonAxisSettingsConstantLineStyleLabel] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.constantLineStyle.width */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.constantLineStyle.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxPolarChartCommonAxisSettingsConstantLineStyle {

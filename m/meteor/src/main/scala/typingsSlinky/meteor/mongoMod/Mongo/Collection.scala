@@ -4,17 +4,17 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.meteor.anon.ArrayFilters
 import typingsSlinky.meteor.anon.Fetch
-import typingsSlinky.meteor.anon.Fields
 import typingsSlinky.meteor.anon.InsertedId
 import typingsSlinky.meteor.anon.Multi
-import typingsSlinky.meteor.anon.Reactive
+import typingsSlinky.meteor.meteorStrings.limit
 import typingsSlinky.mongodb.mod.Db
+import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Collection[T] extends js.Object {
+trait Collection[T, U] extends js.Object {
   
   def _dropIndex(keys: String): Unit = js.native
   def _dropIndex(keys: StringDictionary[Double | String]): Unit = js.native
@@ -24,25 +24,133 @@ trait Collection[T] extends js.Object {
   def _ensureIndex(keys: StringDictionary[Double | String]): Unit = js.native
   def _ensureIndex(keys: StringDictionary[Double | String], options: StringDictionary[js.Any]): Unit = js.native
   
-  def allow(options: Fetch[T]): Boolean = js.native
+  def allow[Fn /* <: Transform[T] */](options: Fetch[Fn, T, U]): Boolean = js.native
   
-  def deny(options: Fetch[T]): Boolean = js.native
+  def deny[Fn /* <: Transform[T] */](options: Fetch[Fn, T, U]): Boolean = js.native
   
-  def find(): Cursor[T] = js.native
-  def find(selector: js.UndefOr[Selector[T]], options: Fields): Cursor[T] = js.native
-  def find(selector: String): Cursor[T] = js.native
-  def find(selector: String, options: Fields): Cursor[T] = js.native
-  def find(selector: ObjectID): Cursor[T] = js.native
-  def find(selector: ObjectID, options: Fields): Cursor[T] = js.native
-  def find(selector: Selector[T]): Cursor[T] = js.native
+  def find(): Cursor[T, U] = js.native
+  def find(selector: String): Cursor[T, U] = js.native
+  def find(selector: ObjectID): Cursor[T, U] = js.native
+  def find(selector: Selector[T]): Cursor[T, U] = js.native
+  def find[O /* <: Options[T] */](selector: js.UndefOr[Selector[T]], options: O): Cursor[
+    T, 
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  def find[O /* <: Options[T] */](selector: String, options: O): Cursor[
+    T, 
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  def find[O /* <: Options[T] */](selector: ObjectID, options: O): Cursor[
+    T, 
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
   
-  def findOne(): js.UndefOr[T] = js.native
-  def findOne(selector: js.UndefOr[Selector[T]], options: Reactive): js.UndefOr[T] = js.native
-  def findOne(selector: String): js.UndefOr[T] = js.native
-  def findOne(selector: String, options: Reactive): js.UndefOr[T] = js.native
-  def findOne(selector: ObjectID): js.UndefOr[T] = js.native
-  def findOne(selector: ObjectID, options: Reactive): js.UndefOr[T] = js.native
-  def findOne(selector: Selector[T]): js.UndefOr[T] = js.native
+  def findOne(): js.UndefOr[U] = js.native
+  def findOne(selector: String): js.UndefOr[U] = js.native
+  def findOne(selector: ObjectID): js.UndefOr[U] = js.native
+  def findOne(selector: Selector[T]): js.UndefOr[U] = js.native
+  def findOne[O /* <: Omit[Options[T], limit] */](selector: js.UndefOr[Selector[T]], options: O): js.UndefOr[
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  def findOne[O /* <: Omit[Options[T], limit] */](selector: String, options: O): js.UndefOr[
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  def findOne[O /* <: Omit[Options[T], limit] */](selector: ObjectID, options: O): js.UndefOr[
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  @JSName("findOne")
+  def findOne_O_OmitOptionsTlimit[O /* <: Omit[Options[T], limit] */](): js.UndefOr[
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  @JSName("findOne")
+  def findOne_O_OmitOptionsTlimit[O /* <: Omit[Options[T], limit] */](selector: String): js.UndefOr[
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  @JSName("findOne")
+  def findOne_O_OmitOptionsTlimit[O /* <: Omit[Options[T], limit] */](selector: ObjectID): js.UndefOr[
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  @JSName("findOne")
+  def findOne_O_OmitOptionsTlimit[O /* <: Omit[Options[T], limit] */](selector: Selector[T]): js.UndefOr[
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  
+  @JSName("find")
+  def find_O_OptionsT[O /* <: Options[T] */](): Cursor[
+    T, 
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  @JSName("find")
+  def find_O_OptionsT[O /* <: Options[T] */](selector: String): Cursor[
+    T, 
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  @JSName("find")
+  def find_O_OptionsT[O /* <: Options[T] */](selector: ObjectID): Cursor[
+    T, 
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
+  @JSName("find")
+  def find_O_OptionsT[O /* <: Options[T] */](selector: Selector[T]): Cursor[
+    T, 
+    DispatchTransform[
+      /* import warning: importer.ImportType#apply Failed type conversion: O['transform'] */ js.Any, 
+      T, 
+      U
+    ]
+  ] = js.native
   
   def insert(doc: OptionalId[T]): String = js.native
   def insert(doc: OptionalId[T], callback: js.Function): String = js.native

@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Pick<@formatjs/intl-listformat.@formatjs/intl-listformat.IntlListFormatOptions, 'localeMatcher'> */
+/* Inlined std.Pick<@formatjs/intl-listformat.@formatjs/intl-listformat/lib.IntlListFormatOptions, 'localeMatcher'> */
 @js.native
 trait PickIntlListFormatOptions extends js.Object {
   

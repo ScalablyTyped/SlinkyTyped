@@ -1,7 +1,7 @@
 
 # Scala.js typings for ant-design__react-native
 
-Typings are for version 4.0.2
+Typings are for version 4.0.6
 
 ## Library description:
 基于蚂蚁金服移动设计规范的 React Native 组件库

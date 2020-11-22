@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PointCloudRendererColorModulation extends Object {
   
   /**
-    * Field to use for the color modulation. Commonly modulation is used with the `intensity` field.
+    * Field to use for the color modulation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudRenderer.html#colorModulation)
     */
@@ -20,8 +20,6 @@ trait PointCloudRendererColorModulation extends Object {
     * Field value at which the point color will be left unchanged.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudRenderer.html#colorModulation)
-    *
-    * @default 255
     */
   var maxValue: js.UndefOr[Double] = js.native
   
@@ -29,8 +27,6 @@ trait PointCloudRendererColorModulation extends Object {
     * Field value at which the point color becomes darkest.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudRenderer.html#colorModulation)
-    *
-    * @default 0
     */
   var minValue: js.UndefOr[Double] = js.native
 }

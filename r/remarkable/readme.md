@@ -1,7 +1,7 @@
 
 # Scala.js typings for remarkable
 
-Typings are for version 1.7
+Typings are for version 2.0
 
 ## Library description:
 Markdown parser, done right. 100% Commonmark support, extensions, syntax plugins, high speed - all in one.

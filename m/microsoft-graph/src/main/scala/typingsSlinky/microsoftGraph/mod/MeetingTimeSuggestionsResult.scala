@@ -12,10 +12,10 @@ trait MeetingTimeSuggestionsResult extends js.Object {
     * attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string
     * if the meetingTimeSuggestions property does include any meeting suggestions.
     */
-  var emptySuggestionsReason: js.UndefOr[String] = js.native
+  var emptySuggestionsReason: js.UndefOr[NullableOption[String]] = js.native
   
   // An array of meeting suggestions.
-  var meetingTimeSuggestions: js.UndefOr[js.Array[MeetingTimeSuggestion]] = js.native
+  var meetingTimeSuggestions: js.UndefOr[NullableOption[js.Array[MeetingTimeSuggestion]]] = js.native
 }
 object MeetingTimeSuggestionsResult {
   
@@ -41,18 +41,24 @@ object MeetingTimeSuggestionsResult {
     }
     
     @scala.inline
-    def setEmptySuggestionsReason(value: String): Self = this.set("emptySuggestionsReason", value.asInstanceOf[js.Any])
+    def setEmptySuggestionsReason(value: NullableOption[String]): Self = this.set("emptySuggestionsReason", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEmptySuggestionsReason: Self = this.set("emptySuggestionsReason", js.undefined)
     
     @scala.inline
+    def setEmptySuggestionsReasonNull: Self = this.set("emptySuggestionsReason", null)
+    
+    @scala.inline
     def setMeetingTimeSuggestionsVarargs(value: MeetingTimeSuggestion*): Self = this.set("meetingTimeSuggestions", js.Array(value :_*))
     
     @scala.inline
-    def setMeetingTimeSuggestions(value: js.Array[MeetingTimeSuggestion]): Self = this.set("meetingTimeSuggestions", value.asInstanceOf[js.Any])
+    def setMeetingTimeSuggestions(value: NullableOption[js.Array[MeetingTimeSuggestion]]): Self = this.set("meetingTimeSuggestions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMeetingTimeSuggestions: Self = this.set("meetingTimeSuggestions", js.undefined)
+    
+    @scala.inline
+    def setMeetingTimeSuggestionsNull: Self = this.set("meetingTimeSuggestions", null)
   }
 }

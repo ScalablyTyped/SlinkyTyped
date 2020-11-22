@@ -3,10 +3,7 @@ package typingsSlinky.realm.mod
 import typingsSlinky.realm.ProgressPromise
 import typingsSlinky.realm.Realm
 import typingsSlinky.realm.Realm.Configuration
-import typingsSlinky.realm.Realm.Object
 import typingsSlinky.realm.Realm.ObjectSchema
-import typingsSlinky.realm.Realm.Sync.ProgressNotificationCallback
-import typingsSlinky.realm.Realm.Sync.User
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,14 +22,6 @@ class ^ () extends Realm {
 object ^ extends js.Object {
   
   /**
-    * @deprecated in favor of `Realm.Sync.User.createConfiguration()`.
-    * Return a configuration for a default Realm.
-    * @param {Realm.Sync.User} optional user.
-    */
-  def automaticSyncConfiguration(): String = js.native
-  def automaticSyncConfiguration(user: User): String = js.native
-  
-  /**
     * Clears the state by closing and deleting any Realm in the default directory and logout all users.
     * @private Not a part of the public API: It's primarily used from the library's tests.
     */
@@ -47,7 +36,7 @@ object ^ extends js.Object {
     * @param {Realm.ObjectSchema} object schema describing the object that should be created.
     * @returns {T}
     */
-  def createTemplateObject[T](objectSchema: ObjectSchema): T with Object = js.native
+  def createTemplateObject[T](objectSchema: ObjectSchema): T with typingsSlinky.realm.Realm.Object = js.native
   
   var defaultPath: String = js.native
   
@@ -67,20 +56,6 @@ object ^ extends js.Object {
     * @param {Configuration} config
     */
   def open(config: Configuration): ProgressPromise = js.native
-  
-  /**
-    * @deprecated in favor of `Realm.open`
-    * Open a realm asynchronously with a callback. If the realm is synced, it will be fully synchronized before it is available.
-    * @param {Configuration} config
-    * @param {Function} callback will be called when the realm is ready.
-    * @param {ProgressNotificationCallback} progressCallback? a progress notification callback for 'download' direction and 'forCurrentlyOutstandingWork' mode
-    */
-  def openAsync(config: Configuration, callback: js.Function2[/* error */ js.Any, /* realm */ Realm, Unit]): Unit = js.native
-  def openAsync(
-    config: Configuration,
-    callback: js.Function2[/* error */ js.Any, /* realm */ Realm, Unit],
-    progressCallback: ProgressNotificationCallback
-  ): Unit = js.native
   
   /**
     * Get the current schema version of the Realm at the given path.

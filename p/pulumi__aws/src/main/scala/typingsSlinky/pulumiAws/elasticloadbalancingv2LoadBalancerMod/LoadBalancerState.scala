@@ -27,6 +27,11 @@ trait LoadBalancerState extends js.Object {
   val arnSuffix: js.UndefOr[Input[String]] = js.native
   
   /**
+    * The ID of the customer owned ipv4 pool to use for this load balancer.
+    */
+  val customerOwnedIpv4Pool: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * The DNS name of the load balancer.
     */
   val dnsName: js.UndefOr[Input[String]] = js.native
@@ -69,7 +74,7 @@ trait LoadBalancerState extends js.Object {
   val ipAddressType: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The type of load balancer to create. Possible values are `application` or `network`. The default value is `application`.
+    * The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
     */
   val loadBalancerType: js.UndefOr[Input[String]] = js.native
   
@@ -111,6 +116,7 @@ trait LoadBalancerState extends js.Object {
   
   /**
     * The canonical hosted zone ID of the load balancer (to be used in a Route 53 Alias record).
+    * * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
     */
   val zoneId: js.UndefOr[Input[String]] = js.native
 }
@@ -154,6 +160,12 @@ object LoadBalancerState {
     
     @scala.inline
     def deleteArnSuffix: Self = this.set("arnSuffix", js.undefined)
+    
+    @scala.inline
+    def setCustomerOwnedIpv4Pool(value: Input[String]): Self = this.set("customerOwnedIpv4Pool", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomerOwnedIpv4Pool: Self = this.set("customerOwnedIpv4Pool", js.undefined)
     
     @scala.inline
     def setDnsName(value: Input[String]): Self = this.set("dnsName", value.asInstanceOf[js.Any])

@@ -9,11 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object mapBrowserEventHandlerMod extends js.Object {
   
   @js.native
-  class default protected ()
-    extends typingsSlinky.ol.targetMod.default {
+  trait MapBrowserEventHandler
+    extends typingsSlinky.ol.targetMod.default
+  
+  @js.native
+  class default protected () extends MapBrowserEventHandler {
     def this(map: typingsSlinky.ol.pluggableMapMod.default) = this()
     def this(map: typingsSlinky.ol.pluggableMapMod.default, moveTolerance: Double) = this()
   }
-  
-  type MapBrowserEventHandler = typingsSlinky.ol.targetMod.default
 }

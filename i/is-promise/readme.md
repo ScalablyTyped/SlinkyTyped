@@ -1,7 +1,7 @@
 
 # Scala.js typings for is-promise
 
-Typings are for version 4.0.0
+Typings are for version 2.1
 
 ## Library description:
 Test whether an object looks like a promises-a+ promise
@@ -24,7 +24,7 @@ Test whether an object looks like a promises-a+ promise
 
 
 ## Note
-This library has been generated from typescript code from first party type definitions.
+This library has been generated from typescript code from [DefinitelyTyped](https://definitelytyped.org).
 
 Provided with :purple_heart: from [ScalablyTyped](https://github.com/oyvindberg/ScalablyTyped)
 

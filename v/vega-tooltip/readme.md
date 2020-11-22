@@ -1,7 +1,7 @@
 
 # Scala.js typings for vega-tooltip
 
-Typings are for version 0.23.2
+Typings are for version 0.24.2
 
 ## Library description:
 A tooltip plugin for Vega-Lite and Vega visualizations.

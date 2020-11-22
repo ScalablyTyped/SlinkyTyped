@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetSnowballUsageResult extends js.Object {
   
   /**
-    * The service limit for number of Snowballs this account can have at once. The default service limit is 1 (one).
+    * The service limit for number of Snow devices this account can have at once. The default service limit is 1 (one).
     */
   var SnowballLimit: js.UndefOr[Integer] = js.native
   
   /**
-    * The number of Snowballs that this account is currently using.
+    * The number of Snow devices that this account is currently using.
     */
   var SnowballsInUse: js.UndefOr[Integer] = js.native
 }

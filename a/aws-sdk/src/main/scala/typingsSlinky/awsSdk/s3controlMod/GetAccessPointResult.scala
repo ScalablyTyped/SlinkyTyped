@@ -23,7 +23,7 @@ trait GetAccessPointResult extends js.Object {
   var Name: js.UndefOr[AccessPointName] = js.native
   
   /**
-    * Indicates whether this access point allows access from the public internet. If VpcConfiguration is specified for this access point, then NetworkOrigin is VPC, and the access point doesn't allow access from the public internet. Otherwise, NetworkOrigin is Internet, and the access point allows access from the public internet, subject to the access point and bucket access policies.
+    * Indicates whether this access point allows access from the public internet. If VpcConfiguration is specified for this access point, then NetworkOrigin is VPC, and the access point doesn't allow access from the public internet. Otherwise, NetworkOrigin is Internet, and the access point allows access from the public internet, subject to the access point and bucket access policies. This will always be true for an Amazon S3 on Outposts access point
     */
   var NetworkOrigin: js.UndefOr[typingsSlinky.awsSdk.s3controlMod.NetworkOrigin] = js.native
   

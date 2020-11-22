@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SelectRowProps[T] extends js.Object {
   
-  var bgColor: js.UndefOr[String] = js.native
+  var bgColor: js.UndefOr[js.Function2[/* row */ T, /* rowIndex */ Double, String]] = js.native
   
   var classes: js.UndefOr[(js.Function2[/* row */ T, /* rowIndex */ Double, js.UndefOr[String]]) | String] = js.native
   
@@ -108,7 +108,7 @@ object SelectRowProps {
     def setMode(value: RowSelectionType): Self = this.set("mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBgColor(value: String): Self = this.set("bgColor", value.asInstanceOf[js.Any])
+    def setBgColor(value: (/* row */ T, /* rowIndex */ Double) => String): Self = this.set("bgColor", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteBgColor: Self = this.set("bgColor", js.undefined)

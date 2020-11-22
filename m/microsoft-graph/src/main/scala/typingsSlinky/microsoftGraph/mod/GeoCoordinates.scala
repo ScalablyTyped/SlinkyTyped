@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GeoCoordinates extends js.Object {
   
   // Optional. The altitude (height), in feet, above sea level for the item. Read-only.
-  var altitude: js.UndefOr[Double] = js.native
+  var altitude: js.UndefOr[NullableOption[Double]] = js.native
   
   // Optional. The latitude, in decimal, for the item. Read-only.
-  var latitude: js.UndefOr[Double] = js.native
+  var latitude: js.UndefOr[NullableOption[Double]] = js.native
   
   // Optional. The longitude, in decimal, for the item. Read-only.
-  var longitude: js.UndefOr[Double] = js.native
+  var longitude: js.UndefOr[NullableOption[Double]] = js.native
 }
 object GeoCoordinates {
   
@@ -40,21 +40,30 @@ object GeoCoordinates {
     }
     
     @scala.inline
-    def setAltitude(value: Double): Self = this.set("altitude", value.asInstanceOf[js.Any])
+    def setAltitude(value: NullableOption[Double]): Self = this.set("altitude", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAltitude: Self = this.set("altitude", js.undefined)
     
     @scala.inline
-    def setLatitude(value: Double): Self = this.set("latitude", value.asInstanceOf[js.Any])
+    def setAltitudeNull: Self = this.set("altitude", null)
+    
+    @scala.inline
+    def setLatitude(value: NullableOption[Double]): Self = this.set("latitude", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLatitude: Self = this.set("latitude", js.undefined)
     
     @scala.inline
-    def setLongitude(value: Double): Self = this.set("longitude", value.asInstanceOf[js.Any])
+    def setLatitudeNull: Self = this.set("latitude", null)
+    
+    @scala.inline
+    def setLongitude(value: NullableOption[Double]): Self = this.set("longitude", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLongitude: Self = this.set("longitude", js.undefined)
+    
+    @scala.inline
+    def setLongitudeNull: Self = this.set("longitude", null)
   }
 }

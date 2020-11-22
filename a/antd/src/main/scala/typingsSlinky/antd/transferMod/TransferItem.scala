@@ -13,15 +13,15 @@ trait TransferItem
   
   var disabled: js.UndefOr[Boolean] = js.native
   
-  var key: String = js.native
+  var key: js.UndefOr[String] = js.native
   
   var title: js.UndefOr[String] = js.native
 }
 object TransferItem {
   
   @scala.inline
-  def apply(key: String): TransferItem = {
-    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+  def apply(): TransferItem = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[TransferItem]
   }
   
@@ -41,9 +41,6 @@ object TransferItem {
     }
     
     @scala.inline
-    def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -54,6 +51,12 @@ object TransferItem {
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKey: Self = this.set("key", js.undefined)
     
     @scala.inline
     def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])

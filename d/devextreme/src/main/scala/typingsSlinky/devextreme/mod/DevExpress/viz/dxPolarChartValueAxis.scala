@@ -25,75 +25,117 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartValueAxis extends dxPolarChartCommonAxisSettings {
   
-  /** @name dxPolarChart.Options.valueAxis.axisDivisionFactor */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.axisDivisionFactor]
+    */
   var axisDivisionFactor: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.categories */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.categories]
+    */
   var categories: js.UndefOr[js.Array[Double | String | js.Date]] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.constantLines */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.constantLines]
+    */
   var constantLines: js.UndefOr[js.Array[dxPolarChartValueAxisConstantLines]] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.label */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.label]
+    */
   @JSName("label")
   var label_dxPolarChartValueAxis: js.UndefOr[dxPolarChartValueAxisLabel] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.linearThreshold */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.linearThreshold]
+    */
   var linearThreshold: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.logarithmBase */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.logarithmBase]
+    */
   var logarithmBase: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.maxValueMargin */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.maxValueMargin]
+    */
   var maxValueMargin: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.minValueMargin */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.minValueMargin]
+    */
   var minValueMargin: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.minVisualRangeLength */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.minVisualRangeLength]
+    */
   var minVisualRangeLength: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.minorTickCount */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.minorTickCount]
+    */
   var minorTickCount: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.minorTickInterval */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.minorTickInterval]
+    */
   var minorTickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.showZero */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.showZero]
+    */
   var showZero: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.strips */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.strips]
+    */
   var strips: js.UndefOr[js.Array[dxPolarChartValueAxisStrips]] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.tickInterval */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.tickInterval]
+    */
   var tickInterval: js.UndefOr[
     Double | js.Any | day | hour | millisecond | minute | month | quarter | second | week | year
   ] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.tick */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.tick]
+    */
   @JSName("tick")
   var tick_dxPolarChartValueAxis: js.UndefOr[dxPolarChartValueAxisTick] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.type */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.type]
+    */
   var `type`: js.UndefOr[continuous | discrete | logarithmic] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.valueMarginsEnabled */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.valueMarginsEnabled]
+    */
   var valueMarginsEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.valueType */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.valueType]
+    */
   var valueType: js.UndefOr[datetime | numeric | string_] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.visualRange */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.visualRange]
+    */
   var visualRange: js.UndefOr[VizRange | (js.Array[Double | String | js.Date])] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.visualRangeUpdateMode */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.visualRangeUpdateMode]
+    */
   var visualRangeUpdateMode: js.UndefOr[auto | keep | reset] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.wholeRange */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.wholeRange]
+    */
   var wholeRange: js.UndefOr[VizRange | (js.Array[Double | String | js.Date])] = js.native
 }
 object dxPolarChartValueAxis {

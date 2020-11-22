@@ -17,19 +17,27 @@ object OperationType extends js.Object {
   
   def allowTrust(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
   
+  def beginSponsoringFutureReserves(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
+  
   def bumpSequence(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
   
   def changeTrust(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
   
+  def claimClaimableBalance(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
+  
   def createAccount(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
   
+  def createClaimableBalance(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
+  
   def createPassiveSellOffer(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
+  
+  def endSponsoringFutureReserves(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
   
   def inflation(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
   
   def manageBuyOffer(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
   
-  def manageDatum(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
+  def manageData(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
   
   def manageSellOffer(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
   
@@ -39,5 +47,7 @@ object OperationType extends js.Object {
   
   def payment(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
   
-  def setOption(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
+  def revokeSponsorship(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
+  
+  def setOptions(): typingsSlinky.stellarBase.xdrMod.xdr.OperationType = js.native
 }

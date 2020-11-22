@@ -240,7 +240,7 @@ package object cloudwatchMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Seconds_
-    - typingsSlinky.awsSdk.awsSdkStrings.Microseconds
+    - typingsSlinky.awsSdk.awsSdkStrings.Microseconds_
     - typingsSlinky.awsSdk.awsSdkStrings.Milliseconds_
     - typingsSlinky.awsSdk.awsSdkStrings.Bytes_
     - typingsSlinky.awsSdk.awsSdkStrings.Kilobytes

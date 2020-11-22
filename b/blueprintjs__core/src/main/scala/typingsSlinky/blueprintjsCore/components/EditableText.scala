@@ -65,7 +65,7 @@ object EditableText {
     def onConfirm(value: /* value */ String => Unit): this.type = set("onConfirm", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onEdit(value: /* value */ String => Unit): this.type = set("onEdit", js.Any.fromFunction1(value))
+    def onEdit(value: /* value */ js.UndefOr[String] => Unit): this.type = set("onEdit", js.Any.fromFunction1(value))
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])

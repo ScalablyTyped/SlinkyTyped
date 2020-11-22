@@ -15,14 +15,7 @@ trait ScaleEventInfo
      with UpdateToolEventInfo {
   
   /**
-    * Returns information indicating the stage of the scale operation.  **Possible Values**
-    *
-    * Value | Description |
-    * ----- | ----------- |
-    * scale-start | The type changes to `scale-start` at the start of scale or resize operation.
-    * scale | The type changes to `scale` while graphics are being scaled or resized.
-    * scale-stop | The type changes to `scale-stop` once graphics are scaled or resized.
-    *
+    * Returns information indicating the stage of the scale operation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#ScaleEventInfo)
     */

@@ -17,7 +17,7 @@ trait InputFieldGroup extends Accessor {
   var description: String = js.native
   
   /**
-    * The result of `visibilityExpression`.  Note, if `visibilityExpression` is not defined, the value of this property will be `undefined`.
+    * The result of `visibilityExpression`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputFieldGroup.html#evaluatedVisibility)
     */
@@ -40,11 +40,9 @@ trait InputFieldGroup extends Accessor {
   val label: String = js.native
   
   /**
-    * Arcade expression to determine whether this group is visible or not
+    * Arcade expression to determine whether this group is visible or not.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputFieldGroup.html#visibilityExpression)
-    *
-    * @default null
     */
   var visibilityExpression: String = js.native
   

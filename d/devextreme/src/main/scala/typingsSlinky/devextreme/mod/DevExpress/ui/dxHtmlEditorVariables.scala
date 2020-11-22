@@ -9,10 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxHtmlEditorVariables extends js.Object {
   
-  /** @name dxHtmlEditorVariables.dataSource */
+  /**
+    * [descr:dxHtmlEditorVariables.dataSource]
+    */
   var dataSource: js.UndefOr[String | js.Array[String] | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxHtmlEditorVariables.escapeChar */
+  /**
+    * [descr:dxHtmlEditorVariables.escapeChar]
+    */
   var escapeChar: js.UndefOr[String | js.Array[String]] = js.native
 }
 object dxHtmlEditorVariables {

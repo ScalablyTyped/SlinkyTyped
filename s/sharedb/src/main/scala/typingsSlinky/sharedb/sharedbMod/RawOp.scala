@@ -13,8 +13,6 @@ trait RawOp extends js.Object {
   
   var m: js.Any = js.native
   
-  var op: js.Array[Op] = js.native
-  
   var seq: Double = js.native
   
   var src: String = js.native
@@ -24,8 +22,8 @@ trait RawOp extends js.Object {
 object RawOp {
   
   @scala.inline
-  def apply(c: String, d: String, m: js.Any, op: js.Array[Op], seq: Double, src: String, v: Double): RawOp = {
-    val __obj = js.Dynamic.literal(c = c.asInstanceOf[js.Any], d = d.asInstanceOf[js.Any], m = m.asInstanceOf[js.Any], op = op.asInstanceOf[js.Any], seq = seq.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], v = v.asInstanceOf[js.Any])
+  def apply(c: String, d: String, m: js.Any, seq: Double, src: String, v: Double): RawOp = {
+    val __obj = js.Dynamic.literal(c = c.asInstanceOf[js.Any], d = d.asInstanceOf[js.Any], m = m.asInstanceOf[js.Any], seq = seq.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], v = v.asInstanceOf[js.Any])
     __obj.asInstanceOf[RawOp]
   }
   
@@ -52,12 +50,6 @@ object RawOp {
     
     @scala.inline
     def setM(value: js.Any): Self = this.set("m", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOpVarargs(value: Op*): Self = this.set("op", js.Array(value :_*))
-    
-    @scala.inline
-    def setOp(value: js.Array[Op]): Self = this.set("op", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSeq(value: Double): Self = this.set("seq", value.asInstanceOf[js.Any])

@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StickyOffsets extends js.Object {
   
+  var isSticky: js.UndefOr[Boolean] = js.native
+  
   var left: js.Array[Double] = js.native
   
   var right: js.Array[Double] = js.native
@@ -45,5 +47,11 @@ object StickyOffsets {
     
     @scala.inline
     def setRight(value: js.Array[Double]): Self = this.set("right", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIsSticky(value: Boolean): Self = this.set("isSticky", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsSticky: Self = this.set("isSticky", js.undefined)
   }
 }

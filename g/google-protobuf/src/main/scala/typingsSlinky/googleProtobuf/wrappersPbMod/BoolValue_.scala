@@ -11,5 +11,5 @@ class BoolValue_ () extends Message {
   
   def getValue(): Boolean = js.native
   
-  def setValue(value: Boolean): Unit = js.native
+  def setValue(value: Boolean): BoolValue = js.native
 }

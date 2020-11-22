@@ -9,7 +9,7 @@ trait BorderOptions extends js.Object {
   
   var color: js.UndefOr[String] = js.native
   
-  var style: js.UndefOr[String] = js.native
+  var hide: js.UndefOr[Boolean] = js.native
   
   var width: js.UndefOr[Double] = js.native
 }
@@ -43,10 +43,10 @@ object BorderOptions {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setStyle(value: String): Self = this.set("style", value.asInstanceOf[js.Any])
+    def setHide(value: Boolean): Self = this.set("hide", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteStyle: Self = this.set("style", js.undefined)
+    def deleteHide: Self = this.set("hide", js.undefined)
     
     @scala.inline
     def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])

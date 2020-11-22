@@ -16,6 +16,7 @@ import typingsSlinky.prosemirrorView.prosemirrorViewStrings.forward
 import typingsSlinky.prosemirrorView.prosemirrorViewStrings.left
 import typingsSlinky.prosemirrorView.prosemirrorViewStrings.right
 import typingsSlinky.prosemirrorView.prosemirrorViewStrings.up
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,11 +42,15 @@ class EditorView[S /* <: Schema[_, _] */] protected () extends js.Object {
   var composing: Boolean = js.native
   
   /**
-    * Returns the viewport rectangle at a given document position. `left`
-    * and `right` will be the same number, as this returns a flat
-    * cursor-ish rectangle.
+    * Returns the viewport rectangle at a given document position.
+    * `left` and `right` will be the same number, as this returns a
+    * flat cursor-ish rectangle. If the position is between two things
+    * that aren't directly adjacent, `side` determines which element is
+    * used. When < 0, the element before the position is used,
+    * otherwise the element after.
     */
   def coordsAtPos(pos: Double): Bottom = js.native
+  def coordsAtPos(pos: Double, side: Double): Bottom = js.native
   
   /**
     * Removes the editor from the DOM and destroys all [node
@@ -206,7 +211,7 @@ class EditorView[S /* <: Schema[_, _] */] protected () extends js.Object {
     * given as argument. Equivalent to `view.update(Object.assign({},
     * view.props, props))`.
     */
-  def setProps(props: DirectEditorProps[S]): Unit = js.native
+  def setProps(props: Partial[DirectEditorProps[S]]): Unit = js.native
   
   /**
     * Goes over the values of a prop, first those provided directly,

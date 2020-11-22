@@ -1,5 +1,6 @@
 package typingsSlinky.muiDatatables.anon
 
+import slinky.core.facade.ReactElement
 import typingsSlinky.muiDatatables.mod.MUIDataTableColumn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +12,7 @@ trait PartialMUIDataTableTextLa extends js.Object {
   
   var columnHeaderTooltip: js.UndefOr[js.Function1[/* column */ MUIDataTableColumn, String]] = js.native
   
-  var noMatch: js.UndefOr[String] = js.native
+  var noMatch: js.UndefOr[String | ReactElement] = js.native
   
   var toolTip: js.UndefOr[String] = js.native
 }
@@ -45,7 +46,10 @@ object PartialMUIDataTableTextLa {
     def deleteColumnHeaderTooltip: Self = this.set("columnHeaderTooltip", js.undefined)
     
     @scala.inline
-    def setNoMatch(value: String): Self = this.set("noMatch", value.asInstanceOf[js.Any])
+    def setNoMatchReactElement(value: ReactElement): Self = this.set("noMatch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNoMatch(value: String | ReactElement): Self = this.set("noMatch", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNoMatch: Self = this.set("noMatch", js.undefined)

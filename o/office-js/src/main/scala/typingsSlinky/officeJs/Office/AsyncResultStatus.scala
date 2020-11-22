@@ -6,7 +6,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 sealed trait AsyncResultStatus extends js.Object
-// Enumerations
 /**
   * Specifies the result of an asynchronous call.
   * 

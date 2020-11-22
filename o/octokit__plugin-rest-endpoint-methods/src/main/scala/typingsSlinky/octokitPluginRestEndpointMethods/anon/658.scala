@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ChecksListAnnotationsEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ChecksListAnnotationsResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ChecksCreateSuiteEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ChecksCreateSuiteResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `658` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ChecksListAnnotationsEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ChecksCreateSuiteEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ChecksListAnnotationsResponseData] = js.native
+  var response: OctokitResponse[ChecksCreateSuiteResponseData] = js.native
 }
 object `658` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ChecksListAnnotationsEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ChecksListAnnotationsResponseData]
+    parameters: RequestParameters with (Omit[ChecksCreateSuiteEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ChecksCreateSuiteResponseData]
   ): `658` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`658`]
@@ -46,9 +46,9 @@ object `658` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ChecksListAnnotationsEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ChecksCreateSuiteEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ChecksListAnnotationsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ChecksCreateSuiteResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

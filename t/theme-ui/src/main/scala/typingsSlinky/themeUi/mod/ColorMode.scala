@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ColorMode
   extends /* k */ StringDictionary[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any) | (ObjectOrArray[
-        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ _
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any) | (ObjectOrArray[
+        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ _
       ])
     ] {
   
@@ -19,19 +19,19 @@ trait ColorMode
     * A contrast color for emphasizing UI
     */
   var accent: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ] = js.native
   
   /**
     * Body background color
     */
-  var background: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any = js.native
+  var background: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any = js.native
   
   /**
     * A background color for highlighting text
     */
   var highlight: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ] = js.native
   
   /**
@@ -39,27 +39,27 @@ trait ColorMode
     * high contrast with the background color
     */
   var muted: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ] = js.native
   
   /**
     * Primary brand color for links, buttons, etc.
     */
   var primary: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ] = js.native
   
   /**
     * A secondary brand color for alternative styling
     */
   var secondary: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ] = js.native
   
   /**
     * Body foreground color
     */
-  var text: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any = js.native
+  var text: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any = js.native
 }
 @JSImport("theme-ui", "ColorMode")
 @js.native

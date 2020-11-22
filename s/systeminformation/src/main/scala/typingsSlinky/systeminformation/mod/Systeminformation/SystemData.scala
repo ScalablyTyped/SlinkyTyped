@@ -4,13 +4,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// 2. System (HW)
 @js.native
 trait SystemData extends js.Object {
   
   var manufacturer: String = js.native
   
   var model: String = js.native
+  
+  var raspberry: js.UndefOr[RaspberryRevisionData] = js.native
   
   var serial: String = js.native
   
@@ -60,5 +61,11 @@ object SystemData {
     
     @scala.inline
     def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRaspberry(value: RaspberryRevisionData): Self = this.set("raspberry", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRaspberry: Self = this.set("raspberry", js.undefined)
   }
 }

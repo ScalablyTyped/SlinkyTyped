@@ -10,15 +10,15 @@ trait Request extends js.Object {
   
   var data: js.Any = js.native
   
-  var options: js.Object = js.native
+  var options: js.UndefOr[Options] = js.native
   
   var template: PartialTemplate = js.native
 }
 object Request {
   
   @scala.inline
-  def apply(data: js.Any, options: js.Object, template: PartialTemplate): Request = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
+  def apply(data: js.Any, template: PartialTemplate): Request = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], template = template.asInstanceOf[js.Any])
     __obj.asInstanceOf[Request]
   }
   
@@ -41,9 +41,12 @@ object Request {
     def setData(value: js.Any): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setTemplate(value: PartialTemplate): Self = this.set("template", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTemplate(value: PartialTemplate): Self = this.set("template", value.asInstanceOf[js.Any])
+    def setOptions(value: Options): Self = this.set("options", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOptions: Self = this.set("options", js.undefined)
   }
 }

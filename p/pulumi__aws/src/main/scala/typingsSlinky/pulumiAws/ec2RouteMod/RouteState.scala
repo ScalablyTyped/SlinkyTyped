@@ -38,6 +38,11 @@ trait RouteState extends js.Object {
   val instanceOwnerId: js.UndefOr[Input[String]] = js.native
   
   /**
+    * Identifier of a Outpost local gateway.
+    */
+  val localGatewayId: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * Identifier of a VPC NAT gateway.
     */
   val natGatewayId: js.UndefOr[Input[String]] = js.native
@@ -60,6 +65,11 @@ trait RouteState extends js.Object {
     * Identifier of an EC2 Transit Gateway.
     */
   val transitGatewayId: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Identifier of a VPC Endpoint.
+    */
+  val vpcEndpointId: js.UndefOr[Input[String]] = js.native
   
   /**
     * Identifier of a VPC peering connection.
@@ -132,6 +142,12 @@ object RouteState {
     def deleteInstanceOwnerId: Self = this.set("instanceOwnerId", js.undefined)
     
     @scala.inline
+    def setLocalGatewayId(value: Input[String]): Self = this.set("localGatewayId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocalGatewayId: Self = this.set("localGatewayId", js.undefined)
+    
+    @scala.inline
     def setNatGatewayId(value: Input[String]): Self = this.set("natGatewayId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -166,6 +182,12 @@ object RouteState {
     
     @scala.inline
     def deleteTransitGatewayId: Self = this.set("transitGatewayId", js.undefined)
+    
+    @scala.inline
+    def setVpcEndpointId(value: Input[String]): Self = this.set("vpcEndpointId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVpcEndpointId: Self = this.set("vpcEndpointId", js.undefined)
     
     @scala.inline
     def setVpcPeeringConnectionId(value: Input[String]): Self = this.set("vpcPeeringConnectionId", value.asInstanceOf[js.Any])

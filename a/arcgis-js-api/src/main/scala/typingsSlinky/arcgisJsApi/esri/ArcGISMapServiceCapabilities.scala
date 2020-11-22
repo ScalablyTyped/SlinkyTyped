@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ArcGISMapServiceCapabilities extends Object {
   
   /**
-    * Indicates options supported by the exportMap operation. Will be `null` if the `supportsExportMap` is `false`.
+    * Indicates options supported by the exportMap operation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISMapService.html#capabilities)
     */
   var exportMap: ArcGISMapServiceCapabilitiesExportMap = js.native
   
   /**
-    * Indicates options supported by the exportTiles operation. Will be `null` if the `supportsExportTiles` is `false`.
+    * Indicates options supported by the exportTiles operation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISMapService.html#capabilities)
     */

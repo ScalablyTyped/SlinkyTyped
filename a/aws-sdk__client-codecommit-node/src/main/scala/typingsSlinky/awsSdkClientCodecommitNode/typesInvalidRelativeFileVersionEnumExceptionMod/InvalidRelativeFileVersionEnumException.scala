@@ -2,31 +2,25 @@ package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRelativeFileVersion
 
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidRelativeFileVersionEnumExceptionDetails> * / any */ @js.native
 trait InvalidRelativeFileVersionEnumException
-  extends ServiceException[InvalidRelativeFileVersionEnumExceptionDetails]
-     with PostCommentForComparedCommitExceptionsUnion
+  extends PostCommentForComparedCommitExceptionsUnion
      with PostCommentForPullRequestExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidRelativeFileVersionEnumException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidRelativeFileVersionEnumException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidRelativeFileVersionEnumException = js.native
 }
 object InvalidRelativeFileVersionEnumException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidRelativeFileVersionEnumExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidRelativeFileVersionEnumException
   ): InvalidRelativeFileVersionEnumException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidRelativeFileVersionEnumException]
   }
   

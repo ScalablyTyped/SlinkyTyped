@@ -28,7 +28,7 @@ trait Destination extends js.Object {
   var EncryptionConfiguration: js.UndefOr[typingsSlinky.awsSdk.s3Mod.EncryptionConfiguration] = js.native
   
   /**
-    *  A container specifying replication metrics-related settings enabling metrics and Amazon S3 events for S3 Replication Time Control (S3 RTC). Must be specified together with a ReplicationTime block. 
+    *  A container specifying replication metrics-related settings enabling replication metrics and events. 
     */
   var Metrics: js.UndefOr[typingsSlinky.awsSdk.s3Mod.Metrics] = js.native
   

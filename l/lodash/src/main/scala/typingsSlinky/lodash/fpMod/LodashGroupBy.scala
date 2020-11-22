@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashGroupBy extends LodashConvertible {
+trait LodashGroupBy extends js.Object {
   
   def apply[T](iteratee: ValueIteratee[T]): LodashGroupBy1x1[T] = js.native
   def apply[T /* <: js.Object */](

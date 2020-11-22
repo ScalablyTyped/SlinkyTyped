@@ -20,7 +20,13 @@ object ErrorCodes extends js.Object {
   sealed trait conflict extends ErrorCodes
   
   @js.native
+  sealed trait filteredRangeConflict extends ErrorCodes
+  
+  @js.native
   sealed trait generalException extends ErrorCodes
+  
+  @js.native
+  sealed trait inactiveWorkbook extends ErrorCodes
   
   @js.native
   sealed trait insertDeleteConflict extends ErrorCodes
@@ -54,6 +60,9 @@ object ErrorCodes extends js.Object {
   
   @js.native
   sealed trait notImplemented extends ErrorCodes
+  
+  @js.native
+  sealed trait pivotTableRangeConflict extends ErrorCodes
   
   @js.native
   sealed trait rangeExceedsLimit extends ErrorCodes

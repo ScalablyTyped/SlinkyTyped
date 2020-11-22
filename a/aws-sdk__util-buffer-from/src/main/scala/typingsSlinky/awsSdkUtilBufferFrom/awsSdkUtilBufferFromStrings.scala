@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdkUtilBufferFrom
 
+import typingsSlinky.awsSdkUtilBufferFrom.mod.StringEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,26 +32,26 @@ object awsSdkUtilBufferFromStrings {
   def utf8: utf8 = "utf8".asInstanceOf[utf8]
   
   @js.native
-  sealed trait ascii extends js.Object
+  sealed trait ascii extends StringEncoding
   
   @js.native
-  sealed trait base64 extends js.Object
+  sealed trait base64 extends StringEncoding
   
   @js.native
-  sealed trait binary extends js.Object
+  sealed trait binary extends StringEncoding
   
   @js.native
-  sealed trait hex extends js.Object
+  sealed trait hex extends StringEncoding
   
   @js.native
-  sealed trait latin1 extends js.Object
+  sealed trait latin1 extends StringEncoding
   
   @js.native
-  sealed trait ucs2 extends js.Object
+  sealed trait ucs2 extends StringEncoding
   
   @js.native
-  sealed trait utf16le extends js.Object
+  sealed trait utf16le extends StringEncoding
   
   @js.native
-  sealed trait utf8 extends js.Object
+  sealed trait utf8 extends StringEncoding
 }

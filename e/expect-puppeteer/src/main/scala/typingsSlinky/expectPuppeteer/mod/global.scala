@@ -15,7 +15,6 @@ object global extends js.Object {
   @js.native
   object jest extends js.Object {
     
-    // tslint:disable-next-line no-empty-interface
     @js.native
     trait Matchers[R, T] extends js.Object {
       

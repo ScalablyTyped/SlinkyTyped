@@ -14,6 +14,8 @@ package object xdr {
   
   type SequenceNumber = typingsSlinky.stellarBase.xdrMod.xdr.Int64
   
+  type SponsorshipDescriptor = js.UndefOr[typingsSlinky.stellarBase.xdrMod.xdr.AccountId]
+  
   type TimePoint = typingsSlinky.stellarBase.xdrMod.xdr.Uint64
   
   type Uint64 = typingsSlinky.stellarBase.xdrMod.xdr.UnsignedHyper

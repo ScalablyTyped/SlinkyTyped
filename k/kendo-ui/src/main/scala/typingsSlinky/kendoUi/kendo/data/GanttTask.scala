@@ -17,6 +17,10 @@ trait GanttTask extends Model {
   
   var percentComplete: Double = js.native
   
+  var plannedEnd: js.Date = js.native
+  
+  var plannedStart: js.Date = js.native
+  
   var start: js.Date = js.native
   
   var summary: Boolean = js.native

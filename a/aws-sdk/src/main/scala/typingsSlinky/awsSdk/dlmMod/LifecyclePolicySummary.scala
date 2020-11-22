@@ -18,6 +18,11 @@ trait LifecyclePolicySummary extends js.Object {
   var PolicyId: js.UndefOr[typingsSlinky.awsSdk.dlmMod.PolicyId] = js.native
   
   /**
+    * The type of policy. EBS_SNAPSHOT_MANAGEMENT indicates that the policy manages the lifecycle of Amazon EBS snapshots. IMAGE_MANAGEMENT indicates that the policy manages the lifecycle of EBS-backed AMIs.
+    */
+  var PolicyType: js.UndefOr[PolicyTypeValues] = js.native
+  
+  /**
     * The activation state of the lifecycle policy.
     */
   var State: js.UndefOr[GettablePolicyStateValues] = js.native
@@ -61,6 +66,12 @@ object LifecyclePolicySummary {
     
     @scala.inline
     def deletePolicyId: Self = this.set("PolicyId", js.undefined)
+    
+    @scala.inline
+    def setPolicyType(value: PolicyTypeValues): Self = this.set("PolicyType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePolicyType: Self = this.set("PolicyType", js.undefined)
     
     @scala.inline
     def setState(value: GettablePolicyStateValues): Self = this.set("State", value.asInstanceOf[js.Any])

@@ -38,7 +38,7 @@ trait ActionSheetOptionsReactOv extends js.Object {
   
   var isOpen: Boolean = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyboardClose: js.UndefOr[Boolean] = js.native
   
@@ -154,6 +154,9 @@ object ActionSheetOptionsReactOv {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyboardClose(value: Boolean): Self = this.set("keyboardClose", value.asInstanceOf[js.Any])

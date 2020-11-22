@@ -13,6 +13,7 @@ import typingsSlinky.babelTypes.babelTypesStrings.FunctionDeclaration
 import typingsSlinky.babelTypes.babelTypesStrings.FunctionExpression
 import typingsSlinky.babelTypes.babelTypesStrings.ObjectMethod
 import typingsSlinky.babelTypes.babelTypesStrings.Program
+import typingsSlinky.babelTypes.babelTypesStrings.StaticBlock
 import typingsSlinky.babelTypes.babelTypesStrings.SwitchStatement
 import typingsSlinky.babelTypes.babelTypesStrings.TSModuleBlock
 import typingsSlinky.babelTypes.babelTypesStrings.WhileStatement
@@ -42,6 +43,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.babelTypes.mod.ForOfStatement_
   - typingsSlinky.babelTypes.mod.ClassMethod_
   - typingsSlinky.babelTypes.mod.ClassPrivateMethod_
+  - typingsSlinky.babelTypes.mod.StaticBlock_
   - typingsSlinky.babelTypes.mod.TSModuleBlock_
 */
 trait BlockParent extends _Node
@@ -79,6 +81,13 @@ object BlockParent {
     `type`: ObjectMethod
   ): BlockParent = {
     val __obj = js.Dynamic.literal(async = async.asInstanceOf[js.Any], body = body.asInstanceOf[js.Any], computed = computed.asInstanceOf[js.Any], generator = generator.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[BlockParent]
+  }
+  
+  @scala.inline
+  def StaticBlock_(body: js.Array[Statement], `type`: StaticBlock): BlockParent = {
+    val __obj = js.Dynamic.literal(body = body.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[BlockParent]
   }

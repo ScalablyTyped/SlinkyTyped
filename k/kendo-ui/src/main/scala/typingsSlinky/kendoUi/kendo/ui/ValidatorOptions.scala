@@ -21,13 +21,13 @@ trait ValidatorOptions extends js.Object {
   
   var validateOnBlur: js.UndefOr[Boolean] = js.native
   
-  var validationSummary: Boolean | ValidationSummary = js.native
+  var validationSummary: js.UndefOr[Boolean | ValidationSummary] = js.native
 }
 object ValidatorOptions {
   
   @scala.inline
-  def apply(validationSummary: Boolean | ValidationSummary): ValidatorOptions = {
-    val __obj = js.Dynamic.literal(validationSummary = validationSummary.asInstanceOf[js.Any])
+  def apply(): ValidatorOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ValidatorOptions]
   }
   
@@ -45,9 +45,6 @@ object ValidatorOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setValidationSummary(value: Boolean | ValidationSummary): Self = this.set("validationSummary", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setErrorTemplate(value: String): Self = this.set("errorTemplate", value.asInstanceOf[js.Any])
@@ -90,5 +87,11 @@ object ValidatorOptions {
     
     @scala.inline
     def deleteValidateOnBlur: Self = this.set("validateOnBlur", js.undefined)
+    
+    @scala.inline
+    def setValidationSummary(value: Boolean | ValidationSummary): Self = this.set("validationSummary", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValidationSummary: Self = this.set("validationSummary", js.undefined)
   }
 }

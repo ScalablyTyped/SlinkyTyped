@@ -19,7 +19,11 @@ class PostmsgTransport protected () extends js.Object {
   
   var flush: js.Any = js.native
   
-  var getWindow: js.Any = js.native
+  var getCurrentFrames: js.Any = js.native
+  
+  var getFrames: js.Any = js.native
+  
+  var getLocalFrame: js.Any = js.native
   
   var handleEvent: js.Any = js.native
   

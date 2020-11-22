@@ -9,6 +9,7 @@ trait MapNotesLayerProperties
   extends LayerProperties
      with PortalLayerProperties
      with ScaleRangeLayerProperties
+     with BlendLayerProperties
 object MapNotesLayerProperties {
   
   @scala.inline

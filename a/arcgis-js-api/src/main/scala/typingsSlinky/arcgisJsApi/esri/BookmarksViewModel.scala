@@ -29,29 +29,29 @@ trait BookmarksViewModel
     * Creates a new bookmark from based on the [BookmarkCreationOptions](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#createBookmark)
-    *
-    * @param bookmarkCreationOptions Specifies how new bookmarks will be created. Can be used to enable/disable taking screenshots or capturing the extent when a new bookmark is added.
-    *
     */
   def createBookmark(): js.Promise[Bookmark] = js.native
   def createBookmark(bookmarkCreationOptions: BookmarkCreationOptions): js.Promise[Bookmark] = js.native
   
   /**
+    * Edits the given bookmark.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#editBookmark)
+    */
+  def editBookmark(bookmark: Bookmark): js.Promise[Bookmark] = js.native
+  def editBookmark(bookmark: Bookmark, bookmarkCreationOptions: BookmarkCreationOptions): js.Promise[Bookmark] = js.native
+  
+  /**
     * Zoom to a specific bookmark.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#goTo)
-    *
-    * @param Bookmark The bookmark to zoom to.
-    *
     */
-  def goTo(Bookmark: Bookmark): js.Promise[_] = js.native
+  def goTo(bookmark: Bookmark): js.Promise[_] = js.native
   
   /**
     * The view model's state.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#state)
-    *
-    * @default ready
     */
   val state: loading | ready = js.native
   

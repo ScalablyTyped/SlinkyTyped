@@ -1,6 +1,6 @@
 package typingsSlinky.reactDates.anon
 
-import typingsSlinky.reactDates.mod.momentPropTypes.momentObj
+import typingsSlinky.moment.mod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EndDate extends js.Object {
   
-  var endDate: momentObj | Null = js.native
+  var endDate: Moment | Null = js.native
   
-  var startDate: momentObj | Null = js.native
+  var startDate: Moment | Null = js.native
 }
 object EndDate {
   
@@ -36,13 +36,13 @@ object EndDate {
     }
     
     @scala.inline
-    def setEndDate(value: momentObj): Self = this.set("endDate", value.asInstanceOf[js.Any])
+    def setEndDate(value: Moment): Self = this.set("endDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setEndDateNull: Self = this.set("endDate", null)
     
     @scala.inline
-    def setStartDate(value: momentObj): Self = this.set("startDate", value.asInstanceOf[js.Any])
+    def setStartDate(value: Moment): Self = this.set("startDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStartDateNull: Self = this.set("startDate", null)

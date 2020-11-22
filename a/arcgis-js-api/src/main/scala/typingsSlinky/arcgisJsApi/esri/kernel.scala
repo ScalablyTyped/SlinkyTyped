@@ -9,13 +9,6 @@ trait kernel extends js.Object {
   
   /**
     * Current version of the ArcGIS API for JavaScript.
-    * ```js
-    * require([
-    *   "esri/kernel"
-    * ], function(esriNS) {
-    *   console.log(esriNS.version);
-    * });
-    * ```
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-kernel.html#version)
     */

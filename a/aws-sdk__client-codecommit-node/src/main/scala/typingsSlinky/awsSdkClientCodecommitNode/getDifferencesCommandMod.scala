@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientCodecommitNode.inputTypesUnionMod.InputTypesUni
 import typingsSlinky.awsSdkClientCodecommitNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientCodecommitNode.typesGetDifferencesInputMod.GetDifferencesInput
 import typingsSlinky.awsSdkClientCodecommitNode.typesGetDifferencesOutputMod.GetDifferencesOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object getDifferencesCommandMod extends js.Object {
           GetDifferencesInput, 
           OutputTypesUnion, 
           GetDifferencesOutput, 
-          CodeCommitResolvedConfiguration, 
-          Readable
+          CodeCommitResolvedConfiguration
         ] {
     def this(input: GetDifferencesInput) = this()
     
-    val middlewareStack: MiddlewareStack[GetDifferencesInput, GetDifferencesOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetDifferencesInput, GetDifferencesOutput] = js.native
   }

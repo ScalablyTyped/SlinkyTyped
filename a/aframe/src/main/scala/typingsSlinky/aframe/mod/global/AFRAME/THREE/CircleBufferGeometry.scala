@@ -6,5 +6,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSGlobal("AFRAME.THREE.CircleBufferGeometry")
 @js.native
+/**
+	 * @param [radius=1]
+	 * @param [segments=8]
+	 * @param [thetaStart=0]
+	 * @param [thetaLength=Math.PI * 2]
+	 */
 class CircleBufferGeometry ()
   extends typingsSlinky.three.mod.CircleBufferGeometry

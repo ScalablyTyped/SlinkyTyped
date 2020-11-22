@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object cardLinkMod {
   
-  type CardLink[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.cardLinkMod.CardLinkProps]
+  type CardLink = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.cardLinkMod.CardLinkProps]
 }

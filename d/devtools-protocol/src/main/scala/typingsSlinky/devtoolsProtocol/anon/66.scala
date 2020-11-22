@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.DOMDebugger.SetXHRBreakpointRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOMDebugger.SetDOMBreakpointRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `66` extends js.Object {
   
-  var paramsType: js.Array[SetXHRBreakpointRequest] = js.native
+  var paramsType: js.Array[SetDOMBreakpointRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `66` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetXHRBreakpointRequest], returnType: Unit): `66` = {
+  def apply(paramsType: js.Array[SetDOMBreakpointRequest], returnType: Unit): `66` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`66`]
   }
@@ -36,10 +36,10 @@ object `66` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetXHRBreakpointRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetDOMBreakpointRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetXHRBreakpointRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetDOMBreakpointRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

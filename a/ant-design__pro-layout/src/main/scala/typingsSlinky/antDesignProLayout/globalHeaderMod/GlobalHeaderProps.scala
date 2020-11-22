@@ -1,7 +1,10 @@
 package typingsSlinky.antDesignProLayout.globalHeaderMod
 
+import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
+import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.mix
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.realDark
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.side
@@ -36,6 +39,8 @@ trait GlobalHeaderProps extends js.Object {
   
   var headerHeight: js.UndefOr[Double] = js.native
   
+  var headerTheme: js.UndefOr[MenuTheme] = js.native
+  
   var iconfontUrl: js.UndefOr[String] = js.native
   
   var isMobile: js.UndefOr[Boolean] = js.native
@@ -69,6 +74,8 @@ trait GlobalHeaderProps extends js.Object {
   
   var onCollapse: js.UndefOr[js.Function1[/* collapsed */ Boolean, Unit]] = js.native
   
+  var onMenuHeaderClick: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLDivElement], Unit]] = js.native
+  
   var prefixCls: js.UndefOr[String] = js.native
   
   var primaryColor: js.UndefOr[String] = js.native
@@ -79,7 +86,7 @@ trait GlobalHeaderProps extends js.Object {
   
   var style: js.UndefOr[CSSProperties] = js.native
   
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String | `false`] = js.native
 }
 object GlobalHeaderProps {
   
@@ -154,6 +161,12 @@ object GlobalHeaderProps {
     
     @scala.inline
     def deleteHeaderHeight: Self = this.set("headerHeight", js.undefined)
+    
+    @scala.inline
+    def setHeaderTheme(value: MenuTheme): Self = this.set("headerTheme", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderTheme: Self = this.set("headerTheme", js.undefined)
     
     @scala.inline
     def setIconfontUrl(value: String): Self = this.set("iconfontUrl", value.asInstanceOf[js.Any])
@@ -243,6 +256,12 @@ object GlobalHeaderProps {
     def deleteOnCollapse: Self = this.set("onCollapse", js.undefined)
     
     @scala.inline
+    def setOnMenuHeaderClick(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMenuHeaderClick", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnMenuHeaderClick: Self = this.set("onMenuHeaderClick", js.undefined)
+    
+    @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -276,7 +295,7 @@ object GlobalHeaderProps {
     def deleteStyle: Self = this.set("style", js.undefined)
     
     @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: String | `false`): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)

@@ -1,8 +1,6 @@
 package typingsSlinky.popmotionPose
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
-import typingsSlinky.popmotion.mod.Action_
 import typingsSlinky.popmotionEasing.mod.Easing
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +12,12 @@ object lookupsMod extends js.Object {
   
   @js.native
   object animationLookup
-    extends /* key */ StringDictionary[js.Function1[/* props */ StringDictionary[js.Any], Action_[ColdSubscription]]]
+    extends /* key */ StringDictionary[
+          js.Function1[
+            /* props */ StringDictionary[js.Any], 
+            /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Action */ _
+          ]
+        ]
   
   @js.native
   object easingLookup extends js.Object {

@@ -13,23 +13,27 @@ import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.FlowType, 'type'> */
+@js.native
 trait MemberTypeAnnotation
   extends ASTNode
      with FlowKind
      with FlowTypeKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `object`: IdentifierKind
-  var property: MemberTypeAnnotationKind | GenericTypeAnnotationKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.MemberTypeAnnotation
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var `object`: IdentifierKind = js.native
+  
+  var property: MemberTypeAnnotationKind | GenericTypeAnnotationKind = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.MemberTypeAnnotation = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.MemberTypeAnnotation")
 @js.native
 object MemberTypeAnnotation extends TopLevel[Type[MemberTypeAnnotation]]
-

@@ -13,7 +13,7 @@ trait ListTagsForResourceRequest extends js.Object {
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.organizationsMod.NextToken] = js.native
   
   /**
-    * The ID of the resource that you want to retrieve tags for. 
+    * The ID of the resource with the tags to list. You can specify any of the following taggable resources.   AWS account – specify the account ID number.   Organizational unit – specify the OU ID that begins with ou- and looks similar to: ou-1a2b-34uvwxyz     Root – specify the root ID that begins with r- and looks similar to: r-1a2b     Policy – specify the policy ID that begins with p- andlooks similar to: p-12abcdefg3    
     */
   var ResourceId: TaggableResourceId = js.native
 }

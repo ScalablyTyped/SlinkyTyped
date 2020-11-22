@@ -16,8 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object skinnedMeshMod extends js.Object {
   
   @js.native
-  class SkinnedMesh[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: Material | js.Array[Material] */] ()
-    extends Mesh[Geometry | BufferGeometry, Material | js.Array[Material]] {
+  class SkinnedMesh[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: Material | js.Array[Material] */] () extends Mesh[TGeometry, TMaterial] {
     def this(geometry: TGeometry) = this()
     def this(geometry: TGeometry, material: TMaterial) = this()
     def this(geometry: js.UndefOr[scala.Nothing], material: TMaterial) = this()

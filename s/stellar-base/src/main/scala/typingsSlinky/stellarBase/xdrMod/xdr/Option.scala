@@ -25,5 +25,13 @@ trait Option extends js.Object {
   
   def toXDR(value: js.Any): Buffer = js.native
   
+  def validateXDR(input: Buffer): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_base64(input: String, format: base64): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_hex(input: String, format: hex): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_raw(input: Buffer, format: raw): Boolean = js.native
+  
   def write(value: js.Any, io: Buffer): Unit = js.native
 }

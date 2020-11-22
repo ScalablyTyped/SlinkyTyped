@@ -1,6 +1,7 @@
 package typingsSlinky.wechatMiniprogram.global
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.GetCurrentPages
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,5 +14,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("getCurrentPages")
 @js.native
-object getCurrentPages
-  extends TopLevel[typingsSlinky.wechatMiniprogram.WechatMiniprogram.Page.getCurrentPages]
+object getCurrentPages extends TopLevel[GetCurrentPages]

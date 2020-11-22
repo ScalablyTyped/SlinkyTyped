@@ -1,5 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.devtools.panels
 
+import org.scalajs.dom.raw.Window
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
 import typingsSlinky.firefoxWebextBrowser.browser.manifest.ExtensionURL
 import scala.scalajs.js
@@ -11,8 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ExtensionSidebarPane extends js.Object {
   
   /**
-    * Fired when the sidebar pane becomes hidden as a result of the user switching away from the panel that hosts
-    * the sidebar pane.
+    * Fired when the sidebar pane becomes hidden as a result of the user switching away from the panel that hosts the sidebar pane.
     */
   var onHidden: WebExtEvent[js.Function0[Unit]] = js.native
   
@@ -20,12 +20,11 @@ trait ExtensionSidebarPane extends js.Object {
     * Fired when the sidebar pane becomes visible as a result of user switching to the panel that hosts it.
     * @param window The JavaScript `window` object of the sidebar page, if one was set with the `setPage()` method.
     */
-  var onShown: WebExtEvent[js.Function1[/* window */ js.Object, Unit]] = js.native
+  var onShown: WebExtEvent[js.Function1[/* window */ Window, Unit]] = js.native
   
   /**
     * Sets an expression that is evaluated within the inspected page. The result is displayed in the sidebar pane.
-    * @param expression An expression to be evaluated in context of the inspected page. JavaScript objects and DOM
-    *     nodes are displayed in an expandable tree similar to the console/watch.
+    * @param expression An expression to be evaluated in context of the inspected page. JavaScript objects and DOM nodes are displayed in an expandable tree similar to the console/watch.
     * @param [rootTitle] An optional title for the root of the expression tree.
     */
   def setExpression(expression: String): js.Promise[Unit] = js.native
@@ -40,8 +39,7 @@ trait ExtensionSidebarPane extends js.Object {
   
   /**
     * Sets a JSON-compliant object to be displayed in the sidebar pane.
-    * @param jsonObject An object to be displayed in context of the inspected page. Evaluated in the context of
-    *     the caller (API client).
+    * @param jsonObject An object to be displayed in context of the inspected page. Evaluated in the context of the caller (API client).
     * @param [rootTitle] An optional title for the root of the expression tree.
     */
   def setObject(jsonObject: String): js.Promise[Unit] = js.native

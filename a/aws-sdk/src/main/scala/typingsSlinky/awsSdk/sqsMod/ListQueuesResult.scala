@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListQueuesResult extends js.Object {
   
   /**
-    * Pagination token to include in the next request.
+    * Pagination token to include in the next request. Token value is null if there are no additional results to request, or if you did not set MaxResults in the request.
     */
   var NextToken: js.UndefOr[Token] = js.native
   

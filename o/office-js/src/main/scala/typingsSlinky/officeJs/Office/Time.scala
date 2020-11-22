@@ -65,6 +65,8 @@ trait Time extends js.Object {
     *
     * The time must be in UTC; you can get the correct UTC time by using the `convertToUtcClientTime` method.
     *
+    * **Important**: In the Windows client, you can't use this function to update the start or end of a recurrence.
+    *
     * [Api set: Mailbox 1.1]
     *
     * @remarks
@@ -84,7 +86,6 @@ trait Time extends js.Object {
     *               type `Office.AsyncResult`. If setting the date and time fails, the `asyncResult.error` property will contain an error code.
     */
   def setAsync(dateTime: js.Date): Unit = js.native
-  def setAsync(dateTime: js.Date, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def setAsync(
     dateTime: js.Date,
     options: js.UndefOr[scala.Nothing],

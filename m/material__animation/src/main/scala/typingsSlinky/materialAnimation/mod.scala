@@ -18,6 +18,10 @@ object mod extends js.Object {
   def getCorrectPropertyName(windowObj: Window, cssProperty: StandardCssPropertyName): StandardCssPropertyName | PrefixedCssPropertyName = js.native
   
   @js.native
+  class AnimationFrame ()
+    extends typingsSlinky.materialAnimation.animationframeMod.AnimationFrame
+  
+  @js.native
   object util extends js.Object {
     
     def getCorrectEventName(windowObj: Window, eventType: StandardJsEventType): StandardJsEventType | PrefixedJsEventType = js.native

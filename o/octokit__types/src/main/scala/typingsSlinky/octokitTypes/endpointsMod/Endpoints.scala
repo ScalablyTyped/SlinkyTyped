@@ -1,7 +1,9 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
 import typingsSlinky.octokitTypes.anon.Parameters
+import typingsSlinky.octokitTypes.anon.ParametersActionsAddRepoAccessToSelfHostedRunnerGroupInOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsAddSelectedRepoToOrgSecretEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsAddSelfHostedRunnerToGroupForOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsCancelWorkflowRunEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsCreateOrUpdateOrgSecretEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsCreateOrUpdateRepoSecretEndpoint
@@ -9,12 +11,14 @@ import typingsSlinky.octokitTypes.anon.ParametersActionsCreateRegistrationTokenF
 import typingsSlinky.octokitTypes.anon.ParametersActionsCreateRegistrationTokenForRepoEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsCreateRemoveTokenForOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsCreateRemoveTokenForRepoEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsCreateSelfHostedRunnerGroupForOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsCreateWorkflowDispatchEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsDeleteArtifactEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsDeleteOrgSecretEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsDeleteRepoSecretEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsDeleteSelfHostedRunnerFromOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsDeleteSelfHostedRunnerFromRepoEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsDeleteSelfHostedRunnerGroupFromOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsDeleteWorkflowRunEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsDeleteWorkflowRunLogsEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsDownloadArtifactEndpoint
@@ -28,6 +32,7 @@ import typingsSlinky.octokitTypes.anon.ParametersActionsGetRepoPublicKeyEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsGetRepoSecretEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsGetSelfHostedRunnerForOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsGetSelfHostedRunnerForRepoEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsGetSelfHostedRunnerGroupForOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsGetWorkflowEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsGetWorkflowRunEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsGetWorkflowRunUsageEndpoint
@@ -35,19 +40,27 @@ import typingsSlinky.octokitTypes.anon.ParametersActionsGetWorkflowUsageEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListArtifactsForRepoEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListJobsForWorkflowRunEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListOrgSecretsEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsListRepoAccessToSelfHostedRunnerGroupInOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListRepoSecretsEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListRepoWorkflowsEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListRunnerApplicationsForOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListRunnerApplicationsForRepoEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListSelectedReposForOrgSecretEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsListSelfHostedRunnerGroupsForOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListSelfHostedRunnersForOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListSelfHostedRunnersForRepoEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsListSelfHostedRunnersInGroupForOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListWorkflowRunArtifactsEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListWorkflowRunsEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsListWorkflowRunsForRepoEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsReRunWorkflowEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsRemoveSelectedRepoFromOrgSecretEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsRemoveSelfHostedRunnerFromGroupForOrgEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsSetRepoAccessToSelfHostedRunnerGroupInOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActionsSetSelectedReposForOrgSecretEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsSetSelfHostedRunnersInGroupForOrgEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersActionsUpdateSelfHostedRunnerGroupForOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActivityCheckRepoIsStarredByAuthenticatedUserEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActivityDeleteRepoSubscriptionEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersActivityDeleteThreadSubscriptionEndpoint
@@ -108,13 +121,10 @@ import typingsSlinky.octokitTypes.anon.ParametersAppsResetAuthorizationEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersAppsResetTokenEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersAppsRevokeInstallationAccessTokenEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersAppsSuspendInstallationEndpoint
-import typingsSlinky.octokitTypes.anon.ParametersBillingGetGithubActionsBillingGheEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersBillingGetGithubActionsBillingOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersBillingGetGithubActionsBillingUserEndpoint
-import typingsSlinky.octokitTypes.anon.ParametersBillingGetGithubPackagesBillingGheEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersBillingGetGithubPackagesBillingOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersBillingGetGithubPackagesBillingUserEndpoint
-import typingsSlinky.octokitTypes.anon.ParametersBillingGetSharedStorageBillingGheEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersBillingGetSharedStorageBillingOrgEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersBillingGetSharedStorageBillingUserEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersChecksCreateEndpoint
@@ -128,24 +138,53 @@ import typingsSlinky.octokitTypes.anon.ParametersChecksListSuitesForRefEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersChecksRerequestSuiteEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersChecksSetSuitesPreferencesEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersChecksUpdateEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersCodeScanningGetAlertDeprecatedAlertIdEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersCodeScanningGetAlertEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersCodeScanningListAlertsForRepoEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersCodeScanningListRecentAnalysesEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersCodeScanningUpdateAlertEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersCodeScanningUploadSarifEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersCodesOfConductGetAllCodesOfConductEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersCodesOfConductGetConductCodeEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersCodesOfConductGetForRepoEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEmojisGetEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminAddSelfHostedRunnerToRunnerGroupForEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminCreateRegistrationTokenForEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminCreateRemoveTokenForEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminDeleteScimGroupFromEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminDeleteUserFromEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminGetGithubActionsBillingGheDeprecatedEnterpriseIdEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminGetGithubActionsBillingGheEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminGetGithubPackagesBillingGheDeprecatedEnterpriseIdEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminGetGithubPackagesBillingGheEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminGetProvisioningInformationForEnterpriseGroupEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminGetProvisioningInformationForEnterpriseUserEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminGetSelfHostedRunnerForEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminGetSharedStorageBillingGheDeprecatedEnterpriseIdEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminGetSharedStorageBillingGheEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminListProvisionedGroupsEnterpriseEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminListProvisionedIdentitiesEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminListRunnerApplicationsForEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminListSelfHostedRunnersForEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminProvisionAndInviteEnterpriseGroupEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminProvisionAndInviteEnterpriseUserEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminSetInformationForProvisionedEnterpriseGroupEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminSetInformationForProvisionedEnterpriseUserEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminSetSelfHostedInGroupForEnterpriseEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminUpdateAttributeForEnterpriseGroupEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminUpdateAttributeForEnterpriseUserEndpoint
+import typingsSlinky.octokitTypes.anon.ParametersEnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersGistsCheckIsStarredEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersGistsCreateCommentEndpoint
 import typingsSlinky.octokitTypes.anon.ParametersGistsCreateEndpoint
@@ -687,6 +726,30 @@ trait Endpoints extends js.Object {
   var `DELETE SlashauthorizationsSlashColonauthorization_id`: ParametersOauthAuthorizationsDeleteAuthorizationEndpoint = js.native
   
   /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#delete-a-self-hosted-runner-group-from-an-enterprise
+    */
+  @JSName("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id")
+  var `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: ParametersEnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#remove-organization-access-to-a-self-hosted-runner-group-in-an-enterprise
+    */
+  @JSName("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations/:org_id")
+  var `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`: ParametersEnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#remove-a-self-hosted-runner-from-a-group-for-an-enterprise
+    */
+  @JSName("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners/:runner_id")
+  var `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: ParametersEnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#delete-self-hosted-runner-from-an-enterprise
+    */
+  @JSName("DELETE /enterprises/:enterprise/actions/runners/:runner_id")
+  var `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`: ParametersEnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseEndpoint = js.native
+  
+  /**
     * @see https://developer.github.com/v3/gists/#delete-a-gist
     */
   @JSName("DELETE /gists/:gist_id")
@@ -715,6 +778,24 @@ trait Endpoints extends js.Object {
     */
   @JSName("DELETE /notifications/threads/:thread_id/subscription")
   var `DELETE SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`: ParametersActivityDeleteThreadSubscriptionEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#delete-a-self-hosted-runner-group-from-an-organization
+    */
+  @JSName("DELETE /orgs/:org/actions/runner-groups/:runner_group_id")
+  var `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: ParametersActionsDeleteSelfHostedRunnerGroupFromOrgEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#remove-repository-access-to-a-self-hosted-runner-group-in-an-organization
+    */
+  @JSName("DELETE /orgs/:org/actions/runner-groups/:runner_group_id/repositories/:repository_id")
+  var `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`: ParametersActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#remove-a-self-hosted-runner-from-a-group-for-an-organization
+    */
+  @JSName("DELETE /orgs/:org/actions/runner-groups/:runner_group_id/runners/:runner_id")
+  var `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: ParametersActionsRemoveSelfHostedRunnerFromGroupForOrgEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/actions/self-hosted-runners/#delete-a-self-hosted-runner-from-an-organization
@@ -1341,22 +1422,85 @@ trait Endpoints extends js.Object {
   var `GET Slashemojis`: ParametersEmojisGetEndpoint = js.native
   
   /**
-    * @see https://developer.github.com/v3/billing/#get-github-actions-billing-for-an-enterprise
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#list-self-hosted-runner-groups-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runner-groups")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`: ParametersEnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#get-a-self-hosted-runner-group-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: ParametersEnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#list-organization-access-to-a-self-hosted-runner-group-in-a-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`: ParametersEnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#list-self-hosted-runners-in-a-group-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: ParametersEnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#list-self-hosted-runners-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runners")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`: ParametersEnterpriseAdminListSelfHostedRunnersForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#get-a-self-hosted-runner-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runners/:runner_id")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`: ParametersEnterpriseAdminGetSelfHostedRunnerForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#list-runner-applications-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runners/downloads")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`: ParametersEnterpriseAdminListRunnerApplicationsForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/billing/#get-github-actions-billing-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/settings/billing/actions")
+  var `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions`: ParametersEnterpriseAdminGetGithubActionsBillingGheEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/billing/#get-github-packages-billing-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/settings/billing/packages")
+  var `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages`: ParametersEnterpriseAdminGetGithubPackagesBillingGheEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/billing/#get-shared-storage-billing-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/settings/billing/shared-storage")
+  var `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage`: ParametersEnterpriseAdminGetSharedStorageBillingGheEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/billing/#get-github-actions-billing-for-an-enterprise
+    * @deprecated "enterprise_id" is deprecated, use "enterprise" instead
     */
   @JSName("GET /enterprises/:enterprise_id/settings/billing/actions")
-  var `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions`: ParametersBillingGetGithubActionsBillingGheEndpoint = js.native
+  var `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions`: ParametersEnterpriseAdminGetGithubActionsBillingGheDeprecatedEnterpriseIdEndpoint = js.native
   
   /**
-    * @see https://developer.github.com/v3/billing/#get-github-packages-billing-for-an-enterprise
+    * @see https://developer.github.com/v3/enterprise-admin/billing/#get-github-packages-billing-for-an-enterprise
+    * @deprecated "enterprise_id" is deprecated, use "enterprise" instead
     */
   @JSName("GET /enterprises/:enterprise_id/settings/billing/packages")
-  var `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages`: ParametersBillingGetGithubPackagesBillingGheEndpoint = js.native
+  var `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages`: ParametersEnterpriseAdminGetGithubPackagesBillingGheDeprecatedEnterpriseIdEndpoint = js.native
   
   /**
-    * @see https://developer.github.com/v3/billing/#get-shared-storage-billing-for-an-enterprise
+    * @see https://developer.github.com/v3/enterprise-admin/billing/#get-shared-storage-billing-for-an-enterprise
+    * @deprecated "enterprise_id" is deprecated, use "enterprise" instead
     */
   @JSName("GET /enterprises/:enterprise_id/settings/billing/shared-storage")
-  var `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage`: ParametersBillingGetSharedStorageBillingGheEndpoint = js.native
+  var `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage`: ParametersEnterpriseAdminGetSharedStorageBillingGheDeprecatedEnterpriseIdEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/activity/events/#list-public-events
@@ -1543,6 +1687,30 @@ trait Endpoints extends js.Object {
     */
   @JSName("GET /orgs/:org")
   var `GET SlashorgsSlashColonorg`: ParametersOrgsGetEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#list-self-hosted-runner-groups-for-an-organization
+    */
+  @JSName("GET /orgs/:org/actions/runner-groups")
+  var `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`: ParametersActionsListSelfHostedRunnerGroupsForOrgEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#get-a-self-hosted-runner-group-for-an-organization
+    */
+  @JSName("GET /orgs/:org/actions/runner-groups/:runner_group_id")
+  var `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: ParametersActionsGetSelfHostedRunnerGroupForOrgEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#list-repository-access-to-a-self-hosted-runner-group-in-an-organization
+    */
+  @JSName("GET /orgs/:org/actions/runner-groups/:runner_group_id/repositories")
+  var `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`: ParametersActionsListRepoAccessToSelfHostedRunnerGroupInOrgEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#list-self-hosted-runners-in-a-group-for-an-organization
+    */
+  @JSName("GET /orgs/:org/actions/runner-groups/:runner_group_id/runners")
+  var `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: ParametersActionsListSelfHostedRunnersInGroupForOrgEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/actions/self-hosted-runners/#list-self-hosted-runners-for-an-organization
@@ -2158,9 +2326,22 @@ trait Endpoints extends js.Object {
   
   /**
     * @see https://developer.github.com/v3/code-scanning/#get-a-code-scanning-alert
+    * @deprecated "alert_id" is deprecated, use "alert_number" instead
     */
   @JSName("GET /repos/:owner/:repo/code-scanning/alerts/:alert_id")
-  var `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`: ParametersCodeScanningGetAlertEndpoint = js.native
+  var `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`: ParametersCodeScanningGetAlertDeprecatedAlertIdEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/code-scanning/#get-a-code-scanning-alert
+    */
+  @JSName("GET /repos/:owner/:repo/code-scanning/alerts/:alert_number")
+  var `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`: ParametersCodeScanningGetAlertEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/code-scanning/#list-recent-analyses
+    */
+  @JSName("GET /repos/:owner/:repo/code-scanning/analyses")
+  var `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`: ParametersCodeScanningListRecentAnalysesEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/repos/collaborators/#list-repository-collaborators
@@ -3297,6 +3478,12 @@ trait Endpoints extends js.Object {
   var `PATCH SlashauthorizationsSlashColonauthorization_id`: ParametersOauthAuthorizationsUpdateAuthorizationEndpoint = js.native
   
   /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#update-a-self-hosted-runner-group-for-an-enterprise
+    */
+  @JSName("PATCH /enterprises/:enterprise/actions/runner-groups/:runner_group_id")
+  var `PATCH SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: ParametersEnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseEndpoint = js.native
+  
+  /**
     * @see https://developer.github.com/v3/gists/#update-a-gist
     */
   @JSName("PATCH /gists/:gist_id")
@@ -3319,6 +3506,12 @@ trait Endpoints extends js.Object {
     */
   @JSName("PATCH /orgs/:org")
   var `PATCH SlashorgsSlashColonorg`: ParametersOrgsUpdateEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#update-a-self-hosted-runner-group-for-an-organization
+    */
+  @JSName("PATCH /orgs/:org/actions/runner-groups/:runner_group_id")
+  var `PATCH SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: ParametersActionsUpdateSelfHostedRunnerGroupForOrgEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/orgs/hooks/#update-an-organization-webhook
@@ -3397,6 +3590,12 @@ trait Endpoints extends js.Object {
     */
   @JSName("PATCH /repos/:owner/:repo/check-suites/preferences")
   var `PATCH SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashpreferences`: ParametersChecksSetSuitesPreferencesEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/code-scanning/#upload-a-code-scanning-alert
+    */
+  @JSName("PATCH /repos/:owner/:repo/code-scanning/alerts/:alert_number")
+  var `PATCH SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`: ParametersCodeScanningUpdateAlertEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/repos/comments/#update-a-commit-comment
@@ -3591,6 +3790,24 @@ trait Endpoints extends js.Object {
   var `POST Slashcontent_referencesSlashColoncontent_reference_idSlashattachments`: ParametersAppsCreateContentAttachmentEndpoint = js.native
   
   /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#create-self-hosted-runner-group-for-an-enterprise
+    */
+  @JSName("POST /enterprises/:enterprise/actions/runner-groups")
+  var `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`: ParametersEnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#create-a-registration-token-for-an-enterprise
+    */
+  @JSName("POST /enterprises/:enterprise/actions/runners/registration-token")
+  var `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashregistration-token`: ParametersEnterpriseAdminCreateRegistrationTokenForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#create-a-remove-token-for-an-enterprise
+    */
+  @JSName("POST /enterprises/:enterprise/actions/runners/remove-token")
+  var `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashremove-token`: ParametersEnterpriseAdminCreateRemoveTokenForEnterpriseEndpoint = js.native
+  
+  /**
     * @see https://developer.github.com/v3/gists/#create-a-gist
     */
   @JSName("POST /gists")
@@ -3619,6 +3836,12 @@ trait Endpoints extends js.Object {
     */
   @JSName("POST /markdown/raw")
   var `POST SlashmarkdownSlashraw`: ParametersMarkdownRenderRawEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#create-a-self-hosted-runner-group-for-an-organization
+    */
+  @JSName("POST /orgs/:org/actions/runner-groups")
+  var `POST SlashorgsSlashColonorgSlashactionsSlashrunner-groups`: ParametersActionsCreateSelfHostedRunnerGroupForOrgEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/actions/self-hosted-runners/#create-a-registration-token-for-an-organization
@@ -3805,6 +4028,12 @@ trait Endpoints extends js.Object {
     */
   @JSName("POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest")
   var `POST SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashrerequest`: ParametersChecksRerequestSuiteEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/code-scanning/#upload-a-sarif-analysis
+    */
+  @JSName("POST /repos/:owner/:repo/code-scanning/sarifs")
+  var `POST SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashsarifs`: ParametersCodeScanningUploadSarifEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/reactions/#create-reaction-for-a-commit-comment
@@ -4137,6 +4366,30 @@ trait Endpoints extends js.Object {
   var `PUT SlashauthorizationsSlashclientsSlashColonclient_idSlashColonfingerprint`: ParametersOauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintEndpoint = js.native
   
   /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#set-organization-access-to-a-self-hosted-runner-group-in-an-enterprise
+    */
+  @JSName("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations")
+  var `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`: ParametersEnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#add-organization-access-to-a-self-hosted-runner-group-in-an-enterprise
+    */
+  @JSName("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations/:org_id")
+  var `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`: ParametersEnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#set-self-hosted-runners-in-a-group-for-an-enterprise
+    */
+  @JSName("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners")
+  var `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: ParametersEnterpriseAdminSetSelfHostedInGroupForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#add-a-self-hosted-runner-to-a-group-for-an-enterprise
+    */
+  @JSName("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners/:runner_id")
+  var `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: ParametersEnterpriseAdminAddSelfHostedRunnerToRunnerGroupForEnterpriseEndpoint = js.native
+  
+  /**
     * @see https://developer.github.com/v3/gists/#star-a-gist
     */
   @JSName("PUT /gists/:gist_id/star")
@@ -4153,6 +4406,30 @@ trait Endpoints extends js.Object {
     */
   @JSName("PUT /notifications/threads/:thread_id/subscription")
   var `PUT SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`: ParametersActivitySetThreadSubscriptionEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#set-repository-access-to-a-self-hosted-runner-group-in-an-organization
+    */
+  @JSName("PUT /orgs/:org/actions/runner-groups/:runner_group_id/repositories")
+  var `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`: ParametersActionsSetRepoAccessToSelfHostedRunnerGroupInOrgEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#add-repository-acess-to-a-self-hosted-runner-group-in-an-organization
+    */
+  @JSName("PUT /orgs/:org/actions/runner-groups/:runner_group_id/repositories/:repository_id")
+  var `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`: ParametersActionsAddRepoAccessToSelfHostedRunnerGroupInOrgEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/sef-hosted-runner-groups/#set-self-hosted-runners-in-a-group-for-an-organization
+    */
+  @JSName("PUT /orgs/:org/actions/runner-groups/:runner_group_id/runners")
+  var `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: ParametersActionsSetSelfHostedRunnersInGroupForOrgEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#add-a-self-hosted-runner-to-a-group-for-an-organization
+    */
+  @JSName("PUT /orgs/:org/actions/runner-groups/:runner_group_id/runners/:runner_id")
+  var `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: ParametersActionsAddSelfHostedRunnerToGroupForOrgEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/actions/secrets/#create-or-update-an-organization-secret
@@ -4436,11 +4713,18 @@ object Endpoints {
     `DELETE SlashapplicationsSlashColonclient_idSlashtokensSlashColonaccess_token`: ParametersRequestResponse,
     `DELETE SlashapplicationsSlashgrantsSlashColongrant_id`: ParametersOauthAuthorizationsDeleteGrantEndpoint,
     `DELETE SlashauthorizationsSlashColonauthorization_id`: ParametersOauthAuthorizationsDeleteAuthorizationEndpoint,
+    `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: ParametersEnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseEndpoint,
+    `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`: ParametersEnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint,
+    `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: ParametersEnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseEndpoint,
+    `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`: ParametersEnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseEndpoint,
     `DELETE SlashgistsSlashColongist_id`: ParametersGistsDeleteEndpoint,
     `DELETE SlashgistsSlashColongist_idSlashcommentsSlashColoncomment_id`: ParametersGistsDeleteCommentEndpoint,
     `DELETE SlashgistsSlashColongist_idSlashstar`: ParametersGistsUnstarEndpoint,
     `DELETE SlashinstallationSlashtoken`: ParametersAppsRevokeInstallationAccessTokenEndpoint,
     `DELETE SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`: ParametersActivityDeleteThreadSubscriptionEndpoint,
+    `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: ParametersActionsDeleteSelfHostedRunnerGroupFromOrgEndpoint,
+    `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`: ParametersActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgEndpoint,
+    `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: ParametersActionsRemoveSelfHostedRunnerFromGroupForOrgEndpoint,
     `DELETE SlashorgsSlashColonorgSlashactionsSlashrunnersSlashColonrunner_id`: ParametersActionsDeleteSelfHostedRunnerFromOrgEndpoint,
     `DELETE SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_name`: ParametersActionsDeleteOrgSecretEndpoint,
     `DELETE SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_nameSlashrepositoriesSlashColonrepository_id`: ParametersActionsRemoveSelectedRepoFromOrgSecretEndpoint,
@@ -4545,9 +4829,19 @@ object Endpoints {
     `GET Slashcodes_of_conduct`: ParametersCodesOfConductGetAllCodesOfConductEndpoint,
     `GET Slashcodes_of_conductSlashColonkey`: ParametersCodesOfConductGetConductCodeEndpoint,
     `GET Slashemojis`: ParametersEmojisGetEndpoint,
-    `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions`: ParametersBillingGetGithubActionsBillingGheEndpoint,
-    `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages`: ParametersBillingGetGithubPackagesBillingGheEndpoint,
-    `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage`: ParametersBillingGetSharedStorageBillingGheEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`: ParametersEnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: ParametersEnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`: ParametersEnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: ParametersEnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`: ParametersEnterpriseAdminListSelfHostedRunnersForEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`: ParametersEnterpriseAdminGetSelfHostedRunnerForEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`: ParametersEnterpriseAdminListRunnerApplicationsForEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions`: ParametersEnterpriseAdminGetGithubActionsBillingGheEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages`: ParametersEnterpriseAdminGetGithubPackagesBillingGheEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage`: ParametersEnterpriseAdminGetSharedStorageBillingGheEndpoint,
+    `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions`: ParametersEnterpriseAdminGetGithubActionsBillingGheDeprecatedEnterpriseIdEndpoint,
+    `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages`: ParametersEnterpriseAdminGetGithubPackagesBillingGheDeprecatedEnterpriseIdEndpoint,
+    `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage`: ParametersEnterpriseAdminGetSharedStorageBillingGheDeprecatedEnterpriseIdEndpoint,
     `GET Slashevents`: ParametersActivityListPublicEventsEndpoint,
     `GET Slashfeeds`: ParametersActivityGetFeedsEndpoint,
     `GET Slashgists`: ParametersGistsListEndpoint,
@@ -4579,6 +4873,10 @@ object Endpoints {
     `GET SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`: ParametersActivityGetThreadSubscriptionForAuthenticatedUserEndpoint,
     `GET Slashorganizations`: ParametersOrgsListEndpoint,
     `GET SlashorgsSlashColonorg`: ParametersOrgsGetEndpoint,
+    `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`: ParametersActionsListSelfHostedRunnerGroupsForOrgEndpoint,
+    `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: ParametersActionsGetSelfHostedRunnerGroupForOrgEndpoint,
+    `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`: ParametersActionsListRepoAccessToSelfHostedRunnerGroupInOrgEndpoint,
+    `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: ParametersActionsListSelfHostedRunnersInGroupForOrgEndpoint,
     `GET SlashorgsSlashColonorgSlashactionsSlashrunners`: ParametersActionsListSelfHostedRunnersForOrgEndpoint,
     `GET SlashorgsSlashColonorgSlashactionsSlashrunnersSlashColonrunner_id`: ParametersActionsGetSelfHostedRunnerForOrgEndpoint,
     `GET SlashorgsSlashColonorgSlashactionsSlashrunnersSlashdownloads`: ParametersActionsListRunnerApplicationsForOrgEndpoint,
@@ -4660,28 +4958,7 @@ object Endpoints {
     `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashsecretsSlashpublic-key`: ParametersActionsGetRepoPublicKeyEndpoint,
     `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflows`: ParametersActionsListRepoWorkflowsEndpoint,
     `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_id`: ParametersActionsGetWorkflowEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_idSlashruns`: ParametersActionsListWorkflowRunsEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_idSlashtiming`: ParametersActionsGetWorkflowUsageEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashassignees`: ParametersIssuesListAssigneesEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashassigneesSlashColonassignee`: ParametersIssuesCheckUserCanBeAssignedEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranches`: ParametersReposListBranchesEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranch`: ParametersReposGetBranchEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotection`: ParametersReposGetBranchProtectionEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashenforce_admins`: ParametersReposGetAdminBranchProtectionEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrequired_pull_request_reviews`: ParametersReposGetPullRequestReviewProtectionEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrequired_signatures`: ParametersReposGetCommitSignatureProtectionEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrequired_status_checks`: ParametersReposGetStatusChecksProtectionEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrequired_status_checksSlashcontexts`: ParametersReposGetAllStatusCheckContextsEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrestrictions`: ParametersReposGetAccessRestrictionsEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrestrictionsSlashapps`: ParametersReposGetAppsWithAccessToProtectedBranchEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrestrictionsSlashteams`: ParametersReposGetTeamsWithAccessToProtectedBranchEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrestrictionsSlashusers`: ParametersReposGetUsersWithAccessToProtectedBranchEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-runsSlashColoncheck_run_id`: ParametersChecksGetEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-runsSlashColoncheck_run_idSlashannotations`: ParametersChecksListAnnotationsEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_id`: ParametersChecksGetSuiteEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashcheck-runs`: ParametersChecksListForSuiteEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`: ParametersCodeScanningListAlertsForRepoEndpoint,
-    `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`: ParametersCodeScanningGetAlertEndpoint
+    `GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_idSlashruns`: ParametersActionsListWorkflowRunsEndpoint
   ): Endpoints = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("DELETE /app/installations/:installation_id")((`DELETE SlashappSlashinstallationsSlashColoninstallation_id`).asInstanceOf[js.Any])
@@ -4692,11 +4969,18 @@ object Endpoints {
     __obj.updateDynamic("DELETE /applications/:client_id/tokens/:access_token")((`DELETE SlashapplicationsSlashColonclient_idSlashtokensSlashColonaccess_token`).asInstanceOf[js.Any])
     __obj.updateDynamic("DELETE /applications/grants/:grant_id")((`DELETE SlashapplicationsSlashgrantsSlashColongrant_id`).asInstanceOf[js.Any])
     __obj.updateDynamic("DELETE /authorizations/:authorization_id")((`DELETE SlashauthorizationsSlashColonauthorization_id`).asInstanceOf[js.Any])
+    __obj.updateDynamic("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id")((`DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`).asInstanceOf[js.Any])
+    __obj.updateDynamic("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations/:org_id")((`DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`).asInstanceOf[js.Any])
+    __obj.updateDynamic("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners/:runner_id")((`DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`).asInstanceOf[js.Any])
+    __obj.updateDynamic("DELETE /enterprises/:enterprise/actions/runners/:runner_id")((`DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`).asInstanceOf[js.Any])
     __obj.updateDynamic("DELETE /gists/:gist_id")((`DELETE SlashgistsSlashColongist_id`).asInstanceOf[js.Any])
     __obj.updateDynamic("DELETE /gists/:gist_id/comments/:comment_id")((`DELETE SlashgistsSlashColongist_idSlashcommentsSlashColoncomment_id`).asInstanceOf[js.Any])
     __obj.updateDynamic("DELETE /gists/:gist_id/star")((`DELETE SlashgistsSlashColongist_idSlashstar`).asInstanceOf[js.Any])
     __obj.updateDynamic("DELETE /installation/token")((`DELETE SlashinstallationSlashtoken`).asInstanceOf[js.Any])
     __obj.updateDynamic("DELETE /notifications/threads/:thread_id/subscription")((`DELETE SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`).asInstanceOf[js.Any])
+    __obj.updateDynamic("DELETE /orgs/:org/actions/runner-groups/:runner_group_id")((`DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`).asInstanceOf[js.Any])
+    __obj.updateDynamic("DELETE /orgs/:org/actions/runner-groups/:runner_group_id/repositories/:repository_id")((`DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`).asInstanceOf[js.Any])
+    __obj.updateDynamic("DELETE /orgs/:org/actions/runner-groups/:runner_group_id/runners/:runner_id")((`DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`).asInstanceOf[js.Any])
     __obj.updateDynamic("DELETE /orgs/:org/actions/runners/:runner_id")((`DELETE SlashorgsSlashColonorgSlashactionsSlashrunnersSlashColonrunner_id`).asInstanceOf[js.Any])
     __obj.updateDynamic("DELETE /orgs/:org/actions/secrets/:secret_name")((`DELETE SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_name`).asInstanceOf[js.Any])
     __obj.updateDynamic("DELETE /orgs/:org/actions/secrets/:secret_name/repositories/:repository_id")((`DELETE SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_nameSlashrepositoriesSlashColonrepository_id`).asInstanceOf[js.Any])
@@ -4801,6 +5085,16 @@ object Endpoints {
     __obj.updateDynamic("GET /codes_of_conduct")((`GET Slashcodes_of_conduct`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /codes_of_conduct/:key")((`GET Slashcodes_of_conductSlashColonkey`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /emojis")((`GET Slashemojis`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runner-groups")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runners")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runners/:runner_id")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runners/downloads")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/settings/billing/actions")((`GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/settings/billing/packages")((`GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/settings/billing/shared-storage")((`GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /enterprises/:enterprise_id/settings/billing/actions")((`GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /enterprises/:enterprise_id/settings/billing/packages")((`GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /enterprises/:enterprise_id/settings/billing/shared-storage")((`GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage`).asInstanceOf[js.Any])
@@ -4835,6 +5129,10 @@ object Endpoints {
     __obj.updateDynamic("GET /notifications/threads/:thread_id/subscription")((`GET SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /organizations")((`GET Slashorganizations`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /orgs/:org")((`GET SlashorgsSlashColonorg`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /orgs/:org/actions/runner-groups")((`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /orgs/:org/actions/runner-groups/:runner_group_id")((`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /orgs/:org/actions/runner-groups/:runner_group_id/repositories")((`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /orgs/:org/actions/runner-groups/:runner_group_id/runners")((`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /orgs/:org/actions/runners")((`GET SlashorgsSlashColonorgSlashactionsSlashrunners`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /orgs/:org/actions/runners/:runner_id")((`GET SlashorgsSlashColonorgSlashactionsSlashrunnersSlashColonrunner_id`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /orgs/:org/actions/runners/downloads")((`GET SlashorgsSlashColonorgSlashactionsSlashrunnersSlashdownloads`).asInstanceOf[js.Any])
@@ -4917,27 +5215,6 @@ object Endpoints {
     __obj.updateDynamic("GET /repos/:owner/:repo/actions/workflows")((`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflows`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /repos/:owner/:repo/actions/workflows/:workflow_id")((`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_id`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /repos/:owner/:repo/actions/workflows/:workflow_id/runs")((`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_idSlashruns`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/actions/workflows/:workflow_id/timing")((`GET SlashreposSlashColonownerSlashColonrepoSlashactionsSlashworkflowsSlashColonworkflow_idSlashtiming`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/assignees")((`GET SlashreposSlashColonownerSlashColonrepoSlashassignees`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/assignees/:assignee")((`GET SlashreposSlashColonownerSlashColonrepoSlashassigneesSlashColonassignee`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranches`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranch`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch/protection")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotection`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch/protection/enforce_admins")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashenforce_admins`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch/protection/required_pull_request_reviews")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrequired_pull_request_reviews`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch/protection/required_signatures")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrequired_signatures`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrequired_status_checks`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch/protection/required_status_checks/contexts")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrequired_status_checksSlashcontexts`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch/protection/restrictions")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrestrictions`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch/protection/restrictions/apps")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrestrictionsSlashapps`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch/protection/restrictions/teams")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrestrictionsSlashteams`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/branches/:branch/protection/restrictions/users")((`GET SlashreposSlashColonownerSlashColonrepoSlashbranchesSlashColonbranchSlashprotectionSlashrestrictionsSlashusers`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/check-runs/:check_run_id")((`GET SlashreposSlashColonownerSlashColonrepoSlashcheck-runsSlashColoncheck_run_id`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/check-runs/:check_run_id/annotations")((`GET SlashreposSlashColonownerSlashColonrepoSlashcheck-runsSlashColoncheck_run_idSlashannotations`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/check-suites/:check_suite_id")((`GET SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_id`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs")((`GET SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashcheck-runs`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/code-scanning/alerts")((`GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`).asInstanceOf[js.Any])
-    __obj.updateDynamic("GET /repos/:owner/:repo/code-scanning/alerts/:alert_id")((`GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`).asInstanceOf[js.Any])
     __obj.asInstanceOf[Endpoints]
   }
   
@@ -4981,6 +5258,18 @@ object Endpoints {
     def `setDELETE SlashauthorizationsSlashColonauthorization_id`(value: ParametersOauthAuthorizationsDeleteAuthorizationEndpoint): Self = this.set("DELETE /authorizations/:authorization_id", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def `setDELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`(value: ParametersEnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseEndpoint): Self = this.set("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setDELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`(value: ParametersEnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint): Self = this.set("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations/:org_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setDELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`(value: ParametersEnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseEndpoint): Self = this.set("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners/:runner_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setDELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`(value: ParametersEnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseEndpoint): Self = this.set("DELETE /enterprises/:enterprise/actions/runners/:runner_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def `setDELETE SlashgistsSlashColongist_id`(value: ParametersGistsDeleteEndpoint): Self = this.set("DELETE /gists/:gist_id", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -4994,6 +5283,15 @@ object Endpoints {
     
     @scala.inline
     def `setDELETE SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`(value: ParametersActivityDeleteThreadSubscriptionEndpoint): Self = this.set("DELETE /notifications/threads/:thread_id/subscription", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setDELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`(value: ParametersActionsDeleteSelfHostedRunnerGroupFromOrgEndpoint): Self = this.set("DELETE /orgs/:org/actions/runner-groups/:runner_group_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setDELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`(value: ParametersActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgEndpoint): Self = this.set("DELETE /orgs/:org/actions/runner-groups/:runner_group_id/repositories/:repository_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setDELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`(value: ParametersActionsRemoveSelfHostedRunnerFromGroupForOrgEndpoint): Self = this.set("DELETE /orgs/:org/actions/runner-groups/:runner_group_id/runners/:runner_id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setDELETE SlashorgsSlashColonorgSlashactionsSlashrunnersSlashColonrunner_id`(value: ParametersActionsDeleteSelfHostedRunnerFromOrgEndpoint): Self = this.set("DELETE /orgs/:org/actions/runners/:runner_id", value.asInstanceOf[js.Any])
@@ -5308,13 +5606,43 @@ object Endpoints {
     def `setGET Slashemojis`(value: ParametersEmojisGetEndpoint): Self = this.set("GET /emojis", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `setGET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions`(value: ParametersBillingGetGithubActionsBillingGheEndpoint): Self = this.set("GET /enterprises/:enterprise_id/settings/billing/actions", value.asInstanceOf[js.Any])
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`(value: ParametersEnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runner-groups", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `setGET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages`(value: ParametersBillingGetGithubPackagesBillingGheEndpoint): Self = this.set("GET /enterprises/:enterprise_id/settings/billing/packages", value.asInstanceOf[js.Any])
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`(value: ParametersEnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `setGET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage`(value: ParametersBillingGetSharedStorageBillingGheEndpoint): Self = this.set("GET /enterprises/:enterprise_id/settings/billing/shared-storage", value.asInstanceOf[js.Any])
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`(value: ParametersEnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`(value: ParametersEnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`(value: ParametersEnterpriseAdminListSelfHostedRunnersForEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runners", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`(value: ParametersEnterpriseAdminGetSelfHostedRunnerForEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runners/:runner_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`(value: ParametersEnterpriseAdminListRunnerApplicationsForEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runners/downloads", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions`(value: ParametersEnterpriseAdminGetGithubActionsBillingGheEndpoint): Self = this.set("GET /enterprises/:enterprise/settings/billing/actions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages`(value: ParametersEnterpriseAdminGetGithubPackagesBillingGheEndpoint): Self = this.set("GET /enterprises/:enterprise/settings/billing/packages", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage`(value: ParametersEnterpriseAdminGetSharedStorageBillingGheEndpoint): Self = this.set("GET /enterprises/:enterprise/settings/billing/shared-storage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions`(value: ParametersEnterpriseAdminGetGithubActionsBillingGheDeprecatedEnterpriseIdEndpoint): Self = this.set("GET /enterprises/:enterprise_id/settings/billing/actions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages`(value: ParametersEnterpriseAdminGetGithubPackagesBillingGheDeprecatedEnterpriseIdEndpoint): Self = this.set("GET /enterprises/:enterprise_id/settings/billing/packages", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage`(value: ParametersEnterpriseAdminGetSharedStorageBillingGheDeprecatedEnterpriseIdEndpoint): Self = this.set("GET /enterprises/:enterprise_id/settings/billing/shared-storage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setGET Slashevents`(value: ParametersActivityListPublicEventsEndpoint): Self = this.set("GET /events", value.asInstanceOf[js.Any])
@@ -5408,6 +5736,18 @@ object Endpoints {
     
     @scala.inline
     def `setGET SlashorgsSlashColonorg`(value: ParametersOrgsGetEndpoint): Self = this.set("GET /orgs/:org", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`(value: ParametersActionsListSelfHostedRunnerGroupsForOrgEndpoint): Self = this.set("GET /orgs/:org/actions/runner-groups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`(value: ParametersActionsGetSelfHostedRunnerGroupForOrgEndpoint): Self = this.set("GET /orgs/:org/actions/runner-groups/:runner_group_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`(value: ParametersActionsListRepoAccessToSelfHostedRunnerGroupInOrgEndpoint): Self = this.set("GET /orgs/:org/actions/runner-groups/:runner_group_id/repositories", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`(value: ParametersActionsListSelfHostedRunnersInGroupForOrgEndpoint): Self = this.set("GET /orgs/:org/actions/runner-groups/:runner_group_id/runners", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setGET SlashorgsSlashColonorgSlashactionsSlashrunners`(value: ParametersActionsListSelfHostedRunnersForOrgEndpoint): Self = this.set("GET /orgs/:org/actions/runners", value.asInstanceOf[js.Any])
@@ -5716,7 +6056,13 @@ object Endpoints {
     def `setGET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`(value: ParametersCodeScanningListAlertsForRepoEndpoint): Self = this.set("GET /repos/:owner/:repo/code-scanning/alerts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `setGET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`(value: ParametersCodeScanningGetAlertEndpoint): Self = this.set("GET /repos/:owner/:repo/code-scanning/alerts/:alert_id", value.asInstanceOf[js.Any])
+    def `setGET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`(value: ParametersCodeScanningGetAlertDeprecatedAlertIdEndpoint): Self = this.set("GET /repos/:owner/:repo/code-scanning/alerts/:alert_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`(value: ParametersCodeScanningGetAlertEndpoint): Self = this.set("GET /repos/:owner/:repo/code-scanning/alerts/:alert_number", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`(value: ParametersCodeScanningListRecentAnalysesEndpoint): Self = this.set("GET /repos/:owner/:repo/code-scanning/analyses", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setGET SlashreposSlashColonownerSlashColonrepoSlashcollaborators`(value: ParametersReposListCollaboratorsEndpoint): Self = this.set("GET /repos/:owner/:repo/collaborators", value.asInstanceOf[js.Any])
@@ -6286,6 +6632,9 @@ object Endpoints {
     def `setPATCH SlashauthorizationsSlashColonauthorization_id`(value: ParametersOauthAuthorizationsUpdateAuthorizationEndpoint): Self = this.set("PATCH /authorizations/:authorization_id", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def `setPATCH SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`(value: ParametersEnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseEndpoint): Self = this.set("PATCH /enterprises/:enterprise/actions/runner-groups/:runner_group_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def `setPATCH SlashgistsSlashColongist_id`(value: ParametersGistsUpdateEndpoint): Self = this.set("PATCH /gists/:gist_id", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -6296,6 +6645,9 @@ object Endpoints {
     
     @scala.inline
     def `setPATCH SlashorgsSlashColonorg`(value: ParametersOrgsUpdateEndpoint): Self = this.set("PATCH /orgs/:org", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPATCH SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`(value: ParametersActionsUpdateSelfHostedRunnerGroupForOrgEndpoint): Self = this.set("PATCH /orgs/:org/actions/runner-groups/:runner_group_id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setPATCH SlashorgsSlashColonorgSlashhooksSlashColonhook_id`(value: ParametersOrgsUpdateWebhookEndpoint): Self = this.set("PATCH /orgs/:org/hooks/:hook_id", value.asInstanceOf[js.Any])
@@ -6335,6 +6687,9 @@ object Endpoints {
     
     @scala.inline
     def `setPATCH SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashpreferences`(value: ParametersChecksSetSuitesPreferencesEndpoint): Self = this.set("PATCH /repos/:owner/:repo/check-suites/preferences", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPATCH SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`(value: ParametersCodeScanningUpdateAlertEndpoint): Self = this.set("PATCH /repos/:owner/:repo/code-scanning/alerts/:alert_number", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setPATCH SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_id`(value: ParametersReposUpdateCommitCommentEndpoint): Self = this.set("PATCH /repos/:owner/:repo/comments/:comment_id", value.asInstanceOf[js.Any])
@@ -6433,6 +6788,15 @@ object Endpoints {
     def `setPOST Slashcontent_referencesSlashColoncontent_reference_idSlashattachments`(value: ParametersAppsCreateContentAttachmentEndpoint): Self = this.set("POST /content_references/:content_reference_id/attachments", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def `setPOST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`(value: ParametersEnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseEndpoint): Self = this.set("POST /enterprises/:enterprise/actions/runner-groups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPOST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashregistration-token`(value: ParametersEnterpriseAdminCreateRegistrationTokenForEnterpriseEndpoint): Self = this.set("POST /enterprises/:enterprise/actions/runners/registration-token", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPOST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashremove-token`(value: ParametersEnterpriseAdminCreateRemoveTokenForEnterpriseEndpoint): Self = this.set("POST /enterprises/:enterprise/actions/runners/remove-token", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def `setPOST Slashgists`(value: ParametersGistsCreateEndpoint): Self = this.set("POST /gists", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -6446,6 +6810,9 @@ object Endpoints {
     
     @scala.inline
     def `setPOST SlashmarkdownSlashraw`(value: ParametersMarkdownRenderRawEndpoint): Self = this.set("POST /markdown/raw", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPOST SlashorgsSlashColonorgSlashactionsSlashrunner-groups`(value: ParametersActionsCreateSelfHostedRunnerGroupForOrgEndpoint): Self = this.set("POST /orgs/:org/actions/runner-groups", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setPOST SlashorgsSlashColonorgSlashactionsSlashrunnersSlashregistration-token`(value: ParametersActionsCreateRegistrationTokenForOrgEndpoint): Self = this.set("POST /orgs/:org/actions/runners/registration-token", value.asInstanceOf[js.Any])
@@ -6539,6 +6906,9 @@ object Endpoints {
     
     @scala.inline
     def `setPOST SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashrerequest`(value: ParametersChecksRerequestSuiteEndpoint): Self = this.set("POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPOST SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashsarifs`(value: ParametersCodeScanningUploadSarifEndpoint): Self = this.set("POST /repos/:owner/:repo/code-scanning/sarifs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setPOST SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions`(value: ParametersReactionsCreateForCommitCommentEndpoint): Self = this.set("POST /repos/:owner/:repo/comments/:comment_id/reactions", value.asInstanceOf[js.Any])
@@ -6706,6 +7076,18 @@ object Endpoints {
     def `setPUT SlashauthorizationsSlashclientsSlashColonclient_idSlashColonfingerprint`(value: ParametersOauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintEndpoint): Self = this.set("PUT /authorizations/clients/:client_id/:fingerprint", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def `setPUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`(value: ParametersEnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint): Self = this.set("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`(value: ParametersEnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint): Self = this.set("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations/:org_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`(value: ParametersEnterpriseAdminSetSelfHostedInGroupForEnterpriseEndpoint): Self = this.set("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`(value: ParametersEnterpriseAdminAddSelfHostedRunnerToRunnerGroupForEnterpriseEndpoint): Self = this.set("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners/:runner_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def `setPUT SlashgistsSlashColongist_idSlashstar`(value: ParametersGistsStarEndpoint): Self = this.set("PUT /gists/:gist_id/star", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -6713,6 +7095,18 @@ object Endpoints {
     
     @scala.inline
     def `setPUT SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`(value: ParametersActivitySetThreadSubscriptionEndpoint): Self = this.set("PUT /notifications/threads/:thread_id/subscription", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`(value: ParametersActionsSetRepoAccessToSelfHostedRunnerGroupInOrgEndpoint): Self = this.set("PUT /orgs/:org/actions/runner-groups/:runner_group_id/repositories", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`(value: ParametersActionsAddRepoAccessToSelfHostedRunnerGroupInOrgEndpoint): Self = this.set("PUT /orgs/:org/actions/runner-groups/:runner_group_id/repositories/:repository_id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`(value: ParametersActionsSetSelfHostedRunnersInGroupForOrgEndpoint): Self = this.set("PUT /orgs/:org/actions/runner-groups/:runner_group_id/runners", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setPUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`(value: ParametersActionsAddSelfHostedRunnerToGroupForOrgEndpoint): Self = this.set("PUT /orgs/:org/actions/runner-groups/:runner_group_id/runners/:runner_id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setPUT SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_name`(value: ParametersActionsCreateOrUpdateOrgSecretEndpoint): Self = this.set("PUT /orgs/:org/actions/secrets/:secret_name", value.asInstanceOf[js.Any])

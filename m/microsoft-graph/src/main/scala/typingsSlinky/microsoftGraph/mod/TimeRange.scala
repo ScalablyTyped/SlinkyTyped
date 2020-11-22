@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TimeRange extends js.Object {
   
   // End time for the time range.
-  var endTime: js.UndefOr[String] = js.native
+  var endTime: js.UndefOr[NullableOption[String]] = js.native
   
   // Start time for the time range.
-  var startTime: js.UndefOr[String] = js.native
+  var startTime: js.UndefOr[NullableOption[String]] = js.native
 }
 object TimeRange {
   
@@ -37,15 +37,21 @@ object TimeRange {
     }
     
     @scala.inline
-    def setEndTime(value: String): Self = this.set("endTime", value.asInstanceOf[js.Any])
+    def setEndTime(value: NullableOption[String]): Self = this.set("endTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEndTime: Self = this.set("endTime", js.undefined)
     
     @scala.inline
-    def setStartTime(value: String): Self = this.set("startTime", value.asInstanceOf[js.Any])
+    def setEndTimeNull: Self = this.set("endTime", null)
+    
+    @scala.inline
+    def setStartTime(value: NullableOption[String]): Self = this.set("startTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStartTime: Self = this.set("startTime", js.undefined)
+    
+    @scala.inline
+    def setStartTimeNull: Self = this.set("startTime", null)
   }
 }

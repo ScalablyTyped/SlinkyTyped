@@ -1,7 +1,7 @@
 
 # Scala.js typings for on-change
 
-Typings are for version 2.0.1
+Typings are for version 2.2.0
 
 ## Library description:
 Watch an object or array for changes

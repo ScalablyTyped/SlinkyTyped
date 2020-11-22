@@ -167,9 +167,9 @@ trait I18NextRequest extends js.Object {
     * Express instance itself is a request handler, which could be invoked without
     * third argument.
     */
-  def app(req: Request[ParamsDictionary, _, _, ParsedQs], res: Response[_]): js.Any = js.native
+  def app(req: Request[ParamsDictionary, _, _, ParsedQs], res: Response[_, Double]): js.Any = js.native
   def app(req: Request[ParamsDictionary, _, _, ParsedQs], res: ServerResponse): js.Any = js.native
-  def app(req: IncomingMessage, res: Response[_]): js.Any = js.native
+  def app(req: IncomingMessage, res: Response[_, Double]): js.Any = js.native
   def app(req: IncomingMessage, res: ServerResponse): js.Any = js.native
   @JSName("app")
   var app_Original: Application = js.native
@@ -317,8 +317,8 @@ trait I18NextRequest extends js.Object {
   
   var languages: js.Array[String] = js.native
   
-  def listenerCount(`type`: String): Double = js.native
-  def listenerCount(`type`: js.Symbol): Double = js.native
+  def listenerCount(event: String): Double = js.native
+  def listenerCount(event: js.Symbol): Double = js.native
   
   def listeners(event: String): js.Array[js.Function] = js.native
   def listeners(event: js.Symbol): js.Array[js.Function] = js.native
@@ -512,7 +512,7 @@ trait I18NextRequest extends js.Object {
     * After middleware.init executed, Request will contain res and next properties
     * See: express/lib/middleware/init.js
     */
-  var res: js.UndefOr[Response[_]] = js.native
+  var res: js.UndefOr[Response[_, Double]] = js.native
   
   def resume(): this.type = js.native
   

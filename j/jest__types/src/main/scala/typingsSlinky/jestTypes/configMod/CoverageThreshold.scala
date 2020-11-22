@@ -6,14 +6,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait CoverageThreshold extends /* path */ StringDictionary[StringDictionary[Double]] {
+trait CoverageThreshold extends /* path */ StringDictionary[CoverageThresholdValue] {
   
-  var global: StringDictionary[Double] = js.native
+  var global: CoverageThresholdValue = js.native
 }
 object CoverageThreshold {
   
   @scala.inline
-  def apply(global: StringDictionary[Double]): CoverageThreshold = {
+  def apply(global: CoverageThresholdValue): CoverageThreshold = {
     val __obj = js.Dynamic.literal(global = global.asInstanceOf[js.Any])
     __obj.asInstanceOf[CoverageThreshold]
   }
@@ -34,6 +34,6 @@ object CoverageThreshold {
     }
     
     @scala.inline
-    def setGlobal(value: StringDictionary[Double]): Self = this.set("global", value.asInstanceOf[js.Any])
+    def setGlobal(value: CoverageThresholdValue): Self = this.set("global", value.asInstanceOf[js.Any])
   }
 }

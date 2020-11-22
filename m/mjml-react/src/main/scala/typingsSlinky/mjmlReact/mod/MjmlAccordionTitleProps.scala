@@ -1,7 +1,7 @@
 package typingsSlinky.mjmlReact.mod
 
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.Color
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.ColorProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MjmlAccordionTitleProps extends js.Object {
   
-  var backgroundColor: js.UndefOr[BackgroundColor] = js.native
+  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
   
-  var color: js.UndefOr[Color] = js.native
+  var color: js.UndefOr[ColorProperty] = js.native
   
   var fontFamily: js.UndefOr[String] = js.native
   
@@ -41,13 +41,13 @@ object MjmlAccordionTitleProps {
     }
     
     @scala.inline
-    def setBackgroundColor(value: BackgroundColor): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColor(value: BackgroundColorProperty): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
     
     @scala.inline
-    def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: ColorProperty): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)

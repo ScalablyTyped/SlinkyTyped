@@ -48,6 +48,9 @@ object Text {
     def dimColor(value: Boolean): this.type = set("dimColor", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def inverse(value: Boolean): this.type = set("inverse", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def italic(value: Boolean): this.type = set("italic", value.asInstanceOf[js.Any])
     
     @scala.inline

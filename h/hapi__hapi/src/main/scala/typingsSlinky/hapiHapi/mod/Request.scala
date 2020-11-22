@@ -138,7 +138,7 @@ trait Request extends Podium {
   /**
     * An object where each key is a path parameter name with matching value as described in [Path parameters](https://github.com/hapijs/hapi/blob/master/API.md#path-parameters).
     */
-  val params: Dictionary[String] = js.native
+  val params: Dictionary[_] = js.native
   
   /**
     * An array containing all the path params values in the order they appeared in the path.

@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SetUserAgentOverrideRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SetCookiesRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `119` extends js.Object {
   
-  var paramsType: js.Array[SetUserAgentOverrideRequest] = js.native
+  var paramsType: js.Array[SetCookiesRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `119` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetUserAgentOverrideRequest], returnType: Unit): `119` = {
+  def apply(paramsType: js.Array[SetCookiesRequest], returnType: Unit): `119` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`119`]
   }
@@ -36,10 +36,10 @@ object `119` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetUserAgentOverrideRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetCookiesRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetUserAgentOverrideRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetCookiesRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

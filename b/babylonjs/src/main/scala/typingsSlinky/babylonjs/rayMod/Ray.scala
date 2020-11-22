@@ -63,6 +63,7 @@ class Ray protected () extends js.Object {
   
   /**
     * Checks if the ray intersects a box
+    * This does not account for the ray lenght by design to improve perfs.
     * @param box the bounding box to check
     * @param intersectionTreshold extra extend to be added to the BoundingBox in all direction
     * @returns if the box was hit
@@ -72,6 +73,7 @@ class Ray protected () extends js.Object {
   
   /**
     * Checks if the ray intersects a box
+    * This does not account for the ray lenght by design to improve perfs.
     * @param minimum bound of the box
     * @param maximum bound of the box
     * @param intersectionTreshold extra extend to be added to the box in all direction
@@ -83,7 +85,7 @@ class Ray protected () extends js.Object {
   /**
     * Checks if ray intersects a mesh
     * @param mesh the mesh to check
-    * @param fastCheck if only the bounding box should checked
+    * @param fastCheck defines if the first intersection will be used (and not the closest)
     * @returns picking info of the intersecton
     */
   def intersectsMesh(mesh: DeepImmutable[AbstractMesh]): PickingInfo = js.native
@@ -92,7 +94,7 @@ class Ray protected () extends js.Object {
   /**
     * Checks if ray intersects a mesh
     * @param meshes the meshes to check
-    * @param fastCheck if only the bounding box should checked
+    * @param fastCheck defines if the first intersection will be used (and not the closest)
     * @param results array to store result in
     * @returns Array of picking infos
     */
@@ -211,10 +213,8 @@ object Ray extends js.Object {
     * @param world a matrix to transform the ray to. Default is the identity matrix.
     * @returns the new ray
     */
-  def CreateNewFromTo(origin: DeepImmutable[Vector3], end: DeepImmutable[Vector3]): Ray = js.native
-  def CreateNewFromTo(origin: DeepImmutable[Vector3], end: DeepImmutable[Vector3], world: DeepImmutable[Matrix]): Ray = js.native
-  
-  val TmpVector3: js.Any = js.native
+  def CreateNewFromTo(origin: Vector3, end: Vector3): Ray = js.native
+  def CreateNewFromTo(origin: Vector3, end: Vector3, world: DeepImmutable[Matrix]): Ray = js.native
   
   /**
     * Transforms a ray by a matrix
@@ -237,6 +237,8 @@ object Ray extends js.Object {
     * @returns the new ray
     */
   def Zero(): Ray = js.native
+  
+  val _TmpVector3: js.Any = js.native
   
   var rayl: js.Any = js.native
   

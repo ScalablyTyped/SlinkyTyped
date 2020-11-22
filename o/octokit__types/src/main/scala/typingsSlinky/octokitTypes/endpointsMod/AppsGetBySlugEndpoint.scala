@@ -1,23 +1,19 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  app_slug :string} & @octokit/types.@octokit/types/dist-types/generated/Endpoints.RequiredPreview<'machine-man'> */
 @js.native
 trait AppsGetBySlugEndpoint extends js.Object {
   
   var app_slug: String = js.native
-  
-  var mediaType: `1` = js.native
 }
 object AppsGetBySlugEndpoint {
   
   @scala.inline
-  def apply(app_slug: String, mediaType: `1`): AppsGetBySlugEndpoint = {
-    val __obj = js.Dynamic.literal(app_slug = app_slug.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any])
+  def apply(app_slug: String): AppsGetBySlugEndpoint = {
+    val __obj = js.Dynamic.literal(app_slug = app_slug.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppsGetBySlugEndpoint]
   }
   
@@ -38,8 +34,5 @@ object AppsGetBySlugEndpoint {
     
     @scala.inline
     def setApp_slug(value: String): Self = this.set("app_slug", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMediaType(value: `1`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
   }
 }

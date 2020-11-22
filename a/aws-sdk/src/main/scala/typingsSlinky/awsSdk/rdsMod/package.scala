@@ -225,6 +225,13 @@ package object rdsMod {
   
   type RecurringChargeList = js.Array[typingsSlinky.awsSdk.rdsMod.RecurringCharge]
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`open-read-only`
+    - typingsSlinky.awsSdk.awsSdkStrings.mounted
+    - java.lang.String
+  */
+  type ReplicaMode = typingsSlinky.awsSdk.rdsMod._ReplicaMode | java.lang.String
+  
   type ReservedDBInstanceList = js.Array[typingsSlinky.awsSdk.rdsMod.ReservedDBInstance]
   
   type ReservedDBInstancesOfferingList = js.Array[typingsSlinky.awsSdk.rdsMod.ReservedDBInstancesOffering]

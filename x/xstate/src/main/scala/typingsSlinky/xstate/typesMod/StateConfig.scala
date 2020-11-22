@@ -2,7 +2,7 @@ package typingsSlinky.xstate.typesMod
 
 import typingsSlinky.std.Record
 import typingsSlinky.xstate.actorMod.Actor
-import typingsSlinky.xstate.anon.Context
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateMod.State
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import scala.scalajs.js
@@ -22,7 +22,7 @@ trait StateConfig[TContext, TEvent /* <: EventObject */] extends js.Object {
   
   var children: Record[String, Actor[_, AnyEventObject]] = js.native
   
-  var configuration: js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+  var configuration: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]] = js.native
   
   var context: TContext = js.native
   
@@ -30,7 +30,7 @@ trait StateConfig[TContext, TEvent /* <: EventObject */] extends js.Object {
   
   var events: js.UndefOr[js.Array[TEvent]] = js.native
   
-  var history: js.UndefOr[State[TContext, TEvent, _, Context[TContext]]] = js.native
+  var history: js.UndefOr[State[TContext, TEvent, _, ContextTContext[TContext]]] = js.native
   
   var historyValue: js.UndefOr[HistoryValue] = js.native
   
@@ -46,7 +46,7 @@ object StateConfig {
   def apply[TContext, TEvent /* <: EventObject */](
     _event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent],
     children: Record[String, Actor[_, AnyEventObject]],
-    configuration: js.Array[StateNode[TContext, _, TEvent, _]],
+    configuration: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]],
     context: TContext,
     transitions: js.Array[TransitionDefinition[TContext, TEvent]],
     value: StateValue
@@ -77,10 +77,10 @@ object StateConfig {
     def setChildren(value: Record[String, Actor[_, AnyEventObject]]): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setConfigurationVarargs(value: (StateNode[TContext, js.Any, TEvent, js.Any])*): Self = this.set("configuration", js.Array(value :_*))
+    def setConfigurationVarargs(value: (StateNode[TContext, js.Any, TEvent, ContextTContext[TContext]])*): Self = this.set("configuration", js.Array(value :_*))
     
     @scala.inline
-    def setConfiguration(value: js.Array[StateNode[TContext, _, TEvent, _]]): Self = this.set("configuration", value.asInstanceOf[js.Any])
+    def setConfiguration(value: js.Array[StateNode[TContext, _, TEvent, ContextTContext[TContext]]]): Self = this.set("configuration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setContext(value: TContext): Self = this.set("context", value.asInstanceOf[js.Any])
@@ -131,7 +131,7 @@ object StateConfig {
     def deleteEvents: Self = this.set("events", js.undefined)
     
     @scala.inline
-    def setHistory(value: State[TContext, TEvent, _, Context[TContext]]): Self = this.set("history", value.asInstanceOf[js.Any])
+    def setHistory(value: State[TContext, TEvent, _, ContextTContext[TContext]]): Self = this.set("history", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHistory: Self = this.set("history", js.undefined)

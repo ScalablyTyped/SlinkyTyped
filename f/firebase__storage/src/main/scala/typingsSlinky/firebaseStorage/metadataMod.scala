@@ -1,8 +1,8 @@
 package typingsSlinky.firebaseStorage
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebaseStorage.serviceMod.StorageService
 import typingsSlinky.firebaseStorage.srcMetadataMod.Metadata
+import typingsSlinky.firebaseStorage.srcServiceMod.StorageService
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,8 +21,6 @@ object metadataMod extends js.Object {
   
   def getMappings(): Mappings = js.native
   
-  def metadataValidator(p: js.Any): Unit = js.native
-  
   @JSName("noXform_")
   def noXform[T](metadata: Metadata, value: T): T = js.native
   
@@ -31,9 +29,6 @@ object metadataMod extends js.Object {
   def xformPath(): js.UndefOr[String] = js.native
   def xformPath(fullPath: String): js.UndefOr[String] = js.native
   
-  /**
-    * @struct
-    */
   @js.native
   trait Mapping[T] extends js.Object {
     

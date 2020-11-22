@@ -1,5 +1,6 @@
 package typingsSlinky.jestCore
 
+import typingsSlinky.jestTypes.configMod.GlobalConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getNoTestFoundFailedMod extends js.Object {
   
-  def default(): String = js.native
+  def default(globalConfig: GlobalConfig): String = js.native
 }

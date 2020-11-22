@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PatternedRecurrence extends js.Object {
   
   // The frequency of an event.
-  var pattern: js.UndefOr[RecurrencePattern] = js.native
+  var pattern: js.UndefOr[NullableOption[RecurrencePattern]] = js.native
   
   // The duration of an event.
-  var range: js.UndefOr[RecurrenceRange] = js.native
+  var range: js.UndefOr[NullableOption[RecurrenceRange]] = js.native
 }
 object PatternedRecurrence {
   
@@ -37,15 +37,21 @@ object PatternedRecurrence {
     }
     
     @scala.inline
-    def setPattern(value: RecurrencePattern): Self = this.set("pattern", value.asInstanceOf[js.Any])
+    def setPattern(value: NullableOption[RecurrencePattern]): Self = this.set("pattern", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePattern: Self = this.set("pattern", js.undefined)
     
     @scala.inline
-    def setRange(value: RecurrenceRange): Self = this.set("range", value.asInstanceOf[js.Any])
+    def setPatternNull: Self = this.set("pattern", null)
+    
+    @scala.inline
+    def setRange(value: NullableOption[RecurrenceRange]): Self = this.set("range", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRange: Self = this.set("range", js.undefined)
+    
+    @scala.inline
+    def setRangeNull: Self = this.set("range", null)
   }
 }

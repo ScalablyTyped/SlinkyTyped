@@ -1,31 +1,32 @@
 package typingsSlinky.awsSdkTypes.middlewareMod
 
-import typingsSlinky.awsSdkTypes.httpMod.HttpRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SerializeHandlerArguments[Input /* <: js.Object */, Stream] extends HandlerArguments[Input] {
+trait SerializeHandlerArguments[Input /* <: js.Object */] extends InitializeHandlerArguments[Input] {
   
   /**
-    * The user input serialized as an HTTP request.
+    * The user input serialized as a request object. The request object is unknown,
+    * so you cannot modify it directly. When work with request, you need to guard its
+    * type to e.g. HttpRequest with 'instanceof' operand
     *
     * During the build phase of the execution of a middleware stack, a built
-    * HTTP request may or may not be available.
+    * request may or may not be available.
     */
-  var request: js.UndefOr[HttpRequest[Stream]] = js.native
+  var request: js.UndefOr[js.Any] = js.native
 }
 object SerializeHandlerArguments {
   
   @scala.inline
-  def apply[Input /* <: js.Object */, Stream](input: Input): SerializeHandlerArguments[Input, Stream] = {
+  def apply[Input /* <: js.Object */](input: Input): SerializeHandlerArguments[Input] = {
     val __obj = js.Dynamic.literal(input = input.asInstanceOf[js.Any])
-    __obj.asInstanceOf[SerializeHandlerArguments[Input, Stream]]
+    __obj.asInstanceOf[SerializeHandlerArguments[Input]]
   }
   
   @scala.inline
-  implicit class SerializeHandlerArgumentsOps[Self <: SerializeHandlerArguments[_, _], Input /* <: js.Object */, Stream] (val x: Self with (SerializeHandlerArguments[Input, Stream])) extends AnyVal {
+  implicit class SerializeHandlerArgumentsOps[Self <: SerializeHandlerArguments[_], Input /* <: js.Object */] (val x: Self with SerializeHandlerArguments[Input]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -40,7 +41,7 @@ object SerializeHandlerArguments {
     }
     
     @scala.inline
-    def setRequest(value: HttpRequest[Stream]): Self = this.set("request", value.asInstanceOf[js.Any])
+    def setRequest(value: js.Any): Self = this.set("request", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRequest: Self = this.set("request", js.undefined)

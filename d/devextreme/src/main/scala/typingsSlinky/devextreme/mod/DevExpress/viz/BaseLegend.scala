@@ -17,58 +17,94 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BaseLegend extends js.Object {
   
-  /** @name BaseLegend.backgroundColor */
+  /**
+    * [descr:BaseLegend.backgroundColor]
+    */
   var backgroundColor: js.UndefOr[String] = js.native
   
-  /** @name BaseLegend.border */
+  /**
+    * [descr:BaseLegend.border]
+    */
   var border: js.UndefOr[CornerRadius] = js.native
   
-  /** @name BaseLegend.columnCount */
+  /**
+    * [descr:BaseLegend.columnCount]
+    */
   var columnCount: js.UndefOr[Double] = js.native
   
-  /** @name BaseLegend.columnItemSpacing */
+  /**
+    * [descr:BaseLegend.columnItemSpacing]
+    */
   var columnItemSpacing: js.UndefOr[Double] = js.native
   
-  /** @name BaseLegend.font */
+  /**
+    * [descr:BaseLegend.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name BaseLegend.horizontalAlignment */
+  /**
+    * [descr:BaseLegend.horizontalAlignment]
+    */
   var horizontalAlignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name BaseLegend.itemTextPosition */
+  /**
+    * [descr:BaseLegend.itemTextPosition]
+    */
   var itemTextPosition: js.UndefOr[bottom | left | right | top] = js.native
   
-  /** @name BaseLegend.itemsAlignment */
+  /**
+    * [descr:BaseLegend.itemsAlignment]
+    */
   var itemsAlignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name BaseLegend.margin */
+  /**
+    * [descr:BaseLegend.margin]
+    */
   var margin: js.UndefOr[Double | Bottom] = js.native
   
-  /** @name BaseLegend.markerSize */
+  /**
+    * [descr:BaseLegend.markerSize]
+    */
   var markerSize: js.UndefOr[Double] = js.native
   
-  /** @name BaseLegend.orientation */
+  /**
+    * [descr:BaseLegend.orientation]
+    */
   var orientation: js.UndefOr[horizontal | vertical] = js.native
   
-  /** @name BaseLegend.paddingLeftRight */
+  /**
+    * [descr:BaseLegend.paddingLeftRight]
+    */
   var paddingLeftRight: js.UndefOr[Double] = js.native
   
-  /** @name BaseLegend.paddingTopBottom */
+  /**
+    * [descr:BaseLegend.paddingTopBottom]
+    */
   var paddingTopBottom: js.UndefOr[Double] = js.native
   
-  /** @name BaseLegend.rowCount */
+  /**
+    * [descr:BaseLegend.rowCount]
+    */
   var rowCount: js.UndefOr[Double] = js.native
   
-  /** @name BaseLegend.rowItemSpacing */
+  /**
+    * [descr:BaseLegend.rowItemSpacing]
+    */
   var rowItemSpacing: js.UndefOr[Double] = js.native
   
-  /** @name BaseLegend.title */
+  /**
+    * [descr:BaseLegend.title]
+    */
   var title: js.UndefOr[HorizontalAlignment | String] = js.native
   
-  /** @name BaseLegend.verticalAlignment */
+  /**
+    * [descr:BaseLegend.verticalAlignment]
+    */
   var verticalAlignment: js.UndefOr[bottom | top] = js.native
   
-  /** @name BaseLegend.visible */
+  /**
+    * [descr:BaseLegend.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object BaseLegend {

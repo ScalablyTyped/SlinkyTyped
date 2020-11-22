@@ -13,7 +13,7 @@ trait GetOrganizationalUnitsChildren extends js.Object {
   var arn: String = js.native
   
   /**
-    * ID of the organizational unit
+    * Parent identifier of the organizational units.
     */
   var id: String = js.native
   

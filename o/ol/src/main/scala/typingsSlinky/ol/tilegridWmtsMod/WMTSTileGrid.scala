@@ -10,5 +10,8 @@ trait WMTSTileGrid
   
   def getMatrixId(z: Double): String = js.native
   
+  /**
+    * Get the list of matrix identifiers.
+    */
   def getMatrixIds(): js.Array[String] = js.native
 }

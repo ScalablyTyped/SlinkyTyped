@@ -15,6 +15,8 @@ object modelsTypesTypeParameterMod extends js.Object {
     
     var constraint: js.UndefOr[Type] = js.native
     
+    var default: js.UndefOr[Type] = js.native
+    
     def equals(`type`: TypeParameterType): Boolean = js.native
     
     val name: String = js.native

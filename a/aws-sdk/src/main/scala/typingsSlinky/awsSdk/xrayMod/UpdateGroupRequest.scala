@@ -21,6 +21,11 @@ trait UpdateGroupRequest extends js.Object {
     * The case-sensitive name of the group.
     */
   var GroupName: js.UndefOr[typingsSlinky.awsSdk.xrayMod.GroupName] = js.native
+  
+  /**
+    * The structure containing configurations related to insights.   The InsightsEnabled boolean can be set to true to enable insights for the group or false to disable insights for the group.   The NotifcationsEnabled boolean can be set to true to enable insights notifications for the group. Notifications can only be enabled on a group with InsightsEnabled set to true.  
+    */
+  var InsightsConfiguration: js.UndefOr[typingsSlinky.awsSdk.xrayMod.InsightsConfiguration] = js.native
 }
 object UpdateGroupRequest {
   
@@ -62,5 +67,11 @@ object UpdateGroupRequest {
     
     @scala.inline
     def deleteGroupName: Self = this.set("GroupName", js.undefined)
+    
+    @scala.inline
+    def setInsightsConfiguration(value: InsightsConfiguration): Self = this.set("InsightsConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInsightsConfiguration: Self = this.set("InsightsConfiguration", js.undefined)
   }
 }

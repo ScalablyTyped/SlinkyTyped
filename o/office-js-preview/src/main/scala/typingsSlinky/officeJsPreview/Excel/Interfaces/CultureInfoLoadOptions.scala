@@ -23,8 +23,7 @@ trait CultureInfoLoadOptions extends js.Object {
     *
     * Defines the culturally appropriate format of displaying date and time. This is based on current system culture settings.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var datetimeFormat: js.UndefOr[DatetimeFormatInfoLoadOptions] = js.native
   

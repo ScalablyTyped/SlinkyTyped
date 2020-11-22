@@ -2,9 +2,9 @@ package typingsSlinky.tensorflowTfjsConverter
 
 import typingsSlinky.tensorflowTfjsConverter.typesMod.NamedTensorsMap
 import typingsSlinky.tensorflowTfjsConverter.typesMod.TensorInfo
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.modelTypesMod.InferenceModel
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import typingsSlinky.tensorflowTfjsCore.typesMod.IOHandler
 import typingsSlinky.tensorflowTfjsCore.typesMod.LoadOptions
@@ -49,9 +49,10 @@ object graphModelMod extends js.Object {
     var convertTensorMapToTensorsMap: js.Any = js.native
     
     /**
-      * Releases the memory used by the weight tensors.
+      * Releases the memory used by the weight tensors and resourceManager.
+      *
+      * @doc {heading: 'Models', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Models', subheading: 'Classes'} */
     def dispose(): Unit = js.native
     
     def execute(inputs: js.Array[Tensor[Rank]]): Tensor[Rank] | js.Array[Tensor[Rank]] = js.native
@@ -68,8 +69,9 @@ object graphModelMod extends js.Object {
       * are provided and there is only one default output, otherwise return a
       * tensor array. The order of the tensor array is the same as the outputs
       * if provided, otherwise the order of outputNodes attribute of the model.
+      *
+      * @doc {heading: 'Models', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Models', subheading: 'Classes'} */
     def execute(inputs: Tensor[Rank]): Tensor[Rank] | js.Array[Tensor[Rank]] = js.native
     def execute(inputs: NamedTensorMap): Tensor[Rank] | js.Array[Tensor[Rank]] = js.native
     
@@ -89,8 +91,9 @@ object graphModelMod extends js.Object {
       * @returns A Promise of single tensor if provided with a single output or
       * no outputs are provided and there is only one default output, otherwise
       * return a tensor map.
+      *
+      * @doc {heading: 'Models', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Models', subheading: 'Classes'} */
     def executeAsync(inputs: Tensor[Rank]): js.Promise[Tensor[Rank] | js.Array[Tensor[Rank]]] = js.native
     def executeAsync(inputs: Tensor[Rank], outputs: String): js.Promise[Tensor[Rank] | js.Array[Tensor[Rank]]] = js.native
     def executeAsync(inputs: Tensor[Rank], outputs: js.Array[String]): js.Promise[Tensor[Rank] | js.Array[Tensor[Rank]]] = js.native
@@ -103,6 +106,8 @@ object graphModelMod extends js.Object {
     var findIOHandler: js.Any = js.native
     
     var handler: js.Any = js.native
+    
+    var initializer: js.Any = js.native
     
     val inputNodes: js.Array[String] = js.native
     
@@ -119,9 +124,10 @@ object graphModelMod extends js.Object {
     
     /**
       * Synchronously construct the in memory weight map and
-      * compile the inference graph.
+      * compile the inference graph. Also initialize hashtable if any.
+      *
+      * @doc {heading: 'Models', subheading: 'Classes', ignoreCI: true}
       */
-    /** @doc {heading: 'Models', subheading: 'Classes', ignoreCI: true} */
     def loadSync(artifacts: ModelArtifacts): Boolean = js.native
     
     var modelUrl: js.Any = js.native
@@ -173,10 +179,13 @@ object graphModelMod extends js.Object {
       * @returns Inference result tensors. The output would be single `tf.Tensor`
       * if model has single output node, otherwise Tensor[] or NamedTensorMap[]
       * will be returned for model with multiple outputs.
+      *
+      * @doc {heading: 'Models', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Models', subheading: 'Classes'} */
     def predict(inputs: Tensor[Rank]): Tensor[Rank] | js.Array[Tensor[Rank]] | NamedTensorMap = js.native
     def predict(inputs: NamedTensorMap): Tensor[Rank] | js.Array[Tensor[Rank]] | NamedTensorMap = js.native
+    
+    var resourceManager: js.Any = js.native
     
     def save(handlerOrURL: String): js.Promise[SaveResult] = js.native
     def save(handlerOrURL: String, config: SaveConfig): js.Promise[SaveResult] = js.native
@@ -221,8 +230,7 @@ object graphModelMod extends js.Object {
       * @returns A `Promise` of `SaveResult`, which summarizes the result of
       * the saving, such as byte sizes of the saved artifacts for the model's
       *   topology and weight values.
-      */
-    /**
+      *
       * @doc {heading: 'Models', subheading: 'Classes', ignoreCI: true}
       */
     def save(handlerOrURL: IOHandler): js.Promise[SaveResult] = js.native

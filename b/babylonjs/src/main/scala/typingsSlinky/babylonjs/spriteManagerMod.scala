@@ -20,12 +20,18 @@ object spriteManagerMod extends js.Object {
   @js.native
   trait ISpriteManager extends IDisposable {
     
+    /** Defines the default height of a cell in the spritesheet */
+    var cellHeight: Double = js.native
+    
+    /** Defines the default width of a cell in the spritesheet */
+    var cellWidth: Double = js.native
+    
     /**
       * Tests the intersection of a sprite with a specific ray.
       * @param ray The ray we are sending to test the collision
       * @param camera The camera space we are sending rays in
       * @param predicate A predicate allowing excluding sprites from the list of object to test
-      * @param fastCheck Is the hit test done in a OOBB or AOBB fashion the faster, the less precise
+      * @param fastCheck defines if the first intersection will be used (and not the closest)
       * @returns picking info or null.
       */
     def intersects(ray: Ray, camera: Camera): Nullable[PickingInfo] = js.native
@@ -60,20 +66,35 @@ object spriteManagerMod extends js.Object {
     def multiIntersects(ray: Ray, camera: Camera, predicate: js.Function1[/* sprite */ Sprite, Boolean]): Nullable[js.Array[PickingInfo]] = js.native
     
     /**
+      * Gets manager's name
+      */
+    var name: String = js.native
+    
+    /**
       * Renders the list of sprites on screen.
       */
     def render(): Unit = js.native
     
     /**
       * Specifies the rendering group id for this mesh (0 by default)
-      * @see http://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered#rendering-groups
+      * @see https://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered#rendering-groups
       */
     var renderingGroupId: Double = js.native
+    
+    /**
+      * Gets the hosting scene
+      */
+    var scene: Scene = js.native
     
     /**
       * Defines the list of sprites managed by the manager.
       */
     var sprites: js.Array[Sprite] = js.native
+    
+    /**
+      * Gets or sets the spritesheet texture
+      */
+    var texture: Texture = js.native
   }
   
   @js.native
@@ -268,26 +289,14 @@ object spriteManagerMod extends js.Object {
       spriteJSON: js.Any
     ) = this()
     
-    var _appendSpriteVertex: js.Any = js.native
-    
-    var _blendMode: js.Any = js.native
-    
-    var _buffer: js.Any = js.native
-    
-    var _capacity: js.Any = js.native
-    
     /** Associative array from JSON sprite data file */
     var _cellData: js.Any = js.native
     
-    var _effectBase: js.Any = js.native
+    var _checkTextureAlpha: js.Any = js.native
     
-    var _effectFog: js.Any = js.native
-    
-    var _epsilon: js.Any = js.native
+    var _customUpdate: js.Any = js.native
     
     var _fromPacked: js.Any = js.native
-    
-    var _indexBuffer: js.Any = js.native
     
     var _makePacked: js.Any = js.native
     
@@ -301,11 +310,9 @@ object spriteManagerMod extends js.Object {
     /** Array of sprite names from JSON sprite data file */
     var _spriteMap: js.Any = js.native
     
-    var _spriteTexture: js.Any = js.native
+    var _spriteRenderer: js.Any = js.native
     
-    var _vertexBuffers: js.Any = js.native
-    
-    var _vertexData: js.Any = js.native
+    var _textureContent: js.Any = js.native
     
     /**
       * Blend mode use to render the particle, it can be any of
@@ -315,11 +322,23 @@ object spriteManagerMod extends js.Object {
     def blendMode: Double = js.native
     def blendMode_=(blendMode: Double): Unit = js.native
     
+    /**
+      * Gets the capacity of the manager
+      */
+    def capacity: Double = js.native
+    
     /** Defines the default height of a cell in the spritesheet */
-    var cellHeight: Double = js.native
+    @JSName("cellHeight")
+    def cellHeight_MSpriteManager: Double = js.native
     
     /** Defines the default width of a cell in the spritesheet */
-    var cellWidth: Double = js.native
+    @JSName("cellWidth")
+    def cellWidth_MSpriteManager: Double = js.native
+    
+    /**
+      * Gets the array of sprites
+      */
+    def children: js.Array[Sprite] = js.native
     
     /** Disables writing to the depth buffer when rendering the sprites.
       *  It can be handy to disable depth writing when using textures without alpha channel
@@ -328,10 +347,14 @@ object spriteManagerMod extends js.Object {
     var disableDepthWrite: Boolean = js.native
     
     /** Gets or sets a boolean indicating if the manager must consider scene fog when rendering */
-    var fogEnabled: Boolean = js.native
+    def fogEnabled: Boolean = js.native
+    def fogEnabled_=(value: Boolean): Unit = js.native
     
-    /** defines the manager's name */
-    var name: String = js.native
+    /**
+      * Returns the string "SpriteManager"
+      * @returns "SpriteManager"
+      */
+    def getClassName(): String = js.native
     
     /**
       * An event triggered when the manager is disposed.
@@ -344,9 +367,68 @@ object spriteManagerMod extends js.Object {
     def onDispose_=(callback: js.Function0[Unit]): Unit = js.native
     
     /**
+      * Gets the hosting scene
+      */
+    @JSName("scene")
+    def scene_MSpriteManager: Scene = js.native
+    
+    /**
+      * Serializes the sprite manager to a JSON object
+      * @param serializeTexture defines if the texture must be serialized as well
+      * @returns the JSON object
+      */
+    def serialize(): js.Any = js.native
+    def serialize(serializeTexture: Boolean): js.Any = js.native
+    
+    /** Snippet ID if the manager was created from the snippet server */
+    var snippetId: String = js.native
+    
+    /**
       * Gets or sets the spritesheet texture
       */
-    def texture: Texture = js.native
-    def texture_=(value: Texture): Unit = js.native
+    @JSName("texture")
+    def texture_MSpriteManager: Texture = js.native
+    
+    /**
+      * Gets or sets the unique id of the sprite
+      */
+    var uniqueId: Double = js.native
+  }
+  /* static members */
+  @js.native
+  object SpriteManager extends js.Object {
+    
+    /**
+      * Creates a sprite manager from a snippet saved by the sprite editor
+      * @param snippetId defines the snippet to load (can be set to _BLANK to create a default one)
+      * @param scene defines the hosting scene
+      * @param rootUrl defines the root URL to use to load textures and relative dependencies
+      * @returns a promise that will resolve to the new sprite manager
+      */
+    def CreateFromSnippetAsync(snippetId: String, scene: Scene): js.Promise[SpriteManager] = js.native
+    def CreateFromSnippetAsync(snippetId: String, scene: Scene, rootUrl: String): js.Promise[SpriteManager] = js.native
+    
+    /**
+      * Parses a JSON object to create a new sprite manager.
+      * @param parsedManager The JSON object to parse
+      * @param scene The scene to create the sprite managerin
+      * @param rootUrl The root url to use to load external dependencies like texture
+      * @returns the new sprite manager
+      */
+    def Parse(parsedManager: js.Any, scene: Scene, rootUrl: String): SpriteManager = js.native
+    
+    /**
+      * Creates a sprite manager from a snippet saved in a remote file
+      * @param name defines the name of the sprite manager to create (can be null or empty to use the one from the json data)
+      * @param url defines the url to load from
+      * @param scene defines the hosting scene
+      * @param rootUrl defines the root URL to use to load textures and relative dependencies
+      * @returns a promise that will resolve to the new sprite manager
+      */
+    def ParseFromFileAsync(name: Nullable[String], url: String, scene: Scene): js.Promise[SpriteManager] = js.native
+    def ParseFromFileAsync(name: Nullable[String], url: String, scene: Scene, rootUrl: String): js.Promise[SpriteManager] = js.native
+    
+    /** Define the Url to load snippets */
+    var SnippetUrl: String = js.native
   }
 }

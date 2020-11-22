@@ -1,5 +1,6 @@
 package typingsSlinky.phin.mod
 
+import org.scalajs.dom.experimental.URL
 import typingsSlinky.phin.phinBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +15,7 @@ trait IStreamResponseOptions extends IOptionsBase {
 object IStreamResponseOptions {
   
   @scala.inline
-  def apply(stream: `true`, url: String): IStreamResponseOptions = {
+  def apply(stream: `true`, url: String | URL): IStreamResponseOptions = {
     val __obj = js.Dynamic.literal(stream = stream.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IStreamResponseOptions]
   }

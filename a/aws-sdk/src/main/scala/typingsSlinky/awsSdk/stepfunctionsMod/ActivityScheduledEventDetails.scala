@@ -13,9 +13,14 @@ trait ActivityScheduledEventDetails extends js.Object {
   var heartbeatInSeconds: js.UndefOr[TimeoutInSeconds] = js.native
   
   /**
-    * The JSON data input to the activity task.
+    * The JSON data input to the activity task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
     */
   var input: js.UndefOr[SensitiveData] = js.native
+  
+  /**
+    * Contains details about the input for an execution history event.
+    */
+  var inputDetails: js.UndefOr[HistoryEventExecutionDataDetails] = js.native
   
   /**
     * The Amazon Resource Name (ARN) of the scheduled activity.
@@ -64,6 +69,12 @@ object ActivityScheduledEventDetails {
     
     @scala.inline
     def deleteInput: Self = this.set("input", js.undefined)
+    
+    @scala.inline
+    def setInputDetails(value: HistoryEventExecutionDataDetails): Self = this.set("inputDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputDetails: Self = this.set("inputDetails", js.undefined)
     
     @scala.inline
     def setTimeoutInSeconds(value: TimeoutInSeconds): Self = this.set("timeoutInSeconds", value.asInstanceOf[js.Any])

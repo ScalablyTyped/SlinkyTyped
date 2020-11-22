@@ -18,11 +18,7 @@ trait FormatOptions extends js.Object {
   var braces: js.UndefOr[Boolean] = js.native
   
   var comments: js.UndefOr[
-    Boolean | all | some | js.RegExp | (js.Function2[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AST_Node */ /* node */ js.Any, 
-      /* comment */ Col, 
-      Boolean
-    ])
+    Boolean | all | some | js.RegExp | (js.Function2[/* node */ js.Any, /* comment */ Col, Boolean])
   ] = js.native
   
   var ecma: js.UndefOr[ECMA] = js.native
@@ -107,20 +103,14 @@ object FormatOptions {
     def deleteBraces: Self = this.set("braces", js.undefined)
     
     @scala.inline
-    def setCommentsFunction2(
-      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AST_Node */ /* node */ js.Any, /* comment */ Col) => Boolean
-    ): Self = this.set("comments", js.Any.fromFunction2(value))
+    def setCommentsFunction2(value: (/* node */ js.Any, /* comment */ Col) => Boolean): Self = this.set("comments", js.Any.fromFunction2(value))
     
     @scala.inline
     def setCommentsRegExp(value: js.RegExp): Self = this.set("comments", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setComments(
-      value: Boolean | all | some | js.RegExp | (js.Function2[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AST_Node */ /* node */ js.Any, 
-          /* comment */ Col, 
-          Boolean
-        ])
+      value: Boolean | all | some | js.RegExp | (js.Function2[/* node */ js.Any, /* comment */ Col, Boolean])
     ): Self = this.set("comments", value.asInstanceOf[js.Any])
     
     @scala.inline

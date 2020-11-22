@@ -11,11 +11,19 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
   
   /**
     * Return the current alpha of the simulation, which defaults to 1.
+    *
+    * alpha is roughly analogous to temperature in simulated annealing.
+    * It decreases over time as the simulation “cools down”.
+    * When alpha reaches alphaMin, the simulation stops; see simulation.restart.
     */
   def alpha(): Double = js.native
   /**
     * Set the current alpha to the specified number in the range [0,1] and return this simulation.
     * The default is 1.
+    *
+    * alpha is roughly analogous to temperature in simulated annealing.
+    * It decreases over time as the simulation “cools down”.
+    * When alpha reaches alphaMin, the simulation stops; see simulation.restart.
     *
     * @param alpha Current alpha of simulation.
     */
@@ -120,7 +128,7 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     *
     * The position [x,y] and velocity [vx,vy] may be subsequently modified by forces and by the simulation.
     * If either vx or vy is NaN, the velocity is initialized to [0,0]. If either x or y is NaN, the position is initialized in a phyllotaxis arrangement,
-    * so chosen to ensure a deterministic, uniform distribution around the origin.
+    * so chosen to ensure a deterministic, uniform distribution.
     *
     * To fix a node in a given position, you may specify two additional properties:
     * - fx (the node’s fixed x-position)
@@ -189,6 +197,18 @@ trait Simulation[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.Unde
     */
   @JSName("on")
   def on_tick_Union(typenames: tick): js.UndefOr[js.ThisFunction0[/* this */ Simulation[NodeDatum, LinkDatum], Unit]] = js.native
+  
+  /**
+    * Returns this simulation’s current random source which defaults to a fixed-seed linear congruential generator.
+    * See also random.source.
+    */
+  def randomSource(): js.Function0[Double] = js.native
+  /**
+    * Sets the function used to generate random numbers; this should be a function that returns a number between 0 (inclusive) and 1 (exclusive).
+    *
+    * @param source The function used to generate random numbers.
+    */
+  def randomSource(source: js.Function0[Double]): this.type = js.native
   
   /**
     * Restart the simulation’s internal timer and return the simulation.

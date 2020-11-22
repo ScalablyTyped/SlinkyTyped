@@ -63,6 +63,11 @@ trait Instance extends js.Object {
   var EnaSupport: js.UndefOr[Boolean] = js.native
   
   /**
+    * Indicates whether the instance is enabled for AWS Nitro Enclaves.
+    */
+  var EnclaveOptions: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.EnclaveOptions] = js.native
+  
+  /**
     * Indicates whether the instance is enabled for hibernation.
     */
   var HibernationOptions: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.HibernationOptions] = js.native
@@ -168,7 +173,7 @@ trait Instance extends js.Object {
   var PublicDnsName: js.UndefOr[String] = js.native
   
   /**
-    * The public IPv4 address assigned to the instance, if applicable.
+    * The public IPv4 address, or the Carrier IP address assigned to the instance, if applicable. A Carrier IP address only applies to an instance launched in a subnet associated with a Wavelength Zone.
     */
   var PublicIpAddress: js.UndefOr[String] = js.native
   
@@ -339,6 +344,12 @@ object Instance {
     
     @scala.inline
     def deleteEnaSupport: Self = this.set("EnaSupport", js.undefined)
+    
+    @scala.inline
+    def setEnclaveOptions(value: EnclaveOptions): Self = this.set("EnclaveOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnclaveOptions: Self = this.set("EnclaveOptions", js.undefined)
     
     @scala.inline
     def setHibernationOptions(value: HibernationOptions): Self = this.set("HibernationOptions", value.asInstanceOf[js.Any])

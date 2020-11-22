@@ -23,7 +23,7 @@ object mod extends js.Object {
   @JSName("Fusion")
   def Fusion_1(
     feature: String,
-    options: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters</ * import warning: ResolveTypeQueries.resolve Couldn't resolve typeof loadFeature * / any>[1] */ js.Any
+    options: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<jest-cucumber-fusion.anon.FnCall>[1] */ js.Any
   ): Unit = js.native
   
   def Given(name: String, callback: CallBack): Unit = js.native

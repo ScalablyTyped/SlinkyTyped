@@ -9,13 +9,13 @@ trait PaddingBottomProps[TLength] extends js.Object {
   
   val paddingBottom: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingBottomProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingBottom<TLength> */ _
     ]
   ] = js.native
   
   val pb: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingBottomProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingBottom<TLength> */ _
     ]
   ] = js.native
 }
@@ -43,9 +43,12 @@ object PaddingBottomProps {
     }
     
     @scala.inline
+    def setPaddingBottomVarargs(value: js.Any*): Self = this.set("paddingBottom", js.Array(value :_*))
+    
+    @scala.inline
     def setPaddingBottom(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingBottomProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingBottom<TLength> */ _
         ]
     ): Self = this.set("paddingBottom", value.asInstanceOf[js.Any])
     
@@ -53,9 +56,12 @@ object PaddingBottomProps {
     def deletePaddingBottom: Self = this.set("paddingBottom", js.undefined)
     
     @scala.inline
+    def setPbVarargs(value: js.Any*): Self = this.set("pb", js.Array(value :_*))
+    
+    @scala.inline
     def setPb(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingBottomProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingBottom<TLength> */ _
         ]
     ): Self = this.set("pb", value.asInstanceOf[js.Any])
     

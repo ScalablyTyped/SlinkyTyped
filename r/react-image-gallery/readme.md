@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-image-gallery
 
-Typings are for version 0.9
+Typings are for version 1.0
 
 ## Library description:
 React carousel image gallery component with thumbnail and mobile support

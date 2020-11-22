@@ -18,8 +18,14 @@ object lightShadowMod extends js.Object {
   class LightShadow protected () extends js.Object {
     def this(camera: Camera) = this()
     
+    /**
+    	 * @default true
+    	 */
     var autoUpdate: Boolean = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var bias: Double = js.native
     
     var camera: Camera = js.native
@@ -34,18 +40,39 @@ object lightShadowMod extends js.Object {
     
     def getViewport(viewportIndex: Double): Vector4 = js.native
     
+    /**
+    	 * @default null
+    	 */
     var map: RenderTarget = js.native
     
+    /**
+    	 * @default null
+    	 */
     var mapPass: RenderTarget = js.native
     
+    /**
+    	 * @default new THREE.Vector2( 512, 512 )
+    	 */
     var mapSize: Vector2 = js.native
     
+    /**
+    	 * @default new THREE.Matrix4()
+    	 */
     var matrix: Matrix4 = js.native
     
+    /**
+    	 * @default false
+    	 */
     var needsUpdate: Boolean = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var normalBias: Double = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var radius: Double = js.native
     
     def toJSON(): js.Any = js.native

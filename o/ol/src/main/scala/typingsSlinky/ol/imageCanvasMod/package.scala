@@ -13,6 +13,6 @@ package object imageCanvasMod {
     /* p2 */ scala.Double, 
     /* p3 */ typingsSlinky.ol.sizeMod.Size, 
     /* p4 */ typingsSlinky.ol.projectionMod.default, 
-    org.scalajs.dom.raw.HTMLCanvasElement
+    js.UndefOr[org.scalajs.dom.raw.HTMLCanvasElement | scala.Null]
   ]
 }

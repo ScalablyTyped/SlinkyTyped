@@ -19,7 +19,7 @@ trait GetSystemInfoSuccessCallbackResult extends js.Object {
     * 最低基础库： `2.6.0` */
   var albumAuthorized: Boolean = js.native
   
-  /** 设备性能等级（仅Android小游戏）。取值为：-2 或 0（该设备无法运行小游戏），-1（性能未知），>=1（设备性能值，该值越高，设备性能越好，目前最高不到50）
+  /** 设备性能等级（仅 Android）。取值为：-2 或 0（该设备无法运行小游戏），-1（性能未知），>=1（设备性能值，该值越高，设备性能越好，目前最高不到50）
     *
     * 最低基础库： `1.8.0` */
   var benchmarkLevel: Double = js.native

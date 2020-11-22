@@ -6,6 +6,7 @@ import typingsSlinky.grommet.anon.EnterSelect
 import typingsSlinky.grommet.anon.LabelValue
 import typingsSlinky.grommet.anon.Suggestion
 import typingsSlinky.grommet.dropMod.DropProps
+import typingsSlinky.grommet.grommetStrings.full
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.small
@@ -45,7 +46,7 @@ trait TextInputProps extends js.Object {
   
   var placeholder: js.UndefOr[PlaceHolderType] = js.native
   
-  var plain: js.UndefOr[Boolean] = js.native
+  var plain: js.UndefOr[Boolean | full] = js.native
   
   var reverse: js.UndefOr[Boolean] = js.native
   
@@ -160,7 +161,7 @@ object TextInputProps {
     def deletePlaceholder: Self = this.set("placeholder", js.undefined)
     
     @scala.inline
-    def setPlain(value: Boolean): Self = this.set("plain", value.asInstanceOf[js.Any])
+    def setPlain(value: Boolean | full): Self = this.set("plain", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePlain: Self = this.set("plain", js.undefined)

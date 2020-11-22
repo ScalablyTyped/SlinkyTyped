@@ -1,7 +1,7 @@
 
 # Scala.js typings for dagre-d3
 
-Typings are for version 0.4
+Typings are for version 0.6
 
 ## Library description:
 A D3-based renderer for Dagre

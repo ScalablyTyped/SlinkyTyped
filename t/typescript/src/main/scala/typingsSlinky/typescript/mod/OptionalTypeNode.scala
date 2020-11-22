@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OptionalTypeNode extends TypeNode {
   
   @JSName("kind")
-  var kind_OptionalTypeNode: OptionalType = js.native
+  val kind_OptionalTypeNode: OptionalType = js.native
   
-  var `type`: TypeNode = js.native
+  val `type`: TypeNode = js.native
 }

@@ -12,7 +12,7 @@ trait MessageSendingResponse extends DefaultResponse {
   
   var Cc: js.UndefOr[String] = js.native
   
-  var MessageID: String = js.native
+  var MessageID: js.UndefOr[String] = js.native
   
   var SubmittedAt: String = js.native
   
@@ -21,8 +21,8 @@ trait MessageSendingResponse extends DefaultResponse {
 object MessageSendingResponse {
   
   @scala.inline
-  def apply(ErrorCode: Double, Message: String, MessageID: String, SubmittedAt: String): MessageSendingResponse = {
-    val __obj = js.Dynamic.literal(ErrorCode = ErrorCode.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], MessageID = MessageID.asInstanceOf[js.Any], SubmittedAt = SubmittedAt.asInstanceOf[js.Any])
+  def apply(ErrorCode: Double, Message: String, SubmittedAt: String): MessageSendingResponse = {
+    val __obj = js.Dynamic.literal(ErrorCode = ErrorCode.asInstanceOf[js.Any], Message = Message.asInstanceOf[js.Any], SubmittedAt = SubmittedAt.asInstanceOf[js.Any])
     __obj.asInstanceOf[MessageSendingResponse]
   }
   
@@ -42,9 +42,6 @@ object MessageSendingResponse {
     }
     
     @scala.inline
-    def setMessageID(value: String): Self = this.set("MessageID", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setSubmittedAt(value: String): Self = this.set("SubmittedAt", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -58,6 +55,12 @@ object MessageSendingResponse {
     
     @scala.inline
     def deleteCc: Self = this.set("Cc", js.undefined)
+    
+    @scala.inline
+    def setMessageID(value: String): Self = this.set("MessageID", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMessageID: Self = this.set("MessageID", js.undefined)
     
     @scala.inline
     def setTo(value: String): Self = this.set("To", value.asInstanceOf[js.Any])

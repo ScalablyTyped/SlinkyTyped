@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AndroidStoreApp extends MobileApp {
   
   // The Android app store URL.
-  var appStoreUrl: js.UndefOr[String] = js.native
+  var appStoreUrl: js.UndefOr[NullableOption[String]] = js.native
   
   // The value for the minimum applicable operating system.
-  var minimumSupportedOperatingSystem: js.UndefOr[AndroidMinimumOperatingSystem] = js.native
+  var minimumSupportedOperatingSystem: js.UndefOr[NullableOption[AndroidMinimumOperatingSystem]] = js.native
   
   // The package identifier.
-  var packageId: js.UndefOr[String] = js.native
+  var packageId: js.UndefOr[NullableOption[String]] = js.native
 }
 object AndroidStoreApp {
   
@@ -40,21 +40,30 @@ object AndroidStoreApp {
     }
     
     @scala.inline
-    def setAppStoreUrl(value: String): Self = this.set("appStoreUrl", value.asInstanceOf[js.Any])
+    def setAppStoreUrl(value: NullableOption[String]): Self = this.set("appStoreUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAppStoreUrl: Self = this.set("appStoreUrl", js.undefined)
     
     @scala.inline
-    def setMinimumSupportedOperatingSystem(value: AndroidMinimumOperatingSystem): Self = this.set("minimumSupportedOperatingSystem", value.asInstanceOf[js.Any])
+    def setAppStoreUrlNull: Self = this.set("appStoreUrl", null)
+    
+    @scala.inline
+    def setMinimumSupportedOperatingSystem(value: NullableOption[AndroidMinimumOperatingSystem]): Self = this.set("minimumSupportedOperatingSystem", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumSupportedOperatingSystem: Self = this.set("minimumSupportedOperatingSystem", js.undefined)
     
     @scala.inline
-    def setPackageId(value: String): Self = this.set("packageId", value.asInstanceOf[js.Any])
+    def setMinimumSupportedOperatingSystemNull: Self = this.set("minimumSupportedOperatingSystem", null)
+    
+    @scala.inline
+    def setPackageId(value: NullableOption[String]): Self = this.set("packageId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePackageId: Self = this.set("packageId", js.undefined)
+    
+    @scala.inline
+    def setPackageIdNull: Self = this.set("packageId", null)
   }
 }

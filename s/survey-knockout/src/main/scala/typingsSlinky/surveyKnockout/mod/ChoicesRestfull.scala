@@ -31,9 +31,13 @@ class ChoicesRestfull () extends Base {
   
   def getResultCallback(items: js.Array[ItemValue]): Unit = js.native
   
+  var imageLinkName: String = js.native
+  
   val isEmpty: Boolean = js.native
   
   val isRunning: Boolean = js.native
+  
+  val isUsingCache: Boolean = js.native
   
   val isWaitingForParameters: Boolean = js.native
   

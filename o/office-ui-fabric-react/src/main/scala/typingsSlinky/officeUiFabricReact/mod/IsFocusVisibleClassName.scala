@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("office-ui-fabric-react", "IsFocusVisibleClassName")
 @js.native
-object IsFocusVisibleClassName extends TopLevel[/* "@media screen and (-ms-high-contrast: active)" */ String]
+object IsFocusVisibleClassName extends TopLevel[/* "change" */ String]

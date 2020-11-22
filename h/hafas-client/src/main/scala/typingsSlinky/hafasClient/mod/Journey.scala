@@ -20,7 +20,7 @@ trait Journey extends js.Object {
   
   var refreshToken: js.UndefOr[String] = js.native
   
-  var remarks: js.UndefOr[js.Array[Hint]] = js.native
+  var remarks: js.UndefOr[js.Array[Hint | Warning]] = js.native
   
   var scheduledDays: js.UndefOr[ScheduledDays] = js.native
   
@@ -78,10 +78,10 @@ object Journey {
     def deleteRefreshToken: Self = this.set("refreshToken", js.undefined)
     
     @scala.inline
-    def setRemarksVarargs(value: Hint*): Self = this.set("remarks", js.Array(value :_*))
+    def setRemarksVarargs(value: (Hint | Warning)*): Self = this.set("remarks", js.Array(value :_*))
     
     @scala.inline
-    def setRemarks(value: js.Array[Hint]): Self = this.set("remarks", value.asInstanceOf[js.Any])
+    def setRemarks(value: js.Array[Hint | Warning]): Self = this.set("remarks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRemarks: Self = this.set("remarks", js.undefined)

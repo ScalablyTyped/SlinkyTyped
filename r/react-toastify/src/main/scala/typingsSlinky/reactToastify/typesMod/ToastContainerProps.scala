@@ -1,12 +1,19 @@
 package typingsSlinky.reactToastify.typesMod
 
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactToastify.anon.DefaultClassName
+import typingsSlinky.reactToastify.anon.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait ToastContainerProps extends CommonOptions {
+  
+  /**
+    * An optional css class to set.
+    */
+  var className: js.UndefOr[ClassName] = js.native
   
   /**
     * Show the toast only if it includes containerId and it's the same as containerId
@@ -33,7 +40,7 @@ trait ToastContainerProps extends CommonOptions {
   /**
     * An optional css class for the toast.
     */
-  var toastClassName: js.UndefOr[ClassName] = js.native
+  var toastClassName: js.UndefOr[ToastClassName] = js.native
   
   /**
     * An optional inline style to apply for the toast.
@@ -64,6 +71,15 @@ object ToastContainerProps {
     }
     
     @scala.inline
+    def setClassNameFunction1(value: /* context */ js.UndefOr[DefaultClassName] => String): Self = this.set("className", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setClassName(value: ClassName): Self = this.set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
     def setEnableMultiContainer(value: Boolean): Self = this.set("enableMultiContainer", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -88,13 +104,13 @@ object ToastContainerProps {
     def deleteStyle: Self = this.set("style", js.undefined)
     
     @scala.inline
-    def setToastClassName(value: ClassName): Self = this.set("toastClassName", value.asInstanceOf[js.Any])
+    def setToastClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("toastClassName", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setToastClassName(value: ToastClassName): Self = this.set("toastClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteToastClassName: Self = this.set("toastClassName", js.undefined)
-    
-    @scala.inline
-    def setToastClassNameNull: Self = this.set("toastClassName", null)
     
     @scala.inline
     def setToastStyle(value: CSSProperties): Self = this.set("toastStyle", value.asInstanceOf[js.Any])

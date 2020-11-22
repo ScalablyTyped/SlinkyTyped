@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object modalHeaderMod {
   
-  type ModalHeader[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.modalHeaderMod.ModalHeaderProps]
+  type ModalHeader = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.modalHeaderMod.ModalHeaderProps]
 }

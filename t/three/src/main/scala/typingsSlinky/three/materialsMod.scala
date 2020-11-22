@@ -24,8 +24,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object materialsMod extends js.Object {
   
-  var MaterialIdCount: Double = js.native
-  
   @js.native
   class LineBasicMaterial ()
     extends typingsSlinky.three.lineBasicMaterialMod.LineBasicMaterial {

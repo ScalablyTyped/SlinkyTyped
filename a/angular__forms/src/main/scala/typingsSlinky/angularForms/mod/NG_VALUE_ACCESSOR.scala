@@ -8,4 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("@angular/forms", "NG_VALUE_ACCESSOR")
 @js.native
-object NG_VALUE_ACCESSOR extends TopLevel[InjectionToken[ControlValueAccessor]]
+object NG_VALUE_ACCESSOR
+  extends TopLevel[InjectionToken[js.Array[ControlValueAccessor]]]

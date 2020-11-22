@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Cursor extends js.Object {
   
-  var cursor: String | Null = js.native
+  var cursor: js.UndefOr[String | Null] = js.native
   
   var hasMore: Boolean = js.native
 }
@@ -39,6 +39,9 @@ object Cursor {
     
     @scala.inline
     def setCursor(value: String): Self = this.set("cursor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCursor: Self = this.set("cursor", js.undefined)
     
     @scala.inline
     def setCursorNull: Self = this.set("cursor", null)

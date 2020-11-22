@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.electron.Electron.CreateFromBitmapOptions
 import typingsSlinky.electron.Electron.CreateFromBufferOptions
 import typingsSlinky.electron.Electron.NativeImage_
+import typingsSlinky.electron.Electron.Size
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TypeofNativeImage extends Instantiable0[NativeImage_] {
   
-  // Docs: http://electronjs.org/docs/api/native-image
+  // Docs: https://electronjs.org/docs/api/native-image
   /**
     * Creates an empty `NativeImage` instance.
     */
@@ -76,4 +77,11 @@ trait TypeofNativeImage extends Instantiable0[NativeImage_] {
     * valid image.
     */
   def createFromPath(path: String): NativeImage_ = js.native
+  
+  /**
+    * fulfilled with the file's thumbnail preview image, which is a NativeImage.
+    *
+    * @platform darwin,win32
+    */
+  def createThumbnailFromPath(path: String, maxSize: Size): js.Promise[NativeImage_] = js.native
 }

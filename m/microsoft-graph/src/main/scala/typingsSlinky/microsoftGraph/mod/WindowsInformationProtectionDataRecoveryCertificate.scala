@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WindowsInformationProtectionDataRecoveryCertificate extends js.Object {
   
   // Data recovery Certificate
-  var certificate: js.UndefOr[Double] = js.native
+  var certificate: js.UndefOr[NullableOption[Double]] = js.native
   
   // Data recovery Certificate description
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[NullableOption[String]] = js.native
   
   // Data recovery Certificate expiration datetime
   var expirationDateTime: js.UndefOr[String] = js.native
   
   // Data recovery Certificate subject name
-  var subjectName: js.UndefOr[String] = js.native
+  var subjectName: js.UndefOr[NullableOption[String]] = js.native
 }
 object WindowsInformationProtectionDataRecoveryCertificate {
   
@@ -43,16 +43,22 @@ object WindowsInformationProtectionDataRecoveryCertificate {
     }
     
     @scala.inline
-    def setCertificate(value: Double): Self = this.set("certificate", value.asInstanceOf[js.Any])
+    def setCertificate(value: NullableOption[Double]): Self = this.set("certificate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCertificate: Self = this.set("certificate", js.undefined)
     
     @scala.inline
-    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setCertificateNull: Self = this.set("certificate", null)
+    
+    @scala.inline
+    def setDescription(value: NullableOption[String]): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
+    
+    @scala.inline
+    def setDescriptionNull: Self = this.set("description", null)
     
     @scala.inline
     def setExpirationDateTime(value: String): Self = this.set("expirationDateTime", value.asInstanceOf[js.Any])
@@ -61,9 +67,12 @@ object WindowsInformationProtectionDataRecoveryCertificate {
     def deleteExpirationDateTime: Self = this.set("expirationDateTime", js.undefined)
     
     @scala.inline
-    def setSubjectName(value: String): Self = this.set("subjectName", value.asInstanceOf[js.Any])
+    def setSubjectName(value: NullableOption[String]): Self = this.set("subjectName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSubjectName: Self = this.set("subjectName", js.undefined)
+    
+    @scala.inline
+    def setSubjectNameNull: Self = this.set("subjectName", null)
   }
 }

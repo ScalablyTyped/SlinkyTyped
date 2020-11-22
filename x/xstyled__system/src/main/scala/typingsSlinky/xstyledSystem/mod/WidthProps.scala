@@ -9,7 +9,7 @@ trait WidthProps[TLength] extends js.Object {
   
   val width: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object WidthProps {
     }
     
     @scala.inline
+    def setWidthVarargs(value: js.Any*): Self = this.set("width", js.Array(value :_*))
+    
+    @scala.inline
     def setWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLength> */ _
         ]
     ): Self = this.set("width", value.asInstanceOf[js.Any])
     

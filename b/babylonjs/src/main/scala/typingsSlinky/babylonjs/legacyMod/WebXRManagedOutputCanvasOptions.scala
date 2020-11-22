@@ -15,7 +15,9 @@ object WebXRManagedOutputCanvasOptions extends js.Object {
   
   /**
     * Get the default values of the configuration object
+    * @param engine defines the engine to use (can be null)
     * @returns default values of this configuration object
     */
   def GetDefaults(): typingsSlinky.babylonjs.webXRManagedOutputCanvasMod.WebXRManagedOutputCanvasOptions = js.native
+  def GetDefaults(engine: typingsSlinky.babylonjs.thinEngineMod.ThinEngine): typingsSlinky.babylonjs.webXRManagedOutputCanvasMod.WebXRManagedOutputCanvasOptions = js.native
 }

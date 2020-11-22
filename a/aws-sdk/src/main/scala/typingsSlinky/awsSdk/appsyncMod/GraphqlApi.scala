@@ -58,6 +58,11 @@ trait GraphqlApi extends js.Object {
   var userPoolConfig: js.UndefOr[UserPoolConfig] = js.native
   
   /**
+    * The ARN of the AWS Web Application Firewall (WAF) ACL associated with this GraphqlApi, if one exists.
+    */
+  var wafWebAclArn: js.UndefOr[String] = js.native
+  
+  /**
     * A flag representing whether X-Ray tracing is enabled for this GraphqlApi.
     */
   var xrayEnabled: js.UndefOr[Boolean] = js.native
@@ -147,6 +152,12 @@ object GraphqlApi {
     
     @scala.inline
     def deleteUserPoolConfig: Self = this.set("userPoolConfig", js.undefined)
+    
+    @scala.inline
+    def setWafWebAclArn(value: String): Self = this.set("wafWebAclArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWafWebAclArn: Self = this.set("wafWebAclArn", js.undefined)
     
     @scala.inline
     def setXrayEnabled(value: Boolean): Self = this.set("xrayEnabled", value.asInstanceOf[js.Any])

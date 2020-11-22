@@ -4,14 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @see {@link LatLngLiteral}. */
+/**
+  * @see {@link LatLngLiteral}.
+  */
 @js.native
 trait ReadonlyLatLngLiteral extends js.Object {
   
-  /** @see {@link LatLngLiteral#lat} */
+  /**
+    * @see {@link LatLngLiteral#lat}
+    */
   val lat: Double = js.native
   
-  /** @see {@link LatLngLiteral#lng} */
+  /**
+    * @see {@link LatLngLiteral#lng}
+    */
   val lng: Double = js.native
 }
 object ReadonlyLatLngLiteral {

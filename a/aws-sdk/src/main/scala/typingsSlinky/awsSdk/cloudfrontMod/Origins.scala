@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Origins extends js.Object {
   
   /**
-    * A complex type that contains origins or origin groups for this distribution.
+    * A list of origins.
     */
   var Items: OriginList = js.native
   
   /**
-    * The number of origins or origin groups for this distribution.
+    * The number of origins for this distribution.
     */
   var Quantity: integer = js.native
 }

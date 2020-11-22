@@ -7,7 +7,7 @@ import typingsSlinky.babelTraverse.mod.Binding
 import typingsSlinky.babelTraverse.mod.Node
 import typingsSlinky.babelTraverse.mod.NodePath
 import typingsSlinky.babelTraverse.mod.Scope
-import typingsSlinky.babelTypes.mod.Identifier_
+import typingsSlinky.babelTypes.ts36Mod.Identifier_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

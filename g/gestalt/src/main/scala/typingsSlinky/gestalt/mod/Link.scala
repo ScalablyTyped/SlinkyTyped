@@ -1,11 +1,11 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLAnchorElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gestalt", "Link")
 @js.native
-class Link ()
-  extends Component[LinkProps, js.Any, js.Any]
+object Link extends TopLevel[ReactForwardRef[HTMLAnchorElement, LinkProps]]

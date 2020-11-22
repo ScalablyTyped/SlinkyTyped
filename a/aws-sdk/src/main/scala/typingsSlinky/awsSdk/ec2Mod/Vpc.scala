@@ -18,7 +18,7 @@ trait Vpc extends js.Object {
   var CidrBlockAssociationSet: js.UndefOr[VpcCidrBlockAssociationSet] = js.native
   
   /**
-    * The ID of the set of DHCP options you've associated with the VPC (or default if the default options are associated with the VPC).
+    * The ID of the set of DHCP options you've associated with the VPC.
     */
   var DhcpOptionsId: js.UndefOr[String] = js.native
   

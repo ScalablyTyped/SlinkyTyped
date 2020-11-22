@@ -26,6 +26,13 @@ trait INumericInputProps
   var allowNumericCharactersOnly: js.UndefOr[Boolean] = js.native
   
   /**
+    * Set this to `true` if you will be controlling the `value` of this input with asynchronous updates.
+    * These may occur if you do not immediately call setState in a parent component with the value from
+    * the `onChange` handler.
+    */
+  var asyncControl: js.UndefOr[Boolean] = js.native
+  
+  /**
     * The position of the buttons with respect to the input field.
     * @default Position.RIGHT
     */
@@ -73,6 +80,13 @@ trait INumericInputProps
     * Name of a Blueprint UI icon (or an icon element) to render on the left side of input.
     */
   var leftIcon: js.UndefOr[IconName | MaybeElement] = js.native
+  
+  /**
+    * The locale name, which is passed to the component to format the number and allowing to type the number in the specific locale.
+    * [See MDN documentation for more info about browser locale identification](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_identification_and_negotiation).
+    * @default ""
+    */
+  var locale: js.UndefOr[String] = js.native
   
   /**
     * The increment between successive values when <kbd>shift</kbd> is held.
@@ -134,7 +148,9 @@ trait INumericInputProps
     */
   var stepSize: js.UndefOr[Double] = js.native
   
-  /** The value to display in the input field. */
+  /**
+    * The value to display in the input field.
+    */
   var value: js.UndefOr[Double | String] = js.native
 }
 object INumericInputProps {
@@ -165,6 +181,12 @@ object INumericInputProps {
     
     @scala.inline
     def deleteAllowNumericCharactersOnly: Self = this.set("allowNumericCharactersOnly", js.undefined)
+    
+    @scala.inline
+    def setAsyncControl(value: Boolean): Self = this.set("asyncControl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAsyncControl: Self = this.set("asyncControl", js.undefined)
     
     @scala.inline
     def setButtonPosition(value: left | right | none): Self = this.set("buttonPosition", value.asInstanceOf[js.Any])
@@ -219,6 +241,12 @@ object INumericInputProps {
     
     @scala.inline
     def setLeftIconNull: Self = this.set("leftIcon", null)
+    
+    @scala.inline
+    def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
     
     @scala.inline
     def setMajorStepSize(value: Double): Self = this.set("majorStepSize", value.asInstanceOf[js.Any])

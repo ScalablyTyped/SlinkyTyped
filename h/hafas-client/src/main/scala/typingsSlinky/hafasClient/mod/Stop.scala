@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Stop extends js.Object {
   
-  var id: String = js.native
+  var distance: js.UndefOr[Double] = js.native
+  
+  var entrances: js.UndefOr[js.Array[Location]] = js.native
+  
+  var id: js.UndefOr[String] = js.native
   
   var ids: js.UndefOr[Ids] = js.native
   
@@ -24,21 +28,21 @@ trait Stop extends js.Object {
   
   var location: js.UndefOr[Location] = js.native
   
-  var name: String = js.native
+  var name: js.UndefOr[String] = js.native
   
-  var products: Products = js.native
+  var products: js.UndefOr[Products] = js.native
   
   var reisezentrumOpeningHours: js.UndefOr[ReisezentrumOpeningHours] = js.native
   
-  var station: js.UndefOr[Station] = js.native
+  var transitAuthority: js.UndefOr[String] = js.native
   
   var `type`: stop = js.native
 }
 object Stop {
   
   @scala.inline
-  def apply(id: String, name: String, products: Products, `type`: stop): Stop = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], products = products.asInstanceOf[js.Any])
+  def apply(`type`: stop): Stop = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Stop]
   }
@@ -59,16 +63,28 @@ object Stop {
     }
     
     @scala.inline
+    def setType(value: stop): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDistance(value: Double): Self = this.set("distance", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDistance: Self = this.set("distance", js.undefined)
+    
+    @scala.inline
+    def setEntrancesVarargs(value: Location*): Self = this.set("entrances", js.Array(value :_*))
+    
+    @scala.inline
+    def setEntrances(value: js.Array[Location]): Self = this.set("entrances", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEntrances: Self = this.set("entrances", js.undefined)
+    
+    @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setProducts(value: Products): Self = this.set("products", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setType(value: stop): Self = this.set("type", value.asInstanceOf[js.Any])
+    def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
     def setIds(value: Ids): Self = this.set("ids", value.asInstanceOf[js.Any])
@@ -104,15 +120,27 @@ object Stop {
     def deleteLocation: Self = this.set("location", js.undefined)
     
     @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setProducts(value: Products): Self = this.set("products", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProducts: Self = this.set("products", js.undefined)
+    
+    @scala.inline
     def setReisezentrumOpeningHours(value: ReisezentrumOpeningHours): Self = this.set("reisezentrumOpeningHours", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReisezentrumOpeningHours: Self = this.set("reisezentrumOpeningHours", js.undefined)
     
     @scala.inline
-    def setStation(value: Station): Self = this.set("station", value.asInstanceOf[js.Any])
+    def setTransitAuthority(value: String): Self = this.set("transitAuthority", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteStation: Self = this.set("station", js.undefined)
+    def deleteTransitAuthority: Self = this.set("transitAuthority", js.undefined)
   }
 }

@@ -13,11 +13,11 @@ package object kernelRegistryMod {
   type DataId = js.Object
   
   type GradFunc = js.Function3[
-    /* dy */ typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | (js.Array[
-      typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+    /* dy */ typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] | (js.Array[
+      typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
     ]), 
     /* saved */ js.Array[
-      typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+      typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
     ], 
     /* attrs */ typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.NamedAttrMap, 
     typingsSlinky.tensorflowTfjsCore.tapeMod.NamedGradientMap

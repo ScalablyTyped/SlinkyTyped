@@ -1,5 +1,6 @@
 package typingsSlinky.react.mod
 
+import typingsSlinky.react.reactStrings.eager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,20 +14,26 @@ trait IframeHTMLAttributes[T] extends HTMLAttributes[T] {
   
   var allowTransparency: js.UndefOr[Boolean] = js.native
   
+  /** @deprecated */
   var frameBorder: js.UndefOr[Double | String] = js.native
   
   var height: js.UndefOr[Double | String] = js.native
   
+  var loading: js.UndefOr[eager | typingsSlinky.react.reactStrings.`lazy`] = js.native
+  
+  /** @deprecated */
   var marginHeight: js.UndefOr[Double] = js.native
   
+  /** @deprecated */
   var marginWidth: js.UndefOr[Double] = js.native
   
   var name: js.UndefOr[String] = js.native
   
-  var referrerPolicy: js.UndefOr[String] = js.native
+  var referrerPolicy: js.UndefOr[HTMLAttributeReferrerPolicy] = js.native
   
   var sandbox: js.UndefOr[String] = js.native
   
+  /** @deprecated */
   var scrolling: js.UndefOr[String] = js.native
   
   var seamless: js.UndefOr[Boolean] = js.native
@@ -91,6 +98,12 @@ object IframeHTMLAttributes {
     def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
+    def setLoading(value: eager | typingsSlinky.react.reactStrings.`lazy`): Self = this.set("loading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
+    
+    @scala.inline
     def setMarginHeight(value: Double): Self = this.set("marginHeight", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -109,7 +122,7 @@ object IframeHTMLAttributes {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setReferrerPolicy(value: String): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    def setReferrerPolicy(value: HTMLAttributeReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)

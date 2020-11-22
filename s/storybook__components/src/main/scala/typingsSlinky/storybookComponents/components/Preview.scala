@@ -2,6 +2,7 @@ package typingsSlinky.storybookComponents.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.storybookComponents.actionBarMod.ActionItem
 import typingsSlinky.storybookComponents.previewMod.PreviewProps
 import typingsSlinky.storybookComponents.sourceMod.SourceProps
 import scala.scalajs.js
@@ -18,6 +19,12 @@ object Preview {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
+    
+    @scala.inline
+    def additionalActionsVarargs(value: ActionItem*): this.type = set("additionalActions", js.Array(value :_*))
+    
+    @scala.inline
+    def additionalActions(value: js.Array[ActionItem]): this.type = set("additionalActions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])

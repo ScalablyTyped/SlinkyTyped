@@ -15,7 +15,7 @@ import typingsSlinky.hapiHapi.hapiHapiStrings.tcp
 import typingsSlinky.hapiHapi.hapiHapiStrings.toolkit
 import typingsSlinky.hapiHapi.mod.Lifecycle.Method
 import typingsSlinky.hapiHapi.mod.Util.HTTP_METHODS
-import typingsSlinky.hapiJoi.mod.Root
+import typingsSlinky.joi.mod.Root
 import typingsSlinky.node.httpMod.Server
 import typingsSlinky.node.zlibMod.Gunzip_
 import typingsSlinky.node.zlibMod.Gzip_

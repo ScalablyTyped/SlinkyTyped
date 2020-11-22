@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ThrowStatement extends Statement {
   
-  var expression: js.UndefOr[Expression] = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_ThrowStatement: typingsSlinky.typescript.mod.SyntaxKind.ThrowStatement = js.native
+  val kind_ThrowStatement: typingsSlinky.typescript.mod.SyntaxKind.ThrowStatement = js.native
 }

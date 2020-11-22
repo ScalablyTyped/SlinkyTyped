@@ -7,7 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Settings extends js.Object {
   
-  /** Which dist-tag to use to find the latest version */
+  /**
+    * Which dist-tag to use to find the latest version
+    * @default 'latest'
+    */
   var distTag: js.UndefOr[String] = js.native
   
   /**

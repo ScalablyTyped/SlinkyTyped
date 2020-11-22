@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-trigger
 
-Typings are for version 4.3.4
+Typings are for version 5.1.2
 
 ## Library description:
 base abstract trigger component for react

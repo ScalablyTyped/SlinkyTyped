@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.parameterMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.parameterTypeMod.ParameterType
+import typingsSlinky.pulumiAws.enumsSsmMod.ParameterType
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -33,6 +33,12 @@ class Parameter protected () extends CustomResource {
     * The ARN of the parameter.
     */
   val arn: Output_[String] = js.native
+  
+  /**
+    * The dataType of the parameter. Valid values: text and aws:ec2:image for AMI format, see the [Native parameter support for Amazon Machine Image IDs
+    * ](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html)
+    */
+  val dataType: Output_[String] = js.native
   
   /**
     * The description of the parameter.

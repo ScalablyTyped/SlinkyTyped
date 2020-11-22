@@ -15,7 +15,7 @@ class Service protected () extends NamespaceBase {
     * @throws {TypeError} If arguments are invalid
     */
   def this(name: String) = this()
-  def this(name: String, options: StringDictionary[js.Any]) = this()
+  def this(name: String, options: StringDictionary[js.UndefOr[js.Any]]) = this()
   
   /**
     * Creates a runtime service using the specified rpc implementation.
@@ -30,7 +30,7 @@ class Service protected () extends NamespaceBase {
   def create(rpcImpl: RPCImpl, requestDelimited: Boolean, responseDelimited: Boolean): typingsSlinky.apolloProtobufjs.mod.rpc.Service = js.native
   
   /** Service methods. */
-  var methods: StringDictionary[Method] = js.native
+  var methods: StringDictionary[js.UndefOr[Method]] = js.native
   
   /** Methods of this service as an array for iteration. */
   val methodsArray: js.Array[Method] = js.native

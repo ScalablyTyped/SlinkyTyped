@@ -23,42 +23,56 @@ object mod extends js.Object {
     trait MockReq extends js.Object {
       
       // Methods
-      def accepts(args: js.Any*): js.Any = js.native
+      def accepts(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       
       // Methods
-      def acceptsCharsets(args: js.Any*): js.Any = js.native
+      def acceptsCharsets(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("acceptsCharsets")
-      var acceptsCharsets_Original: SinonStub = js.native
+      var acceptsCharsets_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def acceptsEncodings(args: js.Any*): js.Any = js.native
+      def acceptsEncodings(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("acceptsEncodings")
-      var acceptsEncodings_Original: SinonStub = js.native
+      var acceptsEncodings_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def acceptsLanguages(args: js.Any*): js.Any = js.native
+      def acceptsLanguages(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("acceptsLanguages")
-      var acceptsLanguages_Original: SinonStub = js.native
+      var acceptsLanguages_Original: SinonStub[js.Array[_], _] = js.native
       
       @JSName("accepts")
-      var accepts_Original: SinonStub = js.native
+      var accepts_Original: SinonStub[js.Array[_], _] = js.native
       
       var body: js.Object = js.native
       
       // Methods
-      def flash(args: js.Any*): js.Any = js.native
+      def flash(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("flash")
-      var flash_Original: SinonStub = js.native
+      var flash_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def get(args: js.Any*): js.Any = js.native
+      def get(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("get")
-      var get_Original: SinonStub = js.native
+      var get_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def is(args: js.Any*): js.Any = js.native
+      def is(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("is")
-      var is_Original: SinonStub = js.native
+      var is_Original: SinonStub[js.Array[_], _] = js.native
       
       var params: js.Object = js.native
       
@@ -78,114 +92,156 @@ object mod extends js.Object {
     trait MockRes extends js.Object {
       
       // Methods
-      def append(args: js.Any*): js.Any = js.native
+      def append(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("append")
-      var append_Original: SinonStub = js.native
+      var append_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def attachement(args: js.Any*): js.Any = js.native
+      def attachement(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("attachement")
-      var attachement_Original: SinonStub = js.native
+      var attachement_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def clearCookie(args: js.Any*): js.Any = js.native
+      def clearCookie(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("clearCookie")
-      var clearCookie_Original: SinonStub = js.native
+      var clearCookie_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def cookie(args: js.Any*): js.Any = js.native
+      def cookie(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("cookie")
-      var cookie_Original: SinonStub = js.native
+      var cookie_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def download(args: js.Any*): js.Any = js.native
+      def download(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("download")
-      var download_Original: SinonStub = js.native
+      var download_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def end(args: js.Any*): js.Any = js.native
+      def end(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("end")
-      var end_Original: SinonStub = js.native
+      var end_Original: SinonStub[js.Array[_], _] = js.native
       
       var format: js.Object = js.native
       
       // Methods
-      def get(args: js.Any*): js.Any = js.native
+      def get(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("get")
-      var get_Original: SinonStub = js.native
+      var get_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def headersSent(args: js.Any*): js.Any = js.native
+      def headersSent(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("headersSent")
-      var headersSent_Original: SinonStub = js.native
+      var headersSent_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def json(args: js.Any*): js.Any = js.native
+      def json(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("json")
-      var json_Original: SinonStub = js.native
+      var json_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def jsonp(args: js.Any*): js.Any = js.native
+      def jsonp(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("jsonp")
-      var jsonp_Original: SinonStub = js.native
+      var jsonp_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def links(args: js.Any*): js.Any = js.native
+      def links(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("links")
-      var links_Original: SinonStub = js.native
+      var links_Original: SinonStub[js.Array[_], _] = js.native
       
       var locals: js.Object = js.native
       
       // Methods
-      def location(args: js.Any*): js.Any = js.native
+      def location(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("location")
-      var location_Original: SinonStub = js.native
+      var location_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def redirect(args: js.Any*): js.Any = js.native
+      def redirect(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("redirect")
-      var redirect_Original: SinonStub = js.native
+      var redirect_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def render(args: js.Any*): js.Any = js.native
+      def render(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("render")
-      var render_Original: SinonStub = js.native
+      var render_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def send(args: js.Any*): js.Any = js.native
+      def send(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       
       // Methods
-      def sendFile(args: js.Any*): js.Any = js.native
+      def sendFile(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("sendFile")
-      var sendFile_Original: SinonStub = js.native
+      var sendFile_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def sendStatus(args: js.Any*): js.Any = js.native
+      def sendStatus(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("sendStatus")
-      var sendStatus_Original: SinonStub = js.native
+      var sendStatus_Original: SinonStub[js.Array[_], _] = js.native
       
       @JSName("send")
-      var send_Original: SinonStub = js.native
+      var send_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def set(args: js.Any*): js.Any = js.native
+      def set(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("set")
-      var set_Original: SinonStub = js.native
+      var set_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def status(args: js.Any*): js.Any = js.native
+      def status(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("status")
-      var status_Original: SinonStub = js.native
+      var status_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def `type`(args: js.Any*): js.Any = js.native
+      def `type`(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("type")
-      var type_Original: SinonStub = js.native
+      var type_Original: SinonStub[js.Array[_], _] = js.native
       
       // Methods
-      def vary(args: js.Any*): js.Any = js.native
+      def vary(
+        /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+      ): js.Any = js.native
       @JSName("vary")
-      var vary_Original: SinonStub = js.native
+      var vary_Original: SinonStub[js.Array[_], _] = js.native
     }
   }
 }

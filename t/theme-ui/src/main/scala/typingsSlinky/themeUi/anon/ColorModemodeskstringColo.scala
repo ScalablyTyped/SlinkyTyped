@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ColorModemodeskstringColo
   extends /* k */ StringDictionary[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any) | (ObjectOrArray[
-        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ _
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any) | (ObjectOrArray[
+        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ _
       ])
     ] {
   
@@ -20,19 +20,19 @@ trait ColorModemodeskstringColo
     * A contrast color for emphasizing UI
     */
   var accent: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ] = js.native
   
   /**
     * Body background color
     */
-  var background: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any = js.native
+  var background: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any = js.native
   
   /**
     * A background color for highlighting text
     */
   var highlight: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ] = js.native
   
   /**
@@ -46,34 +46,34 @@ trait ColorModemodeskstringColo
     * high contrast with the background color
     */
   var muted: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ] = js.native
   
   /**
     * Primary brand color for links, buttons, etc.
     */
   var primary: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ] = js.native
   
   /**
     * A secondary brand color for alternative styling
     */
   var secondary: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ] = js.native
   
   /**
     * Body foreground color
     */
-  var text: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any = js.native
+  var text: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any = js.native
 }
 object ColorModemodeskstringColo {
   
   @scala.inline
   def apply(
-    background: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any,
-    text: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+    background: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any,
+    text: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
   ): ColorModemodeskstringColo = {
     val __obj = js.Dynamic.literal(background = background.asInstanceOf[js.Any], text = text.asInstanceOf[js.Any])
     __obj.asInstanceOf[ColorModemodeskstringColo]
@@ -96,17 +96,17 @@ object ColorModemodeskstringColo {
     
     @scala.inline
     def setBackground(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
     ): Self = this.set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setText(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
     ): Self = this.set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAccent(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
     ): Self = this.set("accent", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -114,7 +114,7 @@ object ColorModemodeskstringColo {
     
     @scala.inline
     def setHighlight(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
     ): Self = this.set("highlight", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -128,7 +128,7 @@ object ColorModemodeskstringColo {
     
     @scala.inline
     def setMuted(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
     ): Self = this.set("muted", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -136,7 +136,7 @@ object ColorModemodeskstringColo {
     
     @scala.inline
     def setPrimary(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
     ): Self = this.set("primary", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -144,7 +144,7 @@ object ColorModemodeskstringColo {
     
     @scala.inline
     def setSecondary(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ js.Any
     ): Self = this.set("secondary", value.asInstanceOf[js.Any])
     
     @scala.inline

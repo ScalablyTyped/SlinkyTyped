@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.IAppServiceActionParameter
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.expressionsMod.expressions.Expression
@@ -8,20 +9,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.AppServiceCallParameterMapping")
 @js.native
-class AppServiceCallParameterMapping protected () extends Element {
+class AppServiceCallParameterMapping protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -32,6 +34,8 @@ class AppServiceCallParameterMapping protected () extends Element {
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 7.9.0: introduced
     */
   def argumentModel: Expression = js.native
@@ -40,9 +44,6 @@ class AppServiceCallParameterMapping protected () extends Element {
   def argument_=(newValue: String): Unit = js.native
   
   def containerAsAppServiceCallAction: AppServiceCallAction = js.native
-  
-  @JSName("model")
-  var model_FAppServiceCallParameterMapping: IModel = js.native
   
   def parameter: IAppServiceActionParameter | Null = js.native
   

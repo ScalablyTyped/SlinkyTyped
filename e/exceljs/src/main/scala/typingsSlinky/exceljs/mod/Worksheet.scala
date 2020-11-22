@@ -2,8 +2,6 @@ package typingsSlinky.exceljs.mod
 
 import typingsSlinky.exceljs.anon.ImageId
 import typingsSlinky.exceljs.anon.IncludeEmpty
-import typingsSlinky.exceljs.anon.PartialColumn
-import typingsSlinky.exceljs.anon.PartialColumnAlignment
 import typingsSlinky.exceljs.anon.PartialHeaderFooter
 import typingsSlinky.exceljs.anon.PartialPageSetup
 import typingsSlinky.exceljs.anon.PartialWorksheetProtectio
@@ -46,19 +44,19 @@ trait Worksheet extends js.Object {
   def addImage(imageId: Double, range: editAsstringundefinedhypeEditAs): Unit = js.native
   
   def addRow(data: js.Any): Row = js.native
-  def addRow(data: js.Any, styleOption: String): Row = js.native
+  def addRow(data: js.Any, style: String): Row = js.native
   /**
   	 * Add a couple of Rows by key-value, after the last current row, using the column keys,
   	 * or add a row by contiguous Array (assign to columns A, B & C)
   	 */
   def addRow(data: js.Array[_]): Row = js.native
-  def addRow(data: js.Array[_], styleOption: String): Row = js.native
+  def addRow(data: js.Array[_], style: String): Row = js.native
   
   /**
   	 * Add multiple rows by providing an array of arrays or key-value pairs
   	 */
-  def addRows(rows: js.Array[_]): Unit = js.native
-  def addRows(rows: js.Array[_], styleOption: String): Unit = js.native
+  def addRows(rows: js.Array[_]): js.Array[Row] = js.native
+  def addRows(rows: js.Array[_], style: String): js.Array[Row] = js.native
   
   /**
   	 * Add a new table and return a reference to it
@@ -81,7 +79,7 @@ trait Worksheet extends js.Object {
   	 * Note: these column structures are a workbook-building convenience only,
   	 * apart from the column width, they will not be fully persisted.
   	 */
-  var columns: js.Array[PartialColumn] = js.native
+  var columns: js.Array[Column] = js.native
   
   def commit(): Unit = js.native
   
@@ -96,7 +94,7 @@ trait Worksheet extends js.Object {
   	 */
   def duplicateRow(rowNum: Double, count: Double, insert: Boolean): Unit = js.native
   
-  def eachColumnKey(callback: js.Function2[/* col */ PartialColumnAlignment, /* index */ Double, Unit]): Unit = js.native
+  def eachColumnKey(callback: js.Function2[/* col */ Column, /* index */ Double, Unit]): Unit = js.native
   
   /**
   	 * Iterate over all rows that have values in a worksheet
@@ -137,7 +135,20 @@ trait Worksheet extends js.Object {
   	 */
   def findCell(r: Double, c: Double): js.UndefOr[Cell] = js.native
   
+  /**
+  	 * Tries to find and return row for row no, else undefined
+  	 * 
+  	 * @param row The 1-index row number
+  	 */
   def findRow(row: Double): js.UndefOr[Row] = js.native
+  
+  /**
+  	 * Tries to find and return rows for row no start and length, else undefined
+  	 * 
+  	 * @param start The 1-index starting row number
+  	 * @param length The length of the expected array
+  	 */
+  def findRows(start: Double, length: Double): js.UndefOr[js.Array[Row]] = js.native
   
   def getBackgroundImageId(): String = js.native
   
@@ -151,13 +162,13 @@ trait Worksheet extends js.Object {
   def getCell(r: Double, c: String): Cell = js.native
   def getCell(r: Double, c: Double): Cell = js.native
   
-  def getColumn(indexOrKey: String): PartialColumn = js.native
+  def getColumn(indexOrKey: String): Column = js.native
   /**
   	 * Access an individual columns by key, letter and 1-based column number
   	 */
-  def getColumn(indexOrKey: Double): PartialColumn = js.native
+  def getColumn(indexOrKey: Double): Column = js.native
   
-  def getColumnKey(key: String): PartialColumn = js.native
+  def getColumnKey(key: String): Column = js.native
   
   def getImages(): js.Array[ImageId] = js.native
   
@@ -167,9 +178,14 @@ trait Worksheet extends js.Object {
   def getRow(index: Double): Row = js.native
   
   /**
+  	 * Get or create rows by 1-based index
+  	 */
+  def getRows(start: Double, length: Double): js.Array[Row] = js.native
+  
+  /**
   	 * return all rows as sparse array
   	 */
-  def getSheetValues(): js.Array[Row] = js.native
+  def getSheetValues(): js.Array[RowValues] = js.native
   
   /**
   	 * fetch table by name or id
@@ -191,20 +207,20 @@ trait Worksheet extends js.Object {
   val id: Double = js.native
   
   def insertRow(pos: Double, value: js.Any): Row = js.native
-  def insertRow(pos: Double, value: js.Any, styleOption: String): Row = js.native
+  def insertRow(pos: Double, value: js.Any, style: String): Row = js.native
   /**
-  	 * Insert a Row by key-value, at the pos (shifiting down all rows from pos),
+  	 * Insert a Row by key-value, at the position (shifiting down all rows from position),
   	 * using the column keys, or add a row by contiguous Array (assign to columns A, B & C)
   	 */
   def insertRow(pos: Double, value: js.Array[_]): Row = js.native
-  def insertRow(pos: Double, value: js.Array[_], styleOption: String): Row = js.native
+  def insertRow(pos: Double, value: js.Array[_], style: String): Row = js.native
   
   /**
-  	 * Insert multiple rows at pos (shifiting down all rows from pos)
+  	 * Insert multiple rows at position (shifiting down all rows from position)
   	 * by providing an array of arrays or key-value pairs
   	 */
-  def insertRows(pos: Double, values: js.Array[_]): Unit = js.native
-  def insertRows(pos: Double, values: js.Array[_], styleOption: String): Unit = js.native
+  def insertRows(pos: Double, values: js.Array[_]): js.Array[Row] = js.native
+  def insertRows(pos: Double, values: js.Array[_], style: String): js.Array[Row] = js.native
   
   /**
   	 * Get the last editable row in a worksheet (or undefined if there are none)
@@ -280,7 +296,7 @@ trait Worksheet extends js.Object {
   	 */
   val rowCount: Double = js.native
   
-  def setColumnKey(key: String, value: PartialColumn): Unit = js.native
+  def setColumnKey(key: String, value: Column): Unit = js.native
   
   /**
   	 * Cut one or more columns (columns to the right are shifted left)

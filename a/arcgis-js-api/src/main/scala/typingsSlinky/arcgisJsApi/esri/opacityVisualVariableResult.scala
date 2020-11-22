@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait opacityVisualVariableResult extends Object {
   
   /**
-    * Authoring information related to the creation of the visual variable. This includes information related to UI inputs from sliders and selected themes.
+    * Authoring information related to the creation of the visual variable.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-opacity.html#VisualVariableResult)
     */
   var authoringInfo: AuthoringInfo = js.native
   
   /**
-    * Indicates whether default values are used in the absence of sufficient data and/or statistics from the layer. Default values are typically used when all features have the same field value or no value at all.
+    * Indicates whether default values are used in the absence of sufficient data and/or statistics from the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-opacity.html#VisualVariableResult)
     */

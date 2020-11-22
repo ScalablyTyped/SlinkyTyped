@@ -1,5 +1,6 @@
 package typingsSlinky.braintreeWebDropIn.mod
 
+import typingsSlinky.braintreeWebDropIn.anon.PartialButtonStyle
 import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.checkout
 import typingsSlinky.braintreeWebDropIn.braintreeWebDropInStrings.vault
 import scala.scalajs.js
@@ -11,7 +12,7 @@ trait paypalCreateOptions extends js.Object {
   
   var amount: js.UndefOr[String | Double] = js.native
   
-  var buttonStyle: js.UndefOr[String] = js.native
+  var buttonStyle: js.UndefOr[PartialButtonStyle] = js.native
   
   var commit: js.UndefOr[Boolean] = js.native
   
@@ -52,7 +53,7 @@ object paypalCreateOptions {
     def deleteAmount: Self = this.set("amount", js.undefined)
     
     @scala.inline
-    def setButtonStyle(value: String): Self = this.set("buttonStyle", value.asInstanceOf[js.Any])
+    def setButtonStyle(value: PartialButtonStyle): Self = this.set("buttonStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteButtonStyle: Self = this.set("buttonStyle", js.undefined)

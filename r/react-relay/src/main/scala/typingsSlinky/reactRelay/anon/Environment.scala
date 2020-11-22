@@ -1,5 +1,6 @@
 package typingsSlinky.reactRelay.anon
 
+import typingsSlinky.reactRelay.reactRelayStrings.reset
 import typingsSlinky.reactRelay.useRefetchableFragmentNodeMod.Action
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +13,7 @@ trait Environment extends Action {
   
   var fragmentIdentifier: String = js.native
   
-  var `type`: String = js.native
+  var `type`: reset = js.native
 }
 object Environment {
   
@@ -20,7 +21,7 @@ object Environment {
   def apply(
     environment: typingsSlinky.relayRuntime.relayStoreTypesMod.Environment,
     fragmentIdentifier: String,
-    `type`: String
+    `type`: reset
   ): Environment = {
     val __obj = js.Dynamic.literal(environment = environment.asInstanceOf[js.Any], fragmentIdentifier = fragmentIdentifier.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
@@ -49,6 +50,6 @@ object Environment {
     def setFragmentIdentifier(value: String): Self = this.set("fragmentIdentifier", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: reset): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

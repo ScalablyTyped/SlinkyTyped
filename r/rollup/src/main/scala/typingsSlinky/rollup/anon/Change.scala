@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Change extends js.Object {
   
-  def change(id: String): Unit = js.native
+  def change(id: String, change: Event): Unit = js.native
+  
+  def close(): Unit = js.native
   
   def event(event: RollupWatcherEvent): Unit = js.native
   
@@ -17,8 +19,13 @@ trait Change extends js.Object {
 object Change {
   
   @scala.inline
-  def apply(change: String => Unit, event: RollupWatcherEvent => Unit, restart: () => Unit): Change = {
-    val __obj = js.Dynamic.literal(change = js.Any.fromFunction1(change), event = js.Any.fromFunction1(event), restart = js.Any.fromFunction0(restart))
+  def apply(
+    change: (String, Event) => Unit,
+    close: () => Unit,
+    event: RollupWatcherEvent => Unit,
+    restart: () => Unit
+  ): Change = {
+    val __obj = js.Dynamic.literal(change = js.Any.fromFunction2(change), close = js.Any.fromFunction0(close), event = js.Any.fromFunction1(event), restart = js.Any.fromFunction0(restart))
     __obj.asInstanceOf[Change]
   }
   
@@ -38,7 +45,10 @@ object Change {
     }
     
     @scala.inline
-    def setChange(value: String => Unit): Self = this.set("change", js.Any.fromFunction1(value))
+    def setChange(value: (String, Event) => Unit): Self = this.set("change", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setClose(value: () => Unit): Self = this.set("close", js.Any.fromFunction0(value))
     
     @scala.inline
     def setEvent(value: RollupWatcherEvent => Unit): Self = this.set("event", js.Any.fromFunction1(value))

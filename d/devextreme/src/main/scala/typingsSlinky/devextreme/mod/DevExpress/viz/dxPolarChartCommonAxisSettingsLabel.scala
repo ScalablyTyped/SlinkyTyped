@@ -9,16 +9,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartCommonAxisSettingsLabel extends js.Object {
   
-  /** @name dxPolarChart.Options.commonAxisSettings.label.font */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.label.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.label.indentFromAxis */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.label.indentFromAxis]
+    */
   var indentFromAxis: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.label.overlappingBehavior */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.label.overlappingBehavior]
+    */
   var overlappingBehavior: js.UndefOr[none | hide] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.label.visible */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.label.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object dxPolarChartCommonAxisSettingsLabel {

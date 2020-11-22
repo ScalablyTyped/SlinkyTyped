@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteResolverEndpointRequest extends js.Object {
   
   /**
-    * The ID of the resolver endpoint that you want to delete.
+    * The ID of the Resolver endpoint that you want to delete.
     */
   var ResolverEndpointId: ResourceId = js.native
 }

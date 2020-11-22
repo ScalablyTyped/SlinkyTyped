@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ImplicitGrantSettings extends js.Object {
   
   // Specifies whether this web application can request an access token using the OAuth 2.0 implicit flow.
-  var enableAccessTokenIssuance: js.UndefOr[Boolean] = js.native
+  var enableAccessTokenIssuance: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow.
-  var enableIdTokenIssuance: js.UndefOr[Boolean] = js.native
+  var enableIdTokenIssuance: js.UndefOr[NullableOption[Boolean]] = js.native
 }
 object ImplicitGrantSettings {
   
@@ -37,15 +37,21 @@ object ImplicitGrantSettings {
     }
     
     @scala.inline
-    def setEnableAccessTokenIssuance(value: Boolean): Self = this.set("enableAccessTokenIssuance", value.asInstanceOf[js.Any])
+    def setEnableAccessTokenIssuance(value: NullableOption[Boolean]): Self = this.set("enableAccessTokenIssuance", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnableAccessTokenIssuance: Self = this.set("enableAccessTokenIssuance", js.undefined)
     
     @scala.inline
-    def setEnableIdTokenIssuance(value: Boolean): Self = this.set("enableIdTokenIssuance", value.asInstanceOf[js.Any])
+    def setEnableAccessTokenIssuanceNull: Self = this.set("enableAccessTokenIssuance", null)
+    
+    @scala.inline
+    def setEnableIdTokenIssuance(value: NullableOption[Boolean]): Self = this.set("enableIdTokenIssuance", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnableIdTokenIssuance: Self = this.set("enableIdTokenIssuance", js.undefined)
+    
+    @scala.inline
+    def setEnableIdTokenIssuanceNull: Self = this.set("enableIdTokenIssuance", null)
   }
 }

@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashFindKey extends LodashConvertible {
+trait LodashFindKey extends js.Object {
   
   def apply[T](
     predicate: ValueIteratee[

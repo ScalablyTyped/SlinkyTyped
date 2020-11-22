@@ -1,5 +1,6 @@
 package typingsSlinky.titanium.Titanium.UI.iOS
 
+import typingsSlinky.titanium.Titanium.UI.Color
 import typingsSlinky.titanium.Titanium.UI.View
 import typingsSlinky.titanium.titaniumStrings.click
 import typingsSlinky.titanium.titaniumStrings.dblclick
@@ -29,7 +30,7 @@ trait Toolbar extends View {
   /**
     * Background color for the toolbar, as a color name or hex triplet.
     */
-  var barColor: String = js.native
+  var barColor: String | Color = js.native
   
   /**
     * If `true`, the background of the toolbar extends upwards.
@@ -69,7 +70,7 @@ trait Toolbar extends View {
     * Gets the value of the <Titanium.UI.iOS.Toolbar.barColor> property.
     * @deprecated Access <Titanium.UI.iOS.Toolbar.barColor> instead.
     */
-  def getBarColor(): String = js.native
+  def getBarColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.iOS.Toolbar.extendBackground> property.
@@ -99,6 +100,7 @@ trait Toolbar extends View {
     * @deprecated Set the value using <Titanium.UI.iOS.Toolbar.barColor> instead.
     */
   def setBarColor(barColor: String): Unit = js.native
+  def setBarColor(barColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.iOS.Toolbar.extendBackground> property.

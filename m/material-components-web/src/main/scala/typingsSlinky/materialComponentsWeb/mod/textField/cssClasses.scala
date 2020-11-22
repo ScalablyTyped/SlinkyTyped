@@ -12,8 +12,6 @@ object cssClasses extends js.Object {
   
   var FOCUSED: String = js.native
   
-  var FULLWIDTH: String = js.native
-  
   var HELPER_LINE: String = js.native
   
   var INVALID: String = js.native

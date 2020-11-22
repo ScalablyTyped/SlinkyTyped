@@ -23,6 +23,11 @@ trait UpdateDomainNameResponse extends js.Object {
   var DomainNameConfigurations: js.UndefOr[typingsSlinky.awsSdk.apigatewayv2Mod.DomainNameConfigurations] = js.native
   
   /**
+    * The mutual TLS authentication configuration for a custom domain name.
+    */
+  var MutualTlsAuthentication: js.UndefOr[typingsSlinky.awsSdk.apigatewayv2Mod.MutualTlsAuthentication] = js.native
+  
+  /**
     * The collection of tags associated with a domain name.
     */
   var Tags: js.UndefOr[typingsSlinky.awsSdk.apigatewayv2Mod.Tags] = js.native
@@ -70,6 +75,12 @@ object UpdateDomainNameResponse {
     
     @scala.inline
     def deleteDomainNameConfigurations: Self = this.set("DomainNameConfigurations", js.undefined)
+    
+    @scala.inline
+    def setMutualTlsAuthentication(value: MutualTlsAuthentication): Self = this.set("MutualTlsAuthentication", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMutualTlsAuthentication: Self = this.set("MutualTlsAuthentication", js.undefined)
     
     @scala.inline
     def setTags(value: Tags): Self = this.set("Tags", value.asInstanceOf[js.Any])

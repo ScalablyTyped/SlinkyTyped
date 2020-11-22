@@ -1,8 +1,7 @@
 package typingsSlinky.awsSdkProtocolQuery
 
-import typingsSlinky.awsSdkTypes.httpMod.HttpEndpoint
-import typingsSlinky.awsSdkTypes.marshallerMod.BodySerializer
-import typingsSlinky.awsSdkTypes.marshallerMod.RequestSerializer
+import typingsSlinky.awsSdkTypes.httpMod.HttpRequest
+import typingsSlinky.awsSdkTypes.serdeMod.RequestSerializer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,11 +11,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object querySerializerMod extends js.Object {
   
   @js.native
-  class QuerySerializer[StreamType] protected () extends RequestSerializer[StreamType] {
-    def this(endpoint: HttpEndpoint, bodySerializer: BodySerializer[String]) = this()
+  class QuerySerializer[StreamType] protected ()
+    extends RequestSerializer[StreamType, js.Any] {
+    def this(
+      endpoint: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpEndpoint */ js.Any,
+      bodySerializer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodySerializer<string> */ js.Any
+    ) = this()
+    
+    /* CompleteClass */
+    override def apply(T0: /* input */ js.Any, T1: js.Any): js.Promise[StreamType] = js.native
     
     val bodySerializer: js.Any = js.native
     
     val endpoint: js.Any = js.native
+    
+    def serialize(
+      operation: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OperationModel */ js.Any,
+      input: js.Any
+    ): HttpRequest = js.native
   }
 }

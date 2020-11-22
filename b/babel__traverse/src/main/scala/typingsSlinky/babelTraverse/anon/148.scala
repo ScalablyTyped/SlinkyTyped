@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.Program
+import typingsSlinky.babelTraverse.babelTraverseStrings.Variance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `148` extends js.Object {
   
-  var `type`: Program = js.native
+  var `type`: Variance = js.native
 }
 object `148` {
   
   @scala.inline
-  def apply(`type`: Program): `148` = {
+  def apply(`type`: Variance): `148` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`148`]
@@ -35,6 +35,6 @@ object `148` {
     }
     
     @scala.inline
-    def setType(value: Program): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: Variance): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

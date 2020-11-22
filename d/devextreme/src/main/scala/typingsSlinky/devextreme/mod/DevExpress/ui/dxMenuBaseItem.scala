@@ -7,22 +7,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxMenuBaseItem extends CollectionWidgetItem {
   
-  /** @name dxMenuBaseItem.beginGroup */
+  /**
+    * [descr:dxMenuBaseItem.beginGroup]
+    */
   var beginGroup: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMenuBaseItem.closeMenuOnClick */
+  /**
+    * [descr:dxMenuBaseItem.closeMenuOnClick]
+    */
   var closeMenuOnClick: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMenuBaseItem.icon */
+  /**
+    * [descr:dxMenuBaseItem.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxMenuBaseItem.items */
+  /**
+    * [descr:dxMenuBaseItem.items]
+    */
   var items: js.UndefOr[js.Array[dxMenuBaseItem]] = js.native
   
-  /** @name dxMenuBaseItem.selectable */
+  /**
+    * [descr:dxMenuBaseItem.selectable]
+    */
   var selectable: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMenuBaseItem.selected */
+  /**
+    * [descr:dxMenuBaseItem.selected]
+    */
   var selected: js.UndefOr[Boolean] = js.native
 }
 object dxMenuBaseItem {

@@ -12,7 +12,7 @@ class RayHelper protected ()
     * Instantiate a new ray helper.
     * As raycast might be hard to debug, the RayHelper can help rendering the different rays
     * in order to better appreciate the issue one might have.
-    * @see http://doc.babylonjs.com/babylon101/raycasts#debugging
+    * @see https://doc.babylonjs.com/babylon101/raycasts#debugging
     * @param ray Defines the ray we are currently tryin to visualize
     */
   def this(ray: typingsSlinky.babylonjs.rayMod.Ray) = this()

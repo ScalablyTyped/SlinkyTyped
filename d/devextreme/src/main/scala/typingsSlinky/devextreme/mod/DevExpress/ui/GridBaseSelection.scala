@@ -10,10 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GridBaseSelection extends js.Object {
   
-  /** @name GridBase.Options.selection.allowSelectAll */
+  /**
+    * [descr:GridBase.Options.selection.allowSelectAll]
+    */
   var allowSelectAll: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.selection.mode */
+  /**
+    * [descr:GridBase.Options.selection.mode]
+    */
   var mode: js.UndefOr[multiple | none | single_] = js.native
 }
 object GridBaseSelection {

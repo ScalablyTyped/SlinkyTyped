@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// shape/IconPositionShape.js
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactDates.reactDatesStrings.before
   - typingsSlinky.reactDates.reactDatesStrings.after

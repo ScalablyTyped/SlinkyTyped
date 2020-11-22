@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ColumnError extends js.Object {
   
   /**
-    * The name of the column.
+    * The name of the column that failed.
     */
   var ColumnName: js.UndefOr[NameString] = js.native
   
   /**
-    * The error message occurred during operation.
+    * An error message with the reason for the failure of an operation.
     */
   var Error: js.UndefOr[ErrorDetail] = js.native
 }

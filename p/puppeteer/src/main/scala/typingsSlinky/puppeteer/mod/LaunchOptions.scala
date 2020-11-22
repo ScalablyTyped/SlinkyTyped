@@ -66,7 +66,7 @@ trait LaunchOptions
     * At this time, this is either `chrome` or `firefox`. See also `PUPPETEER_PRODUCT`.
     * @default 'chrome'
     */
-  var product: js.UndefOr[Product] = js.native
+  var product: js.UndefOr[Product_] = js.native
 }
 object LaunchOptions {
   
@@ -143,7 +143,7 @@ object LaunchOptions {
     def deletePipe: Self = this.set("pipe", js.undefined)
     
     @scala.inline
-    def setProduct(value: Product): Self = this.set("product", value.asInstanceOf[js.Any])
+    def setProduct(value: Product_): Self = this.set("product", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProduct: Self = this.set("product", js.undefined)

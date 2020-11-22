@@ -13,22 +13,22 @@ trait CreateMedicalVocabularyResponse extends js.Object {
   var FailureReason: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.FailureReason] = js.native
   
   /**
-    * The language code you chose to describe the entries in your custom vocabulary. US English (en-US) is the only valid language code for Amazon Transcribe Medical.
+    * The language code for the entries in your custom vocabulary. US English (en-US) is the only valid language code for Amazon Transcribe Medical.
     */
   var LanguageCode: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.LanguageCode] = js.native
   
   /**
-    * The date and time you created the vocabulary.
+    * The date and time that you created the vocabulary.
     */
   var LastModifiedTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The name of the vocabulary. The name must be unique within an AWS account. It is also case-sensitive.
+    * The name of the vocabulary. The name must be unique within an AWS account and is case sensitive.
     */
   var VocabularyName: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.VocabularyName] = js.native
   
   /**
-    * The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is READY you can use the vocabulary in a StartMedicalTranscriptionJob request.
+    * The processing state of your custom vocabulary in Amazon Transcribe Medical. If the state is READY, you can use the vocabulary in a StartMedicalTranscriptionJob request.
     */
   var VocabularyState: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.VocabularyState] = js.native
 }

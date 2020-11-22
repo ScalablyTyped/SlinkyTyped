@@ -12,9 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object autoCompleteMod extends js.Object {
   
-  /**
-    * An AutoComplete is an accessible combobox widget that allows for real-time
-    * suggestions as the user types.
-    */
-  val default: ForwardRefExoticComponent[AutoCompleteProps with RefAttributes[HTMLInputElement]] = js.native
+  val AutoComplete: ForwardRefExoticComponent[AutoCompleteProps with RefAttributes[HTMLInputElement]] = js.native
 }

@@ -8,7 +8,7 @@ import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.Props
 import typingsSlinky.reactBigCalendar.anon.Accessors
 import typingsSlinky.reactBigCalendar.anon.Action
-import typingsSlinky.reactBigCalendar.anon.Start
+import typingsSlinky.reactBigCalendar.anon.End
 import typingsSlinky.reactBigCalendar.anon.X
 import typingsSlinky.reactBigCalendar.reactBigCalendarStrings.ignoreEvents
 import scala.scalajs.js
@@ -22,7 +22,7 @@ trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] ext
   
   var className: js.UndefOr[String] = js.native
   
-  var components: js.UndefOr[Components_[TEvent]] = js.native
+  var components: js.UndefOr[Components_[TEvent, TResource]] = js.native
   
   var culture: js.UndefOr[String] = js.native
   
@@ -59,6 +59,8 @@ trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] ext
   
   var getNow: js.UndefOr[js.Function0[js.Date]] = js.native
   
+  var handleDragStart: js.UndefOr[js.Function1[/* event */ TEvent, Unit]] = js.native
+  
   var length: js.UndefOr[Double] = js.native
   
   var localizer: DateLocalizer = js.native
@@ -86,7 +88,7 @@ trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] ext
   ] = js.native
   
   var onRangeChange: js.UndefOr[
-    js.Function2[/* range */ js.Array[js.Date] | Start, /* view */ js.UndefOr[View], Unit]
+    js.Function2[/* range */ js.Array[js.Date] | End, /* view */ js.UndefOr[View], Unit]
   ] = js.native
   
   var onSelectEvent: js.UndefOr[
@@ -99,7 +101,7 @@ trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] ext
   
   var onSelectSlot: js.UndefOr[js.Function1[/* slotInfo */ Action, Unit]] = js.native
   
-  var onSelecting: js.UndefOr[js.Function1[/* range */ Start, js.UndefOr[Boolean | Null]]] = js.native
+  var onSelecting: js.UndefOr[js.Function1[/* range */ End, js.UndefOr[Boolean | Null]]] = js.native
   
   var onShowMore: js.UndefOr[js.Function2[/* events */ js.Array[TEvent], /* date */ js.Date, Unit]] = js.native
   
@@ -147,7 +149,7 @@ trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] ext
   
   var view: js.UndefOr[View] = js.native
   
-  var views: js.UndefOr[ViewsProps] = js.native
+  var views: js.UndefOr[ViewsProps[TEvent, TResource]] = js.native
 }
 object CalendarProps {
   
@@ -191,7 +193,7 @@ object CalendarProps {
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
-    def setComponents(value: Components_[TEvent]): Self = this.set("components", value.asInstanceOf[js.Any])
+    def setComponents(value: Components_[TEvent, TResource]): Self = this.set("components", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponents: Self = this.set("components", js.undefined)
@@ -305,6 +307,12 @@ object CalendarProps {
     def deleteGetNow: Self = this.set("getNow", js.undefined)
     
     @scala.inline
+    def setHandleDragStart(value: /* event */ TEvent => Unit): Self = this.set("handleDragStart", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteHandleDragStart: Self = this.set("handleDragStart", js.undefined)
+    
+    @scala.inline
     def setLength(value: Double): Self = this.set("length", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -361,7 +369,7 @@ object CalendarProps {
     def deleteOnNavigate: Self = this.set("onNavigate", js.undefined)
     
     @scala.inline
-    def setOnRangeChange(value: (/* range */ js.Array[js.Date] | Start, /* view */ js.UndefOr[View]) => Unit): Self = this.set("onRangeChange", js.Any.fromFunction2(value))
+    def setOnRangeChange(value: (/* range */ js.Array[js.Date] | End, /* view */ js.UndefOr[View]) => Unit): Self = this.set("onRangeChange", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnRangeChange: Self = this.set("onRangeChange", js.undefined)
@@ -381,7 +389,7 @@ object CalendarProps {
     def deleteOnSelectSlot: Self = this.set("onSelectSlot", js.undefined)
     
     @scala.inline
-    def setOnSelecting(value: /* range */ Start => js.UndefOr[Boolean | Null]): Self = this.set("onSelecting", js.Any.fromFunction1(value))
+    def setOnSelecting(value: /* range */ End => js.UndefOr[Boolean | Null]): Self = this.set("onSelecting", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSelecting: Self = this.set("onSelecting", js.undefined)
@@ -551,7 +559,7 @@ object CalendarProps {
     def setViewsVarargs(value: View*): Self = this.set("views", js.Array(value :_*))
     
     @scala.inline
-    def setViews(value: ViewsProps): Self = this.set("views", value.asInstanceOf[js.Any])
+    def setViews(value: ViewsProps[TEvent, TResource]): Self = this.set("views", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteViews: Self = this.set("views", js.undefined)

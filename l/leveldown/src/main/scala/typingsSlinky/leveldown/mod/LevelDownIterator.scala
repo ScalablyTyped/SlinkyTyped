@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LevelDownIterator extends AbstractIterator[BaseType, BaseType] {
+trait LevelDownIterator extends AbstractIterator[Bytes, Bytes] {
   
   var binding: js.Any = js.native
   
@@ -19,7 +19,7 @@ trait LevelDownIterator extends AbstractIterator[BaseType, BaseType] {
   
   var finished: js.Any = js.native
   
-  def seek(key: BaseType): Unit = js.native
+  def seek(key: Bytes): Unit = js.native
 }
 object LevelDownIterator {
   
@@ -27,12 +27,12 @@ object LevelDownIterator {
   def apply(
     binding: js.Any,
     cache: js.Any,
-    db: AbstractLevelDOWN[BaseType, BaseType],
+    db: AbstractLevelDOWN[Bytes, Bytes],
     end: ErrorCallback => Unit,
     fastFuture: js.Any,
     finished: js.Any,
-    next: ErrorKeyValueCallback[BaseType, BaseType] => LevelDownIterator,
-    seek: BaseType => Unit
+    next: ErrorKeyValueCallback[Bytes, Bytes] => LevelDownIterator,
+    seek: Bytes => Unit
   ): LevelDownIterator = {
     val __obj = js.Dynamic.literal(binding = binding.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], db = db.asInstanceOf[js.Any], end = js.Any.fromFunction1(end), fastFuture = fastFuture.asInstanceOf[js.Any], finished = finished.asInstanceOf[js.Any], next = js.Any.fromFunction1(next), seek = js.Any.fromFunction1(seek))
     __obj.asInstanceOf[LevelDownIterator]
@@ -66,6 +66,6 @@ object LevelDownIterator {
     def setFinished(value: js.Any): Self = this.set("finished", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSeek(value: BaseType => Unit): Self = this.set("seek", js.Any.fromFunction1(value))
+    def setSeek(value: Bytes => Unit): Self = this.set("seek", js.Any.fromFunction1(value))
   }
 }

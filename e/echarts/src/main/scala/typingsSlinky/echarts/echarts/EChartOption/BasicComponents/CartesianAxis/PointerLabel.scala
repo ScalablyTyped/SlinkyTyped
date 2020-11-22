@@ -1,9 +1,14 @@
 package typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis
 
-import typingsSlinky.echarts.echartsStrings.`100`
-import typingsSlinky.echarts.echartsStrings.`200`
-import typingsSlinky.echarts.echartsStrings.`300`
-import typingsSlinky.echarts.echartsStrings.`400`
+import typingsSlinky.echarts.echartsNumbers.`100`
+import typingsSlinky.echarts.echartsNumbers.`200`
+import typingsSlinky.echarts.echartsNumbers.`300`
+import typingsSlinky.echarts.echartsNumbers.`400`
+import typingsSlinky.echarts.echartsNumbers.`500`
+import typingsSlinky.echarts.echartsNumbers.`600`
+import typingsSlinky.echarts.echartsNumbers.`700`
+import typingsSlinky.echarts.echartsNumbers.`800`
+import typingsSlinky.echarts.echartsNumbers.`900`
 import typingsSlinky.echarts.echartsStrings.bold
 import typingsSlinky.echarts.echartsStrings.bolder
 import typingsSlinky.echarts.echartsStrings.italic
@@ -33,7 +38,9 @@ trait PointerLabel extends js.Object {
   
   var fontStyle: js.UndefOr[normal | italic | oblique] = js.native
   
-  var fontWeight: js.UndefOr[normal | bold | bolder | lighter | `100` | `200` | `300` | `400`] = js.native
+  var fontWeight: js.UndefOr[
+    normal | bold | bolder | lighter | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900`
+  ] = js.native
   
   var formatter: js.UndefOr[String | js.Function] = js.native
   
@@ -143,7 +150,9 @@ object PointerLabel {
     def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
     
     @scala.inline
-    def setFontWeight(value: normal | bold | bolder | lighter | `100` | `200` | `300` | `400`): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
+    def setFontWeight(
+      value: normal | bold | bolder | lighter | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900`
+    ): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontWeight: Self = this.set("fontWeight", js.undefined)

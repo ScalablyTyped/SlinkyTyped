@@ -10,7 +10,10 @@ import typingsSlinky.jasmine.jasmine.Constructor
 import typingsSlinky.jasmine.jasmine.CustomAsyncMatcherFactories
 import typingsSlinky.jasmine.jasmine.CustomEqualityTester
 import typingsSlinky.jasmine.jasmine.CustomMatcherFactories
+import typingsSlinky.jasmine.jasmine.CustomObjectFormatter
 import typingsSlinky.jasmine.jasmine.Env
+import typingsSlinky.jasmine.jasmine.Func
+import typingsSlinky.jasmine.jasmine.FunctionMatchers
 import typingsSlinky.jasmine.jasmine.Matchers
 import typingsSlinky.jasmine.jasmine.MatchersUtil
 import typingsSlinky.jasmine.jasmine.NothingMatcher
@@ -80,12 +83,6 @@ object global extends js.Object {
   /**
     * Create an expectation for a spec.
     * @checkReturnValue see https://tsetse.info/check-return-value
-    * @param spy
-    */
-  def expect(spy: js.Function): Matchers[_] = js.native
-  /**
-    * Create an expectation for a spec.
-    * @checkReturnValue see https://tsetse.info/check-return-value
     * @param actual Actual computed value to test expectations against.
     */
   def expect[T](actual: T): Matchers[T] = js.native
@@ -95,6 +92,7 @@ object global extends js.Object {
     * @param actual
     */
   def expect[T](actual: ArrayLike[T]): ArrayLikeMatchers[T] = js.native
+  def expect[T /* <: Func */](spy: Spy[T]): FunctionMatchers[T] = js.native
   
   /**
     * Create an asynchronous expectation for a spec. Note that the matchers
@@ -102,10 +100,18 @@ object global extends js.Object {
     * which must be either returned from the spec or waited for using `await`
     * in order for Jasmine to associate them with the correct spec.
     * @checkReturnValue see https://tsetse.info/check-return-value
-    * @param actual - Actual computed value to test expectations against.
+    * @param actual Actual computed value to test expectations against.
     */
   def expectAsync[T, U](actual: T): AsyncMatchers[T, U] = js.native
   def expectAsync[T, U](actual: js.Thenable[T]): AsyncMatchers[T, U] = js.native
+  
+  /**
+    * Create an expectation for a spec.
+    * @checkReturnValue see https://tsetse.info/check-return-value
+    * @param spy
+    */
+  @JSName("expect")
+  def expect_T_Func_FunctionMatchers[T /* <: Func */](spy: T): FunctionMatchers[T] = js.native
   
   /**
     * Explicitly mark a spec as failed.
@@ -161,11 +167,27 @@ object global extends js.Object {
   def runs(asyncMethod: js.Function): Unit = js.native
   
   /**
+    * Sets a user-defined property that will be provided to reporters as
+    * part of the properties field of SpecResult.
+    * @since 3.6.0
+    */
+  def setSpecProperty(key: String, value: js.Any): Unit = js.native
+  
+  /**
+    * Sets a user-defined property that will be provided to reporters as
+    * part of the properties field of SuiteResult.
+    * @since 3.6.0
+    */
+  def setSuiteProperty(key: String, value: js.Any): Unit = js.native
+  
+  /**
     * Install a spy onto an existing object.
     * @param object The object upon which to install the `Spy`.
     * @param method The name of the method to replace with a `Spy`.
     */
-  def spyOn[T](`object`: T, method: /* keyof T */ String): Spy = js.native
+  def spyOn[T, K /* <: /* keyof T */ String */](`object`: T, method: K): Spy[
+    (js.Function1[/* args */ _, _]) | (/* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any)
+  ] = js.native
   
   /**
     * Installs spies on all writable and configurable properties of an object.
@@ -179,11 +201,11 @@ object global extends js.Object {
     * @param property The name of the property to replace with a `Spy`.
     * @param accessType The access type (get|set) of the property to `Spy` on.
     */
-  def spyOnProperty[T](`object`: T, property: /* keyof T */ String): Spy = js.native
+  def spyOnProperty[T](`object`: T, property: /* keyof T */ String): Spy[Func] = js.native
   @JSName("spyOnProperty")
-  def spyOnProperty_get[T](`object`: T, property: /* keyof T */ String, accessType: get): Spy = js.native
+  def spyOnProperty_get[T](`object`: T, property: /* keyof T */ String, accessType: get): Spy[Func] = js.native
   @JSName("spyOnProperty")
-  def spyOnProperty_set[T](`object`: T, property: /* keyof T */ String, accessType: set): Spy = js.native
+  def spyOnProperty_set[T](`object`: T, property: /* keyof T */ String, accessType: set): Spy[Func] = js.native
   
   def waits(): Unit = js.native
   def waits(timeout: Double): Unit = js.native
@@ -222,6 +244,8 @@ object global extends js.Object {
       */
     var DEFAULT_TIMEOUT_INTERVAL: Double = js.native
     
+    def DiffBuilder(): typingsSlinky.jasmine.jasmine.DiffBuilder = js.native
+    
     var HtmlReporter: typingsSlinky.jasmine.jasmine.HtmlReporter = js.native
     
     var HtmlSpecFilter: typingsSlinky.jasmine.jasmine.HtmlSpecFilter = js.native
@@ -249,6 +273,14 @@ object global extends js.Object {
     
     def addCustomEqualityTester(equalityTester: CustomEqualityTester): Unit = js.native
     
+    /**
+      * Add a custom object formatter for the current scope of specs.
+      * Note: This is only callable from within a beforeEach, it, or beforeAll.
+      * @since 3.6.0
+      * @see https://jasmine.github.io/tutorials/custom_object_formatters
+      */
+    def addCustomObjectFormatter(formatter: CustomObjectFormatter): Unit = js.native
+    
     def addMatchers(matchers: CustomMatcherFactories): Unit = js.native
     
     /**
@@ -268,10 +300,10 @@ object global extends js.Object {
     
     def clock(): Clock = js.native
     
-    def createSpy(): Spy = js.native
-    def createSpy(name: js.UndefOr[scala.Nothing], originalFn: js.Function): Spy = js.native
-    def createSpy(name: String): Spy = js.native
-    def createSpy(name: String, originalFn: js.Function): Spy = js.native
+    def createSpy[Fn /* <: Func */](): Spy[Fn] = js.native
+    def createSpy[Fn /* <: Func */](name: js.UndefOr[scala.Nothing], originalFn: Fn): Spy[Fn] = js.native
+    def createSpy[Fn /* <: Func */](name: String): Spy[Fn] = js.native
+    def createSpy[Fn /* <: Func */](name: String, originalFn: Fn): Spy[Fn] = js.native
     
     def createSpyObj(baseName: String, methodNames: SpyObjMethodNames[js.UndefOr[scala.Nothing]]): js.Any = js.native
     def createSpyObj(
@@ -325,7 +357,7 @@ object global extends js.Object {
     
     def pp(value: js.Any): String = js.native
     
-    def setDefaultSpyStrategy(and: SpyAnd): Unit = js.native
+    def setDefaultSpyStrategy[Fn /* <: Func */](and: SpyAnd[Fn]): Unit = js.native
     
     def stringMatching(str: String): AsymmetricMatcher[String] = js.native
     def stringMatching(str: js.RegExp): AsymmetricMatcher[String] = js.native

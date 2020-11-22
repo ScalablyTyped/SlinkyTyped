@@ -14,9 +14,6 @@ class DetailsRowBase protected ()
   extends Component[IDetailsRowBaseProps, IDetailsRowState, js.Any] {
   def this(props: IDetailsRowBaseProps) = this()
   
-  @JSName("UNSAFE_componentWillReceiveProps")
-  def UNSAFE_componentWillReceiveProps_MDetailsRowBase(newProps: IDetailsRowBaseProps): Unit = js.native
-  
   var _cellMeasurer: js.Any = js.native
   
   var _classNames: js.Any = js.native
@@ -31,14 +28,10 @@ class DetailsRowBase protected ()
   
   var _getRowDragDropOptions: js.Any = js.native
   
-  var _getSelectionState: js.Any = js.native
-  
   /** Whether this.props.onDidMount has been called */
   var _onDidMountCalled: js.Any = js.native
   
   /* protected */ def _onRenderCheck(props: IDetailsRowCheckProps): ReactElement = js.native
-  
-  var _onRootRef: js.Any = js.native
   
   var _onSelectionChanged: js.Any = js.native
   
@@ -81,4 +74,11 @@ class DetailsRowBase protected ()
   
   @JSName("shouldComponentUpdate")
   def shouldComponentUpdate_MDetailsRowBase(nextProps: IDetailsRowBaseProps, nextState: IDetailsRowState): Boolean = js.native
+}
+/* static members */
+@JSImport("office-ui-fabric-react/lib/components/DetailsList/DetailsRow.base", "DetailsRowBase")
+@js.native
+object DetailsRowBase extends js.Object {
+  
+  def getDerivedStateFromProps(nextProps: IDetailsRowBaseProps, previousState: IDetailsRowState): IDetailsRowState = js.native
 }

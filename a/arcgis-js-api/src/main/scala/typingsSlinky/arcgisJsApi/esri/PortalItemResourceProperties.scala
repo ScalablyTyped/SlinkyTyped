@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PortalItemResourceProperties extends js.Object {
   
   /**
-    * Path of the resource relative to `{ITEM}/resources/`. Resource paths may include subfolders, but are always specified relative to the item resources endpoint.
+    * Path of the resource relative to `{ITEM}/resources/`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#path)
     */

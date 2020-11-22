@@ -1,17 +1,14 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxActionSheet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ElementModel extends js.Object {
+trait ElementModel[T] extends js.Object {
   
-  var cancel: js.UndefOr[Boolean] = js.native
-  
-  var component: js.UndefOr[dxActionSheet] = js.native
+  var component: js.UndefOr[T] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -20,13 +17,13 @@ trait ElementModel extends js.Object {
 object ElementModel {
   
   @scala.inline
-  def apply(): ElementModel = {
+  def apply[T](): ElementModel[T] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ElementModel]
+    __obj.asInstanceOf[ElementModel[T]]
   }
   
   @scala.inline
-  implicit class ElementModelOps[Self <: ElementModel] (val x: Self) extends AnyVal {
+  implicit class ElementModelOps[Self <: ElementModel[_], T] (val x: Self with ElementModel[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -41,13 +38,7 @@ object ElementModel {
     }
     
     @scala.inline
-    def setCancel(value: Boolean): Self = this.set("cancel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCancel: Self = this.set("cancel", js.undefined)
-    
-    @scala.inline
-    def setComponent(value: dxActionSheet): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: T): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)

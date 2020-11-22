@@ -25,12 +25,17 @@ trait BaseParticleSystem extends js.Object {
   
   var _emitRateGradients: Nullable[js.Array[FactorGradient]] = js.native
   
+  /**
+    * The engine the particle system belongs to.
+    */
+  var _engine: ThinEngine = js.native
+  
   /* protected */ def _hasTargetStopDurationDependantGradient(): Boolean | Null = js.native
   
   /**
     * Default configuration related to image processing available in the standard Material.
     */
-  var _imageProcessingConfiguration: ImageProcessingConfiguration = js.native
+  var _imageProcessingConfiguration: Nullable[ImageProcessingConfiguration] = js.native
   
   /**
     * Local cache of defines for image processing.
@@ -62,7 +67,7 @@ trait BaseParticleSystem extends js.Object {
   /**
     * The scene the particle system belongs to.
     */
-  var _scene: Scene = js.native
+  var _scene: Nullable[Scene] = js.native
   
   var _sizeGradients: Nullable[js.Array[FactorGradient]] = js.native
   
@@ -506,7 +511,7 @@ trait BaseParticleSystem extends js.Object {
     * Get hosting scene
     * @returns the scene
     */
-  def getScene(): Scene = js.native
+  def getScene(): Nullable[Scene] = js.native
   
   /**
     * Gets the current list of size gradients.
@@ -542,13 +547,13 @@ trait BaseParticleSystem extends js.Object {
   /**
     * Gets the image processing configuration used either in this material.
     */
-  def imageProcessingConfiguration: ImageProcessingConfiguration = js.native
+  def imageProcessingConfiguration: Nullable[ImageProcessingConfiguration] = js.native
   /**
     * Sets the Default image processing configuration used either in the this material.
     *
     * If sets to null, the scene one is in use.
     */
-  def imageProcessingConfiguration_=(value: ImageProcessingConfiguration): Unit = js.native
+  def imageProcessingConfiguration_=(value: Nullable[ImageProcessingConfiguration]): Unit = js.native
   
   /**
     * Gets or sets whether an animation sprite sheet is enabled or not on the particle system
@@ -687,7 +692,7 @@ trait BaseParticleSystem extends js.Object {
   /**
     * The texture used to render each particle. (this can be a spritesheet)
     */
-  var particleTexture: Nullable[Texture] = js.native
+  var particleTexture: Nullable[BaseTexture] = js.native
   
   /** Gets or sets a value indicating how many cycles (or frames) must be executed before first rendering (this value has to be set before starting the system). Default is 0 */
   var preWarmCycles: Double = js.native
@@ -705,6 +710,11 @@ trait BaseParticleSystem extends js.Object {
     * The rendering group used by the Particle system to chose when to render.
     */
   var renderingGroupId: Double = js.native
+  
+  /**
+    * Snippet ID if the particle system was created from the snippet server
+    */
+  var snippetId: String = js.native
   
   /**
     * If using a spritesheet (isAnimationSheetEnabled) defines the speed of the sprite loop (default is 1 meaning the animation will play once during the entire particle lifetime)
@@ -748,6 +758,11 @@ trait BaseParticleSystem extends js.Object {
   
   /** Gets or sets a Vector2 used to move the pivot (by default (0,0)) */
   var translationPivot: Vector2 = js.native
+  
+  /**
+    * Gets or sets the unique id of the particle system
+    */
+  var uniqueId: Double = js.native
   
   /**
     * The overall motion speed (0.01 is default update speed, faster updates = faster animation)

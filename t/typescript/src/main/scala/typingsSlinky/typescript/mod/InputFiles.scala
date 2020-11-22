@@ -24,5 +24,5 @@ trait InputFiles extends Node {
   var javascriptText: java.lang.String = js.native
   
   @JSName("kind")
-  var kind_InputFiles: typingsSlinky.typescript.mod.SyntaxKind.InputFiles = js.native
+  val kind_InputFiles: typingsSlinky.typescript.mod.SyntaxKind.InputFiles = js.native
 }

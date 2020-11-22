@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FetchResourcesParams extends Object {
   
   /**
-    * The maximum number of results to be included in the result set response. The maximum value allowed is `100`. The [start](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#start) property combined with the `num` property can be used to paginate the search results.
+    * The maximum number of results to be included in the result set response.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#FetchResourcesParams)
     */
@@ -31,18 +31,12 @@ trait FetchResourcesParams extends Object {
   /**
     * The order in which to sort the results.
     *
-    *   Possible Value | Description
-    *   ---------------|------------
-    *   asc | Sort the results in ascending order.
-    *   desc | Sort the results in descending order.
-    *
-    *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#FetchResourcesParams)
     */
   var sortOrder: js.UndefOr[asc_ | desc_] = js.native
   
   /**
-    * The index of the first entry in the result set response. The index is 1-based. The [start](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#start) property, along with the [num](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#num) property can be used to paginate the search results.
+    * The index of the first entry in the result set response.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItem.html#FetchResourcesParams)
     */

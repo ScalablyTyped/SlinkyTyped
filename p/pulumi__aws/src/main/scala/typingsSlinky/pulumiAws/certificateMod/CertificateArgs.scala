@@ -43,7 +43,7 @@ trait CertificateArgs extends js.Object {
   val privateKey: js.UndefOr[Input[String]] = js.native
   
   /**
-    * A list of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`) to trigger recreation.
+    * Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`) to trigger recreation.
     */
   val subjectAlternativeNames: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   

@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.ServiceWorker.SetForceUpdateOnPageLoadRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Security.SetIgnoreCertificateErrorsRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `168` extends js.Object {
   
-  var paramsType: js.Array[SetForceUpdateOnPageLoadRequest] = js.native
+  var paramsType: js.Array[SetIgnoreCertificateErrorsRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `168` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetForceUpdateOnPageLoadRequest], returnType: Unit): `168` = {
+  def apply(paramsType: js.Array[SetIgnoreCertificateErrorsRequest], returnType: Unit): `168` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`168`]
   }
@@ -36,10 +36,10 @@ object `168` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetForceUpdateOnPageLoadRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetIgnoreCertificateErrorsRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetForceUpdateOnPageLoadRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetIgnoreCertificateErrorsRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

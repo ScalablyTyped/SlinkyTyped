@@ -20,10 +20,13 @@ trait TContainerNode
     * - They are dynamically created
     */
   @JSName("parent")
-  var parent_TContainerNode: ɵangularPackagesCoreCoreBf | TElementContainerNode | Null = js.native
+  var parent_TContainerNode: ɵangularPackagesCoreCoreBh | TElementContainerNode | Null = js.native
   
   @JSName("projection")
   var projection_TContainerNode: Null = js.native
+  
+  @JSName("value")
+  var value_TContainerNode: Null = js.native
 }
 object TContainerNode {
   
@@ -40,9 +43,10 @@ object TContainerNode {
     projection: Null,
     providerIndexes: TNodeProviderIndexes,
     styleBindings: TStylingRange,
-    `type`: TNodeType
+    `type`: TNodeType,
+    value: Null
   ): TContainerNode = {
-    val __obj = js.Dynamic.literal(child = child.asInstanceOf[js.Any], classBindings = classBindings.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], directiveStylingLast = directiveStylingLast.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], styleBindings = styleBindings.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(child = child.asInstanceOf[js.Any], classBindings = classBindings.asInstanceOf[js.Any], directiveEnd = directiveEnd.asInstanceOf[js.Any], directiveStart = directiveStart.asInstanceOf[js.Any], directiveStylingLast = directiveStylingLast.asInstanceOf[js.Any], flags = flags.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], injectorIndex = injectorIndex.asInstanceOf[js.Any], projection = projection.asInstanceOf[js.Any], providerIndexes = providerIndexes.asInstanceOf[js.Any], styleBindings = styleBindings.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TContainerNode]
   }
@@ -69,7 +73,10 @@ object TContainerNode {
     def setProjection(value: Null): Self = this.set("projection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setParent(value: ɵangularPackagesCoreCoreBf | TElementContainerNode): Self = this.set("parent", value.asInstanceOf[js.Any])
+    def setValue(value: Null): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setParent(value: ɵangularPackagesCoreCoreBh | TElementContainerNode): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParentNull: Self = this.set("parent", null)

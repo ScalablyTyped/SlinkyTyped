@@ -2,6 +2,7 @@ package typingsSlinky.reactMdAvatar.components
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticAnimationEvent
@@ -21,9 +22,15 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.RefAttributes
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -68,6 +75,8 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactMdAvatar.avatarMod.AvatarProps
+import typingsSlinky.reactMdAvatar.avatarMod.ImgAttributes
+import typingsSlinky.reactMdUtils.typesTypesMod.PropsWithRef
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -198,7 +207,9 @@ object Avatar {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -283,6 +294,9 @@ object Avatar {
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def imgProps(value: PropsWithRef[ImgAttributes, HTMLImageElement]): this.type = set("imgProps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
@@ -559,6 +573,9 @@ object Avatar {
     
     @scala.inline
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])

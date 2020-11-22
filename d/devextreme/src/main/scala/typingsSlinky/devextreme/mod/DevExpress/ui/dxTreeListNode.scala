@@ -7,25 +7,39 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeListNode extends js.Object {
   
-  /** @name dxTreeListNode.children */
+  /**
+    * [descr:dxTreeListNode.children]
+    */
   var children: js.UndefOr[js.Array[dxTreeListNode]] = js.native
   
-  /** @name dxTreeListNode.data */
+  /**
+    * [descr:dxTreeListNode.data]
+    */
   var data: js.UndefOr[js.Any] = js.native
   
-  /** @name dxTreeListNode.hasChildren */
+  /**
+    * [descr:dxTreeListNode.hasChildren]
+    */
   var hasChildren: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeListNode.key */
+  /**
+    * [descr:dxTreeListNode.key]
+    */
   var key: js.UndefOr[js.Any] = js.native
   
-  /** @name dxTreeListNode.level */
+  /**
+    * [descr:dxTreeListNode.level]
+    */
   var level: js.UndefOr[Double] = js.native
   
-  /** @name dxTreeListNode.parent */
+  /**
+    * [descr:dxTreeListNode.parent]
+    */
   var parent: js.UndefOr[dxTreeListNode] = js.native
   
-  /** @name dxTreeListNode.visible */
+  /**
+    * [descr:dxTreeListNode.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object dxTreeListNode {

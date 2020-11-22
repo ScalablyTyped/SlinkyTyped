@@ -1,10 +1,5 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firefoxWebextBrowser.anon.Basepath
-import typingsSlinky.firefoxWebextBrowser.anon.Chromeresources
-import typingsSlinky.firefoxWebextBrowser.anon.Edge
-import typingsSlinky.firefoxWebextBrowser.anon.Gecko
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WebExtensionLangpackManifest extends js.Object {
   
-  var applications: js.UndefOr[Gecko] = js.native
+  var applications: js.UndefOr[WebExtensionLangpackManifestApplications] = js.native
   
   var author: js.UndefOr[String] = js.native
   
-  var browser_specific_settings: js.UndefOr[Edge] = js.native
+  var browser_specific_settings: js.UndefOr[WebExtensionLangpackManifestBrowserSpecificSettings] = js.native
   
   var description: js.UndefOr[String] = js.native
   
@@ -25,7 +20,7 @@ trait WebExtensionLangpackManifest extends js.Object {
   
   var langpack_id: String = js.native
   
-  var languages: StringDictionary[Chromeresources] = js.native
+  var languages: WebExtensionLangpackManifestLanguages = js.native
   
   var manifest_version: Double = js.native
   
@@ -33,7 +28,7 @@ trait WebExtensionLangpackManifest extends js.Object {
   
   var short_name: js.UndefOr[String] = js.native
   
-  var sources: js.UndefOr[StringDictionary[Basepath]] = js.native
+  var sources: js.UndefOr[WebExtensionLangpackManifestSources] = js.native
   
   var version: String = js.native
 }
@@ -42,7 +37,7 @@ object WebExtensionLangpackManifest {
   @scala.inline
   def apply(
     langpack_id: String,
-    languages: StringDictionary[Chromeresources],
+    languages: WebExtensionLangpackManifestLanguages,
     manifest_version: Double,
     name: String,
     version: String
@@ -70,7 +65,7 @@ object WebExtensionLangpackManifest {
     def setLangpack_id(value: String): Self = this.set("langpack_id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLanguages(value: StringDictionary[Chromeresources]): Self = this.set("languages", value.asInstanceOf[js.Any])
+    def setLanguages(value: WebExtensionLangpackManifestLanguages): Self = this.set("languages", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setManifest_version(value: Double): Self = this.set("manifest_version", value.asInstanceOf[js.Any])
@@ -82,7 +77,7 @@ object WebExtensionLangpackManifest {
     def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setApplications(value: Gecko): Self = this.set("applications", value.asInstanceOf[js.Any])
+    def setApplications(value: WebExtensionLangpackManifestApplications): Self = this.set("applications", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteApplications: Self = this.set("applications", js.undefined)
@@ -94,7 +89,7 @@ object WebExtensionLangpackManifest {
     def deleteAuthor: Self = this.set("author", js.undefined)
     
     @scala.inline
-    def setBrowser_specific_settings(value: Edge): Self = this.set("browser_specific_settings", value.asInstanceOf[js.Any])
+    def setBrowser_specific_settings(value: WebExtensionLangpackManifestBrowserSpecificSettings): Self = this.set("browser_specific_settings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBrowser_specific_settings: Self = this.set("browser_specific_settings", js.undefined)
@@ -118,7 +113,7 @@ object WebExtensionLangpackManifest {
     def deleteShort_name: Self = this.set("short_name", js.undefined)
     
     @scala.inline
-    def setSources(value: StringDictionary[Basepath]): Self = this.set("sources", value.asInstanceOf[js.Any])
+    def setSources(value: WebExtensionLangpackManifestSources): Self = this.set("sources", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSources: Self = this.set("sources", js.undefined)

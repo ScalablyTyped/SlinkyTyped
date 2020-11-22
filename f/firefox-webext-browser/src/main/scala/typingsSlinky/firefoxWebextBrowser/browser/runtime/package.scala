@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object runtime {
   
-  type PlatformNaclArch = js.Any
+  type DirectoryEntry = js.Any
 }

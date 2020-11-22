@@ -23,16 +23,15 @@ trait BoxAnnotationOptions
   @JSName("type")
   var type_BoxAnnotationOptions: box = js.native
   
-   // value or label
-  var xMax: Double | String = js.native
+  var xMax: ChartPointValue = js.native
   
-  var xMin: Double | String = js.native
+  var xMin: ChartPointValue = js.native
   
   var xScaleID: js.UndefOr[String] = js.native
   
-  var yMax: Double | String = js.native
+  var yMax: ChartPointValue = js.native
   
-  var yMin: Double | String = js.native
+  var yMin: ChartPointValue = js.native
   
   var yScaleID: js.UndefOr[String] = js.native
 }
@@ -41,10 +40,10 @@ object BoxAnnotationOptions {
   @scala.inline
   def apply(
     `type`: box,
-    xMax: Double | String,
-    xMin: Double | String,
-    yMax: Double | String,
-    yMin: Double | String
+    xMax: ChartPointValue,
+    xMin: ChartPointValue,
+    yMax: ChartPointValue,
+    yMin: ChartPointValue
   ): BoxAnnotationOptions = {
     val __obj = js.Dynamic.literal(xMax = xMax.asInstanceOf[js.Any], xMin = xMin.asInstanceOf[js.Any], yMax = yMax.asInstanceOf[js.Any], yMin = yMin.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
@@ -70,16 +69,28 @@ object BoxAnnotationOptions {
     def setType(value: box): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setXMax(value: Double | String): Self = this.set("xMax", value.asInstanceOf[js.Any])
+    def setXMaxDate(value: js.Date): Self = this.set("xMax", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setXMin(value: Double | String): Self = this.set("xMin", value.asInstanceOf[js.Any])
+    def setXMax(value: ChartPointValue): Self = this.set("xMax", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setYMax(value: Double | String): Self = this.set("yMax", value.asInstanceOf[js.Any])
+    def setXMinDate(value: js.Date): Self = this.set("xMin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setYMin(value: Double | String): Self = this.set("yMin", value.asInstanceOf[js.Any])
+    def setXMin(value: ChartPointValue): Self = this.set("xMin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setYMaxDate(value: js.Date): Self = this.set("yMax", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setYMax(value: ChartPointValue): Self = this.set("yMax", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setYMinDate(value: js.Date): Self = this.set("yMin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setYMin(value: ChartPointValue): Self = this.set("yMin", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBackgroundColor(

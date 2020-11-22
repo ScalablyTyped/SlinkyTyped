@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.expressionsMod.expressions.Expression
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,20 +8,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.TemplateArgument")
 @js.native
-class TemplateArgument protected () extends Element {
+class TemplateArgument protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsTemplate: Template = js.native
@@ -33,15 +35,14 @@ class TemplateArgument protected () extends Element {
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 7.9.0: introduced
     */
   def expressionModel: Expression = js.native
   def expressionModel_=(newValue: Expression): Unit = js.native
   
   def expression_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FTemplateArgument: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.TemplateArgument")

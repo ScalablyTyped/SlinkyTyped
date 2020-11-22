@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateAccountCustomizationRequest extends js.Object {
   
   /**
-    * The customizations you want to update in QuickSight.
+    * The QuickSight customizations you're updating in the current AWS Region. 
     */
   var AccountCustomization: typingsSlinky.awsSdk.quicksightMod.AccountCustomization = js.native
   
@@ -18,7 +18,7 @@ trait UpdateAccountCustomizationRequest extends js.Object {
   var AwsAccountId: typingsSlinky.awsSdk.quicksightMod.AwsAccountId = js.native
   
   /**
-    * The namespace associated with the customization that you're updating.
+    * The namespace that you want to update QuickSight customizations for.
     */
   var Namespace: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.Namespace] = js.native
 }

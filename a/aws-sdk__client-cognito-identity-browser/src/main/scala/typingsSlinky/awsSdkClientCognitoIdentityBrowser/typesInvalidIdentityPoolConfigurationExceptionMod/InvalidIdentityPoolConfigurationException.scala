@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInvalidIdentityPoolConfigurationExceptionMod
 
 import typingsSlinky.awsSdkClientCognitoIdentityBrowser.getCredentialsForIdentityExceptionsUnionMod.GetCredentialsForIdentityExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait InvalidIdentityPoolConfigurationException
-  extends ServiceException[InvalidIdentityPoolConfigurationExceptionDetails]
-     with GetCredentialsForIdentityExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidIdentityPoolConfigurationExceptionDetails> * / any */ @js.native
+trait InvalidIdentityPoolConfigurationException extends GetCredentialsForIdentityExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidIdentityPoolConfigurationException: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.InvalidIdentityPoolConfigurationException = js.native
+  var name: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.InvalidIdentityPoolConfigurationException = js.native
 }
 object InvalidIdentityPoolConfigurationException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidIdentityPoolConfigurationExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.InvalidIdentityPoolConfigurationException
   ): InvalidIdentityPoolConfigurationException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidIdentityPoolConfigurationException]
   }
   

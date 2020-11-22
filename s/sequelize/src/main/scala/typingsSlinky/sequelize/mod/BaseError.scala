@@ -4,7 +4,7 @@ import typingsSlinky.std.Error
 import typingsSlinky.std.ErrorConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 //
 //  Errors
@@ -19,4 +19,3 @@ import scala.scalajs.js.annotation._
 trait BaseError
   extends Error
      with ErrorConstructor
-

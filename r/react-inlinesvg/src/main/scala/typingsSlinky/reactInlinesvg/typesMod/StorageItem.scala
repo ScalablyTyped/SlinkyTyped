@@ -9,14 +9,14 @@ trait StorageItem extends js.Object {
   
   var content: String = js.native
   
-  var queue: js.Array[_] = js.native
+  var queue: js.Array[Callback] = js.native
   
   var status: String = js.native
 }
 object StorageItem {
   
   @scala.inline
-  def apply(content: String, queue: js.Array[_], status: String): StorageItem = {
+  def apply(content: String, queue: js.Array[Callback], status: String): StorageItem = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], queue = queue.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[StorageItem]
   }
@@ -40,10 +40,10 @@ object StorageItem {
     def setContent(value: String): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setQueueVarargs(value: js.Any*): Self = this.set("queue", js.Array(value :_*))
+    def setQueueVarargs(value: Callback*): Self = this.set("queue", js.Array(value :_*))
     
     @scala.inline
-    def setQueue(value: js.Array[_]): Self = this.set("queue", value.asInstanceOf[js.Any])
+    def setQueue(value: js.Array[Callback]): Self = this.set("queue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStatus(value: String): Self = this.set("status", value.asInstanceOf[js.Any])

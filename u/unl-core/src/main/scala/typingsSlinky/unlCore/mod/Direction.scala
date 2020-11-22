@@ -1,36 +1,27 @@
 package typingsSlinky.unlCore.mod
 
-import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-sealed trait Direction extends js.Object
-@JSImport("unl-core", "Direction")
-@js.native
-object Direction extends js.Object {
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.unlCore.unlCoreStrings.N
+  - typingsSlinky.unlCore.unlCoreStrings.S
+  - typingsSlinky.unlCore.unlCoreStrings.E
+  - typingsSlinky.unlCore.unlCoreStrings.W
+*/
+trait Direction extends js.Object
+object Direction {
   
-  @JSBracketAccess
-  def apply(value: String): js.UndefOr[Direction with String] = js.native
+  @scala.inline
+  def E: typingsSlinky.unlCore.unlCoreStrings.E = "E".asInstanceOf[typingsSlinky.unlCore.unlCoreStrings.E]
   
-  @js.native
-  sealed trait East extends Direction
-  /* "E" */ @js.native
-  object East extends TopLevel[East with String]
+  @scala.inline
+  def N: typingsSlinky.unlCore.unlCoreStrings.N = "N".asInstanceOf[typingsSlinky.unlCore.unlCoreStrings.N]
   
-  @js.native
-  sealed trait North extends Direction
-  /* "N" */ @js.native
-  object North extends TopLevel[North with String]
+  @scala.inline
+  def S: typingsSlinky.unlCore.unlCoreStrings.S = "S".asInstanceOf[typingsSlinky.unlCore.unlCoreStrings.S]
   
-  @js.native
-  sealed trait South extends Direction
-  /* "S" */ @js.native
-  object South extends TopLevel[South with String]
-  
-  @js.native
-  sealed trait West extends Direction
-  /* "W" */ @js.native
-  object West extends TopLevel[West with String]
+  @scala.inline
+  def W: typingsSlinky.unlCore.unlCoreStrings.W = "W".asInstanceOf[typingsSlinky.unlCore.unlCoreStrings.W]
 }

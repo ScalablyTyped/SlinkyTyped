@@ -49,6 +49,15 @@ trait UploadProps[T] extends js.Object {
   
   var isImageUrl: js.UndefOr[js.Function1[/* file */ UploadFile[_], Boolean]] = js.native
   
+  var itemRender: js.UndefOr[
+    js.Function3[
+      /* originNode */ ReactElement, 
+      /* file */ UploadFile[_], 
+      /* fileList */ js.UndefOr[js.Array[UploadFile[T]]], 
+      ReactElement
+    ]
+  ] = js.native
+  
   var listType: js.UndefOr[UploadListType] = js.native
   
   var locale: js.UndefOr[UploadLocale] = js.native
@@ -207,6 +216,14 @@ object UploadProps {
     
     @scala.inline
     def deleteIsImageUrl: Self = this.set("isImageUrl", js.undefined)
+    
+    @scala.inline
+    def setItemRender(
+      value: (/* originNode */ ReactElement, /* file */ UploadFile[_], /* fileList */ js.UndefOr[js.Array[UploadFile[T]]]) => ReactElement
+    ): Self = this.set("itemRender", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def deleteItemRender: Self = this.set("itemRender", js.undefined)
     
     @scala.inline
     def setListType(value: UploadListType): Self = this.set("listType", value.asInstanceOf[js.Any])

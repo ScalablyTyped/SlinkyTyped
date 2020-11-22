@@ -25,6 +25,9 @@ object viewStacksMod extends js.Object {
     def findLeavingViewItemByRouteInfo(routeInfo: RouteInfo[_]): js.UndefOr[ViewItem[_]] = js.native
     def findLeavingViewItemByRouteInfo(routeInfo: RouteInfo[_], outletId: String): js.UndefOr[ViewItem[_]] = js.native
     
+    def findViewItemByPathname(pathname: String): js.UndefOr[ViewItem[_]] = js.native
+    def findViewItemByPathname(pathname: String, outletId: String): js.UndefOr[ViewItem[_]] = js.native
+    
     def findViewItemByRouteInfo(routeInfo: RouteInfo[_]): js.UndefOr[ViewItem[_]] = js.native
     def findViewItemByRouteInfo(routeInfo: RouteInfo[_], outletId: String): js.UndefOr[ViewItem[_]] = js.native
     
@@ -39,8 +42,6 @@ object viewStacksMod extends js.Object {
     ): js.Array[ReactElement] = js.native
     
     /* protected */ def getStackIds(): js.Array[String] = js.native
-    
-    def getViewItemForTransition(pathname: String): js.UndefOr[ViewItem[_]] = js.native
     
     def getViewItemsForOutlet(outletId: String): js.Array[ViewItem[_]] = js.native
     

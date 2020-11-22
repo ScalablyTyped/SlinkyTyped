@@ -7,11 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object mod {
   
   // Crazy typedef needed get _.omit to work properly with Dictionary and NumericDictionary
-  type AnyKindOfDictionary = (typingsSlinky.lodash.mod.Dictionary[js.UndefOr[js.Object | scala.Null]]) | (typingsSlinky.lodash.mod.NumericDictionary[js.UndefOr[js.Object | scala.Null]])
+  type AnyKindOfDictionary = typingsSlinky.lodash.mod.Dictionary[js.Any] | typingsSlinky.lodash.mod.NumericDictionary[js.Any]
   
   type ArrayIterator[T, TResult] = js.Function3[/* value */ T, /* index */ scala.Double, /* collection */ js.Array[T], TResult]
   
-  // assignInWith
   type AssignCustomizer = js.Function5[
     /* objectValue */ js.Any, 
     /* sourceValue */ js.Any, 
@@ -21,7 +20,6 @@ package object mod {
     js.Any
   ]
   
-  // cloneDeepWith
   type CloneDeepWithCustomizer[TObject] = js.Function4[
     /* value */ js.Any, 
     /* key */ js.UndefOr[scala.Double | java.lang.String], 
@@ -30,7 +28,6 @@ package object mod {
     js.Any
   ]
   
-  // cloneWith
   type CloneWithCustomizer[TValue, TResult] = js.Function4[
     /* value */ TValue, 
     /* key */ js.UndefOr[scala.Double | java.lang.String], 
@@ -45,9 +42,8 @@ package object mod {
   
   type CondPair[T, R] = js.Tuple2[js.Function1[/* val */ T, scala.Boolean], js.Function1[/* val */ T, R]]
   
-  // conforms
   type ConformsPredicateObject[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in keyof T ]:? (val : T[P]): boolean}
+  {[ P in keyof T ]: T[P] extends (arg : infer A): any? any : any}
     */ typingsSlinky.lodash.lodashStrings.ConformsPredicateObject with org.scalablytyped.runtime.TopLevel[T]
   
   type Dictionary[T] = org.scalablytyped.runtime.StringDictionary[T]
@@ -57,6 +53,19 @@ package object mod {
   type DictionaryIterator[T, TResult] = typingsSlinky.lodash.mod.ObjectIterator[typingsSlinky.lodash.mod.Dictionary[T], TResult]
   
   type DictionaryIteratorTypeGuard[T, S /* <: T */] = typingsSlinky.lodash.mod.ObjectIteratorTypeGuard[typingsSlinky.lodash.mod.Dictionary[T], S]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.lodash.mod.PrimitiveChain[T]
+    - typingsSlinky.lodash.mod.ObjectChain[T]
+    - typingsSlinky.lodash.mod.CollectionChain[js.Any]
+    - typingsSlinky.lodash.mod.FunctionChain[T]
+    - typingsSlinky.lodash.mod.StringNullableChain
+    - typingsSlinky.lodash.mod.StringChain
+    - typingsSlinky.lodash.mod.CollectionChain[_] with typingsSlinky.lodash.mod.FunctionChain[_] with typingsSlinky.lodash.mod.ObjectChain[_] with typingsSlinky.lodash.mod.PrimitiveChain[_] with typingsSlinky.lodash.mod.StringChain
+  */
+  type ExpChain[T] = typingsSlinky.lodash.mod._ExpChain[T] | typingsSlinky.lodash.mod.CollectionChain[js.Any] | (typingsSlinky.lodash.mod.CollectionChain[_] with typingsSlinky.lodash.mod.FunctionChain[_] with typingsSlinky.lodash.mod.ObjectChain[_] with typingsSlinky.lodash.mod.PrimitiveChain[_] with typingsSlinky.lodash.mod.StringChain)
+  
+  type Flat[T] = T
   
   type Function0[R] = js.Function0[R]
   
@@ -68,7 +77,18 @@ package object mod {
   
   type Function4[T1, T2, T3, T4, R] = js.Function4[/* t1 */ T1, /* t2 */ T2, /* t3 */ T3, /* t4 */ T4, R]
   
-  // isEqualWith
+  type FunctionBase = typingsSlinky.lodash.GlobalFunction
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.lodash.mod.Primitive[T]
+    - typingsSlinky.lodash.mod.Object[T]
+    - typingsSlinky.lodash.mod.Collection[js.Any]
+    - typingsSlinky.lodash.mod.Function[T]
+    - typingsSlinky.lodash.mod.String
+    - typingsSlinky.lodash.mod.Collection[_] with typingsSlinky.lodash.mod.Function[_] with typingsSlinky.lodash.mod.Object[_] with typingsSlinky.lodash.mod.Primitive[_] with typingsSlinky.lodash.mod.String
+  */
+  type ImpChain[T] = typingsSlinky.lodash.mod._ImpChain[T] | typingsSlinky.lodash.mod.Collection[js.Any] | (typingsSlinky.lodash.mod.Collection[_] with typingsSlinky.lodash.mod.Function[_] with typingsSlinky.lodash.mod.Object[_] with typingsSlinky.lodash.mod.Primitive[_] with typingsSlinky.lodash.mod.String)
+  
   type IsEqualCustomizer = js.Function6[
     /* value */ js.Any, 
     /* other */ js.Any, 
@@ -79,7 +99,7 @@ package object mod {
     js.UndefOr[scala.Boolean]
   ]
   
-  type IterateeShorthand[T] = typingsSlinky.lodash.mod.PropertyName | (js.Tuple2[typingsSlinky.lodash.mod.PropertyName, js.Any]) | typingsSlinky.lodash.mod.PartialDeep[T]
+  type IterateeShorthand[T] = typingsSlinky.lodash.mod.PropertyName | (js.Tuple2[typingsSlinky.lodash.mod.PropertyName, js.Any]) | typingsSlinky.lodash.mod.PartialShallow[T]
   
   /** Common interface between Arrays and jQuery objects */
   type List[T] = typingsSlinky.std.ArrayLike[T]
@@ -175,7 +195,6 @@ package object mod {
   
   type MemoVoidIteratorCapped[T, TResult] = js.Function2[/* acc */ TResult, /* curr */ T, scala.Unit]
   
-  // mergeWith
   type MergeWithCustomizer = js.Function5[
     /* value */ js.Any, 
     /* srcValue */ js.Any, 
@@ -185,7 +204,7 @@ package object mod {
     js.Any
   ]
   
-  type NotVoid = js.UndefOr[js.Object | scala.Null]
+  type NotVoid = js.Any
   
   type NumericDictionary[T] = org.scalablytyped.runtime.NumberDictionary[T]
   
@@ -224,16 +243,13 @@ package object mod {
     /* is S */ scala.Boolean
   ]
   
-  type Omit[T, K /* <: /* keyof T */ java.lang.String */] = typingsSlinky.std.Pick[
-    T, 
-    /* import warning: importer.ImportType#apply Failed type conversion: {[ P in keyof T ]: P} & {[ P in K ]: never} & {[x: string] : never}[keyof T] */ js.Any
-  ]
-  
-  type PartialDeep[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ P in keyof T ]:? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias lodash.lodash.PartialDeep<T[P]> * / object}
-    */ typingsSlinky.lodash.lodashStrings.PartialDeep with org.scalablytyped.runtime.TopLevel[js.Any]
+  type Omit[T, K /* <: /* keyof any */ java.lang.String */] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   
   type PartialObject[T] = typingsSlinky.lodash.GlobalPartial[T]
+  
+  type PartialShallow[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof T ]:? T[P] extends object? object : T[P]}
+    */ typingsSlinky.lodash.lodashStrings.PartialShallow with org.scalablytyped.runtime.TopLevel[js.Any]
   
   type PropertyName = java.lang.String | scala.Double | js.Symbol
   
@@ -241,7 +257,6 @@ package object mod {
   
   type ReplaceFunction = js.Function2[/* match */ java.lang.String, /* repeated */ js.Any, java.lang.String]
   
-  // setWith
   type SetWithCustomizer[T] = js.Function3[/* nsValue */ js.Any, /* key */ java.lang.String, /* nsObject */ T, js.Any]
   
   type StringIterator[TResult] = js.Function3[
@@ -250,6 +265,8 @@ package object mod {
     /* string */ java.lang.String, 
     TResult
   ]
+  
+  type Truthy[T] = T
   
   type ValueIteratee[T] = (js.Function1[/* value */ T, typingsSlinky.lodash.mod.NotVoid]) | typingsSlinky.lodash.mod.IterateeShorthand[T]
   
@@ -261,10 +278,8 @@ package object mod {
   
   type ValueKeyIterateeTypeGuard[T, S /* <: T */] = js.Function2[/* value */ T, /* key */ java.lang.String, /* is S */ scala.Boolean]
   
-  /** The placeholder, to be used in curried functions */
   type __ = typingsSlinky.lodash.mod.LoDashStatic
   
-  // isMatchWith
   type isMatchWithCustomizer = js.Function5[
     /* value */ js.Any, 
     /* other */ js.Any, 

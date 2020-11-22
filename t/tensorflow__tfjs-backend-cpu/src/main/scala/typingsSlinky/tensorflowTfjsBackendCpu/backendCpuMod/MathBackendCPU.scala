@@ -3,15 +3,16 @@ package typingsSlinky.tensorflowTfjsBackendCpu.backendCpuMod
 import typingsSlinky.tensorflowTfjsBackendCpu.tensorflowTfjsBackendCpuStrings.NCHW
 import typingsSlinky.tensorflowTfjsBackendCpu.tensorflowTfjsBackendCpuStrings.NHWC
 import typingsSlinky.tensorflowTfjsCore.backendMod.KernelBackend
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor2D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.BackendValues
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R4
+import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.TensorInfo
 import typingsSlinky.tensorflowTfjsCore.mod.DataStorage
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,8 +22,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class MathBackendCPU () extends KernelBackend {
   
   var blockSize: Double = js.native
-  
-  var broadcastedBinaryComplexOp: js.Any = js.native
   
   var broadcastedBinaryOp: js.Any = js.native
   
@@ -39,6 +38,9 @@ class MathBackendCPU () extends KernelBackend {
   
   var data: DataStorage[TensorData[DataType]] = js.native
   
+  /** Decrease refCount of a `TensorData`. */
+  def decRef(dataId: DataId): Unit = js.native
+  
   @JSName("depthToSpace")
   def depthToSpace_NCHW(x: Tensor4D, blockSize: Double, dataFormat: NCHW): Tensor4D = js.native
   @JSName("depthToSpace")
@@ -46,24 +48,24 @@ class MathBackendCPU () extends KernelBackend {
   
   def disposeData(dataId: DataId): Unit = js.native
   
-  /**
-    * Calculate FFT of inner most elements of batch tensor.
-    */
-  var fftBatch: js.Any = js.native
-  
-  var fftImpl: js.Any = js.native
-  
-  var fftRadix2: js.Any = js.native
+  def disposeIntermediateTensorInfo(tensorInfo: TensorInfo): Unit = js.native
   
   var firstUse: js.Any = js.native
   
-  var fourierTransformByMatmul: js.Any = js.native
+  /** Increase refCount of a `TensorData`. */
+  def incRef(dataId: DataId): Unit = js.native
   
-  var isExponentOf2: js.Any = js.native
+  def makeOutput[T /* <: Tensor[Rank] */](values: BackendValues, shape: js.Array[Double], dtype: DataType): T = js.native
   
-  def linear[T /* <: Tensor[Rank] */](x: T): T = js.native
-  
-  var makeOutput: js.Any = js.native
+  /**
+    * Create a data bucket in cpu backend.
+    * @param shape Shape of the `TensorInfo`.
+    * @param dtype DType of the `TensorInfo`.
+    * @param values The value of the `TensorInfo` stored as a flattened array.
+    */
+  def makeTensorInfo(shape: js.Array[Double], dtype: DataType): TensorInfo = js.native
+  def makeTensorInfo(shape: js.Array[Double], dtype: DataType, values: js.Array[String]): TensorInfo = js.native
+  def makeTensorInfo(shape: js.Array[Double], dtype: DataType, values: BackendValues): TensorInfo = js.native
   
   var maxPool3dPositions: js.Any = js.native
   
@@ -75,12 +77,5 @@ class MathBackendCPU () extends KernelBackend {
   
   def readSync(dataId: DataId): BackendValues = js.native
   
-  def reshape[R /* <: Rank */](
-    x: Tensor[Rank],
-    shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any
-  ): Tensor[R] = js.native
-  
   var scatter: js.Any = js.native
-  
-  def step[T /* <: Tensor[Rank] */](x: T): T = js.native
 }

@@ -41,8 +41,8 @@ object Property {
   }
   
   @scala.inline
-  def ClassPrivateProperty_(key: PrivateName_, `type`: ClassPrivateProperty): Property = {
-    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+  def ClassPrivateProperty_(key: PrivateName_, static: js.Any, `type`: ClassPrivateProperty): Property = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Property]
   }

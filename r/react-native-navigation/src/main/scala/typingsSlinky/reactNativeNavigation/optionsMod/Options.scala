@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
-import typingsSlinky.reactNative.mod.ImageRequireSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -40,7 +39,7 @@ trait Options extends js.Object {
     * Background image for the screen
     * #### (iOS specific)
     */
-  var backgroundImage: js.UndefOr[ImageRequireSource] = js.native
+  var backgroundImage: js.UndefOr[ImageResource] = js.native
   
   /**
     * Enable or disable automatically blurring focused input, dismissing keyboard on unmount
@@ -110,7 +109,7 @@ trait Options extends js.Object {
     * Background image for the Navigation View
     * #### (iOS specific)
     */
-  var rootBackgroundImage: js.UndefOr[ImageRequireSource] = js.native
+  var rootBackgroundImage: js.UndefOr[ImageResource] = js.native
   
   /**
     * Configure the side menu
@@ -131,6 +130,12 @@ trait Options extends js.Object {
     * Configure the top bar
     */
   var topBar: js.UndefOr[OptionsTopBar] = js.native
+  
+  /**
+    * Provides a way to configure the overall presentation of your application's main user interface
+    * #### (iOS specific)
+    */
+  var window: js.UndefOr[WindowOptions] = js.native
 }
 object Options {
   
@@ -162,7 +167,7 @@ object Options {
     def deleteAnimations: Self = this.set("animations", js.undefined)
     
     @scala.inline
-    def setBackgroundImage(value: ImageRequireSource): Self = this.set("backgroundImage", value.asInstanceOf[js.Any])
+    def setBackgroundImage(value: ImageResource): Self = this.set("backgroundImage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundImage: Self = this.set("backgroundImage", js.undefined)
@@ -240,7 +245,7 @@ object Options {
     def deletePreview: Self = this.set("preview", js.undefined)
     
     @scala.inline
-    def setRootBackgroundImage(value: ImageRequireSource): Self = this.set("rootBackgroundImage", value.asInstanceOf[js.Any])
+    def setRootBackgroundImage(value: ImageResource): Self = this.set("rootBackgroundImage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRootBackgroundImage: Self = this.set("rootBackgroundImage", js.undefined)
@@ -268,5 +273,11 @@ object Options {
     
     @scala.inline
     def deleteTopBar: Self = this.set("topBar", js.undefined)
+    
+    @scala.inline
+    def setWindow(value: WindowOptions): Self = this.set("window", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWindow: Self = this.set("window", js.undefined)
   }
 }

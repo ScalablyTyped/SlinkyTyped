@@ -1,7 +1,7 @@
 
 # Scala.js typings for storybook__addon-options
 
-Typings are for version 5.3.19
+Typings are for version 5.3.21
 
 ## Library description:
 Options addon for storybook

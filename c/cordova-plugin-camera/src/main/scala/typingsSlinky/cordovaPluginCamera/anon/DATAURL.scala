@@ -10,14 +10,12 @@ trait DATAURL extends js.Object {
   var DATA_URL: Double = js.native
   
   var FILE_URI: Double = js.native
-  
-  var NATIVE_URI: Double = js.native
 }
 object DATAURL {
   
   @scala.inline
-  def apply(DATA_URL: Double, FILE_URI: Double, NATIVE_URI: Double): DATAURL = {
-    val __obj = js.Dynamic.literal(DATA_URL = DATA_URL.asInstanceOf[js.Any], FILE_URI = FILE_URI.asInstanceOf[js.Any], NATIVE_URI = NATIVE_URI.asInstanceOf[js.Any])
+  def apply(DATA_URL: Double, FILE_URI: Double): DATAURL = {
+    val __obj = js.Dynamic.literal(DATA_URL = DATA_URL.asInstanceOf[js.Any], FILE_URI = FILE_URI.asInstanceOf[js.Any])
     __obj.asInstanceOf[DATAURL]
   }
   
@@ -41,8 +39,5 @@ object DATAURL {
     
     @scala.inline
     def setFILE_URI(value: Double): Self = this.set("FILE_URI", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setNATIVE_URI(value: Double): Self = this.set("NATIVE_URI", value.asInstanceOf[js.Any])
   }
 }

@@ -64,6 +64,9 @@ object flatpickrStrings {
   def allowInput: allowInput = "allowInput".asInstanceOf[allowInput]
   
   @scala.inline
+  def allowInvalidPreload: allowInvalidPreload = "allowInvalidPreload".asInstanceOf[allowInvalidPreload]
+  
+  @scala.inline
   def altFormat: altFormat = "altFormat".asInstanceOf[altFormat]
   
   @scala.inline
@@ -118,6 +121,9 @@ object flatpickrStrings {
   def auto: auto = "auto".asInstanceOf[auto]
   
   @scala.inline
+  def autoFillDefaultTime: autoFillDefaultTime = "autoFillDefaultTime".asInstanceOf[autoFillDefaultTime]
+  
+  @scala.inline
   def auxclick: auxclick = "auxclick".asInstanceOf[auxclick]
   
   @scala.inline
@@ -167,6 +173,9 @@ object flatpickrStrings {
   
   @scala.inline
   def button: button = "button".asInstanceOf[button]
+  
+  @scala.inline
+  def ca: ca = "ca".asInstanceOf[ca]
   
   @scala.inline
   def cancel: cancel = "cancel".asInstanceOf[cancel]
@@ -1192,6 +1201,12 @@ object flatpickrStrings {
   def use: use = "use".asInstanceOf[use]
   
   @scala.inline
+  def uz: uz = "uz".asInstanceOf[uz]
+  
+  @scala.inline
+  def uz_latn: uz_latn = "uz_latn".asInstanceOf[uz_latn]
+  
+  @scala.inline
   def `var`: `var` = "var".asInstanceOf[`var`]
   
   @scala.inline
@@ -1288,6 +1303,9 @@ object flatpickrStrings {
   sealed trait allowInput extends js.Object
   
   @js.native
+  sealed trait allowInvalidPreload extends js.Object
+  
+  @js.native
   sealed trait altFormat extends js.Object
   
   @js.native
@@ -1342,6 +1360,9 @@ object flatpickrStrings {
   sealed trait auto extends js.Object
   
   @js.native
+  sealed trait autoFillDefaultTime extends js.Object
+  
+  @js.native
   sealed trait auxclick extends js.Object
   
   @js.native
@@ -1391,6 +1412,9 @@ object flatpickrStrings {
   
   @js.native
   sealed trait button extends js.Object
+  
+  @js.native
+  sealed trait ca extends key
   
   @js.native
   sealed trait cancel extends js.Object
@@ -2414,6 +2438,12 @@ object flatpickrStrings {
   
   @js.native
   sealed trait use extends js.Object
+  
+  @js.native
+  sealed trait uz extends key
+  
+  @js.native
+  sealed trait uz_latn extends key
   
   @js.native
   sealed trait `var` extends js.Object

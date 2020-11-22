@@ -12,85 +12,85 @@ trait PartialScaleThemeProperti extends _Theme {
   
   var borderStyles: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LineStyle */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderStyle */ _
     ]
   ] = js.native
   
   var borderWidths: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderWidthProperty<{}> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderWidth<{}> */ _
     ]
   ] = js.native
   
   var borders: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<{}> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<{}> */ _
     ]
   ] = js.native
   
   var colors: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ _
     ]
   ] = js.native
   
   var fontSizes: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontSizeProperty<number> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontSize<number> */ _
     ]
   ] = js.native
   
   var fontWeights: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontWeightProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontWeight */ _
     ]
   ] = js.native
   
   var fonts: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _
     ]
   ] = js.native
   
   var letterSpacings: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LetterSpacingProperty<string | number> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LetterSpacing<string | number> */ _
     ]
   ] = js.native
   
   var lineHeights: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LineHeightProperty<string> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LineHeight<string> */ _
     ]
   ] = js.native
   
   var radii: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRadiusProperty<{}> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRadius<{}> */ _
     ]
   ] = js.native
   
   var shadows: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ _
     ]
   ] = js.native
   
   var sizes: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<{}> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<{}> */ _
     ]
   ] = js.native
   
   var space: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginProperty<number> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Margin<number> */ js.Any
     ]
   ] = js.native
   
   var zIndices: js.UndefOr[
     ThemeValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _
     ]
   ] = js.native
 }
@@ -123,7 +123,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setBorderStyles(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LineStyle */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderStyle */ _
         ]
     ): Self = this.set("borderStyles", value.asInstanceOf[js.Any])
     
@@ -136,7 +136,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setBorderWidths(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderWidthProperty<{}> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderWidth<{}> */ _
         ]
     ): Self = this.set("borderWidths", value.asInstanceOf[js.Any])
     
@@ -149,7 +149,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setBorders(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<{}> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<{}> */ _
         ]
     ): Self = this.set("borders", value.asInstanceOf[js.Any])
     
@@ -162,7 +162,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setColors(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ _
         ]
     ): Self = this.set("colors", value.asInstanceOf[js.Any])
     
@@ -175,7 +175,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setFontSizes(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontSizeProperty<number> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontSize<number> */ _
         ]
     ): Self = this.set("fontSizes", value.asInstanceOf[js.Any])
     
@@ -188,7 +188,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setFontWeights(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontWeightProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontWeight */ _
         ]
     ): Self = this.set("fontWeights", value.asInstanceOf[js.Any])
     
@@ -201,7 +201,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setFonts(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _
         ]
     ): Self = this.set("fonts", value.asInstanceOf[js.Any])
     
@@ -214,7 +214,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setLetterSpacings(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LetterSpacingProperty<string | number> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LetterSpacing<string | number> */ _
         ]
     ): Self = this.set("letterSpacings", value.asInstanceOf[js.Any])
     
@@ -227,7 +227,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setLineHeights(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LineHeightProperty<string> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LineHeight<string> */ _
         ]
     ): Self = this.set("lineHeights", value.asInstanceOf[js.Any])
     
@@ -240,7 +240,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setRadii(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRadiusProperty<{}> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRadius<{}> */ _
         ]
     ): Self = this.set("radii", value.asInstanceOf[js.Any])
     
@@ -253,7 +253,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setShadows(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ _
         ]
     ): Self = this.set("shadows", value.asInstanceOf[js.Any])
     
@@ -266,7 +266,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setSizes(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<{}> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<{}> */ _
         ]
     ): Self = this.set("sizes", value.asInstanceOf[js.Any])
     
@@ -275,13 +275,13 @@ object PartialScaleThemeProperti {
     
     @scala.inline
     def setSpaceVarargs(
-      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginProperty<number> */ js.Any)*
+      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Margin<number> */ js.Any)*
     ): Self = this.set("space", js.Array(value :_*))
     
     @scala.inline
     def setSpace(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginProperty<number> */ js.Any
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Margin<number> */ js.Any
         ]
     ): Self = this.set("space", value.asInstanceOf[js.Any])
     
@@ -294,7 +294,7 @@ object PartialScaleThemeProperti {
     @scala.inline
     def setZIndices(
       value: ThemeValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _
         ]
     ): Self = this.set("zIndices", value.asInstanceOf[js.Any])
     

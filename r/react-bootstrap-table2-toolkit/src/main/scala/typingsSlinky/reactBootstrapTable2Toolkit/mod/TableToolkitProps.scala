@@ -13,6 +13,8 @@ trait TableToolkitProps[T /* <: js.Object */] extends js.Object {
   
   def children(props: ToolkitContextType): ReactElement = js.native
   
+  var columnToggle: js.UndefOr[Boolean] = js.native
+  
   var columns: js.Array[ColumnDescription[T, _]] = js.native
   
   var data: js.Array[T] = js.native
@@ -76,6 +78,12 @@ object TableToolkitProps {
     
     @scala.inline
     def deleteBootstrap4: Self = this.set("bootstrap4", js.undefined)
+    
+    @scala.inline
+    def setColumnToggle(value: Boolean): Self = this.set("columnToggle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnToggle: Self = this.set("columnToggle", js.undefined)
     
     @scala.inline
     def setExportCSV(value: Boolean | CSVProps): Self = this.set("exportCSV", value.asInstanceOf[js.Any])

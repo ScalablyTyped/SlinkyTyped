@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListMedicalVocabulariesResponse extends js.Object {
   
   /**
-    * The ListMedicalVocabularies operation returns a page of vocabularies at a time. The maximum size of the page is set by the MaxResults parameter. If there are more jobs in the list than the page size, Amazon Transcribe Medical returns the NextPage token. Include the token in the next request to the ListMedicalVocabularies operation to return the next page of jobs.
+    * The ListMedicalVocabularies operation returns a page of vocabularies at a time. You set the maximum number of vocabularies to return on a page with the MaxResults parameter. If there are more jobs in the list will fit on a page, Amazon Transcribe Medical returns the NextPage token. To return the next page of vocabularies, include the token in the next request to the ListMedicalVocabularies operation .
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.NextToken] = js.native
   
@@ -18,7 +18,7 @@ trait ListMedicalVocabulariesResponse extends js.Object {
   var Status: js.UndefOr[VocabularyState] = js.native
   
   /**
-    * A list of objects that describe the vocabularies that match the search criteria in the request.
+    * A list of objects that describe the vocabularies that match your search criteria.
     */
   var Vocabularies: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.Vocabularies] = js.native
 }

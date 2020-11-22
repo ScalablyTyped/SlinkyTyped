@@ -16,6 +16,8 @@ trait FixedInfo extends js.Object {
   
   var fixRight: Double | `false` = js.native
   
+  var isSticky: Boolean = js.native
+  
   var lastFixLeft: Boolean = js.native
   
   var lastFixRight: Boolean = js.native
@@ -28,10 +30,11 @@ object FixedInfo {
     firstFixRight: Boolean,
     fixLeft: Double | `false`,
     fixRight: Double | `false`,
+    isSticky: Boolean,
     lastFixLeft: Boolean,
     lastFixRight: Boolean
   ): FixedInfo = {
-    val __obj = js.Dynamic.literal(firstFixLeft = firstFixLeft.asInstanceOf[js.Any], firstFixRight = firstFixRight.asInstanceOf[js.Any], fixLeft = fixLeft.asInstanceOf[js.Any], fixRight = fixRight.asInstanceOf[js.Any], lastFixLeft = lastFixLeft.asInstanceOf[js.Any], lastFixRight = lastFixRight.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(firstFixLeft = firstFixLeft.asInstanceOf[js.Any], firstFixRight = firstFixRight.asInstanceOf[js.Any], fixLeft = fixLeft.asInstanceOf[js.Any], fixRight = fixRight.asInstanceOf[js.Any], isSticky = isSticky.asInstanceOf[js.Any], lastFixLeft = lastFixLeft.asInstanceOf[js.Any], lastFixRight = lastFixRight.asInstanceOf[js.Any])
     __obj.asInstanceOf[FixedInfo]
   }
   
@@ -61,6 +64,9 @@ object FixedInfo {
     
     @scala.inline
     def setFixRight(value: Double | `false`): Self = this.set("fixRight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIsSticky(value: Boolean): Self = this.set("isSticky", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLastFixLeft(value: Boolean): Self = this.set("lastFixLeft", value.asInstanceOf[js.Any])

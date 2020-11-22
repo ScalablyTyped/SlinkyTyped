@@ -23,13 +23,17 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.ImgHTMLAttributes
 import typingsSlinky.react.reactStrings._empty
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.`lazy`
-import typingsSlinky.react.reactStrings.`no-referrer`
-import typingsSlinky.react.reactStrings.`unsafe-url`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.`use-credentials`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
@@ -63,7 +67,6 @@ import typingsSlinky.react.reactStrings.none
 import typingsSlinky.react.reactStrings.numeric
 import typingsSlinky.react.reactStrings.off
 import typingsSlinky.react.reactStrings.on
-import typingsSlinky.react.reactStrings.origin
 import typingsSlinky.react.reactStrings.other
 import typingsSlinky.react.reactStrings.page
 import typingsSlinky.react.reactStrings.polite
@@ -212,7 +215,9 @@ object ReactImageFallback {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -596,7 +601,7 @@ object ReactImageFallback {
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def referrerPolicy(value: `no-referrer` | origin | `unsafe-url`): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
+    def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])

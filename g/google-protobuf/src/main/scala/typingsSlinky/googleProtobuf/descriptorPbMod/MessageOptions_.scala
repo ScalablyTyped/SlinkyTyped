@@ -14,15 +14,15 @@ class MessageOptions_ () extends Message {
   def addUninterpretedOption(value: UninterpretedOption): UninterpretedOption = js.native
   def addUninterpretedOption(value: UninterpretedOption, index: Double): UninterpretedOption = js.native
   
-  def clearDeprecated(): Unit = js.native
+  def clearDeprecated(): MessageOptions = js.native
   
-  def clearMapEntry(): Unit = js.native
+  def clearMapEntry(): MessageOptions = js.native
   
-  def clearMessageSetWireFormat(): Unit = js.native
+  def clearMessageSetWireFormat(): MessageOptions = js.native
   
-  def clearNoStandardDescriptorAccessor(): Unit = js.native
+  def clearNoStandardDescriptorAccessor(): MessageOptions = js.native
   
-  def clearUninterpretedOptionList(): Unit = js.native
+  def clearUninterpretedOptionList(): MessageOptions = js.native
   
   def getDeprecated(): js.UndefOr[Boolean] = js.native
   
@@ -42,13 +42,13 @@ class MessageOptions_ () extends Message {
   
   def hasNoStandardDescriptorAccessor(): Boolean = js.native
   
-  def setDeprecated(value: Boolean): Unit = js.native
+  def setDeprecated(value: Boolean): MessageOptions = js.native
   
-  def setMapEntry(value: Boolean): Unit = js.native
+  def setMapEntry(value: Boolean): MessageOptions = js.native
   
-  def setMessageSetWireFormat(value: Boolean): Unit = js.native
+  def setMessageSetWireFormat(value: Boolean): MessageOptions = js.native
   
-  def setNoStandardDescriptorAccessor(value: Boolean): Unit = js.native
+  def setNoStandardDescriptorAccessor(value: Boolean): MessageOptions = js.native
   
-  def setUninterpretedOptionList(value: js.Array[UninterpretedOption]): Unit = js.native
+  def setUninterpretedOptionList(value: js.Array[UninterpretedOption]): MessageOptions = js.native
 }

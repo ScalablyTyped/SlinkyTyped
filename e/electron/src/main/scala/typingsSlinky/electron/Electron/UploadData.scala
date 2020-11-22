@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UploadData extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/upload-data
+  // Docs: https://electronjs.org/docs/api/structures/upload-data
   /**
     * UUID of blob data. Use ses.getBlobData method to retrieve the data.
     */

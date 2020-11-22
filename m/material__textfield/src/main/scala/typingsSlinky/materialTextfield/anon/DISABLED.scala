@@ -11,8 +11,6 @@ trait DISABLED extends js.Object {
   
   var FOCUSED: String = js.native
   
-  var FULLWIDTH: String = js.native
-  
   var HELPER_LINE: String = js.native
   
   var INVALID: String = js.native
@@ -37,7 +35,6 @@ object DISABLED {
   def apply(
     DISABLED: String,
     FOCUSED: String,
-    FULLWIDTH: String,
     HELPER_LINE: String,
     INVALID: String,
     LABEL_FLOATING: String,
@@ -48,7 +45,7 @@ object DISABLED {
     WITH_LEADING_ICON: String,
     WITH_TRAILING_ICON: String
   ): DISABLED = {
-    val __obj = js.Dynamic.literal(DISABLED = DISABLED.asInstanceOf[js.Any], FOCUSED = FOCUSED.asInstanceOf[js.Any], FULLWIDTH = FULLWIDTH.asInstanceOf[js.Any], HELPER_LINE = HELPER_LINE.asInstanceOf[js.Any], INVALID = INVALID.asInstanceOf[js.Any], LABEL_FLOATING = LABEL_FLOATING.asInstanceOf[js.Any], NO_LABEL = NO_LABEL.asInstanceOf[js.Any], OUTLINED = OUTLINED.asInstanceOf[js.Any], ROOT = ROOT.asInstanceOf[js.Any], TEXTAREA = TEXTAREA.asInstanceOf[js.Any], WITH_LEADING_ICON = WITH_LEADING_ICON.asInstanceOf[js.Any], WITH_TRAILING_ICON = WITH_TRAILING_ICON.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(DISABLED = DISABLED.asInstanceOf[js.Any], FOCUSED = FOCUSED.asInstanceOf[js.Any], HELPER_LINE = HELPER_LINE.asInstanceOf[js.Any], INVALID = INVALID.asInstanceOf[js.Any], LABEL_FLOATING = LABEL_FLOATING.asInstanceOf[js.Any], NO_LABEL = NO_LABEL.asInstanceOf[js.Any], OUTLINED = OUTLINED.asInstanceOf[js.Any], ROOT = ROOT.asInstanceOf[js.Any], TEXTAREA = TEXTAREA.asInstanceOf[js.Any], WITH_LEADING_ICON = WITH_LEADING_ICON.asInstanceOf[js.Any], WITH_TRAILING_ICON = WITH_TRAILING_ICON.asInstanceOf[js.Any])
     __obj.asInstanceOf[DISABLED]
   }
   
@@ -72,9 +69,6 @@ object DISABLED {
     
     @scala.inline
     def setFOCUSED(value: String): Self = this.set("FOCUSED", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setFULLWIDTH(value: String): Self = this.set("FULLWIDTH", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHELPER_LINE(value: String): Self = this.set("HELPER_LINE", value.asInstanceOf[js.Any])

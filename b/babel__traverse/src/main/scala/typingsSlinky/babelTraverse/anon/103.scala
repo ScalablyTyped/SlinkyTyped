@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.VoidTypeAnnotation
+import typingsSlinky.babelTraverse.babelTraverseStrings.PipelineTopicExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `103` extends js.Object {
   
-  var `type`: VoidTypeAnnotation = js.native
+  var `type`: PipelineTopicExpression = js.native
 }
 object `103` {
   
   @scala.inline
-  def apply(`type`: VoidTypeAnnotation): `103` = {
+  def apply(`type`: PipelineTopicExpression): `103` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`103`]
@@ -35,6 +35,6 @@ object `103` {
     }
     
     @scala.inline
-    def setType(value: VoidTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: PipelineTopicExpression): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

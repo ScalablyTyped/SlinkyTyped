@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.EntityRef
@@ -12,12 +13,13 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayout
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallArgument
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/reference-set-selector relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/reference-set-selector relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.ReferenceSetSelector")
 @js.native
@@ -27,8 +29,8 @@ class ReferenceSetSelector protected () extends ColumnGrid {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -42,9 +44,6 @@ class ReferenceSetSelector protected () extends ColumnGrid {
     * In version 7.11.0: introduced
     */
   def constrainedByRefs: IList[EntityRef] = js.native
-  
-  @JSName("model")
-  var model_FReferenceSetSelector: IModel = js.native
   
   /**
     * In version 7.13.0: introduced

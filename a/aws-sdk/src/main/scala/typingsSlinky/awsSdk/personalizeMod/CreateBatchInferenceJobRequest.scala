@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateBatchInferenceJobRequest extends js.Object {
   
   /**
+    * The configuration details of a batch inference job.
+    */
+  var batchInferenceJobConfig: js.UndefOr[BatchInferenceJobConfig] = js.native
+  
+  /**
     * The ARN of the filter to apply to the batch inference job. For more information on using filters, see Using Filters with Amazon Personalize.
     */
   var filterArn: js.UndefOr[Arn] = js.native
@@ -85,6 +90,12 @@ object CreateBatchInferenceJobRequest {
     
     @scala.inline
     def setSolutionVersionArn(value: Arn): Self = this.set("solutionVersionArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBatchInferenceJobConfig(value: BatchInferenceJobConfig): Self = this.set("batchInferenceJobConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBatchInferenceJobConfig: Self = this.set("batchInferenceJobConfig", js.undefined)
     
     @scala.inline
     def setFilterArn(value: Arn): Self = this.set("filterArn", value.asInstanceOf[js.Any])

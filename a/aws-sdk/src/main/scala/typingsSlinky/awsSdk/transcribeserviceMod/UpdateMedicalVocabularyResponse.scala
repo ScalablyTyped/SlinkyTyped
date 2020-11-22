@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateMedicalVocabularyResponse extends js.Object {
   
   /**
-    * The language code for the text file used to update the custom vocabulary. US English (en-US) is the only language supported in Amazon Transcribe Medical.
+    * The language code for the language of the text file used to update the custom vocabulary. US English (en-US) is the only language supported in Amazon Transcribe Medical.
     */
   var LanguageCode: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.LanguageCode] = js.native
   
   /**
-    * The date and time the vocabulary was updated.
+    * The date and time that the vocabulary was updated.
     */
   var LastModifiedTime: js.UndefOr[js.Date] = js.native
   
@@ -23,7 +23,7 @@ trait UpdateMedicalVocabularyResponse extends js.Object {
   var VocabularyName: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.VocabularyName] = js.native
   
   /**
-    * The processing state of the update to the vocabulary. When the VocabularyState field is READY the vocabulary is ready to be used in a StartMedicalTranscriptionJob request.
+    * The processing state of the update to the vocabulary. When the VocabularyState field is READY, the vocabulary is ready to be used in a StartMedicalTranscriptionJob request.
     */
   var VocabularyState: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.VocabularyState] = js.native
 }

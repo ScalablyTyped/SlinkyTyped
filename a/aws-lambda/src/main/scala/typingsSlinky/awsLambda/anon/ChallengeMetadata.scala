@@ -1,12 +1,6 @@
 package typingsSlinky.awsLambda.anon
 
-import typingsSlinky.awsLambda.awsLambdaStrings.ADMIN_NO_SRP_AUTH
-import typingsSlinky.awsLambda.awsLambdaStrings.CUSTOM_CHALLENGE
-import typingsSlinky.awsLambda.awsLambdaStrings.DEVICE_PASSWORD_VERIFIER
-import typingsSlinky.awsLambda.awsLambdaStrings.DEVICE_SRP_AUTH
-import typingsSlinky.awsLambda.awsLambdaStrings.PASSWORD_VERIFIER
-import typingsSlinky.awsLambda.awsLambdaStrings.SMS_MFA
-import typingsSlinky.awsLambda.awsLambdaStrings.SRP_A
+import typingsSlinky.awsLambda.commonMod.StringMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,20 +8,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ChallengeMetadata extends js.Object {
   
-  var challengeMetadata: js.UndefOr[String] = js.native
+  var challengeMetadata: String = js.native
   
-  var challengeName: CUSTOM_CHALLENGE | PASSWORD_VERIFIER | SMS_MFA | DEVICE_SRP_AUTH | DEVICE_PASSWORD_VERIFIER | ADMIN_NO_SRP_AUTH | SRP_A = js.native
+  var privateChallengeParameters: StringMap = js.native
   
-  var challengeResult: Boolean = js.native
+  var publicChallengeParameters: StringMap = js.native
 }
 object ChallengeMetadata {
   
   @scala.inline
   def apply(
-    challengeName: CUSTOM_CHALLENGE | PASSWORD_VERIFIER | SMS_MFA | DEVICE_SRP_AUTH | DEVICE_PASSWORD_VERIFIER | ADMIN_NO_SRP_AUTH | SRP_A,
-    challengeResult: Boolean
+    challengeMetadata: String,
+    privateChallengeParameters: StringMap,
+    publicChallengeParameters: StringMap
   ): ChallengeMetadata = {
-    val __obj = js.Dynamic.literal(challengeName = challengeName.asInstanceOf[js.Any], challengeResult = challengeResult.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(challengeMetadata = challengeMetadata.asInstanceOf[js.Any], privateChallengeParameters = privateChallengeParameters.asInstanceOf[js.Any], publicChallengeParameters = publicChallengeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChallengeMetadata]
   }
   
@@ -47,17 +42,12 @@ object ChallengeMetadata {
     }
     
     @scala.inline
-    def setChallengeName(
-      value: CUSTOM_CHALLENGE | PASSWORD_VERIFIER | SMS_MFA | DEVICE_SRP_AUTH | DEVICE_PASSWORD_VERIFIER | ADMIN_NO_SRP_AUTH | SRP_A
-    ): Self = this.set("challengeName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setChallengeResult(value: Boolean): Self = this.set("challengeResult", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setChallengeMetadata(value: String): Self = this.set("challengeMetadata", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteChallengeMetadata: Self = this.set("challengeMetadata", js.undefined)
+    def setPrivateChallengeParameters(value: StringMap): Self = this.set("privateChallengeParameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPublicChallengeParameters(value: StringMap): Self = this.set("publicChallengeParameters", value.asInstanceOf[js.Any])
   }
 }

@@ -421,7 +421,7 @@ trait RichEditCommands extends js.Object {
   def endUpdate(): Unit = js.native
   
   /**
-    * Gets a command to download the document specifying the file's extension.
+    * Gets a command to download the document specifying the file's extension and name.
     */
   val fileDownload: FileDownloadCommand = js.native
   

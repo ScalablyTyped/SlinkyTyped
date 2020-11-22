@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DisassociateRepositoryRequest extends js.Object {
   
   /**
-    * The Amazon Resource Name (ARN) of the  RepositoryAssociation  object. 
+    *  The Amazon Resource Name (ARN) of the  RepositoryAssociation  object. You can retrieve this ARN by calling  ListRepositoryAssociations . 
     */
-  var AssociationArn: Arn = js.native
+  var AssociationArn: typingsSlinky.awsSdk.codegurureviewerMod.AssociationArn = js.native
 }
 object DisassociateRepositoryRequest {
   
   @scala.inline
-  def apply(AssociationArn: Arn): DisassociateRepositoryRequest = {
+  def apply(AssociationArn: AssociationArn): DisassociateRepositoryRequest = {
     val __obj = js.Dynamic.literal(AssociationArn = AssociationArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[DisassociateRepositoryRequest]
   }
@@ -36,6 +36,6 @@ object DisassociateRepositoryRequest {
     }
     
     @scala.inline
-    def setAssociationArn(value: Arn): Self = this.set("AssociationArn", value.asInstanceOf[js.Any])
+    def setAssociationArn(value: AssociationArn): Self = this.set("AssociationArn", value.asInstanceOf[js.Any])
   }
 }

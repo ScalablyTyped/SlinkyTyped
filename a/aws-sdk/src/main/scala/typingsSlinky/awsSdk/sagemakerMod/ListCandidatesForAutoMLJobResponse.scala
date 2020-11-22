@@ -13,7 +13,7 @@ trait ListCandidatesForAutoMLJobResponse extends js.Object {
   var Candidates: AutoMLCandidates = js.native
   
   /**
-    * If the previous response was truncated, you will receive this token. Use it in your next request to receive the next set of results.
+    * If the previous response was truncated, you receive this token. Use it in your next request to receive the next set of results.
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.NextToken] = js.native
 }

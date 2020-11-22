@@ -65,40 +65,55 @@ trait HafasClient extends js.Object {
     * @param location location
     * @param options options for search
     */
-  def nearby(location: Location): js.Promise[js.Array[Stop]] = js.native
-  def nearby(location: Location, options: NearByOptions): js.Promise[js.Array[Stop]] = js.native
+  def nearby(location: Location): js.Promise[js.Array[Station | Stop | Location]] = js.native
+  def nearby(location: Location, options: NearByOptions): js.Promise[js.Array[Station | Stop | Location]] = js.native
   
   /**
     * Retrieves all vehicles currently in an area.
     * @param box area
     * @param options options for search
     */
-  def radar(box: BoundingBox): js.Promise[js.Array[Movement]] = js.native
-  def radar(box: BoundingBox, options: RadarOptions): js.Promise[js.Array[Movement]] = js.native
+  var radar: js.UndefOr[
+    js.Function2[
+      /* box */ BoundingBox, 
+      /* options */ js.UndefOr[RadarOptions], 
+      js.Promise[js.Array[Movement]]
+    ]
+  ] = js.native
   
   /**
     * Retrieves stations reachable within a certain time from a location
     * @param address location
     * @param options options for search
     */
-  def reachableFrom(address: Location): js.Promise[js.Array[Duration]] = js.native
-  def reachableFrom(address: Location, options: ReachableFromOptions): js.Promise[js.Array[Duration]] = js.native
+  var reachableFrom: js.UndefOr[
+    js.Function2[
+      /* address */ Location, 
+      /* options */ js.UndefOr[ReachableFromOptions], 
+      js.Promise[js.Array[Duration]]
+    ]
+  ] = js.native
   
   /**
     * refreshes a Journey
     * @param refreshToken refreshToken must be a string, taken from {@link journey#refreshToken}
     * @param options options
     */
-  def refreshJourney(refreshToken: String): js.Promise[Journey] = js.native
-  def refreshJourney(refreshToken: String, options: RefreshJourneyOptions): js.Promise[Journey] = js.native
+  var refreshJourney: js.UndefOr[
+    js.Function2[
+      /* refreshToken */ String, 
+      /* options */ js.UndefOr[RefreshJourneyOptions], 
+      js.Promise[Journey]
+    ]
+  ] = js.native
   
   /**
     * Retrieves information about a stop
     * @param id uid of station
     * @param options options for search
     */
-  def stop(id: String): js.Promise[Stop] = js.native
-  def stop(id: String, options: StopOptions): js.Promise[Stop] = js.native
+  def stop(id: String): js.Promise[Station | Stop | Location] = js.native
+  def stop(id: String, options: StopOptions): js.Promise[Station | Stop | Location] = js.native
   
   /**
     * Refetch information about a trip
@@ -106,6 +121,12 @@ trait HafasClient extends js.Object {
     * @param name name
     * @param options options
     */
-  def trip(id: String, name: String): js.Promise[Trip] = js.native
-  def trip(id: String, name: String, options: TripOptions): js.Promise[Trip] = js.native
+  var trip: js.UndefOr[
+    js.Function3[
+      /* id */ String, 
+      /* name */ String, 
+      /* options */ js.UndefOr[TripOptions], 
+      js.Promise[Trip]
+    ]
+  ] = js.native
 }

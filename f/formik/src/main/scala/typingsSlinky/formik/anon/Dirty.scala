@@ -13,6 +13,7 @@ import typingsSlinky.formik.typesMod.FormikState
 import typingsSlinky.formik.typesMod.FormikTouched
 import typingsSlinky.formik.typesMod.FormikValues
 import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.react.mod.SetStateAction
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -66,13 +67,13 @@ trait Dirty[Values /* <: FormikValues */] extends js.Object {
   def setFieldError(field: String): Unit = js.native
   def setFieldError(field: String, value: String): Unit = js.native
   
-  def setFieldTouched(field: String): js.Any = js.native
-  def setFieldTouched(field: String, touched: js.UndefOr[scala.Nothing], shouldValidate: Boolean): js.Any = js.native
-  def setFieldTouched(field: String, touched: Boolean): js.Any = js.native
-  def setFieldTouched(field: String, touched: Boolean, shouldValidate: Boolean): js.Any = js.native
+  def setFieldTouched(field: String): js.Promise[FormikErrors[Values] | Unit] = js.native
+  def setFieldTouched(field: String, touched: js.UndefOr[scala.Nothing], shouldValidate: Boolean): js.Promise[FormikErrors[Values] | Unit] = js.native
+  def setFieldTouched(field: String, touched: Boolean): js.Promise[FormikErrors[Values] | Unit] = js.native
+  def setFieldTouched(field: String, touched: Boolean, shouldValidate: Boolean): js.Promise[FormikErrors[Values] | Unit] = js.native
   
-  def setFieldValue(field: String, value: js.Any): js.Any = js.native
-  def setFieldValue(field: String, value: js.Any, shouldValidate: Boolean): js.Any = js.native
+  def setFieldValue(field: String, value: js.Any): js.Promise[FormikErrors[Values] | Unit] = js.native
+  def setFieldValue(field: String, value: js.Any, shouldValidate: Boolean): js.Promise[FormikErrors[Values] | Unit] = js.native
   
   def setFormikState(stateOrCb: js.Function1[/* state */ FormikState[Values], FormikState[Values]]): Unit = js.native
   def setFormikState(stateOrCb: FormikState[Values]): Unit = js.native
@@ -81,11 +82,11 @@ trait Dirty[Values /* <: FormikValues */] extends js.Object {
   
   def setSubmitting(isSubmitting: Boolean): Unit = js.native
   
-  def setTouched(touched: FormikTouched[Values]): js.Any = js.native
-  def setTouched(touched: FormikTouched[Values], shouldValidate: Boolean): js.Any = js.native
+  def setTouched(touched: FormikTouched[Values]): js.Promise[FormikErrors[Values] | Unit] = js.native
+  def setTouched(touched: FormikTouched[Values], shouldValidate: Boolean): js.Promise[FormikErrors[Values] | Unit] = js.native
   
-  def setValues(values: Values): js.Any = js.native
-  def setValues(values: Values, shouldValidate: Boolean): js.Any = js.native
+  def setValues(values: SetStateAction[Values]): js.Promise[FormikErrors[Values] | Unit] = js.native
+  def setValues(values: SetStateAction[Values], shouldValidate: Boolean): js.Promise[FormikErrors[Values] | Unit] = js.native
   
   var status: js.UndefOr[js.Any] = js.native
   

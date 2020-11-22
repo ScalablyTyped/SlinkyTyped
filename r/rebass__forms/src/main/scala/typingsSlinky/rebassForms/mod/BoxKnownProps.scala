@@ -4,12 +4,14 @@ import typingsSlinky.rebass.mod.BaseProps
 import typingsSlinky.rebass.mod.SxProps
 import typingsSlinky.rebassForms.rebassFormsStrings.colors
 import typingsSlinky.rebassForms.rebassFormsStrings.fontSizes
+import typingsSlinky.rebassForms.rebassFormsStrings.fontWeights
 import typingsSlinky.rebassForms.rebassFormsStrings.space
 import typingsSlinky.styledSystem.mod.AlignSelfProps
 import typingsSlinky.styledSystem.mod.BackgroundColorProps
 import typingsSlinky.styledSystem.mod.DisplayProps
 import typingsSlinky.styledSystem.mod.FlexProps
 import typingsSlinky.styledSystem.mod.FontSizeProps
+import typingsSlinky.styledSystem.mod.FontWeightProps
 import typingsSlinky.styledSystem.mod.HeightProps
 import typingsSlinky.styledSystem.mod.MaxHeightProps
 import typingsSlinky.styledSystem.mod.MaxWidthProps
@@ -36,45 +38,46 @@ trait BoxKnownProps
      with SpaceProps[RequiredTheme, ThemeValue[space, RequiredTheme, js.Any]]
      with WidthProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ js.Any
     ]
      with HeightProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ js.Any
     ]
      with MinWidthProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ js.Any
     ]
      with MinHeightProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ js.Any
     ]
      with MaxWidthProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ js.Any
     ]
      with MaxHeightProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ js.Any
     ]
      with DisplayProps[RequiredTheme]
      with VerticalAlignProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ js.Any
     ]
      with SizeProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ js.Any
     ]
      with OverflowProps[RequiredTheme]
      with FontSizeProps[RequiredTheme, ThemeValue[fontSizes, RequiredTheme, js.Any]]
+     with FontWeightProps[RequiredTheme, ThemeValue[fontWeights, RequiredTheme, js.Any]]
      with TextColorProps[RequiredTheme, ThemeValue[colors, RequiredTheme, js.Any]]
      with BackgroundColorProps[RequiredTheme, ThemeValue[colors, RequiredTheme, js.Any]]
      with OpacityProps[RequiredTheme]
      with FlexProps[
       RequiredTheme, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ js.Any
     ]
      with OrderProps[RequiredTheme]
      with AlignSelfProps[RequiredTheme]

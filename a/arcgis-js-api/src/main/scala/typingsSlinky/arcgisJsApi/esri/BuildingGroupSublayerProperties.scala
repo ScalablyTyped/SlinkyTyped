@@ -11,18 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BuildingGroupSublayerProperties extends BuildingSublayerProperties {
   
   /**
-    * Indicates how the layer should display in the [LayerList](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html) widget. The possible values are listed below.
-    *
-    * Value | Description
-    * ------|------------
-    *  show | The layer is visible in the table of contents.
-    *  hide | The layer is hidden in the table of contents.
-    *  hide-children | Hide the children layers from the table of contents.
-    *
+    * Indicates how the sublayer should display in the [LayerList](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html) widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-buildingSublayers-BuildingGroupSublayer.html#listMode)
-    *
-    * @default show
     */
   var listMode: js.UndefOr[show | hide | `hide-children`] = js.native
 }

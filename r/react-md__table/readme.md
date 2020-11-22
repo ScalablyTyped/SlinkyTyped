@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__table
 
-Typings are for version 2.1.2
+Typings are for version 2.4.3
 
 ## Library description:
 Create responsive data tables and accessible fixed tables

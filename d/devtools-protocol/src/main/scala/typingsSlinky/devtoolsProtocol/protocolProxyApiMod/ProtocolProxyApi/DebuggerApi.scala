@@ -50,6 +50,7 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger.SetScriptSourceRespo
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger.SetSkipAllPausesRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger.SetVariableValueRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger.StepIntoRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger.StepOverRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -248,5 +249,5 @@ trait DebuggerApi extends js.Object {
   /**
     * Steps over the statement.
     */
-  def stepOver(): js.Promise[Unit] = js.native
+  def stepOver(params: StepOverRequest): js.Promise[Unit] = js.native
 }

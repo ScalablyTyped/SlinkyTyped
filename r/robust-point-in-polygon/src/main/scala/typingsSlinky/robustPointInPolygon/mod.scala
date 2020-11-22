@@ -1,5 +1,8 @@
 package typingsSlinky.robustPointInPolygon
 
+import typingsSlinky.robustPointInPolygon.robustPointInPolygonNumbers.`-1`
+import typingsSlinky.robustPointInPolygon.robustPointInPolygonNumbers.`0`
+import typingsSlinky.robustPointInPolygon.robustPointInPolygonNumbers.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def apply(vs: js.Array[Point], point: Point): Double = js.native
+  def apply(vs: js.Array[Point], point: Point): `-1` | `0` | `1` = js.native
   
   type Point = js.Tuple2[Double, Double]
 }

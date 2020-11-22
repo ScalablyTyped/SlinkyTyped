@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MeshArgs extends js.Object {
   
   /**
-    * The name to use for the service mesh.
+    * The name to use for the service mesh. Must be between 1 and 255 characters in length.
     */
   val name: js.UndefOr[Input[String]] = js.native
   

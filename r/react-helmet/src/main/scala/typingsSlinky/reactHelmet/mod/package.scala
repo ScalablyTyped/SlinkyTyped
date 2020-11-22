@@ -11,6 +11,8 @@ package object mod {
     org.scalajs.dom.raw.HTMLBodyElement
   ]) with typingsSlinky.reactHelmet.mod.OtherElementAttributes
   
+  type Helmet = slinky.core.ReactComponentClass[typingsSlinky.reactHelmet.mod.HelmetProps]
+  
   type HtmlProps = (typingsSlinky.react.mod.DetailedHTMLProps[
     typingsSlinky.react.mod.HtmlHTMLAttributes[org.scalajs.dom.raw.HTMLHtmlElement], 
     org.scalajs.dom.raw.HTMLHtmlElement

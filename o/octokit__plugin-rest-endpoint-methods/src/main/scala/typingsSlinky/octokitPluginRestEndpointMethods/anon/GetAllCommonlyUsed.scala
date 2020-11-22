@@ -36,7 +36,7 @@ trait GetAllCommonlyUsed extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /licenses']['response'] */ js.Any
   ] = js.native
   @JSName("getAllCommonlyUsed")
-  var getAllCommonlyUsed_Original: `202` = js.native
+  var getAllCommonlyUsed_Original: `205` = js.native
   
   /**
     * This method returns the contents of the repository's license file, if one is detected.
@@ -60,8 +60,8 @@ trait GetAllCommonlyUsed extends js.Object {
     * Similar to [Get repository content](https://developer.github.com/v3/repos/contents/#get-repository-content), this method also supports [custom media types](https://developer.github.com/v3/repos/contents/#custom-media-types) for retrieving the raw license content or rendered license HTML.
     */
   @JSName("getForRepo")
-  var getForRepo_Original: `203` = js.native
+  var getForRepo_Original: `206` = js.native
   
   @JSName("get")
-  var get_Original: `201` = js.native
+  var get_Original: `204` = js.native
 }

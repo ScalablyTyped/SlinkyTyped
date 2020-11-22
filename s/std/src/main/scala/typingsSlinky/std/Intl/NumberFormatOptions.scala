@@ -7,9 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait NumberFormatOptions extends js.Object {
   
+  var compactDisplay: js.UndefOr[String] = js.native
+  
   var currency: js.UndefOr[String] = js.native
   
   var currencyDisplay: js.UndefOr[String] = js.native
+  
+  var currencySign: js.UndefOr[String] = js.native
   
   var localeMatcher: js.UndefOr[String] = js.native
   
@@ -23,7 +27,15 @@ trait NumberFormatOptions extends js.Object {
   
   var minimumSignificantDigits: js.UndefOr[Double] = js.native
   
+  var notation: js.UndefOr[String] = js.native
+  
+  var signDisplay: js.UndefOr[String] = js.native
+  
   var style: js.UndefOr[String] = js.native
+  
+  var unit: js.UndefOr[String] = js.native
+  
+  var unitDisplay: js.UndefOr[String] = js.native
   
   var useGrouping: js.UndefOr[Boolean] = js.native
 }
@@ -51,6 +63,12 @@ object NumberFormatOptions {
     }
     
     @scala.inline
+    def setCompactDisplay(value: String): Self = this.set("compactDisplay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCompactDisplay: Self = this.set("compactDisplay", js.undefined)
+    
+    @scala.inline
     def setCurrency(value: String): Self = this.set("currency", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -61,6 +79,12 @@ object NumberFormatOptions {
     
     @scala.inline
     def deleteCurrencyDisplay: Self = this.set("currencyDisplay", js.undefined)
+    
+    @scala.inline
+    def setCurrencySign(value: String): Self = this.set("currencySign", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCurrencySign: Self = this.set("currencySign", js.undefined)
     
     @scala.inline
     def setLocaleMatcher(value: String): Self = this.set("localeMatcher", value.asInstanceOf[js.Any])
@@ -99,10 +123,34 @@ object NumberFormatOptions {
     def deleteMinimumSignificantDigits: Self = this.set("minimumSignificantDigits", js.undefined)
     
     @scala.inline
+    def setNotation(value: String): Self = this.set("notation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNotation: Self = this.set("notation", js.undefined)
+    
+    @scala.inline
+    def setSignDisplay(value: String): Self = this.set("signDisplay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSignDisplay: Self = this.set("signDisplay", js.undefined)
+    
+    @scala.inline
     def setStyle(value: String): Self = this.set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
+    
+    @scala.inline
+    def setUnit(value: String): Self = this.set("unit", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnit: Self = this.set("unit", js.undefined)
+    
+    @scala.inline
+    def setUnitDisplay(value: String): Self = this.set("unitDisplay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnitDisplay: Self = this.set("unitDisplay", js.undefined)
     
     @scala.inline
     def setUseGrouping(value: Boolean): Self = this.set("useGrouping", value.asInstanceOf[js.Any])

@@ -6,33 +6,34 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NamespaceType extends IDLRootType {
+trait NamespaceType
+  extends AbstractContainer
+     with IDLRootType {
   
-  /** A list of extended attributes. */
-  var extAttrs: js.Array[ExtendedAttribute] = js.native
+  var inheritance: Null = js.native
   
-  /** An array of namespace members (attributes, operations). Empty if there are none. */
-  var members: js.Array[IDLNamespaceMemberType] = js.native
+  @JSName("members")
+  var members_NamespaceType: js.Array[IDLNamespaceMemberType] = js.native
   
-  /** The enum's name. */
-  var name: String = js.native
+  @JSName("parent")
+  var parent_NamespaceType: Null = js.native
   
-  /** A boolean indicating whether it's a partial namespace. */
-  var partial: Boolean = js.native
-  
-  var `type`: namespace = js.native
+  @JSName("type")
+  var type_NamespaceType: namespace = js.native
 }
 object NamespaceType {
   
   @scala.inline
   def apply(
     extAttrs: js.Array[ExtendedAttribute],
+    inheritance: Null,
     members: js.Array[IDLNamespaceMemberType],
     name: String,
+    parent: Null,
     partial: Boolean,
     `type`: namespace
   ): NamespaceType = {
-    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], inheritance = inheritance.asInstanceOf[js.Any], members = members.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], partial = partial.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NamespaceType]
   }
@@ -53,10 +54,7 @@ object NamespaceType {
     }
     
     @scala.inline
-    def setExtAttrsVarargs(value: ExtendedAttribute*): Self = this.set("extAttrs", js.Array(value :_*))
-    
-    @scala.inline
-    def setExtAttrs(value: js.Array[ExtendedAttribute]): Self = this.set("extAttrs", value.asInstanceOf[js.Any])
+    def setInheritance(value: Null): Self = this.set("inheritance", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMembersVarargs(value: IDLNamespaceMemberType*): Self = this.set("members", js.Array(value :_*))
@@ -65,10 +63,7 @@ object NamespaceType {
     def setMembers(value: js.Array[IDLNamespaceMemberType]): Self = this.set("members", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPartial(value: Boolean): Self = this.set("partial", value.asInstanceOf[js.Any])
+    def setParent(value: Null): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: namespace): Self = this.set("type", value.asInstanceOf[js.Any])

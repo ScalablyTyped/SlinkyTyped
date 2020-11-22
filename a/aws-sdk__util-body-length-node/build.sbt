@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "aws-sdk__util-body-length-node"
-version := "0.1.0-preview.2-092110"
+version := "1.0.0-rc.3-290e0e"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

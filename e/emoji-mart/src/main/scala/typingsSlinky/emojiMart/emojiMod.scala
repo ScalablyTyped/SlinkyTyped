@@ -10,6 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object emojiMod extends js.Object {
   
-  // tslint:disable-next-line strict-export-declare-modifiers
   val default: ReactComponentClass[EmojiProps] = js.native
 }

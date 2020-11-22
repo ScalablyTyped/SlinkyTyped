@@ -11,6 +11,7 @@ import typingsSlinky.intercomWeb.intercomWebStrings.show
 import typingsSlinky.intercomWeb.intercomWebStrings.showMessages
 import typingsSlinky.intercomWeb.intercomWebStrings.showNewMessage
 import typingsSlinky.intercomWeb.intercomWebStrings.shutdown
+import typingsSlinky.intercomWeb.intercomWebStrings.startTour
 import typingsSlinky.intercomWeb.intercomWebStrings.trackEvent
 import typingsSlinky.intercomWeb.intercomWebStrings.update
 import scala.scalajs.js
@@ -39,6 +40,7 @@ trait IntercomStatic extends js.Object {
   def apply(command: showNewMessage): Unit = js.native
   def apply(command: showNewMessage, param: String): Unit = js.native
   def apply(command: shutdown): Unit = js.native
+  def apply(command: startTour, tourId: Double): Unit = js.native
   def apply(command: trackEvent): Unit = js.native
   def apply(command: trackEvent, tag: js.UndefOr[scala.Nothing], metadata: js.Any): Unit = js.native
   def apply(command: trackEvent, tag: String): Unit = js.native

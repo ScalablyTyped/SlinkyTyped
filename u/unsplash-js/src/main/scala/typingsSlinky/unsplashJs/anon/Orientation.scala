@@ -7,9 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Orientation extends js.Object {
   
-  var collections: js.UndefOr[js.Array[String]] = js.native
-  
-  var orientation: js.UndefOr[String] = js.native
+  var orientation: js.UndefOr[typingsSlinky.unsplashJs.mod.Orientation] = js.native
 }
 object Orientation {
   
@@ -35,16 +33,7 @@ object Orientation {
     }
     
     @scala.inline
-    def setCollectionsVarargs(value: String*): Self = this.set("collections", js.Array(value :_*))
-    
-    @scala.inline
-    def setCollections(value: js.Array[String]): Self = this.set("collections", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCollections: Self = this.set("collections", js.undefined)
-    
-    @scala.inline
-    def setOrientation(value: String): Self = this.set("orientation", value.asInstanceOf[js.Any])
+    def setOrientation(value: typingsSlinky.unsplashJs.mod.Orientation): Self = this.set("orientation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrientation: Self = this.set("orientation", js.undefined)

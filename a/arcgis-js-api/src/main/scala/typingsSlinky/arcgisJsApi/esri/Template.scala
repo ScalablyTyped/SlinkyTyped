@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Template extends Object {
   
   /**
-    * The name of the auto-generated PopupTemplate. This can be used in the UI of web map authoring apps.
+    * The name of the auto-generated PopupTemplate.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-popup-templates.html#Template)
     */

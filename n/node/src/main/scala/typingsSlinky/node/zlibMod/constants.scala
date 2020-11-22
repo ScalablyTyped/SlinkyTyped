@@ -174,6 +174,7 @@ object constants extends js.Object {
   
   val Z_ERRNO: Double = js.native
   
+  // Compression strategy.
   val Z_FILTERED: Double = js.native
   
   val Z_FINISH: Double = js.native
@@ -204,10 +205,14 @@ object constants extends js.Object {
   
   val Z_NEED_DICT: Double = js.native
   
+  // Compression levels.
   val Z_NO_COMPRESSION: Double = js.native
   
+  // Allowed flush values.
   val Z_NO_FLUSH: Double = js.native
   
+  // Return codes for the compression/decompression functions.
+  // Negative values are errors, positive values are used for special but normal events.
   val Z_OK: Double = js.native
   
   val Z_PARTIAL_FLUSH: Double = js.native
@@ -219,6 +224,8 @@ object constants extends js.Object {
   val Z_STREAM_ERROR: Double = js.native
   
   val Z_SYNC_FLUSH: Double = js.native
+  
+  val Z_TREES: Double = js.native
   
   val Z_VERSION_ERROR: Double = js.native
 }

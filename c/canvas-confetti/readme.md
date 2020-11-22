@@ -1,7 +1,7 @@
 
 # Scala.js typings for canvas-confetti
 
-Typings are for version 1.0
+Typings are for version 1.3
 
 ## Library description:
 performant confetti animation in the browser

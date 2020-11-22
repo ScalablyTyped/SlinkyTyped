@@ -13,7 +13,11 @@ trait CreateReportOptions extends js.Object {
   
   var cmdDelimiter: js.Tuple2[String, String] = js.native
   
+  var errorHandler: ErrorHandler | Null = js.native
+  
   var failFast: Boolean = js.native
+  
+  var fixSmartQuotes: Boolean = js.native
   
   var literalXmlDelimiter: String = js.native
   
@@ -32,12 +36,13 @@ object CreateReportOptions {
     additionalJsContext: js.Object,
     cmdDelimiter: js.Tuple2[String, String],
     failFast: Boolean,
+    fixSmartQuotes: Boolean,
     literalXmlDelimiter: String,
     noSandbox: Boolean,
     processLineBreaks: Boolean,
     rejectNullish: Boolean
   ): CreateReportOptions = {
-    val __obj = js.Dynamic.literal(additionalJsContext = additionalJsContext.asInstanceOf[js.Any], cmdDelimiter = cmdDelimiter.asInstanceOf[js.Any], failFast = failFast.asInstanceOf[js.Any], literalXmlDelimiter = literalXmlDelimiter.asInstanceOf[js.Any], noSandbox = noSandbox.asInstanceOf[js.Any], processLineBreaks = processLineBreaks.asInstanceOf[js.Any], rejectNullish = rejectNullish.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(additionalJsContext = additionalJsContext.asInstanceOf[js.Any], cmdDelimiter = cmdDelimiter.asInstanceOf[js.Any], failFast = failFast.asInstanceOf[js.Any], fixSmartQuotes = fixSmartQuotes.asInstanceOf[js.Any], literalXmlDelimiter = literalXmlDelimiter.asInstanceOf[js.Any], noSandbox = noSandbox.asInstanceOf[js.Any], processLineBreaks = processLineBreaks.asInstanceOf[js.Any], rejectNullish = rejectNullish.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateReportOptions]
   }
   
@@ -66,6 +71,9 @@ object CreateReportOptions {
     def setFailFast(value: Boolean): Self = this.set("failFast", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setFixSmartQuotes(value: Boolean): Self = this.set("fixSmartQuotes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setLiteralXmlDelimiter(value: String): Self = this.set("literalXmlDelimiter", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -76,6 +84,12 @@ object CreateReportOptions {
     
     @scala.inline
     def setRejectNullish(value: Boolean): Self = this.set("rejectNullish", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setErrorHandler(value: (/* e */ js.Error, /* raw_code */ js.UndefOr[String]) => js.Any): Self = this.set("errorHandler", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setErrorHandlerNull: Self = this.set("errorHandler", null)
     
     @scala.inline
     def setRunJs(value: /* o */ Ctx => ModifiedSandbox): Self = this.set("runJs", js.Any.fromFunction1(value))

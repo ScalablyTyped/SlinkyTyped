@@ -10,7 +10,7 @@ trait PlayVoiceOption extends js.Object {
   /** 接口调用结束的回调函数（调用成功、失败都会执行） */
   var complete: js.UndefOr[PlayVoiceCompleteCallback] = js.native
   
-  /** 指定录音时长，到达指定的录音时长后会自动停止录音，单位：秒
+  /** 指定播放时长，到达指定的播放时长后会自动停止播放，单位：秒
     *
     * 最低基础库： `1.6.0` */
   var duration: js.UndefOr[Double] = js.native

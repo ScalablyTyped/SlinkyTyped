@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class KeyframeTrack protected ()
   extends typingsSlinky.three.keyframeTrackMod.KeyframeTrack {
+  /**
+  	 * @param name
+  	 * @param times
+  	 * @param values
+  	 * @param [interpolation=THREE.InterpolateLinear]
+  	 */
   def this(name: String, times: js.Array[_], values: js.Array[_]) = this()
   def this(
     name: String,

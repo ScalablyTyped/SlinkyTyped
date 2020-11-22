@@ -10,8 +10,6 @@ trait PoolConfig extends ClientConfig {
   
   var Promise: js.UndefOr[PromiseConstructorLike] = js.native
   
-  var connectionTimeoutMillis: js.UndefOr[Double] = js.native
-  
   var idleTimeoutMillis: js.UndefOr[Double] = js.native
   
   var log: js.UndefOr[js.Function1[/* repeated */ js.Any, Unit]] = js.native
@@ -49,12 +47,6 @@ object PoolConfig {
     
     @scala.inline
     def deletePromise: Self = this.set("Promise", js.undefined)
-    
-    @scala.inline
-    def setConnectionTimeoutMillis(value: Double): Self = this.set("connectionTimeoutMillis", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteConnectionTimeoutMillis: Self = this.set("connectionTimeoutMillis", js.undefined)
     
     @scala.inline
     def setIdleTimeoutMillis(value: Double): Self = this.set("idleTimeoutMillis", value.asInstanceOf[js.Any])

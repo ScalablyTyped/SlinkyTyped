@@ -13,6 +13,11 @@ trait GetExecutionHistoryInput extends js.Object {
   var executionArn: Arn = js.native
   
   /**
+    * You can select whether execution data (input or output of a history event) is returned. The default is true.
+    */
+  var includeExecutionData: js.UndefOr[IncludeExecutionDataGetExecutionHistory] = js.native
+  
+  /**
     * The maximum number of results that are returned per call. You can use nextToken to obtain further pages of results. The default is 100 and the maximum allowed page size is 1000. A value of 0 uses the default. This is only an upper limit. The actual number of results returned per call might be fewer than the specified maximum.
     */
   var maxResults: js.UndefOr[PageSize] = js.native
@@ -52,6 +57,12 @@ object GetExecutionHistoryInput {
     
     @scala.inline
     def setExecutionArn(value: Arn): Self = this.set("executionArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIncludeExecutionData(value: IncludeExecutionDataGetExecutionHistory): Self = this.set("includeExecutionData", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIncludeExecutionData: Self = this.set("includeExecutionData", js.undefined)
     
     @scala.inline
     def setMaxResults(value: PageSize): Self = this.set("maxResults", value.asInstanceOf[js.Any])

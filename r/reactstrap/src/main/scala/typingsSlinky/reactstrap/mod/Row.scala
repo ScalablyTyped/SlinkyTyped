@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "Row")
+@JSImport("reactstrap/es", "Row")
 @js.native
-class Row[T] ()
+class Row ()
   extends Component[RowProps, js.Object, js.Any]

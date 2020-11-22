@@ -9,14 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SecurityInfo extends js.Object {
   
   /**
-    * Certificate transparency compliance per RFC 6962\. See `https://www.certificate-transparency.org/what-is-ct`
-    * for more information.
+    * Certificate transparency compliance per RFC 6962\. See `https://www.certificate-transparency.org/what-is-ct` for more information.
     */
   var certificateTransparencyStatus: js.UndefOr[CertificateTransparencyStatus] = js.native
   
   /**
-    * Certificate data if state is "secure". Will only contain one entry unless `certificateChain` is passed as an
-    * option.
+    * Certificate data if state is "secure". Will only contain one entry unless `certificateChain` is passed as an option.
     */
   var certificates: js.Array[CertificateInfo] = js.native
   
@@ -38,8 +36,7 @@ trait SecurityInfo extends js.Object {
   var isExtendedValidation: js.UndefOr[Boolean] = js.native
   
   /**
-    * The certificate is either expired or is not yet valid. See `CertificateInfo.validity` for start and end
-    * dates.
+    * The certificate is either expired or is not yet valid. See `CertificateInfo.validity` for start and end dates.
     */
   var isNotValidAtThisTime: js.UndefOr[Boolean] = js.native
   

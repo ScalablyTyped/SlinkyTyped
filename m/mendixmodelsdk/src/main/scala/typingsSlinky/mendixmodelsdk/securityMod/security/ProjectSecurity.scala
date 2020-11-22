@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.securityMod.security
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
@@ -13,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/project-security relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/project-security relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -70,9 +69,6 @@ class ProjectSecurity protected () extends ProjectDocument {
     */
   def imageAccess: ImageAccessRuleContainer = js.native
   def imageAccess_=(newValue: ImageAccessRuleContainer): Unit = js.native
-  
-  @JSName("model")
-  var model_FProjectSecurity: IModel = js.native
   
   def passwordPolicySettings: PasswordPolicySettings = js.native
   def passwordPolicySettings_=(newValue: PasswordPolicySettings): Unit = js.native

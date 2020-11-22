@@ -1,6 +1,7 @@
 package typingsSlinky.highcharts.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,16 +37,18 @@ trait ChartOptions extends js.Object {
     * ms. If used as a configuration object, the following properties are
     * supported:
     *
-    * - **duration**: The duration of the animation in milliseconds.
+    * - `defer`: The animation delay time in milliseconds.
     *
-    * - **easing**: A string reference to an easing function set on the `Math`
+    * - `duration`: The duration of the animation in milliseconds.
+    *
+    * - `easing`: A string reference to an easing function set on the `Math`
     * object. See the easing demo.
     *
     * When zooming on a series with less than 100 points, the chart redraw will
     * be done with animation, but in case of more data points, it is necessary
     * to set this option to ensure animation on zoom.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The background color or gradient
@@ -466,7 +469,7 @@ object ChartOptions {
     def deleteAlignTicks: Self = this.set("alignTicks", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)

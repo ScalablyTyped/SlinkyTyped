@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("__esri.UnknownLayer")
 @js.native
 /**
-  * Represents a layer whose type could not be determined. For example, when loading a layer from a URL and the layer type cannot be determined, then it is represented as an instance of this class.
+  * Represents a layer whose type could not be determined.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-UnknownLayer.html)
   */

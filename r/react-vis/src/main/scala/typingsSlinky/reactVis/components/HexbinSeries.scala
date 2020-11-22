@@ -9,6 +9,7 @@ import typingsSlinky.reactVis.mod.AnimationParam
 import typingsSlinky.reactVis.mod.ContourSeriesPoint
 import typingsSlinky.reactVis.mod.HexbinSeriesProps
 import typingsSlinky.reactVis.mod.RVNearestXData
+import typingsSlinky.reactVis.mod.RVNearestXYData
 import typingsSlinky.reactVis.mod.Scale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -150,7 +151,7 @@ object HexbinSeries {
     def onNearestX(value: (ContourSeriesPoint, /* data */ RVNearestXData[ContourSeriesPoint]) => Unit): this.type = set("onNearestX", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onNearestXY(value: (ContourSeriesPoint, /* data */ RVNearestXData[ContourSeriesPoint]) => Unit): this.type = set("onNearestXY", js.Any.fromFunction2(value))
+    def onNearestXY(value: (ContourSeriesPoint, /* data */ RVNearestXYData[ContourSeriesPoint]) => Unit): this.type = set("onNearestXY", js.Any.fromFunction2(value))
     
     @scala.inline
     def onSeriesClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onSeriesClick", js.Any.fromFunction1(value))

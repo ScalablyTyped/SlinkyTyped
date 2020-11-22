@@ -1,74 +1,21 @@
 package typingsSlinky.jupyterlabDocregistry.registryMod.DocumentRegistry
 
-import typingsSlinky.jupyterlabApputils.clientsessionMod.IClientSession
+import typingsSlinky.jupyterlabApputils.sessioncontextMod.ISessionContext
 import typingsSlinky.jupyterlabRendermimeInterfaces.mod.IRenderMime.IResolver
 import typingsSlinky.jupyterlabServices.contentsMod.Contents.ICheckpointModel
-import typingsSlinky.phosphorDisposable.mod.IDisposable
-import typingsSlinky.phosphorSignaling.mod.ISignal
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.luminoDisposable.mod.IDisposable
+import typingsSlinky.luminoSignaling.mod.ISignal
+import typingsSlinky.luminoWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The document context object.
   */
 @js.native
 trait IContext[T /* <: IModel */] extends IDisposable {
-  /**
-    * The document metadata, stored as a services contents model.
-    *
-    * #### Notes
-    * This will be null until the context is 'ready'. Since we only store
-    * metadata here, the `.contents` attribute will always be empty.
-    */
-  val contentsModel: typingsSlinky.jupyterlabServices.contentsMod.Contents.IModel | Null = js.native
-  /**
-    * A signal emitted when the context is disposed.
-    */
-  var disposed: ISignal[this.type, Unit] = js.native
-  /**
-    * A signal emitted when the contentsModel changes.
-    */
-  var fileChanged: ISignal[this.type, typingsSlinky.jupyterlabServices.contentsMod.Contents.IModel] = js.native
-  /**
-    * Whether the context is ready.
-    */
-  val isReady: Boolean = js.native
-  /**
-    * The current local path associated with the document.
-    * If the document is in the default notebook file browser,
-    * this is the same as the path.
-    */
-  val localPath: String = js.native
-  /**
-    * The data model for the document.
-    */
-  val model: T = js.native
-  /**
-    * The current path associated with the document.
-    */
-  val path: String = js.native
-  /**
-    * A signal emitted when the path changes.
-    */
-  var pathChanged: ISignal[this.type, String] = js.native
-  /**
-    * A promise that is fulfilled when the context is ready.
-    */
-  val ready: js.Promise[Unit] = js.native
-  /**
-    * A signal emitted on the start and end of a saving operation.
-    */
-  var saveState: ISignal[this.type, SaveState] = js.native
-  /**
-    * The client session object associated with the context.
-    */
-  val session: IClientSession = js.native
-  /**
-    * The url resolver for the context.
-    */
-  val urlResolver: IResolver = js.native
+  
   /**
     * Add a sibling widget to the document manager.
     *
@@ -84,6 +31,16 @@ trait IContext[T /* <: IModel */] extends IDisposable {
     */
   def addSibling(widget: Widget): IDisposable = js.native
   def addSibling(widget: Widget, options: IOpenOptions): IDisposable = js.native
+  
+  /**
+    * The document metadata, stored as a services contents model.
+    *
+    * #### Notes
+    * This will be null until the context is 'ready'. Since we only store
+    * metadata here, the `.contents` attribute will always be empty.
+    */
+  val contentsModel: typingsSlinky.jupyterlabServices.contentsMod.Contents.IModel | Null = js.native
+  
   /**
     * Create a checkpoint for the file.
     *
@@ -91,6 +48,7 @@ trait IContext[T /* <: IModel */] extends IDisposable {
     *   checkpoint is created.
     */
   def createCheckpoint(): js.Promise[ICheckpointModel] = js.native
+  
   /**
     * Delete a checkpoint for the file.
     *
@@ -99,6 +57,27 @@ trait IContext[T /* <: IModel */] extends IDisposable {
     * @returns A promise which resolves when the checkpoint is deleted.
     */
   def deleteCheckpoint(checkpointID: String): js.Promise[Unit] = js.native
+  
+  /**
+    * A signal emitted when the context is disposed.
+    */
+  var disposed: ISignal[this.type, Unit] = js.native
+  
+  /**
+    * Save the document to a different path chosen by the user.
+    */
+  def download(): js.Promise[Unit] = js.native
+  
+  /**
+    * A signal emitted when the contentsModel changes.
+    */
+  var fileChanged: ISignal[this.type, typingsSlinky.jupyterlabServices.contentsMod.Contents.IModel] = js.native
+  
+  /**
+    * Whether the context is ready.
+    */
+  val isReady: Boolean = js.native
+  
   /**
     * List available checkpoints for the file.
     *
@@ -106,6 +85,34 @@ trait IContext[T /* <: IModel */] extends IDisposable {
     *    the file.
     */
   def listCheckpoints(): js.Promise[js.Array[ICheckpointModel]] = js.native
+  
+  /**
+    * The current local path associated with the document.
+    * If the document is in the default notebook file browser,
+    * this is the same as the path.
+    */
+  val localPath: String = js.native
+  
+  /**
+    * The data model for the document.
+    */
+  val model: T = js.native
+  
+  /**
+    * The current path associated with the document.
+    */
+  val path: String = js.native
+  
+  /**
+    * A signal emitted when the path changes.
+    */
+  var pathChanged: ISignal[this.type, String] = js.native
+  
+  /**
+    * A promise that is fulfilled when the context is ready.
+    */
+  val ready: js.Promise[Unit] = js.native
+  
   /**
     * Restore the file to a known checkpoint state.
     *
@@ -116,17 +123,34 @@ trait IContext[T /* <: IModel */] extends IDisposable {
     */
   def restoreCheckpoint(): js.Promise[Unit] = js.native
   def restoreCheckpoint(checkpointID: String): js.Promise[Unit] = js.native
+  
   /**
     * Revert the document contents to disk contents.
     */
   def revert(): js.Promise[Unit] = js.native
+  
   /**
     * Save the document contents to disk.
     */
   def save(): js.Promise[Unit] = js.native
+  
   /**
     * Save the document to a different path chosen by the user.
     */
   def saveAs(): js.Promise[Unit] = js.native
+  
+  /**
+    * A signal emitted on the start and end of a saving operation.
+    */
+  var saveState: ISignal[this.type, SaveState] = js.native
+  
+  /**
+    * The session context object associated with the context.
+    */
+  val sessionContext: ISessionContext = js.native
+  
+  /**
+    * The url resolver for the context.
+    */
+  val urlResolver: IResolver = js.native
 }
-

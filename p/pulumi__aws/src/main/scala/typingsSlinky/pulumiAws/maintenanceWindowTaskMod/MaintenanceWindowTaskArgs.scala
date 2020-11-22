@@ -1,9 +1,7 @@
 package typingsSlinky.pulumiAws.maintenanceWindowTaskMod
 
-import typingsSlinky.pulumiAws.inputMod.ssm.MaintenanceWindowTaskLoggingInfo
 import typingsSlinky.pulumiAws.inputMod.ssm.MaintenanceWindowTaskTarget
 import typingsSlinky.pulumiAws.inputMod.ssm.MaintenanceWindowTaskTaskInvocationParameters
-import typingsSlinky.pulumiAws.inputMod.ssm.MaintenanceWindowTaskTaskParameter
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,13 +14,6 @@ trait MaintenanceWindowTaskArgs extends js.Object {
     * The description of the maintenance window task.
     */
   val description: js.UndefOr[Input[String]] = js.native
-  
-  /**
-    * A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `taskInvocationParameters` configuration block `runCommandParameters` configuration block `output_s3_*` arguments instead. Conflicts with `taskInvocationParameters`. Documented below.
-    *
-    * @deprecated use 'task_invocation_parameters' argument instead
-    */
-  val loggingInfo: js.UndefOr[Input[MaintenanceWindowTaskLoggingInfo]] = js.native
   
   /**
     * The maximum number of targets this task can be run for in parallel.
@@ -60,16 +51,9 @@ trait MaintenanceWindowTaskArgs extends js.Object {
   val taskArn: Input[String] = js.native
   
   /**
-    * The parameters for task execution. This argument is conflict with `taskParameters` and `loggingInfo`.
+    * Configuration block with parameters for task execution.
     */
   val taskInvocationParameters: js.UndefOr[Input[MaintenanceWindowTaskTaskInvocationParameters]] = js.native
-  
-  /**
-    * A structure containing information about parameters required by the particular `taskArn`. Use `parameter` configuration blocks under the `taskInvocationParameters` configuration block instead. Conflicts with `taskInvocationParameters`. Documented below.
-    *
-    * @deprecated use 'task_invocation_parameters' argument instead
-    */
-  val taskParameters: js.UndefOr[Input[js.Array[Input[MaintenanceWindowTaskTaskParameter]]]] = js.native
   
   /**
     * The type of task being registered. The only allowed value is `RUN_COMMAND`.
@@ -143,12 +127,6 @@ object MaintenanceWindowTaskArgs {
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
-    def setLoggingInfo(value: Input[MaintenanceWindowTaskLoggingInfo]): Self = this.set("loggingInfo", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLoggingInfo: Self = this.set("loggingInfo", js.undefined)
-    
-    @scala.inline
     def setName(value: Input[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -165,14 +143,5 @@ object MaintenanceWindowTaskArgs {
     
     @scala.inline
     def deleteTaskInvocationParameters: Self = this.set("taskInvocationParameters", js.undefined)
-    
-    @scala.inline
-    def setTaskParametersVarargs(value: Input[MaintenanceWindowTaskTaskParameter]*): Self = this.set("taskParameters", js.Array(value :_*))
-    
-    @scala.inline
-    def setTaskParameters(value: Input[js.Array[Input[MaintenanceWindowTaskTaskParameter]]]): Self = this.set("taskParameters", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTaskParameters: Self = this.set("taskParameters", js.undefined)
   }
 }

@@ -1,8 +1,8 @@
 package typingsSlinky.googleGeolocation
 
-import org.scalajs.dom.raw.Position
-import org.scalajs.dom.raw.PositionError
 import org.scalajs.dom.raw.PositionOptions
+import typingsSlinky.std.GeolocationPosition
+import typingsSlinky.std.GeolocationPositionError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,19 +10,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GeolocationStatic extends js.Object {
   
-  def getCurrentPosition(success: js.Function1[/* position */ Position, Unit]): Unit = js.native
+  def getCurrentPosition(success: js.Function1[/* position */ GeolocationPosition, Unit]): Unit = js.native
   def getCurrentPosition(
-    success: js.Function1[/* position */ Position, Unit],
+    success: js.Function1[/* position */ GeolocationPosition, Unit],
     error: js.UndefOr[scala.Nothing],
     opts: PositionOptions
   ): Unit = js.native
   def getCurrentPosition(
-    success: js.Function1[/* position */ Position, Unit],
-    error: js.Function1[/* positionError */ PositionError, Unit]
+    success: js.Function1[/* position */ GeolocationPosition, Unit],
+    error: js.Function1[/* positionError */ GeolocationPositionError, Unit]
   ): Unit = js.native
   def getCurrentPosition(
-    success: js.Function1[/* position */ Position, Unit],
-    error: js.Function1[/* positionError */ PositionError, Unit],
+    success: js.Function1[/* position */ GeolocationPosition, Unit],
+    error: js.Function1[/* positionError */ GeolocationPositionError, Unit],
     opts: PositionOptions
   ): Unit = js.native
   

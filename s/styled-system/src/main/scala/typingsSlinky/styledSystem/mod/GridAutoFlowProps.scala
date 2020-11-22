@@ -15,7 +15,7 @@ trait GridAutoFlowProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends j
     */
   var gridAutoFlow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoFlowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoFlow */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object GridAutoFlowProps {
     @scala.inline
     def setGridAutoFlow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoFlowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoFlow */ _, 
           ThemeType
         ]
     ): Self = this.set("gridAutoFlow", value.asInstanceOf[js.Any])

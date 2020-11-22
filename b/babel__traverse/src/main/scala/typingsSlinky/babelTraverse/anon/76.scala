@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.BindExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.TemplateLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `76` extends js.Object {
   
-  var `type`: BindExpression = js.native
+  var `type`: TemplateLiteral = js.native
 }
 object `76` {
   
   @scala.inline
-  def apply(`type`: BindExpression): `76` = {
+  def apply(`type`: TemplateLiteral): `76` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`76`]
@@ -35,6 +35,6 @@ object `76` {
     }
     
     @scala.inline
-    def setType(value: BindExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TemplateLiteral): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

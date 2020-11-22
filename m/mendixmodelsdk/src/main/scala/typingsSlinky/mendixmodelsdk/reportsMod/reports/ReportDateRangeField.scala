@@ -1,38 +1,37 @@
 package typingsSlinky.mendixmodelsdk.reportsMod.reports
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/date-range-field relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/date-range-field relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/reports", "reports.ReportDateRangeField")
 @js.native
-class ReportDateRangeField protected () extends Element {
+class ReportDateRangeField protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def caption: Text = js.native
   def caption_=(newValue: Text): Unit = js.native
   
   def containerAsReportDateRangeSelector: ReportDateRangeSelector = js.native
-  
-  @JSName("model")
-  var model_FReportDateRangeField: IModel = js.native
   
   def `type`: DateRangeFieldEnum = js.native
   def type_=(newValue: DateRangeFieldEnum): Unit = js.native

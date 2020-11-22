@@ -1,5 +1,6 @@
 package typingsSlinky.ol.styleImageMod
 
+import typingsSlinky.ol.sizeMod.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +16,7 @@ trait Options extends js.Object {
   
   var rotation: Double = js.native
   
-  var scale: Double = js.native
+  var scale: Double | Size = js.native
 }
 object Options {
   
@@ -25,7 +26,7 @@ object Options {
     opacity: Double,
     rotateWithView: Boolean,
     rotation: Double,
-    scale: Double
+    scale: Double | Size
   ): Options = {
     val __obj = js.Dynamic.literal(displacement = displacement.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], rotateWithView = rotateWithView.asInstanceOf[js.Any], rotation = rotation.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
@@ -62,6 +63,6 @@ object Options {
     def setRotation(value: Double): Self = this.set("rotation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setScale(value: Double): Self = this.set("scale", value.asInstanceOf[js.Any])
+    def setScale(value: Double | Size): Self = this.set("scale", value.asInstanceOf[js.Any])
   }
 }

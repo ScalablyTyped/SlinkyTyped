@@ -25,6 +25,11 @@ trait GetVpcEndpointServiceArgs extends js.Object {
   val serviceName: js.UndefOr[String] = js.native
   
   /**
+    * The service type, `Gateway` or `Interface`.
+    */
+  val serviceType: js.UndefOr[String] = js.native
+  
+  /**
     * A map of tags, each pair of which must exactly match a pair on the desired VPC Endpoint Service.
     */
   val tags: js.UndefOr[StringDictionary[String]] = js.native
@@ -72,6 +77,12 @@ object GetVpcEndpointServiceArgs {
     
     @scala.inline
     def deleteServiceName: Self = this.set("serviceName", js.undefined)
+    
+    @scala.inline
+    def setServiceType(value: String): Self = this.set("serviceType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteServiceType: Self = this.set("serviceType", js.undefined)
     
     @scala.inline
     def setTags(value: StringDictionary[String]): Self = this.set("tags", value.asInstanceOf[js.Any])

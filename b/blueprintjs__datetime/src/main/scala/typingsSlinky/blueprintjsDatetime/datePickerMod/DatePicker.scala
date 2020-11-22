@@ -37,8 +37,6 @@ class DatePicker protected ()
   
   var ignoreNextMonthChange: js.Any = js.native
   
-  var isToday: js.Any = js.native
-  
   var maybeRenderShortcuts: js.Any = js.native
   
   var maybeRenderTimePicker: js.Any = js.native

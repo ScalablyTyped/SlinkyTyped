@@ -50,7 +50,7 @@ trait CompletionItem extends js.Object {
   
   /**
     * A string or snippet that should be inserted in a document when selecting
-    * this completion. When `falsy` the [label](#CompletionItem.label)
+    * this completion.
     * is used.
     */
   var insertText: String = js.native

@@ -1,13 +1,12 @@
 package typingsSlinky.leveldown.mod
 
+import typingsSlinky.abstractLeveldown.mod.AbstractGetOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LevelDownGetOptions extends js.Object {
-  
-  var asBuffer: js.UndefOr[Boolean] = js.native
+trait LevelDownGetOptions extends AbstractGetOptions {
   
   var fillCache: js.UndefOr[Boolean] = js.native
 }
@@ -33,12 +32,6 @@ object LevelDownGetOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setAsBuffer(value: Boolean): Self = this.set("asBuffer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAsBuffer: Self = this.set("asBuffer", js.undefined)
     
     @scala.inline
     def setFillCache(value: Boolean): Self = this.set("fillCache", value.asInstanceOf[js.Any])

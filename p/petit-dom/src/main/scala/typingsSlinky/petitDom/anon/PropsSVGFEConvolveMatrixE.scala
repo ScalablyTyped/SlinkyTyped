@@ -190,9 +190,9 @@ trait PropsSVGFEConvolveMatrixE extends js.Object {
   
   var getAttributeNames: js.UndefOr[js.Function0[js.Array[String]]] = js.native
   
-  var getAttributeNode: js.UndefOr[js.Function1[/* name */ String, Attr | Null]] = js.native
+  var getAttributeNode: js.UndefOr[js.Function1[/* qualifiedName */ String, Attr | Null]] = js.native
   
-  var getAttributeNodeNS: js.UndefOr[js.Function2[/* namespaceURI */ String, /* localName */ String, Attr | Null]] = js.native
+  var getAttributeNodeNS: js.UndefOr[js.Function2[/* namespace */ String, /* localName */ String, Attr | Null]] = js.native
   
   var getBoundingClientRect: js.UndefOr[js.Function0[DOMRect]] = js.native
   
@@ -992,13 +992,13 @@ object PropsSVGFEConvolveMatrixE {
     def deleteGetAttributeNames: Self = this.set("getAttributeNames", js.undefined)
     
     @scala.inline
-    def setGetAttributeNode(value: /* name */ String => Attr | Null): Self = this.set("getAttributeNode", js.Any.fromFunction1(value))
+    def setGetAttributeNode(value: /* qualifiedName */ String => Attr | Null): Self = this.set("getAttributeNode", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteGetAttributeNode: Self = this.set("getAttributeNode", js.undefined)
     
     @scala.inline
-    def setGetAttributeNodeNS(value: (/* namespaceURI */ String, /* localName */ String) => Attr | Null): Self = this.set("getAttributeNodeNS", js.Any.fromFunction2(value))
+    def setGetAttributeNodeNS(value: (/* namespace */ String, /* localName */ String) => Attr | Null): Self = this.set("getAttributeNodeNS", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteGetAttributeNodeNS: Self = this.set("getAttributeNodeNS", js.undefined)

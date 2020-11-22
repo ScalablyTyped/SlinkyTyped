@@ -6,7 +6,6 @@ import typingsSlinky.angularCompiler.outputAstMod.BinaryOperatorExpr
 import typingsSlinky.angularCompiler.outputAstMod.BuiltinMethod
 import typingsSlinky.angularCompiler.outputAstMod.ClassStmt
 import typingsSlinky.angularCompiler.outputAstMod.CommaExpr
-import typingsSlinky.angularCompiler.outputAstMod.CommentStmt
 import typingsSlinky.angularCompiler.outputAstMod.ConditionalExpr
 import typingsSlinky.angularCompiler.outputAstMod.DeclareVarStmt
 import typingsSlinky.angularCompiler.outputAstMod.Expression
@@ -18,7 +17,6 @@ import typingsSlinky.angularCompiler.outputAstMod.IfStmt_
 import typingsSlinky.angularCompiler.outputAstMod.InstantiateExpr
 import typingsSlinky.angularCompiler.outputAstMod.InvokeFunctionExpr
 import typingsSlinky.angularCompiler.outputAstMod.InvokeMethodExpr
-import typingsSlinky.angularCompiler.outputAstMod.JSDocCommentStmt
 import typingsSlinky.angularCompiler.outputAstMod.LiteralArrayExpr
 import typingsSlinky.angularCompiler.outputAstMod.LiteralExpr
 import typingsSlinky.angularCompiler.outputAstMod.LiteralMapExpr
@@ -33,6 +31,7 @@ import typingsSlinky.angularCompiler.outputAstMod.StatementVisitor
 import typingsSlinky.angularCompiler.outputAstMod.ThrowStmt
 import typingsSlinky.angularCompiler.outputAstMod.TryCatchStmt
 import typingsSlinky.angularCompiler.outputAstMod.TypeofExpr_
+import typingsSlinky.angularCompiler.outputAstMod.UnaryOperatorExpr
 import typingsSlinky.angularCompiler.outputAstMod.WrappedNodeExpr
 import typingsSlinky.angularCompiler.outputAstMod.WriteKeyExpr
 import typingsSlinky.angularCompiler.outputAstMod.WritePropExpr
@@ -64,6 +63,8 @@ object abstractEmitterMod extends js.Object {
     
     def getBuiltinMethodName(method: BuiltinMethod): String = js.native
     
+    /* protected */ def printLeadingComments(stmt: Statement, ctx: EmitterVisitorContext): Unit = js.native
+    
     def visitAllExpressions(expressions: js.Array[Expression], ctx: EmitterVisitorContext, separator: String): Unit = js.native
     
     def visitAllObjects[T](
@@ -80,8 +81,6 @@ object abstractEmitterMod extends js.Object {
     def visitBinaryOperatorExpr(ast: BinaryOperatorExpr, ctx: EmitterVisitorContext): js.Any = js.native
     
     def visitCommaExpr(ast: CommaExpr, ctx: EmitterVisitorContext): js.Any = js.native
-    
-    def visitCommentStmt(stmt: CommentStmt, ctx: EmitterVisitorContext): js.Any = js.native
     
     def visitConditionalExpr(ast: ConditionalExpr, ctx: EmitterVisitorContext): js.Any = js.native
     
@@ -102,8 +101,6 @@ object abstractEmitterMod extends js.Object {
     def visitInvokeFunctionExpr(expr: InvokeFunctionExpr, ctx: EmitterVisitorContext): js.Any = js.native
     
     def visitInvokeMethodExpr(expr: InvokeMethodExpr, ctx: EmitterVisitorContext): js.Any = js.native
-    
-    def visitJSDocCommentStmt(stmt: JSDocCommentStmt, ctx: EmitterVisitorContext): Null = js.native
     
     def visitLiteralArrayExpr(ast: LiteralArrayExpr, ctx: EmitterVisitorContext): js.Any = js.native
     
@@ -128,6 +125,8 @@ object abstractEmitterMod extends js.Object {
     def visitTryCatchStmt(stmt: TryCatchStmt, ctx: EmitterVisitorContext): js.Any = js.native
     
     def visitTypeofExpr(expr: TypeofExpr_, ctx: EmitterVisitorContext): js.Any = js.native
+    
+    def visitUnaryOperatorExpr(ast: UnaryOperatorExpr, ctx: EmitterVisitorContext): js.Any = js.native
     
     def visitWrappedNodeExpr(ast: WrappedNodeExpr[_], ctx: EmitterVisitorContext): js.Any = js.native
     

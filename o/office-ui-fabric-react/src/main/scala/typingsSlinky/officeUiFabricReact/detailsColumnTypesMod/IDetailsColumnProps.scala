@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.ItemIndex
 import typingsSlinky.officeUiFabricReact.detailsColumnBaseMod.DetailsColumnBase
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
@@ -12,7 +13,6 @@ import typingsSlinky.officeUiFabricReact.dragdropInterfacesMod.IDragDropHelper
 import typingsSlinky.react.mod.ClassAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`

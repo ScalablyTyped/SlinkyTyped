@@ -1,6 +1,8 @@
 package typingsSlinky.auth0
 
 import typingsSlinky.auth0.mod.ClientAppType
+import typingsSlinky.auth0.mod.CustomDomainStatus
+import typingsSlinky.auth0.mod.CustomDomainType
 import typingsSlinky.auth0.mod.DeleteDeleteMultifactorParamsProvider
 import typingsSlinky.auth0.mod.Grant
 import typingsSlinky.auth0.mod.JobFormat
@@ -48,6 +50,9 @@ object auth0Strings {
   def `auth0-oidc`: `auth0-oidc` = "auth0-oidc".asInstanceOf[`auth0-oidc`]
   
   @scala.inline
+  def auth0_managed_certs: auth0_managed_certs = "auth0_managed_certs".asInstanceOf[auth0_managed_certs]
+  
+  @scala.inline
   def authorization_code: authorization_code = "authorization_code".asInstanceOf[authorization_code]
   
   @scala.inline
@@ -85,6 +90,9 @@ object auth0Strings {
   
   @scala.inline
   def daccount: daccount = "daccount".asInstanceOf[daccount]
+  
+  @scala.inline
+  def disabled: disabled = "disabled".asInstanceOf[disabled]
   
   @scala.inline
   def dropbox: dropbox = "dropbox".asInstanceOf[dropbox]
@@ -195,6 +203,9 @@ object auth0Strings {
   def pending: pending = "pending".asInstanceOf[pending]
   
   @scala.inline
+  def pending_verification: pending_verification = "pending_verification".asInstanceOf[pending_verification]
+  
+  @scala.inline
   def pingfederate: pingfederate = "pingfederate".asInstanceOf[pingfederate]
   
   @scala.inline
@@ -202,6 +213,9 @@ object auth0Strings {
   
   @scala.inline
   def processing: processing = "processing".asInstanceOf[processing]
+  
+  @scala.inline
+  def ready: ready = "ready".asInstanceOf[ready]
   
   @scala.inline
   def refresh_token: refresh_token = "refresh_token".asInstanceOf[refresh_token]
@@ -226,6 +240,9 @@ object auth0Strings {
   
   @scala.inline
   def samlp: samlp = "samlp".asInstanceOf[samlp]
+  
+  @scala.inline
+  def self_managed_certs: self_managed_certs = "self_managed_certs".asInstanceOf[self_managed_certs]
   
   @scala.inline
   def sentry: sentry = "sentry".asInstanceOf[sentry]
@@ -262,6 +279,9 @@ object auth0Strings {
   
   @scala.inline
   def twitter: twitter = "twitter".asInstanceOf[twitter]
+  
+  @scala.inline
+  def txt: txt = "txt".asInstanceOf[txt]
   
   @scala.inline
   def untappd: untappd = "untappd".asInstanceOf[untappd]
@@ -353,6 +373,9 @@ object auth0Strings {
        with UnlinkAccountsParamsProvider
   
   @js.native
+  sealed trait auth0_managed_certs extends CustomDomainType
+  
+  @js.native
   sealed trait authorization_code extends Grant
   
   @js.native
@@ -401,6 +424,9 @@ object auth0Strings {
   
   @js.native
   sealed trait daccount extends Strategy
+  
+  @js.native
+  sealed trait disabled extends CustomDomainStatus
   
   @js.native
   sealed trait dropbox
@@ -554,7 +580,12 @@ object auth0Strings {
        with UnlinkAccountsParamsProvider
   
   @js.native
-  sealed trait pending extends JobStatus
+  sealed trait pending
+    extends CustomDomainStatus
+       with JobStatus
+  
+  @js.native
+  sealed trait pending_verification extends CustomDomainStatus
   
   @js.native
   sealed trait pingfederate
@@ -568,6 +599,9 @@ object auth0Strings {
   
   @js.native
   sealed trait processing extends JobStatus
+  
+  @js.native
+  sealed trait ready extends CustomDomainStatus
   
   @js.native
   sealed trait refresh_token extends Grant
@@ -603,6 +637,9 @@ object auth0Strings {
   sealed trait samlp
     extends Strategy
        with UnlinkAccountsParamsProvider
+  
+  @js.native
+  sealed trait self_managed_certs extends CustomDomainType
   
   @js.native
   sealed trait sentry extends ClientAppType
@@ -656,6 +693,9 @@ object auth0Strings {
   sealed trait twitter
     extends Strategy
        with UnlinkAccountsParamsProvider
+  
+  @js.native
+  sealed trait txt extends js.Object
   
   @js.native
   sealed trait untappd

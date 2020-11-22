@@ -48,6 +48,11 @@ trait PutIntentRequest extends js.Object {
   var fulfillmentActivity: js.UndefOr[FulfillmentActivity] = js.native
   
   /**
+    * An array of InputContext objects that lists the contexts that must be active for Amazon Lex to choose the intent in a conversation with the user.
+    */
+  var inputContexts: js.UndefOr[InputContextList] = js.native
+  
+  /**
     * Configuration information required to use the AMAZON.KendraSearchIntent intent to connect to an Amazon Kendra index. For more information, see  AMAZON.KendraSearchIntent.
     */
   var kendraConfiguration: js.UndefOr[KendraConfiguration] = js.native
@@ -56,6 +61,11 @@ trait PutIntentRequest extends js.Object {
     * The name of the intent. The name is not case sensitive.  The name can't match a built-in intent name, or a built-in intent name with "AMAZON." removed. For example, because there is a built-in intent called AMAZON.HelpIntent, you can't create a custom intent called HelpIntent. For a list of built-in intents, see Standard Built-in Intents in the Alexa Skills Kit.
     */
   var name: IntentName = js.native
+  
+  /**
+    * An array of OutputContext objects that lists the contexts that the intent activates when the intent is fulfilled.
+    */
+  var outputContexts: js.UndefOr[OutputContextList] = js.native
   
   /**
     * A unique identifier for the built-in intent to base this intent on. To find the signature for an intent, see Standard Built-in Intents in the Alexa Skills Kit.
@@ -152,10 +162,28 @@ object PutIntentRequest {
     def deleteFulfillmentActivity: Self = this.set("fulfillmentActivity", js.undefined)
     
     @scala.inline
+    def setInputContextsVarargs(value: InputContext*): Self = this.set("inputContexts", js.Array(value :_*))
+    
+    @scala.inline
+    def setInputContexts(value: InputContextList): Self = this.set("inputContexts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputContexts: Self = this.set("inputContexts", js.undefined)
+    
+    @scala.inline
     def setKendraConfiguration(value: KendraConfiguration): Self = this.set("kendraConfiguration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKendraConfiguration: Self = this.set("kendraConfiguration", js.undefined)
+    
+    @scala.inline
+    def setOutputContextsVarargs(value: OutputContext*): Self = this.set("outputContexts", js.Array(value :_*))
+    
+    @scala.inline
+    def setOutputContexts(value: OutputContextList): Self = this.set("outputContexts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutputContexts: Self = this.set("outputContexts", js.undefined)
     
     @scala.inline
     def setParentIntentSignature(value: BuiltinIntentSignature): Self = this.set("parentIntentSignature", value.asInstanceOf[js.Any])

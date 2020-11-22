@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateBotVersionResponse extends js.Object {
   
   /**
-    * The message that Amazon Lex uses to abort a conversation. For more information, see PutBot.
+    * The message that Amazon Lex uses to cancel a conversation. For more information, see PutBot.
     */
   var abortStatement: js.UndefOr[Statement] = js.native
   
@@ -41,6 +41,11 @@ trait CreateBotVersionResponse extends js.Object {
     * Indicates whether utterances entered by the user should be sent to Amazon Comprehend for sentiment analysis.
     */
   var detectSentiment: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Indicates whether the bot uses accuracy improvements. true indicates that the bot is using the improvements, otherwise, false.
+    */
+  var enableModelImprovements: js.UndefOr[Boolean] = js.native
   
   /**
     * If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
@@ -151,6 +156,12 @@ object CreateBotVersionResponse {
     
     @scala.inline
     def deleteDetectSentiment: Self = this.set("detectSentiment", js.undefined)
+    
+    @scala.inline
+    def setEnableModelImprovements(value: Boolean): Self = this.set("enableModelImprovements", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnableModelImprovements: Self = this.set("enableModelImprovements", js.undefined)
     
     @scala.inline
     def setFailureReason(value: String): Self = this.set("failureReason", value.asInstanceOf[js.Any])

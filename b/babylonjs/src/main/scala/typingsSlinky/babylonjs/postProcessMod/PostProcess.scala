@@ -8,7 +8,11 @@ import typingsSlinky.babylonjs.iInspectableMod.IInspectable
 import typingsSlinky.babylonjs.internalTextureMod.InternalTexture
 import typingsSlinky.babylonjs.mathColorMod.Color4
 import typingsSlinky.babylonjs.mathVectorMod.Vector2
+import typingsSlinky.babylonjs.nodeMaterialMod.NodeMaterial
 import typingsSlinky.babylonjs.observableMod.Observable
+import typingsSlinky.babylonjs.prePassEffectConfigurationMod.PrePassEffectConfiguration
+import typingsSlinky.babylonjs.prePassRendererMod.PrePassRenderer
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.smartArrayMod.SmartArray
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
@@ -33,12 +37,11 @@ class PostProcess protected () extends js.Object {
     * @param textureType Type of textures used when performing the post process. (default: 0)
     * @param vertexUrl The url of the vertex shader to be used. (default: "postprocess")
     * @param indexParameters The index parameters to be used for babylons include syntax "#include<kernelBlurVaryingDeclaration>[0..varyingCount]". (default: undefined) See usage in babylon.blurPostProcess.ts and kernelBlur.vertex.fx
-    * @param blockCompilation If the shader should not be compiled imediatly. (default: false)
+    * @param blockCompilation If the shader should not be compiled immediatly. (default: false)
     * @param textureFormat Format of textures used when performing the post process. (default: TEXTUREFORMAT_RGBA)
     */
   def this(
-    /** Name of the PostProcess. */
-  name: String,
+    name: String,
     fragmentUrl: String,
     parameters: Nullable[js.Array[String]],
     samplers: Nullable[js.Array[String]],
@@ -95,6 +98,12 @@ class PostProcess protected () extends js.Object {
   
   var _parameters: js.Any = js.native
   
+  /**
+    * Prepass configuration in case this post process needs a texture from prepass
+    * @hidden
+    */
+  var _prePassEffectConfiguration: PrePassEffectConfiguration = js.native
+  
   var _reusable: js.Any = js.native
   
   var _samplers: js.Any = js.native
@@ -103,7 +112,7 @@ class PostProcess protected () extends js.Object {
   
   var _scaleRatio: js.Any = js.native
   
-  var _scene: js.Any = js.native
+  var _scene: Scene = js.native
   
   var _shareOutputWithPostProcess: js.Any = js.native
   
@@ -210,7 +219,7 @@ class PostProcess protected () extends js.Object {
   def getCamera(): Camera = js.native
   
   /**
-    * Gets a string idenfifying the name of the class
+    * Gets a string identifying the name of the class
     * @returns "PostProcess" string
     */
   def getClassName(): String = js.native
@@ -275,6 +284,11 @@ class PostProcess protected () extends js.Object {
   var name: String = js.native
   
   /**
+    * Gets the node material used to create this postprocess (null if the postprocess was manually created)
+    */
+  var nodeMaterialSource: Nullable[NodeMaterial] = js.native
+  
+  /**
     * An event triggered when the postprocess is activated.
     */
   var onActivateObservable: Observable[Camera] = js.native
@@ -331,6 +345,12 @@ class PostProcess protected () extends js.Object {
   var renderTargetSamplingMode: Double = js.native
   
   /**
+    * Since inputTexture should always be defined, if we previously manually set `inputTexture`,
+    * the only way to unset it is to use this function to restore its internal state
+    */
+  def restoreDefaultInputTexture(): Unit = js.native
+  
+  /**
     * Number of sample textures (default: 1)
     */
   def samples: Double = js.native
@@ -341,12 +361,25 @@ class PostProcess protected () extends js.Object {
     *
     * | Value | Type                                | Description |
     * | ----- | ----------------------------------- | ----------- |
-    * | 1     | SCALEMODE_FLOOR                     | [engine.scalemode_floor](http://doc.babylonjs.com/api/classes/babylon.engine#scalemode_floor) |
-    * | 2     | SCALEMODE_NEAREST                   | [engine.scalemode_nearest](http://doc.babylonjs.com/api/classes/babylon.engine#scalemode_nearest) |
-    * | 3     | SCALEMODE_CEILING                   | [engine.scalemode_ceiling](http://doc.babylonjs.com/api/classes/babylon.engine#scalemode_ceiling) |
+    * | 1     | SCALEMODE_FLOOR                     | [engine.scalemode_floor](https://doc.babylonjs.com/api/classes/babylon.engine#scalemode_floor) |
+    * | 2     | SCALEMODE_NEAREST                   | [engine.scalemode_nearest](https://doc.babylonjs.com/api/classes/babylon.engine#scalemode_nearest) |
+    * | 3     | SCALEMODE_CEILING                   | [engine.scalemode_ceiling](https://doc.babylonjs.com/api/classes/babylon.engine#scalemode_ceiling) |
     *
     */
   var scaleMode: Double = js.native
+  
+  /**
+    * Serializes the particle system to a JSON object
+    * @returns the JSON object
+    */
+  def serialize(): js.Any = js.native
+  
+  /**
+    * Sets the required values to the prepass renderer.
+    * @param prePassRenderer defines the prepass renderer to setup.
+    * @returns true if the pre pass is needed.
+    */
+  def setPrePassRenderer(prePassRenderer: PrePassRenderer): Boolean = js.native
   
   /**
     * To avoid multiple redundant textures for multiple post process, the output the output texture for this post process can be shared with another.
@@ -374,6 +407,8 @@ class PostProcess protected () extends js.Object {
     * @param indexParameters The index parameters to be used for babylons include syntax "#include<kernelBlurVaryingDeclaration>[0..varyingCount]". (default: undefined) See usage in babylon.blurPostProcess.ts and kernelBlur.vertex.fx
     * @param onCompiled Called when the shader has been compiled.
     * @param onError Called if there is an error when compiling a shader.
+    * @param vertexUrl The url of the vertex shader to be used (default: the one given at construction time)
+    * @param fragmentUrl The url of the fragment shader to be used (default: the one given at construction time)
     */
   def updateEffect(
     defines: js.UndefOr[Nullable[String]],
@@ -381,7 +416,9 @@ class PostProcess protected () extends js.Object {
     samplers: js.UndefOr[Nullable[js.Array[String]]],
     indexParameters: js.UndefOr[js.Any],
     onCompiled: js.UndefOr[js.Function1[/* effect */ Effect, Unit]],
-    onError: js.UndefOr[js.Function2[/* effect */ Effect, /* errors */ String, Unit]]
+    onError: js.UndefOr[js.Function2[/* effect */ Effect, /* errors */ String, Unit]],
+    vertexUrl: js.UndefOr[String],
+    fragmentUrl: js.UndefOr[String]
   ): Unit = js.native
   
   /**
@@ -394,4 +431,18 @@ class PostProcess protected () extends js.Object {
     * Width of the texture to apply the post process on
     */
   var width: Double = js.native
+}
+/* static members */
+@JSImport("babylonjs/PostProcesses/postProcess", "PostProcess")
+@js.native
+object PostProcess extends js.Object {
+  
+  /**
+    * Creates a material from parsed material data
+    * @param parsedPostProcess defines parsed post process data
+    * @param scene defines the hosting scene
+    * @param rootUrl defines the root URL to use to load textures
+    * @returns a new post process
+    */
+  def Parse(parsedPostProcess: js.Any, scene: Scene, rootUrl: String): Nullable[PostProcess] = js.native
 }

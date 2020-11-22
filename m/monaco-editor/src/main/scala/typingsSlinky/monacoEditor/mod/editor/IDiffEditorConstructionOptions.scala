@@ -1,11 +1,18 @@
 package typingsSlinky.monacoEditor.mod.editor
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IDiffEditorConstructionOptions extends IDiffEditorOptions {
+  
+  /**
+    * Place overflow widgets inside an external DOM node.
+    * Defaults to an internal DOM node.
+    */
+  var overflowWidgetsDomNode: js.UndefOr[HTMLElement] = js.native
   
   /**
     * Initial theme to be used for rendering.
@@ -37,6 +44,12 @@ object IDiffEditorConstructionOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setOverflowWidgetsDomNode(value: HTMLElement): Self = this.set("overflowWidgetsDomNode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverflowWidgetsDomNode: Self = this.set("overflowWidgetsDomNode", js.undefined)
     
     @scala.inline
     def setTheme(value: String): Self = this.set("theme", value.asInstanceOf[js.Any])

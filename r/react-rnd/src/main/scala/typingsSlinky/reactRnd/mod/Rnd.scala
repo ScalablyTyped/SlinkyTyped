@@ -1,6 +1,5 @@
 package typingsSlinky.reactRnd.mod
 
-import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
@@ -9,6 +8,7 @@ import slinky.web.SyntheticTouchEvent
 import typingsSlinky.reResizable.mod.Resizable
 import typingsSlinky.reResizable.mod.ResizeDirection
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactRnd.anon.Current
 import typingsSlinky.reactRnd.anon.Height
 import typingsSlinky.reactRnd.anon.HeightWidth
 import typingsSlinky.reactRnd.anon.Left
@@ -43,7 +43,7 @@ class Rnd protected ()
   
   def getParentSize(): Height = js.native
   
-  def getSelfElement(): HTMLDivElement | Null = js.native
+  def getSelfElement(): HTMLElement | Null = js.native
   
   var offsetFromParent: Left = js.native
   
@@ -53,14 +53,14 @@ class Rnd protected ()
   
   def onDragStop(e: RndDragEvent, data: DraggableData): `false` | Unit = js.native
   
-  def onResize(e: MouseEvent, direction: ResizeDirection, elementRef: HTMLDivElement, delta: Width): Unit = js.native
-  def onResize(e: TouchEvent, direction: ResizeDirection, elementRef: HTMLDivElement, delta: Width): Unit = js.native
+  def onResize(e: MouseEvent, direction: ResizeDirection, elementRef: HTMLElement, delta: Width): Unit = js.native
+  def onResize(e: TouchEvent, direction: ResizeDirection, elementRef: HTMLElement, delta: Width): Unit = js.native
   
-  def onResizeStart(e: SyntheticMouseEvent[HTMLDivElement], dir: ResizeDirection, elementRef: HTMLDivElement): Unit = js.native
-  def onResizeStart(e: SyntheticTouchEvent[HTMLDivElement], dir: ResizeDirection, elementRef: HTMLDivElement): Unit = js.native
+  def onResizeStart(e: SyntheticMouseEvent[HTMLElement], dir: ResizeDirection, elementRef: HTMLElement): Unit = js.native
+  def onResizeStart(e: SyntheticTouchEvent[HTMLElement], dir: ResizeDirection, elementRef: HTMLElement): Unit = js.native
   
-  def onResizeStop(e: MouseEvent, direction: ResizeDirection, elementRef: HTMLDivElement, delta: Width): Unit = js.native
-  def onResizeStop(e: TouchEvent, direction: ResizeDirection, elementRef: HTMLDivElement, delta: Width): Unit = js.native
+  def onResizeStop(e: MouseEvent, direction: ResizeDirection, elementRef: HTMLElement, delta: Width): Unit = js.native
+  def onResizeStop(e: TouchEvent, direction: ResizeDirection, elementRef: HTMLElement, delta: Width): Unit = js.native
   
   def refDraggable(c: js.Any): Unit = js.native
   
@@ -68,6 +68,8 @@ class Rnd protected ()
   def refResizable(c: Resizable): Unit = js.native
   
   var resizable: Resizable = js.native
+  
+  var resizableElement: Current = js.native
   
   var resizing: Boolean = js.native
   

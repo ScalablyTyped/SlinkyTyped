@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("react-native", "SectionList")
 @js.native
-class SectionList[SectionT] ()
-  extends Component[SectionListProps[SectionT], js.Object, js.Any] {
+class SectionList[ItemT, SectionT] ()
+  extends Component[SectionListProps[ItemT, SectionT], js.Object, js.Any] {
   
   /**
     * Displays the scroll indicators momentarily.

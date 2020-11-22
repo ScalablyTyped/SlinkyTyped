@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartArgumentAxisTick extends dxPolarChartCommonAxisSettingsTick {
   
-  /** @name dxPolarChart.Options.argumentAxis.tick.shift */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis.tick.shift]
+    */
   var shift: js.UndefOr[Double] = js.native
 }
 object dxPolarChartArgumentAxisTick {

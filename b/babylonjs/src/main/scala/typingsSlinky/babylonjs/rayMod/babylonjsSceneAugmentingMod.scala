@@ -42,6 +42,20 @@ object babylonjsSceneAugmentingMod extends js.Object {
       rayFunction: js.Function1[/* world */ Matrix, Ray],
       predicate: js.UndefOr[scala.Nothing],
       fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: js.UndefOr[scala.Nothing],
+      trianglePredicate: TrianglePickingPredicate
+    ): Nullable[PickingInfo] = js.native
+    def _internalPick(
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      predicate: js.UndefOr[scala.Nothing],
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPick(
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      predicate: js.UndefOr[scala.Nothing],
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: Boolean,
       trianglePredicate: TrianglePickingPredicate
     ): Nullable[PickingInfo] = js.native
     def _internalPick(
@@ -53,6 +67,20 @@ object babylonjsSceneAugmentingMod extends js.Object {
       rayFunction: js.Function1[/* world */ Matrix, Ray],
       predicate: js.UndefOr[scala.Nothing],
       fastCheck: Boolean,
+      onlyBoundingInfo: js.UndefOr[scala.Nothing],
+      trianglePredicate: TrianglePickingPredicate
+    ): Nullable[PickingInfo] = js.native
+    def _internalPick(
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      predicate: js.UndefOr[scala.Nothing],
+      fastCheck: Boolean,
+      onlyBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPick(
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      predicate: js.UndefOr[scala.Nothing],
+      fastCheck: Boolean,
+      onlyBoundingInfo: Boolean,
       trianglePredicate: TrianglePickingPredicate
     ): Nullable[PickingInfo] = js.native
     def _internalPick(
@@ -63,6 +91,20 @@ object babylonjsSceneAugmentingMod extends js.Object {
       rayFunction: js.Function1[/* world */ Matrix, Ray],
       predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
       fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: js.UndefOr[scala.Nothing],
+      trianglePredicate: TrianglePickingPredicate
+    ): Nullable[PickingInfo] = js.native
+    def _internalPick(
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPick(
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: Boolean,
       trianglePredicate: TrianglePickingPredicate
     ): Nullable[PickingInfo] = js.native
     def _internalPick(
@@ -74,7 +116,168 @@ object babylonjsSceneAugmentingMod extends js.Object {
       rayFunction: js.Function1[/* world */ Matrix, Ray],
       predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
       fastCheck: Boolean,
+      onlyBoundingInfo: js.UndefOr[scala.Nothing],
       trianglePredicate: TrianglePickingPredicate
+    ): Nullable[PickingInfo] = js.native
+    def _internalPick(
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+      fastCheck: Boolean,
+      onlyBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPick(
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      predicate: js.Function1[/* mesh */ AbstractMesh, Boolean],
+      fastCheck: Boolean,
+      onlyBoundingInfo: Boolean,
+      trianglePredicate: TrianglePickingPredicate
+    ): Nullable[PickingInfo] = js.native
+    
+    /** @hidden */
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: js.UndefOr[scala.Nothing],
+      trianglePredicate: js.UndefOr[scala.Nothing],
+      skipBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: js.UndefOr[scala.Nothing],
+      trianglePredicate: TrianglePickingPredicate
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: js.UndefOr[scala.Nothing],
+      trianglePredicate: TrianglePickingPredicate,
+      skipBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: Boolean,
+      trianglePredicate: js.UndefOr[scala.Nothing],
+      skipBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: Boolean,
+      trianglePredicate: TrianglePickingPredicate
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: js.UndefOr[scala.Nothing],
+      onlyBoundingInfo: Boolean,
+      trianglePredicate: TrianglePickingPredicate,
+      skipBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: Boolean,
+      onlyBoundingInfo: js.UndefOr[scala.Nothing],
+      trianglePredicate: js.UndefOr[scala.Nothing],
+      skipBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: Boolean,
+      onlyBoundingInfo: js.UndefOr[scala.Nothing],
+      trianglePredicate: TrianglePickingPredicate
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: Boolean,
+      onlyBoundingInfo: js.UndefOr[scala.Nothing],
+      trianglePredicate: TrianglePickingPredicate,
+      skipBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: Boolean,
+      onlyBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: Boolean,
+      onlyBoundingInfo: Boolean,
+      trianglePredicate: js.UndefOr[scala.Nothing],
+      skipBoundingInfo: Boolean
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: Boolean,
+      onlyBoundingInfo: Boolean,
+      trianglePredicate: TrianglePickingPredicate
+    ): Nullable[PickingInfo] = js.native
+    def _internalPickForMesh(
+      pickingInfo: Nullable[PickingInfo],
+      rayFunction: js.Function1[/* world */ Matrix, Ray],
+      mesh: AbstractMesh,
+      world: Matrix,
+      fastCheck: Boolean,
+      onlyBoundingInfo: Boolean,
+      trianglePredicate: TrianglePickingPredicate,
+      skipBoundingInfo: Boolean
     ): Nullable[PickingInfo] = js.native
     
     /** @hidden */

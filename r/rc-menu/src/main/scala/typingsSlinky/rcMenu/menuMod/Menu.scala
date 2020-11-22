@@ -29,8 +29,6 @@ trait Menu
   
   def getRealMenuMode(): MenuMode = js.native
   
-  var inlineOpenKeys: js.Array[String] = js.native
-  
   var innerMenu: ComponentClassSubPopupMen = js.native
   
   var isRootMenu: Boolean = js.native
@@ -60,6 +58,4 @@ trait Menu
   def updateMenuDisplay(): Unit = js.native
   
   def updateMiniStore(): Unit = js.native
-  
-  def updateOpentKeysWhenSwitchMode(prevProps: MenuProps): Unit = js.native
 }

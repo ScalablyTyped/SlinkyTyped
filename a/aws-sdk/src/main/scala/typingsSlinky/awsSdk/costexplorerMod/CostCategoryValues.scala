@@ -10,6 +10,11 @@ trait CostCategoryValues extends js.Object {
   var Key: js.UndefOr[CostCategoryName] = js.native
   
   /**
+    *  The match options that you can use to filter your results. MatchOptions is only applicable for only applicable for actions related to cost category. The default values for MatchOptions is EQUALS and CASE_SENSITIVE. 
+    */
+  var MatchOptions: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.MatchOptions] = js.native
+  
+  /**
     * The specific value of the Cost Category.
     */
   var Values: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.Values] = js.native
@@ -42,6 +47,15 @@ object CostCategoryValues {
     
     @scala.inline
     def deleteKey: Self = this.set("Key", js.undefined)
+    
+    @scala.inline
+    def setMatchOptionsVarargs(value: MatchOption*): Self = this.set("MatchOptions", js.Array(value :_*))
+    
+    @scala.inline
+    def setMatchOptions(value: MatchOptions): Self = this.set("MatchOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMatchOptions: Self = this.set("MatchOptions", js.undefined)
     
     @scala.inline
     def setValuesVarargs(value: Value*): Self = this.set("Values", js.Array(value :_*))

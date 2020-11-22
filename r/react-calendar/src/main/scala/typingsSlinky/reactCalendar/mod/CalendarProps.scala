@@ -14,6 +14,8 @@ trait CalendarProps extends js.Object {
   
   var activeStartDate: js.UndefOr[js.Date] = js.native
   
+  var allowPartialRange: js.UndefOr[Boolean] = js.native
+  
   var calendarType: js.UndefOr[CalendarType] = js.native
   
   var className: js.UndefOr[String | js.Array[String]] = js.native
@@ -164,6 +166,12 @@ object CalendarProps {
     
     @scala.inline
     def deleteActiveStartDate: Self = this.set("activeStartDate", js.undefined)
+    
+    @scala.inline
+    def setAllowPartialRange(value: Boolean): Self = this.set("allowPartialRange", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowPartialRange: Self = this.set("allowPartialRange", js.undefined)
     
     @scala.inline
     def setCalendarType(value: CalendarType): Self = this.set("calendarType", value.asInstanceOf[js.Any])

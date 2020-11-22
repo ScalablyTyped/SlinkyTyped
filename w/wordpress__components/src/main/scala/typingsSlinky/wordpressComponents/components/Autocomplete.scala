@@ -23,6 +23,9 @@ object Autocomplete {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
+    def isSelected(value: Boolean): this.type = set("isSelected", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def onChange(value: /* value */ Value => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline

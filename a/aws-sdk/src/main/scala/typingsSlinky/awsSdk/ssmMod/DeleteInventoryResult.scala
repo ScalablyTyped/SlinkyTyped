@@ -10,7 +10,7 @@ trait DeleteInventoryResult extends js.Object {
   /**
     * Every DeleteInventory action is assigned a unique ID. This option returns a unique ID. You can use this ID to query the status of a delete operation. This option is useful for ensuring that a delete operation has completed before you begin other actions. 
     */
-  var DeletionId: js.UndefOr[InventoryDeletionId] = js.native
+  var DeletionId: js.UndefOr[UUID] = js.native
   
   /**
     * A summary of the delete operation. For more information about this summary, see Deleting custom inventory in the AWS Systems Manager User Guide.
@@ -46,7 +46,7 @@ object DeleteInventoryResult {
     }
     
     @scala.inline
-    def setDeletionId(value: InventoryDeletionId): Self = this.set("DeletionId", value.asInstanceOf[js.Any])
+    def setDeletionId(value: UUID): Self = this.set("DeletionId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeletionId: Self = this.set("DeletionId", js.undefined)

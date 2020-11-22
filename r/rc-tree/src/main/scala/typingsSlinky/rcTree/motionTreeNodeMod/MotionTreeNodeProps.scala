@@ -69,6 +69,8 @@ trait MotionTreeNodeProps extends js.Object {
   
   def onMotionEnd(): Unit = js.native
   
+  def onMotionStart(): Unit = js.native
+  
   var onMouseMove: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
   
   var pos: js.UndefOr[String] = js.native
@@ -90,8 +92,13 @@ trait MotionTreeNodeProps extends js.Object {
 object MotionTreeNodeProps {
   
   @scala.inline
-  def apply(active: Boolean, onMotionEnd: () => Unit, treeNodeRequiredProps: TreeNodeRequiredProps): MotionTreeNodeProps = {
-    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], onMotionEnd = js.Any.fromFunction0(onMotionEnd), treeNodeRequiredProps = treeNodeRequiredProps.asInstanceOf[js.Any])
+  def apply(
+    active: Boolean,
+    onMotionEnd: () => Unit,
+    onMotionStart: () => Unit,
+    treeNodeRequiredProps: TreeNodeRequiredProps
+  ): MotionTreeNodeProps = {
+    val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], onMotionEnd = js.Any.fromFunction0(onMotionEnd), onMotionStart = js.Any.fromFunction0(onMotionStart), treeNodeRequiredProps = treeNodeRequiredProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[MotionTreeNodeProps]
   }
   
@@ -115,6 +122,9 @@ object MotionTreeNodeProps {
     
     @scala.inline
     def setOnMotionEnd(value: () => Unit): Self = this.set("onMotionEnd", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setOnMotionStart(value: () => Unit): Self = this.set("onMotionStart", js.Any.fromFunction0(value))
     
     @scala.inline
     def setTreeNodeRequiredProps(value: TreeNodeRequiredProps): Self = this.set("treeNodeRequiredProps", value.asInstanceOf[js.Any])

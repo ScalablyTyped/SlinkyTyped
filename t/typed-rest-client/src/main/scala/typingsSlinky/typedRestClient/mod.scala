@@ -12,6 +12,11 @@ object mod extends js.Object {
   @js.native
   class BasicCredentialHandler protected () extends IRequestHandler {
     def this(username: String, password: String) = this()
+    def this(username: String, password: String, allowCrossOriginAuthentication: Boolean) = this()
+    
+    var allowCrossOriginAuthentication: Boolean = js.native
+    
+    var origin: String = js.native
     
     var password: String = js.native
     

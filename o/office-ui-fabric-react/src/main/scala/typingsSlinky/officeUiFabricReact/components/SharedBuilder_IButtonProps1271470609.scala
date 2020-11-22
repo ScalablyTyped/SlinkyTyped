@@ -24,6 +24,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.baseButtonClassNamesMod.IButtonClassNames
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.ButtonType
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButton
@@ -39,8 +40,14 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.ButtonHTMLAttributes
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -85,7 +92,6 @@ import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.uifabricMergeStyles.istyleMod.IStyle
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps
@@ -232,7 +238,9 @@ class SharedBuilder_IButtonProps1271470609[R <: js.Object] (val args: js.Array[j
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -416,6 +424,18 @@ class SharedBuilder_IButtonProps1271470609[R <: js.Object] (val args: js.Array[j
   
   @scala.inline
   def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def elementRefRefObject(value: ReactRef[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def elementRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("elementRef", js.Any.fromFunction1(value))
+  
+  @scala.inline
+  def elementRef(value: Ref[HTMLElement]): this.type = set("elementRef", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def elementRefNull: this.type = set("elementRef", null)
   
   @scala.inline
   def encType(value: String): this.type = set("encType", value.asInstanceOf[js.Any])

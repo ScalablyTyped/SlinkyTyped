@@ -74,127 +74,208 @@ object dayjsStrings {
   @js.native
   sealed trait M
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
        with UnitTypeShort
+       with typingsSlinky.dayjs.esmMod.UnitTypeShort
   
   @js.native
-  sealed trait Q extends QUnitType
+  sealed trait Q
+    extends QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
   
   @js.native
   sealed trait d
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
        with UnitTypeShort
+       with typingsSlinky.dayjs.esmMod.UnitTypeShort
   
   @js.native
   sealed trait date
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
   
   @js.native
   sealed trait day
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
   
   @js.native
   sealed trait h
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
        with UnitTypeShort
+       with typingsSlinky.dayjs.esmMod.UnitTypeShort
   
   @js.native
   sealed trait hour
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
   
   @js.native
-  sealed trait isoWeek extends ISOUnitType
+  sealed trait isoWeek
+    extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
   
   @js.native
   sealed trait m_
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
        with UnitTypeShort
+       with typingsSlinky.dayjs.esmMod.UnitTypeShort
   
   @js.native
   sealed trait millisecond
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
   
   @js.native
   sealed trait minute
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
   
   @js.native
   sealed trait month
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
   
   @js.native
   sealed trait ms
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
        with UnitTypeShort
+       with typingsSlinky.dayjs.esmMod.UnitTypeShort
   
   @js.native
-  sealed trait quarter extends QUnitType
+  sealed trait quarter
+    extends QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
   
   @js.native
   sealed trait s
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
        with UnitTypeShort
+       with typingsSlinky.dayjs.esmMod.UnitTypeShort
   
   @js.native
   sealed trait second
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
   
   @js.native
-  sealed trait w extends OpUnitType
+  sealed trait w
+    extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
+       with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
   
   @js.native
-  sealed trait week extends OpUnitType
+  sealed trait week
+    extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
+       with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
   
   @js.native
   sealed trait y
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
        with UnitTypeShort
+       with typingsSlinky.dayjs.esmMod.UnitTypeShort
   
   @js.native
   sealed trait year
     extends ISOUnitType
+       with typingsSlinky.dayjs.pluginIsoWeekMod.ISOUnitType
        with OpUnitType
+       with typingsSlinky.dayjs.esmMod.OpUnitType
        with QUnitType
+       with typingsSlinky.dayjs.esmMod.QUnitType
        with UnitType
+       with typingsSlinky.dayjs.esmMod.UnitType
 }

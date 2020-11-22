@@ -40,7 +40,9 @@ trait Torrent extends EventEmitter {
   def deselect(start: Double, end: Double, priority: Double): Unit = js.native
   
   def destroy(): Unit = js.native
-  def destroy(cb: js.Function1[/* err */ js.Error | String, Unit]): Unit = js.native
+  def destroy(opts: js.UndefOr[scala.Nothing], cb: js.Function1[/* err */ js.Error | String, Unit]): Unit = js.native
+  def destroy(opts: TorrentDestroyOptions): Unit = js.native
+  def destroy(opts: TorrentDestroyOptions, cb: js.Function1[/* err */ js.Error | String, Unit]): Unit = js.native
   
   val done: Boolean = js.native
   

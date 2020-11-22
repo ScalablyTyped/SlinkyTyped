@@ -1,6 +1,6 @@
 package typingsSlinky.rcProgress.components
 
-import typingsSlinky.rcProgress.mod.RCProgressProps
+import typingsSlinky.rcProgress.interfaceMod.ProgressProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ object Line {
   @js.native
   object component extends js.Object
   
-  def withProps(p: RCProgressProps): SharedBuilder_RCProgressProps89681719[typingsSlinky.rcProgress.mod.Line] = new SharedBuilder_RCProgressProps89681719[typingsSlinky.rcProgress.mod.Line](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ProgressProps): SharedBuilder_ProgressProps_555392113 = new SharedBuilder_ProgressProps_555392113(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make(companion: Line.type): SharedBuilder_RCProgressProps89681719[typingsSlinky.rcProgress.mod.Line] = new SharedBuilder_RCProgressProps89681719[typingsSlinky.rcProgress.mod.Line](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: Line.type): SharedBuilder_ProgressProps_555392113 = new SharedBuilder_ProgressProps_555392113(js.Array(this.component, js.Dictionary.empty))()
 }

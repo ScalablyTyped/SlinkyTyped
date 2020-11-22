@@ -1,12 +1,14 @@
 package typingsSlinky.blueprintjsCore.mod
 
 import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import typingsSlinky.blueprintjsCore.anon.Key
 import typingsSlinky.blueprintjsCore.compareUtilsMod.IKeyAllowlist
 import typingsSlinky.blueprintjsCore.compareUtilsMod.IKeyDenylist
@@ -40,17 +42,19 @@ object Utils extends js.Object {
   
   def countDecimalPlaces(num: Double): Double = js.native
   
+  def createReactRef[T](): ReactRef[T] = js.native
+  
   def deepCompareKeys(objA: js.Any, objB: js.Any): Boolean = js.native
   def deepCompareKeys(objA: js.Any, objB: js.Any, keys: js.Array[String | Double | js.Symbol]): Boolean = js.native
   
   def elementIsOrContains(element: HTMLElement, testElement: HTMLElement): Boolean = js.native
   
-  def ensureElement(): ReactElement = js.native
+  def ensureElement(): js.UndefOr[ReactElement] = js.native
   def ensureElement(
     child: js.UndefOr[ReactElement],
     tagName: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 175 */ js.Any
-  ): ReactElement = js.native
-  def ensureElement(child: ReactElement): ReactElement = js.native
+  ): js.UndefOr[ReactElement] = js.native
+  def ensureElement(child: ReactElement): js.UndefOr[ReactElement] = js.native
   
   def getDeepUnequalKeyValues[T /* <: js.Object */](): js.Array[Key[T]] = js.native
   def getDeepUnequalKeyValues[T /* <: js.Object */](objA: T): js.Array[Key[T]] = js.native
@@ -68,8 +72,9 @@ object Utils extends js.Object {
   def getDisplayName(ComponentClass: INamed): String = js.native
   def getDisplayName(ComponentClass: ReactComponentClass[js.Object]): String = js.native
   
-  def getRef[T](ref: T): T = js.native
-  def getRef[T](ref: IRefObject[T]): T = js.native
+  def getRef[T](): T | Null = js.native
+  def getRef[T](ref: T): T | Null = js.native
+  def getRef[T](ref: IRefObject[T]): T | Null = js.native
   
   def isElementOfType[P](element: js.Any, ComponentType: ReactComponentClass[P]): /* is react.react.ReactElement */ Boolean = js.native
   
@@ -155,9 +160,9 @@ object Utils extends js.Object {
   
   def throttleEvent(target: EventTarget, eventName: String, newEventName: String): js.Function1[/* event */ Event, Unit] = js.native
   
-  def throttleReactEventCallback(callback: js.Function2[/* event */ SyntheticEvent[Event, _], /* repeated */ js.Any, _]): js.Function1[/* event2 */ SyntheticEvent[Event, _], Unit] = js.native
-  def throttleReactEventCallback(
-    callback: js.Function2[/* event */ SyntheticEvent[Event, _], /* repeated */ js.Any, _],
+  def throttleReactEventCallback[E /* <: SyntheticEvent[Event, Element] */](callback: js.Function2[/* event */ E, /* repeated */ js.Any, _]): js.Function1[/* event2 */ E, Unit] = js.native
+  def throttleReactEventCallback[E /* <: SyntheticEvent[Event, Element] */](
+    callback: js.Function2[/* event */ E, /* repeated */ js.Any, _],
     options: IThrottledReactEventOptions
-  ): js.Function1[/* event2 */ SyntheticEvent[Event, _], Unit] = js.native
+  ): js.Function1[/* event2 */ E, Unit] = js.native
 }

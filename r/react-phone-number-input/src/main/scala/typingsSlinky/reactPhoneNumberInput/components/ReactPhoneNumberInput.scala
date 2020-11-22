@@ -30,8 +30,13 @@ import typingsSlinky.reactPhoneNumberInput.mod.CountrySelectComponentProps
 import typingsSlinky.reactPhoneNumberInput.mod.FlagsMap
 import typingsSlinky.reactPhoneNumberInput.mod.PhoneInputProps
 import typingsSlinky.reactPhoneNumberInput.mod.default
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`additions removals`
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`additions text`
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`inline`
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`removals additions`
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`removals text`
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`text additions`
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.`text removals`
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.additions
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.all
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.ascending
@@ -42,8 +47,11 @@ import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.date
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.decimal
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.descending
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.dialog
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.done
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.email
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.enter
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.execute
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.go
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.grammar
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.grid
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.horizontal
@@ -55,6 +63,7 @@ import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.location
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.menu
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.mixed
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.move
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.next
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.no
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.none
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.numeric
@@ -64,8 +73,10 @@ import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.other
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.page
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.polite
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.popup
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.previous
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.removals
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.search
+import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.send
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.spelling
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.step
 import typingsSlinky.reactPhoneNumberInput.reactPhoneNumberInputStrings.tel
@@ -211,7 +222,9 @@ object ReactPhoneNumberInput {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -307,7 +320,7 @@ object ReactPhoneNumberInput {
     def countrySelectComponent(value: ReactComponentClass[CountrySelectComponentProps]): this.type = set("countrySelectComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def countrySelectProps(value: Double): this.type = set("countrySelectProps", value.asInstanceOf[js.Any])
+    def countrySelectProps(value: js.Object): this.type = set("countrySelectProps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def crossOrigin(value: String): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
@@ -341,6 +354,9 @@ object ReactPhoneNumberInput {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def error(value: String): this.type = set("error", value.asInstanceOf[js.Any])

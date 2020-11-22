@@ -33,10 +33,15 @@ object default extends js.Object {
   def hover(element: TargetElement): Unit = js.native
   def hover(element: TargetElement, init: MouseEventInit): Unit = js.native
   
-  def paste(element: TargetElement): Unit = js.native
-  def paste(element: TargetElement, init: js.UndefOr[scala.Nothing], pasteOptions: InitialSelectionEnd): Unit = js.native
-  def paste(element: TargetElement, init: js.Object): Unit = js.native
-  def paste(element: TargetElement, init: js.Object, pasteOptions: InitialSelectionEnd): Unit = js.native
+  def paste(element: TargetElement, text: String): Unit = js.native
+  def paste(
+    element: TargetElement,
+    text: String,
+    init: js.UndefOr[scala.Nothing],
+    pasteOptions: InitialSelectionEnd
+  ): Unit = js.native
+  def paste(element: TargetElement, text: String, init: MouseEventInit): Unit = js.native
+  def paste(element: TargetElement, text: String, init: MouseEventInit, pasteOptions: InitialSelectionEnd): Unit = js.native
   
   def selectOptions(element: TargetElement, values: String): Unit = js.native
   def selectOptions(element: TargetElement, values: String, init: MouseEventInit): Unit = js.native
@@ -48,8 +53,8 @@ object default extends js.Object {
   def tab(): Unit = js.native
   def tab(userOpts: ITabUserOptions): Unit = js.native
   
-  def `type`(element: TargetElement, text: String): js.Promise[Unit] = js.native
-  def `type`(element: TargetElement, text: String, userOpts: ITypeOpts): js.Promise[Unit] = js.native
+  def `type`[T /* <: ITypeOpts */](element: TargetElement, text: String): Unit | js.Promise[Unit] = js.native
+  def `type`[T /* <: ITypeOpts */](element: TargetElement, text: String, userOpts: T): Unit | js.Promise[Unit] = js.native
   
   def unhover(element: TargetElement): Unit = js.native
   def unhover(element: TargetElement, init: MouseEventInit): Unit = js.native

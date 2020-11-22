@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.anon.LightmapMode
 import typingsSlinky.babylonjs.effectMod.IEffectCreationOptions
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.lightMod.Light
+import typingsSlinky.babylonjs.prePassConfigurationMod.PrePassConfiguration
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
@@ -24,11 +25,28 @@ object MaterialHelper extends js.Object {
     * Binds the bones information from the mesh to the effect.
     * @param mesh The mesh we are binding the information to render
     * @param effect The effect we are binding the data to
+    * @param prePassConfiguration Configuration for the prepass, in case prepass is activated
     */
   def BindBonesParameters(): Unit = js.native
+  def BindBonesParameters(
+    mesh: js.UndefOr[scala.Nothing],
+    effect: js.UndefOr[scala.Nothing],
+    prePassConfiguration: PrePassConfiguration
+  ): Unit = js.native
   def BindBonesParameters(mesh: js.UndefOr[scala.Nothing], effect: typingsSlinky.babylonjs.effectMod.Effect): Unit = js.native
+  def BindBonesParameters(
+    mesh: js.UndefOr[scala.Nothing],
+    effect: typingsSlinky.babylonjs.effectMod.Effect,
+    prePassConfiguration: PrePassConfiguration
+  ): Unit = js.native
   def BindBonesParameters(mesh: AbstractMesh): Unit = js.native
+  def BindBonesParameters(mesh: AbstractMesh, effect: js.UndefOr[scala.Nothing], prePassConfiguration: PrePassConfiguration): Unit = js.native
   def BindBonesParameters(mesh: AbstractMesh, effect: typingsSlinky.babylonjs.effectMod.Effect): Unit = js.native
+  def BindBonesParameters(
+    mesh: AbstractMesh,
+    effect: typingsSlinky.babylonjs.effectMod.Effect,
+    prePassConfiguration: PrePassConfiguration
+  ): Unit = js.native
   
   /**
     * Binds the clip plane information from the scene to the effect.
@@ -41,8 +59,10 @@ object MaterialHelper extends js.Object {
     * Bind the current view position to an effect.
     * @param effect The effect to be bound
     * @param scene The scene the eyes position is used from
+    * @param variableName name of the shader variable that will hold the eye position
     */
   def BindEyePosition(effect: typingsSlinky.babylonjs.effectMod.Effect, scene: Scene): Unit = js.native
+  def BindEyePosition(effect: typingsSlinky.babylonjs.effectMod.Effect, scene: Scene, variableName: String): Unit = js.native
   
   /**
     * Binds the fog information from the scene to the effect for the given mesh.
@@ -279,8 +299,18 @@ object MaterialHelper extends js.Object {
     * @param defines specifies the list of active defines
     * @param useInstances defines if instances have to be turned on
     * @param useClipPlane defines if clip plane have to be turned on
+    * @param useInstances defines if instances have to be turned on
+    * @param useThinInstances defines if thin instances have to be turned on
     */
   def PrepareDefinesForFrameBoundValues(scene: Scene, engine: Engine, defines: js.Any, useInstances: Boolean): Unit = js.native
+  def PrepareDefinesForFrameBoundValues(
+    scene: Scene,
+    engine: Engine,
+    defines: js.Any,
+    useInstances: Boolean,
+    useClipPlane: js.UndefOr[Nullable[Boolean]],
+    useThinInstances: Boolean
+  ): Unit = js.native
   def PrepareDefinesForFrameBoundValues(
     scene: Scene,
     engine: Engine,
@@ -388,14 +418,31 @@ object MaterialHelper extends js.Object {
   def PrepareDefinesForMultiview(scene: Scene, defines: js.Any): Unit = js.native
   
   /**
+    * Prepares the defines related to the prepass
+    * @param scene The scene we are intending to draw
+    * @param defines The defines to update
+    * @param canRenderToMRT Indicates if this material renders to several textures in the prepass
+    */
+  def PrepareDefinesForPrePass(scene: Scene, defines: js.Any, canRenderToMRT: Boolean): Unit = js.native
+  
+  /**
     * Prepares the uniforms and samplers list to be used in the effect (for a specific light)
     * @param lightIndex defines the light index
     * @param uniformsList The uniform list
     * @param samplersList The sampler list
     * @param projectedLightTexture defines if projected texture must be used
     * @param uniformBuffersList defines an optional list of uniform buffers
+    * @param updateOnlyBuffersList True to only update the uniformBuffersList array
     */
   def PrepareUniformsAndSamplersForLight(lightIndex: Double, uniformsList: js.Array[String], samplersList: js.Array[String]): Unit = js.native
+  def PrepareUniformsAndSamplersForLight(
+    lightIndex: Double,
+    uniformsList: js.Array[String],
+    samplersList: js.Array[String],
+    projectedLightTexture: js.UndefOr[scala.Nothing],
+    uniformBuffersList: js.UndefOr[Nullable[js.Array[String]]],
+    updateOnlyBuffersList: Boolean
+  ): Unit = js.native
   def PrepareUniformsAndSamplersForLight(
     lightIndex: Double,
     uniformsList: js.Array[String],
@@ -408,6 +455,14 @@ object MaterialHelper extends js.Object {
     uniformsList: js.Array[String],
     samplersList: js.Array[String],
     projectedLightTexture: js.Any
+  ): Unit = js.native
+  def PrepareUniformsAndSamplersForLight(
+    lightIndex: Double,
+    uniformsList: js.Array[String],
+    samplersList: js.Array[String],
+    projectedLightTexture: js.Any,
+    uniformBuffersList: js.UndefOr[Nullable[js.Array[String]]],
+    updateOnlyBuffersList: Boolean
   ): Unit = js.native
   def PrepareUniformsAndSamplersForLight(
     lightIndex: Double,
@@ -490,6 +545,8 @@ object MaterialHelper extends js.Object {
     * @param attribs The current list of supported attribs
     */
   def PushAttributesForInstances(attribs: js.Array[String]): Unit = js.native
+  
+  var _CopyBonesTransformationMatrices: js.Any = js.native
   
   var _TmpMorphInfluencers: js.Any = js.native
   

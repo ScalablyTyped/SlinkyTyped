@@ -14,4 +14,4 @@ trait FieldColumnConstructor
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable-FieldColumn.html)
   */
 Instantiable0[FieldColumn]
-     with Instantiable1[/* properties */ js.Any, FieldColumn]
+     with Instantiable1[/* properties */ FieldColumnProperties, FieldColumn]

@@ -4,7 +4,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.feedLikeMod.FeedLikeProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -34,7 +33,7 @@ class SharedBuilder_FeedMetaProps1680283281 (val args: js.Array[js.Any])
   
   @scala.inline
   def likeFunction3(
-    value: (/* component */ ReactType[FeedLikeProps], FeedLikeProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, FeedLikeProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("like", js.Any.fromFunction3(value))
   
   @scala.inline

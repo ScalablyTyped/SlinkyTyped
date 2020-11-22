@@ -21,6 +21,32 @@ trait PivotLayoutLoadOptions extends js.Object {
   
   /**
     *
+    * The alt text description of the PivotTable.
+    
+    Alt text provides alternative, text-based representations of the information contained in the PivotTable.
+    This information is useful for people with vision or cognitive impairments who may not be able to see or understand the table.
+    A title can be read to a person with a disability and is used to determine whether they wish to hear the description of the content.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var altTextDescription: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
+    * The alt text title of the PivotTable.
+    
+    Alt text provides alternative, text-based representations of the information contained in the PivotTable.
+    This information is useful for people with vision or cognitive impairments who may not be able to see or understand the table.
+    A title can be read to a person with a disability and is used to determine whether they wish to hear the description of the content.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var altTextTitle: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
     * Specifies if formatting will be automatically formatted when it’s refreshed or when fields are moved.
     *
     * [Api set: ExcelApi 1.9]
@@ -29,11 +55,32 @@ trait PivotLayoutLoadOptions extends js.Object {
   
   /**
     *
+    * The text that is automatically filled into any empty cell in the PivotTable if `fillEmptyCells == true`.
+    Note that this value persists if `fillEmptyCells` is set to false, and that setting this value does not set that property to true.
+    By default, this is an empty string.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var emptyCellText: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
     * Specifies if the field list can be shown in the UI.
     *
     * [Api set: ExcelApi 1.10]
     */
   var enableFieldList: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
+    * Specifies whether empty cells in the PivotTable should be populated with the `emptyCellText`. False by default.
+    Note that the value of `emptyCellText` persists when this property is set to false.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var fillEmptyCells: js.UndefOr[Boolean] = js.native
   
   /**
     *
@@ -67,6 +114,15 @@ trait PivotLayoutLoadOptions extends js.Object {
     * [Api set: ExcelApi 1.8]
     */
   var showColumnGrandTotals: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
+    * Specifies whether the PivotTable displays field headers (field captions and filter drop-downs).
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var showFieldHeaders: js.UndefOr[Boolean] = js.native
   
   /**
     *
@@ -114,16 +170,40 @@ object PivotLayoutLoadOptions {
     def delete$all: Self = this.set("$all", js.undefined)
     
     @scala.inline
+    def setAltTextDescription(value: Boolean): Self = this.set("altTextDescription", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAltTextDescription: Self = this.set("altTextDescription", js.undefined)
+    
+    @scala.inline
+    def setAltTextTitle(value: Boolean): Self = this.set("altTextTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAltTextTitle: Self = this.set("altTextTitle", js.undefined)
+    
+    @scala.inline
     def setAutoFormat(value: Boolean): Self = this.set("autoFormat", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAutoFormat: Self = this.set("autoFormat", js.undefined)
     
     @scala.inline
+    def setEmptyCellText(value: Boolean): Self = this.set("emptyCellText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEmptyCellText: Self = this.set("emptyCellText", js.undefined)
+    
+    @scala.inline
     def setEnableFieldList(value: Boolean): Self = this.set("enableFieldList", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnableFieldList: Self = this.set("enableFieldList", js.undefined)
+    
+    @scala.inline
+    def setFillEmptyCells(value: Boolean): Self = this.set("fillEmptyCells", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFillEmptyCells: Self = this.set("fillEmptyCells", js.undefined)
     
     @scala.inline
     def setLayoutType(value: Boolean): Self = this.set("layoutType", value.asInstanceOf[js.Any])
@@ -148,6 +228,12 @@ object PivotLayoutLoadOptions {
     
     @scala.inline
     def deleteShowColumnGrandTotals: Self = this.set("showColumnGrandTotals", js.undefined)
+    
+    @scala.inline
+    def setShowFieldHeaders(value: Boolean): Self = this.set("showFieldHeaders", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShowFieldHeaders: Self = this.set("showFieldHeaders", js.undefined)
     
     @scala.inline
     def setShowRowGrandTotals(value: Boolean): Self = this.set("showRowGrandTotals", value.asInstanceOf[js.Any])

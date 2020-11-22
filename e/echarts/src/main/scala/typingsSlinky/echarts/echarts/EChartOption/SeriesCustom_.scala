@@ -1,9 +1,24 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.anon.Arguments
 import typingsSlinky.echarts.anon.BorderType
 import typingsSlinky.echarts.anon.`2`
 import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.DataObject
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItem
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemApi
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemParams
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnArc
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnBezierCurve
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnCircle
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnGroup
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnImage
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnLine
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnPath
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnPolygon
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnPolyline
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnRect
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnRing
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnSector
+import typingsSlinky.echarts.echarts.EChartOption.SeriesCustom.RenderItemReturnText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -668,8 +683,26 @@ trait SeriesCustom_ extends js.Object {
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.renderItem
+    *
+    * @returns
+    * `renderItem` should returns graphic element definitions.
+    * Each graphic element is an object. See
+    * [graphic](https://echarts.apache.org/en/option.html#graphic.elements)
+    * for detailed info.
+    * (But width\\height\\top\\bottom is not supported here)
+    *
+    * If nothing should be rendered in this data item, just returns
+    * nothing.
+    *
+    * For example:
+    *
+    * [see doc](https://echarts.apache.org/en/option.html#series-custom.custom.renderItem)
+    * [see doc](https://echarts.apache.org/en/option.html#series-custom.custom.renderItem)
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-custom.renderItem.return
     */
-  var renderItem: js.UndefOr[Arguments] = js.native
+  var renderItem: js.UndefOr[RenderItem] = js.native
   
   /**
     * When
@@ -934,7 +967,9 @@ object SeriesCustom_ {
     def deletePolarIndex: Self = this.set("polarIndex", js.undefined)
     
     @scala.inline
-    def setRenderItem(value: Arguments): Self = this.set("renderItem", value.asInstanceOf[js.Any])
+    def setRenderItem(
+      value: (/* params */ RenderItemParams, /* api */ RenderItemApi) => RenderItemReturnGroup | RenderItemReturnPath | RenderItemReturnImage | RenderItemReturnText | RenderItemReturnRect | RenderItemReturnCircle | RenderItemReturnRing | RenderItemReturnSector | RenderItemReturnArc | RenderItemReturnPolygon | RenderItemReturnPolyline | RenderItemReturnLine | RenderItemReturnBezierCurve
+    ): Self = this.set("renderItem", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteRenderItem: Self = this.set("renderItem", js.undefined)

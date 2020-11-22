@@ -14,6 +14,9 @@ object grpcGrpcJsStrings {
   def bidi: bidi = "bidi".asInstanceOf[bidi]
   
   @scala.inline
+  def cds: cds = "cds".asInstanceOf[cds]
+  
+  @scala.inline
   def clientStream: clientStream = "clientStream".asInstanceOf[clientStream]
   
   @scala.inline
@@ -39,6 +42,9 @@ object grpcGrpcJsStrings {
   
   @scala.inline
   def grpclb: grpclb = "grpclb".asInstanceOf[grpclb]
+  
+  @scala.inline
+  def lrs: lrs = "lrs".asInstanceOf[lrs]
   
   @scala.inline
   def metadata: metadata = "metadata".asInstanceOf[metadata]
@@ -71,6 +77,18 @@ object grpcGrpcJsStrings {
   def status: status = "status".asInstanceOf[status]
   
   @scala.inline
+  def typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotCluster: typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotCluster = "type.googleapis.com/envoy.api.v2.Cluster".asInstanceOf[typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotCluster]
+  
+  @scala.inline
+  def typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotClusterLoadAssignment: typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotClusterLoadAssignment = "type.googleapis.com/envoy.api.v2.ClusterLoadAssignment".asInstanceOf[typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotClusterLoadAssignment]
+  
+  @scala.inline
+  def typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotListener: typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotListener = "type.googleapis.com/envoy.api.v2.Listener".asInstanceOf[typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotListener]
+  
+  @scala.inline
+  def typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotRouteConfiguration: typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotRouteConfiguration = "type.googleapis.com/envoy.api.v2.RouteConfiguration".asInstanceOf[typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotRouteConfiguration]
+  
+  @scala.inline
   def unary: unary = "unary".asInstanceOf[unary]
   
   @scala.inline
@@ -87,6 +105,9 @@ object grpcGrpcJsStrings {
   
   @js.native
   sealed trait bidi extends HandlerType
+  
+  @js.native
+  sealed trait cds extends js.Object
   
   @js.native
   sealed trait clientStream extends HandlerType
@@ -114,6 +135,9 @@ object grpcGrpcJsStrings {
   
   @js.native
   sealed trait grpclb extends js.Object
+  
+  @js.native
+  sealed trait lrs extends js.Object
   
   @js.native
   sealed trait metadata extends js.Object
@@ -144,6 +168,18 @@ object grpcGrpcJsStrings {
   
   @js.native
   sealed trait status extends js.Object
+  
+  @js.native
+  sealed trait typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotCluster extends js.Object
+  
+  @js.native
+  sealed trait typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotClusterLoadAssignment extends js.Object
+  
+  @js.native
+  sealed trait typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotListener extends js.Object
+  
+  @js.native
+  sealed trait typeDotgoogleapisDotcomSlashenvoyDotapiDotv2DotRouteConfiguration extends js.Object
   
   @js.native
   sealed trait unary extends HandlerType

@@ -92,6 +92,7 @@ object createMethodSignature extends js.Object {
     name: PropertyName,
     questionToken: QuestionToken
   ): MethodSignature = js.native
+  /** @deprecated Use `factory.createMethodSignature` or the factory supplied by your transformation context instead. */
   def apply(
     typeParameters: js.Array[TypeParameterDeclaration],
     parameters: js.Array[ParameterDeclaration],

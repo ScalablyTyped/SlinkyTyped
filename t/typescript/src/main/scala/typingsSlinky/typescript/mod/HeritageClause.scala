@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait HeritageClause extends Node {
   
   @JSName("kind")
-  var kind_HeritageClause: typingsSlinky.typescript.mod.SyntaxKind.HeritageClause = js.native
+  val kind_HeritageClause: typingsSlinky.typescript.mod.SyntaxKind.HeritageClause = js.native
   
   @JSName("parent")
-  var parent_HeritageClause: InterfaceDeclaration | ClassLikeDeclaration = js.native
+  val parent_HeritageClause: InterfaceDeclaration | ClassLikeDeclaration = js.native
   
-  var token: ExtendsKeyword | ImplementsKeyword = js.native
+  val token: ExtendsKeyword | ImplementsKeyword = js.native
   
-  var types: NodeArray[ExpressionWithTypeArguments] = js.native
+  val types: NodeArray[ExpressionWithTypeArguments] = js.native
 }

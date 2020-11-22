@@ -2,16 +2,14 @@ package typingsSlinky.jupyterlabLogconsole.loggerMod
 
 import typingsSlinky.jupyterlabLogconsole.loggerMod.Logger.IOptions
 import typingsSlinky.jupyterlabLogconsole.tokensMod.IContentChange
-import typingsSlinky.jupyterlabLogconsole.tokensMod.ILogPayload
 import typingsSlinky.jupyterlabLogconsole.tokensMod.ILogger
-import typingsSlinky.jupyterlabLogconsole.tokensMod.ILoggerOutputAreaModel
 import typingsSlinky.jupyterlabLogconsole.tokensMod.IStateChange
 import typingsSlinky.jupyterlabLogconsole.tokensMod.LogLevel
 import typingsSlinky.jupyterlabRendermime.tokensMod.IRenderMimeRegistry
-import typingsSlinky.phosphorSignaling.mod.ISignal
+import typingsSlinky.luminoSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/logconsole/lib/logger", "Logger")
 @js.native
@@ -22,46 +20,55 @@ class Logger_ protected () extends ILogger {
     * @param source - The name of the log source.
     */
   def this(options: IOptions) = this()
+  
   var _contentChanged: js.Any = js.native
+  
   var _isDisposed: js.Any = js.native
+  
   var _level: js.Any = js.native
+  
   var _log: js.Any = js.native
+  
   var _rendermime: js.Any = js.native
+  
   var _stateChanged: js.Any = js.native
+  
   var _version: js.Any = js.native
+  
   /**
-    * A signal emitted when the log model changes.
+    * A signal emitted when the list of log messages changes.
     */
-  /* CompleteClass */
-  override val contentChanged: ISignal[this.type, IContentChange] = js.native
+  @JSName("contentChanged")
+  def contentChanged_MLogger_ : ISignal[this.type, IContentChange] = js.native
+  
   /**
-    * Test whether the object has been disposed.
-    *
-    * #### Notes
-    * This property is always safe to access.
+    * Whether the logger is disposed.
     */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
+  @JSName("isDisposed")
+  def isDisposed_MLogger_ : Boolean = js.native
+  
   /**
     * Number of outputs logged.
     */
-  /* CompleteClass */
-  override val length: Double = js.native
+  @JSName("length")
+  def length_MLogger_ : Double = js.native
+  
   /**
-    * Log level.
+    * The level of outputs logged
     */
-  /* CompleteClass */
-  override var level: LogLevel = js.native
+  @JSName("level")
+  def level_MLogger_ : LogLevel = js.native
+  
   /**
-    * Max number of messages.
+    * The maximum number of outputs stored.
+    *
+    * #### Notes
+    * Oldest entries will be trimmed to ensure the length is at most
+    * `.maxLength`.
     */
-  /* CompleteClass */
-  override var maxLength: Double = js.native
-  /**
-    * Output Area Model used to manage log storage in memory.
-    */
-  /* CompleteClass */
-  override val outputAreaModel: ILoggerOutputAreaModel = js.native
+  @JSName("maxLength")
+  def maxLength_MLogger_ : Double = js.native
+  
   /**
     * The output area model used for the logger.
     *
@@ -71,60 +78,22 @@ class Logger_ protected () extends ILogger {
     */
   @JSName("outputAreaModel")
   val outputAreaModel_Logger_ : LoggerOutputAreaModel = js.native
-  /**
-    * Rendermime to use when rendering outputs logged.
-    */
-  /* CompleteClass */
-  override var rendermime: IRenderMimeRegistry = js.native
+  
   /**
     * Rendermime to use when rendering outputs logged.
     */
   @JSName("rendermime")
-  var rendermime_Logger_ : IRenderMimeRegistry | Null = js.native
+  def rendermime_MLogger_ : IRenderMimeRegistry | Null = js.native
+  
   /**
-    * The name of the log source.
+    * A signal emitted when the log state changes.
     */
-  /* CompleteClass */
-  override val source: String = js.native
+  @JSName("stateChanged")
+  def stateChanged_MLogger_ : ISignal[this.type, IStateChange] = js.native
+  
   /**
-    * A signal emitted when the rendermime changes.
+    * The number of messages that have ever been stored.
     */
-  /* CompleteClass */
-  override val stateChanged: ISignal[this.type, IStateChange] = js.native
-  /**
-    * The cumulative number of messages the log has stored.
-    */
-  /* CompleteClass */
-  override val version: Double = js.native
-  /**
-    * Add a checkpoint in the log.
-    */
-  /* CompleteClass */
-  override def checkpoint(): Unit = js.native
-  /**
-    * Clear all outputs logged.
-    */
-  /* CompleteClass */
-  override def clear(): Unit = js.native
-  /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
-  /**
-    * Log an output to logger.
-    *
-    * @param log - The output to be logged.
-    */
-  /* CompleteClass */
-  override def log(log: ILogPayload): Unit = js.native
+  @JSName("version")
+  def version_MLogger_ : Double = js.native
 }
-

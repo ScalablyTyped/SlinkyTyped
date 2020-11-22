@@ -16,6 +16,9 @@ object mod extends js.Object {
   object nolookalikes extends TopLevel[String]
   
   @js.native
+  object nolookalikesSafe extends TopLevel[String]
+  
+  @js.native
   object numbers extends TopLevel[String]
   
   @js.native

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -8,6 +9,7 @@ import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.CodeActionParameter
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.INanoflow
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.JavaActionParameterMapping
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.JavaScriptActionParameterMapping
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import scala.scalajs.js
@@ -40,12 +42,9 @@ object nanoflowsMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
-      
-      @JSName("model")
-      var model_FNanoflowParameterValue: IModel = js.native
       
       def nanoflow: INanoflow | Null = js.native
       

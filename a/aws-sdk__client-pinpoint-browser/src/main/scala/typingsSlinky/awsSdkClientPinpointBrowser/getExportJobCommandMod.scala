@@ -1,12 +1,10 @@
 package typingsSlinky.awsSdkClientPinpointBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientPinpointBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientPinpointBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientPinpointBrowser.pinpointConfigurationMod.PinpointResolvedConfiguration
 import typingsSlinky.awsSdkClientPinpointBrowser.typesGetExportJobInputMod.GetExportJobInput
 import typingsSlinky.awsSdkClientPinpointBrowser.typesGetExportJobOutputMod.GetExportJobOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
@@ -23,15 +21,12 @@ object getExportJobCommandMod extends js.Object {
           GetExportJobInput, 
           OutputTypesUnion, 
           GetExportJobOutput, 
-          PinpointResolvedConfiguration, 
-          Blob
+          PinpointResolvedConfiguration
         ] {
     def this(input: GetExportJobInput) = this()
     
-    val middlewareStack: MiddlewareStack[GetExportJobInput, GetExportJobOutput, Blob] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any,
       configuration: PinpointResolvedConfiguration
     ): Handler[GetExportJobInput, GetExportJobOutput] = js.native
   }

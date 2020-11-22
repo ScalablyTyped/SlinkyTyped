@@ -57,11 +57,11 @@ object Masonry {
     def virtualize(value: Boolean): this.type = set("virtualize", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: MasonryProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: MasonryProps[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(comp: ReactComponentClass[Data], items: js.Array[_]): Builder = {
+  def apply(comp: ReactComponentClass[Data[js.Any]], items: js.Array[js.Any]): Builder = {
     val __props = js.Dynamic.literal(comp = comp.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[MasonryProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[MasonryProps[js.Any]]))
   }
 }

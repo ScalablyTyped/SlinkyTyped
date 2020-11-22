@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("backgrid", "CellEditor")
 @js.native
 class CellEditor ()
-  extends View[Model[js.Any, ModelSetOptions]] {
+  extends View[Model[js.Any, ModelSetOptions, js.Object]] {
   
   def initialize(options: js.Any): Unit = js.native
   
-  def postRender(model: Model[_, ModelSetOptions], column: Model[_, ModelSetOptions]): js.Any = js.native
+  def postRender(model: Model[_, ModelSetOptions, js.Object], column: Model[_, ModelSetOptions, js.Object]): js.Any = js.native
 }

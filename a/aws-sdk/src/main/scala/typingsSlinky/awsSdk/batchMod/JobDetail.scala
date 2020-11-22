@@ -23,7 +23,7 @@ trait JobDetail extends js.Object {
   var container: js.UndefOr[ContainerDetail] = js.native
   
   /**
-    * The Unix timestamp (in seconds and milliseconds) for when the job was created. For non-array jobs and parent array jobs, this is when the job entered the SUBMITTED state (at the time SubmitJob was called). For array child jobs, this is when the child job was spawned by its parent and entered the PENDING state.
+    * The Unix timestamp (in milliseconds) for when the job was created. For non-array jobs and parent array jobs, this is when the job entered the SUBMITTED state (at the time SubmitJob was called). For array child jobs, this is when the child job was spawned by its parent and entered the PENDING state.
     */
   var createdAt: js.UndefOr[Long] = js.native
   
@@ -31,6 +31,11 @@ trait JobDetail extends js.Object {
     * A list of job IDs on which this job depends.
     */
   var dependsOn: js.UndefOr[JobDependencyList] = js.native
+  
+  /**
+    * The Amazon Resource Name (ARN) of the job.
+    */
+  var jobArn: js.UndefOr[String] = js.native
   
   /**
     * The job definition that is used by this job.
@@ -73,7 +78,7 @@ trait JobDetail extends js.Object {
   var retryStrategy: js.UndefOr[RetryStrategy] = js.native
   
   /**
-    * The Unix timestamp (in seconds and milliseconds) for when the job was started (when the job transitioned from the STARTING state to the RUNNING state).
+    * The Unix timestamp (in milliseconds) for when the job was started (when the job transitioned from the STARTING state to the RUNNING state). This parameter is not provided for child jobs of array jobs or multi-node parallel jobs.
     */
   var startedAt: Long = js.native
   
@@ -88,9 +93,14 @@ trait JobDetail extends js.Object {
   var statusReason: js.UndefOr[String] = js.native
   
   /**
-    * The Unix timestamp (in seconds and milliseconds) for when the job was stopped (when the job transitioned from the RUNNING state to a terminal state, such as SUCCEEDED or FAILED).
+    * The Unix timestamp (in milliseconds) for when the job was stopped (when the job transitioned from the RUNNING state to a terminal state, such as SUCCEEDED or FAILED).
     */
   var stoppedAt: js.UndefOr[Long] = js.native
+  
+  /**
+    * The tags applied to the job.
+    */
+  var tags: js.UndefOr[TagrisTagsMap] = js.native
   
   /**
     * The timeout configuration for the job.
@@ -182,6 +192,12 @@ object JobDetail {
     def deleteDependsOn: Self = this.set("dependsOn", js.undefined)
     
     @scala.inline
+    def setJobArn(value: String): Self = this.set("jobArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJobArn: Self = this.set("jobArn", js.undefined)
+    
+    @scala.inline
     def setNodeDetails(value: NodeDetails): Self = this.set("nodeDetails", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -216,6 +232,12 @@ object JobDetail {
     
     @scala.inline
     def deleteStoppedAt: Self = this.set("stoppedAt", js.undefined)
+    
+    @scala.inline
+    def setTags(value: TagrisTagsMap): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
     
     @scala.inline
     def setTimeout(value: JobTimeout): Self = this.set("timeout", value.asInstanceOf[js.Any])

@@ -35,5 +35,5 @@ object formatterMod extends js.Object {
   @JSName("createFormatter")
   def createFormatter_T_FormatterType[T /* <: FormatterType */](`type`: T): Formatter = js.native
   
-  def createWebpackFormatter(formatter: Formatter, context: String): Formatter = js.native
+  def createWebpackFormatter(formatter: Formatter): Formatter = js.native
 }

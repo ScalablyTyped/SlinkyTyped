@@ -18,7 +18,7 @@ trait S3Settings extends js.Object {
   var BucketName: js.UndefOr[String] = js.native
   
   /**
-    * A value that enables a change data capture (CDC) load to write INSERT and UPDATE operations to .csv or .parquet (columnar storage) output files. The default setting is false, but when CdcInsertsAndUpdates is set to trueor y, INSERTs and UPDATEs from the source database are migrated to the .csv or .parquet file.  For .csv file format only, how these INSERTs and UPDATEs are recorded depends on the value of the IncludeOpForFullLoad parameter. If IncludeOpForFullLoad is set to true, the first field of every CDC record is set to either I or U to indicate INSERT and UPDATE operations at the source. But if IncludeOpForFullLoad is set to false, CDC records are written without an indication of INSERT or UPDATE operations at the source. For more information about how these settings work together, see Indicating Source DB Operations in Migrated S3 Data in the AWS Database Migration Service User Guide..  AWS DMS supports the use of the CdcInsertsAndUpdates parameter in versions 3.3.1 and later.  CdcInsertsOnly and CdcInsertsAndUpdates can't both be set to true for the same endpoint. Set either CdcInsertsOnly or CdcInsertsAndUpdates to true for the same endpoint, but not both. 
+    * A value that enables a change data capture (CDC) load to write INSERT and UPDATE operations to .csv or .parquet (columnar storage) output files. The default setting is false, but when CdcInsertsAndUpdates is set to true or y, only INSERTs and UPDATEs from the source database are migrated to the .csv or .parquet file.  For .csv file format only, how these INSERTs and UPDATEs are recorded depends on the value of the IncludeOpForFullLoad parameter. If IncludeOpForFullLoad is set to true, the first field of every CDC record is set to either I or U to indicate INSERT and UPDATE operations at the source. But if IncludeOpForFullLoad is set to false, CDC records are written without an indication of INSERT or UPDATE operations at the source. For more information about how these settings work together, see Indicating Source DB Operations in Migrated S3 Data in the AWS Database Migration Service User Guide..  AWS DMS supports the use of the CdcInsertsAndUpdates parameter in versions 3.3.1 and later.  CdcInsertsOnly and CdcInsertsAndUpdates can't both be set to true for the same endpoint. Set either CdcInsertsOnly or CdcInsertsAndUpdates to true for the same endpoint, but not both. 
     */
   var CdcInsertsAndUpdates: js.UndefOr[BooleanOptional] = js.native
   
@@ -33,12 +33,12 @@ trait S3Settings extends js.Object {
   var CompressionType: js.UndefOr[CompressionTypeValue] = js.native
   
   /**
-    *  The delimiter used to separate columns in the source files. The default is a comma. 
+    *  The delimiter used to separate columns in the .csv file for both source and target. The default is a comma. 
     */
   var CsvDelimiter: js.UndefOr[String] = js.native
   
   /**
-    *  The delimiter used to separate rows in the source files. The default is a carriage return (\n). 
+    *  The delimiter used to separate rows in the .csv file for both source and target. The default is a carriage return (\n). 
     */
   var CsvRowDelimiter: js.UndefOr[String] = js.native
   
@@ -51,6 +51,21 @@ trait S3Settings extends js.Object {
     * The size of one data page in bytes. This parameter defaults to 1024 * 1024 bytes (1 MiB). This number is used for .parquet file format only. 
     */
   var DataPageSize: js.UndefOr[IntegerOptional] = js.native
+  
+  /**
+    * Specifies a date separating delimiter to use during folder partitioning. The default value is SLASH. Use this parameter when DatePartitionedEnabled is set to true.
+    */
+  var DatePartitionDelimiter: js.UndefOr[DatePartitionDelimiterValue] = js.native
+  
+  /**
+    * When set to true, this parameter partitions S3 bucket folders based on transaction commit dates. The default value is false. For more information about date-based folder partitoning, see Using date-based folder partitioning.
+    */
+  var DatePartitionEnabled: js.UndefOr[BooleanOptional] = js.native
+  
+  /**
+    * Identifies the sequence of the date format to use during folder partitioning. The default value is YYYYMMDD. Use this parameter when DatePartitionedEnabled is set to true.
+    */
+  var DatePartitionSequence: js.UndefOr[DatePartitionSequenceValue] = js.native
   
   /**
     * The maximum size of an encoded dictionary page of a column. If the dictionary page exceeds this, this column is stored using an encoding type of PLAIN. This parameter defaults to 1024 * 1024 bytes (1 MiB), the maximum size of a dictionary page before it reverts to PLAIN encoding. This size is used for .parquet file format only. 
@@ -68,12 +83,12 @@ trait S3Settings extends js.Object {
   var EncodingType: js.UndefOr[EncodingTypeValue] = js.native
   
   /**
-    * The type of server-side encryption that you want to use for your data. This encryption type is part of the endpoint settings or the extra connections attributes for Amazon S3. You can choose either SSE_S3 (the default) or SSE_KMS. To use SSE_S3, you need an AWS Identity and Access Management (IAM) role with permission to allow "arn:aws:s3:::dms-*" to use the following actions:    s3:CreateBucket     s3:ListBucket     s3:DeleteBucket     s3:GetBucketLocation     s3:GetObject     s3:PutObject     s3:DeleteObject     s3:GetObjectVersion     s3:GetBucketPolicy     s3:PutBucketPolicy     s3:DeleteBucketPolicy   
+    * The type of server-side encryption that you want to use for your data. This encryption type is part of the endpoint settings or the extra connections attributes for Amazon S3. You can choose either SSE_S3 (the default) or SSE_KMS.   For the ModifyEndpoint operation, you can change the existing value of the EncryptionMode parameter from SSE_KMS to SSE_S3. But you can’t change the existing value from SSE_S3 to SSE_KMS.  To use SSE_S3, you need an AWS Identity and Access Management (IAM) role with permission to allow "arn:aws:s3:::dms-*" to use the following actions:    s3:CreateBucket     s3:ListBucket     s3:DeleteBucket     s3:GetBucketLocation     s3:GetObject     s3:PutObject     s3:DeleteObject     s3:GetObjectVersion     s3:GetBucketPolicy     s3:PutBucketPolicy     s3:DeleteBucketPolicy   
     */
   var EncryptionMode: js.UndefOr[EncryptionModeValue] = js.native
   
   /**
-    *  The external table definition. 
+    *  Specifies how tables are defined in the S3 source files only. 
     */
   var ExternalTableDefinition: js.UndefOr[String] = js.native
   
@@ -103,7 +118,7 @@ trait S3Settings extends js.Object {
   var ServerSideEncryptionKmsKeyId: js.UndefOr[String] = js.native
   
   /**
-    *  The Amazon Resource Name (ARN) used by the service access IAM role. 
+    *  The Amazon Resource Name (ARN) used by the service access IAM role. It is a required parameter that enables DMS to write and read objects from an 3S bucket.
     */
   var ServiceAccessRoleArn: js.UndefOr[String] = js.native
   
@@ -188,6 +203,24 @@ object S3Settings {
     
     @scala.inline
     def deleteDataPageSize: Self = this.set("DataPageSize", js.undefined)
+    
+    @scala.inline
+    def setDatePartitionDelimiter(value: DatePartitionDelimiterValue): Self = this.set("DatePartitionDelimiter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDatePartitionDelimiter: Self = this.set("DatePartitionDelimiter", js.undefined)
+    
+    @scala.inline
+    def setDatePartitionEnabled(value: BooleanOptional): Self = this.set("DatePartitionEnabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDatePartitionEnabled: Self = this.set("DatePartitionEnabled", js.undefined)
+    
+    @scala.inline
+    def setDatePartitionSequence(value: DatePartitionSequenceValue): Self = this.set("DatePartitionSequence", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDatePartitionSequence: Self = this.set("DatePartitionSequence", js.undefined)
     
     @scala.inline
     def setDictPageSizeLimit(value: IntegerOptional): Self = this.set("DictPageSizeLimit", value.asInstanceOf[js.Any])

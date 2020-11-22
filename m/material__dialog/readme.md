@@ -1,7 +1,7 @@
 
 # Scala.js typings for material__dialog
 
-Typings are for version 7.0.0
+Typings are for version 8.0.0
 
 ## Library description:
 The Material Components Web dialog component

@@ -10,25 +10,25 @@ trait Connection extends js.Object {
   
   var clientAddress: String = js.native
   
-  var close: js.Function = js.native
+  def close(): Unit = js.native
   
   var httpHeaders: js.Object = js.native
   
   var id: String = js.native
   
-  var onClose: js.Function = js.native
+  def onClose(callback: js.Function0[Unit]): Unit = js.native
 }
 object Connection {
   
   @scala.inline
   def apply(
     clientAddress: String,
-    close: js.Function,
+    close: () => Unit,
     httpHeaders: js.Object,
     id: String,
-    onClose: js.Function
+    onClose: js.Function0[Unit] => Unit
   ): Connection = {
-    val __obj = js.Dynamic.literal(clientAddress = clientAddress.asInstanceOf[js.Any], close = close.asInstanceOf[js.Any], httpHeaders = httpHeaders.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onClose = onClose.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(clientAddress = clientAddress.asInstanceOf[js.Any], close = js.Any.fromFunction0(close), httpHeaders = httpHeaders.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onClose = js.Any.fromFunction1(onClose))
     __obj.asInstanceOf[Connection]
   }
   
@@ -51,7 +51,7 @@ object Connection {
     def setClientAddress(value: String): Self = this.set("clientAddress", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClose(value: js.Function): Self = this.set("close", value.asInstanceOf[js.Any])
+    def setClose(value: () => Unit): Self = this.set("close", js.Any.fromFunction0(value))
     
     @scala.inline
     def setHttpHeaders(value: js.Object): Self = this.set("httpHeaders", value.asInstanceOf[js.Any])
@@ -60,6 +60,6 @@ object Connection {
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnClose(value: js.Function): Self = this.set("onClose", value.asInstanceOf[js.Any])
+    def setOnClose(value: js.Function0[Unit] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
   }
 }

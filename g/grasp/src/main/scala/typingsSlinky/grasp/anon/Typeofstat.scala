@@ -1,7 +1,10 @@
 package typingsSlinky.grasp.anon
 
 import typingsSlinky.node.NodeJS.ErrnoException
+import typingsSlinky.node.fsMod.BigIntOptions
+import typingsSlinky.node.fsMod.BigIntStats
 import typingsSlinky.node.fsMod.PathLike
+import typingsSlinky.node.fsMod.StatOptions
 import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,4 +14,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Typeofstat extends js.Object {
   
   def apply(path: PathLike, callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ Stats, Unit]): Unit = js.native
+  def apply(
+    path: PathLike,
+    options: BigIntOptions,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ BigIntStats, Unit]
+  ): Unit = js.native
+  def apply(
+    path: PathLike,
+    options: StatOptions,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* stats */ Stats | BigIntStats, Unit]
+  ): Unit = js.native
 }

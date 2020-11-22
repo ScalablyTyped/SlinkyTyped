@@ -152,13 +152,6 @@ trait PointOptionsObject extends js.Object {
   var from: js.UndefOr[String] = js.native
   
   /**
-    * (Highcharts) By deafult sides fill is set to a gradient through this
-    * option being set to `true`. Set to `false` to get solid color for the
-    * sides.
-    */
-  var gradientForSides: js.UndefOr[Boolean] = js.native
-  
-  /**
     * (Highcharts, Highstock) The high or maximum value for each data point.
     */
   var high: js.UndefOr[Double] = js.native
@@ -268,7 +261,8 @@ trait PointOptionsObject extends js.Object {
   
   /**
     * (Highcharts, Highstock, Gantt) A pixel value specifying a fixed width for
-    * the column or bar. Overrides pointWidth on the series.
+    * the column or bar. Overrides pointWidth on the series. The width effects
+    * the dimension that is not based on the point value.
     */
   var pointWidth: js.UndefOr[Double] = js.native
   
@@ -545,12 +539,6 @@ object PointOptionsObject {
     
     @scala.inline
     def deleteFrom: Self = this.set("from", js.undefined)
-    
-    @scala.inline
-    def setGradientForSides(value: Boolean): Self = this.set("gradientForSides", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteGradientForSides: Self = this.set("gradientForSides", js.undefined)
     
     @scala.inline
     def setHigh(value: Double): Self = this.set("high", value.asInstanceOf[js.Any])

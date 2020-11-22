@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Backend extends js.Object {
   
   /**
-    * Specifies a virtual service to use as a backend for a virtual node. 
+    * Specifies a virtual service to use as a backend. 
     */
   var virtualService: js.UndefOr[VirtualServiceBackend] = js.native
 }

@@ -7,43 +7,69 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StoreOptions[T] extends js.Object {
   
-  /** @name Store.Options.errorHandler */
+  /**
+    * [descr:Store.Options.errorHandler]
+    */
   var errorHandler: js.UndefOr[js.Function] = js.native
   
-  /** @name Store.Options.key */
+  /**
+    * [descr:Store.Options.key]
+    */
   var key: js.UndefOr[String | js.Array[String]] = js.native
   
-  /** @name Store.Options.onInserted */
+  /**
+    * [descr:Store.Options.onInserted]
+    */
   var onInserted: js.UndefOr[js.Function2[/* values */ js.Any, /* key */ js.Any | String | Double, _]] = js.native
   
-  /** @name Store.Options.onInserting */
+  /**
+    * [descr:Store.Options.onInserting]
+    */
   var onInserting: js.UndefOr[js.Function1[/* values */ js.Any, _]] = js.native
   
-  /** @name Store.Options.onLoaded */
+  /**
+    * [descr:Store.Options.onLoaded]
+    */
   var onLoaded: js.UndefOr[js.Function1[/* result */ js.Array[_], _]] = js.native
   
-  /** @name Store.Options.onLoading */
+  /**
+    * [descr:Store.Options.onLoading]
+    */
   var onLoading: js.UndefOr[js.Function1[/* loadOptions */ LoadOptions, _]] = js.native
   
-  /** @name Store.Options.onModified */
+  /**
+    * [descr:Store.Options.onModified]
+    */
   var onModified: js.UndefOr[js.Function] = js.native
   
-  /** @name Store.Options.onModifying */
+  /**
+    * [descr:Store.Options.onModifying]
+    */
   var onModifying: js.UndefOr[js.Function] = js.native
   
-  /** @name Store.Options.onPush */
+  /**
+    * [descr:Store.Options.onPush]
+    */
   var onPush: js.UndefOr[js.Function1[/* changes */ js.Array[_], _]] = js.native
   
-  /** @name Store.Options.onRemoved */
+  /**
+    * [descr:Store.Options.onRemoved]
+    */
   var onRemoved: js.UndefOr[js.Function1[/* key */ js.Any | String | Double, _]] = js.native
   
-  /** @name Store.Options.onRemoving */
+  /**
+    * [descr:Store.Options.onRemoving]
+    */
   var onRemoving: js.UndefOr[js.Function1[/* key */ js.Any | String | Double, _]] = js.native
   
-  /** @name Store.Options.onUpdated */
+  /**
+    * [descr:Store.Options.onUpdated]
+    */
   var onUpdated: js.UndefOr[js.Function2[/* key */ js.Any | String | Double, /* values */ js.Any, _]] = js.native
   
-  /** @name Store.Options.onUpdating */
+  /**
+    * [descr:Store.Options.onUpdating]
+    */
   var onUpdating: js.UndefOr[js.Function2[/* key */ js.Any | String | Double, /* values */ js.Any, _]] = js.native
 }
 object StoreOptions {

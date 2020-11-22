@@ -1,12 +1,11 @@
 package typingsSlinky.rcFieldForm.interfaceMod
 
 import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`false`
-import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Omit<rc-field-form.rc-field-form/es/interface.FormInstance, 'validateFields'> & {  validateFields :rc-field-form.rc-field-form/es/interface.InternalValidateFields,   prefixName :rc-field-form.rc-field-form/es/interface.InternalNamePath | undefined,   validateTrigger :string | std.Array<string> | false | undefined, getInternalHooks (secret : string): rc-field-form.rc-field-form/es/interface.InternalHooks | null} */
+/* Inlined std.Omit<rc-field-form.rc-field-form/es/interface.FormInstance<any>, 'validateFields'> & {  validateFields :rc-field-form.rc-field-form/es/interface.InternalValidateFields,   prefixName :rc-field-form.rc-field-form/es/interface.InternalNamePath | undefined,   validateTrigger :string | std.Array<string> | false | undefined, getInternalHooks (secret : string): rc-field-form.rc-field-form/es/interface.InternalHooks | null} */
 @js.native
 trait InternalFormInstance extends js.Object {
   
@@ -16,11 +15,7 @@ trait InternalFormInstance extends js.Object {
   
   var getFieldsError: js.Function1[/* nameList */ js.UndefOr[js.Array[NamePath]], js.Array[FieldError]] = js.native
   
-  var getFieldsValue: js.Function2[
-    /* nameList */ js.UndefOr[js.Array[NamePath] | `true`], 
-    /* filterFunc */ js.UndefOr[js.Function1[/* meta */ Meta, Boolean]], 
-    Store
-  ] = js.native
+  var getFieldsValue: js.Function0[_] = js.native
   
   /**
     * Form component should register some content into store.
@@ -49,7 +44,7 @@ trait InternalFormInstance extends js.Object {
   
   var setFields: js.Function1[/* fields */ js.Array[FieldData], Unit] = js.native
   
-  var setFieldsValue: js.Function1[/* value */ Store, Unit] = js.native
+  var setFieldsValue: js.Function1[/* value */ RecursivePartial[_], Unit] = js.native
   
   var submit: js.Function0[Unit] = js.native
   
@@ -64,7 +59,7 @@ object InternalFormInstance {
     getFieldError: /* name */ NamePath => js.Array[String],
     getFieldValue: /* name */ NamePath => StoreValue,
     getFieldsError: /* nameList */ js.UndefOr[js.Array[NamePath]] => js.Array[FieldError],
-    getFieldsValue: (/* nameList */ js.UndefOr[js.Array[NamePath] | `true`], /* filterFunc */ js.UndefOr[js.Function1[/* meta */ Meta, Boolean]]) => Store,
+    getFieldsValue: () => _,
     getInternalHooks: String => InternalHooks | Null,
     isFieldTouched: /* name */ NamePath => Boolean,
     isFieldValidating: /* name */ NamePath => Boolean,
@@ -72,11 +67,11 @@ object InternalFormInstance {
     isFieldsValidating: /* nameList */ js.Array[NamePath] => Boolean,
     resetFields: /* fields */ js.UndefOr[js.Array[NamePath]] => Unit,
     setFields: /* fields */ js.Array[FieldData] => Unit,
-    setFieldsValue: /* value */ Store => Unit,
+    setFieldsValue: /* value */ RecursivePartial[_] => Unit,
     submit: () => Unit,
     validateFields: (/* nameList */ js.UndefOr[js.Array[NamePath]], /* options */ js.UndefOr[ValidateOptions]) => js.Promise[Store]
   ): InternalFormInstance = {
-    val __obj = js.Dynamic.literal(getFieldError = js.Any.fromFunction1(getFieldError), getFieldValue = js.Any.fromFunction1(getFieldValue), getFieldsError = js.Any.fromFunction1(getFieldsError), getFieldsValue = js.Any.fromFunction2(getFieldsValue), getInternalHooks = js.Any.fromFunction1(getInternalHooks), isFieldTouched = js.Any.fromFunction1(isFieldTouched), isFieldValidating = js.Any.fromFunction1(isFieldValidating), isFieldsTouched = js.Any.fromFunction2(isFieldsTouched), isFieldsValidating = js.Any.fromFunction1(isFieldsValidating), resetFields = js.Any.fromFunction1(resetFields), setFields = js.Any.fromFunction1(setFields), setFieldsValue = js.Any.fromFunction1(setFieldsValue), submit = js.Any.fromFunction0(submit), validateFields = js.Any.fromFunction2(validateFields))
+    val __obj = js.Dynamic.literal(getFieldError = js.Any.fromFunction1(getFieldError), getFieldValue = js.Any.fromFunction1(getFieldValue), getFieldsError = js.Any.fromFunction1(getFieldsError), getFieldsValue = js.Any.fromFunction0(getFieldsValue), getInternalHooks = js.Any.fromFunction1(getInternalHooks), isFieldTouched = js.Any.fromFunction1(isFieldTouched), isFieldValidating = js.Any.fromFunction1(isFieldValidating), isFieldsTouched = js.Any.fromFunction2(isFieldsTouched), isFieldsValidating = js.Any.fromFunction1(isFieldsValidating), resetFields = js.Any.fromFunction1(resetFields), setFields = js.Any.fromFunction1(setFields), setFieldsValue = js.Any.fromFunction1(setFieldsValue), submit = js.Any.fromFunction0(submit), validateFields = js.Any.fromFunction2(validateFields))
     __obj.asInstanceOf[InternalFormInstance]
   }
   
@@ -105,9 +100,7 @@ object InternalFormInstance {
     def setGetFieldsError(value: /* nameList */ js.UndefOr[js.Array[NamePath]] => js.Array[FieldError]): Self = this.set("getFieldsError", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setGetFieldsValue(
-      value: (/* nameList */ js.UndefOr[js.Array[NamePath] | `true`], /* filterFunc */ js.UndefOr[js.Function1[/* meta */ Meta, Boolean]]) => Store
-    ): Self = this.set("getFieldsValue", js.Any.fromFunction2(value))
+    def setGetFieldsValue(value: () => _): Self = this.set("getFieldsValue", js.Any.fromFunction0(value))
     
     @scala.inline
     def setGetInternalHooks(value: String => InternalHooks | Null): Self = this.set("getInternalHooks", js.Any.fromFunction1(value))
@@ -133,7 +126,7 @@ object InternalFormInstance {
     def setSetFields(value: /* fields */ js.Array[FieldData] => Unit): Self = this.set("setFields", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setSetFieldsValue(value: /* value */ Store => Unit): Self = this.set("setFieldsValue", js.Any.fromFunction1(value))
+    def setSetFieldsValue(value: /* value */ RecursivePartial[_] => Unit): Self = this.set("setFieldsValue", js.Any.fromFunction1(value))
     
     @scala.inline
     def setSubmit(value: () => Unit): Self = this.set("submit", js.Any.fromFunction0(value))

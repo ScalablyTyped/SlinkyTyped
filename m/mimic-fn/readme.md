@@ -1,7 +1,7 @@
 
 # Scala.js typings for mimic-fn
 
-Typings are for version 2.1.0
+Typings are for version 3.1.0
 
 ## Library description:
 Make a function mimic another one

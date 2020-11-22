@@ -7,31 +7,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ExportLoadPanel extends js.Object {
   
-  /** @name ExportLoadPanel.enabled */
+  /**
+    * [descr:ExportLoadPanel.enabled]
+    */
   var enabled: js.UndefOr[Boolean] = js.native
   
-  /** @name ExportLoadPanel.height */
+  /**
+    * [descr:ExportLoadPanel.height]
+    */
   var height: js.UndefOr[Double] = js.native
   
-  /** @name ExportLoadPanel.indicatorSrc */
+  /**
+    * [descr:ExportLoadPanel.indicatorSrc]
+    */
   var indicatorSrc: js.UndefOr[String] = js.native
   
-  /** @name ExportLoadPanel.shading */
+  /**
+    * [descr:ExportLoadPanel.shading]
+    */
   var shading: js.UndefOr[Boolean] = js.native
   
-  /** @name ExportLoadPanel.shadingColor */
+  /**
+    * [descr:ExportLoadPanel.shadingColor]
+    */
   var shadingColor: js.UndefOr[String] = js.native
   
-  /** @name ExportLoadPanel.showIndicator */
+  /**
+    * [descr:ExportLoadPanel.showIndicator]
+    */
   var showIndicator: js.UndefOr[Boolean] = js.native
   
-  /** @name ExportLoadPanel.showPane */
+  /**
+    * [descr:ExportLoadPanel.showPane]
+    */
   var showPane: js.UndefOr[Boolean] = js.native
   
-  /** @name ExportLoadPanel.text */
+  /**
+    * [descr:ExportLoadPanel.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name ExportLoadPanel.width */
+  /**
+    * [descr:ExportLoadPanel.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object ExportLoadPanel {

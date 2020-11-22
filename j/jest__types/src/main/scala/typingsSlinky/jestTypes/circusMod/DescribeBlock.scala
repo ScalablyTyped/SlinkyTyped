@@ -1,5 +1,6 @@
 package typingsSlinky.jestTypes.circusMod
 
+import typingsSlinky.jestTypes.jestTypesStrings.describeBlock
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DescribeBlock extends js.Object {
   
-  var children: js.Array[DescribeBlock] = js.native
+  var children: js.Array[DescribeBlock | TestEntry] = js.native
   
   var hooks: js.Array[Hook] = js.native
   
@@ -17,19 +18,24 @@ trait DescribeBlock extends js.Object {
   
   var parent: js.UndefOr[DescribeBlock] = js.native
   
+  /** @deprecated Please get from `children` array instead */
   var tests: js.Array[TestEntry] = js.native
+  
+  var `type`: describeBlock = js.native
 }
 object DescribeBlock {
   
   @scala.inline
   def apply(
-    children: js.Array[DescribeBlock],
+    children: js.Array[DescribeBlock | TestEntry],
     hooks: js.Array[Hook],
     mode: BlockMode,
     name: BlockName,
-    tests: js.Array[TestEntry]
+    tests: js.Array[TestEntry],
+    `type`: describeBlock
   ): DescribeBlock = {
     val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], hooks = hooks.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], tests = tests.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeBlock]
   }
   
@@ -49,10 +55,10 @@ object DescribeBlock {
     }
     
     @scala.inline
-    def setChildrenVarargs(value: DescribeBlock*): Self = this.set("children", js.Array(value :_*))
+    def setChildrenVarargs(value: (DescribeBlock | TestEntry)*): Self = this.set("children", js.Array(value :_*))
     
     @scala.inline
-    def setChildren(value: js.Array[DescribeBlock]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: js.Array[DescribeBlock | TestEntry]): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHooksVarargs(value: Hook*): Self = this.set("hooks", js.Array(value :_*))
@@ -71,6 +77,9 @@ object DescribeBlock {
     
     @scala.inline
     def setTests(value: js.Array[TestEntry]): Self = this.set("tests", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setType(value: describeBlock): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParent(value: DescribeBlock): Self = this.set("parent", value.asInstanceOf[js.Any])

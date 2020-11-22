@@ -26,28 +26,28 @@ trait MacOSCompliancePolicy extends DeviceCompliancePolicy {
   var firewallEnabled: js.UndefOr[Boolean] = js.native
   
   // Maximum MacOS version.
-  var osMaximumVersion: js.UndefOr[String] = js.native
+  var osMaximumVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Minimum MacOS version.
-  var osMinimumVersion: js.UndefOr[String] = js.native
+  var osMinimumVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates whether or not to block simple passwords.
   var passwordBlockSimple: js.UndefOr[Boolean] = js.native
   
   // Number of days before the password expires. Valid values 1 to 65535
-  var passwordExpirationDays: js.UndefOr[Double] = js.native
+  var passwordExpirationDays: js.UndefOr[NullableOption[Double]] = js.native
   
   // The number of character sets required in the password.
-  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.native
+  var passwordMinimumCharacterSetCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum length of password. Valid values 4 to 14
-  var passwordMinimumLength: js.UndefOr[Double] = js.native
+  var passwordMinimumLength: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minutes of inactivity before a password is required.
-  var passwordMinutesOfInactivityBeforeLock: js.UndefOr[Double] = js.native
+  var passwordMinutesOfInactivityBeforeLock: js.UndefOr[NullableOption[Double]] = js.native
   
   // Number of previous passwords to block. Valid values 1 to 24
-  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var passwordPreviousPasswordBlockCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // Whether or not to require a password.
   var passwordRequired: js.UndefOr[Boolean] = js.native
@@ -115,16 +115,22 @@ object MacOSCompliancePolicy {
     def deleteFirewallEnabled: Self = this.set("firewallEnabled", js.undefined)
     
     @scala.inline
-    def setOsMaximumVersion(value: String): Self = this.set("osMaximumVersion", value.asInstanceOf[js.Any])
+    def setOsMaximumVersion(value: NullableOption[String]): Self = this.set("osMaximumVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOsMaximumVersion: Self = this.set("osMaximumVersion", js.undefined)
     
     @scala.inline
-    def setOsMinimumVersion(value: String): Self = this.set("osMinimumVersion", value.asInstanceOf[js.Any])
+    def setOsMaximumVersionNull: Self = this.set("osMaximumVersion", null)
+    
+    @scala.inline
+    def setOsMinimumVersion(value: NullableOption[String]): Self = this.set("osMinimumVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOsMinimumVersion: Self = this.set("osMinimumVersion", js.undefined)
+    
+    @scala.inline
+    def setOsMinimumVersionNull: Self = this.set("osMinimumVersion", null)
     
     @scala.inline
     def setPasswordBlockSimple(value: Boolean): Self = this.set("passwordBlockSimple", value.asInstanceOf[js.Any])
@@ -133,34 +139,49 @@ object MacOSCompliancePolicy {
     def deletePasswordBlockSimple: Self = this.set("passwordBlockSimple", js.undefined)
     
     @scala.inline
-    def setPasswordExpirationDays(value: Double): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDays(value: NullableOption[Double]): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordExpirationDays: Self = this.set("passwordExpirationDays", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumCharacterSetCount(value: Double): Self = this.set("passwordMinimumCharacterSetCount", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDaysNull: Self = this.set("passwordExpirationDays", null)
+    
+    @scala.inline
+    def setPasswordMinimumCharacterSetCount(value: NullableOption[Double]): Self = this.set("passwordMinimumCharacterSetCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumCharacterSetCount: Self = this.set("passwordMinimumCharacterSetCount", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumLength(value: Double): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
+    def setPasswordMinimumCharacterSetCountNull: Self = this.set("passwordMinimumCharacterSetCount", null)
+    
+    @scala.inline
+    def setPasswordMinimumLength(value: NullableOption[Double]): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumLength: Self = this.set("passwordMinimumLength", js.undefined)
     
     @scala.inline
-    def setPasswordMinutesOfInactivityBeforeLock(value: Double): Self = this.set("passwordMinutesOfInactivityBeforeLock", value.asInstanceOf[js.Any])
+    def setPasswordMinimumLengthNull: Self = this.set("passwordMinimumLength", null)
+    
+    @scala.inline
+    def setPasswordMinutesOfInactivityBeforeLock(value: NullableOption[Double]): Self = this.set("passwordMinutesOfInactivityBeforeLock", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinutesOfInactivityBeforeLock: Self = this.set("passwordMinutesOfInactivityBeforeLock", js.undefined)
     
     @scala.inline
-    def setPasswordPreviousPasswordBlockCount(value: Double): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
+    def setPasswordMinutesOfInactivityBeforeLockNull: Self = this.set("passwordMinutesOfInactivityBeforeLock", null)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCount(value: NullableOption[Double]): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordPreviousPasswordBlockCount: Self = this.set("passwordPreviousPasswordBlockCount", js.undefined)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCountNull: Self = this.set("passwordPreviousPasswordBlockCount", null)
     
     @scala.inline
     def setPasswordRequired(value: Boolean): Self = this.set("passwordRequired", value.asInstanceOf[js.Any])

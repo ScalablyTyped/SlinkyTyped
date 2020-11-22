@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object provideStorage extends js.Object {
   
-  def apply(storageConfig: StorageConfig): Storage = js.native
+  def apply(storageConfig: StorageConfig, platformID: js.Object): Storage = js.native
 }

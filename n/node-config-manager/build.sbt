@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "node-config-manager"
-version := "1.0.2-dt-20200515Z-77f784"
+version := "1.0.2-dt-20201002Z-77f784"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -1,42 +1,41 @@
 package typingsSlinky.jupyterlabMainmenu.fileMod
 
+import typingsSlinky.jupyterlabMainmenu.fileMod.IFileMenu.ICloseAndCleaner
+import typingsSlinky.jupyterlabMainmenu.fileMod.IFileMenu.IConsoleCreator
+import typingsSlinky.jupyterlabMainmenu.labmenuMod.IJupyterLabMenu
 import typingsSlinky.jupyterlabMainmenu.labmenuMod.JupyterLabMenu
-import typingsSlinky.phosphorWidgets.menuMod.Menu.IOptions
+import typingsSlinky.luminoWidgets.menuMod.Menu.IOptions
+import typingsSlinky.luminoWidgets.mod.Widget
+import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jupyterlab/mainmenu/lib/file", "FileMenu")
+/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
+- typingsSlinky.luminoDisposable.mod.IDisposable because Already inherited
+- typingsSlinky.jupyterlabMainmenu.labmenuMod.IJupyterLabMenu because Already inherited
+- typingsSlinky.jupyterlabMainmenu.fileMod.IFileMenu because var conflicts: isDisposed. Inlined quitEntry, newMenu, closeAndCleaners, consoleCreators */ @JSImport("@jupyterlab/mainmenu/lib/file", "FileMenu")
 @js.native
-class FileMenu protected ()
-  extends JupyterLabMenu
-     with IFileMenu {
+class FileMenu protected () extends JupyterLabMenu {
   def this(options: IOptions) = this()
+  
   /**
-    * Test whether the object has been disposed.
-    *
-    * #### Notes
-    * This property is always safe to access.
+    * The close and cleanup extension point.
     */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
+  val closeAndCleaners: Set[ICloseAndCleaner[Widget]] = js.native
+  
+  /**
+    * A set storing IConsoleCreators for the Kernel menu.
+    */
+  val consoleCreators: Set[IConsoleCreator[Widget]] = js.native
+  
   /**
     * The New submenu.
     */
-  @JSName("newMenu")
-  val newMenu_FileMenu: JupyterLabMenu = js.native
+  val newMenu: IJupyterLabMenu | JupyterLabMenu = js.native
+  
   /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
+    * Option to add a `Quit` entry in File menu
     */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
+  var quitEntry: Boolean = js.native
 }
-

@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSSymbolKeyword
+import typingsSlinky.babelTraverse.babelTraverseStrings.JSXEmptyExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `122` extends js.Object {
   
-  var `type`: TSSymbolKeyword = js.native
+  var `type`: JSXEmptyExpression = js.native
 }
 object `122` {
   
   @scala.inline
-  def apply(`type`: TSSymbolKeyword): `122` = {
+  def apply(`type`: JSXEmptyExpression): `122` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`122`]
@@ -35,6 +35,6 @@ object `122` {
     }
     
     @scala.inline
-    def setType(value: TSSymbolKeyword): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: JSXEmptyExpression): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

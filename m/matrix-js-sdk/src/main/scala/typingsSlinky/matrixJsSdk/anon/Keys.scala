@@ -1,5 +1,6 @@
 package typingsSlinky.matrixJsSdk.anon
 
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,16 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Keys extends js.Object {
   
-  // The text to query.
-  var keys: String = js.native
-  
-  var query: String = js.native
+  var keys: Record[String, Pubkey] = js.native
 }
 object Keys {
   
   @scala.inline
-  def apply(keys: String, query: String): Keys = {
-    val __obj = js.Dynamic.literal(keys = keys.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any])
+  def apply(keys: Record[String, Pubkey]): Keys = {
+    val __obj = js.Dynamic.literal(keys = keys.asInstanceOf[js.Any])
     __obj.asInstanceOf[Keys]
   }
   
@@ -36,9 +34,6 @@ object Keys {
     }
     
     @scala.inline
-    def setKeys(value: String): Self = this.set("keys", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setQuery(value: String): Self = this.set("query", value.asInstanceOf[js.Any])
+    def setKeys(value: Record[String, Pubkey]): Self = this.set("keys", value.asInstanceOf[js.Any])
   }
 }

@@ -1,8 +1,9 @@
 package typingsSlinky.tensorflowTfjsConverter
 
+import typingsSlinky.std.Set
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,10 +12,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object tensorListMod extends js.Object {
   
-  def fromTensor(tensor: Tensor[Rank], elementShape: js.Array[Double]): TensorList = js.native
+  def fromTensor(tensor: Tensor[Rank], elementShape: js.Array[Double], elementDtype: DataType): TensorList = js.native
   
   def reserve(elementShape: js.Array[Double], elementDtype: DataType, numElements: Double): TensorList = js.native
   
+  def scatter(tensor: Tensor[Rank], indices: js.Array[Double], elementShape: js.Array[Double]): TensorList = js.native
   def scatter(
     tensor: Tensor[Rank],
     indices: js.Array[Double],
@@ -43,6 +45,12 @@ object tensorListMod extends js.Object {
     ) = this()
     
     /**
+      * Dispose the tensors and idTensor and clear the tensor list.
+      */
+    def clearAndClose(): Unit = js.native
+    def clearAndClose(keepIds: Set[Double]): Unit = js.native
+    
+    /**
       * Return the values in the TensorList as a concatenated Tensor.
       * @param elementDtype output tensor dtype
       * @param elementShape output tensor element shape
@@ -54,9 +62,9 @@ object tensorListMod extends js.Object {
       */
     def copy(): TensorList = js.native
     
-    var elementDtype: DataType = js.native
+    val elementDtype: DataType = js.native
     
-    var elementShape: js.Array[Double] = js.native
+    val elementShape: js.Array[Double] = js.native
     
     /**
       * Return selected values in the TensorList as a stacked Tensor. All of
@@ -74,6 +82,10 @@ object tensorListMod extends js.Object {
       * @param elementIndex index of the tensor
       */
     def getItem(elementIndex: Double, elementShape: js.Array[Double], elementDtype: DataType): Tensor[Rank] = js.native
+    
+    val id: Double = js.native
+    
+    val idTensor: Tensor[Rank] = js.native
     
     var maxNumElements: Double = js.native
     
@@ -118,6 +130,6 @@ object tensorListMod extends js.Object {
     def stack(elementShape: js.Array[Double], elementDtype: DataType): Tensor[Rank] = js.native
     def stack(elementShape: js.Array[Double], elementDtype: DataType, numElements: Double): Tensor[Rank] = js.native
     
-    var tensors: js.Array[Tensor[Rank]] = js.native
+    val tensors: js.Array[Tensor[Rank]] = js.native
   }
 }

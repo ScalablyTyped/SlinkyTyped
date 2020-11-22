@@ -8,4 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("@apollo/protobufjs/light", "wrappers")
 @js.native
-object wrappers extends /* k */ StringDictionary[IWrapper]
+object wrappers
+  extends /* k */ StringDictionary[js.UndefOr[IWrapper]]

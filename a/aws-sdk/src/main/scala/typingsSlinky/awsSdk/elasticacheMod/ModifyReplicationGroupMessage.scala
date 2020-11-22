@@ -83,6 +83,11 @@ trait ModifyReplicationGroupMessage extends js.Object {
   var PrimaryClusterId: js.UndefOr[String] = js.native
   
   /**
+    * Removes the user groups that can access this replication group.
+    */
+  var RemoveUserGroups: js.UndefOr[BooleanOptional] = js.native
+  
+  /**
     * A description for the replication group. Maximum length is 255 characters.
     */
   var ReplicationGroupDescription: js.UndefOr[String] = js.native
@@ -111,6 +116,16 @@ trait ModifyReplicationGroupMessage extends js.Object {
     * The cluster ID that is used as the daily snapshot source for the replication group. This parameter cannot be set for Redis (cluster mode enabled) replication groups.
     */
   var SnapshottingClusterId: js.UndefOr[String] = js.native
+  
+  /**
+    * A list of user group IDs.
+    */
+  var UserGroupIdsToAdd: js.UndefOr[UserGroupIdList] = js.native
+  
+  /**
+    * A list of users groups to remove, meaning the users in the group no longer can access thereplication group.
+    */
+  var UserGroupIdsToRemove: js.UndefOr[UserGroupIdList] = js.native
 }
 object ModifyReplicationGroupMessage {
   
@@ -232,6 +247,12 @@ object ModifyReplicationGroupMessage {
     def deletePrimaryClusterId: Self = this.set("PrimaryClusterId", js.undefined)
     
     @scala.inline
+    def setRemoveUserGroups(value: BooleanOptional): Self = this.set("RemoveUserGroups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRemoveUserGroups: Self = this.set("RemoveUserGroups", js.undefined)
+    
+    @scala.inline
     def setReplicationGroupDescription(value: String): Self = this.set("ReplicationGroupDescription", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -263,5 +284,23 @@ object ModifyReplicationGroupMessage {
     
     @scala.inline
     def deleteSnapshottingClusterId: Self = this.set("SnapshottingClusterId", js.undefined)
+    
+    @scala.inline
+    def setUserGroupIdsToAddVarargs(value: UserGroupId*): Self = this.set("UserGroupIdsToAdd", js.Array(value :_*))
+    
+    @scala.inline
+    def setUserGroupIdsToAdd(value: UserGroupIdList): Self = this.set("UserGroupIdsToAdd", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserGroupIdsToAdd: Self = this.set("UserGroupIdsToAdd", js.undefined)
+    
+    @scala.inline
+    def setUserGroupIdsToRemoveVarargs(value: UserGroupId*): Self = this.set("UserGroupIdsToRemove", js.Array(value :_*))
+    
+    @scala.inline
+    def setUserGroupIdsToRemove(value: UserGroupIdList): Self = this.set("UserGroupIdsToRemove", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserGroupIdsToRemove: Self = this.set("UserGroupIdsToRemove", js.undefined)
   }
 }

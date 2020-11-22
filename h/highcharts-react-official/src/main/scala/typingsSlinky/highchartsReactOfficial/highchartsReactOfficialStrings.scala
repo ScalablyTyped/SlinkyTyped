@@ -136,6 +136,9 @@ object highchartsReactOfficialStrings {
   def format: format = "format".asInstanceOf[format]
   
   @scala.inline
+  def getDeferredAnimation: getDeferredAnimation = "getDeferredAnimation".asInstanceOf[getDeferredAnimation]
+  
+  @scala.inline
   def getMagnitude: getMagnitude = "getMagnitude".asInstanceOf[getMagnitude]
   
   @scala.inline
@@ -227,6 +230,9 @@ object highchartsReactOfficialStrings {
   
   @scala.inline
   def syncTimeout: syncTimeout = "syncTimeout".asInstanceOf[syncTimeout]
+  
+  @scala.inline
+  def theme: theme = "theme".asInstanceOf[theme]
   
   @scala.inline
   def time_ : time_ = "time".asInstanceOf[time_]
@@ -370,6 +376,9 @@ object highchartsReactOfficialStrings {
   sealed trait format extends js.Object
   
   @js.native
+  sealed trait getDeferredAnimation extends js.Object
+  
+  @js.native
   sealed trait getMagnitude extends js.Object
   
   @js.native
@@ -461,6 +470,9 @@ object highchartsReactOfficialStrings {
   
   @js.native
   sealed trait syncTimeout extends js.Object
+  
+  @js.native
+  sealed trait theme extends js.Object
   
   @js.native
   sealed trait time_ extends js.Object

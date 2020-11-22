@@ -1,5 +1,8 @@
 package typingsSlinky.formatjsIntlRelativetimeformat.mod
 
+import typingsSlinky.formatjsEcma402Abstract.typesRelativeTimeMod.RelativeTimeFormattableUnit
+import typingsSlinky.formatjsEcma402Abstract.typesRelativeTimeMod.RelativeTimePart
+import typingsSlinky.formatjsEcma402Abstract.typesRelativeTimeMod.ResolvedIntlRelativeTimeFormatOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,9 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RelativeTimeFormat extends js.Object {
   
-  def format(value: Double, unit: FormattableUnit): String = js.native
+  def format(value: Double, unit: RelativeTimeFormattableUnit): String = js.native
   
-  def formatToParts(value: Double, unit: FormattableUnit): js.Array[Part] = js.native
+  def formatToParts(value: Double, unit: RelativeTimeFormattableUnit): js.Array[RelativeTimePart] = js.native
   
   def resolvedOptions(): ResolvedIntlRelativeTimeFormatOptions = js.native
 }
@@ -17,8 +20,8 @@ object RelativeTimeFormat {
   
   @scala.inline
   def apply(
-    format: (Double, FormattableUnit) => String,
-    formatToParts: (Double, FormattableUnit) => js.Array[Part],
+    format: (Double, RelativeTimeFormattableUnit) => String,
+    formatToParts: (Double, RelativeTimeFormattableUnit) => js.Array[RelativeTimePart],
     resolvedOptions: () => ResolvedIntlRelativeTimeFormatOptions
   ): RelativeTimeFormat = {
     val __obj = js.Dynamic.literal(format = js.Any.fromFunction2(format), formatToParts = js.Any.fromFunction2(formatToParts), resolvedOptions = js.Any.fromFunction0(resolvedOptions))
@@ -41,10 +44,10 @@ object RelativeTimeFormat {
     }
     
     @scala.inline
-    def setFormat(value: (Double, FormattableUnit) => String): Self = this.set("format", js.Any.fromFunction2(value))
+    def setFormat(value: (Double, RelativeTimeFormattableUnit) => String): Self = this.set("format", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setFormatToParts(value: (Double, FormattableUnit) => js.Array[Part]): Self = this.set("formatToParts", js.Any.fromFunction2(value))
+    def setFormatToParts(value: (Double, RelativeTimeFormattableUnit) => js.Array[RelativeTimePart]): Self = this.set("formatToParts", js.Any.fromFunction2(value))
     
     @scala.inline
     def setResolvedOptions(value: () => ResolvedIntlRelativeTimeFormatOptions): Self = this.set("resolvedOptions", js.Any.fromFunction0(value))

@@ -117,7 +117,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * Returns true if and only if the first (non-null) selected element has the specified classes.
     * This is generally useful only if you know the selection contains exactly one element.
     *
-    * @param name A string of space-separated class names.
+    * @param names A string of space-separated class names.
     */
   def classed(names: String): Boolean = js.native
   /**
@@ -144,6 +144,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
   
   def clone(deep: Boolean): Selection_[GElement, Datum, PElement, PDatum] = js.native
   
+  // Data Join ---------------------------------
   /**
     * Returns the array of data for the selected elements.
     */
@@ -171,7 +172,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     *
     * The generic refers to the type of the new datum to be used for the selected elements.
     *
-    * @param data The specified data is an array of arbitrary values (e.g., numbers or objects).
+    * @param data The specified data is an array or iterable of arbitrary values (e.g., numbers or objects).
     * @param key An optional key function which is evaluated for each selected element, in order, being passed the
     * current datum (d), the current index (i), and the current group (nodes), with this as the current DOM element (nodes[i]); the returned string is the element’s key.
     * The key function is then also evaluated for each new datum in data, being passed the current datum (d),
@@ -205,7 +206,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     *
     * @param data A value function which will be evaluated for each group in order, being passed the group’s parent datum
     * (d, which may be undefined), the group index (i), and the selection’s parent nodes (nodes),
-    * with this as the group’s parent element. The function returns an array of values for each group.
+    * with this as the group’s parent element. The function returns an array or iterable of values for each group.
     * @param key An optional key function which is evaluated for each selected element, in order, being passed the
     * current datum (d), the current index (i), and the current group (nodes), with this as the current DOM element (nodes[i]); the returned string is the element’s key.
     * The key function is then also evaluated for each new datum in data, being passed the current datum (d),
@@ -213,13 +214,14 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * The datum for a given key is assigned to the element with the matching key. If multiple elements have the same key,
     * the duplicate elements are put into the exit selection; if multiple data have the same key, the duplicate data are put into the enter selection.
     */
-  def data[NewDatum](data: ValueFn[PElement, PDatum, js.Array[NewDatum]]): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
+  def data[NewDatum](data: ValueFn[PElement, PDatum, js.Array[NewDatum] | js.Iterable[NewDatum]]): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
   def data[NewDatum](
-    data: ValueFn[PElement, PDatum, js.Array[NewDatum]],
+    data: ValueFn[PElement, PDatum, js.Array[NewDatum] | js.Iterable[NewDatum]],
     key: ValueFn[GElement | PElement, Datum | NewDatum, KeyType]
   ): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
+  def data[NewDatum](data: js.Iterable[NewDatum]): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
+  def data[NewDatum](data: js.Iterable[NewDatum], key: ValueFn[GElement | PElement, Datum | NewDatum, KeyType]): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
   
-  // Data Join ---------------------------------
   /**
     * Returns the bound datum for the first (non-null) element in the selection.
     * This is generally useful only if you know the selection contains exactly one element.
@@ -439,6 +441,12 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
   def insert[ChildElement /* <: BaseType */](`type`: ValueFn[GElement, Datum, ChildElement], before: ValueFn[GElement, Datum, BaseType]): Selection_[ChildElement, Datum, PElement, PDatum] = js.native
   
   /**
+    * Returns an iterator over the selected (non-null) elements.
+    */
+  @JSName(js.Symbol.iterator)
+  var iterator: js.Function0[js.Iterator[GElement]] = js.native
+  
+  /**
     * Appends, removes and reorders elements as necessary to match the data that was previously bound by `selection.data`, returning the merged enter and update selection.
     * This method is a convenient alternative to the more explicit `selection.enter`, `selection.exit`, `selection.append` and `selection.remove`.
     *
@@ -598,7 +606,33 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * to receive events of the same type, such as click.foo and click.bar. To specify multiple typenames, separate typenames with spaces,
     * such as "input change"" or "click.foo click.bar".
     */
-  def on(typenames: String): js.UndefOr[ValueFn[GElement, Datum, Unit]] = js.native
+  def on(typenames: String): js.UndefOr[js.ThisFunction2[/* this */ GElement, /* event */ js.Any, /* d */ Datum, Unit]] = js.native
+  /**
+    * Add an event listener for the specified event type names. If an event listener was previously registered for the same typename
+    * on a selected element, the old listener is removed before the new listener is added.
+    *
+    * When a specified event is dispatched on a selected node, the specified listener will be evaluated for each selected element.
+    *
+    * @param typenames The typenames is a string event type, such as click, mouseover, or submit; any DOM event type supported by your browser may be used.
+    * The type may be optionally followed by a period (.) and a name; the optional name allows multiple callbacks to be registered
+    * to receive events of the same type, such as click.foo and click.bar. To specify multiple typenames, separate typenames with spaces,
+    * such as "input change"" or "click.foo click.bar".
+    * @param listener A listener function which will be evaluated for each selected element,
+    * being passed the current event (event) and the current datum (d), with this as the current DOM element (event.currentTarget).
+    * Listeners always see the latest datum for their element.
+    * Note: while you can use event.pageX and event.pageY directly,
+    * it is often convenient to transform the event position to the local coordinate system of that element that received the event using d3.pointer.
+    * @param options An optional options object may specify characteristics about the event listener, such as wehether it is captures or passive; see element.addEventListener.
+    */
+  def on(
+    typenames: String,
+    listener: js.ThisFunction2[/* this */ GElement, /* event */ js.Any, /* d */ Datum, Unit]
+  ): this.type = js.native
+  def on(
+    typenames: String,
+    listener: js.ThisFunction2[/* this */ GElement, /* event */ js.Any, /* d */ Datum, Unit],
+    options: js.Any
+  ): this.type = js.native
   /**
     * Remove a listener for the specified event type names. To remove all listeners for a given name,
     * pass null as the listener and ".foo" as the typename, where foo is the name; to remove all listeners with no name, specify "." as the typename.
@@ -610,29 +644,6 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * @param listener null to indicate removal of listener
     */
   def on(typenames: String, listener: Null): this.type = js.native
-  /**
-    * Add an event listener for the specified event type names. If an event listener was previously registered for the same typename
-    * on a selected element, the old listener is removed before the new listener is added.
-    *
-    * When a specified event is dispatched on a selected node, the specified listener will be evaluated for each selected element.
-    *
-    * An optional capture flag may be specified which corresponds to the W3C useCapture flag:
-    * "After initiating capture, all events of the specified type will be dispatched to the registered EventListener before being
-    * dispatched to any EventTargets beneath them in the tree. Events which are bubbling upward through the tree will not
-    * trigger an EventListener designated to use capture."
-    *
-    * @param typenames The typenames is a string event type, such as click, mouseover, or submit; any DOM event type supported by your browser may be used.
-    * The type may be optionally followed by a period (.) and a name; the optional name allows multiple callbacks to be registered
-    * to receive events of the same type, such as click.foo and click.bar. To specify multiple typenames, separate typenames with spaces,
-    * such as "input change"" or "click.foo click.bar".
-    * @param listener A listener function which will be evaluated for each selected element, being passed the current datum (d), the current index (i),
-    * and the current group (nodes), with this as the current DOM element (nodes[i]). Listeners always see the latest datum for their element,
-    * but the index is a property of the selection and is fixed when the listener is assigned; to update the index, re-assign the listener.
-    * To access the current event within a listener, use d3.event.
-    * @param capture An optional capture flag which corresponds to the W3C useCapture flag.
-    */
-  def on(typenames: String, listener: ValueFn[GElement, Datum, Unit]): this.type = js.native
-  def on(typenames: String, listener: ValueFn[GElement, Datum, Unit], capture: Boolean): this.type = js.native
   
   /**
     * Re-insert elements into the document such that the document order of each group matches the selection order.
@@ -788,9 +799,91 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     *
     * @param selector A selector function which is evaluated for each selected element, in order, being passed the current datum (d),
     * the current index (i), and the current group (nodes), with this as the current DOM element (nodes[i]). It must return an array of elements
-    * (or a pseudo-array, such as a NodeList), or the empty array if there are no matching elements.
+    * (or an iterable, or a pseudo-array, such as a NodeList), or the empty array if there are no matching elements.
     */
-  def selectAll[DescElement /* <: BaseType */, OldDatum](selector: ValueFn[GElement, Datum, js.Array[DescElement] | ArrayLike[DescElement]]): Selection_[DescElement, OldDatum, GElement, Datum] = js.native
+  def selectAll[DescElement /* <: BaseType */, OldDatum](
+    selector: ValueFn[
+      GElement, 
+      Datum, 
+      js.Array[DescElement] | ArrayLike[DescElement] | js.Iterable[DescElement]
+    ]
+  ): Selection_[DescElement, OldDatum, GElement, Datum] = js.native
+  
+  /**
+    * Returns a new selection with the (first) child of each element of the current selection matching the selector.
+    * Selects the first child (if any).
+    *
+    * The generic represents the type of the descendant element to be selected.
+    */
+  def selectChild[DescElement /* <: BaseType */](): Selection_[DescElement, Datum, PElement, PDatum] = js.native
+  /**
+    * Returns a new selection with the (first) child of each element of the current selection matching the selector.
+    * Selects the first child that matches (if any).
+    *
+    * The generic represents the type of the descendant element to be selected.
+    *
+    * @param selector CSS selector string
+    */
+  def selectChild[DescElement /* <: BaseType */](selector: String): Selection_[DescElement, Datum, PElement, PDatum] = js.native
+  /**
+    * Returns a new selection with the (first) child of each element of the current selection matching the selector.
+    *
+    * The first generic represents the type of the descendant element to be selected.
+    * The second generic represents the type of any of the child elements.
+    *
+    * @param selector A selector function, which is evaluated for each of the children nodes, in order, being passed the child (child), the child’s index (i), and the list of children (children);
+    * the method selects the first child for which the selector return truthy, if any.
+    */
+  def selectChild[ResultElement /* <: BaseType */, ChildElement /* <: BaseType */](
+    selector: js.Function3[
+      /* child */ ChildElement, 
+      /* i */ Double, 
+      /* children */ js.Array[ChildElement], 
+      Boolean
+    ]
+  ): Selection_[ResultElement, Datum, PElement, PDatum] = js.native
+  
+  /**
+    * Returns a new selection with the children of each element of the current selection matching the selector.
+    * Selects all the children
+    *
+    * The first generic represents the type of the descendant element to be selected.
+    * The second generic refers to the type of the datum of the element to be selected.
+    */
+  def selectChildren[DescElement /* <: BaseType */, OldDatum](): Selection_[DescElement, OldDatum, GElement, Datum] = js.native
+  /**
+    * Returns a new selection with the children of each element of the current selection matching the selector.
+    * Selects the children that match (if any)
+    *
+    * The first generic represents the type of the descendant element to be selected.
+    * The second generic refers to the type of the datum of the element to be selected.
+    *
+    * @param selector CSS selector string
+    */
+  def selectChildren[DescElement /* <: BaseType */, OldDatum](selector: String): Selection_[DescElement, OldDatum, GElement, Datum] = js.native
+  /**
+    * Returns a new selection with the children of each element of the current selection matching the selector.
+    *
+    * The first generic represents the type of the descendant element to be selected.
+    * The second generic refers to the type of the datum of the element to be selected.
+    * The third generic represents the type of any of the child elements.
+    *
+    * @param selector A selector function, which is evaluated for each of the children nodes, in order, being passed the child (child), the child’s index (i), and the list of children (children);
+    * the method selects the first child for which the selector return truthy, if any.
+    */
+  def selectChildren[ResultElement /* <: BaseType */, ResultDatum, ChildElement /* <: BaseType */](
+    selector: js.Function3[
+      /* child */ ChildElement, 
+      /* i */ Double, 
+      /* children */ js.Array[ChildElement], 
+      Boolean
+    ]
+  ): Selection_[ResultElement, ResultDatum, GElement, Datum] = js.native
+  
+  /**
+    * Returns the selection (for symmetry with transition.selection).
+    */
+  def selection(): this.type = js.native
   
   /**
     * Returns the total number of elements in this selection.

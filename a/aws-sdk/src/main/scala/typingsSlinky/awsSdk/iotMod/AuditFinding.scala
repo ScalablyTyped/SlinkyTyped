@@ -23,6 +23,11 @@ trait AuditFinding extends js.Object {
   var findingTime: js.UndefOr[js.Date] = js.native
   
   /**
+    *  Indicates whether the audit finding was suppressed or not during reporting. 
+    */
+  var isSuppressed: js.UndefOr[IsSuppressed] = js.native
+  
+  /**
     * The resource that was found to be noncompliant with the audit check.
     */
   var nonCompliantResource: js.UndefOr[NonCompliantResource] = js.native
@@ -97,6 +102,12 @@ object AuditFinding {
     
     @scala.inline
     def deleteFindingTime: Self = this.set("findingTime", js.undefined)
+    
+    @scala.inline
+    def setIsSuppressed(value: IsSuppressed): Self = this.set("isSuppressed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsSuppressed: Self = this.set("isSuppressed", js.undefined)
     
     @scala.inline
     def setNonCompliantResource(value: NonCompliantResource): Self = this.set("nonCompliantResource", value.asInstanceOf[js.Any])

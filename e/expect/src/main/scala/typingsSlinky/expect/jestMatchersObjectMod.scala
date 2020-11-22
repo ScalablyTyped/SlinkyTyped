@@ -1,6 +1,8 @@
 package typingsSlinky.expect
 
+import typingsSlinky.expect.anon.PartialMatcherState
 import typingsSlinky.expect.typesMod.Expect
+import typingsSlinky.expect.typesMod.MatcherState
 import typingsSlinky.expect.typesMod.MatchersObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,9 +16,9 @@ object jestMatchersObjectMod extends js.Object {
   
   def getMatchers(): MatchersObject = js.native
   
-  def getState(): js.Any = js.native
+  def getState(): MatcherState = js.native
   
   def setMatchers(matchers: MatchersObject, isInternal: Boolean, expect: Expect): Unit = js.native
   
-  def setState(state: js.Object): Unit = js.native
+  def setState(state: PartialMatcherState): Unit = js.native
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.electron.Electron
 
-import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,27 +7,33 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Request extends js.Object {
   
-  var headers: Record[String, String] = js.native
+  var certificate: Certificate = js.native
   
-  var method: String = js.native
+  /**
+    * Error code.
+    */
+  var errorCode: Double = js.native
   
-  var referrer: String = js.native
+  var hostname: String = js.native
   
-  var uploadData: js.Array[UploadData] = js.native
+  var validatedCertificate: Certificate = js.native
   
-  var url: String = js.native
+  /**
+    * Verification result from chromium.
+    */
+  var verificationResult: String = js.native
 }
 object Request {
   
   @scala.inline
   def apply(
-    headers: Record[String, String],
-    method: String,
-    referrer: String,
-    uploadData: js.Array[UploadData],
-    url: String
+    certificate: Certificate,
+    errorCode: Double,
+    hostname: String,
+    validatedCertificate: Certificate,
+    verificationResult: String
   ): Request = {
-    val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], referrer = referrer.asInstanceOf[js.Any], uploadData = uploadData.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(certificate = certificate.asInstanceOf[js.Any], errorCode = errorCode.asInstanceOf[js.Any], hostname = hostname.asInstanceOf[js.Any], validatedCertificate = validatedCertificate.asInstanceOf[js.Any], verificationResult = verificationResult.asInstanceOf[js.Any])
     __obj.asInstanceOf[Request]
   }
   
@@ -48,21 +53,18 @@ object Request {
     }
     
     @scala.inline
-    def setHeaders(value: Record[String, String]): Self = this.set("headers", value.asInstanceOf[js.Any])
+    def setCertificate(value: Certificate): Self = this.set("certificate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMethod(value: String): Self = this.set("method", value.asInstanceOf[js.Any])
+    def setErrorCode(value: Double): Self = this.set("errorCode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setReferrer(value: String): Self = this.set("referrer", value.asInstanceOf[js.Any])
+    def setHostname(value: String): Self = this.set("hostname", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUploadDataVarargs(value: UploadData*): Self = this.set("uploadData", js.Array(value :_*))
+    def setValidatedCertificate(value: Certificate): Self = this.set("validatedCertificate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUploadData(value: js.Array[UploadData]): Self = this.set("uploadData", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setVerificationResult(value: String): Self = this.set("verificationResult", value.asInstanceOf[js.Any])
   }
 }

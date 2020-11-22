@@ -13,11 +13,6 @@ trait UpdateVoIPChatMuteConfigOption extends js.Object {
   /** 接口调用失败的回调函数 */
   var fail: js.UndefOr[UpdateVoIPChatMuteConfigFailCallback] = js.native
   
-  /** 语音通话是否免提
-    *
-    * 最低基础库： `2.10.4` */
-  var handsFree: js.UndefOr[Boolean] = js.native
-  
   /** 静音设置 */
   var muteConfig: MuteConfig = js.native
   
@@ -61,12 +56,6 @@ object UpdateVoIPChatMuteConfigOption {
     
     @scala.inline
     def deleteFail: Self = this.set("fail", js.undefined)
-    
-    @scala.inline
-    def setHandsFree(value: Boolean): Self = this.set("handsFree", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHandsFree: Self = this.set("handsFree", js.undefined)
     
     @scala.inline
     def setSuccess(value: /* res */ GeneralCallbackResult => Unit): Self = this.set("success", js.Any.fromFunction1(value))

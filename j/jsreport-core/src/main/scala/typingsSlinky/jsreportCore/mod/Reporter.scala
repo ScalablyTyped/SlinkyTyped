@@ -14,6 +14,8 @@ trait Reporter extends js.Object {
   
   var beforeRenderListeners: ListenerCollection = js.native
   
+  def close(): js.Promise[Unit] = js.native
+  
   def createListenerCollection(): ListenerCollection = js.native
   
   def discover(): Reporter = js.native

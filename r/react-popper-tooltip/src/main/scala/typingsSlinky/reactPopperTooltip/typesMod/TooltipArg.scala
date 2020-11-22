@@ -15,7 +15,7 @@ trait TooltipArg extends js.Object {
   def getTooltipProps(): GetTooltipPropsArg = js.native
   def getTooltipProps(arg: GetTooltipPropsArg): GetTooltipPropsArg = js.native
   
-  var placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Placement */ js.Any = js.native
+  var placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any = js.native
   
   var tooltipRef: Ref = js.native
 }

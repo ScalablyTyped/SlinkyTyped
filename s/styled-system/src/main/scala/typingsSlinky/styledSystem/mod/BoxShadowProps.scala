@@ -15,7 +15,7 @@ trait BoxShadowProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.O
     */
   var boxShadow: js.UndefOr[
     ResponsiveValue[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ _) | Double, 
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ _) | Double, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object BoxShadowProps {
     @scala.inline
     def setBoxShadow(
       value: ResponsiveValue[
-          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ _) | Double, 
+          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ _) | Double, 
           ThemeType
         ]
     ): Self = this.set("boxShadow", value.asInstanceOf[js.Any])

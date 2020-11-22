@@ -30,6 +30,8 @@ trait Build extends js.Object {
   var mode: js.UndefOr[readonly | `write-tsbuildinfo` | `write-references`] = js.native
   
   var profile: js.UndefOr[Boolean] = js.native
+  
+  var typescriptPath: js.UndefOr[String] = js.native
 }
 object Build {
   
@@ -113,5 +115,11 @@ object Build {
     
     @scala.inline
     def deleteProfile: Self = this.set("profile", js.undefined)
+    
+    @scala.inline
+    def setTypescriptPath(value: String): Self = this.set("typescriptPath", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTypescriptPath: Self = this.set("typescriptPath", js.undefined)
   }
 }

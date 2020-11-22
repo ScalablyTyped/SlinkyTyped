@@ -8,32 +8,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EC2ResourceDetails extends js.Object {
   
   /**
-    *  Hourly public On Demand rate for the instance type.
+    *  Hourly public On-Demand rate for the instance type.
     */
   var HourlyOnDemandRate: js.UndefOr[GenericString] = js.native
   
   /**
-    *  The type of Amazon Web Services instance.
+    *  The type of AWS instance.
     */
   var InstanceType: js.UndefOr[GenericString] = js.native
   
   /**
-    *  Memory capacity of Amazon Web Services instance.
+    *  Memory capacity of the AWS instance.
     */
   var Memory: js.UndefOr[GenericString] = js.native
   
   /**
-    *  Network performance capacity of the Amazon Web Services instance.
+    *  Network performance capacity of the AWS instance.
     */
   var NetworkPerformance: js.UndefOr[GenericString] = js.native
   
   /**
-    *  The platform of the Amazon Web Services instance. The platform is the specific combination of operating system, license model, and software on an instance.
+    *  The platform of the AWS instance. The platform is the specific combination of operating system, license model, and software on an instance.
     */
   var Platform: js.UndefOr[GenericString] = js.native
   
   /**
-    *  The Amazon Web Services Region of the instance.
+    *  The AWS Region of the instance.
     */
   var Region: js.UndefOr[GenericString] = js.native
   
@@ -43,12 +43,12 @@ trait EC2ResourceDetails extends js.Object {
   var Sku: js.UndefOr[GenericString] = js.native
   
   /**
-    *  The disk storage of the Amazon Web Services instance (Not EBS storage).
+    *  The disk storage of the AWS instance (not EBS storage).
     */
   var Storage: js.UndefOr[GenericString] = js.native
   
   /**
-    *  Number of VCPU cores in the Amazon Web Services instance type.
+    *  Number of VCPU cores in the AWS instance type.
     */
   var Vcpu: js.UndefOr[GenericString] = js.native
 }

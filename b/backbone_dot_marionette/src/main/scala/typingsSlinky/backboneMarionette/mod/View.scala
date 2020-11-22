@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.backboneMarionette.mod.ViewMixin because var conflicts: delegateEvents. Inlined supportsRenderLifecycle, supportsDestroyLifecycle, isDestroyed, isRendered, isAttached, getTriggers, delegateEntityEvents, undelegateEntityEvents, destroy, bindUIElements, unbindUIElements, childViewEventPrefix, triggerMethod */ @JSImport("backbone.marionette", "View")
 @js.native
-class View[TModel /* <: Model[_, ModelSetOptions] */] ()
+class View[TModel /* <: Model[_, ModelSetOptions, js.Object] */] ()
   extends typingsSlinky.backbone.mod.View[TModel]
      with RegionsMixin
      with DomMixin

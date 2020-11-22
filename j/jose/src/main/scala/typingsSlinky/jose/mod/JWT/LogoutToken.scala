@@ -1,8 +1,6 @@
 package typingsSlinky.jose.mod.JWT
 
-import typingsSlinky.jose.joseBooleans.`false`
-import typingsSlinky.jose.joseBooleans.`true`
-import typingsSlinky.jose.joseStrings.logout_token
+import typingsSlinky.jose.anon.VerifyOptionscompletetrueClockTolerance
 import typingsSlinky.jose.mod.ConsumeKeyInput
 import typingsSlinky.jose.mod.ConsumeKeyInputWithNone
 import typingsSlinky.jose.mod.EmbeddedVerifyKeys
@@ -19,13 +17,12 @@ object LogoutToken extends js.Object {
   def verify(
     jwt: String,
     key: ConsumeKeyInputWithNone | EmbeddedVerifyKeys,
-    options: VerifyOptions[`false`] with VerifyProfileOptions[logout_token]
+    options: VerifyOptions with LogoutTokenVerifyOptions
   ): js.Object = js.native
-  def verify(jwt: String, key: NoneKey, options: VerifyOptions[`true`] with VerifyProfileOptions[logout_token]): completeResult[NoneKey] = js.native
-  @JSName("verify")
-  def verify_completeResult(
+  def verify(
     jwt: String,
     key: ConsumeKeyInput | EmbeddedVerifyKeys,
-    options: VerifyOptions[`true`] with VerifyProfileOptions[logout_token]
+    options: VerifyOptionscompletetrueClockTolerance
   ): completeResult[Key] = js.native
+  def verify(jwt: String, key: NoneKey, options: VerifyOptionscompletetrueClockTolerance): completeResult[NoneKey] = js.native
 }

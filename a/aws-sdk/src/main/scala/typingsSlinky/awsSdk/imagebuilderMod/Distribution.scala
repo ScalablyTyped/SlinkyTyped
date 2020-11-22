@@ -15,7 +15,7 @@ trait Distribution extends js.Object {
   /**
     * The License Manager Configuration to associate with the AMI in the specified Region.
     */
-  var licenseConfigurationArns: js.UndefOr[ArnList] = js.native
+  var licenseConfigurationArns: js.UndefOr[LicenseConfigurationArnList] = js.native
   
   /**
     * The target Region. 
@@ -55,10 +55,10 @@ object Distribution {
     def deleteAmiDistributionConfiguration: Self = this.set("amiDistributionConfiguration", js.undefined)
     
     @scala.inline
-    def setLicenseConfigurationArnsVarargs(value: Arn*): Self = this.set("licenseConfigurationArns", js.Array(value :_*))
+    def setLicenseConfigurationArnsVarargs(value: LicenseConfigurationArn*): Self = this.set("licenseConfigurationArns", js.Array(value :_*))
     
     @scala.inline
-    def setLicenseConfigurationArns(value: ArnList): Self = this.set("licenseConfigurationArns", value.asInstanceOf[js.Any])
+    def setLicenseConfigurationArns(value: LicenseConfigurationArnList): Self = this.set("licenseConfigurationArns", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLicenseConfigurationArns: Self = this.set("licenseConfigurationArns", js.undefined)

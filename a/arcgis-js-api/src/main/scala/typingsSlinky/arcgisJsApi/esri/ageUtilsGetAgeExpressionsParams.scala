@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ageUtilsGetAgeExpressionsParams extends Object {
   
   /**
-    * The end time for the age calculation. This can be a field name or a date value, such as `Date.now()`. If a `Date` is provided, then the `startTime` parameter must be a field name.
+    * The end time for the age calculation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-support-ageUtils.html#getAgeExpressions)
     */
@@ -30,7 +30,7 @@ trait ageUtilsGetAgeExpressionsParams extends Object {
   var layer: FeatureLayer | SceneLayer | CSVLayer | GeoJSONLayer = js.native
   
   /**
-    * The start time for the age calculation. This can be a field name or a date value, such as `Date.now()`. If a `Date` is provided, then the `endTime` parameter must be a field name.
+    * The start time for the age calculation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-support-ageUtils.html#getAgeExpressions)
     */

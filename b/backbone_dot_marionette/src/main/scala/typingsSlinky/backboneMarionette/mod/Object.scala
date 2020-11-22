@@ -38,7 +38,7 @@ class Object ()
     * attached to the instance. Invoking the destroy method will trigger a
     * "before:destroy" event and corresponding onBeforeDestroy method call.
     * These calls will be passed any arguments destroy was invoked with.
-    * @param args any arguments to pass to the "before:destory" event and call to
+    * @param args any arguments to pass to the "before:destroy" event and call to
     * onBeforeDestroy.
     */
   def destroy(args: js.Any*): Unit = js.native
@@ -66,7 +66,7 @@ class Object ()
   def initialize(options: ObjectOptions): Unit = js.native
   
   /**
-    * Check if this Oject has been destroyed.
+    * Check if this Object has been destroyed.
     */
   def isDestroyed(): Boolean = js.native
   

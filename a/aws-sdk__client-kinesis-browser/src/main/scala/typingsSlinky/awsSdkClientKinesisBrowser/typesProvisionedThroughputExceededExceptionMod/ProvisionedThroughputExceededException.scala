@@ -4,33 +4,27 @@ import typingsSlinky.awsSdkClientKinesisBrowser.getRecordsExceptionsUnionMod.Get
 import typingsSlinky.awsSdkClientKinesisBrowser.getShardIteratorExceptionsUnionMod.GetShardIteratorExceptionsUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.putRecordExceptionsUnionMod.PutRecordExceptionsUnion
 import typingsSlinky.awsSdkClientKinesisBrowser.putRecordsExceptionsUnionMod.PutRecordsExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ProvisionedThroughputExceededExceptionDetails> * / any */ @js.native
 trait ProvisionedThroughputExceededException
-  extends ServiceException[ProvisionedThroughputExceededExceptionDetails]
-     with GetRecordsExceptionsUnion
+  extends GetRecordsExceptionsUnion
      with GetShardIteratorExceptionsUnion
      with PutRecordExceptionsUnion
      with PutRecordsExceptionsUnion {
   
-  @JSName("name")
-  var name_ProvisionedThroughputExceededException: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ProvisionedThroughputExceededException = js.native
+  var name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ProvisionedThroughputExceededException = js.native
 }
 object ProvisionedThroughputExceededException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: ProvisionedThroughputExceededExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ProvisionedThroughputExceededException
   ): ProvisionedThroughputExceededException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProvisionedThroughputExceededException]
   }
   

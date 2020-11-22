@@ -8,11 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PictureFillSymbolProperties extends FillSymbolProperties {
   
   /**
-    * The height of the image in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
+    * The height of the image in points.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PictureFillSymbol.html#height)
-    *
-    * @default 12
     */
   var height: js.UndefOr[Double | String] = js.native
   
@@ -24,20 +22,16 @@ trait PictureFillSymbolProperties extends FillSymbolProperties {
   var url: js.UndefOr[String] = js.native
   
   /**
-    * The width of the image in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
+    * The width of the image in points.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PictureFillSymbol.html#width)
-    *
-    * @default 12
     */
   var width: js.UndefOr[Double | String] = js.native
   
   /**
-    * The offset on the x-axis in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
+    * The offset on the x-axis in points.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PictureFillSymbol.html#xoffset)
-    *
-    * @default 0
     */
   var xoffset: js.UndefOr[Double | String] = js.native
   
@@ -45,17 +39,13 @@ trait PictureFillSymbolProperties extends FillSymbolProperties {
     * The scale factor on the x axis of the symbol.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PictureFillSymbol.html#xscale)
-    *
-    * @default 1
     */
   var xscale: js.UndefOr[Double] = js.native
   
   /**
-    * The offset on the y-axis in pixels or points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`).
+    * The offset on the y-axis in pixels or points.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PictureFillSymbol.html#yoffset)
-    *
-    * @default 0
     */
   var yoffset: js.UndefOr[Double | String] = js.native
   
@@ -63,8 +53,6 @@ trait PictureFillSymbolProperties extends FillSymbolProperties {
     * The scale factor on the y axis of the symbol.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-PictureFillSymbol.html#yscale)
-    *
-    * @default 1
     */
   var yscale: js.UndefOr[Double] = js.native
 }

@@ -19,6 +19,8 @@ trait SearchFieldProps extends js.Object {
   
   var autoComplete: js.UndefOr[on | off | username | name] = js.native
   
+  var errorMessage: js.UndefOr[String] = js.native
+  
   var id: String = js.native
   
   var onBlur: js.UndefOr[js.Function1[/* args */ `0`, Unit]] = js.native
@@ -70,6 +72,12 @@ object SearchFieldProps {
     
     @scala.inline
     def deleteAutoComplete: Self = this.set("autoComplete", js.undefined)
+    
+    @scala.inline
+    def setErrorMessage(value: String): Self = this.set("errorMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorMessage: Self = this.set("errorMessage", js.undefined)
     
     @scala.inline
     def setOnBlur(value: /* args */ `0` => Unit): Self = this.set("onBlur", js.Any.fromFunction1(value))

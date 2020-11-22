@@ -1,11 +1,14 @@
 package typingsSlinky.hark.mod
 
+import org.scalajs.dom.raw.AudioContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Option extends js.Object {
+  
+  var audioContext: js.UndefOr[AudioContext] = js.native
   
   var history: js.UndefOr[Double] = js.native
   
@@ -39,6 +42,12 @@ object Option {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAudioContext(value: AudioContext): Self = this.set("audioContext", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAudioContext: Self = this.set("audioContext", js.undefined)
     
     @scala.inline
     def setHistory(value: Double): Self = this.set("history", value.asInstanceOf[js.Any])

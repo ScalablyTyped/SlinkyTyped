@@ -12,6 +12,12 @@ trait BaseRouter extends js.Object {
   
   var basePath: String = js.native
   
+  var defaultLocale: js.UndefOr[String] = js.native
+  
+  var locale: js.UndefOr[String] = js.native
+  
+  var locales: js.UndefOr[js.Array[String]] = js.native
+  
   var pathname: String = js.native
   
   var query: ParsedUrlQuery = js.native
@@ -55,5 +61,26 @@ object BaseRouter {
     
     @scala.inline
     def setRoute(value: String): Self = this.set("route", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDefaultLocale(value: String): Self = this.set("defaultLocale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultLocale: Self = this.set("defaultLocale", js.undefined)
+    
+    @scala.inline
+    def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    
+    @scala.inline
+    def setLocalesVarargs(value: String*): Self = this.set("locales", js.Array(value :_*))
+    
+    @scala.inline
+    def setLocales(value: js.Array[String]): Self = this.set("locales", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocales: Self = this.set("locales", js.undefined)
   }
 }

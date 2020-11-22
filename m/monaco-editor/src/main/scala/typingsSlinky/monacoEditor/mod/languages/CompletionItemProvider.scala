@@ -22,9 +22,7 @@ trait CompletionItemProvider extends js.Object {
     * The editor will only resolve a completion item once.
     */
   var resolveCompletionItem: js.UndefOr[
-    js.Function4[
-      /* model */ ITextModel, 
-      /* position */ Position, 
+    js.Function2[
       /* item */ CompletionItem, 
       /* token */ CancellationToken, 
       ProviderResult[CompletionItem]
@@ -65,8 +63,8 @@ object CompletionItemProvider {
     
     @scala.inline
     def setResolveCompletionItem(
-      value: (/* model */ ITextModel, /* position */ Position, /* item */ CompletionItem, /* token */ CancellationToken) => ProviderResult[CompletionItem]
-    ): Self = this.set("resolveCompletionItem", js.Any.fromFunction4(value))
+      value: (/* item */ CompletionItem, /* token */ CancellationToken) => ProviderResult[CompletionItem]
+    ): Self = this.set("resolveCompletionItem", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteResolveCompletionItem: Self = this.set("resolveCompletionItem", js.undefined)

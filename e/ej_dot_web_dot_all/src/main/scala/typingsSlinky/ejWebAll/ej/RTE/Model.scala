@@ -215,7 +215,7 @@ trait Model extends js.Object {
   var name: js.UndefOr[String] = js.native
   
   /** This API holds configuration setting for paste cleanup behavior.
-    * @Default {{ listConversion: false, cleanCSS: false,    removeStyles: false, cleanElements: false }}
+    * @Default {{ listConversion: false, cleanCSS: false,	removeStyles: false, cleanElements: false }}
     */
   var pasteCleanupSettings: js.UndefOr[PasteCleanupSettings] = js.native
   

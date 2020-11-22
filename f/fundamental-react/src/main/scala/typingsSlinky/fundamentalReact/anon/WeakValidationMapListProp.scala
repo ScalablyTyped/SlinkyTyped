@@ -2,8 +2,18 @@ package typingsSlinky.fundamentalReact.anon
 
 import org.scalajs.dom.raw.HTMLAnchorElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`2`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`3`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`4`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`5`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`6`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals text`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.all
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.ascending
@@ -149,7 +159,11 @@ trait WeakValidationMapListProp extends js.Object {
   var `aria-readonly`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
   var `aria-relevant`: js.UndefOr[
-    Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]
+    Validator[
+      js.UndefOr[
+        additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`) | Null
+      ]
+    ]
   ] = js.native
   
   var `aria-required`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
@@ -208,6 +222,10 @@ trait WeakValidationMapListProp extends js.Object {
   
   var draggable: js.UndefOr[Validator[js.UndefOr[Booleanish | Null]]] = js.native
   
+  var footer: js.UndefOr[Validator[js.UndefOr[ReactElement | Null | String]]] = js.native
+  
+  var header: js.UndefOr[Validator[js.UndefOr[ReactElement | Null | String]]] = js.native
+  
   var hidden: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
   var id: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
@@ -231,6 +249,10 @@ trait WeakValidationMapListProp extends js.Object {
   var itemType: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
   
   var lang: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  
+  var level: js.UndefOr[Validator[js.UndefOr[`2` | `3` | `4` | `5` | `6` | Null]]] = js.native
+  
+  var navigation: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
   var noBorder: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
@@ -392,6 +414,8 @@ trait WeakValidationMapListProp extends js.Object {
   
   var onWheel: js.UndefOr[Validator[js.UndefOr[Null | WheelEventHandler[HTMLAnchorElement]]]] = js.native
   
+  var partialNavigation: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
+  
   var placeholder: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
   
   var prefix: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
@@ -409,6 +433,8 @@ trait WeakValidationMapListProp extends js.Object {
   var role: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
   
   var security: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
+  
+  var selectable: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
   var slot: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
   
@@ -678,7 +704,13 @@ object WeakValidationMapListProp {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: Validator[
+          js.UndefOr[
+            additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`) | Null
+          ]
+        ]
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -852,6 +884,18 @@ object WeakValidationMapListProp {
     def deleteDraggable: Self = this.set("draggable", js.undefined)
     
     @scala.inline
+    def setFooter(value: Validator[js.UndefOr[ReactElement | Null | String]]): Self = this.set("footer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFooter: Self = this.set("footer", js.undefined)
+    
+    @scala.inline
+    def setHeader(value: Validator[js.UndefOr[ReactElement | Null | String]]): Self = this.set("header", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeader: Self = this.set("header", js.undefined)
+    
+    @scala.inline
     def setHidden(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -916,6 +960,18 @@ object WeakValidationMapListProp {
     
     @scala.inline
     def deleteLang: Self = this.set("lang", js.undefined)
+    
+    @scala.inline
+    def setLevel(value: Validator[js.UndefOr[`2` | `3` | `4` | `5` | `6` | Null]]): Self = this.set("level", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLevel: Self = this.set("level", js.undefined)
+    
+    @scala.inline
+    def setNavigation(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("navigation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNavigation: Self = this.set("navigation", js.undefined)
     
     @scala.inline
     def setNoBorder(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("noBorder", value.asInstanceOf[js.Any])
@@ -1398,6 +1454,12 @@ object WeakValidationMapListProp {
     def deleteOnWheel: Self = this.set("onWheel", js.undefined)
     
     @scala.inline
+    def setPartialNavigation(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("partialNavigation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePartialNavigation: Self = this.set("partialNavigation", js.undefined)
+    
+    @scala.inline
     def setPlaceholder(value: Validator[js.UndefOr[Null | String]]): Self = this.set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1450,6 +1512,12 @@ object WeakValidationMapListProp {
     
     @scala.inline
     def deleteSecurity: Self = this.set("security", js.undefined)
+    
+    @scala.inline
+    def setSelectable(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("selectable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelectable: Self = this.set("selectable", js.undefined)
     
     @scala.inline
     def setSlot(value: Validator[js.UndefOr[Null | String]]): Self = this.set("slot", value.asInstanceOf[js.Any])

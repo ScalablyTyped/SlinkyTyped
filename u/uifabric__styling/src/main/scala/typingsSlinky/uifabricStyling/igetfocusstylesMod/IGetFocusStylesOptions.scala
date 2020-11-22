@@ -1,6 +1,6 @@
 package typingsSlinky.uifabricStyling.igetfocusstylesMod
 
-import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
+import typingsSlinky.uifabricMergeStyles.irawstyleMod.IRawStyle
 import typingsSlinky.uifabricStyling.uifabricStylingStrings.absolute
 import typingsSlinky.uifabricStyling.uifabricStylingStrings.relative
 import scala.scalajs.js

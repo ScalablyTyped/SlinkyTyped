@@ -8,13 +8,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateTaggedTemplate extends js.Object {
   
-  /** @deprecated */ def apply(node: TaggedTemplateExpression, tag: Expression, template: TemplateLiteral): TaggedTemplateExpression = js.native
+  /** @deprecated Use `factory.updateTaggedTemplate` or the factory supplied by your transformation context instead. */
+  def apply(node: TaggedTemplateExpression, tag: Expression, template: TemplateLiteral): TaggedTemplateExpression = js.native
   def apply(
     node: TaggedTemplateExpression,
     tag: Expression,
     typeArguments: js.UndefOr[scala.Nothing],
     template: TemplateLiteral
   ): TaggedTemplateExpression = js.native
+  /** @deprecated Use `factory.updateTaggedTemplate` or the factory supplied by your transformation context instead. */
   def apply(
     node: TaggedTemplateExpression,
     tag: Expression,

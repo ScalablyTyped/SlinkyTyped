@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object containsElementMod extends js.Object {
   
-  def default(container: CheckableThing, child: CheckableThing): Boolean = js.native
+  def containsElement(container: CheckableThing, child: CheckableThing): Boolean = js.native
   
   type CheckableElement = HTMLElement | Null
   

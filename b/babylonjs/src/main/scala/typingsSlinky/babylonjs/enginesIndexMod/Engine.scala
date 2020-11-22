@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.enginesIndexMod
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.babylonjs.HTMLCanvasElement
 import typingsSlinky.babylonjs.WebGLRenderingContext
-import typingsSlinky.babylonjs.audioEngineMod.IAudioEngine
+import typingsSlinky.babylonjs.iaudioengineMod.IAudioEngine
 import typingsSlinky.babylonjs.iofflineproviderMod.IOfflineProvider
 import typingsSlinky.babylonjs.loadingScreenMod.ILoadingScreen
 import typingsSlinky.babylonjs.materialMod.Material
@@ -432,7 +432,7 @@ object Engine extends js.Object {
   
   /**
     * Gets the audio engine
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     * @ignorenaming
     */
   var audioEngine: IAudioEngine = js.native

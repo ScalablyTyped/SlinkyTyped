@@ -36,7 +36,7 @@ class ShadowGenerator protected () extends IShadowGenerator {
   
   var _bias: Double = js.native
   
-  /* protected */ def _bindCustomEffectForRenderSubMeshForShadowMap(subMesh: SubMesh, effect: Effect): Unit = js.native
+  /* protected */ def _bindCustomEffectForRenderSubMeshForShadowMap(subMesh: SubMesh, effect: Effect, matriceNames: js.Any, mesh: AbstractMesh): Unit = js.native
   
   var _blurBoxOffset: Double = js.native
   
@@ -100,6 +100,8 @@ class ShadowGenerator protected () extends IShadowGenerator {
   
   var _normalBias: Double = js.native
   
+  var _prepareShadowDefines: js.Any = js.native
+  
   var _projectionMatrix: Matrix = js.native
   
   /* protected */ def _renderForShadowMap(
@@ -110,6 +112,7 @@ class ShadowGenerator protected () extends IShadowGenerator {
   ): Unit = js.native
   
   /* protected */ def _renderSubMeshForShadowMap(subMesh: SubMesh): Unit = js.native
+  /* protected */ def _renderSubMeshForShadowMap(subMesh: SubMesh, isTransparent: Boolean): Unit = js.native
   
   var _scene: Scene = js.native
   
@@ -203,6 +206,9 @@ class ShadowGenerator protected () extends IShadowGenerator {
     */
   def contactHardeningLightSizeUVRatio_=(contactHardeningLightSizeUVRatio: Double): Unit = js.native
   
+  /** Gets or sets a custom function to allow/disallow rendering a sub mesh in the shadow map */
+  def customAllowRendering(subMesh: SubMesh): Boolean = js.native
+  
   /** Gets or sets the custom shader name to use */
   var customShaderOptions: ICustomShaderOptions = js.native
   
@@ -219,6 +225,15 @@ class ShadowGenerator protected () extends IShadowGenerator {
     * This can override the scale stored on the light.
     */
   def depthScale_=(value: Double): Unit = js.native
+  
+  /**
+    * Enables or disables shadows with varying strength based on the transparency
+    * When it is enabled, the strength of the shadow is taken equal to mesh.visibility
+    * If you enabled an alpha texture on your material, the alpha value red from the texture is also combined to compute the strength:
+    *          mesh.visibility * alphaTexture.a
+    * Note that by definition transparencyShadow must be set to true for enableSoftTransparentShadow to work!
+    */
+  var enableSoftTransparentShadow: Boolean = js.native
   
   /**
     * Gets the current mode of the shadow generator (normal, PCF, ESM...).
@@ -278,6 +293,12 @@ class ShadowGenerator protected () extends IShadowGenerator {
     * @returns The render target texture if the shadow map is present otherwise, null
     */
   def getShadowMapForRendering(): Nullable[RenderTargetTexture] = js.native
+  
+  /**
+    * Gets or sets the size of the texture what stores the shadows
+    */
+  def mapSize: Double = js.native
+  def mapSize_=(size: Double): Unit = js.native
   
   /**
     * Gets the normalBias: offset applied on the depth preventing acnea (along side the normal direction and proportinal to the light/normal angle).

@@ -1,8 +1,8 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliBooleans.`true`
-import typingsSlinky.jestCli.jestCliStrings.`The glob patterns Jest uses to detect test filesDot`
-import typingsSlinky.jestCli.jestCliStrings.array
+import typingsSlinky.jestCli.jestCliBooleans.`false`
+import typingsSlinky.jestCli.jestCliStrings.`Add GraveaccentlocationGraveaccent information to the test results`
+import typingsSlinky.jestCli.jestCliStrings.boolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,17 +10,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `17` extends js.Object {
   
-  val description: `The glob patterns Jest uses to detect test filesDot` = js.native
+  val default: `false` = js.native
   
-  val string: `true` = js.native
+  val description: `Add GraveaccentlocationGraveaccent information to the test results` = js.native
   
-  val `type`: array = js.native
+  val `type`: boolean = js.native
 }
 object `17` {
   
   @scala.inline
-  def apply(description: `The glob patterns Jest uses to detect test filesDot`, string: `true`, `type`: array): `17` = {
-    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], string = string.asInstanceOf[js.Any])
+  def apply(
+    default: `false`,
+    description: `Add GraveaccentlocationGraveaccent information to the test results`,
+    `type`: boolean
+  ): `17` = {
+    val __obj = js.Dynamic.literal(default = default.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`17`]
   }
@@ -41,12 +45,12 @@ object `17` {
     }
     
     @scala.inline
-    def setDescription(value: `The glob patterns Jest uses to detect test filesDot`): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDefault(value: `false`): Self = this.set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setString(value: `true`): Self = this.set("string", value.asInstanceOf[js.Any])
+    def setDescription(value: `Add GraveaccentlocationGraveaccent information to the test results`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: array): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: boolean): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

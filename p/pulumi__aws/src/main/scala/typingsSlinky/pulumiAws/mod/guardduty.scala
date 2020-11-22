@@ -2,6 +2,8 @@ package typingsSlinky.pulumiAws.mod
 
 import typingsSlinky.pulumiAws.detectorMod.DetectorArgs
 import typingsSlinky.pulumiAws.detectorMod.DetectorState
+import typingsSlinky.pulumiAws.filterMod.FilterArgs
+import typingsSlinky.pulumiAws.filterMod.FilterState
 import typingsSlinky.pulumiAws.getDetectorMod.GetDetectorArgs
 import typingsSlinky.pulumiAws.getDetectorMod.GetDetectorResult
 import typingsSlinky.pulumiAws.inviteAccepterMod.InviteAccepterArgs
@@ -14,6 +16,8 @@ import typingsSlinky.pulumiAws.organizationAdminAccountMod.OrganizationAdminAcco
 import typingsSlinky.pulumiAws.organizationAdminAccountMod.OrganizationAdminAccountState
 import typingsSlinky.pulumiAws.organizationConfigurationMod.OrganizationConfigurationArgs
 import typingsSlinky.pulumiAws.organizationConfigurationMod.OrganizationConfigurationState
+import typingsSlinky.pulumiAws.publishingDestinationMod.PublishingDestinationArgs
+import typingsSlinky.pulumiAws.publishingDestinationMod.PublishingDestinationState
 import typingsSlinky.pulumiAws.threatIntelSetMod.ThreatIntelSetArgs
 import typingsSlinky.pulumiAws.threatIntelSetMod.ThreatIntelSetState
 import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
@@ -71,6 +75,44 @@ object guardduty extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/guardduty/detector.Detector */ Boolean = js.native
+  }
+  
+  @js.native
+  class Filter protected ()
+    extends typingsSlinky.pulumiAws.guarddutyMod.Filter {
+    /**
+      * Create a Filter resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: FilterArgs) = this()
+    def this(name: String, args: FilterArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object Filter extends js.Object {
+    
+    /**
+      * Get an existing Filter resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.filterMod.Filter = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.filterMod.Filter = js.native
+    def get(name: String, id: Input[ID], state: FilterState): typingsSlinky.pulumiAws.filterMod.Filter = js.native
+    def get(name: String, id: Input[ID], state: FilterState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.filterMod.Filter = js.native
+    
+    /**
+      * Returns true if the given object is an instance of Filter.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/guardduty/filter.Filter */ Boolean = js.native
   }
   
   @js.native
@@ -261,6 +303,44 @@ object guardduty extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/guardduty/organizationConfiguration.OrganizationConfiguration */ Boolean = js.native
+  }
+  
+  @js.native
+  class PublishingDestination protected ()
+    extends typingsSlinky.pulumiAws.guarddutyMod.PublishingDestination {
+    /**
+      * Create a PublishingDestination resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: PublishingDestinationArgs) = this()
+    def this(name: String, args: PublishingDestinationArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object PublishingDestination extends js.Object {
+    
+    /**
+      * Get an existing PublishingDestination resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.publishingDestinationMod.PublishingDestination = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.publishingDestinationMod.PublishingDestination = js.native
+    def get(name: String, id: Input[ID], state: PublishingDestinationState): typingsSlinky.pulumiAws.publishingDestinationMod.PublishingDestination = js.native
+    def get(name: String, id: Input[ID], state: PublishingDestinationState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.publishingDestinationMod.PublishingDestination = js.native
+    
+    /**
+      * Returns true if the given object is an instance of PublishingDestination.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/guardduty/publishingDestination.PublishingDestination */ Boolean = js.native
   }
   
   @js.native

@@ -9,9 +9,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/**
-  * Parsed mail object.
-  */
 @js.native
 trait ParsedMail extends js.Object {
   

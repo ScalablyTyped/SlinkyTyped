@@ -14,6 +14,13 @@ trait AsyncMatchers[T, U] extends js.Object {
   var not: AsyncMatchers[T, U] = js.native
   
   /**
+    * Expect a promise to be pending, i.e. the promise is neither resolved nor rejected.
+    * @param expectationFailOutput
+    */
+  def toBePending(): js.Thenable[Unit] = js.native
+  def toBePending(expectationFailOutput: js.Any): js.Thenable[Unit] = js.native
+  
+  /**
     * Expect a promise to be rejected.
     * @param expectationFailOutput
     */
@@ -22,14 +29,14 @@ trait AsyncMatchers[T, U] extends js.Object {
   
   /**
     * Expect a promise to be rejected with a value equal to the expected, using deep equality comparison.
-    * @param expected - Value that the promise is expected to be rejected with.
+    * @param expected Value that the promise is expected to be rejected with.
     */
   def toBeRejectedWith(expected: Expected[U]): js.Thenable[Unit] = js.native
   
   /**
     * Expect a promise to be rejected with a value matched to the expected.
-    * @param expected - Error constructor the object that was thrown needs to be an instance of. If not provided, Error will be used.
-    * @param message - The message that should be set on the thrown Error.
+    * @param expected Error constructor the object that was thrown needs to be an instance of. If not provided, Error will be used.
+    * @param message The message that should be set on the thrown Error.
     */
   def toBeRejectedWithError(): js.Thenable[Unit] = js.native
   def toBeRejectedWithError(expected: js.UndefOr[scala.Nothing], message: String): js.Thenable[Unit] = js.native
@@ -49,13 +56,13 @@ trait AsyncMatchers[T, U] extends js.Object {
   
   /**
     * Expect a promise to be resolved to a value equal to the expected, using deep equality comparison.
-    * @param expected - Value that the promise is expected to resolve to.
+    * @param expected Value that the promise is expected to resolve to.
     */
   def toBeResolvedTo(expected: Expected[T]): js.Thenable[Unit] = js.native
   
   /**
     * Add some context for an expect.
-    * @param message - Additional context to show when the matcher fails.
+    * @param message Additional context to show when the matcher fails.
     */
   def withContext(message: String): AsyncMatchers[T, U] = js.native
 }

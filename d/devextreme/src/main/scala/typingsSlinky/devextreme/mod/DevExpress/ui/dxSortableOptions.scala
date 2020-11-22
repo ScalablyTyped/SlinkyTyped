@@ -5,8 +5,8 @@ import typingsSlinky.devextreme.anon.ComponentDropInsideItem
 import typingsSlinky.devextreme.anon.DropInsideItemElement
 import typingsSlinky.devextreme.anon.FromDataFromIndex
 import typingsSlinky.devextreme.anon.FromIndexItemData
+import typingsSlinky.devextreme.anon.ItemElementModel
 import typingsSlinky.devextreme.anon.ModelPromise
-import typingsSlinky.devextreme.anon.ModelToComponent
 import typingsSlinky.devextreme.devextremeStrings.horizontal
 import typingsSlinky.devextreme.devextremeStrings.indicate
 import typingsSlinky.devextreme.devextremeStrings.push
@@ -20,13 +20,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSortableOptions extends DraggableBaseOptions[dxSortable] {
   
-  /** @name dxSortable.Options.allowDropInsideItem */
+  /**
+    * [descr:dxSortable.Options.allowDropInsideItem]
+    */
   var allowDropInsideItem: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSortable.Options.allowReordering */
+  /**
+    * [descr:dxSortable.Options.allowReordering]
+    */
   var allowReordering: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSortable.Options.dragTemplate */
+  /**
+    * [descr:dxSortable.Options.dragTemplate]
+    */
   var dragTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
       /* dragInfo */ FromIndexItemData, 
@@ -35,37 +41,59 @@ trait dxSortableOptions extends DraggableBaseOptions[dxSortable] {
     ])
   ] = js.native
   
-  /** @name dxSortable.Options.dropFeedbackMode */
+  /**
+    * [descr:dxSortable.Options.dropFeedbackMode]
+    */
   var dropFeedbackMode: js.UndefOr[push | indicate] = js.native
   
-  /** @name dxSortable.Options.filter */
+  /**
+    * [descr:dxSortable.Options.filter]
+    */
   var filter: js.UndefOr[String] = js.native
   
-  /** @name dxSortable.Options.itemOrientation */
+  /**
+    * [descr:dxSortable.Options.itemOrientation]
+    */
   var itemOrientation: js.UndefOr[horizontal | vertical] = js.native
   
-  /** @name dxSortable.Options.moveItemOnDrop */
+  /**
+    * [descr:dxSortable.Options.moveItemOnDrop]
+    */
   var moveItemOnDrop: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSortable.Options.onAdd */
+  /**
+    * [descr:dxSortable.Options.onAdd]
+    */
   var onAdd: js.UndefOr[js.Function1[/* e */ ComponentDropInsideItem, _]] = js.native
   
-  /** @name dxSortable.Options.onDragChange */
+  /**
+    * [descr:dxSortable.Options.onDragChange]
+    */
   var onDragChange: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.native
   
-  /** @name dxSortable.Options.onDragEnd */
+  /**
+    * [descr:dxSortable.Options.onDragEnd]
+    */
   var onDragEnd: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.native
   
-  /** @name dxSortable.Options.onDragMove */
+  /**
+    * [descr:dxSortable.Options.onDragMove]
+    */
   var onDragMove: js.UndefOr[js.Function1[/* e */ DropInsideItemElement, _]] = js.native
   
-  /** @name dxSortable.Options.onDragStart */
+  /**
+    * [descr:dxSortable.Options.onDragStart]
+    */
   var onDragStart: js.UndefOr[js.Function1[/* e */ FromDataFromIndex, _]] = js.native
   
-  /** @name dxSortable.Options.onRemove */
-  var onRemove: js.UndefOr[js.Function1[/* e */ ModelToComponent, _]] = js.native
+  /**
+    * [descr:dxSortable.Options.onRemove]
+    */
+  var onRemove: js.UndefOr[js.Function1[/* e */ ItemElementModel, _]] = js.native
   
-  /** @name dxSortable.Options.onReorder */
+  /**
+    * [descr:dxSortable.Options.onReorder]
+    */
   var onReorder: js.UndefOr[js.Function1[/* e */ ModelPromise, _]] = js.native
 }
 object dxSortableOptions {
@@ -178,7 +206,7 @@ object dxSortableOptions {
     def deleteOnDragStart: Self = this.set("onDragStart", js.undefined)
     
     @scala.inline
-    def setOnRemove(value: /* e */ ModelToComponent => _): Self = this.set("onRemove", js.Any.fromFunction1(value))
+    def setOnRemove(value: /* e */ ItemElementModel => _): Self = this.set("onRemove", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnRemove: Self = this.set("onRemove", js.undefined)

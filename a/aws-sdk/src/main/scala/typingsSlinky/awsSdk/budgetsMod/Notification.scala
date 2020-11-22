@@ -23,7 +23,7 @@ trait Notification extends js.Object {
   var NotificationType: typingsSlinky.awsSdk.budgetsMod.NotificationType = js.native
   
   /**
-    * The threshold that is associated with a notification. Thresholds are always a percentage.
+    * The threshold that is associated with a notification. Thresholds are always a percentage, and many customers find value being alerted between 50% - 200% of the budgeted amount. The maximum limit for your threshold is 1,000,000% above the budgeted amount.
     */
   var Threshold: NotificationThreshold = js.native
   

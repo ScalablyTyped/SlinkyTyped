@@ -1,11 +1,9 @@
 package typingsSlinky.awsSdkClientDynamodbBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientDynamodbBrowser.dynamoDBConfigurationMod.DynamoDBConfiguration
 import typingsSlinky.awsSdkClientDynamodbBrowser.dynamoDBConfigurationMod.DynamoDBResolvedConfiguration
 import typingsSlinky.awsSdkClientDynamodbBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientDynamodbBrowser.outputTypesUnionMod.OutputTypesUnion
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,30 +21,16 @@ object dynamoDBClientMod extends js.Object {
     
     def destroy(): Unit = js.native
     
-    val middlewareStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob] = js.native
+    val middlewareStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any = js.native
     
     /**
       * This will need to be revised when the command interface lands.
       */
     def send[InputType /* <: InputTypesUnion */, OutputType /* <: OutputTypesUnion */](
-      command: Command[
-          InputTypesUnion, 
-          InputType, 
-          OutputTypesUnion, 
-          OutputType, 
-          DynamoDBResolvedConfiguration, 
-          Blob
-        ]
+      command: Command[InputTypesUnion, InputType, OutputTypesUnion, OutputType, DynamoDBResolvedConfiguration]
     ): js.Promise[OutputType] = js.native
     def send[InputType /* <: InputTypesUnion */, OutputType /* <: OutputTypesUnion */](
-      command: Command[
-          InputTypesUnion, 
-          InputType, 
-          OutputTypesUnion, 
-          OutputType, 
-          DynamoDBResolvedConfiguration, 
-          Blob
-        ],
+      command: Command[InputTypesUnion, InputType, OutputTypesUnion, OutputType, DynamoDBResolvedConfiguration],
       cb: js.Function2[/* err */ js.Any, /* data */ js.UndefOr[OutputType], Unit]
     ): Unit = js.native
   }

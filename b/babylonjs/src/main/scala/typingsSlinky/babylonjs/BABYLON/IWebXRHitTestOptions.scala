@@ -1,21 +1,43 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import typingsSlinky.babylonjs.XRHitTestTrackableType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IWebXRHitTestOptions extends js.Object {
+trait IWebXRHitTestOptions extends IWebXRLegacyHitTestOptions {
   
   /**
-    * Only test when user interacted with the scene. Default - hit test every frame
+    * Do not create a permanent hit test. Will usually be used when only
+    * transient inputs are needed.
     */
-  var testOnPointerDownOnly: js.UndefOr[Boolean] = js.native
+  var disablePermanentHitTest: js.UndefOr[Boolean] = js.native
   
   /**
-    * The node to use to transform the local results to world coordinates
+    * Enable transient (for example touch-based) hit test inspections
     */
-  var worldParentNode: js.UndefOr[TransformNode] = js.native
+  var enableTransientHitTest: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Override the default entity type(s) of the hit-test result
+    */
+  var entityTypes: js.UndefOr[js.Array[XRHitTestTrackableType]] = js.native
+  
+  /**
+    * Offset ray for the permanent hit test
+    */
+  var offsetRay: js.UndefOr[Vector3] = js.native
+  
+  /**
+    * Offset ray for the transient hit test
+    */
+  var transientOffsetRay: js.UndefOr[Vector3] = js.native
+  
+  /**
+    * Instead of using viewer space for hit tests, use the reference space defined in the session manager
+    */
+  var useReferenceSpace: js.UndefOr[Boolean] = js.native
 }
 object IWebXRHitTestOptions {
   
@@ -41,15 +63,42 @@ object IWebXRHitTestOptions {
     }
     
     @scala.inline
-    def setTestOnPointerDownOnly(value: Boolean): Self = this.set("testOnPointerDownOnly", value.asInstanceOf[js.Any])
+    def setDisablePermanentHitTest(value: Boolean): Self = this.set("disablePermanentHitTest", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteTestOnPointerDownOnly: Self = this.set("testOnPointerDownOnly", js.undefined)
+    def deleteDisablePermanentHitTest: Self = this.set("disablePermanentHitTest", js.undefined)
     
     @scala.inline
-    def setWorldParentNode(value: TransformNode): Self = this.set("worldParentNode", value.asInstanceOf[js.Any])
+    def setEnableTransientHitTest(value: Boolean): Self = this.set("enableTransientHitTest", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteWorldParentNode: Self = this.set("worldParentNode", js.undefined)
+    def deleteEnableTransientHitTest: Self = this.set("enableTransientHitTest", js.undefined)
+    
+    @scala.inline
+    def setEntityTypesVarargs(value: XRHitTestTrackableType*): Self = this.set("entityTypes", js.Array(value :_*))
+    
+    @scala.inline
+    def setEntityTypes(value: js.Array[XRHitTestTrackableType]): Self = this.set("entityTypes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEntityTypes: Self = this.set("entityTypes", js.undefined)
+    
+    @scala.inline
+    def setOffsetRay(value: Vector3): Self = this.set("offsetRay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOffsetRay: Self = this.set("offsetRay", js.undefined)
+    
+    @scala.inline
+    def setTransientOffsetRay(value: Vector3): Self = this.set("transientOffsetRay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTransientOffsetRay: Self = this.set("transientOffsetRay", js.undefined)
+    
+    @scala.inline
+    def setUseReferenceSpace(value: Boolean): Self = this.set("useReferenceSpace", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUseReferenceSpace: Self = this.set("useReferenceSpace", js.undefined)
   }
 }

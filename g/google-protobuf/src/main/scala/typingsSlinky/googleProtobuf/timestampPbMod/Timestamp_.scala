@@ -15,9 +15,9 @@ class Timestamp_ () extends Message {
   
   def getSeconds(): Double = js.native
   
-  def setNanos(value: Double): Unit = js.native
+  def setNanos(value: Double): Timestamp = js.native
   
-  def setSeconds(value: Double): Unit = js.native
+  def setSeconds(value: Double): Timestamp = js.native
   
   def toDate(): js.Date = js.native
 }

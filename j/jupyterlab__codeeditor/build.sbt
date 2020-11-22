@@ -1,22 +1,23 @@
 organization := "org.scalablytyped.slinky"
 name := "jupyterlab__codeeditor"
-version := "1.2.0-acc6a4"
-scalaVersion := "2.13.2"
+version := "2.2.5-1323d8"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "jupyterlab__coreutils" % "3.2.0-511f91",
-  "org.scalablytyped.slinky" %%% "jupyterlab__observables" % "2.4.0-c720ff",
-  "org.scalablytyped.slinky" %%% "phosphor__algorithm" % "1.2.0-787f4c",
-  "org.scalablytyped.slinky" %%% "phosphor__commands" % "1.7.2-b6159b",
-  "org.scalablytyped.slinky" %%% "phosphor__coreutils" % "1.3.1-3c6f75",
-  "org.scalablytyped.slinky" %%% "phosphor__disposable" % "1.3.1-42e33c",
-  "org.scalablytyped.slinky" %%% "phosphor__messaging" % "1.3.0-3dd3f4",
-  "org.scalablytyped.slinky" %%% "phosphor__signaling" % "1.3.1-06b254",
-  "org.scalablytyped.slinky" %%% "phosphor__virtualdom" % "1.2.0-f01026",
-  "org.scalablytyped.slinky" %%% "phosphor__widgets" % "1.9.3-93a919",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "jupyterlab__coreutils" % "4.2.5-5b6788",
+  "org.scalablytyped.slinky" %%% "jupyterlab__nbformat" % "2.2.5-a224d9",
+  "org.scalablytyped.slinky" %%% "jupyterlab__observables" % "3.2.5-73ba47",
+  "org.scalablytyped.slinky" %%% "lumino__algorithm" % "1.3.3-5516f9",
+  "org.scalablytyped.slinky" %%% "lumino__commands" % "1.11.4-d636c9",
+  "org.scalablytyped.slinky" %%% "lumino__coreutils" % "1.5.3-0c65b7",
+  "org.scalablytyped.slinky" %%% "lumino__disposable" % "1.4.3-ecfb0d",
+  "org.scalablytyped.slinky" %%% "lumino__messaging" % "1.4.3-5751c6",
+  "org.scalablytyped.slinky" %%% "lumino__signaling" % "1.4.3-80eff1",
+  "org.scalablytyped.slinky" %%% "lumino__virtualdom" % "1.7.3-1289e7",
+  "org.scalablytyped.slinky" %%% "lumino__widgets" % "1.14.1-13ffca",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

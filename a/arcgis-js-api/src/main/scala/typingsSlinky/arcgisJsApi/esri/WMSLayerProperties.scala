@@ -7,33 +7,41 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WMSLayerProperties
   extends LayerProperties
+     with BlendLayerProperties
      with PortalLayerProperties
      with ScaleRangeLayerProperties
      with RefreshableLayerProperties {
   
   /**
-    * Copyright information for the WMS service. This defaults to the value of the AccessConstraints property from the GetCapabilities request.
+    * A flattened collection of all [WMSSublayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-WMSSublayer.html)s.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#allSublayers)
+    */
+  var allSublayers: js.UndefOr[CollectionProperties[WMSSublayerProperties]] = js.native
+  
+  /**
+    * Copyright information for the WMS service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#copyright)
     */
   var copyright: js.UndefOr[String] = js.native
   
   /**
-    * Use this to append different custom parameters to the WMS map requests. The custom layer parameters are applied to GetMap and GetFeatureInfo.
+    * Use this to append different custom parameters to the WMS map requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#customLayerParameters)
     */
   var customLayerParameters: js.UndefOr[js.Any] = js.native
   
   /**
-    * Use this to append custom parameters to all WMS requests. The custom parameters are applied to GetCapabilities, GetMap and GetFeatureInfo. For example, if an access key is required, the key can be configured as a custom parameter.
+    * Use this to append custom parameters to all WMS requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#customParameters)
     */
   var customParameters: js.UndefOr[js.Any] = js.native
   
   /**
-    * Description for the WMS layer. This defaults to the value of the Abstract property from the WMS GetCapabilities request.
+    * Description for the WMS layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#description)
     */
@@ -61,7 +69,7 @@ trait WMSLayerProperties
   var fullExtents: js.UndefOr[js.Array[ExtentProperties]] = js.native
   
   /**
-    * The map image format (MIME type) to request. Defaults to `image/png` if the WMS service supports it. If not, it defaults to the value of the first `<Format>` in `<GetMap>` in the GetCapabilities response.
+    * The map image format (MIME type) to request.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#imageFormat)
     */
@@ -71,8 +79,6 @@ trait WMSLayerProperties
     * Indicates the maximum height of the image exported by the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#imageMaxHeight)
-    *
-    * @default 2048
     */
   var imageMaxHeight: js.UndefOr[Double] = js.native
   
@@ -80,8 +86,6 @@ trait WMSLayerProperties
     * Indicates the maximum width of the image exported by the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#imageMaxWidth)
-    *
-    * @default 2048
     */
   var imageMaxWidth: js.UndefOr[Double] = js.native
   
@@ -89,8 +93,6 @@ trait WMSLayerProperties
     * Indicates whether the background of the image exported by the service is transparent.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#imageTransparency)
-    *
-    * @default true
     */
   var imageTransparency: js.UndefOr[Boolean] = js.native
   
@@ -98,8 +100,6 @@ trait WMSLayerProperties
     * Indicates whether the layer will be included in the legend.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#legendEnabled)
-    *
-    * @default true
     */
   var legendEnabled: js.UndefOr[Boolean] = js.native
   
@@ -125,6 +125,27 @@ trait WMSLayerProperties
   var sublayers: js.UndefOr[CollectionProperties[WMSSublayerProperties]] = js.native
   
   /**
+    * The layer's time extent.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#timeExtent)
+    */
+  var timeExtent: js.UndefOr[TimeExtentProperties] = js.native
+  
+  /**
+    * TimeInfo provides information such as date fields that store [start](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TimeInfo.html#startField) and [end](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TimeInfo.html#endField) time for each feature and the [fullTimeExtent](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TimeInfo.html#fullTimeExtent) for the layer.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#timeInfo)
+    */
+  var timeInfo: js.UndefOr[TimeInfoProperties] = js.native
+  
+  /**
+    * A temporary offset of the time data based on a certain [TimeInterval](https://developers.arcgis.com/javascript/latest/api-reference/esri-TimeInterval.html).
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#timeOffset)
+    */
+  var timeOffset: js.UndefOr[TimeIntervalProperties] = js.native
+  
+  /**
     * The URL of the WMS service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#url)
@@ -132,7 +153,14 @@ trait WMSLayerProperties
   var url: js.UndefOr[String] = js.native
   
   /**
-    * Version of the [WMS specification](http://www.opengeospatial.org/standards/wms) to use. For example, `1.3.0`, `1.1.1`, `1.1` or `1.0`.
+    * Determines if the layer will update its temporal data based on the view's [timeExtent](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#timeExtent).
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#useViewTime)
+    */
+  var useViewTime: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Version of the [WMS specification](http://www.opengeospatial.org/standards/wms) to use.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WMSLayer.html#version)
     */
@@ -160,6 +188,15 @@ object WMSLayerProperties {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAllSublayersVarargs(value: WMSSublayerProperties*): Self = this.set("allSublayers", js.Array(value :_*))
+    
+    @scala.inline
+    def setAllSublayers(value: CollectionProperties[WMSSublayerProperties]): Self = this.set("allSublayers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllSublayers: Self = this.set("allSublayers", js.undefined)
     
     @scala.inline
     def setCopyright(value: String): Self = this.set("copyright", value.asInstanceOf[js.Any])
@@ -261,10 +298,34 @@ object WMSLayerProperties {
     def deleteSublayers: Self = this.set("sublayers", js.undefined)
     
     @scala.inline
+    def setTimeExtent(value: TimeExtentProperties): Self = this.set("timeExtent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimeExtent: Self = this.set("timeExtent", js.undefined)
+    
+    @scala.inline
+    def setTimeInfo(value: TimeInfoProperties): Self = this.set("timeInfo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimeInfo: Self = this.set("timeInfo", js.undefined)
+    
+    @scala.inline
+    def setTimeOffset(value: TimeIntervalProperties): Self = this.set("timeOffset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimeOffset: Self = this.set("timeOffset", js.undefined)
+    
+    @scala.inline
     def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUrl: Self = this.set("url", js.undefined)
+    
+    @scala.inline
+    def setUseViewTime(value: Boolean): Self = this.set("useViewTime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUseViewTime: Self = this.set("useViewTime", js.undefined)
     
     @scala.inline
     def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])

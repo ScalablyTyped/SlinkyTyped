@@ -17,6 +17,10 @@ object boxHelperMod extends js.Object {
   @js.native
   class BoxHelper protected ()
     extends LineSegments[Geometry | BufferGeometry, Material | js.Array[Material]] {
+    /**
+    	 * @param object
+    	 * @param [color=0xffff00]
+    	 */
     def this(`object`: Object3D) = this()
     def this(`object`: Object3D, color: String) = this()
     def this(`object`: Object3D, color: Double) = this()

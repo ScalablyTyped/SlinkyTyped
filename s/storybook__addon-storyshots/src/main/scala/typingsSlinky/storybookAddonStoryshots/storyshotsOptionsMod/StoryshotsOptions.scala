@@ -1,7 +1,6 @@
 package typingsSlinky.storybookAddonStoryshots.storyshotsOptionsMod
 
 import typingsSlinky.glob.mod.IOptions
-import typingsSlinky.storybookAddonStoryshots.frameworksLoaderMod.RenderTree
 import typingsSlinky.storybookAddonStoryshots.stories2SnapsConverterMod.Stories2SnapsConverter
 import typingsSlinky.storybookAddonStoryshots.storybookAddonStoryshotsBooleans.`false`
 import typingsSlinky.storybookAddonStoryshots.supportedFrameworkMod.SupportedFramework
@@ -43,15 +42,7 @@ trait StoryshotsOptions extends js.Object {
   
   var suite: js.UndefOr[String] = js.native
   
-  var test: js.UndefOr[
-    js.Function4[
-      /* story */ js.Any, 
-      /* context */ js.Any, 
-      /* renderTree */ RenderTree, 
-      /* options */ js.UndefOr[js.Any], 
-      _
-    ]
-  ] = js.native
+  var test: js.UndefOr[StoryshotsTestMethod] = js.native
 }
 object StoryshotsOptions {
   
@@ -162,9 +153,7 @@ object StoryshotsOptions {
     def deleteSuite: Self = this.set("suite", js.undefined)
     
     @scala.inline
-    def setTest(
-      value: (/* story */ js.Any, /* context */ js.Any, /* renderTree */ RenderTree, /* options */ js.UndefOr[js.Any]) => _
-    ): Self = this.set("test", js.Any.fromFunction4(value))
+    def setTest(value: StoryshotsTestMethod): Self = this.set("test", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTest: Self = this.set("test", js.undefined)

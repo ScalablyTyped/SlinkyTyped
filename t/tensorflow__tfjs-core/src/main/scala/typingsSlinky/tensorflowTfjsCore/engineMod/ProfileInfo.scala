@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProfileInfo extends js.Object {
   
-  var kernels: js.Array[KernelProfile] = js.native
+  var kernels: js.Array[KernelInfo] = js.native
   
   var newBytes: Double = js.native
   
@@ -22,7 +22,7 @@ object ProfileInfo {
   
   @scala.inline
   def apply(
-    kernels: js.Array[KernelProfile],
+    kernels: js.Array[KernelInfo],
     newBytes: Double,
     newTensors: Double,
     peakBytes: Double,
@@ -48,10 +48,10 @@ object ProfileInfo {
     }
     
     @scala.inline
-    def setKernelsVarargs(value: KernelProfile*): Self = this.set("kernels", js.Array(value :_*))
+    def setKernelsVarargs(value: KernelInfo*): Self = this.set("kernels", js.Array(value :_*))
     
     @scala.inline
-    def setKernels(value: js.Array[KernelProfile]): Self = this.set("kernels", value.asInstanceOf[js.Any])
+    def setKernels(value: js.Array[KernelInfo]): Self = this.set("kernels", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNewBytes(value: Double): Self = this.set("newBytes", value.asInstanceOf[js.Any])

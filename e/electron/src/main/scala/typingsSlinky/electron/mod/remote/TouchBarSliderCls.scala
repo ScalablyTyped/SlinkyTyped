@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("electron", "remote.TouchBarSlider")
 @js.native
 class TouchBarSliderCls protected () extends TouchBarSlider {
-  // Docs: http://electronjs.org/docs/api/touch-bar-slider
+  // Docs: https://electronjs.org/docs/api/touch-bar-slider
   /**
     * TouchBarSlider
     */

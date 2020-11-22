@@ -23,7 +23,7 @@ trait TrialComponentSourceDetail extends js.Object {
   var TrainingJob: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.TrainingJob] = js.native
   
   /**
-    * Information about a transform job that's the source of the trial component.
+    * Information about a transform job that's the source of a trial component.
     */
   var TransformJob: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.TransformJob] = js.native
 }

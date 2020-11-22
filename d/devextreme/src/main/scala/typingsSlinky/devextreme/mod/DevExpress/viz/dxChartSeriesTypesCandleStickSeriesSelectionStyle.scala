@@ -4,11 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CandleStickSeries.selectionStyle */
+/**
+  * [descr:dxChartSeriesTypes.CandleStickSeries.selectionStyle]
+  */
 @js.native
 trait dxChartSeriesTypesCandleStickSeriesSelectionStyle extends dxChartSeriesTypesCommonSeriesSelectionStyle {
   
-  /** @name dxChartSeriesTypes.CandleStickSeries.selectionStyle.hatching */
+  /**
+    * [descr:dxChartSeriesTypes.CandleStickSeries.selectionStyle.hatching]
+    */
   @JSName("hatching")
   var hatching_dxChartSeriesTypesCandleStickSeriesSelectionStyle: js.UndefOr[dxChartSeriesTypesCandleStickSeriesSelectionStyleHatching] = js.native
 }

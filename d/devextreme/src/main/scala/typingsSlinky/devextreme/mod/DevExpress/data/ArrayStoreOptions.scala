@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ArrayStoreOptions[T] extends StoreOptions[T] {
   
-  /** @name ArrayStore.Options.data */
+  /**
+    * [descr:ArrayStore.Options.data]
+    */
   var data: js.UndefOr[js.Array[_]] = js.native
 }
 object ArrayStoreOptions {

@@ -1,6 +1,5 @@
 package typingsSlinky.reconnectingwebsocket.mod
 
-import typingsSlinky.std.BinaryType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +18,9 @@ trait Options extends js.Object {
     * The binary type, possible values `'blob'` or `'arraybuffer'`.
     * @default `'blob'`
     */
-  var binaryType: js.UndefOr[BinaryType] = js.native
+  var binaryType: js.UndefOr[
+    /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['binaryType'] */ js.Any
+  ] = js.native
   
   /**
     * Whether this instance should log debug messages.
@@ -91,7 +92,9 @@ object Options {
     def deleteAutomaticOpen: Self = this.set("automaticOpen", js.undefined)
     
     @scala.inline
-    def setBinaryType(value: BinaryType): Self = this.set("binaryType", value.asInstanceOf[js.Any])
+    def setBinaryType(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['binaryType'] */ js.Any
+    ): Self = this.set("binaryType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBinaryType: Self = this.set("binaryType", js.undefined)

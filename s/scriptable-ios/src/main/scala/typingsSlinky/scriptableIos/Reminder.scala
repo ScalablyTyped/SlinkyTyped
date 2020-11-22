@@ -67,6 +67,12 @@ trait Reminder extends js.Object {
   var isCompleted: Boolean = js.native
   
   /**
+    * _Whether the reminder is overdue._
+    * @see https://docs.scriptable.app/reminder/#isoverdue
+    */
+  var isOverdue: Boolean = js.native
+  
+  /**
     * _Notes associated with reminder._
     * @see https://docs.scriptable.app/reminder/#notes
     */
@@ -118,6 +124,7 @@ object Reminder {
     dueDateIncludesTime: Boolean,
     identifier: String,
     isCompleted: Boolean,
+    isOverdue: Boolean,
     notes: String,
     priority: Double,
     remove: () => Unit,
@@ -125,7 +132,7 @@ object Reminder {
     save: () => Unit,
     title: String
   ): Reminder = {
-    val __obj = js.Dynamic.literal(addRecurrenceRule = js.Any.fromFunction1(addRecurrenceRule), calendar = calendar.asInstanceOf[js.Any], completionDate = completionDate.asInstanceOf[js.Any], creationDate = creationDate.asInstanceOf[js.Any], dueDate = dueDate.asInstanceOf[js.Any], dueDateIncludesTime = dueDateIncludesTime.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], isCompleted = isCompleted.asInstanceOf[js.Any], notes = notes.asInstanceOf[js.Any], priority = priority.asInstanceOf[js.Any], remove = js.Any.fromFunction0(remove), removeAllRecurrenceRules = js.Any.fromFunction0(removeAllRecurrenceRules), save = js.Any.fromFunction0(save), title = title.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(addRecurrenceRule = js.Any.fromFunction1(addRecurrenceRule), calendar = calendar.asInstanceOf[js.Any], completionDate = completionDate.asInstanceOf[js.Any], creationDate = creationDate.asInstanceOf[js.Any], dueDate = dueDate.asInstanceOf[js.Any], dueDateIncludesTime = dueDateIncludesTime.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], isCompleted = isCompleted.asInstanceOf[js.Any], isOverdue = isOverdue.asInstanceOf[js.Any], notes = notes.asInstanceOf[js.Any], priority = priority.asInstanceOf[js.Any], remove = js.Any.fromFunction0(remove), removeAllRecurrenceRules = js.Any.fromFunction0(removeAllRecurrenceRules), save = js.Any.fromFunction0(save), title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[Reminder]
   }
   
@@ -167,6 +174,9 @@ object Reminder {
     
     @scala.inline
     def setIsCompleted(value: Boolean): Self = this.set("isCompleted", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIsOverdue(value: Boolean): Self = this.set("isOverdue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNotes(value: String): Self = this.set("notes", value.asInstanceOf[js.Any])

@@ -4,6 +4,7 @@ import typingsSlinky.relayRuntime.commitMutationMod.MutationParameters
 import typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod.DeclarativeMutationConfig
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.PayloadError
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.UploadableMap
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.VariablesOf
 import typingsSlinky.relayRuntime.relayStoreTypesMod.RecordSourceSelectorProxy
 import typingsSlinky.relayRuntime.relayStoreTypesMod.SelectorStoreUpdater
 import scala.scalajs.js
@@ -19,32 +20,38 @@ trait UseMutationConfig[TMutation /* <: MutationParameters */] extends js.Object
     js.Function2[
       /* import warning: importer.ImportType#apply Failed type conversion: TMutation['response'] */ /* response */ js.Any, 
       /* errors */ js.Array[PayloadError], 
-      Unit
+      Unit | Null
     ]
   ] = js.native
   
-  var onError: js.UndefOr[js.Function1[/* error */ js.Error, Unit]] = js.native
+  var onError: js.UndefOr[js.Function1[/* error */ js.Error, Unit | Null]] = js.native
   
-  var onUnsubscribe: js.UndefOr[js.Function0[Unit]] = js.native
+  var onUnsubscribe: js.UndefOr[js.Function0[Unit | Null]] = js.native
   
   var optimisticResponse: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: TMutation['rawResponse'] */ js.Any
   ] = js.native
   
-  var optimisticUpdater: js.UndefOr[SelectorStoreUpdater[js.Object]] = js.native
+  var optimisticUpdater: js.UndefOr[
+    (SelectorStoreUpdater[
+      /* import warning: importer.ImportType#apply Failed type conversion: TMutation['response'] */ js.Any
+    ]) | Null
+  ] = js.native
   
-  var updater: js.UndefOr[SelectorStoreUpdater[js.Object]] = js.native
+  var updater: js.UndefOr[
+    (SelectorStoreUpdater[
+      /* import warning: importer.ImportType#apply Failed type conversion: TMutation['response'] */ js.Any
+    ]) | Null
+  ] = js.native
   
   var uploadables: js.UndefOr[UploadableMap] = js.native
   
-  var variables: /* import warning: importer.ImportType#apply Failed type conversion: TMutation['variables'] */ js.Any = js.native
+  var variables: VariablesOf[TMutation] = js.native
 }
 object UseMutationConfig {
   
   @scala.inline
-  def apply[TMutation /* <: MutationParameters */](
-    variables: /* import warning: importer.ImportType#apply Failed type conversion: TMutation['variables'] */ js.Any
-  ): UseMutationConfig[TMutation] = {
+  def apply[TMutation /* <: MutationParameters */](variables: VariablesOf[TMutation]): UseMutationConfig[TMutation] = {
     val __obj = js.Dynamic.literal(variables = variables.asInstanceOf[js.Any])
     __obj.asInstanceOf[UseMutationConfig[TMutation]]
   }
@@ -65,9 +72,7 @@ object UseMutationConfig {
     }
     
     @scala.inline
-    def setVariables(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: TMutation['variables'] */ js.Any
-    ): Self = this.set("variables", value.asInstanceOf[js.Any])
+    def setVariables(value: VariablesOf[TMutation]): Self = this.set("variables", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setConfigsVarargs(value: DeclarativeMutationConfig*): Self = this.set("configs", js.Array(value :_*))
@@ -80,20 +85,20 @@ object UseMutationConfig {
     
     @scala.inline
     def setOnCompleted(
-      value: (/* import warning: importer.ImportType#apply Failed type conversion: TMutation['response'] */ /* response */ js.Any, /* errors */ js.Array[PayloadError]) => Unit
+      value: (/* import warning: importer.ImportType#apply Failed type conversion: TMutation['response'] */ /* response */ js.Any, /* errors */ js.Array[PayloadError]) => Unit | Null
     ): Self = this.set("onCompleted", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnCompleted: Self = this.set("onCompleted", js.undefined)
     
     @scala.inline
-    def setOnError(value: /* error */ js.Error => Unit): Self = this.set("onError", js.Any.fromFunction1(value))
+    def setOnError(value: /* error */ js.Error => Unit | Null): Self = this.set("onError", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnError: Self = this.set("onError", js.undefined)
     
     @scala.inline
-    def setOnUnsubscribe(value: () => Unit): Self = this.set("onUnsubscribe", js.Any.fromFunction0(value))
+    def setOnUnsubscribe(value: () => Unit | Null): Self = this.set("onUnsubscribe", js.Any.fromFunction0(value))
     
     @scala.inline
     def deleteOnUnsubscribe: Self = this.set("onUnsubscribe", js.undefined)
@@ -107,16 +112,30 @@ object UseMutationConfig {
     def deleteOptimisticResponse: Self = this.set("optimisticResponse", js.undefined)
     
     @scala.inline
-    def setOptimisticUpdater(value: (/* store */ RecordSourceSelectorProxy[js.Object], js.Object) => Unit): Self = this.set("optimisticUpdater", js.Any.fromFunction2(value))
+    def setOptimisticUpdater(
+      value: (/* store */ RecordSourceSelectorProxy[
+          /* import warning: importer.ImportType#apply Failed type conversion: TMutation['response'] */ js.Any
+        ], /* import warning: importer.ImportType#apply Failed type conversion: TMutation['response'] */ js.Any) => Unit
+    ): Self = this.set("optimisticUpdater", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOptimisticUpdater: Self = this.set("optimisticUpdater", js.undefined)
     
     @scala.inline
-    def setUpdater(value: (/* store */ RecordSourceSelectorProxy[js.Object], js.Object) => Unit): Self = this.set("updater", js.Any.fromFunction2(value))
+    def setOptimisticUpdaterNull: Self = this.set("optimisticUpdater", null)
+    
+    @scala.inline
+    def setUpdater(
+      value: (/* store */ RecordSourceSelectorProxy[
+          /* import warning: importer.ImportType#apply Failed type conversion: TMutation['response'] */ js.Any
+        ], /* import warning: importer.ImportType#apply Failed type conversion: TMutation['response'] */ js.Any) => Unit
+    ): Self = this.set("updater", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteUpdater: Self = this.set("updater", js.undefined)
+    
+    @scala.inline
+    def setUpdaterNull: Self = this.set("updater", null)
     
     @scala.inline
     def setUploadables(value: UploadableMap): Self = this.set("uploadables", value.asInstanceOf[js.Any])

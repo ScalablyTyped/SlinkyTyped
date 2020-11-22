@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Focused extends js.Object {
   
-  var focused: Boolean | Null = js.native
+  var focused: Boolean = js.native
 }
 object Focused {
   
   @scala.inline
-  def apply(): Focused = {
-    val __obj = js.Dynamic.literal()
+  def apply(focused: Boolean): Focused = {
+    val __obj = js.Dynamic.literal(focused = focused.asInstanceOf[js.Any])
     __obj.asInstanceOf[Focused]
   }
   
@@ -34,8 +34,5 @@ object Focused {
     
     @scala.inline
     def setFocused(value: Boolean): Self = this.set("focused", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setFocusedNull: Self = this.set("focused", null)
   }
 }

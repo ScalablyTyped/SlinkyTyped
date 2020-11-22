@@ -14,6 +14,13 @@ trait VirtualAuthenticatorOptions extends js.Object {
   var automaticPresenceSimulation: js.UndefOr[Boolean] = js.native
   
   /**
+    * If set to true, the authenticator will support the largeBlob extension.
+    * https://w3c.github.io/webauthn#largeBlob
+    * Defaults to false.
+    */
+  var hasLargeBlob: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Defaults to false.
     */
   var hasResidentKey: js.UndefOr[Boolean] = js.native
@@ -67,6 +74,12 @@ object VirtualAuthenticatorOptions {
     
     @scala.inline
     def deleteAutomaticPresenceSimulation: Self = this.set("automaticPresenceSimulation", js.undefined)
+    
+    @scala.inline
+    def setHasLargeBlob(value: Boolean): Self = this.set("hasLargeBlob", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHasLargeBlob: Self = this.set("hasLargeBlob", js.undefined)
     
     @scala.inline
     def setHasResidentKey(value: Boolean): Self = this.set("hasResidentKey", value.asInstanceOf[js.Any])

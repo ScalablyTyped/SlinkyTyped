@@ -20,6 +20,7 @@ class Animatable protected ()
     * @param onAnimationEnd defines a callback to call when animation ends if it is not looping
     * @param animations defines a group of animation to add to the new Animatable
     * @param onAnimationLoop defines a callback to call when animation loops
+    * @param isAdditive defines whether the animation should be evaluated additively
     */
   def this(
     scene: Scene,
@@ -36,6 +37,8 @@ class Animatable protected ()
   onAnimationEnd: js.UndefOr[js.Function0[Unit] | Null],
     animations: js.UndefOr[js.Array[typingsSlinky.babylonjs.animationMod.Animation]],
     /** defines a callback to call when animation loops */
-  onAnimationLoop: js.UndefOr[js.Function0[Unit] | Null]
+  onAnimationLoop: js.UndefOr[js.Function0[Unit] | Null],
+    /** defines whether the animation should be evaluated additively */
+  isAdditive: js.UndefOr[Boolean]
   ) = this()
 }

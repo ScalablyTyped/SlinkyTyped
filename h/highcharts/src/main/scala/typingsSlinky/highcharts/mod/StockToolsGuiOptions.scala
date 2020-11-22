@@ -9,9 +9,10 @@ trait StockToolsGuiOptions extends js.Object {
   
   /**
     * (Highstock) A collection of strings pointing to config options for the
-    * toolbar items. Each name refers to unique key from definitions object.
+    * toolbar items. Each name refers to a unique key from the definitions
+    * object.
     */
-  var buttons: js.UndefOr[String] = js.native
+  var buttons: js.UndefOr[js.Array[String]] = js.native
   
   /**
     * (Highstock) A CSS class name to apply to the stocktools' div, allowing
@@ -60,7 +61,10 @@ object StockToolsGuiOptions {
     }
     
     @scala.inline
-    def setButtons(value: String): Self = this.set("buttons", value.asInstanceOf[js.Any])
+    def setButtonsVarargs(value: String*): Self = this.set("buttons", js.Array(value :_*))
+    
+    @scala.inline
+    def setButtons(value: js.Array[String]): Self = this.set("buttons", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteButtons: Self = this.set("buttons", js.undefined)

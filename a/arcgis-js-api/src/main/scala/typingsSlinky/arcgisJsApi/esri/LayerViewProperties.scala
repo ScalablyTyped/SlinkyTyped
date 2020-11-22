@@ -8,11 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LayerViewProperties extends js.Object {
   
   /**
-    * When `true`, the layer is visible in the view. Set this property to `false` to hide the layer from the view.
+    * When `true`, the layer is visible in the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html#visible)
-    *
-    * @default true
     */
   var visible: js.UndefOr[Boolean] = js.native
 }

@@ -6,8 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* devtools.network types */
 /**
-  * Represents a network request for a document resource (script, image and so on). See HAR Specification for
-  * reference.
+  * Represents a network request for a document resource (script, image and so on). See HAR Specification for reference.
   */
 @js.native
 trait Request extends js.Object {

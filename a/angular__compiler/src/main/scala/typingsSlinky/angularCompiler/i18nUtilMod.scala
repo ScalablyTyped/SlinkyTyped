@@ -29,7 +29,7 @@ object i18nUtilMod extends js.Object {
   
   val I18N_PLACEHOLDER_SYMBOL: /* "\\uFFFD" */ String = js.native
   
-  val TRANSLATION_PREFIX: /* "I18N_" */ String = js.native
+  val TRANSLATION_VAR_PREFIX: /* "i18n_" */ String = js.native
   
   def assembleBoundTextPlaceholders(meta: I18nMeta): Map[String, js.Array[_]] = js.native
   def assembleBoundTextPlaceholders(meta: I18nMeta, bindingStartIndex: js.UndefOr[scala.Nothing], contextId: Double): Map[String, js.Array[_]] = js.native

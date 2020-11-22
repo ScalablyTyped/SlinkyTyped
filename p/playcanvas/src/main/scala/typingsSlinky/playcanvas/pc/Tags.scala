@@ -23,7 +23,7 @@ trait Tags extends EventHandler {
     * @param name - Name of a tag, or array of tags.
     * @returns True if any tag were added.
     */
-  def add(name: String): Boolean = js.native
+  def add(name: js.Any*): Boolean = js.native
   
   /**
     * Remove all tags.
@@ -68,7 +68,7 @@ trait Tags extends EventHandler {
     * @param name - Name of a tag or array of tags.
     * @returns True if any tag were removed.
     */
-  def remove(name: String): Boolean = js.native
+  def remove(name: js.Any*): Boolean = js.native
   
   /**
     * Number of tags in set.

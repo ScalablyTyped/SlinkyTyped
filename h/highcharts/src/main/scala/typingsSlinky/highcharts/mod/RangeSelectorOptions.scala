@@ -85,7 +85,8 @@ trait RangeSelectorOptions extends js.Object {
   /**
     * (Highstock, Gantt) A custom callback function to parse values entered in
     * the input boxes and return a valid JavaScript time as milliseconds since
-    * 1970.
+    * 1970. The first argument passed is a value to parse, second is a boolean
+    * indicating use of the UTC time.
     */
   var inputDateParser: js.UndefOr[RangeSelectorParseCallbackFunction] = js.native
   

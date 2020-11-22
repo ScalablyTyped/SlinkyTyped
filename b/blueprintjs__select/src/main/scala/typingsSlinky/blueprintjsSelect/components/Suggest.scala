@@ -10,6 +10,8 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.blueprintjsCore.inputGroupMod.IInputGroupProps
 import typingsSlinky.blueprintjsCore.propsMod.HTMLInputProps
 import typingsSlinky.blueprintjsSelect.anon.PartialIPopoverProps
+import typingsSlinky.blueprintjsSelect.blueprintjsSelectStrings.first
+import typingsSlinky.blueprintjsSelect.blueprintjsSelectStrings.last
 import typingsSlinky.blueprintjsSelect.itemListRendererMod.IItemListRendererProps
 import typingsSlinky.blueprintjsSelect.itemRendererMod.IItemRendererProps
 import typingsSlinky.blueprintjsSelect.listItemsPropsMod.ItemsEqualProp
@@ -46,6 +48,9 @@ object Suggest {
     
     @scala.inline
     def createNewItemFromQuery(value: /* query */ String => T): this.type = set("createNewItemFromQuery", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def createNewItemPosition(value: first | last): this.type = set("createNewItemPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def createNewItemRenderer(

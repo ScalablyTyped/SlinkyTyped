@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("three", "TetrahedronGeometry")
 @js.native
+/**
+	 * @param [radius=1]
+	 * @param [detail=0]
+	 */
 class TetrahedronGeometry ()
   extends typingsSlinky.three.geometriesMod.TetrahedronGeometry {
   def this(radius: Double) = this()

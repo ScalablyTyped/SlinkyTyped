@@ -9,7 +9,7 @@ trait FlexDirectionProps extends js.Object {
   
   val flexDirection: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexDirectionProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexDirection */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object FlexDirectionProps {
     }
     
     @scala.inline
+    def setFlexDirectionVarargs(value: js.Any*): Self = this.set("flexDirection", js.Array(value :_*))
+    
+    @scala.inline
     def setFlexDirection(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexDirectionProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexDirection */ _
         ]
     ): Self = this.set("flexDirection", value.asInstanceOf[js.Any])
     

@@ -22,8 +22,13 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactMdTransition.anon.PickCrossFadePropshiddenc
+import typingsSlinky.reactMdTransition.reactMdTransitionStrings.`additions removals`
 import typingsSlinky.reactMdTransition.reactMdTransitionStrings.`additions text`
 import typingsSlinky.reactMdTransition.reactMdTransitionStrings.`inline`
+import typingsSlinky.reactMdTransition.reactMdTransitionStrings.`removals additions`
+import typingsSlinky.reactMdTransition.reactMdTransitionStrings.`removals text`
+import typingsSlinky.reactMdTransition.reactMdTransitionStrings.`text additions`
+import typingsSlinky.reactMdTransition.reactMdTransitionStrings.`text removals`
 import typingsSlinky.reactMdTransition.reactMdTransitionStrings.additions
 import typingsSlinky.reactMdTransition.reactMdTransitionStrings.all
 import typingsSlinky.reactMdTransition.reactMdTransitionStrings.ascending
@@ -199,7 +204,9 @@ object CrossFade {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

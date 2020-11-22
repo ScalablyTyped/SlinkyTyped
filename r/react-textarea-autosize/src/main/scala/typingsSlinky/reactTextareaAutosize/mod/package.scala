@@ -6,5 +6,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type TextareaAutosize = slinky.core.ReactComponentClass[typingsSlinky.reactTextareaAutosize.mod.TextareaAutosizeProps]
+  type Style = (typingsSlinky.std.Omit[
+    typingsSlinky.std.NonNullable[js.UndefOr[typingsSlinky.react.mod.CSSProperties]], 
+    typingsSlinky.reactTextareaAutosize.reactTextareaAutosizeStrings.maxHeight | typingsSlinky.reactTextareaAutosize.reactTextareaAutosizeStrings.minHeight
+  ]) with typingsSlinky.reactTextareaAutosize.anon.Height
+  
+  type TextareaProps = typingsSlinky.react.mod.TextareaHTMLAttributes[org.scalajs.dom.raw.HTMLTextAreaElement]
 }

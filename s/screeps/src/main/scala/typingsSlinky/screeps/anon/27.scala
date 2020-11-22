@@ -1,6 +1,6 @@
 package typingsSlinky.screeps.anon
 
-import typingsSlinky.screeps.screepsStrings.XUH2O
+import typingsSlinky.screeps.screepsStrings.XZH2O
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `27` extends js.Object {
   
-  var X: XUH2O = js.native
+  var X: XZH2O = js.native
 }
 object `27` {
   
   @scala.inline
-  def apply(X: XUH2O): `27` = {
+  def apply(X: XZH2O): `27` = {
     val __obj = js.Dynamic.literal(X = X.asInstanceOf[js.Any])
     __obj.asInstanceOf[`27`]
   }
@@ -34,6 +34,6 @@ object `27` {
     }
     
     @scala.inline
-    def setX(value: XUH2O): Self = this.set("X", value.asInstanceOf[js.Any])
+    def setX(value: XZH2O): Self = this.set("X", value.asInstanceOf[js.Any])
   }
 }

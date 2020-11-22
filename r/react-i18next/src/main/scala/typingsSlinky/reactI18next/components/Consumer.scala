@@ -3,8 +3,8 @@ package typingsSlinky.reactI18next.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.i18next.mod.i18n
 import typingsSlinky.react.mod.ConsumerProps
+import typingsSlinky.reactI18next.anon.I18nI18n
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,11 +15,11 @@ object Consumer {
   @js.native
   object component extends js.Object
   
-  def withProps(p: ConsumerProps[i18n]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ConsumerProps[I18nI18n]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(children: i18n => ReactElement): Default[tag.type, js.Object] = {
+  def apply(children: I18nI18n => ReactElement): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(children = js.Any.fromFunction1(children))
-    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ConsumerProps[i18n]]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ConsumerProps[I18nI18n]]))
   }
 }

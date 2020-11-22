@@ -1,19 +1,20 @@
 package typingsSlinky.popmotion
 
-import typingsSlinky.popmotion.actionMod.Action
-import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
-import typingsSlinky.popmotion.springTypesMod.SpringProps
-import typingsSlinky.popmotion.vectorMod.ActionFactory
+import typingsSlinky.popmotion.typesMod.Animation
+import typingsSlinky.popmotion.typesMod.SpringOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("popmotion/lib/animations/spring", JSImport.Namespace)
+@JSImport("popmotion/lib/animations/generators/spring", JSImport.Namespace)
 @js.native
 object springMod extends js.Object {
   
-  val default: ActionFactory = js.native
-  
-  def springSole(): Action[ColdSubscription] = js.native
-  def springSole(props: SpringProps): Action[ColdSubscription] = js.native
+  @js.native
+  object spring extends js.Object {
+    
+    def apply(hasFromToRestSpeedRestDeltaOptions: SpringOptions): Animation[Double] = js.native
+    
+    var needsInterpolation: js.Function2[/* a */ js.Any, /* b */ js.Any, Boolean] = js.native
+  }
 }

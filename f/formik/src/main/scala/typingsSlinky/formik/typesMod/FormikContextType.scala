@@ -7,6 +7,7 @@ import slinky.core.SyntheticEvent
 import slinky.web.SyntheticFocusEvent
 import typingsSlinky.formik.anon.Validate
 import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.react.mod.SetStateAction
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,14 +32,10 @@ trait FormikContextType[Values] extends js.Object {
   
   def getFieldProps[Value](props: js.Any): FieldInputProps[Value] = js.native
   
-  /** Classic React blur handler, keyed by input name */
   def handleBlur(e: SyntheticFocusEvent[_]): Unit = js.native
-  /** Preact-like linkState. Will return a handleBlur function. */
   def handleBlur[T](fieldOrEvent: T): Unit | (js.Function1[/* e */ js.Any, Unit]) = js.native
   
-  /** Classic React change handler, keyed by input name */
   def handleChange(e: ChangeEvent[_]): Unit = js.native
-  /** Preact-like linkState. Will return a handleChange function.  */
   def handleChange[T](field: T): (js.Function1[/* e */ String | ChangeEvent[_], Unit]) | Unit = js.native
   
   /** Reset form event handler  */
@@ -113,8 +110,8 @@ trait FormikContextType[Values] extends js.Object {
   def setTouched(touched: FormikTouched[Values], shouldValidate: Boolean): Unit = js.native
   
   /** Manually set values object  */
-  def setValues(values: Values): Unit = js.native
-  def setValues(values: Values, shouldValidate: Boolean): Unit = js.native
+  def setValues(values: SetStateAction[Values]): Unit = js.native
+  def setValues(values: SetStateAction[Values], shouldValidate: Boolean): Unit = js.native
   
   /** Top level status state, in case you need it */
   var status: js.UndefOr[js.Any] = js.native

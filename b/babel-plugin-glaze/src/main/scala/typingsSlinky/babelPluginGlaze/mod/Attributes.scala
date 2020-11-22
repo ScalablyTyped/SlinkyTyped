@@ -1,5 +1,6 @@
 package typingsSlinky.babelPluginGlaze.mod
 
+import typingsSlinky.glaze.useStylingMod.ThemedStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,9 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Attributes extends js.Object {
   
-  var sx: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ThemedStyle */ js.Any
-  ] = js.native
+  var sx: js.UndefOr[ThemedStyle] = js.native
 }
 object Attributes {
   
@@ -35,9 +34,7 @@ object Attributes {
     }
     
     @scala.inline
-    def setSx(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ThemedStyle */ js.Any
-    ): Self = this.set("sx", value.asInstanceOf[js.Any])
+    def setSx(value: ThemedStyle): Self = this.set("sx", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSx: Self = this.set("sx", js.undefined)

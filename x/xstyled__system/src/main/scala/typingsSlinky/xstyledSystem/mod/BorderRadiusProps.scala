@@ -9,7 +9,7 @@ trait BorderRadiusProps[TLength] extends js.Object {
   
   val borderRadius: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRadiusProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRadius<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BorderRadiusProps {
     }
     
     @scala.inline
+    def setBorderRadiusVarargs(value: js.Any*): Self = this.set("borderRadius", js.Array(value :_*))
+    
+    @scala.inline
     def setBorderRadius(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRadiusProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRadius<TLength> */ _
         ]
     ): Self = this.set("borderRadius", value.asInstanceOf[js.Any])
     

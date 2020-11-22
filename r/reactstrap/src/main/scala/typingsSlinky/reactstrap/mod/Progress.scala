@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "Progress")
+@JSImport("reactstrap/es", "Progress")
 @js.native
-class Progress[T] ()
+class Progress ()
   extends Component[ProgressProps, js.Object, js.Any]

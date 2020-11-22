@@ -15,21 +15,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPopoverOptions[T] extends dxPopupOptions[T] {
   
-  /** @name dxPopover.Options.animation */
+  /**
+    * [descr:dxPopover.Options.animation]
+    */
   @JSName("animation")
   var animation_dxPopoverOptions: js.UndefOr[dxPopoverAnimation] = js.native
   
-  /** @name dxPopover.Options.hideEvent */
+  /**
+    * [descr:dxPopover.Options.hideEvent]
+    */
   var hideEvent: js.UndefOr[Delay | String] = js.native
   
-  /** @name dxPopover.Options.position */
+  /**
+    * [descr:dxPopover.Options.position]
+    */
   @JSName("position")
   var position_dxPopoverOptions: js.UndefOr[bottom | left | right | top | positionConfig] = js.native
   
-  /** @name dxPopover.Options.showEvent */
+  /**
+    * [descr:dxPopover.Options.showEvent]
+    */
   var showEvent: js.UndefOr[Delay | String] = js.native
   
-  /** @name dxPopover.Options.target */
+  /**
+    * [descr:dxPopover.Options.target]
+    */
   var target: js.UndefOr[String | Element | JQuery] = js.native
 }
 object dxPopoverOptions {

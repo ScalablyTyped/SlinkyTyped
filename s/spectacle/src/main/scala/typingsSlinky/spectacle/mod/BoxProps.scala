@@ -12,7 +12,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  children :react.react.ReactNode} & styled-system.styled-system.ColorProps<styled-system.styled-system.RequiredTheme, styled-system.styled-system.ThemeValue<'colors', styled-system.styled-system.RequiredTheme, any>> & styled-system.styled-system.SpaceProps<styled-system.styled-system.RequiredTheme, styled-system.styled-system.ThemeValue<'space', styled-system.styled-system.RequiredTheme, any>> & styled-system.styled-system.LayoutProps<styled-system.styled-system.RequiredTheme> & styled-system.styled-system.PositionProps<styled-system.styled-system.RequiredTheme> & styled-system.styled-system.BorderProps<styled-system.styled-system.RequiredTheme, / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> * / any> */
+/* Inlined {  children :react.react.ReactNode} & styled-system.styled-system.ColorProps<styled-system.styled-system.RequiredTheme, styled-system.styled-system.ThemeValue<'colors', styled-system.styled-system.RequiredTheme, any>> & styled-system.styled-system.SpaceProps<styled-system.styled-system.RequiredTheme, styled-system.styled-system.ThemeValue<'space', styled-system.styled-system.RequiredTheme, any>> & styled-system.styled-system.LayoutProps<styled-system.styled-system.RequiredTheme> & styled-system.styled-system.PositionProps<styled-system.styled-system.RequiredTheme> & styled-system.styled-system.BorderProps<styled-system.styled-system.RequiredTheme, / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> * / any> */
 @js.native
 trait BoxProps extends js.Object {
   
@@ -37,7 +37,7 @@ trait BoxProps extends js.Object {
     */
   var border: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -50,7 +50,7 @@ trait BoxProps extends js.Object {
     */
   var borderBottom: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderBottomProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderBottom<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -83,7 +83,7 @@ trait BoxProps extends js.Object {
     */
   var borderBottomStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderBottomStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderBottomStyle */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -110,7 +110,7 @@ trait BoxProps extends js.Object {
     */
   var borderLeft: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderLeftProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderLeft<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -129,7 +129,7 @@ trait BoxProps extends js.Object {
     */
   var borderLeftStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderLeftStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderLeftStyle */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -157,7 +157,7 @@ trait BoxProps extends js.Object {
     */
   var borderRight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRight<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -176,7 +176,7 @@ trait BoxProps extends js.Object {
     */
   var borderRightStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRightStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRightStyle */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -195,7 +195,7 @@ trait BoxProps extends js.Object {
     */
   var borderStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderStyle */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -208,7 +208,7 @@ trait BoxProps extends js.Object {
     */
   var borderTop: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTop<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -241,7 +241,7 @@ trait BoxProps extends js.Object {
     */
   var borderTopStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTopStyle */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -262,14 +262,14 @@ trait BoxProps extends js.Object {
   
   var borderX: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
   
   var borderY: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -282,7 +282,7 @@ trait BoxProps extends js.Object {
     */
   var bottom: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -309,7 +309,7 @@ trait BoxProps extends js.Object {
     */
   var display: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -322,7 +322,7 @@ trait BoxProps extends js.Object {
     */
   var height: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -335,7 +335,7 @@ trait BoxProps extends js.Object {
     */
   var left: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -372,7 +372,7 @@ trait BoxProps extends js.Object {
     */
   var maxHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -385,7 +385,7 @@ trait BoxProps extends js.Object {
     */
   var maxWidth: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -401,7 +401,7 @@ trait BoxProps extends js.Object {
     */
   var minHeight: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -414,7 +414,7 @@ trait BoxProps extends js.Object {
     */
   var minWidth: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -442,7 +442,7 @@ trait BoxProps extends js.Object {
     */
   var opacity: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -455,7 +455,7 @@ trait BoxProps extends js.Object {
     */
   var overflow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -468,7 +468,7 @@ trait BoxProps extends js.Object {
     */
   var overflowX: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -481,7 +481,7 @@ trait BoxProps extends js.Object {
     */
   var overflowY: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -524,7 +524,7 @@ trait BoxProps extends js.Object {
     */
   var position: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -549,14 +549,14 @@ trait BoxProps extends js.Object {
     */
   var right: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
   
   var size: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -569,7 +569,7 @@ trait BoxProps extends js.Object {
     */
   var top: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -581,7 +581,7 @@ trait BoxProps extends js.Object {
     */
   var verticalAlign: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -596,7 +596,7 @@ trait BoxProps extends js.Object {
     */
   var width: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -609,7 +609,7 @@ trait BoxProps extends js.Object {
     */
   var zIndex: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -667,7 +667,7 @@ object BoxProps {
     @scala.inline
     def setBorder(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("border", value.asInstanceOf[js.Any])
@@ -684,7 +684,7 @@ object BoxProps {
     @scala.inline
     def setBorderBottom(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderBottomProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderBottom<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderBottom", value.asInstanceOf[js.Any])
@@ -737,7 +737,7 @@ object BoxProps {
     @scala.inline
     def setBorderBottomStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderBottomStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderBottomStyle */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderBottomStyle", value.asInstanceOf[js.Any])
@@ -778,7 +778,7 @@ object BoxProps {
     @scala.inline
     def setBorderLeft(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderLeftProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderLeft<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderLeft", value.asInstanceOf[js.Any])
@@ -807,7 +807,7 @@ object BoxProps {
     @scala.inline
     def setBorderLeftStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderLeftStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderLeftStyle */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderLeftStyle", value.asInstanceOf[js.Any])
@@ -848,7 +848,7 @@ object BoxProps {
     @scala.inline
     def setBorderRight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderRight", value.asInstanceOf[js.Any])
@@ -877,7 +877,7 @@ object BoxProps {
     @scala.inline
     def setBorderRightStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRightStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRightStyle */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderRightStyle", value.asInstanceOf[js.Any])
@@ -906,7 +906,7 @@ object BoxProps {
     @scala.inline
     def setBorderStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderStyle */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderStyle", value.asInstanceOf[js.Any])
@@ -923,7 +923,7 @@ object BoxProps {
     @scala.inline
     def setBorderTop(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTop<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderTop", value.asInstanceOf[js.Any])
@@ -976,7 +976,7 @@ object BoxProps {
     @scala.inline
     def setBorderTopStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTopStyle */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderTopStyle", value.asInstanceOf[js.Any])
@@ -1017,7 +1017,7 @@ object BoxProps {
     @scala.inline
     def setBorderX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderX", value.asInstanceOf[js.Any])
@@ -1034,7 +1034,7 @@ object BoxProps {
     @scala.inline
     def setBorderY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("borderY", value.asInstanceOf[js.Any])
@@ -1051,7 +1051,7 @@ object BoxProps {
     @scala.inline
     def setBottom(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("bottom", value.asInstanceOf[js.Any])
@@ -1086,7 +1086,7 @@ object BoxProps {
     @scala.inline
     def setDisplay(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
           RequiredTheme
         ]
     ): Self = this.set("display", value.asInstanceOf[js.Any])
@@ -1103,7 +1103,7 @@ object BoxProps {
     @scala.inline
     def setHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("height", value.asInstanceOf[js.Any])
@@ -1120,7 +1120,7 @@ object BoxProps {
     @scala.inline
     def setLeft(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("left", value.asInstanceOf[js.Any])
@@ -1233,7 +1233,7 @@ object BoxProps {
     @scala.inline
     def setMaxHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("maxHeight", value.asInstanceOf[js.Any])
@@ -1250,7 +1250,7 @@ object BoxProps {
     @scala.inline
     def setMaxWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
@@ -1279,7 +1279,7 @@ object BoxProps {
     @scala.inline
     def setMinHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("minHeight", value.asInstanceOf[js.Any])
@@ -1296,7 +1296,7 @@ object BoxProps {
     @scala.inline
     def setMinWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("minWidth", value.asInstanceOf[js.Any])
@@ -1373,7 +1373,7 @@ object BoxProps {
     @scala.inline
     def setOpacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): Self = this.set("opacity", value.asInstanceOf[js.Any])
@@ -1390,7 +1390,7 @@ object BoxProps {
     @scala.inline
     def setOverflow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflow", value.asInstanceOf[js.Any])
@@ -1407,7 +1407,7 @@ object BoxProps {
     @scala.inline
     def setOverflowX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflowX", value.asInstanceOf[js.Any])
@@ -1424,7 +1424,7 @@ object BoxProps {
     @scala.inline
     def setOverflowY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
           RequiredTheme
         ]
     ): Self = this.set("overflowY", value.asInstanceOf[js.Any])
@@ -1561,7 +1561,7 @@ object BoxProps {
     @scala.inline
     def setPosition(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _, 
           RequiredTheme
         ]
     ): Self = this.set("position", value.asInstanceOf[js.Any])
@@ -1626,7 +1626,7 @@ object BoxProps {
     @scala.inline
     def setRight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("right", value.asInstanceOf[js.Any])
@@ -1643,7 +1643,7 @@ object BoxProps {
     @scala.inline
     def setSize(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("size", value.asInstanceOf[js.Any])
@@ -1660,7 +1660,7 @@ object BoxProps {
     @scala.inline
     def setTop(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("top", value.asInstanceOf[js.Any])
@@ -1677,7 +1677,7 @@ object BoxProps {
     @scala.inline
     def setVerticalAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
@@ -1694,7 +1694,7 @@ object BoxProps {
     @scala.inline
     def setWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): Self = this.set("width", value.asInstanceOf[js.Any])
@@ -1711,7 +1711,7 @@ object BoxProps {
     @scala.inline
     def setZIndex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
           RequiredTheme
         ]
     ): Self = this.set("zIndex", value.asInstanceOf[js.Any])

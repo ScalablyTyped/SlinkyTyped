@@ -115,10 +115,6 @@ object equiRectangularCubeTextureMod extends js.Object {
     /** The width of the input image. */
     var _width: js.Any = js.native
     
-    /** The texture coordinates mode. As this texture is stored in a cube format, please modify carefully. */
-    @JSName("coordinatesMode")
-    var coordinatesMode_FEquiRectangularCubeTexture: Double = js.native
-    
     /**
       * Convert the ArrayBuffer into a Float32Array and drop the transparency channel.
       * @param buffer The ArrayBuffer that should be converted.

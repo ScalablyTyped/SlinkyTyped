@@ -13,6 +13,11 @@ trait LoadBalancerAddress extends js.Object {
   var AllocationId: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.AllocationId] = js.native
   
   /**
+    * [Network Load Balancers] The IPv6 address.
+    */
+  var IPv6Address: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.IPv6Address] = js.native
+  
+  /**
     * The static IP address.
     */
   var IpAddress: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.IpAddress] = js.native
@@ -50,6 +55,12 @@ object LoadBalancerAddress {
     
     @scala.inline
     def deleteAllocationId: Self = this.set("AllocationId", js.undefined)
+    
+    @scala.inline
+    def setIPv6Address(value: IPv6Address): Self = this.set("IPv6Address", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIPv6Address: Self = this.set("IPv6Address", js.undefined)
     
     @scala.inline
     def setIpAddress(value: IpAddress): Self = this.set("IpAddress", value.asInstanceOf[js.Any])

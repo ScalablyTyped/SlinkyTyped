@@ -3,6 +3,7 @@ package typingsSlinky.echarts.echarts
 import typingsSlinky.echarts.echarts.EChartOption.AxisPointer
 import typingsSlinky.echarts.echarts.EChartOption.BaseTextStyle
 import typingsSlinky.echarts.echarts.EChartOption.Calendar
+import typingsSlinky.echarts.echarts.EChartOption.Color
 import typingsSlinky.echarts.echarts.EChartOption.DataZoom
 import typingsSlinky.echarts.echarts.EChartOption.Dataset
 import typingsSlinky.echarts.echarts.EChartOption.Grid
@@ -132,7 +133,7 @@ trait EChartOption_[TSeries] extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#backgroundColor
     */
-  var backgroundColor: js.UndefOr[String] = js.native
+  var backgroundColor: js.UndefOr[Color] = js.native
   
   /**
     * Equal to CanvasRenderingContext2D.globalCompositeOperation
@@ -572,7 +573,7 @@ object EChartOption_ {
     def deleteAxisPointer: Self = this.set("axisPointer", js.undefined)
     
     @scala.inline
-    def setBackgroundColor(value: String): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColor(value: Color): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)

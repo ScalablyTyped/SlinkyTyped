@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.postProcessesIndexMod
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,12 +28,11 @@ class PostProcess protected ()
     * @param textureType Type of textures used when performing the post process. (default: 0)
     * @param vertexUrl The url of the vertex shader to be used. (default: "postprocess")
     * @param indexParameters The index parameters to be used for babylons include syntax "#include<kernelBlurVaryingDeclaration>[0..varyingCount]". (default: undefined) See usage in babylon.blurPostProcess.ts and kernelBlur.vertex.fx
-    * @param blockCompilation If the shader should not be compiled imediatly. (default: false)
+    * @param blockCompilation If the shader should not be compiled immediatly. (default: false)
     * @param textureFormat Format of textures used when performing the post process. (default: TEXTUREFORMAT_RGBA)
     */
   def this(
-    /** Name of the PostProcess. */
-  name: String,
+    name: String,
     fragmentUrl: String,
     parameters: Nullable[js.Array[String]],
     samplers: Nullable[js.Array[String]],
@@ -48,4 +48,18 @@ class PostProcess protected ()
     blockCompilation: js.UndefOr[Boolean],
     textureFormat: js.UndefOr[Double]
   ) = this()
+}
+/* static members */
+@JSImport("babylonjs/PostProcesses/index", "PostProcess")
+@js.native
+object PostProcess extends js.Object {
+  
+  /**
+    * Creates a material from parsed material data
+    * @param parsedPostProcess defines parsed post process data
+    * @param scene defines the hosting scene
+    * @param rootUrl defines the root URL to use to load textures
+    * @returns a new post process
+    */
+  def Parse(parsedPostProcess: js.Any, scene: Scene, rootUrl: String): Nullable[typingsSlinky.babylonjs.postProcessMod.PostProcess] = js.native
 }

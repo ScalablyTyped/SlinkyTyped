@@ -4,7 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.angular.mod.IDeferred
 import typingsSlinky.angular.mod.IRequestShortcutConfig
 import typingsSlinky.restangular.anon.Element
-import typingsSlinky.restangular.anon.Headers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +23,7 @@ trait IProvider extends js.Object {
       /* headers */ js.Any, 
       /* params */ js.Any, 
       /* httpConfig */ IRequestShortcutConfig, 
-      Headers
+      Element
     ]
   ): IProvider = js.native
   

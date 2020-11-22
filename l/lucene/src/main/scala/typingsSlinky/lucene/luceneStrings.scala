@@ -25,6 +25,18 @@ object luceneStrings {
   @scala.inline
   def `OR NOT`: `OR NOT` = ("OR NOT").asInstanceOf[`OR NOT`]
   
+  @scala.inline
+  def both: both = "both".asInstanceOf[both]
+  
+  @scala.inline
+  def left: left = "left".asInstanceOf[left]
+  
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
+  
+  @scala.inline
+  def right: right = "right".asInstanceOf[right]
+  
   @js.native
   sealed trait AND extends Operator
   
@@ -42,4 +54,16 @@ object luceneStrings {
   
   @js.native
   sealed trait `OR NOT` extends Operator
+  
+  @js.native
+  sealed trait both extends js.Object
+  
+  @js.native
+  sealed trait left extends js.Object
+  
+  @js.native
+  sealed trait none extends js.Object
+  
+  @js.native
+  sealed trait right extends js.Object
 }

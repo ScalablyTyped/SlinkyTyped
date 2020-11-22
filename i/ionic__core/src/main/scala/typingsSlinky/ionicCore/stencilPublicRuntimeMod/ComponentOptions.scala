@@ -9,11 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ComponentOptions extends js.Object {
   
   /**
-    * @deprecated Use `assetsDirs` instead
-    */
-  var assetsDir: js.UndefOr[String] = js.native
-  
-  /**
     * Array of relative links to folders of assets required by the component.
     */
   var assetsDirs: js.UndefOr[js.Array[String]] = js.native
@@ -83,12 +78,6 @@ object ComponentOptions {
     
     @scala.inline
     def setTag(value: String): Self = this.set("tag", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setAssetsDir(value: String): Self = this.set("assetsDir", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAssetsDir: Self = this.set("assetsDir", js.undefined)
     
     @scala.inline
     def setAssetsDirsVarargs(value: String*): Self = this.set("assetsDirs", js.Array(value :_*))

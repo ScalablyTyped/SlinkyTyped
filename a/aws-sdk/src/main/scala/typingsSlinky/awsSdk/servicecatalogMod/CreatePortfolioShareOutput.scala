@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreatePortfolioShareOutput extends js.Object {
   
   /**
-    * The portfolio share unique identifier. This will only be returned if portfolio is shared to an organization node.
+    * The portfolio shares a unique identifier that only returns if the portfolio is shared to an organization node.
     */
   var PortfolioShareToken: js.UndefOr[Id] = js.native
 }

@@ -22,4 +22,6 @@ trait TableBuilderColumnProps[RowT] extends js.Object {
   var overrides: js.UndefOr[ColumnOverrides] = js.native
   
   var sortable: js.UndefOr[Boolean] = js.native
+  
+  var tableHeadAriaLabel: js.UndefOr[String] = js.native
 }

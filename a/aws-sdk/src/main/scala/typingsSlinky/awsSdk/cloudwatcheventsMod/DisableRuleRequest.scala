@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DisableRuleRequest extends js.Object {
   
   /**
-    * The event bus associated with the rule. If you omit this, the default event bus is used.
+    * The name or ARN of the event bus associated with the rule. If you omit this, the default event bus is used.
     */
-  var EventBusName: js.UndefOr[typingsSlinky.awsSdk.cloudwatcheventsMod.EventBusName] = js.native
+  var EventBusName: js.UndefOr[EventBusNameOrArn] = js.native
   
   /**
     * The name of the rule.
@@ -44,7 +44,7 @@ object DisableRuleRequest {
     def setName(value: RuleName): Self = this.set("Name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEventBusName(value: EventBusName): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
+    def setEventBusName(value: EventBusNameOrArn): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEventBusName: Self = this.set("EventBusName", js.undefined)

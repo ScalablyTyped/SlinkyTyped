@@ -14,6 +14,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SameSiteNoneInsecure
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.UserPreferences
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.UnknownError
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SchemefulSameSiteStrict
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SchemefulSameSiteLax
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SchemefulSameSiteUnspecifiedTreatedAsLax
 */
 trait CookieBlockedReason extends js.Object
 object CookieBlockedReason {
@@ -35,6 +38,15 @@ object CookieBlockedReason {
   
   @scala.inline
   def SameSiteUnspecifiedTreatedAsLax: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SameSiteUnspecifiedTreatedAsLax = "SameSiteUnspecifiedTreatedAsLax".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SameSiteUnspecifiedTreatedAsLax]
+  
+  @scala.inline
+  def SchemefulSameSiteLax: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SchemefulSameSiteLax = "SchemefulSameSiteLax".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SchemefulSameSiteLax]
+  
+  @scala.inline
+  def SchemefulSameSiteStrict: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SchemefulSameSiteStrict = "SchemefulSameSiteStrict".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SchemefulSameSiteStrict]
+  
+  @scala.inline
+  def SchemefulSameSiteUnspecifiedTreatedAsLax: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SchemefulSameSiteUnspecifiedTreatedAsLax = "SchemefulSameSiteUnspecifiedTreatedAsLax".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SchemefulSameSiteUnspecifiedTreatedAsLax]
   
   @scala.inline
   def SecureOnly: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SecureOnly = "SecureOnly".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.SecureOnly]

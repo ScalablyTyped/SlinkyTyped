@@ -1,6 +1,5 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +11,7 @@ trait CameraInputsManager[TCamera /* <: Camera */] extends js.Object {
   
   /**
     * Add an input method to a camera
-    * @see http://doc.babylonjs.com/how_to/customizing_camera_inputs
+    * @see https://doc.babylonjs.com/how_to/customizing_camera_inputs
     * @param input camera input method
     */
   def add(input: ICameraInput[TCamera]): Unit = js.native
@@ -22,8 +21,8 @@ trait CameraInputsManager[TCamera /* <: Camera */] extends js.Object {
     * @param element Defines the dom element to collect the events from
     * @param noPreventDefault Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
     */
-  def attachElement(element: HTMLElement): Unit = js.native
-  def attachElement(element: HTMLElement, noPreventDefault: Boolean): Unit = js.native
+  def attachElement(): Unit = js.native
+  def attachElement(noPreventDefault: Boolean): Unit = js.native
   
   /**
     * Attach the input controls to the currently attached dom element to listen the events from.
@@ -40,7 +39,7 @@ trait CameraInputsManager[TCamera /* <: Camera */] extends js.Object {
     * Defines the dom element the camera is collecting inputs from.
     * This is null if the controls have not been attached.
     */
-  var attachedElement: Nullable[HTMLElement] = js.native
+  var attachedToElement: Boolean = js.native
   
   /**
     * Defined the camera the input manager belongs to.
@@ -63,8 +62,8 @@ trait CameraInputsManager[TCamera /* <: Camera */] extends js.Object {
     * @param element Defines the dom element to collect the events from
     * @param disconnect Defines whether the input should be removed from the current list of attached inputs
     */
-  def detachElement(element: HTMLElement): Unit = js.native
-  def detachElement(element: HTMLElement, disconnect: Boolean): Unit = js.native
+  def detachElement(): Unit = js.native
+  def detachElement(disconnect: Boolean): Unit = js.native
   
   /**
     * Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)

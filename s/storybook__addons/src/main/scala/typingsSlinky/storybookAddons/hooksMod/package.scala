@@ -15,4 +15,6 @@ package object hooksMod {
   ]
   
   type EventMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.storybookAddons.hooksMod.Listener]
+  
+  type Listener = js.Function1[/* repeated */ js.Any, scala.Unit]
 }

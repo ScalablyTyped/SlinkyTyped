@@ -8,39 +8,57 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.StepAreaSeries */
+/**
+  * [descr:dxChartSeriesTypes.StepAreaSeries]
+  */
 @js.native
 trait dxChartSeriesTypesStepAreaSeries extends dxChartSeriesTypesCommonSeries {
   
-  /** @name dxChartSeriesTypes.StepAreaSeries.aggregation */
+  /**
+    * [descr:dxChartSeriesTypes.StepAreaSeries.aggregation]
+    */
   @JSName("aggregation")
   var aggregation_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesAggregation] = js.native
   
-  /** @name dxChartSeriesTypes.StepAreaSeries.border */
+  /**
+    * [descr:dxChartSeriesTypes.StepAreaSeries.border]
+    */
   @JSName("border")
   var border_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesBorder] = js.native
   
-  /** @name dxChartSeriesTypes.StepAreaSeries.hoverMode */
+  /**
+    * [descr:dxChartSeriesTypes.StepAreaSeries.hoverMode]
+    */
   @JSName("hoverMode")
   var hoverMode_dxChartSeriesTypesStepAreaSeries: js.UndefOr[nearestPoint | includePoints | excludePoints | none] = js.native
   
-  /** @name dxChartSeriesTypes.StepAreaSeries.hoverStyle */
+  /**
+    * [descr:dxChartSeriesTypes.StepAreaSeries.hoverStyle]
+    */
   @JSName("hoverStyle")
   var hoverStyle_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesHoverStyle] = js.native
   
-  /** @name dxChartSeriesTypes.StepAreaSeries.label */
+  /**
+    * [descr:dxChartSeriesTypes.StepAreaSeries.label]
+    */
   @JSName("label")
   var label_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesLabel] = js.native
   
-  /** @name dxChartSeriesTypes.StepAreaSeries.point */
+  /**
+    * [descr:dxChartSeriesTypes.StepAreaSeries.point]
+    */
   @JSName("point")
   var point_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesPoint] = js.native
   
-  /** @name dxChartSeriesTypes.StepAreaSeries.selectionMode */
+  /**
+    * [descr:dxChartSeriesTypes.StepAreaSeries.selectionMode]
+    */
   @JSName("selectionMode")
   var selectionMode_dxChartSeriesTypesStepAreaSeries: js.UndefOr[includePoints | excludePoints | none] = js.native
   
-  /** @name dxChartSeriesTypes.StepAreaSeries.selectionStyle */
+  /**
+    * [descr:dxChartSeriesTypes.StepAreaSeries.selectionStyle]
+    */
   @JSName("selectionStyle")
   var selectionStyle_dxChartSeriesTypesStepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeriesSelectionStyle] = js.native
 }

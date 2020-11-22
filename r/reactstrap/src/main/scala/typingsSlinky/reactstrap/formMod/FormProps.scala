@@ -3,10 +3,9 @@ package typingsSlinky.reactstrap.formMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.react.mod.ReactType
+import typingsSlinky.react.mod.FormHTMLAttributes
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
@@ -15,8 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait FormProps
-  extends AllHTMLAttributes[HTMLFormElement]
-     with ClassAttributes[HTMLFormElement]
+  extends FormHTMLAttributes[HTMLFormElement]
      with /* key */ StringDictionary[js.Any] {
   
   var cssModule: js.UndefOr[CSSModule] = js.native
@@ -25,7 +23,7 @@ trait FormProps
   
   var innerRef: js.UndefOr[Ref[HTMLFormElement]] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
 }
 object FormProps {
   
@@ -84,7 +82,7 @@ object FormProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

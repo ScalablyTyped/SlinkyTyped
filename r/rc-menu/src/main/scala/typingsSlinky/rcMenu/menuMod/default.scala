@@ -1,6 +1,7 @@
 package typingsSlinky.rcMenu.menuMod
 
 import typingsSlinky.rcMenu.anon.BuiltinPlacements
+import typingsSlinky.rcMenu.anon.PartialMenuState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,4 +17,6 @@ class default protected () extends Menu {
 object default extends js.Object {
   
   var defaultProps: BuiltinPlacements = js.native
+  
+  def getDerivedStateFromProps(nextProps: MenuProps, prevState: MenuState): PartialMenuState = js.native
 }

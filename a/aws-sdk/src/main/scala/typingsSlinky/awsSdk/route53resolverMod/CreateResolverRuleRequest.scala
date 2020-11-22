@@ -13,7 +13,7 @@ trait CreateResolverRuleRequest extends js.Object {
   var CreatorRequestId: typingsSlinky.awsSdk.route53resolverMod.CreatorRequestId = js.native
   
   /**
-    * DNS queries for this domain name are forwarded to the IP addresses that you specify in TargetIps. If a query matches multiple resolver rules (example.com and www.example.com), outbound DNS queries are routed using the resolver rule that contains the most specific domain name (www.example.com).
+    * DNS queries for this domain name are forwarded to the IP addresses that you specify in TargetIps. If a query matches multiple Resolver rules (example.com and www.example.com), outbound DNS queries are routed using the Resolver rule that contains the most specific domain name (www.example.com).
     */
   var DomainName: typingsSlinky.awsSdk.route53resolverMod.DomainName = js.native
   
@@ -23,12 +23,12 @@ trait CreateResolverRuleRequest extends js.Object {
   var Name: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.Name] = js.native
   
   /**
-    * The ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify in TargetIps.
+    * The ID of the outbound Resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify in TargetIps.
     */
   var ResolverEndpointId: js.UndefOr[ResourceId] = js.native
   
   /**
-    * Specify FORWARD. Other resolver rule types aren't supported.
+    * When you want to forward DNS queries for specified domain name to resolvers on your network, specify FORWARD. When you have a forwarding rule to forward DNS queries for a domain to your network and you want Resolver to process queries for a subdomain of that domain, specify SYSTEM. For example, to forward DNS queries for example.com to resolvers on your network, you create a rule and specify FORWARD for RuleType. To then have Resolver process queries for apex.example.com, you create a rule and specify SYSTEM for RuleType. Currently, only Resolver can create rules that have a value of RECURSIVE for RuleType.
     */
   var RuleType: RuleTypeOption = js.native
   
@@ -38,7 +38,7 @@ trait CreateResolverRuleRequest extends js.Object {
   var Tags: js.UndefOr[TagList] = js.native
   
   /**
-    * The IPs that you want Resolver to forward DNS queries to. You can specify only IPv4 addresses. Separate IP addresses with a comma.
+    * The IPs that you want Resolver to forward DNS queries to. You can specify only IPv4 addresses. Separate IP addresses with a comma.  TargetIps is available only when the value of Rule type is FORWARD.
     */
   var TargetIps: js.UndefOr[TargetList] = js.native
 }

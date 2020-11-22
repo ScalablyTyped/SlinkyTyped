@@ -1,5 +1,7 @@
 package typingsSlinky.electron.Electron
 
+import typingsSlinky.electron.electronStrings.default
+import typingsSlinky.electron.electronStrings.json
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,11 +18,11 @@ trait FeedURLOptions extends js.Object {
   var headers: js.UndefOr[Record[String, String]] = js.native
   
   /**
-    * Either `json` or `default`, see the Squirrel.Mac README for more information.
+    * Can be `json` or `default`, see the Squirrel.Mac README for more information.
     *
     * @platform darwin
     */
-  var serverType: js.UndefOr[String] = js.native
+  var serverType: js.UndefOr[json | default] = js.native
   
   var url: String = js.native
 }
@@ -57,7 +59,7 @@ object FeedURLOptions {
     def deleteHeaders: Self = this.set("headers", js.undefined)
     
     @scala.inline
-    def setServerType(value: String): Self = this.set("serverType", value.asInstanceOf[js.Any])
+    def setServerType(value: json | default): Self = this.set("serverType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteServerType: Self = this.set("serverType", js.undefined)

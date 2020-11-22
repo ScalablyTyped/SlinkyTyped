@@ -1,5 +1,6 @@
 package typingsSlinky.twilsock
 
+import typingsSlinky.std.Set
 import typingsSlinky.twilsock.abstractmessageMod.AbstractMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,8 +28,11 @@ object initReplyMod extends js.Object {
       continuationTokenStatus: ContinuationTokenStatus,
       offlineStorage: js.Any,
       initRegistrations: js.Any,
-      debugInfo: js.Any
+      debugInfo: js.Any,
+      confirmedCapabilities: Set[String]
     ) = this()
+    
+    val confirmedCapabilities: Set[String] = js.native
     
     val continuationToken: String = js.native
     

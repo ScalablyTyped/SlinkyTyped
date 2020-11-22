@@ -6,11 +6,30 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
+  type AbstractKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.AbstractKeyword]
+  
+  type AccessibilityModifier = typingsSlinky.typescript.mod.PublicKeyword | typingsSlinky.typescript.mod.PrivateKeyword | typingsSlinky.typescript.mod.ProtectedKeyword
+  
   type AdditiveOperatorOrHigher = typingsSlinky.typescript.mod.MultiplicativeOperatorOrHigher | typingsSlinky.typescript.mod.AdditiveOperator
   
   type AffectedFileResult[T] = js.UndefOr[typingsSlinky.typescript.anon.Affected[T]]
   
-  type AssertsToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.AssertsKeyword]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.typescript.mod.BindingElement
+    - typingsSlinky.typescript.mod.OmittedExpression
+    - typingsSlinky.typescript.mod.SpreadElement
+    - typingsSlinky.typescript.mod.ArrayLiteralExpression
+    - typingsSlinky.typescript.mod.ObjectLiteralExpression
+    - typingsSlinky.typescript.mod.AssignmentExpression[typingsSlinky.typescript.mod.EqualsToken]
+    - typingsSlinky.typescript.mod.Identifier
+    - typingsSlinky.typescript.mod.PropertyAccessExpression
+    - typingsSlinky.typescript.mod.ElementAccessExpression
+  */
+  type ArrayBindingOrAssignmentElement = typingsSlinky.typescript.mod._ArrayBindingOrAssignmentElement | typingsSlinky.typescript.mod.AssignmentExpression[typingsSlinky.typescript.mod.EqualsToken]
+  
+  type AssertsKeyword = typingsSlinky.typescript.mod.KeywordToken[typingsSlinky.typescript.mod.SyntaxKind.AssertsKeyword]
+  
+  type AssertsToken = typingsSlinky.typescript.mod.AssertsKeyword
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.typescript.mod.SyntaxKind.QuestionQuestionToken
@@ -21,9 +40,13 @@ package object mod {
   
   type AssignmentOperatorToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.AssignmentOperator]
   
-  type AsteriskToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.AsteriskToken]
+  type AsteriskToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.AsteriskToken]
   
-  type AwaitKeywordToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.AwaitKeyword]
+  type AsyncKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.AsyncKeyword]
+  
+  type AwaitKeyword = typingsSlinky.typescript.mod.KeywordToken[typingsSlinky.typescript.mod.SyntaxKind.AwaitKeyword]
+  
+  type AwaitKeywordToken = typingsSlinky.typescript.mod.AwaitKeyword
   
   type BaseType = typingsSlinky.typescript.mod.ObjectType | typingsSlinky.typescript.mod.IntersectionType | typingsSlinky.typescript.mod.TypeVariable
   
@@ -38,18 +61,8 @@ package object mod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.typescript.mod.VariableDeclaration
     - typingsSlinky.typescript.mod.ParameterDeclaration
-    - typingsSlinky.typescript.mod.BindingElement
-    - typingsSlinky.typescript.mod.PropertyAssignment
-    - typingsSlinky.typescript.mod.ShorthandPropertyAssignment
-    - typingsSlinky.typescript.mod.SpreadAssignment
-    - typingsSlinky.typescript.mod.OmittedExpression
-    - typingsSlinky.typescript.mod.SpreadElement
-    - typingsSlinky.typescript.mod.ArrayLiteralExpression
-    - typingsSlinky.typescript.mod.ObjectLiteralExpression
-    - typingsSlinky.typescript.mod.AssignmentExpression[typingsSlinky.typescript.mod.EqualsToken]
-    - typingsSlinky.typescript.mod.Identifier
-    - typingsSlinky.typescript.mod.PropertyAccessExpression
-    - typingsSlinky.typescript.mod.ElementAccessExpression
+    - typingsSlinky.typescript.mod.ObjectBindingOrAssignmentElement
+    - typingsSlinky.typescript.mod.ArrayBindingOrAssignmentElement
   */
   type BindingOrAssignmentElement = typingsSlinky.typescript.mod._BindingOrAssignmentElement | typingsSlinky.typescript.mod.AssignmentExpression[typingsSlinky.typescript.mod.EqualsToken]
   
@@ -62,9 +75,11 @@ package object mod {
   
   type BitwiseOperatorOrHigher = typingsSlinky.typescript.mod.EqualityOperatorOrHigher | typingsSlinky.typescript.mod.BitwiseOperator
   
+  type ClassMemberModifier = typingsSlinky.typescript.mod.AccessibilityModifier | typingsSlinky.typescript.mod.ReadonlyKeyword | typingsSlinky.typescript.mod.StaticKeyword
+  
   type CodeActionCommand = typingsSlinky.typescript.mod.InstallPackageAction
   
-  type ColonToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.ColonToken]
+  type ColonToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.ColonToken]
   
   type CompilerOptionsValue = js.UndefOr[
     java.lang.String | scala.Double | scala.Boolean | (js.Array[
@@ -73,6 +88,8 @@ package object mod {
   ]
   
   type ConciseBody = typingsSlinky.typescript.mod.FunctionBody | typingsSlinky.typescript.mod.Expression
+  
+  type ConstKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.ConstKeyword]
   
   /** Create the program with rootNames and options, if they are undefined, oldProgram and new configFile diagnostics create new program */
   type CreateProgram_[T /* <: typingsSlinky.typescript.mod.BuilderProgram */] = js.Function6[
@@ -90,6 +107,10 @@ package object mod {
     typingsSlinky.typescript.mod.CustomTransformer
   ]
   
+  type DeclareKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.DeclareKeyword]
+  
+  type DefaultKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.DefaultKeyword]
+  
   type DeferredTypeReference = typingsSlinky.typescript.mod.TypeReference
   
   type DiagnosticReporter = js.Function1[/* diagnostic */ typingsSlinky.typescript.mod.Diagnostic, scala.Unit]
@@ -98,9 +119,9 @@ package object mod {
   
   type DocumentRegistryBucketKey = java.lang.String with typingsSlinky.typescript.anon.BucketKey
   
-  type DotDotDotToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.DotDotDotToken]
+  type DotDotDotToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.DotDotDotToken]
   
-  type DotToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.DotToken]
+  type DotToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.DotToken]
   
   type EmitHelperUniqueNameCallback = js.Function1[/* name */ java.lang.String, java.lang.String]
   
@@ -110,9 +131,9 @@ package object mod {
   
   type EqualityOperatorOrHigher = typingsSlinky.typescript.mod.RelationalOperatorOrHigher | typingsSlinky.typescript.mod.EqualityOperator
   
-  type EqualsGreaterThanToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsGreaterThanToken]
+  type EqualsGreaterThanToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.EqualsGreaterThanToken]
   
-  type EqualsToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsToken]
+  type EqualsToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.EqualsToken]
   
   type ErrorCallback = js.Function2[
     /* message */ typingsSlinky.typescript.mod.DiagnosticMessage, 
@@ -120,9 +141,11 @@ package object mod {
     scala.Unit
   ]
   
-  type ExclamationToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.ExclamationToken]
+  type ExclamationToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.ExclamationToken]
   
   type ExponentiationOperator = typingsSlinky.typescript.mod.SyntaxKind.AsteriskAsteriskToken
+  
+  type ExportKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.ExportKeyword]
   
   type FileWatcherCallback = js.Function2[
     /* fileName */ java.lang.String, 
@@ -161,11 +184,15 @@ package object mod {
     - typingsSlinky.typescript.mod.EnumDeclaration
     - typingsSlinky.typescript.mod.ModuleDeclaration
     - typingsSlinky.typescript.mod.ImportEqualsDeclaration
+    - typingsSlinky.typescript.mod.ImportDeclaration
+    - typingsSlinky.typescript.mod.NamespaceExportDeclaration
+    - typingsSlinky.typescript.mod.ExportAssignment
     - typingsSlinky.typescript.mod.IndexSignatureDeclaration
     - typingsSlinky.typescript.mod.FunctionTypeNode
     - typingsSlinky.typescript.mod.ConstructorTypeNode
     - typingsSlinky.typescript.mod.JSDocFunctionType
     - typingsSlinky.typescript.mod.ExportDeclaration
+    - typingsSlinky.typescript.mod.NamedTupleMember
     - typingsSlinky.typescript.mod.EndOfFileToken
   */
   type HasJSDoc = typingsSlinky.typescript.mod._HasJSDoc | typingsSlinky.typescript.mod.EndOfFileToken
@@ -178,7 +205,17 @@ package object mod {
   
   type JsFileExtensionInfo = typingsSlinky.typescript.mod.FileExtensionInfo
   
+  type KeywordToken[TKind /* <: typingsSlinky.typescript.mod.KeywordSyntaxKind */] = typingsSlinky.typescript.mod.Token[TKind]
+  
   type LogicalOperatorOrHigher = typingsSlinky.typescript.mod.BitwiseOperatorOrHigher | typingsSlinky.typescript.mod.LogicalOperator
+  
+  /**
+    * ES6 Map interface.
+    */
+  /**
+    * @deprecated Use `ts.ESMap<K, V>` instead.
+    */
+  type Map[T] = typingsSlinky.typescript.mod.ESMap[java.lang.String, T]
   
   /**
     * Type of objects whose values are all of the same type.
@@ -187,11 +224,11 @@ package object mod {
     */
   type MapLike[T] = org.scalablytyped.runtime.StringDictionary[T]
   
-  type MinusToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.MinusToken]
+  type MinusToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.MinusToken]
   
-  type Modifier = typingsSlinky.typescript.mod.Token[
-    typingsSlinky.typescript.mod.SyntaxKind.AbstractKeyword | typingsSlinky.typescript.mod.SyntaxKind.AsyncKeyword | typingsSlinky.typescript.mod.SyntaxKind.ConstKeyword | typingsSlinky.typescript.mod.SyntaxKind.DeclareKeyword | typingsSlinky.typescript.mod.SyntaxKind.DefaultKeyword | typingsSlinky.typescript.mod.SyntaxKind.ExportKeyword | typingsSlinky.typescript.mod.SyntaxKind.PrivateKeyword | typingsSlinky.typescript.mod.SyntaxKind.ProtectedKeyword | typingsSlinky.typescript.mod.SyntaxKind.PublicKeyword | typingsSlinky.typescript.mod.SyntaxKind.ReadonlyKeyword | typingsSlinky.typescript.mod.SyntaxKind.StaticKeyword
-  ]
+  type Modifier = typingsSlinky.typescript.mod.AbstractKeyword | typingsSlinky.typescript.mod.AsyncKeyword | typingsSlinky.typescript.mod.ConstKeyword | typingsSlinky.typescript.mod.DeclareKeyword | typingsSlinky.typescript.mod.DefaultKeyword | typingsSlinky.typescript.mod.ExportKeyword | typingsSlinky.typescript.mod.PrivateKeyword | typingsSlinky.typescript.mod.ProtectedKeyword | typingsSlinky.typescript.mod.PublicKeyword | typingsSlinky.typescript.mod.ReadonlyKeyword | typingsSlinky.typescript.mod.StaticKeyword
+  
+  type ModifierToken[TKind /* <: typingsSlinky.typescript.mod.ModifierSyntaxKind */] = typingsSlinky.typescript.mod.KeywordToken[TKind]
   
   type ModifiersArray = typingsSlinky.typescript.mod.NodeArray[typingsSlinky.typescript.mod.Modifier]
   
@@ -199,15 +236,37 @@ package object mod {
   
   type OrganizeImportsScope = typingsSlinky.typescript.mod.CombinedCodeFixScope
   
+  type ParameterPropertyModifier = typingsSlinky.typescript.mod.AccessibilityModifier | typingsSlinky.typescript.mod.ReadonlyKeyword
+  
   type Path = java.lang.String with typingsSlinky.typescript.anon.PathBrand
   
-  type PlusToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.PlusToken]
+  type PlusToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.PlusToken]
   
-  type QuestionDotToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.QuestionDotToken]
+  type PrivateKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.PrivateKeyword]
   
-  type QuestionToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.QuestionToken]
+  type ProtectedKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.ProtectedKeyword]
   
-  type ReadonlyToken = typingsSlinky.typescript.mod.Token[typingsSlinky.typescript.mod.SyntaxKind.ReadonlyKeyword]
+  type PublicKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.PublicKeyword]
+  
+  type PunctuationToken[TKind /* <: typingsSlinky.typescript.mod.PunctuationSyntaxKind */] = typingsSlinky.typescript.mod.Token[TKind]
+  
+  type QuestionDotToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.QuestionDotToken]
+  
+  type QuestionToken = typingsSlinky.typescript.mod.PunctuationToken[typingsSlinky.typescript.mod.SyntaxKind.QuestionToken]
+  
+  type ReadonlyKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.ReadonlyKeyword]
+  
+  /**
+    * ES6 Map interface, only read methods included.
+    */
+  /**
+    * @deprecated Use `ts.ReadonlyESMap<K, V>` instead.
+    */
+  type ReadonlyMap[T] = typingsSlinky.typescript.mod.ReadonlyESMap[java.lang.String, T]
+  
+  type ReadonlyToken = typingsSlinky.typescript.mod.ReadonlyKeyword
+  
+  type ReadonlyUnderscoreEscapedMap[T] = typingsSlinky.typescript.mod.ReadonlyESMap[typingsSlinky.typescript.mod.String, T]
   
   type RelationalOperatorOrHigher = typingsSlinky.typescript.mod.ShiftOperatorOrHigher | typingsSlinky.typescript.mod.RelationalOperator
   
@@ -216,6 +275,8 @@ package object mod {
   type ResolvedConfigFileName = java.lang.String with js.Object
   
   type ShiftOperatorOrHigher = typingsSlinky.typescript.mod.AdditiveOperatorOrHigher | typingsSlinky.typescript.mod.ShiftOperator
+  
+  type StaticKeyword = typingsSlinky.typescript.mod.ModifierToken[typingsSlinky.typescript.mod.SyntaxKind.StaticKeyword]
   
   type String = (java.lang.String with typingsSlinky.typescript.anon.EscapedIdentifier) | (scala.Unit with typingsSlinky.typescript.anon.EscapedIdentifier) | typingsSlinky.typescript.mod.InternalSymbolName
   

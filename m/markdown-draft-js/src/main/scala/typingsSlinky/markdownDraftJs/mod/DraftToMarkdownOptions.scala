@@ -12,6 +12,8 @@ trait DraftToMarkdownOptions extends js.Object {
   
   var entityItems: js.UndefOr[StringDictionary[Close]] = js.native
   
+  var preserveNewlines: js.UndefOr[Boolean] = js.native
+  
   var styleItems: js.UndefOr[StringDictionary[Open]] = js.native
 }
 object DraftToMarkdownOptions {
@@ -42,6 +44,12 @@ object DraftToMarkdownOptions {
     
     @scala.inline
     def deleteEntityItems: Self = this.set("entityItems", js.undefined)
+    
+    @scala.inline
+    def setPreserveNewlines(value: Boolean): Self = this.set("preserveNewlines", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreserveNewlines: Self = this.set("preserveNewlines", js.undefined)
     
     @scala.inline
     def setStyleItems(value: StringDictionary[Open]): Self = this.set("styleItems", value.asInstanceOf[js.Any])

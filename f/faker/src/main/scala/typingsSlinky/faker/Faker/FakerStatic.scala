@@ -3,17 +3,21 @@ package typingsSlinky.faker.Faker
 import typingsSlinky.faker.anon.Abbreviation
 import typingsSlinky.faker.anon.Abstract
 import typingsSlinky.faker.anon.Account
-import typingsSlinky.faker.anon.AlphaNumeric
+import typingsSlinky.faker.anon.Alpha
 import typingsSlinky.faker.anon.Avatar
 import typingsSlinky.faker.anon.Between
+import typingsSlinky.faker.anon.Branch
 import typingsSlinky.faker.anon.Bs
-import typingsSlinky.faker.anon.City
+import typingsSlinky.faker.anon.CardinalDirection
 import typingsSlinky.faker.anon.Collation
 import typingsSlinky.faker.anon.Color
 import typingsSlinky.faker.anon.CommonFileExt
 import typingsSlinky.faker.anon.FindName
+import typingsSlinky.faker.anon.Fuel
+import typingsSlinky.faker.anon.Genre
 import typingsSlinky.faker.anon.Lines
 import typingsSlinky.faker.anon.PhoneFormats
+import typingsSlinky.faker.anon.Recent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FakerStatic extends js.Object {
   
-  var address: City = js.native
+  var address: CardinalDirection = js.native
   
   var commerce: Color = js.native
   
@@ -35,6 +39,8 @@ trait FakerStatic extends js.Object {
   
   var finance: Account = js.native
   
+  var git: Branch = js.native
+  
   var hacker: Abbreviation = js.native
   
   var helpers: typingsSlinky.faker.anon.ContextualCard = js.native
@@ -47,11 +53,13 @@ trait FakerStatic extends js.Object {
   
   var lorem: Lines = js.native
   
+  var music: Genre = js.native
+  
   var name: FindName = js.native
   
   var phone: PhoneFormats = js.native
   
-  var random: AlphaNumeric = js.native
+  var random: Alpha = js.native
   
   def seed(value: Double): Unit = js.native
   
@@ -60,32 +68,40 @@ trait FakerStatic extends js.Object {
   def setLocale(locale: String): Unit = js.native
   
   var system: CommonFileExt = js.native
+  
+  var time: Recent = js.native
+  
+  var vehicle: Fuel = js.native
 }
 object FakerStatic {
   
   @scala.inline
   def apply(
-    address: City,
+    address: CardinalDirection,
     commerce: Color,
     company: Bs,
     database: Collation,
     date: Between,
     fake: String => String,
     finance: Account,
+    git: Branch,
     hacker: Abbreviation,
     helpers: typingsSlinky.faker.anon.ContextualCard,
     image: Abstract,
     internet: Avatar,
     locale: String,
     lorem: Lines,
+    music: Genre,
     name: FindName,
     phone: PhoneFormats,
-    random: AlphaNumeric,
+    random: Alpha,
     seed: Double => Unit,
     setLocale: String => Unit,
-    system: CommonFileExt
+    system: CommonFileExt,
+    time: Recent,
+    vehicle: Fuel
   ): FakerStatic = {
-    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], commerce = commerce.asInstanceOf[js.Any], company = company.asInstanceOf[js.Any], database = database.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], fake = js.Any.fromFunction1(fake), finance = finance.asInstanceOf[js.Any], hacker = hacker.asInstanceOf[js.Any], helpers = helpers.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], internet = internet.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], lorem = lorem.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], random = random.asInstanceOf[js.Any], seed = js.Any.fromFunction1(seed), setLocale = js.Any.fromFunction1(setLocale), system = system.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], commerce = commerce.asInstanceOf[js.Any], company = company.asInstanceOf[js.Any], database = database.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], fake = js.Any.fromFunction1(fake), finance = finance.asInstanceOf[js.Any], git = git.asInstanceOf[js.Any], hacker = hacker.asInstanceOf[js.Any], helpers = helpers.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], internet = internet.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], lorem = lorem.asInstanceOf[js.Any], music = music.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], phone = phone.asInstanceOf[js.Any], random = random.asInstanceOf[js.Any], seed = js.Any.fromFunction1(seed), setLocale = js.Any.fromFunction1(setLocale), system = system.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], vehicle = vehicle.asInstanceOf[js.Any])
     __obj.asInstanceOf[FakerStatic]
   }
   
@@ -105,7 +121,7 @@ object FakerStatic {
     }
     
     @scala.inline
-    def setAddress(value: City): Self = this.set("address", value.asInstanceOf[js.Any])
+    def setAddress(value: CardinalDirection): Self = this.set("address", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCommerce(value: Color): Self = this.set("commerce", value.asInstanceOf[js.Any])
@@ -126,6 +142,9 @@ object FakerStatic {
     def setFinance(value: Account): Self = this.set("finance", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setGit(value: Branch): Self = this.set("git", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setHacker(value: Abbreviation): Self = this.set("hacker", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -144,13 +163,16 @@ object FakerStatic {
     def setLorem(value: Lines): Self = this.set("lorem", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setMusic(value: Genre): Self = this.set("music", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setName(value: FindName): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPhone(value: PhoneFormats): Self = this.set("phone", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRandom(value: AlphaNumeric): Self = this.set("random", value.asInstanceOf[js.Any])
+    def setRandom(value: Alpha): Self = this.set("random", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSeed(value: Double => Unit): Self = this.set("seed", js.Any.fromFunction1(value))
@@ -160,6 +182,12 @@ object FakerStatic {
     
     @scala.inline
     def setSystem(value: CommonFileExt): Self = this.set("system", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTime(value: Recent): Self = this.set("time", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setVehicle(value: Fuel): Self = this.set("vehicle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSeedValue(value: Double): Self = this.set("seedValue", value.asInstanceOf[js.Any])

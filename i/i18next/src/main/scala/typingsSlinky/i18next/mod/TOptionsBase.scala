@@ -123,6 +123,9 @@ object TOptionsBase {
     def setFallbackLngVarargs(value: String*): Self = this.set("fallbackLng", js.Array(value :_*))
     
     @scala.inline
+    def setFallbackLngFunction1(value: /* code */ String => String | js.Array[String] | FallbackLngObjList): Self = this.set("fallbackLng", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def setFallbackLng(value: FallbackLng): Self = this.set("fallbackLng", value.asInstanceOf[js.Any])
     
     @scala.inline

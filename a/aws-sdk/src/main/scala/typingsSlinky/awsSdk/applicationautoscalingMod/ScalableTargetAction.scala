@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ScalableTargetAction extends js.Object {
   
   /**
-    * The maximum capacity.
+    * The maximum capacity. Although you can specify a large maximum capacity, note that service quotas may impose lower limits. Each service has its own default quotas for the maximum capacity of the resource. If you want to specify a higher limit, you can request an increase. For more information, consult the documentation for that service. For information about the default quotas for each service, see Service Endpoints and Quotas in the Amazon Web Services General Reference.
     */
   var MaxCapacity: js.UndefOr[ResourceCapacity] = js.native
   
   /**
-    * The minimum capacity. For Lambda provisioned concurrency, the minimum value allowed is 0. For all other resources, the minimum value allowed is 1.
+    * The minimum capacity. For certain resources, the minimum value allowed is 0. This includes Lambda provisioned concurrency, Spot Fleet, ECS services, Aurora DB clusters, EMR clusters, and custom resources. For all other resources, the minimum value allowed is 1.
     */
   var MinCapacity: js.UndefOr[ResourceCapacity] = js.native
 }

@@ -9,7 +9,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object resetGlobalVars extends js.Object {
   
   def apply(): Unit = js.native
-  def apply(newGlobalInitDone: js.UndefOr[scala.Nothing], newGaInitializedPromise: js.Object): Unit = js.native
+  def apply(
+    newGlobalInitDone: js.UndefOr[scala.Nothing],
+    newInitializationPromisesMap: js.UndefOr[scala.Nothing],
+    newDynamicPromises: js.Array[scala.Nothing]
+  ): Unit = js.native
+  def apply(newGlobalInitDone: js.UndefOr[scala.Nothing], newInitializationPromisesMap: js.Object): Unit = js.native
+  def apply(
+    newGlobalInitDone: js.UndefOr[scala.Nothing],
+    newInitializationPromisesMap: js.Object,
+    newDynamicPromises: js.Array[scala.Nothing]
+  ): Unit = js.native
   def apply(newGlobalInitDone: Boolean): Unit = js.native
-  def apply(newGlobalInitDone: Boolean, newGaInitializedPromise: js.Object): Unit = js.native
+  def apply(
+    newGlobalInitDone: Boolean,
+    newInitializationPromisesMap: js.UndefOr[scala.Nothing],
+    newDynamicPromises: js.Array[scala.Nothing]
+  ): Unit = js.native
+  def apply(newGlobalInitDone: Boolean, newInitializationPromisesMap: js.Object): Unit = js.native
+  def apply(
+    newGlobalInitDone: Boolean,
+    newInitializationPromisesMap: js.Object,
+    newDynamicPromises: js.Array[scala.Nothing]
+  ): Unit = js.native
 }

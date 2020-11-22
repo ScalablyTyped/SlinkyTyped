@@ -22,7 +22,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.UndefOr[scala.Nothing],
     body: js.UndefOr[scala.Nothing],
     headers: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(
     method: String,
@@ -37,7 +37,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.UndefOr[scala.Nothing],
     body: js.UndefOr[scala.Nothing],
     headers: js.Any,
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(method: String, path: String, params: js.UndefOr[scala.Nothing], body: js.Any): Unit = js.native
   def request(
@@ -46,7 +46,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.UndefOr[scala.Nothing],
     body: js.Any,
     headers: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(method: String, path: String, params: js.UndefOr[scala.Nothing], body: js.Any, headers: js.Any): Unit = js.native
   def request(
@@ -55,7 +55,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.UndefOr[scala.Nothing],
     body: js.Any,
     headers: js.Any,
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(method: String, path: String, params: js.UndefOr[scala.Nothing], body: js.Array[_]): Unit = js.native
   def request(
@@ -64,7 +64,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.UndefOr[scala.Nothing],
     body: js.Array[_],
     headers: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(
     method: String,
@@ -79,7 +79,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.UndefOr[scala.Nothing],
     body: js.Array[_],
     headers: js.Any,
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(method: String, path: String, params: js.Any): Unit = js.native
   def request(
@@ -88,7 +88,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.Any,
     body: js.UndefOr[scala.Nothing],
     headers: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(method: String, path: String, params: js.Any, body: js.UndefOr[scala.Nothing], headers: js.Any): Unit = js.native
   def request(
@@ -97,7 +97,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.Any,
     body: js.UndefOr[scala.Nothing],
     headers: js.Any,
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(method: String, path: String, params: js.Any, body: js.Any): Unit = js.native
   def request(
@@ -106,7 +106,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.Any,
     body: js.Any,
     headers: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(method: String, path: String, params: js.Any, body: js.Any, headers: js.Any): Unit = js.native
   def request(
@@ -115,7 +115,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.Any,
     body: js.Any,
     headers: js.Any,
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(method: String, path: String, params: js.Any, body: js.Array[_]): Unit = js.native
   def request(
@@ -124,7 +124,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.Any,
     body: js.Array[_],
     headers: js.UndefOr[scala.Nothing],
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   def request(method: String, path: String, params: js.Any, body: js.Array[_], headers: js.Any): Unit = js.native
   def request(
@@ -133,7 +133,7 @@ trait RealtimeCallbacks extends RealtimeBase {
     params: js.Any,
     body: js.Array[_],
     headers: js.Any,
-    callback: js.Function2[/* error */ ErrorInfo, /* response */ HttpPaginatedResponse, Unit]
+    callback: StandardCallback[HttpPaginatedResponse]
   ): Unit = js.native
   
   def stats(): Unit = js.native

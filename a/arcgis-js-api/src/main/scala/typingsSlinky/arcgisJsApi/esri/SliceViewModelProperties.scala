@@ -11,31 +11,27 @@ trait SliceViewModelProperties extends js.Object {
     * Indicates whether the [Ground](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html) and layers that are draped on the ground surface are excluded from the slice.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SliceViewModel.html#excludeGroundSurface)
-    *
-    * @default false
     */
   var excludeGroundSurface: js.UndefOr[Boolean] = js.native
   
   /**
-    * Add layers to this collection to exclude them from the slice. Layers that are draped on the ground surface are not affected by this property
+    * Add layers to this collection to exclude them from the slice.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SliceViewModel.html#excludedLayers)
     */
   var excludedLayers: js.UndefOr[CollectionProperties[LayerProperties | BuildingComponentSublayerProperties]] = js.native
   
   /**
-    * The shape used to slice elements in a 3D scene. Currently the only supported shape is a plane.
+    * The shape used to slice elements in a 3D scene.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SliceViewModel.html#shape)
     */
   var shape: js.UndefOr[SlicePlaneProperties] = js.native
   
   /**
-    * Enable tilting the slice shape. If set to true, the slice shape will orient itself as best as possible to the surface under the cursor when first placing the shape. If set to false, the slice shape is restricted to be either horizontal or vertical.
+    * Enable tilting the slice shape.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slice-SliceViewModel.html#tiltEnabled)
-    *
-    * @default false
     */
   var tiltEnabled: js.UndefOr[Boolean] = js.native
   

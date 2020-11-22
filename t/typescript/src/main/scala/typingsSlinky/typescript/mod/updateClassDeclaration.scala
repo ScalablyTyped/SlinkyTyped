@@ -287,6 +287,7 @@ object updateClassDeclaration extends js.Object {
     heritageClauses: js.UndefOr[scala.Nothing],
     members: js.Array[ClassElement]
   ): ClassDeclaration = js.native
+  /** @deprecated Use `factory.updateClassDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     node: ClassDeclaration,
     decorators: js.Array[Decorator],

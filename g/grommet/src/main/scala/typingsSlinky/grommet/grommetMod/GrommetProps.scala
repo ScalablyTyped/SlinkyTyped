@@ -1,5 +1,6 @@
 package typingsSlinky.grommet.grommetMod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.grommet.baseMod.ThemeType
 import typingsSlinky.grommet.grommetStrings.dark
 import typingsSlinky.grommet.grommetStrings.light
@@ -13,6 +14,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GrommetProps extends js.Object {
   
   var background: js.UndefOr[BackgroundType] = js.native
+  
+  var containerTarget: js.UndefOr[HTMLElement] = js.native
   
   var cssVars: js.UndefOr[Boolean] = js.native
   
@@ -56,6 +59,12 @@ object GrommetProps {
     
     @scala.inline
     def deleteBackground: Self = this.set("background", js.undefined)
+    
+    @scala.inline
+    def setContainerTarget(value: HTMLElement): Self = this.set("containerTarget", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContainerTarget: Self = this.set("containerTarget", js.undefined)
     
     @scala.inline
     def setCssVars(value: Boolean): Self = this.set("cssVars", value.asInstanceOf[js.Any])

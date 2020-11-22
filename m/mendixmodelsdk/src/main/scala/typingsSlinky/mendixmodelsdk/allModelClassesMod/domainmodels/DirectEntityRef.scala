@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates.EntityWidget
@@ -12,6 +13,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.EntityPathSource
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.NewButton
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.ReferenceSetSelector
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.SelectorXPathSource
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,8 +30,8 @@ class DirectEntityRef protected ()
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
 /* static members */

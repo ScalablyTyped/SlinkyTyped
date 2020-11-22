@@ -1,5 +1,6 @@
 package typingsSlinky.pmmmwhReactRefreshWebpackPlugin.typesMod
 
+import typingsSlinky.pmmmwhReactRefreshWebpackPlugin.pmmmwhReactRefreshWebpackPluginBooleans.`false`
 import typingsSlinky.pmmmwhReactRefreshWebpackPlugin.pmmmwhReactRefreshWebpackPluginStrings.wds
 import typingsSlinky.pmmmwhReactRefreshWebpackPlugin.pmmmwhReactRefreshWebpackPluginStrings.whm
 import typingsSlinky.pmmmwhReactRefreshWebpackPlugin.pmmmwhReactRefreshWebpackPluginStrings.wps
@@ -14,12 +15,12 @@ trait NormalizedErrorOverlayOptions extends js.Object {
   /**
     * Path to a JS file that sets up the error overlay integration.
     */
-  var entry: String = js.native
+  var entry: String | `false` = js.native
   
   /**
     * The error overlay module to use.
     */
-  var module: String = js.native
+  var module: String | `false` = js.native
   
   /**
     * The socket host to use (WDS only).
@@ -29,7 +30,7 @@ trait NormalizedErrorOverlayOptions extends js.Object {
   /**
     * Path to a JS file that sets up the Webpack socket integration.
     */
-  var sockIntegration: LiteralUnion[wds | whm | wps, String] = js.native
+  var sockIntegration: LiteralUnion[wds | whm | wps | `false`, String] = js.native
   
   /**
     * The socket path to use (WDS only).
@@ -40,11 +41,20 @@ trait NormalizedErrorOverlayOptions extends js.Object {
     * The socket port to use (WDS only).
     */
   var sockPort: js.UndefOr[Double] = js.native
+  
+  /**
+    * Uses a custom SocketJS implementation for older versions of webpack-dev-server.
+    */
+  var useLegacyWDSSockets: js.UndefOr[Boolean] = js.native
 }
 object NormalizedErrorOverlayOptions {
   
   @scala.inline
-  def apply(entry: String, module: String, sockIntegration: LiteralUnion[wds | whm | wps, String]): NormalizedErrorOverlayOptions = {
+  def apply(
+    entry: String | `false`,
+    module: String | `false`,
+    sockIntegration: LiteralUnion[wds | whm | wps | `false`, String]
+  ): NormalizedErrorOverlayOptions = {
     val __obj = js.Dynamic.literal(entry = entry.asInstanceOf[js.Any], module = module.asInstanceOf[js.Any], sockIntegration = sockIntegration.asInstanceOf[js.Any])
     __obj.asInstanceOf[NormalizedErrorOverlayOptions]
   }
@@ -65,13 +75,13 @@ object NormalizedErrorOverlayOptions {
     }
     
     @scala.inline
-    def setEntry(value: String): Self = this.set("entry", value.asInstanceOf[js.Any])
+    def setEntry(value: String | `false`): Self = this.set("entry", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setModule(value: String): Self = this.set("module", value.asInstanceOf[js.Any])
+    def setModule(value: String | `false`): Self = this.set("module", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSockIntegration(value: LiteralUnion[wds | whm | wps, String]): Self = this.set("sockIntegration", value.asInstanceOf[js.Any])
+    def setSockIntegration(value: LiteralUnion[wds | whm | wps | `false`, String]): Self = this.set("sockIntegration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSockHost(value: String): Self = this.set("sockHost", value.asInstanceOf[js.Any])
@@ -90,5 +100,11 @@ object NormalizedErrorOverlayOptions {
     
     @scala.inline
     def deleteSockPort: Self = this.set("sockPort", js.undefined)
+    
+    @scala.inline
+    def setUseLegacyWDSSockets(value: Boolean): Self = this.set("useLegacyWDSSockets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUseLegacyWDSSockets: Self = this.set("useLegacyWDSSockets", js.undefined)
   }
 }

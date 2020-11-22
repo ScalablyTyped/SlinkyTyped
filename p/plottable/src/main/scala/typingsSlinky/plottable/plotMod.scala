@@ -2,7 +2,6 @@ package typingsSlinky.plottable
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.SVGGElement
-import typingsSlinky.d3Collection.mod.Map_
 import typingsSlinky.d3Selection.mod.Selection_
 import typingsSlinky.plottable.animatorMod.IAnimator
 import typingsSlinky.plottable.anon.HeightWidth
@@ -207,7 +206,10 @@ object plotMod extends js.Object {
       * registered by the user. By default, only attrs are passed to the
       * _generateDrawStep's attrToProjector; properties are not.
       */
-    var _propertyBindings: Map_[IAccessorScaleBinding[_, _]] = js.native
+    var _propertyBindings: typingsSlinky.std.Map[
+        IAccessorScaleBinding[_, _], 
+        /* import warning: DefaultedTypeArguments.enterTsTypeRef applyOrElse newTParams next no default parameter for V */ _
+      ] = js.native
     
     /**
       * Mapping from property names to the extents ([min, max]) values that that

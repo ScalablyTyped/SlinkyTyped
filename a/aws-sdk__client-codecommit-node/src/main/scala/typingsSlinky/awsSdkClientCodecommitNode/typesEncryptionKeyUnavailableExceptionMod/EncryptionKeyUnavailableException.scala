@@ -31,16 +31,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.testRepositoryTriggersExceptions
 import typingsSlinky.awsSdkClientCodecommitNode.updateDefaultBranchExceptionsUnionMod.UpdateDefaultBranchExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestStatusExceptionsUnionMod.UpdatePullRequestStatusExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updateRepositoryDescriptionExceptionsUnionMod.UpdateRepositoryDescriptionExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_EncryptionKeyUnavailableExceptionDetails> * / any */ @js.native
 trait EncryptionKeyUnavailableException
-  extends ServiceException[EncryptionKeyUnavailableExceptionDetails]
-     with BatchGetRepositoriesExceptionsUnion
+  extends BatchGetRepositoriesExceptionsUnion
      with CreateBranchExceptionsUnion
      with CreatePullRequestExceptionsUnion
      with CreateRepositoryExceptionsUnion
@@ -72,19 +70,15 @@ trait EncryptionKeyUnavailableException
      with UpdatePullRequestStatusExceptionsUnion
      with UpdateRepositoryDescriptionExceptionsUnion {
   
-  @JSName("name")
-  var name_EncryptionKeyUnavailableException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionKeyUnavailableException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionKeyUnavailableException = js.native
 }
 object EncryptionKeyUnavailableException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: EncryptionKeyUnavailableExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.EncryptionKeyUnavailableException
   ): EncryptionKeyUnavailableException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[EncryptionKeyUnavailableException]
   }
   

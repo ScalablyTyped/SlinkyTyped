@@ -46,7 +46,7 @@ trait symbolUtilsRenderPreviewHTMLOptions extends Object {
   var rotation: js.UndefOr[String] = js.native
   
   /**
-    * Indicates whether to scale the symbol preview.
+    * When `true` the size of the symbol preview will include the outline in the measurement of the entire symbol.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-support-symbolUtils.html#renderPreviewHTML)
     */

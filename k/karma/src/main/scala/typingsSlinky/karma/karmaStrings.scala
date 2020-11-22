@@ -27,6 +27,27 @@ object karmaStrings {
   def Firefox: Firefox = "Firefox".asInstanceOf[Firefox]
   
   @scala.inline
+  def FirefoxAurora: FirefoxAurora = "FirefoxAurora".asInstanceOf[FirefoxAurora]
+  
+  @scala.inline
+  def FirefoxAuroraHeadless: FirefoxAuroraHeadless = "FirefoxAuroraHeadless".asInstanceOf[FirefoxAuroraHeadless]
+  
+  @scala.inline
+  def FirefoxDeveloper: FirefoxDeveloper = "FirefoxDeveloper".asInstanceOf[FirefoxDeveloper]
+  
+  @scala.inline
+  def FirefoxDeveloperHeadless: FirefoxDeveloperHeadless = "FirefoxDeveloperHeadless".asInstanceOf[FirefoxDeveloperHeadless]
+  
+  @scala.inline
+  def FirefoxHeadless: FirefoxHeadless = "FirefoxHeadless".asInstanceOf[FirefoxHeadless]
+  
+  @scala.inline
+  def FirefoxNightly: FirefoxNightly = "FirefoxNightly".asInstanceOf[FirefoxNightly]
+  
+  @scala.inline
+  def FirefoxNightlyHeadless: FirefoxNightlyHeadless = "FirefoxNightlyHeadless".asInstanceOf[FirefoxNightlyHeadless]
+  
+  @scala.inline
   def IE: IE = "IE".asInstanceOf[IE]
   
   @scala.inline
@@ -112,6 +133,27 @@ object karmaStrings {
   
   @js.native
   sealed trait Firefox extends AutomatedBrowsers
+  
+  @js.native
+  sealed trait FirefoxAurora extends AutomatedBrowsers
+  
+  @js.native
+  sealed trait FirefoxAuroraHeadless extends AutomatedBrowsers
+  
+  @js.native
+  sealed trait FirefoxDeveloper extends AutomatedBrowsers
+  
+  @js.native
+  sealed trait FirefoxDeveloperHeadless extends AutomatedBrowsers
+  
+  @js.native
+  sealed trait FirefoxHeadless extends AutomatedBrowsers
+  
+  @js.native
+  sealed trait FirefoxNightly extends AutomatedBrowsers
+  
+  @js.native
+  sealed trait FirefoxNightlyHeadless extends AutomatedBrowsers
   
   @js.native
   sealed trait IE extends AutomatedBrowsers

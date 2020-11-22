@@ -11,23 +11,33 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSlideOutViewOptions extends WidgetOptions[dxSlideOutView] {
   
-  /** @name dxSlideOutView.Options.contentTemplate */
+  /**
+    * [descr:dxSlideOutView.Options.contentTemplate]
+    */
   var contentTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* contentElement */ dxElement, _])
   ] = js.native
   
-  /** @name dxSlideOutView.Options.menuPosition */
+  /**
+    * [descr:dxSlideOutView.Options.menuPosition]
+    */
   var menuPosition: js.UndefOr[inverted | normal] = js.native
   
-  /** @name dxSlideOutView.Options.menuTemplate */
+  /**
+    * [descr:dxSlideOutView.Options.menuTemplate]
+    */
   var menuTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* menuElement */ dxElement, _])
   ] = js.native
   
-  /** @name dxSlideOutView.Options.menuVisible */
+  /**
+    * [descr:dxSlideOutView.Options.menuVisible]
+    */
   var menuVisible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSlideOutView.Options.swipeEnabled */
+  /**
+    * [descr:dxSlideOutView.Options.swipeEnabled]
+    */
   var swipeEnabled: js.UndefOr[Boolean] = js.native
 }
 object dxSlideOutViewOptions {

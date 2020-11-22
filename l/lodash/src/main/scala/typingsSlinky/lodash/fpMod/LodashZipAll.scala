@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashZipAll extends LodashConvertible {
+trait LodashZipAll extends js.Object {
   
   def apply[T](arrays: js.Array[js.UndefOr[List[T] | Null]]): js.Array[js.Array[js.UndefOr[T]]] = js.native
   def apply[T1, T2](arrays1: js.Tuple2[List[T1], List[T2]]): js.Array[js.Tuple2[js.UndefOr[T1], js.UndefOr[T2]]] = js.native

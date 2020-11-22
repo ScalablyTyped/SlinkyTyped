@@ -10,41 +10,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LocatorAddressToLocationsParams extends Object {
   
   /**
-    * The address argument is data object that contains properties representing the various address fields accepted by the corresponding geocode service. These fields are listed in the addressFields property of the associated geocode service resource. For example, if the *addressFields* of a geocode service resource includes fields with the following names: Street, City, State and Zone, then the address argument is of the form:
-    * ```js
-    * {
-    *   Street: "1234 W Main St",
-    *   City: "Small Town",
-    *   State: "WA",
-    *   Zone: "99027"
-    * }
-    * ```
-    *
-    * Locators published using ArcGIS 10 or later support a single line address field, which
-    * can be specified using the following syntax where field_name is the name of the single
-    * line address field. You can find this name by viewing the help or services directory for
-    * your locator services. Common values are *SingleLine* and *SingleLineFieldName*:
-    *
-    * ```js
-    * var address = { "field_name": "380 New York St, Redlands, CA 92373" };
-    * ```
-    * The Services Directory can be used to find out the required and optional address fields
-    * and the correct names for the input name fields. If you are using the World Geocoding Service
-    * visit the ArcGIS Online Geocoding Service help for more details on the World Geocoder.
+    * The address argument is data object that contains properties representing the various address fields accepted by the corresponding geocode service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#addressToLocations)
     */
   var address: js.Any = js.native
   
   /**
-    * Limit result to one or more categories. For example, "Populated Place" or "Scandinavian Food". Only applies to the World Geocode Service. See [Category filtering (World Geocoding Service)](https://developers.arcgis.com/rest/geocode/api-reference/geocoding-category-filtering.htm#ESRI_SECTION1_502B3FE2028145D7B189C25B1A00E17B) for more information.
+    * Limit result to one or more categories.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#addressToLocations)
     */
   var categories: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * Limit result to a specific country. For example, "US" for United States or "SE" for Sweden. Only applies to the World Geocode Service. See Geocode coverage (World Geocoding Service) for more information.
+    * Limit result to a specific country.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#addressToLocations)
     */
@@ -72,7 +52,7 @@ trait LocatorAddressToLocationsParams extends Object {
   var locationType: js.UndefOr[String] = js.native
   
   /**
-    * A `suggestLocations` result ID (magicKey). Used to query for a specific results information.
+    * A `suggestLocations` result ID (magicKey).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#addressToLocations)
     */
@@ -86,14 +66,14 @@ trait LocatorAddressToLocationsParams extends Object {
   var maxLocations: js.UndefOr[Double] = js.native
   
   /**
-    * The list of fields included in the returned result set. This list is a comma delimited list of field names. If you specify the shape field in the list of return fields, it is ignored. For non-intersection addresses you can specify the candidate fields as defined in the geocode service. For intersection addresses you can specify the intersection candidate fields.
+    * The list of fields included in the returned result set.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#addressToLocations)
     */
   var outFields: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * Defines the extent within which the geocode server will search. Requires ArcGIS Server version 10.1 or greater.
+    * Defines the extent within which the geocode server will search.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#addressToLocations)
     */

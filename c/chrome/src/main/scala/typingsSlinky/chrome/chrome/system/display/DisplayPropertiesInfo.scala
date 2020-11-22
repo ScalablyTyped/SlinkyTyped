@@ -52,7 +52,7 @@ trait DisplayPropertiesInfo extends js.Object {
   var isPrimary: js.UndefOr[Boolean] = js.native
   
   /**
-    * @requires(CrOS) Chrome OS only.
+    * requires(CrOS) Chrome OS only.
     * @description
     * If set to true, changes the display mode to unified desktop.
     * If set to false, unified desktop mode will be disabled.
@@ -65,7 +65,7 @@ trait DisplayPropertiesInfo extends js.Object {
   var isUnified: js.UndefOr[Boolean] = js.native
   
   /**
-    * @requires(CrOS) Chrome OS only.
+    * requires(CrOS) Chrome OS only.
     * @deprecated Deprecated since Chrome 68. Use ´setMirrorMode´
     * @see setMirrorMode
     * @description

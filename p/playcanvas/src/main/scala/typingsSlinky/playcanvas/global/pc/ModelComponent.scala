@@ -26,6 +26,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * @property lightmapped - If true, this model will be lightmapped after using lightmapper.bake().
   * @property lightmapSizeMultiplier - Lightmap resolution multiplier.
   * @property isStatic - Mark model as non-movable (optimization).
+  * @property aabb - If set, the bounding box is used as a bounding box for visibility culling of attached mesh instances. This is an optimization,
+  * allowing oversized bounding box to be specified for skinned characters in order to avoid per frame bounding box computations based on bone positions.
   * @property meshInstances - An array of meshInstances contained in the component's model. If model is not set or loaded for component it will return null.
   * @property batchGroupId - Assign model to a specific batch group (see {@link pc.BatchGroup}). Default value is -1 (no group).
   * @property layers - An array of layer IDs ({@link pc.Layer#id}) to which this model should belong.

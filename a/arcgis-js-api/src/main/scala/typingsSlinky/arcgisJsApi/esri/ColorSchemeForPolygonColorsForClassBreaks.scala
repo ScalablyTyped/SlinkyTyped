@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ColorSchemeForPolygonColorsForClassBreaks extends Object {
   
   /**
-    * An array of hex color strings. Each color is assigned to a specific break in classed color visualizations.
+    * An array of hex color strings.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-color.html#ColorSchemeForPolygon)
     */

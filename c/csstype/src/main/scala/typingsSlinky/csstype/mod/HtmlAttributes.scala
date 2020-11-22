@@ -179,6 +179,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.`[rows]`
   - typingsSlinky.csstype.csstypeStrings.`[rowspan]`
   - typingsSlinky.csstype.csstypeStrings.`[rules]`
+  - typingsSlinky.csstype.csstypeStrings.`[sandbox-allow-downloads]`
   - typingsSlinky.csstype.csstypeStrings.`[sandbox-allow-modals]`
   - typingsSlinky.csstype.csstypeStrings.`[sandbox-allow-popups-to-escape-sandbox]`
   - typingsSlinky.csstype.csstypeStrings.`[sandbox-allow-popups]`
@@ -749,6 +750,9 @@ object HtmlAttributes {
   
   @scala.inline
   def `[rules]`: typingsSlinky.csstype.csstypeStrings.`[rules]` = "[rules]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[rules]`]
+  
+  @scala.inline
+  def `[sandbox-allow-downloads]`: typingsSlinky.csstype.csstypeStrings.`[sandbox-allow-downloads]` = "[sandbox-allow-downloads]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[sandbox-allow-downloads]`]
   
   @scala.inline
   def `[sandbox-allow-modals]`: typingsSlinky.csstype.csstypeStrings.`[sandbox-allow-modals]` = "[sandbox-allow-modals]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[sandbox-allow-modals]`]

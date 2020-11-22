@@ -3,14 +3,13 @@ package typingsSlinky.feathersjsExpress
 import typingsSlinky.bodyParser.mod.OptionsJson
 import typingsSlinky.bodyParser.mod.OptionsUrlencoded
 import typingsSlinky.connect.mod.NextHandleFunction
-import typingsSlinky.express.anon.Typeofm
 import typingsSlinky.express.mod.Application_
 import typingsSlinky.express.mod.ErrorRequestHandler
 import typingsSlinky.express.mod.IRouterHandler
 import typingsSlinky.express.mod.RequestHandler
+import typingsSlinky.express.mod.Response_
 import typingsSlinky.express.mod.RouterOptions
 import typingsSlinky.expressServeStaticCore.mod.Express
-import typingsSlinky.expressServeStaticCore.mod.Handler
 import typingsSlinky.expressServeStaticCore.mod.NextFunction
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.PathParams
@@ -24,7 +23,7 @@ import typingsSlinky.feathersjsExpress.anon.Typeofexpress
 import typingsSlinky.feathersjsExpress.anon.Typeofself
 import typingsSlinky.feathersjsExpress.feathersjsExpressStrings.use
 import typingsSlinky.qs.mod.ParsedQs
-import typingsSlinky.serveStatic.mod.ServeStaticOptions
+import typingsSlinky.serveStatic.mod.RequestHandlerConstructor
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Pick
 import scala.scalajs.js
@@ -46,6 +45,11 @@ object mod extends js.Object {
   def notFound(): RequestHandler[ParamsDictionary, _, _, Query] = js.native
   
   val original: js.Function0[Express] with Typeofexpress = js.native
+  
+  /**
+    * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
+    */
+  var static: RequestHandlerConstructor[Response_[js.Any]] = js.native
   
   /* import warning: RemoveDifficultInheritance.summarizeChanges 
   - Dropped {[ P in std.Exclude<keyof express.express.Application, 'use'> ]: express.express.Application[P]}
@@ -80,24 +84,9 @@ object mod extends js.Object {
     def apply(): js.Function0[Unit] = js.native
     def apply(handler: RequestHandler[ParamsDictionary, _, _, Query]): js.Function0[Unit] = js.native
     
-    def formatter(req: Request[ParamsDictionary, _, _, Query], res: Response[_], next: NextFunction): js.Any = js.native
+    def formatter(req: Request[ParamsDictionary, _, _, Query], res: Response[_, Double], next: NextFunction): js.Any = js.native
     @JSName("formatter")
     var formatter_Original: RequestHandler[ParamsDictionary, _, _, Query] = js.native
-  }
-  
-  /**
-    * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
-    */
-  @js.native
-  object static extends js.Object {
-    
-    def apply(root: String): Handler = js.native
-    def apply(root: String, options: ServeStaticOptions): Handler = js.native
-    
-    var mime: Typeofm = js.native
-    
-    def serveStatic(root: String): Handler = js.native
-    def serveStatic(root: String, options: ServeStaticOptions): Handler = js.native
   }
   
   /**

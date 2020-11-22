@@ -4,6 +4,10 @@ import typingsSlinky.std.Intl.DateTimeFormatPartTypes
 import typingsSlinky.std.Intl.LDMLPluralRule
 import typingsSlinky.std.Intl.NumberFormatPartTypes
 import typingsSlinky.std.Intl.PluralRuleType
+import typingsSlinky.std.Intl.RelativeTimeFormatLocaleMatcher
+import typingsSlinky.std.Intl.RelativeTimeFormatNumeric
+import typingsSlinky.std.Intl.RelativeTimeFormatStyle
+import typingsSlinky.std.Intl.RelativeTimeFormatUnit
 import typingsSlinky.std.WebAssembly.ImportExportKind
 import typingsSlinky.std.WebAssembly.ValueType
 import scala.scalajs.js
@@ -104,6 +108,9 @@ object stdStrings {
   
   @scala.inline
   def FIDO_2_0: FIDO_2_0 = "FIDO_2_0".asInstanceOf[FIDO_2_0]
+  
+  @scala.inline
+  def FinalizationRegistry: FinalizationRegistry = "FinalizationRegistry".asInstanceOf[FinalizationRegistry]
   
   @scala.inline
   def Float32Array: Float32Array = "Float32Array".asInstanceOf[Float32Array]
@@ -463,6 +470,9 @@ object stdStrings {
   def WEBGL_lose_context: WEBGL_lose_context = "WEBGL_lose_context".asInstanceOf[WEBGL_lose_context]
   
   @scala.inline
+  def WeakRef: WeakRef = "WeakRef".asInstanceOf[WeakRef]
+  
+  @scala.inline
   def WebGLContextEvent: WebGLContextEvent = "WebGLContextEvent".asInstanceOf[WebGLContextEvent]
   
   @scala.inline
@@ -536,6 +546,9 @@ object stdStrings {
   
   @scala.inline
   def `alternate-reverse`: `alternate-reverse` = "alternate-reverse".asInstanceOf[`alternate-reverse`]
+  
+  @scala.inline
+  def always: always = "always".asInstanceOf[always]
   
   @scala.inline
   def `ambient-light-sensor`: `ambient-light-sensor` = "ambient-light-sensor".asInstanceOf[`ambient-light-sensor`]
@@ -868,6 +881,12 @@ object stdStrings {
   def copy: copy = "copy".asInstanceOf[copy]
   
   @scala.inline
+  def copyLink: copyLink = "copyLink".asInstanceOf[copyLink]
+  
+  @scala.inline
+  def copyMove: copyMove = "copyMove".asInstanceOf[copyMove]
+  
+  @scala.inline
   def cors: cors = "cors".asInstanceOf[cors]
   
   @scala.inline
@@ -902,6 +921,9 @@ object stdStrings {
   
   @scala.inline
   def dayPeriod: dayPeriod = "dayPeriod".asInstanceOf[dayPeriod]
+  
+  @scala.inline
+  def days: days = "days".asInstanceOf[days]
   
   @scala.inline
   def dblclick: dblclick = "dblclick".asInstanceOf[dblclick]
@@ -1079,6 +1101,9 @@ object stdStrings {
   
   @scala.inline
   def enter: enter = "enter".asInstanceOf[enter]
+  
+  @scala.inline
+  def enterprise: enterprise = "enterprise".asInstanceOf[enterprise]
   
   @scala.inline
   def environment: environment = "environment".asInstanceOf[environment]
@@ -1378,6 +1403,9 @@ object stdStrings {
   def hour: hour = "hour".asInstanceOf[hour]
   
   @scala.inline
+  def hours: hours = "hours".asInstanceOf[hours]
+  
+  @scala.inline
   def hr: hr = "hr".asInstanceOf[hr]
   
   @scala.inline
@@ -1597,6 +1625,9 @@ object stdStrings {
   def link: link = "link".asInstanceOf[link]
   
   @scala.inline
+  def linkMove: linkMove = "linkMove".asInstanceOf[linkMove]
+  
+  @scala.inline
   def listing: listing = "listing".asInstanceOf[listing]
   
   @scala.inline
@@ -1625,6 +1656,9 @@ object stdStrings {
   
   @scala.inline
   def localcandidate: localcandidate = "localcandidate".asInstanceOf[localcandidate]
+  
+  @scala.inline
+  def long: long = "long".asInstanceOf[long]
   
   @scala.inline
   def lookup: lookup = "lookup".asInstanceOf[lookup]
@@ -1741,6 +1775,9 @@ object stdStrings {
   def minute: minute = "minute".asInstanceOf[minute]
   
   @scala.inline
+  def minutes: minutes = "minutes".asInstanceOf[minutes]
+  
+  @scala.inline
   def miter: miter = "miter".asInstanceOf[miter]
   
   @scala.inline
@@ -1751,6 +1788,9 @@ object stdStrings {
   
   @scala.inline
   def month: month = "month".asInstanceOf[month]
+  
+  @scala.inline
+  def months: months = "months".asInstanceOf[months]
   
   @scala.inline
   def mounted: mounted = "mounted".asInstanceOf[mounted]
@@ -1780,10 +1820,16 @@ object stdStrings {
   def mousewheel: mousewheel = "mousewheel".asInstanceOf[mousewheel]
   
   @scala.inline
+  def move: move = "move".asInstanceOf[move]
+  
+  @scala.inline
   def mute: mute = "mute".asInstanceOf[mute]
   
   @scala.inline
   def nan: nan = "nan".asInstanceOf[nan]
+  
+  @scala.inline
+  def narrow: narrow = "narrow".asInstanceOf[narrow]
   
   @scala.inline
   def native: native = "native".asInstanceOf[native]
@@ -2146,6 +2192,12 @@ object stdStrings {
   def q: q = "q".asInstanceOf[q]
   
   @scala.inline
+  def quarter: quarter = "quarter".asInstanceOf[quarter]
+  
+  @scala.inline
+  def quarters: quarters = "quarters".asInstanceOf[quarters]
+  
+  @scala.inline
   def radialGradient: radialGradient = "radialGradient".asInstanceOf[radialGradient]
   
   @scala.inline
@@ -2293,6 +2345,9 @@ object stdStrings {
   def second: second = "second".asInstanceOf[second]
   
   @scala.inline
+  def seconds: seconds = "seconds".asInstanceOf[seconds]
+  
+  @scala.inline
   def secret: secret = "secret".asInstanceOf[secret]
   
   @scala.inline
@@ -2351,6 +2406,9 @@ object stdStrings {
   
   @scala.inline
   def shippingoptionchange: shippingoptionchange = "shippingoptionchange".asInstanceOf[shippingoptionchange]
+  
+  @scala.inline
+  def short: short = "short".asInstanceOf[short]
   
   @scala.inline
   def show: show = "show".asInstanceOf[show]
@@ -2647,6 +2705,9 @@ object stdStrings {
   def unhandledrejection: unhandledrejection = "unhandledrejection".asInstanceOf[unhandledrejection]
   
   @scala.inline
+  def uninitialized: uninitialized = "uninitialized".asInstanceOf[uninitialized]
+  
+  @scala.inline
   def unknown: unknown = "unknown".asInstanceOf[unknown]
   
   @scala.inline
@@ -2785,7 +2846,13 @@ object stdStrings {
   def webnotifications: webnotifications = "webnotifications".asInstanceOf[webnotifications]
   
   @scala.inline
+  def week: week = "week".asInstanceOf[week]
+  
+  @scala.inline
   def weekday: weekday = "weekday".asInstanceOf[weekday]
+  
+  @scala.inline
+  def weeks: weeks = "weeks".asInstanceOf[weeks]
   
   @scala.inline
   def wheel: wheel = "wheel".asInstanceOf[wheel]
@@ -2807,6 +2874,9 @@ object stdStrings {
   
   @scala.inline
   def year: year = "year".asInstanceOf[year]
+  
+  @scala.inline
+  def years: years = "years".asInstanceOf[years]
   
   @scala.inline
   def zero: zero = "zero".asInstanceOf[zero]
@@ -2903,6 +2973,9 @@ object stdStrings {
   
   @js.native
   sealed trait FIDO_2_0 extends js.Object
+  
+  @js.native
+  sealed trait FinalizationRegistry extends js.Object
   
   @js.native
   sealed trait Float32Array extends js.Object
@@ -3262,6 +3335,9 @@ object stdStrings {
   sealed trait WEBGL_lose_context extends js.Object
   
   @js.native
+  sealed trait WeakRef extends js.Object
+  
+  @js.native
   sealed trait WebGLContextEvent extends js.Object
   
   @js.native
@@ -3356,6 +3432,9 @@ object stdStrings {
   sealed trait `alternate-reverse` extends PlaybackDirection
   
   @js.native
+  sealed trait always extends RelativeTimeFormatNumeric
+  
+  @js.native
   sealed trait `ambient-light-sensor` extends PermissionName
   
   @js.native
@@ -3386,10 +3465,10 @@ object stdStrings {
   sealed trait application extends DisplayCaptureSurfaceType
   
   @js.native
-  sealed trait applicationSlashxhtmlPlussignxml extends SupportedType
+  sealed trait applicationSlashxhtmlPlussignxml extends DOMParserSupportedType
   
   @js.native
-  sealed trait applicationSlashxml extends SupportedType
+  sealed trait applicationSlashxml extends DOMParserSupportedType
   
   @js.native
   sealed trait area extends js.Object
@@ -3449,6 +3528,7 @@ object stdStrings {
        with NotificationDirection
        with PositionAlignSetting
        with RTCDtlsRole
+       with RelativeTimeFormatNumeric
        with ScrollBehavior
        with ScrollRestoration
   
@@ -3507,7 +3587,7 @@ object stdStrings {
   sealed trait beforeunload extends js.Object
   
   @js.native
-  sealed trait `best fit` extends js.Object
+  sealed trait `best fit` extends RelativeTimeFormatLocaleMatcher
   
   @js.native
   sealed trait bevel extends CanvasLineJoin
@@ -3734,6 +3814,12 @@ object stdStrings {
   sealed trait copy extends js.Object
   
   @js.native
+  sealed trait copyLink extends js.Object
+  
+  @js.native
+  sealed trait copyMove extends js.Object
+  
+  @js.native
   sealed trait cors
     extends RequestMode
        with ResponseType
@@ -3766,10 +3852,15 @@ object stdStrings {
   sealed trait datalist extends js.Object
   
   @js.native
-  sealed trait day extends DateTimeFormatPartTypes
+  sealed trait day
+    extends DateTimeFormatPartTypes
+       with RelativeTimeFormatUnit
   
   @js.native
   sealed trait dayPeriod extends DateTimeFormatPartTypes
+  
+  @js.native
+  sealed trait days extends RelativeTimeFormatUnit
   
   @js.native
   sealed trait dblclick extends js.Object
@@ -3878,7 +3969,9 @@ object stdStrings {
        with RTCPeerConnectionState
   
   @js.native
-  sealed trait discouraged extends UserVerificationRequirement
+  sealed trait discouraged
+    extends ResidentKeyRequirement
+       with UserVerificationRequirement
   
   @js.native
   sealed trait discrete extends ChannelInterpretation
@@ -3972,6 +4065,9 @@ object stdStrings {
   
   @js.native
   sealed trait enter extends js.Object
+  
+  @js.native
+  sealed trait enterprise extends AttestationConveyancePreference
   
   @js.native
   sealed trait environment extends VideoFacingModeEnum
@@ -4289,7 +4385,12 @@ object stdStrings {
        with RTCStatsIceCandidateType
   
   @js.native
-  sealed trait hour extends DateTimeFormatPartTypes
+  sealed trait hour
+    extends DateTimeFormatPartTypes
+       with RelativeTimeFormatUnit
+  
+  @js.native
+  sealed trait hours extends RelativeTimeFormatUnit
   
   @js.native
   sealed trait hr extends js.Object
@@ -4361,7 +4462,7 @@ object stdStrings {
   sealed trait image extends RequestDestination
   
   @js.native
-  sealed trait imageSlashsvgPlussignxml extends SupportedType
+  sealed trait imageSlashsvgPlussignxml extends DOMParserSupportedType
   
   @js.native
   sealed trait img extends js.Object
@@ -4524,6 +4625,9 @@ object stdStrings {
   sealed trait link extends js.Object
   
   @js.native
+  sealed trait linkMove extends js.Object
+  
+  @js.native
   sealed trait listing extends js.Object
   
   @js.native
@@ -4556,7 +4660,10 @@ object stdStrings {
   sealed trait localcandidate extends RTCStatsType
   
   @js.native
-  sealed trait lookup extends js.Object
+  sealed trait long extends RelativeTimeFormatStyle
+  
+  @js.native
+  sealed trait lookup extends RelativeTimeFormatLocaleMatcher
   
   @js.native
   sealed trait lostpointercapture extends js.Object
@@ -4677,7 +4784,12 @@ object stdStrings {
   sealed trait minusSign extends NumberFormatPartTypes
   
   @js.native
-  sealed trait minute extends DateTimeFormatPartTypes
+  sealed trait minute
+    extends DateTimeFormatPartTypes
+       with RelativeTimeFormatUnit
+  
+  @js.native
+  sealed trait minutes extends RelativeTimeFormatUnit
   
   @js.native
   sealed trait miter extends CanvasLineJoin
@@ -4689,7 +4801,12 @@ object stdStrings {
   sealed trait monitor extends DisplayCaptureSurfaceType
   
   @js.native
-  sealed trait month extends DateTimeFormatPartTypes
+  sealed trait month
+    extends DateTimeFormatPartTypes
+       with RelativeTimeFormatUnit
+  
+  @js.native
+  sealed trait months extends RelativeTimeFormatUnit
   
   @js.native
   sealed trait mounted extends VRDisplayEventReason
@@ -4719,10 +4836,16 @@ object stdStrings {
   sealed trait mousewheel extends js.Object
   
   @js.native
+  sealed trait move extends js.Object
+  
+  @js.native
   sealed trait mute extends js.Object
   
   @js.native
   sealed trait nan extends NumberFormatPartTypes
+  
+  @js.native
+  sealed trait narrow extends RelativeTimeFormatStyle
   
   @js.native
   sealed trait native extends EndingType
@@ -5067,7 +5190,9 @@ object stdStrings {
   sealed trait pre extends js.Object
   
   @js.native
-  sealed trait preferred extends UserVerificationRequirement
+  sealed trait preferred
+    extends ResidentKeyRequirement
+       with UserVerificationRequirement
   
   @js.native
   sealed trait premultiply extends PremultiplyAlpha
@@ -5115,6 +5240,12 @@ object stdStrings {
   
   @js.native
   sealed trait q extends js.Object
+  
+  @js.native
+  sealed trait quarter extends RelativeTimeFormatUnit
+  
+  @js.native
+  sealed trait quarters extends RelativeTimeFormatUnit
   
   @js.native
   sealed trait radialGradient extends js.Object
@@ -5194,6 +5325,7 @@ object stdStrings {
   sealed trait required_
     extends CredentialMediationRequirement
        with MediaKeysRequirement
+       with ResidentKeyRequirement
        with UserVerificationRequirement
   
   @js.native
@@ -5286,7 +5418,12 @@ object stdStrings {
   sealed trait `sdp-syntax-error` extends RTCErrorDetailType
   
   @js.native
-  sealed trait second extends DateTimeFormatPartTypes
+  sealed trait second
+    extends DateTimeFormatPartTypes
+       with RelativeTimeFormatUnit
+  
+  @js.native
+  sealed trait seconds extends RelativeTimeFormatUnit
   
   @js.native
   sealed trait secret extends KeyType
@@ -5349,6 +5486,9 @@ object stdStrings {
   
   @js.native
   sealed trait shippingoptionchange extends js.Object
+  
+  @js.native
+  sealed trait short extends RelativeTimeFormatStyle
   
   @js.native
   sealed trait show extends FullscreenNavigationUI
@@ -5550,10 +5690,10 @@ object stdStrings {
   sealed trait textPath extends js.Object
   
   @js.native
-  sealed trait textSlashhtml extends SupportedType
+  sealed trait textSlashhtml extends DOMParserSupportedType
   
   @js.native
-  sealed trait textSlashxml extends SupportedType
+  sealed trait textSlashxml extends DOMParserSupportedType
   
   @js.native
   sealed trait textarea extends js.Object
@@ -5652,6 +5792,9 @@ object stdStrings {
   
   @js.native
   sealed trait unhandledrejection extends js.Object
+  
+  @js.native
+  sealed trait uninitialized extends js.Object
   
   @js.native
   sealed trait unknown
@@ -5799,7 +5942,13 @@ object stdStrings {
   sealed trait webnotifications extends MSWebViewPermissionType
   
   @js.native
+  sealed trait week extends RelativeTimeFormatUnit
+  
+  @js.native
   sealed trait weekday extends DateTimeFormatPartTypes
+  
+  @js.native
+  sealed trait weeks extends RelativeTimeFormatUnit
   
   @js.native
   sealed trait wheel extends js.Object
@@ -5824,7 +5973,12 @@ object stdStrings {
   sealed trait xslt extends RequestDestination
   
   @js.native
-  sealed trait year extends DateTimeFormatPartTypes
+  sealed trait year
+    extends DateTimeFormatPartTypes
+       with RelativeTimeFormatUnit
+  
+  @js.native
+  sealed trait years extends RelativeTimeFormatUnit
   
   @js.native
   sealed trait zero extends LDMLPluralRule

@@ -10,15 +10,15 @@ trait AlgorithmNode extends Node {
   
   var contents: OrderedListNode = js.native
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: algorithm = js.native
 }
 object AlgorithmNode {
   
   @scala.inline
-  def apply(contents: OrderedListNode, name: algorithm): AlgorithmNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(contents: OrderedListNode, location: LocationRange, name: algorithm): AlgorithmNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[AlgorithmNode]
   }
   
@@ -41,12 +41,9 @@ object AlgorithmNode {
     def setContents(value: OrderedListNode): Self = this.set("contents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: algorithm): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
+    def setName(value: algorithm): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

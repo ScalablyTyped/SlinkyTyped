@@ -17,7 +17,7 @@ object ErrorCode extends js.Object {
   
   def errConf(): typingsSlinky.stellarBase.xdrMod.xdr.ErrorCode = js.native
   
-  def errDatum(): typingsSlinky.stellarBase.xdrMod.xdr.ErrorCode = js.native
+  def errData(): typingsSlinky.stellarBase.xdrMod.xdr.ErrorCode = js.native
   
   def errLoad(): typingsSlinky.stellarBase.xdrMod.xdr.ErrorCode = js.native
   

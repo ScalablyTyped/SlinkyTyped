@@ -34,12 +34,6 @@ trait S3LocationArgs extends js.Object {
 object S3LocationArgs {
   
   @scala.inline
-  def apply(s3BucketArn: Input[ARN], s3Config: Input[S3LocationS3Config], subdirectory: Input[String]): S3LocationArgs = {
-    val __obj = js.Dynamic.literal(s3BucketArn = s3BucketArn.asInstanceOf[js.Any], s3Config = s3Config.asInstanceOf[js.Any], subdirectory = subdirectory.asInstanceOf[js.Any])
-    __obj.asInstanceOf[S3LocationArgs]
-  }
-  
-  @scala.inline
   implicit class S3LocationArgsOps[Self <: S3LocationArgs] (val x: Self) extends AnyVal {
     
     @scala.inline

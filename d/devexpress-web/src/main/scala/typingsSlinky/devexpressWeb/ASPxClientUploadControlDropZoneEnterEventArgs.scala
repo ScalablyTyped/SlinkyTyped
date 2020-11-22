@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ASPxClientUploadControlDropZoneEnterEventArgs extends ASPxClientEventArgs {
   
   /**
-    * Gets a <strong>drop zone</strong> object related to the processed event.
+    * Gets a drop zone object related to the processed event.
     */
   var dropZone: js.Any = js.native
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StorediSCSIVolume extends js.Object {
   
   /**
-    * The date the volume was created. Volumes created prior to March 28, 2017 don’t have this time stamp.
+    * The date the volume was created. Volumes created prior to March 28, 2017 don’t have this timestamp.
     */
   var CreatedDate: js.UndefOr[js.Date] = js.native
   
@@ -45,7 +45,7 @@ trait StorediSCSIVolume extends js.Object {
   var VolumeDiskId: js.UndefOr[DiskId] = js.native
   
   /**
-    * The unique identifier of the volume, e.g. vol-AE4B946D.
+    * The unique identifier of the volume, e.g., vol-AE4B946D.
     */
   var VolumeId: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.VolumeId] = js.native
   

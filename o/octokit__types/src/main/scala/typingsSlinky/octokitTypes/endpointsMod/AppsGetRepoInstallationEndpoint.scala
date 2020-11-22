@@ -1,15 +1,11 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  owner :string,   repo :string} & @octokit/types.@octokit/types/dist-types/generated/Endpoints.RequiredPreview<'machine-man'> */
 @js.native
 trait AppsGetRepoInstallationEndpoint extends js.Object {
-  
-  var mediaType: `1` = js.native
   
   var owner: String = js.native
   
@@ -18,8 +14,8 @@ trait AppsGetRepoInstallationEndpoint extends js.Object {
 object AppsGetRepoInstallationEndpoint {
   
   @scala.inline
-  def apply(mediaType: `1`, owner: String, repo: String): AppsGetRepoInstallationEndpoint = {
-    val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
+  def apply(owner: String, repo: String): AppsGetRepoInstallationEndpoint = {
+    val __obj = js.Dynamic.literal(owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppsGetRepoInstallationEndpoint]
   }
   
@@ -37,9 +33,6 @@ object AppsGetRepoInstallationEndpoint {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setMediaType(value: `1`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

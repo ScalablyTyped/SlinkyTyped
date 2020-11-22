@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-syntax-highlighter/dist/esm/languages/prism/clike", JSImport.Namespace)
+@JSImport("react-syntax-highlighter/dist/cjs/languages/prism/clike", JSImport.Namespace)
 @js.native
 object prismClikeMod extends js.Object {
   

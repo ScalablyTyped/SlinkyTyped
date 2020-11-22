@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object atob extends js.Object {
   
   /**
-    * _Converts base6 4 string to ascii._
+    * _Converts base64 string to ascii._
     */
   def apply(str: String): String = js.native
 }

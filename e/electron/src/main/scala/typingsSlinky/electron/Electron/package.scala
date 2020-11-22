@@ -8,13 +8,9 @@ package object Electron {
   
   type Accelerator = java.lang.String
   
-  type MainInterface = typingsSlinky.electron.Electron.CommonInterface
+  type TouchBarGroup = typingsSlinky.node.eventsMod.EventEmitter
   
-  type RendererInterface = typingsSlinky.electron.Electron.CommonInterface
-  
-  type TouchBarGroup = typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
-  
-  type TouchBarSpacer = typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+  type TouchBarOtherItemsProxy = typingsSlinky.node.eventsMod.EventEmitter
   
   type nativeImage = typingsSlinky.electron.Electron.NativeImage_
   

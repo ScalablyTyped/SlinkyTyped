@@ -16,6 +16,22 @@ trait Settings extends js.Object {
   var args: js.UndefOr[js.Array[String]] = js.native
   
   /**
+    * `true` will change the startup approved registry key and `enable / disable` the
+    * App in Task Manager and Windows Settings. Defaults to `true`.
+    *
+    * @platform win32
+    */
+  var enabled: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * value name to write into registry. Defaults to the app's AppUserModelId(). Set
+    * the app's login item settings.
+    *
+    * @platform win32
+    */
+  var name: js.UndefOr[String] = js.native
+  
+  /**
     * `true` to open the app as hidden. Defaults to `false`. The user can edit this
     * setting from the System Preferences so
     * `app.getLoginItemSettings().wasOpenedAsHidden` should be checked when the app is
@@ -69,6 +85,18 @@ object Settings {
     
     @scala.inline
     def deleteArgs: Self = this.set("args", js.undefined)
+    
+    @scala.inline
+    def setEnabled(value: Boolean): Self = this.set("enabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnabled: Self = this.set("enabled", js.undefined)
+    
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
     def setOpenAsHidden(value: Boolean): Self = this.set("openAsHidden", value.asInstanceOf[js.Any])

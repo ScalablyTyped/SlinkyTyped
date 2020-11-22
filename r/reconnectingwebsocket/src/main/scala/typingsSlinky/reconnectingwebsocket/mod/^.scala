@@ -54,13 +54,13 @@ class ^ protected () extends ReconnectingWebSocket {
 @js.native
 object ^ extends js.Object {
   
-  var CLOSED: Double = js.native
+  var CLOSED: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['CLOSED'] */ js.Any = js.native
   
-  var CLOSING: Double = js.native
+  var CLOSING: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['CLOSING'] */ js.Any = js.native
   
-  var CONNECTING: Double = js.native
+  var CONNECTING: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['CONNECTING'] */ js.Any = js.native
   
-  var OPEN: Double = js.native
+  var OPEN: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['OPEN'] */ js.Any = js.native
   
   /**
     * Whether all instances of ReconnectingWebSocket should log debug messages.

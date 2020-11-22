@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.navigationMod.navigation
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.navigationMod.StructureVersionInfo
@@ -12,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/navigation relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/navigation relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -70,9 +69,6 @@ class NavigationDocument protected () extends ProjectDocument {
   def hybridTabletProfile6_=(newValue: NavigationProfile): Unit = js.native
   
   def hybridTabletProfile_=(newValue: NavigationProfile): Unit = js.native
-  
-  @JSName("model")
-  var model_FNavigationDocument: IModel = js.native
   
   /**
     * In version 7.0.2: deleted

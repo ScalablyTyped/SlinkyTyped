@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
@@ -35,9 +34,6 @@ abstract class ServerSideMicroflow protected () extends MicroflowBase {
   
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MServerSideMicroflow: FolderBase = js.native
-  
-  @JSName("model")
-  var model_FServerSideMicroflow: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.ServerSideMicroflow")

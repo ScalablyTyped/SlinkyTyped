@@ -10,21 +10,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FixedColumnsSettings extends js.Object {
   
-  /*
+  /**
     * Row height matching algorithm to use
     *
-    * The algorithm to use. This can be one of (see below for full description):
-    * 'none' | 'semiauto' | 'auto'
+    * FixedColumns has three different algorithms that it can use: 'none', 'semiauto', 'auto'
+    * @see {@link https://datatables.net/reference/option/fixedColumns.heightMatch}
     */
   var heightMatch: js.UndefOr[none | semiauto | auto] = js.native
   
-  /*
-    * The number of columns on the left hand side of the table to fix in place.
+  /**
+    * @description The number of columns on the left hand side of the table to fix in place.
+    * @see {@link https://datatables.net/reference/option/fixedColumns.leftColumns}
     */
   var leftColumns: js.UndefOr[Double] = js.native
   
-  /*
-    * The number of columns on the right hand side of the table to fix in place.
+  /**
+    * @description The number of columns on the right hand side of the table to fix in place.
+    * @see {@link https://datatables.net/reference/option/fixedColumns.rightColumns}
     */
   var rightColumns: js.UndefOr[Double] = js.native
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.transferMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -82,6 +82,20 @@ trait Transfer extends Service {
   def deleteUser(params: DeleteUserRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   
   /**
+    * Describes the security policy that is attached to your file transfer protocol-enabled server. The response contains a description of the security policy's properties. For more information about security policies, see Working with security policies.
+    */
+  def describeSecurityPolicy(): Request[DescribeSecurityPolicyResponse, AWSError] = js.native
+  def describeSecurityPolicy(callback: js.Function2[/* err */ AWSError, /* data */ DescribeSecurityPolicyResponse, Unit]): Request[DescribeSecurityPolicyResponse, AWSError] = js.native
+  /**
+    * Describes the security policy that is attached to your file transfer protocol-enabled server. The response contains a description of the security policy's properties. For more information about security policies, see Working with security policies.
+    */
+  def describeSecurityPolicy(params: DescribeSecurityPolicyRequest): Request[DescribeSecurityPolicyResponse, AWSError] = js.native
+  def describeSecurityPolicy(
+    params: DescribeSecurityPolicyRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeSecurityPolicyResponse, Unit]
+  ): Request[DescribeSecurityPolicyResponse, AWSError] = js.native
+  
+  /**
     * Describes a file transfer protocol-enabled server that you specify by passing the ServerId parameter. The response contains a description of a server's properties. When you set EndpointType to VPC, the response will contain the EndpointDetails.
     */
   def describeServer(): Request[DescribeServerResponse, AWSError] = js.native
@@ -122,6 +136,20 @@ trait Transfer extends Service {
     params: ImportSshPublicKeyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ImportSshPublicKeyResponse, Unit]
   ): Request[ImportSshPublicKeyResponse, AWSError] = js.native
+  
+  /**
+    * Lists the security policies that are attached to your file transfer protocol-enabled servers.
+    */
+  def listSecurityPolicies(): Request[ListSecurityPoliciesResponse, AWSError] = js.native
+  def listSecurityPolicies(callback: js.Function2[/* err */ AWSError, /* data */ ListSecurityPoliciesResponse, Unit]): Request[ListSecurityPoliciesResponse, AWSError] = js.native
+  /**
+    * Lists the security policies that are attached to your file transfer protocol-enabled servers.
+    */
+  def listSecurityPolicies(params: ListSecurityPoliciesRequest): Request[ListSecurityPoliciesResponse, AWSError] = js.native
+  def listSecurityPolicies(
+    params: ListSecurityPoliciesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListSecurityPoliciesResponse, Unit]
+  ): Request[ListSecurityPoliciesResponse, AWSError] = js.native
   
   /**
     * Lists the file transfer protocol-enabled servers that are associated with your AWS account.
@@ -177,12 +205,12 @@ trait Transfer extends Service {
   def startServer(params: StartServerRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   
   /**
-    * Changes the state of a file transfer protocol-enabled server from ONLINE to OFFLINE. An OFFLINE server cannot accept and process file transfer jobs. Information tied to your server, such as server and user properties, are not affected by stopping your server. Stopping the server will not reduce or impact your file transfer protocol endpoint billing. The state of STOPPING indicates that the server is in an intermediate state, either not fully able to respond, or not fully offline. The values of STOP_FAILED can indicate an error condition. No response is returned from this call.
+    * Changes the state of a file transfer protocol-enabled server from ONLINE to OFFLINE. An OFFLINE server cannot accept and process file transfer jobs. Information tied to your server, such as server and user properties, are not affected by stopping your server.  Stopping the server will not reduce or impact your file transfer protocol endpoint billing; you must delete the server to stop being billed.  The state of STOPPING indicates that the server is in an intermediate state, either not fully able to respond, or not fully offline. The values of STOP_FAILED can indicate an error condition. No response is returned from this call.
     */
   def stopServer(): Request[js.Object, AWSError] = js.native
   def stopServer(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Changes the state of a file transfer protocol-enabled server from ONLINE to OFFLINE. An OFFLINE server cannot accept and process file transfer jobs. Information tied to your server, such as server and user properties, are not affected by stopping your server. Stopping the server will not reduce or impact your file transfer protocol endpoint billing. The state of STOPPING indicates that the server is in an intermediate state, either not fully able to respond, or not fully offline. The values of STOP_FAILED can indicate an error condition. No response is returned from this call.
+    * Changes the state of a file transfer protocol-enabled server from ONLINE to OFFLINE. An OFFLINE server cannot accept and process file transfer jobs. Information tied to your server, such as server and user properties, are not affected by stopping your server.  Stopping the server will not reduce or impact your file transfer protocol endpoint billing; you must delete the server to stop being billed.  The state of STOPPING indicates that the server is in an intermediate state, either not fully able to respond, or not fully offline. The values of STOP_FAILED can indicate an error condition. No response is returned from this call.
     */
   def stopServer(params: StopServerRequest): Request[js.Object, AWSError] = js.native
   def stopServer(params: StopServerRequest, callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native

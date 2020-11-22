@@ -72,19 +72,19 @@ trait ButtonBar extends View {
     * Gets the value of the <Titanium.UI.ButtonBar.selectedButtonColor> property.
     * @deprecated Access <Titanium.UI.ButtonBar.selectedButtonColor> instead.
     */
-  def getSelectedButtonColor(): String = js.native
+  def getSelectedButtonColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ButtonBar.selectedTextColor> property.
     * @deprecated Access <Titanium.UI.ButtonBar.selectedTextColor> instead.
     */
-  def getSelectedTextColor(): String = js.native
+  def getSelectedTextColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ButtonBar.textColor> property.
     * @deprecated Access <Titanium.UI.ButtonBar.textColor> instead.
     */
-  def getTextColor(): String = js.native
+  def getTextColor(): String | Color = js.native
   
   /**
     * Index of the currently selected button.
@@ -102,12 +102,12 @@ trait ButtonBar extends View {
   /**
     * Color of selected button, as a color name or hex triplet.
     */
-  var selectedButtonColor: String = js.native
+  var selectedButtonColor: String | Color = js.native
   
   /**
     * Color of title of button when it is selected, as a color name or hex triplet.
     */
-  var selectedTextColor: String = js.native
+  var selectedTextColor: String | Color = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ButtonBar.index> property.
@@ -128,21 +128,24 @@ trait ButtonBar extends View {
     * @deprecated Set the value using <Titanium.UI.ButtonBar.selectedButtonColor> instead.
     */
   def setSelectedButtonColor(selectedButtonColor: String): Unit = js.native
+  def setSelectedButtonColor(selectedButtonColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ButtonBar.selectedTextColor> property.
     * @deprecated Set the value using <Titanium.UI.ButtonBar.selectedTextColor> instead.
     */
   def setSelectedTextColor(selectedTextColor: String): Unit = js.native
+  def setSelectedTextColor(selectedTextColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ButtonBar.textColor> property.
     * @deprecated Set the value using <Titanium.UI.ButtonBar.textColor> instead.
     */
   def setTextColor(textColor: String): Unit = js.native
+  def setTextColor(textColor: Color): Unit = js.native
   
   /**
     * Color of title of button, as a color name or hex triplet.
     */
-  var textColor: String = js.native
+  var textColor: String | Color = js.native
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.next.apiUtilsMod
 
+import typingsSlinky.next.libUtilsMod.NextApiRequest
 import typingsSlinky.next.serverRouterMod.Params
-import typingsSlinky.next.utilsMod.NextApiRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

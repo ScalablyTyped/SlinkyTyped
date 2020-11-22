@@ -8,11 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GeolocationPositioning extends js.Object {
   
   /**
-    * The HTML5 Geolocation Position options for locating. Refer to [Geolocation API Specification](http://www.w3.org/TR/geolocation-API/#position-options) for details.
+    * The HTML5 Geolocation Position options for locating.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-GeolocationPositioning.html#geolocationOptions)
-    *
-    * @default { maximumAge: 0, timeout: 15000, enableHighAccuracy: true }
     */
   var geolocationOptions: js.Any = js.native
   
@@ -20,8 +18,6 @@ trait GeolocationPositioning extends js.Object {
     * Indicates whether to navigate the view to the position and scale of the geolocated result.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-GeolocationPositioning.html#goToLocationEnabled)
-    *
-    * @default true
     */
   var goToLocationEnabled: Boolean = js.native
   
@@ -33,11 +29,9 @@ trait GeolocationPositioning extends js.Object {
   var graphic: Graphic = js.native
   
   /**
-    * The scale to set on the view when navigating to the position of the geolocated result. If a scale value is not explicitly set, then the view will navigate to a default scale of `2500`.
+    * The scale to set on the view when navigating to the position of the geolocated result.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-support-GeolocationPositioning.html#scale)
-    *
-    * @default null
     */
   var scale: Double = js.native
   

@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLAnchorElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.imageImageMod.ImageProps
 import typingsSlinky.semanticUiReact.listContentMod.ListContentProps
@@ -116,7 +115,7 @@ object StrictListItemProps {
     
     @scala.inline
     def setContentFunction3(
-      value: (/* component */ ReactType[ListContentProps], ListContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ListContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("content", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -130,7 +129,7 @@ object StrictListItemProps {
     
     @scala.inline
     def setDescriptionFunction3(
-      value: (/* component */ ReactType[ListDescriptionProps], ListDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ListDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("description", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -150,7 +149,7 @@ object StrictListItemProps {
     
     @scala.inline
     def setHeaderFunction3(
-      value: (/* component */ ReactType[ListHeaderProps], ListHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ListHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("header", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -164,7 +163,7 @@ object StrictListItemProps {
     
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[ListIconProps], ListIconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ListIconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -178,7 +177,7 @@ object StrictListItemProps {
     
     @scala.inline
     def setImageFunction3(
-      value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("image", js.Any.fromFunction3(value))
     
     @scala.inline

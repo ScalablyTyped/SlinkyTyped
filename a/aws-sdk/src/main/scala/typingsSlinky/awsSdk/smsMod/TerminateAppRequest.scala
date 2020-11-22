@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TerminateAppRequest extends js.Object {
   
   /**
-    * ID of the application to terminate.
+    * The ID of the application.
     */
   var appId: js.UndefOr[AppId] = js.native
 }

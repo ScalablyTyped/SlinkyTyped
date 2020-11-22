@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ModuleInfo extends js.Object {
   
   /**
+    * Copyright statements
+    */
+  var copyright: js.UndefOr[String] = js.native
+  
+  /**
     * Module description
     */
   var description: js.UndefOr[String] = js.native
@@ -41,6 +46,21 @@ trait ModuleInfo extends js.Object {
     * Module name
     */
   var name: js.UndefOr[String] = js.native
+  
+  /**
+    * Path of NOTICE file
+    */
+  var noticeFile: js.UndefOr[String] = js.native
+  
+  /**
+    * Path to module
+    */
+  var path: js.UndefOr[String] = js.native
+  
+  /**
+    * Private module
+    */
+  var `private`: js.UndefOr[Boolean] = js.native
   
   /**
     * Publisher name
@@ -86,6 +106,12 @@ object ModuleInfo {
     }
     
     @scala.inline
+    def setCopyright(value: String): Self = this.set("copyright", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCopyright: Self = this.set("copyright", js.undefined)
+    
+    @scala.inline
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -129,6 +155,24 @@ object ModuleInfo {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setNoticeFile(value: String): Self = this.set("noticeFile", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNoticeFile: Self = this.set("noticeFile", js.undefined)
+    
+    @scala.inline
+    def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePath: Self = this.set("path", js.undefined)
+    
+    @scala.inline
+    def setPrivate(value: Boolean): Self = this.set("private", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrivate: Self = this.set("private", js.undefined)
     
     @scala.inline
     def setPublisher(value: String): Self = this.set("publisher", value.asInstanceOf[js.Any])

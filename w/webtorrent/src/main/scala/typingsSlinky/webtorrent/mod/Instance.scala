@@ -62,11 +62,41 @@ trait Instance extends EventEmitter {
   val ratio: Double = js.native
   
   def remove(torrentId: String): Unit = js.native
-  def remove(torrentId: String, callback: js.Function1[/* err */ js.Error | String, Unit]): Unit = js.native
+  def remove(
+    torrentId: String,
+    opts: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.Error | String, Unit]
+  ): Unit = js.native
+  def remove(torrentId: String, opts: TorrentDestroyOptions): Unit = js.native
+  def remove(
+    torrentId: String,
+    opts: TorrentDestroyOptions,
+    callback: js.Function1[/* err */ js.Error | String, Unit]
+  ): Unit = js.native
   def remove(torrentId: Buffer): Unit = js.native
-  def remove(torrentId: Buffer, callback: js.Function1[/* err */ js.Error | String, Unit]): Unit = js.native
+  def remove(
+    torrentId: Buffer,
+    opts: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.Error | String, Unit]
+  ): Unit = js.native
+  def remove(torrentId: Buffer, opts: TorrentDestroyOptions): Unit = js.native
+  def remove(
+    torrentId: Buffer,
+    opts: TorrentDestroyOptions,
+    callback: js.Function1[/* err */ js.Error | String, Unit]
+  ): Unit = js.native
   def remove(torrentId: Torrent): Unit = js.native
-  def remove(torrentId: Torrent, callback: js.Function1[/* err */ js.Error | String, Unit]): Unit = js.native
+  def remove(
+    torrentId: Torrent,
+    opts: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* err */ js.Error | String, Unit]
+  ): Unit = js.native
+  def remove(torrentId: Torrent, opts: TorrentDestroyOptions): Unit = js.native
+  def remove(
+    torrentId: Torrent,
+    opts: TorrentDestroyOptions,
+    callback: js.Function1[/* err */ js.Error | String, Unit]
+  ): Unit = js.native
   
   def seed(input: String): Torrent = js.native
   def seed(input: String, cb: js.Function1[/* torrent */ Torrent, _]): Torrent = js.native

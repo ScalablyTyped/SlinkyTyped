@@ -5,6 +5,7 @@ import typingsSlinky.elasticElasticsearch.anon.Url
 import typingsSlinky.elasticElasticsearch.connectionMod.AgentOptions
 import typingsSlinky.elasticElasticsearch.connectionMod.default
 import typingsSlinky.node.tlsMod.SecureContextOptions
+import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,6 +18,8 @@ class BaseConnectionPool () extends js.Object {
   var Connection: Instantiable = js.native
   
   var _agent: AgentOptions | Null = js.native
+  
+  var _proxy: String | URL_ = js.native
   
   var _ssl: SecureContextOptions | Null = js.native
   

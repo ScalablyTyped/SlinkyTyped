@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object novaEditorNode {
   
+  type AssistantArray[T] = js.Array[T] | js.Promise[js.Array[T]]
+  
   /// https://novadocs.panic.com/api-reference/assistants-registry/
   type AssistantsRegistrySelector = java.lang.String | typingsSlinky.novaEditorNode.anon.Syntax
   
@@ -17,13 +19,15 @@ package object novaEditorNode {
   /// https://novadocs.panic.com/api-reference/file-system/
   type FileSystemBitField = scala.Double with typingsSlinky.novaEditorNode.anon.T
   
-  type ReadableStream = js.Any
+  type ReadableStream[T] = js.Any
   
-  // tslint:disable-next-line:ban-types
+  /// https://docs.nova.app/api-reference/task/
+  type TaskName = java.lang.String with typingsSlinky.novaEditorNode.anon.Type
+  
   type TimerHandler = java.lang.String | js.Function
   
   /// https://novadocs.panic.com/api-reference/credentials/
   type User = js.Any
   
-  type WritableStream = js.Any
+  type WritableStream[T] = js.Any
 }

@@ -42,24 +42,15 @@ trait ExtraOptions extends js.Object {
   var errorHandler: js.UndefOr[ErrorHandler] = js.native
   
   /**
-    * One of `enabled` or `disabled`.
-    * When set to `enabled`, the initial navigation starts before the root component is created.
-    * The bootstrap is blocked until the initial navigation is complete. This value is required for
-    * [server-side rendering](guide/universal) to work.
-    * When set to `disabled`, the initial navigation is not performed.
-    * The location listener is set up before the root component gets created.
-    * Use if there is a reason to have more control over when the router
+    * One of `enabled`, `enabledBlocking`, `enabledNonBlocking` or `disabled`.
+    * When set to `enabled` or `enabledBlocking`, the initial navigation starts before the root
+    * component is created. The bootstrap is blocked until the initial navigation is complete. This
+    * value is required for [server-side rendering](guide/universal) to work. When set to
+    * `enabledNonBlocking`, the initial navigation starts after the root component has been created.
+    * The bootstrap is not blocked on the completion of the initial navigation. When set to
+    * `disabled`, the initial navigation is not performed. The location listener is set up before the
+    * root component gets created. Use if there is a reason to have more control over when the router
     * starts its initial navigation due to some complex initialization logic.
-    *
-    * Legacy values are deprecated since v4 and should not be used for new applications:
-    *
-    * * `legacy_enabled` - Default for compatibility.
-    * The initial navigation starts after the root component has been created,
-    * but the bootstrap is not blocked until the initial navigation is complete.
-    * * `legacy_disabled` - The initial navigation is not performed.
-    * The location listener is set up after the root component gets created.
-    * * `true` - same as `legacy_enabled`.
-    * * `false` - same as `legacy_disabled`.
     */
   var initialNavigation: js.UndefOr[InitialNavigation] = js.native
   
@@ -125,8 +116,9 @@ trait ExtraOptions extends js.Object {
     *
     * `<a [routerLink]="['../a']">Link to A</a>`
     *
-    * In other words, you're required to use `../` rather than `./`. This is currently the default
-    * behavior. Setting this option to `corrected` enables the fix.
+    * In other words, you're required to use `../` rather than `./`.
+    *
+    * The default in v11 is `corrected`.
     */
   var relativeLinkResolution: js.UndefOr[legacy | corrected] = js.native
   

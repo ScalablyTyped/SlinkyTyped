@@ -19,9 +19,5 @@ class ɵangularPackagesRouterRouterH protected () extends js.Object {
   
   var injector: js.Any = js.native
   
-  var isLegacyDisabled: js.Any = js.native
-  
-  var isLegacyEnabled: js.Any = js.native
-  
   var resultOfPreactivationDone: js.Any = js.native
 }

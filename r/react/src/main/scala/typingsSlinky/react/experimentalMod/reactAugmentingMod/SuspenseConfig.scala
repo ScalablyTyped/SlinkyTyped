@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SuspenseConfig extends TimeoutConfig {
+trait SuspenseConfig extends js.Object {
   
   var busyDelayMs: js.UndefOr[Double] = js.native
   
@@ -14,8 +14,8 @@ trait SuspenseConfig extends TimeoutConfig {
 object SuspenseConfig {
   
   @scala.inline
-  def apply(timeoutMs: Double): SuspenseConfig = {
-    val __obj = js.Dynamic.literal(timeoutMs = timeoutMs.asInstanceOf[js.Any])
+  def apply(): SuspenseConfig = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[SuspenseConfig]
   }
   

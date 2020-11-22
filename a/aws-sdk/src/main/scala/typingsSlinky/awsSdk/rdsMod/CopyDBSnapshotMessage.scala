@@ -40,6 +40,11 @@ trait CopyDBSnapshotMessage extends js.Object {
   var Tags: js.UndefOr[TagList] = js.native
   
   /**
+    * The external custom Availability Zone (CAZ) identifier for the target CAZ. Example: rds-caz-aiqhTgQv.
+    */
+  var TargetCustomAvailabilityZone: js.UndefOr[String] = js.native
+  
+  /**
     * The identifier for the copy of the snapshot.  Constraints:   Can't be null, empty, or blank   Must contain from 1 to 255 letters, numbers, or hyphens   First character must be a letter   Can't end with a hyphen or contain two consecutive hyphens   Example: my-db-snapshot 
     */
   var TargetDBSnapshotIdentifier: String = js.native
@@ -111,5 +116,11 @@ object CopyDBSnapshotMessage {
     
     @scala.inline
     def deleteTags: Self = this.set("Tags", js.undefined)
+    
+    @scala.inline
+    def setTargetCustomAvailabilityZone(value: String): Self = this.set("TargetCustomAvailabilityZone", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTargetCustomAvailabilityZone: Self = this.set("TargetCustomAvailabilityZone", js.undefined)
   }
 }

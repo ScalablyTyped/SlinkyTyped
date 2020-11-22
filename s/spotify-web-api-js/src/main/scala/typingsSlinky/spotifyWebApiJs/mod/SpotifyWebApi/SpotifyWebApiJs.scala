@@ -39,6 +39,7 @@ import typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistCoverImageResponse
 import typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistSearchResponse
 import typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistSnapshotResponse
 import typingsSlinky.spotifyWebApiJs.SpotifyApi.PlaylistTrackResponse
+import typingsSlinky.spotifyWebApiJs.SpotifyApi.QueueParameterObject
 import typingsSlinky.spotifyWebApiJs.SpotifyApi.RecentlyPlayedParameterObject
 import typingsSlinky.spotifyWebApiJs.SpotifyApi.RecommendationsFromSeedsResponse
 import typingsSlinky.spotifyWebApiJs.SpotifyApi.RecommendationsOptionsObject
@@ -798,6 +799,7 @@ trait SpotifyWebApiJs extends js.Object {
   def getMyCurrentPlayingTrack(callback: ResultsCallback[CurrentlyPlayingResponse]): Unit = js.native
   def getMyCurrentPlayingTrack(options: TrackRelinkingParameterObject): js.Promise[CurrentlyPlayingResponse] = js.native
   def getMyCurrentPlayingTrack(options: TrackRelinkingParameterObject, callback: ResultsCallback[CurrentlyPlayingResponse]): Unit = js.native
+  def getMyCurrentPlayingTrack(uri: String, options: QueueParameterObject, callback: VoidResultsCallback): Unit = js.native
   
   /**
     * Get information about a user’s available devices.
@@ -1201,6 +1203,21 @@ trait SpotifyWebApiJs extends js.Object {
   def play(callback: VoidResultsCallback): Unit = js.native
   def play(options: PlayParameterObject): js.Promise[Unit] = js.native
   def play(options: PlayParameterObject, callback: VoidResultsCallback): Unit = js.native
+  
+  /**
+    * Add an item to the end of the user’s current playback queue.
+    * See [Add an Item to the User's Playback Queue](https://developer.spotify.com/documentation/web-api/reference/player/add-to-queue/) on
+    * the Spotify Developer site for more information about the endpoint.
+    *
+    * @param {string} uri The uri of the item to add to the queue. Must be a track or an episode uri.
+    * @param {Object} options A JSON object with options that can be passed.
+    * @param {function(Object,Object)} callback An optional callback that receives 2 parameters. The first
+    * one is the error object (null if no error), and the second is the value if the request succeeded.
+    * @return {Object} Null if a callback is provided, a `Promise` object otherwise
+    */
+  def queue(uri: String): js.Promise[Unit] = js.native
+  def queue(uri: String, callback: VoidResultsCallback): Unit = js.native
+  def queue(uri: String, options: QueueParameterObject): js.Promise[Unit] = js.native
   
   /**
     * Remove one or more albums from the current user's "Your Music" library.

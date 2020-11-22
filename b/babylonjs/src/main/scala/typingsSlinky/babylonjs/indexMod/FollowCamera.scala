@@ -11,7 +11,7 @@ class FollowCamera protected ()
   extends typingsSlinky.babylonjs.babylonjsMod.FollowCamera {
   /**
     * Instantiates the follow camera.
-    * @see http://doc.babylonjs.com/features/cameras#follow-camera
+    * @see https://doc.babylonjs.com/features/cameras#follow-camera
     * @param name Define the name of the camera in the scene
     * @param position Define the position of the camera
     * @param scene Define the scene the camera belong to

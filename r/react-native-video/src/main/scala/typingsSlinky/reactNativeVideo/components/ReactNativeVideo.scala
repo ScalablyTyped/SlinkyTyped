@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeVideo.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -10,7 +11,6 @@ import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -29,9 +29,9 @@ import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
 import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNativeVideo.anon.BufferForPlaybackAfterRebufferMs
+import typingsSlinky.reactNativeVideo.anon.Headers
 import typingsSlinky.reactNativeVideo.anon.Language
 import typingsSlinky.reactNativeVideo.anon.Type
-import typingsSlinky.reactNativeVideo.anon.Uri
 import typingsSlinky.reactNativeVideo.anon.Value
 import typingsSlinky.reactNativeVideo.mod.FilterType
 import typingsSlinky.reactNativeVideo.mod.LoadError
@@ -231,7 +231,7 @@ object ReactNativeVideo {
     def onFullscreenPlayerWillPresent(value: () => Unit): this.type = set("onFullscreenPlayerWillPresent", js.Any.fromFunction0(value))
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onLoad(value: /* data */ OnLoadData => Unit): this.type = set("onLoad", js.Any.fromFunction1(value))
@@ -375,6 +375,9 @@ object ReactNativeVideo {
     def posterResizeMode(value: stretch | contain | cover | typingsSlinky.reactNativeVideo.reactNativeVideoStrings.none): this.type = set("posterResizeMode", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def preventsDisplaySleepDuringVideoPlayback(value: Boolean): this.type = set("preventsDisplaySleepDuringVideoPlayback", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def progressUpdateInterval(value: Double): this.type = set("progressUpdateInterval", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -471,7 +474,7 @@ object ReactNativeVideo {
   def withProps(p: VideoProperties): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(source: Uri | Double): Builder = {
+  def apply(source: Headers | Double): Builder = {
     val __props = js.Dynamic.literal(source = source.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[VideoProperties]))
   }

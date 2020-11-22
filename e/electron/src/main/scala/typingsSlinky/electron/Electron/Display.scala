@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Display extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/display
+  // Docs: https://electronjs.org/docs/api/structures/display
   /**
     * Can be `available`, `unavailable`, `unknown`.
     */

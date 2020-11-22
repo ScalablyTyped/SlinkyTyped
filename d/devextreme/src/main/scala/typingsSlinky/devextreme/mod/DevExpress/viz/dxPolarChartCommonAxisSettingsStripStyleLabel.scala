@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartCommonAxisSettingsStripStyleLabel extends js.Object {
   
-  /** @name dxPolarChart.Options.commonAxisSettings.stripStyle.label.font */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.stripStyle.label.font]
+    */
   var font: js.UndefOr[Font] = js.native
 }
 object dxPolarChartCommonAxisSettingsStripStyleLabel {

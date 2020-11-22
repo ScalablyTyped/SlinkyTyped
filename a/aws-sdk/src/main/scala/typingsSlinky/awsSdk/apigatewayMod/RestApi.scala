@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RestApi extends js.Object {
   
   /**
-    * The source of the API key for metering requests according to a usage plan. Valid values are: HEADER to read the API key from the X-API-Key header of a request. AUTHORIZER to read the API key from the UsageIdentifierKey from a custom authorizer. 
+    * The source of the API key for metering requests according to a usage plan. Valid values are: HEADER to read the API key from the X-API-Key header of a request. AUTHORIZER to read the API key from the UsageIdentifierKey from a custom authorizer.
     */
   var apiKeySource: js.UndefOr[ApiKeySourceType] = js.native
   
@@ -28,7 +28,12 @@ trait RestApi extends js.Object {
   var description: js.UndefOr[String] = js.native
   
   /**
-    * The endpoint configuration of this RestApi showing the endpoint types of the API. 
+    * Specifies whether clients can invoke your API by using the default execute-api endpoint. By default, clients can invoke your API with the default https://{api_id}.execute-api.{region}.amazonaws.com endpoint. To require that clients use a custom domain name to invoke your API, disable the default endpoint.
+    */
+  var disableExecuteApiEndpoint: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * The endpoint configuration of this RestApi showing the endpoint types of the API.
     */
   var endpointConfiguration: js.UndefOr[EndpointConfiguration] = js.native
   
@@ -116,6 +121,12 @@ object RestApi {
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
+    
+    @scala.inline
+    def setDisableExecuteApiEndpoint(value: Boolean): Self = this.set("disableExecuteApiEndpoint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableExecuteApiEndpoint: Self = this.set("disableExecuteApiEndpoint", js.undefined)
     
     @scala.inline
     def setEndpointConfiguration(value: EndpointConfiguration): Self = this.set("endpointConfiguration", value.asInstanceOf[js.Any])

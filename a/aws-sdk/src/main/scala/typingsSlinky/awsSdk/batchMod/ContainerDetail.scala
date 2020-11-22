@@ -23,6 +23,11 @@ trait ContainerDetail extends js.Object {
   var environment: js.UndefOr[EnvironmentVariables] = js.native
   
   /**
+    * The Amazon Resource Name (ARN) of the execution role that AWS Batch can assume. For more information, see AWS Batch execution IAM role.
+    */
+  var executionRoleArn: js.UndefOr[String] = js.native
+  
+  /**
     * The exit code to return upon completion.
     */
   var exitCode: js.UndefOr[Integer] = js.native
@@ -48,12 +53,17 @@ trait ContainerDetail extends js.Object {
   var linuxParameters: js.UndefOr[LinuxParameters] = js.native
   
   /**
+    * The log configuration specification for the container. This parameter maps to LogConfig in the Create a container section of the Docker Remote API and the --log-driver option to docker run. By default, containers use the same logging driver that the Docker daemon uses. However the container may use a different logging driver than the Docker daemon by specifying a log driver with this parameter in the container definition. To use a different logging driver for a container, the log system must be configured properly on the container instance (or on a different log server for remote logging options). For more information on the options for different supported log drivers, see Configure logging drivers in the Docker documentation.  AWS Batch currently supports a subset of the logging drivers available to the Docker daemon (shown in the LogConfiguration data type). Additional log drivers may be available in future releases of the Amazon ECS container agent.  This parameter requires version 1.18 of the Docker Remote API or greater on your container instance. To check the Docker Remote API version on your container instance, log into your container instance and run the following command: sudo docker version | grep "Server API version"   The Amazon ECS container agent running on a container instance must register the logging drivers available on that instance with the ECS_AVAILABLE_LOGGING_DRIVERS environment variable before containers placed on that instance can use these log configuration options. For more information, see Amazon ECS Container Agent Configuration in the Amazon Elastic Container Service Developer Guide. 
+    */
+  var logConfiguration: js.UndefOr[LogConfiguration] = js.native
+  
+  /**
     * The name of the CloudWatch Logs log stream associated with the container. The log group for AWS Batch jobs is /aws/batch/job. Each container attempt receives a log stream name when they reach the RUNNING status.
     */
   var logStreamName: js.UndefOr[String] = js.native
   
   /**
-    * The number of MiB of memory reserved for the job.
+    * The number of MiB of memory reserved for the job. This is a required parameter.
     */
   var memory: js.UndefOr[Integer] = js.native
   
@@ -88,6 +98,11 @@ trait ContainerDetail extends js.Object {
   var resourceRequirements: js.UndefOr[ResourceRequirements] = js.native
   
   /**
+    * The secrets to pass to the container. For more information, see Specifying Sensitive Data in the Amazon Elastic Container Service Developer Guide.
+    */
+  var secrets: js.UndefOr[SecretList] = js.native
+  
+  /**
     * The Amazon Resource Name (ARN) of the Amazon ECS task that is associated with the container job. Each container attempt receives a task ARN when they reach the STARTING status.
     */
   var taskArn: js.UndefOr[String] = js.native
@@ -103,7 +118,7 @@ trait ContainerDetail extends js.Object {
   var user: js.UndefOr[String] = js.native
   
   /**
-    * The number of VCPUs allocated for the job.
+    * The number of VCPUs allocated for the job. This is a required parameter.
     */
   var vcpus: js.UndefOr[Integer] = js.native
   
@@ -160,6 +175,12 @@ object ContainerDetail {
     def deleteEnvironment: Self = this.set("environment", js.undefined)
     
     @scala.inline
+    def setExecutionRoleArn(value: String): Self = this.set("executionRoleArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExecutionRoleArn: Self = this.set("executionRoleArn", js.undefined)
+    
+    @scala.inline
     def setExitCode(value: Integer): Self = this.set("exitCode", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -188,6 +209,12 @@ object ContainerDetail {
     
     @scala.inline
     def deleteLinuxParameters: Self = this.set("linuxParameters", js.undefined)
+    
+    @scala.inline
+    def setLogConfiguration(value: LogConfiguration): Self = this.set("logConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLogConfiguration: Self = this.set("logConfiguration", js.undefined)
     
     @scala.inline
     def setLogStreamName(value: String): Self = this.set("logStreamName", value.asInstanceOf[js.Any])
@@ -245,6 +272,15 @@ object ContainerDetail {
     
     @scala.inline
     def deleteResourceRequirements: Self = this.set("resourceRequirements", js.undefined)
+    
+    @scala.inline
+    def setSecretsVarargs(value: Secret*): Self = this.set("secrets", js.Array(value :_*))
+    
+    @scala.inline
+    def setSecrets(value: SecretList): Self = this.set("secrets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSecrets: Self = this.set("secrets", js.undefined)
     
     @scala.inline
     def setTaskArn(value: String): Self = this.set("taskArn", value.asInstanceOf[js.Any])

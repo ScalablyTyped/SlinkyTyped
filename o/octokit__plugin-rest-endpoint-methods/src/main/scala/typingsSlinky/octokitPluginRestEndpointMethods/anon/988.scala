@@ -3,8 +3,7 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposListLanguagesEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposListLanguagesResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposListForAuthenticatedUserEndpoint
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +14,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `988` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposListLanguagesEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposListForAuthenticatedUserEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposListLanguagesResponseData] = js.native
+  var response: OctokitResponse[_] = js.native
 }
 object `988` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposListLanguagesEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposListLanguagesResponseData]
+    parameters: RequestParameters with (Omit[ReposListForAuthenticatedUserEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[_]
   ): `988` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`988`]
@@ -46,9 +45,11 @@ object `988` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ReposListLanguagesEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(
+      value: RequestParameters with (Omit[ReposListForAuthenticatedUserEndpoint, baseUrl | headers | mediaType])
+    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposListLanguagesResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

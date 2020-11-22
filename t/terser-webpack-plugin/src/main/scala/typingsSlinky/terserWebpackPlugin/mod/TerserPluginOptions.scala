@@ -9,20 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TerserPluginOptions extends js.Object {
   
   /**
-    * ⚠ Ignored in webpack 5! Please use {@link webpack.js.org/configuration/other-options/#cache.}
-    * Enable/disable file caching.
-    * Default path to cache directory: `node_modules/.cache/terser-webpack-plugin`.
-    * @default true
-    */
-  var cache: js.UndefOr[Boolean | String] = js.native
-  
-  /**
-    * ⚠ Ignored in webpack 5! Please use {@link webpack.js.org/configuration/other-options/#cache}.
-    * Allows you to override default cache keys.
-    */
-  var cacheKeys: js.UndefOr[js.Function2[/* defaultCacheKeys */ js.Any, /* file */ js.Any, js.Object]] = js.native
-  
-  /**
     * Files to exclude.
     * @default undefined
     */
@@ -49,7 +35,14 @@ trait TerserPluginOptions extends js.Object {
     * By default plugin uses terser package. Useful for using and testing unpublished versions or forks
     * @default undefined
     */
-  var minify: js.UndefOr[js.Function2[/* file */ js.Any, /* sourceMap */ js.Any, MinifyResult]] = js.native
+  var minify: js.UndefOr[
+    js.Function3[
+      /* file */ js.Any, 
+      /* sourceMap */ js.Any, 
+      /* minimizerOptions */ js.UndefOr[MinifyOptions], 
+      MinifyResult
+    ]
+  ] = js.native
   
   /**
     * Enable/disable multi-process parallel running.
@@ -57,13 +50,6 @@ trait TerserPluginOptions extends js.Object {
     * @default true
     */
   var parallel: js.UndefOr[Boolean | Double] = js.native
-  
-  /**
-    * Use source maps to map error message locations to modules (this slows down the compilation).
-    * If you use your own minify function please read the minify section for handling source maps correctly.
-    * @default false
-    */
-  var sourceMap: js.UndefOr[Boolean] = js.native
   
   /**
     * Terser minify {@link https://github.com/terser/terser#minify-options|options}.
@@ -75,20 +61,6 @@ trait TerserPluginOptions extends js.Object {
     * @default /\.m?js(\?.*)?$/i
     */
   var test: js.UndefOr[String | js.RegExp | (js.Array[String | js.RegExp])] = js.native
-  
-  /**
-    * Allow to filter terser warnings.
-    * ⚠️ The source argument will contain undefined if you don't use source maps.
-    * @default () => true
-    */
-  var warningsFilter: js.UndefOr[
-    js.Function3[
-      /* warning */ String, 
-      /* file */ String, 
-      /* source */ js.UndefOr[String], 
-      js.UndefOr[Boolean | Null]
-    ]
-  ] = js.native
 }
 object TerserPluginOptions {
   
@@ -112,18 +84,6 @@ object TerserPluginOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setCache(value: Boolean | String): Self = this.set("cache", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCache: Self = this.set("cache", js.undefined)
-    
-    @scala.inline
-    def setCacheKeys(value: (/* defaultCacheKeys */ js.Any, /* file */ js.Any) => js.Object): Self = this.set("cacheKeys", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def deleteCacheKeys: Self = this.set("cacheKeys", js.undefined)
     
     @scala.inline
     def setExcludeVarargs(value: (String | js.RegExp)*): Self = this.set("exclude", js.Array(value :_*))
@@ -162,7 +122,9 @@ object TerserPluginOptions {
     def deleteInclude: Self = this.set("include", js.undefined)
     
     @scala.inline
-    def setMinify(value: (/* file */ js.Any, /* sourceMap */ js.Any) => MinifyResult): Self = this.set("minify", js.Any.fromFunction2(value))
+    def setMinify(
+      value: (/* file */ js.Any, /* sourceMap */ js.Any, /* minimizerOptions */ js.UndefOr[MinifyOptions]) => MinifyResult
+    ): Self = this.set("minify", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteMinify: Self = this.set("minify", js.undefined)
@@ -172,12 +134,6 @@ object TerserPluginOptions {
     
     @scala.inline
     def deleteParallel: Self = this.set("parallel", js.undefined)
-    
-    @scala.inline
-    def setSourceMap(value: Boolean): Self = this.set("sourceMap", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSourceMap: Self = this.set("sourceMap", js.undefined)
     
     @scala.inline
     def setTerserOptions(value: MinifyOptions): Self = this.set("terserOptions", value.asInstanceOf[js.Any])
@@ -196,13 +152,5 @@ object TerserPluginOptions {
     
     @scala.inline
     def deleteTest: Self = this.set("test", js.undefined)
-    
-    @scala.inline
-    def setWarningsFilter(
-      value: (/* warning */ String, /* file */ String, /* source */ js.UndefOr[String]) => js.UndefOr[Boolean | Null]
-    ): Self = this.set("warningsFilter", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def deleteWarningsFilter: Self = this.set("warningsFilter", js.undefined)
   }
 }

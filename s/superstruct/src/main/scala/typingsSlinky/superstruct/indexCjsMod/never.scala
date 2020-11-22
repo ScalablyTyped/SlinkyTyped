@@ -11,8 +11,5 @@ object never extends js.Object {
   /**
     * Validate that a value always fails.
     */
-  /**
-    * Validate that a value always fails.
-    */
   def apply(): Struct_[scala.Nothing, _] = js.native
 }

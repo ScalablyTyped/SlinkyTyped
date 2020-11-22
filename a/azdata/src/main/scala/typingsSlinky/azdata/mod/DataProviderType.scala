@@ -104,6 +104,11 @@ object DataProviderType extends js.Object {
   object SerializationProvider extends TopLevel[SerializationProvider with String]
   
   @js.native
+  sealed trait SqlAssessmentServicesProvider extends DataProviderType
+  /* "SqlAssessmentServicesProvider" */ @js.native
+  object SqlAssessmentServicesProvider extends TopLevel[SqlAssessmentServicesProvider with String]
+  
+  @js.native
   sealed trait TaskServicesProvider extends DataProviderType
   /* "TaskServicesProvider" */ @js.native
   object TaskServicesProvider

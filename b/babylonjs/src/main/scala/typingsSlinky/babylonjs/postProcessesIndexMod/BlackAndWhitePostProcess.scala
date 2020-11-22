@@ -3,6 +3,8 @@ package typingsSlinky.babylonjs.postProcessesIndexMod
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -105,4 +107,12 @@ class BlackAndWhitePostProcess protected ()
     engine: Engine,
     reusable: Boolean
   ) = this()
+}
+/* static members */
+@JSImport("babylonjs/PostProcesses/index", "BlackAndWhitePostProcess")
+@js.native
+object BlackAndWhitePostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): Nullable[typingsSlinky.babylonjs.blackAndWhitePostProcessMod.BlackAndWhitePostProcess] = js.native
 }

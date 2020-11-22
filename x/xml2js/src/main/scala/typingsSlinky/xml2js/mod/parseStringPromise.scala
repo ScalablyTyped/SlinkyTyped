@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object parseStringPromise extends js.Object {
   
   def apply(str: convertableToString): js.Promise[_] = js.native
-  def apply(str: convertableToString, options: OptionsV2): js.Promise[_] = js.native
+  def apply(str: convertableToString, options: ParserOptions): js.Promise[_] = js.native
 }

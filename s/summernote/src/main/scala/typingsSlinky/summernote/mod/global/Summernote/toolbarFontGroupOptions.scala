@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.summernote.summernoteStrings.fontname_
   - typingsSlinky.summernote.summernoteStrings.fontsize_
+  - typingsSlinky.summernote.summernoteStrings.fontsizeunit
   - typingsSlinky.summernote.summernoteStrings.color
   - typingsSlinky.summernote.summernoteStrings.forecolor_
   - typingsSlinky.summernote.summernoteStrings.backcolor_
@@ -42,6 +43,9 @@ object toolbarFontGroupOptions {
   
   @scala.inline
   def fontsize: fontsize_ = "fontsize".asInstanceOf[fontsize_]
+  
+  @scala.inline
+  def fontsizeunit: typingsSlinky.summernote.summernoteStrings.fontsizeunit = "fontsizeunit".asInstanceOf[typingsSlinky.summernote.summernoteStrings.fontsizeunit]
   
   @scala.inline
   def forecolor: forecolor_ = "forecolor".asInstanceOf[forecolor_]

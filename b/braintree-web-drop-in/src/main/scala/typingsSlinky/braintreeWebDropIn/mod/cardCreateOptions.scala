@@ -14,15 +14,15 @@ trait cardCreateOptions extends js.Object {
   
   var clearFieldsAfterTokenization: js.UndefOr[Boolean] = js.native
   
-  var overrides: Fields = js.native
+  var overrides: js.UndefOr[Fields] = js.native
   
   var vault: js.UndefOr[AllowVaultCardOverride] = js.native
 }
 object cardCreateOptions {
   
   @scala.inline
-  def apply(overrides: Fields): cardCreateOptions = {
-    val __obj = js.Dynamic.literal(overrides = overrides.asInstanceOf[js.Any])
+  def apply(): cardCreateOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[cardCreateOptions]
   }
   
@@ -42,9 +42,6 @@ object cardCreateOptions {
     }
     
     @scala.inline
-    def setOverrides(value: Fields): Self = this.set("overrides", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setCardholderName(value: Boolean | Required): Self = this.set("cardholderName", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -55,6 +52,12 @@ object cardCreateOptions {
     
     @scala.inline
     def deleteClearFieldsAfterTokenization: Self = this.set("clearFieldsAfterTokenization", js.undefined)
+    
+    @scala.inline
+    def setOverrides(value: Fields): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverrides: Self = this.set("overrides", js.undefined)
     
     @scala.inline
     def setVault(value: AllowVaultCardOverride): Self = this.set("vault", value.asInstanceOf[js.Any])

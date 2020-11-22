@@ -14,7 +14,7 @@ object htmlTagsMod extends js.Object {
   
   @js.native
   class HtmlTagDefinition () extends TagDefinition {
-    def this(hasClosedByChildrenImplicitNamespacePrefixContentTypeClosedByParentIsVoidIgnoreFirstLf: ClosedByChildren) = this()
+    def this(hasClosedByChildrenImplicitNamespacePrefixContentTypeClosedByParentIsVoidIgnoreFirstLfPreventNamespaceInheritance: ClosedByChildren) = this()
     
     var closedByChildren: js.Any = js.native
   }

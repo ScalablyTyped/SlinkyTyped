@@ -36,6 +36,8 @@ trait DaumPostcodeProps extends js.Object {
   
   def onComplete(data: AddressData): Unit = js.native
   
+  var onSearch: js.UndefOr[js.Function1[/* data */ SearchData, Unit]] = js.native
+  
   var pleaseReadGuide: js.UndefOr[Double] = js.native
   
   var pleaseReadGuideTimer: js.UndefOr[Double] = js.native
@@ -55,8 +57,6 @@ trait DaumPostcodeProps extends js.Object {
   var useSuggest: js.UndefOr[Boolean] = js.native
   
   var width: js.UndefOr[Double | String] = js.native
-  
-  var zonecodeOnly: js.UndefOr[Boolean] = js.native
 }
 object DaumPostcodeProps {
   
@@ -163,6 +163,12 @@ object DaumPostcodeProps {
     def deleteMaxSuggestItems: Self = this.set("maxSuggestItems", js.undefined)
     
     @scala.inline
+    def setOnSearch(value: /* data */ SearchData => Unit): Self = this.set("onSearch", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnSearch: Self = this.set("onSearch", js.undefined)
+    
+    @scala.inline
     def setPleaseReadGuide(value: Double): Self = this.set("pleaseReadGuide", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -221,11 +227,5 @@ object DaumPostcodeProps {
     
     @scala.inline
     def deleteWidth: Self = this.set("width", js.undefined)
-    
-    @scala.inline
-    def setZonecodeOnly(value: Boolean): Self = this.set("zonecodeOnly", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteZonecodeOnly: Self = this.set("zonecodeOnly", js.undefined)
   }
 }

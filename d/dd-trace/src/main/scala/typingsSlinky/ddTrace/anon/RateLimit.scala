@@ -1,7 +1,5 @@
 package typingsSlinky.ddTrace.anon
 
-import typingsSlinky.ddTrace.mod.SamplingRule
-import typingsSlinky.std.Number
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,21 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RateLimit extends js.Object {
   
   /**
-    * Global rate limit that is applied on the global sample rate and all rules.
-    * @default 100
+    * Controls the ingestion rate limit between the agent and the backend.
     */
-  var rateLimit: js.UndefOr[Number] = js.native
+  var rateLimit: js.UndefOr[Double] = js.native
   
   /**
-    * Sampling rules to apply to priority sampling.
-    * @default []
+    * Controls the ingestion sample rate (between 0 and 1) between the agent and the backend.
     */
-  var rules: js.UndefOr[js.Array[SamplingRule]] = js.native
-  
-  /**
-    * Sample rate to apply globally when no other rule is matched. Omit to fallback on the dynamic rates returned by the agent instead.
-    */
-  var sampleRate: js.UndefOr[Number] = js.native
+  var sampleRate: js.UndefOr[Double] = js.native
 }
 object RateLimit {
   
@@ -50,22 +41,13 @@ object RateLimit {
     }
     
     @scala.inline
-    def setRateLimit(value: Number): Self = this.set("rateLimit", value.asInstanceOf[js.Any])
+    def setRateLimit(value: Double): Self = this.set("rateLimit", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRateLimit: Self = this.set("rateLimit", js.undefined)
     
     @scala.inline
-    def setRulesVarargs(value: SamplingRule*): Self = this.set("rules", js.Array(value :_*))
-    
-    @scala.inline
-    def setRules(value: js.Array[SamplingRule]): Self = this.set("rules", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteRules: Self = this.set("rules", js.undefined)
-    
-    @scala.inline
-    def setSampleRate(value: Number): Self = this.set("sampleRate", value.asInstanceOf[js.Any])
+    def setSampleRate(value: Double): Self = this.set("sampleRate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSampleRate: Self = this.set("sampleRate", js.undefined)

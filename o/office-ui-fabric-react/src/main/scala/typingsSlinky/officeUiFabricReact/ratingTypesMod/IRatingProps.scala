@@ -3,10 +3,10 @@ package typingsSlinky.officeUiFabricReact.ratingTypesMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

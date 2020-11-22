@@ -23,6 +23,11 @@ trait DeleteJobExecutionRequest extends js.Object {
   var jobId: JobId = js.native
   
   /**
+    * The namespace used to indicate that a job is a customer-managed job. When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.  $aws/things/THING_NAME/jobs/JOB_ID/notify-namespace-NAMESPACE_ID/   The namespaceId feature is in public preview. 
+    */
+  var namespaceId: js.UndefOr[NamespaceId] = js.native
+  
+  /**
     * The name of the thing whose job execution will be deleted.
     */
   var thingName: ThingName = js.native
@@ -64,5 +69,11 @@ object DeleteJobExecutionRequest {
     
     @scala.inline
     def deleteForce: Self = this.set("force", js.undefined)
+    
+    @scala.inline
+    def setNamespaceId(value: NamespaceId): Self = this.set("namespaceId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNamespaceId: Self = this.set("namespaceId", js.undefined)
   }
 }

@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "lambda-wrapper"
-version := "0.3-dt-20200219Z-ffdfb7"
+version := "0.3-dt-20200219Z-c4b74a"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "aws-lambda" % "8.10-dt-20200710Z-e65ba4",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "aws-lambda" % "8.10-dt-20201013Z-bf6477",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

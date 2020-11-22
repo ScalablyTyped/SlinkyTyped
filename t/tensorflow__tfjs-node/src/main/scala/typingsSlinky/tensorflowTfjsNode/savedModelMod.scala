@@ -1,10 +1,11 @@
 package typingsSlinky.tensorflowTfjsNode
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.modelTypesMod.InferenceModel
 import typingsSlinky.tensorflowTfjsCore.modelTypesMod.MetaGraph
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.modelTypesMod.SignatureDefEntry
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import typingsSlinky.tensorflowTfjsNode.nodejsKernelBackendMod.NodeJSKernelBackend
 import scala.scalajs.js
@@ -17,11 +18,11 @@ object savedModelMod extends js.Object {
   
   def getEnumKeyFromValue(`object`: js.Any, value: Double): String = js.native
   
-  def getInputAndOutputNodeNameFromMetaGraphInfo(savedModelInfo: js.Array[MetaGraph], tags: js.Array[String], signature: String): js.Array[StringDictionary[String]] = js.native
-  
   def getMetaGraphsFromSavedModel(path: String): js.Promise[js.Array[MetaGraph]] = js.native
   
   def getNumOfSavedModels(): Double = js.native
+  
+  def getSignatureDefEntryFromMetaGraphInfo(savedModelInfo: js.Array[MetaGraph], tags: js.Array[String], signature: String): SignatureDefEntry = js.native
   
   def loadSavedModel(path: String): js.Promise[TFSavedModel] = js.native
   def loadSavedModel(path: String, tags: js.UndefOr[scala.Nothing], signature: String): js.Promise[TFSavedModel] = js.native
@@ -32,30 +33,25 @@ object savedModelMod extends js.Object {
   
   @js.native
   class TFSavedModel protected () extends InferenceModel {
-    def this(
-      sessionId: Double,
-      jsid: Double,
-      inputNodeNames: StringDictionary[String],
-      outputNodeNames: StringDictionary[String],
-      backend: NodeJSKernelBackend
-    ) = this()
+    def this(sessionId: Double, jsid: Double, signature: SignatureDefEntry, backend: NodeJSKernelBackend) = this()
     
     var backend: js.Any = js.native
     
     /**
       * Delete the SavedModel from nodeBackend and delete corresponding session in
       * the C++ backend if the session is only used by this TFSavedModel.
+      *
+      * @doc {heading: 'Models', subheading: 'SavedModel'}
       */
-    /** @doc {heading: 'Models', subheading: 'SavedModel'} */
     def dispose(): Unit = js.native
     
     var disposed: js.Any = js.native
     
-    var inputNodeNames: js.Any = js.native
-    
     var jsid: js.Any = js.native
     
-    var outputNodeNames: js.Any = js.native
+    val outputNodeNames: StringDictionary[String] = js.native
+    
+    var outputNodeNames_ : js.Any = js.native
     
     def predict(inputs: js.Array[Tensor[Rank]]): Tensor[Rank] | js.Array[Tensor[Rank]] | NamedTensorMap = js.native
     /**
@@ -79,11 +75,14 @@ object savedModelMod extends js.Object {
       * @returns Inference result tensors. The output would be single Tensor if
       * model has single output node, otherwise Tensor[] or NamedTensorMap[] will
       * be returned for model with multiple outputs.
+      *
+      * @doc {heading: 'Models', subheading: 'SavedModel'}
       */
-    /** @doc {heading: 'Models', subheading: 'SavedModel'} */
     def predict(inputs: Tensor[Rank]): Tensor[Rank] | js.Array[Tensor[Rank]] | NamedTensorMap = js.native
     def predict(inputs: NamedTensorMap): Tensor[Rank] | js.Array[Tensor[Rank]] | NamedTensorMap = js.native
     
     var sessionId: js.Any = js.native
+    
+    var signature: js.Any = js.native
   }
 }

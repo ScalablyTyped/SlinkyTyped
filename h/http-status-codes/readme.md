@@ -1,7 +1,7 @@
 
 # Scala.js typings for http-status-codes
 
-Typings are for version 1.4.0
+Typings are for version 2.1.4
 
 ## Library description:
 Constants enumerating the HTTP status codes. Based on the Java Apache HttpStatus API.

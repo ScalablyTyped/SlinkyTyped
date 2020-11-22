@@ -23,7 +23,7 @@ class CatalogItemVariation () extends js.Object {
   var inventory_alert_type: js.UndefOr[NONE | LOW_QUANTITY] = js.native
   
   /**
-    * The ID of the `CatalogItem` associated with this item variation. Searchable.
+    * The ID of the `CatalogItem` associated with this item variation.
     */
   var item_id: js.UndefOr[String] = js.native
   
@@ -44,7 +44,7 @@ class CatalogItemVariation () extends js.Object {
   var measurement_unit_id: js.UndefOr[String] = js.native
   
   /**
-    * The item variation's name. Searchable. This field has max length of 255 Unicode code points.
+    * The item variation's name. This is a searchable attribute for use in applicable query filters, and its value length is of Unicode code points.
     */
   var name: js.UndefOr[String] = js.native
   
@@ -74,7 +74,7 @@ class CatalogItemVariation () extends js.Object {
   var service_duration: js.UndefOr[Double] = js.native
   
   /**
-    * The item variation's SKU, if any. Searchable.
+    * The item variation's SKU, if any. This is a searchable attribute for use in applicable query filters.
     */
   var sku: js.UndefOr[String] = js.native
   
@@ -84,14 +84,13 @@ class CatalogItemVariation () extends js.Object {
   var track_inventory: js.UndefOr[Boolean] = js.native
   
   /**
-    * The item variation's UPC, if any. Searchable in the Connect API. This field is only exposed in the Connect API.
-    * It is not exposed in Square's Dashboard, Square Point of Sale app or Retail Point of Sale app.
+    * The item variation's UPC, if any. This is a searchable attribute for use in applicable query filters.
+    * It is only accessible through the Square API, and not exposed in the Square Seller Dashboard, Square Point of Sale or Retail Point of Sale apps.
     */
   var upc: js.UndefOr[String] = js.native
   
   /**
-    * Arbitrary user metadata to associate with the item variation. Searchable.
-    * This field has max length of 255 Unicode code points.
+    * Arbitrary user metadata to associate with the item variation. This attribute value length is of Unicode code points.
     */
   var user_data: js.UndefOr[String] = js.native
 }

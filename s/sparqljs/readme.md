@@ -1,7 +1,7 @@
 
 # Scala.js typings for sparqljs
 
-Typings are for version 3.0
+Typings are for version 3.1
 
 ## Library description:
 A parser for the SPARQL query language

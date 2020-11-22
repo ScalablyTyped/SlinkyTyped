@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.instanceMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.enumsEc2Mod.InstanceType
 import typingsSlinky.pulumiAws.iamMod.InstanceProfile
 import typingsSlinky.pulumiAws.inputMod.ec2.InstanceCreditSpecification
 import typingsSlinky.pulumiAws.inputMod.ec2.InstanceEbsBlockDevice
@@ -8,7 +9,6 @@ import typingsSlinky.pulumiAws.inputMod.ec2.InstanceEphemeralBlockDevice
 import typingsSlinky.pulumiAws.inputMod.ec2.InstanceMetadataOptions
 import typingsSlinky.pulumiAws.inputMod.ec2.InstanceNetworkInterface
 import typingsSlinky.pulumiAws.inputMod.ec2.InstanceRootBlockDevice
-import typingsSlinky.pulumiAws.instanceTypeMod.InstanceType
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -156,6 +156,11 @@ trait InstanceArgs extends js.Object {
     * device of the instance. See Block Devices below for details.
     */
   val rootBlockDevice: js.UndefOr[Input[InstanceRootBlockDevice]] = js.native
+  
+  /**
+    * A list of secondary private IPv4 addresses to assign to the instance's primary network interface (eth0) in a VPC. Can only be assigned to the primary network interface (eth0) attached at instance creation, not a pre-existing network interface i.e. referenced in a `networkInterface` block. Refer to the [Elastic network interfaces documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) to see the maximum number of private IP addresses allowed per instance type.
+    */
+  val secondaryPrivateIps: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
   /**
     * A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
@@ -383,6 +388,15 @@ object InstanceArgs {
     
     @scala.inline
     def deleteRootBlockDevice: Self = this.set("rootBlockDevice", js.undefined)
+    
+    @scala.inline
+    def setSecondaryPrivateIpsVarargs(value: Input[String]*): Self = this.set("secondaryPrivateIps", js.Array(value :_*))
+    
+    @scala.inline
+    def setSecondaryPrivateIps(value: Input[js.Array[Input[String]]]): Self = this.set("secondaryPrivateIps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSecondaryPrivateIps: Self = this.set("secondaryPrivateIps", js.undefined)
     
     @scala.inline
     def setSecurityGroupsVarargs(value: Input[String]*): Self = this.set("securityGroups", js.Array(value :_*))

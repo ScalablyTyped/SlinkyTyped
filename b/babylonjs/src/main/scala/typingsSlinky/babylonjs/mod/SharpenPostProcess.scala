@@ -32,3 +32,16 @@ class SharpenPostProcess protected ()
     blockCompilation: js.UndefOr[Boolean]
   ) = this()
 }
+/* static members */
+@JSImport("babylonjs", "SharpenPostProcess")
+@js.native
+object SharpenPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(
+    parsedPostProcess: js.Any,
+    targetCamera: typingsSlinky.babylonjs.cameraMod.Camera,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    rootUrl: String
+  ): typingsSlinky.babylonjs.sharpenPostProcessMod.SharpenPostProcess = js.native
+}

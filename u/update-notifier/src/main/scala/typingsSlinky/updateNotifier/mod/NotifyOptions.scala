@@ -1,5 +1,6 @@
 package typingsSlinky.updateNotifier.mod
 
+import typingsSlinky.boxen.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,8 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait NotifyOptions extends js.Object {
   
-  /** Options object that will be passed to `boxen` */
-  var boxenOptions: js.UndefOr[BoxenOptions] = js.native
+  /**
+    * Options object that will be passed to `boxen`
+    * See https://github.com/sindresorhus/boxen/blob/master/index.d.ts
+    */
+  var boxenOptions: js.UndefOr[Options] = js.native
   
   /** Defer showing the notification to after the process has exited */
   var defer: js.UndefOr[Boolean] = js.native
@@ -43,7 +47,7 @@ object NotifyOptions {
     }
     
     @scala.inline
-    def setBoxenOptions(value: BoxenOptions): Self = this.set("boxenOptions", value.asInstanceOf[js.Any])
+    def setBoxenOptions(value: Options): Self = this.set("boxenOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBoxenOptions: Self = this.set("boxenOptions", js.undefined)

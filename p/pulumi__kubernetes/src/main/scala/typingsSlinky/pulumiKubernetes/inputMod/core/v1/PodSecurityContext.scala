@@ -46,6 +46,11 @@ trait PodSecurityContext extends js.Object {
   var seLinuxOptions: js.UndefOr[Input[SELinuxOptions]] = js.native
   
   /**
+    * The seccomp options to use by the containers in this pod.
+    */
+  var seccompProfile: js.UndefOr[Input[SeccompProfile]] = js.native
+  
+  /**
     * A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container.
     */
   var supplementalGroups: js.UndefOr[Input[js.Array[Input[Double]]]] = js.native
@@ -118,6 +123,12 @@ object PodSecurityContext {
     
     @scala.inline
     def deleteSeLinuxOptions: Self = this.set("seLinuxOptions", js.undefined)
+    
+    @scala.inline
+    def setSeccompProfile(value: Input[SeccompProfile]): Self = this.set("seccompProfile", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSeccompProfile: Self = this.set("seccompProfile", js.undefined)
     
     @scala.inline
     def setSupplementalGroupsVarargs(value: Input[Double]*): Self = this.set("supplementalGroups", js.Array(value :_*))

@@ -2,6 +2,7 @@ package typingsSlinky.wordpressBlocks
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Record
+import typingsSlinky.wordpressBlocks.anon.Icon
 import typingsSlinky.wordpressBlocks.mod.Block
 import typingsSlinky.wordpressBlocks.mod.BlockConfiguration
 import typingsSlinky.wordpressBlocks.mod.BlockInstance
@@ -190,6 +191,8 @@ object registrationMod extends js.Object {
   
   def isReusableBlock(blockOrType: Block[_]): Boolean = js.native
   def isReusableBlock(blockOrType: BlockInstance[StringDictionary[_]]): Boolean = js.native
+  
+  def registerBlockCollection(namespace: String, settings: Icon): Unit = js.native
   
   def registerBlockStyle(blockName: String, styleVariation: BlockStyle): Unit = js.native
   

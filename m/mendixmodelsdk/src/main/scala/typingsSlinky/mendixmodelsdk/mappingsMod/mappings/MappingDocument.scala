@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.mappingsMod.mappings
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.jsonstructuresMod.jsonstructures.IJsonStructure
@@ -16,7 +15,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/mapping-documents relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/mapping-documents relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -64,9 +63,6 @@ abstract class MappingDocument protected () extends Document {
   def messageDefinitionQualifiedName: String | Null = js.native
   
   def messageDefinition_=(newValue: IMessageDefinition | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FMappingDocument: IModel = js.native
   
   def operationName: String = js.native
   def operationName_=(newValue: String): Unit = js.native

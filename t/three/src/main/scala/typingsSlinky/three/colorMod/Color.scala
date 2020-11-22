@@ -24,6 +24,7 @@ class Color () extends js.Object {
   
   /**
   	 * Blue channel value between 0 and 1. Default is 1.
+  	 * @default 1
   	 */
   var b: Double = js.native
   
@@ -102,6 +103,7 @@ class Color () extends js.Object {
   
   /**
   	 * Green channel value between 0 and 1. Default is 1.
+  	 * @default 1
   	 */
   var g: Double = js.native
   
@@ -137,6 +139,7 @@ class Color () extends js.Object {
   
   /**
   	 * Red channel value between 0 and 1. Default is 1.
+  	 * @default 1
   	 */
   var r: Double = js.native
   

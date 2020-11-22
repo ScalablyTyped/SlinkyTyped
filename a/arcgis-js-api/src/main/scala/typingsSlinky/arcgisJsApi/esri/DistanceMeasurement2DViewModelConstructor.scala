@@ -9,4 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DistanceMeasurement2DViewModelConstructor
   extends Instantiable0[DistanceMeasurement2DViewModel]
-     with Instantiable1[/* properties */ js.Any, DistanceMeasurement2DViewModel]
+     with Instantiable1[
+      /* properties */ DistanceMeasurement2DViewModelProperties, 
+      DistanceMeasurement2DViewModel
+    ]

@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("react-navigation", "SectionList")
 @js.native
-class SectionList[SectionT] ()
-  extends typingsSlinky.reactNative.mod.SectionList[SectionT]
+class SectionList[ItemT, SectionT] ()
+  extends typingsSlinky.reactNative.mod.SectionList[ItemT, SectionT]

@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SectionListStatic[SectionT]
-  extends ComponentClass[SectionListProps[SectionT], js.Object] {
+trait SectionListStatic[ItemT, SectionT]
+  extends ComponentClass[SectionListProps[ItemT, SectionT], js.Object] {
   
   /**
     * Scrolls to the item at the specified sectionIndex and itemIndex (within the section)

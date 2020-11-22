@@ -37,8 +37,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`additions removals`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`additions text`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`inline`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`removals additions`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`removals text`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`text additions`
+import typingsSlinky.storybookComponents.storybookComponentsStrings.`text removals`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.additions
 import typingsSlinky.storybookComponents.storybookComponentsStrings.all
 import typingsSlinky.storybookComponents.storybookComponentsStrings.ascending
@@ -178,7 +183,9 @@ trait InputProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -300,7 +307,7 @@ trait InputProps extends js.Object {
   
   var headers: js.UndefOr[String] = js.native
   
-  var height: js.UndefOr[Double | String] = js.native
+  var height: js.UndefOr[Double] = js.native
   
   var hidden: js.UndefOr[Boolean] = js.native
   
@@ -334,7 +341,7 @@ trait InputProps extends js.Object {
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyParams: js.UndefOr[String] = js.native
   
@@ -942,7 +949,9 @@ object InputProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1314,7 +1323,7 @@ object InputProps {
     def deleteHeaders: Self = this.set("headers", js.undefined)
     
     @scala.inline
-    def setHeight(value: Double | String): Self = this.set("height", value.asInstanceOf[js.Any])
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHeight: Self = this.set("height", js.undefined)
@@ -1420,6 +1429,9 @@ object InputProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyParams(value: String): Self = this.set("keyParams", value.asInstanceOf[js.Any])

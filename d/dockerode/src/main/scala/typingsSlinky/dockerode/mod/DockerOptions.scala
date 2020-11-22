@@ -17,9 +17,7 @@ trait DockerOptions extends js.Object {
     PromiseConstructor with (Instantiable1[
       /* executor */ js.Function2[
         /* resolve */ js.Function1[
-          /* value */ js.UndefOr[
-            (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
-          ], 
+          /* value */ (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]), 
           Unit
         ], 
         /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
@@ -79,9 +77,7 @@ object DockerOptions {
       value: PromiseConstructor with (Instantiable1[
           /* executor */ js.Function2[
             /* resolve */ js.Function1[
-              /* value */ js.UndefOr[
-                (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any])
-              ], 
+              /* value */ (/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any) | (js.Thenable[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any]), 
               Unit
             ], 
             /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 

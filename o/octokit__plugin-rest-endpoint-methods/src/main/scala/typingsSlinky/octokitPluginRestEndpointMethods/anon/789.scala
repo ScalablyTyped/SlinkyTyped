@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.OrgsGetMembershipForUserEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.OrgsGetMembershipForUserResponseData
+import typingsSlinky.octokitTypes.endpointsMod.OrgsConvertMemberToOutsideCollaboratorEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.OrgsConvertMemberToOutsideCollaboratorResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `789` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[OrgsGetMembershipForUserEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[OrgsConvertMemberToOutsideCollaboratorEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[OrgsGetMembershipForUserResponseData] = js.native
+  var response: OctokitResponse[OrgsConvertMemberToOutsideCollaboratorResponseData] = js.native
 }
 object `789` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[OrgsGetMembershipForUserEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[OrgsGetMembershipForUserResponseData]
+    parameters: RequestParameters with (Omit[OrgsConvertMemberToOutsideCollaboratorEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[OrgsConvertMemberToOutsideCollaboratorResponseData]
   ): `789` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`789`]
@@ -47,10 +47,10 @@ object `789` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[OrgsGetMembershipForUserEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[OrgsConvertMemberToOutsideCollaboratorEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[OrgsGetMembershipForUserResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[OrgsConvertMemberToOutsideCollaboratorResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

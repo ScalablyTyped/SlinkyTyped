@@ -1,5 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -8,16 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EntryExitStateArrays[TContext] extends js.Object {
   
-  var entry: js.Array[StateNode[TContext, _, EventObject, _]] = js.native
+  var entry: js.Array[StateNode[TContext, _, EventObject, ContextTContext[TContext]]] = js.native
   
-  var exit: js.Array[StateNode[TContext, _, EventObject, _]] = js.native
+  var exit: js.Array[StateNode[TContext, _, EventObject, ContextTContext[TContext]]] = js.native
 }
 object EntryExitStateArrays {
   
   @scala.inline
   def apply[TContext](
-    entry: js.Array[StateNode[TContext, _, EventObject, _]],
-    exit: js.Array[StateNode[TContext, _, EventObject, _]]
+    entry: js.Array[StateNode[TContext, _, EventObject, ContextTContext[TContext]]],
+    exit: js.Array[StateNode[TContext, _, EventObject, ContextTContext[TContext]]]
   ): EntryExitStateArrays[TContext] = {
     val __obj = js.Dynamic.literal(entry = entry.asInstanceOf[js.Any], exit = exit.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntryExitStateArrays[TContext]]
@@ -39,15 +40,15 @@ object EntryExitStateArrays {
     }
     
     @scala.inline
-    def setEntryVarargs(value: (StateNode[TContext, js.Any, EventObject, js.Any])*): Self = this.set("entry", js.Array(value :_*))
+    def setEntryVarargs(value: (StateNode[TContext, js.Any, EventObject, ContextTContext[TContext]])*): Self = this.set("entry", js.Array(value :_*))
     
     @scala.inline
-    def setEntry(value: js.Array[StateNode[TContext, _, EventObject, _]]): Self = this.set("entry", value.asInstanceOf[js.Any])
+    def setEntry(value: js.Array[StateNode[TContext, _, EventObject, ContextTContext[TContext]]]): Self = this.set("entry", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExitVarargs(value: (StateNode[TContext, js.Any, EventObject, js.Any])*): Self = this.set("exit", js.Array(value :_*))
+    def setExitVarargs(value: (StateNode[TContext, js.Any, EventObject, ContextTContext[TContext]])*): Self = this.set("exit", js.Array(value :_*))
     
     @scala.inline
-    def setExit(value: js.Array[StateNode[TContext, _, EventObject, _]]): Self = this.set("exit", value.asInstanceOf[js.Any])
+    def setExit(value: js.Array[StateNode[TContext, _, EventObject, ContextTContext[TContext]]]): Self = this.set("exit", value.asInstanceOf[js.Any])
   }
 }

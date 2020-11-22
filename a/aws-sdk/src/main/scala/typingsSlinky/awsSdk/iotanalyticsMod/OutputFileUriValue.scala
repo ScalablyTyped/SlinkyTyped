@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OutputFileUriValue extends js.Object {
   
   /**
-    * The URI of the location where data set contents are stored, usually the URI of a file in an S3 bucket.
+    * The URI of the location where dataset contents are stored, usually the URI of a file in an S3 bucket.
     */
   var fileName: OutputFileName = js.native
 }

@@ -18,6 +18,11 @@ trait HlsGroupSettings extends js.Object {
   var AdditionalManifests: js.UndefOr[listOfHlsAdditionalManifest] = js.native
   
   /**
+    * Ignore this setting unless you are using FairPlay DRM with Verimatrix and you encounter playback issues. Keep the default value, Include (INCLUDE), to output audio-only headers. Choose Exclude (EXCLUDE) to remove the audio-only headers from your audio segments.
+    */
+  var AudioOnlyHeader: js.UndefOr[HlsAudioOnlyHeader] = js.native
+  
+  /**
     * A partial URI prefix that will be prepended to each output in the media .m3u8 file. Can be used if base manifest is delivered from a different URL than the main .m3u8 file.
     */
   var BaseUrl: js.UndefOr[string] = js.native
@@ -172,6 +177,12 @@ object HlsGroupSettings {
     
     @scala.inline
     def deleteAdditionalManifests: Self = this.set("AdditionalManifests", js.undefined)
+    
+    @scala.inline
+    def setAudioOnlyHeader(value: HlsAudioOnlyHeader): Self = this.set("AudioOnlyHeader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAudioOnlyHeader: Self = this.set("AudioOnlyHeader", js.undefined)
     
     @scala.inline
     def setBaseUrl(value: string): Self = this.set("BaseUrl", value.asInstanceOf[js.Any])

@@ -18,8 +18,6 @@ trait ButtonMenuViewModel extends Accessor {
     * Indicates if the menu content is visible.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable-Grid-support-ButtonMenuViewModel.html#open)
-    *
-    * @default false
     */
   var open: Boolean = js.native
 }

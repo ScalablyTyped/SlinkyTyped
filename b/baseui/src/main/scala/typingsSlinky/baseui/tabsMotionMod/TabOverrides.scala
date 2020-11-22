@@ -17,7 +17,7 @@ trait TabOverrides extends js.Object {
   ] = js.native
   
   var TabPanel: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<{  $pad :boolean | undefined,   $focusVisible :boolean | undefined}> */ js.Any
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<{  $pad :boolean | undefined}> */ js.Any
   ] = js.native
 }
 object TabOverrides {
@@ -61,7 +61,7 @@ object TabOverrides {
     
     @scala.inline
     def setTabPanel(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<{  $pad :boolean | undefined,   $focusVisible :boolean | undefined}> */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<{  $pad :boolean | undefined}> */ js.Any
     ): Self = this.set("TabPanel", value.asInstanceOf[js.Any])
     
     @scala.inline

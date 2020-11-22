@@ -122,10 +122,9 @@ trait CommentCollection extends ClientObject {
     *
     * Occurs when the comments are added.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * [Api set: ExcelApi 1.12]
     *
     * @eventproperty
-    * @beta
     */
   val onAdded: EventHandlers[CommentAddedEventArgs] = js.native
   
@@ -133,10 +132,9 @@ trait CommentCollection extends ClientObject {
     *
     * Occurs when comments or replies in a comment collection are changed, including when replies are deleted.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * [Api set: ExcelApi 1.12]
     *
     * @eventproperty
-    * @beta
     */
   val onChanged: EventHandlers[CommentChangedEventArgs] = js.native
   
@@ -144,10 +142,9 @@ trait CommentCollection extends ClientObject {
     *
     * Occurs when comments are deleted in the comment collection.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * [Api set: ExcelApi 1.12]
     *
     * @eventproperty
-    * @beta
     */
   val onDeleted: EventHandlers[CommentDeletedEventArgs] = js.native
   

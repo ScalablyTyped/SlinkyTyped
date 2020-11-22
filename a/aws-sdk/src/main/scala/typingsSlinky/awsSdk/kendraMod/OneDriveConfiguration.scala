@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OneDriveConfiguration extends js.Object {
   
   /**
+    * A Boolean value that specifies whether local groups are disabled (True) or enabled (False). 
+    */
+  var DisableLocalGroups: js.UndefOr[Boolean] = js.native
+  
+  /**
     * List of regular expressions applied to documents. Items that match the exclusion pattern are not indexed. If you provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion pattern isn't indexed.  The exclusion pattern is applied to the file name.
     */
   var ExclusionPatterns: js.UndefOr[DataSourceInclusionsExclusionsStrings] = js.native
@@ -68,6 +73,12 @@ object OneDriveConfiguration {
     
     @scala.inline
     def setTenantDomain(value: TenantDomain): Self = this.set("TenantDomain", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDisableLocalGroups(value: Boolean): Self = this.set("DisableLocalGroups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableLocalGroups: Self = this.set("DisableLocalGroups", js.undefined)
     
     @scala.inline
     def setExclusionPatternsVarargs(value: DataSourceInclusionsExclusionsStringsMember*): Self = this.set("ExclusionPatterns", js.Array(value :_*))

@@ -16,20 +16,20 @@ trait RecurrencePattern extends js.Object {
     * one day, the event falls on the first day that satisfies the pattern. Required if type is weekly, relativeMonthly, or
     * relativeYearly.
     */
-  var daysOfWeek: js.UndefOr[js.Array[DayOfWeek]] = js.native
+  var daysOfWeek: js.UndefOr[NullableOption[js.Array[DayOfWeek]]] = js.native
   
   /**
     * The first day of the week. The possible values are: sunday, monday, tuesday, wednesday, thursday, friday, saturday.
     * Default is sunday. Required if type is weekly.
     */
-  var firstDayOfWeek: js.UndefOr[DayOfWeek] = js.native
+  var firstDayOfWeek: js.UndefOr[NullableOption[DayOfWeek]] = js.native
   
   /**
     * Specifies on which instance of the allowed days specified in daysOfsWeek the event occurs, counted from the first
     * instance in the month. The possible values are: first, second, third, fourth, last. Default is first. Optional and used
     * if type is relativeMonthly or relativeYearly.
     */
-  var index: js.UndefOr[WeekIndex] = js.native
+  var index: js.UndefOr[NullableOption[WeekIndex]] = js.native
   
   /**
     * The number of units between occurrences, where units can be in days, weeks, months, or years, depending on the type.
@@ -41,7 +41,7 @@ trait RecurrencePattern extends js.Object {
   var month: js.UndefOr[Double] = js.native
   
   // The recurrence pattern type: daily, weekly, absoluteMonthly, relativeMonthly, absoluteYearly, relativeYearly. Required.
-  var `type`: js.UndefOr[RecurrencePatternType] = js.native
+  var `type`: js.UndefOr[NullableOption[RecurrencePatternType]] = js.native
 }
 object RecurrencePattern {
   
@@ -76,22 +76,31 @@ object RecurrencePattern {
     def setDaysOfWeekVarargs(value: DayOfWeek*): Self = this.set("daysOfWeek", js.Array(value :_*))
     
     @scala.inline
-    def setDaysOfWeek(value: js.Array[DayOfWeek]): Self = this.set("daysOfWeek", value.asInstanceOf[js.Any])
+    def setDaysOfWeek(value: NullableOption[js.Array[DayOfWeek]]): Self = this.set("daysOfWeek", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDaysOfWeek: Self = this.set("daysOfWeek", js.undefined)
     
     @scala.inline
-    def setFirstDayOfWeek(value: DayOfWeek): Self = this.set("firstDayOfWeek", value.asInstanceOf[js.Any])
+    def setDaysOfWeekNull: Self = this.set("daysOfWeek", null)
+    
+    @scala.inline
+    def setFirstDayOfWeek(value: NullableOption[DayOfWeek]): Self = this.set("firstDayOfWeek", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFirstDayOfWeek: Self = this.set("firstDayOfWeek", js.undefined)
     
     @scala.inline
-    def setIndex(value: WeekIndex): Self = this.set("index", value.asInstanceOf[js.Any])
+    def setFirstDayOfWeekNull: Self = this.set("firstDayOfWeek", null)
+    
+    @scala.inline
+    def setIndex(value: NullableOption[WeekIndex]): Self = this.set("index", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIndex: Self = this.set("index", js.undefined)
+    
+    @scala.inline
+    def setIndexNull: Self = this.set("index", null)
     
     @scala.inline
     def setInterval(value: Double): Self = this.set("interval", value.asInstanceOf[js.Any])
@@ -106,9 +115,12 @@ object RecurrencePattern {
     def deleteMonth: Self = this.set("month", js.undefined)
     
     @scala.inline
-    def setType(value: RecurrencePatternType): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: NullableOption[RecurrencePatternType]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    
+    @scala.inline
+    def setTypeNull: Self = this.set("type", null)
   }
 }

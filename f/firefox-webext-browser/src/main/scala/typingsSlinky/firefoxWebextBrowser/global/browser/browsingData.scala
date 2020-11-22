@@ -1,8 +1,8 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
-import typingsSlinky.firefoxWebextBrowser.anon.DataRemovalPermitted
 import typingsSlinky.firefoxWebextBrowser.browser.browsingData.DataTypeSet
 import typingsSlinky.firefoxWebextBrowser.browser.browsingData.RemovalOptions
+import typingsSlinky.firefoxWebextBrowser.browser.browsingData.SettingsReturnResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -74,9 +74,7 @@ object browsingData extends js.Object {
   
   /* browsingData functions */
   /**
-    * Reports which types of data are currently selected in the 'Clear browsing data' settings UI. Note: some of the
-    * data types included in this API are not available in the settings UI, and some UI settings control more than one
-    * data type listed here.
+    * Reports which types of data are currently selected in the 'Clear browsing data' settings UI. Note: some of the data types included in this API are not available in the settings UI, and some UI settings control more than one data type listed here.
     */
-  def settings(): js.Promise[DataRemovalPermitted] = js.native
+  def settings(): js.Promise[SettingsReturnResult] = js.native
 }

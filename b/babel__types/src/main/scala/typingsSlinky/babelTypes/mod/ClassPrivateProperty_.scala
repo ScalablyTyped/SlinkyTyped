@@ -16,6 +16,8 @@ trait ClassPrivateProperty_
   
   var key: PrivateName_ = js.native
   
+  var static: js.Any = js.native
+  
   @JSName("type")
   var type_ClassPrivateProperty_ : ClassPrivateProperty = js.native
   
@@ -24,8 +26,8 @@ trait ClassPrivateProperty_
 object ClassPrivateProperty_ {
   
   @scala.inline
-  def apply(key: PrivateName_, `type`: ClassPrivateProperty): ClassPrivateProperty_ = {
-    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
+  def apply(key: PrivateName_, static: js.Any, `type`: ClassPrivateProperty): ClassPrivateProperty_ = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClassPrivateProperty_]
   }
@@ -47,6 +49,9 @@ object ClassPrivateProperty_ {
     
     @scala.inline
     def setKey(value: PrivateName_): Self = this.set("key", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStatic(value: js.Any): Self = this.set("static", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: ClassPrivateProperty): Self = this.set("type", value.asInstanceOf[js.Any])

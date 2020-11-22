@@ -63,6 +63,16 @@ trait DashPackage extends js.Object {
     * Duration (in seconds) to delay live content before presentation.
     */
   var SuggestedPresentationDelaySeconds: js.UndefOr[integer] = js.native
+  
+  /**
+    * Determines the type of UTCTiming included in the Media Presentation Description (MPD)
+    */
+  var UtcTiming: js.UndefOr[typingsSlinky.awsSdk.mediapackageMod.UtcTiming] = js.native
+  
+  /**
+    * Specifies the value attribute of the UTCTiming field when utcTiming is set to HTTP-ISO or HTTP-HEAD
+    */
+  var UtcTimingUri: js.UndefOr[string] = js.native
 }
 object DashPackage {
   
@@ -170,5 +180,17 @@ object DashPackage {
     
     @scala.inline
     def deleteSuggestedPresentationDelaySeconds: Self = this.set("SuggestedPresentationDelaySeconds", js.undefined)
+    
+    @scala.inline
+    def setUtcTiming(value: UtcTiming): Self = this.set("UtcTiming", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUtcTiming: Self = this.set("UtcTiming", js.undefined)
+    
+    @scala.inline
+    def setUtcTimingUri(value: string): Self = this.set("UtcTimingUri", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUtcTimingUri: Self = this.set("UtcTimingUri", js.undefined)
   }
 }

@@ -19,7 +19,7 @@ object animationGroupMod extends js.Object {
     /**
       * Instantiates a new Animation Group.
       * This helps managing several animations at once.
-      * @see http://doc.babylonjs.com/how_to/group
+      * @see https://doc.babylonjs.com/how_to/group
       * @param name Defines the name of the group
       * @param scene Defines the scene the group belongs to
       */
@@ -37,6 +37,8 @@ object animationGroupMod extends js.Object {
     var _checkAnimationGroupEnded: js.Any = js.native
     
     var _from: js.Any = js.native
+    
+    var _isAdditive: js.Any = js.native
     
     var _isPaused: js.Any = js.native
     
@@ -68,6 +70,11 @@ object animationGroupMod extends js.Object {
     def animatables: js.Array[Animatable] = js.native
     
     /**
+      * Gets the list of target animations
+      */
+    def children: js.Array[TargetedAnimation] = js.native
+    
+    /**
       * Clone the current animation group and returns a copy
       * @param newName defines the name of the new group
       * @param targetConverter defines an optional function used to convert current animation targets to new ones
@@ -93,6 +100,12 @@ object animationGroupMod extends js.Object {
       * @return the animationGroup
       */
     def goToFrame(frame: Double): AnimationGroup = js.native
+    
+    /**
+      * Gets or sets if all animations should be evaluated additively
+      */
+    def isAdditive: Boolean = js.native
+    def isAdditive_=(value: Boolean): Unit = js.native
     
     /**
       * Gets a value indicating that the current group is playing
@@ -191,7 +204,7 @@ object animationGroupMod extends js.Object {
       * Set animation weight for all animatables
       * @param weight defines the weight to use
       * @return the animationGroup
-      * @see http://doc.babylonjs.com/babylon101/animations#animation-weights
+      * @see https://doc.babylonjs.com/babylon101/animations#animation-weights
       */
     def setWeightForAllAnimatables(weight: Double): AnimationGroup = js.native
     
@@ -210,6 +223,7 @@ object animationGroupMod extends js.Object {
       * @param speedRatio defines the ratio to apply to animation speed (1 by default)
       * @param from defines the from key (optional)
       * @param to defines the to key (optional)
+      * @param isAdditive defines the additive state for the resulting animatables (optional)
       * @returns the current animation group
       */
     def start(): AnimationGroup = js.native
@@ -217,22 +231,122 @@ object animationGroupMod extends js.Object {
       loop: js.UndefOr[scala.Nothing],
       speedRatio: js.UndefOr[scala.Nothing],
       from: js.UndefOr[scala.Nothing],
+      to: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
+    def start(
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      from: js.UndefOr[scala.Nothing],
       to: Double
     ): AnimationGroup = js.native
+    def start(
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      from: js.UndefOr[scala.Nothing],
+      to: Double,
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: js.UndefOr[scala.Nothing], speedRatio: js.UndefOr[scala.Nothing], from: Double): AnimationGroup = js.native
+    def start(
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      from: Double,
+      to: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: js.UndefOr[scala.Nothing], speedRatio: js.UndefOr[scala.Nothing], from: Double, to: Double): AnimationGroup = js.native
+    def start(
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: js.UndefOr[scala.Nothing],
+      from: Double,
+      to: Double,
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: js.UndefOr[scala.Nothing], speedRatio: Double): AnimationGroup = js.native
+    def start(
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
+      from: js.UndefOr[scala.Nothing],
+      to: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: js.UndefOr[scala.Nothing], speedRatio: Double, from: js.UndefOr[scala.Nothing], to: Double): AnimationGroup = js.native
+    def start(
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
+      from: js.UndefOr[scala.Nothing],
+      to: Double,
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: js.UndefOr[scala.Nothing], speedRatio: Double, from: Double): AnimationGroup = js.native
+    def start(
+      loop: js.UndefOr[scala.Nothing],
+      speedRatio: Double,
+      from: Double,
+      to: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: js.UndefOr[scala.Nothing], speedRatio: Double, from: Double, to: Double): AnimationGroup = js.native
+    def start(loop: js.UndefOr[scala.Nothing], speedRatio: Double, from: Double, to: Double, isAdditive: Boolean): AnimationGroup = js.native
     def start(loop: Boolean): AnimationGroup = js.native
+    def start(
+      loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      from: js.UndefOr[scala.Nothing],
+      to: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: Boolean, speedRatio: js.UndefOr[scala.Nothing], from: js.UndefOr[scala.Nothing], to: Double): AnimationGroup = js.native
+    def start(
+      loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      from: js.UndefOr[scala.Nothing],
+      to: Double,
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: Boolean, speedRatio: js.UndefOr[scala.Nothing], from: Double): AnimationGroup = js.native
+    def start(
+      loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      from: Double,
+      to: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: Boolean, speedRatio: js.UndefOr[scala.Nothing], from: Double, to: Double): AnimationGroup = js.native
+    def start(
+      loop: Boolean,
+      speedRatio: js.UndefOr[scala.Nothing],
+      from: Double,
+      to: Double,
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: Boolean, speedRatio: Double): AnimationGroup = js.native
+    def start(
+      loop: Boolean,
+      speedRatio: Double,
+      from: js.UndefOr[scala.Nothing],
+      to: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: Boolean, speedRatio: Double, from: js.UndefOr[scala.Nothing], to: Double): AnimationGroup = js.native
+    def start(
+      loop: Boolean,
+      speedRatio: Double,
+      from: js.UndefOr[scala.Nothing],
+      to: Double,
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: Boolean, speedRatio: Double, from: Double): AnimationGroup = js.native
+    def start(
+      loop: Boolean,
+      speedRatio: Double,
+      from: Double,
+      to: js.UndefOr[scala.Nothing],
+      isAdditive: Boolean
+    ): AnimationGroup = js.native
     def start(loop: Boolean, speedRatio: Double, from: Double, to: Double): AnimationGroup = js.native
+    def start(loop: Boolean, speedRatio: Double, from: Double, to: Double, isAdditive: Boolean): AnimationGroup = js.native
     
     /**
       * Stop all animations
@@ -244,7 +358,7 @@ object animationGroupMod extends js.Object {
       * Synchronize and normalize all animatables with a source animatable
       * @param root defines the root animatable to synchronize with
       * @return the animationGroup
-      * @see http://doc.babylonjs.com/babylon101/animations#animation-weights
+      * @see https://doc.babylonjs.com/babylon101/animations#animation-weights
       */
     def syncAllAnimationsWith(root: Animatable): AnimationGroup = js.native
     
@@ -270,6 +384,100 @@ object animationGroupMod extends js.Object {
   object AnimationGroup extends js.Object {
     
     /**
+      * Convert the keyframes for all animations belonging to the group to be relative to a given reference frame.
+      * @param sourceAnimationGroup defines the AnimationGroup containing animations to convert
+      * @param referenceFrame defines the frame that keyframes in the range will be relative to
+      * @param range defines the name of the AnimationRange belonging to the animations in the group to convert
+      * @param cloneOriginal defines whether or not to clone the group and convert the clone or convert the original group (default is false)
+      * @param clonedName defines the name of the resulting cloned AnimationGroup if cloneOriginal is true
+      * @returns a new AnimationGroup if cloneOriginal is true or the original AnimationGroup if cloneOriginal is false
+      */
+    def MakeAnimationAdditive(sourceAnimationGroup: AnimationGroup): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: js.UndefOr[scala.Nothing],
+      range: js.UndefOr[scala.Nothing],
+      cloneOriginal: js.UndefOr[scala.Nothing],
+      clonedName: String
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: js.UndefOr[scala.Nothing],
+      range: js.UndefOr[scala.Nothing],
+      cloneOriginal: Boolean
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: js.UndefOr[scala.Nothing],
+      range: js.UndefOr[scala.Nothing],
+      cloneOriginal: Boolean,
+      clonedName: String
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(sourceAnimationGroup: AnimationGroup, referenceFrame: js.UndefOr[scala.Nothing], range: String): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: js.UndefOr[scala.Nothing],
+      range: String,
+      cloneOriginal: js.UndefOr[scala.Nothing],
+      clonedName: String
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: js.UndefOr[scala.Nothing],
+      range: String,
+      cloneOriginal: Boolean
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: js.UndefOr[scala.Nothing],
+      range: String,
+      cloneOriginal: Boolean,
+      clonedName: String
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(sourceAnimationGroup: AnimationGroup, referenceFrame: Double): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: Double,
+      range: js.UndefOr[scala.Nothing],
+      cloneOriginal: js.UndefOr[scala.Nothing],
+      clonedName: String
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: Double,
+      range: js.UndefOr[scala.Nothing],
+      cloneOriginal: Boolean
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: Double,
+      range: js.UndefOr[scala.Nothing],
+      cloneOriginal: Boolean,
+      clonedName: String
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(sourceAnimationGroup: AnimationGroup, referenceFrame: Double, range: String): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: Double,
+      range: String,
+      cloneOriginal: js.UndefOr[scala.Nothing],
+      clonedName: String
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: Double,
+      range: String,
+      cloneOriginal: Boolean
+    ): AnimationGroup = js.native
+    def MakeAnimationAdditive(
+      sourceAnimationGroup: AnimationGroup,
+      referenceFrame: Double,
+      range: String,
+      cloneOriginal: Boolean,
+      clonedName: String
+    ): AnimationGroup = js.native
+    
+    /**
       * Returns a new AnimationGroup object parsed from the source provided.
       * @param parsedAnimationGroup defines the source
       * @param scene defines the scene that will receive the animationGroup
@@ -285,6 +493,12 @@ object animationGroupMod extends js.Object {
       * Animation to perform
       */
     var animation: Animation = js.native
+    
+    /**
+      * Returns the string "TargetedAnimation"
+      * @returns "TargetedAnimation"
+      */
+    def getClassName(): String = js.native
     
     /**
       * Serialize the object

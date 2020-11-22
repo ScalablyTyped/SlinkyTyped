@@ -8,6 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CookieOptions
   extends typingsSlinky.expressServeStaticCore.mod.CookieOptions {
   
+  /**
+    * @defautl '_csrf'
+    */
   var key: js.UndefOr[String] = js.native
 }
 object CookieOptions {

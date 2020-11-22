@@ -9,67 +9,67 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CertificateAuthorityCertificateAuthorityConfigurationSubject extends js.Object {
   
   /**
-    * Fully qualified domain name (FQDN) associated with the certificate subject.
+    * Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
     */
   var commonName: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Two digit code that specifies the country in which the certificate subject located.
+    * Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
     */
   var country: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Disambiguating information for the certificate subject.
+    * Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
     */
   var distinguishedNameQualifier: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third.
+    * Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
     */
   var generationQualifier: js.UndefOr[Input[String]] = js.native
   
   /**
-    * First name.
+    * First name. Must be less than or equal to 16 characters in length.
     */
   var givenName: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Concatenation that typically contains the first letter of the `givenName`, the first letter of the middle name if one exists, and the first letter of the `surname`.
+    * Concatenation that typically contains the first letter of the `givenName`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
     */
   var initials: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The locality (such as a city or town) in which the certificate subject is located.
+    * The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
     */
   var locality: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Legal name of the organization with which the certificate subject is affiliated.
+    * Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
     */
   var organization: js.UndefOr[Input[String]] = js.native
   
   /**
-    * A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated.
+    * A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
     */
   var organizationalUnit: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Typically a shortened version of a longer `givenName`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza.
+    * Typically a shortened version of a longer `givenName`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
     */
   var pseudonym: js.UndefOr[Input[String]] = js.native
   
   /**
-    * State in which the subject of the certificate is located.
+    * State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
     */
   var state: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first.
+    * Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
     */
   var surname: js.UndefOr[Input[String]] = js.native
   
   /**
-    * A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject.
+    * A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
     */
   var title: js.UndefOr[Input[String]] = js.native
 }

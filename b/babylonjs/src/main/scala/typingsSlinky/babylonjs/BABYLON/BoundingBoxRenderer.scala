@@ -7,8 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BoundingBoxRenderer extends ISceneComponent {
   
-  var _activeMesh: js.Any = js.native
-  
   var _colorShader: js.Any = js.native
   
   var _createIndexBuffer: js.Any = js.native
@@ -21,7 +19,9 @@ trait BoundingBoxRenderer extends ISceneComponent {
   
   var _indexBuffer: js.Any = js.native
   
-  var _prepareRessources: js.Any = js.native
+  var _preActiveMesh: js.Any = js.native
+  
+  var _prepareResources: js.Any = js.native
   
   var _vertexBuffers: js.Any = js.native
   
@@ -31,9 +31,29 @@ trait BoundingBoxRenderer extends ISceneComponent {
   var backColor: Color3 = js.native
   
   /**
+    * When false, no bounding boxes will be rendered
+    */
+  var enabled: Boolean = js.native
+  
+  /**
     * Color of the bounding box lines placed in front of an object
     */
   var frontColor: Color3 = js.native
+  
+  /**
+    * Observable raised after rendering a bounding box
+    */
+  var onAfterBoxRenderingObservable: Observable[BoundingBox] = js.native
+  
+  /**
+    * Observable raised before rendering a bounding box
+    */
+  var onBeforeBoxRenderingObservable: Observable[BoundingBox] = js.native
+  
+  /**
+    * Observable raised after resources are created
+    */
+  var onResourcesReadyObservable: Observable[BoundingBoxRenderer] = js.native
   
   /**
     * Render the bounding boxes of a specific rendering group
@@ -66,19 +86,23 @@ object BoundingBoxRenderer {
   
   @scala.inline
   def apply(
-    _activeMesh: js.Any,
     _colorShader: js.Any,
     _createIndexBuffer: js.Any,
     _evaluateSubMesh: js.Any,
     _fillIndexBuffer: js.Any,
     _fillIndexData: js.Any,
     _indexBuffer: js.Any,
-    _prepareRessources: js.Any,
+    _preActiveMesh: js.Any,
+    _prepareResources: js.Any,
     _vertexBuffers: js.Any,
     backColor: Color3,
     dispose: () => Unit,
+    enabled: Boolean,
     frontColor: Color3,
     name: String,
+    onAfterBoxRenderingObservable: Observable[BoundingBox],
+    onBeforeBoxRenderingObservable: Observable[BoundingBox],
+    onResourcesReadyObservable: Observable[BoundingBoxRenderer],
     rebuild: () => Unit,
     register: () => Unit,
     render: Double => Unit,
@@ -88,7 +112,7 @@ object BoundingBoxRenderer {
     scene: Scene,
     showBackLines: Boolean
   ): BoundingBoxRenderer = {
-    val __obj = js.Dynamic.literal(_activeMesh = _activeMesh.asInstanceOf[js.Any], _colorShader = _colorShader.asInstanceOf[js.Any], _createIndexBuffer = _createIndexBuffer.asInstanceOf[js.Any], _evaluateSubMesh = _evaluateSubMesh.asInstanceOf[js.Any], _fillIndexBuffer = _fillIndexBuffer.asInstanceOf[js.Any], _fillIndexData = _fillIndexData.asInstanceOf[js.Any], _indexBuffer = _indexBuffer.asInstanceOf[js.Any], _prepareRessources = _prepareRessources.asInstanceOf[js.Any], _vertexBuffers = _vertexBuffers.asInstanceOf[js.Any], backColor = backColor.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), frontColor = frontColor.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], rebuild = js.Any.fromFunction0(rebuild), register = js.Any.fromFunction0(register), render = js.Any.fromFunction1(render), renderList = renderList.asInstanceOf[js.Any], renderOcclusionBoundingBox = js.Any.fromFunction1(renderOcclusionBoundingBox), reset = js.Any.fromFunction0(reset), scene = scene.asInstanceOf[js.Any], showBackLines = showBackLines.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(_colorShader = _colorShader.asInstanceOf[js.Any], _createIndexBuffer = _createIndexBuffer.asInstanceOf[js.Any], _evaluateSubMesh = _evaluateSubMesh.asInstanceOf[js.Any], _fillIndexBuffer = _fillIndexBuffer.asInstanceOf[js.Any], _fillIndexData = _fillIndexData.asInstanceOf[js.Any], _indexBuffer = _indexBuffer.asInstanceOf[js.Any], _preActiveMesh = _preActiveMesh.asInstanceOf[js.Any], _prepareResources = _prepareResources.asInstanceOf[js.Any], _vertexBuffers = _vertexBuffers.asInstanceOf[js.Any], backColor = backColor.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), enabled = enabled.asInstanceOf[js.Any], frontColor = frontColor.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], onAfterBoxRenderingObservable = onAfterBoxRenderingObservable.asInstanceOf[js.Any], onBeforeBoxRenderingObservable = onBeforeBoxRenderingObservable.asInstanceOf[js.Any], onResourcesReadyObservable = onResourcesReadyObservable.asInstanceOf[js.Any], rebuild = js.Any.fromFunction0(rebuild), register = js.Any.fromFunction0(register), render = js.Any.fromFunction1(render), renderList = renderList.asInstanceOf[js.Any], renderOcclusionBoundingBox = js.Any.fromFunction1(renderOcclusionBoundingBox), reset = js.Any.fromFunction0(reset), scene = scene.asInstanceOf[js.Any], showBackLines = showBackLines.asInstanceOf[js.Any])
     __obj.asInstanceOf[BoundingBoxRenderer]
   }
   
@@ -106,9 +130,6 @@ object BoundingBoxRenderer {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def set_activeMesh(value: js.Any): Self = this.set("_activeMesh", value.asInstanceOf[js.Any])
     
     @scala.inline
     def set_colorShader(value: js.Any): Self = this.set("_colorShader", value.asInstanceOf[js.Any])
@@ -129,7 +150,10 @@ object BoundingBoxRenderer {
     def set_indexBuffer(value: js.Any): Self = this.set("_indexBuffer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set_prepareRessources(value: js.Any): Self = this.set("_prepareRessources", value.asInstanceOf[js.Any])
+    def set_preActiveMesh(value: js.Any): Self = this.set("_preActiveMesh", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def set_prepareResources(value: js.Any): Self = this.set("_prepareResources", value.asInstanceOf[js.Any])
     
     @scala.inline
     def set_vertexBuffers(value: js.Any): Self = this.set("_vertexBuffers", value.asInstanceOf[js.Any])
@@ -138,7 +162,19 @@ object BoundingBoxRenderer {
     def setBackColor(value: Color3): Self = this.set("backColor", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setEnabled(value: Boolean): Self = this.set("enabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setFrontColor(value: Color3): Self = this.set("frontColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOnAfterBoxRenderingObservable(value: Observable[BoundingBox]): Self = this.set("onAfterBoxRenderingObservable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOnBeforeBoxRenderingObservable(value: Observable[BoundingBox]): Self = this.set("onBeforeBoxRenderingObservable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOnResourcesReadyObservable(value: Observable[BoundingBoxRenderer]): Self = this.set("onResourcesReadyObservable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRender(value: Double => Unit): Self = this.set("render", js.Any.fromFunction1(value))

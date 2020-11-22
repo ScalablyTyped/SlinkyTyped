@@ -1,10 +1,12 @@
 package typingsSlinky.gestalt.components
 
+import org.scalajs.dom.raw.HTMLElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.down
+import typingsSlinky.gestalt.gestaltStrings.flexible
 import typingsSlinky.gestalt.gestaltStrings.left
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
@@ -48,13 +50,13 @@ object Flyout {
     def showCaret(value: Boolean): this.type = set("showCaret", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def size(value: xs | sm | md | lg | xl | Double): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: xs | sm | md | lg | xl | flexible | Double): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: FlyoutProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(anchor: js.Any, onDismiss: () => Unit): Builder = {
+  def apply(anchor: HTMLElement, onDismiss: () => Unit): Builder = {
     val __props = js.Dynamic.literal(anchor = anchor.asInstanceOf[js.Any], onDismiss = js.Any.fromFunction0(onDismiss))
     new Builder(js.Array(this.component, __props.asInstanceOf[FlyoutProps]))
   }

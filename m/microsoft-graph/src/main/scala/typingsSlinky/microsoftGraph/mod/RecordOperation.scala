@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RecordOperation extends CommsOperation {
   
   // The access token required to retrieve the recording.
-  var recordingAccessToken: js.UndefOr[String] = js.native
+  var recordingAccessToken: js.UndefOr[NullableOption[String]] = js.native
   
   // The location where the recording is located.
-  var recordingLocation: js.UndefOr[String] = js.native
+  var recordingLocation: js.UndefOr[NullableOption[String]] = js.native
 }
 object RecordOperation {
   
@@ -37,15 +37,21 @@ object RecordOperation {
     }
     
     @scala.inline
-    def setRecordingAccessToken(value: String): Self = this.set("recordingAccessToken", value.asInstanceOf[js.Any])
+    def setRecordingAccessToken(value: NullableOption[String]): Self = this.set("recordingAccessToken", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRecordingAccessToken: Self = this.set("recordingAccessToken", js.undefined)
     
     @scala.inline
-    def setRecordingLocation(value: String): Self = this.set("recordingLocation", value.asInstanceOf[js.Any])
+    def setRecordingAccessTokenNull: Self = this.set("recordingAccessToken", null)
+    
+    @scala.inline
+    def setRecordingLocation(value: NullableOption[String]): Self = this.set("recordingLocation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRecordingLocation: Self = this.set("recordingLocation", js.undefined)
+    
+    @scala.inline
+    def setRecordingLocationNull: Self = this.set("recordingLocation", null)
   }
 }

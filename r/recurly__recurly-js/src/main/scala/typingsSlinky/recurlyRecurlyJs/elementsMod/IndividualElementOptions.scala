@@ -8,12 +8,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IndividualElementOptions extends js.Object {
   
+  /**
+    * Enables contextual input formatting, injecting spaces to match the card brand, and forcing numeric input on expiry
+    * and cvv.
+    */
   var format: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Modifies the input type of the expiry fields. 'text' - normal text input. 'mobileSelect' - if the user is using a
+    * mobile device, a native select interface will appear. 'select' - A select field will display on all devices
+    */
   var inputType: js.UndefOr[String] = js.native
   
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#common-field-style-properties|Common field style properties}
+    */
   var style: js.UndefOr[CommonElementStyleinvalidFontColor] = js.native
   
+  /**
+    * tabIndex property to be applied to the outer iframe.
+    */
   var tabIndex: js.UndefOr[String] = js.native
 }
 object IndividualElementOptions {

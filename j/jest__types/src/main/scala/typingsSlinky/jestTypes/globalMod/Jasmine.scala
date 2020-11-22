@@ -1,5 +1,6 @@
 package typingsSlinky.jestTypes.globalMod
 
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,13 +10,13 @@ trait Jasmine extends js.Object {
   
   var _DEFAULT_TIMEOUT_INTERVAL: js.UndefOr[Double] = js.native
   
-  var addMatchers: js.Function = js.native
+  def addMatchers(matchers: Record[String, _]): Unit = js.native
 }
 object Jasmine {
   
   @scala.inline
-  def apply(addMatchers: js.Function): Jasmine = {
-    val __obj = js.Dynamic.literal(addMatchers = addMatchers.asInstanceOf[js.Any])
+  def apply(addMatchers: Record[String, _] => Unit): Jasmine = {
+    val __obj = js.Dynamic.literal(addMatchers = js.Any.fromFunction1(addMatchers))
     __obj.asInstanceOf[Jasmine]
   }
   
@@ -35,7 +36,7 @@ object Jasmine {
     }
     
     @scala.inline
-    def setAddMatchers(value: js.Function): Self = this.set("addMatchers", value.asInstanceOf[js.Any])
+    def setAddMatchers(value: Record[String, _] => Unit): Self = this.set("addMatchers", js.Any.fromFunction1(value))
     
     @scala.inline
     def set_DEFAULT_TIMEOUT_INTERVAL(value: Double): Self = this.set("_DEFAULT_TIMEOUT_INTERVAL", value.asInstanceOf[js.Any])

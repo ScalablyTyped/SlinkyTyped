@@ -8,23 +8,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SharedInsight extends Entity {
   
   // Details about the shared item. Read only.
-  var lastShared: js.UndefOr[SharingDetail] = js.native
+  var lastShared: js.UndefOr[NullableOption[SharingDetail]] = js.native
   
-  var lastSharedMethod: js.UndefOr[Entity] = js.native
+  var lastSharedMethod: js.UndefOr[NullableOption[Entity]] = js.native
   
   /**
     * Used for navigating to the item that was shared. For file attachments, the type is fileAttachment. For linked
     * attachments, the type is driveItem.
     */
-  var resource: js.UndefOr[Entity] = js.native
+  var resource: js.UndefOr[NullableOption[Entity]] = js.native
   
   // Reference properties of the shared document, such as the url and type of the document. Read-only
-  var resourceReference: js.UndefOr[ResourceReference] = js.native
+  var resourceReference: js.UndefOr[NullableOption[ResourceReference]] = js.native
   
   // Properties that you can use to visualize the document in your experience. Read-only
-  var resourceVisualization: js.UndefOr[ResourceVisualization] = js.native
+  var resourceVisualization: js.UndefOr[NullableOption[ResourceVisualization]] = js.native
   
-  var sharingHistory: js.UndefOr[js.Array[SharingDetail]] = js.native
+  var sharingHistory: js.UndefOr[NullableOption[js.Array[SharingDetail]]] = js.native
 }
 object SharedInsight {
   
@@ -50,42 +50,60 @@ object SharedInsight {
     }
     
     @scala.inline
-    def setLastShared(value: SharingDetail): Self = this.set("lastShared", value.asInstanceOf[js.Any])
+    def setLastShared(value: NullableOption[SharingDetail]): Self = this.set("lastShared", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastShared: Self = this.set("lastShared", js.undefined)
     
     @scala.inline
-    def setLastSharedMethod(value: Entity): Self = this.set("lastSharedMethod", value.asInstanceOf[js.Any])
+    def setLastSharedNull: Self = this.set("lastShared", null)
+    
+    @scala.inline
+    def setLastSharedMethod(value: NullableOption[Entity]): Self = this.set("lastSharedMethod", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastSharedMethod: Self = this.set("lastSharedMethod", js.undefined)
     
     @scala.inline
-    def setResource(value: Entity): Self = this.set("resource", value.asInstanceOf[js.Any])
+    def setLastSharedMethodNull: Self = this.set("lastSharedMethod", null)
+    
+    @scala.inline
+    def setResource(value: NullableOption[Entity]): Self = this.set("resource", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResource: Self = this.set("resource", js.undefined)
     
     @scala.inline
-    def setResourceReference(value: ResourceReference): Self = this.set("resourceReference", value.asInstanceOf[js.Any])
+    def setResourceNull: Self = this.set("resource", null)
+    
+    @scala.inline
+    def setResourceReference(value: NullableOption[ResourceReference]): Self = this.set("resourceReference", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResourceReference: Self = this.set("resourceReference", js.undefined)
     
     @scala.inline
-    def setResourceVisualization(value: ResourceVisualization): Self = this.set("resourceVisualization", value.asInstanceOf[js.Any])
+    def setResourceReferenceNull: Self = this.set("resourceReference", null)
+    
+    @scala.inline
+    def setResourceVisualization(value: NullableOption[ResourceVisualization]): Self = this.set("resourceVisualization", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResourceVisualization: Self = this.set("resourceVisualization", js.undefined)
     
     @scala.inline
+    def setResourceVisualizationNull: Self = this.set("resourceVisualization", null)
+    
+    @scala.inline
     def setSharingHistoryVarargs(value: SharingDetail*): Self = this.set("sharingHistory", js.Array(value :_*))
     
     @scala.inline
-    def setSharingHistory(value: js.Array[SharingDetail]): Self = this.set("sharingHistory", value.asInstanceOf[js.Any])
+    def setSharingHistory(value: NullableOption[js.Array[SharingDetail]]): Self = this.set("sharingHistory", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSharingHistory: Self = this.set("sharingHistory", js.undefined)
+    
+    @scala.inline
+    def setSharingHistoryNull: Self = this.set("sharingHistory", null)
   }
 }

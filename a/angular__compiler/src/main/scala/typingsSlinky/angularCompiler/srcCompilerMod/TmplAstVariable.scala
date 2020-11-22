@@ -11,12 +11,14 @@ class TmplAstVariable protected () extends Variable {
   def this(
     name: String,
     value: String,
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(
     name: String,
     value: String,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    keySpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
 }

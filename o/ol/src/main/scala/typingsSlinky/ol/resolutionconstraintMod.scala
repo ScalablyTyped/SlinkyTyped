@@ -184,6 +184,6 @@ object resolutionconstraintMod extends js.Object {
     /* p1 */ Double, 
     /* p2 */ Size, 
     /* p3 */ js.UndefOr[Boolean], 
-    Double
+    js.UndefOr[Double]
   ]
 }

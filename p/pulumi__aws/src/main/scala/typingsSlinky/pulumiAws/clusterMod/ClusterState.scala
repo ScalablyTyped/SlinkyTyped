@@ -13,7 +13,7 @@ trait ClusterState extends js.Object {
   /**
     * The list of cluster certificates.
     * * `cluster_certificates.0.cluster_certificate` - The cluster certificate issued (signed) by the issuing certificate authority (CA) of the cluster's owner.
-    * * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in UNINITIALIZED state after an hsm instance is added to the cluster.
+    * * `cluster_certificates.0.cluster_csr` - The certificate signing request (CSR). Available only in `UNINITIALIZED` state after an HSM instance is added to the cluster.
     * * `cluster_certificates.0.aws_hardware_certificate` - The HSM hardware certificate issued (signed) by AWS CloudHSM.
     * * `cluster_certificates.0.hsm_certificate` - The HSM certificate issued (signed) by the HSM hardware.
     * * `cluster_certificates.0.manufacturer_hardware_certificate` - The HSM hardware certificate issued (signed) by the hardware manufacturer.
@@ -26,12 +26,12 @@ trait ClusterState extends js.Object {
   val clusterId: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The state of the cluster.
+    * The state of the CloudHSM cluster.
     */
   val clusterState: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The type of HSM module in the cluster. Currently, only hsm1.medium is supported.
+    * The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
     */
   val hsmType: js.UndefOr[Input[String]] = js.native
   

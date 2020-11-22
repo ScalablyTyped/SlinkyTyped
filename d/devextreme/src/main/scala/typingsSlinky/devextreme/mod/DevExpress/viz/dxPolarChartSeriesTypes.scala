@@ -7,22 +7,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartSeriesTypes extends js.Object {
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries]
+    */
   var CommonPolarChartSeries: js.UndefOr[dxPolarChartSeriesTypesCommonPolarChartSeries] = js.native
   
-  /** @name dxPolarChartSeriesTypes.areapolarseries */
+  /**
+    * [descr:dxPolarChartSeriesTypes.areapolarseries]
+    */
   var areapolarseries: js.UndefOr[dxPolarChartSeriesTypesAreapolarseries] = js.native
   
-  /** @name dxPolarChartSeriesTypes.barpolarseries */
+  /**
+    * [descr:dxPolarChartSeriesTypes.barpolarseries]
+    */
   var barpolarseries: js.UndefOr[dxPolarChartSeriesTypesBarpolarseries] = js.native
   
-  /** @name dxPolarChartSeriesTypes.linepolarseries */
+  /**
+    * [descr:dxPolarChartSeriesTypes.linepolarseries]
+    */
   var linepolarseries: js.UndefOr[dxPolarChartSeriesTypesLinepolarseries] = js.native
   
-  /** @name dxPolarChartSeriesTypes.scatterpolarseries */
+  /**
+    * [descr:dxPolarChartSeriesTypes.scatterpolarseries]
+    */
   var scatterpolarseries: js.UndefOr[js.Any] = js.native
   
-  /** @name dxPolarChartSeriesTypes.stackedbarpolarseries */
+  /**
+    * [descr:dxPolarChartSeriesTypes.stackedbarpolarseries]
+    */
   var stackedbarpolarseries: js.UndefOr[dxPolarChartSeriesTypesStackedbarpolarseries] = js.native
 }
 object dxPolarChartSeriesTypes {

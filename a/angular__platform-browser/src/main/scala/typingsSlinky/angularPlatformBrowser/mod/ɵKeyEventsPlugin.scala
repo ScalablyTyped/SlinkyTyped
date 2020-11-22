@@ -1,8 +1,8 @@
 package typingsSlinky.angularPlatformBrowser.mod
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.KeyboardEvent
 import typingsSlinky.angularCore.mod.NgZone
+import typingsSlinky.angularPlatformBrowser.anon.DomEventName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,5 +32,5 @@ object ɵKeyEventsPlugin extends js.Object {
   
   def getEventFullKey(event: KeyboardEvent): String = js.native
   
-  def parseEventName(eventName: String): StringDictionary[String] | Null = js.native
+  def parseEventName(eventName: String): DomEventName | Null = js.native
 }

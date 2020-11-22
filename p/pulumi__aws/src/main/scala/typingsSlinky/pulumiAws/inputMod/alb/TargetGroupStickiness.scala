@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TargetGroupStickiness extends js.Object {
   
   /**
-    * The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
+    * Only used when the type is `lbCookie`. The time period, in seconds, during which requests from a client should be routed to the same target. After this time period expires, the load balancer-generated cookie is considered stale. The range is 1 second to 1 week (604800 seconds). The default value is 1 day (86400 seconds).
     */
   var cookieDuration: js.UndefOr[Input[Double]] = js.native
   
@@ -19,7 +19,7 @@ trait TargetGroupStickiness extends js.Object {
   var enabled: js.UndefOr[Input[Boolean]] = js.native
   
   /**
-    * The type of sticky sessions. The only current possible value is `lbCookie`.
+    * The type of sticky sessions. The only current possible values are `lbCookie` for ALBs and `sourceIp` for NLBs.
     */
   var `type`: Input[String] = js.native
 }

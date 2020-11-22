@@ -13,8 +13,6 @@ trait Generic extends js.Object {
   
   var human: js.UndefOr[Boolean] = js.native
   
-  var ignore: js.UndefOr[Double | js.Array[Double]] = js.native
-  
   var method: js.UndefOr[String] = js.native
   
   var pretty: js.UndefOr[Boolean] = js.native
@@ -64,15 +62,6 @@ object Generic {
     
     @scala.inline
     def deleteHuman: Self = this.set("human", js.undefined)
-    
-    @scala.inline
-    def setIgnoreVarargs(value: Double*): Self = this.set("ignore", js.Array(value :_*))
-    
-    @scala.inline
-    def setIgnore(value: Double | js.Array[Double]): Self = this.set("ignore", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteIgnore: Self = this.set("ignore", js.undefined)
     
     @scala.inline
     def setMethod(value: String): Self = this.set("method", value.asInstanceOf[js.Any])

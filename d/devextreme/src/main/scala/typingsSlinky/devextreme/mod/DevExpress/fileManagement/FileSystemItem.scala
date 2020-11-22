@@ -7,37 +7,59 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FileSystemItem extends js.Object {
   
-  /** @name FileSystemItem.dataItem */
+  /**
+    * [descr:FileSystemItem.dataItem]
+    */
   var dataItem: js.Any = js.native
   
-  /** @name FileSystemItem.dateModified */
+  /**
+    * [descr:FileSystemItem.dateModified]
+    */
   var dateModified: js.Date = js.native
   
-  /** @name FileSystemItem.getFileExtension() */
+  /**
+    * [descr:FileSystemItem.getFileExtension()]
+    */
   def getFileExtension(): String = js.native
   
-  /** @name FileSystemItem.hasSubDirectories */
+  /**
+    * [descr:FileSystemItem.hasSubDirectories]
+    */
   var hasSubDirectories: Boolean = js.native
   
-  /** @name FileSystemItem.isDirectory */
+  /**
+    * [descr:FileSystemItem.isDirectory]
+    */
   var isDirectory: Boolean = js.native
   
-  /** @name FileSystemItem.key */
+  /**
+    * [descr:FileSystemItem.key]
+    */
   var key: String = js.native
   
-  /** @name FileSystemItem.name */
+  /**
+    * [descr:FileSystemItem.name]
+    */
   var name: String = js.native
   
-  /** @name FileSystemItem.path */
+  /**
+    * [descr:FileSystemItem.path]
+    */
   var path: String = js.native
   
-  /** @name FileSystemItem.pathKeys */
+  /**
+    * [descr:FileSystemItem.pathKeys]
+    */
   var pathKeys: js.Array[String] = js.native
   
-  /** @name FileSystemItem.size */
+  /**
+    * [descr:FileSystemItem.size]
+    */
   var size: Double = js.native
   
-  /** @name FileSystemItem.thumbnail */
+  /**
+    * [descr:FileSystemItem.thumbnail]
+    */
   var thumbnail: String = js.native
 }
 object FileSystemItem {

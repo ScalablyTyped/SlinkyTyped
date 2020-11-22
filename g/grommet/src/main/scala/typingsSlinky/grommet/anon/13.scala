@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `13` extends js.Object {
   
-  var border: js.UndefOr[ColorSide] = js.native
+  var icon: js.UndefOr[`12`] = js.native
 }
 object `13` {
   
@@ -33,9 +33,9 @@ object `13` {
     }
     
     @scala.inline
-    def setBorder(value: ColorSide): Self = this.set("border", value.asInstanceOf[js.Any])
+    def setIcon(value: `12`): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteBorder: Self = this.set("border", js.undefined)
+    def deleteIcon: Self = this.set("icon", js.undefined)
   }
 }

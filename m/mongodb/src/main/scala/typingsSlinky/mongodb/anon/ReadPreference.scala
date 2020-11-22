@@ -9,15 +9,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ReadPreference extends js.Object {
   
-  var readPreference: ReadPreferenceOrMode = js.native
+  var readPreference: js.UndefOr[ReadPreferenceOrMode] = js.native
   
   var session: js.UndefOr[ClientSession] = js.native
 }
 object ReadPreference {
   
   @scala.inline
-  def apply(readPreference: ReadPreferenceOrMode): ReadPreference = {
-    val __obj = js.Dynamic.literal(readPreference = readPreference.asInstanceOf[js.Any])
+  def apply(): ReadPreference = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ReadPreference]
   }
   
@@ -38,6 +38,9 @@ object ReadPreference {
     
     @scala.inline
     def setReadPreference(value: ReadPreferenceOrMode): Self = this.set("readPreference", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReadPreference: Self = this.set("readPreference", js.undefined)
     
     @scala.inline
     def setSession(value: ClientSession): Self = this.set("session", value.asInstanceOf[js.Any])

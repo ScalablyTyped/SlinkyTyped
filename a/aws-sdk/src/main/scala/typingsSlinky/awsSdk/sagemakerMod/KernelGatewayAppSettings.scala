@@ -8,7 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait KernelGatewayAppSettings extends js.Object {
   
   /**
-    * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    * A list of custom SageMaker images that are configured to run as a KernelGateway app.
+    */
+  var CustomImages: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.CustomImages] = js.native
+  
+  /**
+    * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
     */
   var DefaultResourceSpec: js.UndefOr[ResourceSpec] = js.native
 }
@@ -34,6 +39,15 @@ object KernelGatewayAppSettings {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setCustomImagesVarargs(value: CustomImage*): Self = this.set("CustomImages", js.Array(value :_*))
+    
+    @scala.inline
+    def setCustomImages(value: CustomImages): Self = this.set("CustomImages", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomImages: Self = this.set("CustomImages", js.undefined)
     
     @scala.inline
     def setDefaultResourceSpec(value: ResourceSpec): Self = this.set("DefaultResourceSpec", value.asInstanceOf[js.Any])

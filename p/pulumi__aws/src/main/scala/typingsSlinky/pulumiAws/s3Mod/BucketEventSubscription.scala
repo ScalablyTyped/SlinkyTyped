@@ -13,13 +13,13 @@ class BucketEventSubscription protected ()
   extends typingsSlinky.pulumiAws.s3MixinsMod.BucketEventSubscription {
   def this(
     name: String,
-    bucket: typingsSlinky.pulumiAws.bucketMod.Bucket,
+    bucket: typingsSlinky.pulumiAws.s3BucketMod.Bucket,
     handler: BucketEventHandler,
     args: BucketEventSubscriptionArgs
   ) = this()
   def this(
     name: String,
-    bucket: typingsSlinky.pulumiAws.bucketMod.Bucket,
+    bucket: typingsSlinky.pulumiAws.s3BucketMod.Bucket,
     handler: BucketEventHandler,
     args: BucketEventSubscriptionArgs,
     opts: ComponentResourceOptions

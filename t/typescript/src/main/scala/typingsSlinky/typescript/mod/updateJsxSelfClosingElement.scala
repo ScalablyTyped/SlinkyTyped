@@ -14,6 +14,7 @@ object updateJsxSelfClosingElement extends js.Object {
     typeArguments: js.UndefOr[scala.Nothing],
     attributes: JsxAttributes
   ): JsxSelfClosingElement = js.native
+  /** @deprecated Use `factory.updateJsxSelfClosingElement` or the factory supplied by your transformation context instead. */
   def apply(
     node: JsxSelfClosingElement,
     tagName: JsxTagNameExpression,

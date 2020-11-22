@@ -19,19 +19,19 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined typescript.typescript.ExpressionWithTypeArguments & {  expression :typescript.typescript.Identifier | typescript.typescript.PropertyAccessEntityNameExpression} */
+/* Inlined typescript.typescript.ExpressionWithTypeArguments & { readonly expression :typescript.typescript.Identifier | typescript.typescript.PropertyAccessEntityNameExpression} */
 @js.native
 trait ExpressionWithTypeArgumen extends js.Object {
   
   var _typeNodeBrand: js.Any = js.native
   
-  var decorators: js.UndefOr[NodeArray[Decorator]] = js.native
+  val decorators: js.UndefOr[NodeArray[Decorator]] = js.native
   
-  var end: Double = js.native
+  val end: Double = js.native
   
-  var expression: LeftHandSideExpression with (Identifier | PropertyAccessEntityNameExpression) = js.native
+  val expression: LeftHandSideExpression with (Identifier | PropertyAccessEntityNameExpression) = js.native
   
-  var flags: NodeFlags = js.native
+  val flags: NodeFlags = js.native
   
   def forEachChild[T](cbNode: js.Function1[/* node */ Node, js.UndefOr[T]]): js.UndefOr[T] = js.native
   def forEachChild[T](
@@ -79,13 +79,13 @@ trait ExpressionWithTypeArgumen extends js.Object {
   def getWidth(): Double = js.native
   def getWidth(sourceFile: SourceFileLike): Double = js.native
   
-  var kind: ExpressionWithTypeArguments = js.native
+  val kind: ExpressionWithTypeArguments = js.native
   
-  var modifiers: js.UndefOr[ModifiersArray] = js.native
+  val modifiers: js.UndefOr[ModifiersArray] = js.native
   
-  var parent: HeritageClause | JSDocAugmentsTag | JSDocImplementsTag = js.native
+  val parent: HeritageClause | JSDocAugmentsTag | JSDocImplementsTag = js.native
   
-  var pos: Double = js.native
+  val pos: Double = js.native
   
-  var typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
+  val typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
 }

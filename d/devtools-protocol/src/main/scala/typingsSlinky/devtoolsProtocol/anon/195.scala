@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Fetch.FailRequestRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Target.SetAutoAttachRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `195` extends js.Object {
   
-  var paramsType: js.Array[FailRequestRequest] = js.native
+  var paramsType: js.Array[SetAutoAttachRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `195` {
   
   @scala.inline
-  def apply(paramsType: js.Array[FailRequestRequest], returnType: Unit): `195` = {
+  def apply(paramsType: js.Array[SetAutoAttachRequest], returnType: Unit): `195` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`195`]
   }
@@ -36,10 +36,10 @@ object `195` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: FailRequestRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetAutoAttachRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[FailRequestRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetAutoAttachRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

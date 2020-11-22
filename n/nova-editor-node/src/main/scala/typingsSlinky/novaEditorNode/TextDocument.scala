@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// https://novadocs.panic.com/api-reference/text-document/
+/// https://novadocs.panic.com/api-reference/text-document/
 @js.native
 trait TextDocument extends js.Object {
   
@@ -26,9 +26,9 @@ trait TextDocument extends js.Object {
   
   val length: Double = js.native
   
-  def onDidChangePath(callback: js.Function2[/* document */ this.type, /* path */ String | Null, Unit]): Unit = js.native
+  def onDidChangePath(callback: js.Function2[/* document */ this.type, /* path */ String | Null, Unit]): Disposable = js.native
   
-  def onDidChangeSyntax(callback: js.Function2[/* document */ this.type, /* syntax */ String | Null, Unit]): Unit = js.native
+  def onDidChangeSyntax(callback: js.Function2[/* document */ this.type, /* syntax */ String | Null, Unit]): Disposable = js.native
   
   val path: String | Null = js.native
   
@@ -49,8 +49,8 @@ object TextDocument {
     isRemote: Boolean,
     isUntitled: Boolean,
     length: Double,
-    onDidChangePath: js.Function2[TextDocument, /* path */ String | Null, Unit] => Unit,
-    onDidChangeSyntax: js.Function2[TextDocument, /* syntax */ String | Null, Unit] => Unit,
+    onDidChangePath: js.Function2[TextDocument, /* path */ String | Null, Unit] => Disposable,
+    onDidChangeSyntax: js.Function2[TextDocument, /* syntax */ String | Null, Unit] => Disposable,
     uri: String
   ): TextDocument = {
     val __obj = js.Dynamic.literal(eol = eol.asInstanceOf[js.Any], getLineRangeForRange = js.Any.fromFunction1(getLineRangeForRange), getTextInRange = js.Any.fromFunction1(getTextInRange), isClosed = isClosed.asInstanceOf[js.Any], isDirty = isDirty.asInstanceOf[js.Any], isEmpty = isEmpty.asInstanceOf[js.Any], isRemote = isRemote.asInstanceOf[js.Any], isUntitled = isUntitled.asInstanceOf[js.Any], length = length.asInstanceOf[js.Any], onDidChangePath = js.Any.fromFunction1(onDidChangePath), onDidChangeSyntax = js.Any.fromFunction1(onDidChangeSyntax), uri = uri.asInstanceOf[js.Any])
@@ -100,10 +100,10 @@ object TextDocument {
     def setLength(value: Double): Self = this.set("length", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnDidChangePath(value: js.Function2[TextDocument, /* path */ String | Null, Unit] => Unit): Self = this.set("onDidChangePath", js.Any.fromFunction1(value))
+    def setOnDidChangePath(value: js.Function2[TextDocument, /* path */ String | Null, Unit] => Disposable): Self = this.set("onDidChangePath", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnDidChangeSyntax(value: js.Function2[TextDocument, /* syntax */ String | Null, Unit] => Unit): Self = this.set("onDidChangeSyntax", js.Any.fromFunction1(value))
+    def setOnDidChangeSyntax(value: js.Function2[TextDocument, /* syntax */ String | Null, Unit] => Disposable): Self = this.set("onDidChangeSyntax", js.Any.fromFunction1(value))
     
     @scala.inline
     def setUri(value: String): Self = this.set("uri", value.asInstanceOf[js.Any])

@@ -241,8 +241,6 @@ object R3Identifiers extends js.Object {
   
   var sanitizeUrlOrResourceUrl: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
   
-  var select: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
-  
   var setComponentScope: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
   
   var setNgModuleScope: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
@@ -320,6 +318,12 @@ object R3Identifiers extends js.Object {
   var textInterpolate8: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
   
   var textInterpolateV: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
+  
+  var trustConstantHtml: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
+  
+  var trustConstantResourceUrl: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
+  
+  var trustConstantScript: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
   
   var viewQuery: typingsSlinky.angularCompiler.outputAstMod.ExternalReference = js.native
 }

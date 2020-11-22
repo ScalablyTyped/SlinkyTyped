@@ -123,6 +123,16 @@ trait Typeofmarked extends js.Object {
   ): String = js.native
   
   /**
+    * Compiles markdown to HTML without enclosing `p` tag.
+    *
+    * @param src String of markdown source to be compiled
+    * @param options Hash of options
+    * @return String of compiled HTML
+    */
+  def parseInline(src: String): String = js.native
+  def parseInline(src: String, options: MarkedOptions): String = js.native
+  
+  /**
     * @param src Tokenized source as array of tokens
     * @param options Hash of options
     */

@@ -13,12 +13,12 @@ trait GetAppResponse extends js.Object {
   var appSummary: js.UndefOr[AppSummary] = js.native
   
   /**
-    * List of server groups belonging to the application.
+    * The server groups that belong to the application.
     */
   var serverGroups: js.UndefOr[ServerGroups] = js.native
   
   /**
-    * List of tags associated with the application.
+    * The tags associated with the application.
     */
   var tags: js.UndefOr[Tags] = js.native
 }

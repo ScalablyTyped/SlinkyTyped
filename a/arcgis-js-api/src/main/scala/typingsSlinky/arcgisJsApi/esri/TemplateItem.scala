@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TemplateItem extends Accessor {
   
   /**
-    * The description that is displayed for the template item. This is similar to the description provided in [FeatureTemplate.description](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureTemplate.html#description).
+    * The description that is displayed for the template item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates-TemplateItem.html#description)
     */
@@ -19,13 +19,11 @@ trait TemplateItem extends Accessor {
     * Fetches the thumbnail used to display the template item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates-TemplateItem.html#fetchThumbnail)
-    *
-    *
     */
   def fetchThumbnail(): js.Promise[_] = js.native
   
   /**
-    * The label that is displayed for the template item. This is similar to the name provided in [FeatureTemplate.name](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureTemplate.html#name).
+    * The label that is displayed for the template item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates-TemplateItem.html#label)
     */
@@ -46,7 +44,7 @@ trait TemplateItem extends Accessor {
   var template: FeatureTemplate = js.native
   
   /**
-    * An object used to create a thumbnail image that represents a feature type in the feature template. This is similar to [FeatureTemplate.thumbnail](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureTemplate.html#thumbnail).
+    * An object used to create a thumbnail image that represents a feature type in the feature template.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates-TemplateItem.html#thumbnail)
     */

@@ -8,17 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListAccessPoliciesRequest extends js.Object {
   
   /**
-    * The ID of the identity. This parameter is required if you specify identityType.
+    * The ARN of the IAM user. For more information, see IAM ARNs in the IAM User Guide. This parameter is required if you specify IAM for identityType.
+    */
+  var iamArn: js.UndefOr[ARN] = js.native
+  
+  /**
+    * The ID of the identity. This parameter is required if you specify USER or GROUP for identityType.
     */
   var identityId: js.UndefOr[IdentityId] = js.native
   
   /**
-    * The type of identity (user or group). This parameter is required if you specify identityId.
+    * The type of identity (AWS SSO user, AWS SSO group, or IAM user). This parameter is required if you specify identityId.
     */
   var identityType: js.UndefOr[IdentityType] = js.native
   
   /**
-    * The maximum number of results to be returned per paginated request.
+    * The maximum number of results to be returned per paginated request. Default: 50
     */
   var maxResults: js.UndefOr[MaxResults] = js.native
   
@@ -59,6 +64,12 @@ object ListAccessPoliciesRequest {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setIamArn(value: ARN): Self = this.set("iamArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIamArn: Self = this.set("iamArn", js.undefined)
     
     @scala.inline
     def setIdentityId(value: IdentityId): Self = this.set("identityId", value.asInstanceOf[js.Any])

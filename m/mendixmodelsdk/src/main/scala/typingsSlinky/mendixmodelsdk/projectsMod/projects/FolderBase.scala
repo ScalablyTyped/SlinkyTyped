@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.unitsMod.IStructuralUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsFolderBase, containerAsProject, folders, documents */ @JSImport("mendixmodelsdk/dist/gen/projects", "projects.FolderBase")
 @js.native
-abstract class FolderBase protected () extends StructuralUnit {
+abstract class FolderBase protected () extends StructuralUnit[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
@@ -47,9 +47,6 @@ abstract class FolderBase protected () extends StructuralUnit {
   def folders: IList[IFolder] = js.native
   @JSName("folders")
   var folders_FFolderBase: IList[IFolder] = js.native
-  
-  @JSName("model")
-  var model_FFolderBase: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/projects", "projects.FolderBase")

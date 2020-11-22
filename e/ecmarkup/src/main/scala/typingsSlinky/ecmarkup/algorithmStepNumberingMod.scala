@@ -1,7 +1,7 @@
 package typingsSlinky.ecmarkup
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.ecmarkup.algorithmErrorReporterTypeMod.LintingError
+import typingsSlinky.ecmarkup.algorithmErrorReporterTypeMod.Reporter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object algorithmStepNumberingMod extends js.Object {
   
-  def default(report: js.Function1[/* e */ LintingError, Unit], node: Element, algorithmSource: String): js.Any = js.native
+  def default(report: Reporter, node: Element, algorithmSource: String): js.Any = js.native
 }

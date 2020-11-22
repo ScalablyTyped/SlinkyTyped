@@ -35,6 +35,8 @@ trait Scanner extends js.Object {
   
   def lookAhead[T](callback: js.Function0[T]): T = js.native
   
+  def reScanAsteriskEqualsToken(): SyntaxKind = js.native
+  
   def reScanGreaterToken(): SyntaxKind = js.native
   
   def reScanJsxAttributeValue(): SyntaxKind = js.native

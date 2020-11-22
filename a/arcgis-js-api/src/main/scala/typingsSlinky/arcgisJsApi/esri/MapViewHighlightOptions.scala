@@ -13,33 +13,27 @@ trait MapViewHighlightOptions extends AnonymousAccessor {
     * The color of the highlight fill.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#highlightOptions)
-    *
-    * @default #00ffff
     */
   var color: js.UndefOr[Color_] = js.native
   
   /**
-    * The opacity of the fill (area within the halo). This will be multiplied with the opacity specified in `color`.
+    * The opacity of the fill (area within the halo).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#highlightOptions)
-    *
-    * @default 0.25
     */
   var fillOpacity: js.UndefOr[Double] = js.native
   
   /**
-    * The color of the halo surrounding the highlight. If no `haloColor` is provided, then the halo will be colored with the specified `color`.
+    * The color of the halo surrounding the highlight.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#highlightOptions)
     */
   var haloColor: js.UndefOr[Color_] = js.native
   
   /**
-    * The opacity of the highlight halo. This will be multiplied with any opacity specified in `color`.
+    * The opacity of the highlight halo.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#highlightOptions)
-    *
-    * @default 1
     */
   var haloOpacity: js.UndefOr[Double] = js.native
 }

@@ -34,6 +34,9 @@ object titaniumStrings {
   def authorization: authorization = "authorization".asInstanceOf[authorization]
   
   @scala.inline
+  def auto: auto = "auto".asInstanceOf[auto]
+  
+  @scala.inline
   def backgroundfetch: backgroundfetch = "backgroundfetch".asInstanceOf[backgroundfetch]
   
   @scala.inline
@@ -47,6 +50,9 @@ object titaniumStrings {
   
   @scala.inline
   def blacklisturl: blacklisturl = "blacklisturl".asInstanceOf[blacklisturl]
+  
+  @scala.inline
+  def blockedurl: blockedurl = "blockedurl".asInstanceOf[blockedurl]
   
   @scala.inline
   def blur: blur = "blur".asInstanceOf[blur]
@@ -361,6 +367,9 @@ object titaniumStrings {
   def scale: scale = "scale".asInstanceOf[scale]
   
   @scala.inline
+  def screenshotcaptured: screenshotcaptured = "screenshotcaptured".asInstanceOf[screenshotcaptured]
+  
+  @scala.inline
   def scroll: scroll = "scroll".asInstanceOf[scroll]
   
   @scala.inline
@@ -502,6 +511,9 @@ object titaniumStrings {
   def userinteraction: userinteraction = "userinteraction".asInstanceOf[userinteraction]
   
   @scala.inline
+  def userinterfacestyle: userinterfacestyle = "userinterfacestyle".asInstanceOf[userinterfacestyle]
+  
+  @scala.inline
   def userleavehint: userleavehint = "userleavehint".asInstanceOf[userleavehint]
   
   @scala.inline
@@ -544,6 +556,9 @@ object titaniumStrings {
   sealed trait authorization extends js.Object
   
   @js.native
+  sealed trait auto extends js.Object
+  
+  @js.native
   sealed trait backgroundfetch extends js.Object
   
   @js.native
@@ -557,6 +572,9 @@ object titaniumStrings {
   
   @js.native
   sealed trait blacklisturl extends js.Object
+  
+  @js.native
+  sealed trait blockedurl extends js.Object
   
   @js.native
   sealed trait blur extends js.Object
@@ -871,6 +889,9 @@ object titaniumStrings {
   sealed trait scale extends js.Object
   
   @js.native
+  sealed trait screenshotcaptured extends js.Object
+  
+  @js.native
   sealed trait scroll extends js.Object
   
   @js.native
@@ -1010,6 +1031,9 @@ object titaniumStrings {
   
   @js.native
   sealed trait userinteraction extends js.Object
+  
+  @js.native
+  sealed trait userinterfacestyle extends js.Object
   
   @js.native
   sealed trait userleavehint extends js.Object

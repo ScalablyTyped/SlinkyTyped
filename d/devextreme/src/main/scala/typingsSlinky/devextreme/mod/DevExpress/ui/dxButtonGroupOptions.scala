@@ -17,37 +17,51 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxButtonGroupOptions extends WidgetOptions[dxButtonGroup] {
   
-  /** @name dxButtonGroup.Options.buttonTemplate */
+  /**
+    * [descr:dxButtonGroup.Options.buttonTemplate]
+    */
   var buttonTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ js.Any, /* buttonContent */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @deprecated */
-  /** @name dxButtonGroup.Options.itemTemplate */
-  var itemTemplate: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.core.template | js.Function] = js.native
-  
-  /** @name dxButtonGroup.Options.items */
+  /**
+    * [descr:dxButtonGroup.Options.items]
+    */
   var items: js.UndefOr[js.Array[dxButtonGroupItem]] = js.native
   
-  /** @name dxButtonGroup.Options.keyExpr */
+  /**
+    * [descr:dxButtonGroup.Options.keyExpr]
+    */
   var keyExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name dxButtonGroup.Options.onItemClick */
+  /**
+    * [descr:dxButtonGroup.Options.onItemClick]
+    */
   var onItemClick: js.UndefOr[js.Function1[/* e */ EventItemData, _]] = js.native
   
-  /** @name dxButtonGroup.Options.onSelectionChanged */
+  /**
+    * [descr:dxButtonGroup.Options.onSelectionChanged]
+    */
   var onSelectionChanged: js.UndefOr[js.Function1[/* e */ RemovedItems, _]] = js.native
   
-  /** @name dxButtonGroup.Options.selectedItemKeys */
+  /**
+    * [descr:dxButtonGroup.Options.selectedItemKeys]
+    */
   var selectedItemKeys: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name dxButtonGroup.Options.selectedItems */
+  /**
+    * [descr:dxButtonGroup.Options.selectedItems]
+    */
   var selectedItems: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name dxButtonGroup.Options.selectionMode */
+  /**
+    * [descr:dxButtonGroup.Options.selectionMode]
+    */
   var selectionMode: js.UndefOr[multiple | single_] = js.native
   
-  /** @name dxButtonGroup.Options.stylingMode */
+  /**
+    * [descr:dxButtonGroup.Options.stylingMode]
+    */
   var stylingMode: js.UndefOr[text | outlined | contained] = js.native
 }
 object dxButtonGroupOptions {
@@ -86,15 +100,6 @@ object dxButtonGroupOptions {
     
     @scala.inline
     def deleteButtonTemplate: Self = this.set("buttonTemplate", js.undefined)
-    
-    @scala.inline
-    def setItemTemplateElement(value: Element): Self = this.set("itemTemplate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setItemTemplate(value: typingsSlinky.devextreme.mod.DevExpress.core.template | js.Function): Self = this.set("itemTemplate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteItemTemplate: Self = this.set("itemTemplate", js.undefined)
     
     @scala.inline
     def setItemsVarargs(value: dxButtonGroupItem*): Self = this.set("items", js.Array(value :_*))

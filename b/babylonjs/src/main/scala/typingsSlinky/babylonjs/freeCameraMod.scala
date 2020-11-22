@@ -19,7 +19,7 @@ object freeCameraMod extends js.Object {
       * Instantiates a Free Camera.
       * This represents a free type of camera. It can be useful in First Person Shooter game for instance.
       * Please consider using the new UniversalCamera instead as it adds more functionality like touch to this camera.
-      * @see http://doc.babylonjs.com/features/cameras#universal-camera
+      * @see https://doc.babylonjs.com/features/cameras#universal-camera
       * @param name Define the name of the camera in the scene
       * @param position Define the start position of the camera in the scene
       * @param scene Define the scene the camera belongs to
@@ -81,7 +81,7 @@ object freeCameraMod extends js.Object {
     /**
       * Define the collision ellipsoid of the camera.
       * This is helpful to simulate a camera body like the player body around the camera
-      * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity#arcrotatecamera
+      * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity#arcrotatecamera
       */
     var ellipsoid: Vector3 = js.native
     
@@ -105,6 +105,12 @@ object freeCameraMod extends js.Object {
     def keysDown_=(value: js.Array[Double]): Unit = js.native
     
     /**
+      * Gets or Set the list of keyboard keys used to control the downward move of the camera.
+      */
+    def keysDownward: js.Array[Double] = js.native
+    def keysDownward_=(value: js.Array[Double]): Unit = js.native
+    
+    /**
       * Gets or Set the list of keyboard keys used to control the left strafe move of the camera.
       */
     def keysLeft: js.Array[Double] = js.native
@@ -121,6 +127,12 @@ object freeCameraMod extends js.Object {
       */
     def keysUp: js.Array[Double] = js.native
     def keysUp_=(value: js.Array[Double]): Unit = js.native
+    
+    /**
+      * Gets or Set the list of keyboard keys used to control the upward move of the camera.
+      */
+    def keysUpward: js.Array[Double] = js.native
+    def keysUpward_=(value: js.Array[Double]): Unit = js.native
     
     /**
       * Event raised when the camera collide with a mesh in the scene.

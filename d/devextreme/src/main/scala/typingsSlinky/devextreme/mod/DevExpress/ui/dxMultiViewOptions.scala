@@ -9,26 +9,38 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxMultiViewOptions[T] extends CollectionWidgetOptions[T] {
   
-  /** @name dxMultiView.Options.animationEnabled */
+  /**
+    * [descr:dxMultiView.Options.animationEnabled]
+    */
   var animationEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMultiView.Options.dataSource */
+  /**
+    * [descr:dxMultiView.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxMultiViewOptions: js.UndefOr[
     String | (js.Array[String | dxMultiViewItem | _]) | DataSource | DataSourceOptions
   ] = js.native
   
-  /** @name dxMultiView.Options.deferRendering */
+  /**
+    * [descr:dxMultiView.Options.deferRendering]
+    */
   var deferRendering: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMultiView.Options.items */
+  /**
+    * [descr:dxMultiView.Options.items]
+    */
   @JSName("items")
   var items_dxMultiViewOptions: js.UndefOr[js.Array[String | dxMultiViewItem | _]] = js.native
   
-  /** @name dxMultiView.Options.loop */
+  /**
+    * [descr:dxMultiView.Options.loop]
+    */
   var loop: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMultiView.Options.swipeEnabled */
+  /**
+    * [descr:dxMultiView.Options.swipeEnabled]
+    */
   var swipeEnabled: js.UndefOr[Boolean] = js.native
 }
 object dxMultiViewOptions {

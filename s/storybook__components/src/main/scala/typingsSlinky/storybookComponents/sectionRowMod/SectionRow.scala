@@ -6,6 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@storybook/components/dist/blocks/PropsTable/SectionRow", "SectionRow")
+@JSImport("@storybook/components/dist/blocks/ArgsTable/SectionRow", "SectionRow")
 @js.native
 object SectionRow extends TopLevel[ReactComponentClass[SectionRowProps]]

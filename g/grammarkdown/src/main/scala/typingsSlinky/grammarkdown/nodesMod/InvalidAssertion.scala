@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown/dist/nodes", "InvalidAssertion")
 @js.native
 class InvalidAssertion protected ()
-  extends AssertionBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.InvalidAssertion, OpenBracketToken] {
+  extends AssertionBase[typingsSlinky.grammarkdown.tokensMod.SyntaxKind.InvalidAssertion, OpenBracketToken]
+     with Assertion {
   def this(openBracketToken: Token[OpenBracketToken]) = this()
   def this(openBracketToken: Token[OpenBracketToken], closeBracketToken: Token[CloseBracketToken]) = this()
 }

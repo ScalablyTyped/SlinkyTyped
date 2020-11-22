@@ -18,7 +18,7 @@ trait LocalGateway extends js.Object {
   var OutpostArn: js.UndefOr[String] = js.native
   
   /**
-    * The ID of the AWS account ID that owns the local gateway.
+    * The AWS account ID that owns the local gateway.
     */
   var OwnerId: js.UndefOr[String] = js.native
   

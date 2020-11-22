@@ -10,6 +10,7 @@ object global extends js.Object {
   
   @js.native
   class Set[T] () extends js.Object {
+    def this(items: js.Array[T]) = this()
     
     def add(value: T): this.type = js.native
     

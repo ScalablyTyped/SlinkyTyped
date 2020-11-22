@@ -46,9 +46,14 @@ trait Tab extends View {
   var activeIconIsMask: Boolean = js.native
   
   /**
+    * Defines the color of the tab icon when it is active. Will fallback to activeTitleColor when not defined.
+    */
+  var activeTintColor: String = js.native
+  
+  /**
     * Defines the color of the title of tab when it's active.
     */
-  var activeTitleColor: String = js.native
+  var activeTitleColor: String | Color = js.native
   
   @JSName("addEventListener")
   def addEventListener_selected(
@@ -70,7 +75,7 @@ trait Tab extends View {
     * If this item displays a badge, this color will be used for the badge's background.
     * If set to null, the default background color will be used instead.
     */
-  var badgeColor: String = js.native
+  var badgeColor: String | Color = js.native
   
   /**
     * Closes the top-level window for this tab.
@@ -136,10 +141,16 @@ trait Tab extends View {
   def getActiveIconIsMask(): Boolean = js.native
   
   /**
+    * Gets the value of the <Titanium.UI.Tab.activeTintColor> property.
+    * @deprecated Access <Titanium.UI.Tab.activeTintColor> instead.
+    */
+  def getActiveTintColor(): String = js.native
+  
+  /**
     * Gets the value of the <Titanium.UI.Tab.activeTitleColor> property.
     * @deprecated Access <Titanium.UI.Tab.activeTitleColor> instead.
     */
-  def getActiveTitleColor(): String = js.native
+  def getActiveTitleColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Tab.badge> property.
@@ -151,7 +162,7 @@ trait Tab extends View {
     * Gets the value of the <Titanium.UI.Tab.badgeColor> property.
     * @deprecated Access <Titanium.UI.Tab.badgeColor> instead.
     */
-  def getBadgeColor(): String = js.native
+  def getBadgeColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Tab.icon> property.
@@ -181,7 +192,7 @@ trait Tab extends View {
     * Gets the value of the <Titanium.UI.Tab.titleColor> property.
     * @deprecated Access <Titanium.UI.Tab.titleColor> instead.
     */
-  def getTitleColor(): String = js.native
+  def getTitleColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Tab.titleid> property.
@@ -252,10 +263,17 @@ trait Tab extends View {
   def setActiveIconIsMask(activeIconIsMask: Boolean): Unit = js.native
   
   /**
+    * Sets the value of the <Titanium.UI.Tab.activeTintColor> property.
+    * @deprecated Set the value using <Titanium.UI.Tab.activeTintColor> instead.
+    */
+  def setActiveTintColor(activeTintColor: String): Unit = js.native
+  
+  /**
     * Sets the value of the <Titanium.UI.Tab.activeTitleColor> property.
     * @deprecated Set the value using <Titanium.UI.Tab.activeTitleColor> instead.
     */
   def setActiveTitleColor(activeTitleColor: String): Unit = js.native
+  def setActiveTitleColor(activeTitleColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Tab.badge> property.
@@ -268,6 +286,7 @@ trait Tab extends View {
     * @deprecated Set the value using <Titanium.UI.Tab.badgeColor> instead.
     */
   def setBadgeColor(badgeColor: String): Unit = js.native
+  def setBadgeColor(badgeColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Tab.icon> property.
@@ -298,6 +317,7 @@ trait Tab extends View {
     * @deprecated Set the value using <Titanium.UI.Tab.titleColor> instead.
     */
   def setTitleColor(titleColor: String): Unit = js.native
+  def setTitleColor(titleColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Tab.titleid> property.
@@ -311,6 +331,12 @@ trait Tab extends View {
   def setWindow(window: Window): Unit = js.native
   
   /**
+    * Defines the color of the tab icon. Will fallback to titleColor when not defined.
+    */
+  @JSName("tintColor")
+  var tintColor_Tab: String = js.native
+  
+  /**
     * Title for this tab.
     */
   var title: String = js.native
@@ -318,7 +344,7 @@ trait Tab extends View {
   /**
     * Defines the color of the title of tab when it's inactive.
     */
-  var titleColor: String = js.native
+  var titleColor: String | Color = js.native
   
   /**
     * Key identifying a string from the locale file to use for the tab title. Only one of `title` or `titleid` should be specified.

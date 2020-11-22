@@ -1,15 +1,18 @@
 package typingsSlinky.jestCli.anon
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.jestCli.jestCliStrings.fake
-import typingsSlinky.jestCli.jestCliStrings.real
 import typingsSlinky.jestTypes.anon.Global
 import typingsSlinky.jestTypes.configMod.ConfigGlobals
+import typingsSlinky.jestTypes.configMod.CoverageProvider
+import typingsSlinky.jestTypes.configMod.CoverageReporterName
+import typingsSlinky.jestTypes.configMod.CoverageReporterWithOptions
+import typingsSlinky.jestTypes.configMod.CoverageReporters
 import typingsSlinky.jestTypes.configMod.DisplayName
 import typingsSlinky.jestTypes.configMod.Glob
 import typingsSlinky.jestTypes.configMod.HasteConfig
 import typingsSlinky.jestTypes.configMod.Path
 import typingsSlinky.jestTypes.configMod.ReporterConfig
+import typingsSlinky.jestTypes.configMod.Timers
 import typingsSlinky.jestTypes.configMod.TransformerConfig
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -23,8 +26,6 @@ trait PartialInitialOptions extends js.Object {
   var automock: js.UndefOr[Boolean] = js.native
   
   var bail: js.UndefOr[Boolean | Double] = js.native
-  
-  var browser: js.UndefOr[Boolean] = js.native
   
   var cache: js.UndefOr[Boolean] = js.native
   
@@ -46,7 +47,9 @@ trait PartialInitialOptions extends js.Object {
   
   var coveragePathIgnorePatterns: js.UndefOr[js.Array[java.lang.String]] = js.native
   
-  var coverageReporters: js.UndefOr[js.Array[java.lang.String]] = js.native
+  var coverageProvider: js.UndefOr[CoverageProvider] = js.native
+  
+  var coverageReporters: js.UndefOr[CoverageReporters] = js.native
   
   var coverageThreshold: js.UndefOr[Global] = js.native
   
@@ -56,7 +59,7 @@ trait PartialInitialOptions extends js.Object {
   
   var detectOpenHandles: js.UndefOr[Boolean] = js.native
   
-  var displayName: js.UndefOr[DisplayName] = js.native
+  var displayName: js.UndefOr[java.lang.String | DisplayName] = js.native
   
   var errorOnDeprecated: js.UndefOr[Boolean] = js.native
   
@@ -80,6 +83,8 @@ trait PartialInitialOptions extends js.Object {
   
   var haste: js.UndefOr[HasteConfig] = js.native
   
+  var injectGlobals: js.UndefOr[Boolean] = js.native
+  
   var json: js.UndefOr[Boolean] = js.native
   
   var lastCommit: js.UndefOr[Boolean] = js.native
@@ -100,7 +105,7 @@ trait PartialInitialOptions extends js.Object {
   
   var moduleLoader: js.UndefOr[Path] = js.native
   
-  var moduleNameMapper: js.UndefOr[StringDictionary[java.lang.String]] = js.native
+  var moduleNameMapper: js.UndefOr[StringDictionary[java.lang.String | js.Array[java.lang.String]]] = js.native
   
   var modulePathIgnorePatterns: js.UndefOr[js.Array[java.lang.String]] = js.native
   
@@ -116,6 +121,8 @@ trait PartialInitialOptions extends js.Object {
   var notify_FPartialInitialOptions: js.UndefOr[Boolean] = js.native
   
   var onlyChanged: js.UndefOr[Boolean] = js.native
+  
+  var onlyFailures: js.UndefOr[Boolean] = js.native
   
   var outputFile: js.UndefOr[Path] = js.native
   
@@ -163,6 +170,8 @@ trait PartialInitialOptions extends js.Object {
   
   var skipNodeResolution: js.UndefOr[Boolean] = js.native
   
+  var slowTestThreshold: js.UndefOr[Double] = js.native
+  
   var snapshotResolver: js.UndefOr[Path] = js.native
   
   var snapshotSerializers: js.UndefOr[js.Array[Path]] = js.native
@@ -185,7 +194,7 @@ trait PartialInitialOptions extends js.Object {
   
   var testRegex: js.UndefOr[java.lang.String | js.Array[java.lang.String]] = js.native
   
-  var testResultsProcessor: js.UndefOr[java.lang.String | Null] = js.native
+  var testResultsProcessor: js.UndefOr[java.lang.String] = js.native
   
   var testRunner: js.UndefOr[java.lang.String] = js.native
   
@@ -195,7 +204,7 @@ trait PartialInitialOptions extends js.Object {
   
   var testURL: js.UndefOr[java.lang.String] = js.native
   
-  var timers: js.UndefOr[real | fake] = js.native
+  var timers: js.UndefOr[Timers] = js.native
   
   var transform: js.UndefOr[StringDictionary[Path | TransformerConfig]] = js.native
   
@@ -207,7 +216,7 @@ trait PartialInitialOptions extends js.Object {
   
   var useStderr: js.UndefOr[Boolean] = js.native
   
-  var verbose: js.UndefOr[Boolean | Null] = js.native
+  var verbose: js.UndefOr[Boolean] = js.native
   
   var watch: js.UndefOr[Boolean] = js.native
   
@@ -255,12 +264,6 @@ object PartialInitialOptions {
     
     @scala.inline
     def deleteBail: Self = this.set("bail", js.undefined)
-    
-    @scala.inline
-    def setBrowser(value: Boolean): Self = this.set("browser", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBrowser: Self = this.set("browser", js.undefined)
     
     @scala.inline
     def setCache(value: Boolean): Self = this.set("cache", value.asInstanceOf[js.Any])
@@ -329,10 +332,16 @@ object PartialInitialOptions {
     def deleteCoveragePathIgnorePatterns: Self = this.set("coveragePathIgnorePatterns", js.undefined)
     
     @scala.inline
-    def setCoverageReportersVarargs(value: java.lang.String*): Self = this.set("coverageReporters", js.Array(value :_*))
+    def setCoverageProvider(value: CoverageProvider): Self = this.set("coverageProvider", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCoverageReporters(value: js.Array[java.lang.String]): Self = this.set("coverageReporters", value.asInstanceOf[js.Any])
+    def deleteCoverageProvider: Self = this.set("coverageProvider", js.undefined)
+    
+    @scala.inline
+    def setCoverageReportersVarargs(value: (CoverageReporterName | CoverageReporterWithOptions[CoverageReporterName])*): Self = this.set("coverageReporters", js.Array(value :_*))
+    
+    @scala.inline
+    def setCoverageReporters(value: CoverageReporters): Self = this.set("coverageReporters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCoverageReporters: Self = this.set("coverageReporters", js.undefined)
@@ -362,7 +371,7 @@ object PartialInitialOptions {
     def deleteDetectOpenHandles: Self = this.set("detectOpenHandles", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: DisplayName): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: java.lang.String | DisplayName): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
@@ -446,6 +455,12 @@ object PartialInitialOptions {
     def deleteHaste: Self = this.set("haste", js.undefined)
     
     @scala.inline
+    def setInjectGlobals(value: Boolean): Self = this.set("injectGlobals", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInjectGlobals: Self = this.set("injectGlobals", js.undefined)
+    
+    @scala.inline
     def setJson(value: Boolean): Self = this.set("json", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -512,7 +527,7 @@ object PartialInitialOptions {
     def deleteModuleLoader: Self = this.set("moduleLoader", js.undefined)
     
     @scala.inline
-    def setModuleNameMapper(value: StringDictionary[java.lang.String]): Self = this.set("moduleNameMapper", value.asInstanceOf[js.Any])
+    def setModuleNameMapper(value: StringDictionary[java.lang.String | js.Array[java.lang.String]]): Self = this.set("moduleNameMapper", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModuleNameMapper: Self = this.set("moduleNameMapper", js.undefined)
@@ -564,6 +579,12 @@ object PartialInitialOptions {
     
     @scala.inline
     def deleteOnlyChanged: Self = this.set("onlyChanged", js.undefined)
+    
+    @scala.inline
+    def setOnlyFailures(value: Boolean): Self = this.set("onlyFailures", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOnlyFailures: Self = this.set("onlyFailures", js.undefined)
     
     @scala.inline
     def setOutputFile(value: Path): Self = this.set("outputFile", value.asInstanceOf[js.Any])
@@ -734,6 +755,12 @@ object PartialInitialOptions {
     def deleteSkipNodeResolution: Self = this.set("skipNodeResolution", js.undefined)
     
     @scala.inline
+    def setSlowTestThreshold(value: Double): Self = this.set("slowTestThreshold", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSlowTestThreshold: Self = this.set("slowTestThreshold", js.undefined)
+    
+    @scala.inline
     def setSnapshotResolver(value: Path): Self = this.set("snapshotResolver", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -821,9 +848,6 @@ object PartialInitialOptions {
     def deleteTestResultsProcessor: Self = this.set("testResultsProcessor", js.undefined)
     
     @scala.inline
-    def setTestResultsProcessorNull: Self = this.set("testResultsProcessor", null)
-    
-    @scala.inline
     def setTestRunner(value: java.lang.String): Self = this.set("testRunner", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -848,7 +872,7 @@ object PartialInitialOptions {
     def deleteTestURL: Self = this.set("testURL", js.undefined)
     
     @scala.inline
-    def setTimers(value: real | fake): Self = this.set("timers", value.asInstanceOf[js.Any])
+    def setTimers(value: Timers): Self = this.set("timers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTimers: Self = this.set("timers", js.undefined)
@@ -894,9 +918,6 @@ object PartialInitialOptions {
     
     @scala.inline
     def deleteVerbose: Self = this.set("verbose", js.undefined)
-    
-    @scala.inline
-    def setVerboseNull: Self = this.set("verbose", null)
     
     @scala.inline
     def setWatch(value: Boolean): Self = this.set("watch", value.asInstanceOf[js.Any])

@@ -25,8 +25,6 @@ trait RadiusZ extends js.Object {
   var sideOrientation: js.UndefOr[Double] = js.native
   
   var subdivisions: js.UndefOr[Double] = js.native
-  
-  var updatable: js.UndefOr[Boolean] = js.native
 }
 object RadiusZ {
   
@@ -104,11 +102,5 @@ object RadiusZ {
     
     @scala.inline
     def deleteSubdivisions: Self = this.set("subdivisions", js.undefined)
-    
-    @scala.inline
-    def setUpdatable(value: Boolean): Self = this.set("updatable", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUpdatable: Self = this.set("updatable", js.undefined)
   }
 }

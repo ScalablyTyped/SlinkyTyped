@@ -1,7 +1,7 @@
 package typingsSlinky.libpq.mod
 
+import typingsSlinky.buffer.mod.Buffer
 import typingsSlinky.libpq.libpqBooleans.`true`
-import typingsSlinky.node.bufferMod.Buffer
 import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -28,7 +28,7 @@ trait DescribeClassificationJobResponse extends js.Object {
   var description: js.UndefOr[string] = js.native
   
   /**
-    * Specifies whether the job has run for the first time.
+    * Specifies whether the job is configured to analyze all existing, eligible objects immediately after it's created.
     */
   var initialRun: js.UndefOr[boolean] = js.native
   
@@ -43,17 +43,22 @@ trait DescribeClassificationJobResponse extends js.Object {
   var jobId: js.UndefOr[string] = js.native
   
   /**
-    * The current status of the job. Possible values are: CANCELLED - The job was cancelled by you or a user of the master account for your organization. A job might also be cancelled if ownership of an S3 bucket changed while the job was running, and that change affected the job's access to the bucket. COMPLETE - Amazon Macie finished processing all the data specified for the job. IDLE - For a recurring job, the previous scheduled run is complete and the next scheduled run is pending. This value doesn't apply to jobs that occur only once. PAUSED - Amazon Macie started the job, but completion of the job would exceed one or more quotas for your account. RUNNING - The job is in progress.
+    * The current status of the job. Possible values are: CANCELLED - You cancelled the job, or you paused the job while it had a status of RUNNING and you didn't resume it within 30 days of pausing it. COMPLETE - For a one-time job, Amazon Macie finished processing the data specified for the job. This value doesn't apply to recurring jobs. IDLE - For a recurring job, the previous scheduled run is complete and the next scheduled run is pending. This value doesn't apply to one-time jobs. PAUSED - Amazon Macie started running the job but additional processing would exceed the monthly sensitive data discovery quota for your account or one or more member accounts that the job analyzes data for. RUNNING - For a one-time job, the job is in progress. For a recurring job, a scheduled run is in progress. USER_PAUSED - You paused the job. If you paused the job while it had a status of RUNNING and you don't resume the job within 30 days of pausing it, the job expires and is cancelled. To check the job's expiration date, refer to the UserPausedDetails.jobExpiresAt property.
     */
   var jobStatus: js.UndefOr[JobStatus] = js.native
   
   /**
-    * The schedule for running the job. Possible values are: ONE_TIME - The job ran or will run only once. SCHEDULED - The job runs on a daily, weekly, or monthly basis. The scheduleFrequency property indicates the recurrence pattern for the job.
+    * The schedule for running the job. Possible values are: ONE_TIME - The job runs only once. SCHEDULED - The job runs on a daily, weekly, or monthly basis. The scheduleFrequency property indicates the recurrence pattern for the job.
     */
   var jobType: js.UndefOr[JobType] = js.native
   
   /**
-    * The date and time, in UTC and extended ISO 8601 format, when the job last ran.
+    * Specifies whether any account- or bucket-level access errors occurred when the job ran. For a recurring job, this value indicates the error status of the job's most recent run.
+    */
+  var lastRunErrorStatus: js.UndefOr[LastRunErrorStatus] = js.native
+  
+  /**
+    * The date and time, in UTC and extended ISO 8601 format, when the job started. If the job is a recurring job, this value indicates when the most recent run started.
     */
   var lastRunTime: js.UndefOr[js.Date] = js.native
   
@@ -68,7 +73,7 @@ trait DescribeClassificationJobResponse extends js.Object {
   var s3JobDefinition: js.UndefOr[S3JobDefinition] = js.native
   
   /**
-    * The sampling depth, as a percentage, that the job applies when it processes objects.
+    * The sampling depth, as a percentage, that determines the percentage of eligible objects that the job analyzes.
     */
   var samplingPercentage: js.UndefOr[integer] = js.native
   
@@ -78,14 +83,19 @@ trait DescribeClassificationJobResponse extends js.Object {
   var scheduleFrequency: js.UndefOr[JobScheduleFrequency] = js.native
   
   /**
-    * The number of times that the job has run and processing statistics for the job's most recent run.
+    * The number of times that the job has run and processing statistics for the job's current run.
     */
   var statistics: js.UndefOr[Statistics] = js.native
   
   /**
-    * A map of key-value pairs that identifies the tags (keys and values) that are associated with the classification job.
+    * A map of key-value pairs that specifies which tags (keys and values) are associated with the classification job.
     */
   var tags: js.UndefOr[TagMap] = js.native
+  
+  /**
+    * If the current status of the job is USER_PAUSED, specifies when the job was paused and when the job will expire and be cancelled if it isn't resumed. This value is present only if the value for jobStatus is USER_PAUSED.
+    */
+  var userPausedDetails: js.UndefOr[UserPausedDetails] = js.native
 }
 object DescribeClassificationJobResponse {
   
@@ -168,6 +178,12 @@ object DescribeClassificationJobResponse {
     def deleteJobType: Self = this.set("jobType", js.undefined)
     
     @scala.inline
+    def setLastRunErrorStatus(value: LastRunErrorStatus): Self = this.set("lastRunErrorStatus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLastRunErrorStatus: Self = this.set("lastRunErrorStatus", js.undefined)
+    
+    @scala.inline
     def setLastRunTime(value: js.Date): Self = this.set("lastRunTime", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -208,5 +224,11 @@ object DescribeClassificationJobResponse {
     
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)
+    
+    @scala.inline
+    def setUserPausedDetails(value: UserPausedDetails): Self = this.set("userPausedDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUserPausedDetails: Self = this.set("userPausedDetails", js.undefined)
   }
 }

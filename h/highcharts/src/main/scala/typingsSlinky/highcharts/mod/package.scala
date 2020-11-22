@@ -244,7 +244,7 @@ package object mod {
     scala.Unit
   ]
   
-  type PointOptionsType = scala.Double | java.lang.String | typingsSlinky.highcharts.mod.PointOptionsObject | (js.Array[scala.Double | java.lang.String]) | scala.Null
+  type PointOptionsType = scala.Double | java.lang.String | typingsSlinky.highcharts.mod.PointOptionsObject | (js.Array[scala.Double | java.lang.String | scala.Null]) | scala.Null
   
   type PointRemoveCallbackFunction = js.ThisFunction1[
     /* this */ typingsSlinky.highcharts.mod.Point, 
@@ -285,16 +285,30 @@ package object mod {
   type SVGDOMElement = org.scalajs.dom.raw.SVGElement
   
   type SVGPathArray = js.Array[
-    js.Tuple8[
+    js.Array[typingsSlinky.highcharts.mod.SVGPathCommand] | (js.Tuple2[typingsSlinky.highcharts.mod.SVGPathCommand, scala.Double]) | (js.Tuple3[typingsSlinky.highcharts.mod.SVGPathCommand, scala.Double, scala.Double]) | (js.Tuple5[
       typingsSlinky.highcharts.mod.SVGPathCommand, 
-      js.UndefOr[scala.Double], 
-      js.UndefOr[scala.Double], 
-      js.UndefOr[scala.Double], 
-      js.UndefOr[scala.Double], 
-      js.UndefOr[scala.Double], 
-      js.UndefOr[scala.Double], 
-      js.UndefOr[scala.Double]
-    ]
+      scala.Double, 
+      scala.Double, 
+      scala.Double, 
+      scala.Double
+    ]) | (js.Tuple7[
+      typingsSlinky.highcharts.mod.SVGPathCommand, 
+      scala.Double, 
+      scala.Double, 
+      scala.Double, 
+      scala.Double, 
+      scala.Double, 
+      scala.Double
+    ]) | (js.Tuple8[
+      typingsSlinky.highcharts.mod.SVGPathCommand, 
+      scala.Double, 
+      scala.Double, 
+      scala.Double, 
+      scala.Double, 
+      scala.Double, 
+      scala.Double, 
+      scala.Double
+    ])
   ]
   
   type ScreenReaderClickCallbackFunction = js.Function1[/* evt */ org.scalajs.dom.raw.MouseEvent, scala.Unit]
@@ -393,7 +407,7 @@ package object mod {
     /* this */ typingsSlinky.highcharts.mod.Tooltip, 
     /* labelWidth */ scala.Double, 
     /* labelHeight */ scala.Double, 
-    /* point */ typingsSlinky.highcharts.mod.Point | typingsSlinky.highcharts.mod.TooltipPositionerPointObject, 
+    /* point */ typingsSlinky.highcharts.mod.TooltipPositionerPointObject, 
     typingsSlinky.highcharts.mod.PositionObject
   ]
   

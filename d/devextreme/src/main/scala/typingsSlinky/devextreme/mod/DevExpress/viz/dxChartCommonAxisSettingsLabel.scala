@@ -1,5 +1,9 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.SVGElement
+import org.scalajs.dom.raw.SVGGElement
+import typingsSlinky.devextreme.anon.ValueValueText
 import typingsSlinky.devextreme.devextremeStrings.bottom
 import typingsSlinky.devextreme.devextremeStrings.breakWord
 import typingsSlinky.devextreme.devextremeStrings.center
@@ -15,6 +19,8 @@ import typingsSlinky.devextreme.devextremeStrings.rotate
 import typingsSlinky.devextreme.devextremeStrings.stagger
 import typingsSlinky.devextreme.devextremeStrings.standard
 import typingsSlinky.devextreme.devextremeStrings.top
+import typingsSlinky.devextreme.mod.DevExpress.core.template
+import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,37 +28,66 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartCommonAxisSettingsLabel extends js.Object {
   
-  /** @name dxChart.Options.commonAxisSettings.label.alignment */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.alignment]
+    */
   var alignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label.displayMode */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.displayMode]
+    */
   var displayMode: js.UndefOr[rotate | stagger | standard] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label.font */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label.indentFromAxis */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.indentFromAxis]
+    */
   var indentFromAxis: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label.overlappingBehavior */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.overlappingBehavior]
+    */
   var overlappingBehavior: js.UndefOr[rotate | stagger | none | hide] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label.position */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.position]
+    */
   var position: js.UndefOr[inside | outside | bottom | left | right | top] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label.rotationAngle */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.rotationAngle]
+    */
   var rotationAngle: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label.staggeringSpacing */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.staggeringSpacing]
+    */
   var staggeringSpacing: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label.textOverflow */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.template]
+    */
+  var template: js.UndefOr[
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* data */ ValueValueText, /* element */ SVGGElement, String | SVGElement | JQuery])
+  ] = js.native
+  
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.textOverflow]
+    */
   var textOverflow: js.UndefOr[ellipsis | hide | none] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label.visible */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label.wordWrap */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label.wordWrap]
+    */
   var wordWrap: js.UndefOr[normal | breakWord | none] = js.native
 }
 object dxChartCommonAxisSettingsLabel {
@@ -125,6 +160,20 @@ object dxChartCommonAxisSettingsLabel {
     
     @scala.inline
     def deleteStaggeringSpacing: Self = this.set("staggeringSpacing", js.undefined)
+    
+    @scala.inline
+    def setTemplateFunction2(value: (/* data */ ValueValueText, /* element */ SVGGElement) => String | SVGElement | JQuery): Self = this.set("template", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setTemplateElement(value: Element): Self = this.set("template", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTemplate(
+      value: template | (js.Function2[/* data */ ValueValueText, /* element */ SVGGElement, String | SVGElement | JQuery])
+    ): Self = this.set("template", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTemplate: Self = this.set("template", js.undefined)
     
     @scala.inline
     def setTextOverflow(value: ellipsis | hide | none): Self = this.set("textOverflow", value.asInstanceOf[js.Any])

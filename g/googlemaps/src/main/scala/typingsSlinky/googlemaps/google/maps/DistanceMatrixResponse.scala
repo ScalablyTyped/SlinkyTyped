@@ -4,13 +4,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * The response to a {@link DistanceMatrixService} request, consisting of the formatted origin and destination
+  * addresses, and a sequence of {@link DistanceMatrixResponseRow}s, one for each corresponding origin address.
+  * @see {@link https://developers.google.com/maps/documentation/javascript/reference/distance-matrix#DistanceMatrixResponse Maps JavaScript API}
+  */
 @js.native
 trait DistanceMatrixResponse extends js.Object {
   
+  /**
+    * The formatted destination addresses.
+    * @see {@link https://developers.google.com/maps/documentation/javascript/reference/distance-matrix#DistanceMatrixResponse.destinationAddresses Maps JavaScript API}
+    */
   var destinationAddresses: js.Array[String] = js.native
   
+  /**
+    * The formatted origin addresses.
+    * @see {@link https://developers.google.com/maps/documentation/javascript/reference/distance-matrix#DistanceMatrixResponse.originAddresses Maps JavaScript API}
+    */
   var originAddresses: js.Array[String] = js.native
   
+  /**
+    * The rows of the matrix, corresponding to the origin addresses.
+    * @see {@link https://developers.google.com/maps/documentation/javascript/reference/distance-matrix#DistanceMatrixResponse.rows Maps JavaScript API}
+    */
   var rows: js.Array[DistanceMatrixResponseRow] = js.native
 }
 object DistanceMatrixResponse {

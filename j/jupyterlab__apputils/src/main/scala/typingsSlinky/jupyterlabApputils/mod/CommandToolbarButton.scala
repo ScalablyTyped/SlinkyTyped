@@ -3,7 +3,7 @@ package typingsSlinky.jupyterlabApputils.mod
 import typingsSlinky.jupyterlabApputils.toolbarMod.CommandToolbarButtonComponent.IProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/apputils", "CommandToolbarButton")
 @js.native
@@ -15,4 +15,3 @@ class CommandToolbarButton protected ()
     */
   def this(props: IProps) = this()
 }
-

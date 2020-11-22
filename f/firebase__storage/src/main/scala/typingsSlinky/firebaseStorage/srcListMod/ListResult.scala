@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseStorage.srcListMod
 
-import typingsSlinky.firebaseStorage.referenceMod.Reference
+import typingsSlinky.firebaseStorage.srcReferenceMod.Reference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +10,7 @@ trait ListResult extends js.Object {
   
   var items: js.Array[Reference] = js.native
   
-  var nextPageToken: js.UndefOr[String | Null] = js.native
+  var nextPageToken: js.UndefOr[String] = js.native
   
   var prefixes: js.Array[Reference] = js.native
 }
@@ -54,8 +54,5 @@ object ListResult {
     
     @scala.inline
     def deleteNextPageToken: Self = this.set("nextPageToken", js.undefined)
-    
-    @scala.inline
-    def setNextPageTokenNull: Self = this.set("nextPageToken", null)
   }
 }

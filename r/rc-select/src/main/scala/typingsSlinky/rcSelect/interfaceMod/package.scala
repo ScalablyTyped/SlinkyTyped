@@ -6,6 +6,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object interfaceMod {
   
+  type OnActiveValue = js.Function3[
+    /* active */ typingsSlinky.rcSelect.generatorMod.RawValueType, 
+    /* index */ scala.Double, 
+    /* info */ js.UndefOr[typingsSlinky.rcSelect.anon.Source], 
+    scala.Unit
+  ]
+  
   type OptionsType = js.Array[
     typingsSlinky.rcSelect.interfaceMod.OptionData | typingsSlinky.rcSelect.interfaceMod.OptionGroupData
   ]

@@ -3,6 +3,7 @@ package typingsSlinky.reactRange.typesMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactRange.anon.Children
 import typingsSlinky.reactRange.anon.Index
+import typingsSlinky.reactRange.anon.IsDragged
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,6 +17,8 @@ trait IProps extends js.Object {
   
   var disabled: Boolean = js.native
   
+  var draggableTrack: Boolean = js.native
+  
   var max: Double = js.native
   
   var min: Double = js.native
@@ -24,7 +27,9 @@ trait IProps extends js.Object {
   
   var onFinalChange: js.UndefOr[js.Function1[/* values */ js.Array[Double], Unit]] = js.native
   
-  def renderThumb(params: Index): ReactElement = js.native
+  var renderMark: js.UndefOr[js.Function1[/* params */ Index, ReactElement]] = js.native
+  
+  def renderThumb(params: IsDragged): ReactElement = js.native
   
   def renderTrack(params: Children): ReactElement = js.native
   
@@ -41,16 +46,17 @@ object IProps {
     allowOverlap: Boolean,
     direction: Direction,
     disabled: Boolean,
+    draggableTrack: Boolean,
     max: Double,
     min: Double,
     onChange: js.Array[Double] => Unit,
-    renderThumb: Index => ReactElement,
+    renderThumb: IsDragged => ReactElement,
     renderTrack: Children => ReactElement,
     rtl: Boolean,
     step: Double,
     values: js.Array[Double]
   ): IProps = {
-    val __obj = js.Dynamic.literal(allowOverlap = allowOverlap.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], max = max.asInstanceOf[js.Any], min = min.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), renderThumb = js.Any.fromFunction1(renderThumb), renderTrack = js.Any.fromFunction1(renderTrack), rtl = rtl.asInstanceOf[js.Any], step = step.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(allowOverlap = allowOverlap.asInstanceOf[js.Any], direction = direction.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], draggableTrack = draggableTrack.asInstanceOf[js.Any], max = max.asInstanceOf[js.Any], min = min.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), renderThumb = js.Any.fromFunction1(renderThumb), renderTrack = js.Any.fromFunction1(renderTrack), rtl = rtl.asInstanceOf[js.Any], step = step.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
     __obj.asInstanceOf[IProps]
   }
   
@@ -79,6 +85,9 @@ object IProps {
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setDraggableTrack(value: Boolean): Self = this.set("draggableTrack", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -88,7 +97,7 @@ object IProps {
     def setOnChange(value: js.Array[Double] => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setRenderThumb(value: Index => ReactElement): Self = this.set("renderThumb", js.Any.fromFunction1(value))
+    def setRenderThumb(value: IsDragged => ReactElement): Self = this.set("renderThumb", js.Any.fromFunction1(value))
     
     @scala.inline
     def setRenderTrack(value: Children => ReactElement): Self = this.set("renderTrack", js.Any.fromFunction1(value))
@@ -110,5 +119,11 @@ object IProps {
     
     @scala.inline
     def deleteOnFinalChange: Self = this.set("onFinalChange", js.undefined)
+    
+    @scala.inline
+    def setRenderMark(value: /* params */ Index => ReactElement): Self = this.set("renderMark", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteRenderMark: Self = this.set("renderMark", js.undefined)
   }
 }

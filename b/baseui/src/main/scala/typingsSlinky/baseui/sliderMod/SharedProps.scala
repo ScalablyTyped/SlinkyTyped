@@ -13,6 +13,9 @@ trait SharedProps extends js.Object {
   @JSName("$isDragged")
   var $isDragged: Boolean = js.native
   
+  @JSName("$marks")
+  var $marks: Boolean = js.native
+  
   @JSName("$max")
   var $max: Double = js.native
   
@@ -31,12 +34,13 @@ object SharedProps {
   def apply(
     $disabled: Boolean,
     $isDragged: Boolean,
+    $marks: Boolean,
     $max: Double,
     $min: Double,
     $thumbIndex: Double,
     $value: js.Array[Double]
   ): SharedProps = {
-    val __obj = js.Dynamic.literal($disabled = $disabled.asInstanceOf[js.Any], $isDragged = $isDragged.asInstanceOf[js.Any], $max = $max.asInstanceOf[js.Any], $min = $min.asInstanceOf[js.Any], $thumbIndex = $thumbIndex.asInstanceOf[js.Any], $value = $value.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal($disabled = $disabled.asInstanceOf[js.Any], $isDragged = $isDragged.asInstanceOf[js.Any], $marks = $marks.asInstanceOf[js.Any], $max = $max.asInstanceOf[js.Any], $min = $min.asInstanceOf[js.Any], $thumbIndex = $thumbIndex.asInstanceOf[js.Any], $value = $value.asInstanceOf[js.Any])
     __obj.asInstanceOf[SharedProps]
   }
   
@@ -60,6 +64,9 @@ object SharedProps {
     
     @scala.inline
     def set$isDragged(value: Boolean): Self = this.set("$isDragged", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def set$marks(value: Boolean): Self = this.set("$marks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def set$max(value: Double): Self = this.set("$max", value.asInstanceOf[js.Any])

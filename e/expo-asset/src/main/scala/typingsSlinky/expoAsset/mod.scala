@@ -10,6 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
+  def useAssets(moduleIds: js.Array[Double]): js.Tuple2[js.UndefOr[js.Array[typingsSlinky.expoAsset.assetMod.Asset]], js.UndefOr[js.Error]] = js.native
+  def useAssets(moduleIds: Double): js.Tuple2[js.UndefOr[js.Array[typingsSlinky.expoAsset.assetMod.Asset]], js.UndefOr[js.Error]] = js.native
+  
   @js.native
   class Asset protected ()
     extends typingsSlinky.expoAsset.assetMod.Asset {
@@ -26,7 +29,8 @@ object mod extends js.Object {
     
     def fromURI(uri: String): typingsSlinky.expoAsset.assetMod.Asset = js.native
     
-    def loadAsync(moduleId: js.Array[Double]): js.Promise[js.Array[Unit]] = js.native
-    def loadAsync(moduleId: Double): js.Promise[js.Array[Unit]] = js.native
+    def loadAsync(moduleId: String): js.Promise[js.Array[typingsSlinky.expoAsset.assetMod.Asset]] = js.native
+    def loadAsync(moduleId: js.Array[Double | String]): js.Promise[js.Array[typingsSlinky.expoAsset.assetMod.Asset]] = js.native
+    def loadAsync(moduleId: Double): js.Promise[js.Array[typingsSlinky.expoAsset.assetMod.Asset]] = js.native
   }
 }

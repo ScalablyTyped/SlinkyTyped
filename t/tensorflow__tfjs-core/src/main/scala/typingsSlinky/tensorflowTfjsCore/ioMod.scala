@@ -70,8 +70,7 @@ object ioMod extends js.Object {
     *   is successful).
     * @throws Error if copying fails, e.g., if no model exists at `sourceURL`, or
     *   if `oldPath` and `newPath` are identical.
-    */
-  /**
+    *
     * @doc {
     *   heading: 'Models',
     *   subheading: 'Management',
@@ -203,8 +202,7 @@ object ioMod extends js.Object {
     * their model artifacts info. URLs include medium-specific schemes, e.g.,
     *   'indexeddb://my/model/1'. Model artifacts info include type of the
     * model's topology, byte sizes of the topology, weights, etc.
-    */
-  /**
+    *
     * @doc {
     *   heading: 'Models',
     *   subheading: 'Management',
@@ -285,8 +283,7 @@ object ioMod extends js.Object {
     *   is successful).
     * @throws Error if moving fails, e.g., if no model exists at `sourceURL`, or
     *   if `oldPath` and `newPath` are identical.
-    */
-  /**
+    *
     * @doc {
     *   heading: 'Models',
     *   subheading: 'Management',
@@ -325,8 +322,7 @@ object ioMod extends js.Object {
     * @returns ModelArtifactsInfo of the deleted model (if and only if deletion
     *   is successful).
     * @throws Error if deletion fails, e.g., if no model exists at `path`.
-    */
-  /**
+    *
     * @doc {
     *   heading: 'Models',
     *   subheading: 'Management',

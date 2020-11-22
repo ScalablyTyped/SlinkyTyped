@@ -3,12 +3,12 @@ package typingsSlinky.reactstrap.dropdownMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.reactstrapStrings.append
 import typingsSlinky.reactstrap.reactstrapStrings.prepend
@@ -45,7 +45,7 @@ trait DropdownProps
   
   var size: js.UndefOr[String] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
   
   var toggle: js.UndefOr[KeyboardEventHandler[_] | MouseEventHandler[_]] = js.native
 }
@@ -151,7 +151,7 @@ object DropdownProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

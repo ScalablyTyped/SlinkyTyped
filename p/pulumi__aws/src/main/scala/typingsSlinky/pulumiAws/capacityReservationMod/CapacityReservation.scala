@@ -1,9 +1,9 @@
 package typingsSlinky.pulumiAws.capacityReservationMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.instancePlatformMod.InstancePlatform
-import typingsSlinky.pulumiAws.instanceTypeMod.InstanceType
-import typingsSlinky.pulumiAws.tenancyMod.Tenancy
+import typingsSlinky.pulumiAws.enumsEc2Mod.InstancePlatform
+import typingsSlinky.pulumiAws.enumsEc2Mod.InstanceType
+import typingsSlinky.pulumiAws.enumsEc2Mod.Tenancy
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_

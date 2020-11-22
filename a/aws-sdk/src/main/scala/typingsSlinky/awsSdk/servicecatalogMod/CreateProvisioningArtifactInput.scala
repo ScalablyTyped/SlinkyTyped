@@ -18,7 +18,7 @@ trait CreateProvisioningArtifactInput extends js.Object {
   var IdempotencyToken: typingsSlinky.awsSdk.servicecatalogMod.IdempotencyToken = js.native
   
   /**
-    * The configuration for the provisioning artifact.
+    * The configuration for the provisioning artifact. The info field accepts ImportFromPhysicalID. 
     */
   var Parameters: ProvisioningArtifactProperties = js.native
   

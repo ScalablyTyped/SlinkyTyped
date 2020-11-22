@@ -6,7 +6,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** Options for dialog creation */
-// tslint:disable-next-line: interface-name
 @js.native
 trait IDialogOptions extends js.Object {
   

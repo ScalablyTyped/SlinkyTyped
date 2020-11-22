@@ -109,7 +109,7 @@ object Matrix extends js.Object {
     * @param result defines the target matrix
     */
   def FromFloat32ArrayToRefScaled(
-    array: DeepImmutable[js.typedarray.Float32Array],
+    array: DeepImmutable[js.typedarray.Float32Array | js.Array[Double]],
     offset: Double,
     scale: Double,
     result: typingsSlinky.babylonjs.mathVectorMod.Matrix
@@ -223,14 +223,14 @@ object Matrix extends js.Object {
     * @param matrix defines the matrix to use
     * @returns a new Float32Array array with 4 elements : the 2x2 matrix extracted from the given matrix
     */
-  def GetAsMatrix2x2(matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]): js.typedarray.Float32Array = js.native
+  def GetAsMatrix2x2(matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]): js.typedarray.Float32Array | js.Array[Double] = js.native
   
   /**
     * Extracts a 3x3 matrix from a given matrix and store the result in a Float32Array
     * @param matrix defines the matrix to use
     * @returns a new Float32Array array with 9 elements : the 3x3 matrix extracted from the given matrix
     */
-  def GetAsMatrix3x3(matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]): js.typedarray.Float32Array = js.native
+  def GetAsMatrix3x3(matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix]): js.typedarray.Float32Array | js.Array[Double] = js.native
   
   /**
     * Computes a complete transformation matrix
@@ -681,7 +681,7 @@ object Matrix extends js.Object {
     * Creates a rotation matrix
     * @param yaw defines the yaw angle in radians (Y axis)
     * @param pitch defines the pitch angle in radians (X axis)
-    * @param roll defines the roll angle in radians (X axis)
+    * @param roll defines the roll angle in radians (Z axis)
     * @returns the new rotation matrix
     */
   def RotationYawPitchRoll(yaw: Double, pitch: Double, roll: Double): typingsSlinky.babylonjs.mathVectorMod.Matrix = js.native
@@ -690,7 +690,7 @@ object Matrix extends js.Object {
     * Creates a rotation matrix and stores it in a given matrix
     * @param yaw defines the yaw angle in radians (Y axis)
     * @param pitch defines the pitch angle in radians (X axis)
-    * @param roll defines the roll angle in radians (X axis)
+    * @param roll defines the roll angle in radians (Z axis)
     * @param result defines the target matrix
     */
   def RotationYawPitchRollToRef(yaw: Double, pitch: Double, roll: Double, result: typingsSlinky.babylonjs.mathVectorMod.Matrix): Unit = js.native
@@ -761,6 +761,11 @@ object Matrix extends js.Object {
     matrix: DeepImmutable[typingsSlinky.babylonjs.mathVectorMod.Matrix],
     result: typingsSlinky.babylonjs.mathVectorMod.Matrix
   ): Unit = js.native
+  
+  /**
+    * Gets the precision of matrix computations
+    */
+  def Use64Bits: Boolean = js.native
   
   /**
     * Creates a new zero matrix

@@ -1,6 +1,5 @@
 package typingsSlinky.carbonComponents.contentSwitcherMod
 
-import typingsSlinky.carbonComponents.anon.Item
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - Dropped any */ @js.native
 trait ContentSwitcher extends js.Object {
   
-  def _changeState(hasItem: Item, callback: js.Any): Unit = js.native
+  def _changeState(hasItem: js.Any, callback: js.Any): Unit = js.native
   
   def _handleClick(event: js.Any): Unit = js.native
   
@@ -19,7 +18,7 @@ object ContentSwitcher {
   
   @scala.inline
   def apply(
-    _changeState: (Item, js.Any) => Unit,
+    _changeState: (js.Any, js.Any) => Unit,
     _handleClick: js.Any => Unit,
     setActive: (js.Any, js.Any) => Unit
   ): ContentSwitcher = {
@@ -43,7 +42,7 @@ object ContentSwitcher {
     }
     
     @scala.inline
-    def set_changeState(value: (Item, js.Any) => Unit): Self = this.set("_changeState", js.Any.fromFunction2(value))
+    def set_changeState(value: (js.Any, js.Any) => Unit): Self = this.set("_changeState", js.Any.fromFunction2(value))
     
     @scala.inline
     def set_handleClick(value: js.Any => Unit): Self = this.set("_handleClick", js.Any.fromFunction1(value))

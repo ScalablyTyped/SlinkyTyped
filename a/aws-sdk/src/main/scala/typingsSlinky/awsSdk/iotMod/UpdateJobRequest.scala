@@ -28,6 +28,11 @@ trait UpdateJobRequest extends js.Object {
   var jobId: JobId = js.native
   
   /**
+    * The namespace used to indicate that a job is a customer-managed job. When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.  $aws/things/THING_NAME/jobs/JOB_ID/notify-namespace-NAMESPACE_ID/   The namespaceId feature is in public preview. 
+    */
+  var namespaceId: js.UndefOr[NamespaceId] = js.native
+  
+  /**
     * Configuration information for pre-signed S3 URLs.
     */
   var presignedUrlConfig: js.UndefOr[PresignedUrlConfig] = js.native
@@ -80,6 +85,12 @@ object UpdateJobRequest {
     
     @scala.inline
     def deleteJobExecutionsRolloutConfig: Self = this.set("jobExecutionsRolloutConfig", js.undefined)
+    
+    @scala.inline
+    def setNamespaceId(value: NamespaceId): Self = this.set("namespaceId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNamespaceId: Self = this.set("namespaceId", js.undefined)
     
     @scala.inline
     def setPresignedUrlConfig(value: PresignedUrlConfig): Self = this.set("presignedUrlConfig", value.asInstanceOf[js.Any])

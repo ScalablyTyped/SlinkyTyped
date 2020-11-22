@@ -1,6 +1,5 @@
 package typingsSlinky.imageminWebp.mod
 
-import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,11 +18,6 @@ trait Options extends js.Object {
     * @default false
     */
   var autoFilter: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * Buffer to optimize.
-    */
-  var buffer: js.UndefOr[Buffer] = js.native
   
   /**
     * Crop the image.
@@ -131,12 +125,6 @@ object Options {
     
     @scala.inline
     def deleteAutoFilter: Self = this.set("autoFilter", js.undefined)
-    
-    @scala.inline
-    def setBuffer(value: Buffer): Self = this.set("buffer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBuffer: Self = this.set("buffer", js.undefined)
     
     @scala.inline
     def setCrop(value: Crop): Self = this.set("crop", value.asInstanceOf[js.Any])

@@ -101,6 +101,11 @@ trait Action extends js.Object {
     * Starts execution of a Step Functions state machine.
     */
   var stepFunctions: js.UndefOr[StepFunctionsAction] = js.native
+  
+  /**
+    * The Timestream rule action writes attributes (measures) from an MQTT message into an Amazon Timestream table. For more information, see the Timestream topic rule action documentation.
+    */
+  var timestream: js.UndefOr[TimestreamAction] = js.native
 }
 object Action {
   
@@ -238,5 +243,11 @@ object Action {
     
     @scala.inline
     def deleteStepFunctions: Self = this.set("stepFunctions", js.undefined)
+    
+    @scala.inline
+    def setTimestream(value: TimestreamAction): Self = this.set("timestream", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimestream: Self = this.set("timestream", js.undefined)
   }
 }

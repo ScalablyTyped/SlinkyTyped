@@ -1,6 +1,5 @@
 package typingsSlinky.prettier.mod
 
-import typingsSlinky.prettier.anon.RecordBuiltInParserNameBu
 import typingsSlinky.prettier.prettierStrings.`as-needed`
 import typingsSlinky.prettier.prettierStrings.all
 import typingsSlinky.prettier.prettierStrings.always
@@ -15,6 +14,7 @@ import typingsSlinky.prettier.prettierStrings.ignore
 import typingsSlinky.prettier.prettierStrings.lf
 import typingsSlinky.prettier.prettierStrings.never
 import typingsSlinky.prettier.prettierStrings.none
+import typingsSlinky.prettier.prettierStrings.off
 import typingsSlinky.prettier.prettierStrings.preserve
 import typingsSlinky.prettier.prettierStrings.strict
 import scala.scalajs.js
@@ -36,6 +36,12 @@ trait RequiredOptions
     * @default true
     */
   var bracketSpacing: Boolean = js.native
+  
+  /**
+    * Control whether Prettier formats quoted code embedded in the file.
+    * @default 'auto'
+    */
+  var embeddedLanguageFormatting: auto | off = js.native
   
   /**
     * Which end of line characters to apply.
@@ -78,12 +84,12 @@ trait RequiredOptions
   /**
     * Specify which parser to use.
     */
-  var parser: BuiltInParserName | CustomParser = js.native
+  var parser: (LiteralUnion[BuiltInParserName, String]) | CustomParser = js.native
   
   /**
     * The plugin API is in a beta state.
     */
-  var plugins: js.Array[String | Plugin] = js.native
+  var plugins: js.Array[String | Plugin[_]] = js.native
   
   /**
     * By default, Prettier will wrap markdown text as-is since some services use a linebreak-sensitive renderer.
@@ -147,14 +153,16 @@ object RequiredOptions {
   def apply(
     arrowParens: avoid | always,
     bracketSpacing: Boolean,
+    embeddedInHtml: Boolean,
+    embeddedLanguageFormatting: auto | off,
     endOfLine: auto | lf | crlf | cr,
     filepath: String,
     htmlWhitespaceSensitivity: css | strict | ignore,
     insertPragma: Boolean,
     jsxBracketSameLine: Boolean,
     jsxSingleQuote: Boolean,
-    parser: BuiltInParserName | CustomParser,
-    plugins: js.Array[String | Plugin],
+    parser: (LiteralUnion[BuiltInParserName, String]) | CustomParser,
+    plugins: js.Array[String | Plugin[_]],
     printWidth: Double,
     proseWrap: always | never | preserve,
     quoteProps: `as-needed` | consistent | preserve,
@@ -168,7 +176,7 @@ object RequiredOptions {
     useTabs: Boolean,
     vueIndentScriptAndStyle: Boolean
   ): RequiredOptions = {
-    val __obj = js.Dynamic.literal(arrowParens = arrowParens.asInstanceOf[js.Any], bracketSpacing = bracketSpacing.asInstanceOf[js.Any], endOfLine = endOfLine.asInstanceOf[js.Any], filepath = filepath.asInstanceOf[js.Any], htmlWhitespaceSensitivity = htmlWhitespaceSensitivity.asInstanceOf[js.Any], insertPragma = insertPragma.asInstanceOf[js.Any], jsxBracketSameLine = jsxBracketSameLine.asInstanceOf[js.Any], jsxSingleQuote = jsxSingleQuote.asInstanceOf[js.Any], parser = parser.asInstanceOf[js.Any], plugins = plugins.asInstanceOf[js.Any], printWidth = printWidth.asInstanceOf[js.Any], proseWrap = proseWrap.asInstanceOf[js.Any], quoteProps = quoteProps.asInstanceOf[js.Any], rangeEnd = rangeEnd.asInstanceOf[js.Any], rangeStart = rangeStart.asInstanceOf[js.Any], requirePragma = requirePragma.asInstanceOf[js.Any], semi = semi.asInstanceOf[js.Any], singleQuote = singleQuote.asInstanceOf[js.Any], tabWidth = tabWidth.asInstanceOf[js.Any], trailingComma = trailingComma.asInstanceOf[js.Any], useTabs = useTabs.asInstanceOf[js.Any], vueIndentScriptAndStyle = vueIndentScriptAndStyle.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(arrowParens = arrowParens.asInstanceOf[js.Any], bracketSpacing = bracketSpacing.asInstanceOf[js.Any], embeddedInHtml = embeddedInHtml.asInstanceOf[js.Any], embeddedLanguageFormatting = embeddedLanguageFormatting.asInstanceOf[js.Any], endOfLine = endOfLine.asInstanceOf[js.Any], filepath = filepath.asInstanceOf[js.Any], htmlWhitespaceSensitivity = htmlWhitespaceSensitivity.asInstanceOf[js.Any], insertPragma = insertPragma.asInstanceOf[js.Any], jsxBracketSameLine = jsxBracketSameLine.asInstanceOf[js.Any], jsxSingleQuote = jsxSingleQuote.asInstanceOf[js.Any], parser = parser.asInstanceOf[js.Any], plugins = plugins.asInstanceOf[js.Any], printWidth = printWidth.asInstanceOf[js.Any], proseWrap = proseWrap.asInstanceOf[js.Any], quoteProps = quoteProps.asInstanceOf[js.Any], rangeEnd = rangeEnd.asInstanceOf[js.Any], rangeStart = rangeStart.asInstanceOf[js.Any], requirePragma = requirePragma.asInstanceOf[js.Any], semi = semi.asInstanceOf[js.Any], singleQuote = singleQuote.asInstanceOf[js.Any], tabWidth = tabWidth.asInstanceOf[js.Any], trailingComma = trailingComma.asInstanceOf[js.Any], useTabs = useTabs.asInstanceOf[js.Any], vueIndentScriptAndStyle = vueIndentScriptAndStyle.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequiredOptions]
   }
   
@@ -194,6 +202,9 @@ object RequiredOptions {
     def setBracketSpacing(value: Boolean): Self = this.set("bracketSpacing", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setEmbeddedLanguageFormatting(value: auto | off): Self = this.set("embeddedLanguageFormatting", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setEndOfLine(value: auto | lf | crlf | cr): Self = this.set("endOfLine", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -212,16 +223,16 @@ object RequiredOptions {
     def setJsxSingleQuote(value: Boolean): Self = this.set("jsxSingleQuote", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setParserFunction3(value: (/* text */ String, /* parsers */ RecordBuiltInParserNameBu, /* options */ Options) => AST): Self = this.set("parser", js.Any.fromFunction3(value))
+    def setParserFunction3(value: (/* text */ String, /* parsers */ BuiltInParsers, /* options */ Options) => AST): Self = this.set("parser", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setParser(value: BuiltInParserName | CustomParser): Self = this.set("parser", value.asInstanceOf[js.Any])
+    def setParser(value: (LiteralUnion[BuiltInParserName, String]) | CustomParser): Self = this.set("parser", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPluginsVarargs(value: (String | Plugin)*): Self = this.set("plugins", js.Array(value :_*))
+    def setPluginsVarargs(value: (String | Plugin[js.Any])*): Self = this.set("plugins", js.Array(value :_*))
     
     @scala.inline
-    def setPlugins(value: js.Array[String | Plugin]): Self = this.set("plugins", value.asInstanceOf[js.Any])
+    def setPlugins(value: js.Array[String | Plugin[_]]): Self = this.set("plugins", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setProseWrap(value: always | never | preserve): Self = this.set("proseWrap", value.asInstanceOf[js.Any])

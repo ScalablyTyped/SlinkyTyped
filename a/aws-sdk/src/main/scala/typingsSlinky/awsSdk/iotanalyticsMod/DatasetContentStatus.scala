@@ -13,7 +13,7 @@ trait DatasetContentStatus extends js.Object {
   var reason: js.UndefOr[Reason] = js.native
   
   /**
-    * The state of the data set contents. Can be one of "READY", "CREATING", "SUCCEEDED" or "FAILED".
+    * The state of the data set contents. Can be one of READY, CREATING, SUCCEEDED, or FAILED.
     */
   var state: js.UndefOr[DatasetContentState] = js.native
 }

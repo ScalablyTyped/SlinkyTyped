@@ -12,6 +12,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Mixpanel extends js.Object {
   
+  def add_group(group_key: String, group_id: String): Unit = js.native
+  def add_group(group_key: String, group_id: String, callback: Callback): Unit = js.native
+  
   def alias(alias: String): Unit = js.native
   def alias(alias: String, original: String): Unit = js.native
   
@@ -25,6 +28,8 @@ trait Mixpanel extends js.Object {
   def get_config(prop_name: String): js.Any = js.native
   
   def get_distinct_id(): js.Any = js.native
+  
+  def get_group(group_key: String, group_id: String): Group = js.native
   
   def get_property(property_name: String): js.Any = js.native
   
@@ -60,9 +65,23 @@ trait Mixpanel extends js.Object {
   def register_once(props: Dict, default_value: js.Any): Unit = js.native
   def register_once(props: Dict, default_value: js.Any, days: Double): Unit = js.native
   
+  def remove_group(group_key: String, group_ids: String): Unit = js.native
+  def remove_group(group_key: String, group_ids: String, callback: Callback): Unit = js.native
+  def remove_group(group_key: String, group_ids: js.Array[Double | String]): Unit = js.native
+  def remove_group(group_key: String, group_ids: js.Array[Double | String], callback: Callback): Unit = js.native
+  def remove_group(group_key: String, group_ids: Double): Unit = js.native
+  def remove_group(group_key: String, group_ids: Double, callback: Callback): Unit = js.native
+  
   def reset(): Unit = js.native
   
   def set_config(config: PartialConfig): Unit = js.native
+  
+  def set_group(group_key: String, group_ids: String): Unit = js.native
+  def set_group(group_key: String, group_ids: String, callback: Callback): Unit = js.native
+  def set_group(group_key: String, group_ids: js.Array[Double | String]): Unit = js.native
+  def set_group(group_key: String, group_ids: js.Array[Double | String], callback: Callback): Unit = js.native
+  def set_group(group_key: String, group_ids: Double): Unit = js.native
+  def set_group(group_key: String, group_ids: Double, callback: Callback): Unit = js.native
   
   def time_event(event_name: String): Unit = js.native
   
@@ -106,6 +125,9 @@ trait Mixpanel extends js.Object {
   def track_links(query: Query, event_name: String): Unit = js.native
   def track_links(query: Query, event_name: String, properties: js.Function0[Unit]): Unit = js.native
   def track_links(query: Query, event_name: String, properties: Dict): Unit = js.native
+  
+  def track_with_groups(event_name: String, properties: Dict, groups: Dict): Unit = js.native
+  def track_with_groups(event_name: String, properties: Dict, groups: Dict, callback: Callback): Unit = js.native
   
   def unregister(property: String): Unit = js.native
 }

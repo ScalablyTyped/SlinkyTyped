@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MemoryUsageDetails extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/memory-usage-details
+  // Docs: https://electronjs.org/docs/api/structures/memory-usage-details
   var count: Double = js.native
   
   var liveSize: Double = js.native

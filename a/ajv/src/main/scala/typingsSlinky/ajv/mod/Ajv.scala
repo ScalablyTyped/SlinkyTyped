@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Ajv extends js.Object {
   
+  var _opts: Options = js.native
+  
   def addFormat(name: String, format: FormatDefinition): Ajv = js.native
   /**
     * Add custom format

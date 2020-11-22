@@ -10,11 +10,11 @@ trait NamespaceExport
      with NamedExportBindings {
   
   @JSName("kind")
-  var kind_NamespaceExport: typingsSlinky.typescript.mod.SyntaxKind.NamespaceExport = js.native
+  val kind_NamespaceExport: typingsSlinky.typescript.mod.SyntaxKind.NamespaceExport = js.native
   
   @JSName("name")
-  var name_NamespaceExport: Identifier = js.native
+  val name_NamespaceExport: Identifier = js.native
   
   @JSName("parent")
-  var parent_NamespaceExport: ExportDeclaration = js.native
+  val parent_NamespaceExport: ExportDeclaration = js.native
 }

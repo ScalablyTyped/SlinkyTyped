@@ -1,0 +1,13 @@
+package typingsSlinky.typeorm
+
+import typingsSlinky.std.ParameterDecorator
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@JSImport("typeorm/decorator/transaction/TransactionManager", JSImport.Namespace)
+@js.native
+object transactionTransactionManagerMod extends js.Object {
+  
+  def TransactionManager(): ParameterDecorator = js.native
+}

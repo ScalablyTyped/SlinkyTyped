@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DeleteReportDefinitionRequest extends js.Object {
   
+  /**
+    * The name of the report that you want to delete. The name must be unique, is case sensitive, and can't include spaces.
+    */
   var ReportName: js.UndefOr[typingsSlinky.awsSdk.curMod.ReportName] = js.native
 }
 object DeleteReportDefinitionRequest {

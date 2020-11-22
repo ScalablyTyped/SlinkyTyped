@@ -11,7 +11,7 @@ trait RasterColormapRenderer
      with JSONSupport {
   
   /**
-    * A colormap info array containing mappings for pixel and RGB color values. Colormaps contain a set of values that are associated with colors and pixel values, and are used to display a single-band raster consistently with the same colors.
+    * A colormap info array containing mappings for pixel and RGB color values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-RasterColormapRenderer.html#colormapInfos)
     */

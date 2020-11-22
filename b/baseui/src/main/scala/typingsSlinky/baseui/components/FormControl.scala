@@ -36,6 +36,9 @@ object FormControl {
     def error(value: Boolean | ReactElement): this.type = set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def htmlFor(value: String): this.type = set("htmlFor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
     
     @scala.inline

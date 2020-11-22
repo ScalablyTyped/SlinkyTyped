@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DebuggerStatement extends Statement {
   
   @JSName("kind")
-  var kind_DebuggerStatement: typingsSlinky.typescript.mod.SyntaxKind.DebuggerStatement = js.native
+  val kind_DebuggerStatement: typingsSlinky.typescript.mod.SyntaxKind.DebuggerStatement = js.native
 }

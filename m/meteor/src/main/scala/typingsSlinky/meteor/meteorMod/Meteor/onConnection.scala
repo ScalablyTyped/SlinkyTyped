@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object onConnection extends js.Object {
   
-  def apply(callback: js.Function): Unit = js.native
+  def apply(callback: js.Function1[/* connection */ Connection, Unit]): Unit = js.native
 }

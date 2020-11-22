@@ -48,7 +48,7 @@ trait JSONSchema6 extends js.Object {
   var anyOf: js.UndefOr[js.Array[JSONSchema6Definition]] = js.native
   
   /**
-    * More readible form of a one-element "enum"
+    * More readable form of a one-element "enum"
     * @see https://tools.ietf.org/html/draft-wright-json-schema-validation-01#section-6.24
     */
   var const: js.UndefOr[JSONSchema6Type] = js.native

@@ -1,6 +1,8 @@
 package typingsSlinky.stripeV3.stripe
 
 import typingsSlinky.stripeV3.anon.`0`
+import typingsSlinky.stripeV3.stripeV3Strings.off_session
+import typingsSlinky.stripeV3.stripeV3Strings.on_session
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,7 +43,7 @@ trait ConfirmCardPaymentData extends js.Object {
   /**
     * Indicates that you intend to make future payments with this PaymentIntent's payment method.
     */
-  var setup_future_usage: js.UndefOr[Boolean] = js.native
+  var setup_future_usage: js.UndefOr[on_session | off_session] = js.native
   
   /**
     * The shipping details for the payment, if collected.
@@ -97,7 +99,7 @@ object ConfirmCardPaymentData {
     def deleteSave_payment_method: Self = this.set("save_payment_method", js.undefined)
     
     @scala.inline
-    def setSetup_future_usage(value: Boolean): Self = this.set("setup_future_usage", value.asInstanceOf[js.Any])
+    def setSetup_future_usage(value: on_session | off_session): Self = this.set("setup_future_usage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSetup_future_usage: Self = this.set("setup_future_usage", js.undefined)

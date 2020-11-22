@@ -1,5 +1,6 @@
 package typingsSlinky.storybookComponents.buttonButtonMod
 
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,9 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ButtonProps extends js.Object {
   
+  var children: js.UndefOr[ReactElement] = js.native
+  
   var containsIcon: js.UndefOr[Boolean] = js.native
   
   var disabled: js.UndefOr[Boolean] = js.native
+  
+  var gray: js.UndefOr[Boolean] = js.native
   
   var inForm: js.UndefOr[Boolean] = js.native
   
@@ -49,6 +54,15 @@ object ButtonProps {
     }
     
     @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    
+    @scala.inline
     def setContainsIcon(value: Boolean): Self = this.set("containsIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -59,6 +73,12 @@ object ButtonProps {
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setGray(value: Boolean): Self = this.set("gray", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGray: Self = this.set("gray", js.undefined)
     
     @scala.inline
     def setInForm(value: Boolean): Self = this.set("inForm", value.asInstanceOf[js.Any])

@@ -14,14 +14,17 @@ import org.scalajs.dom.raw.HTMLSpanElement
 import org.scalajs.dom.raw.HTMLTableElement
 import org.scalajs.dom.raw.HTMLTitleElement
 import org.scalajs.dom.raw.HTMLUListElement
+import slinky.core.facade.ReactElement
 import typingsSlinky.emotionStyledBase.mod.StyledComponent
 import typingsSlinky.react.mod.BlockquoteHTMLAttributes
+import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.ImgHTMLAttributes
 import typingsSlinky.react.mod.LiHTMLAttributes
 import typingsSlinky.react.mod.OlHTMLAttributes
 import typingsSlinky.react.mod.TableHTMLAttributes
+import typingsSlinky.std.Record
 import typingsSlinky.storybookTheming.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +42,11 @@ object htmlMod extends js.Object {
     Theme
   ] = js.native
   
-  val Code: StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement], js.Object, Theme] = js.native
+  def Code(
+    hasClassNameProps: ComponentProps[
+      StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement], js.Object, Theme]
+    ]
+  ): ReactElement = js.native
   
   val DL: StyledComponent[
     DetailedHTMLProps[HTMLAttributes[HTMLDListElement], HTMLDListElement], 
@@ -135,6 +142,8 @@ object htmlMod extends js.Object {
     Theme
   ] = js.native
   
+  val resetComponents: Record[String, ReactElement] = js.native
+  
   @js.native
   object components extends js.Object {
     
@@ -146,7 +155,11 @@ object htmlMod extends js.Object {
         Theme
       ] = js.native
     
-    var code: StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement], js.Object, Theme] = js.native
+    def code(
+      hasClassNameProps: ComponentProps[
+          StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement], js.Object, Theme]
+        ]
+    ): ReactElement = js.native
     
     var div: StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], js.Object, Theme] = js.native
     

@@ -35,7 +35,7 @@ package object mod {
     scala.Unit
   ]
   
-  type RequestQuery = org.scalablytyped.runtime.StringDictionary[java.lang.String | js.Array[java.lang.String]]
+  type RequestQuery = org.scalablytyped.runtime.StringDictionary[js.Any]
   
   type ResponseEventHandler = js.Function1[/* request */ typingsSlinky.hapiHapi.mod.Request, scala.Unit]
   
@@ -60,9 +60,9 @@ package object mod {
   
   type RouteOptionsPreArray = js.Array[typingsSlinky.hapiHapi.mod.RouteOptionsPreAllOptions]
   
-  type RouteOptionsResponseSchema = scala.Boolean | typingsSlinky.hapiHapi.mod.ValidationObject | typingsSlinky.hapiJoi.mod.Schema | (js.Function2[
+  type RouteOptionsResponseSchema = scala.Boolean | typingsSlinky.hapiHapi.mod.ValidationObject | typingsSlinky.joi.mod.Schema | (js.Function2[
     /* value */ js.Object | typingsSlinky.node.Buffer | java.lang.String, 
-    /* options */ typingsSlinky.hapiJoi.mod.ValidationOptions, 
+    /* options */ typingsSlinky.joi.mod.ValidationOptions, 
     js.Promise[js.Any]
   ])
   
@@ -90,5 +90,5 @@ package object mod {
   
   type StopEventHandler = js.Function0[scala.Unit]
   
-  type ValidationObject = typingsSlinky.hapiJoi.mod.SchemaMap[js.Any]
+  type ValidationObject = typingsSlinky.joi.mod.SchemaMap[js.Any]
 }

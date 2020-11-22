@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.jobQueueMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -50,6 +51,11 @@ class JobQueue protected () extends CustomResource {
     * The state of the job queue. Must be one of: `ENABLED` or `DISABLED`
     */
   val state: Output_[String] = js.native
+  
+  /**
+    * Key-value map of resource tags
+    */
+  val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
 }
 /* static members */
 @JSImport("@pulumi/aws/batch/jobQueue", "JobQueue")

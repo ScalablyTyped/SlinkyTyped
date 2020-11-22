@@ -2,8 +2,8 @@ package typingsSlinky.grommet.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.grommet.anon.ColorOpacity
 import typingsSlinky.grommet.anon.Highlight
+import typingsSlinky.grommet.anon.`1`
 import typingsSlinky.grommet.grommetStrings.bar
 import typingsSlinky.grommet.grommetStrings.circle
 import typingsSlinky.grommet.grommetStrings.full
@@ -39,7 +39,7 @@ object Meter {
     def alignSelf(value: AlignSelfType): this.type = set("alignSelf", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def background(value: String | ColorOpacity): this.type = set("background", value.asInstanceOf[js.Any])
+    def background(value: String | `1`): this.type = set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
     def gridArea(value: GridAreaType): this.type = set("gridArea", value.asInstanceOf[js.Any])

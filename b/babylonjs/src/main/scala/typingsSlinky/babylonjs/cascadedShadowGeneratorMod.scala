@@ -268,7 +268,7 @@ object cascadedShadowGeneratorMod extends js.Object {
     
     /**
       * Sets this to true if you want that the edges of the shadows don't "swimm" / "shimmer" when rotating the camera.
-      * The trade off is that you loose some precision in the shadow rendering when enabling this setting.
+      * The trade off is that you lose some precision in the shadow rendering when enabling this setting.
       */
     var stabilizeCascades: Boolean = js.native
   }
@@ -285,6 +285,11 @@ object cascadedShadowGeneratorMod extends js.Object {
       * Defines the default number of cascades used by the CSM.
       */
     val DEFAULT_CASCADES_COUNT: Double = js.native
+    
+    /**
+      *  Support test.
+      */
+    def IsSupported: Boolean = js.native
     
     /**
       * Defines the maximum number of cascades used by the CSM.

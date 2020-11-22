@@ -21,13 +21,13 @@ trait launchOptions extends js.Object {
     * This key indicates that the application was launched by another
     * application with the specified bundle ID.
     */
-  var source: js.UndefOr[java.lang.String] = js.native
+  var source: js.UndefOr[String] = js.native
   
   /**
     * This key indicates that the application was launched in order to open
     * the specified URL.
     */
-  var url: js.UndefOr[java.lang.String] = js.native
+  var url: js.UndefOr[String] = js.native
 }
 object launchOptions {
   
@@ -47,7 +47,7 @@ object launchOptions {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -59,13 +59,13 @@ object launchOptions {
     def deleteLaunchOptionsLocationKey: Self = this.set("launchOptionsLocationKey", js.undefined)
     
     @scala.inline
-    def setSource(value: java.lang.String): Self = this.set("source", value.asInstanceOf[js.Any])
+    def setSource(value: String): Self = this.set("source", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSource: Self = this.set("source", js.undefined)
     
     @scala.inline
-    def setUrl(value: java.lang.String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUrl: Self = this.set("url", js.undefined)

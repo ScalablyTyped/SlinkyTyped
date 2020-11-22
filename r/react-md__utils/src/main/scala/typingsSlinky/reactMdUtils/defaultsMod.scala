@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object defaultsMod extends js.Object {
   
-  def default[O /* <: js.Object */, R /* <: js.Object */](optional: O, required: R): O with R = js.native
+  def defaults[O /* <: js.Object */, R /* <: js.Object */](optional: O, required: R): O with R = js.native
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SavingsPlansPurchaseRecommendationSummary extends js.Object {
   
   /**
-    * The currency code Amazon Web Services used to generate the recommendations and present potential savings.
+    * The currency code AWS used to generate the recommendations and present potential savings.
     */
   var CurrencyCode: js.UndefOr[GenericString] = js.native
   

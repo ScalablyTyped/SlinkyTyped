@@ -8,12 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait InvokeMeta extends js.Object {
   
   var data: js.Any = js.native
+  
+  var src: InvokeSourceDefinition = js.native
 }
 object InvokeMeta {
   
   @scala.inline
-  def apply(data: js.Any): InvokeMeta = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
+  def apply(data: js.Any, src: InvokeSourceDefinition): InvokeMeta = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvokeMeta]
   }
   
@@ -34,5 +36,8 @@ object InvokeMeta {
     
     @scala.inline
     def setData(value: js.Any): Self = this.set("data", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSrc(value: InvokeSourceDefinition): Self = this.set("src", value.asInstanceOf[js.Any])
   }
 }

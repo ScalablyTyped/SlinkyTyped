@@ -87,6 +87,9 @@ object skeletonMod extends js.Object {
     
     var _useTextureToStoreBoneMatrices: js.Any = js.native
     
+    /** @hidden */
+    var _waitingOverrideMeshId: Nullable[String] = js.native
+    
     /**
       * Gets or sets the animation properties override
       */
@@ -197,7 +200,7 @@ object skeletonMod extends js.Object {
     /**
       * Enable animation blending for this skeleton
       * @param blendingSpeed defines the blending speed to apply
-      * @see http://doc.babylonjs.com/babylon101/animations#animation-blending
+      * @see https://doc.babylonjs.com/babylon101/animations#animation-blending
       */
     def enableBlending(): Unit = js.native
     def enableBlending(blendingSpeed: Double): Unit = js.native
@@ -315,6 +318,11 @@ object skeletonMod extends js.Object {
     def serialize(): js.Any = js.native
     
     /**
+      * Set the current local matrix as the restPose for all bones in the skeleton.
+      */
+    def setCurrentPoseAsRest(): Unit = js.native
+    
+    /**
       * Sorts bones per internal index
       */
     def sortBones(): Unit = js.native
@@ -336,6 +344,16 @@ object skeletonMod extends js.Object {
   /* static members */
   @js.native
   object Skeleton extends js.Object {
+    
+    def MakeAnimationAdditive(skeleton: Skeleton, referenceFrame: js.UndefOr[scala.Nothing], range: String): Nullable[Skeleton] = js.native
+    /**
+      * Convert the keyframes for a range of animation on a skeleton to be relative to a given reference frame.
+      * @param skeleton defines the Skeleton containing the animation range to convert
+      * @param referenceFrame defines the frame that keyframes in the range will be relative to
+      * @param range defines the name of the AnimationRange belonging to the Skeleton to convert
+      * @returns the original skeleton
+      */
+    def MakeAnimationAdditive(skeleton: Skeleton, referenceFrame: Double, range: String): Nullable[Skeleton] = js.native
     
     /**
       * Creates a new skeleton from serialized data

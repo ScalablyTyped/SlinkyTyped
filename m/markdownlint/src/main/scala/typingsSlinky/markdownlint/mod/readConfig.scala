@@ -8,8 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object readConfig extends js.Object {
   
-  def apply(
-    file: String,
-    callback: js.Function2[/* err */ js.Error | Null, /* result */ MarkdownlintConfig, _]
-  ): Unit = js.native
+  /**
+    * Read specified configuration file.
+    *
+    * @param {string} file Configuration file name.
+    * @param {ConfigurationParser[] | ReadConfigCallback} parsers Parsing
+    * function(s).
+    * @param {ReadConfigCallback} [callback] Callback (err, result) function.
+    * @returns {void}
+    */
+  def apply(file: String, parsers: js.Array[ConfigurationParser]): Unit = js.native
+  def apply(file: String, parsers: js.Array[ConfigurationParser], callback: ReadConfigCallback): Unit = js.native
+  def apply(file: String, parsers: ReadConfigCallback): Unit = js.native
+  def apply(file: String, parsers: ReadConfigCallback, callback: ReadConfigCallback): Unit = js.native
 }

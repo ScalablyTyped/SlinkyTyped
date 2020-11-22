@@ -16,7 +16,16 @@ object tsEssentialsStrings {
   def DeepRequired: DeepRequired = "DeepRequired".asInstanceOf[DeepRequired]
   
   @scala.inline
+  def DeepWritableObject: DeepWritableObject = "DeepWritableObject".asInstanceOf[DeepWritableObject]
+  
+  @scala.inline
   def Dictionary: Dictionary = "Dictionary".asInstanceOf[Dictionary]
+  
+  @scala.inline
+  def IsFullyWritable: IsFullyWritable = "IsFullyWritable".asInstanceOf[IsFullyWritable]
+  
+  @scala.inline
+  def Writable: Writable = "Writable".asInstanceOf[Writable]
   
   @js.native
   sealed trait DeepPartial extends js.Object
@@ -28,5 +37,14 @@ object tsEssentialsStrings {
   sealed trait DeepRequired extends js.Object
   
   @js.native
+  sealed trait DeepWritableObject extends js.Object
+  
+  @js.native
   sealed trait Dictionary extends js.Object
+  
+  @js.native
+  sealed trait IsFullyWritable extends js.Object
+  
+  @js.native
+  sealed trait Writable extends js.Object
 }

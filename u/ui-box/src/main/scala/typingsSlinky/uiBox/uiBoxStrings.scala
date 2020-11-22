@@ -937,6 +937,9 @@ object uiBoxStrings {
   def `var`: `var` = "var".asInstanceOf[`var`]
   
   @scala.inline
+  def verticalAlign: verticalAlign = "verticalAlign".asInstanceOf[verticalAlign]
+  
+  @scala.inline
   def video: video = "video".asInstanceOf[video]
   
   @scala.inline
@@ -1895,6 +1898,9 @@ object uiBoxStrings {
   
   @js.native
   sealed trait `var` extends js.Object
+  
+  @js.native
+  sealed trait verticalAlign extends js.Object
   
   @js.native
   sealed trait video extends js.Object

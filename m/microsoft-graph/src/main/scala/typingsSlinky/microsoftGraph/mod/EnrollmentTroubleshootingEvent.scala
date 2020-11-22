@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEvent {
   
   // Azure AD device identifier.
-  var deviceId: js.UndefOr[String] = js.native
+  var deviceId: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Type of the enrollment. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser,
@@ -25,19 +25,19 @@ trait EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
   var failureCategory: js.UndefOr[DeviceEnrollmentFailureReason] = js.native
   
   // Detailed failure reason.
-  var failureReason: js.UndefOr[String] = js.native
+  var failureReason: js.UndefOr[NullableOption[String]] = js.native
   
   // Device identifier created or collected by Intune.
-  var managedDeviceIdentifier: js.UndefOr[String] = js.native
+  var managedDeviceIdentifier: js.UndefOr[NullableOption[String]] = js.native
   
   // Operating System.
-  var operatingSystem: js.UndefOr[String] = js.native
+  var operatingSystem: js.UndefOr[NullableOption[String]] = js.native
   
   // OS Version.
-  var osVersion: js.UndefOr[String] = js.native
+  var osVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Identifier for the user that tried to enroll the device.
-  var userId: js.UndefOr[String] = js.native
+  var userId: js.UndefOr[NullableOption[String]] = js.native
 }
 object EnrollmentTroubleshootingEvent {
   
@@ -63,10 +63,13 @@ object EnrollmentTroubleshootingEvent {
     }
     
     @scala.inline
-    def setDeviceId(value: String): Self = this.set("deviceId", value.asInstanceOf[js.Any])
+    def setDeviceId(value: NullableOption[String]): Self = this.set("deviceId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceId: Self = this.set("deviceId", js.undefined)
+    
+    @scala.inline
+    def setDeviceIdNull: Self = this.set("deviceId", null)
     
     @scala.inline
     def setEnrollmentType(value: DeviceEnrollmentType): Self = this.set("enrollmentType", value.asInstanceOf[js.Any])
@@ -81,33 +84,48 @@ object EnrollmentTroubleshootingEvent {
     def deleteFailureCategory: Self = this.set("failureCategory", js.undefined)
     
     @scala.inline
-    def setFailureReason(value: String): Self = this.set("failureReason", value.asInstanceOf[js.Any])
+    def setFailureReason(value: NullableOption[String]): Self = this.set("failureReason", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFailureReason: Self = this.set("failureReason", js.undefined)
     
     @scala.inline
-    def setManagedDeviceIdentifier(value: String): Self = this.set("managedDeviceIdentifier", value.asInstanceOf[js.Any])
+    def setFailureReasonNull: Self = this.set("failureReason", null)
+    
+    @scala.inline
+    def setManagedDeviceIdentifier(value: NullableOption[String]): Self = this.set("managedDeviceIdentifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteManagedDeviceIdentifier: Self = this.set("managedDeviceIdentifier", js.undefined)
     
     @scala.inline
-    def setOperatingSystem(value: String): Self = this.set("operatingSystem", value.asInstanceOf[js.Any])
+    def setManagedDeviceIdentifierNull: Self = this.set("managedDeviceIdentifier", null)
+    
+    @scala.inline
+    def setOperatingSystem(value: NullableOption[String]): Self = this.set("operatingSystem", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOperatingSystem: Self = this.set("operatingSystem", js.undefined)
     
     @scala.inline
-    def setOsVersion(value: String): Self = this.set("osVersion", value.asInstanceOf[js.Any])
+    def setOperatingSystemNull: Self = this.set("operatingSystem", null)
+    
+    @scala.inline
+    def setOsVersion(value: NullableOption[String]): Self = this.set("osVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOsVersion: Self = this.set("osVersion", js.undefined)
     
     @scala.inline
-    def setUserId(value: String): Self = this.set("userId", value.asInstanceOf[js.Any])
+    def setOsVersionNull: Self = this.set("osVersion", null)
+    
+    @scala.inline
+    def setUserId(value: NullableOption[String]): Self = this.set("userId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserId: Self = this.set("userId", js.undefined)
+    
+    @scala.inline
+    def setUserIdNull: Self = this.set("userId", null)
   }
 }

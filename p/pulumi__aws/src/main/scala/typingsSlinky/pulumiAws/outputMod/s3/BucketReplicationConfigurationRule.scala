@@ -18,12 +18,12 @@ trait BucketReplicationConfigurationRule extends js.Object {
   var filter: js.UndefOr[BucketReplicationConfigurationRuleFilter] = js.native
   
   /**
-    * Unique identifier for the rule.
+    * Unique identifier for the rule. Must be less than or equal to 255 characters in length.
     */
   var id: js.UndefOr[String] = js.native
   
   /**
-    * Object keyname prefix identifying one or more objects to which the rule applies.
+    * Object keyname prefix identifying one or more objects to which the rule applies. Must be less than or equal to 1024 characters in length.
     */
   var prefix: js.UndefOr[String] = js.native
   

@@ -92,6 +92,8 @@ package object globalacceleratorMod {
   
   type PortNumber = scala.Double
   
+  type PortOverrides = js.Array[typingsSlinky.awsSdk.globalacceleratorMod.PortOverride]
+  
   type PortRanges = js.Array[typingsSlinky.awsSdk.globalacceleratorMod.PortRange]
   
   /* Rewritten from type alias, can be one of: 

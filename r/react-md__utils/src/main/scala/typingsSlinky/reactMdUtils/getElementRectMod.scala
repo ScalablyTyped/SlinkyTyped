@@ -12,6 +12,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getElementRectMod extends js.Object {
   
-  def default(element: HTMLElement): DOMRect | ClientRect = js.native
-  def default(element: HTMLElement, coords: Coords): DOMRect | ClientRect = js.native
+  def getElementRect(element: HTMLElement): DOMRect | ClientRect = js.native
+  def getElementRect(element: HTMLElement, coords: Coords): DOMRect | ClientRect = js.native
 }

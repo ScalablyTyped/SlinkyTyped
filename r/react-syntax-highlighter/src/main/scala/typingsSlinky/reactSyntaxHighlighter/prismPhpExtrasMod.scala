@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-syntax-highlighter/dist/esm/languages/prism/phpExtras", JSImport.Namespace)
+@JSImport("react-syntax-highlighter/dist/esm/languages/prism/php-extras", JSImport.Namespace)
 @js.native
 object prismPhpExtrasMod extends js.Object {
   

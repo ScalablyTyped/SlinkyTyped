@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ArrayTypeNode extends TypeNode {
   
-  var elementType: TypeNode = js.native
+  val elementType: TypeNode = js.native
   
   @JSName("kind")
-  var kind_ArrayTypeNode: ArrayType = js.native
+  val kind_ArrayTypeNode: ArrayType = js.native
 }

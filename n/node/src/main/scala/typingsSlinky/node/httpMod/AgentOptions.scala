@@ -1,5 +1,7 @@
 package typingsSlinky.node.httpMod
 
+import typingsSlinky.node.nodeStrings.fifo
+import typingsSlinky.node.nodeStrings.lifo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,6 +29,16 @@ trait AgentOptions extends js.Object {
     * Maximum number of sockets to allow per host. Default for Node 0.10 is 5, default for Node 0.12 is Infinity
     */
   var maxSockets: js.UndefOr[Double] = js.native
+  
+  /**
+    * Maximum number of sockets allowed for all hosts in total. Each request will use a new socket until the maximum is reached. Default: Infinity.
+    */
+  var maxTotalSockets: js.UndefOr[Double] = js.native
+  
+  /**
+    * Scheduling strategy to apply when picking the next free socket to use. Default: 'fifo'.
+    */
+  var scheduling: js.UndefOr[fifo | lifo] = js.native
   
   /**
     * Socket timeout in milliseconds. This will set the timeout after the socket is connected.
@@ -79,6 +91,18 @@ object AgentOptions {
     
     @scala.inline
     def deleteMaxSockets: Self = this.set("maxSockets", js.undefined)
+    
+    @scala.inline
+    def setMaxTotalSockets(value: Double): Self = this.set("maxTotalSockets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxTotalSockets: Self = this.set("maxTotalSockets", js.undefined)
+    
+    @scala.inline
+    def setScheduling(value: fifo | lifo): Self = this.set("scheduling", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScheduling: Self = this.set("scheduling", js.undefined)
     
     @scala.inline
     def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])

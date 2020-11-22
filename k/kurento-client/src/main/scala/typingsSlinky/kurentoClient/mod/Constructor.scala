@@ -1,5 +1,7 @@
 package typingsSlinky.kurentoClient.mod
 
+import typingsSlinky.node.NodeRequire
+import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,4 +17,9 @@ trait Constructor extends js.Object {
   
   def getSingleton(ws_uri: String): js.Promise[ClientInstance] = js.native
   def getSingleton(ws_uri: String, options: Options): js.Promise[ClientInstance] = js.native
+  
+  var on: js.UndefOr[scala.Nothing] = js.native
+  
+  def register(module: String): Unit = js.native
+  def register(module: ReturnType[NodeRequire]): Unit = js.native
 }

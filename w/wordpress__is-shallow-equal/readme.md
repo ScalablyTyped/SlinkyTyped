@@ -1,7 +1,7 @@
 
 # Scala.js typings for wordpress__is-shallow-equal
 
-Typings are for version 2.1.0
+Typings are for version 2.3.0
 
 ## Library description:
 Test for shallow equality between two objects or arrays.

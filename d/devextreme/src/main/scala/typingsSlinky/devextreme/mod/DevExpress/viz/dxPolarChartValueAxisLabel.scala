@@ -9,13 +9,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartValueAxisLabel extends dxPolarChartCommonAxisSettingsLabel {
   
-  /** @name dxPolarChart.Options.valueAxis.label.customizeHint */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.label.customizeHint]
+    */
   var customizeHint: js.UndefOr[js.Function1[/* axisValue */ ValueValueText, String]] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.label.customizeText */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.label.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* axisValue */ ValueValueText, String]] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis.label.format */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis.label.format]
+    */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
 }
 object dxPolarChartValueAxisLabel {

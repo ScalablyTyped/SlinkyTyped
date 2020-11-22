@@ -183,6 +183,15 @@ trait Workbook extends ClientObject {
   var isDirty: Boolean = js.native
   
   /**
+    *
+    * Returns a collection of linked data types that are part of the workbook.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  val linkedDataTypes: LinkedDataTypeCollection = js.native
+  
+  /**
     * Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading the properties.
     *
     * @param options Provides options for which properties of the object to load.
@@ -363,6 +372,15 @@ trait Workbook extends ClientObject {
     * [Api set: ExcelApi 1.1]
     */
   val tables: TableCollection = js.native
+  
+  /**
+    *
+    * Returns a collection of tasks that are present in the workbook.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  val tasks: TaskCollection = js.native
   
   /**
     *

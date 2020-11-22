@@ -12,6 +12,6 @@ package object olTileMod {
     /* p0 */ typingsSlinky.ol.tilecoordMod.TileCoord, 
     /* p1 */ scala.Double, 
     /* p2 */ typingsSlinky.ol.projectionMod.default, 
-    java.lang.String
+    js.UndefOr[java.lang.String]
   ]
 }

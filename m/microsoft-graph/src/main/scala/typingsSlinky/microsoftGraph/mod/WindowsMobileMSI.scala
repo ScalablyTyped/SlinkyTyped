@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WindowsMobileMSI extends MobileLobApp {
   
   // The command line.
-  var commandLine: js.UndefOr[String] = js.native
+  var commandLine: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set
@@ -17,10 +17,10 @@ trait WindowsMobileMSI extends MobileLobApp {
   var ignoreVersionDetection: js.UndefOr[Boolean] = js.native
   
   // The product code.
-  var productCode: js.UndefOr[String] = js.native
+  var productCode: js.UndefOr[NullableOption[String]] = js.native
   
   // The product version of Windows Mobile MSI Line of Business (LoB) app.
-  var productVersion: js.UndefOr[String] = js.native
+  var productVersion: js.UndefOr[NullableOption[String]] = js.native
 }
 object WindowsMobileMSI {
   
@@ -46,10 +46,13 @@ object WindowsMobileMSI {
     }
     
     @scala.inline
-    def setCommandLine(value: String): Self = this.set("commandLine", value.asInstanceOf[js.Any])
+    def setCommandLine(value: NullableOption[String]): Self = this.set("commandLine", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCommandLine: Self = this.set("commandLine", js.undefined)
+    
+    @scala.inline
+    def setCommandLineNull: Self = this.set("commandLine", null)
     
     @scala.inline
     def setIgnoreVersionDetection(value: Boolean): Self = this.set("ignoreVersionDetection", value.asInstanceOf[js.Any])
@@ -58,15 +61,21 @@ object WindowsMobileMSI {
     def deleteIgnoreVersionDetection: Self = this.set("ignoreVersionDetection", js.undefined)
     
     @scala.inline
-    def setProductCode(value: String): Self = this.set("productCode", value.asInstanceOf[js.Any])
+    def setProductCode(value: NullableOption[String]): Self = this.set("productCode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProductCode: Self = this.set("productCode", js.undefined)
     
     @scala.inline
-    def setProductVersion(value: String): Self = this.set("productVersion", value.asInstanceOf[js.Any])
+    def setProductCodeNull: Self = this.set("productCode", null)
+    
+    @scala.inline
+    def setProductVersion(value: NullableOption[String]): Self = this.set("productVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProductVersion: Self = this.set("productVersion", js.undefined)
+    
+    @scala.inline
+    def setProductVersionNull: Self = this.set("productVersion", null)
   }
 }

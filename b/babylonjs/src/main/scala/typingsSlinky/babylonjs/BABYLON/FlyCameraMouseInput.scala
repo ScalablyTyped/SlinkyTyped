@@ -7,8 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FlyCameraMouseInput extends ICameraInput[FlyCamera] {
   
-  var _mousemoveCallback: js.Any = js.native
-  
   var _observer: js.Any = js.native
   
   var _onMouseMove: js.Any = js.native

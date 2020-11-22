@@ -52,6 +52,8 @@ trait PartialModalProps extends js.Object {
   
   var maskTransitionName: js.UndefOr[String] = js.native
   
+  var modalRender: js.UndefOr[js.Function1[/* node */ ReactElement, ReactElement]] = js.native
+  
   var okButtonProps: js.UndefOr[ButtonProps] = js.native
   
   var okText: js.UndefOr[ReactElement] = js.native
@@ -228,6 +230,12 @@ object PartialModalProps {
     
     @scala.inline
     def deleteMaskTransitionName: Self = this.set("maskTransitionName", js.undefined)
+    
+    @scala.inline
+    def setModalRender(value: /* node */ ReactElement => ReactElement): Self = this.set("modalRender", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteModalRender: Self = this.set("modalRender", js.undefined)
     
     @scala.inline
     def setOkButtonProps(value: ButtonProps): Self = this.set("okButtonProps", value.asInstanceOf[js.Any])

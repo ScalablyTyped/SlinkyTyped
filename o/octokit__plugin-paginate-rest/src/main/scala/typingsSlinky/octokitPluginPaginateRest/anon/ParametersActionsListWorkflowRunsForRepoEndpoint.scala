@@ -12,14 +12,14 @@ trait ParametersActionsListWorkflowRunsForRepoEndpoint extends js.Object {
   
   var parameters: ActionsListWorkflowRunsForRepoEndpoint = js.native
   
-  var response: OctokitResponse[ActionsListWorkflowRunsForRepoResponseData] with `5` = js.native
+  var response: OctokitResponse[ActionsListWorkflowRunsForRepoResponseData] with `9` = js.native
 }
 object ParametersActionsListWorkflowRunsForRepoEndpoint {
   
   @scala.inline
   def apply(
     parameters: ActionsListWorkflowRunsForRepoEndpoint,
-    response: OctokitResponse[ActionsListWorkflowRunsForRepoResponseData] with `5`
+    response: OctokitResponse[ActionsListWorkflowRunsForRepoResponseData] with `9`
   ): ParametersActionsListWorkflowRunsForRepoEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersActionsListWorkflowRunsForRepoEndpoint]
@@ -44,6 +44,6 @@ object ParametersActionsListWorkflowRunsForRepoEndpoint {
     def setParameters(value: ActionsListWorkflowRunsForRepoEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ActionsListWorkflowRunsForRepoResponseData] with `5`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ActionsListWorkflowRunsForRepoResponseData] with `9`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

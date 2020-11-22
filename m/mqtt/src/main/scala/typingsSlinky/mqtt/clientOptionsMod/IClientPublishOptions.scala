@@ -1,5 +1,6 @@
 package typingsSlinky.mqtt.clientOptionsMod
 
+import typingsSlinky.mqtt.anon.CorrelationData
 import typingsSlinky.mqttPacket.mod.QoS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +18,11 @@ trait IClientPublishOptions extends js.Object {
     * whether or not mark a message as duplicate
     */
   var dup: js.UndefOr[Boolean] = js.native
+  
+  /*
+    *  MQTT 5.0 properties object
+    */
+  var properties: js.UndefOr[CorrelationData] = js.native
   
   /**
     * the QoS
@@ -62,6 +68,12 @@ object IClientPublishOptions {
     
     @scala.inline
     def deleteDup: Self = this.set("dup", js.undefined)
+    
+    @scala.inline
+    def setProperties(value: CorrelationData): Self = this.set("properties", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProperties: Self = this.set("properties", js.undefined)
     
     @scala.inline
     def setQos(value: QoS): Self = this.set("qos", value.asInstanceOf[js.Any])

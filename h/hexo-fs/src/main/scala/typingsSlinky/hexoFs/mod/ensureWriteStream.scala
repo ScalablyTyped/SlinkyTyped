@@ -3,14 +3,24 @@ package typingsSlinky.hexoFs.mod
 import typingsSlinky.hexoFs.anon.AutoClose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("hexo-fs", "ensureWriteStream")
 @js.native
 object ensureWriteStream extends js.Object {
+  
   def apply(path: String): typingsSlinky.bluebird.mod.^[typingsSlinky.gracefulFs.mod.WriteStream] = js.native
   def apply(
     path: String,
+    callback: js.Function2[
+      /* err */ js.Any, 
+      /* value */ js.UndefOr[typingsSlinky.gracefulFs.mod.WriteStream], 
+      Unit
+    ]
+  ): typingsSlinky.bluebird.mod.^[typingsSlinky.gracefulFs.mod.WriteStream] = js.native
+  def apply(
+    path: String,
+    options: js.UndefOr[scala.Nothing],
     callback: js.Function2[
       /* err */ js.Any, 
       /* value */ js.UndefOr[typingsSlinky.gracefulFs.mod.WriteStream], 
@@ -38,4 +48,3 @@ object ensureWriteStream extends js.Object {
     ]
   ): typingsSlinky.bluebird.mod.^[typingsSlinky.gracefulFs.mod.WriteStream] = js.native
 }
-

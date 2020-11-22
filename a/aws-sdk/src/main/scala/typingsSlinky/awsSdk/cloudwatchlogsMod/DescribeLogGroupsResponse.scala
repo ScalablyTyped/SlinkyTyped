@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeLogGroupsResponse extends js.Object {
   
   /**
-    * The log groups.
+    * The log groups. If the retentionInDays value if not included for a log group, then that log group is set to have its events never expire.
     */
   var logGroups: js.UndefOr[LogGroups] = js.native
   

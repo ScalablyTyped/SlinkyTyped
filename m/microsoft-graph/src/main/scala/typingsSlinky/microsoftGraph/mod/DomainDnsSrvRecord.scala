@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DomainDnsSrvRecord extends DomainDnsRecord {
   
   // Value to use when configuring the Target property of the SRV record at the DNS host.
-  var nameTarget: js.UndefOr[String] = js.native
+  var nameTarget: js.UndefOr[NullableOption[String]] = js.native
   
   // Value to use when configuring the port property of the SRV record at the DNS host.
-  var port: js.UndefOr[Double] = js.native
+  var port: js.UndefOr[NullableOption[Double]] = js.native
   
   // Value to use when configuring the priority property of the SRV record at the DNS host.
-  var priority: js.UndefOr[Double] = js.native
+  var priority: js.UndefOr[NullableOption[Double]] = js.native
   
   // Value to use when configuring the protocol property of the SRV record at the DNS host.
-  var protocol: js.UndefOr[String] = js.native
+  var protocol: js.UndefOr[NullableOption[String]] = js.native
   
   // Value to use when configuring the service property of the SRV record at the DNS host.
-  var service: js.UndefOr[String] = js.native
+  var service: js.UndefOr[NullableOption[String]] = js.native
   
   // Value to use when configuring the weight property of the SRV record at the DNS host.
-  var weight: js.UndefOr[Double] = js.native
+  var weight: js.UndefOr[NullableOption[Double]] = js.native
 }
 object DomainDnsSrvRecord {
   
@@ -49,39 +49,57 @@ object DomainDnsSrvRecord {
     }
     
     @scala.inline
-    def setNameTarget(value: String): Self = this.set("nameTarget", value.asInstanceOf[js.Any])
+    def setNameTarget(value: NullableOption[String]): Self = this.set("nameTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNameTarget: Self = this.set("nameTarget", js.undefined)
     
     @scala.inline
-    def setPort(value: Double): Self = this.set("port", value.asInstanceOf[js.Any])
+    def setNameTargetNull: Self = this.set("nameTarget", null)
+    
+    @scala.inline
+    def setPort(value: NullableOption[Double]): Self = this.set("port", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePort: Self = this.set("port", js.undefined)
     
     @scala.inline
-    def setPriority(value: Double): Self = this.set("priority", value.asInstanceOf[js.Any])
+    def setPortNull: Self = this.set("port", null)
+    
+    @scala.inline
+    def setPriority(value: NullableOption[Double]): Self = this.set("priority", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePriority: Self = this.set("priority", js.undefined)
     
     @scala.inline
-    def setProtocol(value: String): Self = this.set("protocol", value.asInstanceOf[js.Any])
+    def setPriorityNull: Self = this.set("priority", null)
+    
+    @scala.inline
+    def setProtocol(value: NullableOption[String]): Self = this.set("protocol", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProtocol: Self = this.set("protocol", js.undefined)
     
     @scala.inline
-    def setService(value: String): Self = this.set("service", value.asInstanceOf[js.Any])
+    def setProtocolNull: Self = this.set("protocol", null)
+    
+    @scala.inline
+    def setService(value: NullableOption[String]): Self = this.set("service", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteService: Self = this.set("service", js.undefined)
     
     @scala.inline
-    def setWeight(value: Double): Self = this.set("weight", value.asInstanceOf[js.Any])
+    def setServiceNull: Self = this.set("service", null)
+    
+    @scala.inline
+    def setWeight(value: NullableOption[Double]): Self = this.set("weight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWeight: Self = this.set("weight", js.undefined)
+    
+    @scala.inline
+    def setWeightNull: Self = this.set("weight", null)
   }
 }

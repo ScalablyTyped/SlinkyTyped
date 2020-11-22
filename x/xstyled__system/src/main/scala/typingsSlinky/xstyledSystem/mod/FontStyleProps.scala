@@ -9,7 +9,7 @@ trait FontStyleProps extends js.Object {
   
   val fontStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontStyleProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontStyle */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object FontStyleProps {
     }
     
     @scala.inline
+    def setFontStyleVarargs(value: js.Any*): Self = this.set("fontStyle", js.Array(value :_*))
+    
+    @scala.inline
     def setFontStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontStyleProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontStyle */ _
         ]
     ): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
     

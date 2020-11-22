@@ -1,6 +1,5 @@
 package typingsSlinky.reactDateRange.mod
 
-import typingsSlinky.moment.mod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DateContainerType extends js.Object {
   
-  var date: Moment = js.native
+  var date: js.Date = js.native
 }
 object DateContainerType {
   
   @scala.inline
-  def apply(date: Moment): DateContainerType = {
+  def apply(date: js.Date): DateContainerType = {
     val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any])
     __obj.asInstanceOf[DateContainerType]
   }
@@ -34,6 +33,6 @@ object DateContainerType {
     }
     
     @scala.inline
-    def setDate(value: Moment): Self = this.set("date", value.asInstanceOf[js.Any])
+    def setDate(value: js.Date): Self = this.set("date", value.asInstanceOf[js.Any])
   }
 }

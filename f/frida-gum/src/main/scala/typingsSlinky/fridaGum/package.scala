@@ -193,6 +193,11 @@ package object fridaGum {
   type StalkerNativeCallout = typingsSlinky.fridaGum.NativePointer
   
   /**
+    * Signature: `void process (const GumEvent * event, GumCpuContext * cpu_context, gpointer user_data)`
+    */
+  type StalkerNativeEventCallback = typingsSlinky.fridaGum.NativePointer
+  
+  /**
     * Signature: `void transform (GumStalkerIterator * iterator, GumStalkerOutput * output, gpointer user_data)`
     */
   type StalkerNativeTransformCallback = typingsSlinky.fridaGum.NativePointer

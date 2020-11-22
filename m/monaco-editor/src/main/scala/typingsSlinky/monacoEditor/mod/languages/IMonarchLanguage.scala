@@ -37,6 +37,11 @@ trait IMonarchLanguage extends js.Object {
     * map from string to ILanguageRule[]
     */
   var tokenizer: StringDictionary[js.Array[IMonarchLanguageRule]] = js.native
+  
+  /**
+    * is the language unicode-aware? (i.e., /\\u{1D306}/)
+    */
+  var unicode: js.UndefOr[Boolean] = js.native
 }
 object IMonarchLanguage {
   
@@ -96,5 +101,11 @@ object IMonarchLanguage {
     
     @scala.inline
     def deleteTokenPostfix: Self = this.set("tokenPostfix", js.undefined)
+    
+    @scala.inline
+    def setUnicode(value: Boolean): Self = this.set("unicode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnicode: Self = this.set("unicode", js.undefined)
   }
 }

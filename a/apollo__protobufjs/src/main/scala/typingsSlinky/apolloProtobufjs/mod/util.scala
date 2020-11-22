@@ -179,8 +179,12 @@ object util extends js.Object {
     * @param [ifNotSet=false] Merges only if the key is not already set
     * @returns Destination object
     */
-  def merge(dst: StringDictionary[js.Any], src: StringDictionary[js.Any]): StringDictionary[js.Any] = js.native
-  def merge(dst: StringDictionary[js.Any], src: StringDictionary[js.Any], ifNotSet: Boolean): StringDictionary[js.Any] = js.native
+  def merge(dst: StringDictionary[js.UndefOr[js.Any]], src: StringDictionary[js.UndefOr[js.Any]]): StringDictionary[js.UndefOr[js.Any]] = js.native
+  def merge(
+    dst: StringDictionary[js.UndefOr[js.Any]],
+    src: StringDictionary[js.UndefOr[js.Any]],
+    ifNotSet: Boolean
+  ): StringDictionary[js.UndefOr[js.Any]] = js.native
   
   /**
     * Creates a new buffer of whatever type supported by the environment.
@@ -234,7 +238,7 @@ object util extends js.Object {
     * @param object Object to convert
     * @returns Converted array
     */
-  def toArray(`object`: StringDictionary[js.Any]): js.Array[_] = js.native
+  def toArray(`object`: StringDictionary[js.UndefOr[js.Any]]): js.Array[_] = js.native
   
   /**
     * Default conversion options used for {@link Message#toJSON} implementations.
@@ -258,7 +262,7 @@ object util extends js.Object {
     * @param array Array to convert
     * @returns Converted object
     */
-  def toObject(array: js.Array[_]): StringDictionary[js.Any] = js.native
+  def toObject(array: js.Array[_]): StringDictionary[js.UndefOr[js.Any]] = js.native
   
   /**
     * Converts the first character of a string to upper case.
@@ -429,7 +433,7 @@ object util extends js.Object {
       * @param [properties] Additional properties
       */
     def this(message: String) = this()
-    def this(message: String, properties: StringDictionary[js.Any]) = this()
+    def this(message: String, properties: StringDictionary[js.UndefOr[js.Any]]) = this()
     
     /** So far decoded message instance. */
     var instance: Message[T] = js.native
@@ -568,7 +572,7 @@ object util extends js.Object {
   /** Node's fs module if available. */
   @js.native
   object fs
-    extends /* k */ StringDictionary[js.Any]
+    extends /* k */ StringDictionary[js.UndefOr[js.Any]]
   
   /** A minimal path module to resolve Unix, Windows and URL paths alike. */
   @js.native

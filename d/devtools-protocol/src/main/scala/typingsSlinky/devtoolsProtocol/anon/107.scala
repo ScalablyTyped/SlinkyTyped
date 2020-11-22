@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.ContinueInterceptedRequestRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Log.StartViolationsReportRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `107` extends js.Object {
   
-  var paramsType: js.Array[ContinueInterceptedRequestRequest] = js.native
+  var paramsType: js.Array[StartViolationsReportRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `107` {
   
   @scala.inline
-  def apply(paramsType: js.Array[ContinueInterceptedRequestRequest], returnType: Unit): `107` = {
+  def apply(paramsType: js.Array[StartViolationsReportRequest], returnType: Unit): `107` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`107`]
   }
@@ -36,10 +36,10 @@ object `107` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: ContinueInterceptedRequestRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: StartViolationsReportRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[ContinueInterceptedRequestRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[StartViolationsReportRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

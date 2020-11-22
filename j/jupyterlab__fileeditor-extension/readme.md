@@ -1,7 +1,7 @@
 
 # Scala.js typings for jupyterlab__fileeditor-extension
 
-Typings are for version 1.2.9
+Typings are for version 2.2.7
 
 ## Library description:
 JupyterLab - Editor Widget Extension

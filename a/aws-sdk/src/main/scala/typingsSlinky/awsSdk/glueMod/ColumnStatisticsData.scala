@@ -8,42 +8,42 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ColumnStatisticsData extends js.Object {
   
   /**
-    * Binary Column Statistics Data.
+    * Binary column statistics data.
     */
   var BinaryColumnStatisticsData: js.UndefOr[typingsSlinky.awsSdk.glueMod.BinaryColumnStatisticsData] = js.native
   
   /**
-    * Boolean Column Statistics Data.
+    * Boolean column statistics data.
     */
   var BooleanColumnStatisticsData: js.UndefOr[typingsSlinky.awsSdk.glueMod.BooleanColumnStatisticsData] = js.native
   
   /**
-    * Date Column Statistics Data.
+    * Date column statistics data.
     */
   var DateColumnStatisticsData: js.UndefOr[typingsSlinky.awsSdk.glueMod.DateColumnStatisticsData] = js.native
   
   /**
-    * Decimal Column Statistics Data.
+    * Decimal column statistics data.
     */
   var DecimalColumnStatisticsData: js.UndefOr[typingsSlinky.awsSdk.glueMod.DecimalColumnStatisticsData] = js.native
   
   /**
-    * Double Column Statistics Data.
+    * Double column statistics data.
     */
   var DoubleColumnStatisticsData: js.UndefOr[typingsSlinky.awsSdk.glueMod.DoubleColumnStatisticsData] = js.native
   
   /**
-    * Long Column Statistics Data.
+    * Long column statistics data.
     */
   var LongColumnStatisticsData: js.UndefOr[typingsSlinky.awsSdk.glueMod.LongColumnStatisticsData] = js.native
   
   /**
-    * String Column Statistics Data.
+    * String column statistics data.
     */
   var StringColumnStatisticsData: js.UndefOr[typingsSlinky.awsSdk.glueMod.StringColumnStatisticsData] = js.native
   
   /**
-    * The name of the column.
+    * The type of column statistics data.
     */
   var Type: ColumnStatisticsType = js.native
 }

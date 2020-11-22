@@ -23,7 +23,7 @@ trait CreateEntityRecognizerRequest extends js.Object {
   var InputDataConfig: EntityRecognizerInputDataConfig = js.native
   
   /**
-    *  The language of the input documents. All documents must be in the same language. Only English ("en") is currently supported. 
+    *  You can specify any of the following languages supported by Amazon Comprehend: English ("en"), Spanish ("es"), French ("fr"), Italian ("it"), German ("de"), or Portuguese ("pt"). All documents must be in the same language.
     */
   var LanguageCode: typingsSlinky.awsSdk.comprehendMod.LanguageCode = js.native
   

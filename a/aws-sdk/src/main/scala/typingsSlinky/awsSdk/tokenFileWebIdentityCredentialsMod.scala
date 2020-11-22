@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk
 
-import typingsSlinky.awsSdk.configMod.ConfigurationOptions
+import typingsSlinky.awsSdk.configBaseMod.ConfigurationOptions
 import typingsSlinky.awsSdk.credentialsMod.Credentials
 import scala.scalajs.js
 import scala.scalajs.js.`|`

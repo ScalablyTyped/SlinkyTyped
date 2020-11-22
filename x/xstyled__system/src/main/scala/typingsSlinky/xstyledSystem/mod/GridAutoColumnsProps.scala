@@ -9,7 +9,7 @@ trait GridAutoColumnsProps[TLength] extends js.Object {
   
   val gridAutoColumns: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoColumnsProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoColumns<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object GridAutoColumnsProps {
     }
     
     @scala.inline
+    def setGridAutoColumnsVarargs(value: js.Any*): Self = this.set("gridAutoColumns", js.Array(value :_*))
+    
+    @scala.inline
     def setGridAutoColumns(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridAutoColumnsProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridAutoColumns<TLength> */ _
         ]
     ): Self = this.set("gridAutoColumns", value.asInstanceOf[js.Any])
     

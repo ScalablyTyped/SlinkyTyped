@@ -18,12 +18,12 @@ import typingsSlinky.stellarBase.stellarBaseNumbers.`9`
 import typingsSlinky.stellarBase.stellarBaseStrings.auth
 import typingsSlinky.stellarBase.stellarBaseStrings.dontHave
 import typingsSlinky.stellarBase.stellarBaseStrings.errorMsg
-import typingsSlinky.stellarBase.stellarBaseStrings.getPeer
+import typingsSlinky.stellarBase.stellarBaseStrings.getPeers
 import typingsSlinky.stellarBase.stellarBaseStrings.getScpQuorumset
 import typingsSlinky.stellarBase.stellarBaseStrings.getScpState
 import typingsSlinky.stellarBase.stellarBaseStrings.getTxSet
 import typingsSlinky.stellarBase.stellarBaseStrings.hello
-import typingsSlinky.stellarBase.stellarBaseStrings.peer
+import typingsSlinky.stellarBase.stellarBaseStrings.peers
 import typingsSlinky.stellarBase.stellarBaseStrings.scpMessage
 import typingsSlinky.stellarBase.stellarBaseStrings.scpQuorumset
 import typingsSlinky.stellarBase.stellarBaseStrings.surveyRequest
@@ -37,7 +37,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MessageType extends js.Object {
   
-  val name: errorMsg | auth | dontHave | getPeer | peer | getTxSet | txSet | transaction | getScpQuorumset | scpQuorumset | scpMessage | getScpState | hello | surveyRequest | surveyResponse = js.native
+  val name: errorMsg | auth | dontHave | getPeers | peers | getTxSet | txSet | transaction | getScpQuorumset | scpQuorumset | scpMessage | getScpState | hello | surveyRequest | surveyResponse = js.native
   
   val value: `0` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `10` | `11` | `12` | `13` | `14` | `15` = js.native
 }
@@ -45,7 +45,7 @@ object MessageType {
   
   @scala.inline
   def apply(
-    name: errorMsg | auth | dontHave | getPeer | peer | getTxSet | txSet | transaction | getScpQuorumset | scpQuorumset | scpMessage | getScpState | hello | surveyRequest | surveyResponse,
+    name: errorMsg | auth | dontHave | getPeers | peers | getTxSet | txSet | transaction | getScpQuorumset | scpQuorumset | scpMessage | getScpState | hello | surveyRequest | surveyResponse,
     value: `0` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9` | `10` | `11` | `12` | `13` | `14` | `15`
   ): MessageType = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
@@ -69,7 +69,7 @@ object MessageType {
     
     @scala.inline
     def setName(
-      value: errorMsg | auth | dontHave | getPeer | peer | getTxSet | txSet | transaction | getScpQuorumset | scpQuorumset | scpMessage | getScpState | hello | surveyRequest | surveyResponse
+      value: errorMsg | auth | dontHave | getPeers | peers | getTxSet | txSet | transaction | getScpQuorumset | scpQuorumset | scpMessage | getScpState | hello | surveyRequest | surveyResponse
     ): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline

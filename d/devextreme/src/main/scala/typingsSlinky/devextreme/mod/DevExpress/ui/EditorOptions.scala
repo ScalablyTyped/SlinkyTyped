@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.anon.JQueryEvent
+import typingsSlinky.devextreme.anon.PreviousValue
 import typingsSlinky.devextreme.devextremeStrings.always
 import typingsSlinky.devextreme.devextremeStrings.auto
 import typingsSlinky.devextreme.devextremeStrings.invalid
@@ -13,28 +13,44 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EditorOptions[T] extends WidgetOptions[T] {
   
-  /** @name Editor.Options.isValid */
+  /**
+    * [descr:Editor.Options.isValid]
+    */
   var isValid: js.UndefOr[Boolean] = js.native
   
-  /** @name Editor.Options.onValueChanged */
-  var onValueChanged: js.UndefOr[js.Function1[/* e */ JQueryEvent[T], _]] = js.native
+  /**
+    * [descr:Editor.Options.onValueChanged]
+    */
+  var onValueChanged: js.UndefOr[js.Function1[/* e */ PreviousValue[T], _]] = js.native
   
-  /** @name Editor.Options.readOnly */
+  /**
+    * [descr:Editor.Options.readOnly]
+    */
   var readOnly: js.UndefOr[Boolean] = js.native
   
-  /** @name Editor.Options.validationError */
+  /**
+    * [descr:Editor.Options.validationError]
+    */
   var validationError: js.UndefOr[js.Any] = js.native
   
-  /** @name Editor.Options.validationErrors */
+  /**
+    * [descr:Editor.Options.validationErrors]
+    */
   var validationErrors: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name Editor.Options.validationMessageMode */
+  /**
+    * [descr:Editor.Options.validationMessageMode]
+    */
   var validationMessageMode: js.UndefOr[always | auto] = js.native
   
-  /** @name Editor.Options.validationStatus */
+  /**
+    * [descr:Editor.Options.validationStatus]
+    */
   var validationStatus: js.UndefOr[valid | invalid | pending] = js.native
   
-  /** @name Editor.Options.value */
+  /**
+    * [descr:Editor.Options.value]
+    */
   var value: js.UndefOr[js.Any] = js.native
 }
 object EditorOptions {
@@ -67,7 +83,7 @@ object EditorOptions {
     def deleteIsValid: Self = this.set("isValid", js.undefined)
     
     @scala.inline
-    def setOnValueChanged(value: /* e */ JQueryEvent[T] => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
+    def setOnValueChanged(value: /* e */ PreviousValue[T] => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnValueChanged: Self = this.set("onValueChanged", js.undefined)

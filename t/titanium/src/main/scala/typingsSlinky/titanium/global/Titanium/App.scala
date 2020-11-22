@@ -17,6 +17,7 @@ import typingsSlinky.titanium.Titanium.App.iOSHandleurlEvent
 import typingsSlinky.titanium.Titanium.App.iOSLocalnotificationactionEvent
 import typingsSlinky.titanium.Titanium.App.iOSNotificationEvent
 import typingsSlinky.titanium.Titanium.App.iOSRemotenotificationactionEvent
+import typingsSlinky.titanium.Titanium.App.iOSScreenshotcapturedEvent
 import typingsSlinky.titanium.Titanium.App.iOSSessioncompletedEvent
 import typingsSlinky.titanium.Titanium.App.iOSSessioneventscompletedEvent
 import typingsSlinky.titanium.Titanium.App.iOSShortcutitemclickEvent
@@ -65,6 +66,7 @@ import typingsSlinky.titanium.titaniumStrings.proximity
 import typingsSlinky.titanium.titaniumStrings.remotenotificationaction
 import typingsSlinky.titanium.titaniumStrings.resume
 import typingsSlinky.titanium.titaniumStrings.resumed
+import typingsSlinky.titanium.titaniumStrings.screenshotcaptured
 import typingsSlinky.titanium.titaniumStrings.sessioncompleted
 import typingsSlinky.titanium.titaniumStrings.sessioneventscompleted
 import typingsSlinky.titanium.titaniumStrings.shortcutitemclick
@@ -981,16 +983,19 @@ object App extends js.Object {
     
     /**
       * A dark interface style.
+      * @deprecated Use <Titanium.UI.USER_INTERFACE_STYLE_DARK> instead, which is supported cross-platform.
       */
     val USER_INTERFACE_STYLE_DARK: Double = js.native
     
     /**
       * A light interface style.
+      * @deprecated Use <Titanium.UI.USER_INTERFACE_STYLE_LIGHT> instead, which is supported cross-platform.
       */
     val USER_INTERFACE_STYLE_LIGHT: Double = js.native
     
     /**
       * An unspecified interface style.
+      * @deprecated Use <Titanium.UI.USER_INTERFACE_STYLE_UNSPECIFIED> instead, which is supported cross-platform.
       */
     val USER_INTERFACE_STYLE_UNSPECIFIED: Double = js.native
     
@@ -1353,6 +1358,11 @@ object App extends js.Object {
       callback: js.ThisFunction1[/* this */ this.type, /* event */ iOSRemotenotificationactionEvent, Unit]
     ): Unit = js.native
     @JSName("addEventListener")
+    def addEventListener_screenshotcaptured(
+      name: screenshotcaptured,
+      callback: js.ThisFunction1[/* this */ this.type, /* event */ iOSScreenshotcapturedEvent, Unit]
+    ): Unit = js.native
+    @JSName("addEventListener")
     def addEventListener_sessioncompleted(
       name: sessioncompleted,
       callback: js.ThisFunction1[/* this */ this.type, /* event */ iOSSessioncompletedEvent, Unit]
@@ -1529,6 +1539,10 @@ object App extends js.Object {
     @JSName("fireEvent")
     def fireEvent_remotenotificationaction(name: remotenotificationaction, event: iOSRemotenotificationactionEvent): Unit = js.native
     @JSName("fireEvent")
+    def fireEvent_screenshotcaptured(name: screenshotcaptured): Unit = js.native
+    @JSName("fireEvent")
+    def fireEvent_screenshotcaptured(name: screenshotcaptured, event: iOSScreenshotcapturedEvent): Unit = js.native
+    @JSName("fireEvent")
     def fireEvent_sessioncompleted(name: sessioncompleted): Unit = js.native
     @JSName("fireEvent")
     def fireEvent_sessioncompleted(name: sessioncompleted, event: iOSSessioncompletedEvent): Unit = js.native
@@ -1593,9 +1607,9 @@ object App extends js.Object {
     
     /**
       * Gets the value of the <Titanium.App.iOS.userInterfaceStyle> property.
-      * @deprecated Access <Titanium.App.iOS.userInterfaceStyle> instead.
+      * @deprecated Use <Titanium.UI.userInterfaceStyle> instead, which is supported cross-platform.
       */
-    def getUserInterfaceStyle(): js.Array[String] = js.native
+    def getUserInterfaceStyle(): Double = js.native
     
     /**
       * Registers a service to run when the application is placed in the background.
@@ -1658,6 +1672,11 @@ object App extends js.Object {
     def removeEventListener_remotenotificationaction(
       name: remotenotificationaction,
       callback: js.ThisFunction1[/* this */ this.type, /* event */ iOSRemotenotificationactionEvent, Unit]
+    ): Unit = js.native
+    @JSName("removeEventListener")
+    def removeEventListener_screenshotcaptured(
+      name: screenshotcaptured,
+      callback: js.ThisFunction1[/* this */ this.type, /* event */ iOSScreenshotcapturedEvent, Unit]
     ): Unit = js.native
     @JSName("removeEventListener")
     def removeEventListener_sessioncompleted(
@@ -1731,8 +1750,9 @@ object App extends js.Object {
     
     /**
       * The style associated with the user interface.
+      * @deprecated Use <Titanium.UI.userInterfaceStyle> instead, which is supported cross-platform.
       */
-    val userInterfaceStyle: js.Array[String] = js.native
+    val userInterfaceStyle: Double = js.native
     
     /**
       * A service that runs when the application is placed in the background.

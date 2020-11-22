@@ -36,7 +36,7 @@ object Tabs {
     
     @scala.inline
     def onChange(
-      value: (/* newTabId */ TabId, /* prevTabId */ TabId, /* event */ SyntheticMouseEvent[HTMLElement]) => Unit
+      value: (/* newTabId */ TabId, /* prevTabId */ js.UndefOr[TabId], /* event */ SyntheticMouseEvent[HTMLElement]) => Unit
     ): this.type = set("onChange", js.Any.fromFunction3(value))
     
     @scala.inline

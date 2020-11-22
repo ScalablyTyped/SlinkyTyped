@@ -27,6 +27,7 @@ import typingsSlinky.ddTrace.mod.plugins.limitdClient
 import typingsSlinky.ddTrace.mod.plugins.memcached
 import typingsSlinky.ddTrace.mod.plugins.microgatewayCore
 import typingsSlinky.ddTrace.mod.plugins.mongodbCore
+import typingsSlinky.ddTrace.mod.plugins.mongoose
 import typingsSlinky.ddTrace.mod.plugins.mysql
 import typingsSlinky.ddTrace.mod.plugins.mysql2
 import typingsSlinky.ddTrace.mod.plugins.net
@@ -105,6 +106,8 @@ trait Plugins_ extends js.Object {
   
   var `mongodb-core`: mongodbCore = js.native
   
+  var mongoose: typingsSlinky.ddTrace.mod.plugins.mongoose = js.native
+  
   var mysql: typingsSlinky.ddTrace.mod.plugins.mysql = js.native
   
   var mysql2: typingsSlinky.ddTrace.mod.plugins.mysql2 = js.native
@@ -168,6 +171,7 @@ object Plugins_ {
     memcached: memcached,
     `microgateway-core`: microgatewayCore,
     `mongodb-core`: mongodbCore,
+    mongoose: mongoose,
     mysql: mysql,
     mysql2: mysql2,
     net: net,
@@ -185,7 +189,7 @@ object Plugins_ {
     when: when,
     winston: winston
   ): Plugins_ = {
-    val __obj = js.Dynamic.literal(amqp10 = amqp10.asInstanceOf[js.Any], amqplib = amqplib.asInstanceOf[js.Any], bluebird = bluebird.asInstanceOf[js.Any], bunyan = bunyan.asInstanceOf[js.Any], connect = connect.asInstanceOf[js.Any], couchbase = couchbase.asInstanceOf[js.Any], dns = dns.asInstanceOf[js.Any], elasticsearch = elasticsearch.asInstanceOf[js.Any], express = express.asInstanceOf[js.Any], fastify = fastify.asInstanceOf[js.Any], fs = fs.asInstanceOf[js.Any], graphql = graphql.asInstanceOf[js.Any], grpc = grpc.asInstanceOf[js.Any], hapi = hapi.asInstanceOf[js.Any], http = http.asInstanceOf[js.Any], http2 = http2.asInstanceOf[js.Any], ioredis = ioredis.asInstanceOf[js.Any], knex = knex.asInstanceOf[js.Any], koa = koa.asInstanceOf[js.Any], memcached = memcached.asInstanceOf[js.Any], mysql = mysql.asInstanceOf[js.Any], mysql2 = mysql2.asInstanceOf[js.Any], net = net.asInstanceOf[js.Any], paperplane = paperplane.asInstanceOf[js.Any], pg = pg.asInstanceOf[js.Any], pino = pino.asInstanceOf[js.Any], promise = promise.asInstanceOf[js.Any], q = q.asInstanceOf[js.Any], redis = redis.asInstanceOf[js.Any], restify = restify.asInstanceOf[js.Any], rhea = rhea.asInstanceOf[js.Any], router = router.asInstanceOf[js.Any], tedious = tedious.asInstanceOf[js.Any], when = when.asInstanceOf[js.Any], winston = winston.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(amqp10 = amqp10.asInstanceOf[js.Any], amqplib = amqplib.asInstanceOf[js.Any], bluebird = bluebird.asInstanceOf[js.Any], bunyan = bunyan.asInstanceOf[js.Any], connect = connect.asInstanceOf[js.Any], couchbase = couchbase.asInstanceOf[js.Any], dns = dns.asInstanceOf[js.Any], elasticsearch = elasticsearch.asInstanceOf[js.Any], express = express.asInstanceOf[js.Any], fastify = fastify.asInstanceOf[js.Any], fs = fs.asInstanceOf[js.Any], graphql = graphql.asInstanceOf[js.Any], grpc = grpc.asInstanceOf[js.Any], hapi = hapi.asInstanceOf[js.Any], http = http.asInstanceOf[js.Any], http2 = http2.asInstanceOf[js.Any], ioredis = ioredis.asInstanceOf[js.Any], knex = knex.asInstanceOf[js.Any], koa = koa.asInstanceOf[js.Any], memcached = memcached.asInstanceOf[js.Any], mongoose = mongoose.asInstanceOf[js.Any], mysql = mysql.asInstanceOf[js.Any], mysql2 = mysql2.asInstanceOf[js.Any], net = net.asInstanceOf[js.Any], paperplane = paperplane.asInstanceOf[js.Any], pg = pg.asInstanceOf[js.Any], pino = pino.asInstanceOf[js.Any], promise = promise.asInstanceOf[js.Any], q = q.asInstanceOf[js.Any], redis = redis.asInstanceOf[js.Any], restify = restify.asInstanceOf[js.Any], rhea = rhea.asInstanceOf[js.Any], router = router.asInstanceOf[js.Any], tedious = tedious.asInstanceOf[js.Any], when = when.asInstanceOf[js.Any], winston = winston.asInstanceOf[js.Any])
     __obj.updateDynamic("aws-sdk")(`aws-sdk`.asInstanceOf[js.Any])
     __obj.updateDynamic("cassandra-driver")(`cassandra-driver`.asInstanceOf[js.Any])
     __obj.updateDynamic("generic-pool")(`generic-pool`.asInstanceOf[js.Any])
@@ -292,6 +296,9 @@ object Plugins_ {
     
     @scala.inline
     def `setMongodb-core`(value: mongodbCore): Self = this.set("mongodb-core", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMongoose(value: mongoose): Self = this.set("mongoose", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMysql(value: mysql): Self = this.set("mysql", value.asInstanceOf[js.Any])

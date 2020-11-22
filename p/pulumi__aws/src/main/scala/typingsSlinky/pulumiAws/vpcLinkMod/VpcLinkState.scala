@@ -15,7 +15,7 @@ trait VpcLinkState extends js.Object {
   val arn: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The name of the VPC Link.
+    * The name of the VPC Link. Must be between 1 and 128 characters in length.
     */
   val name: js.UndefOr[Input[String]] = js.native
   

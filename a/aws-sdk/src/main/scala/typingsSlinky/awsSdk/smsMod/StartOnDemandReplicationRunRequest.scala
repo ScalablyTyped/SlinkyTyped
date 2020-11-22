@@ -13,7 +13,7 @@ trait StartOnDemandReplicationRunRequest extends js.Object {
   var description: js.UndefOr[Description] = js.native
   
   /**
-    * The identifier of the replication job.
+    * The ID of the replication job.
     */
   var replicationJobId: ReplicationJobId = js.native
 }

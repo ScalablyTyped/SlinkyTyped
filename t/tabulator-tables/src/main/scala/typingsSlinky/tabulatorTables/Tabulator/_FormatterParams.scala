@@ -54,4 +54,10 @@ object _FormatterParams {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[_FormatterParams]
   }
+  
+  @scala.inline
+  def RowSelectionParams(): _FormatterParams = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[_FormatterParams]
+  }
 }

@@ -26,8 +26,13 @@ import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.rebass.mod.SxStyleProp
 import typingsSlinky.rebassForms.mod.SelectProps
+import typingsSlinky.rebassForms.rebassFormsStrings.`additions removals`
 import typingsSlinky.rebassForms.rebassFormsStrings.`additions text`
 import typingsSlinky.rebassForms.rebassFormsStrings.`inline`
+import typingsSlinky.rebassForms.rebassFormsStrings.`removals additions`
+import typingsSlinky.rebassForms.rebassFormsStrings.`removals text`
+import typingsSlinky.rebassForms.rebassFormsStrings.`text additions`
+import typingsSlinky.rebassForms.rebassFormsStrings.`text removals`
 import typingsSlinky.rebassForms.rebassFormsStrings.additions
 import typingsSlinky.rebassForms.rebassFormsStrings.all
 import typingsSlinky.rebassForms.rebassFormsStrings.ascending
@@ -42,6 +47,7 @@ import typingsSlinky.rebassForms.rebassFormsStrings.dialog
 import typingsSlinky.rebassForms.rebassFormsStrings.email
 import typingsSlinky.rebassForms.rebassFormsStrings.execute
 import typingsSlinky.rebassForms.rebassFormsStrings.fontSizes
+import typingsSlinky.rebassForms.rebassFormsStrings.fontWeights
 import typingsSlinky.rebassForms.rebassFormsStrings.grammar
 import typingsSlinky.rebassForms.rebassFormsStrings.grid
 import typingsSlinky.rebassForms.rebassFormsStrings.horizontal
@@ -106,7 +112,7 @@ object Select {
     @scala.inline
     def alignSelf(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _, 
           RequiredTheme
         ]
     ): this.type = set("alignSelf", value.asInstanceOf[js.Any])
@@ -220,7 +226,9 @@ object Select {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -348,7 +356,7 @@ object Select {
     @scala.inline
     def display(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
           RequiredTheme
         ]
     ): this.type = set("display", value.asInstanceOf[js.Any])
@@ -365,7 +373,7 @@ object Select {
     @scala.inline
     def flex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Flex<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("flex", value.asInstanceOf[js.Any])
@@ -383,6 +391,15 @@ object Select {
     def fontSizeNull: this.type = set("fontSize", null)
     
     @scala.inline
+    def fontWeightVarargs(value: ((ThemeValue[fontWeights, RequiredTheme, js.Any]) | Null)*): this.type = set("fontWeight", js.Array(value :_*))
+    
+    @scala.inline
+    def fontWeight(value: ResponsiveValue[ThemeValue[fontWeights, RequiredTheme, _], RequiredTheme]): this.type = set("fontWeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def fontWeightNull: this.type = set("fontWeight", null)
+    
+    @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -391,7 +408,7 @@ object Select {
     @scala.inline
     def height(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("height", value.asInstanceOf[js.Any])
@@ -510,7 +527,7 @@ object Select {
     @scala.inline
     def maxHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("maxHeight", value.asInstanceOf[js.Any])
@@ -524,7 +541,7 @@ object Select {
     @scala.inline
     def maxWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("maxWidth", value.asInstanceOf[js.Any])
@@ -547,7 +564,7 @@ object Select {
     @scala.inline
     def minHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("minHeight", value.asInstanceOf[js.Any])
@@ -561,7 +578,7 @@ object Select {
     @scala.inline
     def minWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("minWidth", value.asInstanceOf[js.Any])
@@ -863,7 +880,7 @@ object Select {
     @scala.inline
     def opacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): this.type = set("opacity", value.asInstanceOf[js.Any])
@@ -877,7 +894,7 @@ object Select {
     @scala.inline
     def order(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Order */ _, 
           RequiredTheme
         ]
     ): this.type = set("order", value.asInstanceOf[js.Any])
@@ -891,7 +908,7 @@ object Select {
     @scala.inline
     def overflow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflow", value.asInstanceOf[js.Any])
@@ -905,7 +922,7 @@ object Select {
     @scala.inline
     def overflowX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflowX", value.asInstanceOf[js.Any])
@@ -919,7 +936,7 @@ object Select {
     @scala.inline
     def overflowY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflowY", value.asInstanceOf[js.Any])
@@ -1086,7 +1103,7 @@ object Select {
     @scala.inline
     def size(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("size", value.asInstanceOf[js.Any])
@@ -1154,7 +1171,7 @@ object Select {
     @scala.inline
     def verticalAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
@@ -1171,7 +1188,7 @@ object Select {
     @scala.inline
     def width(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("width", value.asInstanceOf[js.Any])

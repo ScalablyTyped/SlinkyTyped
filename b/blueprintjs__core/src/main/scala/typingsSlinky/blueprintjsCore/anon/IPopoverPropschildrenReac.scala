@@ -43,12 +43,10 @@ trait IPopoverPropschildrenReac extends js.Object {
   var canEscapeKeyClose: js.UndefOr[Boolean] = js.native
   
   /**
-    * When enabled, `preventDefault()` is invoked on `click` events that close
-    * this popover, which will prevent those clicks from closing outer
-    * popovers. When disabled, clicking inside a `Classes.POPOVER_DISMISS`
-    * element will close the parent popover.
-    *
-    * See http://blueprintjs.com/docs/#core/components/popover.closing-on-click
+    * When enabled, clicks inside a `Classes.POPOVER_DISMISS` element
+    * will only close the current popover and not outer popovers.
+    * When disabled, the current popover and any ancestor popovers will be closed.
+    * @see http://blueprintjs.com/docs/#core/components/popover.closing-on-click
     * @default false
     */
   var captureDismiss: js.UndefOr[Boolean] = js.native
@@ -150,9 +148,8 @@ trait IPopoverPropschildrenReac extends js.Object {
   var `lazy`: js.UndefOr[Boolean] = js.native
   
   /**
-    * Whether to apply minimal styles to this popover, which includes removing
-    * the arrow and adding `Classes.MINIMAL` to minimize and accelerate the
-    * transitions.
+    * Whether to apply minimal styling to this popover or tooltip. Minimal popovers
+    * do not have an arrow pointing to their target and use a subtler animation.
     * @default false
     */
   var minimal: js.UndefOr[Boolean] = js.native
@@ -172,7 +169,7 @@ trait IPopoverPropschildrenReac extends js.Object {
     * mouse or key event). Note that, since this component is controlled by the `isOpen` prop, it
     * will not actually close itself until that prop becomes `false`.
     */
-  var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.native
   
   /**
     * Lifecycle method invoked just after the CSS _close_ transition ends but
@@ -228,7 +225,7 @@ trait IPopoverPropschildrenReac extends js.Object {
   /**
     * Ref supplied to the `Classes.POPOVER` element.
     */
-  var popoverRef: js.UndefOr[js.Function1[/* ref */ HTMLDivElement | Null, Unit]] = js.native
+  var popoverRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, Unit]] = js.native
   
   /**
     * Space-delimited string of class names applied to the `Portal` element if
@@ -472,7 +469,7 @@ object IPopoverPropschildrenReac {
     def deleteModifiers: Self = this.set("modifiers", js.undefined)
     
     @scala.inline
-    def setOnClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
+    def setOnClose(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClose: Self = this.set("onClose", js.undefined)
@@ -522,7 +519,7 @@ object IPopoverPropschildrenReac {
     def deletePopoverClassName: Self = this.set("popoverClassName", js.undefined)
     
     @scala.inline
-    def setPopoverRef(value: /* ref */ HTMLDivElement | Null => Unit): Self = this.set("popoverRef", js.Any.fromFunction1(value))
+    def setPopoverRef(value: /* ref */ HTMLElement | Null => Unit): Self = this.set("popoverRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def deletePopoverRef: Self = this.set("popoverRef", js.undefined)

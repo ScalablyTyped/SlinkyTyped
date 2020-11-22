@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
+import typingsSlinky.babylonjs.BABYLON.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,6 +13,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 class MeshParticleEmitter ()
   extends typingsSlinky.babylonjs.BABYLON.MeshParticleEmitter {
-  def this(/** Defines the mesh to use as source */
-  mesh: typingsSlinky.babylonjs.BABYLON.AbstractMesh) = this()
+  def this(mesh: Nullable[typingsSlinky.babylonjs.BABYLON.AbstractMesh]) = this()
 }

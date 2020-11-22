@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-native-push-notification
 
-Typings are for version 3.0
+Typings are for version 5.0
 
 ## Library description:
 React Native Local and Remote Notifications

@@ -8,11 +8,11 @@ import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
@@ -38,6 +38,12 @@ trait ITextFieldProps extends AllHTMLAttributes[HTMLInputElement | HTMLTextAreaE
     * @defaultvalue false
     */
   var borderless: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Whether to show the reveal password button for input type `'password'` (will be ignored unless
+    * the `type` prop is set to `'password'`).
+    */
+  var canRevealPassword: js.UndefOr[Boolean] = js.native
   
   /**
     * Optional callback to access the ITextField component. Use this instead of ref for accessing
@@ -82,33 +88,17 @@ trait ITextFieldProps extends AllHTMLAttributes[HTMLInputElement | HTMLTextAreaE
   var inputClassName: js.UndefOr[String] = js.native
   
   /**
-    * Only used by MaskedTextField:
-    * The masking string that defines the mask's behavior.
-    * A backslash will escape any character.
-    * Special format characters are:
-    * '9': [0-9]
-    * 'a': [a-zA-Z]
-    * '*': [a-zA-Z0-9]
-    *
-    * @example `Phone Number: (999) 999-9999`
+    * @deprecated Only used by `MaskedTextField`, which now has a separate `IMaskedTextFieldProps` interface.
     */
   var mask: js.UndefOr[String] = js.native
   
   /**
-    * Only used by MaskedTextField:
-    * The character to show in place of unfilled characters of the mask.
-    * @defaultvalue '_'
+    * @deprecated Only used by `MaskedTextField`, which now has a separate `IMaskedTextFieldProps` interface.
     */
   var maskChar: js.UndefOr[String] = js.native
   
   /**
-    * Only used by MaskedTextField:
-    * An object defining the format characters and corresponding regexp values.
-    * Default format characters: \{
-    *  '9': /[0-9]/,
-    *  'a': /[a-zA-Z]/,
-    *  '*': /[a-zA-Z0-9]/
-    * \}
+    * @deprecated Only used by `MaskedTextField`, which now has a separate `IMaskedTextFieldProps` interface.
     */
   var maskFormat: js.UndefOr[StringDictionary[js.RegExp]] = js.native
   
@@ -278,6 +268,12 @@ object ITextFieldProps {
     
     @scala.inline
     def deleteBorderless: Self = this.set("borderless", js.undefined)
+    
+    @scala.inline
+    def setCanRevealPassword(value: Boolean): Self = this.set("canRevealPassword", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCanRevealPassword: Self = this.set("canRevealPassword", js.undefined)
     
     @scala.inline
     def setComponentRefFunction1(value: /* ref */ ITextField | Null => Unit): Self = this.set("componentRef", js.Any.fromFunction1(value))

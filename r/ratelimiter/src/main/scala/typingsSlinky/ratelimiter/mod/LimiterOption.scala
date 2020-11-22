@@ -15,6 +15,7 @@ trait LimiterOption extends js.Object {
   
   /**
     * Duration of limit in milliseconds
+    * @default 3600000
     */
   var duration: js.UndefOr[Double] = js.native
   
@@ -25,6 +26,7 @@ trait LimiterOption extends js.Object {
   
   /**
     * Max requests within duration
+    * @default 2500
     */
   var max: js.UndefOr[Double] = js.native
 }

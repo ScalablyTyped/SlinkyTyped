@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposCreateDeploymentStatusEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposCreateDeploymentStatusResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposCompareCommitsEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposCompareCommitsResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `900` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposCreateDeploymentStatusEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposCompareCommitsEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposCreateDeploymentStatusResponseData] = js.native
+  var response: OctokitResponse[ReposCompareCommitsResponseData] = js.native
 }
 object `900` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposCreateDeploymentStatusEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposCreateDeploymentStatusResponseData]
+    parameters: RequestParameters with (Omit[ReposCompareCommitsEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposCompareCommitsResponseData]
   ): `900` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`900`]
@@ -46,11 +46,9 @@ object `900` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[ReposCreateDeploymentStatusEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ReposCompareCommitsEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposCreateDeploymentStatusResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReposCompareCommitsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

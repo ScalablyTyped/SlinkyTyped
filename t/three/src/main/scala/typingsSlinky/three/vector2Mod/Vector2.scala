@@ -271,7 +271,13 @@ class Vector2 () extends Vector {
   
   var width: Double = js.native
   
+  /**
+  	 * @default 0
+  	 */
   var x: Double = js.native
   
+  /**
+  	 * @default 0
+  	 */
   var y: Double = js.native
 }

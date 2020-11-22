@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import typingsSlinky.highcharts.highchartsNumbers.`0`
 import typingsSlinky.highcharts.highchartsNumbers.`100`
 import scala.scalajs.js
@@ -40,6 +41,8 @@ trait PlotScatter3dOptions extends js.Object {
     * animation parameter under the API methods. The following properties are
     * supported:
     *
+    * - `defer`: The animation delay time in milliseconds.
+    *
     * - `duration`: The duration of the animation in milliseconds.
     *
     * - `easing`: Can be a string reference to an easing function set on the
@@ -48,7 +51,7 @@ trait PlotScatter3dOptions extends js.Object {
     * Due to poor performance, animation is disabled in old IE browsers for
     * several chart types.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | PlotScatter3dAnimationOptions | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highcharts) For some series, there is a limit that shuts down initial
@@ -58,28 +61,6 @@ trait PlotScatter3dOptions extends js.Object {
     * set `animationLimit` to `Infinity`.
     */
   var animationLimit: js.UndefOr[Double] = js.native
-  
-  /**
-    * (Highcharts) Sets the color blending in the boost module.
-    */
-  var boostBlending: js.UndefOr[OptionsBoostBlendingValue] = js.native
-  
-  /**
-    * (Highcharts) Set the point threshold for when a series should enter boost
-    * mode.
-    *
-    * Setting it to e.g. 2000 will cause the series to enter boost mode when
-    * there are 2000 or more points in the series.
-    *
-    * To disable boosting on the series, set the `boostThreshold` to 0. Setting
-    * it to 1 will force boosting.
-    *
-    * Note that the cropThreshold also affects this setting. When zooming in on
-    * a series that has fewer points than the `cropThreshold`, all points are
-    * rendered although outside the visible plot area, and the `boostThreshold`
-    * won't take effect.
-    */
-  var boostThreshold: js.UndefOr[Double] = js.native
   
   /**
     * (Highmaps) The border color of the map areas.
@@ -208,18 +189,6 @@ trait PlotScatter3dOptions extends js.Object {
     * column is rendered blurry.
     */
   var crisp: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * (Highcharts, Highstock) When the series contains less points than the
-    * crop threshold, all points are drawn, even if the points fall outside the
-    * visible plot area at the current zoom. The advantage of drawing all
-    * points (including markers and columns), is that animation is performed on
-    * updates. On the other hand, when the series contains more points than the
-    * crop threshold, the series data is cropped to only contain points that
-    * fall within the plot area. The advantage of cropping away invisible
-    * points is to increase performance on large series.
-    */
-  var cropThreshold: js.UndefOr[Double] = js.native
   
   /**
     * (Highcharts) You can set the cursor to "pointer" if you have click events
@@ -715,7 +684,7 @@ object PlotScatter3dOptions {
     def deleteAllowPointSelect: Self = this.set("allowPointSelect", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PlotScatter3dAnimationOptions | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)
@@ -725,18 +694,6 @@ object PlotScatter3dOptions {
     
     @scala.inline
     def deleteAnimationLimit: Self = this.set("animationLimit", js.undefined)
-    
-    @scala.inline
-    def setBoostBlending(value: OptionsBoostBlendingValue): Self = this.set("boostBlending", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBoostBlending: Self = this.set("boostBlending", js.undefined)
-    
-    @scala.inline
-    def setBoostThreshold(value: Double): Self = this.set("boostThreshold", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBoostThreshold: Self = this.set("boostThreshold", js.undefined)
     
     @scala.inline
     def setBorderColor(value: ColorString | GradientColorObject | PatternObject): Self = this.set("borderColor", value.asInstanceOf[js.Any])
@@ -827,12 +784,6 @@ object PlotScatter3dOptions {
     
     @scala.inline
     def deleteCrisp: Self = this.set("crisp", js.undefined)
-    
-    @scala.inline
-    def setCropThreshold(value: Double): Self = this.set("cropThreshold", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCropThreshold: Self = this.set("cropThreshold", js.undefined)
     
     @scala.inline
     def setCursor(value: String | CursorValue): Self = this.set("cursor", value.asInstanceOf[js.Any])

@@ -9,7 +9,7 @@ trait BackgroundRepeatProps extends js.Object {
   
   val backgroundRepeat: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundRepeatProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundRepeat */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BackgroundRepeatProps {
     }
     
     @scala.inline
+    def setBackgroundRepeatVarargs(value: js.Any*): Self = this.set("backgroundRepeat", js.Array(value :_*))
+    
+    @scala.inline
     def setBackgroundRepeat(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundRepeatProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundRepeat */ _
         ]
     ): Self = this.set("backgroundRepeat", value.asInstanceOf[js.Any])
     

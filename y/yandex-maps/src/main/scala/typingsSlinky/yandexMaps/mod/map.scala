@@ -13,7 +13,6 @@ object map extends js.Object {
   @js.native
   class Balloon protected ()
     extends IBalloonManager[typingsSlinky.yandexMaps.mod.map.Balloon] {
-    //tslint:disable-line no-shadowed-variable
     def this(map: Map_) = this()
   }
   
@@ -73,6 +72,11 @@ object map extends js.Object {
   class GeoObjects protected () extends IGeoObjectCollection {
     def this(map: Map_) = this()
     def this(map: Map_, options: js.Object) = this()
+    
+    def add(child: ObjectManager_): this.type = js.native
+    def add(child: ObjectManager_, index: Double): this.type = js.native
+    
+    def remove(child: ObjectManager_): this.type = js.native
   }
   
   @js.native
@@ -114,7 +118,6 @@ object map extends js.Object {
   @js.native
   object behavior extends js.Object {
     
-    //tslint:disable-line no-shadowed-variable
     @js.native
     class Manager protected ()
       extends ICustomizable
@@ -152,6 +155,8 @@ object map extends js.Object {
       
       def each(callback: js.Function1[/* layer */ ILayer, Unit]): Unit = js.native
       def each(callback: js.Function1[/* layer */ ILayer, Unit], context: js.Object): Unit = js.native
+      
+      def getAll(): js.Array[Collection_[Layer]] = js.native
       
       def getIterator(): IIterator = js.native
       

@@ -1,7 +1,7 @@
 
 # Scala.js typings for os-name
 
-Typings are for version 3.1.0
+Typings are for version 4.0.0
 
 ## Library description:
 Get the name of the current operating system. Example: macOS Sierra

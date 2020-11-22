@@ -1,5 +1,6 @@
 package typingsSlinky.nukaCarousel.mod
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
@@ -166,12 +167,18 @@ trait CarouselProps extends js.Object {
   /**
     * optional callback function
     */
-  var onDragStart: js.UndefOr[js.Function0[Unit]] = js.native
+  var onDragStart: js.UndefOr[js.Function1[/* e */ js.UndefOr[Event], Unit]] = js.native
   
   /**
     * Window onResize callback
     */
   var onResize: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  /**
+    * Adds a number value to set the scale of the opacity for the 'scroll3d' transition mode.
+    * @default 0.65
+    */
+  var opacityScale: js.UndefOr[Double] = js.native
   
   /**
     * Pause autoPlay when mouse is over carousel
@@ -243,6 +250,12 @@ trait CarouselProps extends js.Object {
   var slideIndex: js.UndefOr[Double] = js.native
   
   /**
+    * While using prop animation = "zoom", you can
+    * configure space around current slide with slideOffset.
+    */
+  var slideOffset: js.UndefOr[Double] = js.native
+  
+  /**
     * Manually set slideWidth
     * @example '20px'
     * @example 0.8
@@ -303,6 +316,13 @@ trait CarouselProps extends js.Object {
     * @default false
     */
   var wrapAround: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Adds a number value to set the scale of zoom when animation === "zoom".
+    * The number value should be set in a range of (0,1).
+    * @default 0.85
+    */
+  var zoomScale: js.UndefOr[Double] = js.native
 }
 object CarouselProps {
   
@@ -484,7 +504,7 @@ object CarouselProps {
     def deleteKeyCodeConfig: Self = this.set("keyCodeConfig", js.undefined)
     
     @scala.inline
-    def setOnDragStart(value: () => Unit): Self = this.set("onDragStart", js.Any.fromFunction0(value))
+    def setOnDragStart(value: /* e */ js.UndefOr[Event] => Unit): Self = this.set("onDragStart", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnDragStart: Self = this.set("onDragStart", js.undefined)
@@ -494,6 +514,12 @@ object CarouselProps {
     
     @scala.inline
     def deleteOnResize: Self = this.set("onResize", js.undefined)
+    
+    @scala.inline
+    def setOpacityScale(value: Double): Self = this.set("opacityScale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOpacityScale: Self = this.set("opacityScale", js.undefined)
     
     @scala.inline
     def setPauseOnHover(value: Boolean): Self = this.set("pauseOnHover", value.asInstanceOf[js.Any])
@@ -601,6 +627,12 @@ object CarouselProps {
     def deleteSlideIndex: Self = this.set("slideIndex", js.undefined)
     
     @scala.inline
+    def setSlideOffset(value: Double): Self = this.set("slideOffset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSlideOffset: Self = this.set("slideOffset", js.undefined)
+    
+    @scala.inline
     def setSlideWidth(value: CarouselSlideWidthProp): Self = this.set("slideWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -665,5 +697,11 @@ object CarouselProps {
     
     @scala.inline
     def deleteWrapAround: Self = this.set("wrapAround", js.undefined)
+    
+    @scala.inline
+    def setZoomScale(value: Double): Self = this.set("zoomScale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteZoomScale: Self = this.set("zoomScale", js.undefined)
   }
 }

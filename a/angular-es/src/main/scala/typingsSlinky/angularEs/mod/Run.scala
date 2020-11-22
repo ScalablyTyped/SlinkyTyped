@@ -11,7 +11,7 @@ object Run extends js.Object {
   /**
     * Register run block
     *
-    * @returns {ngESDecorator} - decorated class
+    * @returns decorated class
     */
   def apply(): ngESDecorator = js.native
 }

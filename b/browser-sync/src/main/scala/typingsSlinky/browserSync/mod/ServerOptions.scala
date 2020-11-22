@@ -1,5 +1,6 @@
 package typingsSlinky.browserSync.mod
 
+import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +27,7 @@ trait ServerOptions extends js.Object {
     */
   var routes: js.UndefOr[Hash[String]] = js.native
   
-  var serveStaticOptions: js.UndefOr[ServeStaticOptions] = js.native
+  var serveStaticOptions: js.UndefOr[ServeStaticOptions[ServerResponse]] = js.native
 }
 object ServerOptions {
   
@@ -88,7 +89,7 @@ object ServerOptions {
     def deleteRoutes: Self = this.set("routes", js.undefined)
     
     @scala.inline
-    def setServeStaticOptions(value: ServeStaticOptions): Self = this.set("serveStaticOptions", value.asInstanceOf[js.Any])
+    def setServeStaticOptions(value: ServeStaticOptions[ServerResponse]): Self = this.set("serveStaticOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteServeStaticOptions: Self = this.set("serveStaticOptions", js.undefined)

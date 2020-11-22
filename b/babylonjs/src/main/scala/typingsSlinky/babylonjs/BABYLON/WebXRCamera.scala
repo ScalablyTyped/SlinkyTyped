@@ -13,6 +13,12 @@ trait WebXRCamera extends FreeCamera {
   
   var _referencedPosition: js.Any = js.native
   
+  var _rotate180: js.Any = js.native
+  
+  var _setTrackingState: js.Any = js.native
+  
+  var _trackingState: js.Any = js.native
+  
   /** @hidden */
   def _updateForDualEyeDebugging(): Unit = js.native
   
@@ -37,6 +43,22 @@ trait WebXRCamera extends FreeCamera {
   var compensateOnFirstFrame: Boolean = js.native
   
   /**
+    *  Observable raised after camera teleportation
+    */
+  var onAfterCameraTeleport: Observable[Vector3] = js.native
+  
+  /**
+    * Observable raised before camera teleportation
+    */
+  var onBeforeCameraTeleport: Observable[Vector3] = js.native
+  
+  /**
+    * Notifies when the camera's tracking state has changed.
+    * Notice - will also be triggered when tracking has started (at the beginning of the session)
+    */
+  var onTrackingStateChanged: Observable[WebXRTrackingState] = js.native
+  
+  /**
     * Return the user's height, unrelated to the current ground.
     * This will be the y position of this camera, when ground level is 0.
     */
@@ -51,4 +73,9 @@ trait WebXRCamera extends FreeCamera {
   def setTransformationFromNonVRCamera(otherCamera: js.UndefOr[scala.Nothing], resetToBaseReferenceSpace: Boolean): Unit = js.native
   def setTransformationFromNonVRCamera(otherCamera: Camera): Unit = js.native
   def setTransformationFromNonVRCamera(otherCamera: Camera, resetToBaseReferenceSpace: Boolean): Unit = js.native
+  
+  /**
+    * Get the current XR tracking state of the camera
+    */
+  def trackingState: WebXRTrackingState = js.native
 }

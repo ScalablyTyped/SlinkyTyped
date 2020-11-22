@@ -27,6 +27,9 @@ object SwaggerUiReact {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
+    def deepLinking(value: Boolean): this.type = set("deepLinking", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def defaultModelExpandDepth(value: Double): this.type = set("defaultModelExpandDepth", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -48,7 +51,7 @@ object SwaggerUiReact {
     def responseInterceptor(value: /* res */ Response => Response | js.Promise[Response]): this.type = set("responseInterceptor", js.Any.fromFunction1(value))
     
     @scala.inline
-    def spec(value: js.Object): this.type = set("spec", value.asInstanceOf[js.Any])
+    def spec(value: js.Object | String): this.type = set("spec", value.asInstanceOf[js.Any])
     
     @scala.inline
     def supportedSubmitMethodsVarargs(value: String*): this.type = set("supportedSubmitMethods", js.Array(value :_*))

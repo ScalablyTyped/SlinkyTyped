@@ -40,12 +40,6 @@ trait PolicyAttachmentArgs extends js.Object {
 object PolicyAttachmentArgs {
   
   @scala.inline
-  def apply(policyArn: Input[ARN]): PolicyAttachmentArgs = {
-    val __obj = js.Dynamic.literal(policyArn = policyArn.asInstanceOf[js.Any])
-    __obj.asInstanceOf[PolicyAttachmentArgs]
-  }
-  
-  @scala.inline
   implicit class PolicyAttachmentArgsOps[Self <: PolicyAttachmentArgs] (val x: Self) extends AnyVal {
     
     @scala.inline

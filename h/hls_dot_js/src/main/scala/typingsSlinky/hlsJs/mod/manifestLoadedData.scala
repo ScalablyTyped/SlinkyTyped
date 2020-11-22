@@ -9,7 +9,7 @@ trait manifestLoadedData extends js.Object {
   
   var audioTracks: js.Array[Double] = js.native
   
-  var levels: js.Array[Double] = js.native
+  var levels: js.Array[Level] = js.native
   
   var stats: Stats = js.native
   
@@ -18,7 +18,7 @@ trait manifestLoadedData extends js.Object {
 object manifestLoadedData {
   
   @scala.inline
-  def apply(audioTracks: js.Array[Double], levels: js.Array[Double], stats: Stats, url: String): manifestLoadedData = {
+  def apply(audioTracks: js.Array[Double], levels: js.Array[Level], stats: Stats, url: String): manifestLoadedData = {
     val __obj = js.Dynamic.literal(audioTracks = audioTracks.asInstanceOf[js.Any], levels = levels.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[manifestLoadedData]
   }
@@ -45,10 +45,10 @@ object manifestLoadedData {
     def setAudioTracks(value: js.Array[Double]): Self = this.set("audioTracks", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLevelsVarargs(value: Double*): Self = this.set("levels", js.Array(value :_*))
+    def setLevelsVarargs(value: Level*): Self = this.set("levels", js.Array(value :_*))
     
     @scala.inline
-    def setLevels(value: js.Array[Double]): Self = this.set("levels", value.asInstanceOf[js.Any])
+    def setLevels(value: js.Array[Level]): Self = this.set("levels", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStats(value: Stats): Self = this.set("stats", value.asInstanceOf[js.Any])

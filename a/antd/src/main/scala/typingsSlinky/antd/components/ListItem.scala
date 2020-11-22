@@ -3,6 +3,7 @@ package typingsSlinky.antd.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.antd.anon.KeyWiseTransferItem
 import typingsSlinky.antd.transferListItemMod.ListItemProps
 import typingsSlinky.react.mod.ComponentPropsWithRef
 import scala.scalajs.js
@@ -18,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * / typingsSlinky.std.stdStrings.Pick with js.Any)) with (typingsSlinky.react.mod.RefAttributes[
 typingsSlinky.std.InstanceType[
   js.Function1[
-  / * props * / typingsSlinky.antd.transferListItemMod.ListItemProps, 
+  / * props * / typingsSlinky.antd.transferListItemMod.ListItemProps[typingsSlinky.antd.anon.KeyWiseTransferItem], 
   typingsSlinky.react.mod.global.JSX.Element
   ]
 ]]) because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree., Couldn't find props for / * import warning: importer.ImportType#apply c Unsupported type mapping: 
@@ -30,7 +31,9 @@ object ListItem {
   @js.native
   object component extends js.Object
   
-  def apply(p: ComponentPropsWithRef[js.Function1[/* props */ ListItemProps, ReactElement]]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def apply(
+    p: ComponentPropsWithRef[js.Function1[/* props */ ListItemProps[KeyWiseTransferItem], ReactElement]]
+  ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: ListItem.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }

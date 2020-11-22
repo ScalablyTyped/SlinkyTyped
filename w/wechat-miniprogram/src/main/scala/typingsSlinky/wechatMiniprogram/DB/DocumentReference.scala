@@ -1,5 +1,6 @@
 package typingsSlinky.wechatMiniprogram.DB
 
+import typingsSlinky.std.Record
 import typingsSlinky.wechatMiniprogram.OQ
 import typingsSlinky.wechatMiniprogram.anon.RQIGetDocumentOptions
 import typingsSlinky.wechatMiniprogram.anon.RQIRemoveSingleDocumentOp
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DocumentReference extends js.Object {
   
-  def field(`object`: js.Object): this.type = js.native
+  def field(`object`: Record[String, _]): this.type = js.native
   
   def get(): js.Promise[IQuerySingleResult] = js.native
   def get(options: OQ[IGetDocumentOptions]): Unit = js.native

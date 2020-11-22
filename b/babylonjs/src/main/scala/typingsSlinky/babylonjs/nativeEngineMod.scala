@@ -1,7 +1,10 @@
 package typingsSlinky.babylonjs
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.babylonjs.anon.Width
+import typingsSlinky.babylonjs.bufferMod.VertexBuffer
 import typingsSlinky.babylonjs.dataBufferMod.DataBuffer
+import typingsSlinky.babylonjs.effectMod.Effect
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.internalTextureMod.InternalTexture
 import typingsSlinky.babylonjs.mathMod.Color3
@@ -9,6 +12,7 @@ import typingsSlinky.babylonjs.mathMod.Matrix
 import typingsSlinky.babylonjs.mathMod.Viewport
 import typingsSlinky.babylonjs.renderTargetCreationOptionsMod.RenderTargetCreationOptions
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.typesMod.DataArray
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.std.WebGLVertexArrayObject
 import scala.scalajs.js
@@ -45,13 +49,30 @@ object nativeEngineMod extends js.Object {
     /** @hidden */
     def _bindTexture(channel: Double, texture: InternalTexture): Unit = js.native
     
+    var _boundBuffersVertexArray: js.Any = js.native
+    
+    var _currentDepthTest: js.Any = js.native
+    
     /* protected */ def _deleteBuffer(buffer: NativeDataBuffer): Unit = js.native
     
     var _getAddressMode: js.Any = js.native
     
-    var _getSamplingFilter: js.Any = js.native
+    var _getNativeAlphaMode: js.Any = js.native
+    
+    var _getNativeAttribType: js.Any = js.native
+    
+    var _getNativeSamplingMode: js.Any = js.native
+    
+    var _getNativeTextureFormat: js.Any = js.native
     
     val _native: js.Any = js.native
+    
+    /* protected */ def _recordVertexArrayObject(
+      vertexArray: js.Any,
+      vertexBuffers: StringDictionary[VertexBuffer],
+      indexBuffer: Nullable[NativeDataBuffer],
+      effect: Effect
+    ): Unit = js.native
     
     var _updateAnisotropicLevel: js.Any = js.native
     
@@ -172,65 +193,94 @@ object nativeEngineMod extends js.Object {
       fallback: js.UndefOr[Nullable[InternalTexture]]
     ): InternalTexture = js.native
     
+    def createRenderTargetTexture(size: Double, options: Boolean): NativeTexture = js.native
+    def createRenderTargetTexture(size: Double, options: RenderTargetCreationOptions): NativeTexture = js.native
     def createRenderTargetTexture(size: Width, options: Boolean): NativeTexture = js.native
     def createRenderTargetTexture(size: Width, options: RenderTargetCreationOptions): NativeTexture = js.native
     
-    def setArray(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
+    def createVertexBuffer(data: DataArray, updateable: Boolean): NativeDataBuffer = js.native
     
-    def setArray2(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
+    def setArray(uniform: WebGLUniformLocation, array: js.Array[Double]): Boolean = js.native
     
-    def setArray3(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
+    def setArray2(uniform: WebGLUniformLocation, array: js.Array[Double]): Boolean = js.native
     
-    def setArray4(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
+    def setArray3(uniform: WebGLUniformLocation, array: js.Array[Double]): Boolean = js.native
     
-    def setColor3(uniform: WebGLUniformLocation, color3: Color3): Unit = js.native
+    def setArray4(uniform: WebGLUniformLocation, array: js.Array[Double]): Boolean = js.native
     
-    def setColor4(uniform: WebGLUniformLocation, color3: Color3, alpha: Double): Unit = js.native
+    def setColor3(uniform: WebGLUniformLocation, color3: Color3): Boolean = js.native
     
-    def setFloat(uniform: WebGLUniformLocation, value: Double): Unit = js.native
+    def setColor4(uniform: WebGLUniformLocation, color3: Color3, alpha: Double): Boolean = js.native
     
-    def setFloat2(uniform: WebGLUniformLocation, x: Double, y: Double): Unit = js.native
+    def setFloat(uniform: WebGLUniformLocation, value: Double): Boolean = js.native
     
-    def setFloat3(uniform: WebGLUniformLocation, x: Double, y: Double, z: Double): Unit = js.native
+    def setFloat2(uniform: WebGLUniformLocation, x: Double, y: Double): Boolean = js.native
     
-    def setFloat4(uniform: WebGLUniformLocation, x: Double, y: Double, z: Double, w: Double): Unit = js.native
+    def setFloat3(uniform: WebGLUniformLocation, x: Double, y: Double, z: Double): Boolean = js.native
     
-    def setFloatArray(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Unit = js.native
+    def setFloat4(uniform: WebGLUniformLocation, x: Double, y: Double, z: Double, w: Double): Boolean = js.native
     
-    def setFloatArray2(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Unit = js.native
+    def setFloatArray(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Boolean = js.native
     
-    def setFloatArray3(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Unit = js.native
+    def setFloatArray2(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Boolean = js.native
     
-    def setFloatArray4(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Unit = js.native
+    def setFloatArray3(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Boolean = js.native
     
-    def setInt(uniform: WebGLUniformLocation, int: Double): Unit = js.native
+    def setFloatArray4(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Boolean = js.native
     
-    def setIntArray(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Unit = js.native
+    def setInt(uniform: WebGLUniformLocation, int: Double): Boolean = js.native
     
-    def setIntArray2(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Unit = js.native
+    def setIntArray(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Boolean = js.native
     
-    def setIntArray3(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Unit = js.native
+    def setIntArray2(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Boolean = js.native
     
-    def setIntArray4(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Unit = js.native
+    def setIntArray3(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Boolean = js.native
     
-    def setMatrices(uniform: WebGLUniformLocation, matrices: js.typedarray.Float32Array): Unit = js.native
+    def setIntArray4(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Boolean = js.native
+    
+    def setMatrices(uniform: WebGLUniformLocation, matrices: js.typedarray.Float32Array): Boolean = js.native
     
     def setMatrix(uniform: WebGLUniformLocation, matrix: Matrix): Unit = js.native
     
-    def setMatrix2x2(uniform: WebGLUniformLocation, matrix: js.typedarray.Float32Array): Unit = js.native
+    def setMatrix2x2(uniform: WebGLUniformLocation, matrix: js.typedarray.Float32Array): Boolean = js.native
     
-    def setMatrix3x3(uniform: WebGLUniformLocation, matrix: js.typedarray.Float32Array): Unit = js.native
+    def setMatrix3x3(uniform: WebGLUniformLocation, matrix: js.typedarray.Float32Array): Boolean = js.native
     
     def setViewport(viewport: Viewport): Unit = js.native
     def setViewport(viewport: Viewport, requiredWidth: js.UndefOr[scala.Nothing], requiredHeight: Double): Unit = js.native
     def setViewport(viewport: Viewport, requiredWidth: Double): Unit = js.native
     def setViewport(viewport: Viewport, requiredWidth: Double, requiredHeight: Double): Unit = js.native
-  }
-  /* static members */
-  @js.native
-  object NativeEngine extends js.Object {
     
-    var _GetNativeTextureFormat: js.Any = js.native
+    /**
+      * Update the content of a dynamic texture
+      * @param texture defines the texture to update
+      * @param canvas defines the canvas containing the source
+      * @param invertY defines if data must be stored with Y axis inverted
+      * @param premulAlpha defines if alpha is stored as premultiplied
+      * @param format defines the format of the data
+      * @param forceBindTexture if the texture should be forced to be bound eg. after a graphics context loss (Default: false)
+      */
+    def updateDynamicTexture(texture: Nullable[InternalTexture], canvas: HTMLCanvasElement, invertY: Boolean): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: HTMLCanvasElement,
+      invertY: Boolean,
+      premulAlpha: js.UndefOr[scala.Nothing],
+      format: Double
+    ): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: HTMLCanvasElement,
+      invertY: Boolean,
+      premulAlpha: Boolean
+    ): Unit = js.native
+    def updateDynamicTexture(
+      texture: Nullable[InternalTexture],
+      canvas: HTMLCanvasElement,
+      invertY: Boolean,
+      premulAlpha: Boolean,
+      format: Double
+    ): Unit = js.native
   }
   
   /** @hidden */

@@ -1,26 +1,35 @@
 package typingsSlinky.jupyterlabApputils.vdomMod
 
 import typingsSlinky.jupyterlabApputils.vdomMod.VDomRenderer.IModel
-import typingsSlinky.phosphorSignaling.mod.ISignal
+import typingsSlinky.luminoSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/apputils/lib/vdom", "VDomRenderer")
 @js.native
-abstract class VDomRenderer_[T /* <: IModel | Null */] () extends ReactWidget {
-  var _model: js.Any = js.native
-  var _modelChanged: js.Any = js.native
+abstract class VDomRenderer_[T /* <: IModel | Null */] protected () extends ReactWidget {
   /**
-    * Set the model and fire changed signals.
+    * Create a new VDomRenderer
     */
+  def this(model: T | Unit) = this()
+  
+  var _model: js.Any = js.native
+  
+  var _modelChanged: js.Any = js.native
+  
   /**
     * Get the current model.
     */
-  var model: T | Null = js.native
+  def model: T = js.native
+  
   /**
     * A signal emitted when the model changes.
     */
-  val modelChanged: ISignal[this.type, Unit] = js.native
+  def modelChanged: ISignal[this.type, Unit] = js.native
+  
+  /**
+    * Set the model and fire changed signals.
+    */
+  def model_=(newValue: T): Unit = js.native
 }
-

@@ -2,7 +2,7 @@ package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxDropDownMenu
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxFileManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ItemIndexModel extends js.Object {
   
-  var component: js.UndefOr[dxDropDownMenu] = js.native
+  var component: js.UndefOr[dxFileManager] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -48,7 +48,7 @@ object ItemIndexModel {
     }
     
     @scala.inline
-    def setComponent(value: dxDropDownMenu): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxFileManager): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)

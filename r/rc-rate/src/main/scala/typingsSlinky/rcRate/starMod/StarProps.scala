@@ -13,7 +13,7 @@ trait StarProps extends js.Object {
   
   var allowHalf: js.UndefOr[Boolean] = js.native
   
-  var character: js.UndefOr[js.Function1[/* props */ this.type, ReactElement]] = js.native
+  var character: js.UndefOr[ReactElement] = js.native
   
   var characterRender: js.UndefOr[js.Function2[/* origin */ ReactElement, /* props */ this.type, ReactElement]] = js.native
   
@@ -71,7 +71,10 @@ object StarProps {
     def deleteAllowHalf: Self = this.set("allowHalf", js.undefined)
     
     @scala.inline
-    def setCharacter(value: StarProps => ReactElement): Self = this.set("character", js.Any.fromFunction1(value))
+    def setCharacterReactElement(value: ReactElement): Self = this.set("character", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCharacter(value: ReactElement): Self = this.set("character", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCharacter: Self = this.set("character", js.undefined)

@@ -8,10 +8,10 @@ import typingsSlinky.antd.antdStrings.large
 import typingsSlinky.antd.antdStrings.round
 import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.antdStrings.square
-import typingsSlinky.antd.imageMod.SkeletonImageProps
 import typingsSlinky.antd.paragraphMod.SkeletonParagraphProps
 import typingsSlinky.antd.skeletonAvatarMod.AvatarProps
 import typingsSlinky.antd.skeletonButtonMod.SkeletonButtonProps
+import typingsSlinky.antd.skeletonImageMod.SkeletonImageProps
 import typingsSlinky.antd.skeletonInputMod.SkeletonInputProps
 import typingsSlinky.antd.skeletonSkeletonMod.SkeletonAvatarProps
 import typingsSlinky.antd.skeletonSkeletonMod.SkeletonProps
@@ -133,9 +133,24 @@ object Skeleton {
     @js.native
     object component extends js.Object
     
-    def withProps(p: SkeletonImageProps): SharedBuilder_SkeletonImageProps696746036 = new SharedBuilder_SkeletonImageProps696746036(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    }
     
-    implicit def make(companion: Image.type): SharedBuilder_SkeletonImageProps696746036 = new SharedBuilder_SkeletonImageProps696746036(js.Array(this.component, js.Dictionary.empty))()
+    def withProps(p: SkeletonImageProps): typingsSlinky.antd.components.Skeleton.Image.Builder = new typingsSlinky.antd.components.Skeleton.Image.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    
+    implicit def make(companion: Image.type): typingsSlinky.antd.components.Skeleton.Image.Builder = new typingsSlinky.antd.components.Skeleton.Image.Builder(js.Array(this.component, js.Dictionary.empty))()
   }
   
   object Avatar {

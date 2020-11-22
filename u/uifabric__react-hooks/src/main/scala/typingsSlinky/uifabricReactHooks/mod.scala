@@ -1,19 +1,26 @@
 package typingsSlinky.uifabricReactHooks
 
+import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Window
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.SetStateAction
 import typingsSlinky.uifabricReactHooks.useBooleanMod.IUseBooleanCallbacks
 import typingsSlinky.uifabricReactHooks.useControllableValueMod.ChangeCallback
+import typingsSlinky.uifabricReactHooks.useMergedRefsMod.RefObjectFunction
 import typingsSlinky.uifabricReactHooks.useRefEffectMod.RefCallback
 import typingsSlinky.uifabricReactHooks.useSetIntervalMod.UseSetIntervalReturnType
 import typingsSlinky.uifabricReactHooks.useSetTimeoutMod.UseSetTimeoutReturnType
+import typingsSlinky.uifabricReactHooks.useTargetMod.Target
+import typingsSlinky.uifabricReactHooks.useWarningsMod.IWarningOptions
 import typingsSlinky.uifabricUtilities.mod.Async
+import typingsSlinky.uifabricUtilities.pointMod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,42 +38,102 @@ object mod extends js.Object {
   
   def useConstCallback[T /* <: js.Function1[/* repeated */ js.Any, _] */](callback: T): T = js.native
   
-  def useControllableValue[TValue, TElement /* <: HTMLElement */](): js.Tuple2[js.UndefOr[TValue], js.Function1[/* newValue */ js.UndefOr[TValue], Unit]] = js.native
-  def useControllableValue[TValue, TElement /* <: HTMLElement */](controlledValue: TValue): js.Tuple2[js.UndefOr[TValue], js.Function1[/* newValue */ js.UndefOr[TValue], Unit]] = js.native
-  def useControllableValue[TValue, TElement /* <: HTMLElement */](controlledValue: TValue, defaultUncontrolledValue: TValue): js.Tuple2[js.UndefOr[TValue], js.Function1[/* newValue */ js.UndefOr[TValue], Unit]] = js.native
-  def useControllableValue[TValue, TElement /* <: HTMLElement */](controlledValue: js.UndefOr[scala.Nothing], defaultUncontrolledValue: TValue): js.Tuple2[js.UndefOr[TValue], js.Function1[/* newValue */ js.UndefOr[TValue], Unit]] = js.native
-  def useControllableValue[TValue, TElement /* <: HTMLElement */, TCallback /* <: js.UndefOr[ChangeCallback[TElement, TValue]] */](controlledValue: TValue, defaultUncontrolledValue: TValue, onChange: TCallback): js.Tuple2[
+  def useControllableValue[TValue, TElement /* <: HTMLElement */](): js.Tuple2[
     js.UndefOr[TValue], 
-    js.Function2[
-      /* newValue */ js.UndefOr[TValue], 
-      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
-      Unit
-    ]
+    js.Function1[/* update */ SetStateAction[js.UndefOr[TValue]], Unit]
   ] = js.native
-  def useControllableValue[TValue, TElement /* <: HTMLElement */, TCallback /* <: js.UndefOr[ChangeCallback[TElement, TValue]] */](controlledValue: TValue, defaultUncontrolledValue: js.UndefOr[scala.Nothing], onChange: TCallback): js.Tuple2[
+  def useControllableValue[TValue, TElement /* <: HTMLElement */](controlledValue: TValue): js.Tuple2[
     js.UndefOr[TValue], 
-    js.Function2[
-      /* newValue */ js.UndefOr[TValue], 
-      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
-      Unit
-    ]
+    js.Function1[/* update */ SetStateAction[js.UndefOr[TValue]], Unit]
   ] = js.native
-  def useControllableValue[TValue, TElement /* <: HTMLElement */, TCallback /* <: js.UndefOr[ChangeCallback[TElement, TValue]] */](controlledValue: js.UndefOr[scala.Nothing], defaultUncontrolledValue: TValue, onChange: TCallback): js.Tuple2[
+  def useControllableValue[TValue, TElement /* <: HTMLElement */](controlledValue: TValue, defaultUncontrolledValue: TValue): js.Tuple2[
     js.UndefOr[TValue], 
-    js.Function2[
-      /* newValue */ js.UndefOr[TValue], 
-      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
-      Unit
-    ]
+    js.Function1[/* update */ SetStateAction[js.UndefOr[TValue]], Unit]
   ] = js.native
-  def useControllableValue[TValue, TElement /* <: HTMLElement */, TCallback /* <: js.UndefOr[ChangeCallback[TElement, TValue]] */](
-    controlledValue: js.UndefOr[scala.Nothing],
-    defaultUncontrolledValue: js.UndefOr[scala.Nothing],
-    onChange: TCallback
+  def useControllableValue[TValue, TElement /* <: HTMLElement */](controlledValue: js.UndefOr[scala.Nothing], defaultUncontrolledValue: TValue): js.Tuple2[
+    js.UndefOr[TValue], 
+    js.Function1[/* update */ SetStateAction[js.UndefOr[TValue]], Unit]
+  ] = js.native
+  def useControllableValue[TValue, TElement /* <: HTMLElement */, TEvent /* <: js.UndefOr[SyntheticEvent[Event, TElement]] */](
+    controlledValue: TValue,
+    defaultUncontrolledValue: TValue,
+    onChange: ChangeCallback[TElement, TValue, TEvent]
   ): js.Tuple2[
     js.UndefOr[TValue], 
     js.Function2[
-      /* newValue */ js.UndefOr[TValue], 
+      /* update */ SetStateAction[js.UndefOr[TValue]], 
+      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
+      Unit
+    ]
+  ] = js.native
+  def useControllableValue[TValue, TElement /* <: HTMLElement */, TEvent /* <: js.UndefOr[SyntheticEvent[Event, TElement]] */](
+    controlledValue: TValue,
+    defaultUncontrolledValue: js.UndefOr[scala.Nothing],
+    onChange: ChangeCallback[TElement, TValue, TEvent]
+  ): js.Tuple2[
+    js.UndefOr[TValue], 
+    js.Function2[
+      /* update */ SetStateAction[js.UndefOr[TValue]], 
+      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
+      Unit
+    ]
+  ] = js.native
+  def useControllableValue[TValue, TElement /* <: HTMLElement */, TEvent /* <: js.UndefOr[SyntheticEvent[Event, TElement]] */](
+    controlledValue: js.UndefOr[scala.Nothing],
+    defaultUncontrolledValue: TValue,
+    onChange: ChangeCallback[TElement, TValue, TEvent]
+  ): js.Tuple2[
+    js.UndefOr[TValue], 
+    js.Function2[
+      /* update */ SetStateAction[js.UndefOr[TValue]], 
+      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
+      Unit
+    ]
+  ] = js.native
+  def useControllableValue[TValue, TElement /* <: HTMLElement */, TEvent /* <: js.UndefOr[SyntheticEvent[Event, TElement]] */](
+    controlledValue: js.UndefOr[scala.Nothing],
+    defaultUncontrolledValue: js.UndefOr[scala.Nothing],
+    onChange: ChangeCallback[TElement, TValue, TEvent]
+  ): js.Tuple2[
+    js.UndefOr[TValue], 
+    js.Function2[
+      /* update */ SetStateAction[js.UndefOr[TValue]], 
+      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
+      Unit
+    ]
+  ] = js.native
+  @JSName("useControllableValue")
+  def `useControllableValue_TValueTElement_HTMLElementTEvent_UnionSyntheticEventTElementEvent<undefined>`[TValue, TElement /* <: HTMLElement */, TEvent /* <: js.UndefOr[SyntheticEvent[Event, TElement]] */](): js.Tuple2[
+    js.UndefOr[TValue], 
+    js.Function2[
+      /* update */ SetStateAction[js.UndefOr[TValue]], 
+      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
+      Unit
+    ]
+  ] = js.native
+  @JSName("useControllableValue")
+  def `useControllableValue_TValueTElement_HTMLElementTEvent_UnionSyntheticEventTElementEvent<undefined>`[TValue, TElement /* <: HTMLElement */, TEvent /* <: js.UndefOr[SyntheticEvent[Event, TElement]] */](controlledValue: TValue): js.Tuple2[
+    js.UndefOr[TValue], 
+    js.Function2[
+      /* update */ SetStateAction[js.UndefOr[TValue]], 
+      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
+      Unit
+    ]
+  ] = js.native
+  @JSName("useControllableValue")
+  def `useControllableValue_TValueTElement_HTMLElementTEvent_UnionSyntheticEventTElementEvent<undefined>`[TValue, TElement /* <: HTMLElement */, TEvent /* <: js.UndefOr[SyntheticEvent[Event, TElement]] */](controlledValue: TValue, defaultUncontrolledValue: TValue): js.Tuple2[
+    js.UndefOr[TValue], 
+    js.Function2[
+      /* update */ SetStateAction[js.UndefOr[TValue]], 
+      /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
+      Unit
+    ]
+  ] = js.native
+  @JSName("useControllableValue")
+  def `useControllableValue_TValueTElement_HTMLElementTEvent_UnionSyntheticEventTElementEvent<undefined>`[TValue, TElement /* <: HTMLElement */, TEvent /* <: js.UndefOr[SyntheticEvent[Event, TElement]] */](controlledValue: js.UndefOr[scala.Nothing], defaultUncontrolledValue: TValue): js.Tuple2[
+    js.UndefOr[TValue], 
+    js.Function2[
+      /* update */ SetStateAction[js.UndefOr[TValue]], 
       /* ev */ js.UndefOr[SyntheticEvent[EventTarget with TElement, Event]], 
       Unit
     ]
@@ -79,7 +146,7 @@ object mod extends js.Object {
   def useId(prefix: String): String = js.native
   def useId(prefix: String, providedId: String): String = js.native
   
-  def useMergedRefs[T](refs: Ref[T]*): js.Function1[/* instance */ T, Unit] = js.native
+  def useMergedRefs[T](refs: js.UndefOr[Ref[T]]*): RefObjectFunction[T] = js.native
   
   def useOnEvent[TElement /* <: Element */, TEvent /* <: Event */](element: TElement, eventName: String, callback: js.Function1[/* ev */ TEvent, Unit]): Unit = js.native
   def useOnEvent[TElement /* <: Element */, TEvent /* <: Event */](
@@ -117,6 +184,13 @@ object mod extends js.Object {
     callback: js.Function1[/* ev */ TEvent, Unit],
     useCapture: Boolean
   ): Unit = js.native
+  def useOnEvent[TElement /* <: Element */, TEvent /* <: Event */](element: Document, eventName: String, callback: js.Function1[/* ev */ TEvent, Unit]): Unit = js.native
+  def useOnEvent[TElement /* <: Element */, TEvent /* <: Event */](
+    element: Document,
+    eventName: String,
+    callback: js.Function1[/* ev */ TEvent, Unit],
+    useCapture: Boolean
+  ): Unit = js.native
   def useOnEvent[TElement /* <: Element */, TEvent /* <: Event */](element: Window, eventName: String, callback: js.Function1[/* ev */ TEvent, Unit]): Unit = js.native
   def useOnEvent[TElement /* <: Element */, TEvent /* <: Event */](
     element: Window,
@@ -133,4 +207,10 @@ object mod extends js.Object {
   def useSetInterval(): UseSetIntervalReturnType = js.native
   
   def useSetTimeout(): UseSetTimeoutReturnType = js.native
+  
+  def useTarget[TElement /* <: HTMLElement */](): js.Tuple2[ReactRef[Element | MouseEvent | Point | Null], js.UndefOr[Window]] = js.native
+  def useTarget[TElement /* <: HTMLElement */](target: js.UndefOr[Target], hostElement: ReactRef[Null | TElement]): js.Tuple2[ReactRef[Element | MouseEvent | Point | Null], js.UndefOr[Window]] = js.native
+  def useTarget[TElement /* <: HTMLElement */](target: Target): js.Tuple2[ReactRef[Element | MouseEvent | Point | Null], js.UndefOr[Window]] = js.native
+  
+  def useWarnings[P](options: IWarningOptions[P]): Unit = js.native
 }

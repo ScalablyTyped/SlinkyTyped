@@ -279,13 +279,22 @@ object mapboxGlStrings {
   def identity: identity = "identity".asInstanceOf[identity]
   
   @scala.inline
+  def idle: idle = "idle".asInstanceOf[idle]
+  
+  @scala.inline
   def image_ : image_ = "image".asInstanceOf[image_]
   
   @scala.inline
   def imperial: imperial = "imperial".asInstanceOf[imperial]
   
   @scala.inline
+  def in: in = "in".asInstanceOf[in]
+  
+  @scala.inline
   def include: include = "include".asInstanceOf[include]
+  
+  @scala.inline
+  def `index-of`: `index-of` = "index-of".asInstanceOf[`index-of`]
   
   @scala.inline
   def interpolate: interpolate = "interpolate".asInstanceOf[interpolate]
@@ -484,6 +493,9 @@ object mapboxGlStrings {
   
   @scala.inline
   def sin: sin = "sin".asInstanceOf[sin]
+  
+  @scala.inline
+  def slice: slice = "slice".asInstanceOf[slice]
   
   @scala.inline
   def source_ : source_ = "source".asInstanceOf[source_]
@@ -882,13 +894,22 @@ object mapboxGlStrings {
   sealed trait identity extends js.Object
   
   @js.native
-  sealed trait image_ extends js.Object
+  sealed trait idle extends js.Object
+  
+  @js.native
+  sealed trait image_ extends ExpressionName
   
   @js.native
   sealed trait imperial extends js.Object
   
   @js.native
+  sealed trait in extends ExpressionName
+  
+  @js.native
   sealed trait include extends js.Object
+  
+  @js.native
+  sealed trait `index-of` extends ExpressionName
   
   @js.native
   sealed trait interpolate extends ExpressionName
@@ -1087,6 +1108,9 @@ object mapboxGlStrings {
   
   @js.native
   sealed trait sin extends ExpressionName
+  
+  @js.native
+  sealed trait slice extends ExpressionName
   
   @js.native
   sealed trait source_ extends js.Object

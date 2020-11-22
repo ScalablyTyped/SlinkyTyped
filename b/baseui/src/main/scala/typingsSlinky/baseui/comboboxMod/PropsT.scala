@@ -1,8 +1,9 @@
 package typingsSlinky.baseui.comboboxMod
 
+import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticFocusEvent
 import typingsSlinky.baseui.anon.CloseListbox
-import typingsSlinky.baseui.anon.Input
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -18,19 +19,25 @@ trait PropsT[OptionT] extends js.Object {
   
   var disabled: js.UndefOr[Boolean] = js.native
   
+  var id: js.UndefOr[String] = js.native
+  
   var mapOptionToNode: js.UndefOr[js.Function1[/* hasIsSelectedOption */ js.Any, ReactElement]] = js.native
   
   def mapOptionToString(OptionT: js.Any): String = js.native
   
   var name: js.UndefOr[String] = js.native
   
+  var onBlur: js.UndefOr[js.Function1[/* event */ SyntheticFocusEvent[HTMLInputElement], _]] = js.native
+  
   var onChange: js.UndefOr[js.Function2[/* value */ String, /* option */ OptionT | Null, _]] = js.native
+  
+  var onFocus: js.UndefOr[js.Function1[/* event */ SyntheticFocusEvent[HTMLInputElement], _]] = js.native
   
   var onSubmit: js.UndefOr[js.Function1[/* params */ CloseListbox, _]] = js.native
   
   var options: OptionT = js.native
   
-  var overrides: js.UndefOr[Input] = js.native
+  var overrides: js.UndefOr[ComboboxOverrides] = js.native
   
   var size: js.UndefOr[compact | default_ | large_ | mini] = js.native
   
@@ -81,6 +88,12 @@ object PropsT {
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     
     @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    
+    @scala.inline
     def setMapOptionToNode(value: /* hasIsSelectedOption */ js.Any => ReactElement): Self = this.set("mapOptionToNode", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -93,10 +106,22 @@ object PropsT {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
+    def setOnBlur(value: /* event */ SyntheticFocusEvent[HTMLInputElement] => _): Self = this.set("onBlur", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnBlur: Self = this.set("onBlur", js.undefined)
+    
+    @scala.inline
     def setOnChange(value: (/* value */ String, /* option */ OptionT | Null) => _): Self = this.set("onChange", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
+    
+    @scala.inline
+    def setOnFocus(value: /* event */ SyntheticFocusEvent[HTMLInputElement] => _): Self = this.set("onFocus", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnFocus: Self = this.set("onFocus", js.undefined)
     
     @scala.inline
     def setOnSubmit(value: /* params */ CloseListbox => _): Self = this.set("onSubmit", js.Any.fromFunction1(value))
@@ -105,7 +130,7 @@ object PropsT {
     def deleteOnSubmit: Self = this.set("onSubmit", js.undefined)
     
     @scala.inline
-    def setOverrides(value: Input): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: ComboboxOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)

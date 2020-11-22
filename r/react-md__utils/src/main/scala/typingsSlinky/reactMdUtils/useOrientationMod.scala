@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useOrientationMod extends js.Object {
   
-  def default(): OrientationType = js.native
-  def default(defaultValue: OrientationType): OrientationType = js.native
-  
   def getOrientationType(): OrientationType = js.native
+  
+  def useOrientation(): OrientationType = js.native
+  def useOrientation(defaultValue: OrientationType): OrientationType = js.native
 }

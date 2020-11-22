@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VmServerAddress extends js.Object {
   
   /**
-    * The identifier of the VM.
+    * The ID of the VM.
     */
   var vmId: js.UndefOr[VmId] = js.native
   
   /**
-    * The identifier of the VM manager.
+    * The ID of the VM manager.
     */
   var vmManagerId: js.UndefOr[VmManagerId] = js.native
 }

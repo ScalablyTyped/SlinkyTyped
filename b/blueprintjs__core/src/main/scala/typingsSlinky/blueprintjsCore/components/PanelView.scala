@@ -27,8 +27,8 @@ object PanelView {
   
   @scala.inline
   def apply(
-    onClose: IPanel[js.Object] => Unit,
-    onOpen: IPanel[js.Object] => Unit,
+    onClose: IPanel[_] => Unit,
+    onOpen: IPanel[_] => Unit,
     panel: IPanel[js.Object],
     showHeader: Boolean
   ): Builder = {

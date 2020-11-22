@@ -30,6 +30,14 @@ trait HealthCheckArgs extends js.Object {
   val cloudwatchAlarmRegion: js.UndefOr[Input[String]] = js.native
   
   /**
+    * A boolean value that stops Route 53 from performing health checks. When set to true, Route 53 will do the following depending on the type of health check:
+    * * For health checks that check the health of endpoints, Route5 53 stops submitting requests to your application, server, or other resource.
+    * * For calculated health checks, Route 53 stops aggregating the status of the referenced health checks.
+    * * For health checks that monitor CloudWatch alarms, Route 53 stops monitoring the corresponding CloudWatch metrics.
+    */
+  val disabled: js.UndefOr[Input[Boolean]] = js.native
+  
+  /**
     * A boolean value that indicates whether Route53 should send the `fqdn` to the endpoint when performing the health check. This defaults to AWS' defaults: when the `type` is "HTTPS" `enableSni` defaults to `true`, when `type` is anything else `enableSni` defaults to `false`.
     */
   val enableSni: js.UndefOr[Input[Boolean]] = js.native
@@ -158,6 +166,12 @@ object HealthCheckArgs {
     
     @scala.inline
     def deleteCloudwatchAlarmRegion: Self = this.set("cloudwatchAlarmRegion", js.undefined)
+    
+    @scala.inline
+    def setDisabled(value: Input[Boolean]): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
     
     @scala.inline
     def setEnableSni(value: Input[Boolean]): Self = this.set("enableSni", value.asInstanceOf[js.Any])

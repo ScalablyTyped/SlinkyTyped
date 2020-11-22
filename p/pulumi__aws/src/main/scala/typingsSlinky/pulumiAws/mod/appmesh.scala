@@ -2,8 +2,12 @@ package typingsSlinky.pulumiAws.mod
 
 import typingsSlinky.pulumiAws.appmeshRouteMod.RouteArgs
 import typingsSlinky.pulumiAws.appmeshRouteMod.RouteState
+import typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRouteArgs
+import typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRouteState
 import typingsSlinky.pulumiAws.meshMod.MeshArgs
 import typingsSlinky.pulumiAws.meshMod.MeshState
+import typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGatewayArgs
+import typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGatewayState
 import typingsSlinky.pulumiAws.virtualNodeMod.VirtualNodeArgs
 import typingsSlinky.pulumiAws.virtualNodeMod.VirtualNodeState
 import typingsSlinky.pulumiAws.virtualRouterMod.VirtualRouterArgs
@@ -20,6 +24,44 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@pulumi/aws", "appmesh")
 @js.native
 object appmesh extends js.Object {
+  
+  @js.native
+  class GatewayRoute protected ()
+    extends typingsSlinky.pulumiAws.appmeshMod.GatewayRoute {
+    /**
+      * Create a GatewayRoute resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: GatewayRouteArgs) = this()
+    def this(name: String, args: GatewayRouteArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object GatewayRoute extends js.Object {
+    
+    /**
+      * Get an existing GatewayRoute resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRoute = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRoute = js.native
+    def get(name: String, id: Input[ID], state: GatewayRouteState): typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRoute = js.native
+    def get(name: String, id: Input[ID], state: GatewayRouteState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.gatewayRouteMod.GatewayRoute = js.native
+    
+    /**
+      * Returns true if the given object is an instance of GatewayRoute.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/appmesh/gatewayRoute.GatewayRoute */ Boolean = js.native
+  }
   
   @js.native
   class Mesh protected ()
@@ -97,6 +139,44 @@ object appmesh extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/appmesh/route.Route */ Boolean = js.native
+  }
+  
+  @js.native
+  class VirtualGateway protected ()
+    extends typingsSlinky.pulumiAws.appmeshMod.VirtualGateway {
+    /**
+      * Create a VirtualGateway resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: VirtualGatewayArgs) = this()
+    def this(name: String, args: VirtualGatewayArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object VirtualGateway extends js.Object {
+    
+    /**
+      * Get an existing VirtualGateway resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGateway = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGateway = js.native
+    def get(name: String, id: Input[ID], state: VirtualGatewayState): typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGateway = js.native
+    def get(name: String, id: Input[ID], state: VirtualGatewayState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.virtualGatewayMod.VirtualGateway = js.native
+    
+    /**
+      * Returns true if the given object is an instance of VirtualGateway.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/appmesh/virtualGateway.VirtualGateway */ Boolean = js.native
   }
   
   @js.native

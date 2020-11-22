@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.anon.CancelComponentElement
+import typingsSlinky.devextreme.anon.CancelComponentElementModel
 import typingsSlinky.devextreme.anon.ComponentElementModel
 import typingsSlinky.devextreme.anon.Delay
 import typingsSlinky.devextreme.anon.Position
@@ -20,42 +20,66 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxContextMenuOptions extends dxMenuBaseOptions[dxContextMenu] {
   
-  /** @name dxContextMenu.Options.closeOnOutsideClick */
+  /**
+    * [descr:dxContextMenu.Options.closeOnOutsideClick]
+    */
   var closeOnOutsideClick: js.UndefOr[Boolean | (js.Function1[/* event */ event, Boolean])] = js.native
   
-  /** @name dxContextMenu.Options.dataSource */
+  /**
+    * [descr:dxContextMenu.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxContextMenuOptions: js.UndefOr[String | js.Array[dxContextMenuItem] | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxContextMenu.Options.items */
+  /**
+    * [descr:dxContextMenu.Options.items]
+    */
   @JSName("items")
   var items_dxContextMenuOptions: js.UndefOr[js.Array[dxContextMenuItem]] = js.native
   
-  /** @name dxContextMenu.Options.onHidden */
+  /**
+    * [descr:dxContextMenu.Options.onHidden]
+    */
   var onHidden: js.UndefOr[js.Function1[/* e */ ComponentElementModel, _]] = js.native
   
-  /** @name dxContextMenu.Options.onHiding */
-  var onHiding: js.UndefOr[js.Function1[/* e */ CancelComponentElement, _]] = js.native
+  /**
+    * [descr:dxContextMenu.Options.onHiding]
+    */
+  var onHiding: js.UndefOr[js.Function1[/* e */ CancelComponentElementModel, _]] = js.native
   
-  /** @name dxContextMenu.Options.onPositioning */
+  /**
+    * [descr:dxContextMenu.Options.onPositioning]
+    */
   var onPositioning: js.UndefOr[js.Function1[/* e */ Position, _]] = js.native
   
-  /** @name dxContextMenu.Options.onShowing */
-  var onShowing: js.UndefOr[js.Function1[/* e */ CancelComponentElement, _]] = js.native
+  /**
+    * [descr:dxContextMenu.Options.onShowing]
+    */
+  var onShowing: js.UndefOr[js.Function1[/* e */ CancelComponentElementModel, _]] = js.native
   
-  /** @name dxContextMenu.Options.onShown */
+  /**
+    * [descr:dxContextMenu.Options.onShown]
+    */
   var onShown: js.UndefOr[js.Function1[/* e */ ComponentElementModel, _]] = js.native
   
-  /** @name dxContextMenu.Options.position */
+  /**
+    * [descr:dxContextMenu.Options.position]
+    */
   var position: js.UndefOr[positionConfig] = js.native
   
-  /** @name dxContextMenu.Options.showEvent */
+  /**
+    * [descr:dxContextMenu.Options.showEvent]
+    */
   var showEvent: js.UndefOr[Delay | String] = js.native
   
-  /** @name dxContextMenu.Options.submenuDirection */
+  /**
+    * [descr:dxContextMenu.Options.submenuDirection]
+    */
   var submenuDirection: js.UndefOr[auto | left | right] = js.native
   
-  /** @name dxContextMenu.Options.target */
+  /**
+    * [descr:dxContextMenu.Options.target]
+    */
   var target: js.UndefOr[String | Element | JQuery] = js.native
 }
 object dxContextMenuOptions {
@@ -115,7 +139,7 @@ object dxContextMenuOptions {
     def deleteOnHidden: Self = this.set("onHidden", js.undefined)
     
     @scala.inline
-    def setOnHiding(value: /* e */ CancelComponentElement => _): Self = this.set("onHiding", js.Any.fromFunction1(value))
+    def setOnHiding(value: /* e */ CancelComponentElementModel => _): Self = this.set("onHiding", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnHiding: Self = this.set("onHiding", js.undefined)
@@ -127,7 +151,7 @@ object dxContextMenuOptions {
     def deleteOnPositioning: Self = this.set("onPositioning", js.undefined)
     
     @scala.inline
-    def setOnShowing(value: /* e */ CancelComponentElement => _): Self = this.set("onShowing", js.Any.fromFunction1(value))
+    def setOnShowing(value: /* e */ CancelComponentElementModel => _): Self = this.set("onShowing", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnShowing: Self = this.set("onShowing", js.undefined)

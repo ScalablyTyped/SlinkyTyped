@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetCertificatesRequest extends js.Object {
   
   /**
-    * The name for the certificate for which to return information. When omitted, the response includes all of your certificates in the AWS region where the request is made.
+    * The name for the certificate for which to return information. When omitted, the response includes all of your certificates in the AWS Region where the request is made.
     */
   var certificateName: js.UndefOr[CertificateName] = js.native
   
   /**
-    * The status of the certificates for which to return information. For example, specify ISSUED to return only certificates with an ISSUED status. When omitted, the response includes all of your certificates in the AWS region where the request is made, regardless of their current status.
+    * The status of the certificates for which to return information. For example, specify ISSUED to return only certificates with an ISSUED status. When omitted, the response includes all of your certificates in the AWS Region where the request is made, regardless of their current status.
     */
   var certificateStatuses: js.UndefOr[CertificateStatusList] = js.native
   

@@ -32,9 +32,9 @@ class ServerUnaryCallImpl[RequestType, ResponseType] protected ()
   override def getMaxListeners(): Double = js.native
   
   /* InferMemberOverrides */
-  override def listenerCount(`type`: String): Double = js.native
+  override def listenerCount(event: String): Double = js.native
   /* InferMemberOverrides */
-  override def listenerCount(`type`: js.Symbol): Double = js.native
+  override def listenerCount(event: js.Symbol): Double = js.native
   
   /* InferMemberOverrides */
   override def listeners(event: String): js.Array[js.Function] = js.native

@@ -11,7 +11,7 @@ trait ParenthesizedTypeNode
      with HasType {
   
   @JSName("kind")
-  var kind_ParenthesizedTypeNode: ParenthesizedType = js.native
+  val kind_ParenthesizedTypeNode: ParenthesizedType = js.native
   
-  var `type`: TypeNode = js.native
+  val `type`: TypeNode = js.native
 }

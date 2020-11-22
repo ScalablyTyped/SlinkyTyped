@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createSemicolonClassElement extends js.Object {
   
+  /** @deprecated Use `factory.createSemicolonClassElement` or the factory supplied by your transformation context instead. */
   def apply(): SemicolonClassElement = js.native
 }

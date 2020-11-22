@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientCodecommitNode.typesCommentNotCreatedByCallerExceptionMod
 
 import typingsSlinky.awsSdkClientCodecommitNode.updateCommentExceptionsUnionMod.UpdateCommentExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait CommentNotCreatedByCallerException
-  extends ServiceException[CommentNotCreatedByCallerExceptionDetails]
-     with UpdateCommentExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_CommentNotCreatedByCallerExceptionDetails> * / any */ @js.native
+trait CommentNotCreatedByCallerException extends UpdateCommentExceptionsUnion {
   
-  @JSName("name")
-  var name_CommentNotCreatedByCallerException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommentNotCreatedByCallerException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommentNotCreatedByCallerException = js.native
 }
 object CommentNotCreatedByCallerException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: CommentNotCreatedByCallerExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommentNotCreatedByCallerException
   ): CommentNotCreatedByCallerException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommentNotCreatedByCallerException]
   }
   

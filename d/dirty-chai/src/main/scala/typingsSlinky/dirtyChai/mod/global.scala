@@ -1,6 +1,7 @@
 package typingsSlinky.dirtyChai.mod
 
 import typingsSlinky.chaiAsPromised.Chai.Eventually
+import typingsSlinky.std.PromiseLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,8 +36,8 @@ object global extends js.Object {
     
     @js.native
     trait PromisedAssertion
-      extends js.Thenable[js.Any]
-         with Eventually {
+      extends Eventually
+         with PromiseLike[js.Any] {
       
       def apply(): PromisedAssertion = js.native
       

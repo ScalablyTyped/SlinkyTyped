@@ -18,13 +18,25 @@ trait Cluster
   
   /* protected */ def geometryFunction(feature: typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]): typingsSlinky.ol.pointMod.default = js.native
   
+  /**
+    * Get the distance in pixels between clusters.
+    */
   def getDistance(): Double = js.native
   
+  /**
+    * Get a reference to the wrapped source.
+    */
   def getSource(): typingsSlinky.ol.sourceVectorMod.default[typingsSlinky.ol.geometryMod.default] = js.native
   
   var resolution: Double = js.native
   
+  /**
+    * Set the distance in pixels between clusters.
+    */
   def setDistance(distance: Double): Unit = js.native
   
+  /**
+    * Replace the wrapped source.
+    */
   def setSource(source: typingsSlinky.ol.sourceVectorMod.default[typingsSlinky.ol.geometryMod.default]): Unit = js.native
 }

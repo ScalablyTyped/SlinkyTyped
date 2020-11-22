@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`16`
+import typingsSlinky.octokitTypes.anon.`15`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ReposReplaceAllTopicsEndpoint extends js.Object {
   
-  var mediaType: `16` = js.native
+  var mediaType: `15` = js.native
   
   /**
     * An array of topics to add to the repository. Pass one or more topics to _replace_ the set of existing topics. Send an empty array (`[]`) to clear all topics from the repository. **Note:** Topic `names` cannot contain uppercase letters.
@@ -23,7 +23,7 @@ trait ReposReplaceAllTopicsEndpoint extends js.Object {
 object ReposReplaceAllTopicsEndpoint {
   
   @scala.inline
-  def apply(mediaType: `16`, names: js.Array[String], owner: String, repo: String): ReposReplaceAllTopicsEndpoint = {
+  def apply(mediaType: `15`, names: js.Array[String], owner: String, repo: String): ReposReplaceAllTopicsEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], names = names.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposReplaceAllTopicsEndpoint]
   }
@@ -44,7 +44,7 @@ object ReposReplaceAllTopicsEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `16`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `15`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNamesVarargs(value: String*): Self = this.set("names", js.Array(value :_*))

@@ -210,6 +210,15 @@ trait Big extends js.Object {
   def toJSON(): String = js.native
   
   /**
+    * Returns a primitive number representing the value of this Big number.
+    *
+    * If Big.strict is true an error will be thrown if toNumber is called on a Big number which cannot be converted to a primitive number without a loss of precision.
+    *
+    * @since 6.0
+    */
+  def toNumber(): Double = js.native
+  
+  /**
     * Returns a string representing the value of this Big number to the specified number of significant digits sd.
     *
     * If the value of this Big number has more digits than is specified by sd, the return value will be rounded to sd significant digits using rounding mode Big.RM.

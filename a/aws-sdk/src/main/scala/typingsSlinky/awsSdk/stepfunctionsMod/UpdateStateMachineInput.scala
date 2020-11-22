@@ -26,6 +26,11 @@ trait UpdateStateMachineInput extends js.Object {
     * The Amazon Resource Name (ARN) of the state machine.
     */
   var stateMachineArn: Arn = js.native
+  
+  /**
+    * Selects whether AWS X-Ray tracing is enabled.
+    */
+  var tracingConfiguration: js.UndefOr[TracingConfiguration] = js.native
 }
 object UpdateStateMachineInput {
   
@@ -70,5 +75,11 @@ object UpdateStateMachineInput {
     
     @scala.inline
     def deleteRoleArn: Self = this.set("roleArn", js.undefined)
+    
+    @scala.inline
+    def setTracingConfiguration(value: TracingConfiguration): Self = this.set("tracingConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTracingConfiguration: Self = this.set("tracingConfiguration", js.undefined)
   }
 }

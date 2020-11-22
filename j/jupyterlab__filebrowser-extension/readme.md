@@ -1,7 +1,7 @@
 
 # Scala.js typings for jupyterlab__filebrowser-extension
 
-Typings are for version 1.2.8
+Typings are for version 2.2.7
 
 ## Library description:
 JupyterLab - Filebrowser Widget Extension

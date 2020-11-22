@@ -1,6 +1,6 @@
 package typingsSlinky.reduxDevtoolsLogMonitor.mod
 
-import typingsSlinky.base16.mod.ColorScheme
+import typingsSlinky.base16.mod.Base16Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -45,7 +45,7 @@ trait ILogMonitorProps extends js.Object {
     *
     * @see https://github.com/gaearon/redux-devtools-themes
     */
-  var theme: js.UndefOr[String | ColorScheme] = js.native
+  var theme: js.UndefOr[String | Base16Theme] = js.native
 }
 object ILogMonitorProps {
   
@@ -95,7 +95,7 @@ object ILogMonitorProps {
     def deleteSelect: Self = this.set("select", js.undefined)
     
     @scala.inline
-    def setTheme(value: String | ColorScheme): Self = this.set("theme", value.asInstanceOf[js.Any])
+    def setTheme(value: String | Base16Theme): Self = this.set("theme", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTheme: Self = this.set("theme", js.undefined)

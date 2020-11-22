@@ -1,5 +1,6 @@
 package typingsSlinky.expoConfigureSplashScreen
 
+import typingsSlinky.expoConfigureSplashScreen.anon.DarkModeImage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,11 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object drawablesMod extends js.Object {
   
   def default(androidMainPath: String): js.Promise[Unit] = js.native
-  def default(
-    androidMainPath: String,
-    splashScreenImagePath: js.UndefOr[scala.Nothing],
-    darkModeSplashScreenImagePath: String
-  ): js.Promise[Unit] = js.native
-  def default(androidMainPath: String, splashScreenImagePath: String): js.Promise[Unit] = js.native
-  def default(androidMainPath: String, splashScreenImagePath: String, darkModeSplashScreenImagePath: String): js.Promise[Unit] = js.native
+  def default(androidMainPath: String, config: DarkModeImage): js.Promise[Unit] = js.native
 }

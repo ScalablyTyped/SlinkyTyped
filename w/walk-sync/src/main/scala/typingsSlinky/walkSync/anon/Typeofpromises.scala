@@ -21,7 +21,8 @@ import typingsSlinky.node.fsMod.MakeDirectoryOptions
 import typingsSlinky.node.fsMod.Mode
 import typingsSlinky.node.fsMod.OpenDirOptions
 import typingsSlinky.node.fsMod.PathLike
-import typingsSlinky.node.fsMod.RmDirAsyncOptions
+import typingsSlinky.node.fsMod.RmDirOptions
+import typingsSlinky.node.fsMod.RmOptions
 import typingsSlinky.node.fsMod.Stats
 import typingsSlinky.node.promisesMod.FileHandle
 import typingsSlinky.walkSync.walkSyncStrings.buffer
@@ -172,6 +173,24 @@ trait Typeofpromises extends js.Object {
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     */
   def lstat(path: PathLike): js.Promise[Stats] = js.native
+  
+  /**
+    * Changes the access and modification times of a file in the same way as `fsPromises.utimes()`,
+    * with the difference that if the path refers to a symbolic link, then the link is not
+    * dereferenced: instead, the timestamps of the symbolic link itself are changed.
+    * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+    * @param atime The last access time. If a string is provided, it will be coerced to number.
+    * @param mtime The last modified time. If a string is provided, it will be coerced to number.
+    */
+  def lutimes(path: PathLike, atime: String, mtime: String): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: String, mtime: Double): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: String, mtime: js.Date): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: Double, mtime: String): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: js.Date, mtime: String): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
+  def lutimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
   
   /**
     * Asynchronous mkdir(2) - create a directory.
@@ -363,11 +382,17 @@ trait Typeofpromises extends js.Object {
   def rename(oldPath: PathLike, newPath: PathLike): js.Promise[Unit] = js.native
   
   /**
+    * Asynchronously removes files and directories (modeled on the standard POSIX `rm` utility).
+    */
+  def rm(path: PathLike): js.Promise[Unit] = js.native
+  def rm(path: PathLike, options: RmOptions): js.Promise[Unit] = js.native
+  
+  /**
     * Asynchronous rmdir(2) - delete a directory.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     */
   def rmdir(path: PathLike): js.Promise[Unit] = js.native
-  def rmdir(path: PathLike, options: RmDirAsyncOptions): js.Promise[Unit] = js.native
+  def rmdir(path: PathLike, options: RmDirOptions): js.Promise[Unit] = js.native
   
   /**
     * Asynchronous stat(2) - Get file status.

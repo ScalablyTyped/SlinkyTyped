@@ -1,17 +1,13 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  installation_id :number,   repository_ids :std.Array<number> | undefined,   permissions :@octokit/types.@octokit/types/dist-types/generated/Endpoints.AppsCreateInstallationAccessTokenParamsPermissions | undefined} & @octokit/types.@octokit/types/dist-types/generated/Endpoints.RequiredPreview<'machine-man'> */
 @js.native
 trait AppsCreateInstallationAccessTokenEndpoint extends js.Object {
   
   var installation_id: Double = js.native
-  
-  var mediaType: `1` = js.native
   
   /**
     * The permissions granted to the access token. The permissions object includes the permission names and their access type. For a complete list of permissions and allowable values, see "[GitHub App permissions](https://developer.github.com/apps/building-github-apps/creating-github-apps-using-url-parameters/#github-app-permissions)."
@@ -26,8 +22,8 @@ trait AppsCreateInstallationAccessTokenEndpoint extends js.Object {
 object AppsCreateInstallationAccessTokenEndpoint {
   
   @scala.inline
-  def apply(installation_id: Double, mediaType: `1`): AppsCreateInstallationAccessTokenEndpoint = {
-    val __obj = js.Dynamic.literal(installation_id = installation_id.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any])
+  def apply(installation_id: Double): AppsCreateInstallationAccessTokenEndpoint = {
+    val __obj = js.Dynamic.literal(installation_id = installation_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppsCreateInstallationAccessTokenEndpoint]
   }
   
@@ -48,9 +44,6 @@ object AppsCreateInstallationAccessTokenEndpoint {
     
     @scala.inline
     def setInstallation_id(value: Double): Self = this.set("installation_id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMediaType(value: `1`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPermissions(value: AppsCreateInstallationAccessTokenParamsPermissions): Self = this.set("permissions", value.asInstanceOf[js.Any])

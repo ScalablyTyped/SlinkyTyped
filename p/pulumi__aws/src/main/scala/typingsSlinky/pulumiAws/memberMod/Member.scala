@@ -53,7 +53,7 @@ class Member protected () extends CustomResource {
   val invite: Output_[js.UndefOr[Boolean]] = js.native
   
   /**
-    * The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
+    * The status of the relationship between the member account and its primary account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
     */
   val relationshipStatus: Output_[String] = js.native
 }

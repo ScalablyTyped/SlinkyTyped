@@ -3,6 +3,7 @@ package typingsSlinky.swaggerUiExpress.mod
 import typingsSlinky.express.mod.RequestHandler
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
 import typingsSlinky.expressServeStaticCore.mod.Query
+import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,5 +13,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object serveWithOptions extends js.Object {
   
-  def apply(options: ServeStaticOptions): js.Array[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
+  def apply(options: ServeStaticOptions[ServerResponse]): js.Array[RequestHandler[ParamsDictionary, _, _, Query]] = js.native
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.grammarkdown
 
-import typingsSlinky.grammarkdown.nodesMod.ProseFragmentKind
+import typingsSlinky.grammarkdown.grammarkdownMod.ProseFragmentKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -13,7 +13,7 @@ trait TagValues extends js.Object {
   var Key: js.UndefOr[TagKey] = js.native
   
   /**
-    * The match options that you can use to filter your results. MatchOptions is only applicable for only applicable for actions related to Cost Category. The default values for MatchOptions is EQUALS and CASE_SENSITIVE.
+    * The match options that you can use to filter your results. MatchOptions is only applicable for actions related to Cost Category. The default values for MatchOptions are EQUALS and CASE_SENSITIVE.
     */
   var MatchOptions: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.MatchOptions] = js.native
   

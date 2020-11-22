@@ -44,8 +44,6 @@ object alertMod extends js.Object {
     @JSName("componentDidLoad")
     def componentDidLoad_MAlert(): Unit = js.native
     
-    def componentDidUnload(): Unit = js.native
-    
     @JSName("componentWillLoad")
     def componentWillLoad_MAlert(): Unit = js.native
     
@@ -57,6 +55,9 @@ object alertMod extends js.Object {
       * provided they should be separated by spaces.
       */
     var cssClass: js.UndefOr[String | js.Array[String]] = js.native
+    
+    @JSName("disconnectedCallback")
+    def disconnectedCallback_MAlert(): Unit = js.native
     
     var dispatchCancelHandler: js.Any = js.native
     
@@ -100,6 +101,8 @@ object alertMod extends js.Object {
       * Returns a promise that resolves when the alert did dismiss.
       */
     def onDidDismiss[T](): js.Promise[OverlayEventDetail[T]] = js.native
+    
+    def onKeydown(ev: js.Any): Unit = js.native
     
     /**
       * Returns a promise that resolves when the alert will dismiss.

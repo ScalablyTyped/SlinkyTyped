@@ -16,25 +16,25 @@ trait TooltipProps extends js.Object {
   
   def clearScheduled(): Unit = js.native
   
-  var closeOnOutOfBoundaries: Boolean = js.native
+  var closeOnReferenceHidden: Boolean = js.native
   
   def hideTooltip(): Unit = js.native
   
   var innerRef: Ref = js.native
   
+  var isReferenceHidden: js.UndefOr[Boolean] = js.native
+  
   var mutationObserverOptions: MutationObserverInit = js.native
   
-  var outOfBoundaries: Boolean | Null = js.native
-  
-  var placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Placement */ js.Any = js.native
-  
-  def scheduleUpdate(): Unit = js.native
+  var placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any = js.native
   
   var style: CSSProperties = js.native
   
   def tooltip(arg: TooltipArg): ReactElement = js.native
   
   var trigger: Trigger = js.native
+  
+  def update(): Unit = js.native
 }
 object TooltipProps {
   
@@ -42,16 +42,16 @@ object TooltipProps {
   def apply(
     arrowProps: PopperArrowProps,
     clearScheduled: () => Unit,
-    closeOnOutOfBoundaries: Boolean,
+    closeOnReferenceHidden: Boolean,
     hideTooltip: () => Unit,
     mutationObserverOptions: MutationObserverInit,
-    placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Placement */ js.Any,
-    scheduleUpdate: () => Unit,
+    placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any,
     style: CSSProperties,
     tooltip: TooltipArg => ReactElement,
-    trigger: Trigger
+    trigger: Trigger,
+    update: () => Unit
   ): TooltipProps = {
-    val __obj = js.Dynamic.literal(arrowProps = arrowProps.asInstanceOf[js.Any], clearScheduled = js.Any.fromFunction0(clearScheduled), closeOnOutOfBoundaries = closeOnOutOfBoundaries.asInstanceOf[js.Any], hideTooltip = js.Any.fromFunction0(hideTooltip), mutationObserverOptions = mutationObserverOptions.asInstanceOf[js.Any], placement = placement.asInstanceOf[js.Any], scheduleUpdate = js.Any.fromFunction0(scheduleUpdate), style = style.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(arrowProps = arrowProps.asInstanceOf[js.Any], clearScheduled = js.Any.fromFunction0(clearScheduled), closeOnReferenceHidden = closeOnReferenceHidden.asInstanceOf[js.Any], hideTooltip = js.Any.fromFunction0(hideTooltip), mutationObserverOptions = mutationObserverOptions.asInstanceOf[js.Any], placement = placement.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any], update = js.Any.fromFunction0(update))
     __obj.asInstanceOf[TooltipProps]
   }
   
@@ -77,7 +77,7 @@ object TooltipProps {
     def setClearScheduled(value: () => Unit): Self = this.set("clearScheduled", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setCloseOnOutOfBoundaries(value: Boolean): Self = this.set("closeOnOutOfBoundaries", value.asInstanceOf[js.Any])
+    def setCloseOnReferenceHidden(value: Boolean): Self = this.set("closeOnReferenceHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHideTooltip(value: () => Unit): Self = this.set("hideTooltip", js.Any.fromFunction0(value))
@@ -87,11 +87,8 @@ object TooltipProps {
     
     @scala.inline
     def setPlacement(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Placement */ js.Any
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any
     ): Self = this.set("placement", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setScheduleUpdate(value: () => Unit): Self = this.set("scheduleUpdate", js.Any.fromFunction0(value))
     
     @scala.inline
     def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
@@ -106,6 +103,9 @@ object TooltipProps {
     def setTrigger(value: Trigger): Self = this.set("trigger", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setUpdate(value: () => Unit): Self = this.set("update", js.Any.fromFunction0(value))
+    
+    @scala.inline
     def setInnerRefFunction1(value: /* element */ HTMLElement | Null => Unit): Self = this.set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -115,9 +115,9 @@ object TooltipProps {
     def setInnerRefNull: Self = this.set("innerRef", null)
     
     @scala.inline
-    def setOutOfBoundaries(value: Boolean): Self = this.set("outOfBoundaries", value.asInstanceOf[js.Any])
+    def setIsReferenceHidden(value: Boolean): Self = this.set("isReferenceHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOutOfBoundariesNull: Self = this.set("outOfBoundaries", null)
+    def deleteIsReferenceHidden: Self = this.set("isReferenceHidden", js.undefined)
   }
 }

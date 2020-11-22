@@ -1,6 +1,5 @@
 package typingsSlinky.node.tlsMod
 
-import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.TypedArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -53,18 +52,6 @@ trait TlsOptions
     * emitted with `ERR_TLS_PSK_SET_IDENTIY_HINT_FAILED` code.
     */
   var pskIdentityHint: js.UndefOr[String] = js.native
-  
-  /**
-    * The number of seconds after which a TLS session created by the
-    * server will no longer be resumable. See Session Resumption for more
-    * information. Default: 300.
-    */
-  var sessionTimeout: js.UndefOr[Double] = js.native
-  
-  /**
-    * 48-bytes of cryptographically strong pseudo-random data.
-    */
-  var ticketKeys: js.UndefOr[Buffer] = js.native
 }
 object TlsOptions {
   
@@ -108,17 +95,5 @@ object TlsOptions {
     
     @scala.inline
     def deletePskIdentityHint: Self = this.set("pskIdentityHint", js.undefined)
-    
-    @scala.inline
-    def setSessionTimeout(value: Double): Self = this.set("sessionTimeout", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSessionTimeout: Self = this.set("sessionTimeout", js.undefined)
-    
-    @scala.inline
-    def setTicketKeys(value: Buffer): Self = this.set("ticketKeys", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTicketKeys: Self = this.set("ticketKeys", js.undefined)
   }
 }

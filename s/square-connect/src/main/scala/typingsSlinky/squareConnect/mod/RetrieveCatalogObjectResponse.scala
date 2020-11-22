@@ -9,17 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class RetrieveCatalogObjectResponse () extends js.Object {
   
   /**
-    * Information on any errors encountered.
+    * Any errors that occurred during the request.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   
   /**
-    * The CatalogObjects returned.
+    * The `CatalogObject`s returned.
     */
   var `object`: js.UndefOr[CatalogObject] = js.native
   
   /**
-    * A list of CatalogObjects referenced by the object in the `object` field.
+    * A list of `CatalogObject`s referenced by the object in the `object` field.
     */
   var related_objects: js.UndefOr[js.Array[CatalogObject]] = js.native
 }

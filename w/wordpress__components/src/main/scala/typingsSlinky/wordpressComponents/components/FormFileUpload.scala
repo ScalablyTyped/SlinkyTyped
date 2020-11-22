@@ -27,8 +27,13 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.wordpressComponents.anon.OpenFileDialog
 import typingsSlinky.wordpressComponents.popoverMod.Popover.Position
 import typingsSlinky.wordpressComponents.shortcutMod.Shortcut.ShortcutType
+import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`additions removals`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`additions text`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`inline`
+import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`removals additions`
+import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`removals text`
+import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`text additions`
+import typingsSlinky.wordpressComponents.wordpressComponentsStrings.`text removals`
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.additions
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.all
 import typingsSlinky.wordpressComponents.wordpressComponentsStrings.ascending
@@ -219,7 +224,9 @@ object FormFileUpload {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

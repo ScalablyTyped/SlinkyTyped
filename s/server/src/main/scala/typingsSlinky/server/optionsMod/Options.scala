@@ -2,7 +2,7 @@ package typingsSlinky.server.optionsMod
 
 import typingsSlinky.expressSession.mod.SessionOptions
 import typingsSlinky.server.anon.Body
-import typingsSlinky.server.anon.IHelmetConfigurationcsurf
+import typingsSlinky.server.anon.Csurf
 import typingsSlinky.server.anon.Level
 import typingsSlinky.server.commonMod.LogLevel
 import typingsSlinky.server.serverBooleans.`false`
@@ -29,7 +29,9 @@ trait Options extends js.Object {
   
   var secret: js.UndefOr[String] = js.native
   
-  var security: js.UndefOr[`false` | IHelmetConfigurationcsurf] = js.native
+  var security: js.UndefOr[
+    `false` | ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify helmet.IHelmetConfiguration */ js.Any) with Csurf)
+  ] = js.native
   
   var session: js.UndefOr[SessionOptions] = js.native
   
@@ -107,7 +109,9 @@ object Options {
     def deleteSecret: Self = this.set("secret", js.undefined)
     
     @scala.inline
-    def setSecurity(value: `false` | IHelmetConfigurationcsurf): Self = this.set("security", value.asInstanceOf[js.Any])
+    def setSecurity(
+      value: `false` | ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify helmet.IHelmetConfiguration */ js.Any) with Csurf)
+    ): Self = this.set("security", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSecurity: Self = this.set("security", js.undefined)

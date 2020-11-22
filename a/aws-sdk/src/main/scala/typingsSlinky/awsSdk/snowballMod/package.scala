@@ -89,6 +89,22 @@ package object snowballMod {
   type S3ResourceList = js.Array[typingsSlinky.awsSdk.snowballMod.S3Resource]
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.RECEIVED
+    - typingsSlinky.awsSdk.awsSdkStrings.RETURNED
+    - java.lang.String
+  */
+  type ShipmentState = typingsSlinky.awsSdk.snowballMod._ShipmentState | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.InProgress_
+    - typingsSlinky.awsSdk.awsSdkStrings.TimedOut_
+    - typingsSlinky.awsSdk.awsSdkStrings.Succeeded_
+    - typingsSlinky.awsSdk.awsSdkStrings.Failed_
+    - java.lang.String
+  */
+  type ShippingLabelStatus = typingsSlinky.awsSdk.snowballMod._ShippingLabelStatus | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SECOND_DAY
     - typingsSlinky.awsSdk.awsSdkStrings.NEXT_DAY
     - typingsSlinky.awsSdk.awsSdkStrings.EXPRESS

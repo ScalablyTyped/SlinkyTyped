@@ -32,6 +32,8 @@ trait ReportGroup extends js.Object {
     */
   var name: js.UndefOr[ReportGroupName] = js.native
   
+  var status: js.UndefOr[ReportGroupStatusType] = js.native
+  
   /**
     *  A list of tag key and value pairs associated with this report group.  These tags are available for use by AWS services that support AWS CodeBuild report group tags.
     */
@@ -94,6 +96,12 @@ object ReportGroup {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setStatus(value: ReportGroupStatusType): Self = this.set("status", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStatus: Self = this.set("status", js.undefined)
     
     @scala.inline
     def setTagsVarargs(value: Tag*): Self = this.set("tags", js.Array(value :_*))

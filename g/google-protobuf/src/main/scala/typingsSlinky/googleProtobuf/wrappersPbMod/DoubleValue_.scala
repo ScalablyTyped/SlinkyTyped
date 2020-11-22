@@ -11,5 +11,5 @@ class DoubleValue_ () extends Message {
   
   def getValue(): Double = js.native
   
-  def setValue(value: Double): Unit = js.native
+  def setValue(value: Double): DoubleValue = js.native
 }

@@ -6,15 +6,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type AssertingTestFunction[T] = js.ThisFunction1[
-    /* this */ typingsSlinky.yup.mod.TestContext, 
+  type AssertingTestFunction[T, C] = js.ThisFunction1[
+    /* this */ typingsSlinky.yup.mod.TestContext[C], 
     /* value */ js.Any, 
     /* is T */ scala.Boolean
   ]
   
   type Id[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof T ]: T[K]}
-    */ typingsSlinky.yup.yupStrings.Id with org.scalablytyped.runtime.TopLevel[T]
+  {[ K in keyof T ]: T[K] extends object? yup.yup.InnerInferType<T[K]> : T[K]}
+    */ typingsSlinky.yup.yupStrings.Id with org.scalablytyped.runtime.TopLevel[js.Any]
   
   type InferType[T] = typingsSlinky.yup.mod.InnerInferType[js.Any]
   
@@ -26,7 +26,7 @@ package object mod {
   
   type KeyOfUndefined[T] = /* import warning: importer.ImportType#apply Failed type conversion: {[ P in keyof T ]: -? undefined extends T[P]? P : never}[keyof T] */ js.Any
   
-  type Lazy_ = typingsSlinky.yup.mod.Schema[js.Any]
+  type Lazy_ = typingsSlinky.yup.mod.Schema[js.Any, js.Object]
   
   type LocaleValue = java.lang.String | (js.Function1[/* params */ typingsSlinky.yup.mod.FormatErrorParams, java.lang.String])
   
@@ -35,8 +35,8 @@ package object mod {
   
   type NotRequiredProps[T] = typingsSlinky.std.Partial[typingsSlinky.std.Pick[T, typingsSlinky.yup.mod.KeyOfUndefined[T]]]
   
-  type ObjectSchemaDefinition[T /* <: js.UndefOr[js.Object | scala.Null] */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ field in keyof T ]: yup.yup.Schema<T[field]> | yup.yup.MixedSchema<T[field]> | yup.yup.Ref}
+  type ObjectSchemaDefinition[T /* <: js.UndefOr[js.Object | scala.Null] */, C] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ field in keyof T ]: yup.yup.Schema<T[field], C> | yup.yup.MixedSchema<T[field], C> | yup.yup.Ref}
     */ typingsSlinky.yup.yupStrings.ObjectSchemaDefinition with org.scalablytyped.runtime.TopLevel[js.Any]
   
   type PreserveNull[T] = scala.Null
@@ -52,9 +52,9 @@ package object mod {
   
   type Shape[T /* <: js.UndefOr[js.Object | scala.Null] */, U /* <: js.Object */] = (typingsSlinky.yup.yupStrings.Shape with org.scalablytyped.runtime.TopLevel[js.Any] with U) | typingsSlinky.yup.mod.PreserveOptionals[T]
   
-  type TestFunction = js.ThisFunction1[
-    /* this */ typingsSlinky.yup.mod.TestContext, 
-    /* value */ js.Any, 
+  type TestFunction[T, C] = js.ThisFunction1[
+    /* this */ typingsSlinky.yup.mod.TestContext[C], 
+    /* value */ T, 
     scala.Boolean | typingsSlinky.yup.mod.ValidationError | (js.Promise[scala.Boolean | typingsSlinky.yup.mod.ValidationError])
   ]
   

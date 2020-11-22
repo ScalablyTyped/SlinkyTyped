@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.EnumDefaultedMember
+import typingsSlinky.babelTraverse.babelTraverseStrings.ClassMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `184` extends js.Object {
   
-  var `type`: EnumDefaultedMember = js.native
+  var `type`: ClassMethod = js.native
 }
 object `184` {
   
   @scala.inline
-  def apply(`type`: EnumDefaultedMember): `184` = {
+  def apply(`type`: ClassMethod): `184` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`184`]
@@ -35,6 +35,6 @@ object `184` {
     }
     
     @scala.inline
-    def setType(value: EnumDefaultedMember): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ClassMethod): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -7,17 +7,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ExprNode extends js.Object {
   
-  var position: Double = js.native
+  var arguments: js.UndefOr[js.Array[ExprNode]] = js.native
+  
+  var name: js.UndefOr[String] = js.native
+  
+  var position: js.UndefOr[Double] = js.native
+  
+  var procedure: js.UndefOr[ExprNode] = js.native
+  
+  var steps: js.UndefOr[js.Array[ExprNode]] = js.native
   
   var `type`: String = js.native
   
-  var value: js.Any = js.native
+  var value: js.UndefOr[js.Any] = js.native
 }
 object ExprNode {
   
   @scala.inline
-  def apply(position: Double, `type`: String, value: js.Any): ExprNode = {
-    val __obj = js.Dynamic.literal(position = position.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(`type`: String): ExprNode = {
+    val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExprNode]
   }
@@ -38,12 +46,48 @@ object ExprNode {
     }
     
     @scala.inline
-    def setPosition(value: Double): Self = this.set("position", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setArgumentsVarargs(value: ExprNode*): Self = this.set("arguments", js.Array(value :_*))
+    
+    @scala.inline
+    def setArguments(value: js.Array[ExprNode]): Self = this.set("arguments", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteArguments: Self = this.set("arguments", js.undefined)
+    
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setPosition(value: Double): Self = this.set("position", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePosition: Self = this.set("position", js.undefined)
+    
+    @scala.inline
+    def setProcedure(value: ExprNode): Self = this.set("procedure", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProcedure: Self = this.set("procedure", js.undefined)
+    
+    @scala.inline
+    def setStepsVarargs(value: ExprNode*): Self = this.set("steps", js.Array(value :_*))
+    
+    @scala.inline
+    def setSteps(value: js.Array[ExprNode]): Self = this.set("steps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSteps: Self = this.set("steps", js.undefined)
+    
+    @scala.inline
     def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
   }
 }

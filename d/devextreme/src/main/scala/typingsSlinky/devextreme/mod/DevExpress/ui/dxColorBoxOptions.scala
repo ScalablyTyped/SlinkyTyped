@@ -10,21 +10,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxColorBoxOptions extends dxDropDownEditorOptions[dxColorBox] {
   
-  /** @name dxColorBox.Options.applyButtonText */
+  /**
+    * [descr:dxColorBox.Options.applyButtonText]
+    */
   var applyButtonText: js.UndefOr[String] = js.native
   
-  /** @name dxColorBox.Options.cancelButtonText */
+  /**
+    * [descr:dxColorBox.Options.cancelButtonText]
+    */
   var cancelButtonText: js.UndefOr[String] = js.native
   
-  /** @name dxColorBox.Options.editAlphaChannel */
+  /**
+    * [descr:dxColorBox.Options.editAlphaChannel]
+    */
   var editAlphaChannel: js.UndefOr[Boolean] = js.native
   
-  /** @name dxColorBox.Options.fieldTemplate */
+  /**
+    * [descr:dxColorBox.Options.fieldTemplate]
+    */
   var fieldTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* value */ String, /* fieldElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxColorBox.Options.keyStep */
+  /**
+    * [descr:dxColorBox.Options.keyStep]
+    */
   var keyStep: js.UndefOr[Double] = js.native
 }
 object dxColorBoxOptions {

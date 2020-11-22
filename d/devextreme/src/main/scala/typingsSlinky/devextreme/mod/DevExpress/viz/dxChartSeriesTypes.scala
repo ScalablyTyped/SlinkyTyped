@@ -4,80 +4,130 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes */
+/**
+  * [descr:dxChartSeriesTypes]
+  */
 @js.native
 trait dxChartSeriesTypes extends js.Object {
   
-  /** @name dxChartSeriesTypes.AreaSeries */
+  /**
+    * [descr:dxChartSeriesTypes.AreaSeries]
+    */
   var AreaSeries: js.UndefOr[dxChartSeriesTypesAreaSeries] = js.native
   
-  /** @name dxChartSeriesTypes.BarSeries */
+  /**
+    * [descr:dxChartSeriesTypes.BarSeries]
+    */
   var BarSeries: js.UndefOr[dxChartSeriesTypesBarSeries] = js.native
   
-  /** @name dxChartSeriesTypes.BubbleSeries */
+  /**
+    * [descr:dxChartSeriesTypes.BubbleSeries]
+    */
   var BubbleSeries: js.UndefOr[dxChartSeriesTypesBubbleSeries] = js.native
   
-  /** @name dxChartSeriesTypes.CandleStickSeries */
+  /**
+    * [descr:dxChartSeriesTypes.CandleStickSeries]
+    */
   var CandleStickSeries: js.UndefOr[dxChartSeriesTypesCandleStickSeries] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries]
+    */
   var CommonSeries: js.UndefOr[dxChartSeriesTypesCommonSeries] = js.native
   
-  /** @name dxChartSeriesTypes.FullStackedAreaSeries */
+  /**
+    * [descr:dxChartSeriesTypes.FullStackedAreaSeries]
+    */
   var FullStackedAreaSeries: js.UndefOr[dxChartSeriesTypesFullStackedAreaSeries] = js.native
   
-  /** @name dxChartSeriesTypes.FullStackedBarSeries */
+  /**
+    * [descr:dxChartSeriesTypes.FullStackedBarSeries]
+    */
   var FullStackedBarSeries: js.UndefOr[dxChartSeriesTypesFullStackedBarSeries] = js.native
   
-  /** @name dxChartSeriesTypes.FullStackedLineSeries */
+  /**
+    * [descr:dxChartSeriesTypes.FullStackedLineSeries]
+    */
   var FullStackedLineSeries: js.UndefOr[dxChartSeriesTypesFullStackedLineSeries] = js.native
   
-  /** @name dxChartSeriesTypes.FullStackedSplineAreaSeries */
+  /**
+    * [descr:dxChartSeriesTypes.FullStackedSplineAreaSeries]
+    */
   var FullStackedSplineAreaSeries: js.UndefOr[dxChartSeriesTypesFullStackedSplineAreaSeries] = js.native
   
-  /** @name dxChartSeriesTypes.FullStackedSplineSeries */
+  /**
+    * [descr:dxChartSeriesTypes.FullStackedSplineSeries]
+    */
   var FullStackedSplineSeries: js.UndefOr[dxChartSeriesTypesFullStackedSplineSeries] = js.native
   
-  /** @name dxChartSeriesTypes.LineSeries */
+  /**
+    * [descr:dxChartSeriesTypes.LineSeries]
+    */
   var LineSeries: js.UndefOr[dxChartSeriesTypesLineSeries] = js.native
   
-  /** @name dxChartSeriesTypes.RangeAreaSeries */
+  /**
+    * [descr:dxChartSeriesTypes.RangeAreaSeries]
+    */
   var RangeAreaSeries: js.UndefOr[dxChartSeriesTypesRangeAreaSeries] = js.native
   
-  /** @name dxChartSeriesTypes.RangeBarSeries */
+  /**
+    * [descr:dxChartSeriesTypes.RangeBarSeries]
+    */
   var RangeBarSeries: js.UndefOr[dxChartSeriesTypesRangeBarSeries] = js.native
   
-  /** @name dxChartSeriesTypes.ScatterSeries */
+  /**
+    * [descr:dxChartSeriesTypes.ScatterSeries]
+    */
   var ScatterSeries: js.UndefOr[dxChartSeriesTypesScatterSeries] = js.native
   
-  /** @name dxChartSeriesTypes.SplineAreaSeries */
+  /**
+    * [descr:dxChartSeriesTypes.SplineAreaSeries]
+    */
   var SplineAreaSeries: js.UndefOr[dxChartSeriesTypesSplineAreaSeries] = js.native
   
-  /** @name dxChartSeriesTypes.SplineSeries */
+  /**
+    * [descr:dxChartSeriesTypes.SplineSeries]
+    */
   var SplineSeries: js.UndefOr[dxChartSeriesTypesSplineSeries] = js.native
   
-  /** @name dxChartSeriesTypes.StackedAreaSeries */
+  /**
+    * [descr:dxChartSeriesTypes.StackedAreaSeries]
+    */
   var StackedAreaSeries: js.UndefOr[dxChartSeriesTypesStackedAreaSeries] = js.native
   
-  /** @name dxChartSeriesTypes.StackedBarSeries */
+  /**
+    * [descr:dxChartSeriesTypes.StackedBarSeries]
+    */
   var StackedBarSeries: js.UndefOr[dxChartSeriesTypesStackedBarSeries] = js.native
   
-  /** @name dxChartSeriesTypes.StackedLineSeries */
+  /**
+    * [descr:dxChartSeriesTypes.StackedLineSeries]
+    */
   var StackedLineSeries: js.UndefOr[dxChartSeriesTypesStackedLineSeries] = js.native
   
-  /** @name dxChartSeriesTypes.StackedSplineAreaSeries */
+  /**
+    * [descr:dxChartSeriesTypes.StackedSplineAreaSeries]
+    */
   var StackedSplineAreaSeries: js.UndefOr[dxChartSeriesTypesStackedSplineAreaSeries] = js.native
   
-  /** @name dxChartSeriesTypes.StackedSplineSeries */
+  /**
+    * [descr:dxChartSeriesTypes.StackedSplineSeries]
+    */
   var StackedSplineSeries: js.UndefOr[dxChartSeriesTypesStackedSplineSeries] = js.native
   
-  /** @name dxChartSeriesTypes.StepAreaSeries */
+  /**
+    * [descr:dxChartSeriesTypes.StepAreaSeries]
+    */
   var StepAreaSeries: js.UndefOr[dxChartSeriesTypesStepAreaSeries] = js.native
   
-  /** @name dxChartSeriesTypes.StepLineSeries */
+  /**
+    * [descr:dxChartSeriesTypes.StepLineSeries]
+    */
   var StepLineSeries: js.UndefOr[dxChartSeriesTypesStepLineSeries] = js.native
   
-  /** @name dxChartSeriesTypes.StockSeries */
+  /**
+    * [descr:dxChartSeriesTypes.StockSeries]
+    */
   var StockSeries: js.UndefOr[dxChartSeriesTypesStockSeries] = js.native
 }
 object dxChartSeriesTypes {

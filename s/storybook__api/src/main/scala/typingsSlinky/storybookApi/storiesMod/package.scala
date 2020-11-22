@@ -6,12 +6,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object storiesMod {
   
-  type GroupsList = js.Array[typingsSlinky.storybookApi.storiesMod.Group]
+  type GroupsList = js.Array[
+    typingsSlinky.storybookApi.storiesMod.Root | typingsSlinky.storybookApi.storiesMod.Group
+  ]
   
-  type ParameterName = java.lang.String
+  type SetStoriesPayload = typingsSlinky.storybookApi.anon.Error | (typingsSlinky.storybookApi.anon.Stories with (typingsSlinky.std.Record[java.lang.String, scala.Nothing]))
   
   type StoriesHash = org.scalablytyped.runtime.StringDictionary[
-    typingsSlinky.storybookApi.storiesMod.Group | typingsSlinky.storybookApi.storiesMod.Story
+    typingsSlinky.storybookApi.storiesMod.Root | typingsSlinky.storybookApi.storiesMod.Group | typingsSlinky.storybookApi.storiesMod.Story
   ]
   
   type StoriesList = js.Array[
@@ -19,16 +21,4 @@ package object storiesMod {
   ]
   
   type StoriesRaw = org.scalablytyped.runtime.StringDictionary[typingsSlinky.storybookApi.storiesMod.StoryInput]
-  
-  type Story = typingsSlinky.storybookApi.storiesMod.StoryInput with typingsSlinky.storybookApi.storiesMod.Group
-  
-  type StoryId = java.lang.String
-  
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.storybookApi.storybookApiStrings.story
-    - typingsSlinky.storybookApi.storybookApiStrings.info
-    - typingsSlinky.storybookApi.storybookApiStrings.settings
-    - js.UndefOr[scala.Nothing]
-  */
-  type ViewMode = js.UndefOr[typingsSlinky.storybookApi.storiesMod._ViewMode]
 }

@@ -17,38 +17,60 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CommonSeries.point */
+/**
+  * [descr:dxChartSeriesTypes.CommonSeries.point]
+  */
 @js.native
 trait dxChartSeriesTypesCommonSeriesPoint extends js.Object {
   
-  /** @name dxChartSeriesTypes.CommonSeries.point.border */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point.border]
+    */
   var border: js.UndefOr[ColorVisible] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.point.color */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.point.hoverMode */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point.hoverMode]
+    */
   var hoverMode: js.UndefOr[allArgumentPoints | allSeriesPoints | none | onlyPoint] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.point.hoverStyle */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point.hoverStyle]
+    */
   var hoverStyle: js.UndefOr[Size] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.point.image */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point.image]
+    */
   var image: js.UndefOr[String | HeightUrl] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.point.selectionMode */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point.selectionMode]
+    */
   var selectionMode: js.UndefOr[allArgumentPoints | allSeriesPoints | none | onlyPoint] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.point.selectionStyle */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point.selectionStyle]
+    */
   var selectionStyle: js.UndefOr[Size] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.point.size */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point.size]
+    */
   var size: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.point.symbol */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point.symbol]
+    */
   var symbol: js.UndefOr[circle | cross | polygon | square | triangleDown | triangleUp] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.point.visible */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.point.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object dxChartSeriesTypesCommonSeriesPoint {

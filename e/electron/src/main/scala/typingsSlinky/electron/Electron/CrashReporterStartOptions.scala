@@ -17,10 +17,7 @@ trait CrashReporterStartOptions extends js.Object {
   
   /**
     * If true, crash reports will be compressed and uploaded with `Content-Encoding:
-    * gzip`. Not all collection servers support compressed payloads. Default is
-    * `false`.
-    *
-    * @platform darwin,win32
+    * gzip`. Default is `false`.
     */
   var compress: js.UndefOr[Boolean] = js.native
   

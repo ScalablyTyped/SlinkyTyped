@@ -12,15 +12,15 @@ trait OpaqueTagNode
   
   var contents: String = js.native
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: opaqueTag = js.native
 }
 object OpaqueTagNode {
   
   @scala.inline
-  def apply(contents: String, name: opaqueTag): OpaqueTagNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(contents: String, location: LocationRange, name: opaqueTag): OpaqueTagNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[OpaqueTagNode]
   }
   
@@ -43,12 +43,9 @@ object OpaqueTagNode {
     def setContents(value: String): Self = this.set("contents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: opaqueTag): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
+    def setName(value: opaqueTag): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

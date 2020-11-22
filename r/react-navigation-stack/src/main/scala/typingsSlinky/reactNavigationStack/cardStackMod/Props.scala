@@ -18,6 +18,8 @@ trait Props extends js.Object {
   
   var descriptors: StackDescriptorMap = js.native
   
+  var detachInactiveScreens: js.UndefOr[Boolean] = js.native
+  
   def getGesturesEnabled(props: Route): Boolean = js.native
   
   def getPreviousRoute(props: Route): js.UndefOr[typingsSlinky.reactNavigationStack.vendorTypesMod.Route[String]] = js.native
@@ -26,9 +28,17 @@ trait Props extends js.Object {
   
   var insets: EdgeInsets = js.native
   
+  var isParentHeaderShown: Boolean = js.native
+  
   var mode: StackCardMode = js.native
   
   def onCloseRoute(props: Route): Unit = js.native
+  
+  var onGestureCancel: js.UndefOr[js.Function1[/* props */ Route, Unit]] = js.native
+  
+  var onGestureEnd: js.UndefOr[js.Function1[/* props */ Route, Unit]] = js.native
+  
+  var onGestureStart: js.UndefOr[js.Function1[/* props */ Route, Unit]] = js.native
   
   def onOpenRoute(props: Route): Unit = js.native
   
@@ -62,6 +72,7 @@ object Props {
     getPreviousRoute: Route => js.UndefOr[typingsSlinky.reactNavigationStack.vendorTypesMod.Route[String]],
     headerMode: StackHeaderMode,
     insets: EdgeInsets,
+    isParentHeaderShown: Boolean,
     mode: StackCardMode,
     onCloseRoute: Route => Unit,
     onOpenRoute: Route => Unit,
@@ -73,7 +84,7 @@ object Props {
     routes: js.Array[typingsSlinky.reactNavigationStack.vendorTypesMod.Route[String]],
     state: NavigationState
   ): Props = {
-    val __obj = js.Dynamic.literal(closingRouteKeys = closingRouteKeys.asInstanceOf[js.Any], descriptors = descriptors.asInstanceOf[js.Any], getGesturesEnabled = js.Any.fromFunction1(getGesturesEnabled), getPreviousRoute = js.Any.fromFunction1(getPreviousRoute), headerMode = headerMode.asInstanceOf[js.Any], insets = insets.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], onCloseRoute = js.Any.fromFunction1(onCloseRoute), onOpenRoute = js.Any.fromFunction1(onOpenRoute), onTransitionEnd = js.Any.fromFunction2(onTransitionEnd), onTransitionStart = js.Any.fromFunction2(onTransitionStart), openingRouteKeys = openingRouteKeys.asInstanceOf[js.Any], renderHeader = js.Any.fromFunction1(renderHeader), renderScene = js.Any.fromFunction1(renderScene), routes = routes.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(closingRouteKeys = closingRouteKeys.asInstanceOf[js.Any], descriptors = descriptors.asInstanceOf[js.Any], getGesturesEnabled = js.Any.fromFunction1(getGesturesEnabled), getPreviousRoute = js.Any.fromFunction1(getPreviousRoute), headerMode = headerMode.asInstanceOf[js.Any], insets = insets.asInstanceOf[js.Any], isParentHeaderShown = isParentHeaderShown.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], onCloseRoute = js.Any.fromFunction1(onCloseRoute), onOpenRoute = js.Any.fromFunction1(onOpenRoute), onTransitionEnd = js.Any.fromFunction2(onTransitionEnd), onTransitionStart = js.Any.fromFunction2(onTransitionStart), openingRouteKeys = openingRouteKeys.asInstanceOf[js.Any], renderHeader = js.Any.fromFunction1(renderHeader), renderScene = js.Any.fromFunction1(renderScene), routes = routes.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[Props]
   }
   
@@ -114,6 +125,9 @@ object Props {
     def setInsets(value: EdgeInsets): Self = this.set("insets", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setIsParentHeaderShown(value: Boolean): Self = this.set("isParentHeaderShown", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setMode(value: StackCardMode): Self = this.set("mode", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -148,6 +162,30 @@ object Props {
     
     @scala.inline
     def setState(value: NavigationState): Self = this.set("state", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDetachInactiveScreens(value: Boolean): Self = this.set("detachInactiveScreens", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDetachInactiveScreens: Self = this.set("detachInactiveScreens", js.undefined)
+    
+    @scala.inline
+    def setOnGestureCancel(value: /* props */ Route => Unit): Self = this.set("onGestureCancel", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnGestureCancel: Self = this.set("onGestureCancel", js.undefined)
+    
+    @scala.inline
+    def setOnGestureEnd(value: /* props */ Route => Unit): Self = this.set("onGestureEnd", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnGestureEnd: Self = this.set("onGestureEnd", js.undefined)
+    
+    @scala.inline
+    def setOnGestureStart(value: /* props */ Route => Unit): Self = this.set("onGestureStart", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnGestureStart: Self = this.set("onGestureStart", js.undefined)
     
     @scala.inline
     def setOnPageChangeCancel(value: () => Unit): Self = this.set("onPageChangeCancel", js.Any.fromFunction0(value))

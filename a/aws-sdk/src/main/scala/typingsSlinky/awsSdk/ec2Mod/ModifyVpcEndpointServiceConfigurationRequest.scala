@@ -13,6 +13,11 @@ trait ModifyVpcEndpointServiceConfigurationRequest extends js.Object {
   var AcceptanceRequired: js.UndefOr[Boolean] = js.native
   
   /**
+    * The Amazon Resource Names (ARNs) of Gateway Load Balancers to add to your service configuration.
+    */
+  var AddGatewayLoadBalancerArns: js.UndefOr[ValueStringList] = js.native
+  
+  /**
     * The Amazon Resource Names (ARNs) of Network Load Balancers to add to your service configuration.
     */
   var AddNetworkLoadBalancerArns: js.UndefOr[ValueStringList] = js.native
@@ -23,9 +28,14 @@ trait ModifyVpcEndpointServiceConfigurationRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * The private DNS name to assign to the endpoint service.
+    * (Interface endpoint configuration) The private DNS name to assign to the endpoint service.
     */
   var PrivateDnsName: js.UndefOr[String] = js.native
+  
+  /**
+    * The Amazon Resource Names (ARNs) of Gateway Load Balancers to remove from your service configuration.
+    */
+  var RemoveGatewayLoadBalancerArns: js.UndefOr[ValueStringList] = js.native
   
   /**
     * The Amazon Resource Names (ARNs) of Network Load Balancers to remove from your service configuration.
@@ -33,7 +43,7 @@ trait ModifyVpcEndpointServiceConfigurationRequest extends js.Object {
   var RemoveNetworkLoadBalancerArns: js.UndefOr[ValueStringList] = js.native
   
   /**
-    * Removes the private DNS name of the endpoint service.
+    * (Interface endpoint configuration) Removes the private DNS name of the endpoint service.
     */
   var RemovePrivateDnsName: js.UndefOr[Boolean] = js.native
   
@@ -75,6 +85,15 @@ object ModifyVpcEndpointServiceConfigurationRequest {
     def deleteAcceptanceRequired: Self = this.set("AcceptanceRequired", js.undefined)
     
     @scala.inline
+    def setAddGatewayLoadBalancerArnsVarargs(value: String*): Self = this.set("AddGatewayLoadBalancerArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setAddGatewayLoadBalancerArns(value: ValueStringList): Self = this.set("AddGatewayLoadBalancerArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAddGatewayLoadBalancerArns: Self = this.set("AddGatewayLoadBalancerArns", js.undefined)
+    
+    @scala.inline
     def setAddNetworkLoadBalancerArnsVarargs(value: String*): Self = this.set("AddNetworkLoadBalancerArns", js.Array(value :_*))
     
     @scala.inline
@@ -94,6 +113,15 @@ object ModifyVpcEndpointServiceConfigurationRequest {
     
     @scala.inline
     def deletePrivateDnsName: Self = this.set("PrivateDnsName", js.undefined)
+    
+    @scala.inline
+    def setRemoveGatewayLoadBalancerArnsVarargs(value: String*): Self = this.set("RemoveGatewayLoadBalancerArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setRemoveGatewayLoadBalancerArns(value: ValueStringList): Self = this.set("RemoveGatewayLoadBalancerArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRemoveGatewayLoadBalancerArns: Self = this.set("RemoveGatewayLoadBalancerArns", js.undefined)
     
     @scala.inline
     def setRemoveNetworkLoadBalancerArnsVarargs(value: String*): Self = this.set("RemoveNetworkLoadBalancerArns", js.Array(value :_*))

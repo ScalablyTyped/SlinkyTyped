@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Shell extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/shell
+  // Docs: https://electronjs.org/docs/api/shell
   /**
     * Play the beep sound.
     */
@@ -32,8 +32,8 @@ trait Shell extends js.Object {
   def openExternal(url: String, options: OpenExternalOptions): js.Promise[Unit] = js.native
   
   /**
-    * Resolves with an string containing the error message corresponding to the
-    * failure if a failure occurred, otherwise "".
+    * Resolves with a string containing the error message corresponding to the failure
+    * if a failure occurred, otherwise "".
     * 
   Open the given file in the desktop's default manner.
     */

@@ -231,6 +231,13 @@ object EventType extends js.Object {
   sealed trait worksheetFormatChanged extends EventType
   
   /**
+    * WorksheetFormulaChanged represents the type of event registered on worksheet, and occurs when formula is changed.
+    *
+    */
+  @js.native
+  sealed trait worksheetFormulaChanged extends EventType
+  
+  /**
     * WorksheetRowHiddenChanged represents the type of event registered on worksheet, and occurs when a row's hidden state is changed.
     *
     */

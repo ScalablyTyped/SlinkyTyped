@@ -31,7 +31,7 @@ trait ServerManager extends js.Object {
     * Starts the server. Some server types may not support or require this.
     * Should no-op if server is already started
     */
-  def startServer(): Thenable[Unit] = js.native
+  def startServer(kernelSpec: IKernelSpec): Thenable[Unit] = js.native
   
   /**
     * Stops the server. Some server types may not support or require this

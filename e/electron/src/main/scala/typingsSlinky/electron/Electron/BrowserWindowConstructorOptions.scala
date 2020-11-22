@@ -6,14 +6,17 @@ import typingsSlinky.electron.electronStrings.`medium-light`
 import typingsSlinky.electron.electronStrings.`ultra-dark`
 import typingsSlinky.electron.electronStrings.`under-page`
 import typingsSlinky.electron.electronStrings.`under-window`
+import typingsSlinky.electron.electronStrings.active
 import typingsSlinky.electron.electronStrings.content
 import typingsSlinky.electron.electronStrings.customButtonsOnHover
 import typingsSlinky.electron.electronStrings.dark
 import typingsSlinky.electron.electronStrings.default
+import typingsSlinky.electron.electronStrings.followWindow
 import typingsSlinky.electron.electronStrings.header
 import typingsSlinky.electron.electronStrings.hidden
 import typingsSlinky.electron.electronStrings.hiddenInset
 import typingsSlinky.electron.electronStrings.hud
+import typingsSlinky.electron.electronStrings.inactive
 import typingsSlinky.electron.electronStrings.light
 import typingsSlinky.electron.electronStrings.menu
 import typingsSlinky.electron.electronStrings.popover
@@ -65,7 +68,7 @@ trait BrowserWindowConstructorOptions extends js.Object {
   var closable: js.UndefOr[Boolean] = js.native
   
   /**
-    * Forces using dark theme for the window, only works on some GTK desktop
+    * Forces using dark theme for the window, only works on some GTK+3 desktop
     * environments. Default is `false`.
     */
   var darkTheme: js.UndefOr[Boolean] = js.native
@@ -280,6 +283,12 @@ trait BrowserWindowConstructorOptions extends js.Object {
   var vibrancy: js.UndefOr[
     `appearance-based` | light | dark | titlebar | selection | menu | popover | sidebar | `medium-light` | `ultra-dark` | header | sheet | window | hud | `fullscreen-ui` | tooltip | content | `under-window` | `under-page`
   ] = js.native
+  
+  /**
+    * Specify how the material appearance should reflect window activity state on
+    * macOS. Must be used with the `vibrancy` property. Possible values are:
+    */
+  var visualEffectState: js.UndefOr[followWindow | active | inactive] = js.native
   
   /**
     * Settings of web page's features.
@@ -588,6 +597,12 @@ object BrowserWindowConstructorOptions {
     
     @scala.inline
     def deleteVibrancy: Self = this.set("vibrancy", js.undefined)
+    
+    @scala.inline
+    def setVisualEffectState(value: followWindow | active | inactive): Self = this.set("visualEffectState", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVisualEffectState: Self = this.set("visualEffectState", js.undefined)
     
     @scala.inline
     def setWebPreferences(value: WebPreferences): Self = this.set("webPreferences", value.asInstanceOf[js.Any])

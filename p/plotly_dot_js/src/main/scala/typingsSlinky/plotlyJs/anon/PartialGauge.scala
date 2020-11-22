@@ -1,7 +1,11 @@
 package typingsSlinky.plotlyJs.anon
 
+import typingsSlinky.plotlyJs.mod.Axis
+import typingsSlinky.plotlyJs.mod.GaugeBar
+import typingsSlinky.plotlyJs.mod.Threshold
 import typingsSlinky.plotlyJs.plotlyJsStrings.angular
 import typingsSlinky.plotlyJs.plotlyJsStrings.bullet
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,9 +14,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PartialGauge extends js.Object {
   
-  var axis: js.UndefOr[PartialAxisAutorange] = js.native
+  var axis: js.UndefOr[Partial[Axis]] = js.native
   
-  var bar: js.UndefOr[PartialGaugeBar] = js.native
+  var bar: js.UndefOr[Partial[GaugeBar]] = js.native
   
   var bgcolor: js.UndefOr[typingsSlinky.plotlyJs.mod.Color] = js.native
   
@@ -24,7 +28,7 @@ trait PartialGauge extends js.Object {
   
   var steps: js.UndefOr[js.Array[Color]] = js.native
   
-  var threshold: js.UndefOr[PartialThreshold] = js.native
+  var threshold: js.UndefOr[Partial[Threshold]] = js.native
 }
 object PartialGauge {
   
@@ -50,13 +54,13 @@ object PartialGauge {
     }
     
     @scala.inline
-    def setAxis(value: PartialAxisAutorange): Self = this.set("axis", value.asInstanceOf[js.Any])
+    def setAxis(value: Partial[Axis]): Self = this.set("axis", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAxis: Self = this.set("axis", js.undefined)
     
     @scala.inline
-    def setBar(value: PartialGaugeBar): Self = this.set("bar", value.asInstanceOf[js.Any])
+    def setBar(value: Partial[GaugeBar]): Self = this.set("bar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBar: Self = this.set("bar", js.undefined)
@@ -101,7 +105,7 @@ object PartialGauge {
     def deleteSteps: Self = this.set("steps", js.undefined)
     
     @scala.inline
-    def setThreshold(value: PartialThreshold): Self = this.set("threshold", value.asInstanceOf[js.Any])
+    def setThreshold(value: Partial[Threshold]): Self = this.set("threshold", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteThreshold: Self = this.set("threshold", js.undefined)

@@ -39,8 +39,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`additions removals`
 import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`additions text`
 import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`inline`
+import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`removals additions`
+import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`removals text`
+import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`text additions`
+import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.`text removals`
 import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.additions
 import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.all
 import typingsSlinky.reactInlinesvg.reactInlinesvgStrings.ascending
@@ -178,7 +183,9 @@ trait Props extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -342,7 +349,7 @@ trait Props extends js.Object {
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyParams: js.UndefOr[String] = js.native
   
@@ -452,7 +459,7 @@ trait Props extends js.Object {
   
   var onEnded: js.UndefOr[ReactEventHandler[SVGElement]] = js.native
   
-  var onError: js.UndefOr[js.Function1[/* error */ js.Error | FetchError, Unit]] = js.native
+  var onError: js.UndefOr[ErrorCallback] = js.native
   
   var onFocus: js.UndefOr[FocusEventHandler[SVGElement]] = js.native
   
@@ -466,7 +473,7 @@ trait Props extends js.Object {
   
   var onKeyUp: js.UndefOr[KeyboardEventHandler[SVGElement]] = js.native
   
-  var onLoad: js.UndefOr[js.Function2[/* src */ String, /* isCached */ Boolean, Unit]] = js.native
+  var onLoad: js.UndefOr[LoadCallback] = js.native
   
   var onLoadStart: js.UndefOr[ReactEventHandler[SVGElement]] = js.native
   
@@ -562,7 +569,7 @@ trait Props extends js.Object {
   
   var poster: js.UndefOr[String] = js.native
   
-  var preProcessor: js.UndefOr[js.Function1[/* code */ String, String]] = js.native
+  var preProcessor: js.UndefOr[PreProcessorCallback] = js.native
   
   var prefix: js.UndefOr[String] = js.native
   
@@ -953,7 +960,9 @@ object Props {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1464,6 +1473,9 @@ object Props {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyParams(value: String): Self = this.set("keyParams", value.asInstanceOf[js.Any])

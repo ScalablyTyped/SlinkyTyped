@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`8`
+import typingsSlinky.octokitTypes.anon.`7`
 import typingsSlinky.octokitTypes.octokitTypesStrings.all
 import typingsSlinky.octokitTypes.octokitTypesStrings.closed
 import typingsSlinky.octokitTypes.octokitTypesStrings.open
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProjectsListForOrgEndpoint extends js.Object {
   
-  var mediaType: `8` = js.native
+  var mediaType: `7` = js.native
   
   @JSName("org")
   var org_ : String = js.native
@@ -35,7 +35,7 @@ trait ProjectsListForOrgEndpoint extends js.Object {
 object ProjectsListForOrgEndpoint {
   
   @scala.inline
-  def apply(mediaType: `8`, org_ : String): ProjectsListForOrgEndpoint = {
+  def apply(mediaType: `7`, org_ : String): ProjectsListForOrgEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any])
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsListForOrgEndpoint]
@@ -57,7 +57,7 @@ object ProjectsListForOrgEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOrg_(value: String): Self = this.set("org", value.asInstanceOf[js.Any])

@@ -3,6 +3,7 @@ package typingsSlinky.titanium.global.Titanium.UI.iOS
 import typingsSlinky.titanium.Dictionary
 import typingsSlinky.titanium.Titanium.Blob
 import typingsSlinky.titanium.Titanium.Event
+import typingsSlinky.titanium.Titanium.UI.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -70,6 +71,7 @@ object ^ extends js.Object {
   
   /**
     * Creates and returns an instance of <Titanium.UI.iOS.ApplicationShortcuts>.
+    * @deprecated Use [Titanium.UI.Shortcut](Titanium.UI.Shortcut) instead.
     */
   def createApplicationShortcuts(): typingsSlinky.titanium.Titanium.UI.iOS.ApplicationShortcuts = js.native
   def createApplicationShortcuts(parameters: Dictionary[typingsSlinky.titanium.Titanium.UI.iOS.ApplicationShortcuts]): typingsSlinky.titanium.Titanium.UI.iOS.ApplicationShortcuts = js.native
@@ -278,7 +280,7 @@ object ^ extends js.Object {
     * Gets the value of the <Titanium.UI.iOS.statusBarBackgroundColor> property.
     * @deprecated Access <Titanium.UI.iOS.statusBarBackgroundColor> instead.
     */
-  def getStatusBarBackgroundColor(): String = js.native
+  def getStatusBarBackgroundColor(): String | Color = js.native
   
   /**
     * Removes the specified callback as an event listener for the named event.
@@ -326,11 +328,12 @@ object ^ extends js.Object {
     * @deprecated Set the value using <Titanium.UI.iOS.statusBarBackgroundColor> instead.
     */
   def setStatusBarBackgroundColor(statusBarBackgroundColor: String): Unit = js.native
+  def setStatusBarBackgroundColor(statusBarBackgroundColor: Color): Unit = js.native
   
   /**
-    * Sets the global status bar background color for the application.
+    * Sets the global status bar background color for the application. Android does not support setting instances of <Titanium.UI.Color>
     */
-  var statusBarBackgroundColor: String = js.native
+  var statusBarBackgroundColor: String | Color = js.native
   
   /**
     * Get image from SF Symbols provided by Apple.

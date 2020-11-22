@@ -1,5 +1,7 @@
 package typingsSlinky.wicgMediasession
 
+import typingsSlinky.wicgMediasession.anon.RequiredPickMediaSessionA
+import typingsSlinky.wicgMediasession.wicgMediasessionStrings.seekto
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +15,14 @@ trait MediaSession extends js.Object {
   // Current media session playback state.
   var playbackState: MediaSessionPlaybackState = js.native
   
-  // Set/Unset actions handlers.
   def setActionHandler(action: MediaSessionAction): Unit = js.native
-  def setActionHandler(action: MediaSessionAction, listener: js.Function0[Unit]): Unit = js.native
+  def setActionHandler(action: MediaSessionAction, listener: js.Function1[/* details */ MediaSessionActionDetails, Unit]): Unit = js.native
+  // Set/Unset actions handlers.
+  @JSName("setActionHandler")
+  def setActionHandler_seekto(action: seekto): Unit = js.native
+  @JSName("setActionHandler")
+  def setActionHandler_seekto(action: seekto, listener: js.Function1[/* details */ RequiredPickMediaSessionA, Unit]): Unit = js.native
+  
+  // Set/unset position state
+  var setPositionState: js.UndefOr[SetPositionState] = js.native
 }

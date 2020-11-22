@@ -12,9 +12,10 @@ import typingsSlinky.antDesignReactNative.antDesignReactNativeStrings.vertical
 import typingsSlinky.antDesignReactNative.tabsPropsTypeMod.PropsType
 import typingsSlinky.antDesignReactNative.tabsPropsTypeMod.TabData
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.mod.NativeScrollEvent
 import typingsSlinky.reactNative.mod.NodeHandle
+import typingsSlinky.reactNativeCommunityViewpager.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -78,7 +79,7 @@ class Tabs protected ()
   def goToTab(index: Double, force: Boolean): Boolean = js.native
   def goToTab(index: Double, force: Boolean, newState: js.Any): Boolean = js.native
   
-  def handleLayout(e: LayoutChangeEvent): Unit = js.native
+  def handleLayout(e: SyntheticEvent[NodeHandle, Layout]): Unit = js.native
   
   var instanceId: Double = js.native
   
@@ -115,7 +116,7 @@ class Tabs protected ()
   
   def tabClickGoToTab(index: Double): Unit = js.native
   
-  var viewPager: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ViewPager */ js.Any) | Null = js.native
+  var viewPager: default | Null = js.native
 }
 /* static members */
 @JSImport("@ant-design/react-native/lib/tabs/Tabs", "Tabs")

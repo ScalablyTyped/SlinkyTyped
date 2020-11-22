@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Key extends js.Object {
   
-  var color: js.UndefOr[String | Color | js.Array[Value]] = js.native
-  
   var key: String = js.native
+  
+  var reduce: js.UndefOr[Boolean] = js.native
 }
 object Key {
   
@@ -38,12 +38,9 @@ object Key {
     def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColorVarargs(value: Value*): Self = this.set("color", js.Array(value :_*))
+    def setReduce(value: Boolean): Self = this.set("reduce", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColor(value: String | Color | js.Array[Value]): Self = this.set("color", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteColor: Self = this.set("color", js.undefined)
+    def deleteReduce: Self = this.set("reduce", js.undefined)
   }
 }

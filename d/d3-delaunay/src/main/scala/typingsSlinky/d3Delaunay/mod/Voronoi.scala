@@ -1,6 +1,6 @@
 package typingsSlinky.d3Delaunay.mod
 
-import typingsSlinky.d3Delaunay.mod.Delaunay.Bounds
+import typingsSlinky.d3Delaunay.anon.Polygonindexnumber
 import typingsSlinky.d3Delaunay.mod.Delaunay.ClosableContext
 import typingsSlinky.d3Delaunay.mod.Delaunay.LineContext
 import typingsSlinky.d3Delaunay.mod.Delaunay.MoveContext
@@ -13,11 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("d3-delaunay", "Voronoi")
 @js.native
-class Voronoi[P] protected () extends js.Object {
-  /**
-    * Internally used to implement Delaunay#voronoi.
-    */
-  def this(delaunay: Delaunay[P], bounds: Bounds) = this()
+class Voronoi[P] () extends js.Object {
   
   /**
     * Returns the convex, closed polygon [[x0, y0], [x1, y1], ..., [x0, y0]] representing the cell for the specified point i.
@@ -25,9 +21,9 @@ class Voronoi[P] protected () extends js.Object {
   def cellPolygon(i: Double): Polygon = js.native
   
   /**
-    * Returns an iterable over the polygons for each cell, in order.
+    * Returns an iterable over the non-empty polygons for each cell, with the cell index as property.
     */
-  def cellPolygons(): IterableIterator[Polygon] = js.native
+  def cellPolygons(): IterableIterator[Polygonindexnumber] = js.native
   
   /**
     * The circumcenters of the Delaunay triangles [cx0, cy0, cx1, cy1, ...].
@@ -46,6 +42,12 @@ class Voronoi[P] protected () extends js.Object {
     * The Voronoi diagram’s associated Delaunay triangulation.
     */
   var delaunay: Delaunay[P] = js.native
+  
+  /**
+    * Returns an iterable over the indexes of the cells that share a common edge with the specified cell i.
+    * Voronoi neighbors are always neighbors on the Delaunay graph, but the converse is false when the common edge has been clipped out by the Voronoi diagram’s viewport.
+    */
+  def neighbors(i: Double): js.Iterable[Double] = js.native
   
   /**
     * Renders the mesh of Voronoi cells to an SVG path string.
@@ -77,6 +79,11 @@ class Voronoi[P] protected () extends js.Object {
     * The specified context must implement the context.moveTo, context.lineTo, and context.closePath methods from the CanvasPathMethods API.
     */
   def renderCell(i: Double, context: MoveContext with LineContext with ClosableContext): Unit = js.native
+  
+  /**
+    * Updates the Voronoi diagram and underlying triangulation after the points have been modified in-place — useful for Lloyd’s relaxation.
+    */
+  def update(): this.type = js.native
   
   /**
     * An array [vx0, vy0, wx0, wy0, ...] where each non-zero quadruple describes an open (infinite) cell

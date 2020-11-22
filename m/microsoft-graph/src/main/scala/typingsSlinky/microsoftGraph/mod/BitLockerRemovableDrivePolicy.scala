@@ -14,7 +14,7 @@ trait BitLockerRemovableDrivePolicy extends js.Object {
   var blockCrossOrganizationWriteAccess: js.UndefOr[Boolean] = js.native
   
   // Select the encryption method for removable drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-  var encryptionMethod: js.UndefOr[BitLockerEncryptionMethod] = js.native
+  var encryptionMethod: js.UndefOr[NullableOption[BitLockerEncryptionMethod]] = js.native
   
   /**
     * Indicates whether to block write access to devices configured in another organization. If
@@ -52,10 +52,13 @@ object BitLockerRemovableDrivePolicy {
     def deleteBlockCrossOrganizationWriteAccess: Self = this.set("blockCrossOrganizationWriteAccess", js.undefined)
     
     @scala.inline
-    def setEncryptionMethod(value: BitLockerEncryptionMethod): Self = this.set("encryptionMethod", value.asInstanceOf[js.Any])
+    def setEncryptionMethod(value: NullableOption[BitLockerEncryptionMethod]): Self = this.set("encryptionMethod", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEncryptionMethod: Self = this.set("encryptionMethod", js.undefined)
+    
+    @scala.inline
+    def setEncryptionMethodNull: Self = this.set("encryptionMethod", null)
     
     @scala.inline
     def setRequireEncryptionForWriteAccess(value: Boolean): Self = this.set("requireEncryptionForWriteAccess", value.asInstanceOf[js.Any])

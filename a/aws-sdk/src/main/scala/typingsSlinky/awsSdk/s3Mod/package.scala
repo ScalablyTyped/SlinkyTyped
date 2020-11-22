@@ -34,6 +34,13 @@ package object s3Mod {
   
   type AnalyticsS3ExportFileFormat = typingsSlinky.awsSdk.awsSdkStrings.CSV | java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ARCHIVE_ACCESS
+    - typingsSlinky.awsSdk.awsSdkStrings.DEEP_ARCHIVE_ACCESS
+    - java.lang.String
+  */
+  type ArchiveStatus = typingsSlinky.awsSdk.s3Mod._ArchiveStatus | java.lang.String
+  
   type Body = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.s3Mod.Blob | java.lang.String | typingsSlinky.node.streamMod.Readable
   
   /* Rewritten from type alias, can be one of: 
@@ -53,17 +60,31 @@ package object s3Mod {
   type BucketCannedACL = typingsSlinky.awsSdk.s3Mod._BucketCannedACL | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.EU
-    - typingsSlinky.awsSdk.awsSdkStrings.`eu-west-1`
-    - typingsSlinky.awsSdk.awsSdkStrings.`us-west-1`
-    - typingsSlinky.awsSdk.awsSdkStrings.`us-west-2`
+    - typingsSlinky.awsSdk.awsSdkStrings.`af-south-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ap-east-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ap-northeast-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ap-northeast-2`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ap-northeast-3`
     - typingsSlinky.awsSdk.awsSdkStrings.`ap-south-1`
     - typingsSlinky.awsSdk.awsSdkStrings.`ap-southeast-1`
     - typingsSlinky.awsSdk.awsSdkStrings.`ap-southeast-2`
-    - typingsSlinky.awsSdk.awsSdkStrings.`ap-northeast-1`
-    - typingsSlinky.awsSdk.awsSdkStrings.`sa-east-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ca-central-1`
     - typingsSlinky.awsSdk.awsSdkStrings.`cn-north-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`cn-northwest-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.EU
     - typingsSlinky.awsSdk.awsSdkStrings.`eu-central-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`eu-north-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`eu-south-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`eu-west-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`eu-west-2`
+    - typingsSlinky.awsSdk.awsSdkStrings.`eu-west-3`
+    - typingsSlinky.awsSdk.awsSdkStrings.`me-south-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`sa-east-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`us-east-2`
+    - typingsSlinky.awsSdk.awsSdkStrings.`us-gov-east-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`us-gov-west-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`us-west-1`
+    - typingsSlinky.awsSdk.awsSdkStrings.`us-west-2`
     - java.lang.String
   */
   type BucketLocationConstraint = typingsSlinky.awsSdk.s3Mod._BucketLocationConstraint | java.lang.String
@@ -303,12 +324,32 @@ package object s3Mod {
   
   type Initiated = js.Date
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ARCHIVE_ACCESS
+    - typingsSlinky.awsSdk.awsSdkStrings.DEEP_ARCHIVE_ACCESS
+    - java.lang.String
+  */
+  type IntelligentTieringAccessTier = typingsSlinky.awsSdk.s3Mod._IntelligentTieringAccessTier | java.lang.String
+  
+  type IntelligentTieringConfigurationList = js.Array[typingsSlinky.awsSdk.s3Mod.IntelligentTieringConfiguration]
+  
+  type IntelligentTieringDays = scala.Double
+  
+  type IntelligentTieringId = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Enabled_
+    - typingsSlinky.awsSdk.awsSdkStrings.Disabled_
+    - java.lang.String
+  */
+  type IntelligentTieringStatus = typingsSlinky.awsSdk.s3Mod._IntelligentTieringStatus | java.lang.String
+  
   type InventoryConfigurationList = js.Array[typingsSlinky.awsSdk.s3Mod.InventoryConfiguration]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CSV
     - typingsSlinky.awsSdk.awsSdkStrings.ORC
-    - typingsSlinky.awsSdk.awsSdkStrings.Parquet
+    - typingsSlinky.awsSdk.awsSdkStrings.Parquet_
     - java.lang.String
   */
   type InventoryFormat = typingsSlinky.awsSdk.s3Mod._InventoryFormat | java.lang.String
@@ -506,6 +547,13 @@ package object s3Mod {
   type ObjectLockToken = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.BucketOwnerPreferred
+    - typingsSlinky.awsSdk.awsSdkStrings.ObjectWriter
+    - java.lang.String
+  */
+  type ObjectOwnership = typingsSlinky.awsSdk.s3Mod._ObjectOwnership | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.STANDARD
     - typingsSlinky.awsSdk.awsSdkStrings.REDUCED_REDUNDANCY
     - typingsSlinky.awsSdk.awsSdkStrings.GLACIER
@@ -513,6 +561,7 @@ package object s3Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.ONEZONE_IA
     - typingsSlinky.awsSdk.awsSdkStrings.INTELLIGENT_TIERING
     - typingsSlinky.awsSdk.awsSdkStrings.DEEP_ARCHIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.OUTPOSTS
     - java.lang.String
   */
   type ObjectStorageClass = typingsSlinky.awsSdk.s3Mod._ObjectStorageClass | java.lang.String
@@ -524,6 +573,8 @@ package object s3Mod {
   type ObjectVersionStorageClass = typingsSlinky.awsSdk.awsSdkStrings.STANDARD | java.lang.String
   
   type OwnerOverride = typingsSlinky.awsSdk.awsSdkStrings.Destination | java.lang.String
+  
+  type OwnershipControlsRules = js.Array[typingsSlinky.awsSdk.s3Mod.OwnershipControlsRule]
   
   type PartNumber = scala.Double
   
@@ -687,6 +738,7 @@ package object s3Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.INTELLIGENT_TIERING
     - typingsSlinky.awsSdk.awsSdkStrings.GLACIER
     - typingsSlinky.awsSdk.awsSdkStrings.DEEP_ARCHIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.OUTPOSTS
     - java.lang.String
   */
   type StorageClass = typingsSlinky.awsSdk.s3Mod._StorageClass | java.lang.String
@@ -721,6 +773,8 @@ package object s3Mod {
     - java.lang.String
   */
   type Tier = typingsSlinky.awsSdk.s3Mod._Tier | java.lang.String
+  
+  type TieringList = js.Array[typingsSlinky.awsSdk.s3Mod.Tiering]
   
   type Token = java.lang.String
   

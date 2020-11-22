@@ -28,7 +28,7 @@ trait JobQueueDetail extends js.Object {
   var priority: Integer = js.native
   
   /**
-    * Describes the ability of the queue to accept new jobs.
+    * Describes the ability of the queue to accept new jobs. If the job queue state is ENABLED, it is able to accept jobs. If the job queue state is DISABLED, new jobs cannot be added to the queue, but jobs already in the queue can finish.
     */
   var state: JQState = js.native
   
@@ -41,6 +41,11 @@ trait JobQueueDetail extends js.Object {
     * A short, human-readable string to provide additional details about the current status of the job queue.
     */
   var statusReason: js.UndefOr[String] = js.native
+  
+  /**
+    * The tags applied to the job queue.
+    */
+  var tags: js.UndefOr[TagrisTagsMap] = js.native
 }
 object JobQueueDetail {
   
@@ -100,5 +105,11 @@ object JobQueueDetail {
     
     @scala.inline
     def deleteStatusReason: Self = this.set("statusReason", js.undefined)
+    
+    @scala.inline
+    def setTags(value: TagrisTagsMap): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
   }
 }

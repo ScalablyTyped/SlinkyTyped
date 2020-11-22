@@ -40,43 +40,69 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GridBaseColumn extends js.Object {
   
-  /** @name GridBaseColumn.alignment */
+  /**
+    * [descr:GridBaseColumn.alignment]
+    */
   var alignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name GridBaseColumn.allowEditing */
+  /**
+    * [descr:GridBaseColumn.allowEditing]
+    */
   var allowEditing: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.allowFiltering */
+  /**
+    * [descr:GridBaseColumn.allowFiltering]
+    */
   var allowFiltering: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.allowFixing */
+  /**
+    * [descr:GridBaseColumn.allowFixing]
+    */
   var allowFixing: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.allowHeaderFiltering */
+  /**
+    * [descr:GridBaseColumn.allowHeaderFiltering]
+    */
   var allowHeaderFiltering: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.allowHiding */
+  /**
+    * [descr:GridBaseColumn.allowHiding]
+    */
   var allowHiding: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.allowReordering */
+  /**
+    * [descr:GridBaseColumn.allowReordering]
+    */
   var allowReordering: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.allowResizing */
+  /**
+    * [descr:GridBaseColumn.allowResizing]
+    */
   var allowResizing: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.allowSearch */
+  /**
+    * [descr:GridBaseColumn.allowSearch]
+    */
   var allowSearch: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.allowSorting */
+  /**
+    * [descr:GridBaseColumn.allowSorting]
+    */
   var allowSorting: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.calculateCellValue */
+  /**
+    * [descr:GridBaseColumn.calculateCellValue]
+    */
   var calculateCellValue: js.UndefOr[js.Function1[/* rowData */ js.Any, _]] = js.native
   
-  /** @name GridBaseColumn.calculateDisplayValue */
+  /**
+    * [descr:GridBaseColumn.calculateDisplayValue]
+    */
   var calculateDisplayValue: js.UndefOr[String | (js.Function1[/* rowData */ js.Any, _])] = js.native
   
-  /** @name GridBaseColumn.calculateFilterExpression */
+  /**
+    * [descr:GridBaseColumn.calculateFilterExpression]
+    */
   var calculateFilterExpression: js.UndefOr[
     js.Function3[
       /* filterValue */ js.Any, 
@@ -86,91 +112,145 @@ trait GridBaseColumn extends js.Object {
     ]
   ] = js.native
   
-  /** @name GridBaseColumn.calculateSortValue */
+  /**
+    * [descr:GridBaseColumn.calculateSortValue]
+    */
   var calculateSortValue: js.UndefOr[String | (js.Function1[/* rowData */ js.Any, _])] = js.native
   
-  /** @name GridBaseColumn.caption */
+  /**
+    * [descr:GridBaseColumn.caption]
+    */
   var caption: js.UndefOr[String] = js.native
   
-  /** @name GridBaseColumn.cssClass */
+  /**
+    * [descr:GridBaseColumn.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name GridBaseColumn.customizeText */
+  /**
+    * [descr:GridBaseColumn.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* cellInfo */ GroupInterval, String]] = js.native
   
-  /** @name GridBaseColumn.dataField */
+  /**
+    * [descr:GridBaseColumn.dataField]
+    */
   var dataField: js.UndefOr[String] = js.native
   
-  /** @name GridBaseColumn.dataType */
+  /**
+    * [descr:GridBaseColumn.dataType]
+    */
   var dataType: js.UndefOr[string_ | number | date | boolean_ | `object` | datetime] = js.native
   
-  /** @name GridBaseColumn.editorOptions */
+  /**
+    * [descr:GridBaseColumn.editorOptions]
+    */
   var editorOptions: js.UndefOr[js.Any] = js.native
   
-  /** @name GridBaseColumn.encodeHtml */
+  /**
+    * [descr:GridBaseColumn.encodeHtml]
+    */
   var encodeHtml: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.falseText */
+  /**
+    * [descr:GridBaseColumn.falseText]
+    */
   var falseText: js.UndefOr[String] = js.native
   
-  /** @name GridBaseColumn.filterOperations */
+  /**
+    * [descr:GridBaseColumn.filterOperations]
+    */
   var filterOperations: js.UndefOr[
     js.Array[
       Equalssign | LessthansignGreaterthansign | Lessthansign | LessthansignEqualssign | Greaterthansign | GreaterthansignEqualssign | contains | endswith | isblank | isnotblank | notcontains | startswith | between | anyof | noneof | String
     ]
   ] = js.native
   
-  /** @name GridBaseColumn.filterType */
+  /**
+    * [descr:GridBaseColumn.filterType]
+    */
   var filterType: js.UndefOr[exclude | include] = js.native
   
-  /** @name GridBaseColumn.filterValue */
+  /**
+    * [descr:GridBaseColumn.filterValue]
+    */
   var filterValue: js.UndefOr[js.Any] = js.native
   
-  /** @name GridBaseColumn.filterValues */
+  /**
+    * [descr:GridBaseColumn.filterValues]
+    */
   var filterValues: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name GridBaseColumn.fixed */
+  /**
+    * [descr:GridBaseColumn.fixed]
+    */
   var fixed: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.fixedPosition */
+  /**
+    * [descr:GridBaseColumn.fixedPosition]
+    */
   var fixedPosition: js.UndefOr[left | right] = js.native
   
-  /** @name GridBaseColumn.formItem */
+  /**
+    * [descr:GridBaseColumn.formItem]
+    */
   var formItem: js.UndefOr[dxFormSimpleItem] = js.native
   
-  /** @name GridBaseColumn.format */
+  /**
+    * [descr:GridBaseColumn.format]
+    */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
   
-  /** @name GridBaseColumn.headerFilter */
+  /**
+    * [descr:GridBaseColumn.headerFilter]
+    */
   var headerFilter: js.UndefOr[SearchMode] = js.native
   
-  /** @name GridBaseColumn.hidingPriority */
+  /**
+    * [descr:GridBaseColumn.hidingPriority]
+    */
   var hidingPriority: js.UndefOr[Double] = js.native
   
-  /** @name GridBaseColumn.isBand */
+  /**
+    * [descr:GridBaseColumn.isBand]
+    */
   var isBand: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.lookup */
+  /**
+    * [descr:GridBaseColumn.lookup]
+    */
   var lookup: js.UndefOr[AllowClearing] = js.native
   
-  /** @name GridBaseColumn.minWidth */
+  /**
+    * [descr:GridBaseColumn.minWidth]
+    */
   var minWidth: js.UndefOr[Double] = js.native
   
-  /** @name GridBaseColumn.name */
+  /**
+    * [descr:GridBaseColumn.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name GridBaseColumn.ownerBand */
+  /**
+    * [descr:GridBaseColumn.ownerBand]
+    */
   var ownerBand: js.UndefOr[Double] = js.native
   
-  /** @name GridBaseColumn.renderAsync */
+  /**
+    * [descr:GridBaseColumn.renderAsync]
+    */
   var renderAsync: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.selectedFilterOperation */
+  /**
+    * [descr:GridBaseColumn.selectedFilterOperation]
+    */
   var selectedFilterOperation: js.UndefOr[
     Lessthansign | LessthansignEqualssign | LessthansignGreaterthansign | Equalssign | Greaterthansign | GreaterthansignEqualssign | between | contains | endswith | notcontains | startswith
   ] = js.native
   
-  /** @name GridBaseColumn.setCellValue */
+  /**
+    * [descr:GridBaseColumn.setCellValue]
+    */
   var setCellValue: js.UndefOr[
     js.Function3[
       /* newData */ js.Any, 
@@ -180,38 +260,58 @@ trait GridBaseColumn extends js.Object {
     ]
   ] = js.native
   
-  /** @name GridBaseColumn.showEditorAlways */
+  /**
+    * [descr:GridBaseColumn.showEditorAlways]
+    */
   var showEditorAlways: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.showInColumnChooser */
+  /**
+    * [descr:GridBaseColumn.showInColumnChooser]
+    */
   var showInColumnChooser: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.sortIndex */
+  /**
+    * [descr:GridBaseColumn.sortIndex]
+    */
   var sortIndex: js.UndefOr[Double] = js.native
   
-  /** @name GridBaseColumn.sortOrder */
+  /**
+    * [descr:GridBaseColumn.sortOrder]
+    */
   var sortOrder: js.UndefOr[asc | desc] = js.native
   
-  /** @name GridBaseColumn.sortingMethod */
+  /**
+    * [descr:GridBaseColumn.sortingMethod]
+    */
   var sortingMethod: js.UndefOr[js.Function2[/* value1 */ js.Any, /* value2 */ js.Any, Double]] = js.native
   
-  /** @name GridBaseColumn.trueText */
+  /**
+    * [descr:GridBaseColumn.trueText]
+    */
   var trueText: js.UndefOr[String] = js.native
   
-  /** @name GridBaseColumn.validationRules */
+  /**
+    * [descr:GridBaseColumn.validationRules]
+    */
   var validationRules: js.UndefOr[
     js.Array[
       RequiredRule | NumericRule | RangeRule | StringLengthRule | CustomRule | CompareRule | PatternRule | EmailRule | AsyncRule
     ]
   ] = js.native
   
-  /** @name GridBaseColumn.visible */
+  /**
+    * [descr:GridBaseColumn.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBaseColumn.visibleIndex */
+  /**
+    * [descr:GridBaseColumn.visibleIndex]
+    */
   var visibleIndex: js.UndefOr[Double] = js.native
   
-  /** @name GridBaseColumn.width */
+  /**
+    * [descr:GridBaseColumn.width]
+    */
   var width: js.UndefOr[Double | String] = js.native
 }
 object GridBaseColumn {

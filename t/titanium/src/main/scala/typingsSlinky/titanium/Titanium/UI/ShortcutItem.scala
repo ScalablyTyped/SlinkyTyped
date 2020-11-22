@@ -6,15 +6,26 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * An application shortcut.
+  * An application shortcut item.
   */
 @js.native
 trait ShortcutItem extends Proxy {
   
   /**
+    * Shortcut data.
+    */
+  var data: js.Any = js.native
+  
+  /**
     * Description of the shortcut.
     */
   var description: String = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.ShortcutItem.data> property.
+    * @deprecated Access <Titanium.UI.ShortcutItem.data> instead.
+    */
+  def getData(): js.Any = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ShortcutItem.description> property.
@@ -41,7 +52,14 @@ trait ShortcutItem extends Proxy {
   def getTitle(): String = js.native
   
   /**
+    * Gets the value of the <Titanium.UI.ShortcutItem.visible> property.
+    * @deprecated Use [Titanium.UI.Shortcut.items](Titanium.UI.Shortcut.items) to determine if shortcut is active.
+    */
+  def getVisible(): Boolean = js.native
+  
+  /**
     * Hide the shortcut.
+    * @deprecated Use [Titanium.UI.Shortcut.remove](Titanium.UI.Shortcut.remove) instead.
     */
   def hide(): Unit = js.native
   
@@ -60,6 +78,12 @@ trait ShortcutItem extends Proxy {
     * Pin shortcut to launcher.
     */
   def pin(): Unit = js.native
+  
+  /**
+    * Sets the value of the <Titanium.UI.ShortcutItem.data> property.
+    * @deprecated Set the value using <Titanium.UI.ShortcutItem.data> instead.
+    */
+  def setData(data: js.Any): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ShortcutItem.description> property.
@@ -87,7 +111,14 @@ trait ShortcutItem extends Proxy {
   def setTitle(title: String): Unit = js.native
   
   /**
+    * Sets the value of the <Titanium.UI.ShortcutItem.visible> property.
+    * @deprecated Use [Titanium.UI.Shortcut.items](Titanium.UI.Shortcut.items) to determine if shortcut is active.
+    */
+  def setVisible(visible: Boolean): Unit = js.native
+  
+  /**
     * Allow the shortcut to show.
+    * @deprecated Use [Titanium.UI.Shortcut.add](Titanium.UI.Shortcut.add) instead.
     */
   def show(): Unit = js.native
   
@@ -95,4 +126,10 @@ trait ShortcutItem extends Proxy {
     * Title of the shortcut.
     */
   var title: String = js.native
+  
+  /**
+    * Shortcut visibility.
+    * @deprecated Use [Titanium.UI.Shortcut.items](Titanium.UI.Shortcut.items) to determine if shortcut is active.
+    */
+  var visible: Boolean = js.native
 }

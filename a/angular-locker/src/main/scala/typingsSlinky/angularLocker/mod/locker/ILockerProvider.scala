@@ -11,7 +11,7 @@ trait ILockerProvider extends IServiceProvider {
   /**
     * Allow the defaults to be specified via the `lockerProvider`
     *
-    * @param {ILockerSettings}  lockerSettings  The defaults to override
+    * @param  lockerSettings  The defaults to override
     */
   def defaults(lockerSettings: ILockerSettings): Unit = js.native
 }

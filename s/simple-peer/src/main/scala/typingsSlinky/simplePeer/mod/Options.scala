@@ -32,9 +32,6 @@ trait Options extends js.Object {
   var offerConstraints: js.UndefOr[js.Object] = js.native
   
    // custom answer constraints (used by createAnswer method)
-  var reconnectTimer: js.UndefOr[Boolean | Double] = js.native
-  
-   // wait __ milliseconds after ICE 'disconnect' for reconnect attempt before emitting 'close'
   var sdpTransform: js.UndefOr[js.Function1[/* sdp */ js.Any, _]] = js.native
   
    // function to transform the generated SDP signaling data (for advanced users)
@@ -116,12 +113,6 @@ object Options {
     
     @scala.inline
     def deleteOfferConstraints: Self = this.set("offerConstraints", js.undefined)
-    
-    @scala.inline
-    def setReconnectTimer(value: Boolean | Double): Self = this.set("reconnectTimer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteReconnectTimer: Self = this.set("reconnectTimer", js.undefined)
     
     @scala.inline
     def setSdpTransform(value: /* sdp */ js.Any => _): Self = this.set("sdpTransform", js.Any.fromFunction1(value))

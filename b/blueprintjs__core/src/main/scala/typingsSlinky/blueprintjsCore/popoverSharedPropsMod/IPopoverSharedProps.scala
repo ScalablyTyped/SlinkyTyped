@@ -26,12 +26,10 @@ trait IPopoverSharedProps
   var boundary: js.UndefOr[Boundary] = js.native
   
   /**
-    * When enabled, `preventDefault()` is invoked on `click` events that close
-    * this popover, which will prevent those clicks from closing outer
-    * popovers. When disabled, clicking inside a `Classes.POPOVER_DISMISS`
-    * element will close the parent popover.
-    *
-    * See http://blueprintjs.com/docs/#core/components/popover.closing-on-click
+    * When enabled, clicks inside a `Classes.POPOVER_DISMISS` element
+    * will only close the current popover and not outer popovers.
+    * When disabled, the current popover and any ancestor popovers will be closed.
+    * @see http://blueprintjs.com/docs/#core/components/popover.closing-on-click
     * @default false
     */
   var captureDismiss: js.UndefOr[Boolean] = js.native
@@ -79,6 +77,13 @@ trait IPopoverSharedProps
     * @default undefined
     */
   var isOpen: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Whether to apply minimal styling to this popover or tooltip. Minimal popovers
+    * do not have an arrow pointing to their target and use a subtler animation.
+    * @default false
+    */
+  var minimal: js.UndefOr[Boolean] = js.native
   
   /**
     * Popper modifier options, passed directly to internal Popper instance. See
@@ -224,6 +229,12 @@ object IPopoverSharedProps {
     
     @scala.inline
     def deleteIsOpen: Self = this.set("isOpen", js.undefined)
+    
+    @scala.inline
+    def setMinimal(value: Boolean): Self = this.set("minimal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMinimal: Self = this.set("minimal", js.undefined)
     
     @scala.inline
     def setModifiers(value: Modifiers): Self = this.set("modifiers", value.asInstanceOf[js.Any])

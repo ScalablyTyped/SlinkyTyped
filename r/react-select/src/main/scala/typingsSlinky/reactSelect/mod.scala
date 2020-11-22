@@ -25,6 +25,7 @@ import typingsSlinky.reactSelect.stateManagerMod.DefaultProps
 import typingsSlinky.reactSelect.stateManagerMod.StateManager
 import typingsSlinky.reactSelect.stylesMod.StylesConfig
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
+import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.std.NonNullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -36,6 +37,8 @@ object mod extends js.Object {
   
   def createFilter(): js.Function2[/* option */ Option, /* rawInput */ String, Boolean] = js.native
   def createFilter(config: Config): js.Function2[/* option */ Option, /* rawInput */ String, Boolean] = js.native
+  
+  val defaultTheme: Theme = js.native
   
   def mergeStyles(source: StylesConfig, target: StylesConfig): StylesConfig = js.native
   

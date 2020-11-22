@@ -9,7 +9,7 @@ trait GetLaunchTemplateNetworkInterface extends js.Object {
   
   var associatePublicIpAddress: js.UndefOr[Boolean] = js.native
   
-  var deleteOnTermination: Boolean = js.native
+  var deleteOnTermination: js.UndefOr[Boolean] = js.native
   
   /**
     * Description of the launch template.
@@ -38,7 +38,6 @@ object GetLaunchTemplateNetworkInterface {
   
   @scala.inline
   def apply(
-    deleteOnTermination: Boolean,
     description: String,
     deviceIndex: Double,
     ipv4AddressCount: Double,
@@ -50,7 +49,7 @@ object GetLaunchTemplateNetworkInterface {
     securityGroups: js.Array[String],
     subnetId: String
   ): GetLaunchTemplateNetworkInterface = {
-    val __obj = js.Dynamic.literal(deleteOnTermination = deleteOnTermination.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], deviceIndex = deviceIndex.asInstanceOf[js.Any], ipv4AddressCount = ipv4AddressCount.asInstanceOf[js.Any], ipv4Addresses = ipv4Addresses.asInstanceOf[js.Any], ipv6AddressCount = ipv6AddressCount.asInstanceOf[js.Any], ipv6Addresses = ipv6Addresses.asInstanceOf[js.Any], networkInterfaceId = networkInterfaceId.asInstanceOf[js.Any], privateIpAddress = privateIpAddress.asInstanceOf[js.Any], securityGroups = securityGroups.asInstanceOf[js.Any], subnetId = subnetId.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], deviceIndex = deviceIndex.asInstanceOf[js.Any], ipv4AddressCount = ipv4AddressCount.asInstanceOf[js.Any], ipv4Addresses = ipv4Addresses.asInstanceOf[js.Any], ipv6AddressCount = ipv6AddressCount.asInstanceOf[js.Any], ipv6Addresses = ipv6Addresses.asInstanceOf[js.Any], networkInterfaceId = networkInterfaceId.asInstanceOf[js.Any], privateIpAddress = privateIpAddress.asInstanceOf[js.Any], securityGroups = securityGroups.asInstanceOf[js.Any], subnetId = subnetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLaunchTemplateNetworkInterface]
   }
   
@@ -68,9 +67,6 @@ object GetLaunchTemplateNetworkInterface {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setDeleteOnTermination(value: Boolean): Self = this.set("deleteOnTermination", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
@@ -116,5 +112,11 @@ object GetLaunchTemplateNetworkInterface {
     
     @scala.inline
     def deleteAssociatePublicIpAddress: Self = this.set("associatePublicIpAddress", js.undefined)
+    
+    @scala.inline
+    def setDeleteOnTermination(value: Boolean): Self = this.set("deleteOnTermination", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeleteOnTermination: Self = this.set("deleteOnTermination", js.undefined)
   }
 }

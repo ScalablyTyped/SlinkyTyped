@@ -1,5 +1,6 @@
 package typingsSlinky.firebaseAnalytics
 
+import typingsSlinky.firebaseAnalytics.anon.ApiKey
 import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
 import typingsSlinky.firebaseInstallationsTypes.mod.FirebaseInstallations
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object getFakeFirebaseServicesMod extends js.Object {
   
   def getFakeApp(): FirebaseApp = js.native
-  def getFakeApp(measurementId: String): FirebaseApp = js.native
+  def getFakeApp(fakeAppParams: ApiKey): FirebaseApp = js.native
   
   def getFakeInstallations(): FirebaseInstallations = js.native
   def getFakeInstallations(fid: js.UndefOr[scala.Nothing], onFidResolve: js.Function): FirebaseInstallations = js.native

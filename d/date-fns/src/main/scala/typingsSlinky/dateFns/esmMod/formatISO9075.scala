@@ -1,6 +1,6 @@
 package typingsSlinky.dateFns.esmMod
 
-import typingsSlinky.dateFns.anon.Format
+import typingsSlinky.dateFns.anon.Representation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object formatISO9075 extends js.Object {
   
   def apply(date: Double): String = js.native
-  def apply(date: Double, options: Format): String = js.native
+  def apply(date: Double, options: Representation): String = js.native
   def apply(date: js.Date): String = js.native
-  def apply(date: js.Date, options: Format): String = js.native
+  def apply(date: js.Date, options: Representation): String = js.native
 }

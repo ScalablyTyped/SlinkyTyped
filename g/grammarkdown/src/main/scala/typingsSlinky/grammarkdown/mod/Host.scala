@@ -1,6 +1,6 @@
 package typingsSlinky.grammarkdown.mod
 
-import typingsSlinky.grammarkdown.hostMod.HostOptions
+import typingsSlinky.grammarkdown.nodeMod.HostOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("grammarkdown", "Host")
 @js.native
 class Host ()
-  extends typingsSlinky.grammarkdown.hostMod.Host {
-  def this(hasReadFileReadFileSyncWriteFileWriteFileSyncBaseOptions: HostOptions) = this()
+  extends typingsSlinky.grammarkdown.nodeMod.Host {
+  def this(options: HostOptions) = this()
 }

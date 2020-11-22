@@ -23,24 +23,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  /**
-    * The `List` component creates an unstyled ordered or unordered list that
-    * should be used with the `ListItem`, `ListItemLink`, and `SimpleListItem`
-    * components.
-    */
   val List: ForwardRefExoticComponent[ListProps with RefAttributes[ListElement]] = js.native
   
-  /**
-    * The `ListItem` creates a clickable and focusable `<li>` within a `List` that
-    * can optionally render addons to the left and right of the `children` or text.
-    */
   val ListItem: ForwardRefExoticComponent[ListItemProps with RefAttributes[HTMLLIElement]] = js.native
   
-  /**
-    * This component is a really bad attempt at creating a `Link` within a `List`
-    * that has the main `ListItem` styles. It will probably be better to just use
-    * the `ListItemChildren` within your `Link` component instead.
-    */
   val ListItemLink: ForwardRefExoticComponent[
     (ListItemLinkProps with (RefAttributes[
       /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 178 */ js.Any
@@ -49,22 +35,8 @@ object mod extends js.Object {
     ]))
   ] = js.native
   
-  /**
-    * This is a simple component that will render a `<li>` with the subheader
-    * typography styles. It also supports an `inset` variant that adds some spacing
-    * to the left of the text to align with other `ListItem` that have left addons.
-    */
   val ListSubheader: ForwardRefExoticComponent[ListSubheaderProps with RefAttributes[HTMLLIElement]] = js.native
   
-  /**
-    * The `SimpleListItem` component is used to create a non-clickable item within
-    * a `List`. This is really just useful since it allows for the `ListItem`
-    * styling behavior of left and right icons, avatars, and media.
-    *
-    * Note: Even though this component exists, it is recommended to use the
-    * `ListItemChildren` component instead if you want the "addon" styling/behavior
-    * since screen readers read `li` items within lists differently.
-    */
   val SimpleListItem: ForwardRefExoticComponent[SimpleListItemProps with RefAttributes[HTMLLIElement]] = js.native
   
   def getListItemHeight(hasHeightLeftAddonLeftAddonTypeRightAddonRightAddonTypeSecondaryText: SimpleListItemProps): ListItemHeight = js.native
@@ -72,10 +44,6 @@ object mod extends js.Object {
   @js.native
   object ListItemAddon extends js.Object {
     
-    /**
-      * The `ListItemAddon` is used to create an addon to the left or right of the
-      * text/children of a `ListItem`.
-      */
     def apply(hasClassNameChildrenAddonAddonAfterTypePositionForceAddonWrapProps: ListItemAddonProps): ReactElement = js.native
     
     @js.native
@@ -100,17 +68,6 @@ object mod extends js.Object {
   @js.native
   object ListItemChildren extends js.Object {
     
-    /**
-      * The `ListItemChildren` component is used to create a styled list item that
-      * can have optional addons to the left or right of the children in the form of
-      * icons, avatars, or media. The `children` can be replaced by the `primaryText`
-      * and `secondaryText` props to create stacked text spanning two or more lines
-      * with the default behavior of using `line-clamp` at three lines.
-      *
-      * Note: This will return a `React.Fragment` of the children and does not wrap
-      * in a DOM node for styling. The parent component should normally have
-      * `display: flex` for the styling to work.
-      */
     def apply(
       hasTextClassNameSecondaryTextClassNameTextChildrenPrimaryTextSecondaryTextLeftAddonLeftAddonTypeLeftAddonPositionRightAddonRightAddonTypeRightAddonPositionForceAddonWrapChildren: ListItemChildrenProps
     ): ReactElement = js.native
@@ -149,10 +106,6 @@ object mod extends js.Object {
   @js.native
   object ListItemText extends js.Object {
     
-    /**
-      * This component us used to create the one to three lines of text within a
-      * `ListItem` or `SimpleListItem`.
-      */
     def apply(hasClassNameSecondaryTextClassNameSecondaryTextChildren: ListItemTextProps): ReactElement = js.native
     
     @js.native

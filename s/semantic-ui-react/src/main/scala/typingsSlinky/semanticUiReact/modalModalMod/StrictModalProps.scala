@@ -5,10 +5,10 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.modalActionsMod.ModalActionsProps
 import typingsSlinky.semanticUiReact.modalContentMod.ModalContentProps
+import typingsSlinky.semanticUiReact.modalDimmerMod.ModalDimmerProps
 import typingsSlinky.semanticUiReact.modalHeaderMod.ModalHeaderProps
 import typingsSlinky.semanticUiReact.portalPortalMod.StrictPortalProps
 import typingsSlinky.semanticUiReact.semanticUiReactBooleans.`true`
@@ -35,7 +35,7 @@ trait StrictModalProps extends StrictPortalProps {
   /** A Modal can reduce its complexity */
   var basic: js.UndefOr[Boolean] = js.native
   
-  /** A modal can be vertically centered in the viewport */
+  /** A modal can be vertically centered in the viewport. */
   var centered: js.UndefOr[Boolean] = js.native
   
   /** Additional classes. */
@@ -51,7 +51,7 @@ trait StrictModalProps extends StrictPortalProps {
   var content: js.UndefOr[SemanticShorthandItem[ModalContentProps]] = js.native
   
   /** A modal can appear in a dimmer. */
-  var dimmer: js.UndefOr[`true` | blurring | inverted] = js.native
+  var dimmer: js.UndefOr[`true` | blurring | inverted | SemanticShorthandItem[ModalDimmerProps]] = js.native
   
   /** A Modal can be passed header via shorthand. */
   var header: js.UndefOr[SemanticShorthandItem[ModalHeaderProps]] = js.native
@@ -140,7 +140,7 @@ object StrictModalProps {
     
     @scala.inline
     def setActionsFunction3(
-      value: (/* component */ ReactType[ModalActionsProps], ModalActionsProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ModalActionsProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("actions", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -190,7 +190,7 @@ object StrictModalProps {
     
     @scala.inline
     def setContentFunction3(
-      value: (/* component */ ReactType[ModalContentProps], ModalContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ModalContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("content", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -200,7 +200,15 @@ object StrictModalProps {
     def deleteContent: Self = this.set("content", js.undefined)
     
     @scala.inline
-    def setDimmer(value: `true` | blurring | inverted): Self = this.set("dimmer", value.asInstanceOf[js.Any])
+    def setDimmerReactElement(value: ReactElement): Self = this.set("dimmer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDimmerFunction3(
+      value: (/* component */ ReactElement, ModalDimmerProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    ): Self = this.set("dimmer", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setDimmer(value: `true` | blurring | inverted | SemanticShorthandItem[ModalDimmerProps]): Self = this.set("dimmer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDimmer: Self = this.set("dimmer", js.undefined)
@@ -210,7 +218,7 @@ object StrictModalProps {
     
     @scala.inline
     def setHeaderFunction3(
-      value: (/* component */ ReactType[ModalHeaderProps], ModalHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ModalHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("header", js.Any.fromFunction3(value))
     
     @scala.inline

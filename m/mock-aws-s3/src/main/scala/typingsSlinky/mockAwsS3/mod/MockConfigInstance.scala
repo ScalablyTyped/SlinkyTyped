@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.awsSdk.configServicePlaceholdersMod.ConfigurationServicePlaceholders because Inheritance from two classes. Inlined accessanalyzer, acm, acmpca, alexaforbusiness, amplify, apigateway, apigatewaymanagementapi, apigatewayv2, appconfig, applicationautoscaling, applicationinsights, appmesh, appstream, appsync, athena, augmentedairuntime, autoscaling, autoscalingplans, backup, batch, budgets, chime, cloud9, clouddirectory, cloudformation, cloudfront, cloudhsm, cloudhsmv2, cloudsearch, cloudsearchdomain, cloudtrail, cloudwatch, cloudwatchevents, cloudwatchlogs, codeartifact, codebuild, codecommit, codedeploy, codeguruprofiler, codegurureviewer, codepipeline, codestar, codestarconnections, codestarnotifications, cognitoidentity, cognitoidentityserviceprovider, cognitosync, comprehend, comprehendmedical, computeoptimizer, configservice, connect, connectparticipant, costexplorer, cur, dataexchange, datapipeline, datasync, dax, detective, devicefarm, directconnect, directoryservice, discovery, dlm, dms, docdb, dynamodb, dynamodbstreams, ebs, ec2, ec2instanceconnect, ecr, ecs, efs, eks, elasticache, elasticbeanstalk, elasticinference, elastictranscoder, elb, elbv2, emr, es, eventbridge, firehose, fms, forecastqueryservice, forecastservice, frauddetector, fsx, gamelift, glacier, globalaccelerator, glue, greengrass, groundstation, guardduty, health, honeycode, iam, imagebuilder, importexport, inspector, iot, iot1clickdevicesservice, iot1clickprojects, iotanalytics, iotdata, iotevents, ioteventsdata, iotjobsdataplane, iotsecuretunneling, iotsitewise, iotthingsgraph, ivs, kafka, kendra, kinesis, kinesisanalytics, kinesisanalyticsv2, kinesisvideo, kinesisvideoarchivedmedia, kinesisvideomedia, kinesisvideosignalingchannels, kms, lakeformation, lambda, lexmodelbuildingservice, lexruntime, licensemanager, lightsail, machinelearning, macie, macie2, managedblockchain, marketplacecatalog, marketplacecommerceanalytics, marketplaceentitlementservice, marketplacemetering, mediaconnect, mediaconvert, medialive, mediapackage, mediapackagevod, mediastore, mediastoredata, mediatailor, migrationhub, migrationhubconfig, mobile, mobileanalytics, mq, mturk, neptune, networkmanager, opsworks, opsworkscm, organizations, outposts, personalize, personalizeevents, personalizeruntime, pi, pinpoint, pinpointemail, pinpointsmsvoice, polly, pricing, qldb, qldbsession, quicksight, ram, rds, rdsdataservice, redshift, rekognition, resourcegroups, resourcegroupstaggingapi, robomaker, route53, route53domains, route53resolver, s3, s3control, sagemaker, sagemakerruntime, savingsplans, schemas, secretsmanager, securityhub, serverlessapplicationrepository, servicecatalog, servicediscovery, servicequotas, ses, sesv2, shield, signer, simpledb, sms, snowball, sns, sqs, ssm, sso, ssooidc, stepfunctions, storagegateway, sts, support, swf, synthetics, textract, transcribeservice, transfer, translate, waf, wafregional, wafv2, workdocs, worklink, workmail, workmailmessageflow, workspaces, xray */ @js.native
+- typingsSlinky.awsSdk.configServicePlaceholdersMod.ConfigurationServicePlaceholders because Inheritance from two classes. Inlined accessanalyzer, acm, acmpca, alexaforbusiness, amplify, apigateway, apigatewaymanagementapi, apigatewayv2, appconfig, appflow, applicationautoscaling, applicationinsights, appmesh, appstream, appsync, athena, augmentedairuntime, autoscaling, autoscalingplans, backup, batch, braket, budgets, chime, cloud9, clouddirectory, cloudformation, cloudfront, cloudhsm, cloudhsmv2, cloudsearch, cloudsearchdomain, cloudtrail, cloudwatch, cloudwatchevents, cloudwatchlogs, codeartifact, codebuild, codecommit, codedeploy, codeguruprofiler, codegurureviewer, codepipeline, codestar, codestarconnections, codestarnotifications, cognitoidentity, cognitoidentityserviceprovider, cognitosync, comprehend, comprehendmedical, computeoptimizer, configservice, connect, connectparticipant, costexplorer, cur, databrew, dataexchange, datapipeline, datasync, dax, detective, devicefarm, directconnect, directoryservice, discovery, dlm, dms, docdb, dynamodb, dynamodbstreams, ebs, ec2, ec2instanceconnect, ecr, ecs, efs, eks, elasticache, elasticbeanstalk, elasticinference, elastictranscoder, elb, elbv2, emr, es, eventbridge, firehose, fms, forecastqueryservice, forecastservice, frauddetector, fsx, gamelift, glacier, globalaccelerator, glue, greengrass, groundstation, guardduty, health, honeycode, iam, identitystore, imagebuilder, importexport, inspector, iot, iot1clickdevicesservice, iot1clickprojects, iotanalytics, iotdata, iotevents, ioteventsdata, iotjobsdataplane, iotsecuretunneling, iotsitewise, iotthingsgraph, ivs, kafka, kendra, kinesis, kinesisanalytics, kinesisanalyticsv2, kinesisvideo, kinesisvideoarchivedmedia, kinesisvideomedia, kinesisvideosignalingchannels, kms, lakeformation, lambda, lexmodelbuildingservice, lexruntime, licensemanager, lightsail, machinelearning, macie, macie2, managedblockchain, marketplacecatalog, marketplacecommerceanalytics, marketplaceentitlementservice, marketplacemetering, mediaconnect, mediaconvert, medialive, mediapackage, mediapackagevod, mediastore, mediastoredata, mediatailor, migrationhub, migrationhubconfig, mobile, mobileanalytics, mq, mturk, neptune, networkfirewall, networkmanager, opsworks, opsworkscm, organizations, outposts, personalize, personalizeevents, personalizeruntime, pi, pinpoint, pinpointemail, pinpointsmsvoice, polly, pricing, qldb, qldbsession, quicksight, ram, rds, rdsdataservice, redshift, redshiftdata, rekognition, resourcegroups, resourcegroupstaggingapi, robomaker, route53, route53domains, route53resolver, s3, s3control, s3outposts, sagemaker, sagemakerruntime, savingsplans, schemas, secretsmanager, securityhub, serverlessapplicationrepository, servicecatalog, servicecatalogappregistry, servicediscovery, servicequotas, ses, sesv2, shield, signer, simpledb, sms, snowball, sns, sqs, ssm, sso, ssoadmin, ssooidc, stepfunctions, storagegateway, sts, support, swf, synthetics, textract, timestreamquery, timestreamwrite, transcribeservice, transfer, translate, waf, wafregional, wafv2, workdocs, worklink, workmail, workmailmessageflow, workspaces, xray */ @js.native
 trait MockConfigInstance
   extends Config
      with APIVersions {
@@ -30,6 +30,8 @@ trait MockConfigInstance
   var apigatewayv2: js.UndefOr[typingsSlinky.awsSdk.apigatewayv2Mod.ClientConfiguration] = js.native
   
   var appconfig: js.UndefOr[typingsSlinky.awsSdk.appconfigMod.ClientConfiguration] = js.native
+  
+  var appflow: js.UndefOr[typingsSlinky.awsSdk.appflowMod.ClientConfiguration] = js.native
   
   var applicationautoscaling: js.UndefOr[typingsSlinky.awsSdk.applicationautoscalingMod.ClientConfiguration] = js.native
   
@@ -54,6 +56,8 @@ trait MockConfigInstance
   var basePath: String = js.native
   
   var batch: js.UndefOr[typingsSlinky.awsSdk.batchMod.ClientConfiguration] = js.native
+  
+  var braket: js.UndefOr[typingsSlinky.awsSdk.braketMod.ClientConfiguration] = js.native
   
   var budgets: js.UndefOr[typingsSlinky.awsSdk.budgetsMod.ClientConfiguration] = js.native
   
@@ -124,6 +128,8 @@ trait MockConfigInstance
   var costexplorer: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.ClientConfiguration] = js.native
   
   var cur: js.UndefOr[typingsSlinky.awsSdk.curMod.ClientConfiguration] = js.native
+  
+  var databrew: js.UndefOr[typingsSlinky.awsSdk.databrewMod.ClientConfiguration] = js.native
   
   var dataexchange: js.UndefOr[typingsSlinky.awsSdk.dataexchangeMod.ClientConfiguration] = js.native
   
@@ -216,6 +222,8 @@ trait MockConfigInstance
   var honeycode: js.UndefOr[typingsSlinky.awsSdk.honeycodeMod.ClientConfiguration] = js.native
   
   var iam: js.UndefOr[typingsSlinky.awsSdk.iamMod.ClientConfiguration] = js.native
+  
+  var identitystore: js.UndefOr[typingsSlinky.awsSdk.identitystoreMod.ClientConfiguration] = js.native
   
   var imagebuilder: js.UndefOr[typingsSlinky.awsSdk.imagebuilderMod.ClientConfiguration] = js.native
   
@@ -325,6 +333,8 @@ trait MockConfigInstance
   
   var neptune: js.UndefOr[typingsSlinky.awsSdk.neptuneMod.ClientConfiguration] = js.native
   
+  var networkfirewall: js.UndefOr[typingsSlinky.awsSdk.networkfirewallMod.ClientConfiguration] = js.native
+  
   var networkmanager: js.UndefOr[typingsSlinky.awsSdk.networkmanagerMod.ClientConfiguration] = js.native
   
   var opsworks: js.UndefOr[typingsSlinky.awsSdk.opsworksMod.ClientConfiguration] = js.native
@@ -367,6 +377,8 @@ trait MockConfigInstance
   
   var redshift: js.UndefOr[typingsSlinky.awsSdk.redshiftMod.ClientConfiguration] = js.native
   
+  var redshiftdata: js.UndefOr[typingsSlinky.awsSdk.redshiftdataMod.ClientConfiguration] = js.native
+  
   var rekognition: js.UndefOr[typingsSlinky.awsSdk.rekognitionMod.ClientConfiguration] = js.native
   
   var resourcegroups: js.UndefOr[typingsSlinky.awsSdk.resourcegroupsMod.ClientConfiguration] = js.native
@@ -385,6 +397,8 @@ trait MockConfigInstance
   
   var s3control: js.UndefOr[typingsSlinky.awsSdk.s3controlMod.ClientConfiguration] = js.native
   
+  var s3outposts: js.UndefOr[typingsSlinky.awsSdk.s3outpostsMod.ClientConfiguration] = js.native
+  
   var sagemaker: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.ClientConfiguration] = js.native
   
   var sagemakerruntime: js.UndefOr[typingsSlinky.awsSdk.sagemakerruntimeMod.ClientConfiguration] = js.native
@@ -400,6 +414,8 @@ trait MockConfigInstance
   var serverlessapplicationrepository: js.UndefOr[typingsSlinky.awsSdk.serverlessapplicationrepositoryMod.ClientConfiguration] = js.native
   
   var servicecatalog: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.ClientConfiguration] = js.native
+  
+  var servicecatalogappregistry: js.UndefOr[typingsSlinky.awsSdk.servicecatalogappregistryMod.ClientConfiguration] = js.native
   
   var servicediscovery: js.UndefOr[typingsSlinky.awsSdk.servicediscoveryMod.ClientConfiguration] = js.native
   
@@ -427,6 +443,8 @@ trait MockConfigInstance
   
   var sso: js.UndefOr[typingsSlinky.awsSdk.ssoMod.ClientConfiguration] = js.native
   
+  var ssoadmin: js.UndefOr[typingsSlinky.awsSdk.ssoadminMod.ClientConfiguration] = js.native
+  
   var ssooidc: js.UndefOr[typingsSlinky.awsSdk.ssooidcMod.ClientConfiguration] = js.native
   
   var stepfunctions: js.UndefOr[typingsSlinky.awsSdk.stepfunctionsMod.ClientConfiguration] = js.native
@@ -442,6 +460,10 @@ trait MockConfigInstance
   var synthetics: js.UndefOr[typingsSlinky.awsSdk.syntheticsMod.ClientConfiguration] = js.native
   
   var textract: js.UndefOr[typingsSlinky.awsSdk.textractMod.ClientConfiguration] = js.native
+  
+  var timestreamquery: js.UndefOr[typingsSlinky.awsSdk.timestreamqueryMod.ClientConfiguration] = js.native
+  
+  var timestreamwrite: js.UndefOr[typingsSlinky.awsSdk.timestreamwriteMod.ClientConfiguration] = js.native
   
   var transcribeservice: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.ClientConfiguration] = js.native
   

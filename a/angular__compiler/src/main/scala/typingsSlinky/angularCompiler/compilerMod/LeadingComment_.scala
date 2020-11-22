@@ -1,0 +1,12 @@
+package typingsSlinky.angularCompiler.compilerMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@JSImport("@angular/compiler/compiler", "LeadingComment")
+@js.native
+class LeadingComment_ protected ()
+  extends typingsSlinky.angularCompiler.publicApiMod.LeadingComment_ {
+  def this(text: String, multiline: Boolean, trailingNewline: Boolean) = this()
+}

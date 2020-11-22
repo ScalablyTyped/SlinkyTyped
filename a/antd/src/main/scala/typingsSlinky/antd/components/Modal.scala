@@ -100,6 +100,9 @@ object Modal {
     def maskTransitionName(value: String): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def modalRender(value: /* node */ ReactElement => ReactElement): this.type = set("modalRender", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def okButtonProps(value: ButtonProps): this.type = set("okButtonProps", value.asInstanceOf[js.Any])
     
     @scala.inline

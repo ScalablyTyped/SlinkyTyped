@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetMedicalVocabularyResponse extends js.Object {
   
   /**
-    * The Amazon S3 location where the vocabulary is stored. Use this URI to get the contents of the vocabulary. You can download your vocabulary from the URI for a limited time.
+    * The location in Amazon S3 where the vocabulary is stored. Use this URI to get the contents of the vocabulary. You can download your vocabulary from the URI for a limited time.
     */
   var DownloadUri: js.UndefOr[Uri] = js.native
   
@@ -18,22 +18,22 @@ trait GetMedicalVocabularyResponse extends js.Object {
   var FailureReason: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.FailureReason] = js.native
   
   /**
-    * The valid language code returned for your vocabulary entries.
+    * The valid language code for your vocabulary entries.
     */
   var LanguageCode: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.LanguageCode] = js.native
   
   /**
-    * The date and time the vocabulary was last modified with a text file different from what was previously used.
+    * The date and time that the vocabulary was last modified with a text file different from the one that was previously used.
     */
   var LastModifiedTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The valid name that Amazon Transcribe Medical returns.
+    * The name of the vocabulary returned by Amazon Transcribe Medical.
     */
   var VocabularyName: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.VocabularyName] = js.native
   
   /**
-    * The processing state of the vocabulary.
+    * The processing state of the vocabulary. If the VocabularyState is READY then you can use it in the StartMedicalTranscriptionJob operation. 
     */
   var VocabularyState: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.VocabularyState] = js.native
 }

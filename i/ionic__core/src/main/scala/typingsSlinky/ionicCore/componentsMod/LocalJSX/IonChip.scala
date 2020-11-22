@@ -16,6 +16,11 @@ trait IonChip extends js.Object {
   var color: js.UndefOr[Color] = js.native
   
   /**
+    * If `true`, the user cannot interact with the chip.
+    */
+  var disabled: js.UndefOr[Boolean] = js.native
+  
+  /**
     * The mode determines which platform styles to use.
     */
   var mode: js.UndefOr[ios | md] = js.native
@@ -53,6 +58,12 @@ object IonChip {
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
+    
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisabled: Self = this.set("disabled", js.undefined)
     
     @scala.inline
     def setMode(value: ios | md): Self = this.set("mode", value.asInstanceOf[js.Any])

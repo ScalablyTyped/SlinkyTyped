@@ -1,5 +1,6 @@
 package typingsSlinky.plotlyJs.anon
 
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PartialPlotNumber extends js.Object {
   
-  var font: js.UndefOr[PartialFont] = js.native
+  var font: js.UndefOr[Partial[typingsSlinky.plotlyJs.mod.Font]] = js.native
   
   var prefix: js.UndefOr[String] = js.native
   
@@ -40,7 +41,7 @@ object PartialPlotNumber {
     }
     
     @scala.inline
-    def setFont(value: PartialFont): Self = this.set("font", value.asInstanceOf[js.Any])
+    def setFont(value: Partial[typingsSlinky.plotlyJs.mod.Font]): Self = this.set("font", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFont: Self = this.set("font", js.undefined)

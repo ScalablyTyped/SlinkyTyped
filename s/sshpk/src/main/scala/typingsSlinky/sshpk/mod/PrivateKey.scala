@@ -10,6 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class PrivateKey protected () extends js.Object {
   def this(opts: js.Any) = this()
   
+  var comment: js.UndefOr[String] = js.native
+  
   def createSign(hashAlgo: String): Signer = js.native
   
   def createVerify(hashAlgo: String): Key = js.native

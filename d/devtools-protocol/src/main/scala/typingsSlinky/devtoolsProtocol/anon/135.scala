@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.DeleteCookieRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowGridOverlaysRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `135` extends js.Object {
   
-  var paramsType: js.Array[DeleteCookieRequest] = js.native
+  var paramsType: js.Array[SetShowGridOverlaysRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `135` {
   
   @scala.inline
-  def apply(paramsType: js.Array[DeleteCookieRequest], returnType: Unit): `135` = {
+  def apply(paramsType: js.Array[SetShowGridOverlaysRequest], returnType: Unit): `135` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`135`]
   }
@@ -36,10 +36,10 @@ object `135` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: DeleteCookieRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetShowGridOverlaysRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[DeleteCookieRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetShowGridOverlaysRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

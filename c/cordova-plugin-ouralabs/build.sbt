@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "cordova-plugin-ouralabs"
-version := "1.1.0-dt-20200515Z-2e383e"
+version := "1.1.0-dt-20201002Z-2e383e"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

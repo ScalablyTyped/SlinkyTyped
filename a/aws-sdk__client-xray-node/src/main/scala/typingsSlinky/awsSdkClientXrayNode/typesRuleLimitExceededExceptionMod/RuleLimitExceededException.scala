@@ -1,30 +1,21 @@
 package typingsSlinky.awsSdkClientXrayNode.typesRuleLimitExceededExceptionMod
 
 import typingsSlinky.awsSdkClientXrayNode.createSamplingRuleExceptionsUnionMod.CreateSamplingRuleExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait RuleLimitExceededException
-  extends ServiceException[RuleLimitExceededExceptionDetails]
-     with CreateSamplingRuleExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_RuleLimitExceededExceptionDetails> * / any */ @js.native
+trait RuleLimitExceededException extends CreateSamplingRuleExceptionsUnion {
   
-  @JSName("name")
-  var name_RuleLimitExceededException: typingsSlinky.awsSdkClientXrayNode.awsSdkClientXrayNodeStrings.RuleLimitExceededException = js.native
+  var name: typingsSlinky.awsSdkClientXrayNode.awsSdkClientXrayNodeStrings.RuleLimitExceededException = js.native
 }
 object RuleLimitExceededException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: RuleLimitExceededExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientXrayNode.awsSdkClientXrayNodeStrings.RuleLimitExceededException
-  ): RuleLimitExceededException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientXrayNode.awsSdkClientXrayNodeStrings.RuleLimitExceededException): RuleLimitExceededException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuleLimitExceededException]
   }
   

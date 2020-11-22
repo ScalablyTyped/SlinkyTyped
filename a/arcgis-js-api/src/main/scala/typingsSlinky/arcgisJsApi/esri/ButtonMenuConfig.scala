@@ -18,21 +18,21 @@ trait ButtonMenuConfig extends Object {
   var container: js.UndefOr[HTMLElement] = js.native
   
   /**
-    * Adds a CSS class to the menu button's DOM node.  </br> ![menu items iconClass](https://developers.arcgis.com/javascript/assets/img/apiref/widgets/featuretable/button-menu-icon-class.png)
+    * Adds a CSS class to the menu button's DOM node.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable.html#ButtonMenuConfig)
     */
   var iconClass: js.UndefOr[Boolean] = js.native
   
   /**
-    * An array of [ButtonMenuItems](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable-Grid-support-ButtonMenuItem.html). The following image shows the default menu with two additional items.  </br> ![ButtonMenuItems array](https://developers.arcgis.com/javascript/assets/img/apiref/widgets/featuretable/custom-menu-items.png)
+    * An array of [ButtonMenuItems](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable-Grid-support-ButtonMenuItem.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable.html#ButtonMenuConfig)
     */
   var items: js.UndefOr[js.Array[ButtonMenuItem]] = js.native
   
   /**
-    * Indicates if the menu content is visible. Default is `false`.
+    * Indicates if the menu content is visible.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable.html#ButtonMenuConfig)
     */

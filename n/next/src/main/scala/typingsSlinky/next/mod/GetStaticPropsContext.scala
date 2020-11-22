@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GetStaticPropsContext[Q /* <: ParsedUrlQuery */] extends js.Object {
   
+  var defaultLocale: js.UndefOr[String] = js.native
+  
+  var locale: js.UndefOr[String] = js.native
+  
+  var locales: js.UndefOr[js.Array[String]] = js.native
+  
   var params: js.UndefOr[Q] = js.native
   
   var preview: js.UndefOr[Boolean] = js.native
@@ -36,6 +42,27 @@ object GetStaticPropsContext {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDefaultLocale(value: String): Self = this.set("defaultLocale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultLocale: Self = this.set("defaultLocale", js.undefined)
+    
+    @scala.inline
+    def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    
+    @scala.inline
+    def setLocalesVarargs(value: String*): Self = this.set("locales", js.Array(value :_*))
+    
+    @scala.inline
+    def setLocales(value: js.Array[String]): Self = this.set("locales", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocales: Self = this.set("locales", js.undefined)
     
     @scala.inline
     def setParams(value: Q): Self = this.set("params", value.asInstanceOf[js.Any])

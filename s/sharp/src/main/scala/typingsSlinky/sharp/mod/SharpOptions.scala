@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SharpOptions extends js.Object {
   
+  /** Set to `true` to read all frames/pages of an animated image (equivalent of setting `pages` to `-1`). (optional, default false) */
+  var animated: js.UndefOr[Boolean] = js.native
+  
   /** Describes a new image to be created. */
   var create: js.UndefOr[Create] = js.native
   
@@ -20,6 +23,9 @@ trait SharpOptions extends js.Object {
     * (optional, default true)
     */
   var failOnError: js.UndefOr[Boolean] = js.native
+  
+  /** Level to extract from a multi-level input (OpenSlide), zero based. (optional, default 0) */
+  var level: js.UndefOr[Double] = js.native
   
   /**
     * Do not process input images where the number of pixels (width x height) exceeds this limit.
@@ -64,6 +70,12 @@ object SharpOptions {
     }
     
     @scala.inline
+    def setAnimated(value: Boolean): Self = this.set("animated", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnimated: Self = this.set("animated", js.undefined)
+    
+    @scala.inline
     def setCreate(value: Create): Self = this.set("create", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -80,6 +92,12 @@ object SharpOptions {
     
     @scala.inline
     def deleteFailOnError: Self = this.set("failOnError", js.undefined)
+    
+    @scala.inline
+    def setLevel(value: Double): Self = this.set("level", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLevel: Self = this.set("level", js.undefined)
     
     @scala.inline
     def setLimitInputPixels(value: Double | Boolean): Self = this.set("limitInputPixels", value.asInstanceOf[js.Any])

@@ -8,23 +8,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.RangeBarSeries */
+/**
+  * [descr:dxChartSeriesTypes.RangeBarSeries]
+  */
 @js.native
 trait dxChartSeriesTypesRangeBarSeries extends dxChartSeriesTypesCommonSeries {
   
-  /** @name dxChartSeriesTypes.RangeBarSeries.aggregation */
+  /**
+    * [descr:dxChartSeriesTypes.RangeBarSeries.aggregation]
+    */
   @JSName("aggregation")
   var aggregation_dxChartSeriesTypesRangeBarSeries: js.UndefOr[dxChartSeriesTypesRangeBarSeriesAggregation] = js.native
   
-  /** @name dxChartSeriesTypes.RangeBarSeries.hoverMode */
+  /**
+    * [descr:dxChartSeriesTypes.RangeBarSeries.hoverMode]
+    */
   @JSName("hoverMode")
   var hoverMode_dxChartSeriesTypesRangeBarSeries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.native
   
-  /** @name dxChartSeriesTypes.RangeBarSeries.label */
+  /**
+    * [descr:dxChartSeriesTypes.RangeBarSeries.label]
+    */
   @JSName("label")
   var label_dxChartSeriesTypesRangeBarSeries: js.UndefOr[dxChartSeriesTypesRangeBarSeriesLabel] = js.native
   
-  /** @name dxChartSeriesTypes.RangeBarSeries.selectionMode */
+  /**
+    * [descr:dxChartSeriesTypes.RangeBarSeries.selectionMode]
+    */
   @JSName("selectionMode")
   var selectionMode_dxChartSeriesTypesRangeBarSeries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.native
 }

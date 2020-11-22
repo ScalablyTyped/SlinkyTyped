@@ -130,3 +130,16 @@ class DisplayPassPostProcess protected ()
     reusable: Boolean
   ) = this()
 }
+/* static members */
+@JSImport("babylonjs", "DisplayPassPostProcess")
+@js.native
+object DisplayPassPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(
+    parsedPostProcess: js.Any,
+    targetCamera: typingsSlinky.babylonjs.cameraMod.Camera,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    rootUrl: String
+  ): Nullable[typingsSlinky.babylonjs.displayPassPostProcessMod.DisplayPassPostProcess] = js.native
+}

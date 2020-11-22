@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("egg-core", "EggLoader")
 @js.native
-class EggLoader[T, Config] protected () extends js.Object {
+class EggLoader[T, Config, Options /* <: EggLoaderOptions */] protected () extends js.Object {
   /**
     * @constructor
     * @param {Object} options - options
@@ -40,6 +40,8 @@ class EggLoader[T, Config] protected () extends js.Object {
     */
   def getAppInfo(): EggAppInfo = js.native
   
+  def getEggPaths(): js.Array[String] = js.native
+  
   /**
     * Get home directory
     * @return {String} home directory
@@ -63,6 +65,8 @@ class EggLoader[T, Config] protected () extends js.Object {
     * @since 1.0.0
     */
   def getLoadUnits(): js.Array[Type] = js.native
+  
+  def getServerEnv(): String = js.native
   
   def getTypeFiles(filename: String): js.Array[String] = js.native
   
@@ -138,6 +142,8 @@ class EggLoader[T, Config] protected () extends js.Object {
   def loadToContext(directory: String, property: String, opt: PartialContextLoaderOptio): Unit = js.native
   def loadToContext(directory: js.Array[String], property: String): Unit = js.native
   def loadToContext(directory: js.Array[String], property: String, opt: PartialContextLoaderOptio): Unit = js.native
+  
+  var options: Options = js.native
   
   var pkg: PlainObject[_] = js.native
   

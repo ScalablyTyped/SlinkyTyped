@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "EdgeChromiumHighContrastSelector")
 @js.native
-object EdgeChromiumHighContrastSelector extends TopLevel[/* "@media screen and (-ms-high-contrast: active)" */ String]
+object EdgeChromiumHighContrastSelector extends TopLevel[/* "change" */ String]

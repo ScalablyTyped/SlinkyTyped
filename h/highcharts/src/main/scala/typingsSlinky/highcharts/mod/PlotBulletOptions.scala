@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,6 +32,8 @@ trait PlotBulletOptions extends js.Object {
     * animation parameter under the API methods. The following properties are
     * supported:
     *
+    * - `defer`: The animation delay time in milliseconds.
+    *
     * - `duration`: The duration of the animation in milliseconds.
     *
     * - `easing`: Can be a string reference to an easing function set on the
@@ -39,7 +42,7 @@ trait PlotBulletOptions extends js.Object {
     * Due to poor performance, animation is disabled in old IE browsers for
     * several chart types.
     */
-  var animation: js.UndefOr[Boolean | AnimationOptionsObject] = js.native
+  var animation: js.UndefOr[Boolean | PlotBulletAnimationOptions | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highcharts) For some series, there is a limit that shuts down initial
@@ -49,11 +52,6 @@ trait PlotBulletOptions extends js.Object {
     * set `animationLimit` to `Infinity`.
     */
   var animationLimit: js.UndefOr[Double] = js.native
-  
-  /**
-    * (Highcharts) Sets the color blending in the boost module.
-    */
-  var boostBlending: js.UndefOr[OptionsBoostBlendingValue] = js.native
   
   /**
     * (Highcharts, Highstock, Gantt) The color of the border surrounding each
@@ -531,8 +529,10 @@ trait PlotBulletOptions extends js.Object {
   
   /**
     * (Highcharts, Highstock, Gantt) A pixel value specifying a fixed width for
-    * each column or bar. When `null`, the width is calculated from the
-    * `pointPadding` and `groupPadding`.
+    * each column or bar point. When `null`, the width is calculated from the
+    * `pointPadding` and `groupPadding`. The width effects the dimension that
+    * is not based on the point value. For column series it is the hoizontal
+    * length and for bar series it is the vertical length.
     */
   var pointWidth: js.UndefOr[Double] = js.native
   
@@ -713,7 +713,7 @@ object PlotBulletOptions {
     def deleteAllowPointSelect: Self = this.set("allowPointSelect", js.undefined)
     
     @scala.inline
-    def setAnimation(value: Boolean | AnimationOptionsObject): Self = this.set("animation", value.asInstanceOf[js.Any])
+    def setAnimation(value: Boolean | PlotBulletAnimationOptions | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimation: Self = this.set("animation", js.undefined)
@@ -723,12 +723,6 @@ object PlotBulletOptions {
     
     @scala.inline
     def deleteAnimationLimit: Self = this.set("animationLimit", js.undefined)
-    
-    @scala.inline
-    def setBoostBlending(value: OptionsBoostBlendingValue): Self = this.set("boostBlending", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBoostBlending: Self = this.set("boostBlending", js.undefined)
     
     @scala.inline
     def setBorderColor(value: ColorString | GradientColorObject | PatternObject): Self = this.set("borderColor", value.asInstanceOf[js.Any])

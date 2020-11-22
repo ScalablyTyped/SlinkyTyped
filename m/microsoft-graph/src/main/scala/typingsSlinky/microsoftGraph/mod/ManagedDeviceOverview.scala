@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ManagedDeviceOverview extends Entity {
   
   // Distribution of Exchange Access State in Intune
-  var deviceExchangeAccessStateSummary: js.UndefOr[DeviceExchangeAccessStateSummary] = js.native
+  var deviceExchangeAccessStateSummary: js.UndefOr[NullableOption[DeviceExchangeAccessStateSummary]] = js.native
   
   // Device operating system summary.
-  var deviceOperatingSystemSummary: js.UndefOr[DeviceOperatingSystemSummary] = js.native
+  var deviceOperatingSystemSummary: js.UndefOr[NullableOption[DeviceOperatingSystemSummary]] = js.native
   
   // The number of devices enrolled in both MDM and EAS
   var dualEnrolledDeviceCount: js.UndefOr[Double] = js.native
@@ -46,16 +46,22 @@ object ManagedDeviceOverview {
     }
     
     @scala.inline
-    def setDeviceExchangeAccessStateSummary(value: DeviceExchangeAccessStateSummary): Self = this.set("deviceExchangeAccessStateSummary", value.asInstanceOf[js.Any])
+    def setDeviceExchangeAccessStateSummary(value: NullableOption[DeviceExchangeAccessStateSummary]): Self = this.set("deviceExchangeAccessStateSummary", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceExchangeAccessStateSummary: Self = this.set("deviceExchangeAccessStateSummary", js.undefined)
     
     @scala.inline
-    def setDeviceOperatingSystemSummary(value: DeviceOperatingSystemSummary): Self = this.set("deviceOperatingSystemSummary", value.asInstanceOf[js.Any])
+    def setDeviceExchangeAccessStateSummaryNull: Self = this.set("deviceExchangeAccessStateSummary", null)
+    
+    @scala.inline
+    def setDeviceOperatingSystemSummary(value: NullableOption[DeviceOperatingSystemSummary]): Self = this.set("deviceOperatingSystemSummary", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceOperatingSystemSummary: Self = this.set("deviceOperatingSystemSummary", js.undefined)
+    
+    @scala.inline
+    def setDeviceOperatingSystemSummaryNull: Self = this.set("deviceOperatingSystemSummary", null)
     
     @scala.inline
     def setDualEnrolledDeviceCount(value: Double): Self = this.set("dualEnrolledDeviceCount", value.asInstanceOf[js.Any])

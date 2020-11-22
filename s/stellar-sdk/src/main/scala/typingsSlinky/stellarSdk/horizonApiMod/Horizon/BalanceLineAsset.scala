@@ -28,6 +28,8 @@ trait BalanceLineAsset[T /* <: credit4 | credit12 */] extends js.Object {
   var limit: String = js.native
   
   var selling_liabilities: String = js.native
+  
+  var sponsor: js.UndefOr[String] = js.native
 }
 object BalanceLineAsset {
   
@@ -92,5 +94,11 @@ object BalanceLineAsset {
     
     @scala.inline
     def setSelling_liabilities(value: String): Self = this.set("selling_liabilities", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSponsor(value: String): Self = this.set("sponsor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSponsor: Self = this.set("sponsor", js.undefined)
   }
 }

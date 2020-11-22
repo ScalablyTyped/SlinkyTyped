@@ -32,7 +32,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFilterBuilderField extends js.Object {
   
-  /** @name dxFilterBuilderField.calculateFilterExpression */
+  /**
+    * [descr:dxFilterBuilderField.calculateFilterExpression]
+    */
   var calculateFilterExpression: js.UndefOr[
     js.Function2[
       /* filterValue */ js.Any, 
@@ -41,22 +43,34 @@ trait dxFilterBuilderField extends js.Object {
     ]
   ] = js.native
   
-  /** @name dxFilterBuilderField.caption */
+  /**
+    * [descr:dxFilterBuilderField.caption]
+    */
   var caption: js.UndefOr[String] = js.native
   
-  /** @name dxFilterBuilderField.customizeText */
+  /**
+    * [descr:dxFilterBuilderField.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* fieldInfo */ Value, String]] = js.native
   
-  /** @name dxFilterBuilderField.dataField */
+  /**
+    * [descr:dxFilterBuilderField.dataField]
+    */
   var dataField: js.UndefOr[String] = js.native
   
-  /** @name dxFilterBuilderField.dataType */
+  /**
+    * [descr:dxFilterBuilderField.dataType]
+    */
   var dataType: js.UndefOr[string_ | number | date | boolean_ | `object` | datetime] = js.native
   
-  /** @name dxFilterBuilderField.editorOptions */
+  /**
+    * [descr:dxFilterBuilderField.editorOptions]
+    */
   var editorOptions: js.UndefOr[js.Any] = js.native
   
-  /** @name dxFilterBuilderField.editorTemplate */
+  /**
+    * [descr:dxFilterBuilderField.editorTemplate]
+    */
   var editorTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
       /* conditionInfo */ FilterOperation, 
@@ -65,26 +79,38 @@ trait dxFilterBuilderField extends js.Object {
     ])
   ] = js.native
   
-  /** @name dxFilterBuilderField.falseText */
+  /**
+    * [descr:dxFilterBuilderField.falseText]
+    */
   var falseText: js.UndefOr[String] = js.native
   
-  /** @name dxFilterBuilderField.filterOperations */
+  /**
+    * [descr:dxFilterBuilderField.filterOperations]
+    */
   var filterOperations: js.UndefOr[
     js.Array[
       Equalssign | LessthansignGreaterthansign | Lessthansign | LessthansignEqualssign | Greaterthansign | GreaterthansignEqualssign | contains | endswith | isblank | isnotblank | notcontains | startswith | between | String
     ]
   ] = js.native
   
-  /** @name dxFilterBuilderField.format */
+  /**
+    * [descr:dxFilterBuilderField.format]
+    */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
   
-  /** @name dxFilterBuilderField.lookup */
+  /**
+    * [descr:dxFilterBuilderField.lookup]
+    */
   var lookup: js.UndefOr[DisplayExpr] = js.native
   
-  /** @name dxFilterBuilderField.name */
+  /**
+    * [descr:dxFilterBuilderField.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxFilterBuilderField.trueText */
+  /**
+    * [descr:dxFilterBuilderField.trueText]
+    */
   var trueText: js.UndefOr[String] = js.native
 }
 object dxFilterBuilderField {

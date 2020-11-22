@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.unitsMod.IModelUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IProjectConversion because var conflicts: id, isLoadable, isLoaded, isReadOnly, model, structureTypeName, unit. Inlined containerAsProject */ @JSImport("mendixmodelsdk/dist/gen/projects", "projects.ProjectConversion")
 @js.native
-class ProjectConversion protected () extends ModelUnit {
+class ProjectConversion protected () extends ModelUnit[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
@@ -31,9 +31,6 @@ class ProjectConversion protected () extends ModelUnit {
   val containerAsProject_FProjectConversion: IProject = js.native
   
   def markers: IList[OneTimeConversionMarker] = js.native
-  
-  @JSName("model")
-  var model_FProjectConversion: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/projects", "projects.ProjectConversion")

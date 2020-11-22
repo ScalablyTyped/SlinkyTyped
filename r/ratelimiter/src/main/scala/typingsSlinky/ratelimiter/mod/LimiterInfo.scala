@@ -4,29 +4,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Result Object
+  */
 @js.native
 trait LimiterInfo extends js.Object {
   
   /**
-    * Number of calls left in current duration without decreasing current get
+    * number of calls left in current `duration` without decreasing current `get`
     */
   var remaining: Double = js.native
   
   /**
-    * Time in milliseconds until the end of current duration
+    * time since epoch in seconds at which the rate limiting period will end (or already ended)
     */
   var reset: Double = js.native
   
   /**
-    * max value
+    * time since epoch in milliseconds at which the rate limiting period will end (or already ended)
+    */
+  var resetMs: Double = js.native
+  
+  /**
+    * `max` value
     */
   var total: Double = js.native
 }
 object LimiterInfo {
   
   @scala.inline
-  def apply(remaining: Double, reset: Double, total: Double): LimiterInfo = {
-    val __obj = js.Dynamic.literal(remaining = remaining.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
+  def apply(remaining: Double, reset: Double, resetMs: Double, total: Double): LimiterInfo = {
+    val __obj = js.Dynamic.literal(remaining = remaining.asInstanceOf[js.Any], reset = reset.asInstanceOf[js.Any], resetMs = resetMs.asInstanceOf[js.Any], total = total.asInstanceOf[js.Any])
     __obj.asInstanceOf[LimiterInfo]
   }
   
@@ -50,6 +58,9 @@ object LimiterInfo {
     
     @scala.inline
     def setReset(value: Double): Self = this.set("reset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setResetMs(value: Double): Self = this.set("resetMs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTotal(value: Double): Self = this.set("total", value.asInstanceOf[js.Any])

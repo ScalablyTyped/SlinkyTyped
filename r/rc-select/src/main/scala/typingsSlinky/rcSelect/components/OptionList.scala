@@ -8,6 +8,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcSelect.anon.Selected
+import typingsSlinky.rcSelect.anon.Source
 import typingsSlinky.rcSelect.generatorMod.FlattenOptionsType
 import typingsSlinky.rcSelect.generatorMod.RawValueType
 import typingsSlinky.rcSelect.interfaceMod.OptionsType
@@ -63,7 +64,7 @@ object OptionList {
     id: String,
     itemHeight: Double,
     multiple: Boolean,
-    onActiveValue: (RawValueType, Double) => Unit,
+    onActiveValue: (/* active */ RawValueType, /* index */ Double, /* info */ js.UndefOr[Source]) => Unit,
     onScroll: SyntheticUIEvent[HTMLDivElement] => Unit,
     onSelect: (RawValueType, Selected) => Unit,
     onToggleOpen: js.UndefOr[Boolean] => Unit,
@@ -74,7 +75,7 @@ object OptionList {
     values: Set[RawValueType],
     virtual: Boolean
   ): Builder = {
-    val __props = js.Dynamic.literal(childrenAsData = childrenAsData.asInstanceOf[js.Any], flattenOptions = flattenOptions.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemHeight = itemHeight.asInstanceOf[js.Any], multiple = multiple.asInstanceOf[js.Any], onActiveValue = js.Any.fromFunction2(onActiveValue), onScroll = js.Any.fromFunction1(onScroll), onSelect = js.Any.fromFunction2(onSelect), onToggleOpen = js.Any.fromFunction1(onToggleOpen), open = open.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], searchValue = searchValue.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any], virtual = virtual.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(childrenAsData = childrenAsData.asInstanceOf[js.Any], flattenOptions = flattenOptions.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemHeight = itemHeight.asInstanceOf[js.Any], multiple = multiple.asInstanceOf[js.Any], onActiveValue = js.Any.fromFunction3(onActiveValue), onScroll = js.Any.fromFunction1(onScroll), onSelect = js.Any.fromFunction2(onSelect), onToggleOpen = js.Any.fromFunction1(onToggleOpen), open = open.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], searchValue = searchValue.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any], virtual = virtual.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[OptionListProps[OptionsType] with RefAttributes[RefOptionListProps]]))
   }
 }

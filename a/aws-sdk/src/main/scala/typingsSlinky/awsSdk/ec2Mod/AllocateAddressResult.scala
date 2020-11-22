@@ -13,6 +13,11 @@ trait AllocateAddressResult extends js.Object {
   var AllocationId: js.UndefOr[String] = js.native
   
   /**
+    * The carrier IP address. This option is only available for network interfaces which reside in a subnet in a Wavelength Zone (for example an EC2 instance). 
+    */
+  var CarrierIp: js.UndefOr[String] = js.native
+  
+  /**
     * The customer-owned IP address.
     */
   var CustomerOwnedIp: js.UndefOr[String] = js.native
@@ -28,7 +33,7 @@ trait AllocateAddressResult extends js.Object {
   var Domain: js.UndefOr[DomainType] = js.native
   
   /**
-    * The location from which the IP address is advertised.
+    * The set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses.
     */
   var NetworkBorderGroup: js.UndefOr[String] = js.native
   
@@ -70,6 +75,12 @@ object AllocateAddressResult {
     
     @scala.inline
     def deleteAllocationId: Self = this.set("AllocationId", js.undefined)
+    
+    @scala.inline
+    def setCarrierIp(value: String): Self = this.set("CarrierIp", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCarrierIp: Self = this.set("CarrierIp", js.undefined)
     
     @scala.inline
     def setCustomerOwnedIp(value: String): Self = this.set("CustomerOwnedIp", value.asInstanceOf[js.Any])

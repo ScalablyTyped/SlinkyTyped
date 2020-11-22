@@ -1,10 +1,10 @@
 package typingsSlinky.tensorflowTfjsLayers.topologyMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.mod.serialization.Serializable
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.constraintsMod.Constraint
 import typingsSlinky.tensorflowTfjsLayers.distTypesMod.Kwargs
 import typingsSlinky.tensorflowTfjsLayers.distTypesMod.RegularizerFn
@@ -61,8 +61,9 @@ abstract class Layer () extends Serializable {
     *
     * The loss may potentionally be conditional on some inputs tensors,
     * for instance activity losses are conditional on the layer's inputs.
+    *
+    * @doc {heading: 'Models', 'subheading': 'Classes'}
     */
-  /** @doc {heading: 'Models', 'subheading': 'Classes'} */
   def addLoss(losses: RegularizerFn): Unit = js.native
   
   /**
@@ -77,8 +78,9 @@ abstract class Layer () extends Serializable {
     *   (assuming that the layer itself is also trainable).
     * @param constraint An optional trainable.
     * @return The created weight variable.
+    *
+    * @doc {heading: 'Models', 'subheading': 'Classes'}
     */
-  /** @doc {heading: 'Models', 'subheading': 'Classes'} */
   /* protected */ def addWeight(name: String, shape: Shape): LayerVariable = js.native
   /* protected */ def addWeight(
     name: String,
@@ -383,8 +385,9 @@ abstract class Layer () extends Serializable {
     *
     * @exception ValueError error in case the layer is missing shape information
     *   for its `build` call.
+    *
+    * @doc {heading: 'Models', 'subheading': 'Classes'}
     */
-  /** @doc {heading: 'Models', 'subheading': 'Classes'} */
   @JSName("apply")
   def apply(inputs: Tensor[Rank]): Tensor[Rank] | (js.Array[SymbolicTensor | Tensor[Rank]]) | SymbolicTensor = js.native
   @JSName("apply")
@@ -422,8 +425,9 @@ abstract class Layer () extends Serializable {
     * Called when apply() is called to construct the weights.
     *
     * @param inputShape A `Shape` or array of `Shape` (unused).
+    *
+    * @doc {heading: 'Models', 'subheading': 'Classes'}
     */
-  /** @doc {heading: 'Models', 'subheading': 'Classes'} */
   def build(inputShape: js.Array[Shape] | Shape): Unit = js.native
   
   var built: Boolean = js.native
@@ -476,8 +480,9 @@ abstract class Layer () extends Serializable {
     * @param inputShape A shape (tuple of integers) or a list of shape tuples
     *   (one per output tensor of the layer). Shape tuples can include null for
     *   free dimensions, instead of an integer.
+    *
+    * @doc {heading: 'Models', 'subheading': 'Classes'}
     */
-  /** @doc {heading: 'Models', 'subheading': 'Classes'} */
   def computeOutputShape(inputShape: js.Array[Shape] | Shape): Shape | js.Array[Shape] = js.native
   
   /**
@@ -487,8 +492,9 @@ abstract class Layer () extends Serializable {
     * @returns An integer count.
     * @throws RuntimeError: If the layer is not built yet (in which case its
     *   weights are not defined yet.)
+    *
+    * @doc {heading: 'Models', 'subheading': 'Classes'}
     */
-  /** @doc {heading: 'Models', 'subheading': 'Classes'} */
   def countParams(): Double = js.native
   
   /**
@@ -518,8 +524,9 @@ abstract class Layer () extends Serializable {
     *     during this `dispose()` call.
     * @throws {Error} If the layer is not built yet, or if the layer has already
     *   been disposed.
+    *
+    * @doc {heading: 'Models', 'subheading': 'Classes'}
     */
-  /** @doc {heading: 'Models', 'subheading': 'Classes'} */
   def dispose(): DisposeResult = js.native
   
   /**
@@ -569,8 +576,9 @@ abstract class Layer () extends Serializable {
     *
     * @param trainableOnly Whether to get the values of only trainable weights.
     * @returns Weight values as an `Array` of `tf.Tensor`s.
+    *
+    * @doc {heading: 'Models', 'subheading': 'Classes'}
     */
-  /** @doc {heading: 'Models', 'subheading': 'Classes'} */
   def getWeights(): js.Array[Tensor[Rank]] = js.native
   def getWeights(trainableOnly: Boolean): js.Array[Tensor[Rank]] = js.native
   
@@ -637,8 +645,9 @@ abstract class Layer () extends Serializable {
     * @returns Output shape or shapes.
     * @throws AttributeError: if the layer is connected to more than one incoming
     *   nodes.
+    *
+    * @doc {heading: 'Models', 'subheading': 'Classes'}
     */
-  /** @doc {heading: 'Models', 'subheading': 'Classes'} */
   val outputShape: Shape | js.Array[Shape] = js.native
   
   /**
@@ -678,8 +687,9 @@ abstract class Layer () extends Serializable {
     *
     * @exception ValueError If the provided weights list does not match the
     *   layer's specifications.
+    *
+    * @doc {heading: 'Models', 'subheading': 'Classes'}
     */
-  /** @doc {heading: 'Models', 'subheading': 'Classes'} */
   def setWeights(weights: js.Array[Tensor[Rank]]): Unit = js.native
   
   val stateful: Boolean = js.native

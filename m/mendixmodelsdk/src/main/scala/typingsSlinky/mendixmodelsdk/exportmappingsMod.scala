@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -11,6 +12,7 @@ import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.ValueMappingElement
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.NullValueOption
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import scala.scalajs.js
@@ -31,7 +33,7 @@ object exportmappingsMod extends js.Object {
   object exportmappings extends js.Object {
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/export-mappings relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/export-mappings relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -58,9 +60,6 @@ object exportmappingsMod extends js.Object {
       
       def isHeader: Boolean = js.native
       def isHeader_=(newValue: Boolean): Unit = js.native
-      
-      @JSName("model")
-      var model_FExportMapping: IModel = js.native
       
       /**
         * In version 6.7.0: introduced
@@ -93,7 +92,7 @@ object exportmappingsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/export-mappings relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/export-mappings relevant section in reference guide}
       */
     @js.native
     class ExportObjectMappingElement protected () extends ObjectMappingElement {
@@ -102,12 +101,9 @@ object exportmappingsMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
-      
-      @JSName("model")
-      var model_FExportObjectMappingElement: IModel = js.native
     }
     /* static members */
     @js.native
@@ -140,7 +136,7 @@ object exportmappingsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/export-mappings relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/export-mappings relevant section in reference guide}
       */
     @js.native
     class ExportValueMappingElement protected () extends ValueMappingElement {
@@ -149,12 +145,9 @@ object exportmappingsMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
-      
-      @JSName("model")
-      var model_FExportValueMappingElement: IModel = js.native
     }
     /* static members */
     @js.native
@@ -183,7 +176,7 @@ object exportmappingsMod extends js.Object {
       * Interfaces and instance classes for types from the Mendix sub meta model `ExportMappings`.
       */
     /**
-      * See: {@link https://docs.mendix.com/refguide7/export-mappings relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/export-mappings relevant section in reference guide}
       */
     @js.native
     trait IExportMapping extends IMappingDocument

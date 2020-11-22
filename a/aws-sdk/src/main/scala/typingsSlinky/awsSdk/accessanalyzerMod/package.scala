@@ -40,8 +40,8 @@ package object accessanalyzerMod {
   type FindingSourceList = js.Array[typingsSlinky.awsSdk.accessanalyzerMod.FindingSource]
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.BUCKET_ACL
     - typingsSlinky.awsSdk.awsSdkStrings.POLICY
+    - typingsSlinky.awsSdk.awsSdkStrings.BUCKET_ACL
     - typingsSlinky.awsSdk.awsSdkStrings.S3_ACCESS_POINT
     - java.lang.String
   */
@@ -91,12 +91,12 @@ package object accessanalyzerMod {
   type ResourceArn = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonS3ColonColonBucket
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonIAMColonColonRole
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonKMSColonColonKey
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonSQSColonColonQueue
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonLambdaColonColonFunction
     - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonLambdaColonColonLayerVersion
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonS3ColonColonBucket
-    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonSQSColonColonQueue
+    - typingsSlinky.awsSdk.awsSdkStrings.AWSColonColonKMSColonColonKey
     - java.lang.String
   */
   type ResourceType = typingsSlinky.awsSdk.accessanalyzerMod._ResourceType | java.lang.String

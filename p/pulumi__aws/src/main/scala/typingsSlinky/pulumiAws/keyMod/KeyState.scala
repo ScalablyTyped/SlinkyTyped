@@ -21,8 +21,7 @@ trait KeyState extends js.Object {
   val customerMasterKeySpec: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Duration in days after which the key is deleted
-    * after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
+    * Duration in days after which the key is deleted after destruction of the resource, must be between 7 and 30 days. Defaults to 30 days.
     */
   val deletionWindowInDays: js.UndefOr[Input[Double]] = js.native
   
@@ -32,8 +31,7 @@ trait KeyState extends js.Object {
   val description: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html)
-    * is enabled. Defaults to false.
+    * Specifies whether [key rotation](http://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) is enabled. Defaults to false.
     */
   val enableKeyRotation: js.UndefOr[Input[Boolean]] = js.native
   

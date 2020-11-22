@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetActivityTaskOutput extends js.Object {
   
   /**
-    * The string that contains the JSON input data for the task.
+    * The string that contains the JSON input data for the task. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
     */
   var input: js.UndefOr[SensitiveDataJobInput] = js.native
   

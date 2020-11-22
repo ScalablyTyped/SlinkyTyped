@@ -2,12 +2,13 @@ package typingsSlinky.reactDateRange.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.moment.mod.Moment
+import typingsSlinky.reactDateRange.anon.PartialClassNames
 import typingsSlinky.reactDateRange.mod.AnyDate
 import typingsSlinky.reactDateRange.mod.CalendarProps
 import typingsSlinky.reactDateRange.mod.CalendarTheme
 import typingsSlinky.reactDateRange.mod.DateInputType
 import typingsSlinky.reactDateRange.mod.LanguageType
+import typingsSlinky.reactDateRange.mod.OnChangeProps
 import typingsSlinky.reactDateRange.mod.Range
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,6 +26,9 @@ object Calendar {
        with StBuildingComponent[tag.type, typingsSlinky.reactDateRange.mod.Calendar] {
     
     @scala.inline
+    def classNames(value: PartialClassNames): this.type = set("classNames", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def firstDayOfWeek(value: Double): this.type = set("firstDayOfWeek", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -34,19 +38,25 @@ object Calendar {
     def lang(value: LanguageType): this.type = set("lang", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def maxDateFunction1(value: /* now */ Moment => AnyDate): this.type = set("maxDate", js.Any.fromFunction1(value))
+    def maxDateDate(value: js.Date): this.type = set("maxDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maxDateFunction1(value: /* now */ js.Date => AnyDate): this.type = set("maxDate", js.Any.fromFunction1(value))
     
     @scala.inline
     def maxDate(value: DateInputType): this.type = set("maxDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def minDateFunction1(value: /* now */ Moment => AnyDate): this.type = set("minDate", js.Any.fromFunction1(value))
+    def minDateDate(value: js.Date): this.type = set("minDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def minDateFunction1(value: /* now */ js.Date => AnyDate): this.type = set("minDate", js.Any.fromFunction1(value))
     
     @scala.inline
     def minDate(value: DateInputType): this.type = set("minDate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onChange(value: /* range */ Range => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
+    def onChange(value: /* range */ OnChangeProps => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def onInit(value: /* range */ Range => Unit): this.type = set("onInit", js.Any.fromFunction1(value))

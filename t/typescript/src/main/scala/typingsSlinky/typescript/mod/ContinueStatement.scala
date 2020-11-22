@@ -10,7 +10,7 @@ trait ContinueStatement
      with BreakOrContinueStatement {
   
   @JSName("kind")
-  var kind_ContinueStatement: typingsSlinky.typescript.mod.SyntaxKind.ContinueStatement = js.native
+  val kind_ContinueStatement: typingsSlinky.typescript.mod.SyntaxKind.ContinueStatement = js.native
   
-  var label: js.UndefOr[Identifier] = js.native
+  val label: js.UndefOr[Identifier] = js.native
 }

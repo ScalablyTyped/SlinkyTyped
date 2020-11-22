@@ -42,7 +42,11 @@ trait Card
   
   var isClosing: js.Any = js.native
   
+  var isCurrentlyMounted: js.Any = js.native
+  
   var isSwiping: js.Any = js.native
+  
+  var lastToValue: js.Any = js.native
   
   var layout: js.Any = js.native
   

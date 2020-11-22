@@ -33,16 +33,6 @@ trait SeriesDumbbellOptions extends PlotDumbbellOptions {
   ] = js.native
   
   /**
-    * Not available
-    */
-  var fillColor: js.UndefOr[scala.Nothing] = js.native
-  
-  /**
-    * Not available
-    */
-  var fillOpacity: js.UndefOr[scala.Nothing] = js.native
-  
-  /**
     * (Highcharts, Highstock, Highmaps, Gantt) An id for the series. This can
     * be used after render time to get a pointer to the series object through
     * `chart.get()`.
@@ -76,14 +66,12 @@ trait SeriesDumbbellOptions extends PlotDumbbellOptions {
   var name: js.UndefOr[String] = js.native
   
   /**
-    * Not available
+    * (Highcharts, Highstock) This option allows grouping series in a stacked
+    * chart. The stack option can be a string or anything else, as long as the
+    * grouped series' stack options match each other after conversion into a
+    * string.
     */
   var stack: js.UndefOr[Double | String] = js.native
-  
-  /**
-    * Not available
-    */
-  var trackByArea: js.UndefOr[scala.Nothing] = js.native
   
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) This property is only in
@@ -184,7 +172,7 @@ object SeriesDumbbellOptions {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setStack(value: Double | scala.Nothing | String): Self = this.set("stack", value.asInstanceOf[js.Any])
+    def setStack(value: Double | String): Self = this.set("stack", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStack: Self = this.set("stack", js.undefined)

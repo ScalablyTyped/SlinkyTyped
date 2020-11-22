@@ -27,6 +27,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CardView extends View {
   
+  /**
+    * Background color for CardView as a color name or hex triplet.
+    */
+  @JSName("backgroundColor")
+  var backgroundColor_CardView: String = js.native
+  
+  /**
+    * Corner radius for CardView.
+    */
+  @JSName("borderRadius")
+  var borderRadius_CardView: Double = js.native
+  
   @JSName("fireEvent")
   def fireEvent_click(name: click, event: CardViewClickEvent): Unit = js.native
   @JSName("fireEvent")

@@ -11,6 +11,9 @@ trait ActionsDeleteSelfHostedRunnerFromRepoEndpoint extends js.Object {
   
   var repo: String = js.native
   
+  /**
+    * Unique identifier of the self-hosted runner.
+    */
   var runner_id: Double = js.native
 }
 object ActionsDeleteSelfHostedRunnerFromRepoEndpoint {

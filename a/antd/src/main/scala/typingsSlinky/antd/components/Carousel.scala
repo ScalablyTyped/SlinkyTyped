@@ -11,6 +11,7 @@ import typingsSlinky.antd.carouselMod.CarouselEffect
 import typingsSlinky.antd.carouselMod.CarouselProps
 import typingsSlinky.antd.carouselMod.DotPosition
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ object Carousel {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Carousel] {
+       with StBuildingComponent[tag.type, js.Any with js.Object] {
     
     @scala.inline
     def accessibility(value: Boolean): this.type = set("accessibility", value.asInstanceOf[js.Any])
@@ -201,7 +202,7 @@ object Carousel {
     def waitForAnimate(value: Boolean): this.type = set("waitForAnimate", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: CarouselProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: Carousel.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

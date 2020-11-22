@@ -13,7 +13,7 @@ class DebugLayer protected ()
     * Instantiates a new debug layer.
     * The debug layer (aka Inspector) is the go to tool in order to better understand
     * what is happening in your scene
-    * @see http://doc.babylonjs.com/features/playground_debuglayer
+    * @see https://doc.babylonjs.com/features/playground_debuglayer
     * @param scene Defines the scene to inspect
     */
   def this(scene: Scene) = this()

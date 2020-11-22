@@ -33,6 +33,11 @@ trait NullEngineOptions extends js.Object {
     * Texture size (Default: 512)
     */
   var textureSize: Double = js.native
+  
+  /**
+    * Make the matrix computations to be performed in 64 bits instead of 32 bits. False by default
+    */
+  var useHighPrecisionMatrix: js.UndefOr[Boolean] = js.native
 }
 object NullEngineOptions {
   
@@ -77,5 +82,11 @@ object NullEngineOptions {
     
     @scala.inline
     def setTextureSize(value: Double): Self = this.set("textureSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUseHighPrecisionMatrix(value: Boolean): Self = this.set("useHighPrecisionMatrix", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUseHighPrecisionMatrix: Self = this.set("useHighPrecisionMatrix", js.undefined)
   }
 }

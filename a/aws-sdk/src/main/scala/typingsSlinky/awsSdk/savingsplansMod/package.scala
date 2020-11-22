@@ -21,6 +21,8 @@ package object savingsplansMod {
   
   type CurrencyList = js.Array[typingsSlinky.awsSdk.savingsplansMod.CurrencyCode]
   
+  type DateTime = js.Date
+  
   type DurationsList = js.Array[typingsSlinky.awsSdk.savingsplansMod.SavingsPlansDuration]
   
   type EC2InstanceFamily = java.lang.String
@@ -184,6 +186,8 @@ package object savingsplansMod {
     - typingsSlinky.awsSdk.awsSdkStrings.`payment-failed`
     - typingsSlinky.awsSdk.awsSdkStrings.active__
     - typingsSlinky.awsSdk.awsSdkStrings.retired
+    - typingsSlinky.awsSdk.awsSdkStrings.queued__
+    - typingsSlinky.awsSdk.awsSdkStrings.`queued-deleted`
     - java.lang.String
   */
   type SavingsPlanState = typingsSlinky.awsSdk.savingsplansMod._SavingsPlanState | java.lang.String

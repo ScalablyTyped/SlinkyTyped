@@ -47,8 +47,19 @@ trait TabGroup extends Window {
   
   /**
     * Color applied to active tabs icons, as a color name or hex triplet, where the tab's activeIcon was not defined.
+    * @deprecated Deprecated in favor of [Titanium.UI.TabGroup.activeTintColor](Titanium.UI.TabGroup.activeTintColor) or alternatively [Titanium.UI.Tab.activeTintColor](Titanium.UI.Tab.activeTintColor).
     */
-  var activeTabIconTint: String = js.native
+  var activeTabIconTint: String | Color = js.native
+  
+  /**
+    * The activeTintColor to apply to tabs.
+    */
+  var activeTintColor: String = js.native
+  
+  /**
+    * Defines the color of the title of tab when it's active.
+    */
+  var activeTitleColor: String | Color = js.native
   
   /**
     * Adds a tab to the tab group.
@@ -136,9 +147,21 @@ trait TabGroup extends Window {
   
   /**
     * Gets the value of the <Titanium.UI.TabGroup.activeTabIconTint> property.
-    * @deprecated Access <Titanium.UI.TabGroup.activeTabIconTint> instead.
+    * @deprecated Deprecated in favor of [Titanium.UI.TabGroup.activeTintColor](Titanium.UI.TabGroup.activeTintColor) or alternatively [Titanium.UI.Tab.activeTintColor](Titanium.UI.Tab.activeTintColor).
     */
-  def getActiveTabIconTint(): String = js.native
+  def getActiveTabIconTint(): String | Color = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.TabGroup.activeTintColor> property.
+    * @deprecated Access <Titanium.UI.TabGroup.activeTintColor> instead.
+    */
+  def getActiveTintColor(): String = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.TabGroup.activeTitleColor> property.
+    * @deprecated Access <Titanium.UI.TabGroup.activeTitleColor> instead.
+    */
+  def getActiveTitleColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TabGroup.allowUserCustomization> property.
@@ -185,7 +208,7 @@ trait TabGroup extends Window {
     * Gets the value of the <Titanium.UI.TabGroup.tabsBackgroundColor> property.
     * @deprecated Access <Titanium.UI.TabGroup.tabsBackgroundColor> instead.
     */
-  def getTabsBackgroundColor(): String = js.native
+  def getTabsBackgroundColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TabGroup.tabsBackgroundImage> property.
@@ -201,9 +224,9 @@ trait TabGroup extends Window {
   
   /**
     * Gets the value of the <Titanium.UI.TabGroup.tabsTintColor> property.
-    * @deprecated Access <Titanium.UI.TabGroup.tabsTintColor> instead.
+    * @deprecated Deprecated in favor of [Titanium.UI.TabGroup.tintColor](Titanium.UI.TabGroup.tintColor) or alternatively [Titanium.UI.Tab.tintColor](Titanium.UI.Tab.tintColor).
     */
-  def getTabsTintColor(): String = js.native
+  def getTabsTintColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TabGroup.tabsTranslucent> property.
@@ -212,10 +235,16 @@ trait TabGroup extends Window {
   def getTabsTranslucent(): Boolean = js.native
   
   /**
-    * Gets the value of the <Titanium.UI.TabGroup.unselectedItemTintColor> property.
-    * @deprecated Access <Titanium.UI.TabGroup.unselectedItemTintColor> instead.
+    * Gets the value of the <Titanium.UI.TabGroup.titleColor> property.
+    * @deprecated Access <Titanium.UI.TabGroup.titleColor> instead.
     */
-  def getUnselectedItemTintColor(): String = js.native
+  def getTitleColor(): String | Color = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.TabGroup.unselectedItemTintColor> property.
+    * @deprecated Deprecated in favor of [Titanium.UI.TabGroup.tintColor](Titanium.UI.TabGroup.tintColor) or alternatively [Titanium.UI.Tab.tintColor](Titanium.UI.Tab.tintColor).
+    */
+  def getUnselectedItemTintColor(): String | Color = js.native
   
   /**
     * Removes a tab from the tab group.
@@ -236,9 +265,23 @@ trait TabGroup extends Window {
   
   /**
     * Sets the value of the <Titanium.UI.TabGroup.activeTabIconTint> property.
-    * @deprecated Set the value using <Titanium.UI.TabGroup.activeTabIconTint> instead.
+    * @deprecated Deprecated in favor of [Titanium.UI.TabGroup.activeTintColor](Titanium.UI.TabGroup.activeTintColor) or alternatively [Titanium.UI.Tab.activeTintColor](Titanium.UI.Tab.activeTintColor).
     */
   def setActiveTabIconTint(activeTabIconTint: String): Unit = js.native
+  def setActiveTabIconTint(activeTabIconTint: Color): Unit = js.native
+  
+  /**
+    * Sets the value of the <Titanium.UI.TabGroup.activeTintColor> property.
+    * @deprecated Set the value using <Titanium.UI.TabGroup.activeTintColor> instead.
+    */
+  def setActiveTintColor(activeTintColor: String): Unit = js.native
+  
+  /**
+    * Sets the value of the <Titanium.UI.TabGroup.activeTitleColor> property.
+    * @deprecated Set the value using <Titanium.UI.TabGroup.activeTitleColor> instead.
+    */
+  def setActiveTitleColor(activeTitleColor: String): Unit = js.native
+  def setActiveTitleColor(activeTitleColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TabGroup.allowUserCustomization> property.
@@ -287,6 +330,7 @@ trait TabGroup extends Window {
     * @deprecated Set the value using <Titanium.UI.TabGroup.tabsBackgroundColor> instead.
     */
   def setTabsBackgroundColor(tabsBackgroundColor: String): Unit = js.native
+  def setTabsBackgroundColor(tabsBackgroundColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TabGroup.tabsBackgroundImage> property.
@@ -302,9 +346,10 @@ trait TabGroup extends Window {
   
   /**
     * Sets the value of the <Titanium.UI.TabGroup.tabsTintColor> property.
-    * @deprecated Set the value using <Titanium.UI.TabGroup.tabsTintColor> instead.
+    * @deprecated Deprecated in favor of [Titanium.UI.TabGroup.tintColor](Titanium.UI.TabGroup.tintColor) or alternatively [Titanium.UI.Tab.tintColor](Titanium.UI.Tab.tintColor).
     */
   def setTabsTintColor(tabsTintColor: String): Unit = js.native
+  def setTabsTintColor(tabsTintColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TabGroup.tabsTranslucent> property.
@@ -313,10 +358,18 @@ trait TabGroup extends Window {
   def setTabsTranslucent(tabsTranslucent: Boolean): Unit = js.native
   
   /**
+    * Sets the value of the <Titanium.UI.TabGroup.titleColor> property.
+    * @deprecated Set the value using <Titanium.UI.TabGroup.titleColor> instead.
+    */
+  def setTitleColor(titleColor: String): Unit = js.native
+  def setTitleColor(titleColor: Color): Unit = js.native
+  
+  /**
     * Sets the value of the <Titanium.UI.TabGroup.unselectedItemTintColor> property.
-    * @deprecated Set the value using <Titanium.UI.TabGroup.unselectedItemTintColor> instead.
+    * @deprecated Deprecated in favor of [Titanium.UI.TabGroup.tintColor](Titanium.UI.TabGroup.tintColor) or alternatively [Titanium.UI.Tab.tintColor](Titanium.UI.Tab.tintColor).
     */
   def setUnselectedItemTintColor(unselectedItemTintColor: String): Unit = js.native
+  def setUnselectedItemTintColor(unselectedItemTintColor: Color): Unit = js.native
   
   /**
     * Determines whether the [TABS_STYLE_BOTTOM_NAVIGATION](Titanium.UI.Android.TABS_STYLE_BOTTOM_NAVIGATION) uses shiftMode.
@@ -346,7 +399,7 @@ trait TabGroup extends Window {
   /**
     * Default background color for inactive tabs, as a color name or hex triplet.
     */
-  var tabsBackgroundColor: String = js.native
+  var tabsBackgroundColor: String | Color = js.native
   
   /**
     * Default background image for tabs.
@@ -360,8 +413,9 @@ trait TabGroup extends Window {
   
   /**
     * The tintColor to apply to the tabs.
+    * @deprecated Deprecated in favor of [Titanium.UI.TabGroup.tintColor](Titanium.UI.TabGroup.tintColor) or alternatively [Titanium.UI.Tab.tintColor](Titanium.UI.Tab.tintColor).
     */
-  var tabsTintColor: String = js.native
+  var tabsTintColor: String | Color = js.native
   
   /**
     * A Boolean value that indicates whether the tab bar is translucent.
@@ -369,8 +423,20 @@ trait TabGroup extends Window {
   var tabsTranslucent: Boolean = js.native
   
   /**
+    * The tintColor to apply to tabs.
+    */
+  @JSName("tintColor")
+  var tintColor_TabGroup: String = js.native
+  
+  /**
+    * Defines the color of the title of tab when it's inactive.
+    */
+  var titleColor: String | Color = js.native
+  
+  /**
     * Unselected items in this tab group will be tinted with this color. Setting this value to null
     * indicates that the tab group should use its default value instead.
+    * @deprecated Deprecated in favor of [Titanium.UI.TabGroup.tintColor](Titanium.UI.TabGroup.tintColor) or alternatively [Titanium.UI.Tab.tintColor](Titanium.UI.Tab.tintColor).
     */
-  var unselectedItemTintColor: String = js.native
+  var unselectedItemTintColor: String | Color = js.native
 }

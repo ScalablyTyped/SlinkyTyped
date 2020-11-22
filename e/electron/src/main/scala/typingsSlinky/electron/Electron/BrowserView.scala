@@ -8,25 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BrowserView extends js.Object {
   
   /**
-    * Force closing the view, the `unload` and `beforeunload` events won't be emitted
-    * for the web page. After you're done with a view, call this function in order to
-    * free memory and other resources as soon as possible.
-    */
-  def destroy(): Unit = js.native
-  
-  /**
     * The `bounds` of this BrowserView instance as `Object`.
     *
     * @experimental
     */
   def getBounds(): Rectangle = js.native
-  
-  var id: Double = js.native
-  
-  /**
-    * Whether the view is destroyed.
-    */
-  def isDestroyed(): Boolean = js.native
   
   def setAutoResize(options: AutoResizeOptions): Unit = js.native
   
@@ -45,16 +31,13 @@ object BrowserView {
   
   @scala.inline
   def apply(
-    destroy: () => Unit,
     getBounds: () => Rectangle,
-    id: Double,
-    isDestroyed: () => Boolean,
     setAutoResize: AutoResizeOptions => Unit,
     setBackgroundColor: String => Unit,
     setBounds: Rectangle => Unit,
     webContents: WebContents_
   ): BrowserView = {
-    val __obj = js.Dynamic.literal(destroy = js.Any.fromFunction0(destroy), getBounds = js.Any.fromFunction0(getBounds), id = id.asInstanceOf[js.Any], isDestroyed = js.Any.fromFunction0(isDestroyed), setAutoResize = js.Any.fromFunction1(setAutoResize), setBackgroundColor = js.Any.fromFunction1(setBackgroundColor), setBounds = js.Any.fromFunction1(setBounds), webContents = webContents.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(getBounds = js.Any.fromFunction0(getBounds), setAutoResize = js.Any.fromFunction1(setAutoResize), setBackgroundColor = js.Any.fromFunction1(setBackgroundColor), setBounds = js.Any.fromFunction1(setBounds), webContents = webContents.asInstanceOf[js.Any])
     __obj.asInstanceOf[BrowserView]
   }
   
@@ -74,16 +57,7 @@ object BrowserView {
     }
     
     @scala.inline
-    def setDestroy(value: () => Unit): Self = this.set("destroy", js.Any.fromFunction0(value))
-    
-    @scala.inline
     def setGetBounds(value: () => Rectangle): Self = this.set("getBounds", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setId(value: Double): Self = this.set("id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setIsDestroyed(value: () => Boolean): Self = this.set("isDestroyed", js.Any.fromFunction0(value))
     
     @scala.inline
     def setSetAutoResize(value: AutoResizeOptions => Unit): Self = this.set("setAutoResize", js.Any.fromFunction1(value))

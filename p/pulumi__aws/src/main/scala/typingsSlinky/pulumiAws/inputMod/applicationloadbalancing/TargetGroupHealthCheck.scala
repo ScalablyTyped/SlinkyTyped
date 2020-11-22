@@ -29,7 +29,7 @@ trait TargetGroupHealthCheck extends js.Object {
   var matcher: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The destination for the health check request. Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
+    * The destination for the health check request. Applies to only HTTP/HTTPS.
     */
   var path: js.UndefOr[Input[String]] = js.native
   
@@ -39,7 +39,7 @@ trait TargetGroupHealthCheck extends js.Object {
   var port: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The protocol to use for routing traffic to the targets. Should be one of "TCP", "TLS", "UDP", "TCP_UDP", "HTTP" or "HTTPS". Required when `targetType` is `instance` or `ip`. Does not apply when `targetType` is `lambda`.
+    * The protocol to use for routing traffic to the targets. Should be one of `GENEVE`, `HTTP`, `HTTPS`, `TCP`, `TCP_UDP`, `TLS`, or `UDP`. Required when `targetType` is `instance` or `ip`. Does not apply when `targetType` is `lambda`.
     */
   var protocol: js.UndefOr[Input[String]] = js.native
   

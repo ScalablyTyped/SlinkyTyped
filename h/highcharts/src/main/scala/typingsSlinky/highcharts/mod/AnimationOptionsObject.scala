@@ -13,6 +13,11 @@ trait AnimationOptionsObject extends js.Object {
   var complete: js.UndefOr[js.Function] = js.native
   
   /**
+    * The animation defer in milliseconds.
+    */
+  var defer: js.UndefOr[Double] = js.native
+  
+  /**
     * The animation duration in milliseconds.
     */
   var duration: js.UndefOr[Double] = js.native
@@ -57,6 +62,12 @@ object AnimationOptionsObject {
     
     @scala.inline
     def deleteComplete: Self = this.set("complete", js.undefined)
+    
+    @scala.inline
+    def setDefer(value: Double): Self = this.set("defer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefer: Self = this.set("defer", js.undefined)
     
     @scala.inline
     def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])

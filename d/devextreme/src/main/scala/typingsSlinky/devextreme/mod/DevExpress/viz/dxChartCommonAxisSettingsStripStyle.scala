@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartCommonAxisSettingsStripStyle extends js.Object {
   
-  /** @name dxChart.Options.commonAxisSettings.stripStyle.label */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.stripStyle.label]
+    */
   var label: js.UndefOr[dxChartCommonAxisSettingsStripStyleLabel] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.stripStyle.paddingLeftRight */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.stripStyle.paddingLeftRight]
+    */
   var paddingLeftRight: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.stripStyle.paddingTopBottom */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.stripStyle.paddingTopBottom]
+    */
   var paddingTopBottom: js.UndefOr[Double] = js.native
 }
 object dxChartCommonAxisSettingsStripStyle {

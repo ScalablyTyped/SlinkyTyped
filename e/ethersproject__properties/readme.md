@@ -1,7 +1,7 @@
 
 # Scala.js typings for ethersproject__properties
 
-Typings are for version 5.0.2
+Typings are for version 5.0.5
 
 ## Library description:
 Properties utility functions for ethers.

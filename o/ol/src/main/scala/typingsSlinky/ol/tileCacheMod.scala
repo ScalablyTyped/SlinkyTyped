@@ -15,6 +15,9 @@ object tileCacheMod extends js.Object {
     
     def expireCache(usedTiles: StringDictionary[Boolean]): Unit = js.native
     
+    /**
+      * Prune all tiles from the cache that don't have the same z as the newest tile.
+      */
     def pruneExceptNewestZ(): Unit = js.native
   }
   

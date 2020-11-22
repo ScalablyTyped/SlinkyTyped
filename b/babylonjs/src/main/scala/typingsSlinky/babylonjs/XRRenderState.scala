@@ -7,19 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait XRRenderState extends js.Object {
   
-  var baseLayer: js.UndefOr[XRWebGLLayer] = js.native
+  val baseLayer: js.UndefOr[XRWebGLLayer] = js.native
   
-  var depthFar: js.UndefOr[Double] = js.native
+  val depthFar: Double = js.native
   
-  var depthNear: js.UndefOr[Double] = js.native
+  val depthNear: Double = js.native
   
-  var inlineVerticalFieldOfView: js.UndefOr[Double] = js.native
+  val inlineVerticalFieldOfView: js.UndefOr[Double] = js.native
 }
 object XRRenderState {
   
   @scala.inline
-  def apply(): XRRenderState = {
-    val __obj = js.Dynamic.literal()
+  def apply(depthFar: Double, depthNear: Double): XRRenderState = {
+    val __obj = js.Dynamic.literal(depthFar = depthFar.asInstanceOf[js.Any], depthNear = depthNear.asInstanceOf[js.Any])
     __obj.asInstanceOf[XRRenderState]
   }
   
@@ -39,22 +39,16 @@ object XRRenderState {
     }
     
     @scala.inline
-    def setBaseLayer(value: XRWebGLLayer): Self = this.set("baseLayer", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBaseLayer: Self = this.set("baseLayer", js.undefined)
-    
-    @scala.inline
     def setDepthFar(value: Double): Self = this.set("depthFar", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDepthFar: Self = this.set("depthFar", js.undefined)
     
     @scala.inline
     def setDepthNear(value: Double): Self = this.set("depthNear", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDepthNear: Self = this.set("depthNear", js.undefined)
+    def setBaseLayer(value: XRWebGLLayer): Self = this.set("baseLayer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBaseLayer: Self = this.set("baseLayer", js.undefined)
     
     @scala.inline
     def setInlineVerticalFieldOfView(value: Double): Self = this.set("inlineVerticalFieldOfView", value.asInstanceOf[js.Any])

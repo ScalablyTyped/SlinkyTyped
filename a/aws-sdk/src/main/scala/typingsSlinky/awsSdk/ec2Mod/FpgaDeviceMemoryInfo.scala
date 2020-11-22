@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FpgaDeviceMemoryInfo extends js.Object {
   
   /**
-    * The size (in MiB) for the memory available to the FPGA accelerator.
+    * The size of the memory available to the FPGA accelerator, in MiB.
     */
   var SizeInMiB: js.UndefOr[FpgaDeviceMemorySize] = js.native
 }

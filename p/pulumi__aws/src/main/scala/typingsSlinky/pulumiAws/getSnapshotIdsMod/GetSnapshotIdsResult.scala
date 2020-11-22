@@ -15,6 +15,9 @@ trait GetSnapshotIdsResult extends js.Object {
     */
   val id: String = js.native
   
+  /**
+    * Set of EBS snapshot IDs, sorted by creation time in descending order.
+    */
   val ids: js.Array[String] = js.native
   
   val owners: js.UndefOr[js.Array[String]] = js.native

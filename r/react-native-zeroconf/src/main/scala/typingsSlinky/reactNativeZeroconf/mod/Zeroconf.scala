@@ -69,6 +69,7 @@ trait Zeroconf extends EventEmitter {
     * suffixed, for example `'local.'`. Defaults to `'local'`.
     * @param name should be unique to the device, often the device name.
     * @param port should be an integer between 0 and 65535.
+    * @param txt contains key-value pairs of additional TXT record data.
     */
   def publishService(`type`: String, protocol: String): Unit = js.native
   def publishService(
@@ -76,14 +77,78 @@ trait Zeroconf extends EventEmitter {
     protocol: String,
     domain: js.UndefOr[scala.Nothing],
     name: js.UndefOr[scala.Nothing],
+    port: js.UndefOr[scala.Nothing],
+    txt: StringDictionary[js.Any]
+  ): Unit = js.native
+  def publishService(
+    `type`: String,
+    protocol: String,
+    domain: js.UndefOr[scala.Nothing],
+    name: js.UndefOr[scala.Nothing],
     port: Double
   ): Unit = js.native
+  def publishService(
+    `type`: String,
+    protocol: String,
+    domain: js.UndefOr[scala.Nothing],
+    name: js.UndefOr[scala.Nothing],
+    port: Double,
+    txt: StringDictionary[js.Any]
+  ): Unit = js.native
   def publishService(`type`: String, protocol: String, domain: js.UndefOr[scala.Nothing], name: String): Unit = js.native
+  def publishService(
+    `type`: String,
+    protocol: String,
+    domain: js.UndefOr[scala.Nothing],
+    name: String,
+    port: js.UndefOr[scala.Nothing],
+    txt: StringDictionary[js.Any]
+  ): Unit = js.native
   def publishService(`type`: String, protocol: String, domain: js.UndefOr[scala.Nothing], name: String, port: Double): Unit = js.native
+  def publishService(
+    `type`: String,
+    protocol: String,
+    domain: js.UndefOr[scala.Nothing],
+    name: String,
+    port: Double,
+    txt: StringDictionary[js.Any]
+  ): Unit = js.native
   def publishService(`type`: String, protocol: String, domain: String): Unit = js.native
+  def publishService(
+    `type`: String,
+    protocol: String,
+    domain: String,
+    name: js.UndefOr[scala.Nothing],
+    port: js.UndefOr[scala.Nothing],
+    txt: StringDictionary[js.Any]
+  ): Unit = js.native
   def publishService(`type`: String, protocol: String, domain: String, name: js.UndefOr[scala.Nothing], port: Double): Unit = js.native
+  def publishService(
+    `type`: String,
+    protocol: String,
+    domain: String,
+    name: js.UndefOr[scala.Nothing],
+    port: Double,
+    txt: StringDictionary[js.Any]
+  ): Unit = js.native
   def publishService(`type`: String, protocol: String, domain: String, name: String): Unit = js.native
+  def publishService(
+    `type`: String,
+    protocol: String,
+    domain: String,
+    name: String,
+    port: js.UndefOr[scala.Nothing],
+    txt: StringDictionary[js.Any]
+  ): Unit = js.native
   def publishService(`type`: String, protocol: String, domain: String, name: String, port: Double): Unit = js.native
+  def publishService(
+    `type`: String,
+    protocol: String,
+    domain: String,
+    name: String,
+    port: Double,
+    txt: StringDictionary[js.Any]
+  ): Unit = js.native
   
   /**
     * Remove listeners.

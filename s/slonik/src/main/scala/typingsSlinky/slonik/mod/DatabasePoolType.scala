@@ -29,6 +29,12 @@ trait DatabasePoolType extends js.Object {
   
   def end(): js.Promise[Unit] = js.native
   
+  def exists(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type QueryMethodParams<any> is not an array type */ args: QueryMethodParams[_]
+  ): js.Promise[Boolean] = js.native
+  @JSName("exists")
+  var exists_Original: QueryExistsFunctionType = js.native
+  
   def getPoolState(): PoolStateType = js.native
   
   def many[T](

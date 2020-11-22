@@ -27,8 +27,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactI18next.mod.Namespace
 import typingsSlinky.reactI18next.mod.TransProps
+import typingsSlinky.reactI18next.reactI18nextStrings.`additions removals`
 import typingsSlinky.reactI18next.reactI18nextStrings.`additions text`
 import typingsSlinky.reactI18next.reactI18nextStrings.`inline`
+import typingsSlinky.reactI18next.reactI18nextStrings.`removals additions`
+import typingsSlinky.reactI18next.reactI18nextStrings.`removals text`
+import typingsSlinky.reactI18next.reactI18nextStrings.`text additions`
+import typingsSlinky.reactI18next.reactI18nextStrings.`text removals`
 import typingsSlinky.reactI18next.reactI18nextStrings.additions
 import typingsSlinky.reactI18next.reactI18nextStrings.all
 import typingsSlinky.reactI18next.reactI18nextStrings.ascending
@@ -217,7 +222,9 @@ object Trans {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

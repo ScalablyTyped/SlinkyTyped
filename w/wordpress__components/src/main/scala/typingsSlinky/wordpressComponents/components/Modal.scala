@@ -3,8 +3,8 @@ package typingsSlinky.wordpressComponents.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
-import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -22,8 +22,13 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -217,7 +222,9 @@ object Modal {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -430,13 +437,10 @@ object Modal {
     def httpEquiv(value: String): this.type = set("httpEquiv", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconFunctionComponent(value: ReactComponentClass[js.Object]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconComponentClass(value: ReactComponentClass[js.Object]): this.type = set("icon", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def icon(value: ReactComponentClass[js.Object]): this.type = set("icon", value.asInstanceOf[js.Any])
+    def icon(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])

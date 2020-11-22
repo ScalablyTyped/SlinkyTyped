@@ -10,18 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object echartsStrings {
   
   @scala.inline
-  def `100`: `100` = "100".asInstanceOf[`100`]
-  
-  @scala.inline
-  def `200`: `200` = "200".asInstanceOf[`200`]
-  
-  @scala.inline
-  def `300`: `300` = "300".asInstanceOf[`300`]
-  
-  @scala.inline
-  def `400`: `400` = "400".asInstanceOf[`400`]
-  
-  @scala.inline
   def angle: angle = "angle".asInstanceOf[angle]
   
   @scala.inline
@@ -46,7 +34,13 @@ object echartsStrings {
   def boxplot: boxplot = "boxplot".asInstanceOf[boxplot]
   
   @scala.inline
+  def calendar: calendar = "calendar".asInstanceOf[calendar]
+  
+  @scala.inline
   def candlestick: candlestick = "candlestick".asInstanceOf[candlestick]
+  
+  @scala.inline
+  def cartesian2d: cartesian2d = "cartesian2d".asInstanceOf[cartesian2d]
   
   @scala.inline
   def category: category = "category".asInstanceOf[category]
@@ -92,6 +86,9 @@ object echartsStrings {
   
   @scala.inline
   def gauge: gauge = "gauge".asInstanceOf[gauge]
+  
+  @scala.inline
+  def geo: geo = "geo".asInstanceOf[geo]
   
   @scala.inline
   def graph: graph = "graph".asInstanceOf[graph]
@@ -184,6 +181,9 @@ object echartsStrings {
   def plain: plain = "plain".asInstanceOf[plain]
   
   @scala.inline
+  def polar: polar = "polar".asInstanceOf[polar]
+  
+  @scala.inline
   def radar: radar = "radar".asInstanceOf[radar]
   
   @scala.inline
@@ -221,6 +221,9 @@ object echartsStrings {
   
   @scala.inline
   def single: single = "single".asInstanceOf[single]
+  
+  @scala.inline
+  def singleAxis: singleAxis = "singleAxis".asInstanceOf[singleAxis]
   
   @scala.inline
   def solid: solid = "solid".asInstanceOf[solid]
@@ -262,18 +265,6 @@ object echartsStrings {
   def y: y = "y".asInstanceOf[y]
   
   @js.native
-  sealed trait `100` extends js.Object
-  
-  @js.native
-  sealed trait `200` extends js.Object
-  
-  @js.native
-  sealed trait `300` extends js.Object
-  
-  @js.native
-  sealed trait `400` extends js.Object
-  
-  @js.native
   sealed trait angle extends js.Object
   
   @js.native
@@ -298,7 +289,13 @@ object echartsStrings {
   sealed trait boxplot extends EChartsSeriesType
   
   @js.native
+  sealed trait calendar extends js.Object
+  
+  @js.native
   sealed trait candlestick extends EChartsSeriesType
+  
+  @js.native
+  sealed trait cartesian2d extends js.Object
   
   @js.native
   sealed trait category extends Type
@@ -344,6 +341,9 @@ object echartsStrings {
   
   @js.native
   sealed trait gauge extends EChartsSeriesType
+  
+  @js.native
+  sealed trait geo extends js.Object
   
   @js.native
   sealed trait graph extends EChartsSeriesType
@@ -436,6 +436,9 @@ object echartsStrings {
   sealed trait plain extends js.Object
   
   @js.native
+  sealed trait polar extends js.Object
+  
+  @js.native
   sealed trait radar extends EChartsSeriesType
   
   @js.native
@@ -473,6 +476,9 @@ object echartsStrings {
   
   @js.native
   sealed trait single extends js.Object
+  
+  @js.native
+  sealed trait singleAxis extends js.Object
   
   @js.native
   sealed trait solid extends js.Object

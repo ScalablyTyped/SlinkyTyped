@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IStruct extends js.Object {
   
-  var fields: js.UndefOr[StringDictionary[IValue]] = js.native
+  var fields: js.UndefOr[StringDictionary[js.UndefOr[IValue]]] = js.native
 }
 object IStruct {
   
@@ -35,7 +35,7 @@ object IStruct {
     }
     
     @scala.inline
-    def setFields(value: StringDictionary[IValue]): Self = this.set("fields", value.asInstanceOf[js.Any])
+    def setFields(value: StringDictionary[js.UndefOr[IValue]]): Self = this.set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFields: Self = this.set("fields", js.undefined)

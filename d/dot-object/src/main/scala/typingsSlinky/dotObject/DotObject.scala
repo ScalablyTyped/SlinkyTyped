@@ -1,6 +1,9 @@
 package typingsSlinky.dotObject
 
 import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.Instantiable2
+import org.scalablytyped.runtime.Instantiable3
+import org.scalablytyped.runtime.Instantiable4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -64,11 +67,23 @@ object DotObject extends js.Object {
       *
       * Remove value from an object using dot notation.
       *
-      * @param {String} path
+      * @param {String | Array<String>} path
       * @param {Object} obj
       * @return {Mixed} The removed value
       */
     def del(path: String, obj: js.Any): js.Any = js.native
+    def del(path: js.Array[String], obj: js.Any): js.Any = js.native
+    
+    /**
+      *
+      * Delete value from an object using dot notation.
+      *
+      * @param {String | Array<String>} path
+      * @param {Object} obj
+      * @return {any} The removed value
+      */
+    def delete(path: String, obj: js.Any): js.Any = js.native
+    def delete(path: js.Array[String], obj: js.Any): js.Any = js.native
     
     /**
       *
@@ -93,6 +108,30 @@ object DotObject extends js.Object {
       * @param {Object} tgt target object
       */
     def dot(obj: js.Any, tgt: js.Any): Unit = js.native
+    
+    /**
+      *
+      * Keep array
+      *
+      * example:
+      *
+      * var obj = {
+      *   "id": "my-id",
+      *   "other": [1, 2, 3]
+      *   "some": {
+      *     "array": ["A", "B"]
+      *   }
+      * }
+      *
+      * if the keepArray property is true:
+      *
+      * {
+      *   "id": "my-id",
+      *   "other": [1, 2, 3],
+      *   "some.array": ["A", "B"]
+      * }
+      */
+    var keepArray: Boolean = js.native
     
     /**
       *
@@ -163,11 +202,12 @@ object DotObject extends js.Object {
       *
       * Remove value from an object using dot notation.
       *
-      * @param {String} path
+      * @param {String | Array<String>} path
       * @param {Object} obj
       * @return {Mixed} The removed value
       */
     def remove(path: String, obj: js.Any): js.Any = js.native
+    def remove(path: js.Array[String], obj: js.Any): js.Any = js.native
     
     /**
       *
@@ -275,6 +315,20 @@ object DotObject extends js.Object {
   trait DotConstructor
     extends Dot
        with Instantiable1[/* separator */ String, Dot]
+       with Instantiable2[/* separator */ String, /* override */ Boolean, Dot]
+       with Instantiable3[
+          /* separator */ String, 
+          js.UndefOr[/* override */ Boolean], 
+          /* useArray */ Boolean, 
+          Dot
+        ]
+       with Instantiable4[
+          /* separator */ String, 
+          js.UndefOr[/* override */ Boolean], 
+          js.UndefOr[/* useArray */ Boolean], 
+          /* useBrackets */ Boolean, 
+          Dot
+        ]
   
   type ModifierFunctionWrapper = js.Function1[/* arg */ js.Any, js.Any]
 }

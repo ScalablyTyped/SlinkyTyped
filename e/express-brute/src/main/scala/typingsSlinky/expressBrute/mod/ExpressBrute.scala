@@ -1,5 +1,6 @@
 package typingsSlinky.expressBrute.mod
 
+import typingsSlinky.express.mod.NextFunction
 import typingsSlinky.express.mod.RequestHandler
 import typingsSlinky.express.mod.Request_
 import typingsSlinky.express.mod.Response_
@@ -29,7 +30,7 @@ trait ExpressBrute extends js.Object {
     * @param {Function}    next        The next middleware.
     * @return {RequestHandler} The Request handler.
     */
-  def prevent(request: Request_[ParamsDictionary, _, _, Query], response: Response_[_], next: js.Function): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def prevent(request: Request_[ParamsDictionary, _, _, Query], response: Response_[_], next: NextFunction): RequestHandler[ParamsDictionary, _, _, Query] = js.native
   
   /**
     * @summary Resets the wait time between requests back to its initial value.
@@ -38,15 +39,15 @@ trait ExpressBrute extends js.Object {
     * @param {Function}    next    The next middleware.
     * @return {RequestHandler} The Request handler.
     */
-  def reset(ip: String, key: String, next: js.Function): RequestHandler[ParamsDictionary, _, _, Query] = js.native
+  def reset(ip: String, key: String, next: NextFunction): RequestHandler[ParamsDictionary, _, _, Query] = js.native
 }
 object ExpressBrute {
   
   @scala.inline
   def apply(
     getMiddleware: Middleware => RequestHandler[ParamsDictionary, _, _, Query],
-    prevent: (Request_[ParamsDictionary, _, _, Query], Response_[_], js.Function) => RequestHandler[ParamsDictionary, _, _, Query],
-    reset: (String, String, js.Function) => RequestHandler[ParamsDictionary, _, _, Query]
+    prevent: (Request_[ParamsDictionary, _, _, Query], Response_[_], NextFunction) => RequestHandler[ParamsDictionary, _, _, Query],
+    reset: (String, String, NextFunction) => RequestHandler[ParamsDictionary, _, _, Query]
   ): ExpressBrute = {
     val __obj = js.Dynamic.literal(getMiddleware = js.Any.fromFunction1(getMiddleware), prevent = js.Any.fromFunction3(prevent), reset = js.Any.fromFunction3(reset))
     __obj.asInstanceOf[ExpressBrute]
@@ -72,10 +73,10 @@ object ExpressBrute {
     
     @scala.inline
     def setPrevent(
-      value: (Request_[ParamsDictionary, _, _, Query], Response_[_], js.Function) => RequestHandler[ParamsDictionary, _, _, Query]
+      value: (Request_[ParamsDictionary, _, _, Query], Response_[_], NextFunction) => RequestHandler[ParamsDictionary, _, _, Query]
     ): Self = this.set("prevent", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setReset(value: (String, String, js.Function) => RequestHandler[ParamsDictionary, _, _, Query]): Self = this.set("reset", js.Any.fromFunction3(value))
+    def setReset(value: (String, String, NextFunction) => RequestHandler[ParamsDictionary, _, _, Query]): Self = this.set("reset", js.Any.fromFunction3(value))
   }
 }

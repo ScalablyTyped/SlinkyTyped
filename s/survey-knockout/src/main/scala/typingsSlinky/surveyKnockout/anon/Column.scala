@@ -21,6 +21,10 @@ trait Column extends js.Object {
   
   var itemInline: String = js.native
   
+  var itemNone: String = js.native
+  
+  var itemSelectAll: String = js.native
+  
   var label: String = js.native
   
   var labelChecked: String = js.native
@@ -42,13 +46,15 @@ object Column {
     itemControl: String,
     itemDecorator: String,
     itemInline: String,
+    itemNone: String,
+    itemSelectAll: String,
     label: String,
     labelChecked: String,
     materialDecorator: String,
     other: String,
     root: String
   ): Column = {
-    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], controlLabel = controlLabel.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], itemChecked = itemChecked.asInstanceOf[js.Any], itemControl = itemControl.asInstanceOf[js.Any], itemDecorator = itemDecorator.asInstanceOf[js.Any], itemInline = itemInline.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], labelChecked = labelChecked.asInstanceOf[js.Any], materialDecorator = materialDecorator.asInstanceOf[js.Any], other = other.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], controlLabel = controlLabel.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any], itemChecked = itemChecked.asInstanceOf[js.Any], itemControl = itemControl.asInstanceOf[js.Any], itemDecorator = itemDecorator.asInstanceOf[js.Any], itemInline = itemInline.asInstanceOf[js.Any], itemNone = itemNone.asInstanceOf[js.Any], itemSelectAll = itemSelectAll.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], labelChecked = labelChecked.asInstanceOf[js.Any], materialDecorator = materialDecorator.asInstanceOf[js.Any], other = other.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[Column]
   }
   
@@ -87,6 +93,12 @@ object Column {
     
     @scala.inline
     def setItemInline(value: String): Self = this.set("itemInline", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setItemNone(value: String): Self = this.set("itemNone", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setItemSelectAll(value: String): Self = this.set("itemSelectAll", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])

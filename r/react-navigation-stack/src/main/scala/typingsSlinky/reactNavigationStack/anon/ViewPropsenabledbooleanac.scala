@@ -2,6 +2,7 @@ package typingsSlinky.reactNavigationStack.anon
 
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -10,7 +11,6 @@ import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -18,6 +18,7 @@ import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigationStack.reactNavigationStackNumbers.`0`
 import typingsSlinky.reactNavigationStack.reactNavigationStackNumbers.`1`
+import typingsSlinky.reactNavigationStack.reactNavigationStackNumbers.`2`
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.`box-none`
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.`box-only`
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.`no-hide-descendants`
@@ -34,7 +35,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-native.react-native.ViewProps & {  enabled :boolean,   active :0 | 1 | react-native.react-native.Animated.AnimatedInterpolation,   children :react.react.ReactNode} */
+/* Inlined react-native.react-native.ViewProps & {  enabled :boolean,   active :0 | 1 | 2 | react-native.react-native.Animated.AnimatedInterpolation,   children :react.react.ReactNode} */
 @js.native
 trait ViewPropsenabledbooleanac extends js.Object {
   
@@ -65,7 +66,7 @@ trait ViewPropsenabledbooleanac extends js.Object {
   var accessibilityHint: js.UndefOr[String] = js.native
   
   /**
-    * https://facebook.github.io/react-native/docs/accessibility#accessibilityignoresinvertcolorsios
+    * https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
     * @platform ios
     */
   var accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.native
@@ -119,7 +120,7 @@ trait ViewPropsenabledbooleanac extends js.Object {
     */
   var accessible: js.UndefOr[Boolean] = js.native
   
-  var active: `0` | `1` | AnimatedInterpolation = js.native
+  var active: `0` | `1` | `2` | AnimatedInterpolation = js.native
   
   var children: ReactElement = js.native
   
@@ -220,7 +221,7 @@ trait ViewPropsenabledbooleanac extends js.Object {
     *
     * {nativeEvent: { layout: {x, y, width, height}}}.
     */
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   /**
     * When accessible is true, the system will invoke this function when the user performs the magic tap gesture.
@@ -425,7 +426,7 @@ trait ViewPropsenabledbooleanac extends js.Object {
 object ViewPropsenabledbooleanac {
   
   @scala.inline
-  def apply(active: `0` | `1` | AnimatedInterpolation, enabled: Boolean): ViewPropsenabledbooleanac = {
+  def apply(active: `0` | `1` | `2` | AnimatedInterpolation, enabled: Boolean): ViewPropsenabledbooleanac = {
     val __obj = js.Dynamic.literal(active = active.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewPropsenabledbooleanac]
   }
@@ -446,7 +447,7 @@ object ViewPropsenabledbooleanac {
     }
     
     @scala.inline
-    def setActive(value: `0` | `1` | AnimatedInterpolation): Self = this.set("active", value.asInstanceOf[js.Any])
+    def setActive(value: `0` | `1` | `2` | AnimatedInterpolation): Self = this.set("active", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setEnabled(value: Boolean): Self = this.set("enabled", value.asInstanceOf[js.Any])
@@ -608,7 +609,7 @@ object ViewPropsenabledbooleanac {
     def deleteOnAccessibilityTap: Self = this.set("onAccessibilityTap", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)

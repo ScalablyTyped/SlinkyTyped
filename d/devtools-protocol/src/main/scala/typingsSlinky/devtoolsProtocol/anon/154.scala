@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetWebLifecycleStateRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetFontSizesRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `154` extends js.Object {
   
-  var paramsType: js.Array[SetWebLifecycleStateRequest] = js.native
+  var paramsType: js.Array[SetFontSizesRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `154` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetWebLifecycleStateRequest], returnType: Unit): `154` = {
+  def apply(paramsType: js.Array[SetFontSizesRequest], returnType: Unit): `154` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`154`]
   }
@@ -36,10 +36,10 @@ object `154` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetWebLifecycleStateRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetFontSizesRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetWebLifecycleStateRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetFontSizesRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

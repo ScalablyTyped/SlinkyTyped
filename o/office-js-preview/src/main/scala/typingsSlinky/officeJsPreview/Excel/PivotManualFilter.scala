@@ -9,8 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Configurable template for a manual filter to apply to a PivotField.
   The `condition` defines what criteria need to be set in order for the filter to operate.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait PivotManualFilter extends js.Object {
@@ -19,8 +18,7 @@ trait PivotManualFilter extends js.Object {
     *
     * A list of selected items to manually filter. These must be existing and valid items from the chosen field.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var selectedItems: js.UndefOr[js.Array[String | PivotItem]] = js.native
 }

@@ -70,7 +70,7 @@ trait IonInput extends js.Object {
   var color: js.UndefOr[Color] = js.native
   
   /**
-    * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke.
+    * Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`.
     */
   var debounce: Double = js.native
   
@@ -83,6 +83,11 @@ trait IonInput extends js.Object {
     * A hint to the browser for which enter key to display. Possible values: `"enter"`, `"done"`, `"go"`, `"next"`, `"previous"`, `"search"`, and `"send"`.
     */
   var enterkeyhint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
+  
+  /**
+    * This is required for a WebKit bug which requires us to blur and focus an input to properly focus the input in an item with delegatesFocus. It will no longer be needed with iOS 14.
+    */
+  var fireFocusEvents: Boolean = js.native
   
   /**
     * Returns the native `<input>` element used under the hood.
@@ -150,7 +155,12 @@ trait IonInput extends js.Object {
   var required: Boolean = js.native
   
   /**
-    * Sets focus on the specified `ion-input`. Use this method instead of the global `input.focus()`.
+    * Sets blur on the native `input` in `ion-input`. Use this method instead of the global `input.blur()`.
+    */
+  def setBlur(): js.Promise[Unit] = js.native
+  
+  /**
+    * Sets focus on the native `input` in `ion-input`. Use this method instead of the global `input.focus()`.
     */
   def setFocus(): js.Promise[Unit] = js.native
   
@@ -190,15 +200,17 @@ object IonInput {
     clearInput: Boolean,
     debounce: Double,
     disabled: Boolean,
+    fireFocusEvents: Boolean,
     getInputElement: () => js.Promise[HTMLInputElement],
     name: String,
     readonly: Boolean,
     required: Boolean,
+    setBlur: () => js.Promise[Unit],
     setFocus: () => js.Promise[Unit],
     spellcheck: Boolean,
     `type`: TextFieldTypes
   ): IonInput = {
-    val __obj = js.Dynamic.literal(autocapitalize = autocapitalize.asInstanceOf[js.Any], autocomplete = autocomplete.asInstanceOf[js.Any], autocorrect = autocorrect.asInstanceOf[js.Any], autofocus = autofocus.asInstanceOf[js.Any], clearInput = clearInput.asInstanceOf[js.Any], debounce = debounce.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], getInputElement = js.Any.fromFunction0(getInputElement), name = name.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any], setFocus = js.Any.fromFunction0(setFocus), spellcheck = spellcheck.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(autocapitalize = autocapitalize.asInstanceOf[js.Any], autocomplete = autocomplete.asInstanceOf[js.Any], autocorrect = autocorrect.asInstanceOf[js.Any], autofocus = autofocus.asInstanceOf[js.Any], clearInput = clearInput.asInstanceOf[js.Any], debounce = debounce.asInstanceOf[js.Any], disabled = disabled.asInstanceOf[js.Any], fireFocusEvents = fireFocusEvents.asInstanceOf[js.Any], getInputElement = js.Any.fromFunction0(getInputElement), name = name.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any], required = required.asInstanceOf[js.Any], setBlur = js.Any.fromFunction0(setBlur), setFocus = js.Any.fromFunction0(setFocus), spellcheck = spellcheck.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonInput]
   }
@@ -240,6 +252,9 @@ object IonInput {
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setFireFocusEvents(value: Boolean): Self = this.set("fireFocusEvents", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setGetInputElement(value: () => js.Promise[HTMLInputElement]): Self = this.set("getInputElement", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -250,6 +265,9 @@ object IonInput {
     
     @scala.inline
     def setRequired(value: Boolean): Self = this.set("required", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSetBlur(value: () => js.Promise[Unit]): Self = this.set("setBlur", js.Any.fromFunction0(value))
     
     @scala.inline
     def setSetFocus(value: () => js.Promise[Unit]): Self = this.set("setFocus", js.Any.fromFunction0(value))

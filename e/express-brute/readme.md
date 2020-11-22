@@ -1,6 +1,7 @@
 
 # Scala.js typings for express-brute
 
+Typings are for version 1.0.1
 
 ## Library description:
 A brute-force protection middleware for express routes that rate limits incoming requests

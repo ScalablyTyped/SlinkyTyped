@@ -14,8 +14,7 @@ trait UpdateFilter extends js.Object {
   var tabId: js.UndefOr[Double] = js.native
   
   /**
-    * A list of URLs or URL patterns. Events that cannot match any of the URLs will be filtered out. Filtering
-    * with urls requires the `"tabs"` or `"activeTab"` permission.
+    * A list of URLs or URL patterns. Events that cannot match any of the URLs will be filtered out. Filtering with urls requires the `"tabs"` or `"activeTab"` permission.
     */
   var urls: js.UndefOr[js.Array[String]] = js.native
   

@@ -9,31 +9,23 @@ trait FsStatsData extends js.Object {
   
   var ms: Double = js.native
   
-  var rx_bytes: Double = js.native
+  var rx: Double = js.native
   
   var rx_sec: Double = js.native
   
-  var tx_bytes: Double = js.native
+  var tx: Double = js.native
   
   var tx_sec: Double = js.native
   
-  var wx_bytes: Double = js.native
+  var wx: Double = js.native
   
   var wx_sec: Double = js.native
 }
 object FsStatsData {
   
   @scala.inline
-  def apply(
-    ms: Double,
-    rx_bytes: Double,
-    rx_sec: Double,
-    tx_bytes: Double,
-    tx_sec: Double,
-    wx_bytes: Double,
-    wx_sec: Double
-  ): FsStatsData = {
-    val __obj = js.Dynamic.literal(ms = ms.asInstanceOf[js.Any], rx_bytes = rx_bytes.asInstanceOf[js.Any], rx_sec = rx_sec.asInstanceOf[js.Any], tx_bytes = tx_bytes.asInstanceOf[js.Any], tx_sec = tx_sec.asInstanceOf[js.Any], wx_bytes = wx_bytes.asInstanceOf[js.Any], wx_sec = wx_sec.asInstanceOf[js.Any])
+  def apply(ms: Double, rx: Double, rx_sec: Double, tx: Double, tx_sec: Double, wx: Double, wx_sec: Double): FsStatsData = {
+    val __obj = js.Dynamic.literal(ms = ms.asInstanceOf[js.Any], rx = rx.asInstanceOf[js.Any], rx_sec = rx_sec.asInstanceOf[js.Any], tx = tx.asInstanceOf[js.Any], tx_sec = tx_sec.asInstanceOf[js.Any], wx = wx.asInstanceOf[js.Any], wx_sec = wx_sec.asInstanceOf[js.Any])
     __obj.asInstanceOf[FsStatsData]
   }
   
@@ -56,19 +48,19 @@ object FsStatsData {
     def setMs(value: Double): Self = this.set("ms", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRx_bytes(value: Double): Self = this.set("rx_bytes", value.asInstanceOf[js.Any])
+    def setRx(value: Double): Self = this.set("rx", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRx_sec(value: Double): Self = this.set("rx_sec", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTx_bytes(value: Double): Self = this.set("tx_bytes", value.asInstanceOf[js.Any])
+    def setTx(value: Double): Self = this.set("tx", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTx_sec(value: Double): Self = this.set("tx_sec", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setWx_bytes(value: Double): Self = this.set("wx_bytes", value.asInstanceOf[js.Any])
+    def setWx(value: Double): Self = this.set("wx", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWx_sec(value: Double): Self = this.set("wx_sec", value.asInstanceOf[js.Any])

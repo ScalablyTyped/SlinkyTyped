@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposCreateForAuthenticatedUserEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposCreateForAuthenticatedUserResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposCreateCommitSignatureProtectionEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposCreateCommitSignatureProtectionResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `902` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposCreateForAuthenticatedUserEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposCreateCommitSignatureProtectionEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposCreateForAuthenticatedUserResponseData] = js.native
+  var response: OctokitResponse[ReposCreateCommitSignatureProtectionResponseData] = js.native
 }
 object `902` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposCreateForAuthenticatedUserEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposCreateForAuthenticatedUserResponseData]
+    parameters: RequestParameters with (Omit[ReposCreateCommitSignatureProtectionEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposCreateCommitSignatureProtectionResponseData]
   ): `902` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`902`]
@@ -47,10 +47,10 @@ object `902` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[ReposCreateForAuthenticatedUserEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ReposCreateCommitSignatureProtectionEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposCreateForAuthenticatedUserResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReposCreateCommitSignatureProtectionResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

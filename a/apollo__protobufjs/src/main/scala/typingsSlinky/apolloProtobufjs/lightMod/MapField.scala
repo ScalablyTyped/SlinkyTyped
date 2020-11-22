@@ -38,7 +38,13 @@ class MapField protected ()
     * @param [comment] Comment associated with this field
     */
   def this(name: String, id: Double, keyType: String, `type`: String) = this()
-  def this(name: String, id: Double, keyType: String, `type`: String, options: StringDictionary[js.Any]) = this()
+  def this(
+    name: String,
+    id: Double,
+    keyType: String,
+    `type`: String,
+    options: StringDictionary[js.UndefOr[js.Any]]
+  ) = this()
   def this(
     name: String,
     id: Double,
@@ -52,7 +58,7 @@ class MapField protected ()
     id: Double,
     keyType: String,
     `type`: String,
-    options: StringDictionary[js.Any],
+    options: StringDictionary[js.UndefOr[js.Any]],
     comment: String
   ) = this()
 }

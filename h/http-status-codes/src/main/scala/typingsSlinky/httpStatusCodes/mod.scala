@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("http-status-codes", JSImport.Namespace)
+@JSImport("http-status-codes/build/es", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
   
@@ -116,7 +116,363 @@ object mod extends js.Object {
   
   val USE_PROXY: /* 305 */ Double = js.native
   
+  def getReasonPhrase(statusCode: String): String = js.native
+  def getReasonPhrase(statusCode: Double): String = js.native
+  
   def getStatusCode(reasonPhrase: String): Double = js.native
   
-  def getStatusText(statusCode: Double): String = js.native
+  val getStatusText: js.Function1[/* statusCode */ Double | String, String] = js.native
+  
+  @js.native
+  object ReasonPhrases extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: String): js.UndefOr[typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases with String] = js.native
+    
+    /* "Accepted" */ val ACCEPTED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.ACCEPTED with String = js.native
+    
+    /* "Bad Gateway" */ val BAD_GATEWAY: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.BAD_GATEWAY with String = js.native
+    
+    /* "Bad Request" */ val BAD_REQUEST: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.BAD_REQUEST with String = js.native
+    
+    /* "Conflict" */ val CONFLICT: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.CONFLICT with String = js.native
+    
+    /* "Continue" */ val CONTINUE: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.CONTINUE with String = js.native
+    
+    /* "Created" */ val CREATED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.CREATED with String = js.native
+    
+    /* "Expectation Failed" */ val EXPECTATION_FAILED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.EXPECTATION_FAILED with String = js.native
+    
+    /* "Failed Dependency" */ val FAILED_DEPENDENCY: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.FAILED_DEPENDENCY with String = js.native
+    
+    /* "Forbidden" */ val FORBIDDEN: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.FORBIDDEN with String = js.native
+    
+    /* "Gateway Timeout" */ val GATEWAY_TIMEOUT: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.GATEWAY_TIMEOUT with String = js.native
+    
+    /* "Gone" */ val GONE: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.GONE with String = js.native
+    
+    /* "HTTP Version Not Supported" */ val HTTP_VERSION_NOT_SUPPORTED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.HTTP_VERSION_NOT_SUPPORTED with String = js.native
+    
+    /* "I'm a teapot" */ val IM_A_TEAPOT: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.IM_A_TEAPOT with String = js.native
+    
+    /* "Insufficient Space on Resource" */ val INSUFFICIENT_SPACE_ON_RESOURCE: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.INSUFFICIENT_SPACE_ON_RESOURCE with String = js.native
+    
+    /* "Insufficient Storage" */ val INSUFFICIENT_STORAGE: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.INSUFFICIENT_STORAGE with String = js.native
+    
+    /* "Internal Server Error" */ val INTERNAL_SERVER_ERROR: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.INTERNAL_SERVER_ERROR with String = js.native
+    
+    /* "Length Required" */ val LENGTH_REQUIRED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.LENGTH_REQUIRED with String = js.native
+    
+    /* "Locked" */ val LOCKED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.LOCKED with String = js.native
+    
+    /* "Method Failure" */ val METHOD_FAILURE: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.METHOD_FAILURE with String = js.native
+    
+    /* "Method Not Allowed" */ val METHOD_NOT_ALLOWED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.METHOD_NOT_ALLOWED with String = js.native
+    
+    /* "Moved Permanently" */ val MOVED_PERMANENTLY: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.MOVED_PERMANENTLY with String = js.native
+    
+    /* "Moved Temporarily" */ val MOVED_TEMPORARILY: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.MOVED_TEMPORARILY with String = js.native
+    
+    /* "Multiple Choices" */ val MULTIPLE_CHOICES: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.MULTIPLE_CHOICES with String = js.native
+    
+    /* "Multi-Status" */ val MULTI_STATUS: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.MULTI_STATUS with String = js.native
+    
+    /* "Network Authentication Required" */ val NETWORK_AUTHENTICATION_REQUIRED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.NETWORK_AUTHENTICATION_REQUIRED with String = js.native
+    
+    /* "Non Authoritative Information" */ val NON_AUTHORITATIVE_INFORMATION: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.NON_AUTHORITATIVE_INFORMATION with String = js.native
+    
+    /* "Not Acceptable" */ val NOT_ACCEPTABLE: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.NOT_ACCEPTABLE with String = js.native
+    
+    /* "Not Found" */ val NOT_FOUND: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.NOT_FOUND with String = js.native
+    
+    /* "Not Implemented" */ val NOT_IMPLEMENTED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.NOT_IMPLEMENTED with String = js.native
+    
+    /* "Not Modified" */ val NOT_MODIFIED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.NOT_MODIFIED with String = js.native
+    
+    /* "No Content" */ val NO_CONTENT: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.NO_CONTENT with String = js.native
+    
+    /* "OK" */ val OK: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.OK with String = js.native
+    
+    /* "Partial Content" */ val PARTIAL_CONTENT: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.PARTIAL_CONTENT with String = js.native
+    
+    /* "Payment Required" */ val PAYMENT_REQUIRED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.PAYMENT_REQUIRED with String = js.native
+    
+    /* "Permanent Redirect" */ val PERMANENT_REDIRECT: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.PERMANENT_REDIRECT with String = js.native
+    
+    /* "Precondition Failed" */ val PRECONDITION_FAILED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.PRECONDITION_FAILED with String = js.native
+    
+    /* "Precondition Required" */ val PRECONDITION_REQUIRED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.PRECONDITION_REQUIRED with String = js.native
+    
+    /* "Processing" */ val PROCESSING: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.PROCESSING with String = js.native
+    
+    /* "Proxy Authentication Required" */ val PROXY_AUTHENTICATION_REQUIRED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.PROXY_AUTHENTICATION_REQUIRED with String = js.native
+    
+    /* "Requested Range Not Satisfiable" */ val REQUESTED_RANGE_NOT_SATISFIABLE: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.REQUESTED_RANGE_NOT_SATISFIABLE with String = js.native
+    
+    /* "Request Header Fields Too Large" */ val REQUEST_HEADER_FIELDS_TOO_LARGE: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.REQUEST_HEADER_FIELDS_TOO_LARGE with String = js.native
+    
+    /* "Request Timeout" */ val REQUEST_TIMEOUT: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.REQUEST_TIMEOUT with String = js.native
+    
+    /* "Request Entity Too Large" */ val REQUEST_TOO_LONG: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.REQUEST_TOO_LONG with String = js.native
+    
+    /* "Request-URI Too Long" */ val REQUEST_URI_TOO_LONG: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.REQUEST_URI_TOO_LONG with String = js.native
+    
+    /* "Reset Content" */ val RESET_CONTENT: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.RESET_CONTENT with String = js.native
+    
+    /* "See Other" */ val SEE_OTHER: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.SEE_OTHER with String = js.native
+    
+    /* "Service Unavailable" */ val SERVICE_UNAVAILABLE: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.SERVICE_UNAVAILABLE with String = js.native
+    
+    /* "Switching Protocols" */ val SWITCHING_PROTOCOLS: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.SWITCHING_PROTOCOLS with String = js.native
+    
+    /* "Temporary Redirect" */ val TEMPORARY_REDIRECT: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.TEMPORARY_REDIRECT with String = js.native
+    
+    /* "Too Many Requests" */ val TOO_MANY_REQUESTS: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.TOO_MANY_REQUESTS with String = js.native
+    
+    /* "Unauthorized" */ val UNAUTHORIZED: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.UNAUTHORIZED with String = js.native
+    
+    /* "Unavailable For Legal Reasons" */ val UNAVAILABLE_FOR_LEGAL_REASONS: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.UNAVAILABLE_FOR_LEGAL_REASONS with String = js.native
+    
+    /* "Unprocessable Entity" */ val UNPROCESSABLE_ENTITY: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.UNPROCESSABLE_ENTITY with String = js.native
+    
+    /* "Unsupported Media Type" */ val UNSUPPORTED_MEDIA_TYPE: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.UNSUPPORTED_MEDIA_TYPE with String = js.native
+    
+    /* "Use Proxy" */ val USE_PROXY: typingsSlinky.httpStatusCodes.reasonPhrasesMod.ReasonPhrases.USE_PROXY with String = js.native
+  }
+  
+  @js.native
+  object StatusCodes extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes with Double] = js.native
+    
+    /* 202 */ val ACCEPTED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.ACCEPTED with Double = js.native
+    
+    /* 502 */ val BAD_GATEWAY: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.BAD_GATEWAY with Double = js.native
+    
+    /* 400 */ val BAD_REQUEST: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.BAD_REQUEST with Double = js.native
+    
+    /* 409 */ val CONFLICT: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.CONFLICT with Double = js.native
+    
+    /* 100 */ val CONTINUE: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.CONTINUE with Double = js.native
+    
+    /* 201 */ val CREATED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.CREATED with Double = js.native
+    
+    /* 417 */ val EXPECTATION_FAILED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.EXPECTATION_FAILED with Double = js.native
+    
+    /* 424 */ val FAILED_DEPENDENCY: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.FAILED_DEPENDENCY with Double = js.native
+    
+    /* 403 */ val FORBIDDEN: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.FORBIDDEN with Double = js.native
+    
+    /* 504 */ val GATEWAY_TIMEOUT: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.GATEWAY_TIMEOUT with Double = js.native
+    
+    /* 410 */ val GONE: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.GONE with Double = js.native
+    
+    /* 505 */ val HTTP_VERSION_NOT_SUPPORTED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.HTTP_VERSION_NOT_SUPPORTED with Double = js.native
+    
+    /* 418 */ val IM_A_TEAPOT: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.IM_A_TEAPOT with Double = js.native
+    
+    /* 419 */ val INSUFFICIENT_SPACE_ON_RESOURCE: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.INSUFFICIENT_SPACE_ON_RESOURCE with Double = js.native
+    
+    /* 507 */ val INSUFFICIENT_STORAGE: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.INSUFFICIENT_STORAGE with Double = js.native
+    
+    /* 500 */ val INTERNAL_SERVER_ERROR: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.INTERNAL_SERVER_ERROR with Double = js.native
+    
+    /* 411 */ val LENGTH_REQUIRED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.LENGTH_REQUIRED with Double = js.native
+    
+    /* 423 */ val LOCKED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.LOCKED with Double = js.native
+    
+    /* 420 */ val METHOD_FAILURE: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.METHOD_FAILURE with Double = js.native
+    
+    /* 405 */ val METHOD_NOT_ALLOWED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.METHOD_NOT_ALLOWED with Double = js.native
+    
+    /* 301 */ val MOVED_PERMANENTLY: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.MOVED_PERMANENTLY with Double = js.native
+    
+    /* 302 */ val MOVED_TEMPORARILY: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.MOVED_TEMPORARILY with Double = js.native
+    
+    /* 300 */ val MULTIPLE_CHOICES: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.MULTIPLE_CHOICES with Double = js.native
+    
+    /* 207 */ val MULTI_STATUS: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.MULTI_STATUS with Double = js.native
+    
+    /* 511 */ val NETWORK_AUTHENTICATION_REQUIRED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.NETWORK_AUTHENTICATION_REQUIRED with Double = js.native
+    
+    /* 203 */ val NON_AUTHORITATIVE_INFORMATION: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.NON_AUTHORITATIVE_INFORMATION with Double = js.native
+    
+    /* 406 */ val NOT_ACCEPTABLE: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.NOT_ACCEPTABLE with Double = js.native
+    
+    /* 404 */ val NOT_FOUND: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.NOT_FOUND with Double = js.native
+    
+    /* 501 */ val NOT_IMPLEMENTED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.NOT_IMPLEMENTED with Double = js.native
+    
+    /* 304 */ val NOT_MODIFIED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.NOT_MODIFIED with Double = js.native
+    
+    /* 204 */ val NO_CONTENT: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.NO_CONTENT with Double = js.native
+    
+    /* 200 */ val OK: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.OK with Double = js.native
+    
+    /* 206 */ val PARTIAL_CONTENT: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.PARTIAL_CONTENT with Double = js.native
+    
+    /* 402 */ val PAYMENT_REQUIRED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.PAYMENT_REQUIRED with Double = js.native
+    
+    /* 308 */ val PERMANENT_REDIRECT: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.PERMANENT_REDIRECT with Double = js.native
+    
+    /* 412 */ val PRECONDITION_FAILED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.PRECONDITION_FAILED with Double = js.native
+    
+    /* 428 */ val PRECONDITION_REQUIRED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.PRECONDITION_REQUIRED with Double = js.native
+    
+    /* 102 */ val PROCESSING: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.PROCESSING with Double = js.native
+    
+    /* 407 */ val PROXY_AUTHENTICATION_REQUIRED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.PROXY_AUTHENTICATION_REQUIRED with Double = js.native
+    
+    /* 416 */ val REQUESTED_RANGE_NOT_SATISFIABLE: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.REQUESTED_RANGE_NOT_SATISFIABLE with Double = js.native
+    
+    /* 431 */ val REQUEST_HEADER_FIELDS_TOO_LARGE: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.REQUEST_HEADER_FIELDS_TOO_LARGE with Double = js.native
+    
+    /* 408 */ val REQUEST_TIMEOUT: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.REQUEST_TIMEOUT with Double = js.native
+    
+    /* 413 */ val REQUEST_TOO_LONG: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.REQUEST_TOO_LONG with Double = js.native
+    
+    /* 414 */ val REQUEST_URI_TOO_LONG: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.REQUEST_URI_TOO_LONG with Double = js.native
+    
+    /* 205 */ val RESET_CONTENT: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.RESET_CONTENT with Double = js.native
+    
+    /* 303 */ val SEE_OTHER: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.SEE_OTHER with Double = js.native
+    
+    /* 503 */ val SERVICE_UNAVAILABLE: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.SERVICE_UNAVAILABLE with Double = js.native
+    
+    /* 101 */ val SWITCHING_PROTOCOLS: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.SWITCHING_PROTOCOLS with Double = js.native
+    
+    /* 307 */ val TEMPORARY_REDIRECT: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.TEMPORARY_REDIRECT with Double = js.native
+    
+    /* 429 */ val TOO_MANY_REQUESTS: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.TOO_MANY_REQUESTS with Double = js.native
+    
+    /* 401 */ val UNAUTHORIZED: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.UNAUTHORIZED with Double = js.native
+    
+    /* 451 */ val UNAVAILABLE_FOR_LEGAL_REASONS: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.UNAVAILABLE_FOR_LEGAL_REASONS with Double = js.native
+    
+    /* 422 */ val UNPROCESSABLE_ENTITY: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.UNPROCESSABLE_ENTITY with Double = js.native
+    
+    /* 415 */ val UNSUPPORTED_MEDIA_TYPE: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.UNSUPPORTED_MEDIA_TYPE with Double = js.native
+    
+    /* 305 */ val USE_PROXY: typingsSlinky.httpStatusCodes.statusCodesMod.StatusCodes.USE_PROXY with Double = js.native
+  }
+  
+  @js.native
+  object default extends js.Object {
+    
+    var ACCEPTED: Double = js.native
+    
+    var BAD_GATEWAY: Double = js.native
+    
+    var BAD_REQUEST: Double = js.native
+    
+    var CONFLICT: Double = js.native
+    
+    var CONTINUE: Double = js.native
+    
+    var CREATED: Double = js.native
+    
+    var EXPECTATION_FAILED: Double = js.native
+    
+    var FORBIDDEN: Double = js.native
+    
+    var GATEWAY_TIMEOUT: Double = js.native
+    
+    var GONE: Double = js.native
+    
+    var HTTP_VERSION_NOT_SUPPORTED: Double = js.native
+    
+    var IM_A_TEAPOT: Double = js.native
+    
+    var INSUFFICIENT_SPACE_ON_RESOURCE: Double = js.native
+    
+    var INSUFFICIENT_STORAGE: Double = js.native
+    
+    var INTERNAL_SERVER_ERROR: Double = js.native
+    
+    var LENGTH_REQUIRED: Double = js.native
+    
+    var LOCKED: Double = js.native
+    
+    var METHOD_FAILURE: Double = js.native
+    
+    var METHOD_NOT_ALLOWED: Double = js.native
+    
+    var MOVED_PERMANENTLY: Double = js.native
+    
+    var MOVED_TEMPORARILY: Double = js.native
+    
+    var MULTIPLE_CHOICES: Double = js.native
+    
+    var MULTI_STATUS: Double = js.native
+    
+    var NETWORK_AUTHENTICATION_REQUIRED: Double = js.native
+    
+    var NON_AUTHORITATIVE_INFORMATION: Double = js.native
+    
+    var NOT_ACCEPTABLE: Double = js.native
+    
+    var NOT_FOUND: Double = js.native
+    
+    var NOT_IMPLEMENTED: Double = js.native
+    
+    var NOT_MODIFIED: Double = js.native
+    
+    var NO_CONTENT: Double = js.native
+    
+    var OK: Double = js.native
+    
+    var PARTIAL_CONTENT: Double = js.native
+    
+    var PAYMENT_REQUIRED: Double = js.native
+    
+    var PERMANENT_REDIRECT: Double = js.native
+    
+    var PRECONDITION_FAILED: Double = js.native
+    
+    var PRECONDITION_REQUIRED: Double = js.native
+    
+    var PROCESSING: Double = js.native
+    
+    var PROXY_AUTHENTICATION_REQUIRED: Double = js.native
+    
+    var REQUESTED_RANGE_NOT_SATISFIABLE: Double = js.native
+    
+    var REQUEST_HEADER_FIELDS_TOO_LARGE: Double = js.native
+    
+    var REQUEST_TIMEOUT: Double = js.native
+    
+    var REQUEST_TOO_LONG: Double = js.native
+    
+    var REQUEST_URI_TOO_LONG: Double = js.native
+    
+    var RESET_CONTENT: Double = js.native
+    
+    var SEE_OTHER: Double = js.native
+    
+    var SERVICE_UNAVAILABLE: Double = js.native
+    
+    var SWITCHING_PROTOCOLS: Double = js.native
+    
+    var TEMPORARY_REDIRECT: Double = js.native
+    
+    var TOO_MANY_REQUESTS: Double = js.native
+    
+    var UNAUTHORIZED: Double = js.native
+    
+    var UNPROCESSABLE_ENTITY: Double = js.native
+    
+    var UNSUPPORTED_MEDIA_TYPE: Double = js.native
+    
+    var USE_PROXY: Double = js.native
+    
+    def getStatusCode(reasonPhrase: String): Double = js.native
+    @JSName("getStatusCode")
+    var getStatusCode_Original: js.Function1[/* reasonPhrase */ String, Double] = js.native
+    
+    def getStatusText(statusCode: String): String = js.native
+    def getStatusText(statusCode: Double): String = js.native
+    @JSName("getStatusText")
+    var getStatusText_Original: js.Function1[/* statusCode */ Double | String, String] = js.native
+  }
 }

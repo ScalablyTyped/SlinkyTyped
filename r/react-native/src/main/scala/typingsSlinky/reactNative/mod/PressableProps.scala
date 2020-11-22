@@ -2,6 +2,7 @@ package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.reactNativeStrings.`box-none`
 import typingsSlinky.reactNative.reactNativeStrings.`box-only`
@@ -51,7 +52,7 @@ trait PressableProps extends js.Object {
   var accessibilityHint: js.UndefOr[String] = js.native
   
   /**
-    * https://facebook.github.io/react-native/docs/accessibility#accessibilityignoresinvertcolorsios
+    * https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
     * @platform ios
     */
   var accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.native
@@ -119,7 +120,9 @@ trait PressableProps extends js.Object {
     * Either children or a render prop that receives a boolean reflecting whether
     * the component is currently pressed.
     */
-  var children: ReactElement | (js.Function1[/* state */ PressableStateCallbackType, ReactElement]) = js.native
+  var children: js.UndefOr[
+    ReactElement | (js.Function1[/* state */ PressableStateCallbackType, ReactElement])
+  ] = js.native
   
   var collapsable: js.UndefOr[Boolean] = js.native
   
@@ -178,7 +181,7 @@ trait PressableProps extends js.Object {
     */
   var onAccessibilityTap: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   /**
     * Called when a long-tap gesture is detected.
@@ -504,7 +507,7 @@ object PressableProps {
     def deleteOnAccessibilityTap: Self = this.set("onAccessibilityTap", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)

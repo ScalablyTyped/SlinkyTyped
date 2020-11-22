@@ -23,6 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.protectedMediaIdentifier
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.sensors
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.videoCapture
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.videoCapturePanTiltZoom
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.idleDetection
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.wakeLockScreen
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.wakeLockSystem
@@ -86,6 +87,9 @@ object PermissionType {
   
   @scala.inline
   def videoCapture: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.videoCapture = "videoCapture".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.videoCapture]
+  
+  @scala.inline
+  def videoCapturePanTiltZoom: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.videoCapturePanTiltZoom = "videoCapturePanTiltZoom".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.videoCapturePanTiltZoom]
   
   @scala.inline
   def wakeLockScreen: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.wakeLockScreen = "wakeLockScreen".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.wakeLockScreen]

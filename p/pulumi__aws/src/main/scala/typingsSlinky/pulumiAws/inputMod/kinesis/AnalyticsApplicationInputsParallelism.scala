@@ -11,13 +11,13 @@ trait AnalyticsApplicationInputsParallelism extends js.Object {
   /**
     * The Count of streams.
     */
-  var count: Input[Double] = js.native
+  var count: js.UndefOr[Input[Double]] = js.native
 }
 object AnalyticsApplicationInputsParallelism {
   
   @scala.inline
-  def apply(count: Input[Double]): AnalyticsApplicationInputsParallelism = {
-    val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any])
+  def apply(): AnalyticsApplicationInputsParallelism = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[AnalyticsApplicationInputsParallelism]
   }
   
@@ -38,5 +38,8 @@ object AnalyticsApplicationInputsParallelism {
     
     @scala.inline
     def setCount(value: Input[Double]): Self = this.set("count", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCount: Self = this.set("count", js.undefined)
   }
 }

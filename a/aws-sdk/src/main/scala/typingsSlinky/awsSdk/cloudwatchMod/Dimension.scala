@@ -13,7 +13,7 @@ trait Dimension extends js.Object {
   var Name: DimensionName = js.native
   
   /**
-    * The value of the dimension.
+    * The value of the dimension. Dimension values cannot contain blank spaces or non-ASCII characters.
     */
   var Value: DimensionValue = js.native
 }

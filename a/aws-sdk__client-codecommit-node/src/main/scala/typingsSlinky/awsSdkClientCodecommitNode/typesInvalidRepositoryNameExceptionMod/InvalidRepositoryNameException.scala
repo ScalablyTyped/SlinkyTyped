@@ -29,16 +29,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.testRepositoryTriggersExceptions
 import typingsSlinky.awsSdkClientCodecommitNode.updateDefaultBranchExceptionsUnionMod.UpdateDefaultBranchExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updateRepositoryDescriptionExceptionsUnionMod.UpdateRepositoryDescriptionExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updateRepositoryNameExceptionsUnionMod.UpdateRepositoryNameExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidRepositoryNameExceptionDetails> * / any */ @js.native
 trait InvalidRepositoryNameException
-  extends ServiceException[InvalidRepositoryNameExceptionDetails]
-     with BatchGetRepositoriesExceptionsUnion
+  extends BatchGetRepositoriesExceptionsUnion
      with CreateBranchExceptionsUnion
      with CreatePullRequestExceptionsUnion
      with CreateRepositoryExceptionsUnion
@@ -68,19 +66,15 @@ trait InvalidRepositoryNameException
      with UpdateRepositoryDescriptionExceptionsUnion
      with UpdateRepositoryNameExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidRepositoryNameException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidRepositoryNameException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidRepositoryNameException = js.native
 }
 object InvalidRepositoryNameException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidRepositoryNameExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidRepositoryNameException
   ): InvalidRepositoryNameException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidRepositoryNameException]
   }
   

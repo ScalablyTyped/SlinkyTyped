@@ -20,7 +20,7 @@ trait Module extends js.Object {
   
   var loaded: Boolean = js.native
   
-  var parent: NodeModule | Null = js.native
+  var parent: js.UndefOr[NodeModule | Null] = js.native
 }
 object Module {
   
@@ -71,6 +71,9 @@ object Module {
     
     @scala.inline
     def setParent(value: NodeModule): Self = this.set("parent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParent: Self = this.set("parent", js.undefined)
     
     @scala.inline
     def setParentNull: Self = this.set("parent", null)

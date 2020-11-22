@@ -9,7 +9,7 @@ trait ColorProps extends js.Object {
   
   // Clash with HTMLAttributes interface declared in React module
   // that includes a non-standard HTML attribute `color?: string`.
-  // Type here should be `ResponsiveValue<CSS.ColorProperty>`.
+  // Type here should be `ResponsiveValue<CSS.Property.Color>`.
   val color: js.UndefOr[js.Any] = js.native
 }
 object ColorProps {

@@ -70,6 +70,7 @@ trait InnerAudioContext extends js.Object {
     * 取消监听音频进入可以播放状态的事件
     *
     * 最低基础库： `1.9.0` */
+  def offCanplay(): Unit = js.native
   def offCanplay(/** 音频进入可以播放状态的事件的回调函数 */
   callback: OffCanplayCallback): Unit = js.native
   
@@ -78,6 +79,7 @@ trait InnerAudioContext extends js.Object {
     * 取消监听音频自然播放至结束的事件
     *
     * 最低基础库： `1.9.0` */
+  def offEnded(): Unit = js.native
   def offEnded(/** 音频自然播放至结束的事件的回调函数 */
   callback: OffEndedCallback): Unit = js.native
   
@@ -86,14 +88,16 @@ trait InnerAudioContext extends js.Object {
     * 取消监听音频播放错误事件
     *
     * 最低基础库： `1.9.0` */
+  def offError(): Unit = js.native
   def offError(/** 音频播放错误事件的回调函数 */
-  callback: OffErrorCallback): Unit = js.native
+  callback: InnerAudioContextOffErrorCallback): Unit = js.native
   
   /** [InnerAudioContext.offPause(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/media/audio/InnerAudioContext.offPause.html)
     *
     * 取消监听音频暂停事件
     *
     * 最低基础库： `1.9.0` */
+  def offPause(): Unit = js.native
   def offPause(/** 音频暂停事件的回调函数 */
   callback: OffPauseCallback): Unit = js.native
   
@@ -102,6 +106,7 @@ trait InnerAudioContext extends js.Object {
     * 取消监听音频播放事件
     *
     * 最低基础库： `1.9.0` */
+  def offPlay(): Unit = js.native
   def offPlay(/** 音频播放事件的回调函数 */
   callback: OffPlayCallback): Unit = js.native
   
@@ -110,6 +115,7 @@ trait InnerAudioContext extends js.Object {
     * 取消监听音频完成跳转操作的事件
     *
     * 最低基础库： `1.9.0` */
+  def offSeeked(): Unit = js.native
   def offSeeked(/** 音频完成跳转操作的事件的回调函数 */
   callback: OffSeekedCallback): Unit = js.native
   
@@ -118,6 +124,7 @@ trait InnerAudioContext extends js.Object {
     * 取消监听音频进行跳转操作的事件
     *
     * 最低基础库： `1.9.0` */
+  def offSeeking(): Unit = js.native
   def offSeeking(/** 音频进行跳转操作的事件的回调函数 */
   callback: OffSeekingCallback): Unit = js.native
   
@@ -126,6 +133,7 @@ trait InnerAudioContext extends js.Object {
     * 取消监听音频停止事件
     *
     * 最低基础库： `1.9.0` */
+  def offStop(): Unit = js.native
   def offStop(/** 音频停止事件的回调函数 */
   callback: OffStopCallback): Unit = js.native
   
@@ -134,6 +142,7 @@ trait InnerAudioContext extends js.Object {
     * 取消监听音频播放进度更新事件
     *
     * 最低基础库： `1.9.0` */
+  def offTimeUpdate(): Unit = js.native
   def offTimeUpdate(/** 音频播放进度更新事件的回调函数 */
   callback: OffTimeUpdateCallback): Unit = js.native
   
@@ -142,6 +151,7 @@ trait InnerAudioContext extends js.Object {
     * 取消监听音频加载中事件
     *
     * 最低基础库： `1.9.0` */
+  def offWaiting(): Unit = js.native
   def offWaiting(/** 音频加载中事件的回调函数 */
   callback: OffWaitingCallback): Unit = js.native
   
@@ -244,173 +254,4 @@ trait InnerAudioContext extends js.Object {
     *
     * 最低基础库： `1.9.90` */
   var volume: Double = js.native
-}
-object InnerAudioContext {
-  
-  @scala.inline
-  def apply(
-    autoplay: Boolean,
-    buffered: Double,
-    currentTime: Double,
-    destroy: () => Unit,
-    duration: Double,
-    loop: Boolean,
-    obeyMuteSwitch: Boolean,
-    offCanplay: OffCanplayCallback => Unit,
-    offEnded: OffEndedCallback => Unit,
-    offError: OffErrorCallback => Unit,
-    offPause: OffPauseCallback => Unit,
-    offPlay: OffPlayCallback => Unit,
-    offSeeked: OffSeekedCallback => Unit,
-    offSeeking: OffSeekingCallback => Unit,
-    offStop: OffStopCallback => Unit,
-    offTimeUpdate: OffTimeUpdateCallback => Unit,
-    offWaiting: OffWaitingCallback => Unit,
-    onCanplay: OnCanplayCallback => Unit,
-    onEnded: OnEndedCallback => Unit,
-    onError: InnerAudioContextOnErrorCallback => Unit,
-    onPause: OnPauseCallback => Unit,
-    onPlay: OnPlayCallback => Unit,
-    onSeeked: OnSeekedCallback => Unit,
-    onSeeking: OnSeekingCallback => Unit,
-    onStop: InnerAudioContextOnStopCallback => Unit,
-    onTimeUpdate: OnTimeUpdateCallback => Unit,
-    onWaiting: OnWaitingCallback => Unit,
-    pause: () => Unit,
-    paused: Boolean,
-    play: () => Unit,
-    playbackRate: Double,
-    seek: Double => Unit,
-    src: String,
-    startTime: Double,
-    stop: () => Unit,
-    volume: Double
-  ): InnerAudioContext = {
-    val __obj = js.Dynamic.literal(autoplay = autoplay.asInstanceOf[js.Any], buffered = buffered.asInstanceOf[js.Any], currentTime = currentTime.asInstanceOf[js.Any], destroy = js.Any.fromFunction0(destroy), duration = duration.asInstanceOf[js.Any], loop = loop.asInstanceOf[js.Any], obeyMuteSwitch = obeyMuteSwitch.asInstanceOf[js.Any], offCanplay = js.Any.fromFunction1(offCanplay), offEnded = js.Any.fromFunction1(offEnded), offError = js.Any.fromFunction1(offError), offPause = js.Any.fromFunction1(offPause), offPlay = js.Any.fromFunction1(offPlay), offSeeked = js.Any.fromFunction1(offSeeked), offSeeking = js.Any.fromFunction1(offSeeking), offStop = js.Any.fromFunction1(offStop), offTimeUpdate = js.Any.fromFunction1(offTimeUpdate), offWaiting = js.Any.fromFunction1(offWaiting), onCanplay = js.Any.fromFunction1(onCanplay), onEnded = js.Any.fromFunction1(onEnded), onError = js.Any.fromFunction1(onError), onPause = js.Any.fromFunction1(onPause), onPlay = js.Any.fromFunction1(onPlay), onSeeked = js.Any.fromFunction1(onSeeked), onSeeking = js.Any.fromFunction1(onSeeking), onStop = js.Any.fromFunction1(onStop), onTimeUpdate = js.Any.fromFunction1(onTimeUpdate), onWaiting = js.Any.fromFunction1(onWaiting), pause = js.Any.fromFunction0(pause), paused = paused.asInstanceOf[js.Any], play = js.Any.fromFunction0(play), playbackRate = playbackRate.asInstanceOf[js.Any], seek = js.Any.fromFunction1(seek), src = src.asInstanceOf[js.Any], startTime = startTime.asInstanceOf[js.Any], stop = js.Any.fromFunction0(stop), volume = volume.asInstanceOf[js.Any])
-    __obj.asInstanceOf[InnerAudioContext]
-  }
-  
-  @scala.inline
-  implicit class InnerAudioContextOps[Self <: InnerAudioContext] (val x: Self) extends AnyVal {
-    
-    @scala.inline
-    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
-    
-    @scala.inline
-    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
-    
-    @scala.inline
-    def set(key: String, value: js.Any): Self = {
-      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
-      x
-    }
-    
-    @scala.inline
-    def setAutoplay(value: Boolean): Self = this.set("autoplay", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBuffered(value: Double): Self = this.set("buffered", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setCurrentTime(value: Double): Self = this.set("currentTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDestroy(value: () => Unit): Self = this.set("destroy", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setLoop(value: Boolean): Self = this.set("loop", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setObeyMuteSwitch(value: Boolean): Self = this.set("obeyMuteSwitch", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setOffCanplay(value: OffCanplayCallback => Unit): Self = this.set("offCanplay", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOffEnded(value: OffEndedCallback => Unit): Self = this.set("offEnded", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOffError(value: OffErrorCallback => Unit): Self = this.set("offError", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOffPause(value: OffPauseCallback => Unit): Self = this.set("offPause", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOffPlay(value: OffPlayCallback => Unit): Self = this.set("offPlay", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOffSeeked(value: OffSeekedCallback => Unit): Self = this.set("offSeeked", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOffSeeking(value: OffSeekingCallback => Unit): Self = this.set("offSeeking", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOffStop(value: OffStopCallback => Unit): Self = this.set("offStop", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOffTimeUpdate(value: OffTimeUpdateCallback => Unit): Self = this.set("offTimeUpdate", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOffWaiting(value: OffWaitingCallback => Unit): Self = this.set("offWaiting", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnCanplay(value: OnCanplayCallback => Unit): Self = this.set("onCanplay", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnEnded(value: OnEndedCallback => Unit): Self = this.set("onEnded", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnError(value: InnerAudioContextOnErrorCallback => Unit): Self = this.set("onError", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnPause(value: OnPauseCallback => Unit): Self = this.set("onPause", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnPlay(value: OnPlayCallback => Unit): Self = this.set("onPlay", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnSeeked(value: OnSeekedCallback => Unit): Self = this.set("onSeeked", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnSeeking(value: OnSeekingCallback => Unit): Self = this.set("onSeeking", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnStop(value: InnerAudioContextOnStopCallback => Unit): Self = this.set("onStop", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnTimeUpdate(value: OnTimeUpdateCallback => Unit): Self = this.set("onTimeUpdate", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setOnWaiting(value: OnWaitingCallback => Unit): Self = this.set("onWaiting", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setPause(value: () => Unit): Self = this.set("pause", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setPaused(value: Boolean): Self = this.set("paused", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPlay(value: () => Unit): Self = this.set("play", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setPlaybackRate(value: Double): Self = this.set("playbackRate", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSeek(value: Double => Unit): Self = this.set("seek", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setSrc(value: String): Self = this.set("src", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStartTime(value: Double): Self = this.set("startTime", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStop(value: () => Unit): Self = this.set("stop", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setVolume(value: Double): Self = this.set("volume", value.asInstanceOf[js.Any])
-  }
 }

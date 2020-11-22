@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@tensorflow/tfjs-backend-webgl", "version_webgl")
 @js.native
 object versionWebgl
-  extends TopLevel[/* "2.0.1" */ String]
+  extends TopLevel[/* "2.7.0" */ String]

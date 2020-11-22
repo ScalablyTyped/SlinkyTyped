@@ -13,28 +13,44 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFormTabbedItem extends js.Object {
   
-  /** @name dxFormTabbedItem.colSpan */
+  /**
+    * [descr:dxFormTabbedItem.colSpan]
+    */
   var colSpan: js.UndefOr[Double] = js.native
   
-  /** @name dxFormTabbedItem.cssClass */
+  /**
+    * [descr:dxFormTabbedItem.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name dxFormTabbedItem.itemType */
+  /**
+    * [descr:dxFormTabbedItem.itemType]
+    */
   var itemType: js.UndefOr[empty | group | simple | tabbed | button] = js.native
   
-  /** @name dxFormTabbedItem.name */
+  /**
+    * [descr:dxFormTabbedItem.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxFormTabbedItem.tabPanelOptions */
+  /**
+    * [descr:dxFormTabbedItem.tabPanelOptions]
+    */
   var tabPanelOptions: js.UndefOr[dxTabPanelOptions] = js.native
   
-  /** @name dxFormTabbedItem.tabs */
+  /**
+    * [descr:dxFormTabbedItem.tabs]
+    */
   var tabs: js.UndefOr[js.Array[AlignItemLabels]] = js.native
   
-  /** @name dxFormTabbedItem.visible */
+  /**
+    * [descr:dxFormTabbedItem.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFormTabbedItem.visibleIndex */
+  /**
+    * [descr:dxFormTabbedItem.visibleIndex]
+    */
   var visibleIndex: js.UndefOr[Double] = js.native
 }
 object dxFormTabbedItem {

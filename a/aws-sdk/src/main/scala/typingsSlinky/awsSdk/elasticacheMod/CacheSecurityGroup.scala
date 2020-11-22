@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CacheSecurityGroup extends js.Object {
   
   /**
-    * The ARN (Amazon Resource Name) of the cache security group.
+    * The ARN of the cache security group,
     */
   var ARN: js.UndefOr[String] = js.native
   

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class Message protected () extends I18nMeta {
   /**
     * @param nodes message AST
-    * @param placeholders maps placeholder names to static content
+    * @param placeholders maps placeholder names to static content and their source spans
     * @param placeholderToMessage maps placeholder names to messages (used for nested ICU messages)
     * @param meaning
     * @param description
@@ -18,7 +18,7 @@ class Message protected () extends I18nMeta {
     */
   def this(
     nodes: js.Array[Node],
-    placeholders: StringDictionary[String],
+    placeholders: StringDictionary[MessagePlaceholder],
     placeholderToMessage: StringDictionary[Message],
     meaning: String,
     description: String,
@@ -40,7 +40,7 @@ class Message protected () extends I18nMeta {
   
   var placeholderToMessage: StringDictionary[Message] = js.native
   
-  var placeholders: StringDictionary[String] = js.native
+  var placeholders: StringDictionary[MessagePlaceholder] = js.native
   
   var sources: js.Array[MessageSpan] = js.native
 }

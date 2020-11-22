@@ -127,7 +127,7 @@ trait WebPreferences extends js.Object {
   var enableBlinkFeatures: js.UndefOr[String] = js.native
   
   /**
-    * Whether to enable the `remote` module. Default is `true`.
+    * Whether to enable the `remote` module. Default is `false`.
     */
   var enableRemoteModule: js.UndefOr[Boolean] = js.native
   
@@ -287,6 +287,14 @@ trait WebPreferences extends js.Object {
     * `preload` script and to validate or alter the `<webview>`'s initial settings.
     */
   var webviewTag: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * If true, values returned from `webFrame.executeJavaScript` will be sanitized to
+    * ensure JS values can't unsafely cross between worlds when using
+    * `contextIsolation`.  The default is `false`. In Electron 12, the default will be
+    * changed to `true`. _Deprecated_
+    */
+  var worldSafeExecuteJavaScript: js.UndefOr[Boolean] = js.native
   
   /**
     * The default zoom factor of the page, `3.0` represents `300%`. Default is `1.0`.
@@ -570,6 +578,12 @@ object WebPreferences {
     
     @scala.inline
     def deleteWebviewTag: Self = this.set("webviewTag", js.undefined)
+    
+    @scala.inline
+    def setWorldSafeExecuteJavaScript(value: Boolean): Self = this.set("worldSafeExecuteJavaScript", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWorldSafeExecuteJavaScript: Self = this.set("worldSafeExecuteJavaScript", js.undefined)
     
     @scala.inline
     def setZoomFactor(value: Double): Self = this.set("zoomFactor", value.asInstanceOf[js.Any])

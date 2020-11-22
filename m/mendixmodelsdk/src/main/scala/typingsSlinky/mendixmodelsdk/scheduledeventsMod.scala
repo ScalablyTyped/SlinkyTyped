@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractEnum
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
@@ -31,7 +30,7 @@ object scheduledeventsMod extends js.Object {
       * Interfaces and instance classes for types from the Mendix sub meta model `ScheduledEvents`.
       */
     /**
-      * See: {@link https://docs.mendix.com/refguide7/scheduled-events relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/scheduled-events relevant section in reference guide}
       */
     @js.native
     trait IScheduledEvent extends IDocument
@@ -58,7 +57,7 @@ object scheduledeventsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/scheduled-events relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/scheduled-events relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -97,9 +96,6 @@ object scheduledeventsMod extends js.Object {
       def microflowQualifiedName: String | Null = js.native
       
       def microflow_=(newValue: IMicroflow | Null): Unit = js.native
-      
-      @JSName("model")
-      var model_FScheduledEvent: IModel = js.native
       
       def startDateTime: String = js.native
       def startDateTime_=(newValue: String): Unit = js.native

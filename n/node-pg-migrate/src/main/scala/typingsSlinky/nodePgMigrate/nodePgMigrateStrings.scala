@@ -20,6 +20,9 @@ object nodePgMigrateStrings {
   def ALWAYS: ALWAYS = "ALWAYS".asInstanceOf[ALWAYS]
   
   @scala.inline
+  def ASC: ASC = "ASC".asInstanceOf[ASC]
+  
+  @scala.inline
   def BEFORE: BEFORE = "BEFORE".asInstanceOf[BEFORE]
   
   @scala.inline
@@ -42,6 +45,9 @@ object nodePgMigrateStrings {
   
   @scala.inline
   def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
+  
+  @scala.inline
+  def DESC: DESC = "DESC".asInstanceOf[DESC]
   
   @scala.inline
   def DISABLE: DISABLE = "DISABLE".asInstanceOf[DISABLE]
@@ -90,6 +96,9 @@ object nodePgMigrateStrings {
   
   @scala.inline
   def OUT: OUT = "OUT".asInstanceOf[OUT]
+  
+  @scala.inline
+  def PublicPart: PublicPart = "PublicPart".asInstanceOf[PublicPart]
   
   @scala.inline
   def RESTRICT: RESTRICT = "RESTRICT".asInstanceOf[RESTRICT]
@@ -320,6 +329,9 @@ object nodePgMigrateStrings {
   sealed trait ALWAYS extends js.Object
   
   @js.native
+  sealed trait ASC extends js.Object
+  
+  @js.native
   sealed trait BEFORE extends js.Object
   
   @js.native
@@ -342,6 +354,9 @@ object nodePgMigrateStrings {
   
   @js.native
   sealed trait DELETE extends js.Object
+  
+  @js.native
+  sealed trait DESC extends js.Object
   
   @js.native
   sealed trait DISABLE extends js.Object
@@ -390,6 +405,9 @@ object nodePgMigrateStrings {
   
   @js.native
   sealed trait OUT extends js.Object
+  
+  @js.native
+  sealed trait PublicPart extends js.Object
   
   @js.native
   sealed trait RESTRICT extends Action

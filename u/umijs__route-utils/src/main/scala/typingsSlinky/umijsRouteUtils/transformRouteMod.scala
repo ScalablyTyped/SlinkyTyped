@@ -56,9 +56,9 @@ object transformRouteMod extends js.Object {
     ignoreFilter: Boolean
   ): Breadcrumb = js.native
   
-  def getKeyByPath(item: MenuDataItem): String = js.native
-  
-  def guid(): String = js.native
+  def getKeyByPath(item: MenuDataItem): js.UndefOr[String] = js.native
   
   def isUrl(path: String): Boolean = js.native
+  
+  def stripQueryStringAndHashFromPath(url: String): String = js.native
 }

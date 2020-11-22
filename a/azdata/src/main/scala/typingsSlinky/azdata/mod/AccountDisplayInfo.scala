@@ -23,7 +23,7 @@ trait AccountDisplayInfo extends js.Object {
   var displayName: String = js.native
   
   /**
-    * User id that identifies the account, such as "user@contoso.com".
+    * Unique user id that identifies the account.
     */
   var userId: String = js.native
 }

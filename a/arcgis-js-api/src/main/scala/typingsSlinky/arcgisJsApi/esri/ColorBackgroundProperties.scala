@@ -8,11 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ColorBackgroundProperties extends js.Object {
   
   /**
-    * The color of the background. This can be autocast with an array of rgb(a) values, named string, hex string or an hsl(a) string, an object with `r`, `g`, `b`, and `a` properties, or a [Color](https://developers.arcgis.com/javascript/latest/api-reference/esri-Color.html) object.
+    * The color of the background.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-background-ColorBackground.html#color)
-    *
-    * @default black
     */
   var color: js.UndefOr[Color_ | js.Array[Double] | String] = js.native
 }

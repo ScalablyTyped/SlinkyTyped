@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object ToggleChildren {
   
-  @JSImport("@react-md/menu/types/ToggleChildren", JSImport.Default)
+  @JSImport("@react-md/menu/types/ToggleChildren", "ToggleChildren")
   @js.native
   object component extends js.Object
   

@@ -19,8 +19,6 @@ object stringMod extends js.Object {
   @JSName("dataURLContentType_")
   def dataURLContentType(dataUrl: String): String | Null = js.native
   
-  def formatValidator(stringFormat: js.Any): Unit = js.native
-  
   @JSName("percentEncodedBytes_")
   def percentEncodedBytes(value: String): js.typedarray.Uint8Array = js.native
   

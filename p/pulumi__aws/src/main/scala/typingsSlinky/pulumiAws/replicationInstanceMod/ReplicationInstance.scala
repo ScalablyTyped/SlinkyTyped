@@ -29,6 +29,11 @@ class ReplicationInstance protected () extends CustomResource {
   val allocatedStorage: Output_[Double] = js.native
   
   /**
+    * Indicates that major version upgrades are allowed.
+    */
+  val allowMajorVersionUpgrade: Output_[js.UndefOr[Boolean]] = js.native
+  
+  /**
     * Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
     */
   val applyImmediately: Output_[js.UndefOr[Boolean]] = js.native

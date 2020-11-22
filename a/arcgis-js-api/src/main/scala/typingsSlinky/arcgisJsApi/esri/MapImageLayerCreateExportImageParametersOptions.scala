@@ -17,7 +17,7 @@ trait MapImageLayerCreateExportImageParametersOptions extends Object {
   var pixelRatio: js.UndefOr[Double] = js.native
   
   /**
-    * The rotation in degrees of the exported image. Available since ArcGIS Server 10.3.
+    * The rotation in degrees of the exported image.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-MapImageLayer.html#createExportImageParameters)
     */

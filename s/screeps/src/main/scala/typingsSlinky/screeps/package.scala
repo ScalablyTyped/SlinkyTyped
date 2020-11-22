@@ -229,6 +229,8 @@ package object screeps {
   
   type Id[T] = java.lang.String with typingsSlinky.screeps.Tag.OpaqueTag[T]
   
+  type InterShardResourceConstant = typingsSlinky.screeps.SUBSCRIPTION_TOKEN | typingsSlinky.screeps.CPU_UNLOCK | typingsSlinky.screeps.PIXEL | typingsSlinky.screeps.ACCESS_KEY
+  
   type LEFT = typingsSlinky.screeps.screepsNumbers.`7`
   
   type LOOK_CONSTRUCTION_SITES = typingsSlinky.screeps.screepsStrings.constructionSite
@@ -280,7 +282,7 @@ package object screeps {
   
   type MOVE = typingsSlinky.screeps.screepsStrings.move
   
-  type MarketResourceConstant = typingsSlinky.screeps.ResourceConstant | typingsSlinky.screeps.SUBSCRIPTION_TOKEN
+  type MarketResourceConstant = typingsSlinky.screeps.ResourceConstant | typingsSlinky.screeps.InterShardResourceConstant
   
   /** The compounds which can't boost */
   type MineralBaseCompoundsConstant = typingsSlinky.screeps.RESOURCE_HYDROXIDE | typingsSlinky.screeps.RESOURCE_ZYNTHIUM_KEANITE | typingsSlinky.screeps.RESOURCE_UTRIUM_LEMERGITE | typingsSlinky.screeps.RESOURCE_GHODIUM

@@ -38,7 +38,7 @@ trait ASPxClientRichEditPopupMenuItem extends js.Object {
   var beginGroup: Boolean = js.native
   
   /**
-    * Gets or sets a value that indicates whether the menu item is enabled, allowing the item to respond to end-user interactions.
+    * Indicates whether the menu item is enabled.
     */
   var enabled: Boolean = js.native
   
@@ -53,7 +53,7 @@ trait ASPxClientRichEditPopupMenuItem extends js.Object {
   var imageUrl: String = js.native
   
   /**
-    * Gets or sets the unique identifier name for the current menu item.
+    * Specifies the unique identifier name for the current menu item.
     */
   var name: String = js.native
   
@@ -73,7 +73,7 @@ trait ASPxClientRichEditPopupMenuItem extends js.Object {
   var target: String = js.native
   
   /**
-    * Gets or sets the text content of the current menu item.
+    * Specifies the text content of the current menu item.
     */
   var text: String = js.native
   

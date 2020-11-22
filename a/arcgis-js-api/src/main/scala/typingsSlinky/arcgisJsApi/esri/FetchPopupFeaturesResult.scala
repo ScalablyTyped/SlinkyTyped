@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FetchPopupFeaturesResult extends Object {
   
   /**
-    * An array of promises containing graphics from the selected location. This can be a combination of graphics derived from a [layerview](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html), and/or graphics that reside directly on the view, ie. [view.graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#graphics).
+    * An array of promises containing graphics from the selected location.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html#FetchPopupFeaturesResult)
     */
   var allGraphicsPromise: js.UndefOr[js.Promise[js.Array[Graphic]]] = js.native
   
   /**
-    * An array of [graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) that do not have any associated [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html), ie. [view.graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#graphics).
+    * An array of [graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) that do not have any associated [LayerView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-LayerView.html), ie.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html#FetchPopupFeaturesResult)
     */

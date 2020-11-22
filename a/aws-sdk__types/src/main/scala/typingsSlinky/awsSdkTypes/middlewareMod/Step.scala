@@ -8,13 +8,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.awsSdkTypes.awsSdkTypesStrings.initialize
   - typingsSlinky.awsSdkTypes.awsSdkTypesStrings.serialize
   - typingsSlinky.awsSdkTypes.awsSdkTypesStrings.build
-  - typingsSlinky.awsSdkTypes.awsSdkTypesStrings.finalize
+  - typingsSlinky.awsSdkTypes.awsSdkTypesStrings.finalizeRequest
+  - typingsSlinky.awsSdkTypes.awsSdkTypesStrings.deserialize
 */
 trait Step extends js.Object
 object Step {
   
   @scala.inline
   def build: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.build = "build".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.build]
+  
+  @scala.inline
+  def deserialize: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.deserialize = "deserialize".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.deserialize]
+  
+  @scala.inline
+  def finalizeRequest: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.finalizeRequest = "finalizeRequest".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.finalizeRequest]
   
   @scala.inline
   def initialize: typingsSlinky.awsSdkTypes.awsSdkTypesStrings.initialize = "initialize".asInstanceOf[typingsSlinky.awsSdkTypes.awsSdkTypesStrings.initialize]

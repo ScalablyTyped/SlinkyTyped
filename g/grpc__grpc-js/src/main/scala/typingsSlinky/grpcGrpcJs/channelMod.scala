@@ -125,6 +125,15 @@ object channelMod extends js.Object {
     
     def _startCallStream(stream: Http2CallStream, metadata: Metadata): Unit = js.native
     
+    /**
+      * This timer does not do anything on its own. Its purpose is to hold the
+      * event loop open while there are any pending calls for the channel that
+      * have not yet been assigned to specific subchannels. In other words,
+      * the invariant is that callRefTimer is reffed if and only if pickQueue
+      * is non-empty.
+      */
+    var callRefTimer: js.Any = js.native
+    
     var connectivityState: js.Any = js.native
     
     var connectivityStateWatchers: js.Any = js.native
@@ -140,6 +149,8 @@ object channelMod extends js.Object {
     val options: js.Any = js.native
     
     var pickQueue: js.Any = js.native
+    
+    var pushPick: js.Any = js.native
     
     var removeConnectivityStateWatcher: js.Any = js.native
     

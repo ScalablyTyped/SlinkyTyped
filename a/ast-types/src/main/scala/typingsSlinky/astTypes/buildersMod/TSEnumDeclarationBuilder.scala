@@ -6,11 +6,12 @@ import typingsSlinky.astTypes.kindsMod.TSEnumMemberKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSEnumDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TSEnumDeclarationBuilder extends js.Object {
+  
   def apply(id: IdentifierKind, members: js.Array[TSEnumMemberKind]): TSEnumDeclaration = js.native
+  
   def from(params: Const): TSEnumDeclaration = js.native
 }
-

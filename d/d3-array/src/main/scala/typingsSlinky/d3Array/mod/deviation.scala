@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object deviation extends js.Object {
   
-  def apply[T /* <: Numeric */](array: js.Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
+  def apply[T /* <: Numeric */](iterable: js.Iterable[js.UndefOr[T | Null]]): js.UndefOr[Double] = js.native
   def apply[T](
-    array: js.Iterable[T],
+    iterable: js.Iterable[T],
     accessor: js.Function3[
       /* datum */ T, 
       /* index */ Double, 

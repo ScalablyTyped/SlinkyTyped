@@ -191,7 +191,7 @@ trait RichEditSelection extends js.Object {
   def selectTableRow(extendSelection: Boolean): Unit = js.native
   
   /**
-    * Makes the specified sub-document active.
+    * Makes the specified sub-document active. true if the sub-document is made active; false if the sub-document with the specified id is not found.
     * @param id An integer value identifying the target sub-document by its id.
     */
   def setActiveSubDocumentById(id: Double): Boolean = js.native
@@ -223,6 +223,7 @@ trait RichEditSelection extends js.Object {
   
   /**
     * Makes the specified text box active.
+    * @param arg An integer value that identifies the target text box by its id, or an object that contains the text box settings.
     */
   def setTextBoxSubDocumentAsActive(arg: Double): Unit = js.native
   def setTextBoxSubDocumentAsActive(arg: FloatingTextBoxInfo): Unit = js.native

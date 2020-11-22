@@ -309,6 +309,24 @@ object Platform extends js.Object {
   def getVersion(): String = js.native
   
   /**
+    * Gets the value of the <Titanium.Platform.versionMajor> property.
+    * @deprecated Access <Titanium.Platform.versionMajor> instead.
+    */
+  def getVersionMajor(): Double = js.native
+  
+  /**
+    * Gets the value of the <Titanium.Platform.versionMinor> property.
+    * @deprecated Access <Titanium.Platform.versionMinor> instead.
+    */
+  def getVersionMinor(): Double = js.native
+  
+  /**
+    * Gets the value of the <Titanium.Platform.versionPatch> property.
+    * @deprecated Access <Titanium.Platform.versionPatch> instead.
+    */
+  def getVersionPatch(): Double = js.native
+  
+  /**
     * Applications's globally-unique ID (UUID).
     */
   val id: String = js.native
@@ -458,9 +476,24 @@ object Platform extends js.Object {
   val username: String = js.native
   
   /**
-    * System's OS version.
+    * The operating system's version string.
     */
   val version: String = js.native
+  
+  /**
+    * The operating system's major version number.
+    */
+  val versionMajor: Double = js.native
+  
+  /**
+    * The operating system's minor version number.
+    */
+  val versionMinor: Double = js.native
+  
+  /**
+    * The operating system's patch version number.
+    */
+  val versionPatch: Double = js.native
   
   /**
     * The Android-specific Platform module, used to access the device's platform-related functionality.

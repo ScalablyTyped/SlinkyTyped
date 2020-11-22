@@ -10,5 +10,5 @@ trait SuperPropertyAccessExpression
      with SuperProperty {
   
   @JSName("expression")
-  var expression_SuperPropertyAccessExpression: SuperExpression = js.native
+  val expression_SuperPropertyAccessExpression: SuperExpression = js.native
 }

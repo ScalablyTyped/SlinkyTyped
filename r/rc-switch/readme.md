@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-switch
 
-Typings are for version 3.2.0
+Typings are for version 3.2.2
 
 ## Library description:
 switch ui component for react

@@ -40,8 +40,7 @@ trait WorksheetData extends js.Object {
     *
     * Gets a collection of worksheet-level custom properties.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var customProperties: js.UndefOr[js.Array[WorksheetCustomPropertyData]] = js.native
   

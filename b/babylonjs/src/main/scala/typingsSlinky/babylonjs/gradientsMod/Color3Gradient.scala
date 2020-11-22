@@ -7,7 +7,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("babylonjs/Misc/gradients", "Color3Gradient")
 @js.native
-class Color3Gradient () extends IValueGradient {
+class Color3Gradient protected () extends IValueGradient {
+  /**
+    * Creates a new color3 gradient
+    * @param gradient gets or sets the gradient value (between 0 and 1)
+    * @param color gets or sets associated color
+    */
+  def this(
+    /**
+    * Gets or sets the gradient value (between 0 and 1)
+    */
+  gradient: Double,
+    /**
+    * Gets or sets the associated color
+    */
+  color: Color3
+  ) = this()
   
   /**
     * Gets or sets the associated color

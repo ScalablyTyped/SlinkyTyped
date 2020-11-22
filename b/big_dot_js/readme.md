@@ -1,7 +1,7 @@
 
 # Scala.js typings for big_dot_js
 
-Typings are for version 4.0
+Typings are for version 6.0
 
 ## Library description:
 A small, fast, easy-to-use library for arbitrary-precision decimal arithmetic

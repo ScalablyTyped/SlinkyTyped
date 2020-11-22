@@ -34,6 +34,10 @@ trait ChartLegendOptions extends js.Object {
   var position: js.UndefOr[PositionType] = js.native
   
   var reverse: js.UndefOr[Boolean] = js.native
+  
+  var rtl: js.UndefOr[Boolean] = js.native
+  
+  var textDirection: js.UndefOr[String] = js.native
 }
 object ChartLegendOptions {
   
@@ -111,5 +115,17 @@ object ChartLegendOptions {
     
     @scala.inline
     def deleteReverse: Self = this.set("reverse", js.undefined)
+    
+    @scala.inline
+    def setRtl(value: Boolean): Self = this.set("rtl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRtl: Self = this.set("rtl", js.undefined)
+    
+    @scala.inline
+    def setTextDirection(value: String): Self = this.set("textDirection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTextDirection: Self = this.set("textDirection", js.undefined)
   }
 }

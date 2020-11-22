@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PublicInnerError extends js.Object {
   
-  var code: js.UndefOr[String] = js.native
+  var code: js.UndefOr[NullableOption[String]] = js.native
   
-  var details: js.UndefOr[js.Array[PublicErrorDetail]] = js.native
+  var details: js.UndefOr[NullableOption[js.Array[PublicErrorDetail]]] = js.native
   
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[NullableOption[String]] = js.native
   
-  var target: js.UndefOr[String] = js.native
+  var target: js.UndefOr[NullableOption[String]] = js.native
 }
 object PublicInnerError {
   
@@ -39,30 +39,42 @@ object PublicInnerError {
     }
     
     @scala.inline
-    def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])
+    def setCode(value: NullableOption[String]): Self = this.set("code", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCode: Self = this.set("code", js.undefined)
     
     @scala.inline
+    def setCodeNull: Self = this.set("code", null)
+    
+    @scala.inline
     def setDetailsVarargs(value: PublicErrorDetail*): Self = this.set("details", js.Array(value :_*))
     
     @scala.inline
-    def setDetails(value: js.Array[PublicErrorDetail]): Self = this.set("details", value.asInstanceOf[js.Any])
+    def setDetails(value: NullableOption[js.Array[PublicErrorDetail]]): Self = this.set("details", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDetails: Self = this.set("details", js.undefined)
     
     @scala.inline
-    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setDetailsNull: Self = this.set("details", null)
+    
+    @scala.inline
+    def setMessage(value: NullableOption[String]): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
     
     @scala.inline
-    def setTarget(value: String): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setMessageNull: Self = this.set("message", null)
+    
+    @scala.inline
+    def setTarget(value: NullableOption[String]): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)
+    
+    @scala.inline
+    def setTargetNull: Self = this.set("target", null)
   }
 }

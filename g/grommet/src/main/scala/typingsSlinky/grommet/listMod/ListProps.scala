@@ -2,6 +2,7 @@ package typingsSlinky.grommet.listMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.Element
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.grommet.anon.Border
 import typingsSlinky.grommet.anon.Index
@@ -18,6 +19,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListProps extends js.Object {
   
   var a11yTitle: js.UndefOr[A11yTitleType] = js.native
+  
+  var action: js.UndefOr[js.Function2[/* item */ js.Any, /* index */ Double, Unit]] = js.native
   
   var alignSelf: js.UndefOr[AlignSelfType] = js.native
   
@@ -43,9 +46,9 @@ trait ListProps extends js.Object {
   
   var pad: js.UndefOr[PadType] = js.native
   
-  var primaryKey: js.UndefOr[String | (js.Function1[/* repeated */ js.Any, _])] = js.native
+  var primaryKey: js.UndefOr[String | (js.Function1[/* item */ js.Any, ReactElement])] = js.native
   
-  var secondaryKey: js.UndefOr[String | (js.Function1[/* repeated */ js.Any, _])] = js.native
+  var secondaryKey: js.UndefOr[String | (js.Function1[/* item */ js.Any, ReactElement])] = js.native
   
   var step: js.UndefOr[Double] = js.native
 }
@@ -77,6 +80,12 @@ object ListProps {
     
     @scala.inline
     def deleteA11yTitle: Self = this.set("a11yTitle", js.undefined)
+    
+    @scala.inline
+    def setAction(value: (/* item */ js.Any, /* index */ Double) => Unit): Self = this.set("action", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteAction: Self = this.set("action", js.undefined)
     
     @scala.inline
     def setAlignSelf(value: AlignSelfType): Self = this.set("alignSelf", value.asInstanceOf[js.Any])
@@ -151,19 +160,19 @@ object ListProps {
     def deletePad: Self = this.set("pad", js.undefined)
     
     @scala.inline
-    def setPrimaryKeyFunction1(value: /* repeated */ js.Any => _): Self = this.set("primaryKey", js.Any.fromFunction1(value))
+    def setPrimaryKeyFunction1(value: /* item */ js.Any => ReactElement): Self = this.set("primaryKey", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setPrimaryKey(value: String | (js.Function1[/* repeated */ js.Any, _])): Self = this.set("primaryKey", value.asInstanceOf[js.Any])
+    def setPrimaryKey(value: String | (js.Function1[/* item */ js.Any, ReactElement])): Self = this.set("primaryKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePrimaryKey: Self = this.set("primaryKey", js.undefined)
     
     @scala.inline
-    def setSecondaryKeyFunction1(value: /* repeated */ js.Any => _): Self = this.set("secondaryKey", js.Any.fromFunction1(value))
+    def setSecondaryKeyFunction1(value: /* item */ js.Any => ReactElement): Self = this.set("secondaryKey", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setSecondaryKey(value: String | (js.Function1[/* repeated */ js.Any, _])): Self = this.set("secondaryKey", value.asInstanceOf[js.Any])
+    def setSecondaryKey(value: String | (js.Function1[/* item */ js.Any, ReactElement])): Self = this.set("secondaryKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSecondaryKey: Self = this.set("secondaryKey", js.undefined)

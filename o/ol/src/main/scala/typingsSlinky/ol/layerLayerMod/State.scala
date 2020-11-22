@@ -10,7 +10,7 @@ trait State extends js.Object {
   
   var extent: js.UndefOr[Extent] = js.native
   
-  var layer: typingsSlinky.ol.baseMod.default = js.native
+  var layer: Layer[typingsSlinky.ol.sourceSourceMod.default] = js.native
   
   var managed: Boolean = js.native
   
@@ -34,7 +34,7 @@ object State {
   
   @scala.inline
   def apply(
-    layer: typingsSlinky.ol.baseMod.default,
+    layer: Layer[typingsSlinky.ol.sourceSourceMod.default],
     managed: Boolean,
     maxResolution: Double,
     maxZoom: Double,
@@ -65,7 +65,7 @@ object State {
     }
     
     @scala.inline
-    def setLayer(value: typingsSlinky.ol.baseMod.default): Self = this.set("layer", value.asInstanceOf[js.Any])
+    def setLayer(value: Layer[typingsSlinky.ol.sourceSourceMod.default]): Self = this.set("layer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setManaged(value: Boolean): Self = this.set("managed", value.asInstanceOf[js.Any])

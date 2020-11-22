@@ -1,5 +1,6 @@
 package typingsSlinky.officeJsPreview.global.Excel
 
+import typingsSlinky.officeJsPreview.Excel.Session
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,5 +13,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class RequestContext ()
   extends typingsSlinky.officeJsPreview.Excel.RequestContext {
   def this(url: String) = this()
-  def this(url: typingsSlinky.officeJsPreview.Excel.Session) = this()
+  def this(url: Session) = this()
 }

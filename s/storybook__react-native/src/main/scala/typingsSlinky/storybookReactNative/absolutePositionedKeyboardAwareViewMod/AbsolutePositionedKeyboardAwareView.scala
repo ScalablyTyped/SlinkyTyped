@@ -1,9 +1,11 @@
 package typingsSlinky.storybookReactNative.absolutePositionedKeyboardAwareViewMod
 
+import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.Component
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.mod.EmitterSubscription
 import typingsSlinky.reactNative.mod.KeyboardEvent
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.mod.NodeHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +27,7 @@ trait AbsolutePositionedKeyboardAwareView
   
   var keyboardOpen: Boolean = js.native
   
-  def onLayoutHandler(hasNativeEvent: LayoutChangeEvent): Unit = js.native
+  def onLayoutHandler(hasNativeEvent: SyntheticEvent[NodeHandle, Layout]): Unit = js.native
   
   def removeKeyboardOnOrientationChange(): Unit = js.native
 }

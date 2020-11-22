@@ -1,14 +1,14 @@
 package typingsSlinky.webpackBundleAnalyzer.mod
 
-import typingsSlinky.std.Plugin
 import typingsSlinky.webpackBundleAnalyzer.mod.BundleAnalyzerPlugin.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("webpack-bundle-analyzer", "BundleAnalyzerPlugin")
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify WebpackPluginInstance * / any */ @JSImport("webpack-bundle-analyzer", "BundleAnalyzerPlugin")
 @js.native
-class BundleAnalyzerPlugin_ () extends Plugin {
+class BundleAnalyzerPlugin_ () extends js.Object {
   def this(options: Options) = this()
   
   @JSName("apply")

@@ -304,8 +304,8 @@ package object ecsMod {
   type PlacementStrategies = js.Array[typingsSlinky.awsSdk.ecsMod.PlacementStrategy]
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.random_
-    - typingsSlinky.awsSdk.awsSdkStrings.spread
+    - typingsSlinky.awsSdk.awsSdkStrings.random__
+    - typingsSlinky.awsSdk.awsSdkStrings.spread_
     - typingsSlinky.awsSdk.awsSdkStrings.binpack
     - java.lang.String
   */

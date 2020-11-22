@@ -24,6 +24,9 @@ object reactNativeElementsStrings {
   def addressState: addressState = "addressState".asInstanceOf[addressState]
   
   @scala.inline
+  def all: all = "all".asInstanceOf[all]
+  
+  @scala.inline
   def always: always = "always".asInstanceOf[always]
   
   @scala.inline
@@ -213,6 +216,9 @@ object reactNativeElementsStrings {
   def light: light = "light".asInstanceOf[light]
   
   @scala.inline
+  def link: link = "link".asInstanceOf[link]
+  
+  @scala.inline
   def linkedin: linkedin = "linkedin".asInstanceOf[linkedin]
   
   @scala.inline
@@ -286,6 +292,9 @@ object reactNativeElementsStrings {
   
   @scala.inline
   def password: password = "password".asInstanceOf[password]
+  
+  @scala.inline
+  def phoneNumber: phoneNumber = "phoneNumber".asInstanceOf[phoneNumber]
   
   @scala.inline
   def pinterest: pinterest = "pinterest".asInstanceOf[pinterest]
@@ -466,6 +475,9 @@ object reactNativeElementsStrings {
   
   @js.native
   sealed trait addressState extends js.Object
+  
+  @js.native
+  sealed trait all extends js.Object
   
   @js.native
   sealed trait always extends js.Object
@@ -657,6 +669,9 @@ object reactNativeElementsStrings {
   sealed trait light extends js.Object
   
   @js.native
+  sealed trait link extends js.Object
+  
+  @js.native
   sealed trait linkedin extends SocialMediaType
   
   @js.native
@@ -730,6 +745,9 @@ object reactNativeElementsStrings {
   
   @js.native
   sealed trait password extends js.Object
+  
+  @js.native
+  sealed trait phoneNumber extends js.Object
   
   @js.native
   sealed trait pinterest extends SocialMediaType

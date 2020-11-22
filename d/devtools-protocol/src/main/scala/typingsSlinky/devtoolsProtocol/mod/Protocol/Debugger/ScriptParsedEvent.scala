@@ -22,6 +22,11 @@ trait ScriptParsedEvent extends js.Object {
   var debugSymbols: js.UndefOr[DebugSymbols] = js.native
   
   /**
+    * The name the embedder supplied for this script.
+    */
+  var embedderName: js.UndefOr[String] = js.native
+  
+  /**
     * Length of the last line of the script.
     */
   var endColumn: integer = js.native
@@ -168,6 +173,12 @@ object ScriptParsedEvent {
     
     @scala.inline
     def deleteDebugSymbols: Self = this.set("debugSymbols", js.undefined)
+    
+    @scala.inline
+    def setEmbedderName(value: String): Self = this.set("embedderName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEmbedderName: Self = this.set("embedderName", js.undefined)
     
     @scala.inline
     def setExecutionContextAuxData(value: js.Any): Self = this.set("executionContextAuxData", value.asInstanceOf[js.Any])

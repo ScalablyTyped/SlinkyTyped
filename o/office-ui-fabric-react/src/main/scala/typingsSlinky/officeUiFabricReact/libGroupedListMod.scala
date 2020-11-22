@@ -6,6 +6,7 @@ import typingsSlinky.officeUiFabricReact.groupFooterTypesMod.IGroupFooterProps
 import typingsSlinky.officeUiFabricReact.groupHeaderTypesMod.IGroupHeaderProps
 import typingsSlinky.officeUiFabricReact.groupShowAllTypesMod.IGroupShowAllProps
 import typingsSlinky.officeUiFabricReact.groupSpacerTypesMod.IGroupSpacerProps
+import typingsSlinky.officeUiFabricReact.groupedListBaseMod.IGroupedListState
 import typingsSlinky.officeUiFabricReact.groupedListSectionMod.IGroupedListSectionProps
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroupedListProps
 import scala.scalajs.js
@@ -49,6 +50,8 @@ object libGroupedListMod extends js.Object {
   object GroupedListBase extends js.Object {
     
     var defaultProps: Compact = js.native
+    
+    def getDerivedStateFromProps(nextProps: IGroupedListProps, previousState: IGroupedListState): IGroupedListState = js.native
   }
   
   @js.native

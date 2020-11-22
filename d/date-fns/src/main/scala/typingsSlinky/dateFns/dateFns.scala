@@ -1,13 +1,13 @@
 package typingsSlinky.dateFns
 
 import typingsSlinky.dateFns.anon.AdditionalDigits
-import typingsSlinky.dateFns.anon.Delimiter
 import typingsSlinky.dateFns.anon.Format
 import typingsSlinky.dateFns.anon.FractionDigits
 import typingsSlinky.dateFns.anon.Hours
 import typingsSlinky.dateFns.anon.IncludeSeconds
 import typingsSlinky.dateFns.anon.Inclusive
 import typingsSlinky.dateFns.anon.NearestTo
+import typingsSlinky.dateFns.anon.Representation
 import typingsSlinky.dateFns.anon.Step
 import typingsSlinky.dateFns.anon.Unit
 import typingsSlinky.dateFns.anon.UseAdditionalDayOfYearTokens
@@ -277,17 +277,17 @@ trait dateFns extends js.Object {
   def formatDistanceToNowStrict(date: js.Date, options: Unit): String = js.native
   
   def formatDuration(duration: Duration): String = js.native
-  def formatDuration(duration: Duration, options: Delimiter): String = js.native
+  def formatDuration(duration: Duration, options: Format): String = js.native
   
   def formatISO(date: Double): String = js.native
-  def formatISO(date: Double, options: Format): String = js.native
+  def formatISO(date: Double, options: Representation): String = js.native
   def formatISO(date: js.Date): String = js.native
-  def formatISO(date: js.Date, options: Format): String = js.native
+  def formatISO(date: js.Date, options: Representation): String = js.native
   
   def formatISO9075(date: Double): String = js.native
-  def formatISO9075(date: Double, options: Format): String = js.native
+  def formatISO9075(date: Double, options: Representation): String = js.native
   def formatISO9075(date: js.Date): String = js.native
-  def formatISO9075(date: js.Date, options: Format): String = js.native
+  def formatISO9075(date: js.Date, options: Representation): String = js.native
   
   def formatISODuration(duration: Duration): String = js.native
   

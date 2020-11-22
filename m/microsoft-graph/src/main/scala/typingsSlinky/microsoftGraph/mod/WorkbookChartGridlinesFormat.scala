@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookChartGridlinesFormat extends Entity {
   
   // Represents chart line formatting. Read-only.
-  var line: js.UndefOr[WorkbookChartLineFormat] = js.native
+  var line: js.UndefOr[NullableOption[WorkbookChartLineFormat]] = js.native
 }
 object WorkbookChartGridlinesFormat {
   
@@ -34,9 +34,12 @@ object WorkbookChartGridlinesFormat {
     }
     
     @scala.inline
-    def setLine(value: WorkbookChartLineFormat): Self = this.set("line", value.asInstanceOf[js.Any])
+    def setLine(value: NullableOption[WorkbookChartLineFormat]): Self = this.set("line", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLine: Self = this.set("line", js.undefined)
+    
+    @scala.inline
+    def setLineNull: Self = this.set("line", null)
   }
 }

@@ -15,7 +15,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined parent std.Partial<rc-tooltip.rc-tooltip/es/Tooltip.TooltipProps> */
+/* Inlined parent std.Partial<std.Omit<rc-tooltip.rc-tooltip/es/Tooltip.TooltipProps, 'children'>> */
 @js.native
 trait AbstractTooltipProps extends js.Object {
   
@@ -148,6 +148,9 @@ object AbstractTooltipProps {
     
     @scala.inline
     def deleteBuiltinPlacements: Self = this.set("builtinPlacements", js.undefined)
+    
+    @scala.inline
+    def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])

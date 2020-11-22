@@ -45,8 +45,7 @@ trait OnClickData extends js.Object {
   var modifiers: js.Array[OnClickDataModifiers] = js.native
   
   /**
-    * The URL of the page where the menu item was clicked. This property is not set if the click occured in a
-    * context where there is no current page, such as in a launcher context menu.
+    * The URL of the page where the menu item was clicked. This property is not set if the click occured in a context where there is no current page, such as in a launcher context menu.
     */
   var pageUrl: js.UndefOr[String] = js.native
   
@@ -60,8 +59,7 @@ trait OnClickData extends js.Object {
   var srcUrl: js.UndefOr[String] = js.native
   
   /**
-    * An identifier of the clicked element, if any. Use menus.getTargetElement in the page to find the
-    * corresponding element.
+    * An identifier of the clicked element, if any. Use menus.getTargetElement in the page to find the corresponding element.
     */
   var targetElementId: js.UndefOr[Double] = js.native
   

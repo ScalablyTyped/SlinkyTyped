@@ -329,6 +329,9 @@ object uifabricUtilitiesStrings {
   def link: link = "link".asInstanceOf[link]
   
   @scala.inline
+  def localStorage: localStorage = "localStorage".asInstanceOf[localStorage]
+  
+  @scala.inline
   def main: main = "main".asInstanceOf[main]
   
   @scala.inline
@@ -366,6 +369,9 @@ object uifabricUtilitiesStrings {
   
   @scala.inline
   def noindex: noindex = "noindex".asInstanceOf[noindex]
+  
+  @scala.inline
+  def none: none = "none".asInstanceOf[none]
   
   @scala.inline
   def noscript: noscript = "noscript".asInstanceOf[noscript]
@@ -446,7 +452,7 @@ object uifabricUtilitiesStrings {
   def select: select = "select".asInstanceOf[select]
   
   @scala.inline
-  def slot: slot = "slot".asInstanceOf[slot]
+  def sessionStorage: sessionStorage = "sessionStorage".asInstanceOf[sessionStorage]
   
   @scala.inline
   def small: small = "small".asInstanceOf[small]
@@ -875,6 +881,9 @@ object uifabricUtilitiesStrings {
   sealed trait link extends js.Object
   
   @js.native
+  sealed trait localStorage extends js.Object
+  
+  @js.native
   sealed trait main extends js.Object
   
   @js.native
@@ -912,6 +921,9 @@ object uifabricUtilitiesStrings {
   
   @js.native
   sealed trait noindex extends js.Object
+  
+  @js.native
+  sealed trait none extends js.Object
   
   @js.native
   sealed trait noscript extends js.Object
@@ -992,7 +1004,7 @@ object uifabricUtilitiesStrings {
   sealed trait select extends js.Object
   
   @js.native
-  sealed trait slot extends js.Object
+  sealed trait sessionStorage extends js.Object
   
   @js.native
   sealed trait small extends js.Object

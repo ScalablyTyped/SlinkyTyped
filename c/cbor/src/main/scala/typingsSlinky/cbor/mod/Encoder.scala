@@ -26,13 +26,13 @@ class Encoder () extends Transform {
 @js.native
 object Encoder extends js.Object {
   
-  def encode(objs: js.Any*): Buffer = js.native
+  def encode(objs: js.Any*): Buffer | js.typedarray.ArrayBufferView = js.native
   
-  def encodeAsync(obj: js.Any): js.Promise[Buffer] = js.native
-  def encodeAsync(obj: js.Any, options: EncoderOptions): js.Promise[Buffer] = js.native
+  def encodeAsync(obj: js.Any): js.Promise[Buffer | js.typedarray.ArrayBufferView] = js.native
+  def encodeAsync(obj: js.Any, options: EncoderOptions): js.Promise[Buffer | js.typedarray.ArrayBufferView] = js.native
   
-  def encodeCanonical(objs: js.Any*): Buffer = js.native
+  def encodeCanonical(objs: js.Any*): Buffer | js.typedarray.ArrayBufferView = js.native
   
-  def encodeOne(obj: js.Any): Buffer = js.native
-  def encodeOne(obj: js.Any, options: EncoderOptions): Buffer = js.native
+  def encodeOne(obj: js.Any): Buffer | js.typedarray.ArrayBufferView = js.native
+  def encodeOne(obj: js.Any, options: EncoderOptions): Buffer | js.typedarray.ArrayBufferView = js.native
 }

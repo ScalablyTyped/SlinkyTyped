@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("react-redux", "connect")
 @js.native
-object connect extends TopLevel[Connect_]
+object connect extends TopLevel[Connect_[DefaultRootState]]

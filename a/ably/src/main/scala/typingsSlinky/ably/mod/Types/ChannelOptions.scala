@@ -7,17 +7,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ChannelOptions extends js.Object {
   
-  var cipher: js.Any = js.native
+  var cipher: js.UndefOr[CipherParamOptions | CipherParams] = js.native
   
-  var modes: ChannelModes = js.native
+  var modes: js.UndefOr[ChannelModes] = js.native
   
-  var params: ChannelParams = js.native
+  var params: js.UndefOr[ChannelParams] = js.native
 }
 object ChannelOptions {
   
   @scala.inline
-  def apply(cipher: js.Any, modes: ChannelModes, params: ChannelParams): ChannelOptions = {
-    val __obj = js.Dynamic.literal(cipher = cipher.asInstanceOf[js.Any], modes = modes.asInstanceOf[js.Any], params = params.asInstanceOf[js.Any])
+  def apply(): ChannelOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ChannelOptions]
   }
   
@@ -37,7 +37,10 @@ object ChannelOptions {
     }
     
     @scala.inline
-    def setCipher(value: js.Any): Self = this.set("cipher", value.asInstanceOf[js.Any])
+    def setCipher(value: CipherParamOptions | CipherParams): Self = this.set("cipher", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCipher: Self = this.set("cipher", js.undefined)
     
     @scala.inline
     def setModesVarargs(value: ChannelMode*): Self = this.set("modes", js.Array(value :_*))
@@ -46,6 +49,12 @@ object ChannelOptions {
     def setModes(value: ChannelModes): Self = this.set("modes", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def deleteModes: Self = this.set("modes", js.undefined)
+    
+    @scala.inline
     def setParams(value: ChannelParams): Self = this.set("params", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParams: Self = this.set("params", js.undefined)
   }
 }

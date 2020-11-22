@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MouseInputEvent extends InputEvent {
   
-  // Docs: http://electronjs.org/docs/api/structures/mouse-input-event
+  // Docs: https://electronjs.org/docs/api/structures/mouse-input-event
   /**
     * The button pressed, can be `left`, `middle`, `right`.
     */

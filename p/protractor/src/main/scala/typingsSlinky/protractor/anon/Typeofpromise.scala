@@ -14,7 +14,6 @@ trait Typeofpromise extends js.Object {
     * argument. The callback will the resolve or reject the returned promise,
     * based on its arguments.
     */
-  // tslint:disable-next-line:no-any  Variable args have variable types.
   def checkedNodeCall[T](fn: js.Function, varArgs: js.Any*): js.Promise[T] = js.native
   
   /**
@@ -42,8 +41,7 @@ trait Typeofpromise extends js.Object {
   def filter[T, V](
     arr: js.Array[T],
     fn: js.Function3[/* element */ T, /* index */ Double, /* array */ js.Array[T], V],
-    // tslint:disable-next-line:no-any The type of archaic `self` adds no
-  // value
+    // value
   optSelf: js.Any
   ): js.Promise[js.Array[V]] = js.native
   def filter[T, V](
@@ -53,8 +51,7 @@ trait Typeofpromise extends js.Object {
   def filter[T, V](
     arr: js.Promise[js.Array[T]],
     fn: js.Function3[/* element */ T, /* index */ Double, /* array */ js.Array[T], V],
-    // tslint:disable-next-line:no-any The type of archaic `self` adds no
-  // value
+    // value
   optSelf: js.Any
   ): js.Promise[js.Array[V]] = js.native
   
@@ -73,7 +70,6 @@ trait Typeofpromise extends js.Object {
     *     value['self'] = value;
     *     promise.fullyResolved(value);  // Stack overflow.
     */
-  // tslint:disable-next-line:no-any Complex relation between input and output
   def fullyResolved(value: js.Any): js.Promise[_] = js.native
   
   // region Functions
@@ -97,7 +93,6 @@ trait Typeofpromise extends js.Object {
     * Only the first failure will be reported; all subsequent errors will be
     * silently ignored.
     */
-  // tslint:disable-next-line:no-any The type of archaic `self` adds no value
   def map[T, V](
     arr: js.Array[T],
     fn: js.Function4[/* self */ js.Any, /* type */ T, /* index */ Double, /* array */ js.Array[T], V]

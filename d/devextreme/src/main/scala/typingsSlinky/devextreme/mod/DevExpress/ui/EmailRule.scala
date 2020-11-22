@@ -16,13 +16,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EmailRule extends js.Object {
   
-  /** @name EmailRule.ignoreEmptyValue */
+  /**
+    * [descr:EmailRule.ignoreEmptyValue]
+    */
   var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
   
-  /** @name EmailRule.message */
+  /**
+    * [descr:EmailRule.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name EmailRule.type */
+  /**
+    * [descr:EmailRule.type]
+    */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native

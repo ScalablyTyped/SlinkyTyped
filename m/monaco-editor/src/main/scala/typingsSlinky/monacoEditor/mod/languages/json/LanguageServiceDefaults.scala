@@ -10,6 +10,8 @@ trait LanguageServiceDefaults extends js.Object {
   
   val diagnosticsOptions: DiagnosticsOptions = js.native
   
+  val languageId: String = js.native
+  
   val modeConfiguration: ModeConfiguration = js.native
   
   def onDidChange(listener: js.Function1[/* e */ LanguageServiceDefaults, _]): IDisposable = js.native

@@ -149,6 +149,19 @@ trait SeriesGraph_ extends js.Object {
   var animationThreshold: js.UndefOr[Double] = js.native
   
   /**
+    * For the situation where there are multiple links between nodes, the curveness of each link is automatically calculated.
+    * When set to number, it indicates the length of the edge curvenness array between two nodes, and the calculation result is given by the internal algorithm.
+    * When set to Array, it means that the curveness array is directly specified, and the multilateral curveness is directly selected from the array.
+    * Notice： if lineStyle.curveness has been set, this property is invalid.
+    *
+    * [see doc](https://echarts.apache.org/en/option.html#series-graph.autoCurveness)
+    *
+    *
+    * @see https://echarts.apache.org/en/option.html#series-graph.autoCurveness
+    */
+  var autoCurveness: js.UndefOr[Double | js.Array[Double]] = js.native
+  
+  /**
     * Distance between component and the bottom side of the container.
     *
     * `bottom` value can be instant pixel value like `20`; it can also
@@ -868,6 +881,15 @@ object SeriesGraph_ {
     
     @scala.inline
     def deleteAnimationThreshold: Self = this.set("animationThreshold", js.undefined)
+    
+    @scala.inline
+    def setAutoCurvenessVarargs(value: Double*): Self = this.set("autoCurveness", js.Array(value :_*))
+    
+    @scala.inline
+    def setAutoCurveness(value: Double | js.Array[Double]): Self = this.set("autoCurveness", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoCurveness: Self = this.set("autoCurveness", js.undefined)
     
     @scala.inline
     def setBottom(value: Double | String): Self = this.set("bottom", value.asInstanceOf[js.Any])

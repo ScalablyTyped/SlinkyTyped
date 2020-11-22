@@ -9,5 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createModifiersFromModifierFlags extends js.Object {
   
+  /** @deprecated Use `factory.createModifiersFromModifierFlags` or the factory supplied by your transformation context instead. */
   def apply(flags: typingsSlinky.typescript.mod.ModifierFlags): js.Array[Modifier] = js.native
 }

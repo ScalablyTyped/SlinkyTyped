@@ -31,6 +31,11 @@ trait Material extends IAnimatable {
   var _backFaceCulling: Boolean = js.native
   
   /**
+    * Specifies if the color write state should be cached
+    */
+  var _cachedColorWriteState: js.Any = js.native
+  
+  /**
     * Specifies if the depth function state should be cached
     */
   var _cachedDepthFunctionState: js.Any = js.native
@@ -39,6 +44,11 @@ trait Material extends IAnimatable {
     * Specifies if the depth write state should be cached
     */
   var _cachedDepthWriteState: js.Any = js.native
+  
+  /**
+    * Returns true if alpha blending should be disabled.
+    */
+  /* protected */ def _disableAlphaBlending: Boolean = js.native
   
   /**
     * @hidden
@@ -55,6 +65,11 @@ trait Material extends IAnimatable {
     * Stores the state specifing if fog should be enabled
     */
   var _fogEnabled: js.Any = js.native
+  
+  /**
+    * Enforces alpha test in opaque or blend mode in order to improve the performances of some situations.
+    */
+  var _forceAlphaTest: Boolean = js.native
   
   /** @hidden */
   var _indexInSceneMaterialArray: Double = js.native
@@ -101,6 +116,11 @@ trait Material extends IAnimatable {
   /* protected */ def _markAllSubMeshesAsMiscDirty(): Unit = js.native
   
   /**
+    * Indicates that prepass needs to be re-calculated for all submeshes
+    */
+  /* protected */ def _markAllSubMeshesAsPrePassDirty(): Unit = js.native
+  
+  /**
     * Indicates that textures and misc need to be re-calculated for all submeshes
     */
   /* protected */ def _markAllSubMeshesAsTexturesAndMiscDirty(): Unit = js.native
@@ -109,6 +129,11 @@ trait Material extends IAnimatable {
     * Indicates that textures need to be re-calculated for all submeshes
     */
   /* protected */ def _markAllSubMeshesAsTexturesDirty(): Unit = js.native
+  
+  /**
+    * Indicates that the scene should check if the rendering now needs a prepass
+    */
+  /* protected */ def _markScenePrePassDirty(): Unit = js.native
   
   /**
     * Stores the state of the need depth pre-pass value
@@ -126,6 +151,8 @@ trait Material extends IAnimatable {
     * An observer which watches for dispose events
     */
   var _onDisposeObserver: js.Any = js.native
+  
+  var _onEffectCreatedObservable: Nullable[Observable[typingsSlinky.babylonjs.anon.SubMesh]] = js.native
   
   var _onUnBindObservable: js.Any = js.native
   
@@ -152,6 +179,11 @@ trait Material extends IAnimatable {
   var _storeEffectOnSubMeshes: Boolean = js.native
   
   /**
+    * The transparency mode of the material.
+    */
+  var _transparencyMode: Nullable[Double] = js.native
+  
+  /**
     * Stores the uniform buffer
     */
   var _uniformBuffer: UniformBuffer = js.native
@@ -160,6 +192,13 @@ trait Material extends IAnimatable {
     * Specifies if uniform buffers should be used
     */
   var _useUBO: js.Any = js.native
+  
+  /**
+    * Gets or sets a boolean indicating that the material is allowed (if supported) to do shader hot swapping.
+    * This means that the material can keep using a previous shader while a new one is being compiled.
+    * This is mostly used when shader parallel compilation is supported (true by default)
+    */
+  var allowShaderHotSwapping: Boolean = js.native
   
   /**
     * Gets the alpha value of the material
@@ -246,6 +285,11 @@ trait Material extends IAnimatable {
   def bindViewProjection(effect: Effect): Unit = js.native
   
   /**
+    * If the material can be rendered to several textures with MRT extension
+    */
+  def canRenderToMRT: Boolean = js.native
+  
+  /**
     * Specifies if the ready state should be checked on each call
     */
   var checkReadyOnEveryCall: Boolean = js.native
@@ -262,10 +306,85 @@ trait Material extends IAnimatable {
     */
   def clone(name: String): Nullable[Material] = js.native
   
+  def customShaderNameResolve(
+    shaderName: String,
+    uniforms: js.Array[String],
+    uniformBuffers: js.Array[String],
+    samplers: js.Array[String],
+    defines: js.Array[String]
+  ): String = js.native
+  def customShaderNameResolve(
+    shaderName: String,
+    uniforms: js.Array[String],
+    uniformBuffers: js.Array[String],
+    samplers: js.Array[String],
+    defines: js.Array[String],
+    attributes: js.UndefOr[scala.Nothing],
+    options: ICustomShaderNameResolveOptions
+  ): String = js.native
+  def customShaderNameResolve(
+    shaderName: String,
+    uniforms: js.Array[String],
+    uniformBuffers: js.Array[String],
+    samplers: js.Array[String],
+    defines: js.Array[String],
+    attributes: js.Array[String]
+  ): String = js.native
+  def customShaderNameResolve(
+    shaderName: String,
+    uniforms: js.Array[String],
+    uniformBuffers: js.Array[String],
+    samplers: js.Array[String],
+    defines: js.Array[String],
+    attributes: js.Array[String],
+    options: ICustomShaderNameResolveOptions
+  ): String = js.native
+  /**
+    * Custom callback helping to override the default shader used in the material.
+    */
+  def customShaderNameResolve(
+    shaderName: String,
+    uniforms: js.Array[String],
+    uniformBuffers: js.Array[String],
+    samplers: js.Array[String],
+    defines: MaterialDefines
+  ): String = js.native
+  def customShaderNameResolve(
+    shaderName: String,
+    uniforms: js.Array[String],
+    uniformBuffers: js.Array[String],
+    samplers: js.Array[String],
+    defines: MaterialDefines,
+    attributes: js.UndefOr[scala.Nothing],
+    options: ICustomShaderNameResolveOptions
+  ): String = js.native
+  def customShaderNameResolve(
+    shaderName: String,
+    uniforms: js.Array[String],
+    uniformBuffers: js.Array[String],
+    samplers: js.Array[String],
+    defines: MaterialDefines,
+    attributes: js.Array[String]
+  ): String = js.native
+  def customShaderNameResolve(
+    shaderName: String,
+    uniforms: js.Array[String],
+    uniformBuffers: js.Array[String],
+    samplers: js.Array[String],
+    defines: MaterialDefines,
+    attributes: js.Array[String],
+    options: ICustomShaderNameResolveOptions
+  ): String = js.native
+  
   /**
     * Specifies the depth function that should be used. 0 means the default engine function
     */
   var depthFunction: Double = js.native
+  
+  /**
+    * Specifies if color writing should be disabled
+    */
+  var disableColorWrite: Boolean = js.native
   
   /**
     * Specifies if depth writing should be disabled
@@ -468,8 +587,8 @@ trait Material extends IAnimatable {
     * @param useInstances specifies that instances should be used
     * @returns a boolean indicating that the submesh is ready or not
     */
-  def isReadyForSubMesh(mesh: AbstractMesh, subMesh: BaseSubMesh): Boolean = js.native
-  def isReadyForSubMesh(mesh: AbstractMesh, subMesh: BaseSubMesh, useInstances: Boolean): Boolean = js.native
+  def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh): Boolean = js.native
+  def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh, useInstances: Boolean): Boolean = js.native
   
   /**
     * Marks a define in the material to indicate that it needs to be re-computed
@@ -496,7 +615,7 @@ trait Material extends IAnimatable {
   var name: String = js.native
   
   /**
-    * Specifies if the material will require alpha blending
+    * Specifies whether or not this material should be rendered in alpha blend mode.
     * @returns a boolean specifying if alpha blending is needed
     */
   def needAlphaBlending(): Boolean = js.native
@@ -509,7 +628,7 @@ trait Material extends IAnimatable {
   def needAlphaBlendingForMesh(mesh: AbstractMesh): Boolean = js.native
   
   /**
-    * Specifies if this material should be rendered in alpha test mode
+    * Specifies whether or not this material should be rendered in alpha test mode.
     * @returns a boolean specifying if an alpha test is needed.
     */
   def needAlphaTesting(): Boolean = js.native
@@ -547,6 +666,11 @@ trait Material extends IAnimatable {
     * Called during a dispose event
     */
   def onDispose_=(callback: js.Function0[Unit]): Unit = js.native
+  
+  /**
+    * An event triggered when the effect is (re)created
+    */
+  def onEffectCreatedObservable: Observable[typingsSlinky.babylonjs.anon.SubMesh] = js.native
   
   /**
     * Callback triggered when an error occurs
@@ -592,6 +716,18 @@ trait Material extends IAnimatable {
   def serialize(): js.Any = js.native
   
   /**
+    * Sets the required values to the prepass renderer.
+    * @param prePassRenderer defines the prepass renderer to setup.
+    * @returns true if the pre pass is needed.
+    */
+  def setPrePassRenderer(prePassRenderer: PrePassRenderer): Boolean = js.native
+  
+  /**
+    * Custom shadow depth material to use for shadow rendering instead of the in-built one
+    */
+  var shadowDepthWrapper: Nullable[ShadowDepthWrapper] = js.native
+  
+  /**
     * Stores the value for side orientation
     */
   var sideOrientation: Double = js.native
@@ -602,6 +738,23 @@ trait Material extends IAnimatable {
   var state: String = js.native
   
   def toString(fullDetails: Boolean): String = js.native
+  
+  /**
+    * Gets the current transparency mode.
+    */
+  def transparencyMode: Nullable[Double] = js.native
+  /**
+    * Sets the transparency mode of the material.
+    *
+    * | Value | Type                                | Description |
+    * | ----- | ----------------------------------- | ----------- |
+    * | 0     | OPAQUE                              |             |
+    * | 1     | ALPHATEST                           |             |
+    * | 2     | ALPHABLEND                          |             |
+    * | 3     | ALPHATESTANDBLEND                   |             |
+    *
+    */
+  def transparencyMode_=(value: Nullable[Double]): Unit = js.native
   
   /**
     * Unbinds the material from the mesh
@@ -618,9 +771,6 @@ trait Material extends IAnimatable {
     */
   var uniqueId: Double = js.native
   
-  /**
-    * Gets a value specifying if wireframe mode is enabled
-    */
   def wireframe: Boolean = js.native
   /**
     * Sets the state of wireframe mode

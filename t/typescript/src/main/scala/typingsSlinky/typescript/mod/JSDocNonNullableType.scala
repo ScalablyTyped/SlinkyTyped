@@ -11,7 +11,7 @@ trait JSDocNonNullableType
      with JSDocTypeReferencingNode {
   
   @JSName("kind")
-  var kind_JSDocNonNullableType: typingsSlinky.typescript.mod.SyntaxKind.JSDocNonNullableType = js.native
+  val kind_JSDocNonNullableType: typingsSlinky.typescript.mod.SyntaxKind.JSDocNonNullableType = js.native
   
-  var `type`: TypeNode = js.native
+  val `type`: TypeNode = js.native
 }

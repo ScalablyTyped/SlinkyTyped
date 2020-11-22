@@ -23,8 +23,6 @@ trait PointCloudStretchRendererProperties extends PointCloudRendererProperties {
     * A transform that is applied to the field value before evaluating the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudStretchRenderer.html#fieldTransformType)
-    *
-    * @default null
     */
   var fieldTransformType: js.UndefOr[none | `low-four-bit` | `high-four-bit` | `absolute-value` | `modulo-ten`] = js.native
   
@@ -36,7 +34,7 @@ trait PointCloudStretchRendererProperties extends PointCloudRendererProperties {
   var legendOptions: js.UndefOr[PointCloudStretchRendererLegendOptions] = js.native
   
   /**
-    * An array of color value pairs. Points with values between the specified stops are colorized with linearly interpolated colors.
+    * An array of color value pairs.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudStretchRenderer.html#stops)
     */

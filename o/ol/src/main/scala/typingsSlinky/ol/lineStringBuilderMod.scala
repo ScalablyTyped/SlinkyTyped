@@ -11,10 +11,7 @@ object lineStringBuilderMod extends js.Object {
   
   @js.native
   trait CanvasLineStringBuilder
-    extends typingsSlinky.ol.builderMod.default {
-    
-    def applyStroke(): Unit = js.native
-  }
+    extends typingsSlinky.ol.builderMod.default
   
   @js.native
   class default protected () extends CanvasLineStringBuilder {

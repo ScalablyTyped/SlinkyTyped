@@ -12,8 +12,12 @@ trait TransformCaller extends js.Object {
   
   var supportsDynamicImport: js.UndefOr[Boolean] = js.native
   
+  var supportsExportNamespaceFrom: js.UndefOr[Boolean] = js.native
+  
   // e.g. set to true by `babel-loader` and false by `babel-jest`
   var supportsStaticESM: js.UndefOr[Boolean] = js.native
+  
+  var supportsTopLevelAwait: js.UndefOr[Boolean] = js.native
 }
 object TransformCaller {
   
@@ -48,9 +52,21 @@ object TransformCaller {
     def deleteSupportsDynamicImport: Self = this.set("supportsDynamicImport", js.undefined)
     
     @scala.inline
+    def setSupportsExportNamespaceFrom(value: Boolean): Self = this.set("supportsExportNamespaceFrom", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSupportsExportNamespaceFrom: Self = this.set("supportsExportNamespaceFrom", js.undefined)
+    
+    @scala.inline
     def setSupportsStaticESM(value: Boolean): Self = this.set("supportsStaticESM", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSupportsStaticESM: Self = this.set("supportsStaticESM", js.undefined)
+    
+    @scala.inline
+    def setSupportsTopLevelAwait(value: Boolean): Self = this.set("supportsTopLevelAwait", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSupportsTopLevelAwait: Self = this.set("supportsTopLevelAwait", js.undefined)
   }
 }

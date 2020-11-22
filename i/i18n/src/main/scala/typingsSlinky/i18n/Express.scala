@@ -1,5 +1,6 @@
 package typingsSlinky.i18n
 
+import typingsSlinky.i18n.anon.Partiali18nAPI
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,6 +24,6 @@ object Express extends js.Object {
   @js.native
   trait Response extends i18nAPI {
     
-    var locals: i18nAPI = js.native
+    var locals: Partiali18nAPI = js.native
   }
 }

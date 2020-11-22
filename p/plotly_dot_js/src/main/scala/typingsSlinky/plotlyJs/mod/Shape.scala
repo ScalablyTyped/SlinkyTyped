@@ -10,8 +10,6 @@ import typingsSlinky.plotlyJs.plotlyJsStrings.path
 import typingsSlinky.plotlyJs.plotlyJsStrings.pixel
 import typingsSlinky.plotlyJs.plotlyJsStrings.rect
 import typingsSlinky.plotlyJs.plotlyJsStrings.scaled
-import typingsSlinky.plotlyJs.plotlyJsStrings.x
-import typingsSlinky.plotlyJs.plotlyJsStrings.y
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -43,8 +41,7 @@ trait Shape extends js.Object {
   
   var xanchor: Double | String = js.native
   
-  // x-reference is assigned to the x-values
-  var xref: x | paper = js.native
+  var xref: paper | XAxisName = js.native
   
   var xsizemode: scaled | pixel = js.native
   
@@ -54,8 +51,7 @@ trait Shape extends js.Object {
   
   var yanchor: Double | String = js.native
   
-  // y-reference is assigned to the plot paper [0,1]
-  var yref: paper | y = js.native
+  var yref: paper | YAxisName = js.native
   
   var ysizemode: scaled | pixel = js.native
 }
@@ -73,10 +69,10 @@ object Shape {
     `type`: rect | circle | line | path,
     visible: Boolean,
     xanchor: Double | String,
-    xref: x | paper,
+    xref: paper | XAxisName,
     xsizemode: scaled | pixel,
     yanchor: Double | String,
-    yref: paper | y,
+    yref: paper | YAxisName,
     ysizemode: scaled | pixel
   ): Shape = {
     val __obj = js.Dynamic.literal(fillcolor = fillcolor.asInstanceOf[js.Any], layer = layer.asInstanceOf[js.Any], line = line.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], opacity = opacity.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], templateitemname = templateitemname.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any], xanchor = xanchor.asInstanceOf[js.Any], xref = xref.asInstanceOf[js.Any], xsizemode = xsizemode.asInstanceOf[js.Any], yanchor = yanchor.asInstanceOf[js.Any], yref = yref.asInstanceOf[js.Any], ysizemode = ysizemode.asInstanceOf[js.Any])
@@ -130,7 +126,7 @@ object Shape {
     def setXanchor(value: Double | String): Self = this.set("xanchor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setXref(value: typingsSlinky.plotlyJs.plotlyJsStrings.x | paper): Self = this.set("xref", value.asInstanceOf[js.Any])
+    def setXref(value: paper | XAxisName): Self = this.set("xref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setXsizemode(value: scaled | pixel): Self = this.set("xsizemode", value.asInstanceOf[js.Any])
@@ -139,7 +135,7 @@ object Shape {
     def setYanchor(value: Double | String): Self = this.set("yanchor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setYref(value: paper | y): Self = this.set("yref", value.asInstanceOf[js.Any])
+    def setYref(value: paper | YAxisName): Self = this.set("yref", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setYsizemode(value: scaled | pixel): Self = this.set("ysizemode", value.asInstanceOf[js.Any])

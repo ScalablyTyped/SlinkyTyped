@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/reporters/build/summary_reporter", JSImport.Namespace)
+@JSImport("@jest/reporters/build/SummaryReporter", JSImport.Namespace)
 @js.native
 object summaryReporterMod extends js.Object {
   

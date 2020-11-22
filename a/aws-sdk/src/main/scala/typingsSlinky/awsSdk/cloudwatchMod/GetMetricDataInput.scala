@@ -23,7 +23,7 @@ trait GetMetricDataInput extends js.Object {
   var MetricDataQueries: typingsSlinky.awsSdk.cloudwatchMod.MetricDataQueries = js.native
   
   /**
-    * Include this value, if it was returned by the previous call, to get the next set of data points.
+    * Include this value, if it was returned by the previous GetMetricData operation, to get the next set of data points.
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.cloudwatchMod.NextToken] = js.native
   

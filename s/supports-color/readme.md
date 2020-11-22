@@ -1,7 +1,7 @@
 
 # Scala.js typings for supports-color
 
-Typings are for version 5.3
+Typings are for version 7.2
 
 ## Library description:
 Detect whether a terminal supports color

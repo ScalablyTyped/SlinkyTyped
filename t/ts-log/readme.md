@@ -1,7 +1,7 @@
 
 # Scala.js typings for ts-log
 
-Typings are for version 2.1.4
+Typings are for version 2.2.3
 
 ## Library description:
 Abstract logger TypeScript interface with a dummy logger that does nothing, useful for libraries.

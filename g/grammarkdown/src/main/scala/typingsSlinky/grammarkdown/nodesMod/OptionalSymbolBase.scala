@@ -1,5 +1,6 @@
 package typingsSlinky.grammarkdown.nodesMod
 
+import typingsSlinky.grammarkdown.tokensMod.OptionalSymbolKind
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind.QuestionToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`

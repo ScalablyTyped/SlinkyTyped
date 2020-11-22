@@ -10,8 +10,7 @@ sealed trait TopBottomSelectionType extends js.Object
   *
   * A simple enum for Top/Bottom filters to select whether to filter by the top N or bottom N percent, number, or sum of values.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @JSGlobal("Excel.TopBottomSelectionType")
 @js.native

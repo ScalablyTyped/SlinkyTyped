@@ -1,5 +1,12 @@
 package typingsSlinky.kdbxweb.anon
 
+import typingsSlinky.kdbxweb.kdbxwebStrings.FileCorrupt
+import typingsSlinky.kdbxweb.kdbxwebStrings.InvalidArg
+import typingsSlinky.kdbxweb.kdbxwebStrings.InvalidKey
+import typingsSlinky.kdbxweb.kdbxwebStrings.InvalidVersion
+import typingsSlinky.kdbxweb.kdbxwebStrings.MergeError
+import typingsSlinky.kdbxweb.kdbxwebStrings.NotImplemented
+import typingsSlinky.kdbxweb.kdbxwebStrings.Unsupported
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,34 +14,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BadSignature extends js.Object {
   
-  var BadSignature: String = js.native
+  var BadSignature: typingsSlinky.kdbxweb.kdbxwebStrings.BadSignature = js.native
   
-  var FileCorrupt: String = js.native
+  var FileCorrupt: typingsSlinky.kdbxweb.kdbxwebStrings.FileCorrupt = js.native
   
-  var InvalidArg: String = js.native
+  var InvalidArg: typingsSlinky.kdbxweb.kdbxwebStrings.InvalidArg = js.native
   
-  var InvalidKey: String = js.native
+  var InvalidKey: typingsSlinky.kdbxweb.kdbxwebStrings.InvalidKey = js.native
   
-  var InvalidVersion: String = js.native
+  var InvalidVersion: typingsSlinky.kdbxweb.kdbxwebStrings.InvalidVersion = js.native
   
-  var MergeError: String = js.native
+  var MergeError: typingsSlinky.kdbxweb.kdbxwebStrings.MergeError = js.native
   
-  var NotImplemented: String = js.native
+  var NotImplemented: typingsSlinky.kdbxweb.kdbxwebStrings.NotImplemented = js.native
   
-  var Unsupported: String = js.native
+  var Unsupported: typingsSlinky.kdbxweb.kdbxwebStrings.Unsupported = js.native
 }
 object BadSignature {
   
   @scala.inline
   def apply(
-    BadSignature: String,
-    FileCorrupt: String,
-    InvalidArg: String,
-    InvalidKey: String,
-    InvalidVersion: String,
-    MergeError: String,
-    NotImplemented: String,
-    Unsupported: String
+    BadSignature: typingsSlinky.kdbxweb.kdbxwebStrings.BadSignature,
+    FileCorrupt: FileCorrupt,
+    InvalidArg: InvalidArg,
+    InvalidKey: InvalidKey,
+    InvalidVersion: InvalidVersion,
+    MergeError: MergeError,
+    NotImplemented: NotImplemented,
+    Unsupported: Unsupported
   ): BadSignature = {
     val __obj = js.Dynamic.literal(BadSignature = BadSignature.asInstanceOf[js.Any], FileCorrupt = FileCorrupt.asInstanceOf[js.Any], InvalidArg = InvalidArg.asInstanceOf[js.Any], InvalidKey = InvalidKey.asInstanceOf[js.Any], InvalidVersion = InvalidVersion.asInstanceOf[js.Any], MergeError = MergeError.asInstanceOf[js.Any], NotImplemented = NotImplemented.asInstanceOf[js.Any], Unsupported = Unsupported.asInstanceOf[js.Any])
     __obj.asInstanceOf[BadSignature]
@@ -56,27 +63,27 @@ object BadSignature {
     }
     
     @scala.inline
-    def setBadSignature(value: String): Self = this.set("BadSignature", value.asInstanceOf[js.Any])
+    def setBadSignature(value: typingsSlinky.kdbxweb.kdbxwebStrings.BadSignature): Self = this.set("BadSignature", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFileCorrupt(value: String): Self = this.set("FileCorrupt", value.asInstanceOf[js.Any])
+    def setFileCorrupt(value: FileCorrupt): Self = this.set("FileCorrupt", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInvalidArg(value: String): Self = this.set("InvalidArg", value.asInstanceOf[js.Any])
+    def setInvalidArg(value: InvalidArg): Self = this.set("InvalidArg", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInvalidKey(value: String): Self = this.set("InvalidKey", value.asInstanceOf[js.Any])
+    def setInvalidKey(value: InvalidKey): Self = this.set("InvalidKey", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInvalidVersion(value: String): Self = this.set("InvalidVersion", value.asInstanceOf[js.Any])
+    def setInvalidVersion(value: InvalidVersion): Self = this.set("InvalidVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMergeError(value: String): Self = this.set("MergeError", value.asInstanceOf[js.Any])
+    def setMergeError(value: MergeError): Self = this.set("MergeError", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNotImplemented(value: String): Self = this.set("NotImplemented", value.asInstanceOf[js.Any])
+    def setNotImplemented(value: NotImplemented): Self = this.set("NotImplemented", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUnsupported(value: String): Self = this.set("Unsupported", value.asInstanceOf[js.Any])
+    def setUnsupported(value: Unsupported): Self = this.set("Unsupported", value.asInstanceOf[js.Any])
   }
 }

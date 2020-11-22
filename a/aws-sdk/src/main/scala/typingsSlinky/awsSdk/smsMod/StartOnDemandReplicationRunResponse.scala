@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StartOnDemandReplicationRunResponse extends js.Object {
   
   /**
-    * The identifier of the replication run.
+    * The ID of the replication run.
     */
   var replicationRunId: js.UndefOr[ReplicationRunId] = js.native
 }

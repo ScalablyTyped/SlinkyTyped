@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AuthSetting extends js.Object {
   
-  /** 是否授权通讯地址，对应接口 [wx.chooseAddress](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/address/wx.chooseAddress.html) */
+  /** 是否授权通讯地址，已取消此项授权，会默认返回true */
   @JSName("scope.address")
   var scopeDotaddress: js.UndefOr[Boolean] = js.native
   
@@ -16,11 +16,11 @@ trait AuthSetting extends js.Object {
   @JSName("scope.camera")
   var scopeDotcamera: js.UndefOr[Boolean] = js.native
   
-  /** 是否授权获取发票，对应接口 [wx.chooseInvoice](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/invoice/wx.chooseInvoice.html) */
+  /** 是否授权获取发票，已取消此项授权，会默认返回true */
   @JSName("scope.invoice")
   var scopeDotinvoice: js.UndefOr[Boolean] = js.native
   
-  /** 是否授权发票抬头，对应接口 [wx.chooseInvoiceTitle](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/invoice/wx.chooseInvoiceTitle.html) */
+  /** 是否授权发票抬头，已取消此项授权，会默认返回true */
   @JSName("scope.invoiceTitle")
   var scopeDotinvoiceTitle: js.UndefOr[Boolean] = js.native
   

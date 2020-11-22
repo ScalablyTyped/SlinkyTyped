@@ -75,7 +75,9 @@ trait Wampy extends js.Object {
   def register(topicURI: String, callbacks: RegisterCallbacksHash, avdancedOptions: RegisterAdvancedOptions): Wampy = js.native
   
   def subscribe(topicURI: String, callbacks: EventCallback): Wampy = js.native
+  def subscribe(topicURI: String, callbacks: EventCallback, advancedOptions: SubscribeAdvancedOptions): Wampy = js.native
   def subscribe(topicURI: String, callbacks: SubscribeCallbacksHash): Wampy = js.native
+  def subscribe(topicURI: String, callbacks: SubscribeCallbacksHash, advancedOptions: SubscribeAdvancedOptions): Wampy = js.native
   
   def unregister(topicURI: String): Wampy = js.native
   def unregister(topicURI: String, callbacks: Callback): Wampy = js.native

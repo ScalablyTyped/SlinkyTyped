@@ -14,6 +14,8 @@ trait MarkdownToDraftOptions extends js.Object {
   
   var blockTypes: js.UndefOr[BlockTypesParam] = js.native
   
+  var preserveNewlines: js.UndefOr[Boolean] = js.native
+  
   var remarkableOptions: js.UndefOr[StringDictionary[Boolean | js.Object]] = js.native
   
   var remarkablePlugins: js.UndefOr[js.Array[_]] = js.native
@@ -60,6 +62,12 @@ object MarkdownToDraftOptions {
     
     @scala.inline
     def deleteBlockTypes: Self = this.set("blockTypes", js.undefined)
+    
+    @scala.inline
+    def setPreserveNewlines(value: Boolean): Self = this.set("preserveNewlines", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreserveNewlines: Self = this.set("preserveNewlines", js.undefined)
     
     @scala.inline
     def setRemarkableOptions(value: StringDictionary[Boolean | js.Object]): Self = this.set("remarkableOptions", value.asInstanceOf[js.Any])

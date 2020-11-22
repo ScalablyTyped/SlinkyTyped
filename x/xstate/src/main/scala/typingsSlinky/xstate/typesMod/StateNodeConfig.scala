@@ -1,6 +1,9 @@
 package typingsSlinky.xstate.typesMod
 
+import typingsSlinky.xstate.anon.ContextAny
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.anon.`0`
+import typingsSlinky.xstate.anon.`1`
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import typingsSlinky.xstate.xstateStrings.`final`
 import typingsSlinky.xstate.xstateStrings.atomic
@@ -87,7 +90,9 @@ trait StateNodeConfig[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* 
   /**
     * The services to invoke upon entering this state node. These services will be stopped upon exiting this state node.
     */
-  var invoke: js.UndefOr[SingleOrArray[(InvokeConfig[TContext, TEvent]) | (StateMachine[_, _, _, _])]] = js.native
+  var invoke: js.UndefOr[
+    SingleOrArray[(InvokeConfig[TContext, TEvent]) | (StateMachine[_, _, _, ContextAny])]
+  ] = js.native
   
   /**
     * The relative key of the state node, which represents its location in the overall state value.
@@ -139,7 +144,7 @@ trait StateNodeConfig[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* 
   /**
     * @private
     */
-  var parent: js.UndefOr[StateNode[TContext, _, TEvent, _]] = js.native
+  var parent: js.UndefOr[StateNode[TContext, _, TEvent, ContextTContext[TContext]]] = js.native
   
   /**
     * The mapping of state node keys to their state node configurations (recursive).
@@ -280,10 +285,10 @@ object StateNodeConfig {
     def deleteInitial: Self = this.set("initial", js.undefined)
     
     @scala.inline
-    def setInvokeVarargs(value: ((InvokeConfig[TContext, TEvent]) | (StateMachine[js.Any, js.Any, js.Any, js.Any]))*): Self = this.set("invoke", js.Array(value :_*))
+    def setInvokeVarargs(value: ((InvokeConfig[TContext, TEvent]) | (StateMachine[js.Any, js.Any, js.Any, ContextAny]))*): Self = this.set("invoke", js.Array(value :_*))
     
     @scala.inline
-    def setInvoke(value: SingleOrArray[(InvokeConfig[TContext, TEvent]) | (StateMachine[_, _, _, _])]): Self = this.set("invoke", value.asInstanceOf[js.Any])
+    def setInvoke(value: SingleOrArray[(InvokeConfig[TContext, TEvent]) | (StateMachine[_, _, _, ContextAny])]): Self = this.set("invoke", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInvoke: Self = this.set("invoke", js.undefined)
@@ -302,7 +307,7 @@ object StateNodeConfig {
     
     @scala.inline
     def setOnVarargs(
-      value: ((/* import warning: importer.ImportType#apply Failed type conversion: {[ K in TEvent['type'] ]: xstate.xstate/lib/types.TransitionConfig<TContext, TEvent extends {  type :K}? TEvent : never> & {  event :K}}[TEvent['type']] */ js.Any) | ((TransitionConfig[TContext, TEvent]) with typingsSlinky.xstate.anon.Event) | ((TransitionConfig[TContext, TEvent]) with `0`))*
+      value: (((TransitionConfig[TContext, TEvent]) with typingsSlinky.xstate.anon.Event[TEvent]) | ((TransitionConfig[TContext, TEvent]) with `0`) | ((TransitionConfig[TContext, TEvent]) with `1`))*
     ): Self = this.set("on", js.Array(value :_*))
     
     @scala.inline
@@ -357,7 +362,7 @@ object StateNodeConfig {
     def deleteParallel: Self = this.set("parallel", js.undefined)
     
     @scala.inline
-    def setParent(value: StateNode[TContext, _, TEvent, _]): Self = this.set("parent", value.asInstanceOf[js.Any])
+    def setParent(value: StateNode[TContext, _, TEvent, ContextTContext[TContext]]): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteParent: Self = this.set("parent", js.undefined)

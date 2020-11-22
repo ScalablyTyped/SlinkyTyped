@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Line_[Datum] extends js.Object {
   
+  def apply(data: js.Array[Datum]): String | Null = js.native
   /**
     * Generates a line for the given array of data. Depending on this line generator’s associated curve,
     * the given input data may need to be sorted by x-value before being passed to the line generator.
@@ -17,7 +18,7 @@ trait Line_[Datum] extends js.Object {
     *
     * @param data Array of data elements.
     */
-  def apply(data: js.Array[Datum]): String | Null = js.native
+  def apply(data: js.Iterable[Datum]): String | Null = js.native
   
   /**
     * Returns the current rendering context, which defaults to null.

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object PanelGroup {
   
-  @JSImport("@react-md/tabs/types/PanelGroup", JSImport.Default)
+  @JSImport("@react-md/tabs/types/PanelGroup", "PanelGroup")
   @js.native
   object component extends js.Object
   

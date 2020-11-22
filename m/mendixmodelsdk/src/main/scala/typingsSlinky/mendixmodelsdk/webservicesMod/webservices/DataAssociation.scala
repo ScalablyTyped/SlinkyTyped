@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.webservicesMod.webservices
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.MsdAssociation
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAssociationBase
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,8 +21,8 @@ class DataAssociation protected () extends DataEntityBase {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def association: IAssociationBase | Null = js.native
@@ -43,9 +45,6 @@ class DataAssociation protected () extends DataEntityBase {
     */
   def exposedAssociationName: String = js.native
   def exposedAssociationName_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FDataAssociation: IModel = js.native
   
   /**
     * In version 8.5.0: introduced

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Outline extends js.Object {
   
-  var border: js.UndefOr[`0`] = js.native
+  var border: js.UndefOr[`3`] = js.native
   
   var outline: js.UndefOr[ColorSize] = js.native
   
@@ -37,7 +37,7 @@ object Outline {
     }
     
     @scala.inline
-    def setBorder(value: `0`): Self = this.set("border", value.asInstanceOf[js.Any])
+    def setBorder(value: `3`): Self = this.set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBorder: Self = this.set("border", js.undefined)

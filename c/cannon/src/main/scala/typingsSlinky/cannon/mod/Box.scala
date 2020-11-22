@@ -15,7 +15,7 @@ class Box protected ()
 @js.native
 object Box extends js.Object {
   
-  def calculateIntertia(
+  def calculateInertia(
     halfExtents: typingsSlinky.cannon.CANNON.Vec3,
     mass: Double,
     target: typingsSlinky.cannon.CANNON.Vec3

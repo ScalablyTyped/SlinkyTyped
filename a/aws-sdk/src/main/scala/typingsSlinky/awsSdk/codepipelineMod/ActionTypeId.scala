@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ActionTypeId extends js.Object {
   
   /**
-    * A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Valid categories are limited to one of the following values. 
+    * A category defines what kind of action can be taken in the stage, and constrains the provider type for the action. Valid categories are limited to one of the following values.    Source   Build   Test   Deploy   Invoke   Approval  
     */
   var category: ActionCategory = js.native
   
   /**
-    * The creator of the action being called.
+    * The creator of the action being called. There are three valid values for the Owner field in the action category section within your pipeline structure: AWS, ThirdParty, and Custom. For more information, see Valid Action Types and Providers in CodePipeline.
     */
   var owner: ActionOwner = js.native
   

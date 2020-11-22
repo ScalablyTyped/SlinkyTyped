@@ -74,6 +74,8 @@ package object cloudfrontMod {
   
   type EncryptionEntityList = js.Array[typingsSlinky.awsSdk.cloudfrontMod.EncryptionEntity]
   
+  type EndPointList = js.Array[typingsSlinky.awsSdk.cloudfrontMod.EndPoint]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`viewer-request`
     - typingsSlinky.awsSdk.awsSdkStrings.`viewer-response`
@@ -86,6 +88,8 @@ package object cloudfrontMod {
   type FieldLevelEncryptionProfileSummaryList = js.Array[typingsSlinky.awsSdk.cloudfrontMod.FieldLevelEncryptionProfileSummary]
   
   type FieldLevelEncryptionSummaryList = js.Array[typingsSlinky.awsSdk.cloudfrontMod.FieldLevelEncryptionSummary]
+  
+  type FieldList = js.Array[java.lang.String]
   
   type FieldPatternList = js.Array[java.lang.String]
   
@@ -125,6 +129,10 @@ package object cloudfrontMod {
     - java.lang.String
   */
   type ItemSelection = typingsSlinky.awsSdk.cloudfrontMod._ItemSelection | java.lang.String
+  
+  type KGKeyPairIdsList = js.Array[typingsSlinky.awsSdk.cloudfrontMod.KGKeyPairIds]
+  
+  type KeyGroupSummaryList = js.Array[typingsSlinky.awsSdk.cloudfrontMod.KeyGroupSummary]
   
   type KeyPairIdList = js.Array[java.lang.String]
   
@@ -209,6 +217,8 @@ package object cloudfrontMod {
   */
   type OriginRequestPolicyType = typingsSlinky.awsSdk.cloudfrontMod._OriginRequestPolicyType | java.lang.String
   
+  type OriginShieldRegion = java.lang.String
+  
   type PathList = js.Array[java.lang.String]
   
   /* Rewritten from type alias, can be one of: 
@@ -219,6 +229,8 @@ package object cloudfrontMod {
   */
   type PriceClass = typingsSlinky.awsSdk.cloudfrontMod._PriceClass | java.lang.String
   
+  type PublicKeyIdList = js.Array[java.lang.String]
+  
   type PublicKeySummaryList = js.Array[typingsSlinky.awsSdk.cloudfrontMod.PublicKeySummary]
   
   type QueryArgProfileList = js.Array[typingsSlinky.awsSdk.cloudfrontMod.QueryArgProfile]
@@ -227,11 +239,21 @@ package object cloudfrontMod {
   
   type QueryStringNamesList = js.Array[java.lang.String]
   
+  type RealtimeLogConfigList = js.Array[typingsSlinky.awsSdk.cloudfrontMod.RealtimeLogConfig]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Enabled_
+    - typingsSlinky.awsSdk.awsSdkStrings.Disabled_
+    - java.lang.String
+  */
+  type RealtimeMetricsSubscriptionStatus = typingsSlinky.awsSdk.cloudfrontMod._RealtimeMetricsSubscriptionStatus | java.lang.String
+  
   type ResourceARN = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`sni-only`
     - typingsSlinky.awsSdk.awsSdkStrings.vip
+    - typingsSlinky.awsSdk.awsSdkStrings.`static-ip`
     - java.lang.String
   */
   type SSLSupportMethod = typingsSlinky.awsSdk.cloudfrontMod._SSLSupportMethod | java.lang.String
@@ -260,6 +282,8 @@ package object cloudfrontMod {
   type TagList = js.Array[typingsSlinky.awsSdk.cloudfrontMod.Tag]
   
   type TagValue = java.lang.String
+  
+  type TrustedKeyGroupIdList = js.Array[java.lang.String]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`allow-all`

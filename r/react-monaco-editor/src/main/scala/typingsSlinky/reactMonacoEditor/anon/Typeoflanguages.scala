@@ -23,6 +23,7 @@ import typingsSlinky.monacoEditor.mod.languages.ImplementationProvider
 import typingsSlinky.monacoEditor.mod.languages.LanguageConfiguration
 import typingsSlinky.monacoEditor.mod.languages.LinkProvider
 import typingsSlinky.monacoEditor.mod.languages.OnTypeFormattingEditProvider
+import typingsSlinky.monacoEditor.mod.languages.OnTypeRenameProvider
 import typingsSlinky.monacoEditor.mod.languages.ReferenceProvider
 import typingsSlinky.monacoEditor.mod.languages.RenameProvider
 import typingsSlinky.monacoEditor.mod.languages.SelectionRangeProvider
@@ -85,6 +86,8 @@ trait Typeoflanguages extends js.Object {
   def registerLinkProvider(languageId: String, provider: LinkProvider): IDisposable = js.native
   
   def registerOnTypeFormattingEditProvider(languageId: String, provider: OnTypeFormattingEditProvider): IDisposable = js.native
+  
+  def registerOnTypeRenameProvider(languageId: String, provider: OnTypeRenameProvider): IDisposable = js.native
   
   def registerReferenceProvider(languageId: String, provider: ReferenceProvider): IDisposable = js.native
   

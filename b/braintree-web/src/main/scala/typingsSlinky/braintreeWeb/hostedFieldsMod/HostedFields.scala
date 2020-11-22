@@ -25,7 +25,7 @@ trait HostedFields extends js.Object {
     * });
     */
   def addClass(field: String, classname: String): Unit = js.native
-  def addClass(field: String, classname: String, callback: callback): Unit = js.native
+  def addClass(field: String, classname: String, callback: callback[_]): Unit = js.native
   
   /**
     * @example
@@ -41,7 +41,7 @@ trait HostedFields extends js.Object {
     * hostedFieldsInstance.clear('expirationDate');
     */
   def clear(field: String): Unit = js.native
-  def clear(field: String, callback: callback): Unit = js.native
+  def clear(field: String, callback: callback[_]): Unit = js.native
   
   /**
     * braintree.hostedFields.create({
@@ -72,7 +72,7 @@ trait HostedFields extends js.Object {
     * }, callback);
     */
   def create(options: Fields): js.Promise[HostedFields] = js.native
-  def create(options: Fields, callback: callback): Unit = js.native
+  def create(options: Fields, callback: callback[_]): Unit = js.native
   
   /**
     * Returns an {@link HostedFields~stateObject|object} that includes the state of all fields and possible card types.
@@ -101,7 +101,7 @@ trait HostedFields extends js.Object {
     * });
     */
   def removeClass(field: String, classname: String): Unit = js.native
-  def removeClass(field: String, classname: String, callback: callback): Unit = js.native
+  def removeClass(field: String, classname: String, callback: callback[_]): Unit = js.native
   
   /**
     * Sets the placeholder of a {@link module:braintree-web/hosted-fields~field field}.     *
@@ -126,7 +126,7 @@ trait HostedFields extends js.Object {
     * });
     */
   def setPlaceholder(field: String, placeholder: String): Unit = js.native
-  def setPlaceholder(field: String, placeholder: String, callback: callback): Unit = js.native
+  def setPlaceholder(field: String, placeholder: String, callback: callback[_]): Unit = js.native
   
   /**
     * An object that represents CSS that will be applied in each hosted field. This object looks similar to CSS.
@@ -167,7 +167,7 @@ trait HostedFields extends js.Object {
   var styleOptions: js.Any = js.native
   
   def teardown(): Unit = js.native
-  def teardown(callback: callback): Unit = js.native
+  def teardown(callback: callback[_]): Unit = js.native
   @JSName("teardown")
   def teardown_Promise(): js.Promise[Unit] = js.native
   
@@ -207,7 +207,7 @@ trait HostedFields extends js.Object {
     * });
     */
   def tokenize(): js.Promise[HostedFieldsTokenizePayload] = js.native
-  def tokenize(callback: callback): Unit = js.native
+  def tokenize(callback: callback[_]): Unit = js.native
   def tokenize(options: BillingAddress): js.Promise[HostedFieldsTokenizePayload] = js.native
-  def tokenize(options: BillingAddress, callback: callback): Unit = js.native
+  def tokenize(options: BillingAddress, callback: callback[_]): Unit = js.native
 }

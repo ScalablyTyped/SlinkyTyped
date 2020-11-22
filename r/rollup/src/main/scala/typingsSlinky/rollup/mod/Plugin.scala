@@ -11,6 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Plugin extends js.Object {
   
+  // for inter-plugin communication
+  var api: js.UndefOr[js.Any] = js.native
+  
   var augmentChunkHash: js.UndefOr[
     js.ThisFunction1[/* this */ PluginContext, /* chunk */ PreRenderedChunk, String | Unit]
   ] = js.native
@@ -31,6 +34,8 @@ trait Plugin extends js.Object {
   
   var cacheKey: js.UndefOr[String] = js.native
   
+  var closeWatcher: js.UndefOr[js.ThisFunction0[/* this */ PluginContext, Unit]] = js.native
+  
   var footer: js.UndefOr[AddonHook] = js.native
   
   var generateBundle: js.UndefOr[
@@ -47,13 +52,15 @@ trait Plugin extends js.Object {
   
   var load: js.UndefOr[LoadHook] = js.native
   
+  var moduleParsed: js.UndefOr[ModuleParsedHook] = js.native
+  
   var name: String = js.native
   
   var options: js.UndefOr[
     js.ThisFunction1[
       /* this */ MinimalPluginContext, 
       /* options */ InputOptions, 
-      js.UndefOr[InputOptions | Null]
+      js.UndefOr[(js.Promise[js.UndefOr[InputOptions | Null]]) | InputOptions | Null]
     ]
   ] = js.native
   
@@ -98,7 +105,7 @@ trait Plugin extends js.Object {
   
   var transform: js.UndefOr[TransformHook] = js.native
   
-  var watchChange: js.UndefOr[js.Function1[/* id */ String, Unit]] = js.native
+  var watchChange: js.UndefOr[WatchChangeHook] = js.native
   
   var writeBundle: js.UndefOr[
     js.ThisFunction2[
@@ -134,6 +141,12 @@ object Plugin {
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setApi(value: js.Any): Self = this.set("api", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteApi: Self = this.set("api", js.undefined)
     
     @scala.inline
     def setAugmentChunkHash(value: js.ThisFunction1[/* this */ PluginContext, /* chunk */ PreRenderedChunk, String | Unit]): Self = this.set("augmentChunkHash", value.asInstanceOf[js.Any])
@@ -174,6 +187,12 @@ object Plugin {
     def deleteCacheKey: Self = this.set("cacheKey", js.undefined)
     
     @scala.inline
+    def setCloseWatcher(value: js.ThisFunction0[/* this */ PluginContext, Unit]): Self = this.set("closeWatcher", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCloseWatcher: Self = this.set("closeWatcher", js.undefined)
+    
+    @scala.inline
     def setFooter(value: AddonHook): Self = this.set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -206,11 +225,17 @@ object Plugin {
     def deleteLoad: Self = this.set("load", js.undefined)
     
     @scala.inline
+    def setModuleParsed(value: ModuleParsedHook): Self = this.set("moduleParsed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModuleParsed: Self = this.set("moduleParsed", js.undefined)
+    
+    @scala.inline
     def setOptions(
       value: js.ThisFunction1[
           /* this */ MinimalPluginContext, 
           /* options */ InputOptions, 
-          js.UndefOr[InputOptions | Null]
+          js.UndefOr[(js.Promise[js.UndefOr[InputOptions | Null]]) | InputOptions | Null]
         ]
     ): Self = this.set("options", value.asInstanceOf[js.Any])
     
@@ -307,7 +332,7 @@ object Plugin {
     def deleteTransform: Self = this.set("transform", js.undefined)
     
     @scala.inline
-    def setWatchChange(value: /* id */ String => Unit): Self = this.set("watchChange", js.Any.fromFunction1(value))
+    def setWatchChange(value: WatchChangeHook): Self = this.set("watchChange", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWatchChange: Self = this.set("watchChange", js.undefined)

@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Target.SendMessageToTargetRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Storage.TrackCacheStorageForOriginRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `186` extends js.Object {
   
-  var paramsType: js.Array[SendMessageToTargetRequest] = js.native
+  var paramsType: js.Array[TrackCacheStorageForOriginRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `186` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SendMessageToTargetRequest], returnType: Unit): `186` = {
+  def apply(paramsType: js.Array[TrackCacheStorageForOriginRequest], returnType: Unit): `186` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`186`]
   }
@@ -36,10 +36,10 @@ object `186` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SendMessageToTargetRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: TrackCacheStorageForOriginRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SendMessageToTargetRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[TrackCacheStorageForOriginRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

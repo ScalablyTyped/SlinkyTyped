@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IEventController extends js.Object {
   
-  var onStartListening: js.UndefOr[js.Function2[/* events */ IEventManager, /* type */ String, Unit]] = js.native
+  var onStartListening: js.UndefOr[js.Function2[/* events */ IEventManager[js.Object], /* type */ String, Unit]] = js.native
   
-  var onStopListening: js.UndefOr[js.Function2[/* events */ IEventManager, /* type */ String, Unit]] = js.native
+  var onStopListening: js.UndefOr[js.Function2[/* events */ IEventManager[js.Object], /* type */ String, Unit]] = js.native
 }
 object IEventController {
   
@@ -35,13 +35,13 @@ object IEventController {
     }
     
     @scala.inline
-    def setOnStartListening(value: (/* events */ IEventManager, /* type */ String) => Unit): Self = this.set("onStartListening", js.Any.fromFunction2(value))
+    def setOnStartListening(value: (/* events */ IEventManager[js.Object], /* type */ String) => Unit): Self = this.set("onStartListening", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnStartListening: Self = this.set("onStartListening", js.undefined)
     
     @scala.inline
-    def setOnStopListening(value: (/* events */ IEventManager, /* type */ String) => Unit): Self = this.set("onStopListening", js.Any.fromFunction2(value))
+    def setOnStopListening(value: (/* events */ IEventManager[js.Object], /* type */ String) => Unit): Self = this.set("onStopListening", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnStopListening: Self = this.set("onStopListening", js.undefined)

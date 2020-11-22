@@ -9,7 +9,7 @@ trait FontSizeProps[TLength] extends js.Object {
   
   val fontSize: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontSizeProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontSize<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object FontSizeProps {
     }
     
     @scala.inline
+    def setFontSizeVarargs(value: js.Any*): Self = this.set("fontSize", js.Array(value :_*))
+    
+    @scala.inline
     def setFontSize(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontSizeProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontSize<TLength> */ _
         ]
     ): Self = this.set("fontSize", value.asInstanceOf[js.Any])
     

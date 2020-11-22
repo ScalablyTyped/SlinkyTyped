@@ -9,5 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createJsxOpeningFragment extends js.Object {
   
+  /** @deprecated Use `factory.createJsxOpeningFragment` or the factory supplied by your transformation context instead. */
   def apply(): JsxOpeningFragment = js.native
 }

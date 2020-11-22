@@ -1,7 +1,7 @@
 
 # Scala.js typings for properties-reader
 
-Typings are for version 0.0
+Typings are for version 2.1
 
 ## Library description:
 Properties file reader for Node.js

@@ -1,5 +1,6 @@
 package typingsSlinky.serverless.awsProviderMod
 
+import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Sqs extends js.Object {
   
-  var arn: String = js.native
+  var arn: String | StringDictionary[js.Any] = js.native
   
   var batchSize: js.UndefOr[Double | String] = js.native
   
@@ -18,7 +19,7 @@ trait Sqs extends js.Object {
 object Sqs {
   
   @scala.inline
-  def apply(arn: String): Sqs = {
+  def apply(arn: String | StringDictionary[js.Any]): Sqs = {
     val __obj = js.Dynamic.literal(arn = arn.asInstanceOf[js.Any])
     __obj.asInstanceOf[Sqs]
   }
@@ -39,7 +40,7 @@ object Sqs {
     }
     
     @scala.inline
-    def setArn(value: String): Self = this.set("arn", value.asInstanceOf[js.Any])
+    def setArn(value: String | StringDictionary[js.Any]): Self = this.set("arn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBatchSize(value: Double | String): Self = this.set("batchSize", value.asInstanceOf[js.Any])

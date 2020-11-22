@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TemplateSpan extends Node {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_TemplateSpan: typingsSlinky.typescript.mod.SyntaxKind.TemplateSpan = js.native
+  val kind_TemplateSpan: typingsSlinky.typescript.mod.SyntaxKind.TemplateSpan = js.native
   
-  var literal: TemplateMiddle | TemplateTail = js.native
+  val literal: TemplateMiddle | TemplateTail = js.native
   
   @JSName("parent")
-  var parent_TemplateSpan: TemplateExpression = js.native
+  val parent_TemplateSpan: TemplateExpression = js.native
 }

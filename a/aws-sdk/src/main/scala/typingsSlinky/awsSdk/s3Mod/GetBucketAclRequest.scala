@@ -11,6 +11,11 @@ trait GetBucketAclRequest extends js.Object {
     * Specifies the S3 bucket whose ACL is being requested.
     */
   var Bucket: BucketName = js.native
+  
+  /**
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
 }
 object GetBucketAclRequest {
   
@@ -37,5 +42,11 @@ object GetBucketAclRequest {
     
     @scala.inline
     def setBucket(value: BucketName): Self = this.set("Bucket", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
   }
 }

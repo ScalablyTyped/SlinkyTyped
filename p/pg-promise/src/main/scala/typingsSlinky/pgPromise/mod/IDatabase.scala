@@ -2,6 +2,7 @@ package typingsSlinky.pgPromise.mod
 
 import typingsSlinky.pgPromise.pgSubsetMod.IClient
 import typingsSlinky.pgPromise.pgSubsetMod.IConnectionParameters
+import typingsSlinky.pgPromise.pgSubsetMod.IPool
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +27,7 @@ trait IDatabase[Ext, C /* <: IClient */] extends IBaseProtocol[Ext] {
   val $dc: js.Any = js.native
   
   @JSName("$pool")
-  val $pool: js.Any = js.native
+  val $pool: IPool = js.native
   
   def connect(): XPromise[IConnected[Ext, C]] = js.native
   def connect(options: IConnectionOptions[C]): XPromise[IConnected[Ext, C]] = js.native

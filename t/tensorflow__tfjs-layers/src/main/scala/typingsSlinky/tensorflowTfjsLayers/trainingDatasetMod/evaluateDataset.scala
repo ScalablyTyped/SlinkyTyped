@@ -1,6 +1,6 @@
 package typingsSlinky.tensorflowTfjsLayers.trainingDatasetMod
 
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
 import typingsSlinky.tensorflowTfjsLayers.datasetStubMod.Dataset
 import typingsSlinky.tensorflowTfjsLayers.datasetStubMod.LazyIterator
 import scala.scalajs.js

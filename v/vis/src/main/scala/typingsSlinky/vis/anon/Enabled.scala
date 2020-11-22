@@ -7,17 +7,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Enabled extends js.Object {
   
-  var enabled: js.UndefOr[Boolean] = js.native
+  var enabled: Boolean = js.native
   
-  var scaleFactor: js.UndefOr[Double] = js.native
+  var forceDirection: js.UndefOr[String | Boolean] = js.native
   
-  var `type`: js.UndefOr[String] = js.native
+  var roundness: Double = js.native
+  
+  var `type`: String = js.native
 }
 object Enabled {
   
   @scala.inline
-  def apply(): Enabled = {
-    val __obj = js.Dynamic.literal()
+  def apply(enabled: Boolean, roundness: Double, `type`: String): Enabled = {
+    val __obj = js.Dynamic.literal(enabled = enabled.asInstanceOf[js.Any], roundness = roundness.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Enabled]
   }
   
@@ -40,18 +43,15 @@ object Enabled {
     def setEnabled(value: Boolean): Self = this.set("enabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteEnabled: Self = this.set("enabled", js.undefined)
-    
-    @scala.inline
-    def setScaleFactor(value: Double): Self = this.set("scaleFactor", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteScaleFactor: Self = this.set("scaleFactor", js.undefined)
+    def setRoundness(value: Double): Self = this.set("roundness", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteType: Self = this.set("type", js.undefined)
+    def setForceDirection(value: String | Boolean): Self = this.set("forceDirection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteForceDirection: Self = this.set("forceDirection", js.undefined)
   }
 }

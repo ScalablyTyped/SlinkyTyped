@@ -5,41 +5,65 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseGauge.Options.scale */
+/**
+  * [descr:BaseGauge.Options.scale]
+  */
 @js.native
 trait BaseGaugeScale extends js.Object {
   
-  /** @name BaseGauge.Options.scale.allowDecimals */
+  /**
+    * [descr:BaseGauge.Options.scale.allowDecimals]
+    */
   var allowDecimals: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseGauge.Options.scale.customMinorTicks */
+  /**
+    * [descr:BaseGauge.Options.scale.customMinorTicks]
+    */
   var customMinorTicks: js.UndefOr[js.Array[Double]] = js.native
   
-  /** @name BaseGauge.Options.scale.customTicks */
+  /**
+    * [descr:BaseGauge.Options.scale.customTicks]
+    */
   var customTicks: js.UndefOr[js.Array[Double]] = js.native
   
-  /** @name BaseGauge.Options.scale.endValue */
+  /**
+    * [descr:BaseGauge.Options.scale.endValue]
+    */
   var endValue: js.UndefOr[Double] = js.native
   
-  /** @name BaseGauge.Options.scale.label */
+  /**
+    * [descr:BaseGauge.Options.scale.label]
+    */
   var label: js.UndefOr[BaseGaugeScaleLabel] = js.native
   
-  /** @name BaseGauge.Options.scale.minorTick */
+  /**
+    * [descr:BaseGauge.Options.scale.minorTick]
+    */
   var minorTick: js.UndefOr[ColorLength] = js.native
   
-  /** @name BaseGauge.Options.scale.minorTickInterval */
+  /**
+    * [descr:BaseGauge.Options.scale.minorTickInterval]
+    */
   var minorTickInterval: js.UndefOr[Double] = js.native
   
-  /** @name BaseGauge.Options.scale.scaleDivisionFactor */
+  /**
+    * [descr:BaseGauge.Options.scale.scaleDivisionFactor]
+    */
   var scaleDivisionFactor: js.UndefOr[Double] = js.native
   
-  /** @name BaseGauge.Options.scale.startValue */
+  /**
+    * [descr:BaseGauge.Options.scale.startValue]
+    */
   var startValue: js.UndefOr[Double] = js.native
   
-  /** @name BaseGauge.Options.scale.tick */
+  /**
+    * [descr:BaseGauge.Options.scale.tick]
+    */
   var tick: js.UndefOr[ColorLength] = js.native
   
-  /** @name BaseGauge.Options.scale.tickInterval */
+  /**
+    * [descr:BaseGauge.Options.scale.tickInterval]
+    */
   var tickInterval: js.UndefOr[Double] = js.native
 }
 object BaseGaugeScale {

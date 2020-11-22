@@ -12,22 +12,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartCommonSeriesSettings extends dxPolarChartSeriesTypesCommonPolarChartSeries {
   
-  /** @name dxPolarChart.Options.commonSeriesSettings.area */
+  /**
+    * [descr:dxPolarChart.Options.commonSeriesSettings.area]
+    */
   var area: js.UndefOr[js.Any] = js.native
   
-  /** @name dxPolarChart.Options.commonSeriesSettings.bar */
+  /**
+    * [descr:dxPolarChart.Options.commonSeriesSettings.bar]
+    */
   var bar: js.UndefOr[js.Any] = js.native
   
-  /** @name dxPolarChart.Options.commonSeriesSettings.line */
+  /**
+    * [descr:dxPolarChart.Options.commonSeriesSettings.line]
+    */
   var line: js.UndefOr[js.Any] = js.native
   
-  /** @name dxPolarChart.Options.commonSeriesSettings.scatter */
+  /**
+    * [descr:dxPolarChart.Options.commonSeriesSettings.scatter]
+    */
   var scatter: js.UndefOr[js.Any] = js.native
   
-  /** @name dxPolarChart.Options.commonSeriesSettings.stackedbar */
+  /**
+    * [descr:dxPolarChart.Options.commonSeriesSettings.stackedbar]
+    */
   var stackedbar: js.UndefOr[js.Any] = js.native
   
-  /** @name dxPolarChart.Options.commonSeriesSettings.type */
+  /**
+    * [descr:dxPolarChart.Options.commonSeriesSettings.type]
+    */
   var `type`: js.UndefOr[area | bar | line | scatter | stackedbar] = js.native
 }
 object dxPolarChartCommonSeriesSettings {

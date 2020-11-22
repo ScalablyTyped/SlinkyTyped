@@ -27,7 +27,7 @@ object exceptionExceptionMod extends js.Object {
     /**
       * Native function for `JSON.stringify()`.
       *
-      * The {@link Exception.toJSON} function returns only three properties; ({@link name}, {@link message} and {@link stack}). If you want to define a new sub-class extending the {@link Exception} and let the class to export additional props (or remove some props), override this {@link Exception.toJSON} method.
+      * The {@link Exception.toJSON} function returns only three properties; ({@link name}, {@link message} and {@link stack}). If you want to define a new sub-class extending the {@link Exception} and const the class to export additional props (or remove some props), override this {@link Exception.toJSON} method.
       *
       * @return An object for `JSON.stringify()`.
       */

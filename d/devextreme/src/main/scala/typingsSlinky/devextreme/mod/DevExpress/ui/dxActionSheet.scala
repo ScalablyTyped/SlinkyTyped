@@ -9,12 +9,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxActionSheet extends CollectionWidget {
   
-  /** @name dxActionSheet.hide() */
+  /**
+    * [descr:dxActionSheet.hide()]
+    */
   def hide(): Promise[Unit] with JQueryPromise[Unit] = js.native
   
-  /** @name dxActionSheet.show() */
+  /**
+    * [descr:dxActionSheet.show()]
+    */
   def show(): Promise[Unit] with JQueryPromise[Unit] = js.native
   
-  /** @name dxActionSheet.toggle(showing) */
+  /**
+    * [descr:dxActionSheet.toggle(showing)]
+    */
   def toggle(showing: Boolean): Promise[Unit] with JQueryPromise[Unit] = js.native
 }

@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Code extends js.Object {
   
-  /** The generated code as a string. */
+  /** The generated code as a string */
   var code: String = js.native
   
-  /** A hash of all properties referenced within the fieldvar scope. */
+  /** A hash of all properties referenced within the _fieldvar_ scope */
   var fields: js.Array[String] = js.native
   
-  /** A hash of all properties referenced outside a provided whitelist */
+  /** A hash of all properties referenced outside a provided allowed list */
   var globals: js.Array[String] = js.native
 }
 object Code {

@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ServerGroupReplicationConfiguration extends js.Object {
   
   /**
-    * Identifier of the server group this replication configuration is associated with.
+    * The ID of the server group with which this replication configuration is associated.
     */
   var serverGroupId: js.UndefOr[ServerGroupId] = js.native
   
   /**
-    * Replication configuration for servers in the server group.
+    * The replication configuration for servers in the server group.
     */
   var serverReplicationConfigurations: js.UndefOr[ServerReplicationConfigurations] = js.native
 }

@@ -67,6 +67,9 @@ object tensorflowTfjsStrings {
   def nearest: nearest = "nearest".asInstanceOf[nearest]
   
   @scala.inline
+  def reflect: reflect = "reflect".asInstanceOf[reflect]
+  
+  @scala.inline
   def round: round = "round".asInstanceOf[round]
   
   @scala.inline
@@ -74,6 +77,9 @@ object tensorflowTfjsStrings {
   
   @scala.inline
   def string: string = "string".asInstanceOf[string]
+  
+  @scala.inline
+  def symmetric: symmetric = "symmetric".asInstanceOf[symmetric]
   
   @scala.inline
   def valid: valid = "valid".asInstanceOf[valid]
@@ -139,6 +145,9 @@ object tensorflowTfjsStrings {
   sealed trait nearest extends js.Object
   
   @js.native
+  sealed trait reflect extends js.Object
+  
+  @js.native
   sealed trait round extends js.Object
   
   @js.native
@@ -146,6 +155,9 @@ object tensorflowTfjsStrings {
   
   @js.native
   sealed trait string extends js.Object
+  
+  @js.native
+  sealed trait symmetric extends js.Object
   
   @js.native
   sealed trait valid extends js.Object

@@ -19,7 +19,7 @@ trait DomainLogPublishingOption extends js.Object {
   var enabled: js.UndefOr[Input[Boolean]] = js.native
   
   /**
-    * A type of Elasticsearch log. Valid values: INDEX_SLOW_LOGS, SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS
+    * A type of Elasticsearch log. Valid values: INDEX_SLOW_LOGS, SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS, AUDIT_LOGS
     */
   var logType: Input[String] = js.native
 }

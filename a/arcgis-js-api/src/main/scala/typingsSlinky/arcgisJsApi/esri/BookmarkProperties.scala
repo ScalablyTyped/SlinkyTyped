@@ -15,7 +15,7 @@ trait BookmarkProperties extends js.Object {
   var extent: js.UndefOr[ExtentProperties] = js.native
   
   /**
-    * The name of the bookmark item. Used as a label in the [Bookmarks](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html) widget.
+    * The name of the bookmark item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#name)
     */
@@ -27,6 +27,13 @@ trait BookmarkProperties extends js.Object {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#thumbnail)
     */
   var thumbnail: js.UndefOr[BookmarkThumbnail] = js.native
+  
+  /**
+    * The viewpoint of the bookmark item.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#viewpoint)
+    */
+  var viewpoint: js.UndefOr[ViewpointProperties] = js.native
 }
 object BookmarkProperties {
   
@@ -68,5 +75,11 @@ object BookmarkProperties {
     
     @scala.inline
     def deleteThumbnail: Self = this.set("thumbnail", js.undefined)
+    
+    @scala.inline
+    def setViewpoint(value: ViewpointProperties): Self = this.set("viewpoint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteViewpoint: Self = this.set("viewpoint", js.undefined)
   }
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.materialUiCore.createTypographyMod
 
-import typingsSlinky.csstype.mod.Property.FontFamily
-import typingsSlinky.csstype.mod.Property.FontWeight
+import typingsSlinky.csstype.mod.FontFamilyProperty
+import typingsSlinky.csstype.mod.FontWeightProperty
 import typingsSlinky.materialUiCore.withStylesMod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,15 +29,15 @@ trait TypographyOptions extends js.Object {
   
   var display4: js.UndefOr[TypographyStyleOptions] = js.native
   
-  var fontFamily: js.UndefOr[FontFamily] = js.native
+  var fontFamily: js.UndefOr[FontFamilyProperty] = js.native
   
   var fontSize: js.UndefOr[Double] = js.native
   
-  var fontWeightLight: js.UndefOr[FontWeight] = js.native
+  var fontWeightLight: js.UndefOr[FontWeightProperty] = js.native
   
-  var fontWeightMedium: js.UndefOr[FontWeight] = js.native
+  var fontWeightMedium: js.UndefOr[FontWeightProperty] = js.native
   
-  var fontWeightRegular: js.UndefOr[FontWeight] = js.native
+  var fontWeightRegular: js.UndefOr[FontWeightProperty] = js.native
   
   var h1: js.UndefOr[TypographyStyleOptions] = js.native
   
@@ -145,7 +145,7 @@ object TypographyOptions {
     def deleteDisplay4: Self = this.set("display4", js.undefined)
     
     @scala.inline
-    def setFontFamily(value: FontFamily): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
+    def setFontFamily(value: FontFamilyProperty): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontFamily: Self = this.set("fontFamily", js.undefined)
@@ -157,19 +157,19 @@ object TypographyOptions {
     def deleteFontSize: Self = this.set("fontSize", js.undefined)
     
     @scala.inline
-    def setFontWeightLight(value: FontWeight): Self = this.set("fontWeightLight", value.asInstanceOf[js.Any])
+    def setFontWeightLight(value: FontWeightProperty): Self = this.set("fontWeightLight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontWeightLight: Self = this.set("fontWeightLight", js.undefined)
     
     @scala.inline
-    def setFontWeightMedium(value: FontWeight): Self = this.set("fontWeightMedium", value.asInstanceOf[js.Any])
+    def setFontWeightMedium(value: FontWeightProperty): Self = this.set("fontWeightMedium", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontWeightMedium: Self = this.set("fontWeightMedium", js.undefined)
     
     @scala.inline
-    def setFontWeightRegular(value: FontWeight): Self = this.set("fontWeightRegular", value.asInstanceOf[js.Any])
+    def setFontWeightRegular(value: FontWeightProperty): Self = this.set("fontWeightRegular", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontWeightRegular: Self = this.set("fontWeightRegular", js.undefined)

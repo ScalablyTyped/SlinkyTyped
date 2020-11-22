@@ -9,7 +9,7 @@ trait PaddingYProps[TLength] extends js.Object {
   
   val py: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingTopProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingTop<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object PaddingYProps {
     }
     
     @scala.inline
+    def setPyVarargs(value: js.Any*): Self = this.set("py", js.Array(value :_*))
+    
+    @scala.inline
     def setPy(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingTopProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingTop<TLength> */ _
         ]
     ): Self = this.set("py", value.asInstanceOf[js.Any])
     

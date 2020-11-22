@@ -58,6 +58,20 @@ object fontAwesome5ProMod extends js.Object {
     def getImageSource(name: String, size: Double, color: String): js.Promise[ImageSource] = js.native
     def getImageSource(name: String, size: Double, color: String, fa5Style: ValueOf[Brand]): js.Promise[ImageSource] = js.native
     
+    def getImageSourceSync(name: String): ImageSource = js.native
+    def getImageSourceSync(
+      name: String,
+      size: js.UndefOr[scala.Nothing],
+      color: js.UndefOr[scala.Nothing],
+      fa5Style: ValueOf[Brand]
+    ): ImageSource = js.native
+    def getImageSourceSync(name: String, size: js.UndefOr[scala.Nothing], color: String): ImageSource = js.native
+    def getImageSourceSync(name: String, size: js.UndefOr[scala.Nothing], color: String, fa5Style: ValueOf[Brand]): ImageSource = js.native
+    def getImageSourceSync(name: String, size: Double): ImageSource = js.native
+    def getImageSourceSync(name: String, size: Double, color: js.UndefOr[scala.Nothing], fa5Style: ValueOf[Brand]): ImageSource = js.native
+    def getImageSourceSync(name: String, size: Double, color: String): ImageSource = js.native
+    def getImageSourceSync(name: String, size: Double, color: String, fa5Style: ValueOf[Brand]): ImageSource = js.native
+    
     def hasIcon(name: String): Boolean = js.native
     
     def loadFont(): js.Promise[Unit] = js.native

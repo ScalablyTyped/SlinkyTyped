@@ -1,5 +1,6 @@
 package typingsSlinky.auth0Js.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -71,7 +72,7 @@ class WebAuth protected () extends js.Object {
     * - If the client_id parameter is included, the returnTo URL must be listed in the Allowed Logout URLs set at the client level (see Setting Allowed Logout URLs at the App Level).
     * - If the client_id parameter is NOT included, the returnTo URL must be listed in the Allowed Logout URLs set at the account level (see Setting Allowed Logout URLs at the Account Level).
     *
-    * @see   {@link https://auth0.com/docs/api/authentication#logout}
+    * @see {@link https://auth0.com/docs/api/authentication#logout}
     */
   def logout(options: LogoutOptions): Unit = js.native
   
@@ -120,6 +121,20 @@ class WebAuth protected () extends js.Object {
   var popup: Popup = js.native
   
   var redirect: Redirect = js.native
+  
+  /**
+    * Renders the captcha challenge in the provided element.
+    * This function can only be used in the context of a Classic Universal Login Page.
+    * @param element The element where the captcha needs to be rendered
+    * @param [options] The configuration options for the captcha
+    * @param [callback] An optional completion callback
+    *
+    * @see {@link https://auth0.github.io/auth0.js/WebAuth.html#renderCaptcha}
+    */
+  def renderCaptcha(element: HTMLElement): Unit = js.native
+  def renderCaptcha(element: HTMLElement, options: js.UndefOr[scala.Nothing], callback: Auth0Callback[_, Auth0Error]): Unit = js.native
+  def renderCaptcha(element: HTMLElement, options: CatpchaConfiguration): Unit = js.native
+  def renderCaptcha(element: HTMLElement, options: CatpchaConfiguration, callback: Auth0Callback[_, Auth0Error]): Unit = js.native
   
   /**
     * Executes a silent authentication transaction under the hood in order to fetch a new tokens for the current session.

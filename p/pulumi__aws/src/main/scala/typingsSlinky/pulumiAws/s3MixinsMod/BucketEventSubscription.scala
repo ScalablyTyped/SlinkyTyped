@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.s3MixinsMod
 
-import typingsSlinky.pulumiAws.bucketMod.Bucket
 import typingsSlinky.pulumiAws.lambdaMod.EventSubscription
+import typingsSlinky.pulumiAws.s3BucketMod.Bucket
 import typingsSlinky.pulumiPulumi.resourceMod.ComponentResourceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

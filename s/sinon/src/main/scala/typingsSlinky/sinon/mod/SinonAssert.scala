@@ -11,118 +11,165 @@ trait SinonAssert extends js.Object {
   /**
     * Passes if spy was always called with obj as its this value.
     */
-  def alwaysCalledOn(spy: SinonSpy, obj: js.Any): Unit = js.native
+  def alwaysCalledOn(spy: SinonSpy[_, _], obj: js.Any): Unit = js.native
   
   /**
     * Passes if spy was always called with the provided arguments.
     * @param spy
     * @param args
     */
-  def alwaysCalledWith(spy: SinonSpy, args: js.Any*): Unit = js.native
+  def alwaysCalledWith[TArgs /* <: js.Array[_] */](
+    spy: SinonSpy[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Unit = js.native
   
   /**
     * Passes if spy was always called with the provided arguments and no others.
     */
-  def alwaysCalledWithExactly(spy: SinonSpy, args: js.Any*): Unit = js.native
+  def alwaysCalledWithExactly[TArgs /* <: js.Array[_] */](
+    spy: SinonSpy[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Unit = js.native
   
   /**
     * Passes if spy was always called with matching arguments.
     * This behaves the same way as sinon.assert.alwaysCalledWith(spy, sinon.match(arg1), sinon.match(arg2), ...).
     */
-  def alwaysCalledWithMatch(spy: SinonSpy, args: js.Any*): Unit = js.native
+  def alwaysCalledWithMatch[TArgs /* <: js.Array[_] */](
+    spy: SinonSpy[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: TArgs
+  ): Unit = js.native
   
   /**
     * Like threw, only required for all calls to the spy.
     */
-  def alwaysThrew(spy: SinonSpy): Unit = js.native
+  def alwaysThrew(spy: SinonSpy[_, _]): Unit = js.native
   /**
     * Like threw, only required for all calls to the spy.
     */
-  def alwaysThrew(spy: SinonSpy, exception: String): Unit = js.native
+  def alwaysThrew(spy: SinonSpy[_, _], exception: String): Unit = js.native
   /**
     * Like threw, only required for all calls to the spy.
     */
-  def alwaysThrew(spy: SinonSpy, exception: js.Any): Unit = js.native
+  def alwaysThrew(spy: SinonSpy[_, _], exception: js.Any): Unit = js.native
   
   /**
     * Passes if spy was called exactly num times.
     */
-  def callCount(spy: SinonSpy, count: Double): Unit = js.native
+  def callCount(spy: SinonSpy[_, _], count: Double): Unit = js.native
   
   /**
     * Passes if provided spies were called in the specified order.
     * @param spies
     */
-  def callOrder(spies: SinonSpy*): Unit = js.native
+  def callOrder(spies: (SinonSpy[_, _])*): Unit = js.native
   
   /**
     * Passes if spy was called at least once.
     */
-  def called(spy: SinonSpy): Unit = js.native
+  def called(spy: SinonSpy[_, _]): Unit = js.native
   
-  def calledOn(spyOrSpyCall: SinonSpyCall, obj: js.Any): Unit = js.native
+  def calledOn(spyOrSpyCall: SinonSpyCall[_, _], obj: js.Any): Unit = js.native
   /**
     * Passes if spy was ever called with obj as its this value.
     * It’s possible to assert on a dedicated spy call: sinon.assert.calledOn(spy.firstCall, arg1, arg2, ...);.
     */
-  def calledOn(spyOrSpyCall: SinonSpy, obj: js.Any): Unit = js.native
+  def calledOn(spyOrSpyCall: SinonSpy[_, _], obj: js.Any): Unit = js.native
   
   /**
     * Passes if spy was called once and only once.
     */
-  def calledOnce(spy: SinonSpy): Unit = js.native
+  def calledOnce(spy: SinonSpy[_, _]): Unit = js.native
   
-  def calledOnceWithExactly(spyOrSpyCall: SinonSpyCall, args: js.Any*): Unit = js.native
+  def calledOnceWithExactly[TArgs /* <: js.Array[_] */](
+    spyOrSpyCall: SinonSpyCall[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Unit = js.native
   /**
     * Passes if spy was called at exactly once with the provided arguments and no others.
     * @param spyOrSpyCall
     * @param args
     */
-  def calledOnceWithExactly(spyOrSpyCall: SinonSpy, args: js.Any*): Unit = js.native
+  def calledOnceWithExactly[TArgs /* <: js.Array[_] */](
+    spyOrSpyCall: SinonSpy[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Unit = js.native
+  
+  def calledOnceWithMatch[TArgs /* <: js.Array[_] */](
+    spyOrSpyCall: SinonSpyCall[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: TArgs
+  ): Unit = js.native
+  /**
+    * Passes if spy was called once with matching arguments.
+    * This behaves the same way as calling both sinon.assert.calledOnce(spy) and
+    * sinon.assert.calledWithMatch(spy, ...).
+    */
+  def calledOnceWithMatch[TArgs /* <: js.Array[_] */](
+    spyOrSpyCall: SinonSpy[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: TArgs
+  ): Unit = js.native
   
   /**
     * Passes if spy was called exactly three times.
     */
-  def calledThrice(spy: SinonSpy): Unit = js.native
+  def calledThrice(spy: SinonSpy[_, _]): Unit = js.native
   
   /**
     * Passes if spy was called exactly twice.
     */
-  def calledTwice(spy: SinonSpy): Unit = js.native
+  def calledTwice(spy: SinonSpy[_, _]): Unit = js.native
   
-  def calledWith(spyOrSpyCall: SinonSpyCall, args: js.Any*): Unit = js.native
+  def calledWith[TArgs /* <: js.Array[_] */](
+    spyOrSpyCall: SinonSpyCall[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Unit = js.native
   /**
     * Passes if spy was called with the provided arguments.
     * It’s possible to assert on a dedicated spy call: sinon.assert.calledWith(spy.firstCall, arg1, arg2, ...);.
     * @param spyOrSpyCall
     * @param args
     */
-  def calledWith(spyOrSpyCall: SinonSpy, args: js.Any*): Unit = js.native
+  def calledWith[TArgs /* <: js.Array[_] */](
+    spyOrSpyCall: SinonSpy[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Unit = js.native
   
-  def calledWithExactly(spyOrSpyCall: SinonSpyCall, args: js.Any*): Unit = js.native
+  def calledWithExactly[TArgs /* <: js.Array[_] */](
+    spyOrSpyCall: SinonSpyCall[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Unit = js.native
   /**
     * Passes if spy was called with the provided arguments and no others.
     * It’s possible to assert on a dedicated spy call: sinon.assert.calledWithExactly(spy.getCall(1), arg1, arg2, ...);.
     * @param spyOrSpyCall
     * @param args
     */
-  def calledWithExactly(spyOrSpyCall: SinonSpy, args: js.Any*): Unit = js.native
+  def calledWithExactly[TArgs /* <: js.Array[_] */](
+    spyOrSpyCall: SinonSpy[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Unit = js.native
   
-  def calledWithMatch(spyOrSpyCall: SinonSpyCall, args: js.Any*): Unit = js.native
+  def calledWithMatch[TArgs /* <: js.Array[_] */](
+    spyOrSpyCall: SinonSpyCall[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: TArgs
+  ): Unit = js.native
   /**
     * Passes if spy was called with matching arguments.
     * This behaves the same way as sinon.assert.calledWith(spy, sinon.match(arg1), sinon.match(arg2), ...).
-    * It’s possible to assert on a dedicated spy call: sinon.assert.calledWithMatch(spy.secondCall, arg1, arg2, ...);.
+    * It's possible to assert on a dedicated spy call: sinon.assert.calledWithMatch(spy.secondCall, arg1, arg2, ...);.
     */
-  def calledWithMatch(spyOrSpyCall: SinonSpy, args: js.Any*): Unit = js.native
+  def calledWithMatch[TArgs /* <: js.Array[_] */](
+    spyOrSpyCall: SinonSpy[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: TArgs
+  ): Unit = js.native
   
   /**
     * Passes if spy was called with the new operator.
     * It’s possible to assert on a dedicated spy call: sinon.assert.calledWithNew(spy.secondCall, arg1, arg2, ...);.
     * @param spyOrSpyCall
     */
-  def calledWithNew(spyOrSpyCall: SinonSpy): Unit = js.native
-  def calledWithNew(spyOrSpyCall: SinonSpyCall): Unit = js.native
+  def calledWithNew(spyOrSpyCall: SinonSpy[_, _]): Unit = js.native
+  def calledWithNew(spyOrSpyCall: SinonSpyCall[_, _]): Unit = js.native
   
   /**
     * Exposes assertions into another object, to better integrate with the test framework.
@@ -159,7 +206,10 @@ trait SinonAssert extends js.Object {
     * @param spy
     * @param args
     */
-  def neverCalledWith(spy: SinonSpy, args: js.Any*): Unit = js.native
+  def neverCalledWith[TArgs /* <: js.Array[_] */](
+    spy: SinonSpy[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type MatchArguments<TArgs> is not an array type */ args: MatchArguments[TArgs]
+  ): Unit = js.native
   
   /**
     * Passes if spy was never called with matching arguments.
@@ -167,7 +217,10 @@ trait SinonAssert extends js.Object {
     * @param spy
     * @param args
     */
-  def neverCalledWithMatch(spy: SinonSpy, args: js.Any*): Unit = js.native
+  def neverCalledWithMatch[TArgs /* <: js.Array[_] */](
+    spy: SinonSpy[TArgs, _],
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: TArgs
+  ): Unit = js.native
   
    // Overridable
   // Methods
@@ -175,7 +228,7 @@ trait SinonAssert extends js.Object {
     * Passes if spy was never called
     * @param spy
     */
-  def notCalled(spy: SinonSpy): Unit = js.native
+  def notCalled(spy: SinonSpy[_, _]): Unit = js.native
   
    // Overridable
   /**
@@ -187,20 +240,20 @@ trait SinonAssert extends js.Object {
   /**
     * Passes if spy threw any exception.
     */
-  def threw(spyOrSpyCall: SinonSpy): Unit = js.native
-  def threw(spyOrSpyCall: SinonSpyCall): Unit = js.native
-  def threw(spyOrSpyCall: SinonSpyCall, exception: String): Unit = js.native
-  def threw(spyOrSpyCall: SinonSpyCall, exception: js.Any): Unit = js.native
+  def threw(spyOrSpyCall: SinonSpy[_, _]): Unit = js.native
+  def threw(spyOrSpyCall: SinonSpyCall[_, _]): Unit = js.native
+  def threw(spyOrSpyCall: SinonSpyCall[_, _], exception: String): Unit = js.native
+  def threw(spyOrSpyCall: SinonSpyCall[_, _], exception: js.Any): Unit = js.native
   /**
     * Passes if spy threw the given exception.
     * The exception is an actual object.
     * It’s possible to assert on a dedicated spy call: sinon.assert.threw(spy.thirdCall, exception);.
     */
-  def threw(spyOrSpyCall: SinonSpy, exception: String): Unit = js.native
+  def threw(spyOrSpyCall: SinonSpy[_, _], exception: String): Unit = js.native
   /**
     * Passes if spy threw the given exception.
     * The exception is a String denoting its type.
     * It’s possible to assert on a dedicated spy call: sinon.assert.threw(spy.thirdCall, exception);.
     */
-  def threw(spyOrSpyCall: SinonSpy, exception: js.Any): Unit = js.native
+  def threw(spyOrSpyCall: SinonSpy[_, _], exception: js.Any): Unit = js.native
 }

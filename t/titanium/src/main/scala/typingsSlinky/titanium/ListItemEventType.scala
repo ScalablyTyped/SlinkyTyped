@@ -14,7 +14,7 @@ trait ListItemEventType extends js.Object {
   /**
     * The item ID bound to the list item that generated the event.
     */
-  var itemId: js.UndefOr[java.lang.String] = js.native
+  var itemId: js.UndefOr[String] = js.native
   
   /**
     * Item index.
@@ -49,13 +49,13 @@ object ListItemEventType {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setItemId(value: java.lang.String): Self = this.set("itemId", value.asInstanceOf[js.Any])
+    def setItemId(value: String): Self = this.set("itemId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteItemId: Self = this.set("itemId", js.undefined)

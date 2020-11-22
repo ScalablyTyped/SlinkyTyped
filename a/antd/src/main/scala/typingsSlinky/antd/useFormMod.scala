@@ -11,12 +11,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useFormMod extends js.Object {
   
-  def default(): js.Array[FormInstance] = js.native
-  def default(form: FormInstance): js.Array[FormInstance] = js.native
+  def default[Values](): js.Array[FormInstance[Values]] = js.native
+  def default[Values](form: FormInstance[Values]): js.Array[FormInstance[Values]] = js.native
   
   @js.native
-  trait FormInstance
-    extends typingsSlinky.rcFieldForm.interfaceMod.FormInstance {
+  trait FormInstance[Values]
+    extends typingsSlinky.rcFieldForm.interfaceMod.FormInstance[Values] {
     
     /** This is an internal usage. Do not use in your prod */
     var __INTERNAL__ : ItemRef = js.native

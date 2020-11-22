@@ -1,33 +1,29 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.viz.chartSeriesObject
-import typingsSlinky.devextreme.mod.DevExpress.viz.dxChart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `19` extends js.Object {
+trait `19`[T] extends js.Object {
   
-  var component: js.UndefOr[dxChart] = js.native
+  var component: js.UndefOr[T] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
-  
-  var target: js.UndefOr[chartSeriesObject] = js.native
 }
 object `19` {
   
   @scala.inline
-  def apply(): `19` = {
+  def apply[T](): `19`[T] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[`19`]
+    __obj.asInstanceOf[`19`[T]]
   }
   
   @scala.inline
-  implicit class `19Ops`[Self <: `19`] (val x: Self) extends AnyVal {
+  implicit class `19Ops`[Self <: `19`[_], T] (val x: Self with `19`[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -42,7 +38,7 @@ object `19` {
     }
     
     @scala.inline
-    def setComponent(value: dxChart): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: T): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -58,11 +54,5 @@ object `19` {
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)
-    
-    @scala.inline
-    def setTarget(value: chartSeriesObject): Self = this.set("target", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTarget: Self = this.set("target", js.undefined)
   }
 }

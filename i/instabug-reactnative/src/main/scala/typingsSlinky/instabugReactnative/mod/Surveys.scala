@@ -10,7 +10,7 @@ object Surveys extends js.Object {
   
   def getAvailableSurveys(availableSurveysCallback: js.Function1[/* surveys */ js.Array[Survey], Unit]): Unit = js.native
   
-  def hasRespondedToSurvey(surveyToken: String, surveyTokenCallback: js.Function0[Unit]): Unit = js.native
+  def hasRespondedToSurvey(surveyToken: String, surveyTokenCallback: js.Function1[/* hasResponded */ Boolean, Unit]): Unit = js.native
   
   def onDismissCallback(didDismissSurveyHandler: js.Function0[Unit]): Unit = js.native
   

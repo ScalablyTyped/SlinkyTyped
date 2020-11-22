@@ -26,7 +26,10 @@ class SharedBuilder_RateProps_1786259366[R <: js.Object] (val args: js.Array[js.
   def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def character(value: /* props */ StarProps => ReactElement): this.type = set("character", js.Any.fromFunction1(value))
+  def characterReactElement(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def character(value: ReactElement): this.type = set("character", value.asInstanceOf[js.Any])
   
   @scala.inline
   def characterRender(value: (/* origin */ ReactElement, /* props */ StarProps) => ReactElement): this.type = set("characterRender", js.Any.fromFunction2(value))

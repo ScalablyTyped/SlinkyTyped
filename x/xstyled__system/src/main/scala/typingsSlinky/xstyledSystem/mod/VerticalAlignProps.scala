@@ -9,7 +9,7 @@ trait VerticalAlignProps[TLength] extends js.Object {
   
   val verticalAlign: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object VerticalAlignProps {
     }
     
     @scala.inline
+    def setVerticalAlignVarargs(value: js.Any*): Self = this.set("verticalAlign", js.Array(value :_*))
+    
+    @scala.inline
     def setVerticalAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLength> */ _
         ]
     ): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
     

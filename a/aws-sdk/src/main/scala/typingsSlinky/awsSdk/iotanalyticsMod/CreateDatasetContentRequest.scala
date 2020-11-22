@@ -8,9 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateDatasetContentRequest extends js.Object {
   
   /**
-    * The name of the data set.
+    * The name of the dataset.
     */
   var datasetName: DatasetName = js.native
+  
+  /**
+    * The version ID of the dataset content. To specify versionId for a dataset content, the dataset must use a DeltaTimer filter.
+    */
+  var versionId: js.UndefOr[DatasetContentVersion] = js.native
 }
 object CreateDatasetContentRequest {
   
@@ -37,5 +42,11 @@ object CreateDatasetContentRequest {
     
     @scala.inline
     def setDatasetName(value: DatasetName): Self = this.set("datasetName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setVersionId(value: DatasetContentVersion): Self = this.set("versionId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVersionId: Self = this.set("versionId", js.undefined)
   }
 }

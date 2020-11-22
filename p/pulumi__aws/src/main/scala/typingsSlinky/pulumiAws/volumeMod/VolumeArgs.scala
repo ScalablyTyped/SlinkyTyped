@@ -20,7 +20,7 @@ trait VolumeArgs extends js.Object {
   val encrypted: js.UndefOr[Input[Boolean]] = js.native
   
   /**
-    * The amount of IOPS to provision for the disk.
+    * The amount of IOPS to provision for the disk. Only valid for `type` of `io1` or `io2`.
     */
   val iops: js.UndefOr[Input[Double]] = js.native
   
@@ -55,7 +55,7 @@ trait VolumeArgs extends js.Object {
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
-    * The type of EBS volume. Can be "standard", "gp2", "io1", "sc1" or "st1" (Default: "gp2").
+    * The type of EBS volume. Can be "standard", "gp2", "io1", "io2", "sc1" or "st1" (Default: "gp2").
     */
   val `type`: js.UndefOr[Input[String]] = js.native
 }

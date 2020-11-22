@@ -116,10 +116,10 @@ class Robot[A /* <: Adapter */] protected () extends js.Object {
     */
   def router(
     req: Request[ParamsDictionary, _, _, ParsedQs],
-    res: typingsSlinky.expressServeStaticCore.mod.Response[_]
+    res: typingsSlinky.expressServeStaticCore.mod.Response[_, Double]
   ): js.Any = js.native
   def router(req: Request[ParamsDictionary, _, _, ParsedQs], res: ServerResponse): js.Any = js.native
-  def router(req: IncomingMessage, res: typingsSlinky.expressServeStaticCore.mod.Response[_]): js.Any = js.native
+  def router(req: IncomingMessage, res: typingsSlinky.expressServeStaticCore.mod.Response[_, Double]): js.Any = js.native
   def router(req: IncomingMessage, res: ServerResponse): js.Any = js.native
   @JSName("router")
   val router_Original: Express = js.native

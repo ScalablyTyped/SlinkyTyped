@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__list
 
-Typings are for version 2.1.2
+Typings are for version 2.4.3
 
 ## Library description:
 This package is used to create lists with the material design specs.

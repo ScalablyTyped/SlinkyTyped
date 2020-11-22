@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.collapsibleListMod
 
+import typingsSlinky.blueprintjsCore.anon.PartialICollapsibleListPr
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +18,7 @@ class CollapsibleList ()
 @js.native
 object CollapsibleList extends js.Object {
   
-  var defaultProps: ICollapsibleListProps = js.native
+  var defaultProps: PartialICollapsibleListPr = js.native
   
   var displayName: String = js.native
 }

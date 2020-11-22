@@ -8,7 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CallbackSolution extends js.Object {
   
-  // tslint:disable-next-line:no-any
   @JSName("apply")
   def apply(): js.Any = js.native
   

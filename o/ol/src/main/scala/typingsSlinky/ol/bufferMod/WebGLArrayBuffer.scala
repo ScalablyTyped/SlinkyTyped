@@ -7,18 +7,33 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WebGLArrayBuffer extends js.Object {
   
+  /**
+    * Populates the buffer with an array of the given size (all values will be zeroes).
+    */
   def fromArray(array: js.Array[Double]): Unit = js.native
   
+  /**
+    * Populates the buffer with a raw binary array buffer.
+    */
   def fromArrayBuffer(buffer: js.typedarray.ArrayBuffer): Unit = js.native
   
+  /**
+    * Will return null if the buffer was not initialized
+    */
   def getArray(): js.typedarray.Float32Array | js.typedarray.Uint32Array = js.native
   
+  /**
+    * Will return 0 if the buffer is not initialized
+    */
   def getSize(): Double = js.native
   
   def getType(): Double = js.native
   
   def getUsage(): Double = js.native
   
+  /**
+    * Populates the buffer with an array of the given size (all values will be zeroes).
+    */
   def ofSize(size: Double): Unit = js.native
 }
 object WebGLArrayBuffer {

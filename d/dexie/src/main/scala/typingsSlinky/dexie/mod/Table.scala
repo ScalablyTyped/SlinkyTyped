@@ -27,7 +27,7 @@ trait Table[T, TKey] extends js.Object {
   
   def bulkDelete(keys: IndexableTypeArrayReadonly): PromiseExtended[Unit] = js.native
   
-  def bulkGet(keys: js.Array[TKey]): PromiseExtended[js.Array[T]] = js.native
+  def bulkGet(keys: js.Array[TKey]): PromiseExtended[js.Array[js.UndefOr[T]]] = js.native
   
   def bulkPut(items: js.Array[T]): PromiseExtended[TKey] = js.native
   def bulkPut(items: js.Array[T], keys: js.UndefOr[scala.Nothing], options: AllKeysBoolean): PromiseExtended[TKey] = js.native

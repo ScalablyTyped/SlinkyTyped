@@ -23,13 +23,19 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdList.getListItemHeightMod.ListItemHeight
 import typingsSlinky.reactMdList.listItemAddonMod.ListItemAddonPosition
 import typingsSlinky.reactMdList.listItemAddonMod.ListItemAddonType
 import typingsSlinky.reactMdList.listItemLinkMod.ListItemLinkWithComponentProps
+import typingsSlinky.reactMdList.reactMdListStrings.`additions removals`
 import typingsSlinky.reactMdList.reactMdListStrings.`additions text`
 import typingsSlinky.reactMdList.reactMdListStrings.`inline`
+import typingsSlinky.reactMdList.reactMdListStrings.`removals additions`
+import typingsSlinky.reactMdList.reactMdListStrings.`removals text`
+import typingsSlinky.reactMdList.reactMdListStrings.`text additions`
+import typingsSlinky.reactMdList.reactMdListStrings.`text removals`
 import typingsSlinky.reactMdList.reactMdListStrings.additions
 import typingsSlinky.reactMdList.reactMdListStrings.all
 import typingsSlinky.reactMdList.reactMdListStrings.ascending
@@ -207,7 +213,9 @@ object MenuItemLink {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -642,7 +650,7 @@ object MenuItemLink {
       def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def referrerPolicy(value: String): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
+      def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
       
       @scala.inline
       def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])
@@ -869,7 +877,9 @@ object MenuItemLink {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -1295,7 +1305,7 @@ object MenuItemLink {
       def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def referrerPolicy(value: String): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
+      def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
       
       @scala.inline
       def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])

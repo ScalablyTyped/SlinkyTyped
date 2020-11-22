@@ -10,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("backgrid", "Row")
 @js.native
 class Row ()
-  extends View[Model[js.Any, ModelSetOptions]]
+  extends View[Model[js.Any, ModelSetOptions, js.Object]]

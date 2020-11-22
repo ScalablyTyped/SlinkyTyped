@@ -9,13 +9,13 @@ trait PaddingTopProps[TLength] extends js.Object {
   
   val paddingTop: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingTopProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingTop<TLength> */ _
     ]
   ] = js.native
   
   val pt: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingTopProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingTop<TLength> */ _
     ]
   ] = js.native
 }
@@ -43,9 +43,12 @@ object PaddingTopProps {
     }
     
     @scala.inline
+    def setPaddingTopVarargs(value: js.Any*): Self = this.set("paddingTop", js.Array(value :_*))
+    
+    @scala.inline
     def setPaddingTop(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingTopProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingTop<TLength> */ _
         ]
     ): Self = this.set("paddingTop", value.asInstanceOf[js.Any])
     
@@ -53,9 +56,12 @@ object PaddingTopProps {
     def deletePaddingTop: Self = this.set("paddingTop", js.undefined)
     
     @scala.inline
+    def setPtVarargs(value: js.Any*): Self = this.set("pt", js.Array(value :_*))
+    
+    @scala.inline
     def setPt(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PaddingTopProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.PaddingTop<TLength> */ _
         ]
     ): Self = this.set("pt", value.asInstanceOf[js.Any])
     

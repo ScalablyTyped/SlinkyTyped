@@ -6,6 +6,7 @@ import typingsSlinky.relayRuntime.relayDeclarativeMutationConfigMod.DeclarativeM
 import typingsSlinky.relayRuntime.relayModernGraphQLTagMod.GraphQLTaggedNode
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.PayloadError
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.UploadableMap
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.CacheConfig
 import typingsSlinky.relayRuntime.relayStoreTypesMod.RecordSourceSelectorProxy
 import typingsSlinky.relayRuntime.relayStoreTypesMod.SelectorStoreUpdater
 import scala.scalajs.js
@@ -14,6 +15,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait MutationConfig[TOperation /* <: MutationParameters */] extends js.Object {
+  
+  var cacheConfig: js.UndefOr[CacheConfig] = js.native
   
   var configs: js.UndefOr[js.Array[DeclarativeMutationConfig]] = js.native
   
@@ -28,6 +31,8 @@ trait MutationConfig[TOperation /* <: MutationParameters */] extends js.Object {
   ] = js.native
   
   var onError: js.UndefOr[(js.Function1[/* error */ js.Error, Unit]) | Null] = js.native
+  
+  var onUnsubscribe: js.UndefOr[js.Function0[js.UndefOr[Unit | Null]]] = js.native
   
   var optimisticResponse: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: TOperation['response'] */ js.Any
@@ -87,6 +92,12 @@ object MutationConfig {
     ): Self = this.set("variables", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setCacheConfig(value: CacheConfig): Self = this.set("cacheConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCacheConfig: Self = this.set("cacheConfig", js.undefined)
+    
+    @scala.inline
     def setConfigsVarargs(value: DeclarativeMutationConfig*): Self = this.set("configs", js.Array(value :_*))
     
     @scala.inline
@@ -114,6 +125,12 @@ object MutationConfig {
     
     @scala.inline
     def setOnErrorNull: Self = this.set("onError", null)
+    
+    @scala.inline
+    def setOnUnsubscribe(value: () => js.UndefOr[Unit | Null]): Self = this.set("onUnsubscribe", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteOnUnsubscribe: Self = this.set("onUnsubscribe", js.undefined)
     
     @scala.inline
     def setOptimisticResponse(

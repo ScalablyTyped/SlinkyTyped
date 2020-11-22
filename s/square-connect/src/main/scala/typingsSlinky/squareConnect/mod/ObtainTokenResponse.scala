@@ -38,8 +38,8 @@ class ObtainTokenResponse () extends js.Object {
   var plan_id: js.UndefOr[String] = js.native
   
   /**
-    * A refresh token. For more information, see [OAuth access token management]
-    * @link https://developer.squareup.com/docs/authz/oauth/how-it-works#oauth-access-token-management
+    * A refresh token. OAuth refresh tokens are 64 bytes long.
+    * For more information, see [OAuth access token management](https://developer.squareup.com/docs/authz/oauth/how-it-works#oauth-access-token-management).
     */
   var refresh_token: js.UndefOr[String] = js.native
   

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookCommentReply extends Entity {
   
   // The content of a comment reply.
-  var content: js.UndefOr[String] = js.native
+  var content: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates the type for the comment reply.
   var contentType: js.UndefOr[String] = js.native
@@ -37,10 +37,13 @@ object WorkbookCommentReply {
     }
     
     @scala.inline
-    def setContent(value: String): Self = this.set("content", value.asInstanceOf[js.Any])
+    def setContent(value: NullableOption[String]): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
+    
+    @scala.inline
+    def setContentNull: Self = this.set("content", null)
     
     @scala.inline
     def setContentType(value: String): Self = this.set("contentType", value.asInstanceOf[js.Any])

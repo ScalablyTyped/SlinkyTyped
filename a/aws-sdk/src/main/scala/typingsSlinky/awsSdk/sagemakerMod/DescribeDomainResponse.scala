@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeDomainResponse extends js.Object {
   
   /**
+    * Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.    PublicInternetOnly - Non-EFS traffic is through a VPC managed by Amazon SageMaker, which allows direct internet access    VpcOnly - All Studio traffic is through the specified VPC and subnets  
+    */
+  var AppNetworkAccessType: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.AppNetworkAccessType] = js.native
+  
+  /**
     * The domain's authentication mode.
     */
   var AuthMode: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.AuthMode] = js.native
@@ -18,7 +23,7 @@ trait DescribeDomainResponse extends js.Object {
   var CreationTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * Settings which are applied to all UserProfile in this domain, if settings are not explicitly specified in a given UserProfile. 
+    * Settings which are applied to all UserProfiles in this domain, if settings are not explicitly specified in a given UserProfile. 
     */
   var DefaultUserSettings: js.UndefOr[UserSettings] = js.native
   
@@ -48,9 +53,14 @@ trait DescribeDomainResponse extends js.Object {
   var HomeEfsFileSystemId: js.UndefOr[ResourceId] = js.native
   
   /**
-    * The AWS Key Management Service encryption key ID.
+    * This member is deprecated and replaced with KmsKeyId.
     */
   var HomeEfsFileSystemKmsKeyId: js.UndefOr[KmsKeyId] = js.native
+  
+  /**
+    * The AWS KMS customer managed CMK used to encrypt the EFS volume attached to the domain.
+    */
+  var KmsKeyId: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.KmsKeyId] = js.native
   
   /**
     * The last modified time.
@@ -68,7 +78,7 @@ trait DescribeDomainResponse extends js.Object {
   var Status: js.UndefOr[DomainStatus] = js.native
   
   /**
-    * Security setting to limit to a set of subnets.
+    * The VPC subnets that Studio uses for communication.
     */
   var SubnetIds: js.UndefOr[Subnets] = js.native
   
@@ -78,7 +88,7 @@ trait DescribeDomainResponse extends js.Object {
   var Url: js.UndefOr[String1024] = js.native
   
   /**
-    * The ID of the Amazon Virtual Private Cloud.
+    * The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
     */
   var VpcId: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.VpcId] = js.native
 }
@@ -104,6 +114,12 @@ object DescribeDomainResponse {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAppNetworkAccessType(value: AppNetworkAccessType): Self = this.set("AppNetworkAccessType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAppNetworkAccessType: Self = this.set("AppNetworkAccessType", js.undefined)
     
     @scala.inline
     def setAuthMode(value: AuthMode): Self = this.set("AuthMode", value.asInstanceOf[js.Any])
@@ -158,6 +174,12 @@ object DescribeDomainResponse {
     
     @scala.inline
     def deleteHomeEfsFileSystemKmsKeyId: Self = this.set("HomeEfsFileSystemKmsKeyId", js.undefined)
+    
+    @scala.inline
+    def setKmsKeyId(value: KmsKeyId): Self = this.set("KmsKeyId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKmsKeyId: Self = this.set("KmsKeyId", js.undefined)
     
     @scala.inline
     def setLastModifiedTime(value: js.Date): Self = this.set("LastModifiedTime", value.asInstanceOf[js.Any])

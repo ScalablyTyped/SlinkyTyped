@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SuperExpression extends PrimaryExpression {
   
   @JSName("kind")
-  var kind_SuperExpression: SuperKeyword = js.native
+  val kind_SuperExpression: SuperKeyword = js.native
 }

@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createArrayBindingPattern extends js.Object {
   
+  /** @deprecated Use `factory.createArrayBindingPattern` or the factory supplied by your transformation context instead. */
   def apply(elements: js.Array[ArrayBindingElement]): ArrayBindingPattern = js.native
 }

@@ -13,7 +13,7 @@ trait PutSnapshotBlockRequest extends js.Object {
   var BlockData: typingsSlinky.awsSdk.ebsMod.BlockData = js.native
   
   /**
-    * The block index of the block in which to write the data. A block index is the offset position of a block within a snapshot, and it is used to identify the block. To identify the logical offset of the data in the logical volume, multiply the block index with the block size (Block index * 512 bytes).
+    * The block index of the block in which to write the data. A block index is a logical index in units of 512 KiB blocks. To identify the block index, divide the logical offset of the data in the logical volume by the block size (logical offset of data/524288). The logical offset of the data must be 512 KiB aligned.
     */
   var BlockIndex: typingsSlinky.awsSdk.ebsMod.BlockIndex = js.native
   

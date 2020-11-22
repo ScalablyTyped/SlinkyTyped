@@ -2,7 +2,7 @@ package typingsSlinky.echarts.echarts.EChartOption.SeriesLine
 
 import typingsSlinky.echarts.anon.BarBorderWidth
 import typingsSlinky.echarts.anon.Distance
-import typingsSlinky.echarts.anon.`10`
+import typingsSlinky.echarts.anon.`9`
 import typingsSlinky.echarts.echarts.EChartOption.BaseTooltip
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-line.data.emphasis
     */
-  var emphasis: js.UndefOr[`10`] = js.native
+  var emphasis: js.UndefOr[`9`] = js.native
   
   /**
     * The style of the symbol of single data point.
@@ -179,7 +179,7 @@ object DataObject {
     }
     
     @scala.inline
-    def setEmphasis(value: `10`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
+    def setEmphasis(value: `9`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEmphasis: Self = this.set("emphasis", js.undefined)

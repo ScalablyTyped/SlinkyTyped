@@ -1,5 +1,6 @@
 package typingsSlinky.surveyKnockout.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.surveyKnockout.surveyKnockoutStrings.`survey-panel`
 import typingsSlinky.surveyKnockout.surveyKnockoutStrings.`survey-question`
 import scala.scalajs.js
@@ -18,4 +19,6 @@ class QuestionRow protected () extends QuestionRowModel {
   var koElementAfterRender: js.Any = js.native
   
   var koGetType: js.Any = js.native
+  
+  def rowAfterRender(elements: js.Array[HTMLElement], model: QuestionRow): Unit = js.native
 }

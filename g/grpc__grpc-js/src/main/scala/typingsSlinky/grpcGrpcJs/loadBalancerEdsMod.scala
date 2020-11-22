@@ -19,10 +19,19 @@ object loadBalancerEdsMod extends js.Object {
     val channelControlHelper: js.Any = js.native
     
     /**
+      * Check whether a single call should be dropped according to the current
+      * policy, based on randomly chosen numbers. Returns the drop category if
+      * the call should be dropped, and null otherwise.
+      */
+    var checkForDrop: js.Any = js.native
+    
+    /**
       * The child load balancer that will handle balancing the results of the EDS
       * requests.
       */
     var childBalancer: js.Any = js.native
+    
+    var clusterDropStats: js.Any = js.native
     
     var edsServiceName: js.Any = js.native
     

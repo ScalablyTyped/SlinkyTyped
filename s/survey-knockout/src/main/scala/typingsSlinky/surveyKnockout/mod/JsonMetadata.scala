@@ -33,6 +33,9 @@ class JsonMetadata () extends js.Object {
   
   def findProperty(className: String, propertyName: String): JsonObjectProperty = js.native
   
+  def generateSchema(): js.Any = js.native
+  def generateSchema(className: String): js.Any = js.native
+  
   def getAllClasses(): js.Array[String] = js.native
   
   def getAllPropertiesByName(propertyName: String): js.Array[JsonObjectProperty] = js.native

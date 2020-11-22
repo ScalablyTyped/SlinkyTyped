@@ -13,6 +13,11 @@ trait CompleteMultipartUploadRequest extends js.Object {
   var Bucket: BucketName = js.native
   
   /**
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
+  
+  /**
     * Object key for which the multipart upload was initiated.
     */
   var Key: ObjectKey = js.native
@@ -60,6 +65,12 @@ object CompleteMultipartUploadRequest {
     
     @scala.inline
     def setUploadId(value: MultipartUploadId): Self = this.set("UploadId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
     
     @scala.inline
     def setMultipartUpload(value: CompletedMultipartUpload): Self = this.set("MultipartUpload", value.asInstanceOf[js.Any])

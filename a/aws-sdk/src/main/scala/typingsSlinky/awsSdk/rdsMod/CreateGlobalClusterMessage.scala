@@ -18,7 +18,7 @@ trait CreateGlobalClusterMessage extends js.Object {
   var DeletionProtection: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * Provides the name of the database engine to be used for this DB cluster.
+    * The name of the database engine to be used for this DB cluster.
     */
   var Engine: js.UndefOr[String] = js.native
   

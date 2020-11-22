@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined @babel/template.@babel/template.TemplateBuilder<@babel/types.@babel/types.Statement | std.Array<@babel/types.@babel/types.Statement>> & {  smart :@babel/template.@babel/template.TemplateBuilder<@babel/types.@babel/types.Statement | std.Array<@babel/types.@babel/types.Statement>>,   statement :@babel/template.@babel/template.TemplateBuilder<@babel/types.@babel/types.Statement>,   statements :@babel/template.@babel/template.TemplateBuilder<std.Array<@babel/types.@babel/types.Statement>>,   expression :@babel/template.@babel/template.TemplateBuilder<@babel/types.@babel/types.Expression>,   program :@babel/template.@babel/template.TemplateBuilder<@babel/types.@babel/types.Program>,   ast :{None (tpl : string, opts : @babel/template.@babel/template.TemplateBuilderOptions | undefined): @babel/types.@babel/types.Statement | std.Array<@babel/types.@babel/types.Statement>, None (tpl : std.TemplateStringsArray, args : ...any): @babel/types.@babel/types.Statement | std.Array<@babel/types.@babel/types.Statement>}} */
+/* Inlined @babel/template.@babel/template.TemplateBuilder<@babel/types.@babel/types.Statement | std.Array<@babel/types.@babel/types.Statement>> & {  smart :@babel/template.@babel/template.TemplateBuilder<@babel/types.@babel/types.Statement | std.Array<@babel/types.@babel/types.Statement>>,   statement :@babel/template.@babel/template.TemplateBuilder<@babel/types.@babel/types.Statement>,   statements :@babel/template.@babel/template.TemplateBuilder<std.Array<@babel/types.@babel/types.Statement>>,   expression :@babel/template.@babel/template.TemplateBuilder<@babel/types.@babel/types.Expression>,   program :@babel/template.@babel/template.TemplateBuilder<@babel/types.@babel/types.Program>,   ast :{None (tpl : string, opts : @babel/template.@babel/template.TemplateBuilderOptions | undefined): @babel/types.@babel/types.Statement | std.Array<@babel/types.@babel/types.Statement>, None (tpl : std.TemplateStringsArray, args : ...unknown): @babel/types.@babel/types.Statement | std.Array<@babel/types.@babel/types.Statement>}} */
 @js.native
 trait DefaultTemplateBuilder extends js.Object {
   
@@ -27,10 +27,20 @@ trait DefaultTemplateBuilder extends js.Object {
     */
   def apply(tpl: TemplateStringsArray, args: js.Any*): js.Function1[/* arg */ js.UndefOr[PublicReplacements], Statement | js.Array[Statement]] = js.native
   
-  // Allow users to explicitly create templates that produce ASTs, skipping the need for an intermediate function.
+  /**
+    * Allow users to explicitly create templates that produce ASTs,
+    * skipping the need for an intermediate function.
+    *
+    * Does not allow `%%foo%%` style placeholders.
+    */
   def ast(tpl: String): Statement | js.Array[Statement] = js.native
   def ast(tpl: String, opts: TemplateBuilderOptions): Statement | js.Array[Statement] = js.native
-  // Allow users to explicitly create templates that produce ASTs, skipping the need for an intermediate function.
+  /**
+    * Allow users to explicitly create templates that produce ASTs,
+    * skipping the need for an intermediate function.
+    *
+    * Does not allow `%%foo%%` style placeholders.
+    */
   def ast(tpl: TemplateStringsArray, args: js.Any*): Statement | js.Array[Statement] = js.native
   @JSName("ast")
   var ast_Original: FnCall = js.native

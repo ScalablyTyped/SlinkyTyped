@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod.reports
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -22,12 +23,13 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.TableCell
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.VerticalFlow
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/report-pane relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide6/report-pane relevant section in reference guide}
   *
   * In version 6.10.0: deleted
   */
@@ -40,8 +42,8 @@ class ReportPane protected ()
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
 /* static members */

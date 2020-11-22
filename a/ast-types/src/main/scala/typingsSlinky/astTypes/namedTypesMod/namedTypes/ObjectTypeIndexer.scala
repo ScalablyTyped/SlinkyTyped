@@ -13,23 +13,31 @@ import typingsSlinky.astTypes.kindsMod.VarianceKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Node, 'type'> */
+@js.native
 trait ObjectTypeIndexer
   extends ASTNode
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var id: IdentifierKind
-  var key: FlowTypeKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ObjectTypeIndexer
-  var value: FlowTypeKind
-  var variance: js.UndefOr[VarianceKind | plus | minus | Null] = js.undefined
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var id: IdentifierKind = js.native
+  
+  var key: FlowTypeKind = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var static: js.UndefOr[Boolean] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ObjectTypeIndexer = js.native
+  
+  var value: FlowTypeKind = js.native
+  
+  var variance: js.UndefOr[VarianceKind | plus | minus | Null] = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ObjectTypeIndexer")
 @js.native
 object ObjectTypeIndexer extends TopLevel[Type[ObjectTypeIndexer]]
-

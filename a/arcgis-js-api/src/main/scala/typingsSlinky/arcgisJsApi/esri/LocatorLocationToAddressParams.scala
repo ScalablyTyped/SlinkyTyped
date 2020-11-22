@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LocatorLocationToAddressParams extends Object {
   
   /**
-    * The point at which to search for the closest address. The location should be in the same spatial reference as that of the geocode service.
+    * The point at which to search for the closest address.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Locator.html#locationToAddress)
     */

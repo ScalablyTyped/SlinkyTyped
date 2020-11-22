@@ -23,6 +23,11 @@ object sceneInputManagerMod extends js.Object {
       */
     def this(scene: Scene) = this()
     
+    /** This is a defensive check to not allow control attachment prior to an already active one. If already attached, previous control is unattached before attaching the new one. */
+    var _alreadyAttached: js.Any = js.native
+    
+    var _alreadyAttachedTo: js.Any = js.native
+    
     var _checkPrePointerObservable: js.Any = js.native
     
     var _currentPickResult: js.Any = js.native
@@ -40,7 +45,11 @@ object sceneInputManagerMod extends js.Object {
     /** @hidden */
     def _isPointerSwiping(): Boolean = js.native
     
+    var _keyboardIsAttached: js.Any = js.native
+    
     var _meshPickProceed: js.Any = js.native
+    
+    var _meshUnderPointerId: js.Any = js.native
     
     var _onCanvasBlurObserver: js.Any = js.native
     
@@ -172,6 +181,13 @@ object sceneInputManagerMod extends js.Object {
     def detachControl(): Unit = js.native
     
     /**
+      * When using more than one pointer (for example in XR) you can get the mesh under the specific pointer
+      * @param pointerId the pointer id to use
+      * @returns The mesh under this pointer id or null if not found
+      */
+    def getMeshUnderPointerByPointerId(pointerId: Double): Nullable[AbstractMesh] = js.native
+    
+    /**
       * Gets the mesh under the pointer
       * @returns a Mesh or null if no mesh is under the pointer
       */
@@ -205,8 +221,10 @@ object sceneInputManagerMod extends js.Object {
     /**
       * Force the value of meshUnderPointer
       * @param mesh defines the mesh to use
+      * @param pointerId optional pointer id when using more than one pointer. Defaults to 0
       */
     def setPointerOverMesh(mesh: Nullable[AbstractMesh]): Unit = js.native
+    def setPointerOverMesh(mesh: Nullable[AbstractMesh], pointerId: Double): Unit = js.native
     
     /**
       * Use this method to simulate a pointer down on a mesh

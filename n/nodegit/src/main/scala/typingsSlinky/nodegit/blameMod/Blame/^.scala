@@ -17,8 +17,8 @@ object ^ extends js.Object {
     * @param path - to the file to get the blame of
     * @param [options] - Options for the blame
     */
-  def file(repo: Repository, path: String): typingsSlinky.nodegit.blameMod.Blame = js.native
-  def file(repo: Repository, path: String, options: BlameOptions): typingsSlinky.nodegit.blameMod.Blame = js.native
+  def file(repo: Repository, path: String): js.Promise[typingsSlinky.nodegit.blameMod.Blame] = js.native
+  def file(repo: Repository, path: String, options: BlameOptions): js.Promise[typingsSlinky.nodegit.blameMod.Blame] = js.native
   
   /**
     * @param opts - The git_blame_options struct to initialize

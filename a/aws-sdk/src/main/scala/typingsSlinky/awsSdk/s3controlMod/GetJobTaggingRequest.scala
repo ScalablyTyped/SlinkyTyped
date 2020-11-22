@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetJobTaggingRequest extends js.Object {
   
   /**
-    * The AWS account ID associated with the Amazon S3 Batch Operations job.
+    * The AWS account ID associated with the S3 Batch Operations job.
     */
   var AccountId: typingsSlinky.awsSdk.s3controlMod.AccountId = js.native
   
   /**
-    * The ID for the Amazon S3 Batch Operations job whose tags you want to retrieve.
+    * The ID for the S3 Batch Operations job whose tags you want to retrieve.
     */
   var JobId: typingsSlinky.awsSdk.s3controlMod.JobId = js.native
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for phenomnomnominal__tsquery
 
-Typings are for version 4.1.0
+Typings are for version 4.1.1
 
 ## Library description:
 Query TypeScript ASTs with the esquery API!

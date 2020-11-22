@@ -1,6 +1,5 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,11 +9,10 @@ trait ICameraInput[TCamera /* <: Camera */] extends js.Object {
   
   /**
     * Attach the input controls to a specific dom element to get the input from.
-    * @param element Defines the element the controls should be listened from
     * @param noPreventDefault Defines whether event caught by the controls should call preventdefault() (https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
     */
-  def attachControl(element: HTMLElement): Unit = js.native
-  def attachControl(element: HTMLElement, noPreventDefault: Boolean): Unit = js.native
+  def attachControl(): Unit = js.native
+  def attachControl(noPreventDefault: Boolean): Unit = js.native
   
   /**
     * Defines the camera the input is attached to.
@@ -29,9 +27,8 @@ trait ICameraInput[TCamera /* <: Camera */] extends js.Object {
   
   /**
     * Detach the current controls from the specified dom element.
-    * @param element Defines the element to stop listening the inputs from
     */
-  def detachControl(element: Nullable[HTMLElement]): Unit = js.native
+  def detachControl(): Unit = js.native
   
   /**
     * Gets the class name of the current intput.

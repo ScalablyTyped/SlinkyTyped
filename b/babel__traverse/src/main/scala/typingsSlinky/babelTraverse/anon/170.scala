@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.UnaryExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.ObjectTypeIndexer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `170` extends js.Object {
   
-  var `type`: UnaryExpression = js.native
+  var `type`: ObjectTypeIndexer = js.native
 }
 object `170` {
   
   @scala.inline
-  def apply(`type`: UnaryExpression): `170` = {
+  def apply(`type`: ObjectTypeIndexer): `170` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`170`]
@@ -35,6 +35,6 @@ object `170` {
     }
     
     @scala.inline
-    def setType(value: UnaryExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ObjectTypeIndexer): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.reactVis.mod
 
-import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactVis.anon.CSSPropertieslineCSSPrope
 import typingsSlinky.reactVis.reactVisStrings.bottom
 import typingsSlinky.reactVis.reactVisStrings.top
 import scala.scalajs.js
@@ -42,7 +42,7 @@ trait XAxisProps extends js.Object {
   
   var orientation: js.UndefOr[top | bottom] = js.native
   
-  var style: js.UndefOr[CSSProperties] = js.native
+  var style: js.UndefOr[CSSPropertieslineCSSPrope] = js.native
   
   var tickFormat: js.UndefOr[RVTickFormat] = js.native
   
@@ -181,7 +181,7 @@ object XAxisProps {
     def deleteOrientation: Self = this.set("orientation", js.undefined)
     
     @scala.inline
-    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    def setStyle(value: CSSPropertieslineCSSPrope): Self = this.set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)

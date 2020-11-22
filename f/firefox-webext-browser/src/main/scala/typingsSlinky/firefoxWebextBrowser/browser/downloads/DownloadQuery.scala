@@ -5,8 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Parameters that combine to specify a predicate that can be used to select a set of downloads. Used for example
-  * in search() and erase()
+  * Parameters that combine to specify a predicate that can be used to select a set of downloads. Used for example in search() and erase()
   */
 @js.native
 trait DownloadQuery extends js.Object {
@@ -50,9 +49,7 @@ trait DownloadQuery extends js.Object {
   var mime: js.UndefOr[String] = js.native
   
   /**
-    * Setting elements of this array to DownloadItem properties in order to sort the search results. For example,
-    * setting `orderBy='startTime'` sorts the DownloadItems by their start time in ascending order. To specify
-    * descending order, prefix `orderBy` with a hyphen: '-startTime'.
+    * Setting elements of this array to DownloadItem properties in order to sort the search results. For example, setting `orderBy='startTime'` sorts the DownloadItems by their start time in ascending order. To specify descending order, prefix `orderBy` with a hyphen: '-startTime'.
     */
   var orderBy: js.UndefOr[js.Array[String]] = js.native
   
@@ -60,8 +57,7 @@ trait DownloadQuery extends js.Object {
   var paused: js.UndefOr[Boolean] = js.native
   
   /**
-    * This array of search terms limits results to DownloadItems whose `filename` or `url` contain all of the
-    * search terms that do not begin with a dash '-' and none of the search terms that do begin with a dash.
+    * This array of search terms limits results to DownloadItems whose `filename` or `url` contain all of the search terms that do not begin with a dash '-' and none of the search terms that do begin with a dash.
     */
   var query: js.UndefOr[js.Array[String]] = js.native
   

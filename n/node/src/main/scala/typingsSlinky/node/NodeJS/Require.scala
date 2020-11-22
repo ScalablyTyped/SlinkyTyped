@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Require extends js.Object {
   
-  /* tslint:disable-next-line:callable-types */
   def apply(id: String): js.Any = js.native
   
   var cache: Dict[NodeModule] = js.native

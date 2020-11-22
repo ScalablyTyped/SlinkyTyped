@@ -2,7 +2,7 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.anon.ColorFilter
 import typingsSlinky.babylonjs.anon.SubdivisionsX
-import typingsSlinky.babylonjs.anon.Xmax
+import typingsSlinky.babylonjs.anon.Updatable
 import typingsSlinky.babylonjs.groundMeshMod.GroundMesh
 import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.sceneMod.Scene
@@ -69,7 +69,7 @@ object groundBuilderMod extends js.Object {
       * @returns the tiled ground mesh
       * @see https://doc.babylonjs.com/how_to/set_shapes#tiled-ground
       */
-    def CreateTiledGround(name: String, options: Xmax): Mesh = js.native
-    def CreateTiledGround(name: String, options: Xmax, scene: Nullable[Scene]): Mesh = js.native
+    def CreateTiledGround(name: String, options: Updatable): Mesh = js.native
+    def CreateTiledGround(name: String, options: Updatable, scene: Nullable[Scene]): Mesh = js.native
   }
 }

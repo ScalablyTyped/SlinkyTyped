@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.planMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.outputMod.backup.PlanAdvancedBackupSetting
 import typingsSlinky.pulumiAws.outputMod.backup.PlanRule
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -23,6 +24,11 @@ class Plan protected () extends CustomResource {
     */
   def this(name: String, args: PlanArgs) = this()
   def this(name: String, args: PlanArgs, opts: CustomResourceOptions) = this()
+  
+  /**
+    * An object that specifies backup options for each resource type.
+    */
+  val advancedBackupSettings: Output_[js.UndefOr[js.Array[PlanAdvancedBackupSetting]]] = js.native
   
   /**
     * The ARN of the backup plan.

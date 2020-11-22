@@ -23,7 +23,7 @@ package object cloudsearchMod {
     - typingsSlinky.awsSdk.awsSdkStrings.ar_
     - typingsSlinky.awsSdk.awsSdkStrings.bg_
     - typingsSlinky.awsSdk.awsSdkStrings.ca_
-    - typingsSlinky.awsSdk.awsSdkStrings.cs
+    - typingsSlinky.awsSdk.awsSdkStrings.cs_
     - typingsSlinky.awsSdk.awsSdkStrings.da
     - typingsSlinky.awsSdk.awsSdkStrings.de_
     - typingsSlinky.awsSdk.awsSdkStrings.el

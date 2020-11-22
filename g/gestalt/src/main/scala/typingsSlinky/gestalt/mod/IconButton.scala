@@ -1,11 +1,12 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.react.mod.Component
+import org.scalablytyped.runtime.TopLevel
+import org.scalajs.dom.raw.HTMLAnchorElement
+import org.scalajs.dom.raw.HTMLButtonElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("gestalt", "IconButton")
 @js.native
-class IconButton ()
-  extends Component[IconButtonProps, js.Any, js.Any]
+object IconButton extends TopLevel[ReactForwardRef[HTMLButtonElement | HTMLAnchorElement, IconButtonProps]]

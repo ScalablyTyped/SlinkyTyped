@@ -9,15 +9,17 @@ trait Settings extends js.Object {
   
   var cacheSizeBytes: js.UndefOr[Double] = js.native
   
+  var experimentalAutoDetectLongPolling: js.UndefOr[Boolean] = js.native
+  
   var experimentalForceLongPolling: js.UndefOr[Boolean] = js.native
   
   var host: js.UndefOr[String] = js.native
   
   var ignoreUndefinedProperties: js.UndefOr[Boolean] = js.native
   
-  var ssl: js.UndefOr[Boolean] = js.native
+  var merge: js.UndefOr[Boolean] = js.native
   
-  var timestampsInSnapshots: js.UndefOr[Boolean] = js.native
+  var ssl: js.UndefOr[Boolean] = js.native
 }
 object Settings {
   
@@ -49,6 +51,12 @@ object Settings {
     def deleteCacheSizeBytes: Self = this.set("cacheSizeBytes", js.undefined)
     
     @scala.inline
+    def setExperimentalAutoDetectLongPolling(value: Boolean): Self = this.set("experimentalAutoDetectLongPolling", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExperimentalAutoDetectLongPolling: Self = this.set("experimentalAutoDetectLongPolling", js.undefined)
+    
+    @scala.inline
     def setExperimentalForceLongPolling(value: Boolean): Self = this.set("experimentalForceLongPolling", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -67,15 +75,15 @@ object Settings {
     def deleteIgnoreUndefinedProperties: Self = this.set("ignoreUndefinedProperties", js.undefined)
     
     @scala.inline
+    def setMerge(value: Boolean): Self = this.set("merge", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMerge: Self = this.set("merge", js.undefined)
+    
+    @scala.inline
     def setSsl(value: Boolean): Self = this.set("ssl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSsl: Self = this.set("ssl", js.undefined)
-    
-    @scala.inline
-    def setTimestampsInSnapshots(value: Boolean): Self = this.set("timestampsInSnapshots", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTimestampsInSnapshots: Self = this.set("timestampsInSnapshots", js.undefined)
   }
 }

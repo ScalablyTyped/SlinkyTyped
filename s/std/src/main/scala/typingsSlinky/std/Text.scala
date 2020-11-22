@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Text
   extends CharacterData
-     with Slotable {
+     with Slottable {
   
   /**
     * Splits data at the given offset and returns the remainder as Text node.

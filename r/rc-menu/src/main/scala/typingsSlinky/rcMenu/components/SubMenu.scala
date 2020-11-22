@@ -17,7 +17,7 @@ import typingsSlinky.rcMenu.interfaceMod.TriggerSubMenuAction
 import typingsSlinky.rcMenu.rcMenuStrings.ltr
 import typingsSlinky.rcMenu.rcMenuStrings.rtl
 import typingsSlinky.rcMenu.subMenuMod.SubMenuProps
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.ReactInstance
 import scala.scalajs.js
@@ -90,7 +90,7 @@ object SubMenu {
     def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def motion(value: MotionType): this.type = set("motion", value.asInstanceOf[js.Any])
+    def motion(value: CSSMotionProps): this.type = set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])

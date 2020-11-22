@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AttributeRef
@@ -8,20 +9,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.SortDirection
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.GridSortItem")
 @js.native
-class GridSortItem protected () extends Element {
+class GridSortItem protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -39,9 +41,6 @@ class GridSortItem protected () extends Element {
   def attributeRef_=(newValue: AttributeRef): Unit = js.native
   
   def containerAsGridSortBar: GridSortBar = js.native
-  
-  @JSName("model")
-  var model_FGridSortItem: IModel = js.native
   
   def sortOrder: SortDirection = js.native
   def sortOrder_=(newValue: SortDirection): Unit = js.native

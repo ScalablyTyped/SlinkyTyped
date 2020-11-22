@@ -14,11 +14,11 @@ class ServiceDescriptorProto_ () extends Message {
   def addMethod(value: MethodDescriptorProto): MethodDescriptorProto = js.native
   def addMethod(value: MethodDescriptorProto, index: Double): MethodDescriptorProto = js.native
   
-  def clearMethodList(): Unit = js.native
+  def clearMethodList(): ServiceDescriptorProto = js.native
   
-  def clearName(): Unit = js.native
+  def clearName(): ServiceDescriptorProto = js.native
   
-  def clearOptions(): Unit = js.native
+  def clearOptions(): ServiceDescriptorProto = js.native
   
   def getMethodList(): js.Array[MethodDescriptorProto] = js.native
   
@@ -30,10 +30,10 @@ class ServiceDescriptorProto_ () extends Message {
   
   def hasOptions(): Boolean = js.native
   
-  def setMethodList(value: js.Array[MethodDescriptorProto]): Unit = js.native
+  def setMethodList(value: js.Array[MethodDescriptorProto]): ServiceDescriptorProto = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): ServiceDescriptorProto = js.native
   
-  def setOptions(): Unit = js.native
-  def setOptions(value: ServiceOptions): Unit = js.native
+  def setOptions(): ServiceDescriptorProto = js.native
+  def setOptions(value: ServiceOptions): ServiceDescriptorProto = js.native
 }

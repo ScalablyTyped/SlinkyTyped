@@ -9,21 +9,22 @@ trait BindingElement
   extends NamedDeclaration
      with ArrayBindingElement
      with HasExpressionInitializer
+     with ObjectBindingOrAssignmentElement
      with VariableLikeDeclaration
-     with _BindingOrAssignmentElement {
+     with _ArrayBindingOrAssignmentElement {
   
-  var dotDotDotToken: js.UndefOr[DotDotDotToken] = js.native
+  val dotDotDotToken: js.UndefOr[DotDotDotToken] = js.native
   
-  var initializer: js.UndefOr[Expression] = js.native
+  val initializer: js.UndefOr[Expression] = js.native
   
   @JSName("kind")
-  var kind_BindingElement: typingsSlinky.typescript.mod.SyntaxKind.BindingElement = js.native
+  val kind_BindingElement: typingsSlinky.typescript.mod.SyntaxKind.BindingElement = js.native
   
   @JSName("name")
-  var name_BindingElement: BindingName = js.native
+  val name_BindingElement: BindingName = js.native
   
   @JSName("parent")
-  var parent_BindingElement: BindingPattern = js.native
+  val parent_BindingElement: BindingPattern = js.native
   
-  var propertyName: js.UndefOr[PropertyName] = js.native
+  val propertyName: js.UndefOr[PropertyName] = js.native
 }

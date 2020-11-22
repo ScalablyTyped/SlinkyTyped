@@ -1,7 +1,9 @@
 package typingsSlinky.pullStream
 
 import typingsSlinky.pullStream.anon.Last
+import typingsSlinky.pullStream.mod.EndOrError
 import typingsSlinky.pullStream.mod.Source
+import typingsSlinky.pullStream.mod.SourceCallback
 import typingsSlinky.pullStream.mod.Through_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,13 +16,7 @@ object throughsMod extends js.Object {
   @js.native
   object asyncMap extends js.Object {
     
-    def apply[In, Out](
-      fn: js.Function2[
-          /* data */ In, 
-          /* cb */ js.Function2[/* err */ js.Error | Null, /* result */ Out, Unit], 
-          _
-        ]
-    ): Through_[In, Out] = js.native
+    def apply[In, Out](fn: js.Function2[/* data */ In, /* cb */ SourceCallback[Out], _]): Through_[In, Out] = js.native
   }
   
   @js.native
@@ -67,9 +63,9 @@ object throughsMod extends js.Object {
   object through extends js.Object {
     
     def apply[InOut](): Through_[InOut, InOut] = js.native
-    def apply[InOut](op: js.UndefOr[scala.Nothing], onEnd: js.Function1[/* err */ js.Error | Null, _]): Through_[InOut, InOut] = js.native
+    def apply[InOut](op: js.UndefOr[scala.Nothing], onEnd: js.Function1[/* err */ EndOrError, _]): Through_[InOut, InOut] = js.native
     def apply[InOut](op: js.Function1[/* data */ InOut, _]): Through_[InOut, InOut] = js.native
-    def apply[InOut](op: js.Function1[/* data */ InOut, _], onEnd: js.Function1[/* err */ js.Error | Null, _]): Through_[InOut, InOut] = js.native
+    def apply[InOut](op: js.Function1[/* data */ InOut, _], onEnd: js.Function1[/* err */ EndOrError, _]): Through_[InOut, InOut] = js.native
   }
   
   @js.native

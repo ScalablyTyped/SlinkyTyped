@@ -1,0 +1,21 @@
+package typingsSlinky.typeorm.browserMod
+
+import typingsSlinky.typeorm.queryRunnerMod.QueryRunner
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@JSImport("typeorm/browser", "QueryBuilder")
+@js.native
+abstract class QueryBuilder[Entity] protected ()
+  extends typingsSlinky.typeorm.queryBuilderMod.QueryBuilder[Entity] {
+  /**
+    * QueryBuilder can be initialized from given Connection and QueryRunner objects or from given other QueryBuilder.
+    */
+  def this(connection: typingsSlinky.typeorm.connectionMod.Connection) = this()
+  /**
+    * QueryBuilder can be initialized from given Connection and QueryRunner objects or from given other QueryBuilder.
+    */
+  def this(queryBuilder: typingsSlinky.typeorm.queryBuilderMod.QueryBuilder[_]) = this()
+  def this(connection: typingsSlinky.typeorm.connectionMod.Connection, queryRunner: QueryRunner) = this()
+}

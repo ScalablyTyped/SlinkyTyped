@@ -13,7 +13,7 @@ trait ViewTemplate extends js.Object {
   /**
     * View's ID (or set of IDs) used for data binding. This value must be unique.
     */
-  var bindId: js.UndefOr[java.lang.String] = js.native
+  var bindId: js.UndefOr[String] = js.native
   
   /**
     * Contains an array of subview templates to be added (in order) as children to this view.
@@ -33,12 +33,12 @@ trait ViewTemplate extends js.Object {
   /**
     * View's class name, for example, `Ti.UI.Button`.
     */
-  var `type`: java.lang.String = js.native
+  var `type`: String = js.native
 }
 object ViewTemplate {
   
   @scala.inline
-  def apply(`type`: java.lang.String): ViewTemplate = {
+  def apply(`type`: String): ViewTemplate = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ViewTemplate]
@@ -54,16 +54,16 @@ object ViewTemplate {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setType(value: java.lang.String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBindId(value: java.lang.String): Self = this.set("bindId", value.asInstanceOf[js.Any])
+    def setBindId(value: String): Self = this.set("bindId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBindId: Self = this.set("bindId", js.undefined)

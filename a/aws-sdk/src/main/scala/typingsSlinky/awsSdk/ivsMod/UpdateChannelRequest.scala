@@ -13,6 +13,11 @@ trait UpdateChannelRequest extends js.Object {
   var arn: ChannelArn = js.native
   
   /**
+    * Whether the channel is authorized. Default: false.
+    */
+  var authorized: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Channel latency mode. Default: LOW.
     */
   var latencyMode: js.UndefOr[ChannelLatencyMode] = js.native
@@ -52,6 +57,12 @@ object UpdateChannelRequest {
     
     @scala.inline
     def setArn(value: ChannelArn): Self = this.set("arn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAuthorized(value: Boolean): Self = this.set("authorized", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAuthorized: Self = this.set("authorized", js.undefined)
     
     @scala.inline
     def setLatencyMode(value: ChannelLatencyMode): Self = this.set("latencyMode", value.asInstanceOf[js.Any])

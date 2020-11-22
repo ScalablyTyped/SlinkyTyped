@@ -49,10 +49,17 @@ object RecastJSCrowd {
     agents: js.Array[Double],
     bjsRECASTPlugin: RecastJSPlugin,
     dispose: () => Unit,
+    getAgentNextTargetPath: Double => Vector3,
+    getAgentNextTargetPathToRef: (Double, Vector3) => Unit,
     getAgentPosition: Double => Vector3,
+    getAgentPositionToRef: (Double, Vector3) => Unit,
+    getAgentState: Double => Double,
     getAgentVelocity: Double => Vector3,
+    getAgentVelocityToRef: (Double, Vector3) => Unit,
     getAgents: () => js.Array[Double],
     getDefaultQueryExtent: () => Vector3,
+    getDefaultQueryExtentToRef: Vector3 => Unit,
+    overOffmeshConnection: Double => Boolean,
     recastCrowd: js.Any,
     removeAgent: Double => Unit,
     setDefaultQueryExtent: Vector3 => Unit,
@@ -60,7 +67,7 @@ object RecastJSCrowd {
     update: Double => Unit,
     updateAgentParameters: (Double, IAgentParameters) => Unit
   ): RecastJSCrowd = {
-    val __obj = js.Dynamic.literal(_onBeforeAnimationsObserver = _onBeforeAnimationsObserver.asInstanceOf[js.Any], _scene = _scene.asInstanceOf[js.Any], addAgent = js.Any.fromFunction3(addAgent), agentGoto = js.Any.fromFunction2(agentGoto), agentTeleport = js.Any.fromFunction2(agentTeleport), agents = agents.asInstanceOf[js.Any], bjsRECASTPlugin = bjsRECASTPlugin.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), getAgentPosition = js.Any.fromFunction1(getAgentPosition), getAgentVelocity = js.Any.fromFunction1(getAgentVelocity), getAgents = js.Any.fromFunction0(getAgents), getDefaultQueryExtent = js.Any.fromFunction0(getDefaultQueryExtent), recastCrowd = recastCrowd.asInstanceOf[js.Any], removeAgent = js.Any.fromFunction1(removeAgent), setDefaultQueryExtent = js.Any.fromFunction1(setDefaultQueryExtent), transforms = transforms.asInstanceOf[js.Any], update = js.Any.fromFunction1(update), updateAgentParameters = js.Any.fromFunction2(updateAgentParameters))
+    val __obj = js.Dynamic.literal(_onBeforeAnimationsObserver = _onBeforeAnimationsObserver.asInstanceOf[js.Any], _scene = _scene.asInstanceOf[js.Any], addAgent = js.Any.fromFunction3(addAgent), agentGoto = js.Any.fromFunction2(agentGoto), agentTeleport = js.Any.fromFunction2(agentTeleport), agents = agents.asInstanceOf[js.Any], bjsRECASTPlugin = bjsRECASTPlugin.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), getAgentNextTargetPath = js.Any.fromFunction1(getAgentNextTargetPath), getAgentNextTargetPathToRef = js.Any.fromFunction2(getAgentNextTargetPathToRef), getAgentPosition = js.Any.fromFunction1(getAgentPosition), getAgentPositionToRef = js.Any.fromFunction2(getAgentPositionToRef), getAgentState = js.Any.fromFunction1(getAgentState), getAgentVelocity = js.Any.fromFunction1(getAgentVelocity), getAgentVelocityToRef = js.Any.fromFunction2(getAgentVelocityToRef), getAgents = js.Any.fromFunction0(getAgents), getDefaultQueryExtent = js.Any.fromFunction0(getDefaultQueryExtent), getDefaultQueryExtentToRef = js.Any.fromFunction1(getDefaultQueryExtentToRef), overOffmeshConnection = js.Any.fromFunction1(overOffmeshConnection), recastCrowd = recastCrowd.asInstanceOf[js.Any], removeAgent = js.Any.fromFunction1(removeAgent), setDefaultQueryExtent = js.Any.fromFunction1(setDefaultQueryExtent), transforms = transforms.asInstanceOf[js.Any], update = js.Any.fromFunction1(update), updateAgentParameters = js.Any.fromFunction2(updateAgentParameters))
     __obj.asInstanceOf[RecastJSCrowd]
   }
   

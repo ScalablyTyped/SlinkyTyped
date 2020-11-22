@@ -17,6 +17,9 @@ trait MochaOptions extends js.Object {
   /** bail on the first test failure. */
   var bail: js.UndefOr[Boolean] = js.native
   
+  /** check for global variable leaks. */
+  var checkLeaks: js.UndefOr[Boolean] = js.native
+  
   /** Color TTY output from reporter */
   var color: js.UndefOr[Boolean] = js.native
   
@@ -43,9 +46,6 @@ trait MochaOptions extends js.Object {
   /** Do not show diffs at all. */
   var hideDiff: js.UndefOr[Boolean] = js.native
   
-  /** ignore global leaks. */
-  var ignoreLeaks: js.UndefOr[Boolean] = js.native
-  
   /** Use inline diffs rather than +/-. */
   var inlineDiffs: js.UndefOr[Boolean] = js.native
   
@@ -70,7 +70,7 @@ trait MochaOptions extends js.Object {
   var retries: js.UndefOr[Double] = js.native
   
   /** Assigns hooks to the root suite */
-  var rootHooks: js.UndefOr[js.Any] = js.native
+  var rootHooks: js.UndefOr[RootHookObject] = js.native
   
   /** milliseconds to wait before considering a test slow. */
   var slow: js.UndefOr[Double] = js.native
@@ -121,6 +121,12 @@ object MochaOptions {
     
     @scala.inline
     def deleteBail: Self = this.set("bail", js.undefined)
+    
+    @scala.inline
+    def setCheckLeaks(value: Boolean): Self = this.set("checkLeaks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCheckLeaks: Self = this.set("checkLeaks", js.undefined)
     
     @scala.inline
     def setColor(value: Boolean): Self = this.set("color", value.asInstanceOf[js.Any])
@@ -189,12 +195,6 @@ object MochaOptions {
     def deleteHideDiff: Self = this.set("hideDiff", js.undefined)
     
     @scala.inline
-    def setIgnoreLeaks(value: Boolean): Self = this.set("ignoreLeaks", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteIgnoreLeaks: Self = this.set("ignoreLeaks", js.undefined)
-    
-    @scala.inline
     def setInlineDiffs(value: Boolean): Self = this.set("inlineDiffs", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -237,7 +237,7 @@ object MochaOptions {
     def deleteRetries: Self = this.set("retries", js.undefined)
     
     @scala.inline
-    def setRootHooks(value: js.Any): Self = this.set("rootHooks", value.asInstanceOf[js.Any])
+    def setRootHooks(value: RootHookObject): Self = this.set("rootHooks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRootHooks: Self = this.set("rootHooks", js.undefined)

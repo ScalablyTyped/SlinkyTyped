@@ -1,7 +1,7 @@
 
 # Scala.js typings for jsonata
 
-Typings are for version 1.8.3
+Typings are for version 1.8.4
 
 ## Library description:
 JSON query and transformation language

@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createConditionalTypeNode extends js.Object {
   
+  /** @deprecated Use `factory.createConditionalTypeNode` or the factory supplied by your transformation context instead. */
   def apply(checkType: TypeNode, extendsType: TypeNode, trueType: TypeNode, falseType: TypeNode): ConditionalTypeNode = js.native
 }

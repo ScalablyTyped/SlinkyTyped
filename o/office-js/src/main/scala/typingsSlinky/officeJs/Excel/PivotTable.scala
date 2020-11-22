@@ -22,6 +22,14 @@ trait PivotTable extends ClientObject {
   
   /**
     *
+    * Specifies if the PivotTable allows the application of multiple PivotFilters on a given PivotField in the table.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var allowMultipleFiltersPerField: Boolean = js.native
+  
+  /**
+    *
     * The Column Pivot Hierarchies of the PivotTable.
     *
     * [Api set: ExcelApi 1.8]

@@ -62,6 +62,8 @@ trait Mentions
     */
   var onKeyUp: KeyboardEventHandler[HTMLTextAreaElement] = js.native
   
+  var onPressEnter: KeyboardEventHandler[HTMLTextAreaElement] = js.native
+  
   def selectOption(option: OptionProps): Unit = js.native
   
   def setActiveIndex(activeIndex: Double): Unit = js.native

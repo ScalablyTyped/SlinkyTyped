@@ -23,6 +23,8 @@ trait GaOptions extends js.Object {
   
   var cookieName: js.UndefOr[String] = js.native
   
+  var cookieUpdate: js.UndefOr[Boolean] = js.native
+  
   var legacyCookieDomain: js.UndefOr[String] = js.native
   
   var legacyHistoryImport: js.UndefOr[Boolean] = js.native
@@ -109,6 +111,12 @@ object GaOptions {
     
     @scala.inline
     def deleteCookieName: Self = this.set("cookieName", js.undefined)
+    
+    @scala.inline
+    def setCookieUpdate(value: Boolean): Self = this.set("cookieUpdate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCookieUpdate: Self = this.set("cookieUpdate", js.undefined)
     
     @scala.inline
     def setLegacyCookieDomain(value: String): Self = this.set("legacyCookieDomain", value.asInstanceOf[js.Any])

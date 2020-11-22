@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useKeyboardDetectionMod extends js.Object {
   
-  def default(): Boolean = js.native
+  def useKeyboardDetection(): Boolean = js.native
 }

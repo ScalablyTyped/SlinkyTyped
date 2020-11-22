@@ -10,9 +10,9 @@ trait HttpResponse extends BaseHttpResponse {
   
   var content: String = js.native
   
-  var data: js.UndefOr[js.Object] = js.native
+  var data: js.UndefOr[js.Any] = js.native
   
-  var json: js.UndefOr[js.Object] = js.native
+  var json: js.UndefOr[js.Any] = js.native
 }
 object HttpResponse {
   
@@ -49,13 +49,13 @@ object HttpResponse {
     def setContent(value: String): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setData(value: js.Object): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: js.Any): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)
     
     @scala.inline
-    def setJson(value: js.Object): Self = this.set("json", value.asInstanceOf[js.Any])
+    def setJson(value: js.Any): Self = this.set("json", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteJson: Self = this.set("json", js.undefined)

@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartArgumentAxisTitle extends dxChartCommonAxisSettingsTitle {
   
-  /** @name dxChart.Options.argumentAxis.title.text */
+  /**
+    * [descr:dxChart.Options.argumentAxis.title.text]
+    */
   var text: js.UndefOr[String] = js.native
 }
 object dxChartArgumentAxisTitle {

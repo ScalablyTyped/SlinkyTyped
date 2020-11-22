@@ -13,35 +13,102 @@ import typingsSlinky.astTypes.kindsMod.TSTypeAnnotationKind
 import typingsSlinky.astTypes.kindsMod.TypeAnnotationKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@js.native
 trait Decorators extends js.Object {
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
-  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
   var properties: js.Array[
     PropertyKind | PropertyPatternKind | SpreadPropertyPatternKind | SpreadPropertyKind | ObjectPropertyKind | RestPropertyKind
-  ]
-  var typeAnnotation: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind | Null] = js.undefined
+  ] = js.native
+  
+  var typeAnnotation: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind | Null] = js.native
 }
-
 object Decorators {
+  
   @scala.inline
   def apply(
     properties: js.Array[
       PropertyKind | PropertyPatternKind | SpreadPropertyPatternKind | SpreadPropertyKind | ObjectPropertyKind | RestPropertyKind
-    ],
-    comments: js.UndefOr[Null | js.Array[CommentKind]] = js.undefined,
-    decorators: js.UndefOr[Null | js.Array[DecoratorKind]] = js.undefined,
-    loc: js.UndefOr[Null | SourceLocationKind] = js.undefined,
-    typeAnnotation: js.UndefOr[Null | TypeAnnotationKind | TSTypeAnnotationKind] = js.undefined
+    ]
   ): Decorators = {
     val __obj = js.Dynamic.literal(properties = properties.asInstanceOf[js.Any])
-    if (!js.isUndefined(comments)) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (!js.isUndefined(decorators)) __obj.updateDynamic("decorators")(decorators.asInstanceOf[js.Any])
-    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (!js.isUndefined(typeAnnotation)) __obj.updateDynamic("typeAnnotation")(typeAnnotation.asInstanceOf[js.Any])
     __obj.asInstanceOf[Decorators]
   }
+  
+  @scala.inline
+  implicit class DecoratorsOps[Self <: Decorators] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
+    }
+    
+    @scala.inline
+    def setPropertiesVarargs(
+      value: (PropertyKind | PropertyPatternKind | SpreadPropertyPatternKind | SpreadPropertyKind | ObjectPropertyKind | RestPropertyKind)*
+    ): Self = this.set("properties", js.Array(value :_*))
+    
+    @scala.inline
+    def setProperties(
+      value: js.Array[
+          PropertyKind | PropertyPatternKind | SpreadPropertyPatternKind | SpreadPropertyKind | ObjectPropertyKind | RestPropertyKind
+        ]
+    ): Self = this.set("properties", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCommentsVarargs(value: CommentKind*): Self = this.set("comments", js.Array(value :_*))
+    
+    @scala.inline
+    def setComments(value: js.Array[CommentKind]): Self = this.set("comments", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteComments: Self = this.set("comments", js.undefined)
+    
+    @scala.inline
+    def setCommentsNull: Self = this.set("comments", null)
+    
+    @scala.inline
+    def setDecoratorsVarargs(value: DecoratorKind*): Self = this.set("decorators", js.Array(value :_*))
+    
+    @scala.inline
+    def setDecorators(value: js.Array[DecoratorKind]): Self = this.set("decorators", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDecorators: Self = this.set("decorators", js.undefined)
+    
+    @scala.inline
+    def setDecoratorsNull: Self = this.set("decorators", null)
+    
+    @scala.inline
+    def setLoc(value: SourceLocationKind): Self = this.set("loc", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoc: Self = this.set("loc", js.undefined)
+    
+    @scala.inline
+    def setLocNull: Self = this.set("loc", null)
+    
+    @scala.inline
+    def setTypeAnnotation(value: TypeAnnotationKind | TSTypeAnnotationKind): Self = this.set("typeAnnotation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTypeAnnotation: Self = this.set("typeAnnotation", js.undefined)
+    
+    @scala.inline
+    def setTypeAnnotationNull: Self = this.set("typeAnnotation", null)
+  }
 }
-

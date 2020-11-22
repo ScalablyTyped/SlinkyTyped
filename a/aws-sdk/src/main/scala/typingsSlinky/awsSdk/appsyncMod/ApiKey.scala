@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ApiKey extends js.Object {
   
   /**
+    * The time after which the API key is deleted. The date is represented as seconds since the epoch, rounded down to the nearest hour.
+    */
+  var deletes: js.UndefOr[Long] = js.native
+  
+  /**
     * A description of the purpose of the API key.
     */
   var description: js.UndefOr[String] = js.native
@@ -44,6 +49,12 @@ object ApiKey {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDeletes(value: Long): Self = this.set("deletes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeletes: Self = this.set("deletes", js.undefined)
     
     @scala.inline
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])

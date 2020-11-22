@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ShapeGeometry protected ()
   extends typingsSlinky.three.mod.ShapeGeometry {
+  /**
+  	 * @param shapes
+  	 * @param [curveSegments=12]
+  	 */
   def this(shapes: typingsSlinky.three.shapeMod.Shape) = this()
 }

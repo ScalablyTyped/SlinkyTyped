@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposListCommitsEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposListCommitsResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposListBranchesEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposListBranchesResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `977` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposListCommitsEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposListBranchesEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposListCommitsResponseData] = js.native
+  var response: OctokitResponse[ReposListBranchesResponseData] = js.native
 }
 object `977` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposListCommitsEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposListCommitsResponseData]
+    parameters: RequestParameters with (Omit[ReposListBranchesEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposListBranchesResponseData]
   ): `977` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`977`]
@@ -46,9 +46,9 @@ object `977` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ReposListCommitsEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ReposListBranchesEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposListCommitsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReposListBranchesResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

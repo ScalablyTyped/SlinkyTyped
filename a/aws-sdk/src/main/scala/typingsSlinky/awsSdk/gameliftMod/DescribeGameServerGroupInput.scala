@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeGameServerGroupInput extends js.Object {
   
   /**
-    * The unique identifier for the game server group being requested. Use either the GameServerGroup name or ARN value.
+    * A unique identifier for the game server group. Use either the GameServerGroup name or ARN value.
     */
   var GameServerGroupName: GameServerGroupNameOrArn = js.native
 }

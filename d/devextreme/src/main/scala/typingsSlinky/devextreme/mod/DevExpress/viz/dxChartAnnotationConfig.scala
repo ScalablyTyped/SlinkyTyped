@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartAnnotationConfig extends dxChartCommonAnnotationConfig {
   
-  /** @name dxChartAnnotationConfig.name */
+  /**
+    * [descr:dxChartAnnotationConfig.name]
+    */
   var name: js.UndefOr[String] = js.native
 }
 object dxChartAnnotationConfig {

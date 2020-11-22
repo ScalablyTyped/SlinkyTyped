@@ -13,7 +13,7 @@ trait Canvas
   
   var height: Double = js.native
   
-  def toDataURL(): String = js.native
+  def toDataURL(): js.Promise[String] = js.native
   
   var width: Double = js.native
 }

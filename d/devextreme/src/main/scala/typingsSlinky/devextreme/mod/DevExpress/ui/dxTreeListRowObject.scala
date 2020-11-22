@@ -7,34 +7,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeListRowObject extends js.Object {
   
-  /** @name dxTreeListRowObject.isEditing */
+  /**
+    * [descr:dxTreeListRowObject.isEditing]
+    */
   var isEditing: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeListRowObject.isExpanded */
+  /**
+    * [descr:dxTreeListRowObject.isExpanded]
+    */
   var isExpanded: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeListRowObject.isNewRow */
+  /**
+    * [descr:dxTreeListRowObject.isNewRow]
+    */
   var isNewRow: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeListRowObject.isSelected */
+  /**
+    * [descr:dxTreeListRowObject.isSelected]
+    */
   var isSelected: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeListRowObject.key */
+  /**
+    * [descr:dxTreeListRowObject.key]
+    */
   var key: js.UndefOr[js.Any] = js.native
   
-  /** @name dxTreeListRowObject.level */
+  /**
+    * [descr:dxTreeListRowObject.level]
+    */
   var level: js.UndefOr[Double] = js.native
   
-  /** @name dxTreeListRowObject.node */
+  /**
+    * [descr:dxTreeListRowObject.node]
+    */
   var node: js.UndefOr[dxTreeListNode] = js.native
   
-  /** @name dxTreeListRowObject.rowIndex */
+  /**
+    * [descr:dxTreeListRowObject.rowIndex]
+    */
   var rowIndex: js.UndefOr[Double] = js.native
   
-  /** @name dxTreeListRowObject.rowType */
+  /**
+    * [descr:dxTreeListRowObject.rowType]
+    */
   var rowType: js.UndefOr[String] = js.native
   
-  /** @name dxTreeListRowObject.values */
+  /**
+    * [descr:dxTreeListRowObject.values]
+    */
   var values: js.UndefOr[js.Array[_]] = js.native
 }
 object dxTreeListRowObject {

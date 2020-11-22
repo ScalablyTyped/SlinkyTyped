@@ -38,29 +38,29 @@ class FileDescriptorProto_ () extends Message {
   def addWeakDependency(value: Double): Double = js.native
   def addWeakDependency(value: Double, index: Double): Double = js.native
   
-  def clearDependencyList(): Unit = js.native
+  def clearDependencyList(): FileDescriptorProto = js.native
   
-  def clearEnumTypeList(): Unit = js.native
+  def clearEnumTypeList(): FileDescriptorProto = js.native
   
-  def clearExtensionList(): Unit = js.native
+  def clearExtensionList(): FileDescriptorProto = js.native
   
-  def clearMessageTypeList(): Unit = js.native
+  def clearMessageTypeList(): FileDescriptorProto = js.native
   
-  def clearName(): Unit = js.native
+  def clearName(): FileDescriptorProto = js.native
   
-  def clearOptions(): Unit = js.native
+  def clearOptions(): FileDescriptorProto = js.native
   
-  def clearPackage(): Unit = js.native
+  def clearPackage(): FileDescriptorProto = js.native
   
-  def clearPublicDependencyList(): Unit = js.native
+  def clearPublicDependencyList(): FileDescriptorProto = js.native
   
-  def clearServiceList(): Unit = js.native
+  def clearServiceList(): FileDescriptorProto = js.native
   
-  def clearSourceCodeInfo(): Unit = js.native
+  def clearSourceCodeInfo(): FileDescriptorProto = js.native
   
-  def clearSyntax(): Unit = js.native
+  def clearSyntax(): FileDescriptorProto = js.native
   
-  def clearWeakDependencyList(): Unit = js.native
+  def clearWeakDependencyList(): FileDescriptorProto = js.native
   
   def getDependencyList(): js.Array[String] = js.native
   
@@ -96,29 +96,29 @@ class FileDescriptorProto_ () extends Message {
   
   def hasSyntax(): Boolean = js.native
   
-  def setDependencyList(value: js.Array[String]): Unit = js.native
+  def setDependencyList(value: js.Array[String]): FileDescriptorProto = js.native
   
-  def setEnumTypeList(value: js.Array[EnumDescriptorProto]): Unit = js.native
+  def setEnumTypeList(value: js.Array[EnumDescriptorProto]): FileDescriptorProto = js.native
   
-  def setExtensionList(value: js.Array[FieldDescriptorProto]): Unit = js.native
+  def setExtensionList(value: js.Array[FieldDescriptorProto]): FileDescriptorProto = js.native
   
-  def setMessageTypeList(value: js.Array[DescriptorProto]): Unit = js.native
+  def setMessageTypeList(value: js.Array[DescriptorProto]): FileDescriptorProto = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): FileDescriptorProto = js.native
   
-  def setOptions(): Unit = js.native
-  def setOptions(value: FileOptions): Unit = js.native
+  def setOptions(): FileDescriptorProto = js.native
+  def setOptions(value: FileOptions): FileDescriptorProto = js.native
   
-  def setPackage(value: String): Unit = js.native
+  def setPackage(value: String): FileDescriptorProto = js.native
   
-  def setPublicDependencyList(value: js.Array[Double]): Unit = js.native
+  def setPublicDependencyList(value: js.Array[Double]): FileDescriptorProto = js.native
   
-  def setServiceList(value: js.Array[ServiceDescriptorProto]): Unit = js.native
+  def setServiceList(value: js.Array[ServiceDescriptorProto]): FileDescriptorProto = js.native
   
-  def setSourceCodeInfo(): Unit = js.native
-  def setSourceCodeInfo(value: SourceCodeInfo): Unit = js.native
+  def setSourceCodeInfo(): FileDescriptorProto = js.native
+  def setSourceCodeInfo(value: SourceCodeInfo): FileDescriptorProto = js.native
   
-  def setSyntax(value: String): Unit = js.native
+  def setSyntax(value: String): FileDescriptorProto = js.native
   
-  def setWeakDependencyList(value: js.Array[Double]): Unit = js.native
+  def setWeakDependencyList(value: js.Array[Double]): FileDescriptorProto = js.native
 }

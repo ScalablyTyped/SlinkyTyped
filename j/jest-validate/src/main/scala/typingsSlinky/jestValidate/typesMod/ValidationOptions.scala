@@ -41,6 +41,8 @@ trait ValidationOptions extends js.Object {
   
   var recursiveBlacklist: js.UndefOr[js.Array[String]] = js.native
   
+  var recursiveDenylist: js.UndefOr[js.Array[String]] = js.native
+  
   var title: js.UndefOr[Title] = js.native
   
   var unknown: js.UndefOr[
@@ -128,6 +130,15 @@ object ValidationOptions {
     
     @scala.inline
     def deleteRecursiveBlacklist: Self = this.set("recursiveBlacklist", js.undefined)
+    
+    @scala.inline
+    def setRecursiveDenylistVarargs(value: String*): Self = this.set("recursiveDenylist", js.Array(value :_*))
+    
+    @scala.inline
+    def setRecursiveDenylist(value: js.Array[String]): Self = this.set("recursiveDenylist", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRecursiveDenylist: Self = this.set("recursiveDenylist", js.undefined)
     
     @scala.inline
     def setTitle(value: Title): Self = this.set("title", value.asInstanceOf[js.Any])

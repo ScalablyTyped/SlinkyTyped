@@ -1,7 +1,7 @@
 
 # Scala.js typings for cacheable-lookup
 
-Typings are for version 2.0.1
+Typings are for version 5.0.3
 
 ## Library description:
 A cacheable dns.lookup(…) that respects the TTL

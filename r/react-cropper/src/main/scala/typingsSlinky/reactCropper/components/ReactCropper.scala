@@ -20,17 +20,27 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.img.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.cropperjs.Cropper.CropEndEvent
+import typingsSlinky.cropperjs.Cropper.CropEvent
+import typingsSlinky.cropperjs.Cropper.CropMoveEvent
+import typingsSlinky.cropperjs.Cropper.CropStartEvent
 import typingsSlinky.cropperjs.Cropper.Data
 import typingsSlinky.cropperjs.Cropper.DragMode
 import typingsSlinky.cropperjs.Cropper.ViewMode
+import typingsSlinky.cropperjs.Cropper.ZoomEvent
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactCropper.mod.ReactCropperProps
 import typingsSlinky.reactCropper.mod.default
+import typingsSlinky.reactCropper.reactCropperStrings.`additions removals`
 import typingsSlinky.reactCropper.reactCropperStrings.`additions text`
 import typingsSlinky.reactCropper.reactCropperStrings.`inline`
+import typingsSlinky.reactCropper.reactCropperStrings.`removals additions`
+import typingsSlinky.reactCropper.reactCropperStrings.`removals text`
+import typingsSlinky.reactCropper.reactCropperStrings.`text additions`
+import typingsSlinky.reactCropper.reactCropperStrings.`text removals`
 import typingsSlinky.reactCropper.reactCropperStrings.additions
 import typingsSlinky.reactCropper.reactCropperStrings.all
 import typingsSlinky.reactCropper.reactCropperStrings.ascending
@@ -219,7 +229,9 @@ object ReactCropper {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -354,7 +366,7 @@ object ReactCropper {
     def coords(value: String): this.type = set("coords", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def crop(value: /* event */ CustomEvent => Unit): this.type = set("crop", js.Any.fromFunction1(value))
+    def crop(value: /* event */ CropEvent => Unit): this.type = set("crop", js.Any.fromFunction1(value))
     
     @scala.inline
     def cropBoxMovable(value: Boolean): this.type = set("cropBoxMovable", value.asInstanceOf[js.Any])
@@ -363,13 +375,13 @@ object ReactCropper {
     def cropBoxResizable(value: Boolean): this.type = set("cropBoxResizable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def cropend(value: /* event */ CustomEvent => Unit): this.type = set("cropend", js.Any.fromFunction1(value))
+    def cropend(value: /* event */ CropEndEvent => Unit): this.type = set("cropend", js.Any.fromFunction1(value))
     
     @scala.inline
-    def cropmove(value: /* event */ CustomEvent => Unit): this.type = set("cropmove", js.Any.fromFunction1(value))
+    def cropmove(value: /* event */ CropMoveEvent => Unit): this.type = set("cropmove", js.Any.fromFunction1(value))
     
     @scala.inline
-    def cropstart(value: /* event */ CustomEvent => Unit): this.type = set("cropstart", js.Any.fromFunction1(value))
+    def cropstart(value: /* event */ CropStartEvent => Unit): this.type = set("cropstart", js.Any.fromFunction1(value))
     
     @scala.inline
     def crossOrigin(value: String): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
@@ -879,7 +891,7 @@ object ReactCropper {
     def readOnly(value: Boolean): this.type = set("readOnly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def ready(value: /* event */ CustomEvent => Unit): this.type = set("ready", js.Any.fromFunction1(value))
+    def ready(value: CustomEvent => Unit): this.type = set("ready", js.Any.fromFunction1(value))
     
     @scala.inline
     def rel(value: String): this.type = set("rel", value.asInstanceOf[js.Any])
@@ -1038,7 +1050,7 @@ object ReactCropper {
     def wrap(value: String): this.type = set("wrap", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def zoom(value: /* event */ CustomEvent => Unit): this.type = set("zoom", js.Any.fromFunction1(value))
+    def zoom(value: /* event */ ZoomEvent => Unit): this.type = set("zoom", js.Any.fromFunction1(value))
     
     @scala.inline
     def zoomOnTouch(value: Boolean): this.type = set("zoomOnTouch", value.asInstanceOf[js.Any])

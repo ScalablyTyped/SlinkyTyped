@@ -10,7 +10,7 @@ trait MultiplexSettings extends js.Object {
   /**
     * Maximum video buffer delay in milliseconds.
     */
-  var MaximumVideoBufferDelayMilliseconds: js.UndefOr[integerMin1000Max3000] = js.native
+  var MaximumVideoBufferDelayMilliseconds: js.UndefOr[integerMin800Max3000] = js.native
   
   /**
     * Transport stream bit rate.
@@ -57,7 +57,7 @@ object MultiplexSettings {
     def setTransportStreamId(value: integerMin0Max65535): Self = this.set("TransportStreamId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMaximumVideoBufferDelayMilliseconds(value: integerMin1000Max3000): Self = this.set("MaximumVideoBufferDelayMilliseconds", value.asInstanceOf[js.Any])
+    def setMaximumVideoBufferDelayMilliseconds(value: integerMin800Max3000): Self = this.set("MaximumVideoBufferDelayMilliseconds", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaximumVideoBufferDelayMilliseconds: Self = this.set("MaximumVideoBufferDelayMilliseconds", js.undefined)

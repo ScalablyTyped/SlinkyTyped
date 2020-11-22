@@ -33,6 +33,8 @@ trait Response extends ReadableStream {
   
   var header: js.Any = js.native
   
+  var headers: js.Any = js.native
+  
   var info: Boolean = js.native
   
   var links: js.Object = js.native

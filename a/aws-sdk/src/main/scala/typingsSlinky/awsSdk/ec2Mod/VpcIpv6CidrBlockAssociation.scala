@@ -28,7 +28,7 @@ trait VpcIpv6CidrBlockAssociation extends js.Object {
   var Ipv6Pool: js.UndefOr[String] = js.native
   
   /**
-    * The name of the location from which we advertise the IPV6 CIDR block.
+    * The name of the unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses, for example, us-east-1-wl1-bos-wlz-1.
     */
   var NetworkBorderGroup: js.UndefOr[String] = js.native
 }

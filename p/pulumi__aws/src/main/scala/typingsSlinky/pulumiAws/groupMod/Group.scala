@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.groupMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.metricsMod.Metric
+import typingsSlinky.pulumiAws.enumsAutoscalingMod.Metric
 import typingsSlinky.pulumiAws.outputMod.autoscaling.GroupInitialLifecycleHook
 import typingsSlinky.pulumiAws.outputMod.autoscaling.GroupLaunchTemplate
 import typingsSlinky.pulumiAws.outputMod.autoscaling.GroupMixedInstancesPolicy
@@ -34,7 +34,7 @@ class Group protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
-    * A list of one or more availability zones for the group. This parameter should not be specified when using `vpcZoneIdentifier`.
+    * A list of one or more availability zones for the group. Used for EC2-Classic and default subnets when not specified with `vpcZoneIdentifier` argument. Conflicts with `vpcZoneIdentifier`.
     */
   val availabilityZones: Output_[js.Array[String]] = js.native
   
@@ -99,7 +99,7 @@ class Group protected () extends CustomResource {
     * A list of elastic load balancer names to add to the autoscaling
     * group names. Only valid for classic load balancers. For ALBs, use `targetGroupArns` instead.
     */
-  val loadBalancers: Output_[js.Array[String]] = js.native
+  val loadBalancers: Output_[js.UndefOr[js.Array[String]]] = js.native
   
   /**
     * The maximum amount of time, in seconds, that an instance can be in service, values must be either equal to 0 or between 604800 and 31536000 seconds.
@@ -180,9 +180,9 @@ class Group protected () extends CustomResource {
   val tagsCollection: Output_[js.UndefOr[js.Array[StringDictionary[String]]]] = js.native
   
   /**
-    * A list of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
+    * A set of `aws.alb.TargetGroup` ARNs, for use with Application or Network Load Balancing.
     */
-  val targetGroupArns: Output_[js.Array[String]] = js.native
+  val targetGroupArns: Output_[js.UndefOr[js.Array[String]]] = js.native
   
   /**
     * A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
@@ -190,7 +190,7 @@ class Group protected () extends CustomResource {
   val terminationPolicies: Output_[js.UndefOr[js.Array[String]]] = js.native
   
   /**
-    * A list of subnet IDs to launch resources in.
+    * A list of subnet IDs to launch resources in. Subnets automatically determine which availability zones the group will reside. Conflicts with `availabilityZones`.
     */
   val vpcZoneIdentifiers: Output_[js.Array[String]] = js.native
   

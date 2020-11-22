@@ -9,7 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object frequentlyMod extends js.Object {
   
-  // tslint:disable-next-line strict-export-declare-modifiers
   @js.native
   object default extends js.Object {
     

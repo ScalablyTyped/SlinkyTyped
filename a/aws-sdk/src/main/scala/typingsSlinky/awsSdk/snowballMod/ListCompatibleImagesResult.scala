@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListCompatibleImagesResult extends js.Object {
   
   /**
-    * A JSON-formatted object that describes a compatible AMI, including the ID and name for a Snowball Edge AMI.
+    * A JSON-formatted object that describes a compatible AMI, including the ID and name for a Snow device AMI.
     */
   var CompatibleImages: js.UndefOr[CompatibleImageList] = js.native
   

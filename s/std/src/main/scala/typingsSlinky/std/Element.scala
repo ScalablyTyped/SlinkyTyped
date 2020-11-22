@@ -188,7 +188,7 @@ trait Element
      with InnerHTML
      with NonDocumentTypeChildNode
      with ParentNode
-     with Slotable {
+     with Slottable {
   
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
@@ -615,9 +615,10 @@ trait Element
     */
   def getAttributeNames(): js.Array[java.lang.String] = js.native
   
-  def getAttributeNode(name: java.lang.String): org.scalajs.dom.raw.Attr | Null = js.native
+  def getAttributeNode(qualifiedName: java.lang.String): org.scalajs.dom.raw.Attr | Null = js.native
   
-  def getAttributeNodeNS(namespaceURI: java.lang.String, localName: java.lang.String): org.scalajs.dom.raw.Attr | Null = js.native
+  def getAttributeNodeNS(namespace: java.lang.String, localName: java.lang.String): org.scalajs.dom.raw.Attr | Null = js.native
+  def getAttributeNodeNS(namespace: Null, localName: java.lang.String): org.scalajs.dom.raw.Attr | Null = js.native
   
   def getBoundingClientRect(): DOMRect = js.native
   

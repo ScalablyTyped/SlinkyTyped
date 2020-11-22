@@ -20,7 +20,8 @@ object ShaderProcessor extends js.Object {
   def Process(
     sourceCode: String,
     options: ProcessingOptions,
-    callback: js.Function1[/* migratedCode */ String, Unit]
+    callback: js.Function1[/* migratedCode */ String, Unit],
+    engine: typingsSlinky.babylonjs.BABYLON.ThinEngine
   ): Unit = js.native
   
   var _BuildExpression: js.Any = js.native

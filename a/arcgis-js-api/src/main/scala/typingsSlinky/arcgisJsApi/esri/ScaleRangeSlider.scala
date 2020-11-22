@@ -11,8 +11,6 @@ trait ScaleRangeSlider extends Widget_ {
     * When `true`, sets the widget to a disabled state so the user cannot interact with it.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#disabled)
-    *
-    * @default false
     */
   var disabled: Boolean = js.native
   
@@ -24,7 +22,7 @@ trait ScaleRangeSlider extends Widget_ {
   var layer: Layer = js.native
   
   /**
-    * The maximum scale of the active scale range. When the maxScale reaches the [maxScaleLimit](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#maxScaleLimit), the maxScale value becomes 0 and there is no maximum scale set.
+    * The maximum scale of the active scale range.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#maxScale)
     */
@@ -38,7 +36,7 @@ trait ScaleRangeSlider extends Widget_ {
   var maxScaleLimit: Double = js.native
   
   /**
-    * The minimum scale of the active scale range. When the minScale reaches the [minScaleLimit](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#minScaleLimit), the minScale value becomes 0 and there is no minimum scale.
+    * The minimum scale of the active scale range.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#minScale)
     */
@@ -52,30 +50,28 @@ trait ScaleRangeSlider extends Widget_ {
   var minScaleLimit: Double = js.native
   
   /**
-    * The region that the scale thumbnails will focus on. Each region comes from the [ISO 3166-1 alpha-2 code](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes). See [SupportedRegion](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#SupportedRegion) for the list of regions that are currently supported.
+    * The region that the scale thumbnails will focus on.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#region)
-    *
-    * @default "US"
     */
   var region: SupportedRegion = js.native
   
   /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the widget to a specific view.
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#view)
     */
   var view: MapView | SceneView = js.native
   
   /**
-    * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [ScaleRangeSliderViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html) class to access all properties and methods on the widget.
+    * The view model for this widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#viewModel)
     */
   var viewModel: ScaleRangeSliderViewModel = js.native
   
   /**
-    * The visible elements that are displayed within the widget. This property provides the ability to turn individual elements of the widget's display on/off.
+    * The visible elements that are displayed within the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#visibleElements)
     */

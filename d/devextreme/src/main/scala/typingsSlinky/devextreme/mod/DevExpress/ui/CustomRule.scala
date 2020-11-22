@@ -17,21 +17,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CustomRule extends js.Object {
   
-  /** @name CustomRule.ignoreEmptyValue */
+  /**
+    * [descr:CustomRule.ignoreEmptyValue]
+    */
   var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
   
-  /** @name CustomRule.message */
+  /**
+    * [descr:CustomRule.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name CustomRule.reevaluate */
+  /**
+    * [descr:CustomRule.reevaluate]
+    */
   var reevaluate: js.UndefOr[Boolean] = js.native
   
-  /** @name CustomRule.type */
+  /**
+    * [descr:CustomRule.type]
+    */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native
   
-  /** @name CustomRule.validationCallback */
+  /**
+    * [descr:CustomRule.validationCallback]
+    */
   var validationCallback: js.UndefOr[js.Function1[/* options */ Column, Boolean]] = js.native
 }
 object CustomRule {

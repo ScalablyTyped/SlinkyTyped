@@ -1,13 +1,16 @@
 package typingsSlinky.baseui.components
 
+import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
-import slinky.web.html.`*`.tag
+import slinky.web.SyntheticFocusEvent
+import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.anon.CloseListbox
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.mini
+import typingsSlinky.baseui.comboboxMod.ComboboxOverrides
 import typingsSlinky.baseui.comboboxMod.PropsT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,19 +34,28 @@ object Combobox {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def mapOptionToNode(value: /* hasIsSelectedOption */ js.Any => ReactElement): this.type = set("mapOptionToNode", js.Any.fromFunction1(value))
     
     @scala.inline
     def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def onBlur(value: /* event */ SyntheticFocusEvent[HTMLInputElement] => _): this.type = set("onBlur", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def onChange(value: (/* value */ String, /* option */ js.Any | Null) => _): this.type = set("onChange", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def onFocus(value: /* event */ SyntheticFocusEvent[HTMLInputElement] => _): this.type = set("onFocus", js.Any.fromFunction1(value))
     
     @scala.inline
     def onSubmit(value: /* params */ CloseListbox => _): this.type = set("onSubmit", js.Any.fromFunction1(value))
     
     @scala.inline
-    def overrides(value: typingsSlinky.baseui.anon.Input): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: ComboboxOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def size(value: compact | default_ | large_ | mini): this.type = set("size", value.asInstanceOf[js.Any])

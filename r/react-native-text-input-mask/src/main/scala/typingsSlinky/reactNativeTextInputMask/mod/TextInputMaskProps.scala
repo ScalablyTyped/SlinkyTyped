@@ -1,12 +1,10 @@
 package typingsSlinky.reactNativeTextInputMask.mod
 
 import slinky.core.SyntheticEvent
-import slinky.core.facade.ReactRef
 import typingsSlinky.reactNative.mod.KeyboardTypeOptions
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ReturnKeyTypeOptions
 import typingsSlinky.reactNative.mod.StyleProp
-import typingsSlinky.reactNative.mod.TextInput
 import typingsSlinky.reactNative.mod.TextInputAndroidProps
 import typingsSlinky.reactNative.mod.TextInputFocusEventData
 import typingsSlinky.reactNative.mod.TextInputIOSProps
@@ -192,7 +190,7 @@ trait TextInputMaskProps
     */
   var placeholderTextColor: js.UndefOr[String] = js.native
   
-  var refInput: js.UndefOr[ReactRef[TextInput]] = js.native
+  var refInput: js.UndefOr[js.Function1[/* ref */ js.Any, Unit]] = js.native
   
   /**
     * enum('default', 'go', 'google', 'join', 'next', 'route', 'search', 'send', 'yahoo', 'done', 'emergency-call')
@@ -414,7 +412,7 @@ object TextInputMaskProps {
     def deletePlaceholderTextColor: Self = this.set("placeholderTextColor", js.undefined)
     
     @scala.inline
-    def setRefInput(value: ReactRef[TextInput]): Self = this.set("refInput", value.asInstanceOf[js.Any])
+    def setRefInput(value: /* ref */ js.Any => Unit): Self = this.set("refInput", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRefInput: Self = this.set("refInput", js.undefined)

@@ -26,14 +26,24 @@ trait RouteState extends js.Object {
   val lastUpdatedDate: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The name of the service mesh in which to create the route.
+    * The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
     */
   val meshName: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The name to use for the route.
+    * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    */
+  val meshOwner: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The name to use for the route. Must be between 1 and 255 characters in length.
     */
   val name: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The resource owner's AWS account ID.
+    */
+  val resourceOwner: js.UndefOr[Input[String]] = js.native
   
   /**
     * The route specification to apply.
@@ -46,7 +56,7 @@ trait RouteState extends js.Object {
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
-    * The name of the virtual router in which to create the route.
+    * The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
     */
   val virtualRouterName: js.UndefOr[Input[String]] = js.native
 }
@@ -98,10 +108,22 @@ object RouteState {
     def deleteMeshName: Self = this.set("meshName", js.undefined)
     
     @scala.inline
+    def setMeshOwner(value: Input[String]): Self = this.set("meshOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMeshOwner: Self = this.set("meshOwner", js.undefined)
+    
+    @scala.inline
     def setName(value: Input[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setResourceOwner(value: Input[String]): Self = this.set("resourceOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResourceOwner: Self = this.set("resourceOwner", js.undefined)
     
     @scala.inline
     def setSpec(value: Input[RouteSpec]): Self = this.set("spec", value.asInstanceOf[js.Any])

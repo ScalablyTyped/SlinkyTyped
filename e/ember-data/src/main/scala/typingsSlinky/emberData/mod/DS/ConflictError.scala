@@ -3,7 +3,7 @@ package typingsSlinky.emberData.mod.DS
 import typingsSlinky.emberObject.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A `DS.ConflictError` equates to a HTTP `409 Conflict` response status.
@@ -15,4 +15,3 @@ import scala.scalajs.js.annotation._
 @JSImport("ember-data", "DS.ConflictError")
 @js.native
 class ConflictError () extends default
-

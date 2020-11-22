@@ -8,14 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EditorViewModelProperties extends js.Object {
   
   /**
-    * An array of string values which specifies what end users are allowed to edit. For example, a feature layer with full editing privileges may be available. But you may only want the end user to have the ability to update existing features. Set the `allowedWorkflows` to only `update`.
-    *
-    * Possible Value | Description
-    * ---------------|------------
-    * create | Indicated in the widget via the `Add feature` option. This allows the end user to create new features in the feature service.
-    * update | Indicated in the widget via the `Edit feature` option. This allows the end user to update and/or delete features in the feature service.
-    *
-    * > These workflows are only enabled if the feature service allows these operations. For example, if a feature service is only enabled to allow updates, 'Add features' is not enabled.
+    * An array of string values which specifies what end users are allowed to edit.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#allowedWorkflows)
     */
@@ -36,7 +29,7 @@ trait EditorViewModelProperties extends js.Object {
   var featureTemplatesViewModel: js.UndefOr[FeatureTemplatesViewModelProperties] = js.native
   
   /**
-    * An array of editing configurations for individual layers.  If you have an editable feature layer but do not want the end user to do any type of editing, you can limit this by setting the `enabled` property to `false`.
+    * An array of editing configurations for individual layers.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#layerInfos)
     */
@@ -50,11 +43,11 @@ trait EditorViewModelProperties extends js.Object {
   var sketchViewModel: js.UndefOr[SketchViewModelProperties] = js.native
   
   /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html). This view provides the editable layers for the Editor widget.
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#view)
     */
-  var view: js.UndefOr[MapViewProperties] = js.native
+  var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.native
 }
 object EditorViewModelProperties {
   
@@ -116,7 +109,7 @@ object EditorViewModelProperties {
     def deleteSketchViewModel: Self = this.set("sketchViewModel", js.undefined)
     
     @scala.inline
-    def setView(value: MapViewProperties): Self = this.set("view", value.asInstanceOf[js.Any])
+    def setView(value: MapViewProperties | SceneViewProperties): Self = this.set("view", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteView: Self = this.set("view", js.undefined)

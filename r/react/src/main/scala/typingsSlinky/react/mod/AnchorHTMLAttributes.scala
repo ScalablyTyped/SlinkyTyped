@@ -17,7 +17,7 @@ trait AnchorHTMLAttributes[T] extends HTMLAttributes[T] {
   
   var ping: js.UndefOr[String] = js.native
   
-  var referrerPolicy: js.UndefOr[String] = js.native
+  var referrerPolicy: js.UndefOr[HTMLAttributeReferrerPolicy] = js.native
   
   var rel: js.UndefOr[String] = js.native
   
@@ -79,7 +79,7 @@ object AnchorHTMLAttributes {
     def deletePing: Self = this.set("ping", js.undefined)
     
     @scala.inline
-    def setReferrerPolicy(value: String): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    def setReferrerPolicy(value: HTMLAttributeReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)

@@ -47,7 +47,7 @@ class Db protected () extends EventEmitter {
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#command */
   def command(command: js.Object, callback: MongoCallback[_]): Unit = js.native
   def command(command: js.Object, options: typingsSlinky.mongodb.anon.ReadPreference): js.Promise[_] = js.native
-  def command(command: js.Object, options: typingsSlinky.mongodb.anon.ReadPreference, callback: MongoCallback[_]): Unit = js.native
+  def command(command: js.Object, options: Session, callback: MongoCallback[_]): Unit = js.native
   
   def createCollection[TSchema](name: String): js.Promise[Collection[TSchema]] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#createCollection */
@@ -78,8 +78,8 @@ class Db protected () extends EventEmitter {
   def executeDbAdminCommand(command: js.Object): js.Promise[_] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#executeDbAdminCommand */
   def executeDbAdminCommand(command: js.Object, callback: MongoCallback[_]): Unit = js.native
-  def executeDbAdminCommand(command: js.Object, options: Session): js.Promise[_] = js.native
-  def executeDbAdminCommand(command: js.Object, options: Session, callback: MongoCallback[_]): Unit = js.native
+  def executeDbAdminCommand(command: js.Object, options: typingsSlinky.mongodb.anon.ReadPreference): js.Promise[_] = js.native
+  def executeDbAdminCommand(command: js.Object, options: typingsSlinky.mongodb.anon.ReadPreference, callback: MongoCallback[_]): Unit = js.native
   
   def indexInformation(name: String): js.Promise[_] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#indexInformation */

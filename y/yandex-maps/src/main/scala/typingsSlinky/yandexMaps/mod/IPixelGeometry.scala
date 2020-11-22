@@ -20,7 +20,7 @@ object IPixelGeometry {
   @scala.inline
   def apply(
     equals: IPixelGeometry => Boolean,
-    events: IEventManager,
+    events: IEventManager[js.Object],
     getBounds: () => js.Array[js.Array[Double]] | Null,
     getMetaData: () => js.Object,
     getType: () => String,

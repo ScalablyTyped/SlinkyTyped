@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SavingsPlansPurchaseRecommendationMetadata extends js.Object {
   
   /**
+    * Additional metadata that may be applicable to the recommendation.
+    */
+  var AdditionalMetadata: js.UndefOr[GenericString] = js.native
+  
+  /**
     * The timestamp showing when the recommendations were generated.
     */
   var GenerationTimestamp: js.UndefOr[GenericString] = js.native
@@ -39,6 +44,12 @@ object SavingsPlansPurchaseRecommendationMetadata {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAdditionalMetadata(value: GenericString): Self = this.set("AdditionalMetadata", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdditionalMetadata: Self = this.set("AdditionalMetadata", js.undefined)
     
     @scala.inline
     def setGenerationTimestamp(value: GenericString): Self = this.set("GenerationTimestamp", value.asInstanceOf[js.Any])

@@ -3,6 +3,7 @@ package typingsSlinky.babelCore.mod
 import typingsSlinky.babelTraverse.mod.Hub
 import typingsSlinky.babelTraverse.mod.Scope
 import typingsSlinky.babelTypes.mod.File_
+import typingsSlinky.babelTypes.mod.Program_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +23,7 @@ trait BabelFile extends js.Object {
   
   var opts: TransformOptions = js.native
   
-  var path: typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTraverse.mod.Node] = js.native
+  var path: typingsSlinky.babelTraverse.mod.NodePath[Program_] = js.native
   
   var scope: Scope = js.native
 }
@@ -35,7 +36,7 @@ object BabelFile {
     hub: Hub,
     metadata: js.Object,
     opts: TransformOptions,
-    path: typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTraverse.mod.Node],
+    path: typingsSlinky.babelTraverse.mod.NodePath[Program_],
     scope: Scope
   ): BabelFile = {
     val __obj = js.Dynamic.literal(ast = ast.asInstanceOf[js.Any], code = code.asInstanceOf[js.Any], hub = hub.asInstanceOf[js.Any], metadata = metadata.asInstanceOf[js.Any], opts = opts.asInstanceOf[js.Any], path = path.asInstanceOf[js.Any], scope = scope.asInstanceOf[js.Any])
@@ -73,7 +74,7 @@ object BabelFile {
     def setOpts(value: TransformOptions): Self = this.set("opts", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPath(value: typingsSlinky.babelTraverse.mod.NodePath[typingsSlinky.babelTraverse.mod.Node]): Self = this.set("path", value.asInstanceOf[js.Any])
+    def setPath(value: typingsSlinky.babelTraverse.mod.NodePath[Program_]): Self = this.set("path", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setScope(value: Scope): Self = this.set("scope", value.asInstanceOf[js.Any])

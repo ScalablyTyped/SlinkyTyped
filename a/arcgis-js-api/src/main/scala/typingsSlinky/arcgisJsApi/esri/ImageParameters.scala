@@ -24,8 +24,6 @@ trait ImageParameters extends Accessor {
     * Dots per inch setting for an module:esri/layersMapImageLayer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#dpi)
-    *
-    * @default 96
     */
   var dpi: Double = js.native
   
@@ -40,8 +38,6 @@ trait ImageParameters extends Accessor {
     * Map image format.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#format)
-    *
-    * @default png8
     */
   var format: png | png8 | png24 | png32 | jpg | pdf | bmp | gif | svg = js.native
   
@@ -60,14 +56,14 @@ trait ImageParameters extends Accessor {
   var imageSpatialReference: SpatialReference = js.native
   
   /**
-    * Array of layer definition expressions that allows you to filter the features of individual layers in the exported map image. Layer definitions with semicolons or colons are supported if using a map service published using ArcGIS Server 10 or later.
+    * Array of layer definition expressions that allows you to filter the features of individual layers in the exported map image.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#layerDefinitions)
     */
   var layerDefinitions: js.Array[String] = js.native
   
   /**
-    * A list of layer IDs, that represent which layers to include in the exported map. Use in combination with [layerOption](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#layerOption) to specify how layer visibility is handled.
+    * A list of layer IDs, that represent which layers to include in the exported map.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#layerIds)
     */
@@ -81,11 +77,9 @@ trait ImageParameters extends Accessor {
   var layerOption: show | hide | include | exclude = js.native
   
   /**
-    * Converts an instance of  [this class]() to its ArcGIS portal JSON representation. See the [Using fromJSON()](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#using-fromjson) topic in the Guide for more information.
+    * Converts an instance of  [this class]() to its ArcGIS portal JSON representation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#toJSON)
-    *
-    *
     */
   def toJSON(): js.Any = js.native
   
@@ -93,8 +87,6 @@ trait ImageParameters extends Accessor {
     * Indicates whether or not the background of the dynamic image is transparent.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-ImageParameters.html#transparent)
-    *
-    * @default true
     */
   var transparent: Boolean = js.native
   

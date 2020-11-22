@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ExportingCsvOptions extends js.Object {
   
   /**
+    * (Highcharts, Highstock, Highmaps, Gantt) Options for annotations in the
+    * export-data table.
+    */
+  var annotations: js.UndefOr[ExportingCsvAnnotationsOptions] = js.native
+  
+  /**
     * (Highcharts, Highstock, Highmaps, Gantt) Formatter callback for the
     * column headers. Parameters are:
     *
@@ -83,6 +89,12 @@ object ExportingCsvOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAnnotations(value: ExportingCsvAnnotationsOptions): Self = this.set("annotations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnnotations: Self = this.set("annotations", js.undefined)
     
     @scala.inline
     def setColumnHeaderFormatter(value: js.Function): Self = this.set("columnHeaderFormatter", value.asInstanceOf[js.Any])

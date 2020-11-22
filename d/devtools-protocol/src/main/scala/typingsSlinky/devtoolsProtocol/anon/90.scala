@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.IndexedDB.ClearObjectStoreRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetTimezoneOverrideRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `90` extends js.Object {
   
-  var paramsType: js.Array[ClearObjectStoreRequest] = js.native
+  var paramsType: js.Array[SetTimezoneOverrideRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `90` {
   
   @scala.inline
-  def apply(paramsType: js.Array[ClearObjectStoreRequest], returnType: Unit): `90` = {
+  def apply(paramsType: js.Array[SetTimezoneOverrideRequest], returnType: Unit): `90` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`90`]
   }
@@ -36,10 +36,10 @@ object `90` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: ClearObjectStoreRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetTimezoneOverrideRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[ClearObjectStoreRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetTimezoneOverrideRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

@@ -25,6 +25,16 @@ trait ModelContainer extends js.Object {
   var image: String = js.native
   
   /**
+    * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
+    */
+  var imageConfig: js.UndefOr[ModelContainerImageConfig] = js.native
+  
+  /**
+    * The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
+    */
+  var mode: js.UndefOr[String] = js.native
+  
+  /**
     * The URL for the S3 location where model artifacts are stored.
     */
   var modelDataUrl: js.UndefOr[String] = js.native
@@ -66,6 +76,18 @@ object ModelContainer {
     
     @scala.inline
     def deleteEnvironment: Self = this.set("environment", js.undefined)
+    
+    @scala.inline
+    def setImageConfig(value: ModelContainerImageConfig): Self = this.set("imageConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImageConfig: Self = this.set("imageConfig", js.undefined)
+    
+    @scala.inline
+    def setMode(value: String): Self = this.set("mode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMode: Self = this.set("mode", js.undefined)
     
     @scala.inline
     def setModelDataUrl(value: String): Self = this.set("modelDataUrl", value.asInstanceOf[js.Any])

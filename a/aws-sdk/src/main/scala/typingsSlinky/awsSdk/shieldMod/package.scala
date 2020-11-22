@@ -30,6 +30,8 @@ package object shieldMod {
   */
   type AttackPropertyIdentifier = typingsSlinky.awsSdk.shieldMod._AttackPropertyIdentifier | java.lang.String
   
+  type AttackStatisticsDataList = js.Array[typingsSlinky.awsSdk.shieldMod.AttackStatisticsDataItem]
+  
   type AttackSummaries = js.Array[typingsSlinky.awsSdk.shieldMod.AttackSummary]
   
   type AttackTimestamp = js.Date
@@ -85,6 +87,39 @@ package object shieldMod {
   */
   type ProactiveEngagementStatus = typingsSlinky.awsSdk.shieldMod._ProactiveEngagementStatus | java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CLOUDFRONT_DISTRIBUTION
+    - typingsSlinky.awsSdk.awsSdkStrings.ROUTE_53_HOSTED_ZONE
+    - typingsSlinky.awsSdk.awsSdkStrings.ELASTIC_IP_ALLOCATION
+    - typingsSlinky.awsSdk.awsSdkStrings.CLASSIC_LOAD_BALANCER
+    - typingsSlinky.awsSdk.awsSdkStrings.APPLICATION_LOAD_BALANCER
+    - typingsSlinky.awsSdk.awsSdkStrings.GLOBAL_ACCELERATOR
+    - java.lang.String
+  */
+  type ProtectedResourceType = typingsSlinky.awsSdk.shieldMod._ProtectedResourceType | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SUM
+    - typingsSlinky.awsSdk.awsSdkStrings.MEAN
+    - typingsSlinky.awsSdk.awsSdkStrings.MAX
+    - java.lang.String
+  */
+  type ProtectionGroupAggregation = typingsSlinky.awsSdk.shieldMod._ProtectionGroupAggregation | java.lang.String
+  
+  type ProtectionGroupId = java.lang.String
+  
+  type ProtectionGroupMembers = js.Array[typingsSlinky.awsSdk.shieldMod.ResourceArn]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ALL
+    - typingsSlinky.awsSdk.awsSdkStrings.ARBITRARY
+    - typingsSlinky.awsSdk.awsSdkStrings.BY_RESOURCE_TYPE
+    - java.lang.String
+  */
+  type ProtectionGroupPattern = typingsSlinky.awsSdk.shieldMod._ProtectionGroupPattern | java.lang.String
+  
+  type ProtectionGroups = js.Array[typingsSlinky.awsSdk.shieldMod.ProtectionGroup]
+  
   type ProtectionId = java.lang.String
   
   type ProtectionName = java.lang.String
@@ -94,6 +129,8 @@ package object shieldMod {
   type ResourceArn = java.lang.String
   
   type ResourceArnFilterList = js.Array[typingsSlinky.awsSdk.shieldMod.ResourceArn]
+  
+  type ResourceArnList = js.Array[typingsSlinky.awsSdk.shieldMod.ResourceArn]
   
   type RoleArn = java.lang.String
   

@@ -104,6 +104,8 @@ package object iotMod {
   
   type AuditCheckToReasonCodeFilter = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.iotMod.ReasonForNonComplianceCodes]
   
+  type AuditDescription = java.lang.String
+  
   type AuditDetails = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.iotMod.AuditCheckDetails]
   
   /* Rewritten from type alias, can be one of: 
@@ -157,6 +159,8 @@ package object iotMod {
   type AuditNotificationTargetConfigurations = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.iotMod.AuditNotificationTarget]
   
   type AuditNotificationType = typingsSlinky.awsSdk.awsSdkStrings.SNS | java.lang.String
+  
+  type AuditSuppressionList = js.Array[typingsSlinky.awsSdk.iotMod.AuditSuppression]
   
   type AuditTaskId = java.lang.String
   
@@ -248,6 +252,8 @@ package object iotMod {
   type AwsJobRolloutRatePerMinute = scala.Double
   
   type AwsJobTimeoutInProgressTimeoutInMinutes = scala.Double
+  
+  type BatchMode = scala.Boolean
   
   type BehaviorMetric = java.lang.String
   
@@ -635,6 +641,8 @@ package object iotMod {
   
   type IsDisabled = scala.Boolean
   
+  type IsSuppressed = scala.Boolean
+  
   type JobArn = java.lang.String
   
   type JobDescription = java.lang.String
@@ -695,6 +703,8 @@ package object iotMod {
   type LaserMaxResults = scala.Double
   
   type LastModifiedDate = js.Date
+  
+  type ListSuppressedFindings = scala.Boolean
   
   type LogGroupName = java.lang.String
   
@@ -776,6 +786,8 @@ package object iotMod {
   type MqttPassword = typingsSlinky.node.Buffer | js.typedarray.Uint8Array | typingsSlinky.awsSdk.iotMod.Blob | java.lang.String
   
   type MqttUsername = java.lang.String
+  
+  type NamespaceId = java.lang.String
   
   type NextToken = java.lang.String
   
@@ -1126,6 +1138,10 @@ package object iotMod {
   
   type SumOfSquares = scala.Double
   
+  type SuppressIndefinitely = scala.Boolean
+  
+  type SuppressedNonCompliantResourcesCount = scala.Double
+  
   type TableName = java.lang.String
   
   type TagKey = java.lang.String
@@ -1230,6 +1246,20 @@ package object iotMod {
   type TimedOutThings = scala.Double
   
   type Timestamp = js.Date
+  
+  type TimestreamDatabaseName = java.lang.String
+  
+  type TimestreamDimensionList = js.Array[typingsSlinky.awsSdk.iotMod.TimestreamDimension]
+  
+  type TimestreamDimensionName = java.lang.String
+  
+  type TimestreamDimensionValue = java.lang.String
+  
+  type TimestreamTableName = java.lang.String
+  
+  type TimestreamTimestampUnit = java.lang.String
+  
+  type TimestreamTimestampValue = java.lang.String
   
   type Token = java.lang.String
   

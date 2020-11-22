@@ -1,7 +1,7 @@
 
 # Scala.js typings for mini-create-react-context
 
-Typings are for version 0.3.2
+Typings are for version 0.3.3
 
 ## Library description:
 Smaller Polyfill for the proposed React context API

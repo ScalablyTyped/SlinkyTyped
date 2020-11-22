@@ -22,8 +22,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MessageDetails extends js.Object {
   
   /**
-    * The log level, from 0 to 3.  In order it matches `verbose`, `info`, `warning`
-    * and `error`.
+    * The log level, from 0 to 3. In order it matches `verbose`, `info`, `warning` and
+    * `error`.
     */
   var level: Double = js.native
   

@@ -39,7 +39,7 @@ class Socket ()
   @JSName("addListener")
   def addListener_timeout(event: timeout, listener: js.Function0[Unit]): this.type = js.native
   
-  def address(): AddressInfo | String = js.native
+  def address(): AddressInfo | js.Object = js.native
   
   val bufferSize: Double = js.native
   

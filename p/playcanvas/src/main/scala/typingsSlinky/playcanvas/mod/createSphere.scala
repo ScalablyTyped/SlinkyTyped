@@ -13,7 +13,7 @@ object createSphere extends js.Object {
     * Creates a procedural sphere-shaped mesh.
     *
     * The size and tesselation properties of the sphere can be controlled via function
-    * parameters. By default, the function will create a sphere centred on the object
+    * parameters. By default, the function will create a sphere centered on the object
     * space origin with a radius of 0.5 and 16 segments in both longitude and latitude.
     *
     * Note that the sphere is created with UVs in the range of 0 to 1. Additionally, tangent

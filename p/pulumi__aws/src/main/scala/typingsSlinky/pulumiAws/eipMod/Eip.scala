@@ -46,12 +46,20 @@ class Eip protected () extends CustomResource {
     */
   val customerOwnedIpv4Pool: Output_[js.UndefOr[String]] = js.native
   
+  /**
+    * Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
+    */
   val domain: Output_[String] = js.native
   
   /**
     * EC2 instance ID.
     */
   val instance: Output_[String] = js.native
+  
+  /**
+    * The location from which the IP address is advertised. Use this parameter to limit the address to this location.
+    */
+  val networkBorderGroup: Output_[String] = js.native
   
   /**
     * Network interface ID to associate with.
@@ -84,7 +92,7 @@ class Eip protected () extends CustomResource {
   val publicIpv4Pool: Output_[String] = js.native
   
   /**
-    * A map of tags to assign to the resource.
+    * A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
     */
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   

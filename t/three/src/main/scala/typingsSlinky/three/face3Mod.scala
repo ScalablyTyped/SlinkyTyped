@@ -112,28 +112,33 @@ object face3Mod extends js.Object {
     
     /**
     	 * Face color.
+    	 * @default new THREE.Color()
     	 */
     var color: Color = js.native
     
     def copy(source: Face3): this.type = js.native
     
     /**
-    	 * Material index (points to {@link Geometry.materials}).
+    	 * Material index (points to {@link Mesh.material}).
+    	 * @default 0
     	 */
     var materialIndex: Double = js.native
     
     /**
     	 * Face normal.
+    	 * @default new THREE.Vector3()
     	 */
     var normal: Vector3 = js.native
     
     /**
     	 * Array of 3 vertex colors.
+    	 * @default []
     	 */
     var vertexColors: js.Array[Color] = js.native
     
     /**
     	 * Array of 3 vertex normals.
+    	 * @default []
     	 */
     var vertexNormals: js.Array[Vector3] = js.native
   }

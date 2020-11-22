@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useState extends js.Object {
   
-  // convenience overload when first argument is ommitted
+  // convenience overload when first argument is omitted
   /**
     * Returns a stateful value, and a function to update it.
     *

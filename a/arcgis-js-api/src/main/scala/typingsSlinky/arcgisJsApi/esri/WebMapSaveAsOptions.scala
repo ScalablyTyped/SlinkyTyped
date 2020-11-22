@@ -17,7 +17,7 @@ trait WebMapSaveAsOptions extends Object {
   var folder: js.UndefOr[PortalFolder] = js.native
   
   /**
-    * Allow the webmap to be saved even in the case it contains unsupported content (layers, renderers, symbols). Any content that is not supported will not be saved and the webmap may appear different when reloaded from its portal item.
+    * Allow the webmap to be saved even in the case it contains unsupported content (layers, renderers, symbols).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-WebMap.html#saveAs)
     */

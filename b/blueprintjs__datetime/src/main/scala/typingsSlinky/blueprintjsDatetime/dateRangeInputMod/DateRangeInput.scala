@@ -37,8 +37,6 @@ class DateRangeInput protected ()
   
   var getInputDisplayString: js.Any = js.native
   
-  var getInputGroupCallbackForEvent: js.Any = js.native
-  
   var getInputPlaceholderString: js.Any = js.native
   
   var getInputProps: js.Any = js.native

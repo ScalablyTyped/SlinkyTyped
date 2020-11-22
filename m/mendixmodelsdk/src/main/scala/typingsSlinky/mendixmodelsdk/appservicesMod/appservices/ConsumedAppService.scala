@@ -1,7 +1,6 @@
 package typingsSlinky.mendixmodelsdk.appservicesMod.appservices
 
 import typingsSlinky.mendixmodelsdk.appservicesMod.StructureVersionInfo
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.constantsMod.constants.IConstant
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -13,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/consumed-app-services relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/consumed-app-services relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -63,9 +62,6 @@ class ConsumedAppService protected () extends Document {
   def locationConstantQualifiedName: String | Null = js.native
   
   def locationConstant_=(newValue: IConstant | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FConsumedAppService: IModel = js.native
   
   def msd: Msd = js.native
   def msd_=(newValue: Msd): Unit = js.native

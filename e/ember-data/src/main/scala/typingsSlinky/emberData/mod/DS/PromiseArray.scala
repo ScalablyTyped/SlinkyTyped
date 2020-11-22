@@ -4,7 +4,7 @@ import typingsSlinky.ember.mod.default.ArrayProxy
 import typingsSlinky.emberObject.promiseProxyMixinMod.PromiseProxyMixin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A `PromiseArray` is an object that acts like both an `Ember.Array`
@@ -18,4 +18,3 @@ import scala.scalajs.js.annotation._
 class PromiseArray[T] ()
   extends PromiseProxyMixin[ArrayProxy[T]]
      with typingsSlinky.emberArray.proxyMod.ArrayProxy[T]
-

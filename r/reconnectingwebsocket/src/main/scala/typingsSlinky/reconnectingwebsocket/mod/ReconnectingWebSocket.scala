@@ -1,17 +1,12 @@
 package typingsSlinky.reconnectingwebsocket.mod
 
-import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.EventListenerOptions
-import typingsSlinky.reconnectingwebsocket.anon.FnCall
-import typingsSlinky.reconnectingwebsocket.anon.FnCallData
 import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.close
 import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.connecting
 import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.error
 import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.message
 import typingsSlinky.reconnectingwebsocket.reconnectingwebsocketStrings.open
 import typingsSlinky.std.AddEventListenerOptions
-import typingsSlinky.std.ArrayBufferLike
-import typingsSlinky.std.BinaryType
 import typingsSlinky.std.EventTarget
 import typingsSlinky.std.NonNullable
 import scala.scalajs.js
@@ -135,34 +130,13 @@ trait ReconnectingWebSocket extends EventTarget {
   /**
     * The binary type, possible values `'blob'` or `'arraybuffer'`.
     */
-  val binaryType: BinaryType = js.native
+  val binaryType: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['binaryType'] */ js.Any = js.native
   
   /**
     * Closes the WebSocket connection or connection attempt, if any.
     * If the connection is already `CLOSED`, this method does nothing.
     */
-  def close(): Unit = js.native
-  /**
-    * Closes the WebSocket connection or connection attempt, if any.
-    * If the connection is already `CLOSED`, this method does nothing.
-    */
-  def close(code: js.UndefOr[scala.Nothing], reason: String): Unit = js.native
-  /**
-    * Closes the WebSocket connection or connection attempt, if any.
-    * If the connection is already `CLOSED`, this method does nothing.
-    */
-  def close(code: Double): Unit = js.native
-  /**
-    * Closes the WebSocket connection or connection attempt, if any.
-    * If the connection is already `CLOSED`, this method does nothing.
-    */
-  def close(code: Double, reason: String): Unit = js.native
-  /**
-    * Closes the WebSocket connection or connection attempt, if any.
-    * If the connection is already `CLOSED`, this method does nothing.
-    */
-  @JSName("close")
-  var close_Original: FnCall = js.native
+  var close: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['close'] */ js.Any = js.native
   
   /**
     * Whether this instance should log debug messages.
@@ -203,13 +177,13 @@ trait ReconnectingWebSocket extends EventTarget {
     * A string indicating the name of the sub-protocol the server selected; this will be one of
     * the strings specified in the protocols parameter when creating the `WebSocket` object.
     */
-  val protocol: String | Null = js.native
+  val protocol: (/* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['protocol'] */ js.Any) | Null = js.native
   
   /**
     * The current state of the connection.
     * Can be one of: `WebSocket.CONNECTING`, `WebSocket.OPEN`, `WebSocket.CLOSING`, `WebSocket.CLOSED`.
     */
-  val readyState: Double = js.native
+  val readyState: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['readyState'] */ js.Any = js.native
   
   /** The number of attempted reconnects since starting, or the last successful connection. */
   val reconnectAttempts: Double = js.native
@@ -307,16 +281,7 @@ trait ReconnectingWebSocket extends EventTarget {
   ): Unit = js.native
   
   /** Transmits data to the server over the WebSocket connection. */
-  def send(data: String): Unit = js.native
-  /** Transmits data to the server over the WebSocket connection. */
-  def send(data: ArrayBufferLike): Unit = js.native
-  /** Transmits data to the server over the WebSocket connection. */
-  def send(data: js.typedarray.ArrayBufferView): Unit = js.native
-  /** Transmits data to the server over the WebSocket connection. */
-  def send(data: Blob): Unit = js.native
-  /** Transmits data to the server over the WebSocket connection. */
-  @JSName("send")
-  var send_Original: FnCallData = js.native
+  var send: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['send'] */ js.Any = js.native
   
   /**
     * The maximum time in milliseconds to wait for a connection to succeed before closing and retrying.
@@ -327,5 +292,5 @@ trait ReconnectingWebSocket extends EventTarget {
   /**
     * The URL as resolved by the constructor. This is always an absolute URL.
     */
-  val url: String = js.native
+  val url: /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.WebSocket * / any['url'] */ js.Any = js.native
 }

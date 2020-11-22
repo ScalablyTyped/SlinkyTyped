@@ -1,7 +1,6 @@
 package typingsSlinky.three
 
 import org.scalajs.dom.raw.WebGLRenderingContext
-import typingsSlinky.std.GLenum
 import typingsSlinky.std.WebGL2RenderingContext
 import typingsSlinky.three.anon.BytesPerElement
 import typingsSlinky.three.bufferAttributeMod.BufferAttribute
@@ -26,7 +25,7 @@ object webGLAttributesMod extends js.Object {
     def remove(attribute: BufferAttribute): Unit = js.native
     def remove(attribute: InterleavedBufferAttribute): Unit = js.native
     
-    def update(attribute: BufferAttribute, bufferType: GLenum): Unit = js.native
-    def update(attribute: InterleavedBufferAttribute, bufferType: GLenum): Unit = js.native
+    def update(attribute: BufferAttribute, bufferType: Double): Unit = js.native
+    def update(attribute: InterleavedBufferAttribute, bufferType: Double): Unit = js.native
   }
 }

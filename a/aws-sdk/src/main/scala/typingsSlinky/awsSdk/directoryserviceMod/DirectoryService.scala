@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.directoryserviceMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -38,6 +38,20 @@ trait DirectoryService extends Service {
     params: AddIpRoutesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ AddIpRoutesResult, Unit]
   ): Request[AddIpRoutesResult, AWSError] = js.native
+  
+  /**
+    * Adds two domain controllers in the specified Region for the specified directory.
+    */
+  def addRegion(): Request[AddRegionResult, AWSError] = js.native
+  def addRegion(callback: js.Function2[/* err */ AWSError, /* data */ AddRegionResult, Unit]): Request[AddRegionResult, AWSError] = js.native
+  /**
+    * Adds two domain controllers in the specified Region for the specified directory.
+    */
+  def addRegion(params: AddRegionRequest): Request[AddRegionResult, AWSError] = js.native
+  def addRegion(
+    params: AddRegionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ AddRegionResult, Unit]
+  ): Request[AddRegionResult, AWSError] = js.native
   
   /**
     * Adds or overwrites one or more tags for the specified directory. Each directory can have a maximum of 50 tags. Each tag consists of a key and optional value. Tag keys must be unique to each resource.
@@ -99,12 +113,12 @@ trait DirectoryService extends Service {
   ): Request[CreateAliasResult, AWSError] = js.native
   
   /**
-    * Creates a computer account in the specified directory, and joins the computer to the directory.
+    * Creates an Active Directory computer object in the specified directory.
     */
   def createComputer(): Request[CreateComputerResult, AWSError] = js.native
   def createComputer(callback: js.Function2[/* err */ AWSError, /* data */ CreateComputerResult, Unit]): Request[CreateComputerResult, AWSError] = js.native
   /**
-    * Creates a computer account in the specified directory, and joins the computer to the directory.
+    * Creates an Active Directory computer object in the specified directory.
     */
   def createComputer(params: CreateComputerRequest): Request[CreateComputerResult, AWSError] = js.native
   def createComputer(
@@ -377,6 +391,20 @@ trait DirectoryService extends Service {
     params: DescribeLDAPSSettingsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeLDAPSSettingsResult, Unit]
   ): Request[DescribeLDAPSSettingsResult, AWSError] = js.native
+  
+  /**
+    * Provides information about the Regions that are configured for multi-Region replication.
+    */
+  def describeRegions(): Request[DescribeRegionsResult, AWSError] = js.native
+  def describeRegions(callback: js.Function2[/* err */ AWSError, /* data */ DescribeRegionsResult, Unit]): Request[DescribeRegionsResult, AWSError] = js.native
+  /**
+    * Provides information about the Regions that are configured for multi-Region replication.
+    */
+  def describeRegions(params: DescribeRegionsRequest): Request[DescribeRegionsResult, AWSError] = js.native
+  def describeRegions(
+    params: DescribeRegionsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeRegionsResult, Unit]
+  ): Request[DescribeRegionsResult, AWSError] = js.native
   
   /**
     * Returns the shared directories in your account. 
@@ -657,6 +685,20 @@ trait DirectoryService extends Service {
     params: RemoveIpRoutesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ RemoveIpRoutesResult, Unit]
   ): Request[RemoveIpRoutesResult, AWSError] = js.native
+  
+  /**
+    * Stops all replication and removes the domain controllers from the specified Region. You cannot remove the primary Region with this operation. Instead, use the DeleteDirectory API.
+    */
+  def removeRegion(): Request[RemoveRegionResult, AWSError] = js.native
+  def removeRegion(callback: js.Function2[/* err */ AWSError, /* data */ RemoveRegionResult, Unit]): Request[RemoveRegionResult, AWSError] = js.native
+  /**
+    * Stops all replication and removes the domain controllers from the specified Region. You cannot remove the primary Region with this operation. Instead, use the DeleteDirectory API.
+    */
+  def removeRegion(params: RemoveRegionRequest): Request[RemoveRegionResult, AWSError] = js.native
+  def removeRegion(
+    params: RemoveRegionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ RemoveRegionResult, Unit]
+  ): Request[RemoveRegionResult, AWSError] = js.native
   
   /**
     * Removes tags from a directory.

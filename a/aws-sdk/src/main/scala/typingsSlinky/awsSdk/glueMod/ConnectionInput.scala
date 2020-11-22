@@ -13,7 +13,7 @@ trait ConnectionInput extends js.Object {
   var ConnectionProperties: typingsSlinky.awsSdk.glueMod.ConnectionProperties = js.native
   
   /**
-    * The type of the connection. Currently, these types are supported:    JDBC - Designates a connection to a database through Java Database Connectivity (JDBC).    KAFKA - Designates a connection to an Apache Kafka streaming platform.    MONGODB - Designates a connection to a MongoDB document database.   SFTP is not supported.
+    * The type of the connection. Currently, these types are supported:    JDBC - Designates a connection to a database through Java Database Connectivity (JDBC).    KAFKA - Designates a connection to an Apache Kafka streaming platform.    MONGODB - Designates a connection to a MongoDB document database.    NETWORK - Designates a network connection to a data source within an Amazon Virtual Private Cloud environment (Amazon VPC).   SFTP is not supported.
     */
   var ConnectionType: typingsSlinky.awsSdk.glueMod.ConnectionType = js.native
   

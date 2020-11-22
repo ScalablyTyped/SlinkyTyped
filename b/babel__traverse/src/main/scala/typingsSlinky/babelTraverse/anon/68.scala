@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.OpaqueType
+import typingsSlinky.babelTraverse.babelTraverseStrings.LogicalExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `68` extends js.Object {
   
-  var `type`: OpaqueType = js.native
+  var `type`: LogicalExpression = js.native
 }
 object `68` {
   
   @scala.inline
-  def apply(`type`: OpaqueType): `68` = {
+  def apply(`type`: LogicalExpression): `68` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`68`]
@@ -35,6 +35,6 @@ object `68` {
     }
     
     @scala.inline
-    def setType(value: OpaqueType): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: LogicalExpression): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

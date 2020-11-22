@@ -7,13 +7,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object webidl2Strings {
   
   @scala.inline
+  def FrozenArray: FrozenArray = "FrozenArray".asInstanceOf[FrozenArray]
+  
+  @scala.inline
   def Infinity: Infinity = "Infinity".asInstanceOf[Infinity]
   
   @scala.inline
   def NaN: NaN = "NaN".asInstanceOf[NaN]
   
   @scala.inline
+  def ObservableArray: ObservableArray = "ObservableArray".asInstanceOf[ObservableArray]
+  
+  @scala.inline
+  def Promise: Promise = "Promise".asInstanceOf[Promise]
+  
+  @scala.inline
   def WebIDLParseError: WebIDLParseError = "WebIDLParseError".asInstanceOf[WebIDLParseError]
+  
+  @scala.inline
+  def _empty: _empty = "".asInstanceOf[_empty]
+  
+  @scala.inline
+  def argument: argument = "argument".asInstanceOf[argument]
   
   @scala.inline
   def attribute: attribute = "attribute".asInstanceOf[attribute]
@@ -47,6 +62,12 @@ object webidl2Strings {
   
   @scala.inline
   def enum: enum = "enum".asInstanceOf[enum]
+  
+  @scala.inline
+  def `enum-value`: `enum-value` = "enum-value".asInstanceOf[`enum-value`]
+  
+  @scala.inline
+  def `extended-attribute`: `extended-attribute` = "extended-attribute".asInstanceOf[`extended-attribute`]
   
   @scala.inline
   def field: field = "field".asInstanceOf[field]
@@ -94,7 +115,7 @@ object webidl2Strings {
   def operation: operation = "operation".asInstanceOf[operation]
   
   @scala.inline
-  def other: other = "other".asInstanceOf[other]
+  def record: record = "record".asInstanceOf[record]
   
   @scala.inline
   def sequence: sequence = "sequence".asInstanceOf[sequence]
@@ -120,8 +141,8 @@ object webidl2Strings {
   @scala.inline
   def typedef: typedef = "typedef".asInstanceOf[typedef]
   
-  @scala.inline
-  def whitespace: whitespace = "whitespace".asInstanceOf[whitespace]
+  @js.native
+  sealed trait FrozenArray extends js.Object
   
   @js.native
   sealed trait Infinity extends js.Object
@@ -130,7 +151,19 @@ object webidl2Strings {
   sealed trait NaN extends js.Object
   
   @js.native
+  sealed trait ObservableArray extends js.Object
+  
+  @js.native
+  sealed trait Promise extends js.Object
+  
+  @js.native
   sealed trait WebIDLParseError extends js.Object
+  
+  @js.native
+  sealed trait _empty extends js.Object
+  
+  @js.native
+  sealed trait argument extends js.Object
   
   @js.native
   sealed trait attribute extends js.Object
@@ -164,6 +197,12 @@ object webidl2Strings {
   
   @js.native
   sealed trait enum extends js.Object
+  
+  @js.native
+  sealed trait `enum-value` extends js.Object
+  
+  @js.native
+  sealed trait `extended-attribute` extends js.Object
   
   @js.native
   sealed trait field extends js.Object
@@ -211,7 +250,7 @@ object webidl2Strings {
   sealed trait operation extends js.Object
   
   @js.native
-  sealed trait other extends js.Object
+  sealed trait record extends js.Object
   
   @js.native
   sealed trait sequence extends js.Object
@@ -236,7 +275,4 @@ object webidl2Strings {
   
   @js.native
   sealed trait typedef extends js.Object
-  
-  @js.native
-  sealed trait whitespace extends js.Object
 }

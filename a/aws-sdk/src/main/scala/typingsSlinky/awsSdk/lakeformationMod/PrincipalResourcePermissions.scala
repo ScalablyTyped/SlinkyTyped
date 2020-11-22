@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PrincipalResourcePermissions extends js.Object {
   
   /**
+    * This attribute can be used to return any additional details of PrincipalResourcePermissions. Currently returns only as a RAM share resource ARN.
+    */
+  var AdditionalDetails: js.UndefOr[DetailsMap] = js.native
+  
+  /**
     * The permissions to be granted or revoked on the resource.
     */
   var Permissions: js.UndefOr[PermissionList] = js.native
@@ -49,6 +54,12 @@ object PrincipalResourcePermissions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAdditionalDetails(value: DetailsMap): Self = this.set("AdditionalDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdditionalDetails: Self = this.set("AdditionalDetails", js.undefined)
     
     @scala.inline
     def setPermissionsVarargs(value: Permission*): Self = this.set("Permissions", js.Array(value :_*))

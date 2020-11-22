@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "lodash-deep"
-version := "2.0-dt-20200515Z-ac56a9"
+version := "2.0-dt-20200921Z-ac56a9"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

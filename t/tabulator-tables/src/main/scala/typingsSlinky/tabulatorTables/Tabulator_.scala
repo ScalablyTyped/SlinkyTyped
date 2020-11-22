@@ -14,6 +14,7 @@ import typingsSlinky.tabulatorTables.Tabulator.FilterFunction
 import typingsSlinky.tabulatorTables.Tabulator.FilterParams
 import typingsSlinky.tabulatorTables.Tabulator.FilterType
 import typingsSlinky.tabulatorTables.Tabulator.GroupComponent
+import typingsSlinky.tabulatorTables.Tabulator.GroupValuesArg
 import typingsSlinky.tabulatorTables.Tabulator.Options
 import typingsSlinky.tabulatorTables.Tabulator.RowComponent
 import typingsSlinky.tabulatorTables.Tabulator.RowLookup
@@ -23,16 +24,12 @@ import typingsSlinky.tabulatorTables.Tabulator.ScrollToRowPostition
 import typingsSlinky.tabulatorTables.Tabulator.SortDirection
 import typingsSlinky.tabulatorTables.Tabulator.Sorter
 import typingsSlinky.tabulatorTables.Tabulator.SorterFromTable
-import typingsSlinky.tabulatorTables.Tabulator.VisibleRowRangeLookup
 import typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`false`
 import typingsSlinky.tabulatorTables.tabulatorTablesBooleans.`true`
-import typingsSlinky.tabulatorTables.tabulatorTablesStrings.active
-import typingsSlinky.tabulatorTables.tabulatorTablesStrings.all
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.first
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.last
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.next
 import typingsSlinky.tabulatorTables.tabulatorTablesStrings.prev
-import typingsSlinky.tabulatorTables.tabulatorTablesStrings.visible
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -251,10 +248,10 @@ trait Tabulator_ extends js.Object {
   
   /** You can retrieve the data stored in the table using the getData function. */
   def getData(): js.Array[_] = js.native
-  def getData(activeOnly: VisibleRowRangeLookup): js.Array[_] = js.native
+  def getData(activeOnly: RowRangeLookup): js.Array[_] = js.native
   
   def getDataCount(): Double = js.native
-  def getDataCount(activeOnly: VisibleRowRangeLookup): Double = js.native
+  def getDataCount(activeOnly: RowRangeLookup): Double = js.native
   
   /**You can get a list of all editited cells in the table using the getEditedCells function. this will return an array of Cell Components for each cell that has been edited. */
   def getEditedCells(): js.Array[CellComponent] = js.native
@@ -332,7 +329,7 @@ trait Tabulator_ extends js.Object {
   
   /** You can retrieve all the row components in the table using the getRows function.* By default getRows will return an array containing all the Row Component's held in the Tabulator. If you only want to access the currently filtered/sorted elements, you can pass a value of true to the first argument of the function.*/
   def getRows(): js.Array[RowComponent] = js.native
-  def getRows(activeOnly: VisibleRowRangeLookup): js.Array[RowComponent] = js.native
+  def getRows(activeOnly: RowRangeLookup): js.Array[RowComponent] = js.native
   
   /** To get the data objects for the selected rows you can use the getSelectedData function.
     This will return an array of the selected rows data objects in the order in which they were selected */
@@ -493,14 +490,9 @@ trait Tabulator_ extends js.Object {
     To select a specific row you can pass the any of the standard row component look up options into the first argument of the function. If you leave the argument blank you will select all rows (if you have set the selectable option to a numeric value, it will be ignored when selecting all rows). If lookup value is true you will selected all current filtered rows.*/
   def selectRow(): Unit = js.native
   def selectRow(lookup: js.Array[RowLookup]): Unit = js.native
-  @JSName("selectRow")
-  def selectRow_active(lookup: active): Unit = js.native
-  @JSName("selectRow")
-  def selectRow_all(lookup: all): Unit = js.native
+  def selectRow(lookup: RowRangeLookup): Unit = js.native
   @JSName("selectRow")
   def selectRow_true(lookup: `true`): Unit = js.native
-  @JSName("selectRow")
-  def selectRow_visible(lookup: visible): Unit = js.native
   
   /** If you have previously used the getColumnLayout function to retrieve a tables layout, you can use the setColumnLayout function to apply it to a table. */
   def setColumnLayout(layout: ColumnLayout): Unit = js.native
@@ -651,6 +643,8 @@ trait Tabulator_ extends js.Object {
     */
   def setGroupStartOpen(values: Boolean): Unit = js.native
   
+  def setGroupValues(data: GroupValuesArg): Unit = js.native
+  
   /** You can programatically set the focus on a header filter element by calling the setHeaderFilterFocus function, This function takes any of the standard column component look up options as its first parameter */
   def setHeaderFilterFocus(column: ColumnLookup): Unit = js.native
   
@@ -732,7 +726,7 @@ trait Tabulator_ extends js.Object {
     The first argument is the row you want to update, it will take any of the standard row component look up options.
     The second argument should be the updated data object for the row. As with the updateData function, this will not replace the existing row data object, it will only update any of the provided parameters.
     
-    Once complete, this function will trigger the rowUpdated and dataEdited events.
+    Once complete, this function will trigger the rowUpdated and dataChanged events.
     This function will return true if the update was successful or false if the requested row could not be found. If the new data matches the existing row data, no update will be performed.
     */
   def updateRow(row: RowLookup, data: js.Object): Boolean = js.native

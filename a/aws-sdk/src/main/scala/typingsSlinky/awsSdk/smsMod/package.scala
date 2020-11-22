@@ -12,7 +12,16 @@ package object smsMod {
   
   type AppId = java.lang.String
   
+  type AppIdWithValidation = java.lang.String
+  
   type AppIds = js.Array[typingsSlinky.awsSdk.smsMod.AppId]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NOT_CONFIGURED
+    - typingsSlinky.awsSdk.awsSdkStrings.CONFIGURED
+    - java.lang.String
+  */
+  type AppLaunchConfigurationStatus = typingsSlinky.awsSdk.smsMod._AppLaunchConfigurationStatus | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.READY_FOR_CONFIGURATION
@@ -23,6 +32,7 @@ package object smsMod {
     - typingsSlinky.awsSdk.awsSdkStrings.LAUNCH_PENDING
     - typingsSlinky.awsSdk.awsSdkStrings.LAUNCH_IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.LAUNCHED
+    - typingsSlinky.awsSdk.awsSdkStrings.PARTIALLY_LAUNCHED
     - typingsSlinky.awsSdk.awsSdkStrings.DELTA_LAUNCH_IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.DELTA_LAUNCH_FAILED
     - typingsSlinky.awsSdk.awsSdkStrings.LAUNCH_FAILED
@@ -38,6 +48,13 @@ package object smsMod {
   type AppName = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NOT_CONFIGURED
+    - typingsSlinky.awsSdk.awsSdkStrings.CONFIGURED
+    - java.lang.String
+  */
+  type AppReplicationConfigurationStatus = typingsSlinky.awsSdk.smsMod._AppReplicationConfigurationStatus | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.READY_FOR_CONFIGURATION
     - typingsSlinky.awsSdk.awsSdkStrings.CONFIGURATION_IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.CONFIGURATION_INVALID
@@ -46,6 +63,7 @@ package object smsMod {
     - typingsSlinky.awsSdk.awsSdkStrings.REPLICATION_PENDING
     - typingsSlinky.awsSdk.awsSdkStrings.REPLICATION_IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.REPLICATED
+    - typingsSlinky.awsSdk.awsSdkStrings.PARTIALLY_REPLICATED
     - typingsSlinky.awsSdk.awsSdkStrings.DELTA_REPLICATION_IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.DELTA_REPLICATED
     - typingsSlinky.awsSdk.awsSdkStrings.DELTA_REPLICATION_FAILED
@@ -72,9 +90,15 @@ package object smsMod {
   
   type AppStatusMessage = java.lang.String
   
+  type AppValidationConfigurations = js.Array[typingsSlinky.awsSdk.smsMod.AppValidationConfiguration]
+  
+  type AppValidationStrategy = typingsSlinky.awsSdk.awsSdkStrings.SSM | java.lang.String
+  
   type Apps = js.Array[typingsSlinky.awsSdk.smsMod.AppSummary]
   
   type AssociatePublicIpAddress = scala.Boolean
+  
+  type AutoLaunch = scala.Boolean
   
   type BucketName = java.lang.String
   
@@ -82,11 +106,14 @@ package object smsMod {
   
   type ClientToken = java.lang.String
   
+  type Command = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.VSPHERE
     - typingsSlinky.awsSdk.awsSdkStrings.SCVMM
     - typingsSlinky.awsSdk.awsSdkStrings.`HYPERV-MANAGER`
     - typingsSlinky.awsSdk.awsSdkStrings.SNAPSHOT_BATCHING
+    - typingsSlinky.awsSdk.awsSdkStrings.SMS_OPTIMIZED
     - java.lang.String
   */
   type ConnectorCapability = typingsSlinky.awsSdk.smsMod._ConnectorCapability | java.lang.String
@@ -112,17 +139,21 @@ package object smsMod {
   
   type Encrypted = scala.Boolean
   
+  type ExecutionTimeoutSeconds = scala.Double
+  
   type ForceStopAppReplication = scala.Boolean
   
   type ForceTerminateApp = scala.Boolean
   
   type Frequency = scala.Double
   
+  type ImportedAppId = java.lang.String
+  
+  type InstanceId = java.lang.String
+  
   type InstanceType = java.lang.String
   
   type IpAddress = java.lang.String
-  
-  type KeyName = java.lang.String
   
   type KmsKeyId = java.lang.String
   
@@ -142,6 +173,8 @@ package object smsMod {
   type MaxResults = scala.Double
   
   type NextToken = java.lang.String
+  
+  type NonEmptyStringWithMaxLen255 = java.lang.String
   
   type NumberOfRecentAmisToKeep = scala.Double
   
@@ -206,6 +239,17 @@ package object smsMod {
   
   type RunOnce = scala.Boolean
   
+  type S3BucketName = java.lang.String
+  
+  type S3KeyName = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SHELL_SCRIPT
+    - typingsSlinky.awsSdk.awsSdkStrings.POWERSHELL_SCRIPT
+    - java.lang.String
+  */
+  type ScriptType = typingsSlinky.awsSdk.smsMod._ScriptType | java.lang.String
+  
   type SecurityGroup = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
@@ -226,6 +270,8 @@ package object smsMod {
   
   type ServerGroupReplicationConfigurations = js.Array[typingsSlinky.awsSdk.smsMod.ServerGroupReplicationConfiguration]
   
+  type ServerGroupValidationConfigurations = js.Array[typingsSlinky.awsSdk.smsMod.ServerGroupValidationConfiguration]
+  
   type ServerGroups = js.Array[typingsSlinky.awsSdk.smsMod.ServerGroup]
   
   type ServerId = java.lang.String
@@ -237,6 +283,10 @@ package object smsMod {
   type ServerReplicationConfigurations = js.Array[typingsSlinky.awsSdk.smsMod.ServerReplicationConfiguration]
   
   type ServerType = typingsSlinky.awsSdk.awsSdkStrings.VIRTUAL_MACHINE | java.lang.String
+  
+  type ServerValidationConfigurations = js.Array[typingsSlinky.awsSdk.smsMod.ServerValidationConfiguration]
+  
+  type ServerValidationStrategy = typingsSlinky.awsSdk.awsSdkStrings.USERDATA | java.lang.String
   
   type StackId = java.lang.String
   
@@ -257,6 +307,22 @@ package object smsMod {
   type TotalServers = scala.Double
   
   type VPC = java.lang.String
+  
+  type ValidationId = java.lang.String
+  
+  type ValidationOutputList = js.Array[typingsSlinky.awsSdk.smsMod.ValidationOutput]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.READY_FOR_VALIDATION
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS
+    - typingsSlinky.awsSdk.awsSdkStrings.SUCCEEDED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - java.lang.String
+  */
+  type ValidationStatus = typingsSlinky.awsSdk.smsMod._ValidationStatus | java.lang.String
+  
+  type ValidationStatusMessage = java.lang.String
   
   type VmId = java.lang.String
   

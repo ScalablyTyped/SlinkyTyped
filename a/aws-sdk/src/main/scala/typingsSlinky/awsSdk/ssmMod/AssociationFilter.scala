@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AssociationFilter extends js.Object {
   
   /**
-    * The name of the filter.
+    * The name of the filter.   InstanceId has been deprecated. 
     */
   var key: AssociationFilterKey = js.native
   

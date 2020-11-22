@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.placementGroupMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.placementStrategyMod.PlacementStrategy
+import typingsSlinky.pulumiAws.enumsEc2Mod.PlacementStrategy
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_

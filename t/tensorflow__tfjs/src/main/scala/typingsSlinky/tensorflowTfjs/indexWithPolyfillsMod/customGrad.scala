@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.engineMod.CustomGradientFunc
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -47,7 +47,8 @@ object customGrad extends js.Object {
     * @param f The function to evaluate in forward mode, which should return
     *     `{value: Tensor, gradFunc: (dy, saved) => Tensor[]}`, where `gradFunc`
     *     returns the custom gradients of `f` with respect to its inputs.
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def apply[T /* <: Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank] */](f: CustomGradientFunc[T]): js.Function1[/* repeated */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], T] = js.native
 }

@@ -19,6 +19,8 @@ trait NotificationSettings extends js.Object {
   
   var notificationCenter: js.UndefOr[Boolean] = js.native
   
+  var provisional: js.UndefOr[Boolean] = js.native
+  
   var sound: js.UndefOr[Boolean] = js.native
 }
 object NotificationSettings {
@@ -79,6 +81,12 @@ object NotificationSettings {
     
     @scala.inline
     def deleteNotificationCenter: Self = this.set("notificationCenter", js.undefined)
+    
+    @scala.inline
+    def setProvisional(value: Boolean): Self = this.set("provisional", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProvisional: Self = this.set("provisional", js.undefined)
     
     @scala.inline
     def setSound(value: Boolean): Self = this.set("sound", value.asInstanceOf[js.Any])

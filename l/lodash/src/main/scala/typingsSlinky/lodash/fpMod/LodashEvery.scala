@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashEvery extends LodashConvertible {
+trait LodashEvery extends js.Object {
   
   def apply[T](predicate: ValueIterateeCustom[T, Boolean]): LodashEvery1x1[T] = js.native
   def apply[T /* <: js.Object */](

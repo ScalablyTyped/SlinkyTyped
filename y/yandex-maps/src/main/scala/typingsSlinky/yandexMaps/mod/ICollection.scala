@@ -18,7 +18,7 @@ object ICollection {
   @scala.inline
   def apply(
     add: js.Object => ICollection,
-    events: IEventManager,
+    events: IEventManager[js.Object],
     getIterator: () => IIterator,
     remove: js.Object => ICollection
   ): ICollection = {

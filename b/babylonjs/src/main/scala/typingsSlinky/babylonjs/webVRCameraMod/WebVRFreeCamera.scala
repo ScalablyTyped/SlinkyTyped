@@ -51,8 +51,6 @@ class WebVRFreeCamera protected () extends FreeCamera {
   
   var _frameData: js.Any = js.native
   
-  var _htmlElementAttached: js.Any = js.native
-  
   var _leftController: js.Any = js.native
   
   var _lightOnControllers: js.Any = js.native

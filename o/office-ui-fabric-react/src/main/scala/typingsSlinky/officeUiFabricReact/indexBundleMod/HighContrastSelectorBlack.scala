@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "HighContrastSelectorBlack")
 @js.native
-object HighContrastSelectorBlack extends TopLevel[/* "@media screen and (-ms-high-contrast: active)" */ String]
+object HighContrastSelectorBlack extends TopLevel[/* "change" */ String]

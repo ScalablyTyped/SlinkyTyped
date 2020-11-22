@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "app-root-path"
-version := "1.2.1-dt-20200515Z-b74192"
+version := "1.2.1-dt-20200923Z-b74192"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -33,6 +33,9 @@ object RowProps {
     }
     
     @scala.inline
+    def setRowVarargs(value: (String | Double | Boolean)*): Self = this.set("row", js.Array(value :_*))
+    
+    @scala.inline
     def setRow(value: ResponsiveValue[String | Double | Boolean]): Self = this.set("row", value.asInstanceOf[js.Any])
     
     @scala.inline

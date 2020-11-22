@@ -10,6 +10,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object typesTupleMod extends js.Object {
   
   @js.native
+  class NamedTupleMember protected () extends Type {
+    def this(name: String, isOptional: Boolean, element: Type) = this()
+    
+    var element: Type = js.native
+    
+    var isOptional: Boolean = js.native
+    
+    var name: String = js.native
+  }
+  
+  @js.native
   class TupleType protected () extends Type {
     def this(elements: js.Array[Type]) = this()
     

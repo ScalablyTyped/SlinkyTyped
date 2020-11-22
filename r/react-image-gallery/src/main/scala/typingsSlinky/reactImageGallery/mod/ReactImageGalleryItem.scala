@@ -2,6 +2,7 @@ package typingsSlinky.reactImageGallery.mod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactImageGallery.anon.CurrentIndex
+import typingsSlinky.reactImageGallery.anon.Media
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +18,9 @@ trait ReactImageGalleryItem extends js.Object {
   
   var fullscreen: js.UndefOr[String] = js.native
   
-  var original: js.UndefOr[String] = js.native
+  var imageSet: js.UndefOr[ReactImageGalleryImageSet] = js.native
+  
+  var original: String = js.native
   
   var originalAlt: js.UndefOr[String] = js.native
   
@@ -25,9 +28,9 @@ trait ReactImageGalleryItem extends js.Object {
   
   var originalTitle: js.UndefOr[String] = js.native
   
-  var renderItem: js.UndefOr[js.Function1[/* item */ js.UndefOr[this.type], ReactElement]] = js.native
+  var renderItem: js.UndefOr[js.Function1[/* item */ this.type, ReactElement]] = js.native
   
-  var renderThumbInner: js.UndefOr[js.Function1[/* item */ js.UndefOr[this.type], ReactElement]] = js.native
+  var renderThumbInner: js.UndefOr[js.Function1[/* item */ this.type, ReactElement]] = js.native
   
   var sizes: js.UndefOr[String] = js.native
   
@@ -46,8 +49,8 @@ trait ReactImageGalleryItem extends js.Object {
 object ReactImageGalleryItem {
   
   @scala.inline
-  def apply(): ReactImageGalleryItem = {
-    val __obj = js.Dynamic.literal()
+  def apply(original: String): ReactImageGalleryItem = {
+    val __obj = js.Dynamic.literal(original = original.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactImageGalleryItem]
   }
   
@@ -65,6 +68,9 @@ object ReactImageGalleryItem {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setOriginal(value: String): Self = this.set("original", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBulletClass(value: String): Self = this.set("bulletClass", value.asInstanceOf[js.Any])
@@ -91,10 +97,13 @@ object ReactImageGalleryItem {
     def deleteFullscreen: Self = this.set("fullscreen", js.undefined)
     
     @scala.inline
-    def setOriginal(value: String): Self = this.set("original", value.asInstanceOf[js.Any])
+    def setImageSetVarargs(value: Media*): Self = this.set("imageSet", js.Array(value :_*))
     
     @scala.inline
-    def deleteOriginal: Self = this.set("original", js.undefined)
+    def setImageSet(value: ReactImageGalleryImageSet): Self = this.set("imageSet", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImageSet: Self = this.set("imageSet", js.undefined)
     
     @scala.inline
     def setOriginalAlt(value: String): Self = this.set("originalAlt", value.asInstanceOf[js.Any])
@@ -115,13 +124,13 @@ object ReactImageGalleryItem {
     def deleteOriginalTitle: Self = this.set("originalTitle", js.undefined)
     
     @scala.inline
-    def setRenderItem(value: /* item */ js.UndefOr[ReactImageGalleryItem] => ReactElement): Self = this.set("renderItem", js.Any.fromFunction1(value))
+    def setRenderItem(value: ReactImageGalleryItem => ReactElement): Self = this.set("renderItem", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRenderItem: Self = this.set("renderItem", js.undefined)
     
     @scala.inline
-    def setRenderThumbInner(value: /* item */ js.UndefOr[ReactImageGalleryItem] => ReactElement): Self = this.set("renderThumbInner", js.Any.fromFunction1(value))
+    def setRenderThumbInner(value: ReactImageGalleryItem => ReactElement): Self = this.set("renderThumbInner", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRenderThumbInner: Self = this.set("renderThumbInner", js.undefined)

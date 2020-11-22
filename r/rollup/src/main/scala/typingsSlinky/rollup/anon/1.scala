@@ -1,21 +1,20 @@
 package typingsSlinky.rollup.anon
 
-import typingsSlinky.rollup.mod.RollupWatcherEvent
-import typingsSlinky.rollup.rollupStrings.START
+import typingsSlinky.rollup.mod.CustomPluginOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `1` extends RollupWatcherEvent {
+trait `1` extends js.Object {
   
-  var code: START = js.native
+  var custom: js.UndefOr[CustomPluginOptions] = js.native
 }
 object `1` {
   
   @scala.inline
-  def apply(code: START): `1` = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
+  def apply(): `1` = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[`1`]
   }
   
@@ -35,6 +34,9 @@ object `1` {
     }
     
     @scala.inline
-    def setCode(value: START): Self = this.set("code", value.asInstanceOf[js.Any])
+    def setCustom(value: CustomPluginOptions): Self = this.set("custom", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustom: Self = this.set("custom", js.undefined)
   }
 }

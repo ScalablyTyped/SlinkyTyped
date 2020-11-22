@@ -2,15 +2,15 @@ package typingsSlinky.antd.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.sizeContextMod.AvatarSize
 import typingsSlinky.antd.sizeContextMod.SizeContextProps
-import typingsSlinky.antd.sizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object SizeContextProvider {
   
-  @JSImport("antd/lib/config-provider/SizeContext", "SizeContextProvider")
+  @JSImport("antd/lib/avatar/SizeContext", "SizeContextProvider")
   @js.native
   object component extends js.Object
   
@@ -20,7 +20,7 @@ object SizeContextProvider {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def size(value: SizeType): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: AvatarSize): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SizeContextProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

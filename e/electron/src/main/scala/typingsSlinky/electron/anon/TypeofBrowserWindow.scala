@@ -61,7 +61,7 @@ trait TypeofBrowserWindow
   /**
     * The window with the given `id`.
     */
-  def fromId(id: Double): BrowserWindow = js.native
+  def fromId(id: Double): BrowserWindow | Null = js.native
   
   /**
     * The window that owns the given `webContents` or `null` if the contents are not

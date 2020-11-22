@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AlertTrigger extends js.Object {
   
   // Name of the property serving as a detection trigger.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   // Type of the property in the key:value pair for interpretation. For example, String, Boolean, etc.
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[NullableOption[String]] = js.native
   
   // Value of the property serving as a detection trigger.
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[NullableOption[String]] = js.native
 }
 object AlertTrigger {
   
@@ -40,21 +40,30 @@ object AlertTrigger {
     }
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
+    def setType(value: NullableOption[String]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
     
     @scala.inline
-    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setTypeNull: Self = this.set("type", null)
+    
+    @scala.inline
+    def setValue(value: NullableOption[String]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

@@ -28,6 +28,11 @@ trait NodeGroupMember extends js.Object {
   var PreferredAvailabilityZone: js.UndefOr[String] = js.native
   
   /**
+    * The outpost ARN of the node group member.
+    */
+  var PreferredOutpostArn: js.UndefOr[String] = js.native
+  
+  /**
     * The information required for client programs to connect to a node for read operations. The read endpoint is only applicable on Redis (cluster mode disabled) clusters.
     */
   var ReadEndpoint: js.UndefOr[Endpoint] = js.native
@@ -78,6 +83,12 @@ object NodeGroupMember {
     
     @scala.inline
     def deletePreferredAvailabilityZone: Self = this.set("PreferredAvailabilityZone", js.undefined)
+    
+    @scala.inline
+    def setPreferredOutpostArn(value: String): Self = this.set("PreferredOutpostArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreferredOutpostArn: Self = this.set("PreferredOutpostArn", js.undefined)
     
     @scala.inline
     def setReadEndpoint(value: Endpoint): Self = this.set("ReadEndpoint", value.asInstanceOf[js.Any])

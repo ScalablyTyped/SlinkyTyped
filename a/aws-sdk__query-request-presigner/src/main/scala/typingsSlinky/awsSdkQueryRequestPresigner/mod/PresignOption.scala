@@ -2,7 +2,6 @@ package typingsSlinky.awsSdkQueryRequestPresigner.mod
 
 import typingsSlinky.awsSdkTypes.credentialsMod.Credentials
 import typingsSlinky.awsSdkTypes.cryptoMod.HashConstructor
-import typingsSlinky.awsSdkTypes.httpMod.HttpEndpoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +18,9 @@ trait PresignOption extends js.Object {
     * Use endpoint other than that in request
     * @default request the same endpoint as in the request
     */
-  var endpoint: js.UndefOr[HttpEndpoint] = js.native
+  var endpoint: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpEndpoint */ js.Any
+  ] = js.native
   
   /**
     * The time span in second that the presigned url lives
@@ -76,7 +77,9 @@ object PresignOption {
     def setSigningRegion(value: String): Self = this.set("signingRegion", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEndpoint(value: HttpEndpoint): Self = this.set("endpoint", value.asInstanceOf[js.Any])
+    def setEndpoint(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpEndpoint */ js.Any
+    ): Self = this.set("endpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEndpoint: Self = this.set("endpoint", js.undefined)

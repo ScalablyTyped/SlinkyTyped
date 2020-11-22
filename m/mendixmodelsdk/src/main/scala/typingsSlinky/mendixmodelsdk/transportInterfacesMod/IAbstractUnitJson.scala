@@ -10,20 +10,12 @@ trait IAbstractUnitJson extends IStructureJson {
   var containerId: String = js.native
   
   var containmentName: String = js.native
-  
-  var contents: IAbstractElementJson = js.native
 }
 object IAbstractUnitJson {
   
   @scala.inline
-  def apply(
-    $ID: String,
-    $Type: String,
-    containerId: String,
-    containmentName: String,
-    contents: IAbstractElementJson
-  ): IAbstractUnitJson = {
-    val __obj = js.Dynamic.literal($ID = $ID.asInstanceOf[js.Any], $Type = $Type.asInstanceOf[js.Any], containerId = containerId.asInstanceOf[js.Any], containmentName = containmentName.asInstanceOf[js.Any], contents = contents.asInstanceOf[js.Any])
+  def apply($ID: String, $Type: String, containerId: String, containmentName: String): IAbstractUnitJson = {
+    val __obj = js.Dynamic.literal($ID = $ID.asInstanceOf[js.Any], $Type = $Type.asInstanceOf[js.Any], containerId = containerId.asInstanceOf[js.Any], containmentName = containmentName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IAbstractUnitJson]
   }
   
@@ -47,8 +39,5 @@ object IAbstractUnitJson {
     
     @scala.inline
     def setContainmentName(value: String): Self = this.set("containmentName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setContents(value: IAbstractElementJson): Self = this.set("contents", value.asInstanceOf[js.Any])
   }
 }

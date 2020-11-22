@@ -9,19 +9,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSpeedDialActionOptions extends WidgetOptions[dxSpeedDialAction] {
   
-  /** @name dxSpeedDialAction.Options.icon */
+  /**
+    * [descr:dxSpeedDialAction.Options.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxSpeedDialAction.Options.index */
+  /**
+    * [descr:dxSpeedDialAction.Options.index]
+    */
   var index: js.UndefOr[Double] = js.native
   
-  /** @name dxSpeedDialAction.Options.label */
+  /**
+    * [descr:dxSpeedDialAction.Options.label]
+    */
   var label: js.UndefOr[String] = js.native
   
-  /** @name dxSpeedDialAction.Options.onClick */
+  /**
+    * [descr:dxSpeedDialAction.Options.onClick]
+    */
   var onClick: js.UndefOr[js.Function1[/* e */ ActionElement, _]] = js.native
   
-  /** @name dxSpeedDialAction.Options.onContentReady */
+  /**
+    * [descr:dxSpeedDialAction.Options.onContentReady]
+    */
   @JSName("onContentReady")
   var onContentReady_dxSpeedDialActionOptions: js.UndefOr[js.Function1[/* e */ ActionElementComponent, _]] = js.native
 }

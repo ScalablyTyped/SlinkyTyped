@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait InformationProtection extends Entity {
   
-  var threatAssessmentRequests: js.UndefOr[js.Array[ThreatAssessmentRequest]] = js.native
+  var threatAssessmentRequests: js.UndefOr[NullableOption[js.Array[ThreatAssessmentRequest]]] = js.native
 }
 object InformationProtection {
   
@@ -36,9 +36,12 @@ object InformationProtection {
     def setThreatAssessmentRequestsVarargs(value: ThreatAssessmentRequest*): Self = this.set("threatAssessmentRequests", js.Array(value :_*))
     
     @scala.inline
-    def setThreatAssessmentRequests(value: js.Array[ThreatAssessmentRequest]): Self = this.set("threatAssessmentRequests", value.asInstanceOf[js.Any])
+    def setThreatAssessmentRequests(value: NullableOption[js.Array[ThreatAssessmentRequest]]): Self = this.set("threatAssessmentRequests", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteThreatAssessmentRequests: Self = this.set("threatAssessmentRequests", js.undefined)
+    
+    @scala.inline
+    def setThreatAssessmentRequestsNull: Self = this.set("threatAssessmentRequests", null)
   }
 }

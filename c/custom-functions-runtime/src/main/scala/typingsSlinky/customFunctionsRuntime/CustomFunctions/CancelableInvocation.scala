@@ -18,6 +18,7 @@ trait CancelableInvocation extends Invocation {
   
   /**
     * Event handler called when the custom function is canceled.
+    * [Api set: CustomFunctionsRuntime 1.1]
     */
   def onCanceled(): Unit = js.native
 }

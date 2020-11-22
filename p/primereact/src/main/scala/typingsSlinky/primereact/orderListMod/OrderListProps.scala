@@ -23,8 +23,6 @@ trait OrderListProps extends js.Object {
   
   var onChange: js.UndefOr[js.Function1[/* e */ Value, Unit]] = js.native
   
-  var responsive: js.UndefOr[Boolean] = js.native
-  
   var style: js.UndefOr[js.Object] = js.native
   
   var tabIndex: js.UndefOr[String] = js.native
@@ -95,12 +93,6 @@ object OrderListProps {
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
-    
-    @scala.inline
-    def setResponsive(value: Boolean): Self = this.set("responsive", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteResponsive: Self = this.set("responsive", js.undefined)
     
     @scala.inline
     def setStyle(value: js.Object): Self = this.set("style", value.asInstanceOf[js.Any])

@@ -21,5 +21,7 @@ object accountCallBuilderMod extends js.Object {
     def forAsset(asset: Asset): this.type = js.native
     
     def forSigner(id: String): this.type = js.native
+    
+    def sponsor(id: String): this.type = js.native
   }
 }

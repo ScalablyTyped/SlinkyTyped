@@ -44,6 +44,13 @@ trait AirbnbRatingProps extends js.Object {
   var reviews: js.UndefOr[js.Array[String]] = js.native
   
   /**
+    * Color value for filled stars.
+    *
+    * Default is #004666
+    */
+  var selectedColor: js.UndefOr[String] = js.native
+  
+  /**
     * Determines if to show the reviews above the rating
     *
     * Default is true
@@ -119,6 +126,12 @@ object AirbnbRatingProps {
     
     @scala.inline
     def deleteReviews: Self = this.set("reviews", js.undefined)
+    
+    @scala.inline
+    def setSelectedColor(value: String): Self = this.set("selectedColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelectedColor: Self = this.set("selectedColor", js.undefined)
     
     @scala.inline
     def setShowRating(value: Boolean): Self = this.set("showRating", value.asInstanceOf[js.Any])

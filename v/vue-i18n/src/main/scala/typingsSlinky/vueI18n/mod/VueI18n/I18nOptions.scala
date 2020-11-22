@@ -14,6 +14,8 @@ trait I18nOptions extends js.Object {
   
   var dateTimeFormats: js.UndefOr[DateTimeFormats] = js.native
   
+  var escapeParameterHtml: js.UndefOr[Boolean] = js.native
+  
   var fallbackLocale: js.UndefOr[FallbackLocale] = js.native
   
   var fallbackRoot: js.UndefOr[Boolean] = js.native
@@ -84,6 +86,12 @@ object I18nOptions {
     
     @scala.inline
     def deleteDateTimeFormats: Self = this.set("dateTimeFormats", js.undefined)
+    
+    @scala.inline
+    def setEscapeParameterHtml(value: Boolean): Self = this.set("escapeParameterHtml", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEscapeParameterHtml: Self = this.set("escapeParameterHtml", js.undefined)
     
     @scala.inline
     def setFallbackLocaleVarargs(value: String*): Self = this.set("fallbackLocale", js.Array(value :_*))

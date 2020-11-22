@@ -16,12 +16,17 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined parent std.Omit<rc-field-form.rc-field-form/es/Field.InternalFieldProps, 'name'> */
+/* Inlined parent std.Omit<rc-field-form.rc-field-form/es/Field.InternalFieldProps<Values>, 'name' | 'fieldContext'> */
 @js.native
-trait FieldProps extends js.Object {
+trait FieldProps[Values] extends js.Object {
   
   var children: js.UndefOr[
-    ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, ReactElement])
+    ReactElement | (js.Function3[
+      /* control */ ChildProps, 
+      /* meta */ Meta, 
+      /* form */ FormInstance[Values], 
+      ReactElement
+    ])
   ] = js.native
   
   var dependencies: js.UndefOr[js.Array[NamePath]] = js.native
@@ -32,7 +37,8 @@ trait FieldProps extends js.Object {
   
   var initialValue: js.UndefOr[js.Any] = js.native
   
-  /** @private Passed by Form.List props. */
+  var isList: js.UndefOr[Boolean] = js.native
+  
   var isListField: js.UndefOr[Boolean] = js.native
   
   var messageVariables: js.UndefOr[Record[String, String]] = js.native
@@ -49,7 +55,7 @@ trait FieldProps extends js.Object {
   
   var rules: js.UndefOr[js.Array[Rule]] = js.native
   
-  var shouldUpdate: js.UndefOr[ShouldUpdate] = js.native
+  var shouldUpdate: js.UndefOr[ShouldUpdate[Values]] = js.native
   
   var trigger: js.UndefOr[String] = js.native
   
@@ -62,13 +68,13 @@ trait FieldProps extends js.Object {
 object FieldProps {
   
   @scala.inline
-  def apply(): FieldProps = {
+  def apply[Values](): FieldProps[Values] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[FieldProps]
+    __obj.asInstanceOf[FieldProps[Values]]
   }
   
   @scala.inline
-  implicit class FieldPropsOps[Self <: FieldProps] (val x: Self) extends AnyVal {
+  implicit class FieldPropsOps[Self <: FieldProps[_], Values] (val x: Self with FieldProps[Values]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -86,11 +92,18 @@ object FieldProps {
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenFunction3(value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance) => ReactElement): Self = this.set("children", js.Any.fromFunction3(value))
+    def setChildrenFunction3(
+      value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance[Values]) => ReactElement
+    ): Self = this.set("children", js.Any.fromFunction3(value))
     
     @scala.inline
     def setChildren(
-      value: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, ReactElement])
+      value: ReactElement | (js.Function3[
+          /* control */ ChildProps, 
+          /* meta */ Meta, 
+          /* form */ FormInstance[Values], 
+          ReactElement
+        ])
     ): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -122,6 +135,12 @@ object FieldProps {
     
     @scala.inline
     def deleteInitialValue: Self = this.set("initialValue", js.undefined)
+    
+    @scala.inline
+    def setIsList(value: Boolean): Self = this.set("isList", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsList: Self = this.set("isList", js.undefined)
     
     @scala.inline
     def setIsListField(value: Boolean): Self = this.set("isListField", value.asInstanceOf[js.Any])
@@ -172,10 +191,10 @@ object FieldProps {
     def deleteRules: Self = this.set("rules", js.undefined)
     
     @scala.inline
-    def setShouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ Source) => Boolean): Self = this.set("shouldUpdate", js.Any.fromFunction3(value))
+    def setShouldUpdateFunction3(value: (Values, Values, /* info */ Source) => Boolean): Self = this.set("shouldUpdate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setShouldUpdate(value: ShouldUpdate): Self = this.set("shouldUpdate", value.asInstanceOf[js.Any])
+    def setShouldUpdate(value: ShouldUpdate[Values]): Self = this.set("shouldUpdate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShouldUpdate: Self = this.set("shouldUpdate", js.undefined)

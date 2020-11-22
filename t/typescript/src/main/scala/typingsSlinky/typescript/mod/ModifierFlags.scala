@@ -22,11 +22,12 @@ object ModifierFlags extends js.Object {
   @js.native
   sealed trait AccessibilityModifier extends ModifierFlags
   /* 28 */ @js.native
-  object AccessibilityModifier extends TopLevel[AccessibilityModifier with Double]
+  object AccessibilityModifier
+    extends TopLevel[typingsSlinky.typescript.mod.ModifierFlags.AccessibilityModifier with Double]
   
   @js.native
   sealed trait All extends ModifierFlags
-  /* 3071 */ @js.native
+  /* 11263 */ @js.native
   object All extends TopLevel[All with Double]
   
   @js.native
@@ -50,6 +51,11 @@ object ModifierFlags extends js.Object {
   object Default extends TopLevel[Default with Double]
   
   @js.native
+  sealed trait Deprecated extends ModifierFlags
+  /* 8192 */ @js.native
+  object Deprecated extends TopLevel[Deprecated with Double]
+  
+  @js.native
   sealed trait Export extends ModifierFlags
   /* 1 */ @js.native
   object Export extends TopLevel[Export with Double]
@@ -65,6 +71,11 @@ object ModifierFlags extends js.Object {
   object HasComputedFlags extends TopLevel[HasComputedFlags with Double]
   
   @js.native
+  sealed trait HasComputedJSDocModifiers extends ModifierFlags
+  /* 4096 */ @js.native
+  object HasComputedJSDocModifiers extends TopLevel[HasComputedJSDocModifiers with Double]
+  
+  @js.native
   sealed trait NonPublicAccessibilityModifier extends ModifierFlags
   /* 24 */ @js.native
   object NonPublicAccessibilityModifier extends TopLevel[NonPublicAccessibilityModifier with Double]
@@ -77,7 +88,8 @@ object ModifierFlags extends js.Object {
   @js.native
   sealed trait ParameterPropertyModifier extends ModifierFlags
   /* 92 */ @js.native
-  object ParameterPropertyModifier extends TopLevel[ParameterPropertyModifier with Double]
+  object ParameterPropertyModifier
+    extends TopLevel[typingsSlinky.typescript.mod.ModifierFlags.ParameterPropertyModifier with Double]
   
   @js.native
   sealed trait Private extends ModifierFlags

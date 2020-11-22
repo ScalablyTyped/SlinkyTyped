@@ -17,14 +17,14 @@ trait ClassBreaksResult extends Object {
   var classBreakInfos: js.Array[ClassBreak] = js.native
   
   /**
-    * The maximum value of features in the dataset. This will be the upper bound of the highest class break.
+    * The maximum value of features in the dataset.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-classBreaks.html#ClassBreaksResult)
     */
   var maxValue: Double = js.native
   
   /**
-    * The minimum value of features in the dataset. This will be the lower bound of the lowest class break.
+    * The minimum value of features in the dataset.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-classBreaks.html#ClassBreaksResult)
     */

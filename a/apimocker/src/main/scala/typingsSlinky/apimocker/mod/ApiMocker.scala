@@ -20,9 +20,9 @@ trait ApiMocker extends js.Object {
     * Express instance itself is a request handler, which could be invoked without
     * third argument.
     */
-  def express(req: Request[ParamsDictionary, _, _, ParsedQs], res: Response[_]): js.Any = js.native
+  def express(req: Request[ParamsDictionary, _, _, ParsedQs], res: Response[_, Double]): js.Any = js.native
   def express(req: Request[ParamsDictionary, _, _, ParsedQs], res: ServerResponse): js.Any = js.native
-  def express(req: IncomingMessage, res: Response[_]): js.Any = js.native
+  def express(req: IncomingMessage, res: Response[_, Double]): js.Any = js.native
   def express(req: IncomingMessage, res: ServerResponse): js.Any = js.native
   @JSName("express")
   var express_Original: Application_ = js.native

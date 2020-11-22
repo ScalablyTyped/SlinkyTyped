@@ -9,45 +9,71 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxGalleryOptions extends CollectionWidgetOptions[dxGallery] {
   
-  /** @name dxGallery.Options.animationDuration */
+  /**
+    * [descr:dxGallery.Options.animationDuration]
+    */
   var animationDuration: js.UndefOr[Double] = js.native
   
-  /** @name dxGallery.Options.animationEnabled */
+  /**
+    * [descr:dxGallery.Options.animationEnabled]
+    */
   var animationEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxGallery.Options.dataSource */
+  /**
+    * [descr:dxGallery.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxGalleryOptions: js.UndefOr[String | (js.Array[String | dxGalleryItem | _]) | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxGallery.Options.indicatorEnabled */
+  /**
+    * [descr:dxGallery.Options.indicatorEnabled]
+    */
   var indicatorEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxGallery.Options.initialItemWidth */
+  /**
+    * [descr:dxGallery.Options.initialItemWidth]
+    */
   var initialItemWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxGallery.Options.items */
+  /**
+    * [descr:dxGallery.Options.items]
+    */
   @JSName("items")
   var items_dxGalleryOptions: js.UndefOr[js.Array[String | dxGalleryItem | _]] = js.native
   
-  /** @name dxGallery.Options.loop */
+  /**
+    * [descr:dxGallery.Options.loop]
+    */
   var loop: js.UndefOr[Boolean] = js.native
   
-  /** @name dxGallery.Options.showIndicator */
+  /**
+    * [descr:dxGallery.Options.showIndicator]
+    */
   var showIndicator: js.UndefOr[Boolean] = js.native
   
-  /** @name dxGallery.Options.showNavButtons */
+  /**
+    * [descr:dxGallery.Options.showNavButtons]
+    */
   var showNavButtons: js.UndefOr[Boolean] = js.native
   
-  /** @name dxGallery.Options.slideshowDelay */
+  /**
+    * [descr:dxGallery.Options.slideshowDelay]
+    */
   var slideshowDelay: js.UndefOr[Double] = js.native
   
-  /** @name dxGallery.Options.stretchImages */
+  /**
+    * [descr:dxGallery.Options.stretchImages]
+    */
   var stretchImages: js.UndefOr[Boolean] = js.native
   
-  /** @name dxGallery.Options.swipeEnabled */
+  /**
+    * [descr:dxGallery.Options.swipeEnabled]
+    */
   var swipeEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxGallery.Options.wrapAround */
+  /**
+    * [descr:dxGallery.Options.wrapAround]
+    */
   var wrapAround: js.UndefOr[Boolean] = js.native
 }
 object dxGalleryOptions {

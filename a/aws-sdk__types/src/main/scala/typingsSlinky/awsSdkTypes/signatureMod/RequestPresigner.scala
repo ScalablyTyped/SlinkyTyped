@@ -15,10 +15,8 @@ trait RequestPresigner extends js.Object {
     * passed or the underlying credentials have expired.
     *
     * @param requestToSign The request that should be signed.
-    * @param expiration    The time at which the signed request should no
-    *                      longer be honored.
     * @param options       Additional signing options.
     */
-  def presignRequest[StreamType](requestToSign: HttpRequest[StreamType], expiration: DateInput): js.Promise[HttpRequest[StreamType]] = js.native
-  def presignRequest[StreamType](requestToSign: HttpRequest[StreamType], expiration: DateInput, options: RequestSigningArguments): js.Promise[HttpRequest[StreamType]] = js.native
+  def presign(requestToSign: HttpRequest): js.Promise[HttpRequest] = js.native
+  def presign(requestToSign: HttpRequest, options: RequestPresigningArguments): js.Promise[HttpRequest] = js.native
 }

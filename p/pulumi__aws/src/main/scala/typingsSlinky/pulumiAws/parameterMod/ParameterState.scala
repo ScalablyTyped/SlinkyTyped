@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.parameterMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.parameterTypeMod.ParameterType
+import typingsSlinky.pulumiAws.enumsSsmMod.ParameterType
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,6 +19,12 @@ trait ParameterState extends js.Object {
     * The ARN of the parameter.
     */
   val arn: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The dataType of the parameter. Valid values: text and aws:ec2:image for AMI format, see the [Native parameter support for Amazon Machine Image IDs
+    * ](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-ec2-aliases.html)
+    */
+  val dataType: js.UndefOr[Input[String]] = js.native
   
   /**
     * The description of the parameter.
@@ -99,6 +105,12 @@ object ParameterState {
     
     @scala.inline
     def deleteArn: Self = this.set("arn", js.undefined)
+    
+    @scala.inline
+    def setDataType(value: Input[String]): Self = this.set("dataType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataType: Self = this.set("dataType", js.undefined)
     
     @scala.inline
     def setDescription(value: Input[String]): Self = this.set("description", value.asInstanceOf[js.Any])

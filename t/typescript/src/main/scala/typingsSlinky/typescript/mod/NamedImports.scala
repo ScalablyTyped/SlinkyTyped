@@ -10,11 +10,11 @@ trait NamedImports
      with NamedImportBindings
      with NamedImportsOrExports {
   
-  var elements: NodeArray[ImportSpecifier] = js.native
+  val elements: NodeArray[ImportSpecifier] = js.native
   
   @JSName("kind")
-  var kind_NamedImports: typingsSlinky.typescript.mod.SyntaxKind.NamedImports = js.native
+  val kind_NamedImports: typingsSlinky.typescript.mod.SyntaxKind.NamedImports = js.native
   
   @JSName("parent")
-  var parent_NamedImports: ImportClause = js.native
+  val parent_NamedImports: ImportClause = js.native
 }

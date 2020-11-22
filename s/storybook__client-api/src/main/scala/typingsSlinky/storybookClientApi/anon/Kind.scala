@@ -1,32 +1,24 @@
 package typingsSlinky.storybookClientApi.anon
 
-import typingsSlinky.storybookAddons.typesMod.StoryContext
-import typingsSlinky.storybookAddons.typesMod.StoryFn
+import typingsSlinky.storybookAddons.typesMod.StoryKind
+import typingsSlinky.storybookAddons.typesMod.StoryName
+import typingsSlinky.storybookClientApi.typesMod._StorySpecifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Kind extends js.Object {
+trait Kind extends _StorySpecifier {
   
-  var kind: String = js.native
+  var kind: StoryKind = js.native
   
-  var name: String = js.native
-  
-  var parameters: typingsSlinky.storybookAddons.typesMod.Parameters = js.native
-  
-  var storyFn: StoryFn[_] = js.native
+  var name: StoryName = js.native
 }
 object Kind {
   
   @scala.inline
-  def apply(
-    kind: String,
-    name: String,
-    parameters: typingsSlinky.storybookAddons.typesMod.Parameters,
-    storyFn: /* p */ js.UndefOr[StoryContext] => _
-  ): Kind = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any], storyFn = js.Any.fromFunction1(storyFn))
+  def apply(kind: StoryKind, name: StoryName): Kind = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Kind]
   }
   
@@ -46,15 +38,9 @@ object Kind {
     }
     
     @scala.inline
-    def setKind(value: String): Self = this.set("kind", value.asInstanceOf[js.Any])
+    def setKind(value: StoryKind): Self = this.set("kind", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setParameters(value: typingsSlinky.storybookAddons.typesMod.Parameters): Self = this.set("parameters", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStoryFn(value: /* p */ js.UndefOr[StoryContext] => _): Self = this.set("storyFn", js.Any.fromFunction1(value))
+    def setName(value: StoryName): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

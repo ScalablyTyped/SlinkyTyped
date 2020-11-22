@@ -12,6 +12,7 @@ import typingsSlinky.node.anon.Chunk
 import typingsSlinky.node.anon.End
 import typingsSlinky.node.eventsMod.EventEmitterOptions
 import typingsSlinky.node.httpMod.IncomingMessage
+import typingsSlinky.node.httpMod.OutgoingHttpHeader
 import typingsSlinky.node.httpMod.OutgoingHttpHeaders
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.Readable
@@ -79,7 +80,7 @@ trait NextApiResponse[T] extends js.Object {
   /**
     * @deprecate Use `socket` instead.
     */
-  var connection: Socket = js.native
+  var connection: Socket | Null = js.native
   
   def cork(): Unit = js.native
   
@@ -145,8 +146,8 @@ trait NextApiResponse[T] extends js.Object {
     */
   var json: Send[T] = js.native
   
-  def listenerCount(`type`: String): Double = js.native
-  def listenerCount(`type`: js.Symbol): Double = js.native
+  def listenerCount(event: String): Double = js.native
+  def listenerCount(event: js.Symbol): Double = js.native
   
   def listeners(event: String): js.Array[js.Function] = js.native
   def listeners(event: js.Symbol): js.Array[js.Function] = js.native
@@ -261,7 +262,7 @@ trait NextApiResponse[T] extends js.Object {
   
   var shouldKeepAlive: Boolean = js.native
   
-  var socket: Socket = js.native
+  var socket: Socket | Null = js.native
   
   def status(statusCode: Double): NextApiResponse[T] = js.native
   
@@ -319,9 +320,12 @@ trait NextApiResponse[T] extends js.Object {
   def writeContinue(callback: js.Function0[Unit]): Unit = js.native
   
   def writeHead(statusCode: Double): this.type = js.native
+  def writeHead(statusCode: Double, headers: js.Array[OutgoingHttpHeader]): this.type = js.native
   def writeHead(statusCode: Double, headers: OutgoingHttpHeaders): this.type = js.native
+  def writeHead(statusCode: Double, reasonPhrase: js.UndefOr[scala.Nothing], headers: js.Array[OutgoingHttpHeader]): this.type = js.native
   def writeHead(statusCode: Double, reasonPhrase: js.UndefOr[scala.Nothing], headers: OutgoingHttpHeaders): this.type = js.native
   def writeHead(statusCode: Double, reasonPhrase: String): this.type = js.native
+  def writeHead(statusCode: Double, reasonPhrase: String, headers: js.Array[OutgoingHttpHeader]): this.type = js.native
   def writeHead(statusCode: Double, reasonPhrase: String, headers: OutgoingHttpHeaders): this.type = js.native
   
   def writeProcessing(): Unit = js.native

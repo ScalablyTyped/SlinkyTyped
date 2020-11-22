@@ -21,5 +21,8 @@ class PayOrderRequest () extends js.Object {
     */
   var order_version: js.UndefOr[Double] = js.native
   
+  /**
+    * The IDs of the `payments` to collect. The payment total must match the order total.
+    */
   var payment_ids: js.UndefOr[js.Array[String]] = js.native
 }

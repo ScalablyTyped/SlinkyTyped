@@ -47,7 +47,7 @@ object Popover {
     def placement(value: Placement | auto): this.type = set("placement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderOverlayComponent(value: /* node */ ReactElement => ReactElement): this.type = set("renderOverlayComponent", js.Any.fromFunction1(value))
+    def renderOverlayComponent(value: (/* node */ ReactElement, /* closePopover */ js.Function0[Unit]) => ReactElement): this.type = set("renderOverlayComponent", js.Any.fromFunction2(value))
     
     @scala.inline
     def styles(value: Partial[PopoverStyle]): this.type = set("styles", value.asInstanceOf[js.Any])

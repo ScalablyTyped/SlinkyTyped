@@ -15,6 +15,8 @@ trait WebXRControllerPointerSelection extends WebXRAbstractFeature {
   
   var _attachTrackedPointerRayMode: js.Any = js.native
   
+  var _attachedController: js.Any = js.native
+  
   var _controllers: js.Any = js.native
   
   var _convertNormalToDirectionOfRay: js.Any = js.native
@@ -23,15 +25,21 @@ trait WebXRControllerPointerSelection extends WebXRAbstractFeature {
   
   var _generateNewMeshPair: js.Any = js.native
   
+  var _identityMatrix: js.Any = js.native
+  
   val _options: js.Any = js.native
   
   var _pickingMoved: js.Any = js.native
   
   var _scene: js.Any = js.native
   
+  var _screenCoordinatesRef: js.Any = js.native
+  
   var _tmpVectorForPickCompare: js.Any = js.native
   
   var _updatePointerDistance: js.Any = js.native
+  
+  var _viewportRef: js.Any = js.native
   
   /**
     * Disable lighting on the laser pointer (so it will always be visible)
@@ -70,14 +78,23 @@ trait WebXRControllerPointerSelection extends WebXRAbstractFeature {
   def getXRControllerByPointerId(id: Double): Nullable[WebXRInputSource] = js.native
   
   /**
+    * Default color of the laser pointer
+    */
+  var laserPointerDefaultColor: Color3 = js.native
+  
+  /**
     * This color will be set to the laser pointer when selection is triggered
     */
   var laserPointerPickedColor: Color3 = js.native
   
+  /** @hidden */
+  def lasterPointerDefaultColor: Color3 = js.native
+  
   /**
-    * Default color of the laser pointer
+    * Optional filter to be used for ray selection.  This predicate shares behavior with
+    * scene.pointerMovePredicate which takes priority if it is also assigned.
     */
-  var lasterPointerDefaultColor: Color3 = js.native
+  def raySelectionPredicate(mesh: AbstractMesh): Boolean = js.native
   
   /**
     * default color of the selection ring

@@ -6,15 +6,17 @@ import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.button
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.reset
 import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.submit
 import typingsSlinky.blueprintjsCore.propsMod.IActionProps
+import typingsSlinky.blueprintjsCore.propsMod.IElementRefProps
 import typingsSlinky.blueprintjsCore.propsMod.MaybeElement
-import typingsSlinky.blueprintjsCore.refsMod.IRef
 import typingsSlinky.blueprintjsIcons.iconNameMod.IconName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IButtonProps extends IActionProps {
+trait IButtonProps
+  extends IActionProps
+     with IElementRefProps[js.Any] {
   
   /**
     * If set to `true`, the button will display in an active state.
@@ -31,9 +33,6 @@ trait IButtonProps extends IActionProps {
     * @default Alignment.CENTER
     */
   var alignText: js.UndefOr[Alignment] = js.native
-  
-  /** A ref handler or a ref object that receives the native HTML element backing this component. */
-  var elementRef: js.UndefOr[IRef[_]] = js.native
   
   /** Whether this button should expand to fill its container. */
   var fill: js.UndefOr[Boolean] = js.native
@@ -101,15 +100,6 @@ object IButtonProps {
     
     @scala.inline
     def deleteAlignText: Self = this.set("alignText", js.undefined)
-    
-    @scala.inline
-    def setElementRefFunction1(value: /* ref */ _ | Null => js.Any): Self = this.set("elementRef", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setElementRef(value: IRef[_]): Self = this.set("elementRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteElementRef: Self = this.set("elementRef", js.undefined)
     
     @scala.inline
     def setFill(value: Boolean): Self = this.set("fill", value.asInstanceOf[js.Any])

@@ -1,5 +1,7 @@
 package typingsSlinky.rcProgress
 
+import typingsSlinky.rcProgress.interfaceMod.GapPositionType
+import typingsSlinky.rcProgress.interfaceMod.StrokeLinecapType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,23 +30,23 @@ object rcProgressStrings {
   def top: top = "top".asInstanceOf[top]
   
   @js.native
-  sealed trait bottom extends js.Object
+  sealed trait bottom extends GapPositionType
   
   @js.native
-  sealed trait butt extends js.Object
+  sealed trait butt extends StrokeLinecapType
   
   @js.native
-  sealed trait left extends js.Object
+  sealed trait left extends GapPositionType
   
   @js.native
-  sealed trait right extends js.Object
+  sealed trait right extends GapPositionType
   
   @js.native
-  sealed trait round extends js.Object
+  sealed trait round extends StrokeLinecapType
   
   @js.native
-  sealed trait square extends js.Object
+  sealed trait square extends StrokeLinecapType
   
   @js.native
-  sealed trait top extends js.Object
+  sealed trait top extends GapPositionType
 }

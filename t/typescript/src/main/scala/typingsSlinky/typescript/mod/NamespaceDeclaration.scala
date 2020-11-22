@@ -10,8 +10,8 @@ trait NamespaceDeclaration
      with NamespaceBody {
   
   @JSName("body")
-  var body_NamespaceDeclaration: NamespaceBody = js.native
+  val body_NamespaceDeclaration: NamespaceBody = js.native
   
   @JSName("name")
-  var name_NamespaceDeclaration: Identifier = js.native
+  val name_NamespaceDeclaration: Identifier = js.native
 }

@@ -39,6 +39,8 @@ trait PolarRadiusAxisProps extends js.Object {
   
   var allowDataOverflow: js.UndefOr[Boolean] = js.native
   
+  var allowDuplicatedCategory: js.UndefOr[Boolean] = js.native
+  
   var angle: js.UndefOr[Double] = js.native
   
   var axisLine: js.UndefOr[Boolean | js.Object] = js.native
@@ -259,6 +261,12 @@ object PolarRadiusAxisProps {
     
     @scala.inline
     def deleteAllowDataOverflow: Self = this.set("allowDataOverflow", js.undefined)
+    
+    @scala.inline
+    def setAllowDuplicatedCategory(value: Boolean): Self = this.set("allowDuplicatedCategory", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowDuplicatedCategory: Self = this.set("allowDuplicatedCategory", js.undefined)
     
     @scala.inline
     def setAngle(value: Double): Self = this.set("angle", value.asInstanceOf[js.Any])

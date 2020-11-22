@@ -18,7 +18,7 @@ trait SharingSettings extends js.Object {
   var S3KmsKeyId: js.UndefOr[KmsKeyId] = js.native
   
   /**
-    * When NotebookOutputOption is Allowed, the Amazon S3 bucket used to save the notebook cell output. If S3OutputPath isn't specified, a default bucket is used.
+    * When NotebookOutputOption is Allowed, the Amazon S3 bucket used to save the notebook cell output.
     */
   var S3OutputPath: js.UndefOr[S3Uri] = js.native
 }

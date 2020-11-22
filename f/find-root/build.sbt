@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "find-root"
-version := "1.1-dt-20200515Z-5cd585"
+version := "1.1-dt-20200823Z-5cd585"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

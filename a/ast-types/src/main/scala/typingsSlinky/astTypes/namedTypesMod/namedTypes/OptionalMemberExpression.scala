@@ -1,6 +1,7 @@
 package typingsSlinky.astTypes.namedTypesMod.namedTypes
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.astTypes.kindsMod.ChainElementKind
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
@@ -11,25 +12,32 @@ import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.MemberExpression, 'type'> */
+/* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.MemberExpression, 'type' | 'optional'> */
+@js.native
 trait OptionalMemberExpression
   extends ASTNode
+     with ChainElementKind
      with ExpressionKind
      with MemberExpressionKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var computed: js.UndefOr[Boolean] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `object`: ExpressionKind
-  var optional: js.UndefOr[Boolean] = js.undefined
-  var property: IdentifierKind | ExpressionKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.OptionalMemberExpression
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var computed: js.UndefOr[Boolean] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var `object`: ExpressionKind = js.native
+  
+  var optional: js.UndefOr[Boolean] = js.native
+  
+  var property: IdentifierKind | ExpressionKind = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.OptionalMemberExpression = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.OptionalMemberExpression")
 @js.native
 object OptionalMemberExpression extends TopLevel[Type[OptionalMemberExpression]]
-

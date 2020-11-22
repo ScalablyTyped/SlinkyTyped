@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BooleanSchemaConstructor
   extends AnySchemaConstructor
-     with Instantiable0[BooleanSchema[js.UndefOr[Boolean]]] {
+     with // tslint:disable-next-line:no-unnecessary-generics
+Instantiable0[BooleanSchema[js.UndefOr[Boolean | Null], js.Object]] {
   
-  def apply(): BooleanSchema[js.UndefOr[Boolean]] = js.native
+  // tslint:disable-next-line:no-unnecessary-generics
+  def apply[T /* <: js.UndefOr[Boolean | Null] */, C](): BooleanSchema[T, C] = js.native
 }

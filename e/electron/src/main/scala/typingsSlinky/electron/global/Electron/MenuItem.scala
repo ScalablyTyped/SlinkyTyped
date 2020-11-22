@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class MenuItem protected ()
   extends typingsSlinky.electron.Electron.MenuItem {
-  // Docs: http://electronjs.org/docs/api/menu-item
+  // Docs: https://electronjs.org/docs/api/menu-item
   /**
     * MenuItem
     */

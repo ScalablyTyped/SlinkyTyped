@@ -10,6 +10,8 @@ trait PartialMUIDataTableTextLaDisplayRows extends js.Object {
   
   var displayRows: js.UndefOr[String] = js.native
   
+  var jumpToPage: js.UndefOr[String] = js.native
+  
   var next: js.UndefOr[String] = js.native
   
   var previous: js.UndefOr[String] = js.native
@@ -44,6 +46,12 @@ object PartialMUIDataTableTextLaDisplayRows {
     
     @scala.inline
     def deleteDisplayRows: Self = this.set("displayRows", js.undefined)
+    
+    @scala.inline
+    def setJumpToPage(value: String): Self = this.set("jumpToPage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJumpToPage: Self = this.set("jumpToPage", js.undefined)
     
     @scala.inline
     def setNext(value: String): Self = this.set("next", value.asInstanceOf[js.Any])

@@ -18,6 +18,7 @@ object injectElementMod extends js.Object {
     el: NonNullable[ElementType],
     evalScripts: EvalScripts,
     renumerateIRIElements: Boolean,
+    cacheRequests: Boolean,
     beforeEach: BeforeEach,
     callback: Errback
   ): Unit = js.native

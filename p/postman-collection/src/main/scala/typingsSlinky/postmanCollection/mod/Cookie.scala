@@ -1,7 +1,6 @@
 package typingsSlinky.postmanCollection.mod
 
 import typingsSlinky.postmanCollection.anon.Key
-import typingsSlinky.postmanCollection.anon.Value
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,9 +40,20 @@ class Cookie () extends PropertyBase[CookieDefinition] {
 @js.native
 object Cookie extends js.Object {
   
+  /** Check whether an object is an instance of PostmanCookie. */
   def isCookie(obj: js.Any): Boolean = js.native
   
+  /** Cookie header parser */
   def parse(str: String): CookieDefinition = js.native
   
-  def splitParam(param: String): Value = js.native
+  /**
+    * Converts the Cookie to a single Set-Cookie header string.
+    */
+  def stringify(cookie: CookieDefinition): String = js.native
+  
+  /** Stringifies an Array or {@link PropertyList} of Cookies into a single string. */
+  def unparse(cookies: js.Array[CookieDefinition]): String = js.native
+  
+  /** Unparses a single Cookie. */
+  def unparseSingle(cookie: CookieDefinition): String = js.native
 }

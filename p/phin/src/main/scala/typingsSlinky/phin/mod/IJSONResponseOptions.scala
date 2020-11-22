@@ -1,5 +1,6 @@
 package typingsSlinky.phin.mod
 
+import org.scalajs.dom.experimental.URL
 import typingsSlinky.phin.phinStrings.json
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +14,7 @@ trait IJSONResponseOptions extends IOptionsBase {
 object IJSONResponseOptions {
   
   @scala.inline
-  def apply(parse: json, url: String): IJSONResponseOptions = {
+  def apply(parse: json, url: String | URL): IJSONResponseOptions = {
     val __obj = js.Dynamic.literal(parse = parse.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IJSONResponseOptions]
   }

@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CalendarSharingMessageAction extends js.Object {
   
-  var action: js.UndefOr[CalendarSharingAction] = js.native
+  var action: js.UndefOr[NullableOption[CalendarSharingAction]] = js.native
   
-  var actionType: js.UndefOr[CalendarSharingActionType] = js.native
+  var actionType: js.UndefOr[NullableOption[CalendarSharingActionType]] = js.native
   
-  var importance: js.UndefOr[CalendarSharingActionImportance] = js.native
+  var importance: js.UndefOr[NullableOption[CalendarSharingActionImportance]] = js.native
 }
 object CalendarSharingMessageAction {
   
@@ -37,21 +37,30 @@ object CalendarSharingMessageAction {
     }
     
     @scala.inline
-    def setAction(value: CalendarSharingAction): Self = this.set("action", value.asInstanceOf[js.Any])
+    def setAction(value: NullableOption[CalendarSharingAction]): Self = this.set("action", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAction: Self = this.set("action", js.undefined)
     
     @scala.inline
-    def setActionType(value: CalendarSharingActionType): Self = this.set("actionType", value.asInstanceOf[js.Any])
+    def setActionNull: Self = this.set("action", null)
+    
+    @scala.inline
+    def setActionType(value: NullableOption[CalendarSharingActionType]): Self = this.set("actionType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteActionType: Self = this.set("actionType", js.undefined)
     
     @scala.inline
-    def setImportance(value: CalendarSharingActionImportance): Self = this.set("importance", value.asInstanceOf[js.Any])
+    def setActionTypeNull: Self = this.set("actionType", null)
+    
+    @scala.inline
+    def setImportance(value: NullableOption[CalendarSharingActionImportance]): Self = this.set("importance", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteImportance: Self = this.set("importance", js.undefined)
+    
+    @scala.inline
+    def setImportanceNull: Self = this.set("importance", null)
   }
 }

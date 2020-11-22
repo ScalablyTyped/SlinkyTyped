@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object defaultMenuItemRendererMod extends js.Object {
   
-  def default(item: ValidMenuItem, key: String): ReactElement = js.native
+  def defaultMenuItemRenderer(item: ValidMenuItem, key: String): ReactElement = js.native
   
   trait _ValidMenuItem extends js.Object
   

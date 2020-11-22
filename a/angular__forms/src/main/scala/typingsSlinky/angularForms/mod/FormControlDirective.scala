@@ -35,7 +35,7 @@ class FormControlDirective protected ()
   
   /**
     * @description
-    * Triggers a warning that this input should not be used with reactive forms.
+    * Triggers a warning in dev mode that this input should not be used with reactive forms.
     */
   def isDisabled_=(isDisabled: Boolean): Unit = js.native
   
@@ -46,8 +46,8 @@ class FormControlDirective protected ()
   var update: EventEmitter[_] = js.native
   
   /**
-    * @description
     * Internal reference to the view model value.
+    * @nodoc
     */
   var viewModel: js.Any = js.native
 }

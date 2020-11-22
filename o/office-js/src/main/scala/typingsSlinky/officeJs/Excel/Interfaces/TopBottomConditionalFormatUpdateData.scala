@@ -11,7 +11,7 @@ trait TopBottomConditionalFormatUpdateData extends js.Object {
   
   /**
     *
-    * Returns a format object, encapsulating the conditional formats font, fill, borders, and other properties.
+    * Returns a format object, encapsulating the conditional format's font, fill, borders, and other properties.
     *
     * [Api set: ExcelApi 1.6]
     */

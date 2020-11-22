@@ -14,7 +14,7 @@ object format extends js.Object {
     * Define a named custom format by specifying a format string in token
     * notation.
     */
-  // tslint:disable-next-line
+  // tslint:disable-next-line:no-unnecessary-generics
   def apply[Request /* <: IncomingMessage */, Response /* <: ServerResponse */](name: String, fmt: String): Morgan[Request, Response] = js.native
   /**
     * Define a named custom format by specifying a format function.

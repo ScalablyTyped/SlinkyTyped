@@ -11,7 +11,13 @@ object Field {
   @js.native
   object component extends js.Object
   
-  def withProps(p: FieldProps): SharedBuilder_FieldProps1867252267 = new SharedBuilder_FieldProps1867252267(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[Values](p: FieldProps[Values]): SharedBuilder_FieldProps1642681149[Values] = new SharedBuilder_FieldProps1642681149[Values](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make(companion: Field.type): SharedBuilder_FieldProps1867252267 = new SharedBuilder_FieldProps1867252267(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply[Values](): SharedBuilder_FieldProps1642681149[Values] = {
+    val __props = js.Dynamic.literal()
+    new SharedBuilder_FieldProps1642681149[Values](js.Array(this.component, __props.asInstanceOf[FieldProps[Values]]))
+  }
+  
+  implicit def make[Values](companion: Field.type): SharedBuilder_FieldProps1642681149[Values] = new SharedBuilder_FieldProps1642681149[Values](js.Array(this.component, js.Dictionary.empty))()
 }

@@ -9,18 +9,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTabPanelItem extends CollectionWidgetItem {
   
-  /** @name dxTabPanelItem.badge */
+  /**
+    * [descr:dxTabPanelItem.badge]
+    */
   var badge: js.UndefOr[String] = js.native
   
-  /** @name dxTabPanelItem.icon */
+  /**
+    * [descr:dxTabPanelItem.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxTabPanelItem.tabTemplate */
+  /**
+    * [descr:dxTabPanelItem.tabTemplate]
+    */
   var tabTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function0[String | Element | JQuery])
   ] = js.native
   
-  /** @name dxTabPanelItem.title */
+  /**
+    * [descr:dxTabPanelItem.title]
+    */
   var title: js.UndefOr[String] = js.native
 }
 object dxTabPanelItem {

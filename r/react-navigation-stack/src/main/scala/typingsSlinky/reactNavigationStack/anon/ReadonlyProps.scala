@@ -15,6 +15,8 @@ trait ReadonlyProps extends js.Object {
   
   val descriptors: StackDescriptorMap = js.native
   
+  val detachInactiveScreens: js.UndefOr[Boolean] = js.native
+  
   val headerMode: js.UndefOr[StackHeaderMode] = js.native
   
   val keyboardHandlingEnabled: js.UndefOr[Boolean] = js.native
@@ -66,6 +68,12 @@ object ReadonlyProps {
     
     @scala.inline
     def setState(value: NavigationState): Self = this.set("state", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDetachInactiveScreens(value: Boolean): Self = this.set("detachInactiveScreens", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDetachInactiveScreens: Self = this.set("detachInactiveScreens", js.undefined)
     
     @scala.inline
     def setHeaderMode(value: StackHeaderMode): Self = this.set("headerMode", value.asInstanceOf[js.Any])

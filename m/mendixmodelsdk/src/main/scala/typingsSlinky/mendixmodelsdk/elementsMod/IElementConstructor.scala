@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.elementsMod
 
 import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.instancesMod.InstanceConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IElementConstructor
   extends InstanceConstructor
-     with Instantiable1[/* args (repeated) */ js.Any, Element]
+     with Instantiable1[/* args (repeated) */ js.Any, Element[IAbstractModel]]

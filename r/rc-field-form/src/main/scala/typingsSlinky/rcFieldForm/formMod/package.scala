@@ -8,7 +8,7 @@ package object formMod {
   
   type RenderProps = js.Function2[
     /* values */ typingsSlinky.rcFieldForm.interfaceMod.Store, 
-    /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance, 
+    /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance[js.Any], 
     slinky.core.facade.ReactElement
   ]
 }

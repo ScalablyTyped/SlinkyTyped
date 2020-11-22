@@ -16,19 +16,12 @@ trait UserPoolAdminCreateUserConfig extends js.Object {
     * The invite message template structure.
     */
   var inviteMessageTemplate: js.UndefOr[UserPoolAdminCreateUserConfigInviteMessageTemplate] = js.native
-  
-  /**
-    * **DEPRECATED** Use password_policy.temporary_password_validity_days instead - The user account expiration limit, in days, after which the account is no longer usable.
-    *
-    * @deprecated Use password_policy.temporary_password_validity_days instead
-    */
-  var unusedAccountValidityDays: Double = js.native
 }
 object UserPoolAdminCreateUserConfig {
   
   @scala.inline
-  def apply(unusedAccountValidityDays: Double): UserPoolAdminCreateUserConfig = {
-    val __obj = js.Dynamic.literal(unusedAccountValidityDays = unusedAccountValidityDays.asInstanceOf[js.Any])
+  def apply(): UserPoolAdminCreateUserConfig = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[UserPoolAdminCreateUserConfig]
   }
   
@@ -46,9 +39,6 @@ object UserPoolAdminCreateUserConfig {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setUnusedAccountValidityDays(value: Double): Self = this.set("unusedAccountValidityDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAllowAdminCreateUserOnly(value: Boolean): Self = this.set("allowAdminCreateUserOnly", value.asInstanceOf[js.Any])

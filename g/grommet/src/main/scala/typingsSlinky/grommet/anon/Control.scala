@@ -1,8 +1,11 @@
 package typingsSlinky.grommet.anon
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.grommet.baseMod.ExtendProps
 import typingsSlinky.grommet.baseMod.ExtendType
+import typingsSlinky.grommet.baseMod.ExtendValue
 import typingsSlinky.grommet.utilsMod.BackgroundType
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,15 +15,15 @@ trait Control extends js.Object {
   
   var background: js.UndefOr[BackgroundType] = js.native
   
-  var container: js.UndefOr[`10`] = js.native
+  var container: js.UndefOr[`14`] = js.native
   
   var control: js.UndefOr[Open] = js.native
   
-  var extend: js.UndefOr[ExtendType] = js.native
+  var extend: js.UndefOr[ExtendType[Record[String, _]]] = js.native
   
   var icons: js.UndefOr[Up] = js.native
   
-  var options: js.UndefOr[Container] = js.native
+  var options: js.UndefOr[ContainerText] = js.native
   
   // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/37506
   var searchInput: js.UndefOr[ReactElement] = js.native
@@ -57,7 +60,7 @@ object Control {
     def deleteBackground: Self = this.set("background", js.undefined)
     
     @scala.inline
-    def setContainer(value: `10`): Self = this.set("container", value.asInstanceOf[js.Any])
+    def setContainer(value: `14`): Self = this.set("container", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContainer: Self = this.set("container", js.undefined)
@@ -69,10 +72,10 @@ object Control {
     def deleteControl: Self = this.set("control", js.undefined)
     
     @scala.inline
-    def setExtendFunction1(value: /* args */ js.Any => Unit): Self = this.set("extend", js.Any.fromFunction1(value))
+    def setExtendFunction1(value: /* props */ ExtendProps[Record[String, _]] => ExtendValue[Record[String, _]]): Self = this.set("extend", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setExtend(value: ExtendType): Self = this.set("extend", value.asInstanceOf[js.Any])
+    def setExtend(value: ExtendType[Record[String, _]]): Self = this.set("extend", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExtend: Self = this.set("extend", js.undefined)
@@ -84,7 +87,7 @@ object Control {
     def deleteIcons: Self = this.set("icons", js.undefined)
     
     @scala.inline
-    def setOptions(value: Container): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: ContainerText): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

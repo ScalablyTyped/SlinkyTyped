@@ -21,13 +21,14 @@ object ASPxClientSpreadsheetCellEndEditEventArgs {
   def apply(
     cancel: Boolean,
     columnIndex: Double,
+    displayText: String,
     editorText: String,
     formula: String,
     rowIndex: Double,
     sheetName: String,
     value: String
   ): ASPxClientSpreadsheetCellEndEditEventArgs = {
-    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], columnIndex = columnIndex.asInstanceOf[js.Any], editorText = editorText.asInstanceOf[js.Any], formula = formula.asInstanceOf[js.Any], rowIndex = rowIndex.asInstanceOf[js.Any], sheetName = sheetName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(cancel = cancel.asInstanceOf[js.Any], columnIndex = columnIndex.asInstanceOf[js.Any], displayText = displayText.asInstanceOf[js.Any], editorText = editorText.asInstanceOf[js.Any], formula = formula.asInstanceOf[js.Any], rowIndex = rowIndex.asInstanceOf[js.Any], sheetName = sheetName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientSpreadsheetCellEndEditEventArgs]
   }
   

@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CompoundedComponent
   extends ForwardRefExoticComponent[TreeProps with RefAttributes[typingsSlinky.rcTree.mod.default]] {
   
-  var DirectoryTree: ReactComponentClass[DirectoryTreeProps] = js.native
+  var DirectoryTree: ForwardRefExoticComponent[DirectoryTreeProps with RefAttributes[typingsSlinky.rcTree.mod.default]] = js.native
   
   var TreeNode: ReactComponentClass[TreeNodeProps] = js.native
 }

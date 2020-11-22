@@ -10,7 +10,7 @@ import typingsSlinky.puppeteer.mod.MouseButtons
 import typingsSlinky.puppeteer.mod.PDFFormat
 import typingsSlinky.puppeteer.mod.Permission
 import typingsSlinky.puppeteer.mod.Platform
-import typingsSlinky.puppeteer.mod.Product
+import typingsSlinky.puppeteer.mod.Product_
 import typingsSlinky.puppeteer.mod.ResourceType
 import typingsSlinky.puppeteer.mod.SameSiteSetting
 import typingsSlinky.puppeteer.mod.TargetType
@@ -519,7 +519,7 @@ object puppeteerStrings {
   sealed trait camera extends Permission
   
   @js.native
-  sealed trait chrome extends Product
+  sealed trait chrome extends Product_
   
   @js.native
   sealed trait clear extends ConsoleMessageType
@@ -594,7 +594,7 @@ object puppeteerStrings {
   sealed trait fetch extends ResourceType
   
   @js.native
-  sealed trait firefox extends Product
+  sealed trait firefox extends Product_
   
   @js.native
   sealed trait font extends ResourceType

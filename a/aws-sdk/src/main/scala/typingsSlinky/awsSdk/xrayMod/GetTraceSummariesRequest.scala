@@ -28,7 +28,7 @@ trait GetTraceSummariesRequest extends js.Object {
   var Sampling: js.UndefOr[NullableBoolean] = js.native
   
   /**
-    * A paramater to indicate whether to enable sampling on trace summaries. Input parameters are Name and Value.
+    * A parameter to indicate whether to enable sampling on trace summaries. Input parameters are Name and Value.
     */
   var SamplingStrategy: js.UndefOr[typingsSlinky.awsSdk.xrayMod.SamplingStrategy] = js.native
   

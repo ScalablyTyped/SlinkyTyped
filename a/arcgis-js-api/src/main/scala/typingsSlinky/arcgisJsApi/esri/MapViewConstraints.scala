@@ -45,21 +45,28 @@ trait MapViewConstraints extends Object {
   var effectiveMinZoom: js.UndefOr[Double] = js.native
   
   /**
-    * An array of [LODs](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-LOD.html). If not specified, this value is read from the [Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html). This property may be [autocast](https://developers.arcgis.com/javascript/latest/guide/programming-patterns/#autocasting).
+    * The area in which the user is allowed to navigate laterally.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints)
+    */
+  var geometry: js.UndefOr[Geometry_] = js.native
+  
+  /**
+    * An array of [LODs](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-LOD.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints)
     */
   var lods: js.UndefOr[js.Array[LOD]] = js.native
   
   /**
-    * The maximum [scale](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#scale) the user is allowed to zoom to within the view. Setting this value to `0` allows the user to overzoom layer tiles.
+    * The maximum [scale](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#scale) the user is allowed to zoom to within the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints)
     */
   var maxScale: js.UndefOr[Double] = js.native
   
   /**
-    * The maximum [zoom](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#zoom) level the user is allowed to zoom to within the view. Setting this value to `0` allows the user to overzoom layer tiles.
+    * The maximum [zoom](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#zoom) level the user is allowed to zoom to within the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints)
     */
@@ -83,17 +90,13 @@ trait MapViewConstraints extends Object {
     * Indicates whether the user can rotate the map.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints)
-    *
-    * @default true
     */
   var rotationEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * When `true`, the view snaps to the next LOD when zooming in or out. When `false`, the zoom is continuous. This does not apply when zooming in/out using two finger pinch in/out.
+    * When `true`, the view snaps to the next LOD when zooming in or out.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html#constraints)
-    *
-    * @default true
     */
   var snapToZoom: js.UndefOr[Boolean] = js.native
 }
@@ -156,6 +159,12 @@ object MapViewConstraints {
     
     @scala.inline
     def deleteEffectiveMinZoom: Self = this.set("effectiveMinZoom", js.undefined)
+    
+    @scala.inline
+    def setGeometry(value: Geometry_): Self = this.set("geometry", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGeometry: Self = this.set("geometry", js.undefined)
     
     @scala.inline
     def setLodsVarargs(value: LOD*): Self = this.set("lods", js.Array(value :_*))

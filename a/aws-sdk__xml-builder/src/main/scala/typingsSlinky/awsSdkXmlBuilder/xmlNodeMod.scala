@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/xml-builder/build/XmlNode", JSImport.Namespace)
+@JSImport("@aws-sdk/xml-builder/dist/cjs/XmlNode", JSImport.Namespace)
 @js.native
 object xmlNodeMod extends js.Object {
   
@@ -25,5 +25,7 @@ object xmlNodeMod extends js.Object {
     var name: js.Any = js.native
     
     def removeAttribute(name: String): XmlNode = js.native
+    
+    def withName(name: String): XmlNode = js.native
   }
 }

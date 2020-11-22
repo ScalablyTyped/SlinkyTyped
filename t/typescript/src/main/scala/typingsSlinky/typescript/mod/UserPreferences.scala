@@ -6,6 +6,8 @@ import typingsSlinky.typescript.typescriptStrings.double
 import typingsSlinky.typescript.typescriptStrings.index
 import typingsSlinky.typescript.typescriptStrings.js_
 import typingsSlinky.typescript.typescriptStrings.minimal
+import typingsSlinky.typescript.typescriptStrings.off
+import typingsSlinky.typescript.typescriptStrings.on
 import typingsSlinky.typescript.typescriptStrings.relative
 import typingsSlinky.typescript.typescriptStrings.single
 import scala.scalajs.js
@@ -30,7 +32,11 @@ trait UserPreferences extends js.Object {
   
   val includeCompletionsWithInsertText: js.UndefOr[Boolean] = js.native
   
+  val includePackageJsonAutoImports: js.UndefOr[auto | on | off] = js.native
+  
   val providePrefixAndSuffixTextForRename: js.UndefOr[Boolean] = js.native
+  
+  val provideRefactorNotApplicableReason: js.UndefOr[Boolean] = js.native
   
   val quotePreference: js.UndefOr[auto | double | single] = js.native
 }
@@ -100,10 +106,22 @@ object UserPreferences {
     def deleteIncludeCompletionsWithInsertText: Self = this.set("includeCompletionsWithInsertText", js.undefined)
     
     @scala.inline
+    def setIncludePackageJsonAutoImports(value: auto | on | off): Self = this.set("includePackageJsonAutoImports", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIncludePackageJsonAutoImports: Self = this.set("includePackageJsonAutoImports", js.undefined)
+    
+    @scala.inline
     def setProvidePrefixAndSuffixTextForRename(value: Boolean): Self = this.set("providePrefixAndSuffixTextForRename", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProvidePrefixAndSuffixTextForRename: Self = this.set("providePrefixAndSuffixTextForRename", js.undefined)
+    
+    @scala.inline
+    def setProvideRefactorNotApplicableReason(value: Boolean): Self = this.set("provideRefactorNotApplicableReason", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProvideRefactorNotApplicableReason: Self = this.set("provideRefactorNotApplicableReason", js.undefined)
     
     @scala.inline
     def setQuotePreference(value: auto | double | single): Self = this.set("quotePreference", value.asInstanceOf[js.Any])

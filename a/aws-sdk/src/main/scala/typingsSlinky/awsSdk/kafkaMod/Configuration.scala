@@ -48,6 +48,13 @@ trait Configuration extends js.Object {
     
     */
   var Name: string = js.native
+  
+  /**
+    * 
+    The state of the configuration. The possible states are ACTIVE, DELETING, and DELETE_FAILED. 
+    
+    */
+  var State: ConfigurationState = js.native
 }
 object Configuration {
   
@@ -58,9 +65,10 @@ object Configuration {
     Description: string,
     KafkaVersions: listOfString,
     LatestRevision: ConfigurationRevision,
-    Name: string
+    Name: string,
+    State: ConfigurationState
   ): Configuration = {
-    val __obj = js.Dynamic.literal(Arn = Arn.asInstanceOf[js.Any], CreationTime = CreationTime.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any], KafkaVersions = KafkaVersions.asInstanceOf[js.Any], LatestRevision = LatestRevision.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(Arn = Arn.asInstanceOf[js.Any], CreationTime = CreationTime.asInstanceOf[js.Any], Description = Description.asInstanceOf[js.Any], KafkaVersions = KafkaVersions.asInstanceOf[js.Any], LatestRevision = LatestRevision.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], State = State.asInstanceOf[js.Any])
     __obj.asInstanceOf[Configuration]
   }
   
@@ -99,5 +107,8 @@ object Configuration {
     
     @scala.inline
     def setName(value: string): Self = this.set("Name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setState(value: ConfigurationState): Self = this.set("State", value.asInstanceOf[js.Any])
   }
 }

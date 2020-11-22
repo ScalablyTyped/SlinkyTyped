@@ -5,26 +5,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.typescript.mod.TextRange because Already inherited
+- typingsSlinky.typescript.mod.ReadonlyTextRange because Already inherited
 - typingsSlinky.typescript.mod.Node because Already inherited
 - typingsSlinky.typescript.mod.Declaration because Already inherited
-- typingsSlinky.typescript.mod.Statement because var conflicts: decorators, end, flags, kind, modifiers, parent, pos. Inlined _statementBrand
 - typingsSlinky.typescript.mod.NamedDeclaration because Already inherited
-- typingsSlinky.typescript.mod.DeclarationStatement because var conflicts: _declarationBrand, decorators, end, flags, kind, modifiers, name, parent, pos. Inlined  */ @js.native
+- typingsSlinky.typescript.mod.DeclarationStatement because var conflicts: _declarationBrand. Inlined  */ @js.native
 trait FunctionDeclaration
   extends FunctionLikeDeclarationBase
      with FunctionLikeDeclaration
      with SignatureDeclaration
-     with _HasJSDoc {
-  
-  var _statementBrand: js.Any = js.native
+     with _HasJSDoc
+     with Statement {
   
   @JSName("body")
-  var body_FunctionDeclaration: js.UndefOr[FunctionBody] = js.native
+  val body_FunctionDeclaration: js.UndefOr[FunctionBody] = js.native
   
   @JSName("kind")
-  var kind_FunctionDeclaration: typingsSlinky.typescript.mod.SyntaxKind.FunctionDeclaration = js.native
+  val kind_FunctionDeclaration: typingsSlinky.typescript.mod.SyntaxKind.FunctionDeclaration = js.native
   
   @JSName("name")
-  var name_FunctionDeclaration: js.UndefOr[Identifier] = js.native
+  val name_FunctionDeclaration: js.UndefOr[Identifier] = js.native
 }

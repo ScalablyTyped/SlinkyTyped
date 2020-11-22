@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CampaignUpdateSummary extends js.Object {
   
+  var campaignConfig: js.UndefOr[CampaignConfig] = js.native
+  
   /**
     * The date and time (in Unix time) that the campaign update was created.
     */
@@ -59,6 +61,12 @@ object CampaignUpdateSummary {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setCampaignConfig(value: CampaignConfig): Self = this.set("campaignConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCampaignConfig: Self = this.set("campaignConfig", js.undefined)
     
     @scala.inline
     def setCreationDateTime(value: js.Date): Self = this.set("creationDateTime", value.asInstanceOf[js.Any])

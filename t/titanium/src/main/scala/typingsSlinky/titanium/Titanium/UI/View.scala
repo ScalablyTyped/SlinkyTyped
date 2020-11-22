@@ -156,7 +156,7 @@ trait View extends Proxy {
   /**
     * Background color of the view, as a color name or hex triplet.
     */
-  var backgroundColor: String = js.native
+  var backgroundColor: String | Color = js.native
   
   /**
     * Disabled background color of the view, as a color name or hex triplet.
@@ -201,7 +201,7 @@ trait View extends Proxy {
   /**
     * Selected background color of the view, as a color name or hex triplet.
     */
-  var backgroundSelectedColor: String = js.native
+  var backgroundSelectedColor: String | Color = js.native
   
   /**
     * Selected background image url for the view, specified as a local file path or URL.
@@ -216,12 +216,12 @@ trait View extends Proxy {
   /**
     * Border color of the view, as a color name or hex triplet.
     */
-  var borderColor: String = js.native
+  var borderColor: String | Color = js.native
   
   /**
     * Radius for the rounded corners of the view's border.
     */
-  var borderRadius: Double = js.native
+  var borderRadius: Double | String | (js.Array[Double | String]) = js.native
   
   /**
     * Border width of the view.
@@ -376,7 +376,7 @@ trait View extends Proxy {
     * Gets the value of the <Titanium.UI.View.backgroundColor> property.
     * @deprecated Access <Titanium.UI.View.backgroundColor> instead.
     */
-  def getBackgroundColor(): String = js.native
+  def getBackgroundColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.View.backgroundDisabledColor> property.
@@ -430,7 +430,7 @@ trait View extends Proxy {
     * Gets the value of the <Titanium.UI.View.backgroundSelectedColor> property.
     * @deprecated Access <Titanium.UI.View.backgroundSelectedColor> instead.
     */
-  def getBackgroundSelectedColor(): String = js.native
+  def getBackgroundSelectedColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.View.backgroundSelectedImage> property.
@@ -448,13 +448,13 @@ trait View extends Proxy {
     * Gets the value of the <Titanium.UI.View.borderColor> property.
     * @deprecated Access <Titanium.UI.View.borderColor> instead.
     */
-  def getBorderColor(): String = js.native
+  def getBorderColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.View.borderRadius> property.
     * @deprecated Access <Titanium.UI.View.borderRadius> instead.
     */
-  def getBorderRadius(): Double = js.native
+  def getBorderRadius(): Double | String | (js.Array[Double | String]) = js.native
   
   /**
     * Gets the value of the <Titanium.UI.View.borderWidth> property.
@@ -562,7 +562,7 @@ trait View extends Proxy {
     * Gets the value of the <Titanium.UI.View.pullBackgroundColor> property.
     * @deprecated Access <Titanium.UI.View.pullBackgroundColor> instead.
     */
-  def getPullBackgroundColor(): String = js.native
+  def getPullBackgroundColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.View.rect> property.
@@ -622,7 +622,7 @@ trait View extends Proxy {
     * Gets the value of the <Titanium.UI.View.tintColor> property.
     * @deprecated Access <Titanium.UI.View.tintColor> instead.
     */
-  def getTintColor(): String = js.native
+  def getTintColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.View.top> property.
@@ -693,7 +693,7 @@ trait View extends Proxy {
     * Gets the value of the <Titanium.UI.View.viewShadowColor> property.
     * @deprecated Access <Titanium.UI.View.viewShadowColor> instead.
     */
-  def getViewShadowColor(): String = js.native
+  def getViewShadowColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.View.viewShadowOffset> property.
@@ -797,7 +797,7 @@ trait View extends Proxy {
     * Background color of the wrapper view when this view is used as either <Titanium.UI.ListView.pullView> or <Titanium.UI.TableView.headerPullView>.
     * Defaults to `undefined`. Results in a light grey background color on the wrapper view.
     */
-  var pullBackgroundColor: String = js.native
+  var pullBackgroundColor: String | Color = js.native
   
   /**
     * The bounding box of the view relative to its parent, in system units.
@@ -956,6 +956,7 @@ trait View extends Proxy {
     * @deprecated Set the value using <Titanium.UI.View.backgroundColor> instead.
     */
   def setBackgroundColor(backgroundColor: String): Unit = js.native
+  def setBackgroundColor(backgroundColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.View.backgroundDisabledColor> property.
@@ -1010,6 +1011,7 @@ trait View extends Proxy {
     * @deprecated Set the value using <Titanium.UI.View.backgroundSelectedColor> instead.
     */
   def setBackgroundSelectedColor(backgroundSelectedColor: String): Unit = js.native
+  def setBackgroundSelectedColor(backgroundSelectedColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.View.backgroundSelectedImage> property.
@@ -1028,7 +1030,10 @@ trait View extends Proxy {
     * @deprecated Set the value using <Titanium.UI.View.borderColor> instead.
     */
   def setBorderColor(borderColor: String): Unit = js.native
+  def setBorderColor(borderColor: Color): Unit = js.native
   
+  def setBorderRadius(borderRadius: String): Unit = js.native
+  def setBorderRadius(borderRadius: js.Array[Double | String]): Unit = js.native
   /**
     * Sets the value of the <Titanium.UI.View.borderRadius> property.
     * @deprecated Set the value using <Titanium.UI.View.borderRadius> instead.
@@ -1139,6 +1144,7 @@ trait View extends Proxy {
     * @deprecated Set the value using <Titanium.UI.View.pullBackgroundColor> instead.
     */
   def setPullBackgroundColor(pullBackgroundColor: String): Unit = js.native
+  def setPullBackgroundColor(pullBackgroundColor: Color): Unit = js.native
   
   def setRight(right: String): Unit = js.native
   /**
@@ -1188,6 +1194,7 @@ trait View extends Proxy {
     * @deprecated Set the value using <Titanium.UI.View.tintColor> instead.
     */
   def setTintColor(tintColor: String): Unit = js.native
+  def setTintColor(tintColor: Color): Unit = js.native
   
   def setTop(top: String): Unit = js.native
   /**
@@ -1256,6 +1263,7 @@ trait View extends Proxy {
     * @deprecated Set the value using <Titanium.UI.View.viewShadowColor> instead.
     */
   def setViewShadowColor(viewShadowColor: String): Unit = js.native
+  def setViewShadowColor(viewShadowColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.View.viewShadowOffset> property.
@@ -1307,7 +1315,7 @@ trait View extends Proxy {
   /**
     * The view's tintColor
     */
-  var tintColor: String = js.native
+  var tintColor: String | Color = js.native
   
   /**
     * Returns an image of the rendered view, as a Blob.
@@ -1370,7 +1378,7 @@ trait View extends Proxy {
   /**
     * Determines the color of the shadow.
     */
-  var viewShadowColor: String = js.native
+  var viewShadowColor: String | Color = js.native
   
   /**
     * Determines the offset for the shadow of the view.

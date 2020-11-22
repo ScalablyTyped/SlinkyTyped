@@ -10,17 +10,17 @@ class ListPaymentsResponse () extends js.Object {
   
   /**
     * The pagination cursor to be used in a subsequent request. If empty, this is the final response.
-    * See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
+    * For more information, see [Pagination](https://developer.squareup.com/docs/basics/api101/pagination).
     */
   var cursor: js.UndefOr[String] = js.native
   
   /**
-    * Information on errors encountered during the request.
+    * Information about errors encountered during the request.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   
   /**
-    * The requested list of `Payment`s.
+    * The requested list of payments.
     */
   var payments: js.UndefOr[js.Array[Payment]] = js.native
 }

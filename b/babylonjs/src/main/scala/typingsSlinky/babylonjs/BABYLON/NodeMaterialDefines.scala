@@ -36,5 +36,6 @@ trait NodeMaterialDefines
   
   var UV1: Boolean = js.native
   
-  def setValue(name: String, value: Boolean): Unit = js.native
+  def setValue(name: String, value: js.Any): Unit = js.native
+  def setValue(name: String, value: js.Any, markAsUnprocessedIfDirty: Boolean): Unit = js.native
 }

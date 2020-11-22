@@ -1,5 +1,6 @@
 package typingsSlinky.titanium
 
+import typingsSlinky.titanium.Titanium.UI.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +14,7 @@ trait titleAttributesParams extends js.Object {
   /**
     * Color of the window title, as a color name or hex triplet.
     */
-  var color: js.UndefOr[java.lang.String] = js.native
+  var color: js.UndefOr[String | Color] = js.native
   
   /**
     * Font to use for the window title.
@@ -43,13 +44,13 @@ object titleAttributesParams {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setColor(value: java.lang.String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: String | Color): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)

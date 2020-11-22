@@ -10,7 +10,7 @@ trait FindResult
      with JSONSupport {
   
   /**
-    * The name of the layer's primary display field. The value of this property matches the name of one of the fields of the feature.
+    * The name of the layer's primary display field.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindResult.html#displayFieldName)
     */

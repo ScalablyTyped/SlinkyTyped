@@ -90,9 +90,13 @@ package object lakeformationMod {
   
   type PrincipalResourcePermissionsList = js.Array[typingsSlinky.awsSdk.lakeformationMod.PrincipalResourcePermissions]
   
+  type RAMResourceShareArn = java.lang.String
+  
   type ResourceArnString = java.lang.String
   
   type ResourceInfoList = js.Array[typingsSlinky.awsSdk.lakeformationMod.ResourceInfo]
+  
+  type ResourceShareList = js.Array[typingsSlinky.awsSdk.lakeformationMod.RAMResourceShareArn]
   
   type StringValue = java.lang.String
   

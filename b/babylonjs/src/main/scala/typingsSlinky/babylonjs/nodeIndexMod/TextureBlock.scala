@@ -13,4 +13,5 @@ class TextureBlock protected ()
     * @param name defines the block name
     */
   def this(name: String) = this()
+  def this(name: String, fragmentOnly: Boolean) = this()
 }

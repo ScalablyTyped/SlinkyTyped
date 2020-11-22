@@ -1,11 +1,12 @@
 package typingsSlinky.styledComponents.anon
 
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait As[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] extends js.Object {
+trait As[C /* <: String | ReactComponentClass[_] */] extends js.Object {
   
   var as: js.UndefOr[C] = js.native
   
@@ -14,13 +15,13 @@ trait As[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type
 object As {
   
   @scala.inline
-  def apply[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */](): As[C] = {
+  def apply[C /* <: String | ReactComponentClass[_] */](): As[C] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[As[C]]
   }
   
   @scala.inline
-  implicit class AsOps[Self <: As[_], C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] (val x: Self with As[C]) extends AnyVal {
+  implicit class AsOps[Self <: As[_], C /* <: String | ReactComponentClass[_] */] (val x: Self with As[C]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

@@ -431,7 +431,7 @@ object Engine extends js.Object {
   
   /**
     * Gets the audio engine
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music
     * @ignorenaming
     */
   var audioEngine: IAudioEngine = js.native

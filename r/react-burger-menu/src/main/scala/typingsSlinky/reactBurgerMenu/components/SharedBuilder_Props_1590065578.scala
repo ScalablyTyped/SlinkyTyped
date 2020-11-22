@@ -6,6 +6,7 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactBurgerMenu.anon.PartialStyles
+import typingsSlinky.reactBurgerMenu.mod.HoverState
 import typingsSlinky.reactBurgerMenu.mod.State
 import typingsSlinky.reactBurgerMenu.reactBurgerMenuBooleans.`false`
 import scala.scalajs.js
@@ -88,6 +89,15 @@ class SharedBuilder_Props_1590065578[R <: js.Object] (val args: js.Array[js.Any]
   
   @scala.inline
   def noTransition(value: Boolean): this.type = set("noTransition", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def onClose(value: () => Unit): this.type = set("onClose", js.Any.fromFunction0(value))
+  
+  @scala.inline
+  def onIconHoverChange(value: /* state */ HoverState => Unit): this.type = set("onIconHoverChange", js.Any.fromFunction1(value))
+  
+  @scala.inline
+  def onOpen(value: () => Unit): this.type = set("onOpen", js.Any.fromFunction0(value))
   
   @scala.inline
   def onStateChange(value: /* state */ State => Unit): this.type = set("onStateChange", js.Any.fromFunction1(value))

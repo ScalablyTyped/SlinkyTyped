@@ -7,12 +7,12 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.Ghost
 import typingsSlinky.antd.anon.Size
 import typingsSlinky.antd.anon.ValidateMessages
-import typingsSlinky.antd.antdStrings.ltr
-import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.configProviderContextMod.CSPConfig
+import typingsSlinky.antd.configProviderContextMod.DirectionType
 import typingsSlinky.antd.configProviderMod.ConfigProviderProps
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.localeProviderMod.Locale
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.react.mod.PropsWithChildren
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,7 +38,7 @@ object ConfigProvider {
     def csp(value: CSPConfig): this.type = set("csp", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
+    def direction(value: DirectionType): this.type = set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def dropdownMatchSelectWidth(value: Boolean): this.type = set("dropdownMatchSelectWidth", value.asInstanceOf[js.Any])
@@ -74,7 +74,7 @@ object ConfigProvider {
     def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ConfigProviderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: PropsWithChildren[ConfigProviderProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: ConfigProvider.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Store extends js.Object {
   
   /**
-    * whether to store the user's previous answer
+    * A value indicating whether to store the user's previous answer.
     */
   var store: js.UndefOr[Boolean] = js.native
 }

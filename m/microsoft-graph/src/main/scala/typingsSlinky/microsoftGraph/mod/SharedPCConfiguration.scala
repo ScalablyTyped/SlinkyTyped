@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SharedPCConfiguration extends DeviceConfiguration {
   
   // Specifies how accounts are managed on a shared PC. Only applies when disableAccountManager is false.
-  var accountManagerPolicy: js.UndefOr[SharedPCAccountManagerPolicy] = js.native
+  var accountManagerPolicy: js.UndefOr[NullableOption[SharedPCAccountManagerPolicy]] = js.native
   
   // Specifies whether local storage is allowed on a shared PC.
   var allowLocalStorage: js.UndefOr[Boolean] = js.native
@@ -38,19 +38,19 @@ trait SharedPCConfiguration extends DeviceConfiguration {
     * Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents
     * the sleep timeout from occurring.
     */
-  var idleTimeBeforeSleepInSeconds: js.UndefOr[Double] = js.native
+  var idleTimeBeforeSleepInSeconds: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * Specifies the display text for the account shown on the sign-in screen which launches the app specified by
     * SetKioskAppUserModelId. Only applies when KioskAppUserModelId is set.
     */
-  var kioskAppDisplayName: js.UndefOr[String] = js.native
+  var kioskAppDisplayName: js.UndefOr[NullableOption[String]] = js.native
   
   // Specifies the application user model ID of the app to use with assigned access.
-  var kioskAppUserModelId: js.UndefOr[String] = js.native
+  var kioskAppUserModelId: js.UndefOr[NullableOption[String]] = js.native
   
   // Specifies the daily start time of maintenance hour.
-  var maintenanceStartTime: js.UndefOr[String] = js.native
+  var maintenanceStartTime: js.UndefOr[NullableOption[String]] = js.native
 }
 object SharedPCConfiguration {
   
@@ -76,10 +76,13 @@ object SharedPCConfiguration {
     }
     
     @scala.inline
-    def setAccountManagerPolicy(value: SharedPCAccountManagerPolicy): Self = this.set("accountManagerPolicy", value.asInstanceOf[js.Any])
+    def setAccountManagerPolicy(value: NullableOption[SharedPCAccountManagerPolicy]): Self = this.set("accountManagerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAccountManagerPolicy: Self = this.set("accountManagerPolicy", js.undefined)
+    
+    @scala.inline
+    def setAccountManagerPolicyNull: Self = this.set("accountManagerPolicy", null)
     
     @scala.inline
     def setAllowLocalStorage(value: Boolean): Self = this.set("allowLocalStorage", value.asInstanceOf[js.Any])
@@ -124,27 +127,39 @@ object SharedPCConfiguration {
     def deleteEnabled: Self = this.set("enabled", js.undefined)
     
     @scala.inline
-    def setIdleTimeBeforeSleepInSeconds(value: Double): Self = this.set("idleTimeBeforeSleepInSeconds", value.asInstanceOf[js.Any])
+    def setIdleTimeBeforeSleepInSeconds(value: NullableOption[Double]): Self = this.set("idleTimeBeforeSleepInSeconds", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIdleTimeBeforeSleepInSeconds: Self = this.set("idleTimeBeforeSleepInSeconds", js.undefined)
     
     @scala.inline
-    def setKioskAppDisplayName(value: String): Self = this.set("kioskAppDisplayName", value.asInstanceOf[js.Any])
+    def setIdleTimeBeforeSleepInSecondsNull: Self = this.set("idleTimeBeforeSleepInSeconds", null)
+    
+    @scala.inline
+    def setKioskAppDisplayName(value: NullableOption[String]): Self = this.set("kioskAppDisplayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKioskAppDisplayName: Self = this.set("kioskAppDisplayName", js.undefined)
     
     @scala.inline
-    def setKioskAppUserModelId(value: String): Self = this.set("kioskAppUserModelId", value.asInstanceOf[js.Any])
+    def setKioskAppDisplayNameNull: Self = this.set("kioskAppDisplayName", null)
+    
+    @scala.inline
+    def setKioskAppUserModelId(value: NullableOption[String]): Self = this.set("kioskAppUserModelId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKioskAppUserModelId: Self = this.set("kioskAppUserModelId", js.undefined)
     
     @scala.inline
-    def setMaintenanceStartTime(value: String): Self = this.set("maintenanceStartTime", value.asInstanceOf[js.Any])
+    def setKioskAppUserModelIdNull: Self = this.set("kioskAppUserModelId", null)
+    
+    @scala.inline
+    def setMaintenanceStartTime(value: NullableOption[String]): Self = this.set("maintenanceStartTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaintenanceStartTime: Self = this.set("maintenanceStartTime", js.undefined)
+    
+    @scala.inline
+    def setMaintenanceStartTimeNull: Self = this.set("maintenanceStartTime", null)
   }
 }

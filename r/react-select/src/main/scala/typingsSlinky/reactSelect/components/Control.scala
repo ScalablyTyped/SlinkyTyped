@@ -10,6 +10,7 @@ import typingsSlinky.reactSelect.selectMod.Props
 import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
 import typingsSlinky.reactSelect.typesMod.OptionsType
+import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.reactSelect.typesMod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -55,12 +56,14 @@ object Control {
     isDisabled: Boolean,
     isFocused: Boolean,
     isMulti: Boolean,
+    menuIsOpen: Boolean,
     options: OptionsType[js.Any],
     selectOption: js.Any => Unit,
     selectProps: Props[js.Any],
-    setValue: (ValueType[js.Any], ActionTypes) => Unit
+    setValue: (ValueType[js.Any], ActionTypes) => Unit,
+    theme: Theme
   ): Builder = {
-    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isDisabled = isDisabled.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
+    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isDisabled = isDisabled.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], menuIsOpen = menuIsOpen.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue), theme = theme.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ControlProps[js.Any]]))
   }
 }

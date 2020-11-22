@@ -24,6 +24,11 @@ trait IModelDecorationOptions extends js.Object {
   var className: js.UndefOr[String | Null] = js.native
   
   /**
+    * If set, the decoration will be rendered in the lines decorations with this CSS class name, but only for the first line in case of line wrapping.
+    */
+  var firstLineDecorationClassName: js.UndefOr[String | Null] = js.native
+  
+  /**
     * If set, the decoration will be rendered in the glyph margin with this CSS class name.
     */
   var glyphMarginClassName: js.UndefOr[String | Null] = js.native
@@ -136,6 +141,15 @@ object IModelDecorationOptions {
     
     @scala.inline
     def setClassNameNull: Self = this.set("className", null)
+    
+    @scala.inline
+    def setFirstLineDecorationClassName(value: String): Self = this.set("firstLineDecorationClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFirstLineDecorationClassName: Self = this.set("firstLineDecorationClassName", js.undefined)
+    
+    @scala.inline
+    def setFirstLineDecorationClassNameNull: Self = this.set("firstLineDecorationClassName", null)
     
     @scala.inline
     def setGlyphMarginClassName(value: String): Self = this.set("glyphMarginClassName", value.asInstanceOf[js.Any])

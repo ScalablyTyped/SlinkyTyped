@@ -7,28 +7,66 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LinkedList extends js.Object {
   
+  /**
+    * Concatenates two lists.
+    */
   def concat(list: LinkedList): Unit = js.native
   
+  /**
+    * Sets the cursor to the first item, and returns the associated data.
+    */
   def firstItem(): js.Any = js.native
   
+  /**
+    * Returns the current item's data.
+    */
   def getCurrItem(): js.Any = js.native
   
+  /**
+    * Returns the current length of the list.
+    */
   def getLength(): Double = js.native
   
+  /**
+    * Returns the next item's data without moving the cursor.
+    */
   def getNextItem(): js.Any = js.native
   
+  /**
+    * Returns the previous item's data without moving the cursor.
+    */
   def getPrevItem(): js.Any = js.native
   
+  /**
+    * Inserts an item into the linked list right after the current one.
+    */
   def insertItem(data: js.Any): Unit = js.native
   
+  /**
+    * Sets the cursor to the last item, and returns the associated data.
+    */
   def lastItem(): js.Any = js.native
   
+  /**
+    * Sets the cursor to the next item, and returns the associated data.
+    */
   def nextItem(): js.Any = js.native
   
+  /**
+    * Sets the cursor to the previous item, and returns the associated data.
+    */
   def prevItem(): js.Any = js.native
   
+  /**
+    * Removes the current item from the list. Sets the cursor to the next item,
+    * if possible.
+    */
   def removeItem(): Unit = js.native
   
+  /**
+    * Sets the first item of the list. This only works for circular lists, and sets
+    * the last item accordingly.
+    */
   def setFirstItem(): Unit = js.native
 }
 object LinkedList {

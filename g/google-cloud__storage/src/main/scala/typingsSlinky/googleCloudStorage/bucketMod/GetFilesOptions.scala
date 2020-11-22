@@ -13,6 +13,10 @@ trait GetFilesOptions extends js.Object {
   
   var directory: js.UndefOr[String] = js.native
   
+  var endOffset: js.UndefOr[String] = js.native
+  
+  var includeTrailingDelimiter: js.UndefOr[Boolean] = js.native
+  
   var maxApiCalls: js.UndefOr[Double] = js.native
   
   var maxResults: js.UndefOr[Double] = js.native
@@ -20,6 +24,8 @@ trait GetFilesOptions extends js.Object {
   var pageToken: js.UndefOr[String] = js.native
   
   var prefix: js.UndefOr[String] = js.native
+  
+  var startOffset: js.UndefOr[String] = js.native
   
   var userProject: js.UndefOr[String] = js.native
   
@@ -67,6 +73,18 @@ object GetFilesOptions {
     def deleteDirectory: Self = this.set("directory", js.undefined)
     
     @scala.inline
+    def setEndOffset(value: String): Self = this.set("endOffset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEndOffset: Self = this.set("endOffset", js.undefined)
+    
+    @scala.inline
+    def setIncludeTrailingDelimiter(value: Boolean): Self = this.set("includeTrailingDelimiter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIncludeTrailingDelimiter: Self = this.set("includeTrailingDelimiter", js.undefined)
+    
+    @scala.inline
     def setMaxApiCalls(value: Double): Self = this.set("maxApiCalls", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -89,6 +107,12 @@ object GetFilesOptions {
     
     @scala.inline
     def deletePrefix: Self = this.set("prefix", js.undefined)
+    
+    @scala.inline
+    def setStartOffset(value: String): Self = this.set("startOffset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStartOffset: Self = this.set("startOffset", js.undefined)
     
     @scala.inline
     def setUserProject(value: String): Self = this.set("userProject", value.asInstanceOf[js.Any])

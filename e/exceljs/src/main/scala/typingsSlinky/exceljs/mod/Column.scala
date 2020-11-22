@@ -13,9 +13,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Column extends js.Object {
   
-  var alignment: PartialAlignment = js.native
+  var alignment: js.UndefOr[PartialAlignment] = js.native
   
-  var border: PartialBorders = js.native
+  /**
+  	 * Below properties read from style
+  	 */
+  var border: js.UndefOr[PartialBorders] = js.native
   
   /**
   	 * indicate the collapsed state based on outlineLevel
@@ -35,14 +38,14 @@ trait Column extends js.Object {
   
   def equivalentTo(other: Column): Boolean = js.native
   
-  var fill: Fill = js.native
+  var fill: js.UndefOr[Fill] = js.native
   
-  var font: PartialFont = js.native
+  var font: js.UndefOr[PartialFont] = js.native
   
   /**
   	 * Can be a string to set one row high header or an array to set multi-row high header
   	 */
-  var header: String | js.Array[String] = js.native
+  var header: js.UndefOr[String | js.Array[String]] = js.native
   
   val headerCount: Double = js.native
   
@@ -60,14 +63,14 @@ trait Column extends js.Object {
   /**
   	 * The name of the properties associated with this column in each row
   	 */
-  var key: String = js.native
+  var key: js.UndefOr[String] = js.native
   
   /**
   	 * Column letter key
   	 */
   val letter: String = js.native
   
-  var numFmt: String = js.native
+  var numFmt: js.UndefOr[String] = js.native
   
   val number: Double = js.native
   
@@ -76,7 +79,7 @@ trait Column extends js.Object {
   	 */
   var outlineLevel: Double = js.native
   
-  var protection: PartialProtection = js.native
+  var protection: js.UndefOr[PartialProtection] = js.native
   
   /**
   	 * Styles applied to the column
@@ -91,7 +94,7 @@ trait Column extends js.Object {
   /**
   	 * The width of the column
   	 */
-  var width: Double = js.native
+  var width: js.UndefOr[Double] = js.native
   
   val worksheet: Worksheet = js.native
 }

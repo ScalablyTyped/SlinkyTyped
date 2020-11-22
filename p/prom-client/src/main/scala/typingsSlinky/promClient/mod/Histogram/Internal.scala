@@ -1,12 +1,12 @@
 package typingsSlinky.promClient.mod.Histogram
 
-import typingsSlinky.promClient.mod.labelValues
+import typingsSlinky.promClient.mod.LabelValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Internal extends js.Object {
+trait Internal[T /* <: String */] extends js.Object {
   
   /**
   		 * Observe value
@@ -19,21 +19,21 @@ trait Internal extends js.Object {
   		 * @param labels Object with label keys and values
   		 * @return Function to invoke when timer should be stopped
   		 */
-  def startTimer(): js.Function1[/* labels */ js.UndefOr[labelValues], Unit] = js.native
+  def startTimer(): js.Function1[/* labels */ js.UndefOr[LabelValues[T]], Unit] = js.native
 }
 object Internal {
   
   @scala.inline
-  def apply(
+  def apply[T /* <: String */](
     observe: Double => Unit,
-    startTimer: () => js.Function1[/* labels */ js.UndefOr[labelValues], Unit]
-  ): Internal = {
+    startTimer: () => js.Function1[/* labels */ js.UndefOr[LabelValues[T]], Unit]
+  ): Internal[T] = {
     val __obj = js.Dynamic.literal(observe = js.Any.fromFunction1(observe), startTimer = js.Any.fromFunction0(startTimer))
-    __obj.asInstanceOf[Internal]
+    __obj.asInstanceOf[Internal[T]]
   }
   
   @scala.inline
-  implicit class InternalOps[Self <: Internal] (val x: Self) extends AnyVal {
+  implicit class InternalOps[Self <: Internal[_], T /* <: String */] (val x: Self with Internal[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -51,6 +51,6 @@ object Internal {
     def setObserve(value: Double => Unit): Self = this.set("observe", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setStartTimer(value: () => js.Function1[/* labels */ js.UndefOr[labelValues], Unit]): Self = this.set("startTimer", js.Any.fromFunction0(value))
+    def setStartTimer(value: () => js.Function1[/* labels */ js.UndefOr[LabelValues[T]], Unit]): Self = this.set("startTimer", js.Any.fromFunction0(value))
   }
 }

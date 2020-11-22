@@ -18,6 +18,11 @@ trait CreateClusterRequest extends js.Object {
   var encryptionConfig: js.UndefOr[EncryptionConfigList] = js.native
   
   /**
+    * The Kubernetes network configuration for the cluster.
+    */
+  var kubernetesNetworkConfig: js.UndefOr[KubernetesNetworkConfigRequest] = js.native
+  
+  /**
     * Enable or disable exporting the Kubernetes control plane logs for your cluster to CloudWatch Logs. By default, cluster control plane logs aren't exported to CloudWatch Logs. For more information, see Amazon EKS Cluster Control Plane Logs in the  Amazon EKS User Guide .  CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs. For more information, see Amazon CloudWatch Pricing. 
     */
   var logging: js.UndefOr[Logging] = js.native
@@ -33,7 +38,7 @@ trait CreateClusterRequest extends js.Object {
   var resourcesVpcConfig: VpcConfigRequest = js.native
   
   /**
-    * The Amazon Resource Name (ARN) of the IAM role that provides permissions for Amazon EKS to make calls to other AWS API operations on your behalf. For more information, see Amazon EKS Service IAM Role in the  Amazon EKS User Guide .
+    * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf. For more information, see Amazon EKS Service IAM Role in the  Amazon EKS User Guide .
     */
   var roleArn: String = js.native
   
@@ -93,6 +98,12 @@ object CreateClusterRequest {
     
     @scala.inline
     def deleteEncryptionConfig: Self = this.set("encryptionConfig", js.undefined)
+    
+    @scala.inline
+    def setKubernetesNetworkConfig(value: KubernetesNetworkConfigRequest): Self = this.set("kubernetesNetworkConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKubernetesNetworkConfig: Self = this.set("kubernetesNetworkConfig", js.undefined)
     
     @scala.inline
     def setLogging(value: Logging): Self = this.set("logging", value.asInstanceOf[js.Any])

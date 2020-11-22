@@ -11,5 +11,7 @@ class BaseQuad protected ()
   def this(subject: Term, predicate: Term, `object`: Term) = this()
   def this(subject: Term, predicate: Term, `object`: Term, graph: Term) = this()
   
+  def equals(other: typingsSlinky.rdfJs.mod.BaseQuad): Boolean = js.native
+  
   def toJSON(): String = js.native
 }

@@ -2,7 +2,6 @@ package typingsSlinky.ardatanAggregateError
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Error
-import typingsSlinky.std.Iterable
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,9 +12,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object aggregateErrorMod extends js.Object {
   
   @js.native
-  class AggregateError protected ()
-    extends Error
-       with Iterable[js.Error] {
+  class AggregateError protected () extends Error {
+    def this(errors: js.Array[js.Error | StringDictionary[_] | String]) = this()
+    
     /**
       @param errors - If a string, a new `Error` is created with the string as the error message. If a non-Error object, a new `Error` is created with all properties from the object copied over.
       @returns An Error that is also an [`Iterable`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables) for the individual errors.
@@ -49,14 +48,7 @@ object aggregateErrorMod extends js.Object {
       //=> [Error: baz]
       ```
       */
-    def this(errors: js.Array[js.Error | StringDictionary[_] | String]) = this()
-    
-    val _errors: js.Any = js.native
-    
     @JSName(js.Symbol.iterator)
-    var iterator_AggregateError: js.Function0[IterableIterator[js.Error]] = js.native
-    
-    @JSName("name")
-    val name_AggregateError: typingsSlinky.ardatanAggregateError.ardatanAggregateErrorStrings.AggregateError = js.native
+    var iterator: js.Function0[IterableIterator[js.Error]] = js.native
   }
 }

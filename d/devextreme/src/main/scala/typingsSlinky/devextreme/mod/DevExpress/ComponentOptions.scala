@@ -9,13 +9,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ComponentOptions[T] extends js.Object {
   
-  /** @name Component.Options.onDisposing */
+  /**
+    * [descr:Component.Options.onDisposing]
+    */
   var onDisposing: js.UndefOr[js.Function1[/* e */ typingsSlinky.devextreme.anon.Component[T], _]] = js.native
   
-  /** @name Component.Options.onInitialized */
+  /**
+    * [descr:Component.Options.onInitialized]
+    */
   var onInitialized: js.UndefOr[js.Function1[/* e */ Element[T], _]] = js.native
   
-  /** @name Component.Options.onOptionChanged */
+  /**
+    * [descr:Component.Options.onOptionChanged]
+    */
   var onOptionChanged: js.UndefOr[js.Function1[/* e */ FullName[T], _]] = js.native
 }
 object ComponentOptions {

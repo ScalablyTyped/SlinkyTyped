@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListServersRequest extends js.Object {
   
   /**
-    * Specifies the number of file transfer protocol-enabled servers to return as a response to the ListServers query.
+    * Specifies the number of servers to return as a response to the ListServers query.
     */
   var MaxResults: js.UndefOr[typingsSlinky.awsSdk.transferMod.MaxResults] = js.native
   
   /**
-    * When additional results are obtained from theListServers command, a NextToken parameter is returned in the output. You can then pass the NextToken parameter in a subsequent command to continue listing additional file transfer protocol-enabled servers.
+    * When additional results are obtained from the ListServers command, a NextToken parameter is returned in the output. You can then pass the NextToken parameter in a subsequent command to continue listing additional servers.
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.transferMod.NextToken] = js.native
 }

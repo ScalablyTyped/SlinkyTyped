@@ -2,6 +2,7 @@ package typingsSlinky.storybookComponents.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.storybookComponents.anon.Error
 import typingsSlinky.storybookComponents.storyMod.StoryProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +15,7 @@ object Story {
   @js.native
   object component extends js.Object
   
-  def apply(p: StoryProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def apply(p: StoryProps with Error): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: Story.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }

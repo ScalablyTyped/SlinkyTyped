@@ -24,10 +24,8 @@ class MinLengthValidator ()
   var minlength: String | Double = js.native
   
   /**
-    * @description
     * Registers a callback function to call when the validator inputs change.
-    *
-    * @param fn The callback function
+    * @nodoc
     */
   @JSName("registerOnValidatorChange")
   def registerOnValidatorChange_MMinLengthValidator(fn: js.Function0[Unit]): Unit = js.native

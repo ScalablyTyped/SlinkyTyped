@@ -10,23 +10,35 @@ trait MUIDataTableBody extends js.Object {
   
   var classes: js.Object = js.native
   
+  var columnOrder: js.UndefOr[js.Array[Double]] = js.native
+  
   var columns: js.Array[MUIDataTableColumnDef] = js.native
   
   var count: Double = js.native
   
   var data: js.Array[js.Object | (js.Array[Double | String])] = js.native
   
+  var expandedRows: js.UndefOr[MUIDataTableStateRows] = js.native
+  
   var filterList: js.UndefOr[js.Array[js.Array[String]]] = js.native
   
   var onRowClick: js.UndefOr[js.Function2[/* rowData */ js.Array[String], /* rowMeta */ RowIndex, Unit]] = js.native
   
-  var options: js.Object = js.native
+  var options: MUIDataTableOptions = js.native
+  
+  var page: js.UndefOr[Double] = js.native
+  
+  var previousSelectedRow: js.UndefOr[Double | Null] = js.native
+  
+  var rowsPerPage: js.UndefOr[Double] = js.native
   
   var searchText: js.UndefOr[String] = js.native
   
   var selectRowUpdate: js.UndefOr[js.Function1[/* args */ js.Any, _]] = js.native
   
-  var selectedRows: js.UndefOr[js.Object] = js.native
+  var selectedRows: js.UndefOr[MUIDataTableStateRows] = js.native
+  
+  var tableId: js.UndefOr[String] = js.native
   
   var toggleExpandRow: js.UndefOr[js.Function1[/* args */ js.Any, _]] = js.native
 }
@@ -38,7 +50,7 @@ object MUIDataTableBody {
     columns: js.Array[MUIDataTableColumnDef],
     count: Double,
     data: js.Array[js.Object | (js.Array[Double | String])],
-    options: js.Object
+    options: MUIDataTableOptions
   ): MUIDataTableBody = {
     val __obj = js.Dynamic.literal(classes = classes.asInstanceOf[js.Any], columns = columns.asInstanceOf[js.Any], count = count.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableBody]
@@ -78,7 +90,22 @@ object MUIDataTableBody {
     def setData(value: js.Array[js.Object | (js.Array[Double | String])]): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: MUIDataTableOptions): Self = this.set("options", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setColumnOrderVarargs(value: Double*): Self = this.set("columnOrder", js.Array(value :_*))
+    
+    @scala.inline
+    def setColumnOrder(value: js.Array[Double]): Self = this.set("columnOrder", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnOrder: Self = this.set("columnOrder", js.undefined)
+    
+    @scala.inline
+    def setExpandedRows(value: MUIDataTableStateRows): Self = this.set("expandedRows", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpandedRows: Self = this.set("expandedRows", js.undefined)
     
     @scala.inline
     def setFilterListVarargs(value: js.Array[String]*): Self = this.set("filterList", js.Array(value :_*))
@@ -96,6 +123,27 @@ object MUIDataTableBody {
     def deleteOnRowClick: Self = this.set("onRowClick", js.undefined)
     
     @scala.inline
+    def setPage(value: Double): Self = this.set("page", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePage: Self = this.set("page", js.undefined)
+    
+    @scala.inline
+    def setPreviousSelectedRow(value: Double): Self = this.set("previousSelectedRow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePreviousSelectedRow: Self = this.set("previousSelectedRow", js.undefined)
+    
+    @scala.inline
+    def setPreviousSelectedRowNull: Self = this.set("previousSelectedRow", null)
+    
+    @scala.inline
+    def setRowsPerPage(value: Double): Self = this.set("rowsPerPage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRowsPerPage: Self = this.set("rowsPerPage", js.undefined)
+    
+    @scala.inline
     def setSearchText(value: String): Self = this.set("searchText", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -108,10 +156,16 @@ object MUIDataTableBody {
     def deleteSelectRowUpdate: Self = this.set("selectRowUpdate", js.undefined)
     
     @scala.inline
-    def setSelectedRows(value: js.Object): Self = this.set("selectedRows", value.asInstanceOf[js.Any])
+    def setSelectedRows(value: MUIDataTableStateRows): Self = this.set("selectedRows", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSelectedRows: Self = this.set("selectedRows", js.undefined)
+    
+    @scala.inline
+    def setTableId(value: String): Self = this.set("tableId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTableId: Self = this.set("tableId", js.undefined)
     
     @scala.inline
     def setToggleExpandRow(value: /* args */ js.Any => _): Self = this.set("toggleExpandRow", js.Any.fromFunction1(value))

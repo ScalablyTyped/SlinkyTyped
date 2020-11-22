@@ -43,7 +43,11 @@ trait GridOptions extends js.Object {
   
   var columnShow: js.UndefOr[js.Function1[/* e */ GridColumnShowEvent, Unit]] = js.native
   
+  var columnStick: js.UndefOr[js.Function1[/* e */ GridColumnStickEvent, Unit]] = js.native
+  
   var columnUnlock: js.UndefOr[js.Function1[/* e */ GridColumnUnlockEvent, Unit]] = js.native
+  
+  var columnUnstick: js.UndefOr[js.Function1[/* e */ GridColumnUnstickEvent, Unit]] = js.native
   
   var columns: js.UndefOr[js.Array[GridColumn]] = js.native
   
@@ -122,6 +126,8 @@ trait GridOptions extends js.Object {
   var saveChanges: js.UndefOr[js.Function1[/* e */ GridSaveChangesEvent, Unit]] = js.native
   
   var scrollable: js.UndefOr[Boolean | GridScrollable] = js.native
+  
+  var search: js.UndefOr[GridSearch] = js.native
   
   var selectable: js.UndefOr[Boolean | String] = js.native
   
@@ -251,10 +257,22 @@ object GridOptions {
     def deleteColumnShow: Self = this.set("columnShow", js.undefined)
     
     @scala.inline
+    def setColumnStick(value: /* e */ GridColumnStickEvent => Unit): Self = this.set("columnStick", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteColumnStick: Self = this.set("columnStick", js.undefined)
+    
+    @scala.inline
     def setColumnUnlock(value: /* e */ GridColumnUnlockEvent => Unit): Self = this.set("columnUnlock", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteColumnUnlock: Self = this.set("columnUnlock", js.undefined)
+    
+    @scala.inline
+    def setColumnUnstick(value: /* e */ GridColumnUnstickEvent => Unit): Self = this.set("columnUnstick", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteColumnUnstick: Self = this.set("columnUnstick", js.undefined)
     
     @scala.inline
     def setColumnsVarargs(value: GridColumn*): Self = this.set("columns", js.Array(value :_*))
@@ -492,6 +510,12 @@ object GridOptions {
     
     @scala.inline
     def deleteScrollable: Self = this.set("scrollable", js.undefined)
+    
+    @scala.inline
+    def setSearch(value: GridSearch): Self = this.set("search", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSearch: Self = this.set("search", js.undefined)
     
     @scala.inline
     def setSelectable(value: Boolean | String): Self = this.set("selectable", value.asInstanceOf[js.Any])

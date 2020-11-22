@@ -11,14 +11,13 @@ trait ImageryLayerProperties
      with PortalLayerProperties
      with RefreshableLayerProperties
      with ScaleRangeLayerProperties
-     with TemporalLayerProperties {
+     with TemporalLayerProperties
+     with BlendLayerProperties {
   
   /**
     * Indicates whether the layer will be included in the legend.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html#legendEnabled)
-    *
-    * @default true
     */
   var legendEnabled: js.UndefOr[Boolean] = js.native
   
@@ -26,13 +25,11 @@ trait ImageryLayerProperties
     * Indicates whether to display popups when features in the layer are clicked.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html#popupEnabled)
-    *
-    * @default true
     */
   var popupEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * The popup template for the layer. When set on the layer, the popupTemplate allows users to access attributes and display their values using text and/or charts in the [view's popup](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-View.html#popup) when a pixel is clicked. See [this sample](https://developers.arcgis.com/javascript/latest/sample-code/layers-imagery-popup/index.html) for an example of how [PopupTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-PopupTemplate.html) interacts with an [ImageryLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html).  A default popup template is automatically used if no `popupTemplate` has been defined when [Popup.defaultPopupTemplateEnabled](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Popup.html#defaultPopupTemplateEnabled) is set to `true`.
+    * The popup template for the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html#popupTemplate)
     */

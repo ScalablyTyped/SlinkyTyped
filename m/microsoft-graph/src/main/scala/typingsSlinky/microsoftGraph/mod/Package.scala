@@ -11,7 +11,7 @@ trait Package extends js.Object {
     * A string indicating the type of package. While oneNote is the only currently defined value, you should expect other
     * package types to be returned and handle them accordingly.
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[NullableOption[String]] = js.native
 }
 object Package {
   
@@ -37,9 +37,12 @@ object Package {
     }
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: NullableOption[String]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    
+    @scala.inline
+    def setTypeNull: Self = this.set("type", null)
   }
 }

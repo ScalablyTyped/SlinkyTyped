@@ -1,7 +1,7 @@
 package typingsSlinky.babelTraverse.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.babelTypes.mod.Identifier_
+import typingsSlinky.babelTypes.ts36Mod.Identifier_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

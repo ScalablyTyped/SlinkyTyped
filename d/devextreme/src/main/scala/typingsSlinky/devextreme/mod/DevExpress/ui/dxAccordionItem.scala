@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxAccordionItem extends CollectionWidgetItem {
   
-  /** @name dxAccordionItem.icon */
+  /**
+    * [descr:dxAccordionItem.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxAccordionItem.title */
+  /**
+    * [descr:dxAccordionItem.title]
+    */
   var title: js.UndefOr[String] = js.native
 }
 object dxAccordionItem {

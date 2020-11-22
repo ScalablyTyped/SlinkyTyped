@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.DoExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.NumericLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `210` extends js.Object {
   
-  var `type`: DoExpression = js.native
+  var `type`: NumericLiteral = js.native
 }
 object `210` {
   
   @scala.inline
-  def apply(`type`: DoExpression): `210` = {
+  def apply(`type`: NumericLiteral): `210` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`210`]
@@ -35,6 +35,6 @@ object `210` {
     }
     
     @scala.inline
-    def setType(value: DoExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: NumericLiteral): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

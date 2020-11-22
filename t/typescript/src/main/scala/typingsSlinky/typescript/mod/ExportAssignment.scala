@@ -5,15 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ExportAssignment extends DeclarationStatement {
+trait ExportAssignment
+  extends DeclarationStatement
+     with JSDocContainer
+     with _HasJSDoc {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
-  var isExportEquals: js.UndefOr[Boolean] = js.native
+  val isExportEquals: js.UndefOr[Boolean] = js.native
   
   @JSName("kind")
-  var kind_ExportAssignment: typingsSlinky.typescript.mod.SyntaxKind.ExportAssignment = js.native
+  val kind_ExportAssignment: typingsSlinky.typescript.mod.SyntaxKind.ExportAssignment = js.native
   
   @JSName("parent")
-  var parent_ExportAssignment: SourceFile = js.native
+  val parent_ExportAssignment: SourceFile = js.native
 }

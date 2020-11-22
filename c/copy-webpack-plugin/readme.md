@@ -1,7 +1,7 @@
 
 # Scala.js typings for copy-webpack-plugin
 
-Typings are for version 6.0
+Typings are for version 6.3
 
 ## Library description:
 Copy files && directories with webpack

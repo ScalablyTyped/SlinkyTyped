@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSNamedTupleMember
+import typingsSlinky.babelTraverse.babelTraverseStrings.JSXOpeningFragment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `213` extends js.Object {
   
-  var `type`: TSNamedTupleMember = js.native
+  var `type`: JSXOpeningFragment = js.native
 }
 object `213` {
   
   @scala.inline
-  def apply(`type`: TSNamedTupleMember): `213` = {
+  def apply(`type`: JSXOpeningFragment): `213` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`213`]
@@ -35,6 +35,6 @@ object `213` {
     }
     
     @scala.inline
-    def setType(value: TSNamedTupleMember): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: JSXOpeningFragment): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

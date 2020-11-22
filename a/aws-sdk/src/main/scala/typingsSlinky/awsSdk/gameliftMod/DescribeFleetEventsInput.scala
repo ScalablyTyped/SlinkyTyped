@@ -23,7 +23,7 @@ trait DescribeFleetEventsInput extends js.Object {
   var Limit: js.UndefOr[PositiveInteger] = js.native
   
   /**
-    * Token that indicates the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To start at the beginning of the result set, do not specify a value.
+    * Token that indicates the start of the next sequential page of results. Use the token that is returned with a previous call to this operation. To start at the beginning of the result set, do not specify a value.
     */
   var NextToken: js.UndefOr[NonZeroAndMaxString] = js.native
   

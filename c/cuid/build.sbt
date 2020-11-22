@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "cuid"
-version := "v1.3.8-dt-20200515Z-041028"
+version := "v1.3.8-dt-20201002Z-041028"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

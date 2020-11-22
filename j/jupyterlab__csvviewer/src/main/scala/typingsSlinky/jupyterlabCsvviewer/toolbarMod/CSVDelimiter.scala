@@ -3,11 +3,11 @@ package typingsSlinky.jupyterlabCsvviewer.toolbarMod
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLSelectElement
 import typingsSlinky.jupyterlabCsvviewer.toolbarMod.CSVToolbar.IOptions
-import typingsSlinky.phosphorSignaling.mod.ISignal
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.luminoSignaling.mod.ISignal
+import typingsSlinky.luminoWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/csvviewer/lib/toolbar", "CSVDelimiter")
 @js.native
@@ -16,15 +16,14 @@ class CSVDelimiter protected () extends Widget {
     * Construct a new csv table widget.
     */
   def this(options: IOptions) = this()
+  
   var _delimiterChanged: js.Any = js.native
+  
   /**
     * A signal emitted when the delimiter selection has changed.
     */
-  val delimiterChanged: ISignal[this.type, String] = js.native
-  /**
-    * The delimiter dropdown menu.
-    */
-  val selectNode: HTMLSelectElement = js.native
+  def delimiterChanged: ISignal[this.type, String] = js.native
+  
   /**
     * Handle the DOM events for the widget.
     *
@@ -36,5 +35,9 @@ class CSVDelimiter protected () extends Widget {
     * not be called directly by user code.
     */
   def handleEvent(event: Event): Unit = js.native
+  
+  /**
+    * The delimiter dropdown menu.
+    */
+  def selectNode: HTMLSelectElement = js.native
 }
-

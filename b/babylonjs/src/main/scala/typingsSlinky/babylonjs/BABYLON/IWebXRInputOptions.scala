@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IWebXRInputOptions extends js.Object {
   
   /**
+    * Optional options to pass to the controller. Will be overridden by the Input options where applicable
+    */
+  var controllerOptions: js.UndefOr[IWebXRControllerOptions] = js.native
+  
+  /**
     * A custom URL for the controllers repository
     */
   var customControllersRepositoryURL: js.UndefOr[String] = js.native
@@ -58,6 +63,12 @@ object IWebXRInputOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setControllerOptions(value: IWebXRControllerOptions): Self = this.set("controllerOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteControllerOptions: Self = this.set("controllerOptions", js.undefined)
     
     @scala.inline
     def setCustomControllersRepositoryURL(value: String): Self = this.set("customControllersRepositoryURL", value.asInstanceOf[js.Any])

@@ -36,8 +36,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactMdForm.reactMdFormStrings.`additions removals`
 import typingsSlinky.reactMdForm.reactMdFormStrings.`additions text`
 import typingsSlinky.reactMdForm.reactMdFormStrings.`inline`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`removals additions`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`removals text`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`text additions`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`text removals`
 import typingsSlinky.reactMdForm.reactMdFormStrings.additions
 import typingsSlinky.reactMdForm.reactMdFormStrings.all
 import typingsSlinky.reactMdForm.reactMdFormStrings.ascending
@@ -48,8 +53,11 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.date
 import typingsSlinky.reactMdForm.reactMdFormStrings.decimal
 import typingsSlinky.reactMdForm.reactMdFormStrings.descending
 import typingsSlinky.reactMdForm.reactMdFormStrings.dialog
+import typingsSlinky.reactMdForm.reactMdFormStrings.done
 import typingsSlinky.reactMdForm.reactMdFormStrings.email
+import typingsSlinky.reactMdForm.reactMdFormStrings.enter
 import typingsSlinky.reactMdForm.reactMdFormStrings.execute
+import typingsSlinky.reactMdForm.reactMdFormStrings.go
 import typingsSlinky.reactMdForm.reactMdFormStrings.grammar
 import typingsSlinky.reactMdForm.reactMdFormStrings.grid
 import typingsSlinky.reactMdForm.reactMdFormStrings.horizontal
@@ -61,6 +69,7 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.location
 import typingsSlinky.reactMdForm.reactMdFormStrings.menu
 import typingsSlinky.reactMdForm.reactMdFormStrings.mixed
 import typingsSlinky.reactMdForm.reactMdFormStrings.move
+import typingsSlinky.reactMdForm.reactMdFormStrings.next
 import typingsSlinky.reactMdForm.reactMdFormStrings.no
 import typingsSlinky.reactMdForm.reactMdFormStrings.none
 import typingsSlinky.reactMdForm.reactMdFormStrings.numeric
@@ -70,8 +79,10 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.other
 import typingsSlinky.reactMdForm.reactMdFormStrings.page
 import typingsSlinky.reactMdForm.reactMdFormStrings.polite
 import typingsSlinky.reactMdForm.reactMdFormStrings.popup
+import typingsSlinky.reactMdForm.reactMdFormStrings.previous
 import typingsSlinky.reactMdForm.reactMdFormStrings.removals
 import typingsSlinky.reactMdForm.reactMdFormStrings.search
+import typingsSlinky.reactMdForm.reactMdFormStrings.send
 import typingsSlinky.reactMdForm.reactMdFormStrings.spelling
 import typingsSlinky.reactMdForm.reactMdFormStrings.step
 import typingsSlinky.reactMdForm.reactMdFormStrings.tel
@@ -167,7 +178,9 @@ trait SwitchProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -245,6 +258,8 @@ trait SwitchProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   
   var draggable: js.UndefOr[Booleanish] = js.native
+  
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
   
   /**
     * Boolean if the input toggle is currently errored. This will update the
@@ -833,7 +848,9 @@ object SwitchProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1047,6 +1064,12 @@ object SwitchProps {
     
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    
+    @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
     
     @scala.inline
     def setError(value: Boolean): Self = this.set("error", value.asInstanceOf[js.Any])

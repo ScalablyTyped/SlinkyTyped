@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object xlinkMod extends js.Object {
   
-  def readHref(node: Element): String = js.native
+  def readHref(node: Element): js.UndefOr[String] = js.native
 }

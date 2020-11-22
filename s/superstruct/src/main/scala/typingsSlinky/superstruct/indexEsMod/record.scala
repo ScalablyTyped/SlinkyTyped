@@ -13,9 +13,5 @@ object record extends js.Object {
     * Validate that a value is a record with specific key and
     * value entries.
     */
-  /**
-    * Validate that a value is a record with specific key and
-    * value entries.
-    */
   def apply[K /* <: String | Double */, V](Key: Struct_[K, _], Value: Struct_[V, _]): Struct_[Record[K, V], _] = js.native
 }

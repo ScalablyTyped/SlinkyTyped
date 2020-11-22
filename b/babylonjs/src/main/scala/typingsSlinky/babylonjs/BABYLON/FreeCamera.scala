@@ -60,7 +60,7 @@ trait FreeCamera extends TargetCamera {
   /**
     * Define the collision ellipsoid of the camera.
     * This is helpful to simulate a camera body like the player body around the camera
-    * @see http://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity#arcrotatecamera
+    * @see https://doc.babylonjs.com/babylon101/cameras,_mesh_collisions_and_gravity#arcrotatecamera
     */
   var ellipsoid: Vector3 = js.native
   
@@ -84,6 +84,12 @@ trait FreeCamera extends TargetCamera {
   def keysDown_=(value: js.Array[Double]): Unit = js.native
   
   /**
+    * Gets or Set the list of keyboard keys used to control the downward move of the camera.
+    */
+  def keysDownward: js.Array[Double] = js.native
+  def keysDownward_=(value: js.Array[Double]): Unit = js.native
+  
+  /**
     * Gets or Set the list of keyboard keys used to control the left strafe move of the camera.
     */
   def keysLeft: js.Array[Double] = js.native
@@ -100,6 +106,12 @@ trait FreeCamera extends TargetCamera {
     */
   def keysUp: js.Array[Double] = js.native
   def keysUp_=(value: js.Array[Double]): Unit = js.native
+  
+  /**
+    * Gets or Set the list of keyboard keys used to control the upward move of the camera.
+    */
+  def keysUpward: js.Array[Double] = js.native
+  def keysUpward_=(value: js.Array[Double]): Unit = js.native
   
   /**
     * Event raised when the camera collide with a mesh in the scene.

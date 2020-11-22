@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IdentifyResultProperties extends js.Object {
   
   /**
-    * The name of the layer's primary display field. The value of this property matches the name of one of the fields of the feature.
+    * The name of the layer's primary display field.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-IdentifyResult.html#displayFieldName)
     */

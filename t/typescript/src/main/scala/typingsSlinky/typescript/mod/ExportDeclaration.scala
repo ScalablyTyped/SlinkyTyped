@@ -11,16 +11,16 @@ trait ExportDeclaration
      with _HasJSDoc {
   
   /** Will not be assigned in the case of `export * from "foo";` */
-  var exportClause: js.UndefOr[NamedExportBindings] = js.native
+  val exportClause: js.UndefOr[NamedExportBindings] = js.native
   
-  var isTypeOnly: Boolean = js.native
+  val isTypeOnly: Boolean = js.native
   
   @JSName("kind")
-  var kind_ExportDeclaration: typingsSlinky.typescript.mod.SyntaxKind.ExportDeclaration = js.native
+  val kind_ExportDeclaration: typingsSlinky.typescript.mod.SyntaxKind.ExportDeclaration = js.native
   
   /** If this is not a StringLiteral it will be a grammar error. */
-  var moduleSpecifier: js.UndefOr[Expression] = js.native
+  val moduleSpecifier: js.UndefOr[Expression] = js.native
   
   @JSName("parent")
-  var parent_ExportDeclaration: SourceFile | ModuleBlock = js.native
+  val parent_ExportDeclaration: SourceFile | ModuleBlock = js.native
 }

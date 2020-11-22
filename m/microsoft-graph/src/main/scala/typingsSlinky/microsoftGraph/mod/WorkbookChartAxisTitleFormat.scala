@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookChartAxisTitleFormat extends Entity {
   
   // Represents the font attributes, such as font name, font size, color, etc. of chart axis title object. Read-only.
-  var font: js.UndefOr[WorkbookChartFont] = js.native
+  var font: js.UndefOr[NullableOption[WorkbookChartFont]] = js.native
 }
 object WorkbookChartAxisTitleFormat {
   
@@ -34,9 +34,12 @@ object WorkbookChartAxisTitleFormat {
     }
     
     @scala.inline
-    def setFont(value: WorkbookChartFont): Self = this.set("font", value.asInstanceOf[js.Any])
+    def setFont(value: NullableOption[WorkbookChartFont]): Self = this.set("font", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFont: Self = this.set("font", js.undefined)
+    
+    @scala.inline
+    def setFontNull: Self = this.set("font", null)
   }
 }

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteTapeInput extends js.Object {
   
   /**
+    * Set to TRUE to delete an archived tape that belongs to a custom pool with tape retention lock. Only archived tapes with tape retention lock set to governance can be deleted. Archived tapes with tape retention lock set to compliance can't be deleted.
+    */
+  var BypassGovernanceRetention: js.UndefOr[scala.Boolean] = js.native
+  
+  /**
     * The unique Amazon Resource Name (ARN) of the gateway that the virtual tape to delete is associated with. Use the ListGateways operation to return a list of gateways for your account and AWS Region.
     */
   var GatewayARN: typingsSlinky.awsSdk.storagegatewayMod.GatewayARN = js.native
@@ -45,5 +50,11 @@ object DeleteTapeInput {
     
     @scala.inline
     def setTapeARN(value: TapeARN): Self = this.set("TapeARN", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBypassGovernanceRetention(value: scala.Boolean): Self = this.set("BypassGovernanceRetention", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBypassGovernanceRetention: Self = this.set("BypassGovernanceRetention", js.undefined)
   }
 }

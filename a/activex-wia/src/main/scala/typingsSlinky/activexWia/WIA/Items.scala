@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** The Items object contains a collection of Item objects. See the Items property on the Device or Item object for details on accessing the Items object. */
-// tslint:disable-next-line interface-name
 @js.native
 trait Items extends js.Object {
   

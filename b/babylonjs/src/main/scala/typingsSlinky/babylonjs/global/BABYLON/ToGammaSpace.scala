@@ -7,4 +7,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSGlobal("BABYLON.ToGammaSpace")
 @js.native
-object ToGammaSpace extends TopLevel[Double]
+object ToGammaSpace
+  extends TopLevel[/* 2.2 */ Double]

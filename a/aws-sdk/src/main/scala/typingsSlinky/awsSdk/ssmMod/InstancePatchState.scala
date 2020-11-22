@@ -38,7 +38,7 @@ trait InstancePatchState extends js.Object {
   var InstalledPendingRebootCount: js.UndefOr[PatchInstalledPendingRebootCount] = js.native
   
   /**
-    * The number of instances with patches installed that are specified in a RejectedPatches list. Patches with a status of InstalledRejected were typically installed before they were added to a RejectedPatches list.  If ALLOW_AS_DEPENDENCY is the specified option for RejectedPatchesAction, the value of InstalledRejectedCount will always be 0 (zero). 
+    * The number of patches installed on an instance that are specified in a RejectedPatches list. Patches with a status of InstalledRejected were typically installed before they were added to a RejectedPatches list.  If ALLOW_AS_DEPENDENCY is the specified option for RejectedPatchesAction, the value of InstalledRejectedCount will always be 0 (zero). 
     */
   var InstalledRejectedCount: js.UndefOr[PatchInstalledRejectedCount] = js.native
   

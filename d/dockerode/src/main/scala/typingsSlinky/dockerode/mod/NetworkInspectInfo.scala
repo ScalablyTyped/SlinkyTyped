@@ -11,6 +11,10 @@ trait NetworkInspectInfo extends js.Object {
   
   var Attachable: Boolean = js.native
   
+  var ConfigFrom: js.UndefOr[typingsSlinky.dockerode.anon.Network] = js.native
+  
+  var ConfigOnly: Boolean = js.native
+  
   var Containers: js.UndefOr[StringDictionary[NetworkContainer]] = js.native
   
   var Created: String = js.native
@@ -40,6 +44,7 @@ object NetworkInspectInfo {
   @scala.inline
   def apply(
     Attachable: Boolean,
+    ConfigOnly: Boolean,
     Created: String,
     Driver: String,
     EnableIPv6: Boolean,
@@ -49,7 +54,7 @@ object NetworkInspectInfo {
     Name: String,
     Scope: String
   ): NetworkInspectInfo = {
-    val __obj = js.Dynamic.literal(Attachable = Attachable.asInstanceOf[js.Any], Created = Created.asInstanceOf[js.Any], Driver = Driver.asInstanceOf[js.Any], EnableIPv6 = EnableIPv6.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], Ingress = Ingress.asInstanceOf[js.Any], Internal = Internal.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Scope = Scope.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(Attachable = Attachable.asInstanceOf[js.Any], ConfigOnly = ConfigOnly.asInstanceOf[js.Any], Created = Created.asInstanceOf[js.Any], Driver = Driver.asInstanceOf[js.Any], EnableIPv6 = EnableIPv6.asInstanceOf[js.Any], Id = Id.asInstanceOf[js.Any], Ingress = Ingress.asInstanceOf[js.Any], Internal = Internal.asInstanceOf[js.Any], Name = Name.asInstanceOf[js.Any], Scope = Scope.asInstanceOf[js.Any])
     __obj.asInstanceOf[NetworkInspectInfo]
   }
   
@@ -70,6 +75,9 @@ object NetworkInspectInfo {
     
     @scala.inline
     def setAttachable(value: Boolean): Self = this.set("Attachable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setConfigOnly(value: Boolean): Self = this.set("ConfigOnly", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCreated(value: String): Self = this.set("Created", value.asInstanceOf[js.Any])
@@ -94,6 +102,12 @@ object NetworkInspectInfo {
     
     @scala.inline
     def setScope(value: String): Self = this.set("Scope", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setConfigFrom(value: typingsSlinky.dockerode.anon.Network): Self = this.set("ConfigFrom", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConfigFrom: Self = this.set("ConfigFrom", js.undefined)
     
     @scala.inline
     def setContainers(value: StringDictionary[NetworkContainer]): Self = this.set("Containers", value.asInstanceOf[js.Any])

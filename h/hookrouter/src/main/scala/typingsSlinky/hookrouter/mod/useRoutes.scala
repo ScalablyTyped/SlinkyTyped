@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useRoutes extends js.Object {
   
-  def apply(routeObj: RouteObject): js.Any = js.native
+  def apply[T](routeObj: RouteObject[T]): T | Null = js.native
 }

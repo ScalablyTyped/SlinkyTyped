@@ -1,6 +1,7 @@
 package typingsSlinky.ably.mod.Types
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.ably.anon.ClientId
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -55,7 +56,13 @@ trait ClientOptions extends AuthOptions {
   		 * Can be used to explicitly recover a connection.
   		 * See https://www.ably.io/documentation/realtime/connection#connection-state-recovery
   		 */
-  var recover: js.UndefOr[standardCallback | String] = js.native
+  var recover: js.UndefOr[
+    String | (js.Function2[
+      /* lastConnectionDetails */ ClientId, 
+      /* callback */ js.Function1[/* shouldRecover */ Boolean, Unit], 
+      Unit
+    ])
+  ] = js.native
   
   var restHost: js.UndefOr[String] = js.native
   
@@ -183,10 +190,18 @@ object ClientOptions {
     def deleteRealtimeHost: Self = this.set("realtimeHost", js.undefined)
     
     @scala.inline
-    def setRecoverFunction2(value: (/* error */ ErrorInfo, /* results */ js.Any) => Unit): Self = this.set("recover", js.Any.fromFunction2(value))
+    def setRecoverFunction2(
+      value: (/* lastConnectionDetails */ ClientId, /* callback */ js.Function1[/* shouldRecover */ Boolean, Unit]) => Unit
+    ): Self = this.set("recover", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setRecover(value: standardCallback | String): Self = this.set("recover", value.asInstanceOf[js.Any])
+    def setRecover(
+      value: String | (js.Function2[
+          /* lastConnectionDetails */ ClientId, 
+          /* callback */ js.Function1[/* shouldRecover */ Boolean, Unit], 
+          Unit
+        ])
+    ): Self = this.set("recover", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRecover: Self = this.set("recover", js.undefined)

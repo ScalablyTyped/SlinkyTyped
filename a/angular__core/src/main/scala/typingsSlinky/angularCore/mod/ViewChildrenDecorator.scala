@@ -10,11 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ViewChildrenDecorator
   extends Instantiable1[
-      (/* selector */ js.Function) | (/* selector */ String) | (/* selector */ Type[js.Any]), 
+      (/* selector */ js.Function) | (/* selector */ InjectionToken[js.Any]) | (/* selector */ String) | (/* selector */ Type[js.Any]), 
       ViewChildren
     ]
      with Instantiable2[
-      (/* selector */ js.Function) | (/* selector */ String) | (/* selector */ Type[js.Any]), 
+      (/* selector */ js.Function) | (/* selector */ InjectionToken[js.Any]) | (/* selector */ String) | (/* selector */ Type[js.Any]), 
       /* opts */ `0`, 
       ViewChildren
     ] {
@@ -23,6 +23,8 @@ trait ViewChildrenDecorator
   def apply(selector: String, opts: `0`): js.Any = js.native
   def apply(selector: js.Function): js.Any = js.native
   def apply(selector: js.Function, opts: `0`): js.Any = js.native
+  def apply(selector: InjectionToken[_]): js.Any = js.native
+  def apply(selector: InjectionToken[_], opts: `0`): js.Any = js.native
   /**
     * Parameter decorator that configures a view query.
     *

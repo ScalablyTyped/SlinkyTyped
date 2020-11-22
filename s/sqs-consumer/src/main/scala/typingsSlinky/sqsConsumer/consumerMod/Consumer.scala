@@ -1,6 +1,14 @@
 package typingsSlinky.sqsConsumer.consumerMod
 
 import typingsSlinky.events.mod.EventEmitter
+import typingsSlinky.sqsConsumer.sqsConsumerStrings.empty
+import typingsSlinky.sqsConsumer.sqsConsumerStrings.error
+import typingsSlinky.sqsConsumer.sqsConsumerStrings.message_processed
+import typingsSlinky.sqsConsumer.sqsConsumerStrings.message_received
+import typingsSlinky.sqsConsumer.sqsConsumerStrings.processing_error
+import typingsSlinky.sqsConsumer.sqsConsumerStrings.response_processed
+import typingsSlinky.sqsConsumer.sqsConsumerStrings.stopped
+import typingsSlinky.sqsConsumer.sqsConsumerStrings.timeout_error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,11 +24,56 @@ class Consumer protected () extends EventEmitter {
   
   var batchSize: js.Any = js.native
   
+  var changeVisabilityTimeout: js.Any = js.native
+  
+  var changeVisabilityTimeoutBatch: js.Any = js.native
+  
   var deleteMessage: js.Any = js.native
   
   var deleteMessageBatch: js.Any = js.native
   
   var emitError: js.Any = js.native
+  
+  @JSName("emit")
+  def emit_empty(
+    event: empty,
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Events[T] is not an array type */ args: js.Array[js.Any]
+  ): Boolean = js.native
+  @JSName("emit")
+  def emit_error(
+    event: error,
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Events[T] is not an array type */ args: js.Tuple2[js.Error, Unit | SQSMessage | js.Array[SQSMessage]]
+  ): Boolean = js.native
+  @JSName("emit")
+  def emit_messageprocessed(
+    event: message_processed,
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Events[T] is not an array type */ args: js.Array[SQSMessage]
+  ): Boolean = js.native
+  @JSName("emit")
+  def emit_messagereceived(
+    event: message_received,
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Events[T] is not an array type */ args: js.Array[SQSMessage]
+  ): Boolean = js.native
+  @JSName("emit")
+  def emit_processingerror(
+    event: processing_error,
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Events[T] is not an array type */ args: js.Tuple2[js.Error, SQSMessage]
+  ): Boolean = js.native
+  @JSName("emit")
+  def emit_responseprocessed(
+    event: response_processed,
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Events[T] is not an array type */ args: js.Array[js.Any]
+  ): Boolean = js.native
+  @JSName("emit")
+  def emit_stopped(
+    event: stopped,
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Events[T] is not an array type */ args: js.Array[js.Any]
+  ): Boolean = js.native
+  @JSName("emit")
+  def emit_timeouterror(
+    event: timeout_error,
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type Events[T] is not an array type */ args: js.Tuple2[js.Error, SQSMessage]
+  ): Boolean = js.native
   
   var executeBatchHandler: js.Any = js.native
   
@@ -34,9 +87,51 @@ class Consumer protected () extends EventEmitter {
   
   var handleSqsResponse: js.Any = js.native
   
-  val isRunning: Boolean = js.native
+  var heartbeatInterval: js.Any = js.native
+  
+  def isRunning: Boolean = js.native
   
   var messageAttributeNames: js.Any = js.native
+  
+  @JSName("on")
+  def on_empty(event: empty, listener: js.Function1[/* args */ js.Array[js.Any], Unit]): this.type = js.native
+  @JSName("on")
+  def on_error(
+    event: error,
+    listener: js.Function1[/* args */ js.Tuple2[js.Error, Unit | SQSMessage | js.Array[SQSMessage]], Unit]
+  ): this.type = js.native
+  @JSName("on")
+  def on_messageprocessed(event: message_processed, listener: js.Function1[/* args */ js.Array[SQSMessage], Unit]): this.type = js.native
+  @JSName("on")
+  def on_messagereceived(event: message_received, listener: js.Function1[/* args */ js.Array[SQSMessage], Unit]): this.type = js.native
+  @JSName("on")
+  def on_processingerror(event: processing_error, listener: js.Function1[/* args */ js.Tuple2[js.Error, SQSMessage], Unit]): this.type = js.native
+  @JSName("on")
+  def on_responseprocessed(event: response_processed, listener: js.Function1[/* args */ js.Array[js.Any], Unit]): this.type = js.native
+  @JSName("on")
+  def on_stopped(event: stopped, listener: js.Function1[/* args */ js.Array[js.Any], Unit]): this.type = js.native
+  @JSName("on")
+  def on_timeouterror(event: timeout_error, listener: js.Function1[/* args */ js.Tuple2[js.Error, SQSMessage], Unit]): this.type = js.native
+  
+  @JSName("once")
+  def once_empty(event: empty, listener: js.Function1[/* args */ js.Array[js.Any], Unit]): this.type = js.native
+  @JSName("once")
+  def once_error(
+    event: error,
+    listener: js.Function1[/* args */ js.Tuple2[js.Error, Unit | SQSMessage | js.Array[SQSMessage]], Unit]
+  ): this.type = js.native
+  @JSName("once")
+  def once_messageprocessed(event: message_processed, listener: js.Function1[/* args */ js.Array[SQSMessage], Unit]): this.type = js.native
+  @JSName("once")
+  def once_messagereceived(event: message_received, listener: js.Function1[/* args */ js.Array[SQSMessage], Unit]): this.type = js.native
+  @JSName("once")
+  def once_processingerror(event: processing_error, listener: js.Function1[/* args */ js.Tuple2[js.Error, SQSMessage], Unit]): this.type = js.native
+  @JSName("once")
+  def once_responseprocessed(event: response_processed, listener: js.Function1[/* args */ js.Array[js.Any], Unit]): this.type = js.native
+  @JSName("once")
+  def once_stopped(event: stopped, listener: js.Function1[/* args */ js.Array[js.Any], Unit]): this.type = js.native
+  @JSName("once")
+  def once_timeouterror(event: timeout_error, listener: js.Function1[/* args */ js.Tuple2[js.Error, SQSMessage], Unit]): this.type = js.native
   
   var poll: js.Any = js.native
   
@@ -54,13 +149,11 @@ class Consumer protected () extends EventEmitter {
   
   def start(): Unit = js.native
   
+  var startHeartbeat: js.Any = js.native
+  
   def stop(): Unit = js.native
   
   var stopped: js.Any = js.native
-  
-  var terminateVisabilityTimeout: js.Any = js.native
-  
-  var terminateVisabilityTimeoutBatch: js.Any = js.native
   
   var terminateVisibilityTimeout: js.Any = js.native
   

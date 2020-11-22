@@ -1,6 +1,6 @@
 package typingsSlinky.uifabricStyling
 
-import typingsSlinky.uifabricStyling.ieffectsMod.IEffects
+import typingsSlinky.fluentuiTheme.ieffectsMod.IEffects
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

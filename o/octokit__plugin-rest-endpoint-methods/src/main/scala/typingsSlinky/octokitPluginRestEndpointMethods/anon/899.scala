@@ -3,10 +3,7 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposCreateDeploymentEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposCreateDeploymentResponse202Data
-import typingsSlinky.octokitTypes.endpointsMod.ReposCreateDeploymentResponse409Data
-import typingsSlinky.octokitTypes.endpointsMod.ReposCreateDeploymentResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposCheckVulnerabilityAlertsEndpoint
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -17,20 +14,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `899` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposCreateDeploymentEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposCheckVulnerabilityAlertsEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[
-    ReposCreateDeploymentResponseData | ReposCreateDeploymentResponse202Data | ReposCreateDeploymentResponse409Data
-  ] = js.native
+  var response: OctokitResponse[_] = js.native
 }
 object `899` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposCreateDeploymentEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[
-      ReposCreateDeploymentResponseData | ReposCreateDeploymentResponse202Data | ReposCreateDeploymentResponse409Data
-    ]
+    parameters: RequestParameters with (Omit[ReposCheckVulnerabilityAlertsEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[_]
   ): `899` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`899`]
@@ -52,13 +45,11 @@ object `899` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ReposCreateDeploymentEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(
+      value: RequestParameters with (Omit[ReposCheckVulnerabilityAlertsEndpoint, baseUrl | headers | mediaType])
+    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(
-      value: OctokitResponse[
-          ReposCreateDeploymentResponseData | ReposCreateDeploymentResponse202Data | ReposCreateDeploymentResponse409Data
-        ]
-    ): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -1,6 +1,8 @@
 package typingsSlinky.reactToastify.progressBarMod
 
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactToastify.anon.Position
+import typingsSlinky.reactToastify.typesMod.ToastClassName
 import typingsSlinky.reactToastify.typesMod.TypeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +14,7 @@ trait ProgressBarProps extends js.Object {
   /**
     * Optionnal className
     */
-  var className: js.UndefOr[String | Null] = js.native
+  var className: js.UndefOr[ToastClassName] = js.native
   
   /**
     * Func to close the current toast
@@ -101,13 +103,13 @@ object ProgressBarProps {
     def setType(value: TypeOptions): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    def setClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("className", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setClassName(value: ToastClassName): Self = this.set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
-    
-    @scala.inline
-    def setClassNameNull: Self = this.set("className", null)
     
     @scala.inline
     def setControlledProgress(value: Boolean): Self = this.set("controlledProgress", value.asInstanceOf[js.Any])

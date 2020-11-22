@@ -31,7 +31,7 @@ object StellarMessage extends js.Object {
   @JSName("fromXDR")
   def fromXDR_raw(input: Buffer, format: raw): typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage = js.native
   
-  def getPeer(): typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage = js.native
+  def getPeers(): typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage = js.native
   
   def getScpQuorumset(value: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage = js.native
   
@@ -43,7 +43,7 @@ object StellarMessage extends js.Object {
   
   def isValid(value: typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage): Boolean = js.native
   
-  def peer(value: js.Array[typingsSlinky.stellarBase.xdrMod.xdr.PeerAddress]): typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage = js.native
+  def peers(value: js.Array[typingsSlinky.stellarBase.xdrMod.xdr.PeerAddress]): typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage = js.native
   
   def read(io: Buffer): typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage = js.native
   
@@ -60,6 +60,14 @@ object StellarMessage extends js.Object {
   def transaction(value: typingsSlinky.stellarBase.xdrMod.xdr.TransactionEnvelope): typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage = js.native
   
   def txSet(value: typingsSlinky.stellarBase.xdrMod.xdr.TransactionSet): typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage = js.native
+  
+  def validateXDR(input: Buffer): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_base64(input: String, format: base64): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_hex(input: String, format: hex): Boolean = js.native
+  @JSName("validateXDR")
+  def validateXDR_raw(input: Buffer, format: raw): Boolean = js.native
   
   def write(value: typingsSlinky.stellarBase.xdrMod.xdr.StellarMessage, io: Buffer): Unit = js.native
 }

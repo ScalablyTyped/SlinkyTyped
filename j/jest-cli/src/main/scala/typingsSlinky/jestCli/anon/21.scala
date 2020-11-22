@@ -1,7 +1,7 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliStrings.`This option sets the URL for the jsdom environmentDot`
-import typingsSlinky.jestCli.jestCliStrings.string
+import typingsSlinky.jestCli.jestCliStrings.`This option sets the default timeouts of test casesDot`
+import typingsSlinky.jestCli.jestCliStrings.number
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `21` extends js.Object {
   
-  val description: `This option sets the URL for the jsdom environmentDot` = js.native
+  val description: `This option sets the default timeouts of test casesDot` = js.native
   
-  val `type`: string = js.native
+  val `type`: number = js.native
 }
 object `21` {
   
   @scala.inline
-  def apply(description: `This option sets the URL for the jsdom environmentDot`, `type`: string): `21` = {
+  def apply(description: `This option sets the default timeouts of test casesDot`, `type`: number): `21` = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`21`]
@@ -38,9 +38,9 @@ object `21` {
     }
     
     @scala.inline
-    def setDescription(value: `This option sets the URL for the jsdom environmentDot`): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: `This option sets the default timeouts of test casesDot`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: string): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: number): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

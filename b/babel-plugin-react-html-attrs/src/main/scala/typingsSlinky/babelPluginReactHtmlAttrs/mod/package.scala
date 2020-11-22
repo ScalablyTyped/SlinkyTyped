@@ -8,7 +8,6 @@ package object mod {
   
   type AnimationEventHandler[T] = typingsSlinky.babelPluginReactHtmlAttrs.mod.EventHandler[typingsSlinky.babelPluginReactHtmlAttrs.mod.AnimationEvent[T]]
   
-  // tslint:disable-next-line:no-empty-interface
   type AudioHTMLAttributes[T] = typingsSlinky.babelPluginReactHtmlAttrs.mod.MediaHTMLAttributes[T]
   
   type Booleanish = scala.Boolean
@@ -156,7 +155,6 @@ package object mod {
   
   type FocusEventHandler[T] = typingsSlinky.babelPluginReactHtmlAttrs.mod.EventHandler[typingsSlinky.babelPluginReactHtmlAttrs.mod.FocusEvent[T]]
   
-  // tslint:disable-next-line:no-empty-interface
   type FormEvent[T] = typingsSlinky.babelPluginReactHtmlAttrs.mod.SyntheticEvent[T, org.scalajs.dom.raw.Event]
   
   type FormEventHandler[T] = typingsSlinky.babelPluginReactHtmlAttrs.mod.EventHandler[typingsSlinky.babelPluginReactHtmlAttrs.mod.FormEvent[T]]
@@ -182,7 +180,6 @@ package object mod {
     */
   js.Function2[/* nextProps */ P, /* prevState */ S, typingsSlinky.std.Partial[S] | scala.Null]
   
-  // tslint:disable-next-line:no-empty-interface
   type HTMLFactory[T /* <: org.scalajs.dom.raw.HTMLElement */] = typingsSlinky.babelPluginReactHtmlAttrs.mod.DetailedHTMLFactory[typingsSlinky.babelPluginReactHtmlAttrs.mod.AllHTMLAttributes[T], T]
   
   type JSXElementConstructor[P] = (js.Function1[
@@ -297,7 +294,6 @@ package object mod {
   type ReactFragment = js.Object | typingsSlinky.babelPluginReactHtmlAttrs.mod.ReactNodeArray
   
   // ReactHTML for ReactHTMLElement
-  // tslint:disable-next-line:no-empty-interface
   type ReactHTMLElement[T /* <: org.scalajs.dom.raw.HTMLElement */] = typingsSlinky.babelPluginReactHtmlAttrs.mod.DetailedReactHTMLElement[typingsSlinky.babelPluginReactHtmlAttrs.mod.AllHTMLAttributes[T], T]
   
   //

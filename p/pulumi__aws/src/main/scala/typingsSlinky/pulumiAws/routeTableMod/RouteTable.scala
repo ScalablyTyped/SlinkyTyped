@@ -24,6 +24,11 @@ class RouteTable protected () extends CustomResource {
   def this(name: String, args: RouteTableArgs, opts: CustomResourceOptions) = this()
   
   /**
+    * EC2 Transit Gateway Route Table Amazon Resource Name (ARN).
+    */
+  val arn: Output_[String] = js.native
+  
+  /**
     * Boolean whether this is the default association route table for the EC2 Transit Gateway.
     */
   val defaultAssociationRouteTable: Output_[Boolean] = js.native

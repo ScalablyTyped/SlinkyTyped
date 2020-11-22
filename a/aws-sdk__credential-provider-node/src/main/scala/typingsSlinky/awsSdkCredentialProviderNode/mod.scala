@@ -2,6 +2,7 @@ package typingsSlinky.awsSdkCredentialProviderNode
 
 import typingsSlinky.awsSdkCredentialProviderImds.remoteProviderInitMod.RemoteProviderInit
 import typingsSlinky.awsSdkCredentialProviderIni.mod.FromIniInit
+import typingsSlinky.awsSdkCredentialProviderProcess.mod.FromProcessInit
 import typingsSlinky.awsSdkTypes.credentialsMod.CredentialProvider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,5 +15,5 @@ object mod extends js.Object {
   val ENV_IMDS_DISABLED: /* "AWS_EC2_METADATA_DISABLED" */ String = js.native
   
   def defaultProvider(): CredentialProvider = js.native
-  def defaultProvider(init: FromIniInit with RemoteProviderInit): CredentialProvider = js.native
+  def defaultProvider(init: FromIniInit with RemoteProviderInit with FromProcessInit): CredentialProvider = js.native
 }

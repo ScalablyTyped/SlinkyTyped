@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StoryData extends js.Object {
   
+  var refId: js.UndefOr[String] = js.native
+  
   var storyId: js.UndefOr[String] = js.native
   
   var viewMode: js.UndefOr[String] = js.native
@@ -33,6 +35,12 @@ object StoryData {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setRefId(value: String): Self = this.set("refId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRefId: Self = this.set("refId", js.undefined)
     
     @scala.inline
     def setStoryId(value: String): Self = this.set("storyId", value.asInstanceOf[js.Any])

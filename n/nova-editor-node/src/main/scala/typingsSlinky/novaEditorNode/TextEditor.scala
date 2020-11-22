@@ -15,23 +15,24 @@ trait TextEditor extends js.Object {
   def edit(callback: js.Function1[/* edit */ TextEditorEdit, Unit]): js.Promise[Unit] = js.native
   def edit(callback: js.Function1[/* edit */ TextEditorEdit, Unit], options: js.Any): js.Promise[Unit] = js.native
   
-  def getLineRangeForRange(range: Range): String = js.native
+  def getLineRangeForRange(range: Range): Range = js.native
   
   def getTextInRange(range: Range): String = js.native
   
   def insert(string: String): js.Promise[Unit] = js.native
+  def insert(string: String, format: InsertTextFormat): js.Promise[Unit] = js.native
   
-  def onDidChange(callback: js.Function1[/* textEditor */ this.type, Unit]): Unit = js.native
+  def onDidChange(callback: js.Function1[/* textEditor */ this.type, Unit]): Disposable = js.native
   
-  def onDidChangeSelection(callback: js.Function1[/* textEditor */ this.type, Unit]): Unit = js.native
+  def onDidChangeSelection(callback: js.Function1[/* textEditor */ this.type, Unit]): Disposable = js.native
   
-  def onDidDestroy(callback: js.Function1[/* textEditor */ this.type, Unit]): Unit = js.native
+  def onDidDestroy(callback: js.Function1[/* textEditor */ this.type, Unit]): Disposable = js.native
   
-  def onDidSave(callback: js.Function1[/* textEditor */ this.type, Unit]): Unit = js.native
+  def onDidSave(callback: js.Function1[/* textEditor */ this.type, Unit]): Disposable = js.native
   
-  def onDidStopChanging(callback: js.Function1[/* textEditor */ this.type, Unit]): Unit = js.native
+  def onDidStopChanging(callback: js.Function1[/* textEditor */ this.type, Unit]): Disposable = js.native
   
-  def onWillSave(callback: js.Function1[/* textEditor */ this.type, Unit]): Unit = js.native
+  def onWillSave(callback: js.Function1[/* textEditor */ this.type, Unit]): Disposable = js.native
   
   def save(): Unit = js.native
   
@@ -67,19 +68,19 @@ trait TextEditor extends js.Object {
   
   def selectWordsContainingCursors(): Unit = js.native
   
-  val selectedRange: Range = js.native
+  var selectedRange: Range = js.native
   
-  val selectedRanges: js.Array[Range] = js.native
+  var selectedRanges: js.Array[Range] = js.native
   
   val selectedText: String = js.native
   
-  val softTabs: Boolean = js.native
+  var softTabs: Boolean = js.native
   
   def symbolAtPosition(position: Double): NovaSymbol | Null = js.native
   
   def symbolsForSelectedRanges(): js.Array[NovaSymbol | Null] = js.native
   
-  val tabLength: Double = js.native
+  var tabLength: Double = js.native
   
   val tabText: String = js.native
 }

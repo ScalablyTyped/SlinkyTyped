@@ -10,26 +10,38 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxResponsiveBoxOptions extends CollectionWidgetOptions[dxResponsiveBox] {
   
-  /** @name dxResponsiveBox.Options.cols */
+  /**
+    * [descr:dxResponsiveBox.Options.cols]
+    */
   var cols: js.UndefOr[js.Array[BaseSize]] = js.native
   
-  /** @name dxResponsiveBox.Options.dataSource */
+  /**
+    * [descr:dxResponsiveBox.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxResponsiveBoxOptions: js.UndefOr[
     String | (js.Array[String | dxResponsiveBoxItem | _]) | DataSource | DataSourceOptions
   ] = js.native
   
-  /** @name dxResponsiveBox.Options.items */
+  /**
+    * [descr:dxResponsiveBox.Options.items]
+    */
   @JSName("items")
   var items_dxResponsiveBoxOptions: js.UndefOr[js.Array[String | dxResponsiveBoxItem | _]] = js.native
   
-  /** @name dxResponsiveBox.Options.rows */
+  /**
+    * [descr:dxResponsiveBox.Options.rows]
+    */
   var rows: js.UndefOr[js.Array[BaseSize]] = js.native
   
-  /** @name dxResponsiveBox.Options.screenByWidth */
+  /**
+    * [descr:dxResponsiveBox.Options.screenByWidth]
+    */
   var screenByWidth: js.UndefOr[js.Function] = js.native
   
-  /** @name dxResponsiveBox.Options.singleColumnScreen */
+  /**
+    * [descr:dxResponsiveBox.Options.singleColumnScreen]
+    */
   var singleColumnScreen: js.UndefOr[String] = js.native
 }
 object dxResponsiveBoxOptions {

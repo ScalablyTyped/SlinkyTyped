@@ -64,7 +64,7 @@ trait Code extends js.Object {
     * language:go`](https://github.com/search?utf8=%E2%9C%93&q=amazing+language%3Ago&type=Code) is.
     */
   @JSName("code")
-  var code_Original: `475` = js.native
+  var code_Original: `478` = js.native
   
   /**
     * Find commits via various criteria on the default branch (usually `master`). This method returns up to 100 results [per page](https://developer.github.com/v3/#pagination).
@@ -98,7 +98,7 @@ trait Code extends js.Object {
     * `q=repo:octocat/Spoon-Knife+css`
     */
   @JSName("commits")
-  var commits_Original: `476` = js.native
+  var commits_Original: `479` = js.native
   
   /**
     * Find issues by state and keyword. This method returns up to 100 results [per page](https://developer.github.com/v3/#pagination).
@@ -136,7 +136,7 @@ trait Code extends js.Object {
     * This query searches for the keyword `windows`, within any open issue that is labeled as `bug`. The search runs across repositories whose primary language is Python. The results are sorted by creation date in ascending order, whick means the oldest issues appear first in the search results.
     */
   @JSName("issuesAndPullRequests")
-  var issuesAndPullRequests_Original: `477` = js.native
+  var issuesAndPullRequests_Original: `480` = js.native
   
   /**
     * Find labels in a repository with names or descriptions that match search keywords. Returns up to 100 results [per page](https://developer.github.com/v3/#pagination).
@@ -172,7 +172,7 @@ trait Code extends js.Object {
     * The labels that best match the query appear first in the search results.
     */
   @JSName("labels")
-  var labels_Original: `478` = js.native
+  var labels_Original: `481` = js.native
   
   /**
     * Find repositories via various criteria. This method returns up to 100 results [per page](https://developer.github.com/v3/#pagination).
@@ -216,7 +216,7 @@ trait Code extends js.Object {
     * `q=topic:ruby+topic:rails`
     */
   @JSName("repos")
-  var repos_Original: `479` = js.native
+  var repos_Original: `482` = js.native
   
   /**
     * Find topics via various criteria. Results are sorted by best match. This method returns up to 100 results [per page](https://developer.github.com/v3/#pagination). See "[Searching topics](https://docs.github.com/articles/searching-topics/)" for a detailed list of qualifiers.
@@ -252,7 +252,7 @@ trait Code extends js.Object {
     * This query searches for topics with the keyword `ruby` and limits the results to find only topics that are featured. The topics that are the best match for the query appear first in the search results.
     */
   @JSName("topics")
-  var topics_Original: `480` = js.native
+  var topics_Original: `483` = js.native
   
   /**
     * Find users via various criteria. This method returns up to 100 results [per page](https://developer.github.com/v3/#pagination).
@@ -288,5 +288,5 @@ trait Code extends js.Object {
     * This query searches for users with the name `tom`. The results are restricted to users with more than 42 repositories and over 1,000 followers.
     */
   @JSName("users")
-  var users_Original: `481` = js.native
+  var users_Original: `484` = js.native
 }

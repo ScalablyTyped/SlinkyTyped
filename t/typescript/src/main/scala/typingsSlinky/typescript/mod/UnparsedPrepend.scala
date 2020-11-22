@@ -10,10 +10,10 @@ trait UnparsedPrepend
      with UnparsedSourceText {
   
   @JSName("data")
-  var data_UnparsedPrepend: java.lang.String = js.native
+  val data_UnparsedPrepend: java.lang.String = js.native
   
   @JSName("kind")
-  var kind_UnparsedPrepend: typingsSlinky.typescript.mod.SyntaxKind.UnparsedPrepend = js.native
+  val kind_UnparsedPrepend: typingsSlinky.typescript.mod.SyntaxKind.UnparsedPrepend = js.native
   
-  var texts: js.Array[UnparsedTextLike] = js.native
+  val texts: js.Array[UnparsedTextLike] = js.native
 }

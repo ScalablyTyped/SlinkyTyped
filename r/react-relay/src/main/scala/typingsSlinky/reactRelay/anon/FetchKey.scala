@@ -1,6 +1,6 @@
 package typingsSlinky.reactRelay.anon
 
-import typingsSlinky.reactRelay.queryResourceMod.RenderPolicy
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.RenderPolicy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +12,7 @@ trait FetchKey extends js.Object {
   
   var fetchKey: js.UndefOr[String | Double] = js.native
   
-  var fetchPolicy: js.UndefOr[typingsSlinky.reactRelay.queryResourceMod.FetchPolicy] = js.native
+  var fetchPolicy: js.UndefOr[typingsSlinky.relayRuntime.relayRuntimeTypesMod.FetchPolicy] = js.native
   
   var networkCacheConfig: js.UndefOr[typingsSlinky.relayRuntime.relayRuntimeTypesMod.CacheConfig] = js.native
 }
@@ -52,7 +52,7 @@ object FetchKey {
     def deleteFetchKey: Self = this.set("fetchKey", js.undefined)
     
     @scala.inline
-    def setFetchPolicy(value: typingsSlinky.reactRelay.queryResourceMod.FetchPolicy): Self = this.set("fetchPolicy", value.asInstanceOf[js.Any])
+    def setFetchPolicy(value: typingsSlinky.relayRuntime.relayRuntimeTypesMod.FetchPolicy): Self = this.set("fetchPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFetchPolicy: Self = this.set("fetchPolicy", js.undefined)

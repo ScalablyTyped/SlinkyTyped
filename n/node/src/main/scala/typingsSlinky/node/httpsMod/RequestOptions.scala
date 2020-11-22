@@ -217,6 +217,13 @@ trait RequestOptions extends js.Object {
     */
   var sessionIdContext: js.UndefOr[String] = js.native
   
+  /**
+    * The number of seconds after which a TLS session created by the
+    * server will no longer be resumable. See Session Resumption for more
+    * information. Default: 300.
+    */
+  var sessionTimeout: js.UndefOr[Double] = js.native
+  
   var setHost: js.UndefOr[Boolean] = js.native
   
   /**
@@ -228,6 +235,12 @@ trait RequestOptions extends js.Object {
   var sigalgs: js.UndefOr[String] = js.native
   
   var socketPath: js.UndefOr[String] = js.native
+  
+  /**
+    * 48-bytes of cryptographically strong pseudo-random data.
+    * See Session Resumption for more information.
+    */
+  var ticketKeys: js.UndefOr[Buffer] = js.native
   
   var timeout: js.UndefOr[Double] = js.native
 }
@@ -500,6 +513,12 @@ object RequestOptions {
     def deleteSessionIdContext: Self = this.set("sessionIdContext", js.undefined)
     
     @scala.inline
+    def setSessionTimeout(value: Double): Self = this.set("sessionTimeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSessionTimeout: Self = this.set("sessionTimeout", js.undefined)
+    
+    @scala.inline
     def setSetHost(value: Boolean): Self = this.set("setHost", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -516,6 +535,12 @@ object RequestOptions {
     
     @scala.inline
     def deleteSocketPath: Self = this.set("socketPath", js.undefined)
+    
+    @scala.inline
+    def setTicketKeys(value: Buffer): Self = this.set("ticketKeys", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTicketKeys: Self = this.set("ticketKeys", js.undefined)
     
     @scala.inline
     def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])

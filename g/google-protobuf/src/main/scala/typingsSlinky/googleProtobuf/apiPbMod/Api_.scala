@@ -27,13 +27,13 @@ class Api_ () extends Message {
   def addOptions(value: Option): Option = js.native
   def addOptions(value: Option, index: Double): Option = js.native
   
-  def clearMethodsList(): Unit = js.native
+  def clearMethodsList(): Api = js.native
   
-  def clearMixinsList(): Unit = js.native
+  def clearMixinsList(): Api = js.native
   
-  def clearOptionsList(): Unit = js.native
+  def clearOptionsList(): Api = js.native
   
-  def clearSourceContext(): Unit = js.native
+  def clearSourceContext(): Api = js.native
   
   def getMethodsList(): js.Array[Method] = js.native
   
@@ -51,18 +51,18 @@ class Api_ () extends Message {
   
   def hasSourceContext(): Boolean = js.native
   
-  def setMethodsList(value: js.Array[Method]): Unit = js.native
+  def setMethodsList(value: js.Array[Method]): Api = js.native
   
-  def setMixinsList(value: js.Array[Mixin]): Unit = js.native
+  def setMixinsList(value: js.Array[Mixin]): Api = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): Api = js.native
   
-  def setOptionsList(value: js.Array[Option]): Unit = js.native
+  def setOptionsList(value: js.Array[Option]): Api = js.native
   
-  def setSourceContext(): Unit = js.native
-  def setSourceContext(value: SourceContext): Unit = js.native
+  def setSourceContext(): Api = js.native
+  def setSourceContext(value: SourceContext): Api = js.native
   
-  def setSyntax(value: Syntax): Unit = js.native
+  def setSyntax(value: Syntax): Api = js.native
   
-  def setVersion(value: String): Unit = js.native
+  def setVersion(value: String): Api = js.native
 }

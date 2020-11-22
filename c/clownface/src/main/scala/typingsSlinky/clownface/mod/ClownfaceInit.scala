@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<std.Pick<clownface.clownface.Clownface<clownface.clownface.AnyContext, D>, 'dataset' | '_context'> & {  graph :rdf-js.rdf-js.Quad_Graph}> */
+/* Inlined std.Partial<std.Pick<clownface.clownface.AnyPointer<clownface.clownface.AnyContext, D>, 'dataset' | '_context'> & {  graph :rdf-js.rdf-js.Quad_Graph}> */
 @js.native
 trait ClownfaceInit[D /* <: DatasetCore[Quad, Quad] */] extends js.Object {
   

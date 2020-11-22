@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.ServiceWorker.StopWorkerRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.ServiceWorker.DeliverPushMessageRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `171` extends js.Object {
   
-  var paramsType: js.Array[StopWorkerRequest] = js.native
+  var paramsType: js.Array[DeliverPushMessageRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `171` {
   
   @scala.inline
-  def apply(paramsType: js.Array[StopWorkerRequest], returnType: Unit): `171` = {
+  def apply(paramsType: js.Array[DeliverPushMessageRequest], returnType: Unit): `171` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`171`]
   }
@@ -36,10 +36,10 @@ object `171` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: StopWorkerRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: DeliverPushMessageRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[StopWorkerRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[DeliverPushMessageRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

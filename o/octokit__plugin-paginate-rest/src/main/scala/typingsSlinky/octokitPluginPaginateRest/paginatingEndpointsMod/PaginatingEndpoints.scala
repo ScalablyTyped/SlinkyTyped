@@ -4,13 +4,16 @@ import typingsSlinky.octokitPluginPaginateRest.anon.Parameters
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListArtifactsForRepoEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListJobsForWorkflowRunEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListOrgSecretsEndpoint
+import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListRepoAccessToSelfHostedRunnerGroupInOrgEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListRepoSecretsEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListRepoWorkflowsEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListRunnerApplicationsForOrgEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListRunnerApplicationsForRepoEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListSelectedReposForOrgSecretEndpoint
+import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListSelfHostedRunnerGroupsForOrgEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListSelfHostedRunnersForOrgEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListSelfHostedRunnersForRepoEndpoint
+import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListSelfHostedRunnersInGroupForOrgEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListWorkflowRunArtifactsEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListWorkflowRunsEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersActionsListWorkflowRunsForRepoEndpoint
@@ -36,8 +39,14 @@ import typingsSlinky.octokitPluginPaginateRest.anon.ParametersChecksListForRefEn
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersChecksListForSuiteEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersChecksListSuitesForRefEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersCodeScanningListAlertsForRepoEndpoint
+import typingsSlinky.octokitPluginPaginateRest.anon.ParametersCodeScanningListRecentAnalysesEndpoint
+import typingsSlinky.octokitPluginPaginateRest.anon.ParametersEnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersEnterpriseAdminListProvisionedGroupsEnterpriseEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersEnterpriseAdminListProvisionedIdentitiesEnterpriseEndpoint
+import typingsSlinky.octokitPluginPaginateRest.anon.ParametersEnterpriseAdminListRunnerApplicationsForEnterpriseEndpoint
+import typingsSlinky.octokitPluginPaginateRest.anon.ParametersEnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseEndpoint
+import typingsSlinky.octokitPluginPaginateRest.anon.ParametersEnterpriseAdminListSelfHostedRunnersForEnterpriseEndpoint
+import typingsSlinky.octokitPluginPaginateRest.anon.ParametersEnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersGistsListCommentsEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersGistsListCommitsEndpoint
 import typingsSlinky.octokitPluginPaginateRest.anon.ParametersGistsListEndpoint
@@ -190,6 +199,36 @@ trait PaginatingEndpoints extends js.Object {
   var `GET Slashauthorizations`: ParametersResponse = js.native
   
   /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#list-self-hosted-runner-groups-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runner-groups")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`: ParametersEnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#list-organization-access-to-a-self-hosted-runner-group-in-a-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`: ParametersEnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#list-self-hosted-runners-in-a-group-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: ParametersEnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#list-self-hosted-runners-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runners")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`: ParametersEnterpriseAdminListSelfHostedRunnersForEnterpriseEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/enterprise-admin/actions/#list-runner-applications-for-an-enterprise
+    */
+  @JSName("GET /enterprises/:enterprise/actions/runners/downloads")
+  var `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`: ParametersEnterpriseAdminListRunnerApplicationsForEnterpriseEndpoint = js.native
+  
+  /**
     * @see https://developer.github.com/v3/gists/#list-gists-for-the-authenticated-user
     */
   @JSName("GET /gists")
@@ -272,6 +311,24 @@ trait PaginatingEndpoints extends js.Object {
     */
   @JSName("GET /organizations")
   var `GET Slashorganizations`: ParametersOrgsListEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#list-self-hosted-runner-groups-for-an-organization
+    */
+  @JSName("GET /orgs/:org/actions/runner-groups")
+  var `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`: ParametersActionsListSelfHostedRunnerGroupsForOrgEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#list-repository-access-to-a-self-hosted-runner-group-in-an-organization
+    */
+  @JSName("GET /orgs/:org/actions/runner-groups/:runner_group_id/repositories")
+  var `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`: ParametersActionsListRepoAccessToSelfHostedRunnerGroupInOrgEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/actions/self-hosted-runner-groups/#list-self-hosted-runners-in-a-group-for-an-organization
+    */
+  @JSName("GET /orgs/:org/actions/runner-groups/:runner_group_id/runners")
+  var `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: ParametersActionsListSelfHostedRunnersInGroupForOrgEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/actions/self-hosted-runners/#list-self-hosted-runners-for-an-organization
@@ -554,6 +611,12 @@ trait PaginatingEndpoints extends js.Object {
     */
   @JSName("GET /repos/:owner/:repo/code-scanning/alerts")
   var `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`: ParametersCodeScanningListAlertsForRepoEndpoint = js.native
+  
+  /**
+    * @see https://developer.github.com/v3/code-scanning/#list-recent-analyses
+    */
+  @JSName("GET /repos/:owner/:repo/code-scanning/analyses")
+  var `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`: ParametersCodeScanningListRecentAnalysesEndpoint = js.native
   
   /**
     * @see https://developer.github.com/v3/repos/collaborators/#list-repository-collaborators
@@ -1162,6 +1225,11 @@ object PaginatingEndpoints {
     `GET SlashappSlashinstallations`: Parameters,
     `GET SlashapplicationsSlashgrants`: Response,
     `GET Slashauthorizations`: ParametersResponse,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`: ParametersEnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`: ParametersEnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: ParametersEnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`: ParametersEnterpriseAdminListSelfHostedRunnersForEnterpriseEndpoint,
+    `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`: ParametersEnterpriseAdminListRunnerApplicationsForEnterpriseEndpoint,
     `GET Slashgists`: ParametersGistsListEndpoint,
     `GET SlashgistsSlashColongist_idSlashcomments`: ParametersGistsListCommentsEndpoint,
     `GET SlashgistsSlashColongist_idSlashcommits`: ParametersGistsListCommitsEndpoint,
@@ -1176,6 +1244,9 @@ object PaginatingEndpoints {
     `GET Slashmarketplace_listingSlashstubbedSlashplansSlashColonplan_idSlashaccounts`: ParametersAppsListAccountsForPlanStubbedEndpoint,
     `GET Slashnotifications`: ParametersActivityListNotificationsForAuthenticatedUserEndpoint,
     `GET Slashorganizations`: ParametersOrgsListEndpoint,
+    `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`: ParametersActionsListSelfHostedRunnerGroupsForOrgEndpoint,
+    `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`: ParametersActionsListRepoAccessToSelfHostedRunnerGroupInOrgEndpoint,
+    `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: ParametersActionsListSelfHostedRunnersInGroupForOrgEndpoint,
     `GET SlashorgsSlashColonorgSlashactionsSlashrunners`: ParametersActionsListSelfHostedRunnersForOrgEndpoint,
     `GET SlashorgsSlashColonorgSlashactionsSlashrunnersSlashdownloads`: ParametersActionsListRunnerApplicationsForOrgEndpoint,
     `GET SlashorgsSlashColonorgSlashactionsSlashsecrets`: ParametersActionsListOrgSecretsEndpoint,
@@ -1223,6 +1294,7 @@ object PaginatingEndpoints {
     `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-runsSlashColoncheck_run_idSlashannotations`: ParametersChecksListAnnotationsEndpoint,
     `GET SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashcheck-runs`: ParametersChecksListForSuiteEndpoint,
     `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`: ParametersCodeScanningListAlertsForRepoEndpoint,
+    `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`: ParametersCodeScanningListRecentAnalysesEndpoint,
     `GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators`: ParametersReposListCollaboratorsEndpoint,
     `GET SlashreposSlashColonownerSlashColonrepoSlashcomments`: ParametersReposListCommitCommentsForRepoEndpoint,
     `GET SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions`: ParametersReactionsListForCommitCommentEndpoint,
@@ -1328,6 +1400,11 @@ object PaginatingEndpoints {
     __obj.updateDynamic("GET /app/installations")((`GET SlashappSlashinstallations`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /applications/grants")((`GET SlashapplicationsSlashgrants`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /authorizations")((`GET Slashauthorizations`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runner-groups")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runners")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /enterprises/:enterprise/actions/runners/downloads")((`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /gists")((`GET Slashgists`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /gists/:gist_id/comments")((`GET SlashgistsSlashColongist_idSlashcomments`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /gists/:gist_id/commits")((`GET SlashgistsSlashColongist_idSlashcommits`).asInstanceOf[js.Any])
@@ -1342,6 +1419,9 @@ object PaginatingEndpoints {
     __obj.updateDynamic("GET /marketplace_listing/stubbed/plans/:plan_id/accounts")((`GET Slashmarketplace_listingSlashstubbedSlashplansSlashColonplan_idSlashaccounts`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /notifications")((`GET Slashnotifications`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /organizations")((`GET Slashorganizations`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /orgs/:org/actions/runner-groups")((`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /orgs/:org/actions/runner-groups/:runner_group_id/repositories")((`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /orgs/:org/actions/runner-groups/:runner_group_id/runners")((`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /orgs/:org/actions/runners")((`GET SlashorgsSlashColonorgSlashactionsSlashrunners`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /orgs/:org/actions/runners/downloads")((`GET SlashorgsSlashColonorgSlashactionsSlashrunnersSlashdownloads`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /orgs/:org/actions/secrets")((`GET SlashorgsSlashColonorgSlashactionsSlashsecrets`).asInstanceOf[js.Any])
@@ -1389,6 +1469,7 @@ object PaginatingEndpoints {
     __obj.updateDynamic("GET /repos/:owner/:repo/check-runs/:check_run_id/annotations")((`GET SlashreposSlashColonownerSlashColonrepoSlashcheck-runsSlashColoncheck_run_idSlashannotations`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /repos/:owner/:repo/check-suites/:check_suite_id/check-runs")((`GET SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashcheck-runs`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /repos/:owner/:repo/code-scanning/alerts")((`GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`).asInstanceOf[js.Any])
+    __obj.updateDynamic("GET /repos/:owner/:repo/code-scanning/analyses")((`GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /repos/:owner/:repo/collaborators")((`GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /repos/:owner/:repo/comments")((`GET SlashreposSlashColonownerSlashColonrepoSlashcomments`).asInstanceOf[js.Any])
     __obj.updateDynamic("GET /repos/:owner/:repo/comments/:comment_id/reactions")((`GET SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions`).asInstanceOf[js.Any])
@@ -1517,6 +1598,21 @@ object PaginatingEndpoints {
     def `setGET Slashauthorizations`(value: ParametersResponse): Self = this.set("GET /authorizations", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`(value: ParametersEnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runner-groups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`(value: ParametersEnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`(value: ParametersEnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`(value: ParametersEnterpriseAdminListSelfHostedRunnersForEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runners", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`(value: ParametersEnterpriseAdminListRunnerApplicationsForEnterpriseEndpoint): Self = this.set("GET /enterprises/:enterprise/actions/runners/downloads", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def `setGET Slashgists`(value: ParametersGistsListEndpoint): Self = this.set("GET /gists", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1557,6 +1653,15 @@ object PaginatingEndpoints {
     
     @scala.inline
     def `setGET Slashorganizations`(value: ParametersOrgsListEndpoint): Self = this.set("GET /organizations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`(value: ParametersActionsListSelfHostedRunnerGroupsForOrgEndpoint): Self = this.set("GET /orgs/:org/actions/runner-groups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`(value: ParametersActionsListRepoAccessToSelfHostedRunnerGroupInOrgEndpoint): Self = this.set("GET /orgs/:org/actions/runner-groups/:runner_group_id/repositories", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`(value: ParametersActionsListSelfHostedRunnersInGroupForOrgEndpoint): Self = this.set("GET /orgs/:org/actions/runner-groups/:runner_group_id/runners", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setGET SlashorgsSlashColonorgSlashactionsSlashrunners`(value: ParametersActionsListSelfHostedRunnersForOrgEndpoint): Self = this.set("GET /orgs/:org/actions/runners", value.asInstanceOf[js.Any])
@@ -1698,6 +1803,9 @@ object PaginatingEndpoints {
     
     @scala.inline
     def `setGET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`(value: ParametersCodeScanningListAlertsForRepoEndpoint): Self = this.set("GET /repos/:owner/:repo/code-scanning/alerts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `setGET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`(value: ParametersCodeScanningListRecentAnalysesEndpoint): Self = this.set("GET /repos/:owner/:repo/code-scanning/analyses", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `setGET SlashreposSlashColonownerSlashColonrepoSlashcollaborators`(value: ParametersReposListCollaboratorsEndpoint): Self = this.set("GET /repos/:owner/:repo/collaborators", value.asInstanceOf[js.Any])

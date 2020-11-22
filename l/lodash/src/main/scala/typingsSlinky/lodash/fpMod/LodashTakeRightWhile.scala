@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashTakeRightWhile extends LodashConvertible {
+trait LodashTakeRightWhile extends js.Object {
   
   def apply[T](predicate: ValueIteratee[T]): LodashTakeRightWhile1x1[T] = js.native
   def apply[T](predicate: ValueIteratee[T], array: List[T]): js.Array[T] = js.native

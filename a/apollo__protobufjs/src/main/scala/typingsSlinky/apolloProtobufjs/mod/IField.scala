@@ -12,7 +12,7 @@ trait IField extends js.Object {
   var id: Double = js.native
   
   /** Field options */
-  var options: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var options: js.UndefOr[StringDictionary[js.UndefOr[js.Any]]] = js.native
   
   /** Field rule */
   var rule: js.UndefOr[String] = js.native
@@ -51,7 +51,7 @@ object IField {
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: StringDictionary[js.Any]): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: StringDictionary[js.UndefOr[js.Any]]): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

@@ -38,7 +38,7 @@ trait TaskExecutionResultDetail extends js.Object {
   var TransferDuration: js.UndefOr[Duration] = js.native
   
   /**
-    * The status of the TRANSFERRING Phase.
+    * The status of the TRANSFERRING phase.
     */
   var TransferStatus: js.UndefOr[PhaseStatus] = js.native
   
@@ -48,7 +48,7 @@ trait TaskExecutionResultDetail extends js.Object {
   var VerifyDuration: js.UndefOr[Duration] = js.native
   
   /**
-    * The status of the VERIFYING Phase.
+    * The status of the VERIFYING phase.
     */
   var VerifyStatus: js.UndefOr[PhaseStatus] = js.native
 }

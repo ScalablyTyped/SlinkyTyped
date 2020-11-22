@@ -35,7 +35,7 @@ trait TableViewRow extends View {
   /**
     * Default text color of the row when not selected, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   /**
     * Text to display on the delete button when editable is enabled
@@ -101,7 +101,7 @@ trait TableViewRow extends View {
     * Gets the value of the <Titanium.UI.TableViewRow.color> property.
     * @deprecated Access <Titanium.UI.TableViewRow.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TableViewRow.deleteButtonTitle> property.
@@ -179,7 +179,7 @@ trait TableViewRow extends View {
     * Gets the value of the <Titanium.UI.TableViewRow.selectedBackgroundColor> property.
     * @deprecated Access <Titanium.UI.TableViewRow.selectedBackgroundColor> instead.
     */
-  def getSelectedBackgroundColor(): String = js.native
+  def getSelectedBackgroundColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TableViewRow.selectedBackgroundImage> property.
@@ -191,7 +191,7 @@ trait TableViewRow extends View {
     * Gets the value of the <Titanium.UI.TableViewRow.selectedColor> property.
     * @deprecated Access <Titanium.UI.TableViewRow.selectedColor> instead.
     */
-  def getSelectedColor(): String = js.native
+  def getSelectedColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TableViewRow.selectionStyle> property.
@@ -251,7 +251,7 @@ trait TableViewRow extends View {
   /**
     * Background color to render when the row is selected, as a color name or hex triplet.
     */
-  var selectedBackgroundColor: String = js.native
+  var selectedBackgroundColor: String | Color = js.native
   
   /**
     * Background image to render when the row is selected.
@@ -261,7 +261,7 @@ trait TableViewRow extends View {
   /**
     * Color of the row text when the row is selected, as a color name or hex triplet.
     */
-  var selectedColor: String = js.native
+  var selectedColor: String | Color = js.native
   
   /**
     * Selection style constant to control the selection color.
@@ -279,6 +279,7 @@ trait TableViewRow extends View {
     * @deprecated Set the value using <Titanium.UI.TableViewRow.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TableViewRow.deleteButtonTitle> property.
@@ -357,6 +358,7 @@ trait TableViewRow extends View {
     * @deprecated Set the value using <Titanium.UI.TableViewRow.selectedBackgroundColor> instead.
     */
   def setSelectedBackgroundColor(selectedBackgroundColor: String): Unit = js.native
+  def setSelectedBackgroundColor(selectedBackgroundColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TableViewRow.selectedBackgroundImage> property.
@@ -369,6 +371,7 @@ trait TableViewRow extends View {
     * @deprecated Set the value using <Titanium.UI.TableViewRow.selectedColor> instead.
     */
   def setSelectedColor(selectedColor: String): Unit = js.native
+  def setSelectedColor(selectedColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TableViewRow.selectionStyle> property.

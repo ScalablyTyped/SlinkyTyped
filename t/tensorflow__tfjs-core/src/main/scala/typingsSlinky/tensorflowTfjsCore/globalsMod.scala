@@ -1,6 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore
 
 import typingsSlinky.tensorflowTfjsCore.backendMod.KernelBackend
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.engineMod.Engine
 import typingsSlinky.tensorflowTfjsCore.engineMod.MemoryInfo
@@ -8,7 +9,6 @@ import typingsSlinky.tensorflowTfjsCore.engineMod.ProfileInfo
 import typingsSlinky.tensorflowTfjsCore.engineMod.ScopeFn
 import typingsSlinky.tensorflowTfjsCore.engineMod.TimingInfo
 import typingsSlinky.tensorflowTfjsCore.platformMod.Platform
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.TensorContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -44,7 +44,7 @@ object globalsMod extends js.Object {
   
   def memory(): MemoryInfo = js.native
   
-  def profile(f: js.Function0[TensorContainer]): js.Promise[ProfileInfo] = js.native
+  def profile(f: js.Function0[TensorContainer | js.Promise[TensorContainer]]): js.Promise[ProfileInfo] = js.native
   
   def ready(): js.Promise[Unit] = js.native
   

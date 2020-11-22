@@ -7,11 +7,12 @@ import typingsSlinky.reactInstantsearchCore.mod.Omit
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("react-instantsearch", JSImport.Namespace)
 @js.native
 object mod extends js.Object {
+  
   def createConnector[TProvided, TExposed](connectorDesc: ConnectorDescription[TProvided, TExposed]): (js.Function1[
     /* stateless */ ReactComponentClass[ConnectorProvided[TProvided]], 
     ReactComponentClass[TExposed]
@@ -22,4 +23,3 @@ object mod extends js.Object {
     ]
   ]) = js.native
 }
-

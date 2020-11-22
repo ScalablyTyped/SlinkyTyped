@@ -1,7 +1,7 @@
 
 # Scala.js typings for jss-plugin-rule-value-observable
 
-Typings are for version 10.3.0
+Typings are for version 10.5.0
 
 ## Library description:
 JSS plugin for TC39 Observables support

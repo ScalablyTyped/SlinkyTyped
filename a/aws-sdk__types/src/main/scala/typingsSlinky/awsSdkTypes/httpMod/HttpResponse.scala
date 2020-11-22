@@ -5,20 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait HttpResponse[StreamType] extends HttpMessage[StreamType] {
+trait HttpResponse extends HttpMessage {
   
   var statusCode: Double = js.native
 }
 object HttpResponse {
   
   @scala.inline
-  def apply[StreamType](headers: HeaderBag, statusCode: Double): HttpResponse[StreamType] = {
+  def apply(headers: HeaderBag, statusCode: Double): HttpResponse = {
     val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any], statusCode = statusCode.asInstanceOf[js.Any])
-    __obj.asInstanceOf[HttpResponse[StreamType]]
+    __obj.asInstanceOf[HttpResponse]
   }
   
   @scala.inline
-  implicit class HttpResponseOps[Self <: HttpResponse[_], StreamType] (val x: Self with HttpResponse[StreamType]) extends AnyVal {
+  implicit class HttpResponseOps[Self <: HttpResponse] (val x: Self) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

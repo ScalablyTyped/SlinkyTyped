@@ -16,8 +16,7 @@ trait InstanceArgs extends js.Object {
   val availabilityZone: Input[String] = js.native
   
   /**
-    * The ID for a virtual private server image
-    * (see list below)
+    * The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
     */
   val blueprintId: Input[String] = js.native
   
@@ -38,7 +37,7 @@ trait InstanceArgs extends js.Object {
   val name: js.UndefOr[Input[String]] = js.native
   
   /**
-    * A map of tags to assign to the resource.
+    * A map of tags to assign to the resource. To create a key-only tag, use an empty string as the value.
     */
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   

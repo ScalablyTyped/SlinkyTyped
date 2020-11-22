@@ -29,11 +29,9 @@ trait URI extends js.Object {
   def addFragment(fragment: String): URI = js.native
   
   def addQuery(qry: String): URI = js.native
-  // tslint:disable-next-line:unified-signatures
   def addQuery(qry: String, value: js.Any): URI = js.native
   def addQuery(qry: js.Object): URI = js.native
   
-  // tslint:disable-next-line:unified-signatures
   def addSearch(key: String, value: js.Any): URI = js.native
   def addSearch(qry: String): URI = js.native
   def addSearch(qry: js.Object): URI = js.native
@@ -187,21 +185,20 @@ trait URI extends js.Object {
   def protocol(protocol: String): URI = js.native
   
   def query(): String = js.native
+  // tslint:disable-next-line void-return
   def query(qry: String): URI = js.native
-  def query(qry: js.Function1[/* qryObject */ QueryDataMap, QueryDataMap]): URI = js.native
-  def query(qry: Boolean): js.Object = js.native
+  def query(qry: js.Function1[/* qryObject */ QueryDataMap, QueryDataMap | Unit]): URI = js.native
   def query(qry: QueryDataMap): URI = js.native
+  def query(v: Boolean): QueryDataMap = js.native
   
   def readable(): String = js.native
   
   def relativeTo(path: String): URI = js.native
   
-  // tslint:disable-next-line:unified-signatures
   def removeQuery(name: String, value: String): URI = js.native
   def removeQuery(qry: String): URI = js.native
   def removeQuery(qry: js.Object): URI = js.native
   
-  // tslint:disable-next-line:unified-signatures
   def removeSearch(name: String, value: String): URI = js.native
   def removeSearch(qry: String): URI = js.native
   def removeSearch(qry: js.Object): URI = js.native
@@ -213,10 +210,11 @@ trait URI extends js.Object {
   def scheme(protocol: String): URI = js.native
   
   def search(): String = js.native
+  // tslint:disable-next-line void-return
   def search(qry: String): URI = js.native
-  def search(qry: js.Function1[/* qryObject */ QueryDataMap, QueryDataMap]): URI = js.native
-  def search(qry: Boolean): js.Any = js.native
+  def search(qry: js.Function1[/* qryObject */ QueryDataMap, QueryDataMap | Unit]): URI = js.native
   def search(qry: QueryDataMap): URI = js.native
+  def search(v: Boolean): QueryDataMap = js.native
   
   def segment(): js.Array[String] = js.native
   def segment(position: Double): js.UndefOr[String] = js.native

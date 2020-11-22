@@ -1,175 +1,175 @@
 package typingsSlinky.babelTraverse.mod
 
-import typingsSlinky.babelTypes.mod.AnyTypeAnnotation_
-import typingsSlinky.babelTypes.mod.ArrayExpression_
-import typingsSlinky.babelTypes.mod.ArrayPattern_
-import typingsSlinky.babelTypes.mod.ArrayTypeAnnotation_
-import typingsSlinky.babelTypes.mod.ArrowFunctionExpression_
-import typingsSlinky.babelTypes.mod.AssignmentExpression_
-import typingsSlinky.babelTypes.mod.AssignmentPattern_
-import typingsSlinky.babelTypes.mod.AwaitExpression_
-import typingsSlinky.babelTypes.mod.Binary
-import typingsSlinky.babelTypes.mod.BinaryExpression_
-import typingsSlinky.babelTypes.mod.BindExpression_
-import typingsSlinky.babelTypes.mod.Block
-import typingsSlinky.babelTypes.mod.BlockParent
-import typingsSlinky.babelTypes.mod.BlockStatement_
-import typingsSlinky.babelTypes.mod.BooleanLiteralTypeAnnotation_
-import typingsSlinky.babelTypes.mod.BooleanLiteral_
-import typingsSlinky.babelTypes.mod.BooleanTypeAnnotation_
-import typingsSlinky.babelTypes.mod.BreakStatement_
-import typingsSlinky.babelTypes.mod.CallExpression_
-import typingsSlinky.babelTypes.mod.CatchClause_
-import typingsSlinky.babelTypes.mod.Class
-import typingsSlinky.babelTypes.mod.ClassBody_
-import typingsSlinky.babelTypes.mod.ClassDeclaration_
-import typingsSlinky.babelTypes.mod.ClassExpression_
-import typingsSlinky.babelTypes.mod.ClassImplements_
-import typingsSlinky.babelTypes.mod.ClassMethod_
-import typingsSlinky.babelTypes.mod.ClassProperty_
-import typingsSlinky.babelTypes.mod.CompletionStatement
-import typingsSlinky.babelTypes.mod.Conditional
-import typingsSlinky.babelTypes.mod.ConditionalExpression_
-import typingsSlinky.babelTypes.mod.ContinueStatement_
-import typingsSlinky.babelTypes.mod.DebuggerStatement_
-import typingsSlinky.babelTypes.mod.Declaration
-import typingsSlinky.babelTypes.mod.DeclareClass_
-import typingsSlinky.babelTypes.mod.DeclareFunction_
-import typingsSlinky.babelTypes.mod.DeclareInterface_
-import typingsSlinky.babelTypes.mod.DeclareModule_
-import typingsSlinky.babelTypes.mod.DeclareTypeAlias_
-import typingsSlinky.babelTypes.mod.DeclareVariable_
-import typingsSlinky.babelTypes.mod.Decorator_
-import typingsSlinky.babelTypes.mod.DirectiveLiteral_
-import typingsSlinky.babelTypes.mod.Directive_
-import typingsSlinky.babelTypes.mod.DoExpression_
-import typingsSlinky.babelTypes.mod.DoWhileStatement_
-import typingsSlinky.babelTypes.mod.EmptyStatement_
-import typingsSlinky.babelTypes.mod.ExistentialTypeParam_
-import typingsSlinky.babelTypes.mod.ExportAllDeclaration_
-import typingsSlinky.babelTypes.mod.ExportDeclaration
-import typingsSlinky.babelTypes.mod.ExportDefaultDeclaration_
-import typingsSlinky.babelTypes.mod.ExportDefaultSpecifier_
-import typingsSlinky.babelTypes.mod.ExportNamedDeclaration_
-import typingsSlinky.babelTypes.mod.ExportNamespaceSpecifier_
-import typingsSlinky.babelTypes.mod.ExportSpecifier_
-import typingsSlinky.babelTypes.mod.Expression
-import typingsSlinky.babelTypes.mod.ExpressionStatement_
-import typingsSlinky.babelTypes.mod.ExpressionWrapper
-import typingsSlinky.babelTypes.mod.File_
-import typingsSlinky.babelTypes.mod.Flow
-import typingsSlinky.babelTypes.mod.FlowBaseAnnotation
-import typingsSlinky.babelTypes.mod.FlowDeclaration
-import typingsSlinky.babelTypes.mod.For
-import typingsSlinky.babelTypes.mod.ForInStatement_
-import typingsSlinky.babelTypes.mod.ForOfStatement_
-import typingsSlinky.babelTypes.mod.ForStatement_
-import typingsSlinky.babelTypes.mod.ForXStatement
-import typingsSlinky.babelTypes.mod.Function
-import typingsSlinky.babelTypes.mod.FunctionDeclaration_
-import typingsSlinky.babelTypes.mod.FunctionExpression_
-import typingsSlinky.babelTypes.mod.FunctionParent
-import typingsSlinky.babelTypes.mod.FunctionTypeAnnotation_
-import typingsSlinky.babelTypes.mod.FunctionTypeParam_
-import typingsSlinky.babelTypes.mod.GenericTypeAnnotation_
-import typingsSlinky.babelTypes.mod.Identifier_
-import typingsSlinky.babelTypes.mod.IfStatement_
-import typingsSlinky.babelTypes.mod.Immutable
-import typingsSlinky.babelTypes.mod.ImportDeclaration_
-import typingsSlinky.babelTypes.mod.ImportDefaultSpecifier_
-import typingsSlinky.babelTypes.mod.ImportNamespaceSpecifier_
-import typingsSlinky.babelTypes.mod.ImportSpecifier_
-import typingsSlinky.babelTypes.mod.InterfaceDeclaration_
-import typingsSlinky.babelTypes.mod.InterfaceExtends_
-import typingsSlinky.babelTypes.mod.IntersectionTypeAnnotation_
-import typingsSlinky.babelTypes.mod.JSX
-import typingsSlinky.babelTypes.mod.JSXAttribute_
-import typingsSlinky.babelTypes.mod.JSXClosingElement_
-import typingsSlinky.babelTypes.mod.JSXElement_
-import typingsSlinky.babelTypes.mod.JSXEmptyExpression_
-import typingsSlinky.babelTypes.mod.JSXExpressionContainer_
-import typingsSlinky.babelTypes.mod.JSXIdentifier_
-import typingsSlinky.babelTypes.mod.JSXMemberExpression_
-import typingsSlinky.babelTypes.mod.JSXNamespacedName_
-import typingsSlinky.babelTypes.mod.JSXOpeningElement_
-import typingsSlinky.babelTypes.mod.JSXSpreadAttribute_
-import typingsSlinky.babelTypes.mod.JSXText_
-import typingsSlinky.babelTypes.mod.LVal
-import typingsSlinky.babelTypes.mod.LabeledStatement_
-import typingsSlinky.babelTypes.mod.Literal
-import typingsSlinky.babelTypes.mod.LogicalExpression_
-import typingsSlinky.babelTypes.mod.Loop
-import typingsSlinky.babelTypes.mod.MemberExpression_
-import typingsSlinky.babelTypes.mod.MetaProperty_
-import typingsSlinky.babelTypes.mod.Method
-import typingsSlinky.babelTypes.mod.MixedTypeAnnotation_
-import typingsSlinky.babelTypes.mod.ModuleDeclaration
-import typingsSlinky.babelTypes.mod.ModuleSpecifier
-import typingsSlinky.babelTypes.mod.NewExpression_
-import typingsSlinky.babelTypes.mod.Noop_
-import typingsSlinky.babelTypes.mod.NullLiteralTypeAnnotation_
-import typingsSlinky.babelTypes.mod.NullLiteral_
-import typingsSlinky.babelTypes.mod.NullableTypeAnnotation_
-import typingsSlinky.babelTypes.mod.NumberTypeAnnotation_
-import typingsSlinky.babelTypes.mod.NumericLiteralTypeAnnotation_
-import typingsSlinky.babelTypes.mod.NumericLiteral_
-import typingsSlinky.babelTypes.mod.ObjectExpression_
-import typingsSlinky.babelTypes.mod.ObjectMember
-import typingsSlinky.babelTypes.mod.ObjectMethod_
-import typingsSlinky.babelTypes.mod.ObjectPattern_
-import typingsSlinky.babelTypes.mod.ObjectProperty_
-import typingsSlinky.babelTypes.mod.ObjectTypeAnnotation_
-import typingsSlinky.babelTypes.mod.ObjectTypeCallProperty_
-import typingsSlinky.babelTypes.mod.ObjectTypeIndexer_
-import typingsSlinky.babelTypes.mod.ObjectTypeProperty_
-import typingsSlinky.babelTypes.mod.ParenthesizedExpression_
-import typingsSlinky.babelTypes.mod.Pattern
-import typingsSlinky.babelTypes.mod.Program_
-import typingsSlinky.babelTypes.mod.Property
-import typingsSlinky.babelTypes.mod.Pureish
-import typingsSlinky.babelTypes.mod.QualifiedTypeIdentifier_
-import typingsSlinky.babelTypes.mod.RegExpLiteral_
-import typingsSlinky.babelTypes.mod.RestElement_
-import typingsSlinky.babelTypes.mod.RestProperty_
-import typingsSlinky.babelTypes.mod.ReturnStatement_
-import typingsSlinky.babelTypes.mod.Scopable
-import typingsSlinky.babelTypes.mod.SequenceExpression_
-import typingsSlinky.babelTypes.mod.SpreadElement_
-import typingsSlinky.babelTypes.mod.SpreadProperty_
-import typingsSlinky.babelTypes.mod.Statement
-import typingsSlinky.babelTypes.mod.StringLiteralTypeAnnotation_
-import typingsSlinky.babelTypes.mod.StringLiteral_
-import typingsSlinky.babelTypes.mod.StringTypeAnnotation_
-import typingsSlinky.babelTypes.mod.Super
-import typingsSlinky.babelTypes.mod.SwitchCase_
-import typingsSlinky.babelTypes.mod.SwitchStatement_
-import typingsSlinky.babelTypes.mod.TaggedTemplateExpression_
-import typingsSlinky.babelTypes.mod.TemplateElement_
-import typingsSlinky.babelTypes.mod.TemplateLiteral_
-import typingsSlinky.babelTypes.mod.Terminatorless
-import typingsSlinky.babelTypes.mod.ThisExpression_
-import typingsSlinky.babelTypes.mod.ThisTypeAnnotation_
-import typingsSlinky.babelTypes.mod.ThrowStatement_
-import typingsSlinky.babelTypes.mod.TryStatement_
-import typingsSlinky.babelTypes.mod.TupleTypeAnnotation_
-import typingsSlinky.babelTypes.mod.TypeAlias_
-import typingsSlinky.babelTypes.mod.TypeAnnotation_
-import typingsSlinky.babelTypes.mod.TypeCastExpression_
-import typingsSlinky.babelTypes.mod.TypeParameterDeclaration_
-import typingsSlinky.babelTypes.mod.TypeParameterInstantiation_
-import typingsSlinky.babelTypes.mod.TypeofTypeAnnotation_
-import typingsSlinky.babelTypes.mod.UnaryExpression_
-import typingsSlinky.babelTypes.mod.UnaryLike
-import typingsSlinky.babelTypes.mod.UnionTypeAnnotation_
-import typingsSlinky.babelTypes.mod.UpdateExpression_
-import typingsSlinky.babelTypes.mod.UserWhitespacable
-import typingsSlinky.babelTypes.mod.VariableDeclaration_
-import typingsSlinky.babelTypes.mod.VariableDeclarator_
-import typingsSlinky.babelTypes.mod.VoidTypeAnnotation_
-import typingsSlinky.babelTypes.mod.While
-import typingsSlinky.babelTypes.mod.WhileStatement_
-import typingsSlinky.babelTypes.mod.WithStatement_
-import typingsSlinky.babelTypes.mod.YieldExpression_
+import typingsSlinky.babelTypes.ts36Mod.AnyTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.ArrayExpression_
+import typingsSlinky.babelTypes.ts36Mod.ArrayPattern_
+import typingsSlinky.babelTypes.ts36Mod.ArrayTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.ArrowFunctionExpression_
+import typingsSlinky.babelTypes.ts36Mod.AssignmentExpression_
+import typingsSlinky.babelTypes.ts36Mod.AssignmentPattern_
+import typingsSlinky.babelTypes.ts36Mod.AwaitExpression_
+import typingsSlinky.babelTypes.ts36Mod.Binary
+import typingsSlinky.babelTypes.ts36Mod.BinaryExpression_
+import typingsSlinky.babelTypes.ts36Mod.BindExpression_
+import typingsSlinky.babelTypes.ts36Mod.Block
+import typingsSlinky.babelTypes.ts36Mod.BlockParent
+import typingsSlinky.babelTypes.ts36Mod.BlockStatement_
+import typingsSlinky.babelTypes.ts36Mod.BooleanLiteralTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.BooleanLiteral_
+import typingsSlinky.babelTypes.ts36Mod.BooleanTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.BreakStatement_
+import typingsSlinky.babelTypes.ts36Mod.CallExpression_
+import typingsSlinky.babelTypes.ts36Mod.CatchClause_
+import typingsSlinky.babelTypes.ts36Mod.Class
+import typingsSlinky.babelTypes.ts36Mod.ClassBody_
+import typingsSlinky.babelTypes.ts36Mod.ClassDeclaration_
+import typingsSlinky.babelTypes.ts36Mod.ClassExpression_
+import typingsSlinky.babelTypes.ts36Mod.ClassImplements_
+import typingsSlinky.babelTypes.ts36Mod.ClassMethod_
+import typingsSlinky.babelTypes.ts36Mod.ClassProperty_
+import typingsSlinky.babelTypes.ts36Mod.CompletionStatement
+import typingsSlinky.babelTypes.ts36Mod.Conditional
+import typingsSlinky.babelTypes.ts36Mod.ConditionalExpression_
+import typingsSlinky.babelTypes.ts36Mod.ContinueStatement_
+import typingsSlinky.babelTypes.ts36Mod.DebuggerStatement_
+import typingsSlinky.babelTypes.ts36Mod.Declaration
+import typingsSlinky.babelTypes.ts36Mod.DeclareClass_
+import typingsSlinky.babelTypes.ts36Mod.DeclareFunction_
+import typingsSlinky.babelTypes.ts36Mod.DeclareInterface_
+import typingsSlinky.babelTypes.ts36Mod.DeclareModule_
+import typingsSlinky.babelTypes.ts36Mod.DeclareTypeAlias_
+import typingsSlinky.babelTypes.ts36Mod.DeclareVariable_
+import typingsSlinky.babelTypes.ts36Mod.Decorator_
+import typingsSlinky.babelTypes.ts36Mod.DirectiveLiteral_
+import typingsSlinky.babelTypes.ts36Mod.Directive_
+import typingsSlinky.babelTypes.ts36Mod.DoExpression_
+import typingsSlinky.babelTypes.ts36Mod.DoWhileStatement_
+import typingsSlinky.babelTypes.ts36Mod.EmptyStatement_
+import typingsSlinky.babelTypes.ts36Mod.ExistentialTypeParam_
+import typingsSlinky.babelTypes.ts36Mod.ExportAllDeclaration_
+import typingsSlinky.babelTypes.ts36Mod.ExportDeclaration
+import typingsSlinky.babelTypes.ts36Mod.ExportDefaultDeclaration_
+import typingsSlinky.babelTypes.ts36Mod.ExportDefaultSpecifier_
+import typingsSlinky.babelTypes.ts36Mod.ExportNamedDeclaration_
+import typingsSlinky.babelTypes.ts36Mod.ExportNamespaceSpecifier_
+import typingsSlinky.babelTypes.ts36Mod.ExportSpecifier_
+import typingsSlinky.babelTypes.ts36Mod.Expression
+import typingsSlinky.babelTypes.ts36Mod.ExpressionStatement_
+import typingsSlinky.babelTypes.ts36Mod.ExpressionWrapper
+import typingsSlinky.babelTypes.ts36Mod.File_
+import typingsSlinky.babelTypes.ts36Mod.Flow
+import typingsSlinky.babelTypes.ts36Mod.FlowBaseAnnotation
+import typingsSlinky.babelTypes.ts36Mod.FlowDeclaration
+import typingsSlinky.babelTypes.ts36Mod.For
+import typingsSlinky.babelTypes.ts36Mod.ForInStatement_
+import typingsSlinky.babelTypes.ts36Mod.ForOfStatement_
+import typingsSlinky.babelTypes.ts36Mod.ForStatement_
+import typingsSlinky.babelTypes.ts36Mod.ForXStatement
+import typingsSlinky.babelTypes.ts36Mod.Function
+import typingsSlinky.babelTypes.ts36Mod.FunctionDeclaration_
+import typingsSlinky.babelTypes.ts36Mod.FunctionExpression_
+import typingsSlinky.babelTypes.ts36Mod.FunctionParent
+import typingsSlinky.babelTypes.ts36Mod.FunctionTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.FunctionTypeParam_
+import typingsSlinky.babelTypes.ts36Mod.GenericTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.Identifier_
+import typingsSlinky.babelTypes.ts36Mod.IfStatement_
+import typingsSlinky.babelTypes.ts36Mod.Immutable
+import typingsSlinky.babelTypes.ts36Mod.ImportDeclaration_
+import typingsSlinky.babelTypes.ts36Mod.ImportDefaultSpecifier_
+import typingsSlinky.babelTypes.ts36Mod.ImportNamespaceSpecifier_
+import typingsSlinky.babelTypes.ts36Mod.ImportSpecifier_
+import typingsSlinky.babelTypes.ts36Mod.InterfaceDeclaration_
+import typingsSlinky.babelTypes.ts36Mod.InterfaceExtends_
+import typingsSlinky.babelTypes.ts36Mod.IntersectionTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.JSX
+import typingsSlinky.babelTypes.ts36Mod.JSXAttribute_
+import typingsSlinky.babelTypes.ts36Mod.JSXClosingElement_
+import typingsSlinky.babelTypes.ts36Mod.JSXElement_
+import typingsSlinky.babelTypes.ts36Mod.JSXEmptyExpression_
+import typingsSlinky.babelTypes.ts36Mod.JSXExpressionContainer_
+import typingsSlinky.babelTypes.ts36Mod.JSXIdentifier_
+import typingsSlinky.babelTypes.ts36Mod.JSXMemberExpression_
+import typingsSlinky.babelTypes.ts36Mod.JSXNamespacedName_
+import typingsSlinky.babelTypes.ts36Mod.JSXOpeningElement_
+import typingsSlinky.babelTypes.ts36Mod.JSXSpreadAttribute_
+import typingsSlinky.babelTypes.ts36Mod.JSXText_
+import typingsSlinky.babelTypes.ts36Mod.LVal
+import typingsSlinky.babelTypes.ts36Mod.LabeledStatement_
+import typingsSlinky.babelTypes.ts36Mod.Literal
+import typingsSlinky.babelTypes.ts36Mod.LogicalExpression_
+import typingsSlinky.babelTypes.ts36Mod.Loop
+import typingsSlinky.babelTypes.ts36Mod.MemberExpression_
+import typingsSlinky.babelTypes.ts36Mod.MetaProperty_
+import typingsSlinky.babelTypes.ts36Mod.Method
+import typingsSlinky.babelTypes.ts36Mod.MixedTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.ModuleDeclaration
+import typingsSlinky.babelTypes.ts36Mod.ModuleSpecifier
+import typingsSlinky.babelTypes.ts36Mod.NewExpression_
+import typingsSlinky.babelTypes.ts36Mod.Noop_
+import typingsSlinky.babelTypes.ts36Mod.NullLiteralTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.NullLiteral_
+import typingsSlinky.babelTypes.ts36Mod.NullableTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.NumberTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.NumericLiteralTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.NumericLiteral_
+import typingsSlinky.babelTypes.ts36Mod.ObjectExpression_
+import typingsSlinky.babelTypes.ts36Mod.ObjectMember
+import typingsSlinky.babelTypes.ts36Mod.ObjectMethod_
+import typingsSlinky.babelTypes.ts36Mod.ObjectPattern_
+import typingsSlinky.babelTypes.ts36Mod.ObjectProperty_
+import typingsSlinky.babelTypes.ts36Mod.ObjectTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.ObjectTypeCallProperty_
+import typingsSlinky.babelTypes.ts36Mod.ObjectTypeIndexer_
+import typingsSlinky.babelTypes.ts36Mod.ObjectTypeProperty_
+import typingsSlinky.babelTypes.ts36Mod.ParenthesizedExpression_
+import typingsSlinky.babelTypes.ts36Mod.Pattern
+import typingsSlinky.babelTypes.ts36Mod.Program_
+import typingsSlinky.babelTypes.ts36Mod.Property
+import typingsSlinky.babelTypes.ts36Mod.Pureish
+import typingsSlinky.babelTypes.ts36Mod.QualifiedTypeIdentifier_
+import typingsSlinky.babelTypes.ts36Mod.RegExpLiteral_
+import typingsSlinky.babelTypes.ts36Mod.RestElement_
+import typingsSlinky.babelTypes.ts36Mod.RestProperty_
+import typingsSlinky.babelTypes.ts36Mod.ReturnStatement_
+import typingsSlinky.babelTypes.ts36Mod.Scopable
+import typingsSlinky.babelTypes.ts36Mod.SequenceExpression_
+import typingsSlinky.babelTypes.ts36Mod.SpreadElement_
+import typingsSlinky.babelTypes.ts36Mod.SpreadProperty_
+import typingsSlinky.babelTypes.ts36Mod.Statement
+import typingsSlinky.babelTypes.ts36Mod.StringLiteralTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.StringLiteral_
+import typingsSlinky.babelTypes.ts36Mod.StringTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.Super
+import typingsSlinky.babelTypes.ts36Mod.SwitchCase_
+import typingsSlinky.babelTypes.ts36Mod.SwitchStatement_
+import typingsSlinky.babelTypes.ts36Mod.TaggedTemplateExpression_
+import typingsSlinky.babelTypes.ts36Mod.TemplateElement_
+import typingsSlinky.babelTypes.ts36Mod.TemplateLiteral_
+import typingsSlinky.babelTypes.ts36Mod.Terminatorless
+import typingsSlinky.babelTypes.ts36Mod.ThisExpression_
+import typingsSlinky.babelTypes.ts36Mod.ThisTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.ThrowStatement_
+import typingsSlinky.babelTypes.ts36Mod.TryStatement_
+import typingsSlinky.babelTypes.ts36Mod.TupleTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.TypeAlias_
+import typingsSlinky.babelTypes.ts36Mod.TypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.TypeCastExpression_
+import typingsSlinky.babelTypes.ts36Mod.TypeParameterDeclaration_
+import typingsSlinky.babelTypes.ts36Mod.TypeParameterInstantiation_
+import typingsSlinky.babelTypes.ts36Mod.TypeofTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.UnaryExpression_
+import typingsSlinky.babelTypes.ts36Mod.UnaryLike
+import typingsSlinky.babelTypes.ts36Mod.UnionTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.UpdateExpression_
+import typingsSlinky.babelTypes.ts36Mod.UserWhitespacable
+import typingsSlinky.babelTypes.ts36Mod.VariableDeclaration_
+import typingsSlinky.babelTypes.ts36Mod.VariableDeclarator_
+import typingsSlinky.babelTypes.ts36Mod.VoidTypeAnnotation_
+import typingsSlinky.babelTypes.ts36Mod.While
+import typingsSlinky.babelTypes.ts36Mod.WhileStatement_
+import typingsSlinky.babelTypes.ts36Mod.WithStatement_
+import typingsSlinky.babelTypes.ts36Mod.YieldExpression_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -193,15 +193,15 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var AwaitExpression: js.UndefOr[VisitNode[S, AwaitExpression_]] = js.native
   
-  var Binary: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Binary]] = js.native
+  var Binary: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Binary]] = js.native
   
   var BinaryExpression: js.UndefOr[VisitNode[S, BinaryExpression_]] = js.native
   
   var BindExpression: js.UndefOr[VisitNode[S, BindExpression_]] = js.native
   
-  var Block: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Block]] = js.native
+  var Block: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Block]] = js.native
   
-  var BlockParent: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.BlockParent]] = js.native
+  var BlockParent: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.BlockParent]] = js.native
   
   var BlockStatement: js.UndefOr[VisitNode[S, BlockStatement_]] = js.native
   
@@ -217,7 +217,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var CatchClause: js.UndefOr[VisitNode[S, CatchClause_]] = js.native
   
-  var Class: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Class]] = js.native
+  var Class: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Class]] = js.native
   
   var ClassBody: js.UndefOr[VisitNode[S, ClassBody_]] = js.native
   
@@ -231,9 +231,9 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var ClassProperty: js.UndefOr[VisitNode[S, ClassProperty_]] = js.native
   
-  var CompletionStatement: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.CompletionStatement]] = js.native
+  var CompletionStatement: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.CompletionStatement]] = js.native
   
-  var Conditional: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Conditional]] = js.native
+  var Conditional: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Conditional]] = js.native
   
   var ConditionalExpression: js.UndefOr[VisitNode[S, ConditionalExpression_]] = js.native
   
@@ -241,7 +241,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var DebuggerStatement: js.UndefOr[VisitNode[S, DebuggerStatement_]] = js.native
   
-  var Declaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Declaration]] = js.native
+  var Declaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Declaration]] = js.native
   
   var DeclareClass: js.UndefOr[VisitNode[S, DeclareClass_]] = js.native
   
@@ -271,7 +271,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var ExportAllDeclaration: js.UndefOr[VisitNode[S, ExportAllDeclaration_]] = js.native
   
-  var ExportDeclaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ExportDeclaration]] = js.native
+  var ExportDeclaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.ExportDeclaration]] = js.native
   
   var ExportDefaultDeclaration: js.UndefOr[VisitNode[S, ExportDefaultDeclaration_]] = js.native
   
@@ -283,21 +283,21 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var ExportSpecifier: js.UndefOr[VisitNode[S, ExportSpecifier_]] = js.native
   
-  var Expression: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Expression]] = js.native
+  var Expression: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Expression]] = js.native
   
   var ExpressionStatement: js.UndefOr[VisitNode[S, ExpressionStatement_]] = js.native
   
-  var ExpressionWrapper: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ExpressionWrapper]] = js.native
+  var ExpressionWrapper: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.ExpressionWrapper]] = js.native
   
   var File: js.UndefOr[VisitNode[S, File_]] = js.native
   
-  var Flow: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Flow]] = js.native
+  var Flow: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Flow]] = js.native
   
-  var FlowBaseAnnotation: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.FlowBaseAnnotation]] = js.native
+  var FlowBaseAnnotation: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.FlowBaseAnnotation]] = js.native
   
-  var FlowDeclaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.FlowDeclaration]] = js.native
+  var FlowDeclaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.FlowDeclaration]] = js.native
   
-  var For: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.For]] = js.native
+  var For: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.For]] = js.native
   
   var ForInStatement: js.UndefOr[VisitNode[S, ForInStatement_]] = js.native
   
@@ -305,15 +305,15 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var ForStatement: js.UndefOr[VisitNode[S, ForStatement_]] = js.native
   
-  var ForXStatement: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ForXStatement]] = js.native
+  var ForXStatement: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.ForXStatement]] = js.native
   
-  var Function: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Function]] = js.native
+  var Function: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Function]] = js.native
   
   var FunctionDeclaration: js.UndefOr[VisitNode[S, FunctionDeclaration_]] = js.native
   
   var FunctionExpression: js.UndefOr[VisitNode[S, FunctionExpression_]] = js.native
   
-  var FunctionParent: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.FunctionParent]] = js.native
+  var FunctionParent: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.FunctionParent]] = js.native
   
   var FunctionTypeAnnotation: js.UndefOr[VisitNode[S, FunctionTypeAnnotation_]] = js.native
   
@@ -325,7 +325,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var IfStatement: js.UndefOr[VisitNode[S, IfStatement_]] = js.native
   
-  var Immutable: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Immutable]] = js.native
+  var Immutable: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Immutable]] = js.native
   
   var ImportDeclaration: js.UndefOr[VisitNode[S, ImportDeclaration_]] = js.native
   
@@ -341,7 +341,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var IntersectionTypeAnnotation: js.UndefOr[VisitNode[S, IntersectionTypeAnnotation_]] = js.native
   
-  var JSX: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.JSX]] = js.native
+  var JSX: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.JSX]] = js.native
   
   var JSXAttribute: js.UndefOr[VisitNode[S, JSXAttribute_]] = js.native
   
@@ -365,27 +365,27 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var JSXText: js.UndefOr[VisitNode[S, JSXText_]] = js.native
   
-  var LVal: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.LVal]] = js.native
+  var LVal: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.LVal]] = js.native
   
   var LabeledStatement: js.UndefOr[VisitNode[S, LabeledStatement_]] = js.native
   
-  var Literal: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Literal]] = js.native
+  var Literal: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Literal]] = js.native
   
   var LogicalExpression: js.UndefOr[VisitNode[S, LogicalExpression_]] = js.native
   
-  var Loop: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Loop]] = js.native
+  var Loop: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Loop]] = js.native
   
   var MemberExpression: js.UndefOr[VisitNode[S, MemberExpression_]] = js.native
   
   var MetaProperty: js.UndefOr[VisitNode[S, MetaProperty_]] = js.native
   
-  var Method: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Method]] = js.native
+  var Method: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Method]] = js.native
   
   var MixedTypeAnnotation: js.UndefOr[VisitNode[S, MixedTypeAnnotation_]] = js.native
   
-  var ModuleDeclaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ModuleDeclaration]] = js.native
+  var ModuleDeclaration: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.ModuleDeclaration]] = js.native
   
-  var ModuleSpecifier: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ModuleSpecifier]] = js.native
+  var ModuleSpecifier: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.ModuleSpecifier]] = js.native
   
   var NewExpression: js.UndefOr[VisitNode[S, NewExpression_]] = js.native
   
@@ -405,7 +405,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var ObjectExpression: js.UndefOr[VisitNode[S, ObjectExpression_]] = js.native
   
-  var ObjectMember: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.ObjectMember]] = js.native
+  var ObjectMember: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.ObjectMember]] = js.native
   
   var ObjectMethod: js.UndefOr[VisitNode[S, ObjectMethod_]] = js.native
   
@@ -423,13 +423,13 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var ParenthesizedExpression: js.UndefOr[VisitNode[S, ParenthesizedExpression_]] = js.native
   
-  var Pattern: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Pattern]] = js.native
+  var Pattern: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Pattern]] = js.native
   
   var Program: js.UndefOr[VisitNode[S, Program_]] = js.native
   
-  var Property: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Property]] = js.native
+  var Property: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Property]] = js.native
   
-  var Pureish: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Pureish]] = js.native
+  var Pureish: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Pureish]] = js.native
   
   var QualifiedTypeIdentifier: js.UndefOr[VisitNode[S, QualifiedTypeIdentifier_]] = js.native
   
@@ -441,7 +441,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var ReturnStatement: js.UndefOr[VisitNode[S, ReturnStatement_]] = js.native
   
-  var Scopable: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Scopable]] = js.native
+  var Scopable: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Scopable]] = js.native
   
   var Scope: js.UndefOr[VisitNode[S, Scopable]] = js.native
   
@@ -451,7 +451,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var SpreadProperty: js.UndefOr[VisitNode[S, SpreadProperty_]] = js.native
   
-  var Statement: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Statement]] = js.native
+  var Statement: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Statement]] = js.native
   
   var StringLiteral: js.UndefOr[VisitNode[S, StringLiteral_]] = js.native
   
@@ -459,7 +459,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var StringTypeAnnotation: js.UndefOr[VisitNode[S, StringTypeAnnotation_]] = js.native
   
-  var Super: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Super]] = js.native
+  var Super: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Super]] = js.native
   
   var SwitchCase: js.UndefOr[VisitNode[S, SwitchCase_]] = js.native
   
@@ -471,7 +471,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var TemplateLiteral: js.UndefOr[VisitNode[S, TemplateLiteral_]] = js.native
   
-  var Terminatorless: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.Terminatorless]] = js.native
+  var Terminatorless: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.Terminatorless]] = js.native
   
   var ThisExpression: js.UndefOr[VisitNode[S, ThisExpression_]] = js.native
   
@@ -497,13 +497,13 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var UnaryExpression: js.UndefOr[VisitNode[S, UnaryExpression_]] = js.native
   
-  var UnaryLike: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.UnaryLike]] = js.native
+  var UnaryLike: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.UnaryLike]] = js.native
   
   var UnionTypeAnnotation: js.UndefOr[VisitNode[S, UnionTypeAnnotation_]] = js.native
   
   var UpdateExpression: js.UndefOr[VisitNode[S, UpdateExpression_]] = js.native
   
-  var UserWhitespacable: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.UserWhitespacable]] = js.native
+  var UserWhitespacable: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.UserWhitespacable]] = js.native
   
   var VariableDeclaration: js.UndefOr[VisitNode[S, VariableDeclaration_]] = js.native
   
@@ -511,7 +511,7 @@ trait Visitor[S] extends VisitNodeObject[Node] {
   
   var VoidTypeAnnotation: js.UndefOr[VisitNode[S, VoidTypeAnnotation_]] = js.native
   
-  var While: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.mod.While]] = js.native
+  var While: js.UndefOr[VisitNode[S, typingsSlinky.babelTypes.ts36Mod.While]] = js.native
   
   var WhileStatement: js.UndefOr[VisitNode[S, WhileStatement_]] = js.native
   

@@ -11,11 +11,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object abstractPureComponentMod extends js.Object {
   
   @js.native
-  abstract class AbstractPureComponent[P, S] ()
+  abstract class AbstractPureComponent[P, S] protected ()
     extends Component[P, S, js.Any] {
     def this(props: P) = this()
     def this(props: P, context: js.Any) = this()
-    def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
     
     /**
       * Clear all known timeouts.

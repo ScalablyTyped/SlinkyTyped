@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined @blueprintjs/core.@blueprintjs/core/lib/esm/components/toast/toast.IToastProps & {  key :string | undefined} */
+/* Inlined @blueprintjs/core.@blueprintjs/core/lib/esm/components/toast/toast.IToastProps & {  key :string} */
 @js.native
 trait IToastOptions extends js.Object {
   
@@ -31,7 +31,7 @@ trait IToastOptions extends js.Object {
   /** Visual intent color to apply to element. */
   var intent: js.UndefOr[Intent] = js.native
   
-  var key: js.UndefOr[String] = js.native
+  var key: String = js.native
   
   /** Message to display in the body of the toast. */
   var message: ReactElement = js.native
@@ -52,8 +52,8 @@ trait IToastOptions extends js.Object {
 object IToastOptions {
   
   @scala.inline
-  def apply(): IToastOptions = {
-    val __obj = js.Dynamic.literal()
+  def apply(key: String): IToastOptions = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
     __obj.asInstanceOf[IToastOptions]
   }
   
@@ -71,6 +71,9 @@ object IToastOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAction(value: IActionProps with ILinkProps): Self = this.set("action", value.asInstanceOf[js.Any])
@@ -101,12 +104,6 @@ object IToastOptions {
     
     @scala.inline
     def deleteIntent: Self = this.set("intent", js.undefined)
-    
-    @scala.inline
-    def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteKey: Self = this.set("key", js.undefined)
     
     @scala.inline
     def setMessage(value: ReactElement): Self = this.set("message", value.asInstanceOf[js.Any])

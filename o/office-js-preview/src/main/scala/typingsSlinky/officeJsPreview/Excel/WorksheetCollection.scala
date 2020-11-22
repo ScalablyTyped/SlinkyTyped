@@ -40,7 +40,7 @@ trait WorksheetCollection extends ClientObject {
     
     **Note**: This API is currently only supported for Office on Windows and Mac.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * [Api set: ExcelApiAddFromBase64String 1.1]
     * @beta
     *
     * @param base64File Required. The base64-encoded string representing the source workbook file.

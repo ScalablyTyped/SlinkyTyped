@@ -32,13 +32,19 @@ import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.react.mod.PointerEventHandler
 import typingsSlinky.react.mod.ReactEventHandler
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.reactMentions.anon.Target
+import typingsSlinky.reactMentions.reactMentionsStrings.`additions removals`
 import typingsSlinky.reactMentions.reactMentionsStrings.`additions text`
 import typingsSlinky.reactMentions.reactMentionsStrings.`inline`
+import typingsSlinky.reactMentions.reactMentionsStrings.`removals additions`
+import typingsSlinky.reactMentions.reactMentionsStrings.`removals text`
+import typingsSlinky.reactMentions.reactMentionsStrings.`text additions`
+import typingsSlinky.reactMentions.reactMentionsStrings.`text removals`
 import typingsSlinky.reactMentions.reactMentionsStrings.additions
 import typingsSlinky.reactMentions.reactMentionsStrings.all
 import typingsSlinky.reactMentions.reactMentionsStrings.ascending
@@ -171,7 +177,9 @@ trait MentionsInputProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -249,7 +257,7 @@ trait MentionsInputProps extends js.Object {
   
   var inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
   
-  var inputRef: js.UndefOr[ReactRef[HTMLInputElement | HTMLTextAreaElement]] = js.native
+  var inputRef: js.UndefOr[Ref[HTMLInputElement | HTMLTextAreaElement]] = js.native
   
   var is: js.UndefOr[String] = js.native
   
@@ -760,7 +768,9 @@ object MentionsInputProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -991,10 +1001,19 @@ object MentionsInputProps {
     def deleteInputMode: Self = this.set("inputMode", js.undefined)
     
     @scala.inline
-    def setInputRef(value: ReactRef[HTMLInputElement | HTMLTextAreaElement]): Self = this.set("inputRef", value.asInstanceOf[js.Any])
+    def setInputRefRefObject(value: ReactRef[HTMLInputElement | HTMLTextAreaElement]): Self = this.set("inputRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInputRefFunction1(value: /* instance */ HTMLInputElement | HTMLTextAreaElement | Null => Unit): Self = this.set("inputRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setInputRef(value: Ref[HTMLInputElement | HTMLTextAreaElement]): Self = this.set("inputRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInputRef: Self = this.set("inputRef", js.undefined)
+    
+    @scala.inline
+    def setInputRefNull: Self = this.set("inputRef", null)
     
     @scala.inline
     def setIs(value: String): Self = this.set("is", value.asInstanceOf[js.Any])

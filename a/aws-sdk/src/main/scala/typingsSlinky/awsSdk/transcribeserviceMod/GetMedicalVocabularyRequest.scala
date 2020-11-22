@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetMedicalVocabularyRequest extends js.Object {
   
   /**
-    * The name of the vocabulary you are trying to get information about. The value you enter for this request is case-sensitive. 
+    * The name of the vocabulary that you want information about. The value is case sensitive. 
     */
   var VocabularyName: typingsSlinky.awsSdk.transcribeserviceMod.VocabularyName = js.native
 }

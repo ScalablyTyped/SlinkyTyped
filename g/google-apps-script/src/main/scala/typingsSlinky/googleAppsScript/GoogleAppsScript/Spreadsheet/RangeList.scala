@@ -2,17 +2,12 @@ package typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet
 
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
 import typingsSlinky.googleAppsScript.anon.CommentsOnly
-import typingsSlinky.googleAppsScript.googleAppsScriptStrings.`line-through`
-import typingsSlinky.googleAppsScript.googleAppsScriptStrings.bold
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.bottom
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.center
-import typingsSlinky.googleAppsScript.googleAppsScriptStrings.italic
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.left
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.middle
-import typingsSlinky.googleAppsScript.googleAppsScriptStrings.none
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.normal
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.top
-import typingsSlinky.googleAppsScript.googleAppsScriptStrings.underline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -80,26 +75,15 @@ trait RangeList extends js.Object {
   def setFontFamily(fontFamily: String): RangeList = js.native
   
   def setFontLine(): RangeList = js.native
-  @JSName("setFontLine")
-  def setFontLine_linethrough(fontLine: `line-through`): RangeList = js.native
-  @JSName("setFontLine")
-  def setFontLine_none(fontLine: none): RangeList = js.native
-  @JSName("setFontLine")
-  def setFontLine_underline(fontLine: underline): RangeList = js.native
+  def setFontLine(fontLine: FontLine): RangeList = js.native
   
   def setFontSize(size: Integer): RangeList = js.native
   
   def setFontStyle(): RangeList = js.native
-  @JSName("setFontStyle")
-  def setFontStyle_italic(fontStyle: italic): RangeList = js.native
-  @JSName("setFontStyle")
-  def setFontStyle_normal(fontStyle: normal): RangeList = js.native
+  def setFontStyle(fontStyle: FontStyle): RangeList = js.native
   
   def setFontWeight(): RangeList = js.native
-  @JSName("setFontWeight")
-  def setFontWeight_bold(fontWeight: bold): RangeList = js.native
-  @JSName("setFontWeight")
-  def setFontWeight_normal(fontWeight: normal): RangeList = js.native
+  def setFontWeight(fontWeight: FontWeight): RangeList = js.native
   
   def setFormula(formula: String): RangeList = js.native
   

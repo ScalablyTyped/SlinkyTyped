@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IosHomeScreenPage extends js.Object {
   
   // Name of the page
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // A list of apps and folders to appear on a page. This collection can contain a maximum of 500 elements.
   var icons: js.UndefOr[js.Array[IosHomeScreenItem]] = js.native
@@ -37,10 +37,13 @@ object IosHomeScreenPage {
     }
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
     
     @scala.inline
     def setIconsVarargs(value: IosHomeScreenItem*): Self = this.set("icons", js.Array(value :_*))

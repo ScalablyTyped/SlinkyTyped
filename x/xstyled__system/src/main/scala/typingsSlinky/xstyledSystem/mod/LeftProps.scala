@@ -9,7 +9,7 @@ trait LeftProps[TLength] extends js.Object {
   
   val left: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object LeftProps {
     }
     
     @scala.inline
+    def setLeftVarargs(value: js.Any*): Self = this.set("left", js.Array(value :_*))
+    
+    @scala.inline
     def setLeft(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLength> */ _
         ]
     ): Self = this.set("left", value.asInstanceOf[js.Any])
     

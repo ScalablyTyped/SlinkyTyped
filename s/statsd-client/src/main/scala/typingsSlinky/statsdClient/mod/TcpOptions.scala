@@ -18,8 +18,8 @@ trait TcpOptions extends CommonOptions {
   var port: js.UndefOr[Double] = js.native
   
   /**
-    * Number of timeouts in which the socket auto-closes if it 
-    * has been inactive. (default 10; 1 to auto-close after a 
+    * Number of timeouts in which the socket auto-closes if it
+    * has been inactive. (default 10; 1 to auto-close after a
     * single timeout).
     */
   var socketTimeoutsToClose: Double = js.native

@@ -59,7 +59,7 @@ trait BreadcrumbRender extends js.Object {
   var locale: js.UndefOr[LocaleType] = js.native
   
   /**
-    * logo url
+    *@name logo url
     */
   var logo: js.UndefOr[ReactElement | WithFalse[js.Function0[ReactElement]]] = js.native
   
@@ -74,7 +74,7 @@ trait BreadcrumbRender extends js.Object {
   var onCollapse: js.UndefOr[js.Function1[/* collapsed */ Boolean, Unit]] = js.native
   
   /**
-    * 页面切换的时候触发
+    *@name 页面切换的时候触发
     */
   var onPageChange: js.UndefOr[
     js.Function1[

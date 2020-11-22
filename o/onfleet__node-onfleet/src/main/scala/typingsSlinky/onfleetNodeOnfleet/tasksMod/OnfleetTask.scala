@@ -1,6 +1,7 @@
 package typingsSlinky.onfleetNodeOnfleet.tasksMod
 
 import typingsSlinky.onfleetNodeOnfleet.anon.Actions
+import typingsSlinky.onfleetNodeOnfleet.anon.Captured
 import typingsSlinky.onfleetNodeOnfleet.anon.Checksum
 import typingsSlinky.onfleetNodeOnfleet.anon.Organization
 import typingsSlinky.onfleetNodeOnfleet.anon.RecipientName
@@ -13,6 +14,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait OnfleetTask extends js.Object {
+  
+  var barcodes: js.UndefOr[Captured] = js.native
   
   var completeAfter: Double = js.native
   
@@ -213,6 +216,12 @@ object OnfleetTask {
     
     @scala.inline
     def setTrackingViewed(value: Boolean): Self = this.set("trackingViewed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBarcodes(value: Captured): Self = this.set("barcodes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBarcodes: Self = this.set("barcodes", js.undefined)
     
     @scala.inline
     def setWorker(value: String): Self = this.set("worker", value.asInstanceOf[js.Any])

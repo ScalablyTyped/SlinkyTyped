@@ -44,18 +44,22 @@ class EventTarget protected () extends CustomResource {
   val ecsTarget: Output_[js.UndefOr[EventTargetEcsTarget]] = js.native
   
   /**
-    * Valid JSON text passed to the target.
+    * The event bus to associate with the rule. If you omit this, the `default` event bus is used.
+    */
+  val eventBusName: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * Valid JSON text passed to the target. Conflicts with `inputPath` and `inputTransformer`.
     */
   val input: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * The value of the [JSONPath](http://goessner.net/articles/JsonPath/)
-    * that is used for extracting part of the matched event when passing it to the target.
+    * The value of the [JSONPath](http://goessner.net/articles/JsonPath/) that is used for extracting part of the matched event when passing it to the target. Conflicts with `input` and `inputTransformer`.
     */
   val inputPath: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * Parameters used when you are providing a custom input to a target based on certain event data.
+    * Parameters used when you are providing a custom input to a target based on certain event data. Conflicts with `input` and `inputPath`.
     */
   val inputTransformer: Output_[js.UndefOr[EventTargetInputTransformer]] = js.native
   

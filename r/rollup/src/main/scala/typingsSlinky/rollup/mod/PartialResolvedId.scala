@@ -5,6 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined parent std.Partial<rollup.rollup.PartialNull<rollup.rollup.ModuleOptions>> */
 @js.native
 trait PartialResolvedId extends _ResolveIdResult {
   
@@ -12,9 +13,11 @@ trait PartialResolvedId extends _ResolveIdResult {
   
   var id: String = js.native
   
+  var meta: js.UndefOr[CustomPluginOptions | Null] = js.native
+  
   var moduleSideEffects: js.UndefOr[Boolean | `no-treeshake` | Null] = js.native
   
-  var syntheticNamedExports: js.UndefOr[Boolean | String] = js.native
+  var syntheticNamedExports: js.UndefOr[Boolean | String | Null] = js.native
 }
 object PartialResolvedId {
   
@@ -49,6 +52,15 @@ object PartialResolvedId {
     def deleteExternal: Self = this.set("external", js.undefined)
     
     @scala.inline
+    def setMeta(value: CustomPluginOptions): Self = this.set("meta", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMeta: Self = this.set("meta", js.undefined)
+    
+    @scala.inline
+    def setMetaNull: Self = this.set("meta", null)
+    
+    @scala.inline
     def setModuleSideEffects(value: Boolean | `no-treeshake`): Self = this.set("moduleSideEffects", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -62,5 +74,8 @@ object PartialResolvedId {
     
     @scala.inline
     def deleteSyntheticNamedExports: Self = this.set("syntheticNamedExports", js.undefined)
+    
+    @scala.inline
+    def setSyntheticNamedExportsNull: Self = this.set("syntheticNamedExports", null)
   }
 }

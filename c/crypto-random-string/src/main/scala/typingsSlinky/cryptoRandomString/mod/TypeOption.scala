@@ -1,6 +1,8 @@
 package typingsSlinky.cryptoRandomString.mod
 
+import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.`ascii-printable`
 import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.`url-safe`
+import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.alphanumeric
 import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.base64
 import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.distinguishable
 import typingsSlinky.cryptoRandomString.cryptoRandomStringStrings.hex
@@ -17,6 +19,8 @@ trait TypeOption extends js.Object {
   	Cannot be set at the same time as the `characters` option.
   	@default 'hex'
   	The `distinguishable` set contains only uppercase characters that are not easily confused: `CDEHKMPRTUWXY012458`. It can be useful if you need to print out a short string that you'd like users to read and type back in with minimal errors. For example, reading a code off of a screen that needs to be typed into a phone to connect two devices.
+  	The `ascii-printable` set contains all [printable ASCII characters](https://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters): ``!"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~`` Useful for generating passwords where all possible ASCII characters should be used.
+  	The `alphanumeric` set contains uppercase letters, lowercase letters, and digits: `ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789`. Useful for generating [nonce](https://developer.mozilla.org/en-US/docs/Web/API/HTMLOrForeignElement/nonce) values.
   	@example
   	```
   	cryptoRandomString({length: 10});
@@ -29,9 +33,16 @@ trait TypeOption extends js.Object {
   	//=> '8314659141'
   	cryptoRandomString({length: 6, type: 'distinguishable'});
   	//=> 'CDEHKM'
+  	cryptoRandomString({length: 10, type: 'ascii-printable'});
+  	//=> '`#Rt8$IK>B'
+  	
+  	cryptoRandomString({length: 10, type: 'alphanumeric'});
+  	//=> 'DMuKL8YtE7'
   	```
   	*/
-  var `type`: js.UndefOr[hex | base64 | `url-safe` | numeric | distinguishable] = js.native
+  var `type`: js.UndefOr[
+    hex | base64 | `url-safe` | numeric | distinguishable | `ascii-printable` | alphanumeric
+  ] = js.native
 }
 object TypeOption {
   
@@ -57,7 +68,7 @@ object TypeOption {
     }
     
     @scala.inline
-    def setType(value: hex | base64 | `url-safe` | numeric | distinguishable): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: hex | base64 | `url-safe` | numeric | distinguishable | `ascii-printable` | alphanumeric): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)

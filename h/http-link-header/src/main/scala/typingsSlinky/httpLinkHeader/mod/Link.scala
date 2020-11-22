@@ -4,6 +4,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Parse & format HTTP link headers according to RFC 8288
+  */
 @js.native
 trait Link extends js.Object {
   

@@ -1,6 +1,6 @@
 package typingsSlinky.babylon.mod
 
-import typingsSlinky.babelTypes.mod.File_
+import typingsSlinky.babelTypes.ts36Mod.File_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

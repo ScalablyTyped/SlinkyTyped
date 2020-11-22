@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ImportExpression extends PrimaryExpression {
   
   @JSName("kind")
-  var kind_ImportExpression: ImportKeyword = js.native
+  val kind_ImportExpression: ImportKeyword = js.native
 }

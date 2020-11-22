@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("office-ui-fabric-react", "DEFAULT_MASK_CHAR")
 @js.native
-object DEFAULT_MASK_CHAR extends TopLevel[/* "@media screen and (-ms-high-contrast: active)" */ String]
+object DEFAULT_MASK_CHAR extends TopLevel[/* "change" */ String]

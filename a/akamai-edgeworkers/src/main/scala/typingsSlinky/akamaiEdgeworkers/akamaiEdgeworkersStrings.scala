@@ -15,6 +15,12 @@ object akamaiEdgeworkersStrings {
   @scala.inline
   def Strict: Strict = "Strict".asInstanceOf[Strict]
   
+  @scala.inline
+  def byob: byob = "byob".asInstanceOf[byob]
+  
+  @scala.inline
+  def bytes: bytes = "bytes".asInstanceOf[bytes]
+  
   @js.native
   sealed trait Lax extends js.Object
   
@@ -23,4 +29,10 @@ object akamaiEdgeworkersStrings {
   
   @js.native
   sealed trait Strict extends js.Object
+  
+  @js.native
+  sealed trait byob extends js.Object
+  
+  @js.native
+  sealed trait bytes extends js.Object
 }

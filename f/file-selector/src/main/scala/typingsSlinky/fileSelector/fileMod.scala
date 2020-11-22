@@ -1,6 +1,6 @@
 package typingsSlinky.fileSelector
 
-import typingsSlinky.std.File
+import typingsSlinky.std.Blob
 import typingsSlinky.std.Map
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,15 @@ object fileMod extends js.Object {
   def toFileWithPath(file: FileWithPath, path: String): FileWithPath = js.native
   
   @js.native
-  trait FileWithPath extends File {
+  trait DOMFile extends Blob {
+    
+    val lastModified: Double = js.native
+    
+    val name: String = js.native
+  }
+  
+  @js.native
+  trait FileWithPath extends DOMFile {
     
     val path: js.UndefOr[String] = js.native
   }

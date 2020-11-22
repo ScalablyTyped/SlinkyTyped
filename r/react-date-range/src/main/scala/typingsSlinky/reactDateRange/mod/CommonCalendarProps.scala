@@ -1,6 +1,6 @@
 package typingsSlinky.reactDateRange.mod
 
-import typingsSlinky.moment.mod.Moment
+import typingsSlinky.reactDateRange.anon.PartialClassNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CommonCalendarProps extends js.Object {
   
-  /** default: moment.localeData().firstDayOfWeek() */
+  /** Custom class names for elements */
+  var classNames: js.UndefOr[PartialClassNames] = js.native
+  
   var firstDayOfWeek: js.UndefOr[Double] = js.native
   
   /** default: DD/MM/YYY */
@@ -31,7 +33,7 @@ trait CommonCalendarProps extends js.Object {
   var minDate: js.UndefOr[DateInputType] = js.native
   
   /** default: none */
-  var onChange: js.UndefOr[js.Function1[/* range */ Range, Unit]] = js.native
+  var onChange: js.UndefOr[js.Function1[/* range */ OnChangeProps, Unit]] = js.native
   
   /** default: none */
   var onInit: js.UndefOr[js.Function1[/* range */ Range, Unit]] = js.native
@@ -62,6 +64,12 @@ object CommonCalendarProps {
     }
     
     @scala.inline
+    def setClassNames(value: PartialClassNames): Self = this.set("classNames", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassNames: Self = this.set("classNames", js.undefined)
+    
+    @scala.inline
     def setFirstDayOfWeek(value: Double): Self = this.set("firstDayOfWeek", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -80,7 +88,10 @@ object CommonCalendarProps {
     def deleteLang: Self = this.set("lang", js.undefined)
     
     @scala.inline
-    def setMaxDateFunction1(value: /* now */ Moment => AnyDate): Self = this.set("maxDate", js.Any.fromFunction1(value))
+    def setMaxDateDate(value: js.Date): Self = this.set("maxDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMaxDateFunction1(value: /* now */ js.Date => AnyDate): Self = this.set("maxDate", js.Any.fromFunction1(value))
     
     @scala.inline
     def setMaxDate(value: DateInputType): Self = this.set("maxDate", value.asInstanceOf[js.Any])
@@ -89,7 +100,10 @@ object CommonCalendarProps {
     def deleteMaxDate: Self = this.set("maxDate", js.undefined)
     
     @scala.inline
-    def setMinDateFunction1(value: /* now */ Moment => AnyDate): Self = this.set("minDate", js.Any.fromFunction1(value))
+    def setMinDateDate(value: js.Date): Self = this.set("minDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMinDateFunction1(value: /* now */ js.Date => AnyDate): Self = this.set("minDate", js.Any.fromFunction1(value))
     
     @scala.inline
     def setMinDate(value: DateInputType): Self = this.set("minDate", value.asInstanceOf[js.Any])
@@ -98,7 +112,7 @@ object CommonCalendarProps {
     def deleteMinDate: Self = this.set("minDate", js.undefined)
     
     @scala.inline
-    def setOnChange(value: /* range */ Range => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
+    def setOnChange(value: /* range */ OnChangeProps => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)

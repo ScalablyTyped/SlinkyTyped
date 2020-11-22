@@ -7,17 +7,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Invitation extends Entity {
   
-  // The URL user can use to redeem his invitation. Read-Only
-  var inviteRedeemUrl: js.UndefOr[String] = js.native
+  // The URL the user can use to redeem their invitation. Read-only
+  var inviteRedeemUrl: js.UndefOr[NullableOption[String]] = js.native
   
-  // The URL user should be redirected to once the invitation is redeemed. Required.
+  // The URL the user should be redirected to once the invitation is redeemed. Required.
   var inviteRedirectUrl: js.UndefOr[String] = js.native
   
   // The user created as part of the invitation creation. Read-Only
-  var invitedUser: js.UndefOr[User] = js.native
+  var invitedUser: js.UndefOr[NullableOption[User]] = js.native
   
   // The display name of the user being invited.
-  var invitedUserDisplayName: js.UndefOr[String] = js.native
+  var invitedUserDisplayName: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The email address of the user being invited. Required. The following special characters are not permitted in the email
@@ -33,19 +33,19 @@ trait Invitation extends Entity {
     * Additional configuration for the message being sent to the invited user, including customizing message text, language
     * and cc recipient list.
     */
-  var invitedUserMessageInfo: js.UndefOr[InvitedUserMessageInfo] = js.native
+  var invitedUserMessageInfo: js.UndefOr[NullableOption[InvitedUserMessageInfo]] = js.native
   
   /**
     * The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company
     * administrator.
     */
-  var invitedUserType: js.UndefOr[String] = js.native
+  var invitedUserType: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates whether an email should be sent to the user being invited or not. The default is false.
-  var sendInvitationMessage: js.UndefOr[Boolean] = js.native
+  var sendInvitationMessage: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
-  var status: js.UndefOr[String] = js.native
+  var status: js.UndefOr[NullableOption[String]] = js.native
 }
 object Invitation {
   
@@ -71,10 +71,13 @@ object Invitation {
     }
     
     @scala.inline
-    def setInviteRedeemUrl(value: String): Self = this.set("inviteRedeemUrl", value.asInstanceOf[js.Any])
+    def setInviteRedeemUrl(value: NullableOption[String]): Self = this.set("inviteRedeemUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInviteRedeemUrl: Self = this.set("inviteRedeemUrl", js.undefined)
+    
+    @scala.inline
+    def setInviteRedeemUrlNull: Self = this.set("inviteRedeemUrl", null)
     
     @scala.inline
     def setInviteRedirectUrl(value: String): Self = this.set("inviteRedirectUrl", value.asInstanceOf[js.Any])
@@ -83,16 +86,22 @@ object Invitation {
     def deleteInviteRedirectUrl: Self = this.set("inviteRedirectUrl", js.undefined)
     
     @scala.inline
-    def setInvitedUser(value: User): Self = this.set("invitedUser", value.asInstanceOf[js.Any])
+    def setInvitedUser(value: NullableOption[User]): Self = this.set("invitedUser", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInvitedUser: Self = this.set("invitedUser", js.undefined)
     
     @scala.inline
-    def setInvitedUserDisplayName(value: String): Self = this.set("invitedUserDisplayName", value.asInstanceOf[js.Any])
+    def setInvitedUserNull: Self = this.set("invitedUser", null)
+    
+    @scala.inline
+    def setInvitedUserDisplayName(value: NullableOption[String]): Self = this.set("invitedUserDisplayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInvitedUserDisplayName: Self = this.set("invitedUserDisplayName", js.undefined)
+    
+    @scala.inline
+    def setInvitedUserDisplayNameNull: Self = this.set("invitedUserDisplayName", null)
     
     @scala.inline
     def setInvitedUserEmailAddress(value: String): Self = this.set("invitedUserEmailAddress", value.asInstanceOf[js.Any])
@@ -101,27 +110,39 @@ object Invitation {
     def deleteInvitedUserEmailAddress: Self = this.set("invitedUserEmailAddress", js.undefined)
     
     @scala.inline
-    def setInvitedUserMessageInfo(value: InvitedUserMessageInfo): Self = this.set("invitedUserMessageInfo", value.asInstanceOf[js.Any])
+    def setInvitedUserMessageInfo(value: NullableOption[InvitedUserMessageInfo]): Self = this.set("invitedUserMessageInfo", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInvitedUserMessageInfo: Self = this.set("invitedUserMessageInfo", js.undefined)
     
     @scala.inline
-    def setInvitedUserType(value: String): Self = this.set("invitedUserType", value.asInstanceOf[js.Any])
+    def setInvitedUserMessageInfoNull: Self = this.set("invitedUserMessageInfo", null)
+    
+    @scala.inline
+    def setInvitedUserType(value: NullableOption[String]): Self = this.set("invitedUserType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInvitedUserType: Self = this.set("invitedUserType", js.undefined)
     
     @scala.inline
-    def setSendInvitationMessage(value: Boolean): Self = this.set("sendInvitationMessage", value.asInstanceOf[js.Any])
+    def setInvitedUserTypeNull: Self = this.set("invitedUserType", null)
+    
+    @scala.inline
+    def setSendInvitationMessage(value: NullableOption[Boolean]): Self = this.set("sendInvitationMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSendInvitationMessage: Self = this.set("sendInvitationMessage", js.undefined)
     
     @scala.inline
-    def setStatus(value: String): Self = this.set("status", value.asInstanceOf[js.Any])
+    def setSendInvitationMessageNull: Self = this.set("sendInvitationMessage", null)
+    
+    @scala.inline
+    def setStatus(value: NullableOption[String]): Self = this.set("status", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStatus: Self = this.set("status", js.undefined)
+    
+    @scala.inline
+    def setStatusNull: Self = this.set("status", null)
   }
 }

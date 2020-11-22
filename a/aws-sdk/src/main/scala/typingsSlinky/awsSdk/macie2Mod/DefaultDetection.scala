@@ -8,12 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DefaultDetection extends js.Object {
   
   /**
-    * The total number of occurrences of the type of data that was detected.
+    * The total number of occurrences of the type of sensitive data that was detected.
     */
   var count: js.UndefOr[long] = js.native
   
   /**
-    * The type of data that was detected. For example, AWS_CREDENTIALS, PHONE_NUMBER, or ADDRESS.
+    * The location of 1-15 occurrences of the sensitive data that was detected. A finding includes location data for a maximum of 15 occurrences of sensitive data.
+    */
+  var occurrences: js.UndefOr[Occurrences] = js.native
+  
+  /**
+    * The type of sensitive data that was detected. For example, AWS_CREDENTIALS, PHONE_NUMBER, or ADDRESS.
     */
   var `type`: js.UndefOr[string] = js.native
 }
@@ -45,6 +50,12 @@ object DefaultDetection {
     
     @scala.inline
     def deleteCount: Self = this.set("count", js.undefined)
+    
+    @scala.inline
+    def setOccurrences(value: Occurrences): Self = this.set("occurrences", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOccurrences: Self = this.set("occurrences", js.undefined)
     
     @scala.inline
     def setType(value: string): Self = this.set("type", value.asInstanceOf[js.Any])

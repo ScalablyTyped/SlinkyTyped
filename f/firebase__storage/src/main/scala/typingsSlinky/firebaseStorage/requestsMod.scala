@@ -5,9 +5,9 @@ import typingsSlinky.firebaseStorage.errorMod.FirebaseStorageError
 import typingsSlinky.firebaseStorage.locationMod.Location
 import typingsSlinky.firebaseStorage.metadataMod.Mappings
 import typingsSlinky.firebaseStorage.requestinfoMod.RequestInfo
-import typingsSlinky.firebaseStorage.serviceMod.StorageService
 import typingsSlinky.firebaseStorage.srcListMod.ListResult
 import typingsSlinky.firebaseStorage.srcMetadataMod.Metadata
+import typingsSlinky.firebaseStorage.srcServiceMod.StorageService
 import typingsSlinky.firebaseStorage.xhrioMod.XhrIo
 import scala.scalajs.js
 import scala.scalajs.js.`|`

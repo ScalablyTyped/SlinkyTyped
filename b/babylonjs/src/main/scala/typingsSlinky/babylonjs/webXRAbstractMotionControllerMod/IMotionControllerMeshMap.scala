@@ -21,13 +21,13 @@ trait IMotionControllerMeshMap extends js.Object {
   /**
     * The mesh that will be changed when axis value changes
     */
-  var valueMesh: AbstractMesh = js.native
+  var valueMesh: js.UndefOr[AbstractMesh] = js.native
 }
 object IMotionControllerMeshMap {
   
   @scala.inline
-  def apply(valueMesh: AbstractMesh): IMotionControllerMeshMap = {
-    val __obj = js.Dynamic.literal(valueMesh = valueMesh.asInstanceOf[js.Any])
+  def apply(): IMotionControllerMeshMap = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[IMotionControllerMeshMap]
   }
   
@@ -47,9 +47,6 @@ object IMotionControllerMeshMap {
     }
     
     @scala.inline
-    def setValueMesh(value: AbstractMesh): Self = this.set("valueMesh", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setMaxMesh(value: AbstractMesh): Self = this.set("maxMesh", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -60,5 +57,11 @@ object IMotionControllerMeshMap {
     
     @scala.inline
     def deleteMinMesh: Self = this.set("minMesh", js.undefined)
+    
+    @scala.inline
+    def setValueMesh(value: AbstractMesh): Self = this.set("valueMesh", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValueMesh: Self = this.set("valueMesh", js.undefined)
   }
 }

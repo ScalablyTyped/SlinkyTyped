@@ -1,7 +1,7 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
 import typingsSlinky.echarts.anon.ShadowBlur
-import typingsSlinky.echarts.anon.`17`
+import typingsSlinky.echarts.anon.`16`
 import typingsSlinky.echarts.echarts.EChartOption.SeriesParallel.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -279,7 +279,7 @@ trait SeriesParallel_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-parallel.emphasis
     */
-  var emphasis: js.UndefOr[`17`] = js.native
+  var emphasis: js.UndefOr[`16`] = js.native
   
   /**
     * Component ID, not specified by default.
@@ -550,7 +550,7 @@ object SeriesParallel_ {
     def deleteData: Self = this.set("data", js.undefined)
     
     @scala.inline
-    def setEmphasis(value: `17`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
+    def setEmphasis(value: `16`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEmphasis: Self = this.set("emphasis", js.undefined)

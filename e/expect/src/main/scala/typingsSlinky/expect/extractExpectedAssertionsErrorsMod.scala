@@ -1,6 +1,6 @@
 package typingsSlinky.expect
 
-import typingsSlinky.expect.anon.Actual
+import typingsSlinky.expect.typesMod.ExpectedAssertionsErrors
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object extractExpectedAssertionsErrorsMod extends js.Object {
   
-  def default(): AssertionsErrors = js.native
-  
-  type AssertionsErrors = js.Array[Actual]
+  val default: js.Function0[ExpectedAssertionsErrors] = js.native
 }

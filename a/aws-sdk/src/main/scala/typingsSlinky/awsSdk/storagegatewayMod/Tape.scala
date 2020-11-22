@@ -10,6 +10,11 @@ trait Tape extends js.Object {
   var KMSKey: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.KMSKey] = js.native
   
   /**
+    * The date that the tape enters a custom tape pool.
+    */
+  var PoolEntryDate: js.UndefOr[js.Date] = js.native
+  
+  /**
     * The ID of the pool that contains tapes that will be archived. The tapes in this pool are archived in the S3 storage class that is associated with the pool. When you use your backup application to eject the tape, the tape is archived directly into the storage class (S3 Glacier or S3 Glacier Deep Archive) that corresponds to the pool. Valid Values: GLACIER | DEEP_ARCHIVE 
     */
   var PoolId: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.PoolId] = js.native
@@ -18,6 +23,11 @@ trait Tape extends js.Object {
     * For archiving virtual tapes, indicates how much data remains to be uploaded before archiving is complete. Range: 0 (not started) to 100 (complete).
     */
   var Progress: js.UndefOr[DoubleObject] = js.native
+  
+  /**
+    * The date that the tape is first archived with tape retention lock enabled.
+    */
+  var RetentionStartDate: js.UndefOr[js.Date] = js.native
   
   /**
     * The Amazon Resource Name (ARN) of the virtual tape.
@@ -53,6 +63,11 @@ trait Tape extends js.Object {
     * The virtual tape library (VTL) device that the virtual tape is associated with.
     */
   var VTLDevice: js.UndefOr[VTLDeviceARN] = js.native
+  
+  /**
+    * If the tape is archived as write-once-read-many (WORM), this value is true.
+    */
+  var Worm: js.UndefOr[scala.Boolean] = js.native
 }
 object Tape {
   
@@ -84,6 +99,12 @@ object Tape {
     def deleteKMSKey: Self = this.set("KMSKey", js.undefined)
     
     @scala.inline
+    def setPoolEntryDate(value: js.Date): Self = this.set("PoolEntryDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePoolEntryDate: Self = this.set("PoolEntryDate", js.undefined)
+    
+    @scala.inline
     def setPoolId(value: PoolId): Self = this.set("PoolId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -94,6 +115,12 @@ object Tape {
     
     @scala.inline
     def deleteProgress: Self = this.set("Progress", js.undefined)
+    
+    @scala.inline
+    def setRetentionStartDate(value: js.Date): Self = this.set("RetentionStartDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRetentionStartDate: Self = this.set("RetentionStartDate", js.undefined)
     
     @scala.inline
     def setTapeARN(value: TapeARN): Self = this.set("TapeARN", value.asInstanceOf[js.Any])
@@ -136,5 +163,11 @@ object Tape {
     
     @scala.inline
     def deleteVTLDevice: Self = this.set("VTLDevice", js.undefined)
+    
+    @scala.inline
+    def setWorm(value: scala.Boolean): Self = this.set("Worm", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWorm: Self = this.set("Worm", js.undefined)
   }
 }

@@ -7,23 +7,41 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ImagePars extends js.Object {
   
+  /**
+    * Optional alt text.
+    */
   var alt: js.UndefOr[String] = js.native
   
+  /**
+    * Either an ArrayBuffer or a base64 string with the image data.
+    */
   var data: js.typedarray.ArrayBuffer | String = js.native
   
-  var extension: js.UndefOr[String] = js.native
+  /**
+    * One of '.png', '.gif', '.jpg', '.jpeg', '.svg'.
+    */
+  var extension: ImageExtension = js.native
   
+  /**
+    * Desired height of the image in centimeters.
+    */
   var height: Double = js.native
   
+  /**
+    * Optional. When injecting an SVG image, a fallback non-SVG (png/jpg/gif, etc.) image can be provided. This thumbnail is used when SVG images are not supported (e.g. older versions of Word) or when the document is previewed by e.g. Windows Explorer. See usage example below.
+    */
   var thumbnail: js.UndefOr[Image] = js.native
   
+  /**
+    * Desired width of the image in centimeters.
+    */
   var width: Double = js.native
 }
 object ImagePars {
   
   @scala.inline
-  def apply(data: js.typedarray.ArrayBuffer | String, height: Double, width: Double): ImagePars = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+  def apply(data: js.typedarray.ArrayBuffer | String, extension: ImageExtension, height: Double, width: Double): ImagePars = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], extension = extension.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImagePars]
   }
   
@@ -49,6 +67,9 @@ object ImagePars {
     def setData(value: js.typedarray.ArrayBuffer | String): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setExtension(value: ImageExtension): Self = this.set("extension", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -59,12 +80,6 @@ object ImagePars {
     
     @scala.inline
     def deleteAlt: Self = this.set("alt", js.undefined)
-    
-    @scala.inline
-    def setExtension(value: String): Self = this.set("extension", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteExtension: Self = this.set("extension", js.undefined)
     
     @scala.inline
     def setThumbnail(value: Image): Self = this.set("thumbnail", value.asInstanceOf[js.Any])

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RetentionPeriod extends js.Object {
   
   /**
-    * The number of days that message data is kept. The "unlimited" parameter must be false.
+    * The number of days that message data is kept. The unlimited parameter must be false.
     */
   var numberOfDays: js.UndefOr[RetentionPeriodInDays] = js.native
   

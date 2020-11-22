@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Invert extends js.Object {
   
-  var invert: js.UndefOr[`0`] = js.native
+  var invert: js.UndefOr[`3`] = js.native
 }
 object Invert {
   
@@ -33,7 +33,7 @@ object Invert {
     }
     
     @scala.inline
-    def setInvert(value: `0`): Self = this.set("invert", value.asInstanceOf[js.Any])
+    def setInvert(value: `3`): Self = this.set("invert", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInvert: Self = this.set("invert", js.undefined)

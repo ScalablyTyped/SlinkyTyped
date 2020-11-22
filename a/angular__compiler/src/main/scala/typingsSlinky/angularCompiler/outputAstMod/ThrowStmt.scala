@@ -10,6 +10,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ThrowStmt protected () extends Statement {
   def this(error: Expression) = this()
   def this(error: Expression, sourceSpan: ParseSourceSpan) = this()
+  def this(
+    error: Expression,
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[LeadingComment_]
+  ) = this()
+  def this(error: Expression, sourceSpan: Null, leadingComments: js.Array[LeadingComment_]) = this()
+  def this(error: Expression, sourceSpan: ParseSourceSpan, leadingComments: js.Array[LeadingComment_]) = this()
   
   var error: Expression = js.native
   

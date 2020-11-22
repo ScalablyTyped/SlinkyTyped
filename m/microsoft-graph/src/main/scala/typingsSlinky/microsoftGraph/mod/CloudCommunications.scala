@@ -1,5 +1,6 @@
 package typingsSlinky.microsoftGraph.mod
 
+import typingsSlinky.microsoftGraph.mod.CallRecords.CallRecord
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,9 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CloudCommunications extends Entity {
   
-  var calls: js.UndefOr[js.Array[Call]] = js.native
+  var callRecords: js.UndefOr[NullableOption[js.Array[CallRecord]]] = js.native
   
-  var onlineMeetings: js.UndefOr[js.Array[OnlineMeeting]] = js.native
+  var calls: js.UndefOr[NullableOption[js.Array[Call]]] = js.native
+  
+  var onlineMeetings: js.UndefOr[NullableOption[js.Array[OnlineMeeting]]] = js.native
 }
 object CloudCommunications {
   
@@ -35,21 +38,39 @@ object CloudCommunications {
     }
     
     @scala.inline
+    def setCallRecordsVarargs(value: CallRecord*): Self = this.set("callRecords", js.Array(value :_*))
+    
+    @scala.inline
+    def setCallRecords(value: NullableOption[js.Array[CallRecord]]): Self = this.set("callRecords", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCallRecords: Self = this.set("callRecords", js.undefined)
+    
+    @scala.inline
+    def setCallRecordsNull: Self = this.set("callRecords", null)
+    
+    @scala.inline
     def setCallsVarargs(value: Call*): Self = this.set("calls", js.Array(value :_*))
     
     @scala.inline
-    def setCalls(value: js.Array[Call]): Self = this.set("calls", value.asInstanceOf[js.Any])
+    def setCalls(value: NullableOption[js.Array[Call]]): Self = this.set("calls", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCalls: Self = this.set("calls", js.undefined)
     
     @scala.inline
+    def setCallsNull: Self = this.set("calls", null)
+    
+    @scala.inline
     def setOnlineMeetingsVarargs(value: OnlineMeeting*): Self = this.set("onlineMeetings", js.Array(value :_*))
     
     @scala.inline
-    def setOnlineMeetings(value: js.Array[OnlineMeeting]): Self = this.set("onlineMeetings", value.asInstanceOf[js.Any])
+    def setOnlineMeetings(value: NullableOption[js.Array[OnlineMeeting]]): Self = this.set("onlineMeetings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnlineMeetings: Self = this.set("onlineMeetings", js.undefined)
+    
+    @scala.inline
+    def setOnlineMeetingsNull: Self = this.set("onlineMeetings", null)
   }
 }

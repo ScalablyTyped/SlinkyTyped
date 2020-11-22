@@ -2,9 +2,9 @@ package typingsSlinky.uifabricFoundation.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ischemeMod.ISchemeNames
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.uifabricFoundation.themeProviderMod.IThemeProviderProps
-import typingsSlinky.uifabricStyling.ithemeMod.ISchemeNames
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

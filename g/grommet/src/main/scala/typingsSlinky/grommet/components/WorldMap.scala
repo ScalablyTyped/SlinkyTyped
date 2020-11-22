@@ -20,6 +20,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.anon.Dark
 import typingsSlinky.grommet.anon.Location
 import typingsSlinky.grommet.anon.Name
+import typingsSlinky.grommet.grommetStrings.color
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.ColorType
@@ -33,10 +34,15 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.SVGProps
 import typingsSlinky.react.reactStrings._empty
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`after-edge`
 import typingsSlinky.react.reactStrings.`before-edge`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.`text-after-edge`
 import typingsSlinky.react.reactStrings.`text-before-edge`
 import typingsSlinky.react.reactStrings.`use-credentials`
@@ -100,6 +106,7 @@ import typingsSlinky.react.reactStrings.time
 import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.std.Omit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -253,7 +260,9 @@ object WorldMap {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -1306,7 +1315,7 @@ object WorldMap {
     def zoomAndPan(value: String): this.type = set("zoomAndPan", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: WorldMapProps with SVGProps[SVGSVGElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: WorldMapProps with (Omit[SVGProps[SVGSVGElement], color])): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: WorldMap.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

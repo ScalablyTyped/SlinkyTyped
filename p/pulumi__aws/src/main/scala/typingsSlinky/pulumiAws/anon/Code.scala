@@ -1,8 +1,8 @@
 package typingsSlinky.pulumiAws.anon
 
 import typingsSlinky.pulumiAws.arnMod.ARN
+import typingsSlinky.pulumiAws.enumsLambdaMod.Runtime
 import typingsSlinky.pulumiAws.iamMod.Role
-import typingsSlinky.pulumiAws.runtimesMod.Runtime
 import typingsSlinky.pulumiPulumi.codePathsMod.CodePathOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`

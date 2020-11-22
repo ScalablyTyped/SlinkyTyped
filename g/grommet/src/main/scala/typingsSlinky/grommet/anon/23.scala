@@ -7,9 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `23` extends js.Object {
   
-  var dark: js.UndefOr[js.Array[String]] = js.native
-  
-  var light: js.UndefOr[js.Array[String]] = js.native
+  var duration: js.UndefOr[Double] = js.native
 }
 object `23` {
   
@@ -35,21 +33,9 @@ object `23` {
     }
     
     @scala.inline
-    def setDarkVarargs(value: String*): Self = this.set("dark", js.Array(value :_*))
+    def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDark(value: js.Array[String]): Self = this.set("dark", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDark: Self = this.set("dark", js.undefined)
-    
-    @scala.inline
-    def setLightVarargs(value: String*): Self = this.set("light", js.Array(value :_*))
-    
-    @scala.inline
-    def setLight(value: js.Array[String]): Self = this.set("light", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLight: Self = this.set("light", js.undefined)
+    def deleteDuration: Self = this.set("duration", js.undefined)
   }
 }

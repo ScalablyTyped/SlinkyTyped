@@ -35,7 +35,7 @@ trait SendParamsMessage extends js.Object {
   
   var Sender: js.UndefOr[typingsSlinky.nodeMailjet.anon.Email] = js.native
   
-  var Subject: String = js.native
+  var Subject: js.UndefOr[String] = js.native
   
   var TemplateID: js.UndefOr[Double] = js.native
   
@@ -52,8 +52,8 @@ trait SendParamsMessage extends js.Object {
 object SendParamsMessage {
   
   @scala.inline
-  def apply(From: typingsSlinky.nodeMailjet.anon.Email, Subject: String, To: js.Array[SendParamsRecipient]): SendParamsMessage = {
-    val __obj = js.Dynamic.literal(From = From.asInstanceOf[js.Any], Subject = Subject.asInstanceOf[js.Any], To = To.asInstanceOf[js.Any])
+  def apply(From: typingsSlinky.nodeMailjet.anon.Email, To: js.Array[SendParamsRecipient]): SendParamsMessage = {
+    val __obj = js.Dynamic.literal(From = From.asInstanceOf[js.Any], To = To.asInstanceOf[js.Any])
     __obj.asInstanceOf[SendParamsMessage]
   }
   
@@ -74,9 +74,6 @@ object SendParamsMessage {
     
     @scala.inline
     def setFrom(value: typingsSlinky.nodeMailjet.anon.Email): Self = this.set("From", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSubject(value: String): Self = this.set("Subject", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setToVarargs(value: SendParamsRecipient*): Self = this.set("To", js.Array(value :_*))
@@ -173,6 +170,12 @@ object SendParamsMessage {
     
     @scala.inline
     def deleteSender: Self = this.set("Sender", js.undefined)
+    
+    @scala.inline
+    def setSubject(value: String): Self = this.set("Subject", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSubject: Self = this.set("Subject", js.undefined)
     
     @scala.inline
     def setTemplateID(value: Double): Self = this.set("TemplateID", value.asInstanceOf[js.Any])

@@ -5,22 +5,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Value[TC] extends js.Object {
+trait Value[TContext] extends js.Object {
   
-  var context: TC = js.native
+  var context: TContext = js.native
   
   var value: js.Any = js.native
 }
 object Value {
   
   @scala.inline
-  def apply[TC](context: TC, value: js.Any): Value[TC] = {
+  def apply[TContext](context: TContext, value: js.Any): Value[TContext] = {
     val __obj = js.Dynamic.literal(context = context.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Value[TC]]
+    __obj.asInstanceOf[Value[TContext]]
   }
   
   @scala.inline
-  implicit class ValueOps[Self <: Value[_], TC] (val x: Self with Value[TC]) extends AnyVal {
+  implicit class ValueOps[Self <: Value[_], TContext] (val x: Self with Value[TContext]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -35,7 +35,7 @@ object Value {
     }
     
     @scala.inline
-    def setContext(value: TC): Self = this.set("context", value.asInstanceOf[js.Any])
+    def setContext(value: TContext): Self = this.set("context", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])

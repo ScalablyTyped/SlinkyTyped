@@ -11,7 +11,7 @@ trait UploadSession extends js.Object {
     * The date and time in UTC that the upload session will expire. The complete file must be uploaded before this expiration
     * time is reached.
     */
-  var expirationDateTime: js.UndefOr[String] = js.native
+  var expirationDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * A collection of byte ranges that the server is missing for the file. These ranges are zero indexed and of the format
@@ -19,10 +19,10 @@ trait UploadSession extends js.Object {
     * instead of a collection of ranges, this property always indicates a single value '{start}', the location in the file
     * where the next upload should begin.
     */
-  var nextExpectedRanges: js.UndefOr[js.Array[String]] = js.native
+  var nextExpectedRanges: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // The URL endpoint that accepts PUT requests for byte ranges of the file.
-  var uploadUrl: js.UndefOr[String] = js.native
+  var uploadUrl: js.UndefOr[NullableOption[String]] = js.native
 }
 object UploadSession {
   
@@ -48,24 +48,33 @@ object UploadSession {
     }
     
     @scala.inline
-    def setExpirationDateTime(value: String): Self = this.set("expirationDateTime", value.asInstanceOf[js.Any])
+    def setExpirationDateTime(value: NullableOption[String]): Self = this.set("expirationDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExpirationDateTime: Self = this.set("expirationDateTime", js.undefined)
     
     @scala.inline
+    def setExpirationDateTimeNull: Self = this.set("expirationDateTime", null)
+    
+    @scala.inline
     def setNextExpectedRangesVarargs(value: String*): Self = this.set("nextExpectedRanges", js.Array(value :_*))
     
     @scala.inline
-    def setNextExpectedRanges(value: js.Array[String]): Self = this.set("nextExpectedRanges", value.asInstanceOf[js.Any])
+    def setNextExpectedRanges(value: NullableOption[js.Array[String]]): Self = this.set("nextExpectedRanges", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNextExpectedRanges: Self = this.set("nextExpectedRanges", js.undefined)
     
     @scala.inline
-    def setUploadUrl(value: String): Self = this.set("uploadUrl", value.asInstanceOf[js.Any])
+    def setNextExpectedRangesNull: Self = this.set("nextExpectedRanges", null)
+    
+    @scala.inline
+    def setUploadUrl(value: NullableOption[String]): Self = this.set("uploadUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUploadUrl: Self = this.set("uploadUrl", js.undefined)
+    
+    @scala.inline
+    def setUploadUrlNull: Self = this.set("uploadUrl", null)
   }
 }

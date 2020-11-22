@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CalendarTileProperties extends js.Object {
   
+  var activeStartDate: js.Date = js.native
+  
   var date: js.Date = js.native
   
   var view: Detail = js.native
@@ -14,8 +16,8 @@ trait CalendarTileProperties extends js.Object {
 object CalendarTileProperties {
   
   @scala.inline
-  def apply(date: js.Date, view: Detail): CalendarTileProperties = {
-    val __obj = js.Dynamic.literal(date = date.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
+  def apply(activeStartDate: js.Date, date: js.Date, view: Detail): CalendarTileProperties = {
+    val __obj = js.Dynamic.literal(activeStartDate = activeStartDate.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], view = view.asInstanceOf[js.Any])
     __obj.asInstanceOf[CalendarTileProperties]
   }
   
@@ -33,6 +35,9 @@ object CalendarTileProperties {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setActiveStartDate(value: js.Date): Self = this.set("activeStartDate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDate(value: js.Date): Self = this.set("date", value.asInstanceOf[js.Any])

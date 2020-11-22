@@ -9,13 +9,13 @@ trait RegexTokenizerOptions extends js.Object {
   
   var discardEmpty: js.UndefOr[Boolean] = js.native
   
-  var pattern: js.RegExp = js.native
+  var pattern: js.UndefOr[js.RegExp] = js.native
 }
 object RegexTokenizerOptions {
   
   @scala.inline
-  def apply(pattern: js.RegExp): RegexTokenizerOptions = {
-    val __obj = js.Dynamic.literal(pattern = pattern.asInstanceOf[js.Any])
+  def apply(): RegexTokenizerOptions = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[RegexTokenizerOptions]
   }
   
@@ -35,12 +35,15 @@ object RegexTokenizerOptions {
     }
     
     @scala.inline
-    def setPattern(value: js.RegExp): Self = this.set("pattern", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setDiscardEmpty(value: Boolean): Self = this.set("discardEmpty", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDiscardEmpty: Self = this.set("discardEmpty", js.undefined)
+    
+    @scala.inline
+    def setPattern(value: js.RegExp): Self = this.set("pattern", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePattern: Self = this.set("pattern", js.undefined)
   }
 }

@@ -21,7 +21,7 @@ trait Cwd extends js.Object {
   var shell: js.UndefOr[`true` | String] = js.native
   
   var stdio: js.UndefOr[
-    (js.Tuple3[pipe | ignore, pipe | ignore, pipe | ignore]) | pipe | ignore | jsonrpc
+    (js.Tuple3[pipe | ignore, pipe | ignore, pipe | ignore]) | pipe | ignore | jsonrpc | Double
   ] = js.native
 }
 object Cwd {
@@ -75,7 +75,7 @@ object Cwd {
     def deleteShell: Self = this.set("shell", js.undefined)
     
     @scala.inline
-    def setStdio(value: (js.Tuple3[pipe | ignore, pipe | ignore, pipe | ignore]) | pipe | ignore | jsonrpc): Self = this.set("stdio", value.asInstanceOf[js.Any])
+    def setStdio(value: (js.Tuple3[pipe | ignore, pipe | ignore, pipe | ignore]) | pipe | ignore | jsonrpc | Double): Self = this.set("stdio", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStdio: Self = this.set("stdio", js.undefined)

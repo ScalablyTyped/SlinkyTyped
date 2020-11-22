@@ -39,7 +39,7 @@ trait InAppPurchase extends EventEmitter {
     */
   def getReceiptURL(): String = js.native
   
-  // Docs: http://electronjs.org/docs/api/in-app-purchase
+  // Docs: https://electronjs.org/docs/api/in-app-purchase
   @JSName("on")
   def on_transactionsupdated(event: `transactions-updated`, listener: js.Function): this.type = js.native
   

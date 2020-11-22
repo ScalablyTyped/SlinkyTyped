@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-permissions/lib/typescript/utils", JSImport.Namespace)
+@JSImport("react-native-permissions/dist/typescript/utils", JSImport.Namespace)
 @js.native
 object utilsMod extends js.Object {
   

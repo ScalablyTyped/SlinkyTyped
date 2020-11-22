@@ -14,7 +14,13 @@ trait TableBuilderProps[RowT] extends js.Object {
   
   var data: js.Array[RowT] = js.native
   
+  var emptyMessage: js.UndefOr[ReactElement | js.Function0[ReactElement]] = js.native
+  
   var horizontalScrollWidth: js.UndefOr[String] = js.native
+  
+  var isLoading: js.UndefOr[Boolean] = js.native
+  
+  var loadingMessage: js.UndefOr[ReactElement | js.Function0[ReactElement]] = js.native
   
   var onSort: js.UndefOr[js.Function1[/* columnId */ String, Unit]] = js.native
   
@@ -63,10 +69,40 @@ object TableBuilderProps {
     def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
+    def setEmptyMessageReactElement(value: ReactElement): Self = this.set("emptyMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEmptyMessageFunction0(value: () => ReactElement): Self = this.set("emptyMessage", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setEmptyMessage(value: ReactElement | js.Function0[ReactElement]): Self = this.set("emptyMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEmptyMessage: Self = this.set("emptyMessage", js.undefined)
+    
+    @scala.inline
     def setHorizontalScrollWidth(value: String): Self = this.set("horizontalScrollWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHorizontalScrollWidth: Self = this.set("horizontalScrollWidth", js.undefined)
+    
+    @scala.inline
+    def setIsLoading(value: Boolean): Self = this.set("isLoading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsLoading: Self = this.set("isLoading", js.undefined)
+    
+    @scala.inline
+    def setLoadingMessageReactElement(value: ReactElement): Self = this.set("loadingMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLoadingMessageFunction0(value: () => ReactElement): Self = this.set("loadingMessage", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setLoadingMessage(value: ReactElement | js.Function0[ReactElement]): Self = this.set("loadingMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoadingMessage: Self = this.set("loadingMessage", js.undefined)
     
     @scala.inline
     def setOnSort(value: /* columnId */ String => Unit): Self = this.set("onSort", js.Any.fromFunction1(value))

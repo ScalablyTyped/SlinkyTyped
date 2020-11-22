@@ -7,14 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RenderRaw extends js.Object {
   
-  var render: `754` = js.native
+  var render: `760` = js.native
   
-  var renderRaw: `755` = js.native
+  var renderRaw: `761` = js.native
 }
 object RenderRaw {
   
   @scala.inline
-  def apply(render: `754`, renderRaw: `755`): RenderRaw = {
+  def apply(render: `760`, renderRaw: `761`): RenderRaw = {
     val __obj = js.Dynamic.literal(render = render.asInstanceOf[js.Any], renderRaw = renderRaw.asInstanceOf[js.Any])
     __obj.asInstanceOf[RenderRaw]
   }
@@ -35,9 +35,9 @@ object RenderRaw {
     }
     
     @scala.inline
-    def setRender(value: `754`): Self = this.set("render", value.asInstanceOf[js.Any])
+    def setRender(value: `760`): Self = this.set("render", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRenderRaw(value: `755`): Self = this.set("renderRaw", value.asInstanceOf[js.Any])
+    def setRenderRaw(value: `761`): Self = this.set("renderRaw", value.asInstanceOf[js.Any])
   }
 }

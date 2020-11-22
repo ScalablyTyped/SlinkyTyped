@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UserSummary extends js.Object {
   
   /**
-    * The type of change pending for the ActiveMQ user.
+    * The type of change pending for the broker user.
     */
   var PendingChange: js.UndefOr[ChangeType] = js.native
   
   /**
-    * Required. The username of the ActiveMQ user. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 2-100 characters long.
+    * Required. The username of the broker user. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 2-100 characters long.
     */
   var Username: js.UndefOr[string] = js.native
 }

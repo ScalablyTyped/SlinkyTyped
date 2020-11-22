@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.navigationMod.navigation
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.navigationMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,18 +16,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
   *
+  * @ignore
+  *
   * In version 7.22.0: introduced
   */
 @JSImport("mendixmodelsdk/dist/gen/navigation", "navigation.OfflineEntityConfig")
 @js.native
-class OfflineEntityConfig protected () extends Element {
+class OfflineEntityConfig protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -47,9 +51,6 @@ class OfflineEntityConfig protected () extends Element {
   def entityQualifiedName: String = js.native
   
   def entity_=(newValue: IEntity): Unit = js.native
-  
-  @JSName("model")
-  var model_FOfflineEntityConfig: IModel = js.native
   
   /**
     * In version 8.9.0: deleted

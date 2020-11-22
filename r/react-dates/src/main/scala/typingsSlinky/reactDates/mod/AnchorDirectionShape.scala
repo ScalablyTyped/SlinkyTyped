@@ -4,9 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// SHAPES
-//
-// shapes/AnchorDirectionShape.js
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactDates.reactDatesStrings.left
   - typingsSlinky.reactDates.reactDatesStrings.right

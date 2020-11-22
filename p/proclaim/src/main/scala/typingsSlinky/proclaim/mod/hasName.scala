@@ -8,5 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object hasName extends js.Object {
   
+  /**
+    * Assert that fn.name === expected.
+    */
+  def apply(fn: js.Function0[Unit], expected: js.Any): AssertionError | Unit = js.native
   def apply(fn: js.Function0[Unit], expected: js.Any, msg: String): AssertionError | Unit = js.native
 }

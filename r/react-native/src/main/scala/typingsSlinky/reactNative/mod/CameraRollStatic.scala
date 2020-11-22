@@ -29,7 +29,7 @@ trait CameraRollStatic extends js.Object {
     * On iOS, the tag can be one of the following:
     *      local URI
     *      assets-library tag
-    *      a tag not maching any of the above, which means the image data will be stored in memory (and consume memory as long as the process is alive)
+    *      a tag not matching any of the above, which means the image data will be stored in memory (and consume memory as long as the process is alive)
     *
     * @deprecated use saveToCameraRoll instead
     */

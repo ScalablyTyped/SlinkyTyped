@@ -42,6 +42,11 @@ class Api protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
+    * An OpenAPI specification that defines the set of routes and integrations to create as part of the HTTP APIs. Supported only for HTTP APIs.
+    */
+  val body: Output_[js.UndefOr[String]] = js.native
+  
+  /**
     * The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
     */
   val corsConfiguration: Output_[js.UndefOr[ApiCorsConfiguration]] = js.native
@@ -52,9 +57,16 @@ class Api protected () extends CustomResource {
   val credentialsArn: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * The description of the API.
+    * The description of the API. Must be less than or equal to 1024 characters in length.
     */
   val description: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * Whether clients can invoke the API by using the default `execute-api` endpoint.
+    * By default, clients can invoke the API with the default `{api_id}.execute-api.{region}.amazonaws.com endpoint`.
+    * To require that clients use a custom domain name to invoke the API, disable the default endpoint.
+    */
+  val disableExecuteApiEndpoint: Output_[js.UndefOr[Boolean]] = js.native
   
   /**
     * The ARN prefix to be used in an `aws.lambda.Permission`'s `sourceArn` attribute
@@ -64,7 +76,7 @@ class Api protected () extends CustomResource {
   val executionArn: Output_[String] = js.native
   
   /**
-    * The name of the API.
+    * The name of the API. Must be less than or equal to 128 characters in length.
     */
   val name: Output_[String] = js.native
   
@@ -97,7 +109,7 @@ class Api protected () extends CustomResource {
   val target: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * A version identifier for the API.
+    * A version identifier for the API. Must be between 1 and 64 characters in length.
     */
   val version: Output_[js.UndefOr[String]] = js.native
 }

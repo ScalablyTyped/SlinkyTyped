@@ -1,11 +1,11 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
+import typingsSlinky.echarts.anon.AnimationDelay
 import typingsSlinky.echarts.anon.AnimationDelayUpdate
 import typingsSlinky.echarts.anon.AnimationDuration
 import typingsSlinky.echarts.anon.BorderRadius
-import typingsSlinky.echarts.anon.ColorOpacity
 import typingsSlinky.echarts.anon.DictunknownPropertyBorderColor
-import typingsSlinky.echarts.anon.Precision
+import typingsSlinky.echarts.anon.Origin
 import typingsSlinky.echarts.anon.ShadowBlur
 import typingsSlinky.echarts.anon.`8`
 import typingsSlinky.echarts.echarts.EChartOption.SeriesLine.DataObject
@@ -153,7 +153,7 @@ trait SeriesLine_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.areaStyle
     */
-  var areaStyle: js.UndefOr[ColorOpacity] = js.native
+  var areaStyle: js.UndefOr[Origin] = js.native
   
   /**
     * Whether to clip the overflowing part, which defaults to clip.
@@ -531,7 +531,7 @@ trait SeriesLine_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-line.markLine
     */
-  var markLine: js.UndefOr[Precision] = js.native
+  var markLine: js.UndefOr[AnimationDelay] = js.native
   
   /**
     * Mark point in a chart.
@@ -991,7 +991,7 @@ object SeriesLine_ {
     def deleteAnimationThreshold: Self = this.set("animationThreshold", js.undefined)
     
     @scala.inline
-    def setAreaStyle(value: ColorOpacity): Self = this.set("areaStyle", value.asInstanceOf[js.Any])
+    def setAreaStyle(value: Origin): Self = this.set("areaStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAreaStyle: Self = this.set("areaStyle", js.undefined)
@@ -1103,7 +1103,7 @@ object SeriesLine_ {
     def deleteMarkArea: Self = this.set("markArea", js.undefined)
     
     @scala.inline
-    def setMarkLine(value: Precision): Self = this.set("markLine", value.asInstanceOf[js.Any])
+    def setMarkLine(value: AnimationDelay): Self = this.set("markLine", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMarkLine: Self = this.set("markLine", js.undefined)

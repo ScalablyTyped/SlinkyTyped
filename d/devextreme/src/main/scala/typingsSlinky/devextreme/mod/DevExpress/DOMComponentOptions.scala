@@ -9,27 +9,41 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DOMComponentOptions[T] extends ComponentOptions[T] {
   
-  /** @name DOMComponent.Options.bindingOptions */
+  /**
+    * [descr:DOMComponent.Options.bindingOptions]
+    */
   var bindingOptions: js.UndefOr[js.Any] = js.native
   
-  /** @name DOMComponent.Options.elementAttr */
+  /**
+    * [descr:DOMComponent.Options.elementAttr]
+    */
   var elementAttr: js.UndefOr[js.Any] = js.native
   
-  /** @name DOMComponent.Options.height */
+  /**
+    * [descr:DOMComponent.Options.height]
+    */
   var height: js.UndefOr[Double | String | (js.Function0[Double | String])] = js.native
   
-  /** @name DOMComponent.Options.onDisposing */
+  /**
+    * [descr:DOMComponent.Options.onDisposing]
+    */
   @JSName("onDisposing")
   var onDisposing_DOMComponentOptions: js.UndefOr[js.Function1[/* e */ Model[T], _]] = js.native
   
-  /** @name DOMComponent.Options.onOptionChanged */
+  /**
+    * [descr:DOMComponent.Options.onOptionChanged]
+    */
   @JSName("onOptionChanged")
   var onOptionChanged_DOMComponentOptions: js.UndefOr[js.Function1[/* e */ Name[T], _]] = js.native
   
-  /** @name DOMComponent.Options.rtlEnabled */
+  /**
+    * [descr:DOMComponent.Options.rtlEnabled]
+    */
   var rtlEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name DOMComponent.Options.width */
+  /**
+    * [descr:DOMComponent.Options.width]
+    */
   var width: js.UndefOr[Double | String | (js.Function0[Double | String])] = js.native
 }
 object DOMComponentOptions {

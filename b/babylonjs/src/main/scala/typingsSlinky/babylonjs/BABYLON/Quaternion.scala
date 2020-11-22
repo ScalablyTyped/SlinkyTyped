@@ -7,6 +7,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Quaternion extends js.Object {
   
+  /** @hidden */
+  var _isDirty: Boolean = js.native
+  
+  /** @hidden */
+  var _w: Double = js.native
+  
+  /** @hidden */
+  var _x: Double = js.native
+  
+  /** @hidden */
+  var _y: Double = js.native
+  
+  /** @hidden */
+  var _z: Double = js.native
+  
   /**
     * Adds two quaternions
     * @param other defines the second operand
@@ -181,7 +196,7 @@ trait Quaternion extends js.Object {
   
   /**
     * Returns a new Vector3 set with the Euler angles translated from the current quaternion
-    * @param order is a reserved parameter and is ignore for now
+    * @param order is a reserved parameter and is ignored for now
     * @returns a new Vector3 containing the Euler angles
     */
   def toEulerAngles(): Vector3 = js.native
@@ -190,7 +205,6 @@ trait Quaternion extends js.Object {
   /**
     * Sets the given vector3 "result" with the Euler angles translated from the current quaternion
     * @param result defines the vector which will be filled with the Euler angles
-    * @param order is a reserved parameter and is ignore for now
     * @returns the current unchanged quaternion
     */
   def toEulerAnglesToRef(result: Vector3): Quaternion = js.native
@@ -202,15 +216,19 @@ trait Quaternion extends js.Object {
     */
   def toRotationMatrix(result: Matrix): Quaternion = js.native
   
-  /** defines the fourth component (1.0 by default) */
-  var w: Double = js.native
+  /** Gets or sets the w coordinate */
+  def w: Double = js.native
+  def w_=(value: Double): Unit = js.native
   
-  /** defines the first component (0 by default) */
-  var x: Double = js.native
+  /** Gets or sets the x coordinate */
+  def x: Double = js.native
+  def x_=(value: Double): Unit = js.native
   
-  /** defines the second component (0 by default) */
-  var y: Double = js.native
+  /** Gets or sets the y coordinate */
+  def y: Double = js.native
+  def y_=(value: Double): Unit = js.native
   
-  /** defines the third component (0 by default) */
-  var z: Double = js.native
+  /** Gets or sets the z coordinate */
+  def z: Double = js.native
+  def z_=(value: Double): Unit = js.native
 }

@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.fileRequestMod.IFileRequest
 import typingsSlinky.babylonjs.fileToolsMod.LoadFileError
 import typingsSlinky.babylonjs.iofflineproviderMod.IOfflineProvider
 import typingsSlinky.babylonjs.shaderProcessingOptionsMod.ProcessingOptions
+import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.webRequestMod.WebRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,6 +22,24 @@ object processorsIndexMod extends js.Object {
   @js.native
   class ShaderCodeCursor ()
     extends typingsSlinky.babylonjs.shaderCodeCursorMod.ShaderCodeCursor
+  
+  @js.native
+  class ShaderCodeInliner protected ()
+    extends typingsSlinky.babylonjs.shaderCodeInlinerMod.ShaderCodeInliner {
+    /**
+      * Initializes the inliner
+      * @param sourceCode shader code source to inline
+      * @param numMaxIterations maximum number of iterations (used to detect recursive calls)
+      */
+    def this(sourceCode: String) = this()
+    def this(sourceCode: String, numMaxIterations: Double) = this()
+  }
+  /* static members */
+  @js.native
+  object ShaderCodeInliner extends js.Object {
+    
+    val _RegexpFindFunctionNameAndType: js.Any = js.native
+  }
   
   @js.native
   class ShaderCodeNode ()
@@ -42,7 +61,19 @@ object processorsIndexMod extends js.Object {
   
   @js.native
   class ShaderDefineExpression ()
-    extends typingsSlinky.babylonjs.shaderDefineExpressionMod.ShaderDefineExpression
+    extends typingsSlinky.babylonjs.expressionsIndexMod.ShaderDefineExpression
+  /* static members */
+  @js.native
+  object ShaderDefineExpression extends js.Object {
+    
+    var _OperatorPriority: js.Any = js.native
+    
+    var _Stack: js.Any = js.native
+    
+    def infixToPostfix(infix: String): js.Array[String] = js.native
+    
+    def postfixToInfix(postfix: js.Array[String]): String = js.native
+  }
   
   @js.native
   class ShaderDefineIsDefinedOperator protected ()
@@ -65,7 +96,8 @@ object processorsIndexMod extends js.Object {
     def Process(
       sourceCode: String,
       options: ProcessingOptions,
-      callback: js.Function1[/* migratedCode */ String, Unit]
+      callback: js.Function1[/* migratedCode */ String, Unit],
+      engine: ThinEngine
     ): Unit = js.native
     
     var _BuildExpression: js.Any = js.native

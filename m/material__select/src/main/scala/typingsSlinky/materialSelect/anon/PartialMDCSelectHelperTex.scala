@@ -10,6 +10,8 @@ trait PartialMDCSelectHelperTex extends js.Object {
   
   var addClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
   
+  var getAttr: js.UndefOr[js.Function1[/* attr */ String, String | Null]] = js.native
+  
   var hasClass: js.UndefOr[js.Function1[/* className */ String, Boolean]] = js.native
   
   var removeAttr: js.UndefOr[js.Function1[/* attr */ String, Unit]] = js.native
@@ -48,6 +50,12 @@ object PartialMDCSelectHelperTex {
     
     @scala.inline
     def deleteAddClass: Self = this.set("addClass", js.undefined)
+    
+    @scala.inline
+    def setGetAttr(value: /* attr */ String => String | Null): Self = this.set("getAttr", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteGetAttr: Self = this.set("getAttr", js.undefined)
     
     @scala.inline
     def setHasClass(value: /* className */ String => Boolean): Self = this.set("hasClass", js.Any.fromFunction1(value))

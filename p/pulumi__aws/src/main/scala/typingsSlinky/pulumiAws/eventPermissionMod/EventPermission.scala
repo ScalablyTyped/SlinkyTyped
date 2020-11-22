@@ -34,6 +34,11 @@ class EventPermission protected () extends CustomResource {
   val condition: Output_[js.UndefOr[EventPermissionCondition]] = js.native
   
   /**
+    * The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+    */
+  val eventBusName: Output_[js.UndefOr[String]] = js.native
+  
+  /**
     * The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
     */
   val principal: Output_[String] = js.native

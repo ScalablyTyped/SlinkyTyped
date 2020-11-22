@@ -62,6 +62,12 @@ class CardPaymentDetails () extends js.Object {
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   
   /**
+    * Whether or not the card is required to be physically present in order for the payment to be refunded.
+    * If true, the card is required to be present.
+    */
+  var refund_requires_card_presence: Boolean = js.native
+  
+  /**
     * The statement description sent to the card networks.
     * @note The actual statement description will vary and is likely to be truncated and appended with additional
     * information on a per issuer basis.

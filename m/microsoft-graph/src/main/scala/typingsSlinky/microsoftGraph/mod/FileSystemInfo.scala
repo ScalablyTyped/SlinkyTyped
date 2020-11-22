@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FileSystemInfo extends js.Object {
   
   // The UTC date and time the file was created on a client.
-  var createdDateTime: js.UndefOr[String] = js.native
+  var createdDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // The UTC date and time the file was last accessed. Available for the recent file list only.
-  var lastAccessedDateTime: js.UndefOr[String] = js.native
+  var lastAccessedDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // The UTC date and time the file was last modified on a client.
-  var lastModifiedDateTime: js.UndefOr[String] = js.native
+  var lastModifiedDateTime: js.UndefOr[NullableOption[String]] = js.native
 }
 object FileSystemInfo {
   
@@ -40,21 +40,30 @@ object FileSystemInfo {
     }
     
     @scala.inline
-    def setCreatedDateTime(value: String): Self = this.set("createdDateTime", value.asInstanceOf[js.Any])
+    def setCreatedDateTime(value: NullableOption[String]): Self = this.set("createdDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCreatedDateTime: Self = this.set("createdDateTime", js.undefined)
     
     @scala.inline
-    def setLastAccessedDateTime(value: String): Self = this.set("lastAccessedDateTime", value.asInstanceOf[js.Any])
+    def setCreatedDateTimeNull: Self = this.set("createdDateTime", null)
+    
+    @scala.inline
+    def setLastAccessedDateTime(value: NullableOption[String]): Self = this.set("lastAccessedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastAccessedDateTime: Self = this.set("lastAccessedDateTime", js.undefined)
     
     @scala.inline
-    def setLastModifiedDateTime(value: String): Self = this.set("lastModifiedDateTime", value.asInstanceOf[js.Any])
+    def setLastAccessedDateTimeNull: Self = this.set("lastAccessedDateTime", null)
+    
+    @scala.inline
+    def setLastModifiedDateTime(value: NullableOption[String]): Self = this.set("lastModifiedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastModifiedDateTime: Self = this.set("lastModifiedDateTime", js.undefined)
+    
+    @scala.inline
+    def setLastModifiedDateTimeNull: Self = this.set("lastModifiedDateTime", null)
   }
 }

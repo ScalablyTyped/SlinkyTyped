@@ -12,10 +12,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.joi.joiStrings.binary
   - typingsSlinky.joi.joiStrings.date
   - typingsSlinky.joi.joiStrings.function
-  - typingsSlinky.joi.joiStrings.`lazy`
+  - typingsSlinky.joi.joiStrings.link
   - typingsSlinky.joi.joiStrings.number
   - typingsSlinky.joi.joiStrings.`object`
   - typingsSlinky.joi.joiStrings.string
+  - typingsSlinky.joi.joiStrings.symbol
 */
 trait Types extends js.Object
 object Types {
@@ -42,7 +43,7 @@ object Types {
   def function: typingsSlinky.joi.joiStrings.function = "function".asInstanceOf[typingsSlinky.joi.joiStrings.function]
   
   @scala.inline
-  def `lazy`: typingsSlinky.joi.joiStrings.`lazy` = "lazy".asInstanceOf[typingsSlinky.joi.joiStrings.`lazy`]
+  def link: typingsSlinky.joi.joiStrings.link = "link".asInstanceOf[typingsSlinky.joi.joiStrings.link]
   
   @scala.inline
   def number: typingsSlinky.joi.joiStrings.number = "number".asInstanceOf[typingsSlinky.joi.joiStrings.number]
@@ -52,4 +53,7 @@ object Types {
   
   @scala.inline
   def string: typingsSlinky.joi.joiStrings.string = "string".asInstanceOf[typingsSlinky.joi.joiStrings.string]
+  
+  @scala.inline
+  def symbol: typingsSlinky.joi.joiStrings.symbol = "symbol".asInstanceOf[typingsSlinky.joi.joiStrings.symbol]
 }

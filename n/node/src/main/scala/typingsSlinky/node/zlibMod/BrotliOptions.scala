@@ -23,6 +23,8 @@ trait BrotliOptions extends js.Object {
     */
   var flush: js.UndefOr[Double] = js.native
   
+  var maxOutputLength: js.UndefOr[Double] = js.native
+  
   var params: js.UndefOr[
     /**
     * Each key is a `constants.BROTLI_*` constant.
@@ -70,6 +72,12 @@ object BrotliOptions {
     
     @scala.inline
     def deleteFlush: Self = this.set("flush", js.undefined)
+    
+    @scala.inline
+    def setMaxOutputLength(value: Double): Self = this.set("maxOutputLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxOutputLength: Self = this.set("maxOutputLength", js.undefined)
     
     @scala.inline
     def setParams(

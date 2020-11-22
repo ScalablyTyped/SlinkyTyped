@@ -89,7 +89,7 @@ object PassportSocketIoOptions {
     
     @scala.inline
     def setCookieParser(
-      value: (/* req */ Request[ParamsDictionary, _, _, Query], /* res */ Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ Request[ParamsDictionary, _, _, Query], /* res */ Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("cookieParser", js.Any.fromFunction3(value))
     
     @scala.inline

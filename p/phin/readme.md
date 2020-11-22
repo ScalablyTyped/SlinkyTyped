@@ -1,7 +1,7 @@
 
 # Scala.js typings for phin
 
-Typings are for version 3.5.0
+Typings are for version 3.5.1
 
 ## Library description:
 The ultra-lightweight Node.js HTTP client

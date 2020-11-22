@@ -1,7 +1,6 @@
 package typingsSlinky.multibase.mod
 
 import typingsSlinky.multibase.multibaseBooleans.`false`
-import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,11 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object isEncoded extends js.Object {
   
-  def apply(bufOrString: String): name | `false` = js.native
+  def apply(data: String): `false` | String = js.native
   /**
     * Is the given data multibase encoded?
     *
-    * @param bufOrString The data to be checked.
+    * @param {Uint8Array|string} data
+    * @returns {false | string}
     */
-  def apply(bufOrString: Buffer): name | `false` = js.native
+  def apply(data: js.typedarray.Uint8Array): `false` | String = js.native
 }

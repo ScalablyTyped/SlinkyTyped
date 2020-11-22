@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object hasWidget extends js.Object {
   
+  def apply(schema: JSONSchema6, widget: String): Boolean = js.native
+  def apply(schema: JSONSchema6, widget: String, registeredWidgets: StringDictionary[Widget]): Boolean = js.native
   def apply(schema: JSONSchema6, widget: Widget): Boolean = js.native
   def apply(schema: JSONSchema6, widget: Widget, registeredWidgets: StringDictionary[Widget]): Boolean = js.native
 }

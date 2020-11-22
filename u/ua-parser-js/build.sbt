@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "ua-parser-js"
-version := "v0.7.10-dt-20200515Z-cb3b2b"
+version := "v0.7.10-dt-20201002Z-cb3b2b"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

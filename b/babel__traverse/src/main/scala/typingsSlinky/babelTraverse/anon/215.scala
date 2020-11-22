@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ObjectPattern
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSNamedTupleMember
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `215` extends js.Object {
   
-  var `type`: ObjectPattern = js.native
+  var `type`: TSNamedTupleMember = js.native
 }
 object `215` {
   
   @scala.inline
-  def apply(`type`: ObjectPattern): `215` = {
+  def apply(`type`: TSNamedTupleMember): `215` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`215`]
@@ -35,6 +35,6 @@ object `215` {
     }
     
     @scala.inline
-    def setType(value: ObjectPattern): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSNamedTupleMember): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -6,15 +6,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object imagebuilderMod {
   
-  type AccountList = js.Array[typingsSlinky.awsSdk.imagebuilderMod.NonEmptyString]
+  type AccountId = java.lang.String
+  
+  type AccountList = js.Array[typingsSlinky.awsSdk.imagebuilderMod.AccountId]
   
   type AmiList = js.Array[typingsSlinky.awsSdk.imagebuilderMod.Ami]
   
   type AmiNameString = java.lang.String
   
   type Arn = java.lang.String
-  
-  type ArnList = js.Array[typingsSlinky.awsSdk.imagebuilderMod.Arn]
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.imagebuilderMod.ClientApiVersions
   
@@ -60,6 +60,7 @@ package object imagebuilderMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.standard__
     - typingsSlinky.awsSdk.awsSdkStrings.io1
+    - typingsSlinky.awsSdk.awsSdkStrings.io2
     - typingsSlinky.awsSdk.awsSdkStrings.gp2
     - typingsSlinky.awsSdk.awsSdkStrings.sc1
     - typingsSlinky.awsSdk.awsSdkStrings.st1
@@ -127,6 +128,10 @@ package object imagebuilderMod {
   
   type InstanceTypeList = js.Array[typingsSlinky.awsSdk.imagebuilderMod.InstanceType]
   
+  type LicenseConfigurationArn = java.lang.String
+  
+  type LicenseConfigurationArnList = js.Array[typingsSlinky.awsSdk.imagebuilderMod.LicenseConfigurationArn]
+  
   type NonEmptyString = java.lang.String
   
   type NullableBoolean = scala.Boolean
@@ -142,6 +147,8 @@ package object imagebuilderMod {
     - java.lang.String
   */
   type Ownership = typingsSlinky.awsSdk.imagebuilderMod._Ownership | java.lang.String
+  
+  type PaginationToken = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EXPRESSION_MATCH_ONLY

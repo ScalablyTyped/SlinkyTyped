@@ -1,20 +1,17 @@
 package typingsSlinky.reactRnd.components
 
-import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
-import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reResizable.mod.ResizeDirection
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactDraggable.mod.DraggableData
 import typingsSlinky.reactDraggable.mod.DraggableEvent
 import typingsSlinky.reactDraggable.reactDraggableBooleans.`false`
-import typingsSlinky.reactRnd.anon.TypeofComponent
 import typingsSlinky.reactRnd.anon.X
 import typingsSlinky.reactRnd.anon.xnumberynumberSize
 import typingsSlinky.reactRnd.mod.Grid
@@ -100,18 +97,6 @@ object Rnd {
     def minWidth(value: Double | String): this.type = set("minWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def nodeRefRefObject(value: ReactRef[TypeofComponent]): this.type = set("nodeRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def nodeRefFunction1(value: /* instance */ TypeofComponent | Null => Unit): this.type = set("nodeRef", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def nodeRef(value: Ref[TypeofComponent]): this.type = set("nodeRef", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def nodeRefNull: this.type = set("nodeRef", null)
-    
-    @scala.inline
     def onDrag(value: (/* e */ DraggableEvent, /* data */ DraggableData) => Unit | `false`): this.type = set("onDrag", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -128,17 +113,17 @@ object Rnd {
     
     @scala.inline
     def onResize(
-      value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
+      value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
     ): this.type = set("onResize", js.Any.fromFunction5(value))
     
     @scala.inline
     def onResizeStart(
-      value: (/* e */ SyntheticMouseEvent[HTMLDivElement] | SyntheticTouchEvent[HTMLDivElement], /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement) => Unit
+      value: (/* e */ SyntheticMouseEvent[HTMLElement] | SyntheticTouchEvent[HTMLElement], /* dir */ ResizeDirection, /* elementRef */ HTMLElement) => Unit | Boolean
     ): this.type = set("onResizeStart", js.Any.fromFunction3(value))
     
     @scala.inline
     def onResizeStop(
-      value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLDivElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
+      value: (/* e */ MouseEvent | TouchEvent, /* dir */ ResizeDirection, /* elementRef */ HTMLElement, /* delta */ ResizableDelta, /* position */ Position) => Unit
     ): this.type = set("onResizeStop", js.Any.fromFunction5(value))
     
     @scala.inline

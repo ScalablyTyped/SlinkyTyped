@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,16 +18,22 @@ object colorGradingTextureMod extends js.Object {
       * Instantiates a ColorGradingTexture from the following parameters.
       *
       * @param url The location of the color gradind data (currently only supporting 3dl)
-      * @param scene The scene the texture will be used in
+      * @param sceneOrEngine The scene or engine the texture will be used in
+      * @param onLoad defines a callback triggered when the texture has been loaded
       */
-    def this(url: String, scene: Scene) = this()
+    def this(url: String, sceneOrEngine: Scene) = this()
+    def this(url: String, sceneOrEngine: ThinEngine) = this()
+    def this(url: String, sceneOrEngine: Scene, onLoad: Nullable[js.Function0[Unit]]) = this()
+    def this(url: String, sceneOrEngine: ThinEngine, onLoad: Nullable[js.Function0[Unit]]) = this()
     
-    var _engine: js.Any = js.native
+    var _onLoad: js.Any = js.native
+    
+    var _textureMatrix: js.Any = js.native
     
     /**
-      * The current texture matrix. (will always be identity in color grading texture)
+      * Fires the onload event from the constructor if requested.
       */
-    var _textureMatrix: js.Any = js.native
+    var _triggerOnLoad: js.Any = js.native
     
     /**
       * Occurs when the file being loaded is a .3dl LUT file.

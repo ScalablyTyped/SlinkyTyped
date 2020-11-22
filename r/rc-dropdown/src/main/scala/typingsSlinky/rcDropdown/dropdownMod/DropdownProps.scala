@@ -12,7 +12,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined parent std.Pick<rc-trigger.rc-trigger.TriggerProps, 'getPopupContainer' | 'children'> */
+/* Inlined parent std.Pick<rc-trigger.rc-trigger.TriggerProps, 'getPopupContainer' | 'children' | 'mouseEnterDelay' | 'mouseLeaveDelay'> */
 @js.native
 trait DropdownProps extends js.Object {
   
@@ -31,6 +31,10 @@ trait DropdownProps extends js.Object {
   var hideAction: js.UndefOr[js.Array[ActionType]] = js.native
   
   var minOverlayWidthMatchTrigger: js.UndefOr[Boolean] = js.native
+  
+  var mouseEnterDelay: js.UndefOr[Double] = js.native
+  
+  var mouseLeaveDelay: js.UndefOr[Double] = js.native
   
   var onOverlayClick: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   
@@ -128,6 +132,18 @@ object DropdownProps {
     
     @scala.inline
     def deleteMinOverlayWidthMatchTrigger: Self = this.set("minOverlayWidthMatchTrigger", js.undefined)
+    
+    @scala.inline
+    def setMouseEnterDelay(value: Double): Self = this.set("mouseEnterDelay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMouseEnterDelay: Self = this.set("mouseEnterDelay", js.undefined)
+    
+    @scala.inline
+    def setMouseLeaveDelay(value: Double): Self = this.set("mouseLeaveDelay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMouseLeaveDelay: Self = this.set("mouseLeaveDelay", js.undefined)
     
     @scala.inline
     def setOnOverlayClick(value: /* e */ Event => Unit): Self = this.set("onOverlayClick", js.Any.fromFunction1(value))

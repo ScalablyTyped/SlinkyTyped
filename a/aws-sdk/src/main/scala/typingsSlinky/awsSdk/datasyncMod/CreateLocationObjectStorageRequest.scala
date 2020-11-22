@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateLocationObjectStorageRequest extends js.Object {
   
   /**
-    * Optional. The access key is used if credentials are required to access the self-managed object storage server.
+    * Optional. The access key is used if credentials are required to access the self-managed object storage server. If your object storage requires a user name and password to authenticate, use AccessKey and SecretKey to provide the user name and password, respectively.
     */
   var AccessKey: js.UndefOr[ObjectStorageAccessKey] = js.native
   
@@ -23,7 +23,7 @@ trait CreateLocationObjectStorageRequest extends js.Object {
   var BucketName: ObjectStorageBucketName = js.native
   
   /**
-    * Optional. The secret key is used if credentials are required to access the self-managed object storage server.
+    * Optional. The secret key is used if credentials are required to access the self-managed object storage server. If your object storage requires a user name and password to authenticate, use AccessKey and SecretKey to provide the user name and password, respectively.
     */
   var SecretKey: js.UndefOr[ObjectStorageSecretKey] = js.native
   

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AddIn extends js.Object {
   
-  var id: js.UndefOr[String] = js.native
+  var id: js.UndefOr[NullableOption[String]] = js.native
   
   var properties: js.UndefOr[js.Array[KeyValue]] = js.native
   
@@ -37,10 +37,13 @@ object AddIn {
     }
     
     @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setId(value: NullableOption[String]): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
+    
+    @scala.inline
+    def setIdNull: Self = this.set("id", null)
     
     @scala.inline
     def setPropertiesVarargs(value: KeyValue*): Self = this.set("properties", js.Array(value :_*))

@@ -35,6 +35,16 @@ class Gateway protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
+    * The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
+    */
+  val averageDownloadRateLimitInBitsPerSec: Output_[js.UndefOr[Double]] = js.native
+  
+  /**
+    * The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
+    */
+  val averageUploadRateLimitInBitsPerSec: Output_[js.UndefOr[Double]] = js.native
+  
+  /**
     * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
     */
   val cloudwatchLogGroupArn: Output_[js.UndefOr[String]] = js.native
@@ -69,6 +79,9 @@ class Gateway protected () extends CustomResource {
     */
   val gatewayVpcEndpoint: Output_[js.UndefOr[String]] = js.native
   
+  /**
+    * Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`.
+    */
   val mediumChangerType: Output_[js.UndefOr[String]] = js.native
   
   /**
@@ -80,6 +93,11 @@ class Gateway protected () extends CustomResource {
     * Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
     */
   val smbGuestPassword: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
+    */
+  val smbSecurityStrategy: Output_[String] = js.native
   
   /**
     * Key-value mapping of resource tags

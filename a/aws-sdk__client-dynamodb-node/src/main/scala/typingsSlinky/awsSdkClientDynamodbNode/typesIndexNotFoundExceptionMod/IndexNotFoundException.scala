@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientDynamodbNode.typesIndexNotFoundExceptionMod
 
 import typingsSlinky.awsSdkClientDynamodbNode.updateGlobalTableSettingsExceptionsUnionMod.UpdateGlobalTableSettingsExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait IndexNotFoundException
-  extends ServiceException[IndexNotFoundExceptionDetails]
-     with UpdateGlobalTableSettingsExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_IndexNotFoundExceptionDetails> * / any */ @js.native
+trait IndexNotFoundException extends UpdateGlobalTableSettingsExceptionsUnion {
   
-  @JSName("name")
-  var name_IndexNotFoundException: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.IndexNotFoundException = js.native
+  var name: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.IndexNotFoundException = js.native
 }
 object IndexNotFoundException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: IndexNotFoundExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.IndexNotFoundException
   ): IndexNotFoundException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[IndexNotFoundException]
   }
   

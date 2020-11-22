@@ -1,12 +1,13 @@
 package typingsSlinky.pulumiAws
 
+import typingsSlinky.pulumiAws.enumsAlbMod.IpAddressType
+import typingsSlinky.pulumiAws.enumsAlbMod.LoadBalancerType
 import typingsSlinky.pulumiAws.getListenerMod.GetListenerArgs
 import typingsSlinky.pulumiAws.getListenerMod.GetListenerResult
 import typingsSlinky.pulumiAws.getLoadBalancerMod.GetLoadBalancerArgs
 import typingsSlinky.pulumiAws.getLoadBalancerMod.GetLoadBalancerResult
 import typingsSlinky.pulumiAws.getTargetGroupMod.GetTargetGroupArgs
 import typingsSlinky.pulumiAws.getTargetGroupMod.GetTargetGroupResult
-import typingsSlinky.pulumiAws.ipAddressTypeMod.IpAddressType
 import typingsSlinky.pulumiAws.listenerCertificateMod.ListenerCertificateArgs
 import typingsSlinky.pulumiAws.listenerCertificateMod.ListenerCertificateState
 import typingsSlinky.pulumiAws.listenerMod.ListenerArgs
@@ -15,7 +16,10 @@ import typingsSlinky.pulumiAws.listenerRuleMod.ListenerRuleArgs
 import typingsSlinky.pulumiAws.listenerRuleMod.ListenerRuleState
 import typingsSlinky.pulumiAws.loadBalancerMod.LoadBalancerArgs
 import typingsSlinky.pulumiAws.loadBalancerMod.LoadBalancerState
-import typingsSlinky.pulumiAws.loadBalancerTypeMod.LoadBalancerType
+import typingsSlinky.pulumiAws.pulumiAwsStrings.application
+import typingsSlinky.pulumiAws.pulumiAwsStrings.dualstack
+import typingsSlinky.pulumiAws.pulumiAwsStrings.ipv4
+import typingsSlinky.pulumiAws.pulumiAwsStrings.network
 import typingsSlinky.pulumiAws.targetGroupAttachmentMod.TargetGroupAttachmentArgs
 import typingsSlinky.pulumiAws.targetGroupAttachmentMod.TargetGroupAttachmentState
 import typingsSlinky.pulumiAws.targetGroupMod.TargetGroupArgs
@@ -54,6 +58,14 @@ object albMod extends js.Object {
   def getTargetGroup(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetTargetGroupResult] = js.native
   def getTargetGroup(args: GetTargetGroupArgs): js.Promise[GetTargetGroupResult] = js.native
   def getTargetGroup(args: GetTargetGroupArgs, opts: InvokeOptions): js.Promise[GetTargetGroupResult] = js.native
+  
+  @js.native
+  object IpAddressType extends js.Object {
+    
+    val Dualstack: dualstack = js.native
+    
+    val Ipv4: ipv4 = js.native
+  }
   
   @js.native
   class Listener protected ()
@@ -207,6 +219,14 @@ object albMod extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/alb/loadBalancer.LoadBalancer */ Boolean = js.native
+  }
+  
+  @js.native
+  object LoadBalancerType extends js.Object {
+    
+    val Application: application = js.native
+    
+    val Network: network = js.native
   }
   
   @js.native

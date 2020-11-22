@@ -9,6 +9,7 @@ package object eksMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.AL2_x86_64
     - typingsSlinky.awsSdk.awsSdkStrings.AL2_x86_64_GPU
+    - typingsSlinky.awsSdk.awsSdkStrings.AL2_ARM_64
     - java.lang.String
   */
   type AMITypes = typingsSlinky.awsSdk.eksMod._AMITypes | java.lang.String
@@ -51,6 +52,7 @@ package object eksMod {
     - typingsSlinky.awsSdk.awsSdkStrings.NodeCreationFailure
     - typingsSlinky.awsSdk.awsSdkStrings.PodEvictionFailure
     - typingsSlinky.awsSdk.awsSdkStrings.InsufficientFreeAddresses
+    - typingsSlinky.awsSdk.awsSdkStrings.ClusterUnreachable
     - java.lang.String
   */
   type ErrorCode = typingsSlinky.awsSdk.eksMod._ErrorCode | java.lang.String
@@ -113,6 +115,7 @@ package object eksMod {
     - typingsSlinky.awsSdk.awsSdkStrings.InsufficientFreeAddresses
     - typingsSlinky.awsSdk.awsSdkStrings.AccessDenied
     - typingsSlinky.awsSdk.awsSdkStrings.InternalFailure
+    - typingsSlinky.awsSdk.awsSdkStrings.ClusterUnreachable
     - java.lang.String
   */
   type NodegroupIssueCode = typingsSlinky.awsSdk.eksMod._NodegroupIssueCode | java.lang.String

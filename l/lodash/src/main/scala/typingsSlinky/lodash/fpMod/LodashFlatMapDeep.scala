@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashFlatMapDeep extends LodashConvertible {
+trait LodashFlatMapDeep extends js.Object {
   
   def apply(iteratee: String): LodashFlatMapDeep3x1 = js.native
   def apply(iteratee: String, collection: js.Object): js.Array[_] = js.native

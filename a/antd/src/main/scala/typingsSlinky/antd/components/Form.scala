@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -19,10 +20,16 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.antd.anon.Children
+import typingsSlinky.antd.anon.Errors
 import typingsSlinky.antd.antdBooleans.`false`
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -60,24 +67,25 @@ import typingsSlinky.antd.antdStrings.search
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.tel
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
+import typingsSlinky.antd.errorListMod.ErrorListProps
 import typingsSlinky.antd.formContextMod.FormProviderProps
 import typingsSlinky.antd.formFormMod.FormLayout
 import typingsSlinky.antd.formFormMod.FormProps
+import typingsSlinky.antd.formFormMod.RequiredMark
 import typingsSlinky.antd.formItemMod.FormItemProps
 import typingsSlinky.antd.formListMod.FormListFieldData
 import typingsSlinky.antd.formListMod.FormListOperation
 import typingsSlinky.antd.formListMod.FormListProps
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
-import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.antd.useFormMod.FormInstance
-import typingsSlinky.rcFieldForm.formMod.RenderProps
 import typingsSlinky.rcFieldForm.interfaceMod.FieldData
 import typingsSlinky.rcFieldForm.interfaceMod.Store
 import typingsSlinky.rcFieldForm.interfaceMod.ValidateErrorEntity
@@ -86,7 +94,6 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -98,9 +105,9 @@ object Form {
   object component extends js.Object
   
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
+  class Builder[Values] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, FormInstance] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -220,7 +227,9 @@ object Form {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -269,17 +278,6 @@ object Form {
     
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def childrenFunction2(
-      value: (/* values */ Store, /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance) => ReactElement
-    ): this.type = set("children", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def children(value: RenderProps | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
@@ -336,7 +334,7 @@ object Form {
     def fields(value: js.Array[FieldData]): this.type = set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def form(value: FormInstance): this.type = set("form", value.asInstanceOf[js.Any])
+    def form(value: FormInstance[Values]): this.type = set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -354,7 +352,7 @@ object Form {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
+    def inputMode(value: none | text_ | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -492,10 +490,10 @@ object Form {
     def onFieldsChange(value: (/* changedFields */ js.Array[FieldData], /* allFields */ js.Array[FieldData]) => Unit): this.type = set("onFieldsChange", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onFinish(value: /* values */ Store => Unit): this.type = set("onFinish", js.Any.fromFunction1(value))
+    def onFinish(value: Values => Unit): this.type = set("onFinish", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onFinishFailed(value: /* errorInfo */ ValidateErrorEntity => Unit): this.type = set("onFinishFailed", js.Any.fromFunction1(value))
+    def onFinishFailed(value: /* errorInfo */ ValidateErrorEntity[Values] => Unit): this.type = set("onFinishFailed", js.Any.fromFunction1(value))
     
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLFormElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
@@ -630,7 +628,7 @@ object Form {
     def onTransitionEnd(value: SyntheticTransitionEvent[HTMLFormElement] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onValuesChange(value: (/* changedValues */ Store, /* values */ Store) => Unit): this.type = set("onValuesChange", js.Any.fromFunction2(value))
+    def onValuesChange(value: (/* changedValues */ js.Any, Values) => Unit): this.type = set("onValuesChange", js.Any.fromFunction2(value))
     
     @scala.inline
     def onVolumeChange(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
@@ -658,6 +656,23 @@ object Form {
     
     @scala.inline
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def refRefObject(value: ReactRef[FormInstance[Values]]): this.type = set("ref", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def refFunction1(value: /* instance */ FormInstance[Values] | Null => Unit): this.type = set("ref", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def ref(
+      value: (js.Function1[/* instance */ FormInstance[Values] | Null, Unit]) | ReactRef[FormInstance[Values]]
+    ): this.type = set("ref", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def refNull: this.type = set("ref", null)
+    
+    @scala.inline
+    def requiredMark(value: RequiredMark): this.type = set("requiredMark", value.asInstanceOf[js.Any])
     
     @scala.inline
     def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])
@@ -726,9 +741,15 @@ object Form {
     def wrapperCol(value: ColProps): this.type = set("wrapperCol", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FormProps with RefAttributes[FormInstance]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[Values](p: Children[Values] with FormProps[Values]): Builder[Values] = new Builder[Values](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply[Values](): Builder[Values] = {
+    val __props = js.Dynamic.literal()
+    new Builder[Values](js.Array(this.component, __props.asInstanceOf[Children[Values] with FormProps[Values]]))
+  }
+  
+  implicit def make[Values](companion: Form.type): Builder[Values] = new Builder[Values](js.Array(this.component, js.Dictionary.empty))()
   
   object Item {
     
@@ -736,9 +757,15 @@ object Form {
     @js.native
     object component extends js.Object
     
-    def withProps(p: /* props */ FormItemProps): SharedBuilder_FormItemProps1002017227 = new SharedBuilder_FormItemProps1002017227(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps[Values](p: FormItemProps[Values]): SharedBuilder_FormItemProps1309695920[Values] = new SharedBuilder_FormItemProps1309695920[Values](js.Array(this.component, p.asInstanceOf[js.Any]))
     
-    implicit def make(companion: Item.type): SharedBuilder_FormItemProps1002017227 = new SharedBuilder_FormItemProps1002017227(js.Array(this.component, js.Dictionary.empty))()
+    @scala.inline
+    def apply[Values](): SharedBuilder_FormItemProps1309695920[Values] = {
+      val __props = js.Dynamic.literal()
+      new SharedBuilder_FormItemProps1309695920[Values](js.Array(this.component, __props.asInstanceOf[FormItemProps[Values]]))
+    }
+    
+    implicit def make[Values](companion: Item.type): SharedBuilder_FormItemProps1309695920[Values] = new SharedBuilder_FormItemProps1309695920[Values](js.Array(this.component, js.Dictionary.empty))()
   }
   
   object List {
@@ -747,16 +774,27 @@ object Form {
     @js.native
     object component extends js.Object
     
-    def withProps(p: FormListProps): Default[slinky.web.html.`*`.tag.type, js.Object] = new Default[slinky.web.html.`*`.tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: FormListProps): SharedBuilder_FormListProps458563791 = new SharedBuilder_FormListProps458563791(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
     def apply(
-      children: (js.Array[FormListFieldData], FormListOperation) => ReactElement,
+      children: (js.Array[FormListFieldData], FormListOperation, Errors) => ReactElement,
       name: String | Double | (js.Array[String | Double])
-    ): Default[slinky.web.html.`*`.tag.type, js.Object] = {
-      val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children), name = name.asInstanceOf[js.Any])
-      new Default[slinky.web.html.`*`.tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[FormListProps]))
+    ): SharedBuilder_FormListProps458563791 = {
+      val __props = js.Dynamic.literal(children = js.Any.fromFunction3(children), name = name.asInstanceOf[js.Any])
+      new SharedBuilder_FormListProps458563791(js.Array(this.component, __props.asInstanceOf[FormListProps]))
     }
+  }
+  
+  object ErrorList {
+    
+    @JSImport("antd", "Form.ErrorList")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: ErrorListProps): SharedBuilder_ErrorListProps1412097232 = new SharedBuilder_ErrorListProps1412097232(js.Array(this.component, p.asInstanceOf[js.Any]))
+    
+    implicit def make(companion: ErrorList.type): SharedBuilder_ErrorListProps1412097232 = new SharedBuilder_ErrorListProps1412097232(js.Array(this.component, js.Dictionary.empty))()
   }
   
   object Provider {

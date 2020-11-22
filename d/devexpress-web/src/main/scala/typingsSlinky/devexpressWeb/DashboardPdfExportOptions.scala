@@ -55,6 +55,9 @@ trait DashboardPdfExportOptions extends js.Object {
     */
   var ExportParameters: Boolean = js.native
   
+  /**
+    * Provides access to the font settings of the exported document.
+    */
   var FontInfo: ExportFontInfo = js.native
   
   /**

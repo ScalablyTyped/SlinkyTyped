@@ -18,7 +18,7 @@ trait MonitoringConfiguration extends js.Object {
   var LogLevel: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.LogLevel] = js.native
   
   /**
-    * Describes the granularity of the CloudWatch Logs for an application.
+    * Describes the granularity of the CloudWatch Logs for an application. The Parallelism level is not recommended for applications with a Parallelism over 64 due to excessive costs.
     */
   var MetricsLevel: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.MetricsLevel] = js.native
 }

@@ -18,6 +18,8 @@ import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.qs.mod.IParseOptions
 import typingsSlinky.qs.mod.ParsedQs
+import typingsSlinky.serveStatic.mod.RequestHandler
+import typingsSlinky.serveStatic.mod.RequestHandlerConstructor
 import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -36,7 +38,7 @@ trait Typeofexpress extends js.Object {
   /**
     * These are the exposed prototypes.
     */
-  def application(req: Request[ParamsDictionary, _, _, ParsedQs], res: Response[_]): js.Any = js.native
+  def application(req: Request[ParamsDictionary, _, _, ParsedQs], res: Response[_, Double]): js.Any = js.native
   /**
     * These are the exposed prototypes.
     */
@@ -44,7 +46,7 @@ trait Typeofexpress extends js.Object {
   /**
     * These are the exposed prototypes.
     */
-  def application(req: IncomingMessage, res: Response[_]): js.Any = js.native
+  def application(req: IncomingMessage, res: Response[_, Double]): js.Any = js.native
   /**
     * These are the exposed prototypes.
     */
@@ -99,16 +101,16 @@ trait Typeofexpress extends js.Object {
   /**
     * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
     */
-  def static(root: String): typingsSlinky.expressServeStaticCore.mod.Handler = js.native
+  def static(root: String): RequestHandler[Response_[_]] = js.native
   /**
     * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
     */
-  def static(root: String, options: ServeStaticOptions): typingsSlinky.expressServeStaticCore.mod.Handler = js.native
+  def static(root: String, options: ServeStaticOptions[Response_[_]]): RequestHandler[Response_[_]] = js.native
   /**
     * This is a built-in middleware function in Express. It serves static files and is based on serve-static.
     */
   @JSName("static")
-  var static_Original: Mime = js.native
+  var static_Original: RequestHandlerConstructor[Response_[_]] = js.native
   
   /**
     * This is a built-in middleware function in Express. It parses incoming requests with text payloads and is based on body-parser.

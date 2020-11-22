@@ -1,5 +1,7 @@
 package typingsSlinky.elasticElasticsearch.connectionMod
 
+import typingsSlinky.hpagent.mod.HttpProxyAgent
+import typingsSlinky.hpagent.mod.HttpsProxyAgent
 import typingsSlinky.node.httpMod.Agent
 import typingsSlinky.node.httpMod.ClientRequest
 import typingsSlinky.node.httpMod.IncomingMessage
@@ -15,7 +17,7 @@ trait Connection extends js.Object {
   
   def apply(`object`: js.Any, options: InspectOptions): String = js.native
   
-  var _agent: Agent = js.native
+  var _agent: Agent | typingsSlinky.node.httpsMod.Agent | HttpProxyAgent | HttpsProxyAgent = js.native
   
   var _openRequests: Double = js.native
   

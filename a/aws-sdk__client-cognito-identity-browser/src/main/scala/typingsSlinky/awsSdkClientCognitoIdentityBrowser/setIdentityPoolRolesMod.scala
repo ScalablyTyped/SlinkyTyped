@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientCognitoIdentityBrowser
 
-import typingsSlinky.awsSdkTypes.protocolMod.OperationModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object setIdentityPoolRolesMod extends js.Object {
   
-  val SetIdentityPoolRoles: OperationModel = js.native
+  val SetIdentityPoolRoles: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _Operation_ */ js.Any = js.native
 }

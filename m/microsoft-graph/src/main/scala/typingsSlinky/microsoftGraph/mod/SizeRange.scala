@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SizeRange extends js.Object {
   
   // The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
-  var maximumSize: js.UndefOr[Double] = js.native
+  var maximumSize: js.UndefOr[NullableOption[Double]] = js.native
   
   // The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply.
-  var minimumSize: js.UndefOr[Double] = js.native
+  var minimumSize: js.UndefOr[NullableOption[Double]] = js.native
 }
 object SizeRange {
   
@@ -37,15 +37,21 @@ object SizeRange {
     }
     
     @scala.inline
-    def setMaximumSize(value: Double): Self = this.set("maximumSize", value.asInstanceOf[js.Any])
+    def setMaximumSize(value: NullableOption[Double]): Self = this.set("maximumSize", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaximumSize: Self = this.set("maximumSize", js.undefined)
     
     @scala.inline
-    def setMinimumSize(value: Double): Self = this.set("minimumSize", value.asInstanceOf[js.Any])
+    def setMaximumSizeNull: Self = this.set("maximumSize", null)
+    
+    @scala.inline
+    def setMinimumSize(value: NullableOption[Double]): Self = this.set("minimumSize", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumSize: Self = this.set("minimumSize", js.undefined)
+    
+    @scala.inline
+    def setMinimumSizeNull: Self = this.set("minimumSize", null)
   }
 }

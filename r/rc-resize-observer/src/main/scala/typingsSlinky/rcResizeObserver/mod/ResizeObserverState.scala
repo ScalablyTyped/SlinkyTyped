@@ -9,13 +9,17 @@ trait ResizeObserverState extends js.Object {
   
   var height: Double = js.native
   
+  var offsetHeight: Double = js.native
+  
+  var offsetWidth: Double = js.native
+  
   var width: Double = js.native
 }
 object ResizeObserverState {
   
   @scala.inline
-  def apply(height: Double, width: Double): ResizeObserverState = {
-    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
+  def apply(height: Double, offsetHeight: Double, offsetWidth: Double, width: Double): ResizeObserverState = {
+    val __obj = js.Dynamic.literal(height = height.asInstanceOf[js.Any], offsetHeight = offsetHeight.asInstanceOf[js.Any], offsetWidth = offsetWidth.asInstanceOf[js.Any], width = width.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResizeObserverState]
   }
   
@@ -36,6 +40,12 @@ object ResizeObserverState {
     
     @scala.inline
     def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOffsetHeight(value: Double): Self = this.set("offsetHeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOffsetWidth(value: Double): Self = this.set("offsetWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])

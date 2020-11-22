@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashXorWith extends LodashConvertible {
+trait LodashXorWith extends js.Object {
   
   def apply[T](comparator: Comparator[T]): js.Array[T] = js.native
   def apply[T](comparator: Comparator[T], arrays: js.UndefOr[scala.Nothing], arrays2: List[T]): js.Array[T] = js.native

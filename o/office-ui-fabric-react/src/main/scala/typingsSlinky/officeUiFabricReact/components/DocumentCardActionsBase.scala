@@ -3,6 +3,7 @@ package typingsSlinky.officeUiFabricReact.components
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.documentCardActionsTypesMod.IDocumentCardActions
 import typingsSlinky.officeUiFabricReact.documentCardActionsTypesMod.IDocumentCardActionsProps
@@ -11,7 +12,6 @@ import typingsSlinky.officeUiFabricReact.documentCardActionsTypesMod.IDocumentCa
 import typingsSlinky.std.Number
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

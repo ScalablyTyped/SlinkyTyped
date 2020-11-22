@@ -14,6 +14,5 @@ object textSync extends js.Object {
     * @desc
     * This `unified-signatures` is disabled because `Fonts` type is too long
     */
-  // tslint:disable-next-line: unified-signatures
   def apply(txt: String, options: Options): String = js.native
 }

@@ -3,7 +3,7 @@ package typingsSlinky.babylonjs.global.BABYLON
 import typingsSlinky.babylonjs.BABYLON.Nullable
 import typingsSlinky.babylonjs.anon.MaxHeight
 import typingsSlinky.babylonjs.anon.SubdivisionsX
-import typingsSlinky.babylonjs.anon.Xmax
+import typingsSlinky.babylonjs.anon.Updatable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -70,6 +70,6 @@ object GroundBuilder extends js.Object {
     * @returns the tiled ground mesh
     * @see https://doc.babylonjs.com/how_to/set_shapes#tiled-ground
     */
-  def CreateTiledGround(name: String, options: Xmax): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
-  def CreateTiledGround(name: String, options: Xmax, scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
+  def CreateTiledGround(name: String, options: Updatable): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
+  def CreateTiledGround(name: String, options: Updatable, scene: Nullable[typingsSlinky.babylonjs.BABYLON.Scene]): typingsSlinky.babylonjs.BABYLON.Mesh = js.native
 }

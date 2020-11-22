@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SizeContextProps extends js.Object {
   
-  var size: js.UndefOr[SizeType] = js.native
+  var size: js.UndefOr[AvatarSize] = js.native
 }
 object SizeContextProps {
   
@@ -33,7 +33,7 @@ object SizeContextProps {
     }
     
     @scala.inline
-    def setSize(value: SizeType): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setSize(value: AvatarSize): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)

@@ -12,30 +12,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PointCloudRendererPointSizeAlgorithm extends Object {
   
   /**
-    * Specifies the scale factor that is applied to the size estimated by the density. Applies to `splat` only.
+    * Specifies the scale factor that is applied to the size estimated by the density.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudRenderer.html#pointSizeAlgorithm)
-    *
-    * @default 1
     */
   var scaleFactor: js.UndefOr[Double] = js.native
   
   /**
-    * Point size in meters (`useRealWorldSymbolSizes = true`) or points. Applies to `fixed-size` only.
+    * Point size in meters (`useRealWorldSymbolSizes = true`) or points.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudRenderer.html#pointSizeAlgorithm)
     */
   var size: js.UndefOr[Double] = js.native
   
   /**
-    * `fixed-size` or `splat`. Choosing `fixed-size` implies setting `size` and `useRealWorldSymbolSizes`. If `splat` is chosen then `scaleFactor` should be set.
+    * `fixed-size` or `splat`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudRenderer.html#pointSizeAlgorithm)
     */
   var `type`: `fixed-size` | splat = js.native
   
   /**
-    * Specifies whether `size` is in real world units or screen-space units. Applies to `fixed-size` only.
+    * Specifies whether `size` is in real world units or screen-space units.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-PointCloudRenderer.html#pointSizeAlgorithm)
     */

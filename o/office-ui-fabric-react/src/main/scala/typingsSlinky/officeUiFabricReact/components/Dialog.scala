@@ -7,6 +7,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.dialogContentTypesMod.DialogType
 import typingsSlinky.officeUiFabricReact.dialogContentTypesMod.IDialogContentProps
@@ -20,7 +21,6 @@ import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.ICSSPixelUnitRule
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.ICSSRule
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

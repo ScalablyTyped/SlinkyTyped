@@ -48,6 +48,11 @@ trait JobDefinition extends js.Object {
   var status: js.UndefOr[String] = js.native
   
   /**
+    * The tags applied to the job definition.
+    */
+  var tags: js.UndefOr[TagrisTagsMap] = js.native
+  
+  /**
     * The timeout configuration for jobs that are submitted with this job definition. You can specify a timeout duration after which AWS Batch terminates your jobs if they have not finished.
     */
   var timeout: js.UndefOr[JobTimeout] = js.native
@@ -122,6 +127,12 @@ object JobDefinition {
     
     @scala.inline
     def deleteStatus: Self = this.set("status", js.undefined)
+    
+    @scala.inline
+    def setTags(value: TagrisTagsMap): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
     
     @scala.inline
     def setTimeout(value: JobTimeout): Self = this.set("timeout", value.asInstanceOf[js.Any])

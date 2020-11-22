@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SearchResult extends Object {
   
   /**
-    * The extent, or bounding box, of the returned feature. The value depends on the data source, with higher quality data sources returning extents closer to the `feature` obtained from the search.
+    * The extent, or bounding box, of the returned feature.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search.html#SearchResult)
     */

@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Error extends js.Object {
   
-  var error: js.Any = js.native
+  var error: Null = js.native
 }
 object Error {
   
   @scala.inline
-  def apply(error: js.Any): Error = {
+  def apply(error: Null): Error = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any])
     __obj.asInstanceOf[Error]
   }
@@ -33,6 +33,6 @@ object Error {
     }
     
     @scala.inline
-    def setError(value: js.Any): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setError(value: Null): Self = this.set("error", value.asInstanceOf[js.Any])
   }
 }

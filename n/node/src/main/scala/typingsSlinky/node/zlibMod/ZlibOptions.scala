@@ -26,7 +26,12 @@ trait ZlibOptions extends js.Object {
     */
   var flush: js.UndefOr[Double] = js.native
   
+   // deflate/inflate only, empty dictionary by default
+  var info: js.UndefOr[Boolean] = js.native
+  
   var level: js.UndefOr[Double] = js.native
+  
+  var maxOutputLength: js.UndefOr[Double] = js.native
   
    // compression only
   var memLevel: js.UndefOr[Double] = js.native
@@ -117,10 +122,22 @@ object ZlibOptions {
     def deleteFlush: Self = this.set("flush", js.undefined)
     
     @scala.inline
+    def setInfo(value: Boolean): Self = this.set("info", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInfo: Self = this.set("info", js.undefined)
+    
+    @scala.inline
     def setLevel(value: Double): Self = this.set("level", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLevel: Self = this.set("level", js.undefined)
+    
+    @scala.inline
+    def setMaxOutputLength(value: Double): Self = this.set("maxOutputLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxOutputLength: Self = this.set("maxOutputLength", js.undefined)
     
     @scala.inline
     def setMemLevel(value: Double): Self = this.set("memLevel", value.asInstanceOf[js.Any])

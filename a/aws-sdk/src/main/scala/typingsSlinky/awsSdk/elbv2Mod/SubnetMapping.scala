@@ -13,6 +13,11 @@ trait SubnetMapping extends js.Object {
   var AllocationId: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.AllocationId] = js.native
   
   /**
+    * [Network Load Balancers] The IPv6 address.
+    */
+  var IPv6Address: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.IPv6Address] = js.native
+  
+  /**
     * [Network Load Balancers] The private IPv4 address for an internal load balancer.
     */
   var PrivateIPv4Address: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.PrivateIPv4Address] = js.native
@@ -50,6 +55,12 @@ object SubnetMapping {
     
     @scala.inline
     def deleteAllocationId: Self = this.set("AllocationId", js.undefined)
+    
+    @scala.inline
+    def setIPv6Address(value: IPv6Address): Self = this.set("IPv6Address", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIPv6Address: Self = this.set("IPv6Address", js.undefined)
     
     @scala.inline
     def setPrivateIPv4Address(value: PrivateIPv4Address): Self = this.set("PrivateIPv4Address", value.asInstanceOf[js.Any])

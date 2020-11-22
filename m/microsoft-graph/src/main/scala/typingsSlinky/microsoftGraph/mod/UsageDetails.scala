@@ -12,14 +12,14 @@ trait UsageDetails extends js.Object {
     * ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this:
     * 2014-01-01T00:00:00Z. Read-only.
     */
-  var lastAccessedDateTime: js.UndefOr[String] = js.native
+  var lastAccessedDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * The date and time the resource was last modified by the user. The timestamp represents date and time information using
     * ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this:
     * 2014-01-01T00:00:00Z. Read-only.
     */
-  var lastModifiedDateTime: js.UndefOr[String] = js.native
+  var lastModifiedDateTime: js.UndefOr[NullableOption[String]] = js.native
 }
 object UsageDetails {
   
@@ -45,15 +45,21 @@ object UsageDetails {
     }
     
     @scala.inline
-    def setLastAccessedDateTime(value: String): Self = this.set("lastAccessedDateTime", value.asInstanceOf[js.Any])
+    def setLastAccessedDateTime(value: NullableOption[String]): Self = this.set("lastAccessedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastAccessedDateTime: Self = this.set("lastAccessedDateTime", js.undefined)
     
     @scala.inline
-    def setLastModifiedDateTime(value: String): Self = this.set("lastModifiedDateTime", value.asInstanceOf[js.Any])
+    def setLastAccessedDateTimeNull: Self = this.set("lastAccessedDateTime", null)
+    
+    @scala.inline
+    def setLastModifiedDateTime(value: NullableOption[String]): Self = this.set("lastModifiedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastModifiedDateTime: Self = this.set("lastModifiedDateTime", js.undefined)
+    
+    @scala.inline
+    def setLastModifiedDateTimeNull: Self = this.set("lastModifiedDateTime", null)
   }
 }

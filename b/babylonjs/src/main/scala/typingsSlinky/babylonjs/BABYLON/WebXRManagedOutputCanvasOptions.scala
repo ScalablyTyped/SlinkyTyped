@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.BABYLON
 
 import typingsSlinky.babylonjs.HTMLCanvasElement
-import typingsSlinky.babylonjs.XRWebGLLayerOptions
+import typingsSlinky.babylonjs.XRWebGLLayerInit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,7 +18,7 @@ trait WebXRManagedOutputCanvasOptions extends js.Object {
   /**
     * Options for this XR Layer output
     */
-  var canvasOptions: js.UndefOr[XRWebGLLayerOptions] = js.native
+  var canvasOptions: js.UndefOr[XRWebGLLayerInit] = js.native
   
   /**
     * CSS styling for a newly created canvas (if not provided)
@@ -55,7 +55,7 @@ object WebXRManagedOutputCanvasOptions {
     def deleteCanvasElement: Self = this.set("canvasElement", js.undefined)
     
     @scala.inline
-    def setCanvasOptions(value: XRWebGLLayerOptions): Self = this.set("canvasOptions", value.asInstanceOf[js.Any])
+    def setCanvasOptions(value: XRWebGLLayerInit): Self = this.set("canvasOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCanvasOptions: Self = this.set("canvasOptions", js.undefined)

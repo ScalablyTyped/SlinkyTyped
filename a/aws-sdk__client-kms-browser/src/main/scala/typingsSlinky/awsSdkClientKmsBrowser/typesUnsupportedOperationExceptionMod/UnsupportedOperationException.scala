@@ -8,16 +8,14 @@ import typingsSlinky.awsSdkClientKmsBrowser.getKeyRotationStatusExceptionsUnionM
 import typingsSlinky.awsSdkClientKmsBrowser.getParametersForImportExceptionsUnionMod.GetParametersForImportExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.importKeyMaterialExceptionsUnionMod.ImportKeyMaterialExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.putKeyPolicyExceptionsUnionMod.PutKeyPolicyExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_UnsupportedOperationExceptionDetails> * / any */ @js.native
 trait UnsupportedOperationException
-  extends ServiceException[UnsupportedOperationExceptionDetails]
-     with CreateKeyExceptionsUnion
+  extends CreateKeyExceptionsUnion
      with DeleteImportedKeyMaterialExceptionsUnion
      with DisableKeyRotationExceptionsUnion
      with EnableKeyRotationExceptionsUnion
@@ -26,19 +24,15 @@ trait UnsupportedOperationException
      with ImportKeyMaterialExceptionsUnion
      with PutKeyPolicyExceptionsUnion {
   
-  @JSName("name")
-  var name_UnsupportedOperationException: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.UnsupportedOperationException = js.native
+  var name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.UnsupportedOperationException = js.native
 }
 object UnsupportedOperationException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: UnsupportedOperationExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.UnsupportedOperationException
   ): UnsupportedOperationException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnsupportedOperationException]
   }
   

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery_dot_jnotify"
-version := "1.0-dt-20200515Z-1d3379"
+version := "1.0-dt-20201002Z-1d3379"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

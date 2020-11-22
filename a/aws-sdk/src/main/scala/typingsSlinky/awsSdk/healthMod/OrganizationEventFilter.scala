@@ -15,7 +15,7 @@ trait OrganizationEventFilter extends js.Object {
   var endTime: js.UndefOr[DateTimeRange] = js.native
   
   /**
-    * REPLACEME
+    * A list of entity ARNs (unique identifiers).
     */
   var entityArns: js.UndefOr[entityArnList] = js.native
   
@@ -30,7 +30,7 @@ trait OrganizationEventFilter extends js.Object {
   var eventStatusCodes: js.UndefOr[eventStatusCodeList] = js.native
   
   /**
-    * REPLACEME
+    * A list of event type category codes (issue, scheduledChange, or accountNotification).
     */
   var eventTypeCategories: js.UndefOr[eventTypeCategoryList] = js.native
   

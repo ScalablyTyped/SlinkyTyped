@@ -14,7 +14,8 @@ class LexicalGoalAssertion protected ()
   extends AssertionBase[
       typingsSlinky.grammarkdown.tokensMod.SyntaxKind.LexicalGoalAssertion, 
       OpenBracketToken
-    ] {
+    ]
+     with Assertion {
   def this(openBracketToken: Token[OpenBracketToken], lexicalKeyword: Token[LexicalKeyword]) = this()
   def this(
     openBracketToken: Token[OpenBracketToken],

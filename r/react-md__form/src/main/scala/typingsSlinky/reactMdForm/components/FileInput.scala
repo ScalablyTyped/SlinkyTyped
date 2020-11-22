@@ -28,8 +28,13 @@ import typingsSlinky.reactMdButton.buttonThemeClassNamesMod.ButtonTheme
 import typingsSlinky.reactMdButton.buttonThemeClassNamesMod.ButtonThemeType
 import typingsSlinky.reactMdButton.buttonThemeClassNamesMod.ButtonType
 import typingsSlinky.reactMdForm.fileInputFileInputMod.FileInputProps
+import typingsSlinky.reactMdForm.reactMdFormStrings.`additions removals`
 import typingsSlinky.reactMdForm.reactMdFormStrings.`additions text`
 import typingsSlinky.reactMdForm.reactMdFormStrings.`inline`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`removals additions`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`removals text`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`text additions`
+import typingsSlinky.reactMdForm.reactMdFormStrings.`text removals`
 import typingsSlinky.reactMdForm.reactMdFormStrings.additions
 import typingsSlinky.reactMdForm.reactMdFormStrings.all
 import typingsSlinky.reactMdForm.reactMdFormStrings.ascending
@@ -40,8 +45,11 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.date
 import typingsSlinky.reactMdForm.reactMdFormStrings.decimal
 import typingsSlinky.reactMdForm.reactMdFormStrings.descending
 import typingsSlinky.reactMdForm.reactMdFormStrings.dialog
+import typingsSlinky.reactMdForm.reactMdFormStrings.done
 import typingsSlinky.reactMdForm.reactMdFormStrings.email
+import typingsSlinky.reactMdForm.reactMdFormStrings.enter
 import typingsSlinky.reactMdForm.reactMdFormStrings.execute
+import typingsSlinky.reactMdForm.reactMdFormStrings.go
 import typingsSlinky.reactMdForm.reactMdFormStrings.grammar
 import typingsSlinky.reactMdForm.reactMdFormStrings.grid
 import typingsSlinky.reactMdForm.reactMdFormStrings.horizontal
@@ -53,6 +61,7 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.location
 import typingsSlinky.reactMdForm.reactMdFormStrings.menu
 import typingsSlinky.reactMdForm.reactMdFormStrings.mixed
 import typingsSlinky.reactMdForm.reactMdFormStrings.move
+import typingsSlinky.reactMdForm.reactMdFormStrings.next
 import typingsSlinky.reactMdForm.reactMdFormStrings.no
 import typingsSlinky.reactMdForm.reactMdFormStrings.none
 import typingsSlinky.reactMdForm.reactMdFormStrings.numeric
@@ -62,8 +71,10 @@ import typingsSlinky.reactMdForm.reactMdFormStrings.other
 import typingsSlinky.reactMdForm.reactMdFormStrings.page
 import typingsSlinky.reactMdForm.reactMdFormStrings.polite
 import typingsSlinky.reactMdForm.reactMdFormStrings.popup
+import typingsSlinky.reactMdForm.reactMdFormStrings.previous
 import typingsSlinky.reactMdForm.reactMdFormStrings.removals
 import typingsSlinky.reactMdForm.reactMdFormStrings.search
+import typingsSlinky.reactMdForm.reactMdFormStrings.send
 import typingsSlinky.reactMdForm.reactMdFormStrings.spelling
 import typingsSlinky.reactMdForm.reactMdFormStrings.step
 import typingsSlinky.reactMdForm.reactMdFormStrings.tel
@@ -206,7 +217,9 @@ object FileInput {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -306,6 +319,9 @@ object FileInput {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])

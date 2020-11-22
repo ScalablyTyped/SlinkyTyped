@@ -21,11 +21,17 @@ trait Config extends js.Object {
   
   var cookieExpiration: js.UndefOr[Double] = js.native
   
+  var cookieForceUpgrade: js.UndefOr[Boolean] = js.native
+  
   var cookieName: js.UndefOr[String] = js.native
+  
+  var deferInitialization: js.UndefOr[Boolean] = js.native
   
   var deviceId: js.UndefOr[String] = js.native
   
   var deviceIdFromUrlParam: js.UndefOr[Boolean] = js.native
+  
+  var disableCookies: js.UndefOr[Boolean] = js.native
   
   var domain: js.UndefOr[String] = js.native
   
@@ -119,10 +125,22 @@ object Config {
     def deleteCookieExpiration: Self = this.set("cookieExpiration", js.undefined)
     
     @scala.inline
+    def setCookieForceUpgrade(value: Boolean): Self = this.set("cookieForceUpgrade", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCookieForceUpgrade: Self = this.set("cookieForceUpgrade", js.undefined)
+    
+    @scala.inline
     def setCookieName(value: String): Self = this.set("cookieName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCookieName: Self = this.set("cookieName", js.undefined)
+    
+    @scala.inline
+    def setDeferInitialization(value: Boolean): Self = this.set("deferInitialization", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeferInitialization: Self = this.set("deferInitialization", js.undefined)
     
     @scala.inline
     def setDeviceId(value: String): Self = this.set("deviceId", value.asInstanceOf[js.Any])
@@ -135,6 +153,12 @@ object Config {
     
     @scala.inline
     def deleteDeviceIdFromUrlParam: Self = this.set("deviceIdFromUrlParam", js.undefined)
+    
+    @scala.inline
+    def setDisableCookies(value: Boolean): Self = this.set("disableCookies", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableCookies: Self = this.set("disableCookies", js.undefined)
     
     @scala.inline
     def setDomain(value: String): Self = this.set("domain", value.asInstanceOf[js.Any])

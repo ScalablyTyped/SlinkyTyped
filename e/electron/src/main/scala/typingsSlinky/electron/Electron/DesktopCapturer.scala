@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DesktopCapturer extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/desktop-capturer
+  // Docs: https://electronjs.org/docs/api/desktop-capturer
   /**
     * Resolves with an array of `DesktopCapturerSource` objects, each
     * `DesktopCapturerSource` represents a screen or an individual window that can be

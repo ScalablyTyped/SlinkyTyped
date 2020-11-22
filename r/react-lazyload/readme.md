@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-lazyload
 
-Typings are for version 2.6
+Typings are for version 3.0
 
 ## Library description:
 Lazyload your components, images or anything where performance matters.

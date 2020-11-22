@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSBooleanKeyword
+import typingsSlinky.babelTraverse.babelTraverseStrings.DeclareModuleExports
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `216` extends js.Object {
   
-  var `type`: TSBooleanKeyword = js.native
+  var `type`: DeclareModuleExports = js.native
 }
 object `216` {
   
   @scala.inline
-  def apply(`type`: TSBooleanKeyword): `216` = {
+  def apply(`type`: DeclareModuleExports): `216` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`216`]
@@ -35,6 +35,6 @@ object `216` {
     }
     
     @scala.inline
-    def setType(value: TSBooleanKeyword): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: DeclareModuleExports): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

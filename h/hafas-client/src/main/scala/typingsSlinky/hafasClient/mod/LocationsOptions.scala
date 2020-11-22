@@ -14,6 +14,12 @@ trait LocationsOptions extends js.Object {
   var addresses: js.UndefOr[Boolean] = js.native
   
   /**
+    * parse & expose entrances of stops/stations?
+    * @default true
+    */
+  var entrances: js.UndefOr[Boolean] = js.native
+  
+  /**
     * find only exact matches?
     * @default true
     */
@@ -48,6 +54,12 @@ trait LocationsOptions extends js.Object {
     * @default true
     */
   var stops: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * parse & expose sub-stops of stations?
+    * @default false
+    */
+  var subStops: js.UndefOr[Boolean] = js.native
 }
 object LocationsOptions {
   
@@ -77,6 +89,12 @@ object LocationsOptions {
     
     @scala.inline
     def deleteAddresses: Self = this.set("addresses", js.undefined)
+    
+    @scala.inline
+    def setEntrances(value: Boolean): Self = this.set("entrances", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEntrances: Self = this.set("entrances", js.undefined)
     
     @scala.inline
     def setFuzzy(value: Boolean): Self = this.set("fuzzy", value.asInstanceOf[js.Any])
@@ -113,5 +131,11 @@ object LocationsOptions {
     
     @scala.inline
     def deleteStops: Self = this.set("stops", js.undefined)
+    
+    @scala.inline
+    def setSubStops(value: Boolean): Self = this.set("subStops", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSubStops: Self = this.set("subStops", js.undefined)
   }
 }

@@ -9,24 +9,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ResizeObserverEntry extends js.Object {
   
-  val borderBoxSize: ResizeObserverSize = js.native
+  val borderBoxSize: js.UndefOr[js.Array[ResizeObserverSize]] = js.native
   
-  val contentBoxSize: ResizeObserverSize = js.native
+  val contentBoxSize: js.UndefOr[js.Array[ResizeObserverSize]] = js.native
   
   val contentRect: DOMRectReadOnly = js.native
+  
+  val devicePixelContentBoxSize: js.UndefOr[js.Array[ResizeObserverSize]] = js.native
   
   val target: Element = js.native
 }
 object ResizeObserverEntry {
   
   @scala.inline
-  def apply(
-    borderBoxSize: ResizeObserverSize,
-    contentBoxSize: ResizeObserverSize,
-    contentRect: DOMRectReadOnly,
-    target: Element
-  ): ResizeObserverEntry = {
-    val __obj = js.Dynamic.literal(borderBoxSize = borderBoxSize.asInstanceOf[js.Any], contentBoxSize = contentBoxSize.asInstanceOf[js.Any], contentRect = contentRect.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
+  def apply(contentRect: DOMRectReadOnly, target: Element): ResizeObserverEntry = {
+    val __obj = js.Dynamic.literal(contentRect = contentRect.asInstanceOf[js.Any], target = target.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResizeObserverEntry]
   }
   
@@ -46,15 +43,36 @@ object ResizeObserverEntry {
     }
     
     @scala.inline
-    def setBorderBoxSize(value: ResizeObserverSize): Self = this.set("borderBoxSize", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setContentBoxSize(value: ResizeObserverSize): Self = this.set("contentBoxSize", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setContentRect(value: DOMRectReadOnly): Self = this.set("contentRect", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTarget(value: Element): Self = this.set("target", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBorderBoxSizeVarargs(value: ResizeObserverSize*): Self = this.set("borderBoxSize", js.Array(value :_*))
+    
+    @scala.inline
+    def setBorderBoxSize(value: js.Array[ResizeObserverSize]): Self = this.set("borderBoxSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBorderBoxSize: Self = this.set("borderBoxSize", js.undefined)
+    
+    @scala.inline
+    def setContentBoxSizeVarargs(value: ResizeObserverSize*): Self = this.set("contentBoxSize", js.Array(value :_*))
+    
+    @scala.inline
+    def setContentBoxSize(value: js.Array[ResizeObserverSize]): Self = this.set("contentBoxSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContentBoxSize: Self = this.set("contentBoxSize", js.undefined)
+    
+    @scala.inline
+    def setDevicePixelContentBoxSizeVarargs(value: ResizeObserverSize*): Self = this.set("devicePixelContentBoxSize", js.Array(value :_*))
+    
+    @scala.inline
+    def setDevicePixelContentBoxSize(value: js.Array[ResizeObserverSize]): Self = this.set("devicePixelContentBoxSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDevicePixelContentBoxSize: Self = this.set("devicePixelContentBoxSize", js.undefined)
   }
 }

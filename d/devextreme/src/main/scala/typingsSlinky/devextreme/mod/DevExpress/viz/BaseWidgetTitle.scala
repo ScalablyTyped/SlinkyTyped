@@ -16,35 +16,55 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseWidget.Options.title */
+/**
+  * [descr:BaseWidget.Options.title]
+  */
 @js.native
 trait BaseWidgetTitle extends js.Object {
   
-  /** @name BaseWidget.Options.title.font */
+  /**
+    * [descr:BaseWidget.Options.title.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name BaseWidget.Options.title.horizontalAlignment */
+  /**
+    * [descr:BaseWidget.Options.title.horizontalAlignment]
+    */
   var horizontalAlignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name BaseWidget.Options.title.margin */
+  /**
+    * [descr:BaseWidget.Options.title.margin]
+    */
   var margin: js.UndefOr[Double | Bottom] = js.native
   
-  /** @name BaseWidget.Options.title.placeholderSize */
+  /**
+    * [descr:BaseWidget.Options.title.placeholderSize]
+    */
   var placeholderSize: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.title.subtitle */
+  /**
+    * [descr:BaseWidget.Options.title.subtitle]
+    */
   var subtitle: js.UndefOr[FontOffset | String] = js.native
   
-  /** @name BaseWidget.Options.title.text */
+  /**
+    * [descr:BaseWidget.Options.title.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name BaseWidget.Options.title.textOverflow */
+  /**
+    * [descr:BaseWidget.Options.title.textOverflow]
+    */
   var textOverflow: js.UndefOr[ellipsis | hide | none] = js.native
   
-  /** @name BaseWidget.Options.title.verticalAlignment */
+  /**
+    * [descr:BaseWidget.Options.title.verticalAlignment]
+    */
   var verticalAlignment: js.UndefOr[bottom | top] = js.native
   
-  /** @name BaseWidget.Options.title.wordWrap */
+  /**
+    * [descr:BaseWidget.Options.title.wordWrap]
+    */
   var wordWrap: js.UndefOr[normal | breakWord | none] = js.native
 }
 object BaseWidgetTitle {

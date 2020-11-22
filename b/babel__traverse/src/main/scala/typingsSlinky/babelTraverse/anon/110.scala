@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ArrayPattern
+import typingsSlinky.babelTraverse.babelTraverseStrings.AwaitExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `110` extends js.Object {
   
-  var `type`: ArrayPattern = js.native
+  var `type`: AwaitExpression = js.native
 }
 object `110` {
   
   @scala.inline
-  def apply(`type`: ArrayPattern): `110` = {
+  def apply(`type`: AwaitExpression): `110` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`110`]
@@ -35,6 +35,6 @@ object `110` {
     }
     
     @scala.inline
-    def setType(value: ArrayPattern): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: AwaitExpression): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

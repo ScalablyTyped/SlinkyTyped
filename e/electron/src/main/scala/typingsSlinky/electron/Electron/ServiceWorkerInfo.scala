@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ServiceWorkerInfo extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/service-worker-info
+  // Docs: https://electronjs.org/docs/api/structures/service-worker-info
   /**
     * The virtual ID of the process that this service worker is running in.  This is
     * not an OS level PID.  This aligns with the ID set used for

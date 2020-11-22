@@ -1,6 +1,6 @@
 package typingsSlinky.next.anon
 
-import typingsSlinky.next.utilsMod.BaseContext
+import typingsSlinky.next.libUtilsMod.BaseContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

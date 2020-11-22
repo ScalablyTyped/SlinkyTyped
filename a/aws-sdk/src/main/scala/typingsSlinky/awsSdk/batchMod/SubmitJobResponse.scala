@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SubmitJobResponse extends js.Object {
   
   /**
+    * The Amazon Resource Name (ARN) for the job.
+    */
+  var jobArn: js.UndefOr[String] = js.native
+  
+  /**
     * The unique identifier for the job.
     */
   var jobId: String = js.native
@@ -45,5 +50,11 @@ object SubmitJobResponse {
     
     @scala.inline
     def setJobName(value: String): Self = this.set("jobName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJobArn(value: String): Self = this.set("jobArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJobArn: Self = this.set("jobArn", js.undefined)
   }
 }

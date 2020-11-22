@@ -1,7 +1,7 @@
 
 # Scala.js typings for xstyled__system
 
-Typings are for version 1.17
+Typings are for version 1.19
 
 ## Library description:
 Modern style system for styled-components & emotion.

@@ -9,7 +9,7 @@ trait BackgroundPositionProps[TLength] extends js.Object {
   
   val backgroundPosition: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundPositionProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundPosition<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BackgroundPositionProps {
     }
     
     @scala.inline
+    def setBackgroundPositionVarargs(value: js.Any*): Self = this.set("backgroundPosition", js.Array(value :_*))
+    
+    @scala.inline
     def setBackgroundPosition(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundPositionProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundPosition<TLength> */ _
         ]
     ): Self = this.set("backgroundPosition", value.asInstanceOf[js.Any])
     

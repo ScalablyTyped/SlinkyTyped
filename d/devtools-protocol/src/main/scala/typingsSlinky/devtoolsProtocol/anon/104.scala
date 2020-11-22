@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Memory.SetPressureNotificationsSuppressedRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Input.SynthesizeScrollGestureRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `104` extends js.Object {
   
-  var paramsType: js.Array[SetPressureNotificationsSuppressedRequest] = js.native
+  var paramsType: js.Array[SynthesizeScrollGestureRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `104` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetPressureNotificationsSuppressedRequest], returnType: Unit): `104` = {
+  def apply(paramsType: js.Array[SynthesizeScrollGestureRequest], returnType: Unit): `104` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`104`]
   }
@@ -36,10 +36,10 @@ object `104` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetPressureNotificationsSuppressedRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SynthesizeScrollGestureRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetPressureNotificationsSuppressedRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SynthesizeScrollGestureRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

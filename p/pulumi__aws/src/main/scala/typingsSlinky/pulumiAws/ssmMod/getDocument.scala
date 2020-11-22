@@ -1,0 +1,16 @@
+package typingsSlinky.pulumiAws.ssmMod
+
+import typingsSlinky.pulumiAws.getDocumentMod.GetDocumentArgs
+import typingsSlinky.pulumiAws.getDocumentMod.GetDocumentResult
+import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@JSImport("@pulumi/aws/ssm", "getDocument")
+@js.native
+object getDocument extends js.Object {
+  
+  def apply(args: GetDocumentArgs): js.Promise[GetDocumentResult] = js.native
+  def apply(args: GetDocumentArgs, opts: InvokeOptions): js.Promise[GetDocumentResult] = js.native
+}

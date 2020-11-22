@@ -14,6 +14,11 @@ trait WifiInfo extends js.Object {
   /** Wi-Fi 的 SSID */
   var SSID: String = js.native
   
+  /** Wi-Fi 频段单位 MHz
+    *
+    * 最低基础库： `2.12.0` */
+  var frequency: Double = js.native
+  
   /** Wi-Fi 是否安全 */
   var secure: Boolean = js.native
   
@@ -23,8 +28,8 @@ trait WifiInfo extends js.Object {
 object WifiInfo {
   
   @scala.inline
-  def apply(BSSID: String, SSID: String, secure: Boolean, signalStrength: Double): WifiInfo = {
-    val __obj = js.Dynamic.literal(BSSID = BSSID.asInstanceOf[js.Any], SSID = SSID.asInstanceOf[js.Any], secure = secure.asInstanceOf[js.Any], signalStrength = signalStrength.asInstanceOf[js.Any])
+  def apply(BSSID: String, SSID: String, frequency: Double, secure: Boolean, signalStrength: Double): WifiInfo = {
+    val __obj = js.Dynamic.literal(BSSID = BSSID.asInstanceOf[js.Any], SSID = SSID.asInstanceOf[js.Any], frequency = frequency.asInstanceOf[js.Any], secure = secure.asInstanceOf[js.Any], signalStrength = signalStrength.asInstanceOf[js.Any])
     __obj.asInstanceOf[WifiInfo]
   }
   
@@ -48,6 +53,9 @@ object WifiInfo {
     
     @scala.inline
     def setSSID(value: String): Self = this.set("SSID", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFrequency(value: Double): Self = this.set("frequency", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSecure(value: Boolean): Self = this.set("secure", value.asInstanceOf[js.Any])

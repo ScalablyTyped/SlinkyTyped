@@ -2,6 +2,8 @@ package typingsSlinky.reactstrap.breadcrumbMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
@@ -17,9 +19,9 @@ trait BreadcrumbProps
   
   var listClassName: js.UndefOr[String] = js.native
   
-  var listTag: js.UndefOr[String] = js.native
+  var listTag: js.UndefOr[ReactElement] = js.native
   
-  var tag: js.UndefOr[String] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
 }
 object BreadcrumbProps {
   
@@ -57,13 +59,25 @@ object BreadcrumbProps {
     def deleteListClassName: Self = this.set("listClassName", js.undefined)
     
     @scala.inline
-    def setListTag(value: String): Self = this.set("listTag", value.asInstanceOf[js.Any])
+    def setListTagFunctionComponent(value: ReactComponentClass[_]): Self = this.set("listTag", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setListTagComponentClass(value: ReactComponentClass[_]): Self = this.set("listTag", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setListTag(value: ReactElement): Self = this.set("listTag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteListTag: Self = this.set("listTag", js.undefined)
     
     @scala.inline
-    def setTag(value: String): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTagFunctionComponent(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

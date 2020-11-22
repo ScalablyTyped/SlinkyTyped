@@ -52,9 +52,9 @@ trait Ora extends js.Object {
   val isSpinning: Boolean = js.native
   
   /**
-  		Change the text before the spinner. No prefix text will be displayed if set to an empty string.
+  		Change the text or function that returns text before the spinner. No prefix text will be displayed if set to an empty string.
   		*/
-  var prefixText: String = js.native
+  var prefixText: String | PrefixTextGenerator = js.native
   
   /**
   		Manually render a new frame.

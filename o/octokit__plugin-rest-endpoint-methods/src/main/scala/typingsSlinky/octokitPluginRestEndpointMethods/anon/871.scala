@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReactionsCreateForTeamDiscussionCommentInOrgEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReactionsCreateForTeamDiscussionCommentInOrgResponseData
+import typingsSlinky.octokitTypes.endpointsMod.PullsUpdateReviewCommentEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.PullsUpdateReviewCommentResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,22 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `871` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[
-    ReactionsCreateForTeamDiscussionCommentInOrgEndpoint, 
-    baseUrl | headers | mediaType
-  ]) = js.native
+  var parameters: RequestParameters with (Omit[PullsUpdateReviewCommentEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReactionsCreateForTeamDiscussionCommentInOrgResponseData] = js.native
+  var response: OctokitResponse[PullsUpdateReviewCommentResponseData] = js.native
 }
 object `871` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[
-      ReactionsCreateForTeamDiscussionCommentInOrgEndpoint, 
-      baseUrl | headers | mediaType
-    ]),
-    response: OctokitResponse[ReactionsCreateForTeamDiscussionCommentInOrgResponseData]
+    parameters: RequestParameters with (Omit[PullsUpdateReviewCommentEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[PullsUpdateReviewCommentResponseData]
   ): `871` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`871`]
@@ -53,13 +47,10 @@ object `871` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[
-          ReactionsCreateForTeamDiscussionCommentInOrgEndpoint, 
-          baseUrl | headers | mediaType
-        ])
+      value: RequestParameters with (Omit[PullsUpdateReviewCommentEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReactionsCreateForTeamDiscussionCommentInOrgResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[PullsUpdateReviewCommentResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

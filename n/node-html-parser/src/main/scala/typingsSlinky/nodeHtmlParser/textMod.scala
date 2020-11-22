@@ -28,6 +28,6 @@ object textMod extends js.Object {
   
   @js.native
   class default protected () extends TextNode {
-    def this(value: String) = this()
+    def this(rawText: String) = this()
   }
 }

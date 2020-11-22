@@ -9,13 +9,13 @@ trait MarginLeftProps[TLength] extends js.Object {
   
   val marginLeft: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginLeftProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginLeft<TLength> */ _
     ]
   ] = js.native
   
   val ml: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginLeftProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginLeft<TLength> */ _
     ]
   ] = js.native
 }
@@ -43,9 +43,12 @@ object MarginLeftProps {
     }
     
     @scala.inline
+    def setMarginLeftVarargs(value: js.Any*): Self = this.set("marginLeft", js.Array(value :_*))
+    
+    @scala.inline
     def setMarginLeft(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginLeftProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginLeft<TLength> */ _
         ]
     ): Self = this.set("marginLeft", value.asInstanceOf[js.Any])
     
@@ -53,9 +56,12 @@ object MarginLeftProps {
     def deleteMarginLeft: Self = this.set("marginLeft", js.undefined)
     
     @scala.inline
+    def setMlVarargs(value: js.Any*): Self = this.set("ml", js.Array(value :_*))
+    
+    @scala.inline
     def setMl(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginLeftProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginLeft<TLength> */ _
         ]
     ): Self = this.set("ml", value.asInstanceOf[js.Any])
     

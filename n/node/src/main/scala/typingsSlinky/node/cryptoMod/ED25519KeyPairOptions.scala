@@ -1,7 +1,7 @@
 package typingsSlinky.node.cryptoMod
 
-import typingsSlinky.node.anon.Format
-import typingsSlinky.node.anon.`1`
+import typingsSlinky.node.anon.FormatType
+import typingsSlinky.node.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ED25519KeyPairOptions[PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */] extends js.Object {
   
-  var privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with `1` = js.native
+  var privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with `0` = js.native
   
-  var publicKeyEncoding: Format[PubF] = js.native
+  var publicKeyEncoding: FormatType[PubF] = js.native
 }
 object ED25519KeyPairOptions {
   
   @scala.inline
-  def apply[PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */](privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with `1`, publicKeyEncoding: Format[PubF]): ED25519KeyPairOptions[PubF, PrivF] = {
+  def apply[PubF /* <: KeyFormat */, PrivF /* <: KeyFormat */](
+    privateKeyEncoding: BasePrivateKeyEncodingOptions[PrivF] with `0`,
+    publicKeyEncoding: FormatType[PubF]
+  ): ED25519KeyPairOptions[PubF, PrivF] = {
     val __obj = js.Dynamic.literal(privateKeyEncoding = privateKeyEncoding.asInstanceOf[js.Any], publicKeyEncoding = publicKeyEncoding.asInstanceOf[js.Any])
     __obj.asInstanceOf[ED25519KeyPairOptions[PubF, PrivF]]
   }
@@ -37,9 +40,9 @@ object ED25519KeyPairOptions {
     }
     
     @scala.inline
-    def setPrivateKeyEncoding(value: BasePrivateKeyEncodingOptions[PrivF] with `1`): Self = this.set("privateKeyEncoding", value.asInstanceOf[js.Any])
+    def setPrivateKeyEncoding(value: BasePrivateKeyEncodingOptions[PrivF] with `0`): Self = this.set("privateKeyEncoding", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPublicKeyEncoding(value: Format[PubF]): Self = this.set("publicKeyEncoding", value.asInstanceOf[js.Any])
+    def setPublicKeyEncoding(value: FormatType[PubF]): Self = this.set("publicKeyEncoding", value.asInstanceOf[js.Any])
   }
 }

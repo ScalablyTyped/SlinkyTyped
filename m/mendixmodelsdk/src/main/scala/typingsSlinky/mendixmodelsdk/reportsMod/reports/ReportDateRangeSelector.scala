@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.reportsMod.reports
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -30,13 +31,14 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.VerticalFlow
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.WebLayoutContent
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/report-date-parameter relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/report-date-parameter relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/reports", "reports.ReportDateRangeSelector")
 @js.native
@@ -46,8 +48,8 @@ class ReportDateRangeSelector protected () extends ReportParameter {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def fields: IList[ReportDateRangeField] = js.native
@@ -63,9 +65,6 @@ class ReportDateRangeSelector protected () extends ReportParameter {
   
   def minYear: Double = js.native
   def minYear_=(newValue: Double): Unit = js.native
-  
-  @JSName("model")
-  var model_FReportDateRangeSelector: IModel = js.native
   
   def showFromToRange: Boolean = js.native
   def showFromToRange_=(newValue: Boolean): Unit = js.native

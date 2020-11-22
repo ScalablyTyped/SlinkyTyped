@@ -14,7 +14,7 @@ trait BorderStyleProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js
     */
   var borderBottomStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderBottomStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderBottomStyle */ _, 
       ThemeType
     ]
   ] = js.native
@@ -26,7 +26,7 @@ trait BorderStyleProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js
     */
   var borderLeftStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderLeftStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderLeftStyle */ _, 
       ThemeType
     ]
   ] = js.native
@@ -38,7 +38,7 @@ trait BorderStyleProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js
     */
   var borderRightStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRightStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRightStyle */ _, 
       ThemeType
     ]
   ] = js.native
@@ -50,7 +50,7 @@ trait BorderStyleProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js
     */
   var borderStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderStyle */ _, 
       ThemeType
     ]
   ] = js.native
@@ -62,7 +62,7 @@ trait BorderStyleProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js
     */
   var borderTopStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTopStyle */ _, 
       ThemeType
     ]
   ] = js.native
@@ -96,7 +96,7 @@ object BorderStyleProps {
     @scala.inline
     def setBorderBottomStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderBottomStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderBottomStyle */ _, 
           ThemeType
         ]
     ): Self = this.set("borderBottomStyle", value.asInstanceOf[js.Any])
@@ -113,7 +113,7 @@ object BorderStyleProps {
     @scala.inline
     def setBorderLeftStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderLeftStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderLeftStyle */ _, 
           ThemeType
         ]
     ): Self = this.set("borderLeftStyle", value.asInstanceOf[js.Any])
@@ -130,7 +130,7 @@ object BorderStyleProps {
     @scala.inline
     def setBorderRightStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRightStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRightStyle */ _, 
           ThemeType
         ]
     ): Self = this.set("borderRightStyle", value.asInstanceOf[js.Any])
@@ -147,7 +147,7 @@ object BorderStyleProps {
     @scala.inline
     def setBorderStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderStyle */ _, 
           ThemeType
         ]
     ): Self = this.set("borderStyle", value.asInstanceOf[js.Any])
@@ -164,7 +164,7 @@ object BorderStyleProps {
     @scala.inline
     def setBorderTopStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTopStyle */ _, 
           ThemeType
         ]
     ): Self = this.set("borderTopStyle", value.asInstanceOf[js.Any])

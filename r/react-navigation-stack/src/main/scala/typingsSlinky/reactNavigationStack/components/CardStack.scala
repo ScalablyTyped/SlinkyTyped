@@ -27,6 +27,18 @@ object CardStack {
        with StBuildingComponent[tag.type, default] {
     
     @scala.inline
+    def detachInactiveScreens(value: Boolean): this.type = set("detachInactiveScreens", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def onGestureCancel(value: /* props */ Route => Unit): this.type = set("onGestureCancel", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onGestureEnd(value: /* props */ Route => Unit): this.type = set("onGestureEnd", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onGestureStart(value: /* props */ Route => Unit): this.type = set("onGestureStart", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def onPageChangeCancel(value: () => Unit): this.type = set("onPageChangeCancel", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -46,6 +58,7 @@ object CardStack {
     getPreviousRoute: Route => js.UndefOr[typingsSlinky.reactNavigationStack.vendorTypesMod.Route[String]],
     headerMode: StackHeaderMode,
     insets: EdgeInsets,
+    isParentHeaderShown: Boolean,
     mode: StackCardMode,
     onCloseRoute: Route => Unit,
     onOpenRoute: Route => Unit,
@@ -57,7 +70,7 @@ object CardStack {
     routes: js.Array[typingsSlinky.reactNavigationStack.vendorTypesMod.Route[String]],
     state: NavigationState
   ): Builder = {
-    val __props = js.Dynamic.literal(closingRouteKeys = closingRouteKeys.asInstanceOf[js.Any], descriptors = descriptors.asInstanceOf[js.Any], getGesturesEnabled = js.Any.fromFunction1(getGesturesEnabled), getPreviousRoute = js.Any.fromFunction1(getPreviousRoute), headerMode = headerMode.asInstanceOf[js.Any], insets = insets.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], onCloseRoute = js.Any.fromFunction1(onCloseRoute), onOpenRoute = js.Any.fromFunction1(onOpenRoute), onTransitionEnd = js.Any.fromFunction2(onTransitionEnd), onTransitionStart = js.Any.fromFunction2(onTransitionStart), openingRouteKeys = openingRouteKeys.asInstanceOf[js.Any], renderHeader = js.Any.fromFunction1(renderHeader), renderScene = js.Any.fromFunction1(renderScene), routes = routes.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(closingRouteKeys = closingRouteKeys.asInstanceOf[js.Any], descriptors = descriptors.asInstanceOf[js.Any], getGesturesEnabled = js.Any.fromFunction1(getGesturesEnabled), getPreviousRoute = js.Any.fromFunction1(getPreviousRoute), headerMode = headerMode.asInstanceOf[js.Any], insets = insets.asInstanceOf[js.Any], isParentHeaderShown = isParentHeaderShown.asInstanceOf[js.Any], mode = mode.asInstanceOf[js.Any], onCloseRoute = js.Any.fromFunction1(onCloseRoute), onOpenRoute = js.Any.fromFunction1(onOpenRoute), onTransitionEnd = js.Any.fromFunction2(onTransitionEnd), onTransitionStart = js.Any.fromFunction2(onTransitionStart), openingRouteKeys = openingRouteKeys.asInstanceOf[js.Any], renderHeader = js.Any.fromFunction1(renderHeader), renderScene = js.Any.fromFunction1(renderScene), routes = routes.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[Props]))
   }
 }

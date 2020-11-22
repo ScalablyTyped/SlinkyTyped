@@ -19,6 +19,25 @@ package object workspacesMod {
   
   type Alias = java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Microsoft_Office_2016
+    - typingsSlinky.awsSdk.awsSdkStrings.Microsoft_Office_2019
+    - java.lang.String
+  */
+  type Application = typingsSlinky.awsSdk.workspacesMod._Application | java.lang.String
+  
+  type ApplicationList = js.Array[typingsSlinky.awsSdk.workspacesMod.Application]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NOT_ASSOCIATED
+    - typingsSlinky.awsSdk.awsSdkStrings.ASSOCIATED_WITH_OWNER_ACCOUNT
+    - typingsSlinky.awsSdk.awsSdkStrings.ASSOCIATED_WITH_SHARED_ACCOUNT
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_ASSOCIATION
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING_DISASSOCIATION
+    - java.lang.String
+  */
+  type AssociationStatus = typingsSlinky.awsSdk.workspacesMod._AssociationStatus | java.lang.String
+  
   type AwsAccount = java.lang.String
   
   type BooleanObject = scala.Boolean
@@ -49,6 +68,26 @@ package object workspacesMod {
   
   type ComputerName = java.lang.String
   
+  type ConnectionAliasAssociationList = js.Array[typingsSlinky.awsSdk.workspacesMod.ConnectionAliasAssociation]
+  
+  type ConnectionAliasId = java.lang.String
+  
+  type ConnectionAliasIdList = js.Array[typingsSlinky.awsSdk.workspacesMod.ConnectionAliasId]
+  
+  type ConnectionAliasList = js.Array[typingsSlinky.awsSdk.workspacesMod.ConnectionAlias]
+  
+  type ConnectionAliasPermissions = js.Array[typingsSlinky.awsSdk.workspacesMod.ConnectionAliasPermission]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATED
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - java.lang.String
+  */
+  type ConnectionAliasState = typingsSlinky.awsSdk.workspacesMod._ConnectionAliasState | java.lang.String
+  
+  type ConnectionIdentifier = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CONNECTED
     - typingsSlinky.awsSdk.awsSdkStrings.DISCONNECTED
@@ -56,6 +95,8 @@ package object workspacesMod {
     - java.lang.String
   */
   type ConnectionState = typingsSlinky.awsSdk.workspacesMod._ConnectionState | java.lang.String
+  
+  type ConnectionString = java.lang.String
   
   type DedicatedTenancyCidrRangeList = js.Array[typingsSlinky.awsSdk.workspacesMod.DedicatedTenancyManagementCidrRange]
   

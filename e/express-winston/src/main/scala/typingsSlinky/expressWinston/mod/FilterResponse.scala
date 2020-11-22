@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait FilterResponse
-  extends Response[js.Any]
+  extends Response[js.Any, Double]
      with /* other */ StringDictionary[js.Any]

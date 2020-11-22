@@ -47,8 +47,8 @@ trait Dockerode extends js.Object {
   def createSecret(options: js.Object): js.Promise[_] = js.native
   def createSecret(options: js.Object, callback: Callback[_]): Unit = js.native
   
-  def createService(options: js.Object): js.Promise[_] = js.native
-  def createService(options: js.Object, callback: Callback[_]): Unit = js.native
+  def createService(options: ServiceSpec): js.Promise[ServiceCreateResponse] = js.native
+  def createService(options: ServiceSpec, callback: Callback[ServiceCreateResponse]): Unit = js.native
   
   def createVolume(options: js.Object): js.Promise[_] = js.native
   def createVolume(options: js.Object, callback: Callback[_]): Unit = js.native
@@ -110,10 +110,10 @@ trait Dockerode extends js.Object {
   def listImages(options: js.Object): js.Promise[js.Array[ImageInfo]] = js.native
   def listImages(options: js.Object, callback: Callback[js.Array[ImageInfo]]): Unit = js.native
   
-  def listNetworks(): js.Promise[js.Array[_]] = js.native
-  def listNetworks(callback: Callback[js.Array[_]]): Unit = js.native
-  def listNetworks(options: js.Object): js.Promise[js.Array[_]] = js.native
-  def listNetworks(options: js.Object, callback: Callback[js.Array[_]]): Unit = js.native
+  def listNetworks(): js.Promise[js.Array[NetworkInspectInfo]] = js.native
+  def listNetworks(callback: Callback[js.Array[NetworkInspectInfo]]): Unit = js.native
+  def listNetworks(options: js.Object): js.Promise[js.Array[NetworkInspectInfo]] = js.native
+  def listNetworks(options: js.Object, callback: Callback[js.Array[NetworkInspectInfo]]): Unit = js.native
   
   def listNodes(): js.Promise[js.Array[_]] = js.native
   def listNodes(callback: Callback[js.Array[_]]): Unit = js.native
@@ -125,15 +125,15 @@ trait Dockerode extends js.Object {
   def listPlugins(options: js.Object): js.Promise[js.Array[PluginInfo]] = js.native
   def listPlugins(options: js.Object, callback: Callback[js.Array[PluginInfo]]): Unit = js.native
   
-  def listSecrets(): js.Promise[js.Array[SecretInfo]] = js.native
-  def listSecrets(callback: Callback[js.Array[SecretInfo]]): Unit = js.native
-  def listSecrets(options: js.Object): js.Promise[js.Array[SecretInfo]] = js.native
-  def listSecrets(options: js.Object, callback: Callback[js.Array[SecretInfo]]): Unit = js.native
+  def listSecrets(): js.Promise[js.Array[Secret]] = js.native
+  def listSecrets(callback: Callback[js.Array[Secret]]): Unit = js.native
+  def listSecrets(options: js.Object): js.Promise[js.Array[Secret]] = js.native
+  def listSecrets(options: js.Object, callback: Callback[js.Array[Secret]]): Unit = js.native
   
-  def listServices(): js.Promise[js.Array[_]] = js.native
-  def listServices(callback: Callback[js.Array[_]]): Unit = js.native
-  def listServices(options: js.Object): js.Promise[js.Array[_]] = js.native
-  def listServices(options: js.Object, callback: Callback[js.Array[_]]): Unit = js.native
+  def listServices(): js.Promise[js.Array[Service]] = js.native
+  def listServices(callback: Callback[js.Array[Service]]): Unit = js.native
+  def listServices(options: ServiceListOptions): js.Promise[js.Array[Service]] = js.native
+  def listServices(options: ServiceListOptions, callback: Callback[js.Array[Service]]): Unit = js.native
   
   def listTasks(): js.Promise[js.Array[_]] = js.native
   def listTasks(callback: Callback[js.Array[_]]): Unit = js.native

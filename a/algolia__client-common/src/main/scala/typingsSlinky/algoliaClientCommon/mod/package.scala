@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
+  type AddedMethods[TBase, TMethods /* <: typingsSlinky.algoliaClientCommon.mod.Methods[TBase] */] = TBase with typingsSlinky.algoliaClientCommon.algoliaClientCommonStrings.AddedMethods with org.scalablytyped.runtime.TopLevel[TMethods]
+  
   type ClientTransporterOptions = (typingsSlinky.std.Pick[
     typingsSlinky.algoliaTransporter.mod.TransporterOptions, 
     (typingsSlinky.std.Exclude[
@@ -27,6 +29,8 @@ package object mod {
     ]), 
     TClient with typingsSlinky.algoliaClientCommon.algoliaClientCommonStrings.CreateClient with org.scalablytyped.runtime.TopLevel[js.Any]
   ]
+  
+  type Methods[TBase] = org.scalablytyped.runtime.StringDictionary[js.Function1[/* base */ TBase, js.Function1[/* repeated */ js.Any, js.Any]]]
   
   type Wait[TResponse] = js.Function2[
     /* response */ TResponse, 

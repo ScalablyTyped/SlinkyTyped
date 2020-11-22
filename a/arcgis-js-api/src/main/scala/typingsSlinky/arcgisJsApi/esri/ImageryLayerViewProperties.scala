@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ImageryLayerViewProperties extends LayerViewProperties {
   
   /**
-    * An object that provides the user access to [pixels](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-PixelBlock.html#pixels) and their values in the layer. See the object specifications table below for details about each property. This object is used as input in the [pixelFilter()](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ImageryLayer.html#pixelFilter) function for filtering and processing each pixel in the block.
+    * An object that provides the user access to [pixels](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-PixelBlock.html#pixels) and their values in the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-ImageryLayerView.html#pixelData)
     */
-  var pixelData: js.UndefOr[ImageryLayerViewPixelData] = js.native
+  var pixelData: js.UndefOr[PixelData] = js.native
 }
 object ImageryLayerViewProperties {
   
@@ -38,7 +38,7 @@ object ImageryLayerViewProperties {
     }
     
     @scala.inline
-    def setPixelData(value: ImageryLayerViewPixelData): Self = this.set("pixelData", value.asInstanceOf[js.Any])
+    def setPixelData(value: PixelData): Self = this.set("pixelData", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePixelData: Self = this.set("pixelData", js.undefined)

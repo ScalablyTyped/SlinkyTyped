@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LocateDeviceActionResult extends DeviceActionResult {
   
   // device location
-  var deviceLocation: js.UndefOr[DeviceGeoLocation] = js.native
+  var deviceLocation: js.UndefOr[NullableOption[DeviceGeoLocation]] = js.native
 }
 object LocateDeviceActionResult {
   
@@ -34,9 +34,12 @@ object LocateDeviceActionResult {
     }
     
     @scala.inline
-    def setDeviceLocation(value: DeviceGeoLocation): Self = this.set("deviceLocation", value.asInstanceOf[js.Any])
+    def setDeviceLocation(value: NullableOption[DeviceGeoLocation]): Self = this.set("deviceLocation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceLocation: Self = this.set("deviceLocation", js.undefined)
+    
+    @scala.inline
+    def setDeviceLocationNull: Self = this.set("deviceLocation", null)
   }
 }

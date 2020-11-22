@@ -7,31 +7,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxBulletOptions extends BaseSparklineOptions[dxBullet] {
   
-  /** @name dxBullet.Options.color */
+  /**
+    * [descr:dxBullet.Options.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxBullet.Options.endScaleValue */
+  /**
+    * [descr:dxBullet.Options.endScaleValue]
+    */
   var endScaleValue: js.UndefOr[Double] = js.native
   
-  /** @name dxBullet.Options.showTarget */
+  /**
+    * [descr:dxBullet.Options.showTarget]
+    */
   var showTarget: js.UndefOr[Boolean] = js.native
   
-  /** @name dxBullet.Options.showZeroLevel */
+  /**
+    * [descr:dxBullet.Options.showZeroLevel]
+    */
   var showZeroLevel: js.UndefOr[Boolean] = js.native
   
-  /** @name dxBullet.Options.startScaleValue */
+  /**
+    * [descr:dxBullet.Options.startScaleValue]
+    */
   var startScaleValue: js.UndefOr[Double] = js.native
   
-  /** @name dxBullet.Options.target */
+  /**
+    * [descr:dxBullet.Options.target]
+    */
   var target: js.UndefOr[Double] = js.native
   
-  /** @name dxBullet.Options.targetColor */
+  /**
+    * [descr:dxBullet.Options.targetColor]
+    */
   var targetColor: js.UndefOr[String] = js.native
   
-  /** @name dxBullet.Options.targetWidth */
+  /**
+    * [descr:dxBullet.Options.targetWidth]
+    */
   var targetWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxBullet.Options.value */
+  /**
+    * [descr:dxBullet.Options.value]
+    */
   var value: js.UndefOr[Double] = js.native
 }
 object dxBulletOptions {

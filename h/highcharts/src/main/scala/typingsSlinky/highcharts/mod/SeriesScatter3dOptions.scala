@@ -10,11 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SeriesScatter3dOptions extends PlotScatter3dOptions {
   
   /**
-    * Not available
-    */
-  var cluster: js.UndefOr[scala.Nothing] = js.native
-  
-  /**
     * (Highcharts) An array of data points for the series. For the `scatter3d`
     * series type, points can be given in the following ways:
     *

@@ -15,7 +15,7 @@ trait CreateCertificateAuthorityAuditReportResponse extends js.Object {
   /**
     * The key that uniquely identifies the report file in your S3 bucket.
     */
-  var S3Key: js.UndefOr[String] = js.native
+  var S3Key: js.UndefOr[typingsSlinky.awsSdk.acmpcaMod.S3Key] = js.native
 }
 object CreateCertificateAuthorityAuditReportResponse {
   
@@ -47,7 +47,7 @@ object CreateCertificateAuthorityAuditReportResponse {
     def deleteAuditReportId: Self = this.set("AuditReportId", js.undefined)
     
     @scala.inline
-    def setS3Key(value: String): Self = this.set("S3Key", value.asInstanceOf[js.Any])
+    def setS3Key(value: S3Key): Self = this.set("S3Key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteS3Key: Self = this.set("S3Key", js.undefined)

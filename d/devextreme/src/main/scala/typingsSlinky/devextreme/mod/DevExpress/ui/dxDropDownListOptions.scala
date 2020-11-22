@@ -2,8 +2,8 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.ItemElementItemIndex
+import typingsSlinky.devextreme.anon.ModelPreviousValue
 import typingsSlinky.devextreme.anon.ModelSelectedItem
-import typingsSlinky.devextreme.anon.PreviousValue
 import typingsSlinky.devextreme.devextremeStrings.contains
 import typingsSlinky.devextreme.devextremeStrings.startswith
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
@@ -18,16 +18,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.devextreme.mod.DevExpress.ui.DataExpressionMixinOptions because var conflicts: value. Inlined dataSource, displayExpr, itemTemplate, items, valueExpr */ @js.native
 trait dxDropDownListOptions[T] extends dxDropDownEditorOptions[T] {
   
-  /** @name DataExpressionMixin.Options.dataSource */
+  /**
+    * [descr:DataExpressionMixin.Options.dataSource]
+    */
   var dataSource: js.UndefOr[String | (js.Array[CollectionWidgetItem | _]) | DataSource | DataSourceOptions] = js.native
   
-  /** @name DataExpressionMixin.Options.displayExpr */
+  /**
+    * [descr:DataExpressionMixin.Options.displayExpr]
+    */
   var displayExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String])] = js.native
   
-  /** @name dxDropDownList.Options.displayValue */
+  /**
+    * [descr:dxDropDownList.Options.displayValue]
+    */
   var displayValue: js.UndefOr[String] = js.native
   
-  /** @name dxDropDownList.Options.groupTemplate */
+  /**
+    * [descr:dxDropDownList.Options.groupTemplate]
+    */
   var groupTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -37,10 +45,14 @@ trait dxDropDownListOptions[T] extends dxDropDownEditorOptions[T] {
     ])
   ] = js.native
   
-  /** @name dxDropDownList.Options.grouped */
+  /**
+    * [descr:dxDropDownList.Options.grouped]
+    */
   var grouped: js.UndefOr[Boolean] = js.native
   
-  /** @name DataExpressionMixin.Options.itemTemplate */
+  /**
+    * [descr:DataExpressionMixin.Options.itemTemplate]
+    */
   var itemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -50,47 +62,75 @@ trait dxDropDownListOptions[T] extends dxDropDownEditorOptions[T] {
     ])
   ] = js.native
   
-  /** @name DataExpressionMixin.Options.items */
+  /**
+    * [descr:DataExpressionMixin.Options.items]
+    */
   var items: js.UndefOr[js.Array[CollectionWidgetItem | _]] = js.native
   
-  /** @name dxDropDownList.Options.minSearchLength */
+  /**
+    * [descr:dxDropDownList.Options.minSearchLength]
+    */
   var minSearchLength: js.UndefOr[Double] = js.native
   
-  /** @name dxDropDownList.Options.noDataText */
+  /**
+    * [descr:dxDropDownList.Options.noDataText]
+    */
   var noDataText: js.UndefOr[String] = js.native
   
-  /** @name dxDropDownList.Options.onItemClick */
+  /**
+    * [descr:dxDropDownList.Options.onItemClick]
+    */
   var onItemClick: js.UndefOr[js.Function1[/* e */ ItemElementItemIndex[T], _]] = js.native
   
-  /** @name dxDropDownList.Options.onSelectionChanged */
+  /**
+    * [descr:dxDropDownList.Options.onSelectionChanged]
+    */
   var onSelectionChanged: js.UndefOr[js.Function1[/* e */ ModelSelectedItem[T], _]] = js.native
   
-  /** @name dxDropDownList.Options.onValueChanged */
+  /**
+    * [descr:dxDropDownList.Options.onValueChanged]
+    */
   @JSName("onValueChanged")
-  var onValueChanged_dxDropDownListOptions: js.UndefOr[js.Function1[/* e */ PreviousValue[T], _]] = js.native
+  var onValueChanged_dxDropDownListOptions: js.UndefOr[js.Function1[/* e */ ModelPreviousValue[T], _]] = js.native
   
-  /** @name dxDropDownList.Options.searchEnabled */
+  /**
+    * [descr:dxDropDownList.Options.searchEnabled]
+    */
   var searchEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDropDownList.Options.searchExpr */
+  /**
+    * [descr:dxDropDownList.Options.searchExpr]
+    */
   var searchExpr: js.UndefOr[String | js.Function | (js.Array[String | js.Function])] = js.native
   
-  /** @name dxDropDownList.Options.searchMode */
+  /**
+    * [descr:dxDropDownList.Options.searchMode]
+    */
   var searchMode: js.UndefOr[contains | startswith] = js.native
   
-  /** @name dxDropDownList.Options.searchTimeout */
+  /**
+    * [descr:dxDropDownList.Options.searchTimeout]
+    */
   var searchTimeout: js.UndefOr[Double] = js.native
   
-  /** @name dxDropDownList.Options.selectedItem */
+  /**
+    * [descr:dxDropDownList.Options.selectedItem]
+    */
   var selectedItem: js.UndefOr[js.Any] = js.native
   
-  /** @name dxDropDownList.Options.showDataBeforeSearch */
+  /**
+    * [descr:dxDropDownList.Options.showDataBeforeSearch]
+    */
   var showDataBeforeSearch: js.UndefOr[Boolean] = js.native
   
-  /** @name DataExpressionMixin.Options.valueExpr */
+  /**
+    * [descr:DataExpressionMixin.Options.valueExpr]
+    */
   var valueExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String | Double | Boolean])] = js.native
   
-  /** @name dxDropDownList.Options.wrapItemText */
+  /**
+    * [descr:dxDropDownList.Options.wrapItemText]
+    */
   var wrapItemText: js.UndefOr[Boolean] = js.native
 }
 object dxDropDownListOptions {
@@ -222,7 +262,7 @@ object dxDropDownListOptions {
     def deleteOnSelectionChanged: Self = this.set("onSelectionChanged", js.undefined)
     
     @scala.inline
-    def setOnValueChanged(value: /* e */ PreviousValue[T] => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
+    def setOnValueChanged(value: /* e */ ModelPreviousValue[T] => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnValueChanged: Self = this.set("onValueChanged", js.undefined)

@@ -7,19 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ISliderState extends js.Object {
   
-  var labelPrecision: js.UndefOr[Double] = js.native
+  var labelPrecision: Double = js.native
   
   /** the client size, in pixels, of one tick */
-  var tickSize: js.UndefOr[Double] = js.native
+  var tickSize: Double = js.native
   
   /** the size of one tick as a ratio of the component's client size */
-  var tickSizeRatio: js.UndefOr[Double] = js.native
+  var tickSizeRatio: Double = js.native
 }
 object ISliderState {
   
   @scala.inline
-  def apply(): ISliderState = {
-    val __obj = js.Dynamic.literal()
+  def apply(labelPrecision: Double, tickSize: Double, tickSizeRatio: Double): ISliderState = {
+    val __obj = js.Dynamic.literal(labelPrecision = labelPrecision.asInstanceOf[js.Any], tickSize = tickSize.asInstanceOf[js.Any], tickSizeRatio = tickSizeRatio.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISliderState]
   }
   
@@ -42,18 +42,9 @@ object ISliderState {
     def setLabelPrecision(value: Double): Self = this.set("labelPrecision", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLabelPrecision: Self = this.set("labelPrecision", js.undefined)
-    
-    @scala.inline
     def setTickSize(value: Double): Self = this.set("tickSize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteTickSize: Self = this.set("tickSize", js.undefined)
-    
-    @scala.inline
     def setTickSizeRatio(value: Double): Self = this.set("tickSizeRatio", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTickSizeRatio: Self = this.set("tickSizeRatio", js.undefined)
   }
 }

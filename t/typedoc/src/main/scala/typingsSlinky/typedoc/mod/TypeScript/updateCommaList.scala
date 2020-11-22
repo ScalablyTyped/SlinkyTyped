@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateCommaList extends js.Object {
   
+  /** @deprecated Use `factory.updateCommaList` or the factory supplied by your transformation context instead. */
   def apply(node: CommaListExpression, elements: js.Array[Expression]): CommaListExpression = js.native
 }

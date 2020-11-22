@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// defaultPhrases.js
 @js.native
 trait DateRangePickerInputPhrases extends js.Object {
   
@@ -12,7 +11,9 @@ trait DateRangePickerInputPhrases extends js.Object {
   
   var focusStartDate: js.UndefOr[String] = js.native
   
-  var keyboardNavigationInstructions: js.UndefOr[String] = js.native
+  var keyboardBackwardNavigationInstructions: js.UndefOr[String] = js.native
+  
+  var keyboardForwardNavigationInstructions: js.UndefOr[String] = js.native
 }
 object DateRangePickerInputPhrases {
   
@@ -50,9 +51,15 @@ object DateRangePickerInputPhrases {
     def deleteFocusStartDate: Self = this.set("focusStartDate", js.undefined)
     
     @scala.inline
-    def setKeyboardNavigationInstructions(value: String): Self = this.set("keyboardNavigationInstructions", value.asInstanceOf[js.Any])
+    def setKeyboardBackwardNavigationInstructions(value: String): Self = this.set("keyboardBackwardNavigationInstructions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteKeyboardNavigationInstructions: Self = this.set("keyboardNavigationInstructions", js.undefined)
+    def deleteKeyboardBackwardNavigationInstructions: Self = this.set("keyboardBackwardNavigationInstructions", js.undefined)
+    
+    @scala.inline
+    def setKeyboardForwardNavigationInstructions(value: String): Self = this.set("keyboardForwardNavigationInstructions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKeyboardForwardNavigationInstructions: Self = this.set("keyboardForwardNavigationInstructions", js.undefined)
   }
 }

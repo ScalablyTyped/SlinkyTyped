@@ -1,7 +1,5 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
-import typingsSlinky.firefoxWebextBrowser.anon.Edge
-import typingsSlinky.firefoxWebextBrowser.anon.Gecko
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ManifestBase extends js.Object {
   
-  var applications: js.UndefOr[Gecko] = js.native
+  var applications: js.UndefOr[ManifestBaseApplications] = js.native
   
   var author: js.UndefOr[String] = js.native
   
-  var browser_specific_settings: js.UndefOr[Edge] = js.native
+  var browser_specific_settings: js.UndefOr[ManifestBaseBrowserSpecificSettings] = js.native
   
   var description: js.UndefOr[String] = js.native
   
@@ -61,7 +59,7 @@ object ManifestBase {
     def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setApplications(value: Gecko): Self = this.set("applications", value.asInstanceOf[js.Any])
+    def setApplications(value: ManifestBaseApplications): Self = this.set("applications", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteApplications: Self = this.set("applications", js.undefined)
@@ -73,7 +71,7 @@ object ManifestBase {
     def deleteAuthor: Self = this.set("author", js.undefined)
     
     @scala.inline
-    def setBrowser_specific_settings(value: Edge): Self = this.set("browser_specific_settings", value.asInstanceOf[js.Any])
+    def setBrowser_specific_settings(value: ManifestBaseBrowserSpecificSettings): Self = this.set("browser_specific_settings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBrowser_specific_settings: Self = this.set("browser_specific_settings", js.undefined)

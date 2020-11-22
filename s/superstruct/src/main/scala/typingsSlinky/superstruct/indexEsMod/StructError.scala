@@ -2,16 +2,11 @@ package typingsSlinky.superstruct.indexEsMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Error
+import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/**
-  * `StructError` objects are thrown (or returned) by Superstruct when its
-  * validation fails. The error represents the first error encountered during
-  * validation. But they also have an `error.failures` property that holds
-  * information for all of the failures encountered.
-  */
 /**
   * `StructError` objects are thrown (or returned) by Superstruct when its
   * validation fails. The error represents the first error encountered during
@@ -23,11 +18,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class StructError protected ()
   extends Error
      with /* key */ StringDictionary[js.Any] {
-  def this(failure: StructFailure, iterable: js.Iterable[StructFailure]) = this()
+  def this(failure: StructFailure, moreFailures: IterableIterator[StructFailure]) = this()
   
   var branch: js.Array[_] = js.native
   
-  def failures(): js.Iterable[StructFailure] = js.native
+  def failures(): js.Array[StructFailure] = js.native
   
   var path: js.Array[Double | String] = js.native
   

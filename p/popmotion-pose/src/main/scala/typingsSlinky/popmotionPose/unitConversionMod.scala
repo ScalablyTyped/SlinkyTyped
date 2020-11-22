@@ -1,7 +1,5 @@
 package typingsSlinky.popmotionPose
 
-import typingsSlinky.popmotion.actionTypesMod.ColdSubscription
-import typingsSlinky.popmotionPose.flipMod.Action
 import typingsSlinky.popmotionPose.libTypesMod.Pose
 import typingsSlinky.popmotionPose.libTypesMod.PoserState
 import typingsSlinky.popmotionPose.typesMod.DomPopmotionPoser
@@ -16,9 +14,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object unitConversionMod extends js.Object {
   
   def convertPositionalUnits(
-    state: PoserState[Value, Action[ColdSubscription], ColdSubscription, DomPopmotionPoser],
-    nextPose: Pose[Action[ColdSubscription], TransitionDefinition]
-  ): Pose[Action[ColdSubscription], TransitionDefinition] = js.native
+    state: PoserState[
+      Value, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_flip.Action */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_flip.ColdSubscription */ _, 
+      DomPopmotionPoser
+    ],
+    nextPose: Pose[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_flip.Action */ _, 
+      TransitionDefinition
+    ]
+  ): Pose[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_flip.Action */ _, 
+    TransitionDefinition
+  ] = js.native
   
-  def isPositional(pose: Pose[Action[ColdSubscription], TransitionDefinition]): Boolean = js.native
+  def isPositional(
+    pose: Pose[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify imported_flip.Action */ _, 
+      TransitionDefinition
+    ]
+  ): Boolean = js.native
 }

@@ -3,6 +3,7 @@ package typingsSlinky.reactNative.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -11,7 +12,6 @@ import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.DatePickerIOSProps
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -107,6 +107,12 @@ object DatePickerIOS {
     def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def date(value: js.Date): this.type = set("date", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dateNull: this.type = set("date", null)
+    
+    @scala.inline
     def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -117,6 +123,12 @@ object DatePickerIOS {
     
     @scala.inline
     def importantForAccessibility(value: auto | yes | no | `no-hide-descendants`): this.type = set("importantForAccessibility", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def initialDate(value: js.Date): this.type = set("initialDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def initialDateNull: this.type = set("initialDate", null)
     
     @scala.inline
     def isTVSelectable(value: Boolean): this.type = set("isTVSelectable", value.asInstanceOf[js.Any])
@@ -152,7 +164,7 @@ object DatePickerIOS {
     def onAccessibilityTap(value: () => Unit): this.type = set("onAccessibilityTap", js.Any.fromFunction0(value))
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))
@@ -251,8 +263,8 @@ object DatePickerIOS {
   def withProps(p: DatePickerIOSProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(date: js.Date, onDateChange: js.Date => Unit): Builder = {
-    val __props = js.Dynamic.literal(date = date.asInstanceOf[js.Any], onDateChange = js.Any.fromFunction1(onDateChange))
+  def apply(onDateChange: js.Date => Unit): Builder = {
+    val __props = js.Dynamic.literal(onDateChange = js.Any.fromFunction1(onDateChange))
     new Builder(js.Array(this.component, __props.asInstanceOf[DatePickerIOSProps]))
   }
 }

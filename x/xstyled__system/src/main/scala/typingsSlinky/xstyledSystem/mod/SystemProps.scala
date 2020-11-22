@@ -14,7 +14,7 @@ trait SystemProps
      with BackgroundRepeatProps
      with OpacityProps
      with OverflowProps
-     with TransitionProps
+     with TransitionProps[StyledSystemLength]
      with BorderProps[StyledSystemLength]
      with BorderTopProps[StyledSystemLength]
      with BorderTopColorProps
@@ -34,6 +34,8 @@ trait SystemProps
      with JustifyContentProps
      with JustifyItemsProps
      with FlexWrapProps
+     with FlexGrowProps
+     with FlexShrinkProps
      with FlexBasisProps[StyledSystemLength]
      with FlexDirectionProps
      with FlexProps[StyledSystemLength]

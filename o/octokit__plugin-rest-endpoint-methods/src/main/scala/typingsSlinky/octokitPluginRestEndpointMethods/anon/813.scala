@@ -3,8 +3,7 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.OrgsUpdateWebhookEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.OrgsUpdateWebhookResponseData
+import typingsSlinky.octokitTypes.endpointsMod.OrgsRemovePublicMembershipForAuthenticatedUserEndpoint
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +14,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `813` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[OrgsUpdateWebhookEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[
+    OrgsRemovePublicMembershipForAuthenticatedUserEndpoint, 
+    baseUrl | headers | mediaType
+  ]) = js.native
   
-  var response: OctokitResponse[OrgsUpdateWebhookResponseData] = js.native
+  var response: OctokitResponse[_] = js.native
 }
 object `813` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[OrgsUpdateWebhookEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[OrgsUpdateWebhookResponseData]
+    parameters: RequestParameters with (Omit[
+      OrgsRemovePublicMembershipForAuthenticatedUserEndpoint, 
+      baseUrl | headers | mediaType
+    ]),
+    response: OctokitResponse[_]
   ): `813` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`813`]
@@ -46,9 +51,14 @@ object `813` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[OrgsUpdateWebhookEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(
+      value: RequestParameters with (Omit[
+          OrgsRemovePublicMembershipForAuthenticatedUserEndpoint, 
+          baseUrl | headers | mediaType
+        ])
+    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[OrgsUpdateWebhookResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

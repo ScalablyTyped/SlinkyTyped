@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__badge
 
-Typings are for version 2.1.2
+Typings are for version 2.4.2
 
 ## Library description:
 Create a badge that is fixed to another element. This is generally used for notification counts.

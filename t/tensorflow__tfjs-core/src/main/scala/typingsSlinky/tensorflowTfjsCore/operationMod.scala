@@ -9,5 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object operationMod extends js.Object {
   
+  val OP_SCOPE_SUFFIX: /* "__op" */ String = js.native
+  
   def op[T /* <: js.Function */](f: StringDictionary[T]): T = js.native
 }

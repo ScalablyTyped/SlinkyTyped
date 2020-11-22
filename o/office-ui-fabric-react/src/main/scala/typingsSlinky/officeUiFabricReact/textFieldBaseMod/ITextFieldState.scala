@@ -17,6 +17,12 @@ trait ITextFieldState extends js.Object {
   /** Is true when the control has focus. */
   var isFocused: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Whether this field has `type='password'` and `canRevealPassword=true`, and the password is
+    * currently being revealed.
+    */
+  var isRevealingPassword: js.UndefOr[Boolean] = js.native
+  
   /** The currently displayed value if uncontrolled. */
   var uncontrolledValue: js.UndefOr[String] = js.native
 }
@@ -54,6 +60,12 @@ object ITextFieldState {
     
     @scala.inline
     def deleteIsFocused: Self = this.set("isFocused", js.undefined)
+    
+    @scala.inline
+    def setIsRevealingPassword(value: Boolean): Self = this.set("isRevealingPassword", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsRevealingPassword: Self = this.set("isRevealingPassword", js.undefined)
     
     @scala.inline
     def setUncontrolledValue(value: String): Self = this.set("uncontrolledValue", value.asInstanceOf[js.Any])

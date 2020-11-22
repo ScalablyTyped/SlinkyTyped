@@ -41,7 +41,7 @@ trait IScope extends IRootScopeService {
     * @param definitions - Object containing `name` => `function` definition, where each name is a string and each function is the helper function. Should return a [MongoDB Cursor](http://docs.meteor.com/#/full/mongo_cursor)
     * @return This method returns this, which the the reactive context, in order to provide the ability to chain the logic.
     */
-  def helpers(definitions: StringDictionary[js.Function0[Cursor[_]]]): IScope = js.native
+  def helpers(definitions: StringDictionary[js.Function0[Cursor[_, _]]]): IScope = js.native
   
   /**
     * A service which is a wrapper for Meteor.subscribe. It subscribes to a Meteor.publish method in the client and returns a AngularJS promise when ready.

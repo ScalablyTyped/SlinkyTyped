@@ -13,7 +13,7 @@ trait CertificateAuthorityConfiguration extends js.Object {
   var KeyAlgorithm: typingsSlinky.awsSdk.acmpcaMod.KeyAlgorithm = js.native
   
   /**
-    * Name of the algorithm your private CA uses to sign certificate requests.
+    * Name of the algorithm your private CA uses to sign certificate requests. This parameter should not be confused with the SigningAlgorithm parameter used to sign certificates when they are issued.
     */
   var SigningAlgorithm: typingsSlinky.awsSdk.acmpcaMod.SigningAlgorithm = js.native
   

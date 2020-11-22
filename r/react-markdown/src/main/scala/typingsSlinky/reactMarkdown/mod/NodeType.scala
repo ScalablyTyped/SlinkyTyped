@@ -4,33 +4,34 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined mdast.mdast.Content['type'] */
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.root
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.text
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.break
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.paragraph
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.emphasis
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.strong
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.thematicBreak
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.blockquote
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.delete
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.link
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.image
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.linkReference
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.imageReference
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.table
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.tableHead
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.tableBody
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.tableRow
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.tableCell
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.list
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.listItem
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.definition
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.html
   - typingsSlinky.reactMarkdown.reactMarkdownStrings.heading
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.break
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.delete
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.linkReference
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.footnoteReference
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.definition
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.image
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.tableCell
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.paragraph
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.text
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.strong
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.imageReference
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.footnote
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.thematicBreak
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.footnoteDefinition
   - typingsSlinky.reactMarkdown.reactMarkdownStrings.inlineCode
   - typingsSlinky.reactMarkdown.reactMarkdownStrings.code
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.html
-  - typingsSlinky.reactMarkdown.reactMarkdownStrings.virtualHtml
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.listItem
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.table
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.list
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.emphasis
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.tableRow
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.blockquote
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.yaml
+  - typingsSlinky.reactMarkdown.reactMarkdownStrings.link
 */
 trait NodeType extends js.Object
 object NodeType {
@@ -52,6 +53,15 @@ object NodeType {
   
   @scala.inline
   def emphasis: typingsSlinky.reactMarkdown.reactMarkdownStrings.emphasis = "emphasis".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.emphasis]
+  
+  @scala.inline
+  def footnote: typingsSlinky.reactMarkdown.reactMarkdownStrings.footnote = "footnote".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.footnote]
+  
+  @scala.inline
+  def footnoteDefinition: typingsSlinky.reactMarkdown.reactMarkdownStrings.footnoteDefinition = "footnoteDefinition".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.footnoteDefinition]
+  
+  @scala.inline
+  def footnoteReference: typingsSlinky.reactMarkdown.reactMarkdownStrings.footnoteReference = "footnoteReference".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.footnoteReference]
   
   @scala.inline
   def heading: typingsSlinky.reactMarkdown.reactMarkdownStrings.heading = "heading".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.heading]
@@ -84,22 +94,13 @@ object NodeType {
   def paragraph: typingsSlinky.reactMarkdown.reactMarkdownStrings.paragraph = "paragraph".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.paragraph]
   
   @scala.inline
-  def root: typingsSlinky.reactMarkdown.reactMarkdownStrings.root = "root".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.root]
-  
-  @scala.inline
   def strong: typingsSlinky.reactMarkdown.reactMarkdownStrings.strong = "strong".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.strong]
   
   @scala.inline
   def table: typingsSlinky.reactMarkdown.reactMarkdownStrings.table = "table".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.table]
   
   @scala.inline
-  def tableBody: typingsSlinky.reactMarkdown.reactMarkdownStrings.tableBody = "tableBody".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.tableBody]
-  
-  @scala.inline
   def tableCell: typingsSlinky.reactMarkdown.reactMarkdownStrings.tableCell = "tableCell".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.tableCell]
-  
-  @scala.inline
-  def tableHead: typingsSlinky.reactMarkdown.reactMarkdownStrings.tableHead = "tableHead".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.tableHead]
   
   @scala.inline
   def tableRow: typingsSlinky.reactMarkdown.reactMarkdownStrings.tableRow = "tableRow".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.tableRow]
@@ -111,5 +112,5 @@ object NodeType {
   def thematicBreak: typingsSlinky.reactMarkdown.reactMarkdownStrings.thematicBreak = "thematicBreak".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.thematicBreak]
   
   @scala.inline
-  def virtualHtml: typingsSlinky.reactMarkdown.reactMarkdownStrings.virtualHtml = "virtualHtml".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.virtualHtml]
+  def yaml: typingsSlinky.reactMarkdown.reactMarkdownStrings.yaml = "yaml".asInstanceOf[typingsSlinky.reactMarkdown.reactMarkdownStrings.yaml]
 }

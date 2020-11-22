@@ -1,7 +1,7 @@
 
 # Scala.js typings for file-type
 
-Typings are for version 14.7.0
+Typings are for version 16.0.1
 
 ## Library description:
 Detect the file type of a Buffer/Uint8Array/ArrayBuffer

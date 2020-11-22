@@ -5,9 +5,11 @@ import typingsSlinky.babylonjs.glowLayerMod.GlowLayer
 import typingsSlinky.babylonjs.highlightLayerMod.HighlightLayer
 import typingsSlinky.babylonjs.layerMod.Layer
 import typingsSlinky.babylonjs.lensFlareSystemMod.LensFlareSystem
+import typingsSlinky.babylonjs.prePassRendererMod.PrePassRenderer
 import typingsSlinky.babylonjs.proceduralTextureMod.ProceduralTexture
 import typingsSlinky.babylonjs.reflectionProbeMod.ReflectionProbe
 import typingsSlinky.babylonjs.soundMod.Sound
+import typingsSlinky.babylonjs.subSurfaceConfigurationMod.SubSurfaceConfiguration
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,6 +17,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait AbstractScene extends js.Object {
+  
+  /** @hidden (Backing field) */
+  var _prePassRenderer: Nullable[PrePassRenderer] = js.native
+  
+  /** @hidden (Backing field) */
+  var _subSurfaceConfiguration: Nullable[SubSurfaceConfiguration] = js.native
   
   /**
     * Adds the given effect layer to this scene
@@ -35,11 +43,33 @@ trait AbstractScene extends js.Object {
   def addReflectionProbe(newReflectionProbe: ReflectionProbe): Unit = js.native
   
   /**
+    * Disables the prepass associated with the scene
+    */
+  def disablePrePassRenderer(): Unit = js.native
+  
+  /**
+    * Disables the subsurface effect for prepass
+    */
+  def disableSubSurfaceForPrePass(): Unit = js.native
+  
+  /**
     * The list of effect layers (highlights/glow) added to the scene
-    * @see http://doc.babylonjs.com/how_to/highlight_layer
-    * @see http://doc.babylonjs.com/how_to/glow_layer
+    * @see https://doc.babylonjs.com/how_to/highlight_layer
+    * @see https://doc.babylonjs.com/how_to/glow_layer
     */
   var effectLayers: js.Array[EffectLayer] = js.native
+  
+  /**
+    * Enables the prepass and associates it with the scene
+    * @returns the PrePassRenderer
+    */
+  def enablePrePassRenderer(): Nullable[PrePassRenderer] = js.native
+  
+  /**
+    * Enables the subsurface effect for prepass
+    * @returns the SubSurfaceConfiguration
+    */
+  def enableSubSurfaceForPrePass(): Nullable[SubSurfaceConfiguration] = js.native
   
   /**
     * Return a the first highlight layer of the scene with a given name.
@@ -76,19 +106,24 @@ trait AbstractScene extends js.Object {
   
   /**
     * The list of lens flare system added to the scene
-    * @see http://doc.babylonjs.com/how_to/how_to_use_lens_flares
+    * @see https://doc.babylonjs.com/how_to/how_to_use_lens_flares
     */
   var lensFlareSystems: js.Array[LensFlareSystem] = js.native
   
   /**
+    * Gets or Sets the current prepass renderer associated to the scene.
+    */
+  var prePassRenderer: Nullable[PrePassRenderer] = js.native
+  
+  /**
     * The list of procedural textures added to the scene
-    * @see http://doc.babylonjs.com/how_to/how_to_use_procedural_textures
+    * @see https://doc.babylonjs.com/how_to/how_to_use_procedural_textures
     */
   var proceduralTextures: js.Array[ProceduralTexture] = js.native
   
   /**
     * The list of reflection probes added to the scene
-    * @see http://doc.babylonjs.com/how_to/how_to_use_reflection_probes
+    * @see https://doc.babylonjs.com/how_to/how_to_use_reflection_probes
     */
   var reflectionProbes: js.Array[ReflectionProbe] = js.native
   
@@ -117,6 +152,11 @@ trait AbstractScene extends js.Object {
     * The list of sounds used in the scene.
     */
   var sounds: Nullable[js.Array[Sound]] = js.native
+  
+  /**
+    * Gets or Sets the current prepass renderer associated to the scene.
+    */
+  var subSurfaceConfiguration: Nullable[SubSurfaceConfiguration] = js.native
 }
 object AbstractScene {
   
@@ -125,7 +165,11 @@ object AbstractScene {
     addEffectLayer: EffectLayer => Unit,
     addLensFlareSystem: LensFlareSystem => Unit,
     addReflectionProbe: ReflectionProbe => Unit,
+    disablePrePassRenderer: () => Unit,
+    disableSubSurfaceForPrePass: () => Unit,
     effectLayers: js.Array[EffectLayer],
+    enablePrePassRenderer: () => Nullable[PrePassRenderer],
+    enableSubSurfaceForPrePass: () => Nullable[SubSurfaceConfiguration],
     getGlowLayerByName: String => Nullable[GlowLayer],
     getHighlightLayerByName: String => Nullable[HighlightLayer],
     getLensFlareSystemByID: String => Nullable[LensFlareSystem],
@@ -138,7 +182,7 @@ object AbstractScene {
     removeLensFlareSystem: LensFlareSystem => Double,
     removeReflectionProbe: ReflectionProbe => Double
   ): AbstractScene = {
-    val __obj = js.Dynamic.literal(addEffectLayer = js.Any.fromFunction1(addEffectLayer), addLensFlareSystem = js.Any.fromFunction1(addLensFlareSystem), addReflectionProbe = js.Any.fromFunction1(addReflectionProbe), effectLayers = effectLayers.asInstanceOf[js.Any], getGlowLayerByName = js.Any.fromFunction1(getGlowLayerByName), getHighlightLayerByName = js.Any.fromFunction1(getHighlightLayerByName), getLensFlareSystemByID = js.Any.fromFunction1(getLensFlareSystemByID), getLensFlareSystemByName = js.Any.fromFunction1(getLensFlareSystemByName), layers = layers.asInstanceOf[js.Any], lensFlareSystems = lensFlareSystems.asInstanceOf[js.Any], proceduralTextures = proceduralTextures.asInstanceOf[js.Any], reflectionProbes = reflectionProbes.asInstanceOf[js.Any], removeEffectLayer = js.Any.fromFunction1(removeEffectLayer), removeLensFlareSystem = js.Any.fromFunction1(removeLensFlareSystem), removeReflectionProbe = js.Any.fromFunction1(removeReflectionProbe))
+    val __obj = js.Dynamic.literal(addEffectLayer = js.Any.fromFunction1(addEffectLayer), addLensFlareSystem = js.Any.fromFunction1(addLensFlareSystem), addReflectionProbe = js.Any.fromFunction1(addReflectionProbe), disablePrePassRenderer = js.Any.fromFunction0(disablePrePassRenderer), disableSubSurfaceForPrePass = js.Any.fromFunction0(disableSubSurfaceForPrePass), effectLayers = effectLayers.asInstanceOf[js.Any], enablePrePassRenderer = js.Any.fromFunction0(enablePrePassRenderer), enableSubSurfaceForPrePass = js.Any.fromFunction0(enableSubSurfaceForPrePass), getGlowLayerByName = js.Any.fromFunction1(getGlowLayerByName), getHighlightLayerByName = js.Any.fromFunction1(getHighlightLayerByName), getLensFlareSystemByID = js.Any.fromFunction1(getLensFlareSystemByID), getLensFlareSystemByName = js.Any.fromFunction1(getLensFlareSystemByName), layers = layers.asInstanceOf[js.Any], lensFlareSystems = lensFlareSystems.asInstanceOf[js.Any], proceduralTextures = proceduralTextures.asInstanceOf[js.Any], reflectionProbes = reflectionProbes.asInstanceOf[js.Any], removeEffectLayer = js.Any.fromFunction1(removeEffectLayer), removeLensFlareSystem = js.Any.fromFunction1(removeLensFlareSystem), removeReflectionProbe = js.Any.fromFunction1(removeReflectionProbe))
     __obj.asInstanceOf[AbstractScene]
   }
   
@@ -167,10 +211,22 @@ object AbstractScene {
     def setAddReflectionProbe(value: ReflectionProbe => Unit): Self = this.set("addReflectionProbe", js.Any.fromFunction1(value))
     
     @scala.inline
+    def setDisablePrePassRenderer(value: () => Unit): Self = this.set("disablePrePassRenderer", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setDisableSubSurfaceForPrePass(value: () => Unit): Self = this.set("disableSubSurfaceForPrePass", js.Any.fromFunction0(value))
+    
+    @scala.inline
     def setEffectLayersVarargs(value: EffectLayer*): Self = this.set("effectLayers", js.Array(value :_*))
     
     @scala.inline
     def setEffectLayers(value: js.Array[EffectLayer]): Self = this.set("effectLayers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEnablePrePassRenderer(value: () => Nullable[PrePassRenderer]): Self = this.set("enablePrePassRenderer", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setEnableSubSurfaceForPrePass(value: () => Nullable[SubSurfaceConfiguration]): Self = this.set("enableSubSurfaceForPrePass", js.Any.fromFunction0(value))
     
     @scala.inline
     def setGetGlowLayerByName(value: String => Nullable[GlowLayer]): Self = this.set("getGlowLayerByName", js.Any.fromFunction1(value))
@@ -218,6 +274,24 @@ object AbstractScene {
     def setRemoveReflectionProbe(value: ReflectionProbe => Double): Self = this.set("removeReflectionProbe", js.Any.fromFunction1(value))
     
     @scala.inline
+    def set_prePassRenderer(value: Nullable[PrePassRenderer]): Self = this.set("_prePassRenderer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def set_prePassRendererNull: Self = this.set("_prePassRenderer", null)
+    
+    @scala.inline
+    def set_subSurfaceConfiguration(value: Nullable[SubSurfaceConfiguration]): Self = this.set("_subSurfaceConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def set_subSurfaceConfigurationNull: Self = this.set("_subSurfaceConfiguration", null)
+    
+    @scala.inline
+    def setPrePassRenderer(value: Nullable[PrePassRenderer]): Self = this.set("prePassRenderer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPrePassRendererNull: Self = this.set("prePassRenderer", null)
+    
+    @scala.inline
     def setSoundsVarargs(value: Sound*): Self = this.set("sounds", js.Array(value :_*))
     
     @scala.inline
@@ -225,5 +299,11 @@ object AbstractScene {
     
     @scala.inline
     def setSoundsNull: Self = this.set("sounds", null)
+    
+    @scala.inline
+    def setSubSurfaceConfiguration(value: Nullable[SubSurfaceConfiguration]): Self = this.set("subSurfaceConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSubSurfaceConfigurationNull: Self = this.set("subSurfaceConfiguration", null)
   }
 }

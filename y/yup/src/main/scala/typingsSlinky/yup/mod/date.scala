@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("yup", "date")
 @js.native
-class date ()
-  extends DateSchema[js.UndefOr[js.Date]]
+// tslint:disable-next-line:no-unnecessary-generics
+class date[T /* <: js.UndefOr[js.Date | String | Null] */, C] () extends DateSchema[T, C]
 @JSImport("yup", "date")
 @js.native
 object date extends TopLevel[DateSchemaConstructor]

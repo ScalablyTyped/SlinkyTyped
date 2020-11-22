@@ -34,8 +34,14 @@ object polygonMod extends js.Object {
   trait Polygon
     extends typingsSlinky.ol.simpleGeometryMod.default {
     
+    /**
+      * Append the passed linear ring to this polygon.
+      */
     def appendLinearRing(linearRing: typingsSlinky.ol.linearRingMod.default): Unit = js.native
     
+    /**
+      * Return the area of the polygon on projected plane.
+      */
     def getArea(): Double = js.native
     
     def getCoordinates(opt_right: Boolean): js.Array[js.Array[Coordinate]] = js.native
@@ -44,12 +50,28 @@ object polygonMod extends js.Object {
     
     def getFlatInteriorPoint(): js.Array[Double] = js.native
     
+    /**
+      * Return an interior point of the polygon.
+      */
     def getInteriorPoint(): typingsSlinky.ol.pointMod.default = js.native
     
+    /**
+      * Return the Nth linear ring of the polygon geometry. Return null if the
+      * given index is out of range.
+      * The exterior linear ring is available at index 0 and the interior rings
+      * at index 1 and beyond.
+      */
     def getLinearRing(index: Double): typingsSlinky.ol.linearRingMod.default = js.native
     
+    /**
+      * Return the number of rings of the polygon,  this includes the exterior
+      * ring and any interior rings.
+      */
     def getLinearRingCount(): Double = js.native
     
+    /**
+      * Return the linear rings of the polygon.
+      */
     def getLinearRings(): js.Array[typingsSlinky.ol.linearRingMod.default] = js.native
     
     def getOrientedFlatCoordinates(): js.Array[Double] = js.native

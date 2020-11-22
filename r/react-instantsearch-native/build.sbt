@@ -1,21 +1,29 @@
 organization := "org.scalablytyped.slinky"
 name := "react-instantsearch-native"
-version := "6.3-dt-20200323Z-1ce6d2"
-scalaVersion := "2.13.2"
+version := "6.3-dt-20200323Z-6a5981"
+scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "algoliasearch" % "3.34.0-dt-20200226Z-a76548",
-  "org.scalablytyped.slinky" %%% "algoliasearch-helper" % "2.26-dt-20190524Z-ebc7ef",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-e9335f",
-  "org.scalablytyped.slinky" %%% "node" % "13.13-dt-20200426Z-9e8213",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-7e1d98",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200409Z-36b705",
-  "org.scalablytyped.slinky" %%% "react-instantsearch-core" % "6.3-dt-20200323Z-faad9f",
-  "org.scalablytyped.slinky" %%% "std" % "3.8-c726bb")
+  "me.shadaj" %%% "slinky-web" % "0.6.6",
+  "org.scalablytyped.slinky" %%% "algolia__cache-common" % "4.8.0-dd8654",
+  "org.scalablytyped.slinky" %%% "algolia__client-analytics" % "4.8.0-94b626",
+  "org.scalablytyped.slinky" %%% "algolia__client-common" % "4.8.0-e2adf1",
+  "org.scalablytyped.slinky" %%% "algolia__client-recommendation" % "4.8.0-024a11",
+  "org.scalablytyped.slinky" %%% "algolia__client-search" % "4.8.0-309681",
+  "org.scalablytyped.slinky" %%% "algolia__logger-common" % "4.8.0-02383a",
+  "org.scalablytyped.slinky" %%% "algolia__requester-common" % "4.8.0-60350d",
+  "org.scalablytyped.slinky" %%% "algolia__transporter" % "4.8.0-6e55a0",
+  "org.scalablytyped.slinky" %%% "algoliasearch" % "4.8.0-749ef4",
+  "org.scalablytyped.slinky" %%% "algoliasearch-helper" % "3.3.2-2fcbbc",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.14-23cf0c",
+  "org.scalablytyped.slinky" %%% "events" % "3.0-dt-20200515Z-c0f47b",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ed7fbd",
+  "org.scalablytyped.slinky" %%% "react" % "17.0-dt-20201121Z-8f0b52",
+  "org.scalablytyped.slinky" %%% "react-instantsearch-core" % "6.3-dt-20200911Z-fc64b2",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "ScalablyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "ScalablyTyped")

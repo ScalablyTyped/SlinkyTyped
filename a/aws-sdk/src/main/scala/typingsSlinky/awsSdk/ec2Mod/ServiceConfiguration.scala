@@ -23,6 +23,11 @@ trait ServiceConfiguration extends js.Object {
   var BaseEndpointDnsNames: js.UndefOr[ValueStringList] = js.native
   
   /**
+    * The Amazon Resource Names (ARNs) of the Gateway Load Balancers for the service.
+    */
+  var GatewayLoadBalancerArns: js.UndefOr[ValueStringList] = js.native
+  
+  /**
     * Indicates whether the service manages its VPC endpoints. Management of the service VPC endpoints using the VPC endpoint API is restricted.
     */
   var ManagesVpcEndpoints: js.UndefOr[Boolean] = js.native
@@ -113,6 +118,15 @@ object ServiceConfiguration {
     
     @scala.inline
     def deleteBaseEndpointDnsNames: Self = this.set("BaseEndpointDnsNames", js.undefined)
+    
+    @scala.inline
+    def setGatewayLoadBalancerArnsVarargs(value: String*): Self = this.set("GatewayLoadBalancerArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setGatewayLoadBalancerArns(value: ValueStringList): Self = this.set("GatewayLoadBalancerArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGatewayLoadBalancerArns: Self = this.set("GatewayLoadBalancerArns", js.undefined)
     
     @scala.inline
     def setManagesVpcEndpoints(value: Boolean): Self = this.set("ManagesVpcEndpoints", value.asInstanceOf[js.Any])

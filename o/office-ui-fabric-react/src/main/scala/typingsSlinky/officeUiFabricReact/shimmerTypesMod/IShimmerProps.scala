@@ -3,10 +3,10 @@ package typingsSlinky.officeUiFabricReact.shimmerTypesMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,8 +21,7 @@ trait IShimmerProps extends AllHTMLAttributes[HTMLElement] {
   var ariaLabel: js.UndefOr[String] = js.native
   
   /**
-    * Optional callback to access the IShimmer interface. Use this instead of ref for accessing
-    * the public methods and properties of the component.
+    * @deprecated No longer used.
     */
   var componentRef: js.UndefOr[IRefObject[IShimmer]] = js.native
   

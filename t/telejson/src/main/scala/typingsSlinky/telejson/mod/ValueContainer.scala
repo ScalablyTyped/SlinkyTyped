@@ -9,14 +9,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ValueContainer
   extends /* keys */ StringDictionary[js.Any] {
   
-  var `_constructor-name_`: String = js.native
+  var `_constructor-name_`: js.UndefOr[String] = js.native
 }
 object ValueContainer {
   
   @scala.inline
-  def apply(`_constructor-name_`: String): ValueContainer = {
+  def apply(): ValueContainer = {
     val __obj = js.Dynamic.literal()
-    __obj.updateDynamic("_constructor-name_")(`_constructor-name_`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueContainer]
   }
   
@@ -37,5 +36,8 @@ object ValueContainer {
     
     @scala.inline
     def `set_constructor-name_`(value: String): Self = this.set("_constructor-name_", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def `delete_constructor-name_`: Self = this.set("_constructor-name_", js.undefined)
   }
 }

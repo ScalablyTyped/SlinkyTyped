@@ -1,8 +1,6 @@
 package typingsSlinky.ol.rasterMod
 
 import org.scalajs.dom.raw.ImageData
-import typingsSlinky.ol.olStrings.image
-import typingsSlinky.ol.olStrings.pixel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +12,7 @@ trait Options extends js.Object {
   
   var operation: js.UndefOr[Operation] = js.native
   
-  var operationType: js.UndefOr[pixel | image] = js.native
+  var operationType: js.UndefOr[RasterOperationType] = js.native
   
   var sources: js.Array[
     typingsSlinky.ol.sourceSourceMod.default | typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default]
@@ -76,7 +74,7 @@ object Options {
     def deleteOperation: Self = this.set("operation", js.undefined)
     
     @scala.inline
-    def setOperationType(value: pixel | image): Self = this.set("operationType", value.asInstanceOf[js.Any])
+    def setOperationType(value: RasterOperationType): Self = this.set("operationType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOperationType: Self = this.set("operationType", js.undefined)

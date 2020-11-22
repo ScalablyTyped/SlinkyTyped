@@ -2,7 +2,7 @@ package typingsSlinky.enzyme.mod
 
 import org.scalajs.dom.raw.Element
 import slinky.core.facade.ReactElement
-import typingsSlinky.cheerio.Cheerio
+import typingsSlinky.cheerio.cheerio.Cheerio
 import typingsSlinky.enzyme.anon.IgnoreProps
 import typingsSlinky.std.NonNullable
 import typingsSlinky.std.Pick
@@ -20,6 +20,7 @@ trait CommonWrapper[P, S, C] extends js.Object {
   
   def contains(node: String): Boolean = js.native
   def contains(node: js.Array[ReactElement]): Boolean = js.native
+  def contains(node: Double): Boolean = js.native
   /**
     * Returns whether or not the current wrapper has a node anywhere in it's render tree that looks like the one passed in.
     */

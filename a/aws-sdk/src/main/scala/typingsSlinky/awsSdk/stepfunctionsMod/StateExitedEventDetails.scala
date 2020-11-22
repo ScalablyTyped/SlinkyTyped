@@ -13,9 +13,14 @@ trait StateExitedEventDetails extends js.Object {
   var name: Name = js.native
   
   /**
-    * The JSON output data of the state.
+    * The JSON output data of the state. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
     */
   var output: js.UndefOr[SensitiveData] = js.native
+  
+  /**
+    * Contains details about the output of an execution history event.
+    */
+  var outputDetails: js.UndefOr[HistoryEventExecutionDataDetails] = js.native
 }
 object StateExitedEventDetails {
   
@@ -48,5 +53,11 @@ object StateExitedEventDetails {
     
     @scala.inline
     def deleteOutput: Self = this.set("output", js.undefined)
+    
+    @scala.inline
+    def setOutputDetails(value: HistoryEventExecutionDataDetails): Self = this.set("outputDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutputDetails: Self = this.set("outputDetails", js.undefined)
   }
 }

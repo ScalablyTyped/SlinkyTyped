@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AreaRadial_[Datum] extends js.Object {
   
+  def apply(data: js.Array[Datum]): String | Null = js.native
   /**
     * Generates a radial area for the given array of data.
     *
@@ -16,7 +17,7 @@ trait AreaRadial_[Datum] extends js.Object {
     *
     * @param data Array of data elements.
     */
-  def apply(data: js.Array[Datum]): String | Null = js.native
+  def apply(data: js.Iterable[Datum]): String | Null = js.native
   
   /**
     * Returns the current startAngle accessor. The default startAngle accessor is a function returning the first element of a

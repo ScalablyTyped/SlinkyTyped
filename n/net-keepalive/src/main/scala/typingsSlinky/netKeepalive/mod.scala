@@ -14,9 +14,13 @@ object mod extends js.Object {
   
   def getKeepAliveProbes(socket: NodeJSSocketWithFileDescriptor): Double = js.native
   
+  def getUserTimeout(socket: NodeJSSocketWithFileDescriptor): Double = js.native
+  
   def setKeepAliveInterval(socket: NodeJSSocketWithFileDescriptor, intvl: Double): Boolean = js.native
   
   def setKeepAliveProbes(socket: NodeJSSocketWithFileDescriptor, cnt: Double): Boolean = js.native
+  
+  def setUserTimeout(socket: NodeJSSocketWithFileDescriptor, timeout: Double): Boolean = js.native
   
   type NodeJSSocketWithFileDescriptor = Socket | Handle
 }

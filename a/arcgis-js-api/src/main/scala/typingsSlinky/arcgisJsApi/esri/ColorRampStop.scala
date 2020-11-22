@@ -24,7 +24,7 @@ trait ColorRampStop extends Object {
   var label: String = js.native
   
   /**
-    * A number between `0` and `1` describing the position of the label on the color ramp. For example, in a color ramp with three stops, the first stop would have an offset of `0`, the second `0.5`, and the third `1`. These offsets are equally spaced for any given number of labels in the color ramp. The interval of each offset value is equal to 1 divided by the number of stops minus 1.
+    * A number between `0` and `1` describing the position of the label on the color ramp.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#ColorRampStop)
     */

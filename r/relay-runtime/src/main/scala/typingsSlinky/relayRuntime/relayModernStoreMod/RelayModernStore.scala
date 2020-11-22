@@ -8,5 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RelayModernStore extends Store {
   
+  def scheduleGC(): Unit = js.native
+  
   def toJSON(): js.Any = js.native
 }

@@ -14,7 +14,7 @@ trait CellProps extends js.Object {
   
   var order: js.UndefOr[Responsive[Double]] = js.native
   
-  var overrides: js.UndefOr[typingsSlinky.baseui.anon.Cell] = js.native
+  var overrides: js.UndefOr[CellOverrides] = js.native
   
   var skip: js.UndefOr[Responsive[Double]] = js.native
   
@@ -71,7 +71,7 @@ object CellProps {
     def deleteOrder: Self = this.set("order", js.undefined)
     
     @scala.inline
-    def setOverrides(value: typingsSlinky.baseui.anon.Cell): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: CellOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)

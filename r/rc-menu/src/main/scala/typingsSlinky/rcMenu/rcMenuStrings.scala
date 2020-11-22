@@ -219,6 +219,9 @@ object rcMenuStrings {
   def MozOrient: MozOrient = "MozOrient".asInstanceOf[MozOrient]
   
   @scala.inline
+  def MozOsxFontSmoothing: MozOsxFontSmoothing = "MozOsxFontSmoothing".asInstanceOf[MozOsxFontSmoothing]
+  
+  @scala.inline
   def MozOutline: MozOutline = "MozOutline".asInstanceOf[MozOutline]
   
   @scala.inline
@@ -573,6 +576,9 @@ object rcMenuStrings {
   def WebkitFontKerning: WebkitFontKerning = "WebkitFontKerning".asInstanceOf[WebkitFontKerning]
   
   @scala.inline
+  def WebkitFontSmoothing: WebkitFontSmoothing = "WebkitFontSmoothing".asInstanceOf[WebkitFontSmoothing]
+  
+  @scala.inline
   def WebkitFontVariantLigatures: WebkitFontVariantLigatures = "WebkitFontVariantLigatures".asInstanceOf[WebkitFontVariantLigatures]
   
   @scala.inline
@@ -655,6 +661,9 @@ object rcMenuStrings {
   
   @scala.inline
   def WebkitPrintColorAdjust: WebkitPrintColorAdjust = "WebkitPrintColorAdjust".asInstanceOf[WebkitPrintColorAdjust]
+  
+  @scala.inline
+  def WebkitRubyPosition: WebkitRubyPosition = "WebkitRubyPosition".asInstanceOf[WebkitRubyPosition]
   
   @scala.inline
   def WebkitScrollSnapPointsX: WebkitScrollSnapPointsX = "WebkitScrollSnapPointsX".asInstanceOf[WebkitScrollSnapPointsX]
@@ -759,6 +768,9 @@ object rcMenuStrings {
   def additions: additions = "additions".asInstanceOf[additions]
   
   @scala.inline
+  def `additions removals`: `additions removals` = ("additions removals").asInstanceOf[`additions removals`]
+  
+  @scala.inline
   def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   
   @scala.inline
@@ -769,6 +781,9 @@ object rcMenuStrings {
   
   @scala.inline
   def alignSelf: alignSelf = "alignSelf".asInstanceOf[alignSelf]
+  
+  @scala.inline
+  def alignTracks: alignTracks = "alignTracks".asInstanceOf[alignTracks]
   
   @scala.inline
   def alignmentBaseline: alignmentBaseline = "alignmentBaseline".asInstanceOf[alignmentBaseline]
@@ -814,6 +829,9 @@ object rcMenuStrings {
   
   @scala.inline
   def assertive: assertive = "assertive".asInstanceOf[assertive]
+  
+  @scala.inline
+  def azimuth: azimuth = "azimuth".asInstanceOf[azimuth]
   
   @scala.inline
   def backdropFilter: backdropFilter = "backdropFilter".asInstanceOf[backdropFilter]
@@ -1278,6 +1296,9 @@ object rcMenuStrings {
   def fontSizeAdjust: fontSizeAdjust = "fontSizeAdjust".asInstanceOf[fontSizeAdjust]
   
   @scala.inline
+  def fontSmooth: fontSmooth = "fontSmooth".asInstanceOf[fontSmooth]
+  
+  @scala.inline
   def fontStretch: fontStretch = "fontStretch".asInstanceOf[fontStretch]
   
   @scala.inline
@@ -1449,6 +1470,9 @@ object rcMenuStrings {
   def justifySelf: justifySelf = "justifySelf".asInstanceOf[justifySelf]
   
   @scala.inline
+  def justifyTracks: justifyTracks = "justifyTracks".asInstanceOf[justifyTracks]
+  
+  @scala.inline
   def left: left = "left".asInstanceOf[left]
   
   @scala.inline
@@ -1593,6 +1617,12 @@ object rcMenuStrings {
   def maskType: maskType = "maskType".asInstanceOf[maskType]
   
   @scala.inline
+  def masonryAutoFlow: masonryAutoFlow = "masonryAutoFlow".asInstanceOf[masonryAutoFlow]
+  
+  @scala.inline
+  def mathStyle: mathStyle = "mathStyle".asInstanceOf[mathStyle]
+  
+  @scala.inline
   def maxBlockSize: maxBlockSize = "maxBlockSize".asInstanceOf[maxBlockSize]
   
   @scala.inline
@@ -1720,6 +1750,9 @@ object rcMenuStrings {
   
   @scala.inline
   def msImeMode: msImeMode = "msImeMode".asInstanceOf[msImeMode]
+  
+  @scala.inline
+  def msJustifySelf: msJustifySelf = "msJustifySelf".asInstanceOf[msJustifySelf]
   
   @scala.inline
   def msLineBreak: msLineBreak = "msLineBreak".asInstanceOf[msLineBreak]
@@ -2058,6 +2091,12 @@ object rcMenuStrings {
   def removals: removals = "removals".asInstanceOf[removals]
   
   @scala.inline
+  def `removals additions`: `removals additions` = ("removals additions").asInstanceOf[`removals additions`]
+  
+  @scala.inline
+  def `removals text`: `removals text` = ("removals text").asInstanceOf[`removals text`]
+  
+  @scala.inline
   def resize: resize = "resize".asInstanceOf[resize]
   
   @scala.inline
@@ -2199,6 +2238,9 @@ object rcMenuStrings {
   def scrollbarColor: scrollbarColor = "scrollbarColor".asInstanceOf[scrollbarColor]
   
   @scala.inline
+  def scrollbarGutter: scrollbarGutter = "scrollbarGutter".asInstanceOf[scrollbarGutter]
+  
+  @scala.inline
   def scrollbarTrackColor: scrollbarTrackColor = "scrollbarTrackColor".asInstanceOf[scrollbarTrackColor]
   
   @scala.inline
@@ -2266,6 +2308,12 @@ object rcMenuStrings {
   
   @scala.inline
   def text: text = "text".asInstanceOf[text]
+  
+  @scala.inline
+  def `text additions`: `text additions` = ("text additions").asInstanceOf[`text additions`]
+  
+  @scala.inline
+  def `text removals`: `text removals` = ("text removals").asInstanceOf[`text removals`]
   
   @scala.inline
   def textAlign: textAlign = "textAlign".asInstanceOf[textAlign]
@@ -2661,6 +2709,9 @@ object rcMenuStrings {
   sealed trait MozOrient extends js.Object
   
   @js.native
+  sealed trait MozOsxFontSmoothing extends js.Object
+  
+  @js.native
   sealed trait MozOutline extends js.Object
   
   @js.native
@@ -3015,6 +3066,9 @@ object rcMenuStrings {
   sealed trait WebkitFontKerning extends js.Object
   
   @js.native
+  sealed trait WebkitFontSmoothing extends js.Object
+  
+  @js.native
   sealed trait WebkitFontVariantLigatures extends js.Object
   
   @js.native
@@ -3097,6 +3151,9 @@ object rcMenuStrings {
   
   @js.native
   sealed trait WebkitPrintColorAdjust extends js.Object
+  
+  @js.native
+  sealed trait WebkitRubyPosition extends js.Object
   
   @js.native
   sealed trait WebkitScrollSnapPointsX extends js.Object
@@ -3201,6 +3258,9 @@ object rcMenuStrings {
   sealed trait additions extends js.Object
   
   @js.native
+  sealed trait `additions removals` extends js.Object
+  
+  @js.native
   sealed trait `additions text` extends js.Object
   
   @js.native
@@ -3211,6 +3271,9 @@ object rcMenuStrings {
   
   @js.native
   sealed trait alignSelf extends js.Object
+  
+  @js.native
+  sealed trait alignTracks extends js.Object
   
   @js.native
   sealed trait alignmentBaseline extends js.Object
@@ -3256,6 +3319,9 @@ object rcMenuStrings {
   
   @js.native
   sealed trait assertive extends js.Object
+  
+  @js.native
+  sealed trait azimuth extends js.Object
   
   @js.native
   sealed trait backdropFilter extends js.Object
@@ -3720,6 +3786,9 @@ object rcMenuStrings {
   sealed trait fontSizeAdjust extends js.Object
   
   @js.native
+  sealed trait fontSmooth extends js.Object
+  
+  @js.native
   sealed trait fontStretch extends js.Object
   
   @js.native
@@ -3891,6 +3960,9 @@ object rcMenuStrings {
   sealed trait justifySelf extends js.Object
   
   @js.native
+  sealed trait justifyTracks extends js.Object
+  
+  @js.native
   sealed trait left extends js.Object
   
   @js.native
@@ -4035,6 +4107,12 @@ object rcMenuStrings {
   sealed trait maskType extends js.Object
   
   @js.native
+  sealed trait masonryAutoFlow extends js.Object
+  
+  @js.native
+  sealed trait mathStyle extends js.Object
+  
+  @js.native
   sealed trait maxBlockSize extends js.Object
   
   @js.native
@@ -4162,6 +4240,9 @@ object rcMenuStrings {
   
   @js.native
   sealed trait msImeMode extends js.Object
+  
+  @js.native
+  sealed trait msJustifySelf extends js.Object
   
   @js.native
   sealed trait msLineBreak extends js.Object
@@ -4500,6 +4581,12 @@ object rcMenuStrings {
   sealed trait removals extends js.Object
   
   @js.native
+  sealed trait `removals additions` extends js.Object
+  
+  @js.native
+  sealed trait `removals text` extends js.Object
+  
+  @js.native
   sealed trait resize extends js.Object
   
   @js.native
@@ -4641,6 +4728,9 @@ object rcMenuStrings {
   sealed trait scrollbarColor extends js.Object
   
   @js.native
+  sealed trait scrollbarGutter extends js.Object
+  
+  @js.native
   sealed trait scrollbarTrackColor extends js.Object
   
   @js.native
@@ -4708,6 +4798,12 @@ object rcMenuStrings {
   
   @js.native
   sealed trait text extends js.Object
+  
+  @js.native
+  sealed trait `text additions` extends js.Object
+  
+  @js.native
+  sealed trait `text removals` extends js.Object
   
   @js.native
   sealed trait textAlign extends js.Object

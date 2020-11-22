@@ -1,7 +1,7 @@
 
 # Scala.js typings for formsy-react
 
-Typings are for version 2.1.0
+Typings are for version 2.2.1
 
 ## Library description:
 A form input builder and validator for React

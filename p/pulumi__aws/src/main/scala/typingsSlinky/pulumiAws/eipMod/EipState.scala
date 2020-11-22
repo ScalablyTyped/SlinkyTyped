@@ -30,12 +30,20 @@ trait EipState extends js.Object {
     */
   val customerOwnedIpv4Pool: js.UndefOr[Input[String]] = js.native
   
+  /**
+    * Indicates if this EIP is for use in VPC (`vpc`) or EC2 Classic (`standard`).
+    */
   val domain: js.UndefOr[Input[String]] = js.native
   
   /**
     * EC2 instance ID.
     */
   val instance: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The location from which the IP address is advertised. Use this parameter to limit the address to this location.
+    */
+  val networkBorderGroup: js.UndefOr[Input[String]] = js.native
   
   /**
     * Network interface ID to associate with.
@@ -68,7 +76,7 @@ trait EipState extends js.Object {
   val publicIpv4Pool: js.UndefOr[Input[String]] = js.native
   
   /**
-    * A map of tags to assign to the resource.
+    * A map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC.
     */
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
@@ -141,6 +149,12 @@ object EipState {
     
     @scala.inline
     def deleteInstance: Self = this.set("instance", js.undefined)
+    
+    @scala.inline
+    def setNetworkBorderGroup(value: Input[String]): Self = this.set("networkBorderGroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkBorderGroup: Self = this.set("networkBorderGroup", js.undefined)
     
     @scala.inline
     def setNetworkInterface(value: Input[String]): Self = this.set("networkInterface", value.asInstanceOf[js.Any])

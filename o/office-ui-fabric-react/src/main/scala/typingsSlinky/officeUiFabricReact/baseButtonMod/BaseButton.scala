@@ -51,6 +51,8 @@ class BaseButton protected ()
   
   var _menuShouldFocusOnMount: js.Any = js.native
   
+  var _mergedRef: js.Any = js.native
+  
   var _onClick: js.Any = js.native
   
   var _onDismissMenu: js.Any = js.native

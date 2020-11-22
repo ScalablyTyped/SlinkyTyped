@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.spritesIndexMod
 
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -198,4 +199,42 @@ class SpriteManager protected ()
     fromPacked: Boolean,
     spriteJSON: js.Any
   ) = this()
+}
+/* static members */
+@JSImport("babylonjs/Sprites/index", "SpriteManager")
+@js.native
+object SpriteManager extends js.Object {
+  
+  /**
+    * Creates a sprite manager from a snippet saved by the sprite editor
+    * @param snippetId defines the snippet to load (can be set to _BLANK to create a default one)
+    * @param scene defines the hosting scene
+    * @param rootUrl defines the root URL to use to load textures and relative dependencies
+    * @returns a promise that will resolve to the new sprite manager
+    */
+  def CreateFromSnippetAsync(snippetId: String, scene: Scene): js.Promise[typingsSlinky.babylonjs.spriteManagerMod.SpriteManager] = js.native
+  def CreateFromSnippetAsync(snippetId: String, scene: Scene, rootUrl: String): js.Promise[typingsSlinky.babylonjs.spriteManagerMod.SpriteManager] = js.native
+  
+  /**
+    * Parses a JSON object to create a new sprite manager.
+    * @param parsedManager The JSON object to parse
+    * @param scene The scene to create the sprite managerin
+    * @param rootUrl The root url to use to load external dependencies like texture
+    * @returns the new sprite manager
+    */
+  def Parse(parsedManager: js.Any, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.spriteManagerMod.SpriteManager = js.native
+  
+  /**
+    * Creates a sprite manager from a snippet saved in a remote file
+    * @param name defines the name of the sprite manager to create (can be null or empty to use the one from the json data)
+    * @param url defines the url to load from
+    * @param scene defines the hosting scene
+    * @param rootUrl defines the root URL to use to load textures and relative dependencies
+    * @returns a promise that will resolve to the new sprite manager
+    */
+  def ParseFromFileAsync(name: Nullable[String], url: String, scene: Scene): js.Promise[typingsSlinky.babylonjs.spriteManagerMod.SpriteManager] = js.native
+  def ParseFromFileAsync(name: Nullable[String], url: String, scene: Scene, rootUrl: String): js.Promise[typingsSlinky.babylonjs.spriteManagerMod.SpriteManager] = js.native
+  
+  /** Define the Url to load snippets */
+  var SnippetUrl: String = js.native
 }

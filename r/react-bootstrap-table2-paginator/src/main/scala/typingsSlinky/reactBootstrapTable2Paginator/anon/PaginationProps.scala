@@ -11,12 +11,12 @@ trait PaginationProps extends js.Object {
   
   var paginationProps: PaginationChildProps = js.native
   
-  var paginationTableProps: BootstrapTableProps[_] = js.native
+  var paginationTableProps: BootstrapTableProps[_, Double] = js.native
 }
 object PaginationProps {
   
   @scala.inline
-  def apply(paginationProps: PaginationChildProps, paginationTableProps: BootstrapTableProps[_]): PaginationProps = {
+  def apply(paginationProps: PaginationChildProps, paginationTableProps: BootstrapTableProps[_, Double]): PaginationProps = {
     val __obj = js.Dynamic.literal(paginationProps = paginationProps.asInstanceOf[js.Any], paginationTableProps = paginationTableProps.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaginationProps]
   }
@@ -40,6 +40,6 @@ object PaginationProps {
     def setPaginationProps(value: PaginationChildProps): Self = this.set("paginationProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPaginationTableProps(value: BootstrapTableProps[_]): Self = this.set("paginationTableProps", value.asInstanceOf[js.Any])
+    def setPaginationTableProps(value: BootstrapTableProps[_, Double]): Self = this.set("paginationTableProps", value.asInstanceOf[js.Any])
   }
 }

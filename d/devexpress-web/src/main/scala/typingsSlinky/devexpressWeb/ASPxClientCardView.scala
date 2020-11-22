@@ -250,7 +250,7 @@ trait ASPxClientCardView extends ASPxClientGridBase {
   def GetEditFormLayoutItemByColumn(column: Double): ASPxClientLayoutItem = js.native
   /**
     * Gets the edit form layout item. The form layout item.
-    * @param column The column, its index or field name.
+    * @param column The column, its index or name.
     */
   def GetEditFormLayoutItemByColumn(column: ASPxClientCardViewColumn): ASPxClientLayoutItem = js.native
   

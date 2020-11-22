@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DocumentResponseRowMeta extends js.Object {
   
+  var error: js.UndefOr[String] = js.native
+  
   var id: String = js.native
   
   var key: String = js.native
@@ -48,5 +50,11 @@ object DocumentResponseRowMeta {
     
     @scala.inline
     def setValue(value: Rev): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setError(value: String): Self = this.set("error", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteError: Self = this.set("error", js.undefined)
   }
 }

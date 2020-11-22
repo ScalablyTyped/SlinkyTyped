@@ -5,8 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait SkData extends SkObject[SkData] {
+trait SkData extends EmbindObject[SkData] {
   
+  /**
+    * Return the number of bytes in this container.
+    */
   def size(): Double = js.native
 }
 object SkData {

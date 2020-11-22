@@ -18,7 +18,7 @@ trait ModifyVpcEndpointRequest extends js.Object {
   var AddSecurityGroupIds: js.UndefOr[VpcEndpointSecurityGroupIdList] = js.native
   
   /**
-    * (Interface endpoint) One or more subnet IDs in which to serve the endpoint.
+    * (Interface and Gateway Load Balancer endpoints) One or more subnet IDs in which to serve the endpoint. For a Gateway Load Balancer endpoint, you can specify only one subnet.
     */
   var AddSubnetIds: js.UndefOr[VpcEndpointSubnetIdList] = js.native
   
@@ -28,7 +28,7 @@ trait ModifyVpcEndpointRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * A policy to attach to the endpoint that controls access to the service. The policy must be in valid JSON format.
+    * (Interface and gateway endpoints) A policy to attach to the endpoint that controls access to the service. The policy must be in valid JSON format.
     */
   var PolicyDocument: js.UndefOr[String] = js.native
   

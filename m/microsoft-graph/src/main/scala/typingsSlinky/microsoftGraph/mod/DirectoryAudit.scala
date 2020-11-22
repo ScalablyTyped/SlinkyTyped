@@ -20,7 +20,7 @@ trait DirectoryAudit extends Entity {
   var activityDisplayName: js.UndefOr[String] = js.native
   
   // Indicates additional details on the activity.
-  var additionalDetails: js.UndefOr[js.Array[KeyValue]] = js.native
+  var additionalDetails: js.UndefOr[NullableOption[js.Array[KeyValue]]] = js.native
   
   /**
     * Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management
@@ -32,7 +32,7 @@ trait DirectoryAudit extends Entity {
     * Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs
     * across services.
     */
-  var correlationId: js.UndefOr[String] = js.native
+  var correlationId: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates information about the user or app initiated the activity.
   var initiatedBy: js.UndefOr[AuditActivityInitiator] = js.native
@@ -41,21 +41,21 @@ trait DirectoryAudit extends Entity {
     * Indicates information on which service initiated the activity (For example: Self-service Password Management, Core
     * Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
     */
-  var loggedByService: js.UndefOr[String] = js.native
+  var loggedByService: js.UndefOr[NullableOption[String]] = js.native
   
-  var operationType: js.UndefOr[String] = js.native
+  var operationType: js.UndefOr[NullableOption[String]] = js.native
   
-  // Indicates the result of the activity.Possible values are: success, failure, timeout, unknownFutureValue.
-  var result: js.UndefOr[OperationResult] = js.native
+  // Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
+  var result: js.UndefOr[NullableOption[OperationResult]] = js.native
   
   // Describes cause of 'failure' or 'timeout' results.
-  var resultReason: js.UndefOr[String] = js.native
+  var resultReason: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device,
     * Directory, App, Role, Group, Policy or Other.
     */
-  var targetResources: js.UndefOr[js.Array[TargetResource]] = js.native
+  var targetResources: js.UndefOr[NullableOption[js.Array[TargetResource]]] = js.native
 }
 object DirectoryAudit {
   
@@ -96,10 +96,13 @@ object DirectoryAudit {
     def setAdditionalDetailsVarargs(value: KeyValue*): Self = this.set("additionalDetails", js.Array(value :_*))
     
     @scala.inline
-    def setAdditionalDetails(value: js.Array[KeyValue]): Self = this.set("additionalDetails", value.asInstanceOf[js.Any])
+    def setAdditionalDetails(value: NullableOption[js.Array[KeyValue]]): Self = this.set("additionalDetails", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAdditionalDetails: Self = this.set("additionalDetails", js.undefined)
+    
+    @scala.inline
+    def setAdditionalDetailsNull: Self = this.set("additionalDetails", null)
     
     @scala.inline
     def setCategory(value: String): Self = this.set("category", value.asInstanceOf[js.Any])
@@ -108,10 +111,13 @@ object DirectoryAudit {
     def deleteCategory: Self = this.set("category", js.undefined)
     
     @scala.inline
-    def setCorrelationId(value: String): Self = this.set("correlationId", value.asInstanceOf[js.Any])
+    def setCorrelationId(value: NullableOption[String]): Self = this.set("correlationId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCorrelationId: Self = this.set("correlationId", js.undefined)
+    
+    @scala.inline
+    def setCorrelationIdNull: Self = this.set("correlationId", null)
     
     @scala.inline
     def setInitiatedBy(value: AuditActivityInitiator): Self = this.set("initiatedBy", value.asInstanceOf[js.Any])
@@ -120,36 +126,51 @@ object DirectoryAudit {
     def deleteInitiatedBy: Self = this.set("initiatedBy", js.undefined)
     
     @scala.inline
-    def setLoggedByService(value: String): Self = this.set("loggedByService", value.asInstanceOf[js.Any])
+    def setLoggedByService(value: NullableOption[String]): Self = this.set("loggedByService", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLoggedByService: Self = this.set("loggedByService", js.undefined)
     
     @scala.inline
-    def setOperationType(value: String): Self = this.set("operationType", value.asInstanceOf[js.Any])
+    def setLoggedByServiceNull: Self = this.set("loggedByService", null)
+    
+    @scala.inline
+    def setOperationType(value: NullableOption[String]): Self = this.set("operationType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOperationType: Self = this.set("operationType", js.undefined)
     
     @scala.inline
-    def setResult(value: OperationResult): Self = this.set("result", value.asInstanceOf[js.Any])
+    def setOperationTypeNull: Self = this.set("operationType", null)
+    
+    @scala.inline
+    def setResult(value: NullableOption[OperationResult]): Self = this.set("result", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResult: Self = this.set("result", js.undefined)
     
     @scala.inline
-    def setResultReason(value: String): Self = this.set("resultReason", value.asInstanceOf[js.Any])
+    def setResultNull: Self = this.set("result", null)
+    
+    @scala.inline
+    def setResultReason(value: NullableOption[String]): Self = this.set("resultReason", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResultReason: Self = this.set("resultReason", js.undefined)
     
     @scala.inline
+    def setResultReasonNull: Self = this.set("resultReason", null)
+    
+    @scala.inline
     def setTargetResourcesVarargs(value: TargetResource*): Self = this.set("targetResources", js.Array(value :_*))
     
     @scala.inline
-    def setTargetResources(value: js.Array[TargetResource]): Self = this.set("targetResources", value.asInstanceOf[js.Any])
+    def setTargetResources(value: NullableOption[js.Array[TargetResource]]): Self = this.set("targetResources", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTargetResources: Self = this.set("targetResources", js.undefined)
+    
+    @scala.inline
+    def setTargetResourcesNull: Self = this.set("targetResources", null)
   }
 }

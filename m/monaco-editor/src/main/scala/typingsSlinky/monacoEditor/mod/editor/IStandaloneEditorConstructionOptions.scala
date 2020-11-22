@@ -29,14 +29,6 @@ trait IStandaloneEditorConstructionOptions
   var model: js.UndefOr[ITextModel | Null] = js.native
   
   /**
-    * Initial theme to be used for rendering.
-    * The current out-of-the-box available themes are: 'vs' (default), 'vs-dark', 'hc-black'.
-    * You can create custom themes via `monaco.editor.defineTheme`.
-    * To switch a theme, use `monaco.editor.setTheme`
-    */
-  var theme: js.UndefOr[String] = js.native
-  
-  /**
     * The initial value of the auto created model in the editor.
     * To not create automatically a model, use `model: null`.
     */
@@ -85,12 +77,6 @@ object IStandaloneEditorConstructionOptions {
     
     @scala.inline
     def setModelNull: Self = this.set("model", null)
-    
-    @scala.inline
-    def setTheme(value: String): Self = this.set("theme", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTheme: Self = this.set("theme", js.undefined)
     
     @scala.inline
     def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])

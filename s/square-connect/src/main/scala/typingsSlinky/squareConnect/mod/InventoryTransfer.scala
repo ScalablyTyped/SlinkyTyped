@@ -46,10 +46,6 @@ class InventoryTransfer () extends js.Object {
   
   /**
     * The number of items affected by the transfer as a decimal string. Can support up to 5 digits after the decimal point.
-    * @note The Point of Sale app and Dashboard do not currently support decimal quantities. If a Point of Sale app or
-    * Dashboard attempts to read a decimal quantity on inventory counts or adjustments, the quantity will be rounded down
-    * to the nearest integer. For example, `2.5` will become `2`, and `-2.5` will become `-3`. Read [Decimal
-    * Quantities (BETA)](https://developer.squareup.com/docs/docs/inventory-api/what-it-does#decimal-quantities-beta) for more information.
     */
   var quantity: js.UndefOr[String] = js.native
   
@@ -64,8 +60,7 @@ class InventoryTransfer () extends js.Object {
   var source: js.UndefOr[SourceApplication] = js.native
   
   /**
-    * The `InventoryState` for the quantity of items being transfered.
-    * See [InventoryState](#type-inventorystate) for possible values.
+    * The `InventoryState` for the quantity of items being transferred. See [InventoryState](#type-inventorystate) for possible values.
     */
   var state: js.UndefOr[InventoryStateType] = js.native
   

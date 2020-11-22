@@ -18,7 +18,7 @@ trait GetBucketStatisticsResponse extends js.Object {
   var bucketCountByEffectivePermission: js.UndefOr[BucketCountByEffectivePermission] = js.native
   
   /**
-    * The total number of buckets, grouped by server-side encryption type. This object also reports the total number of buckets that aren't encrypted.
+    * The total number of buckets, grouped by server-side encryption type. This object also reports the total number of buckets that don't encrypt objects by default.
     */
   var bucketCountByEncryptionType: js.UndefOr[BucketCountByEncryptionType] = js.native
   
@@ -28,29 +28,44 @@ trait GetBucketStatisticsResponse extends js.Object {
   var bucketCountBySharedAccessType: js.UndefOr[BucketCountBySharedAccessType] = js.native
   
   /**
-    * The total number of objects that Amazon Macie can analyze in all the buckets. These objects use a file format, file extension, or content type that Amazon Macie supports.
+    * The total number of objects that Amazon Macie can analyze in the buckets. These objects use a supported storage class and have a file name extension for a supported file or storage format.
     */
   var classifiableObjectCount: js.UndefOr[long] = js.native
   
   /**
-    * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie last analyzed the buckets.
+    * The total storage size, in bytes, of all the objects that Amazon Macie can analyze in the buckets. These objects use a supported storage class and have a file name extension for a supported file or storage format.
+    */
+  var classifiableSizeInBytes: js.UndefOr[long] = js.native
+  
+  /**
+    * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently retrieved data about the buckets from Amazon S3.
     */
   var lastUpdated: js.UndefOr[js.Date] = js.native
   
   /**
-    * The total number of objects in all the buckets.
+    * The total number of objects in the buckets.
     */
   var objectCount: js.UndefOr[long] = js.native
   
   /**
-    * The total storage size, in bytes, of all the buckets.
+    * The total storage size, in bytes, of the buckets.
     */
   var sizeInBytes: js.UndefOr[long] = js.native
   
   /**
-    * The total compressed storage size, in bytes, of all the buckets.
+    * The total compressed storage size, in bytes, of the buckets.
     */
   var sizeInBytesCompressed: js.UndefOr[long] = js.native
+  
+  /**
+    * The total number of objects that Amazon Macie can't analyze in the buckets. These objects don't use a supported storage class or don't have a file name extension for a supported file or storage format.
+    */
+  var unclassifiableObjectCount: js.UndefOr[ObjectLevelStatistics] = js.native
+  
+  /**
+    * The total storage size, in bytes, of all the objects that Amazon Macie can't analyze in the buckets. These objects don't use a supported storage class or don't have a file name extension for a supported file or storage format.
+    */
+  var unclassifiableObjectSizeInBytes: js.UndefOr[ObjectLevelStatistics] = js.native
 }
 object GetBucketStatisticsResponse {
   
@@ -106,6 +121,12 @@ object GetBucketStatisticsResponse {
     def deleteClassifiableObjectCount: Self = this.set("classifiableObjectCount", js.undefined)
     
     @scala.inline
+    def setClassifiableSizeInBytes(value: long): Self = this.set("classifiableSizeInBytes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassifiableSizeInBytes: Self = this.set("classifiableSizeInBytes", js.undefined)
+    
+    @scala.inline
     def setLastUpdated(value: js.Date): Self = this.set("lastUpdated", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -128,5 +149,17 @@ object GetBucketStatisticsResponse {
     
     @scala.inline
     def deleteSizeInBytesCompressed: Self = this.set("sizeInBytesCompressed", js.undefined)
+    
+    @scala.inline
+    def setUnclassifiableObjectCount(value: ObjectLevelStatistics): Self = this.set("unclassifiableObjectCount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnclassifiableObjectCount: Self = this.set("unclassifiableObjectCount", js.undefined)
+    
+    @scala.inline
+    def setUnclassifiableObjectSizeInBytes(value: ObjectLevelStatistics): Self = this.set("unclassifiableObjectSizeInBytes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnclassifiableObjectSizeInBytes: Self = this.set("unclassifiableObjectSizeInBytes", js.undefined)
   }
 }

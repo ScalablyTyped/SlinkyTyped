@@ -214,7 +214,8 @@ object mod extends js.Object {
     
     /**
       * Returns a new date representing the latest interval boundary date before or equal to date.
-      * This function is an alias for "TimeInterval.floor(date)". For example, timeYear(date) and timeYear.floor(date) are equivalent.
+      * Equivalent to interval.floor, except it date is not specified, it defaults to the current time.
+      * For example, d3.timeYear(date) and d3.timeYear.floor(date) are equivalent.
       *
       * For example, timeDay(date) typically returns 12:00 AM local time on the given date.
       *
@@ -231,6 +232,7 @@ object mod extends js.Object {
       *
       * @param date A date object.
       */
+    def apply(): js.Date = js.native
     def apply(date: js.Date): js.Date = js.native
     
     /**

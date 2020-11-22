@@ -1,5 +1,6 @@
 package typingsSlinky.expressSocketIoSession.mod.socketIoAugmentingMod
 
+import typingsSlinky.expressSocketIoSession.anon.SessionPartialSessionData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,9 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Handshake extends js.Object {
   
-  var session: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Express.Session */ js.Any
-  ] = js.native
+  var session: js.UndefOr[SessionPartialSessionData] = js.native
   
   var sessionID: js.UndefOr[String] = js.native
 }
@@ -37,9 +36,7 @@ object Handshake {
     }
     
     @scala.inline
-    def setSession(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Express.Session */ js.Any
-    ): Self = this.set("session", value.asInstanceOf[js.Any])
+    def setSession(value: SessionPartialSessionData): Self = this.set("session", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSession: Self = this.set("session", js.undefined)

@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PublicKeyConfig extends js.Object {
   
   /**
-    * A unique number that ensures that the request can't be replayed.
+    * A string included in the request to help make sure that the request can’t be replayed.
     */
   var CallerReference: String = js.native
   
   /**
-    * An optional comment about a public key.
+    * A comment to describe the public key.
     */
   var Comment: js.UndefOr[String] = js.native
   
   /**
-    * The encoded public key that you want to add to CloudFront to use with features like field-level encryption.
+    * The public key that you can use with signed URLs and signed cookies, or with field-level encryption.
     */
   var EncodedKey: String = js.native
   
   /**
-    * The name for a public key you add to CloudFront to use with features like field-level encryption.
+    * A name to help identify the public key.
     */
   var Name: String = js.native
 }

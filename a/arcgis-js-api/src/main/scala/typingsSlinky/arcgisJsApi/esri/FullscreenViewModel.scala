@@ -20,20 +20,16 @@ trait FullscreenViewModel extends Accessor {
   var element: HTMLElement = js.native
   
   /**
-    * Enter fullscreen
+    * Enter fullscreen.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Fullscreen-FullscreenViewModel.html#enter)
-    *
-    *
     */
   def enter(): Unit = js.native
   
   /**
-    * Exit fullscreen
+    * Exit fullscreen.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Fullscreen-FullscreenViewModel.html#exit)
-    *
-    *
     */
   def exit(): Unit = js.native
   
@@ -41,17 +37,13 @@ trait FullscreenViewModel extends Accessor {
     * The view model's state.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Fullscreen-FullscreenViewModel.html#state)
-    *
-    * @default disabled
     */
   val state: active | ready | `feature-unsupported` | disabled = js.native
   
   /**
-    * Toggle fullscreen
+    * Toggle fullscreen.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Fullscreen-FullscreenViewModel.html#toggle)
-    *
-    *
     */
   def toggle(): Unit = js.native
   

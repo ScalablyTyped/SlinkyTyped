@@ -7,6 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RiskOptions extends js.Object {
   
+  /**
+    * `three_d_secure_action_token_id` returned by the Recurly API when 3-D Secure authentication is required for a
+    * transaction.
+    *
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-recurlythreedsecure|ThreeDSecure}
+    */
   var actionTokenId: js.UndefOr[String] = js.native
 }
 object RiskOptions {

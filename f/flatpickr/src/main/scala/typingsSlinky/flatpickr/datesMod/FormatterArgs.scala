@@ -11,6 +11,8 @@ trait FormatterArgs extends js.Object {
   
   var config: js.UndefOr[ParsedOptions] = js.native
   
+  var isMobile: js.UndefOr[Boolean] = js.native
+  
   var l10n: js.UndefOr[Locale] = js.native
 }
 object FormatterArgs {
@@ -41,6 +43,12 @@ object FormatterArgs {
     
     @scala.inline
     def deleteConfig: Self = this.set("config", js.undefined)
+    
+    @scala.inline
+    def setIsMobile(value: Boolean): Self = this.set("isMobile", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsMobile: Self = this.set("isMobile", js.undefined)
     
     @scala.inline
     def setL10n(value: Locale): Self = this.set("l10n", value.asInstanceOf[js.Any])

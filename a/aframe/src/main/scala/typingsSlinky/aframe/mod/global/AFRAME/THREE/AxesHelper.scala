@@ -6,5 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSGlobal("AFRAME.THREE.AxesHelper")
 @js.native
+/**
+	 * @param [size=1]
+	 */
 class AxesHelper ()
   extends typingsSlinky.three.mod.AxesHelper

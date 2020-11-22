@@ -61,8 +61,9 @@ object csvDatasetMod extends js.Object {
       * `configuredColumnsOnly` is false and `columnNames` is not provided, return
       * all column names parsed from the csv file. For example usage please go to
       * `tf.data.csv`.
+      *
+      * @doc {heading: 'Data', subheading: 'Classes'}
       */
-    /** @doc {heading: 'Data', subheading: 'Classes'} */
     def columnNames(): js.Promise[js.Array[String]] = js.native
     
     var columnNamesValidated: js.Any = js.native

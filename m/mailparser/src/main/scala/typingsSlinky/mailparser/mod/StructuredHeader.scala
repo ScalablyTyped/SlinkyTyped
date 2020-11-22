@@ -5,19 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/**
-  * Structured object for headers with arguments.
-  *
-  * `content-type: text/plain; CHARSET="UTF-8"` =>
-  * ```
-  * {
-  *     "value": "text/plain",
-  *     "params": {
-  *         "charset": "UTF-8"
-  *     }
-  * }
-  * ```
-  */
 @js.native
 trait StructuredHeader extends _HeaderValue {
   

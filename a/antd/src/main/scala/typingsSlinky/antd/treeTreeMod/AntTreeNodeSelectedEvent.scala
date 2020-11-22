@@ -2,7 +2,7 @@ package typingsSlinky.antd.treeTreeMod
 
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.ReactComponentClass
-import typingsSlinky.antd.antdStrings.select
+import typingsSlinky.antd.antdStrings.select_
 import typingsSlinky.rcTree.interfaceMod.DataNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AntTreeNodeSelectedEvent extends AntTreeNodeBaseEvent {
   
-  var event: select = js.native
+  var event: select_ = js.native
   
   var selected: js.UndefOr[Boolean] = js.native
   
@@ -20,7 +20,7 @@ trait AntTreeNodeSelectedEvent extends AntTreeNodeBaseEvent {
 object AntTreeNodeSelectedEvent {
   
   @scala.inline
-  def apply(event: select, nativeEvent: MouseEvent, node: ReactComponentClass[AntTreeNodeProps]): AntTreeNodeSelectedEvent = {
+  def apply(event: select_, nativeEvent: MouseEvent, node: ReactComponentClass[AntTreeNodeProps]): AntTreeNodeSelectedEvent = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], nativeEvent = nativeEvent.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
     __obj.asInstanceOf[AntTreeNodeSelectedEvent]
   }
@@ -41,7 +41,7 @@ object AntTreeNodeSelectedEvent {
     }
     
     @scala.inline
-    def setEvent(value: select): Self = this.set("event", value.asInstanceOf[js.Any])
+    def setEvent(value: select_): Self = this.set("event", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSelected(value: Boolean): Self = this.set("selected", value.asInstanceOf[js.Any])

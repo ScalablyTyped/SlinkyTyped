@@ -15,6 +15,10 @@ trait EntityTypes extends js.Object {
   var entityTypes: js.UndefOr[js.Array[String]] = js.native
   
   var offsetRay: js.UndefOr[Ray] = js.native
+  
+  var profile: js.UndefOr[String] = js.native
+  
+  var spaceType: js.UndefOr[String] = js.native
 }
 object EntityTypes {
   
@@ -59,5 +63,17 @@ object EntityTypes {
     
     @scala.inline
     def deleteOffsetRay: Self = this.set("offsetRay", js.undefined)
+    
+    @scala.inline
+    def setProfile(value: String): Self = this.set("profile", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProfile: Self = this.set("profile", js.undefined)
+    
+    @scala.inline
+    def setSpaceType(value: String): Self = this.set("spaceType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSpaceType: Self = this.set("spaceType", js.undefined)
   }
 }

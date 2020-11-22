@@ -43,6 +43,11 @@ trait CertificateAuthority extends js.Object {
   var NotBefore: js.UndefOr[js.Date] = js.native
   
   /**
+    * The AWS account ID that owns the certificate authority.
+    */
+  var OwnerAccount: js.UndefOr[AccountId] = js.native
+  
+  /**
     * The period during which a deleted CA can be restored. For more information, see the PermanentDeletionTimeInDays parameter of the DeleteCertificateAuthorityRequest action. 
     */
   var RestorableUntil: js.UndefOr[js.Date] = js.native
@@ -131,6 +136,12 @@ object CertificateAuthority {
     
     @scala.inline
     def deleteNotBefore: Self = this.set("NotBefore", js.undefined)
+    
+    @scala.inline
+    def setOwnerAccount(value: AccountId): Self = this.set("OwnerAccount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOwnerAccount: Self = this.set("OwnerAccount", js.undefined)
     
     @scala.inline
     def setRestorableUntil(value: js.Date): Self = this.set("RestorableUntil", value.asInstanceOf[js.Any])

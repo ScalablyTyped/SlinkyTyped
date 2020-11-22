@@ -15,6 +15,12 @@ object algoliaClientSearchStrings {
   def CreateIndex: CreateIndex = "CreateIndex".asInstanceOf[CreateIndex]
   
   @scala.inline
+  def HighlightResult: HighlightResult = "HighlightResult".asInstanceOf[HighlightResult]
+  
+  @scala.inline
+  def SnippetResult: SnippetResult = "SnippetResult".asInstanceOf[SnippetResult]
+  
+  @scala.inline
   def addObject: addObject = "addObject".asInstanceOf[addObject]
   
   @scala.inline
@@ -75,6 +81,9 @@ object algoliaClientSearchStrings {
   def firstWords: firstWords = "firstWords".asInstanceOf[firstWords]
   
   @scala.inline
+  def full: full = "full".asInstanceOf[full]
+  
+  @scala.inline
   def ignorePlurals: ignorePlurals = "ignorePlurals".asInstanceOf[ignorePlurals]
   
   @scala.inline
@@ -100,6 +109,9 @@ object algoliaClientSearchStrings {
   
   @scala.inline
   def oneWaySynonym: oneWaySynonym = "oneWaySynonym".asInstanceOf[oneWaySynonym]
+  
+  @scala.inline
+  def partial: partial = "partial".asInstanceOf[partial]
   
   @scala.inline
   def partialUpdateObject: partialUpdateObject = "partialUpdateObject".asInstanceOf[partialUpdateObject]
@@ -171,6 +183,12 @@ object algoliaClientSearchStrings {
   sealed trait CreateIndex extends js.Object
   
   @js.native
+  sealed trait HighlightResult extends js.Object
+  
+  @js.native
+  sealed trait SnippetResult extends js.Object
+  
+  @js.native
   sealed trait addObject
     extends ApiKeyACLType
        with BatchActionType
@@ -235,6 +253,9 @@ object algoliaClientSearchStrings {
   sealed trait firstWords extends js.Object
   
   @js.native
+  sealed trait full extends js.Object
+  
+  @js.native
   sealed trait ignorePlurals extends js.Object
   
   @js.native
@@ -260,6 +281,9 @@ object algoliaClientSearchStrings {
   
   @js.native
   sealed trait oneWaySynonym extends SynonymType
+  
+  @js.native
+  sealed trait partial extends js.Object
   
   @js.native
   sealed trait partialUpdateObject extends BatchActionType

@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IEditorCommentsOptions extends js.Object {
   
   /**
+    * Ignore empty lines when inserting line comments.
+    * Defaults to true.
+    */
+  var ignoreEmptyLines: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Insert a space after the line comment token and inside the block comments tokens.
     * Defaults to true.
     */
@@ -35,6 +41,12 @@ object IEditorCommentsOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setIgnoreEmptyLines(value: Boolean): Self = this.set("ignoreEmptyLines", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIgnoreEmptyLines: Self = this.set("ignoreEmptyLines", js.undefined)
     
     @scala.inline
     def setInsertSpace(value: Boolean): Self = this.set("insertSpace", value.asInstanceOf[js.Any])

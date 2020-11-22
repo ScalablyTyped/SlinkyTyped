@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSModuleBlock
+import typingsSlinky.babelTraverse.babelTraverseStrings.DeclareOpaqueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `222` extends js.Object {
   
-  var `type`: TSModuleBlock = js.native
+  var `type`: DeclareOpaqueType = js.native
 }
 object `222` {
   
   @scala.inline
-  def apply(`type`: TSModuleBlock): `222` = {
+  def apply(`type`: DeclareOpaqueType): `222` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`222`]
@@ -35,6 +35,6 @@ object `222` {
     }
     
     @scala.inline
-    def setType(value: TSModuleBlock): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: DeclareOpaqueType): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

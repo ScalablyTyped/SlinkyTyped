@@ -10,11 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TileInfoCreateOptions extends Object {
   
   /**
-    * An array of scale values to use for the TileInfo. If none are specified, the scales from the [ArcGIS Online basemaps](https://www.arcgis.com/home/group.html?id=702026e41f6641fb85da88efe79dc166#overview) are used from level 0 through 24.
+    * An array of scale values to use for the TileInfo.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TileInfo.html#create)
-    *
-    * @default The scales provided by ArcGIS Online basemaps
     */
   var scales: js.UndefOr[js.Array[Double]] = js.native
   
@@ -22,17 +20,13 @@ trait TileInfoCreateOptions extends Object {
     * The size of each tile in pixels.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TileInfo.html#create)
-    *
-    * @default 256
     */
   var size: js.UndefOr[Double] = js.native
   
   /**
-    * The spatial reference for the new TileInfo instance. If the spatial reference is not WGS84 nor WebMercator, the origin of the TileInfo is `0.0`.
+    * The spatial reference for the new TileInfo instance.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TileInfo.html#create)
-    *
-    * @default WebMercator
     */
   var spatialReference: js.UndefOr[SpatialReference] = js.native
 }

@@ -1,9 +1,12 @@
 package typingsSlinky.xstate
 
+import typingsSlinky.xstate.anon.Context
 import typingsSlinky.xstate.anon.Id
 import typingsSlinky.xstate.typesMod.AnyEventObject
 import typingsSlinky.xstate.typesMod.EventObject
 import typingsSlinky.xstate.typesMod.InvokeDefinition
+import typingsSlinky.xstate.typesMod.SCXML.Event
+import typingsSlinky.xstate.typesMod.Spawnable
 import typingsSlinky.xstate.typesMod.StateMachine
 import typingsSlinky.xstate.typesMod.Subscribable
 import scala.scalajs.js
@@ -14,7 +17,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object actorMod extends js.Object {
   
-  def createInvocableActor[TC, TE /* <: EventObject */](invokeDefinition: InvokeDefinition[TC, TE], machine: StateMachine[TC, _, TE, _]): Actor[_, AnyEventObject] = js.native
+  def createDeferredActor(entity: Spawnable, id: String): Actor[_, AnyEventObject] = js.native
+  def createDeferredActor(entity: Spawnable, id: String, data: js.Any): Actor[_, AnyEventObject] = js.native
+  
+  def createInvocableActor[TC, TE /* <: EventObject */](
+    invokeDefinition: InvokeDefinition[TC, TE],
+    machine: StateMachine[TC, _, TE, Context[TC]],
+    context: TC,
+    _event: Event[TE]
+  ): Actor[_, AnyEventObject] = js.native
   
   def createNullActor(id: String): Actor[_, AnyEventObject] = js.native
   

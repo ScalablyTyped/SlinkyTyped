@@ -1,6 +1,7 @@
 package typingsSlinky.muiDatatables
 
-import typingsSlinky.muiDatatables.mod.Display
+import typingsSlinky.muiDatatables.mod.ChipColor
+import typingsSlinky.muiDatatables.mod.ChipVariant
 import typingsSlinky.muiDatatables.mod.FilterType
 import typingsSlinky.muiDatatables.mod.Responsive
 import typingsSlinky.muiDatatables.mod.SelectableRows
@@ -26,16 +27,19 @@ object muiDatatablesStrings {
   def custom: custom = "custom".asInstanceOf[custom]
   
   @scala.inline
+  def default: default = "default".asInstanceOf[default]
+  
+  @scala.inline
   def desc: desc = "desc".asInstanceOf[desc]
+  
+  @scala.inline
+  def disabled: disabled = "disabled".asInstanceOf[disabled]
   
   @scala.inline
   def dropdown: dropdown = "dropdown".asInstanceOf[dropdown]
   
   @scala.inline
   def excluded: excluded = "excluded".asInstanceOf[excluded]
-  
-  @scala.inline
-  def `false`: `false` = "false".asInstanceOf[`false`]
   
   @scala.inline
   def multiple: multiple = "multiple".asInstanceOf[multiple]
@@ -47,10 +51,19 @@ object muiDatatablesStrings {
   def none: none = "none".asInstanceOf[none]
   
   @scala.inline
+  def outlined: outlined = "outlined".asInstanceOf[outlined]
+  
+  @scala.inline
+  def primary: primary = "primary".asInstanceOf[primary]
+  
+  @scala.inline
   def replace: replace = "replace".asInstanceOf[replace]
   
   @scala.inline
   def reset: reset = "reset".asInstanceOf[reset]
+  
+  @scala.inline
+  def secondary: secondary = "secondary".asInstanceOf[secondary]
   
   @scala.inline
   def simple: simple = "simple".asInstanceOf[simple]
@@ -63,9 +76,6 @@ object muiDatatablesStrings {
   
   @scala.inline
   def textField: textField = "textField".asInstanceOf[textField]
-  
-  @scala.inline
-  def `true`: `true` = "true".asInstanceOf[`true`]
   
   @scala.inline
   def vertical: vertical = "vertical".asInstanceOf[vertical]
@@ -86,16 +96,21 @@ object muiDatatablesStrings {
   sealed trait custom extends FilterType
   
   @js.native
+  sealed trait default
+    extends ChipColor
+       with ChipVariant
+  
+  @js.native
   sealed trait desc extends js.Object
+  
+  @js.native
+  sealed trait disabled extends js.Object
   
   @js.native
   sealed trait dropdown extends FilterType
   
   @js.native
-  sealed trait excluded extends Display
-  
-  @js.native
-  sealed trait `false` extends Display
+  sealed trait excluded extends js.Object
   
   @js.native
   sealed trait multiple extends SelectableRows
@@ -107,10 +122,19 @@ object muiDatatablesStrings {
   sealed trait none extends SelectableRows
   
   @js.native
+  sealed trait outlined extends ChipVariant
+  
+  @js.native
+  sealed trait primary extends ChipColor
+  
+  @js.native
   sealed trait replace extends js.Object
   
   @js.native
   sealed trait reset extends js.Object
+  
+  @js.native
+  sealed trait secondary extends ChipColor
   
   @js.native
   sealed trait simple extends Responsive
@@ -123,9 +147,6 @@ object muiDatatablesStrings {
   
   @js.native
   sealed trait textField extends FilterType
-  
-  @js.native
-  sealed trait `true` extends Display
   
   @js.native
   sealed trait vertical extends Responsive

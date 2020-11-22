@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SizeVariableConstructor
   extends /**
-  * The size visual variable defines the size of individual features in a layer based on a numeric (often thematic) value. This value comes from one of the following:
+  * The size visual variable defines the size of individual features in a layer based on a numeric (often thematic) value.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-SizeVariable.html)
   */

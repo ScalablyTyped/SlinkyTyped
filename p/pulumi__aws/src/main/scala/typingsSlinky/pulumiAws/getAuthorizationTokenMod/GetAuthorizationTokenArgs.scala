@@ -8,15 +8,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetAuthorizationTokenArgs extends js.Object {
   
   /**
-    * AWS account ID of the ECR Repository. If not specified the default account is assumed.
+    * The name of the domain that is in scope for the generated authorization token.
     */
-  val registryId: js.UndefOr[String] = js.native
+  val domain: String = js.native
+  
+  /**
+    * The account number of the AWS account that owns the domain.
+    */
+  val domainOwner: js.UndefOr[String] = js.native
+  
+  /**
+    * The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
+    */
+  val durationSeconds: js.UndefOr[Double] = js.native
 }
 object GetAuthorizationTokenArgs {
   
   @scala.inline
-  def apply(): GetAuthorizationTokenArgs = {
-    val __obj = js.Dynamic.literal()
+  def apply(domain: String): GetAuthorizationTokenArgs = {
+    val __obj = js.Dynamic.literal(domain = domain.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetAuthorizationTokenArgs]
   }
   
@@ -36,9 +46,18 @@ object GetAuthorizationTokenArgs {
     }
     
     @scala.inline
-    def setRegistryId(value: String): Self = this.set("registryId", value.asInstanceOf[js.Any])
+    def setDomain(value: String): Self = this.set("domain", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRegistryId: Self = this.set("registryId", js.undefined)
+    def setDomainOwner(value: String): Self = this.set("domainOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDomainOwner: Self = this.set("domainOwner", js.undefined)
+    
+    @scala.inline
+    def setDurationSeconds(value: Double): Self = this.set("durationSeconds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDurationSeconds: Self = this.set("durationSeconds", js.undefined)
   }
 }

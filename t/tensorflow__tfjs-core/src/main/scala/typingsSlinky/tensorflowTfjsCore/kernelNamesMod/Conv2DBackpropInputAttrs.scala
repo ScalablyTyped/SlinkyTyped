@@ -19,6 +19,8 @@ trait Conv2DBackpropInputAttrs extends js.Object {
   
   var dimRoundingMode: js.UndefOr[floor | round | ceil] = js.native
   
+  var inputShape: js.Tuple4[Double, Double, Double, Double] = js.native
+  
   var pad: valid_ | same_ | Double | ExplicitPadding = js.native
   
   var strides: (js.Tuple2[Double, Double]) | Double = js.native
@@ -28,10 +30,11 @@ object Conv2DBackpropInputAttrs {
   @scala.inline
   def apply(
     dataFormat: NHWC | NCHW,
+    inputShape: js.Tuple4[Double, Double, Double, Double],
     pad: valid_ | same_ | Double | ExplicitPadding,
     strides: (js.Tuple2[Double, Double]) | Double
   ): Conv2DBackpropInputAttrs = {
-    val __obj = js.Dynamic.literal(dataFormat = dataFormat.asInstanceOf[js.Any], pad = pad.asInstanceOf[js.Any], strides = strides.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(dataFormat = dataFormat.asInstanceOf[js.Any], inputShape = inputShape.asInstanceOf[js.Any], pad = pad.asInstanceOf[js.Any], strides = strides.asInstanceOf[js.Any])
     __obj.asInstanceOf[Conv2DBackpropInputAttrs]
   }
   
@@ -52,6 +55,9 @@ object Conv2DBackpropInputAttrs {
     
     @scala.inline
     def setDataFormat(value: NHWC | NCHW): Self = this.set("dataFormat", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInputShape(value: js.Tuple4[Double, Double, Double, Double]): Self = this.set("inputShape", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPad(value: valid_ | same_ | Double | ExplicitPadding): Self = this.set("pad", value.asInstanceOf[js.Any])

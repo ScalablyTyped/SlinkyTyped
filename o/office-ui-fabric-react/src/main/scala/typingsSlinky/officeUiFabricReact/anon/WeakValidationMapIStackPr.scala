@@ -3,8 +3,14 @@ package typingsSlinky.officeUiFabricReact.anon
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions text`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`inline`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals text`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.additions
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.all
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.ascending
@@ -76,7 +82,6 @@ import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.uifabricFoundation.ihtmlslotsMod.IHTMLSlot
 import typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunctionOrObject
 import typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -160,7 +165,11 @@ trait WeakValidationMapIStackPr extends js.Object {
   var `aria-readonly`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
   var `aria-relevant`: js.UndefOr[
-    Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]
+    Validator[
+      js.UndefOr[
+        additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`) | Null
+      ]
+    ]
   ] = js.native
   
   var `aria-required`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
@@ -733,7 +742,13 @@ object WeakValidationMapIStackPr {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: Validator[
+          js.UndefOr[
+            additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`) | Null
+          ]
+        ]
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

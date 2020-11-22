@@ -12,9 +12,6 @@ class GroupHeaderBase protected ()
   extends Component[IGroupHeaderProps, IGroupHeaderState, js.Any] {
   def this(props: IGroupHeaderProps) = this()
   
-  @JSName("UNSAFE_componentWillReceiveProps")
-  def UNSAFE_componentWillReceiveProps_MGroupHeaderBase(newProps: IGroupHeaderProps): Unit = js.native
-  
   var _classNames: js.Any = js.native
   
   var _defaultCheckboxRender: js.Any = js.native
@@ -39,4 +36,6 @@ class GroupHeaderBase protected ()
 object GroupHeaderBase extends js.Object {
   
   var defaultProps: IGroupHeaderProps = js.native
+  
+  def getDerivedStateFromProps(nextProps: IGroupHeaderProps, previousState: IGroupHeaderState): IGroupHeaderState = js.native
 }

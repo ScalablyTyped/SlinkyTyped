@@ -1,6 +1,7 @@
 package typingsSlinky.typescript.anon
 
 import typingsSlinky.typescript.mod.CompletionEntry
+import typingsSlinky.typescript.mod.TextSpan
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,6 +23,13 @@ trait WithMetadataCompletionInf extends js.Object {
   var isNewIdentifierLocation: Boolean = js.native
   
   var metadata: js.UndefOr[js.Any] = js.native
+  
+  /**
+    * In the absence of `CompletionEntry["replacementSpan"], the editor may choose whether to use
+    * this span or its default one. If `CompletionEntry["replacementSpan"]` is defined, that span
+    * must be used to commit that completion entry.
+    */
+  var optionalReplacementSpan: js.UndefOr[TextSpan] = js.native
 }
 object WithMetadataCompletionInf {
   
@@ -71,5 +79,11 @@ object WithMetadataCompletionInf {
     
     @scala.inline
     def deleteMetadata: Self = this.set("metadata", js.undefined)
+    
+    @scala.inline
+    def setOptionalReplacementSpan(value: TextSpan): Self = this.set("optionalReplacementSpan", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOptionalReplacementSpan: Self = this.set("optionalReplacementSpan", js.undefined)
   }
 }

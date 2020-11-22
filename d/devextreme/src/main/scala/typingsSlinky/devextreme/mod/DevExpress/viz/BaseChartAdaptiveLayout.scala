@@ -4,17 +4,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseChart.Options.adaptiveLayout */
+/**
+  * [descr:BaseChart.Options.adaptiveLayout]
+  */
 @js.native
 trait BaseChartAdaptiveLayout extends js.Object {
   
-  /** @name BaseChart.Options.adaptiveLayout.height */
+  /**
+    * [descr:BaseChart.Options.adaptiveLayout.height]
+    */
   var height: js.UndefOr[Double] = js.native
   
-  /** @name BaseChart.Options.adaptiveLayout.keepLabels */
+  /**
+    * [descr:BaseChart.Options.adaptiveLayout.keepLabels]
+    */
   var keepLabels: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseChart.Options.adaptiveLayout.width */
+  /**
+    * [descr:BaseChart.Options.adaptiveLayout.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object BaseChartAdaptiveLayout {

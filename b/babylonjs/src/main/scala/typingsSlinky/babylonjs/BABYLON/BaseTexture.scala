@@ -5,11 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BaseTexture extends IAnimatable {
+trait BaseTexture
+  extends ThinTexture
+     with IAnimatable {
   
-  var _cachedSize: js.Any = js.native
+  var _coordinatesMode: Double = js.native
   
-  var _coordinatesMode: js.Any = js.native
+  var _gammaSpace: js.Any = js.native
+  
+  /** @hidden */
+  /* protected */ def _getEngine(): Nullable[ThinEngine] = js.native
   
   /** @hidden */
   def _getFromCache(url: Nullable[String], noMipmap: Boolean): Nullable[InternalTexture] = js.native
@@ -18,6 +23,8 @@ trait BaseTexture extends IAnimatable {
   def _getFromCache(url: Nullable[String], noMipmap: Boolean, sampling: Double, invertY: Boolean): Nullable[InternalTexture] = js.native
   
   var _hasAlpha: js.Any = js.native
+  
+  var _isCube: js.Any = js.native
   
   /** @hidden */
   def _lodTextureHigh: Nullable[BaseTexture] = js.native
@@ -36,12 +43,12 @@ trait BaseTexture extends IAnimatable {
   var _onDisposeObserver: js.Any = js.native
   
   /** @hidden */
-  def _rebuild(): Unit = js.native
-  
-  var _scene: js.Any = js.native
+  var _prefiltered: Boolean = js.native
   
   /** @hidden */
-  var _texture: Nullable[InternalTexture] = js.native
+  def _rebuild(): Unit = js.native
+  
+  var _scene: Nullable[Scene] = js.native
   
   var _uid: js.Any = js.native
   
@@ -52,16 +59,16 @@ trait BaseTexture extends IAnimatable {
   var animations_BaseTexture: js.Array[Animation] = js.native
   
   /**
-    * With compliant hardware and browser (supporting anisotropic filtering)
-    * this defines the level of anisotropic filtering in the texture.
-    * The higher the better but the slower. This defaults to 4 as it seems to be the best tradeoff.
-    */
-  var anisotropicFilteringLevel: Double = js.native
-  
-  /**
     * Get if the texture can rescale.
     */
   def canRescale: Boolean = js.native
+  
+  /**
+    * Checks if the texture has the same transform matrix than another texture
+    * @param texture texture to check against
+    * @returns true if the transforms are the same, else false
+    */
+  def checkTransformsAreIdentical(texture: Nullable[BaseTexture]): Boolean = js.native
   
   /**
     * Define the UV chanel to use starting from 0 and defaulting to 0.
@@ -69,7 +76,6 @@ trait BaseTexture extends IAnimatable {
     */
   var coordinatesIndex: Double = js.native
   
-  def coordinatesMode: Double = js.native
   /**
     * How a texture is mapped.
     *
@@ -89,51 +95,18 @@ trait BaseTexture extends IAnimatable {
   def coordinatesMode_=(value: Double): Unit = js.native
   
   /**
-    * Triggers the load sequence in delayed load mode.
-    */
-  def delayLoad(): Unit = js.native
-  
-  /**
-    * Define the current state of the loading sequence when in delayed load mode.
-    */
-  var delayLoadState: Double = js.native
-  
-  /**
-    * Dispose the texture and release its associated resources.
-    */
-  def dispose(): Unit = js.native
-  
-  /**
     * Define if the texture contains data in gamma space (most of the png/jpg aside bump).
     * HDR texture are usually stored in linear space.
     * This only impacts the PBR and Background materials
     */
-  var gammaSpace: Boolean = js.native
+  def gammaSpace: Boolean = js.native
+  def gammaSpace_=(gamma: Boolean): Unit = js.native
   
   /**
     * Defines if the alpha value should be determined via the rgb values.
     * If true the luminance of the pixel might be used to find the corresponding alpha value.
     */
   var getAlphaFromRGB: Boolean = js.native
-  
-  /**
-    * Get the base size of the texture.
-    * It can be different from the size if the texture has been resized for POT for instance
-    * @returns the base size
-    */
-  def getBaseSize(): ISize = js.native
-  
-  /**
-    * Get the class name of the texture.
-    * @returns "BaseTexture"
-    */
-  def getClassName(): String = js.native
-  
-  /**
-    * Get the underlying lower level texture from Babylon.
-    * @returns the insternal texture
-    */
-  def getInternalTexture(): Nullable[InternalTexture] = js.native
   
   /**
     * Get the texture reflection matrix used to rotate/transform the reflection.
@@ -146,12 +119,6 @@ trait BaseTexture extends IAnimatable {
     * @returns the scene or null if undefined
     */
   def getScene(): Nullable[Scene] = js.native
-  
-  /**
-    * Get the size of the texture.
-    * @returns the texture size.
-    */
-  def getSize(): ISize = js.native
   
   /**
     * Get the texture transform matrix used to offset tile the texture for istance.
@@ -179,40 +146,16 @@ trait BaseTexture extends IAnimatable {
   def irradianceTexture_=(value: Nullable[BaseTexture]): Unit = js.native
   
   /**
-    * Define if the texture is a 2d array texture (webgl 2) or if false a 2d texture.
-    */
-  def is2DArray: Boolean = js.native
-  def is2DArray_=(value: Boolean): Unit = js.native
-  
-  /**
-    * Define if the texture is a 3d texture (webgl 2) or if false a 2d texture.
-    */
-  def is3D: Boolean = js.native
-  def is3D_=(value: Boolean): Unit = js.native
-  
-  /**
     * Define if the texture is preventinga material to render or not.
     * If not and the texture is not ready, the engine will use a default black texture instead.
     */
   def isBlocking: Boolean = js.native
   
   /**
-    * Define if the texture is a cube texture or if false a 2d texture.
-    */
-  def isCube: Boolean = js.native
-  def isCube_=(value: Boolean): Unit = js.native
-  
-  /**
     * Gets or sets whether or not the texture contains RGBD data.
     */
   def isRGBD: Boolean = js.native
   def isRGBD_=(value: Boolean): Unit = js.native
-  
-  /**
-    * Get if the texture is ready to be used (downloaded, converted, mip mapped...).
-    * @returns true if fully ready
-    */
-  def isReady(): Boolean = js.native
   
   /**
     * Get if the texture is ready to be consumed (either it is ready or it is not blocking)
@@ -313,11 +256,6 @@ trait BaseTexture extends IAnimatable {
   def readPixels(faceIndex: Double, level: Double, buffer: Nullable[js.typedarray.ArrayBufferView]): Nullable[js.typedarray.ArrayBufferView] = js.native
   
   /**
-    * Release and destroy the underlying lower level texture aka internalTexture.
-    */
-  def releaseInternalTexture(): Unit = js.native
-  
-  /**
     * For internal use only. Please do not use.
     */
   var reservedDataStore: js.Any = js.native
@@ -360,57 +298,4 @@ trait BaseTexture extends IAnimatable {
     * Gets or sets the unique id of the texture
     */
   var uniqueId: Double = js.native
-  
-  /**
-    * Update the sampling mode of the texture.
-    * Default is Trilinear mode.
-    *
-    * | Value | Type               | Description |
-    * | ----- | ------------------ | ----------- |
-    * | 1     | NEAREST_SAMPLINGMODE or NEAREST_NEAREST_MIPLINEAR  | Nearest is: mag = nearest, min = nearest, mip = linear |
-    * | 2     | BILINEAR_SAMPLINGMODE or LINEAR_LINEAR_MIPNEAREST | Bilinear is: mag = linear, min = linear, mip = nearest |
-    * | 3     | TRILINEAR_SAMPLINGMODE or LINEAR_LINEAR_MIPLINEAR | Trilinear is: mag = linear, min = linear, mip = linear |
-    * | 4     | NEAREST_NEAREST_MIPNEAREST |             |
-    * | 5    | NEAREST_LINEAR_MIPNEAREST |             |
-    * | 6    | NEAREST_LINEAR_MIPLINEAR |             |
-    * | 7    | NEAREST_LINEAR |             |
-    * | 8    | NEAREST_NEAREST |             |
-    * | 9   | LINEAR_NEAREST_MIPNEAREST |             |
-    * | 10   | LINEAR_NEAREST_MIPLINEAR |             |
-    * | 11   | LINEAR_LINEAR |             |
-    * | 12   | LINEAR_NEAREST |             |
-    *
-    *    > _mag_: magnification filter (close to the viewer)
-    *    > _min_: minification filter (far from the viewer)
-    *    > _mip_: filter used between mip map levels
-    *@param samplingMode Define the new sampling mode of the texture
-    */
-  def updateSamplingMode(samplingMode: Double): Unit = js.native
-  
-  /**
-    * | Value | Type               | Description |
-    * | ----- | ------------------ | ----------- |
-    * | 0     | CLAMP_ADDRESSMODE  |             |
-    * | 1     | WRAP_ADDRESSMODE   |             |
-    * | 2     | MIRROR_ADDRESSMODE |             |
-    */
-  var wrapR: Double = js.native
-  
-  /**
-    * | Value | Type               | Description |
-    * | ----- | ------------------ | ----------- |
-    * | 0     | CLAMP_ADDRESSMODE  |             |
-    * | 1     | WRAP_ADDRESSMODE   |             |
-    * | 2     | MIRROR_ADDRESSMODE |             |
-    */
-  var wrapU: Double = js.native
-  
-  /**
-    * | Value | Type               | Description |
-    * | ----- | ------------------ | ----------- |
-    * | 0     | CLAMP_ADDRESSMODE  |             |
-    * | 1     | WRAP_ADDRESSMODE   |             |
-    * | 2     | MIRROR_ADDRESSMODE |             |
-    */
-  var wrapV: Double = js.native
 }

@@ -14,7 +14,7 @@ trait BackgroundImageProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extend
     */
   var backgroundImage: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundImageProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundImage */ _, 
       ThemeType
     ]
   ] = js.native
@@ -48,7 +48,7 @@ object BackgroundImageProps {
     @scala.inline
     def setBackgroundImage(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundImageProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundImage */ _, 
           ThemeType
         ]
     ): Self = this.set("backgroundImage", value.asInstanceOf[js.Any])

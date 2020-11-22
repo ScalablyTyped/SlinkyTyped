@@ -52,14 +52,7 @@ class InstanceProfile protected () extends CustomResource {
   /**
     * The role name to include in the profile.
     */
-  val role: Output_[String] = js.native
-  
-  /**
-    * A list of role names to include in the profile.  The current default is 1.  If you see an error message similar to `Cannot exceed quota for InstanceSessionsPerInstanceProfile: 1`, then you must contact AWS support and ask for a limit increase.
-    *
-    * @deprecated Use `role` instead. Only a single role can be passed to an IAM Instance Profile
-    */
-  val roles: Output_[js.Array[String]] = js.native
+  val role: Output_[js.UndefOr[String]] = js.native
   
   /**
     * The [unique ID][1] assigned by AWS.

@@ -1,8 +1,8 @@
 package typingsSlinky.firebase.anon
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firebase.mod.analytics.Item
-import typingsSlinky.firebase.mod.analytics.Promotion
+import typingsSlinky.firebase.mod.firebase.analytics.Item
+import typingsSlinky.firebase.mod.firebase.analytics.Promotion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

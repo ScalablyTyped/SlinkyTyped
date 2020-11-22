@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration {
   
   // mdm app configuration Base64 binary.
-  var encodedSettingXml: js.UndefOr[Double] = js.native
+  var encodedSettingXml: js.UndefOr[NullableOption[Double]] = js.native
   
   // app configuration setting items.
-  var settings: js.UndefOr[js.Array[AppConfigurationSettingItem]] = js.native
+  var settings: js.UndefOr[NullableOption[js.Array[AppConfigurationSettingItem]]] = js.native
 }
 object IosMobileAppConfiguration {
   
@@ -37,18 +37,24 @@ object IosMobileAppConfiguration {
     }
     
     @scala.inline
-    def setEncodedSettingXml(value: Double): Self = this.set("encodedSettingXml", value.asInstanceOf[js.Any])
+    def setEncodedSettingXml(value: NullableOption[Double]): Self = this.set("encodedSettingXml", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEncodedSettingXml: Self = this.set("encodedSettingXml", js.undefined)
     
     @scala.inline
+    def setEncodedSettingXmlNull: Self = this.set("encodedSettingXml", null)
+    
+    @scala.inline
     def setSettingsVarargs(value: AppConfigurationSettingItem*): Self = this.set("settings", js.Array(value :_*))
     
     @scala.inline
-    def setSettings(value: js.Array[AppConfigurationSettingItem]): Self = this.set("settings", value.asInstanceOf[js.Any])
+    def setSettings(value: NullableOption[js.Array[AppConfigurationSettingItem]]): Self = this.set("settings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSettings: Self = this.set("settings", js.undefined)
+    
+    @scala.inline
+    def setSettingsNull: Self = this.set("settings", null)
   }
 }

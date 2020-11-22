@@ -1,8 +1,5 @@
 package typingsSlinky.baseui.anon
 
-import org.scalajs.dom.raw.EventTarget
-import org.scalajs.dom.raw.HTMLElement
-import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.SyntheticEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,15 +8,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EventItem extends js.Object {
   
-  var event: js.UndefOr[(SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) | KeyboardEvent] = js.native
+  var event: SyntheticEvent[org.scalajs.dom.raw.Event, _] = js.native
   
   var item: js.Any = js.native
 }
 object EventItem {
   
   @scala.inline
-  def apply(item: js.Any): EventItem = {
-    val __obj = js.Dynamic.literal(item = item.asInstanceOf[js.Any])
+  def apply(event: SyntheticEvent[org.scalajs.dom.raw.Event, _], item: js.Any): EventItem = {
+    val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], item = item.asInstanceOf[js.Any])
     __obj.asInstanceOf[EventItem]
   }
   
@@ -39,18 +36,9 @@ object EventItem {
     }
     
     @scala.inline
+    def setEvent(value: SyntheticEvent[org.scalajs.dom.raw.Event, _]): Self = this.set("event", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setItem(value: js.Any): Self = this.set("item", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setEventKeyboardEvent(value: KeyboardEvent): Self = this.set("event", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setEventBaseSyntheticEvent(value: SyntheticEvent[EventTarget with HTMLElement, org.scalajs.dom.raw.Event]): Self = this.set("event", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setEvent(value: (SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) | KeyboardEvent): Self = this.set("event", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteEvent: Self = this.set("event", js.undefined)
   }
 }

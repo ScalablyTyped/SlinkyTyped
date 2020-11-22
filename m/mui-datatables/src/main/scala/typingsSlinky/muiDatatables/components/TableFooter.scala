@@ -3,6 +3,7 @@ package typingsSlinky.muiDatatables.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.muiDatatables.mod.MUIDataTableFooter
+import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,13 +20,13 @@ object TableFooter {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def changePage(value: js.Any): this.type = set("changePage", value.asInstanceOf[js.Any])
+    def changePage(value: /* e */ js.Any => _): this.type = set("changePage", js.Any.fromFunction1(value))
     
     @scala.inline
-    def changeRowsPerPage(value: /* args */ js.Any => _): this.type = set("changeRowsPerPage", js.Any.fromFunction1(value))
+    def changeRowsPerPage(value: /* e */ js.Any => _): this.type = set("changeRowsPerPage", js.Any.fromFunction1(value))
     
     @scala.inline
-    def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
+    def options(value: MUIDataTableOptions): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def page(value: Double): this.type = set("page", value.asInstanceOf[js.Any])

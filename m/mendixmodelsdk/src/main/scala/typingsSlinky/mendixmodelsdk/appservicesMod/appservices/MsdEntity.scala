@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.appservicesMod.appservices
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -7,20 +8,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/appservices", "appservices.MsdEntity")
 @js.native
-class MsdEntity protected () extends Element {
+class MsdEntity protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def attributes: IList[MsdAttribute] = js.native
@@ -38,9 +40,6 @@ class MsdEntity protected () extends Element {
   
   def locationY: Double = js.native
   def locationY_=(newValue: Double): Unit = js.native
-  
-  @JSName("model")
-  var model_FMsdEntity: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
-import typingsSlinky.reactNative.mod.ImageRequireSource
 import typingsSlinky.reactNative.mod.Insets
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -40,7 +39,7 @@ trait OptionsBottomTab extends js.Object {
   var dotIndicator: js.UndefOr[DotIndicatorOptions] = js.native
   
   /**
-    * Set the text font family
+    * Set the font family for the tab's text
     */
   var fontFamily: js.UndefOr[FontFamily] = js.native
   
@@ -50,15 +49,21 @@ trait OptionsBottomTab extends js.Object {
   var fontSize: js.UndefOr[Double] = js.native
   
   /**
-    * Set the font weight, ignore fontFamily and use the iOS system fonts instead
-    * #### (iOS specific)
+    * Set the font style for the tab's text
+    */
+  var fontStyle: js.UndefOr[FontStyle] = js.native
+  
+  /**
+    * Specifies font weight. The values 'normal' and 'bold' are supported
+    * for most fonts. Not all fonts have a variant for each of the numeric
+    * values, in that case the closest one is chosen.
     */
   var fontWeight: js.UndefOr[FontWeight] = js.native
   
   /**
     * Set the tab icon
     */
-  var icon: js.UndefOr[ImageRequireSource | ImageResource] = js.native
+  var icon: js.UndefOr[ImageResource] = js.native
   
   /**
     * Set the icon tint
@@ -87,7 +92,7 @@ trait OptionsBottomTab extends js.Object {
     * Set selected icon image
     * #### (iOS specific)
     */
-  var selectedIcon: js.UndefOr[ImageRequireSource] = js.native
+  var selectedIcon: js.UndefOr[ImageResource] = js.native
   
   /**
     * Set the selected icon tint
@@ -186,13 +191,19 @@ object OptionsBottomTab {
     def deleteFontSize: Self = this.set("fontSize", js.undefined)
     
     @scala.inline
+    def setFontStyle(value: FontStyle): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
+    
+    @scala.inline
     def setFontWeight(value: FontWeight): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontWeight: Self = this.set("fontWeight", js.undefined)
     
     @scala.inline
-    def setIcon(value: ImageRequireSource | ImageResource): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ImageResource): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
@@ -222,7 +233,7 @@ object OptionsBottomTab {
     def deleteSelectedFontSize: Self = this.set("selectedFontSize", js.undefined)
     
     @scala.inline
-    def setSelectedIcon(value: ImageRequireSource): Self = this.set("selectedIcon", value.asInstanceOf[js.Any])
+    def setSelectedIcon(value: ImageResource): Self = this.set("selectedIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSelectedIcon: Self = this.set("selectedIcon", js.undefined)

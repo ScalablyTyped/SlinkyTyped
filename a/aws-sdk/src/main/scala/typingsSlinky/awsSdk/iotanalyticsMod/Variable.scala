@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Variable extends js.Object {
   
   /**
-    * The value of the variable as a structure that specifies a data set content version.
+    * The value of the variable as a structure that specifies a dataset content version.
     */
   var datasetContentVersionValue: js.UndefOr[DatasetContentVersionValue] = js.native
   

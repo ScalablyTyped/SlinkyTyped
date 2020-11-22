@@ -1,11 +1,12 @@
 package typingsSlinky.webidl2.mod
 
+import typingsSlinky.webidl2.webidl2Strings.`extended-attribute`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ExtendedAttribute extends js.Object {
+trait ExtendedAttribute extends AbstractBase {
   
   /** If the extended attribute takes arguments or if its right-hand side does they are listed here. */
   var arguments: js.Array[Argument] = js.native
@@ -13,21 +14,27 @@ trait ExtendedAttribute extends js.Object {
   /** The extended attribute's name. */
   var name: String = js.native
   
-  /** The container of this extended attribute. */
-  var parent: IDLRootType | FieldType | IDLInterfaceMemberType = js.native
+  @JSName("parent")
+  var parent_ExtendedAttribute: IDLRootType | FieldType | IDLInterfaceMemberType = js.native
   
   /** If there is a right-hand side, this will capture its type and value. */
   var rhs: ExtendedAttributeRightHandSide | Null = js.native
+  
+  @JSName("type")
+  var type_ExtendedAttribute: `extended-attribute` = js.native
 }
 object ExtendedAttribute {
   
   @scala.inline
   def apply(
     arguments: js.Array[Argument],
+    extAttrs: js.Array[ExtendedAttribute],
     name: String,
-    parent: IDLRootType | FieldType | IDLInterfaceMemberType
+    parent: IDLRootType | FieldType | IDLInterfaceMemberType,
+    `type`: `extended-attribute`
   ): ExtendedAttribute = {
-    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(arguments = arguments.asInstanceOf[js.Any], extAttrs = extAttrs.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtendedAttribute]
   }
   
@@ -57,6 +64,9 @@ object ExtendedAttribute {
     
     @scala.inline
     def setParent(value: IDLRootType | FieldType | IDLInterfaceMemberType): Self = this.set("parent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setType(value: `extended-attribute`): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRhs(value: ExtendedAttributeRightHandSide): Self = this.set("rhs", value.asInstanceOf[js.Any])

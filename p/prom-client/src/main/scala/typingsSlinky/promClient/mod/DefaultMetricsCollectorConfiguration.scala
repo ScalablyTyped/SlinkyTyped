@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DefaultMetricsCollectorConfiguration extends js.Object {
   
+  var eventLoopMonitoringPrecision: js.UndefOr[Double] = js.native
+  
+  var gcDurationBuckets: js.UndefOr[js.Array[Double]] = js.native
+  
   var prefix: js.UndefOr[String] = js.native
   
   var register: js.UndefOr[Registry] = js.native
-  
-  var timeout: js.UndefOr[Double] = js.native
-  
-  var timestamps: js.UndefOr[Boolean] = js.native
 }
 object DefaultMetricsCollectorConfiguration {
   
@@ -39,6 +39,21 @@ object DefaultMetricsCollectorConfiguration {
     }
     
     @scala.inline
+    def setEventLoopMonitoringPrecision(value: Double): Self = this.set("eventLoopMonitoringPrecision", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEventLoopMonitoringPrecision: Self = this.set("eventLoopMonitoringPrecision", js.undefined)
+    
+    @scala.inline
+    def setGcDurationBucketsVarargs(value: Double*): Self = this.set("gcDurationBuckets", js.Array(value :_*))
+    
+    @scala.inline
+    def setGcDurationBuckets(value: js.Array[Double]): Self = this.set("gcDurationBuckets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGcDurationBuckets: Self = this.set("gcDurationBuckets", js.undefined)
+    
+    @scala.inline
     def setPrefix(value: String): Self = this.set("prefix", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -49,17 +64,5 @@ object DefaultMetricsCollectorConfiguration {
     
     @scala.inline
     def deleteRegister: Self = this.set("register", js.undefined)
-    
-    @scala.inline
-    def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTimeout: Self = this.set("timeout", js.undefined)
-    
-    @scala.inline
-    def setTimestamps(value: Boolean): Self = this.set("timestamps", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTimestamps: Self = this.set("timestamps", js.undefined)
   }
 }

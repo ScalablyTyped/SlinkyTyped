@@ -3,9 +3,8 @@ package typingsSlinky.antd.configProviderContextMod
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.antd.anon.AutoComplete
 import typingsSlinky.antd.anon.Ghost
+import typingsSlinky.antd.anon.RequiredMark
 import typingsSlinky.antd.anon.Size
-import typingsSlinky.antd.antdStrings.ltr
-import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.localeProviderMod.Locale
 import typingsSlinky.antd.renderEmptyMod.RenderEmptyHandler
 import scala.scalajs.js
@@ -19,12 +18,16 @@ trait ConfigConsumerProps extends js.Object {
   
   var csp: js.UndefOr[CSPConfig] = js.native
   
-  var direction: js.UndefOr[ltr | rtl] = js.native
+  var direction: js.UndefOr[DirectionType] = js.native
   
   var dropdownMatchSelectWidth: js.UndefOr[Boolean] = js.native
   
+  var form: js.UndefOr[RequiredMark] = js.native
+  
   var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.native
   
+  def getPrefixCls(): String = js.native
+  def getPrefixCls(suffixCls: js.UndefOr[scala.Nothing], customizePrefixCls: String): String = js.native
   def getPrefixCls(suffixCls: String): String = js.native
   def getPrefixCls(suffixCls: String, customizePrefixCls: String): String = js.native
   

@@ -17,35 +17,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFormButtonItem extends js.Object {
   
-  /** @deprecated */
-  /** @name dxFormButtonItem.alignment */
-  var alignment: js.UndefOr[center | left | right] = js.native
-  
-  /** @name dxFormButtonItem.buttonOptions */
+  /**
+    * [descr:dxFormButtonItem.buttonOptions]
+    */
   var buttonOptions: js.UndefOr[dxButtonOptions] = js.native
   
-  /** @name dxFormButtonItem.colSpan */
+  /**
+    * [descr:dxFormButtonItem.colSpan]
+    */
   var colSpan: js.UndefOr[Double] = js.native
   
-  /** @name dxFormButtonItem.cssClass */
+  /**
+    * [descr:dxFormButtonItem.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name dxFormButtonItem.horizontalAlignment */
+  /**
+    * [descr:dxFormButtonItem.horizontalAlignment]
+    */
   var horizontalAlignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name dxFormButtonItem.itemType */
+  /**
+    * [descr:dxFormButtonItem.itemType]
+    */
   var itemType: js.UndefOr[empty | group | simple | tabbed | button] = js.native
   
-  /** @name dxFormButtonItem.name */
+  /**
+    * [descr:dxFormButtonItem.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxFormButtonItem.verticalAlignment */
+  /**
+    * [descr:dxFormButtonItem.verticalAlignment]
+    */
   var verticalAlignment: js.UndefOr[bottom | center | top] = js.native
   
-  /** @name dxFormButtonItem.visible */
+  /**
+    * [descr:dxFormButtonItem.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFormButtonItem.visibleIndex */
+  /**
+    * [descr:dxFormButtonItem.visibleIndex]
+    */
   var visibleIndex: js.UndefOr[Double] = js.native
 }
 object dxFormButtonItem {
@@ -70,12 +84,6 @@ object dxFormButtonItem {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setAlignment(value: center | left | right): Self = this.set("alignment", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAlignment: Self = this.set("alignment", js.undefined)
     
     @scala.inline
     def setButtonOptions(value: dxButtonOptions): Self = this.set("buttonOptions", value.asInstanceOf[js.Any])

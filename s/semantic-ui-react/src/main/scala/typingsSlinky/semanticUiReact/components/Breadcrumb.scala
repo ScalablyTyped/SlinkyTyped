@@ -6,7 +6,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.breadcrumbBreadcrumbMod.BreadcrumbProps
 import typingsSlinky.semanticUiReact.breadcrumbDividerMod.BreadcrumbDividerProps
 import typingsSlinky.semanticUiReact.breadcrumbSectionMod.BreadcrumbSectionProps
@@ -53,7 +52,7 @@ object Breadcrumb {
     
     @scala.inline
     def iconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("icon", js.Any.fromFunction3(value))
     
     @scala.inline

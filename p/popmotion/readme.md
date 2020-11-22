@@ -1,7 +1,7 @@
 
 # Scala.js typings for popmotion
 
-Typings are for version 8.7.3
+Typings are for version 9.0.0
 
 ## Library description:
 A functional, reactive motion library.

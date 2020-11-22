@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BackupPlan extends js.Object {
   
   /**
+    * Contains a list of BackupOptions for each resource type.
+    */
+  var AdvancedBackupSettings: js.UndefOr[typingsSlinky.awsSdk.backupMod.AdvancedBackupSettings] = js.native
+  
+  /**
     * The display name of a backup plan.
     */
   var BackupPlanName: typingsSlinky.awsSdk.backupMod.BackupPlanName = js.native
@@ -48,5 +53,14 @@ object BackupPlan {
     
     @scala.inline
     def setRules(value: BackupRules): Self = this.set("Rules", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAdvancedBackupSettingsVarargs(value: AdvancedBackupSetting*): Self = this.set("AdvancedBackupSettings", js.Array(value :_*))
+    
+    @scala.inline
+    def setAdvancedBackupSettings(value: AdvancedBackupSettings): Self = this.set("AdvancedBackupSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdvancedBackupSettings: Self = this.set("AdvancedBackupSettings", js.undefined)
   }
 }

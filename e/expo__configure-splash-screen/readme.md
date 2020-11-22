@@ -1,7 +1,7 @@
 
 # Scala.js typings for expo__configure-splash-screen
 
-Typings are for version 0.1.13
+Typings are for version 0.2.0
 
 ## Library description:
 Supplementary module for 'expo-splash-screen' providing cli configuration command

@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MixedInstancesPolicy extends js.Object {
   
   /**
-    * The instances distribution to use. If you leave this parameter unspecified, the value for each parameter in InstancesDistribution uses a default value.
+    * Specifies the instances distribution. If not provided, the value for each parameter in InstancesDistribution uses a default value.
     */
   var InstancesDistribution: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.InstancesDistribution] = js.native
   
   /**
-    * The launch template and instance types (overrides). Required when creating a mixed instances policy.
+    * Specifies the launch template to use and optionally the instance types (overrides) that are used to provision EC2 instances to fulfill On-Demand and Spot capacities. Required when creating a mixed instances policy.
     */
   var LaunchTemplate: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.LaunchTemplate] = js.native
 }

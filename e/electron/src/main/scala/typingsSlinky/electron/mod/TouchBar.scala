@@ -1,5 +1,6 @@
 package typingsSlinky.electron.mod
 
+import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.electron.Electron.TouchBarButtonConstructorOptions
 import typingsSlinky.electron.Electron.TouchBarColorPickerConstructorOptions
@@ -19,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class TouchBar protected ()
   extends typingsSlinky.electron.Electron.TouchBar {
-  // Docs: http://electronjs.org/docs/api/touch-bar
+  // Docs: https://electronjs.org/docs/api/touch-bar
   /**
     * TouchBar
     */
@@ -49,6 +50,8 @@ object TouchBar extends js.Object {
     /* options */ TouchBarLabelConstructorOptions, 
     typingsSlinky.electron.Electron.TouchBarLabel
   ] = js.native
+  
+  var TouchBarOtherItemsProxy: Instantiable0[typingsSlinky.electron.Electron.TouchBarOtherItemsProxy] = js.native
   
   var TouchBarPopover: Instantiable1[
     /* options */ TouchBarPopoverConstructorOptions, 

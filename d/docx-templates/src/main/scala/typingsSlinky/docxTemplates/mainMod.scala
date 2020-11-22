@@ -1,5 +1,6 @@
 package typingsSlinky.docxTemplates
 
+import typingsSlinky.docxTemplates.anon.Category
 import typingsSlinky.docxTemplates.docxTemplatesStrings.JS
 import typingsSlinky.docxTemplates.docxTemplatesStrings.XML
 import typingsSlinky.docxTemplates.typesMod.CommandSummary
@@ -53,6 +54,8 @@ object mainMod extends js.Object {
   def default_XML(options: UserOptions, _probe: XML): js.Promise[String] = js.native
   
   def getMainDoc(contentTypes: NonTextNode): String = js.native
+  
+  def getMetadata(template: Buffer): js.Promise[Category] = js.native
   
   def listCommands(template: Buffer): js.Promise[js.Array[CommandSummary]] = js.native
   def listCommands(template: Buffer, delimiter: String): js.Promise[js.Array[CommandSummary]] = js.native

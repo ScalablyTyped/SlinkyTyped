@@ -8,26 +8,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ApplicationConfigurationDescription extends js.Object {
   
   /**
-    * The details about the application code for a Java-based Kinesis Data Analytics application.
+    * The details about the application code for a Flink-based Kinesis Data Analytics application.
     */
   var ApplicationCodeConfigurationDescription: js.UndefOr[
     typingsSlinky.awsSdk.kinesisanalyticsv2Mod.ApplicationCodeConfigurationDescription
   ] = js.native
   
   /**
-    * Describes whether snapshots are enabled for a Java-based Kinesis Data Analytics application.
+    * Describes whether snapshots are enabled for a Flink-based Kinesis Data Analytics application.
     */
   var ApplicationSnapshotConfigurationDescription: js.UndefOr[
     typingsSlinky.awsSdk.kinesisanalyticsv2Mod.ApplicationSnapshotConfigurationDescription
   ] = js.native
   
   /**
-    * Describes execution properties for a Java-based Kinesis Data Analytics application.
+    * Describes execution properties for a Flink-based Kinesis Data Analytics application.
     */
   var EnvironmentPropertyDescriptions: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.EnvironmentPropertyDescriptions] = js.native
   
   /**
-    * The details about a Java-based Kinesis Data Analytics application.
+    * The details about a Flink-based Kinesis Data Analytics application.
     */
   var FlinkApplicationConfigurationDescription: js.UndefOr[
     typingsSlinky.awsSdk.kinesisanalyticsv2Mod.FlinkApplicationConfigurationDescription
@@ -39,7 +39,7 @@ trait ApplicationConfigurationDescription extends js.Object {
   var RunConfigurationDescription: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.RunConfigurationDescription] = js.native
   
   /**
-    * The details about inputs, outputs, and reference data sources for an SQL-based Kinesis Data Analytics application.
+    * The details about inputs, outputs, and reference data sources for a SQL-based Kinesis Data Analytics application.
     */
   var SqlApplicationConfigurationDescription: js.UndefOr[
     typingsSlinky.awsSdk.kinesisanalyticsv2Mod.SqlApplicationConfigurationDescription

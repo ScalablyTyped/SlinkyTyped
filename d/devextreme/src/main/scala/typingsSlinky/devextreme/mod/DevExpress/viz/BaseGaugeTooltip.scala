@@ -9,19 +9,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseGauge.Options.tooltip */
+/**
+  * [descr:BaseGauge.Options.tooltip]
+  */
 @js.native
 trait BaseGaugeTooltip extends BaseWidgetTooltip {
   
-  /** @name BaseGauge.Options.tooltip.contentTemplate */
+  /**
+    * [descr:BaseGauge.Options.tooltip.contentTemplate]
+    */
   var contentTemplate: js.UndefOr[
     template | (js.Function2[/* scaleValue */ ValueText, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name BaseGauge.Options.tooltip.customizeTooltip */
+  /**
+    * [descr:BaseGauge.Options.tooltip.customizeTooltip]
+    */
   var customizeTooltip: js.UndefOr[js.Function1[/* scaleValue */ ValueText, _]] = js.native
   
-  /** @name BaseGauge.Options.tooltip.interactive */
+  /**
+    * [descr:BaseGauge.Options.tooltip.interactive]
+    */
   var interactive: js.UndefOr[Boolean] = js.native
 }
 object BaseGaugeTooltip {

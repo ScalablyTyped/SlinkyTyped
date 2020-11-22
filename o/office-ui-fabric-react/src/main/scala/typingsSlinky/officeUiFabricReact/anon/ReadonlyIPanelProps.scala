@@ -18,10 +18,16 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.focusTrapZoneTypesMod.IFocusTrapZoneProps
 import typingsSlinky.officeUiFabricReact.layerTypesMod.ILayerProps
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`additions text`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`inline`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`removals text`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text additions`
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.`text removals`
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.additions
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.all
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.ascending
@@ -73,6 +79,7 @@ import typingsSlinky.officeUiFabricReact.panelTypesMod.IPanelProps
 import typingsSlinky.officeUiFabricReact.panelTypesMod.IPanelStyleProps
 import typingsSlinky.officeUiFabricReact.panelTypesMod.IPanelStyles
 import typingsSlinky.officeUiFabricReact.panelTypesMod.PanelType
+import typingsSlinky.officeUiFabricReact.popupTypesMod.IPopupProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
@@ -94,7 +101,6 @@ import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
@@ -181,7 +187,9 @@ trait ReadonlyIPanelProps extends js.Object {
   
   val `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  val `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  val `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   val `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -483,6 +491,8 @@ trait ReadonlyIPanelProps extends js.Object {
   
   val placeholder: js.UndefOr[String] = js.native
   
+  val popupProps: js.UndefOr[IPopupProps] = js.native
+  
   val prefix: js.UndefOr[String] = js.native
   
   val property: js.UndefOr[String] = js.native
@@ -777,7 +787,9 @@ object ReadonlyIPanelProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1697,6 +1709,12 @@ object ReadonlyIPanelProps {
     
     @scala.inline
     def deletePlaceholder: Self = this.set("placeholder", js.undefined)
+    
+    @scala.inline
+    def setPopupProps(value: IPopupProps): Self = this.set("popupProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePopupProps: Self = this.set("popupProps", js.undefined)
     
     @scala.inline
     def setPrefix(value: String): Self = this.set("prefix", value.asInstanceOf[js.Any])

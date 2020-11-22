@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ConnectionCallbacks extends ConnectionBase {
   
   def ping(): Unit = js.native
-  def ping(callback: js.Function2[/* error */ ErrorInfo, /* responseTime */ Double, Unit]): Unit = js.native
+  def ping(callback: StandardCallback[Double]): Unit = js.native
   
   def whenState(targetState: ConnectionState, callback: connectionEventCallback): Unit = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Page
 
+import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.sameOrigin_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.noReferrerWhenDowngrade
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.origin
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.originWhenCrossOrigin
-  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.sameOrigin
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.sameOrigin_
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.strictOrigin
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.strictOriginWhenCrossOrigin
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.unsafeUrl
@@ -30,7 +31,7 @@ object ReferrerPolicy {
   def originWhenCrossOrigin: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.originWhenCrossOrigin = "originWhenCrossOrigin".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.originWhenCrossOrigin]
   
   @scala.inline
-  def sameOrigin: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.sameOrigin = "sameOrigin".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.sameOrigin]
+  def sameOrigin: sameOrigin_ = "sameOrigin".asInstanceOf[sameOrigin_]
   
   @scala.inline
   def strictOrigin: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.strictOrigin = "strictOrigin".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.strictOrigin]

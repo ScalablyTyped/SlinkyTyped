@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.ecrRepositoryMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.outputMod.ecr.RepositoryEncryptionConfiguration
 import typingsSlinky.pulumiAws.outputMod.ecr.RepositoryImageScanningConfiguration
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -30,6 +31,11 @@ class Repository protected () extends CustomResource {
     * Full ARN of the repository.
     */
   val arn: Output_[String] = js.native
+  
+  /**
+    * Encryption configuration for the repository. See below for schema.
+    */
+  val encryptionConfigurations: Output_[js.UndefOr[js.Array[RepositoryEncryptionConfiguration]]] = js.native
   
   /**
     * Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.

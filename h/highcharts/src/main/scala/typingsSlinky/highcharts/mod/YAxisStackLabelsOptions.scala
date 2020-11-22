@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,6 +20,18 @@ trait YAxisStackLabelsOptions extends js.Object {
     * (Highcharts) Allow the stack labels to overlap.
     */
   var allowOverlap: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * (Highcharts) Enable or disable the initial animation when a series is
+    * displayed for the `stackLabels`. The animation can also be set as a
+    * configuration object. Please note that this option only applies to the
+    * initial animation. For other animations, see chart.animation and the
+    * animation parameter under the API methods. The following properties are
+    * supported:
+    *
+    * - `defer`: The animation delay time in milliseconds.
+    */
+  var animation: js.UndefOr[Boolean | YAxisStackLabelsAnimationOptions | PartialAnimationOptionsOb] = js.native
   
   /**
     * (Highcharts) The background color or gradient for the stack label.
@@ -158,6 +171,12 @@ object YAxisStackLabelsOptions {
     
     @scala.inline
     def deleteAllowOverlap: Self = this.set("allowOverlap", js.undefined)
+    
+    @scala.inline
+    def setAnimation(value: Boolean | YAxisStackLabelsAnimationOptions | PartialAnimationOptionsOb): Self = this.set("animation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnimation: Self = this.set("animation", js.undefined)
     
     @scala.inline
     def setBackgroundColor(value: ColorType): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])

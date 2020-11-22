@@ -5,7 +5,7 @@ import typingsSlinky.babylonjs.XRInputSourceEvent
 import typingsSlinky.babylonjs.XRRay
 import typingsSlinky.babylonjs.XRReferenceSpace
 import typingsSlinky.babylonjs.XRSession
-import typingsSlinky.babylonjs.webXRHitTestLegacyMod.IWebXRHitTestOptions
+import typingsSlinky.babylonjs.webXRHitTestLegacyMod.IWebXRLegacyHitTestOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,7 +25,7 @@ class WebXRHitTestLegacy protected ()
     /**
     * options to use when constructing this feature
     */
-  options: IWebXRHitTestOptions
+  options: IWebXRLegacyHitTestOptions
   ) = this()
 }
 /* static members */

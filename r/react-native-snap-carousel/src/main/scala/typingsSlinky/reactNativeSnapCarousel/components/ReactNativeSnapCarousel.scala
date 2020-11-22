@@ -5,10 +5,12 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.AutoscrollToTopThreshold
 import typingsSlinky.reactNative.anon.AverageItemLength
 import typingsSlinky.reactNative.anon.Changed
 import typingsSlinky.reactNative.anon.DistanceFromEnd
 import typingsSlinky.reactNative.anon.Index
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -21,7 +23,6 @@ import typingsSlinky.reactNative.mod.Animated.SpringAnimationConfig
 import typingsSlinky.reactNative.mod.Animated.TimingAnimationConfig
 import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeScrollEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
@@ -431,6 +432,12 @@ object ReactNativeSnapCarousel {
     def loopClonesPerSide(value: Double): this.type = set("loopClonesPerSide", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def maintainVisibleContentPosition(value: AutoscrollToTopThreshold): this.type = set("maintainVisibleContentPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maintainVisibleContentPositionNull: this.type = set("maintainVisibleContentPosition", null)
+    
+    @scala.inline
     def maxToRenderPerBatch(value: Double): this.type = set("maxToRenderPerBatch", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -479,7 +486,7 @@ object ReactNativeSnapCarousel {
     def onEndReachedThresholdNull: this.type = set("onEndReachedThreshold", null)
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))

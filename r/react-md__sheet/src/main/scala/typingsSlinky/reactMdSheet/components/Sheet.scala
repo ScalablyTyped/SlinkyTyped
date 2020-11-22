@@ -23,8 +23,13 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactMdPortal.getContainerMod.PortalInto
+import typingsSlinky.reactMdSheet.reactMdSheetStrings.`additions removals`
 import typingsSlinky.reactMdSheet.reactMdSheetStrings.`additions text`
 import typingsSlinky.reactMdSheet.reactMdSheetStrings.`inline`
+import typingsSlinky.reactMdSheet.reactMdSheetStrings.`removals additions`
+import typingsSlinky.reactMdSheet.reactMdSheetStrings.`removals text`
+import typingsSlinky.reactMdSheet.reactMdSheetStrings.`text additions`
+import typingsSlinky.reactMdSheet.reactMdSheetStrings.`text removals`
 import typingsSlinky.reactMdSheet.reactMdSheetStrings.additions
 import typingsSlinky.reactMdSheet.reactMdSheetStrings.all
 import typingsSlinky.reactMdSheet.reactMdSheetStrings.ascending
@@ -83,7 +88,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object Sheet {
   
-  object SheetPropsPickSheetPropsh {
+  object PickBaseSheetPropshiddenv {
     
     @JSImport("@react-md/sheet", "Sheet")
     @js.native
@@ -206,7 +211,9 @@ object Sheet {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -986,22 +993,17 @@ object Sheet {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactMdSheet.anon.SheetPropsPickSheetPropsh): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: typingsSlinky.reactMdSheet.anon.PickBaseSheetPropshiddenv): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
-    def apply(
-      `aria-label`: js.UndefOr[String] with String,
-      id: String,
-      onRequestClose: () => Unit,
-      visible: Boolean
-    ): Builder = {
+    def apply(`aria-label`: String, id: String, onRequestClose: () => Unit, visible: Boolean): Builder = {
       val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
       __props.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdSheet.anon.SheetPropsPickSheetPropsh]))
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdSheet.anon.PickBaseSheetPropshiddenv]))
     }
   }
   
-  object SheetPropsPickSheetPropshAbout {
+  object PickBaseSheetPropshiddenvAbout {
     
     @JSImport("@react-md/sheet", "Sheet")
     @js.native
@@ -1124,7 +1126,9 @@ object Sheet {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -1904,18 +1908,13 @@ object Sheet {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactMdSheet.anon.SheetPropsPickSheetPropshAbout): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: typingsSlinky.reactMdSheet.anon.PickBaseSheetPropshiddenvAbout): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
-    def apply(
-      `aria-labelledby`: js.UndefOr[String] with String,
-      id: String,
-      onRequestClose: () => Unit,
-      visible: Boolean
-    ): Builder = {
+    def apply(`aria-labelledby`: String, id: String, onRequestClose: () => Unit, visible: Boolean): Builder = {
       val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
       __props.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdSheet.anon.SheetPropsPickSheetPropshAbout]))
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdSheet.anon.PickBaseSheetPropshiddenvAbout]))
     }
   }
 }

@@ -17,7 +17,7 @@ trait StopsByCount extends Object {
   var count: Double = js.native
   
   /**
-    * The time period to divide. If unspecified, the time slider's [fullTimeExtent](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-TimeSlider.html#fullTimeExtent) will be used.
+    * The time period to divide.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-TimeSlider.html#StopsByCount)
     */

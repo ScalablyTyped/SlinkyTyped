@@ -8,8 +8,6 @@ package object mod {
   
   type ActivityBasedTimeoutPolicy = typingsSlinky.microsoftGraph.mod.StsPolicy
   
-  type AdministrativeUnit = typingsSlinky.microsoftGraph.mod.DirectoryObject
-  
   type AllDevicesAssignmentTarget = typingsSlinky.microsoftGraph.mod.DeviceAndAppManagementAssignmentTarget
   
   type AllLicensedUsersAssignmentTarget = typingsSlinky.microsoftGraph.mod.DeviceAndAppManagementAssignmentTarget
@@ -18,7 +16,13 @@ package object mod {
   
   type AppleDeviceFeaturesConfigurationBase = typingsSlinky.microsoftGraph.mod.DeviceConfiguration
   
+  type ApplicationEnforcedRestrictionsSessionControl = typingsSlinky.microsoftGraph.mod.ConditionalAccessSessionControl
+  
   type CalendarSharingActionType = typingsSlinky.microsoftGraph.microsoftGraphStrings.accept
+  
+  type CancelMediaProcessingOperation = typingsSlinky.microsoftGraph.mod.CommsOperation
+  
+  type Chat = typingsSlinky.microsoftGraph.mod.Entity
   
   type ChatMessageHostedContent = typingsSlinky.microsoftGraph.mod.Entity
   
@@ -34,8 +38,6 @@ package object mod {
   
   type HomeRealmDiscoveryPolicy = typingsSlinky.microsoftGraph.mod.StsPolicy
   
-  type IdentityContainer = typingsSlinky.microsoftGraph.mod.Entity
-  
   type IosCertificateProfile = typingsSlinky.microsoftGraph.mod.DeviceConfiguration
   
   type IosManagedAppRegistration = typingsSlinky.microsoftGraph.mod.ManagedAppRegistration
@@ -50,6 +52,8 @@ package object mod {
   
   type MuteParticipantOperation = typingsSlinky.microsoftGraph.mod.CommsOperation
   
+  type NullableOption[T] = T | scala.Null
+  
   type OutgoingCallOptions = typingsSlinky.microsoftGraph.mod.CallOptions
   
   type PlayPromptOperation = typingsSlinky.microsoftGraph.mod.CommsOperation
@@ -58,7 +62,11 @@ package object mod {
   
   type ReportRoot = typingsSlinky.microsoftGraph.mod.Entity
   
+  type SearchEntity = typingsSlinky.microsoftGraph.mod.Entity
+  
   type SubscribeToToneOperation = typingsSlinky.microsoftGraph.mod.CommsOperation
+  
+  type TeamsTemplate = typingsSlinky.microsoftGraph.mod.Entity
   
   type TeleconferenceDeviceAudioQuality = typingsSlinky.microsoftGraph.mod.TeleconferenceDeviceMediaQuality
   

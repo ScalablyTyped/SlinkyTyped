@@ -33,7 +33,7 @@ trait AwsEc2InstanceDetails extends js.Object {
   var KeyName: js.UndefOr[NonEmptyString] = js.native
   
   /**
-    * The date/time the instance was launched.
+    * Indicates when the instance was launched. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var LaunchedAt: js.UndefOr[NonEmptyString] = js.native
   

@@ -8,19 +8,27 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseSparkline.Options.tooltip */
+/**
+  * [descr:BaseSparkline.Options.tooltip]
+  */
 @js.native
 trait BaseSparklineTooltip extends BaseWidgetTooltip {
   
-  /** @name BaseSparkline.Options.tooltip.contentTemplate */
+  /**
+    * [descr:BaseSparkline.Options.tooltip.contentTemplate]
+    */
   var contentTemplate: js.UndefOr[
     template | (js.Function2[/* pointsInfo */ js.Any, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name BaseSparkline.Options.tooltip.customizeTooltip */
+  /**
+    * [descr:BaseSparkline.Options.tooltip.customizeTooltip]
+    */
   var customizeTooltip: js.UndefOr[js.Function1[/* pointsInfo */ js.Any, _]] = js.native
   
-  /** @name BaseSparkline.Options.tooltip.interactive */
+  /**
+    * [descr:BaseSparkline.Options.tooltip.interactive]
+    */
   var interactive: js.UndefOr[Boolean] = js.native
 }
 object BaseSparklineTooltip {

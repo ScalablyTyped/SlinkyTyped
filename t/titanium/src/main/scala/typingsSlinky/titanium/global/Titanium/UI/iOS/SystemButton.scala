@@ -19,7 +19,7 @@ class SystemButton ()
 object SystemButton extends js.Object {
   
   /**
-    * Use with [Button.systemButton](Titanium.UI.Button.systemButton) to specify an **Action** button. <img src="images/systembutton/system_icons.png"/>
+    * Use with [Button.systemButton](Titanium.UI.Button.systemButton) to specify an **Action** button.
     */
   val ACTION: Double = js.native
   

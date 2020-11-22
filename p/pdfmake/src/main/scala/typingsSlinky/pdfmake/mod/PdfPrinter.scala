@@ -7,8 +7,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// 'export =' syntax forbids any other export.
-// tslint:disable-next-line: strict-export-declare-modifiers
 @js.native
 trait PdfPrinter extends js.Object {
   

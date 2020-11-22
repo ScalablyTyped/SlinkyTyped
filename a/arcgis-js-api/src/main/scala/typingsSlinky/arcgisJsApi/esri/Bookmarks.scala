@@ -1,6 +1,8 @@
 package typingsSlinky.arcgisJsApi.esri
 
 import typingsSlinky.arcgisJsApi.IHandle
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bookmark-edit`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`bookmark-select`
 import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`select-bookmark`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +14,7 @@ trait Bookmarks
      with GoTo {
   
   /**
-    * Specifies how new bookmarks will be created if [editingEnabled](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#editingEnabled) is set to `true`. Can be used to enable or disable taking screenshots or creating an extent based on the current view when a bookmark is created. See [BookmarkCreationOptions](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html#BookmarkCreationOptions) for more information.
+    * Specifies how new bookmarks will be created if [editingEnabled](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#editingEnabled) is set to `true`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#bookmarkCreationOptions)
     */
@@ -29,17 +31,13 @@ trait Bookmarks
     * When true, the widget is visually withdrawn and cannot be interacted with.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#disabled)
-    *
-    * @default false
     */
   var disabled: Boolean = js.native
   
   /**
-    * Indicates whether the widget is able to be edited. When `true`, allows bookmarks to be added, edited, reordered, or deleted from within the widget. Any edits made will only be shown locally and will not be saved.
+    * Indicates whether the bookmarks are able to be edited.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#editingEnabled)
-    *
-    * @default false
     */
   var editingEnabled: Boolean = js.native
   
@@ -47,9 +45,6 @@ trait Bookmarks
     * Zoom to a specific bookmark.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#goTo)
-    *
-    * @param Bookmark The bookmark to zoom to.
-    *
     */
   def goTo(Bookmark: Bookmark): js.Promise[_] = js.native
   
@@ -61,6 +56,10 @@ trait Bookmarks
   var iconClass: String = js.native
   
   @JSName("on")
+  def on_bookmarkedit(name: `bookmark-edit`, eventHandler: BookmarksBookmarkEditEventHandler): IHandle = js.native
+  @JSName("on")
+  def on_bookmarkselect(name: `bookmark-select`, eventHandler: BookmarksBookmarkSelectEventHandler): IHandle = js.native
+  @JSName("on")
   def on_selectbookmark(name: `select-bookmark`, eventHandler: BookmarksSelectBookmarkEventHandler): IHandle = js.native
   
   /**
@@ -71,14 +70,14 @@ trait Bookmarks
   var view: MapView = js.native
   
   /**
-    * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [BookmarksViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks-BookmarksViewModel.html) class to access all properties and methods on the widget.
+    * The view model for this widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#viewModel)
     */
   var viewModel: BookmarksViewModel = js.native
   
   /**
-    * The visible elements that are displayed within the widget. This property provides the ability to turn individual elements of the widget's display on/off.
+    * The visible elements that are displayed within the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#visibleElements)
     */

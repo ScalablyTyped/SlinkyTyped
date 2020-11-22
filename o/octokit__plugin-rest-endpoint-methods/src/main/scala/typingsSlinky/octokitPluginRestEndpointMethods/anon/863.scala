@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.PullsUpdateBranchEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.PullsUpdateBranchResponseData
+import typingsSlinky.octokitTypes.endpointsMod.PullsListReviewsEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.PullsListReviewsResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `863` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[PullsUpdateBranchEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[PullsListReviewsEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[PullsUpdateBranchResponseData] = js.native
+  var response: OctokitResponse[PullsListReviewsResponseData] = js.native
 }
 object `863` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[PullsUpdateBranchEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[PullsUpdateBranchResponseData]
+    parameters: RequestParameters with (Omit[PullsListReviewsEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[PullsListReviewsResponseData]
   ): `863` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`863`]
@@ -46,9 +46,9 @@ object `863` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[PullsUpdateBranchEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[PullsListReviewsEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[PullsUpdateBranchResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[PullsListReviewsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

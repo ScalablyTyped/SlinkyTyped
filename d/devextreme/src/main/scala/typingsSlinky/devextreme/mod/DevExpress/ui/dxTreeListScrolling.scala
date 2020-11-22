@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeListScrolling extends GridBaseScrolling {
   
-  /** @name dxTreeList.Options.scrolling.mode */
+  /**
+    * [descr:dxTreeList.Options.scrolling.mode]
+    */
   var mode: js.UndefOr[standard | virtual] = js.native
 }
 object dxTreeListScrolling {

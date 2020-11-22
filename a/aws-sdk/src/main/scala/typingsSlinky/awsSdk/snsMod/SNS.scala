@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.snsMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -374,12 +374,12 @@ trait SNS extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
-    * Use this request to set the default settings for sending SMS messages and receiving daily SMS usage reports. You can override some of these settings for a single message when you use the Publish action with the MessageAttributes.entry.N parameter. For more information, see Sending an SMS Message in the Amazon SNS Developer Guide.
+    * Use this request to set the default settings for sending SMS messages and receiving daily SMS usage reports. You can override some of these settings for a single message when you use the Publish action with the MessageAttributes.entry.N parameter. For more information, see Publishing to a mobile phone in the Amazon SNS Developer Guide.
     */
   def setSMSAttributes(): Request[SetSMSAttributesResponse, AWSError] = js.native
   def setSMSAttributes(callback: js.Function2[/* err */ AWSError, /* data */ SetSMSAttributesResponse, Unit]): Request[SetSMSAttributesResponse, AWSError] = js.native
   /**
-    * Use this request to set the default settings for sending SMS messages and receiving daily SMS usage reports. You can override some of these settings for a single message when you use the Publish action with the MessageAttributes.entry.N parameter. For more information, see Sending an SMS Message in the Amazon SNS Developer Guide.
+    * Use this request to set the default settings for sending SMS messages and receiving daily SMS usage reports. You can override some of these settings for a single message when you use the Publish action with the MessageAttributes.entry.N parameter. For more information, see Publishing to a mobile phone in the Amazon SNS Developer Guide.
     */
   def setSMSAttributes(params: SetSMSAttributesInput): Request[SetSMSAttributesResponse, AWSError] = js.native
   def setSMSAttributes(
@@ -416,12 +416,12 @@ trait SNS extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
-    * Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S or email, or if the endpoint and the topic are not in the same AWS account, the endpoint owner must the ConfirmSubscription action to confirm the subscription. You call the ConfirmSubscription action with the token from the subscription response. Confirmation tokens are valid for three days. This action is throttled at 100 transactions per second (TPS).
+    * Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S or email, or if the endpoint and the topic are not in the same AWS account, the endpoint owner must run the ConfirmSubscription action to confirm the subscription. You call the ConfirmSubscription action with the token from the subscription response. Confirmation tokens are valid for three days. This action is throttled at 100 transactions per second (TPS).
     */
   def subscribe(): Request[SubscribeResponse, AWSError] = js.native
   def subscribe(callback: js.Function2[/* err */ AWSError, /* data */ SubscribeResponse, Unit]): Request[SubscribeResponse, AWSError] = js.native
   /**
-    * Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S or email, or if the endpoint and the topic are not in the same AWS account, the endpoint owner must the ConfirmSubscription action to confirm the subscription. You call the ConfirmSubscription action with the token from the subscription response. Confirmation tokens are valid for three days. This action is throttled at 100 transactions per second (TPS).
+    * Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S or email, or if the endpoint and the topic are not in the same AWS account, the endpoint owner must run the ConfirmSubscription action to confirm the subscription. You call the ConfirmSubscription action with the token from the subscription response. Confirmation tokens are valid for three days. This action is throttled at 100 transactions per second (TPS).
     */
   def subscribe(params: SubscribeInput): Request[SubscribeResponse, AWSError] = js.native
   def subscribe(

@@ -54,20 +54,32 @@ trait UITableCell extends js.Object {
   /**
     * _Color of the subtitle._
     *
-    * This only have an effect on cells with a subtitle. By default the color is null, in which case an appropriate color is automatically chosen based on the theme of the app and the
+    * This only has an effect on cells with a subtitle. By default the color is null, in which case an appropriate color is automatically chosen based on the theme of the app and the
     * context the script is running in.
     * @see https://docs.scriptable.app/uitablecell/#subtitlecolor
     */
   var subtitleColor: Color = js.native
   
   /**
+    * _Font of the subtitle._
+    * @see https://docs.scriptable.app/uitablecell/#subtitlefont
+    */
+  var subtitleFont: Font = js.native
+  
+  /**
     * _Color of the title._
     *
-    * This only have an effect on cells with a title. By default the color is null, in which case an appropriate color is automatically chosen based on the theme of the app and the
+    * This only has an effect on cells with a title. By default the color is null, in which case an appropriate color is automatically chosen based on the theme of the app and the
     * context the script is running in.
     * @see https://docs.scriptable.app/uitablecell/#titlecolor
     */
   var titleColor: Color = js.native
+  
+  /**
+    * _Font of the title._
+    * @see https://docs.scriptable.app/uitablecell/#titlefont
+    */
+  var titleFont: Font = js.native
   
   /**
     * _Relative width of the cell._
@@ -92,10 +104,12 @@ object UITableCell {
     onTap: () => Unit,
     rightAligned: () => Unit,
     subtitleColor: Color,
+    subtitleFont: Font,
     titleColor: Color,
+    titleFont: Font,
     widthWeight: Double
   ): UITableCell = {
-    val __obj = js.Dynamic.literal(centerAligned = js.Any.fromFunction0(centerAligned), dismissOnTap = dismissOnTap.asInstanceOf[js.Any], leftAligned = js.Any.fromFunction0(leftAligned), onTap = js.Any.fromFunction0(onTap), rightAligned = js.Any.fromFunction0(rightAligned), subtitleColor = subtitleColor.asInstanceOf[js.Any], titleColor = titleColor.asInstanceOf[js.Any], widthWeight = widthWeight.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(centerAligned = js.Any.fromFunction0(centerAligned), dismissOnTap = dismissOnTap.asInstanceOf[js.Any], leftAligned = js.Any.fromFunction0(leftAligned), onTap = js.Any.fromFunction0(onTap), rightAligned = js.Any.fromFunction0(rightAligned), subtitleColor = subtitleColor.asInstanceOf[js.Any], subtitleFont = subtitleFont.asInstanceOf[js.Any], titleColor = titleColor.asInstanceOf[js.Any], titleFont = titleFont.asInstanceOf[js.Any], widthWeight = widthWeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[UITableCell]
   }
   
@@ -133,7 +147,13 @@ object UITableCell {
     def setSubtitleColor(value: Color): Self = this.set("subtitleColor", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setSubtitleFont(value: Font): Self = this.set("subtitleFont", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setTitleColor(value: Color): Self = this.set("titleColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTitleFont(value: Font): Self = this.set("titleFont", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWidthWeight(value: Double): Self = this.set("widthWeight", value.asInstanceOf[js.Any])

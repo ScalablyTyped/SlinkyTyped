@@ -91,12 +91,6 @@ object Clipboard extends js.Object {
   def getItems(): js.Array[_] = js.native
   
   /**
-    * Gets the value of the <Titanium.UI.Clipboard.lifecycleContainer> property.
-    * @deprecated Access <Titanium.UI.Clipboard.lifecycleContainer> instead.
-    */
-  def getLifecycleContainer(): typingsSlinky.titanium.Titanium.UI.Window | typingsSlinky.titanium.Titanium.UI.TabGroup = js.native
-  
-  /**
     * Gets the value of the <Titanium.UI.Clipboard.name> property.
     * @deprecated Access <Titanium.UI.Clipboard.name> instead.
     */
@@ -140,11 +134,6 @@ object Clipboard extends js.Object {
   def hasURLs(): Boolean = js.native
   
   /**
-    * The Window or TabGroup whose Activity lifecycle should be triggered on the proxy.
-    */
-  var lifecycleContainer: typingsSlinky.titanium.Titanium.UI.Window | typingsSlinky.titanium.Titanium.UI.TabGroup = js.native
-  
-  /**
     * Create a new named clipboard.
     */
   var name: String = js.native
@@ -180,13 +169,6 @@ object Clipboard extends js.Object {
     * Adds an array of items to a clipboard, and sets privacy options for all included items.
     */
   def setItems(items: ClipboardItemsType): Unit = js.native
-  
-  def setLifecycleContainer(lifecycleContainer: typingsSlinky.titanium.Titanium.UI.TabGroup): Unit = js.native
-  /**
-    * Sets the value of the <Titanium.UI.Clipboard.lifecycleContainer> property.
-    * @deprecated Set the value using <Titanium.UI.Clipboard.lifecycleContainer> instead.
-    */
-  def setLifecycleContainer(lifecycleContainer: typingsSlinky.titanium.Titanium.UI.Window): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Clipboard.name> property.

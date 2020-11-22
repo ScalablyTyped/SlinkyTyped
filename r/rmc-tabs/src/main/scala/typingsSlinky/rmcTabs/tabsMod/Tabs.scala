@@ -3,6 +3,7 @@ package typingsSlinky.rmcTabs.tabsMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.rcGesture.mod.IGestureStatus
 import typingsSlinky.rmcTabs.anon.OnPanMove
 import typingsSlinky.rmcTabs.anon.ReadonlychildrenReactNode
 import typingsSlinky.rmcTabs.anon.TypeofDefaultTabBar
@@ -45,9 +46,7 @@ class Tabs protected ()
   
   var onPan: OnPanMove = js.native
   
-  def onSwipe(
-    status: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IGestureStatus */ js.Any
-  ): Unit = js.native
+  def onSwipe(status: IGestureStatus): Unit = js.native
   
   def renderContent(): ReactElement = js.native
   def renderContent(

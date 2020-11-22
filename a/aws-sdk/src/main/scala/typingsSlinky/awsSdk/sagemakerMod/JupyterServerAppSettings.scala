@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait JupyterServerAppSettings extends js.Object {
   
   /**
-    * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the JupyterServer app.
     */
   var DefaultResourceSpec: js.UndefOr[ResourceSpec] = js.native
 }

@@ -26,4 +26,6 @@ class Panel () extends PanelModel {
   /* protected */ def onCreating(): Unit = js.native
   
   /* protected */ def onNumChanged(value: Double): Unit = js.native
+  
+  var pressExpand: js.Any = js.native
 }

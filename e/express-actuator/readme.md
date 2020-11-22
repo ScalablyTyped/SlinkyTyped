@@ -1,7 +1,7 @@
 
 # Scala.js typings for express-actuator
 
-Typings are for version 1.3
+Typings are for version 1.6
 
 ## Library description:
 Provides endpoints to help you monitor and manage your application when it's pushed to production.

@@ -26,7 +26,14 @@ class ListPaymentRefundsRequest () extends js.Object {
   var end_time: js.UndefOr[String] = js.native
   
   /**
-    * ID of location associated with payment.
+    * Maximum number of results to be returned in a single page.
+    * It is possible to receive fewer results than the specified limit on a given page.
+    * If the supplied value is greater than 100, at most 100 results will be returned. Default: `100`
+    */
+  var limit: js.UndefOr[Double] = js.native
+  
+  /**
+    * Limit results to the location supplied. By default, results are returned for all locations associated with the merchant.
     */
   var location_id: js.UndefOr[String] = js.native
   

@@ -7,8 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RowsMethods extends js.Object {
   
-  /*
-    * Recalculate the height of one or more rows after a data change
+  /**
+    * @description Mark the heights of the selected rows (from rows()) to be recalculated on the next draw.
+    * @see {@link https://datatables.net/reference/api/rows().recalcHeight()}
     */
   def recalcHeight(): Api = js.native
 }

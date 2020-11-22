@@ -8,6 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object reactDatesNumbers {
   
   @scala.inline
+  def `-1`: `-1` = -1.asInstanceOf[`-1`]
+  
+  @scala.inline
   def `0`: `0` = 0.asInstanceOf[`0`]
   
   @scala.inline
@@ -27,6 +30,9 @@ object reactDatesNumbers {
   
   @scala.inline
   def `6`: `6` = 6.asInstanceOf[`6`]
+  
+  @js.native
+  sealed trait `-1` extends js.Object
   
   @js.native
   sealed trait `0` extends DayOfWeekShape

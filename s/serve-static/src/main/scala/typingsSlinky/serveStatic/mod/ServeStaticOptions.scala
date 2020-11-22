@@ -1,16 +1,16 @@
 package typingsSlinky.serveStatic.mod
 
-import typingsSlinky.expressServeStaticCore.mod.Response
+import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.serveStatic.serveStaticBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServeStaticOptions extends js.Object {
+trait ServeStaticOptions[R /* <: ServerResponse */] extends js.Object {
   
   /**
-    * Enable or disable setting Cache-Control response header, defaults to true. 
+    * Enable or disable setting Cache-Control response header, defaults to true.
     * Disabling this will ignore the immutable and maxAge options.
     */
   var cacheControl: js.UndefOr[Boolean] = js.native
@@ -40,7 +40,7 @@ trait ServeStaticOptions extends js.Object {
   
   /**
     * Let client errors fall-through as unhandled requests, otherwise forward a client error.
-    * The default value is false.
+    * The default value is true.
     */
   var fallthrough: js.UndefOr[Boolean] = js.native
   
@@ -78,18 +78,18 @@ trait ServeStaticOptions extends js.Object {
     * path the file path that is being sent
     * stat the stat object of the file that is being sent
     */
-  var setHeaders: js.UndefOr[js.Function3[/* res */ Response[_], /* path */ String, /* stat */ js.Any, _]] = js.native
+  var setHeaders: js.UndefOr[js.Function3[/* res */ R, /* path */ String, /* stat */ js.Any, _]] = js.native
 }
 object ServeStaticOptions {
   
   @scala.inline
-  def apply(): ServeStaticOptions = {
+  def apply[R /* <: ServerResponse */](): ServeStaticOptions[R] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ServeStaticOptions]
+    __obj.asInstanceOf[ServeStaticOptions[R]]
   }
   
   @scala.inline
-  implicit class ServeStaticOptionsOps[Self <: ServeStaticOptions] (val x: Self) extends AnyVal {
+  implicit class ServeStaticOptionsOps[Self <: ServeStaticOptions[_], R /* <: ServerResponse */] (val x: Self with ServeStaticOptions[R]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -170,7 +170,7 @@ object ServeStaticOptions {
     def deleteRedirect: Self = this.set("redirect", js.undefined)
     
     @scala.inline
-    def setSetHeaders(value: (/* res */ Response[_], /* path */ String, /* stat */ js.Any) => _): Self = this.set("setHeaders", js.Any.fromFunction3(value))
+    def setSetHeaders(value: (/* res */ R, /* path */ String, /* stat */ js.Any) => _): Self = this.set("setHeaders", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteSetHeaders: Self = this.set("setHeaders", js.undefined)

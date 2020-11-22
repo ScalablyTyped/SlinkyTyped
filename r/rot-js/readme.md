@@ -1,7 +1,7 @@
 
 # Scala.js typings for rot-js
 
-Typings are for version 2.1.4
+Typings are for version 2.1.5
 
 ## Library description:
 A roguelike toolkit in JavaScript

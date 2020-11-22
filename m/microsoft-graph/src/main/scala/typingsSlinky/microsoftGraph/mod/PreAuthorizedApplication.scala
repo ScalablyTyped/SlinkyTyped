@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PreAuthorizedApplication extends js.Object {
   
   // The unique identifier for the application.
-  var appId: js.UndefOr[String] = js.native
+  var appId: js.UndefOr[NullableOption[String]] = js.native
   
   // The unique identifier for the oauth2PermissionScopes the application requires.
   var delegatedPermissionIds: js.UndefOr[js.Array[String]] = js.native
@@ -37,10 +37,13 @@ object PreAuthorizedApplication {
     }
     
     @scala.inline
-    def setAppId(value: String): Self = this.set("appId", value.asInstanceOf[js.Any])
+    def setAppId(value: NullableOption[String]): Self = this.set("appId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAppId: Self = this.set("appId", js.undefined)
+    
+    @scala.inline
+    def setAppIdNull: Self = this.set("appId", null)
     
     @scala.inline
     def setDelegatedPermissionIdsVarargs(value: String*): Self = this.set("delegatedPermissionIds", js.Array(value :_*))

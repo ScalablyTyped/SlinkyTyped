@@ -6,10 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /**
   *
-  * WorkbookRangeAreas represents a collection of one or more rectangular ranges in multi worksheet.
+  * Represents a collection of one or more rectangular ranges in multiple worksheets.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait WorkbookRangeAreasLoadOptions extends js.Object {
@@ -24,8 +23,7 @@ trait WorkbookRangeAreasLoadOptions extends js.Object {
     *
     * Returns an array of address in A1-style. Address value will contain the worksheet name for each rectangular block of cells (e.g., "Sheet1!A1:B4, Sheet1!D1:D4"). Read-only.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var addresses: js.UndefOr[Boolean] = js.native
 }

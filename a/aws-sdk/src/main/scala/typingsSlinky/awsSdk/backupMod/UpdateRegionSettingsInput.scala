@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateRegionSettingsInput extends js.Object {
   
   /**
-    * Updates the list of services along with the opt-in preferences for the region.
+    * Updates the list of services along with the opt-in preferences for the Region.
     */
   var ResourceTypeOptInPreference: js.UndefOr[typingsSlinky.awsSdk.backupMod.ResourceTypeOptInPreference] = js.native
 }

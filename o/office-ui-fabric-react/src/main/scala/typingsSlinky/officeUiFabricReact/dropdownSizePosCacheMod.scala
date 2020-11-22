@@ -12,9 +12,16 @@ object dropdownSizePosCacheMod extends js.Object {
   @js.native
   class DropdownSizePosCache () extends js.Object {
     
+    var _cachedOptions: js.Any = js.native
+    
     var _displayOnlyOptionsCache: js.Any = js.native
     
     var _size: js.Any = js.native
+    
+    /**
+      * The chached options array.
+      */
+    val cachedOptions: js.Array[IDropdownOption] = js.native
     
     /**
       * The size of all the selectable options.

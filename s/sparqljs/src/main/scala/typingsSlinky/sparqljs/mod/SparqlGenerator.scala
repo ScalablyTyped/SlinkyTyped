@@ -7,13 +7,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SparqlGenerator extends js.Object {
   
+  def createGenerator(): js.Any = js.native
+  
   def stringify(query: SparqlQuery): String = js.native
 }
 object SparqlGenerator {
   
   @scala.inline
-  def apply(stringify: SparqlQuery => String): SparqlGenerator = {
-    val __obj = js.Dynamic.literal(stringify = js.Any.fromFunction1(stringify))
+  def apply(createGenerator: () => js.Any, stringify: SparqlQuery => String): SparqlGenerator = {
+    val __obj = js.Dynamic.literal(createGenerator = js.Any.fromFunction0(createGenerator), stringify = js.Any.fromFunction1(stringify))
     __obj.asInstanceOf[SparqlGenerator]
   }
   
@@ -31,6 +33,9 @@ object SparqlGenerator {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setCreateGenerator(value: () => js.Any): Self = this.set("createGenerator", js.Any.fromFunction0(value))
     
     @scala.inline
     def setStringify(value: SparqlQuery => String): Self = this.set("stringify", js.Any.fromFunction1(value))

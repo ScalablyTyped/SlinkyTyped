@@ -25,7 +25,7 @@ trait Credential extends Accessor {
   var isAdmin: Boolean = js.native
   
   /**
-    * The Identity Manager's [setOAuthRedirectionHandler](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-IdentityManager.html#setOAuthRedirectionHandler) returns an object that contains a `state` property. This information is returned for this property.
+    * The Identity Manager's [setOAuthRedirectionHandler](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-IdentityManager.html#setOAuthRedirectionHandler) returns an object that contains a `state` property.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-Credential.html#oAuthState)
     */
@@ -37,11 +37,9 @@ trait Credential extends Accessor {
   def on_tokenchange(name: `token-change`, eventHandler: CredentialTokenChangeEventHandler): IHandle = js.native
   
   /**
-    * Generates a new token and updates the Credential's [token](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-Credential.html#token) property with the newly acquired token. Tokens are typically kept valid using a timer that automatically triggers a refresh before the token expires. Use this method in cases where the timer has been delayed or stopped.
+    * Generates a new token and updates the Credential's [token](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-Credential.html#token) property with the newly acquired token.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-identity-Credential.html#refreshToken)
-    *
-    *
     */
   def refreshToken(): Unit = js.native
   

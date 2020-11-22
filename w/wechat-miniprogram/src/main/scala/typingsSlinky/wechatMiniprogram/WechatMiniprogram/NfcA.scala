@@ -25,7 +25,7 @@ trait NfcA extends js.Object {
   
   /** [NfcA.getAtqa(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/NfcA.getAtqa.html)
     *
-    *
+    * 获取ATQA信息
     *
     * 最低基础库： `2.11.2` */
   def getAtqa(): Unit = js.native
@@ -41,19 +41,11 @@ trait NfcA extends js.Object {
   
   /** [NfcA.getSak(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/NfcA.getSak.html)
     *
-    *
+    * 获取SAK信息
     *
     * 最低基础库： `2.11.2` */
   def getSak(): Unit = js.native
   def getSak(option: GetSakOption): Unit = js.native
-  
-  /** [NfcA.isConnected(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/NfcA.isConnected.html)
-    *
-    * 检查连接状态
-    *
-    * 最低基础库： `2.11.2` */
-  def isConnected(): Unit = js.native
-  def isConnected(option: IsConnectedOption): Unit = js.native
   
   /** [NfcA.setTimeout(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/NfcA.setTimeout.html)
     *

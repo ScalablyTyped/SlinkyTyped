@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateMultipartUploadRequest extends js.Object {
   
   /**
-    * The canned ACL to apply to the object.
+    * The canned ACL to apply to the object. This action is not supported by Amazon S3 on Outposts.
     */
   var ACL: js.UndefOr[ObjectCannedACL] = js.native
   
   /**
-    * The name of the bucket to which to initiate the upload
+    * The name of the bucket to which to initiate the upload When using this API with an access point, you must direct requests to the access point hostname. The access point hostname takes the form AccessPointName-AccountId.s3-accesspoint.Region.amazonaws.com. When using this operation with an access point through the AWS SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see Using Access Points in the Amazon Simple Storage Service Developer Guide. When using this API with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com. When using this operation using S3 on Outposts through the AWS SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see Using S3 on Outposts in the Amazon Simple Storage Service Developer Guide.
     */
   var Bucket: BucketName = js.native
   
@@ -43,27 +43,32 @@ trait CreateMultipartUploadRequest extends js.Object {
   var ContentType: js.UndefOr[typingsSlinky.awsSdk.s3Mod.ContentType] = js.native
   
   /**
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
+  
+  /**
     * The date and time at which the object is no longer cacheable.
     */
   var Expires: js.UndefOr[js.Date] = js.native
   
   /**
-    * Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object.
+    * Gives the grantee READ, READ_ACP, and WRITE_ACP permissions on the object. This action is not supported by Amazon S3 on Outposts.
     */
   var GrantFullControl: js.UndefOr[typingsSlinky.awsSdk.s3Mod.GrantFullControl] = js.native
   
   /**
-    * Allows grantee to read the object data and its metadata.
+    * Allows grantee to read the object data and its metadata. This action is not supported by Amazon S3 on Outposts.
     */
   var GrantRead: js.UndefOr[typingsSlinky.awsSdk.s3Mod.GrantRead] = js.native
   
   /**
-    * Allows grantee to read the object ACL.
+    * Allows grantee to read the object ACL. This action is not supported by Amazon S3 on Outposts.
     */
   var GrantReadACP: js.UndefOr[typingsSlinky.awsSdk.s3Mod.GrantReadACP] = js.native
   
   /**
-    * Allows grantee to write the ACL for the applicable object.
+    * Allows grantee to write the ACL for the applicable object. This action is not supported by Amazon S3 on Outposts.
     */
   var GrantWriteACP: js.UndefOr[typingsSlinky.awsSdk.s3Mod.GrantWriteACP] = js.native
   
@@ -100,7 +105,7 @@ trait CreateMultipartUploadRequest extends js.Object {
   var SSECustomerAlgorithm: js.UndefOr[typingsSlinky.awsSdk.s3Mod.SSECustomerAlgorithm] = js.native
   
   /**
-    * Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side​-encryption​-customer-algorithm header.
+    * Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side-encryption-customer-algorithm header.
     */
   var SSECustomerKey: js.UndefOr[typingsSlinky.awsSdk.s3Mod.SSECustomerKey] = js.native
   
@@ -125,7 +130,7 @@ trait CreateMultipartUploadRequest extends js.Object {
   var ServerSideEncryption: js.UndefOr[typingsSlinky.awsSdk.s3Mod.ServerSideEncryption] = js.native
   
   /**
-    * The type of storage to use for the object. Defaults to 'STANDARD'.
+    * By default, Amazon S3 uses the STANDARD Storage Class to store newly created objects. The STANDARD storage class provides high durability and high availability. Depending on performance needs, you can specify a different Storage Class. Amazon S3 on Outposts only uses the OUTPOSTS Storage Class. For more information, see Storage Classes in the Amazon S3 Service Developer Guide.
     */
   var StorageClass: js.UndefOr[typingsSlinky.awsSdk.s3Mod.StorageClass] = js.native
   
@@ -203,6 +208,12 @@ object CreateMultipartUploadRequest {
     
     @scala.inline
     def deleteContentType: Self = this.set("ContentType", js.undefined)
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
     
     @scala.inline
     def setExpires(value: js.Date): Self = this.set("Expires", value.asInstanceOf[js.Any])

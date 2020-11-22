@@ -62,6 +62,18 @@ object octokitTypesStrings {
   def `DELETE SlashauthorizationsSlashColonauthorization_id`: `DELETE SlashauthorizationsSlashColonauthorization_id` = ("DELETE /authorizations/:authorization_id").asInstanceOf[`DELETE SlashauthorizationsSlashColonauthorization_id`]
   
   @scala.inline
+  def `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id` = ("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id").asInstanceOf[`DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`]
+  
+  @scala.inline
+  def `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`: `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id` = ("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations/:org_id").asInstanceOf[`DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`]
+  
+  @scala.inline
+  def `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` = ("DELETE /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners/:runner_id").asInstanceOf[`DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`]
+  
+  @scala.inline
+  def `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`: `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id` = ("DELETE /enterprises/:enterprise/actions/runners/:runner_id").asInstanceOf[`DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`]
+  
+  @scala.inline
   def `DELETE SlashgistsSlashColongist_id`: `DELETE SlashgistsSlashColongist_id` = ("DELETE /gists/:gist_id").asInstanceOf[`DELETE SlashgistsSlashColongist_id`]
   
   @scala.inline
@@ -75,6 +87,15 @@ object octokitTypesStrings {
   
   @scala.inline
   def `DELETE SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`: `DELETE SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription` = ("DELETE /notifications/threads/:thread_id/subscription").asInstanceOf[`DELETE SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`]
+  
+  @scala.inline
+  def `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id` = ("DELETE /orgs/:org/actions/runner-groups/:runner_group_id").asInstanceOf[`DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`]
+  
+  @scala.inline
+  def `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`: `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id` = ("DELETE /orgs/:org/actions/runner-groups/:runner_group_id/repositories/:repository_id").asInstanceOf[`DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`]
+  
+  @scala.inline
+  def `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` = ("DELETE /orgs/:org/actions/runner-groups/:runner_group_id/runners/:runner_id").asInstanceOf[`DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`]
   
   @scala.inline
   def `DELETE SlashorgsSlashColonorgSlashactionsSlashrunnersSlashColonrunner_id`: `DELETE SlashorgsSlashColonorgSlashactionsSlashrunnersSlashColonrunner_id` = ("DELETE /orgs/:org/actions/runners/:runner_id").asInstanceOf[`DELETE SlashorgsSlashColonorgSlashactionsSlashrunnersSlashColonrunner_id`]
@@ -392,6 +413,36 @@ object octokitTypesStrings {
   def `GET Slashemojis`: `GET Slashemojis` = ("GET /emojis").asInstanceOf[`GET Slashemojis`]
   
   @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups` = ("GET /enterprises/:enterprise/actions/runner-groups").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id` = ("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations` = ("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` = ("GET /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners` = ("GET /enterprises/:enterprise/actions/runners").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id` = ("GET /enterprises/:enterprise/actions/runners/:runner_id").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`: `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads` = ("GET /enterprises/:enterprise/actions/runners/downloads").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions`: `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions` = ("GET /enterprises/:enterprise/settings/billing/actions").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages`: `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages` = ("GET /enterprises/:enterprise/settings/billing/packages").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages`]
+  
+  @scala.inline
+  def `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage`: `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage` = ("GET /enterprises/:enterprise/settings/billing/shared-storage").asInstanceOf[`GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage`]
+  
+  @scala.inline
   def `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions`: `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions` = ("GET /enterprises/:enterprise_id/settings/billing/actions").asInstanceOf[`GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions`]
   
   @scala.inline
@@ -492,6 +543,18 @@ object octokitTypesStrings {
   
   @scala.inline
   def `GET SlashorgsSlashColonorg`: `GET SlashorgsSlashColonorg` = ("GET /orgs/:org").asInstanceOf[`GET SlashorgsSlashColonorg`]
+  
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`: `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups` = ("GET /orgs/:org/actions/runner-groups").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups`]
+  
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id` = ("GET /orgs/:org/actions/runner-groups/:runner_group_id").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`]
+  
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`: `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories` = ("GET /orgs/:org/actions/runner-groups/:runner_group_id/repositories").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`]
+  
+  @scala.inline
+  def `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` = ("GET /orgs/:org/actions/runner-groups/:runner_group_id/runners").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`]
   
   @scala.inline
   def `GET SlashorgsSlashColonorgSlashactionsSlashrunners`: `GET SlashorgsSlashColonorgSlashactionsSlashrunners` = ("GET /orgs/:org/actions/runners").asInstanceOf[`GET SlashorgsSlashColonorgSlashactionsSlashrunners`]
@@ -801,6 +864,12 @@ object octokitTypesStrings {
   
   @scala.inline
   def `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`: `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id` = ("GET /repos/:owner/:repo/code-scanning/alerts/:alert_id").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`]
+  
+  @scala.inline
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`: `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number` = ("GET /repos/:owner/:repo/code-scanning/alerts/:alert_number").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`]
+  
+  @scala.inline
+  def `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`: `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses` = ("GET /repos/:owner/:repo/code-scanning/analyses").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`]
   
   @scala.inline
   def `GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators`: `GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators` = ("GET /repos/:owner/:repo/collaborators").asInstanceOf[`GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators`]
@@ -1379,6 +1448,9 @@ object octokitTypesStrings {
   def `PATCH SlashauthorizationsSlashColonauthorization_id`: `PATCH SlashauthorizationsSlashColonauthorization_id` = ("PATCH /authorizations/:authorization_id").asInstanceOf[`PATCH SlashauthorizationsSlashColonauthorization_id`]
   
   @scala.inline
+  def `PATCH SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: `PATCH SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id` = ("PATCH /enterprises/:enterprise/actions/runner-groups/:runner_group_id").asInstanceOf[`PATCH SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`]
+  
+  @scala.inline
   def `PATCH SlashgistsSlashColongist_id`: `PATCH SlashgistsSlashColongist_id` = ("PATCH /gists/:gist_id").asInstanceOf[`PATCH SlashgistsSlashColongist_id`]
   
   @scala.inline
@@ -1389,6 +1461,9 @@ object octokitTypesStrings {
   
   @scala.inline
   def `PATCH SlashorgsSlashColonorg`: `PATCH SlashorgsSlashColonorg` = ("PATCH /orgs/:org").asInstanceOf[`PATCH SlashorgsSlashColonorg`]
+  
+  @scala.inline
+  def `PATCH SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: `PATCH SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id` = ("PATCH /orgs/:org/actions/runner-groups/:runner_group_id").asInstanceOf[`PATCH SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`]
   
   @scala.inline
   def `PATCH SlashorgsSlashColonorgSlashhooksSlashColonhook_id`: `PATCH SlashorgsSlashColonorgSlashhooksSlashColonhook_id` = ("PATCH /orgs/:org/hooks/:hook_id").asInstanceOf[`PATCH SlashorgsSlashColonorgSlashhooksSlashColonhook_id`]
@@ -1428,6 +1503,9 @@ object octokitTypesStrings {
   
   @scala.inline
   def `PATCH SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashpreferences`: `PATCH SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashpreferences` = ("PATCH /repos/:owner/:repo/check-suites/preferences").asInstanceOf[`PATCH SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashpreferences`]
+  
+  @scala.inline
+  def `PATCH SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`: `PATCH SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number` = ("PATCH /repos/:owner/:repo/code-scanning/alerts/:alert_number").asInstanceOf[`PATCH SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`]
   
   @scala.inline
   def `PATCH SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_id`: `PATCH SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_id` = ("PATCH /repos/:owner/:repo/comments/:comment_id").asInstanceOf[`PATCH SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_id`]
@@ -1529,6 +1607,15 @@ object octokitTypesStrings {
   def `POST Slashcontent_referencesSlashColoncontent_reference_idSlashattachments`: `POST Slashcontent_referencesSlashColoncontent_reference_idSlashattachments` = ("POST /content_references/:content_reference_id/attachments").asInstanceOf[`POST Slashcontent_referencesSlashColoncontent_reference_idSlashattachments`]
   
   @scala.inline
+  def `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`: `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups` = ("POST /enterprises/:enterprise/actions/runner-groups").asInstanceOf[`POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`]
+  
+  @scala.inline
+  def `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashregistration-token`: `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashregistration-token` = ("POST /enterprises/:enterprise/actions/runners/registration-token").asInstanceOf[`POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashregistration-token`]
+  
+  @scala.inline
+  def `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashremove-token`: `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashremove-token` = ("POST /enterprises/:enterprise/actions/runners/remove-token").asInstanceOf[`POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashremove-token`]
+  
+  @scala.inline
   def `POST Slashgists`: `POST Slashgists` = ("POST /gists").asInstanceOf[`POST Slashgists`]
   
   @scala.inline
@@ -1542,6 +1629,9 @@ object octokitTypesStrings {
   
   @scala.inline
   def `POST SlashmarkdownSlashraw`: `POST SlashmarkdownSlashraw` = ("POST /markdown/raw").asInstanceOf[`POST SlashmarkdownSlashraw`]
+  
+  @scala.inline
+  def `POST SlashorgsSlashColonorgSlashactionsSlashrunner-groups`: `POST SlashorgsSlashColonorgSlashactionsSlashrunner-groups` = ("POST /orgs/:org/actions/runner-groups").asInstanceOf[`POST SlashorgsSlashColonorgSlashactionsSlashrunner-groups`]
   
   @scala.inline
   def `POST SlashorgsSlashColonorgSlashactionsSlashrunnersSlashregistration-token`: `POST SlashorgsSlashColonorgSlashactionsSlashrunnersSlashregistration-token` = ("POST /orgs/:org/actions/runners/registration-token").asInstanceOf[`POST SlashorgsSlashColonorgSlashactionsSlashrunnersSlashregistration-token`]
@@ -1635,6 +1725,9 @@ object octokitTypesStrings {
   
   @scala.inline
   def `POST SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashrerequest`: `POST SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashrerequest` = ("POST /repos/:owner/:repo/check-suites/:check_suite_id/rerequest").asInstanceOf[`POST SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashrerequest`]
+  
+  @scala.inline
+  def `POST SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashsarifs`: `POST SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashsarifs` = ("POST /repos/:owner/:repo/code-scanning/sarifs").asInstanceOf[`POST SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashsarifs`]
   
   @scala.inline
   def `POST SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions`: `POST SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions` = ("POST /repos/:owner/:repo/comments/:comment_id/reactions").asInstanceOf[`POST SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions`]
@@ -1805,6 +1898,18 @@ object octokitTypesStrings {
   def `PUT SlashauthorizationsSlashclientsSlashColonclient_idSlashColonfingerprint`: `PUT SlashauthorizationsSlashclientsSlashColonclient_idSlashColonfingerprint` = ("PUT /authorizations/clients/:client_id/:fingerprint").asInstanceOf[`PUT SlashauthorizationsSlashclientsSlashColonclient_idSlashColonfingerprint`]
   
   @scala.inline
+  def `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`: `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations` = ("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations").asInstanceOf[`PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`]
+  
+  @scala.inline
+  def `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`: `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id` = ("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations/:org_id").asInstanceOf[`PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`]
+  
+  @scala.inline
+  def `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` = ("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners").asInstanceOf[`PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`]
+  
+  @scala.inline
+  def `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` = ("PUT /enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners/:runner_id").asInstanceOf[`PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`]
+  
+  @scala.inline
   def `PUT SlashgistsSlashColongist_idSlashstar`: `PUT SlashgistsSlashColongist_idSlashstar` = ("PUT /gists/:gist_id/star").asInstanceOf[`PUT SlashgistsSlashColongist_idSlashstar`]
   
   @scala.inline
@@ -1812,6 +1917,18 @@ object octokitTypesStrings {
   
   @scala.inline
   def `PUT SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`: `PUT SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription` = ("PUT /notifications/threads/:thread_id/subscription").asInstanceOf[`PUT SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription`]
+  
+  @scala.inline
+  def `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`: `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories` = ("PUT /orgs/:org/actions/runner-groups/:runner_group_id/repositories").asInstanceOf[`PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`]
+  
+  @scala.inline
+  def `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`: `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id` = ("PUT /orgs/:org/actions/runner-groups/:runner_group_id/repositories/:repository_id").asInstanceOf[`PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`]
+  
+  @scala.inline
+  def `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` = ("PUT /orgs/:org/actions/runner-groups/:runner_group_id/runners").asInstanceOf[`PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`]
+  
+  @scala.inline
+  def `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` = ("PUT /orgs/:org/actions/runner-groups/:runner_group_id/runners/:runner_id").asInstanceOf[`PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`]
   
   @scala.inline
   def `PUT SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_name`: `PUT SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_name` = ("PUT /orgs/:org/actions/secrets/:secret_name").asInstanceOf[`PUT SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_name`]
@@ -1958,6 +2075,9 @@ object octokitTypesStrings {
   def RIGHT: RIGHT = "RIGHT".asInstanceOf[RIGHT]
   
   @scala.inline
+  def Slash: Slash = "/".asInstanceOf[Slash]
+  
+  @scala.inline
   def Slashapp: Slashapp = "/app".asInstanceOf[Slashapp]
   
   @scala.inline
@@ -2018,16 +2138,52 @@ object octokitTypesStrings {
   def Slashcontent_referencesSlashColoncontent_reference_idSlashattachments: Slashcontent_referencesSlashColoncontent_reference_idSlashattachments = "/content_references/:content_reference_id/attachments".asInstanceOf[Slashcontent_referencesSlashColoncontent_reference_idSlashattachments]
   
   @scala.inline
+  def Slashdocs: Slashdocs = "/docs".asInstanceOf[Slashdocs]
+  
+  @scala.inline
   def Slashemojis: Slashemojis = "/emojis".asInstanceOf[Slashemojis]
   
   @scala.inline
-  def SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions: SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions = "/enterprises/:enterprise_id/settings/billing/actions".asInstanceOf[SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions]
+  def `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`: `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups` = "/enterprises/:enterprise/actions/runner-groups".asInstanceOf[`SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups`]
   
   @scala.inline
-  def SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages: SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages = "/enterprises/:enterprise_id/settings/billing/packages".asInstanceOf[SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages]
+  def `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id` = "/enterprises/:enterprise/actions/runner-groups/:runner_group_id".asInstanceOf[`SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id`]
   
   @scala.inline
-  def `SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage`: `SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage` = "/enterprises/:enterprise_id/settings/billing/shared-storage".asInstanceOf[`SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage`]
+  def `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`: `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations` = "/enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations".asInstanceOf[`SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations`]
+  
+  @scala.inline
+  def `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`: `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id` = "/enterprises/:enterprise/actions/runner-groups/:runner_group_id/organizations/:org_id".asInstanceOf[`SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id`]
+  
+  @scala.inline
+  def `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` = "/enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners".asInstanceOf[`SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`]
+  
+  @scala.inline
+  def `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` = "/enterprises/:enterprise/actions/runner-groups/:runner_group_id/runners/:runner_id".asInstanceOf[`SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`]
+  
+  @scala.inline
+  def SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners: SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners = "/enterprises/:enterprise/actions/runners".asInstanceOf[SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners]
+  
+  @scala.inline
+  def SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id: SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id = "/enterprises/:enterprise/actions/runners/:runner_id".asInstanceOf[SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id]
+  
+  @scala.inline
+  def SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads: SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads = "/enterprises/:enterprise/actions/runners/downloads".asInstanceOf[SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads]
+  
+  @scala.inline
+  def `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashregistration-token`: `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashregistration-token` = "/enterprises/:enterprise/actions/runners/registration-token".asInstanceOf[`SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashregistration-token`]
+  
+  @scala.inline
+  def `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashremove-token`: `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashremove-token` = "/enterprises/:enterprise/actions/runners/remove-token".asInstanceOf[`SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashremove-token`]
+  
+  @scala.inline
+  def SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions: SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions = "/enterprises/:enterprise/settings/billing/actions".asInstanceOf[SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions]
+  
+  @scala.inline
+  def SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages: SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages = "/enterprises/:enterprise/settings/billing/packages".asInstanceOf[SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages]
+  
+  @scala.inline
+  def `SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage`: `SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage` = "/enterprises/:enterprise/settings/billing/shared-storage".asInstanceOf[`SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage`]
   
   @scala.inline
   def Slashevents: Slashevents = "/events".asInstanceOf[Slashevents]
@@ -2130,6 +2286,24 @@ object octokitTypesStrings {
   
   @scala.inline
   def SlashorgsSlashColonorg: SlashorgsSlashColonorg = "/orgs/:org".asInstanceOf[SlashorgsSlashColonorg]
+  
+  @scala.inline
+  def `SlashorgsSlashColonorgSlashactionsSlashrunner-groups`: `SlashorgsSlashColonorgSlashactionsSlashrunner-groups` = "/orgs/:org/actions/runner-groups".asInstanceOf[`SlashorgsSlashColonorgSlashactionsSlashrunner-groups`]
+  
+  @scala.inline
+  def `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`: `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id` = "/orgs/:org/actions/runner-groups/:runner_group_id".asInstanceOf[`SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id`]
+  
+  @scala.inline
+  def `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`: `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories` = "/orgs/:org/actions/runner-groups/:runner_group_id/repositories".asInstanceOf[`SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories`]
+  
+  @scala.inline
+  def `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`: `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id` = "/orgs/:org/actions/runner-groups/:runner_group_id/repositories/:repository_id".asInstanceOf[`SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id`]
+  
+  @scala.inline
+  def `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`: `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` = "/orgs/:org/actions/runner-groups/:runner_group_id/runners".asInstanceOf[`SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners`]
+  
+  @scala.inline
+  def `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`: `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` = "/orgs/:org/actions/runner-groups/:runner_group_id/runners/:runner_id".asInstanceOf[`SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id`]
   
   @scala.inline
   def SlashorgsSlashColonorgSlashactionsSlashrunners: SlashorgsSlashColonorgSlashactionsSlashrunners = "/orgs/:org/actions/runners".asInstanceOf[SlashorgsSlashColonorgSlashactionsSlashrunners]
@@ -2507,7 +2681,13 @@ object octokitTypesStrings {
   def `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts` = "/repos/:owner/:repo/code-scanning/alerts".asInstanceOf[`SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts`]
   
   @scala.inline
-  def `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id` = "/repos/:owner/:repo/code-scanning/alerts/:alert_id".asInstanceOf[`SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id`]
+  def `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number` = "/repos/:owner/:repo/code-scanning/alerts/:alert_number".asInstanceOf[`SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number`]
+  
+  @scala.inline
+  def `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses` = "/repos/:owner/:repo/code-scanning/analyses".asInstanceOf[`SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses`]
+  
+  @scala.inline
+  def `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashsarifs`: `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashsarifs` = "/repos/:owner/:repo/code-scanning/sarifs".asInstanceOf[`SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashsarifs`]
   
   @scala.inline
   def SlashreposSlashColonownerSlashColonrepoSlashcollaborators: SlashreposSlashColonownerSlashColonrepoSlashcollaborators = "/repos/:owner/:repo/collaborators".asInstanceOf[SlashreposSlashColonownerSlashColonrepoSlashcollaborators]
@@ -3254,6 +3434,9 @@ object octokitTypesStrings {
   def created: created = "created".asInstanceOf[created]
   
   @scala.inline
+  def custom: custom = "custom".asInstanceOf[custom]
+  
+  @scala.inline
   def day: day = "day".asInstanceOf[day]
   
   @scala.inline
@@ -3264,6 +3447,9 @@ object octokitTypesStrings {
   
   @scala.inline
   def direct_member: direct_member = "direct_member".asInstanceOf[direct_member]
+  
+  @scala.inline
+  def dismissed: dismissed = "dismissed".asInstanceOf[dismissed]
   
   @scala.inline
   def dorian: dorian = "dorian".asInstanceOf[dorian]
@@ -3284,6 +3470,12 @@ object octokitTypesStrings {
   def failure: failure = "failure".asInstanceOf[failure]
   
   @scala.inline
+  def `false positive`: `false positive` = ("false positive").asInstanceOf[`false positive`]
+  
+  @scala.inline
+  def fixed: fixed = "fixed".asInstanceOf[fixed]
+  
+  @scala.inline
   def followers: followers = "followers".asInstanceOf[followers]
   
   @scala.inline
@@ -3294,9 +3486,6 @@ object octokitTypesStrings {
   
   @scala.inline
   def gfm: gfm = "gfm".asInstanceOf[gfm]
-  
-  @scala.inline
-  def `gh-pages`: `gh-pages` = "gh-pages".asInstanceOf[`gh-pages`]
   
   @scala.inline
   def git: git = "git".asInstanceOf[git]
@@ -3356,9 +3545,6 @@ object octokitTypesStrings {
   def lydian: lydian = "lydian".asInstanceOf[lydian]
   
   @scala.inline
-  def `machine-man`: `machine-man` = "machine-man".asInstanceOf[`machine-man`]
-  
-  @scala.inline
   def maintain: maintain = "maintain".asInstanceOf[maintain]
   
   @scala.inline
@@ -3366,12 +3552,6 @@ object octokitTypesStrings {
   
   @scala.inline
   def markdown: markdown = "markdown".asInstanceOf[markdown]
-  
-  @scala.inline
-  def master: master = "master".asInstanceOf[master]
-  
-  @scala.inline
-  def `master Slashdocs`: `master Slashdocs` = ("master /docs").asInstanceOf[`master Slashdocs`]
   
   @scala.inline
   def member: member = "member".asInstanceOf[member]
@@ -3405,6 +3585,9 @@ object octokitTypesStrings {
   
   @scala.inline
   def not_archived: not_archived = "not_archived".asInstanceOf[not_archived]
+  
+  @scala.inline
+  def note: note = "note".asInstanceOf[note]
   
   @scala.inline
   def notice: notice = "notice".asInstanceOf[notice]
@@ -3489,6 +3672,9 @@ object octokitTypesStrings {
   
   @scala.inline
   def read: read = "read".asInstanceOf[read]
+  
+  @scala.inline
+  def `read-only`: `read-only` = "read-only".asInstanceOf[`read-only`]
   
   @scala.inline
   def rebase: rebase = "rebase".asInstanceOf[rebase]
@@ -3587,6 +3773,9 @@ object octokitTypesStrings {
   def url: url = "url".asInstanceOf[url]
   
   @scala.inline
+  def `used in tests`: `used in tests` = ("used in tests").asInstanceOf[`used in tests`]
+  
+  @scala.inline
   def visibility: visibility = "visibility".asInstanceOf[visibility]
   
   @scala.inline
@@ -3594,6 +3783,9 @@ object octokitTypesStrings {
   
   @scala.inline
   def week: week = "week".asInstanceOf[week]
+  
+  @scala.inline
+  def `wonApostrophet fix`: `wonApostrophet fix` = ("won't fix").asInstanceOf[`wonApostrophet fix`]
   
   @scala.inline
   def write: write = "write".asInstanceOf[write]
@@ -3659,6 +3851,18 @@ object octokitTypesStrings {
   sealed trait `DELETE SlashauthorizationsSlashColonauthorization_id` extends js.Object
   
   @js.native
+  sealed trait `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id` extends js.Object
+  
+  @js.native
+  sealed trait `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id` extends js.Object
+  
+  @js.native
+  sealed trait `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` extends js.Object
+  
+  @js.native
+  sealed trait `DELETE SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id` extends js.Object
+  
+  @js.native
   sealed trait `DELETE SlashgistsSlashColongist_id` extends js.Object
   
   @js.native
@@ -3672,6 +3876,15 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait `DELETE SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription` extends js.Object
+  
+  @js.native
+  sealed trait `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id` extends js.Object
+  
+  @js.native
+  sealed trait `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id` extends js.Object
+  
+  @js.native
+  sealed trait `DELETE SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` extends js.Object
   
   @js.native
   sealed trait `DELETE SlashorgsSlashColonorgSlashactionsSlashrunnersSlashColonrunner_id` extends js.Object
@@ -3989,6 +4202,36 @@ object octokitTypesStrings {
   sealed trait `GET Slashemojis` extends js.Object
   
   @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage` extends js.Object
+  
+  @js.native
   sealed trait `GET SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions` extends js.Object
   
   @js.native
@@ -4089,6 +4332,18 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait `GET SlashorgsSlashColonorg` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groups` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` extends js.Object
   
   @js.native
   sealed trait `GET SlashorgsSlashColonorgSlashactionsSlashrunners` extends js.Object
@@ -4398,6 +4653,12 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number` extends js.Object
+  
+  @js.native
+  sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses` extends js.Object
   
   @js.native
   sealed trait `GET SlashreposSlashColonownerSlashColonrepoSlashcollaborators` extends js.Object
@@ -4976,6 +5237,9 @@ object octokitTypesStrings {
   sealed trait `PATCH SlashauthorizationsSlashColonauthorization_id` extends js.Object
   
   @js.native
+  sealed trait `PATCH SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id` extends js.Object
+  
+  @js.native
   sealed trait `PATCH SlashgistsSlashColongist_id` extends js.Object
   
   @js.native
@@ -4986,6 +5250,9 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait `PATCH SlashorgsSlashColonorg` extends js.Object
+  
+  @js.native
+  sealed trait `PATCH SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id` extends js.Object
   
   @js.native
   sealed trait `PATCH SlashorgsSlashColonorgSlashhooksSlashColonhook_id` extends js.Object
@@ -5025,6 +5292,9 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait `PATCH SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashpreferences` extends js.Object
+  
+  @js.native
+  sealed trait `PATCH SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number` extends js.Object
   
   @js.native
   sealed trait `PATCH SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_id` extends js.Object
@@ -5126,6 +5396,15 @@ object octokitTypesStrings {
   sealed trait `POST Slashcontent_referencesSlashColoncontent_reference_idSlashattachments` extends js.Object
   
   @js.native
+  sealed trait `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups` extends js.Object
+  
+  @js.native
+  sealed trait `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashregistration-token` extends js.Object
+  
+  @js.native
+  sealed trait `POST SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashremove-token` extends js.Object
+  
+  @js.native
   sealed trait `POST Slashgists` extends js.Object
   
   @js.native
@@ -5139,6 +5418,9 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait `POST SlashmarkdownSlashraw` extends js.Object
+  
+  @js.native
+  sealed trait `POST SlashorgsSlashColonorgSlashactionsSlashrunner-groups` extends js.Object
   
   @js.native
   sealed trait `POST SlashorgsSlashColonorgSlashactionsSlashrunnersSlashregistration-token` extends js.Object
@@ -5232,6 +5514,9 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait `POST SlashreposSlashColonownerSlashColonrepoSlashcheck-suitesSlashColoncheck_suite_idSlashrerequest` extends js.Object
+  
+  @js.native
+  sealed trait `POST SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashsarifs` extends js.Object
   
   @js.native
   sealed trait `POST SlashreposSlashColonownerSlashColonrepoSlashcommentsSlashColoncomment_idSlashreactions` extends js.Object
@@ -5402,6 +5687,18 @@ object octokitTypesStrings {
   sealed trait `PUT SlashauthorizationsSlashclientsSlashColonclient_idSlashColonfingerprint` extends js.Object
   
   @js.native
+  sealed trait `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations` extends js.Object
+  
+  @js.native
+  sealed trait `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id` extends js.Object
+  
+  @js.native
+  sealed trait `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` extends js.Object
+  
+  @js.native
+  sealed trait `PUT SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` extends js.Object
+  
+  @js.native
   sealed trait `PUT SlashgistsSlashColongist_idSlashstar` extends js.Object
   
   @js.native
@@ -5409,6 +5706,18 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait `PUT SlashnotificationsSlashthreadsSlashColonthread_idSlashsubscription` extends js.Object
+  
+  @js.native
+  sealed trait `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories` extends js.Object
+  
+  @js.native
+  sealed trait `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id` extends js.Object
+  
+  @js.native
+  sealed trait `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` extends js.Object
+  
+  @js.native
+  sealed trait `PUT SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` extends js.Object
   
   @js.native
   sealed trait `PUT SlashorgsSlashColonorgSlashactionsSlashsecretsSlashColonsecret_name` extends js.Object
@@ -5555,6 +5864,9 @@ object octokitTypesStrings {
   sealed trait RIGHT extends js.Object
   
   @js.native
+  sealed trait Slash extends js.Object
+  
+  @js.native
   sealed trait Slashapp extends js.Object
   
   @js.native
@@ -5615,16 +5927,52 @@ object octokitTypesStrings {
   sealed trait Slashcontent_referencesSlashColoncontent_reference_idSlashattachments extends js.Object
   
   @js.native
+  sealed trait Slashdocs extends js.Object
+  
+  @js.native
   sealed trait Slashemojis extends js.Object
   
   @js.native
-  sealed trait SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashactions extends js.Object
+  sealed trait `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groups` extends js.Object
   
   @js.native
-  sealed trait SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashpackages extends js.Object
+  sealed trait `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_id` extends js.Object
   
   @js.native
-  sealed trait `SlashenterprisesSlashColonenterprise_idSlashsettingsSlashbillingSlashshared-storage` extends js.Object
+  sealed trait `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizations` extends js.Object
+  
+  @js.native
+  sealed trait `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashorganizationsSlashColonorg_id` extends js.Object
+  
+  @js.native
+  sealed trait `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` extends js.Object
+  
+  @js.native
+  sealed trait `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` extends js.Object
+  
+  @js.native
+  sealed trait SlashenterprisesSlashColonenterpriseSlashactionsSlashrunners extends js.Object
+  
+  @js.native
+  sealed trait SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashColonrunner_id extends js.Object
+  
+  @js.native
+  sealed trait SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashdownloads extends js.Object
+  
+  @js.native
+  sealed trait `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashregistration-token` extends js.Object
+  
+  @js.native
+  sealed trait `SlashenterprisesSlashColonenterpriseSlashactionsSlashrunnersSlashremove-token` extends js.Object
+  
+  @js.native
+  sealed trait SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashactions extends js.Object
+  
+  @js.native
+  sealed trait SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashpackages extends js.Object
+  
+  @js.native
+  sealed trait `SlashenterprisesSlashColonenterpriseSlashsettingsSlashbillingSlashshared-storage` extends js.Object
   
   @js.native
   sealed trait Slashevents extends js.Object
@@ -5727,6 +6075,24 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait SlashorgsSlashColonorg extends js.Object
+  
+  @js.native
+  sealed trait `SlashorgsSlashColonorgSlashactionsSlashrunner-groups` extends js.Object
+  
+  @js.native
+  sealed trait `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_id` extends js.Object
+  
+  @js.native
+  sealed trait `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositories` extends js.Object
+  
+  @js.native
+  sealed trait `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrepositoriesSlashColonrepository_id` extends js.Object
+  
+  @js.native
+  sealed trait `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunners` extends js.Object
+  
+  @js.native
+  sealed trait `SlashorgsSlashColonorgSlashactionsSlashrunner-groupsSlashColonrunner_group_idSlashrunnersSlashColonrunner_id` extends js.Object
   
   @js.native
   sealed trait SlashorgsSlashColonorgSlashactionsSlashrunners extends js.Object
@@ -6104,7 +6470,13 @@ object octokitTypesStrings {
   sealed trait `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalerts` extends js.Object
   
   @js.native
-  sealed trait `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_id` extends js.Object
+  sealed trait `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashalertsSlashColonalert_number` extends js.Object
+  
+  @js.native
+  sealed trait `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashanalyses` extends js.Object
+  
+  @js.native
+  sealed trait `SlashreposSlashColonownerSlashColonrepoSlashcode-scanningSlashsarifs` extends js.Object
   
   @js.native
   sealed trait SlashreposSlashColonownerSlashColonrepoSlashcollaborators extends js.Object
@@ -6851,6 +7223,9 @@ object octokitTypesStrings {
   sealed trait created extends js.Object
   
   @js.native
+  sealed trait custom extends js.Object
+  
+  @js.native
   sealed trait day extends js.Object
   
   @js.native
@@ -6861,6 +7236,9 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait direct_member extends js.Object
+  
+  @js.native
+  sealed trait dismissed extends js.Object
   
   @js.native
   sealed trait dorian extends js.Object
@@ -6881,6 +7259,12 @@ object octokitTypesStrings {
   sealed trait failure extends js.Object
   
   @js.native
+  sealed trait `false positive` extends js.Object
+  
+  @js.native
+  sealed trait fixed extends js.Object
+  
+  @js.native
   sealed trait followers extends js.Object
   
   @js.native
@@ -6891,9 +7275,6 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait gfm extends js.Object
-  
-  @js.native
-  sealed trait `gh-pages` extends js.Object
   
   @js.native
   sealed trait git extends js.Object
@@ -6953,9 +7334,6 @@ object octokitTypesStrings {
   sealed trait lydian extends js.Object
   
   @js.native
-  sealed trait `machine-man` extends js.Object
-  
-  @js.native
   sealed trait maintain extends js.Object
   
   @js.native
@@ -6963,12 +7341,6 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait markdown extends js.Object
-  
-  @js.native
-  sealed trait master extends js.Object
-  
-  @js.native
-  sealed trait `master Slashdocs` extends js.Object
   
   @js.native
   sealed trait member extends js.Object
@@ -7002,6 +7374,9 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait not_archived extends js.Object
+  
+  @js.native
+  sealed trait note extends js.Object
   
   @js.native
   sealed trait notice extends js.Object
@@ -7086,6 +7461,9 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait read extends js.Object
+  
+  @js.native
+  sealed trait `read-only` extends js.Object
   
   @js.native
   sealed trait rebase extends js.Object
@@ -7184,6 +7562,9 @@ object octokitTypesStrings {
   sealed trait url extends js.Object
   
   @js.native
+  sealed trait `used in tests` extends js.Object
+  
+  @js.native
   sealed trait visibility extends js.Object
   
   @js.native
@@ -7191,6 +7572,9 @@ object octokitTypesStrings {
   
   @js.native
   sealed trait week extends js.Object
+  
+  @js.native
+  sealed trait `wonApostrophet fix` extends js.Object
   
   @js.native
   sealed trait write extends js.Object

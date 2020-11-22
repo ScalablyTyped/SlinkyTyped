@@ -8,7 +8,6 @@ import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
-import typingsSlinky.reactNativeElements.anon.PartialIconPropsPartialIm
 import typingsSlinky.reactNativeElements.anon.PartialImageProps
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.large
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.medium
@@ -33,13 +32,6 @@ trait AvatarProps extends js.Object {
     * @default React Native default Image component
     */
   var ImageComponent: js.UndefOr[ReactComponentClass[js.Object]] = js.native
-  
-  /**
-    * Edit button for the avatar
-    *
-    * @default "{size: null, iconName: 'mode-edit', iconType: 'material', iconColor: '#fff', underlayColor: '#000', style: null}"
-    */
-  var accessory: js.UndefOr[PartialIconPropsPartialIm] = js.native
   
   /**
     * Opacity when pressed
@@ -74,11 +66,6 @@ trait AvatarProps extends js.Object {
   var imageProps: js.UndefOr[PartialImageProps] = js.native
   
   /**
-    * Callback function when pressing Edit button
-    */
-  var onAccessoryPress: js.UndefOr[js.Function0[Unit]] = js.native
-  
-  /**
     * Callback function when long pressing component
     */
   var onLongPress: js.UndefOr[js.Function0[Unit]] = js.native
@@ -109,13 +96,6 @@ trait AvatarProps extends js.Object {
     * @default false
     */
   var rounded: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * If to show the edit button or not
-    *
-    * @default false
-    */
-  var showAccessory: js.UndefOr[Boolean] = js.native
   
   /**
     * Size of Avatar
@@ -174,12 +154,6 @@ object AvatarProps {
     def deleteImageComponent: Self = this.set("ImageComponent", js.undefined)
     
     @scala.inline
-    def setAccessory(value: PartialIconPropsPartialIm): Self = this.set("accessory", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAccessory: Self = this.set("accessory", js.undefined)
-    
-    @scala.inline
     def setActiveOpacity(value: Double): Self = this.set("activeOpacity", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -222,12 +196,6 @@ object AvatarProps {
     def deleteImageProps: Self = this.set("imageProps", js.undefined)
     
     @scala.inline
-    def setOnAccessoryPress(value: () => Unit): Self = this.set("onAccessoryPress", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def deleteOnAccessoryPress: Self = this.set("onAccessoryPress", js.undefined)
-    
-    @scala.inline
     def setOnLongPress(value: () => Unit): Self = this.set("onLongPress", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -268,12 +236,6 @@ object AvatarProps {
     
     @scala.inline
     def deleteRounded: Self = this.set("rounded", js.undefined)
-    
-    @scala.inline
-    def setShowAccessory(value: Boolean): Self = this.set("showAccessory", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteShowAccessory: Self = this.set("showAccessory", js.undefined)
     
     @scala.inline
     def setSize(value: small | medium | large | xlarge | Double): Self = this.set("size", value.asInstanceOf[js.Any])

@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SecurityResource extends js.Object {
   
   // Name of the resource that is related to current alert. Required.
-  var resource: js.UndefOr[String] = js.native
+  var resource: js.UndefOr[NullableOption[String]] = js.native
   
   // Represents type of security resources related to an alert. Possible values are: attacked, related.
-  var resourceType: js.UndefOr[SecurityResourceType] = js.native
+  var resourceType: js.UndefOr[NullableOption[SecurityResourceType]] = js.native
 }
 object SecurityResource {
   
@@ -37,15 +37,21 @@ object SecurityResource {
     }
     
     @scala.inline
-    def setResource(value: String): Self = this.set("resource", value.asInstanceOf[js.Any])
+    def setResource(value: NullableOption[String]): Self = this.set("resource", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResource: Self = this.set("resource", js.undefined)
     
     @scala.inline
-    def setResourceType(value: SecurityResourceType): Self = this.set("resourceType", value.asInstanceOf[js.Any])
+    def setResourceNull: Self = this.set("resource", null)
+    
+    @scala.inline
+    def setResourceType(value: NullableOption[SecurityResourceType]): Self = this.set("resourceType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResourceType: Self = this.set("resourceType", js.undefined)
+    
+    @scala.inline
+    def setResourceTypeNull: Self = this.set("resourceType", null)
   }
 }

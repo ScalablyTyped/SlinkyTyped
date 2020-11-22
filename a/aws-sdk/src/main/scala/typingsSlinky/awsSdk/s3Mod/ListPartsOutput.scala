@@ -18,7 +18,7 @@ trait ListPartsOutput extends js.Object {
   var AbortRuleId: js.UndefOr[typingsSlinky.awsSdk.s3Mod.AbortRuleId] = js.native
   
   /**
-    * Name of the bucket to which the multipart upload was initiated.
+    * The name of the bucket to which the multipart upload was initiated.
     */
   var Bucket: js.UndefOr[BucketName] = js.native
   

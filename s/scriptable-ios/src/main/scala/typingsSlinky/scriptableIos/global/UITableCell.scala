@@ -47,7 +47,7 @@ object UITableCell extends js.Object {
   /**
     * _Constructs a text cell._
     *
-    * Constructs a new cell containing a text.
+    * Constructs a new cell containing text.
     * @param title - Optional title to show in the cell.
     * @param subtitle - Optional subtitle shown below the title.
     * @see https://docs.scriptable.app/uitablecell/#text

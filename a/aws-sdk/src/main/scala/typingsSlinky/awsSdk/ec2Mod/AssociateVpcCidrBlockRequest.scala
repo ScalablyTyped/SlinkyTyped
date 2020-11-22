@@ -23,7 +23,7 @@ trait AssociateVpcCidrBlockRequest extends js.Object {
   var Ipv6CidrBlock: js.UndefOr[String] = js.native
   
   /**
-    * The name of the location from which we advertise the IPV6 CIDR block. Use this parameter to limit the CiDR block to this location.  You must set AmazonProvidedIpv6CidrBlock to true to use this parameter.  You can have one IPv6 CIDR block association per network border group.
+    * The name of the location from which we advertise the IPV6 CIDR block. Use this parameter to limit the CIDR block to this location.  You must set AmazonProvidedIpv6CidrBlock to true to use this parameter.  You can have one IPv6 CIDR block association per network border group.
     */
   var Ipv6CidrBlockNetworkBorderGroup: js.UndefOr[String] = js.native
   

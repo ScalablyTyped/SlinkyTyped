@@ -31,6 +31,11 @@ trait CreateCompilationJobRequest extends js.Object {
     * Specifies a limit to how long a model compilation job can run. When the job reaches the time limit, Amazon SageMaker ends the compilation job. Use this API to cap model training costs.
     */
   var StoppingCondition: typingsSlinky.awsSdk.sagemakerMod.StoppingCondition = js.native
+  
+  /**
+    * An array of key-value pairs that you want to use to organize and track your AWS resource costs. For more information, see Using Cost Allocation Tags in the AWS Billing and Cost Management User Guide. 
+    */
+  var Tags: js.UndefOr[TagList] = js.native
 }
 object CreateCompilationJobRequest {
   
@@ -75,5 +80,14 @@ object CreateCompilationJobRequest {
     
     @scala.inline
     def setStoppingCondition(value: StoppingCondition): Self = this.set("StoppingCondition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))
+    
+    @scala.inline
+    def setTags(value: TagList): Self = this.set("Tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("Tags", js.undefined)
   }
 }

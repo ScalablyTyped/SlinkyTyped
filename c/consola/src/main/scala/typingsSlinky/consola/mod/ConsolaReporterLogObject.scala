@@ -15,12 +15,12 @@ trait ConsolaReporterLogObject extends js.Object {
   
   var tag: String = js.native
   
-  var `type`: String = js.native
+  var `type`: logType = js.native
 }
 object ConsolaReporterLogObject {
   
   @scala.inline
-  def apply(args: js.Array[_], date: js.Date, level: LogLevel, tag: String, `type`: String): ConsolaReporterLogObject = {
+  def apply(args: js.Array[_], date: js.Date, level: LogLevel, tag: String, `type`: logType): ConsolaReporterLogObject = {
     val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], level = level.asInstanceOf[js.Any], tag = tag.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ConsolaReporterLogObject]
@@ -57,6 +57,6 @@ object ConsolaReporterLogObject {
     def setTag(value: String): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: logType): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ClassPrivateProperty
+import typingsSlinky.babelTraverse.babelTraverseStrings.FunctionTypeParam
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `221` extends js.Object {
   
-  var `type`: ClassPrivateProperty = js.native
+  var `type`: FunctionTypeParam = js.native
 }
 object `221` {
   
   @scala.inline
-  def apply(`type`: ClassPrivateProperty): `221` = {
+  def apply(`type`: FunctionTypeParam): `221` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`221`]
@@ -35,6 +35,6 @@ object `221` {
     }
     
     @scala.inline
-    def setType(value: ClassPrivateProperty): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: FunctionTypeParam): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

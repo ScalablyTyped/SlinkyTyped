@@ -8,9 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DOMComponent extends Component {
   
-  /** @name DOMComponent.dispose() */
+  /**
+    * [descr:DOMComponent.dispose()]
+    */
   def dispose(): Unit = js.native
   
-  /** @name DOMComponent.element() */
+  /**
+    * [descr:DOMComponent.element()]
+    */
   def element(): dxElement = js.native
 }

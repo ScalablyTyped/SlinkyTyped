@@ -1,7 +1,7 @@
 
 # Scala.js typings for d3-delaunay
 
-Typings are for version 4.1
+Typings are for version 5.3
 
 ## Library description:
 Compute the Voronoi diagram of a set of two-dimensional points.

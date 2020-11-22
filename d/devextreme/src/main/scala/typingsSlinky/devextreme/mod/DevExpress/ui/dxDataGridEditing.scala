@@ -8,16 +8,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDataGridEditing extends GridBaseEditing {
   
-  /** @name dxDataGrid.Options.editing.allowAdding */
+  /**
+    * [descr:dxDataGrid.Options.editing.allowAdding]
+    */
   var allowAdding: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDataGrid.Options.editing.allowDeleting */
+  /**
+    * [descr:dxDataGrid.Options.editing.allowDeleting]
+    */
   var allowDeleting: js.UndefOr[Boolean | (js.Function1[/* options */ ComponentRow, Boolean])] = js.native
   
-  /** @name dxDataGrid.Options.editing.allowUpdating */
+  /**
+    * [descr:dxDataGrid.Options.editing.allowUpdating]
+    */
   var allowUpdating: js.UndefOr[Boolean | (js.Function1[/* options */ ComponentRow, Boolean])] = js.native
   
-  /** @name dxDataGrid.Options.editing.texts */
+  /**
+    * [descr:dxDataGrid.Options.editing.texts]
+    */
   @JSName("texts")
   var texts_dxDataGridEditing: js.UndefOr[js.Any] = js.native
 }

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rickshaw"
-version := "0.0-unknown-dt-20200515Z-562df4"
+version := "0.0-unknown-dt-20201002Z-562df4"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

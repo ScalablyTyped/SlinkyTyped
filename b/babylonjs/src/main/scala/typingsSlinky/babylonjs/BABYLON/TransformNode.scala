@@ -52,6 +52,7 @@ trait TransformNode extends Node {
   
   var _position: js.Any = js.native
   
+  /** @hidden */
   var _postMultiplyPivotMatrix: Boolean = js.native
   
   var _preserveParentRotationForBillboard: js.Any = js.native

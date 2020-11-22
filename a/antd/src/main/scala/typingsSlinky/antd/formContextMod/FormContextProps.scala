@@ -1,6 +1,7 @@
 package typingsSlinky.antd.formContextMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.formFormMod.RequiredMark
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import scala.scalajs.js
@@ -19,6 +20,8 @@ trait FormContextProps extends js.Object {
   var labelCol: js.UndefOr[ColProps] = js.native
   
   var name: js.UndefOr[String] = js.native
+  
+  var requiredMark: js.UndefOr[RequiredMark] = js.native
   
   var vertical: Boolean = js.native
   
@@ -79,6 +82,12 @@ object FormContextProps {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setRequiredMark(value: RequiredMark): Self = this.set("requiredMark", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequiredMark: Self = this.set("requiredMark", js.undefined)
     
     @scala.inline
     def setWrapperCol(value: ColProps): Self = this.set("wrapperCol", value.asInstanceOf[js.Any])

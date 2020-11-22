@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MessageEventInit extends EventInit {
+trait MessageEventInit[T] extends EventInit {
   
-  var data: js.UndefOr[js.Any] = js.native
+  var data: js.UndefOr[T] = js.native
   
   var lastEventId: js.UndefOr[String] = js.native
   
@@ -16,13 +16,13 @@ trait MessageEventInit extends EventInit {
 object MessageEventInit {
   
   @scala.inline
-  def apply(): MessageEventInit = {
+  def apply[T](): MessageEventInit[T] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[MessageEventInit]
+    __obj.asInstanceOf[MessageEventInit[T]]
   }
   
   @scala.inline
-  implicit class MessageEventInitOps[Self <: MessageEventInit] (val x: Self) extends AnyVal {
+  implicit class MessageEventInitOps[Self <: MessageEventInit[_], T] (val x: Self with MessageEventInit[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -37,7 +37,7 @@ object MessageEventInit {
     }
     
     @scala.inline
-    def setData(value: js.Any): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: T): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)

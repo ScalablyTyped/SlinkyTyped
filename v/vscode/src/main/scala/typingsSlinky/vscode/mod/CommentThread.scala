@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CommentThread extends js.Object {
   
   /**
+    * Whether the thread supports reply.
+    * Defaults to true.
+    */
+  var canReply: Boolean = js.native
+  
+  /**
     * Whether the thread should be collapsed or expanded when opening the document.
     * Defaults to Collapsed.
     */
@@ -65,13 +71,14 @@ object CommentThread {
   
   @scala.inline
   def apply(
+    canReply: Boolean,
     collapsibleState: CommentThreadCollapsibleState,
     comments: js.Array[Comment],
     dispose: () => Unit,
     range: Range,
     uri: Uri
   ): CommentThread = {
-    val __obj = js.Dynamic.literal(collapsibleState = collapsibleState.asInstanceOf[js.Any], comments = comments.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), range = range.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(canReply = canReply.asInstanceOf[js.Any], collapsibleState = collapsibleState.asInstanceOf[js.Any], comments = comments.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), range = range.asInstanceOf[js.Any], uri = uri.asInstanceOf[js.Any])
     __obj.asInstanceOf[CommentThread]
   }
   
@@ -89,6 +96,9 @@ object CommentThread {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setCanReply(value: Boolean): Self = this.set("canReply", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCollapsibleState(value: CommentThreadCollapsibleState): Self = this.set("collapsibleState", value.asInstanceOf[js.Any])

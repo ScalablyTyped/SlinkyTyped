@@ -20,3 +20,16 @@ class NodeMaterialConnectionPoint protected ()
     direction: typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPointDirection
   ) = this()
 }
+/* static members */
+@JSImport("babylonjs/Materials/Node/index", "NodeMaterialConnectionPoint")
+@js.native
+object NodeMaterialConnectionPoint extends js.Object {
+  
+  /**
+    * Checks if two types are equivalent
+    * @param type1 type 1 to check
+    * @param type2 type 2 to check
+    * @returns true if both types are equivalent, else false
+    */
+  def AreEquivalentTypes(type1: Double, type2: Double): Boolean = js.native
+}

@@ -14,7 +14,7 @@ object serialization extends js.Object {
   
   @js.native
   abstract class Serializable ()
-    extends typingsSlinky.tensorflowTfjsCore.serializationMod.Serializable
+    extends typingsSlinky.tensorflowTfjsCore.baseMod.serialization.Serializable
   /* static members */
   @js.native
   object Serializable extends js.Object {
@@ -33,7 +33,7 @@ object serialization extends js.Object {
   
   @js.native
   class SerializationMap protected ()
-    extends typingsSlinky.tensorflowTfjsCore.serializationMod.SerializationMap
+    extends typingsSlinky.tensorflowTfjsCore.baseMod.serialization.SerializationMap
   /* static members */
   @js.native
   object SerializationMap extends js.Object {

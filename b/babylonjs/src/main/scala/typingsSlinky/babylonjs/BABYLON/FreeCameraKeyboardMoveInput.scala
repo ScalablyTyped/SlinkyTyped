@@ -39,6 +39,11 @@ trait FreeCameraKeyboardMoveInput extends ICameraInput[FreeCamera] {
   var keysDown: js.Array[Double] = js.native
   
   /**
+    * Gets or Set the list of keyboard keys used to control the downward move of the camera.
+    */
+  var keysDownward: js.Array[Double] = js.native
+  
+  /**
     * Gets or Set the list of keyboard keys used to control the left strafe move of the camera.
     */
   var keysLeft: js.Array[Double] = js.native
@@ -52,4 +57,9 @@ trait FreeCameraKeyboardMoveInput extends ICameraInput[FreeCamera] {
     * Gets or Set the list of keyboard keys used to control the forward move of the camera.
     */
   var keysUp: js.Array[Double] = js.native
+  
+  /**
+    * Gets or Set the list of keyboard keys used to control the upward move of the camera.
+    */
+  var keysUpward: js.Array[Double] = js.native
 }

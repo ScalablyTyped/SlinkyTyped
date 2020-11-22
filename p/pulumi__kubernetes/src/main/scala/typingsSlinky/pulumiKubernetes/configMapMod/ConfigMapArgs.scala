@@ -27,7 +27,7 @@ trait ConfigMapArgs extends js.Object {
   val data: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
-    * Immutable, if set to true, ensures that data stored in the ConfigMap cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil. This is an alpha field enabled by ImmutableEphemeralVolumes feature gate.
+    * Immutable, if set to true, ensures that data stored in the ConfigMap cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil. This is a beta field enabled by ImmutableEphemeralVolumes feature gate.
     */
   val immutable: js.UndefOr[Input[Boolean]] = js.native
   

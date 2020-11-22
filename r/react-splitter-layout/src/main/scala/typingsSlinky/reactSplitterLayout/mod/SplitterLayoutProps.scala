@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SplitterLayoutProps extends js.Object {
   
   /**
+    * Placeholder of the panel(s) inside the splitter
+    */
+  var children: js.UndefOr[js.Any] = js.native
+  
+  /**
     * Custom CSS class name applied to the layout div.
     * You can use this to customize layout style.
     * Refers to the original stylesheet to see what you can customize.
@@ -112,6 +117,12 @@ object SplitterLayoutProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setChildren(value: js.Any): Self = this.set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
     def setCustomClassName(value: String): Self = this.set("customClassName", value.asInstanceOf[js.Any])

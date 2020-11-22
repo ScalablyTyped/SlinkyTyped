@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.datasetsMod.datasets
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.datasetsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -12,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/data-sets relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/data-sets relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -39,9 +38,6 @@ class DataSet protected () extends Document {
   
   def dataSetAccess: DataSetAccess = js.native
   def dataSetAccess_=(newValue: DataSetAccess): Unit = js.native
-  
-  @JSName("model")
-  var model_FDataSet: IModel = js.native
   
   def parameters: IList[DataSetParameter] = js.native
   @JSName("parameters")

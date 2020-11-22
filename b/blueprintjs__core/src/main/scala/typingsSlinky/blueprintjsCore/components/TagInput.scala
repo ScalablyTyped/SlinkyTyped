@@ -87,7 +87,7 @@ object TagInput {
     def onKeyUp(value: (/* event */ SyntheticKeyboardEvent[HTMLElement], /* index */ js.UndefOr[Double]) => Unit): this.type = set("onKeyUp", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onRemove(value: (/* value */ String, /* index */ Double) => Unit): this.type = set("onRemove", js.Any.fromFunction2(value))
+    def onRemove(value: (/* value */ ReactElement, /* index */ Double) => Unit): this.type = set("onRemove", js.Any.fromFunction2(value))
     
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])

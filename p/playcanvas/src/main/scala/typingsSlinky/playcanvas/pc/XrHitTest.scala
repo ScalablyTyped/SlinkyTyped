@@ -1,6 +1,6 @@
 package typingsSlinky.playcanvas.pc
 
-import typingsSlinky.playcanvas.anon.Callback
+import typingsSlinky.playcanvas.anon.EntityTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -71,7 +71,7 @@ trait XrHitTest extends EventHandler {
     * @param [options.callback] - Optional callback function called once hit test source is created or failed.
     */
   def start(): Unit = js.native
-  def start(options: Callback): Unit = js.native
+  def start(options: EntityTypes): Unit = js.native
   
   /**
     * True if AR Hit Test is supported.

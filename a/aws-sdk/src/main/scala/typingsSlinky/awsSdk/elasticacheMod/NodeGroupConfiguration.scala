@@ -18,6 +18,11 @@ trait NodeGroupConfiguration extends js.Object {
   var PrimaryAvailabilityZone: js.UndefOr[String] = js.native
   
   /**
+    * The output ARN of the primary node.
+    */
+  var PrimaryOutpostArn: js.UndefOr[String] = js.native
+  
+  /**
     * A list of Availability Zones to be used for the read replicas. The number of Availability Zones in this list must match the value of ReplicaCount or ReplicasPerNodeGroup if not specified.
     */
   var ReplicaAvailabilityZones: js.UndefOr[AvailabilityZonesList] = js.native
@@ -26,6 +31,11 @@ trait NodeGroupConfiguration extends js.Object {
     * The number of read replica nodes in this node group (shard).
     */
   var ReplicaCount: js.UndefOr[IntegerOptional] = js.native
+  
+  /**
+    * The outpost ARN of the node replicas.
+    */
+  var ReplicaOutpostArns: js.UndefOr[OutpostArnsList] = js.native
   
   /**
     * A string that specifies the keyspace for a particular node group. Keyspaces range from 0 to 16,383. The string is in the format startkey-endkey. Example: "0-3999" 
@@ -68,6 +78,12 @@ object NodeGroupConfiguration {
     def deletePrimaryAvailabilityZone: Self = this.set("PrimaryAvailabilityZone", js.undefined)
     
     @scala.inline
+    def setPrimaryOutpostArn(value: String): Self = this.set("PrimaryOutpostArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrimaryOutpostArn: Self = this.set("PrimaryOutpostArn", js.undefined)
+    
+    @scala.inline
     def setReplicaAvailabilityZonesVarargs(value: String*): Self = this.set("ReplicaAvailabilityZones", js.Array(value :_*))
     
     @scala.inline
@@ -81,6 +97,15 @@ object NodeGroupConfiguration {
     
     @scala.inline
     def deleteReplicaCount: Self = this.set("ReplicaCount", js.undefined)
+    
+    @scala.inline
+    def setReplicaOutpostArnsVarargs(value: String*): Self = this.set("ReplicaOutpostArns", js.Array(value :_*))
+    
+    @scala.inline
+    def setReplicaOutpostArns(value: OutpostArnsList): Self = this.set("ReplicaOutpostArns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReplicaOutpostArns: Self = this.set("ReplicaOutpostArns", js.undefined)
     
     @scala.inline
     def setSlots(value: String): Self = this.set("Slots", value.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 
 # Scala.js typings for express-validator
 
-Typings are for version 6.6.0
+Typings are for version 6.6.1
 
 ## Library description:
 Express middleware for the validator module.

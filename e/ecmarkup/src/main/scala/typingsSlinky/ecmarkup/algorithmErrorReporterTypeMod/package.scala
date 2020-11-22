@@ -6,9 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object algorithmErrorReporterTypeMod {
   
-  type Reporter = js.Function2[
-    /* lintingError */ js.Array[typingsSlinky.ecmarkup.algorithmErrorReporterTypeMod.LintingError], 
-    /* sourceText */ java.lang.String, 
+  type Reporter = js.Function1[
+    /* lintingError */ typingsSlinky.ecmarkup.algorithmErrorReporterTypeMod.LintingError, 
     scala.Unit
   ]
 }

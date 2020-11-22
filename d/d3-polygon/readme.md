@@ -1,7 +1,7 @@
 
 # Scala.js typings for d3-polygon
 
-Typings are for version 1.0
+Typings are for version 2.0
 
 ## Library description:
 Operations for two-dimensional polygons.

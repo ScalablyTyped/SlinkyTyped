@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Parameters extends js.Object {
   
   /**
-    * DateTime parameters.
+    * Date-time parameters.
     */
   var DateTimeParameters: js.UndefOr[DateTimeParameterList] = js.native
   

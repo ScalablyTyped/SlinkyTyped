@@ -461,6 +461,16 @@ trait PartialCSSStyleDeclaratio extends js.Object {
   
   var overflowY: js.UndefOr[String] = js.native
   
+  var overscrollBehavior: js.UndefOr[String] = js.native
+  
+  var overscrollBehaviorBlock: js.UndefOr[String] = js.native
+  
+  var overscrollBehaviorInline: js.UndefOr[String] = js.native
+  
+  var overscrollBehaviorX: js.UndefOr[String] = js.native
+  
+  var overscrollBehaviorY: js.UndefOr[String] = js.native
+  
   var padding: js.UndefOr[String] = js.native
   
   var paddingBlockEnd: js.UndefOr[String] = js.native
@@ -2163,6 +2173,36 @@ object PartialCSSStyleDeclaratio {
     
     @scala.inline
     def deleteOverflowY: Self = this.set("overflowY", js.undefined)
+    
+    @scala.inline
+    def setOverscrollBehavior(value: String): Self = this.set("overscrollBehavior", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverscrollBehavior: Self = this.set("overscrollBehavior", js.undefined)
+    
+    @scala.inline
+    def setOverscrollBehaviorBlock(value: String): Self = this.set("overscrollBehaviorBlock", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverscrollBehaviorBlock: Self = this.set("overscrollBehaviorBlock", js.undefined)
+    
+    @scala.inline
+    def setOverscrollBehaviorInline(value: String): Self = this.set("overscrollBehaviorInline", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverscrollBehaviorInline: Self = this.set("overscrollBehaviorInline", js.undefined)
+    
+    @scala.inline
+    def setOverscrollBehaviorX(value: String): Self = this.set("overscrollBehaviorX", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverscrollBehaviorX: Self = this.set("overscrollBehaviorX", js.undefined)
+    
+    @scala.inline
+    def setOverscrollBehaviorY(value: String): Self = this.set("overscrollBehaviorY", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverscrollBehaviorY: Self = this.set("overscrollBehaviorY", js.undefined)
     
     @scala.inline
     def setPadding(value: String): Self = this.set("padding", value.asInstanceOf[js.Any])

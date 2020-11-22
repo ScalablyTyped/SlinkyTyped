@@ -54,6 +54,7 @@ import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetCertificateResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetComputedStyleForNodeResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetContentQuadsResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetCookiesResponse
+import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetCountersResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetCredentialResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetCredentialsResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetCurrentTimeResponse
@@ -70,6 +71,7 @@ import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetFrameOwnerResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetFrameTreeResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetFramesWithManifestsResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetFullAXTreeResponse
+import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetGridHighlightObjectsForTestResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetHeapObjectIdResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetHeapUsageResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetHighlightObjectForTestResponse
@@ -89,6 +91,7 @@ import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetMetricsResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetNavigationHistoryResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetNodeForLocationResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetNodeStackTracesResponse
+import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetNodesForSubtreeByStyleResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetObjectByHeapObjectIdResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetOuterHTMLResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetPartialAXTreeResponse
@@ -108,7 +111,9 @@ import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetRuntimeCallStatsResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetSamplingProfileResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetScriptSourceResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetSearchResultsResponse
+import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetSecurityIsolationStatusResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetSnapshotResponse
+import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetSourceOrderHighlightObjectForTestResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetStackTraceResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetStyleSheetTextResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetTargetInfoResponse
@@ -119,6 +124,7 @@ import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetWasmBytecodeResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetWindowBoundsResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGetWindowForTargetResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeGlobalLexicalScopeNamesResponse
+import typingsSlinky.devtoolsProtocol.anon.ReturnTypeLoadNetworkResourceResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeLoadSnapshotResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeMakeSnapshotResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeMoveToResponse
@@ -128,6 +134,7 @@ import typingsSlinky.devtoolsProtocol.anon.ReturnTypePrintToPDFResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeProfileSnapshotResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypePushNodeByPathToFrontendResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypePushNodesByBackendIdsToFrontendResponse
+import typingsSlinky.devtoolsProtocol.anon.ReturnTypeQueryAXTreeResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeQueryObjectsResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeQuerySelectorAllResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeQuerySelectorResponse
@@ -167,6 +174,7 @@ import typingsSlinky.devtoolsProtocol.anon.ReturnTypeStartPreciseCoverageRespons
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeStopResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeStopRuleUsageTrackingResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeStopSamplingResponse
+import typingsSlinky.devtoolsProtocol.anon.ReturnTypeTakeComputedStyleUpdatesResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeTakeCoverageDeltaResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeTakePreciseCoverageResponse
 import typingsSlinky.devtoolsProtocol.anon.ReturnTypeTakeResponseBodyAsStreamResponse
@@ -289,7 +297,16 @@ import typingsSlinky.devtoolsProtocol.anon.`200`
 import typingsSlinky.devtoolsProtocol.anon.`201`
 import typingsSlinky.devtoolsProtocol.anon.`202`
 import typingsSlinky.devtoolsProtocol.anon.`203`
+import typingsSlinky.devtoolsProtocol.anon.`204`
+import typingsSlinky.devtoolsProtocol.anon.`205`
+import typingsSlinky.devtoolsProtocol.anon.`206`
+import typingsSlinky.devtoolsProtocol.anon.`207`
+import typingsSlinky.devtoolsProtocol.anon.`208`
+import typingsSlinky.devtoolsProtocol.anon.`209`
 import typingsSlinky.devtoolsProtocol.anon.`20`
+import typingsSlinky.devtoolsProtocol.anon.`210`
+import typingsSlinky.devtoolsProtocol.anon.`211`
+import typingsSlinky.devtoolsProtocol.anon.`212`
 import typingsSlinky.devtoolsProtocol.anon.`21`
 import typingsSlinky.devtoolsProtocol.anon.`22`
 import typingsSlinky.devtoolsProtocol.anon.`23`
@@ -410,6 +427,16 @@ trait Commands extends js.Object {
   var AccessibilityDotgetPartialAXTree: ReturnTypeGetPartialAXTreeResponse = js.native
   
   /**
+    * Query a DOM node's accessibility subtree for accessible name and role.
+    * This command computes the name and role for all nodes in the subtree, including those that are
+    * ignored for accessibility, and returns those that mactch the specified name and role. If no DOM
+    * node is specified, or the DOM node does not exist, the command returns an error. If neither
+    * `accessibleName` or `role` is specified, it returns all the accessibility nodes in the subtree.
+    */
+  @JSName("Accessibility.queryAXTree")
+  var AccessibilityDotqueryAXTree: ReturnTypeQueryAXTreeResponse = js.native
+  
+  /**
     * Disables animation domain notifications.
     */
   @JSName("Animation.disable")
@@ -437,7 +464,7 @@ trait Commands extends js.Object {
     * Releases a set of animations to no longer be manipulated.
     */
   @JSName("Animation.releaseAnimations")
-  var AnimationDotreleaseAnimations: `23` = js.native
+  var AnimationDotreleaseAnimations: `24` = js.native
   
   /**
     * Gets the remote object of the Animation.
@@ -449,25 +476,25 @@ trait Commands extends js.Object {
     * Seek a set of animations to a particular time within each animation.
     */
   @JSName("Animation.seekAnimations")
-  var AnimationDotseekAnimations: `24` = js.native
+  var AnimationDotseekAnimations: `25` = js.native
   
   /**
     * Sets the paused state of a set of animations.
     */
   @JSName("Animation.setPaused")
-  var AnimationDotsetPaused: `25` = js.native
+  var AnimationDotsetPaused: `26` = js.native
   
   /**
     * Sets the playback rate of the document timeline.
     */
   @JSName("Animation.setPlaybackRate")
-  var AnimationDotsetPlaybackRate: `26` = js.native
+  var AnimationDotsetPlaybackRate: `27` = js.native
   
   /**
     * Sets the timing of an animation node.
     */
   @JSName("Animation.setTiming")
-  var AnimationDotsetTiming: `27` = js.native
+  var AnimationDotsetTiming: `28` = js.native
   
   /**
     * Enables application cache domain notifications.
@@ -518,25 +545,25 @@ trait Commands extends js.Object {
     * Clears all stored data for the service.
     */
   @JSName("BackgroundService.clearEvents")
-  var BackgroundServiceDotclearEvents: `31` = js.native
+  var BackgroundServiceDotclearEvents: `32` = js.native
   
   /**
     * Set the recording state for the service.
     */
   @JSName("BackgroundService.setRecording")
-  var BackgroundServiceDotsetRecording: `30` = js.native
+  var BackgroundServiceDotsetRecording: `31` = js.native
   
   /**
     * Enables event updates for the service.
     */
   @JSName("BackgroundService.startObserving")
-  var BackgroundServiceDotstartObserving: `28` = js.native
+  var BackgroundServiceDotstartObserving: `29` = js.native
   
   /**
     * Disables event updates for the service.
     */
   @JSName("BackgroundService.stopObserving")
-  var BackgroundServiceDotstopObserving: `29` = js.native
+  var BackgroundServiceDotstopObserving: `30` = js.native
   
   /**
     * Close browser gracefully.
@@ -597,37 +624,37 @@ trait Commands extends js.Object {
     * Grant specific permissions to the given origin and reject all others.
     */
   @JSName("Browser.grantPermissions")
-  var BrowserDotgrantPermissions: `33` = js.native
+  var BrowserDotgrantPermissions: `34` = js.native
   
   /**
     * Reset all permission management for all origins.
     */
   @JSName("Browser.resetPermissions")
-  var BrowserDotresetPermissions: `34` = js.native
+  var BrowserDotresetPermissions: `35` = js.native
   
   /**
     * Set dock tile details, platform-specific.
     */
   @JSName("Browser.setDockTile")
-  var BrowserDotsetDockTile: `37` = js.native
+  var BrowserDotsetDockTile: `38` = js.native
   
   /**
     * Set the behavior when downloading a file.
     */
   @JSName("Browser.setDownloadBehavior")
-  var BrowserDotsetDownloadBehavior: `35` = js.native
+  var BrowserDotsetDownloadBehavior: `36` = js.native
   
   /**
     * Set permission settings for given origin.
     */
   @JSName("Browser.setPermission")
-  var BrowserDotsetPermission: `32` = js.native
+  var BrowserDotsetPermission: `33` = js.native
   
   /**
     * Set position and/or size of the browser window.
     */
   @JSName("Browser.setWindowBounds")
-  var BrowserDotsetWindowBounds: `36` = js.native
+  var BrowserDotsetWindowBounds: `37` = js.native
   
   /**
     * Inserts a new rule with the given `ruleText` in a stylesheet with given `styleSheetId`, at the
@@ -666,7 +693,7 @@ trait Commands extends js.Object {
     * the browser.
     */
   @JSName("CSS.forcePseudoState")
-  var CSSDotforcePseudoState: `38` = js.native
+  var CSSDotforcePseudoState: `39` = js.native
   
   @JSName("CSS.getBackgroundColors")
   var CSSDotgetBackgroundColors: ReturnTypeGetBackgroundColorsResponse = js.native
@@ -714,13 +741,19 @@ trait Commands extends js.Object {
     * property
     */
   @JSName("CSS.setEffectivePropertyValueForNode")
-  var CSSDotsetEffectivePropertyValueForNode: `39` = js.native
+  var CSSDotsetEffectivePropertyValueForNode: `41` = js.native
   
   /**
     * Modifies the keyframe rule key text.
     */
   @JSName("CSS.setKeyframeKey")
   var CSSDotsetKeyframeKey: ReturnTypeSetKeyframeKeyResponse = js.native
+  
+  /**
+    * Enables/disables rendering of local CSS fonts (enabled by default).
+    */
+  @JSName("CSS.setLocalFontsEnabled")
+  var CSSDotsetLocalFontsEnabled: `42` = js.native
   
   /**
     * Modifies the rule selector.
@@ -760,6 +793,12 @@ trait Commands extends js.Object {
   var CSSDotstopRuleUsageTracking: ReturnTypeStopRuleUsageTrackingResponse = js.native
   
   /**
+    * Polls the next batch of computed style updates.
+    */
+  @JSName("CSS.takeComputedStyleUpdates")
+  var CSSDottakeComputedStyleUpdates: ReturnTypeTakeComputedStyleUpdatesResponse = js.native
+  
+  /**
     * Obtain list of rules that became used since last call to this method (or since start of coverage
     * instrumentation)
     */
@@ -767,16 +806,27 @@ trait Commands extends js.Object {
   var CSSDottakeCoverageDelta: ReturnTypeTakeCoverageDeltaResponse = js.native
   
   /**
+    * Starts tracking the given computed styles for updates. The specified array of properties
+    * replaces the one previously specified. Pass empty array to disable tracking.
+    * Use takeComputedStyleUpdates to retrieve the list of nodes that had properties modified.
+    * The changes to computed style properties are only tracked for nodes pushed to the front-end
+    * by the DOM agent. If no changes to the tracked properties occur after the node has been pushed
+    * to the front-end, no updates will be issued for the node.
+    */
+  @JSName("CSS.trackComputedStyleUpdates")
+  var CSSDottrackComputedStyleUpdates: `40` = js.native
+  
+  /**
     * Deletes a cache.
     */
   @JSName("CacheStorage.deleteCache")
-  var CacheStorageDotdeleteCache: `40` = js.native
+  var CacheStorageDotdeleteCache: `43` = js.native
   
   /**
     * Deletes a cache entry.
     */
   @JSName("CacheStorage.deleteEntry")
-  var CacheStorageDotdeleteEntry: `41` = js.native
+  var CacheStorageDotdeleteEntry: `44` = js.native
   
   /**
     * Requests cache names.
@@ -810,26 +860,26 @@ trait Commands extends js.Object {
     * an |issueUpdated| event is fired.
     */
   @JSName("Cast.enable")
-  var CastDotenable: `42` = js.native
+  var CastDotenable: `45` = js.native
   
   /**
     * Sets a sink to be used when the web page requests the browser to choose a
     * sink via Presentation API, Remote Playback API, or Cast SDK.
     */
   @JSName("Cast.setSinkToUse")
-  var CastDotsetSinkToUse: `43` = js.native
+  var CastDotsetSinkToUse: `46` = js.native
   
   /**
     * Starts mirroring the tab to the sink.
     */
   @JSName("Cast.startTabMirroring")
-  var CastDotstartTabMirroring: `44` = js.native
+  var CastDotstartTabMirroring: `47` = js.native
   
   /**
     * Stops the active Cast session on the sink.
     */
   @JSName("Cast.stopCasting")
-  var CastDotstopCasting: `45` = js.native
+  var CastDotstopCasting: `48` = js.native
   
   /**
     * Does nothing.
@@ -860,49 +910,49 @@ trait Commands extends js.Object {
     * Removes DOM breakpoint that was set using `setDOMBreakpoint`.
     */
   @JSName("DOMDebugger.removeDOMBreakpoint")
-  var DOMDebuggerDotremoveDOMBreakpoint: `59` = js.native
+  var DOMDebuggerDotremoveDOMBreakpoint: `62` = js.native
   
   /**
     * Removes breakpoint on particular DOM event.
     */
   @JSName("DOMDebugger.removeEventListenerBreakpoint")
-  var DOMDebuggerDotremoveEventListenerBreakpoint: `60` = js.native
+  var DOMDebuggerDotremoveEventListenerBreakpoint: `63` = js.native
   
   /**
     * Removes breakpoint on particular native event.
     */
   @JSName("DOMDebugger.removeInstrumentationBreakpoint")
-  var DOMDebuggerDotremoveInstrumentationBreakpoint: `61` = js.native
+  var DOMDebuggerDotremoveInstrumentationBreakpoint: `64` = js.native
   
   /**
     * Removes breakpoint from XMLHttpRequest.
     */
   @JSName("DOMDebugger.removeXHRBreakpoint")
-  var DOMDebuggerDotremoveXHRBreakpoint: `62` = js.native
+  var DOMDebuggerDotremoveXHRBreakpoint: `65` = js.native
   
   /**
     * Sets breakpoint on particular operation with DOM.
     */
   @JSName("DOMDebugger.setDOMBreakpoint")
-  var DOMDebuggerDotsetDOMBreakpoint: `63` = js.native
+  var DOMDebuggerDotsetDOMBreakpoint: `66` = js.native
   
   /**
     * Sets breakpoint on particular DOM event.
     */
   @JSName("DOMDebugger.setEventListenerBreakpoint")
-  var DOMDebuggerDotsetEventListenerBreakpoint: `64` = js.native
+  var DOMDebuggerDotsetEventListenerBreakpoint: `67` = js.native
   
   /**
     * Sets breakpoint on particular native event.
     */
   @JSName("DOMDebugger.setInstrumentationBreakpoint")
-  var DOMDebuggerDotsetInstrumentationBreakpoint: `65` = js.native
+  var DOMDebuggerDotsetInstrumentationBreakpoint: `68` = js.native
   
   /**
     * Sets breakpoint on XMLHttpRequest.
     */
   @JSName("DOMDebugger.setXHRBreakpoint")
-  var DOMDebuggerDotsetXHRBreakpoint: `66` = js.native
+  var DOMDebuggerDotsetXHRBreakpoint: `69` = js.native
   
   /**
     * Collects class names for the node with given id and all of it's child nodes.
@@ -935,7 +985,7 @@ trait Commands extends js.Object {
     * be called for that search.
     */
   @JSName("DOM.discardSearchResults")
-  var DOMDotdiscardSearchResults: `47` = js.native
+  var DOMDotdiscardSearchResults: `50` = js.native
   
   /**
     * Enables DOM agent for the given page.
@@ -947,7 +997,7 @@ trait Commands extends js.Object {
     * Focuses the given element.
     */
   @JSName("DOM.focus")
-  var DOMDotfocus: `48` = js.native
+  var DOMDotfocus: `51` = js.native
   
   /**
     * Returns attributes for the specified node.
@@ -983,6 +1033,8 @@ trait Commands extends js.Object {
   
   /**
     * Returns the root DOM node (and optionally the subtree) to the caller.
+    * Deprecated, as it is not designed to work well with the rest of the DOM agent.
+    * Use DOMSnapshot.captureSnapshot instead.
     */
   @JSName("DOM.getFlattenedDocument")
   var DOMDotgetFlattenedDocument: ReturnTypeGetFlattenedDocumentResponse = js.native
@@ -1005,6 +1057,12 @@ trait Commands extends js.Object {
     */
   @JSName("DOM.getNodeStackTraces")
   var DOMDotgetNodeStackTraces: ReturnTypeGetNodeStackTracesResponse = js.native
+  
+  /**
+    * Finds nodes with a given computed style in a subtree.
+    */
+  @JSName("DOM.getNodesForSubtreeByStyle")
+  var DOMDotgetNodesForSubtreeByStyle: ReturnTypeGetNodesForSubtreeByStyleResponse = js.native
   
   /**
     * Returns node's HTML markup.
@@ -1096,13 +1154,13 @@ trait Commands extends js.Object {
     * Removes attribute with given name from an element with given id.
     */
   @JSName("DOM.removeAttribute")
-  var DOMDotremoveAttribute: `49` = js.native
+  var DOMDotremoveAttribute: `52` = js.native
   
   /**
     * Removes node with given id.
     */
   @JSName("DOM.removeNode")
-  var DOMDotremoveNode: `50` = js.native
+  var DOMDotremoveNode: `53` = js.native
   
   /**
     * Requests that children of the node with given id are returned to the caller in form of
@@ -1110,7 +1168,7 @@ trait Commands extends js.Object {
     * the specified depth.
     */
   @JSName("DOM.requestChildNodes")
-  var DOMDotrequestChildNodes: `51` = js.native
+  var DOMDotrequestChildNodes: `54` = js.native
   
   /**
     * Requests that the node is sent to the caller given the JavaScript node object reference. All
@@ -1132,33 +1190,33 @@ trait Commands extends js.Object {
     * to identify the node.
     */
   @JSName("DOM.scrollIntoViewIfNeeded")
-  var DOMDotscrollIntoViewIfNeeded: `46` = js.native
+  var DOMDotscrollIntoViewIfNeeded: `49` = js.native
   
   /**
     * Sets attribute for an element with given id.
     */
   @JSName("DOM.setAttributeValue")
-  var DOMDotsetAttributeValue: `52` = js.native
+  var DOMDotsetAttributeValue: `55` = js.native
   
   /**
     * Sets attributes on element with given id. This method is useful when user edits some existing
     * attribute value and types in several attribute name/value pairs.
     */
   @JSName("DOM.setAttributesAsText")
-  var DOMDotsetAttributesAsText: `53` = js.native
+  var DOMDotsetAttributesAsText: `56` = js.native
   
   /**
     * Sets files for the given file input element.
     */
   @JSName("DOM.setFileInputFiles")
-  var DOMDotsetFileInputFiles: `54` = js.native
+  var DOMDotsetFileInputFiles: `57` = js.native
   
   /**
     * Enables console to refer to the node with given id via $x (see Command Line API for more details
     * $x functions).
     */
   @JSName("DOM.setInspectedNode")
-  var DOMDotsetInspectedNode: `56` = js.native
+  var DOMDotsetInspectedNode: `59` = js.native
   
   /**
     * Sets node name for a node with given id.
@@ -1170,19 +1228,19 @@ trait Commands extends js.Object {
     * Sets if stack traces should be captured for Nodes. See `Node.getNodeStackTraces`. Default is disabled.
     */
   @JSName("DOM.setNodeStackTracesEnabled")
-  var DOMDotsetNodeStackTracesEnabled: `55` = js.native
+  var DOMDotsetNodeStackTracesEnabled: `58` = js.native
   
   /**
     * Sets node value for a node with given id.
     */
   @JSName("DOM.setNodeValue")
-  var DOMDotsetNodeValue: `57` = js.native
+  var DOMDotsetNodeValue: `60` = js.native
   
   /**
     * Sets node HTML markup, returns new node id.
     */
   @JSName("DOM.setOuterHTML")
-  var DOMDotsetOuterHTML: `58` = js.native
+  var DOMDotsetOuterHTML: `61` = js.native
   
   /**
     * Undoes the last performed action.
@@ -1221,7 +1279,7 @@ trait Commands extends js.Object {
   var DOMSnapshotDotgetSnapshot: ReturnTypeGetSnapshotResponse = js.native
   
   @JSName("DOMStorage.clear")
-  var DOMStorageDotclear: `67` = js.native
+  var DOMStorageDotclear: `70` = js.native
   
   /**
     * Disables storage tracking, prevents storage events from being sent to the client.
@@ -1239,10 +1297,10 @@ trait Commands extends js.Object {
   var DOMStorageDotgetDOMStorageItems: ReturnTypeGetDOMStorageItemsResponse = js.native
   
   @JSName("DOMStorage.removeDOMStorageItem")
-  var DOMStorageDotremoveDOMStorageItem: `68` = js.native
+  var DOMStorageDotremoveDOMStorageItem: `71` = js.native
   
   @JSName("DOMStorage.setDOMStorageItem")
-  var DOMStorageDotsetDOMStorageItem: `69` = js.native
+  var DOMStorageDotsetDOMStorageItem: `72` = js.native
   
   /**
     * Disables database tracking, prevents database events from being sent to the client.
@@ -1457,7 +1515,7 @@ trait Commands extends js.Object {
     * Steps over the statement.
     */
   @JSName("Debugger.stepOver")
-  var DebuggerDotstepOver: ParamsType = js.native
+  var DebuggerDotstepOver: `10` = js.native
   
   /**
     * Clears the overridden Device Orientation.
@@ -1469,7 +1527,7 @@ trait Commands extends js.Object {
     * Overrides the Device Orientation.
     */
   @JSName("DeviceOrientation.setDeviceOrientationOverride")
-  var DeviceOrientationDotsetDeviceOrientationOverride: `70` = js.native
+  var DeviceOrientationDotsetDeviceOrientationOverride: `73` = js.native
   
   /**
     * Tells whether emulation is supported.
@@ -1490,6 +1548,12 @@ trait Commands extends js.Object {
   var EmulationDotclearGeolocationOverride: ParamsType = js.native
   
   /**
+    * Clears Idle state overrides.
+    */
+  @JSName("Emulation.clearIdleOverride")
+  var EmulationDotclearIdleOverride: ParamsType = js.native
+  
+  /**
     * Requests that page scale factor is reset to initial values.
     */
   @JSName("Emulation.resetPageScaleFactor")
@@ -1499,14 +1563,14 @@ trait Commands extends js.Object {
     * Enables CPU throttling to emulate slow CPUs.
     */
   @JSName("Emulation.setCPUThrottlingRate")
-  var EmulationDotsetCPUThrottlingRate: `72` = js.native
+  var EmulationDotsetCPUThrottlingRate: `75` = js.native
   
   /**
     * Sets or clears an override of the default background color of the frame. This override is used
     * if the content does not specify one.
     */
   @JSName("Emulation.setDefaultBackgroundColorOverride")
-  var EmulationDotsetDefaultBackgroundColorOverride: `73` = js.native
+  var EmulationDotsetDefaultBackgroundColorOverride: `76` = js.native
   
   /**
     * Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
@@ -1514,83 +1578,89 @@ trait Commands extends js.Object {
     * query results).
     */
   @JSName("Emulation.setDeviceMetricsOverride")
-  var EmulationDotsetDeviceMetricsOverride: `74` = js.native
+  var EmulationDotsetDeviceMetricsOverride: `77` = js.native
   
   @JSName("Emulation.setDocumentCookieDisabled")
-  var EmulationDotsetDocumentCookieDisabled: `76` = js.native
+  var EmulationDotsetDocumentCookieDisabled: `79` = js.native
   
   @JSName("Emulation.setEmitTouchEventsForMouse")
-  var EmulationDotsetEmitTouchEventsForMouse: `77` = js.native
+  var EmulationDotsetEmitTouchEventsForMouse: `80` = js.native
   
   /**
     * Emulates the given media type or media feature for CSS media queries.
     */
   @JSName("Emulation.setEmulatedMedia")
-  var EmulationDotsetEmulatedMedia: `78` = js.native
+  var EmulationDotsetEmulatedMedia: `81` = js.native
   
   /**
     * Emulates the given vision deficiency.
     */
   @JSName("Emulation.setEmulatedVisionDeficiency")
-  var EmulationDotsetEmulatedVisionDeficiency: `79` = js.native
+  var EmulationDotsetEmulatedVisionDeficiency: `82` = js.native
   
   /**
     * Enables or disables simulating a focused and active page.
     */
   @JSName("Emulation.setFocusEmulationEnabled")
-  var EmulationDotsetFocusEmulationEnabled: `71` = js.native
+  var EmulationDotsetFocusEmulationEnabled: `74` = js.native
   
   /**
     * Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
     * unavailable.
     */
   @JSName("Emulation.setGeolocationOverride")
-  var EmulationDotsetGeolocationOverride: `80` = js.native
+  var EmulationDotsetGeolocationOverride: `83` = js.native
+  
+  /**
+    * Overrides the Idle state.
+    */
+  @JSName("Emulation.setIdleOverride")
+  var EmulationDotsetIdleOverride: `84` = js.native
   
   /**
     * Overrides default host system locale with the specified one.
     */
   @JSName("Emulation.setLocaleOverride")
-  var EmulationDotsetLocaleOverride: `85` = js.native
+  var EmulationDotsetLocaleOverride: `89` = js.native
   
   /**
     * Overrides value returned by the javascript navigator object.
     */
   @JSName("Emulation.setNavigatorOverrides")
-  var EmulationDotsetNavigatorOverrides: `81` = js.native
+  var EmulationDotsetNavigatorOverrides: `85` = js.native
   
   /**
     * Sets a specified page scale factor.
     */
   @JSName("Emulation.setPageScaleFactor")
-  var EmulationDotsetPageScaleFactor: `82` = js.native
+  var EmulationDotsetPageScaleFactor: `86` = js.native
   
   /**
     * Switches script execution in the page.
     */
   @JSName("Emulation.setScriptExecutionDisabled")
-  var EmulationDotsetScriptExecutionDisabled: `83` = js.native
+  var EmulationDotsetScriptExecutionDisabled: `87` = js.native
   
   @JSName("Emulation.setScrollbarsHidden")
-  var EmulationDotsetScrollbarsHidden: `75` = js.native
+  var EmulationDotsetScrollbarsHidden: `78` = js.native
   
   /**
     * Overrides default host system timezone with the specified one.
     */
   @JSName("Emulation.setTimezoneOverride")
-  var EmulationDotsetTimezoneOverride: `86` = js.native
+  var EmulationDotsetTimezoneOverride: `90` = js.native
   
   /**
     * Enables touch on platforms which do not support them.
     */
   @JSName("Emulation.setTouchEmulationEnabled")
-  var EmulationDotsetTouchEmulationEnabled: `84` = js.native
+  var EmulationDotsetTouchEmulationEnabled: `88` = js.native
   
   /**
     * Allows overriding user agent with the given string.
     */
   @JSName("Emulation.setUserAgentOverride")
-  var EmulationDotsetUserAgentOverride: `88` = js.native
+  var EmulationDotsetUserAgentOverride: `92` = js.native
   
   /**
     * Turns on virtual time for all frames (replacing real-time with a synthetic time source) and sets
@@ -1605,19 +1675,19 @@ trait Commands extends js.Object {
     * on Android.
     */
   @JSName("Emulation.setVisibleSize")
-  var EmulationDotsetVisibleSize: `87` = js.native
+  var EmulationDotsetVisibleSize: `91` = js.native
   
   /**
     * Continues the request, optionally modifying some of its parameters.
     */
   @JSName("Fetch.continueRequest")
-  var FetchDotcontinueRequest: `197` = js.native
+  var FetchDotcontinueRequest: `205` = js.native
   
   /**
     * Continues a request supplying authChallengeResponse following authRequired event.
     */
   @JSName("Fetch.continueWithAuth")
-  var FetchDotcontinueWithAuth: `198` = js.native
+  var FetchDotcontinueWithAuth: `206` = js.native
   
   /**
     * Disables the fetch domain.
@@ -1630,19 +1700,19 @@ trait Commands extends js.Object {
     * calls one of failRequest, fulfillRequest or continueRequest/continueWithAuth.
     */
   @JSName("Fetch.enable")
-  var FetchDotenable: `194` = js.native
+  var FetchDotenable: `202` = js.native
   
   /**
     * Causes the request to fail with specified reason.
     */
   @JSName("Fetch.failRequest")
-  var FetchDotfailRequest: `195` = js.native
+  var FetchDotfailRequest: `203` = js.native
   
   /**
     * Provides response to the request.
     */
   @JSName("Fetch.fulfillRequest")
-  var FetchDotfulfillRequest: `196` = js.native
+  var FetchDotfulfillRequest: `204` = js.native
   
   /**
     * Causes the body of the response to be received from the server and
@@ -1696,7 +1766,7 @@ trait Commands extends js.Object {
     * $x functions).
     */
   @JSName("HeapProfiler.addInspectedHeapObject")
-  var HeapProfilerDotaddInspectedHeapObject: `10` = js.native
+  var HeapProfilerDotaddInspectedHeapObject: `11` = js.native
   
   @JSName("HeapProfiler.collectGarbage")
   var HeapProfilerDotcollectGarbage: ParamsType = js.native
@@ -1717,25 +1787,25 @@ trait Commands extends js.Object {
   var HeapProfilerDotgetSamplingProfile: ReturnTypeGetSamplingProfileResponse = js.native
   
   @JSName("HeapProfiler.startSampling")
-  var HeapProfilerDotstartSampling: `11` = js.native
+  var HeapProfilerDotstartSampling: `12` = js.native
   
   @JSName("HeapProfiler.startTrackingHeapObjects")
-  var HeapProfilerDotstartTrackingHeapObjects: `12` = js.native
+  var HeapProfilerDotstartTrackingHeapObjects: `13` = js.native
   
   @JSName("HeapProfiler.stopSampling")
   var HeapProfilerDotstopSampling: ReturnTypeStopSamplingResponse = js.native
   
   @JSName("HeapProfiler.stopTrackingHeapObjects")
-  var HeapProfilerDotstopTrackingHeapObjects: `13` = js.native
+  var HeapProfilerDotstopTrackingHeapObjects: `14` = js.native
   
   @JSName("HeapProfiler.takeHeapSnapshot")
-  var HeapProfilerDottakeHeapSnapshot: `14` = js.native
+  var HeapProfilerDottakeHeapSnapshot: `15` = js.native
   
   /**
     * Close the stream, discard any temporary backing storage.
     */
   @JSName("IO.close")
-  var IODotclose: `89` = js.native
+  var IODotclose: `93` = js.native
   
   /**
     * Read a chunk of the stream
@@ -1753,19 +1823,19 @@ trait Commands extends js.Object {
     * Clears all entries from an object store.
     */
   @JSName("IndexedDB.clearObjectStore")
-  var IndexedDBDotclearObjectStore: `90` = js.native
+  var IndexedDBDotclearObjectStore: `94` = js.native
   
   /**
     * Deletes a database.
     */
   @JSName("IndexedDB.deleteDatabase")
-  var IndexedDBDotdeleteDatabase: `91` = js.native
+  var IndexedDBDotdeleteDatabase: `95` = js.native
   
   /**
     * Delete a range of entries from an object store
     */
   @JSName("IndexedDB.deleteObjectStoreEntries")
-  var IndexedDBDotdeleteObjectStoreEntries: `92` = js.native
+  var IndexedDBDotdeleteObjectStoreEntries: `96` = js.native
   
   /**
     * Disables events from backend.
@@ -1807,56 +1877,56 @@ trait Commands extends js.Object {
     * Dispatches a key event to the page.
     */
   @JSName("Input.dispatchKeyEvent")
-  var InputDotdispatchKeyEvent: `93` = js.native
+  var InputDotdispatchKeyEvent: `97` = js.native
   
   /**
     * Dispatches a mouse event to the page.
     */
   @JSName("Input.dispatchMouseEvent")
-  var InputDotdispatchMouseEvent: `95` = js.native
+  var InputDotdispatchMouseEvent: `99` = js.native
   
   /**
     * Dispatches a touch event to the page.
     */
   @JSName("Input.dispatchTouchEvent")
-  var InputDotdispatchTouchEvent: `96` = js.native
+  var InputDotdispatchTouchEvent: `100` = js.native
   
   /**
     * Emulates touch event from the mouse event parameters.
     */
   @JSName("Input.emulateTouchFromMouseEvent")
-  var InputDotemulateTouchFromMouseEvent: `97` = js.native
+  var InputDotemulateTouchFromMouseEvent: `101` = js.native
   
   /**
     * This method emulates inserting text that doesn't come from a key press,
     * for example an emoji keyboard or an IME.
     */
   @JSName("Input.insertText")
-  var InputDotinsertText: `94` = js.native
+  var InputDotinsertText: `98` = js.native
   
   /**
     * Ignores input events (useful while auditing page).
     */
   @JSName("Input.setIgnoreInputEvents")
-  var InputDotsetIgnoreInputEvents: `98` = js.native
+  var InputDotsetIgnoreInputEvents: `102` = js.native
   
   /**
     * Synthesizes a pinch gesture over a time period by issuing appropriate touch events.
     */
   @JSName("Input.synthesizePinchGesture")
-  var InputDotsynthesizePinchGesture: `99` = js.native
+  var InputDotsynthesizePinchGesture: `103` = js.native
   
   /**
     * Synthesizes a scroll gesture over a time period by issuing appropriate touch events.
     */
   @JSName("Input.synthesizeScrollGesture")
-  var InputDotsynthesizeScrollGesture: `100` = js.native
+  var InputDotsynthesizeScrollGesture: `104` = js.native
   
   /**
     * Synthesizes a tap gesture over a time period by issuing appropriate touch events.
     */
   @JSName("Input.synthesizeTapGesture")
-  var InputDotsynthesizeTapGesture: `101` = js.native
+  var InputDotsynthesizeTapGesture: `105` = js.native
   
   /**
     * Disables inspector domain notifications.
@@ -1907,7 +1977,7 @@ trait Commands extends js.Object {
     * Releases layer snapshot captured by the back-end.
     */
   @JSName("LayerTree.releaseSnapshot")
-  var LayerTreeDotreleaseSnapshot: `102` = js.native
+  var LayerTreeDotreleaseSnapshot: `106` = js.native
   
   /**
     * Replays the layer snapshot and returns the resulting bitmap.
@@ -1944,7 +2014,7 @@ trait Commands extends js.Object {
     * start violation reporting.
     */
   @JSName("Log.startViolationsReport")
-  var LogDotstartViolationsReport: `103` = js.native
+  var LogDotstartViolationsReport: `107` = js.native
   
   /**
     * Stop violation reporting.
@@ -2001,19 +2071,19 @@ trait Commands extends js.Object {
     * Enable/disable suppressing memory pressure notifications in all processes.
     */
   @JSName("Memory.setPressureNotificationsSuppressed")
-  var MemoryDotsetPressureNotificationsSuppressed: `104` = js.native
+  var MemoryDotsetPressureNotificationsSuppressed: `108` = js.native
   
   /**
     * Simulate a memory pressure notification in all processes.
     */
   @JSName("Memory.simulatePressureNotification")
-  var MemoryDotsimulatePressureNotification: `105` = js.native
+  var MemoryDotsimulatePressureNotification: `109` = js.native
   
   /**
     * Start collecting native memory profile.
     */
   @JSName("Memory.startSampling")
-  var MemoryDotstartSampling: `106` = js.native
+  var MemoryDotstartSampling: `110` = js.native
   
   /**
     * Stop collecting native memory profile.
@@ -2059,13 +2129,13 @@ trait Commands extends js.Object {
     * Deprecated, use Fetch.continueRequest, Fetch.fulfillRequest and Fetch.failRequest instead.
     */
   @JSName("Network.continueInterceptedRequest")
-  var NetworkDotcontinueInterceptedRequest: `107` = js.native
+  var NetworkDotcontinueInterceptedRequest: `111` = js.native
   
   /**
     * Deletes browser cookies with matching name and url or domain/path pair.
     */
   @JSName("Network.deleteCookies")
-  var NetworkDotdeleteCookies: `108` = js.native
+  var NetworkDotdeleteCookies: `112` = js.native
   
   /**
     * Disables network tracking, prevents network events from being sent to the client.
@@ -2077,13 +2147,13 @@ trait Commands extends js.Object {
     * Activates emulation of network conditions.
     */
   @JSName("Network.emulateNetworkConditions")
-  var NetworkDotemulateNetworkConditions: `109` = js.native
+  var NetworkDotemulateNetworkConditions: `113` = js.native
   
   /**
     * Enables network tracking, network events will now be delivered to the client.
     */
   @JSName("Network.enable")
-  var NetworkDotenable: `110` = js.native
+  var NetworkDotenable: `114` = js.native
   
   /**
     * Returns all browser cookies. Depending on the backend support, will return detailed cookie
@@ -2124,12 +2194,24 @@ trait Commands extends js.Object {
   var NetworkDotgetResponseBodyForInterception: ReturnTypeGetResponseBodyForInterceptionResponse = js.native
   
   /**
+    * Returns information about the COEP/COOP isolation status.
+    */
+  @JSName("Network.getSecurityIsolationStatus")
+  var NetworkDotgetSecurityIsolationStatus: ReturnTypeGetSecurityIsolationStatusResponse = js.native
+  
+  /**
+    * Fetches the resource and returns the content.
+    */
+  @JSName("Network.loadNetworkResource")
+  var NetworkDotloadNetworkResource: ReturnTypeLoadNetworkResourceResponse = js.native
+  
+  /**
     * This method sends a new XMLHttpRequest which is identical to the original one. The following
     * parameters should be identical: method, url, async, request body, extra headers, withCredentials
     * attribute, user, password.
     */
   @JSName("Network.replayXHR")
-  var NetworkDotreplayXHR: `111` = js.native
+  var NetworkDotreplayXHR: `115` = js.native
   
   /**
     * Searches for given string in response content.
@@ -2138,22 +2220,28 @@ trait Commands extends js.Object {
   var NetworkDotsearchInResponseBody: ReturnTypeSearchInResponseBodyResponse = js.native
   
   /**
+    * Specifies whether to sned a debug header to all outgoing requests.
+    */
+  @JSName("Network.setAttachDebugHeader")
+  var NetworkDotsetAttachDebugHeader: `122` = js.native
+  
+  /**
     * Blocks URLs from loading.
     */
   @JSName("Network.setBlockedURLs")
-  var NetworkDotsetBlockedURLs: `112` = js.native
+  var NetworkDotsetBlockedURLs: `116` = js.native
   
   /**
     * Toggles ignoring of service worker for each request.
     */
   @JSName("Network.setBypassServiceWorker")
-  var NetworkDotsetBypassServiceWorker: `113` = js.native
+  var NetworkDotsetBypassServiceWorker: `117` = js.native
   
   /**
     * Toggles ignoring cache for each request. If `true`, cache will not be used.
     */
   @JSName("Network.setCacheDisabled")
-  var NetworkDotsetCacheDisabled: `114` = js.native
+  var NetworkDotsetCacheDisabled: `118` = js.native
   
   /**
     * Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.
@@ -2165,32 +2253,32 @@ trait Commands extends js.Object {
     * Sets given cookies.
     */
   @JSName("Network.setCookies")
-  var NetworkDotsetCookies: `115` = js.native
+  var NetworkDotsetCookies: `119` = js.native
   
   /**
     * For testing.
     */
   @JSName("Network.setDataSizeLimitsForTest")
-  var NetworkDotsetDataSizeLimitsForTest: `116` = js.native
+  var NetworkDotsetDataSizeLimitsForTest: `120` = js.native
   
   /**
     * Specifies whether to always send extra HTTP headers with the requests from this page.
     */
   @JSName("Network.setExtraHTTPHeaders")
-  var NetworkDotsetExtraHTTPHeaders: `117` = js.native
+  var NetworkDotsetExtraHTTPHeaders: `121` = js.native
   
   /**
     * Sets the requests to intercept that match the provided patterns and optionally resource types.
     * Deprecated, please use Fetch.enable instead.
     */
   @JSName("Network.setRequestInterception")
-  var NetworkDotsetRequestInterception: `118` = js.native
+  var NetworkDotsetRequestInterception: `123` = js.native
   
   /**
     * Allows overriding user agent with the given string.
     */
   @JSName("Network.setUserAgentOverride")
-  var NetworkDotsetUserAgentOverride: `119` = js.native
+  var NetworkDotsetUserAgentOverride: `124` = js.native
   
   /**
     * Returns a handle to the stream representing the response body. Note that after this command,
@@ -2214,10 +2302,22 @@ trait Commands extends js.Object {
   var OverlayDotenable: ParamsType = js.native
   
   /**
+    * For Persistent Grid testing.
+    */
+  @JSName("Overlay.getGridHighlightObjectsForTest")
+  var OverlayDotgetGridHighlightObjectsForTest: ReturnTypeGetGridHighlightObjectsForTestResponse = js.native
+  
+  /**
     * For testing.
     */
   @JSName("Overlay.getHighlightObjectForTest")
   var OverlayDotgetHighlightObjectForTest: ReturnTypeGetHighlightObjectForTestResponse = js.native
+  
+  /**
+    * For Source Order Viewer testing.
+    */
+  @JSName("Overlay.getSourceOrderHighlightObjectForTest")
+  var OverlayDotgetSourceOrderHighlightObjectForTest: ReturnTypeGetSourceOrderHighlightObjectForTestResponse = js.native
   
   /**
     * Hides any highlight.
@@ -2229,97 +2329,110 @@ trait Commands extends js.Object {
     * Highlights owner element of the frame with given id.
     */
   @JSName("Overlay.highlightFrame")
-  var OverlayDothighlightFrame: `120` = js.native
+  var OverlayDothighlightFrame: `125` = js.native
   
   /**
     * Highlights DOM node with given id or with the given JavaScript object wrapper. Either nodeId or
     * objectId must be specified.
     */
   @JSName("Overlay.highlightNode")
-  var OverlayDothighlightNode: `121` = js.native
+  var OverlayDothighlightNode: `126` = js.native
   
   /**
     * Highlights given quad. Coordinates are absolute with respect to the main frame viewport.
     */
   @JSName("Overlay.highlightQuad")
-  var OverlayDothighlightQuad: `122` = js.native
+  var OverlayDothighlightQuad: `127` = js.native
   
   /**
     * Highlights given rectangle. Coordinates are absolute with respect to the main frame viewport.
     */
   @JSName("Overlay.highlightRect")
-  var OverlayDothighlightRect: `123` = js.native
+  var OverlayDothighlightRect: `128` = js.native
+  
+  /**
+    * Highlights the source order of the children of the DOM node with given id or with the given
+    * JavaScript object wrapper. Either nodeId or objectId must be specified.
+    */
+  @JSName("Overlay.highlightSourceOrder")
+  var OverlayDothighlightSourceOrder: `129` = js.native
   
   /**
     * Enters the 'inspect' mode. In this mode, elements that user is hovering over are highlighted.
     * Backend then generates 'inspectNodeRequested' event upon element selection.
     */
   @JSName("Overlay.setInspectMode")
-  var OverlayDotsetInspectMode: `124` = js.native
+  var OverlayDotsetInspectMode: `130` = js.native
   
   @JSName("Overlay.setPausedInDebuggerMessage")
-  var OverlayDotsetPausedInDebuggerMessage: `126` = js.native
+  var OverlayDotsetPausedInDebuggerMessage: `132` = js.native
   
   /**
     * Highlights owner element of all frames detected to be ads.
     */
   @JSName("Overlay.setShowAdHighlights")
-  var OverlayDotsetShowAdHighlights: `125` = js.native
+  var OverlayDotsetShowAdHighlights: `131` = js.native
   
   /**
     * Requests that backend shows debug borders on layers
     */
   @JSName("Overlay.setShowDebugBorders")
-  var OverlayDotsetShowDebugBorders: `127` = js.native
+  var OverlayDotsetShowDebugBorders: `133` = js.native
   
   /**
     * Requests that backend shows the FPS counter
     */
   @JSName("Overlay.setShowFPSCounter")
-  var OverlayDotsetShowFPSCounter: `128` = js.native
+  var OverlayDotsetShowFPSCounter: `134` = js.native
+  
+  /**
+    * Highlight multiple elements with the CSS Grid overlay.
+    */
+  @JSName("Overlay.setShowGridOverlays")
+  var OverlayDotsetShowGridOverlays: `135` = js.native
   
   /**
     * Add a dual screen device hinge
     */
   @JSName("Overlay.setShowHinge")
-  var OverlayDotsetShowHinge: `134` = js.native
+  var OverlayDotsetShowHinge: `141` = js.native
   
   /**
     * Requests that backend shows hit-test borders on layers
     */
   @JSName("Overlay.setShowHitTestBorders")
-  var OverlayDotsetShowHitTestBorders: `132` = js.native
+  var OverlayDotsetShowHitTestBorders: `139` = js.native
   
   /**
     * Requests that backend shows layout shift regions
     */
   @JSName("Overlay.setShowLayoutShiftRegions")
-  var OverlayDotsetShowLayoutShiftRegions: `130` = js.native
+  var OverlayDotsetShowLayoutShiftRegions: `137` = js.native
   
   /**
     * Requests that backend shows paint rectangles
     */
   @JSName("Overlay.setShowPaintRects")
-  var OverlayDotsetShowPaintRects: `129` = js.native
+  var OverlayDotsetShowPaintRects: `136` = js.native
   
   /**
     * Requests that backend shows scroll bottleneck rects
     */
   @JSName("Overlay.setShowScrollBottleneckRects")
-  var OverlayDotsetShowScrollBottleneckRects: `131` = js.native
+  var OverlayDotsetShowScrollBottleneckRects: `138` = js.native
   
   /**
     * Paints viewport size upon main frame resize.
     */
   @JSName("Overlay.setShowViewportSizeOnResize")
-  var OverlayDotsetShowViewportSizeOnResize: `133` = js.native
+  var OverlayDotsetShowViewportSizeOnResize: `140` = js.native
   
   /**
     * Seeds compilation cache for given url. Compilation cache does not survive
     * cross-process navigation.
     */
   @JSName("Page.addCompilationCache")
-  var PageDotaddCompilationCache: `156` = js.native
+  var PageDotaddCompilationCache: `163` = js.native
   
   /**
     * Deprecated, please use addScriptToEvaluateOnNewDocument instead.
@@ -2398,7 +2511,7 @@ trait Commands extends js.Object {
     * Deletes browser cookie with given name, domain and path.
     */
   @JSName("Page.deleteCookie")
-  var PageDotdeleteCookie: `135` = js.native
+  var PageDotdeleteCookie: `142` = js.native
   
   /**
     * Disables page domain notifications.
@@ -2416,7 +2529,7 @@ trait Commands extends js.Object {
     * Generates a report for testing.
     */
   @JSName("Page.generateTestReport")
-  var PageDotgenerateTestReport: `157` = js.native
+  var PageDotgenerateTestReport: `164` = js.native
   
   @JSName("Page.getAppManifest")
   var PageDotgetAppManifest: ReturnTypeGetAppManifestResponse = js.native
@@ -2468,7 +2581,7 @@ trait Commands extends js.Object {
     * Accepts or dismisses a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload).
     */
   @JSName("Page.handleJavaScriptDialog")
-  var PageDothandleJavaScriptDialog: `136` = js.native
+  var PageDothandleJavaScriptDialog: `143` = js.native
   
   /**
     * Navigates current page to the given URL.
@@ -2480,7 +2593,7 @@ trait Commands extends js.Object {
     * Navigates current page to the given history entry.
     */
   @JSName("Page.navigateToHistoryEntry")
-  var PageDotnavigateToHistoryEntry: `137` = js.native
+  var PageDotnavigateToHistoryEntry: `144` = js.native
   
   /**
     * Print page as PDF.
@@ -2492,19 +2605,19 @@ trait Commands extends js.Object {
     * Reloads given page optionally ignoring the cache.
     */
   @JSName("Page.reload")
-  var PageDotreload: `138` = js.native
+  var PageDotreload: `145` = js.native
   
   /**
     * Deprecated, please use removeScriptToEvaluateOnNewDocument instead.
     */
   @JSName("Page.removeScriptToEvaluateOnLoad")
-  var PageDotremoveScriptToEvaluateOnLoad: `139` = js.native
+  var PageDotremoveScriptToEvaluateOnLoad: `146` = js.native
   
   /**
     * Removes given script from the list.
     */
   @JSName("Page.removeScriptToEvaluateOnNewDocument")
-  var PageDotremoveScriptToEvaluateOnNewDocument: `140` = js.native
+  var PageDotremoveScriptToEvaluateOnNewDocument: `147` = js.native
   
   /**
     * Resets navigation history for the current page.
@@ -2516,7 +2629,7 @@ trait Commands extends js.Object {
     * Acknowledges that a screencast frame has been received by the frontend.
     */
   @JSName("Page.screencastFrameAck")
-  var PageDotscreencastFrameAck: `141` = js.native
+  var PageDotscreencastFrameAck: `148` = js.native
   
   /**
     * Searches for given string in resource content.
@@ -2528,13 +2641,13 @@ trait Commands extends js.Object {
     * Enable Chrome's experimental ad filter on all sites.
     */
   @JSName("Page.setAdBlockingEnabled")
-  var PageDotsetAdBlockingEnabled: `142` = js.native
+  var PageDotsetAdBlockingEnabled: `149` = js.native
   
   /**
     * Enable page Content Security Policy by-passing.
     */
   @JSName("Page.setBypassCSP")
-  var PageDotsetBypassCSP: `143` = js.native
+  var PageDotsetBypassCSP: `150` = js.native
   
   /**
     * Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
@@ -2542,44 +2655,44 @@ trait Commands extends js.Object {
     * query results).
     */
   @JSName("Page.setDeviceMetricsOverride")
-  var PageDotsetDeviceMetricsOverride: `144` = js.native
+  var PageDotsetDeviceMetricsOverride: `151` = js.native
   
   /**
     * Overrides the Device Orientation.
     */
   @JSName("Page.setDeviceOrientationOverride")
-  var PageDotsetDeviceOrientationOverride: `145` = js.native
+  var PageDotsetDeviceOrientationOverride: `152` = js.native
   
   /**
     * Sets given markup as the document's HTML.
     */
   @JSName("Page.setDocumentContent")
-  var PageDotsetDocumentContent: `148` = js.native
+  var PageDotsetDocumentContent: `155` = js.native
   
   /**
     * Set the behavior when downloading a file.
     */
   @JSName("Page.setDownloadBehavior")
-  var PageDotsetDownloadBehavior: `149` = js.native
+  var PageDotsetDownloadBehavior: `156` = js.native
   
   /**
     * Set generic font families.
     */
   @JSName("Page.setFontFamilies")
-  var PageDotsetFontFamilies: `146` = js.native
+  var PageDotsetFontFamilies: `153` = js.native
   
   /**
     * Set default font sizes.
     */
   @JSName("Page.setFontSizes")
-  var PageDotsetFontSizes: `147` = js.native
+  var PageDotsetFontSizes: `154` = js.native
   
   /**
     * Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
     * unavailable.
     */
   @JSName("Page.setGeolocationOverride")
-  var PageDotsetGeolocationOverride: `150` = js.native
+  var PageDotsetGeolocationOverride: `157` = js.native
   
   /**
     * Intercept file chooser requests and transfer control to protocol clients.
@@ -2587,25 +2700,25 @@ trait Commands extends js.Object {
     * Instead, a protocol event `Page.fileChooserOpened` is emitted.
     */
   @JSName("Page.setInterceptFileChooserDialog")
-  var PageDotsetInterceptFileChooserDialog: `158` = js.native
+  var PageDotsetInterceptFileChooserDialog: `165` = js.native
   
   /**
     * Controls whether page will emit lifecycle events.
     */
   @JSName("Page.setLifecycleEventsEnabled")
-  var PageDotsetLifecycleEventsEnabled: `151` = js.native
+  var PageDotsetLifecycleEventsEnabled: `158` = js.native
   
   /**
     * Forces compilation cache to be generated for every subresource script.
     */
   @JSName("Page.setProduceCompilationCache")
-  var PageDotsetProduceCompilationCache: `155` = js.native
+  var PageDotsetProduceCompilationCache: `162` = js.native
   
   /**
     * Toggles mouse event-based touch event emulation.
     */
   @JSName("Page.setTouchEmulationEnabled")
-  var PageDotsetTouchEmulationEnabled: `152` = js.native
+  var PageDotsetTouchEmulationEnabled: `159` = js.native
   
   /**
     * Tries to update the web lifecycle state of the page.
@@ -2613,13 +2726,13 @@ trait Commands extends js.Object {
     * https://github.com/WICG/web-lifecycle/
     */
   @JSName("Page.setWebLifecycleState")
-  var PageDotsetWebLifecycleState: `154` = js.native
+  var PageDotsetWebLifecycleState: `161` = js.native
   
   /**
     * Starts sending each frame using the `screencastFrame` event.
     */
   @JSName("Page.startScreencast")
-  var PageDotstartScreencast: `153` = js.native
+  var PageDotstartScreencast: `160` = js.native
   
   /**
     * Force the page stop all navigations and pending resource fetches.
@@ -2649,7 +2762,7 @@ trait Commands extends js.Object {
     * Enable collecting and reporting metrics.
     */
   @JSName("Performance.enable")
-  var PerformanceDotenable: `159` = js.native
+  var PerformanceDotenable: `166` = js.native
   
   /**
     * Retrieve current values of run-time metrics.
@@ -2663,10 +2776,16 @@ trait Commands extends js.Object {
     * this method while metrics collection is enabled returns an error.
     */
   @JSName("Performance.setTimeDomain")
-  var PerformanceDotsetTimeDomain: `160` = js.native
+  var PerformanceDotsetTimeDomain: `167` = js.native
   
   @JSName("Profiler.disable")
   var ProfilerDotdisable: ParamsType = js.native
+  
+  /**
+    * Disable counters collection.
+    */
+  @JSName("Profiler.disableCounters")
+  var ProfilerDotdisableCounters: ParamsType = js.native
   
   /**
     * Disable run time call stats collection.
@@ -2676,6 +2795,12 @@ trait Commands extends js.Object {
   
   @JSName("Profiler.enable")
   var ProfilerDotenable: ParamsType = js.native
+  
+  /**
+    * Enable counters collection.
+    */
+  @JSName("Profiler.enableCounters")
+  var ProfilerDotenableCounters: ParamsType = js.native
   
   /**
     * Enable run time call stats collection.
@@ -2691,6 +2816,12 @@ trait Commands extends js.Object {
   var ProfilerDotgetBestEffortCoverage: ReturnTypeGetBestEffortCoverageResponse = js.native
   
   /**
+    * Retrieve counters.
+    */
+  @JSName("Profiler.getCounters")
+  var ProfilerDotgetCounters: ReturnTypeGetCountersResponse = js.native
+  
+  /**
     * Retrieve run time call stats.
     */
   @JSName("Profiler.getRuntimeCallStats")
@@ -2700,7 +2831,7 @@ trait Commands extends js.Object {
     * Changes CPU profiler sampling interval. Must be called before CPU profiles recording started.
     */
   @JSName("Profiler.setSamplingInterval")
-  var ProfilerDotsetSamplingInterval: `15` = js.native
+  var ProfilerDotsetSamplingInterval: `16` = js.native
   
   @JSName("Profiler.start")
   var ProfilerDotstart: ParamsType = js.native
@@ -2759,7 +2890,7 @@ trait Commands extends js.Object {
     * Each binding function call produces Runtime.bindingCalled notification.
     */
   @JSName("Runtime.addBinding")
-  var RuntimeDotaddBinding: `21` = js.native
+  var RuntimeDotaddBinding: `22` = js.native
   
   /**
     * Add handler to promise with given promise object id.
@@ -2839,20 +2970,20 @@ trait Commands extends js.Object {
     * Releases remote object with given id.
     */
   @JSName("Runtime.releaseObject")
-  var RuntimeDotreleaseObject: `16` = js.native
+  var RuntimeDotreleaseObject: `17` = js.native
   
   /**
     * Releases all remote objects that belong to a given group.
     */
   @JSName("Runtime.releaseObjectGroup")
-  var RuntimeDotreleaseObjectGroup: `17` = js.native
+  var RuntimeDotreleaseObjectGroup: `18` = js.native
   
   /**
     * This method does not remove binding function from global object but
     * unsubscribes current runtime agent from Runtime.bindingCalled notifications.
     */
   @JSName("Runtime.removeBinding")
-  var RuntimeDotremoveBinding: `22` = js.native
+  var RuntimeDotremoveBinding: `23` = js.native
   
   /**
     * Tells inspected instance to run if it was waiting for debugger to attach.
@@ -2870,13 +3001,13 @@ trait Commands extends js.Object {
     * Enables or disables async call stacks tracking.
     */
   @JSName("Runtime.setAsyncCallStackDepth")
-  var RuntimeDotsetAsyncCallStackDepth: `18` = js.native
+  var RuntimeDotsetAsyncCallStackDepth: `19` = js.native
   
   @JSName("Runtime.setCustomObjectFormatterEnabled")
-  var RuntimeDotsetCustomObjectFormatterEnabled: `19` = js.native
+  var RuntimeDotsetCustomObjectFormatterEnabled: `20` = js.native
   
   @JSName("Runtime.setMaxCallStackSizeToCapture")
-  var RuntimeDotsetMaxCallStackSizeToCapture: `20` = js.native
+  var RuntimeDotsetMaxCallStackSizeToCapture: `21` = js.native
   
   /**
     * Terminate current or next JavaScript execution.
@@ -2907,77 +3038,77 @@ trait Commands extends js.Object {
     * Handles a certificate error that fired a certificateError event.
     */
   @JSName("Security.handleCertificateError")
-  var SecurityDothandleCertificateError: `162` = js.native
+  var SecurityDothandleCertificateError: `169` = js.native
   
   /**
     * Enable/disable whether all certificate errors should be ignored.
     */
   @JSName("Security.setIgnoreCertificateErrors")
-  var SecurityDotsetIgnoreCertificateErrors: `161` = js.native
+  var SecurityDotsetIgnoreCertificateErrors: `168` = js.native
   
   /**
     * Enable/disable overriding certificate errors. If enabled, all certificate error events need to
     * be handled by the DevTools client and should be answered with `handleCertificateError` commands.
     */
   @JSName("Security.setOverrideCertificateErrors")
-  var SecurityDotsetOverrideCertificateErrors: `163` = js.native
+  var SecurityDotsetOverrideCertificateErrors: `170` = js.native
   
   @JSName("ServiceWorker.deliverPushMessage")
-  var ServiceWorkerDotdeliverPushMessage: `164` = js.native
+  var ServiceWorkerDotdeliverPushMessage: `171` = js.native
   
   @JSName("ServiceWorker.disable")
   var ServiceWorkerDotdisable: ParamsType = js.native
   
   @JSName("ServiceWorker.dispatchPeriodicSyncEvent")
-  var ServiceWorkerDotdispatchPeriodicSyncEvent: `166` = js.native
+  var ServiceWorkerDotdispatchPeriodicSyncEvent: `173` = js.native
   
   @JSName("ServiceWorker.dispatchSyncEvent")
-  var ServiceWorkerDotdispatchSyncEvent: `165` = js.native
+  var ServiceWorkerDotdispatchSyncEvent: `172` = js.native
   
   @JSName("ServiceWorker.enable")
   var ServiceWorkerDotenable: ParamsType = js.native
   
   @JSName("ServiceWorker.inspectWorker")
-  var ServiceWorkerDotinspectWorker: `167` = js.native
+  var ServiceWorkerDotinspectWorker: `174` = js.native
   
   @JSName("ServiceWorker.setForceUpdateOnPageLoad")
-  var ServiceWorkerDotsetForceUpdateOnPageLoad: `168` = js.native
+  var ServiceWorkerDotsetForceUpdateOnPageLoad: `175` = js.native
   
   @JSName("ServiceWorker.skipWaiting")
-  var ServiceWorkerDotskipWaiting: `169` = js.native
+  var ServiceWorkerDotskipWaiting: `176` = js.native
   
   @JSName("ServiceWorker.startWorker")
-  var ServiceWorkerDotstartWorker: `170` = js.native
+  var ServiceWorkerDotstartWorker: `177` = js.native
   
   @JSName("ServiceWorker.stopAllWorkers")
   var ServiceWorkerDotstopAllWorkers: ParamsType = js.native
   
   @JSName("ServiceWorker.stopWorker")
-  var ServiceWorkerDotstopWorker: `171` = js.native
+  var ServiceWorkerDotstopWorker: `178` = js.native
   
   @JSName("ServiceWorker.unregister")
-  var ServiceWorkerDotunregister: `172` = js.native
+  var ServiceWorkerDotunregister: `179` = js.native
   
   @JSName("ServiceWorker.updateRegistration")
-  var ServiceWorkerDotupdateRegistration: `173` = js.native
+  var ServiceWorkerDotupdateRegistration: `180` = js.native
   
   /**
     * Clears cookies.
     */
   @JSName("Storage.clearCookies")
-  var StorageDotclearCookies: `177` = js.native
+  var StorageDotclearCookies: `184` = js.native
   
   /**
     * Clears storage for origin.
     */
   @JSName("Storage.clearDataForOrigin")
-  var StorageDotclearDataForOrigin: `174` = js.native
+  var StorageDotclearDataForOrigin: `181` = js.native
   
   /**
     * Returns all browser cookies.
     */
   @JSName("Storage.getCookies")
-  var StorageDotgetCookies: `175` = js.native
+  var StorageDotgetCookies: `182` = js.native
   
   /**
     * Returns usage and quota in bytes.
@@ -2986,34 +3117,40 @@ trait Commands extends js.Object {
   var StorageDotgetUsageAndQuota: ReturnTypeGetUsageAndQuotaResponse = js.native
   
   /**
+    * Override quota for the specified origin
+    */
+  @JSName("Storage.overrideQuotaForOrigin")
+  var StorageDotoverrideQuotaForOrigin: `185` = js.native
+  
+  /**
     * Sets given cookies.
     */
   @JSName("Storage.setCookies")
-  var StorageDotsetCookies: `176` = js.native
+  var StorageDotsetCookies: `183` = js.native
   
   /**
     * Registers origin to be notified when an update occurs to its cache storage list.
     */
   @JSName("Storage.trackCacheStorageForOrigin")
-  var StorageDottrackCacheStorageForOrigin: `178` = js.native
+  var StorageDottrackCacheStorageForOrigin: `186` = js.native
   
   /**
     * Registers origin to be notified when an update occurs to its IndexedDB.
     */
   @JSName("Storage.trackIndexedDBForOrigin")
-  var StorageDottrackIndexedDBForOrigin: `179` = js.native
+  var StorageDottrackIndexedDBForOrigin: `187` = js.native
   
   /**
     * Unregisters origin from receiving notifications for cache storage.
     */
   @JSName("Storage.untrackCacheStorageForOrigin")
-  var StorageDotuntrackCacheStorageForOrigin: `180` = js.native
+  var StorageDotuntrackCacheStorageForOrigin: `188` = js.native
   
   /**
     * Unregisters origin from receiving notifications for IndexedDB.
     */
   @JSName("Storage.untrackIndexedDBForOrigin")
-  var StorageDotuntrackIndexedDBForOrigin: `181` = js.native
+  var StorageDotuntrackIndexedDBForOrigin: `189` = js.native
   
   /**
     * Returns information about the system.
@@ -3031,7 +3168,7 @@ trait Commands extends js.Object {
     * Activates (focuses) the target.
     */
   @JSName("Target.activateTarget")
-  var TargetDotactivateTarget: `182` = js.native
+  var TargetDotactivateTarget: `190` = js.native
   
   /**
     * Attaches to the browser target, only uses flat sessionId mode.
@@ -3068,14 +3205,14 @@ trait Commands extends js.Object {
     * Detaches session with given id.
     */
   @JSName("Target.detachFromTarget")
-  var TargetDotdetachFromTarget: `184` = js.native
+  var TargetDotdetachFromTarget: `192` = js.native
   
   /**
     * Deletes a BrowserContext. All the belonging pages will be closed without calling their
     * beforeunload hooks.
     */
   @JSName("Target.disposeBrowserContext")
-  var TargetDotdisposeBrowserContext: `185` = js.native
+  var TargetDotdisposeBrowserContext: `193` = js.native
   
   /**
     * Inject object to the target's main frame that provides a communication
@@ -3088,7 +3225,7 @@ trait Commands extends js.Object {
     * - `binding.onmessage = json => handleMessage(json)` - a callback that will be called for the protocol notifications and command responses.
     */
   @JSName("Target.exposeDevToolsProtocol")
-  var TargetDotexposeDevToolsProtocol: `183` = js.native
+  var TargetDotexposeDevToolsProtocol: `191` = js.native
   
   /**
     * Returns all browser contexts created with `Target.createBrowserContext` method.
@@ -3114,7 +3251,7 @@ trait Commands extends js.Object {
     * and crbug.com/991325.
     */
   @JSName("Target.sendMessageToTarget")
-  var TargetDotsendMessageToTarget: `186` = js.native
+  var TargetDotsendMessageToTarget: `194` = js.native
   
   /**
     * Controls whether to automatically attach to new targets which are considered to be related to
@@ -3122,33 +3259,33 @@ trait Commands extends js.Object {
     * automatically detaches from all currently attached targets.
     */
   @JSName("Target.setAutoAttach")
-  var TargetDotsetAutoAttach: `187` = js.native
+  var TargetDotsetAutoAttach: `195` = js.native
   
   /**
     * Controls whether to discover available targets and notify via
     * `targetCreated/targetInfoChanged/targetDestroyed` events.
     */
   @JSName("Target.setDiscoverTargets")
-  var TargetDotsetDiscoverTargets: `188` = js.native
+  var TargetDotsetDiscoverTargets: `196` = js.native
   
   /**
     * Enables target discovery for the specified locations, when `setDiscoverTargets` was set to
     * `true`.
     */
   @JSName("Target.setRemoteLocations")
-  var TargetDotsetRemoteLocations: `189` = js.native
+  var TargetDotsetRemoteLocations: `197` = js.native
   
   /**
     * Request browser port binding.
     */
   @JSName("Tethering.bind")
-  var TetheringDotbind: `190` = js.native
+  var TetheringDotbind: `198` = js.native
   
   /**
     * Request browser port unbinding.
     */
   @JSName("Tethering.unbind")
-  var TetheringDotunbind: `191` = js.native
+  var TetheringDotunbind: `199` = js.native
   
   /**
     * Stop trace events collection.
@@ -3166,7 +3303,7 @@ trait Commands extends js.Object {
     * Record a clock sync marker in the trace.
     */
   @JSName("Tracing.recordClockSyncMarker")
-  var TracingDotrecordClockSyncMarker: `192` = js.native
+  var TracingDotrecordClockSyncMarker: `200` = js.native
   
   /**
     * Request a global memory dump.
@@ -3178,7 +3315,7 @@ trait Commands extends js.Object {
     * Start trace events collection.
     */
   @JSName("Tracing.start")
-  var TracingDotstart: `193` = js.native
+  var TracingDotstart: `201` = js.native
   
   /**
     * Disables the WebAudio domain.
@@ -3202,7 +3339,7 @@ trait Commands extends js.Object {
     * Adds the credential to the specified authenticator.
     */
   @JSName("WebAuthn.addCredential")
-  var WebAuthnDotaddCredential: `200` = js.native
+  var WebAuthnDotaddCredential: `208` = js.native
   
   /**
     * Creates and adds a virtual authenticator.
@@ -3214,7 +3351,7 @@ trait Commands extends js.Object {
     * Clears all the credentials from the specified device.
     */
   @JSName("WebAuthn.clearCredentials")
-  var WebAuthnDotclearCredentials: `202` = js.native
+  var WebAuthnDotclearCredentials: `210` = js.native
   
   /**
     * Disable the WebAuthn domain.
@@ -3246,20 +3383,27 @@ trait Commands extends js.Object {
     * Removes a credential from the authenticator.
     */
   @JSName("WebAuthn.removeCredential")
-  var WebAuthnDotremoveCredential: `201` = js.native
+  var WebAuthnDotremoveCredential: `209` = js.native
   
   /**
     * Removes the given authenticator.
     */
   @JSName("WebAuthn.removeVirtualAuthenticator")
-  var WebAuthnDotremoveVirtualAuthenticator: `199` = js.native
+  var WebAuthnDotremoveVirtualAuthenticator: `207` = js.native
+  
+  /**
+    * Sets whether tests of user presence will succeed immediately (if true) or fail to resolve (if false) for an authenticator.
+    * The default is true.
+    */
+  @JSName("WebAuthn.setAutomaticPresenceSimulation")
+  var WebAuthnDotsetAutomaticPresenceSimulation: `212` = js.native
   
   /**
     * Sets whether User Verification succeeds or fails for an authenticator.
     * The default is true.
     */
   @JSName("WebAuthn.setUserVerified")
-  var WebAuthnDotsetUserVerified: `203` = js.native
+  var WebAuthnDotsetUserVerified: `211` = js.native
 }
 object Commands {
   
@@ -3269,16 +3413,17 @@ object Commands {
     AccessibilityDotenable: ParamsType,
     AccessibilityDotgetFullAXTree: ReturnTypeGetFullAXTreeResponse,
     AccessibilityDotgetPartialAXTree: ReturnTypeGetPartialAXTreeResponse,
+    AccessibilityDotqueryAXTree: ReturnTypeQueryAXTreeResponse,
     AnimationDotdisable: ParamsType,
     AnimationDotenable: ParamsType,
     AnimationDotgetCurrentTime: ReturnTypeGetCurrentTimeResponse,
     AnimationDotgetPlaybackRate: ReturnTypeGetPlaybackRateResponse,
-    AnimationDotreleaseAnimations: `23`,
+    AnimationDotreleaseAnimations: `24`,
     AnimationDotresolveAnimation: ReturnTypeResolveAnimationResponse,
-    AnimationDotseekAnimations: `24`,
-    AnimationDotsetPaused: `25`,
-    AnimationDotsetPlaybackRate: `26`,
-    AnimationDotsetTiming: `27`,
+    AnimationDotseekAnimations: `25`,
+    AnimationDotsetPaused: `26`,
+    AnimationDotsetPlaybackRate: `27`,
+    AnimationDotsetTiming: `28`,
     ApplicationCacheDotenable: ParamsType,
     ApplicationCacheDotgetApplicationCacheForFrame: ReturnTypeGetApplicationCacheForFrameResponse,
     ApplicationCacheDotgetFramesWithManifests: ReturnTypeGetFramesWithManifestsResponse,
@@ -3286,10 +3431,10 @@ object Commands {
     AuditsDotdisable: ParamsType,
     AuditsDotenable: ParamsType,
     AuditsDotgetEncodedResponse: ReturnTypeGetEncodedResponseResponse,
-    BackgroundServiceDotclearEvents: `31`,
-    BackgroundServiceDotsetRecording: `30`,
-    BackgroundServiceDotstartObserving: `28`,
-    BackgroundServiceDotstopObserving: `29`,
+    BackgroundServiceDotclearEvents: `32`,
+    BackgroundServiceDotsetRecording: `31`,
+    BackgroundServiceDotstartObserving: `29`,
+    BackgroundServiceDotstopObserving: `30`,
     BrowserDotclose: ParamsType,
     BrowserDotcrash: ParamsType,
     BrowserDotcrashGpuProcess: ParamsType,
@@ -3299,18 +3444,18 @@ object Commands {
     BrowserDotgetVersion: ReturnTypeGetVersionResponse,
     BrowserDotgetWindowBounds: ReturnTypeGetWindowBoundsResponse,
     BrowserDotgetWindowForTarget: ReturnTypeGetWindowForTargetResponse,
-    BrowserDotgrantPermissions: `33`,
-    BrowserDotresetPermissions: `34`,
-    BrowserDotsetDockTile: `37`,
-    BrowserDotsetDownloadBehavior: `35`,
-    BrowserDotsetPermission: `32`,
-    BrowserDotsetWindowBounds: `36`,
+    BrowserDotgrantPermissions: `34`,
+    BrowserDotresetPermissions: `35`,
+    BrowserDotsetDockTile: `38`,
+    BrowserDotsetDownloadBehavior: `36`,
+    BrowserDotsetPermission: `33`,
+    BrowserDotsetWindowBounds: `37`,
     CSSDotaddRule: ReturnTypeAddRuleResponse,
     CSSDotcollectClassNames: ReturnTypeCollectClassNamesResponse,
     CSSDotcreateStyleSheet: ReturnTypeCreateStyleSheetResponse,
     CSSDotdisable: ParamsType,
     CSSDotenable: ParamsType,
-    CSSDotforcePseudoState: `38`,
+    CSSDotforcePseudoState: `39`,
     CSSDotgetBackgroundColors: ReturnTypeGetBackgroundColorsResponse,
     CSSDotgetComputedStyleForNode: ReturnTypeGetComputedStyleForNodeResponse,
     CSSDotgetInlineStylesForNode: ReturnTypeGetInlineStylesForNodeResponse,
@@ -3318,44 +3463,47 @@ object Commands {
     CSSDotgetMediaQueries: ReturnTypeGetMediaQueriesResponse,
     CSSDotgetPlatformFontsForNode: ReturnTypeGetPlatformFontsForNodeResponse,
     CSSDotgetStyleSheetText: ReturnTypeGetStyleSheetTextResponse,
-    CSSDotsetEffectivePropertyValueForNode: `39`,
+    CSSDotsetEffectivePropertyValueForNode: `41`,
     CSSDotsetKeyframeKey: ReturnTypeSetKeyframeKeyResponse,
+    CSSDotsetLocalFontsEnabled: `42`,
     CSSDotsetMediaText: ReturnTypeSetMediaTextResponse,
     CSSDotsetRuleSelector: ReturnTypeSetRuleSelectorResponse,
     CSSDotsetStyleSheetText: ReturnTypeSetStyleSheetTextResponse,
     CSSDotsetStyleTexts: ReturnTypeSetStyleTextsResponse,
     CSSDotstartRuleUsageTracking: ParamsType,
     CSSDotstopRuleUsageTracking: ReturnTypeStopRuleUsageTrackingResponse,
+    CSSDottakeComputedStyleUpdates: ReturnTypeTakeComputedStyleUpdatesResponse,
     CSSDottakeCoverageDelta: ReturnTypeTakeCoverageDeltaResponse,
-    CacheStorageDotdeleteCache: `40`,
-    CacheStorageDotdeleteEntry: `41`,
+    CSSDottrackComputedStyleUpdates: `40`,
+    CacheStorageDotdeleteCache: `43`,
+    CacheStorageDotdeleteEntry: `44`,
     CacheStorageDotrequestCacheNames: ReturnTypeRequestCacheNamesResponse,
     CacheStorageDotrequestCachedResponse: ReturnTypeRequestCachedResponseResponse,
     CacheStorageDotrequestEntries: ReturnTypeRequestEntriesResponse,
     CastDotdisable: ParamsType,
-    CastDotenable: `42`,
-    CastDotsetSinkToUse: `43`,
-    CastDotstartTabMirroring: `44`,
-    CastDotstopCasting: `45`,
+    CastDotenable: `45`,
+    CastDotsetSinkToUse: `46`,
+    CastDotstartTabMirroring: `47`,
+    CastDotstopCasting: `48`,
     ConsoleDotclearMessages: ParamsType,
     ConsoleDotdisable: ParamsType,
     ConsoleDotenable: ParamsType,
     DOMDebuggerDotgetEventListeners: ReturnTypeGetEventListenersResponse,
-    DOMDebuggerDotremoveDOMBreakpoint: `59`,
-    DOMDebuggerDotremoveEventListenerBreakpoint: `60`,
-    DOMDebuggerDotremoveInstrumentationBreakpoint: `61`,
-    DOMDebuggerDotremoveXHRBreakpoint: `62`,
-    DOMDebuggerDotsetDOMBreakpoint: `63`,
-    DOMDebuggerDotsetEventListenerBreakpoint: `64`,
-    DOMDebuggerDotsetInstrumentationBreakpoint: `65`,
-    DOMDebuggerDotsetXHRBreakpoint: `66`,
+    DOMDebuggerDotremoveDOMBreakpoint: `62`,
+    DOMDebuggerDotremoveEventListenerBreakpoint: `63`,
+    DOMDebuggerDotremoveInstrumentationBreakpoint: `64`,
+    DOMDebuggerDotremoveXHRBreakpoint: `65`,
+    DOMDebuggerDotsetDOMBreakpoint: `66`,
+    DOMDebuggerDotsetEventListenerBreakpoint: `67`,
+    DOMDebuggerDotsetInstrumentationBreakpoint: `68`,
+    DOMDebuggerDotsetXHRBreakpoint: `69`,
     DOMDotcollectClassNamesFromSubtree: ReturnTypeCollectClassNamesFromSubtreeResponse,
     DOMDotcopyTo: ReturnTypeCopyToResponse,
     DOMDotdescribeNode: ReturnTypeDescribeNodeResponse,
     DOMDotdisable: ParamsType,
-    DOMDotdiscardSearchResults: `47`,
+    DOMDotdiscardSearchResults: `50`,
     DOMDotenable: ParamsType,
-    DOMDotfocus: `48`,
+    DOMDotfocus: `51`,
     DOMDotgetAttributes: ReturnTypeGetAttributesResponse,
     DOMDotgetBoxModel: ReturnTypeGetBoxModelResponse,
     DOMDotgetContentQuads: ReturnTypeGetContentQuadsResponse,
@@ -3365,6 +3513,7 @@ object Commands {
     DOMDotgetFrameOwner: ReturnTypeGetFrameOwnerResponse,
     DOMDotgetNodeForLocation: ReturnTypeGetNodeForLocationResponse,
     DOMDotgetNodeStackTraces: ReturnTypeGetNodeStackTracesResponse,
+    DOMDotgetNodesForSubtreeByStyle: ReturnTypeGetNodesForSubtreeByStyleResponse,
     DOMDotgetOuterHTML: ReturnTypeGetOuterHTMLResponse,
     DOMDotgetRelayoutBoundary: ReturnTypeGetRelayoutBoundaryResponse,
     DOMDotgetSearchResults: ReturnTypeGetSearchResultsResponse,
@@ -3379,31 +3528,31 @@ object Commands {
     DOMDotquerySelector: ReturnTypeQuerySelectorResponse,
     DOMDotquerySelectorAll: ReturnTypeQuerySelectorAllResponse,
     DOMDotredo: ParamsType,
-    DOMDotremoveAttribute: `49`,
-    DOMDotremoveNode: `50`,
-    DOMDotrequestChildNodes: `51`,
+    DOMDotremoveAttribute: `52`,
+    DOMDotremoveNode: `53`,
+    DOMDotrequestChildNodes: `54`,
     DOMDotrequestNode: ReturnTypeRequestNodeResponse,
     DOMDotresolveNode: ReturnTypeResolveNodeResponse,
-    DOMDotscrollIntoViewIfNeeded: `46`,
-    DOMDotsetAttributeValue: `52`,
-    DOMDotsetAttributesAsText: `53`,
-    DOMDotsetFileInputFiles: `54`,
-    DOMDotsetInspectedNode: `56`,
+    DOMDotscrollIntoViewIfNeeded: `49`,
+    DOMDotsetAttributeValue: `55`,
+    DOMDotsetAttributesAsText: `56`,
+    DOMDotsetFileInputFiles: `57`,
+    DOMDotsetInspectedNode: `59`,
     DOMDotsetNodeName: ReturnTypeSetNodeNameResponse,
-    DOMDotsetNodeStackTracesEnabled: `55`,
-    DOMDotsetNodeValue: `57`,
-    DOMDotsetOuterHTML: `58`,
+    DOMDotsetNodeStackTracesEnabled: `58`,
+    DOMDotsetNodeValue: `60`,
+    DOMDotsetOuterHTML: `61`,
     DOMDotundo: ParamsType,
     DOMSnapshotDotcaptureSnapshot: ReturnTypeCaptureSnapshotResponse,
     DOMSnapshotDotdisable: ParamsType,
     DOMSnapshotDotenable: ParamsType,
     DOMSnapshotDotgetSnapshot: ReturnTypeGetSnapshotResponse,
-    DOMStorageDotclear: `67`,
+    DOMStorageDotclear: `70`,
     DOMStorageDotdisable: ParamsType,
     DOMStorageDotenable: ParamsType,
     DOMStorageDotgetDOMStorageItems: ReturnTypeGetDOMStorageItemsResponse,
-    DOMStorageDotremoveDOMStorageItem: `68`,
-    DOMStorageDotsetDOMStorageItem: `69`,
+    DOMStorageDotremoveDOMStorageItem: `71`,
+    DOMStorageDotsetDOMStorageItem: `72`,
     DatabaseDotdisable: ParamsType,
     DatabaseDotenable: ParamsType,
     DatabaseDotexecuteSQL: ReturnTypeExecuteSQLResponse,
@@ -3438,93 +3587,89 @@ object Commands {
     DebuggerDotsetVariableValue: `8`,
     DebuggerDotstepInto: `9`,
     DebuggerDotstepOut: ParamsType,
-    DebuggerDotstepOver: ParamsType,
+    DebuggerDotstepOver: `10`,
     DeviceOrientationDotclearDeviceOrientationOverride: ParamsType,
-    DeviceOrientationDotsetDeviceOrientationOverride: `70`,
+    DeviceOrientationDotsetDeviceOrientationOverride: `73`,
     EmulationDotcanEmulate: ReturnTypeCanEmulateResponse,
     EmulationDotclearDeviceMetricsOverride: ParamsType,
     EmulationDotclearGeolocationOverride: ParamsType,
+    EmulationDotclearIdleOverride: ParamsType,
     EmulationDotresetPageScaleFactor: ParamsType,
-    EmulationDotsetCPUThrottlingRate: `72`,
-    EmulationDotsetDefaultBackgroundColorOverride: `73`,
-    EmulationDotsetDeviceMetricsOverride: `74`,
-    EmulationDotsetDocumentCookieDisabled: `76`,
-    EmulationDotsetEmitTouchEventsForMouse: `77`,
-    EmulationDotsetEmulatedMedia: `78`,
-    EmulationDotsetEmulatedVisionDeficiency: `79`,
-    EmulationDotsetFocusEmulationEnabled: `71`,
-    EmulationDotsetGeolocationOverride: `80`,
-    EmulationDotsetLocaleOverride: `85`,
-    EmulationDotsetNavigatorOverrides: `81`,
-    EmulationDotsetPageScaleFactor: `82`,
-    EmulationDotsetScriptExecutionDisabled: `83`,
-    EmulationDotsetScrollbarsHidden: `75`,
-    EmulationDotsetTimezoneOverride: `86`,
-    EmulationDotsetTouchEmulationEnabled: `84`,
-    EmulationDotsetUserAgentOverride: `88`,
+    EmulationDotsetCPUThrottlingRate: `75`,
+    EmulationDotsetDefaultBackgroundColorOverride: `76`,
+    EmulationDotsetDeviceMetricsOverride: `77`,
+    EmulationDotsetDocumentCookieDisabled: `79`,
+    EmulationDotsetEmitTouchEventsForMouse: `80`,
+    EmulationDotsetEmulatedMedia: `81`,
+    EmulationDotsetEmulatedVisionDeficiency: `82`,
+    EmulationDotsetFocusEmulationEnabled: `74`,
+    EmulationDotsetGeolocationOverride: `83`,
+    EmulationDotsetIdleOverride: `84`,
+    EmulationDotsetLocaleOverride: `89`,
+    EmulationDotsetNavigatorOverrides: `85`,
+    EmulationDotsetPageScaleFactor: `86`,
+    EmulationDotsetScriptExecutionDisabled: `87`,
+    EmulationDotsetScrollbarsHidden: `78`,
+    EmulationDotsetTimezoneOverride: `90`,
+    EmulationDotsetTouchEmulationEnabled: `88`,
+    EmulationDotsetUserAgentOverride: `92`,
     EmulationDotsetVirtualTimePolicy: ReturnTypeSetVirtualTimePolicyResponse,
-    EmulationDotsetVisibleSize: `87`,
-    FetchDotcontinueRequest: `197`,
-    FetchDotcontinueWithAuth: `198`,
+    EmulationDotsetVisibleSize: `91`,
+    FetchDotcontinueRequest: `205`,
+    FetchDotcontinueWithAuth: `206`,
     FetchDotdisable: ParamsType,
-    FetchDotenable: `194`,
-    FetchDotfailRequest: `195`,
-    FetchDotfulfillRequest: `196`,
+    FetchDotenable: `202`,
+    FetchDotfailRequest: `203`,
+    FetchDotfulfillRequest: `204`,
     FetchDotgetResponseBody: ParamsTypeReturnTypeGetResponseBodyResponse,
     FetchDottakeResponseBodyAsStream: ReturnTypeTakeResponseBodyAsStreamResponse,
     HeadlessExperimentalDotbeginFrame: ReturnTypeBeginFrameResponse,
     HeadlessExperimentalDotdisable: ParamsType,
     HeadlessExperimentalDotenable: ParamsType,
-    HeapProfilerDotaddInspectedHeapObject: `10`,
+    HeapProfilerDotaddInspectedHeapObject: `11`,
     HeapProfilerDotcollectGarbage: ParamsType,
     HeapProfilerDotdisable: ParamsType,
     HeapProfilerDotenable: ParamsType,
     HeapProfilerDotgetHeapObjectId: ReturnTypeGetHeapObjectIdResponse,
     HeapProfilerDotgetObjectByHeapObjectId: ReturnTypeGetObjectByHeapObjectIdResponse,
     HeapProfilerDotgetSamplingProfile: ReturnTypeGetSamplingProfileResponse,
-    HeapProfilerDotstartSampling: `11`,
-    HeapProfilerDotstartTrackingHeapObjects: `12`,
+    HeapProfilerDotstartSampling: `12`,
+    HeapProfilerDotstartTrackingHeapObjects: `13`,
     HeapProfilerDotstopSampling: ReturnTypeStopSamplingResponse,
-    HeapProfilerDotstopTrackingHeapObjects: `13`,
-    HeapProfilerDottakeHeapSnapshot: `14`,
-    IODotclose: `89`,
+    HeapProfilerDotstopTrackingHeapObjects: `14`,
+    HeapProfilerDottakeHeapSnapshot: `15`,
+    IODotclose: `93`,
     IODotread: ReturnTypeReadResponse,
     IODotresolveBlob: ReturnTypeResolveBlobResponse,
-    IndexedDBDotclearObjectStore: `90`,
-    IndexedDBDotdeleteDatabase: `91`,
-    IndexedDBDotdeleteObjectStoreEntries: `92`,
+    IndexedDBDotclearObjectStore: `94`,
+    IndexedDBDotdeleteDatabase: `95`,
+    IndexedDBDotdeleteObjectStoreEntries: `96`,
     IndexedDBDotdisable: ParamsType,
     IndexedDBDotenable: ParamsType,
     IndexedDBDotgetMetadata: ReturnTypeGetMetadataResponse,
     IndexedDBDotrequestData: ReturnTypeRequestDataResponse,
     IndexedDBDotrequestDatabase: ReturnTypeRequestDatabaseResponse,
     IndexedDBDotrequestDatabaseNames: ReturnTypeRequestDatabaseNamesResponse,
-    InputDotdispatchKeyEvent: `93`,
-    InputDotdispatchMouseEvent: `95`,
-    InputDotdispatchTouchEvent: `96`,
-    InputDotemulateTouchFromMouseEvent: `97`,
-    InputDotinsertText: `94`,
-    InputDotsetIgnoreInputEvents: `98`,
-    InputDotsynthesizePinchGesture: `99`,
-    InputDotsynthesizeScrollGesture: `100`,
-    InputDotsynthesizeTapGesture: `101`,
+    InputDotdispatchKeyEvent: `97`,
+    InputDotdispatchMouseEvent: `99`,
+    InputDotdispatchTouchEvent: `100`,
+    InputDotemulateTouchFromMouseEvent: `101`,
+    InputDotinsertText: `98`,
+    InputDotsetIgnoreInputEvents: `102`,
+    InputDotsynthesizePinchGesture: `103`,
+    InputDotsynthesizeScrollGesture: `104`,
+    InputDotsynthesizeTapGesture: `105`,
     InspectorDotdisable: ParamsType,
     InspectorDotenable: ParamsType,
     LayerTreeDotcompositingReasons: ReturnTypeCompositingReasonsResponse,
-    LayerTreeDotdisable: ParamsType,
-    LayerTreeDotenable: ParamsType,
-    LayerTreeDotloadSnapshot: ReturnTypeLoadSnapshotResponse,
-    LayerTreeDotmakeSnapshot: ReturnTypeMakeSnapshotResponse,
-    LayerTreeDotprofileSnapshot: ReturnTypeProfileSnapshotResponse,
-    LayerTreeDotreleaseSnapshot: `102`,
-    LayerTreeDotreplaySnapshot: ReturnTypeReplaySnapshotResponse,
-    LayerTreeDotsnapshotCommandLog: ReturnTypeSnapshotCommandLogResponse
+    LayerTreeDotdisable: ParamsType
   ): Commands = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("Accessibility.disable")(AccessibilityDotdisable.asInstanceOf[js.Any])
     __obj.updateDynamic("Accessibility.enable")(AccessibilityDotenable.asInstanceOf[js.Any])
     __obj.updateDynamic("Accessibility.getFullAXTree")(AccessibilityDotgetFullAXTree.asInstanceOf[js.Any])
     __obj.updateDynamic("Accessibility.getPartialAXTree")(AccessibilityDotgetPartialAXTree.asInstanceOf[js.Any])
+    __obj.updateDynamic("Accessibility.queryAXTree")(AccessibilityDotqueryAXTree.asInstanceOf[js.Any])
     __obj.updateDynamic("Animation.disable")(AnimationDotdisable.asInstanceOf[js.Any])
     __obj.updateDynamic("Animation.enable")(AnimationDotenable.asInstanceOf[js.Any])
     __obj.updateDynamic("Animation.getCurrentTime")(AnimationDotgetCurrentTime.asInstanceOf[js.Any])
@@ -3576,13 +3721,16 @@ object Commands {
     __obj.updateDynamic("CSS.getStyleSheetText")(CSSDotgetStyleSheetText.asInstanceOf[js.Any])
     __obj.updateDynamic("CSS.setEffectivePropertyValueForNode")(CSSDotsetEffectivePropertyValueForNode.asInstanceOf[js.Any])
     __obj.updateDynamic("CSS.setKeyframeKey")(CSSDotsetKeyframeKey.asInstanceOf[js.Any])
+    __obj.updateDynamic("CSS.setLocalFontsEnabled")(CSSDotsetLocalFontsEnabled.asInstanceOf[js.Any])
     __obj.updateDynamic("CSS.setMediaText")(CSSDotsetMediaText.asInstanceOf[js.Any])
     __obj.updateDynamic("CSS.setRuleSelector")(CSSDotsetRuleSelector.asInstanceOf[js.Any])
     __obj.updateDynamic("CSS.setStyleSheetText")(CSSDotsetStyleSheetText.asInstanceOf[js.Any])
     __obj.updateDynamic("CSS.setStyleTexts")(CSSDotsetStyleTexts.asInstanceOf[js.Any])
     __obj.updateDynamic("CSS.startRuleUsageTracking")(CSSDotstartRuleUsageTracking.asInstanceOf[js.Any])
     __obj.updateDynamic("CSS.stopRuleUsageTracking")(CSSDotstopRuleUsageTracking.asInstanceOf[js.Any])
+    __obj.updateDynamic("CSS.takeComputedStyleUpdates")(CSSDottakeComputedStyleUpdates.asInstanceOf[js.Any])
     __obj.updateDynamic("CSS.takeCoverageDelta")(CSSDottakeCoverageDelta.asInstanceOf[js.Any])
+    __obj.updateDynamic("CSS.trackComputedStyleUpdates")(CSSDottrackComputedStyleUpdates.asInstanceOf[js.Any])
     __obj.updateDynamic("CacheStorage.deleteCache")(CacheStorageDotdeleteCache.asInstanceOf[js.Any])
     __obj.updateDynamic("CacheStorage.deleteEntry")(CacheStorageDotdeleteEntry.asInstanceOf[js.Any])
     __obj.updateDynamic("CacheStorage.requestCacheNames")(CacheStorageDotrequestCacheNames.asInstanceOf[js.Any])
@@ -3621,6 +3769,7 @@ object Commands {
     __obj.updateDynamic("DOM.getFrameOwner")(DOMDotgetFrameOwner.asInstanceOf[js.Any])
     __obj.updateDynamic("DOM.getNodeForLocation")(DOMDotgetNodeForLocation.asInstanceOf[js.Any])
     __obj.updateDynamic("DOM.getNodeStackTraces")(DOMDotgetNodeStackTraces.asInstanceOf[js.Any])
+    __obj.updateDynamic("DOM.getNodesForSubtreeByStyle")(DOMDotgetNodesForSubtreeByStyle.asInstanceOf[js.Any])
     __obj.updateDynamic("DOM.getOuterHTML")(DOMDotgetOuterHTML.asInstanceOf[js.Any])
     __obj.updateDynamic("DOM.getRelayoutBoundary")(DOMDotgetRelayoutBoundary.asInstanceOf[js.Any])
     __obj.updateDynamic("DOM.getSearchResults")(DOMDotgetSearchResults.asInstanceOf[js.Any])
@@ -3700,6 +3849,7 @@ object Commands {
     __obj.updateDynamic("Emulation.canEmulate")(EmulationDotcanEmulate.asInstanceOf[js.Any])
     __obj.updateDynamic("Emulation.clearDeviceMetricsOverride")(EmulationDotclearDeviceMetricsOverride.asInstanceOf[js.Any])
     __obj.updateDynamic("Emulation.clearGeolocationOverride")(EmulationDotclearGeolocationOverride.asInstanceOf[js.Any])
+    __obj.updateDynamic("Emulation.clearIdleOverride")(EmulationDotclearIdleOverride.asInstanceOf[js.Any])
     __obj.updateDynamic("Emulation.resetPageScaleFactor")(EmulationDotresetPageScaleFactor.asInstanceOf[js.Any])
     __obj.updateDynamic("Emulation.setCPUThrottlingRate")(EmulationDotsetCPUThrottlingRate.asInstanceOf[js.Any])
     __obj.updateDynamic("Emulation.setDefaultBackgroundColorOverride")(EmulationDotsetDefaultBackgroundColorOverride.asInstanceOf[js.Any])
@@ -3710,6 +3860,7 @@ object Commands {
     __obj.updateDynamic("Emulation.setEmulatedVisionDeficiency")(EmulationDotsetEmulatedVisionDeficiency.asInstanceOf[js.Any])
     __obj.updateDynamic("Emulation.setFocusEmulationEnabled")(EmulationDotsetFocusEmulationEnabled.asInstanceOf[js.Any])
     __obj.updateDynamic("Emulation.setGeolocationOverride")(EmulationDotsetGeolocationOverride.asInstanceOf[js.Any])
+    __obj.updateDynamic("Emulation.setIdleOverride")(EmulationDotsetIdleOverride.asInstanceOf[js.Any])
     __obj.updateDynamic("Emulation.setLocaleOverride")(EmulationDotsetLocaleOverride.asInstanceOf[js.Any])
     __obj.updateDynamic("Emulation.setNavigatorOverrides")(EmulationDotsetNavigatorOverrides.asInstanceOf[js.Any])
     __obj.updateDynamic("Emulation.setPageScaleFactor")(EmulationDotsetPageScaleFactor.asInstanceOf[js.Any])
@@ -3768,13 +3919,6 @@ object Commands {
     __obj.updateDynamic("Inspector.enable")(InspectorDotenable.asInstanceOf[js.Any])
     __obj.updateDynamic("LayerTree.compositingReasons")(LayerTreeDotcompositingReasons.asInstanceOf[js.Any])
     __obj.updateDynamic("LayerTree.disable")(LayerTreeDotdisable.asInstanceOf[js.Any])
-    __obj.updateDynamic("LayerTree.enable")(LayerTreeDotenable.asInstanceOf[js.Any])
-    __obj.updateDynamic("LayerTree.loadSnapshot")(LayerTreeDotloadSnapshot.asInstanceOf[js.Any])
-    __obj.updateDynamic("LayerTree.makeSnapshot")(LayerTreeDotmakeSnapshot.asInstanceOf[js.Any])
-    __obj.updateDynamic("LayerTree.profileSnapshot")(LayerTreeDotprofileSnapshot.asInstanceOf[js.Any])
-    __obj.updateDynamic("LayerTree.releaseSnapshot")(LayerTreeDotreleaseSnapshot.asInstanceOf[js.Any])
-    __obj.updateDynamic("LayerTree.replaySnapshot")(LayerTreeDotreplaySnapshot.asInstanceOf[js.Any])
-    __obj.updateDynamic("LayerTree.snapshotCommandLog")(LayerTreeDotsnapshotCommandLog.asInstanceOf[js.Any])
     __obj.asInstanceOf[Commands]
   }
   
@@ -3806,6 +3950,9 @@ object Commands {
     def setAccessibilityDotgetPartialAXTree(value: ReturnTypeGetPartialAXTreeResponse): Self = this.set("Accessibility.getPartialAXTree", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setAccessibilityDotqueryAXTree(value: ReturnTypeQueryAXTreeResponse): Self = this.set("Accessibility.queryAXTree", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setAnimationDotdisable(value: ParamsType): Self = this.set("Animation.disable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -3818,22 +3965,22 @@ object Commands {
     def setAnimationDotgetPlaybackRate(value: ReturnTypeGetPlaybackRateResponse): Self = this.set("Animation.getPlaybackRate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAnimationDotreleaseAnimations(value: `23`): Self = this.set("Animation.releaseAnimations", value.asInstanceOf[js.Any])
+    def setAnimationDotreleaseAnimations(value: `24`): Self = this.set("Animation.releaseAnimations", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAnimationDotresolveAnimation(value: ReturnTypeResolveAnimationResponse): Self = this.set("Animation.resolveAnimation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAnimationDotseekAnimations(value: `24`): Self = this.set("Animation.seekAnimations", value.asInstanceOf[js.Any])
+    def setAnimationDotseekAnimations(value: `25`): Self = this.set("Animation.seekAnimations", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAnimationDotsetPaused(value: `25`): Self = this.set("Animation.setPaused", value.asInstanceOf[js.Any])
+    def setAnimationDotsetPaused(value: `26`): Self = this.set("Animation.setPaused", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAnimationDotsetPlaybackRate(value: `26`): Self = this.set("Animation.setPlaybackRate", value.asInstanceOf[js.Any])
+    def setAnimationDotsetPlaybackRate(value: `27`): Self = this.set("Animation.setPlaybackRate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAnimationDotsetTiming(value: `27`): Self = this.set("Animation.setTiming", value.asInstanceOf[js.Any])
+    def setAnimationDotsetTiming(value: `28`): Self = this.set("Animation.setTiming", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setApplicationCacheDotenable(value: ParamsType): Self = this.set("ApplicationCache.enable", value.asInstanceOf[js.Any])
@@ -3857,16 +4004,16 @@ object Commands {
     def setAuditsDotgetEncodedResponse(value: ReturnTypeGetEncodedResponseResponse): Self = this.set("Audits.getEncodedResponse", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBackgroundServiceDotclearEvents(value: `31`): Self = this.set("BackgroundService.clearEvents", value.asInstanceOf[js.Any])
+    def setBackgroundServiceDotclearEvents(value: `32`): Self = this.set("BackgroundService.clearEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBackgroundServiceDotsetRecording(value: `30`): Self = this.set("BackgroundService.setRecording", value.asInstanceOf[js.Any])
+    def setBackgroundServiceDotsetRecording(value: `31`): Self = this.set("BackgroundService.setRecording", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBackgroundServiceDotstartObserving(value: `28`): Self = this.set("BackgroundService.startObserving", value.asInstanceOf[js.Any])
+    def setBackgroundServiceDotstartObserving(value: `29`): Self = this.set("BackgroundService.startObserving", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBackgroundServiceDotstopObserving(value: `29`): Self = this.set("BackgroundService.stopObserving", value.asInstanceOf[js.Any])
+    def setBackgroundServiceDotstopObserving(value: `30`): Self = this.set("BackgroundService.stopObserving", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setBrowserDotclose(value: ParamsType): Self = this.set("Browser.close", value.asInstanceOf[js.Any])
@@ -3896,22 +4043,22 @@ object Commands {
     def setBrowserDotgetWindowForTarget(value: ReturnTypeGetWindowForTargetResponse): Self = this.set("Browser.getWindowForTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBrowserDotgrantPermissions(value: `33`): Self = this.set("Browser.grantPermissions", value.asInstanceOf[js.Any])
+    def setBrowserDotgrantPermissions(value: `34`): Self = this.set("Browser.grantPermissions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBrowserDotresetPermissions(value: `34`): Self = this.set("Browser.resetPermissions", value.asInstanceOf[js.Any])
+    def setBrowserDotresetPermissions(value: `35`): Self = this.set("Browser.resetPermissions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBrowserDotsetDockTile(value: `37`): Self = this.set("Browser.setDockTile", value.asInstanceOf[js.Any])
+    def setBrowserDotsetDockTile(value: `38`): Self = this.set("Browser.setDockTile", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBrowserDotsetDownloadBehavior(value: `35`): Self = this.set("Browser.setDownloadBehavior", value.asInstanceOf[js.Any])
+    def setBrowserDotsetDownloadBehavior(value: `36`): Self = this.set("Browser.setDownloadBehavior", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBrowserDotsetPermission(value: `32`): Self = this.set("Browser.setPermission", value.asInstanceOf[js.Any])
+    def setBrowserDotsetPermission(value: `33`): Self = this.set("Browser.setPermission", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBrowserDotsetWindowBounds(value: `36`): Self = this.set("Browser.setWindowBounds", value.asInstanceOf[js.Any])
+    def setBrowserDotsetWindowBounds(value: `37`): Self = this.set("Browser.setWindowBounds", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCSSDotaddRule(value: ReturnTypeAddRuleResponse): Self = this.set("CSS.addRule", value.asInstanceOf[js.Any])
@@ -3929,7 +4076,7 @@ object Commands {
     def setCSSDotenable(value: ParamsType): Self = this.set("CSS.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCSSDotforcePseudoState(value: `38`): Self = this.set("CSS.forcePseudoState", value.asInstanceOf[js.Any])
+    def setCSSDotforcePseudoState(value: `39`): Self = this.set("CSS.forcePseudoState", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCSSDotgetBackgroundColors(value: ReturnTypeGetBackgroundColorsResponse): Self = this.set("CSS.getBackgroundColors", value.asInstanceOf[js.Any])
@@ -3953,10 +4100,13 @@ object Commands {
     def setCSSDotgetStyleSheetText(value: ReturnTypeGetStyleSheetTextResponse): Self = this.set("CSS.getStyleSheetText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCSSDotsetEffectivePropertyValueForNode(value: `39`): Self = this.set("CSS.setEffectivePropertyValueForNode", value.asInstanceOf[js.Any])
+    def setCSSDotsetEffectivePropertyValueForNode(value: `41`): Self = this.set("CSS.setEffectivePropertyValueForNode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCSSDotsetKeyframeKey(value: ReturnTypeSetKeyframeKeyResponse): Self = this.set("CSS.setKeyframeKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCSSDotsetLocalFontsEnabled(value: `42`): Self = this.set("CSS.setLocalFontsEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCSSDotsetMediaText(value: ReturnTypeSetMediaTextResponse): Self = this.set("CSS.setMediaText", value.asInstanceOf[js.Any])
@@ -3977,13 +4127,19 @@ object Commands {
     def setCSSDotstopRuleUsageTracking(value: ReturnTypeStopRuleUsageTrackingResponse): Self = this.set("CSS.stopRuleUsageTracking", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setCSSDottakeComputedStyleUpdates(value: ReturnTypeTakeComputedStyleUpdatesResponse): Self = this.set("CSS.takeComputedStyleUpdates", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setCSSDottakeCoverageDelta(value: ReturnTypeTakeCoverageDeltaResponse): Self = this.set("CSS.takeCoverageDelta", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCacheStorageDotdeleteCache(value: `40`): Self = this.set("CacheStorage.deleteCache", value.asInstanceOf[js.Any])
+    def setCSSDottrackComputedStyleUpdates(value: `40`): Self = this.set("CSS.trackComputedStyleUpdates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCacheStorageDotdeleteEntry(value: `41`): Self = this.set("CacheStorage.deleteEntry", value.asInstanceOf[js.Any])
+    def setCacheStorageDotdeleteCache(value: `43`): Self = this.set("CacheStorage.deleteCache", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCacheStorageDotdeleteEntry(value: `44`): Self = this.set("CacheStorage.deleteEntry", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCacheStorageDotrequestCacheNames(value: ReturnTypeRequestCacheNamesResponse): Self = this.set("CacheStorage.requestCacheNames", value.asInstanceOf[js.Any])
@@ -3998,16 +4154,16 @@ object Commands {
     def setCastDotdisable(value: ParamsType): Self = this.set("Cast.disable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCastDotenable(value: `42`): Self = this.set("Cast.enable", value.asInstanceOf[js.Any])
+    def setCastDotenable(value: `45`): Self = this.set("Cast.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCastDotsetSinkToUse(value: `43`): Self = this.set("Cast.setSinkToUse", value.asInstanceOf[js.Any])
+    def setCastDotsetSinkToUse(value: `46`): Self = this.set("Cast.setSinkToUse", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCastDotstartTabMirroring(value: `44`): Self = this.set("Cast.startTabMirroring", value.asInstanceOf[js.Any])
+    def setCastDotstartTabMirroring(value: `47`): Self = this.set("Cast.startTabMirroring", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCastDotstopCasting(value: `45`): Self = this.set("Cast.stopCasting", value.asInstanceOf[js.Any])
+    def setCastDotstopCasting(value: `48`): Self = this.set("Cast.stopCasting", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setConsoleDotclearMessages(value: ParamsType): Self = this.set("Console.clearMessages", value.asInstanceOf[js.Any])
@@ -4022,28 +4178,28 @@ object Commands {
     def setDOMDebuggerDotgetEventListeners(value: ReturnTypeGetEventListenersResponse): Self = this.set("DOMDebugger.getEventListeners", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDebuggerDotremoveDOMBreakpoint(value: `59`): Self = this.set("DOMDebugger.removeDOMBreakpoint", value.asInstanceOf[js.Any])
+    def setDOMDebuggerDotremoveDOMBreakpoint(value: `62`): Self = this.set("DOMDebugger.removeDOMBreakpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDebuggerDotremoveEventListenerBreakpoint(value: `60`): Self = this.set("DOMDebugger.removeEventListenerBreakpoint", value.asInstanceOf[js.Any])
+    def setDOMDebuggerDotremoveEventListenerBreakpoint(value: `63`): Self = this.set("DOMDebugger.removeEventListenerBreakpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDebuggerDotremoveInstrumentationBreakpoint(value: `61`): Self = this.set("DOMDebugger.removeInstrumentationBreakpoint", value.asInstanceOf[js.Any])
+    def setDOMDebuggerDotremoveInstrumentationBreakpoint(value: `64`): Self = this.set("DOMDebugger.removeInstrumentationBreakpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDebuggerDotremoveXHRBreakpoint(value: `62`): Self = this.set("DOMDebugger.removeXHRBreakpoint", value.asInstanceOf[js.Any])
+    def setDOMDebuggerDotremoveXHRBreakpoint(value: `65`): Self = this.set("DOMDebugger.removeXHRBreakpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDebuggerDotsetDOMBreakpoint(value: `63`): Self = this.set("DOMDebugger.setDOMBreakpoint", value.asInstanceOf[js.Any])
+    def setDOMDebuggerDotsetDOMBreakpoint(value: `66`): Self = this.set("DOMDebugger.setDOMBreakpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDebuggerDotsetEventListenerBreakpoint(value: `64`): Self = this.set("DOMDebugger.setEventListenerBreakpoint", value.asInstanceOf[js.Any])
+    def setDOMDebuggerDotsetEventListenerBreakpoint(value: `67`): Self = this.set("DOMDebugger.setEventListenerBreakpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDebuggerDotsetInstrumentationBreakpoint(value: `65`): Self = this.set("DOMDebugger.setInstrumentationBreakpoint", value.asInstanceOf[js.Any])
+    def setDOMDebuggerDotsetInstrumentationBreakpoint(value: `68`): Self = this.set("DOMDebugger.setInstrumentationBreakpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDebuggerDotsetXHRBreakpoint(value: `66`): Self = this.set("DOMDebugger.setXHRBreakpoint", value.asInstanceOf[js.Any])
+    def setDOMDebuggerDotsetXHRBreakpoint(value: `69`): Self = this.set("DOMDebugger.setXHRBreakpoint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDOMDotcollectClassNamesFromSubtree(value: ReturnTypeCollectClassNamesFromSubtreeResponse): Self = this.set("DOM.collectClassNamesFromSubtree", value.asInstanceOf[js.Any])
@@ -4058,13 +4214,13 @@ object Commands {
     def setDOMDotdisable(value: ParamsType): Self = this.set("DOM.disable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotdiscardSearchResults(value: `47`): Self = this.set("DOM.discardSearchResults", value.asInstanceOf[js.Any])
+    def setDOMDotdiscardSearchResults(value: `50`): Self = this.set("DOM.discardSearchResults", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDOMDotenable(value: ParamsType): Self = this.set("DOM.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotfocus(value: `48`): Self = this.set("DOM.focus", value.asInstanceOf[js.Any])
+    def setDOMDotfocus(value: `51`): Self = this.set("DOM.focus", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDOMDotgetAttributes(value: ReturnTypeGetAttributesResponse): Self = this.set("DOM.getAttributes", value.asInstanceOf[js.Any])
@@ -4092,6 +4248,9 @@ object Commands {
     
     @scala.inline
     def setDOMDotgetNodeStackTraces(value: ReturnTypeGetNodeStackTracesResponse): Self = this.set("DOM.getNodeStackTraces", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDOMDotgetNodesForSubtreeByStyle(value: ReturnTypeGetNodesForSubtreeByStyleResponse): Self = this.set("DOM.getNodesForSubtreeByStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDOMDotgetOuterHTML(value: ReturnTypeGetOuterHTMLResponse): Self = this.set("DOM.getOuterHTML", value.asInstanceOf[js.Any])
@@ -4136,13 +4295,13 @@ object Commands {
     def setDOMDotredo(value: ParamsType): Self = this.set("DOM.redo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotremoveAttribute(value: `49`): Self = this.set("DOM.removeAttribute", value.asInstanceOf[js.Any])
+    def setDOMDotremoveAttribute(value: `52`): Self = this.set("DOM.removeAttribute", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotremoveNode(value: `50`): Self = this.set("DOM.removeNode", value.asInstanceOf[js.Any])
+    def setDOMDotremoveNode(value: `53`): Self = this.set("DOM.removeNode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotrequestChildNodes(value: `51`): Self = this.set("DOM.requestChildNodes", value.asInstanceOf[js.Any])
+    def setDOMDotrequestChildNodes(value: `54`): Self = this.set("DOM.requestChildNodes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDOMDotrequestNode(value: ReturnTypeRequestNodeResponse): Self = this.set("DOM.requestNode", value.asInstanceOf[js.Any])
@@ -4151,31 +4310,31 @@ object Commands {
     def setDOMDotresolveNode(value: ReturnTypeResolveNodeResponse): Self = this.set("DOM.resolveNode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotscrollIntoViewIfNeeded(value: `46`): Self = this.set("DOM.scrollIntoViewIfNeeded", value.asInstanceOf[js.Any])
+    def setDOMDotscrollIntoViewIfNeeded(value: `49`): Self = this.set("DOM.scrollIntoViewIfNeeded", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotsetAttributeValue(value: `52`): Self = this.set("DOM.setAttributeValue", value.asInstanceOf[js.Any])
+    def setDOMDotsetAttributeValue(value: `55`): Self = this.set("DOM.setAttributeValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotsetAttributesAsText(value: `53`): Self = this.set("DOM.setAttributesAsText", value.asInstanceOf[js.Any])
+    def setDOMDotsetAttributesAsText(value: `56`): Self = this.set("DOM.setAttributesAsText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotsetFileInputFiles(value: `54`): Self = this.set("DOM.setFileInputFiles", value.asInstanceOf[js.Any])
+    def setDOMDotsetFileInputFiles(value: `57`): Self = this.set("DOM.setFileInputFiles", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotsetInspectedNode(value: `56`): Self = this.set("DOM.setInspectedNode", value.asInstanceOf[js.Any])
+    def setDOMDotsetInspectedNode(value: `59`): Self = this.set("DOM.setInspectedNode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDOMDotsetNodeName(value: ReturnTypeSetNodeNameResponse): Self = this.set("DOM.setNodeName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotsetNodeStackTracesEnabled(value: `55`): Self = this.set("DOM.setNodeStackTracesEnabled", value.asInstanceOf[js.Any])
+    def setDOMDotsetNodeStackTracesEnabled(value: `58`): Self = this.set("DOM.setNodeStackTracesEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotsetNodeValue(value: `57`): Self = this.set("DOM.setNodeValue", value.asInstanceOf[js.Any])
+    def setDOMDotsetNodeValue(value: `60`): Self = this.set("DOM.setNodeValue", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMDotsetOuterHTML(value: `58`): Self = this.set("DOM.setOuterHTML", value.asInstanceOf[js.Any])
+    def setDOMDotsetOuterHTML(value: `61`): Self = this.set("DOM.setOuterHTML", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDOMDotundo(value: ParamsType): Self = this.set("DOM.undo", value.asInstanceOf[js.Any])
@@ -4193,7 +4352,7 @@ object Commands {
     def setDOMSnapshotDotgetSnapshot(value: ReturnTypeGetSnapshotResponse): Self = this.set("DOMSnapshot.getSnapshot", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMStorageDotclear(value: `67`): Self = this.set("DOMStorage.clear", value.asInstanceOf[js.Any])
+    def setDOMStorageDotclear(value: `70`): Self = this.set("DOMStorage.clear", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDOMStorageDotdisable(value: ParamsType): Self = this.set("DOMStorage.disable", value.asInstanceOf[js.Any])
@@ -4205,10 +4364,10 @@ object Commands {
     def setDOMStorageDotgetDOMStorageItems(value: ReturnTypeGetDOMStorageItemsResponse): Self = this.set("DOMStorage.getDOMStorageItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMStorageDotremoveDOMStorageItem(value: `68`): Self = this.set("DOMStorage.removeDOMStorageItem", value.asInstanceOf[js.Any])
+    def setDOMStorageDotremoveDOMStorageItem(value: `71`): Self = this.set("DOMStorage.removeDOMStorageItem", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDOMStorageDotsetDOMStorageItem(value: `69`): Self = this.set("DOMStorage.setDOMStorageItem", value.asInstanceOf[js.Any])
+    def setDOMStorageDotsetDOMStorageItem(value: `72`): Self = this.set("DOMStorage.setDOMStorageItem", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDatabaseDotdisable(value: ParamsType): Self = this.set("Database.disable", value.asInstanceOf[js.Any])
@@ -4313,13 +4472,13 @@ object Commands {
     def setDebuggerDotstepOut(value: ParamsType): Self = this.set("Debugger.stepOut", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDebuggerDotstepOver(value: ParamsType): Self = this.set("Debugger.stepOver", value.asInstanceOf[js.Any])
+    def setDebuggerDotstepOver(value: `10`): Self = this.set("Debugger.stepOver", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDeviceOrientationDotclearDeviceOrientationOverride(value: ParamsType): Self = this.set("DeviceOrientation.clearDeviceOrientationOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDeviceOrientationDotsetDeviceOrientationOverride(value: `70`): Self = this.set("DeviceOrientation.setDeviceOrientationOverride", value.asInstanceOf[js.Any])
+    def setDeviceOrientationDotsetDeviceOrientationOverride(value: `73`): Self = this.set("DeviceOrientation.setDeviceOrientationOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setEmulationDotcanEmulate(value: ReturnTypeCanEmulateResponse): Self = this.set("Emulation.canEmulate", value.asInstanceOf[js.Any])
@@ -4331,82 +4490,88 @@ object Commands {
     def setEmulationDotclearGeolocationOverride(value: ParamsType): Self = this.set("Emulation.clearGeolocationOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setEmulationDotclearIdleOverride(value: ParamsType): Self = this.set("Emulation.clearIdleOverride", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setEmulationDotresetPageScaleFactor(value: ParamsType): Self = this.set("Emulation.resetPageScaleFactor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetCPUThrottlingRate(value: `72`): Self = this.set("Emulation.setCPUThrottlingRate", value.asInstanceOf[js.Any])
+    def setEmulationDotsetCPUThrottlingRate(value: `75`): Self = this.set("Emulation.setCPUThrottlingRate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetDefaultBackgroundColorOverride(value: `73`): Self = this.set("Emulation.setDefaultBackgroundColorOverride", value.asInstanceOf[js.Any])
+    def setEmulationDotsetDefaultBackgroundColorOverride(value: `76`): Self = this.set("Emulation.setDefaultBackgroundColorOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetDeviceMetricsOverride(value: `74`): Self = this.set("Emulation.setDeviceMetricsOverride", value.asInstanceOf[js.Any])
+    def setEmulationDotsetDeviceMetricsOverride(value: `77`): Self = this.set("Emulation.setDeviceMetricsOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetDocumentCookieDisabled(value: `76`): Self = this.set("Emulation.setDocumentCookieDisabled", value.asInstanceOf[js.Any])
+    def setEmulationDotsetDocumentCookieDisabled(value: `79`): Self = this.set("Emulation.setDocumentCookieDisabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetEmitTouchEventsForMouse(value: `77`): Self = this.set("Emulation.setEmitTouchEventsForMouse", value.asInstanceOf[js.Any])
+    def setEmulationDotsetEmitTouchEventsForMouse(value: `80`): Self = this.set("Emulation.setEmitTouchEventsForMouse", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetEmulatedMedia(value: `78`): Self = this.set("Emulation.setEmulatedMedia", value.asInstanceOf[js.Any])
+    def setEmulationDotsetEmulatedMedia(value: `81`): Self = this.set("Emulation.setEmulatedMedia", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetEmulatedVisionDeficiency(value: `79`): Self = this.set("Emulation.setEmulatedVisionDeficiency", value.asInstanceOf[js.Any])
+    def setEmulationDotsetEmulatedVisionDeficiency(value: `82`): Self = this.set("Emulation.setEmulatedVisionDeficiency", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetFocusEmulationEnabled(value: `71`): Self = this.set("Emulation.setFocusEmulationEnabled", value.asInstanceOf[js.Any])
+    def setEmulationDotsetFocusEmulationEnabled(value: `74`): Self = this.set("Emulation.setFocusEmulationEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetGeolocationOverride(value: `80`): Self = this.set("Emulation.setGeolocationOverride", value.asInstanceOf[js.Any])
+    def setEmulationDotsetGeolocationOverride(value: `83`): Self = this.set("Emulation.setGeolocationOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetLocaleOverride(value: `85`): Self = this.set("Emulation.setLocaleOverride", value.asInstanceOf[js.Any])
+    def setEmulationDotsetIdleOverride(value: `84`): Self = this.set("Emulation.setIdleOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetNavigatorOverrides(value: `81`): Self = this.set("Emulation.setNavigatorOverrides", value.asInstanceOf[js.Any])
+    def setEmulationDotsetLocaleOverride(value: `89`): Self = this.set("Emulation.setLocaleOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetPageScaleFactor(value: `82`): Self = this.set("Emulation.setPageScaleFactor", value.asInstanceOf[js.Any])
+    def setEmulationDotsetNavigatorOverrides(value: `85`): Self = this.set("Emulation.setNavigatorOverrides", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetScriptExecutionDisabled(value: `83`): Self = this.set("Emulation.setScriptExecutionDisabled", value.asInstanceOf[js.Any])
+    def setEmulationDotsetPageScaleFactor(value: `86`): Self = this.set("Emulation.setPageScaleFactor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetScrollbarsHidden(value: `75`): Self = this.set("Emulation.setScrollbarsHidden", value.asInstanceOf[js.Any])
+    def setEmulationDotsetScriptExecutionDisabled(value: `87`): Self = this.set("Emulation.setScriptExecutionDisabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetTimezoneOverride(value: `86`): Self = this.set("Emulation.setTimezoneOverride", value.asInstanceOf[js.Any])
+    def setEmulationDotsetScrollbarsHidden(value: `78`): Self = this.set("Emulation.setScrollbarsHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetTouchEmulationEnabled(value: `84`): Self = this.set("Emulation.setTouchEmulationEnabled", value.asInstanceOf[js.Any])
+    def setEmulationDotsetTimezoneOverride(value: `90`): Self = this.set("Emulation.setTimezoneOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetUserAgentOverride(value: `88`): Self = this.set("Emulation.setUserAgentOverride", value.asInstanceOf[js.Any])
+    def setEmulationDotsetTouchEmulationEnabled(value: `88`): Self = this.set("Emulation.setTouchEmulationEnabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEmulationDotsetUserAgentOverride(value: `92`): Self = this.set("Emulation.setUserAgentOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setEmulationDotsetVirtualTimePolicy(value: ReturnTypeSetVirtualTimePolicyResponse): Self = this.set("Emulation.setVirtualTimePolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmulationDotsetVisibleSize(value: `87`): Self = this.set("Emulation.setVisibleSize", value.asInstanceOf[js.Any])
+    def setEmulationDotsetVisibleSize(value: `91`): Self = this.set("Emulation.setVisibleSize", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFetchDotcontinueRequest(value: `197`): Self = this.set("Fetch.continueRequest", value.asInstanceOf[js.Any])
+    def setFetchDotcontinueRequest(value: `205`): Self = this.set("Fetch.continueRequest", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFetchDotcontinueWithAuth(value: `198`): Self = this.set("Fetch.continueWithAuth", value.asInstanceOf[js.Any])
+    def setFetchDotcontinueWithAuth(value: `206`): Self = this.set("Fetch.continueWithAuth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFetchDotdisable(value: ParamsType): Self = this.set("Fetch.disable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFetchDotenable(value: `194`): Self = this.set("Fetch.enable", value.asInstanceOf[js.Any])
+    def setFetchDotenable(value: `202`): Self = this.set("Fetch.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFetchDotfailRequest(value: `195`): Self = this.set("Fetch.failRequest", value.asInstanceOf[js.Any])
+    def setFetchDotfailRequest(value: `203`): Self = this.set("Fetch.failRequest", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFetchDotfulfillRequest(value: `196`): Self = this.set("Fetch.fulfillRequest", value.asInstanceOf[js.Any])
+    def setFetchDotfulfillRequest(value: `204`): Self = this.set("Fetch.fulfillRequest", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFetchDotgetResponseBody(value: ParamsTypeReturnTypeGetResponseBodyResponse): Self = this.set("Fetch.getResponseBody", value.asInstanceOf[js.Any])
@@ -4424,7 +4589,7 @@ object Commands {
     def setHeadlessExperimentalDotenable(value: ParamsType): Self = this.set("HeadlessExperimental.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeapProfilerDotaddInspectedHeapObject(value: `10`): Self = this.set("HeapProfiler.addInspectedHeapObject", value.asInstanceOf[js.Any])
+    def setHeapProfilerDotaddInspectedHeapObject(value: `11`): Self = this.set("HeapProfiler.addInspectedHeapObject", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHeapProfilerDotcollectGarbage(value: ParamsType): Self = this.set("HeapProfiler.collectGarbage", value.asInstanceOf[js.Any])
@@ -4445,22 +4610,22 @@ object Commands {
     def setHeapProfilerDotgetSamplingProfile(value: ReturnTypeGetSamplingProfileResponse): Self = this.set("HeapProfiler.getSamplingProfile", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeapProfilerDotstartSampling(value: `11`): Self = this.set("HeapProfiler.startSampling", value.asInstanceOf[js.Any])
+    def setHeapProfilerDotstartSampling(value: `12`): Self = this.set("HeapProfiler.startSampling", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeapProfilerDotstartTrackingHeapObjects(value: `12`): Self = this.set("HeapProfiler.startTrackingHeapObjects", value.asInstanceOf[js.Any])
+    def setHeapProfilerDotstartTrackingHeapObjects(value: `13`): Self = this.set("HeapProfiler.startTrackingHeapObjects", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHeapProfilerDotstopSampling(value: ReturnTypeStopSamplingResponse): Self = this.set("HeapProfiler.stopSampling", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeapProfilerDotstopTrackingHeapObjects(value: `13`): Self = this.set("HeapProfiler.stopTrackingHeapObjects", value.asInstanceOf[js.Any])
+    def setHeapProfilerDotstopTrackingHeapObjects(value: `14`): Self = this.set("HeapProfiler.stopTrackingHeapObjects", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHeapProfilerDottakeHeapSnapshot(value: `14`): Self = this.set("HeapProfiler.takeHeapSnapshot", value.asInstanceOf[js.Any])
+    def setHeapProfilerDottakeHeapSnapshot(value: `15`): Self = this.set("HeapProfiler.takeHeapSnapshot", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIODotclose(value: `89`): Self = this.set("IO.close", value.asInstanceOf[js.Any])
+    def setIODotclose(value: `93`): Self = this.set("IO.close", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIODotread(value: ReturnTypeReadResponse): Self = this.set("IO.read", value.asInstanceOf[js.Any])
@@ -4469,13 +4634,13 @@ object Commands {
     def setIODotresolveBlob(value: ReturnTypeResolveBlobResponse): Self = this.set("IO.resolveBlob", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIndexedDBDotclearObjectStore(value: `90`): Self = this.set("IndexedDB.clearObjectStore", value.asInstanceOf[js.Any])
+    def setIndexedDBDotclearObjectStore(value: `94`): Self = this.set("IndexedDB.clearObjectStore", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIndexedDBDotdeleteDatabase(value: `91`): Self = this.set("IndexedDB.deleteDatabase", value.asInstanceOf[js.Any])
+    def setIndexedDBDotdeleteDatabase(value: `95`): Self = this.set("IndexedDB.deleteDatabase", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIndexedDBDotdeleteObjectStoreEntries(value: `92`): Self = this.set("IndexedDB.deleteObjectStoreEntries", value.asInstanceOf[js.Any])
+    def setIndexedDBDotdeleteObjectStoreEntries(value: `96`): Self = this.set("IndexedDB.deleteObjectStoreEntries", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIndexedDBDotdisable(value: ParamsType): Self = this.set("IndexedDB.disable", value.asInstanceOf[js.Any])
@@ -4496,31 +4661,31 @@ object Commands {
     def setIndexedDBDotrequestDatabaseNames(value: ReturnTypeRequestDatabaseNamesResponse): Self = this.set("IndexedDB.requestDatabaseNames", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInputDotdispatchKeyEvent(value: `93`): Self = this.set("Input.dispatchKeyEvent", value.asInstanceOf[js.Any])
+    def setInputDotdispatchKeyEvent(value: `97`): Self = this.set("Input.dispatchKeyEvent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInputDotdispatchMouseEvent(value: `95`): Self = this.set("Input.dispatchMouseEvent", value.asInstanceOf[js.Any])
+    def setInputDotdispatchMouseEvent(value: `99`): Self = this.set("Input.dispatchMouseEvent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInputDotdispatchTouchEvent(value: `96`): Self = this.set("Input.dispatchTouchEvent", value.asInstanceOf[js.Any])
+    def setInputDotdispatchTouchEvent(value: `100`): Self = this.set("Input.dispatchTouchEvent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInputDotemulateTouchFromMouseEvent(value: `97`): Self = this.set("Input.emulateTouchFromMouseEvent", value.asInstanceOf[js.Any])
+    def setInputDotemulateTouchFromMouseEvent(value: `101`): Self = this.set("Input.emulateTouchFromMouseEvent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInputDotinsertText(value: `94`): Self = this.set("Input.insertText", value.asInstanceOf[js.Any])
+    def setInputDotinsertText(value: `98`): Self = this.set("Input.insertText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInputDotsetIgnoreInputEvents(value: `98`): Self = this.set("Input.setIgnoreInputEvents", value.asInstanceOf[js.Any])
+    def setInputDotsetIgnoreInputEvents(value: `102`): Self = this.set("Input.setIgnoreInputEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInputDotsynthesizePinchGesture(value: `99`): Self = this.set("Input.synthesizePinchGesture", value.asInstanceOf[js.Any])
+    def setInputDotsynthesizePinchGesture(value: `103`): Self = this.set("Input.synthesizePinchGesture", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInputDotsynthesizeScrollGesture(value: `100`): Self = this.set("Input.synthesizeScrollGesture", value.asInstanceOf[js.Any])
+    def setInputDotsynthesizeScrollGesture(value: `104`): Self = this.set("Input.synthesizeScrollGesture", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInputDotsynthesizeTapGesture(value: `101`): Self = this.set("Input.synthesizeTapGesture", value.asInstanceOf[js.Any])
+    def setInputDotsynthesizeTapGesture(value: `105`): Self = this.set("Input.synthesizeTapGesture", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setInspectorDotdisable(value: ParamsType): Self = this.set("Inspector.disable", value.asInstanceOf[js.Any])
@@ -4547,7 +4712,7 @@ object Commands {
     def setLayerTreeDotprofileSnapshot(value: ReturnTypeProfileSnapshotResponse): Self = this.set("LayerTree.profileSnapshot", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLayerTreeDotreleaseSnapshot(value: `102`): Self = this.set("LayerTree.releaseSnapshot", value.asInstanceOf[js.Any])
+    def setLayerTreeDotreleaseSnapshot(value: `106`): Self = this.set("LayerTree.releaseSnapshot", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLayerTreeDotreplaySnapshot(value: ReturnTypeReplaySnapshotResponse): Self = this.set("LayerTree.replaySnapshot", value.asInstanceOf[js.Any])
@@ -4565,7 +4730,7 @@ object Commands {
     def setLogDotenable(value: ParamsType): Self = this.set("Log.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLogDotstartViolationsReport(value: `103`): Self = this.set("Log.startViolationsReport", value.asInstanceOf[js.Any])
+    def setLogDotstartViolationsReport(value: `107`): Self = this.set("Log.startViolationsReport", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLogDotstopViolationsReport(value: ParamsType): Self = this.set("Log.stopViolationsReport", value.asInstanceOf[js.Any])
@@ -4595,13 +4760,13 @@ object Commands {
     def setMemoryDotprepareForLeakDetection(value: ParamsType): Self = this.set("Memory.prepareForLeakDetection", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMemoryDotsetPressureNotificationsSuppressed(value: `104`): Self = this.set("Memory.setPressureNotificationsSuppressed", value.asInstanceOf[js.Any])
+    def setMemoryDotsetPressureNotificationsSuppressed(value: `108`): Self = this.set("Memory.setPressureNotificationsSuppressed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMemoryDotsimulatePressureNotification(value: `105`): Self = this.set("Memory.simulatePressureNotification", value.asInstanceOf[js.Any])
+    def setMemoryDotsimulatePressureNotification(value: `109`): Self = this.set("Memory.simulatePressureNotification", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMemoryDotstartSampling(value: `106`): Self = this.set("Memory.startSampling", value.asInstanceOf[js.Any])
+    def setMemoryDotstartSampling(value: `110`): Self = this.set("Memory.startSampling", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMemoryDotstopSampling(value: ParamsType): Self = this.set("Memory.stopSampling", value.asInstanceOf[js.Any])
@@ -4622,19 +4787,19 @@ object Commands {
     def setNetworkDotclearBrowserCookies(value: ParamsType): Self = this.set("Network.clearBrowserCookies", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotcontinueInterceptedRequest(value: `107`): Self = this.set("Network.continueInterceptedRequest", value.asInstanceOf[js.Any])
+    def setNetworkDotcontinueInterceptedRequest(value: `111`): Self = this.set("Network.continueInterceptedRequest", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotdeleteCookies(value: `108`): Self = this.set("Network.deleteCookies", value.asInstanceOf[js.Any])
+    def setNetworkDotdeleteCookies(value: `112`): Self = this.set("Network.deleteCookies", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNetworkDotdisable(value: ParamsType): Self = this.set("Network.disable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotemulateNetworkConditions(value: `109`): Self = this.set("Network.emulateNetworkConditions", value.asInstanceOf[js.Any])
+    def setNetworkDotemulateNetworkConditions(value: `113`): Self = this.set("Network.emulateNetworkConditions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotenable(value: `110`): Self = this.set("Network.enable", value.asInstanceOf[js.Any])
+    def setNetworkDotenable(value: `114`): Self = this.set("Network.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNetworkDotgetAllCookies(value: ReturnTypeGetAllCookiesResponse): Self = this.set("Network.getAllCookies", value.asInstanceOf[js.Any])
@@ -4655,37 +4820,46 @@ object Commands {
     def setNetworkDotgetResponseBodyForInterception(value: ReturnTypeGetResponseBodyForInterceptionResponse): Self = this.set("Network.getResponseBodyForInterception", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotreplayXHR(value: `111`): Self = this.set("Network.replayXHR", value.asInstanceOf[js.Any])
+    def setNetworkDotgetSecurityIsolationStatus(value: ReturnTypeGetSecurityIsolationStatusResponse): Self = this.set("Network.getSecurityIsolationStatus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNetworkDotloadNetworkResource(value: ReturnTypeLoadNetworkResourceResponse): Self = this.set("Network.loadNetworkResource", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNetworkDotreplayXHR(value: `115`): Self = this.set("Network.replayXHR", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNetworkDotsearchInResponseBody(value: ReturnTypeSearchInResponseBodyResponse): Self = this.set("Network.searchInResponseBody", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotsetBlockedURLs(value: `112`): Self = this.set("Network.setBlockedURLs", value.asInstanceOf[js.Any])
+    def setNetworkDotsetAttachDebugHeader(value: `122`): Self = this.set("Network.setAttachDebugHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotsetBypassServiceWorker(value: `113`): Self = this.set("Network.setBypassServiceWorker", value.asInstanceOf[js.Any])
+    def setNetworkDotsetBlockedURLs(value: `116`): Self = this.set("Network.setBlockedURLs", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotsetCacheDisabled(value: `114`): Self = this.set("Network.setCacheDisabled", value.asInstanceOf[js.Any])
+    def setNetworkDotsetBypassServiceWorker(value: `117`): Self = this.set("Network.setBypassServiceWorker", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNetworkDotsetCacheDisabled(value: `118`): Self = this.set("Network.setCacheDisabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNetworkDotsetCookie(value: ReturnTypeSetCookieResponse): Self = this.set("Network.setCookie", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotsetCookies(value: `115`): Self = this.set("Network.setCookies", value.asInstanceOf[js.Any])
+    def setNetworkDotsetCookies(value: `119`): Self = this.set("Network.setCookies", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotsetDataSizeLimitsForTest(value: `116`): Self = this.set("Network.setDataSizeLimitsForTest", value.asInstanceOf[js.Any])
+    def setNetworkDotsetDataSizeLimitsForTest(value: `120`): Self = this.set("Network.setDataSizeLimitsForTest", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotsetExtraHTTPHeaders(value: `117`): Self = this.set("Network.setExtraHTTPHeaders", value.asInstanceOf[js.Any])
+    def setNetworkDotsetExtraHTTPHeaders(value: `121`): Self = this.set("Network.setExtraHTTPHeaders", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotsetRequestInterception(value: `118`): Self = this.set("Network.setRequestInterception", value.asInstanceOf[js.Any])
+    def setNetworkDotsetRequestInterception(value: `123`): Self = this.set("Network.setRequestInterception", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNetworkDotsetUserAgentOverride(value: `119`): Self = this.set("Network.setUserAgentOverride", value.asInstanceOf[js.Any])
+    def setNetworkDotsetUserAgentOverride(value: `124`): Self = this.set("Network.setUserAgentOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNetworkDottakeResponseBodyForInterceptionAsStream(value: ReturnTypeTakeResponseBodyForInterceptionAsStreamResponse): Self = this.set("Network.takeResponseBodyForInterceptionAsStream", value.asInstanceOf[js.Any])
@@ -4697,58 +4871,70 @@ object Commands {
     def setOverlayDotenable(value: ParamsType): Self = this.set("Overlay.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setOverlayDotgetGridHighlightObjectsForTest(value: ReturnTypeGetGridHighlightObjectsForTestResponse): Self = this.set("Overlay.getGridHighlightObjectsForTest", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setOverlayDotgetHighlightObjectForTest(value: ReturnTypeGetHighlightObjectForTestResponse): Self = this.set("Overlay.getHighlightObjectForTest", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOverlayDotgetSourceOrderHighlightObjectForTest(value: ReturnTypeGetSourceOrderHighlightObjectForTestResponse): Self = this.set("Overlay.getSourceOrderHighlightObjectForTest", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOverlayDothideHighlight(value: ParamsType): Self = this.set("Overlay.hideHighlight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDothighlightFrame(value: `120`): Self = this.set("Overlay.highlightFrame", value.asInstanceOf[js.Any])
+    def setOverlayDothighlightFrame(value: `125`): Self = this.set("Overlay.highlightFrame", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDothighlightNode(value: `121`): Self = this.set("Overlay.highlightNode", value.asInstanceOf[js.Any])
+    def setOverlayDothighlightNode(value: `126`): Self = this.set("Overlay.highlightNode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDothighlightQuad(value: `122`): Self = this.set("Overlay.highlightQuad", value.asInstanceOf[js.Any])
+    def setOverlayDothighlightQuad(value: `127`): Self = this.set("Overlay.highlightQuad", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDothighlightRect(value: `123`): Self = this.set("Overlay.highlightRect", value.asInstanceOf[js.Any])
+    def setOverlayDothighlightRect(value: `128`): Self = this.set("Overlay.highlightRect", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetInspectMode(value: `124`): Self = this.set("Overlay.setInspectMode", value.asInstanceOf[js.Any])
+    def setOverlayDothighlightSourceOrder(value: `129`): Self = this.set("Overlay.highlightSourceOrder", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetPausedInDebuggerMessage(value: `126`): Self = this.set("Overlay.setPausedInDebuggerMessage", value.asInstanceOf[js.Any])
+    def setOverlayDotsetInspectMode(value: `130`): Self = this.set("Overlay.setInspectMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetShowAdHighlights(value: `125`): Self = this.set("Overlay.setShowAdHighlights", value.asInstanceOf[js.Any])
+    def setOverlayDotsetPausedInDebuggerMessage(value: `132`): Self = this.set("Overlay.setPausedInDebuggerMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetShowDebugBorders(value: `127`): Self = this.set("Overlay.setShowDebugBorders", value.asInstanceOf[js.Any])
+    def setOverlayDotsetShowAdHighlights(value: `131`): Self = this.set("Overlay.setShowAdHighlights", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetShowFPSCounter(value: `128`): Self = this.set("Overlay.setShowFPSCounter", value.asInstanceOf[js.Any])
+    def setOverlayDotsetShowDebugBorders(value: `133`): Self = this.set("Overlay.setShowDebugBorders", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetShowHinge(value: `134`): Self = this.set("Overlay.setShowHinge", value.asInstanceOf[js.Any])
+    def setOverlayDotsetShowFPSCounter(value: `134`): Self = this.set("Overlay.setShowFPSCounter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetShowHitTestBorders(value: `132`): Self = this.set("Overlay.setShowHitTestBorders", value.asInstanceOf[js.Any])
+    def setOverlayDotsetShowGridOverlays(value: `135`): Self = this.set("Overlay.setShowGridOverlays", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetShowLayoutShiftRegions(value: `130`): Self = this.set("Overlay.setShowLayoutShiftRegions", value.asInstanceOf[js.Any])
+    def setOverlayDotsetShowHinge(value: `141`): Self = this.set("Overlay.setShowHinge", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetShowPaintRects(value: `129`): Self = this.set("Overlay.setShowPaintRects", value.asInstanceOf[js.Any])
+    def setOverlayDotsetShowHitTestBorders(value: `139`): Self = this.set("Overlay.setShowHitTestBorders", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetShowScrollBottleneckRects(value: `131`): Self = this.set("Overlay.setShowScrollBottleneckRects", value.asInstanceOf[js.Any])
+    def setOverlayDotsetShowLayoutShiftRegions(value: `137`): Self = this.set("Overlay.setShowLayoutShiftRegions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOverlayDotsetShowViewportSizeOnResize(value: `133`): Self = this.set("Overlay.setShowViewportSizeOnResize", value.asInstanceOf[js.Any])
+    def setOverlayDotsetShowPaintRects(value: `136`): Self = this.set("Overlay.setShowPaintRects", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotaddCompilationCache(value: `156`): Self = this.set("Page.addCompilationCache", value.asInstanceOf[js.Any])
+    def setOverlayDotsetShowScrollBottleneckRects(value: `138`): Self = this.set("Overlay.setShowScrollBottleneckRects", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOverlayDotsetShowViewportSizeOnResize(value: `140`): Self = this.set("Overlay.setShowViewportSizeOnResize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPageDotaddCompilationCache(value: `163`): Self = this.set("Page.addCompilationCache", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPageDotaddScriptToEvaluateOnLoad(value: ReturnTypeAddScriptToEvaluateOnLoadResponse): Self = this.set("Page.addScriptToEvaluateOnLoad", value.asInstanceOf[js.Any])
@@ -4787,7 +4973,7 @@ object Commands {
     def setPageDotcreateIsolatedWorld(value: ReturnTypeCreateIsolatedWorldResponse): Self = this.set("Page.createIsolatedWorld", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotdeleteCookie(value: `135`): Self = this.set("Page.deleteCookie", value.asInstanceOf[js.Any])
+    def setPageDotdeleteCookie(value: `142`): Self = this.set("Page.deleteCookie", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPageDotdisable(value: ParamsType): Self = this.set("Page.disable", value.asInstanceOf[js.Any])
@@ -4796,7 +4982,7 @@ object Commands {
     def setPageDotenable(value: ParamsType): Self = this.set("Page.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotgenerateTestReport(value: `157`): Self = this.set("Page.generateTestReport", value.asInstanceOf[js.Any])
+    def setPageDotgenerateTestReport(value: `164`): Self = this.set("Page.generateTestReport", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPageDotgetAppManifest(value: ReturnTypeGetAppManifestResponse): Self = this.set("Page.getAppManifest", value.asInstanceOf[js.Any])
@@ -4826,79 +5012,79 @@ object Commands {
     def setPageDotgetResourceTree(value: ReturnTypeGetResourceTreeResponse): Self = this.set("Page.getResourceTree", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDothandleJavaScriptDialog(value: `136`): Self = this.set("Page.handleJavaScriptDialog", value.asInstanceOf[js.Any])
+    def setPageDothandleJavaScriptDialog(value: `143`): Self = this.set("Page.handleJavaScriptDialog", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPageDotnavigate(value: ReturnTypeNavigateResponse): Self = this.set("Page.navigate", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotnavigateToHistoryEntry(value: `137`): Self = this.set("Page.navigateToHistoryEntry", value.asInstanceOf[js.Any])
+    def setPageDotnavigateToHistoryEntry(value: `144`): Self = this.set("Page.navigateToHistoryEntry", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPageDotprintToPDF(value: ReturnTypePrintToPDFResponse): Self = this.set("Page.printToPDF", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotreload(value: `138`): Self = this.set("Page.reload", value.asInstanceOf[js.Any])
+    def setPageDotreload(value: `145`): Self = this.set("Page.reload", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotremoveScriptToEvaluateOnLoad(value: `139`): Self = this.set("Page.removeScriptToEvaluateOnLoad", value.asInstanceOf[js.Any])
+    def setPageDotremoveScriptToEvaluateOnLoad(value: `146`): Self = this.set("Page.removeScriptToEvaluateOnLoad", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotremoveScriptToEvaluateOnNewDocument(value: `140`): Self = this.set("Page.removeScriptToEvaluateOnNewDocument", value.asInstanceOf[js.Any])
+    def setPageDotremoveScriptToEvaluateOnNewDocument(value: `147`): Self = this.set("Page.removeScriptToEvaluateOnNewDocument", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPageDotresetNavigationHistory(value: ParamsType): Self = this.set("Page.resetNavigationHistory", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotscreencastFrameAck(value: `141`): Self = this.set("Page.screencastFrameAck", value.asInstanceOf[js.Any])
+    def setPageDotscreencastFrameAck(value: `148`): Self = this.set("Page.screencastFrameAck", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPageDotsearchInResource(value: ReturnTypeSearchInResourceResponse): Self = this.set("Page.searchInResource", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetAdBlockingEnabled(value: `142`): Self = this.set("Page.setAdBlockingEnabled", value.asInstanceOf[js.Any])
+    def setPageDotsetAdBlockingEnabled(value: `149`): Self = this.set("Page.setAdBlockingEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetBypassCSP(value: `143`): Self = this.set("Page.setBypassCSP", value.asInstanceOf[js.Any])
+    def setPageDotsetBypassCSP(value: `150`): Self = this.set("Page.setBypassCSP", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetDeviceMetricsOverride(value: `144`): Self = this.set("Page.setDeviceMetricsOverride", value.asInstanceOf[js.Any])
+    def setPageDotsetDeviceMetricsOverride(value: `151`): Self = this.set("Page.setDeviceMetricsOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetDeviceOrientationOverride(value: `145`): Self = this.set("Page.setDeviceOrientationOverride", value.asInstanceOf[js.Any])
+    def setPageDotsetDeviceOrientationOverride(value: `152`): Self = this.set("Page.setDeviceOrientationOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetDocumentContent(value: `148`): Self = this.set("Page.setDocumentContent", value.asInstanceOf[js.Any])
+    def setPageDotsetDocumentContent(value: `155`): Self = this.set("Page.setDocumentContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetDownloadBehavior(value: `149`): Self = this.set("Page.setDownloadBehavior", value.asInstanceOf[js.Any])
+    def setPageDotsetDownloadBehavior(value: `156`): Self = this.set("Page.setDownloadBehavior", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetFontFamilies(value: `146`): Self = this.set("Page.setFontFamilies", value.asInstanceOf[js.Any])
+    def setPageDotsetFontFamilies(value: `153`): Self = this.set("Page.setFontFamilies", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetFontSizes(value: `147`): Self = this.set("Page.setFontSizes", value.asInstanceOf[js.Any])
+    def setPageDotsetFontSizes(value: `154`): Self = this.set("Page.setFontSizes", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetGeolocationOverride(value: `150`): Self = this.set("Page.setGeolocationOverride", value.asInstanceOf[js.Any])
+    def setPageDotsetGeolocationOverride(value: `157`): Self = this.set("Page.setGeolocationOverride", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetInterceptFileChooserDialog(value: `158`): Self = this.set("Page.setInterceptFileChooserDialog", value.asInstanceOf[js.Any])
+    def setPageDotsetInterceptFileChooserDialog(value: `165`): Self = this.set("Page.setInterceptFileChooserDialog", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetLifecycleEventsEnabled(value: `151`): Self = this.set("Page.setLifecycleEventsEnabled", value.asInstanceOf[js.Any])
+    def setPageDotsetLifecycleEventsEnabled(value: `158`): Self = this.set("Page.setLifecycleEventsEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetProduceCompilationCache(value: `155`): Self = this.set("Page.setProduceCompilationCache", value.asInstanceOf[js.Any])
+    def setPageDotsetProduceCompilationCache(value: `162`): Self = this.set("Page.setProduceCompilationCache", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetTouchEmulationEnabled(value: `152`): Self = this.set("Page.setTouchEmulationEnabled", value.asInstanceOf[js.Any])
+    def setPageDotsetTouchEmulationEnabled(value: `159`): Self = this.set("Page.setTouchEmulationEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotsetWebLifecycleState(value: `154`): Self = this.set("Page.setWebLifecycleState", value.asInstanceOf[js.Any])
+    def setPageDotsetWebLifecycleState(value: `161`): Self = this.set("Page.setWebLifecycleState", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPageDotstartScreencast(value: `153`): Self = this.set("Page.startScreencast", value.asInstanceOf[js.Any])
+    def setPageDotstartScreencast(value: `160`): Self = this.set("Page.startScreencast", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPageDotstopLoading(value: ParamsType): Self = this.set("Page.stopLoading", value.asInstanceOf[js.Any])
@@ -4913,16 +5099,19 @@ object Commands {
     def setPerformanceDotdisable(value: ParamsType): Self = this.set("Performance.disable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPerformanceDotenable(value: `159`): Self = this.set("Performance.enable", value.asInstanceOf[js.Any])
+    def setPerformanceDotenable(value: `166`): Self = this.set("Performance.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPerformanceDotgetMetrics(value: ReturnTypeGetMetricsResponse): Self = this.set("Performance.getMetrics", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPerformanceDotsetTimeDomain(value: `160`): Self = this.set("Performance.setTimeDomain", value.asInstanceOf[js.Any])
+    def setPerformanceDotsetTimeDomain(value: `167`): Self = this.set("Performance.setTimeDomain", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setProfilerDotdisable(value: ParamsType): Self = this.set("Profiler.disable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setProfilerDotdisableCounters(value: ParamsType): Self = this.set("Profiler.disableCounters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setProfilerDotdisableRuntimeCallStats(value: ParamsType): Self = this.set("Profiler.disableRuntimeCallStats", value.asInstanceOf[js.Any])
@@ -4931,16 +5120,22 @@ object Commands {
     def setProfilerDotenable(value: ParamsType): Self = this.set("Profiler.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setProfilerDotenableCounters(value: ParamsType): Self = this.set("Profiler.enableCounters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setProfilerDotenableRuntimeCallStats(value: ParamsType): Self = this.set("Profiler.enableRuntimeCallStats", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setProfilerDotgetBestEffortCoverage(value: ReturnTypeGetBestEffortCoverageResponse): Self = this.set("Profiler.getBestEffortCoverage", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setProfilerDotgetCounters(value: ReturnTypeGetCountersResponse): Self = this.set("Profiler.getCounters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setProfilerDotgetRuntimeCallStats(value: ReturnTypeGetRuntimeCallStatsResponse): Self = this.set("Profiler.getRuntimeCallStats", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setProfilerDotsetSamplingInterval(value: `15`): Self = this.set("Profiler.setSamplingInterval", value.asInstanceOf[js.Any])
+    def setProfilerDotsetSamplingInterval(value: `16`): Self = this.set("Profiler.setSamplingInterval", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setProfilerDotstart(value: ParamsType): Self = this.set("Profiler.start", value.asInstanceOf[js.Any])
@@ -4967,7 +5162,7 @@ object Commands {
     def setProfilerDottakeTypeProfile(value: ReturnTypeTakeTypeProfileResponse): Self = this.set("Profiler.takeTypeProfile", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRuntimeDotaddBinding(value: `21`): Self = this.set("Runtime.addBinding", value.asInstanceOf[js.Any])
+    def setRuntimeDotaddBinding(value: `22`): Self = this.set("Runtime.addBinding", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRuntimeDotawaitPromise(value: ReturnTypeAwaitPromiseResponse): Self = this.set("Runtime.awaitPromise", value.asInstanceOf[js.Any])
@@ -5006,13 +5201,13 @@ object Commands {
     def setRuntimeDotqueryObjects(value: ReturnTypeQueryObjectsResponse): Self = this.set("Runtime.queryObjects", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRuntimeDotreleaseObject(value: `16`): Self = this.set("Runtime.releaseObject", value.asInstanceOf[js.Any])
+    def setRuntimeDotreleaseObject(value: `17`): Self = this.set("Runtime.releaseObject", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRuntimeDotreleaseObjectGroup(value: `17`): Self = this.set("Runtime.releaseObjectGroup", value.asInstanceOf[js.Any])
+    def setRuntimeDotreleaseObjectGroup(value: `18`): Self = this.set("Runtime.releaseObjectGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRuntimeDotremoveBinding(value: `22`): Self = this.set("Runtime.removeBinding", value.asInstanceOf[js.Any])
+    def setRuntimeDotremoveBinding(value: `23`): Self = this.set("Runtime.removeBinding", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRuntimeDotrunIfWaitingForDebugger(value: ParamsType): Self = this.set("Runtime.runIfWaitingForDebugger", value.asInstanceOf[js.Any])
@@ -5021,13 +5216,13 @@ object Commands {
     def setRuntimeDotrunScript(value: ReturnTypeRunScriptResponse): Self = this.set("Runtime.runScript", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRuntimeDotsetAsyncCallStackDepth(value: `18`): Self = this.set("Runtime.setAsyncCallStackDepth", value.asInstanceOf[js.Any])
+    def setRuntimeDotsetAsyncCallStackDepth(value: `19`): Self = this.set("Runtime.setAsyncCallStackDepth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRuntimeDotsetCustomObjectFormatterEnabled(value: `19`): Self = this.set("Runtime.setCustomObjectFormatterEnabled", value.asInstanceOf[js.Any])
+    def setRuntimeDotsetCustomObjectFormatterEnabled(value: `20`): Self = this.set("Runtime.setCustomObjectFormatterEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRuntimeDotsetMaxCallStackSizeToCapture(value: `20`): Self = this.set("Runtime.setMaxCallStackSizeToCapture", value.asInstanceOf[js.Any])
+    def setRuntimeDotsetMaxCallStackSizeToCapture(value: `21`): Self = this.set("Runtime.setMaxCallStackSizeToCapture", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRuntimeDotterminateExecution(value: ParamsType): Self = this.set("Runtime.terminateExecution", value.asInstanceOf[js.Any])
@@ -5042,79 +5237,82 @@ object Commands {
     def setSecurityDotenable(value: ParamsType): Self = this.set("Security.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSecurityDothandleCertificateError(value: `162`): Self = this.set("Security.handleCertificateError", value.asInstanceOf[js.Any])
+    def setSecurityDothandleCertificateError(value: `169`): Self = this.set("Security.handleCertificateError", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSecurityDotsetIgnoreCertificateErrors(value: `161`): Self = this.set("Security.setIgnoreCertificateErrors", value.asInstanceOf[js.Any])
+    def setSecurityDotsetIgnoreCertificateErrors(value: `168`): Self = this.set("Security.setIgnoreCertificateErrors", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSecurityDotsetOverrideCertificateErrors(value: `163`): Self = this.set("Security.setOverrideCertificateErrors", value.asInstanceOf[js.Any])
+    def setSecurityDotsetOverrideCertificateErrors(value: `170`): Self = this.set("Security.setOverrideCertificateErrors", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setServiceWorkerDotdeliverPushMessage(value: `164`): Self = this.set("ServiceWorker.deliverPushMessage", value.asInstanceOf[js.Any])
+    def setServiceWorkerDotdeliverPushMessage(value: `171`): Self = this.set("ServiceWorker.deliverPushMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setServiceWorkerDotdisable(value: ParamsType): Self = this.set("ServiceWorker.disable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setServiceWorkerDotdispatchPeriodicSyncEvent(value: `166`): Self = this.set("ServiceWorker.dispatchPeriodicSyncEvent", value.asInstanceOf[js.Any])
+    def setServiceWorkerDotdispatchPeriodicSyncEvent(value: `173`): Self = this.set("ServiceWorker.dispatchPeriodicSyncEvent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setServiceWorkerDotdispatchSyncEvent(value: `165`): Self = this.set("ServiceWorker.dispatchSyncEvent", value.asInstanceOf[js.Any])
+    def setServiceWorkerDotdispatchSyncEvent(value: `172`): Self = this.set("ServiceWorker.dispatchSyncEvent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setServiceWorkerDotenable(value: ParamsType): Self = this.set("ServiceWorker.enable", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setServiceWorkerDotinspectWorker(value: `167`): Self = this.set("ServiceWorker.inspectWorker", value.asInstanceOf[js.Any])
+    def setServiceWorkerDotinspectWorker(value: `174`): Self = this.set("ServiceWorker.inspectWorker", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setServiceWorkerDotsetForceUpdateOnPageLoad(value: `168`): Self = this.set("ServiceWorker.setForceUpdateOnPageLoad", value.asInstanceOf[js.Any])
+    def setServiceWorkerDotsetForceUpdateOnPageLoad(value: `175`): Self = this.set("ServiceWorker.setForceUpdateOnPageLoad", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setServiceWorkerDotskipWaiting(value: `169`): Self = this.set("ServiceWorker.skipWaiting", value.asInstanceOf[js.Any])
+    def setServiceWorkerDotskipWaiting(value: `176`): Self = this.set("ServiceWorker.skipWaiting", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setServiceWorkerDotstartWorker(value: `170`): Self = this.set("ServiceWorker.startWorker", value.asInstanceOf[js.Any])
+    def setServiceWorkerDotstartWorker(value: `177`): Self = this.set("ServiceWorker.startWorker", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setServiceWorkerDotstopAllWorkers(value: ParamsType): Self = this.set("ServiceWorker.stopAllWorkers", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setServiceWorkerDotstopWorker(value: `171`): Self = this.set("ServiceWorker.stopWorker", value.asInstanceOf[js.Any])
+    def setServiceWorkerDotstopWorker(value: `178`): Self = this.set("ServiceWorker.stopWorker", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setServiceWorkerDotunregister(value: `172`): Self = this.set("ServiceWorker.unregister", value.asInstanceOf[js.Any])
+    def setServiceWorkerDotunregister(value: `179`): Self = this.set("ServiceWorker.unregister", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setServiceWorkerDotupdateRegistration(value: `173`): Self = this.set("ServiceWorker.updateRegistration", value.asInstanceOf[js.Any])
+    def setServiceWorkerDotupdateRegistration(value: `180`): Self = this.set("ServiceWorker.updateRegistration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStorageDotclearCookies(value: `177`): Self = this.set("Storage.clearCookies", value.asInstanceOf[js.Any])
+    def setStorageDotclearCookies(value: `184`): Self = this.set("Storage.clearCookies", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStorageDotclearDataForOrigin(value: `174`): Self = this.set("Storage.clearDataForOrigin", value.asInstanceOf[js.Any])
+    def setStorageDotclearDataForOrigin(value: `181`): Self = this.set("Storage.clearDataForOrigin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStorageDotgetCookies(value: `175`): Self = this.set("Storage.getCookies", value.asInstanceOf[js.Any])
+    def setStorageDotgetCookies(value: `182`): Self = this.set("Storage.getCookies", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStorageDotgetUsageAndQuota(value: ReturnTypeGetUsageAndQuotaResponse): Self = this.set("Storage.getUsageAndQuota", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStorageDotsetCookies(value: `176`): Self = this.set("Storage.setCookies", value.asInstanceOf[js.Any])
+    def setStorageDotoverrideQuotaForOrigin(value: `185`): Self = this.set("Storage.overrideQuotaForOrigin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStorageDottrackCacheStorageForOrigin(value: `178`): Self = this.set("Storage.trackCacheStorageForOrigin", value.asInstanceOf[js.Any])
+    def setStorageDotsetCookies(value: `183`): Self = this.set("Storage.setCookies", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStorageDottrackIndexedDBForOrigin(value: `179`): Self = this.set("Storage.trackIndexedDBForOrigin", value.asInstanceOf[js.Any])
+    def setStorageDottrackCacheStorageForOrigin(value: `186`): Self = this.set("Storage.trackCacheStorageForOrigin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStorageDotuntrackCacheStorageForOrigin(value: `180`): Self = this.set("Storage.untrackCacheStorageForOrigin", value.asInstanceOf[js.Any])
+    def setStorageDottrackIndexedDBForOrigin(value: `187`): Self = this.set("Storage.trackIndexedDBForOrigin", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStorageDotuntrackIndexedDBForOrigin(value: `181`): Self = this.set("Storage.untrackIndexedDBForOrigin", value.asInstanceOf[js.Any])
+    def setStorageDotuntrackCacheStorageForOrigin(value: `188`): Self = this.set("Storage.untrackCacheStorageForOrigin", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStorageDotuntrackIndexedDBForOrigin(value: `189`): Self = this.set("Storage.untrackIndexedDBForOrigin", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSystemInfoDotgetInfo(value: ReturnTypeGetInfoResponse): Self = this.set("SystemInfo.getInfo", value.asInstanceOf[js.Any])
@@ -5123,7 +5321,7 @@ object Commands {
     def setSystemInfoDotgetProcessInfo(value: ReturnTypeGetProcessInfoResponse): Self = this.set("SystemInfo.getProcessInfo", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetDotactivateTarget(value: `182`): Self = this.set("Target.activateTarget", value.asInstanceOf[js.Any])
+    def setTargetDotactivateTarget(value: `190`): Self = this.set("Target.activateTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTargetDotattachToBrowserTarget(value: ReturnTypeAttachToBrowserTargetResponse): Self = this.set("Target.attachToBrowserTarget", value.asInstanceOf[js.Any])
@@ -5141,13 +5339,13 @@ object Commands {
     def setTargetDotcreateTarget(value: ReturnTypeCreateTargetResponse): Self = this.set("Target.createTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetDotdetachFromTarget(value: `184`): Self = this.set("Target.detachFromTarget", value.asInstanceOf[js.Any])
+    def setTargetDotdetachFromTarget(value: `192`): Self = this.set("Target.detachFromTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetDotdisposeBrowserContext(value: `185`): Self = this.set("Target.disposeBrowserContext", value.asInstanceOf[js.Any])
+    def setTargetDotdisposeBrowserContext(value: `193`): Self = this.set("Target.disposeBrowserContext", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetDotexposeDevToolsProtocol(value: `183`): Self = this.set("Target.exposeDevToolsProtocol", value.asInstanceOf[js.Any])
+    def setTargetDotexposeDevToolsProtocol(value: `191`): Self = this.set("Target.exposeDevToolsProtocol", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTargetDotgetBrowserContexts(value: ReturnTypeGetBrowserContextsResponse): Self = this.set("Target.getBrowserContexts", value.asInstanceOf[js.Any])
@@ -5159,22 +5357,22 @@ object Commands {
     def setTargetDotgetTargets(value: ReturnTypeGetTargetsResponse): Self = this.set("Target.getTargets", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetDotsendMessageToTarget(value: `186`): Self = this.set("Target.sendMessageToTarget", value.asInstanceOf[js.Any])
+    def setTargetDotsendMessageToTarget(value: `194`): Self = this.set("Target.sendMessageToTarget", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetDotsetAutoAttach(value: `187`): Self = this.set("Target.setAutoAttach", value.asInstanceOf[js.Any])
+    def setTargetDotsetAutoAttach(value: `195`): Self = this.set("Target.setAutoAttach", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetDotsetDiscoverTargets(value: `188`): Self = this.set("Target.setDiscoverTargets", value.asInstanceOf[js.Any])
+    def setTargetDotsetDiscoverTargets(value: `196`): Self = this.set("Target.setDiscoverTargets", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetDotsetRemoteLocations(value: `189`): Self = this.set("Target.setRemoteLocations", value.asInstanceOf[js.Any])
+    def setTargetDotsetRemoteLocations(value: `197`): Self = this.set("Target.setRemoteLocations", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTetheringDotbind(value: `190`): Self = this.set("Tethering.bind", value.asInstanceOf[js.Any])
+    def setTetheringDotbind(value: `198`): Self = this.set("Tethering.bind", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTetheringDotunbind(value: `191`): Self = this.set("Tethering.unbind", value.asInstanceOf[js.Any])
+    def setTetheringDotunbind(value: `199`): Self = this.set("Tethering.unbind", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTracingDotend(value: ParamsType): Self = this.set("Tracing.end", value.asInstanceOf[js.Any])
@@ -5183,13 +5381,13 @@ object Commands {
     def setTracingDotgetCategories(value: ReturnTypeGetCategoriesResponse): Self = this.set("Tracing.getCategories", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTracingDotrecordClockSyncMarker(value: `192`): Self = this.set("Tracing.recordClockSyncMarker", value.asInstanceOf[js.Any])
+    def setTracingDotrecordClockSyncMarker(value: `200`): Self = this.set("Tracing.recordClockSyncMarker", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTracingDotrequestMemoryDump(value: ReturnTypeRequestMemoryDumpResponse): Self = this.set("Tracing.requestMemoryDump", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTracingDotstart(value: `193`): Self = this.set("Tracing.start", value.asInstanceOf[js.Any])
+    def setTracingDotstart(value: `201`): Self = this.set("Tracing.start", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWebAudioDotdisable(value: ParamsType): Self = this.set("WebAudio.disable", value.asInstanceOf[js.Any])
@@ -5201,13 +5399,13 @@ object Commands {
     def setWebAudioDotgetRealtimeData(value: ReturnTypeGetRealtimeDataResponse): Self = this.set("WebAudio.getRealtimeData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setWebAuthnDotaddCredential(value: `200`): Self = this.set("WebAuthn.addCredential", value.asInstanceOf[js.Any])
+    def setWebAuthnDotaddCredential(value: `208`): Self = this.set("WebAuthn.addCredential", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWebAuthnDotaddVirtualAuthenticator(value: ReturnTypeAddVirtualAuthenticatorResponse): Self = this.set("WebAuthn.addVirtualAuthenticator", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setWebAuthnDotclearCredentials(value: `202`): Self = this.set("WebAuthn.clearCredentials", value.asInstanceOf[js.Any])
+    def setWebAuthnDotclearCredentials(value: `210`): Self = this.set("WebAuthn.clearCredentials", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWebAuthnDotdisable(value: ParamsType): Self = this.set("WebAuthn.disable", value.asInstanceOf[js.Any])
@@ -5222,12 +5420,15 @@ object Commands {
     def setWebAuthnDotgetCredentials(value: ReturnTypeGetCredentialsResponse): Self = this.set("WebAuthn.getCredentials", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setWebAuthnDotremoveCredential(value: `201`): Self = this.set("WebAuthn.removeCredential", value.asInstanceOf[js.Any])
+    def setWebAuthnDotremoveCredential(value: `209`): Self = this.set("WebAuthn.removeCredential", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setWebAuthnDotremoveVirtualAuthenticator(value: `199`): Self = this.set("WebAuthn.removeVirtualAuthenticator", value.asInstanceOf[js.Any])
+    def setWebAuthnDotremoveVirtualAuthenticator(value: `207`): Self = this.set("WebAuthn.removeVirtualAuthenticator", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setWebAuthnDotsetUserVerified(value: `203`): Self = this.set("WebAuthn.setUserVerified", value.asInstanceOf[js.Any])
+    def setWebAuthnDotsetAutomaticPresenceSimulation(value: `212`): Self = this.set("WebAuthn.setAutomaticPresenceSimulation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setWebAuthnDotsetUserVerified(value: `211`): Self = this.set("WebAuthn.setUserVerified", value.asInstanceOf[js.Any])
   }
 }

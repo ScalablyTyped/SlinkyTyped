@@ -13,6 +13,8 @@ trait queue[T, R] extends js.Object {
   
   def empty(): Unit = js.native
   
+  def error(handler: errorHandler[_]): Unit = js.native
+  
   def getQueue(): js.Array[T] = js.native
   
   def idle(): Boolean = js.native
@@ -40,6 +42,7 @@ object queue {
     concurrency: Double,
     drain: () => js.Any,
     empty: () => Unit,
+    error: errorHandler[_] => Unit,
     getQueue: () => js.Array[T],
     idle: () => Boolean,
     kill: () => js.Any,
@@ -51,7 +54,7 @@ object queue {
     saturated: () => Unit,
     unshift: (T, done[R]) => Unit
   ): queue[T, R] = {
-    val __obj = js.Dynamic.literal(concurrency = concurrency.asInstanceOf[js.Any], drain = js.Any.fromFunction0(drain), empty = js.Any.fromFunction0(empty), getQueue = js.Any.fromFunction0(getQueue), idle = js.Any.fromFunction0(idle), kill = js.Any.fromFunction0(kill), killAndDrain = js.Any.fromFunction0(killAndDrain), length = js.Any.fromFunction0(length), pause = js.Any.fromFunction0(pause), push = js.Any.fromFunction2(push), resume = js.Any.fromFunction0(resume), saturated = js.Any.fromFunction0(saturated), unshift = js.Any.fromFunction2(unshift))
+    val __obj = js.Dynamic.literal(concurrency = concurrency.asInstanceOf[js.Any], drain = js.Any.fromFunction0(drain), empty = js.Any.fromFunction0(empty), error = js.Any.fromFunction1(error), getQueue = js.Any.fromFunction0(getQueue), idle = js.Any.fromFunction0(idle), kill = js.Any.fromFunction0(kill), killAndDrain = js.Any.fromFunction0(killAndDrain), length = js.Any.fromFunction0(length), pause = js.Any.fromFunction0(pause), push = js.Any.fromFunction2(push), resume = js.Any.fromFunction0(resume), saturated = js.Any.fromFunction0(saturated), unshift = js.Any.fromFunction2(unshift))
     __obj.asInstanceOf[queue[T, R]]
   }
   
@@ -78,6 +81,9 @@ object queue {
     
     @scala.inline
     def setEmpty(value: () => Unit): Self = this.set("empty", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setError(value: errorHandler[_] => Unit): Self = this.set("error", js.Any.fromFunction1(value))
     
     @scala.inline
     def setGetQueue(value: () => js.Array[T]): Self = this.set("getQueue", js.Any.fromFunction0(value))

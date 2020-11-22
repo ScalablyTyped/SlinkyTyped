@@ -1,7 +1,7 @@
 
 # Scala.js typings for aws-sdk__util-uri-escape
 
-Typings are for version 0.1.0-preview.1
+Typings are for version 1.0.0-rc.3
 
 
 

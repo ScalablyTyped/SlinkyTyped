@@ -1,5 +1,6 @@
 package typingsSlinky.cssTree
 
+import typingsSlinky.cssTree.mod.DSNodeCombinator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object cssTreeStrings {
   
   @scala.inline
+  def AmpersandAmpersand: AmpersandAmpersand = "&&".asInstanceOf[AmpersandAmpersand]
+  
+  @scala.inline
   def AnPlusB: AnPlusB = "AnPlusB".asInstanceOf[AnPlusB]
+  
+  @scala.inline
+  def AtKeyword: AtKeyword = "AtKeyword".asInstanceOf[AtKeyword]
   
   @scala.inline
   def Atrule: Atrule = "Atrule".asInstanceOf[Atrule]
@@ -37,6 +44,9 @@ object cssTreeStrings {
   def Combinator: Combinator = "Combinator".asInstanceOf[Combinator]
   
   @scala.inline
+  def Comma: Comma = "Comma".asInstanceOf[Comma]
+  
+  @scala.inline
   def Comment: Comment = "Comment".asInstanceOf[Comment]
   
   @scala.inline
@@ -52,6 +62,9 @@ object cssTreeStrings {
   def Function: Function = "Function".asInstanceOf[Function]
   
   @scala.inline
+  def Group: Group = "Group".asInstanceOf[Group]
+  
+  @scala.inline
   def HexColor: HexColor = "HexColor".asInstanceOf[HexColor]
   
   @scala.inline
@@ -61,6 +74,9 @@ object cssTreeStrings {
   def Identifier: Identifier = "Identifier".asInstanceOf[Identifier]
   
   @scala.inline
+  def Keyword: Keyword = "Keyword".asInstanceOf[Keyword]
+  
+  @scala.inline
   def MediaFeature: MediaFeature = "MediaFeature".asInstanceOf[MediaFeature]
   
   @scala.inline
@@ -68,6 +84,9 @@ object cssTreeStrings {
   
   @scala.inline
   def MediaQueryList: MediaQueryList = "MediaQueryList".asInstanceOf[MediaQueryList]
+  
+  @scala.inline
+  def Multiplier: Multiplier = "Multiplier".asInstanceOf[Multiplier]
   
   @scala.inline
   def Nth: Nth = "Nth".asInstanceOf[Nth]
@@ -85,10 +104,16 @@ object cssTreeStrings {
   def Percentage: Percentage = "Percentage".asInstanceOf[Percentage]
   
   @scala.inline
+  def Property: Property = "Property".asInstanceOf[Property]
+  
+  @scala.inline
   def PseudoClassSelector: PseudoClassSelector = "PseudoClassSelector".asInstanceOf[PseudoClassSelector]
   
   @scala.inline
   def PseudoElementSelector: PseudoElementSelector = "PseudoElementSelector".asInstanceOf[PseudoElementSelector]
+  
+  @scala.inline
+  def Range: Range = "Range".asInstanceOf[Range]
   
   @scala.inline
   def Ratio: Ratio = "Ratio".asInstanceOf[Ratio]
@@ -106,10 +131,19 @@ object cssTreeStrings {
   def SelectorList: SelectorList = "SelectorList".asInstanceOf[SelectorList]
   
   @scala.inline
+  def Space: Space = (" ").asInstanceOf[Space]
+  
+  @scala.inline
   def String: String = "String".asInstanceOf[String]
   
   @scala.inline
   def StyleSheet: StyleSheet = "StyleSheet".asInstanceOf[StyleSheet]
+  
+  @scala.inline
+  def Token: Token = "Token".asInstanceOf[Token]
+  
+  @scala.inline
+  def Type: Type = "Type".asInstanceOf[Type]
   
   @scala.inline
   def TypeSelector: TypeSelector = "TypeSelector".asInstanceOf[TypeSelector]
@@ -124,10 +158,22 @@ object cssTreeStrings {
   def Value: Value = "Value".asInstanceOf[Value]
   
   @scala.inline
+  def Verticalline: Verticalline = "|".asInstanceOf[Verticalline]
+  
+  @scala.inline
+  def VerticallineVerticalline: VerticallineVerticalline = "||".asInstanceOf[VerticallineVerticalline]
+  
+  @scala.inline
   def WhiteSpace: WhiteSpace = "WhiteSpace".asInstanceOf[WhiteSpace]
   
   @js.native
+  sealed trait AmpersandAmpersand extends DSNodeCombinator
+  
+  @js.native
   sealed trait AnPlusB extends js.Object
+  
+  @js.native
+  sealed trait AtKeyword extends js.Object
   
   @js.native
   sealed trait Atrule extends js.Object
@@ -157,6 +203,9 @@ object cssTreeStrings {
   sealed trait Combinator extends js.Object
   
   @js.native
+  sealed trait Comma extends js.Object
+  
+  @js.native
   sealed trait Comment extends js.Object
   
   @js.native
@@ -172,6 +221,9 @@ object cssTreeStrings {
   sealed trait Function extends js.Object
   
   @js.native
+  sealed trait Group extends js.Object
+  
+  @js.native
   sealed trait HexColor extends js.Object
   
   @js.native
@@ -181,6 +233,9 @@ object cssTreeStrings {
   sealed trait Identifier extends js.Object
   
   @js.native
+  sealed trait Keyword extends js.Object
+  
+  @js.native
   sealed trait MediaFeature extends js.Object
   
   @js.native
@@ -188,6 +243,9 @@ object cssTreeStrings {
   
   @js.native
   sealed trait MediaQueryList extends js.Object
+  
+  @js.native
+  sealed trait Multiplier extends js.Object
   
   @js.native
   sealed trait Nth extends js.Object
@@ -205,10 +263,16 @@ object cssTreeStrings {
   sealed trait Percentage extends js.Object
   
   @js.native
+  sealed trait Property extends js.Object
+  
+  @js.native
   sealed trait PseudoClassSelector extends js.Object
   
   @js.native
   sealed trait PseudoElementSelector extends js.Object
+  
+  @js.native
+  sealed trait Range extends js.Object
   
   @js.native
   sealed trait Ratio extends js.Object
@@ -226,10 +290,19 @@ object cssTreeStrings {
   sealed trait SelectorList extends js.Object
   
   @js.native
+  sealed trait Space extends DSNodeCombinator
+  
+  @js.native
   sealed trait String extends js.Object
   
   @js.native
   sealed trait StyleSheet extends js.Object
+  
+  @js.native
+  sealed trait Token extends js.Object
+  
+  @js.native
+  sealed trait Type extends js.Object
   
   @js.native
   sealed trait TypeSelector extends js.Object
@@ -242,6 +315,12 @@ object cssTreeStrings {
   
   @js.native
   sealed trait Value extends js.Object
+  
+  @js.native
+  sealed trait Verticalline extends DSNodeCombinator
+  
+  @js.native
+  sealed trait VerticallineVerticalline extends DSNodeCombinator
   
   @js.native
   sealed trait WhiteSpace extends js.Object

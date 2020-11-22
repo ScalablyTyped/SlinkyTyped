@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object HTMLHint extends js.Object {
   
+  def addRule(rule: Rule): Unit = js.native
+  
   def format(arrMessages: js.Array[LintResult]): js.Array[String] = js.native
   def format(arrMessages: js.Array[LintResult], options: FormatOptions): js.Array[String] = js.native
   

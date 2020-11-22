@@ -9,6 +9,7 @@ import typingsSlinky.reactVis.mod.AnimationParam
 import typingsSlinky.reactVis.mod.HorizontalBarSeriesCanvasProps
 import typingsSlinky.reactVis.mod.HorizontalBarSeriesPoint
 import typingsSlinky.reactVis.mod.RVNearestXData
+import typingsSlinky.reactVis.mod.RVNearestXYData
 import typingsSlinky.reactVis.mod.Scale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -150,7 +151,7 @@ object HorizontalBarSeriesCanvas {
     def onNearestX(value: (HorizontalBarSeriesPoint, /* data */ RVNearestXData[HorizontalBarSeriesPoint]) => Unit): this.type = set("onNearestX", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onNearestXY(value: (HorizontalBarSeriesPoint, /* data */ RVNearestXData[HorizontalBarSeriesPoint]) => Unit): this.type = set("onNearestXY", js.Any.fromFunction2(value))
+    def onNearestXY(value: (HorizontalBarSeriesPoint, /* data */ RVNearestXYData[HorizontalBarSeriesPoint]) => Unit): this.type = set("onNearestXY", js.Any.fromFunction2(value))
     
     @scala.inline
     def onSeriesClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onSeriesClick", js.Any.fromFunction1(value))

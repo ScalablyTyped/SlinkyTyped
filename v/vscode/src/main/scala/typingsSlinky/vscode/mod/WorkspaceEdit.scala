@@ -16,6 +16,8 @@ class WorkspaceEdit () extends js.Object {
     * @param uri Uri of the new file..
     * @param options Defines if an existing file should be overwritten or be
     * ignored. When overwrite and ignoreIfExists are both set overwrite wins.
+    * When both are unset and when the file already exists then the edit cannot
+    * be applied successfully.
     * @param metadata Optional metadata for the entry.
     */
   def createFile(uri: Uri): Unit = js.native

@@ -14,6 +14,11 @@ object serverActionsMod extends js.Object {
   abstract class ServerActions () extends js.Object {
     
     /**
+      * Get the server value satisfying this query.
+      */
+    def get(query: Query): js.Promise[String] = js.native
+    
+    /**
       * @param {!Query} query
       * @param {function():string} currentHashFn
       * @param {?number} tag

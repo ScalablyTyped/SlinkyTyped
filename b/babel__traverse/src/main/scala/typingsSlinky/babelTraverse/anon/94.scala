@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSNonNullExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.WithStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `94` extends js.Object {
   
-  var `type`: TSNonNullExpression = js.native
+  var `type`: WithStatement = js.native
 }
 object `94` {
   
   @scala.inline
-  def apply(`type`: TSNonNullExpression): `94` = {
+  def apply(`type`: WithStatement): `94` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`94`]
@@ -35,6 +35,6 @@ object `94` {
     }
     
     @scala.inline
-    def setType(value: TSNonNullExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: WithStatement): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

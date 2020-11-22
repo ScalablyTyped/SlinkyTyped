@@ -5,6 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.checkbox
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.menuitemcheckbox
@@ -12,7 +13,6 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.switch
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps

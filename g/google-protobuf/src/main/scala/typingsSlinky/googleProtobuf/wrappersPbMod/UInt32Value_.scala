@@ -11,5 +11,5 @@ class UInt32Value_ () extends Message {
   
   def getValue(): Double = js.native
   
-  def setValue(value: Double): Unit = js.native
+  def setValue(value: Double): UInt32Value = js.native
 }

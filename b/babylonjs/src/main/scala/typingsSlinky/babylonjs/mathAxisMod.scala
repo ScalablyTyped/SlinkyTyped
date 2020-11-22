@@ -27,6 +27,33 @@ object mathAxisMod extends js.Object {
   }
   
   @js.native
+  sealed trait Coordinate extends js.Object
+  @js.native
+  object Coordinate extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[Coordinate with Double] = js.native
+    
+    /** X axis */
+    @js.native
+    sealed trait X extends Coordinate
+    /* 0 */ @js.native
+    object X extends TopLevel[X with Double]
+    
+    /** Y axis */
+    @js.native
+    sealed trait Y extends Coordinate
+    /* 1 */ @js.native
+    object Y extends TopLevel[Y with Double]
+    
+    /** Z axis */
+    @js.native
+    sealed trait Z extends Coordinate
+    /* 2 */ @js.native
+    object Z extends TopLevel[Z with Double]
+  }
+  
+  @js.native
   sealed trait Space extends js.Object
   @js.native
   object Space extends js.Object {

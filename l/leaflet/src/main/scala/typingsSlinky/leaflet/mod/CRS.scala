@@ -45,6 +45,8 @@ object CRS extends js.Object {
   
   val EPSG4326: CRS = js.native
   
+  val EPSG900913: CRS = js.native
+  
   val Earth: CRS = js.native
   
   val Simple: CRS = js.native

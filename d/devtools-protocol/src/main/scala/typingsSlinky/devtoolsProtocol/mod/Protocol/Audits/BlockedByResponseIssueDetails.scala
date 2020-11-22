@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BlockedByResponseIssueDetails extends js.Object {
   
-  var frame: js.UndefOr[AffectedFrame] = js.native
+  var blockedFrame: js.UndefOr[AffectedFrame] = js.native
+  
+  var parentFrame: js.UndefOr[AffectedFrame] = js.native
   
   var reason: BlockedByResponseReason = js.native
   
@@ -43,9 +45,15 @@ object BlockedByResponseIssueDetails {
     def setRequest(value: AffectedRequest): Self = this.set("request", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setFrame(value: AffectedFrame): Self = this.set("frame", value.asInstanceOf[js.Any])
+    def setBlockedFrame(value: AffectedFrame): Self = this.set("blockedFrame", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteFrame: Self = this.set("frame", js.undefined)
+    def deleteBlockedFrame: Self = this.set("blockedFrame", js.undefined)
+    
+    @scala.inline
+    def setParentFrame(value: AffectedFrame): Self = this.set("parentFrame", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParentFrame: Self = this.set("parentFrame", js.undefined)
   }
 }

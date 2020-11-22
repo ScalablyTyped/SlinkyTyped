@@ -1,5 +1,6 @@
 package typingsSlinky.dateIoCore
 
+import typingsSlinky.dateIoCore.mod.Unit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +12,9 @@ object dateIoCoreStrings {
   
   @scala.inline
   def dayOfMonth: dayOfMonth = "dayOfMonth".asInstanceOf[dayOfMonth]
+  
+  @scala.inline
+  def days: days = "days".asInstanceOf[days]
   
   @scala.inline
   def fullDate: fullDate = "fullDate".asInstanceOf[fullDate]
@@ -37,6 +41,9 @@ object dateIoCoreStrings {
   def fullTime24h: fullTime24h = "fullTime24h".asInstanceOf[fullTime24h]
   
   @scala.inline
+  def hours: hours = "hours".asInstanceOf[hours]
+  
+  @scala.inline
   def hours12h: hours12h = "hours12h".asInstanceOf[hours12h]
   
   @scala.inline
@@ -55,6 +62,9 @@ object dateIoCoreStrings {
   def keyboardDateTime24h: keyboardDateTime24h = "keyboardDateTime24h".asInstanceOf[keyboardDateTime24h]
   
   @scala.inline
+  def milliseconds: milliseconds = "milliseconds".asInstanceOf[milliseconds]
+  
+  @scala.inline
   def minutes: minutes = "minutes".asInstanceOf[minutes]
   
   @scala.inline
@@ -70,6 +80,9 @@ object dateIoCoreStrings {
   def monthShort: monthShort = "monthShort".asInstanceOf[monthShort]
   
   @scala.inline
+  def months: months = "months".asInstanceOf[months]
+  
+  @scala.inline
   def normalDate: normalDate = "normalDate".asInstanceOf[normalDate]
   
   @scala.inline
@@ -77,6 +90,9 @@ object dateIoCoreStrings {
   
   @scala.inline
   def pm: pm = "pm".asInstanceOf[pm]
+  
+  @scala.inline
+  def quarters: quarters = "quarters".asInstanceOf[quarters]
   
   @scala.inline
   def seconds: seconds = "seconds".asInstanceOf[seconds]
@@ -91,13 +107,22 @@ object dateIoCoreStrings {
   def weekdayShort: weekdayShort = "weekdayShort".asInstanceOf[weekdayShort]
   
   @scala.inline
+  def weeks: weeks = "weeks".asInstanceOf[weeks]
+  
+  @scala.inline
   def year: year = "year".asInstanceOf[year]
+  
+  @scala.inline
+  def years: years = "years".asInstanceOf[years]
   
   @js.native
   sealed trait am extends js.Object
   
   @js.native
   sealed trait dayOfMonth extends js.Object
+  
+  @js.native
+  sealed trait days extends Unit
   
   @js.native
   sealed trait fullDate extends js.Object
@@ -124,6 +149,9 @@ object dateIoCoreStrings {
   sealed trait fullTime24h extends js.Object
   
   @js.native
+  sealed trait hours extends Unit
+  
+  @js.native
   sealed trait hours12h extends js.Object
   
   @js.native
@@ -142,7 +170,10 @@ object dateIoCoreStrings {
   sealed trait keyboardDateTime24h extends js.Object
   
   @js.native
-  sealed trait minutes extends js.Object
+  sealed trait milliseconds extends Unit
+  
+  @js.native
+  sealed trait minutes extends Unit
   
   @js.native
   sealed trait month extends js.Object
@@ -157,6 +188,9 @@ object dateIoCoreStrings {
   sealed trait monthShort extends js.Object
   
   @js.native
+  sealed trait months extends Unit
+  
+  @js.native
   sealed trait normalDate extends js.Object
   
   @js.native
@@ -166,7 +200,10 @@ object dateIoCoreStrings {
   sealed trait pm extends js.Object
   
   @js.native
-  sealed trait seconds extends js.Object
+  sealed trait quarters extends Unit
+  
+  @js.native
+  sealed trait seconds extends Unit
   
   @js.native
   sealed trait shortDate extends js.Object
@@ -178,5 +215,11 @@ object dateIoCoreStrings {
   sealed trait weekdayShort extends js.Object
   
   @js.native
+  sealed trait weeks extends Unit
+  
+  @js.native
   sealed trait year extends js.Object
+  
+  @js.native
+  sealed trait years extends Unit
 }

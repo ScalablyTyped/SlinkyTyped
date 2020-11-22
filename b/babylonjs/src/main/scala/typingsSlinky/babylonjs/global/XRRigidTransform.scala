@@ -7,10 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSGlobal("XRRigidTransform")
 @js.native
-class XRRigidTransform protected ()
+class XRRigidTransform ()
   extends typingsSlinky.babylonjs.XRRigidTransform {
-  def this(matrix: DOMPointInit) = this()
-  def this(matrix: js.typedarray.Float32Array) = this()
-  def this(matrix: DOMPointInit, direction: DOMPointInit) = this()
-  def this(matrix: js.typedarray.Float32Array, direction: DOMPointInit) = this()
+  def this(position: DOMPointInit) = this()
+  def this(position: js.UndefOr[scala.Nothing], direction: DOMPointInit) = this()
+  def this(position: DOMPointInit, direction: DOMPointInit) = this()
 }

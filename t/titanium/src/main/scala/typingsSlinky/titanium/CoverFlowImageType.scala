@@ -20,7 +20,7 @@ trait CoverFlowImageType extends js.Object {
   /**
     * Image to use, as a local file URL, `Blob`, or `File`.
     */
-  var image: js.UndefOr[java.lang.String | Blob | File] = js.native
+  var image: js.UndefOr[String | Blob | File] = js.native
   
   /**
     * Display width for the image, in Apple points.
@@ -45,7 +45,7 @@ object CoverFlowImageType {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -57,7 +57,7 @@ object CoverFlowImageType {
     def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
-    def setImage(value: java.lang.String | Blob | File): Self = this.set("image", value.asInstanceOf[js.Any])
+    def setImage(value: String | Blob | File): Self = this.set("image", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteImage: Self = this.set("image", js.undefined)

@@ -1,7 +1,7 @@
 
 # Scala.js typings for superstruct
 
-Typings are for version 0.10.12
+Typings are for version 0.10.13
 
 ## Library description:
 A simple, expressive way to validate data in JavaScript.

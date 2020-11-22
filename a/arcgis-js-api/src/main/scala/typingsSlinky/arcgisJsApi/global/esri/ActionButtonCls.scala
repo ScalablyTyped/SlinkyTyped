@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.global.esri
 
+import typingsSlinky.arcgisJsApi.esri.ActionButtonProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ActionButtonCls ()
   extends typingsSlinky.arcgisJsApi.esri.ActionButton {
-  def this(properties: js.Any) = this()
+  def this(properties: ActionButtonProperties) = this()
 }

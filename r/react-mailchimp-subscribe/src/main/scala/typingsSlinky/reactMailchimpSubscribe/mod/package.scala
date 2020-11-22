@@ -8,7 +8,7 @@ package object mod {
   
   type DefaultFormFields = typingsSlinky.reactMailchimpSubscribe.mod.EmailFormFields
   
-  type FormHooks[FormFields] = typingsSlinky.reactMailchimpSubscribe.mod.SubscribeArg[FormFields] with (typingsSlinky.reactMailchimpSubscribe.mod.ResponseArgs | typingsSlinky.reactMailchimpSubscribe.mod.PendingArgs)
+  type FormHooks[FormFields] = typingsSlinky.reactMailchimpSubscribe.mod.SubscribeArg[FormFields] with (typingsSlinky.reactMailchimpSubscribe.mod.ErrorResponseArgs | typingsSlinky.reactMailchimpSubscribe.mod.SuccessResponseArgs | typingsSlinky.reactMailchimpSubscribe.mod.PendingArgs)
   
   type MailchimpSubscribe[FormFields] = slinky.core.ReactComponentClass[typingsSlinky.reactMailchimpSubscribe.mod.Props[FormFields]]
 }

@@ -200,6 +200,11 @@ trait NativePointer
   
   def toString(radix: Double): String = js.native
   
+  /**
+    * Converts to an unsigned 32-bit integer.
+    */
+  def toUInt32(): Double = js.native
+  
   def writeAnsiString(value: String): NativePointer = js.native
   
   def writeByteArray(value: js.Array[Double]): NativePointer = js.native

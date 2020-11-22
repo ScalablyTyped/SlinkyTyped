@@ -2,6 +2,7 @@ package typingsSlinky.pulumiAws.workspacesDirectoryMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.outputMod.workspaces.DirectorySelfServicePermissions
+import typingsSlinky.pulumiAws.outputMod.workspaces.DirectoryWorkspaceCreationProperties
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -70,12 +71,12 @@ class Directory protected () extends CustomResource {
   val registrationCode: Output_[String] = js.native
   
   /**
-    * The permissions to enable or disable self-service capabilities.
+    * Permissions to enable or disable self-service capabilities. Defined below.
     */
   val selfServicePermissions: Output_[DirectorySelfServicePermissions] = js.native
   
   /**
-    * The identifiers of the subnets where the directory resides.
+    * The subnets identifiers where the workspaces are created.
     */
   val subnetIds: Output_[js.Array[String]] = js.native
   
@@ -83,6 +84,11 @@ class Directory protected () extends CustomResource {
     * A map of tags assigned to the WorkSpaces directory.
     */
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
+  
+  /**
+    * Default properties that are used for creating WorkSpaces. Defined below.
+    */
+  val workspaceCreationProperties: Output_[DirectoryWorkspaceCreationProperties] = js.native
   
   /**
     * The identifier of the security group that is assigned to new WorkSpaces.

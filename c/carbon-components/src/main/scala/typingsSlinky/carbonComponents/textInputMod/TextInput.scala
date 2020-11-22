@@ -1,7 +1,5 @@
 package typingsSlinky.carbonComponents.textInputMod
 
-import typingsSlinky.carbonComponents.anon.Button
-import typingsSlinky.carbonComponents.anon.IconVisibilityOff
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,16 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - Dropped any */ @js.native
 trait TextInput extends js.Object {
   
-  def _setIconVisibility(
-    hasIconVisibilityOnIconVisibilityOffPasswordIsVisibleSelectorPasswordVisibilityTooltip: IconVisibilityOff
-  ): Unit = js.native
+  def _setIconVisibility(hasIconVisibilityOnIconVisibilityOffPasswordIsVisibleSelectorPasswordVisibilityTooltip: js.Any): Unit = js.native
   
-  def _toggle(hasElementButton: Button): Unit = js.native
+  def _toggle(hasElementButton: js.Any): Unit = js.native
 }
 object TextInput {
   
   @scala.inline
-  def apply(_setIconVisibility: IconVisibilityOff => Unit, _toggle: Button => Unit): TextInput = {
+  def apply(_setIconVisibility: js.Any => Unit, _toggle: js.Any => Unit): TextInput = {
     val __obj = js.Dynamic.literal(_setIconVisibility = js.Any.fromFunction1(_setIconVisibility), _toggle = js.Any.fromFunction1(_toggle))
     __obj.asInstanceOf[TextInput]
   }
@@ -40,9 +36,9 @@ object TextInput {
     }
     
     @scala.inline
-    def set_setIconVisibility(value: IconVisibilityOff => Unit): Self = this.set("_setIconVisibility", js.Any.fromFunction1(value))
+    def set_setIconVisibility(value: js.Any => Unit): Self = this.set("_setIconVisibility", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set_toggle(value: Button => Unit): Self = this.set("_toggle", js.Any.fromFunction1(value))
+    def set_toggle(value: js.Any => Unit): Self = this.set("_toggle", js.Any.fromFunction1(value))
   }
 }

@@ -12,6 +12,9 @@ trait EnterpriseAdminListProvisionedGroupsEnterpriseEndpoint extends js.Object {
     */
   var count: js.UndefOr[Double] = js.native
   
+  /**
+    * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+    */
   var enterprise: String = js.native
   
   /**

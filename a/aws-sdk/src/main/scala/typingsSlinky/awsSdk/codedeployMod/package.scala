@@ -82,7 +82,7 @@ package object codedeployMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.user__
-    - typingsSlinky.awsSdk.awsSdkStrings.autoscaling
+    - typingsSlinky.awsSdk.awsSdkStrings.autoscaling_
     - typingsSlinky.awsSdk.awsSdkStrings.codeDeployRollback
     - typingsSlinky.awsSdk.awsSdkStrings.CodeDeploy
     - typingsSlinky.awsSdk.awsSdkStrings.CloudFormation_

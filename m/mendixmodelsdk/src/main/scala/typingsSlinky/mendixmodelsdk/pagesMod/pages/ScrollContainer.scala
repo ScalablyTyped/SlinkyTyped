@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -9,12 +10,13 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayout
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallArgument
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/scroll-container relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/scroll-container relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.ScrollContainer")
 @js.native
@@ -24,8 +26,8 @@ class ScrollContainer protected () extends Widget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def alignment: AlignmentEnum = js.native
@@ -42,9 +44,6 @@ class ScrollContainer protected () extends Widget {
   
   def left: ScrollContainerRegion | Null = js.native
   def left_=(newValue: ScrollContainerRegion | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FScrollContainer: IModel = js.native
   
   def right: ScrollContainerRegion | Null = js.native
   def right_=(newValue: ScrollContainerRegion | Null): Unit = js.native

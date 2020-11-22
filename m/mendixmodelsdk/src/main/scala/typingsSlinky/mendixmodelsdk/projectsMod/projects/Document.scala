@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.projectsMod.projects
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.elementsMod.IByNameReferrable
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.projectsMod.StructureVersionInfo
@@ -36,9 +35,6 @@ abstract class Document protected ()
   
   def excluded: Boolean = js.native
   def excluded_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FDocument: IModel = js.native
   
   def name: String = js.native
   def name_=(newValue: String): Unit = js.native

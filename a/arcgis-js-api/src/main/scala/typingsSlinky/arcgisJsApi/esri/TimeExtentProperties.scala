@@ -11,8 +11,6 @@ trait TimeExtentProperties extends js.Object {
     * The end time of the time extent.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-TimeExtent.html#end)
-    *
-    * @default null
     */
   var end: js.UndefOr[DateProperties] = js.native
   
@@ -20,8 +18,6 @@ trait TimeExtentProperties extends js.Object {
     * The start time of the time extent.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-TimeExtent.html#start)
-    *
-    * @default null
     */
   var start: js.UndefOr[DateProperties] = js.native
 }

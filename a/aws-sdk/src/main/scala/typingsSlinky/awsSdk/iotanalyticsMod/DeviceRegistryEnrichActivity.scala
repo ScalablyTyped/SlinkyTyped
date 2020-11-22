@@ -13,7 +13,7 @@ trait DeviceRegistryEnrichActivity extends js.Object {
   var attribute: AttributeName = js.native
   
   /**
-    * The name of the 'deviceRegistryEnrich' activity.
+    * The name of the deviceRegistryEnrich activity.
     */
   var name: ActivityName = js.native
   

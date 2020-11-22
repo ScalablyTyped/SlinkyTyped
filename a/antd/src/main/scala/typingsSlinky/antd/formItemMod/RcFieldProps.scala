@@ -14,7 +14,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Omit<rc-field-form.rc-field-form/es/Field.FieldProps, 'children'> */
+/* Inlined std.Omit<rc-field-form.rc-field-form/es/Field.FieldProps<any>, 'children'> */
 @js.native
 trait RcFieldProps extends js.Object {
   
@@ -25,6 +25,8 @@ trait RcFieldProps extends js.Object {
   var getValueProps: js.UndefOr[js.Function1[/* value */ StoreValue, js.Object]] = js.native
   
   var initialValue: js.UndefOr[js.Any] = js.native
+  
+  var isList: js.UndefOr[Boolean] = js.native
   
   var isListField: js.UndefOr[Boolean] = js.native
   
@@ -42,7 +44,7 @@ trait RcFieldProps extends js.Object {
   
   var rules: js.UndefOr[js.Array[Rule]] = js.native
   
-  var shouldUpdate: js.UndefOr[ShouldUpdate] = js.native
+  var shouldUpdate: js.UndefOr[ShouldUpdate[_]] = js.native
   
   var trigger: js.UndefOr[String] = js.native
   
@@ -103,6 +105,12 @@ object RcFieldProps {
     def deleteInitialValue: Self = this.set("initialValue", js.undefined)
     
     @scala.inline
+    def setIsList(value: Boolean): Self = this.set("isList", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsList: Self = this.set("isList", js.undefined)
+    
+    @scala.inline
     def setIsListField(value: Boolean): Self = this.set("isListField", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -151,10 +159,10 @@ object RcFieldProps {
     def deleteRules: Self = this.set("rules", js.undefined)
     
     @scala.inline
-    def setShouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ Source) => Boolean): Self = this.set("shouldUpdate", js.Any.fromFunction3(value))
+    def setShouldUpdateFunction3(value: (_, _, /* info */ Source) => Boolean): Self = this.set("shouldUpdate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setShouldUpdate(value: ShouldUpdate): Self = this.set("shouldUpdate", value.asInstanceOf[js.Any])
+    def setShouldUpdate(value: ShouldUpdate[_]): Self = this.set("shouldUpdate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShouldUpdate: Self = this.set("shouldUpdate", js.undefined)

@@ -6,6 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antd/lib/config-provider/SizeContext", "SizeContextProvider")
+@JSImport("antd/lib/avatar/SizeContext", "SizeContextProvider")
 @js.native
 object SizeContextProvider extends TopLevel[ReactComponentClass[SizeContextProps]]

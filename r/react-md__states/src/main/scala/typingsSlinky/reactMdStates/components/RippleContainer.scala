@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object RippleContainer {
   
-  @JSImport("@react-md/states/types/ripples/RippleContainer", JSImport.Default)
+  @JSImport("@react-md/states/types/ripples/RippleContainer", "RippleContainer")
   @js.native
   object component extends js.Object
   

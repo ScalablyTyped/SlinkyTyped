@@ -10,11 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ElevationLayerCreateElevationSamplerOptions extends Object {
   
   /**
-    * Controls the horizontal resolution (cell size) in meters from which elevation data is sampled (defaults to `auto`). See [ElevationLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#queryElevation) for more details.
+    * Controls the horizontal resolution (cell size) in meters from which elevation data is sampled (defaults to `auto`).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#createElevationSampler)
-    *
-    * @default auto
     */
   var demResolution: js.UndefOr[Double | String] = js.native
   
@@ -22,8 +20,6 @@ trait ElevationLayerCreateElevationSamplerOptions extends Object {
     * The value to use when there is no data available.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html#createElevationSampler)
-    *
-    * @default 0
     */
   var noDataValue: js.UndefOr[Double] = js.native
 }

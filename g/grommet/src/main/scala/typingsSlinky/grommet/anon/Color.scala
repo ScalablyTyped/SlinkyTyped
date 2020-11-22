@@ -1,8 +1,6 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.grommetStrings.medium
-import typingsSlinky.grommet.grommetStrings.strong
-import typingsSlinky.grommet.grommetStrings.weak
+import typingsSlinky.grommet.utilsMod.ColorType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,15 +8,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Color extends js.Object {
   
-  var color: js.UndefOr[String] = js.native
+  var color: ColorType = js.native
   
-  var opacity: js.UndefOr[weak | medium | strong | Boolean] = js.native
+  var value: Double | js.Array[Double] = js.native
 }
 object Color {
   
   @scala.inline
-  def apply(): Color = {
-    val __obj = js.Dynamic.literal()
+  def apply(value: Double | js.Array[Double]): Color = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Color]
   }
   
@@ -38,15 +36,15 @@ object Color {
     }
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setValueVarargs(value: Double*): Self = this.set("value", js.Array(value :_*))
+    
+    @scala.inline
+    def setValue(value: Double | js.Array[Double]): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setColor(value: ColorType): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
-    
-    @scala.inline
-    def setOpacity(value: weak | medium | strong | Boolean): Self = this.set("opacity", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOpacity: Self = this.set("opacity", js.undefined)
   }
 }

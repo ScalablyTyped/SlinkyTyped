@@ -10,12 +10,12 @@ trait DescribeModelPackageInput extends js.Object {
   /**
     * The name of the model package to describe.
     */
-  var ModelPackageName: ArnOrName = js.native
+  var ModelPackageName: VersionedArnOrName = js.native
 }
 object DescribeModelPackageInput {
   
   @scala.inline
-  def apply(ModelPackageName: ArnOrName): DescribeModelPackageInput = {
+  def apply(ModelPackageName: VersionedArnOrName): DescribeModelPackageInput = {
     val __obj = js.Dynamic.literal(ModelPackageName = ModelPackageName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DescribeModelPackageInput]
   }
@@ -36,6 +36,6 @@ object DescribeModelPackageInput {
     }
     
     @scala.inline
-    def setModelPackageName(value: ArnOrName): Self = this.set("ModelPackageName", value.asInstanceOf[js.Any])
+    def setModelPackageName(value: VersionedArnOrName): Self = this.set("ModelPackageName", value.asInstanceOf[js.Any])
   }
 }

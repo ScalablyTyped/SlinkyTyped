@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeIAMPolicyAssignmentRequest extends js.Object {
   
   /**
-    * The name of the assignment. 
+    * The name of the assignment, also called a rule.
     */
   var AssignmentName: IAMPolicyAssignmentName = js.native
   

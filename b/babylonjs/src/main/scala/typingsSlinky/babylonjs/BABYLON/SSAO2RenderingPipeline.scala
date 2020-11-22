@@ -51,19 +51,24 @@ trait SSAO2RenderingPipeline extends PostProcessRenderPipeline {
   
   var _createSSAOPostProcess: js.Any = js.native
   
-  var _depthTexture: js.Any = js.native
-  
   var _expensiveBlur: js.Any = js.native
   
+  /**
+    * Force rendering the geometry through geometry buffer
+    */
+  var _forceGeometryBuffer: js.Any = js.native
+  
   var _generateHemisphere: js.Any = js.native
+  
+  var _getDefinesForSSAO: js.Any = js.native
   
   var _hammersley: js.Any = js.native
   
   var _hemisphereSample_uniform: js.Any = js.native
   
-  var _normalTexture: js.Any = js.native
-  
   var _originalColorPostProcess: js.Any = js.native
+  
+  var _prePassRenderer: js.Any = js.native
   
   var _radicalInverse_VdC: js.Any = js.native
   

@@ -20,9 +20,6 @@ object default extends js.Object {
   /**
     *
     * @param props: toast props
-    * @deprecated duration: use props instead
-    * @deprecated onClose: use props instead
-    * @deprecated mask: use props instead
     */
   def fail(props: String): Double = js.native
   def fail(
@@ -61,9 +58,6 @@ object default extends js.Object {
   /**
     *
     * @param props: toast props
-    * @deprecated duration: use props instead
-    * @deprecated onClose: use props instead
-    * @deprecated mask: use props instead
     */
   def info(props: String): Double = js.native
   def info(
@@ -100,9 +94,6 @@ object default extends js.Object {
   /**
     *
     * @param props: toast props
-    * @deprecated duration: use props instead
-    * @deprecated onClose: use props instead
-    * @deprecated mask: use props instead
     */
   def loading(props: String): Double = js.native
   def loading(
@@ -139,9 +130,6 @@ object default extends js.Object {
   /**
     *
     * @param props: toast props
-    * @deprecated duration: use props instead
-    * @deprecated onClose: use props instead
-    * @deprecated mask: use props instead
     */
   def offline(props: String): Double = js.native
   def offline(
@@ -175,7 +163,7 @@ object default extends js.Object {
   def offline(props: IToastProps, duration: Double, onClose: js.Function0[Unit]): Double = js.native
   def offline(props: IToastProps, duration: Double, onClose: js.Function0[Unit], mask: Boolean): Double = js.native
   
-  def remove(key: Double): Unit = js.native
+  var remove: js.Function1[/* key */ Double, Unit] = js.native
   
   var removeAll: js.Function0[Unit] = js.native
   
@@ -194,9 +182,6 @@ object default extends js.Object {
   /**
     *
     * @param props: toast props
-    * @deprecated duration: use props instead
-    * @deprecated onClose: use props instead
-    * @deprecated mask: use props instead
     */
   def success(props: String): Double = js.native
   def success(

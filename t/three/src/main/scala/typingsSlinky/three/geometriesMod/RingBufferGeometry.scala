@@ -7,7 +7,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("three/src/geometries/Geometries", "RingBufferGeometry")
 @js.native
 class RingBufferGeometry protected ()
-  extends typingsSlinky.three.ringGeometryMod.RingBufferGeometry {
+  extends typingsSlinky.three.ringBufferGeometryMod.RingBufferGeometry {
+  /**
+  	 * @param [innerRadius=0.5]
+  	 * @param [outerRadius=1]
+  	 * @param [thetaSegments=8]
+  	 * @param [phiSegments=1]
+  	 * @param [thetaStart=0]
+  	 * @param [thetaLength=Math.PI * 2]
+  	 */
   def this(
     innerRadius: js.UndefOr[Double],
     outerRadius: js.UndefOr[Double],

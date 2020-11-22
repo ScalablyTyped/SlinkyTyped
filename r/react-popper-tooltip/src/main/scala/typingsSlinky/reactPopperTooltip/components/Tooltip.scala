@@ -37,10 +37,7 @@ object Tooltip {
     def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
-    def outOfBoundaries(value: Boolean): this.type = set("outOfBoundaries", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def outOfBoundariesNull: this.type = set("outOfBoundaries", null)
+    def isReferenceHidden(value: Boolean): this.type = set("isReferenceHidden", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TooltipProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
@@ -49,16 +46,16 @@ object Tooltip {
   def apply(
     arrowProps: PopperArrowProps,
     clearScheduled: () => Unit,
-    closeOnOutOfBoundaries: Boolean,
+    closeOnReferenceHidden: Boolean,
     hideTooltip: () => Unit,
     mutationObserverOptions: MutationObserverInit,
-    placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Placement */ js.Any,
-    scheduleUpdate: () => Unit,
+    placement: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Placement */ js.Any,
     style: CSSProperties,
     tooltip: TooltipArg => ReactElement,
-    trigger: Trigger
+    trigger: Trigger,
+    update: () => Unit
   ): Builder = {
-    val __props = js.Dynamic.literal(arrowProps = arrowProps.asInstanceOf[js.Any], clearScheduled = js.Any.fromFunction0(clearScheduled), closeOnOutOfBoundaries = closeOnOutOfBoundaries.asInstanceOf[js.Any], hideTooltip = js.Any.fromFunction0(hideTooltip), mutationObserverOptions = mutationObserverOptions.asInstanceOf[js.Any], placement = placement.asInstanceOf[js.Any], scheduleUpdate = js.Any.fromFunction0(scheduleUpdate), style = style.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(arrowProps = arrowProps.asInstanceOf[js.Any], clearScheduled = js.Any.fromFunction0(clearScheduled), closeOnReferenceHidden = closeOnReferenceHidden.asInstanceOf[js.Any], hideTooltip = js.Any.fromFunction0(hideTooltip), mutationObserverOptions = mutationObserverOptions.asInstanceOf[js.Any], placement = placement.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], tooltip = js.Any.fromFunction1(tooltip), trigger = trigger.asInstanceOf[js.Any], update = js.Any.fromFunction0(update))
     new Builder(js.Array(this.component, __props.asInstanceOf[TooltipProps]))
   }
 }

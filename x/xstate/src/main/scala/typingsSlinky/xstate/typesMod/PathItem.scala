@@ -1,6 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
-import typingsSlinky.xstate.anon.Context
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateMod.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,14 +11,17 @@ trait PathItem[TContext, TEvent /* <: EventObject */] extends js.Object {
   
   var path: js.Array[Segment[TContext, TEvent]] = js.native
   
-  var state: State[TContext, TEvent, _, Context[TContext]] = js.native
+  var state: State[TContext, TEvent, _, ContextTContext[TContext]] = js.native
   
   var weight: js.UndefOr[Double] = js.native
 }
 object PathItem {
   
   @scala.inline
-  def apply[TContext, TEvent /* <: EventObject */](path: js.Array[Segment[TContext, TEvent]], state: State[TContext, TEvent, _, Context[TContext]]): PathItem[TContext, TEvent] = {
+  def apply[TContext, TEvent /* <: EventObject */](
+    path: js.Array[Segment[TContext, TEvent]],
+    state: State[TContext, TEvent, _, ContextTContext[TContext]]
+  ): PathItem[TContext, TEvent] = {
     val __obj = js.Dynamic.literal(path = path.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[PathItem[TContext, TEvent]]
   }
@@ -45,7 +48,7 @@ object PathItem {
     def setPath(value: js.Array[Segment[TContext, TEvent]]): Self = this.set("path", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setState(value: State[TContext, TEvent, _, Context[TContext]]): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setState(value: State[TContext, TEvent, _, ContextTContext[TContext]]): Self = this.set("state", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWeight(value: Double): Self = this.set("weight", value.asInstanceOf[js.Any])

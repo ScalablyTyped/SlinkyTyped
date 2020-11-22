@@ -17,10 +17,10 @@ trait CookiesFunction
   extends /**
   * "options" array of key strings is deprecated, provide using options {"keys": keygrip}
   */
-// tslint:disable-next-line:unified-signatures
 /**
   * "options" instance of Keygrip is deprecated, provide using options {"keys": keygrip}
   */
+// tslint:disable-next-line:unified-signatures
 Instantiable3[
       /* request */ IncomingMessage, 
       /* response */ ServerResponse, 
@@ -33,7 +33,6 @@ Instantiable3[
   /**
     * "options" array of key strings is deprecated, provide using options {"keys": keygrip}
     */
-  // tslint:disable-next-line:unified-signatures
   def apply(request: IncomingMessage, response: ServerResponse, options: js.Array[String]): Cookies = js.native
   def apply(request: IncomingMessage, response: ServerResponse, options: Option): Cookies = js.native
   /**

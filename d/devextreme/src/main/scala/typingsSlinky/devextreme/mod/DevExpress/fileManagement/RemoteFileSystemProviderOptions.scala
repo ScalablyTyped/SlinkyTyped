@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RemoteFileSystemProviderOptions extends FileSystemProviderBaseOptions[RemoteFileSystemProvider] {
   
-  /** @name RemoteFileSystemProvider.Options.endpointUrl */
+  /**
+    * [descr:RemoteFileSystemProvider.Options.endpointUrl]
+    */
   var endpointUrl: js.UndefOr[String] = js.native
   
-  /** @name RemoteFileSystemProvider.Options.hasSubDirectoriesExpr */
+  /**
+    * [descr:RemoteFileSystemProvider.Options.hasSubDirectoriesExpr]
+    */
   var hasSubDirectoriesExpr: js.UndefOr[String | js.Function] = js.native
 }
 object RemoteFileSystemProviderOptions {

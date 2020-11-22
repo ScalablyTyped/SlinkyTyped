@@ -33,8 +33,6 @@ trait CanvasBuilder
   
   def createStroke(state: FillStrokeState): js.Array[_] = js.native
   
-  def drawCustom(): Unit = js.native
-  
   def drawCustomCoordinates_(
     flatCoordinates: js.Array[Double],
     offset: Double,
@@ -47,6 +45,11 @@ trait CanvasBuilder
   
   def finish(): SerializableInstructions = js.native
   
+  /**
+    * Get the buffered rendering extent.  Rendering will be clipped to the extent
+    * provided to the constructor.  To account for symbolizers that may intersect
+    * this extent, we calculate a buffered extent (e.g. based on stroke width).
+    */
   /* protected */ def getBufferedMaxExtent(): Extent = js.native
   
   var hitDetectionInstructions: js.Array[_] = js.native
@@ -61,6 +64,9 @@ trait CanvasBuilder
   
   var resolution: Double = js.native
   
+  /**
+    * Reverse the hit detection instructions.
+    */
   def reverseHitDetectionInstructions(): Unit = js.native
   
   var state: FillStrokeState = js.native

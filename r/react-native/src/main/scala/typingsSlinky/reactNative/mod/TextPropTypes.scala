@@ -2,18 +2,23 @@ package typingsSlinky.reactNative.mod
 
 import slinky.core.SyntheticEvent
 import typingsSlinky.propTypes.mod.Validator
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
+import typingsSlinky.reactNative.reactNativeStrings.all_
 import typingsSlinky.reactNative.reactNativeStrings.assertive
 import typingsSlinky.reactNative.reactNativeStrings.auto
 import typingsSlinky.reactNative.reactNativeStrings.balanced
 import typingsSlinky.reactNative.reactNativeStrings.button
 import typingsSlinky.reactNative.reactNativeStrings.clip
+import typingsSlinky.reactNative.reactNativeStrings.email
 import typingsSlinky.reactNative.reactNativeStrings.head
 import typingsSlinky.reactNative.reactNativeStrings.highQuality
+import typingsSlinky.reactNative.reactNativeStrings.link
 import typingsSlinky.reactNative.reactNativeStrings.middle
 import typingsSlinky.reactNative.reactNativeStrings.no
 import typingsSlinky.reactNative.reactNativeStrings.none
+import typingsSlinky.reactNative.reactNativeStrings.phoneNumber
 import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
@@ -60,6 +65,8 @@ object TextPropTypes extends js.Object {
   
   var allowFontScaling: js.UndefOr[Validator[js.UndefOr[Boolean]]] = js.native
   
+  var dataDetectorType: js.UndefOr[Validator[js.UndefOr[Null | phoneNumber | link | email | none | all_]]] = js.native
+  
   var ellipsizeMode: js.UndefOr[Validator[js.UndefOr[head | middle | tail | clip]]] = js.native
   
   var importantForAccessibility: js.UndefOr[Validator[js.UndefOr[auto | yes | no | `no-hide-descendants`]]] = js.native
@@ -84,7 +91,7 @@ object TextPropTypes extends js.Object {
   
   var onAccessibilityTap: js.UndefOr[Validator[js.UndefOr[js.Function0[Unit]]]] = js.native
   
-  var onLayout: js.UndefOr[Validator[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]] = js.native
+  var onLayout: js.UndefOr[Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]]]] = js.native
   
   var onLongPress: js.UndefOr[
     Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
@@ -94,6 +101,10 @@ object TextPropTypes extends js.Object {
   
   var onPress: js.UndefOr[
     Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, NativeTouchEvent], Unit]]]
+  ] = js.native
+  
+  var onTextLayout: js.UndefOr[
+    Validator[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextLayoutEventData], Unit]]]
   ] = js.native
   
   var selectable: js.UndefOr[Validator[js.UndefOr[Boolean]]] = js.native

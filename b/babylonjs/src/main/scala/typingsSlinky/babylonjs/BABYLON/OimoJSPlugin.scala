@@ -9,11 +9,15 @@ trait OimoJSPlugin extends IPhysicsEnginePlugin {
   
   var BJSOIMO: js.Any = js.native
   
+  var _fixedTimeStep: js.Any = js.native
+  
   var _raycastResult: js.Any = js.native
   
   var _tmpImpostorsArray: js.Any = js.native
   
   var _tmpPositionVector: js.Any = js.native
+  
+  var _useDeltaForWorldStep: js.Any = js.native
   
   def setAngularVelocity(impostor: PhysicsImpostor, velocity: Vector3): Unit = js.native
   

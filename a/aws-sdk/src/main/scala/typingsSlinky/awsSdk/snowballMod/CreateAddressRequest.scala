@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateAddressRequest extends js.Object {
   
   /**
-    * The address that you want the Snowball shipped to.
+    * The address that you want the Snow device shipped to.
     */
   var Address: typingsSlinky.awsSdk.snowballMod.Address = js.native
 }

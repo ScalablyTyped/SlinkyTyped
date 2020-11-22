@@ -12,9 +12,9 @@ class Database protected ()
   extends typingsSlinky.firebaseDatabase.databaseMod.Database {
   /**
     * The constructor should not be called by users of our public API.
-    * @param {!Repo} repo_
+    * @param {!Repo} repoInternal_
     */
-  def this(repo_ : Repo) = this()
+  def this(repoInternal_ : Repo) = this()
 }
 /* static members */
 @JSImport("@firebase/database/dist/index.node", "Database")

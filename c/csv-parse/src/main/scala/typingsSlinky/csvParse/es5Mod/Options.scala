@@ -8,6 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Options extends js.Object {
   
+  var autoParse: js.UndefOr[Boolean | CastingFunction] = js.native
+  
+  var autoParseDate: js.UndefOr[Boolean | CastingDateFunction] = js.native
+  
   /**
     * If true, the parser will attempt to convert read data types to native types.
     * @deprecated Use {@link cast}
@@ -31,6 +35,8 @@ trait Options extends js.Object {
     */
   var cast: js.UndefOr[Boolean | CastingFunction] = js.native
   
+  var castDate: js.UndefOr[Boolean | CastingDateFunction] = js.native
+  
   /**
     * If true, the parser will attempt to convert input string to dates.
     * If a function, receive the value as argument and return a new value. It requires the "auto_parse" option. Be careful, it relies on Date.parse.
@@ -46,6 +52,8 @@ trait Options extends js.Object {
   var columns: js.UndefOr[
     js.Array[ColumnOption] | Boolean | (js.Function1[/* record */ js.Any, js.Array[ColumnOption]])
   ] = js.native
+  
+  var columnsDuplicatesToArray: js.UndefOr[Boolean] = js.native
   
   /**
     * Convert values into an array of values when columns are activated and
@@ -64,6 +72,11 @@ trait Options extends js.Object {
   var delimiter: js.UndefOr[String | js.Array[String] | Buffer] = js.native
   
   /**
+    * Set the source and destination encoding, a value of `null` returns buffer instead of strings.
+    */
+  var encoding: js.UndefOr[String | Null] = js.native
+  
+  /**
     * Set the escape character, one character only, defaults to double quotes.
     */
   var escape: js.UndefOr[String | Buffer] = js.native
@@ -72,6 +85,8 @@ trait Options extends js.Object {
     * Start handling records from the requested number of records.
     */
   var from: js.UndefOr[Double] = js.native
+  
+  var fromLine: js.UndefOr[Double] = js.native
   
   /**
     * Start handling records from the requested line number.
@@ -89,6 +104,8 @@ trait Options extends js.Object {
     */
   var ltrim: js.UndefOr[Boolean] = js.native
   
+  var maxRecordSize: js.UndefOr[Double] = js.native
+  
   /**
     * Maximum numer of characters to be contained in the field and line buffers before an exception is raised,
     * used to guard against a wrong delimiter or record_delimiter,
@@ -100,6 +117,8 @@ trait Options extends js.Object {
     * Name of header-record title to name objects by.
     */
   var objname: js.UndefOr[String] = js.native
+  
+  var onRecord: js.UndefOr[js.Function2[/* record */ js.Any, /* context */ CastingContext, _]] = js.native
   
   /**
     * Alter and filter records by executing a user defined function.
@@ -116,6 +135,8 @@ trait Options extends js.Object {
     */
   var raw: js.UndefOr[Boolean] = js.native
   
+  var recordDelimiter: js.UndefOr[String | (js.Array[Buffer | String]) | Buffer] = js.native
+  
   /**
     * One or multiple characters used to delimit record rows; defaults to auto discovery if not provided.
     * Supported auto discovery method are Linux ("\n"), Apple ("\r") and Windows ("\r\n") row delimiters.
@@ -126,6 +147,12 @@ trait Options extends js.Object {
     * Preserve quotes inside unquoted field.
     */
   var relax: js.UndefOr[Boolean] = js.native
+  
+  var relaxColumnCount: js.UndefOr[Boolean] = js.native
+  
+  var relaxColumnCountLess: js.UndefOr[Boolean] = js.native
+  
+  var relaxColumnCountMore: js.UndefOr[Boolean] = js.native
   
   /**
     * Discard inconsistent columns count, default to false.
@@ -148,6 +175,12 @@ trait Options extends js.Object {
     */
   var rtrim: js.UndefOr[Boolean] = js.native
   
+  var skipEmptyLines: js.UndefOr[Boolean] = js.native
+  
+  var skipLinesWithEmptyValues: js.UndefOr[Boolean] = js.native
+  
+  var skipLinesWithError: js.UndefOr[Boolean] = js.native
+  
   /**
     * Dont generate empty values for empty lines.
     * Defaults to false
@@ -168,6 +201,8 @@ trait Options extends js.Object {
     * Stop handling records after the requested number of records.
     */
   var to: js.UndefOr[Double] = js.native
+  
+  var toLine: js.UndefOr[Double] = js.native
   
   /**
     * Stop handling records after the requested line number.
@@ -204,6 +239,24 @@ object Options {
     }
     
     @scala.inline
+    def setAutoParseFunction2(value: (/* value */ String, /* context */ CastingContext) => js.Any): Self = this.set("autoParse", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setAutoParse(value: Boolean | CastingFunction): Self = this.set("autoParse", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoParse: Self = this.set("autoParse", js.undefined)
+    
+    @scala.inline
+    def setAutoParseDateFunction2(value: (/* value */ String, /* context */ CastingContext) => js.Date): Self = this.set("autoParseDate", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setAutoParseDate(value: Boolean | CastingDateFunction): Self = this.set("autoParseDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoParseDate: Self = this.set("autoParseDate", js.undefined)
+    
+    @scala.inline
     def setAuto_parseFunction2(value: (/* value */ String, /* context */ CastingContext) => js.Any): Self = this.set("auto_parse", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -237,6 +290,15 @@ object Options {
     def deleteCast: Self = this.set("cast", js.undefined)
     
     @scala.inline
+    def setCastDateFunction2(value: (/* value */ String, /* context */ CastingContext) => js.Date): Self = this.set("castDate", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setCastDate(value: Boolean | CastingDateFunction): Self = this.set("castDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCastDate: Self = this.set("castDate", js.undefined)
+    
+    @scala.inline
     def setCast_dateFunction2(value: (/* value */ String, /* context */ CastingContext) => js.Date): Self = this.set("cast_date", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -260,6 +322,12 @@ object Options {
     def deleteColumns: Self = this.set("columns", js.undefined)
     
     @scala.inline
+    def setColumnsDuplicatesToArray(value: Boolean): Self = this.set("columnsDuplicatesToArray", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnsDuplicatesToArray: Self = this.set("columnsDuplicatesToArray", js.undefined)
+    
+    @scala.inline
     def setColumns_duplicates_to_array(value: Boolean): Self = this.set("columns_duplicates_to_array", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -281,6 +349,15 @@ object Options {
     def deleteDelimiter: Self = this.set("delimiter", js.undefined)
     
     @scala.inline
+    def setEncoding(value: String): Self = this.set("encoding", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEncoding: Self = this.set("encoding", js.undefined)
+    
+    @scala.inline
+    def setEncodingNull: Self = this.set("encoding", null)
+    
+    @scala.inline
     def setEscape(value: String | Buffer): Self = this.set("escape", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -291,6 +368,12 @@ object Options {
     
     @scala.inline
     def deleteFrom: Self = this.set("from", js.undefined)
+    
+    @scala.inline
+    def setFromLine(value: Double): Self = this.set("fromLine", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFromLine: Self = this.set("fromLine", js.undefined)
     
     @scala.inline
     def setFrom_line(value: Double): Self = this.set("from_line", value.asInstanceOf[js.Any])
@@ -311,6 +394,12 @@ object Options {
     def deleteLtrim: Self = this.set("ltrim", js.undefined)
     
     @scala.inline
+    def setMaxRecordSize(value: Double): Self = this.set("maxRecordSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxRecordSize: Self = this.set("maxRecordSize", js.undefined)
+    
+    @scala.inline
     def setMax_record_size(value: Double): Self = this.set("max_record_size", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -321,6 +410,12 @@ object Options {
     
     @scala.inline
     def deleteObjname: Self = this.set("objname", js.undefined)
+    
+    @scala.inline
+    def setOnRecord(value: (/* record */ js.Any, /* context */ CastingContext) => _): Self = this.set("onRecord", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteOnRecord: Self = this.set("onRecord", js.undefined)
     
     @scala.inline
     def setOn_record(value: (/* record */ js.Any, /* context */ CastingContext) => _): Self = this.set("on_record", js.Any.fromFunction2(value))
@@ -344,6 +439,15 @@ object Options {
     def deleteRaw: Self = this.set("raw", js.undefined)
     
     @scala.inline
+    def setRecordDelimiterVarargs(value: (Buffer | String)*): Self = this.set("recordDelimiter", js.Array(value :_*))
+    
+    @scala.inline
+    def setRecordDelimiter(value: String | (js.Array[Buffer | String]) | Buffer): Self = this.set("recordDelimiter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRecordDelimiter: Self = this.set("recordDelimiter", js.undefined)
+    
+    @scala.inline
     def setRecord_delimiterVarargs(value: (Buffer | String)*): Self = this.set("record_delimiter", js.Array(value :_*))
     
     @scala.inline
@@ -357,6 +461,24 @@ object Options {
     
     @scala.inline
     def deleteRelax: Self = this.set("relax", js.undefined)
+    
+    @scala.inline
+    def setRelaxColumnCount(value: Boolean): Self = this.set("relaxColumnCount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRelaxColumnCount: Self = this.set("relaxColumnCount", js.undefined)
+    
+    @scala.inline
+    def setRelaxColumnCountLess(value: Boolean): Self = this.set("relaxColumnCountLess", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRelaxColumnCountLess: Self = this.set("relaxColumnCountLess", js.undefined)
+    
+    @scala.inline
+    def setRelaxColumnCountMore(value: Boolean): Self = this.set("relaxColumnCountMore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRelaxColumnCountMore: Self = this.set("relaxColumnCountMore", js.undefined)
     
     @scala.inline
     def setRelax_column_count(value: Boolean): Self = this.set("relax_column_count", value.asInstanceOf[js.Any])
@@ -383,6 +505,24 @@ object Options {
     def deleteRtrim: Self = this.set("rtrim", js.undefined)
     
     @scala.inline
+    def setSkipEmptyLines(value: Boolean): Self = this.set("skipEmptyLines", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSkipEmptyLines: Self = this.set("skipEmptyLines", js.undefined)
+    
+    @scala.inline
+    def setSkipLinesWithEmptyValues(value: Boolean): Self = this.set("skipLinesWithEmptyValues", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSkipLinesWithEmptyValues: Self = this.set("skipLinesWithEmptyValues", js.undefined)
+    
+    @scala.inline
+    def setSkipLinesWithError(value: Boolean): Self = this.set("skipLinesWithError", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSkipLinesWithError: Self = this.set("skipLinesWithError", js.undefined)
+    
+    @scala.inline
     def setSkip_empty_lines(value: Boolean): Self = this.set("skip_empty_lines", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -405,6 +545,12 @@ object Options {
     
     @scala.inline
     def deleteTo: Self = this.set("to", js.undefined)
+    
+    @scala.inline
+    def setToLine(value: Double): Self = this.set("toLine", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteToLine: Self = this.set("toLine", js.undefined)
     
     @scala.inline
     def setTo_line(value: Double): Self = this.set("to_line", value.asInstanceOf[js.Any])

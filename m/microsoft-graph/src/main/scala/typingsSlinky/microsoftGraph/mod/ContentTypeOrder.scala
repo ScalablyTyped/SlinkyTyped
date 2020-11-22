@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ContentTypeOrder extends js.Object {
   
   // Whether this is the default Content Type
-  var default: js.UndefOr[Boolean] = js.native
+  var default: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // Specifies the position in which the Content Type appears in the selection UI.
-  var position: js.UndefOr[Double] = js.native
+  var position: js.UndefOr[NullableOption[Double]] = js.native
 }
 object ContentTypeOrder {
   
@@ -37,15 +37,21 @@ object ContentTypeOrder {
     }
     
     @scala.inline
-    def setDefault(value: Boolean): Self = this.set("default", value.asInstanceOf[js.Any])
+    def setDefault(value: NullableOption[Boolean]): Self = this.set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefault: Self = this.set("default", js.undefined)
     
     @scala.inline
-    def setPosition(value: Double): Self = this.set("position", value.asInstanceOf[js.Any])
+    def setDefaultNull: Self = this.set("default", null)
+    
+    @scala.inline
+    def setPosition(value: NullableOption[Double]): Self = this.set("position", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePosition: Self = this.set("position", js.undefined)
+    
+    @scala.inline
+    def setPositionNull: Self = this.set("position", null)
   }
 }

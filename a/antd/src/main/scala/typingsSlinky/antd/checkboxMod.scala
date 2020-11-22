@@ -1,8 +1,9 @@
 package typingsSlinky.antd
 
+import slinky.core.ReactComponentClass
 import typingsSlinky.antd.anon.Indeterminate
-import typingsSlinky.antd.anon.TypeofCheckboxGroup
 import typingsSlinky.antd.checkboxGroupMod.CheckboxGroupContext
+import typingsSlinky.antd.checkboxGroupMod.CheckboxGroupProps
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +20,7 @@ object checkboxMod extends js.Object {
   @js.native
   object default extends js.Object {
     
-    var Group: TypeofCheckboxGroup = js.native
+    var Group: ReactComponentClass[CheckboxGroupProps] = js.native
     
     var __ANT_CHECKBOX: Boolean = js.native
     

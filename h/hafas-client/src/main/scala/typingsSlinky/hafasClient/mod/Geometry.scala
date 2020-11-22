@@ -1,6 +1,6 @@
 package typingsSlinky.hafasClient.mod
 
-import typingsSlinky.hafasClient.hafasClientStrings.point
+import typingsSlinky.hafasClient.hafasClientStrings.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,12 +10,12 @@ trait Geometry extends js.Object {
   
   var coordinates: js.Array[Double] = js.native
   
-  var `type`: point = js.native
+  var `type`: Point = js.native
 }
 object Geometry {
   
   @scala.inline
-  def apply(coordinates: js.Array[Double], `type`: point): Geometry = {
+  def apply(coordinates: js.Array[Double], `type`: Point): Geometry = {
     val __obj = js.Dynamic.literal(coordinates = coordinates.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Geometry]
@@ -43,6 +43,6 @@ object Geometry {
     def setCoordinates(value: js.Array[Double]): Self = this.set("coordinates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: point): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: Point): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

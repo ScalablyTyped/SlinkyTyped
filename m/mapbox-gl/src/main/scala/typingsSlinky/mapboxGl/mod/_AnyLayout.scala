@@ -24,4 +24,10 @@ object _AnyLayout {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[_AnyLayout]
   }
+  
+  @scala.inline
+  def CircleLayout(): _AnyLayout = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[_AnyLayout]
+  }
 }

@@ -11,29 +11,43 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTileViewOptions extends CollectionWidgetOptions[dxTileView] {
   
-  /** @name dxTileView.Options.baseItemHeight */
+  /**
+    * [descr:dxTileView.Options.baseItemHeight]
+    */
   var baseItemHeight: js.UndefOr[Double] = js.native
   
-  /** @name dxTileView.Options.baseItemWidth */
+  /**
+    * [descr:dxTileView.Options.baseItemWidth]
+    */
   var baseItemWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxTileView.Options.dataSource */
+  /**
+    * [descr:dxTileView.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxTileViewOptions: js.UndefOr[
     String | (js.Array[String | dxTileViewItem | _]) | DataSource | DataSourceOptions
   ] = js.native
   
-  /** @name dxTileView.Options.direction */
+  /**
+    * [descr:dxTileView.Options.direction]
+    */
   var direction: js.UndefOr[horizontal | vertical] = js.native
   
-  /** @name dxTileView.Options.itemMargin */
+  /**
+    * [descr:dxTileView.Options.itemMargin]
+    */
   var itemMargin: js.UndefOr[Double] = js.native
   
-  /** @name dxTileView.Options.items */
+  /**
+    * [descr:dxTileView.Options.items]
+    */
   @JSName("items")
   var items_dxTileViewOptions: js.UndefOr[js.Array[String | dxTileViewItem | _]] = js.native
   
-  /** @name dxTileView.Options.showScrollbar */
+  /**
+    * [descr:dxTileView.Options.showScrollbar]
+    */
   var showScrollbar: js.UndefOr[Boolean] = js.native
 }
 object dxTileViewOptions {

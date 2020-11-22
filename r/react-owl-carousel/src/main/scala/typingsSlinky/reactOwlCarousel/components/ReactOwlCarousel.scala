@@ -27,8 +27,13 @@ import typingsSlinky.react.mod.FormEventHandler
 import typingsSlinky.reactOwlCarousel.mod.OwlCarouselProps
 import typingsSlinky.reactOwlCarousel.mod.default
 import typingsSlinky.reactOwlCarousel.optionsMod.HandlerCallback
+import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.`additions removals`
 import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.`additions text`
 import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.`inline`
+import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.`removals additions`
+import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.`removals text`
+import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.`text additions`
+import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.`text removals`
 import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.additions
 import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.all
 import typingsSlinky.reactOwlCarousel.reactOwlCarouselStrings.ascending
@@ -226,7 +231,9 @@ object ReactOwlCarousel {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

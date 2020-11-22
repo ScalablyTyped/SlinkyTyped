@@ -1,12 +1,14 @@
 package typingsSlinky.enzymeReactIntl
 
+import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.cheerio.Cheerio
+import typingsSlinky.cheerio.cheerio.Cheerio
 import typingsSlinky.enzyme.mod.MountRendererProps
 import typingsSlinky.enzyme.mod.ReactWrapper
 import typingsSlinky.enzyme.mod.ShallowRendererProps
 import typingsSlinky.enzyme.mod.ShallowWrapper
+import typingsSlinky.reactIntl.mod.IntlProvider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,9 +17,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
+  def getIntl(): IntlProvider = js.native
+  
   def getLocale(): String = js.native
   
   def loadTranslation(translationFilePath: String): js.Any = js.native
+  
+  def loadTranslationObject[T /* <: StringDictionary[String] */](translations: T): T = js.native
   
   def mountWithIntl[P](node: ReactElement): ReactWrapper[P, _, ReactComponentClass[js.Object]] = js.native
   def mountWithIntl[P](node: ReactElement, options: MountRendererProps): ReactWrapper[P, _, ReactComponentClass[js.Object]] = js.native

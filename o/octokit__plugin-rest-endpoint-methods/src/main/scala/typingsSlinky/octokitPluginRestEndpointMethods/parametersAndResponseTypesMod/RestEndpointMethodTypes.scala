@@ -16,9 +16,9 @@ import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateReplyForReviewC
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateSuite
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.DeleteArchiveForAuthenticatedUser
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.DeleteRepoSubscription
-import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get670
-import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get756
-import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get866
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get676
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get762
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get872
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.GetConductCode
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.GetForRepo
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.GetGithubActionsBillingUser
@@ -47,7 +47,7 @@ trait RestEndpointMethodTypes extends js.Object {
   
   var codesOfConduct: GetConductCode = js.native
   
-  var emojis: Get670 = js.native
+  var emojis: Get676 = js.native
   
   var gists: CreateComment = js.native
   
@@ -63,7 +63,7 @@ trait RestEndpointMethodTypes extends js.Object {
   
   var markdown: RenderRaw = js.native
   
-  var meta: Get756 = js.native
+  var meta: Get762 = js.native
   
   var migrations: DeleteArchiveForAuthenticatedUser = js.native
   
@@ -73,7 +73,7 @@ trait RestEndpointMethodTypes extends js.Object {
   
   var pulls: CreateReplyForReviewComment = js.native
   
-  var rateLimit: Get866 = js.native
+  var rateLimit: Get872 = js.native
   
   var reactions: CreateForIssue = js.native
   
@@ -96,7 +96,7 @@ object RestEndpointMethodTypes {
     checks: CreateSuite,
     codeScanning: ListAlertsForRepo,
     codesOfConduct: GetConductCode,
-    emojis: Get670,
+    emojis: Get676,
     gists: CreateComment,
     git: CreateCommit,
     gitignore: GetTemplate,
@@ -104,12 +104,12 @@ object RestEndpointMethodTypes {
     issues: AddLabels,
     licenses: GetForRepo,
     markdown: RenderRaw,
-    meta: Get756,
+    meta: Get762,
     migrations: DeleteArchiveForAuthenticatedUser,
     orgs: CheckBlockedUser,
     projects: CreateCard,
     pulls: CreateReplyForReviewComment,
-    rateLimit: Get866,
+    rateLimit: Get872,
     reactions: CreateForIssue,
     repos: AddAppAccessRestrictions,
     search: Commits,
@@ -157,7 +157,7 @@ object RestEndpointMethodTypes {
     def setCodesOfConduct(value: GetConductCode): Self = this.set("codesOfConduct", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEmojis(value: Get670): Self = this.set("emojis", value.asInstanceOf[js.Any])
+    def setEmojis(value: Get676): Self = this.set("emojis", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setGists(value: CreateComment): Self = this.set("gists", value.asInstanceOf[js.Any])
@@ -181,7 +181,7 @@ object RestEndpointMethodTypes {
     def setMarkdown(value: RenderRaw): Self = this.set("markdown", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMeta(value: Get756): Self = this.set("meta", value.asInstanceOf[js.Any])
+    def setMeta(value: Get762): Self = this.set("meta", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMigrations(value: DeleteArchiveForAuthenticatedUser): Self = this.set("migrations", value.asInstanceOf[js.Any])
@@ -196,7 +196,7 @@ object RestEndpointMethodTypes {
     def setPulls(value: CreateReplyForReviewComment): Self = this.set("pulls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRateLimit(value: Get866): Self = this.set("rateLimit", value.asInstanceOf[js.Any])
+    def setRateLimit(value: Get872): Self = this.set("rateLimit", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReactions(value: CreateForIssue): Self = this.set("reactions", value.asInstanceOf[js.Any])

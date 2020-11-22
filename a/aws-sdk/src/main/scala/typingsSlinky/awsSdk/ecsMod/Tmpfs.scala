@@ -18,7 +18,7 @@ trait Tmpfs extends js.Object {
   var mountOptions: js.UndefOr[StringList] = js.native
   
   /**
-    * The size (in MiB) of the tmpfs volume.
+    * The maximum size (in MiB) of the tmpfs volume.
     */
   var size: Integer = js.native
 }

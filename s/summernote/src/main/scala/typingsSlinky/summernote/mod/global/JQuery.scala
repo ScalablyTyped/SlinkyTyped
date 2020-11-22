@@ -95,9 +95,9 @@ trait JQuery extends js.Object {
   @JSName("summernote")
   def summernote_bold(fontStyle: bold): JQuery = js.native
   @JSName("summernote")
-  def summernote_code(command: code): JQuery = js.native
+  def summernote_code(command: code): String = js.native
   @JSName("summernote")
-  def summernote_code(command: code, markupStr: String): JQuery = js.native
+  def summernote_code(command: code, markupStr: String): js.UndefOr[scala.Nothing] = js.native
   @JSName("summernote")
   def summernote_createLink(command: createLink, options: CreateLinkOptions): JQuery = js.native
   @JSName("summernote")

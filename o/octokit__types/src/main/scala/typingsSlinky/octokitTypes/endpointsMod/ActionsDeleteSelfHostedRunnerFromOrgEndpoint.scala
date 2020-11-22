@@ -10,6 +10,9 @@ trait ActionsDeleteSelfHostedRunnerFromOrgEndpoint extends js.Object {
   @JSName("org")
   var org_ : String = js.native
   
+  /**
+    * Unique identifier of the self-hosted runner.
+    */
   var runner_id: Double = js.native
 }
 object ActionsDeleteSelfHostedRunnerFromOrgEndpoint {

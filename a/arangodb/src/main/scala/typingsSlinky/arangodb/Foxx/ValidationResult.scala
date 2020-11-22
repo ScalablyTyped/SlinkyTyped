@@ -7,15 +7,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ValidationResult[T] extends js.Object {
   
-  var error: js.Any = js.native
+  var error: js.UndefOr[js.Any] = js.native
+  
+  var errors: js.UndefOr[js.Any] = js.native
   
   var value: T = js.native
 }
 object ValidationResult {
   
   @scala.inline
-  def apply[T](error: js.Any, value: T): ValidationResult[T] = {
-    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply[T](value: T): ValidationResult[T] = {
+    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValidationResult[T]]
   }
   
@@ -35,9 +37,18 @@ object ValidationResult {
     }
     
     @scala.inline
+    def setValue(value: T): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setError(value: js.Any): Self = this.set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: T): Self = this.set("value", value.asInstanceOf[js.Any])
+    def deleteError: Self = this.set("error", js.undefined)
+    
+    @scala.inline
+    def setErrors(value: js.Any): Self = this.set("errors", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrors: Self = this.set("errors", js.undefined)
   }
 }

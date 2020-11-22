@@ -23,15 +23,20 @@ trait ModifyFleetRequest extends js.Object {
   var FleetId: typingsSlinky.awsSdk.ec2Mod.FleetId = js.native
   
   /**
+    * The launch template and overrides.
+    */
+  var LaunchTemplateConfigs: js.UndefOr[FleetLaunchTemplateConfigListRequest] = js.native
+  
+  /**
     * The size of the EC2 Fleet.
     */
-  var TargetCapacitySpecification: TargetCapacitySpecificationRequest = js.native
+  var TargetCapacitySpecification: js.UndefOr[TargetCapacitySpecificationRequest] = js.native
 }
 object ModifyFleetRequest {
   
   @scala.inline
-  def apply(FleetId: FleetId, TargetCapacitySpecification: TargetCapacitySpecificationRequest): ModifyFleetRequest = {
-    val __obj = js.Dynamic.literal(FleetId = FleetId.asInstanceOf[js.Any], TargetCapacitySpecification = TargetCapacitySpecification.asInstanceOf[js.Any])
+  def apply(FleetId: FleetId): ModifyFleetRequest = {
+    val __obj = js.Dynamic.literal(FleetId = FleetId.asInstanceOf[js.Any])
     __obj.asInstanceOf[ModifyFleetRequest]
   }
   
@@ -54,9 +59,6 @@ object ModifyFleetRequest {
     def setFleetId(value: FleetId): Self = this.set("FleetId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTargetCapacitySpecification(value: TargetCapacitySpecificationRequest): Self = this.set("TargetCapacitySpecification", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setDryRun(value: Boolean): Self = this.set("DryRun", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -67,5 +69,20 @@ object ModifyFleetRequest {
     
     @scala.inline
     def deleteExcessCapacityTerminationPolicy: Self = this.set("ExcessCapacityTerminationPolicy", js.undefined)
+    
+    @scala.inline
+    def setLaunchTemplateConfigsVarargs(value: FleetLaunchTemplateConfigRequest*): Self = this.set("LaunchTemplateConfigs", js.Array(value :_*))
+    
+    @scala.inline
+    def setLaunchTemplateConfigs(value: FleetLaunchTemplateConfigListRequest): Self = this.set("LaunchTemplateConfigs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLaunchTemplateConfigs: Self = this.set("LaunchTemplateConfigs", js.undefined)
+    
+    @scala.inline
+    def setTargetCapacitySpecification(value: TargetCapacitySpecificationRequest): Self = this.set("TargetCapacitySpecification", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTargetCapacitySpecification: Self = this.set("TargetCapacitySpecification", js.undefined)
   }
 }

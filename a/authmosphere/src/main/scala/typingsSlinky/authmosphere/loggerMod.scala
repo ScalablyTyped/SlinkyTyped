@@ -53,20 +53,34 @@ object loggerMod extends js.Object {
     
     def debug(message: String): Unit = js.native
     def debug(message: String, error: js.Any): Unit = js.native
+    @JSName("debug")
+    var debug_Original: LogFunction = js.native
     
     def error(message: String): Unit = js.native
     def error(message: String, error: js.Any): Unit = js.native
+    @JSName("error")
+    var error_Original: LogFunction = js.native
     
     def fatal(message: String): Unit = js.native
     def fatal(message: String, error: js.Any): Unit = js.native
+    @JSName("fatal")
+    var fatal_Original: LogFunction = js.native
     
     def info(message: String): Unit = js.native
     def info(message: String, error: js.Any): Unit = js.native
+    @JSName("info")
+    var info_Original: LogFunction = js.native
     
     def trace(message: String): Unit = js.native
     def trace(message: String, error: js.Any): Unit = js.native
+    @JSName("trace")
+    var trace_Original: LogFunction = js.native
     
     def warn(message: String): Unit = js.native
     def warn(message: String, error: js.Any): Unit = js.native
+    @JSName("warn")
+    var warn_Original: LogFunction = js.native
   }
+  
+  type LogFunction = js.Function2[/* message */ String, /* error */ js.UndefOr[js.Any], Unit]
 }

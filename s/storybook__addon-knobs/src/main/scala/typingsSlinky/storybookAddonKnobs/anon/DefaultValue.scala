@@ -13,6 +13,10 @@ trait DefaultValue extends js.Object {
   
   var defaultValue: js.UndefOr[js.Any] = js.native
   
+  var disableDebounce: js.UndefOr[Boolean] = js.native
+  
+  var disableForceUpdate: js.UndefOr[Boolean] = js.native
+  
   var groupId: js.UndefOr[String] = js.native
   
   var hideLabel: `true` with js.UndefOr[Boolean] = js.native
@@ -77,6 +81,18 @@ object DefaultValue {
     
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
+    
+    @scala.inline
+    def setDisableDebounce(value: Boolean): Self = this.set("disableDebounce", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableDebounce: Self = this.set("disableDebounce", js.undefined)
+    
+    @scala.inline
+    def setDisableForceUpdate(value: Boolean): Self = this.set("disableForceUpdate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableForceUpdate: Self = this.set("disableForceUpdate", js.undefined)
     
     @scala.inline
     def setGroupId(value: String): Self = this.set("groupId", value.asInstanceOf[js.Any])

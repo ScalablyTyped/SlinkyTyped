@@ -29,6 +29,8 @@ trait PartialProSettings extends js.Object {
   
   var headerRender: js.UndefOr[`false`] = js.native
   
+  var headerTheme: js.UndefOr[MenuTheme] = js.native
+  
   var iconfontUrl: js.UndefOr[String] = js.native
   
   var layout: js.UndefOr[side | top | mix] = js.native
@@ -45,7 +47,7 @@ trait PartialProSettings extends js.Object {
   
   var splitMenus: js.UndefOr[Boolean] = js.native
   
-  var title: js.UndefOr[String] = js.native
+  var title: js.UndefOr[String | `false`] = js.native
 }
 object PartialProSettings {
   
@@ -113,6 +115,12 @@ object PartialProSettings {
     def deleteHeaderRender: Self = this.set("headerRender", js.undefined)
     
     @scala.inline
+    def setHeaderTheme(value: MenuTheme): Self = this.set("headerTheme", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderTheme: Self = this.set("headerTheme", js.undefined)
+    
+    @scala.inline
     def setIconfontUrl(value: String): Self = this.set("iconfontUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -161,7 +169,7 @@ object PartialProSettings {
     def deleteSplitMenus: Self = this.set("splitMenus", js.undefined)
     
     @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: String | `false`): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)

@@ -9,6 +9,8 @@ trait MongoBinaryOpts extends js.Object {
   
   var arch: js.UndefOr[String] = js.native
   
+  var checkMD5: js.UndefOr[Boolean] = js.native
+  
   var downloadDir: js.UndefOr[String] = js.native
   
   var platform: js.UndefOr[String] = js.native
@@ -43,6 +45,12 @@ object MongoBinaryOpts {
     
     @scala.inline
     def deleteArch: Self = this.set("arch", js.undefined)
+    
+    @scala.inline
+    def setCheckMD5(value: Boolean): Self = this.set("checkMD5", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCheckMD5: Self = this.set("checkMD5", js.undefined)
     
     @scala.inline
     def setDownloadDir(value: String): Self = this.set("downloadDir", value.asInstanceOf[js.Any])

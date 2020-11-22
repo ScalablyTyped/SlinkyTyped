@@ -43,7 +43,7 @@ trait ComplianceItem extends js.Object {
   var Severity: js.UndefOr[ComplianceSeverity] = js.native
   
   /**
-    * The status of the compliance item. An item is either COMPLIANT or NON_COMPLIANT.
+    * The status of the compliance item. An item is either COMPLIANT, NON_COMPLIANT, or an empty string (for Windows patches that aren't applicable).
     */
   var Status: js.UndefOr[ComplianceStatus] = js.native
   

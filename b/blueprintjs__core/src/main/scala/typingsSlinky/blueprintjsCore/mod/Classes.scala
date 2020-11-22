@@ -1,5 +1,6 @@
 package typingsSlinky.blueprintjsCore.mod
 
+import typingsSlinky.blueprintjsCore.blueprintjsCoreStrings.none
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -274,6 +275,8 @@ object Classes extends js.Object {
   
   val POPOVER_BACKDROP: String = js.native
   
+  val POPOVER_CAPTURING_DISMISS: String = js.native
+  
   val POPOVER_CONTENT: String = js.native
   
   val POPOVER_CONTENT_SIZING: String = js.native
@@ -424,17 +427,33 @@ object Classes extends js.Object {
   
   val VERTICAL: String = js.native
   
-  def alignmentClass(alignment: typingsSlinky.blueprintjsCore.alignmentMod.Alignment): String = js.native
+  def alignmentClass(): js.UndefOr[String] = js.native
+  def alignmentClass(alignment: typingsSlinky.blueprintjsCore.alignmentMod.Alignment): js.UndefOr[String] = js.native
   
+  def elevationClass(): js.UndefOr[String] = js.native
+  def elevationClass(elevation: js.UndefOr[scala.Nothing]): js.UndefOr[scala.Nothing] = js.native
   def elevationClass(elevation: typingsSlinky.blueprintjsCore.elevationMod.Elevation): String = js.native
+  @JSName("elevationClass")
+  def elevationClass_Union(elevation: typingsSlinky.blueprintjsCore.elevationMod.Elevation): js.UndefOr[String] = js.native
   
   def getClassNamespace(): String = js.native
   
-  def iconClass(): String = js.native
+  def iconClass(): js.UndefOr[String] = js.native
+  def iconClass(iconName: js.UndefOr[scala.Nothing]): js.UndefOr[scala.Nothing] = js.native
   def iconClass(iconName: String): String = js.native
+  @JSName("iconClass")
+  def iconClass_Union(iconName: String): js.UndefOr[String] = js.native
   
-  def intentClass(): String = js.native
+  def intentClass(): js.UndefOr[scala.Nothing] = js.native
   def intentClass(intent: typingsSlinky.blueprintjsCore.intentMod.Intent): String = js.native
+  @JSName("intentClass")
+  def intentClass_Union(intent: typingsSlinky.blueprintjsCore.intentMod.Intent): js.UndefOr[typingsSlinky.blueprintjsCore.intentMod.Intent] = js.native
+  @JSName("intentClass")
+  def intentClass_none(intent: none): js.UndefOr[scala.Nothing] = js.native
   
+  def positionClass(): js.UndefOr[String] = js.native
+  def positionClass(position: js.UndefOr[scala.Nothing]): js.UndefOr[scala.Nothing] = js.native
   def positionClass(position: typingsSlinky.blueprintjsCore.positionMod.Position): String = js.native
+  @JSName("positionClass")
+  def positionClass_Union(position: typingsSlinky.blueprintjsCore.positionMod.Position): js.UndefOr[String] = js.native
 }

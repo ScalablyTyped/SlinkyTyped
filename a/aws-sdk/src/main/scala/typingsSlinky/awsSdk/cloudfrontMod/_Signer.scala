@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait _Signer extends js.Object {
   
   /**
-    * An AWS account that is included in the TrustedSigners complex type for this distribution. Valid values include:    self, which is the AWS account used to create the distribution.   An AWS account number.  
+    * An AWS account number that contains active CloudFront key pairs that CloudFront can use to verify the signatures of signed URLs and signed cookies. If the AWS account that owns the key pairs is the same account that owns the CloudFront distribution, the value of this field is self.
     */
   var AwsAccountNumber: js.UndefOr[String] = js.native
   
   /**
-    * A complex type that lists the active CloudFront key pairs, if any, that are associated with AwsAccountNumber.
+    * A list of CloudFront key pair identifiers.
     */
   var KeyPairIds: js.UndefOr[typingsSlinky.awsSdk.cloudfrontMod.KeyPairIds] = js.native
 }

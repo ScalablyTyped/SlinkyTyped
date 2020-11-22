@@ -10,22 +10,26 @@ import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
+@js.native
 trait MetaProperty
   extends ASTNode
      with ExpressionKind
      with NodeKind
      with PrintableKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var meta: IdentifierKind
-  var property: IdentifierKind
-  var `type`: typingsSlinky.astTypes.astTypesStrings.MetaProperty
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var meta: IdentifierKind = js.native
+  
+  var property: IdentifierKind = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.MetaProperty = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.MetaProperty")
 @js.native
 object MetaProperty extends TopLevel[Type[MetaProperty]]
-

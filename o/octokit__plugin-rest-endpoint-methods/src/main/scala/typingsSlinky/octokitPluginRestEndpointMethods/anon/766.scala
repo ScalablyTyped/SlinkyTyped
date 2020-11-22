@@ -3,8 +3,7 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.MigrationsGetStatusForOrgEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.MigrationsGetStatusForOrgResponseData
+import typingsSlinky.octokitTypes.endpointsMod.MigrationsDownloadArchiveForOrgEndpoint
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +14,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `766` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[MigrationsGetStatusForOrgEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[MigrationsDownloadArchiveForOrgEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[MigrationsGetStatusForOrgResponseData] = js.native
+  var response: OctokitResponse[_] = js.native
 }
 object `766` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[MigrationsGetStatusForOrgEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[MigrationsGetStatusForOrgResponseData]
+    parameters: RequestParameters with (Omit[MigrationsDownloadArchiveForOrgEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[_]
   ): `766` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`766`]
@@ -47,10 +46,10 @@ object `766` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[MigrationsGetStatusForOrgEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[MigrationsDownloadArchiveForOrgEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[MigrationsGetStatusForOrgResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("babylonjs/Materials/index", "PBRMaterial")
 @js.native
 class PBRMaterial protected ()
-  extends typingsSlinky.babylonjs.pbrIndexMod.PBRMaterial {
+  extends typingsSlinky.babylonjs.materialsPbrIndexMod.PBRMaterial {
   /**
     * Instantiates a new PBRMaterial instance.
     *

@@ -1,5 +1,6 @@
 package typingsSlinky.webpackBundleAnalyzer.mod.BundleAnalyzerPlugin
 
+import typingsSlinky.webpackBundleAnalyzer.mod.BundleAnalyzerPlugin.Stats.ToJsonOptionsObject
 import typingsSlinky.webpackBundleAnalyzer.webpackBundleAnalyzerStrings.auto
 import typingsSlinky.webpackBundleAnalyzer.webpackBundleAnalyzerStrings.disabled
 import typingsSlinky.webpackBundleAnalyzer.webpackBundleAnalyzerStrings.error
@@ -84,6 +85,12 @@ trait Options extends js.Object {
   var reportFilename: js.UndefOr[String] = js.native
   
   /**
+    * Content of the HTML title element; or a function of the form () => string that provides the content.
+    * @default function that returns pretty printed current date and time.
+    */
+  var reportTitle: js.UndefOr[String | js.Function0[String]] = js.native
+  
+  /**
     * Name of Webpack Stats JSON file that will be generated if generateStatsFile is true.
     * Relative to bundles output directory.
     * @default 'stats.json'
@@ -95,9 +102,7 @@ trait Options extends js.Object {
     * For example you can exclude sources of your modules from stats file with "source: false" option.
     * @default null
     */
-  var statsOptions: js.UndefOr[
-    Null | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Stats.ToJsonOptionsObject */ js.Any)
-  ] = js.native
+  var statsOptions: js.UndefOr[Null | ToJsonOptionsObject] = js.native
 }
 object Options {
   
@@ -189,15 +194,22 @@ object Options {
     def deleteReportFilename: Self = this.set("reportFilename", js.undefined)
     
     @scala.inline
+    def setReportTitleFunction0(value: () => String): Self = this.set("reportTitle", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setReportTitle(value: String | js.Function0[String]): Self = this.set("reportTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReportTitle: Self = this.set("reportTitle", js.undefined)
+    
+    @scala.inline
     def setStatsFilename(value: String): Self = this.set("statsFilename", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStatsFilename: Self = this.set("statsFilename", js.undefined)
     
     @scala.inline
-    def setStatsOptions(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Stats.ToJsonOptionsObject */ js.Any
-    ): Self = this.set("statsOptions", value.asInstanceOf[js.Any])
+    def setStatsOptions(value: ToJsonOptionsObject): Self = this.set("statsOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStatsOptions: Self = this.set("statsOptions", js.undefined)

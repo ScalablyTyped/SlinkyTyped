@@ -56,6 +56,9 @@ object PolarRadiusAxis {
     def allowDataOverflow(value: Boolean): this.type = set("allowDataOverflow", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def allowDuplicatedCategory(value: Boolean): this.type = set("allowDuplicatedCategory", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def angle(value: Double): this.type = set("angle", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -6,12 +6,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object transferMod {
   
+  type KeyWise[T] = T with typingsSlinky.antd.anon.Key
+  
   type RenderResult = slinky.core.facade.ReactElement | typingsSlinky.antd.transferMod.RenderResultObject | java.lang.String | scala.Null
   
   type SelectAllLabel = slinky.core.facade.ReactElement | (js.Function1[/* info */ typingsSlinky.antd.anon.SelectedCount, slinky.core.facade.ReactElement])
   
-  type TransferRender = js.Function1[
-    /* item */ typingsSlinky.antd.transferMod.TransferItem, 
-    typingsSlinky.antd.transferMod.RenderResult
-  ]
+  type TransferRender[RecordType] = js.Function1[/* item */ RecordType, typingsSlinky.antd.transferMod.RenderResult]
 }

@@ -18,6 +18,38 @@ class TagPlaceholder protected () extends Node {
     isVoid: Boolean,
     sourceSpan: ParseSourceSpan
   ) = this()
+  def this(
+    tag: String,
+    attrs: StringDictionary[String],
+    startName: String,
+    closeName: String,
+    children: js.Array[Node],
+    isVoid: Boolean,
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: ParseSourceSpan
+  ) = this()
+  def this(
+    tag: String,
+    attrs: StringDictionary[String],
+    startName: String,
+    closeName: String,
+    children: js.Array[Node],
+    isVoid: Boolean,
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: Null,
+    endSourceSpan: ParseSourceSpan
+  ) = this()
+  def this(
+    tag: String,
+    attrs: StringDictionary[String],
+    startName: String,
+    closeName: String,
+    children: js.Array[Node],
+    isVoid: Boolean,
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: ParseSourceSpan,
+    endSourceSpan: ParseSourceSpan
+  ) = this()
   
   var attrs: StringDictionary[String] = js.native
   
@@ -25,9 +57,13 @@ class TagPlaceholder protected () extends Node {
   
   var closeName: String = js.native
   
+  var endSourceSpan: ParseSourceSpan | Null = js.native
+  
   var isVoid: Boolean = js.native
   
   var startName: String = js.native
+  
+  var startSourceSpan: ParseSourceSpan | Null = js.native
   
   var tag: String = js.native
 }

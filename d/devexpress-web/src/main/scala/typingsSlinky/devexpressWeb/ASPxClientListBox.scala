@@ -221,6 +221,12 @@ trait ASPxClientListBox extends ASPxClientListEdit {
   @JSName("SelectedIndexChanged")
   var SelectedIndexChanged_ASPxClientListBox: ASPxClientEvent[ASPxClientListEditItemSelectedChangedEventHandler[ASPxClientListBox]] = js.native
   
+  /**
+    * Adds a custom attribute to a list box item.
+    * @param index The item index.
+    * @param attributeName The attribute name.
+    * @param attributeValue The attribute value.
+    */
   def SetItemAttribute(index: Double, attributeName: String, attributeValue: String): Unit = js.native
   
   /**
@@ -230,6 +236,13 @@ trait ASPxClientListBox extends ASPxClientListEdit {
     */
   def SetItemHtml(index: Double, html: String): Unit = js.native
   
+  /**
+    * Adds a custom attribute to a list box item's text cell.
+    * @param itemIndex The item's index.
+    * @param textCellIndex The text cell's index.
+    * @param attributeName The attribute name.
+    * @param attributeValue The attribute value.
+    */
   def SetItemTextCellAttribute(itemIndex: Double, textCellIndex: Double, attributeName: String, attributeValue: String): Unit = js.native
   
   /**

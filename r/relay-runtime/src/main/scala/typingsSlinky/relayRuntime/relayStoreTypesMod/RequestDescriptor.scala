@@ -2,6 +2,7 @@ package typingsSlinky.relayRuntime.relayStoreTypesMod
 
 import typingsSlinky.relayRuntime.getRequestIdentifierMod.RequestIdentifier
 import typingsSlinky.relayRuntime.relayConcreteNodeMod.ConcreteRequest
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.CacheConfig
 import typingsSlinky.relayRuntime.relayRuntimeTypesMod.Variables
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait RequestDescriptor extends js.Object {
+  
+  val cacheConfig: CacheConfig | Null = js.native
   
   val identifier: RequestIdentifier = js.native
   
@@ -47,5 +50,11 @@ object RequestDescriptor {
     
     @scala.inline
     def setVariables(value: Variables): Self = this.set("variables", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCacheConfig(value: CacheConfig): Self = this.set("cacheConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCacheConfigNull: Self = this.set("cacheConfig", null)
   }
 }

@@ -7,16 +7,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Background extends js.Object {
   
-  var background: App = js.native
+  var background: typingsSlinky.storybookTheming.typesMod.Background = js.native
   
-  var color: Ancillary = js.native
+  var color: typingsSlinky.storybookTheming.typesMod.Color = js.native
   
-  var typography: Fonts = js.native
+  var typography: typingsSlinky.storybookTheming.typesMod.Typography = js.native
 }
 object Background {
   
   @scala.inline
-  def apply(background: App, color: Ancillary, typography: Fonts): Background = {
+  def apply(
+    background: typingsSlinky.storybookTheming.typesMod.Background,
+    color: typingsSlinky.storybookTheming.typesMod.Color,
+    typography: typingsSlinky.storybookTheming.typesMod.Typography
+  ): Background = {
     val __obj = js.Dynamic.literal(background = background.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], typography = typography.asInstanceOf[js.Any])
     __obj.asInstanceOf[Background]
   }
@@ -37,12 +41,12 @@ object Background {
     }
     
     @scala.inline
-    def setBackground(value: App): Self = this.set("background", value.asInstanceOf[js.Any])
+    def setBackground(value: typingsSlinky.storybookTheming.typesMod.Background): Self = this.set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColor(value: Ancillary): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: typingsSlinky.storybookTheming.typesMod.Color): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTypography(value: Fonts): Self = this.set("typography", value.asInstanceOf[js.Any])
+    def setTypography(value: typingsSlinky.storybookTheming.typesMod.Typography): Self = this.set("typography", value.asInstanceOf[js.Any])
   }
 }

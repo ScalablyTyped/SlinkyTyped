@@ -35,13 +35,13 @@ object jest extends js.Object {
     
     def toBeCalled(): R = js.native
     
-    def toBeCalledAfter(spy: SinonSpy): R = js.native
+    def toBeCalledAfter(spy: SinonSpy[js.Array[_], _]): R = js.native
     
-    def toBeCalledBefore(spy: SinonSpy): R = js.native
+    def toBeCalledBefore(spy: SinonSpy[js.Array[_], _]): R = js.native
     
-    def toBeCalledImmediatelyAfter(spy: SinonSpy): R = js.native
+    def toBeCalledImmediatelyAfter(spy: SinonSpy[js.Array[_], _]): R = js.native
     
-    def toBeCalledImmediatelyBefore(spy: SinonSpy): R = js.native
+    def toBeCalledImmediatelyBefore(spy: SinonSpy[js.Array[_], _]): R = js.native
     
     def toBeCalledOn(`object`: js.Object): R = js.native
     
@@ -89,13 +89,13 @@ object jest extends js.Object {
     
     def toHaveBeenCalled(): R = js.native
     
-    def toHaveBeenCalledAfter(spy: SinonSpy): R = js.native
+    def toHaveBeenCalledAfter(spy: SinonSpy[js.Array[_], _]): R = js.native
     
-    def toHaveBeenCalledBefore(spy: SinonSpy): R = js.native
+    def toHaveBeenCalledBefore(spy: SinonSpy[js.Array[_], _]): R = js.native
     
-    def toHaveBeenCalledImmediatelyAfter(spy: SinonSpy): R = js.native
+    def toHaveBeenCalledImmediatelyAfter(spy: SinonSpy[js.Array[_], _]): R = js.native
     
-    def toHaveBeenCalledImmediatelyBefore(spy: SinonSpy): R = js.native
+    def toHaveBeenCalledImmediatelyBefore(spy: SinonSpy[js.Array[_], _]): R = js.native
     
     def toHaveBeenCalledOn(`object`: js.Object): R = js.native
     

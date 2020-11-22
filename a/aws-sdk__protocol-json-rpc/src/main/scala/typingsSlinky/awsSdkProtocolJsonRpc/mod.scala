@@ -1,10 +1,6 @@
 package typingsSlinky.awsSdkProtocolJsonRpc
 
-import typingsSlinky.awsSdkTypes.httpMod.HttpEndpoint
-import typingsSlinky.awsSdkTypes.marshallerMod.BodySerializer
-import typingsSlinky.awsSdkTypes.unmarshallerMod.BodyParser
-import typingsSlinky.awsSdkTypes.unmarshallerMod.ServiceExceptionParser
-import typingsSlinky.awsSdkTypes.unmarshallerMod.StreamCollector
+import typingsSlinky.awsSdkTypes.serdeMod.StreamCollector
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,9 +14,9 @@ object mod extends js.Object {
   class JsonRpcParser[StreamType] protected ()
     extends typingsSlinky.awsSdkProtocolJsonRpc.jsonRpcParserMod.JsonRpcParser[StreamType] {
     def this(
-      bodyParser: BodyParser[String],
-      parseServiceException: ServiceExceptionParser,
-      bodyCollector: StreamCollector[StreamType],
+      bodyParser: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodyParser */ js.Any,
+      parseServiceException: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceExceptionParser */ js.Any,
+      bodyCollector: StreamCollector,
       utf8Encoder: Encoder
     ) = this()
   }
@@ -28,6 +24,9 @@ object mod extends js.Object {
   @js.native
   class JsonRpcSerializer[StreamType] protected ()
     extends typingsSlinky.awsSdkProtocolJsonRpc.jsonRpcSerializerMod.JsonRpcSerializer[StreamType] {
-    def this(endpoint: HttpEndpoint, bodySerializer: BodySerializer[String]) = this()
+    def this(
+      endpoint: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpEndpoint */ js.Any,
+      bodySerializer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodySerializer */ js.Any
+    ) = this()
   }
 }

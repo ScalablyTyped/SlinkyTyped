@@ -30,13 +30,11 @@ trait MeshCreatePlaneParams extends Object {
     * Direction the plane is facing.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Mesh.html#createPlane)
-    *
-    * @default "up"
     */
   var facing: js.UndefOr[east | west | north | south | up | down] = js.native
   
   /**
-    * Whether to georeference relative to the globe or the projected coordinate system (PCS). This parameter is only relevant for spatial references that can be used in both local and global viewing modes (currently only WebMercator). This parameter defaults to `true` for WebMercator and WGS84, and `false` for any other PCS. When true, the mesh is created in a Cartesian system with respect to the local coordinate system on the globe and sizes are specified in meters.
+    * Whether to georeference relative to the globe or the projected coordinate system (PCS).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Mesh.html#createPlane)
     */
@@ -50,7 +48,7 @@ trait MeshCreatePlaneParams extends Object {
   var material: js.UndefOr[MeshMaterial] = js.native
   
   /**
-    * A uniform size value or an object containing individual values width and height. The unit of the size values is derived from the spatial reference of the provided location, unless a unit is specified.
+    * A uniform size value or an object containing individual values width and height.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Mesh.html#createPlane)
     */

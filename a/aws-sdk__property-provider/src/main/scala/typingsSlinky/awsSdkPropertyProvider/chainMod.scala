@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/property-provider/build/chain", JSImport.Namespace)
+@JSImport("@aws-sdk/property-provider/dist/cjs/chain", JSImport.Namespace)
 @js.native
 object chainMod extends js.Object {
   

@@ -13,9 +13,15 @@ trait SQSRecordAttributes extends js.Object {
   
   var ApproximateReceiveCount: String = js.native
   
+  var MessageDeduplicationId: js.UndefOr[String] = js.native
+  
+  var MessageGroupId: js.UndefOr[String] = js.native
+  
   var SenderId: String = js.native
   
   var SentTimestamp: String = js.native
+  
+  var SequenceNumber: js.UndefOr[String] = js.native
 }
 object SQSRecordAttributes {
   
@@ -62,5 +68,23 @@ object SQSRecordAttributes {
     
     @scala.inline
     def deleteAWSTraceHeader: Self = this.set("AWSTraceHeader", js.undefined)
+    
+    @scala.inline
+    def setMessageDeduplicationId(value: String): Self = this.set("MessageDeduplicationId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMessageDeduplicationId: Self = this.set("MessageDeduplicationId", js.undefined)
+    
+    @scala.inline
+    def setMessageGroupId(value: String): Self = this.set("MessageGroupId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMessageGroupId: Self = this.set("MessageGroupId", js.undefined)
+    
+    @scala.inline
+    def setSequenceNumber(value: String): Self = this.set("SequenceNumber", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSequenceNumber: Self = this.set("SequenceNumber", js.undefined)
   }
 }

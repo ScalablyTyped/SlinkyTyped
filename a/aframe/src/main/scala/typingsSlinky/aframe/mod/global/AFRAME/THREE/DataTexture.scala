@@ -15,6 +15,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class DataTexture protected ()
   extends typingsSlinky.three.mod.DataTexture {
+  /**
+  	 * @param data
+  	 * @param width
+  	 * @param height
+  	 * @param [format=THREE.RGBAFormat]
+  	 * @param [type=THREE.UnsignedByteType]
+  	 * @param [mapping=THREE.Texture.DEFAULT_MAPPING]
+  	 * @param [wrapS=THREE.ClampToEdgeWrapping]
+  	 * @param [wrapT=THREE.ClampToEdgeWrapping]
+  	 * @param [magFilter=THREE.NearestFilter]
+  	 * @param [minFilter=THREE.NearestFilter]
+  	 * @param [anisotropy=1]
+  	 * @param [encoding=THREE.LinearEncoding]
+  	 */
   def this(
     data: TypedArray,
     width: Double,

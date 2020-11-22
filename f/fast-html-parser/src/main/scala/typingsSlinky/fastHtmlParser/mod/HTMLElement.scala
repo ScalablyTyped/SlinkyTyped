@@ -25,7 +25,7 @@ trait HTMLElement extends js.Object {
   
   val nodeType: NodeType = js.native
   
-  def querySelector(selector: String): HTMLElement = js.native
+  def querySelector(selector: String): HTMLElement | Null = js.native
   
   def querySelectorAll(selector: String): js.Array[HTMLElement] = js.native
   

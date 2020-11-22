@@ -1,5 +1,7 @@
 package typingsSlinky.socketIoClient.SocketIOClient
 
+import typingsSlinky.socketIoClient.socketIoClientStrings.arraybuffer
+import typingsSlinky.socketIoClient.socketIoClientStrings.blob
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,6 +11,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @js.native
 trait Socket extends Emitter {
+  
+  /**
+    * The type of binary data being transmitted by the connection.
+    * https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/binaryType
+    */
+  var binaryType: blob | arraybuffer = js.native
   
   /**
     * Disconnects the socket manually

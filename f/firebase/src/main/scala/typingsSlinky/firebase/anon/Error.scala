@@ -1,7 +1,7 @@
 package typingsSlinky.firebase.anon
 
-import typingsSlinky.firebase.mod.firestore.DocumentSnapshot
-import typingsSlinky.firebase.mod.firestore.FirestoreError
+import typingsSlinky.firebase.mod.firebase.firestore.DocumentSnapshot
+import typingsSlinky.firebase.mod.firebase.firestore.FirestoreError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

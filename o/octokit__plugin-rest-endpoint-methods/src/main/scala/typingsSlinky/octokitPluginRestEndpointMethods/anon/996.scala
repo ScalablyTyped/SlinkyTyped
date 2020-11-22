@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposListWebhooksEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposListWebhooksResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposListPublicEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposListPublicResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `996` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposListWebhooksEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposListPublicEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposListWebhooksResponseData] = js.native
+  var response: OctokitResponse[ReposListPublicResponseData] = js.native
 }
 object `996` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposListWebhooksEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposListWebhooksResponseData]
+    parameters: RequestParameters with (Omit[ReposListPublicEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposListPublicResponseData]
   ): `996` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`996`]
@@ -46,9 +46,9 @@ object `996` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ReposListWebhooksEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ReposListPublicEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposListWebhooksResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReposListPublicResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

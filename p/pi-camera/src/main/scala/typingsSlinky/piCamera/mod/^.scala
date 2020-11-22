@@ -6,6 +6,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("pi-camera", JSImport.Namespace)
 @js.native
-class ^ protected () extends PiCamera {
-  def this(config: cameraConfig) = this()
+class ^ () extends PiCamera {
+  def this(config: CameraConfig) = this()
 }

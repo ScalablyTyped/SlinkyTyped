@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.anon.`10`
+import typingsSlinky.devextreme.anon.`12`
 import typingsSlinky.devextreme.devextremeStrings.inverted
 import typingsSlinky.devextreme.devextremeStrings.normal
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
@@ -15,22 +15,30 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSlideOutOptions extends CollectionWidgetOptions[dxSlideOut] {
   
-  /** @name dxSlideOut.Options.contentTemplate */
+  /**
+    * [descr:dxSlideOut.Options.contentTemplate]
+    */
   var contentTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* container */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxSlideOut.Options.dataSource */
+  /**
+    * [descr:dxSlideOut.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxSlideOutOptions: js.UndefOr[
     String | (js.Array[String | dxSlideOutItem | _]) | DataSource | DataSourceOptions
   ] = js.native
   
-  /** @name dxSlideOut.Options.items */
+  /**
+    * [descr:dxSlideOut.Options.items]
+    */
   @JSName("items")
   var items_dxSlideOutOptions: js.UndefOr[js.Array[String | dxSlideOutItem | _]] = js.native
   
-  /** @name dxSlideOut.Options.menuGroupTemplate */
+  /**
+    * [descr:dxSlideOut.Options.menuGroupTemplate]
+    */
   var menuGroupTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* groupData */ js.Any, 
@@ -40,10 +48,14 @@ trait dxSlideOutOptions extends CollectionWidgetOptions[dxSlideOut] {
     ])
   ] = js.native
   
-  /** @name dxSlideOut.Options.menuGrouped */
+  /**
+    * [descr:dxSlideOut.Options.menuGrouped]
+    */
   var menuGrouped: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSlideOut.Options.menuItemTemplate */
+  /**
+    * [descr:dxSlideOut.Options.menuItemTemplate]
+    */
   var menuItemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -53,19 +65,29 @@ trait dxSlideOutOptions extends CollectionWidgetOptions[dxSlideOut] {
     ])
   ] = js.native
   
-  /** @name dxSlideOut.Options.menuPosition */
+  /**
+    * [descr:dxSlideOut.Options.menuPosition]
+    */
   var menuPosition: js.UndefOr[inverted | normal] = js.native
   
-  /** @name dxSlideOut.Options.menuVisible */
+  /**
+    * [descr:dxSlideOut.Options.menuVisible]
+    */
   var menuVisible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSlideOut.Options.onMenuGroupRendered */
-  var onMenuGroupRendered: js.UndefOr[js.Function1[/* e */ `10`, _]] = js.native
+  /**
+    * [descr:dxSlideOut.Options.onMenuGroupRendered]
+    */
+  var onMenuGroupRendered: js.UndefOr[js.Function1[/* e */ `12`, _]] = js.native
   
-  /** @name dxSlideOut.Options.onMenuItemRendered */
-  var onMenuItemRendered: js.UndefOr[js.Function1[/* e */ `10`, _]] = js.native
+  /**
+    * [descr:dxSlideOut.Options.onMenuItemRendered]
+    */
+  var onMenuItemRendered: js.UndefOr[js.Function1[/* e */ `12`, _]] = js.native
   
-  /** @name dxSlideOut.Options.swipeEnabled */
+  /**
+    * [descr:dxSlideOut.Options.swipeEnabled]
+    */
   var swipeEnabled: js.UndefOr[Boolean] = js.native
 }
 object dxSlideOutOptions {
@@ -184,13 +206,13 @@ object dxSlideOutOptions {
     def deleteMenuVisible: Self = this.set("menuVisible", js.undefined)
     
     @scala.inline
-    def setOnMenuGroupRendered(value: /* e */ `10` => _): Self = this.set("onMenuGroupRendered", js.Any.fromFunction1(value))
+    def setOnMenuGroupRendered(value: /* e */ `12` => _): Self = this.set("onMenuGroupRendered", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnMenuGroupRendered: Self = this.set("onMenuGroupRendered", js.undefined)
     
     @scala.inline
-    def setOnMenuItemRendered(value: /* e */ `10` => _): Self = this.set("onMenuItemRendered", js.Any.fromFunction1(value))
+    def setOnMenuItemRendered(value: /* e */ `12` => _): Self = this.set("onMenuItemRendered", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnMenuItemRendered: Self = this.set("onMenuItemRendered", js.undefined)

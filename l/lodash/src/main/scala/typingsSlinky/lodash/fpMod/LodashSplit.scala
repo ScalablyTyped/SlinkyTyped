@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashSplit extends LodashConvertible {
+trait LodashSplit extends js.Object {
   
   def apply(separator: String): LodashSplit1x1 = js.native
   def apply(separator: String, string: String): js.Array[String] = js.native

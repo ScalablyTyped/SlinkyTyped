@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.astTypes.kindsMod.BlockStatementKind
 import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
+import typingsSlinky.astTypes.kindsMod.FlowPredicateKind
 import typingsSlinky.astTypes.kindsMod.FunctionKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.NodeKind
@@ -17,32 +18,46 @@ import typingsSlinky.astTypes.kindsMod.TypeParameterDeclarationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Function, 'type'> */
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Expression, 'type'> */
+@js.native
 trait FunctionExpression
   extends ASTNode
      with ExpressionKind
      with FunctionKind
      with NodeKind
      with PrintableKind {
-  var async: js.UndefOr[Boolean] = js.undefined
-  var body: BlockStatementKind
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.undefined
-  var expression: js.UndefOr[Boolean] = js.undefined
-  var generator: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[IdentifierKind] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var params: js.Array[PatternKind]
-  var rest: js.UndefOr[IdentifierKind] = js.undefined
-  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.FunctionExpression
-  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind] = js.undefined
+  
+  var async: js.UndefOr[Boolean] = js.native
+  
+  var body: BlockStatementKind = js.native
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.native
+  
+  var expression: js.UndefOr[Boolean] = js.native
+  
+  var generator: js.UndefOr[Boolean] = js.native
+  
+  var id: js.UndefOr[IdentifierKind | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var params: js.Array[PatternKind] = js.native
+  
+  var predicate: js.UndefOr[FlowPredicateKind | Null] = js.native
+  
+  var rest: js.UndefOr[IdentifierKind | Null] = js.native
+  
+  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind | Null] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.FunctionExpression = js.native
+  
+  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind | Null] = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.FunctionExpression")
 @js.native
 object FunctionExpression extends TopLevel[Type[FunctionExpression]]
-

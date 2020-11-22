@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NamedScaleRange extends Object {
   
   /**
-    * The named scale range, such as "room" or "metropolitan area"
+    * The named scale range, such as "room" or "metropolitan area".
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRanges.html#NamedScaleRange)
     */

@@ -11,6 +11,11 @@ trait AttachNetworkInterfaceResult extends js.Object {
     * The ID of the network interface attachment.
     */
   var AttachmentId: js.UndefOr[String] = js.native
+  
+  /**
+    * The index of the network card.
+    */
+  var NetworkCardIndex: js.UndefOr[Integer] = js.native
 }
 object AttachNetworkInterfaceResult {
   
@@ -40,5 +45,11 @@ object AttachNetworkInterfaceResult {
     
     @scala.inline
     def deleteAttachmentId: Self = this.set("AttachmentId", js.undefined)
+    
+    @scala.inline
+    def setNetworkCardIndex(value: Integer): Self = this.set("NetworkCardIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkCardIndex: Self = this.set("NetworkCardIndex", js.undefined)
   }
 }

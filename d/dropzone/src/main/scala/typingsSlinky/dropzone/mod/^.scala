@@ -1,6 +1,8 @@
 package typingsSlinky.dropzone.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.File
 import typingsSlinky.dropzone.dropzoneBooleans.`false`
 import typingsSlinky.dropzone.mod.global.HTMLElement
 import scala.scalajs.js
@@ -37,14 +39,40 @@ object ^ extends js.Object {
   
   var autoDiscover: Boolean = js.native
   
+  var blacklistedBrowsers: js.Array[js.RegExp] = js.native
+  
   def confirm(question: String, accepted: js.Function0[Unit]): Unit = js.native
   def confirm(question: String, accepted: js.Function0[Unit], rejected: js.Function0[Unit]): Unit = js.native
   
   def createElement(string: String): HTMLElement = js.native
   
+  def dataURItoBlob(dataURI: String): Blob = js.native
+  
+  def discover(): js.Array[Dropzone] = js.native
+  
+  def elementInside(element: HTMLElement, container: HTMLElement): Boolean = js.native
+  
+  def forElement(element: String): Dropzone = js.native
+  def forElement(element: HTMLElement): Dropzone = js.native
+  
+  def getElement(element: String): HTMLElement = js.native
+  def getElement(element: String, name: String): HTMLElement = js.native
+  def getElement(element: HTMLElement): HTMLElement = js.native
+  def getElement(element: HTMLElement, name: String): HTMLElement = js.native
+  
+  def getElements(elements: String): js.Array[HTMLElement] = js.native
+  def getElements(elements: js.Array[String | HTMLElement]): js.Array[HTMLElement] = js.native
+  def getElements(elements: HTMLElement): js.Array[HTMLElement] = js.native
+  
   var instances: js.Array[Dropzone] = js.native
   
   def isBrowserSupported(): Boolean = js.native
   
+  def isValidFile(file: File, acceptedFiles: String): Boolean = js.native
+  
   var options: StringDictionary[DropzoneOptions | `false`] = js.native
+  
+  def optionsForElement(element: HTMLElement): js.UndefOr[DropzoneOptions] = js.native
+  
+  var version: String = js.native
 }

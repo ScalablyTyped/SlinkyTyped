@@ -133,6 +133,7 @@ object updateExportDeclaration extends js.Object {
     moduleSpecifier: js.UndefOr[scala.Nothing],
     isTypeOnly: Boolean
   ): ExportDeclaration = js.native
+  /** @deprecated Use `factory.updateExportDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     node: ExportDeclaration,
     decorators: js.Array[Decorator],

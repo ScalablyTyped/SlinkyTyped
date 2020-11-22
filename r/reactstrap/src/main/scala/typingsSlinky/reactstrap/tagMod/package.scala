@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object tagMod {
   
-  type Tag[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.tagMod.TagProps]
+  type Tag = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.tagMod.TagProps]
 }

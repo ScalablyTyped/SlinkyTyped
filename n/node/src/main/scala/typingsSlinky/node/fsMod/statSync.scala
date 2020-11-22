@@ -9,4 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object statSync extends js.Object {
   
   def apply(path: PathLike): Stats = js.native
+  def apply(path: PathLike, options: BigIntOptions): BigIntStats = js.native
+  def apply(path: PathLike, options: StatOptions): Stats | BigIntStats = js.native
 }

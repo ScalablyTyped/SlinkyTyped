@@ -15,8 +15,7 @@ trait BindingDataChangedEventArgs extends js.Object {
   
   /**
     *
-    * Gets a temporary `Binding` object that contains the ID of the `Binding` object that raised the event. 
-    * Use that ID with `BindingCollection.getItem(id)` to get the binding.
+    * Gets a temporary `Binding` object that contains the ID of the `Binding` object that raised the event. Use that ID with `BindingCollection.getItem(id)` to get the binding.
     *
     * [Api set: ExcelApi 1.2]
     */

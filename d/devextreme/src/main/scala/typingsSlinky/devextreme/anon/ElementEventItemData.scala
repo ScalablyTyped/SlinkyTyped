@@ -2,7 +2,7 @@ package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxTabPanel
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ElementEventItemData extends js.Object {
   
-  var component: js.UndefOr[dxTabPanel] = js.native
+  var component: js.UndefOr[dxList] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -19,6 +19,8 @@ trait ElementEventItemData extends js.Object {
   var itemData: js.UndefOr[js.Any] = js.native
   
   var itemElement: js.UndefOr[dxElement] = js.native
+  
+  var itemIndex: js.UndefOr[Double | js.Any] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
 }
@@ -46,7 +48,7 @@ object ElementEventItemData {
     }
     
     @scala.inline
-    def setComponent(value: dxTabPanel): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxList): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -74,6 +76,12 @@ object ElementEventItemData {
     
     @scala.inline
     def deleteItemElement: Self = this.set("itemElement", js.undefined)
+    
+    @scala.inline
+    def setItemIndex(value: Double | js.Any): Self = this.set("itemIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteItemIndex: Self = this.set("itemIndex", js.undefined)
     
     @scala.inline
     def setModel(value: js.Any): Self = this.set("model", value.asInstanceOf[js.Any])

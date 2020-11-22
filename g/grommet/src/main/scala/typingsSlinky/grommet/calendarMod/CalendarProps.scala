@@ -25,6 +25,8 @@ trait CalendarProps extends js.Object {
   
   var bounds: js.UndefOr[js.Array[String]] = js.native
   
+  var children: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  
   var date: js.UndefOr[String] = js.native
   
   var dates: js.UndefOr[js.Array[String | js.Array[String]]] = js.native
@@ -32,6 +34,8 @@ trait CalendarProps extends js.Object {
   var daysOfWeek: js.UndefOr[Boolean] = js.native
   
   var disabled: js.UndefOr[js.Array[String | js.Array[String]]] = js.native
+  
+  var fill: js.UndefOr[Boolean] = js.native
   
   var firstDayOfWeek: js.UndefOr[`0` | `1`] = js.native
   
@@ -45,7 +49,7 @@ trait CalendarProps extends js.Object {
   
   var onReference: js.UndefOr[js.Function1[/* reference */ String, Unit]] = js.native
   
-  var onSelect: js.UndefOr[js.Function1[/* select */ js.Array[String], _]] = js.native
+  var onSelect: js.UndefOr[js.Function1[/* select */ String | js.Array[String], _]] = js.native
   
   var range: js.UndefOr[Boolean] = js.native
   
@@ -106,6 +110,12 @@ object CalendarProps {
     def deleteBounds: Self = this.set("bounds", js.undefined)
     
     @scala.inline
+    def setChildren(value: /* repeated */ js.Any => _): Self = this.set("children", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteChildren: Self = this.set("children", js.undefined)
+    
+    @scala.inline
     def setDate(value: String): Self = this.set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -134,6 +144,12 @@ object CalendarProps {
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setFill(value: Boolean): Self = this.set("fill", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFill: Self = this.set("fill", js.undefined)
     
     @scala.inline
     def setFirstDayOfWeek(value: `0` | `1`): Self = this.set("firstDayOfWeek", value.asInstanceOf[js.Any])
@@ -172,7 +188,7 @@ object CalendarProps {
     def deleteOnReference: Self = this.set("onReference", js.undefined)
     
     @scala.inline
-    def setOnSelect(value: /* select */ js.Array[String] => _): Self = this.set("onSelect", js.Any.fromFunction1(value))
+    def setOnSelect(value: /* select */ String | js.Array[String] => _): Self = this.set("onSelect", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSelect: Self = this.set("onSelect", js.undefined)

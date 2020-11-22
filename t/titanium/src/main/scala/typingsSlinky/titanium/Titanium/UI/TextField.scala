@@ -101,7 +101,7 @@ trait TextField extends View {
   /**
     * Color of the text in this text field, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   /**
     * Determines whether this field can be edited.
@@ -173,6 +173,11 @@ trait TextField extends View {
   def focus(): Unit = js.native
   
   /**
+    * Determines whether this TextField has focus.
+    */
+  val focused: Boolean = js.native
+  
+  /**
     * Font to use for text.
     */
   var font: Font = js.native
@@ -240,7 +245,7 @@ trait TextField extends View {
     * Gets the value of the <Titanium.UI.TextField.color> property.
     * @deprecated Access <Titanium.UI.TextField.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TextField.editable> property.
@@ -259,6 +264,12 @@ trait TextField extends View {
     * @deprecated Access <Titanium.UI.TextField.enableReturnKey> instead.
     */
   def getEnableReturnKey(): Boolean = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.TextField.focused> property.
+    * @deprecated Access <Titanium.UI.TextField.focused> instead.
+    */
+  def getFocused(): Boolean = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TextField.font> property.
@@ -282,7 +293,7 @@ trait TextField extends View {
     * Gets the value of the <Titanium.UI.TextField.hintTextColor> property.
     * @deprecated Access <Titanium.UI.TextField.hintTextColor> instead.
     */
-  def getHintTextColor(): String = js.native
+  def getHintTextColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TextField.hintType> property.
@@ -318,7 +329,7 @@ trait TextField extends View {
     * Gets the value of the <Titanium.UI.TextField.keyboardToolbarColor> property.
     * @deprecated Access <Titanium.UI.TextField.keyboardToolbarColor> instead.
     */
-  def getKeyboardToolbarColor(): String = js.native
+  def getKeyboardToolbarColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.TextField.keyboardToolbarHeight> property.
@@ -453,7 +464,7 @@ trait TextField extends View {
   /**
     * Hint text color to display when the field is empty.
     */
-  var hintTextColor: String = js.native
+  var hintTextColor: String | Color = js.native
   
   /**
     * Hint type to display on the text field.
@@ -485,7 +496,7 @@ trait TextField extends View {
   /**
     * Color of the keyboard toolbar if keyboardToolbar is an array, as a color name or hex triplet.
     */
-  var keyboardToolbarColor: String = js.native
+  var keyboardToolbarColor: String | Color = js.native
   
   /**
     * Height of the keyboard toolbar if keyboardToolbar is an array.
@@ -638,6 +649,7 @@ trait TextField extends View {
     * @deprecated Set the value using <Titanium.UI.TextField.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TextField.editable> property.
@@ -680,6 +692,7 @@ trait TextField extends View {
     * @deprecated Set the value using <Titanium.UI.TextField.hintTextColor> instead.
     */
   def setHintTextColor(hintTextColor: String): Unit = js.native
+  def setHintTextColor(hintTextColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TextField.hintType> property.
@@ -718,6 +731,7 @@ trait TextField extends View {
     * @deprecated Set the value using <Titanium.UI.TextField.keyboardToolbarColor> instead.
     */
   def setKeyboardToolbarColor(keyboardToolbarColor: String): Unit = js.native
+  def setKeyboardToolbarColor(keyboardToolbarColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.TextField.keyboardToolbarHeight> property.

@@ -9,6 +9,7 @@ import typingsSlinky.three.constantsMod.TextureFilter
 import typingsSlinky.three.constantsMod.Wrapping
 import typingsSlinky.three.polyfillsMod.TypedArray
 import typingsSlinky.three.textureMod.Texture
+import typingsSlinky.three.threeBooleans.`true`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,6 +20,20 @@ object dataTextureMod extends js.Object {
   
   @js.native
   class DataTexture protected () extends Texture {
+    /**
+    	 * @param data
+    	 * @param width
+    	 * @param height
+    	 * @param [format=THREE.RGBAFormat]
+    	 * @param [type=THREE.UnsignedByteType]
+    	 * @param [mapping=THREE.Texture.DEFAULT_MAPPING]
+    	 * @param [wrapS=THREE.ClampToEdgeWrapping]
+    	 * @param [wrapT=THREE.ClampToEdgeWrapping]
+    	 * @param [magFilter=THREE.NearestFilter]
+    	 * @param [minFilter=THREE.NearestFilter]
+    	 * @param [anisotropy=1]
+    	 * @param [encoding=THREE.LinearEncoding]
+    	 */
     def this(
       data: TypedArray,
       width: Double,
@@ -36,5 +51,7 @@ object dataTextureMod extends js.Object {
     
     @JSName("image")
     var image_DataTexture: ImageData = js.native
+    
+    val isDataTexture: `true` = js.native
   }
 }

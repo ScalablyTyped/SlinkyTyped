@@ -8,23 +8,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TreemapPoint extends AbstractSeriesPoint {
   
-  var children: js.Array[TreemapPoint] = js.native
+  var children: js.UndefOr[js.Array[TreemapPoint]] = js.native
   
   var color: js.UndefOr[String | Double] = js.native
   
   var opacity: js.UndefOr[Double] = js.native
   
-  var size: Double = js.native
+  var size: js.UndefOr[Double] = js.native
   
-  var style: CSSProperties = js.native
+  var style: js.UndefOr[CSSProperties] = js.native
   
   var title: String = js.native
 }
 object TreemapPoint {
   
   @scala.inline
-  def apply(children: js.Array[TreemapPoint], size: Double, style: CSSProperties, title: String): TreemapPoint = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
+  def apply(title: String): TreemapPoint = {
+    val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreemapPoint]
   }
   
@@ -44,19 +44,16 @@ object TreemapPoint {
     }
     
     @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setChildrenVarargs(value: TreemapPoint*): Self = this.set("children", js.Array(value :_*))
     
     @scala.inline
     def setChildren(value: js.Array[TreemapPoint]): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
     def setColor(value: String | Double): Self = this.set("color", value.asInstanceOf[js.Any])
@@ -69,5 +66,17 @@ object TreemapPoint {
     
     @scala.inline
     def deleteOpacity: Self = this.set("opacity", js.undefined)
+    
+    @scala.inline
+    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
   }
 }

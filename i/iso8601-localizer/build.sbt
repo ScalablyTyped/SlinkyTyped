@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "iso8601-localizer"
-version := "v1.2.1-dt-20200515Z-e38537"
+version := "v1.2.1-dt-20201002Z-e38537"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

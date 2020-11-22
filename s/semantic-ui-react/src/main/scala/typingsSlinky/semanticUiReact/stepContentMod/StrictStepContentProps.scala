@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.stepContentMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.stepDescriptionMod.StepDescriptionProps
@@ -90,7 +89,7 @@ object StrictStepContentProps {
     
     @scala.inline
     def setDescriptionFunction3(
-      value: (/* component */ ReactType[StepDescriptionProps], StepDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, StepDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("description", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -104,7 +103,7 @@ object StrictStepContentProps {
     
     @scala.inline
     def setTitleFunction3(
-      value: (/* component */ ReactType[StepTitleProps], StepTitleProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, StepTitleProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("title", js.Any.fromFunction3(value))
     
     @scala.inline

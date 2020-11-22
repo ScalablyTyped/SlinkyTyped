@@ -1,7 +1,7 @@
 package typingsSlinky.electron.Electron
 
 import typingsSlinky.electron.electronStrings.`console-message`
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,7 +30,7 @@ trait ServiceWorkers extends EventEmitter {
     */
   def getFromVersionID(versionId: Double): ServiceWorkerInfo = js.native
   
-  // Docs: http://electronjs.org/docs/api/service-workers
+  // Docs: https://electronjs.org/docs/api/service-workers
   /**
     * Emitted when a service worker logs something to the console.
     */

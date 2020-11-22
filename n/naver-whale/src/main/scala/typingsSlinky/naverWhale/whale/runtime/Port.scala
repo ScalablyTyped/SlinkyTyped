@@ -17,7 +17,7 @@ trait Port extends js.Object {
   /** An object which allows the addition and removal of listeners for a Chrome event. */
   var onMessage: typingsSlinky.chrome.chrome.runtime.PortMessageEvent = js.native
   
-  def postMessage(message: js.Object): Unit = js.native
+  def postMessage(message: js.Any): Unit = js.native
   
   /**
     * Optional.
@@ -33,7 +33,7 @@ object Port {
     name: String,
     onDisconnect: typingsSlinky.chrome.chrome.runtime.PortDisconnectEvent,
     onMessage: typingsSlinky.chrome.chrome.runtime.PortMessageEvent,
-    postMessage: js.Object => Unit
+    postMessage: js.Any => Unit
   ): Port = {
     val __obj = js.Dynamic.literal(disconnect = js.Any.fromFunction0(disconnect), name = name.asInstanceOf[js.Any], onDisconnect = onDisconnect.asInstanceOf[js.Any], onMessage = onMessage.asInstanceOf[js.Any], postMessage = js.Any.fromFunction1(postMessage))
     __obj.asInstanceOf[Port]
@@ -67,7 +67,7 @@ object Port {
     def setOnMessage(value: typingsSlinky.chrome.chrome.runtime.PortMessageEvent): Self = this.set("onMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPostMessage(value: js.Object => Unit): Self = this.set("postMessage", js.Any.fromFunction1(value))
+    def setPostMessage(value: js.Any => Unit): Self = this.set("postMessage", js.Any.fromFunction1(value))
     
     @scala.inline
     def setSender(value: typingsSlinky.chrome.chrome.runtime.MessageSender): Self = this.set("sender", value.asInstanceOf[js.Any])

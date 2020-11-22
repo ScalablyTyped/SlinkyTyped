@@ -44,12 +44,12 @@ trait MethodSettingsSettings extends js.Object {
   var requireAuthorizationForCacheControl: js.UndefOr[Input[Boolean]] = js.native
   
   /**
-    * Specifies the throttling burst limit.
+    * Specifies the throttling burst limit. Default: `-1` (throttling disabled).
     */
   var throttlingBurstLimit: js.UndefOr[Input[Double]] = js.native
   
   /**
-    * Specifies the throttling rate limit.
+    * Specifies the throttling rate limit. Default: `-1` (throttling disabled).
     */
   var throttlingRateLimit: js.UndefOr[Input[Double]] = js.native
   

@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxHtmlEditorMediaResizing extends js.Object {
   
-  /** @name dxHtmlEditorMediaResizing.allowedTargets */
+  /**
+    * [descr:dxHtmlEditorMediaResizing.allowedTargets]
+    */
   var allowedTargets: js.UndefOr[js.Array[String]] = js.native
   
-  /** @name dxHtmlEditorMediaResizing.enabled */
+  /**
+    * [descr:dxHtmlEditorMediaResizing.enabled]
+    */
   var enabled: js.UndefOr[Boolean] = js.native
 }
 object dxHtmlEditorMediaResizing {

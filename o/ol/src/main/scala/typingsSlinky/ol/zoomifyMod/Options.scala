@@ -20,6 +20,8 @@ trait Options extends js.Object {
   
   var extent: js.UndefOr[Extent] = js.native
   
+  var imageSmoothing: js.UndefOr[Boolean] = js.native
+  
   var projection: js.UndefOr[ProjectionLike] = js.native
   
   var reprojectionErrorThreshold: js.UndefOr[Double] = js.native
@@ -96,6 +98,12 @@ object Options {
     
     @scala.inline
     def deleteExtent: Self = this.set("extent", js.undefined)
+    
+    @scala.inline
+    def setImageSmoothing(value: Boolean): Self = this.set("imageSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImageSmoothing: Self = this.set("imageSmoothing", js.undefined)
     
     @scala.inline
     def setProjection(value: ProjectionLike): Self = this.set("projection", value.asInstanceOf[js.Any])

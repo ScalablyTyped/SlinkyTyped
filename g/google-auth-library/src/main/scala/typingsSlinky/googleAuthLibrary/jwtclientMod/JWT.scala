@@ -66,6 +66,8 @@ class JWT protected ()
   def createScoped(scopes: String): JWT = js.native
   def createScoped(scopes: js.Array[String]): JWT = js.native
   
+  var defaultScopes: js.UndefOr[String | js.Array[String]] = js.native
+  
   var email: js.UndefOr[String] = js.native
   
   /**
@@ -99,9 +101,14 @@ class JWT protected ()
   var gtoken: js.UndefOr[GoogleToken] = js.native
   
   /**
+    * Are there any default or user scopes defined.
+    */
+  var hasAnyScopes: js.Any = js.native
+  
+  /**
     * Determine if there are currently scopes available.
     */
-  var hasScopes: js.Any = js.native
+  var hasUserScopes: js.Any = js.native
   
   var key: js.UndefOr[String] = js.native
   

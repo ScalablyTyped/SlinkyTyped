@@ -1,7 +1,7 @@
 
 # Scala.js typings for snabbdom
 
-Typings are for version 1.0.1
+Typings are for version 2.1.0
 
 ## Library description:
 A virtual DOM library with focus on simplicity, modularity, powerful features and performance.

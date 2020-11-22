@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.appservicesMod.appservices
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.VersionedService
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,14 +16,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/gen/appservices", "appservices.MsdEnumerationContainer")
 @js.native
-class MsdEnumerationContainer protected () extends Element {
+class MsdEnumerationContainer protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsMsd: Msd = js.native
@@ -29,9 +31,6 @@ class MsdEnumerationContainer protected () extends Element {
   def containerAsVersionedService: VersionedService = js.native
   
   def enumerations: IList[MsdEnumeration] = js.native
-  
-  @JSName("model")
-  var model_FMsdEnumerationContainer: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/appservices", "appservices.MsdEnumerationContainer")

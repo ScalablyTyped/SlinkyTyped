@@ -51,8 +51,16 @@ trait IFocusTrapZoneProps extends HTMLAttributes[HTMLDivElement] {
   /**
     * Class name (not actual selector) for first focusable item. Do not append a dot.
     * Only applies if `focusPreviouslyFocusedInnerElement` is false.
+    * @deprecated Use `firstFocusableTarget`, since it is more generic. `firstFocusableTarget` takes precendence if
+    * supplied.
     */
   var firstFocusableSelector: js.UndefOr[String | js.Function0[String]] = js.native
+  
+  /**
+    * Either a full query selector for the first focusable element, or a function to select the focusable element
+    * within the area directly.
+    */
+  var firstFocusableTarget: js.UndefOr[String | (js.Function1[/* element */ HTMLElement, HTMLElement | Null])] = js.native
   
   /**
     * Specifies which descendant element to focus when `focus()` is called.
@@ -155,6 +163,15 @@ object IFocusTrapZoneProps {
     
     @scala.inline
     def deleteFirstFocusableSelector: Self = this.set("firstFocusableSelector", js.undefined)
+    
+    @scala.inline
+    def setFirstFocusableTargetFunction1(value: /* element */ HTMLElement => HTMLElement | Null): Self = this.set("firstFocusableTarget", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setFirstFocusableTarget(value: String | (js.Function1[/* element */ HTMLElement, HTMLElement | Null])): Self = this.set("firstFocusableTarget", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFirstFocusableTarget: Self = this.set("firstFocusableTarget", js.undefined)
     
     @scala.inline
     def setFocusPreviouslyFocusedInnerElement(value: Boolean): Self = this.set("focusPreviouslyFocusedInnerElement", value.asInstanceOf[js.Any])

@@ -5,15 +5,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ServiceSpec extends js.Object {
+trait ServiceSpec extends Annotations {
   
-  var Name: String = js.native
+  var EndpointSpec: js.UndefOr[typingsSlinky.dockerode.mod.EndpointSpec] = js.native
+  
+  var Mode: js.UndefOr[ServiceMode] = js.native
+  
+  var Networks: js.UndefOr[js.Array[NetworkAttachmentConfig]] = js.native
+  
+  var RollbackConfig: js.UndefOr[UpdateConfig] = js.native
+  
+  var TaskTemplate: js.UndefOr[TaskSpec] = js.native
+  
+  var UpdateConfig: js.UndefOr[typingsSlinky.dockerode.mod.UpdateConfig] = js.native
 }
 object ServiceSpec {
   
   @scala.inline
-  def apply(Name: String): ServiceSpec = {
-    val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any])
+  def apply(): ServiceSpec = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ServiceSpec]
   }
   
@@ -33,6 +43,42 @@ object ServiceSpec {
     }
     
     @scala.inline
-    def setName(value: String): Self = this.set("Name", value.asInstanceOf[js.Any])
+    def setEndpointSpec(value: EndpointSpec): Self = this.set("EndpointSpec", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEndpointSpec: Self = this.set("EndpointSpec", js.undefined)
+    
+    @scala.inline
+    def setMode(value: ServiceMode): Self = this.set("Mode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMode: Self = this.set("Mode", js.undefined)
+    
+    @scala.inline
+    def setNetworksVarargs(value: NetworkAttachmentConfig*): Self = this.set("Networks", js.Array(value :_*))
+    
+    @scala.inline
+    def setNetworks(value: js.Array[NetworkAttachmentConfig]): Self = this.set("Networks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworks: Self = this.set("Networks", js.undefined)
+    
+    @scala.inline
+    def setRollbackConfig(value: UpdateConfig): Self = this.set("RollbackConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRollbackConfig: Self = this.set("RollbackConfig", js.undefined)
+    
+    @scala.inline
+    def setTaskTemplate(value: TaskSpec): Self = this.set("TaskTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTaskTemplate: Self = this.set("TaskTemplate", js.undefined)
+    
+    @scala.inline
+    def setUpdateConfig(value: UpdateConfig): Self = this.set("UpdateConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUpdateConfig: Self = this.set("UpdateConfig", js.undefined)
   }
 }

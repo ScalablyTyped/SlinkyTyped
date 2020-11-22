@@ -13,8 +13,6 @@ trait PausableWatchHandle extends Object {
     * Pauses the handle preventing changes to invoke the associated callback.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-watchUtils.html#PausableWatchHandle)
-    *
-    *
     */
   def pause(): Unit = js.native
   
@@ -22,8 +20,6 @@ trait PausableWatchHandle extends Object {
     * Removes the watch handle.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-watchUtils.html#PausableWatchHandle)
-    *
-    *
     */
   def remove(): Unit = js.native
   
@@ -31,8 +27,6 @@ trait PausableWatchHandle extends Object {
     * Resumes a paused the handle.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-watchUtils.html#PausableWatchHandle)
-    *
-    *
     */
   def resume(): Unit = js.native
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Error extends js.Object {
   
   /**
-    * The details object provides additional details specific to the error, giving more information about why the error was raised. For example, the details object for esriRequest includes additional information to help the developer diagnose issues with a problematic request.
+    * The details object provides additional details specific to the error, giving more information about why the error was raised.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html#details)
     */
@@ -22,7 +22,7 @@ trait Error extends js.Object {
   var message: String = js.native
   
   /**
-    * A unique error name. This can be used to map to a localized error message to present to the user.
+    * A unique error name.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html#name)
     */

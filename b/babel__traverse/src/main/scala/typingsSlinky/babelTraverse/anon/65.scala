@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.EnumDeclaration
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSIntrinsicKeyword
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `65` extends js.Object {
   
-  var `type`: EnumDeclaration = js.native
+  var `type`: TSIntrinsicKeyword = js.native
 }
 object `65` {
   
   @scala.inline
-  def apply(`type`: EnumDeclaration): `65` = {
+  def apply(`type`: TSIntrinsicKeyword): `65` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`65`]
@@ -35,6 +35,6 @@ object `65` {
     }
     
     @scala.inline
-    def setType(value: EnumDeclaration): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSIntrinsicKeyword): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

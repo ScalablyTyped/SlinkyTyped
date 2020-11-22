@@ -10,12 +10,12 @@ trait DeleteModelPackageInput extends js.Object {
   /**
     * The name of the model package. The name must have 1 to 63 characters. Valid characters are a-z, A-Z, 0-9, and - (hyphen).
     */
-  var ModelPackageName: EntityName = js.native
+  var ModelPackageName: VersionedArnOrName = js.native
 }
 object DeleteModelPackageInput {
   
   @scala.inline
-  def apply(ModelPackageName: EntityName): DeleteModelPackageInput = {
+  def apply(ModelPackageName: VersionedArnOrName): DeleteModelPackageInput = {
     val __obj = js.Dynamic.literal(ModelPackageName = ModelPackageName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteModelPackageInput]
   }
@@ -36,6 +36,6 @@ object DeleteModelPackageInput {
     }
     
     @scala.inline
-    def setModelPackageName(value: EntityName): Self = this.set("ModelPackageName", value.asInstanceOf[js.Any])
+    def setModelPackageName(value: VersionedArnOrName): Self = this.set("ModelPackageName", value.asInstanceOf[js.Any])
   }
 }

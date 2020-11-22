@@ -9,6 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IWebXRPlaneDetectorOptions extends js.Object {
   
   /**
+    * If set to true a reference of the created planes will be kept until the next session starts
+    * If not defined, planes will be removed from the array when the feature is detached or the session ended.
+    */
+  var doNotRemovePlanesOnSessionEnded: js.UndefOr[Boolean] = js.native
+  
+  /**
     * The node to use to transform the local results to world coordinates
     */
   var worldParentNode: js.UndefOr[TransformNode] = js.native
@@ -35,6 +41,12 @@ object IWebXRPlaneDetectorOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDoNotRemovePlanesOnSessionEnded(value: Boolean): Self = this.set("doNotRemovePlanesOnSessionEnded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDoNotRemovePlanesOnSessionEnded: Self = this.set("doNotRemovePlanesOnSessionEnded", js.undefined)
     
     @scala.inline
     def setWorldParentNode(value: TransformNode): Self = this.set("worldParentNode", value.asInstanceOf[js.Any])

@@ -14,6 +14,22 @@ class ParsedProperty protected () extends js.Object {
     expression: ASTWithSource,
     `type`: ParsedPropertyType,
     sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    expression: ASTWithSource,
+    `type`: ParsedPropertyType,
+    sourceSpan: ParseSourceSpan,
+    keySpan: js.UndefOr[scala.Nothing],
+    valueSpan: ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    expression: ASTWithSource,
+    `type`: ParsedPropertyType,
+    sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan,
     valueSpan: ParseSourceSpan
   ) = this()
   
@@ -22,6 +38,8 @@ class ParsedProperty protected () extends js.Object {
   val isAnimation: Boolean = js.native
   
   val isLiteral: Boolean = js.native
+  
+  val keySpan: js.UndefOr[ParseSourceSpan] = js.native
   
   var name: String = js.native
   

@@ -16,7 +16,7 @@ trait AbstractScene extends js.Object {
   
   /**
     * The list of reflection probes added to the scene
-    * @see http://doc.babylonjs.com/how_to/how_to_use_reflection_probes
+    * @see https://doc.babylonjs.com/how_to/how_to_use_reflection_probes
     */
   var reflectionProbes: js.Array[ReflectionProbe] = js.native
   

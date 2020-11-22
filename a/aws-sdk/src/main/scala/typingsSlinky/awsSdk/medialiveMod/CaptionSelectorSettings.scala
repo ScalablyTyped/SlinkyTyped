@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CaptionSelectorSettings extends js.Object {
   
+  var AncillarySourceSettings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.AncillarySourceSettings] = js.native
+  
   var AribSourceSettings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.AribSourceSettings] = js.native
   
   var DvbSubSourceSettings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.DvbSubSourceSettings] = js.native
@@ -41,6 +43,12 @@ object CaptionSelectorSettings {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAncillarySourceSettings(value: AncillarySourceSettings): Self = this.set("AncillarySourceSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAncillarySourceSettings: Self = this.set("AncillarySourceSettings", js.undefined)
     
     @scala.inline
     def setAribSourceSettings(value: AribSourceSettings): Self = this.set("AribSourceSettings", value.asInstanceOf[js.Any])

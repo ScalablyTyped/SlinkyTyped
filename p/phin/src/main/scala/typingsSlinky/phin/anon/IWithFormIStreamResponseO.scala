@@ -1,6 +1,7 @@
 package typingsSlinky.phin.anon
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.experimental.URL
 import typingsSlinky.node.httpMod.ClientRequestArgs
 import typingsSlinky.phin.phinBooleans.`true`
 import scala.scalajs.js
@@ -33,12 +34,12 @@ trait IWithFormIStreamResponseO extends js.Object {
   
   var timeout: js.UndefOr[Double] = js.native
   
-  var url: String = js.native
+  var url: String | URL = js.native
 }
 object IWithFormIStreamResponseO {
   
   @scala.inline
-  def apply(form: StringDictionary[String], stream: `true`, url: String): IWithFormIStreamResponseO = {
+  def apply(form: StringDictionary[String], stream: `true`, url: String | URL): IWithFormIStreamResponseO = {
     val __obj = js.Dynamic.literal(form = form.asInstanceOf[js.Any], stream = stream.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWithFormIStreamResponseO]
   }
@@ -65,7 +66,10 @@ object IWithFormIStreamResponseO {
     def setStream(value: `true`): Self = this.set("stream", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrlURL(value: URL): Self = this.set("url", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUrl(value: String | URL): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCompression(value: Boolean): Self = this.set("compression", value.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 package typingsSlinky.next.anon
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.next.utilsMod.DocumentProps
+import typingsSlinky.next.libUtilsMod.DocumentProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

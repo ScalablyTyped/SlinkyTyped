@@ -1,5 +1,6 @@
 package typingsSlinky.grpcGrpcJs.resolverMod
 
+import typingsSlinky.grpcGrpcJs.channelOptionsMod.ChannelOptions
 import typingsSlinky.grpcGrpcJs.uriParserMod.GrpcUri
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createResolver extends js.Object {
   
-  def apply(target: GrpcUri, listener: ResolverListener): Resolver = js.native
+  def apply(target: GrpcUri, listener: ResolverListener, options: ChannelOptions): Resolver = js.native
 }

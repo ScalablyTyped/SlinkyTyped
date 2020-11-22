@@ -8,23 +8,35 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxRangeSliderOptions extends dxSliderBaseOptions[dxRangeSlider] {
   
-  /** @name dxRangeSlider.Options.end */
+  /**
+    * [descr:dxRangeSlider.Options.end]
+    */
   var end: js.UndefOr[Double] = js.native
   
-  /** @name dxRangeSlider.Options.endName */
+  /**
+    * [descr:dxRangeSlider.Options.endName]
+    */
   var endName: js.UndefOr[String] = js.native
   
-  /** @name dxRangeSlider.Options.onValueChanged */
+  /**
+    * [descr:dxRangeSlider.Options.onValueChanged]
+    */
   @JSName("onValueChanged")
   var onValueChanged_dxRangeSliderOptions: js.UndefOr[js.Function1[/* e */ End, _]] = js.native
   
-  /** @name dxRangeSlider.Options.start */
+  /**
+    * [descr:dxRangeSlider.Options.start]
+    */
   var start: js.UndefOr[Double] = js.native
   
-  /** @name dxRangeSlider.Options.startName */
+  /**
+    * [descr:dxRangeSlider.Options.startName]
+    */
   var startName: js.UndefOr[String] = js.native
   
-  /** @name dxRangeSlider.Options.value */
+  /**
+    * [descr:dxRangeSlider.Options.value]
+    */
   @JSName("value")
   var value_dxRangeSliderOptions: js.UndefOr[js.Array[Double]] = js.native
 }

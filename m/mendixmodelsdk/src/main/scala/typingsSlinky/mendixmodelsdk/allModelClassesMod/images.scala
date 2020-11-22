@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,8 +23,8 @@ object images extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -49,7 +51,7 @@ object images extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/images relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/images relevant section in reference guide}
     */
   @js.native
   class ImageCollection protected ()

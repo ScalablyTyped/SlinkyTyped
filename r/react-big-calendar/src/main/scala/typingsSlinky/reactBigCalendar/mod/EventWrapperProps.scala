@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.reactBigCalendar.anon.CSSPropertiesxOffsetnumbe
 import typingsSlinky.reactBigCalendar.anon.DayProp
-import typingsSlinky.reactBigCalendar.anon.End
+import typingsSlinky.reactBigCalendar.anon.Start
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EventWrapperProps[TEvent /* <: js.Object */] extends js.Object {
   
-  var accessors: End[TEvent] = js.native
+  var accessors: Start[TEvent] = js.native
   
   var className: String = js.native
   
@@ -41,7 +41,7 @@ object EventWrapperProps {
   
   @scala.inline
   def apply[TEvent /* <: js.Object */](
-    accessors: End[TEvent],
+    accessors: Start[TEvent],
     className: String,
     continuesEarlier: Boolean,
     continuesLater: Boolean,
@@ -73,7 +73,7 @@ object EventWrapperProps {
     }
     
     @scala.inline
-    def setAccessors(value: End[TEvent]): Self = this.set("accessors", value.asInstanceOf[js.Any])
+    def setAccessors(value: Start[TEvent]): Self = this.set("accessors", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])

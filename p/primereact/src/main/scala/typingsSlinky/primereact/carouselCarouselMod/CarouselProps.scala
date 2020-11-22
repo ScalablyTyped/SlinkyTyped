@@ -18,13 +18,13 @@ trait CarouselProps extends js.Object {
   
   var contentClassName: js.UndefOr[String] = js.native
   
-  var dotsContainerClassName: js.UndefOr[String] = js.native
-  
   var footer: js.UndefOr[js.Any] = js.native
   
   var header: js.UndefOr[js.Any] = js.native
   
   var id: js.UndefOr[String] = js.native
+  
+  var indicatorsContentClassName: js.UndefOr[String] = js.native
   
   var itemTemplate: js.UndefOr[js.Any] = js.native
   
@@ -100,12 +100,6 @@ object CarouselProps {
     def deleteContentClassName: Self = this.set("contentClassName", js.undefined)
     
     @scala.inline
-    def setDotsContainerClassName(value: String): Self = this.set("dotsContainerClassName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDotsContainerClassName: Self = this.set("dotsContainerClassName", js.undefined)
-    
-    @scala.inline
     def setFooter(value: js.Any): Self = this.set("footer", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -122,6 +116,12 @@ object CarouselProps {
     
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
+    
+    @scala.inline
+    def setIndicatorsContentClassName(value: String): Self = this.set("indicatorsContentClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIndicatorsContentClassName: Self = this.set("indicatorsContentClassName", js.undefined)
     
     @scala.inline
     def setItemTemplate(value: js.Any): Self = this.set("itemTemplate", value.asInstanceOf[js.Any])

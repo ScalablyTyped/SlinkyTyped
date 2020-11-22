@@ -1,5 +1,6 @@
 package typingsSlinky.phin.mod
 
+import org.scalajs.dom.experimental.URL
 import typingsSlinky.phin.phinStrings.none
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,7 +14,7 @@ trait IOptions extends IOptionsBase {
 object IOptions {
   
   @scala.inline
-  def apply(url: String): IOptions = {
+  def apply(url: String | URL): IOptions = {
     val __obj = js.Dynamic.literal(url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IOptions]
   }

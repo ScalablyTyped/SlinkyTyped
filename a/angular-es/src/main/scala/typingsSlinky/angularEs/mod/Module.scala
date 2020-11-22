@@ -11,9 +11,9 @@ object Module extends js.Object {
   /**
     * Attach target to the specified module
     *
-    * @param {string} name - module name
+    * @param name - module name
     *
-    * @returns {ngESDecorator} - decorated class
+    * @returns decorated class
     */
   def apply(name: String): ngESDecorator = js.native
 }

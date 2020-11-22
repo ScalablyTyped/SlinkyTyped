@@ -389,11 +389,9 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
   var createOrUpdateRepoSecret_Original: CallDefaults = js.native
   
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Returns a token that you can pass to the `config` script. The token expires after one hour.
     *
-    *
-    * Returns a token that you can pass to the `config` script. The token expires after one hour. You must authenticate
-    * using an access token with the `admin:org` scope to use this endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     *
     * #### Example using registration token
     *
@@ -415,11 +413,9 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /orgs/:org/actions/runners/registration-token']['response'] */ js.Any
   ] = js.native
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Returns a token that you can pass to the `config` script. The token expires after one hour.
     *
-    *
-    * Returns a token that you can pass to the `config` script. The token expires after one hour. You must authenticate
-    * using an access token with the `admin:org` scope to use this endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     *
     * #### Example using registration token
     *
@@ -471,12 +467,9 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
   var createRegistrationTokenForRepo_Original: CallDefaultsEndpoint = js.native
   
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Returns a token that you can pass to the `config` script to remove a self-hosted runner from an organization. The token expires after one hour.
     *
-    *
-    * Returns a token that you can pass to the `config` script to remove a self-hosted runner from an organization. The
-    * token expires after one hour. You must authenticate using an access token with the `admin:org` scope to use this
-    * endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     *
     * #### Example using remove token
     *
@@ -499,12 +492,9 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['POST /orgs/:org/actions/runners/remove-token']['response'] */ js.Any
   ] = js.native
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Returns a token that you can pass to the `config` script to remove a self-hosted runner from an organization. The token expires after one hour.
     *
-    *
-    * Returns a token that you can pass to the `config` script to remove a self-hosted runner from an organization. The
-    * token expires after one hour. You must authenticate using an access token with the `admin:org` scope to use this
-    * endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     *
     * #### Example using remove token
     *
@@ -645,9 +635,9 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
   var deleteRepoSecret_Original: `0` = js.native
   
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Forces the removal of a self-hosted runner from an organization. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.
     *
-    * Forces the removal of a self-hosted runner from an organization. You can use this endpoint to completely remove the runner when the machine you were using no longer exists. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     */
   def deleteSelfHostedRunnerFromOrg(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /orgs/:org/actions/runners/:runner_id']['response'] */ js.Any
@@ -661,15 +651,18 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /orgs/:org/actions/runners/:runner_id']['response'] */ js.Any
   ] = js.native
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Forces the removal of a self-hosted runner from an organization. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.
     *
-    * Forces the removal of a self-hosted runner from an organization. You can use this endpoint to completely remove the runner when the machine you were using no longer exists. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     */
   @JSName("deleteSelfHostedRunnerFromOrg")
   var deleteSelfHostedRunnerFromOrg_Original: `1` = js.native
   
   /**
-    * Forces the removal of a self-hosted runner from a repository. You can use this endpoint to completely remove the runner when the machine you were using no longer exists. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    * Forces the removal of a self-hosted runner from a repository. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.
+    *
+    * You must authenticate using an access token with the `repo`
+    * scope to use this endpoint.
     */
   def deleteSelfHostedRunnerFromRepo(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/actions/runners/:runner_id']['response'] */ js.Any
@@ -683,7 +676,10 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /repos/:owner/:repo/actions/runners/:runner_id']['response'] */ js.Any
   ] = js.native
   /**
-    * Forces the removal of a self-hosted runner from a repository. You can use this endpoint to completely remove the runner when the machine you were using no longer exists. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    * Forces the removal of a self-hosted runner from a repository. You can use this endpoint to completely remove the runner when the machine you were using no longer exists.
+    *
+    * You must authenticate using an access token with the `repo`
+    * scope to use this endpoint.
     */
   @JSName("deleteSelfHostedRunnerFromRepo")
   var deleteSelfHostedRunnerFromRepo_Original: `2` = js.native
@@ -932,9 +928,9 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
   var getRepoSecret_Original: `13` = js.native
   
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Gets a specific self-hosted runner configured in an organization.
     *
-    * Gets a specific self-hosted runner for an organization. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     */
   def getSelfHostedRunnerForOrg(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /orgs/:org/actions/runners/:runner_id']['response'] */ js.Any
@@ -948,15 +944,18 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /orgs/:org/actions/runners/:runner_id']['response'] */ js.Any
   ] = js.native
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Gets a specific self-hosted runner configured in an organization.
     *
-    * Gets a specific self-hosted runner for an organization. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     */
   @JSName("getSelfHostedRunnerForOrg")
   var getSelfHostedRunnerForOrg_Original: `14` = js.native
   
   /**
-    * Gets a specific self-hosted runner. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    * Gets a specific self-hosted runner configured in a repository.
+    *
+    * You must authenticate using an access token with the `repo` scope to use this
+    * endpoint.
     */
   def getSelfHostedRunnerForRepo(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/actions/runners/:runner_id']['response'] */ js.Any
@@ -970,7 +969,10 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/actions/runners/:runner_id']['response'] */ js.Any
   ] = js.native
   /**
-    * Gets a specific self-hosted runner. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    * Gets a specific self-hosted runner configured in a repository.
+    *
+    * You must authenticate using an access token with the `repo` scope to use this
+    * endpoint.
     */
   @JSName("getSelfHostedRunnerForRepo")
   var getSelfHostedRunnerForRepo_Original: `15` = js.native
@@ -1174,9 +1176,9 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
   var listRepoWorkflows_Original: `24` = js.native
   
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Lists binaries for the runner application that you can download and run.
     *
-    * Lists binaries for the runner application that you can download and run. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     */
   def listRunnerApplicationsForOrg(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /orgs/:org/actions/runners/downloads']['response'] */ js.Any
@@ -1190,15 +1192,17 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /orgs/:org/actions/runners/downloads']['response'] */ js.Any
   ] = js.native
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Lists binaries for the runner application that you can download and run.
     *
-    * Lists binaries for the runner application that you can download and run. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     */
   @JSName("listRunnerApplicationsForOrg")
   var listRunnerApplicationsForOrg_Original: `25` = js.native
   
   /**
-    * Lists binaries for the runner application that you can download and run. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    * Lists binaries for the runner application that you can download and run.
+    *
+    * You must authenticate using an access token with the `repo` scope to use this endpoint.
     */
   def listRunnerApplicationsForRepo(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/actions/runners/downloads']['response'] */ js.Any
@@ -1212,7 +1216,9 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/actions/runners/downloads']['response'] */ js.Any
   ] = js.native
   /**
-    * Lists binaries for the runner application that you can download and run. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    * Lists binaries for the runner application that you can download and run.
+    *
+    * You must authenticate using an access token with the `repo` scope to use this endpoint.
     */
   @JSName("listRunnerApplicationsForRepo")
   var listRunnerApplicationsForRepo_Original: `26` = js.native
@@ -1238,9 +1244,9 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
   var listSelectedReposForOrgSecret_Original: `27` = js.native
   
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Lists all self-hosted runners configured in an organization.
     *
-    * Lists all self-hosted runners for an organization. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     */
   def listSelfHostedRunnersForOrg(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /orgs/:org/actions/runners']['response'] */ js.Any
@@ -1254,15 +1260,16 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /orgs/:org/actions/runners']['response'] */ js.Any
   ] = js.native
   /**
-    * **Warning:** The self-hosted runners API for organizations is currently in public beta and subject to change.
+    * Lists all self-hosted runners configured in an organization.
     *
-    * Lists all self-hosted runners for an organization. You must authenticate using an access token with the `admin:org` scope to use this endpoint.
+    * You must authenticate using an access token with the `admin:org` scope to use this endpoint.
     */
   @JSName("listSelfHostedRunnersForOrg")
   var listSelfHostedRunnersForOrg_Original: `28` = js.native
   
   /**
-    * Lists all self-hosted runners for a repository. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    * Lists all self-hosted runners configured in a repository.
+    * You must authenticate using an access token with the `repo` scope to use this endpoint.
     */
   def listSelfHostedRunnersForRepo(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/actions/runners']['response'] */ js.Any
@@ -1276,7 +1283,8 @@ trait AddSelectedRepoToOrgSecret extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /repos/:owner/:repo/actions/runners']['response'] */ js.Any
   ] = js.native
   /**
-    * Lists all self-hosted runners for a repository. You must authenticate using an access token with the `repo` scope to use this endpoint.
+    * Lists all self-hosted runners configured in a repository.
+    * You must authenticate using an access token with the `repo` scope to use this endpoint.
     */
   @JSName("listSelfHostedRunnersForRepo")
   var listSelfHostedRunnersForRepo_Original: `29` = js.native

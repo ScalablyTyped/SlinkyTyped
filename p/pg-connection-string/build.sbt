@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "pg-connection-string"
-version := "2.3.0-50f6ee"
+version := "2.4.0-5cf07b"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

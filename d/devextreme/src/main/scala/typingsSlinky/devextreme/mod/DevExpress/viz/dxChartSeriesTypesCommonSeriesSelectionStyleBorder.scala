@@ -8,20 +8,30 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CommonSeries.selectionStyle.border */
+/**
+  * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle.border]
+  */
 @js.native
 trait dxChartSeriesTypesCommonSeriesSelectionStyleBorder extends js.Object {
   
-  /** @name dxChartSeriesTypes.CommonSeries.selectionStyle.border.color */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle.border.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.selectionStyle.border.dashStyle */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle.border.dashStyle]
+    */
   var dashStyle: js.UndefOr[dash | dot | longDash | solid] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.selectionStyle.border.visible */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle.border.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.selectionStyle.border.width */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.selectionStyle.border.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxChartSeriesTypesCommonSeriesSelectionStyleBorder {

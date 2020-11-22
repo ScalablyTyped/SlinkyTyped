@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Flash extends js.Object {
   
-  var flash: typingsSlinky.expressFlash2.mod.global.Express.Flash = js.native
+  var flash: js.UndefOr[typingsSlinky.expressFlash2.mod.global.Express.Flash] = js.native
 }
 object Flash {
   
   @scala.inline
-  def apply(flash: typingsSlinky.expressFlash2.mod.global.Express.Flash): Flash = {
-    val __obj = js.Dynamic.literal(flash = flash.asInstanceOf[js.Any])
+  def apply(): Flash = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Flash]
   }
   
@@ -34,5 +34,8 @@ object Flash {
     
     @scala.inline
     def setFlash(value: typingsSlinky.expressFlash2.mod.global.Express.Flash): Self = this.set("flash", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFlash: Self = this.set("flash", js.undefined)
   }
 }

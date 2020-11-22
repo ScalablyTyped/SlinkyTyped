@@ -11,10 +11,6 @@ trait cimSymbolUtils extends js.Object {
     * Sets the color of the symbol layers of a CIMSymbol to a given value if the symbol layer is not color locked.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-support-cimSymbolUtils.html#applyCIMSymbolColor)
-    *
-    * @param symbol The CIMSymbol to set the color on.
-    * @param color The desired color value for the symbol.
-    *
     */
   def applyCIMSymbolColor(symbol: CIMSymbol, color: Color_): Unit = js.native
   
@@ -22,10 +18,6 @@ trait cimSymbolUtils extends js.Object {
     * Sets the rotation value of a CIMSymbol.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-support-cimSymbolUtils.html#applyCIMSymbolRotation)
-    *
-    * @param symbol The CIMSymbol to set the rotation on.
-    * @param rotation The desired rotation of the symbol in degrees.
-    *
     */
   def applyCIMSymbolRotation(symbol: CIMSymbol, rotation: Double): Unit = js.native
   
@@ -33,9 +25,6 @@ trait cimSymbolUtils extends js.Object {
     * Returns the first color of the symbol layers in a CIMSymbol.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-support-cimSymbolUtils.html#getCIMSymbolColor)
-    *
-    * @param symbol The CIMSymbol from which to get the color.
-    *
     */
   def getCIMSymbolColor(symbol: CIMSymbol): Color_ = js.native
   
@@ -43,30 +32,20 @@ trait cimSymbolUtils extends js.Object {
     * Returns the rotation value of a CIMSymbol.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-support-cimSymbolUtils.html#getCIMSymbolRotation)
-    *
-    * @param symbol The CIMSymbol from which to get the rotation.
-    *
     */
   def getCIMSymbolRotation(symbol: CIMSymbol): Double = js.native
   
   /**
-    * Returns the size of a given CIMSymbol. The size of a CIMSymbol is defined as the size of the largest symbol layer.
+    * Returns the size of a given CIMSymbol.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-support-cimSymbolUtils.html#getCIMSymbolSize)
-    *
-    * @param symbol The CIMSymbol from which to get the size.
-    *
     */
   def getCIMSymbolSize(symbol: CIMSymbol): Double = js.native
   
   /**
-    * Scales the largest layer of a CIMSymbol to a given size. The other symbol layers will scale accordingly.
+    * Scales the largest layer of a CIMSymbol to a given size.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-support-cimSymbolUtils.html#scaleCIMSymbolTo)
-    *
-    * @param symbol The CIMSymbol to scale.
-    * @param size The desired size for the symbol.
-    *
     */
   def scaleCIMSymbolTo(symbol: CIMSymbol, size: Double): Unit = js.native
 }

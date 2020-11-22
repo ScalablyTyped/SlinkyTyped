@@ -48,42 +48,10 @@ trait Map[E /* <: Element */] extends MVCObject {
     * @see {@link MapHandlerMap#tilt_changed tilt_changed} event
     * @see {@link MapHandlerMap#zoom_changed zoom_changed} event
     */
-  @JSName("addListener")
-  def addListener_boundschanged(eventName: bounds_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_centerchanged(eventName: center_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_click(eventName: click, handler: MVCEventHandler[this.type, js.Array[MouseEvent | IconMouseEvent]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_dblclick(eventName: dblclick, handler: MVCEventHandler[this.type, js.Array[MouseEvent]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_drag(eventName: drag, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_dragend(eventName: dragend, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_dragstart(eventName: dragstart, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_headingchanged(eventName: heading_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_idle(eventName: idle, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_maptypeidchanged(eventName: maptypeid_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_mousemove(eventName: mousemove, handler: MVCEventHandler[this.type, js.Array[MouseEvent]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_mouseout(eventName: mouseout, handler: MVCEventHandler[this.type, js.Array[MouseEvent]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_mouseover(eventName: mouseover, handler: MVCEventHandler[this.type, js.Array[MouseEvent]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_projectionchanged(eventName: projection_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_rightclick(eventName: rightclick, handler: MVCEventHandler[this.type, js.Array[MouseEvent]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_tilesloaded(eventName: tilesloaded, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_tiltchanged(eventName: tilt_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
-  @JSName("addListener")
-  def addListener_zoomchanged(eventName: zoom_changed, handler: MVCEventHandler[this.type, js.Array[js.Any]]): MapsEventListener = js.native
+  def addListener[N /* <: /* keyof googlemaps.google.maps.MapHandlerMap<this> */ bounds_changed | center_changed | click | dblclick | drag | dragend | dragstart | heading_changed | idle | maptypeid_changed | mousemove | mouseout | mouseover | projection_changed | rightclick | tilesloaded | tilt_changed | zoom_changed */](
+    eventName: N,
+    handler: /* import warning: importer.ImportType#apply Failed type conversion: googlemaps.google.maps.MapHandlerMap<this>[N] */ js.Any
+  ): MapsEventListener = js.native
   
   /**
     * Additional controls to attach to the map.

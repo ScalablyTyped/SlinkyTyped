@@ -32,7 +32,18 @@ trait Between extends js.Object {
   def past(years: Double, refDate: js.Date): js.Date = js.native
   
   def recent(): js.Date = js.native
+  def recent(days: js.UndefOr[scala.Nothing], refDate: String): js.Date = js.native
+  def recent(days: js.UndefOr[scala.Nothing], refDate: js.Date): js.Date = js.native
   def recent(days: Double): js.Date = js.native
+  def recent(days: Double, refDate: String): js.Date = js.native
+  def recent(days: Double, refDate: js.Date): js.Date = js.native
+  
+  def soon(): js.Date = js.native
+  def soon(days: js.UndefOr[scala.Nothing], refDate: String): js.Date = js.native
+  def soon(days: js.UndefOr[scala.Nothing], refDate: js.Date): js.Date = js.native
+  def soon(days: Double): js.Date = js.native
+  def soon(days: Double, refDate: String): js.Date = js.native
+  def soon(days: Double, refDate: js.Date): js.Date = js.native
   
   def weekday(): String = js.native
   def weekday(options: Abbr): String = js.native

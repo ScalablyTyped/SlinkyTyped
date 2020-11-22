@@ -6,6 +6,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.Input
 import typingsSlinky.officeUiFabricReact.basePickerTypesMod.IBasePicker
 import typingsSlinky.officeUiFabricReact.basePickerTypesMod.IBasePickerStyleProps
@@ -20,7 +21,6 @@ import typingsSlinky.officeUiFabricReact.suggestionsItemTypesMod.ISuggestionItem
 import typingsSlinky.officeUiFabricReact.suggestionsTypesMod.ISuggestionModel
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -78,7 +78,9 @@ class SharedBuilder_IPeoplePickerProps158335197[R <: js.Object] (val args: js.Ar
   def onChange(value: /* items */ js.UndefOr[js.Array[IPersonaProps]] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
   
   @scala.inline
-  def onDismiss(value: (/* ev */ js.UndefOr[js.Any], /* selectedItem */ js.UndefOr[IPersonaProps]) => Unit): this.type = set("onDismiss", js.Any.fromFunction2(value))
+  def onDismiss(
+    value: (/* ev */ js.UndefOr[js.Any], /* selectedItem */ js.UndefOr[IPersonaProps]) => Boolean | Unit
+  ): this.type = set("onDismiss", js.Any.fromFunction2(value))
   
   @scala.inline
   def onEmptyInputFocus(

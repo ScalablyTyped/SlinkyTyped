@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookChart extends Entity {
   
   // Represents chart axes. Read-only.
-  var axes: js.UndefOr[WorkbookChartAxes] = js.native
+  var axes: js.UndefOr[NullableOption[WorkbookChartAxes]] = js.native
   
   // Represents the datalabels on the chart. Read-only.
-  var dataLabels: js.UndefOr[WorkbookChartDataLabels] = js.native
+  var dataLabels: js.UndefOr[NullableOption[WorkbookChartDataLabels]] = js.native
   
   // Encapsulates the format properties for the chart area. Read-only.
-  var format: js.UndefOr[WorkbookChartAreaFormat] = js.native
+  var format: js.UndefOr[NullableOption[WorkbookChartAreaFormat]] = js.native
   
   // Represents the height, in points, of the chart object.
   var height: js.UndefOr[Double] = js.native
@@ -23,19 +23,19 @@ trait WorkbookChart extends Entity {
   var left: js.UndefOr[Double] = js.native
   
   // Represents the legend for the chart. Read-only.
-  var legend: js.UndefOr[WorkbookChartLegend] = js.native
+  var legend: js.UndefOr[NullableOption[WorkbookChartLegend]] = js.native
   
   // Represents the name of a chart object.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   // Represents either a single series or collection of series in the chart. Read-only.
-  var series: js.UndefOr[js.Array[WorkbookChartSeries]] = js.native
+  var series: js.UndefOr[NullableOption[js.Array[WorkbookChartSeries]]] = js.native
   
   /**
     * Represents the title of the specified chart, including the text, visibility, position and formating of the title.
     * Read-only.
     */
-  var title: js.UndefOr[WorkbookChartTitle] = js.native
+  var title: js.UndefOr[NullableOption[WorkbookChartTitle]] = js.native
   
   /**
     * Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of
@@ -47,7 +47,7 @@ trait WorkbookChart extends Entity {
   var width: js.UndefOr[Double] = js.native
   
   // The worksheet containing the current chart. Read-only.
-  var worksheet: js.UndefOr[WorkbookWorksheet] = js.native
+  var worksheet: js.UndefOr[NullableOption[WorkbookWorksheet]] = js.native
 }
 object WorkbookChart {
   
@@ -73,22 +73,31 @@ object WorkbookChart {
     }
     
     @scala.inline
-    def setAxes(value: WorkbookChartAxes): Self = this.set("axes", value.asInstanceOf[js.Any])
+    def setAxes(value: NullableOption[WorkbookChartAxes]): Self = this.set("axes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAxes: Self = this.set("axes", js.undefined)
     
     @scala.inline
-    def setDataLabels(value: WorkbookChartDataLabels): Self = this.set("dataLabels", value.asInstanceOf[js.Any])
+    def setAxesNull: Self = this.set("axes", null)
+    
+    @scala.inline
+    def setDataLabels(value: NullableOption[WorkbookChartDataLabels]): Self = this.set("dataLabels", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDataLabels: Self = this.set("dataLabels", js.undefined)
     
     @scala.inline
-    def setFormat(value: WorkbookChartAreaFormat): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setDataLabelsNull: Self = this.set("dataLabels", null)
+    
+    @scala.inline
+    def setFormat(value: NullableOption[WorkbookChartAreaFormat]): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
+    
+    @scala.inline
+    def setFormatNull: Self = this.set("format", null)
     
     @scala.inline
     def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
@@ -103,31 +112,43 @@ object WorkbookChart {
     def deleteLeft: Self = this.set("left", js.undefined)
     
     @scala.inline
-    def setLegend(value: WorkbookChartLegend): Self = this.set("legend", value.asInstanceOf[js.Any])
+    def setLegend(value: NullableOption[WorkbookChartLegend]): Self = this.set("legend", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLegend: Self = this.set("legend", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setLegendNull: Self = this.set("legend", null)
+    
+    @scala.inline
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
     def setSeriesVarargs(value: WorkbookChartSeries*): Self = this.set("series", js.Array(value :_*))
     
     @scala.inline
-    def setSeries(value: js.Array[WorkbookChartSeries]): Self = this.set("series", value.asInstanceOf[js.Any])
+    def setSeries(value: NullableOption[js.Array[WorkbookChartSeries]]): Self = this.set("series", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSeries: Self = this.set("series", js.undefined)
     
     @scala.inline
-    def setTitle(value: WorkbookChartTitle): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setSeriesNull: Self = this.set("series", null)
+    
+    @scala.inline
+    def setTitle(value: NullableOption[WorkbookChartTitle]): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
+    
+    @scala.inline
+    def setTitleNull: Self = this.set("title", null)
     
     @scala.inline
     def setTop(value: Double): Self = this.set("top", value.asInstanceOf[js.Any])
@@ -142,9 +163,12 @@ object WorkbookChart {
     def deleteWidth: Self = this.set("width", js.undefined)
     
     @scala.inline
-    def setWorksheet(value: WorkbookWorksheet): Self = this.set("worksheet", value.asInstanceOf[js.Any])
+    def setWorksheet(value: NullableOption[WorkbookWorksheet]): Self = this.set("worksheet", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWorksheet: Self = this.set("worksheet", js.undefined)
+    
+    @scala.inline
+    def setWorksheetNull: Self = this.set("worksheet", null)
   }
 }

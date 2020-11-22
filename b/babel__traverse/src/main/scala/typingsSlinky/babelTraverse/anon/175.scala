@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.DeclareVariable
+import typingsSlinky.babelTraverse.babelTraverseStrings.TypeAlias
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `175` extends js.Object {
   
-  var `type`: DeclareVariable = js.native
+  var `type`: TypeAlias = js.native
 }
 object `175` {
   
   @scala.inline
-  def apply(`type`: DeclareVariable): `175` = {
+  def apply(`type`: TypeAlias): `175` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`175`]
@@ -35,6 +35,6 @@ object `175` {
     }
     
     @scala.inline
-    def setType(value: DeclareVariable): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TypeAlias): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

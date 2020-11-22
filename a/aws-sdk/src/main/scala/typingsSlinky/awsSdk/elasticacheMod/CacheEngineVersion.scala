@@ -18,7 +18,7 @@ trait CacheEngineVersion extends js.Object {
   var CacheEngineVersionDescription: js.UndefOr[String] = js.native
   
   /**
-    * The name of the cache parameter group family associated with this cache engine. Valid values are: memcached1.4 | memcached1.5 | redis2.6 | redis2.8 | redis3.2 | redis4.0 | redis5.0 | 
+    * The name of the cache parameter group family associated with this cache engine. Valid values are: memcached1.4 | memcached1.5 | memcached1.6 | redis2.6 | redis2.8 | redis3.2 | redis4.0 | redis5.0 | redis6.x | 
     */
   var CacheParameterGroupFamily: js.UndefOr[String] = js.native
   

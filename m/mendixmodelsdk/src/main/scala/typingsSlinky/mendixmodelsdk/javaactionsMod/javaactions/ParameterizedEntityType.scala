@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,8 +30,8 @@ class ParameterizedEntityType protected () extends EntityType {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsBasicParameterType")
@@ -43,9 +45,6 @@ class ParameterizedEntityType protected () extends EntityType {
   
   @JSName("containerAsListType")
   def containerAsListType_MParameterizedEntityType: ListType = js.native
-  
-  @JSName("model")
-  var model_FParameterizedEntityType: IModel = js.native
   
   def typeParameter: TypeParameter = js.native
   def typeParameter_=(newValue: TypeParameter): Unit = js.native

@@ -17,6 +17,11 @@ object directionalLightHelperMod extends js.Object {
   
   @js.native
   class DirectionalLightHelper protected () extends Object3D {
+    /**
+    	 * @param light
+    	 * @param [size=1]
+    	 * @param color
+    	 */
     def this(light: DirectionalLight) = this()
     def this(light: DirectionalLight, size: Double) = this()
     def this(light: DirectionalLight, size: js.UndefOr[scala.Nothing], color: String) = this()
@@ -26,6 +31,9 @@ object directionalLightHelperMod extends js.Object {
     def this(light: DirectionalLight, size: Double, color: Double) = this()
     def this(light: DirectionalLight, size: Double, color: Color) = this()
     
+    /**
+    	 * @default undefined
+    	 */
     var color: js.UndefOr[Color | String | Double] = js.native
     
     def dispose(): Unit = js.native

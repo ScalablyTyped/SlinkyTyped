@@ -15,6 +15,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MiddlewareOptions extends js.Object {
   
   /**
+    * If function returns true, 403 error is thrown
+    */
+  var blacklist: js.UndefOr[js.Function1[/* context */ Context, Boolean | js.Promise[Boolean]]] = js.native
+  
+  /**
     * The database powering the backing rate-limiter package.
     */
   var db: Redis | RedisClient | (Map[_, _]) = js.native
@@ -64,6 +69,11 @@ trait MiddlewareOptions extends js.Object {
     * the Koa context function "throw".
     */
   var `throw`: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * If function returns true, middleware exits before limiting
+    */
+  var whitelist: js.UndefOr[js.Function1[/* context */ Context, Boolean | js.Promise[Boolean]]] = js.native
 }
 object MiddlewareOptions {
   
@@ -93,6 +103,12 @@ object MiddlewareOptions {
     
     @scala.inline
     def setDriver(value: redis | memory): Self = this.set("driver", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBlacklist(value: /* context */ Context => Boolean | js.Promise[Boolean]): Self = this.set("blacklist", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteBlacklist: Self = this.set("blacklist", js.undefined)
     
     @scala.inline
     def setDisableHeader(value: Boolean): Self = this.set("disableHeader", value.asInstanceOf[js.Any])
@@ -135,5 +151,11 @@ object MiddlewareOptions {
     
     @scala.inline
     def deleteThrow: Self = this.set("throw", js.undefined)
+    
+    @scala.inline
+    def setWhitelist(value: /* context */ Context => Boolean | js.Promise[Boolean]): Self = this.set("whitelist", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteWhitelist: Self = this.set("whitelist", js.undefined)
   }
 }

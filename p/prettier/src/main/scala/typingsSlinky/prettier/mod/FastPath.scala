@@ -24,5 +24,5 @@ trait FastPath[T] extends js.Object {
   
   def map[U](callback: js.Function2[/* path */ this.type, /* index */ Double, U], names: PropertyKey*): js.Array[U] = js.native
   
-  var stack: js.Array[_] = js.native
+  var stack: js.Array[T] = js.native
 }

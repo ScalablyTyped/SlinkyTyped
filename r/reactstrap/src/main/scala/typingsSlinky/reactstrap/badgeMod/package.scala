@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object badgeMod {
   
-  type Badge[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.badgeMod.BadgeProps]
+  type Badge = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.badgeMod.BadgeProps]
 }

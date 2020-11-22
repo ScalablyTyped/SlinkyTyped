@@ -2329,6 +2329,8 @@ trait DayElement extends js.Object {
   
   var draggable: Boolean = js.native
   
+  var enterKeyHint: String = js.native
+  
   /**
     * Returns the first child.
     */
@@ -2360,9 +2362,10 @@ trait DayElement extends js.Object {
     */
   def getAttributeNames(): js.Array[String] = js.native
   
-  def getAttributeNode(name: String): Attr | Null = js.native
+  def getAttributeNode(qualifiedName: String): Attr | Null = js.native
   
-  def getAttributeNodeNS(namespaceURI: String, localName: String): Attr | Null = js.native
+  def getAttributeNodeNS(namespace: String, localName: String): Attr | Null = js.native
+  def getAttributeNodeNS(namespace: Null, localName: String): Attr | Null = js.native
   
   def getBoundingClientRect(): DOMRect = js.native
   

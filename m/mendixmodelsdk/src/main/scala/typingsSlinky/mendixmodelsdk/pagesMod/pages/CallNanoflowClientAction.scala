@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -10,6 +11,7 @@ import typingsSlinky.mendixmodelsdk.menusMod.menus.MenuItem
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.INanoflow
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.BottomBarItem
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,15 +29,12 @@ class CallNanoflowClientAction protected () extends ClientAction {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def confirmationInfo: ConfirmationInfo | Null = js.native
   def confirmationInfo_=(newValue: ConfirmationInfo | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FCallNanoflowClientAction: IModel = js.native
   
   /**
     * In version 7.10.0: introduced
@@ -135,7 +134,7 @@ object CallNanoflowClientAction extends js.Object {
     * of the parent nativepages.BottomBarItem element passed as argument.
     *
     * Warning! Can only be used on models with the following Mendix meta model versions:
-    *  8.0.0 and higher
+    *  8.0.0 to 8.14.0
     */
   def createInBottomBarItemUnderAction(container: BottomBarItem): CallNanoflowClientAction = js.native
   

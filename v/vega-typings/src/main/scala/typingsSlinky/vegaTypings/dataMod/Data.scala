@@ -27,7 +27,7 @@ object Data {
   }
   
   @scala.inline
-  def UrlData(name: String, url: String | SignalRef): Data = {
+  def UrlData(name: String, url: URI | SignalRef): Data = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data]
   }

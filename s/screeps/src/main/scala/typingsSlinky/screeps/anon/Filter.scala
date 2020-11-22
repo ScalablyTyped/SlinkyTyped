@@ -1,24 +1,30 @@
 package typingsSlinky.screeps.anon
 
+import typingsSlinky.screeps.FilterObject
+import typingsSlinky.screeps.FindClosestByPathAlgorithm
+import typingsSlinky.screeps.HasRoomPosition
+import typingsSlinky.screeps.RoomPosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Filter extends js.Object {
+trait Filter[T /* <: HasRoomPosition | RoomPosition */] extends js.Object {
   
-  var filter: js.Any | String = js.native
+  var algorithm: js.UndefOr[FindClosestByPathAlgorithm] = js.native
+  
+  var filter: js.UndefOr[(js.Function1[/* object */ T, Boolean]) | FilterObject | String] = js.native
 }
 object Filter {
   
   @scala.inline
-  def apply(filter: js.Any | String): Filter = {
-    val __obj = js.Dynamic.literal(filter = filter.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Filter]
+  def apply[T /* <: HasRoomPosition | RoomPosition */](): Filter[T] = {
+    val __obj = js.Dynamic.literal()
+    __obj.asInstanceOf[Filter[T]]
   }
   
   @scala.inline
-  implicit class FilterOps[Self <: Filter] (val x: Self) extends AnyVal {
+  implicit class FilterOps[Self <: Filter[_], T /* <: HasRoomPosition | RoomPosition */] (val x: Self with Filter[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -33,6 +39,18 @@ object Filter {
     }
     
     @scala.inline
-    def setFilter(value: js.Any | String): Self = this.set("filter", value.asInstanceOf[js.Any])
+    def setAlgorithm(value: FindClosestByPathAlgorithm): Self = this.set("algorithm", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAlgorithm: Self = this.set("algorithm", js.undefined)
+    
+    @scala.inline
+    def setFilterFunction1(value: /* object */ T => Boolean): Self = this.set("filter", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setFilter(value: (js.Function1[/* object */ T, Boolean]) | FilterObject | String): Self = this.set("filter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFilter: Self = this.set("filter", js.undefined)
   }
 }

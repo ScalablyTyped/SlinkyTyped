@@ -36,6 +36,9 @@ object Modal {
     def closeable(value: Boolean): this.type = set("closeable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def focusLock(value: Boolean): this.type = set("focusLock", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def isOpen(value: Boolean): this.type = set("isOpen", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -2,7 +2,7 @@ package typingsSlinky.emberData.mod.default
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A `DS.ServerError` equates to a HTTP `500 Internal Server Error` response
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class ServerError ()
   extends typingsSlinky.emberObject.mod.default
-

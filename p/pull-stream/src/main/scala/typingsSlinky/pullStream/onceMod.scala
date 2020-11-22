@@ -1,5 +1,6 @@
 package typingsSlinky.pullStream
 
+import typingsSlinky.pullStream.mod.EndOrError
 import typingsSlinky.pullStream.mod.Source
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,6 +15,6 @@ object onceMod extends js.Object {
     */
   def apply[T](): Source[T] = js.native
   def apply[T](value: T): Source[T] = js.native
-  def apply[T](value: T, onAbort: js.Function1[/* err */ js.UndefOr[js.Error | Null], _]): Source[T] = js.native
-  def apply[T](value: js.UndefOr[scala.Nothing], onAbort: js.Function1[/* err */ js.UndefOr[js.Error | Null], _]): Source[T] = js.native
+  def apply[T](value: T, onAbort: js.Function1[/* err */ js.UndefOr[EndOrError], _]): Source[T] = js.native
+  def apply[T](value: js.UndefOr[scala.Nothing], onAbort: js.Function1[/* err */ js.UndefOr[EndOrError], _]): Source[T] = js.native
 }

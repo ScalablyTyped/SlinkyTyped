@@ -62,12 +62,26 @@ object urlTileMod extends js.Object {
   trait UrlTile
     extends typingsSlinky.ol.sourceTileMod.default {
     
+    /**
+      * Return the tile load function of the source.
+      */
     def getTileLoadFunction(): LoadFunction = js.native
     
+    /**
+      * Return the tile URL function of the source.
+      */
     def getTileUrlFunction(): UrlFunction = js.native
     
-    def getUrls(): js.Array[String] = js.native
+    /**
+      * Return the URLs used for this source.
+      * When a tileUrlFunction is used instead of url or urls,
+      * null will be returned.
+      */
+    def getUrls(): js.Array[String] | Null = js.native
     
+    /**
+      * Handle tile change events.
+      */
     /* protected */ def handleTileChange(event: typingsSlinky.ol.eventMod.default): Unit = js.native
     
     @JSName("on")
@@ -84,22 +98,32 @@ object urlTileMod extends js.Object {
     @JSName("once")
     def once_tileloadstart(`type`: tileloadstart, listener: js.Function1[/* evt */ TileSourceEvent, Unit]): EventsKey = js.native
     
+    /**
+      * Set the tile load function of the source.
+      */
     def setTileLoadFunction(tileLoadFunction: LoadFunction): Unit = js.native
     
+    /**
+      * Set the tile URL function of the source.
+      */
     def setTileUrlFunction(tileUrlFunction: UrlFunction): Unit = js.native
     def setTileUrlFunction(tileUrlFunction: UrlFunction, key: String): Unit = js.native
     
+    /**
+      * Set the URL to use for requests.
+      */
     def setUrl(url: String): Unit = js.native
     
+    /**
+      * Set the URLs to use for requests.
+      */
     def setUrls(urls: js.Array[String]): Unit = js.native
     
     /* protected */ def tileLoadFunction(p0: Tile, p1: String): Unit = js.native
     @JSName("tileLoadFunction")
     var tileLoadFunction_Original: LoadFunction = js.native
     
-    /* protected */ def tileUrlFunction(p0: TileCoord, p1: Double, p2: typingsSlinky.ol.projectionMod.default): String = js.native
-    @JSName("tileUrlFunction")
-    var tileUrlFunction_Original: UrlFunction = js.native
+    def tileUrlFunction(tileCoord: TileCoord, pixelRatio: Double, projection: typingsSlinky.ol.projectionMod.default): js.UndefOr[String] = js.native
     
     @JSName("un")
     def un_tileloadend(`type`: tileloadend, listener: js.Function1[/* evt */ TileSourceEvent, Unit]): Unit = js.native
@@ -109,6 +133,11 @@ object urlTileMod extends js.Object {
     def un_tileloadstart(`type`: tileloadstart, listener: js.Function1[/* evt */ TileSourceEvent, Unit]): Unit = js.native
     
     var urls: js.Array[String] = js.native
+    
+    /**
+      * Marks a tile coord as being used, without triggering a load.
+      */
+    def useTile(z: Double, x: Double, y: Double): Unit = js.native
   }
   
   @js.native

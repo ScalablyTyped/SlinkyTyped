@@ -34,8 +34,8 @@ class AsyncPipe protected ()
   var _updateLatestValue: js.Any = js.native
   
   def transform[T](): T | Null = js.native
-  def transform[T](obj: js.UndefOr[scala.Nothing]): js.UndefOr[scala.Nothing] = js.native
   def transform[T](obj: js.Promise[T]): T | Null = js.native
-  def transform[T](obj: Null): Null = js.native
   def transform[T](obj: Observable_[T]): T | Null = js.native
+  @JSName("transform")
+  def transform_T_Null[T](): Null = js.native
 }

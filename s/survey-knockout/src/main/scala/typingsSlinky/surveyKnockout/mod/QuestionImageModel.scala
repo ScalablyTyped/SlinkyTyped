@@ -33,4 +33,6 @@ class QuestionImageModel protected () extends QuestionNonValue {
     * The image width.
     */
   var imageWidth: String = js.native
+  
+  val locImageLink: LocalizableString = js.native
 }

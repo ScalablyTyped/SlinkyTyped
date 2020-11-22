@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "lucene"
-version := "2.1-dt-20200318Z-181b7d"
+version := "2.1-dt-20201016Z-678994"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

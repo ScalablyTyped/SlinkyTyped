@@ -1,20 +1,16 @@
 package typingsSlinky.popmotion
 
-import org.scalajs.dom.raw.MouseEvent
-import org.scalajs.dom.raw.Touch
-import typingsSlinky.popmotion.pointerTypesMod.PointerPoint
+import typingsSlinky.popmotion.typesMod.Animation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("popmotion/lib/input/pointer/utils", JSImport.Namespace)
+@JSImport("popmotion/lib/animations/generators/@/tests/utils", JSImport.Namespace)
 @js.native
 object utilsMod extends js.Object {
   
-  def defaultPointerPos(): PointerPoint = js.native
-  
-  def eventToPoint(e: MouseEvent): PointerPoint = js.native
-  def eventToPoint(e: MouseEvent, point: PointerPoint): PointerPoint = js.native
-  def eventToPoint(e: Touch): PointerPoint = js.native
-  def eventToPoint(e: Touch, point: PointerPoint): PointerPoint = js.native
+  def animateSync(animation: Animation[Double]): js.Array[Double] = js.native
+  def animateSync(animation: Animation[Double], timeStep: js.UndefOr[scala.Nothing], round: Boolean): js.Array[Double] = js.native
+  def animateSync(animation: Animation[Double], timeStep: Double): js.Array[Double] = js.native
+  def animateSync(animation: Animation[Double], timeStep: Double, round: Boolean): js.Array[Double] = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.mod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.CustomWidget
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetObject
@@ -8,6 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,8 +23,8 @@ class ClientTemplate protected ()
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
 }
 /* static members */
@@ -124,6 +126,16 @@ object ClientTemplate extends js.Object {
     *  8.6.0 and higher
     */
   def createInStaticImageViewerUnderAlternativeText(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.StaticImageViewer): typingsSlinky.mendixmodelsdk.pagesMod.pages.ClientTemplate = js.native
+  
+  /**
+    * Creates and returns a new ClientTemplate instance in the SDK and on the server.
+    * The new ClientTemplate will be automatically stored in the 'badge' property
+    * of the parent TabPage element passed as argument.
+    *
+    * Warning! Can only be used on models with the following Mendix meta model versions:
+    *  8.13.0 and higher
+    */
+  def createInTabPageUnderBadge(container: typingsSlinky.mendixmodelsdk.pagesMod.pages.TabPage): typingsSlinky.mendixmodelsdk.pagesMod.pages.ClientTemplate = js.native
   
   /**
     * Creates and returns a new ClientTemplate instance in the SDK and on the server.

@@ -1,5 +1,6 @@
 package typingsSlinky.ol.dragBoxMod
 
+import org.scalajs.dom.raw.UIEvent
 import typingsSlinky.ol.conditionMod.Condition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +18,11 @@ trait Options extends js.Object {
   var minArea: js.UndefOr[Double] = js.native
   
   var onBoxEnd: js.UndefOr[
-    js.ThisFunction1[/* this */ DragBox, /* p0 */ typingsSlinky.ol.mapBrowserEventMod.default, Unit]
+    js.ThisFunction1[
+      /* this */ DragBox, 
+      /* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent], 
+      Unit
+    ]
   ] = js.native
 }
 object Options {
@@ -69,7 +74,11 @@ object Options {
     
     @scala.inline
     def setOnBoxEnd(
-      value: js.ThisFunction1[/* this */ DragBox, /* p0 */ typingsSlinky.ol.mapBrowserEventMod.default, Unit]
+      value: js.ThisFunction1[
+          /* this */ DragBox, 
+          /* p0 */ typingsSlinky.ol.mapBrowserEventMod.default[UIEvent], 
+          Unit
+        ]
     ): Self = this.set("onBoxEnd", value.asInstanceOf[js.Any])
     
     @scala.inline

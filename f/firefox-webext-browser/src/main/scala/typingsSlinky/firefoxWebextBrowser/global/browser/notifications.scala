@@ -26,9 +26,7 @@ object notifications extends js.Object {
   
   /**
     * Creates and displays a notification.
-    * @param notificationId Identifier of the notification. If it is empty, this method generates an id. If it matches
-    *     an existing notification, this method first clears that notification before proceeding with the create
-    *     operation.
+    * @param notificationId Identifier of the notification. If it is empty, this method generates an id. If it matches an existing notification, this method first clears that notification before proceeding with the create operation.
     * @param options Contents of the notification.
     */
   def create(notificationId: String, options: CreateNotificationOptions): js.Promise[String] = js.native

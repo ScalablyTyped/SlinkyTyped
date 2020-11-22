@@ -11,7 +11,7 @@ abstract class Type () extends js.Object {
   
   def hasModifier(modifier: TypeModifier): Boolean = js.native
   
-  var modifiers: js.Array[TypeModifier] | Null = js.native
+  var modifiers: js.Array[TypeModifier] = js.native
   
   def visitType(visitor: TypeVisitor, context: js.Any): js.Any = js.native
 }

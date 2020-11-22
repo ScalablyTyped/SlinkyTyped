@@ -63,6 +63,10 @@ trait HTMLElement extends Node {
     */
   def lastChild: typingsSlinky.nodeHtmlParser.nodeMod.default = js.native
   
+  def nextElementSibling: HTMLElement = js.native
+  
+  def nextSibling: typingsSlinky.nodeHtmlParser.nodeMod.default = js.native
+  
   def outerHTML: String = js.native
   
   var parentNode: typingsSlinky.nodeHtmlParser.nodeMod.default = js.native
@@ -93,12 +97,19 @@ trait HTMLElement extends Node {
   
   var rawAttrs: js.Any = js.native
   
+  var rawTagName: String = js.native
+  
   /**
     * Get escpaed (as-it) text value of current node and its children.
     * @return {string} text content
     */
   @JSName("rawText")
   def rawText_MHTMLElement: String = js.native
+  
+  /**
+    * Remove current element
+    */
+  def remove(): Unit = js.native
   
   def removeAttribute(key: String): Unit = js.native
   
@@ -146,7 +157,7 @@ trait HTMLElement extends Node {
     */
   def structuredText: String = js.native
   
-  var tagName: String = js.native
+  def tagName: String = js.native
   
   /**
     * Get unescaped text value of current node and its children.

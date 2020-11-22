@@ -11,7 +11,7 @@ package object mod {
   type EventHandler = js.Function1[/* repeated */ js.Any, scala.Unit]
   
   type FieldSearchConfig[T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof T ]:? {  bool :elasticlunr.elasticlunr.Bool | undefined,   boost :number | undefined,   expand :boolean | undefined}}
+  {[ K in keyof T ]:? {  bool :elasticlunr.elasticlunr.Bool | undefined,   boost :number | undefined}}
     */ typingsSlinky.elasticlunr.elasticlunrStrings.FieldSearchConfig with org.scalablytyped.runtime.TopLevel[js.Any]
   
   type IndexDocuments[T] = org.scalablytyped.runtime.StringDictionary[T]

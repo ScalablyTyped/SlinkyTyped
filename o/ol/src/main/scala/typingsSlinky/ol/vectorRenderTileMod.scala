@@ -42,6 +42,9 @@ object vectorRenderTileMod extends js.Object {
     
     def getContext(layer: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default]): CanvasRenderingContext2D = js.native
     
+    /**
+      * Get the Canvas for this tile.
+      */
     def getImage(layer: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default]): HTMLCanvasElement = js.native
     
     def getReplayState(layer: typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default]): ReplayState = js.native

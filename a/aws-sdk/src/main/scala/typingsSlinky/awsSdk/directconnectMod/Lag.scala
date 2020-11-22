@@ -63,12 +63,12 @@ trait Lag extends js.Object {
   var location: js.UndefOr[LocationCode] = js.native
   
   /**
-    * The minimum number of physical connections that must be operational for the LAG itself to be operational.
+    * The minimum number of physical dedicated connections that must be operational for the LAG itself to be operational.
     */
   var minimumLinks: js.UndefOr[Count] = js.native
   
   /**
-    * The number of physical connections bundled by the LAG, up to a maximum of 10.
+    * The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.
     */
   var numberOfConnections: js.UndefOr[Count] = js.native
   

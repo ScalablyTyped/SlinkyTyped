@@ -8,20 +8,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BevelEnabled extends js.Object {
   
+  /**
+  		 * @default false
+  		 */
   var bevelEnabled: Boolean = js.native
   
   var bevelOffset: Double = js.native
   
   var bevelSegments: Double = js.native
   
+  /**
+  		 * @default 8
+  		 */
   var bevelSize: Double = js.native
   
+  /**
+  		 * @default 10
+  		 */
   var bevelThickness: Double = js.native
   
   var curveSegments: Double = js.native
   
   var font: Font = js.native
   
+  /**
+  		 * @default 50
+  		 */
   var height: Double = js.native
   
   var size: Double = js.native

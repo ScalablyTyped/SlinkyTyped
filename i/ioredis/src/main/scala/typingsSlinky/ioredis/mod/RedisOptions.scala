@@ -46,6 +46,13 @@ trait RedisOptions extends js.Object {
   var dropBufferSupport: js.UndefOr[Boolean] = js.native
   
   /**
+    * When enabled, all commands issued during an event loop iteration are automatically wrapped in a
+    * pipeline and sent to the server at the same time. This can improve performance by 30-50%.
+    * default: false.
+    */
+  var enableAutoPipelining: js.UndefOr[Boolean] = js.native
+  
+  /**
     * By default, if there is no active connection to the Redis server, commands are added to a queue
     * and are executed once the connection is "ready" (when enableReadyCheck is true, "ready" means
     * the Redis server has loaded the database from disk, otherwise means the connection to the Redis
@@ -237,6 +244,12 @@ object RedisOptions {
     
     @scala.inline
     def deleteDropBufferSupport: Self = this.set("dropBufferSupport", js.undefined)
+    
+    @scala.inline
+    def setEnableAutoPipelining(value: Boolean): Self = this.set("enableAutoPipelining", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnableAutoPipelining: Self = this.set("enableAutoPipelining", js.undefined)
     
     @scala.inline
     def setEnableOfflineQueue(value: Boolean): Self = this.set("enableOfflineQueue", value.asInstanceOf[js.Any])

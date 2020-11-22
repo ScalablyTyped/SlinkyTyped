@@ -51,6 +51,8 @@ trait DetectorOptions extends js.Object {
     */
   var lookupQuerystring: js.UndefOr[String] = js.native
   
+  var lookupSessionStorage: js.UndefOr[String] = js.native
+  
   /**
     * order and from where user language should be detected
     */
@@ -151,6 +153,12 @@ object DetectorOptions {
     
     @scala.inline
     def deleteLookupQuerystring: Self = this.set("lookupQuerystring", js.undefined)
+    
+    @scala.inline
+    def setLookupSessionStorage(value: String): Self = this.set("lookupSessionStorage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLookupSessionStorage: Self = this.set("lookupSessionStorage", js.undefined)
     
     @scala.inline
     def setOrderVarargs(value: (querystring | cookie | sessionStorage | localStorage | navigator | htmlTag | String)*): Self = this.set("order", js.Array(value :_*))

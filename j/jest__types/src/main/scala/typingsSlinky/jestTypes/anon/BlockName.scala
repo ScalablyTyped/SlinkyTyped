@@ -1,14 +1,14 @@
 package typingsSlinky.jestTypes.anon
 
 import typingsSlinky.jestTypes.circusMod.BlockMode
-import typingsSlinky.jestTypes.circusMod.Event
+import typingsSlinky.jestTypes.circusMod.SyncEvent
 import typingsSlinky.jestTypes.jestTypesStrings.finish_describe_definition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait BlockName extends Event {
+trait BlockName extends SyncEvent {
   
   var blockName: typingsSlinky.jestTypes.circusMod.BlockName = js.native
   

@@ -30,7 +30,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * This endpoint is accessible with the `user` scope.
     */
   @JSName("addEmailForAuthenticated")
-  var addEmailForAuthenticated_Original: `512` = js.native
+  var addEmailForAuthenticated_Original: `515` = js.native
   
   def block(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PUT /user/blocks/:username']['response'] */ js.Any
@@ -44,7 +44,7 @@ trait AddEmailForAuthenticated extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['PUT /user/blocks/:username']['response'] */ js.Any
   ] = js.native
   @JSName("block")
-  var block_Original: `513` = js.native
+  var block_Original: `516` = js.native
   
   /**
     * If the user is blocked:
@@ -68,7 +68,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * If the user is not blocked:
     */
   @JSName("checkBlocked")
-  var checkBlocked_Original: `514` = js.native
+  var checkBlocked_Original: `517` = js.native
   
   def checkFollowingForUser(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /users/:username/following/:target_user']['response'] */ js.Any
@@ -82,7 +82,7 @@ trait AddEmailForAuthenticated extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /users/:username/following/:target_user']['response'] */ js.Any
   ] = js.native
   @JSName("checkFollowingForUser")
-  var checkFollowingForUser_Original: `515` = js.native
+  var checkFollowingForUser_Original: `518` = js.native
   
   def checkPersonIsFollowedByAuthenticated(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /user/following/:username']['response'] */ js.Any
@@ -96,7 +96,7 @@ trait AddEmailForAuthenticated extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /user/following/:username']['response'] */ js.Any
   ] = js.native
   @JSName("checkPersonIsFollowedByAuthenticated")
-  var checkPersonIsFollowedByAuthenticated_Original: `516` = js.native
+  var checkPersonIsFollowedByAuthenticated_Original: `519` = js.native
   
   /**
     * Adds a GPG key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
@@ -116,7 +116,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Adds a GPG key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
     */
   @JSName("createGpgKeyForAuthenticated")
-  var createGpgKeyForAuthenticated_Original: `517` = js.native
+  var createGpgKeyForAuthenticated_Original: `520` = js.native
   
   /**
     * Adds a public SSH key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
@@ -136,7 +136,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Adds a public SSH key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
     */
   @JSName("createPublicSshKeyForAuthenticated")
-  var createPublicSshKeyForAuthenticated_Original: `518` = js.native
+  var createPublicSshKeyForAuthenticated_Original: `521` = js.native
   
   /**
     * This endpoint is accessible with the `user` scope.
@@ -156,7 +156,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * This endpoint is accessible with the `user` scope.
     */
   @JSName("deleteEmailForAuthenticated")
-  var deleteEmailForAuthenticated_Original: `519` = js.native
+  var deleteEmailForAuthenticated_Original: `522` = js.native
   
   /**
     * Removes a GPG key from the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `admin:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
@@ -176,7 +176,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Removes a GPG key from the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `admin:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
     */
   @JSName("deleteGpgKeyForAuthenticated")
-  var deleteGpgKeyForAuthenticated_Original: `520` = js.native
+  var deleteGpgKeyForAuthenticated_Original: `523` = js.native
   
   /**
     * Removes a public SSH key from the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `admin:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
@@ -196,7 +196,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Removes a public SSH key from the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `admin:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
     */
   @JSName("deletePublicSshKeyForAuthenticated")
-  var deletePublicSshKeyForAuthenticated_Original: `521` = js.native
+  var deletePublicSshKeyForAuthenticated_Original: `524` = js.native
   
   /**
     * Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
@@ -220,7 +220,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Following a user requires the user to be logged in and authenticated with basic auth or OAuth with the `user:follow` scope.
     */
   @JSName("follow")
-  var follow_Original: `522` = js.native
+  var follow_Original: `525` = js.native
   
   /**
     * If the authenticated user is authenticated through basic authentication or OAuth with the `user` scope, then the response lists public and private profile information.
@@ -244,7 +244,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * If the authenticated user is authenticated through OAuth without the `user` scope, then the response lists only public profile information.
     */
   @JSName("getAuthenticated")
-  var getAuthenticated_Original: `523` = js.native
+  var getAuthenticated_Original: `526` = js.native
   
   /**
     * Provides publicly available information about someone with a GitHub account.
@@ -276,7 +276,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://developer.github.com/v3/users/emails/)".
     */
   @JSName("getByUsername")
-  var getByUsername_Original: `524` = js.native
+  var getByUsername_Original: `527` = js.native
   
   /**
     * Provides hovercard information when authenticated through basic auth or OAuth with the `repo` scope. You can find out more about someone in relation to their pull requests, issues, repositories, and organizations.
@@ -310,7 +310,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * ```
     */
   @JSName("getContextForUser")
-  var getContextForUser_Original: `525` = js.native
+  var getContextForUser_Original: `528` = js.native
   
   /**
     * View extended details for a single GPG key. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
@@ -330,7 +330,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * View extended details for a single GPG key. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
     */
   @JSName("getGpgKeyForAuthenticated")
-  var getGpgKeyForAuthenticated_Original: `526` = js.native
+  var getGpgKeyForAuthenticated_Original: `529` = js.native
   
   /**
     * View extended details for a single public SSH key. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
@@ -350,7 +350,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * View extended details for a single public SSH key. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
     */
   @JSName("getPublicSshKeyForAuthenticated")
-  var getPublicSshKeyForAuthenticated_Original: `527` = js.native
+  var getPublicSshKeyForAuthenticated_Original: `530` = js.native
   
   /**
     * Lists all users, in the order that they signed up on GitHub. This list includes personal user accounts and organization accounts.
@@ -387,7 +387,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * List the users you've blocked on your personal account.
     */
   @JSName("listBlockedByAuthenticated")
-  var listBlockedByAuthenticated_Original: `529` = js.native
+  var listBlockedByAuthenticated_Original: `532` = js.native
   
   /**
     * Lists all of your email addresses, and specifies which one is visible to the public. This endpoint is accessible with the `user:email` scope.
@@ -407,7 +407,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Lists all of your email addresses, and specifies which one is visible to the public. This endpoint is accessible with the `user:email` scope.
     */
   @JSName("listEmailsForAuthenticated")
-  var listEmailsForAuthenticated_Original: `530` = js.native
+  var listEmailsForAuthenticated_Original: `533` = js.native
   
   /**
     * Lists the people who the authenticated user follows.
@@ -427,7 +427,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Lists the people who the authenticated user follows.
     */
   @JSName("listFollowedByAuthenticated")
-  var listFollowedByAuthenticated_Original: `531` = js.native
+  var listFollowedByAuthenticated_Original: `534` = js.native
   
   /**
     * Lists the people following the authenticated user.
@@ -447,7 +447,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Lists the people following the authenticated user.
     */
   @JSName("listFollowersForAuthenticatedUser")
-  var listFollowersForAuthenticatedUser_Original: `532` = js.native
+  var listFollowersForAuthenticatedUser_Original: `535` = js.native
   
   /**
     * Lists the people following the specified user.
@@ -467,7 +467,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Lists the people following the specified user.
     */
   @JSName("listFollowersForUser")
-  var listFollowersForUser_Original: `533` = js.native
+  var listFollowersForUser_Original: `536` = js.native
   
   /**
     * Lists the people who the specified user follows.
@@ -487,7 +487,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Lists the people who the specified user follows.
     */
   @JSName("listFollowingForUser")
-  var listFollowingForUser_Original: `534` = js.native
+  var listFollowingForUser_Original: `537` = js.native
   
   /**
     * Lists the current user's GPG keys. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
@@ -507,7 +507,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Lists the current user's GPG keys. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
     */
   @JSName("listGpgKeysForAuthenticated")
-  var listGpgKeysForAuthenticated_Original: `535` = js.native
+  var listGpgKeysForAuthenticated_Original: `538` = js.native
   
   /**
     * Lists the GPG keys for a user. This information is accessible by anyone.
@@ -527,7 +527,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Lists the GPG keys for a user. This information is accessible by anyone.
     */
   @JSName("listGpgKeysForUser")
-  var listGpgKeysForUser_Original: `536` = js.native
+  var listGpgKeysForUser_Original: `539` = js.native
   
   /**
     * Lists your publicly visible email address, which you can set with the [Set primary email visibility for the authenticated user](https://developer.github.com/v3/users/emails/#set-primary-email-visibility-for-the-authenticated-user) endpoint. This endpoint is accessible with the `user:email` scope.
@@ -547,7 +547,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Lists your publicly visible email address, which you can set with the [Set primary email visibility for the authenticated user](https://developer.github.com/v3/users/emails/#set-primary-email-visibility-for-the-authenticated-user) endpoint. This endpoint is accessible with the `user:email` scope.
     */
   @JSName("listPublicEmailsForAuthenticated")
-  var listPublicEmailsForAuthenticated_Original: `537` = js.native
+  var listPublicEmailsForAuthenticated_Original: `540` = js.native
   
   /**
     * Lists the _verified_ public SSH keys for a user. This is accessible by anyone.
@@ -567,7 +567,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Lists the _verified_ public SSH keys for a user. This is accessible by anyone.
     */
   @JSName("listPublicKeysForUser")
-  var listPublicKeysForUser_Original: `538` = js.native
+  var listPublicKeysForUser_Original: `541` = js.native
   
   /**
     * Lists the public SSH keys for the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
@@ -587,7 +587,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Lists the public SSH keys for the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
     */
   @JSName("listPublicSshKeysForAuthenticated")
-  var listPublicSshKeysForAuthenticated_Original: `539` = js.native
+  var listPublicSshKeysForAuthenticated_Original: `542` = js.native
   
   /**
     * Lists all users, in the order that they signed up on GitHub. This list includes personal user accounts and organization accounts.
@@ -595,7 +595,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Note: Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://developer.github.com/v3/#link-header) to get the URL for the next page of users.
     */
   @JSName("list")
-  var list_Original: `528` = js.native
+  var list_Original: `531` = js.native
   
   /**
     * Sets the visibility for your primary email addresses.
@@ -615,7 +615,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Sets the visibility for your primary email addresses.
     */
   @JSName("setPrimaryEmailVisibilityForAuthenticated")
-  var setPrimaryEmailVisibilityForAuthenticated_Original: `540` = js.native
+  var setPrimaryEmailVisibilityForAuthenticated_Original: `543` = js.native
   
   def unblock(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /user/blocks/:username']['response'] */ js.Any
@@ -629,7 +629,7 @@ trait AddEmailForAuthenticated extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['DELETE /user/blocks/:username']['response'] */ js.Any
   ] = js.native
   @JSName("unblock")
-  var unblock_Original: `541` = js.native
+  var unblock_Original: `544` = js.native
   
   /**
     * Unfollowing a user requires the user to be logged in and authenticated with basic auth or OAuth with the `user:follow` scope.
@@ -649,7 +649,7 @@ trait AddEmailForAuthenticated extends js.Object {
     * Unfollowing a user requires the user to be logged in and authenticated with basic auth or OAuth with the `user:follow` scope.
     */
   @JSName("unfollow")
-  var unfollow_Original: `542` = js.native
+  var unfollow_Original: `545` = js.native
   
   /**
     * **Note:** If your email is set to private and you send an `email` parameter as part of this request to update your profile, your privacy settings are still enforced: the email address will not be displayed on your public profile or via the API.
@@ -669,5 +669,5 @@ trait AddEmailForAuthenticated extends js.Object {
     * **Note:** If your email is set to private and you send an `email` parameter as part of this request to update your profile, your privacy settings are still enforced: the email address will not be displayed on your public profile or via the API.
     */
   @JSName("updateAuthenticated")
-  var updateAuthenticated_Original: `543` = js.native
+  var updateAuthenticated_Original: `546` = js.native
 }

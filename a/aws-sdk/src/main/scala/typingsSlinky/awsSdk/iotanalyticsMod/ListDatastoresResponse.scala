@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListDatastoresResponse extends js.Object {
   
   /**
-    * A list of "DatastoreSummary" objects.
+    * A list of DatastoreSummary objects.
     */
   var datastoreSummaries: js.UndefOr[DatastoreSummaries] = js.native
   

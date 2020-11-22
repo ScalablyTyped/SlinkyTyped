@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CodedValueDomainProperties extends DomainProperties {
   
   /**
-    * An array of the coded values in the domain. See the object specification table below for the properties each item in the array should contain.
+    * An array of the coded values in the domain.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-CodedValueDomain.html#codedValues)
     */

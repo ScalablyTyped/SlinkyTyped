@@ -51,6 +51,13 @@ trait IOptions[T] extends js.Object {
     * The default is `false`.
     */
   var tabsMovable: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Whether the titles can be directly edited by the user.
+    *
+    * The default is `false`.
+    */
+  var titlesEditable: js.UndefOr[Boolean] = js.native
 }
 object IOptions {
   
@@ -110,5 +117,11 @@ object IOptions {
     
     @scala.inline
     def deleteTabsMovable: Self = this.set("tabsMovable", js.undefined)
+    
+    @scala.inline
+    def setTitlesEditable(value: Boolean): Self = this.set("titlesEditable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTitlesEditable: Self = this.set("titlesEditable", js.undefined)
   }
 }

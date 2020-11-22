@@ -9,13 +9,13 @@ trait Value extends js.Object {
   
   var key: String = js.native
   
-  var value: String | Boolean = js.native
+  var value: js.UndefOr[String] = js.native
 }
 object Value {
   
   @scala.inline
-  def apply(key: String, value: String | Boolean): Value = {
-    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(key: String): Value = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
     __obj.asInstanceOf[Value]
   }
   
@@ -38,6 +38,9 @@ object Value {
     def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: String | Boolean): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
   }
 }

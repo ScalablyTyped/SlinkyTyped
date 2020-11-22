@@ -3,7 +3,7 @@ package typingsSlinky.emberData.mod.DS
 import typingsSlinky.emberObject.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A `DS.InvalidError` is used by an adapter to signal the external API
@@ -19,4 +19,3 @@ import scala.scalajs.js.annotation._
 class InvalidError protected () extends default {
   def this(errors: js.Array[_]) = this()
 }
-

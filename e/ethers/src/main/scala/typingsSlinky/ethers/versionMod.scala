@@ -2,11 +2,11 @@ package typingsSlinky.ethers
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ethers/dist/types/_version", JSImport.Namespace)
+@JSImport("ethers/lib/_version", JSImport.Namespace)
 @js.native
 object versionMod extends js.Object {
-  val version: /* "4.0.0-beta.3" */ String = js.native
+  
+  val version: /* "ethers/5.0.21" */ String = js.native
 }
-

@@ -106,6 +106,10 @@ object persistentConnectionMod extends js.Object {
     
     var onVisible_ : js.Any = js.native
     
+    var outstandingGetCount_ : js.Any = js.native
+    
+    var outstandingGets_ : js.Any = js.native
+    
     var outstandingPutCount_ : js.Any = js.native
     
     var outstandingPuts_ : js.Any = js.native
@@ -150,6 +154,8 @@ object persistentConnectionMod extends js.Object {
       * Sends client stats for first connection
       */
     var sendConnectStats_ : js.Any = js.native
+    
+    var sendGet_ : js.Any = js.native
     
     var sendListen_ : js.Any = js.native
     

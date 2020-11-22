@@ -23,8 +23,13 @@ import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.reactElemental.mod.TextAreaProps
+import typingsSlinky.reactElemental.reactElementalStrings.`additions removals`
 import typingsSlinky.reactElemental.reactElementalStrings.`additions text`
 import typingsSlinky.reactElemental.reactElementalStrings.`inline`
+import typingsSlinky.reactElemental.reactElementalStrings.`removals additions`
+import typingsSlinky.reactElemental.reactElementalStrings.`removals text`
+import typingsSlinky.reactElemental.reactElementalStrings.`text additions`
+import typingsSlinky.reactElemental.reactElementalStrings.`text removals`
 import typingsSlinky.reactElemental.reactElementalStrings.additions
 import typingsSlinky.reactElemental.reactElementalStrings.all
 import typingsSlinky.reactElemental.reactElementalStrings.ascending
@@ -35,8 +40,11 @@ import typingsSlinky.reactElemental.reactElementalStrings.date
 import typingsSlinky.reactElemental.reactElementalStrings.decimal
 import typingsSlinky.reactElemental.reactElementalStrings.descending
 import typingsSlinky.reactElemental.reactElementalStrings.dialog
+import typingsSlinky.reactElemental.reactElementalStrings.done
 import typingsSlinky.reactElemental.reactElementalStrings.email
+import typingsSlinky.reactElemental.reactElementalStrings.enter
 import typingsSlinky.reactElemental.reactElementalStrings.execute
+import typingsSlinky.reactElemental.reactElementalStrings.go
 import typingsSlinky.reactElemental.reactElementalStrings.grammar
 import typingsSlinky.reactElemental.reactElementalStrings.grid
 import typingsSlinky.reactElemental.reactElementalStrings.horizontal
@@ -48,6 +56,7 @@ import typingsSlinky.reactElemental.reactElementalStrings.location
 import typingsSlinky.reactElemental.reactElementalStrings.menu
 import typingsSlinky.reactElemental.reactElementalStrings.mixed
 import typingsSlinky.reactElemental.reactElementalStrings.move
+import typingsSlinky.reactElemental.reactElementalStrings.next
 import typingsSlinky.reactElemental.reactElementalStrings.no
 import typingsSlinky.reactElemental.reactElementalStrings.none
 import typingsSlinky.reactElemental.reactElementalStrings.numeric
@@ -57,8 +66,10 @@ import typingsSlinky.reactElemental.reactElementalStrings.other
 import typingsSlinky.reactElemental.reactElementalStrings.page
 import typingsSlinky.reactElemental.reactElementalStrings.polite
 import typingsSlinky.reactElemental.reactElementalStrings.popup
+import typingsSlinky.reactElemental.reactElementalStrings.previous
 import typingsSlinky.reactElemental.reactElementalStrings.removals
 import typingsSlinky.reactElemental.reactElementalStrings.search
+import typingsSlinky.reactElemental.reactElementalStrings.send
 import typingsSlinky.reactElemental.reactElementalStrings.spelling
 import typingsSlinky.reactElemental.reactElementalStrings.step
 import typingsSlinky.reactElemental.reactElementalStrings.tel
@@ -201,7 +212,9 @@ object TextArea {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -304,6 +317,9 @@ object TextArea {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def error(value: String): this.type = set("error", value.asInstanceOf[js.Any])

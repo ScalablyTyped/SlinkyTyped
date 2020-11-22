@@ -13,7 +13,7 @@ trait DescribeDatastoreResponse extends js.Object {
   var datastore: js.UndefOr[Datastore] = js.native
   
   /**
-    * Additional statistical information about the data store. Included if the 'includeStatistics' parameter is set to true in the request.
+    * Additional statistical information about the data store. Included if the includeStatistics parameter is set to true in the request.
     */
   var statistics: js.UndefOr[DatastoreStatistics] = js.native
 }

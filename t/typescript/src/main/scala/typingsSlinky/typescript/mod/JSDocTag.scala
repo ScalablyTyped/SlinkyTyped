@@ -7,10 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait JSDocTag extends Node {
   
-  var comment: js.UndefOr[java.lang.String] = js.native
+  val comment: js.UndefOr[java.lang.String] = js.native
   
   @JSName("parent")
-  var parent_JSDocTag: JSDoc | JSDocTypeLiteral = js.native
+  val parent_JSDocTag: JSDoc | JSDocTypeLiteral = js.native
   
-  var tagName: Identifier = js.native
+  val tagName: Identifier = js.native
 }

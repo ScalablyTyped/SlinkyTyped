@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EmailAddress extends js.Object {
   
   // The email address of the person or entity.
-  var address: js.UndefOr[String] = js.native
+  var address: js.UndefOr[NullableOption[String]] = js.native
   
   // The display name of the person or entity.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
 }
 object EmailAddress {
   
@@ -37,15 +37,21 @@ object EmailAddress {
     }
     
     @scala.inline
-    def setAddress(value: String): Self = this.set("address", value.asInstanceOf[js.Any])
+    def setAddress(value: NullableOption[String]): Self = this.set("address", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAddress: Self = this.set("address", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setAddressNull: Self = this.set("address", null)
+    
+    @scala.inline
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setNameNull: Self = this.set("name", null)
   }
 }

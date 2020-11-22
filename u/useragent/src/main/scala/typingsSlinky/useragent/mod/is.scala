@@ -8,6 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object is extends js.Object {
   
+  /**
+    * Does a more inaccurate but more common check for useragents identification.
+    * @param useragent The user agent
+    */
   def apply(): Details = js.native
   def apply(useragent: String): Details = js.native
 }

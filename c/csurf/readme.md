@@ -1,7 +1,7 @@
 
 # Scala.js typings for csurf
 
-Typings are for version 1.9.0
+Typings are for version 1.11
 
 ## Library description:
 CSRF token middleware

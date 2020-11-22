@@ -16,31 +16,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxScrollableOptions[T] extends DOMComponentOptions[T] {
   
-  /** @name dxScrollable.Options.bounceEnabled */
+  /**
+    * [descr:dxScrollable.Options.bounceEnabled]
+    */
   var bounceEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScrollable.Options.direction */
+  /**
+    * [descr:dxScrollable.Options.direction]
+    */
   var direction: js.UndefOr[both | horizontal | vertical] = js.native
   
-  /** @name dxScrollable.Options.disabled */
+  /**
+    * [descr:dxScrollable.Options.disabled]
+    */
   var disabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScrollable.Options.onScroll */
+  /**
+    * [descr:dxScrollable.Options.onScroll]
+    */
   var onScroll: js.UndefOr[js.Function1[/* e */ ReachedRight[T], _]] = js.native
   
-  /** @name dxScrollable.Options.onUpdated */
+  /**
+    * [descr:dxScrollable.Options.onUpdated]
+    */
   var onUpdated: js.UndefOr[js.Function1[/* e */ ReachedRight[T], _]] = js.native
   
-  /** @name dxScrollable.Options.scrollByContent */
+  /**
+    * [descr:dxScrollable.Options.scrollByContent]
+    */
   var scrollByContent: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScrollable.Options.scrollByThumb */
+  /**
+    * [descr:dxScrollable.Options.scrollByThumb]
+    */
   var scrollByThumb: js.UndefOr[Boolean] = js.native
   
-  /** @name dxScrollable.Options.showScrollbar */
+  /**
+    * [descr:dxScrollable.Options.showScrollbar]
+    */
   var showScrollbar: js.UndefOr[onScroll | onHover | always | never] = js.native
   
-  /** @name dxScrollable.Options.useNative */
+  /**
+    * [descr:dxScrollable.Options.useNative]
+    */
   var useNative: js.UndefOr[Boolean] = js.native
 }
 object dxScrollableOptions {

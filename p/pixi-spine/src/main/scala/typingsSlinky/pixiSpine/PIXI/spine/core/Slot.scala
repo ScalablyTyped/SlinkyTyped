@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Slot extends js.Object {
   
-  var attachment: js.Any = js.native
+  var attachment: Attachment = js.native
+  
+  var attachmentState: Double = js.native
   
   var attachmentTime: js.Any = js.native
   
@@ -57,7 +59,8 @@ object Slot {
   
   @scala.inline
   def apply(
-    attachment: js.Any,
+    attachment: Attachment,
+    attachmentState: Double,
     attachmentTime: js.Any,
     blendMode: Double,
     bone: Bone,
@@ -81,7 +84,7 @@ object Slot {
     setToSetupPose: () => Unit,
     sprites: js.Any
   ): Slot = {
-    val __obj = js.Dynamic.literal(attachment = attachment.asInstanceOf[js.Any], attachmentTime = attachmentTime.asInstanceOf[js.Any], blendMode = blendMode.asInstanceOf[js.Any], bone = bone.asInstanceOf[js.Any], clippingContainer = clippingContainer.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], currentGraphics = currentGraphics.asInstanceOf[js.Any], currentMesh = currentMesh.asInstanceOf[js.Any], currentMeshName = currentMeshName.asInstanceOf[js.Any], currentSprite = currentSprite.asInstanceOf[js.Any], currentSpriteName = currentSpriteName.asInstanceOf[js.Any], darkColor = darkColor.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], deform = deform.asInstanceOf[js.Any], getAttachment = js.Any.fromFunction0(getAttachment), getAttachmentTime = js.Any.fromFunction0(getAttachmentTime), hackAttachment = hackAttachment.asInstanceOf[js.Any], hackRegion = hackRegion.asInstanceOf[js.Any], meshes = meshes.asInstanceOf[js.Any], setAttachment = js.Any.fromFunction1(setAttachment), setAttachmentTime = js.Any.fromFunction1(setAttachmentTime), setToSetupPose = js.Any.fromFunction0(setToSetupPose), sprites = sprites.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(attachment = attachment.asInstanceOf[js.Any], attachmentState = attachmentState.asInstanceOf[js.Any], attachmentTime = attachmentTime.asInstanceOf[js.Any], blendMode = blendMode.asInstanceOf[js.Any], bone = bone.asInstanceOf[js.Any], clippingContainer = clippingContainer.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], currentGraphics = currentGraphics.asInstanceOf[js.Any], currentMesh = currentMesh.asInstanceOf[js.Any], currentMeshName = currentMeshName.asInstanceOf[js.Any], currentSprite = currentSprite.asInstanceOf[js.Any], currentSpriteName = currentSpriteName.asInstanceOf[js.Any], darkColor = darkColor.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], deform = deform.asInstanceOf[js.Any], getAttachment = js.Any.fromFunction0(getAttachment), getAttachmentTime = js.Any.fromFunction0(getAttachmentTime), hackAttachment = hackAttachment.asInstanceOf[js.Any], hackRegion = hackRegion.asInstanceOf[js.Any], meshes = meshes.asInstanceOf[js.Any], setAttachment = js.Any.fromFunction1(setAttachment), setAttachmentTime = js.Any.fromFunction1(setAttachmentTime), setToSetupPose = js.Any.fromFunction0(setToSetupPose), sprites = sprites.asInstanceOf[js.Any])
     __obj.asInstanceOf[Slot]
   }
   
@@ -101,7 +104,10 @@ object Slot {
     }
     
     @scala.inline
-    def setAttachment(value: js.Any): Self = this.set("attachment", value.asInstanceOf[js.Any])
+    def setAttachment(value: Attachment): Self = this.set("attachment", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAttachmentState(value: Double): Self = this.set("attachmentState", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAttachmentTime(value: js.Any): Self = this.set("attachmentTime", value.asInstanceOf[js.Any])

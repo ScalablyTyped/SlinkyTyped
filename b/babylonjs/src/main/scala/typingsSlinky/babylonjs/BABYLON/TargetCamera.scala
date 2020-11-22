@@ -38,10 +38,6 @@ trait TargetCamera extends Camera {
   
   var _getRigCamPositionAndTarget: js.Any = js.native
   
-  var _globalCurrentTarget: Vector3 = js.native
-  
-  var _globalCurrentUpVector: Vector3 = js.native
-  
   /** @hidden */
   var _initialFocalDistance: Double = js.native
   
@@ -64,6 +60,10 @@ trait TargetCamera extends Camera {
   var _storedRotationQuaternion: js.Any = js.native
   
   var _tmpQuaternion: js.Any = js.native
+  
+  var _tmpTargetVector: js.Any = js.native
+  
+  var _tmpUpVector: js.Any = js.native
   
   /** @hidden */
   var _transformedReferencePoint: Vector3 = js.native
@@ -97,6 +97,20 @@ trait TargetCamera extends Camera {
     */
   def getTarget(): Vector3 = js.native
   
+  /** Gets or sets a boolean indicating that the scaling of the parent hierarchy will not be taken in account by the camera */
+  var ignoreParentScaling: Boolean = js.native
+  
+  /**
+    * Speed multiplier for inverse camera panning
+    */
+  var inverseRotationSpeed: Double = js.native
+  
+  /**
+    * Reverses mouselook direction to 'natural' panning as opposed to traditional direct
+    * panning
+    */
+  var invertRotation: Boolean = js.native
+  
   /**
     * Define the current target of the camera as an object or a position.
     */
@@ -128,6 +142,13 @@ trait TargetCamera extends Camera {
     * Define the current speed of the camera
     */
   var speed: Double = js.native
+  
+  /**
+    * Defines the target point of the camera.
+    * The camera looks towards it form the radius distance.
+    */
+  def target: Vector3 = js.native
+  def target_=(value: Vector3): Unit = js.native
   
   /**
     * When set, the up vector of the camera will be updated by the rotation of the camera

@@ -3,6 +3,7 @@ package typingsSlinky.c3.anon
 import typingsSlinky.c3.c3Booleans.`true`
 import typingsSlinky.c3.mod.ArrayOrString
 import typingsSlinky.c3.mod.AxisName
+import typingsSlinky.c3.mod.ChartType
 import typingsSlinky.c3.mod.Primitive
 import typingsSlinky.c3.mod.PrimitiveArray
 import typingsSlinky.d3Color.mod.HSLColor
@@ -53,10 +54,10 @@ trait Axes extends js.Object {
   var rows: js.UndefOr[js.Array[PrimitiveArray]] = js.native
   
   /** Select the plot type for the loaded data. */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[ChartType] = js.native
   
   /** Select the plot types for each individual data by ID. */
-  var types: js.UndefOr[Record[String, String]] = js.native
+  var types: js.UndefOr[Record[String, ChartType]] = js.native
   
   /** ID of data to remove, or list of IDs of data to remove, or `true` to remove all data. */
   var unload: js.UndefOr[`true` | ArrayOrString] = js.native
@@ -169,13 +170,13 @@ object Axes {
     def deleteRows: Self = this.set("rows", js.undefined)
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ChartType): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
     
     @scala.inline
-    def setTypes(value: Record[String, String]): Self = this.set("types", value.asInstanceOf[js.Any])
+    def setTypes(value: Record[String, ChartType]): Self = this.set("types", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTypes: Self = this.set("types", js.undefined)

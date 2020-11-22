@@ -1,10 +1,10 @@
 package typingsSlinky.expo
 
-import typingsSlinky.expo.anon.Data
 import typingsSlinky.expo.anon.Day
 import typingsSlinky.expo.anon.GcmSenderId
 import typingsSlinky.expo.anon.Interval
 import typingsSlinky.expo.anon.IntervalMs
+import typingsSlinky.expo.anon.Type
 import typingsSlinky.expo.notificationsTypesMod.ActionType
 import typingsSlinky.expo.notificationsTypesMod.Channel
 import typingsSlinky.expo.notificationsTypesMod.LocalNotification
@@ -47,7 +47,7 @@ object notificationsMod extends js.Object {
     
     def getBadgeNumberAsync(): js.Promise[Double] = js.native
     
-    def getDevicePushTokenAsync(config: GcmSenderId): js.Promise[Data] = js.native
+    def getDevicePushTokenAsync(config: GcmSenderId): js.Promise[Type] = js.native
     
     def getExpoPushTokenAsync(): js.Promise[String] = js.native
     

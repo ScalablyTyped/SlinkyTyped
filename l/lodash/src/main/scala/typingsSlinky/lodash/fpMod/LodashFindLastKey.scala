@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashFindLastKey extends LodashConvertible {
+trait LodashFindLastKey extends js.Object {
   
   def apply[T](
     predicate: ValueIteratee[

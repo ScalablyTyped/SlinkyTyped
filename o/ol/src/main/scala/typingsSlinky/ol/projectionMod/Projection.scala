@@ -12,32 +12,77 @@ trait Projection extends js.Object {
   
   def canWrapX(): Boolean = js.native
   
+  /**
+    * Get the axis orientation of this projection.
+    * Example values are:
+    * enu - the default easting, northing, elevation.
+    * neu - northing, easting, up - useful for "lat/long" geographic coordinates,
+    *     or south orientated transverse mercator.
+    * wnu - westing, northing, up - some planetary coordinate systems have
+    *     "west positive" coordinate systems
+    */
   def getAxisOrientation(): String = js.native
   
+  /**
+    * Get the code for this projection, e.g. 'EPSG:4326'.
+    */
   def getCode(): String = js.native
   
   def getDefaultTileGrid(): typingsSlinky.ol.tilegridTileGridMod.default = js.native
   
+  /**
+    * Get the validity extent for this projection.
+    */
   def getExtent(): Extent = js.native
   
-  def getMetersPerUnit(): Double = js.native
+  /**
+    * Get the amount of meters per unit of this projection.  If the projection is
+    * not configured with metersPerUnit or a units identifier, the return is
+    * undefined.
+    */
+  def getMetersPerUnit(): js.UndefOr[Double] = js.native
   
-  def getPointResolutionFunc(): js.Function2[/* p0 */ Double, /* p1 */ Coordinate, Double] = js.native
+  /**
+    * Get the custom point resolution function for this projection (if set).
+    */
+  def getPointResolutionFunc(): js.Function2[/* p0 */ Double, /* p1 */ Coordinate, js.UndefOr[Double]] = js.native
   
+  /**
+    * Get the units of this projection.
+    */
   def getUnits(): Units = js.native
   
+  /**
+    * Get the world extent for this projection.
+    */
   def getWorldExtent(): Extent = js.native
   
+  /**
+    * Is this projection a global projection which spans the whole world?
+    */
   def isGlobal(): Boolean = js.native
   
   def setDefaultTileGrid(tileGrid: typingsSlinky.ol.tilegridTileGridMod.default): Unit = js.native
   
+  /**
+    * Set the validity extent for this projection.
+    */
   def setExtent(extent: Extent): Unit = js.native
   
+  /**
+    * Set the getPointResolution function (see {@link module:ol/proj~getPointResolution}
+    * for this projection.
+    */
   def setGetPointResolution(func: js.Function2[/* p0 */ Double, /* p1 */ Coordinate, Double]): Unit = js.native
   
+  /**
+    * Set if the projection is a global projection which spans the whole world
+    */
   def setGlobal(global: Boolean): Unit = js.native
   
+  /**
+    * Set the world extent for this projection.
+    */
   def setWorldExtent(worldExtent: Extent): Unit = js.native
 }
 object Projection {
@@ -49,8 +94,8 @@ object Projection {
     getCode: () => String,
     getDefaultTileGrid: () => typingsSlinky.ol.tilegridTileGridMod.default,
     getExtent: () => Extent,
-    getMetersPerUnit: () => Double,
-    getPointResolutionFunc: () => js.Function2[/* p0 */ Double, /* p1 */ Coordinate, Double],
+    getMetersPerUnit: () => js.UndefOr[Double],
+    getPointResolutionFunc: () => js.Function2[/* p0 */ Double, /* p1 */ Coordinate, js.UndefOr[Double]],
     getUnits: () => Units,
     getWorldExtent: () => Extent,
     isGlobal: () => Boolean,
@@ -95,10 +140,10 @@ object Projection {
     def setGetExtent(value: () => Extent): Self = this.set("getExtent", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGetMetersPerUnit(value: () => Double): Self = this.set("getMetersPerUnit", js.Any.fromFunction0(value))
+    def setGetMetersPerUnit(value: () => js.UndefOr[Double]): Self = this.set("getMetersPerUnit", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGetPointResolutionFunc(value: () => js.Function2[/* p0 */ Double, /* p1 */ Coordinate, Double]): Self = this.set("getPointResolutionFunc", js.Any.fromFunction0(value))
+    def setGetPointResolutionFunc(value: () => js.Function2[/* p0 */ Double, /* p1 */ Coordinate, js.UndefOr[Double]]): Self = this.set("getPointResolutionFunc", js.Any.fromFunction0(value))
     
     @scala.inline
     def setGetUnits(value: () => Units): Self = this.set("getUnits", js.Any.fromFunction0(value))

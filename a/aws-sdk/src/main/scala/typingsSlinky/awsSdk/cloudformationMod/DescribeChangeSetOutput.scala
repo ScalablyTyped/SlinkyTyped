@@ -43,6 +43,11 @@ trait DescribeChangeSetOutput extends js.Object {
   var ExecutionStatus: js.UndefOr[typingsSlinky.awsSdk.cloudformationMod.ExecutionStatus] = js.native
   
   /**
+    * Verifies if IncludeNestedStacks is set to True.
+    */
+  var IncludeNestedStacks: js.UndefOr[typingsSlinky.awsSdk.cloudformationMod.IncludeNestedStacks] = js.native
+  
+  /**
     * If the output exceeds 1 MB, a string that identifies the next page of changes. If there is no additional page, this value is null.
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.cloudformationMod.NextToken] = js.native
@@ -58,9 +63,19 @@ trait DescribeChangeSetOutput extends js.Object {
   var Parameters: js.UndefOr[typingsSlinky.awsSdk.cloudformationMod.Parameters] = js.native
   
   /**
+    * Specifies the change set ID of the parent change set in the current nested change set hierarchy.
+    */
+  var ParentChangeSetId: js.UndefOr[ChangeSetId] = js.native
+  
+  /**
     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for the specified monitoring period afterwards.
     */
   var RollbackConfiguration: js.UndefOr[typingsSlinky.awsSdk.cloudformationMod.RollbackConfiguration] = js.native
+  
+  /**
+    * Specifies the change set ID of the root change set in the current nested change set hierarchy.
+    */
+  var RootChangeSetId: js.UndefOr[ChangeSetId] = js.native
   
   /**
     * The ARN of the stack that is associated with the change set.
@@ -159,6 +174,12 @@ object DescribeChangeSetOutput {
     def deleteExecutionStatus: Self = this.set("ExecutionStatus", js.undefined)
     
     @scala.inline
+    def setIncludeNestedStacks(value: IncludeNestedStacks): Self = this.set("IncludeNestedStacks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIncludeNestedStacks: Self = this.set("IncludeNestedStacks", js.undefined)
+    
+    @scala.inline
     def setNextToken(value: NextToken): Self = this.set("NextToken", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -183,10 +204,22 @@ object DescribeChangeSetOutput {
     def deleteParameters: Self = this.set("Parameters", js.undefined)
     
     @scala.inline
+    def setParentChangeSetId(value: ChangeSetId): Self = this.set("ParentChangeSetId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParentChangeSetId: Self = this.set("ParentChangeSetId", js.undefined)
+    
+    @scala.inline
     def setRollbackConfiguration(value: RollbackConfiguration): Self = this.set("RollbackConfiguration", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRollbackConfiguration: Self = this.set("RollbackConfiguration", js.undefined)
+    
+    @scala.inline
+    def setRootChangeSetId(value: ChangeSetId): Self = this.set("RootChangeSetId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRootChangeSetId: Self = this.set("RootChangeSetId", js.undefined)
     
     @scala.inline
     def setStackId(value: StackId): Self = this.set("StackId", value.asInstanceOf[js.Any])

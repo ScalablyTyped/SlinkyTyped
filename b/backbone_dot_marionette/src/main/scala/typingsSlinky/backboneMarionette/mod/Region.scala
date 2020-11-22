@@ -32,7 +32,7 @@ class Region ()
     * Override this method to change how the new view is appended to the
     * `$el` that the region is managing
     */
-  def attachHtml(view: typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions]]): Unit = js.native
+  def attachHtml(view: typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions, js.Object]]): Unit = js.native
   
   /**
     * Add sibling to the DOM immediately before the DOM node el. The
@@ -58,13 +58,13 @@ class Region ()
   /**
     * @returns view that this region has.
     */
-  var currentView: typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions]] = js.native
+  var currentView: typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions, js.Object]] = js.native
   
   /**
     * Destroys the view taking into consideration if is a View descendant
     * or vanilla Backbone view.
     */
-  def destroyView[TModel /* <: Model[_, ModelSetOptions] */](view: typingsSlinky.backbone.mod.View[TModel]): typingsSlinky.backbone.mod.View[TModel] = js.native
+  def destroyView[TModel /* <: Model[_, ModelSetOptions, js.Object] */](view: typingsSlinky.backbone.mod.View[TModel]): typingsSlinky.backbone.mod.View[TModel] = js.native
   
   /**
     * Remove the inner contents of el from the DOM while leaving el itself
@@ -91,7 +91,7 @@ class Region ()
     * Empties the Region without destroying the view, returns the detached
     * view.
     */
-  def detachView(): typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions]] = js.native
+  def detachView(): typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions, js.Object]] = js.native
   
   /**
     * Contains the element that this region should manage.
@@ -151,7 +151,7 @@ class Region ()
     * Override the region's removeView method to change how and when the
     * view is destroyed / removed from the DOM.
     */
-  def removeView(view: typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions]]): Unit = js.native
+  def removeView(view: typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions, js.Object]]): Unit = js.native
   
   /**
     * Remove oldEl from the DOM and put newEl in its place.
@@ -185,6 +185,9 @@ class Region ()
     * Renders and displays the specified view in this region.
     * @param view the view to display.
     */
-  def show(view: typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions]]): Unit = js.native
-  def show(view: typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions]], options: RegionViewOptions): Unit = js.native
+  def show(view: typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions, js.Object]]): Unit = js.native
+  def show(
+    view: typingsSlinky.backbone.mod.View[Model[_, ModelSetOptions, js.Object]],
+    options: RegionViewOptions
+  ): Unit = js.native
 }

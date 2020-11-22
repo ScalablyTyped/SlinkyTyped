@@ -1,27 +1,20 @@
 package typingsSlinky.awsSdkClientS3Node.typesNoSuchUploadMod
 
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait NoSuchUpload extends ServiceException[NoSuchUploadDetails] {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_NoSuchUploadDetails> * / any */ @js.native
+trait NoSuchUpload extends js.Object {
   
-  @JSName("name")
-  var name_NoSuchUpload: typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.NoSuchUpload = js.native
+  var name: typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.NoSuchUpload = js.native
 }
 object NoSuchUpload {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: NoSuchUploadDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.NoSuchUpload
-  ): NoSuchUpload = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientS3Node.awsSdkClientS3NodeStrings.NoSuchUpload): NoSuchUpload = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoSuchUpload]
   }
   

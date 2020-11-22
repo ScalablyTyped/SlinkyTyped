@@ -23,56 +23,61 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.reactStrings.`additions text`
-import typingsSlinky.react.reactStrings.`inline`
-import typingsSlinky.react.reactStrings.additions
-import typingsSlinky.react.reactStrings.all
-import typingsSlinky.react.reactStrings.ascending
-import typingsSlinky.react.reactStrings.assertive
-import typingsSlinky.react.reactStrings.both
-import typingsSlinky.react.reactStrings.copy
-import typingsSlinky.react.reactStrings.date
-import typingsSlinky.react.reactStrings.decimal
-import typingsSlinky.react.reactStrings.descending
-import typingsSlinky.react.reactStrings.dialog
-import typingsSlinky.react.reactStrings.email
-import typingsSlinky.react.reactStrings.execute
-import typingsSlinky.react.reactStrings.grammar
-import typingsSlinky.react.reactStrings.grid
-import typingsSlinky.react.reactStrings.horizontal
-import typingsSlinky.react.reactStrings.inherit
-import typingsSlinky.react.reactStrings.link
-import typingsSlinky.react.reactStrings.list
-import typingsSlinky.react.reactStrings.listbox
-import typingsSlinky.react.reactStrings.location
-import typingsSlinky.react.reactStrings.menu
-import typingsSlinky.react.reactStrings.mixed
-import typingsSlinky.react.reactStrings.move
-import typingsSlinky.react.reactStrings.no
-import typingsSlinky.react.reactStrings.none
-import typingsSlinky.react.reactStrings.numeric
-import typingsSlinky.react.reactStrings.off
-import typingsSlinky.react.reactStrings.on
-import typingsSlinky.react.reactStrings.other
-import typingsSlinky.react.reactStrings.page
-import typingsSlinky.react.reactStrings.polite
-import typingsSlinky.react.reactStrings.popup
-import typingsSlinky.react.reactStrings.removals
-import typingsSlinky.react.reactStrings.search
-import typingsSlinky.react.reactStrings.spelling
-import typingsSlinky.react.reactStrings.step
-import typingsSlinky.react.reactStrings.tel
-import typingsSlinky.react.reactStrings.text
-import typingsSlinky.react.reactStrings.time
-import typingsSlinky.react.reactStrings.tree
-import typingsSlinky.react.reactStrings.url
-import typingsSlinky.react.reactStrings.vertical
-import typingsSlinky.react.reactStrings.yes
 import typingsSlinky.reactWebcam.mod.WebcamProps
 import typingsSlinky.reactWebcam.mod.default
+import typingsSlinky.reactWebcam.reactWebcamStrings.`additions removals`
+import typingsSlinky.reactWebcam.reactWebcamStrings.`additions text`
+import typingsSlinky.reactWebcam.reactWebcamStrings.`inline`
+import typingsSlinky.reactWebcam.reactWebcamStrings.`removals additions`
+import typingsSlinky.reactWebcam.reactWebcamStrings.`removals text`
+import typingsSlinky.reactWebcam.reactWebcamStrings.`text additions`
+import typingsSlinky.reactWebcam.reactWebcamStrings.`text removals`
+import typingsSlinky.reactWebcam.reactWebcamStrings.additions
+import typingsSlinky.reactWebcam.reactWebcamStrings.all
+import typingsSlinky.reactWebcam.reactWebcamStrings.ascending
+import typingsSlinky.reactWebcam.reactWebcamStrings.assertive
+import typingsSlinky.reactWebcam.reactWebcamStrings.both
+import typingsSlinky.reactWebcam.reactWebcamStrings.copy
+import typingsSlinky.reactWebcam.reactWebcamStrings.date
+import typingsSlinky.reactWebcam.reactWebcamStrings.decimal
+import typingsSlinky.reactWebcam.reactWebcamStrings.descending
+import typingsSlinky.reactWebcam.reactWebcamStrings.dialog
+import typingsSlinky.reactWebcam.reactWebcamStrings.email
+import typingsSlinky.reactWebcam.reactWebcamStrings.execute
+import typingsSlinky.reactWebcam.reactWebcamStrings.grammar
+import typingsSlinky.reactWebcam.reactWebcamStrings.grid
+import typingsSlinky.reactWebcam.reactWebcamStrings.horizontal
 import typingsSlinky.reactWebcam.reactWebcamStrings.imageSlashjpeg
 import typingsSlinky.reactWebcam.reactWebcamStrings.imageSlashpng
 import typingsSlinky.reactWebcam.reactWebcamStrings.imageSlashwebp
+import typingsSlinky.reactWebcam.reactWebcamStrings.inherit
+import typingsSlinky.reactWebcam.reactWebcamStrings.link
+import typingsSlinky.reactWebcam.reactWebcamStrings.list
+import typingsSlinky.reactWebcam.reactWebcamStrings.listbox
+import typingsSlinky.reactWebcam.reactWebcamStrings.location
+import typingsSlinky.reactWebcam.reactWebcamStrings.menu
+import typingsSlinky.reactWebcam.reactWebcamStrings.mixed
+import typingsSlinky.reactWebcam.reactWebcamStrings.move
+import typingsSlinky.reactWebcam.reactWebcamStrings.no
+import typingsSlinky.reactWebcam.reactWebcamStrings.none
+import typingsSlinky.reactWebcam.reactWebcamStrings.numeric
+import typingsSlinky.reactWebcam.reactWebcamStrings.off
+import typingsSlinky.reactWebcam.reactWebcamStrings.on
+import typingsSlinky.reactWebcam.reactWebcamStrings.other
+import typingsSlinky.reactWebcam.reactWebcamStrings.page
+import typingsSlinky.reactWebcam.reactWebcamStrings.polite
+import typingsSlinky.reactWebcam.reactWebcamStrings.popup
+import typingsSlinky.reactWebcam.reactWebcamStrings.removals
+import typingsSlinky.reactWebcam.reactWebcamStrings.search
+import typingsSlinky.reactWebcam.reactWebcamStrings.spelling
+import typingsSlinky.reactWebcam.reactWebcamStrings.step
+import typingsSlinky.reactWebcam.reactWebcamStrings.tel
+import typingsSlinky.reactWebcam.reactWebcamStrings.text
+import typingsSlinky.reactWebcam.reactWebcamStrings.time
+import typingsSlinky.reactWebcam.reactWebcamStrings.tree
+import typingsSlinky.reactWebcam.reactWebcamStrings.url
+import typingsSlinky.reactWebcam.reactWebcamStrings.vertical
+import typingsSlinky.reactWebcam.reactWebcamStrings.yes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -218,7 +223,9 @@ object ReactWebcam {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

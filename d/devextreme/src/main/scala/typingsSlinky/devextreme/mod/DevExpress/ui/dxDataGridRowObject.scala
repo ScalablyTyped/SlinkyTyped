@@ -7,34 +7,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDataGridRowObject extends js.Object {
   
-  /** @name dxDataGridRowObject.data */
+  /**
+    * [descr:dxDataGridRowObject.data]
+    */
   var data: js.UndefOr[js.Any] = js.native
   
-  /** @name dxDataGridRowObject.groupIndex */
+  /**
+    * [descr:dxDataGridRowObject.groupIndex]
+    */
   var groupIndex: js.UndefOr[Double] = js.native
   
-  /** @name dxDataGridRowObject.isEditing */
+  /**
+    * [descr:dxDataGridRowObject.isEditing]
+    */
   var isEditing: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDataGridRowObject.isExpanded */
+  /**
+    * [descr:dxDataGridRowObject.isExpanded]
+    */
   var isExpanded: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDataGridRowObject.isNewRow */
+  /**
+    * [descr:dxDataGridRowObject.isNewRow]
+    */
   var isNewRow: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDataGridRowObject.isSelected */
+  /**
+    * [descr:dxDataGridRowObject.isSelected]
+    */
   var isSelected: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDataGridRowObject.key */
+  /**
+    * [descr:dxDataGridRowObject.key]
+    */
   var key: js.UndefOr[js.Any] = js.native
   
-  /** @name dxDataGridRowObject.rowIndex */
+  /**
+    * [descr:dxDataGridRowObject.rowIndex]
+    */
   var rowIndex: js.UndefOr[Double] = js.native
   
-  /** @name dxDataGridRowObject.rowType */
+  /**
+    * [descr:dxDataGridRowObject.rowType]
+    */
   var rowType: js.UndefOr[String] = js.native
   
-  /** @name dxDataGridRowObject.values */
+  /**
+    * [descr:dxDataGridRowObject.values]
+    */
   var values: js.UndefOr[js.Array[_]] = js.native
 }
 object dxDataGridRowObject {

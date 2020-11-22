@@ -101,7 +101,6 @@ trait BaseJQueryEventObject extends Event {
   
   /**
     * For key or mouse events, this property indicates the specific key or button that was pressed.
-    * @deprecated Use `key` for KeyEvents or `button` for MouseEvents instead.
     * @see {@link https://api.jquery.com/event.which/}
     */
   var which: Double = js.native

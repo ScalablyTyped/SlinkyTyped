@@ -10,6 +10,7 @@ import org.scalajs.dom.raw.WebGLRenderingContext
 import org.scalajs.dom.raw.WebGLTexture
 import org.scalajs.dom.raw.WebGLUniformLocation
 import typingsSlinky.std.WebGLQuery
+import typingsSlinky.tensorflowTfjsBackendWebgl.texUtilMod.TextureConfig
 import typingsSlinky.tensorflowTfjsBackendWebgl.webglTypesMod.WebGL1DisjointQueryTimerExtension
 import typingsSlinky.tensorflowTfjsBackendWebgl.webglTypesMod.WebGL2DisjointQueryTimerExtension
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.PixelData
@@ -136,7 +137,7 @@ class GPGPUContext () extends js.Object {
   def setProgram(): Unit = js.native
   def setProgram(program: WebGLProgram): Unit = js.native
   
-  var textureConfig: js.Any = js.native
+  var textureConfig: TextureConfig = js.native
   
   var throwIfDisposed: js.Any = js.native
   

@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.smbFileShareMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.outputMod.storagegateway.SmbFileShareCacheAttributes
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -24,9 +25,19 @@ class SmbFileShare protected () extends CustomResource {
   def this(name: String, args: SmbFileShareArgs, opts: CustomResourceOptions) = this()
   
   /**
+    * A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
+    */
+  val adminUserLists: Output_[js.UndefOr[js.Array[String]]] = js.native
+  
+  /**
     * Amazon Resource Name (ARN) of the SMB File Share.
     */
   val arn: Output_[String] = js.native
+  
+  /**
+    * The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
+    */
+  val auditDestinationArn: Output_[js.UndefOr[String]] = js.native
   
   /**
     * The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
@@ -34,9 +45,24 @@ class SmbFileShare protected () extends CustomResource {
   val authentication: Output_[js.UndefOr[String]] = js.native
   
   /**
+    * Refresh cache information. see Cache Attributes for more details.
+    */
+  val cacheAttributes: Output_[js.UndefOr[SmbFileShareCacheAttributes]] = js.native
+  
+  /**
+    * The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
+    */
+  val caseSensitivity: Output_[js.UndefOr[String]] = js.native
+  
+  /**
     * The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
     */
   val defaultStorageClass: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * The name of the file share. Must be set if an S3 prefix name is set in `locationArn`.
+    */
+  val fileShareName: Output_[String] = js.native
   
   /**
     * ID of the SMB File Share.
@@ -97,6 +123,11 @@ class SmbFileShare protected () extends CustomResource {
     * The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
     */
   val roleArn: Output_[String] = js.native
+  
+  /**
+    * Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
+    */
+  val smbAclEnabled: Output_[js.UndefOr[Boolean]] = js.native
   
   /**
     * Key-value map of resource tags

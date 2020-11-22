@@ -5,24 +5,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IdGeneration extends js.Object {
+trait IdGeneration[T, U] extends js.Object {
   
   var connection: js.UndefOr[js.Object | Null] = js.native
   
   var idGeneration: js.UndefOr[String] = js.native
   
-  var transform: js.UndefOr[js.Function | Null] = js.native
+  var transform: js.UndefOr[js.Function1[/* doc */ T, U]] = js.native
 }
 object IdGeneration {
   
   @scala.inline
-  def apply(): IdGeneration = {
+  def apply[T, U](): IdGeneration[T, U] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[IdGeneration]
+    __obj.asInstanceOf[IdGeneration[T, U]]
   }
   
   @scala.inline
-  implicit class IdGenerationOps[Self <: IdGeneration] (val x: Self) extends AnyVal {
+  implicit class IdGenerationOps[Self <: IdGeneration[_, _], T, U] (val x: Self with (IdGeneration[T, U])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -52,12 +52,9 @@ object IdGeneration {
     def deleteIdGeneration: Self = this.set("idGeneration", js.undefined)
     
     @scala.inline
-    def setTransform(value: js.Function): Self = this.set("transform", value.asInstanceOf[js.Any])
+    def setTransform(value: /* doc */ T => U): Self = this.set("transform", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteTransform: Self = this.set("transform", js.undefined)
-    
-    @scala.inline
-    def setTransformNull: Self = this.set("transform", null)
   }
 }

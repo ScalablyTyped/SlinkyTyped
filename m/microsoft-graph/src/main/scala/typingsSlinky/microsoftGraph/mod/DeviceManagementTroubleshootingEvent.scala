@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeviceManagementTroubleshootingEvent extends Entity {
   
   // Id used for tracing the failure in the service.
-  var correlationId: js.UndefOr[String] = js.native
+  var correlationId: js.UndefOr[NullableOption[String]] = js.native
   
   // Time when the event occurred .
   var eventDateTime: js.UndefOr[String] = js.native
@@ -37,10 +37,13 @@ object DeviceManagementTroubleshootingEvent {
     }
     
     @scala.inline
-    def setCorrelationId(value: String): Self = this.set("correlationId", value.asInstanceOf[js.Any])
+    def setCorrelationId(value: NullableOption[String]): Self = this.set("correlationId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCorrelationId: Self = this.set("correlationId", js.undefined)
+    
+    @scala.inline
+    def setCorrelationIdNull: Self = this.set("correlationId", null)
     
     @scala.inline
     def setEventDateTime(value: String): Self = this.set("eventDateTime", value.asInstanceOf[js.Any])

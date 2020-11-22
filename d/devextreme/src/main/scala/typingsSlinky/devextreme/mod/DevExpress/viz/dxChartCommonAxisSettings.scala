@@ -12,67 +12,109 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartCommonAxisSettings extends js.Object {
   
-  /** @name dxChart.Options.commonAxisSettings.allowDecimals */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.allowDecimals]
+    */
   var allowDecimals: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.breakStyle */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.breakStyle]
+    */
   var breakStyle: js.UndefOr[Line] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.color */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.constantLineStyle */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.constantLineStyle]
+    */
   var constantLineStyle: js.UndefOr[dxChartCommonAxisSettingsConstantLineStyle] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.discreteAxisDivisionMode */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.discreteAxisDivisionMode]
+    */
   var discreteAxisDivisionMode: js.UndefOr[betweenLabels | crossLabels] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.endOnTick */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.endOnTick]
+    */
   var endOnTick: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.grid */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.grid]
+    */
   var grid: js.UndefOr[ColorOpacity] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.inverted */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.inverted]
+    */
   var inverted: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.label */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.label]
+    */
   var label: js.UndefOr[dxChartCommonAxisSettingsLabel] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.maxValueMargin */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.maxValueMargin]
+    */
   var maxValueMargin: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.minValueMargin */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.minValueMargin]
+    */
   var minValueMargin: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.minorGrid */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.minorGrid]
+    */
   var minorGrid: js.UndefOr[ColorOpacity] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.minorTick */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.minorTick]
+    */
   var minorTick: js.UndefOr[Length] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.opacity */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.opacity]
+    */
   var opacity: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.placeholderSize */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.placeholderSize]
+    */
   var placeholderSize: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.stripStyle */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.stripStyle]
+    */
   var stripStyle: js.UndefOr[dxChartCommonAxisSettingsStripStyle] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.tick */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.tick]
+    */
   var tick: js.UndefOr[Length] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.title */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.title]
+    */
   var title: js.UndefOr[dxChartCommonAxisSettingsTitle] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.valueMarginsEnabled */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.valueMarginsEnabled]
+    */
   var valueMarginsEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.visible */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.width */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxChartCommonAxisSettings {

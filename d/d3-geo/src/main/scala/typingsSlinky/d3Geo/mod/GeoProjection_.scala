@@ -306,6 +306,26 @@ trait GeoProjection_ extends GeoStreamWrapper {
   def preclip(preclip: js.Function1[/* stream */ GeoStream_, GeoStream_]): this.type = js.native
   
   /**
+    * Returns true if x-reflection is enabled, which defaults to false.
+    */
+  def reflectX(): Boolean = js.native
+  /**
+    * Sets whether or not the x-dimension is reflected (negated) in the output.
+    * @param reflect Whether or not the x-dimension is reflected (negated) in the output.
+    */
+  def reflectX(reflect: Boolean): this.type = js.native
+  
+  /**
+    * Returns true if y-reflection is enabled, which defaults to false.
+    */
+  def reflectY(): Boolean = js.native
+  /**
+    * Sets whether or not the y-dimension is reflected (negated) in the output.
+    * @param reflect Whether or not the y-dimension is reflected (negated) in the output.
+    */
+  def reflectY(reflect: Boolean): this.type = js.native
+  
+  /**
     * Returns the current rotation [lambda, phi, gamma] specifying the rotation angles in degrees about each spherical axis.
     * (These correspond to yaw, pitch and roll.) which defaults [0, 0, 0].
     */

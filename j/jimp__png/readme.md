@@ -1,7 +1,7 @@
 
 # Scala.js typings for jimp__png
 
-Typings are for version 0.14.0
+Typings are for version 0.16.1
 
 ## Library description:
 Default Jimp png encoder/decoder.

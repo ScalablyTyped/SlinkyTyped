@@ -11,6 +11,11 @@ trait GetRecommendationsResponse extends js.Object {
     * A list of recommendations sorted in ascending order by prediction score. There can be a maximum of 500 items in the list.
     */
   var itemList: js.UndefOr[ItemList] = js.native
+  
+  /**
+    * The ID of the recommendation.
+    */
+  var recommendationId: js.UndefOr[RecommendationID] = js.native
 }
 object GetRecommendationsResponse {
   
@@ -43,5 +48,11 @@ object GetRecommendationsResponse {
     
     @scala.inline
     def deleteItemList: Self = this.set("itemList", js.undefined)
+    
+    @scala.inline
+    def setRecommendationId(value: RecommendationID): Self = this.set("recommendationId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRecommendationId: Self = this.set("recommendationId", js.undefined)
   }
 }

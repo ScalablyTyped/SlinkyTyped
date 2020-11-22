@@ -8,13 +8,14 @@ import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.LogicalExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LogicalExpressionBuilder extends js.Object {
+  
   def apply(operator: AmpersandAmpersand, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
   def apply(operator: QuestionmarkQuestionmark, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
   def apply(operator: VerticallineVerticalline, left: ExpressionKind, right: ExpressionKind): LogicalExpression = js.native
+  
   def from(params: LeftLoc): LogicalExpression = js.native
 }
-

@@ -64,6 +64,8 @@ trait Format extends js.Object {
   
   var spaceSeparated: js.UndefOr[Boolean] = js.native
   
+  var spaceSeparatedAbbreviation: js.UndefOr[Boolean] = js.native
+  
   var spaceSeparatedCurrency: js.UndefOr[Boolean] = js.native
   
   var thousandSeparated: js.UndefOr[Boolean] = js.native
@@ -208,6 +210,12 @@ object Format {
     
     @scala.inline
     def deleteSpaceSeparated: Self = this.set("spaceSeparated", js.undefined)
+    
+    @scala.inline
+    def setSpaceSeparatedAbbreviation(value: Boolean): Self = this.set("spaceSeparatedAbbreviation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSpaceSeparatedAbbreviation: Self = this.set("spaceSeparatedAbbreviation", js.undefined)
     
     @scala.inline
     def setSpaceSeparatedCurrency(value: Boolean): Self = this.set("spaceSeparatedCurrency", value.asInstanceOf[js.Any])

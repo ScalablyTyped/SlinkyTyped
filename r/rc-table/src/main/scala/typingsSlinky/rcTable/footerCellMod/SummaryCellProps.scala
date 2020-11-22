@@ -1,12 +1,15 @@
 package typingsSlinky.rcTable.footerCellMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.rcTable.interfaceMod.AlignType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SummaryCellProps extends js.Object {
+  
+  var align: js.UndefOr[AlignType] = js.native
   
   var children: js.UndefOr[ReactElement] = js.native
   
@@ -43,6 +46,12 @@ object SummaryCellProps {
     
     @scala.inline
     def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAlign(value: AlignType): Self = this.set("align", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAlign: Self = this.set("align", js.undefined)
     
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])

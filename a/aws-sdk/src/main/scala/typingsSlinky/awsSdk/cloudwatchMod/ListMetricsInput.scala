@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListMetricsInput extends js.Object {
   
   /**
-    * The dimensions to filter against.
+    * The dimensions to filter against. Only the dimensions that match exactly will be returned.
     */
   var Dimensions: js.UndefOr[DimensionFilters] = js.native
   
   /**
-    * The name of the metric to filter against.
+    * The name of the metric to filter against. Only the metrics with names that match exactly will be returned.
     */
   var MetricName: js.UndefOr[typingsSlinky.awsSdk.cloudwatchMod.MetricName] = js.native
   
   /**
-    * The namespace to filter against.
+    * The metric namespace to filter against. Only the namespace that matches exactly will be returned.
     */
   var Namespace: js.UndefOr[typingsSlinky.awsSdk.cloudwatchMod.Namespace] = js.native
   

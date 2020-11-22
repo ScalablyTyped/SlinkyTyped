@@ -8,13 +8,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FindParametersProperties extends js.Object {
   
   /**
-    * Determines whether to look for an exact match of the search text or not. If `true`, searches for a value that contains the provided [searchText](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#searchText). This is a case-insensitive search. If `false`, searches for an exact match of the [searchText](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#searchText) string. The exact match is case-sensitive.
+    * Determines whether to look for an exact match of the search text or not.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#contains)
-    *
-    * @default true
     */
   var contains: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Specify the geodatabase version to search.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#gdbVersion)
+    */
+  var gdbVersion: js.UndefOr[String] = js.native
   
   /**
     * Specify the number of decimal places for the geometries returned by the task.
@@ -24,21 +29,21 @@ trait FindParametersProperties extends js.Object {
   var geometryPrecision: js.UndefOr[Double] = js.native
   
   /**
-    * The layers to perform the find operation on. The layers are specified as a comma-separated list of layer ids. The list of ids is returned in [MapImageLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-MapImageLayer.html) layerInfos.
+    * The layers to perform the find operation on.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#layerIds)
     */
   var layerIds: js.UndefOr[js.Array[Double]] = js.native
   
   /**
-    * The maximum allowable offset used for generalizing geometries returned by the find operation. The offset is in the units of [outSpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#outSpatialReference). If [outSpatialReference](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#outSpatialReference) is not defined, the spatial reference of the map is used.
+    * The maximum allowable offset used for generalizing geometries returned by the find operation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#maxAllowableOffset)
     */
   var maxAllowableOffset: js.UndefOr[Double] = js.native
   
   /**
-    * The spatial reference of the output geometries. If this is not specified, the output geometries are returned in the spatial reference of the map.
+    * The spatial reference of the output geometries.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#outSpatialReference)
     */
@@ -48,13 +53,11 @@ trait FindParametersProperties extends js.Object {
     * If `true`, the output will include the geometry associated with each result.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#returnGeometry)
-    *
-    * @default false
     */
   var returnGeometry: js.UndefOr[Boolean] = js.native
   
   /**
-    * The names of the fields of a layer to search. The fields are specified as a comma-separated list of field names. If this parameter is not specified, all fields are searched by default.
+    * The names of the fields of a layer to search.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-FindParameters.html#searchFields)
     */
@@ -95,6 +98,12 @@ object FindParametersProperties {
     
     @scala.inline
     def deleteContains: Self = this.set("contains", js.undefined)
+    
+    @scala.inline
+    def setGdbVersion(value: String): Self = this.set("gdbVersion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGdbVersion: Self = this.set("gdbVersion", js.undefined)
     
     @scala.inline
     def setGeometryPrecision(value: Double): Self = this.set("geometryPrecision", value.asInstanceOf[js.Any])

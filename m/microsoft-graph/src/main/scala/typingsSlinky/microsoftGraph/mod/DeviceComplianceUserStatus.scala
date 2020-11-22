@@ -20,10 +20,10 @@ trait DeviceComplianceUserStatus extends Entity {
   var status: js.UndefOr[ComplianceStatus] = js.native
   
   // User name of the DevicePolicyStatus.
-  var userDisplayName: js.UndefOr[String] = js.native
+  var userDisplayName: js.UndefOr[NullableOption[String]] = js.native
   
   // UserPrincipalName.
-  var userPrincipalName: js.UndefOr[String] = js.native
+  var userPrincipalName: js.UndefOr[NullableOption[String]] = js.native
 }
 object DeviceComplianceUserStatus {
   
@@ -67,15 +67,21 @@ object DeviceComplianceUserStatus {
     def deleteStatus: Self = this.set("status", js.undefined)
     
     @scala.inline
-    def setUserDisplayName(value: String): Self = this.set("userDisplayName", value.asInstanceOf[js.Any])
+    def setUserDisplayName(value: NullableOption[String]): Self = this.set("userDisplayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserDisplayName: Self = this.set("userDisplayName", js.undefined)
     
     @scala.inline
-    def setUserPrincipalName(value: String): Self = this.set("userPrincipalName", value.asInstanceOf[js.Any])
+    def setUserDisplayNameNull: Self = this.set("userDisplayName", null)
+    
+    @scala.inline
+    def setUserPrincipalName(value: NullableOption[String]): Self = this.set("userPrincipalName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserPrincipalName: Self = this.set("userPrincipalName", js.undefined)
+    
+    @scala.inline
+    def setUserPrincipalNameNull: Self = this.set("userPrincipalName", null)
   }
 }

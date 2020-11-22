@@ -37,6 +37,12 @@ trait FancytreeStatic extends js.Object {
   def getNode(el: Element): FancytreeNode = js.native
   def getNode(el: Event): FancytreeNode = js.native
   
+  def getTree(el: String): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
+  def getTree(el: Double): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
+  def getTree(el: JQuery): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
+  def getTree(el: Element): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
+  def getTree(el: Event): typingsSlinky.jqueryFancytree.Fancytree.Fancytree = js.native
+  
   def info(msg: String): Unit = js.native
   
   /** Convert a keydown event to a string like 'ctrl+a', 'ctrl+shift+f2'.  */

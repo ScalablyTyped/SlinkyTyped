@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ProjectedMetric extends js.Object {
   
   /**
-    * The name of the projected utilization metric.  Memory metrics are only returned for resources that have the unified CloudWatch agent installed on them. For more information, see Enabling Memory Utilization with the CloudWatch Agent. 
+    * The name of the projected utilization metric.
     */
   var name: js.UndefOr[MetricName] = js.native
   

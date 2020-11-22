@@ -53,7 +53,7 @@ trait M2tsSettings extends js.Object {
   var Bitrate: js.UndefOr[integerMin0] = js.native
   
   /**
-    * If set to multiplex, use multiplex buffer model for accurate interleaving.  Setting to bufferModel to none can lead to lower latency, but low-memory devices may not be able to play back the stream without interruptions.
+    * Controls the timing accuracy for output network traffic. Leave as MULTIPLEX to ensure accurate network packet timing. Or set to NONE, which might result in lower latency but will result in more variability in output network packet timing. This variability might cause interruptions, jitter, or bursty behavior in your playback or receiving devices.
     */
   var BufferModel: js.UndefOr[M2tsBufferModel] = js.native
   

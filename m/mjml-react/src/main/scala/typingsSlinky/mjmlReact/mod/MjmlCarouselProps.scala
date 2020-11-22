@@ -1,8 +1,8 @@
 package typingsSlinky.mjmlReact.mod
 
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.Border
-import typingsSlinky.csstype.mod.Property.BorderRadius
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.BorderProperty
+import typingsSlinky.csstype.mod.BorderRadiusProperty
 import typingsSlinky.mjmlReact.mjmlReactStrings.hidden
 import typingsSlinky.mjmlReact.mjmlReactStrings.visible
 import scala.scalajs.js
@@ -14,7 +14,7 @@ trait MjmlCarouselProps extends js.Object {
   
   var align: js.UndefOr[String] = js.native
   
-  var backgroundColor: js.UndefOr[BackgroundColor] = js.native
+  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
   
   var borderRadius: js.UndefOr[String | Double] = js.native
   
@@ -24,9 +24,9 @@ trait MjmlCarouselProps extends js.Object {
   
   var rightIcon: js.UndefOr[String] = js.native
   
-  var tbBorder: js.UndefOr[Border[String | Double]] = js.native
+  var tbBorder: js.UndefOr[BorderProperty[String | Double]] = js.native
   
-  var tbBorderRadius: js.UndefOr[BorderRadius[String | Double]] = js.native
+  var tbBorderRadius: js.UndefOr[BorderRadiusProperty[String | Double]] = js.native
   
   var tbHoverBorderColor: js.UndefOr[String] = js.native
   
@@ -66,7 +66,7 @@ object MjmlCarouselProps {
     def deleteAlign: Self = this.set("align", js.undefined)
     
     @scala.inline
-    def setBackgroundColor(value: BackgroundColor): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColor(value: BackgroundColorProperty): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
@@ -96,13 +96,13 @@ object MjmlCarouselProps {
     def deleteRightIcon: Self = this.set("rightIcon", js.undefined)
     
     @scala.inline
-    def setTbBorder(value: Border[String | Double]): Self = this.set("tbBorder", value.asInstanceOf[js.Any])
+    def setTbBorder(value: BorderProperty[String | Double]): Self = this.set("tbBorder", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTbBorder: Self = this.set("tbBorder", js.undefined)
     
     @scala.inline
-    def setTbBorderRadius(value: BorderRadius[String | Double]): Self = this.set("tbBorderRadius", value.asInstanceOf[js.Any])
+    def setTbBorderRadius(value: BorderRadiusProperty[String | Double]): Self = this.set("tbBorderRadius", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTbBorderRadius: Self = this.set("tbBorderRadius", js.undefined)

@@ -2,6 +2,7 @@ package typingsSlinky.three
 
 import typingsSlinky.three.bufferAttributeMod.BufferAttribute
 import typingsSlinky.three.bufferGeometryMod.BufferGeometry
+import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.geometryMod.Geometry
 import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.matrix4Mod.Matrix4
@@ -16,8 +17,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object instancedMeshMod extends js.Object {
   
   @js.native
-  class InstancedMesh[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: Material | js.Array[Material] */] protected ()
-    extends Mesh[Geometry | BufferGeometry, Material | js.Array[Material]] {
+  class InstancedMesh[TGeometry /* <: Geometry | BufferGeometry */, TMaterial /* <: Material | js.Array[Material] */] protected () extends Mesh[TGeometry, TMaterial] {
     def this(geometry: TGeometry, material: TMaterial, count: Double) = this()
     
     var count: Double = js.native
@@ -27,6 +27,8 @@ object instancedMeshMod extends js.Object {
     var instanceMatrix: BufferAttribute = js.native
     
     val isInstancedMesh: `true` = js.native
+    
+    def setColorAt(index: Double, color: Color): Unit = js.native
     
     def setMatrixAt(index: Double, matrix: Matrix4): Unit = js.native
   }

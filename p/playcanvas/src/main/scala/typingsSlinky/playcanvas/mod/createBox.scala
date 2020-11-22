@@ -13,7 +13,7 @@ object createBox extends js.Object {
     * Creates a procedural box-shaped mesh.
     *
     * The size, shape and tesselation properties of the box can be controlled via function parameters. By
-    * default, the function will create a box centred on the object space origin with a width, length and
+    * default, the function will create a box centered on the object space origin with a width, length and
     * height of 1.0 unit and 10 segments in either axis (50 triangles per face).
     *
     * Note that the box is created with UVs in the range of 0 to 1 on each face. Additionally, tangent

@@ -14,13 +14,13 @@ trait LicenseDetails extends Entity {
     * Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object.
     * Read-only
     */
-  var skuId: js.UndefOr[String] = js.native
+  var skuId: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: 'AAD_Premium'.
     * Read-only
     */
-  var skuPartNumber: js.UndefOr[String] = js.native
+  var skuPartNumber: js.UndefOr[NullableOption[String]] = js.native
 }
 object LicenseDetails {
   
@@ -55,15 +55,21 @@ object LicenseDetails {
     def deleteServicePlans: Self = this.set("servicePlans", js.undefined)
     
     @scala.inline
-    def setSkuId(value: String): Self = this.set("skuId", value.asInstanceOf[js.Any])
+    def setSkuId(value: NullableOption[String]): Self = this.set("skuId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSkuId: Self = this.set("skuId", js.undefined)
     
     @scala.inline
-    def setSkuPartNumber(value: String): Self = this.set("skuPartNumber", value.asInstanceOf[js.Any])
+    def setSkuIdNull: Self = this.set("skuId", null)
+    
+    @scala.inline
+    def setSkuPartNumber(value: NullableOption[String]): Self = this.set("skuPartNumber", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSkuPartNumber: Self = this.set("skuPartNumber", js.undefined)
+    
+    @scala.inline
+    def setSkuPartNumberNull: Self = this.set("skuPartNumber", null)
   }
 }

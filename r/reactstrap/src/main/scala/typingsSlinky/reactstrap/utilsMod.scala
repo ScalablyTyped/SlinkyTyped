@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/utils", JSImport.Namespace)
+@JSImport("reactstrap/es/utils", JSImport.Namespace)
 @js.native
 object utilsMod extends js.Object {
   

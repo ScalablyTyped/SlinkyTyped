@@ -33,12 +33,12 @@ trait GetCustomDataIdentifierResponse extends js.Object {
   var id: js.UndefOr[string] = js.native
   
   /**
-    * An array that lists specific character sequences (ignore words) to exclude from the results. If the text matched by the regular expression is the same as any string in this array, Amazon Macie ignores it.
+    * An array that lists specific character sequences (ignore words) to exclude from the results. If the text matched by the regular expression is the same as any string in this array, Amazon Macie ignores it. Ignore words are case sensitive.
     */
   var ignoreWords: js.UndefOr[listOfString] = js.native
   
   /**
-    * An array that lists specific character sequences (keywords), one of which must be within proximity (maximumMatchDistance) of the regular expression to match.
+    * An array that lists specific character sequences (keywords), one of which must be within proximity (maximumMatchDistance) of the regular expression to match. Keywords aren't case sensitive.
     */
   var keywords: js.UndefOr[listOfString] = js.native
   

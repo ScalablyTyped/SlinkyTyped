@@ -2,6 +2,7 @@ package typingsSlinky.reactNative.anon
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
+import typingsSlinky.reactNative.mod.HostComponent
 import typingsSlinky.reactNative.mod.MeasureInWindowOnSuccessCallback
 import typingsSlinky.reactNative.mod.MeasureLayoutOnSuccessCallback
 import typingsSlinky.reactNative.mod.MeasureOnSuccessCallback
@@ -22,7 +23,7 @@ trait ReadonlyNativeMethods extends js.Object {
   val measureInWindow: js.Function1[/* callback */ MeasureInWindowOnSuccessCallback, Unit] = js.native
   
   val measureLayout: js.Function3[
-    /* relativeToNativeNode */ Double, 
+    /* relativeToNativeComponentRef */ HostComponent[_] | Double, 
     /* onSuccess */ MeasureLayoutOnSuccessCallback, 
     /* onFail */ js.Function0[Unit], 
     Unit
@@ -40,7 +41,7 @@ object ReadonlyNativeMethods {
     focus: () => Unit,
     measure: /* callback */ MeasureOnSuccessCallback => Unit,
     measureInWindow: /* callback */ MeasureInWindowOnSuccessCallback => Unit,
-    measureLayout: (/* relativeToNativeNode */ Double, /* onSuccess */ MeasureLayoutOnSuccessCallback, /* onFail */ js.Function0[Unit]) => Unit,
+    measureLayout: (/* relativeToNativeComponentRef */ HostComponent[_] | Double, /* onSuccess */ MeasureLayoutOnSuccessCallback, /* onFail */ js.Function0[Unit]) => Unit,
     refs: StringDictionary[ReactComponentClass[_]],
     setNativeProps: /* nativeProps */ js.Object => Unit
   ): ReadonlyNativeMethods = {
@@ -77,7 +78,7 @@ object ReadonlyNativeMethods {
     
     @scala.inline
     def setMeasureLayout(
-      value: (/* relativeToNativeNode */ Double, /* onSuccess */ MeasureLayoutOnSuccessCallback, /* onFail */ js.Function0[Unit]) => Unit
+      value: (/* relativeToNativeComponentRef */ HostComponent[_] | Double, /* onSuccess */ MeasureLayoutOnSuccessCallback, /* onFail */ js.Function0[Unit]) => Unit
     ): Self = this.set("measureLayout", js.Any.fromFunction3(value))
     
     @scala.inline

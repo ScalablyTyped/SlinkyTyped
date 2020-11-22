@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.DataType
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.Document
@@ -27,7 +26,7 @@ object constantsMod extends js.Object {
   object constants extends js.Object {
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/constants relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/constants relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -68,9 +67,6 @@ object constantsMod extends js.Object {
       def exposedToClient: Boolean = js.native
       def exposedToClient_=(newValue: Boolean): Unit = js.native
       
-      @JSName("model")
-      var model_FConstant: IModel = js.native
-      
       /**
         * In version 7.9.0: introduced
         */
@@ -96,7 +92,7 @@ object constantsMod extends js.Object {
       * Interfaces and instance classes for types from the Mendix sub meta model `Constants`.
       */
     /**
-      * See: {@link https://docs.mendix.com/refguide7/constants relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/constants relevant section in reference guide}
       */
     @js.native
     trait IConstant extends IDocument

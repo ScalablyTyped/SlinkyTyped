@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SegmentedControlSegment extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/segmented-control-segment
+  // Docs: https://electronjs.org/docs/api/structures/segmented-control-segment
   /**
     * Whether this segment is selectable. Default: true.
     */

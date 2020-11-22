@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jasmine-promise-matchers"
-version := "0.0-unknown-dt-20200515Z-d7b903"
+version := "0.0-unknown-dt-20201002Z-d7b903"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

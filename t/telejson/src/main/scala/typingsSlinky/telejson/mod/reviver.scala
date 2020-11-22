@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object reviver extends js.Object {
   
-  def apply(options: Options): js.ThisFunction2[/* this */ js.Any, /* key */ String, /* value */ String | ValueContainer, _] = js.native
+  def apply(options: Options): js.ThisFunction2[/* this */ js.Any, /* key */ String, /* value */ ValueContainer | String, _] = js.native
 }

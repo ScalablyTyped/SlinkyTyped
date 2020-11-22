@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FileHash extends js.Object {
   
   // File hash type. Possible values are: unknown, sha1, sha256, md5, authenticodeHash256, lsHash, ctph, peSha1, peSha256.
-  var hashType: js.UndefOr[FileHashType] = js.native
+  var hashType: js.UndefOr[NullableOption[FileHashType]] = js.native
   
   // Value of the file hash.
-  var hashValue: js.UndefOr[String] = js.native
+  var hashValue: js.UndefOr[NullableOption[String]] = js.native
 }
 object FileHash {
   
@@ -37,15 +37,21 @@ object FileHash {
     }
     
     @scala.inline
-    def setHashType(value: FileHashType): Self = this.set("hashType", value.asInstanceOf[js.Any])
+    def setHashType(value: NullableOption[FileHashType]): Self = this.set("hashType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHashType: Self = this.set("hashType", js.undefined)
     
     @scala.inline
-    def setHashValue(value: String): Self = this.set("hashValue", value.asInstanceOf[js.Any])
+    def setHashTypeNull: Self = this.set("hashType", null)
+    
+    @scala.inline
+    def setHashValue(value: NullableOption[String]): Self = this.set("hashValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHashValue: Self = this.set("hashValue", js.undefined)
+    
+    @scala.inline
+    def setHashValueNull: Self = this.set("hashValue", null)
   }
 }

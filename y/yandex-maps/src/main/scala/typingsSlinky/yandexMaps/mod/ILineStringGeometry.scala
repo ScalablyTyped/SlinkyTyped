@@ -29,7 +29,7 @@ trait ILineStringGeometry extends IGeometry {
   
   def set(index: Double, coordinates: js.Array[Double]): ILineStringGeometryAccess = js.native
   
-  def setCoordinates(coordinates: js.Array[Double]): ILineStringGeometryAccess = js.native
+  def setCoordinates(coordinates: js.Array[js.Array[Double]]): ILineStringGeometryAccess = js.native
   
   def splice(index: Double, length: Double): js.Array[js.Array[Double]] = js.native
   

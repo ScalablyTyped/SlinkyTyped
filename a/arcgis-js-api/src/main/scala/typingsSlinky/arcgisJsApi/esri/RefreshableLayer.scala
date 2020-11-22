@@ -11,17 +11,13 @@ trait RefreshableLayer extends js.Object {
     * Fetches all the data for the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-RefreshableLayer.html#refresh)
-    *
-    *
     */
   def refresh(): Unit = js.native
   
   /**
-    * Refresh interval of the layer in minutes. Value of `0` indicates no refresh.
+    * Refresh interval of the layer in minutes.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-RefreshableLayer.html#refreshInterval)
-    *
-    * @default 0
     */
   var refreshInterval: Double = js.native
 }

@@ -146,6 +146,12 @@ object Locale extends js.Object {
   var lifecycleContainer: Window | TabGroup = js.native
   
   /**
+    * Parses a number from the given string using the current or given locale.
+    */
+  def parseDecimal(text: String): Double = js.native
+  def parseDecimal(text: String, locale: String): Double = js.native
+  
+  /**
     * Removes the specified callback as an event listener for the named event.
     */
   def removeEventListener(name: String, callback: js.Function1[/* param0 */ Event, Unit]): Unit = js.native

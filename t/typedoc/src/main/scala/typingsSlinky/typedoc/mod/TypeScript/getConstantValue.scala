@@ -1,7 +1,6 @@
 package typingsSlinky.typedoc.mod.TypeScript
 
-import typingsSlinky.typescript.mod.ElementAccessExpression
-import typingsSlinky.typescript.mod.PropertyAccessExpression
+import typingsSlinky.typescript.mod.AccessExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,9 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getConstantValue extends js.Object {
   
-  def apply(node: ElementAccessExpression): js.UndefOr[String | Double] = js.native
   /**
-    * Gets the constant value to emit for an expression.
+    * Gets the constant value to emit for an expression representing an enum.
     */
-  def apply(node: PropertyAccessExpression): js.UndefOr[String | Double] = js.native
+  def apply(node: AccessExpression): js.UndefOr[String | Double] = js.native
 }

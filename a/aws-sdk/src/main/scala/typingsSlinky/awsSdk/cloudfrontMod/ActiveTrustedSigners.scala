@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ActiveTrustedSigners extends js.Object {
   
   /**
-    * Enabled is true if any of the AWS accounts listed in the TrustedSigners complex type for this distribution have active CloudFront key pairs. If not, Enabled is false.
+    * This field is true if any of the AWS accounts in the list have active CloudFront key pairs that CloudFront can use to verify the signatures of signed URLs and signed cookies. If not, this field is false.
     */
   var Enabled: Boolean = js.native
   
   /**
-    * A complex type that contains one Signer complex type for each trusted signer that is specified in the TrustedSigners complex type.
+    * A list of AWS accounts and the identifiers of active CloudFront key pairs in each account that CloudFront can use to verify the signatures of signed URLs and signed cookies.
     */
   var Items: js.UndefOr[SignerList] = js.native
   
   /**
-    * The number of trusted signers specified in the TrustedSigners complex type.
+    * The number of AWS accounts in the list.
     */
   var Quantity: integer = js.native
 }

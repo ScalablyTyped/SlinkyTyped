@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.transferUserMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.inputMod.transfer.UserHomeDirectoryMapping
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,6 +19,16 @@ trait UserState extends js.Object {
     * The landing directory (folder) for a user when they log in to the server using their SFTP client.  It should begin with a `/`.  The first item in the path is the name of the home bucket (accessible as `${Transfer:HomeBucket}` in the policy) and the rest is the home directory (accessible as `${Transfer:HomeDirectory}` in the policy). For example, `/example-bucket-1234/username` would set the home bucket to `example-bucket-1234` and the home directory to `username`.
     */
   val homeDirectory: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible. documented below.
+    */
+  val homeDirectoryMappings: js.UndefOr[Input[js.Array[Input[UserHomeDirectoryMapping]]]] = js.native
+  
+  /**
+    * The type of landing directory (folder) you mapped for your users' home directory. Valid values are `PATH` and `LOGICAL`.
+    */
+  val homeDirectoryType: js.UndefOr[Input[String]] = js.native
   
   /**
     * An IAM JSON policy document that scopes down user access to portions of their Amazon S3 bucket. IAM variables you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`. These are evaluated on-the-fly when navigating the bucket.
@@ -78,6 +89,21 @@ object UserState {
     
     @scala.inline
     def deleteHomeDirectory: Self = this.set("homeDirectory", js.undefined)
+    
+    @scala.inline
+    def setHomeDirectoryMappingsVarargs(value: Input[UserHomeDirectoryMapping]*): Self = this.set("homeDirectoryMappings", js.Array(value :_*))
+    
+    @scala.inline
+    def setHomeDirectoryMappings(value: Input[js.Array[Input[UserHomeDirectoryMapping]]]): Self = this.set("homeDirectoryMappings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHomeDirectoryMappings: Self = this.set("homeDirectoryMappings", js.undefined)
+    
+    @scala.inline
+    def setHomeDirectoryType(value: Input[String]): Self = this.set("homeDirectoryType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHomeDirectoryType: Self = this.set("homeDirectoryType", js.undefined)
     
     @scala.inline
     def setPolicy(value: Input[String]): Self = this.set("policy", value.asInstanceOf[js.Any])

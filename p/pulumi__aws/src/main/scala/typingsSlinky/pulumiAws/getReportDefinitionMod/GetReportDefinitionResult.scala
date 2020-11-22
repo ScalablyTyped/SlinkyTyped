@@ -32,7 +32,17 @@ trait GetReportDefinitionResult extends js.Object {
     */
   val id: String = js.native
   
+  /**
+    * If true reports are updated after they have been finalized.
+    */
+  val refreshClosedReports: Boolean = js.native
+  
   val reportName: String = js.native
+  
+  /**
+    * Overwrite the previous version of each report or to deliver the report in addition to the previous versions.
+    */
+  val reportVersioning: String = js.native
   
   /**
     * Name of customer S3 bucket.
@@ -63,13 +73,15 @@ object GetReportDefinitionResult {
     compression: String,
     format: String,
     id: String,
+    refreshClosedReports: Boolean,
     reportName: String,
+    reportVersioning: String,
     s3Bucket: String,
     s3Prefix: String,
     s3Region: String,
     timeUnit: String
   ): GetReportDefinitionResult = {
-    val __obj = js.Dynamic.literal(additionalArtifacts = additionalArtifacts.asInstanceOf[js.Any], additionalSchemaElements = additionalSchemaElements.asInstanceOf[js.Any], compression = compression.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], reportName = reportName.asInstanceOf[js.Any], s3Bucket = s3Bucket.asInstanceOf[js.Any], s3Prefix = s3Prefix.asInstanceOf[js.Any], s3Region = s3Region.asInstanceOf[js.Any], timeUnit = timeUnit.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(additionalArtifacts = additionalArtifacts.asInstanceOf[js.Any], additionalSchemaElements = additionalSchemaElements.asInstanceOf[js.Any], compression = compression.asInstanceOf[js.Any], format = format.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], refreshClosedReports = refreshClosedReports.asInstanceOf[js.Any], reportName = reportName.asInstanceOf[js.Any], reportVersioning = reportVersioning.asInstanceOf[js.Any], s3Bucket = s3Bucket.asInstanceOf[js.Any], s3Prefix = s3Prefix.asInstanceOf[js.Any], s3Region = s3Region.asInstanceOf[js.Any], timeUnit = timeUnit.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetReportDefinitionResult]
   }
   
@@ -110,7 +122,13 @@ object GetReportDefinitionResult {
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setRefreshClosedReports(value: Boolean): Self = this.set("refreshClosedReports", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setReportName(value: String): Self = this.set("reportName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setReportVersioning(value: String): Self = this.set("reportVersioning", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setS3Bucket(value: String): Self = this.set("s3Bucket", value.asInstanceOf[js.Any])

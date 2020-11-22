@@ -15,7 +15,7 @@ trait OverflowProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Ob
     */
   var overflow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
       ThemeType
     ]
   ] = js.native
@@ -28,7 +28,7 @@ trait OverflowProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Ob
     */
   var overflowX: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
       ThemeType
     ]
   ] = js.native
@@ -41,7 +41,7 @@ trait OverflowProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Ob
     */
   var overflowY: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
       ThemeType
     ]
   ] = js.native
@@ -75,7 +75,7 @@ object OverflowProps {
     @scala.inline
     def setOverflow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
           ThemeType
         ]
     ): Self = this.set("overflow", value.asInstanceOf[js.Any])
@@ -92,7 +92,7 @@ object OverflowProps {
     @scala.inline
     def setOverflowX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
           ThemeType
         ]
     ): Self = this.set("overflowX", value.asInstanceOf[js.Any])
@@ -109,7 +109,7 @@ object OverflowProps {
     @scala.inline
     def setOverflowY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
           ThemeType
         ]
     ): Self = this.set("overflowY", value.asInstanceOf[js.Any])

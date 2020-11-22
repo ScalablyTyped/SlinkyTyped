@@ -8,9 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StateEnteredEventDetails extends js.Object {
   
   /**
-    * The string that contains the JSON input data for the state.
+    * The string that contains the JSON input data for the state. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
     */
   var input: js.UndefOr[SensitiveData] = js.native
+  
+  /**
+    * Contains details about the input for an execution history event.
+    */
+  var inputDetails: js.UndefOr[HistoryEventExecutionDataDetails] = js.native
   
   /**
     * The name of the state.
@@ -48,5 +53,11 @@ object StateEnteredEventDetails {
     
     @scala.inline
     def deleteInput: Self = this.set("input", js.undefined)
+    
+    @scala.inline
+    def setInputDetails(value: HistoryEventExecutionDataDetails): Self = this.set("inputDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputDetails: Self = this.set("inputDetails", js.undefined)
   }
 }

@@ -40,14 +40,24 @@ class VirtualService protected () extends CustomResource {
   val lastUpdatedDate: Output_[String] = js.native
   
   /**
-    * The name of the service mesh in which to create the virtual service.
+    * The name of the service mesh in which to create the virtual service. Must be between 1 and 255 characters in length.
     */
   val meshName: Output_[String] = js.native
   
   /**
-    * The name to use for the virtual service.
+    * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    */
+  val meshOwner: Output_[String] = js.native
+  
+  /**
+    * The name to use for the virtual service. Must be between 1 and 255 characters in length.
     */
   val name: Output_[String] = js.native
+  
+  /**
+    * The resource owner's AWS account ID.
+    */
+  val resourceOwner: Output_[String] = js.native
   
   /**
     * The virtual service specification to apply.

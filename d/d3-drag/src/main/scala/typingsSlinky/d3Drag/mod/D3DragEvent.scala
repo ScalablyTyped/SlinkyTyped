@@ -5,7 +5,6 @@ import typingsSlinky.d3Drag.d3DragStrings.end
 import typingsSlinky.d3Drag.d3DragStrings.mouse
 import typingsSlinky.d3Drag.d3DragStrings.start
 import typingsSlinky.d3Selection.mod.Selection_
-import typingsSlinky.d3Selection.mod.ValueFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -50,22 +49,7 @@ trait D3DragEvent[GElement /* <: Element */, Datum, Subject] extends js.Object {
     * start (after a new pointer becomes active [on mousedown or touchstart]), drag (after an active pointer moves [on mousemove or touchmove], or
     * end (after an active pointer becomes inactive [on mouseup, touchend or touchcancel].)
     */
-  def on(typenames: String): js.UndefOr[ValueFn[GElement, Datum, Unit]] = js.native
-  /**
-    * Remove the current event listeners for the specified typenames, if any, return the drag behavior.
-    *
-    * Equivalent to drag.on, but only applies to the current drag gesture. Before the drag gesture starts,
-    * a copy of the current drag event listeners is made. This copy is bound to the current drag gesture
-    * and modified by event.on. This is useful for temporary listeners that only receive events for the current drag gesture.
-    *
-    * @param typenames The typenames is a string containing one or more typename separated by whitespace.
-    * Each typename is a type, optionally followed by a period (.) and a name, such as "drag.foo"" and "drag.bar";
-    * the name allows multiple listeners to be registered for the same type. The type must be one of the following:
-    * start (after a new pointer becomes active [on mousedown or touchstart]), drag (after an active pointer moves [on mousemove or touchmove], or
-    * end (after an active pointer becomes inactive [on mouseup, touchend or touchcancel].)
-    * @param listener Use null to remove the listener.
-    */
-  def on(typenames: String, listener: Null): this.type = js.native
+  def on(typenames: String): js.UndefOr[js.ThisFunction2[/* this */ GElement, /* event */ js.Any, /* d */ Datum, Unit]] = js.native
   /**
     * Set the event listener for the specified typenames and return the drag behavior.
     * If an event listener was already registered for the same type and name,
@@ -82,10 +66,27 @@ trait D3DragEvent[GElement /* <: Element */, Datum, Subject] extends js.Object {
     * start (after a new pointer becomes active [on mousedown or touchstart]), drag (after an active pointer moves [on mousemove or touchmove], or
     * end (after an active pointer becomes inactive [on mouseup, touchend or touchcancel].)
     * @param listener An event listener function which is evaluated for each selected element,
-    * in order, being passed the current datum (d), the current index (i), and the current group (nodes),
-    * with this as the current DOM element.
+    * in order, being passed the current event (event) and datum d, with the this context as the current DOM element.
     */
-  def on(typenames: String, listener: ValueFn[GElement, Datum, Unit]): this.type = js.native
+  def on(
+    typenames: String,
+    listener: js.ThisFunction2[/* this */ GElement, /* event */ js.Any, /* d */ Datum, Unit]
+  ): this.type = js.native
+  /**
+    * Remove the current event listeners for the specified typenames, if any, return the drag behavior.
+    *
+    * Equivalent to drag.on, but only applies to the current drag gesture. Before the drag gesture starts,
+    * a copy of the current drag event listeners is made. This copy is bound to the current drag gesture
+    * and modified by event.on. This is useful for temporary listeners that only receive events for the current drag gesture.
+    *
+    * @param typenames The typenames is a string containing one or more typename separated by whitespace.
+    * Each typename is a type, optionally followed by a period (.) and a name, such as "drag.foo"" and "drag.bar";
+    * the name allows multiple listeners to be registered for the same type. The type must be one of the following:
+    * start (after a new pointer becomes active [on mousedown or touchstart]), drag (after an active pointer moves [on mousemove or touchmove], or
+    * end (after an active pointer becomes inactive [on mouseup, touchend or touchcancel].)
+    * @param listener Use null to remove the listener.
+    */
+  def on(typenames: String, listener: Null): this.type = js.native
   
   /**
     * The underlying input event, such as mousemove or touchmove.

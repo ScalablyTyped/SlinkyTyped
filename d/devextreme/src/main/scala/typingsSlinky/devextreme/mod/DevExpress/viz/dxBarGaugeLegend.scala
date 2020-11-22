@@ -14,21 +14,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxBarGaugeLegend extends BaseLegend {
   
-  /** @name dxBarGauge.Options.legend.customizeHint */
+  /**
+    * [descr:dxBarGauge.Options.legend.customizeHint]
+    */
   var customizeHint: js.UndefOr[js.Function1[/* arg */ ItemText, String]] = js.native
   
-  /** @name dxBarGauge.Options.legend.customizeItems */
+  /**
+    * [descr:dxBarGauge.Options.legend.customizeItems]
+    */
   var customizeItems: js.UndefOr[
     js.Function1[/* items */ js.Array[BarGaugeLegendItem], js.Array[BarGaugeLegendItem]]
   ] = js.native
   
-  /** @name dxBarGauge.Options.legend.customizeText */
+  /**
+    * [descr:dxBarGauge.Options.legend.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* arg */ ItemText, String]] = js.native
   
-  /** @name dxBarGauge.Options.legend.itemTextFormat */
+  /**
+    * [descr:dxBarGauge.Options.legend.itemTextFormat]
+    */
   var itemTextFormat: js.UndefOr[format] = js.native
   
-  /** @name dxBarGauge.Options.legend.markerTemplate */
+  /**
+    * [descr:dxBarGauge.Options.legend.markerTemplate]
+    */
   var markerTemplate: js.UndefOr[
     template | (js.Function2[
       /* legendItem */ BarGaugeLegendItem, 

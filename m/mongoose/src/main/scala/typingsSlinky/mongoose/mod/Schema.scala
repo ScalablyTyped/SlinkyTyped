@@ -147,7 +147,11 @@ trait Schema[T] extends EventEmitter {
   
   def post[T /* <: Document */](
     method: String,
-    fn: js.Function2[/* doc */ T, /* next */ js.Function1[/* err */ js.UndefOr[NativeError], Unit], Unit]
+    fn: js.Function2[
+      (/* docs */ js.Array[T]) | (/* doc */ T), 
+      /* next */ js.Function1[js.UndefOr[NativeError], Unit], 
+      js.Promise[Unit] | Unit
+    ]
   ): this.type = js.native
   def post[T /* <: Document */](
     method: String,
@@ -160,7 +164,11 @@ trait Schema[T] extends EventEmitter {
   ): this.type = js.native
   def post[T /* <: Document */](
     method: js.RegExp,
-    fn: js.Function2[/* doc */ T, /* next */ js.Function1[/* err */ js.UndefOr[NativeError], Unit], Unit]
+    fn: js.Function2[
+      (/* docs */ js.Array[T]) | (/* doc */ T), 
+      /* next */ js.Function1[js.UndefOr[NativeError], Unit], 
+      js.Promise[Unit] | Unit
+    ]
   ): this.type = js.native
   def post[T /* <: Document */](
     method: js.RegExp,

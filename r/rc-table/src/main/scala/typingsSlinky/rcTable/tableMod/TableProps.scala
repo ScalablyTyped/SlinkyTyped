@@ -16,6 +16,7 @@ import typingsSlinky.rcTable.interfaceMod.PanelRender
 import typingsSlinky.rcTable.interfaceMod.RowClassName
 import typingsSlinky.rcTable.interfaceMod.TableComponents
 import typingsSlinky.rcTable.interfaceMod.TableLayout
+import typingsSlinky.rcTable.interfaceMod.TableSticky
 import typingsSlinky.rcTable.rcTableStrings.ltr
 import typingsSlinky.rcTable.rcTableStrings.rtl
 import typingsSlinky.react.mod.CSSProperties
@@ -75,6 +76,8 @@ trait TableProps[RecordType] extends LegacyExpandableProps[RecordType] {
   var scroll: js.UndefOr[X] = js.native
   
   var showHeader: js.UndefOr[Boolean] = js.native
+  
+  var sticky: js.UndefOr[Boolean | TableSticky] = js.native
   
   var style: js.UndefOr[CSSProperties] = js.native
   
@@ -250,6 +253,12 @@ object TableProps {
     
     @scala.inline
     def deleteShowHeader: Self = this.set("showHeader", js.undefined)
+    
+    @scala.inline
+    def setSticky(value: Boolean | TableSticky): Self = this.set("sticky", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSticky: Self = this.set("sticky", js.undefined)
     
     @scala.inline
     def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])

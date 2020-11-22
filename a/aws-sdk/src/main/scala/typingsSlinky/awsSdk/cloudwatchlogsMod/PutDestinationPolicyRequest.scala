@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PutDestinationPolicyRequest extends js.Object {
   
   /**
-    * An IAM policy document that authorizes cross-account users to deliver their log events to the associated destination.
+    * An IAM policy document that authorizes cross-account users to deliver their log events to the associated destination. This can be up to 5120 bytes.
     */
   var accessPolicy: AccessPolicy = js.native
   

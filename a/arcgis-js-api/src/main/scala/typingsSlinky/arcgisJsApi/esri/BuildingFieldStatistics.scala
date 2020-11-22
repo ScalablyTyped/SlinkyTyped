@@ -38,14 +38,14 @@ trait BuildingFieldStatistics extends Object {
   var min: Double = js.native
   
   /**
-    * Model Name of the field. This can be used to identify certain special fields, like floor number, or phase id.
+    * Model Name of the field.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-BuildingSummaryStatistics.html#BuildingFieldStatistics)
     */
   var modelName: String = js.native
   
   /**
-    * List of the most frequent values of the field. This is not guaranteed to be a complete list of all values.
+    * List of the most frequent values of the field.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-BuildingSummaryStatistics.html#BuildingFieldStatistics)
     */

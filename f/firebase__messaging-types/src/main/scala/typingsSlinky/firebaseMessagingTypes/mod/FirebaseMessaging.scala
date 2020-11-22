@@ -1,6 +1,6 @@
 package typingsSlinky.firebaseMessagingTypes.mod
 
-import org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration
+import typingsSlinky.firebaseMessagingTypes.anon.ServiceWorkerRegistration
 import typingsSlinky.firebaseUtil.subscribeMod.CompleteFn
 import typingsSlinky.firebaseUtil.subscribeMod.ErrorFn
 import typingsSlinky.firebaseUtil.subscribeMod.NextFn
@@ -13,11 +13,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FirebaseMessaging extends js.Object {
   
-  // TODO: remove the token parameter and just delete the token that matches
-  // this app if it exists.
+  /** window controller */
+  def deleteToken(): js.Promise[Boolean] = js.native
+  /** @deprecated */
   def deleteToken(token: String): js.Promise[Boolean] = js.native
   
   def getToken(): js.Promise[String] = js.native
+  def getToken(options: ServiceWorkerRegistration): js.Promise[String] = js.native
+  
+  /** service worker controller */
+  def onBackgroundMessage(nextOrObserver: NextFn[MessagePayload]): Unsubscribe = js.native
+  def onBackgroundMessage(nextOrObserver: NextFn[MessagePayload], error: js.UndefOr[scala.Nothing], completed: CompleteFn): Unsubscribe = js.native
+  def onBackgroundMessage(nextOrObserver: NextFn[MessagePayload], error: ErrorFn): Unsubscribe = js.native
+  def onBackgroundMessage(nextOrObserver: NextFn[MessagePayload], error: ErrorFn, completed: CompleteFn): Unsubscribe = js.native
+  def onBackgroundMessage(nextOrObserver: Observer[MessagePayload]): Unsubscribe = js.native
+  def onBackgroundMessage(nextOrObserver: Observer[MessagePayload], error: js.UndefOr[scala.Nothing], completed: CompleteFn): Unsubscribe = js.native
+  def onBackgroundMessage(nextOrObserver: Observer[MessagePayload], error: ErrorFn): Unsubscribe = js.native
+  def onBackgroundMessage(nextOrObserver: Observer[MessagePayload], error: ErrorFn, completed: CompleteFn): Unsubscribe = js.native
   
   def onMessage(nextOrObserver: NextFn[_]): Unsubscribe = js.native
   def onMessage(nextOrObserver: NextFn[_], error: js.UndefOr[scala.Nothing], completed: CompleteFn): Unsubscribe = js.native
@@ -47,5 +59,5 @@ trait FirebaseMessaging extends js.Object {
   
   def usePublicVapidKey(b64PublicKey: String): Unit = js.native
   
-  def useServiceWorker(registration: ServiceWorkerRegistration): Unit = js.native
+  def useServiceWorker(registration: org.scalajs.dom.experimental.serviceworkers.ServiceWorkerRegistration): Unit = js.native
 }

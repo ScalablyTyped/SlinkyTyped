@@ -22,41 +22,65 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDrawerOptions extends WidgetOptions[dxDrawer] {
   
-  /** @name dxDrawer.Options.animationDuration */
+  /**
+    * [descr:dxDrawer.Options.animationDuration]
+    */
   var animationDuration: js.UndefOr[Double] = js.native
   
-  /** @name dxDrawer.Options.animationEnabled */
+  /**
+    * [descr:dxDrawer.Options.animationEnabled]
+    */
   var animationEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDrawer.Options.closeOnOutsideClick */
+  /**
+    * [descr:dxDrawer.Options.closeOnOutsideClick]
+    */
   var closeOnOutsideClick: js.UndefOr[Boolean | (js.Function1[/* event */ event, Boolean])] = js.native
   
-  /** @name dxDrawer.Options.maxSize */
+  /**
+    * [descr:dxDrawer.Options.maxSize]
+    */
   var maxSize: js.UndefOr[Double] = js.native
   
-  /** @name dxDrawer.Options.minSize */
+  /**
+    * [descr:dxDrawer.Options.minSize]
+    */
   var minSize: js.UndefOr[Double] = js.native
   
-  /** @name dxDrawer.Options.opened */
+  /**
+    * [descr:dxDrawer.Options.opened]
+    */
   var opened: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDrawer.Options.openedStateMode */
+  /**
+    * [descr:dxDrawer.Options.openedStateMode]
+    */
   var openedStateMode: js.UndefOr[overlap | shrink | push] = js.native
   
-  /** @name dxDrawer.Options.position */
+  /**
+    * [descr:dxDrawer.Options.position]
+    */
   var position: js.UndefOr[left | right | top | bottom | before | after] = js.native
   
-  /** @name dxDrawer.Options.revealMode */
+  /**
+    * [descr:dxDrawer.Options.revealMode]
+    */
   var revealMode: js.UndefOr[slide | expand] = js.native
   
-  /** @name dxDrawer.Options.shading */
+  /**
+    * [descr:dxDrawer.Options.shading]
+    */
   var shading: js.UndefOr[Boolean] = js.native
   
-  /** @deprecated */
-  /** @name dxDrawer.Options.target */
+  /**
+    * [descr:dxDrawer.Options.target]
+    * @deprecated [depNote:dxDrawer.Options.target]
+    */
   var target: js.UndefOr[String | Element | JQuery] = js.native
   
-  /** @name dxDrawer.Options.template */
+  /**
+    * [descr:dxDrawer.Options.template]
+    */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* Element */ dxElement, _])
   ] = js.native

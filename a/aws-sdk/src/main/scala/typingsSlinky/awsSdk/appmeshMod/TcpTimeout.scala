@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TcpTimeout extends js.Object {
   
+  /**
+    * An object that represents an idle timeout. An idle timeout bounds the amount of time that a connection may be idle. The default value is none.
+    */
   var idle: js.UndefOr[Duration] = js.native
 }
 object TcpTimeout {

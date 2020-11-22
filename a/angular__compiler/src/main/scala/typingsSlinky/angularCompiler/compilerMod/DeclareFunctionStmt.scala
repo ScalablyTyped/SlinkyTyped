@@ -61,9 +61,87 @@ class DeclareFunctionStmt protected ()
     name: String,
     params: js.Array[FnParam],
     statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: Null,
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: Null,
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
     `type`: js.UndefOr[scala.Nothing],
-    modifiers: Null,
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: js.UndefOr[scala.Nothing],
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: Null,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: js.UndefOr[scala.Nothing],
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: js.UndefOr[scala.Nothing],
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: js.UndefOr[scala.Nothing],
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
+    sourceSpan: Null,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: js.UndefOr[scala.Nothing],
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
   ) = this()
   def this(
     name: String,
@@ -71,7 +149,26 @@ class DeclareFunctionStmt protected ()
     statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
     `type`: Null,
     modifiers: js.UndefOr[scala.Nothing],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: Null,
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: Null,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: Null,
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
   ) = this()
   def this(
     name: String,
@@ -79,15 +176,26 @@ class DeclareFunctionStmt protected ()
     statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
     `type`: Null,
     modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
   ) = this()
   def this(
     name: String,
     params: js.Array[FnParam],
     statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
     `type`: Null,
-    modifiers: Null,
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
+    sourceSpan: Null,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: Null,
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
   ) = this()
   def this(
     name: String,
@@ -95,7 +203,26 @@ class DeclareFunctionStmt protected ()
     statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
     modifiers: js.UndefOr[scala.Nothing],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: Null,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
+    modifiers: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
   ) = this()
   def this(
     name: String,
@@ -103,14 +230,25 @@ class DeclareFunctionStmt protected ()
     statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
     modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
   ) = this()
   def this(
     name: String,
     params: js.Array[FnParam],
     statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
-    modifiers: Null,
-    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
+    sourceSpan: Null,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    name: String,
+    params: js.Array[FnParam],
+    statements: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
+    modifiers: js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
   ) = this()
 }

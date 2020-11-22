@@ -93,7 +93,7 @@ object TypeFlags extends js.Object {
   
   @js.native
   sealed trait Instantiable extends TypeFlags
-  /* 63176704 */ @js.native
+  /* 465829888 */ @js.native
   object Instantiable extends TopLevel[Instantiable with Double]
   
   @js.native
@@ -103,7 +103,7 @@ object TypeFlags extends js.Object {
   
   @js.native
   sealed trait InstantiablePrimitive extends TypeFlags
-  /* 4194304 */ @js.native
+  /* 406847488 */ @js.native
   object InstantiablePrimitive extends TopLevel[InstantiablePrimitive with Double]
   
   @js.native
@@ -118,7 +118,7 @@ object TypeFlags extends js.Object {
   
   @js.native
   sealed trait Narrowable extends TypeFlags
-  /* 133970943 */ @js.native
+  /* 536624127 */ @js.native
   object Narrowable extends TopLevel[Narrowable with Double]
   
   @js.native
@@ -130,11 +130,6 @@ object TypeFlags extends js.Object {
   sealed trait NonPrimitive extends TypeFlags
   /* 67108864 */ @js.native
   object NonPrimitive extends TopLevel[NonPrimitive with Double]
-  
-  @js.native
-  sealed trait NotUnionOrUnit extends TypeFlags
-  /* 67637251 */ @js.native
-  object NotUnionOrUnit extends TopLevel[NotUnionOrUnit with Double]
   
   @js.native
   sealed trait Null extends TypeFlags
@@ -174,7 +169,7 @@ object TypeFlags extends js.Object {
   
   @js.native
   sealed trait StringLike extends TypeFlags
-  /* 132 */ @js.native
+  /* 402653316 */ @js.native
   object StringLike extends TopLevel[StringLike with Double]
   
   @js.native
@@ -184,13 +179,18 @@ object TypeFlags extends js.Object {
     extends TopLevel[typingsSlinky.typescript.mod.TypeFlags.StringLiteral with Double]
   
   @js.native
+  sealed trait StringMapping extends TypeFlags
+  /* 268435456 */ @js.native
+  object StringMapping extends TopLevel[StringMapping with Double]
+  
+  @js.native
   sealed trait StringOrNumberLiteral extends TypeFlags
   /* 384 */ @js.native
   object StringOrNumberLiteral extends TopLevel[StringOrNumberLiteral with Double]
   
   @js.native
   sealed trait StructuredOrInstantiable extends TypeFlags
-  /* 66846720 */ @js.native
+  /* 469499904 */ @js.native
   object StructuredOrInstantiable extends TopLevel[StructuredOrInstantiable with Double]
   
   @js.native
@@ -203,6 +203,12 @@ object TypeFlags extends js.Object {
   sealed trait Substitution extends TypeFlags
   /* 33554432 */ @js.native
   object Substitution extends TopLevel[Substitution with Double]
+  
+  @js.native
+  sealed trait TemplateLiteral extends TypeFlags
+  /* 134217728 */ @js.native
+  object TemplateLiteral
+    extends TopLevel[typingsSlinky.typescript.mod.TypeFlags.TemplateLiteral with Double]
   
   @js.native
   sealed trait TypeParameter extends TypeFlags

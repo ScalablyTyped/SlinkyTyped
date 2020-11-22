@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Interfaces and instance classes for types from the Mendix sub meta model `DataSets`.
   */
 /**
-  * See: {@link https://docs.mendix.com/refguide7/data-sets relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/data-sets relevant section in reference guide}
   */
 @js.native
 trait IDataSet extends IDocument {

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait RowComponent extends js.Object {
+trait RowComponent extends CalculationComponent {
   
   /**Add child rows to a data tree row
     *
@@ -35,20 +35,6 @@ trait RowComponent extends js.Object {
   /** You can freeze a row at the top of the table by calling the freeze function. This will insert the row above the scrolling portion of the table in the table header. */
   def freeze(): Unit = js.native
   
-  def getCell(column: String): CellComponent = js.native
-  def getCell(column: HTMLElement): CellComponent = js.native
-  /** The getCell function returns the CellComponent for the specified column from this row.*/
-  def getCell(column: ColumnComponent): CellComponent = js.native
-  
-  /** The getCells function returns an array of CellComponent objects, one for each cell in the row.*/
-  def getCells(): js.Array[CellComponent] = js.native
-  
-  /** The getData function returns the data object for the row.*/
-  def getData(): js.Any = js.native
-  
-  /** The getElement function returns the DOM node for the row.*/
-  def getElement(): HTMLElement = js.native
-  
   /** When using grouped rows, you can retrieve the group component for the current row using the getGroup function. */
   def getGroup(): GroupComponent = js.native
   
@@ -65,9 +51,6 @@ trait RowComponent extends js.Object {
   
   /** The getNextRow function returns the Row Component for the previous visible row in the table, if there is no next row it will return a value of false */
   def getPrevRow(): RowComponent | `false` = js.native
-  
-  /** The getTable function returns the Tabulator object for the table containing the row. */
-  def getTable(): typingsSlinky.tabulatorTables.Tabulator = js.native
   
   /** When the tree structure is enabled the getTreeChildren function will return an array of Row Components for this rows children. */
   def getTreeChildren(): js.Array[RowComponent] = js.native

@@ -9,6 +9,8 @@ trait InputStyleProps extends js.Object {
   
   var align: js.UndefOr[Alignments] = js.native
   
+  var height: js.UndefOr[Double] = js.native
+  
   var size: js.UndefOr[Sizes] = js.native
   
   var valid: js.UndefOr[ValidationStates] = js.native
@@ -41,6 +43,12 @@ object InputStyleProps {
     
     @scala.inline
     def deleteAlign: Self = this.set("align", js.undefined)
+    
+    @scala.inline
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
     def setSize(value: Sizes): Self = this.set("size", value.asInstanceOf[js.Any])

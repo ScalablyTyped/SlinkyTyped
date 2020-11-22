@@ -6,12 +6,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object BABYLON {
   
-  type ActiveMeshStageAction = js.Function2[
-    /* sourceMesh */ typingsSlinky.babylonjs.BABYLON.AbstractMesh, 
-    /* mesh */ typingsSlinky.babylonjs.BABYLON.AbstractMesh, 
-    scala.Unit
-  ]
-  
   type BabylonFileParser = js.Function4[
     /* parsedData */ js.Any, 
     /* scene */ typingsSlinky.babylonjs.BABYLON.Scene, 
@@ -42,7 +36,14 @@ package object BABYLON {
   {readonly [ K in keyof T ]: babylonjs.BABYLON.DeepImmutable<T[K]>}
     */ typingsSlinky.babylonjs.babylonjsStrings.DeepImmutableObject with org.scalablytyped.runtime.TopLevel[T]
   
-  type DisplayPassPostProcess = typingsSlinky.babylonjs.BABYLON.PostProcess
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.babylonjs.BABYLON.SwitchInput
+    - typingsSlinky.babylonjs.BABYLON.XboxInput
+    - typingsSlinky.babylonjs.BABYLON.DualShockInput
+    - typingsSlinky.babylonjs.BABYLON.PointerInput
+    - scala.Double
+  */
+  type DeviceInput[T /* <: typingsSlinky.babylonjs.BABYLON.DeviceType */] = typingsSlinky.babylonjs.BABYLON._DeviceInput[T] | scala.Double
   
   type EvaluateSubMeshStageAction = js.Function2[
     /* mesh */ typingsSlinky.babylonjs.BABYLON.AbstractMesh, 
@@ -52,10 +53,8 @@ package object BABYLON {
   
   type FloatArray = js.Array[scala.Double] | js.typedarray.Float32Array
   
-  type HighlightsPostProcess = typingsSlinky.babylonjs.BABYLON.PostProcess
-  
   type IMotionControllerLayoutMap = /**
-    * Layouts with handness type as a key
+    * Layouts with handedness type as a key
     */
   org.scalablytyped.runtime.StringDictionary[typingsSlinky.babylonjs.BABYLON.IMotionControllerLayout]
   
@@ -98,8 +97,6 @@ package object BABYLON {
   
   type Nullable[T] = T | scala.Null
   
-  type PassPostProcess = typingsSlinky.babylonjs.BABYLON.PostProcess
-  
   type PointerMoveStageAction = js.Function5[
     /* unTranslatedPointerX */ scala.Double, 
     /* unTranslatedPointerY */ scala.Double, 
@@ -117,6 +114,8 @@ package object BABYLON {
     typingsSlinky.babylonjs.BABYLON.Nullable[typingsSlinky.babylonjs.BABYLON.PickingInfo]
   ]
   
+  type PreActiveMeshStageAction = js.Function1[/* mesh */ typingsSlinky.babylonjs.BABYLON.AbstractMesh, scala.Unit]
+  
   /**
     * Alias type for primitive types
     * @ignorenaming
@@ -125,6 +124,8 @@ package object BABYLON {
   
   type RenderTargetStageAction = js.Function1[/* renderTarget */ typingsSlinky.babylonjs.BABYLON.RenderTargetTexture, scala.Unit]
   
+  type RenderTargetTextureSize = scala.Double | typingsSlinky.babylonjs.anon.Height
+  
   type RenderTargetsStageAction = js.Function1[
     /* renderTargets */ typingsSlinky.babylonjs.BABYLON.SmartArrayNoDuplicate[typingsSlinky.babylonjs.BABYLON.RenderTargetTexture], 
     scala.Unit
@@ -132,10 +133,22 @@ package object BABYLON {
   
   type RenderingGroupStageAction = js.Function1[/* renderingGroupId */ scala.Double, scala.Unit]
   
-  type RenderingMeshStageAction = js.Function3[
+  type RenderingMeshStageAction = js.Function4[
     /* mesh */ typingsSlinky.babylonjs.BABYLON.Mesh, 
     /* subMesh */ typingsSlinky.babylonjs.BABYLON.SubMesh, 
     /* batch */ typingsSlinky.babylonjs.BABYLON.InstancesBatch, 
+    /* effect */ typingsSlinky.babylonjs.BABYLON.Nullable[typingsSlinky.babylonjs.BABYLON.Effect], 
+    scala.Unit
+  ]
+  
+  type SceneLoaderSuccessCallback = js.Function7[
+    /* meshes */ js.Array[typingsSlinky.babylonjs.BABYLON.AbstractMesh], 
+    /* particleSystems */ js.Array[typingsSlinky.babylonjs.BABYLON.IParticleSystem], 
+    /* skeletons */ js.Array[typingsSlinky.babylonjs.BABYLON.Skeleton], 
+    /* animationGroups */ js.Array[typingsSlinky.babylonjs.BABYLON.AnimationGroup], 
+    /* transformNodes */ js.Array[typingsSlinky.babylonjs.BABYLON.TransformNode], 
+    /* geometries */ js.Array[typingsSlinky.babylonjs.BABYLON.Geometry], 
+    /* lights */ js.Array[typingsSlinky.babylonjs.BABYLON.Light], 
     scala.Unit
   ]
   
@@ -148,8 +161,6 @@ package object BABYLON {
     /* ray */ typingsSlinky.babylonjs.BABYLON.Ray, 
     scala.Boolean
   ]
-  
-  type VRMultiviewToSingleviewPostProcess = typingsSlinky.babylonjs.BABYLON.PostProcess
   
   type WebXRFeatureConstructor = js.Function2[
     /* xrSessionManager */ typingsSlinky.babylonjs.BABYLON.WebXRSessionManager, 

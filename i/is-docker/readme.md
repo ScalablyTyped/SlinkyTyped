@@ -1,7 +1,7 @@
 
 # Scala.js typings for is-docker
 
-Typings are for version 2.0.0
+Typings are for version 2.1.1
 
 ## Library description:
 Check if the process is running inside a Docker container

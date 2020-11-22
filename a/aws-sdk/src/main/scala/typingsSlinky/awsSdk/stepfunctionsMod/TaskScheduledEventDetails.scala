@@ -8,7 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TaskScheduledEventDetails extends js.Object {
   
   /**
-    * The JSON data passed to the resource referenced in a task state.
+    * The maximum allowed duration between two heartbeats for the task.
+    */
+  var heartbeatInSeconds: js.UndefOr[TimeoutInSeconds] = js.native
+  
+  /**
+    * The JSON data passed to the resource referenced in a task state. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
     */
   var parameters: ConnectorParameters = js.native
   
@@ -66,6 +71,12 @@ object TaskScheduledEventDetails {
     
     @scala.inline
     def setResourceType(value: Name): Self = this.set("resourceType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHeartbeatInSeconds(value: TimeoutInSeconds): Self = this.set("heartbeatInSeconds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeartbeatInSeconds: Self = this.set("heartbeatInSeconds", js.undefined)
     
     @scala.inline
     def setTimeoutInSeconds(value: TimeoutInSeconds): Self = this.set("timeoutInSeconds", value.asInstanceOf[js.Any])

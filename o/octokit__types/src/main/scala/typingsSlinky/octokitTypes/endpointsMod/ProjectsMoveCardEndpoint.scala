@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`8`
+import typingsSlinky.octokitTypes.anon.`7`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +16,7 @@ trait ProjectsMoveCardEndpoint extends js.Object {
     */
   var column_id: js.UndefOr[Double] = js.native
   
-  var mediaType: `8` = js.native
+  var mediaType: `7` = js.native
   
   /**
     * Can be one of `top`, `bottom`, or `after:<card_id>`, where `<card_id>` is the `id` value of a card in the same column, or in the new column specified by `column_id`.
@@ -26,7 +26,7 @@ trait ProjectsMoveCardEndpoint extends js.Object {
 object ProjectsMoveCardEndpoint {
   
   @scala.inline
-  def apply(card_id: Double, mediaType: `8`, position: String): ProjectsMoveCardEndpoint = {
+  def apply(card_id: Double, mediaType: `7`, position: String): ProjectsMoveCardEndpoint = {
     val __obj = js.Dynamic.literal(card_id = card_id.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], position = position.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsMoveCardEndpoint]
   }
@@ -50,7 +50,7 @@ object ProjectsMoveCardEndpoint {
     def setCard_id(value: Double): Self = this.set("card_id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPosition(value: String): Self = this.set("position", value.asInstanceOf[js.Any])

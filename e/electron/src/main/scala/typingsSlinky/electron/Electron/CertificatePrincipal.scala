@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CertificatePrincipal extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/certificate-principal
+  // Docs: https://electronjs.org/docs/api/structures/certificate-principal
   /**
     * Common Name.
     */

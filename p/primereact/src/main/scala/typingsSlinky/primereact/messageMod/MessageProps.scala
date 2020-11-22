@@ -9,6 +9,8 @@ trait MessageProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
+  var content: js.UndefOr[js.Function1[/* props */ js.Object, _]] = js.native
+  
   var id: js.UndefOr[String] = js.native
   
   var severity: js.UndefOr[String] = js.native
@@ -45,6 +47,12 @@ object MessageProps {
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
+    def setContent(value: /* props */ js.Object => _): Self = this.set("content", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteContent: Self = this.set("content", js.undefined)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])

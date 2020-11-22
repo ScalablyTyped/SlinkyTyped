@@ -10,6 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SwaggerUIProps extends js.Object {
   
+  var deepLinking: js.UndefOr[Boolean] = js.native
+  
   var defaultModelExpandDepth: js.UndefOr[Double] = js.native
   
   var docExpansion: js.UndefOr[list | full | none] = js.native
@@ -22,7 +24,7 @@ trait SwaggerUIProps extends js.Object {
   
   var responseInterceptor: js.UndefOr[js.Function1[/* res */ Response, Response | js.Promise[Response]]] = js.native
   
-  var spec: js.UndefOr[js.Object] = js.native
+  var spec: js.UndefOr[js.Object | String] = js.native
   
   var supportedSubmitMethods: js.UndefOr[js.Array[String]] = js.native
   
@@ -50,6 +52,12 @@ object SwaggerUIProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDeepLinking(value: Boolean): Self = this.set("deepLinking", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeepLinking: Self = this.set("deepLinking", js.undefined)
     
     @scala.inline
     def setDefaultModelExpandDepth(value: Double): Self = this.set("defaultModelExpandDepth", value.asInstanceOf[js.Any])
@@ -91,7 +99,7 @@ object SwaggerUIProps {
     def deleteResponseInterceptor: Self = this.set("responseInterceptor", js.undefined)
     
     @scala.inline
-    def setSpec(value: js.Object): Self = this.set("spec", value.asInstanceOf[js.Any])
+    def setSpec(value: js.Object | String): Self = this.set("spec", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSpec: Self = this.set("spec", js.undefined)

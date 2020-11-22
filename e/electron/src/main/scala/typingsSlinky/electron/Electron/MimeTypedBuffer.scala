@@ -8,22 +8,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MimeTypedBuffer extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/mime-typed-buffer
+  // Docs: https://electronjs.org/docs/api/structures/mime-typed-buffer
+  /**
+    * Charset of the buffer.
+    */
+  var charset: js.UndefOr[String] = js.native
+  
   /**
     * The actual Buffer content.
     */
   var data: Buffer = js.native
   
   /**
-    * The mimeType of the Buffer that you are sending.
+    * MIME type of the buffer.
     */
-  var mimeType: String = js.native
+  var mimeType: js.UndefOr[String] = js.native
 }
 object MimeTypedBuffer {
   
   @scala.inline
-  def apply(data: Buffer, mimeType: String): MimeTypedBuffer = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], mimeType = mimeType.asInstanceOf[js.Any])
+  def apply(data: Buffer): MimeTypedBuffer = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[MimeTypedBuffer]
   }
   
@@ -46,6 +51,15 @@ object MimeTypedBuffer {
     def setData(value: Buffer): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setCharset(value: String): Self = this.set("charset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCharset: Self = this.set("charset", js.undefined)
+    
+    @scala.inline
     def setMimeType(value: String): Self = this.set("mimeType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMimeType: Self = this.set("mimeType", js.undefined)
   }
 }

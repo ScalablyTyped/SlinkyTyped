@@ -1,5 +1,14 @@
 package typingsSlinky.std
 
+import typingsSlinky.std.stdStrings.all
+import typingsSlinky.std.stdStrings.copy
+import typingsSlinky.std.stdStrings.copyLink
+import typingsSlinky.std.stdStrings.copyMove
+import typingsSlinky.std.stdStrings.link
+import typingsSlinky.std.stdStrings.linkMove
+import typingsSlinky.std.stdStrings.move
+import typingsSlinky.std.stdStrings.none
+import typingsSlinky.std.stdStrings.uninitialized
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +30,7 @@ trait DataTransfer extends js.Object {
     * 
     * The possible values are "none", "copy", "link", and "move".
     */
-  var dropEffect: java.lang.String = js.native
+  var dropEffect: none | copy | link | move = js.native
   
   /**
     * Returns the kinds of operations that are to be allowed.
@@ -30,7 +39,7 @@ trait DataTransfer extends js.Object {
     * 
     * The possible values are "none", "copy", "copyLink", "copyMove", "link", "linkMove", "move", "all", and "uninitialized",
     */
-  var effectAllowed: java.lang.String = js.native
+  var effectAllowed: none | copy | copyLink | copyMove | link | linkMove | move | all | uninitialized = js.native
   
   /**
     * Returns a FileList of the files being dragged, if any.

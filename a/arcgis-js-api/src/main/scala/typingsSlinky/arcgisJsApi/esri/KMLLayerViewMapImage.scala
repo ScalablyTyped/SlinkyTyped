@@ -31,7 +31,7 @@ trait KMLLayerViewMapImage extends Object {
   var id: Double = js.native
   
   /**
-    * Rotation of the map image about its center, in degrees. Values can be ±180. The default is 0 (north). Rotations are specified in a counterclockwise direction.
+    * Rotation of the map image about its center, in degrees.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-layers-KMLLayerView.html#MapImage)
     */

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait TypeofDatabase
-  extends Instantiable1[/* repo_ */ Repo, typingsSlinky.firebaseDatabase.databaseMod.Database] {
+  extends Instantiable1[/* repoInternal_ */ Repo, typingsSlinky.firebaseDatabase.databaseMod.Database] {
   
   val ServerValue: TIMESTAMP = js.native
 }

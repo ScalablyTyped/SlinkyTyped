@@ -18,7 +18,7 @@ trait CreateDashboardRequest extends js.Object {
   var DashboardId: RestrictiveResourceId = js.native
   
   /**
-    * Options for publishing the dashboard when you create it:    AvailabilityStatus for AdHocFilteringOption - This status can be either ENABLED or DISABLED. When this is set to DISABLED, QuickSight disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This option is ENABLED by default.     AvailabilityStatus for ExportToCSVOption - This status can be either ENABLED or DISABLED. The visual option to export data to .csv format isn't enabled when this is set to DISABLED. This option is ENABLED by default.     VisibilityState for SheetControlsOption - This visibility state can be either COLLAPSED or EXPANDED. This option is COLLAPSED by default.   
+    * Options for publishing the dashboard when you create it:    AvailabilityStatus for AdHocFilteringOption - This status can be either ENABLED or DISABLED. When this is set to DISABLED, QuickSight disables the left filter pane on the published dashboard, which can be used for ad hoc (one-time) filtering. This option is ENABLED by default.     AvailabilityStatus for ExportToCSVOption - This status can be either ENABLED or DISABLED. The visual option to export data to .CSV format isn't enabled when this is set to DISABLED. This option is ENABLED by default.     VisibilityState for SheetControlsOption - This visibility state can be either COLLAPSED or EXPANDED. This option is COLLAPSED by default.   
     */
   var DashboardPublishOptions: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.DashboardPublishOptions] = js.native
   
@@ -33,7 +33,7 @@ trait CreateDashboardRequest extends js.Object {
   var Parameters: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.Parameters] = js.native
   
   /**
-    * A structure that contains the permissions of the dashboard. You can use this structure for granting permissions with principal and action information.
+    * A structure that contains the permissions of the dashboard. You can use this structure for granting permissions by providing a list of IAM action information for each principal ARN.  To specify no permissions, omit the permissions list.
     */
   var Permissions: js.UndefOr[ResourcePermissionList] = js.native
   

@@ -10,7 +10,7 @@ trait IntersectionTypeNode
      with UnionOrIntersectionTypeNode {
   
   @JSName("kind")
-  var kind_IntersectionTypeNode: typingsSlinky.typescript.mod.SyntaxKind.IntersectionType = js.native
+  val kind_IntersectionTypeNode: typingsSlinky.typescript.mod.SyntaxKind.IntersectionType = js.native
   
-  var types: NodeArray[TypeNode] = js.native
+  val types: NodeArray[TypeNode] = js.native
 }

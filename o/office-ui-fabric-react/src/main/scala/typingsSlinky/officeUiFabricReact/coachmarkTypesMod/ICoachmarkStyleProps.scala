@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.coachmarkTypesMod
 
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -58,6 +58,7 @@ trait ICoachmarkStyleProps extends js.Object {
   
   /**
     * Is the beacon currently animating.
+    * @deprecated Property is never used
     */
   var isBeaconAnimating: Boolean = js.native
   
@@ -68,6 +69,7 @@ trait ICoachmarkStyleProps extends js.Object {
   
   /**
     * Is the Coachmark finished measuring the dimensions of innerHostElement
+    * @deprecated Value is always the inverse of `isMeasuring`
     */
   var isMeasured: Boolean = js.native
   

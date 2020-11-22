@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-syntax-highlighter/dist/cjs/languages/prism/nim", JSImport.Namespace)
+@JSImport("react-syntax-highlighter/dist/cjs/languages/hljs/nim", JSImport.Namespace)
 @js.native
 object nimMod extends js.Object {
   

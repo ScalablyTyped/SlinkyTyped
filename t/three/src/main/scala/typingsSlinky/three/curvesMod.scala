@@ -24,6 +24,12 @@ object curvesMod extends js.Object {
   }
   
   @js.native
+  /**
+  	 * @param [points=[]]
+  	 * @param [closed=false]
+  	 * @param [curveType='centripetal']
+  	 * @param [tension=0.5]
+  	 */
   class CatmullRomCurve3 ()
     extends typingsSlinky.three.catmullRomCurve3Mod.CatmullRomCurve3 {
     def this(points: js.Array[Vector3]) = this()

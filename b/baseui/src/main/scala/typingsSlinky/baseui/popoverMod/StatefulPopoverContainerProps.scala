@@ -65,11 +65,13 @@ trait StatefulPopoverContainerProps extends js.Object {
   
   var onOpen: js.UndefOr[js.Function0[_]] = js.native
   
-  var overrides: js.UndefOr[Overrides] = js.native
+  var overrides: js.UndefOr[PopoverOverrides] = js.native
   
   var placement: js.UndefOr[
     topLeft | leftBottom | topRight | rightBottom | bottomLeft | right | auto | bottomRight | leftTop | left | bottom | rightTop | top
   ] = js.native
+  
+  var popoverMargin: js.UndefOr[Double] = js.native
   
   var popperOptions: js.UndefOr[js.Any] = js.native
   

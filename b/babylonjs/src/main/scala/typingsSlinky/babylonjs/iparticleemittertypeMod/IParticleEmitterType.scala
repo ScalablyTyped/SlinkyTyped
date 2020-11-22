@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.particleMod.Particle
 import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,7 +36,7 @@ trait IParticleEmitterType extends js.Object {
     * @param serializationObject defines the JSON object
     * @param scene defines the hosting scene
     */
-  def parse(serializationObject: js.Any, scene: Scene): Unit = js.native
+  def parse(serializationObject: js.Any, scene: Nullable[Scene]): Unit = js.native
   
   /**
     * Serializes the particle system to a JSON object.
@@ -68,7 +69,7 @@ object IParticleEmitterType {
     applyToShader: Effect => Unit,
     getClassName: () => String,
     getEffectDefines: () => String,
-    parse: (js.Any, Scene) => Unit,
+    parse: (js.Any, Nullable[Scene]) => Unit,
     serialize: () => js.Any,
     startDirectionFunction: (Matrix, Vector3, Particle, Boolean) => Unit,
     startPositionFunction: (Matrix, Vector3, Particle, Boolean) => Unit
@@ -102,7 +103,7 @@ object IParticleEmitterType {
     def setGetEffectDefines(value: () => String): Self = this.set("getEffectDefines", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setParse(value: (js.Any, Scene) => Unit): Self = this.set("parse", js.Any.fromFunction2(value))
+    def setParse(value: (js.Any, Nullable[Scene]) => Unit): Self = this.set("parse", js.Any.fromFunction2(value))
     
     @scala.inline
     def setSerialize(value: () => js.Any): Self = this.set("serialize", js.Any.fromFunction0(value))

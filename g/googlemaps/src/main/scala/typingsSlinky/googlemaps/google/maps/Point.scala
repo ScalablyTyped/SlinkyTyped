@@ -4,16 +4,28 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * @see {@link https://developers.google.com/maps/documentation/javascript/reference/coordinates#Point Maps JavaScript API}
+  */
 @js.native
 trait Point extends js.Object {
   
-  /** Compares two Points */
+  /**
+    * Compares two Points
+    * @see {@link https://developers.google.com/maps/documentation/javascript/reference/coordinates#Point.equals Maps JavaScript API}
+    */
   def equals(other: Point): Boolean = js.native
   
-  /** The X coordinate */
+  /**
+    * The X coordinate
+    * @see {@link https://developers.google.com/maps/documentation/javascript/reference/coordinates#Point.x Maps JavaScript API}
+    */
   var x: Double = js.native
   
-  /** The Y coordinate */
+  /**
+    * The Y coordinate
+    * @see {@link https://developers.google.com/maps/documentation/javascript/reference/coordinates#Point.y Maps JavaScript API}
+    */
   var y: Double = js.native
 }
 object Point {

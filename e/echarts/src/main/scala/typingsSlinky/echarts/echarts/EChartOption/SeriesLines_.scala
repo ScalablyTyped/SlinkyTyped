@@ -6,7 +6,7 @@ import typingsSlinky.echarts.anon.AnimationThreshold
 import typingsSlinky.echarts.anon.ConstantSpeed
 import typingsSlinky.echarts.anon.FontSize
 import typingsSlinky.echarts.anon.ShadowColor
-import typingsSlinky.echarts.anon.`11`
+import typingsSlinky.echarts.anon.`10`
 import typingsSlinky.echarts.echarts.EChartOption.SeriesLines.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -195,7 +195,7 @@ trait SeriesLines_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-lines.emphasis
     */
-  var emphasis: js.UndefOr[`11`] = js.native
+  var emphasis: js.UndefOr[`10`] = js.native
   
   /**
     * Index of
@@ -537,7 +537,7 @@ object SeriesLines_ {
     def deleteEffect: Self = this.set("effect", js.undefined)
     
     @scala.inline
-    def setEmphasis(value: `11`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
+    def setEmphasis(value: `10`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEmphasis: Self = this.set("emphasis", js.undefined)

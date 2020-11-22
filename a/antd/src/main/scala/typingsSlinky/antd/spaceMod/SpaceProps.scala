@@ -1,12 +1,13 @@
 package typingsSlinky.antd.spaceMod
 
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.antdStrings.baseline
 import typingsSlinky.antd.antdStrings.center
 import typingsSlinky.antd.antdStrings.end
 import typingsSlinky.antd.antdStrings.horizontal
 import typingsSlinky.antd.antdStrings.start
 import typingsSlinky.antd.antdStrings.vertical
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,6 +25,8 @@ trait SpaceProps extends js.Object {
   var prefixCls: js.UndefOr[String] = js.native
   
   var size: js.UndefOr[SizeType | Double] = js.native
+  
+  var split: js.UndefOr[ReactElement] = js.native
   
   var style: js.UndefOr[CSSProperties] = js.native
 }
@@ -79,6 +82,15 @@ object SpaceProps {
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)
+    
+    @scala.inline
+    def setSplitReactElement(value: ReactElement): Self = this.set("split", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSplit(value: ReactElement): Self = this.set("split", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSplit: Self = this.set("split", js.undefined)
     
     @scala.inline
     def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])

@@ -11,13 +11,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartLegend extends BaseChartLegend {
   
-  /** @name dxPolarChart.Options.legend.customizeHint */
+  /**
+    * [descr:dxPolarChart.Options.legend.customizeHint]
+    */
   var customizeHint: js.UndefOr[js.Function1[/* seriesInfo */ SeriesColor, String]] = js.native
   
-  /** @name dxPolarChart.Options.legend.customizeText */
+  /**
+    * [descr:dxPolarChart.Options.legend.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* seriesInfo */ SeriesColor, String]] = js.native
   
-  /** @name dxPolarChart.Options.legend.hoverMode */
+  /**
+    * [descr:dxPolarChart.Options.legend.hoverMode]
+    */
   var hoverMode: js.UndefOr[excludePoints | includePoints | none] = js.native
 }
 object dxPolarChartLegend {

@@ -1,7 +1,5 @@
 package typingsSlinky.carbonComponents.dataTableMod
 
-import typingsSlinky.carbonComponents.anon.Element
-import typingsSlinky.carbonComponents.anon.ForceExpand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,11 +20,11 @@ trait DataTable extends js.Object {
   
   def _keydownHandler(evt: js.Any): Unit = js.native
   
-  def _rowExpandToggle(hasElementForceExpand: ForceExpand): Unit = js.native
+  def _rowExpandToggle(hasElementForceExpand: js.Any): Unit = js.native
   
-  def _rowExpandToggleAll(hasElement: Element): Unit = js.native
+  def _rowExpandToggleAll(hasElement: js.Any): Unit = js.native
   
-  def _selectAllToggle(hasElement: Element): Unit = js.native
+  def _selectAllToggle(hasElement: js.Any): Unit = js.native
   
   def _selectToggle(detail: js.Any): Unit = js.native
   
@@ -50,9 +48,9 @@ object DataTable {
     _expandableHoverToggle: js.Any => Unit,
     _handleDocumentClick: js.Any => Unit,
     _keydownHandler: js.Any => Unit,
-    _rowExpandToggle: ForceExpand => Unit,
-    _rowExpandToggleAll: Element => Unit,
-    _selectAllToggle: Element => Unit,
+    _rowExpandToggle: js.Any => Unit,
+    _rowExpandToggleAll: js.Any => Unit,
+    _selectAllToggle: js.Any => Unit,
     _selectToggle: js.Any => Unit,
     _sortToggle: js.Any => Unit,
     _toggleState: (js.Any, js.Any) => Unit,
@@ -98,13 +96,13 @@ object DataTable {
     def set_keydownHandler(value: js.Any => Unit): Self = this.set("_keydownHandler", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set_rowExpandToggle(value: ForceExpand => Unit): Self = this.set("_rowExpandToggle", js.Any.fromFunction1(value))
+    def set_rowExpandToggle(value: js.Any => Unit): Self = this.set("_rowExpandToggle", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set_rowExpandToggleAll(value: Element => Unit): Self = this.set("_rowExpandToggleAll", js.Any.fromFunction1(value))
+    def set_rowExpandToggleAll(value: js.Any => Unit): Self = this.set("_rowExpandToggleAll", js.Any.fromFunction1(value))
     
     @scala.inline
-    def set_selectAllToggle(value: Element => Unit): Self = this.set("_selectAllToggle", js.Any.fromFunction1(value))
+    def set_selectAllToggle(value: js.Any => Unit): Self = this.set("_selectAllToggle", js.Any.fromFunction1(value))
     
     @scala.inline
     def set_selectToggle(value: js.Any => Unit): Self = this.set("_selectToggle", js.Any.fromFunction1(value))

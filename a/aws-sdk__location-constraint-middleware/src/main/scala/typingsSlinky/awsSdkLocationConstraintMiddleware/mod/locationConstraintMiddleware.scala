@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkLocationConstraintMiddleware.mod
 
-import typingsSlinky.awsSdkTypes.middlewareMod.Middleware
 import typingsSlinky.awsSdkTypes.utilMod.Provider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object locationConstraintMiddleware extends js.Object {
   
-  def apply[Input /* <: LocationConstraintAwareInput */, Output /* <: js.Object */](regionProvider: Provider[String]): Middleware[Input, Output] = js.native
+  def apply[Input /* <: LocationConstraintAwareInput */, Output /* <: js.Object */](regionProvider: Provider[String]): js.Any = js.native
 }

@@ -21,7 +21,7 @@ trait DomainNameState extends js.Object {
   val arn: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The domain name.
+    * The domain name. Must be between 1 and 512 characters in length.
     */
   val domainName: js.UndefOr[Input[String]] = js.native
   

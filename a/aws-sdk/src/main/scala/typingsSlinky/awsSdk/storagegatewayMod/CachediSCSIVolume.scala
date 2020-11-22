@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CachediSCSIVolume extends js.Object {
   
   /**
-    * The date the volume was created. Volumes created prior to March 28, 2017 don’t have this time stamp.
+    * The date the volume was created. Volumes created prior to March 28, 2017 don’t have this timestamp.
     */
   var CreatedDate: js.UndefOr[js.Date] = js.native
   
   var KMSKey: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.KMSKey] = js.native
   
   /**
-    * If the cached volume was created from a snapshot, this field contains the snapshot ID used, e.g. snap-78e22663. Otherwise, this field is not included.
+    * If the cached volume was created from a snapshot, this field contains the snapshot ID used, e.g., snap-78e22663. Otherwise, this field is not included.
     */
   var SourceSnapshotId: js.UndefOr[SnapshotId] = js.native
   
@@ -35,7 +35,7 @@ trait CachediSCSIVolume extends js.Object {
   var VolumeAttachmentStatus: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.VolumeAttachmentStatus] = js.native
   
   /**
-    * The unique identifier of the volume, e.g. vol-AE4B946D.
+    * The unique identifier of the volume, e.g., vol-AE4B946D.
     */
   var VolumeId: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.VolumeId] = js.native
   

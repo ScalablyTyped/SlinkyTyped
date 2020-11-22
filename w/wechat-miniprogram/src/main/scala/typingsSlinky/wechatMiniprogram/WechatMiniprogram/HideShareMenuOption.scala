@@ -13,6 +13,11 @@ trait HideShareMenuOption extends js.Object {
   /** 接口调用失败的回调函数 */
   var fail: js.UndefOr[HideShareMenuFailCallback] = js.native
   
+  /** 本接口为 Beta 版本，暂只在 Android 平台支持。需要隐藏的转发按钮名称列表，默认['shareAppMessage', 'shareTimeline']。按钮名称合法值包含 "shareAppMessage"、"shareTimeline" 两种
+    *
+    * 最低基础库： `2.11.3` */
+  var menus: js.UndefOr[js.Array[String]] = js.native
+  
   /** 接口调用成功的回调函数 */
   var success: js.UndefOr[HideShareMenuSuccessCallback] = js.native
 }
@@ -50,6 +55,15 @@ object HideShareMenuOption {
     
     @scala.inline
     def deleteFail: Self = this.set("fail", js.undefined)
+    
+    @scala.inline
+    def setMenusVarargs(value: String*): Self = this.set("menus", js.Array(value :_*))
+    
+    @scala.inline
+    def setMenus(value: js.Array[String]): Self = this.set("menus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMenus: Self = this.set("menus", js.undefined)
     
     @scala.inline
     def setSuccess(value: /* res */ GeneralCallbackResult => Unit): Self = this.set("success", js.Any.fromFunction1(value))

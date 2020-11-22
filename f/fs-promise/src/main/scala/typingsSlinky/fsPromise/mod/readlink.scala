@@ -15,14 +15,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object readlink extends js.Object {
   
-  def apply(path: String): js.Promise[String] = js.native
-  def apply(path: String, callback: js.Function2[/* err */ ErrnoException, /* linkString */ String, _]): Unit = js.native
-  def apply(path: Buffer): js.Promise[String] = js.native
-  def apply(path: Buffer, callback: js.Function2[/* err */ ErrnoException, /* linkString */ String, _]): Unit = js.native
   def apply(path: PathLike): js.Promise[String] = js.native
   def apply(
     path: PathLike,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* linkString */ String, Unit]
+    callback: js.Function2[(/* err */ ErrnoException) | Null, /* linkString */ String, _ | Unit]
   ): Unit = js.native
   def apply(
     path: PathLike,

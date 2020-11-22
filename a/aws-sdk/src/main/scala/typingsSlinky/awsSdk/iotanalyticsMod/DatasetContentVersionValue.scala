@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DatasetContentVersionValue extends js.Object {
   
   /**
-    * The name of the data set whose latest contents are used as input to the notebook or application.
+    * The name of the dataset whose latest contents are used as input to the notebook or application.
     */
   var datasetName: DatasetName = js.native
 }

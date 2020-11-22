@@ -1,6 +1,6 @@
 package typingsSlinky.expoConfigureSplashScreen
 
-import typingsSlinky.expoConfigureSplashScreen.constantsMod.ResizeMode
+import typingsSlinky.expoConfigureSplashScreen.anon.ImageResizeMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object drawableXmlMod extends js.Object {
   
-  def default(androidMainPath: String, resizeMode: ResizeMode): js.Promise[Unit] = js.native
+  def default(androidMainPath: String): js.Promise[Unit] = js.native
+  def default(androidMainPath: String, config: ImageResizeMode): js.Promise[Unit] = js.native
 }

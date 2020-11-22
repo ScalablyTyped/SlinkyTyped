@@ -18,27 +18,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PolylineDrawAction extends DrawAction {
   
   /**
-    * Completes drawing the polyline geometry and fires the [draw-complete](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolylineDrawAction.html#event-draw-complete) event. Call this method if the drawing logic needs to be completed other than by double-clicking or pressing the "C" key.
+    * Completes drawing the polyline geometry and fires the [draw-complete](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolylineDrawAction.html#event-draw-complete) event.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolylineDrawAction.html#complete)
-    *
-    *
     */
   def complete(): Unit = js.native
   
   /**
-    * The drawing mode. It is only relevant when the action is first created. Its value cannot be changed during the action lifecycle.  **Possible Values**
-    *
-    * Value | Description |
-    * ----- | ----------- |
-    * hybrid | Vertices are added while the pointer is clicked or dragged.
-    * freehand | Vertices are added while the pointer is dragged.
-    * click | Vertices are added when the pointer is clicked.
-    *
+    * The drawing mode.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-draw-PolylineDrawAction.html#mode)
-    *
-    * @default hybrid
     */
   var mode: hybrid | freehand | click = js.native
   

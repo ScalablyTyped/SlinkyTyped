@@ -23,7 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait InputEvent extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/input-event
+  // Docs: https://electronjs.org/docs/api/structures/input-event
   /**
     * An array of modifiers of the event, can be `shift`, `control`, `ctrl`, `alt`,
     * `meta`, `command`, `cmd`, `isKeypad`, `isAutoRepeat`, `leftButtonDown`,

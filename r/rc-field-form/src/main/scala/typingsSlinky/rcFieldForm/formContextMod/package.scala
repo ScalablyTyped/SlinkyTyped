@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object formContextMod {
   
-  type Forms = org.scalablytyped.runtime.StringDictionary[typingsSlinky.rcFieldForm.interfaceMod.FormInstance]
+  type Forms = org.scalablytyped.runtime.StringDictionary[typingsSlinky.rcFieldForm.interfaceMod.FormInstance[js.Any]]
 }

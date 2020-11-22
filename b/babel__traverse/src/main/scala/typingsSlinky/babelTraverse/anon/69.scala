@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TaggedTemplateExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.OpaqueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `69` extends js.Object {
   
-  var `type`: TaggedTemplateExpression = js.native
+  var `type`: OpaqueType = js.native
 }
 object `69` {
   
   @scala.inline
-  def apply(`type`: TaggedTemplateExpression): `69` = {
+  def apply(`type`: OpaqueType): `69` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`69`]
@@ -35,6 +35,6 @@ object `69` {
     }
     
     @scala.inline
-    def setType(value: TaggedTemplateExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: OpaqueType): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

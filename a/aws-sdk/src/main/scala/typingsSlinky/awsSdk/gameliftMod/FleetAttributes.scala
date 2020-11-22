@@ -113,7 +113,7 @@ trait FleetAttributes extends js.Object {
   var Status: js.UndefOr[FleetStatus] = js.native
   
   /**
-    * List of fleet actions that have been suspended using StopFleetActions. This includes auto-scaling.
+    * List of fleet activity that have been suspended using StopFleetActions. This includes auto-scaling.
     */
   var StoppedActions: js.UndefOr[FleetActionList] = js.native
   

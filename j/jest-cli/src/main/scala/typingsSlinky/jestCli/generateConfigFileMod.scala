@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("jest-cli/build/init/generate_config_file", JSImport.Namespace)
+@JSImport("jest-cli/build/init/generateConfigFile", JSImport.Namespace)
 @js.native
 object generateConfigFileMod extends js.Object {
   

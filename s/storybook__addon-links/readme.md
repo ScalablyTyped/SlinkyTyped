@@ -1,7 +1,7 @@
 
 # Scala.js typings for storybook__addon-links
 
-Typings are for version 5.3.19
+Typings are for version 6.1.2
 
 ## Library description:
 Story Links addon for storybook

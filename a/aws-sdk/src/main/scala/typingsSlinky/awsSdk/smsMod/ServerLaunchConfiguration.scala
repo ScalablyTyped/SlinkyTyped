@@ -8,37 +8,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ServerLaunchConfiguration extends js.Object {
   
   /**
-    * If true, a publicly accessible IP address is created when launching the server.
+    * Indicates whether a publicly accessible IP address is created when launching the server.
     */
   var associatePublicIpAddress: js.UndefOr[AssociatePublicIpAddress] = js.native
   
+  var configureScript: js.UndefOr[S3Location] = js.native
+  
   /**
-    * Name of the EC2 SSH Key to be used for connecting to the launched server.
+    * The type of configuration script.
+    */
+  var configureScriptType: js.UndefOr[ScriptType] = js.native
+  
+  /**
+    * The name of the Amazon EC2 SSH key to be used for connecting to the launched server.
     */
   var ec2KeyName: js.UndefOr[EC2KeyName] = js.native
   
   /**
-    * Instance type to be used for launching the server.
+    * The name of the IAM instance profile.
+    */
+  var iamInstanceProfileName: js.UndefOr[RoleName] = js.native
+  
+  /**
+    * The instance type to use when launching the server.
     */
   var instanceType: js.UndefOr[InstanceType] = js.native
   
   /**
-    * Logical ID of the server in the Amazon CloudFormation template.
+    * The logical ID of the server in the AWS CloudFormation template.
     */
   var logicalId: js.UndefOr[LogicalId] = js.native
   
   /**
-    * Identifier of the security group that applies to the launched server.
+    * The ID of the security group that applies to the launched server.
     */
   var securityGroup: js.UndefOr[SecurityGroup] = js.native
   
   /**
-    * Identifier of the server the launch configuration is associated with.
+    * The ID of the server with which the launch configuration is associated.
     */
   var server: js.UndefOr[Server] = js.native
   
   /**
-    * Identifier of the subnet the server should be launched into.
+    * The ID of the subnet the server should be launched into.
     */
   var subnet: js.UndefOr[Subnet] = js.native
   
@@ -48,7 +60,7 @@ trait ServerLaunchConfiguration extends js.Object {
   var userData: js.UndefOr[UserData] = js.native
   
   /**
-    * Identifier of the VPC the server should be launched into.
+    * The ID of the VPC into which the server should be launched.
     */
   var vpc: js.UndefOr[VPC] = js.native
 }
@@ -82,10 +94,28 @@ object ServerLaunchConfiguration {
     def deleteAssociatePublicIpAddress: Self = this.set("associatePublicIpAddress", js.undefined)
     
     @scala.inline
+    def setConfigureScript(value: S3Location): Self = this.set("configureScript", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConfigureScript: Self = this.set("configureScript", js.undefined)
+    
+    @scala.inline
+    def setConfigureScriptType(value: ScriptType): Self = this.set("configureScriptType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConfigureScriptType: Self = this.set("configureScriptType", js.undefined)
+    
+    @scala.inline
     def setEc2KeyName(value: EC2KeyName): Self = this.set("ec2KeyName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEc2KeyName: Self = this.set("ec2KeyName", js.undefined)
+    
+    @scala.inline
+    def setIamInstanceProfileName(value: RoleName): Self = this.set("iamInstanceProfileName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIamInstanceProfileName: Self = this.set("iamInstanceProfileName", js.undefined)
     
     @scala.inline
     def setInstanceType(value: InstanceType): Self = this.set("instanceType", value.asInstanceOf[js.Any])

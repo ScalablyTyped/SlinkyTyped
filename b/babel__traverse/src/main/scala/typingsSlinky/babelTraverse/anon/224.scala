@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ObjectTypeInternalSlot
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSModuleBlock
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `224` extends js.Object {
   
-  var `type`: ObjectTypeInternalSlot = js.native
+  var `type`: TSModuleBlock = js.native
 }
 object `224` {
   
   @scala.inline
-  def apply(`type`: ObjectTypeInternalSlot): `224` = {
+  def apply(`type`: TSModuleBlock): `224` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`224`]
@@ -35,6 +35,6 @@ object `224` {
     }
     
     @scala.inline
-    def setType(value: ObjectTypeInternalSlot): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSModuleBlock): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

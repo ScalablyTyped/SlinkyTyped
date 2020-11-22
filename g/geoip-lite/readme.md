@@ -1,7 +1,7 @@
 
 # Scala.js typings for geoip-lite
 
-Typings are for version 1.1.6
+Typings are for version 1.4.2
 
 ## Library description:
 A light weight native JavaScript implementation of GeoIP API from MaxMind

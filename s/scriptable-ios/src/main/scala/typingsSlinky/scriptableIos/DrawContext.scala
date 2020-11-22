@@ -48,7 +48,7 @@ trait DrawContext extends js.Object {
     *
     * Call this to draw a text string to the context. The top-left of the text will be drawn at the specified position.
     * @param text - Text to draw.
-    * @param pos - Position to draw the top-left of the text at.
+    * @param pos - Position to draw the top-left of the text.
     * @see https://docs.scriptable.app/drawcontext/#-drawtext
     */
   def drawText(text: String, pos: Point): Unit = js.native
@@ -67,7 +67,7 @@ trait DrawContext extends js.Object {
   /**
     * _Fills a rectangle._
     *
-    * Fills the rectangle width the color set when calling setFillColor.
+    * Fills the rectangle with the color set when calling setFillColor.
     * @param rect - Rectangle to fill.
     * @see https://docs.scriptable.app/drawcontext/#-fill
     */
@@ -85,7 +85,7 @@ trait DrawContext extends js.Object {
   /**
     * _Fills the path that was added the latest._
     *
-    * The path that was latest added to the context is filles with the color set using setFillColor.
+    * The path that was latest added to the context is filled with the color set using setFillColor.
     * @see https://docs.scriptable.app/drawcontext/#-fillpath
     */
   def fillPath(): Unit = js.native
@@ -93,7 +93,7 @@ trait DrawContext extends js.Object {
   /**
     * _Fills a rectangle._
     *
-    * Fills the rectangle width the color set when calling setFillColor.
+    * Fills the rectangle with the color set when calling setFillColor.
     * @param rect - Rectangle to fill.
     * @see https://docs.scriptable.app/drawcontext/#-fillrect
     */
@@ -137,13 +137,13 @@ trait DrawContext extends js.Object {
   def setFillColor(color: Color): Unit = js.native
   
   /**
-    * _Sets the font size used when drawing text._
+    * _Sets the font to use when drawing text._
     *
-    * Sets the font size to be used when drawing text strings to the context.
-    * @param size - Font size to use when drawing text.
-    * @see https://docs.scriptable.app/drawcontext/#-setfontsize
+    * Sets the font to be used when drawing texts to the context.
+    * @param font - Font to use when drawing text.
+    * @see https://docs.scriptable.app/drawcontext/#-setfont
     */
-  def setFontSize(size: Double): Unit = js.native
+  def setFont(font: Font): Unit = js.native
   
   /**
     * _Sets the line width for stroking._
@@ -215,7 +215,7 @@ trait DrawContext extends js.Object {
   def stroke(rect: Rect): Unit = js.native
   
   /**
-    * _Strokes a rectangle._
+    * _Strokes an ellipse._
     *
     * Draws a line around the ellipse that fits within the supplied rectangle. The line will have the color set when calling setStrokeColor and the width set when calling setLineWidth.
     * @param rect - Rectangle incapsulating the ellipse to stroke.
@@ -226,7 +226,7 @@ trait DrawContext extends js.Object {
   /**
     * _Strokes the path that was added the latest._
     *
-    * The path that was latest added to the context is stroked with the color set using setStrokeColor and the line widht set using setLineWidth.
+    * The path that was added the latest to the context is stroked with the color set using setStrokeColor and the line width set using setLineWidth.
     * @see https://docs.scriptable.app/drawcontext/#-strokepath
     */
   def strokePath(): Unit = js.native
@@ -257,7 +257,7 @@ object DrawContext {
     opaque: Boolean,
     respectScreenScale: Boolean,
     setFillColor: Color => Unit,
-    setFontSize: Double => Unit,
+    setFont: Font => Unit,
     setLineWidth: Double => Unit,
     setStrokeColor: Color => Unit,
     setTextAlignedCenter: () => Unit,
@@ -270,7 +270,7 @@ object DrawContext {
     strokePath: () => Unit,
     strokeRect: Rect => Unit
   ): DrawContext = {
-    val __obj = js.Dynamic.literal(addPath = js.Any.fromFunction1(addPath), drawImageAtPoint = js.Any.fromFunction2(drawImageAtPoint), drawImageInRect = js.Any.fromFunction2(drawImageInRect), drawText = js.Any.fromFunction2(drawText), drawTextInRect = js.Any.fromFunction2(drawTextInRect), fill = js.Any.fromFunction1(fill), fillEllipse = js.Any.fromFunction1(fillEllipse), fillPath = js.Any.fromFunction0(fillPath), fillRect = js.Any.fromFunction1(fillRect), getImage = js.Any.fromFunction0(getImage), opaque = opaque.asInstanceOf[js.Any], respectScreenScale = respectScreenScale.asInstanceOf[js.Any], setFillColor = js.Any.fromFunction1(setFillColor), setFontSize = js.Any.fromFunction1(setFontSize), setLineWidth = js.Any.fromFunction1(setLineWidth), setStrokeColor = js.Any.fromFunction1(setStrokeColor), setTextAlignedCenter = js.Any.fromFunction0(setTextAlignedCenter), setTextAlignedLeft = js.Any.fromFunction0(setTextAlignedLeft), setTextAlignedRight = js.Any.fromFunction0(setTextAlignedRight), setTextColor = js.Any.fromFunction1(setTextColor), size = size.asInstanceOf[js.Any], stroke = js.Any.fromFunction1(stroke), strokeEllipse = js.Any.fromFunction1(strokeEllipse), strokePath = js.Any.fromFunction0(strokePath), strokeRect = js.Any.fromFunction1(strokeRect))
+    val __obj = js.Dynamic.literal(addPath = js.Any.fromFunction1(addPath), drawImageAtPoint = js.Any.fromFunction2(drawImageAtPoint), drawImageInRect = js.Any.fromFunction2(drawImageInRect), drawText = js.Any.fromFunction2(drawText), drawTextInRect = js.Any.fromFunction2(drawTextInRect), fill = js.Any.fromFunction1(fill), fillEllipse = js.Any.fromFunction1(fillEllipse), fillPath = js.Any.fromFunction0(fillPath), fillRect = js.Any.fromFunction1(fillRect), getImage = js.Any.fromFunction0(getImage), opaque = opaque.asInstanceOf[js.Any], respectScreenScale = respectScreenScale.asInstanceOf[js.Any], setFillColor = js.Any.fromFunction1(setFillColor), setFont = js.Any.fromFunction1(setFont), setLineWidth = js.Any.fromFunction1(setLineWidth), setStrokeColor = js.Any.fromFunction1(setStrokeColor), setTextAlignedCenter = js.Any.fromFunction0(setTextAlignedCenter), setTextAlignedLeft = js.Any.fromFunction0(setTextAlignedLeft), setTextAlignedRight = js.Any.fromFunction0(setTextAlignedRight), setTextColor = js.Any.fromFunction1(setTextColor), size = size.asInstanceOf[js.Any], stroke = js.Any.fromFunction1(stroke), strokeEllipse = js.Any.fromFunction1(strokeEllipse), strokePath = js.Any.fromFunction0(strokePath), strokeRect = js.Any.fromFunction1(strokeRect))
     __obj.asInstanceOf[DrawContext]
   }
   
@@ -329,7 +329,7 @@ object DrawContext {
     def setSetFillColor(value: Color => Unit): Self = this.set("setFillColor", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setSetFontSize(value: Double => Unit): Self = this.set("setFontSize", js.Any.fromFunction1(value))
+    def setSetFont(value: Font => Unit): Self = this.set("setFont", js.Any.fromFunction1(value))
     
     @scala.inline
     def setSetLineWidth(value: Double => Unit): Self = this.set("setLineWidth", js.Any.fromFunction1(value))

@@ -10,7 +10,6 @@ object clusterer extends js.Object {
   
   @js.native
   class Balloon protected () extends IBalloonManager[Clusterer_] {
-    //tslint:disable-line no-shadowed-variable
     def this(clusterer: Clusterer_) = this()
   }
   

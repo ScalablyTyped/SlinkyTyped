@@ -28,7 +28,7 @@ trait PendingModifiedValues extends js.Object {
   var ClusterVersion: js.UndefOr[String] = js.native
   
   /**
-    * The encryption type for a cluster. Possible values are: KMS and None. For the China region the possible values are None, and Legacy. 
+    * The encryption type for a cluster. Possible values are: KMS and None. 
     */
   var EncryptionType: js.UndefOr[String] = js.native
   

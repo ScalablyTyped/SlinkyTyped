@@ -1,6 +1,7 @@
 package typingsSlinky.nivoTooltip
 
-import typingsSlinky.nivoTooltip.mod.CrosshairType
+import typingsSlinky.nivoTooltip.typesMod.CrosshairType
+import typingsSlinky.nivoTooltip.typesMod.TooltipAnchor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,6 +16,9 @@ object nivoTooltipStrings {
   
   @scala.inline
   def `bottom-right`: `bottom-right` = "bottom-right".asInstanceOf[`bottom-right`]
+  
+  @scala.inline
+  def center: center = "center".asInstanceOf[center]
   
   @scala.inline
   def cross: cross = "cross".asInstanceOf[cross]
@@ -41,7 +45,9 @@ object nivoTooltipStrings {
   def y: y = "y".asInstanceOf[y]
   
   @js.native
-  sealed trait bottom extends CrosshairType
+  sealed trait bottom
+    extends CrosshairType
+       with TooltipAnchor
   
   @js.native
   sealed trait `bottom-left` extends CrosshairType
@@ -50,16 +56,25 @@ object nivoTooltipStrings {
   sealed trait `bottom-right` extends CrosshairType
   
   @js.native
+  sealed trait center extends TooltipAnchor
+  
+  @js.native
   sealed trait cross extends CrosshairType
   
   @js.native
-  sealed trait left extends CrosshairType
+  sealed trait left
+    extends CrosshairType
+       with TooltipAnchor
   
   @js.native
-  sealed trait right extends CrosshairType
+  sealed trait right
+    extends CrosshairType
+       with TooltipAnchor
   
   @js.native
-  sealed trait top extends CrosshairType
+  sealed trait top
+    extends CrosshairType
+       with TooltipAnchor
   
   @js.native
   sealed trait `top-left` extends CrosshairType

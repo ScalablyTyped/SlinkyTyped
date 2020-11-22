@@ -34,16 +34,6 @@ class Upload protected () extends js.Object {
 @js.native
 object Upload extends js.Object {
   
-  def terminate(url: String): Unit = js.native
-  def terminate(
-    url: String,
-    options: js.UndefOr[scala.Nothing],
-    callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]
-  ): Unit = js.native
-  def terminate(url: String, options: UploadOptions): Unit = js.native
-  def terminate(
-    url: String,
-    options: UploadOptions,
-    callback: js.Function1[/* error */ js.UndefOr[js.Error], Unit]
-  ): Unit = js.native
+  def terminate(url: String): js.Promise[Unit] = js.native
+  def terminate(url: String, options: UploadOptions): js.Promise[Unit] = js.native
 }

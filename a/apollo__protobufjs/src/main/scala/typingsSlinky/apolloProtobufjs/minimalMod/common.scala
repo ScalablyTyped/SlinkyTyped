@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object common extends js.Object {
   
-  def apply(name: String, json: StringDictionary[js.Any]): Unit = js.native
+  def apply(name: String, json: StringDictionary[js.UndefOr[js.Any]]): Unit = js.native
   
   /**
     * Gets the root definition of the specified common proto file.

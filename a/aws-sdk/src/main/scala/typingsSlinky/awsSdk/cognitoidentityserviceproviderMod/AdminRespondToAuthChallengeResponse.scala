@@ -13,17 +13,17 @@ trait AdminRespondToAuthChallengeResponse extends js.Object {
   var AuthenticationResult: js.UndefOr[AuthenticationResultType] = js.native
   
   /**
-    * The name of the challenge. For more information, see .
+    * The name of the challenge. For more information, see AdminInitiateAuth.
     */
   var ChallengeName: js.UndefOr[ChallengeNameType] = js.native
   
   /**
-    * The challenge parameters. For more information, see .
+    * The challenge parameters. For more information, see AdminInitiateAuth.
     */
   var ChallengeParameters: js.UndefOr[ChallengeParametersType] = js.native
   
   /**
-    * The session which should be passed both ways in challenge-response calls to the service. If the or API call determines that the caller needs to go through another challenge, they return a session with other challenge parameters. This session should be passed as it is to the next RespondToAuthChallenge API call.
+    * The session which should be passed both ways in challenge-response calls to the service. If the caller needs to go through another challenge, they return a session with other challenge parameters. This session should be passed as it is to the next RespondToAuthChallenge API call.
     */
   var Session: js.UndefOr[SessionType] = js.native
 }

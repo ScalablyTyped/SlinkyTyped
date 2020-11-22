@@ -18,6 +18,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.vis.visStrings.dragStart
   - typingsSlinky.vis.visStrings.dragging
   - typingsSlinky.vis.visStrings.dragEnd
+  - typingsSlinky.vis.visStrings.controlNodeDragging
+  - typingsSlinky.vis.visStrings.controlNodeDragEnd
   - typingsSlinky.vis.visStrings.hoverNode
   - typingsSlinky.vis.visStrings.blurNode
   - typingsSlinky.vis.visStrings.hoverEdge
@@ -59,6 +61,12 @@ object NetworkEvents {
   
   @scala.inline
   def configChange: typingsSlinky.vis.visStrings.configChange = "configChange".asInstanceOf[typingsSlinky.vis.visStrings.configChange]
+  
+  @scala.inline
+  def controlNodeDragEnd: typingsSlinky.vis.visStrings.controlNodeDragEnd = "controlNodeDragEnd".asInstanceOf[typingsSlinky.vis.visStrings.controlNodeDragEnd]
+  
+  @scala.inline
+  def controlNodeDragging: typingsSlinky.vis.visStrings.controlNodeDragging = "controlNodeDragging".asInstanceOf[typingsSlinky.vis.visStrings.controlNodeDragging]
   
   @scala.inline
   def deselectEdge: typingsSlinky.vis.visStrings.deselectEdge = "deselectEdge".asInstanceOf[typingsSlinky.vis.visStrings.deselectEdge]

@@ -10,10 +10,15 @@ import typingsSlinky.pulumiAws.neptuneClusterSnapshotMod.ClusterSnapshotArgs
 import typingsSlinky.pulumiAws.neptuneClusterSnapshotMod.ClusterSnapshotState
 import typingsSlinky.pulumiAws.neptuneEventSubscriptionMod.EventSubscriptionArgs
 import typingsSlinky.pulumiAws.neptuneEventSubscriptionMod.EventSubscriptionState
+import typingsSlinky.pulumiAws.neptuneGetEngineVersionMod.GetEngineVersionArgs
+import typingsSlinky.pulumiAws.neptuneGetEngineVersionMod.GetEngineVersionResult
+import typingsSlinky.pulumiAws.neptuneGetOrderableDbInstanceMod.GetOrderableDbInstanceArgs
+import typingsSlinky.pulumiAws.neptuneGetOrderableDbInstanceMod.GetOrderableDbInstanceResult
 import typingsSlinky.pulumiAws.neptuneParameterGroupMod.ParameterGroupArgs
 import typingsSlinky.pulumiAws.neptuneParameterGroupMod.ParameterGroupState
 import typingsSlinky.pulumiAws.neptuneSubnetGroupMod.SubnetGroupArgs
 import typingsSlinky.pulumiAws.neptuneSubnetGroupMod.SubnetGroupState
+import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -24,6 +29,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@pulumi/aws/neptune", JSImport.Namespace)
 @js.native
 object neptuneMod extends js.Object {
+  
+  def getEngineVersion(): js.Promise[GetEngineVersionResult] = js.native
+  def getEngineVersion(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetEngineVersionResult] = js.native
+  def getEngineVersion(args: GetEngineVersionArgs): js.Promise[GetEngineVersionResult] = js.native
+  def getEngineVersion(args: GetEngineVersionArgs, opts: InvokeOptions): js.Promise[GetEngineVersionResult] = js.native
+  
+  def getOrderableDbInstance(): js.Promise[GetOrderableDbInstanceResult] = js.native
+  def getOrderableDbInstance(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetOrderableDbInstanceResult] = js.native
+  def getOrderableDbInstance(args: GetOrderableDbInstanceArgs): js.Promise[GetOrderableDbInstanceResult] = js.native
+  def getOrderableDbInstance(args: GetOrderableDbInstanceArgs, opts: InvokeOptions): js.Promise[GetOrderableDbInstanceResult] = js.native
   
   @js.native
   class Cluster protected ()

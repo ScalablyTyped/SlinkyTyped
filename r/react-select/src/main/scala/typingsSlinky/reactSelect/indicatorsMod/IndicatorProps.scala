@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-select.react-select/src/types.CommonProps<OptionType> & {  children :react.react.ReactElement,   innerProps :any,   isFocused :boolean,   isRtl :boolean} */
+/* Inlined react-select.react-select/src/types.CommonProps<OptionType> & {  children :react.react.ReactElement,   innerProps :any,   isFocused :boolean,   isRtl :boolean,   isDisabled :boolean} */
 @js.native
 trait IndicatorProps[OptionType /* <: OptionTypeBase */] extends js.Object {
   
@@ -39,6 +39,9 @@ trait IndicatorProps[OptionType /* <: OptionTypeBase */] extends js.Object {
   
   /** Props that will be passed on to the children. */
   var innerProps: js.Any = js.native
+  
+  /** Whether the component is disabled */
+  var isDisabled: Boolean = js.native
   
   /** The focused state of the select. */
   var isFocused: Boolean = js.native

@@ -30,6 +30,4 @@ trait Matrix extends js.Object {
   def removeCellRefsAtRange(start: js.Object, end: js.Object): js.Array[_] = js.native
   
   def reset(): Unit = js.native
-  
-  var t: RecordTranslator = js.native
 }

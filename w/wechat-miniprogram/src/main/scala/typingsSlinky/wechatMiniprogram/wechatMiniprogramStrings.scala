@@ -117,6 +117,9 @@ object wechatMiniprogramStrings {
   def QR_CODE: QR_CODE = "QR_CODE".asInstanceOf[QR_CODE]
   
   @scala.inline
+  def RSA: RSA = "RSA".asInstanceOf[RSA]
+  
+  @scala.inline
   def RSS_14: RSS_14 = "RSS_14".asInstanceOf[RSS_14]
   
   @scala.inline
@@ -136,6 +139,9 @@ object wechatMiniprogramStrings {
   
   @scala.inline
   def WX_CODE: WX_CODE = "WX_CODE".asInstanceOf[WX_CODE]
+  
+  @scala.inline
+  def _empty: _empty = "".asInstanceOf[_empty]
   
   @scala.inline
   def aac: aac = "aac".asInstanceOf[aac]
@@ -168,7 +174,13 @@ object wechatMiniprogramStrings {
   def audio: audio = "audio".asInstanceOf[audio]
   
   @scala.inline
+  def audioBitrate: audioBitrate = "audioBitrate".asInstanceOf[audioBitrate]
+  
+  @scala.inline
   def auto: auto = "auto".asInstanceOf[auto]
+  
+  @scala.inline
+  def autoplay: autoplay = "autoplay".asInstanceOf[autoplay]
   
   @scala.inline
   def back: back = "back".asInstanceOf[back]
@@ -178,6 +190,9 @@ object wechatMiniprogramStrings {
   
   @scala.inline
   def base64: base64 = "base64".asInstanceOf[base64]
+  
+  @scala.inline
+  def begin: begin = "begin".asInstanceOf[begin]
   
   @scala.inline
   def bevel: bevel = "bevel".asInstanceOf[bevel]
@@ -193,6 +208,9 @@ object wechatMiniprogramStrings {
   
   @scala.inline
   def buildInMic: buildInMic = "buildInMic".asInstanceOf[buildInMic]
+  
+  @scala.inline
+  def bullet: bullet = "bullet".asInstanceOf[bullet]
   
   @scala.inline
   def butt: butt = "butt".asInstanceOf[butt]
@@ -213,6 +231,9 @@ object wechatMiniprogramStrings {
   def central: central = "central".asInstanceOf[central]
   
   @scala.inline
+  def checked: checked = "checked".asInstanceOf[checked]
+  
+  @scala.inline
   def child: child = "child".asInstanceOf[child]
   
   @scala.inline
@@ -226,6 +247,9 @@ object wechatMiniprogramStrings {
   
   @scala.inline
   def datamatrix: datamatrix = "datamatrix".asInstanceOf[datamatrix]
+  
+  @scala.inline
+  def del: del = "del".asInstanceOf[del]
   
   @scala.inline
   def dequeue: dequeue = "dequeue".asInstanceOf[dequeue]
@@ -249,6 +273,9 @@ object wechatMiniprogramStrings {
   def `down-mirrored`: `down-mirrored` = "down-mirrored".asInstanceOf[`down-mirrored`]
   
   @scala.inline
+  def drag: drag = "drag".asInstanceOf[drag]
+  
+  @scala.inline
   def ease: ease = "ease".asInstanceOf[ease]
   
   @scala.inline
@@ -270,7 +297,13 @@ object wechatMiniprogramStrings {
   def easeOut: easeOut = "easeOut".asInstanceOf[easeOut]
   
   @scala.inline
+  def em: em = "em".asInstanceOf[em]
+  
+  @scala.inline
   def en: en = "en".asInstanceOf[en]
+  
+  @scala.inline
+  def end: end = "end".asInstanceOf[end]
   
   @scala.inline
   def ended: ended = "ended".asInstanceOf[ended]
@@ -294,10 +327,16 @@ object wechatMiniprogramStrings {
   def fingerPrint: fingerPrint = "fingerPrint".asInstanceOf[fingerPrint]
   
   @scala.inline
+  def friction: friction = "friction".asInstanceOf[friction]
+  
+  @scala.inline
   def front: front = "front".asInstanceOf[front]
   
   @scala.inline
   def game: game = "game".asInstanceOf[game]
+  
+  @scala.inline
+  def gesture: gesture = "gesture".asInstanceOf[gesture]
   
   @scala.inline
   def headsetMic: headsetMic = "headsetMic".asInstanceOf[headsetMic]
@@ -309,13 +348,13 @@ object wechatMiniprogramStrings {
   def high: high = "high".asInstanceOf[high]
   
   @scala.inline
+  def horizontal: horizontal = "horizontal".asInstanceOf[horizontal]
+  
+  @scala.inline
   def image: image = "image".asInstanceOf[image]
   
   @scala.inline
   def init: init = "init".asInstanceOf[init]
-  
-  @scala.inline
-  def input: input = "input".asInstanceOf[input]
   
   @scala.inline
   def isolated: isolated = "isolated".asInstanceOf[isolated]
@@ -325,6 +364,9 @@ object wechatMiniprogramStrings {
   
   @scala.inline
   def json: json = "json".asInstanceOf[json]
+  
+  @scala.inline
+  def justify: justify = "justify".asInstanceOf[justify]
   
   @scala.inline
   def latin1: latin1 = "latin1".asInstanceOf[latin1]
@@ -372,6 +414,12 @@ object wechatMiniprogramStrings {
   def mp3: mp3 = "mp3".asInstanceOf[mp3]
   
   @scala.inline
+  def netJitter: netJitter = "netJitter".asInstanceOf[netJitter]
+  
+  @scala.inline
+  def netSpeed: netSpeed = "netSpeed".asInstanceOf[netSpeed]
+  
+  @scala.inline
   def `no-repeat`: `no-repeat` = "no-repeat".asInstanceOf[`no-repeat`]
   
   @scala.inline
@@ -381,7 +429,13 @@ object wechatMiniprogramStrings {
   def normal: normal = "normal".asInstanceOf[normal]
   
   @scala.inline
+  def ordered: ordered = "ordered".asInstanceOf[ordered]
+  
+  @scala.inline
   def original: original = "original".asInstanceOf[original]
+  
+  @scala.inline
+  def `out-of-bounds`: `out-of-bounds` = "out-of-bounds".asInstanceOf[`out-of-bounds`]
   
   @scala.inline
   def `page-apply-shared`: `page-apply-shared` = "page-apply-shared".asInstanceOf[`page-apply-shared`]
@@ -444,6 +498,12 @@ object wechatMiniprogramStrings {
   def round: round = "round".asInstanceOf[round]
   
   @scala.inline
+  def rtl: rtl = "rtl".asInstanceOf[rtl]
+  
+  @scala.inline
+  def scale: scale = "scale".asInstanceOf[scale]
+  
+  @scala.inline
   def seek: seek = "seek".asInstanceOf[seek]
   
   @scala.inline
@@ -471,16 +531,28 @@ object wechatMiniprogramStrings {
   def stop: stop = "stop".asInstanceOf[stop]
   
   @scala.inline
+  def strong: strong = "strong".asInstanceOf[strong]
+  
+  @scala.inline
+  def sub: sub = "sub".asInstanceOf[sub]
+  
+  @scala.inline
   def success: success = "success".asInstanceOf[success]
   
   @scala.inline
-  def tap: tap = "tap".asInstanceOf[tap]
+  def `super`: `super` = "super".asInstanceOf[`super`]
   
   @scala.inline
   def text: text = "text".asInstanceOf[text]
   
   @scala.inline
   def top: top = "top".asInstanceOf[top]
+  
+  @scala.inline
+  def touch: touch = "touch".asInstanceOf[touch]
+  
+  @scala.inline
+  def `touch-out-of-bounds`: `touch-out-of-bounds` = "touch-out-of-bounds".asInstanceOf[`touch-out-of-bounds`]
   
   @scala.inline
   def trial: trial = "trial".asInstanceOf[trial]
@@ -493,6 +565,9 @@ object wechatMiniprogramStrings {
   
   @scala.inline
   def ui: ui = "ui".asInstanceOf[ui]
+  
+  @scala.inline
+  def unchecked: unchecked = "unchecked".asInstanceOf[unchecked]
   
   @scala.inline
   def unknown: unknown = "unknown".asInstanceOf[unknown]
@@ -519,7 +594,28 @@ object wechatMiniprogramStrings {
   def utf8: utf8 = "utf8".asInstanceOf[utf8]
   
   @scala.inline
+  def vertical: vertical = "vertical".asInstanceOf[vertical]
+  
+  @scala.inline
   def video: video = "video".asInstanceOf[video]
+  
+  @scala.inline
+  def videoBitrate: videoBitrate = "videoBitrate".asInstanceOf[videoBitrate]
+  
+  @scala.inline
+  def videoFPS: videoFPS = "videoFPS".asInstanceOf[videoFPS]
+  
+  @scala.inline
+  def videoGOP: videoGOP = "videoGOP".asInstanceOf[videoGOP]
+  
+  @scala.inline
+  def videoHeight: videoHeight = "videoHeight".asInstanceOf[videoHeight]
+  
+  @scala.inline
+  def videoWidth: videoWidth = "videoWidth".asInstanceOf[videoWidth]
+  
+  @scala.inline
+  def voice: voice = "voice".asInstanceOf[voice]
   
   @scala.inline
   def voice_communication: voice_communication = "voice_communication".asInstanceOf[voice_communication]
@@ -657,6 +753,9 @@ object wechatMiniprogramStrings {
   sealed trait QR_CODE extends js.Object
   
   @js.native
+  sealed trait RSA extends js.Object
+  
+  @js.native
   sealed trait RSS_14 extends js.Object
   
   @js.native
@@ -676,6 +775,9 @@ object wechatMiniprogramStrings {
   
   @js.native
   sealed trait WX_CODE extends js.Object
+  
+  @js.native
+  sealed trait _empty extends js.Object
   
   @js.native
   sealed trait aac extends js.Object
@@ -708,7 +810,13 @@ object wechatMiniprogramStrings {
   sealed trait audio extends js.Object
   
   @js.native
+  sealed trait audioBitrate extends js.Object
+  
+  @js.native
   sealed trait auto extends js.Object
+  
+  @js.native
+  sealed trait autoplay extends js.Object
   
   @js.native
   sealed trait back extends js.Object
@@ -718,6 +826,9 @@ object wechatMiniprogramStrings {
   
   @js.native
   sealed trait base64 extends js.Object
+  
+  @js.native
+  sealed trait begin extends js.Object
   
   @js.native
   sealed trait bevel extends js.Object
@@ -733,6 +844,9 @@ object wechatMiniprogramStrings {
   
   @js.native
   sealed trait buildInMic extends js.Object
+  
+  @js.native
+  sealed trait bullet extends js.Object
   
   @js.native
   sealed trait butt extends js.Object
@@ -753,6 +867,9 @@ object wechatMiniprogramStrings {
   sealed trait central extends js.Object
   
   @js.native
+  sealed trait checked extends js.Object
+  
+  @js.native
   sealed trait child extends js.Object
   
   @js.native
@@ -766,6 +883,9 @@ object wechatMiniprogramStrings {
   
   @js.native
   sealed trait datamatrix extends js.Object
+  
+  @js.native
+  sealed trait del extends js.Object
   
   @js.native
   sealed trait dequeue extends QueueType
@@ -789,6 +909,9 @@ object wechatMiniprogramStrings {
   sealed trait `down-mirrored` extends js.Object
   
   @js.native
+  sealed trait drag extends js.Object
+  
+  @js.native
   sealed trait ease extends js.Object
   
   @js.native
@@ -810,7 +933,13 @@ object wechatMiniprogramStrings {
   sealed trait easeOut extends js.Object
   
   @js.native
+  sealed trait em extends js.Object
+  
+  @js.native
   sealed trait en extends js.Object
+  
+  @js.native
+  sealed trait end extends js.Object
   
   @js.native
   sealed trait ended extends js.Object
@@ -834,10 +963,16 @@ object wechatMiniprogramStrings {
   sealed trait fingerPrint extends js.Object
   
   @js.native
+  sealed trait friction extends js.Object
+  
+  @js.native
   sealed trait front extends js.Object
   
   @js.native
   sealed trait game extends js.Object
+  
+  @js.native
+  sealed trait gesture extends js.Object
   
   @js.native
   sealed trait headsetMic extends js.Object
@@ -849,15 +984,15 @@ object wechatMiniprogramStrings {
   sealed trait high extends js.Object
   
   @js.native
+  sealed trait horizontal extends js.Object
+  
+  @js.native
   sealed trait image extends js.Object
   
   @js.native
   sealed trait init
     extends DataType
        with QueueType
-  
-  @js.native
-  sealed trait input extends js.Object
   
   @js.native
   sealed trait isolated extends js.Object
@@ -867,6 +1002,9 @@ object wechatMiniprogramStrings {
   
   @js.native
   sealed trait json extends js.Object
+  
+  @js.native
+  sealed trait justify extends js.Object
   
   @js.native
   sealed trait latin1 extends js.Object
@@ -914,6 +1052,12 @@ object wechatMiniprogramStrings {
   sealed trait mp3 extends js.Object
   
   @js.native
+  sealed trait netJitter extends js.Object
+  
+  @js.native
+  sealed trait netSpeed extends js.Object
+  
+  @js.native
   sealed trait `no-repeat` extends js.Object
   
   @js.native
@@ -923,7 +1067,13 @@ object wechatMiniprogramStrings {
   sealed trait normal extends js.Object
   
   @js.native
+  sealed trait ordered extends js.Object
+  
+  @js.native
   sealed trait original extends js.Object
+  
+  @js.native
+  sealed trait `out-of-bounds` extends js.Object
   
   @js.native
   sealed trait `page-apply-shared` extends js.Object
@@ -986,6 +1136,12 @@ object wechatMiniprogramStrings {
   sealed trait round extends js.Object
   
   @js.native
+  sealed trait rtl extends js.Object
+  
+  @js.native
+  sealed trait scale extends js.Object
+  
+  @js.native
   sealed trait seek extends js.Object
   
   @js.native
@@ -1013,16 +1169,28 @@ object wechatMiniprogramStrings {
   sealed trait stop extends js.Object
   
   @js.native
+  sealed trait strong extends js.Object
+  
+  @js.native
+  sealed trait sub extends js.Object
+  
+  @js.native
   sealed trait success extends js.Object
   
   @js.native
-  sealed trait tap extends js.Object
+  sealed trait `super` extends js.Object
   
   @js.native
   sealed trait text extends js.Object
   
   @js.native
   sealed trait top extends js.Object
+  
+  @js.native
+  sealed trait touch extends js.Object
+  
+  @js.native
+  sealed trait `touch-out-of-bounds` extends js.Object
   
   @js.native
   sealed trait trial extends js.Object
@@ -1035,6 +1203,9 @@ object wechatMiniprogramStrings {
   
   @js.native
   sealed trait ui extends js.Object
+  
+  @js.native
+  sealed trait unchecked extends js.Object
   
   @js.native
   sealed trait unknown extends js.Object
@@ -1063,7 +1234,28 @@ object wechatMiniprogramStrings {
   sealed trait utf8 extends js.Object
   
   @js.native
+  sealed trait vertical extends js.Object
+  
+  @js.native
   sealed trait video extends js.Object
+  
+  @js.native
+  sealed trait videoBitrate extends js.Object
+  
+  @js.native
+  sealed trait videoFPS extends js.Object
+  
+  @js.native
+  sealed trait videoGOP extends js.Object
+  
+  @js.native
+  sealed trait videoHeight extends js.Object
+  
+  @js.native
+  sealed trait videoWidth extends js.Object
+  
+  @js.native
+  sealed trait voice extends js.Object
   
   @js.native
   sealed trait voice_communication extends js.Object

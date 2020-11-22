@@ -54,6 +54,9 @@ class Policy protected () extends CustomResource {
     */
   val metricAggregationType: Output_[String] = js.native
   
+  /**
+    * Minimum value to scale by when `adjustmentType` is set to `PercentChangeInCapacity`.
+    */
   val minAdjustmentMagnitude: Output_[js.UndefOr[Double]] = js.native
   
   /**

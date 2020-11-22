@@ -13,7 +13,7 @@ trait ReprocessingSummary extends js.Object {
   var creationTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The 'reprocessingId' returned by "StartPipelineReprocessing".
+    * The reprocessingId returned by StartPipelineReprocessing.
     */
   var id: js.UndefOr[ReprocessingId] = js.native
   

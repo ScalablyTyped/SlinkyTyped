@@ -20,11 +20,6 @@ object ViewEncapsulation extends js.Object {
   object Emulated extends TopLevel[Emulated with Double]
   
   @js.native
-  sealed trait Native extends ViewEncapsulation
-  /* 1 */ @js.native
-  object Native extends TopLevel[Native with Double]
-  
-  @js.native
   sealed trait None extends ViewEncapsulation
   /* 2 */ @js.native
   object None extends TopLevel[None with Double]

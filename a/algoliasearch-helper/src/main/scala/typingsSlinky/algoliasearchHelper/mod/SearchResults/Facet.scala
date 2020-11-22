@@ -1,5 +1,6 @@
 package typingsSlinky.algoliasearchHelper.mod.SearchResults
 
+import typingsSlinky.algoliasearchHelper.anon.Avg
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,13 +12,13 @@ trait Facet extends js.Object {
   
   var name: String = js.native
   
-  var stats: js.Object = js.native
+  var stats: js.UndefOr[Avg] = js.native
 }
 object Facet {
   
   @scala.inline
-  def apply(data: js.Object, name: String, stats: js.Object): Facet = {
-    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], stats = stats.asInstanceOf[js.Any])
+  def apply(data: js.Object, name: String): Facet = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Facet]
   }
   
@@ -43,6 +44,9 @@ object Facet {
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStats(value: js.Object): Self = this.set("stats", value.asInstanceOf[js.Any])
+    def setStats(value: Avg): Self = this.set("stats", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStats: Self = this.set("stats", js.undefined)
   }
 }

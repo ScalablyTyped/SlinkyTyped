@@ -7,14 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Data extends js.Object {
   
-  var data: String = js.native
+  var data: js.Object = js.native
   
   var `type`: String = js.native
 }
 object Data {
   
   @scala.inline
-  def apply(data: String, `type`: String): Data = {
+  def apply(data: js.Object, `type`: String): Data = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data]
@@ -36,7 +36,7 @@ object Data {
     }
     
     @scala.inline
-    def setData(value: String): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: js.Object): Self = this.set("data", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])

@@ -16,21 +16,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EditorViewModel extends Accessor {
   
   /**
-    * A property indicating the current active workflow. This is either [CreateWorkflow](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-CreateWorkflow.html) or [UpdateWorkflow](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-UpdateWorkflow.html).
+    * A property indicating the current active workflow.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#activeWorkflow)
     */
   val activeWorkflow: CreateWorkflow | UpdateWorkflow = js.native
   
   /**
-    * An array of string values which specifies what end users are allowed to edit. For example, a feature layer with full editing privileges may be available. But you may only want the end user to have the ability to update existing features. Set the `allowedWorkflows` to only `update`.
-    *
-    * Possible Value | Description
-    * ---------------|------------
-    * create | Indicated in the widget via the `Add feature` option. This allows the end user to create new features in the feature service.
-    * update | Indicated in the widget via the `Edit feature` option. This allows the end user to update and/or delete features in the feature service.
-    *
-    * > These workflows are only enabled if the feature service allows these operations. For example, if a feature service is only enabled to allow updates, 'Add features' is not enabled.
+    * An array of string values which specifies what end users are allowed to edit.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#allowedWorkflows)
     */
@@ -54,17 +47,13 @@ trait EditorViewModel extends Accessor {
     * Cancels any active workflow.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#cancelWorkflow)
-    *
-    *
     */
   def cancelWorkflow(): js.Promise[Unit] = js.native
   
   /**
-    * This is applicable if there is an active update workflow. If so, this method deletes the workflow feature.
+    * This is applicable if there is an active update workflow.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#deleteFeatureFromWorkflow)
-    *
-    *
     */
   def deleteFeatureFromWorkflow(): js.Promise[Unit] = js.native
   
@@ -76,7 +65,7 @@ trait EditorViewModel extends Accessor {
   val editableItems: Collection[EditableItem] = js.native
   
   /**
-    * An array of objects containing information specific to any failed editing operations. In addition to the error(s), options to `retry()` or `cancel()` are provided.
+    * An array of objects containing information specific to any failed editing operations.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#failures)
     */
@@ -97,7 +86,7 @@ trait EditorViewModel extends Accessor {
   var featureTemplatesViewModel: FeatureTemplatesViewModel = js.native
   
   /**
-    * An array of editing configurations for individual layers.  If you have an editable feature layer but do not want the end user to do any type of editing, you can limit this by setting the `enabled` property to `false`.
+    * An array of editing configurations for individual layers.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#layerInfos)
     */
@@ -111,12 +100,9 @@ trait EditorViewModel extends Accessor {
   var sketchViewModel: SketchViewModel = js.native
   
   /**
-    * Initiates the `create` workflow by displaying the panel where feature creation begins. This method takes a [CreationInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#CreationInfo) object containing the layer(s) and template(s) to use.
+    * Initiates the `create` workflow by displaying the panel where feature creation begins.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#startCreateWorkflowAtFeatureCreation)
-    *
-    * @param creationInfo An object containing information needed to create a new feature using the Editor widget.
-    *
     */
   def startCreateWorkflowAtFeatureCreation(creationInfo: CreationInfo): js.Promise[Unit] = js.native
   
@@ -124,9 +110,6 @@ trait EditorViewModel extends Accessor {
     * This method starts the Editor workflow where it waits for the feature to be selected.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#startCreateWorkflowAtFeatureEdit)
-    *
-    * @param feature The feature to be updated.
-    *
     */
   def startCreateWorkflowAtFeatureEdit(feature: Graphic): js.Promise[Unit] = js.native
   
@@ -134,8 +117,6 @@ trait EditorViewModel extends Accessor {
     * Initiates the `create` workflow by displaying the [FeatureTemplates](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTemplates.html) panel.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#startCreateWorkflowAtFeatureTypeSelection)
-    *
-    *
     */
   def startCreateWorkflowAtFeatureTypeSelection(): js.Promise[Unit] = js.native
   
@@ -143,9 +124,6 @@ trait EditorViewModel extends Accessor {
     * Starts the update workflow at the feature geometry and attribute editing panel.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#startUpdateWorkflowAtFeatureEdit)
-    *
-    * @param feature The feature to be updated.
-    *
     */
   def startUpdateWorkflowAtFeatureEdit(feature: Graphic): js.Promise[Unit] = js.native
   
@@ -153,8 +131,6 @@ trait EditorViewModel extends Accessor {
     * Starts the `update` workflow using the current selected feature.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#startUpdateWorkflowAtFeatureSelection)
-    *
-    *
     */
   def startUpdateWorkflowAtFeatureSelection(): js.Promise[Unit] = js.native
   
@@ -162,29 +138,13 @@ trait EditorViewModel extends Accessor {
     * Starts the Editor workflow where it waits for multiple features to be selected.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#startUpdateWorkflowAtMultipleFeatureSelection)
-    *
-    *
     */
   def startUpdateWorkflowAtMultipleFeatureSelection(): js.Promise[Unit] = js.native
   
   /**
-    * The widget's state. Possible values are in the table below.
-    *
-    * Value | Description
-    * ------|------------
-    * ready | Dependencies are met and has valid property values.
-    * disabled | Dependencies are missing and cannot provide valid inputs.
-    * editing-new-feature | The Editor is currently editing (creating) a new feature.
-    * editing-existing-feature | The Editor is currently editing an existing feature.
-    * awaiting-update-feature-candidate | The period when the application is awaiting the user's input after clicking update and multiple features are returned. Specify the feature to update.
-    * awaiting-feature-creation-info | This is the first step in the `create` workflow. A [CreationInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor.html#CreationInfo) is required.
-    * awaiting-feature-to-update | This is the first step in the `update` workflow. A [feature](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) is required.
-    * awaiting-feature-to-create | The waiting period for when a feature is created beforte attribute/geometry edits can be performed.
-    *
+    * The widget's state.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#state)
-    *
-    * @default disabled
     */
   val state: ready | disabled | `editing-new-feature` | `editing-existing-feature` | `awaiting-update-feature-candidate` | `awaiting-feature-creation-info` | `awaiting-feature-to-update` | `awaiting-feature-to-create` = js.native
   
@@ -196,9 +156,9 @@ trait EditorViewModel extends Accessor {
   val syncing: Boolean = js.native
   
   /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html). This view provides the editable layers for the Editor widget.
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#view)
     */
-  var view: MapView = js.native
+  var view: MapView | SceneView = js.native
 }

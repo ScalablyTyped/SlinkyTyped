@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("FileManager")
 @js.native
-class FileManager ()
+class FileManager protected ()
   extends typingsSlinky.scriptableIos.FileManager
 /* static members */
 @JSGlobal("FileManager")

@@ -27,14 +27,14 @@ trait ExportDeclarationmoduleSp extends _ImportLike {
   
   var _statementBrand: js.Any = js.native
   
-  var decorators: js.UndefOr[NodeArray[Decorator]] = js.native
+  val decorators: js.UndefOr[NodeArray[Decorator]] = js.native
   
-  var end: Double = js.native
+  val end: Double = js.native
   
   /** Will not be assigned in the case of `export * from "foo";` */
-  var exportClause: js.UndefOr[NamedExportBindings] = js.native
+  val exportClause: js.UndefOr[NamedExportBindings] = js.native
   
-  var flags: NodeFlags = js.native
+  val flags: NodeFlags = js.native
   
   def forEachChild[T](cbNode: js.Function1[/* node */ this.type, js.UndefOr[T]]): js.UndefOr[T] = js.native
   def forEachChild[T](
@@ -82,18 +82,18 @@ trait ExportDeclarationmoduleSp extends _ImportLike {
   def getWidth(): Double = js.native
   def getWidth(sourceFile: SourceFileLike): Double = js.native
   
-  var isTypeOnly: Boolean = js.native
+  val isTypeOnly: Boolean = js.native
   
-  var kind: ExportDeclaration = js.native
+  val kind: ExportDeclaration = js.native
   
-  var modifiers: js.UndefOr[ModifiersArray] = js.native
+  val modifiers: js.UndefOr[ModifiersArray] = js.native
   
   /** If this is not a StringLiteral it will be a grammar error. */
-  var moduleSpecifier: js.UndefOr[Expression] with js.Object = js.native
+  val moduleSpecifier: js.UndefOr[Expression] with js.Object = js.native
   
-  var name: js.UndefOr[Identifier | StringLiteral | NumericLiteral] = js.native
+  val name: js.UndefOr[Identifier | StringLiteral | NumericLiteral] = js.native
   
-  var parent: SourceFile | ModuleBlock = js.native
+  val parent: SourceFile | ModuleBlock = js.native
   
-  var pos: Double = js.native
+  val pos: Double = js.native
 }

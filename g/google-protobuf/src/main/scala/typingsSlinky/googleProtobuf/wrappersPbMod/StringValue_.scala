@@ -11,5 +11,5 @@ class StringValue_ () extends Message {
   
   def getValue(): String = js.native
   
-  def setValue(value: String): Unit = js.native
+  def setValue(value: String): StringValue = js.native
 }

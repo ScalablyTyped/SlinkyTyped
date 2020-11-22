@@ -2,7 +2,7 @@ package typingsSlinky.antd.cascaderMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -53,11 +53,17 @@ trait CascaderProps extends js.Object {
   
   var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.native
   
+  /** 输入框id */
+  var id: js.UndefOr[String] = js.native
+  
   var inputPrefixCls: js.UndefOr[String] = js.native
   
   var loadData: js.UndefOr[
     js.Function1[/* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]], Unit]
   ] = js.native
+  
+  /** 输入框name */
+  var name: js.UndefOr[String] = js.native
   
   var notFoundContent: js.UndefOr[ReactElement] = js.native
   
@@ -218,6 +224,12 @@ object CascaderProps {
     def deleteGetPopupContainer: Self = this.set("getPopupContainer", js.undefined)
     
     @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
+    
+    @scala.inline
     def setInputPrefixCls(value: String): Self = this.set("inputPrefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -228,6 +240,12 @@ object CascaderProps {
     
     @scala.inline
     def deleteLoadData: Self = this.set("loadData", js.undefined)
+    
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
     def setNotFoundContentReactElement(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])

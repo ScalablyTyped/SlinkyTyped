@@ -1,19 +1,22 @@
 package typingsSlinky.semanticUiReact.components
 
 import org.scalajs.dom.raw.Document
+import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Window
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.`*`.tag
+import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.popupContentMod.PopupContentProps
 import typingsSlinky.semanticUiReact.popupHeaderMod.PopupHeaderProps
+import typingsSlinky.semanticUiReact.popupPopupMod.PopperOffsetsFunction
+import typingsSlinky.semanticUiReact.popupPopupMod.PopperOffsetsFunctionParams
 import typingsSlinky.semanticUiReact.popupPopupMod.PopupProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom center`
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom left`
@@ -32,7 +35,6 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.mini
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.small
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.tiny
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.very
-import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -80,7 +82,7 @@ object Popup {
     
     @scala.inline
     def contentFunction3(
-      value: (/* component */ ReactType[PopupContentProps], PopupContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, PopupContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("content", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -121,7 +123,7 @@ object Popup {
     
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactType[PopupHeaderProps], PopupHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, PopupHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -146,13 +148,18 @@ object Popup {
     def mouseLeaveDelay(value: Double): this.type = set("mouseLeaveDelay", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def offset(value: Double | String): this.type = set("offset", value.asInstanceOf[js.Any])
+    def offsetFunction1(
+      value: /* params */ PopperOffsetsFunctionParams => js.Tuple2[js.UndefOr[Double], js.UndefOr[Double]]
+    ): this.type = set("offset", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onVarargs(value: focus*): this.type = set("on", js.Array(value :_*))
+    def offset(value: (js.Tuple2[Double, js.UndefOr[Double]]) | PopperOffsetsFunction): this.type = set("offset", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def on(value: hover | click | focus | js.Array[focus]): this.type = set("on", value.asInstanceOf[js.Any])
+    def onVarargs(value: (hover | click | focus)*): this.type = set("on", js.Array(value :_*))
+    
+    @scala.inline
+    def on(value: hover | click | focus | (js.Array[hover | click | focus])): this.type = set("on", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onClose(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ PopupProps) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
@@ -182,13 +189,27 @@ object Popup {
     def pinned(value: Boolean): this.type = set("pinned", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def popperReactElement(value: ReactElement): this.type = set("popper", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def popperFunction3(
+      value: (/* component */ ReactElement, HTMLAttributes[HTMLDivElement], /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("popper", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def popper(value: SemanticShorthandItem[HTMLAttributes[HTMLDivElement]]): this.type = set("popper", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def popperDependenciesVarargs(value: js.Any*): this.type = set("popperDependencies", js.Array(value :_*))
     
     @scala.inline
     def popperDependencies(value: js.Array[_]): this.type = set("popperDependencies", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def popperModifiers(value: Record[String, _]): this.type = set("popperModifiers", value.asInstanceOf[js.Any])
+    def popperModifiersVarargs(value: js.Any*): this.type = set("popperModifiers", js.Array(value :_*))
+    
+    @scala.inline
+    def popperModifiers(value: js.Array[_]): this.type = set("popperModifiers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def position(

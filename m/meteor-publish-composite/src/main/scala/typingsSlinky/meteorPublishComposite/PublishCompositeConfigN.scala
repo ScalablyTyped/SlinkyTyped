@@ -12,12 +12,12 @@ trait PublishCompositeConfigN extends js.Object {
   
   var collectionName: js.UndefOr[String] = js.native
   
-  def find(args: js.Any*): Cursor[_] = js.native
+  def find(args: js.Any*): Cursor[_, _] = js.native
 }
 object PublishCompositeConfigN {
   
   @scala.inline
-  def apply(find: /* repeated */ js.Any => Cursor[_]): PublishCompositeConfigN = {
+  def apply(find: /* repeated */ js.Any => Cursor[_, _]): PublishCompositeConfigN = {
     val __obj = js.Dynamic.literal(find = js.Any.fromFunction1(find))
     __obj.asInstanceOf[PublishCompositeConfigN]
   }
@@ -38,7 +38,7 @@ object PublishCompositeConfigN {
     }
     
     @scala.inline
-    def setFind(value: /* repeated */ js.Any => Cursor[_]): Self = this.set("find", js.Any.fromFunction1(value))
+    def setFind(value: /* repeated */ js.Any => Cursor[_, _]): Self = this.set("find", js.Any.fromFunction1(value))
     
     @scala.inline
     def setChildrenVarargs(value: PublishCompositeConfigN*): Self = this.set("children", js.Array(value :_*))

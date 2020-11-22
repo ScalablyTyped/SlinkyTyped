@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Various utilities and convenience functions for executing code at various phases of browser frames. The scheduling module allows you to register tasks that are executed in every animation frame. This can be used to synchronize updates with ongoing animations of the view, or to animate the view manually by adjusting the extent or camera in every frame.
+  * Various utilities and convenience functions for executing code at various phases of browser frames.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-scheduling.html)
   */
@@ -13,22 +13,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait scheduling extends js.Object {
   
   /**
-    * Registers a frame task. An animation frame is composed of different phases to let various actors execute code before, after, or during the rendering of [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
+    * Registers a frame task.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-scheduling.html#addFrameTask)
-    *
-    * @param phases The callbacks for each phase of the frame.
-    *
     */
   def addFrameTask(phases: PhaseCallbacks): FrameTaskHandle = js.native
   
   /**
-    * Schedules the execution of a `callback` function at the next web browser tick. Unlike [addFrameTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-scheduling.html#addFrameTask), a scheduled `callback` will only run once. Scheduling a task for the next execution tick can be useful when you want to throttle/accumulate functionality over a single javascript execution context.
+    * Schedules the execution of a `callback` function at the next web browser tick.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-scheduling.html#schedule)
-    *
-    * @param callback The function to call at the next tick.
-    *
     */
   def schedule(callback: js.Function): js.Any = js.native
 }

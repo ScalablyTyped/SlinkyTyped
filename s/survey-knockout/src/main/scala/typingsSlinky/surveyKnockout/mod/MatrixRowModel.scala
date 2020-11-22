@@ -6,8 +6,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("survey-knockout", "MatrixRowModel")
 @js.native
-class MatrixRowModel protected () extends js.Object {
+class MatrixRowModel protected () extends Base {
   def this(item: ItemValue, fullName: String, data: IMatrixData, value: js.Any) = this()
+  
+  var cellClick: js.Any = js.native
   
   var fullName: String = js.native
   
@@ -15,9 +17,7 @@ class MatrixRowModel protected () extends js.Object {
   
   val name: String = js.native
   
-  /* protected */ def onValueChanged(): Unit = js.native
-  
-  var rowValue: js.Any = js.native
+  val rowClasses: String = js.native
   
   val text: String = js.native
   

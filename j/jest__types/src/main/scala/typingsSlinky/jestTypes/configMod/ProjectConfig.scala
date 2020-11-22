@@ -1,7 +1,5 @@
 package typingsSlinky.jestTypes.configMod
 
-import typingsSlinky.jestTypes.jestTypesStrings.fake
-import typingsSlinky.jestTypes.jestTypesStrings.real
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,8 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ProjectConfig extends js.Object {
   
   var automock: Boolean = js.native
-  
-  var browser: Boolean = js.native
   
   var cache: Boolean = js.native
   
@@ -38,29 +34,31 @@ trait ProjectConfig extends js.Object {
     /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 51 */ js.Any
   ] = js.native
   
-  var filter: js.UndefOr[Path | Null] = js.native
+  var filter: js.UndefOr[Path] = js.native
   
   var forceCoverageMatch: js.Array[Glob] = js.native
   
-  var globalSetup: js.UndefOr[String | Null] = js.native
+  var globalSetup: js.UndefOr[String] = js.native
   
-  var globalTeardown: js.UndefOr[String | Null] = js.native
+  var globalTeardown: js.UndefOr[String] = js.native
   
   var globals: ConfigGlobals = js.native
   
   var haste: HasteConfig = js.native
   
+  var injectGlobals: Boolean = js.native
+  
   var moduleDirectories: js.Array[String] = js.native
   
   var moduleFileExtensions: js.Array[String] = js.native
   
-  var moduleLoader: Path = js.native
+  var moduleLoader: js.UndefOr[Path] = js.native
   
   var moduleNameMapper: js.Array[js.Tuple2[String, String]] = js.native
   
   var modulePathIgnorePatterns: js.Array[String] = js.native
   
-  var modulePaths: js.Array[String] = js.native
+  var modulePaths: js.UndefOr[js.Array[String]] = js.native
   
   var name: String = js.native
   
@@ -70,7 +68,7 @@ trait ProjectConfig extends js.Object {
   
   var resetModules: Boolean = js.native
   
-  var resolver: js.UndefOr[Path | Null] = js.native
+  var resolver: js.UndefOr[Path] = js.native
   
   var restoreMocks: Boolean = js.native
   
@@ -86,9 +84,11 @@ trait ProjectConfig extends js.Object {
   
   var skipFilter: Boolean = js.native
   
-  var skipNodeResolution: Boolean = js.native
+  var skipNodeResolution: js.UndefOr[Boolean] = js.native
   
-  var snapshotResolver: js.UndefOr[Path | Null] = js.native
+  var slowTestThreshold: Double = js.native
+  
+  var snapshotResolver: js.UndefOr[Path] = js.native
   
   var snapshotSerializers: js.Array[Path] = js.native
   
@@ -102,19 +102,19 @@ trait ProjectConfig extends js.Object {
   
   var testPathIgnorePatterns: js.Array[String] = js.native
   
-  var testRegex: js.Array[String] = js.native
+  var testRegex: js.Array[String | js.RegExp] = js.native
   
   var testRunner: String = js.native
   
   var testURL: String = js.native
   
-  var timers: real | fake = js.native
+  var timers: Timers = js.native
   
   var transform: js.Array[js.Tuple3[String, Path, Record[String, _]]] = js.native
   
   var transformIgnorePatterns: js.Array[Glob] = js.native
   
-  var unmockedModulePathPatterns: js.UndefOr[js.Array[String] | Null] = js.native
+  var unmockedModulePathPatterns: js.UndefOr[js.Array[String]] = js.native
   
   var watchPathIgnorePatterns: js.Array[String] = js.native
 }
@@ -123,7 +123,6 @@ object ProjectConfig {
   @scala.inline
   def apply(
     automock: Boolean,
-    browser: Boolean,
     cache: Boolean,
     cacheDirectory: Path,
     clearMocks: Boolean,
@@ -138,12 +137,11 @@ object ProjectConfig {
     forceCoverageMatch: js.Array[Glob],
     globals: ConfigGlobals,
     haste: HasteConfig,
+    injectGlobals: Boolean,
     moduleDirectories: js.Array[String],
     moduleFileExtensions: js.Array[String],
-    moduleLoader: Path,
     moduleNameMapper: js.Array[js.Tuple2[String, String]],
     modulePathIgnorePatterns: js.Array[String],
-    modulePaths: js.Array[String],
     name: String,
     prettierPath: String,
     resetMocks: Boolean,
@@ -155,22 +153,22 @@ object ProjectConfig {
     setupFiles: js.Array[Path],
     setupFilesAfterEnv: js.Array[Path],
     skipFilter: Boolean,
-    skipNodeResolution: Boolean,
+    slowTestThreshold: Double,
     snapshotSerializers: js.Array[Path],
     testEnvironment: String,
     testEnvironmentOptions: Record[String, _],
     testLocationInResults: Boolean,
     testMatch: js.Array[Glob],
     testPathIgnorePatterns: js.Array[String],
-    testRegex: js.Array[String],
+    testRegex: js.Array[String | js.RegExp],
     testRunner: String,
     testURL: String,
-    timers: real | fake,
+    timers: Timers,
     transform: js.Array[js.Tuple3[String, Path, Record[String, _]]],
     transformIgnorePatterns: js.Array[Glob],
     watchPathIgnorePatterns: js.Array[String]
   ): ProjectConfig = {
-    val __obj = js.Dynamic.literal(automock = automock.asInstanceOf[js.Any], browser = browser.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], cacheDirectory = cacheDirectory.asInstanceOf[js.Any], clearMocks = clearMocks.asInstanceOf[js.Any], coveragePathIgnorePatterns = coveragePathIgnorePatterns.asInstanceOf[js.Any], cwd = cwd.asInstanceOf[js.Any], detectLeaks = detectLeaks.asInstanceOf[js.Any], detectOpenHandles = detectOpenHandles.asInstanceOf[js.Any], errorOnDeprecated = errorOnDeprecated.asInstanceOf[js.Any], extraGlobals = extraGlobals.asInstanceOf[js.Any], forceCoverageMatch = forceCoverageMatch.asInstanceOf[js.Any], globals = globals.asInstanceOf[js.Any], haste = haste.asInstanceOf[js.Any], moduleDirectories = moduleDirectories.asInstanceOf[js.Any], moduleFileExtensions = moduleFileExtensions.asInstanceOf[js.Any], moduleLoader = moduleLoader.asInstanceOf[js.Any], moduleNameMapper = moduleNameMapper.asInstanceOf[js.Any], modulePathIgnorePatterns = modulePathIgnorePatterns.asInstanceOf[js.Any], modulePaths = modulePaths.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], prettierPath = prettierPath.asInstanceOf[js.Any], resetMocks = resetMocks.asInstanceOf[js.Any], resetModules = resetModules.asInstanceOf[js.Any], restoreMocks = restoreMocks.asInstanceOf[js.Any], rootDir = rootDir.asInstanceOf[js.Any], roots = roots.asInstanceOf[js.Any], runner = runner.asInstanceOf[js.Any], setupFiles = setupFiles.asInstanceOf[js.Any], setupFilesAfterEnv = setupFilesAfterEnv.asInstanceOf[js.Any], skipFilter = skipFilter.asInstanceOf[js.Any], skipNodeResolution = skipNodeResolution.asInstanceOf[js.Any], snapshotSerializers = snapshotSerializers.asInstanceOf[js.Any], testEnvironment = testEnvironment.asInstanceOf[js.Any], testEnvironmentOptions = testEnvironmentOptions.asInstanceOf[js.Any], testLocationInResults = testLocationInResults.asInstanceOf[js.Any], testMatch = testMatch.asInstanceOf[js.Any], testPathIgnorePatterns = testPathIgnorePatterns.asInstanceOf[js.Any], testRegex = testRegex.asInstanceOf[js.Any], testRunner = testRunner.asInstanceOf[js.Any], testURL = testURL.asInstanceOf[js.Any], timers = timers.asInstanceOf[js.Any], transform = transform.asInstanceOf[js.Any], transformIgnorePatterns = transformIgnorePatterns.asInstanceOf[js.Any], watchPathIgnorePatterns = watchPathIgnorePatterns.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(automock = automock.asInstanceOf[js.Any], cache = cache.asInstanceOf[js.Any], cacheDirectory = cacheDirectory.asInstanceOf[js.Any], clearMocks = clearMocks.asInstanceOf[js.Any], coveragePathIgnorePatterns = coveragePathIgnorePatterns.asInstanceOf[js.Any], cwd = cwd.asInstanceOf[js.Any], detectLeaks = detectLeaks.asInstanceOf[js.Any], detectOpenHandles = detectOpenHandles.asInstanceOf[js.Any], errorOnDeprecated = errorOnDeprecated.asInstanceOf[js.Any], extraGlobals = extraGlobals.asInstanceOf[js.Any], forceCoverageMatch = forceCoverageMatch.asInstanceOf[js.Any], globals = globals.asInstanceOf[js.Any], haste = haste.asInstanceOf[js.Any], injectGlobals = injectGlobals.asInstanceOf[js.Any], moduleDirectories = moduleDirectories.asInstanceOf[js.Any], moduleFileExtensions = moduleFileExtensions.asInstanceOf[js.Any], moduleNameMapper = moduleNameMapper.asInstanceOf[js.Any], modulePathIgnorePatterns = modulePathIgnorePatterns.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], prettierPath = prettierPath.asInstanceOf[js.Any], resetMocks = resetMocks.asInstanceOf[js.Any], resetModules = resetModules.asInstanceOf[js.Any], restoreMocks = restoreMocks.asInstanceOf[js.Any], rootDir = rootDir.asInstanceOf[js.Any], roots = roots.asInstanceOf[js.Any], runner = runner.asInstanceOf[js.Any], setupFiles = setupFiles.asInstanceOf[js.Any], setupFilesAfterEnv = setupFilesAfterEnv.asInstanceOf[js.Any], skipFilter = skipFilter.asInstanceOf[js.Any], slowTestThreshold = slowTestThreshold.asInstanceOf[js.Any], snapshotSerializers = snapshotSerializers.asInstanceOf[js.Any], testEnvironment = testEnvironment.asInstanceOf[js.Any], testEnvironmentOptions = testEnvironmentOptions.asInstanceOf[js.Any], testLocationInResults = testLocationInResults.asInstanceOf[js.Any], testMatch = testMatch.asInstanceOf[js.Any], testPathIgnorePatterns = testPathIgnorePatterns.asInstanceOf[js.Any], testRegex = testRegex.asInstanceOf[js.Any], testRunner = testRunner.asInstanceOf[js.Any], testURL = testURL.asInstanceOf[js.Any], timers = timers.asInstanceOf[js.Any], transform = transform.asInstanceOf[js.Any], transformIgnorePatterns = transformIgnorePatterns.asInstanceOf[js.Any], watchPathIgnorePatterns = watchPathIgnorePatterns.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectConfig]
   }
   
@@ -191,9 +189,6 @@ object ProjectConfig {
     
     @scala.inline
     def setAutomock(value: Boolean): Self = this.set("automock", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setBrowser(value: Boolean): Self = this.set("browser", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCache(value: Boolean): Self = this.set("cache", value.asInstanceOf[js.Any])
@@ -245,6 +240,9 @@ object ProjectConfig {
     def setHaste(value: HasteConfig): Self = this.set("haste", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setInjectGlobals(value: Boolean): Self = this.set("injectGlobals", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setModuleDirectoriesVarargs(value: String*): Self = this.set("moduleDirectories", js.Array(value :_*))
     
     @scala.inline
@@ -257,9 +255,6 @@ object ProjectConfig {
     def setModuleFileExtensions(value: js.Array[String]): Self = this.set("moduleFileExtensions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setModuleLoader(value: Path): Self = this.set("moduleLoader", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setModuleNameMapperVarargs(value: (js.Tuple2[String, String])*): Self = this.set("moduleNameMapper", js.Array(value :_*))
     
     @scala.inline
@@ -270,12 +265,6 @@ object ProjectConfig {
     
     @scala.inline
     def setModulePathIgnorePatterns(value: js.Array[String]): Self = this.set("modulePathIgnorePatterns", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setModulePathsVarargs(value: String*): Self = this.set("modulePaths", js.Array(value :_*))
-    
-    @scala.inline
-    def setModulePaths(value: js.Array[String]): Self = this.set("modulePaths", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
@@ -320,7 +309,7 @@ object ProjectConfig {
     def setSkipFilter(value: Boolean): Self = this.set("skipFilter", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSkipNodeResolution(value: Boolean): Self = this.set("skipNodeResolution", value.asInstanceOf[js.Any])
+    def setSlowTestThreshold(value: Double): Self = this.set("slowTestThreshold", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSnapshotSerializersVarargs(value: Path*): Self = this.set("snapshotSerializers", js.Array(value :_*))
@@ -350,10 +339,10 @@ object ProjectConfig {
     def setTestPathIgnorePatterns(value: js.Array[String]): Self = this.set("testPathIgnorePatterns", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTestRegexVarargs(value: String*): Self = this.set("testRegex", js.Array(value :_*))
+    def setTestRegexVarargs(value: (String | js.RegExp)*): Self = this.set("testRegex", js.Array(value :_*))
     
     @scala.inline
-    def setTestRegex(value: js.Array[String]): Self = this.set("testRegex", value.asInstanceOf[js.Any])
+    def setTestRegex(value: js.Array[String | js.RegExp]): Self = this.set("testRegex", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTestRunner(value: String): Self = this.set("testRunner", value.asInstanceOf[js.Any])
@@ -362,7 +351,7 @@ object ProjectConfig {
     def setTestURL(value: String): Self = this.set("testURL", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTimers(value: real | fake): Self = this.set("timers", value.asInstanceOf[js.Any])
+    def setTimers(value: Timers): Self = this.set("timers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTransformVarargs(value: (js.Tuple3[String, Path, Record[String, js.Any]])*): Self = this.set("transform", js.Array(value :_*))
@@ -401,16 +390,10 @@ object ProjectConfig {
     def deleteFilter: Self = this.set("filter", js.undefined)
     
     @scala.inline
-    def setFilterNull: Self = this.set("filter", null)
-    
-    @scala.inline
     def setGlobalSetup(value: String): Self = this.set("globalSetup", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGlobalSetup: Self = this.set("globalSetup", js.undefined)
-    
-    @scala.inline
-    def setGlobalSetupNull: Self = this.set("globalSetup", null)
     
     @scala.inline
     def setGlobalTeardown(value: String): Self = this.set("globalTeardown", value.asInstanceOf[js.Any])
@@ -419,7 +402,19 @@ object ProjectConfig {
     def deleteGlobalTeardown: Self = this.set("globalTeardown", js.undefined)
     
     @scala.inline
-    def setGlobalTeardownNull: Self = this.set("globalTeardown", null)
+    def setModuleLoader(value: Path): Self = this.set("moduleLoader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModuleLoader: Self = this.set("moduleLoader", js.undefined)
+    
+    @scala.inline
+    def setModulePathsVarargs(value: String*): Self = this.set("modulePaths", js.Array(value :_*))
+    
+    @scala.inline
+    def setModulePaths(value: js.Array[String]): Self = this.set("modulePaths", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModulePaths: Self = this.set("modulePaths", js.undefined)
     
     @scala.inline
     def setResolver(value: Path): Self = this.set("resolver", value.asInstanceOf[js.Any])
@@ -428,16 +423,16 @@ object ProjectConfig {
     def deleteResolver: Self = this.set("resolver", js.undefined)
     
     @scala.inline
-    def setResolverNull: Self = this.set("resolver", null)
+    def setSkipNodeResolution(value: Boolean): Self = this.set("skipNodeResolution", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSkipNodeResolution: Self = this.set("skipNodeResolution", js.undefined)
     
     @scala.inline
     def setSnapshotResolver(value: Path): Self = this.set("snapshotResolver", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSnapshotResolver: Self = this.set("snapshotResolver", js.undefined)
-    
-    @scala.inline
-    def setSnapshotResolverNull: Self = this.set("snapshotResolver", null)
     
     @scala.inline
     def setUnmockedModulePathPatternsVarargs(value: String*): Self = this.set("unmockedModulePathPatterns", js.Array(value :_*))
@@ -447,8 +442,5 @@ object ProjectConfig {
     
     @scala.inline
     def deleteUnmockedModulePathPatterns: Self = this.set("unmockedModulePathPatterns", js.undefined)
-    
-    @scala.inline
-    def setUnmockedModulePathPatternsNull: Self = this.set("unmockedModulePathPatterns", null)
   }
 }

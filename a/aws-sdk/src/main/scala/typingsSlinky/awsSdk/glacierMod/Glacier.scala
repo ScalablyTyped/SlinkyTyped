@@ -3,7 +3,7 @@ package typingsSlinky.awsSdk.glacierMod
 import typingsSlinky.awsSdk.anon.DescribeVaultInputwaiterW
 import typingsSlinky.awsSdk.awsSdkStrings.vaultExists
 import typingsSlinky.awsSdk.awsSdkStrings.vaultNotExists
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.servicesGlacierMod.GlacierCustomizations

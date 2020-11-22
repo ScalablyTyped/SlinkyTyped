@@ -2,7 +2,9 @@ package typingsSlinky.reactResizeDetector.mod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Props
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactResizeDetector.anon.Leading
 import typingsSlinky.reactResizeDetector.reactResizeDetectorStrings.debounce
 import typingsSlinky.reactResizeDetector.reactResizeDetectorStrings.throttle
@@ -32,6 +34,8 @@ trait ReactResizeDetectorProps extends Props[ReactResizeDetector] {
     * You can pass any valid React node: string with node's name or element.
     * Can be useful when you need to handle table's or paragraph's resizes.
     * Default: "div"
+    * @deprecated since version 5.0.0. It will be removed in version 6.0.0.
+    * Use targetRef instead
     */
   var nodeType: js.UndefOr[
     /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 117 */ js.Any
@@ -48,6 +52,8 @@ trait ReactResizeDetectorProps extends Props[ReactResizeDetector] {
     * You can use this property to attach resize-observer to any DOM element.
     * Please refer to the querySelector docs.
     * Default: undefined
+    * @deprecated since version 5.0.0. It will be removed in version 6.0.0.
+    * Use targetRef instead
     */
   var querySelector: js.UndefOr[String] = js.native
   
@@ -88,8 +94,18 @@ trait ReactResizeDetectorProps extends Props[ReactResizeDetector] {
     * But you can pass any DOM element to observe.
     * This property is omitted when you pass querySelector.
     * Default: undefined
+    * @deprecated since version 5.0.0. It will be removed in version 6.0.0.
+    * Use targetRef instead
     */
   var targetDomEl: js.UndefOr[HTMLElement] = js.native
+  
+  /**
+    * A React reference of the element to observe.
+    * Pass a reference to the element you want to attach resize handlers to.
+    * It must be an instance of React.useRef or React.createRef functions
+    * Default: undefined
+    */
+  var targetRef: js.UndefOr[Ref[HTMLElement]] = js.native
 }
 object ReactResizeDetectorProps {
   
@@ -179,5 +195,20 @@ object ReactResizeDetectorProps {
     
     @scala.inline
     def deleteTargetDomEl: Self = this.set("targetDomEl", js.undefined)
+    
+    @scala.inline
+    def setTargetRefRefObject(value: ReactRef[HTMLElement]): Self = this.set("targetRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTargetRefFunction1(value: /* instance */ HTMLElement | Null => Unit): Self = this.set("targetRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setTargetRef(value: Ref[HTMLElement]): Self = this.set("targetRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTargetRef: Self = this.set("targetRef", js.undefined)
+    
+    @scala.inline
+    def setTargetRefNull: Self = this.set("targetRef", null)
   }
 }

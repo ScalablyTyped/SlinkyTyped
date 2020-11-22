@@ -1,7 +1,7 @@
 
 # Scala.js typings for rc-align
 
-Typings are for version 4.0.1
+Typings are for version 4.0.9
 
 ## Library description:
 align ui component for react

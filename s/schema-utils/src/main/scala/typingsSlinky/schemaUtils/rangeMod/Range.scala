@@ -16,10 +16,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Range extends js.Object {
   
   /** @type {Array<RangeValue>} */
-  var _left: js.Array[RangeValue] = js.native
+  var _left: js.Array[js.Tuple2[Double, Boolean]] = js.native
   
   /** @type {Array<RangeValue>} */
-  var _right: js.Array[RangeValue] = js.native
+  var _right: js.Array[js.Tuple2[Double, Boolean]] = js.native
   
   /**
     * @param {boolean} logic is not logic applied

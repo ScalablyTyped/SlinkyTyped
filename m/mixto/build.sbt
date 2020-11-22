@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "mixto"
-version := "0.0-unknown-dt-20200515Z-ea7faf"
+version := "0.0-unknown-dt-20201002Z-ea7faf"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

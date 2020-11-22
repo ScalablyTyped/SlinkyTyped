@@ -41,8 +41,7 @@ class Rule protected () extends CustomResource {
   val inputParameters: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * The frequency that you want AWS Config to run evaluations for a rule that
-    * is triggered periodically. If specified, requires `messageType` to be `ScheduledNotification`.
+    * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `messageType` to be `ScheduledNotification`.
     */
   val maximumExecutionFrequency: Output_[js.UndefOr[String]] = js.native
   
@@ -62,8 +61,7 @@ class Rule protected () extends CustomResource {
   val scope: Output_[js.UndefOr[RuleScope]] = js.native
   
   /**
-    * Source specifies the rule owner, the rule identifier, and the notifications that cause
-    * the function to evaluate your AWS resources as documented below.
+    * Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
     */
   val source: Output_[RuleSource] = js.native
   

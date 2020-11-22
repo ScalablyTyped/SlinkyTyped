@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.abstractPropertyMod.AbstractProperty
 import typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mobx.observablevalueMod.IObservableValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,14 +21,14 @@ object byNameReferencePropertyMod extends js.Object {
     extends AbstractProperty[js.Array[T], IList[String]] {
     def this(
       declaredOn: IStructureClass,
-      parent: AbstractElement,
+      parent: AbstractElement[IAbstractModel, Container],
       name: String,
       value: js.Array[T],
       _targetType: String
     ) = this()
     
     @JSName("parent")
-    var parent_ByNameReferenceListProperty: AbstractElement = js.native
+    var parent_ByNameReferenceListProperty: AbstractElement[IAbstractModel, Container] = js.native
     
     def qualifiedNames(): js.Array[String] = js.native
     
@@ -39,21 +41,21 @@ object byNameReferencePropertyMod extends js.Object {
   class ByNameReferenceProperty[T /* <: IAbstractElement */] protected () extends AbstractProperty[T | Null, IObservableValue[String | Null]] {
     def this(
       declaredOn: IStructureClass,
-      parent: AbstractElement,
+      parent: AbstractElement[IAbstractModel, Container],
       name: String,
       initialValue: T,
       _targetType: String
     ) = this()
     def this(
       declaredOn: IStructureClass,
-      parent: AbstractElement,
+      parent: AbstractElement[IAbstractModel, Container],
       name: String,
       initialValue: Null,
       _targetType: String
     ) = this()
     
     @JSName("parent")
-    var parent_ByNameReferenceProperty: AbstractElement = js.native
+    var parent_ByNameReferenceProperty: AbstractElement[IAbstractModel, Container] = js.native
     
     def qualifiedName(): String | Null = js.native
     

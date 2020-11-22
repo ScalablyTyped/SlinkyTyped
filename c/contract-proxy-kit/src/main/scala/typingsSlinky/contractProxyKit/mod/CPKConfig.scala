@@ -1,5 +1,7 @@
 package typingsSlinky.contractProxyKit.mod
 
+import typingsSlinky.contractProxyKit.anon.Typeofethers
+import typingsSlinky.ethers.mod.ethers.Signer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,10 +20,7 @@ object CPKConfig {
   }
   
   @scala.inline
-  def EthersSpecificConfig(
-    ethers: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ethers */ js.Any,
-    signer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ethers.Signer */ js.Any
-  ): CPKConfig = {
+  def EthersSpecificConfig(ethers: Typeofethers, signer: Signer): CPKConfig = {
     val __obj = js.Dynamic.literal(ethers = ethers.asInstanceOf[js.Any], signer = signer.asInstanceOf[js.Any])
     __obj.asInstanceOf[CPKConfig]
   }

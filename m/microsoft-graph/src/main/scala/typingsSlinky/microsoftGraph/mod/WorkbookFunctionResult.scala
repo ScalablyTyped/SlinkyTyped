@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WorkbookFunctionResult extends Entity {
   
-  var error: js.UndefOr[String] = js.native
+  var error: js.UndefOr[NullableOption[String]] = js.native
   
-  var value: js.UndefOr[js.Any] = js.native
+  var value: js.UndefOr[NullableOption[_]] = js.native
 }
 object WorkbookFunctionResult {
   
@@ -35,15 +35,21 @@ object WorkbookFunctionResult {
     }
     
     @scala.inline
-    def setError(value: String): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setError(value: NullableOption[String]): Self = this.set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteError: Self = this.set("error", js.undefined)
     
     @scala.inline
-    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setErrorNull: Self = this.set("error", null)
+    
+    @scala.inline
+    def setValue(value: NullableOption[_]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

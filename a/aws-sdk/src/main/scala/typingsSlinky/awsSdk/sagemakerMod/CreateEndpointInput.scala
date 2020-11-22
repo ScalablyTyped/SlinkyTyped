@@ -13,7 +13,7 @@ trait CreateEndpointInput extends js.Object {
   var EndpointConfigName: typingsSlinky.awsSdk.sagemakerMod.EndpointConfigName = js.native
   
   /**
-    * The name of the endpoint. The name must be unique within an AWS Region in your AWS account.
+    * The name of the endpoint.The name must be unique within an AWS Region in your AWS account. The name is case-insensitive in CreateEndpoint, but the case is preserved and must be matched in .
     */
   var EndpointName: typingsSlinky.awsSdk.sagemakerMod.EndpointName = js.native
   

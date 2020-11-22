@@ -24,7 +24,7 @@ trait PredominantCategoriesResultPredominantCategoryInfos extends Object {
   var label: js.UndefOr[String] = js.native
   
   /**
-    * The value or category referenced in a predominance visualization. This is typically a field name.
+    * The value or category referenced in a predominance visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-predominantCategories.html#PredominantCategoriesResult)
     */

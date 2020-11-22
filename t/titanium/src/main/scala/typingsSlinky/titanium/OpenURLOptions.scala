@@ -34,7 +34,7 @@ trait OpenURLOptions extends js.Object {
   /**
     * The value of this key is an String containing the bundle ID of the app that made the request. If the request originated from another app belonging to your team, UIKit sets the value of this key to the ID of that app. If the team identifier of the originating app is different than the team identifier of the current app, the value of the key is nil.
     */
-  var UIApplicationOpenURLOptionsSourceApplicationKey: js.UndefOr[java.lang.String] = js.native
+  var UIApplicationOpenURLOptionsSourceApplicationKey: js.UndefOr[String] = js.native
 }
 object OpenURLOptions {
   
@@ -54,7 +54,7 @@ object OpenURLOptions {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -81,7 +81,7 @@ object OpenURLOptions {
     def deleteUIApplicationOpenURLOptionsOpenInPlaceKey: Self = this.set("UIApplicationOpenURLOptionsOpenInPlaceKey", js.undefined)
     
     @scala.inline
-    def setUIApplicationOpenURLOptionsSourceApplicationKey(value: java.lang.String): Self = this.set("UIApplicationOpenURLOptionsSourceApplicationKey", value.asInstanceOf[js.Any])
+    def setUIApplicationOpenURLOptionsSourceApplicationKey(value: String): Self = this.set("UIApplicationOpenURLOptionsSourceApplicationKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUIApplicationOpenURLOptionsSourceApplicationKey: Self = this.set("UIApplicationOpenURLOptionsSourceApplicationKey", js.undefined)

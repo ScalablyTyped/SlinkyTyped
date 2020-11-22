@@ -15,7 +15,7 @@ trait DeploymentArgs extends js.Object {
   val apiId: Input[String] = js.native
   
   /**
-    * The description for the deployment resource.
+    * The description for the deployment resource. Must be less than or equal to 1024 characters in length.
     */
   val description: js.UndefOr[Input[String]] = js.native
   

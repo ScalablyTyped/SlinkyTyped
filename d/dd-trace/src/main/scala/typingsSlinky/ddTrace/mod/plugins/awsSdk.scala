@@ -19,6 +19,12 @@ trait awsSdk
     * Hooks to run before spans are finished.
     */
   var hooks: js.UndefOr[`1`] = js.native
+  
+  /**
+    * Whether to add a suffix to the service name so that each AWS service has its own service name.
+    * @default true
+    */
+  var splitByAwsService: js.UndefOr[Boolean] = js.native
 }
 object awsSdk {
   
@@ -48,5 +54,11 @@ object awsSdk {
     
     @scala.inline
     def deleteHooks: Self = this.set("hooks", js.undefined)
+    
+    @scala.inline
+    def setSplitByAwsService(value: Boolean): Self = this.set("splitByAwsService", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSplitByAwsService: Self = this.set("splitByAwsService", js.undefined)
   }
 }

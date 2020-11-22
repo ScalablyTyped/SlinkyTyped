@@ -1,6 +1,6 @@
 package typingsSlinky.pvtsutils
 
-import typingsSlinky.std.BufferSource
+import typingsSlinky.pvtsutils.bufferSourceConverterMod.BufferSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +17,7 @@ object convertMod extends js.Object {
     
     /* protected */ def Base64Padding(base64: String): String = js.native
     
-    def FromBase64(base64Text: String): js.typedarray.ArrayBuffer = js.native
+    def FromBase64(base64: String): js.typedarray.ArrayBuffer = js.native
     
     def FromBase64Url(base64url: String): js.typedarray.ArrayBuffer = js.native
     
@@ -27,7 +27,7 @@ object convertMod extends js.Object {
       * Converts HEX string to buffer
       *
       * @static
-      * @param {string} hexString
+      * @param {string} formatted
       * @returns {Uint8Array}
       *
       * @memberOf Convert
@@ -56,6 +56,18 @@ object convertMod extends js.Object {
     def ToString(buffer: BufferSource, enc: BufferEncoding): String = js.native
     
     def ToUtf8String(buffer: BufferSource): String = js.native
+    
+    /**
+      * Removes odd chars from string data
+      * @param data String data
+      */
+    def formatString(data: String): String = js.native
+    
+    def isBase64(data: js.Any): /* is string */ Boolean = js.native
+    
+    def isBase64Url(data: js.Any): /* is string */ Boolean = js.native
+    
+    def isHex(data: js.Any): /* is string */ Boolean = js.native
   }
   
   trait _BufferEncoding extends js.Object

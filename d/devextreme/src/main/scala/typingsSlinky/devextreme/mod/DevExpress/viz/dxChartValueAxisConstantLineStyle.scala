@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartValueAxisConstantLineStyle extends dxChartCommonAxisSettingsConstantLineStyle {
   
-  /** @name dxChart.Options.valueAxis.constantLineStyle.label */
+  /**
+    * [descr:dxChart.Options.valueAxis.constantLineStyle.label]
+    */
   @JSName("label")
   var label_dxChartValueAxisConstantLineStyle: js.UndefOr[dxChartValueAxisConstantLineStyleLabel] = js.native
 }

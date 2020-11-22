@@ -54,6 +54,9 @@ object DateInput {
     def fill(value: Boolean): this.type = set("fill", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def highlightCurrentDay(value: Boolean): this.type = set("highlightCurrentDay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def initialMonth(value: js.Date): this.type = set("initialMonth", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Area_[Datum] extends js.Object {
   
+  def apply(data: js.Array[Datum]): String | Null = js.native
   /**
     * Generates an area for the given array of data. Depending on this area generator’s associated curve,
     * the given input data may need to be sorted by x-value before being passed to the area generator.
@@ -17,7 +18,7 @@ trait Area_[Datum] extends js.Object {
     *
     * @param data Array of data elements.
     */
-  def apply(data: js.Array[Datum]): String | Null = js.native
+  def apply(data: js.Iterable[Datum]): String | Null = js.native
   
   /**
     * Returns the current rendering context, which defaults to null.

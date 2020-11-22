@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TypeParameter
+import typingsSlinky.babelTraverse.babelTraverseStrings.SequenceExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `166` extends js.Object {
   
-  var `type`: TypeParameter = js.native
+  var `type`: SequenceExpression = js.native
 }
 object `166` {
   
   @scala.inline
-  def apply(`type`: TypeParameter): `166` = {
+  def apply(`type`: SequenceExpression): `166` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`166`]
@@ -35,6 +35,6 @@ object `166` {
     }
     
     @scala.inline
-    def setType(value: TypeParameter): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: SequenceExpression): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

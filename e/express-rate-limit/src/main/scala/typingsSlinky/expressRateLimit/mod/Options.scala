@@ -14,6 +14,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Options extends js.Object {
   
   /**
+    * Enable headers conforming to the [ratelimit standardization proposal](https://tools.ietf.org/id/draft-polli-ratelimit-headers-01.html):
+    * `RateLimit-Limit`, `RateLimit-Remaining`, and, if the store supports it, `RateLimit-Reset`. May be used in conjunction with, or instead of the `headers` option.
+    * Behavior and name will likely change in future releases.
+    * @default false
+    */
+  var draft_polli_ratelimit_headers: js.UndefOr[Boolean] = js.native
+  
+  /**
     * The funciton to handle requests once `max` is exceeded. It receives the request and response objects.
     * The "next" param is available if you need to pass to the next middleware. The `req.rateLimit` object
     * has `limit`, `current`, and `remaining` number of requests, and if the store provides it, a `resetTime`
@@ -44,8 +52,10 @@ trait Options extends js.Object {
   ] = js.native
   
   /**
-    * Max number of connections during `windowMs` before sending a 429 response. May be a `number` or
-    * a function that returns a `number` or a `Promise<number>`. Defaults to `5`. Set to `0` to disable.
+    * Max number of connections during `windowMs` before sending a 429 response. May be a number, or
+    * a function that returns a number or a promise. If `max` is a function, it will be called with `req` and `res` params.
+    * Set to `0` to disable.
+    * @default 5
     */
   var max: js.UndefOr[Double | MaxValueFn] = js.native
   
@@ -100,7 +110,10 @@ trait Options extends js.Object {
   var store: js.UndefOr[Store] = js.native
   
   /**
-    * How long in milliseconds to keep records of requests in memory. Defaults to `60000` (1 minute).
+    * Timeframe for which requests are checked/remembered. Also used in the Retry-After header when the limit is reached.
+    * Note: with non-default stores, you may need to configure this value twice, once here and once on the store.
+    * In some cases the units also differ (e.g. seconds vs miliseconds)
+    * @default 60000
     */
   var windowMs: js.UndefOr[Double] = js.native
 }
@@ -126,6 +139,12 @@ object Options {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDraft_polli_ratelimit_headers(value: Boolean): Self = this.set("draft_polli_ratelimit_headers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDraft_polli_ratelimit_headers: Self = this.set("draft_polli_ratelimit_headers", js.undefined)
     
     @scala.inline
     def setHandler(

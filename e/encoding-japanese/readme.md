@@ -1,7 +1,7 @@
 
 # Scala.js typings for encoding-japanese
 
-Typings are for version v1.0.24
+Typings are for version v1.0
 
 ## Library description:
 Convert or detect character encoding in JavaScript

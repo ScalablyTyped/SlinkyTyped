@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * _Event driven XML parser._
   *
-  * Constructs an event driven XML parser. It does not itself do any parsing therfore the callback functions must be set before starting to parse.
+  * Constructs an event driven XML parser. It does not do any parsing on its own and therefore the callback functions must be set before starting to parse.
   * @see https://docs.scriptable.app/xmlparser/#-new-xmlparser
   */
 @js.native
@@ -17,7 +17,7 @@ trait XMLParser extends js.Object {
   /**
     * _Function called when the parser ends parsing a document._
     *
-    * The the parser calls the function, it has successfully completed parsing the document.
+    * When the parser calls the function, it has successfully completed parsing the document.
     * @see https://docs.scriptable.app/xmlparser/#didenddocument
     */
   def didEndDocument(): Unit = js.native

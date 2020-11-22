@@ -1,7 +1,7 @@
 package typingsSlinky.sarif.mod
 
 import typingsSlinky.sarif.mod.Suppression.kind
-import typingsSlinky.sarif.mod.Suppression.state
+import typingsSlinky.sarif.mod.Suppression.status
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -35,9 +35,9 @@ trait Suppression_ extends js.Object {
   var properties: js.UndefOr[PropertyBag] = js.native
   
   /**
-    * A string that indicates the state of the suppression.
+    * A string that indicates the review status of the suppression.
     */
-  var state: js.UndefOr[state] = js.native
+  var status: js.UndefOr[status] = js.native
 }
 object Suppression_ {
   
@@ -90,9 +90,9 @@ object Suppression_ {
     def deleteProperties: Self = this.set("properties", js.undefined)
     
     @scala.inline
-    def setState(value: state): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setStatus(value: status): Self = this.set("status", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteState: Self = this.set("state", js.undefined)
+    def deleteStatus: Self = this.set("status", js.undefined)
   }
 }

@@ -56,7 +56,7 @@ object mod extends js.Object {
   def decorate(decorators: js.Array[js.Function], target: js.Any, key: js.Symbol, desc: js.Any): js.Any = js.native
   
   @JSName("__exportStar")
-  def exportStar(m: js.Any, exports: js.Any): Unit = js.native
+  def exportStar(m: js.Any, o: js.Any): Unit = js.native
   
   @JSName("__extends")
   def `extends`(d: js.Function, b: js.Function): Unit = js.native

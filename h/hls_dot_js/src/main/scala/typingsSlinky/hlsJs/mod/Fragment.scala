@@ -28,7 +28,7 @@ trait Fragment extends js.Object {
   /**
     * stream start date and time
     */
-  var programDateTime: js.Date = js.native
+  var programDateTime: Double = js.native
   
   /**
     * fragment sequence number
@@ -62,7 +62,7 @@ object Fragment {
     cc: Double,
     duration: Double,
     level: Double,
-    programDateTime: js.Date,
+    programDateTime: Double,
     sn: Double,
     start: Double,
     tagList: js.Array[js.Array[String]],
@@ -98,7 +98,7 @@ object Fragment {
     def setLevel(value: Double): Self = this.set("level", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setProgramDateTime(value: js.Date): Self = this.set("programDateTime", value.asInstanceOf[js.Any])
+    def setProgramDateTime(value: Double): Self = this.set("programDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSn(value: Double): Self = this.set("sn", value.asInstanceOf[js.Any])

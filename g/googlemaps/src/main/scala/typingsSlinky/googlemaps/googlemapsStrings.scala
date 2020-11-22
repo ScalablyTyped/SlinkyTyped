@@ -4,8 +4,6 @@ import typingsSlinky.googlemaps.google.maps.DrawingMode
 import typingsSlinky.googlemaps.google.maps.GestureHandlingOptions
 import typingsSlinky.googlemaps.google.maps.MapTypeStyleElementType
 import typingsSlinky.googlemaps.google.maps.MapTypeStyleFeatureType
-import typingsSlinky.googlemaps.google.maps.MarkerChangeOptionEventNames
-import typingsSlinky.googlemaps.google.maps.MarkerMouseEventNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -124,6 +122,9 @@ object googlemapsStrings {
   def idle: idle = "idle".asInstanceOf[idle]
   
   @scala.inline
+  def insert_at: insert_at = "insert_at".asInstanceOf[insert_at]
+  
+  @scala.inline
   def labels: labels = "labels".asInstanceOf[labels]
   
   @scala.inline
@@ -214,6 +215,9 @@ object googlemapsStrings {
   def rect: rect = "rect".asInstanceOf[rect]
   
   @scala.inline
+  def remove_at: remove_at = "remove_at".asInstanceOf[remove_at]
+  
+  @scala.inline
   def rightclick: rightclick = "rightclick".asInstanceOf[rightclick]
   
   @scala.inline
@@ -230,6 +234,9 @@ object googlemapsStrings {
   
   @scala.inline
   def roadDotlocal: roadDotlocal = "road.local".asInstanceOf[roadDotlocal]
+  
+  @scala.inline
+  def set_at: set_at = "set_at".asInstanceOf[set_at]
   
   @scala.inline
   def shape_changed: shape_changed = "shape_changed".asInstanceOf[shape_changed]
@@ -309,7 +316,7 @@ object googlemapsStrings {
        with MapTypeStyleFeatureType
   
   @js.native
-  sealed trait animation_changed extends MarkerChangeOptionEventNames
+  sealed trait animation_changed extends js.Object
   
   @js.native
   sealed trait auto extends GestureHandlingOptions
@@ -324,10 +331,10 @@ object googlemapsStrings {
   sealed trait circle extends js.Object
   
   @js.native
-  sealed trait click extends MarkerMouseEventNames
+  sealed trait click extends js.Object
   
   @js.native
-  sealed trait clickable_changed extends MarkerChangeOptionEventNames
+  sealed trait clickable_changed extends js.Object
   
   @js.native
   sealed trait closeclick extends js.Object
@@ -339,28 +346,28 @@ object googlemapsStrings {
   sealed trait cooperative extends GestureHandlingOptions
   
   @js.native
-  sealed trait cursor_changed extends MarkerChangeOptionEventNames
+  sealed trait cursor_changed extends js.Object
   
   @js.native
-  sealed trait dblclick extends MarkerMouseEventNames
+  sealed trait dblclick extends js.Object
   
   @js.native
   sealed trait domready extends js.Object
   
   @js.native
-  sealed trait drag extends MarkerMouseEventNames
+  sealed trait drag extends js.Object
   
   @js.native
-  sealed trait dragend extends MarkerMouseEventNames
+  sealed trait dragend extends js.Object
   
   @js.native
-  sealed trait draggable_changed extends MarkerChangeOptionEventNames
+  sealed trait draggable_changed extends js.Object
   
   @js.native
-  sealed trait dragstart extends MarkerMouseEventNames
+  sealed trait dragstart extends js.Object
   
   @js.native
-  sealed trait flat_changed extends MarkerChangeOptionEventNames
+  sealed trait flat_changed extends js.Object
   
   @js.native
   sealed trait geometry extends MapTypeStyleElementType
@@ -384,10 +391,13 @@ object googlemapsStrings {
   sealed trait html5 extends js.Object
   
   @js.native
-  sealed trait icon_changed extends MarkerChangeOptionEventNames
+  sealed trait icon_changed extends js.Object
   
   @js.native
   sealed trait idle extends js.Object
+  
+  @js.native
+  sealed trait insert_at extends js.Object
   
   @js.native
   sealed trait labels extends MapTypeStyleElementType
@@ -423,19 +433,19 @@ object googlemapsStrings {
   sealed trait maptypeid_changed extends js.Object
   
   @js.native
-  sealed trait mousedown extends MarkerMouseEventNames
+  sealed trait mousedown extends js.Object
   
   @js.native
   sealed trait mousemove extends js.Object
   
   @js.native
-  sealed trait mouseout extends MarkerMouseEventNames
+  sealed trait mouseout extends js.Object
   
   @js.native
-  sealed trait mouseover extends MarkerMouseEventNames
+  sealed trait mouseover extends js.Object
   
   @js.native
-  sealed trait mouseup extends MarkerMouseEventNames
+  sealed trait mouseup extends js.Object
   
   @js.native
   sealed trait none extends GestureHandlingOptions
@@ -471,7 +481,7 @@ object googlemapsStrings {
   sealed trait poly extends js.Object
   
   @js.native
-  sealed trait position_changed extends MarkerChangeOptionEventNames
+  sealed trait position_changed extends js.Object
   
   @js.native
   sealed trait projection_changed extends js.Object
@@ -480,7 +490,10 @@ object googlemapsStrings {
   sealed trait rect extends js.Object
   
   @js.native
-  sealed trait rightclick extends MarkerMouseEventNames
+  sealed trait remove_at extends js.Object
+  
+  @js.native
+  sealed trait rightclick extends js.Object
   
   @js.native
   sealed trait road extends MapTypeStyleFeatureType
@@ -498,7 +511,10 @@ object googlemapsStrings {
   sealed trait roadDotlocal extends MapTypeStyleFeatureType
   
   @js.native
-  sealed trait shape_changed extends MarkerChangeOptionEventNames
+  sealed trait set_at extends js.Object
+  
+  @js.native
+  sealed trait shape_changed extends js.Object
   
   @js.native
   sealed trait tilesloaded extends js.Object
@@ -507,7 +523,7 @@ object googlemapsStrings {
   sealed trait tilt_changed extends js.Object
   
   @js.native
-  sealed trait title_changed extends MarkerChangeOptionEventNames
+  sealed trait title_changed extends js.Object
   
   @js.native
   sealed trait transit extends MapTypeStyleFeatureType
@@ -528,7 +544,7 @@ object googlemapsStrings {
   sealed trait transitDotstationDotrail extends MapTypeStyleFeatureType
   
   @js.native
-  sealed trait visible_changed extends MarkerChangeOptionEventNames
+  sealed trait visible_changed extends js.Object
   
   @js.native
   sealed trait water extends MapTypeStyleFeatureType
@@ -537,7 +553,7 @@ object googlemapsStrings {
   sealed trait webgl extends js.Object
   
   @js.native
-  sealed trait zindex_changed extends MarkerChangeOptionEventNames
+  sealed trait zindex_changed extends js.Object
   
   @js.native
   sealed trait zoom_changed extends js.Object

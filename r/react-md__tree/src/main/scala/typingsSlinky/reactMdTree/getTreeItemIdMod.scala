@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getTreeItemIdMod extends js.Object {
   
-  def default(treeId: String, index: Double): String = js.native
-  def default(treeId: String, index: Double, parentIndexes: js.Array[Double]): String = js.native
+  def getTreeItemId(treeId: String, index: Double): String = js.native
+  def getTreeItemId(treeId: String, index: Double, parentIndexes: js.Array[Double]): String = js.native
 }

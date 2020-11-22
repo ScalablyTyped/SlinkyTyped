@@ -3,7 +3,8 @@ package typingsSlinky.materialSlider.anon
 import org.scalajs.dom.raw.ClientRect
 import typingsSlinky.materialBase.typesMod.EventType
 import typingsSlinky.materialBase.typesMod.SpecificEventListener
-import typingsSlinky.materialSlider.materialSliderStrings.resize
+import typingsSlinky.materialSlider.typesMod.Thumb
+import typingsSlinky.materialSlider.typesMod.TickMark
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,61 +15,101 @@ trait PartialMDCSliderAdapter extends js.Object {
   
   var addClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
   
-  var computeBoundingRect: js.UndefOr[js.Function0[ClientRect]] = js.native
+  var addThumbClass: js.UndefOr[js.Function2[/* className */ String, /* thumb */ Thumb, Unit]] = js.native
   
-  var deregisterBodyInteractionHandler: js.UndefOr[
+  var deregisterBodyEventHandler: js.UndefOr[
     js.Function2[/* evtType */ EventType, /* handler */ SpecificEventListener[EventType], Unit]
   ] = js.native
   
-  var deregisterInteractionHandler: js.UndefOr[
+  var deregisterEventHandler: js.UndefOr[
     js.Function2[/* evtType */ EventType, /* handler */ SpecificEventListener[EventType], Unit]
   ] = js.native
   
-  var deregisterResizeHandler: js.UndefOr[js.Function1[/* handler */ SpecificEventListener[resize], Unit]] = js.native
+  var deregisterThumbEventHandler: js.UndefOr[
+    js.Function3[
+      /* thumb */ Thumb, 
+      /* evtType */ EventType, 
+      /* handler */ SpecificEventListener[EventType], 
+      Unit
+    ]
+  ] = js.native
   
-  var deregisterThumbContainerInteractionHandler: js.UndefOr[
+  var deregisterWindowEventHandler: js.UndefOr[
     js.Function2[/* evtType */ EventType, /* handler */ SpecificEventListener[EventType], Unit]
   ] = js.native
   
-  var getAttribute: js.UndefOr[js.Function1[/* name */ String, String | Null]] = js.native
+  var emitChangeEvent: js.UndefOr[js.Function2[/* value */ Double, /* thumb */ Thumb, Unit]] = js.native
   
-  var getTabIndex: js.UndefOr[js.Function0[Double]] = js.native
+  var emitDragEndEvent: js.UndefOr[js.Function2[/* value */ Double, /* thumb */ Thumb, Unit]] = js.native
+  
+  var emitDragStartEvent: js.UndefOr[js.Function2[/* value */ Double, /* thumb */ Thumb, Unit]] = js.native
+  
+  var emitInputEvent: js.UndefOr[js.Function2[/* value */ Double, /* thumb */ Thumb, Unit]] = js.native
+  
+  var focusThumb: js.UndefOr[js.Function1[/* thumb */ Thumb, Unit]] = js.native
+  
+  var getAttribute: js.UndefOr[js.Function1[/* attribute */ String, String | Null]] = js.native
+  
+  var getBoundingClientRect: js.UndefOr[js.Function0[ClientRect]] = js.native
+  
+  var getThumbAttribute: js.UndefOr[js.Function2[/* attribute */ String, /* thumb */ Thumb, String | Null]] = js.native
+  
+  var getThumbBoundingClientRect: js.UndefOr[js.Function1[/* thumb */ Thumb, ClientRect]] = js.native
+  
+  var getThumbKnobWidth: js.UndefOr[js.Function1[/* thumb */ Thumb, Double]] = js.native
+  
+  var getValueToAriaValueTextFn: js.UndefOr[js.Function0[(js.Function1[/* value */ Double, String]) | Null]] = js.native
   
   var hasClass: js.UndefOr[js.Function1[/* className */ String, Boolean]] = js.native
   
   var isRTL: js.UndefOr[js.Function0[Boolean]] = js.native
   
-  var notifyChange: js.UndefOr[js.Function0[Unit]] = js.native
+  var isThumbFocused: js.UndefOr[js.Function1[/* thumb */ Thumb, Boolean]] = js.native
   
-  var notifyInput: js.UndefOr[js.Function0[Unit]] = js.native
-  
-  var registerBodyInteractionHandler: js.UndefOr[
+  var registerBodyEventHandler: js.UndefOr[
     js.Function2[/* evtType */ EventType, /* handler */ SpecificEventListener[EventType], Unit]
   ] = js.native
   
-  var registerInteractionHandler: js.UndefOr[
+  var registerEventHandler: js.UndefOr[
     js.Function2[/* evtType */ EventType, /* handler */ SpecificEventListener[EventType], Unit]
   ] = js.native
   
-  var registerResizeHandler: js.UndefOr[js.Function1[/* handler */ SpecificEventListener[resize], Unit]] = js.native
-  
-  var registerThumbContainerInteractionHandler: js.UndefOr[
-    js.Function2[/* evtType */ EventType, /* handler */ SpecificEventListener[EventType], Unit]
+  var registerThumbEventHandler: js.UndefOr[
+    js.Function3[
+      /* thumb */ Thumb, 
+      /* evtType */ EventType, 
+      /* handler */ SpecificEventListener[EventType], 
+      Unit
+    ]
   ] = js.native
   
-  var removeAttribute: js.UndefOr[js.Function1[/* name */ String, Unit]] = js.native
+  var registerWindowEventHandler: js.UndefOr[
+    js.Function2[/* evtType */ EventType, /* handler */ SpecificEventListener[EventType], Unit]
+  ] = js.native
   
   var removeClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
   
-  var setAttribute: js.UndefOr[js.Function2[/* name */ String, /* value */ String, Unit]] = js.native
+  var removeThumbClass: js.UndefOr[js.Function2[/* className */ String, /* thumb */ Thumb, Unit]] = js.native
   
-  var setMarkerValue: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
+  var removeThumbStyleProperty: js.UndefOr[js.Function2[/* propertyName */ String, /* thumb */ Thumb, Unit]] = js.native
   
-  var setThumbContainerStyleProperty: js.UndefOr[js.Function2[/* propertyName */ String, /* value */ String, Unit]] = js.native
+  var removeTrackActiveStyleProperty: js.UndefOr[js.Function1[/* propertyName */ String, Unit]] = js.native
   
-  var setTrackMarkers: js.UndefOr[js.Function3[/* step */ Double, /* max */ Double, /* min */ Double, Unit]] = js.native
+  var setPointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Unit]] = js.native
   
-  var setTrackStyleProperty: js.UndefOr[js.Function2[/* propertyName */ String, /* value */ String, Unit]] = js.native
+  var setThumbAttribute: js.UndefOr[
+    js.Function3[/* attribute */ String, /* value */ String, /* thumb */ Thumb, Unit]
+  ] = js.native
+  
+  var setThumbStyleProperty: js.UndefOr[
+    js.Function3[/* propertyName */ String, /* value */ String, /* thumb */ Thumb, Unit]
+  ] = js.native
+  
+  var setTrackActiveStyleProperty: js.UndefOr[js.Function2[/* propertyName */ String, /* value */ String, Unit]] = js.native
+  
+  var setValueIndicatorText: js.UndefOr[js.Function2[/* value */ Double, /* thumb */ Thumb, Unit]] = js.native
+  
+  var updateTickMarks: js.UndefOr[js.Function1[/* tickMarks */ js.Array[TickMark], Unit]] = js.native
 }
 object PartialMDCSliderAdapter {
   
@@ -100,46 +141,102 @@ object PartialMDCSliderAdapter {
     def deleteAddClass: Self = this.set("addClass", js.undefined)
     
     @scala.inline
-    def setComputeBoundingRect(value: () => ClientRect): Self = this.set("computeBoundingRect", js.Any.fromFunction0(value))
+    def setAddThumbClass(value: (/* className */ String, /* thumb */ Thumb) => Unit): Self = this.set("addThumbClass", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteComputeBoundingRect: Self = this.set("computeBoundingRect", js.undefined)
+    def deleteAddThumbClass: Self = this.set("addThumbClass", js.undefined)
     
     @scala.inline
-    def setDeregisterBodyInteractionHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("deregisterBodyInteractionHandler", js.Any.fromFunction2(value))
+    def setDeregisterBodyEventHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("deregisterBodyEventHandler", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteDeregisterBodyInteractionHandler: Self = this.set("deregisterBodyInteractionHandler", js.undefined)
+    def deleteDeregisterBodyEventHandler: Self = this.set("deregisterBodyEventHandler", js.undefined)
     
     @scala.inline
-    def setDeregisterInteractionHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("deregisterInteractionHandler", js.Any.fromFunction2(value))
+    def setDeregisterEventHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("deregisterEventHandler", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteDeregisterInteractionHandler: Self = this.set("deregisterInteractionHandler", js.undefined)
+    def deleteDeregisterEventHandler: Self = this.set("deregisterEventHandler", js.undefined)
     
     @scala.inline
-    def setDeregisterResizeHandler(value: /* handler */ SpecificEventListener[resize] => Unit): Self = this.set("deregisterResizeHandler", js.Any.fromFunction1(value))
+    def setDeregisterThumbEventHandler(
+      value: (/* thumb */ Thumb, /* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit
+    ): Self = this.set("deregisterThumbEventHandler", js.Any.fromFunction3(value))
     
     @scala.inline
-    def deleteDeregisterResizeHandler: Self = this.set("deregisterResizeHandler", js.undefined)
+    def deleteDeregisterThumbEventHandler: Self = this.set("deregisterThumbEventHandler", js.undefined)
     
     @scala.inline
-    def setDeregisterThumbContainerInteractionHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("deregisterThumbContainerInteractionHandler", js.Any.fromFunction2(value))
+    def setDeregisterWindowEventHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("deregisterWindowEventHandler", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteDeregisterThumbContainerInteractionHandler: Self = this.set("deregisterThumbContainerInteractionHandler", js.undefined)
+    def deleteDeregisterWindowEventHandler: Self = this.set("deregisterWindowEventHandler", js.undefined)
     
     @scala.inline
-    def setGetAttribute(value: /* name */ String => String | Null): Self = this.set("getAttribute", js.Any.fromFunction1(value))
+    def setEmitChangeEvent(value: (/* value */ Double, /* thumb */ Thumb) => Unit): Self = this.set("emitChangeEvent", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteEmitChangeEvent: Self = this.set("emitChangeEvent", js.undefined)
+    
+    @scala.inline
+    def setEmitDragEndEvent(value: (/* value */ Double, /* thumb */ Thumb) => Unit): Self = this.set("emitDragEndEvent", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteEmitDragEndEvent: Self = this.set("emitDragEndEvent", js.undefined)
+    
+    @scala.inline
+    def setEmitDragStartEvent(value: (/* value */ Double, /* thumb */ Thumb) => Unit): Self = this.set("emitDragStartEvent", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteEmitDragStartEvent: Self = this.set("emitDragStartEvent", js.undefined)
+    
+    @scala.inline
+    def setEmitInputEvent(value: (/* value */ Double, /* thumb */ Thumb) => Unit): Self = this.set("emitInputEvent", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteEmitInputEvent: Self = this.set("emitInputEvent", js.undefined)
+    
+    @scala.inline
+    def setFocusThumb(value: /* thumb */ Thumb => Unit): Self = this.set("focusThumb", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteFocusThumb: Self = this.set("focusThumb", js.undefined)
+    
+    @scala.inline
+    def setGetAttribute(value: /* attribute */ String => String | Null): Self = this.set("getAttribute", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteGetAttribute: Self = this.set("getAttribute", js.undefined)
     
     @scala.inline
-    def setGetTabIndex(value: () => Double): Self = this.set("getTabIndex", js.Any.fromFunction0(value))
+    def setGetBoundingClientRect(value: () => ClientRect): Self = this.set("getBoundingClientRect", js.Any.fromFunction0(value))
     
     @scala.inline
-    def deleteGetTabIndex: Self = this.set("getTabIndex", js.undefined)
+    def deleteGetBoundingClientRect: Self = this.set("getBoundingClientRect", js.undefined)
+    
+    @scala.inline
+    def setGetThumbAttribute(value: (/* attribute */ String, /* thumb */ Thumb) => String | Null): Self = this.set("getThumbAttribute", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteGetThumbAttribute: Self = this.set("getThumbAttribute", js.undefined)
+    
+    @scala.inline
+    def setGetThumbBoundingClientRect(value: /* thumb */ Thumb => ClientRect): Self = this.set("getThumbBoundingClientRect", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteGetThumbBoundingClientRect: Self = this.set("getThumbBoundingClientRect", js.undefined)
+    
+    @scala.inline
+    def setGetThumbKnobWidth(value: /* thumb */ Thumb => Double): Self = this.set("getThumbKnobWidth", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteGetThumbKnobWidth: Self = this.set("getThumbKnobWidth", js.undefined)
+    
+    @scala.inline
+    def setGetValueToAriaValueTextFn(value: () => (js.Function1[/* value */ Double, String]) | Null): Self = this.set("getValueToAriaValueTextFn", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteGetValueToAriaValueTextFn: Self = this.set("getValueToAriaValueTextFn", js.undefined)
     
     @scala.inline
     def setHasClass(value: /* className */ String => Boolean): Self = this.set("hasClass", js.Any.fromFunction1(value))
@@ -154,46 +251,36 @@ object PartialMDCSliderAdapter {
     def deleteIsRTL: Self = this.set("isRTL", js.undefined)
     
     @scala.inline
-    def setNotifyChange(value: () => Unit): Self = this.set("notifyChange", js.Any.fromFunction0(value))
+    def setIsThumbFocused(value: /* thumb */ Thumb => Boolean): Self = this.set("isThumbFocused", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteNotifyChange: Self = this.set("notifyChange", js.undefined)
+    def deleteIsThumbFocused: Self = this.set("isThumbFocused", js.undefined)
     
     @scala.inline
-    def setNotifyInput(value: () => Unit): Self = this.set("notifyInput", js.Any.fromFunction0(value))
+    def setRegisterBodyEventHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("registerBodyEventHandler", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteNotifyInput: Self = this.set("notifyInput", js.undefined)
+    def deleteRegisterBodyEventHandler: Self = this.set("registerBodyEventHandler", js.undefined)
     
     @scala.inline
-    def setRegisterBodyInteractionHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("registerBodyInteractionHandler", js.Any.fromFunction2(value))
+    def setRegisterEventHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("registerEventHandler", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteRegisterBodyInteractionHandler: Self = this.set("registerBodyInteractionHandler", js.undefined)
+    def deleteRegisterEventHandler: Self = this.set("registerEventHandler", js.undefined)
     
     @scala.inline
-    def setRegisterInteractionHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("registerInteractionHandler", js.Any.fromFunction2(value))
+    def setRegisterThumbEventHandler(
+      value: (/* thumb */ Thumb, /* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit
+    ): Self = this.set("registerThumbEventHandler", js.Any.fromFunction3(value))
     
     @scala.inline
-    def deleteRegisterInteractionHandler: Self = this.set("registerInteractionHandler", js.undefined)
+    def deleteRegisterThumbEventHandler: Self = this.set("registerThumbEventHandler", js.undefined)
     
     @scala.inline
-    def setRegisterResizeHandler(value: /* handler */ SpecificEventListener[resize] => Unit): Self = this.set("registerResizeHandler", js.Any.fromFunction1(value))
+    def setRegisterWindowEventHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("registerWindowEventHandler", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteRegisterResizeHandler: Self = this.set("registerResizeHandler", js.undefined)
-    
-    @scala.inline
-    def setRegisterThumbContainerInteractionHandler(value: (/* evtType */ EventType, /* handler */ SpecificEventListener[EventType]) => Unit): Self = this.set("registerThumbContainerInteractionHandler", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def deleteRegisterThumbContainerInteractionHandler: Self = this.set("registerThumbContainerInteractionHandler", js.undefined)
-    
-    @scala.inline
-    def setRemoveAttribute(value: /* name */ String => Unit): Self = this.set("removeAttribute", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteRemoveAttribute: Self = this.set("removeAttribute", js.undefined)
+    def deleteRegisterWindowEventHandler: Self = this.set("registerWindowEventHandler", js.undefined)
     
     @scala.inline
     def setRemoveClass(value: /* className */ String => Unit): Self = this.set("removeClass", js.Any.fromFunction1(value))
@@ -202,33 +289,57 @@ object PartialMDCSliderAdapter {
     def deleteRemoveClass: Self = this.set("removeClass", js.undefined)
     
     @scala.inline
-    def setSetAttribute(value: (/* name */ String, /* value */ String) => Unit): Self = this.set("setAttribute", js.Any.fromFunction2(value))
+    def setRemoveThumbClass(value: (/* className */ String, /* thumb */ Thumb) => Unit): Self = this.set("removeThumbClass", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteSetAttribute: Self = this.set("setAttribute", js.undefined)
+    def deleteRemoveThumbClass: Self = this.set("removeThumbClass", js.undefined)
     
     @scala.inline
-    def setSetMarkerValue(value: /* value */ Double => Unit): Self = this.set("setMarkerValue", js.Any.fromFunction1(value))
+    def setRemoveThumbStyleProperty(value: (/* propertyName */ String, /* thumb */ Thumb) => Unit): Self = this.set("removeThumbStyleProperty", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteSetMarkerValue: Self = this.set("setMarkerValue", js.undefined)
+    def deleteRemoveThumbStyleProperty: Self = this.set("removeThumbStyleProperty", js.undefined)
     
     @scala.inline
-    def setSetThumbContainerStyleProperty(value: (/* propertyName */ String, /* value */ String) => Unit): Self = this.set("setThumbContainerStyleProperty", js.Any.fromFunction2(value))
+    def setRemoveTrackActiveStyleProperty(value: /* propertyName */ String => Unit): Self = this.set("removeTrackActiveStyleProperty", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteSetThumbContainerStyleProperty: Self = this.set("setThumbContainerStyleProperty", js.undefined)
+    def deleteRemoveTrackActiveStyleProperty: Self = this.set("removeTrackActiveStyleProperty", js.undefined)
     
     @scala.inline
-    def setSetTrackMarkers(value: (/* step */ Double, /* max */ Double, /* min */ Double) => Unit): Self = this.set("setTrackMarkers", js.Any.fromFunction3(value))
+    def setSetPointerCapture(value: /* pointerId */ Double => Unit): Self = this.set("setPointerCapture", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteSetTrackMarkers: Self = this.set("setTrackMarkers", js.undefined)
+    def deleteSetPointerCapture: Self = this.set("setPointerCapture", js.undefined)
     
     @scala.inline
-    def setSetTrackStyleProperty(value: (/* propertyName */ String, /* value */ String) => Unit): Self = this.set("setTrackStyleProperty", js.Any.fromFunction2(value))
+    def setSetThumbAttribute(value: (/* attribute */ String, /* value */ String, /* thumb */ Thumb) => Unit): Self = this.set("setThumbAttribute", js.Any.fromFunction3(value))
     
     @scala.inline
-    def deleteSetTrackStyleProperty: Self = this.set("setTrackStyleProperty", js.undefined)
+    def deleteSetThumbAttribute: Self = this.set("setThumbAttribute", js.undefined)
+    
+    @scala.inline
+    def setSetThumbStyleProperty(value: (/* propertyName */ String, /* value */ String, /* thumb */ Thumb) => Unit): Self = this.set("setThumbStyleProperty", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def deleteSetThumbStyleProperty: Self = this.set("setThumbStyleProperty", js.undefined)
+    
+    @scala.inline
+    def setSetTrackActiveStyleProperty(value: (/* propertyName */ String, /* value */ String) => Unit): Self = this.set("setTrackActiveStyleProperty", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteSetTrackActiveStyleProperty: Self = this.set("setTrackActiveStyleProperty", js.undefined)
+    
+    @scala.inline
+    def setSetValueIndicatorText(value: (/* value */ Double, /* thumb */ Thumb) => Unit): Self = this.set("setValueIndicatorText", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteSetValueIndicatorText: Self = this.set("setValueIndicatorText", js.undefined)
+    
+    @scala.inline
+    def setUpdateTickMarks(value: /* tickMarks */ js.Array[TickMark] => Unit): Self = this.set("updateTickMarks", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteUpdateTickMarks: Self = this.set("updateTickMarks", js.undefined)
   }
 }

@@ -15,7 +15,7 @@ object curveMod extends js.Object {
     /**
     	 * This value determines the amount of divisions when calculating the cumulative segment lengths of a curve via .getLengths.
     	 * To ensure precision when using methods like .getSpacedPoints, it is recommended to increase .arcLengthDivisions if the curve is very large.
-    	 * Default is 200.
+    	 * @default 200
     	 */
     var arcLengthDivisions: Double = js.native
     
@@ -82,6 +82,11 @@ object curveMod extends js.Object {
     def getUtoTmapping(u: Double, distance: Double): Double = js.native
     
     def toJSON(): js.Object = js.native
+    
+    /**
+    	 * @default 'Curve'
+    	 */
+    var `type`: String = js.native
     
     /**
     	 * Update the cumlative segment distance cache

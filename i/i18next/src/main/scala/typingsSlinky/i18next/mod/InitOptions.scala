@@ -184,7 +184,7 @@ trait InitOptions extends js.Object {
     * DEPRECTADED use nonExplicitSupportedLngs
     * @default false
     */
-  var nonExplicitWhiteliest: js.UndefOr[Boolean] = js.native
+  var nonExplicitWhitelist: js.UndefOr[Boolean] = js.native
   
   /**
     * String or array of namespaces to load
@@ -407,6 +407,9 @@ object InitOptions {
     def setFallbackLngVarargs(value: String*): Self = this.set("fallbackLng", js.Array(value :_*))
     
     @scala.inline
+    def setFallbackLngFunction1(value: /* code */ String => String | js.Array[String] | FallbackLngObjList): Self = this.set("fallbackLng", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def setFallbackLng(value: `false` | FallbackLng): Self = this.set("fallbackLng", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -507,10 +510,10 @@ object InitOptions {
     def deleteNonExplicitSupportedLngs: Self = this.set("nonExplicitSupportedLngs", js.undefined)
     
     @scala.inline
-    def setNonExplicitWhiteliest(value: Boolean): Self = this.set("nonExplicitWhiteliest", value.asInstanceOf[js.Any])
+    def setNonExplicitWhitelist(value: Boolean): Self = this.set("nonExplicitWhitelist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteNonExplicitWhiteliest: Self = this.set("nonExplicitWhiteliest", js.undefined)
+    def deleteNonExplicitWhitelist: Self = this.set("nonExplicitWhitelist", js.undefined)
     
     @scala.inline
     def setNsVarargs(value: String*): Self = this.set("ns", js.Array(value :_*))

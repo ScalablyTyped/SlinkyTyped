@@ -50,7 +50,7 @@ object FlexBox {
     @scala.inline
     def border(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("border", value.asInstanceOf[js.Any])
@@ -64,7 +64,7 @@ object FlexBox {
     @scala.inline
     def borderBottom(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderBottomProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderBottom<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderBottom", value.asInstanceOf[js.Any])
@@ -105,7 +105,7 @@ object FlexBox {
     @scala.inline
     def borderBottomStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderBottomStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderBottomStyle */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderBottomStyle", value.asInstanceOf[js.Any])
@@ -137,7 +137,7 @@ object FlexBox {
     @scala.inline
     def borderLeft(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderLeftProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderLeft<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderLeft", value.asInstanceOf[js.Any])
@@ -160,7 +160,7 @@ object FlexBox {
     @scala.inline
     def borderLeftStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderLeftStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderLeftStyle */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderLeftStyle", value.asInstanceOf[js.Any])
@@ -192,7 +192,7 @@ object FlexBox {
     @scala.inline
     def borderRight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderRight", value.asInstanceOf[js.Any])
@@ -215,7 +215,7 @@ object FlexBox {
     @scala.inline
     def borderRightStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRightStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRightStyle */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderRightStyle", value.asInstanceOf[js.Any])
@@ -238,7 +238,7 @@ object FlexBox {
     @scala.inline
     def borderStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderStyle */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderStyle", value.asInstanceOf[js.Any])
@@ -252,7 +252,7 @@ object FlexBox {
     @scala.inline
     def borderTop(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTop<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderTop", value.asInstanceOf[js.Any])
@@ -293,7 +293,7 @@ object FlexBox {
     @scala.inline
     def borderTopStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderTopStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderTopStyle */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderTopStyle", value.asInstanceOf[js.Any])
@@ -325,7 +325,7 @@ object FlexBox {
     @scala.inline
     def borderX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderX", value.asInstanceOf[js.Any])
@@ -339,7 +339,7 @@ object FlexBox {
     @scala.inline
     def borderY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("borderY", value.asInstanceOf[js.Any])
@@ -353,7 +353,7 @@ object FlexBox {
     @scala.inline
     def bottom(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("bottom", value.asInstanceOf[js.Any])
@@ -376,7 +376,7 @@ object FlexBox {
     @scala.inline
     def display(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
           RequiredTheme
         ]
     ): this.type = set("display", value.asInstanceOf[js.Any])
@@ -399,7 +399,7 @@ object FlexBox {
     @scala.inline
     def height(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("height", value.asInstanceOf[js.Any])
@@ -413,7 +413,7 @@ object FlexBox {
     @scala.inline
     def left(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("left", value.asInstanceOf[js.Any])
@@ -499,7 +499,7 @@ object FlexBox {
     @scala.inline
     def maxHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("maxHeight", value.asInstanceOf[js.Any])
@@ -513,7 +513,7 @@ object FlexBox {
     @scala.inline
     def maxWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("maxWidth", value.asInstanceOf[js.Any])
@@ -536,7 +536,7 @@ object FlexBox {
     @scala.inline
     def minHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("minHeight", value.asInstanceOf[js.Any])
@@ -550,7 +550,7 @@ object FlexBox {
     @scala.inline
     def minWidth(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("minWidth", value.asInstanceOf[js.Any])
@@ -609,7 +609,7 @@ object FlexBox {
     @scala.inline
     def opacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): this.type = set("opacity", value.asInstanceOf[js.Any])
@@ -623,7 +623,7 @@ object FlexBox {
     @scala.inline
     def overflow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflow", value.asInstanceOf[js.Any])
@@ -637,7 +637,7 @@ object FlexBox {
     @scala.inline
     def overflowX(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflowX", value.asInstanceOf[js.Any])
@@ -651,7 +651,7 @@ object FlexBox {
     @scala.inline
     def overflowY(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
           RequiredTheme
         ]
     ): this.type = set("overflowY", value.asInstanceOf[js.Any])
@@ -755,7 +755,7 @@ object FlexBox {
     @scala.inline
     def position(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _, 
           RequiredTheme
         ]
     ): this.type = set("position", value.asInstanceOf[js.Any])
@@ -805,7 +805,7 @@ object FlexBox {
     @scala.inline
     def right(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("right", value.asInstanceOf[js.Any])
@@ -819,7 +819,7 @@ object FlexBox {
     @scala.inline
     def size(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("size", value.asInstanceOf[js.Any])
@@ -833,7 +833,7 @@ object FlexBox {
     @scala.inline
     def top(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("top", value.asInstanceOf[js.Any])
@@ -847,7 +847,7 @@ object FlexBox {
     @scala.inline
     def verticalAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
@@ -861,7 +861,7 @@ object FlexBox {
     @scala.inline
     def width(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.WidthProperty<TLengthStyledSystem> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Width<TLengthStyledSystem> */ _, 
           RequiredTheme
         ]
     ): this.type = set("width", value.asInstanceOf[js.Any])
@@ -875,7 +875,7 @@ object FlexBox {
     @scala.inline
     def zIndex(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
           RequiredTheme
         ]
     ): this.type = set("zIndex", value.asInstanceOf[js.Any])

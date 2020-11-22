@@ -13,5 +13,7 @@ object runtimeConfigMod extends js.Object {
   
   def getConfig(k: String): js.UndefOr[String] = js.native
   
+  def setAllConfig(c: StringDictionary[String]): Unit = js.native
+  
   def setConfig(k: String, v: String): Unit = js.native
 }

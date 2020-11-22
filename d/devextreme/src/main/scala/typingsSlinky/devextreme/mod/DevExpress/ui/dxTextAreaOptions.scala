@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTextAreaOptions extends dxTextBoxOptions[dxTextArea] {
   
-  /** @name dxTextArea.Options.autoResizeEnabled */
+  /**
+    * [descr:dxTextArea.Options.autoResizeEnabled]
+    */
   var autoResizeEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTextArea.Options.maxHeight */
+  /**
+    * [descr:dxTextArea.Options.maxHeight]
+    */
   var maxHeight: js.UndefOr[Double | String] = js.native
   
-  /** @name dxTextArea.Options.minHeight */
+  /**
+    * [descr:dxTextArea.Options.minHeight]
+    */
   var minHeight: js.UndefOr[Double | String] = js.native
 }
 object dxTextAreaOptions {

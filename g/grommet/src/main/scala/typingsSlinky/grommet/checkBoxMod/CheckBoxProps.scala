@@ -1,12 +1,15 @@
 package typingsSlinky.grommet.checkBoxMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.grommet.utilsMod.A11yTitleType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait CheckBoxProps extends js.Object {
+  
+  var a11yTitle: js.UndefOr[A11yTitleType] = js.native
   
   var checked: js.UndefOr[Boolean] = js.native
   
@@ -46,6 +49,12 @@ object CheckBoxProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setA11yTitle(value: A11yTitleType): Self = this.set("a11yTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteA11yTitle: Self = this.set("a11yTitle", js.undefined)
     
     @scala.inline
     def setChecked(value: Boolean): Self = this.set("checked", value.asInstanceOf[js.Any])

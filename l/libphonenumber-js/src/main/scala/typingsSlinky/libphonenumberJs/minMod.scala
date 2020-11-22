@@ -18,6 +18,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object minMod extends js.Object {
   
+  def default(text: String): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
+  def default(text: String, defaultCountry: DefaultCallingCode): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
+  def default(text: String, defaultCountry: CountryCode): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
+  
   def findNumbers(text: String): js.Array[NumberFoundLegacy] = js.native
   def findNumbers(text: String, options: DefaultCountry): js.Array[NumberFound] = js.native
   def findNumbers(text: String, options: CountryCode): js.Array[NumberFoundLegacy] = js.native
@@ -52,6 +56,9 @@ object minMod extends js.Object {
   def parsePhoneNumberFromString(text: String, defaultCountry: DefaultCallingCode): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
   def parsePhoneNumberFromString(text: String, defaultCountry: CountryCode): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
   
+  def parsePhoneNumberWithError(text: String): typingsSlinky.libphonenumberJs.typesMod.PhoneNumber = js.native
+  def parsePhoneNumberWithError(text: String, defaultCountry: CountryCode): typingsSlinky.libphonenumberJs.typesMod.PhoneNumber = js.native
+  
   def searchNumbers(text: String): IterableIterator[NumberFoundLegacy] = js.native
   def searchNumbers(text: String, options: DefaultCountry): IterableIterator[NumberFound] = js.native
   def searchNumbers(text: String, options: CountryCode): IterableIterator[NumberFoundLegacy] = js.native
@@ -65,9 +72,11 @@ object minMod extends js.Object {
     def this(defaultCountryCode: DefaultCallingCode) = this()
     def this(defaultCountryCode: CountryCode) = this()
     
+    def getChars(): String = js.native
+    
     def getNumber(): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
     
-    def getTemplate(): js.UndefOr[String] = js.native
+    def getTemplate(): String = js.native
     
     def input(text: String): String = js.native
     

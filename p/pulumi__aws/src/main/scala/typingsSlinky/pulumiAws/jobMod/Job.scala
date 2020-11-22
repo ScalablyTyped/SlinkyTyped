@@ -27,13 +27,6 @@ class Job protected () extends CustomResource {
   def this(name: String, args: JobArgs, opts: CustomResourceOptions) = this()
   
   /**
-    * **DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-    *
-    * @deprecated Please use attribute `max_capacity' instead. This attribute might be removed in future releases.
-    */
-  val allocatedCapacity: Output_[Double] = js.native
-  
-  /**
     * Amazon Resource Name (ARN) of Glue Job
     */
   val arn: Output_[String] = js.native
@@ -69,7 +62,7 @@ class Job protected () extends CustomResource {
   val glueVersion: Output_[String] = js.native
   
   /**
-    * The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
+    * The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `numberOfWorkers` and `workerType` arguments instead with `glueVersion` `2.0` and above.
     */
   val maxCapacity: Output_[Double] = js.native
   
@@ -82,6 +75,11 @@ class Job protected () extends CustomResource {
     * The name you assign to this job. It must be unique in your account.
     */
   val name: Output_[String] = js.native
+  
+  /**
+    * Non-overridable arguments for this job, specified as name-value pairs.
+    */
+  val nonOverridableArguments: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
   /**
     * Notification property of the job. Defined below.

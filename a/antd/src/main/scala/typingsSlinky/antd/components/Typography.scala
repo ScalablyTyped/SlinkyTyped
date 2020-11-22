@@ -7,6 +7,7 @@ import typingsSlinky.antd.antdNumbers.`1`
 import typingsSlinky.antd.antdNumbers.`2`
 import typingsSlinky.antd.antdNumbers.`3`
 import typingsSlinky.antd.antdNumbers.`4`
+import typingsSlinky.antd.antdNumbers.`5`
 import typingsSlinky.antd.baseMod.BaseType
 import typingsSlinky.antd.baseMod.BlockProps
 import typingsSlinky.antd.baseMod.CopyConfig
@@ -118,7 +119,7 @@ object Typography {
       def keyboard(value: Boolean): this.type = set("keyboard", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def level(value: `1` | `2` | `3` | `4`): this.type = set("level", value.asInstanceOf[js.Any])
+      def level(value: `1` | `2` | `3` | `4` | `5`): this.type = set("level", value.asInstanceOf[js.Any])
       
       @scala.inline
       def mark(value: Boolean): this.type = set("mark", value.asInstanceOf[js.Any])

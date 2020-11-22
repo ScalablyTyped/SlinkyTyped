@@ -19,6 +19,10 @@ trait NumberedStepOverrides extends js.Object {
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
   ] = js.native
   
+  var IconContainer: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+  ] = js.native
+  
   var InnerIcon: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
   ] = js.native
@@ -81,6 +85,14 @@ object NumberedStepOverrides {
     
     @scala.inline
     def deleteIcon: Self = this.set("Icon", js.undefined)
+    
+    @scala.inline
+    def setIconContainer(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<any> */ js.Any
+    ): Self = this.set("IconContainer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIconContainer: Self = this.set("IconContainer", js.undefined)
     
     @scala.inline
     def setInnerIcon(

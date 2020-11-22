@@ -1,8 +1,8 @@
 package typingsSlinky.officeUiFabricReact.groupSpacerTypesMod
 
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,6 +15,9 @@ trait IGroupSpacerProps extends js.Object {
   
   /** How much to indent */
   var indentWidth: js.UndefOr[Double] = js.native
+  
+  /** Override the default role (presentation) */
+  var role: js.UndefOr[String] = js.native
   
   /**
     * Style function to be passed in to override the themed or default styles
@@ -61,6 +64,12 @@ object IGroupSpacerProps {
     
     @scala.inline
     def deleteIndentWidth: Self = this.set("indentWidth", js.undefined)
+    
+    @scala.inline
+    def setRole(value: String): Self = this.set("role", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRole: Self = this.set("role", js.undefined)
     
     @scala.inline
     def setStylesFunction1(value: IGroupSpacerStyleProps => DeepPartial[IGroupSpacerStyles]): Self = this.set("styles", js.Any.fromFunction1(value))

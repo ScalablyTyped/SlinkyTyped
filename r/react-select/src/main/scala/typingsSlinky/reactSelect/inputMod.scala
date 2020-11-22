@@ -5,6 +5,7 @@ import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactSelect.componentsInputMod.InputProps
 import typingsSlinky.reactSelect.transitionsMod.fn
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
+import typingsSlinky.reactSelect.typesMod.Theme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -49,5 +50,7 @@ object inputMod extends js.Object {
     
     /** Function to be called once transition finishes. */
     var onExited: fn = js.native
+    
+    var theme: Theme = js.native
   }
 }

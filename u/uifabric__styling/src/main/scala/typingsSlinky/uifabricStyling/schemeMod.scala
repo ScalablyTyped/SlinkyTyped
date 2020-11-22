@@ -1,7 +1,7 @@
 package typingsSlinky.uifabricStyling
 
-import typingsSlinky.uifabricStyling.ithemeMod.ISchemeNames
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.fluentuiTheme.ischemeMod.ISchemeNames
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.customizerContextMod.ICustomizerContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`

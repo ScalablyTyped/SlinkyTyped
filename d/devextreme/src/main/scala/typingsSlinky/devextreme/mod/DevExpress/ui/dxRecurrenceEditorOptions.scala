@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxRecurrenceEditorOptions extends EditorOptions[dxRecurrenceEditor] {
   
-  /** @name dxRecurrenceEditor.Options.value */
+  /**
+    * [descr:dxRecurrenceEditor.Options.value]
+    */
   @JSName("value")
   var value_dxRecurrenceEditorOptions: js.UndefOr[String] = js.native
 }

@@ -45,6 +45,8 @@ class Handle ()
   
   var getHandleMidpointAndOffset: js.Any = js.native
   
+  var getStyleProperties: js.Any = js.native
+  
   var handleElement: js.Any = js.native
   
   var handleHandleMovement: js.Any = js.native

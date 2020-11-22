@@ -11,12 +11,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ScaleLine
   extends typingsSlinky.ol.controlControlMod.default {
   
+  /**
+    * Creates a marker at given position
+    */
   def createMarker(position: String, i: Double): String = js.native
   
+  /**
+    * Creates the label for a marker marker at given position
+    */
   def createStepText(i: Double, width: Double, isLast: Boolean, scale: Double, suffix: String): String = js.native
   
+  /**
+    * Returns the appropriate scale for the given resolution and units.
+    */
   def getScaleForResolution(): Double = js.native
   
+  /**
+    * Return the units to use in the scale line.
+    */
   def getUnits(): Units = js.native
   
   @JSName("on")
@@ -25,6 +37,15 @@ trait ScaleLine
   @JSName("once")
   def once_changeunits(`type`: changeColonunits, listener: js.Function1[/* evt */ ObjectEvent, Unit]): EventsKey = js.native
   
+  /**
+    * Specify the dpi of output device such as printer.
+    */
+  def setDpi(): Unit = js.native
+  def setDpi(dpi: Double): Unit = js.native
+  
+  /**
+    * Set the units to use in the scale line.
+    */
   def setUnits(units: Units): Unit = js.native
   
   @JSName("un")

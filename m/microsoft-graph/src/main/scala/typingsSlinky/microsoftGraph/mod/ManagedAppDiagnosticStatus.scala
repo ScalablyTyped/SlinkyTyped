@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ManagedAppDiagnosticStatus extends js.Object {
   
   // Instruction on how to mitigate a failed validation
-  var mitigationInstruction: js.UndefOr[String] = js.native
+  var mitigationInstruction: js.UndefOr[NullableOption[String]] = js.native
   
   // The state of the operation
-  var state: js.UndefOr[String] = js.native
+  var state: js.UndefOr[NullableOption[String]] = js.native
   
   // The validation friendly name
-  var validationName: js.UndefOr[String] = js.native
+  var validationName: js.UndefOr[NullableOption[String]] = js.native
 }
 object ManagedAppDiagnosticStatus {
   
@@ -40,21 +40,30 @@ object ManagedAppDiagnosticStatus {
     }
     
     @scala.inline
-    def setMitigationInstruction(value: String): Self = this.set("mitigationInstruction", value.asInstanceOf[js.Any])
+    def setMitigationInstruction(value: NullableOption[String]): Self = this.set("mitigationInstruction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMitigationInstruction: Self = this.set("mitigationInstruction", js.undefined)
     
     @scala.inline
-    def setState(value: String): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setMitigationInstructionNull: Self = this.set("mitigationInstruction", null)
+    
+    @scala.inline
+    def setState(value: NullableOption[String]): Self = this.set("state", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteState: Self = this.set("state", js.undefined)
     
     @scala.inline
-    def setValidationName(value: String): Self = this.set("validationName", value.asInstanceOf[js.Any])
+    def setStateNull: Self = this.set("state", null)
+    
+    @scala.inline
+    def setValidationName(value: NullableOption[String]): Self = this.set("validationName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValidationName: Self = this.set("validationName", js.undefined)
+    
+    @scala.inline
+    def setValidationNameNull: Self = this.set("validationName", null)
   }
 }

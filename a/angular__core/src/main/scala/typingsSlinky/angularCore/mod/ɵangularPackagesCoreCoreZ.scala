@@ -8,5 +8,86 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ɵangularPackagesCoreCoreZ extends js.Object {
   
-  def apply(tNode: TNode, attrNameToInject: String): String | Null = js.native
+  def apply(
+    checkIndex: Double,
+    flags: ɵNodeFlags,
+    matchedQueriesDsl: js.Array[js.Tuple2[String | Double, ɵQueryValueType]],
+    childCount: Double,
+    token: js.Any,
+    value: js.Any,
+    deps: js.Array[(js.Tuple2[ɵDepFlags, _]) | _]
+  ): NodeDef = js.native
+  def apply(
+    checkIndex: Double,
+    flags: ɵNodeFlags,
+    matchedQueriesDsl: js.Array[js.Tuple2[String | Double, ɵQueryValueType]],
+    childCount: Double,
+    token: js.Any,
+    value: js.Any,
+    deps: js.Array[(js.Tuple2[ɵDepFlags, _]) | _],
+    bindings: js.UndefOr[scala.Nothing],
+    outputs: js.Array[OutputDef]
+  ): NodeDef = js.native
+  def apply(
+    checkIndex: Double,
+    flags: ɵNodeFlags,
+    matchedQueriesDsl: js.Array[js.Tuple2[String | Double, ɵQueryValueType]],
+    childCount: Double,
+    token: js.Any,
+    value: js.Any,
+    deps: js.Array[(js.Tuple2[ɵDepFlags, _]) | _],
+    bindings: js.Array[BindingDef]
+  ): NodeDef = js.native
+  def apply(
+    checkIndex: Double,
+    flags: ɵNodeFlags,
+    matchedQueriesDsl: js.Array[js.Tuple2[String | Double, ɵQueryValueType]],
+    childCount: Double,
+    token: js.Any,
+    value: js.Any,
+    deps: js.Array[(js.Tuple2[ɵDepFlags, _]) | _],
+    bindings: js.Array[BindingDef],
+    outputs: js.Array[OutputDef]
+  ): NodeDef = js.native
+  def apply(
+    checkIndex: Double,
+    flags: ɵNodeFlags,
+    matchedQueriesDsl: Null,
+    childCount: Double,
+    token: js.Any,
+    value: js.Any,
+    deps: js.Array[(js.Tuple2[ɵDepFlags, _]) | _]
+  ): NodeDef = js.native
+  def apply(
+    checkIndex: Double,
+    flags: ɵNodeFlags,
+    matchedQueriesDsl: Null,
+    childCount: Double,
+    token: js.Any,
+    value: js.Any,
+    deps: js.Array[(js.Tuple2[ɵDepFlags, _]) | _],
+    bindings: js.UndefOr[scala.Nothing],
+    outputs: js.Array[OutputDef]
+  ): NodeDef = js.native
+  def apply(
+    checkIndex: Double,
+    flags: ɵNodeFlags,
+    matchedQueriesDsl: Null,
+    childCount: Double,
+    token: js.Any,
+    value: js.Any,
+    deps: js.Array[(js.Tuple2[ɵDepFlags, _]) | _],
+    bindings: js.Array[BindingDef]
+  ): NodeDef = js.native
+  def apply(
+    checkIndex: Double,
+    flags: ɵNodeFlags,
+    matchedQueriesDsl: Null,
+    childCount: Double,
+    token: js.Any,
+    value: js.Any,
+    deps: js.Array[(js.Tuple2[ɵDepFlags, _]) | _],
+    bindings: js.Array[BindingDef],
+    outputs: js.Array[OutputDef]
+  ): NodeDef = js.native
 }

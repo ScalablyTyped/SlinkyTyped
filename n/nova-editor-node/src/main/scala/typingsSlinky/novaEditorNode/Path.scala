@@ -18,7 +18,7 @@ trait Path extends js.Object {
   
   def isAbsolute(path: String): Boolean = js.native
   
-  def join(path: String, paths: String*): String = js.native
+  def join(paths: String*): String = js.native
   
   def normalize(path: String): String = js.native
   
@@ -35,12 +35,12 @@ object Path {
     expanduser: String => String,
     extname: String => String,
     isAbsolute: String => Boolean,
-    join: (String, /* repeated */ String) => String,
+    join: /* repeated */ String => String,
     normalize: String => String,
     split: String => js.Array[String],
     splitext: String => js.Tuple2[String, String]
   ): Path = {
-    val __obj = js.Dynamic.literal(basename = js.Any.fromFunction1(basename), dirname = js.Any.fromFunction1(dirname), expanduser = js.Any.fromFunction1(expanduser), extname = js.Any.fromFunction1(extname), isAbsolute = js.Any.fromFunction1(isAbsolute), join = js.Any.fromFunction2(join), normalize = js.Any.fromFunction1(normalize), split = js.Any.fromFunction1(split), splitext = js.Any.fromFunction1(splitext))
+    val __obj = js.Dynamic.literal(basename = js.Any.fromFunction1(basename), dirname = js.Any.fromFunction1(dirname), expanduser = js.Any.fromFunction1(expanduser), extname = js.Any.fromFunction1(extname), isAbsolute = js.Any.fromFunction1(isAbsolute), join = js.Any.fromFunction1(join), normalize = js.Any.fromFunction1(normalize), split = js.Any.fromFunction1(split), splitext = js.Any.fromFunction1(splitext))
     __obj.asInstanceOf[Path]
   }
   
@@ -75,7 +75,7 @@ object Path {
     def setIsAbsolute(value: String => Boolean): Self = this.set("isAbsolute", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setJoin(value: (String, /* repeated */ String) => String): Self = this.set("join", js.Any.fromFunction2(value))
+    def setJoin(value: /* repeated */ String => String): Self = this.set("join", js.Any.fromFunction1(value))
     
     @scala.inline
     def setNormalize(value: String => String): Self = this.set("normalize", js.Any.fromFunction1(value))

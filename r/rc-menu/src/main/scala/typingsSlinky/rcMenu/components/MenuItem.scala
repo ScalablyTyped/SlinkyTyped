@@ -26,8 +26,13 @@ import typingsSlinky.rcMenu.interfaceMod.MenuMode
 import typingsSlinky.rcMenu.interfaceMod.RenderIconType
 import typingsSlinky.rcMenu.interfaceMod.SelectInfo
 import typingsSlinky.rcMenu.menuItemMod.MenuItemProps
+import typingsSlinky.rcMenu.rcMenuStrings.`additions removals`
 import typingsSlinky.rcMenu.rcMenuStrings.`additions text`
 import typingsSlinky.rcMenu.rcMenuStrings.`inline`
+import typingsSlinky.rcMenu.rcMenuStrings.`removals additions`
+import typingsSlinky.rcMenu.rcMenuStrings.`removals text`
+import typingsSlinky.rcMenu.rcMenuStrings.`text additions`
+import typingsSlinky.rcMenu.rcMenuStrings.`text removals`
 import typingsSlinky.rcMenu.rcMenuStrings.additions
 import typingsSlinky.rcMenu.rcMenuStrings.all
 import typingsSlinky.rcMenu.rcMenuStrings.ascending
@@ -210,7 +215,9 @@ object MenuItem {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

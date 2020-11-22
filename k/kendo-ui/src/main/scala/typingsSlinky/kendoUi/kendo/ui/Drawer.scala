@@ -15,5 +15,7 @@ trait Drawer extends Widget {
   
   def show(): Unit = js.native
   
+  var visible: Boolean = js.native
+  
   var wrapper: JQuery = js.native
 }

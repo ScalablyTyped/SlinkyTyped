@@ -21,8 +21,21 @@ trait AuthorizerArgs extends js.Object {
   val authorizerCredentialsArn: js.UndefOr[Input[String]] = js.native
   
   /**
+    * The format of the payload sent to an HTTP API Lambda authorizer. Required for HTTP API Lambda authorizers.
+    * Valid values: `1.0`, `2.0`.
+    */
+  val authorizerPayloadFormatVersion: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The time to live (TTL) for cached authorizer results, in seconds. If it equals 0, authorization caching is disabled.
+    * If it is greater than 0, API Gateway caches authorizer responses. The maximum value is 3600, or 1 hour. Defaults to `300`.
+    * Supported only for HTTP API Lambda authorizers.
+    */
+  val authorizerResultTtlInSeconds: js.UndefOr[Input[Double]] = js.native
+  
+  /**
     * The authorizer type. Valid values: `JWT`, `REQUEST`.
-    * For WebSocket APIs, specify `REQUEST` for a Lambda function using incoming request parameters.
+    * Specify `REQUEST` for a Lambda function using incoming request parameters.
     * For HTTP APIs, specify `JWT` to use JSON Web Tokens.
     */
   val authorizerType: Input[String] = js.native
@@ -30,16 +43,22 @@ trait AuthorizerArgs extends js.Object {
   /**
     * The authorizer's Uniform Resource Identifier (URI).
     * For `REQUEST` authorizers this must be a well-formed Lambda function URI, such as the `invokeArn` attribute of the `aws.lambda.Function` resource.
-    * Supported only for `REQUEST` authorizers.
+    * Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
     */
   val authorizerUri: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Whether a Lambda authorizer returns a response in a simple format. If enabled, the Lambda authorizer can return a boolean value instead of an IAM policy.
+    * Supported only for HTTP APIs.
+    */
+  val enableSimpleResponses: js.UndefOr[Input[Boolean]] = js.native
   
   /**
     * The identity sources for which authorization is requested.
     * For `REQUEST` authorizers the value is a list of one or more mapping expressions of the specified request parameters.
     * For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
     */
-  val identitySources: Input[js.Array[Input[String]]] = js.native
+  val identitySources: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
   /**
     * The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
@@ -48,19 +67,15 @@ trait AuthorizerArgs extends js.Object {
   val jwtConfiguration: js.UndefOr[Input[AuthorizerJwtConfiguration]] = js.native
   
   /**
-    * The name of the authorizer.
+    * The name of the authorizer. Must be between 1 and 128 characters in length.
     */
   val name: js.UndefOr[Input[String]] = js.native
 }
 object AuthorizerArgs {
   
   @scala.inline
-  def apply(
-    apiId: Input[String],
-    authorizerType: Input[String],
-    identitySources: Input[js.Array[Input[String]]]
-  ): AuthorizerArgs = {
-    val __obj = js.Dynamic.literal(apiId = apiId.asInstanceOf[js.Any], authorizerType = authorizerType.asInstanceOf[js.Any], identitySources = identitySources.asInstanceOf[js.Any])
+  def apply(apiId: Input[String], authorizerType: Input[String]): AuthorizerArgs = {
+    val __obj = js.Dynamic.literal(apiId = apiId.asInstanceOf[js.Any], authorizerType = authorizerType.asInstanceOf[js.Any])
     __obj.asInstanceOf[AuthorizerArgs]
   }
   
@@ -86,22 +101,43 @@ object AuthorizerArgs {
     def setAuthorizerType(value: Input[String]): Self = this.set("authorizerType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIdentitySourcesVarargs(value: Input[String]*): Self = this.set("identitySources", js.Array(value :_*))
-    
-    @scala.inline
-    def setIdentitySources(value: Input[js.Array[Input[String]]]): Self = this.set("identitySources", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setAuthorizerCredentialsArn(value: Input[String]): Self = this.set("authorizerCredentialsArn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAuthorizerCredentialsArn: Self = this.set("authorizerCredentialsArn", js.undefined)
     
     @scala.inline
+    def setAuthorizerPayloadFormatVersion(value: Input[String]): Self = this.set("authorizerPayloadFormatVersion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAuthorizerPayloadFormatVersion: Self = this.set("authorizerPayloadFormatVersion", js.undefined)
+    
+    @scala.inline
+    def setAuthorizerResultTtlInSeconds(value: Input[Double]): Self = this.set("authorizerResultTtlInSeconds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAuthorizerResultTtlInSeconds: Self = this.set("authorizerResultTtlInSeconds", js.undefined)
+    
+    @scala.inline
     def setAuthorizerUri(value: Input[String]): Self = this.set("authorizerUri", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAuthorizerUri: Self = this.set("authorizerUri", js.undefined)
+    
+    @scala.inline
+    def setEnableSimpleResponses(value: Input[Boolean]): Self = this.set("enableSimpleResponses", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnableSimpleResponses: Self = this.set("enableSimpleResponses", js.undefined)
+    
+    @scala.inline
+    def setIdentitySourcesVarargs(value: Input[String]*): Self = this.set("identitySources", js.Array(value :_*))
+    
+    @scala.inline
+    def setIdentitySources(value: Input[js.Array[Input[String]]]): Self = this.set("identitySources", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIdentitySources: Self = this.set("identitySources", js.undefined)
     
     @scala.inline
     def setJwtConfiguration(value: Input[AuthorizerJwtConfiguration]): Self = this.set("jwtConfiguration", value.asInstanceOf[js.Any])

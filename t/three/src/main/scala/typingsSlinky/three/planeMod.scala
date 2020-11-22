@@ -24,6 +24,9 @@ object planeMod extends js.Object {
     def applyMatrix4(matrix: Matrix4): Plane = js.native
     def applyMatrix4(matrix: Matrix4, optionalNormalMatrix: Matrix3): Plane = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var constant: Double = js.native
     
     def coplanarPoint(target: Vector3): Vector3 = js.native
@@ -53,6 +56,9 @@ object planeMod extends js.Object {
     
     def negate(): Plane = js.native
     
+    /**
+    	 * @default new THREE.Vector3( 1, 0, 0 )
+    	 */
     var normal: Vector3 = js.native
     
     def normalize(): Plane = js.native

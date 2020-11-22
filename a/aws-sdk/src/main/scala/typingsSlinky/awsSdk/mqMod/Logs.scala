@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Logs extends js.Object {
   
   /**
-    * Enables audit logging. Every user management action made using JMX or the ActiveMQ Web Console is logged.
+    * Enables audit logging. Every user management action made using JMX or the ActiveMQ Web Console is logged. Does not apply to RabbitMQ brokers.
     */
   var Audit: js.UndefOr[boolean] = js.native
   

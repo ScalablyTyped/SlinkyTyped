@@ -33,7 +33,7 @@ trait List extends js.Object {
   
   var matchingItems: js.Array[js.Object] = js.native
   
-  def on(event: String, callback: js.Function0[Unit]): Unit = js.native
+  def on(event: Event, callback: js.Function1[/* list */ this.type, Unit]): List = js.native
   
   def reIndex(): Unit = js.native
   

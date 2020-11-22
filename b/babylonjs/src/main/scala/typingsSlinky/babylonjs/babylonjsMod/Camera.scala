@@ -13,7 +13,7 @@ class Camera protected ()
   /**
     * Instantiates a new camera object.
     * This should not be used directly but through the inherited cameras: ArcRotate, Free...
-    * @see http://doc.babylonjs.com/features/cameras
+    * @see https://doc.babylonjs.com/features/cameras
     * @param name Defines the name of the camera in the scene
     * @param position Defines the position of the camera
     * @param scene Defines the scene the camera belongs too

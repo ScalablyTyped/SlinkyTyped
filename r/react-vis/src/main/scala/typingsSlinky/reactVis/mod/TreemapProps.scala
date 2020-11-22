@@ -24,6 +24,8 @@ trait TreemapProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
+  var color: js.UndefOr[String] = js.native
+  
    // default: ''
   var data: js.UndefOr[TreemapPoint] = js.native
   
@@ -102,6 +104,12 @@ object TreemapProps {
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
+    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
     def setData(value: TreemapPoint): Self = this.set("data", value.asInstanceOf[js.Any])

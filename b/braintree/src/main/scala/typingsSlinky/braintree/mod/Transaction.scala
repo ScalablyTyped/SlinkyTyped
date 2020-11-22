@@ -127,7 +127,7 @@ class Transaction () extends js.Object {
   
   var status: TransactionStatus = js.native
   
-  var statusHistory: js.UndefOr[TransactionStatusHistory] = js.native
+  var statusHistory: js.UndefOr[js.Array[TransactionStatusHistory]] = js.native
   
   var subscription: js.UndefOr[BillingPeriodEndDate] = js.native
   

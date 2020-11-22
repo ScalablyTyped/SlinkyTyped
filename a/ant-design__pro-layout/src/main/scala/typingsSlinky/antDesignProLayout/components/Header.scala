@@ -2,6 +2,7 @@ package typingsSlinky.antDesignProLayout.components
 
 import typingsSlinky.antDesignProLayout.headerMod.HeaderViewProps
 import typingsSlinky.antDesignProLayout.headerMod.default
+import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.PrivateSiderMenuProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,11 @@ object Header {
   @js.native
   object component extends js.Object
   
-  def withProps(p: HeaderViewProps): SharedBuilder_HeaderViewProps_1284827889[default] = new SharedBuilder_HeaderViewProps_1284827889[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: HeaderViewProps with PrivateSiderMenuProps): SharedBuilder_HeaderViewPropsPrivateSiderMenuProps_330522065[default] = new SharedBuilder_HeaderViewPropsPrivateSiderMenuProps_330522065[default](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make(companion: Header.type): SharedBuilder_HeaderViewProps_1284827889[default] = new SharedBuilder_HeaderViewProps_1284827889[default](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(matchMenuKeys: js.Array[String]): SharedBuilder_HeaderViewPropsPrivateSiderMenuProps_330522065[default] = {
+    val __props = js.Dynamic.literal(matchMenuKeys = matchMenuKeys.asInstanceOf[js.Any])
+    new SharedBuilder_HeaderViewPropsPrivateSiderMenuProps_330522065[default](js.Array(this.component, __props.asInstanceOf[HeaderViewProps with PrivateSiderMenuProps]))
+  }
 }

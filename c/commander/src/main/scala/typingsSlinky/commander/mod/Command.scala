@@ -36,6 +36,22 @@ trait Command
   def addCommand(cmd: Command, opts: CommandOptions): this.type = js.native
   
   /**
+    * Override default decision whether to add implicit help command.
+    *
+    *    addHelpCommand() // force on
+    *    addHelpCommand(false); // force off
+    *    addHelpCommand('help [cmd]', 'display help for [cmd]'); // force on with custom details
+    *
+    * @returns `this` command for chaining
+    */
+  def addHelpCommand(): this.type = js.native
+  def addHelpCommand(enableOrNameAndArgs: js.UndefOr[scala.Nothing], description: String): this.type = js.native
+  def addHelpCommand(enableOrNameAndArgs: String): this.type = js.native
+  def addHelpCommand(enableOrNameAndArgs: String, description: String): this.type = js.native
+  def addHelpCommand(enableOrNameAndArgs: Boolean): this.type = js.native
+  def addHelpCommand(enableOrNameAndArgs: Boolean, description: String): this.type = js.native
+  
+  /**
     * Get alias for the command.
     */
   def alias(): String = js.native
@@ -79,6 +95,19 @@ trait Command
     * @returns `this` command for chaining
     */
   def arguments(desc: String): this.type = js.native
+  
+  /**
+    * Alter parsing of short flags with optional values.
+    *
+    * @example
+    *    // for `.option('-f,--flag [value]'):
+    *   .combineFlagAndOptionalValue(true)  // `-f80` is treated like `--flag=80`, this is the default behaviour
+    *   .combineFlagAndOptionalValue(false) // `-fb` is treated like `-f -b`
+    *
+    * @returns `this` command for chaining
+    */
+  def combineFlagAndOptionalValue(): this.type = js.native
+  def combineFlagAndOptionalValue(arg: Boolean): this.type = js.native
   
   /**
     * Define a command, implemented using an action handler.
@@ -169,12 +198,15 @@ trait Command
   
   /**
     * You can pass in flags and a description to override the help
-    * flags and help description for your command.
+    * flags and help description for your command. Pass in false
+    * to disable the built-in help option.
     */
   def helpOption(): this.type = js.native
   def helpOption(flags: js.UndefOr[scala.Nothing], description: String): this.type = js.native
   def helpOption(flags: String): this.type = js.native
   def helpOption(flags: String, description: String): this.type = js.native
+  def helpOption(flags: Boolean): this.type = js.native
+  def helpOption(flags: Boolean, description: String): this.type = js.native
   
   /**
     * Get the name of the command.

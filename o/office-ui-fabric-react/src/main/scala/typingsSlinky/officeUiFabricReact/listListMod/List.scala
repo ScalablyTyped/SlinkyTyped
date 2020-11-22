@@ -4,6 +4,7 @@ import typingsSlinky.officeUiFabricReact.anon.OnRenderCell
 import typingsSlinky.officeUiFabricReact.listTypesMod.IList
 import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.react.mod.Component
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,9 +15,6 @@ class List[T] protected ()
   extends Component[IListProps[T], IListState[T], js.Any]
      with IList {
   def this(props: IListProps[T]) = this()
-  
-  @JSName("UNSAFE_componentWillReceiveProps")
-  def UNSAFE_componentWillReceiveProps_MList(newProps: IListProps[T]): Unit = js.native
   
   var _allowedRect: js.Any = js.native
   
@@ -34,6 +32,8 @@ class List[T] protected ()
   var _events: js.Any = js.native
   
   var _focusedIndex: js.Any = js.native
+  
+  var _getDerivedStateFromProps: js.Any = js.native
   
   var _getItemCountForPage: js.Any = js.native
   
@@ -117,6 +117,8 @@ class List[T] protected ()
   
   var _pageCache: js.Any = js.native
   
+  var _pageRefs: js.Any = js.native
+  
   var _renderPage: js.Any = js.native
   
   var _requiredRect: js.Any = js.native
@@ -155,6 +157,9 @@ class List[T] protected ()
   @JSName("componentDidMount")
   def componentDidMount_MList(): Unit = js.native
   
+  @JSName("componentDidUpdate")
+  def componentDidUpdate_MList(previousProps: IListProps[_], previousState: IListState[T]): Unit = js.native
+  
   @JSName("componentWillUnmount")
   def componentWillUnmount_MList(): Unit = js.native
   
@@ -169,6 +174,8 @@ class List[T] protected ()
   @JSName("getTotalListHeight")
   def getTotalListHeight_MList(): Double = js.native
   
+  val pageRefs: Record[String, _] = js.native
+  
   @JSName("shouldComponentUpdate")
   def shouldComponentUpdate_MList(newProps: IListProps[T], newState: IListState[T]): Boolean = js.native
 }
@@ -178,4 +185,6 @@ class List[T] protected ()
 object List extends js.Object {
   
   var defaultProps: OnRenderCell = js.native
+  
+  def getDerivedStateFromProps[T](nextProps: IListProps[T], previousState: IListState[T]): IListState[T] = js.native
 }

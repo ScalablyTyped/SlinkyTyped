@@ -26,13 +26,18 @@ trait WebBrowserOpenOptions extends js.Object {
   
   var readerMode: js.UndefOr[Boolean] = js.native
   
+  /** Android only */
+  /**
+    * Color of the secondary toolbar in either #AARRGGBB or #RRGGBB format.
+    */
+  var secondaryToolbarColor: js.UndefOr[String] = js.native
+  
   /**
     * Whether browsed website should be shown as separate entry in Android recents/multitasking view.
     * Default: `false`
     */
   var showInRecents: js.UndefOr[Boolean] = js.native
   
-  /** Android only */
   /**
     * Whether the browser should show the title of website on the toolbar.
     */
@@ -111,6 +116,12 @@ object WebBrowserOpenOptions {
     
     @scala.inline
     def deleteReaderMode: Self = this.set("readerMode", js.undefined)
+    
+    @scala.inline
+    def setSecondaryToolbarColor(value: String): Self = this.set("secondaryToolbarColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSecondaryToolbarColor: Self = this.set("secondaryToolbarColor", js.undefined)
     
     @scala.inline
     def setShowInRecents(value: Boolean): Self = this.set("showInRecents", value.asInstanceOf[js.Any])

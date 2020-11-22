@@ -1,6 +1,5 @@
 package typingsSlinky.vis.mod
 
-import typingsSlinky.vis.anon.Align
 import typingsSlinky.vis.anon.BorderDashes
 import typingsSlinky.vis.anon.Bottom
 import typingsSlinky.vis.anon.Code
@@ -23,7 +22,7 @@ trait NodeOptions extends js.Object {
   
   var fixed: js.UndefOr[Boolean | X] = js.native
   
-  var font: js.UndefOr[String | Align] = js.native
+  var font: js.UndefOr[String | Font] = js.native
   
   var group: js.UndefOr[String] = js.native
   
@@ -124,7 +123,7 @@ object NodeOptions {
     def deleteFixed: Self = this.set("fixed", js.undefined)
     
     @scala.inline
-    def setFont(value: String | Align): Self = this.set("font", value.asInstanceOf[js.Any])
+    def setFont(value: String | Font): Self = this.set("font", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFont: Self = this.set("font", js.undefined)

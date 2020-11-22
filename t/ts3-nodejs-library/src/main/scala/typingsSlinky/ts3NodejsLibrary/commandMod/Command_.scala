@@ -39,6 +39,11 @@ class Command_ () extends js.Object {
   /** get the parsed error object which has been received from the TeamSpeak Query */
   def getError(): ResponseError | Null = js.native
   
+  /**
+    * retrieves the current set options for this command
+    */
+  def getOptions(): options = js.native
+  
   /** get the parsed response object which has been received from the TeamSpeak Query */
   def getResponse(): Response = js.native
   
@@ -77,7 +82,7 @@ class Command_ () extends js.Object {
     * Set the error line which has been received from the TeamSpeak Query
     * @param error the error line which has been received from the TeamSpeak Query
     */
-  def setError(error: String): Command = js.native
+  def setError(raw: String): Command = js.native
   
   /**
     * set TeamSpeak flags

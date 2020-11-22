@@ -1,7 +1,7 @@
 
 # Scala.js typings for igdb-api-node
 
-Typings are for version 4.0
+Typings are for version 5.0
 
 ## Library description:
 Nodejs API Wrapper for the IGDB.com API

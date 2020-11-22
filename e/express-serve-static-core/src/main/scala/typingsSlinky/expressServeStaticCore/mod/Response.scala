@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Response[ResBody]
+trait Response[ResBody, StatusCode /* <: Double */]
   extends ServerResponse
      with typingsSlinky.expressServeStaticCore.mod.global.Express.Response {
   
@@ -17,9 +17,9 @@ trait Response[ResBody]
     * Express instance itself is a request handler, which could be invoked without
     * third argument.
     */
-  def app(req: Request[ParamsDictionary, _, _, ParsedQs], res: Response[_]): js.Any = js.native
+  def app(req: Request[ParamsDictionary, _, _, ParsedQs], res: Response[_, Double]): js.Any = js.native
   def app(req: Request[ParamsDictionary, _, _, ParsedQs], res: ServerResponse): js.Any = js.native
-  def app(req: IncomingMessage, res: Response[_]): js.Any = js.native
+  def app(req: IncomingMessage, res: Response[_, Double]): js.Any = js.native
   def app(req: IncomingMessage, res: ServerResponse): js.Any = js.native
   @JSName("app")
   var app_Original: Application = js.native
@@ -90,7 +90,7 @@ trait Response[ResBody]
     * Optionally providing an alternate attachment `filename`,
     * and optional callback `fn(err)`. The callback is invoked
     * when the data transfer is complete, or when an error has
-    * ocurred. Be sure to check `res.headerSent` if you plan to respond.
+    * ocurred. Be sure to check `res.headersSent` if you plan to respond.
     *
     * The optional options argument passes through to the underlying
     * res.sendFile() call, and takes the exact same parameters.
@@ -326,7 +326,7 @@ trait Response[ResBody]
     *
     * Automatically sets the _Content-Type_ response header field.
     * The callback `fn(err)` is invoked when the transfer is complete
-    * or when an error occurs. Be sure to check `res.sentHeader`
+    * or when an error occurs. Be sure to check `res.headersSent`
     * if you wish to attempt responding, as the header and some data
     * may have already been transferred.
     *
@@ -377,7 +377,7 @@ trait Response[ResBody]
     *    res.sendStatus(404); // equivalent to res.status(404).send('Not Found')
     *    res.sendStatus(500); // equivalent to res.status(500).send('Internal Server Error')
     */
-  def sendStatus(code: Double): this.type = js.native
+  def sendStatus(code: StatusCode): this.type = js.native
   
   /**
     * Send a response.
@@ -429,7 +429,7 @@ trait Response[ResBody]
   /**
     * Set status `code`.
     */
-  def status(code: Double): this.type = js.native
+  def status(code: StatusCode): this.type = js.native
   
   /**
     * Set _Content-Type_ response header with `type` through `mime.lookup()`

@@ -14,6 +14,12 @@ trait AlexOptions extends js.Object {
   var allow: js.UndefOr[js.Array[String]] = js.native
   
   /**
+    * When provided, only the rules specified are reported.
+    * @default []
+    */
+  var deny: js.UndefOr[js.Array[String]] = js.native
+  
+  /**
     * When turned on (`true`), pairs such as `he` and `she` and `garbageman` or `garbagewoman` are seen as errors.
     * When turned off (`false`, the default), such pairs are okay
     */
@@ -57,6 +63,15 @@ object AlexOptions {
     
     @scala.inline
     def deleteAllow: Self = this.set("allow", js.undefined)
+    
+    @scala.inline
+    def setDenyVarargs(value: String*): Self = this.set("deny", js.Array(value :_*))
+    
+    @scala.inline
+    def setDeny(value: js.Array[String]): Self = this.set("deny", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDeny: Self = this.set("deny", js.undefined)
     
     @scala.inline
     def setNoBinary(value: Boolean): Self = this.set("noBinary", value.asInstanceOf[js.Any])

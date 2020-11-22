@@ -38,7 +38,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fileType.fileTypeStrings.webm
   - typingsSlinky.fileType.fileTypeStrings.mov
   - typingsSlinky.fileType.fileTypeStrings.avi
-  - typingsSlinky.fileType.fileTypeStrings.wmv
   - typingsSlinky.fileType.fileTypeStrings.mpg
   - typingsSlinky.fileType.fileTypeStrings.mp2
   - typingsSlinky.fileType.fileTypeStrings.mp3
@@ -74,7 +73,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fileType.fileTypeStrings.rpm
   - typingsSlinky.fileType.fileTypeStrings.Z
   - typingsSlinky.fileType.fileTypeStrings.lz
-  - typingsSlinky.fileType.fileTypeStrings.msi
+  - typingsSlinky.fileType.fileTypeStrings.cfb
   - typingsSlinky.fileType.fileTypeStrings.mxf
   - typingsSlinky.fileType.fileTypeStrings.mts
   - typingsSlinky.fileType.fileTypeStrings.wasm
@@ -100,7 +99,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fileType.fileTypeStrings.ape
   - typingsSlinky.fileType.fileTypeStrings.wv
   - typingsSlinky.fileType.fileTypeStrings.asf
-  - typingsSlinky.fileType.fileTypeStrings.wma
   - typingsSlinky.fileType.fileTypeStrings.dcm
   - typingsSlinky.fileType.fileTypeStrings.mpc
   - typingsSlinky.fileType.fileTypeStrings.ics
@@ -138,6 +136,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.fileType.fileTypeStrings.lzh
   - typingsSlinky.fileType.fileTypeStrings.pgp
   - typingsSlinky.fileType.fileTypeStrings.asar
+  - typingsSlinky.fileType.fileTypeStrings.stl
 */
 trait FileExtension extends js.Object
 object FileExtension {
@@ -213,6 +212,9 @@ object FileExtension {
   
   @scala.inline
   def cab: typingsSlinky.fileType.fileTypeStrings.cab = "cab".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.cab]
+  
+  @scala.inline
+  def cfb: typingsSlinky.fileType.fileTypeStrings.cfb = "cfb".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.cfb]
   
   @scala.inline
   def cr2: typingsSlinky.fileType.fileTypeStrings.cr2 = "cr2".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.cr2]
@@ -380,9 +382,6 @@ object FileExtension {
   def mpg: typingsSlinky.fileType.fileTypeStrings.mpg = "mpg".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.mpg]
   
   @scala.inline
-  def msi: typingsSlinky.fileType.fileTypeStrings.msi = "msi".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.msi]
-  
-  @scala.inline
   def mts: typingsSlinky.fileType.fileTypeStrings.mts = "mts".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.mts]
   
   @scala.inline
@@ -482,6 +481,9 @@ object FileExtension {
   def sqlite: typingsSlinky.fileType.fileTypeStrings.sqlite = "sqlite".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.sqlite]
   
   @scala.inline
+  def stl: typingsSlinky.fileType.fileTypeStrings.stl = "stl".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.stl]
+  
+  @scala.inline
   def swf: typingsSlinky.fileType.fileTypeStrings.swf = "swf".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.swf]
   
   @scala.inline
@@ -507,12 +509,6 @@ object FileExtension {
   
   @scala.inline
   def webp: typingsSlinky.fileType.fileTypeStrings.webp = "webp".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.webp]
-  
-  @scala.inline
-  def wma: typingsSlinky.fileType.fileTypeStrings.wma = "wma".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.wma]
-  
-  @scala.inline
-  def wmv: typingsSlinky.fileType.fileTypeStrings.wmv = "wmv".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.wmv]
   
   @scala.inline
   def woff: typingsSlinky.fileType.fileTypeStrings.woff = "woff".asInstanceOf[typingsSlinky.fileType.fileTypeStrings.woff]

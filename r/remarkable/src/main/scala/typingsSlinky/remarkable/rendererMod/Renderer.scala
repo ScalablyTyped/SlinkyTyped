@@ -27,7 +27,6 @@ trait Renderer extends js.Object {
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -38,7 +37,6 @@ trait Renderer extends js.Object {
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -61,7 +59,6 @@ trait Renderer extends js.Object {
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -80,7 +77,6 @@ trait Renderer extends js.Object {
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -103,7 +99,6 @@ trait Renderer extends js.Object {
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -118,7 +113,6 @@ trait Renderer extends js.Object {
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -141,7 +135,6 @@ trait Renderer extends js.Object {
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -160,7 +153,6 @@ trait Renderer extends js.Object {
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.

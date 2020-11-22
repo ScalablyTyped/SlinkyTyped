@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.AppsGetSubscriptionPlanForAccountEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.AppsGetSubscriptionPlanForAccountResponseData
+import typingsSlinky.octokitTypes.endpointsMod.AppsGetInstallationEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.AppsGetInstallationResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `630` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[AppsGetSubscriptionPlanForAccountEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[AppsGetInstallationEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[AppsGetSubscriptionPlanForAccountResponseData] = js.native
+  var response: OctokitResponse[AppsGetInstallationResponseData] = js.native
 }
 object `630` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[AppsGetSubscriptionPlanForAccountEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[AppsGetSubscriptionPlanForAccountResponseData]
+    parameters: RequestParameters with (Omit[AppsGetInstallationEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[AppsGetInstallationResponseData]
   ): `630` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`630`]
@@ -46,11 +46,9 @@ object `630` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[AppsGetSubscriptionPlanForAccountEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[AppsGetInstallationEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[AppsGetSubscriptionPlanForAccountResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[AppsGetInstallationResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

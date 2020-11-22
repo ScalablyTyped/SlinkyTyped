@@ -13,12 +13,12 @@ trait RunConfiguration extends js.Object {
   var ApplicationRestoreConfiguration: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.ApplicationRestoreConfiguration] = js.native
   
   /**
-    * Describes the starting parameters for an Apache Flink-based Kinesis Data Analytics application.
+    * Describes the starting parameters for a Flink-based Kinesis Data Analytics application.
     */
   var FlinkRunConfiguration: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.FlinkRunConfiguration] = js.native
   
   /**
-    * Describes the starting parameters for an SQL-based Kinesis Data Analytics application.
+    * Describes the starting parameters for a SQL-based Kinesis Data Analytics application application.
     */
   var SqlRunConfigurations: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.SqlRunConfigurations] = js.native
 }

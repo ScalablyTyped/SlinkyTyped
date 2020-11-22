@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact.groupedListBaseMod
 
 import typingsSlinky.officeUiFabricReact.groupedListTypesMod.IGroup
+import typingsSlinky.officeUiFabricReact.listTypesMod.IListProps
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,9 +10,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IGroupedListState extends js.Object {
   
+  var compact: js.UndefOr[Boolean] = js.native
+  
   var groups: js.UndefOr[js.Array[IGroup]] = js.native
   
-  var lastSelectionMode: js.UndefOr[SelectionMode] = js.native
+  var items: js.UndefOr[js.Array[_]] = js.native
+  
+  var listProps: js.UndefOr[IListProps[_]] = js.native
+  
+  var selectionMode: js.UndefOr[SelectionMode] = js.native
 }
 object IGroupedListState {
   
@@ -37,6 +44,12 @@ object IGroupedListState {
     }
     
     @scala.inline
+    def setCompact(value: Boolean): Self = this.set("compact", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCompact: Self = this.set("compact", js.undefined)
+    
+    @scala.inline
     def setGroupsVarargs(value: IGroup*): Self = this.set("groups", js.Array(value :_*))
     
     @scala.inline
@@ -46,9 +59,24 @@ object IGroupedListState {
     def deleteGroups: Self = this.set("groups", js.undefined)
     
     @scala.inline
-    def setLastSelectionMode(value: SelectionMode): Self = this.set("lastSelectionMode", value.asInstanceOf[js.Any])
+    def setItemsVarargs(value: js.Any*): Self = this.set("items", js.Array(value :_*))
     
     @scala.inline
-    def deleteLastSelectionMode: Self = this.set("lastSelectionMode", js.undefined)
+    def setItems(value: js.Array[_]): Self = this.set("items", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteItems: Self = this.set("items", js.undefined)
+    
+    @scala.inline
+    def setListProps(value: IListProps[_]): Self = this.set("listProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListProps: Self = this.set("listProps", js.undefined)
+    
+    @scala.inline
+    def setSelectionMode(value: SelectionMode): Self = this.set("selectionMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelectionMode: Self = this.set("selectionMode", js.undefined)
   }
 }

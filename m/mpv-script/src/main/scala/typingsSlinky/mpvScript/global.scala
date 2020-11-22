@@ -4,6 +4,7 @@ import typingsSlinky.mpvScript.mp.AddKeyBindingFlags
 import typingsSlinky.mpvScript.mp.FileInfo
 import typingsSlinky.mpvScript.mp.LogLevel
 import typingsSlinky.mpvScript.mp.OSDOverlay
+import typingsSlinky.mpvScript.mp.OSDSize
 import typingsSlinky.mpvScript.mpvScriptBooleans.`true`
 import typingsSlinky.mpvScript.mpvScriptStrings.`ass-events`
 import typingsSlinky.mpvScript.mpvScriptStrings.all
@@ -110,7 +111,7 @@ object global extends js.Object {
     def getOpt(key: String): String = js.native
     
     @JSName("get_osd_size")
-    def getOsdSize(): js.Tuple3[Double, Double, Double] = js.native
+    def getOsdSize(): js.UndefOr[OSDSize] = js.native
     
     @JSName("get_property")
     def getProperty(name: String): js.UndefOr[String] = js.native

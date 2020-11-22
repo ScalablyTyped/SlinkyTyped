@@ -2,8 +2,11 @@ package typingsSlinky.reactAutosuggest.mod
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,6 +24,8 @@ trait InputProps[TSuggestion] extends js.Object {
   ] = js.native
   
   def onChange(event: SyntheticEvent[EventTarget, Event], params: ChangeEvent): Unit = js.native
+  
+  var ref: js.UndefOr[Ref[HTMLInputElement]] = js.native
   
   var value: String = js.native
 }
@@ -60,5 +65,20 @@ object InputProps {
     
     @scala.inline
     def deleteOnBlur: Self = this.set("onBlur", js.undefined)
+    
+    @scala.inline
+    def setRefRefObject(value: ReactRef[HTMLInputElement]): Self = this.set("ref", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRefFunction1(value: /* instance */ HTMLInputElement | Null => Unit): Self = this.set("ref", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setRef(value: Ref[HTMLInputElement]): Self = this.set("ref", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRef: Self = this.set("ref", js.undefined)
+    
+    @scala.inline
+    def setRefNull: Self = this.set("ref", null)
   }
 }

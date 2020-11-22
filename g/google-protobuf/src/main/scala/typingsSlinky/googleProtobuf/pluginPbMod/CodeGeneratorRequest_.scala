@@ -18,13 +18,13 @@ class CodeGeneratorRequest_ () extends Message {
   def addProtoFile(value: FileDescriptorProto): FileDescriptorProto = js.native
   def addProtoFile(value: FileDescriptorProto, index: Double): FileDescriptorProto = js.native
   
-  def clearCompilerVersion(): Unit = js.native
+  def clearCompilerVersion(): CodeGeneratorRequest = js.native
   
-  def clearFileToGenerateList(): Unit = js.native
+  def clearFileToGenerateList(): CodeGeneratorRequest = js.native
   
-  def clearParameter(): Unit = js.native
+  def clearParameter(): CodeGeneratorRequest = js.native
   
-  def clearProtoFileList(): Unit = js.native
+  def clearProtoFileList(): CodeGeneratorRequest = js.native
   
   def getCompilerVersion(): js.UndefOr[Version] = js.native
   
@@ -38,12 +38,12 @@ class CodeGeneratorRequest_ () extends Message {
   
   def hasParameter(): Boolean = js.native
   
-  def setCompilerVersion(): Unit = js.native
-  def setCompilerVersion(value: Version): Unit = js.native
+  def setCompilerVersion(): CodeGeneratorRequest = js.native
+  def setCompilerVersion(value: Version): CodeGeneratorRequest = js.native
   
-  def setFileToGenerateList(value: js.Array[String]): Unit = js.native
+  def setFileToGenerateList(value: js.Array[String]): CodeGeneratorRequest = js.native
   
-  def setParameter(value: String): Unit = js.native
+  def setParameter(value: String): CodeGeneratorRequest = js.native
   
-  def setProtoFileList(value: js.Array[FileDescriptorProto]): Unit = js.native
+  def setProtoFileList(value: js.Array[FileDescriptorProto]): CodeGeneratorRequest = js.native
 }

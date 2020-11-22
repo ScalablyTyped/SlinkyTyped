@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsCore.mod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor5D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor5D
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCDHW
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NDHWC
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.same_

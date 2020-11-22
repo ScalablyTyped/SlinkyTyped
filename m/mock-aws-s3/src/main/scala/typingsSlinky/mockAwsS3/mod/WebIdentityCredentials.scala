@@ -1,6 +1,5 @@
 package typingsSlinky.mockAwsS3.mod
 
-import typingsSlinky.awsSdk.configMod.ConfigurationOptions
 import typingsSlinky.awsSdk.webIdentityCredentialsMod.WebIdentityCredentials.WebIdentityCredentialsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,7 +19,10 @@ class WebIdentityCredentials ()
     * @param {Object} clientConfig - a map of configuration options to pass to the underlying STS client.
     */
   def this(options: WebIdentityCredentialsOptions) = this()
-  def this(options: WebIdentityCredentialsOptions, clientConfig: ConfigurationOptions) = this()
+  def this(
+    options: WebIdentityCredentialsOptions,
+    clientConfig: typingsSlinky.awsSdk.configBaseMod.ConfigurationOptions
+  ) = this()
 }
 // Needed to expose interfaces on the class
 @JSImport("mock-aws-s3", "WebIdentityCredentials")

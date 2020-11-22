@@ -2,31 +2,23 @@ package typingsSlinky.awsSdkClientLambdaNode.typesResourceInUseExceptionMod
 
 import typingsSlinky.awsSdkClientLambdaNode.deleteEventSourceMappingExceptionsUnionMod.DeleteEventSourceMappingExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateEventSourceMappingExceptionsUnionMod.UpdateEventSourceMappingExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ResourceInUseExceptionDetails> * / any */ @js.native
 trait ResourceInUseException
-  extends ServiceException[ResourceInUseExceptionDetails]
-     with DeleteEventSourceMappingExceptionsUnion
+  extends DeleteEventSourceMappingExceptionsUnion
      with UpdateEventSourceMappingExceptionsUnion {
   
-  @JSName("name")
-  var name_ResourceInUseException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceInUseException = js.native
+  var name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceInUseException = js.native
 }
 object ResourceInUseException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: ResourceInUseExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceInUseException
-  ): ResourceInUseException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceInUseException): ResourceInUseException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ResourceInUseException]
   }
   

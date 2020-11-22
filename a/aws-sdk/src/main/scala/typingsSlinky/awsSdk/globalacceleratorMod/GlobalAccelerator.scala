@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.globalacceleratorMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -29,12 +29,12 @@ trait GlobalAccelerator extends Service {
   var config_GlobalAccelerator: ConfigBase with ClientConfiguration = js.native
   
   /**
-    * Create an accelerator. An accelerator includes one or more listeners that process inbound connections and direct traffic to one or more endpoint groups, each of which includes endpoints, such as Network Load Balancers. To see an AWS CLI example of creating an accelerator, scroll down to Example. If you bring your own IP address ranges to AWS Global Accelerator (BYOIP), you can assign IP addresses from your own pool to your accelerator as the static IP address entry points. Only one IP address from each of your IP address ranges can be used for each accelerator.  You must specify the US West (Oregon) Region to create or update accelerators. 
+    * Create an accelerator. An accelerator includes one or more listeners that process inbound connections and direct traffic to one or more endpoint groups, each of which includes endpoints, such as Network Load Balancers. To see an AWS CLI example of creating an accelerator, scroll down to Example.  Global Accelerator is a global service that supports endpoints in multiple AWS Regions but you must specify the US West (Oregon) Region to create or update accelerators. 
     */
   def createAccelerator(): Request[CreateAcceleratorResponse, AWSError] = js.native
   def createAccelerator(callback: js.Function2[/* err */ AWSError, /* data */ CreateAcceleratorResponse, Unit]): Request[CreateAcceleratorResponse, AWSError] = js.native
   /**
-    * Create an accelerator. An accelerator includes one or more listeners that process inbound connections and direct traffic to one or more endpoint groups, each of which includes endpoints, such as Network Load Balancers. To see an AWS CLI example of creating an accelerator, scroll down to Example. If you bring your own IP address ranges to AWS Global Accelerator (BYOIP), you can assign IP addresses from your own pool to your accelerator as the static IP address entry points. Only one IP address from each of your IP address ranges can be used for each accelerator.  You must specify the US West (Oregon) Region to create or update accelerators. 
+    * Create an accelerator. An accelerator includes one or more listeners that process inbound connections and direct traffic to one or more endpoint groups, each of which includes endpoints, such as Network Load Balancers. To see an AWS CLI example of creating an accelerator, scroll down to Example.  Global Accelerator is a global service that supports endpoints in multiple AWS Regions but you must specify the US West (Oregon) Region to create or update accelerators. 
     */
   def createAccelerator(params: CreateAcceleratorRequest): Request[CreateAcceleratorResponse, AWSError] = js.native
   def createAccelerator(
@@ -43,12 +43,12 @@ trait GlobalAccelerator extends Service {
   ): Request[CreateAcceleratorResponse, AWSError] = js.native
   
   /**
-    * Create an endpoint group for the specified listener. An endpoint group is a collection of endpoints in one AWS Region. To see an AWS CLI example of creating an endpoint group, scroll down to Example.
+    * Create an endpoint group for the specified listener. An endpoint group is a collection of endpoints in one AWS Region. A resource must be valid and active when you add it as an endpoint. To see an AWS CLI example of creating an endpoint group, scroll down to Example.
     */
   def createEndpointGroup(): Request[CreateEndpointGroupResponse, AWSError] = js.native
   def createEndpointGroup(callback: js.Function2[/* err */ AWSError, /* data */ CreateEndpointGroupResponse, Unit]): Request[CreateEndpointGroupResponse, AWSError] = js.native
   /**
-    * Create an endpoint group for the specified listener. An endpoint group is a collection of endpoints in one AWS Region. To see an AWS CLI example of creating an endpoint group, scroll down to Example.
+    * Create an endpoint group for the specified listener. An endpoint group is a collection of endpoints in one AWS Region. A resource must be valid and active when you add it as an endpoint. To see an AWS CLI example of creating an endpoint group, scroll down to Example.
     */
   def createEndpointGroup(params: CreateEndpointGroupRequest): Request[CreateEndpointGroupResponse, AWSError] = js.native
   def createEndpointGroup(
@@ -295,12 +295,12 @@ trait GlobalAccelerator extends Service {
   ): Request[UntagResourceResponse, AWSError] = js.native
   
   /**
-    * Update an accelerator. To see an AWS CLI example of updating an accelerator, scroll down to Example.  You must specify the US West (Oregon) Region to create or update accelerators. 
+    * Update an accelerator. To see an AWS CLI example of updating an accelerator, scroll down to Example.  Global Accelerator is a global service that supports endpoints in multiple AWS Regions but you must specify the US West (Oregon) Region to create or update accelerators. 
     */
   def updateAccelerator(): Request[UpdateAcceleratorResponse, AWSError] = js.native
   def updateAccelerator(callback: js.Function2[/* err */ AWSError, /* data */ UpdateAcceleratorResponse, Unit]): Request[UpdateAcceleratorResponse, AWSError] = js.native
   /**
-    * Update an accelerator. To see an AWS CLI example of updating an accelerator, scroll down to Example.  You must specify the US West (Oregon) Region to create or update accelerators. 
+    * Update an accelerator. To see an AWS CLI example of updating an accelerator, scroll down to Example.  Global Accelerator is a global service that supports endpoints in multiple AWS Regions but you must specify the US West (Oregon) Region to create or update accelerators. 
     */
   def updateAccelerator(params: UpdateAcceleratorRequest): Request[UpdateAcceleratorResponse, AWSError] = js.native
   def updateAccelerator(
@@ -323,12 +323,12 @@ trait GlobalAccelerator extends Service {
   ): Request[UpdateAcceleratorAttributesResponse, AWSError] = js.native
   
   /**
-    * Update an endpoint group. To see an AWS CLI example of updating an endpoint group, scroll down to Example.
+    * Update an endpoint group. A resource must be valid and active when you add it as an endpoint. To see an AWS CLI example of updating an endpoint group, scroll down to Example. 
     */
   def updateEndpointGroup(): Request[UpdateEndpointGroupResponse, AWSError] = js.native
   def updateEndpointGroup(callback: js.Function2[/* err */ AWSError, /* data */ UpdateEndpointGroupResponse, Unit]): Request[UpdateEndpointGroupResponse, AWSError] = js.native
   /**
-    * Update an endpoint group. To see an AWS CLI example of updating an endpoint group, scroll down to Example.
+    * Update an endpoint group. A resource must be valid and active when you add it as an endpoint. To see an AWS CLI example of updating an endpoint group, scroll down to Example. 
     */
   def updateEndpointGroup(params: UpdateEndpointGroupRequest): Request[UpdateEndpointGroupResponse, AWSError] = js.native
   def updateEndpointGroup(

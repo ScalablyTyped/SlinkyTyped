@@ -1,30 +1,21 @@
 package typingsSlinky.awsSdkClientKmsNode.typesExpiredImportTokenExceptionMod
 
 import typingsSlinky.awsSdkClientKmsNode.importKeyMaterialExceptionsUnionMod.ImportKeyMaterialExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait ExpiredImportTokenException
-  extends ServiceException[ExpiredImportTokenExceptionDetails]
-     with ImportKeyMaterialExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_ExpiredImportTokenExceptionDetails> * / any */ @js.native
+trait ExpiredImportTokenException extends ImportKeyMaterialExceptionsUnion {
   
-  @JSName("name")
-  var name_ExpiredImportTokenException: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.ExpiredImportTokenException = js.native
+  var name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.ExpiredImportTokenException = js.native
 }
 object ExpiredImportTokenException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: ExpiredImportTokenExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.ExpiredImportTokenException
-  ): ExpiredImportTokenException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.ExpiredImportTokenException): ExpiredImportTokenException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExpiredImportTokenException]
   }
   

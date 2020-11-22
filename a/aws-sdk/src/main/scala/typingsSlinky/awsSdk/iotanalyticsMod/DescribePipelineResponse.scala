@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribePipelineResponse extends js.Object {
   
   /**
-    * A "Pipeline" object that contains information about the pipeline.
+    * A Pipeline object that contains information about the pipeline.
     */
   var pipeline: js.UndefOr[Pipeline] = js.native
 }

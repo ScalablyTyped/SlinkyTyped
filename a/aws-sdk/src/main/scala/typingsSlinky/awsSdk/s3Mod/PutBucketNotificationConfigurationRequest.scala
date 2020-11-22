@@ -12,6 +12,11 @@ trait PutBucketNotificationConfigurationRequest extends js.Object {
     */
   var Bucket: BucketName = js.native
   
+  /**
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
+  
   var NotificationConfiguration: typingsSlinky.awsSdk.s3Mod.NotificationConfiguration = js.native
 }
 object PutBucketNotificationConfigurationRequest {
@@ -42,5 +47,11 @@ object PutBucketNotificationConfigurationRequest {
     
     @scala.inline
     def setNotificationConfiguration(value: NotificationConfiguration): Self = this.set("NotificationConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
   }
 }

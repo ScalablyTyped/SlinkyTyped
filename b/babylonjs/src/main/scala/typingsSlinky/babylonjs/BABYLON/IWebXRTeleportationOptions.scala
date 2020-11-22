@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import typingsSlinky.babylonjs.XRHandedness
 import typingsSlinky.babylonjs.anon.DisableLighting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,6 +26,21 @@ trait IWebXRTeleportationOptions extends js.Object {
     * If empty, rotation will still work
     */
   var floorMeshes: js.UndefOr[js.Array[AbstractMesh]] = js.native
+  
+  /**
+    * Should teleport work only on a specific hand?
+    */
+  var forceHandedness: js.UndefOr[XRHandedness] = js.native
+  
+  /**
+    * If provided, this function will be used to generate the ray mesh instead of the lines mesh being used per default
+    */
+  var generateRayPathMesh: js.UndefOr[js.Function1[/* points */ js.Array[Vector3], AbstractMesh]] = js.native
+  
+  /**
+    * Meshes that the teleportation ray cannot go through
+    */
+  var pickBlockerMeshes: js.UndefOr[js.Array[AbstractMesh]] = js.native
   
   /**
     *  use this rendering group id for the meshes (optional)
@@ -123,6 +139,27 @@ object IWebXRTeleportationOptions {
     
     @scala.inline
     def deleteFloorMeshes: Self = this.set("floorMeshes", js.undefined)
+    
+    @scala.inline
+    def setForceHandedness(value: XRHandedness): Self = this.set("forceHandedness", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteForceHandedness: Self = this.set("forceHandedness", js.undefined)
+    
+    @scala.inline
+    def setGenerateRayPathMesh(value: /* points */ js.Array[Vector3] => AbstractMesh): Self = this.set("generateRayPathMesh", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteGenerateRayPathMesh: Self = this.set("generateRayPathMesh", js.undefined)
+    
+    @scala.inline
+    def setPickBlockerMeshesVarargs(value: AbstractMesh*): Self = this.set("pickBlockerMeshes", js.Array(value :_*))
+    
+    @scala.inline
+    def setPickBlockerMeshes(value: js.Array[AbstractMesh]): Self = this.set("pickBlockerMeshes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePickBlockerMeshes: Self = this.set("pickBlockerMeshes", js.undefined)
     
     @scala.inline
     def setRenderingGroupId(value: Double): Self = this.set("renderingGroupId", value.asInstanceOf[js.Any])

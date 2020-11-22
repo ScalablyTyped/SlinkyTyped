@@ -1,16 +1,15 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import typingsSlinky.devextreme.anon.ColorMode
-import typingsSlinky.devextreme.anon.ComponentElementEventModel
-import typingsSlinky.devextreme.anon.EventModelTarget
+import typingsSlinky.devextreme.anon.ComponentElementEventModelTarget
 import typingsSlinky.devextreme.anon.HorizontalOffset
 import typingsSlinky.devextreme.anon.KeepLabels
 import typingsSlinky.devextreme.anon.Padding
-import typingsSlinky.devextreme.anon.`24`
-import typingsSlinky.devextreme.anon.`25`
+import typingsSlinky.devextreme.anon.`27`
+import typingsSlinky.devextreme.anon.`28`
+import typingsSlinky.devextreme.anon.`29`
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
-import typingsSlinky.devextreme.devextremeStrings.Default
 import typingsSlinky.devextreme.devextremeStrings.Material
 import typingsSlinky.devextreme.devextremeStrings.Ocean
 import typingsSlinky.devextreme.devextremeStrings.Office
@@ -39,61 +38,97 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSankeyOptions extends BaseWidgetOptions[dxSankey] {
   
-  /** @name dxSankey.Options.adaptiveLayout */
+  /**
+    * [descr:dxSankey.Options.adaptiveLayout]
+    */
   var adaptiveLayout: js.UndefOr[KeepLabels] = js.native
   
-  /** @name dxSankey.Options.alignment */
+  /**
+    * [descr:dxSankey.Options.alignment]
+    */
   var alignment: js.UndefOr[bottom | center | top | (js.Array[bottom | center | top])] = js.native
   
-  /** @name dxSankey.Options.dataSource */
+  /**
+    * [descr:dxSankey.Options.dataSource]
+    */
   var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.native
   
-  /** @name dxSankey.Options.hoverEnabled */
+  /**
+    * [descr:dxSankey.Options.hoverEnabled]
+    */
   var hoverEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxSankey.Options.label */
+  /**
+    * [descr:dxSankey.Options.label]
+    */
   var label: js.UndefOr[HorizontalOffset] = js.native
   
-  /** @name dxSankey.Options.link */
+  /**
+    * [descr:dxSankey.Options.link]
+    */
   var link: js.UndefOr[ColorMode] = js.native
   
-  /** @name dxSankey.Options.node */
+  /**
+    * [descr:dxSankey.Options.node]
+    */
   var node: js.UndefOr[Padding] = js.native
   
-  /** @name dxSankey.Options.onLinkClick */
-  var onLinkClick: js.UndefOr[(js.Function1[/* e */ EventModelTarget, _]) | String] = js.native
+  /**
+    * [descr:dxSankey.Options.onLinkClick]
+    */
+  var onLinkClick: js.UndefOr[(js.Function1[/* e */ ComponentElementEventModelTarget, _]) | String] = js.native
   
-  /** @name dxSankey.Options.onLinkHoverChanged */
-  var onLinkHoverChanged: js.UndefOr[js.Function1[/* e */ `24`, _]] = js.native
+  /**
+    * [descr:dxSankey.Options.onLinkHoverChanged]
+    */
+  var onLinkHoverChanged: js.UndefOr[js.Function1[/* e */ `27`, _]] = js.native
   
-  /** @name dxSankey.Options.onNodeClick */
-  var onNodeClick: js.UndefOr[(js.Function1[/* e */ ComponentElementEventModel, _]) | String] = js.native
+  /**
+    * [descr:dxSankey.Options.onNodeClick]
+    */
+  var onNodeClick: js.UndefOr[(js.Function1[/* e */ `28`, _]) | String] = js.native
   
-  /** @name dxSankey.Options.onNodeHoverChanged */
-  var onNodeHoverChanged: js.UndefOr[js.Function1[/* e */ `25`, _]] = js.native
+  /**
+    * [descr:dxSankey.Options.onNodeHoverChanged]
+    */
+  var onNodeHoverChanged: js.UndefOr[js.Function1[/* e */ `29`, _]] = js.native
   
-  /** @name dxSankey.Options.palette */
+  /**
+    * [descr:dxSankey.Options.palette]
+    */
   var palette: js.UndefOr[
-    js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+    js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
   ] = js.native
   
-  /** @name dxSankey.Options.paletteExtensionMode */
+  /**
+    * [descr:dxSankey.Options.paletteExtensionMode]
+    */
   var paletteExtensionMode: js.UndefOr[alternate | blend | extrapolate] = js.native
   
-  /** @name dxSankey.Options.sortData */
+  /**
+    * [descr:dxSankey.Options.sortData]
+    */
   var sortData: js.UndefOr[js.Any] = js.native
   
-  /** @name dxSankey.Options.sourceField */
+  /**
+    * [descr:dxSankey.Options.sourceField]
+    */
   var sourceField: js.UndefOr[String] = js.native
   
-  /** @name dxSankey.Options.targetField */
+  /**
+    * [descr:dxSankey.Options.targetField]
+    */
   var targetField: js.UndefOr[String] = js.native
   
-  /** @name dxSankey.Options.tooltip */
+  /**
+    * [descr:dxSankey.Options.tooltip]
+    */
   @JSName("tooltip")
   var tooltip_dxSankeyOptions: js.UndefOr[dxSankeyTooltip] = js.native
   
-  /** @name dxSankey.Options.weightField */
+  /**
+    * [descr:dxSankey.Options.weightField]
+    */
   var weightField: js.UndefOr[String] = js.native
 }
 object dxSankeyOptions {
@@ -168,31 +203,31 @@ object dxSankeyOptions {
     def deleteNode: Self = this.set("node", js.undefined)
     
     @scala.inline
-    def setOnLinkClickFunction1(value: /* e */ EventModelTarget => _): Self = this.set("onLinkClick", js.Any.fromFunction1(value))
+    def setOnLinkClickFunction1(value: /* e */ ComponentElementEventModelTarget => _): Self = this.set("onLinkClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnLinkClick(value: (js.Function1[/* e */ EventModelTarget, _]) | String): Self = this.set("onLinkClick", value.asInstanceOf[js.Any])
+    def setOnLinkClick(value: (js.Function1[/* e */ ComponentElementEventModelTarget, _]) | String): Self = this.set("onLinkClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnLinkClick: Self = this.set("onLinkClick", js.undefined)
     
     @scala.inline
-    def setOnLinkHoverChanged(value: /* e */ `24` => _): Self = this.set("onLinkHoverChanged", js.Any.fromFunction1(value))
+    def setOnLinkHoverChanged(value: /* e */ `27` => _): Self = this.set("onLinkHoverChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLinkHoverChanged: Self = this.set("onLinkHoverChanged", js.undefined)
     
     @scala.inline
-    def setOnNodeClickFunction1(value: /* e */ ComponentElementEventModel => _): Self = this.set("onNodeClick", js.Any.fromFunction1(value))
+    def setOnNodeClickFunction1(value: /* e */ `28` => _): Self = this.set("onNodeClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnNodeClick(value: (js.Function1[/* e */ ComponentElementEventModel, _]) | String): Self = this.set("onNodeClick", value.asInstanceOf[js.Any])
+    def setOnNodeClick(value: (js.Function1[/* e */ `28`, _]) | String): Self = this.set("onNodeClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnNodeClick: Self = this.set("onNodeClick", js.undefined)
     
     @scala.inline
-    def setOnNodeHoverChanged(value: /* e */ `25` => _): Self = this.set("onNodeHoverChanged", js.Any.fromFunction1(value))
+    def setOnNodeHoverChanged(value: /* e */ `29` => _): Self = this.set("onNodeHoverChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnNodeHoverChanged: Self = this.set("onNodeHoverChanged", js.undefined)
@@ -202,7 +237,7 @@ object dxSankeyOptions {
     
     @scala.inline
     def setPalette(
-      value: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+      value: js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
     ): Self = this.set("palette", value.asInstanceOf[js.Any])
     
     @scala.inline

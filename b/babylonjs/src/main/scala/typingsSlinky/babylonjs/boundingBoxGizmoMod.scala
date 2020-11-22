@@ -28,7 +28,7 @@ object boundingBoxGizmoMod extends js.Object {
     def this(color: Color3, gizmoLayer: UtilityLayerRenderer) = this()
     
     /**
-      * Mesh used as a pivot to rotate the attached mesh
+      * Mesh used as a pivot to rotate the attached node
       */
     var _anchorMesh: js.Any = js.native
     
@@ -72,7 +72,14 @@ object boundingBoxGizmoMod extends js.Object {
     def enableDragBehavior(): Unit = js.native
     
     /**
+      * If set, the rotation spheres and scale boxes will increase in size based on the size of the bounding box
+      * Note : fixedDragMeshScreenSize takes precedence over fixedDragMeshBoundsSize if both are true
+      */
+    var fixedDragMeshBoundsSize: Boolean = js.native
+    
+    /**
       * If set, the rotation spheres and scale boxes will increase in size based on the distance away from the camera to have a consistent screen size (Default: false)
+      * Note : fixedDragMeshScreenSize takes precedence over fixedDragMeshBoundsSize if both are true
       */
     var fixedDragMeshScreenSize: Boolean = js.native
     
@@ -131,7 +138,7 @@ object boundingBoxGizmoMod extends js.Object {
     var scaleBoxSize: Double = js.native
     
     /**
-      * Relative bounding box pivot used when scaling the attached mesh. When null object with scale from the opposite corner. 0.5,0.5,0.5 for center and 0.5,0,0.5 for bottom (Default: null)
+      * Relative bounding box pivot used when scaling the attached node. When null object with scale from the opposite corner. 0.5,0.5,0.5 for center and 0.5,0,0.5 for bottom (Default: null)
       */
     var scalePivot: Nullable[Vector3] = js.native
     
@@ -150,8 +157,10 @@ object boundingBoxGizmoMod extends js.Object {
     /**
       * Enables/disables scaling
       * @param enable if scaling should be enabled
+      * @param homogeneousScaling defines if scaling should only be homogeneous
       */
     def setEnabledScaling(enable: Boolean): Unit = js.native
+    def setEnabledScaling(enable: Boolean, homogeneousScaling: Boolean): Unit = js.native
     
     /**
       * Updates the bounding box information for the Gizmo

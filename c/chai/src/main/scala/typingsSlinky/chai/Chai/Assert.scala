@@ -750,6 +750,17 @@ trait Assert extends js.Object {
   def isFalse[T](value: T, message: String): Unit = js.native
   
   /**
+    * Asserts that value is a finite number.
+    * Unlike `.isNumber`, this will fail for `NaN` and `Infinity`.
+    *
+    * @type T   Type of value
+    * @param value    Actual value
+    * @param message   Message to display on error.
+    */
+  def isFinite[T](value: T): Unit = js.native
+  def isFinite[T](value: T, message: String): Unit = js.native
+  
+  /**
     * Asserts that object is frozen (cannot have new properties added to it
     * and its existing properties cannot be removed).
     *

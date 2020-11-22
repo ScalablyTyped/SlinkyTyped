@@ -3,7 +3,7 @@ package typingsSlinky.nextReactDevOverlay.components
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.TouchEvent
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.nextReactDevOverlay.dialogDialogMod.DialogProps
 import typingsSlinky.nextReactDevOverlay.nextReactDevOverlayStrings.error
 import typingsSlinky.nextReactDevOverlay.nextReactDevOverlayStrings.warning
@@ -17,19 +17,23 @@ object Dialog {
   @js.native
   object component extends js.Object
   
-  def withProps(p: DialogProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  @scala.inline
+  class Builder (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, js.Object] {
+    
+    @scala.inline
+    def onClose(value: /* e */ MouseEvent | TouchEvent => Unit): this.type = set("onClose", js.Any.fromFunction1(value))
+  }
+  
+  def withProps(p: DialogProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(
-    `aria-describedby`: String,
-    `aria-labelledby`: String,
-    onClose: MouseEvent | TouchEvent => Unit,
-    `type`: error | warning
-  ): Default[tag.type, js.Object] = {
-    val __props = js.Dynamic.literal(onClose = js.Any.fromFunction1(onClose))
+  def apply(`aria-describedby`: String, `aria-labelledby`: String, `type`: error | warning): Builder = {
+    val __props = js.Dynamic.literal()
     __props.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
     __props.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
     __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[DialogProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[DialogProps]))
   }
 }

@@ -235,6 +235,11 @@ trait DefaultRenderingPipeline
   def imageProcessingEnabled_=(enabled: Boolean): Unit = js.native
   
   /**
+    * This is triggered each time the pipeline has been built.
+    */
+  var onBuildObservable: Observable[DefaultRenderingPipeline] = js.native
+  
+  /**
     * Force the compilation of the entire pipeline.
     */
   def prepare(): Unit = js.native

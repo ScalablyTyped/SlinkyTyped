@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("jointjs", "mvc.View")
 @js.native
-class View[T /* <: Model[_, ModelSetOptions] */] ()
+class View[T /* <: Model[_, ModelSetOptions, js.Object] */] ()
   extends typingsSlinky.backbone.mod.View[T] {
   def this(opt: ViewOptions[T]) = this()
   

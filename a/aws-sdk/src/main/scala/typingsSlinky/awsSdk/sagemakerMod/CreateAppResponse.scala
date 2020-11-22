@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateAppResponse extends js.Object {
   
   /**
-    * The App's Amazon Resource Name (ARN).
+    * The Amazon Resource Name (ARN) of the app.
     */
   var AppArn: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.AppArn] = js.native
 }

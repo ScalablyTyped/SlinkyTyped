@@ -8,23 +8,35 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CommonSeries.hoverStyle */
+/**
+  * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle]
+  */
 @js.native
 trait dxChartSeriesTypesCommonSeriesHoverStyle extends js.Object {
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverStyle.border */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle.border]
+    */
   var border: js.UndefOr[dxChartSeriesTypesCommonSeriesHoverStyleBorder] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverStyle.color */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverStyle.dashStyle */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle.dashStyle]
+    */
   var dashStyle: js.UndefOr[dash | dot | longDash | solid] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverStyle.hatching */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle.hatching]
+    */
   var hatching: js.UndefOr[dxChartSeriesTypesCommonSeriesHoverStyleHatching] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.hoverStyle.width */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.hoverStyle.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxChartSeriesTypesCommonSeriesHoverStyle {

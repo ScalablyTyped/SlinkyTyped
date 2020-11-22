@@ -49,6 +49,8 @@ class GoogleToken () extends js.Object {
   
   var getTokenAsync: js.Any = js.native
   
+  var getTokenAsyncInner: js.Any = js.native
+  
   /**
     * Returns whether the token has expired.
     *
@@ -57,6 +59,8 @@ class GoogleToken () extends js.Object {
   def hasExpired(): Boolean = js.native
   
   def idToken: js.UndefOr[String] = js.native
+  
+  var inFlightRequest: js.Any = js.native
   
   var iss: js.UndefOr[String] = js.native
   

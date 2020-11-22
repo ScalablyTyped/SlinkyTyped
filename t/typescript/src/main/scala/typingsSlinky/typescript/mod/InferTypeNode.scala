@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait InferTypeNode extends TypeNode {
   
   @JSName("kind")
-  var kind_InferTypeNode: InferType = js.native
+  val kind_InferTypeNode: InferType = js.native
   
-  var typeParameter: TypeParameterDeclaration = js.native
+  val typeParameter: TypeParameterDeclaration = js.native
 }

@@ -1,9 +1,10 @@
 package typingsSlinky.babylonjs.babylonjsIndexMod
 
-import typingsSlinky.babylonjs.anon.FaceColors
+import typingsSlinky.babylonjs.anon.Custom
+import typingsSlinky.babylonjs.anon.Flat
 import typingsSlinky.babylonjs.anon.H
 import typingsSlinky.babylonjs.anon.Max
-import typingsSlinky.babylonjs.anon.Updatable
+import typingsSlinky.babylonjs.capsuleBuilderMod.ICreateCapsuleOptions
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.nodeMod.Node
 import typingsSlinky.babylonjs.physicsImpostorMod.IPhysicsEnabledObject
@@ -111,7 +112,7 @@ object Mesh extends js.Object {
     * @param size sets the size (float) of each box side (default 1)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateBox(name: String, size: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -132,6 +133,15 @@ object Mesh extends js.Object {
   ): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   def CreateBox(name: String, size: Double, scene: Nullable[Scene]): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   
+  /** Creates a Capsule Mesh
+    * @param name defines the name of the mesh.
+    * @param options the constructors options used to shape the mesh.
+    * @param scene defines the scene the mesh is scoped to.
+    * @returns the capsule mesh
+    * @see https://doc.babylonjs.com/how_to/capsule_shape
+    */
+  def CreateCapsule(name: String, options: ICreateCapsuleOptions, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  
   /**
     * Creates a cylinder or a cone mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -142,7 +152,7 @@ object Mesh extends js.Object {
     * @param subdivisions sets the number of rings along the cylinder height (positive integer, default 1)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateCylinder(
@@ -236,7 +246,7 @@ object Mesh extends js.Object {
     * @param dashNb is the intended total number of dashes (positive integer, default 200)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param instance is an instance of an existing LineMesh object to be updated with the passed `points` parameter (http://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#lines-and-dashedlines)
+    * @param instance is an instance of an existing LineMesh object to be updated with the passed `points` parameter (https://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#lines-and-dashedlines)
     * @returns a new Mesh
     */
   def CreateDashedLines(name: String, points: js.Array[Vector3], dashSize: Double, gapSize: Double, dashNb: Double): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
@@ -306,7 +316,7 @@ object Mesh extends js.Object {
     * @param tessellation sets the number of polygon sides (positive integer, default 64). So a tessellation valued to 3 will build a triangle, to 4 a square, etc
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateDisc(name: String, radius: Double, tessellation: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -368,7 +378,7 @@ object Mesh extends js.Object {
   /**
     * Creates a ground mesh from a height map.
     * Please consider using the same method from the MeshBuilder class instead
-    * @see http://doc.babylonjs.com/babylon101/height_map
+    * @see https://doc.babylonjs.com/babylon101/height_map
     * @param name defines the name of the mesh to create
     * @param url sets the URL of the height map image resource
     * @param width set the ground width size
@@ -498,15 +508,15 @@ object Mesh extends js.Object {
     * * The parameter `subdivisions` sets the number of subdivisions (postive integer, default 4). The more subdivisions, the more faces on the icosphere whatever its size
     * * The parameter `flat` (boolean, default true) gives each side its own normals. Set it to false to get a smooth continuous light reflection on the surface
     * * You can also set the mesh side orientation with the values : Mesh.FRONTSIDE (default), Mesh.BACKSIDE or Mesh.DOUBLESIDE
-    * * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation
+    * * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation
     * * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created
     * @param name defines the name of the mesh
     * @param options defines the options used to create the mesh
     * @param scene defines the hosting scene
     * @returns a new Mesh
-    * @see http://doc.babylonjs.com/how_to/polyhedra_shapes#icosphere
+    * @see https://doc.babylonjs.com/how_to/polyhedra_shapes#icosphere
     */
-  def CreateIcoSphere(name: String, options: Updatable, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreateIcoSphere(name: String, options: Flat, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   
   /**
     * Creates lathe mesh.
@@ -518,7 +528,7 @@ object Mesh extends js.Object {
     * @param tessellation is the side number of the lathe.
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateLathe(name: String, shape: js.Array[Vector3], radius: Double, tessellation: Double, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -555,7 +565,7 @@ object Mesh extends js.Object {
     * @param points is an array successive Vector3
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param instance is an instance of an existing LineMesh object to be updated with the passed `points` parameter (http://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#lines-and-dashedlines).
+    * @param instance is an instance of an existing LineMesh object to be updated with the passed `points` parameter (https://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#lines-and-dashedlines).
     * @returns a new Mesh
     */
   def CreateLines(name: String, points: js.Array[Vector3]): typingsSlinky.babylonjs.linesMeshMod.LinesMesh = js.native
@@ -582,7 +592,7 @@ object Mesh extends js.Object {
     * @param size sets the size (float) of both sides of the plane at once (default 1)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreatePlane(name: String, size: Double, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -603,13 +613,13 @@ object Mesh extends js.Object {
     * You can set the mesh side orientation with the values : Mesh.FRONTSIDE (default), Mesh.BACKSIDE or Mesh.DOUBLESIDE
     * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
     * Remember you can only change the shape positions, not their number when updating a polygon.
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes#non-regular-polygon
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes#non-regular-polygon
     * @param name defines the name of the mesh to create
     * @param shape is a required array of successive Vector3 representing the corners of the polygon in th XoZ plane, that is y = 0 for all vectors
     * @param scene defines the hosting scene
     * @param holes is a required array of arrays of successive Vector3 used to defines holes in the polygon
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns a new Mesh
     */
@@ -746,18 +756,18 @@ object Mesh extends js.Object {
     * * To understand how to set `faceUV` or `faceColors`, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : https://doc.babylonjs.com/how_to/createbox_per_face_textures_and_colors
     * * The parameter `flat` (boolean, default true). If set to false, it gives the polyhedron a single global face, so less vertices and shared normals. In this case, `faceColors` and `faceUV` are ignored
     * * You can also set the mesh side orientation with the values : Mesh.FRONTSIDE (default), Mesh.BACKSIDE or Mesh.DOUBLESIDE
-    * * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation
+    * * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation
     * * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created
     * @param name defines the name of the mesh to create
     * @param options defines the options used to create the mesh
     * @param scene defines the hosting scene
     * @returns a new Mesh
     */
-  def CreatePolyhedron(name: String, options: FaceColors, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
+  def CreatePolyhedron(name: String, options: Custom, scene: Scene): typingsSlinky.babylonjs.meshMod.Mesh = js.native
   
   /**
     * Creates a ribbon mesh. Please consider using the same method from the MeshBuilder class instead
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes
     * @param name defines the name of the mesh to create
     * @param pathArray is a required array of paths, what are each an array of successive Vector3. The pathArray parameter depicts the ribbon geometry.
     * @param closeArray creates a seam between the first and the last paths of the path array (default is false)
@@ -765,8 +775,8 @@ object Mesh extends js.Object {
     * @param offset is taken in account only if the `pathArray` is containing a single path
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
-    * @param instance defines an instance of an existing Ribbon object to be updated with the passed `pathArray` parameter (http://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#ribbon)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param instance defines an instance of an existing Ribbon object to be updated with the passed `pathArray` parameter (https://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#ribbon)
     * @returns a new Mesh
     */
   def CreateRibbon(
@@ -938,7 +948,7 @@ object Mesh extends js.Object {
     * @param diameter sets the diameter size (float) of the sphere (default 1)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateSphere(name: String, segments: Double, diameter: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -1028,7 +1038,7 @@ object Mesh extends js.Object {
     * @param tessellation sets the number of torus sides (postive integer, default 16)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateTorus(name: String, diameter: Double, thickness: Double, tessellation: Double): typingsSlinky.babylonjs.meshMod.Mesh = js.native
@@ -1097,7 +1107,7 @@ object Mesh extends js.Object {
     * @param q the number of windings on Y axis (positive integers, default 3)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateTorusKnot(
@@ -1195,7 +1205,7 @@ object Mesh extends js.Object {
     * The tube is a parametric shape.
     * It has no predefined shape. Its final shape will depend on the input parameters.
     * Please consider using the same method from the MeshBuilder class instead
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes
     * @param name defines the name of the mesh to create
     * @param path is a required array of successive Vector3. It is the curve used as the axis of the tube
     * @param radius sets the tube radius size
@@ -1204,8 +1214,8 @@ object Mesh extends js.Object {
     * @param cap sets the way the extruded shape is capped. Possible values : Mesh.NO_CAP (default), Mesh.CAP_START, Mesh.CAP_END, Mesh.CAP_ALL
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
-    * @param instance is an instance of an existing Tube object to be updated with the passed `pathArray` parameter (http://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#tube)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param instance is an instance of an existing Tube object to be updated with the passed `pathArray` parameter (https://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#tube)
     * @returns a new Mesh
     */
   def CreateTube(
@@ -1310,14 +1320,14 @@ object Mesh extends js.Object {
   
   /**
     * Creates an extruded polygon mesh, with depth in the Y direction. Please consider using the same method from the MeshBuilder class instead.
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes#extruded-non-regular-polygon
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes#extruded-non-regular-polygon
     * @param name defines the name of the mesh to create
     * @param shape is a required array of successive Vector3 representing the corners of the polygon in th XoZ plane, that is y = 0 for all vectors
     * @param depth defines the height of extrusion
     * @param scene defines the hosting scene
     * @param holes is a required array of arrays of successive Vector3 used to defines holes in the polygon
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns a new Mesh
     */
@@ -1465,8 +1475,8 @@ object Mesh extends js.Object {
   /**
     * Creates an extruded shape mesh.
     * The extrusion is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters. Please consider using the same method from the MeshBuilder class instead
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
     * @param name defines the name of the mesh to create
     * @param shape is a required array of successive Vector3. This array depicts the shape to be extruded in its local space : the shape must be designed in the xOy plane and will be extruded along the Z axis
     * @param path is a required array of successive Vector3. This is the axis curve the shape is extruded along
@@ -1475,8 +1485,8 @@ object Mesh extends js.Object {
     * @param cap sets the way the extruded shape is capped. Possible values : Mesh.NO_CAP (default), Mesh.CAP_START, Mesh.CAP_END, Mesh.CAP_ALL
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
-    * @param instance is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters (http://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#extruded-shape)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param instance is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters (https://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#extruded-shape)
     * @returns a new Mesh
     */
   def ExtrudeShape(
@@ -1582,7 +1592,7 @@ object Mesh extends js.Object {
     * The custom extrusion is a parametric shape.
     * It has no predefined shape. Its final shape will depend on the input parameters.
     * Please consider using the same method from the MeshBuilder class instead
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
     * @param name defines the name of the mesh to create
     * @param shape is a required array of successive Vector3. This array depicts the shape to be extruded in its local space : the shape must be designed in the xOy plane and will be extruded along the Z axis
     * @param path is a required array of successive Vector3. This is the axis curve the shape is extruded along
@@ -1593,8 +1603,8 @@ object Mesh extends js.Object {
     * @param cap sets the way the extruded shape is capped. Possible values : Mesh.NO_CAP (default), Mesh.CAP_START, Mesh.CAP_END, Mesh.CAP_ALL
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
-    * @param instance is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters (http://doc.babylonjs.com/how_to/how_to_dynamically_morph_a_mesh#extruded-shape)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param instance is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters (https://doc.babylonjs.com/how_to/how_to_dynamically_morph_a_mesh#extruded-shape)
     * @returns a new Mesh
     */
   def ExtrudeShapeCustom(

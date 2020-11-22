@@ -1,5 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
+import typingsSlinky.xstate.anon.ContextAny
 import typingsSlinky.xstate.stateNodeMod.StateNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +17,7 @@ trait NodesAndEdges[TContext, TEvent /* <: EventObject */] extends js.Object {
     ]
   ] = js.native
   
-  var nodes: js.Array[StateNode[_, _, EventObject, _]] = js.native
+  var nodes: js.Array[StateNode[_, _, EventObject, ContextAny]] = js.native
 }
 object NodesAndEdges {
   
@@ -29,7 +30,7 @@ object NodesAndEdges {
         /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any
       ]
     ],
-    nodes: js.Array[StateNode[_, _, EventObject, _]]
+    nodes: js.Array[StateNode[_, _, EventObject, ContextAny]]
   ): NodesAndEdges[TContext, TEvent] = {
     val __obj = js.Dynamic.literal(edges = edges.asInstanceOf[js.Any], nodes = nodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodesAndEdges[TContext, TEvent]]
@@ -71,9 +72,9 @@ object NodesAndEdges {
     ): Self = this.set("edges", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setNodesVarargs(value: (StateNode[js.Any, js.Any, EventObject, js.Any])*): Self = this.set("nodes", js.Array(value :_*))
+    def setNodesVarargs(value: (StateNode[js.Any, js.Any, EventObject, ContextAny])*): Self = this.set("nodes", js.Array(value :_*))
     
     @scala.inline
-    def setNodes(value: js.Array[StateNode[_, _, EventObject, _]]): Self = this.set("nodes", value.asInstanceOf[js.Any])
+    def setNodes(value: js.Array[StateNode[_, _, EventObject, ContextAny]]): Self = this.set("nodes", value.asInstanceOf[js.Any])
   }
 }

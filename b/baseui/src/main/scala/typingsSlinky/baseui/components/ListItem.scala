@@ -5,7 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.li.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.listMod.ArtworkSizesT
-import typingsSlinky.baseui.listMod.OverridesT
+import typingsSlinky.baseui.listMod.ListOverrides
 import typingsSlinky.baseui.listMod.PropsT
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
@@ -39,7 +39,7 @@ object ListItem {
     def endEnhancer(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overrides(value: OverridesT): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: ListOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def sublist(value: Boolean): this.type = set("sublist", value.asInstanceOf[js.Any])

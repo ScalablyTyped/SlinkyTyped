@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antd/lib/_util/usePatchElement", JSImport.Namespace)
+@JSImport("antd/lib/_util/hooks/usePatchElement", JSImport.Namespace)
 @js.native
 object usePatchElementMod extends js.Object {
   

@@ -1,6 +1,6 @@
 name := "sbt-SlinkyTyped"
 organization := "org.scalablytyped.slinky"
-version := "202011190738"
+version := "202011220437"
 sbtPlugin := true
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 publishMavenStyle := true

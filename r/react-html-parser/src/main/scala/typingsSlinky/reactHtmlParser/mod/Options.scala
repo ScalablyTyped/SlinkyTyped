@@ -1,5 +1,6 @@
 package typingsSlinky.reactHtmlParser.mod
 
+import typingsSlinky.domhandler.mod.DomElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +10,7 @@ trait Options extends js.Object {
   
   var decodeEntities: js.UndefOr[Boolean] = js.native
   
-  var preprocessNodes: js.UndefOr[
-    js.Function1[
-      /* nodes */ js.Array[
-        /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DomElement */ _
-      ], 
-      _
-    ]
-  ] = js.native
+  var preprocessNodes: js.UndefOr[js.Function1[/* nodes */ js.Array[DomElement], _]] = js.native
   
   var transform: js.UndefOr[Transform] = js.native
 }
@@ -50,11 +44,7 @@ object Options {
     def deleteDecodeEntities: Self = this.set("decodeEntities", js.undefined)
     
     @scala.inline
-    def setPreprocessNodes(
-      value: /* nodes */ js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DomElement */ _
-        ] => _
-    ): Self = this.set("preprocessNodes", js.Any.fromFunction1(value))
+    def setPreprocessNodes(value: /* nodes */ js.Array[DomElement] => _): Self = this.set("preprocessNodes", js.Any.fromFunction1(value))
     
     @scala.inline
     def deletePreprocessNodes: Self = this.set("preprocessNodes", js.undefined)

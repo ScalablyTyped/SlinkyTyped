@@ -15,22 +15,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPieChartLegend extends BaseChartLegend {
   
-  /** @name dxPieChart.Options.legend.customizeHint */
+  /**
+    * [descr:dxPieChart.Options.legend.customizeHint]
+    */
   var customizeHint: js.UndefOr[js.Function1[/* pointInfo */ PointColor, String]] = js.native
   
-  /** @name dxPieChart.Options.legend.customizeItems */
+  /**
+    * [descr:dxPieChart.Options.legend.customizeItems]
+    */
   @JSName("customizeItems")
   var customizeItems_dxPieChartLegend: js.UndefOr[
     js.Function1[/* items */ js.Array[PieChartLegendItem], js.Array[PieChartLegendItem]]
   ] = js.native
   
-  /** @name dxPieChart.Options.legend.customizeText */
+  /**
+    * [descr:dxPieChart.Options.legend.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* pointInfo */ PointColor, String]] = js.native
   
-  /** @name dxPieChart.Options.legend.hoverMode */
+  /**
+    * [descr:dxPieChart.Options.legend.hoverMode]
+    */
   var hoverMode: js.UndefOr[none | allArgumentPoints] = js.native
   
-  /** @name dxPieChart.Options.legend.markerTemplate */
+  /**
+    * [descr:dxPieChart.Options.legend.markerTemplate]
+    */
   @JSName("markerTemplate")
   var markerTemplate_dxPieChartLegend: js.UndefOr[
     template | (js.Function2[

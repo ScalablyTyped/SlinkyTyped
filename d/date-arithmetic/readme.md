@@ -1,7 +1,7 @@
 
 # Scala.js typings for date-arithmetic
 
-Typings are for version v3.1.0
+Typings are for version 4.1
 
 ## Library description:
 simple date math util

@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
+  type DSWalkEnterOrLeaveFn = js.Function1[/* node */ typingsSlinky.cssTree.mod.DSNode, scala.Unit]
+  
   type EnterOrLeaveFn[NodeType] = js.ThisFunction3[
     /* this */ typingsSlinky.cssTree.mod.WalkContext, 
     /* node */ NodeType, 

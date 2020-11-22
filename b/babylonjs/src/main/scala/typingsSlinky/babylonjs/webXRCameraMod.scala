@@ -2,8 +2,11 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.freeCameraMod.FreeCamera
+import typingsSlinky.babylonjs.mathVectorMod.Vector3
+import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.webXRSessionManagerMod.WebXRSessionManager
+import typingsSlinky.babylonjs.webXRTypesMod.WebXRTrackingState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,6 +30,12 @@ object webXRCameraMod extends js.Object {
     var _referenceQuaternion: js.Any = js.native
     
     var _referencedPosition: js.Any = js.native
+    
+    var _rotate180: js.Any = js.native
+    
+    var _setTrackingState: js.Any = js.native
+    
+    var _trackingState: js.Any = js.native
     
     /** @hidden */
     def _updateForDualEyeDebugging(): Unit = js.native
@@ -52,6 +61,22 @@ object webXRCameraMod extends js.Object {
     var compensateOnFirstFrame: Boolean = js.native
     
     /**
+      *  Observable raised after camera teleportation
+      */
+    var onAfterCameraTeleport: Observable[Vector3] = js.native
+    
+    /**
+      * Observable raised before camera teleportation
+      */
+    var onBeforeCameraTeleport: Observable[Vector3] = js.native
+    
+    /**
+      * Notifies when the camera's tracking state has changed.
+      * Notice - will also be triggered when tracking has started (at the beginning of the session)
+      */
+    var onTrackingStateChanged: Observable[WebXRTrackingState] = js.native
+    
+    /**
       * Return the user's height, unrelated to the current ground.
       * This will be the y position of this camera, when ground level is 0.
       */
@@ -66,5 +91,10 @@ object webXRCameraMod extends js.Object {
     def setTransformationFromNonVRCamera(otherCamera: js.UndefOr[scala.Nothing], resetToBaseReferenceSpace: Boolean): Unit = js.native
     def setTransformationFromNonVRCamera(otherCamera: Camera): Unit = js.native
     def setTransformationFromNonVRCamera(otherCamera: Camera, resetToBaseReferenceSpace: Boolean): Unit = js.native
+    
+    /**
+      * Get the current XR tracking state of the camera
+      */
+    def trackingState: WebXRTrackingState = js.native
   }
 }

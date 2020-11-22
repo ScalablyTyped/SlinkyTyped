@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore.optimizerMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Variable
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Variable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

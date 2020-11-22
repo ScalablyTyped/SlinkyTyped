@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateListenerInput extends js.Object {
   
   /**
-    * [TLS listeners] The name of the Application-Layer Protocol Negotiation (ALPN) policy. You can specify one policy name. The following are the possible values:    HTTP1Only     HTTP2Only     HTTP2Optional     HTTP2Preferred     None    For more information, see ALPN Policies in the Network Load Balancers Guide.
+    * [TLS listeners] The name of the Application-Layer Protocol Negotiation (ALPN) policy. You can specify one policy name. The following are the possible values:    HTTP1Only     HTTP2Only     HTTP2Optional     HTTP2Preferred     None    For more information, see ALPN policies in the Network Load Balancers Guide.
     */
   var AlpnPolicy: js.UndefOr[AlpnPolicyName] = js.native
   
   /**
-    * [HTTPS and TLS listeners] The default certificate for the listener. You must provide exactly one certificate. Set CertificateArn to the certificate ARN but do not set IsDefault. To create a certificate list for the listener, use AddListenerCertificates.
+    * [HTTPS and TLS listeners] The default certificate for the listener. You must provide exactly one certificate. Set CertificateArn to the certificate ARN but do not set IsDefault.
     */
   var Certificates: js.UndefOr[CertificateList] = js.native
   
   /**
-    * The actions for the default rule. The rule must include one forward action or one or more fixed-response actions. If the action type is forward, you specify one or more target groups. The protocol of the target group must be HTTP or HTTPS for an Application Load Balancer. The protocol of the target group must be TCP, TLS, UDP, or TCP_UDP for a Network Load Balancer. [HTTPS listeners] If the action type is authenticate-oidc, you authenticate users through an identity provider that is OpenID Connect (OIDC) compliant. [HTTPS listeners] If the action type is authenticate-cognito, you authenticate users through the user pools supported by Amazon Cognito. [Application Load Balancer] If the action type is redirect, you redirect specified client requests from one URL to another. [Application Load Balancer] If the action type is fixed-response, you drop specified client requests and return a custom HTTP response.
+    * The actions for the default rule.
     */
   var DefaultActions: Actions = js.native
   
@@ -28,25 +28,30 @@ trait CreateListenerInput extends js.Object {
   var LoadBalancerArn: typingsSlinky.awsSdk.elbv2Mod.LoadBalancerArn = js.native
   
   /**
-    * The port on which the load balancer is listening.
+    * The port on which the load balancer is listening. You cannot specify a port for a Gateway Load Balancer.
     */
-  var Port: typingsSlinky.awsSdk.elbv2Mod.Port = js.native
+  var Port: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.Port] = js.native
   
   /**
-    * The protocol for connections from clients to the load balancer. For Application Load Balancers, the supported protocols are HTTP and HTTPS. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, and TCP_UDP.
+    * The protocol for connections from clients to the load balancer. For Application Load Balancers, the supported protocols are HTTP and HTTPS. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, and TCP_UDP. You can’t specify the UDP or TCP_UDP protocol if dual-stack mode is enabled. You cannot specify a protocol for a Gateway Load Balancer.
     */
-  var Protocol: ProtocolEnum = js.native
+  var Protocol: js.UndefOr[ProtocolEnum] = js.native
   
   /**
-    * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are supported. The following are the possible values:    ELBSecurityPolicy-2016-08     ELBSecurityPolicy-TLS-1-0-2015-04     ELBSecurityPolicy-TLS-1-1-2017-01     ELBSecurityPolicy-TLS-1-2-2017-01     ELBSecurityPolicy-TLS-1-2-Ext-2018-06     ELBSecurityPolicy-FS-2018-06     ELBSecurityPolicy-FS-1-1-2019-08     ELBSecurityPolicy-FS-1-2-2019-08     ELBSecurityPolicy-FS-1-2-Res-2019-08    For more information, see Security Policies in the Application Load Balancers Guide and Security Policies in the Network Load Balancers Guide.
+    * [HTTPS and TLS listeners] The security policy that defines which protocols and ciphers are supported. For more information, see Security policies in the Application Load Balancers Guide and Security policies in the Network Load Balancers Guide.
     */
   var SslPolicy: js.UndefOr[SslPolicyName] = js.native
+  
+  /**
+    * The tags to assign to the listener.
+    */
+  var Tags: js.UndefOr[TagList] = js.native
 }
 object CreateListenerInput {
   
   @scala.inline
-  def apply(DefaultActions: Actions, LoadBalancerArn: LoadBalancerArn, Port: Port, Protocol: ProtocolEnum): CreateListenerInput = {
-    val __obj = js.Dynamic.literal(DefaultActions = DefaultActions.asInstanceOf[js.Any], LoadBalancerArn = LoadBalancerArn.asInstanceOf[js.Any], Port = Port.asInstanceOf[js.Any], Protocol = Protocol.asInstanceOf[js.Any])
+  def apply(DefaultActions: Actions, LoadBalancerArn: LoadBalancerArn): CreateListenerInput = {
+    val __obj = js.Dynamic.literal(DefaultActions = DefaultActions.asInstanceOf[js.Any], LoadBalancerArn = LoadBalancerArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateListenerInput]
   }
   
@@ -75,12 +80,6 @@ object CreateListenerInput {
     def setLoadBalancerArn(value: LoadBalancerArn): Self = this.set("LoadBalancerArn", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPort(value: Port): Self = this.set("Port", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setProtocol(value: ProtocolEnum): Self = this.set("Protocol", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setAlpnPolicyVarargs(value: AlpnPolicyValue*): Self = this.set("AlpnPolicy", js.Array(value :_*))
     
     @scala.inline
@@ -99,9 +98,30 @@ object CreateListenerInput {
     def deleteCertificates: Self = this.set("Certificates", js.undefined)
     
     @scala.inline
+    def setPort(value: Port): Self = this.set("Port", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePort: Self = this.set("Port", js.undefined)
+    
+    @scala.inline
+    def setProtocol(value: ProtocolEnum): Self = this.set("Protocol", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProtocol: Self = this.set("Protocol", js.undefined)
+    
+    @scala.inline
     def setSslPolicy(value: SslPolicyName): Self = this.set("SslPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSslPolicy: Self = this.set("SslPolicy", js.undefined)
+    
+    @scala.inline
+    def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))
+    
+    @scala.inline
+    def setTags(value: TagList): Self = this.set("Tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("Tags", js.undefined)
   }
 }

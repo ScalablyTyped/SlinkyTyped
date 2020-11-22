@@ -18,8 +18,6 @@ trait OpenSettingOption extends js.Object {
   
   /** 是否同时获取用户订阅消息的订阅状态，默认不获取。注意：withSubscriptions 只返回用户勾选过订阅面板中的“总是保持以上选择，不再询问”的订阅消息。
     *
-    * - 注意：[2.3.0](https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html) 版本开始，用户发生点击行为后，才可以跳转打开设置页，管理授权信息。[详情](https://developers.weixin.qq.com/community/develop/doc/000cea2305cc5047af5733de751008)
-    *
     * 最低基础库： `2.10.3` */
   var withSubscriptions: js.UndefOr[Boolean] = js.native
 }

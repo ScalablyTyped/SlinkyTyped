@@ -20,10 +20,10 @@ trait Domain extends Entity {
     * returned in the response. The availabilityStatus property of the domain entity in the response is either
     * AvailableImmediately or EmailVerifiedDomainTakeoverScheduled.
     */
-  var availabilityStatus: js.UndefOr[String] = js.native
+  var availabilityStatus: js.UndefOr[NullableOption[String]] = js.native
   
   // Read-only, Nullable
-  var domainNameReferences: js.UndefOr[js.Array[DirectoryObject]] = js.native
+  var domainNameReferences: js.UndefOr[NullableOption[js.Array[DirectoryObject]]] = js.native
   
   /**
     * The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365.
@@ -49,30 +49,30 @@ trait Domain extends Entity {
   // True if the domain has completed domain ownership verification. Not nullable
   var isVerified: js.UndefOr[Boolean] = js.native
   
-  var manufacturer: js.UndefOr[String] = js.native
+  var manufacturer: js.UndefOr[NullableOption[String]] = js.native
   
-  var model: js.UndefOr[String] = js.native
+  var model: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Specifies the number of days before a user receives notification that their password will expire. If the property is
     * not set, a default value of 14 days will be used.
     */
-  var passwordNotificationWindowInDays: js.UndefOr[Double] = js.native
+  var passwordNotificationWindowInDays: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * Specifies the length of time that a password is valid before it must be changed. If the property is not set, a default
     * value of 90 days will be used.
     */
-  var passwordValidityPeriodInDays: js.UndefOr[Double] = js.native
+  var passwordValidityPeriodInDays: js.UndefOr[NullableOption[Double]] = js.native
   
   /**
     * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online
     * services.Read-only, Nullable
     */
-  var serviceConfigurationRecords: js.UndefOr[js.Array[DomainDnsRecord]] = js.native
+  var serviceConfigurationRecords: js.UndefOr[NullableOption[js.Array[DomainDnsRecord]]] = js.native
   
   // Status of asynchronous operations scheduled for the domain.
-  var state: js.UndefOr[DomainState] = js.native
+  var state: js.UndefOr[NullableOption[DomainState]] = js.native
   
   /**
     * The capabilities assigned to the domain.Can include 0, 1 or more of following values: Email, Sharepoint,
@@ -86,7 +86,7 @@ trait Domain extends Entity {
     * DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership
     * verification with Azure AD.Read-only, Nullable
     */
-  var verificationDnsRecords: js.UndefOr[js.Array[DomainDnsRecord]] = js.native
+  var verificationDnsRecords: js.UndefOr[NullableOption[js.Array[DomainDnsRecord]]] = js.native
 }
 object Domain {
   
@@ -118,19 +118,25 @@ object Domain {
     def deleteAuthenticationType: Self = this.set("authenticationType", js.undefined)
     
     @scala.inline
-    def setAvailabilityStatus(value: String): Self = this.set("availabilityStatus", value.asInstanceOf[js.Any])
+    def setAvailabilityStatus(value: NullableOption[String]): Self = this.set("availabilityStatus", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAvailabilityStatus: Self = this.set("availabilityStatus", js.undefined)
     
     @scala.inline
+    def setAvailabilityStatusNull: Self = this.set("availabilityStatus", null)
+    
+    @scala.inline
     def setDomainNameReferencesVarargs(value: DirectoryObject*): Self = this.set("domainNameReferences", js.Array(value :_*))
     
     @scala.inline
-    def setDomainNameReferences(value: js.Array[DirectoryObject]): Self = this.set("domainNameReferences", value.asInstanceOf[js.Any])
+    def setDomainNameReferences(value: NullableOption[js.Array[DirectoryObject]]): Self = this.set("domainNameReferences", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDomainNameReferences: Self = this.set("domainNameReferences", js.undefined)
+    
+    @scala.inline
+    def setDomainNameReferencesNull: Self = this.set("domainNameReferences", null)
     
     @scala.inline
     def setIsAdminManaged(value: Boolean): Self = this.set("isAdminManaged", value.asInstanceOf[js.Any])
@@ -163,43 +169,61 @@ object Domain {
     def deleteIsVerified: Self = this.set("isVerified", js.undefined)
     
     @scala.inline
-    def setManufacturer(value: String): Self = this.set("manufacturer", value.asInstanceOf[js.Any])
+    def setManufacturer(value: NullableOption[String]): Self = this.set("manufacturer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteManufacturer: Self = this.set("manufacturer", js.undefined)
     
     @scala.inline
-    def setModel(value: String): Self = this.set("model", value.asInstanceOf[js.Any])
+    def setManufacturerNull: Self = this.set("manufacturer", null)
+    
+    @scala.inline
+    def setModel(value: NullableOption[String]): Self = this.set("model", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)
     
     @scala.inline
-    def setPasswordNotificationWindowInDays(value: Double): Self = this.set("passwordNotificationWindowInDays", value.asInstanceOf[js.Any])
+    def setModelNull: Self = this.set("model", null)
+    
+    @scala.inline
+    def setPasswordNotificationWindowInDays(value: NullableOption[Double]): Self = this.set("passwordNotificationWindowInDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordNotificationWindowInDays: Self = this.set("passwordNotificationWindowInDays", js.undefined)
     
     @scala.inline
-    def setPasswordValidityPeriodInDays(value: Double): Self = this.set("passwordValidityPeriodInDays", value.asInstanceOf[js.Any])
+    def setPasswordNotificationWindowInDaysNull: Self = this.set("passwordNotificationWindowInDays", null)
+    
+    @scala.inline
+    def setPasswordValidityPeriodInDays(value: NullableOption[Double]): Self = this.set("passwordValidityPeriodInDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordValidityPeriodInDays: Self = this.set("passwordValidityPeriodInDays", js.undefined)
     
     @scala.inline
+    def setPasswordValidityPeriodInDaysNull: Self = this.set("passwordValidityPeriodInDays", null)
+    
+    @scala.inline
     def setServiceConfigurationRecordsVarargs(value: DomainDnsRecord*): Self = this.set("serviceConfigurationRecords", js.Array(value :_*))
     
     @scala.inline
-    def setServiceConfigurationRecords(value: js.Array[DomainDnsRecord]): Self = this.set("serviceConfigurationRecords", value.asInstanceOf[js.Any])
+    def setServiceConfigurationRecords(value: NullableOption[js.Array[DomainDnsRecord]]): Self = this.set("serviceConfigurationRecords", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteServiceConfigurationRecords: Self = this.set("serviceConfigurationRecords", js.undefined)
     
     @scala.inline
-    def setState(value: DomainState): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setServiceConfigurationRecordsNull: Self = this.set("serviceConfigurationRecords", null)
+    
+    @scala.inline
+    def setState(value: NullableOption[DomainState]): Self = this.set("state", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteState: Self = this.set("state", js.undefined)
+    
+    @scala.inline
+    def setStateNull: Self = this.set("state", null)
     
     @scala.inline
     def setSupportedServicesVarargs(value: String*): Self = this.set("supportedServices", js.Array(value :_*))
@@ -214,9 +238,12 @@ object Domain {
     def setVerificationDnsRecordsVarargs(value: DomainDnsRecord*): Self = this.set("verificationDnsRecords", js.Array(value :_*))
     
     @scala.inline
-    def setVerificationDnsRecords(value: js.Array[DomainDnsRecord]): Self = this.set("verificationDnsRecords", value.asInstanceOf[js.Any])
+    def setVerificationDnsRecords(value: NullableOption[js.Array[DomainDnsRecord]]): Self = this.set("verificationDnsRecords", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVerificationDnsRecords: Self = this.set("verificationDnsRecords", js.undefined)
+    
+    @scala.inline
+    def setVerificationDnsRecordsNull: Self = this.set("verificationDnsRecords", null)
   }
 }

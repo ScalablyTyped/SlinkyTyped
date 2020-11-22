@@ -8,5 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ifError extends js.Object {
   
-  def apply(value: js.Any): Unit = js.native
+  def apply(value: js.Any): js.UndefOr[
+    /* asserts value is TsTypeRef(NoComments,TsQIdent(IArray(TsIdentSimple(null))),IArray())*/ Boolean
+  ] = js.native
 }

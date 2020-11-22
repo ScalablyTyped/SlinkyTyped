@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Website extends js.Object {
   
   // The URL of the website.
-  var address: js.UndefOr[String] = js.native
+  var address: js.UndefOr[NullableOption[String]] = js.native
   
   // The display name of the web site.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // The possible values are: other, home, work, blog, profile.
-  var `type`: js.UndefOr[WebsiteType] = js.native
+  var `type`: js.UndefOr[NullableOption[WebsiteType]] = js.native
 }
 object Website {
   
@@ -40,21 +40,30 @@ object Website {
     }
     
     @scala.inline
-    def setAddress(value: String): Self = this.set("address", value.asInstanceOf[js.Any])
+    def setAddress(value: NullableOption[String]): Self = this.set("address", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAddress: Self = this.set("address", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setAddressNull: Self = this.set("address", null)
+    
+    @scala.inline
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
-    def setType(value: WebsiteType): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setDisplayNameNull: Self = this.set("displayName", null)
+    
+    @scala.inline
+    def setType(value: NullableOption[WebsiteType]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    
+    @scala.inline
+    def setTypeNull: Self = this.set("type", null)
   }
 }

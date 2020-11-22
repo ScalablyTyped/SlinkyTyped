@@ -9,19 +9,19 @@ trait PositionProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
   extends ZIndexProps[ThemeType]
      with TopProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLengthStyledSystem> */ js.Any
     ]
      with RightProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLengthStyledSystem> */ js.Any
     ]
      with BottomProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLengthStyledSystem> */ js.Any
     ]
      with LeftProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLengthStyledSystem> */ js.Any
     ] {
   
   /**
@@ -32,7 +32,7 @@ trait PositionProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
     */
   var position: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _, 
       ThemeType
     ]
   ] = js.native
@@ -66,7 +66,7 @@ object PositionProps {
     @scala.inline
     def setPosition(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _, 
           ThemeType
         ]
     ): Self = this.set("position", value.asInstanceOf[js.Any])

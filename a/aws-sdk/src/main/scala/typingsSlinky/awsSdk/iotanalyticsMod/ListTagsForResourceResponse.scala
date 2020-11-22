@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListTagsForResourceResponse extends js.Object {
   
   /**
-    * The tags (metadata) which you have assigned to the resource.
+    * The tags (metadata) that you have assigned to the resource.
     */
   var tags: js.UndefOr[TagList] = js.native
 }

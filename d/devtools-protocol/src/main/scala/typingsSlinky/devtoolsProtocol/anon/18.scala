@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Runtime.SetAsyncCallStackDepthRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Runtime.ReleaseObjectGroupRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `18` extends js.Object {
   
-  var paramsType: js.Array[SetAsyncCallStackDepthRequest] = js.native
+  var paramsType: js.Array[ReleaseObjectGroupRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `18` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetAsyncCallStackDepthRequest], returnType: Unit): `18` = {
+  def apply(paramsType: js.Array[ReleaseObjectGroupRequest], returnType: Unit): `18` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`18`]
   }
@@ -36,10 +36,10 @@ object `18` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetAsyncCallStackDepthRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: ReleaseObjectGroupRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetAsyncCallStackDepthRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[ReleaseObjectGroupRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// tslint:disable-next-line strict-export-declare-modifiers
 @JSImport("emoji-mart/dist-es/components/emoji/nimble-emoji", "default")
 @js.native
 object default extends TopLevel[ReactComponentClass[NimbleEmojiProps]]

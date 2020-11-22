@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListObjectVersionsRequest extends js.Object {
   
   /**
-    * The bucket name that contains the objects.  When using this API with an access point, you must direct requests to the access point hostname. The access point hostname takes the form AccessPointName-AccountId.s3-accesspoint.Region.amazonaws.com. When using this operation using an access point through the AWS SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see Using Access Points in the Amazon Simple Storage Service Developer Guide.
+    * The bucket name that contains the objects. 
     */
   var Bucket: BucketName = js.native
   
@@ -18,6 +18,11 @@ trait ListObjectVersionsRequest extends js.Object {
   var Delimiter: js.UndefOr[typingsSlinky.awsSdk.s3Mod.Delimiter] = js.native
   
   var EncodingType: js.UndefOr[typingsSlinky.awsSdk.s3Mod.EncodingType] = js.native
+  
+  /**
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
   
   /**
     * Specifies the key to start with when listing objects in a bucket.
@@ -76,6 +81,12 @@ object ListObjectVersionsRequest {
     
     @scala.inline
     def deleteEncodingType: Self = this.set("EncodingType", js.undefined)
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
     
     @scala.inline
     def setKeyMarker(value: KeyMarker): Self = this.set("KeyMarker", value.asInstanceOf[js.Any])

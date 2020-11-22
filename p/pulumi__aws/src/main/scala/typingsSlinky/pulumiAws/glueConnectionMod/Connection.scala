@@ -40,7 +40,7 @@ class Connection protected () extends CustomResource {
   val connectionProperties: Output_[StringDictionary[String]] = js.native
   
   /**
-    * The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`. Defaults to `JBDC`.
+    * The type of the connection. Supported are: `JDBC`, `MONGODB`, `KAFKA`, and `NETWORK`. Defaults to `JBDC`.
     */
   val connectionType: Output_[js.UndefOr[String]] = js.native
   

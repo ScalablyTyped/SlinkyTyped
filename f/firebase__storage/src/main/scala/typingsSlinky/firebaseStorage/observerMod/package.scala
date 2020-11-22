@@ -9,7 +9,7 @@ package object observerMod {
   type CompleteFn = js.Function0[scala.Unit]
   
   type ErrorFn = js.Function1[
-    /* error */ js.Error | typingsSlinky.firebaseStorage.errorMod.FirebaseStorageError, 
+    /* error */ typingsSlinky.firebaseStorage.errorMod.FirebaseStorageError, 
     scala.Unit
   ]
   
@@ -17,10 +17,10 @@ package object observerMod {
   
   type Subscribe[T] = js.Function3[
     /* next */ js.UndefOr[
-      typingsSlinky.firebaseStorage.observerMod.NextFn[T] | typingsSlinky.firebaseStorage.observerMod.StorageObserver[T] | scala.Null
+      typingsSlinky.firebaseStorage.observerMod.NextFn[T] | typingsSlinky.firebaseStorage.observerMod.StorageObserver[T]
     ], 
-    /* error */ js.UndefOr[typingsSlinky.firebaseStorage.observerMod.ErrorFn | scala.Null], 
-    /* complete */ js.UndefOr[typingsSlinky.firebaseStorage.observerMod.CompleteFn | scala.Null], 
+    /* error */ js.UndefOr[typingsSlinky.firebaseStorage.observerMod.ErrorFn], 
+    /* complete */ js.UndefOr[typingsSlinky.firebaseStorage.observerMod.CompleteFn], 
     typingsSlinky.firebaseStorage.observerMod.Unsubscribe
   ]
   

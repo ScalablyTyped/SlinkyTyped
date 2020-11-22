@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TemplateHead
   extends TemplateLiteralLikeNode
-     with TemplateLiteralToken {
+     with PseudoLiteralToken {
   
   @JSName("kind")
-  var kind_TemplateHead: typingsSlinky.typescript.mod.SyntaxKind.TemplateHead = js.native
+  val kind_TemplateHead: typingsSlinky.typescript.mod.SyntaxKind.TemplateHead = js.native
   
   @JSName("parent")
-  var parent_TemplateHead: TemplateExpression = js.native
+  val parent_TemplateHead: TemplateExpression | TemplateLiteralTypeNode = js.native
 }

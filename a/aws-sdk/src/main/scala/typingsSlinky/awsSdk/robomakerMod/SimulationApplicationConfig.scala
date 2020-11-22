@@ -21,6 +21,11 @@ trait SimulationApplicationConfig extends js.Object {
     * The launch configuration for the simulation application.
     */
   var launchConfig: LaunchConfig = js.native
+  
+  /**
+    * A list of world configurations.
+    */
+  var worldConfigs: js.UndefOr[WorldConfigs] = js.native
 }
 object SimulationApplicationConfig {
   
@@ -56,5 +61,14 @@ object SimulationApplicationConfig {
     
     @scala.inline
     def deleteApplicationVersion: Self = this.set("applicationVersion", js.undefined)
+    
+    @scala.inline
+    def setWorldConfigsVarargs(value: WorldConfig*): Self = this.set("worldConfigs", js.Array(value :_*))
+    
+    @scala.inline
+    def setWorldConfigs(value: WorldConfigs): Self = this.set("worldConfigs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWorldConfigs: Self = this.set("worldConfigs", js.undefined)
   }
 }

@@ -1,26 +1,48 @@
 package typingsSlinky.ethers.mod.ethers
 
+import typingsSlinky.ethersprojectLogger.mod.ErrorCode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ethers", "ethers.errors")
 @js.native
 object errors extends js.Object {
-  val CALL_EXCEPTION: /* "CALL_EXCEPTION" */ String = js.native
-  val INVALID_ARGUMENT: /* "INVALID_ARGUMENT" */ String = js.native
-  val MISSING_ARGUMENT: /* "MISSING_ARGUMENT" */ String = js.native
-  val MISSING_NEW: /* "MISSING_NEW" */ String = js.native
-  val NOT_IMPLEMENTED: /* "NOT_IMPLEMENTED" */ String = js.native
-  val NUMERIC_FAULT: /* "NUMERIC_FAULT" */ String = js.native
-  val UNEXPECTED_ARGUMENT: /* "UNEXPECTED_ARGUMENT" */ String = js.native
-  val UNKNOWN_ERROR: /* "UNKNOWN_ERROR" */ String = js.native
-  val UNSUPPORTED_OPERATION: /* "UNSUPPORTED_OPERATION" */ String = js.native
-  def checkArgumentCount(count: Double, expectedCount: Double): Unit = js.native
-  def checkArgumentCount(count: Double, expectedCount: Double, suffix: String): Unit = js.native
-  def checkNew(self: js.Any, kind: js.Any): Unit = js.native
-  def setCensorship(censorship: Boolean): Unit = js.native
-  def setCensorship(censorship: Boolean, permanent: Boolean): Unit = js.native
-  def throwError(message: String, code: String, params: js.Any): scala.Nothing = js.native
+  
+  @JSBracketAccess
+  def apply(value: String): js.UndefOr[ErrorCode with String] = js.native
+  
+  /* "BUFFER_OVERRUN" */ val BUFFER_OVERRUN: typingsSlinky.ethersprojectLogger.mod.ErrorCode.BUFFER_OVERRUN with String = js.native
+  
+  /* "CALL_EXCEPTION" */ val CALL_EXCEPTION: typingsSlinky.ethersprojectLogger.mod.ErrorCode.CALL_EXCEPTION with String = js.native
+  
+  /* "INSUFFICIENT_FUNDS" */ val INSUFFICIENT_FUNDS: typingsSlinky.ethersprojectLogger.mod.ErrorCode.INSUFFICIENT_FUNDS with String = js.native
+  
+  /* "INVALID_ARGUMENT" */ val INVALID_ARGUMENT: typingsSlinky.ethersprojectLogger.mod.ErrorCode.INVALID_ARGUMENT with String = js.native
+  
+  /* "MISSING_ARGUMENT" */ val MISSING_ARGUMENT: typingsSlinky.ethersprojectLogger.mod.ErrorCode.MISSING_ARGUMENT with String = js.native
+  
+  /* "MISSING_NEW" */ val MISSING_NEW: typingsSlinky.ethersprojectLogger.mod.ErrorCode.MISSING_NEW with String = js.native
+  
+  /* "NETWORK_ERROR" */ val NETWORK_ERROR: typingsSlinky.ethersprojectLogger.mod.ErrorCode.NETWORK_ERROR with String = js.native
+  
+  /* "NONCE_EXPIRED" */ val NONCE_EXPIRED: typingsSlinky.ethersprojectLogger.mod.ErrorCode.NONCE_EXPIRED with String = js.native
+  
+  /* "NOT_IMPLEMENTED" */ val NOT_IMPLEMENTED: typingsSlinky.ethersprojectLogger.mod.ErrorCode.NOT_IMPLEMENTED with String = js.native
+  
+  /* "NUMERIC_FAULT" */ val NUMERIC_FAULT: typingsSlinky.ethersprojectLogger.mod.ErrorCode.NUMERIC_FAULT with String = js.native
+  
+  /* "REPLACEMENT_UNDERPRICED" */ val REPLACEMENT_UNDERPRICED: typingsSlinky.ethersprojectLogger.mod.ErrorCode.REPLACEMENT_UNDERPRICED with String = js.native
+  
+  /* "SERVER_ERROR" */ val SERVER_ERROR: typingsSlinky.ethersprojectLogger.mod.ErrorCode.SERVER_ERROR with String = js.native
+  
+  /* "TIMEOUT" */ val TIMEOUT: typingsSlinky.ethersprojectLogger.mod.ErrorCode.TIMEOUT with String = js.native
+  
+  /* "UNEXPECTED_ARGUMENT" */ val UNEXPECTED_ARGUMENT: typingsSlinky.ethersprojectLogger.mod.ErrorCode.UNEXPECTED_ARGUMENT with String = js.native
+  
+  /* "UNKNOWN_ERROR" */ val UNKNOWN_ERROR: typingsSlinky.ethersprojectLogger.mod.ErrorCode.UNKNOWN_ERROR with String = js.native
+  
+  /* "UNPREDICTABLE_GAS_LIMIT" */ val UNPREDICTABLE_GAS_LIMIT: typingsSlinky.ethersprojectLogger.mod.ErrorCode.UNPREDICTABLE_GAS_LIMIT with String = js.native
+  
+  /* "UNSUPPORTED_OPERATION" */ val UNSUPPORTED_OPERATION: typingsSlinky.ethersprojectLogger.mod.ErrorCode.UNSUPPORTED_OPERATION with String = js.native
 }
-

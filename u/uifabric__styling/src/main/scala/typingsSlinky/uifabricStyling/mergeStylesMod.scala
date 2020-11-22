@@ -2,6 +2,7 @@ package typingsSlinky.uifabricStyling
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
+import typingsSlinky.uifabricMergeStyles.ikeyframesMod.IKeyframes
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.IFontFace
 import typingsSlinky.uifabricMergeStyles.istyleMod.IStyle
 import typingsSlinky.uifabricMergeStyles.istyleMod.IStyleBaseArray
@@ -90,7 +91,7 @@ object mergeStylesMod extends js.Object {
   
   def fontFace(font: IFontFace): Unit = js.native
   
-  def keyframes(timeline: StringDictionary[js.Object]): String = js.native
+  def keyframes(timeline: IKeyframes): String = js.native
   
   def mergeStyleSets[TStyleSet](): IProcessedStyleSet[ObjectOnly[TStyleSet]] = js.native
   def mergeStyleSets[TStyleSet](styleSet: TStyleSet): IProcessedStyleSet[ObjectOnly[TStyleSet]] = js.native

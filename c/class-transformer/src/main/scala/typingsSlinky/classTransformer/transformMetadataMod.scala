@@ -1,7 +1,7 @@
 package typingsSlinky.classTransformer
 
 import typingsSlinky.classTransformer.exposeExcludeOptionsMod.TransformOptions
-import typingsSlinky.classTransformer.transformOperationExecutorMod.TransformationType
+import typingsSlinky.classTransformer.transformationTypeEnumMod.TransformationType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -223,6 +223,9 @@ object blueprintjsSelectStrings {
   def filter: filter = "filter".asInstanceOf[filter]
   
   @scala.inline
+  def first: first = "first".asInstanceOf[first]
+  
+  @scala.inline
   def footer: footer = "footer".asInstanceOf[footer]
   
   @scala.inline
@@ -293,6 +296,9 @@ object blueprintjsSelectStrings {
   
   @scala.inline
   def label: label = "label".asInstanceOf[label]
+  
+  @scala.inline
+  def last: last = "last".asInstanceOf[last]
   
   @scala.inline
   def legend: legend = "legend".asInstanceOf[legend]
@@ -751,6 +757,9 @@ object blueprintjsSelectStrings {
   sealed trait filter extends js.Object
   
   @js.native
+  sealed trait first extends js.Object
+  
+  @js.native
   sealed trait footer extends js.Object
   
   @js.native
@@ -821,6 +830,9 @@ object blueprintjsSelectStrings {
   
   @js.native
   sealed trait label extends js.Object
+  
+  @js.native
+  sealed trait last extends js.Object
   
   @js.native
   sealed trait legend extends js.Object

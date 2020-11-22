@@ -13,13 +13,7 @@ trait OptionsParameter
   extends Object
      with /* key */ StringDictionary[js.Any] {
   
-  var hierarchyRootSeparator: js.UndefOr[String] = js.native
-  
-  var hierarchySeparator: js.UndefOr[js.RegExp] = js.native
-  
-  var showRoots: js.UndefOr[Boolean] = js.native
-  
-  var storySort: js.UndefOr[js.Any] = js.native
+  var storySort: js.UndefOr[StorySortParameter] = js.native
   
   var theme: js.UndefOr[Base] = js.native
 }
@@ -51,25 +45,12 @@ object OptionsParameter {
     }
     
     @scala.inline
-    def setHierarchyRootSeparator(value: String): Self = this.set("hierarchyRootSeparator", value.asInstanceOf[js.Any])
+    def setStorySortFunction2(
+      value: (js.Tuple4[StoryId, js.Any, Parameters, Parameters], js.Tuple4[StoryId, js.Any, Parameters, Parameters]) => Boolean | Double
+    ): Self = this.set("storySort", js.Any.fromFunction2(value))
     
     @scala.inline
-    def deleteHierarchyRootSeparator: Self = this.set("hierarchyRootSeparator", js.undefined)
-    
-    @scala.inline
-    def setHierarchySeparator(value: js.RegExp): Self = this.set("hierarchySeparator", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHierarchySeparator: Self = this.set("hierarchySeparator", js.undefined)
-    
-    @scala.inline
-    def setShowRoots(value: Boolean): Self = this.set("showRoots", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteShowRoots: Self = this.set("showRoots", js.undefined)
-    
-    @scala.inline
-    def setStorySort(value: js.Any): Self = this.set("storySort", value.asInstanceOf[js.Any])
+    def setStorySort(value: StorySortParameter): Self = this.set("storySort", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStorySort: Self = this.set("storySort", js.undefined)

@@ -19,7 +19,7 @@ class ValidatorForm ()
 @js.native
 object ValidatorForm extends js.Object {
   
-  def addValidationRule(name: String, callback: js.Function1[/* value */ js.Any, Boolean]): Unit = js.native
+  def addValidationRule(name: String, callback: js.Function1[/* value */ js.Any, Boolean | js.Promise[Boolean]]): Unit = js.native
   
   def removeValidationRule(name: String): Unit = js.native
 }

@@ -14,7 +14,7 @@ class EnumValue_ () extends Message {
   def addOptions(value: Option): Option = js.native
   def addOptions(value: Option, index: Double): Option = js.native
   
-  def clearOptionsList(): Unit = js.native
+  def clearOptionsList(): EnumValue = js.native
   
   def getName(): String = js.native
   
@@ -22,9 +22,9 @@ class EnumValue_ () extends Message {
   
   def getOptionsList(): js.Array[Option] = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): EnumValue = js.native
   
-  def setNumber(value: Double): Unit = js.native
+  def setNumber(value: Double): EnumValue = js.native
   
-  def setOptionsList(value: js.Array[Option]): Unit = js.native
+  def setOptionsList(value: js.Array[Option]): EnumValue = js.native
 }

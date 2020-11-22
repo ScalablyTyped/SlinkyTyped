@@ -2,8 +2,7 @@ package typingsSlinky.reactNativeCalendars.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.reactNativeCalendars.mod.CalendarBaseProps
-import typingsSlinky.reactNativeCalendars.mod.CalendarMarkingProps
+import typingsSlinky.reactNativeCalendars.mod.CalendarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,7 +14,7 @@ object Calendar {
   @js.native
   object component extends js.Object
   
-  def apply(p: CalendarMarkingProps with CalendarBaseProps): Default[tag.type, typingsSlinky.reactNativeCalendars.mod.Calendar] = new Default[tag.type, typingsSlinky.reactNativeCalendars.mod.Calendar](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def apply(p: CalendarProps): Default[tag.type, typingsSlinky.reactNativeCalendars.mod.Calendar] = new Default[tag.type, typingsSlinky.reactNativeCalendars.mod.Calendar](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: Calendar.type): Default[tag.type, typingsSlinky.reactNativeCalendars.mod.Calendar] = new Default[tag.type, typingsSlinky.reactNativeCalendars.mod.Calendar](js.Array(this.component, js.Dictionary.empty))()
 }

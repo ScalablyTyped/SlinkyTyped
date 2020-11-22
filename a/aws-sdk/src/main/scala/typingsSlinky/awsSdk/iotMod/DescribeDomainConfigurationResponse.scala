@@ -38,6 +38,11 @@ trait DescribeDomainConfigurationResponse extends js.Object {
   var domainType: js.UndefOr[DomainType] = js.native
   
   /**
+    * The date and time the domain configuration's status was last changed.
+    */
+  var lastStatusChangeDate: js.UndefOr[js.Date] = js.native
+  
+  /**
     * A list containing summary information about the server certificate included in the domain configuration.
     */
   var serverCertificates: js.UndefOr[ServerCertificates] = js.native
@@ -105,6 +110,12 @@ object DescribeDomainConfigurationResponse {
     
     @scala.inline
     def deleteDomainType: Self = this.set("domainType", js.undefined)
+    
+    @scala.inline
+    def setLastStatusChangeDate(value: js.Date): Self = this.set("lastStatusChangeDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLastStatusChangeDate: Self = this.set("lastStatusChangeDate", js.undefined)
     
     @scala.inline
     def setServerCertificatesVarargs(value: ServerCertificateSummary*): Self = this.set("serverCertificates", js.Array(value :_*))

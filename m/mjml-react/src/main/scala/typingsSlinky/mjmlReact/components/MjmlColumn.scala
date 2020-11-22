@@ -2,8 +2,8 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.VerticalAlign
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.VerticalAlignProperty
 import typingsSlinky.mjmlReact.mod.BorderProps
 import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.MjmlColumnProps
@@ -25,7 +25,7 @@ object MjmlColumn {
        with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlColumn] {
     
     @scala.inline
-    def backgroundColor(value: BackgroundColor): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    def backgroundColor(value: BackgroundColorProperty): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def border(value: String): this.type = set("border", value.asInstanceOf[js.Any])
@@ -64,7 +64,7 @@ object MjmlColumn {
     def paddingTop(value: String | Double): this.type = set("paddingTop", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def verticalAlign(value: VerticalAlign[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
+    def verticalAlign(value: VerticalAlignProperty[String | Double]): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
     
     @scala.inline
     def width(value: String | Double): this.type = set("width", value.asInstanceOf[js.Any])

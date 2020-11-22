@@ -9,12 +9,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class UpdateItemModifierListsResponse () extends js.Object {
   
   /**
-    * Information on any errors encountered.
+    * Any errors that occurred during the request.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   
   /**
-    * The database [timestamp](#workingwithdates) of this update in RFC 3339 format, e.g., "2016-09-04T23:59:33.123Z".
+    * The database [timestamp](https://developer.squareup.com/docs/build-basics/working-with-date) of this
+    * update in RFC 3339 format, e.g., `2016-09-04T23:59:33.123Z`.
     */
   var updated_at: js.UndefOr[String] = js.native
 }

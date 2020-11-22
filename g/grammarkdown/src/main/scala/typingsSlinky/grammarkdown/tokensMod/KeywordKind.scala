@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.ButKeyword
+  - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.DefaultKeyword
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.DefineKeyword
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.EmptyKeyword
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.FalseKeyword
@@ -13,6 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.HereKeyword
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.ImportKeyword
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.LexicalKeyword
+  - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.LineKeyword
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.LookaheadKeyword
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.NoKeyword
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.NotKeyword

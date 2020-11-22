@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts.EChartOption.Tooltip
 
-import typingsSlinky.echarts.anon.Opacity
+import typingsSlinky.echarts.anon.ColorOpacity
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.PointerLabel
 import typingsSlinky.echarts.echarts.EChartOption.LineStyle
 import typingsSlinky.echarts.echartsStrings.angle
@@ -44,7 +44,7 @@ trait AxisPointer extends js.Object {
   
   var lineStyle: js.UndefOr[LineStyle] = js.native
   
-  var shadowStyle: js.UndefOr[Opacity] = js.native
+  var shadowStyle: js.UndefOr[ColorOpacity] = js.native
   
   var show: js.UndefOr[Boolean] = js.native
   
@@ -150,7 +150,7 @@ object AxisPointer {
     def deleteLineStyle: Self = this.set("lineStyle", js.undefined)
     
     @scala.inline
-    def setShadowStyle(value: Opacity): Self = this.set("shadowStyle", value.asInstanceOf[js.Any])
+    def setShadowStyle(value: ColorOpacity): Self = this.set("shadowStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShadowStyle: Self = this.set("shadowStyle", js.undefined)

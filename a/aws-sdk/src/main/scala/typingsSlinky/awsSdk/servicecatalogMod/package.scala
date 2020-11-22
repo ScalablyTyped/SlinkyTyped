@@ -165,9 +165,13 @@ package object servicecatalogMod {
   
   type OutputKey = java.lang.String
   
+  type OutputKeys = js.Array[typingsSlinky.awsSdk.servicecatalogMod.OutputKey]
+  
   type OutputValue = java.lang.String
   
   type PageSize = scala.Double
+  
+  type PageSizeMax100 = scala.Double
   
   type PageToken = java.lang.String
   
@@ -257,7 +261,12 @@ package object servicecatalogMod {
   
   type ProductViewSummaries = js.Array[typingsSlinky.awsSdk.servicecatalogMod.ProductViewSummary]
   
-  type PropertyKey = typingsSlinky.awsSdk.awsSdkStrings.OWNER | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.OWNER
+    - typingsSlinky.awsSdk.awsSdkStrings.LAUNCH_ROLE
+    - java.lang.String
+  */
+  type PropertyKey = typingsSlinky.awsSdk.servicecatalogMod._PropertyKey | java.lang.String
   
   type PropertyName = java.lang.String
   
@@ -439,6 +448,10 @@ package object servicecatalogMod {
   type ResourceId = java.lang.String
   
   type ResourceType = java.lang.String
+  
+  type RetainPhysicalResources = scala.Boolean
+  
+  type RoleArn = java.lang.String
   
   type Scope = js.Array[typingsSlinky.awsSdk.servicecatalogMod.ResourceAttribute]
   

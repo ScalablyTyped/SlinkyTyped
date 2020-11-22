@@ -16,10 +16,22 @@ object braintreeWebDropInStrings {
   def CreditCard: CreditCard = "CreditCard".asInstanceOf[CreditCard]
   
   @scala.inline
+  def No: No = "No".asInstanceOf[No]
+  
+  @scala.inline
   def PayPalAccount: PayPalAccount = "PayPalAccount".asInstanceOf[PayPalAccount]
   
   @scala.inline
+  def Unknown: Unknown = "Unknown".asInstanceOf[Unknown]
+  
+  @scala.inline
   def VenmoAccount: VenmoAccount = "VenmoAccount".asInstanceOf[VenmoAccount]
+  
+  @scala.inline
+  def Yes: Yes = "Yes".asInstanceOf[Yes]
+  
+  @scala.inline
+  def black: black = "black".asInstanceOf[black]
   
   @scala.inline
   def card: card = "card".asInstanceOf[card]
@@ -45,6 +57,12 @@ object braintreeWebDropInStrings {
   @scala.inline
   def vault: vault = "vault".asInstanceOf[vault]
   
+  @scala.inline
+  def white: white = "white".asInstanceOf[white]
+  
+  @scala.inline
+  def `white-outline`: `white-outline` = "white-outline".asInstanceOf[`white-outline`]
+  
   @js.native
   sealed trait AndroidPayCard extends js.Object
   
@@ -55,10 +73,22 @@ object braintreeWebDropInStrings {
   sealed trait CreditCard extends js.Object
   
   @js.native
+  sealed trait No extends js.Object
+  
+  @js.native
   sealed trait PayPalAccount extends js.Object
   
   @js.native
+  sealed trait Unknown extends js.Object
+  
+  @js.native
   sealed trait VenmoAccount extends js.Object
+  
+  @js.native
+  sealed trait Yes extends js.Object
+  
+  @js.native
+  sealed trait black extends js.Object
   
   @js.native
   sealed trait card extends js.Object
@@ -83,4 +113,10 @@ object braintreeWebDropInStrings {
   
   @js.native
   sealed trait vault extends js.Object
+  
+  @js.native
+  sealed trait white extends js.Object
+  
+  @js.native
+  sealed trait `white-outline` extends js.Object
 }

@@ -6,8 +6,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("three/src/geometries/Geometries", "CircleBufferGeometry")
 @js.native
+/**
+	 * @param [radius=1]
+	 * @param [segments=8]
+	 * @param [thetaStart=0]
+	 * @param [thetaLength=Math.PI * 2]
+	 */
 class CircleBufferGeometry ()
-  extends typingsSlinky.three.circleGeometryMod.CircleBufferGeometry {
+  extends typingsSlinky.three.circleBufferGeometryMod.CircleBufferGeometry {
   def this(radius: Double) = this()
   def this(radius: js.UndefOr[scala.Nothing], segments: Double) = this()
   def this(radius: Double, segments: Double) = this()

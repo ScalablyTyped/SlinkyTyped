@@ -8,6 +8,9 @@ import typingsSlinky.tizenCommonWeb.downloadMod.DownloadRequestConstructor
 import typingsSlinky.tizenCommonWeb.filesystemMod.FilesystemManager
 import typingsSlinky.tizenCommonWeb.packageMod.PackageManager
 import typingsSlinky.tizenCommonWeb.systeminfoMod.SystemInfoManager
+import typingsSlinky.tizenCommonWeb.timeMod.TZDateConstructor
+import typingsSlinky.tizenCommonWeb.timeMod.TimeDurationConstructor
+import typingsSlinky.tizenCommonWeb.timeMod.TimeUtil
 import typingsSlinky.tizenCommonWeb.tizenMod.AttributeFilterConstructor
 import typingsSlinky.tizenCommonWeb.tizenMod.AttributeRangeFilterConstructor
 import typingsSlinky.tizenCommonWeb.tizenMod.BundleConstructor
@@ -45,6 +48,10 @@ trait Tizen extends js.Object {
   
   var SortMode: SortModeConstructor = js.native
   
+  var TZDate: TZDateConstructor = js.native
+  
+  var TimeDuration: TimeDurationConstructor = js.native
+  
   @JSName("package")
   var _package: PackageManager = js.native
   
@@ -55,6 +62,8 @@ trait Tizen extends js.Object {
   var filesystem: FilesystemManager = js.native
   
   var systeminfo: SystemInfoManager = js.native
+  
+  var time: TimeUtil = js.native
   
   var tvaudiocontrol: TVAudioControlManager = js.native
   
@@ -81,11 +90,14 @@ object Tizen {
     DownloadRequest: DownloadRequestConstructor,
     SimpleCoordinates: SimpleCoordinatesConstructor,
     SortMode: SortModeConstructor,
+    TZDate: TZDateConstructor,
+    TimeDuration: TimeDurationConstructor,
     _package: PackageManager,
     application: ApplicationManager,
     download: DownloadManager,
     filesystem: FilesystemManager,
     systeminfo: SystemInfoManager,
+    time: TimeUtil,
     tvaudiocontrol: TVAudioControlManager,
     tvdisplaycontrol: TVDisplayControlManager,
     tvinfo: TVInfoManager,
@@ -93,7 +105,7 @@ object Tizen {
     tvwindow: TVWindowManager,
     websetting: WebSettingManager
   ): Tizen = {
-    val __obj = js.Dynamic.literal(ApplicationControl = ApplicationControl.asInstanceOf[js.Any], ApplicationControlData = ApplicationControlData.asInstanceOf[js.Any], AttributeFilter = AttributeFilter.asInstanceOf[js.Any], AttributeRangeFilter = AttributeRangeFilter.asInstanceOf[js.Any], Bundle = Bundle.asInstanceOf[js.Any], CompositeFilter = CompositeFilter.asInstanceOf[js.Any], DownloadRequest = DownloadRequest.asInstanceOf[js.Any], SimpleCoordinates = SimpleCoordinates.asInstanceOf[js.Any], SortMode = SortMode.asInstanceOf[js.Any], application = application.asInstanceOf[js.Any], download = download.asInstanceOf[js.Any], filesystem = filesystem.asInstanceOf[js.Any], systeminfo = systeminfo.asInstanceOf[js.Any], tvaudiocontrol = tvaudiocontrol.asInstanceOf[js.Any], tvdisplaycontrol = tvdisplaycontrol.asInstanceOf[js.Any], tvinfo = tvinfo.asInstanceOf[js.Any], tvinputdevice = tvinputdevice.asInstanceOf[js.Any], tvwindow = tvwindow.asInstanceOf[js.Any], websetting = websetting.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(ApplicationControl = ApplicationControl.asInstanceOf[js.Any], ApplicationControlData = ApplicationControlData.asInstanceOf[js.Any], AttributeFilter = AttributeFilter.asInstanceOf[js.Any], AttributeRangeFilter = AttributeRangeFilter.asInstanceOf[js.Any], Bundle = Bundle.asInstanceOf[js.Any], CompositeFilter = CompositeFilter.asInstanceOf[js.Any], DownloadRequest = DownloadRequest.asInstanceOf[js.Any], SimpleCoordinates = SimpleCoordinates.asInstanceOf[js.Any], SortMode = SortMode.asInstanceOf[js.Any], TZDate = TZDate.asInstanceOf[js.Any], TimeDuration = TimeDuration.asInstanceOf[js.Any], application = application.asInstanceOf[js.Any], download = download.asInstanceOf[js.Any], filesystem = filesystem.asInstanceOf[js.Any], systeminfo = systeminfo.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any], tvaudiocontrol = tvaudiocontrol.asInstanceOf[js.Any], tvdisplaycontrol = tvdisplaycontrol.asInstanceOf[js.Any], tvinfo = tvinfo.asInstanceOf[js.Any], tvinputdevice = tvinputdevice.asInstanceOf[js.Any], tvwindow = tvwindow.asInstanceOf[js.Any], websetting = websetting.asInstanceOf[js.Any])
     __obj.updateDynamic("package")(_package.asInstanceOf[js.Any])
     __obj.asInstanceOf[Tizen]
   }
@@ -141,6 +153,12 @@ object Tizen {
     def setSortMode(value: SortModeConstructor): Self = this.set("SortMode", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setTZDate(value: TZDateConstructor): Self = this.set("TZDate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTimeDuration(value: TimeDurationConstructor): Self = this.set("TimeDuration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def set_package(value: PackageManager): Self = this.set("package", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -154,6 +172,9 @@ object Tizen {
     
     @scala.inline
     def setSysteminfo(value: SystemInfoManager): Self = this.set("systeminfo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTime(value: TimeUtil): Self = this.set("time", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTvaudiocontrol(value: TVAudioControlManager): Self = this.set("tvaudiocontrol", value.asInstanceOf[js.Any])

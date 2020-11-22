@@ -1,7 +1,6 @@
 package typingsSlinky.nextReactDevOverlay
 
-import slinky.core.facade.ReactElement
-import typingsSlinky.nextReactDevOverlay.anon.Children
+import slinky.core.ReactComponentClass
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def ReactDevOverlay(hasChildren: Children): ReactElement = js.native
+  val ReactDevOverlay: ReactComponentClass[js.Object] = js.native
   
   def getNodeError(error: js.Error): js.Error = js.native
   

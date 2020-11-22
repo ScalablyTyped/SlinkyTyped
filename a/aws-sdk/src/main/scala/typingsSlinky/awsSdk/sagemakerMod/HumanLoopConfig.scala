@@ -15,7 +15,7 @@ trait HumanLoopConfig extends js.Object {
   var PublicWorkforceTaskPrice: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.PublicWorkforceTaskPrice] = js.native
   
   /**
-    * The length of time that a task remains available for labeling by human workers.
+    * The length of time that a task remains available for review by human workers.
     */
   var TaskAvailabilityLifetimeInSeconds: js.UndefOr[FlowDefinitionTaskAvailabilityLifetimeInSeconds] = js.native
   
@@ -35,7 +35,7 @@ trait HumanLoopConfig extends js.Object {
   var TaskKeywords: js.UndefOr[FlowDefinitionTaskKeywords] = js.native
   
   /**
-    * The amount of time that a worker has to complete a task.
+    * The amount of time that a worker has to complete a task. The default value is 3,600 seconds (1 hour)
     */
   var TaskTimeLimitInSeconds: js.UndefOr[FlowDefinitionTaskTimeLimitInSeconds] = js.native
   

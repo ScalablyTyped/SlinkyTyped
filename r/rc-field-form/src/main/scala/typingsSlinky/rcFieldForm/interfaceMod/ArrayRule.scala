@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined parent std.Omit<rc-field-form.rc-field-form/es/interface.BaseRule, 'type'> */
+/* Inlined parent std.Omit<rc-field-form.rc-field-form/es/interface.AggregationRule, 'type'> */
 @js.native
 trait ArrayRule extends RuleObject {
   
@@ -134,7 +134,7 @@ object ArrayRule {
     
     @scala.inline
     def setValidator(
-      value: (/* rule */ RuleObject, /* value */ StoreValue, /* callback */ js.Function1[/* error */ js.UndefOr[String], Unit]) => js.Promise[Unit] | Unit
+      value: (/* rule */ RuleObject, /* value */ StoreValue, /* callback */ js.Function1[/* error */ js.UndefOr[String], Unit]) => (js.Promise[Unit | js.Any]) | Unit
     ): Self = this.set("validator", js.Any.fromFunction3(value))
     
     @scala.inline

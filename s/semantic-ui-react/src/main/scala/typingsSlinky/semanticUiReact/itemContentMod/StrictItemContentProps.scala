@@ -2,7 +2,6 @@ package typingsSlinky.semanticUiReact.itemContentMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
@@ -102,7 +101,7 @@ object StrictItemContentProps {
     
     @scala.inline
     def setDescriptionFunction3(
-      value: (/* component */ ReactType[ItemDescriptionProps], ItemDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ItemDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("description", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -116,7 +115,7 @@ object StrictItemContentProps {
     
     @scala.inline
     def setExtraFunction3(
-      value: (/* component */ ReactType[ItemExtraProps], ItemExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ItemExtraProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("extra", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -130,7 +129,7 @@ object StrictItemContentProps {
     
     @scala.inline
     def setHeaderFunction3(
-      value: (/* component */ ReactType[ItemHeaderProps], ItemHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ItemHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("header", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -144,7 +143,7 @@ object StrictItemContentProps {
     
     @scala.inline
     def setMetaFunction3(
-      value: (/* component */ ReactType[ItemMetaProps], ItemMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ItemMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("meta", js.Any.fromFunction3(value))
     
     @scala.inline

@@ -1,6 +1,5 @@
 package typingsSlinky.storybookApi.shortcutsMod
 
-import typingsSlinky.storybookApi.mod.API
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,9 +9,9 @@ trait SubAPI extends js.Object {
   
   def getShortcutKeys(): Shortcuts = js.native
   
-  def handleKeydownEvent(api: API, event: Event): Unit = js.native
+  def handleKeydownEvent(event: Event): Unit = js.native
   
-  def handleShortcutFeature(api: API, feature: Action): Unit = js.native
+  def handleShortcutFeature(feature: Action): Unit = js.native
   
   def restoreAllDefaultShortcuts(): js.Promise[Shortcuts] = js.native
   
@@ -27,14 +26,14 @@ object SubAPI {
   @scala.inline
   def apply(
     getShortcutKeys: () => Shortcuts,
-    handleKeydownEvent: (API, Event) => Unit,
-    handleShortcutFeature: (API, Action) => Unit,
+    handleKeydownEvent: Event => Unit,
+    handleShortcutFeature: Action => Unit,
     restoreAllDefaultShortcuts: () => js.Promise[Shortcuts],
     restoreDefaultShortcut: Action => js.Promise[KeyCollection],
     setShortcut: (Action, KeyCollection) => js.Promise[KeyCollection],
     setShortcuts: Shortcuts => js.Promise[Shortcuts]
   ): SubAPI = {
-    val __obj = js.Dynamic.literal(getShortcutKeys = js.Any.fromFunction0(getShortcutKeys), handleKeydownEvent = js.Any.fromFunction2(handleKeydownEvent), handleShortcutFeature = js.Any.fromFunction2(handleShortcutFeature), restoreAllDefaultShortcuts = js.Any.fromFunction0(restoreAllDefaultShortcuts), restoreDefaultShortcut = js.Any.fromFunction1(restoreDefaultShortcut), setShortcut = js.Any.fromFunction2(setShortcut), setShortcuts = js.Any.fromFunction1(setShortcuts))
+    val __obj = js.Dynamic.literal(getShortcutKeys = js.Any.fromFunction0(getShortcutKeys), handleKeydownEvent = js.Any.fromFunction1(handleKeydownEvent), handleShortcutFeature = js.Any.fromFunction1(handleShortcutFeature), restoreAllDefaultShortcuts = js.Any.fromFunction0(restoreAllDefaultShortcuts), restoreDefaultShortcut = js.Any.fromFunction1(restoreDefaultShortcut), setShortcut = js.Any.fromFunction2(setShortcut), setShortcuts = js.Any.fromFunction1(setShortcuts))
     __obj.asInstanceOf[SubAPI]
   }
   
@@ -57,10 +56,10 @@ object SubAPI {
     def setGetShortcutKeys(value: () => Shortcuts): Self = this.set("getShortcutKeys", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setHandleKeydownEvent(value: (API, Event) => Unit): Self = this.set("handleKeydownEvent", js.Any.fromFunction2(value))
+    def setHandleKeydownEvent(value: Event => Unit): Self = this.set("handleKeydownEvent", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setHandleShortcutFeature(value: (API, Action) => Unit): Self = this.set("handleShortcutFeature", js.Any.fromFunction2(value))
+    def setHandleShortcutFeature(value: Action => Unit): Self = this.set("handleShortcutFeature", js.Any.fromFunction1(value))
     
     @scala.inline
     def setRestoreAllDefaultShortcuts(value: () => js.Promise[Shortcuts]): Self = this.set("restoreAllDefaultShortcuts", js.Any.fromFunction0(value))

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListMultipartUploadsOutput extends js.Object {
   
   /**
-    * Name of the bucket to which the multipart upload was initiated.
+    * The name of the bucket to which the multipart upload was initiated.
     */
   var Bucket: js.UndefOr[BucketName] = js.native
   

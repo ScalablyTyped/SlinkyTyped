@@ -1,7 +1,7 @@
 package typingsSlinky.pulumiAws.mod.s3
 
-import typingsSlinky.pulumiAws.bucketPolicyMod.BucketPolicyArgs
-import typingsSlinky.pulumiAws.bucketPolicyMod.BucketPolicyState
+import typingsSlinky.pulumiAws.s3BucketPolicyMod.BucketPolicyArgs
+import typingsSlinky.pulumiAws.s3BucketPolicyMod.BucketPolicyState
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -37,10 +37,10 @@ object BucketPolicy extends js.Object {
     * @param state Any extra arguments used during the lookup.
     * @param opts Optional settings to control the behavior of the CustomResource.
     */
-  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.bucketPolicyMod.BucketPolicy = js.native
-  def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.bucketPolicyMod.BucketPolicy = js.native
-  def get(name: String, id: Input[ID], state: BucketPolicyState): typingsSlinky.pulumiAws.bucketPolicyMod.BucketPolicy = js.native
-  def get(name: String, id: Input[ID], state: BucketPolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.bucketPolicyMod.BucketPolicy = js.native
+  def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.s3BucketPolicyMod.BucketPolicy = js.native
+  def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.s3BucketPolicyMod.BucketPolicy = js.native
+  def get(name: String, id: Input[ID], state: BucketPolicyState): typingsSlinky.pulumiAws.s3BucketPolicyMod.BucketPolicy = js.native
+  def get(name: String, id: Input[ID], state: BucketPolicyState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.s3BucketPolicyMod.BucketPolicy = js.native
   
   /**
     * Returns true if the given object is an instance of BucketPolicy.  This is designed to work even

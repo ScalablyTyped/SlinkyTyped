@@ -1,11 +1,11 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
 import typingsSlinky.echarts.anon.AnimationAnimationDelay
-import typingsSlinky.echarts.anon.AnimationDelayAnimationDelayUpdate
-import typingsSlinky.echarts.anon.AnimationDelayUpdateAnimationDuration
 import typingsSlinky.echarts.anon.AreaColorEmphasis
 import typingsSlinky.echarts.anon.BorderWidth
 import typingsSlinky.echarts.anon.Min
+import typingsSlinky.echarts.anon.Precision
+import typingsSlinky.echarts.anon.Silent
 import typingsSlinky.echarts.echarts.EChartOption.SeriesMap.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -320,7 +320,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.markArea
     */
-  var markArea: js.UndefOr[AnimationDelayUpdateAnimationDuration] = js.native
+  var markArea: js.UndefOr[AnimationAnimationDelay] = js.native
   
   /**
     * Use a line in the chart to illustrate.
@@ -328,7 +328,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.markLine
     */
-  var markLine: js.UndefOr[AnimationDelayAnimationDelayUpdate] = js.native
+  var markLine: js.UndefOr[Precision] = js.native
   
   /**
     * Mark point in a chart.
@@ -336,7 +336,7 @@ trait SeriesMap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.markPoint
     */
-  var markPoint: js.UndefOr[AnimationAnimationDelay] = js.native
+  var markPoint: js.UndefOr[Silent] = js.native
   
   /**
     * Series name used for displaying in
@@ -658,19 +658,19 @@ object SeriesMap_ {
     def deleteMapValueCalculation: Self = this.set("mapValueCalculation", js.undefined)
     
     @scala.inline
-    def setMarkArea(value: AnimationDelayUpdateAnimationDuration): Self = this.set("markArea", value.asInstanceOf[js.Any])
+    def setMarkArea(value: AnimationAnimationDelay): Self = this.set("markArea", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMarkArea: Self = this.set("markArea", js.undefined)
     
     @scala.inline
-    def setMarkLine(value: AnimationDelayAnimationDelayUpdate): Self = this.set("markLine", value.asInstanceOf[js.Any])
+    def setMarkLine(value: Precision): Self = this.set("markLine", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMarkLine: Self = this.set("markLine", js.undefined)
     
     @scala.inline
-    def setMarkPoint(value: AnimationAnimationDelay): Self = this.set("markPoint", value.asInstanceOf[js.Any])
+    def setMarkPoint(value: Silent): Self = this.set("markPoint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMarkPoint: Self = this.set("markPoint", js.undefined)

@@ -6,9 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/**
-  * COmmon part of the Attachment object.
-  */
 @js.native
 trait AttachmentCommon extends js.Object {
   

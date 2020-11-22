@@ -54,6 +54,7 @@ trait Skeleton extends js.Object {
   
   var scaleY: Double = js.native
   
+  def setAttachment(slotName: String): Unit = js.native
   def setAttachment(slotName: String, attachmentName: String): Unit = js.native
   
   def setBonesToSetupPose(): Unit = js.native

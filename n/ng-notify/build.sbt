@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "ng-notify"
-version := "0.7.1-dt-20200515Z-b3ec68"
+version := "0.7.1-dt-20201002Z-b3ec68"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -9,7 +9,7 @@ trait BackgroundProps extends js.Object {
   
   val background: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundProperty<string> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Background<string> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BackgroundProps {
     }
     
     @scala.inline
+    def setBackgroundVarargs(value: js.Any*): Self = this.set("background", js.Array(value :_*))
+    
+    @scala.inline
     def setBackground(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundProperty<string> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Background<string> */ _
         ]
     ): Self = this.set("background", value.asInstanceOf[js.Any])
     

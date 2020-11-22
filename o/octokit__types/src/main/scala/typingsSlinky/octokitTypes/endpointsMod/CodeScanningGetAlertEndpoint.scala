@@ -7,7 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CodeScanningGetAlertEndpoint extends js.Object {
   
-  var alert_id: Double = js.native
+  /**
+    * The code scanning alert number.
+    */
+  var alert_number: js.UndefOr[Double] = js.native
   
   var owner: String = js.native
   
@@ -16,8 +19,8 @@ trait CodeScanningGetAlertEndpoint extends js.Object {
 object CodeScanningGetAlertEndpoint {
   
   @scala.inline
-  def apply(alert_id: Double, owner: String, repo: String): CodeScanningGetAlertEndpoint = {
-    val __obj = js.Dynamic.literal(alert_id = alert_id.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
+  def apply(owner: String, repo: String): CodeScanningGetAlertEndpoint = {
+    val __obj = js.Dynamic.literal(owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[CodeScanningGetAlertEndpoint]
   }
   
@@ -37,12 +40,15 @@ object CodeScanningGetAlertEndpoint {
     }
     
     @scala.inline
-    def setAlert_id(value: Double): Self = this.set("alert_id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRepo(value: String): Self = this.set("repo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAlert_number(value: Double): Self = this.set("alert_number", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAlert_number: Self = this.set("alert_number", js.undefined)
   }
 }

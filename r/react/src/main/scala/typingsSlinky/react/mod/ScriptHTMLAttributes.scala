@@ -9,6 +9,7 @@ trait ScriptHTMLAttributes[T] extends HTMLAttributes[T] {
   
   var async: js.UndefOr[Boolean] = js.native
   
+  /** @deprecated */
   var charSet: js.UndefOr[String] = js.native
   
   var crossOrigin: js.UndefOr[String] = js.native
@@ -20,6 +21,8 @@ trait ScriptHTMLAttributes[T] extends HTMLAttributes[T] {
   var noModule: js.UndefOr[Boolean] = js.native
   
   var nonce: js.UndefOr[String] = js.native
+  
+  var referrerPolicy: js.UndefOr[HTMLAttributeReferrerPolicy] = js.native
   
   var src: js.UndefOr[String] = js.native
   
@@ -89,6 +92,12 @@ object ScriptHTMLAttributes {
     
     @scala.inline
     def deleteNonce: Self = this.set("nonce", js.undefined)
+    
+    @scala.inline
+    def setReferrerPolicy(value: HTMLAttributeReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)
     
     @scala.inline
     def setSrc(value: String): Self = this.set("src", value.asInstanceOf[js.Any])

@@ -8,5 +8,7 @@ package object mod {
   
   type BoxAnnotation = typingsSlinky.chartjsPluginAnnotation.mod.AnnotationElement
   
+  type ChartPointValue = scala.Double | java.lang.String | js.Date | typingsSlinky.moment.mod.Moment
+  
   type LineAnnotation = typingsSlinky.chartjsPluginAnnotation.mod.AnnotationElement
 }

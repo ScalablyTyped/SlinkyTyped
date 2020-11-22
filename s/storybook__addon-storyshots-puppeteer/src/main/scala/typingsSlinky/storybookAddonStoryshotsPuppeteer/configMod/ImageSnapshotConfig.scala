@@ -1,9 +1,11 @@
 package typingsSlinky.storybookAddonStoryshotsPuppeteer.configMod
 
+import org.scalajs.dom.raw.Element
 import typingsSlinky.jestImageSnapshot.mod.MatchImageSnapshotOptions
 import typingsSlinky.puppeteer.mod.Base64ScreenShotOptions
 import typingsSlinky.puppeteer.mod.Browser
 import typingsSlinky.puppeteer.mod.DirectNavigationOptions
+import typingsSlinky.puppeteer.mod.ElementHandle
 import typingsSlinky.puppeteer.mod.Page
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,9 +14,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ImageSnapshotConfig extends CommonConfig {
   
-  def afterScreenshot(options: typingsSlinky.storybookAddonStoryshotsPuppeteer.anon.Context): Unit = js.native
+  def afterScreenshot(options: typingsSlinky.storybookAddonStoryshotsPuppeteer.anon.Context): js.Promise[Unit] = js.native
   
-  def beforeScreenshot(page: Page, options: Options): Unit = js.native
+  def beforeScreenshot(page: Page, options: Options): js.Promise[Unit | ElementHandle[Element]] = js.native
   
   def getMatchOptions(options: Options): MatchImageSnapshotOptions = js.native
   
@@ -24,8 +26,8 @@ object ImageSnapshotConfig {
   
   @scala.inline
   def apply(
-    afterScreenshot: typingsSlinky.storybookAddonStoryshotsPuppeteer.anon.Context => Unit,
-    beforeScreenshot: (Page, Options) => Unit,
+    afterScreenshot: typingsSlinky.storybookAddonStoryshotsPuppeteer.anon.Context => js.Promise[Unit],
+    beforeScreenshot: (Page, Options) => js.Promise[Unit | ElementHandle[Element]],
     chromeExecutablePath: String,
     customizePage: Page => js.Promise[Unit],
     getCustomBrowser: () => js.Promise[Browser],
@@ -56,10 +58,10 @@ object ImageSnapshotConfig {
     }
     
     @scala.inline
-    def setAfterScreenshot(value: typingsSlinky.storybookAddonStoryshotsPuppeteer.anon.Context => Unit): Self = this.set("afterScreenshot", js.Any.fromFunction1(value))
+    def setAfterScreenshot(value: typingsSlinky.storybookAddonStoryshotsPuppeteer.anon.Context => js.Promise[Unit]): Self = this.set("afterScreenshot", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setBeforeScreenshot(value: (Page, Options) => Unit): Self = this.set("beforeScreenshot", js.Any.fromFunction2(value))
+    def setBeforeScreenshot(value: (Page, Options) => js.Promise[Unit | ElementHandle[Element]]): Self = this.set("beforeScreenshot", js.Any.fromFunction2(value))
     
     @scala.inline
     def setGetMatchOptions(value: Options => MatchImageSnapshotOptions): Self = this.set("getMatchOptions", js.Any.fromFunction1(value))

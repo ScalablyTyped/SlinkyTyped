@@ -30,6 +30,8 @@ trait OfferRecord
   var seller: String = js.native
   
   var selling: OfferAsset = js.native
+  
+  var sponsor: js.UndefOr[String] = js.native
 }
 object OfferRecord {
   
@@ -97,5 +99,11 @@ object OfferRecord {
     
     @scala.inline
     def setSelling(value: OfferAsset): Self = this.set("selling", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSponsor(value: String): Self = this.set("sponsor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSponsor: Self = this.set("sponsor", js.undefined)
   }
 }

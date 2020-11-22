@@ -14,8 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Represents a worksheet-level custom property.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait WorksheetCustomProperty extends ClientObject {
@@ -27,8 +26,7 @@ trait WorksheetCustomProperty extends ClientObject {
   /**
     * Deletes the custom property.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   def delete(): Unit = js.native
   
@@ -36,8 +34,7 @@ trait WorksheetCustomProperty extends ClientObject {
     *
     * Gets the key of the custom property. Custom property keys are case-insensitive. The key is limited to 255 characters (larger values will cause an "InvalidArgument" error to be thrown.)
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val key: String = js.native
   
@@ -78,8 +75,7 @@ trait WorksheetCustomProperty extends ClientObject {
     *
     * Gets or sets the value of the custom property.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var value: String = js.native
 }

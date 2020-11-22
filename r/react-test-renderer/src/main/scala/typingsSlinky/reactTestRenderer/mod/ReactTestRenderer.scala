@@ -12,7 +12,7 @@ trait ReactTestRenderer extends js.Object {
   
   var root: ReactTestInstance = js.native
   
-  def toJSON(): Null | ReactTestRendererJSON = js.native
+  def toJSON(): Null | ReactTestRendererJSON | js.Array[ReactTestRendererJSON] = js.native
   
   def toTree(): Null | ReactTestRendererTree = js.native
   

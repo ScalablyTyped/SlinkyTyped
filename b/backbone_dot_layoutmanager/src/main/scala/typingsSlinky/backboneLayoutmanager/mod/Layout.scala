@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("backbone", "Layout")
 @js.native
-class Layout[TModel /* <: Model[_, ModelSetOptions] */] () extends View[TModel] {
+class Layout[TModel /* <: Model[_, ModelSetOptions, js.Object] */] () extends View[TModel] {
   def this(options: LayoutOptions[TModel]) = this()
   
   def afterRender(): Unit = js.native
@@ -69,5 +69,5 @@ object Layout extends js.Object {
   def configure(options: LayoutManagerOptions): Unit = js.native
   
   def setupView(views: js.Any): Unit = js.native
-  def setupView(views: js.Any, options: LayoutOptions[Model[_, ModelSetOptions]]): Unit = js.native
+  def setupView(views: js.Any, options: LayoutOptions[Model[_, ModelSetOptions, js.Object]]): Unit = js.native
 }

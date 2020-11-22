@@ -14,6 +14,11 @@ trait TimeSeriesServiceStatistics extends js.Object {
     */
   var ResponseTimeHistogram: js.UndefOr[Histogram] = js.native
   
+  /**
+    * The forecasted high and low fault count values.
+    */
+  var ServiceForecastStatistics: js.UndefOr[ForecastStatistics] = js.native
+  
   var ServiceSummaryStatistics: js.UndefOr[ServiceStatistics] = js.native
   
   /**
@@ -58,6 +63,12 @@ object TimeSeriesServiceStatistics {
     
     @scala.inline
     def deleteResponseTimeHistogram: Self = this.set("ResponseTimeHistogram", js.undefined)
+    
+    @scala.inline
+    def setServiceForecastStatistics(value: ForecastStatistics): Self = this.set("ServiceForecastStatistics", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteServiceForecastStatistics: Self = this.set("ServiceForecastStatistics", js.undefined)
     
     @scala.inline
     def setServiceSummaryStatistics(value: ServiceStatistics): Self = this.set("ServiceSummaryStatistics", value.asInstanceOf[js.Any])

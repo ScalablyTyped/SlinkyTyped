@@ -80,6 +80,13 @@ package object iotsitewiseMod {
   
   type AssociatedAssetsSummaries = js.Array[typingsSlinky.awsSdk.iotsitewiseMod.AssociatedAssetsSummary]
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.IAM
+    - typingsSlinky.awsSdk.awsSdkStrings.SSO
+    - java.lang.String
+  */
+  type AuthMode = typingsSlinky.awsSdk.iotsitewiseMod._AuthMode | java.lang.String
+  
   type BatchAssociateProjectAssetsErrors = js.Array[typingsSlinky.awsSdk.iotsitewiseMod.AssetErrorDetails]
   
   type BatchDisassociateProjectAssetsErrors = js.Array[typingsSlinky.awsSdk.iotsitewiseMod.AssetErrorDetails]
@@ -156,6 +163,7 @@ package object iotsitewiseMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.USER
     - typingsSlinky.awsSdk.awsSdkStrings.GROUP
+    - typingsSlinky.awsSdk.awsSdkStrings.IAM
     - java.lang.String
   */
   type IdentityType = typingsSlinky.awsSdk.iotsitewiseMod._IdentityType | java.lang.String
@@ -185,7 +193,13 @@ package object iotsitewiseMod {
   
   type MaxResults = scala.Double
   
-  type MonitorErrorCode = typingsSlinky.awsSdk.awsSdkStrings.INTERNAL_FAILURE | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL_FAILURE
+    - typingsSlinky.awsSdk.awsSdkStrings.VALIDATION_ERROR
+    - typingsSlinky.awsSdk.awsSdkStrings.LIMIT_EXCEEDED
+    - java.lang.String
+  */
+  type MonitorErrorCode = typingsSlinky.awsSdk.iotsitewiseMod._MonitorErrorCode | java.lang.String
   
   type MonitorErrorMessage = java.lang.String
   
@@ -271,6 +285,8 @@ package object iotsitewiseMod {
   
   type SSOApplicationId = java.lang.String
   
+  type SessionDurationSeconds = scala.Double
+  
   type TagKey = java.lang.String
   
   type TagKeyList = js.Array[typingsSlinky.awsSdk.iotsitewiseMod.TagKey]
@@ -291,6 +307,13 @@ package object iotsitewiseMod {
   type Timestamp = js.Date
   
   type Timestamps = js.Array[typingsSlinky.awsSdk.iotsitewiseMod.TimeInNanos]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PARENT
+    - typingsSlinky.awsSdk.awsSdkStrings.CHILD
+    - java.lang.String
+  */
+  type TraversalDirection = typingsSlinky.awsSdk.iotsitewiseMod._TraversalDirection | java.lang.String
   
   type Url = java.lang.String
   

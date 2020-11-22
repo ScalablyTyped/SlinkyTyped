@@ -76,11 +76,15 @@ class QuestionSelectBase protected () extends Question {
   
   def getColumnClass(): js.Any = js.native
   
-  def getControlLabelClass(isChecked: Boolean): js.Any = js.native
+  /* protected */ def getCommentFromValue(newValue: js.Any): String = js.native
+  
+  def getControlLabelClass(item: ItemValue): js.Any = js.native
   
   /* protected */ def getHasOther(`val`: js.Any): Boolean = js.native
   
-  def getLabelClass(isChecked: Boolean): js.Any = js.native
+  /* protected */ def getIsMultipleValue(): Boolean = js.native
+  
+  def getLabelClass(item: ItemValue): js.Any = js.native
   
   /* protected */ def getStoreOthersAsComment(): Boolean = js.native
   
@@ -95,11 +99,15 @@ class QuestionSelectBase protected () extends Question {
   var hideIfChoicesEmpty: Boolean = js.native
   
   /**
+    * Returns true if item is selected
+    * @param item checkbox or radio item value
+    */
+  def isItemSelected(item: ItemValue): Boolean = js.native
+  
+  /**
     * Returns true if a user select the 'other' item.
     */
   val isOtherSelected: Boolean = js.native
-  
-  var isSettingDefaultValue: Boolean = js.native
   
   /* protected */ def isValueDisabled(`val`: js.Any): Boolean = js.native
   
@@ -111,7 +119,11 @@ class QuestionSelectBase protected () extends Question {
   
   val locOtherText: LocalizableString = js.native
   
+  /* protected */ def onAfterRunItemsEnableCondition(): Unit = js.native
+  
   /* protected */ def onBeforeSendRequest(): Unit = js.native
+  
+  /* protected */ def onEnableItemCallBack(item: ItemValue): Boolean = js.native
   
   /* protected */ def onLoadChoicesFromUrl(array: js.Array[ItemValue]): Unit = js.native
   
@@ -151,6 +163,8 @@ class QuestionSelectBase protected () extends Question {
   /* protected */ def runItemsCondition(values: HashTable[_], properties: HashTable[_]): Boolean = js.native
   
   /* protected */ def runItemsEnableCondition(values: HashTable[_], properties: HashTable[_]): js.Any = js.native
+  
+  /* protected */ def setOtherValueIntoValue(newValue: js.Any): js.Any = js.native
   
   /**
     * Please use survey.storeOthersAsComment to change the behavior on the survey level. This property is depricated and invisible in Survey Creator.

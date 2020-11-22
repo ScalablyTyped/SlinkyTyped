@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("three/src/geometries/Geometries", "IcosahedronGeometry")
 @js.native
+/**
+	 * @param [radius=1]
+	 * @param [detail=0]
+	 */
 class IcosahedronGeometry ()
   extends typingsSlinky.three.icosahedronGeometryMod.IcosahedronGeometry {
   def this(radius: Double) = this()

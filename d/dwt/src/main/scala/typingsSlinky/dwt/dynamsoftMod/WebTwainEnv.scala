@@ -251,6 +251,11 @@ trait WebTwainEnv extends js.Object {
   def Unload(): Unit = js.native
   
   /**
+    * Whether to download the wasm for Camera Addon to use on initialization.
+    */
+  var UseCameraAddonWasm: Boolean = js.native
+  
+  /**
     * Whether to use the library in Local-Service mode or WASM mode.
     */
   var UseLocalService: Boolean = js.native

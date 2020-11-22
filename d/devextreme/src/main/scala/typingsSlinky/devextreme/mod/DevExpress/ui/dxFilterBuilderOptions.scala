@@ -4,7 +4,7 @@ import typingsSlinky.devextreme.anon.And
 import typingsSlinky.devextreme.anon.Contains
 import typingsSlinky.devextreme.anon.EditorElement
 import typingsSlinky.devextreme.anon.EditorName
-import typingsSlinky.devextreme.anon.ModelPreviousValue
+import typingsSlinky.devextreme.anon.ElementModelPreviousValue
 import typingsSlinky.devextreme.devextremeStrings.and
 import typingsSlinky.devextreme.devextremeStrings.notAnd
 import typingsSlinky.devextreme.devextremeStrings.notOr
@@ -16,37 +16,59 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFilterBuilderOptions extends WidgetOptions[dxFilterBuilder] {
   
-  /** @name dxFilterBuilder.Options.allowHierarchicalFields */
+  /**
+    * [descr:dxFilterBuilder.Options.allowHierarchicalFields]
+    */
   var allowHierarchicalFields: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFilterBuilder.Options.customOperations */
+  /**
+    * [descr:dxFilterBuilder.Options.customOperations]
+    */
   var customOperations: js.UndefOr[js.Array[dxFilterBuilderCustomOperation]] = js.native
   
-  /** @name dxFilterBuilder.Options.fields */
+  /**
+    * [descr:dxFilterBuilder.Options.fields]
+    */
   var fields: js.UndefOr[js.Array[dxFilterBuilderField]] = js.native
   
-  /** @name dxFilterBuilder.Options.filterOperationDescriptions */
+  /**
+    * [descr:dxFilterBuilder.Options.filterOperationDescriptions]
+    */
   var filterOperationDescriptions: js.UndefOr[Contains] = js.native
   
-  /** @name dxFilterBuilder.Options.groupOperationDescriptions */
+  /**
+    * [descr:dxFilterBuilder.Options.groupOperationDescriptions]
+    */
   var groupOperationDescriptions: js.UndefOr[And] = js.native
   
-  /** @name dxFilterBuilder.Options.groupOperations */
+  /**
+    * [descr:dxFilterBuilder.Options.groupOperations]
+    */
   var groupOperations: js.UndefOr[js.Array[and | or | notAnd | notOr]] = js.native
   
-  /** @name dxFilterBuilder.Options.maxGroupLevel */
+  /**
+    * [descr:dxFilterBuilder.Options.maxGroupLevel]
+    */
   var maxGroupLevel: js.UndefOr[Double] = js.native
   
-  /** @name dxFilterBuilder.Options.onEditorPrepared */
+  /**
+    * [descr:dxFilterBuilder.Options.onEditorPrepared]
+    */
   var onEditorPrepared: js.UndefOr[js.Function1[/* e */ EditorElement, _]] = js.native
   
-  /** @name dxFilterBuilder.Options.onEditorPreparing */
+  /**
+    * [descr:dxFilterBuilder.Options.onEditorPreparing]
+    */
   var onEditorPreparing: js.UndefOr[js.Function1[/* e */ EditorName, _]] = js.native
   
-  /** @name dxFilterBuilder.Options.onValueChanged */
-  var onValueChanged: js.UndefOr[js.Function1[/* e */ ModelPreviousValue, _]] = js.native
+  /**
+    * [descr:dxFilterBuilder.Options.onValueChanged]
+    */
+  var onValueChanged: js.UndefOr[js.Function1[/* e */ ElementModelPreviousValue, _]] = js.native
   
-  /** @name dxFilterBuilder.Options.value */
+  /**
+    * [descr:dxFilterBuilder.Options.value]
+    */
   var value: js.UndefOr[String | js.Array[_] | js.Function] = js.native
 }
 object dxFilterBuilderOptions {
@@ -136,7 +158,7 @@ object dxFilterBuilderOptions {
     def deleteOnEditorPreparing: Self = this.set("onEditorPreparing", js.undefined)
     
     @scala.inline
-    def setOnValueChanged(value: /* e */ ModelPreviousValue => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
+    def setOnValueChanged(value: /* e */ ElementModelPreviousValue => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnValueChanged: Self = this.set("onValueChanged", js.undefined)

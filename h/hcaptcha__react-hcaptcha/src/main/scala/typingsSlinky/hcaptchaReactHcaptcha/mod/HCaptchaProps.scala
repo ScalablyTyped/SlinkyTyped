@@ -22,6 +22,8 @@ trait HCaptchaProps extends js.Object {
   
   var onVerify: js.UndefOr[js.Function1[/* token */ String, _]] = js.native
   
+  var reCaptchaCompat: js.UndefOr[Boolean] = js.native
+  
   var sitekey: String = js.native
   
   var size: js.UndefOr[normal | compact | invisible] = js.native
@@ -85,6 +87,12 @@ object HCaptchaProps {
     
     @scala.inline
     def deleteOnVerify: Self = this.set("onVerify", js.undefined)
+    
+    @scala.inline
+    def setReCaptchaCompat(value: Boolean): Self = this.set("reCaptchaCompat", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReCaptchaCompat: Self = this.set("reCaptchaCompat", js.undefined)
     
     @scala.inline
     def setSize(value: normal | compact | invisible): Self = this.set("size", value.asInstanceOf[js.Any])

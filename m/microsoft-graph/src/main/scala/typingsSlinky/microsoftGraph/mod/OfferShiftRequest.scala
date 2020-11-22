@@ -11,16 +11,16 @@ trait OfferShiftRequest extends ScheduleChangeRequest {
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example,
     * midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
     */
-  var recipientActionDateTime: js.UndefOr[String] = js.native
+  var recipientActionDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // Custom message sent by recipient of the offer shift request.
-  var recipientActionMessage: js.UndefOr[String] = js.native
+  var recipientActionMessage: js.UndefOr[NullableOption[String]] = js.native
   
   // User ID of the recipient of the offer shift request.
-  var recipientUserId: js.UndefOr[String] = js.native
+  var recipientUserId: js.UndefOr[NullableOption[String]] = js.native
   
   // User ID of the sender of the offer shift request.
-  var senderShiftId: js.UndefOr[String] = js.native
+  var senderShiftId: js.UndefOr[NullableOption[String]] = js.native
 }
 object OfferShiftRequest {
   
@@ -46,27 +46,39 @@ object OfferShiftRequest {
     }
     
     @scala.inline
-    def setRecipientActionDateTime(value: String): Self = this.set("recipientActionDateTime", value.asInstanceOf[js.Any])
+    def setRecipientActionDateTime(value: NullableOption[String]): Self = this.set("recipientActionDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRecipientActionDateTime: Self = this.set("recipientActionDateTime", js.undefined)
     
     @scala.inline
-    def setRecipientActionMessage(value: String): Self = this.set("recipientActionMessage", value.asInstanceOf[js.Any])
+    def setRecipientActionDateTimeNull: Self = this.set("recipientActionDateTime", null)
+    
+    @scala.inline
+    def setRecipientActionMessage(value: NullableOption[String]): Self = this.set("recipientActionMessage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRecipientActionMessage: Self = this.set("recipientActionMessage", js.undefined)
     
     @scala.inline
-    def setRecipientUserId(value: String): Self = this.set("recipientUserId", value.asInstanceOf[js.Any])
+    def setRecipientActionMessageNull: Self = this.set("recipientActionMessage", null)
+    
+    @scala.inline
+    def setRecipientUserId(value: NullableOption[String]): Self = this.set("recipientUserId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRecipientUserId: Self = this.set("recipientUserId", js.undefined)
     
     @scala.inline
-    def setSenderShiftId(value: String): Self = this.set("senderShiftId", value.asInstanceOf[js.Any])
+    def setRecipientUserIdNull: Self = this.set("recipientUserId", null)
+    
+    @scala.inline
+    def setSenderShiftId(value: NullableOption[String]): Self = this.set("senderShiftId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSenderShiftId: Self = this.set("senderShiftId", js.undefined)
+    
+    @scala.inline
+    def setSenderShiftIdNull: Self = this.set("senderShiftId", null)
   }
 }

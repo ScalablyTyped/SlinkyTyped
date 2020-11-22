@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.reportsMod.reports
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -30,13 +31,14 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.VerticalFlow
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.WebLayoutContent
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/report-chart relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide7/report-chart relevant document}
   */
 @JSImport("mendixmodelsdk/dist/gen/reports", "reports.ReportChart")
 @js.native
@@ -46,15 +48,12 @@ class ReportChart protected () extends ReportWidget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def aspectRatio: AspectRatio = js.native
   def aspectRatio_=(newValue: AspectRatio): Unit = js.native
-  
-  @JSName("model")
-  var model_FReportChart: IModel = js.native
   
   def seriess: IList[ReportChartSeries] = js.native
   

@@ -22,6 +22,9 @@ object LeftRightDialogHeader {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def close(value: () => Unit): this.type = set("close", js.Any.fromFunction0(value))
+    
+    @scala.inline
     def next(value: () => Unit): this.type = set("next", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -36,9 +39,5 @@ object LeftRightDialogHeader {
   
   def withProps(p: LeftRightDialogHeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply(close: () => Unit): Builder = {
-    val __props = js.Dynamic.literal(close = js.Any.fromFunction0(close))
-    new Builder(js.Array(this.component, __props.asInstanceOf[LeftRightDialogHeaderProps]))
-  }
+  implicit def make(companion: LeftRightDialogHeader.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

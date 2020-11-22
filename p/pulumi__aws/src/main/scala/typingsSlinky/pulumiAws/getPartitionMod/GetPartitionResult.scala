@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GetPartitionResult extends js.Object {
   
+  /**
+    * Base DNS domain name for the current partition (e.g. `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
+    */
   val dnsSuffix: String = js.native
   
   /**
@@ -14,6 +17,9 @@ trait GetPartitionResult extends js.Object {
     */
   val id: String = js.native
   
+  /**
+    * Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in AWS China).
+    */
   val partition: String = js.native
 }
 object GetPartitionResult {

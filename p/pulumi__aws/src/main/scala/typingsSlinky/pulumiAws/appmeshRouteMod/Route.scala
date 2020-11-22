@@ -40,14 +40,24 @@ class Route protected () extends CustomResource {
   val lastUpdatedDate: Output_[String] = js.native
   
   /**
-    * The name of the service mesh in which to create the route.
+    * The name of the service mesh in which to create the route. Must be between 1 and 255 characters in length.
     */
   val meshName: Output_[String] = js.native
   
   /**
-    * The name to use for the route.
+    * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
+    */
+  val meshOwner: Output_[String] = js.native
+  
+  /**
+    * The name to use for the route. Must be between 1 and 255 characters in length.
     */
   val name: Output_[String] = js.native
+  
+  /**
+    * The resource owner's AWS account ID.
+    */
+  val resourceOwner: Output_[String] = js.native
   
   /**
     * The route specification to apply.
@@ -60,7 +70,7 @@ class Route protected () extends CustomResource {
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
   /**
-    * The name of the virtual router in which to create the route.
+    * The name of the virtual router in which to create the route. Must be between 1 and 255 characters in length.
     */
   val virtualRouterName: Output_[String] = js.native
 }

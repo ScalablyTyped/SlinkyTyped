@@ -23,5 +23,7 @@ object OperationResultCode extends js.Object {
   
   def opNotSupported(): typingsSlinky.stellarBase.xdrMod.xdr.OperationResultCode = js.native
   
-  def opTooManySubentry(): typingsSlinky.stellarBase.xdrMod.xdr.OperationResultCode = js.native
+  def opTooManySponsoring(): typingsSlinky.stellarBase.xdrMod.xdr.OperationResultCode = js.native
+  
+  def opTooManySubentries(): typingsSlinky.stellarBase.xdrMod.xdr.OperationResultCode = js.native
 }

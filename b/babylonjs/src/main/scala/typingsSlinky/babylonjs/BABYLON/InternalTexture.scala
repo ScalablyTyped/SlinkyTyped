@@ -88,6 +88,9 @@ trait InternalTexture extends js.Object {
   var _framebuffer: Nullable[WebGLFramebuffer] = js.native
   
   /** @hidden */
+  var _gammaSpace: Nullable[Boolean] = js.native
+  
+  /** @hidden */
   var _generateDepthBuffer: Boolean = js.native
   
   /** @hidden */
@@ -124,6 +127,9 @@ trait InternalTexture extends js.Object {
   var _lodTextureMid: Nullable[BaseTexture] = js.native
   
   /** @hidden */
+  var _originalUrl: String = js.native
+  
+  /** @hidden */
   def _rebuild(): Unit = js.native
   
   /** @hidden */
@@ -140,6 +146,9 @@ trait InternalTexture extends js.Object {
   
   /** @hidden */
   def _swapAndDie(target: InternalTexture): Unit = js.native
+  
+  /** @hidden */
+  var _textureArray: Nullable[js.Array[InternalTexture]] = js.native
   
   /** @hidden */
   var _webGLTexture: Nullable[WebGLTexture] = js.native

@@ -88,6 +88,11 @@ trait MLTransform extends js.Object {
   var Timeout: js.UndefOr[typingsSlinky.awsSdk.glueMod.Timeout] = js.native
   
   /**
+    * The encryption-at-rest settings of the transform that apply to accessing user data. Machine learning transforms can access user data encrypted in Amazon S3 using KMS.
+    */
+  var TransformEncryption: js.UndefOr[typingsSlinky.awsSdk.glueMod.TransformEncryption] = js.native
+  
+  /**
     * The unique transform ID that is generated for the machine learning transform. The ID is guaranteed to be unique and does not change.
     */
   var TransformId: js.UndefOr[HashString] = js.native
@@ -221,6 +226,12 @@ object MLTransform {
     
     @scala.inline
     def deleteTimeout: Self = this.set("Timeout", js.undefined)
+    
+    @scala.inline
+    def setTransformEncryption(value: TransformEncryption): Self = this.set("TransformEncryption", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTransformEncryption: Self = this.set("TransformEncryption", js.undefined)
     
     @scala.inline
     def setTransformId(value: HashString): Self = this.set("TransformId", value.asInstanceOf[js.Any])

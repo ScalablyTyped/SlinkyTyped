@@ -5,8 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ResolvedHttpResponse
-  extends HttpResponse[js.typedarray.Uint8Array] {
+trait ResolvedHttpResponse extends HttpResponse {
   
   @JSName("body")
   var body_ResolvedHttpResponse: String = js.native

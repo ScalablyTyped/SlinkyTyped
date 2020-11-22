@@ -1,7 +1,7 @@
 package typingsSlinky.xstate
 
 import typingsSlinky.std.Partial
-import typingsSlinky.xstate.anon.ContextValue
+import typingsSlinky.xstate.anon.Value
 import typingsSlinky.xstate.stateMod.State
 import typingsSlinky.xstate.typesMod.ActionObject
 import typingsSlinky.xstate.typesMod.ActivityDefinition
@@ -154,7 +154,7 @@ object stateNodeMod extends js.Object {
       * @param relativePath The relative path from this state node
       * @param historyValue
       */
-    def getFromRelativePath(relativePath: js.Array[String]): js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+    def getFromRelativePath(relativePath: js.Array[String]): js.Array[StateNode[TContext, _, TEvent, Value[TContext]]] = js.native
     
     def getInitialState(stateValue: StateValue): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     def getInitialState(stateValue: StateValue, context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
@@ -166,44 +166,48 @@ object stateNodeMod extends js.Object {
       * @param history The previous state to retrieve history
       * @param resolve Whether state nodes should resolve to initial child state nodes
       */
-    def getRelativeStateNodes(relativeStateId: StateNode[TContext, _, TEvent, _]): js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+    def getRelativeStateNodes(relativeStateId: StateNode[TContext, _, TEvent, Value[TContext]]): js.Array[StateNode[TContext, _, TEvent, Value[TContext]]] = js.native
     def getRelativeStateNodes(
-      relativeStateId: StateNode[TContext, _, TEvent, _],
+      relativeStateId: StateNode[TContext, _, TEvent, Value[TContext]],
       historyValue: js.UndefOr[scala.Nothing],
       resolve: Boolean
-    ): js.Array[StateNode[TContext, _, TEvent, _]] = js.native
-    def getRelativeStateNodes(relativeStateId: StateNode[TContext, _, TEvent, _], historyValue: HistoryValue): js.Array[StateNode[TContext, _, TEvent, _]] = js.native
-    def getRelativeStateNodes(relativeStateId: StateNode[TContext, _, TEvent, _], historyValue: HistoryValue, resolve: Boolean): js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+    ): js.Array[StateNode[TContext, _, TEvent, Value[TContext]]] = js.native
+    def getRelativeStateNodes(relativeStateId: StateNode[TContext, _, TEvent, Value[TContext]], historyValue: HistoryValue): js.Array[StateNode[TContext, _, TEvent, Value[TContext]]] = js.native
+    def getRelativeStateNodes(
+      relativeStateId: StateNode[TContext, _, TEvent, Value[TContext]],
+      historyValue: HistoryValue,
+      resolve: Boolean
+    ): js.Array[StateNode[TContext, _, TEvent, Value[TContext]]] = js.native
     
     var getResolvedPath: js.Any = js.native
     
     /**
       * Returns the child state node from its relative `stateKey`, or throws.
       */
-    def getStateNode(stateKey: String): StateNode[TContext, _, TEvent, _] = js.native
+    def getStateNode(stateKey: String): StateNode[TContext, _, TEvent, Value[TContext]] = js.native
     
     /**
       * Returns the state node with the given `stateId`, or throws.
       *
       * @param stateId The state ID. The prefix "#" is removed.
       */
-    def getStateNodeById(stateId: String): StateNode[TContext, _, TEvent, _] = js.native
+    def getStateNodeById(stateId: String): StateNode[TContext, _, TEvent, Value[TContext]] = js.native
     
     /**
       * Returns the relative state node from the given `statePath`, or throws.
       *
       * @param statePath The string or string array relative path to the state node.
       */
-    def getStateNodeByPath(statePath: String): StateNode[TContext, _, TEvent, _] = js.native
-    def getStateNodeByPath(statePath: js.Array[String]): StateNode[TContext, _, TEvent, _] = js.native
+    def getStateNodeByPath(statePath: String): StateNode[TContext, _, TEvent, Value[TContext]] = js.native
+    def getStateNodeByPath(statePath: js.Array[String]): StateNode[TContext, _, TEvent, Value[TContext]] = js.native
     
-    def getStateNodes(state: State[TContext, TEvent, _, ContextValue[TContext]]): js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+    def getStateNodes(state: State[TContext, TEvent, _, TTypestate]): js.Array[StateNode[TContext, _, TEvent, Value[TContext]]] = js.native
     /**
       * Returns the state nodes represented by the current state value.
       *
       * @param state The state value or State instance
       */
-    def getStateNodes(state: StateValue): js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+    def getStateNodes(state: StateValue): js.Array[StateNode[TContext, _, TEvent, Value[TContext]]] = js.native
     
     /**
       * Returns `true` if this state node explicitly handles the given event.
@@ -242,7 +246,7 @@ object stateNodeMod extends js.Object {
       */
     def initialState: State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     
-    def initialStateNodes: js.Array[StateNode[TContext, _, TEvent, _]] = js.native
+    def initialStateNodes: js.Array[StateNode[TContext, _, TEvent, Value[TContext]]] = js.native
     
     /* private */ def initialStateValue: js.Any = js.native
     
@@ -259,7 +263,7 @@ object stateNodeMod extends js.Object {
     /**
       * The root machine node.
       */
-    var machine: StateNode[TContext, _, TEvent, _] = js.native
+    var machine: StateNode[TContext, _, TEvent, Value[TContext]] = js.native
     
     /**
       * The meta data associated with this state node, which will be returned in State instances.
@@ -311,7 +315,7 @@ object stateNodeMod extends js.Object {
     /**
       * The parent state node.
       */
-    var parent: js.UndefOr[StateNode[TContext, _, TEvent, _]] = js.native
+    var parent: js.UndefOr[StateNode[TContext, _, TEvent, Value[TContext]]] = js.native
     
     /**
       * The string path from the root machine node to this node.
@@ -342,7 +346,7 @@ object stateNodeMod extends js.Object {
       *
       * @param state The state to resolve
       */
-    def resolveState(state: State[TContext, TEvent, _, ContextValue[TContext]]): State[TContext, TEvent, _, ContextValue[TContext]] = js.native
+    def resolveState(state: State[TContext, TEvent, _, Value[TContext]]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     
     var resolveTarget: js.Any = js.native
     
@@ -387,14 +391,14 @@ object stateNodeMod extends js.Object {
     def transition(state: String, event: Event[TEvent], context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     def transition(state: String, event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     def transition(state: String, event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent], context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: State[TContext, TEvent, _, ContextValue[TContext]], event: Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-    def transition(state: State[TContext, TEvent, _, ContextValue[TContext]], event: Event[TEvent], context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+    def transition(state: State[TContext, TEvent, _, TTypestate], event: Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+    def transition(state: State[TContext, TEvent, _, TTypestate], event: Event[TEvent], context: TContext): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     def transition(
-      state: State[TContext, TEvent, _, ContextValue[TContext]],
+      state: State[TContext, TEvent, _, TTypestate],
       event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]
     ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
     def transition(
-      state: State[TContext, TEvent, _, ContextValue[TContext]],
+      state: State[TContext, TEvent, _, TTypestate],
       event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent],
       context: TContext
     ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
@@ -444,6 +448,6 @@ object stateNodeMod extends js.Object {
       *
       * @param context Custom context (will override predefined context, not recursive)
       */
-    def withContext(context: TContext): StateNode[TContext, TStateSchema, TEvent, _] = js.native
+    def withContext(context: TContext): StateNode[TContext, TStateSchema, TEvent, Value[TContext]] = js.native
   }
 }

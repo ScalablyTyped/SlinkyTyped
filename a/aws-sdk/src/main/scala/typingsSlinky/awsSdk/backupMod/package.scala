@@ -10,6 +10,8 @@ package object backupMod {
   
   type AccountId = java.lang.String
   
+  type AdvancedBackupSettings = js.Array[typingsSlinky.awsSdk.backupMod.AdvancedBackupSetting]
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CREATED
     - typingsSlinky.awsSdk.awsSdkStrings.PENDING
@@ -24,6 +26,12 @@ package object backupMod {
   type BackupJobState = typingsSlinky.awsSdk.backupMod._BackupJobState | java.lang.String
   
   type BackupJobsList = js.Array[typingsSlinky.awsSdk.backupMod.BackupJob]
+  
+  type BackupOptionKey = java.lang.String
+  
+  type BackupOptionValue = java.lang.String
+  
+  type BackupOptions = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.backupMod.BackupOptionValue]
   
   type BackupPlanName = java.lang.String
   
@@ -93,6 +101,12 @@ package object backupMod {
   type CopyJobsList = js.Array[typingsSlinky.awsSdk.backupMod.CopyJob]
   
   type CronExpression = java.lang.String
+  
+  type GlobalSettings = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.backupMod.GlobalSettingsValue]
+  
+  type GlobalSettingsName = java.lang.String
+  
+  type GlobalSettingsValue = java.lang.String
   
   type IAMPolicy = java.lang.String
   

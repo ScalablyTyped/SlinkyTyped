@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-scroll
 
-Typings are for version 1.5
+Typings are for version 1.8
 
 ## Library description:
 A scroll component for React.js

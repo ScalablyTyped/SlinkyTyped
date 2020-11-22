@@ -34,7 +34,7 @@ class Deployment protected () extends CustomResource {
   val autoDeployed: Output_[Boolean] = js.native
   
   /**
-    * The description for the deployment resource.
+    * The description for the deployment resource. Must be less than or equal to 1024 characters in length.
     */
   val description: Output_[js.UndefOr[String]] = js.native
   

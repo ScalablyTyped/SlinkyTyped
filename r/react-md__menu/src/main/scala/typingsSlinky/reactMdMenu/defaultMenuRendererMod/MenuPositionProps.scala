@@ -1,7 +1,5 @@
 package typingsSlinky.reactMdMenu.defaultMenuRendererMod
 
-import typingsSlinky.reactMdMenu.menuMod.MenuPositionOptions
-import typingsSlinky.reactMdUtils.typesMod.PositionAnchor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,15 +8,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MenuPositionProps extends js.Object {
   
-  var anchor: js.UndefOr[PositionAnchor] = js.native
+  var anchor: js.UndefOr[js.Any] = js.native
   
-  var closeOnResize: js.UndefOr[Boolean] = js.native
+  var closeOnResize: js.UndefOr[js.Any] = js.native
   
-  var closeOnScroll: js.UndefOr[Boolean] = js.native
+  var closeOnScroll: js.UndefOr[js.Any] = js.native
   
-  var horizontal: js.UndefOr[Boolean] = js.native
+  var horizontal: js.UndefOr[js.Any] = js.native
   
-  var positionOptions: js.UndefOr[MenuPositionOptions] = js.native
+  var positionOptions: js.UndefOr[js.Any] = js.native
 }
 object MenuPositionProps {
   
@@ -44,31 +42,31 @@ object MenuPositionProps {
     }
     
     @scala.inline
-    def setAnchor(value: PositionAnchor): Self = this.set("anchor", value.asInstanceOf[js.Any])
+    def setAnchor(value: js.Any): Self = this.set("anchor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnchor: Self = this.set("anchor", js.undefined)
     
     @scala.inline
-    def setCloseOnResize(value: Boolean): Self = this.set("closeOnResize", value.asInstanceOf[js.Any])
+    def setCloseOnResize(value: js.Any): Self = this.set("closeOnResize", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCloseOnResize: Self = this.set("closeOnResize", js.undefined)
     
     @scala.inline
-    def setCloseOnScroll(value: Boolean): Self = this.set("closeOnScroll", value.asInstanceOf[js.Any])
+    def setCloseOnScroll(value: js.Any): Self = this.set("closeOnScroll", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCloseOnScroll: Self = this.set("closeOnScroll", js.undefined)
     
     @scala.inline
-    def setHorizontal(value: Boolean): Self = this.set("horizontal", value.asInstanceOf[js.Any])
+    def setHorizontal(value: js.Any): Self = this.set("horizontal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHorizontal: Self = this.set("horizontal", js.undefined)
     
     @scala.inline
-    def setPositionOptions(value: MenuPositionOptions): Self = this.set("positionOptions", value.asInstanceOf[js.Any])
+    def setPositionOptions(value: js.Any): Self = this.set("positionOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePositionOptions: Self = this.set("positionOptions", js.undefined)

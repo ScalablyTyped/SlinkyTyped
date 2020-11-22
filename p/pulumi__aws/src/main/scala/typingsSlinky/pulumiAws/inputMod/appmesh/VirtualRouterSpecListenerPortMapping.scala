@@ -14,7 +14,7 @@ trait VirtualRouterSpecListenerPortMapping extends js.Object {
   var port: Input[Double] = js.native
   
   /**
-    * The protocol used for the port mapping. Valid values are `http` and `tcp`.
+    * The protocol used for the port mapping. Valid values are `http`,`http2`, `tcp` and `grpc`.
     */
   var protocol: Input[String] = js.native
 }

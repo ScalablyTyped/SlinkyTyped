@@ -4,6 +4,7 @@ import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -46,5 +47,12 @@ object grainPostProcessMod extends js.Object {
       * The intensity of the grain added (default: 30)
       */
     var intensity: Double = js.native
+  }
+  /* static members */
+  @js.native
+  object GrainPostProcess extends js.Object {
+    
+    /** @hidden */
+    def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): GrainPostProcess = js.native
   }
 }

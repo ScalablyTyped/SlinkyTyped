@@ -1,6 +1,6 @@
 package typingsSlinky.constantinople.mod
 
-import typingsSlinky.babylon.mod.BabylonOptions
+import typingsSlinky.babelParser.mod.ParserOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Options extends ExpressionToConstantOptions {
   
-  var babylon: js.UndefOr[BabylonOptions] = js.native
+  var babylon: js.UndefOr[ParserOptions] = js.native
 }
 object Options {
   
@@ -34,7 +34,7 @@ object Options {
     }
     
     @scala.inline
-    def setBabylon(value: BabylonOptions): Self = this.set("babylon", value.asInstanceOf[js.Any])
+    def setBabylon(value: ParserOptions): Self = this.set("babylon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBabylon: Self = this.set("babylon", js.undefined)

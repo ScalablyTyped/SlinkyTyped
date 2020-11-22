@@ -41,15 +41,13 @@ object omnibox extends js.Object {
   
   /* omnibox events */
   /**
-    * User has started a keyword input session by typing the extension's keyword. This is guaranteed to be sent
-    * exactly once per input session, and before any onInputChanged events.
+    * User has started a keyword input session by typing the extension's keyword. This is guaranteed to be sent exactly once per input session, and before any onInputChanged events.
     */
   val onInputStarted: WebExtEvent[js.Function0[Unit]] = js.native
   
   /* omnibox functions */
   /**
-    * Sets the description and styling for the default suggestion. The default suggestion is the text that is
-    * displayed in the first suggestion row underneath the URL bar.
+    * Sets the description and styling for the default suggestion. The default suggestion is the text that is displayed in the first suggestion row underneath the URL bar.
     * @param suggestion A partial SuggestResult object, without the 'content' parameter.
     */
   def setDefaultSuggestion(suggestion: DefaultSuggestResult): Unit = js.native

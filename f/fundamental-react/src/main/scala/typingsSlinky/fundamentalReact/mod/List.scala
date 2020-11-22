@@ -5,6 +5,7 @@ import typingsSlinky.fundamentalReact.anon.FunctionComponentListFoot
 import typingsSlinky.fundamentalReact.anon.FunctionComponentListHead
 import typingsSlinky.fundamentalReact.anon.FunctionComponentListIcon
 import typingsSlinky.fundamentalReact.anon.FunctionComponentListItem
+import typingsSlinky.fundamentalReact.anon.FunctionComponentListSele
 import typingsSlinky.fundamentalReact.anon.FunctionComponentListText
 import typingsSlinky.fundamentalReact.anon.PartialListProps
 import typingsSlinky.fundamentalReact.anon.WeakValidationMapListProp
@@ -29,6 +30,8 @@ object List extends js.Object {
   var Icon: FunctionComponentListIcon = js.native
   
   var Item: FunctionComponentListItem = js.native
+  
+  var Selection: FunctionComponentListSele = js.native
   
   var Text: FunctionComponentListText = js.native
   

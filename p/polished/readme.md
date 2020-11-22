@@ -1,7 +1,7 @@
 
 # Scala.js typings for polished
 
-Typings are for version 3.6.5
+Typings are for version 3.6.7
 
 ## Library description:
 A lightweight toolset for writing styles in Javascript.

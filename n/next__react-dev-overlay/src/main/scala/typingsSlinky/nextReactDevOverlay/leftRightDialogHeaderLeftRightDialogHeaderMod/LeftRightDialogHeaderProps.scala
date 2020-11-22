@@ -9,7 +9,7 @@ trait LeftRightDialogHeaderProps extends js.Object {
   
   var className: js.UndefOr[String] = js.native
   
-  def close(): Unit = js.native
+  var close: js.UndefOr[js.Function0[Unit]] = js.native
   
   var next: js.Function0[Unit] | Null = js.native
   
@@ -18,8 +18,8 @@ trait LeftRightDialogHeaderProps extends js.Object {
 object LeftRightDialogHeaderProps {
   
   @scala.inline
-  def apply(close: () => Unit): LeftRightDialogHeaderProps = {
-    val __obj = js.Dynamic.literal(close = js.Any.fromFunction0(close))
+  def apply(): LeftRightDialogHeaderProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[LeftRightDialogHeaderProps]
   }
   
@@ -39,13 +39,16 @@ object LeftRightDialogHeaderProps {
     }
     
     @scala.inline
-    def setClose(value: () => Unit): Self = this.set("close", js.Any.fromFunction0(value))
-    
-    @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    
+    @scala.inline
+    def setClose(value: () => Unit): Self = this.set("close", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteClose: Self = this.set("close", js.undefined)
     
     @scala.inline
     def setNext(value: () => Unit): Self = this.set("next", js.Any.fromFunction0(value))

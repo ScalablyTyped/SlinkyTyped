@@ -6,6 +6,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object acmpcaMod {
   
+  type ASN1PrintableString64 = java.lang.String
+  
+  type AWSPolicy = java.lang.String
+  
   type AccountId = java.lang.String
   
   type ActionList = js.Array[typingsSlinky.awsSdk.acmpcaMod.ActionType]
@@ -76,8 +80,6 @@ package object acmpcaMod {
   
   type CsrBody = java.lang.String
   
-  type DistinguishedNameQualifierString = java.lang.String
-  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.REQUEST_TIMED_OUT
     - typingsSlinky.awsSdk.awsSdkStrings.UNSUPPORTED_ALGORITHM
@@ -112,6 +114,13 @@ package object acmpcaMod {
   type Principal = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SELF
+    - typingsSlinky.awsSdk.awsSdkStrings.OTHER_ACCOUNTS
+    - java.lang.String
+  */
+  type ResourceOwner = typingsSlinky.awsSdk.acmpcaMod._ResourceOwner | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.UNSPECIFIED
     - typingsSlinky.awsSdk.awsSdkStrings.KEY_COMPROMISE
     - typingsSlinky.awsSdk.awsSdkStrings.CERTIFICATE_AUTHORITY_COMPROMISE
@@ -123,6 +132,10 @@ package object acmpcaMod {
     - java.lang.String
   */
   type RevocationReason = typingsSlinky.awsSdk.acmpcaMod._RevocationReason | java.lang.String
+  
+  type S3BucketName = java.lang.String
+  
+  type S3Key = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.SHA256WITHECDSA

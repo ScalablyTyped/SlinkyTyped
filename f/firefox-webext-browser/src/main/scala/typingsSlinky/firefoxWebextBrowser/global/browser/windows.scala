@@ -1,18 +1,17 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.AllowScriptsToClose
-import typingsSlinky.firefoxWebextBrowser.anon.DrawAttention
-import typingsSlinky.firefoxWebextBrowser.anon.WindowTypes
+import typingsSlinky.firefoxWebextBrowser.browser.windows.CreateCreateData
+import typingsSlinky.firefoxWebextBrowser.browser.windows.GetAllGetInfo
 import typingsSlinky.firefoxWebextBrowser.browser.windows.GetInfo
+import typingsSlinky.firefoxWebextBrowser.browser.windows.UpdateUpdateInfo
 import typingsSlinky.firefoxWebextBrowser.browser.windows.Window
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Use the `browser.windows` API to interact with browser windows. You can use this API to create, modify, and
-  * rearrange windows in the browser.
+  * Use the `browser.windows` API to interact with browser windows. You can use this API to create, modify, and rearrange windows in the browser.
   *
   * Not allowed in: Content scripts, Devtools pages
   */
@@ -29,7 +28,7 @@ object windows extends js.Object {
   
   /** Creates (opens) a new browser with any optional sizing, position or default URL provided. */
   def create(): js.Promise[Window] = js.native
-  def create(createData: AllowScriptsToClose): js.Promise[Window] = js.native
+  def create(createData: CreateCreateData): js.Promise[Window] = js.native
   
   /* windows functions */
   /** Gets details about a window. */
@@ -38,11 +37,10 @@ object windows extends js.Object {
   
   /**
     * Gets all windows.
-    * @param [getInfo] Specifies properties used to filter the `windows.Window` returned and to determine whether they
-    *     should contain a list of the `tabs.Tab` objects.
+    * @param [getInfo] Specifies properties used to filter the `windows.Window` returned and to determine whether they should contain a list of the `tabs.Tab` objects.
     */
   def getAll(): js.Promise[js.Array[Window]] = js.native
-  def getAll(getInfo: WindowTypes): js.Promise[js.Array[Window]] = js.native
+  def getAll(getInfo: GetAllGetInfo): js.Promise[js.Array[Window]] = js.native
   
   /** Gets the current window. */
   def getCurrent(): js.Promise[Window] = js.native
@@ -60,9 +58,7 @@ object windows extends js.Object {
   val onCreated: WebExtEvent[js.Function1[/* window */ Window, Unit]] = js.native
   
   /**
-    * Fired when the currently focused window changes. Will be `windows.WINDOW_ID_NONE` if all browser windows have
-    * lost focus. Note: On some Linux window managers, WINDOW_ID_NONE will always be sent immediately preceding a
-    * switch from one browser window to another.
+    * Fired when the currently focused window changes. Will be `windows.WINDOW_ID_NONE` if all browser windows have lost focus. Note: On some Linux window managers, WINDOW_ID_NONE will always be sent immediately preceding a switch from one browser window to another.
     * @param windowId ID of the newly focused window.
     */
   val onFocusChanged: WebExtEvent[js.Function1[/* windowId */ Double, Unit]] = js.native
@@ -77,8 +73,7 @@ object windows extends js.Object {
   def remove(windowId: Double): js.Promise[Unit] = js.native
   
   /**
-    * Updates the properties of a window. Specify only the properties that you want to change; unspecified properties
-    * will be left unchanged.
+    * Updates the properties of a window. Specify only the properties that you want to change; unspecified properties will be left unchanged.
     */
-  def update(windowId: Double, updateInfo: DrawAttention): js.Promise[Window] = js.native
+  def update(windowId: Double, updateInfo: UpdateUpdateInfo): js.Promise[Window] = js.native
 }

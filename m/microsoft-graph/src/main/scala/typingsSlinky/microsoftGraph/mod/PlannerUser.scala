@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PlannerUser extends Entity {
   
   // Read-only. Nullable. Returns the plannerTasks assigned to the user.
-  var plans: js.UndefOr[js.Array[PlannerPlan]] = js.native
+  var plans: js.UndefOr[NullableOption[js.Array[PlannerPlan]]] = js.native
   
   // Read-only. Nullable. Returns the plannerPlans shared with the user.
-  var tasks: js.UndefOr[js.Array[PlannerTask]] = js.native
+  var tasks: js.UndefOr[NullableOption[js.Array[PlannerTask]]] = js.native
 }
 object PlannerUser {
   
@@ -40,18 +40,24 @@ object PlannerUser {
     def setPlansVarargs(value: PlannerPlan*): Self = this.set("plans", js.Array(value :_*))
     
     @scala.inline
-    def setPlans(value: js.Array[PlannerPlan]): Self = this.set("plans", value.asInstanceOf[js.Any])
+    def setPlans(value: NullableOption[js.Array[PlannerPlan]]): Self = this.set("plans", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePlans: Self = this.set("plans", js.undefined)
     
     @scala.inline
+    def setPlansNull: Self = this.set("plans", null)
+    
+    @scala.inline
     def setTasksVarargs(value: PlannerTask*): Self = this.set("tasks", js.Array(value :_*))
     
     @scala.inline
-    def setTasks(value: js.Array[PlannerTask]): Self = this.set("tasks", value.asInstanceOf[js.Any])
+    def setTasks(value: NullableOption[js.Array[PlannerTask]]): Self = this.set("tasks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTasks: Self = this.set("tasks", js.undefined)
+    
+    @scala.inline
+    def setTasksNull: Self = this.set("tasks", null)
   }
 }

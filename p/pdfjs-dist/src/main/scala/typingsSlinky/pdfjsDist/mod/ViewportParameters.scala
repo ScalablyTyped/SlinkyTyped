@@ -7,8 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ViewportParameters extends js.Object {
   
-   // (optional) The desired rotation, in degrees, of the viewport. If omitted it defaults to the page rotation.
+   // (optional) The vertical, i.e. y-axis, offset. The default value is `0`.
   var dontFlip: js.UndefOr[Boolean] = js.native
+  
+   // (optional) The desired rotation, in degrees, of the viewport. If omitted it defaults to the page rotation.
+  var offsetX: js.UndefOr[Double] = js.native
+  
+   // (optional) The horizontal, i.e. x-axis, offset. The default value is `0`.
+  var offsetY: js.UndefOr[Double] = js.native
   
    // The desired scale of the viewport.
   var rotation: js.UndefOr[Double] = js.native
@@ -46,6 +52,18 @@ object ViewportParameters {
     
     @scala.inline
     def deleteDontFlip: Self = this.set("dontFlip", js.undefined)
+    
+    @scala.inline
+    def setOffsetX(value: Double): Self = this.set("offsetX", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOffsetX: Self = this.set("offsetX", js.undefined)
+    
+    @scala.inline
+    def setOffsetY(value: Double): Self = this.set("offsetY", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOffsetY: Self = this.set("offsetY", js.undefined)
     
     @scala.inline
     def setRotation(value: Double): Self = this.set("rotation", value.asInstanceOf[js.Any])

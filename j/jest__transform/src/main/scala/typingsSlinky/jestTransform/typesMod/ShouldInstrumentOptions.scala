@@ -1,6 +1,7 @@
 package typingsSlinky.jestTransform.typesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.jestTypes.configMod.CoverageProvider
 import typingsSlinky.jestTypes.configMod.Glob
 import typingsSlinky.jestTypes.configMod.Path
 import typingsSlinky.std.Set
@@ -8,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Pick<@jest/types.@jest/types.Config.GlobalConfig, 'collectCoverage' | 'collectCoverageFrom' | 'collectCoverageOnlyFrom'> & {  changedFiles :std.Set<@jest/types.@jest/types.Config.Path> | undefined} */
+/* Inlined std.Pick<@jest/types.@jest/types.Config.GlobalConfig, 'collectCoverage' | 'collectCoverageFrom' | 'collectCoverageOnlyFrom' | 'coverageProvider'> & {  changedFiles :std.Set<@jest/types.@jest/types.Config.Path> | undefined,   sourcesRelatedToTestsInChangedFiles :std.Set<@jest/types.@jest/types.Config.Path> | undefined} */
 @js.native
 trait ShouldInstrumentOptions extends js.Object {
   
@@ -18,13 +19,17 @@ trait ShouldInstrumentOptions extends js.Object {
   
   var collectCoverageFrom: js.Array[Glob] = js.native
   
-  var collectCoverageOnlyFrom: js.UndefOr[StringDictionary[Boolean] | Null] = js.native
+  var collectCoverageOnlyFrom: js.UndefOr[StringDictionary[Boolean]] = js.native
+  
+  var coverageProvider: CoverageProvider = js.native
+  
+  var sourcesRelatedToTestsInChangedFiles: js.UndefOr[Set[Path]] = js.native
 }
 object ShouldInstrumentOptions {
   
   @scala.inline
-  def apply(collectCoverage: Boolean, collectCoverageFrom: js.Array[Glob]): ShouldInstrumentOptions = {
-    val __obj = js.Dynamic.literal(collectCoverage = collectCoverage.asInstanceOf[js.Any], collectCoverageFrom = collectCoverageFrom.asInstanceOf[js.Any])
+  def apply(collectCoverage: Boolean, collectCoverageFrom: js.Array[Glob], coverageProvider: CoverageProvider): ShouldInstrumentOptions = {
+    val __obj = js.Dynamic.literal(collectCoverage = collectCoverage.asInstanceOf[js.Any], collectCoverageFrom = collectCoverageFrom.asInstanceOf[js.Any], coverageProvider = coverageProvider.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShouldInstrumentOptions]
   }
   
@@ -53,6 +58,9 @@ object ShouldInstrumentOptions {
     def setCollectCoverageFrom(value: js.Array[Glob]): Self = this.set("collectCoverageFrom", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setCoverageProvider(value: CoverageProvider): Self = this.set("coverageProvider", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setChangedFiles(value: Set[Path]): Self = this.set("changedFiles", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -65,6 +73,9 @@ object ShouldInstrumentOptions {
     def deleteCollectCoverageOnlyFrom: Self = this.set("collectCoverageOnlyFrom", js.undefined)
     
     @scala.inline
-    def setCollectCoverageOnlyFromNull: Self = this.set("collectCoverageOnlyFrom", null)
+    def setSourcesRelatedToTestsInChangedFiles(value: Set[Path]): Self = this.set("sourcesRelatedToTestsInChangedFiles", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSourcesRelatedToTestsInChangedFiles: Self = this.set("sourcesRelatedToTestsInChangedFiles", js.undefined)
   }
 }

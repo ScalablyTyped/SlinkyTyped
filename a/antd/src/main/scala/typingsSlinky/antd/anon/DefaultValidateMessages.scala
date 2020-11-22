@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DefaultValidateMessages extends js.Object {
   
   var defaultValidateMessages: typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages = js.native
+  
+  var optional: js.UndefOr[String] = js.native
 }
 object DefaultValidateMessages {
   
@@ -34,5 +36,11 @@ object DefaultValidateMessages {
     
     @scala.inline
     def setDefaultValidateMessages(value: typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages): Self = this.set("defaultValidateMessages", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOptional(value: String): Self = this.set("optional", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOptional: Self = this.set("optional", js.undefined)
   }
 }

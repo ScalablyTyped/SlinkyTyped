@@ -1,7 +1,7 @@
 
 # Scala.js typings for uri-js
 
-Typings are for version 4.2.2
+Typings are for version 4.4.0
 
 ## Library description:
 An RFC 3986/3987 compliant, scheme extendable URI/IRI parsing/validating/resolving library for JavaScript.

@@ -1,6 +1,5 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.utilsMod.PadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Pad extends js.Object {
   
-  var pad: js.UndefOr[PadType] = js.native
+  var border: js.UndefOr[`11`] = js.native
+  
+  var pad: js.UndefOr[HorizontalVertical] = js.native
 }
 object Pad {
   
@@ -34,7 +35,13 @@ object Pad {
     }
     
     @scala.inline
-    def setPad(value: PadType): Self = this.set("pad", value.asInstanceOf[js.Any])
+    def setBorder(value: `11`): Self = this.set("border", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBorder: Self = this.set("border", js.undefined)
+    
+    @scala.inline
+    def setPad(value: HorizontalVertical): Self = this.set("pad", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePad: Self = this.set("pad", js.undefined)

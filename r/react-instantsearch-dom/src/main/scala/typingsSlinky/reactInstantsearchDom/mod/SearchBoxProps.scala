@@ -7,168 +7,123 @@ import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait SearchBoxProps extends CommonWidgetProps {
+  
   var autoFocus: js.UndefOr[Boolean] = js.native
+  
   var defaultRefinement: js.UndefOr[String] = js.native
+  
   var focusShortcuts: js.UndefOr[js.Array[String]] = js.native
+  
   var loadingIndicator: js.UndefOr[ReactElement] = js.native
+  
   var onChange: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLInputElement], _]] = js.native
+  
   var onReset: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLFormElement], _]] = js.native
+  
   var onSubmit: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLFormElement], _]] = js.native
+  
   var reset: js.UndefOr[ReactElement] = js.native
+  
   var searchAsYouType: js.UndefOr[Boolean] = js.native
+  
   var showLoadingIndicator: js.UndefOr[Boolean] = js.native
+  
   var submit: js.UndefOr[ReactElement] = js.native
 }
-
 object SearchBoxProps {
+  
   @scala.inline
   def apply(): SearchBoxProps = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[SearchBoxProps]
   }
+  
   @scala.inline
   implicit class SearchBoxPropsOps[Self <: SearchBoxProps] (val x: Self) extends AnyVal {
+    
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
     @scala.inline
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
     @scala.inline
-    def withAutoFocus(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(value.asInstanceOf[js.Any])
-        ret
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
     }
+    
     @scala.inline
-    def withoutAutoFocus: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("autoFocus")(js.undefined)
-        ret
-    }
+    def setAutoFocus(value: Boolean): Self = this.set("autoFocus", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withDefaultRefinement(value: String): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRefinement")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
+    
     @scala.inline
-    def withoutDefaultRefinement: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("defaultRefinement")(js.undefined)
-        ret
-    }
+    def setDefaultRefinement(value: String): Self = this.set("defaultRefinement", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withFocusShortcuts(value: js.Array[String]): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusShortcuts")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def deleteDefaultRefinement: Self = this.set("defaultRefinement", js.undefined)
+    
     @scala.inline
-    def withoutFocusShortcuts: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("focusShortcuts")(js.undefined)
-        ret
-    }
+    def setFocusShortcutsVarargs(value: String*): Self = this.set("focusShortcuts", js.Array(value :_*))
+    
     @scala.inline
-    def withLoadingIndicator(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setFocusShortcuts(value: js.Array[String]): Self = this.set("focusShortcuts", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withoutLoadingIndicator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("loadingIndicator")(js.undefined)
-        ret
-    }
+    def deleteFocusShortcuts: Self = this.set("focusShortcuts", js.undefined)
+    
     @scala.inline
-    def withOnChange(value: /* event */ SyntheticEvent[Event, HTMLInputElement] => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setLoadingIndicator(value: ReactElement): Self = this.set("loadingIndicator", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withoutOnChange: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onChange")(js.undefined)
-        ret
-    }
+    def deleteLoadingIndicator: Self = this.set("loadingIndicator", js.undefined)
+    
     @scala.inline
-    def withOnReset(value: /* event */ SyntheticEvent[Event, HTMLFormElement] => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnChange(value: /* event */ SyntheticEvent[Event, HTMLInputElement] => _): Self = this.set("onChange", js.Any.fromFunction1(value))
+    
     @scala.inline
-    def withoutOnReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onReset")(js.undefined)
-        ret
-    }
+    def deleteOnChange: Self = this.set("onChange", js.undefined)
+    
     @scala.inline
-    def withOnSubmit(value: /* event */ SyntheticEvent[Event, HTMLFormElement] => _): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.Any.fromFunction1(value))
-        ret
-    }
+    def setOnReset(value: /* event */ SyntheticEvent[Event, HTMLFormElement] => _): Self = this.set("onReset", js.Any.fromFunction1(value))
+    
     @scala.inline
-    def withoutOnSubmit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("onSubmit")(js.undefined)
-        ret
-    }
+    def deleteOnReset: Self = this.set("onReset", js.undefined)
+    
     @scala.inline
-    def withReset(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setOnSubmit(value: /* event */ SyntheticEvent[Event, HTMLFormElement] => _): Self = this.set("onSubmit", js.Any.fromFunction1(value))
+    
     @scala.inline
-    def withoutReset: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("reset")(js.undefined)
-        ret
-    }
+    def deleteOnSubmit: Self = this.set("onSubmit", js.undefined)
+    
     @scala.inline
-    def withSearchAsYouType(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchAsYouType")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setReset(value: ReactElement): Self = this.set("reset", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withoutSearchAsYouType: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("searchAsYouType")(js.undefined)
-        ret
-    }
+    def deleteReset: Self = this.set("reset", js.undefined)
+    
     @scala.inline
-    def withShowLoadingIndicator(value: Boolean): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLoadingIndicator")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setSearchAsYouType(value: Boolean): Self = this.set("searchAsYouType", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withoutShowLoadingIndicator: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("showLoadingIndicator")(js.undefined)
-        ret
-    }
+    def deleteSearchAsYouType: Self = this.set("searchAsYouType", js.undefined)
+    
     @scala.inline
-    def withSubmit(value: ReactElement): Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submit")(value.asInstanceOf[js.Any])
-        ret
-    }
+    def setShowLoadingIndicator(value: Boolean): Self = this.set("showLoadingIndicator", value.asInstanceOf[js.Any])
+    
     @scala.inline
-    def withoutSubmit: Self = {
-        val ret = this.duplicate
-        ret.asInstanceOf[js.Dynamic].updateDynamic("submit")(js.undefined)
-        ret
-    }
+    def deleteShowLoadingIndicator: Self = this.set("showLoadingIndicator", js.undefined)
+    
+    @scala.inline
+    def setSubmit(value: ReactElement): Self = this.set("submit", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSubmit: Self = this.set("submit", js.undefined)
   }
-  
 }
-

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DBParameterGroupNameMessage extends js.Object {
   
   /**
-    * Provides the name of the DB parameter group.
+    * The name of the DB parameter group.
     */
   var DBParameterGroupName: js.UndefOr[String] = js.native
 }

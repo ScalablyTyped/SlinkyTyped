@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.ip
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.icmp
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknown_
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.igmp
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.ggp
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.ipv4
@@ -29,7 +30,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.spx
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.spxII
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknownFutureValue
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknown_
 */
 trait SecurityNetworkProtocol extends js.Object
 object SecurityNetworkProtocol {

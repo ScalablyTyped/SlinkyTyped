@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.anon.CancelComponentElementModel
-import typingsSlinky.devextreme.anon.`6`
+import typingsSlinky.devextreme.anon.`7`
+import typingsSlinky.devextreme.anon.`8`
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
 import typingsSlinky.devextreme.mod.global.JQuery
@@ -13,54 +13,86 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxOverlayOptions[T] extends WidgetOptions[T] {
   
-  /** @name dxOverlay.Options.animation */
+  /**
+    * [descr:dxOverlay.Options.animation]
+    */
   var animation: js.UndefOr[dxOverlayAnimation] = js.native
   
-  /** @name dxOverlay.Options.closeOnOutsideClick */
+  /**
+    * [descr:dxOverlay.Options.closeOnOutsideClick]
+    */
   var closeOnOutsideClick: js.UndefOr[Boolean | (js.Function1[/* event */ event, Boolean])] = js.native
   
-  /** @name dxOverlay.Options.contentTemplate */
+  /**
+    * [descr:dxOverlay.Options.contentTemplate]
+    */
   var contentTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* contentElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxOverlay.Options.deferRendering */
+  /**
+    * [descr:dxOverlay.Options.deferRendering]
+    */
   var deferRendering: js.UndefOr[Boolean] = js.native
   
-  /** @name dxOverlay.Options.dragEnabled */
+  /**
+    * [descr:dxOverlay.Options.dragEnabled]
+    */
   var dragEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxOverlay.Options.maxHeight */
+  /**
+    * [descr:dxOverlay.Options.maxHeight]
+    */
   var maxHeight: js.UndefOr[Double | String | (js.Function0[Double | String])] = js.native
   
-  /** @name dxOverlay.Options.maxWidth */
+  /**
+    * [descr:dxOverlay.Options.maxWidth]
+    */
   var maxWidth: js.UndefOr[Double | String | (js.Function0[Double | String])] = js.native
   
-  /** @name dxOverlay.Options.minHeight */
+  /**
+    * [descr:dxOverlay.Options.minHeight]
+    */
   var minHeight: js.UndefOr[Double | String | (js.Function0[Double | String])] = js.native
   
-  /** @name dxOverlay.Options.minWidth */
+  /**
+    * [descr:dxOverlay.Options.minWidth]
+    */
   var minWidth: js.UndefOr[Double | String | (js.Function0[Double | String])] = js.native
   
-  /** @name dxOverlay.Options.onHidden */
-  var onHidden: js.UndefOr[js.Function1[/* e */ `6`[T], _]] = js.native
+  /**
+    * [descr:dxOverlay.Options.onHidden]
+    */
+  var onHidden: js.UndefOr[js.Function1[/* e */ `7`[T], _]] = js.native
   
-  /** @name dxOverlay.Options.onHiding */
-  var onHiding: js.UndefOr[js.Function1[/* e */ CancelComponentElementModel[T], _]] = js.native
+  /**
+    * [descr:dxOverlay.Options.onHiding]
+    */
+  var onHiding: js.UndefOr[js.Function1[/* e */ `8`[T], _]] = js.native
   
-  /** @name dxOverlay.Options.onShowing */
-  var onShowing: js.UndefOr[js.Function1[/* e */ `6`[T], _]] = js.native
+  /**
+    * [descr:dxOverlay.Options.onShowing]
+    */
+  var onShowing: js.UndefOr[js.Function1[/* e */ `7`[T], _]] = js.native
   
-  /** @name dxOverlay.Options.onShown */
-  var onShown: js.UndefOr[js.Function1[/* e */ `6`[T], _]] = js.native
+  /**
+    * [descr:dxOverlay.Options.onShown]
+    */
+  var onShown: js.UndefOr[js.Function1[/* e */ `7`[T], _]] = js.native
   
-  /** @name dxOverlay.Options.position */
+  /**
+    * [descr:dxOverlay.Options.position]
+    */
   var position: js.UndefOr[js.Any] = js.native
   
-  /** @name dxOverlay.Options.shading */
+  /**
+    * [descr:dxOverlay.Options.shading]
+    */
   var shading: js.UndefOr[Boolean] = js.native
   
-  /** @name dxOverlay.Options.shadingColor */
+  /**
+    * [descr:dxOverlay.Options.shadingColor]
+    */
   var shadingColor: js.UndefOr[String] = js.native
 }
 object dxOverlayOptions {
@@ -164,25 +196,25 @@ object dxOverlayOptions {
     def deleteMinWidth: Self = this.set("minWidth", js.undefined)
     
     @scala.inline
-    def setOnHidden(value: /* e */ `6`[T] => _): Self = this.set("onHidden", js.Any.fromFunction1(value))
+    def setOnHidden(value: /* e */ `7`[T] => _): Self = this.set("onHidden", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnHidden: Self = this.set("onHidden", js.undefined)
     
     @scala.inline
-    def setOnHiding(value: /* e */ CancelComponentElementModel[T] => _): Self = this.set("onHiding", js.Any.fromFunction1(value))
+    def setOnHiding(value: /* e */ `8`[T] => _): Self = this.set("onHiding", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnHiding: Self = this.set("onHiding", js.undefined)
     
     @scala.inline
-    def setOnShowing(value: /* e */ `6`[T] => _): Self = this.set("onShowing", js.Any.fromFunction1(value))
+    def setOnShowing(value: /* e */ `7`[T] => _): Self = this.set("onShowing", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnShowing: Self = this.set("onShowing", js.undefined)
     
     @scala.inline
-    def setOnShown(value: /* e */ `6`[T] => _): Self = this.set("onShown", js.Any.fromFunction1(value))
+    def setOnShown(value: /* e */ `7`[T] => _): Self = this.set("onShown", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnShown: Self = this.set("onShown", js.undefined)

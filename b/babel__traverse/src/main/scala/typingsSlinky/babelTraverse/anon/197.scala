@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ParenthesizedExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.ImportNamespaceSpecifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `197` extends js.Object {
   
-  var `type`: ParenthesizedExpression = js.native
+  var `type`: ImportNamespaceSpecifier = js.native
 }
 object `197` {
   
   @scala.inline
-  def apply(`type`: ParenthesizedExpression): `197` = {
+  def apply(`type`: ImportNamespaceSpecifier): `197` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`197`]
@@ -35,6 +35,6 @@ object `197` {
     }
     
     @scala.inline
-    def setType(value: ParenthesizedExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ImportNamespaceSpecifier): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

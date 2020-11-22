@@ -20,9 +20,12 @@ import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.lastWords
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.multiWordsSynonym
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.none
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.numericRefinements
+import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.optionalFilters
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.prefixAll
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.prefixLast
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.prefixNone
+import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.queryLanguages
+import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.ruleContexts
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.singleWordSynonym
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.tagRefinements
 import typingsSlinky.algoliasearchHelper.algoliasearchHelperStrings.word
@@ -290,7 +293,7 @@ class SearchParameters_ () extends PlainSearchParameters {
   
   def getNumericRefinement(attribute: String, operator: Operator): js.Array[Double | js.Array[Double]] = js.native
   
-  def getNumericRefinements(facetName: String): js.Array[OperatorList] = js.native
+  def getNumericRefinements(facetName: String): OperatorList = js.native
   
   def getQueryParams(): SearchOptions = js.native
   
@@ -378,7 +381,7 @@ class SearchParameters_ () extends PlainSearchParameters {
     * default: null
     * https://www.algolia.com/doc/api-reference/api-parameters/insideBoundingBox/
     */
-  var insideBoundingBox: js.UndefOr[js.Array[js.Array[Double]]] = js.native
+  var insideBoundingBox: js.UndefOr[js.Array[js.Tuple4[Double, Double, Double, Double]]] = js.native
   
   /**
     * Search entries inside a given area defined by a set of points
@@ -626,7 +629,54 @@ class SearchParameters_ () extends PlainSearchParameters {
   
   def setQuery(newQuery: String): SearchParameters = js.native
   
-  def setQueryParameter(parameter: String, value: js.Any): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_disjunctiveFacets(parameter: disjunctiveFacets): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_disjunctiveFacets(parameter: disjunctiveFacets, value: js.Array[String]): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_disjunctiveFacetsRefinements(parameter: disjunctiveFacetsRefinements): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_disjunctiveFacetsRefinements(parameter: disjunctiveFacetsRefinements, value: StringDictionary[FacetList]): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_facetsExcludes(parameter: facetsExcludes): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_facetsExcludes(parameter: facetsExcludes, value: StringDictionary[FacetList]): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_facetsRefinements(parameter: facetsRefinements): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_facetsRefinements(parameter: facetsRefinements, value: StringDictionary[FacetList]): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_hierarchicalFacets(parameter: hierarchicalFacets): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_hierarchicalFacets(parameter: hierarchicalFacets, value: js.Array[HierarchicalFacet]): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_hierarchicalFacetsRefinements(parameter: hierarchicalFacetsRefinements): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_hierarchicalFacetsRefinements(parameter: hierarchicalFacetsRefinements, value: StringDictionary[FacetList]): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_index(parameter: index): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_index(parameter: index, value: String): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_numericRefinements(parameter: numericRefinements): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_numericRefinements(parameter: numericRefinements, value: StringDictionary[OperatorList]): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_optionalFilters(parameter: optionalFilters): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_optionalFilters(parameter: optionalFilters, value: js.Array[String | js.Array[String]]): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_queryLanguages(parameter: queryLanguages): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_queryLanguages(parameter: queryLanguages, value: js.Array[String]): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_ruleContexts(parameter: ruleContexts): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_ruleContexts(parameter: ruleContexts, value: js.Array[String]): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_tagRefinements(parameter: tagRefinements): SearchParameters = js.native
+  @JSName("setQueryParameter")
+  def setQueryParameter_tagRefinements(parameter: tagRefinements, value: js.Array[String]): SearchParameters = js.native
   
   def setQueryParameters(params: PlainSearchParameters): SearchParameters = js.native
   

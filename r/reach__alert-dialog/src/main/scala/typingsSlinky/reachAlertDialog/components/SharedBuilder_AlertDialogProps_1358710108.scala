@@ -18,8 +18,13 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reachAlertDialog.reachAlertDialogStrings.`additions removals`
 import typingsSlinky.reachAlertDialog.reachAlertDialogStrings.`additions text`
 import typingsSlinky.reachAlertDialog.reachAlertDialogStrings.`inline`
+import typingsSlinky.reachAlertDialog.reachAlertDialogStrings.`removals additions`
+import typingsSlinky.reachAlertDialog.reachAlertDialogStrings.`removals text`
+import typingsSlinky.reachAlertDialog.reachAlertDialogStrings.`text additions`
+import typingsSlinky.reachAlertDialog.reachAlertDialogStrings.`text removals`
 import typingsSlinky.reachAlertDialog.reachAlertDialogStrings.additions
 import typingsSlinky.reachAlertDialog.reachAlertDialogStrings.all
 import typingsSlinky.reachAlertDialog.reachAlertDialogStrings.ascending
@@ -206,7 +211,9 @@ class SharedBuilder_AlertDialogProps_1358710108[R <: js.Object] (val args: js.Ar
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

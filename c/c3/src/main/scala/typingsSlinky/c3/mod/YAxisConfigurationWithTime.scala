@@ -9,8 +9,6 @@ trait YAxisConfigurationWithTime extends YAxisConfiguration {
   
   @JSName("tick")
   var tick_YAxisConfigurationWithTime: js.UndefOr[YTickConfigurationWithTime] = js.native
-  
-  var `type`: js.UndefOr[js.Any] = js.native
 }
 object YAxisConfigurationWithTime {
   
@@ -40,11 +38,5 @@ object YAxisConfigurationWithTime {
     
     @scala.inline
     def deleteTick: Self = this.set("tick", js.undefined)
-    
-    @scala.inline
-    def setType(value: js.Any): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteType: Self = this.set("type", js.undefined)
   }
 }

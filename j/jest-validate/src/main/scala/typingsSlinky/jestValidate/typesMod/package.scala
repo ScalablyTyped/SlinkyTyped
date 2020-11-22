@@ -6,5 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object typesMod {
   
-  type DeprecatedOptions = typingsSlinky.std.Record[java.lang.String, js.Function]
+  type DeprecatedOptionFunc = js.Function1[/* arg */ typingsSlinky.std.Record[java.lang.String, js.Any], java.lang.String]
+  
+  type DeprecatedOptions = typingsSlinky.std.Record[java.lang.String, typingsSlinky.jestValidate.typesMod.DeprecatedOptionFunc]
 }

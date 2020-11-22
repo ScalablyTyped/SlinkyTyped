@@ -26,6 +26,12 @@ trait StopOptions extends js.Object {
   var linesOfStops: js.UndefOr[Boolean] = js.native
   
   /**
+    * parse & expose hints & warnings?
+    * @default true
+    */
+  var remarks: js.UndefOr[Boolean] = js.native
+  
+  /**
     * parse & expose sub-stops of stations?
     * @default true
     */
@@ -71,6 +77,12 @@ object StopOptions {
     
     @scala.inline
     def deleteLinesOfStops: Self = this.set("linesOfStops", js.undefined)
+    
+    @scala.inline
+    def setRemarks(value: Boolean): Self = this.set("remarks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRemarks: Self = this.set("remarks", js.undefined)
     
     @scala.inline
     def setSubStops(value: Boolean): Self = this.set("subStops", value.asInstanceOf[js.Any])

@@ -1,8 +1,8 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.viz.MapLayerElement
-import typingsSlinky.devextreme.mod.DevExpress.viz.dxVectorMap
+import typingsSlinky.devextreme.mod.DevExpress.viz.dxSankey
+import typingsSlinky.devextreme.mod.DevExpress.viz.dxSankeyLink
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `27` extends js.Object {
   
-  var component: js.UndefOr[dxVectorMap] = js.native
+  var component: js.UndefOr[dxSankey] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
   
-  var target: js.UndefOr[MapLayerElement] = js.native
+  var target: js.UndefOr[dxSankeyLink] = js.native
 }
 object `27` {
   
@@ -42,7 +42,7 @@ object `27` {
     }
     
     @scala.inline
-    def setComponent(value: dxVectorMap): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxSankey): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -60,7 +60,7 @@ object `27` {
     def deleteModel: Self = this.set("model", js.undefined)
     
     @scala.inline
-    def setTarget(value: MapLayerElement): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setTarget(value: dxSankeyLink): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)

@@ -36,7 +36,7 @@ trait TypeofImage extends Instantiable0[Image] {
     failure: js.Function1[/* error */ js.Any, Unit]
   ): js.Any = js.native
   
-  def prefetch(url: String): js.Any = js.native
+  def prefetch(url: String): js.Promise[Boolean] = js.native
   
   var queryCache: js.UndefOr[
     js.Function1[
@@ -46,7 +46,7 @@ trait TypeofImage extends Instantiable0[Image] {
   ] = js.native
   
   /**
-    * @see https://facebook.github.io/react-native/docs/image.html#resolveassetsource
+    * @see https://reactnative.dev/docs/image#resolveassetsource
     */
   def resolveAssetSource(source: ImageSourcePropType): ImageResolvedAssetSource = js.native
 }

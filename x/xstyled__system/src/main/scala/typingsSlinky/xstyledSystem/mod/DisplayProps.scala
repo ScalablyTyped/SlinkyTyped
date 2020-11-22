@@ -9,7 +9,7 @@ trait DisplayProps extends js.Object {
   
   val display: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object DisplayProps {
     }
     
     @scala.inline
+    def setDisplayVarargs(value: js.Any*): Self = this.set("display", js.Array(value :_*))
+    
+    @scala.inline
     def setDisplay(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _
         ]
     ): Self = this.set("display", value.asInstanceOf[js.Any])
     

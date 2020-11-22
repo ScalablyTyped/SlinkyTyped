@@ -13,6 +13,11 @@ trait UpdateCampaignRequest extends js.Object {
   var campaignArn: Arn = js.native
   
   /**
+    * The configuration details of a campaign.
+    */
+  var campaignConfig: js.UndefOr[CampaignConfig] = js.native
+  
+  /**
     * Specifies the requested minimum provisioned transactions (recommendations) per second that Amazon Personalize will support.
     */
   var minProvisionedTPS: js.UndefOr[TransactionsPerSecond] = js.native
@@ -47,6 +52,12 @@ object UpdateCampaignRequest {
     
     @scala.inline
     def setCampaignArn(value: Arn): Self = this.set("campaignArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCampaignConfig(value: CampaignConfig): Self = this.set("campaignConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCampaignConfig: Self = this.set("campaignConfig", js.undefined)
     
     @scala.inline
     def setMinProvisionedTPS(value: TransactionsPerSecond): Self = this.set("minProvisionedTPS", value.asInstanceOf[js.Any])

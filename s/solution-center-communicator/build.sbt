@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "solution-center-communicator"
-version := "2.3.0-dt-20200515Z-3d72dd"
+version := "2.3.0-dt-20201002Z-3d72dd"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

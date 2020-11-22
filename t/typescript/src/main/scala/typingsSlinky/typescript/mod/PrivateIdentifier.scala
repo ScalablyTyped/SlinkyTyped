@@ -10,10 +10,10 @@ trait PrivateIdentifier
      with DeclarationName
      with PropertyName {
   
-  var escapedText: String = js.native
+  val escapedText: String = js.native
   
   @JSName("kind")
-  var kind_PrivateIdentifier: typingsSlinky.typescript.mod.SyntaxKind.PrivateIdentifier = js.native
+  val kind_PrivateIdentifier: typingsSlinky.typescript.mod.SyntaxKind.PrivateIdentifier = js.native
   
   val text: java.lang.String = js.native
 }

@@ -29,6 +29,8 @@ trait CreateBucketRequest extends js.Object {
   
   var standard: js.UndefOr[Boolean] = js.native
   
+  var storageClass: js.UndefOr[String] = js.native
+  
   var userProject: js.UndefOr[String] = js.native
   
   var versioning: js.UndefOr[Versioning] = js.native
@@ -124,6 +126,12 @@ object CreateBucketRequest {
     
     @scala.inline
     def deleteStandard: Self = this.set("standard", js.undefined)
+    
+    @scala.inline
+    def setStorageClass(value: String): Self = this.set("storageClass", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStorageClass: Self = this.set("storageClass", js.undefined)
     
     @scala.inline
     def setUserProject(value: String): Self = this.set("userProject", value.asInstanceOf[js.Any])

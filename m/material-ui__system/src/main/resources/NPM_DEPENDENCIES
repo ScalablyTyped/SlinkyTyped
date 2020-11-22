@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "@material-ui/system" : "4.7.1"
+      "@material-ui/system" : "4.9.14"
     }
   ],
   "test-dependencies" : [
     {
-      "@material-ui/system" : "4.7.1"
+      "@material-ui/system" : "4.9.14"
     }
   ],
   "compile-devDependencies" : [

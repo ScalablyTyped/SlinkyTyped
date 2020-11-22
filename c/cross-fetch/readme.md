@@ -1,7 +1,7 @@
 
 # Scala.js typings for cross-fetch
 
-Typings are for version 2.2.2
+Typings are for version 3.0.6
 
 ## Library description:
 Universal WHATWG Fetch API for Node, Browsers and React Native

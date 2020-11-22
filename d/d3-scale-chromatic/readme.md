@@ -1,7 +1,7 @@
 
 # Scala.js typings for d3-scale-chromatic
 
-Typings are for version 1.5
+Typings are for version 2.0
 
 ## Library description:
 Sequential, diverging and categorical color schemes.

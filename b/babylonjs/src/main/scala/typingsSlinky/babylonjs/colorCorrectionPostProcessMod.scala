@@ -4,6 +4,8 @@ import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -130,5 +132,17 @@ object colorCorrectionPostProcessMod extends js.Object {
     ) = this()
     
     var _colorTableTexture: js.Any = js.native
+    
+    /**
+      * Gets the color table url used to create the LUT texture
+      */
+    var colorTableUrl: String = js.native
+  }
+  /* static members */
+  @js.native
+  object ColorCorrectionPostProcess extends js.Object {
+    
+    /** @hidden */
+    def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): Nullable[ColorCorrectionPostProcess] = js.native
   }
 }

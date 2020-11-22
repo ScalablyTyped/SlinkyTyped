@@ -8,4 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SyntaxList extends Node {
   
   var _children: js.Array[Node] = js.native
+  
+  @JSName("kind")
+  var kind_SyntaxList: typingsSlinky.typescript.mod.SyntaxKind.SyntaxList = js.native
 }

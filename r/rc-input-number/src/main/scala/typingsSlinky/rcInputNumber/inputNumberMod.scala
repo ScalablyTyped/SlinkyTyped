@@ -1,5 +1,7 @@
 package typingsSlinky.rcInputNumber
 
+import org.scalajs.dom.raw.HTMLInputElement
+import typingsSlinky.node.NodeJS.Timer
 import typingsSlinky.rcInputNumber.anon.AutoComplete
 import typingsSlinky.rcInputNumber.anon.PartialInputNumberProps
 import typingsSlinky.rcInputNumber.interfaceMod.InputNumberProps
@@ -17,7 +19,7 @@ object inputNumberMod extends js.Object {
   trait InputNumber
     extends Component[PartialInputNumberProps, InputNumberState, js.Any] {
     
-    var autoStepTimer: js.Any = js.native
+    var autoStepTimer: Timer = js.native
     
     def blur(): Unit = js.native
     
@@ -30,15 +32,15 @@ object inputNumberMod extends js.Object {
     @JSName("componentWillUnmount")
     def componentWillUnmount_MInputNumber(): Unit = js.native
     
-    var currentValue: Double = js.native
+    var currentValue: Double | String = js.native
     
-    var cursorAfter: js.Any = js.native
+    var cursorAfter: Double | String = js.native
     
-    var cursorBefore: js.Any = js.native
+    var cursorBefore: String = js.native
     
-    var cursorEnd: js.Any = js.native
+    var cursorEnd: Double = js.native
     
-    var cursorStart: js.Any = js.native
+    var cursorStart: Double = js.native
     
     def down(e: js.Any, ratio: js.Any, recursive: js.Any): Unit = js.native
     
@@ -73,9 +75,9 @@ object inputNumberMod extends js.Object {
     
     def getValueFromEvent(e: js.Any): js.Any = js.native
     
-    var input: js.Any = js.native
+    var input: HTMLInputElement = js.native
     
-    var inputting: js.Any = js.native
+    var inputting: Boolean = js.native
     
     def isNotCompleteNumber(num: js.Any): Boolean = js.native
     
@@ -95,7 +97,7 @@ object inputNumberMod extends js.Object {
     
     def partRestoreByAfter(str: js.Any): js.Any = js.native
     
-    var pressingUpOrDown: js.Any = js.native
+    var pressingUpOrDown: Boolean = js.native
     
     var rawInput: js.Any = js.native
     

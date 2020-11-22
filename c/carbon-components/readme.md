@@ -1,7 +1,7 @@
 
 # Scala.js typings for carbon-components
 
-Typings are for version 10.15
+Typings are for version 10.23
 
 ## Library description:
 The Carbon Design System is IBM’s open-source design system for products and experiences.

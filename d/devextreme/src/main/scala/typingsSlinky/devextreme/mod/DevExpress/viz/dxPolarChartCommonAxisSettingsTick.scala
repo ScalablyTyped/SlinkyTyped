@@ -7,19 +7,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartCommonAxisSettingsTick extends js.Object {
   
-  /** @name dxPolarChart.Options.commonAxisSettings.tick.color */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.tick.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.tick.length */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.tick.length]
+    */
   var length: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.tick.opacity */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.tick.opacity]
+    */
   var opacity: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.tick.visible */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.tick.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.tick.width */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.tick.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxPolarChartCommonAxisSettingsTick {

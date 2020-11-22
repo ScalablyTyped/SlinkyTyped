@@ -18,6 +18,13 @@ trait CompletionInfo extends js.Object {
     * true when the current location also allows for a new identifier
     */
   var isNewIdentifierLocation: Boolean = js.native
+  
+  /**
+    * In the absence of `CompletionEntry["replacementSpan"], the editor may choose whether to use
+    * this span or its default one. If `CompletionEntry["replacementSpan"]` is defined, that span
+    * must be used to commit that completion entry.
+    */
+  var optionalReplacementSpan: js.UndefOr[TextSpan] = js.native
 }
 object CompletionInfo {
   
@@ -61,5 +68,11 @@ object CompletionInfo {
     
     @scala.inline
     def setIsNewIdentifierLocation(value: Boolean): Self = this.set("isNewIdentifierLocation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOptionalReplacementSpan(value: TextSpan): Self = this.set("optionalReplacementSpan", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOptionalReplacementSpan: Self = this.set("optionalReplacementSpan", js.undefined)
   }
 }

@@ -10,6 +10,12 @@ package object mod {
   
   type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
   
+  type ShouldSelect = js.Function2[
+    /* shouldSelect */ scala.Boolean, 
+    /* e */ slinky.web.SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLInputElement], 
+    scala.Boolean
+  ]
+  
   type StringPropertyNames[T /* <: js.Object */] = /* import warning: importer.ImportType#apply Failed type conversion: {[ K in keyof T ]: T[K] extends string? K : never}[keyof T] */ js.Any
   
   type TypeaheadLabelKey[T /* <: typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel */] = typingsSlinky.reactBootstrapTypeahead.mod.StringPropertyNames[T] | (js.Function1[/* option */ T, java.lang.String])

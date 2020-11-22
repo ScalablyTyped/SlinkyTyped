@@ -13,7 +13,7 @@ trait ApplicationDetail extends js.Object {
   var ApplicationARN: ResourceARN = js.native
   
   /**
-    * Provides details about the application's SQL or Java code and starting parameters.
+    * Provides details about the application's Java, SQL, or Scala code and starting parameters.
     */
   var ApplicationConfigurationDescription: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.ApplicationConfigurationDescription] = js.native
   
@@ -53,7 +53,7 @@ trait ApplicationDetail extends js.Object {
   var LastUpdateTimestamp: js.UndefOr[js.Date] = js.native
   
   /**
-    * The runtime environment for the application (SQL-1.0 or FLINK-1_6).
+    * The runtime environment for the application (SQL-1.0, FLINK-1_6, or FLINK-1_8).
     */
   var RuntimeEnvironment: typingsSlinky.awsSdk.kinesisanalyticsv2Mod.RuntimeEnvironment = js.native
   

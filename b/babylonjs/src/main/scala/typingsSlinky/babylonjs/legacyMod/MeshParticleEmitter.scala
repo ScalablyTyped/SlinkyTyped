@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.legacyMod
 
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,6 +13,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 class MeshParticleEmitter ()
   extends typingsSlinky.babylonjs.indexMod.MeshParticleEmitter {
-  def this(/** Defines the mesh to use as source */
-  mesh: typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh) = this()
+  def this(mesh: Nullable[typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh]) = this()
 }

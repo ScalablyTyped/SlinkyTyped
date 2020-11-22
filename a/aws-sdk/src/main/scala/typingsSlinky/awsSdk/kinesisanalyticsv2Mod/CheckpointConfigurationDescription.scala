@@ -13,7 +13,7 @@ trait CheckpointConfigurationDescription extends js.Object {
   var CheckpointInterval: js.UndefOr[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.CheckpointInterval] = js.native
   
   /**
-    * Describes whether checkpointing is enabled for a Java-based Kinesis Data Analytics application.  If CheckpointConfiguration.ConfigurationType is DEFAULT, the application will use a CheckpointingEnabled value of true, even if this value is set to another value using this API or in application code. 
+    * Describes whether checkpointing is enabled for a Flink-based Kinesis Data Analytics application.  If CheckpointConfiguration.ConfigurationType is DEFAULT, the application will use a CheckpointingEnabled value of true, even if this value is set to another value using this API or in application code. 
     */
   var CheckpointingEnabled: js.UndefOr[BooleanObject] = js.native
   

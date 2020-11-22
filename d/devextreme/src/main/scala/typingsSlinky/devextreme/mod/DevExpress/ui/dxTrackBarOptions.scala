@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTrackBarOptions[T] extends EditorOptions[T] {
   
-  /** @name dxTrackBar.Options.max */
+  /**
+    * [descr:dxTrackBar.Options.max]
+    */
   var max: js.UndefOr[Double] = js.native
   
-  /** @name dxTrackBar.Options.min */
+  /**
+    * [descr:dxTrackBar.Options.min]
+    */
   var min: js.UndefOr[Double] = js.native
 }
 object dxTrackBarOptions {

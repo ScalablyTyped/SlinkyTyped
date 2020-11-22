@@ -21,7 +21,7 @@ object mod extends js.Object {
   def registerOp(name: String, opFunc: OpExecutor): Unit = js.native
   
   @JSName("version_converter")
-  val versionConverter: /* "2.0.1" */ String = js.native
+  val versionConverter: /* "2.7.0" */ String = js.native
   
   @js.native
   class GraphModel protected ()

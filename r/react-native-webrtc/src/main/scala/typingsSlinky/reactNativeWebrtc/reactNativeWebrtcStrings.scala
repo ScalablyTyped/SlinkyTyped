@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeWebrtc
 import typingsSlinky.reactNativeWebrtc.mod.MediaStreamTrackState
 import typingsSlinky.reactNativeWebrtc.mod.RTCIceConnectionState
 import typingsSlinky.reactNativeWebrtc.mod.RTCIceGatheringState
+import typingsSlinky.reactNativeWebrtc.mod.RTCPeerConnectionState
 import typingsSlinky.reactNativeWebrtc.mod.RTCSignalingState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,6 +28,9 @@ object reactNativeWebrtcStrings {
   
   @scala.inline
   def connected: connected = "connected".asInstanceOf[connected]
+  
+  @scala.inline
+  def connecting: connecting = "connecting".asInstanceOf[connecting]
   
   @scala.inline
   def contain: contain = "contain".asInstanceOf[contain]
@@ -88,6 +92,7 @@ object reactNativeWebrtcStrings {
   @js.native
   sealed trait closed
     extends RTCIceConnectionState
+       with RTCPeerConnectionState
        with RTCSignalingState
   
   @js.native
@@ -97,7 +102,12 @@ object reactNativeWebrtcStrings {
   sealed trait completed extends RTCIceConnectionState
   
   @js.native
-  sealed trait connected extends RTCIceConnectionState
+  sealed trait connected
+    extends RTCIceConnectionState
+       with RTCPeerConnectionState
+  
+  @js.native
+  sealed trait connecting extends RTCPeerConnectionState
   
   @js.native
   sealed trait contain extends js.Object
@@ -106,7 +116,9 @@ object reactNativeWebrtcStrings {
   sealed trait cover extends js.Object
   
   @js.native
-  sealed trait disconnected extends RTCIceConnectionState
+  sealed trait disconnected
+    extends RTCIceConnectionState
+       with RTCPeerConnectionState
   
   @js.native
   sealed trait ended extends MediaStreamTrackState
@@ -115,7 +127,9 @@ object reactNativeWebrtcStrings {
   sealed trait environment extends js.Object
   
   @js.native
-  sealed trait failed extends RTCIceConnectionState
+  sealed trait failed
+    extends RTCIceConnectionState
+       with RTCPeerConnectionState
   
   @js.native
   sealed trait gathering extends RTCIceGatheringState
@@ -139,6 +153,7 @@ object reactNativeWebrtcStrings {
   sealed trait `new`
     extends RTCIceConnectionState
        with RTCIceGatheringState
+       with RTCPeerConnectionState
   
   @js.native
   sealed trait public extends js.Object

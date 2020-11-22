@@ -31,6 +31,11 @@ trait IonSegment extends js.Object {
   var scrollable: Boolean = js.native
   
   /**
+    * If `true`, users will be able to swipe between segment buttons to activate them.
+    */
+  var swipeGesture: Boolean = js.native
+  
+  /**
     * the value of the segment.
     */
   var value: js.UndefOr[String | Null] = js.native
@@ -38,8 +43,8 @@ trait IonSegment extends js.Object {
 object IonSegment {
   
   @scala.inline
-  def apply(disabled: Boolean, scrollable: Boolean): IonSegment = {
-    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], scrollable = scrollable.asInstanceOf[js.Any])
+  def apply(disabled: Boolean, scrollable: Boolean, swipeGesture: Boolean): IonSegment = {
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], scrollable = scrollable.asInstanceOf[js.Any], swipeGesture = swipeGesture.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonSegment]
   }
   
@@ -63,6 +68,9 @@ object IonSegment {
     
     @scala.inline
     def setScrollable(value: Boolean): Self = this.set("scrollable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSwipeGesture(value: Boolean): Self = this.set("swipeGesture", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])

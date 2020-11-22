@@ -1,6 +1,7 @@
 package typingsSlinky.nodePgMigrate
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.nodePgMigrate.anon.PublicPartPgLiteral
 import typingsSlinky.nodePgMigrate.distTypesMod.Literal
 import typingsSlinky.nodePgMigrate.distTypesMod.MigrationOptions
 import typingsSlinky.nodePgMigrate.distTypesMod.RunnerOption
@@ -9,6 +10,7 @@ import typingsSlinky.nodePgMigrate.functionsTypesMod.FunctionParamType
 import typingsSlinky.nodePgMigrate.generalTypesMod.Name
 import typingsSlinky.nodePgMigrate.generalTypesMod.Type
 import typingsSlinky.nodePgMigrate.generalTypesMod.Value
+import typingsSlinky.nodePgMigrate.mod.PgLiteral
 import typingsSlinky.nodePgMigrate.tablesTypesMod.ColumnDefinition
 import typingsSlinky.nodePgMigrate.tablesTypesMod.ColumnDefinitions
 import scala.scalajs.js
@@ -26,7 +28,15 @@ object utilsMod extends js.Object {
   
   def createSchemalize(shouldDecamelize: Boolean, shouldQuote: Boolean): js.Function1[/* v */ Name, String] = js.native
   
-  def createTransformer(literal: Literal): js.Function2[/* s */ String, /* d */ js.UndefOr[StringDictionary[Name]], String] = js.native
+  def createTransformer(literal: Literal): js.Function2[
+    /* s */ String, 
+    /* d */ js.UndefOr[
+      StringDictionary[
+        String | Double | Boolean | PgLiteral | PublicPartPgLiteral | js.Array[Value] | typingsSlinky.nodePgMigrate.anon.Name | Null
+      ]
+    ], 
+    String
+  ] = js.native
   
   def escapeValue(`val`: Value): String | Double = js.native
   
@@ -46,4 +56,17 @@ object utilsMod extends js.Object {
   
   def makeComment(`object`: String, name: String): String = js.native
   def makeComment(`object`: String, name: String, text: String): String = js.native
+  
+  @js.native
+  class StringIdGenerator () extends js.Object {
+    def this(chars: String) = this()
+    
+    val chars: js.Any = js.native
+    
+    var ids: js.Any = js.native
+    
+    var increment: js.Any = js.native
+    
+    def next(): String = js.native
+  }
 }

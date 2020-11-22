@@ -5,11 +5,12 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.rcTrigger.interfaceMod.ActionType
 import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.rcTrigger.interfaceMod.AnimationType
 import typingsSlinky.rcTrigger.interfaceMod.BuildInPlacements
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcTrigger.interfaceMod.MobileConfig
 import typingsSlinky.rcTrigger.interfaceMod.TransitionNameType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
@@ -86,10 +87,13 @@ class SharedBuilder_TriggerProps1005917762[R <: js.Object] (val args: js.Array[j
   def maskClosable(value: Boolean): this.type = set("maskClosable", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def maskMotion(value: MotionType): this.type = set("maskMotion", value.asInstanceOf[js.Any])
+  def maskMotion(value: CSSMotionProps): this.type = set("maskMotion", value.asInstanceOf[js.Any])
   
   @scala.inline
   def maskTransitionName(value: TransitionNameType): this.type = set("maskTransitionName", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def mobile(value: MobileConfig): this.type = set("mobile", value.asInstanceOf[js.Any])
   
   @scala.inline
   def mouseEnterDelay(value: Double): this.type = set("mouseEnterDelay", value.asInstanceOf[js.Any])
@@ -122,7 +126,7 @@ class SharedBuilder_TriggerProps1005917762[R <: js.Object] (val args: js.Array[j
   def popupClassName(value: String): this.type = set("popupClassName", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def popupMotion(value: MotionType): this.type = set("popupMotion", value.asInstanceOf[js.Any])
+  def popupMotion(value: CSSMotionProps): this.type = set("popupMotion", value.asInstanceOf[js.Any])
   
   @scala.inline
   def popupPlacement(value: String): this.type = set("popupPlacement", value.asInstanceOf[js.Any])

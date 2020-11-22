@@ -17,6 +17,9 @@ trait ParseConfig[T] extends js.Object {
    // default: undefined
   var chunk: js.UndefOr[js.Function2[/* results */ ParseResult[T], /* parser */ Parser, Unit]] = js.native
   
+   // default: [',', '\t', '|', ';', Papa.RECORD_SEP, Papa.UNIT_SEP]
+  var chunkSize: js.UndefOr[Double] = js.native
+  
    // default: false
   var comments: js.UndefOr[Boolean | String] = js.native
   
@@ -66,7 +69,7 @@ trait ParseConfig[T] extends js.Object {
    // default: undefined
   var skipEmptyLines: js.UndefOr[Boolean | greedy] = js.native
   
-   // default: [',', '\t', '|', ';', Papa.RECORD_SEP, Papa.UNIT_SEP]
+   // default: undefined
   // Callbacks
   var step: js.UndefOr[js.Function2[/* results */ ParseResult[T], /* parser */ Parser, Unit]] = js.native
   
@@ -119,6 +122,12 @@ object ParseConfig {
     
     @scala.inline
     def deleteChunk: Self = this.set("chunk", js.undefined)
+    
+    @scala.inline
+    def setChunkSize(value: Double): Self = this.set("chunkSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChunkSize: Self = this.set("chunkSize", js.undefined)
     
     @scala.inline
     def setComments(value: Boolean | String): Self = this.set("comments", value.asInstanceOf[js.Any])

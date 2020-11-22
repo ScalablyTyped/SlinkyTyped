@@ -55,7 +55,7 @@ object Options {
     
     @scala.inline
     def setGeometryFunction1(
-      value: /* p0 */ FeatureLike => typingsSlinky.ol.geometryMod.default | typingsSlinky.ol.renderFeatureMod.default
+      value: /* p0 */ FeatureLike => js.UndefOr[typingsSlinky.ol.geometryMod.default | typingsSlinky.ol.renderFeatureMod.default]
     ): Self = this.set("geometry", js.Any.fromFunction1(value))
     
     @scala.inline

@@ -1,8 +1,6 @@
 package typingsSlinky.typedoc.mod.TypeScript
 
-import typingsSlinky.typescript.mod.BooleanLiteral
-import typingsSlinky.typescript.mod.SyntaxKind.TrueKeyword
-import typingsSlinky.typescript.mod.Token
+import typingsSlinky.typescript.mod.TrueLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,5 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createTrue extends js.Object {
   
-  def apply(): BooleanLiteral with Token[TrueKeyword] = js.native
+  /** @deprecated Use `factory.createTrue` or the factory supplied by your transformation context instead. */
+  def apply(): TrueLiteral = js.native
 }

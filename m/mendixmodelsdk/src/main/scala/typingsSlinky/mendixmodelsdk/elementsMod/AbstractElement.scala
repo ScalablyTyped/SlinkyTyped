@@ -1,6 +1,7 @@
 package typingsSlinky.mendixmodelsdk.elementsMod
 
 import typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.structuresMod.Structure
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
@@ -12,9 +13,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
 - typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement because var conflicts: container, id, isLoaded, model, structureTypeName, unit. Inlined load, load, load, load, asLoaded */ @JSImport("mendixmodelsdk/dist/sdk/internal/elements", "AbstractElement")
 @js.native
-abstract class AbstractElement protected ()
-  extends Structure
-     with Container
+abstract class AbstractElement[TModel /* <: IAbstractModel */, TContainer /* <: Container */] protected ()
+  extends Structure[TModel, TContainer]
      with IContainer {
   def this(model: AbstractModel, structureTypeName: String, id: String, isPartial: Boolean) = this()
   def this(
@@ -36,13 +36,10 @@ abstract class AbstractElement protected ()
   @JSName("asLoaded")
   def asLoaded_This(): this.type = js.native
   
-  @JSName("container")
-  val container_FAbstractElement: Container = js.native
-  
   /**
     * Given an element id, returns the element in this abstract element with that id, otherwise null.
     */
-  def findElementById(id: String): AbstractElement | Null = js.native
+  def findElementById(id: String): (AbstractElement[IAbstractModel, Container]) | Null = js.native
   
   /**
     * Checks whether all properties are available at the moment

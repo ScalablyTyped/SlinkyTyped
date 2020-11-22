@@ -18,6 +18,8 @@ trait Options extends js.Object {
   
   var imageLoadFunction: js.UndefOr[LoadFunction] = js.native
   
+  var imageSmoothing: js.UndefOr[Boolean] = js.native
+  
   var metersPerUnit: js.UndefOr[Double] = js.native
   
   var params: js.UndefOr[js.Any] = js.native
@@ -78,6 +80,12 @@ object Options {
     
     @scala.inline
     def deleteImageLoadFunction: Self = this.set("imageLoadFunction", js.undefined)
+    
+    @scala.inline
+    def setImageSmoothing(value: Boolean): Self = this.set("imageSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImageSmoothing: Self = this.set("imageSmoothing", js.undefined)
     
     @scala.inline
     def setMetersPerUnit(value: Double): Self = this.set("metersPerUnit", value.asInstanceOf[js.Any])

@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.textureMod.Texture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,36 +34,27 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: Double,
       camera: Camera
     ) = this()
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: PostProcessOptions,
       camera: Camera
     ) = this()
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: Double,
       camera: Camera,
       samplingMode: Double
@@ -70,12 +62,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: PostProcessOptions,
       camera: Camera,
       samplingMode: Double
@@ -83,12 +72,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: Double,
       camera: Camera,
       samplingMode: js.UndefOr[scala.Nothing],
@@ -97,12 +83,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: Double,
       camera: Camera,
       samplingMode: Double,
@@ -111,12 +94,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: PostProcessOptions,
       camera: Camera,
       samplingMode: js.UndefOr[scala.Nothing],
@@ -125,12 +105,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: PostProcessOptions,
       camera: Camera,
       samplingMode: Double,
@@ -139,12 +116,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: Double,
       camera: Camera,
       samplingMode: js.UndefOr[scala.Nothing],
@@ -154,12 +128,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: Double,
       camera: Camera,
       samplingMode: js.UndefOr[scala.Nothing],
@@ -169,12 +140,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: Double,
       camera: Camera,
       samplingMode: Double,
@@ -184,12 +152,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: Double,
       camera: Camera,
       samplingMode: Double,
@@ -199,12 +164,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: PostProcessOptions,
       camera: Camera,
       samplingMode: js.UndefOr[scala.Nothing],
@@ -214,12 +176,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: PostProcessOptions,
       camera: Camera,
       samplingMode: js.UndefOr[scala.Nothing],
@@ -229,12 +188,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: PostProcessOptions,
       camera: Camera,
       samplingMode: Double,
@@ -244,12 +200,9 @@ object refractionPostProcessMod extends js.Object {
     def this(
       name: String,
       refractionTextureUrl: String,
-      /** the base color of the refraction (used to taint the rendering) */
-    color: Color3,
-      /** simulated refraction depth */
-    depth: Double,
-      /** the coefficient of the base color (0 to remove base color tainting) */
-    colorLevel: Double,
+      color: Color3,
+      depth: Double,
+      colorLevel: Double,
       options: PostProcessOptions,
       camera: Camera,
       samplingMode: Double,
@@ -275,6 +228,17 @@ object refractionPostProcessMod extends js.Object {
       * Please note that you are responsible for disposing the texture if you set it manually
       */
     def refractionTexture: Texture = js.native
+    
+    /** Gets the url used to load the refraction texture */
+    var refractionTextureUrl: String = js.native
+    
     def refractionTexture_=(value: Texture): Unit = js.native
+  }
+  /* static members */
+  @js.native
+  object RefractionPostProcess extends js.Object {
+    
+    /** @hidden */
+    def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): RefractionPostProcess = js.native
   }
 }

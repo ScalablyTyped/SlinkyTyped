@@ -10,69 +10,69 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object focusElementWithinMod extends js.Object {
   
-  def default(container: Document, focus: Focus): Unit = js.native
-  def default(
+  def focusElementWithin(container: Document, focus: Focus): Unit = js.native
+  def focusElementWithin(
     container: Document,
     focus: Focus,
     programatic: js.UndefOr[scala.Nothing],
     preventScroll: js.UndefOr[scala.Nothing],
     elements: js.Array[HTMLElement]
   ): Unit = js.native
-  def default(container: Document, focus: Focus, programatic: js.UndefOr[scala.Nothing], preventScroll: Boolean): Unit = js.native
-  def default(
+  def focusElementWithin(container: Document, focus: Focus, programatic: js.UndefOr[scala.Nothing], preventScroll: Boolean): Unit = js.native
+  def focusElementWithin(
     container: Document,
     focus: Focus,
     programatic: js.UndefOr[scala.Nothing],
     preventScroll: Boolean,
     elements: js.Array[HTMLElement]
   ): Unit = js.native
-  def default(container: Document, focus: Focus, programatic: Boolean): Unit = js.native
-  def default(
+  def focusElementWithin(container: Document, focus: Focus, programatic: Boolean): Unit = js.native
+  def focusElementWithin(
     container: Document,
     focus: Focus,
     programatic: Boolean,
     preventScroll: js.UndefOr[scala.Nothing],
     elements: js.Array[HTMLElement]
   ): Unit = js.native
-  def default(container: Document, focus: Focus, programatic: Boolean, preventScroll: Boolean): Unit = js.native
-  def default(
+  def focusElementWithin(container: Document, focus: Focus, programatic: Boolean, preventScroll: Boolean): Unit = js.native
+  def focusElementWithin(
     container: Document,
     focus: Focus,
     programatic: Boolean,
     preventScroll: Boolean,
     elements: js.Array[HTMLElement]
   ): Unit = js.native
-  def default(container: HTMLElement, focus: Focus): Unit = js.native
-  def default(
+  def focusElementWithin(container: HTMLElement, focus: Focus): Unit = js.native
+  def focusElementWithin(
     container: HTMLElement,
     focus: Focus,
     programatic: js.UndefOr[scala.Nothing],
     preventScroll: js.UndefOr[scala.Nothing],
     elements: js.Array[HTMLElement]
   ): Unit = js.native
-  def default(
+  def focusElementWithin(
     container: HTMLElement,
     focus: Focus,
     programatic: js.UndefOr[scala.Nothing],
     preventScroll: Boolean
   ): Unit = js.native
-  def default(
+  def focusElementWithin(
     container: HTMLElement,
     focus: Focus,
     programatic: js.UndefOr[scala.Nothing],
     preventScroll: Boolean,
     elements: js.Array[HTMLElement]
   ): Unit = js.native
-  def default(container: HTMLElement, focus: Focus, programatic: Boolean): Unit = js.native
-  def default(
+  def focusElementWithin(container: HTMLElement, focus: Focus, programatic: Boolean): Unit = js.native
+  def focusElementWithin(
     container: HTMLElement,
     focus: Focus,
     programatic: Boolean,
     preventScroll: js.UndefOr[scala.Nothing],
     elements: js.Array[HTMLElement]
   ): Unit = js.native
-  def default(container: HTMLElement, focus: Focus, programatic: Boolean, preventScroll: Boolean): Unit = js.native
-  def default(
+  def focusElementWithin(container: HTMLElement, focus: Focus, programatic: Boolean, preventScroll: Boolean): Unit = js.native
+  def focusElementWithin(
     container: HTMLElement,
     focus: Focus,
     programatic: Boolean,

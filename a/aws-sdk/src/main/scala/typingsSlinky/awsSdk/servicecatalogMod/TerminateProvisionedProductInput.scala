@@ -28,6 +28,11 @@ trait TerminateProvisionedProductInput extends js.Object {
   var ProvisionedProductName: js.UndefOr[ProvisionedProductNameOrArn] = js.native
   
   /**
+    * When this boolean parameter is set to true, the TerminateProvisionedProduct API deletes the Service Catalog provisioned product. However, it does not remove the CloudFormation stack, stack set, or the underlying resources of the deleted provisioned product. The default value is false.
+    */
+  var RetainPhysicalResources: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.RetainPhysicalResources] = js.native
+  
+  /**
     * An idempotency token that uniquely identifies the termination request. This token is only valid during the termination process. After the provisioned product is terminated, subsequent requests to terminate the same provisioned product always return ResourceNotFound.
     */
   var TerminateToken: IdempotencyToken = js.native
@@ -81,5 +86,11 @@ object TerminateProvisionedProductInput {
     
     @scala.inline
     def deleteProvisionedProductName: Self = this.set("ProvisionedProductName", js.undefined)
+    
+    @scala.inline
+    def setRetainPhysicalResources(value: RetainPhysicalResources): Self = this.set("RetainPhysicalResources", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRetainPhysicalResources: Self = this.set("RetainPhysicalResources", js.undefined)
   }
 }

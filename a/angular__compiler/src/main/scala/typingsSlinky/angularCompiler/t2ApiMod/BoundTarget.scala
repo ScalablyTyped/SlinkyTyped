@@ -9,6 +9,7 @@ import typingsSlinky.angularCompiler.r3AstMod.Reference
 import typingsSlinky.angularCompiler.r3AstMod.Template
 import typingsSlinky.angularCompiler.r3AstMod.TextAttribute
 import typingsSlinky.angularCompiler.r3AstMod.Variable
+import typingsSlinky.std.ReadonlySet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,6 +32,13 @@ trait BoundTarget[DirectiveT /* <: DirectiveMeta */] extends js.Object {
     */
   def getDirectivesOfNode(node: Element): js.Array[DirectiveT] | Null = js.native
   def getDirectivesOfNode(node: Template): js.Array[DirectiveT] | Null = js.native
+  
+  /**
+    * Get all `Reference`s and `Variables` visible within the given `Template` (or at the top level,
+    * if `null` is passed).
+    */
+  def getEntitiesInTemplateScope(): ReadonlySet[Reference | Variable] = js.native
+  def getEntitiesInTemplateScope(template: Template): ReadonlySet[Reference | Variable] = js.native
   
   /**
     * If the given `AST` expression refers to a `Reference` or `Variable` within the `Target`, then

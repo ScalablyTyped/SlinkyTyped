@@ -25,7 +25,7 @@ trait Matchers[R, T] extends js.Object {
     * Ensure that the last call to a mock function has returned a specified value.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def lastReturnedWith[E](value: E): R = js.native
@@ -46,7 +46,7 @@ trait Matchers[R, T] extends js.Object {
     * Ensure that the nth call to a mock function has returned a specified value.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def nthReturnedWith[E](n: Double, value: E): R = js.native
@@ -56,7 +56,7 @@ trait Matchers[R, T] extends js.Object {
     * Don't use `toBe` with floating-point numbers.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def toBe[E](expected: E): R = js.native
@@ -101,13 +101,15 @@ trait Matchers[R, T] extends js.Object {
     */
   def toBeFalsy(): R = js.native
   
+  def toBeGreaterThan(expected: js.BigInt): R = js.native
   /**
-    * For comparing floating point numbers.
+    * For comparing floating point or big integer numbers.
     */
   def toBeGreaterThan(expected: Double): R = js.native
   
+  def toBeGreaterThanOrEqual(expected: js.BigInt): R = js.native
   /**
-    * For comparing floating point numbers.
+    * For comparing floating point or big integer numbers.
     */
   def toBeGreaterThanOrEqual(expected: Double): R = js.native
   
@@ -116,18 +118,20 @@ trait Matchers[R, T] extends js.Object {
     * This matcher uses `instanceof` underneath.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def toBeInstanceOf[E](expected: E): R = js.native
   
+  def toBeLessThan(expected: js.BigInt): R = js.native
   /**
-    * For comparing floating point numbers.
+    * For comparing floating point or big integer numbers.
     */
   def toBeLessThan(expected: Double): R = js.native
   
+  def toBeLessThanOrEqual(expected: js.BigInt): R = js.native
   /**
-    * For comparing floating point numbers.
+    * For comparing floating point or big integer numbers.
     */
   def toBeLessThanOrEqual(expected: Double): R = js.native
   
@@ -160,7 +164,7 @@ trait Matchers[R, T] extends js.Object {
     * It can also check whether a string is a substring of another string.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def toContain[E](expected: E): R = js.native
@@ -171,7 +175,7 @@ trait Matchers[R, T] extends js.Object {
     * equality of all fields, rather than checking for object identity.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def toContainEqual[E](expected: E): R = js.native
@@ -181,7 +185,7 @@ trait Matchers[R, T] extends js.Object {
     * This matcher recursively checks the equality of all fields, rather than checking for object identity.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def toEqual[E](expected: E): R = js.native
@@ -237,7 +241,7 @@ trait Matchers[R, T] extends js.Object {
     * no matter what value you provided as the expected return value.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def toHaveLastReturnedWith[E](expected: E): R = js.native
@@ -254,7 +258,7 @@ trait Matchers[R, T] extends js.Object {
     * no matter what value you provided as the expected return value.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def toHaveNthReturnedWith[E](nthCall: Double, expected: E): R = js.native
@@ -293,7 +297,7 @@ trait Matchers[R, T] extends js.Object {
     * Use to ensure that a mock function returned a specific value.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def toHaveReturnedWith[E](expected: E): R = js.native
@@ -379,7 +383,7 @@ trait Matchers[R, T] extends js.Object {
     * Ensure that a mock function has returned a specified value at least once.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def toReturnWith[E](value: E): R = js.native
@@ -388,7 +392,7 @@ trait Matchers[R, T] extends js.Object {
     * Use to test that objects have the same types as well as structure.
     *
     * Optionally, you can provide a type for the expected value via a generic.
-    * This is particuarly useful for ensuring expected objects have the right structure.
+    * This is particularly useful for ensuring expected objects have the right structure.
     */
   // tslint:disable-next-line: no-unnecessary-generics
   def toStrictEqual[E](expected: E): R = js.native
@@ -422,4 +426,5 @@ trait Matchers[R, T] extends js.Object {
     * Used to test that a function throws a error matching the most recent snapshot when it is called.
     */
   def toThrowErrorMatchingSnapshot(): R = js.native
+  def toThrowErrorMatchingSnapshot(snapshotName: String): R = js.native
 }

@@ -15,5 +15,5 @@ object shapeMod extends js.Object {
   
   def isStructureMember(arg: js.Any): /* is @aws-sdk/build-types.@aws-sdk/build-types/build/ApiModel.StructureMember */ Boolean = js.native
   
-  def isXmlNamespace(arg: js.Any): /* is @aws-sdk/types.@aws-sdk/types/build/protocol.XmlNamespace */ Boolean = js.native
+  def isXmlNamespace(arg: js.Any): /* is / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify XmlNamespace * / any */ Boolean = js.native
 }

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FeatureTableVisibleElements extends Object {
   
   /**
-    * Indicates whether to display the feature table's header information. Default value is `true`.
+    * Indicates whether to display the feature table's header information.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable.html#VisibleElements)
     */
@@ -24,7 +24,7 @@ trait FeatureTableVisibleElements extends Object {
   var menu: js.UndefOr[Boolean] = js.native
   
   /**
-    * The menu items within the feature table menu. This image shows the individual items within the widget's menu.  ![featuretable widget menu items](https://developers.arcgis.com/javascript/assets/img/apiref/widgets/featuretable/menuitems.png)
+    * The menu items within the feature table menu.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable.html#VisibleElements)
     */

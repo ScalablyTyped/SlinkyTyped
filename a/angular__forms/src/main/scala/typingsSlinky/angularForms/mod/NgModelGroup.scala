@@ -7,7 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@angular/forms", "NgModelGroup")
 @js.native
 class NgModelGroup protected () extends AbstractFormGroupDirective {
-  def this(parent: ControlContainer, validators: js.Array[_], asyncValidators: js.Array[_]) = this()
+  def this(
+    parent: ControlContainer,
+    validators: js.Array[Validator | ValidatorFn],
+    asyncValidators: js.Array[AsyncValidator | AsyncValidatorFn]
+  ) = this()
   
   /**
     * @description

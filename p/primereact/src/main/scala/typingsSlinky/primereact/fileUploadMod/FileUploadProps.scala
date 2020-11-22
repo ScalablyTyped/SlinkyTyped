@@ -27,6 +27,8 @@ trait FileUploadProps extends js.Object {
   
   var disabled: js.UndefOr[Boolean] = js.native
   
+  var emptyTemplate: js.UndefOr[js.Function1[/* props */ js.Object, _]] = js.native
+  
   var id: js.UndefOr[String] = js.native
   
   var invalidFileSizeMessageDetail: js.UndefOr[String] = js.native
@@ -135,6 +137,12 @@ object FileUploadProps {
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setEmptyTemplate(value: /* props */ js.Object => _): Self = this.set("emptyTemplate", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteEmptyTemplate: Self = this.set("emptyTemplate", js.undefined)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])

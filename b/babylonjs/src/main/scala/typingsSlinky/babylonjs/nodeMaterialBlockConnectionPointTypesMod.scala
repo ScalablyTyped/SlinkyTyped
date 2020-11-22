@@ -59,6 +59,12 @@ object nodeMaterialBlockConnectionPointTypesMod extends js.Object {
     /* 128 */ @js.native
     object Matrix extends TopLevel[Matrix with Double]
     
+    /** Custom object */
+    @js.native
+    sealed trait Object extends NodeMaterialBlockConnectionPointTypes
+    /* 256 */ @js.native
+    object Object extends TopLevel[Object with Double]
+    
     /** Vector2 */
     @js.native
     sealed trait Vector2 extends NodeMaterialBlockConnectionPointTypes

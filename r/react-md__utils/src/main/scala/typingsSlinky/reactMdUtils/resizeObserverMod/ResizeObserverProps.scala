@@ -3,9 +3,9 @@ package typingsSlinky.reactMdUtils.resizeObserverMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.reactMdUtils.useResizeObserverMod.ObservedResizeData
-import typingsSlinky.reactMdUtils.useResizeObserverMod.ObservedResizeEventHandler
-import typingsSlinky.reactMdUtils.useResizeObserverMod.ResizeObserverTarget
+import typingsSlinky.reactMdUtils.useResizeObserverMod.OnResizeObserverChange
+import typingsSlinky.reactMdUtils.useResizeObserverMod.ResizeObserverElementData
+import typingsSlinky.reactMdUtils.useResizeObserverV1Mod.ResizeObserverTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -48,7 +48,7 @@ trait ResizeObserverProps extends js.Object {
     * the next height, width, scrollHeight, scrollWidth, and the element that is
     * being observed.
     */
-  var onResize: ObservedResizeEventHandler = js.native
+  var onResize: OnResizeObserverChange[HTMLElement] = js.native
   
   /**
     * An optional resize target to be used instead of the parent element of this
@@ -63,7 +63,7 @@ trait ResizeObserverProps extends js.Object {
 object ResizeObserverProps {
   
   @scala.inline
-  def apply(onResize: /* event */ ObservedResizeData => Unit): ResizeObserverProps = {
+  def apply(onResize: /* resizeData */ ResizeObserverElementData[HTMLElement] => Unit): ResizeObserverProps = {
     val __obj = js.Dynamic.literal(onResize = js.Any.fromFunction1(onResize))
     __obj.asInstanceOf[ResizeObserverProps]
   }
@@ -84,7 +84,7 @@ object ResizeObserverProps {
     }
     
     @scala.inline
-    def setOnResize(value: /* event */ ObservedResizeData => Unit): Self = this.set("onResize", js.Any.fromFunction1(value))
+    def setOnResize(value: /* resizeData */ ResizeObserverElementData[HTMLElement] => Unit): Self = this.set("onResize", js.Any.fromFunction1(value))
     
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])

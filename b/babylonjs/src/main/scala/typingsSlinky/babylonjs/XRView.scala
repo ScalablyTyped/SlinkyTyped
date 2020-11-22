@@ -7,17 +7,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait XRView extends js.Object {
   
-  var eye: XREye = js.native
+  val eye: XREye = js.native
   
-  var projectionMatrix: js.typedarray.Float32Array = js.native
+  val projectionMatrix: js.typedarray.Float32Array = js.native
   
-  var transform: XRRigidTransform = js.native
+  val recommendedViewportScale: js.UndefOr[Double] = js.native
+  
+  def requestViewportScale(scale: Double): Unit = js.native
+  
+  val transform: XRRigidTransform = js.native
 }
 object XRView {
   
   @scala.inline
-  def apply(eye: XREye, projectionMatrix: js.typedarray.Float32Array, transform: XRRigidTransform): XRView = {
-    val __obj = js.Dynamic.literal(eye = eye.asInstanceOf[js.Any], projectionMatrix = projectionMatrix.asInstanceOf[js.Any], transform = transform.asInstanceOf[js.Any])
+  def apply(
+    eye: XREye,
+    projectionMatrix: js.typedarray.Float32Array,
+    requestViewportScale: Double => Unit,
+    transform: XRRigidTransform
+  ): XRView = {
+    val __obj = js.Dynamic.literal(eye = eye.asInstanceOf[js.Any], projectionMatrix = projectionMatrix.asInstanceOf[js.Any], requestViewportScale = js.Any.fromFunction1(requestViewportScale), transform = transform.asInstanceOf[js.Any])
     __obj.asInstanceOf[XRView]
   }
   
@@ -43,6 +52,15 @@ object XRView {
     def setProjectionMatrix(value: js.typedarray.Float32Array): Self = this.set("projectionMatrix", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setRequestViewportScale(value: Double => Unit): Self = this.set("requestViewportScale", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def setTransform(value: XRRigidTransform): Self = this.set("transform", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRecommendedViewportScale(value: Double): Self = this.set("recommendedViewportScale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRecommendedViewportScale: Self = this.set("recommendedViewportScale", js.undefined)
   }
 }

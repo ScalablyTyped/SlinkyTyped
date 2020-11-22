@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.RemoveScriptToEvaluateOnNewDocumentRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.SetShowViewportSizeOnResizeRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `140` extends js.Object {
   
-  var paramsType: js.Array[RemoveScriptToEvaluateOnNewDocumentRequest] = js.native
+  var paramsType: js.Array[SetShowViewportSizeOnResizeRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `140` {
   
   @scala.inline
-  def apply(paramsType: js.Array[RemoveScriptToEvaluateOnNewDocumentRequest], returnType: Unit): `140` = {
+  def apply(paramsType: js.Array[SetShowViewportSizeOnResizeRequest], returnType: Unit): `140` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`140`]
   }
@@ -36,10 +36,10 @@ object `140` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: RemoveScriptToEvaluateOnNewDocumentRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetShowViewportSizeOnResizeRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[RemoveScriptToEvaluateOnNewDocumentRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetShowViewportSizeOnResizeRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

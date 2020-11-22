@@ -19,7 +19,7 @@ trait PartialOptions extends js.Object {
   
   var deletedByType: js.UndefOr[js.Any] = js.native
   
-  var indexFields: js.UndefOr[Boolean | all | deleted | deleteAt | deletedBy] = js.native
+  var indexFields: js.UndefOr[Boolean | all | (js.Array[deleted | deleteAt | deletedBy])] = js.native
   
   var overrideMethods: js.UndefOr[Boolean | all | js.Array[overridableMethods]] = js.native
   
@@ -67,7 +67,10 @@ object PartialOptions {
     def deleteDeletedByType: Self = this.set("deletedByType", js.undefined)
     
     @scala.inline
-    def setIndexFields(value: Boolean | all | deleted | deleteAt | deletedBy): Self = this.set("indexFields", value.asInstanceOf[js.Any])
+    def setIndexFieldsVarargs(value: (deleted | deleteAt | deletedBy)*): Self = this.set("indexFields", js.Array(value :_*))
+    
+    @scala.inline
+    def setIndexFields(value: Boolean | all | (js.Array[deleted | deleteAt | deletedBy])): Self = this.set("indexFields", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIndexFields: Self = this.set("indexFields", js.undefined)

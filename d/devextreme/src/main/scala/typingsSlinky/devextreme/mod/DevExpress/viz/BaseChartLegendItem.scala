@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BaseChartLegendItem extends BaseLegendItem {
   
-  /** @name BaseChartLegendItem.series */
+  /**
+    * [descr:BaseChartLegendItem.series]
+    */
   var series: js.UndefOr[baseSeriesObject] = js.native
 }
 object BaseChartLegendItem {

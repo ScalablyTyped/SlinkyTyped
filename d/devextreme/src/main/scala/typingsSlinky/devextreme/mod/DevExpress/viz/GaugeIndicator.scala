@@ -16,7 +16,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GaugeIndicator extends CommonIndicator {
   
-  /** @name GaugeIndicator.type */
+  /**
+    * [descr:GaugeIndicator.type]
+    */
   var `type`: js.UndefOr[
     circle | rangeBar | rectangle | rectangleNeedle | rhombus | textCloud | triangleMarker | triangleNeedle | twoColorNeedle
   ] = js.native

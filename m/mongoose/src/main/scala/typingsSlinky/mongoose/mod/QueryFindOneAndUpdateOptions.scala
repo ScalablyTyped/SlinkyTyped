@@ -41,6 +41,12 @@ trait QueryFindOneAndUpdateOptions extends QueryFindOneAndRemoveOptions {
     before sending the update to the server.**/
   var omitUndefined: js.UndefOr[Boolean] = js.native
   
+  /**
+    * False by default. Setting this to true allows the update to overwrite the existing document if no update
+    * operators are included in the update. When set to false, mongoose will wrap the update in a $set.
+    */
+  var overwrite: js.UndefOr[Boolean] = js.native
+  
   /** if true, runs update validators on this command. Update validators validate the update operation against the model's schema. */
   var runValidators: js.UndefOr[Boolean] = js.native
   
@@ -131,6 +137,12 @@ object QueryFindOneAndUpdateOptions {
     
     @scala.inline
     def deleteOmitUndefined: Self = this.set("omitUndefined", js.undefined)
+    
+    @scala.inline
+    def setOverwrite(value: Boolean): Self = this.set("overwrite", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverwrite: Self = this.set("overwrite", js.undefined)
     
     @scala.inline
     def setRunValidators(value: Boolean): Self = this.set("runValidators", value.asInstanceOf[js.Any])

@@ -1,19 +1,20 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.Path
-import typingsSlinky.firefoxWebextBrowser.anon.PopupTabId
-import typingsSlinky.firefoxWebextBrowser.anon.TabIdNumber
-import typingsSlinky.firefoxWebextBrowser.anon.Title
+import typingsSlinky.firefoxWebextBrowser.browser.pageAction.GetPopupDetails
+import typingsSlinky.firefoxWebextBrowser.browser.pageAction.GetTitleDetails
+import typingsSlinky.firefoxWebextBrowser.browser.pageAction.IsShownDetails
 import typingsSlinky.firefoxWebextBrowser.browser.pageAction.OnClickData
+import typingsSlinky.firefoxWebextBrowser.browser.pageAction.SetIconDetails
+import typingsSlinky.firefoxWebextBrowser.browser.pageAction.SetPopupDetails
+import typingsSlinky.firefoxWebextBrowser.browser.pageAction.SetTitleDetails
 import typingsSlinky.firefoxWebextBrowser.browser.tabs.Tab
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Use the `browser.pageAction` API to put icons inside the address bar. Page actions represent actions that can be
-  * taken on the current page, but that aren't applicable to all pages.
+  * Use the `browser.pageAction` API to put icons inside the address bar. Page actions represent actions that can be taken on the current page, but that aren't applicable to all pages.
   *
   * Manifest keys: `page_action`
   *
@@ -24,10 +25,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object pageAction extends js.Object {
   
   /** Gets the html document set as the popup for this page action. */
-  def getPopup(details: TabIdNumber): js.Promise[String] = js.native
+  def getPopup(details: GetPopupDetails): js.Promise[String] = js.native
   
   /** Gets the title of the page action. */
-  def getTitle(details: TabIdNumber): js.Promise[String] = js.native
+  def getTitle(details: GetTitleDetails): js.Promise[String] = js.native
   
   /**
     * Hides the page action.
@@ -36,7 +37,7 @@ object pageAction extends js.Object {
   def hide(tabId: Double): js.Promise[Unit] = js.native
   
   /** Checks whether the page action is shown. */
-  def isShown(details: TabIdNumber): js.Promise[Boolean] = js.native
+  def isShown(details: IsShownDetails): js.Promise[Boolean] = js.native
   
   /* pageAction events */
   /** Fired when a page action icon is clicked. This event will not fire if the page action has a popup. */
@@ -46,17 +47,15 @@ object pageAction extends js.Object {
   def openPopup(): js.Promise[Unit] = js.native
   
   /**
-    * Sets the icon for the page action. The icon can be specified either as the path to an image file or as the pixel
-    * data from a canvas element, or as dictionary of either one of those. Either the **path** or the **imageData**
-    * property must be specified.
+    * Sets the icon for the page action. The icon can be specified either as the path to an image file or as the pixel data from a canvas element, or as dictionary of either one of those. Either the **path** or the **imageData** property must be specified.
     */
-  def setIcon(details: Path): js.Promise[Unit] = js.native
+  def setIcon(details: SetIconDetails): js.Promise[Unit] = js.native
   
   /** Sets the html document to be opened as a popup when the user clicks on the page action's icon. */
-  def setPopup(details: PopupTabId): Unit = js.native
+  def setPopup(details: SetPopupDetails): Unit = js.native
   
   /** Sets the title of the page action. This is displayed in a tooltip over the page action. */
-  def setTitle(details: Title): Unit = js.native
+  def setTitle(details: SetTitleDetails): Unit = js.native
   
   /* pageAction functions */
   /**

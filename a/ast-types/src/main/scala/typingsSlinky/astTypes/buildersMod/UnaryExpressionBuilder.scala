@@ -12,10 +12,11 @@ import typingsSlinky.astTypes.kindsMod.ExpressionKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.UnaryExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait UnaryExpressionBuilder extends js.Object {
+  
   def apply(operator: Exclamationmark, argument: ExpressionKind): UnaryExpression = js.native
   def apply(operator: Exclamationmark, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
   def apply(operator: Plussign, argument: ExpressionKind): UnaryExpression = js.native
@@ -30,6 +31,6 @@ trait UnaryExpressionBuilder extends js.Object {
   def apply(operator: typeof, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
   def apply(operator: void, argument: ExpressionKind): UnaryExpression = js.native
   def apply(operator: void, argument: ExpressionKind, prefix: Boolean): UnaryExpression = js.native
+  
   def from(params: Operator): UnaryExpression = js.native
 }
-

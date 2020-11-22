@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeviceCompliancePolicyState extends Entity {
   
   // The name of the policy for this policyBase
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // Platform type that the policy applies to
   var platformType: js.UndefOr[PolicyPlatformType] = js.native
@@ -16,7 +16,7 @@ trait DeviceCompliancePolicyState extends Entity {
   // Count of how many setting a policy holds
   var settingCount: js.UndefOr[Double] = js.native
   
-  var settingStates: js.UndefOr[js.Array[DeviceCompliancePolicySettingState]] = js.native
+  var settingStates: js.UndefOr[NullableOption[js.Array[DeviceCompliancePolicySettingState]]] = js.native
   
   // The compliance state of the policy
   var state: js.UndefOr[ComplianceStatus] = js.native
@@ -48,10 +48,13 @@ object DeviceCompliancePolicyState {
     }
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
     
     @scala.inline
     def setPlatformType(value: PolicyPlatformType): Self = this.set("platformType", value.asInstanceOf[js.Any])
@@ -69,10 +72,13 @@ object DeviceCompliancePolicyState {
     def setSettingStatesVarargs(value: DeviceCompliancePolicySettingState*): Self = this.set("settingStates", js.Array(value :_*))
     
     @scala.inline
-    def setSettingStates(value: js.Array[DeviceCompliancePolicySettingState]): Self = this.set("settingStates", value.asInstanceOf[js.Any])
+    def setSettingStates(value: NullableOption[js.Array[DeviceCompliancePolicySettingState]]): Self = this.set("settingStates", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSettingStates: Self = this.set("settingStates", js.undefined)
+    
+    @scala.inline
+    def setSettingStatesNull: Self = this.set("settingStates", null)
     
     @scala.inline
     def setState(value: ComplianceStatus): Self = this.set("state", value.asInstanceOf[js.Any])

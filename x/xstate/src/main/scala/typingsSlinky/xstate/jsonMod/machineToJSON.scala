@@ -1,5 +1,6 @@
 package typingsSlinky.xstate.jsonMod
 
+import typingsSlinky.xstate.anon.ContextAny
 import typingsSlinky.xstate.mod.StateNode
 import typingsSlinky.xstate.typesMod.EventObject
 import scala.scalajs.js
@@ -10,5 +11,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object machineToJSON extends js.Object {
   
-  def apply(stateNode: StateNode[_, _, EventObject, _]): StateNodeConfig = js.native
+  def apply(stateNode: StateNode[_, _, EventObject, ContextAny]): StateNodeConfig = js.native
 }

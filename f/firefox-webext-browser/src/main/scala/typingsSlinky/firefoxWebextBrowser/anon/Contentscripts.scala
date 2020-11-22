@@ -14,9 +14,7 @@ trait Contentscripts extends js.Object {
   var extension_pages: js.UndefOr[String] = js.native
   
   /**
-    * An alias for content_scripts to support Chrome compatibility. Content Security Policy implementations
-    * may differ between Firefox and Chrome. If both isolated_world and content_scripts exist, the value from
-    * content_scripts will be used.
+    * An alias for content_scripts to support Chrome compatibility. Content Security Policy implementations may differ between Firefox and Chrome. If both isolated_world and content_scripts exist, the value from content_scripts will be used.
     */
   var isolated_world: js.UndefOr[String] = js.native
 }

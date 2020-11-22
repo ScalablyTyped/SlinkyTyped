@@ -5,6 +5,9 @@ import typingsSlinky.angularCore.mod.RCssStyleDeclaration
 import typingsSlinky.angularCore.mod.RDomTokenList
 import typingsSlinky.angularCore.mod.RElement
 import typingsSlinky.angularCore.mod.RNode
+import typingsSlinky.angularCore.mod.TrustedHTML
+import typingsSlinky.angularCore.mod.TrustedScript
+import typingsSlinky.angularCore.mod.TrustedScriptURL
 import typingsSlinky.std.EventListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -67,8 +70,14 @@ trait RElementownerDocumentDocu extends js.Object {
   def removeEventListener(`type`: String, listener: EventListener, options: Boolean): Unit = js.native
   
   def setAttribute(name: String, value: String): Unit = js.native
+  def setAttribute(name: String, value: TrustedHTML): Unit = js.native
+  def setAttribute(name: String, value: TrustedScript): Unit = js.native
+  def setAttribute(name: String, value: TrustedScriptURL): Unit = js.native
   
   def setAttributeNS(namespaceURI: String, qualifiedName: String, value: String): Unit = js.native
+  def setAttributeNS(namespaceURI: String, qualifiedName: String, value: TrustedHTML): Unit = js.native
+  def setAttributeNS(namespaceURI: String, qualifiedName: String, value: TrustedScript): Unit = js.native
+  def setAttributeNS(namespaceURI: String, qualifiedName: String, value: TrustedScriptURL): Unit = js.native
   
   var setProperty: js.UndefOr[js.Function2[/* name */ String, /* value */ js.Any, Unit]] = js.native
   

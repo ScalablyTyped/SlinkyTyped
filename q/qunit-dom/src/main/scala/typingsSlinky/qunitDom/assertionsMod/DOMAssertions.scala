@@ -354,7 +354,7 @@ trait DOMAssertions extends js.Object {
     * expression.
     *
     * @param {string} name
-    * @param {string|RegExp} value
+    * @param {RegExp|any} value
     * @param {string?} message
     *
     * @example
@@ -362,10 +362,8 @@ trait DOMAssertions extends js.Object {
     *
     * @see {@link #doesNotHaveProperty}
     */
-  def hasProperty(name: String, value: String): DOMAssertions = js.native
-  def hasProperty(name: String, value: String, message: String): DOMAssertions = js.native
-  def hasProperty(name: String, value: js.RegExp): DOMAssertions = js.native
-  def hasProperty(name: String, value: js.RegExp, message: String): DOMAssertions = js.native
+  def hasProperty(name: String, value: js.Any): DOMAssertions = js.native
+  def hasProperty(name: String, value: js.Any, message: String): DOMAssertions = js.native
   
   def hasPseudoElementStyle(selector: String, expected: js.Object): DOMAssertions = js.native
   def hasPseudoElementStyle(selector: String, expected: js.Object, message: String): DOMAssertions = js.native

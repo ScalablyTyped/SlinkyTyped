@@ -57,6 +57,7 @@ object updateImportDeclaration extends js.Object {
     importClause: js.UndefOr[scala.Nothing],
     moduleSpecifier: Expression
   ): ImportDeclaration = js.native
+  /** @deprecated Use `factory.updateImportDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     node: ImportDeclaration,
     decorators: js.Array[Decorator],

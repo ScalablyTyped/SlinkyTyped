@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object interceptMod extends js.Object {
   
-  def intercept(`object`: js.Object, handler: IInterceptor[IObjectWillChange]): Lambda = js.native
+  def intercept(`object`: js.Object, handler: IInterceptor[IObjectWillChange[_]]): Lambda = js.native
   def intercept[T](
     observableArray: IObservableArray[T],
     handler: IInterceptor[IArrayWillChange[T] | IArrayWillSplice[T]]

@@ -25,8 +25,13 @@ import typingsSlinky.rcDrawer.idrawerproptypesMod.IDrawerChildProps
 import typingsSlinky.rcDrawer.idrawerproptypesMod.ILevelMove
 import typingsSlinky.rcDrawer.idrawerproptypesMod.IPlacement
 import typingsSlinky.rcDrawer.rcDrawerBooleans.`false`
+import typingsSlinky.rcDrawer.rcDrawerStrings.`additions removals`
 import typingsSlinky.rcDrawer.rcDrawerStrings.`additions text`
 import typingsSlinky.rcDrawer.rcDrawerStrings.`inline`
+import typingsSlinky.rcDrawer.rcDrawerStrings.`removals additions`
+import typingsSlinky.rcDrawer.rcDrawerStrings.`removals text`
+import typingsSlinky.rcDrawer.rcDrawerStrings.`text additions`
+import typingsSlinky.rcDrawer.rcDrawerStrings.`text removals`
 import typingsSlinky.rcDrawer.rcDrawerStrings.additions
 import typingsSlinky.rcDrawer.rcDrawerStrings.all
 import typingsSlinky.rcDrawer.rcDrawerStrings.ascending
@@ -204,7 +209,9 @@ object DrawerChild {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

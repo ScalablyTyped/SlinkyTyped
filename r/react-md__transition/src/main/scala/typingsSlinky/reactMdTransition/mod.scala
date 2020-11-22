@@ -30,22 +30,6 @@ object mod extends js.Object {
   
   val CROSS_FADE_TIMEOUT: TransitionTimeout = js.native
   
-  /**
-    * The `Collapse` is really just a convenience wrapper for the `useCrossFade`
-    * hook that triggers the transition by cloning the `ref` and `className` into
-    * the `children` of this component.
-    *
-    * This transition will only fire on mount and when the `appear` prop is set to
-    * `true`, so the way to trigger new animations is by changing the `key` for
-    * this component so it re-mounts. However it is generally not recommended to
-    * fire this transition on first page load especially when dealing with server
-    * side rendering. A simple way to work around this is have the `CrossFade` near
-    * the root of the app and just disable the `appear` prop until the first
-    * render.
-    *
-    * If you want more fine-grain control over the transition, it is recommended to
-    * use the `useCrossFade` hook instead.
-    */
   val CrossFade: ForwardRefExoticComponent[PickCrossFadePropshiddenc] = js.native
   
   val DEFAULT_COLLAPSE_MIN_HEIGHT: /* 0 */ Double = js.native
@@ -100,19 +84,6 @@ object mod extends js.Object {
   @js.native
   object Collapse extends js.Object {
     
-    /**
-      * The `Collapse` component is used to transition a child element in and
-      * out of view by animating it's `max-height`. This means that the child must
-      * either be an HTMLElement or a component that forwards the `ref` to an
-      * HTMLElement and applies the `style`, `className`, and `hidden` props to an
-      * HTMLElement.
-      *
-      * Note: This component **should not be used for `position: absolute` or
-      * `position: fixed` elements**. Instead, the `ScaleTransition` or just a simple
-      * `transform` transition should be used instead. Animating `max-height`,
-      * `padding-top`, and `padding-bottom` is much less performant than `transform`
-      * transition since it forces DOM repaints.
-      */
     def apply(
       hasChildrenCollapsedClassNameAppearTimeoutOnEnterOnEnteringOnEnteredOnExitOnExitingOnExitedMinHeightMinPaddingTopMinPaddingBottomTemporary: CollapseProps
     ): ReactElement | Null = js.native
@@ -155,17 +126,6 @@ object mod extends js.Object {
   @js.native
   object ScaleTransition extends js.Object {
     
-    /**
-      * This `ScaleTransition` component is used to trigger an animation that
-      * switches between an opacity of `0` and `1` and using a `transform: scale(0)`
-      * to `transform: scale(1)`. It is recommended to also manually apply a
-      * `transform-origin` style or use the `useFixedPositioning` hook to generate
-      * for you so that the animation starts from a specific point.
-      *
-      * Since the default scale animation is X and Y, you can enable the `vertical`
-      * prop which will update the transition to use `transform: scaleY(0)` to
-      * `transform: scaleY(1)` instead.
-      */
     def apply(
       hasVisibleChildrenClassNamesVerticalTimeoutPortalPortalIntoPortalIntoIdMountOnEnterUnmountOnExitProps: ScaleTransitionProps
     ): ReactElement = js.native

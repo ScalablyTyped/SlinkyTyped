@@ -833,7 +833,7 @@ trait WebviewTag extends HTMLElement {
     listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.HTMLElement, /* ev */ org.scalajs.dom.raw.Event, _],
     useCapture: Boolean
   ): Unit = js.native
-  // Docs: http://electronjs.org/docs/api/webview-tag
+  // Docs: https://electronjs.org/docs/api/webview-tag
   /**
     * Fired when a load has committed. This includes navigation within the current
     * document as well as subframe document-level loads, but does not include

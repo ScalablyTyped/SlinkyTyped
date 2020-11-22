@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ValidateOptions extends js.Object {
+trait ValidateOptions[C] extends js.Object {
   
   /**
     * Return from validation methods on the first error rather than after all validations run. Default - true
@@ -15,7 +15,7 @@ trait ValidateOptions extends js.Object {
   /**
     * Any context needed for validating schema conditions (see: when())
     */
-  var context: js.UndefOr[js.Object] = js.native
+  var context: js.UndefOr[C] = js.native
   
   /**
     * When false validations will not descend into nested schema (relevant for objects or arrays). Default - true
@@ -35,13 +35,13 @@ trait ValidateOptions extends js.Object {
 object ValidateOptions {
   
   @scala.inline
-  def apply(): ValidateOptions = {
+  def apply[C](): ValidateOptions[C] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[ValidateOptions]
+    __obj.asInstanceOf[ValidateOptions[C]]
   }
   
   @scala.inline
-  implicit class ValidateOptionsOps[Self <: ValidateOptions] (val x: Self) extends AnyVal {
+  implicit class ValidateOptionsOps[Self <: ValidateOptions[_], C] (val x: Self with ValidateOptions[C]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -62,7 +62,7 @@ object ValidateOptions {
     def deleteAbortEarly: Self = this.set("abortEarly", js.undefined)
     
     @scala.inline
-    def setContext(value: js.Object): Self = this.set("context", value.asInstanceOf[js.Any])
+    def setContext(value: C): Self = this.set("context", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContext: Self = this.set("context", js.undefined)

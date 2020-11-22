@@ -2,10 +2,21 @@ package typingsSlinky.uifabricStyling
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.fluentuiTheme.ianimationstylesMod.IAnimationStyles
+import typingsSlinky.fluentuiTheme.ianimationstylesMod.IAnimationVariables
+import typingsSlinky.fluentuiTheme.ieffectsMod.IEffects
+import typingsSlinky.fluentuiTheme.ifontstylesMod.IFontStyles
+import typingsSlinky.fluentuiTheme.ipaletteMod.IPalette
+import typingsSlinky.fluentuiTheme.ischemeMod.ISchemeNames
+import typingsSlinky.fluentuiTheme.ithemeMod.IPartialTheme
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
+import typingsSlinky.fluentuiTheme.themeMod.PartialTheme
+import typingsSlinky.fluentuiTheme.themeMod.Theme
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
+import typingsSlinky.uifabricMergeStyles.ikeyframesMod.IKeyframes
+import typingsSlinky.uifabricMergeStyles.irawstyleMod.IRawStyle
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.IFontFace
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.IFontWeight
-import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
 import typingsSlinky.uifabricMergeStyles.istyleMod.IStyle
 import typingsSlinky.uifabricMergeStyles.istyleMod.IStyleBaseArray
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
@@ -17,17 +28,9 @@ import typingsSlinky.uifabricMergeStyles.stylesheetMod.IStyleSheetConfig
 import typingsSlinky.uifabricStyling.anon.PartialIIconOptions
 import typingsSlinky.uifabricStyling.colorClassNamesMod.IColorClassNames
 import typingsSlinky.uifabricStyling.getGlobalClassNamesMod.GlobalClassNames
-import typingsSlinky.uifabricStyling.ianimationstylesMod.IAnimationStyles
-import typingsSlinky.uifabricStyling.ianimationstylesMod.IAnimationVariables
 import typingsSlinky.uifabricStyling.iconsMod.IIconRecord
 import typingsSlinky.uifabricStyling.iconsMod.IIconSubset
-import typingsSlinky.uifabricStyling.ieffectsMod.IEffects
-import typingsSlinky.uifabricStyling.ifontstylesMod.IFontStyles
 import typingsSlinky.uifabricStyling.igetfocusstylesMod.IGetFocusStylesOptions
-import typingsSlinky.uifabricStyling.ipaletteMod.IPalette
-import typingsSlinky.uifabricStyling.ithemeMod.IPartialTheme
-import typingsSlinky.uifabricStyling.ithemeMod.ISchemeNames
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricStyling.uifabricStylingBooleans.`false`
 import typingsSlinky.uifabricStyling.uifabricStylingNumbers.`0`
 import typingsSlinky.uifabricStyling.uifabricStylingNumbers.`1`
@@ -165,8 +168,10 @@ object mod extends js.Object {
   def createFontStyles(): IFontStyles = js.native
   def createFontStyles(localeCode: String): IFontStyles = js.native
   
-  def createTheme(theme: IPartialTheme): ITheme = js.native
-  def createTheme(theme: IPartialTheme, depComments: Boolean): ITheme = js.native
+  def createTheme(): Theme = js.native
+  def createTheme(theme: js.UndefOr[scala.Nothing], depComments: Boolean): Theme = js.native
+  def createTheme(theme: PartialTheme): Theme = js.native
+  def createTheme(theme: PartialTheme, depComments: Boolean): Theme = js.native
   
   def focusClear(): IRawStyle = js.native
   
@@ -258,7 +263,7 @@ object mod extends js.Object {
   
   val hiddenContentStyle: IRawStyle = js.native
   
-  def keyframes(timeline: StringDictionary[js.Object]): String = js.native
+  def keyframes(timeline: IKeyframes): String = js.native
   
   def loadTheme(theme: IPartialTheme): ITheme = js.native
   def loadTheme(theme: IPartialTheme, depComments: Boolean): ITheme = js.native
@@ -450,6 +455,28 @@ object mod extends js.Object {
     val mega: String = js.native
     
     val mini: String = js.native
+    
+    val size10: /* "10px" */ String = js.native
+    
+    val size12: /* "12px" */ String = js.native
+    
+    val size14: /* "14px" */ String = js.native
+    
+    val size16: /* "16px" */ String = js.native
+    
+    val size18: /* "18px" */ String = js.native
+    
+    val size20: /* "20px" */ String = js.native
+    
+    val size24: /* "24px" */ String = js.native
+    
+    val size28: /* "28px" */ String = js.native
+    
+    val size32: /* "32px" */ String = js.native
+    
+    val size42: /* "42px" */ String = js.native
+    
+    val size68: /* "68px" */ String = js.native
     
     val small: String = js.native
     

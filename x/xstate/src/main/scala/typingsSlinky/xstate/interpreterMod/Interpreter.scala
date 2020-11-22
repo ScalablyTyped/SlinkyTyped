@@ -3,6 +3,8 @@ package typingsSlinky.xstate.interpreterMod
 import typingsSlinky.std.Map
 import typingsSlinky.xstate.actorMod.Actor
 import typingsSlinky.xstate.anon.AutoForward
+import typingsSlinky.xstate.anon.ContextAny
+import typingsSlinky.xstate.anon.ContextTChildContext
 import typingsSlinky.xstate.anon.FnCallMachineOptions
 import typingsSlinky.xstate.anon.PartialInterpreterOptions
 import typingsSlinky.xstate.anon.ReadonlyInterpreterOption
@@ -15,6 +17,7 @@ import typingsSlinky.xstate.typesMod.EventData
 import typingsSlinky.xstate.typesMod.EventObject
 import typingsSlinky.xstate.typesMod.InterpreterOptions
 import typingsSlinky.xstate.typesMod.Observer
+import typingsSlinky.xstate.typesMod.SingleOrArray
 import typingsSlinky.xstate.typesMod.Spawnable
 import typingsSlinky.xstate.typesMod.StateMachine
 import typingsSlinky.xstate.typesMod.StateSchema
@@ -47,8 +50,6 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
     * The current state of the interpreted machine.
     */
   var _state: js.Any = js.native
-  
-  var _status: js.Any = js.native
   
   var attachDev: js.Any = js.native
   
@@ -128,67 +129,65 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
     * Removes a listener.
     * @param listener The listener to remove
     */
-  def off(listener: js.Function1[/* repeated */ js.Any, Unit]): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
+  def off(listener: js.Function1[/* repeated */ js.Any, Unit]): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
   
   /**
     * Adds a context listener that is notified whenever the state context changes.
     * @param listener The context listener
     */
-  def onChange(listener: ContextListener[TContext]): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
+  def onChange(listener: ContextListener[TContext]): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
   
   /**
     * Adds a state listener that is notified when the statechart has reached its final state.
     * @param listener The state listener
     */
-  def onDone(listener: EventListener[DoneEvent]): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
+  def onDone(listener: EventListener[DoneEvent]): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
   
   /**
     * Adds an event listener that is notified whenever an event is sent to the running interpreter.
     * @param listener The event listener
     */
-  def onEvent(listener: EventListener[EventObject]): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
+  def onEvent(listener: EventListener[EventObject]): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
   
   /**
     * Adds an event listener that is notified whenever a `send` event occurs.
     * @param listener The event listener
     */
-  def onSend(listener: EventListener[EventObject]): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
+  def onSend(listener: EventListener[EventObject]): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
   
   /**
     * Adds a listener that is notified when the machine is stopped.
     * @param listener The listener
     */
-  def onStop(listener: Listener): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
+  def onStop(listener: Listener): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
   
   def onTransition(listener: StateListener[TContext, TEvent, TStateSchema, TTypestate]): this.type = js.native
   
   var options: ReadonlyInterpreterOption = js.native
   
-  var parent: js.UndefOr[Interpreter[_, _, EventObject, _]] = js.native
+  var parent: js.UndefOr[Interpreter[_, _, EventObject, ContextAny]] = js.native
   
   var removeChild: js.Any = js.native
   
   var scheduler: js.Any = js.native
   
-  def send(event: TEvent, payload: EventData): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-  def send(event: js.Array[Event[TEvent]]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-  def send(event: js.Array[Event[TEvent]], payload: EventData): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   def send(event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   def send(event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent], payload: EventData): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+  /**
+    * Sends an event to the running interpreter to trigger a transition.
+    *
+    * An array of events (batched) can be sent as well, which will send all
+    * batched events to the running interpreter. The listeners will be
+    * notified only **once** when all events are processed.
+    *
+    * @param event The event(s) to send
+    */
+  def send(event: SingleOrArray[Event[TEvent]]): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
+  def send(event: SingleOrArray[Event[TEvent]], payload: EventData): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   
   var sendListeners: js.Any = js.native
   
   var sendTo: js.Any = js.native
-  
-  @JSName("send")
-  def send_type(
-    event: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any
-  ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
-  @JSName("send")
-  def send_type(
-    event: /* import warning: importer.ImportType#apply Failed type conversion: TEvent['type'] */ js.Any,
-    payload: EventData
-  ): State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   
   /**
     * Returns a send function bound to this interpreter instance.
@@ -213,8 +212,13 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
   
   var spawnEffect: js.Any = js.native
   
-  def spawnMachine[TChildContext, TChildStateSchema, TChildEvent /* <: EventObject */](machine: StateMachine[TChildContext, TChildStateSchema, TChildEvent, _]): Interpreter[TChildContext, TChildStateSchema, TChildEvent, _] = js.native
-  def spawnMachine[TChildContext, TChildStateSchema, TChildEvent /* <: EventObject */](machine: StateMachine[TChildContext, TChildStateSchema, TChildEvent, _], options: AutoForward): Interpreter[TChildContext, TChildStateSchema, TChildEvent, _] = js.native
+  def spawnMachine[TChildContext, TChildStateSchema, TChildEvent /* <: EventObject */](
+    machine: StateMachine[TChildContext, TChildStateSchema, TChildEvent, ContextTChildContext[TChildContext]]
+  ): Interpreter[TChildContext, TChildStateSchema, TChildEvent, ContextTChildContext[TChildContext]] = js.native
+  def spawnMachine[TChildContext, TChildStateSchema, TChildEvent /* <: EventObject */](
+    machine: StateMachine[TChildContext, TChildStateSchema, TChildEvent, ContextTChildContext[TChildContext]],
+    options: AutoForward
+  ): Interpreter[TChildContext, TChildStateSchema, TChildEvent, ContextTChildContext[TChildContext]] = js.native
   
   var spawnObservable: js.Any = js.native
   
@@ -231,6 +235,8 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
   @JSName("state")
   def state_MInterpreter: State[TContext, TEvent, TStateSchema, TTypestate] = js.native
   
+  var status: InterpreterStatus = js.native
+  
   var stopChild: js.Any = js.native
   
   var stopListeners: js.Any = js.native
@@ -241,7 +247,7 @@ class Interpreter[TContext, TStateSchema /* <: StateSchema[_] */, TEvent /* <: E
     * This will also notify the `onStop` listeners.
     */
   @JSName("stop")
-  def stop_MInterpreter(): Interpreter[TContext, TStateSchema, TEvent, _] = js.native
+  def stop_MInterpreter(): Interpreter[TContext, TStateSchema, TEvent, TTypestate] = js.native
   
   def subscribe(observer: Observer[State[TContext, TEvent, _, TTypestate]]): Unsubscribable = js.native
   

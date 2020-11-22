@@ -6,12 +6,11 @@ import typingsSlinky.antd.anon.AutoComplete
 import typingsSlinky.antd.anon.Ghost
 import typingsSlinky.antd.anon.Size
 import typingsSlinky.antd.anon.ValidateMessages
-import typingsSlinky.antd.antdStrings.ltr
-import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.configProviderContextMod.CSPConfig
+import typingsSlinky.antd.configProviderContextMod.DirectionType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.localeProviderMod.Locale
 import typingsSlinky.antd.renderEmptyMod.RenderEmptyHandler
-import typingsSlinky.antd.sizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +26,7 @@ trait ConfigProviderProps extends js.Object {
   
   var csp: js.UndefOr[CSPConfig] = js.native
   
-  var direction: js.UndefOr[ltr | rtl] = js.native
+  var direction: js.UndefOr[DirectionType] = js.native
   
   var dropdownMatchSelectWidth: js.UndefOr[Boolean] = js.native
   
@@ -102,7 +101,7 @@ object ConfigProviderProps {
     def deleteCsp: Self = this.set("csp", js.undefined)
     
     @scala.inline
-    def setDirection(value: ltr | rtl): Self = this.set("direction", value.asInstanceOf[js.Any])
+    def setDirection(value: DirectionType): Self = this.set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDirection: Self = this.set("direction", js.undefined)

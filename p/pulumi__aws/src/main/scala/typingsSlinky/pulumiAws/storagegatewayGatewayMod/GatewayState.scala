@@ -21,6 +21,16 @@ trait GatewayState extends js.Object {
   val arn: js.UndefOr[Input[String]] = js.native
   
   /**
+    * The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
+    */
+  val averageDownloadRateLimitInBitsPerSec: js.UndefOr[Input[Double]] = js.native
+  
+  /**
+    * The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
+    */
+  val averageUploadRateLimitInBitsPerSec: js.UndefOr[Input[Double]] = js.native
+  
+  /**
     * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
     */
   val cloudwatchLogGroupArn: js.UndefOr[Input[String]] = js.native
@@ -55,6 +65,9 @@ trait GatewayState extends js.Object {
     */
   val gatewayVpcEndpoint: js.UndefOr[Input[String]] = js.native
   
+  /**
+    * Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`.
+    */
   val mediumChangerType: js.UndefOr[Input[String]] = js.native
   
   /**
@@ -66,6 +79,11 @@ trait GatewayState extends js.Object {
     * Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` gateway type. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
     */
   val smbGuestPassword: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
+    */
+  val smbSecurityStrategy: js.UndefOr[Input[String]] = js.native
   
   /**
     * Key-value mapping of resource tags
@@ -111,6 +129,18 @@ object GatewayState {
     
     @scala.inline
     def deleteArn: Self = this.set("arn", js.undefined)
+    
+    @scala.inline
+    def setAverageDownloadRateLimitInBitsPerSec(value: Input[Double]): Self = this.set("averageDownloadRateLimitInBitsPerSec", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAverageDownloadRateLimitInBitsPerSec: Self = this.set("averageDownloadRateLimitInBitsPerSec", js.undefined)
+    
+    @scala.inline
+    def setAverageUploadRateLimitInBitsPerSec(value: Input[Double]): Self = this.set("averageUploadRateLimitInBitsPerSec", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAverageUploadRateLimitInBitsPerSec: Self = this.set("averageUploadRateLimitInBitsPerSec", js.undefined)
     
     @scala.inline
     def setCloudwatchLogGroupArn(value: Input[String]): Self = this.set("cloudwatchLogGroupArn", value.asInstanceOf[js.Any])
@@ -171,6 +201,12 @@ object GatewayState {
     
     @scala.inline
     def deleteSmbGuestPassword: Self = this.set("smbGuestPassword", js.undefined)
+    
+    @scala.inline
+    def setSmbSecurityStrategy(value: Input[String]): Self = this.set("smbSecurityStrategy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSmbSecurityStrategy: Self = this.set("smbSecurityStrategy", js.undefined)
     
     @scala.inline
     def setTags(value: Input[StringDictionary[Input[String]]]): Self = this.set("tags", value.asInstanceOf[js.Any])

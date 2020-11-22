@@ -1,6 +1,7 @@
 package typingsSlinky.reactMdMenu.dropdownMenuMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.reactMdMenu.defaultMenuItemRendererMod.MenuItemRenderer
 import typingsSlinky.reactMdMenu.defaultMenuItemRendererMod.ValidMenuItem
 import typingsSlinky.reactMdMenu.defaultMenuRendererMod.InjectedMenuProps
@@ -41,6 +42,11 @@ trait BaseDropdownMenuProps
   var items: js.Array[ValidMenuItem] = js.native
   
   /**
+    * An optional className to pass to the `menuRenderer`/`Menu` component.
+    */
+  var menuClassName: js.UndefOr[String] = js.native
+  
+  /**
     * The label to use for the menu. Either this or the `menuLabelledBy` props
     * are required for a11y.
     */
@@ -60,6 +66,11 @@ trait BaseDropdownMenuProps
     * id.
     */
   var menuRenderer: js.UndefOr[MenuRenderer] = js.native
+  
+  /**
+    * An optional style object to pass to the `menuRenderer`/`Menu` component.
+    */
+  var menuStyle: js.UndefOr[CSSProperties] = js.native
   
   /**
     * An optional function to call when the visibility of the menu changes.
@@ -111,6 +122,12 @@ object BaseDropdownMenuProps {
     def deleteItemRenderer: Self = this.set("itemRenderer", js.undefined)
     
     @scala.inline
+    def setMenuClassName(value: String): Self = this.set("menuClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMenuClassName: Self = this.set("menuClassName", js.undefined)
+    
+    @scala.inline
     def setMenuLabel(value: String): Self = this.set("menuLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -127,6 +144,12 @@ object BaseDropdownMenuProps {
     
     @scala.inline
     def deleteMenuRenderer: Self = this.set("menuRenderer", js.undefined)
+    
+    @scala.inline
+    def setMenuStyle(value: CSSProperties): Self = this.set("menuStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMenuStyle: Self = this.set("menuStyle", js.undefined)
     
     @scala.inline
     def setOnVisibilityChange(value: /* visible */ Boolean => Unit): Self = this.set("onVisibilityChange", js.Any.fromFunction1(value))

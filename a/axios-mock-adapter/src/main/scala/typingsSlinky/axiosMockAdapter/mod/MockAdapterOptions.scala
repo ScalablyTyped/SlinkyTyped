@@ -1,6 +1,7 @@
 package typingsSlinky.axiosMockAdapter.mod
 
 import typingsSlinky.axiosMockAdapter.axiosMockAdapterStrings.passthrough
+import typingsSlinky.axiosMockAdapter.axiosMockAdapterStrings.throwException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ trait MockAdapterOptions extends js.Object {
   
   var delayResponse: js.UndefOr[Double] = js.native
   
-  var onNoMatch: js.UndefOr[passthrough] = js.native
+  var onNoMatch: js.UndefOr[passthrough | throwException] = js.native
 }
 object MockAdapterOptions {
   
@@ -42,7 +43,7 @@ object MockAdapterOptions {
     def deleteDelayResponse: Self = this.set("delayResponse", js.undefined)
     
     @scala.inline
-    def setOnNoMatch(value: passthrough): Self = this.set("onNoMatch", value.asInstanceOf[js.Any])
+    def setOnNoMatch(value: passthrough | throwException): Self = this.set("onNoMatch", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnNoMatch: Self = this.set("onNoMatch", js.undefined)

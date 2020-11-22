@@ -10,13 +10,13 @@ trait SubAPI extends js.Object {
   
   def getAddonState[S](addonId: String): S = js.native
   
-  def getElements(`type`: Types_): Collection = js.native
+  def getElements[T](`type`: Types_): Collection[T] = js.native
   
-  def getPanels(): Collection = js.native
+  def getPanels(): Panels = js.native
   
   def getSelectedPanel(): String = js.native
   
-  def getStoryPanels(): Collection = js.native
+  def getStoryPanels(): Panels = js.native
   
   def setAddonState[S](addonId: String, newStateOrMerger: S): js.Promise[S] = js.native
   def setAddonState[S](addonId: String, newStateOrMerger: S, options: Options): js.Promise[S] = js.native

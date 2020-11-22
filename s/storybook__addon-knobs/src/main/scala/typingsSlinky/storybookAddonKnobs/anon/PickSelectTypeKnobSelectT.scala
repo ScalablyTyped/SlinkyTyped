@@ -1,6 +1,5 @@
 package typingsSlinky.storybookAddonKnobs.anon
 
-import typingsSlinky.std.Extract
 import typingsSlinky.std.PropertyKey
 import typingsSlinky.storybookAddonKnobs.selectMod.SelectTypeKnobValue
 import typingsSlinky.storybookAddonKnobs.selectMod.SelectTypeOptionsProp
@@ -43,7 +42,7 @@ object PickSelectTypeKnobSelectT {
     }
     
     @scala.inline
-    def setOptionsVarargs(value: (Extract[SelectTypeKnobValue, PropertyKey])*): Self = this.set("options", js.Array(value :_*))
+    def setOptionsVarargs(value: SelectTypeKnobValue*): Self = this.set("options", js.Array(value :_*))
     
     @scala.inline
     def setOptions(value: SelectTypeOptionsProp[SelectTypeKnobValue]): Self = this.set("options", value.asInstanceOf[js.Any])

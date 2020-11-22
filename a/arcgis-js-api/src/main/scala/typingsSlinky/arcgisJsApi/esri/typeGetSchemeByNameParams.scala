@@ -20,21 +20,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait typeGetSchemeByNameParams extends Object {
   
   /**
-    * The basemap to pair with the visualization. This value indicates the best symbol color for visualizing features with the given basemap.
+    * The basemap to pair with the visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-type.html#getSchemeByName)
     */
   var basemap: js.UndefOr[String | Basemap] = js.native
   
   /**
-    * If you have a non-Esri basemap (e.g. a VectorTileLayer basemap with a custom style) or no basemap at all, use this parameter to indicate whether the background of the visualization is `light` or `dark`.
+    * If you have a non-Esri basemap (e.g.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-type.html#getSchemeByName)
     */
   var basemapTheme: js.UndefOr[light | dark] = js.native
   
   /**
-    * The geometry type of the features to visualize. | mesh
+    * The geometry type of the features to visualize.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-type.html#getSchemeByName)
     */
@@ -48,23 +48,21 @@ trait typeGetSchemeByNameParams extends Object {
   var name: String = js.native
   
   /**
-    * Determines whether to return a standardized  unique value scheme for point cloud class renderers (i.e. when the `CLASS_CODE` field is driving the visualization in a [PointCloudLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-PointCloudLayer.html)), or to return the other default primary schemes used in other unique value renderers generated for non-point cloud layer types.
+    * Determines whether to return a standardized  unique value scheme for point cloud class renderers (i.e.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-type.html#getSchemeByName)
-    *
-    * @default default
     */
   var theme: js.UndefOr[`point-cloud-class` | default] = js.native
   
   /**
-    * The SceneView instance in which the scheme will be used. This property is only applicable when the scheme will be used in conjunction with 3D symbols.
+    * The SceneView instance in which the scheme will be used.
     *
     * [Read more...](global.html)
     */
   var view: js.UndefOr[SceneView] = js.native
   
   /**
-    * Indicates if the size units of the scheme will be in meters. This should be `true` when the scheme is intended for 3D volumetric symbology. A `view` must be provided if this property is set to `true`.
+    * Indicates if the size units of the scheme will be in meters.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-type.html#getSchemeByName)
     */

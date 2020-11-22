@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ItemPreviewInfo extends js.Object {
   
-  var getUrl: js.UndefOr[String] = js.native
+  var getUrl: js.UndefOr[NullableOption[String]] = js.native
   
-  var postParameters: js.UndefOr[String] = js.native
+  var postParameters: js.UndefOr[NullableOption[String]] = js.native
   
-  var postUrl: js.UndefOr[String] = js.native
+  var postUrl: js.UndefOr[NullableOption[String]] = js.native
 }
 object ItemPreviewInfo {
   
@@ -37,21 +37,30 @@ object ItemPreviewInfo {
     }
     
     @scala.inline
-    def setGetUrl(value: String): Self = this.set("getUrl", value.asInstanceOf[js.Any])
+    def setGetUrl(value: NullableOption[String]): Self = this.set("getUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGetUrl: Self = this.set("getUrl", js.undefined)
     
     @scala.inline
-    def setPostParameters(value: String): Self = this.set("postParameters", value.asInstanceOf[js.Any])
+    def setGetUrlNull: Self = this.set("getUrl", null)
+    
+    @scala.inline
+    def setPostParameters(value: NullableOption[String]): Self = this.set("postParameters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePostParameters: Self = this.set("postParameters", js.undefined)
     
     @scala.inline
-    def setPostUrl(value: String): Self = this.set("postUrl", value.asInstanceOf[js.Any])
+    def setPostParametersNull: Self = this.set("postParameters", null)
+    
+    @scala.inline
+    def setPostUrl(value: NullableOption[String]): Self = this.set("postUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePostUrl: Self = this.set("postUrl", js.undefined)
+    
+    @scala.inline
+    def setPostUrlNull: Self = this.set("postUrl", null)
   }
 }

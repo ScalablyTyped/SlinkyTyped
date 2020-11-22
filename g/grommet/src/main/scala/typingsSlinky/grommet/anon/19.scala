@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `19` extends js.Object {
   
-  var duration: js.UndefOr[Double] = js.native
+  var background: js.UndefOr[`3`] = js.native
+  
+  var border: js.UndefOr[`3`] = js.native
 }
 object `19` {
   
@@ -33,9 +35,15 @@ object `19` {
     }
     
     @scala.inline
-    def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
+    def setBackground(value: `3`): Self = this.set("background", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDuration: Self = this.set("duration", js.undefined)
+    def deleteBackground: Self = this.set("background", js.undefined)
+    
+    @scala.inline
+    def setBorder(value: `3`): Self = this.set("border", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBorder: Self = this.set("border", js.undefined)
   }
 }

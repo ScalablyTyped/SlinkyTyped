@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.postProcessesIndexMod
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,4 +34,12 @@ class SharpenPostProcess protected ()
     textureType: js.UndefOr[Double],
     blockCompilation: js.UndefOr[Boolean]
   ) = this()
+}
+/* static members */
+@JSImport("babylonjs/PostProcesses/index", "SharpenPostProcess")
+@js.native
+object SharpenPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.sharpenPostProcessMod.SharpenPostProcess = js.native
 }

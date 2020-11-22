@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates.DataGridColumn
@@ -47,6 +48,7 @@ import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportChart
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportChartSeries
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeField
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportDateRangeSelector
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -66,8 +68,8 @@ object texts extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -94,7 +96,7 @@ object texts extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/system-texts relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/system-texts relevant section in reference guide}
     */
   @js.native
   class SystemTextCollection protected ()
@@ -123,7 +125,7 @@ object texts extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/translatable-texts relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/translatable-texts relevant section in reference guide}
     */
   @js.native
   class Text protected ()
@@ -133,8 +135,8 @@ object texts extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -594,8 +596,8 @@ object texts extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */

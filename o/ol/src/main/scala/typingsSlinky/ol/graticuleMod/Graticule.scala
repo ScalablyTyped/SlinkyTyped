@@ -13,10 +13,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Graticule
   extends typingsSlinky.ol.vectorMod.default {
   
+  /**
+    * Get the list of meridians.  Meridians are lines of equal longitude.
+    */
   def getMeridians(): js.Array[typingsSlinky.ol.lineStringMod.default] = js.native
   
+  /**
+    * Get the list of parallels.  Parallels are lines of equal latitude.
+    */
   def getParallels(): js.Array[typingsSlinky.ol.lineStringMod.default] = js.native
   
+  /**
+    * Update geometries in the source based on current view
+    */
   def loaderFunction(extent: Extent, resolution: Double, projection: typingsSlinky.ol.projectionMod.default): Unit = js.native
   
   @JSName("on")
@@ -51,6 +60,10 @@ trait Graticule
     listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
   ): EventsKey = js.native
   
+  /**
+    * Strategy function for loading features based on the view's extent and
+    * resolution.
+    */
   def strategyFunction(extent: Extent, resolution: Double): js.Array[Extent] = js.native
   
   @JSName("un")

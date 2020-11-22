@@ -1,14 +1,11 @@
 package typingsSlinky.react.mod
 
 import typingsSlinky.react.reactStrings._empty
-import typingsSlinky.react.reactStrings.`no-referrer`
-import typingsSlinky.react.reactStrings.`unsafe-url`
 import typingsSlinky.react.reactStrings.`use-credentials`
 import typingsSlinky.react.reactStrings.anonymous
 import typingsSlinky.react.reactStrings.async
 import typingsSlinky.react.reactStrings.auto
 import typingsSlinky.react.reactStrings.eager
-import typingsSlinky.react.reactStrings.origin
 import typingsSlinky.react.reactStrings.sync
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -27,7 +24,7 @@ trait ImgHTMLAttributes[T] extends HTMLAttributes[T] {
   
   var loading: js.UndefOr[eager | typingsSlinky.react.reactStrings.`lazy`] = js.native
   
-  var referrerPolicy: js.UndefOr[`no-referrer` | origin | `unsafe-url`] = js.native
+  var referrerPolicy: js.UndefOr[HTMLAttributeReferrerPolicy] = js.native
   
   var sizes: js.UndefOr[String] = js.native
   
@@ -93,7 +90,7 @@ object ImgHTMLAttributes {
     def deleteLoading: Self = this.set("loading", js.undefined)
     
     @scala.inline
-    def setReferrerPolicy(value: `no-referrer` | origin | `unsafe-url`): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    def setReferrerPolicy(value: HTMLAttributeReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)

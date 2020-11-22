@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateResolverRuleRequest extends js.Object {
   
   /**
-    * The new settings for the resolver rule.
+    * The new settings for the Resolver rule.
     */
   var Config: ResolverRuleConfig = js.native
   
   /**
-    * The ID of the resolver rule that you want to update.
+    * The ID of the Resolver rule that you want to update.
     */
   var ResolverRuleId: ResourceId = js.native
 }

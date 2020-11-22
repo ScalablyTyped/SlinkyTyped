@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.surveyKnockout.mod.IMatrixDropdownData because var conflicts: columns, value. Inlined onRowChanged, onRowChanging, getRowIndex, validateCell, createQuestion, getSharedQuestionByName, onTotalValueChanged, getSurvey */ @JSImport("survey-knockout", "QuestionMatrixDropdownModelBase")
+- typingsSlinky.surveyKnockout.mod.IMatrixDropdownData because var conflicts: columns, value. Inlined onRowChanged, onRowChanging, getRowIndex, getRowValue, hasDetailPanel, getIsDetailPanelShowing, setIsDetailPanelShowing, createRowDetailPanel, validateCell, createQuestion, getSharedQuestionByName, onTotalValueChanged, getSurvey */ @JSImport("survey-knockout", "QuestionMatrixDropdownModelBase")
 @js.native
 class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseModel[MatrixDropdownRowModelBase, MatrixDropdownColumn] {
   def this(name: String) = this()
@@ -51,6 +51,8 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
   
   var columnsLocation: String = js.native
   
+  /* protected */ def createNewDetailPanel(): PanelModel = js.native
+  
   /* protected */ def createNewValue(): js.Any = js.native
   /* protected */ def createNewValue(nullOnEmpty: Boolean): js.Any = js.native
   
@@ -60,7 +62,28 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
   
   /* protected */ def createRenderedTable(): QuestionMatrixDropdownRenderedTable = js.native
   
+  def createRowDetailPanel(row: MatrixDropdownRowModelBase): PanelModel = js.native
+  
   /* protected */ def deleteRowValue(newValue: js.Any, row: MatrixDropdownRowModelBase): js.Any = js.native
+  
+  /**
+    * The template Panel elements, questions and panels.
+    * @see  detailPanel
+    * @see detailPanelMode
+    */
+  val detailElements: js.Array[IElement] = js.native
+  
+  /**
+    * The detail template Panel. This panel is used as a template on creating detail panel for a row.
+    * @see  detailElements
+    * @see detailPanelMode
+    */
+  val detailPanel: PanelModel = js.native
+  
+  /**
+    * Set the value to "underRow" to show the detailPanel under the row.
+    */
+  var detailPanelMode: String = js.native
   
   /* protected */ def generateRows(): js.Array[MatrixDropdownRowModelBase] = js.native
   
@@ -82,9 +105,15 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
     */
   def getColumnWidth(column: MatrixDropdownColumn): String = js.native
   
+  def getDetailPanelButtonCss(row: MatrixDropdownRowModelBase): String = js.native
+  
+  def getDetailPanelIconCss(row: MatrixDropdownRowModelBase): String = js.native
+  
   /* protected */ def getFirstCellQuestion(onError: Boolean): Question = js.native
   
   def getFooterText(): LocalizableString = js.native
+  
+  def getIsDetailPanelShowing(row: MatrixDropdownRowModelBase): Boolean = js.native
   
   def getPlainData(options: Calculations): js.Any = js.native
   
@@ -93,6 +122,8 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
   /* protected */ def getRowDisplayValue(row: MatrixDropdownRowModelBase, rowValue: js.Any): js.Any = js.native
   
   def getRowIndex(row: MatrixDropdownRowModelBase): Double = js.native
+  
+  /* protected */ def getRowObj(row: MatrixDropdownRowModelBase): js.Any = js.native
   
   def getRowTitleWidth(): String = js.native
   
@@ -110,6 +141,8 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
   def getSurvey(): ISurvey = js.native
   
   /* protected */ def getVisibleTotalRow(): MatrixDropdownRowModelBase = js.native
+  
+  def hasDetailPanel(row: MatrixDropdownRowModelBase): Boolean = js.native
   
   val hasFooter: Boolean = js.native
   
@@ -148,9 +181,13 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
   
   def onColumnPropertyChanged(column: MatrixDropdownColumn, name: String, newValue: js.Any): Unit = js.native
   
+  def onCreateDetailPanelCallback(row: MatrixDropdownRowModelBase, panel: PanelModel): Unit = js.native
+  
   /* protected */ def onEndRowAdding(): Unit = js.native
   
-  /* protected */ def onEndRowRemoving(index: Double): Unit = js.native
+  /* protected */ def onEndRowRemoving(row: MatrixDropdownRowModelBase): Unit = js.native
+  
+  def onHasDetailPanelCallback(row: MatrixDropdownRowModelBase): Boolean = js.native
   
   /* protected */ def onMatrixRowCreated(row: MatrixDropdownRowModelBase): Unit = js.native
   
@@ -181,12 +218,16 @@ class QuestionMatrixDropdownModelBase protected () extends QuestionMatrixBaseMod
   
   /* protected */ def runTotalsCondition(values: HashTable[_], properties: HashTable[_]): Unit = js.native
   
+  def setIsDetailPanelShowing(row: MatrixDropdownRowModelBase, `val`: Boolean): Unit = js.native
+  
   /**
     * Set the row value.
     * @param rowIndex row index from 0 to visible row count - 1.
     * @param rowValue an object {"column name": columnValue,... }
     */
   def setRowValue(rowIndex: Double, rowValue: js.Any): js.Any = js.native
+  
+  val storeOthersAsComment: Boolean = js.native
   
   val totalValue: js.Any = js.native
   

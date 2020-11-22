@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
 import typingsSlinky.ol.olMod.Transform
+import typingsSlinky.ol.sizeMod.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,7 +25,7 @@ object drawImageOrLabel extends js.Object {
     h: Double,
     x: Double,
     y: Double,
-    scale: Double
+    scale: Size
   ): Unit = js.native
   def apply(
     context: CanvasRenderingContext2D,
@@ -37,7 +38,7 @@ object drawImageOrLabel extends js.Object {
     h: Double,
     x: Double,
     y: Double,
-    scale: Double
+    scale: Size
   ): Unit = js.native
   def apply(
     context: CanvasRenderingContext2D,
@@ -50,7 +51,7 @@ object drawImageOrLabel extends js.Object {
     h: Double,
     x: Double,
     y: Double,
-    scale: Double
+    scale: Size
   ): Unit = js.native
   def apply(
     context: CanvasRenderingContext2D,
@@ -63,7 +64,7 @@ object drawImageOrLabel extends js.Object {
     h: Double,
     x: Double,
     y: Double,
-    scale: Double
+    scale: Size
   ): Unit = js.native
   def apply(
     context: CanvasRenderingContext2D,
@@ -76,7 +77,7 @@ object drawImageOrLabel extends js.Object {
     h: Double,
     x: Double,
     y: Double,
-    scale: Double
+    scale: Size
   ): Unit = js.native
   def apply(
     context: CanvasRenderingContext2D,
@@ -89,7 +90,7 @@ object drawImageOrLabel extends js.Object {
     h: Double,
     x: Double,
     y: Double,
-    scale: Double
+    scale: Size
   ): Unit = js.native
   def apply(
     context: CanvasRenderingContext2D,
@@ -102,7 +103,7 @@ object drawImageOrLabel extends js.Object {
     h: Double,
     x: Double,
     y: Double,
-    scale: Double
+    scale: Size
   ): Unit = js.native
   def apply(
     context: CanvasRenderingContext2D,
@@ -115,6 +116,6 @@ object drawImageOrLabel extends js.Object {
     h: Double,
     x: Double,
     y: Double,
-    scale: Double
+    scale: Size
   ): Unit = js.native
 }

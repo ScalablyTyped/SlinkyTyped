@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`10`
+import typingsSlinky.octokitTypes.anon.`9`
 import typingsSlinky.octokitTypes.octokitTypesStrings.Plussign1
 import typingsSlinky.octokitTypes.octokitTypesStrings.`-1`
 import typingsSlinky.octokitTypes.octokitTypesStrings.confused
@@ -26,7 +26,7 @@ trait ReactionsListForTeamDiscussionCommentInOrgEndpoint extends js.Object {
   
   var discussion_number: Double = js.native
   
-  var mediaType: `10` = js.native
+  var mediaType: `9` = js.native
   
   @JSName("org")
   var org_ : String = js.native
@@ -49,7 +49,7 @@ object ReactionsListForTeamDiscussionCommentInOrgEndpoint {
   def apply(
     comment_number: Double,
     discussion_number: Double,
-    mediaType: `10`,
+    mediaType: `9`,
     org_ : String,
     team_slug: String
   ): ReactionsListForTeamDiscussionCommentInOrgEndpoint = {
@@ -80,7 +80,7 @@ object ReactionsListForTeamDiscussionCommentInOrgEndpoint {
     def setDiscussion_number(value: Double): Self = this.set("discussion_number", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `10`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `9`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOrg_(value: String): Self = this.set("org", value.asInstanceOf[js.Any])

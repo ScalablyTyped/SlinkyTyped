@@ -8,17 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.Lessthansign
   - typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.LessthansignEqualssign
   - typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.EqualssignEqualssign
+  - typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.ExclamationmarkEqualssign
   - typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.GreaterthansignEqualssign
   - typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.Greaterthansign
   - typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`array-contains`
   - typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.in
   - typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`array-contains-any`
+  - typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`not-in`
 */
 trait WhereFilterOp extends js.Object
 object WhereFilterOp {
   
   @scala.inline
   def EqualssignEqualssign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.EqualssignEqualssign = "==".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.EqualssignEqualssign]
+  
+  @scala.inline
+  def ExclamationmarkEqualssign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.ExclamationmarkEqualssign = "!=".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.ExclamationmarkEqualssign]
   
   @scala.inline
   def Greaterthansign: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.Greaterthansign = ">".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.Greaterthansign]
@@ -40,4 +45,7 @@ object WhereFilterOp {
   
   @scala.inline
   def in: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.in = "in".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.in]
+  
+  @scala.inline
+  def `not-in`: typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`not-in` = "not-in".asInstanceOf[typingsSlinky.firebaseFirestoreTypes.firebaseFirestoreTypesStrings.`not-in`]
 }

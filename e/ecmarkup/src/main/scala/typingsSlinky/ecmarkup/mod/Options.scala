@@ -1,7 +1,5 @@
 package typingsSlinky.ecmarkup.mod
 
-import typingsSlinky.ecmarkup.algorithmErrorReporterTypeMod.LintingError
-import typingsSlinky.ecmarkup.algorithmErrorReporterTypeMod.Reporter
 import typingsSlinky.ecmarkup.ecmarkupStrings.`inline`
 import typingsSlinky.ecmarkup.ecmarkupStrings.draft
 import typingsSlinky.ecmarkup.ecmarkupStrings.external
@@ -35,11 +33,11 @@ trait Options extends js.Object {
   
   var location: js.UndefOr[String] = js.native
   
+  var log: js.UndefOr[js.Function1[/* msg */ String, Unit]] = js.native
+  
   var oldToc: js.UndefOr[Boolean] = js.native
   
   var outfile: js.UndefOr[String] = js.native
-  
-  var reportLintErrors: js.UndefOr[Reporter] = js.native
   
   var shortname: js.UndefOr[String] = js.native
   
@@ -51,9 +49,9 @@ trait Options extends js.Object {
   
   var toc: js.UndefOr[Boolean] = js.native
   
-  var verbose: js.UndefOr[Boolean] = js.native
-  
   var version: js.UndefOr[String] = js.native
+  
+  var warn: js.UndefOr[js.Function1[/* err */ EcmarkupError, Unit]] = js.native
 }
 object Options {
   
@@ -139,6 +137,12 @@ object Options {
     def deleteLocation: Self = this.set("location", js.undefined)
     
     @scala.inline
+    def setLog(value: /* msg */ String => Unit): Self = this.set("log", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteLog: Self = this.set("log", js.undefined)
+    
+    @scala.inline
     def setOldToc(value: Boolean): Self = this.set("oldToc", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -149,12 +153,6 @@ object Options {
     
     @scala.inline
     def deleteOutfile: Self = this.set("outfile", js.undefined)
-    
-    @scala.inline
-    def setReportLintErrors(value: (/* lintingError */ js.Array[LintingError], /* sourceText */ String) => Unit): Self = this.set("reportLintErrors", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def deleteReportLintErrors: Self = this.set("reportLintErrors", js.undefined)
     
     @scala.inline
     def setShortname(value: String): Self = this.set("shortname", value.asInstanceOf[js.Any])
@@ -190,15 +188,15 @@ object Options {
     def deleteToc: Self = this.set("toc", js.undefined)
     
     @scala.inline
-    def setVerbose(value: Boolean): Self = this.set("verbose", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteVerbose: Self = this.set("verbose", js.undefined)
-    
-    @scala.inline
     def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVersion: Self = this.set("version", js.undefined)
+    
+    @scala.inline
+    def setWarn(value: /* err */ EcmarkupError => Unit): Self = this.set("warn", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteWarn: Self = this.set("warn", js.undefined)
   }
 }

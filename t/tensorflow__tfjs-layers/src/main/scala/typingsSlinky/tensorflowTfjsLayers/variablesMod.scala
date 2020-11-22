@@ -1,10 +1,10 @@
 package typingsSlinky.tensorflowTfjsLayers
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.mod.Variable_
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.constraintsMod.Constraint
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import scala.scalajs.js

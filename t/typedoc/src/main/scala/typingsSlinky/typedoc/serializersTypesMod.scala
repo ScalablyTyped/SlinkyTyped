@@ -33,6 +33,10 @@ object serializersTypesMod extends js.Object {
     extends typingsSlinky.typedoc.serializersTypesIntrinsicMod.IntrinsicTypeSerializer
   
   @js.native
+  class NamedTupleMemberTypeSerializer ()
+    extends typingsSlinky.typedoc.serializersTypesTupleMod.NamedTupleMemberTypeSerializer
+  
+  @js.native
   class PredicateTypeSerializer ()
     extends typingsSlinky.typedoc.serializersTypesPredicateMod.PredicateTypeSerializer
   

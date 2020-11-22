@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OmaSettingStringXml extends OmaSetting {
   
   // File name associated with the Value property (.xml).
-  var fileName: js.UndefOr[String] = js.native
+  var fileName: js.UndefOr[NullableOption[String]] = js.native
   
   // Value. (UTF8 encoded byte array)
   var value: js.UndefOr[Double] = js.native
@@ -37,10 +37,13 @@ object OmaSettingStringXml {
     }
     
     @scala.inline
-    def setFileName(value: String): Self = this.set("fileName", value.asInstanceOf[js.Any])
+    def setFileName(value: NullableOption[String]): Self = this.set("fileName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFileName: Self = this.set("fileName", js.undefined)
+    
+    @scala.inline
+    def setFileNameNull: Self = this.set("fileName", null)
     
     @scala.inline
     def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 
 # Scala.js typings for estree-walker
 
-Typings are for version 0.6.1
+Typings are for version 2.0.1
 
 ## Library description:
 Traverse an ESTree-compliant AST

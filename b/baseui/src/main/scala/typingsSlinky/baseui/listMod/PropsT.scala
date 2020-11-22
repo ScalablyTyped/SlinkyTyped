@@ -16,7 +16,7 @@ trait PropsT extends js.Object {
   
   var endEnhancer: js.UndefOr[ReactElement] = js.native
   
-  var overrides: js.UndefOr[OverridesT] = js.native
+  var overrides: js.UndefOr[ListOverrides] = js.native
   
   var sublist: js.UndefOr[Boolean] = js.native
 }
@@ -74,7 +74,7 @@ object PropsT {
     def deleteEndEnhancer: Self = this.set("endEnhancer", js.undefined)
     
     @scala.inline
-    def setOverrides(value: OverridesT): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: ListOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)

@@ -13,16 +13,16 @@ trait MUIDataTableFilter extends js.Object {
   
   var filterList: js.UndefOr[js.Array[js.Array[String]]] = js.native
   
-  var onFilterRest: js.UndefOr[js.Function1[/* args */ js.Any, _]] = js.native
+  var onFilterReset: js.UndefOr[js.Function1[/* args */ js.Any, _]] = js.native
   
   var onFilterUpdate: js.UndefOr[js.Function1[/* args */ js.Any, _]] = js.native
   
-  var options: js.Object = js.native
+  var options: MUIDataTableOptions = js.native
 }
 object MUIDataTableFilter {
   
   @scala.inline
-  def apply(filterData: js.Array[_], options: js.Object): MUIDataTableFilter = {
+  def apply(filterData: js.Array[_], options: MUIDataTableOptions): MUIDataTableFilter = {
     val __obj = js.Dynamic.literal(filterData = filterData.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableFilter]
   }
@@ -49,7 +49,7 @@ object MUIDataTableFilter {
     def setFilterData(value: js.Array[_]): Self = this.set("filterData", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: MUIDataTableOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setClasses(value: js.Object): Self = this.set("classes", value.asInstanceOf[js.Any])
@@ -67,10 +67,10 @@ object MUIDataTableFilter {
     def deleteFilterList: Self = this.set("filterList", js.undefined)
     
     @scala.inline
-    def setOnFilterRest(value: /* args */ js.Any => _): Self = this.set("onFilterRest", js.Any.fromFunction1(value))
+    def setOnFilterReset(value: /* args */ js.Any => _): Self = this.set("onFilterReset", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteOnFilterRest: Self = this.set("onFilterRest", js.undefined)
+    def deleteOnFilterReset: Self = this.set("onFilterReset", js.undefined)
     
     @scala.inline
     def setOnFilterUpdate(value: /* args */ js.Any => _): Self = this.set("onFilterUpdate", js.Any.fromFunction1(value))

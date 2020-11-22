@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait NamedDeclaration extends Declaration {
   
-  var name: js.UndefOr[DeclarationName] = js.native
+  val name: js.UndefOr[DeclarationName] = js.native
 }

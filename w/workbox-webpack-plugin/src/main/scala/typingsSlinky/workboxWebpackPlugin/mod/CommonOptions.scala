@@ -34,9 +34,9 @@ trait CommonOptions extends js.Object {
     * as it will reduce the amount of bandwidth consumed when precaching.
     *
     * @default null
-    * @example dontCacheBustUrlsMatching: /\.\w{8}\./
+    * @example dontCacheBustURLsMatching: /\.\w{8}\./
     */
-  var dontCacheBustUrlsMatching: js.UndefOr[js.RegExp | Null] = js.native
+  var dontCacheBustURLsMatching: js.UndefOr[js.RegExp | Null] = js.native
   
   /**
     * This allows you to specifically omit assets matching any of the provided criteria from being included in the precache manifest. It provides a filename-based approach to filtering.
@@ -148,7 +148,7 @@ trait CommonOptions extends js.Object {
     * One or more [`ManifestTransform`](https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.ManifestTransform)
     * functions, which will be applied sequentially against the generated manifest.
     *
-    * If `modifyUrlPrefix` or `dontCacheBustUrlsMatching` are also specified, their corresponding transformations will be applied first.
+    * If `modifyURLPrefix` or `dontCacheBustURLsMatching` are also specified, their corresponding transformations will be applied first.
     */
   var manifestTransforms: js.UndefOr[
     (js.Array[js.Function1[/* originalManifest */ js.Array[ManifestEntry], Manifest]]) | Null
@@ -177,9 +177,9 @@ trait CommonOptions extends js.Object {
     * As an alternative with more flexibility, you can use the `manifestTransforms` option and provide a function that modifies the entries in the manifest using whatever logic you provide.
     *
     * @default null
-    * @example modifyUrlPrefix: { '/dist': '' }
+    * @example modifyURLPrefix: { '/dist': '' }
     */
-  var modifyUrlPrefix: js.UndefOr[StringDictionary[String] | Null] = js.native
+  var modifyURLPrefix: js.UndefOr[StringDictionary[String] | Null] = js.native
   
   /**
     * Workbox automatically creates a JavaScript file that contains information about URLs that need to be precached. By default, this file is called `precache-manifest.[manifestHash].js`,
@@ -257,13 +257,13 @@ object CommonOptions {
     def deleteChunks: Self = this.set("chunks", js.undefined)
     
     @scala.inline
-    def setDontCacheBustUrlsMatching(value: js.RegExp): Self = this.set("dontCacheBustUrlsMatching", value.asInstanceOf[js.Any])
+    def setDontCacheBustURLsMatching(value: js.RegExp): Self = this.set("dontCacheBustURLsMatching", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDontCacheBustUrlsMatching: Self = this.set("dontCacheBustUrlsMatching", js.undefined)
+    def deleteDontCacheBustURLsMatching: Self = this.set("dontCacheBustURLsMatching", js.undefined)
     
     @scala.inline
-    def setDontCacheBustUrlsMatchingNull: Self = this.set("dontCacheBustUrlsMatching", null)
+    def setDontCacheBustURLsMatchingNull: Self = this.set("dontCacheBustURLsMatching", null)
     
     @scala.inline
     def setExcludeVarargs(value: (String | js.RegExp)*): Self = this.set("exclude", js.Array(value :_*))
@@ -368,13 +368,13 @@ object CommonOptions {
     def deleteMode: Self = this.set("mode", js.undefined)
     
     @scala.inline
-    def setModifyUrlPrefix(value: StringDictionary[String]): Self = this.set("modifyUrlPrefix", value.asInstanceOf[js.Any])
+    def setModifyURLPrefix(value: StringDictionary[String]): Self = this.set("modifyURLPrefix", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteModifyUrlPrefix: Self = this.set("modifyUrlPrefix", js.undefined)
+    def deleteModifyURLPrefix: Self = this.set("modifyURLPrefix", js.undefined)
     
     @scala.inline
-    def setModifyUrlPrefixNull: Self = this.set("modifyUrlPrefix", null)
+    def setModifyURLPrefixNull: Self = this.set("modifyURLPrefix", null)
     
     @scala.inline
     def setPrecacheManifestFilename(value: String): Self = this.set("precacheManifestFilename", value.asInstanceOf[js.Any])

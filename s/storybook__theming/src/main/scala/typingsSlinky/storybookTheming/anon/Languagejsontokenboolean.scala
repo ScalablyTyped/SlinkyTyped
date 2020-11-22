@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Languagejsontokenboolean extends js.Object {
   
   @JSName("language-json .token.boolean")
-  var `language-json DottokenDotboolean`: ColorString = js.native
+  var `language-json DottokenDotboolean`: Color = js.native
   
   @JSName("language-json .token.number")
-  var `language-json DottokenDotnumber`: ColorString = js.native
+  var `language-json DottokenDotnumber`: Color = js.native
   
   @JSName("language-json .token.property")
-  var `language-json DottokenDotproperty`: ColorString = js.native
+  var `language-json DottokenDotproperty`: Color = js.native
   
   var namespace: Opacity = js.native
   
@@ -24,9 +24,9 @@ object Languagejsontokenboolean {
   
   @scala.inline
   def apply(
-    `language-json DottokenDotboolean`: ColorString,
-    `language-json DottokenDotnumber`: ColorString,
-    `language-json DottokenDotproperty`: ColorString,
+    `language-json DottokenDotboolean`: Color,
+    `language-json DottokenDotnumber`: Color,
+    `language-json DottokenDotproperty`: Color,
     namespace: Opacity,
     token: Atrule
   ): Languagejsontokenboolean = {
@@ -53,13 +53,13 @@ object Languagejsontokenboolean {
     }
     
     @scala.inline
-    def `setLanguage-json DottokenDotboolean`(value: ColorString): Self = this.set("language-json .token.boolean", value.asInstanceOf[js.Any])
+    def `setLanguage-json DottokenDotboolean`(value: Color): Self = this.set("language-json .token.boolean", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `setLanguage-json DottokenDotnumber`(value: ColorString): Self = this.set("language-json .token.number", value.asInstanceOf[js.Any])
+    def `setLanguage-json DottokenDotnumber`(value: Color): Self = this.set("language-json .token.number", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `setLanguage-json DottokenDotproperty`(value: ColorString): Self = this.set("language-json .token.property", value.asInstanceOf[js.Any])
+    def `setLanguage-json DottokenDotproperty`(value: Color): Self = this.set("language-json .token.property", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNamespace(value: Opacity): Self = this.set("namespace", value.asInstanceOf[js.Any])

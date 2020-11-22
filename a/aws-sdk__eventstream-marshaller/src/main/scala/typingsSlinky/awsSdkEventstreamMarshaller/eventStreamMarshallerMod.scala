@@ -1,19 +1,26 @@
 package typingsSlinky.awsSdkEventstreamMarshaller
 
-import typingsSlinky.awsSdkEventstreamMarshaller.messageMod.Message
+import typingsSlinky.awsSdkTypes.eventStreamMod.Message
+import typingsSlinky.awsSdkTypes.eventStreamMod.MessageHeaders
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/eventstream-marshaller/build/EventStreamMarshaller", JSImport.Namespace)
+@JSImport("@aws-sdk/eventstream-marshaller/dist/cjs/EventStreamMarshaller", JSImport.Namespace)
 @js.native
 object eventStreamMarshallerMod extends js.Object {
   
   @js.native
   class EventStreamMarshaller protected () extends js.Object {
     def this(toUtf8: Encoder, fromUtf8: Decoder) = this()
+    
+    /**
+      * Convert a structured JavaScript object with tagged headers into a binary
+      * event stream message header.
+      */
+    def formatHeaders(rawHeaders: MessageHeaders): js.typedarray.Uint8Array = js.native
     
     val headerMarshaller: js.Any = js.native
     

@@ -15,5 +15,7 @@ class Deferred protected () extends js.Object {
   
   var elapsed: Double = js.native
   
+  def resolve(): Unit = js.native
+  
   var timeStamp: Double = js.native
 }

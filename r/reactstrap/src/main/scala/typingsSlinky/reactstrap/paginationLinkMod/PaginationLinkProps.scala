@@ -3,9 +3,8 @@ package typingsSlinky.reactstrap.paginationLinkMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLAnchorElement
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.react.mod.ReactType
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.AnchorHTMLAttributes
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,8 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait PaginationLinkProps
-  extends AllHTMLAttributes[HTMLAnchorElement]
-     with ClassAttributes[HTMLAnchorElement]
+  extends AnchorHTMLAttributes[HTMLAnchorElement]
      with /* key */ StringDictionary[js.Any] {
   
   var cssModule: js.UndefOr[CSSModule] = js.native
@@ -27,7 +25,7 @@ trait PaginationLinkProps
   
   var previous: js.UndefOr[Boolean] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
 }
 object PaginationLinkProps {
   
@@ -89,7 +87,7 @@ object PaginationLinkProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

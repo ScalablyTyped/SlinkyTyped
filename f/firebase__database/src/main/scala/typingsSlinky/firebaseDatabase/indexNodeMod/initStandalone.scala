@@ -1,7 +1,7 @@
 package typingsSlinky.firebaseDatabase.indexNodeMod
 
 import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
-import typingsSlinky.firebaseDatabase.anon.Instance
+import typingsSlinky.firebaseDatabase.anon.Namespace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object initStandalone extends js.Object {
   
-  def apply(app: FirebaseApp, url: String, version: String): Instance = js.native
+  def apply(app: FirebaseApp, url: String, version: String): Namespace = js.native
+  def apply(app: FirebaseApp, url: String, version: String, nodeAdmin: Boolean): Namespace = js.native
 }

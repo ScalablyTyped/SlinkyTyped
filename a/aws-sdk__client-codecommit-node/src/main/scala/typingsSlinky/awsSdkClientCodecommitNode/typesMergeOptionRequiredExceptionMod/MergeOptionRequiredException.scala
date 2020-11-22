@@ -1,30 +1,23 @@
 package typingsSlinky.awsSdkClientCodecommitNode.typesMergeOptionRequiredExceptionMod
 
 import typingsSlinky.awsSdkClientCodecommitNode.getMergeConflictsExceptionsUnionMod.GetMergeConflictsExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait MergeOptionRequiredException
-  extends ServiceException[MergeOptionRequiredExceptionDetails]
-     with GetMergeConflictsExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_MergeOptionRequiredExceptionDetails> * / any */ @js.native
+trait MergeOptionRequiredException extends GetMergeConflictsExceptionsUnion {
   
-  @JSName("name")
-  var name_MergeOptionRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.MergeOptionRequiredException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.MergeOptionRequiredException = js.native
 }
 object MergeOptionRequiredException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: MergeOptionRequiredExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.MergeOptionRequiredException
   ): MergeOptionRequiredException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[MergeOptionRequiredException]
   }
   

@@ -7,6 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StackNavigationConfig extends js.Object {
   
+  /**
+    * Whether inactive screens should be detached from the view hierarchy to save memory.
+    * Make sure to call `enableScreens` from `react-native-screens` to make it work.
+    * Defaults to `true` on Android, depends on the version of `react-native-screens` on iOS.
+    */
+  var detachInactiveScreens: js.UndefOr[Boolean] = js.native
+  
   var headerMode: js.UndefOr[StackHeaderMode] = js.native
   
   /**
@@ -39,6 +46,12 @@ object StackNavigationConfig {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDetachInactiveScreens(value: Boolean): Self = this.set("detachInactiveScreens", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDetachInactiveScreens: Self = this.set("detachInactiveScreens", js.undefined)
     
     @scala.inline
     def setHeaderMode(value: StackHeaderMode): Self = this.set("headerMode", value.asInstanceOf[js.Any])

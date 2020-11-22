@@ -32,7 +32,7 @@ object tagMod extends js.Object {
     
     def tagger(): Signature = js.native
     
-    def target(): Object = js.native
+    def target(): js.Promise[Object] = js.native
     
     def targetId(): Oid = js.native
     

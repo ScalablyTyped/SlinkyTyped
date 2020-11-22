@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.appsyncMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -337,12 +337,12 @@ trait AppSync extends Service {
   ): Request[GetTypeResponse, AWSError] = js.native
   
   /**
-    * Lists the API keys for a given API.  API keys are deleted automatically sometime after they expire. However, they may still be included in the response until they have actually been deleted. You can safely call DeleteApiKey to manually delete a key before it's automatically deleted. 
+    * Lists the API keys for a given API.  API keys are deleted automatically 60 days after they expire. However, they may still be included in the response until they have actually been deleted. You can safely call DeleteApiKey to manually delete a key before it's automatically deleted. 
     */
   def listApiKeys(): Request[ListApiKeysResponse, AWSError] = js.native
   def listApiKeys(callback: js.Function2[/* err */ AWSError, /* data */ ListApiKeysResponse, Unit]): Request[ListApiKeysResponse, AWSError] = js.native
   /**
-    * Lists the API keys for a given API.  API keys are deleted automatically sometime after they expire. However, they may still be included in the response until they have actually been deleted. You can safely call DeleteApiKey to manually delete a key before it's automatically deleted. 
+    * Lists the API keys for a given API.  API keys are deleted automatically 60 days after they expire. However, they may still be included in the response until they have actually been deleted. You can safely call DeleteApiKey to manually delete a key before it's automatically deleted. 
     */
   def listApiKeys(params: ListApiKeysRequest): Request[ListApiKeysResponse, AWSError] = js.native
   def listApiKeys(
@@ -505,12 +505,12 @@ trait AppSync extends Service {
   ): Request[UpdateApiCacheResponse, AWSError] = js.native
   
   /**
-    * Updates an API key.
+    * Updates an API key. The key can be updated while it is not deleted.
     */
   def updateApiKey(): Request[UpdateApiKeyResponse, AWSError] = js.native
   def updateApiKey(callback: js.Function2[/* err */ AWSError, /* data */ UpdateApiKeyResponse, Unit]): Request[UpdateApiKeyResponse, AWSError] = js.native
   /**
-    * Updates an API key.
+    * Updates an API key. The key can be updated while it is not deleted.
     */
   def updateApiKey(params: UpdateApiKeyRequest): Request[UpdateApiKeyResponse, AWSError] = js.native
   def updateApiKey(

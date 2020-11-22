@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CommandLine extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/command-line
+  // Docs: https://electronjs.org/docs/api/command-line
   /**
     * Append an argument to Chromium's command line. The argument will be quoted
     * correctly. Switches will precede arguments regardless of appending order.

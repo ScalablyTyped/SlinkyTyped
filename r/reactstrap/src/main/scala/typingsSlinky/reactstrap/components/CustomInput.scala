@@ -2,9 +2,11 @@ package typingsSlinky.reactstrap.components
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -23,70 +25,82 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.reactStrings.`additions text`
-import typingsSlinky.react.reactStrings.`inline`
-import typingsSlinky.react.reactStrings.additions
-import typingsSlinky.react.reactStrings.all
-import typingsSlinky.react.reactStrings.ascending
-import typingsSlinky.react.reactStrings.assertive
-import typingsSlinky.react.reactStrings.both
-import typingsSlinky.react.reactStrings.copy
-import typingsSlinky.react.reactStrings.date
-import typingsSlinky.react.reactStrings.decimal
-import typingsSlinky.react.reactStrings.descending
-import typingsSlinky.react.reactStrings.dialog
-import typingsSlinky.react.reactStrings.email
-import typingsSlinky.react.reactStrings.execute
-import typingsSlinky.react.reactStrings.grammar
-import typingsSlinky.react.reactStrings.grid
-import typingsSlinky.react.reactStrings.horizontal
-import typingsSlinky.react.reactStrings.inherit
-import typingsSlinky.react.reactStrings.link
-import typingsSlinky.react.reactStrings.list
-import typingsSlinky.react.reactStrings.listbox
-import typingsSlinky.react.reactStrings.location
-import typingsSlinky.react.reactStrings.menu
-import typingsSlinky.react.reactStrings.mixed
-import typingsSlinky.react.reactStrings.move
-import typingsSlinky.react.reactStrings.no
-import typingsSlinky.react.reactStrings.none
-import typingsSlinky.react.reactStrings.numeric
-import typingsSlinky.react.reactStrings.off
-import typingsSlinky.react.reactStrings.on
-import typingsSlinky.react.reactStrings.other
-import typingsSlinky.react.reactStrings.page
-import typingsSlinky.react.reactStrings.polite
-import typingsSlinky.react.reactStrings.popup
-import typingsSlinky.react.reactStrings.removals
-import typingsSlinky.react.reactStrings.search
-import typingsSlinky.react.reactStrings.spelling
-import typingsSlinky.react.reactStrings.step
-import typingsSlinky.react.reactStrings.tel
-import typingsSlinky.react.reactStrings.text
-import typingsSlinky.react.reactStrings.time
-import typingsSlinky.react.reactStrings.tree
-import typingsSlinky.react.reactStrings.url
-import typingsSlinky.react.reactStrings.vertical
-import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactstrap.customInputMod.CustomInputProps
 import typingsSlinky.reactstrap.customInputMod.CustomInputType
 import typingsSlinky.reactstrap.mod.CSSModule
+import typingsSlinky.reactstrap.reactstrapStrings.`additions removals`
+import typingsSlinky.reactstrap.reactstrapStrings.`additions text`
+import typingsSlinky.reactstrap.reactstrapStrings.`inline`
+import typingsSlinky.reactstrap.reactstrapStrings.`removals additions`
+import typingsSlinky.reactstrap.reactstrapStrings.`removals text`
+import typingsSlinky.reactstrap.reactstrapStrings.`text additions`
+import typingsSlinky.reactstrap.reactstrapStrings.`text removals`
+import typingsSlinky.reactstrap.reactstrapStrings.additions
+import typingsSlinky.reactstrap.reactstrapStrings.all
+import typingsSlinky.reactstrap.reactstrapStrings.ascending
+import typingsSlinky.reactstrap.reactstrapStrings.assertive
+import typingsSlinky.reactstrap.reactstrapStrings.both
+import typingsSlinky.reactstrap.reactstrapStrings.copy
+import typingsSlinky.reactstrap.reactstrapStrings.date
+import typingsSlinky.reactstrap.reactstrapStrings.decimal
+import typingsSlinky.reactstrap.reactstrapStrings.descending
+import typingsSlinky.reactstrap.reactstrapStrings.dialog
+import typingsSlinky.reactstrap.reactstrapStrings.done
+import typingsSlinky.reactstrap.reactstrapStrings.email
+import typingsSlinky.reactstrap.reactstrapStrings.enter
+import typingsSlinky.reactstrap.reactstrapStrings.execute
+import typingsSlinky.reactstrap.reactstrapStrings.go
+import typingsSlinky.reactstrap.reactstrapStrings.grammar
+import typingsSlinky.reactstrap.reactstrapStrings.grid
+import typingsSlinky.reactstrap.reactstrapStrings.horizontal
+import typingsSlinky.reactstrap.reactstrapStrings.inherit
 import typingsSlinky.reactstrap.reactstrapStrings.lg
+import typingsSlinky.reactstrap.reactstrapStrings.link
+import typingsSlinky.reactstrap.reactstrapStrings.list
+import typingsSlinky.reactstrap.reactstrapStrings.listbox
+import typingsSlinky.reactstrap.reactstrapStrings.location
+import typingsSlinky.reactstrap.reactstrapStrings.menu
+import typingsSlinky.reactstrap.reactstrapStrings.mixed
+import typingsSlinky.reactstrap.reactstrapStrings.move
+import typingsSlinky.reactstrap.reactstrapStrings.next
+import typingsSlinky.reactstrap.reactstrapStrings.no
+import typingsSlinky.reactstrap.reactstrapStrings.none
+import typingsSlinky.reactstrap.reactstrapStrings.numeric
+import typingsSlinky.reactstrap.reactstrapStrings.off
+import typingsSlinky.reactstrap.reactstrapStrings.on
+import typingsSlinky.reactstrap.reactstrapStrings.other
+import typingsSlinky.reactstrap.reactstrapStrings.page
+import typingsSlinky.reactstrap.reactstrapStrings.polite
+import typingsSlinky.reactstrap.reactstrapStrings.popup
+import typingsSlinky.reactstrap.reactstrapStrings.previous
+import typingsSlinky.reactstrap.reactstrapStrings.removals
+import typingsSlinky.reactstrap.reactstrapStrings.search
+import typingsSlinky.reactstrap.reactstrapStrings.send
 import typingsSlinky.reactstrap.reactstrapStrings.sm
+import typingsSlinky.reactstrap.reactstrapStrings.spelling
+import typingsSlinky.reactstrap.reactstrapStrings.step
+import typingsSlinky.reactstrap.reactstrapStrings.tel
+import typingsSlinky.reactstrap.reactstrapStrings.text
+import typingsSlinky.reactstrap.reactstrapStrings.time
+import typingsSlinky.reactstrap.reactstrapStrings.tree
+import typingsSlinky.reactstrap.reactstrapStrings.url
+import typingsSlinky.reactstrap.reactstrapStrings.vertical
+import typingsSlinky.reactstrap.reactstrapStrings.yes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object CustomInput {
   
-  @JSImport("reactstrap", "CustomInput")
+  @JSImport("reactstrap/es", "CustomInput")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.CustomInput[T]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactstrap.mod.CustomInput] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -206,7 +220,9 @@ object CustomInput {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -311,6 +327,9 @@ object CustomInput {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -338,13 +357,22 @@ object CustomInput {
     def htmlFor(value: String): this.type = set("htmlFor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def `inline`(value: Boolean): this.type = set("inline", value.asInstanceOf[js.Any])
     
     @scala.inline
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefRefObject(value: ReactRef[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def innerRef(value: Ref[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def innerRefNull: this.type = set("innerRef", null)
     
     @scala.inline
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
@@ -725,12 +753,12 @@ object CustomInput {
     def width(value: Double | String): this.type = set("width", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: CustomInputProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: CustomInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply[T](`type`: CustomInputType): Builder[T] = {
-    val __props = js.Dynamic.literal()
+  def apply(id: String | Double, `type`: CustomInputType): Builder = {
+    val __props = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
     __props.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[CustomInputProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[CustomInputProps]))
   }
 }

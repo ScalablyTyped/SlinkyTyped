@@ -16,39 +16,61 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFormSimpleItem extends js.Object {
   
-  /** @name dxFormSimpleItem.colSpan */
+  /**
+    * [descr:dxFormSimpleItem.colSpan]
+    */
   var colSpan: js.UndefOr[Double] = js.native
   
-  /** @name dxFormSimpleItem.cssClass */
+  /**
+    * [descr:dxFormSimpleItem.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name dxFormSimpleItem.dataField */
+  /**
+    * [descr:dxFormSimpleItem.dataField]
+    */
   var dataField: js.UndefOr[String] = js.native
   
-  /** @name dxFormSimpleItem.editorOptions */
+  /**
+    * [descr:dxFormSimpleItem.editorOptions]
+    */
   var editorOptions: js.UndefOr[js.Any] = js.native
   
-  /** @name dxFormSimpleItem.editorType */
+  /**
+    * [descr:dxFormSimpleItem.editorType]
+    */
   var editorType: js.UndefOr[
     typingsSlinky.devextreme.devextremeStrings.dxAutocomplete | typingsSlinky.devextreme.devextremeStrings.dxCalendar | typingsSlinky.devextreme.devextremeStrings.dxCheckBox | typingsSlinky.devextreme.devextremeStrings.dxColorBox | typingsSlinky.devextreme.devextremeStrings.dxDateBox | typingsSlinky.devextreme.devextremeStrings.dxDropDownBox | typingsSlinky.devextreme.devextremeStrings.dxHtmlEditor | typingsSlinky.devextreme.devextremeStrings.dxLookup | typingsSlinky.devextreme.devextremeStrings.dxNumberBox | typingsSlinky.devextreme.devextremeStrings.dxRadioGroup | typingsSlinky.devextreme.devextremeStrings.dxRangeSlider | typingsSlinky.devextreme.devextremeStrings.dxSelectBox | typingsSlinky.devextreme.devextremeStrings.dxSlider | typingsSlinky.devextreme.devextremeStrings.dxSwitch | typingsSlinky.devextreme.devextremeStrings.dxTagBox | typingsSlinky.devextreme.devextremeStrings.dxTextArea | typingsSlinky.devextreme.devextremeStrings.dxTextBox
   ] = js.native
   
-  /** @name dxFormSimpleItem.helpText */
+  /**
+    * [descr:dxFormSimpleItem.helpText]
+    */
   var helpText: js.UndefOr[String] = js.native
   
-  /** @name dxFormSimpleItem.isRequired */
+  /**
+    * [descr:dxFormSimpleItem.isRequired]
+    */
   var isRequired: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFormSimpleItem.itemType */
+  /**
+    * [descr:dxFormSimpleItem.itemType]
+    */
   var itemType: js.UndefOr[empty | group | simple | tabbed | button] = js.native
   
-  /** @name dxFormSimpleItem.label */
+  /**
+    * [descr:dxFormSimpleItem.label]
+    */
   var label: js.UndefOr[Location] = js.native
   
-  /** @name dxFormSimpleItem.name */
+  /**
+    * [descr:dxFormSimpleItem.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxFormSimpleItem.template */
+  /**
+    * [descr:dxFormSimpleItem.template]
+    */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[
       /* data */ typingsSlinky.devextreme.anon.EditorOptions, 
@@ -57,17 +79,23 @@ trait dxFormSimpleItem extends js.Object {
     ])
   ] = js.native
   
-  /** @name dxFormSimpleItem.validationRules */
+  /**
+    * [descr:dxFormSimpleItem.validationRules]
+    */
   var validationRules: js.UndefOr[
     js.Array[
       RequiredRule | NumericRule | RangeRule | StringLengthRule | CustomRule | CompareRule | PatternRule | EmailRule | AsyncRule
     ]
   ] = js.native
   
-  /** @name dxFormSimpleItem.visible */
+  /**
+    * [descr:dxFormSimpleItem.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxFormSimpleItem.visibleIndex */
+  /**
+    * [descr:dxFormSimpleItem.visibleIndex]
+    */
   var visibleIndex: js.UndefOr[Double] = js.native
 }
 object dxFormSimpleItem {

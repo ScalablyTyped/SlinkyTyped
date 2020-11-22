@@ -1,6 +1,12 @@
 package typingsSlinky.hafasClient.mod
 
+import typingsSlinky.hafasClient.hafasClientStrings.`foreign-id`
+import typingsSlinky.hafasClient.hafasClientStrings.`local-fare-zone`
+import typingsSlinky.hafasClient.hafasClientStrings.`stop-dhid`
+import typingsSlinky.hafasClient.hafasClientStrings.`stop-website`
+import typingsSlinky.hafasClient.hafasClientStrings.`transit-authority`
 import typingsSlinky.hafasClient.hafasClientStrings.hint
+import typingsSlinky.hafasClient.hafasClientStrings.status
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,12 +22,15 @@ trait Hint extends js.Object {
   
   var tripId: js.UndefOr[String] = js.native
   
-  var `type`: hint = js.native
+  var `type`: hint | status | `foreign-id` | `local-fare-zone` | `stop-website` | `stop-dhid` | `transit-authority` = js.native
 }
 object Hint {
   
   @scala.inline
-  def apply(text: String, `type`: hint): Hint = {
+  def apply(
+    text: String,
+    `type`: hint | status | `foreign-id` | `local-fare-zone` | `stop-website` | `stop-dhid` | `transit-authority`
+  ): Hint = {
     val __obj = js.Dynamic.literal(text = text.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Hint]
@@ -46,7 +55,9 @@ object Hint {
     def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: hint): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(
+      value: hint | status | `foreign-id` | `local-fare-zone` | `stop-website` | `stop-dhid` | `transit-authority`
+    ): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCode(value: String): Self = this.set("code", value.asInstanceOf[js.Any])

@@ -10,7 +10,7 @@ trait ImportAttribute_
   extends BaseNode
      with _Node {
   
-  var key: Identifier_ = js.native
+  var key: Identifier_ | StringLiteral_ = js.native
   
   @JSName("type")
   var type_ImportAttribute_ : ImportAttribute = js.native
@@ -20,7 +20,7 @@ trait ImportAttribute_
 object ImportAttribute_ {
   
   @scala.inline
-  def apply(key: Identifier_, `type`: ImportAttribute, value: StringLiteral_): ImportAttribute_ = {
+  def apply(key: Identifier_ | StringLiteral_, `type`: ImportAttribute, value: StringLiteral_): ImportAttribute_ = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportAttribute_]
@@ -42,7 +42,7 @@ object ImportAttribute_ {
     }
     
     @scala.inline
-    def setKey(value: Identifier_): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setKey(value: Identifier_ | StringLiteral_): Self = this.set("key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: ImportAttribute): Self = this.set("type", value.asInstanceOf[js.Any])

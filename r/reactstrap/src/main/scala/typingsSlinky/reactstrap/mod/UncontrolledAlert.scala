@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "UncontrolledAlert")
+@JSImport("reactstrap/es", "UncontrolledAlert")
 @js.native
-class UncontrolledAlert[T] ()
+class UncontrolledAlert ()
   extends Component[UncontrolledAlertProps, js.Object, js.Any]

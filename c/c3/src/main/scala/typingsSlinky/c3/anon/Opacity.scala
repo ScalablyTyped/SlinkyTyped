@@ -15,7 +15,7 @@ trait Opacity extends js.Object {
   /** Points should be added in counter-clockwise direction  to close the polygon. */
   var points: js.Array[X] = js.native
   
-  var text: js.UndefOr[String] = js.native
+  var text: js.UndefOr[js.Function2[/* value */ Double, /* percentage */ Double, String]] = js.native
 }
 object Opacity {
   
@@ -59,7 +59,7 @@ object Opacity {
     def deleteOpacity: Self = this.set("opacity", js.undefined)
     
     @scala.inline
-    def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])
+    def setText(value: (/* value */ Double, /* percentage */ Double) => String): Self = this.set("text", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteText: Self = this.set("text", js.undefined)

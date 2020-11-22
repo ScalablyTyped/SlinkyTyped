@@ -1,6 +1,7 @@
 package typingsSlinky.serverless.awsProviderMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +11,7 @@ trait HttpRequestValidation extends js.Object {
   
   var parameters: js.UndefOr[HttpRequestParametersValidation] = js.native
   
-  var schema: js.UndefOr[StringDictionary[String]] = js.native
+  var schema: js.UndefOr[StringDictionary[Record[String, _]]] = js.native
 }
 object HttpRequestValidation {
   
@@ -42,7 +43,7 @@ object HttpRequestValidation {
     def deleteParameters: Self = this.set("parameters", js.undefined)
     
     @scala.inline
-    def setSchema(value: StringDictionary[String]): Self = this.set("schema", value.asInstanceOf[js.Any])
+    def setSchema(value: StringDictionary[Record[String, _]]): Self = this.set("schema", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSchema: Self = this.set("schema", js.undefined)

@@ -18,7 +18,7 @@ trait GetServersRequest extends js.Object {
   var nextToken: js.UndefOr[NextToken] = js.native
   
   /**
-    * List of VmServerAddress objects
+    * The server addresses.
     */
   var vmServerAddressList: js.UndefOr[VmServerAddressList] = js.native
 }

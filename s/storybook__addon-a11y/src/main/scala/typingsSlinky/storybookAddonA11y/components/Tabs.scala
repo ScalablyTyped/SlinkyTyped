@@ -14,11 +14,11 @@ object Tabs {
   @js.native
   object component extends js.Object
   
-  def withProps(p: TabsProps): Default[tag.type, typingsSlinky.storybookAddonA11y.tabsMod.Tabs] = new Default[tag.type, typingsSlinky.storybookAddonA11y.tabsMod.Tabs](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: TabsProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(tabs: js.Array[Items]): Default[tag.type, typingsSlinky.storybookAddonA11y.tabsMod.Tabs] = {
+  def apply(tabs: js.Array[Items]): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(tabs = tabs.asInstanceOf[js.Any])
-    new Default[tag.type, typingsSlinky.storybookAddonA11y.tabsMod.Tabs](js.Array(this.component, __props.asInstanceOf[TabsProps]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[TabsProps]))
   }
 }

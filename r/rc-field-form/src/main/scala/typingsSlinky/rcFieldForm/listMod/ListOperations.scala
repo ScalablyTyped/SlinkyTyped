@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListOperations extends js.Object {
   
   def add(): Unit = js.native
+  def add(defaultValue: js.UndefOr[scala.Nothing], index: Double): Unit = js.native
   def add(defaultValue: StoreValue): Unit = js.native
+  def add(defaultValue: StoreValue, index: Double): Unit = js.native
   
   def move(from: Double, to: Double): Unit = js.native
   

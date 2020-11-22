@@ -1,5 +1,6 @@
 package typingsSlinky.reactD3Graph.mod
 
+import typingsSlinky.reactD3Graph.anon.Height
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,7 +21,7 @@ trait GraphNode extends js.Object {
   
   var renderLabel: js.UndefOr[Boolean] = js.native
   
-  var size: js.UndefOr[Double] = js.native
+  var size: js.UndefOr[Double | Height] = js.native
   
   var strokeColor: js.UndefOr[String] = js.native
   
@@ -92,7 +93,7 @@ object GraphNode {
     def deleteRenderLabel: Self = this.set("renderLabel", js.undefined)
     
     @scala.inline
-    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setSize(value: Double | Height): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)

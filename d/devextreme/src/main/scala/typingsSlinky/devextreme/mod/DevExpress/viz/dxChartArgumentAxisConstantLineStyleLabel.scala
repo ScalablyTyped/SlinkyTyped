@@ -12,10 +12,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartArgumentAxisConstantLineStyleLabel extends dxChartCommonAxisSettingsConstantLineStyleLabel {
   
-  /** @name dxChart.Options.argumentAxis.constantLineStyle.label.horizontalAlignment */
+  /**
+    * [descr:dxChart.Options.argumentAxis.constantLineStyle.label.horizontalAlignment]
+    */
   var horizontalAlignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name dxChart.Options.argumentAxis.constantLineStyle.label.verticalAlignment */
+  /**
+    * [descr:dxChart.Options.argumentAxis.constantLineStyle.label.verticalAlignment]
+    */
   var verticalAlignment: js.UndefOr[bottom | center | top] = js.native
 }
 object dxChartArgumentAxisConstantLineStyleLabel {

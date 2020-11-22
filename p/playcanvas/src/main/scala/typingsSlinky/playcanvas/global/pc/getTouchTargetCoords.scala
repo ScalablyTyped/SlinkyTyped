@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object getTouchTargetCoords extends js.Object {
   
   /**
-    * Similiar to {@link pc.getTargetCoords} for the MouseEvents.
+    * Similar to {@link pc.getTargetCoords} for the MouseEvents.
     * This function takes a browser Touch object and returns the co-ordinates of the
     * touch relative to the target element.
     * @param touch - The browser Touch object.

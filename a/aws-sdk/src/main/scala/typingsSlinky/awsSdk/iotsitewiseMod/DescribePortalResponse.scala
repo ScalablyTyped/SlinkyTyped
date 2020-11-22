@@ -13,7 +13,12 @@ trait DescribePortalResponse extends js.Object {
   var portalArn: ARN = js.native
   
   /**
-    * The AWS SSO application generated client ID (used with AWS SSO APIs).
+    * The service to use to authenticate users to the portal.
+    */
+  var portalAuthMode: js.UndefOr[AuthMode] = js.native
+  
+  /**
+    * The AWS SSO application generated client ID (used with AWS SSO APIs). AWS IoT SiteWise includes portalClientId for only portals that use AWS SSO to authenticate users.
     */
   var portalClientId: PortalClientId = js.native
   
@@ -53,7 +58,7 @@ trait DescribePortalResponse extends js.Object {
   var portalName: Name = js.native
   
   /**
-    * The public root URL for the AWS IoT AWS IoT SiteWise Monitor application portal.
+    * The URL for the AWS IoT SiteWise Monitor portal. You can use this URL to access portals that use AWS SSO for authentication. For portals that use IAM for authentication, you must use the CreatePresignedPortalUrl operation to create a URL that you can use to access the portal.
     */
   var portalStartUrl: Url = js.native
   
@@ -126,6 +131,12 @@ object DescribePortalResponse {
     
     @scala.inline
     def setPortalStatus(value: PortalStatus): Self = this.set("portalStatus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPortalAuthMode(value: AuthMode): Self = this.set("portalAuthMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePortalAuthMode: Self = this.set("portalAuthMode", js.undefined)
     
     @scala.inline
     def setPortalDescription(value: Description): Self = this.set("portalDescription", value.asInstanceOf[js.Any])

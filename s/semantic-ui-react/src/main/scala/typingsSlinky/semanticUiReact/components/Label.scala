@@ -5,7 +5,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticSIZES
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -74,7 +73,7 @@ object Label {
     
     @scala.inline
     def detailFunction3(
-      value: (/* component */ ReactType[LabelDetailProps], LabelDetailProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, LabelDetailProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("detail", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -94,7 +93,7 @@ object Label {
     
     @scala.inline
     def iconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -120,7 +119,7 @@ object Label {
     
     @scala.inline
     def removeIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("removeIcon", js.Any.fromFunction3(value))
     
     @scala.inline

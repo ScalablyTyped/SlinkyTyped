@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait RequestDataMatcher
-  extends /* index */ StringDictionary[js.Any] {
+  extends /* index */ StringDictionary[js.Any]
+     with AsymmetricRequestDataMatcher {
   
   var params: js.UndefOr[StringDictionary[js.Any]] = js.native
 }

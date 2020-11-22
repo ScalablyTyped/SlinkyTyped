@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TriggeringDataset extends js.Object {
   
   /**
-    * The name of the data set whose content generation triggers the new data set content generation.
+    * The name of the dataset whose content generation triggers the new dataset content generation.
     */
   var name: DatasetName = js.native
 }

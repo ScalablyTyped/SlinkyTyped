@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetTimeSeriesServiceStatisticsResult extends js.Object {
   
   /**
-    * A flag indicating whether or not a group's filter expression has been consistent, or if a returned aggregation may show statistics from an older version of the group's filter expression.
+    * A flag indicating whether or not a group's filter expression has been consistent, or if a returned aggregation might show statistics from an older version of the group's filter expression.
     */
   var ContainsOldGroupVersions: js.UndefOr[Boolean] = js.native
   

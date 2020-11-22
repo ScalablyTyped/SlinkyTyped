@@ -1,5 +1,6 @@
 package typingsSlinky.awsSdk.anon
 
+import typingsSlinky.awsSdk.s3Mod.AccountId
 import typingsSlinky.awsSdk.s3Mod.BucketName
 import typingsSlinky.awsSdk.s3Mod.IfMatch
 import typingsSlinky.awsSdk.s3Mod.IfNoneMatch
@@ -24,9 +25,14 @@ trait HeadObjectRequestwaiterWa extends js.Object {
   var $waiter: js.UndefOr[WaiterConfiguration] = js.native
   
   /**
-    * The name of the bucket containing the object.
+    * The name of the bucket containing the object. When using this API with an access point, you must direct requests to the access point hostname. The access point hostname takes the form AccessPointName-AccountId.s3-accesspoint.Region.amazonaws.com. When using this operation with an access point through the AWS SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see Using Access Points in the Amazon Simple Storage Service Developer Guide. When using this API with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com. When using this operation using S3 on Outposts through the AWS SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see Using S3 on Outposts in the Amazon Simple Storage Service Developer Guide.
     */
   var Bucket: BucketName = js.native
+  
+  /**
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
   
   /**
     * Return the object only if its entity tag (ETag) is the same as the one specified, otherwise return a 412 (precondition failed).
@@ -71,7 +77,7 @@ trait HeadObjectRequestwaiterWa extends js.Object {
   var SSECustomerAlgorithm: js.UndefOr[typingsSlinky.awsSdk.s3Mod.SSECustomerAlgorithm] = js.native
   
   /**
-    * Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side​-encryption​-customer-algorithm header.
+    * Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side-encryption-customer-algorithm header.
     */
   var SSECustomerKey: js.UndefOr[typingsSlinky.awsSdk.s3Mod.SSECustomerKey] = js.native
   
@@ -119,6 +125,12 @@ object HeadObjectRequestwaiterWa {
     
     @scala.inline
     def delete$waiter: Self = this.set("$waiter", js.undefined)
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
     
     @scala.inline
     def setIfMatch(value: IfMatch): Self = this.set("IfMatch", value.asInstanceOf[js.Any])

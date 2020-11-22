@@ -8,7 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Ami extends js.Object {
   
   /**
-    * The description of the EC2 AMI. 
+    *  The account ID of the owner of the AMI. 
+    */
+  var accountId: js.UndefOr[NonEmptyString] = js.native
+  
+  /**
+    * The description of the EC2 AMI. Minimum and maximum length are in characters.
     */
   var description: js.UndefOr[NonEmptyString] = js.native
   
@@ -51,6 +56,12 @@ object Ami {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAccountId(value: NonEmptyString): Self = this.set("accountId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccountId: Self = this.set("accountId", js.undefined)
     
     @scala.inline
     def setDescription(value: NonEmptyString): Self = this.set("description", value.asInstanceOf[js.Any])

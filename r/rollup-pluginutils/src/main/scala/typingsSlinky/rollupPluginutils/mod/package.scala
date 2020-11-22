@@ -13,7 +13,7 @@ package object mod {
   ]
   
   type AttachScopes_ = js.Function2[
-    /* ast */ typingsSlinky.estreeWalker.mod.Node, 
+    /* ast */ org.scalajs.dom.raw.Node, 
     /* propertyName */ js.UndefOr[java.lang.String], 
     typingsSlinky.rollupPluginutils.mod.AttachedScope
   ]
@@ -35,7 +35,7 @@ package object mod {
     java.lang.String
   ]
   
-  type ExtractAssignedNames_ = js.Function1[/* param */ typingsSlinky.estreeWalker.mod.Node, js.Array[java.lang.String]]
+  type ExtractAssignedNames_ = js.Function1[/* param */ org.scalajs.dom.raw.Node, js.Array[java.lang.String]]
   
   type MakeLegalIdentifier_ = js.Function1[/* str */ java.lang.String, java.lang.String]
 }

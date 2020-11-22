@@ -18,7 +18,7 @@ object mod extends js.Object {
   def default(
     handler: js.Function3[
       /* req */ Request[ParamsDictionary, _, _, ParsedQs], 
-      /* res */ Response[_], 
+      /* res */ Response[_, Double], 
       /* next */ NextFunction, 
       js.Promise[Unit]
     ]
@@ -27,7 +27,7 @@ object mod extends js.Object {
     handler: js.Function4[
       /* err */ js.Any, 
       /* req */ Request[ParamsDictionary, _, _, ParsedQs], 
-      /* res */ Response[_], 
+      /* res */ Response[_, Double], 
       /* next */ NextFunction, 
       js.Promise[Unit]
     ]

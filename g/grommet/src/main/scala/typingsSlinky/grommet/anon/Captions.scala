@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Captions extends js.Object {
   
-  var captions: js.UndefOr[`3`] = js.native
+  var captions: js.UndefOr[`5`] = js.native
   
-  var controls: js.UndefOr[`3`] = js.native
+  var controls: js.UndefOr[`5`] = js.native
   
   var icons: js.UndefOr[ClosedCaption] = js.native
   
-  var scrubber: js.UndefOr[`0`] = js.native
+  var scrubber: js.UndefOr[`3`] = js.native
 }
 object Captions {
   
@@ -39,13 +39,13 @@ object Captions {
     }
     
     @scala.inline
-    def setCaptions(value: `3`): Self = this.set("captions", value.asInstanceOf[js.Any])
+    def setCaptions(value: `5`): Self = this.set("captions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCaptions: Self = this.set("captions", js.undefined)
     
     @scala.inline
-    def setControls(value: `3`): Self = this.set("controls", value.asInstanceOf[js.Any])
+    def setControls(value: `5`): Self = this.set("controls", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteControls: Self = this.set("controls", js.undefined)
@@ -57,7 +57,7 @@ object Captions {
     def deleteIcons: Self = this.set("icons", js.undefined)
     
     @scala.inline
-    def setScrubber(value: `0`): Self = this.set("scrubber", value.asInstanceOf[js.Any])
+    def setScrubber(value: `3`): Self = this.set("scrubber", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteScrubber: Self = this.set("scrubber", js.undefined)

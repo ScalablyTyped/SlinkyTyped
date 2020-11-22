@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jquery_dot_cookie"
-version := "1.4.1-dt-20200515Z-db9605"
+version := "1.4.1-dt-20201002Z-db9605"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

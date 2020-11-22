@@ -6,6 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("three", "AxesHelper")
 @js.native
+/**
+	 * @param [size=1]
+	 */
 class AxesHelper ()
   extends typingsSlinky.three.axesHelperMod.AxesHelper {
   def this(size: Double) = this()

@@ -55,6 +55,11 @@ trait DefaultCacheBehavior extends js.Object {
   var OriginRequestPolicyId: js.UndefOr[String] = js.native
   
   /**
+    * The Amazon Resource Name (ARN) of the real-time log configuration that is attached to this cache behavior. For more information, see Real-time logs in the Amazon CloudFront Developer Guide.
+    */
+  var RealtimeLogConfigArn: js.UndefOr[String] = js.native
+  
+  /**
     * Indicates whether you want to distribute media files in the Microsoft Smooth Streaming format using the origin that is associated with this cache behavior. If so, specify true; if not, specify false. If you specify true for SmoothStreaming, you can still distribute other content using this cache behavior if the content matches the value of PathPattern. 
     */
   var SmoothStreaming: js.UndefOr[Boolean] = js.native
@@ -65,9 +70,14 @@ trait DefaultCacheBehavior extends js.Object {
   var TargetOriginId: String = js.native
   
   /**
-    * A complex type that specifies the AWS accounts, if any, that you want to allow to create signed URLs for private content. If you want to require signed URLs in requests for objects in the target origin that match the PathPattern for this cache behavior, specify true for Enabled, and specify the applicable values for Quantity and Items. For more information, see Serving Private Content with Signed URLs and Signed Cookies in the Amazon CloudFront Developer Guide. If you don’t want to require signed URLs in requests for objects that match PathPattern, specify false for Enabled and 0 for Quantity. Omit Items. To add, change, or remove one or more trusted signers, change Enabled to true (if it’s currently false), change Quantity as applicable, and specify all of the trusted signers that you want to include in the updated distribution.
+    * A list of key groups that CloudFront can use to validate signed URLs or signed cookies. When a cache behavior contains trusted key groups, CloudFront requires signed URLs or signed cookies for all requests that match the cache behavior. The URLs or cookies must be signed with a private key whose corresponding public key is in the key group. The signed URL or cookie contains information about which public key CloudFront should use to verify the signature. For more information, see Serving private content in the Amazon CloudFront Developer Guide.
     */
-  var TrustedSigners: typingsSlinky.awsSdk.cloudfrontMod.TrustedSigners = js.native
+  var TrustedKeyGroups: js.UndefOr[typingsSlinky.awsSdk.cloudfrontMod.TrustedKeyGroups] = js.native
+  
+  /**
+    *  We recommend using TrustedKeyGroups instead of TrustedSigners.  A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or signed cookies. When a cache behavior contains trusted signers, CloudFront requires signed URLs or signed cookies for all requests that match the cache behavior. The URLs or cookies must be signed with the private key of a CloudFront key pair in a trusted signer’s AWS account. The signed URL or cookie contains information about which public key CloudFront should use to verify the signature. For more information, see Serving private content in the Amazon CloudFront Developer Guide.
+    */
+  var TrustedSigners: js.UndefOr[typingsSlinky.awsSdk.cloudfrontMod.TrustedSigners] = js.native
   
   /**
     * The protocol that viewers can use to access the files in the origin specified by TargetOriginId when a request matches the path pattern in PathPattern. You can specify the following options:    allow-all: Viewers can use HTTP or HTTPS.    redirect-to-https: If a viewer submits an HTTP request, CloudFront returns an HTTP status code of 301 (Moved Permanently) to the viewer along with the HTTPS URL. The viewer then resubmits the request using the new URL.    https-only: If a viewer sends an HTTP request, CloudFront returns an HTTP status code of 403 (Forbidden).   For more information about requiring the HTTPS protocol, see Requiring HTTPS Between Viewers and CloudFront in the Amazon CloudFront Developer Guide.  The only way to guarantee that viewers retrieve an object that was fetched from the origin using HTTPS is never to use any other protocol to fetch the object. If you have recently changed from HTTP to HTTPS, we recommend that you clear your objects’ cache because cached objects are protocol agnostic. That means that an edge location will return an object from the cache regardless of whether the current request protocol matches the protocol used previously. For more information, see Managing Cache Expiration in the Amazon CloudFront Developer Guide. 
@@ -77,8 +87,8 @@ trait DefaultCacheBehavior extends js.Object {
 object DefaultCacheBehavior {
   
   @scala.inline
-  def apply(TargetOriginId: String, TrustedSigners: TrustedSigners, ViewerProtocolPolicy: ViewerProtocolPolicy): DefaultCacheBehavior = {
-    val __obj = js.Dynamic.literal(TargetOriginId = TargetOriginId.asInstanceOf[js.Any], TrustedSigners = TrustedSigners.asInstanceOf[js.Any], ViewerProtocolPolicy = ViewerProtocolPolicy.asInstanceOf[js.Any])
+  def apply(TargetOriginId: String, ViewerProtocolPolicy: ViewerProtocolPolicy): DefaultCacheBehavior = {
+    val __obj = js.Dynamic.literal(TargetOriginId = TargetOriginId.asInstanceOf[js.Any], ViewerProtocolPolicy = ViewerProtocolPolicy.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefaultCacheBehavior]
   }
   
@@ -99,9 +109,6 @@ object DefaultCacheBehavior {
     
     @scala.inline
     def setTargetOriginId(value: String): Self = this.set("TargetOriginId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setTrustedSigners(value: TrustedSigners): Self = this.set("TrustedSigners", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setViewerProtocolPolicy(value: ViewerProtocolPolicy): Self = this.set("ViewerProtocolPolicy", value.asInstanceOf[js.Any])
@@ -167,9 +174,27 @@ object DefaultCacheBehavior {
     def deleteOriginRequestPolicyId: Self = this.set("OriginRequestPolicyId", js.undefined)
     
     @scala.inline
+    def setRealtimeLogConfigArn(value: String): Self = this.set("RealtimeLogConfigArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRealtimeLogConfigArn: Self = this.set("RealtimeLogConfigArn", js.undefined)
+    
+    @scala.inline
     def setSmoothStreaming(value: Boolean): Self = this.set("SmoothStreaming", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSmoothStreaming: Self = this.set("SmoothStreaming", js.undefined)
+    
+    @scala.inline
+    def setTrustedKeyGroups(value: TrustedKeyGroups): Self = this.set("TrustedKeyGroups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTrustedKeyGroups: Self = this.set("TrustedKeyGroups", js.undefined)
+    
+    @scala.inline
+    def setTrustedSigners(value: TrustedSigners): Self = this.set("TrustedSigners", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTrustedSigners: Self = this.set("TrustedSigners", js.undefined)
   }
 }

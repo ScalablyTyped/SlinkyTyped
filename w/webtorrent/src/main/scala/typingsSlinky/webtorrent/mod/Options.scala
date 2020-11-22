@@ -18,6 +18,8 @@ trait Options extends js.Object {
   
   var tracker: js.UndefOr[Boolean | js.Object] = js.native
   
+  var utp: js.UndefOr[Boolean] = js.native
+  
   var webSeeds: js.UndefOr[Boolean] = js.native
 }
 object Options {
@@ -72,6 +74,12 @@ object Options {
     
     @scala.inline
     def deleteTracker: Self = this.set("tracker", js.undefined)
+    
+    @scala.inline
+    def setUtp(value: Boolean): Self = this.set("utp", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUtp: Self = this.set("utp", js.undefined)
     
     @scala.inline
     def setWebSeeds(value: Boolean): Self = this.set("webSeeds", value.asInstanceOf[js.Any])

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class ReflectionTextureBlock protected ()
   extends typingsSlinky.babylonjs.nodeIndexMod.ReflectionTextureBlock {
   /**
-    * Create a new TextureBlock
+    * Create a new ReflectionTextureBlock
     * @param name defines the block name
     */
   def this(name: String) = this()

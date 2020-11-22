@@ -56,10 +56,17 @@ object mod extends js.Object {
     def this(magicPath: js.UndefOr[scala.Nothing], mask: bitmask) = this()
     def this(magicPath: String, mask: bitmask) = this()
     
-    def detect(data: Buffer, callback: js.Function2[/* err */ js.Error, /* result */ String, Unit]): Unit = js.native
+    def detect(data: Buffer, callback: DetectionCallback): Unit = js.native
     
-    def detectFile(path: String, callback: js.Function2[/* err */ js.Error, /* result */ String, Unit]): Unit = js.native
+    def detectFile(path: String, callback: DetectionCallback): Unit = js.native
   }
+  
+  /**
+    * callback for detect() and detectFile()
+    * Result is a string, except when MAGIC_CONTINUE is set,
+    * then it is an array of string
+    */
+  type DetectionCallback = js.Function2[/* err */ js.Error, /* result */ String | js.Array[String], Unit]
   
   type bitmask = Double
 }

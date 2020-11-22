@@ -35,6 +35,8 @@ object dbMod extends js.Object {
     def column(columnName: String, queryTextOrConfig: String, values: js.Array[_]): js.Promise[js.Array[_]] = js.native
     def column(columnName: String, queryTextOrConfig: QueryConfig[js.Array[_]], values: js.Array[_]): js.Promise[js.Array[_]] = js.native
     
+    def connected(): Boolean = js.native
+    
     def createConnection(): js.Promise[Unit] = js.native
   }
 }

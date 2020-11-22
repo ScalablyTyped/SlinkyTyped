@@ -17,11 +17,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object modalMod extends js.Object {
   
-  val default: Modal = js.native
+  val default: ModalType = js.native
   
   /* Inlined antd.antd/lib/modal/Modal.ModalInterface & antd.antd/lib/modal/confirm.ModalStaticFunctions & {destroyAll (): void,   config :(hasRootPrefixCls : {  rootPrefixCls :string | undefined}): void} */
   @js.native
-  trait Modal extends js.Object {
+  trait ModalType extends js.Object {
     
     def apply(props: PropsWithChildren[ModalProps]): ReactElement | Null = js.native
     def apply(props: PropsWithChildren[ModalProps], context: js.Any): ReactElement | Null = js.native

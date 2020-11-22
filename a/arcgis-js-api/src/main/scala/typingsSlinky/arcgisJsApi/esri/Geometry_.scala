@@ -17,14 +17,14 @@ trait Geometry_
      with _GoToTarget3D {
   
   /**
-    * The cache is used to store values computed from geometries that need to cleared or recomputed upon mutation. An example is the extent of a polygon.
+    * The cache is used to store values computed from geometries that need to cleared or recomputed upon mutation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Geometry.html#cache)
     */
   val cache: js.Any = js.native
   
   /**
-    * The extent of the geometry. For a point, the extent is null.
+    * The extent of the geometry.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Geometry.html#extent)
     */
@@ -39,7 +39,6 @@ trait Geometry_
   
   /**
     * Indicates if the geometry has z-values (elevation).
-    * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Geometry.html#hasZ)
     */
@@ -49,8 +48,6 @@ trait Geometry_
     * The spatial reference of the geometry.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Geometry.html#spatialReference)
-    *
-    * @default WGS84 (wkid: 4326)
     */
   var spatialReference: SpatialReference = js.native
   

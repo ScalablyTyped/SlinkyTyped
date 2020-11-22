@@ -1,10 +1,10 @@
 package typingsSlinky.tensorflowTfjsCore
 
 import typingsSlinky.tensorflowTfjsCore.convUtilMod.ExplicitPadding
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R3
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R4
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NCHW
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.NHWC
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.ceil

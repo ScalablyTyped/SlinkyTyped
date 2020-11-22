@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /** Represents a native manifest file */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.firefoxWebextBrowser.anon.Allowedextensions
-  - typingsSlinky.firefoxWebextBrowser.anon.DataDescription
+  - typingsSlinky.firefoxWebextBrowser.anon.Data
 */
 trait NativeManifest extends js.Object
 object NativeManifest {
@@ -30,7 +30,7 @@ object NativeManifest {
   }
   
   @scala.inline
-  def DataDescription(data: StringDictionary[js.Any], description: String, name: ExtensionID, `type`: storage): NativeManifest = {
+  def Data(data: StringDictionary[js.Any], description: String, name: ExtensionID, `type`: storage): NativeManifest = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[NativeManifest]

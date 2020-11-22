@@ -13,7 +13,7 @@ trait EbsInfo extends js.Object {
   var EbsOptimizedInfo: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.EbsOptimizedInfo] = js.native
   
   /**
-    * Indicates that the instance type is Amazon EBS-optimized. For more information, see Amazon EBS-Optimized Instances in Amazon EC2 User Guide for Linux Instances.
+    * Indicates whether the instance type is Amazon EBS-optimized. For more information, see Amazon EBS-Optimized Instances in Amazon EC2 User Guide for Linux Instances.
     */
   var EbsOptimizedSupport: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.EbsOptimizedSupport] = js.native
   

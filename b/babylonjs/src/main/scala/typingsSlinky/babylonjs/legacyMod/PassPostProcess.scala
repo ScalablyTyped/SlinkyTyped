@@ -32,3 +32,16 @@ class PassPostProcess protected ()
     blockCompilation: js.UndefOr[Boolean]
   ) = this()
 }
+/* static members */
+@JSImport("babylonjs/Legacy/legacy", "PassPostProcess")
+@js.native
+object PassPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(
+    parsedPostProcess: js.Any,
+    targetCamera: typingsSlinky.babylonjs.cameraMod.Camera,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    rootUrl: String
+  ): typingsSlinky.babylonjs.passPostProcessMod.PassPostProcess = js.native
+}

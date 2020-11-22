@@ -30,7 +30,7 @@ trait ActivityIndicator extends View {
   /**
     * Color of the message text, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   @JSName("fireEvent")
   def fireEvent_click(name: click, event: ActivityIndicatorClickEvent): Unit = js.native
@@ -74,7 +74,7 @@ trait ActivityIndicator extends View {
     * Gets the value of the <Titanium.UI.ActivityIndicator.color> property.
     * @deprecated Access <Titanium.UI.ActivityIndicator.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ActivityIndicator.font> property.
@@ -86,7 +86,7 @@ trait ActivityIndicator extends View {
     * Gets the value of the <Titanium.UI.ActivityIndicator.indicatorColor> property.
     * @deprecated Access <Titanium.UI.ActivityIndicator.indicatorColor> instead.
     */
-  def getIndicatorColor(): String = js.native
+  def getIndicatorColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.ActivityIndicator.message> property.
@@ -116,7 +116,7 @@ trait ActivityIndicator extends View {
   /**
     * Color of the animated indicator.
     */
-  var indicatorColor: String = js.native
+  var indicatorColor: String | Color = js.native
   
   /**
     * Message text.
@@ -133,6 +133,7 @@ trait ActivityIndicator extends View {
     * @deprecated Set the value using <Titanium.UI.ActivityIndicator.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ActivityIndicator.font> property.
@@ -145,6 +146,7 @@ trait ActivityIndicator extends View {
     * @deprecated Set the value using <Titanium.UI.ActivityIndicator.indicatorColor> instead.
     */
   def setIndicatorColor(indicatorColor: String): Unit = js.native
+  def setIndicatorColor(indicatorColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.ActivityIndicator.message> property.

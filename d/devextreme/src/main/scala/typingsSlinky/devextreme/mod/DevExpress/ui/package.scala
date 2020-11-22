@@ -40,13 +40,7 @@ package object ui {
   
   type dxDraggable = typingsSlinky.devextreme.mod.DevExpress.ui.DraggableBase
   
-  type dxDropDownButtonItem = typingsSlinky.devextreme.mod.DevExpress.ui.dxListItem
-  
-  type dxFileUploader = typingsSlinky.devextreme.mod.DevExpress.ui.Editor
-  
   type dxGalleryItemTemplate = typingsSlinky.devextreme.mod.DevExpress.ui.dxGalleryItem
-  
-  type dxGantt = typingsSlinky.devextreme.mod.DevExpress.ui.Widget
   
   type dxListItemTemplate = typingsSlinky.devextreme.mod.DevExpress.ui.dxListItem
   
@@ -97,8 +91,6 @@ package object ui {
   type dxSlider = typingsSlinky.devextreme.mod.DevExpress.ui.dxSliderBase
   
   type dxSliderBase = typingsSlinky.devextreme.mod.DevExpress.ui.dxTrackBar
-  
-  type dxSortable = typingsSlinky.devextreme.mod.DevExpress.ui.DraggableBase
   
   type dxSpeedDialAction = typingsSlinky.devextreme.mod.DevExpress.ui.Widget
   

@@ -35,7 +35,7 @@ class AccessPoint protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
-    * The name of the bucket that you want to associate this access point with.
+    * The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
     */
   val bucket: Output_[String] = js.native
   
@@ -71,7 +71,7 @@ class AccessPoint protected () extends CustomResource {
   val publicAccessBlockConfiguration: Output_[js.UndefOr[AccessPointPublicAccessBlockConfiguration]] = js.native
   
   /**
-    * Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
+    * Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
     */
   val vpcConfiguration: Output_[js.UndefOr[AccessPointVpcConfiguration]] = js.native
 }

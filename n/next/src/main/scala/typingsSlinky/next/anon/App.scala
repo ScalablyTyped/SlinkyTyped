@@ -1,7 +1,9 @@
 package typingsSlinky.next.anon
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.next.routerMod.RouteInfo
+import typingsSlinky.next.routerMod.AppComponent
+import typingsSlinky.next.routerMod.AppProps
+import typingsSlinky.next.routerMod.PrivateRouteInfo
 import typingsSlinky.next.routerMod.Subscription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,9 +12,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait App extends js.Object {
   
-  var App: ReactComponentClass[js.Object] = js.native
+  var App: AppComponent = js.native
   
   var Component: ReactComponentClass[js.Object] = js.native
+  
+  var defaultLocale: js.UndefOr[String] = js.native
   
   var err: js.UndefOr[js.Error] = js.native
   
@@ -20,23 +24,27 @@ trait App extends js.Object {
   
   var isFallback: Boolean = js.native
   
+  var locale: js.UndefOr[String] = js.native
+  
+  var locales: js.UndefOr[js.Array[String]] = js.native
+  
   var pageLoader: js.Any = js.native
   
   var subscription: Subscription = js.native
   
-  def wrapApp(App: ReactComponentClass[js.Object]): js.Any = js.native
+  def wrapApp(App: AppComponent): js.Any = js.native
 }
 object App {
   
   @scala.inline
   def apply(
-    App: ReactComponentClass[js.Object],
+    App: AppComponent,
     Component: ReactComponentClass[js.Object],
     initialProps: js.Any,
     isFallback: Boolean,
     pageLoader: js.Any,
-    subscription: (/* data */ RouteInfo, /* App */ js.UndefOr[ReactComponentClass[js.Object]]) => js.Promise[Unit],
-    wrapApp: ReactComponentClass[js.Object] => js.Any
+    subscription: (/* data */ PrivateRouteInfo, /* App */ AppComponent) => js.Promise[Unit],
+    wrapApp: AppComponent => js.Any
   ): App = {
     val __obj = js.Dynamic.literal(App = App.asInstanceOf[js.Any], Component = Component.asInstanceOf[js.Any], initialProps = initialProps.asInstanceOf[js.Any], isFallback = isFallback.asInstanceOf[js.Any], pageLoader = pageLoader.asInstanceOf[js.Any], subscription = js.Any.fromFunction2(subscription), wrapApp = js.Any.fromFunction1(wrapApp))
     __obj.asInstanceOf[App]
@@ -58,7 +66,13 @@ object App {
     }
     
     @scala.inline
-    def setApp(value: ReactComponentClass[js.Object]): Self = this.set("App", value.asInstanceOf[js.Any])
+    def setAppFunctionComponent(value: ReactComponentClass[AppProps]): Self = this.set("App", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAppComponentClass(value: ReactComponentClass[AppProps]): Self = this.set("App", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setApp(value: AppComponent): Self = this.set("App", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setComponent(value: ReactComponentClass[js.Object]): Self = this.set("Component", value.asInstanceOf[js.Any])
@@ -73,17 +87,36 @@ object App {
     def setPageLoader(value: js.Any): Self = this.set("pageLoader", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSubscription(
-      value: (/* data */ RouteInfo, /* App */ js.UndefOr[ReactComponentClass[js.Object]]) => js.Promise[Unit]
-    ): Self = this.set("subscription", js.Any.fromFunction2(value))
+    def setSubscription(value: (/* data */ PrivateRouteInfo, /* App */ AppComponent) => js.Promise[Unit]): Self = this.set("subscription", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setWrapApp(value: ReactComponentClass[js.Object] => js.Any): Self = this.set("wrapApp", js.Any.fromFunction1(value))
+    def setWrapApp(value: AppComponent => js.Any): Self = this.set("wrapApp", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setDefaultLocale(value: String): Self = this.set("defaultLocale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultLocale: Self = this.set("defaultLocale", js.undefined)
     
     @scala.inline
     def setErr(value: js.Error): Self = this.set("err", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteErr: Self = this.set("err", js.undefined)
+    
+    @scala.inline
+    def setLocale(value: String): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    
+    @scala.inline
+    def setLocalesVarargs(value: String*): Self = this.set("locales", js.Array(value :_*))
+    
+    @scala.inline
+    def setLocales(value: js.Array[String]): Self = this.set("locales", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocales: Self = this.set("locales", js.undefined)
   }
 }

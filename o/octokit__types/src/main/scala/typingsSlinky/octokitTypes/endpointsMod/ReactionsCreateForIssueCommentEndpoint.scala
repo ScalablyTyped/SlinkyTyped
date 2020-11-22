@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`10`
+import typingsSlinky.octokitTypes.anon.`9`
 import typingsSlinky.octokitTypes.octokitTypesStrings.Plussign1
 import typingsSlinky.octokitTypes.octokitTypesStrings.`-1`
 import typingsSlinky.octokitTypes.octokitTypesStrings.confused
@@ -24,7 +24,7 @@ trait ReactionsCreateForIssueCommentEndpoint extends js.Object {
     */
   var content: Plussign1 | `-1` | laugh | confused | heart | hooray | rocket | eyes = js.native
   
-  var mediaType: `10` = js.native
+  var mediaType: `9` = js.native
   
   var owner: String = js.native
   
@@ -36,7 +36,7 @@ object ReactionsCreateForIssueCommentEndpoint {
   def apply(
     comment_id: Double,
     content: Plussign1 | `-1` | laugh | confused | heart | hooray | rocket | eyes,
-    mediaType: `10`,
+    mediaType: `9`,
     owner: String,
     repo: String
   ): ReactionsCreateForIssueCommentEndpoint = {
@@ -66,7 +66,7 @@ object ReactionsCreateForIssueCommentEndpoint {
     def setContent(value: Plussign1 | `-1` | laugh | confused | heart | hooray | rocket | eyes): Self = this.set("content", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `10`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `9`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

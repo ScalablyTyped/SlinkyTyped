@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListAppsRequest extends js.Object {
   
   /**
-    * 
+    * The unique application IDs.
     */
   var appIds: js.UndefOr[AppIds] = js.native
   
   /**
-    * The maximum number of results to return in a single call. The default value is 50. To retrieve the remaining results, make another call with the returned NextToken value. 
+    * The maximum number of results to return in a single call. The default value is 100. To retrieve the remaining results, make another call with the returned NextToken value. 
     */
   var maxResults: js.UndefOr[MaxResults] = js.native
   

@@ -17,8 +17,8 @@ import typingsSlinky.octokitPluginRestEndpointMethods.anon.Create
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateBlob
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.CreateForCommitComment
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get
-import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get206
-import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get316
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get209
+import typingsSlinky.octokitPluginRestEndpointMethods.anon.Get319
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.GetAlert
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.GetAllCodesOfConduct
 import typingsSlinky.octokitPluginRestEndpointMethods.anon.GetAllCommonlyUsed
@@ -63,7 +63,7 @@ trait RestEndpointMethods extends js.Object {
   
   var markdown: Render = js.native
   
-  var meta: Get206 = js.native
+  var meta: Get209 = js.native
   
   var migrations: CancelImport = js.native
   
@@ -73,7 +73,7 @@ trait RestEndpointMethods extends js.Object {
   
   var pulls: CheckIfMerged = js.native
   
-  var rateLimit: Get316 = js.native
+  var rateLimit: Get319 = js.native
   
   var reactions: CreateForCommitComment = js.native
   
@@ -104,12 +104,12 @@ object RestEndpointMethods {
     issues: AddAssignees,
     licenses: GetAllCommonlyUsed,
     markdown: Render,
-    meta: Get206,
+    meta: Get209,
     migrations: CancelImport,
     orgs: BlockUser,
     projects: AddCollaborator,
     pulls: CheckIfMerged,
-    rateLimit: Get316,
+    rateLimit: Get319,
     reactions: CreateForCommitComment,
     repos: AcceptInvitation,
     search: Code,
@@ -181,7 +181,7 @@ object RestEndpointMethods {
     def setMarkdown(value: Render): Self = this.set("markdown", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMeta(value: Get206): Self = this.set("meta", value.asInstanceOf[js.Any])
+    def setMeta(value: Get209): Self = this.set("meta", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMigrations(value: CancelImport): Self = this.set("migrations", value.asInstanceOf[js.Any])
@@ -196,7 +196,7 @@ object RestEndpointMethods {
     def setPulls(value: CheckIfMerged): Self = this.set("pulls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRateLimit(value: Get316): Self = this.set("rateLimit", value.asInstanceOf[js.Any])
+    def setRateLimit(value: Get319): Self = this.set("rateLimit", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReactions(value: CreateForCommitComment): Self = this.set("reactions", value.asInstanceOf[js.Any])

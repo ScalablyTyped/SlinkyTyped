@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def headerDefault(headerBag: HeaderDefaultArgs): BuildMiddleware[_, _, _] = js.native
+  def headerDefault(headerBag: HeaderDefaultArgs): BuildMiddleware[_, _] = js.native
   
   type HeaderDefaultArgs = StringDictionary[String]
 }

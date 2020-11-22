@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object basicLayoutMod {
   
-  type BasicLayoutProps = typingsSlinky.antDesignProLayout.anon.PartialRouterTypesRoute with typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.SiderMenuProps with typingsSlinky.antDesignProLayout.headerMod.HeaderViewProps with typingsSlinky.antDesignProLayout.anon.PartialPureSettings with typingsSlinky.antDesignProLayout.anon.BreadcrumbRender
+  type BasicLayoutProps = typingsSlinky.antDesignProLayout.anon.PartialRouterTypesRoute with typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.SiderMenuProps with typingsSlinky.antDesignProLayout.headerMod.HeaderViewProps with typingsSlinky.antDesignProLayout.anon.BreadcrumbRender
 }

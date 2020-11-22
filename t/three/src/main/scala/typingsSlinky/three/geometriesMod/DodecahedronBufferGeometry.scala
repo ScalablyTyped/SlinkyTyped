@@ -6,8 +6,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("three/src/geometries/Geometries", "DodecahedronBufferGeometry")
 @js.native
+/**
+	 * @param [radius=1]
+	 * @param [detail=0]
+	 */
 class DodecahedronBufferGeometry ()
-  extends typingsSlinky.three.dodecahedronGeometryMod.DodecahedronBufferGeometry {
+  extends typingsSlinky.three.dodecahedronBufferGeometryMod.DodecahedronBufferGeometry {
   def this(radius: Double) = this()
   def this(radius: js.UndefOr[scala.Nothing], detail: Double) = this()
   def this(radius: Double, detail: Double) = this()

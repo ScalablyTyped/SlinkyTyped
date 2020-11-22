@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DecimalParameter extends js.Object {
   
   /**
-    * A display name for the dataset.
+    * A display name for the decimal parameter.
     */
   var Name: NonEmptyString = js.native
   
   /**
-    * Values.
+    * The values for the decimal parameter.
     */
   var Values: DoubleList = js.native
 }

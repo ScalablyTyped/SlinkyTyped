@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-onsenui.react-onsenui.HTMLAttributes<'id' | 'className' | 'style'> & {  modifier :string | undefined,   icon :string | react-onsenui.react-onsenui.Modifiers_string | undefined,   size :number | react-onsenui.react-onsenui.Modifiers_number | undefined,   rotate :90 | 180 | 270 | undefined,   fixedWidth :boolean | undefined,   spin :boolean | undefined} */
+/* Inlined react-onsenui.react-onsenui.HTMLAttributes<'id' | 'className' | 'style'> & {  modifier :string | undefined,   icon :string | react-onsenui.react-onsenui.Modifiers_string | undefined,   size :number | react-onsenui.react-onsenui.Modifiers_number | undefined,   rotate :90 | 180 | 270 | undefined,   fixedWidth :boolean | undefined,   spin :boolean | undefined,   title :string | undefined} */
 @js.native
 trait HTMLAttributesidclassNameFixedWidth extends js.Object {
   
@@ -31,6 +31,8 @@ trait HTMLAttributesidclassNameFixedWidth extends js.Object {
   var spin: js.UndefOr[Boolean] = js.native
   
   var style: js.UndefOr[CSSProperties] = js.native
+  
+  var title: js.UndefOr[String] = js.native
 }
 object HTMLAttributesidclassNameFixedWidth {
   
@@ -108,5 +110,11 @@ object HTMLAttributesidclassNameFixedWidth {
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
+    
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
   }
 }

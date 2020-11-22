@@ -1,5 +1,7 @@
 package typingsSlinky.wordpressComponents.autocompleteMod.Autocomplete
 
+import org.scalajs.dom.raw.HTMLElement
+import slinky.web.SyntheticKeyboardEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,12 +14,19 @@ trait RenderProps extends js.Object {
   var isExpanded: Boolean = js.native
   
   var listBoxId: String = js.native
+  
+  def onKeyDown(event: SyntheticKeyboardEvent[HTMLElement]): Unit = js.native
 }
 object RenderProps {
   
   @scala.inline
-  def apply(activeId: String, isExpanded: Boolean, listBoxId: String): RenderProps = {
-    val __obj = js.Dynamic.literal(activeId = activeId.asInstanceOf[js.Any], isExpanded = isExpanded.asInstanceOf[js.Any], listBoxId = listBoxId.asInstanceOf[js.Any])
+  def apply(
+    activeId: String,
+    isExpanded: Boolean,
+    listBoxId: String,
+    onKeyDown: SyntheticKeyboardEvent[HTMLElement] => Unit
+  ): RenderProps = {
+    val __obj = js.Dynamic.literal(activeId = activeId.asInstanceOf[js.Any], isExpanded = isExpanded.asInstanceOf[js.Any], listBoxId = listBoxId.asInstanceOf[js.Any], onKeyDown = js.Any.fromFunction1(onKeyDown))
     __obj.asInstanceOf[RenderProps]
   }
   
@@ -44,5 +53,8 @@ object RenderProps {
     
     @scala.inline
     def setListBoxId(value: String): Self = this.set("listBoxId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOnKeyDown(value: SyntheticKeyboardEvent[HTMLElement] => Unit): Self = this.set("onKeyDown", js.Any.fromFunction1(value))
   }
 }

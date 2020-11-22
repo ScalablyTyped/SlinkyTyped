@@ -29,7 +29,13 @@ object ProfileKind extends js.Object {
   
   var Phone: typingsSlinky.mendixmodelsdk.navigationMod.navigation.ProfileKind = js.native
   
+  var PhoneOffline: typingsSlinky.mendixmodelsdk.navigationMod.navigation.ProfileKind = js.native
+  
   var Responsive: typingsSlinky.mendixmodelsdk.navigationMod.navigation.ProfileKind = js.native
   
+  var ResponsiveOffline: typingsSlinky.mendixmodelsdk.navigationMod.navigation.ProfileKind = js.native
+  
   var Tablet: typingsSlinky.mendixmodelsdk.navigationMod.navigation.ProfileKind = js.native
+  
+  var TabletOffline: typingsSlinky.mendixmodelsdk.navigationMod.navigation.ProfileKind = js.native
 }

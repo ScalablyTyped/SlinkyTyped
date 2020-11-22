@@ -47,6 +47,8 @@ object enumsIndexMod extends js.Object {
     
     /* 128 */ val Matrix: typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointTypesMod.NodeMaterialBlockConnectionPointTypes.Matrix with Double = js.native
     
+    /* 256 */ val Object: typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointTypesMod.NodeMaterialBlockConnectionPointTypes.Object with Double = js.native
+    
     /* 4 */ val Vector2: typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointTypesMod.NodeMaterialBlockConnectionPointTypes.Vector2 with Double = js.native
     
     /* 8 */ val Vector3: typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointTypesMod.NodeMaterialBlockConnectionPointTypes.Vector3 with Double = js.native
@@ -69,6 +71,21 @@ object enumsIndexMod extends js.Object {
     /* 1 */ val Vertex: typingsSlinky.babylonjs.nodeMaterialBlockTargetsMod.NodeMaterialBlockTargets.Vertex with Double = js.native
     
     /* 3 */ val VertexAndFragment: typingsSlinky.babylonjs.nodeMaterialBlockTargetsMod.NodeMaterialBlockTargets.VertexAndFragment with Double = js.native
+  }
+  
+  @js.native
+  object NodeMaterialModes extends js.Object {
+    
+    @JSBracketAccess
+    def apply(value: Double): js.UndefOr[typingsSlinky.babylonjs.nodeMaterialModesMod.NodeMaterialModes with Double] = js.native
+    
+    /* 0 */ val Material: typingsSlinky.babylonjs.nodeMaterialModesMod.NodeMaterialModes.Material with Double = js.native
+    
+    /* 2 */ val Particle: typingsSlinky.babylonjs.nodeMaterialModesMod.NodeMaterialModes.Particle with Double = js.native
+    
+    /* 1 */ val PostProcess: typingsSlinky.babylonjs.nodeMaterialModesMod.NodeMaterialModes.PostProcess with Double = js.native
+    
+    /* 3 */ val ProceduralTexture: typingsSlinky.babylonjs.nodeMaterialModesMod.NodeMaterialModes.ProceduralTexture with Double = js.native
   }
   
   @js.native

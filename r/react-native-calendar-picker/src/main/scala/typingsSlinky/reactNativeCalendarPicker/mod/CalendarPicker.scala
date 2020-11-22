@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CalendarPicker
   extends Component[CalendarPickerProps, js.Object, js.Any] {
   
-  def handleOnPressDay(day: Double): Unit = js.native
+  def handleOnPressDay(date: HandleOnPressDayArg): Unit = js.native
   
   def handleOnPressNext(): Unit = js.native
   

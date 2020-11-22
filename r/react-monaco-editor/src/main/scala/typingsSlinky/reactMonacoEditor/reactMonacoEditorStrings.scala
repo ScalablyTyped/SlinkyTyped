@@ -88,6 +88,9 @@ object reactMonacoEditorStrings {
   def onlySnippets: onlySnippets = "onlySnippets".asInstanceOf[onlySnippets]
   
   @scala.inline
+  def prompt: prompt = "prompt".asInstanceOf[prompt]
+  
+  @scala.inline
   def recentlyUsed: recentlyUsed = "recentlyUsed".asInstanceOf[recentlyUsed]
   
   @scala.inline
@@ -110,6 +113,9 @@ object reactMonacoEditorStrings {
   
   @scala.inline
   def top: top = "top".asInstanceOf[top]
+  
+  @scala.inline
+  def trailing: trailing = "trailing".asInstanceOf[trailing]
   
   @scala.inline
   def tree: tree = "tree".asInstanceOf[tree]
@@ -199,6 +205,9 @@ object reactMonacoEditorStrings {
   sealed trait onlySnippets extends js.Object
   
   @js.native
+  sealed trait prompt extends js.Object
+  
+  @js.native
   sealed trait recentlyUsed extends js.Object
   
   @js.native
@@ -221,6 +230,9 @@ object reactMonacoEditorStrings {
   
   @js.native
   sealed trait top extends js.Object
+  
+  @js.native
+  sealed trait trailing extends js.Object
   
   @js.native
   sealed trait tree extends js.Object

@@ -28,3 +28,12 @@ class SpotLight protected ()
     scene: typingsSlinky.babylonjs.sceneMod.Scene
   ) = this()
 }
+/* static members */
+@JSImport("babylonjs/index", "SpotLight")
+@js.native
+object SpotLight extends js.Object {
+  
+  var _IsProceduralTexture: js.Any = js.native
+  
+  var _IsTexture: js.Any = js.native
+}

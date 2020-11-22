@@ -41,6 +41,7 @@ import typingsSlinky.jestCli.anon.`20`
 import typingsSlinky.jestCli.anon.`21`
 import typingsSlinky.jestCli.anon.`22`
 import typingsSlinky.jestCli.anon.`23`
+import typingsSlinky.jestCli.anon.`24`
 import typingsSlinky.jestCli.anon.`2`
 import typingsSlinky.jestCli.anon.`3`
 import typingsSlinky.jestCli.anon.`4`
@@ -142,6 +143,8 @@ object argsMod extends js.Object {
     
     val init: `5` = js.native
     
+    val injectGlobals: `6` = js.native
+    
     val json: Default = js.native
     
     val lastCommit: Default = js.native
@@ -168,7 +171,7 @@ object argsMod extends js.Object {
     
     val noStackTrace: DefaultUndefinedDescription = js.native
     
-    val notifyMode: `6` = js.native
+    val notifyMode: `7` = js.native
     
     @JSName("notify")
     val notify_Foptions: DefaultUndefinedDescriptionType = js.native
@@ -179,11 +182,11 @@ object argsMod extends js.Object {
     
     val outputFile: Type = js.native
     
-    val passWithNoTests: `7` = js.native
+    val passWithNoTests: `8` = js.native
     
-    val preset: `8` = js.native
+    val preset: `9` = js.native
     
-    val prettierPath: `9` = js.native
+    val prettierPath: `10` = js.native
     
     val projects: DescriptionString = js.native
     
@@ -193,7 +196,7 @@ object argsMod extends js.Object {
     
     val resetModules: Default = js.native
     
-    val resolver: `10` = js.native
+    val resolver: `11` = js.native
     
     val restoreMocks: Default = js.native
     
@@ -205,7 +208,7 @@ object argsMod extends js.Object {
     
     val runTestsByPath: DefaultDescriptionString = js.native
     
-    val runner: `11` = js.native
+    val runner: `12` = js.native
     
     val selectProjects: DescriptionString = js.native
     
@@ -213,31 +216,31 @@ object argsMod extends js.Object {
     
     val setupFilesAfterEnv: DescriptionString = js.native
     
-    val showConfig: `12` = js.native
+    val showConfig: `13` = js.native
     
-    val silent: `13` = js.native
+    val silent: `14` = js.native
     
     val skipFilter: Default = js.native
     
     val snapshotSerializers: DescriptionString = js.native
     
-    val testEnvironment: `14` = js.native
+    val testEnvironment: `15` = js.native
     
     val testEnvironmentOptions: Type = js.native
     
-    val testFailureExitCode: `15` = js.native
+    val testFailureExitCode: `16` = js.native
     
-    val testLocationInResults: `16` = js.native
+    val testLocationInResults: `17` = js.native
     
-    val testMatch: `17` = js.native
+    val testMatch: `18` = js.native
     
-    val testNamePattern: `18` = js.native
+    val testNamePattern: `19` = js.native
     
     val testPathIgnorePatterns: DescriptionString = js.native
     
     val testPathPattern: DescriptionString = js.native
     
-    val testRegex: `19` = js.native
+    val testRegex: `20` = js.native
     
     val testResultsProcessor: Type = js.native
     
@@ -245,9 +248,9 @@ object argsMod extends js.Object {
     
     val testSequencer: Type = js.native
     
-    val testTimeout: `20` = js.native
+    val testTimeout: `21` = js.native
     
-    val testURL: `21` = js.native
+    val testURL: `22` = js.native
     
     val timers: Type = js.native
     
@@ -259,9 +262,9 @@ object argsMod extends js.Object {
     
     val updateSnapshot: AliasDefaultUndefinedDescriptionString = js.native
     
-    val useStderr: `22` = js.native
+    val useStderr: `23` = js.native
     
-    val verbose: `23` = js.native
+    val verbose: `24` = js.native
     
     val version: AliasDefaultUndefinedDescription = js.native
     

@@ -57,7 +57,7 @@ trait ReactNativePhoneInputProps[TextComponentType /* <: ReactComponentClass[js.
   /**
     * Function to be invoked when phone number is changed
     */
-  var onChangePhoneNumber: js.UndefOr[js.Function1[/* number */ Double, Unit]] = js.native
+  var onChangePhoneNumber: js.UndefOr[js.Function1[/* number */ String, Unit]] = js.native
   
   /**
     * Function to be invoked when cancelling country picker selection
@@ -206,7 +206,7 @@ object ReactNativePhoneInputProps {
     def deleteOffset: Self = this.set("offset", js.undefined)
     
     @scala.inline
-    def setOnChangePhoneNumber(value: /* number */ Double => Unit): Self = this.set("onChangePhoneNumber", js.Any.fromFunction1(value))
+    def setOnChangePhoneNumber(value: /* number */ String => Unit): Self = this.set("onChangePhoneNumber", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnChangePhoneNumber: Self = this.set("onChangePhoneNumber", js.undefined)

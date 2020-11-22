@@ -12,7 +12,8 @@ import typingsSlinky.rcMenu.interfaceMod.OpenEventHandler
 import typingsSlinky.rcMenu.interfaceMod.SelectEventHandler
 import typingsSlinky.rcMenu.menuItemMod.MenuItem
 import typingsSlinky.rcMenu.subPopupMenuMod.SubPopupMenuProps
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
@@ -23,7 +24,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("rc-menu/es/SubMenu", "SubMenu")
 @js.native
 class SubMenu protected ()
-  extends Component[SubMenuProps, js.Object, js.Any] {
+  extends Component[SubMenuProps, SubMenuState, js.Any] {
   def this(props: SubMenuProps) = this()
   
   def addKeyPath(info: MenuInfo): Item = js.native
@@ -45,13 +46,17 @@ class SubMenu protected ()
   
   def getDisabledClassName(): String = js.native
   
-  def getMotion(mode: MenuMode, visible: Boolean): MotionType = js.native
+  def getMode(): MenuMode = js.native
+  
+  def getMotion(mode: MenuMode, visible: Boolean): CSSMotionProps = js.native
   
   def getOpenClassName(): String = js.native
   
   def getPrefixCls(): String = js.native
   
   def getSelectedClassName(): String = js.native
+  
+  def getVisible(): Boolean = js.native
   
   var haveOpened: Boolean = js.native
   
@@ -61,7 +66,7 @@ class SubMenu protected ()
   
   def isChildrenSelected(): Boolean = js.native
   
-  def isOpen(): Boolean = js.native
+  def isInlineMode(): Boolean = js.native
   
   var isRootMenu: Boolean = js.native
   
@@ -106,7 +111,10 @@ class SubMenu protected ()
   
   var onTitleMouseLeave: MouseEventHandler[HTMLElement] = js.native
   
-  def renderChildren(children: ReactElement): ReactElement = js.native
+  def renderChildren(): ReactElement = js.native
+  
+  def renderPopupMenu(className: String): ReactElement = js.native
+  def renderPopupMenu(className: String, style: CSSProperties): ReactElement = js.native
   
   def saveMenuInstance(c: MenuItem): Unit = js.native
   
@@ -116,6 +124,8 @@ class SubMenu protected ()
   
   def triggerOpenChange(open: Boolean): Unit = js.native
   def triggerOpenChange(open: Boolean, `type`: String): Unit = js.native
+  
+  var updateStateRaf: Double = js.native
 }
 /* static members */
 @JSImport("rc-menu/es/SubMenu", "SubMenu")

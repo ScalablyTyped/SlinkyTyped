@@ -11,6 +11,9 @@ object xstateStrings {
   def Asterisk: Asterisk = "*".asInstanceOf[Asterisk]
   
   @scala.inline
+  def ExcludeType: ExcludeType = "ExcludeType".asInstanceOf[ExcludeType]
+  
+  @scala.inline
   def ExtractStateValue: ExtractStateValue = "ExtractStateValue".asInstanceOf[ExtractStateValue]
   
   @scala.inline
@@ -78,6 +81,9 @@ object xstateStrings {
   
   @js.native
   sealed trait Asterisk extends js.Object
+  
+  @js.native
+  sealed trait ExcludeType extends js.Object
   
   @js.native
   sealed trait ExtractStateValue extends js.Object

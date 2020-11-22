@@ -24,16 +24,14 @@ import typingsSlinky.awsSdkClientKmsBrowser.scheduleKeyDeletionExceptionsUnionMo
 import typingsSlinky.awsSdkClientKmsBrowser.tagResourceExceptionsUnionMod.TagResourceExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.untagResourceExceptionsUnionMod.UntagResourceExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.updateKeyDescriptionExceptionsUnionMod.UpdateKeyDescriptionExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidArnExceptionDetails> * / any */ @js.native
 trait InvalidArnException
-  extends ServiceException[InvalidArnExceptionDetails]
-     with CancelKeyDeletionExceptionsUnion
+  extends CancelKeyDeletionExceptionsUnion
      with CreateGrantExceptionsUnion
      with CreateKeyExceptionsUnion
      with DeleteImportedKeyMaterialExceptionsUnion
@@ -58,19 +56,13 @@ trait InvalidArnException
      with UntagResourceExceptionsUnion
      with UpdateKeyDescriptionExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidArnException: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidArnException = js.native
+  var name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidArnException = js.native
 }
 object InvalidArnException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidArnExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidArnException
-  ): InvalidArnException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidArnException): InvalidArnException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidArnException]
   }
   

@@ -9,12 +9,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFileManager extends Widget {
   
-  /** @name dxFileManager.getCurrentDirectory() */
+  /**
+    * [descr:dxFileManager.getCurrentDirectory()]
+    */
   def getCurrentDirectory(): js.Any = js.native
   
-  /** @name dxFileManager.getSelectedItems() */
+  /**
+    * [descr:dxFileManager.getSelectedItems()]
+    */
   def getSelectedItems(): js.Array[_] = js.native
   
-  /** @name dxFileManager.refresh() */
+  /**
+    * [descr:dxFileManager.refresh()]
+    */
   def refresh(): Promise[_] with JQueryPromise[_] = js.native
 }

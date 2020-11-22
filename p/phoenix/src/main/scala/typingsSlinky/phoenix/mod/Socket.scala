@@ -36,15 +36,17 @@ class Socket protected () extends js.Object {
   
   def log(kind: String, message: String, data: js.Any): Unit = js.native
   
-  def makeRef(): String = js.native
+  def makeRef(): MessageRef = js.native
   
-  def onClose(callback: js.Function1[/* cb */ js.Any, Unit]): Unit = js.native
+  def off(refs: js.Array[MessageRef]): Unit = js.native
   
-  def onError(callback: js.Function1[/* cb */ js.Any, Unit]): Unit = js.native
+  def onClose(callback: js.Function1[/* cb */ js.Any, Unit]): MessageRef = js.native
   
-  def onMessage(callback: js.Function1[/* cb */ js.Any, Unit]): Unit = js.native
+  def onError(callback: js.Function1[/* cb */ js.Any, Unit]): MessageRef = js.native
   
-  def onOpen(callback: js.Function1[/* cb */ js.Any, Unit]): Unit = js.native
+  def onMessage(callback: js.Function1[/* cb */ js.Any, Unit]): MessageRef = js.native
+  
+  def onOpen(callback: js.Function1[/* cb */ js.Any, Unit]): MessageRef = js.native
   
   def protocol(): String = js.native
   

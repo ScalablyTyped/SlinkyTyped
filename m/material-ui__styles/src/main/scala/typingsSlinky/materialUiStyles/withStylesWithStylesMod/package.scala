@@ -12,8 +12,6 @@ package object withStylesWithStylesMod {
   
   type ClassNameMap[ClassKey /* <: java.lang.String */] = typingsSlinky.std.Record[ClassKey, java.lang.String]
   
-  type JSSFontface = (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFace */ js.Any) with typingsSlinky.materialUiStyles.anon.Fallbacks
-  
   type PropsFunc[Props /* <: js.Object */, T] = js.Function1[/* props */ Props, T]
   
   type PropsOfStyles[StylesType] = js.Object

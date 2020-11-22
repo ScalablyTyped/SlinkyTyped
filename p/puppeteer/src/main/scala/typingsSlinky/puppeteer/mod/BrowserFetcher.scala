@@ -21,7 +21,7 @@ trait BrowserFetcher extends js.Object {
   
   def platform(): Platform = js.native
   
-  def product(): Product = js.native
+  def product(): Product_ = js.native
   
   def remove(revision: String): js.Promise[Unit] = js.native
   

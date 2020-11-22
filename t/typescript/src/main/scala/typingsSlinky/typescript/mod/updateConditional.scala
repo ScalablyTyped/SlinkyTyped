@@ -8,12 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateConditional extends js.Object {
   
+  /** @deprecated Use `factory.updateConditional` or the factory supplied by your transformation context instead. */
   def apply(
     node: ConditionalExpression,
     condition: Expression,
-    questionToken: Token[typingsSlinky.typescript.mod.SyntaxKind.QuestionToken],
+    questionToken: QuestionToken,
     whenTrue: Expression,
-    colonToken: Token[typingsSlinky.typescript.mod.SyntaxKind.ColonToken],
+    colonToken: ColonToken,
     whenFalse: Expression
   ): ConditionalExpression = js.native
 }

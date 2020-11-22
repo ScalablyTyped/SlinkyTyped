@@ -1,0 +1,16 @@
+package typingsSlinky.mockAwsS3.mod
+
+import typingsSlinky.awsSdk.timestreamqueryMod.ClientConfiguration
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@JSImport("mock-aws-s3", "TimestreamQuery")
+@js.native
+/**
+  * Constructs a service object. This object has one method for each API operation.
+  */
+class TimestreamQuery ()
+  extends typingsSlinky.awsSdk.mod.TimestreamQuery {
+  def this(options: ClientConfiguration) = this()
+}

@@ -1,7 +1,6 @@
 package typingsSlinky.reactNativeElements.anon
 
-import typingsSlinky.reactNativeElements.mod.ButtonProps
-import typingsSlinky.reactNativeElements.mod.ListItemProps
+import typingsSlinky.reactNative.mod.ModalProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,11 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PartialBottomSheetProps extends js.Object {
   
-  var buttonProps: js.UndefOr[ButtonProps] = js.native
+  var isVisible: js.UndefOr[Boolean] = js.native
   
-  var cancelButtonIndex: js.UndefOr[Double] = js.native
-  
-  var list: js.UndefOr[js.Array[ListItemProps]] = js.native
+  var modalProps: js.UndefOr[ModalProps] = js.native
 }
 object PartialBottomSheetProps {
   
@@ -40,24 +37,15 @@ object PartialBottomSheetProps {
     }
     
     @scala.inline
-    def setButtonProps(value: ButtonProps): Self = this.set("buttonProps", value.asInstanceOf[js.Any])
+    def setIsVisible(value: Boolean): Self = this.set("isVisible", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteButtonProps: Self = this.set("buttonProps", js.undefined)
+    def deleteIsVisible: Self = this.set("isVisible", js.undefined)
     
     @scala.inline
-    def setCancelButtonIndex(value: Double): Self = this.set("cancelButtonIndex", value.asInstanceOf[js.Any])
+    def setModalProps(value: ModalProps): Self = this.set("modalProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteCancelButtonIndex: Self = this.set("cancelButtonIndex", js.undefined)
-    
-    @scala.inline
-    def setListVarargs(value: ListItemProps*): Self = this.set("list", js.Array(value :_*))
-    
-    @scala.inline
-    def setList(value: js.Array[ListItemProps]): Self = this.set("list", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteList: Self = this.set("list", js.undefined)
+    def deleteModalProps: Self = this.set("modalProps", js.undefined)
   }
 }

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IMethod extends js.Object {
   
   /** Method options */
-  var options: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var options: js.UndefOr[StringDictionary[js.UndefOr[js.Any]]] = js.native
   
   /** Whether requests are streamed */
   var requestStream: js.UndefOr[Boolean] = js.native
@@ -56,7 +56,7 @@ object IMethod {
     def setResponseType(value: String): Self = this.set("responseType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: StringDictionary[js.Any]): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: StringDictionary[js.UndefOr[js.Any]]): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

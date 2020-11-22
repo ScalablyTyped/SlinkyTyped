@@ -55,10 +55,19 @@ object bufferGeometryMod extends js.Object {
     	 */
     def applyMatrix4(matrix: Matrix4): BufferGeometry = js.native
     
+    /**
+    	 * @default {}
+    	 */
     var attributes: StringDictionary[BufferAttribute | InterleavedBufferAttribute] = js.native
     
+    /**
+    	 * @default null
+    	 */
     var boundingBox: Box3 | Null = js.native
     
+    /**
+    	 * @default null
+    	 */
     var boundingSphere: Sphere | Null = js.native
     
     def center(): BufferGeometry = js.native
@@ -97,6 +106,9 @@ object bufferGeometryMod extends js.Object {
     	 */
     def dispose(): Unit = js.native
     
+    /**
+    	 * @default { start: 0, count: Infinity }
+    	 */
     var drawRange: Start = js.native
     
     /**
@@ -113,6 +125,9 @@ object bufferGeometryMod extends js.Object {
     
     def getIndex(): BufferAttribute | Null = js.native
     
+    /**
+    	 * @default []
+    	 */
     var groups: js.Array[MaterialIndex] = js.native
     
     /**
@@ -120,6 +135,9 @@ object bufferGeometryMod extends js.Object {
     	 */
     var id: Double = js.native
     
+    /**
+    	 * @default null
+    	 */
     var index: BufferAttribute | Null = js.native
     
     val isBufferGeometry: `true` = js.native
@@ -129,10 +147,19 @@ object bufferGeometryMod extends js.Object {
     def merge(geometry: BufferGeometry): BufferGeometry = js.native
     def merge(geometry: BufferGeometry, offset: Double): BufferGeometry = js.native
     
+    /**
+    	 * @default {}
+    	 */
     var morphAttributes: StringDictionary[js.Array[BufferAttribute | InterleavedBufferAttribute]] = js.native
     
+    /**
+    	 * @default false
+    	 */
     var morphTargetsRelative: Boolean = js.native
     
+    /**
+    	 * @default ''
+    	 */
     var name: String = js.native
     
     def normalizeNormals(): Unit = js.native
@@ -164,9 +191,9 @@ object bufferGeometryMod extends js.Object {
     
     def setFromPoints(points: js.Array[Vector2 | Vector3]): BufferGeometry = js.native
     
-    def setIndex(): Unit = js.native
-    def setIndex(index: js.Array[Double]): Unit = js.native
-    def setIndex(index: BufferAttribute): Unit = js.native
+    def setIndex(): BufferGeometry = js.native
+    def setIndex(index: js.Array[Double]): BufferGeometry = js.native
+    def setIndex(index: BufferAttribute): BufferGeometry = js.native
     
     def toJSON(): js.Any = js.native
     
@@ -174,10 +201,16 @@ object bufferGeometryMod extends js.Object {
     
     def translate(x: Double, y: Double, z: Double): BufferGeometry = js.native
     
+    /**
+    	 * @default 'BufferGeometry'
+    	 */
     var `type`: String = js.native
     
     def updateFromObject(`object`: Object3D): Unit = js.native
     
+    /**
+    	 * @default {}
+    	 */
     var userData: StringDictionary[js.Any] = js.native
     
     var uuid: String = js.native

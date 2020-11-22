@@ -28,7 +28,7 @@ trait Finding extends js.Object {
   var classificationDetails: js.UndefOr[ClassificationDetails] = js.native
   
   /**
-    * The total number of occurrences of this finding.
+    * The total number of occurrences of the finding. For sensitive data findings, this value is always 1. All sensitive data findings are considered new (unique) because they derive from individual classification jobs.
     */
   var count: js.UndefOr[long] = js.native
   
@@ -78,7 +78,7 @@ trait Finding extends js.Object {
   var schemaVersion: js.UndefOr[string] = js.native
   
   /**
-    * The severity of the finding.
+    * The severity level and score for the finding.
     */
   var severity: js.UndefOr[Severity] = js.native
   
@@ -93,7 +93,7 @@ trait Finding extends js.Object {
   var `type`: js.UndefOr[FindingType] = js.native
   
   /**
-    * The date and time, in UTC and extended ISO 8601 format, when the finding was last updated. For sensitive data findings, this value is the same as the value for the createdAt property. Sensitive data findings aren't updated.
+    * The date and time, in UTC and extended ISO 8601 format, when the finding was last updated. For sensitive data findings, this value is the same as the value for the createdAt property. All sensitive data findings are considered new (unique) because they derive from individual classification jobs.
     */
   var updatedAt: js.UndefOr[js.Date] = js.native
 }

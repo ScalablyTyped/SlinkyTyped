@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("__esri.TimeSlider")
 @js.native
 /**
-  * The TimeSlider widget simplifies visualization of temporal data in your application. Before adding the TimeSlider to your application, you first should understand how it can be configured to correctly display your temporal data.
+  * The TimeSlider widget simplifies visualization of temporal data in your application.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-TimeSlider.html)
   */

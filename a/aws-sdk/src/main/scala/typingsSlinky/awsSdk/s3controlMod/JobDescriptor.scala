@@ -43,7 +43,7 @@ trait JobDescriptor extends js.Object {
   var Manifest: js.UndefOr[JobManifest] = js.native
   
   /**
-    * The operation that the specified job is configured to execute on the objects listed in the manifest.
+    * The operation that the specified job is configured to run on the objects listed in the manifest.
     */
   var Operation: js.UndefOr[JobOperation] = js.native
   
@@ -53,7 +53,7 @@ trait JobDescriptor extends js.Object {
   var Priority: js.UndefOr[JobPriority] = js.native
   
   /**
-    * Describes the total number of tasks that the specified job has executed, the number of tasks that succeeded, and the number of tasks that failed.
+    * Describes the total number of tasks that the specified job has run, the number of tasks that succeeded, and the number of tasks that failed.
     */
   var ProgressSummary: js.UndefOr[JobProgressSummary] = js.native
   
@@ -63,7 +63,7 @@ trait JobDescriptor extends js.Object {
   var Report: js.UndefOr[JobReport] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) for the AWS Identity and Access Management (IAM) role assigned to execute the tasks for this job.
+    * The Amazon Resource Name (ARN) for the AWS Identity and Access Management (IAM) role assigned to run the tasks for this job.
     */
   var RoleArn: js.UndefOr[IAMRoleArn] = js.native
   
@@ -73,7 +73,7 @@ trait JobDescriptor extends js.Object {
   var Status: js.UndefOr[JobStatus] = js.native
   
   /**
-    * 
+    * The reason for updating the job.
     */
   var StatusUpdateReason: js.UndefOr[JobStatusUpdateReason] = js.native
   

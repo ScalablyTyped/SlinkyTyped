@@ -1,5 +1,6 @@
 package typingsSlinky.wechatMiniprogram.DB
 
+import typingsSlinky.std.Record
 import typingsSlinky.wechatMiniprogram.OQ
 import typingsSlinky.wechatMiniprogram.anon.RQICountDocumentOptions
 import typingsSlinky.wechatMiniprogram.anon.RQIGetDocumentOptions
@@ -14,7 +15,7 @@ trait Query extends js.Object {
   def count(options: OQ[ICountDocumentOptions]): Unit = js.native
   def count(options: RQICountDocumentOptions): js.Promise[ICountResult] = js.native
   
-  def field(`object`: js.Object): Query = js.native
+  def field(`object`: Record[String, _]): Query = js.native
   
   def get(): js.Promise[IQueryResult] = js.native
   def get(options: OQ[IGetDocumentOptions]): Unit = js.native

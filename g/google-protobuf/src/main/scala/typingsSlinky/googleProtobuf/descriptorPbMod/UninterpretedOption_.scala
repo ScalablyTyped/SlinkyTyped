@@ -15,19 +15,19 @@ class UninterpretedOption_ () extends Message {
   def addName(value: NamePart): NamePart = js.native
   def addName(value: NamePart, index: Double): NamePart = js.native
   
-  def clearAggregateValue(): Unit = js.native
+  def clearAggregateValue(): UninterpretedOption = js.native
   
-  def clearDoubleValue(): Unit = js.native
+  def clearDoubleValue(): UninterpretedOption = js.native
   
-  def clearIdentifierValue(): Unit = js.native
+  def clearIdentifierValue(): UninterpretedOption = js.native
   
-  def clearNameList(): Unit = js.native
+  def clearNameList(): UninterpretedOption = js.native
   
-  def clearNegativeIntValue(): Unit = js.native
+  def clearNegativeIntValue(): UninterpretedOption = js.native
   
-  def clearPositiveIntValue(): Unit = js.native
+  def clearPositiveIntValue(): UninterpretedOption = js.native
   
-  def clearStringValue(): Unit = js.native
+  def clearStringValue(): UninterpretedOption = js.native
   
   def getAggregateValue(): js.UndefOr[String] = js.native
   
@@ -59,18 +59,18 @@ class UninterpretedOption_ () extends Message {
   
   def hasStringValue(): Boolean = js.native
   
-  def setAggregateValue(value: String): Unit = js.native
+  def setAggregateValue(value: String): UninterpretedOption = js.native
   
-  def setDoubleValue(value: Double): Unit = js.native
+  def setDoubleValue(value: Double): UninterpretedOption = js.native
   
-  def setIdentifierValue(value: String): Unit = js.native
+  def setIdentifierValue(value: String): UninterpretedOption = js.native
   
-  def setNameList(value: js.Array[NamePart]): Unit = js.native
+  def setNameList(value: js.Array[NamePart]): UninterpretedOption = js.native
   
-  def setNegativeIntValue(value: Double): Unit = js.native
+  def setNegativeIntValue(value: Double): UninterpretedOption = js.native
   
-  def setPositiveIntValue(value: Double): Unit = js.native
+  def setPositiveIntValue(value: Double): UninterpretedOption = js.native
   
-  def setStringValue(value: String): Unit = js.native
-  def setStringValue(value: js.typedarray.Uint8Array): Unit = js.native
+  def setStringValue(value: String): UninterpretedOption = js.native
+  def setStringValue(value: js.typedarray.Uint8Array): UninterpretedOption = js.native
 }

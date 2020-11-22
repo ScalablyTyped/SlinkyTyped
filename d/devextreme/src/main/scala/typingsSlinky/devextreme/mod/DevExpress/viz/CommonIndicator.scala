@@ -3,7 +3,6 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 import typingsSlinky.devextreme.anon.Indent
 import typingsSlinky.devextreme.devextremeStrings.Bright
 import typingsSlinky.devextreme.devextremeStrings.Carmine
-import typingsSlinky.devextreme.devextremeStrings.Default
 import typingsSlinky.devextreme.devextremeStrings.Material
 import typingsSlinky.devextreme.devextremeStrings.Ocean
 import typingsSlinky.devextreme.devextremeStrings.Office
@@ -28,60 +27,96 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CommonIndicator extends js.Object {
   
-  /** @name CommonIndicator.arrowLength */
+  /**
+    * [descr:CommonIndicator.arrowLength]
+    */
   var arrowLength: js.UndefOr[Double] = js.native
   
-  /** @name CommonIndicator.backgroundColor */
+  /**
+    * [descr:CommonIndicator.backgroundColor]
+    */
   var backgroundColor: js.UndefOr[String] = js.native
   
-  /** @name CommonIndicator.baseValue */
+  /**
+    * [descr:CommonIndicator.baseValue]
+    */
   var baseValue: js.UndefOr[Double] = js.native
   
-  /** @name CommonIndicator.beginAdaptingAtRadius */
+  /**
+    * [descr:CommonIndicator.beginAdaptingAtRadius]
+    */
   var beginAdaptingAtRadius: js.UndefOr[Double] = js.native
   
-  /** @name CommonIndicator.color */
+  /**
+    * [descr:CommonIndicator.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name CommonIndicator.horizontalOrientation */
+  /**
+    * [descr:CommonIndicator.horizontalOrientation]
+    */
   var horizontalOrientation: js.UndefOr[left | right] = js.native
   
-  /** @name CommonIndicator.indentFromCenter */
+  /**
+    * [descr:CommonIndicator.indentFromCenter]
+    */
   var indentFromCenter: js.UndefOr[Double] = js.native
   
-  /** @name CommonIndicator.length */
+  /**
+    * [descr:CommonIndicator.length]
+    */
   var length: js.UndefOr[Double] = js.native
   
-  /** @name CommonIndicator.offset */
+  /**
+    * [descr:CommonIndicator.offset]
+    */
   var offset: js.UndefOr[Double] = js.native
   
-  /** @name CommonIndicator.palette */
+  /**
+    * [descr:CommonIndicator.palette]
+    */
   var palette: js.UndefOr[
-    js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+    js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
   ] = js.native
   
-  /** @name CommonIndicator.secondColor */
+  /**
+    * [descr:CommonIndicator.secondColor]
+    */
   var secondColor: js.UndefOr[String] = js.native
   
-  /** @name CommonIndicator.secondFraction */
+  /**
+    * [descr:CommonIndicator.secondFraction]
+    */
   var secondFraction: js.UndefOr[Double] = js.native
   
-  /** @name CommonIndicator.size */
+  /**
+    * [descr:CommonIndicator.size]
+    */
   var size: js.UndefOr[Double] = js.native
   
-  /** @name CommonIndicator.spindleGapSize */
+  /**
+    * [descr:CommonIndicator.spindleGapSize]
+    */
   var spindleGapSize: js.UndefOr[Double] = js.native
   
-  /** @name CommonIndicator.spindleSize */
+  /**
+    * [descr:CommonIndicator.spindleSize]
+    */
   var spindleSize: js.UndefOr[Double] = js.native
   
-  /** @name CommonIndicator.text */
+  /**
+    * [descr:CommonIndicator.text]
+    */
   var text: js.UndefOr[Indent] = js.native
   
-  /** @name CommonIndicator.verticalOrientation */
+  /**
+    * [descr:CommonIndicator.verticalOrientation]
+    */
   var verticalOrientation: js.UndefOr[bottom | top] = js.native
   
-  /** @name CommonIndicator.width */
+  /**
+    * [descr:CommonIndicator.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object CommonIndicator {
@@ -166,7 +201,7 @@ object CommonIndicator {
     
     @scala.inline
     def setPalette(
-      value: js.Array[String] | Bright | Default | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
+      value: js.Array[String] | Bright | (`Harmony Light`) | Ocean | Pastel | Soft | (`Soft Pastel`) | Vintage | Violet | Carmine | (`Dark Moon`) | (`Dark Violet`) | (`Green Mist`) | (`Soft Blue`) | Material | Office
     ): Self = this.set("palette", value.asInstanceOf[js.Any])
     
     @scala.inline

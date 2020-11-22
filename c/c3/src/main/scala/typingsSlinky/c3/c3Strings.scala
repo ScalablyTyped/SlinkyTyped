@@ -1,8 +1,9 @@
 package typingsSlinky.c3
 
-import typingsSlinky.c3.mod.AxisName
 import typingsSlinky.c3.mod.ChartType
+import typingsSlinky.c3.mod.XAxisType
 import typingsSlinky.c3.mod.YAxisName
+import typingsSlinky.c3.mod.YAxisType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -121,6 +122,9 @@ object c3Strings {
   def `linear-closed`: `linear-closed` = "linear-closed".asInstanceOf[`linear-closed`]
   
   @scala.inline
+  def log: log = "log".asInstanceOf[log]
+  
+  @scala.inline
   def middle: middle = "middle".asInstanceOf[middle]
   
   @scala.inline
@@ -176,6 +180,9 @@ object c3Strings {
   
   @scala.inline
   def `step-before`: `step-before` = "step-before".asInstanceOf[`step-before`]
+  
+  @scala.inline
+  def time: time = "time".asInstanceOf[time]
   
   @scala.inline
   def timeseries: timeseries = "timeseries".asInstanceOf[timeseries]
@@ -247,7 +254,7 @@ object c3Strings {
   sealed trait `cardinal-open` extends js.Object
   
   @js.native
-  sealed trait category extends js.Object
+  sealed trait category extends XAxisType
   
   @js.native
   sealed trait center extends js.Object
@@ -271,7 +278,7 @@ object c3Strings {
   sealed trait gauge extends ChartType
   
   @js.native
-  sealed trait indexed extends js.Object
+  sealed trait indexed extends XAxisType
   
   @js.native
   sealed trait `inner-bottom` extends js.Object
@@ -301,10 +308,13 @@ object c3Strings {
   sealed trait line extends ChartType
   
   @js.native
-  sealed trait linear extends js.Object
+  sealed trait linear extends YAxisType
   
   @js.native
   sealed trait `linear-closed` extends js.Object
+  
+  @js.native
+  sealed trait log extends YAxisType
   
   @js.native
   sealed trait middle extends js.Object
@@ -364,7 +374,12 @@ object c3Strings {
   sealed trait `step-before` extends js.Object
   
   @js.native
-  sealed trait timeseries extends js.Object
+  sealed trait time extends YAxisType
+  
+  @js.native
+  sealed trait timeseries
+    extends XAxisType
+       with YAxisType
   
   @js.native
   sealed trait `top-left` extends js.Object
@@ -373,15 +388,11 @@ object c3Strings {
   sealed trait `top-right` extends js.Object
   
   @js.native
-  sealed trait x extends AxisName
+  sealed trait x extends js.Object
   
   @js.native
-  sealed trait y
-    extends AxisName
-       with YAxisName
+  sealed trait y extends YAxisName
   
   @js.native
-  sealed trait y2
-    extends AxisName
-       with YAxisName
+  sealed trait y2 extends YAxisName
 }

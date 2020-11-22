@@ -2,6 +2,7 @@ package typingsSlinky.pgProtocol
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ReadableStream
+import typingsSlinky.pgProtocol.messagesMod.MessageName
 import typingsSlinky.pgProtocol.parserMod.MessageCallback
 import typingsSlinky.pgProtocol.serializerMod.BindOpts
 import typingsSlinky.pgProtocol.serializerMod.ExecOpts
@@ -17,6 +18,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object mod extends js.Object {
   
   def parse(stream: ReadableStream, callback: MessageCallback): js.Promise[Unit] = js.native
+  
+  @js.native
+  class DatabaseError protected ()
+    extends typingsSlinky.pgProtocol.messagesMod.DatabaseError {
+    def this(message: String, length: Double, name: MessageName) = this()
+  }
   
   @js.native
   object serialize extends js.Object {

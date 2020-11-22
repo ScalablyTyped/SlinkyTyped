@@ -13,7 +13,7 @@ trait UpdateChannelRequest extends js.Object {
   var channelName: ChannelName = js.native
   
   /**
-    * Where channel data is stored. You may choose one of "serviceManagedS3" or "customerManagedS3" storage. If not specified, the default is "serviceManagedS3". This cannot be changed after creation of the channel.
+    * Where channel data is stored. You can choose one of serviceManagedS3 or customerManagedS3 storage. If not specified, the default is serviceManagedS3. You cannot change this storage option after the channel is created.
     */
   var channelStorage: js.UndefOr[ChannelStorage] = js.native
   

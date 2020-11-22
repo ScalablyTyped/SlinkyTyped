@@ -27,6 +27,9 @@ trait MaterialDefines
   var _areMiscDirty: Boolean = js.native
   
   /** @hidden */
+  var _arePrePassDirty: Boolean = js.native
+  
+  /** @hidden */
   var _areTexturesDirty: Boolean = js.native
   
   var _isDirty: js.Any = js.native
@@ -98,6 +101,11 @@ trait MaterialDefines
     * Marks the misc state as changed
     */
   def markAsMiscDirty(): Unit = js.native
+  
+  /**
+    * Marks the prepass state as changed
+    */
+  def markAsPrePassDirty(): Unit = js.native
   
   /**
     * Marks the material to indicate that it has been re-calculated

@@ -6,7 +6,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object viz {
   
-  /** @name BaseGauge.Options.loadingIndicator */
+  /**
+    * [descr:BaseGauge.Options.loadingIndicator]
+    */
   type BaseGaugeLoadingIndicator = typingsSlinky.devextreme.mod.DevExpress.viz.BaseWidgetLoadingIndicator
   
   type BaseSparkline = typingsSlinky.devextreme.mod.DevExpress.viz.BaseWidget

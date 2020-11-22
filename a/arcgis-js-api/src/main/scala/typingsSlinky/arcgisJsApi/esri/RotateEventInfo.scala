@@ -22,14 +22,7 @@ trait RotateEventInfo
   var angle: Double = js.native
   
   /**
-    * Returns information indicating the stage of the rotate operation.  **Possible Values**
-    *
-    * Value | Description |
-    * ----- | ----------- |
-    * rotate-start | The type changes to `rotate-start` at the start of `rotate` operation.
-    * rotate | The type changes to `rotate` while graphics are being rotated.
-    * rotate-stop | The type changes to `rotate-stop` once graphics are rotated.
-    *
+    * Returns information indicating the stage of the rotate operation.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#RotateEventInfo)
     */

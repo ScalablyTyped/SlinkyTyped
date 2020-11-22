@@ -8,6 +8,8 @@ package object mod {
   
   type AppMetadata = org.scalablytyped.runtime.StringDictionary[js.Any]
   
+  type CustomDomainVerificationMethod = typingsSlinky.auth0.auth0Strings.txt
+  
   type DatabaseClientOptions = typingsSlinky.auth0.mod.BaseClientOptions
   
   type PasswordLessClientOptions = typingsSlinky.auth0.mod.BaseClientOptions

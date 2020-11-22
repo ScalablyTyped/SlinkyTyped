@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WindowsDefenderScanActionResult extends DeviceActionResult {
   
   // Scan type either full scan or quick scan
-  var scanType: js.UndefOr[String] = js.native
+  var scanType: js.UndefOr[NullableOption[String]] = js.native
 }
 object WindowsDefenderScanActionResult {
   
@@ -34,9 +34,12 @@ object WindowsDefenderScanActionResult {
     }
     
     @scala.inline
-    def setScanType(value: String): Self = this.set("scanType", value.asInstanceOf[js.Any])
+    def setScanType(value: NullableOption[String]): Self = this.set("scanType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteScanType: Self = this.set("scanType", js.undefined)
+    
+    @scala.inline
+    def setScanTypeNull: Self = this.set("scanType", null)
   }
 }

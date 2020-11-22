@@ -2,6 +2,7 @@ package typingsSlinky.emojiMart.components
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
@@ -29,7 +30,7 @@ object Emoji {
     def backgroundImageFn(value: (/* set */ EmojiSet, /* sheetSize */ EmojiSheetSize) => String): this.type = set("backgroundImageFn", js.Any.fromFunction2(value))
     
     @scala.inline
-    def fallback(value: (/* emoji */ EmojiData, EmojiProps) => ReactComponentClass[js.Object]): this.type = set("fallback", js.Any.fromFunction2(value))
+    def fallback(value: (/* emoji */ EmojiData, EmojiProps) => ReactComponentClass[js.Object] | ReactElement): this.type = set("fallback", js.Any.fromFunction2(value))
     
     @scala.inline
     def forceSize(value: Boolean): this.type = set("forceSize", value.asInstanceOf[js.Any])

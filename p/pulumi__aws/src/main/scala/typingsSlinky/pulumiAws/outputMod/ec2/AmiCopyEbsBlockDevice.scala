@@ -45,7 +45,7 @@ trait AmiCopyEbsBlockDevice extends js.Object {
   
   /**
     * The type of EBS volume to create. Can be one of "standard" (the
-    * default), "io1" or "gp2".
+    * default), "io1", "io2" or "gp2".
     */
   var volumeType: String = js.native
 }

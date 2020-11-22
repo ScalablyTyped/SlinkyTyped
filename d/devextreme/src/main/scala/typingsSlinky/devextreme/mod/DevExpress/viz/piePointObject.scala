@@ -7,16 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait piePointObject extends basePointObject {
   
-  /** @name piePointObject.hide() */
+  /**
+    * [descr:piePointObject.hide()]
+    */
   def hide(): Unit = js.native
   
-  /** @name piePointObject.isVisible() */
+  /**
+    * [descr:piePointObject.isVisible()]
+    */
   def isVisible(): Boolean = js.native
   
-  /** @name piePointObject.percent */
+  /**
+    * [descr:piePointObject.percent]
+    */
   var percent: js.UndefOr[String | Double | js.Date] = js.native
   
-  /** @name piePointObject.show() */
+  /**
+    * [descr:piePointObject.show()]
+    */
   def show(): Unit = js.native
 }
 object piePointObject {

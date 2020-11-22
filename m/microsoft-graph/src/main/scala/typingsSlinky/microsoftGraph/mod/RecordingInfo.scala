@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RecordingInfo extends js.Object {
   
   // The identities of the recording initiator.
-  var initiator: js.UndefOr[IdentitySet] = js.native
+  var initiator: js.UndefOr[NullableOption[IdentitySet]] = js.native
   
   // Possible values are: unknown, notRecording, recording, or failed.
   var recordingStatus: js.UndefOr[RecordingStatus] = js.native
@@ -37,10 +37,13 @@ object RecordingInfo {
     }
     
     @scala.inline
-    def setInitiator(value: IdentitySet): Self = this.set("initiator", value.asInstanceOf[js.Any])
+    def setInitiator(value: NullableOption[IdentitySet]): Self = this.set("initiator", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInitiator: Self = this.set("initiator", js.undefined)
+    
+    @scala.inline
+    def setInitiatorNull: Self = this.set("initiator", null)
     
     @scala.inline
     def setRecordingStatus(value: RecordingStatus): Self = this.set("recordingStatus", value.asInstanceOf[js.Any])

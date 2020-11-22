@@ -189,6 +189,9 @@ trait FancytreeNode extends js.Object {
   /** Return true if node has keyboard focus. */
   def hasFocus(): Boolean = js.native
   
+  /** Icon of the tree node. */
+  var icon: String = js.native
+  
   /** Write to browser console if debugLevel >= 1 (prepending node info)  */
   def info(msg: String): Unit = js.native
   

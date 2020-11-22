@@ -30,6 +30,8 @@ object searchMod extends js.Object {
   def findIgnoreCase[T](query: String, searchable: js.Array[T]): T | Null = js.native
   def findIgnoreCase[T](query: String, searchable: js.Array[T], options: SearchOptions[T]): T | Null = js.native
   
+  def findMatchInRange(value: String, values: js.Array[String], startIndex: Double, endIndex: Double): Double = js.native
+  
   def findMatchIndex(value: String, values: js.Array[String], startIndex: Double): Double = js.native
   def findMatchIndex(value: String, values: js.Array[String], startIndex: Double, isSelfMatchable: Boolean): Double = js.native
   

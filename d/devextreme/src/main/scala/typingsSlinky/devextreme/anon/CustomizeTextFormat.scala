@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CustomizeTextFormat extends js.Object {
   
-  var customizeText: js.UndefOr[js.Function1[/* markerValue */ `23`, String]] = js.native
+  var customizeText: js.UndefOr[js.Function1[/* markerValue */ `26`, String]] = js.native
   
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
 }
@@ -36,7 +36,7 @@ object CustomizeTextFormat {
     }
     
     @scala.inline
-    def setCustomizeText(value: /* markerValue */ `23` => String): Self = this.set("customizeText", js.Any.fromFunction1(value))
+    def setCustomizeText(value: /* markerValue */ `26` => String): Self = this.set("customizeText", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteCustomizeText: Self = this.set("customizeText", js.undefined)

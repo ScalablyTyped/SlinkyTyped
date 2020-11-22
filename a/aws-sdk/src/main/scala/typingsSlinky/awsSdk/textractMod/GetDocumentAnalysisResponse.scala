@@ -33,7 +33,7 @@ trait GetDocumentAnalysisResponse extends js.Object {
   var NextToken: js.UndefOr[PaginationToken] = js.native
   
   /**
-    * The current status of an asynchronous document-analysis operation.
+    * Returns if the detection job could not be completed. Contains explanation for what error occured.
     */
   var StatusMessage: js.UndefOr[typingsSlinky.awsSdk.textractMod.StatusMessage] = js.native
   

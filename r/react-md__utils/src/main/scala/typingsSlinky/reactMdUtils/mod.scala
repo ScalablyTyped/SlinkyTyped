@@ -8,11 +8,16 @@ import org.scalajs.dom.raw.TouchEvent
 import org.scalajs.dom.raw.Window
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.Context
+import typingsSlinky.react.mod.DependencyList
+import typingsSlinky.react.mod.EffectCallback
 import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MutableRefObject
+import typingsSlinky.react.mod.ProviderProps
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
+import typingsSlinky.reactMdUtils.anon.AppSizeinitializedboolean
 import typingsSlinky.reactMdUtils.appSizeListenerMod.AppSizeListenerProps
 import typingsSlinky.reactMdUtils.bemMod.BEMResult
 import typingsSlinky.reactMdUtils.bemMod.Block
@@ -20,6 +25,9 @@ import typingsSlinky.reactMdUtils.caseInsensitiveFilterMod.CaseInsensitiveOption
 import typingsSlinky.reactMdUtils.containsElementMod.CheckableThing
 import typingsSlinky.reactMdUtils.delegateEventMod.DelegatedEventHandler
 import typingsSlinky.reactMdUtils.delegateEventMod.DelegatedEventTarget
+import typingsSlinky.reactMdUtils.dirMod.DirProps
+import typingsSlinky.reactMdUtils.dirMod.WritingDirection
+import typingsSlinky.reactMdUtils.dirMod.WritingDirectionContext
 import typingsSlinky.reactMdUtils.focusContainerMod.FocusContainerProps
 import typingsSlinky.reactMdUtils.focusElementWithinMod.Focus
 import typingsSlinky.reactMdUtils.getInstanceMod.RefOrInstance
@@ -36,11 +44,12 @@ import typingsSlinky.reactMdUtils.isContrastCompliantMod.ContrastRatioCompliance
 import typingsSlinky.reactMdUtils.mediaOnlyMod.MediaOnlyProps
 import typingsSlinky.reactMdUtils.movementTypesMod.MovementConfig
 import typingsSlinky.reactMdUtils.reactMdUtilsStrings.height
+import typingsSlinky.reactMdUtils.reactMdUtilsStrings.max
+import typingsSlinky.reactMdUtils.reactMdUtilsStrings.min
 import typingsSlinky.reactMdUtils.reactMdUtilsStrings.width
 import typingsSlinky.reactMdUtils.resizeListenerMod.ResizeListenerProps
 import typingsSlinky.reactMdUtils.resizeObserverMod.ResizeObserverProps
 import typingsSlinky.reactMdUtils.scrollListenerMod.ScrollListenerProps
-import typingsSlinky.reactMdUtils.scrollbarSizeMod.SizingType
 import typingsSlinky.reactMdUtils.sizingConstantsMod.QuerySize
 import typingsSlinky.reactMdUtils.throttleMod.ThrottleableFunction
 import typingsSlinky.reactMdUtils.throttleMod.ThrottledFunction
@@ -49,12 +58,18 @@ import typingsSlinky.reactMdUtils.typesMod.Coords
 import typingsSlinky.reactMdUtils.typesMod.FixedPosition
 import typingsSlinky.reactMdUtils.typesMod.FixedPositionOptions
 import typingsSlinky.reactMdUtils.typesMod.PositionAnchor
+import typingsSlinky.reactMdUtils.typesTypesMod.PropsWithRef
 import typingsSlinky.reactMdUtils.unitToNumberMod.UnitToNumberOptions
 import typingsSlinky.reactMdUtils.useActiveDescendantMovementMod.ActiveDescendantMovementProviders
 import typingsSlinky.reactMdUtils.useActiveDescendantMovementMod.ActiveDescendantOptions
 import typingsSlinky.reactMdUtils.useAppSizeMediaMod.AppSize
+import typingsSlinky.reactMdUtils.useAppSizeMediaMod.AppSizeOptions
 import typingsSlinky.reactMdUtils.useCloseOnOutsideClickMod.CloseOnOutsideClickOptions
+import typingsSlinky.reactMdUtils.useEnsuredRefMod.EnsuredRefs
 import typingsSlinky.reactMdUtils.useFocusMovementMod.KeyboardFocusOptions
+import typingsSlinky.reactMdUtils.useGridListMod.GridListSize
+import typingsSlinky.reactMdUtils.useGridListMod.UseGridListOptions
+import typingsSlinky.reactMdUtils.useGridListMod.UseGridListReturnValue
 import typingsSlinky.reactMdUtils.useIntervalMod.ReturnValue
 import typingsSlinky.reactMdUtils.useKeyboardMovementMod.KeyboardMovementOptions
 import typingsSlinky.reactMdUtils.useKeyboardMovementMod.KeyboardMovementProviders
@@ -62,7 +77,9 @@ import typingsSlinky.reactMdUtils.useKeyboardSearchMod.KeyboardSearchOptions
 import typingsSlinky.reactMdUtils.useModeDetectionMod.UserInteractionMode
 import typingsSlinky.reactMdUtils.usePreviousFocusMod.FocusFallback
 import typingsSlinky.reactMdUtils.useResizeListenerMod.ResizeListenerOptions
-import typingsSlinky.reactMdUtils.useResizeObserverMod.ResizeObserverOptions
+import typingsSlinky.reactMdUtils.useResizeObserverMod.OnResizeObserverChange
+import typingsSlinky.reactMdUtils.useResizeObserverMod.UseResizeObserverOptions
+import typingsSlinky.reactMdUtils.useResizeObserverV1Mod.UseResizeObserverV1Options
 import typingsSlinky.reactMdUtils.useScrollListenerMod.Options
 import typingsSlinky.reactMdUtils.useWidthMediaQueryMod.WidthMediaQuery
 import typingsSlinky.reactMdUtils.useWidthMediaQueryMod.WidthMediaQuerys
@@ -80,6 +97,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
+  val AAA_CONTRAST_RATIO: /* 7 */ Double = js.native
+  
   val ABOVE_CENTER_ANCHOR: PositionAnchor = js.native
   
   val ABOVE_INNER_LEFT_ANCHOR: PositionAnchor = js.native
@@ -89,6 +108,8 @@ object mod extends js.Object {
   val ABOVE_LEFT_ANCHOR: PositionAnchor = js.native
   
   val ABOVE_RIGHT_ANCHOR: PositionAnchor = js.native
+  
+  val AppSizeContext: Context[AppSizeinitializedboolean] = js.native
   
   val BELOW_CENTER_ANCHOR: PositionAnchor = js.native
   
@@ -132,7 +153,13 @@ object mod extends js.Object {
   
   val DEFAULT_DESKTOP_MIN_WIDTH: QuerySize = js.native
   
+  def DEFAULT_DIR(): WritingDirection = js.native
+  
   val DEFAULT_GET_ITEM_VALUE: js.Function2[/* item */ js.Any, /* valueKey */ js.UndefOr[String], String] = js.native
+  
+  val DEFAULT_GRID_LIST_MAX_CELL_SIZE: /* 150 */ Double = js.native
+  
+  val DEFAULT_GRID_LIST_PADDING: /* 16 */ Double = js.native
   
   val DEFAULT_IGNORE_WHITESPACE: /* false */ Boolean = js.native
   
@@ -150,41 +177,27 @@ object mod extends js.Object {
   
   val DesktopOnly: ReactComponentClass[MediaOnlyProps] = js.native
   
-  /**
-    * The `FocusContainer` is a wrapper for a few of the accessibility hooks to
-    * maintain focus within an element.
-    */
   val FocusContainer: ForwardRefExoticComponent[FocusContainerProps with RefAttributes[HTMLDivElement]] = js.native
   
   val GRID_COLUMNS_VAR: /* "--rmd-grid-cols" */ String = js.native
   
   val GRID_GUTTER_VAR: /* "--rmd-grid-gutter" */ String = js.native
   
-  /**
-    * The grid component is generally used for a base layout in your app to provide
-    * nice padding and spacing between each item.
-    *
-    * Note: This component relies on the `AppSizeListener` as a parent component to
-    * work and will throw an error if it does not exist as a parent.
-    */
   val Grid: ForwardRefExoticComponent[GridProps with RefAttributes[HTMLDivElement]] = js.native
   
   val GridCell: ForwardRefExoticComponent[GridCellProps with RefAttributes[HTMLDivElement]] = js.native
   
-  /**
-    * The `GridList` component is a different way to render a list of data where
-    * the number of columns is dynamic and based on the max-width for each cell.
-    * Instead of setting a percentage width to each cell based on the number of
-    * columns, this will dynamically add columns to fill up the remaining space and
-    * have each cell grow up to a set max-width. A really good use-case for this is
-    * displaying a list of images or thumbnails and allowing the user to see a full
-    * screen preview once selected/clicked.
-    */
   val GridList: ForwardRefExoticComponent[GridListProps with RefAttributes[HTMLDivElement]] = js.native
   
   val GridListCell: ForwardRefExoticComponent[GridListCellProps with RefAttributes[HTMLDivElement]] = js.native
   
+  val GridListSizeProvider: ReactComponentClass[ProviderProps[GridListSize]] = js.native
+  
+  val LARGE_TEXT_CONTRAST_RATIO: /* 3 */ Double = js.native
+  
   val MobileOnly: ReactComponentClass[MediaOnlyProps] = js.native
+  
+  val NORMAL_TEXT_CONTRAST_RATIO: /* 4.5 */ Double = js.native
   
   val PhoneOnly: ReactComponentClass[MediaOnlyProps] = js.native
   
@@ -403,6 +416,10 @@ object mod extends js.Object {
   ): DelegatedEventHandler = js.native
   def delegateEvent(eventType: String, eventTarget: DelegatedEventTarget): DelegatedEventHandler = js.native
   
+  def disable(element: HTMLElement): Unit = js.native
+  
+  def enable(element: HTMLElement): Unit = js.native
+  
   def extractTextContent(stringOrElement: String): String = js.native
   def extractTextContent(stringOrElement: String, fontIconQuerySelector: String): String = js.native
   def extractTextContent(stringOrElement: HTMLElement): String = js.native
@@ -410,6 +427,8 @@ object mod extends js.Object {
   
   def findIgnoreCase[T](query: String, searchable: js.Array[T]): T | Null = js.native
   def findIgnoreCase[T](query: String, searchable: js.Array[T], options: SearchOptions[T]): T | Null = js.native
+  
+  def findMatchInRange(value: String, values: js.Array[String], startIndex: Double, endIndex: Double): Double = js.native
   
   def findMatchIndex(value: String, values: js.Array[String], startIndex: Double): Double = js.native
   def findMatchIndex(value: String, values: js.Array[String], startIndex: Double, isSelfMatchable: Boolean): Double = js.native
@@ -492,6 +511,10 @@ object mod extends js.Object {
   
   def getContrastRatio(background: HexString, foreground: HexString): Double = js.native
   
+  def getElement[E /* <: HTMLElement */](): E | Null = js.native
+  def getElement[E /* <: HTMLElement */](element: E): E | Null = js.native
+  def getElement[E /* <: HTMLElement */](element: MutableRefObject[E | Null]): E | Null = js.native
+  
   def getElementRect(element: HTMLElement): DOMRect | ClientRect = js.native
   def getElementRect(element: HTMLElement, coords: Coords): DOMRect | ClientRect = js.native
   
@@ -510,6 +533,10 @@ object mod extends js.Object {
   
   def getItemValue(item: js.Any): String = js.native
   def getItemValue(item: js.Any, valueKey: String): String = js.native
+  
+  def getOrientationType(): OrientationType = js.native
+  
+  def getPercentage(min: Double, max: Double, value: Double): Double = js.native
   
   def getSearchString(value: String): String = js.native
   def getSearchString(
@@ -538,6 +565,8 @@ object mod extends js.Object {
   
   def loop(x: Double, max: Double, increment: Boolean): Double = js.native
   def loop(x: Double, max: Double, increment: Boolean, minmax: Boolean): Double = js.native
+  
+  def nearest(value: Double, min: Double, max: Double, steps: Double): Double = js.native
   
   def omit[T /* <: js.Object */, K /* <: /* keyof T */ String */](`object`: T, omitKeys: js.Array[K | String]): Omit[T, K] = js.native
   
@@ -656,11 +685,6 @@ object mod extends js.Object {
   def scrollIntoView(container: Null, element: HTMLElement): Unit = js.native
   def scrollIntoView(container: HTMLElement): Unit = js.native
   def scrollIntoView(container: HTMLElement, element: HTMLElement): Unit = js.native
-  
-  def scrollbarSize(): Double = js.native
-  def scrollbarSize(`type`: js.UndefOr[scala.Nothing], forced: Boolean): Double = js.native
-  def scrollbarSize(`type`: SizingType): Double = js.native
-  def scrollbarSize(`type`: SizingType, forced: Boolean): Double = js.native
   
   def setTouchEvent(
     /**
@@ -855,6 +879,11 @@ object mod extends js.Object {
   
   def throttle[F /* <: ThrottleableFunction */](fn: F, wait: Double): ThrottledFunction[F] = js.native
   
+  @JSName("toWidthPart")
+  def toWidthPart_max(v: js.UndefOr[QuerySize], prefix: max): String = js.native
+  @JSName("toWidthPart")
+  def toWidthPart_min(v: js.UndefOr[QuerySize], prefix: min): String = js.native
+  
   def unitToNumber(unit: String): Double = js.native
   def unitToNumber(unit: String, options: UnitToNumberOptions): Double = js.native
   def unitToNumber(unit: Double): Double = js.native
@@ -866,10 +895,20 @@ object mod extends js.Object {
   
   def useAppSize(): AppSize = js.native
   
+  def useAppSizeMedia(): AppSize = js.native
+  def useAppSizeMedia(
+    hasPhoneMaxWidthTabletMinWidthTabletMaxWidthDesktopMinWidthDesktopLargeMinWidthDefaultSize: AppSizeOptions
+  ): AppSize = js.native
+  
   def useCloseOnEscape[E /* <: HTMLElement */](onRequestClose: js.Function0[Unit], disabled: Boolean): js.UndefOr[KeyboardEventHandler[E]] = js.native
   def useCloseOnEscape[E /* <: HTMLElement */](onRequestClose: js.Function0[Unit], disabled: Boolean, onKeyDown: KeyboardEventHandler[E]): js.UndefOr[KeyboardEventHandler[E]] = js.native
   
   def useCloseOnOutsideClick[E /* <: HTMLElement */](hasEnabledElementOnOutsideClick: CloseOnOutsideClickOptions[E]): Unit = js.native
+  
+  def useDir(): WritingDirectionContext = js.native
+  
+  def useEnsuredRef[E /* <: HTMLElement */](): EnsuredRefs[E] = js.native
+  def useEnsuredRef[E /* <: HTMLElement */](propRef: Ref[E | Null]): EnsuredRefs[E] = js.native
   
   def useFocusMovement[D, CE /* <: HTMLElement */, IE /* <: HTMLElement */](hasDefaultFocusedIndexOnChangeOptions: KeyboardFocusOptions[D, CE, IE]): KeyboardMovementProviders[CE, IE] = js.native
   
@@ -910,6 +949,13 @@ object mod extends js.Object {
     programatic: Boolean,
     disabled: Boolean
   ): Unit = js.native
+  
+  def useGridList[E /* <: HTMLElement */](): UseGridListReturnValue[E] = js.native
+  def useGridList[E /* <: HTMLElement */](
+    hasRefStyleClassNameCellMarginDefaultSizeMaxCellSizeDisableHeightDisableWidthContainerPadding: PropsWithRef[UseGridListOptions, E]
+  ): UseGridListReturnValue[E] = js.native
+  
+  def useGridListSize(): GridListSize = js.native
   
   def useInterval(callback: js.Function1[/* stop */ js.Function0[Unit], Unit], delay: Double): ReturnValue = js.native
   def useInterval(
@@ -963,7 +1009,9 @@ object mod extends js.Object {
   
   def useResizeListener(hasOnResizeOptionsImmediateEnabled: ResizeListenerOptions): Unit = js.native
   
-  def useResizeObserver[E /* <: HTMLElement */](hasDisableHeightDisableWidthOnResizeTarget: ResizeObserverOptions[E]): Unit = js.native
+  def useResizeObserver[E /* <: HTMLElement */](onResize: OnResizeObserverChange[E]): EnsuredRefs[E] = js.native
+  def useResizeObserver[E /* <: HTMLElement */](onResize: OnResizeObserverChange[E], options: UseResizeObserverOptions[E]): EnsuredRefs[E] = js.native
+  def useResizeObserver[E /* <: HTMLElement */](options: UseResizeObserverV1Options[E]): Unit = js.native
   
   def useScrollListener[E /* <: HTMLElement */](hasEnabledOnScrollElementOptions: Options[E]): Unit = js.native
   
@@ -989,10 +1037,6 @@ object mod extends js.Object {
   @js.native
   object AppSizeListener extends js.Object {
     
-    /**
-      * This component should be mounted near the top of your app as it will keep
-      * track of the current app size based on the provided breakpoint widths.
-      */
     def apply(
       hasChildrenOnChangePhoneMaxWidthTabletMinWidthTabletMaxWidthDesktopMinWidthDesktopLargeMinWidthDefaultSize: AppSizeListenerProps
     ): ReactElement = js.native
@@ -1028,6 +1072,20 @@ object mod extends js.Object {
     var trim: Boolean = js.native
     
     var valueKey: String = js.native
+  }
+  
+  @js.native
+  object Dir extends js.Object {
+    
+    def apply(hasChildrenDefaultDir: DirProps): ReactElement = js.native
+    
+    @js.native
+    object propTypes extends js.Object {
+      
+      var children: js.Any = js.native
+      
+      var defaultDir: js.Any = js.native
+    }
   }
   
   @js.native
@@ -1143,14 +1201,6 @@ object mod extends js.Object {
   @js.native
   object ResizeListener extends js.Object {
     
-    /**
-      * This is a simple component that will attach a throttled resize event listener
-      * when mounted, and detach when it unmounts.
-      *
-      * This component only works for entire app resize events. If you are looking
-      * for specific element resize events, check out the `ResizeObserver` component
-      * instead.
-      */
     def apply(hasOnResizeOptionsImmediate: ResizeListenerProps): Null = js.native
     
     @js.native
@@ -1167,11 +1217,6 @@ object mod extends js.Object {
   @js.native
   object ResizeObserver extends js.Object {
     
-    /**
-      * The resize observer is used to track the size changes for a single element in
-      * a page.  This is a bit different than a normal `ResizeListener` since it does
-      * not rely on entire page size changes.
-      */
     def apply(hasDisableHeightDisableWidthClassNameComponentTargetOnResize: ResizeObserverProps): ReactElement | Null = js.native
     
     @js.native
@@ -1187,5 +1232,12 @@ object mod extends js.Object {
       
       var target: js.Any = js.native
     }
+  }
+  
+  @js.native
+  object useIsomorphicLayoutEffect extends js.Object {
+    
+    def apply(effect: EffectCallback): Unit = js.native
+    def apply(effect: EffectCallback, deps: DependencyList): Unit = js.native
   }
 }

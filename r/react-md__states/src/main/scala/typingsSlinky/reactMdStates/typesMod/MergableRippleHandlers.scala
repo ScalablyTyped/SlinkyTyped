@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Pick<react.react.HTMLAttributes<E>, 'onKeyDown' | 'onKeyUp' | 'onMouseDown' | 'onMouseUp' | 'onMouseLeave' | 'onClick' | 'onTouchStart' | 'onTouchMove' | 'onTouchEnd'> */
+/* Inlined std.Pick<react.react.HTMLAttributes<E>, @react-md/states.@react-md/states/types/ripples/types.MergableRippleHandlerNames> */
 @js.native
 trait MergableRippleHandlers[E /* <: HTMLElement */] extends js.Object {
   

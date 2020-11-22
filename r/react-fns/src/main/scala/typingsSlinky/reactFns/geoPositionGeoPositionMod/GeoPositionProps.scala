@@ -1,6 +1,5 @@
 package typingsSlinky.reactFns.geoPositionGeoPositionMod
 
-import org.scalajs.dom.raw.PositionError
 import typingsSlinky.reactFns.anon.Latitude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +10,9 @@ trait GeoPositionProps extends js.Object {
   
   var coords: js.UndefOr[Latitude] = js.native
   
-  var error: js.UndefOr[PositionError] = js.native
+  var error: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PositionError */ js.Any
+  ] = js.native
   
   var isLoading: Boolean = js.native
 }
@@ -48,7 +49,9 @@ object GeoPositionProps {
     def deleteCoords: Self = this.set("coords", js.undefined)
     
     @scala.inline
-    def setError(value: PositionError): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setError(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PositionError */ js.Any
+    ): Self = this.set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteError: Self = this.set("error", js.undefined)

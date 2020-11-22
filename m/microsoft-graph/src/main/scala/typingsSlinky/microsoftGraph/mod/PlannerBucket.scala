@@ -11,13 +11,13 @@ trait PlannerBucket extends Entity {
   var name: js.UndefOr[String] = js.native
   
   // Hint used to order items of this type in a list view. The format is defined as outlined here.
-  var orderHint: js.UndefOr[String] = js.native
+  var orderHint: js.UndefOr[NullableOption[String]] = js.native
   
   // Plan ID to which the bucket belongs.
-  var planId: js.UndefOr[String] = js.native
+  var planId: js.UndefOr[NullableOption[String]] = js.native
   
   // Read-only. Nullable. The collection of tasks in the bucket.
-  var tasks: js.UndefOr[js.Array[PlannerTask]] = js.native
+  var tasks: js.UndefOr[NullableOption[js.Array[PlannerTask]]] = js.native
 }
 object PlannerBucket {
   
@@ -49,24 +49,33 @@ object PlannerBucket {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setOrderHint(value: String): Self = this.set("orderHint", value.asInstanceOf[js.Any])
+    def setOrderHint(value: NullableOption[String]): Self = this.set("orderHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrderHint: Self = this.set("orderHint", js.undefined)
     
     @scala.inline
-    def setPlanId(value: String): Self = this.set("planId", value.asInstanceOf[js.Any])
+    def setOrderHintNull: Self = this.set("orderHint", null)
+    
+    @scala.inline
+    def setPlanId(value: NullableOption[String]): Self = this.set("planId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePlanId: Self = this.set("planId", js.undefined)
     
     @scala.inline
+    def setPlanIdNull: Self = this.set("planId", null)
+    
+    @scala.inline
     def setTasksVarargs(value: PlannerTask*): Self = this.set("tasks", js.Array(value :_*))
     
     @scala.inline
-    def setTasks(value: js.Array[PlannerTask]): Self = this.set("tasks", value.asInstanceOf[js.Any])
+    def setTasks(value: NullableOption[js.Array[PlannerTask]]): Self = this.set("tasks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTasks: Self = this.set("tasks", js.undefined)
+    
+    @scala.inline
+    def setTasksNull: Self = this.set("tasks", null)
   }
 }

@@ -13,15 +13,15 @@ trait CreateOutpostInput extends js.Object {
   
   var Description: js.UndefOr[OutpostDescription] = js.native
   
-  var Name: js.UndefOr[OutpostName] = js.native
+  var Name: OutpostName = js.native
   
   var SiteId: typingsSlinky.awsSdk.outpostsMod.SiteId = js.native
 }
 object CreateOutpostInput {
   
   @scala.inline
-  def apply(SiteId: SiteId): CreateOutpostInput = {
-    val __obj = js.Dynamic.literal(SiteId = SiteId.asInstanceOf[js.Any])
+  def apply(Name: OutpostName, SiteId: SiteId): CreateOutpostInput = {
+    val __obj = js.Dynamic.literal(Name = Name.asInstanceOf[js.Any], SiteId = SiteId.asInstanceOf[js.Any])
     __obj.asInstanceOf[CreateOutpostInput]
   }
   
@@ -39,6 +39,9 @@ object CreateOutpostInput {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setName(value: OutpostName): Self = this.set("Name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSiteId(value: SiteId): Self = this.set("SiteId", value.asInstanceOf[js.Any])
@@ -60,11 +63,5 @@ object CreateOutpostInput {
     
     @scala.inline
     def deleteDescription: Self = this.set("Description", js.undefined)
-    
-    @scala.inline
-    def setName(value: OutpostName): Self = this.set("Name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteName: Self = this.set("Name", js.undefined)
   }
 }

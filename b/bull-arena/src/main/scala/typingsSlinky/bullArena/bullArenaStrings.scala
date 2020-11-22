@@ -15,6 +15,9 @@ object bullArenaStrings {
   @scala.inline
   def bull: bull = "bull".asInstanceOf[bull]
   
+  @scala.inline
+  def bullmq: bullmq = "bullmq".asInstanceOf[bullmq]
+  
   @js.native
   sealed trait bee extends js.Object
   
@@ -23,4 +26,7 @@ object bullArenaStrings {
   
   @js.native
   sealed trait bull extends js.Object
+  
+  @js.native
+  sealed trait bullmq extends js.Object
 }

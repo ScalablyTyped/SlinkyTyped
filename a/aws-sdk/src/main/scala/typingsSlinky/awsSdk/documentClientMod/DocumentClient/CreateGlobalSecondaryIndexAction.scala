@@ -23,7 +23,7 @@ trait CreateGlobalSecondaryIndexAction extends js.Object {
   var Projection: typingsSlinky.awsSdk.documentClientMod.DocumentClient.Projection = js.native
   
   /**
-    * Represents the provisioned throughput settings for the specified global secondary index. For current minimum and maximum provisioned throughput values, see Limits in the Amazon DynamoDB Developer Guide.
+    * Represents the provisioned throughput settings for the specified global secondary index. For current minimum and maximum provisioned throughput values, see Service, Account, and Table Quotas in the Amazon DynamoDB Developer Guide.
     */
   var ProvisionedThroughput: js.UndefOr[typingsSlinky.awsSdk.documentClientMod.DocumentClient.ProvisionedThroughput] = js.native
 }

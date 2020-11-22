@@ -10,13 +10,13 @@ trait VirtualNodeSpecBackend extends js.Object {
   /**
     * Specifies a virtual service to use as a backend for a virtual node.
     */
-  var virtualService: js.UndefOr[VirtualNodeSpecBackendVirtualService] = js.native
+  var virtualService: VirtualNodeSpecBackendVirtualService = js.native
 }
 object VirtualNodeSpecBackend {
   
   @scala.inline
-  def apply(): VirtualNodeSpecBackend = {
-    val __obj = js.Dynamic.literal()
+  def apply(virtualService: VirtualNodeSpecBackendVirtualService): VirtualNodeSpecBackend = {
+    val __obj = js.Dynamic.literal(virtualService = virtualService.asInstanceOf[js.Any])
     __obj.asInstanceOf[VirtualNodeSpecBackend]
   }
   
@@ -37,8 +37,5 @@ object VirtualNodeSpecBackend {
     
     @scala.inline
     def setVirtualService(value: VirtualNodeSpecBackendVirtualService): Self = this.set("virtualService", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteVirtualService: Self = this.set("virtualService", js.undefined)
   }
 }

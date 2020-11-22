@@ -33,7 +33,7 @@ trait JobListDescriptor extends js.Object {
   var Priority: js.UndefOr[JobPriority] = js.native
   
   /**
-    * Describes the total number of tasks that the specified job has executed, the number of tasks that succeeded, and the number of tasks that failed.
+    * Describes the total number of tasks that the specified job has run, the number of tasks that succeeded, and the number of tasks that failed.
     */
   var ProgressSummary: js.UndefOr[JobProgressSummary] = js.native
   

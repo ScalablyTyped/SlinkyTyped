@@ -8,11 +8,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait NameObject extends IObjectDidChange {
+trait NameObject[T] extends IObjectDidChange[T] {
   
   var name: PropertyKey = js.native
   
-  var `object`: js.Any = js.native
+  var `object`: T = js.native
   
   var oldValue: js.Any = js.native
   
@@ -21,15 +21,15 @@ trait NameObject extends IObjectDidChange {
 object NameObject {
   
   @scala.inline
-  def apply(name: PropertyKey, `object`: js.Any, oldValue: js.Any, `type`: remove): NameObject = {
+  def apply[T](name: PropertyKey, `object`: T, oldValue: js.Any, `type`: remove): NameObject[T] = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], oldValue = oldValue.asInstanceOf[js.Any])
     __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[NameObject]
+    __obj.asInstanceOf[NameObject[T]]
   }
   
   @scala.inline
-  implicit class NameObjectOps[Self <: NameObject] (val x: Self) extends AnyVal {
+  implicit class NameObjectOps[Self <: NameObject[_], T] (val x: Self with NameObject[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -47,7 +47,7 @@ object NameObject {
     def setName(value: PropertyKey): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setObject(value: js.Any): Self = this.set("object", value.asInstanceOf[js.Any])
+    def setObject(value: T): Self = this.set("object", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOldValue(value: js.Any): Self = this.set("oldValue", value.asInstanceOf[js.Any])

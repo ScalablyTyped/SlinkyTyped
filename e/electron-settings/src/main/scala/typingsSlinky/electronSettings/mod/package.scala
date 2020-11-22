@@ -6,7 +6,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  // tslint:disable-line no-empty-interface
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
     - scala.Double

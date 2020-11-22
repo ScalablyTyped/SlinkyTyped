@@ -14,8 +14,7 @@ trait IpSetIpSetDescriptor extends js.Object {
   var `type`: Input[String] = js.native
   
   /**
-    * An IPv4 or IPv6 address specified via CIDR notation.
-    * e.g. `192.0.2.44/32` or `1111:0000:0000:0000:0000:0000:0000:0000/64`
+    * An IPv4 or IPv6 address specified via CIDR notation. e.g. `192.0.2.44/32` or `1111:0000:0000:0000:0000:0000:0000:0000/64`
     */
   var value: Input[String] = js.native
 }

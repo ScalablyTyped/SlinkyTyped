@@ -21,6 +21,8 @@ class MeshCollisionData () extends js.Object {
   
   var _collisionMask: Double = js.native
   
+  var _collisionResponse: Boolean = js.native
+  
   var _diffPositionForCollisions: Vector3 = js.native
   
   var _oldPositionForCollisions: Vector3 = js.native
@@ -28,4 +30,6 @@ class MeshCollisionData () extends js.Object {
   var _onCollideObserver: Nullable[Observer[AbstractMesh]] = js.native
   
   var _onCollisionPositionChangeObserver: Nullable[Observer[Vector3]] = js.native
+  
+  var _surroundingMeshes: Nullable[js.Array[AbstractMesh]] = js.native
 }

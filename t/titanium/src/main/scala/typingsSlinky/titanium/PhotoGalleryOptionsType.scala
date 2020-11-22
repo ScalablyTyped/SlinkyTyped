@@ -60,7 +60,7 @@ trait PhotoGalleryOptionsType extends js.Object {
     * at least <Titanium.Media.MEDIA_TYPE_PHOTO> as a fallback. If you do not allow live
     * photos, they still can be selected, but will be represented as a normal static photo.
     */
-  var mediaTypes: js.UndefOr[js.Array[java.lang.String]] = js.native
+  var mediaTypes: js.UndefOr[js.Array[String]] = js.native
   
   /**
     * View to position the photo gallery popover on top of.
@@ -68,9 +68,19 @@ trait PhotoGalleryOptionsType extends js.Object {
   var popoverView: js.UndefOr[View] = js.native
   
   /**
+    * Specifies number of media item that can be selected.
+    */
+  var selectionLimit: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Function to call when the photo gallery is closed after a successful selection.
     */
-  var success: js.UndefOr[js.Function1[/* param0 */ CameraMediaItemType, Unit]] = js.native
+  var success: js.UndefOr[
+    js.Function1[
+      (/* param0 */ CameraMediaItemType) | (/* param0 */ CameraMediaMultipleItemsType), 
+      Unit
+    ]
+  ] = js.native
 }
 object PhotoGalleryOptionsType {
   
@@ -90,7 +100,7 @@ object PhotoGalleryOptionsType {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -144,10 +154,10 @@ object PhotoGalleryOptionsType {
     def deleteError: Self = this.set("error", js.undefined)
     
     @scala.inline
-    def setMediaTypesVarargs(value: java.lang.String*): Self = this.set("mediaTypes", js.Array(value :_*))
+    def setMediaTypesVarargs(value: String*): Self = this.set("mediaTypes", js.Array(value :_*))
     
     @scala.inline
-    def setMediaTypes(value: js.Array[java.lang.String]): Self = this.set("mediaTypes", value.asInstanceOf[js.Any])
+    def setMediaTypes(value: js.Array[String]): Self = this.set("mediaTypes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaTypes: Self = this.set("mediaTypes", js.undefined)
@@ -159,7 +169,13 @@ object PhotoGalleryOptionsType {
     def deletePopoverView: Self = this.set("popoverView", js.undefined)
     
     @scala.inline
-    def setSuccess(value: /* param0 */ CameraMediaItemType => Unit): Self = this.set("success", js.Any.fromFunction1(value))
+    def setSelectionLimit(value: Boolean): Self = this.set("selectionLimit", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelectionLimit: Self = this.set("selectionLimit", js.undefined)
+    
+    @scala.inline
+    def setSuccess(value: (/* param0 */ CameraMediaItemType) | (/* param0 */ CameraMediaMultipleItemsType) => Unit): Self = this.set("success", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteSuccess: Self = this.set("success", js.undefined)

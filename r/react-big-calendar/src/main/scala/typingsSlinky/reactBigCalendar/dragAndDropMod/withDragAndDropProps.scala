@@ -16,9 +16,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait withDragAndDropProps[TEvent /* <: js.Object */] extends js.Object {
+trait withDragAndDropProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] extends js.Object {
   
-  var components: js.UndefOr[Components_[TEvent]] = js.native
+  var components: js.UndefOr[Components_[TEvent, TResource]] = js.native
   
   var dragFromOutsideItem: js.UndefOr[
     js.Function0[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, js.Date])]
@@ -49,13 +49,13 @@ trait withDragAndDropProps[TEvent /* <: js.Object */] extends js.Object {
 object withDragAndDropProps {
   
   @scala.inline
-  def apply[TEvent /* <: js.Object */](): withDragAndDropProps[TEvent] = {
+  def apply[TEvent /* <: js.Object */, TResource /* <: js.Object */](): withDragAndDropProps[TEvent, TResource] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[withDragAndDropProps[TEvent]]
+    __obj.asInstanceOf[withDragAndDropProps[TEvent, TResource]]
   }
   
   @scala.inline
-  implicit class withDragAndDropPropsOps[Self <: withDragAndDropProps[_], TEvent /* <: js.Object */] (val x: Self with withDragAndDropProps[TEvent]) extends AnyVal {
+  implicit class withDragAndDropPropsOps[Self <: withDragAndDropProps[_, _], TEvent /* <: js.Object */, TResource /* <: js.Object */] (val x: Self with (withDragAndDropProps[TEvent, TResource])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -70,7 +70,7 @@ object withDragAndDropProps {
     }
     
     @scala.inline
-    def setComponents(value: Components_[TEvent]): Self = this.set("components", value.asInstanceOf[js.Any])
+    def setComponents(value: Components_[TEvent, TResource]): Self = this.set("components", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponents: Self = this.set("components", js.undefined)

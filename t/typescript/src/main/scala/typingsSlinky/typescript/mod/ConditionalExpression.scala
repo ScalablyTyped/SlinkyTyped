@@ -7,16 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ConditionalExpression extends Expression {
   
-  var colonToken: ColonToken = js.native
+  val colonToken: ColonToken = js.native
   
-  var condition: Expression = js.native
+  val condition: Expression = js.native
   
   @JSName("kind")
-  var kind_ConditionalExpression: typingsSlinky.typescript.mod.SyntaxKind.ConditionalExpression = js.native
+  val kind_ConditionalExpression: typingsSlinky.typescript.mod.SyntaxKind.ConditionalExpression = js.native
   
-  var questionToken: QuestionToken = js.native
+  val questionToken: QuestionToken = js.native
   
-  var whenFalse: Expression = js.native
+  val whenFalse: Expression = js.native
   
-  var whenTrue: Expression = js.native
+  val whenTrue: Expression = js.native
 }

@@ -24,6 +24,16 @@ trait PartialFullTheme extends js.Object {
   
   var Card: js.UndefOr[PartialCardProps] = js.native
   
+  var CardDivider: js.UndefOr[PartialDividerProps] = js.native
+  
+  var CardFeaturedSubtitle: js.UndefOr[PartialTextProps] = js.native
+  
+  var CardFeaturedTitle: js.UndefOr[PartialTextProps] = js.native
+  
+  var CardImage: js.UndefOr[PartialImageProps] = js.native
+  
+  var CardTitle: js.UndefOr[PartialTextProps] = js.native
+  
   var CheckBox: js.UndefOr[PartialCheckBoxProps] = js.native
   
   var Divider: js.UndefOr[PartialDividerProps] = js.native
@@ -37,6 +47,20 @@ trait PartialFullTheme extends js.Object {
   var Input: js.UndefOr[PartialInputProps] = js.native
   
   var ListItem: js.UndefOr[PartialListItemPropsAccessibilityActions] = js.native
+  
+  var ListItemButtonGroup: js.UndefOr[PartialButtonGroupProps] = js.native
+  
+  var ListItemCheckBox: js.UndefOr[PartialCheckBoxProps] = js.native
+  
+  var ListItemChevron: js.UndefOr[PartialIconProps] = js.native
+  
+  var ListItemContent: js.UndefOr[PartialViewProperties] = js.native
+  
+  var ListItemInput: js.UndefOr[PartialInputProps] = js.native
+  
+  var ListItemSubtitle: js.UndefOr[PartialTextProps] = js.native
+  
+  var ListItemTitle: js.UndefOr[PartialTextProps] = js.native
   
   var Overlay: js.UndefOr[PartialOverlayProps] = js.native
   
@@ -130,6 +154,36 @@ object PartialFullTheme {
     def deleteCard: Self = this.set("Card", js.undefined)
     
     @scala.inline
+    def setCardDivider(value: PartialDividerProps): Self = this.set("CardDivider", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCardDivider: Self = this.set("CardDivider", js.undefined)
+    
+    @scala.inline
+    def setCardFeaturedSubtitle(value: PartialTextProps): Self = this.set("CardFeaturedSubtitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCardFeaturedSubtitle: Self = this.set("CardFeaturedSubtitle", js.undefined)
+    
+    @scala.inline
+    def setCardFeaturedTitle(value: PartialTextProps): Self = this.set("CardFeaturedTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCardFeaturedTitle: Self = this.set("CardFeaturedTitle", js.undefined)
+    
+    @scala.inline
+    def setCardImage(value: PartialImageProps): Self = this.set("CardImage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCardImage: Self = this.set("CardImage", js.undefined)
+    
+    @scala.inline
+    def setCardTitle(value: PartialTextProps): Self = this.set("CardTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCardTitle: Self = this.set("CardTitle", js.undefined)
+    
+    @scala.inline
     def setCheckBox(value: PartialCheckBoxProps): Self = this.set("CheckBox", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -170,6 +224,48 @@ object PartialFullTheme {
     
     @scala.inline
     def deleteListItem: Self = this.set("ListItem", js.undefined)
+    
+    @scala.inline
+    def setListItemButtonGroup(value: PartialButtonGroupProps): Self = this.set("ListItemButtonGroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemButtonGroup: Self = this.set("ListItemButtonGroup", js.undefined)
+    
+    @scala.inline
+    def setListItemCheckBox(value: PartialCheckBoxProps): Self = this.set("ListItemCheckBox", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemCheckBox: Self = this.set("ListItemCheckBox", js.undefined)
+    
+    @scala.inline
+    def setListItemChevron(value: PartialIconProps): Self = this.set("ListItemChevron", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemChevron: Self = this.set("ListItemChevron", js.undefined)
+    
+    @scala.inline
+    def setListItemContent(value: PartialViewProperties): Self = this.set("ListItemContent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemContent: Self = this.set("ListItemContent", js.undefined)
+    
+    @scala.inline
+    def setListItemInput(value: PartialInputProps): Self = this.set("ListItemInput", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemInput: Self = this.set("ListItemInput", js.undefined)
+    
+    @scala.inline
+    def setListItemSubtitle(value: PartialTextProps): Self = this.set("ListItemSubtitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemSubtitle: Self = this.set("ListItemSubtitle", js.undefined)
+    
+    @scala.inline
+    def setListItemTitle(value: PartialTextProps): Self = this.set("ListItemTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListItemTitle: Self = this.set("ListItemTitle", js.undefined)
     
     @scala.inline
     def setOverlay(value: PartialOverlayProps): Self = this.set("Overlay", value.asInstanceOf[js.Any])

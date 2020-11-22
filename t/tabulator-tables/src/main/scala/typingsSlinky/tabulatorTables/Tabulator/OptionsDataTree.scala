@@ -30,8 +30,12 @@ trait OptionsDataTree extends js.Object {
   /** The toggle button that allows users to expand the column */
   var dataTreeExpandElement: js.UndefOr[String | HTMLElement | Boolean] = js.native
   
+  var dataTreeFilter: js.UndefOr[Boolean] = js.native
+  
   /**Propagte selection events from parent rows to children */
   var dataTreeSelectPropagate: js.UndefOr[Boolean] = js.native
+  
+  var dataTreeSort: js.UndefOr[Boolean] = js.native
   
   /**  By default all nodes on the tree will start collapsed, you can customize the initial expansion state of the tree using the dataTreeStartExpanded option.*
     This option can take one of three possible value types, either a boolean to indicate whether all nodes should start expanded or collapsed: */
@@ -111,10 +115,22 @@ object OptionsDataTree {
     def deleteDataTreeExpandElement: Self = this.set("dataTreeExpandElement", js.undefined)
     
     @scala.inline
+    def setDataTreeFilter(value: Boolean): Self = this.set("dataTreeFilter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataTreeFilter: Self = this.set("dataTreeFilter", js.undefined)
+    
+    @scala.inline
     def setDataTreeSelectPropagate(value: Boolean): Self = this.set("dataTreeSelectPropagate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDataTreeSelectPropagate: Self = this.set("dataTreeSelectPropagate", js.undefined)
+    
+    @scala.inline
+    def setDataTreeSort(value: Boolean): Self = this.set("dataTreeSort", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataTreeSort: Self = this.set("dataTreeSort", js.undefined)
     
     @scala.inline
     def setDataTreeStartExpandedFunction2(value: (/* row */ RowComponent, /* level */ Double) => Boolean): Self = this.set("dataTreeStartExpanded", js.Any.fromFunction2(value))

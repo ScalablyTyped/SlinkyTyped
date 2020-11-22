@@ -1,7 +1,5 @@
 package typingsSlinky.firefoxWebextBrowser.browser.omnibox
 
-import typingsSlinky.firefoxWebextBrowser.anon.Length
-import typingsSlinky.firefoxWebextBrowser.anon.Offset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,10 +14,7 @@ trait SuggestResult extends js.Object {
   var content: String = js.native
   
   /**
-    * The text that is displayed in the URL dropdown. Can contain XML-style markup for styling. The supported tags
-    * are 'url' (for a literal URL), 'match' (for highlighting text that matched what the user's query), and 'dim'
-    * (for dim helper text). The styles can be nested, eg. <dim><match>dimmed match</match></dim>. You must escape
-    * the five predefined entities to display them as text: stackoverflow.com/a/1091953/89484
+    * The text that is displayed in the URL dropdown. Can contain XML-style markup for styling. The supported tags are 'url' (for a literal URL), 'match' (for highlighting text that matched what the user's query), and 'dim' (for dim helper text). The styles can be nested, eg. <dim><match>dimmed match</match></dim>. You must escape the five predefined entities to display them as text: stackoverflow.com/a/1091953/89484
     */
   var description: String = js.native
   
@@ -27,13 +22,13 @@ trait SuggestResult extends js.Object {
     * An array of style ranges for the description, as provided by the extension.
     * @deprecated Unsupported on Firefox at this time.
     */
-  var descriptionStyles: js.UndefOr[js.Array[Length]] = js.native
+  var descriptionStyles: js.UndefOr[js.Array[SuggestResultDescriptionStyles]] = js.native
   
   /**
     * An array of style ranges for the description, as provided by ToValue().
     * @deprecated Unsupported on Firefox at this time.
     */
-  var descriptionStylesRaw: js.UndefOr[js.Array[Offset]] = js.native
+  var descriptionStylesRaw: js.UndefOr[js.Array[SuggestResultDescriptionStylesRaw]] = js.native
 }
 object SuggestResult {
   
@@ -65,19 +60,19 @@ object SuggestResult {
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDescriptionStylesVarargs(value: Length*): Self = this.set("descriptionStyles", js.Array(value :_*))
+    def setDescriptionStylesVarargs(value: SuggestResultDescriptionStyles*): Self = this.set("descriptionStyles", js.Array(value :_*))
     
     @scala.inline
-    def setDescriptionStyles(value: js.Array[Length]): Self = this.set("descriptionStyles", value.asInstanceOf[js.Any])
+    def setDescriptionStyles(value: js.Array[SuggestResultDescriptionStyles]): Self = this.set("descriptionStyles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescriptionStyles: Self = this.set("descriptionStyles", js.undefined)
     
     @scala.inline
-    def setDescriptionStylesRawVarargs(value: Offset*): Self = this.set("descriptionStylesRaw", js.Array(value :_*))
+    def setDescriptionStylesRawVarargs(value: SuggestResultDescriptionStylesRaw*): Self = this.set("descriptionStylesRaw", js.Array(value :_*))
     
     @scala.inline
-    def setDescriptionStylesRaw(value: js.Array[Offset]): Self = this.set("descriptionStylesRaw", value.asInstanceOf[js.Any])
+    def setDescriptionStylesRaw(value: js.Array[SuggestResultDescriptionStylesRaw]): Self = this.set("descriptionStylesRaw", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescriptionStylesRaw: Self = this.set("descriptionStylesRaw", js.undefined)

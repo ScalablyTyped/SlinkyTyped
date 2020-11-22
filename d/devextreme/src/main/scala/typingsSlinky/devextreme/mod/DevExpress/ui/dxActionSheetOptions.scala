@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.devextreme.anon.ElementModel
+import typingsSlinky.devextreme.anon.CancelComponentElement
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSource
 import typingsSlinky.devextreme.mod.DevExpress.data.DataSourceOptions
 import typingsSlinky.devextreme.mod.global.JQuery
@@ -12,35 +12,53 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxActionSheetOptions extends CollectionWidgetOptions[dxActionSheet] {
   
-  /** @name dxActionSheet.Options.cancelText */
+  /**
+    * [descr:dxActionSheet.Options.cancelText]
+    */
   var cancelText: js.UndefOr[String] = js.native
   
-  /** @name dxActionSheet.Options.dataSource */
+  /**
+    * [descr:dxActionSheet.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxActionSheetOptions: js.UndefOr[
     String | (js.Array[String | dxActionSheetItem | _]) | DataSource | DataSourceOptions
   ] = js.native
   
-  /** @name dxActionSheet.Options.items */
+  /**
+    * [descr:dxActionSheet.Options.items]
+    */
   @JSName("items")
   var items_dxActionSheetOptions: js.UndefOr[js.Array[String | dxActionSheetItem | _]] = js.native
   
-  /** @name dxActionSheet.Options.onCancelClick */
-  var onCancelClick: js.UndefOr[(js.Function1[/* e */ ElementModel, _]) | String] = js.native
+  /**
+    * [descr:dxActionSheet.Options.onCancelClick]
+    */
+  var onCancelClick: js.UndefOr[(js.Function1[/* e */ CancelComponentElement, _]) | String] = js.native
   
-  /** @name dxActionSheet.Options.showCancelButton */
+  /**
+    * [descr:dxActionSheet.Options.showCancelButton]
+    */
   var showCancelButton: js.UndefOr[Boolean] = js.native
   
-  /** @name dxActionSheet.Options.showTitle */
+  /**
+    * [descr:dxActionSheet.Options.showTitle]
+    */
   var showTitle: js.UndefOr[Boolean] = js.native
   
-  /** @name dxActionSheet.Options.target */
+  /**
+    * [descr:dxActionSheet.Options.target]
+    */
   var target: js.UndefOr[String | Element | JQuery] = js.native
   
-  /** @name dxActionSheet.Options.title */
+  /**
+    * [descr:dxActionSheet.Options.title]
+    */
   var title: js.UndefOr[String] = js.native
   
-  /** @name dxActionSheet.Options.usePopover */
+  /**
+    * [descr:dxActionSheet.Options.usePopover]
+    */
   var usePopover: js.UndefOr[Boolean] = js.native
 }
 object dxActionSheetOptions {
@@ -91,10 +109,10 @@ object dxActionSheetOptions {
     def deleteItems: Self = this.set("items", js.undefined)
     
     @scala.inline
-    def setOnCancelClickFunction1(value: /* e */ ElementModel => _): Self = this.set("onCancelClick", js.Any.fromFunction1(value))
+    def setOnCancelClickFunction1(value: /* e */ CancelComponentElement => _): Self = this.set("onCancelClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnCancelClick(value: (js.Function1[/* e */ ElementModel, _]) | String): Self = this.set("onCancelClick", value.asInstanceOf[js.Any])
+    def setOnCancelClick(value: (js.Function1[/* e */ CancelComponentElement, _]) | String): Self = this.set("onCancelClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnCancelClick: Self = this.set("onCancelClick", js.undefined)

@@ -18,7 +18,7 @@ trait IConnectionProfile extends ConnectionInfo {
   
   var groupFullName: js.UndefOr[String] = js.native
   
-  var groupId: String = js.native
+  var groupId: js.UndefOr[String] = js.native
   
   var id: String = js.native
   
@@ -41,7 +41,6 @@ object IConnectionProfile {
     authenticationType: String,
     connectionName: String,
     databaseName: String,
-    groupId: String,
     id: String,
     options: StringDictionary[js.Any],
     password: String,
@@ -51,7 +50,7 @@ object IConnectionProfile {
     serverName: String,
     userName: String
   ): IConnectionProfile = {
-    val __obj = js.Dynamic.literal(authenticationType = authenticationType.asInstanceOf[js.Any], connectionName = connectionName.asInstanceOf[js.Any], databaseName = databaseName.asInstanceOf[js.Any], groupId = groupId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], providerName = providerName.asInstanceOf[js.Any], savePassword = savePassword.asInstanceOf[js.Any], saveProfile = saveProfile.asInstanceOf[js.Any], serverName = serverName.asInstanceOf[js.Any], userName = userName.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(authenticationType = authenticationType.asInstanceOf[js.Any], connectionName = connectionName.asInstanceOf[js.Any], databaseName = databaseName.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], password = password.asInstanceOf[js.Any], providerName = providerName.asInstanceOf[js.Any], savePassword = savePassword.asInstanceOf[js.Any], saveProfile = saveProfile.asInstanceOf[js.Any], serverName = serverName.asInstanceOf[js.Any], userName = userName.asInstanceOf[js.Any])
     __obj.asInstanceOf[IConnectionProfile]
   }
   
@@ -78,9 +77,6 @@ object IConnectionProfile {
     
     @scala.inline
     def setDatabaseName(value: String): Self = this.set("databaseName", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setGroupId(value: String): Self = this.set("groupId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
@@ -114,5 +110,11 @@ object IConnectionProfile {
     
     @scala.inline
     def deleteGroupFullName: Self = this.set("groupFullName", js.undefined)
+    
+    @scala.inline
+    def setGroupId(value: String): Self = this.set("groupId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGroupId: Self = this.set("groupId", js.undefined)
   }
 }

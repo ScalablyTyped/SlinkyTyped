@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait TypeAcquisition
-  extends /* option */ StringDictionary[js.UndefOr[js.Array[java.lang.String] | Boolean]] {
+  extends /* option */ StringDictionary[js.UndefOr[CompilerOptionsValue]] {
+  
+  var disableFilenameBasedTypeAcquisition: js.UndefOr[Boolean] = js.native
   
   var enable: js.UndefOr[Boolean] = js.native
   
@@ -43,6 +45,12 @@ object TypeAcquisition {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDisableFilenameBasedTypeAcquisition(value: Boolean): Self = this.set("disableFilenameBasedTypeAcquisition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableFilenameBasedTypeAcquisition: Self = this.set("disableFilenameBasedTypeAcquisition", js.undefined)
     
     @scala.inline
     def setEnable(value: Boolean): Self = this.set("enable", value.asInstanceOf[js.Any])

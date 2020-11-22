@@ -14,12 +14,10 @@ object flyCameraMouseInputMod extends js.Object {
   /**
     * Listen to mouse events to control the camera.
     * @param touchEnabled Define if touch is enabled. (Default is true.)
-    * @see http://doc.babylonjs.com/how_to/customizing_camera_inputs
+    * @see https://doc.babylonjs.com/how_to/customizing_camera_inputs
     */
   class FlyCameraMouseInput () extends ICameraInput[FlyCamera] {
     def this(touchEnabled: Boolean) = this()
-    
-    var _mousemoveCallback: js.Any = js.native
     
     var _observer: js.Any = js.native
     

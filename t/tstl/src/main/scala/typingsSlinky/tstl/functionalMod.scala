@@ -30,7 +30,7 @@ object functionalMod extends js.Object {
   @JSName("greater_equal")
   def greaterEqual[T](x: T, y: T): Boolean = js.native
   
-  def hash(items: js.Any*): Double = js.native
+  def hash(itemList: js.Any*): Double = js.native
   
   def less[T](x: T, y: T): Boolean = js.native
   

@@ -13,12 +13,12 @@ trait GetServiceGraphRequest extends js.Object {
   var EndTime: js.Date = js.native
   
   /**
-    * The ARN of a group to generate a graph based on.
+    * The Amazon Resource Name (ARN) of a group based on which you want to generate a graph.
     */
   var GroupARN: js.UndefOr[typingsSlinky.awsSdk.xrayMod.GroupARN] = js.native
   
   /**
-    * The name of a group to generate a graph based on.
+    * The name of a group based on which you want to generate a graph.
     */
   var GroupName: js.UndefOr[typingsSlinky.awsSdk.xrayMod.GroupName] = js.native
   

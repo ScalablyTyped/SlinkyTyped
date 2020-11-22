@@ -9,47 +9,75 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseWidget.Options.tooltip */
+/**
+  * [descr:BaseWidget.Options.tooltip]
+  */
 @js.native
 trait BaseWidgetTooltip extends js.Object {
   
-  /** @name BaseWidget.Options.tooltip.arrowLength */
+  /**
+    * [descr:BaseWidget.Options.tooltip.arrowLength]
+    */
   var arrowLength: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.tooltip.border */
+  /**
+    * [descr:BaseWidget.Options.tooltip.border]
+    */
   var border: js.UndefOr[DashStyleOpacity] = js.native
   
-  /** @name BaseWidget.Options.tooltip.color */
+  /**
+    * [descr:BaseWidget.Options.tooltip.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name BaseWidget.Options.tooltip.container */
+  /**
+    * [descr:BaseWidget.Options.tooltip.container]
+    */
   var container: js.UndefOr[String | Element | JQuery] = js.native
   
-  /** @name BaseWidget.Options.tooltip.cornerRadius */
+  /**
+    * [descr:BaseWidget.Options.tooltip.cornerRadius]
+    */
   var cornerRadius: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.tooltip.enabled */
+  /**
+    * [descr:BaseWidget.Options.tooltip.enabled]
+    */
   var enabled: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseWidget.Options.tooltip.font */
+  /**
+    * [descr:BaseWidget.Options.tooltip.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name BaseWidget.Options.tooltip.format */
+  /**
+    * [descr:BaseWidget.Options.tooltip.format]
+    */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
   
-  /** @name BaseWidget.Options.tooltip.opacity */
+  /**
+    * [descr:BaseWidget.Options.tooltip.opacity]
+    */
   var opacity: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.tooltip.paddingLeftRight */
+  /**
+    * [descr:BaseWidget.Options.tooltip.paddingLeftRight]
+    */
   var paddingLeftRight: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.tooltip.paddingTopBottom */
+  /**
+    * [descr:BaseWidget.Options.tooltip.paddingTopBottom]
+    */
   var paddingTopBottom: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.tooltip.shadow */
+  /**
+    * [descr:BaseWidget.Options.tooltip.shadow]
+    */
   var shadow: js.UndefOr[Blur] = js.native
   
-  /** @name BaseWidget.Options.tooltip.zIndex */
+  /**
+    * [descr:BaseWidget.Options.tooltip.zIndex]
+    */
   var zIndex: js.UndefOr[Double] = js.native
 }
 object BaseWidgetTooltip {

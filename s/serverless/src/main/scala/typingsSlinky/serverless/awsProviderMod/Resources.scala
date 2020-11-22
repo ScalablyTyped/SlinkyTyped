@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Resources extends js.Object {
   
+  var Description: js.UndefOr[String] = js.native
+  
   var Outputs: js.UndefOr[typingsSlinky.serverless.awsProviderMod.Outputs] = js.native
   
   var Resources: CloudFormationResources = js.native
@@ -38,6 +40,12 @@ object Resources {
     
     @scala.inline
     def setResources(value: CloudFormationResources): Self = this.set("Resources", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDescription(value: String): Self = this.set("Description", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDescription: Self = this.set("Description", js.undefined)
     
     @scala.inline
     def setOutputs(value: Outputs): Self = this.set("Outputs", value.asInstanceOf[js.Any])

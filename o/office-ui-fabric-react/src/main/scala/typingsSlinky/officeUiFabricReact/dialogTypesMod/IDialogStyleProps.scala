@@ -1,8 +1,8 @@
 package typingsSlinky.officeUiFabricReact.dialogTypesMod
 
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.ICSSPixelUnitRule
 import typingsSlinky.uifabricMergeStyles.irawstylebaseMod.ICSSRule
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

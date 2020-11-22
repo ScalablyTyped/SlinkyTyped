@@ -2,6 +2,7 @@ package typingsSlinky.wechatMiniprogram.WechatMiniprogram.Component
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.std.Record
+import typingsSlinky.wechatMiniprogram.WechatMiniprogram.Behavior.BehaviorIdentifier
 import typingsSlinky.wechatMiniprogram.anon.PartialPageLifetimes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OtherOption extends js.Object {
   
   /** 类似于mixins和traits的组件间代码复用机制，参见 [behaviors](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/behaviors.html) */
-  var behaviors: js.Array[String] = js.native
+  var behaviors: js.Array[BehaviorIdentifier] = js.native
   
   /** 定义段过滤器，用于自定义组件扩展，参见 [自定义组件扩展](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/extend.html)
     *
@@ -43,7 +44,7 @@ object OtherOption {
   
   @scala.inline
   def apply(
-    behaviors: js.Array[String],
+    behaviors: js.Array[BehaviorIdentifier],
     observers: Record[String, js.Function1[/* repeated */ _, _]],
     options: ComponentOptions,
     relations: StringDictionary[RelationOption]
@@ -68,10 +69,10 @@ object OtherOption {
     }
     
     @scala.inline
-    def setBehaviorsVarargs(value: String*): Self = this.set("behaviors", js.Array(value :_*))
+    def setBehaviorsVarargs(value: BehaviorIdentifier*): Self = this.set("behaviors", js.Array(value :_*))
     
     @scala.inline
-    def setBehaviors(value: js.Array[String]): Self = this.set("behaviors", value.asInstanceOf[js.Any])
+    def setBehaviors(value: js.Array[BehaviorIdentifier]): Self = this.set("behaviors", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setObservers(value: Record[String, js.Function1[/* repeated */ _, _]]): Self = this.set("observers", value.asInstanceOf[js.Any])

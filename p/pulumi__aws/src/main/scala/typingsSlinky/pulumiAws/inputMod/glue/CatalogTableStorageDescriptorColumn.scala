@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.inputMod.glue
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +18,11 @@ trait CatalogTableStorageDescriptorColumn extends js.Object {
     * Name of the SerDe.
     */
   var name: Input[String] = js.native
+  
+  /**
+    * A map of initialization parameters for the SerDe, in key-value form.
+    */
+  var parameters: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
     * The datatype of data in the Column.
@@ -54,6 +60,12 @@ object CatalogTableStorageDescriptorColumn {
     
     @scala.inline
     def deleteComment: Self = this.set("comment", js.undefined)
+    
+    @scala.inline
+    def setParameters(value: Input[StringDictionary[Input[String]]]): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteParameters: Self = this.set("parameters", js.undefined)
     
     @scala.inline
     def setType(value: Input[String]): Self = this.set("type", value.asInstanceOf[js.Any])

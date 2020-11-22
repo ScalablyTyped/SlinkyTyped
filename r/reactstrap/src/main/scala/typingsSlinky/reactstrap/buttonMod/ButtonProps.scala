@@ -3,11 +3,9 @@ package typingsSlinky.reactstrap.buttonMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ButtonHTMLAttributes
-import typingsSlinky.react.mod.MouseEventHandler
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
@@ -29,14 +27,11 @@ trait ButtonProps
   
   var innerRef: js.UndefOr[Ref[HTMLButtonElement]] = js.native
   
-  @JSName("onClick")
-  var onClick_ButtonProps: js.UndefOr[MouseEventHandler[_]] = js.native
-  
   var outline: js.UndefOr[Boolean] = js.native
   
   var size: js.UndefOr[String] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
 }
 object ButtonProps {
   
@@ -101,12 +96,6 @@ object ButtonProps {
     def setInnerRefNull: Self = this.set("innerRef", null)
     
     @scala.inline
-    def setOnClick(value: SyntheticMouseEvent[_] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnClick: Self = this.set("onClick", js.undefined)
-    
-    @scala.inline
     def setOutline(value: Boolean): Self = this.set("outline", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -125,7 +114,7 @@ object ButtonProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

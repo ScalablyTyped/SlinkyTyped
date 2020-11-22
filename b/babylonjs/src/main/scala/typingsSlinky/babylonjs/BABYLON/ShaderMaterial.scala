@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ShaderMaterial extends Material {
   
+  var _cachedDefines: js.Any = js.native
+  
   var _cachedWorldViewMatrix: js.Any = js.native
   
   var _cachedWorldViewProjectionMatrix: js.Any = js.native
@@ -60,6 +62,11 @@ trait ShaderMaterial extends Material {
   var _vectors4: js.Any = js.native
   
   var _vectors4Arrays: js.Any = js.native
+  
+  def bind(world: Matrix, mesh: js.UndefOr[scala.Nothing], effectOverride: Nullable[Effect]): Unit = js.native
+  def bind(world: Matrix, mesh: Mesh, effectOverride: Nullable[Effect]): Unit = js.native
+  
+  def bindOnlyWorldMatrix(world: Matrix, effectOverride: Nullable[Effect]): Unit = js.native
   
   /**
     * Gets the options used to compile the shader.
@@ -163,6 +170,7 @@ trait ShaderMaterial extends Material {
     */
   def setMatrix(name: String, value: Matrix): ShaderMaterial = js.native
   
+  def setMatrix2x2(name: String, value: js.Array[Double]): ShaderMaterial = js.native
   /**
     * Set a mat2 in the shader from a Float32Array.
     * @param name Define the name of the uniform as defined in the shader
@@ -171,6 +179,7 @@ trait ShaderMaterial extends Material {
     */
   def setMatrix2x2(name: String, value: js.typedarray.Float32Array): ShaderMaterial = js.native
   
+  def setMatrix3x3(name: String, value: js.Array[Double]): ShaderMaterial = js.native
   /**
     * Set a mat3 in the shader from a Float32Array.
     * @param name Define the name of the uniform as defined in the shader
@@ -185,7 +194,7 @@ trait ShaderMaterial extends Material {
     * @param texture Define the texture to bind to this sampler
     * @return the material itself allowing "fluent" like uniform updates
     */
-  def setTexture(name: String, texture: Texture): ShaderMaterial = js.native
+  def setTexture(name: String, texture: BaseTexture): ShaderMaterial = js.native
   
   /**
     * Set a texture array in the shader.
@@ -193,7 +202,7 @@ trait ShaderMaterial extends Material {
     * @param textures Define the list of textures to bind to this sampler
     * @return the material itself allowing "fluent" like uniform updates
     */
-  def setTextureArray(name: String, textures: js.Array[Texture]): ShaderMaterial = js.native
+  def setTextureArray(name: String, textures: js.Array[BaseTexture]): ShaderMaterial = js.native
   
   /**
     * Set a vec2 in the shader from a Vector2.
@@ -229,4 +238,7 @@ trait ShaderMaterial extends Material {
     * It can be modified to trigger a new compilation
     */
   def shaderPath_=(shaderPath: js.Any): Unit = js.native
+  
+  /** Snippet ID if the material was created from the snippet server */
+  var snippetId: String = js.native
 }

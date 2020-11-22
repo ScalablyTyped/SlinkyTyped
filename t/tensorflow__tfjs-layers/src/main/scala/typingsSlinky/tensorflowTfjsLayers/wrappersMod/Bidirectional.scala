@@ -1,10 +1,10 @@
 package typingsSlinky.tensorflowTfjsLayers.wrappersMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.mod.serialization.Serializable
 import typingsSlinky.tensorflowTfjsCore.serializationMod.ConfigDict
 import typingsSlinky.tensorflowTfjsCore.serializationMod.SerializableConstructor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.BidirectionalMergeMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`

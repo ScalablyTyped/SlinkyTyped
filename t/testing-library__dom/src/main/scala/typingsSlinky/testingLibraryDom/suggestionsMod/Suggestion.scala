@@ -7,13 +7,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Suggestion extends js.Object {
   
+  var queryArgs: QueryArgs = js.native
+  
+  var queryMethod: String = js.native
+  
   var queryName: String = js.native
+  
+  var variant: String = js.native
+  
+  var warning: js.UndefOr[String] = js.native
 }
 object Suggestion {
   
   @scala.inline
-  def apply(queryName: String): Suggestion = {
-    val __obj = js.Dynamic.literal(queryName = queryName.asInstanceOf[js.Any])
+  def apply(queryArgs: QueryArgs, queryMethod: String, queryName: String, variant: String): Suggestion = {
+    val __obj = js.Dynamic.literal(queryArgs = queryArgs.asInstanceOf[js.Any], queryMethod = queryMethod.asInstanceOf[js.Any], queryName = queryName.asInstanceOf[js.Any], variant = variant.asInstanceOf[js.Any])
     __obj.asInstanceOf[Suggestion]
   }
   
@@ -33,6 +41,21 @@ object Suggestion {
     }
     
     @scala.inline
+    def setQueryArgs(value: QueryArgs): Self = this.set("queryArgs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setQueryMethod(value: String): Self = this.set("queryMethod", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setQueryName(value: String): Self = this.set("queryName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setVariant(value: String): Self = this.set("variant", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setWarning(value: String): Self = this.set("warning", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWarning: Self = this.set("warning", js.undefined)
   }
 }

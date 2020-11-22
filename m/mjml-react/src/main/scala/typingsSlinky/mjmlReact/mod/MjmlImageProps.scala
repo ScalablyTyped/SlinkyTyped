@@ -1,7 +1,7 @@
 package typingsSlinky.mjmlReact.mod
 
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.Border
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.BorderProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,11 +13,11 @@ trait MjmlImageProps extends js.Object {
   
   var alt: js.UndefOr[String] = js.native
   
-  var border: js.UndefOr[Border[String | Double]] = js.native
+  var border: js.UndefOr[BorderProperty[String | Double]] = js.native
   
   var borderRadius: js.UndefOr[String | Double] = js.native
   
-  var containerBackgroundColor: js.UndefOr[BackgroundColor] = js.native
+  var containerBackgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
   
   var fluidOnMobile: js.UndefOr[String] = js.native
   
@@ -67,7 +67,7 @@ object MjmlImageProps {
     def deleteAlt: Self = this.set("alt", js.undefined)
     
     @scala.inline
-    def setBorder(value: Border[String | Double]): Self = this.set("border", value.asInstanceOf[js.Any])
+    def setBorder(value: BorderProperty[String | Double]): Self = this.set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBorder: Self = this.set("border", js.undefined)
@@ -79,7 +79,7 @@ object MjmlImageProps {
     def deleteBorderRadius: Self = this.set("borderRadius", js.undefined)
     
     @scala.inline
-    def setContainerBackgroundColor(value: BackgroundColor): Self = this.set("containerBackgroundColor", value.asInstanceOf[js.Any])
+    def setContainerBackgroundColor(value: BackgroundColorProperty): Self = this.set("containerBackgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContainerBackgroundColor: Self = this.set("containerBackgroundColor", js.undefined)

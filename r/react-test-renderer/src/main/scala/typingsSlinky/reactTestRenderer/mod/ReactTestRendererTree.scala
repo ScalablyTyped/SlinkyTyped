@@ -14,7 +14,7 @@ trait ReactTestRendererTree extends ReactTestRendererJSON {
   
   var nodeType: component | host = js.native
   
-  var rendered: Null | ReactTestRendererTree = js.native
+  var rendered: Null | ReactTestRendererTree | js.Array[ReactTestRendererTree] = js.native
 }
 object ReactTestRendererTree {
   
@@ -47,7 +47,10 @@ object ReactTestRendererTree {
     def setNodeType(value: component | host): Self = this.set("nodeType", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRendered(value: ReactTestRendererTree): Self = this.set("rendered", value.asInstanceOf[js.Any])
+    def setRenderedVarargs(value: ReactTestRendererTree*): Self = this.set("rendered", js.Array(value :_*))
+    
+    @scala.inline
+    def setRendered(value: ReactTestRendererTree | js.Array[ReactTestRendererTree]): Self = this.set("rendered", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRenderedNull: Self = this.set("rendered", null)

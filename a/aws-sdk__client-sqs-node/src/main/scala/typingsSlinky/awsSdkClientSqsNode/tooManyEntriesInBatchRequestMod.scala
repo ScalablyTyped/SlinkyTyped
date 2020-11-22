@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientSqsNode
 
-import typingsSlinky.awsSdkTypes.protocolMod.Structure
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object tooManyEntriesInBatchRequestMod extends js.Object {
   
-  val TooManyEntriesInBatchRequest: Structure = js.native
+  val TooManyEntriesInBatchRequest: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _Structure_ */ js.Any = js.native
 }

@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateSpread extends js.Object {
   
+  /** @deprecated Use `factory.updateSpread` or the factory supplied by your transformation context instead. */
   def apply(node: SpreadElement, expression: Expression): SpreadElement = js.native
 }

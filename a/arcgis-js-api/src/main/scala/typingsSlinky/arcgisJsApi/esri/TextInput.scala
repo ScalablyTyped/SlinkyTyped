@@ -1,5 +1,7 @@
 package typingsSlinky.arcgisJsApi.esri
 
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-area`
+import typingsSlinky.arcgisJsApi.arcgisJsApiStrings.`text-box`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,4 +22,12 @@ trait TextInput extends Input {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-inputs-TextInput.html#minLength)
     */
   var minLength: Double = js.native
+  
+  /**
+    * Indicates the type of form element [input](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-inputs-Input.html).
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-form-elements-inputs-TextInput.html#type)
+    */
+  @JSName("type")
+  val type_TextInput: `text-area` | `text-box` = js.native
 }

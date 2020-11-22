@@ -1,7 +1,9 @@
 package typingsSlinky.antDesignReactNative.progressMod
 
+import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.anon.Layout
+import typingsSlinky.reactNative.mod.NodeHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,5 +24,5 @@ trait Progress
   def normalPercent(): js.Any = js.native
   def normalPercent(percent: Double): js.Any = js.native
   
-  def onLayout(e: LayoutChangeEvent): Unit = js.native
+  def onLayout(e: SyntheticEvent[NodeHandle, Layout]): Unit = js.native
 }

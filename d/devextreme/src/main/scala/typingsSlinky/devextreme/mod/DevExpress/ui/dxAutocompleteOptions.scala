@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxAutocompleteOptions extends dxDropDownListOptions[dxAutocomplete] {
   
-  /** @name dxAutocomplete.Options.maxItemCount */
+  /**
+    * [descr:dxAutocomplete.Options.maxItemCount]
+    */
   var maxItemCount: js.UndefOr[Double] = js.native
 }
 object dxAutocompleteOptions {

@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Row extends Style {
   
   /**
-  	 * Number of cells including empty ones
+  	 * Number of non-empty cells
   	 */
   val actualCellCount: Double = js.native
   
@@ -21,7 +21,7 @@ trait Row extends Style {
   def addPageBreak(lft: Double, rght: Double): Unit = js.native
   
   /**
-  	 * Number of non-empty cells
+  	 * Number of cells including empty ones
   	 */
   val cellCount: Double = js.native
   

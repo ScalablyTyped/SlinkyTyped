@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.anon.`15`
+import typingsSlinky.devextreme.anon.`18`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,13 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BaseSparklineOptions[T] extends BaseWidgetOptions[T] {
   
-  /** @name BaseSparkline.Options.onTooltipHidden */
-  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ `15`[T], _]] = js.native
+  /**
+    * [descr:BaseSparkline.Options.onTooltipHidden]
+    */
+  var onTooltipHidden: js.UndefOr[js.Function1[/* e */ `18`[T], _]] = js.native
   
-  /** @name BaseSparkline.Options.onTooltipShown */
-  var onTooltipShown: js.UndefOr[js.Function1[/* e */ `15`[T], _]] = js.native
+  /**
+    * [descr:BaseSparkline.Options.onTooltipShown]
+    */
+  var onTooltipShown: js.UndefOr[js.Function1[/* e */ `18`[T], _]] = js.native
   
-  /** @name BaseSparkline.Options.tooltip */
+  /**
+    * [descr:BaseSparkline.Options.tooltip]
+    */
   @JSName("tooltip")
   var tooltip_BaseSparklineOptions: js.UndefOr[BaseSparklineTooltip] = js.native
 }
@@ -42,13 +48,13 @@ object BaseSparklineOptions {
     }
     
     @scala.inline
-    def setOnTooltipHidden(value: /* e */ `15`[T] => _): Self = this.set("onTooltipHidden", js.Any.fromFunction1(value))
+    def setOnTooltipHidden(value: /* e */ `18`[T] => _): Self = this.set("onTooltipHidden", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnTooltipHidden: Self = this.set("onTooltipHidden", js.undefined)
     
     @scala.inline
-    def setOnTooltipShown(value: /* e */ `15`[T] => _): Self = this.set("onTooltipShown", js.Any.fromFunction1(value))
+    def setOnTooltipShown(value: /* e */ `18`[T] => _): Self = this.set("onTooltipShown", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnTooltipShown: Self = this.set("onTooltipShown", js.undefined)

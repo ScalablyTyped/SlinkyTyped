@@ -16,6 +16,8 @@ package object mediaconnectMod {
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.mediaconnectMod.ClientApiVersions
   
+  type DurationUnits = typingsSlinky.awsSdk.awsSdkStrings.MONTHS | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
     - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
@@ -32,6 +34,8 @@ package object mediaconnectMod {
   
   type MaxResults = scala.Double
   
+  type PriceUnits = typingsSlinky.awsSdk.awsSdkStrings.HOURLY | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`zixi-push`
     - typingsSlinky.awsSdk.awsSdkStrings.`rtp-fec`
@@ -41,6 +45,17 @@ package object mediaconnectMod {
     - java.lang.String
   */
   type Protocol = typingsSlinky.awsSdk.mediaconnectMod._Protocol | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.EXPIRED
+    - typingsSlinky.awsSdk.awsSdkStrings.PROCESSING
+    - typingsSlinky.awsSdk.awsSdkStrings.CANCELED
+    - java.lang.String
+  */
+  type ReservationState = typingsSlinky.awsSdk.mediaconnectMod._ReservationState | java.lang.String
+  
+  type ResourceType = typingsSlinky.awsSdk.awsSdkStrings.Mbps_Outbound_Bandwidth | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.OWNED
@@ -87,7 +102,11 @@ package object mediaconnectMod {
   
   type listOfListedFlow = js.Array[typingsSlinky.awsSdk.mediaconnectMod.ListedFlow]
   
+  type listOfOffering = js.Array[typingsSlinky.awsSdk.mediaconnectMod.Offering]
+  
   type listOfOutput = js.Array[typingsSlinky.awsSdk.mediaconnectMod.Output]
+  
+  type listOfReservation = js.Array[typingsSlinky.awsSdk.mediaconnectMod.Reservation]
   
   type listOfSetSourceRequest = js.Array[typingsSlinky.awsSdk.mediaconnectMod.SetSourceRequest]
   

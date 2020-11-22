@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AddTagsToResourceMessage extends js.Object {
   
   /**
-    * The Amazon DocumentDB resource that the tags are added to. This value is an Amazon Resource Name (ARN).
+    * The Amazon DocumentDB resource that the tags are added to. This value is an Amazon Resource Name .
     */
   var ResourceName: String = js.native
   
   /**
-    * The tags to be assigned to the Amazon DocumentDB resource. 
+    * The tags to be assigned to the Amazon DocumentDB resource.
     */
   var Tags: TagList = js.native
 }

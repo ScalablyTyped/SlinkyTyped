@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BankInfoPayload extends js.Object {
   
+  /**
+    * Bank institution name (ex: Bank of Recurly)
+    */
   var bank_name: String = js.native
 }
 object BankInfoPayload {

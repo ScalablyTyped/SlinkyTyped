@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
+  type CombinedModelConstructorOptions[E, M /* <: typingsSlinky.backbone.mod.Model[_, _, E] */] = typingsSlinky.backbone.mod.ModelConstructorOptions[M] with E
+  
   /**
     * JavaScript events (used in the methods of the Events interface)
     */

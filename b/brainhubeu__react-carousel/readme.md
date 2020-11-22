@@ -1,7 +1,7 @@
 
 # Scala.js typings for brainhubeu__react-carousel
 
-Typings are for version 1.15
+Typings are for version 2.0
 
 ## Library description:
 Carousel component for React

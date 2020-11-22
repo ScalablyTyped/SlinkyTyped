@@ -62,7 +62,7 @@ trait ReactNativeStyledInterface[T /* <: js.Object */] extends ReactNativeThemed
   
   var ScrollView: ReactNativeThemedStyledFunction[Instantiable0[typingsSlinky.reactNative.mod.ScrollView], T] = js.native
   
-  var SectionList: ReactNativeThemedStyledFunction[Instantiable0[typingsSlinky.reactNative.mod.SectionList[js.Object]], T] = js.native
+  var SectionList: ReactNativeThemedStyledFunction[Instantiable0[typingsSlinky.reactNative.mod.SectionList[js.Object, js.Object]], T] = js.native
   
   var SegmentedControlIOS: ReactNativeThemedStyledFunction[Instantiable0[typingsSlinky.reactNative.mod.SegmentedControlIOS], T] = js.native
   

@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GridBasePaging extends js.Object {
   
-  /** @name GridBase.Options.paging.enabled */
+  /**
+    * [descr:GridBase.Options.paging.enabled]
+    */
   var enabled: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.paging.pageIndex */
+  /**
+    * [descr:GridBase.Options.paging.pageIndex]
+    */
   var pageIndex: js.UndefOr[Double] = js.native
   
-  /** @name GridBase.Options.paging.pageSize */
+  /**
+    * [descr:GridBase.Options.paging.pageSize]
+    */
   var pageSize: js.UndefOr[Double] = js.native
 }
 object GridBasePaging {

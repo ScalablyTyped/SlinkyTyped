@@ -18,14 +18,14 @@ trait GetCostAndUsageRequest extends js.Object {
   var Granularity: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.Granularity] = js.native
   
   /**
-    * You can group AWS costs using up to two different groups, either dimensions, tag keys, or both. When you group by tag key, you get all tag values, including empty strings. Valid values are AZ, INSTANCE_TYPE, LEGAL_ENTITY_NAME, LINKED_ACCOUNT, OPERATION, PLATFORM, PURCHASE_TYPE, SERVICE, TAGS, TENANCY, RECORD_TYPE, and USAGE_TYPE.
+    * You can group AWS costs using up to two different groups, either dimensions, tag keys, cost categories, or any two group by types. When you group by tag key, you get all tag values, including empty strings. Valid values are AZ, INSTANCE_TYPE, LEGAL_ENTITY_NAME, LINKED_ACCOUNT, OPERATION, PLATFORM, PURCHASE_TYPE, SERVICE, TAGS, TENANCY, RECORD_TYPE, and USAGE_TYPE.
     */
   var GroupBy: js.UndefOr[GroupDefinitions] = js.native
   
   /**
     * Which metrics are returned in the query. For more information about blended and unblended rates, see Why does the "blended" annotation appear on some line items in my bill?.  Valid values are AmortizedCost, BlendedCost, NetAmortizedCost, NetUnblendedCost, NormalizedUsageAmount, UnblendedCost, and UsageQuantity.   If you return the UsageQuantity metric, the service aggregates all usage numbers without taking into account the units. For example, if you aggregate usageQuantity across all of Amazon EC2, the results aren't meaningful because Amazon EC2 compute hours and data transfer are measured in different units (for example, hours vs. GB). To get more meaningful UsageQuantity metrics, filter by UsageType or UsageTypeGroups.    Metrics is required for GetCostAndUsage requests.
     */
-  var Metrics: js.UndefOr[MetricNames] = js.native
+  var Metrics: MetricNames = js.native
   
   /**
     * The token to retrieve the next set of results. AWS provides the token when the response from a previous call has more results than the maximum page size.
@@ -40,8 +40,8 @@ trait GetCostAndUsageRequest extends js.Object {
 object GetCostAndUsageRequest {
   
   @scala.inline
-  def apply(TimePeriod: DateInterval): GetCostAndUsageRequest = {
-    val __obj = js.Dynamic.literal(TimePeriod = TimePeriod.asInstanceOf[js.Any])
+  def apply(Metrics: MetricNames, TimePeriod: DateInterval): GetCostAndUsageRequest = {
+    val __obj = js.Dynamic.literal(Metrics = Metrics.asInstanceOf[js.Any], TimePeriod = TimePeriod.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetCostAndUsageRequest]
   }
   
@@ -59,6 +59,12 @@ object GetCostAndUsageRequest {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setMetricsVarargs(value: MetricName*): Self = this.set("Metrics", js.Array(value :_*))
+    
+    @scala.inline
+    def setMetrics(value: MetricNames): Self = this.set("Metrics", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTimePeriod(value: DateInterval): Self = this.set("TimePeriod", value.asInstanceOf[js.Any])
@@ -83,15 +89,6 @@ object GetCostAndUsageRequest {
     
     @scala.inline
     def deleteGroupBy: Self = this.set("GroupBy", js.undefined)
-    
-    @scala.inline
-    def setMetricsVarargs(value: MetricName*): Self = this.set("Metrics", js.Array(value :_*))
-    
-    @scala.inline
-    def setMetrics(value: MetricNames): Self = this.set("Metrics", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMetrics: Self = this.set("Metrics", js.undefined)
     
     @scala.inline
     def setNextPageToken(value: NextPageToken): Self = this.set("NextPageToken", value.asInstanceOf[js.Any])

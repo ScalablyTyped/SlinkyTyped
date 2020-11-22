@@ -23,8 +23,13 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactMdMenu.menuMod.MenuPositionOptions
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`additions removals`
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.`additions text`
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.`inline`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`removals additions`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`removals text`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`text additions`
+import typingsSlinky.reactMdMenu.reactMdMenuStrings.`text removals`
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.additions
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.all
 import typingsSlinky.reactMdMenu.reactMdMenuStrings.ascending
@@ -79,7 +84,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object Menu {
   
-  object MenuPropsPickMenuPropshid {
+  object PickBaseMenuPropshiddenvi {
     
     @JSImport("@react-md/menu", "Menu")
     @js.native
@@ -205,7 +210,9 @@ object Menu {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -928,23 +935,17 @@ object Menu {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactMdMenu.anon.MenuPropsPickMenuPropshid): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenvi): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
-    def apply(
-      `aria-label`: js.UndefOr[String] with String,
-      controlId: String,
-      id: String,
-      onRequestClose: () => Unit,
-      visible: Boolean
-    ): Builder = {
+    def apply(`aria-label`: String, controlId: String, id: String, onRequestClose: () => Unit, visible: Boolean): Builder = {
       val __props = js.Dynamic.literal(controlId = controlId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
       __props.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdMenu.anon.MenuPropsPickMenuPropshid]))
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenvi]))
     }
   }
   
-  object MenuPropsPickMenuPropshidAbout {
+  object PickBaseMenuPropshiddenviAbout {
     
     @JSImport("@react-md/menu", "Menu")
     @js.native
@@ -1070,7 +1071,9 @@ object Menu {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -1793,11 +1796,11 @@ object Menu {
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
     }
     
-    def withProps(p: typingsSlinky.reactMdMenu.anon.MenuPropsPickMenuPropshidAbout): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps(p: typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenviAbout): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     @scala.inline
     def apply(
-      `aria-labelledby`: js.UndefOr[String] with String,
+      `aria-labelledby`: String,
       controlId: String,
       id: String,
       onRequestClose: () => Unit,
@@ -1805,7 +1808,7 @@ object Menu {
     ): Builder = {
       val __props = js.Dynamic.literal(controlId = controlId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
       __props.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
-      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdMenu.anon.MenuPropsPickMenuPropshidAbout]))
+      new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.reactMdMenu.anon.PickBaseMenuPropshiddenviAbout]))
     }
   }
 }

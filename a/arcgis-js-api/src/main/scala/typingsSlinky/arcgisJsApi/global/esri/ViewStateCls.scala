@@ -1,5 +1,6 @@
 package typingsSlinky.arcgisJsApi.global.esri
 
+import typingsSlinky.arcgisJsApi.esri.ViewStateProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,4 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("__esri.ViewState")
 @js.native
 class ViewStateCls ()
-  extends typingsSlinky.arcgisJsApi.esri.ViewState
+  extends typingsSlinky.arcgisJsApi.esri.ViewState {
+  def this(properties: ViewStateProperties) = this()
+}

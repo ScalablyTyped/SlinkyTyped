@@ -5,7 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /** For Macintosh only */
-// tslint:disable-next-line:interface-name
 @js.native
 trait IFind extends js.Object {
   

@@ -1,7 +1,7 @@
 
 # Scala.js typings for material__auto-init
 
-Typings are for version 7.0.0
+Typings are for version 8.0.0
 
 ## Library description:
 Declarative, easy-to-use auto-initialization for Material Components for the web

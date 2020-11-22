@@ -16,7 +16,7 @@ trait PolicyState extends js.Object {
   val arn: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The name of the policy.
+    * The name of the policy. Must be between 1 and 255 characters in length.
     */
   val name: js.UndefOr[Input[String]] = js.native
   

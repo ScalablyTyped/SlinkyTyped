@@ -7,14 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AsyncStorage extends js.Object {
   
-  def getItem[T](key: String): js.Promise[T] = js.native
+  def getItem(key: String): js.Promise[String | Null] = js.native
   
-  def setItem[T](key: String, value: T): js.Promise[Unit] = js.native
+  def setItem(key: String, value: String): js.Promise[Unit] = js.native
 }
 object AsyncStorage {
   
   @scala.inline
-  def apply(getItem: String => js.Promise[js.Any], setItem: (String, js.Any) => js.Promise[Unit]): AsyncStorage = {
+  def apply(getItem: String => js.Promise[String | Null], setItem: (String, String) => js.Promise[Unit]): AsyncStorage = {
     val __obj = js.Dynamic.literal(getItem = js.Any.fromFunction1(getItem), setItem = js.Any.fromFunction2(setItem))
     __obj.asInstanceOf[AsyncStorage]
   }
@@ -35,9 +35,9 @@ object AsyncStorage {
     }
     
     @scala.inline
-    def setGetItem(value: String => js.Promise[js.Any]): Self = this.set("getItem", js.Any.fromFunction1(value))
+    def setGetItem(value: String => js.Promise[String | Null]): Self = this.set("getItem", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setSetItem(value: (String, js.Any) => js.Promise[Unit]): Self = this.set("setItem", js.Any.fromFunction2(value))
+    def setSetItem(value: (String, String) => js.Promise[Unit]): Self = this.set("setItem", js.Any.fromFunction2(value))
   }
 }

@@ -15,9 +15,9 @@ class GeneratedCodeInfo_ () extends Message {
   def addAnnotation(value: Annotation): Annotation = js.native
   def addAnnotation(value: Annotation, index: Double): Annotation = js.native
   
-  def clearAnnotationList(): Unit = js.native
+  def clearAnnotationList(): GeneratedCodeInfo = js.native
   
   def getAnnotationList(): js.Array[Annotation] = js.native
   
-  def setAnnotationList(value: js.Array[Annotation]): Unit = js.native
+  def setAnnotationList(value: js.Array[Annotation]): GeneratedCodeInfo = js.native
 }

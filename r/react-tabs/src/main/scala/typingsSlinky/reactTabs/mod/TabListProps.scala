@@ -38,8 +38,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactTabs.reactTabsStrings.`additions removals`
 import typingsSlinky.reactTabs.reactTabsStrings.`additions text`
 import typingsSlinky.reactTabs.reactTabsStrings.`inline`
+import typingsSlinky.reactTabs.reactTabsStrings.`removals additions`
+import typingsSlinky.reactTabs.reactTabsStrings.`removals text`
+import typingsSlinky.reactTabs.reactTabsStrings.`text additions`
+import typingsSlinky.reactTabs.reactTabsStrings.`text removals`
 import typingsSlinky.reactTabs.reactTabsStrings.additions
 import typingsSlinky.reactTabs.reactTabsStrings.all
 import typingsSlinky.reactTabs.reactTabsStrings.ascending
@@ -177,7 +182,9 @@ trait TabListProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -333,7 +340,7 @@ trait TabListProps extends js.Object {
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyParams: js.UndefOr[String] = js.native
   
@@ -933,7 +940,9 @@ object TabListProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1414,6 +1423,9 @@ object TabListProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyParams(value: String): Self = this.set("keyParams", value.asInstanceOf[js.Any])

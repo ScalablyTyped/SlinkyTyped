@@ -2,12 +2,18 @@ package typingsSlinky.pulumiAws.mod
 
 import typingsSlinky.pulumiAws.getBundleMod.GetBundleArgs
 import typingsSlinky.pulumiAws.getBundleMod.GetBundleResult
+import typingsSlinky.pulumiAws.getWorkspaceMod.GetWorkspaceArgs
+import typingsSlinky.pulumiAws.getWorkspaceMod.GetWorkspaceResult
 import typingsSlinky.pulumiAws.ipGroupMod.IpGroupArgs
 import typingsSlinky.pulumiAws.ipGroupMod.IpGroupState
 import typingsSlinky.pulumiAws.workspaceMod.WorkspaceArgs
 import typingsSlinky.pulumiAws.workspaceMod.WorkspaceState
 import typingsSlinky.pulumiAws.workspacesDirectoryMod.DirectoryArgs
 import typingsSlinky.pulumiAws.workspacesDirectoryMod.DirectoryState
+import typingsSlinky.pulumiAws.workspacesGetDirectoryMod.GetDirectoryArgs
+import typingsSlinky.pulumiAws.workspacesGetDirectoryMod.GetDirectoryResult
+import typingsSlinky.pulumiAws.workspacesGetImageMod.GetImageArgs
+import typingsSlinky.pulumiAws.workspacesGetImageMod.GetImageResult
 import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
@@ -24,6 +30,17 @@ object workspaces extends js.Object {
   def getBundle(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetBundleResult] = js.native
   def getBundle(args: GetBundleArgs): js.Promise[GetBundleResult] = js.native
   def getBundle(args: GetBundleArgs, opts: InvokeOptions): js.Promise[GetBundleResult] = js.native
+  
+  def getDirectory(args: GetDirectoryArgs): js.Promise[GetDirectoryResult] = js.native
+  def getDirectory(args: GetDirectoryArgs, opts: InvokeOptions): js.Promise[GetDirectoryResult] = js.native
+  
+  def getImage(args: GetImageArgs): js.Promise[GetImageResult] = js.native
+  def getImage(args: GetImageArgs, opts: InvokeOptions): js.Promise[GetImageResult] = js.native
+  
+  def getWorkspace(): js.Promise[GetWorkspaceResult] = js.native
+  def getWorkspace(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetWorkspaceResult] = js.native
+  def getWorkspace(args: GetWorkspaceArgs): js.Promise[GetWorkspaceResult] = js.native
+  def getWorkspace(args: GetWorkspaceArgs, opts: InvokeOptions): js.Promise[GetWorkspaceResult] = js.native
   
   @js.native
   class Directory protected ()

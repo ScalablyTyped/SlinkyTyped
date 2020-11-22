@@ -12,6 +12,7 @@ package object mod {
     - typingsSlinky.babelParser.babelParserStrings.classPrivateMethods
     - typingsSlinky.babelParser.babelParserStrings.classPrivateProperties
     - typingsSlinky.babelParser.babelParserStrings.classProperties
+    - typingsSlinky.babelParser.babelParserStrings.classStaticBlock
     - typingsSlinky.babelParser.babelParserStrings.decimal
     - typingsSlinky.babelParser.babelParserStrings.decorators
     - typingsSlinky.babelParser.babelParserStrings.`decorators-legacy`
@@ -27,7 +28,8 @@ package object mod {
     - typingsSlinky.babelParser.babelParserStrings.importMeta
     - typingsSlinky.babelParser.babelParserStrings.jsx
     - typingsSlinky.babelParser.babelParserStrings.logicalAssignment
-    - typingsSlinky.babelParser.babelParserStrings.moduleAttributes
+    - typingsSlinky.babelParser.babelParserStrings.importAssertions
+    - typingsSlinky.babelParser.babelParserStrings.moduleStringNames
     - typingsSlinky.babelParser.babelParserStrings.nullishCoalescingOperator
     - typingsSlinky.babelParser.babelParserStrings.numericSeparator
     - typingsSlinky.babelParser.babelParserStrings.objectRestSpread
@@ -46,7 +48,7 @@ package object mod {
   type ParserPlugin = typingsSlinky.babelParser.mod._ParserPlugin | typingsSlinky.babelParser.mod.ParserPluginWithOptions
   
   type ParserPluginWithOptions = js.Tuple2[
-    typingsSlinky.babelParser.babelParserStrings.decorators | typingsSlinky.babelParser.babelParserStrings.pipelineOperator | typingsSlinky.babelParser.babelParserStrings.flow, 
-    typingsSlinky.babelParser.mod.DecoratorsPluginOptions | typingsSlinky.babelParser.mod.FlowPluginOptions | typingsSlinky.babelParser.mod.PipelineOperatorPluginOptions
+    typingsSlinky.babelParser.babelParserStrings.decorators | typingsSlinky.babelParser.babelParserStrings.pipelineOperator | typingsSlinky.babelParser.babelParserStrings.recordAndTuple | typingsSlinky.babelParser.babelParserStrings.flow, 
+    typingsSlinky.babelParser.mod.DecoratorsPluginOptions | typingsSlinky.babelParser.mod.FlowPluginOptions | typingsSlinky.babelParser.mod.PipelineOperatorPluginOptions | typingsSlinky.babelParser.mod.RecordAndTuplePluginOptions
   ]
 }

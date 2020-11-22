@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`8`
+import typingsSlinky.octokitTypes.anon.`7`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +16,7 @@ trait ProjectsUpdateCardEndpoint extends js.Object {
   
   var card_id: Double = js.native
   
-  var mediaType: `8` = js.native
+  var mediaType: `7` = js.native
   
   /**
     * The card's note content. Only valid for cards without another type of content, so this cannot be specified if the card already has a `content_id` and `content_type`.
@@ -26,7 +26,7 @@ trait ProjectsUpdateCardEndpoint extends js.Object {
 object ProjectsUpdateCardEndpoint {
   
   @scala.inline
-  def apply(card_id: Double, mediaType: `8`): ProjectsUpdateCardEndpoint = {
+  def apply(card_id: Double, mediaType: `7`): ProjectsUpdateCardEndpoint = {
     val __obj = js.Dynamic.literal(card_id = card_id.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsUpdateCardEndpoint]
   }
@@ -50,7 +50,7 @@ object ProjectsUpdateCardEndpoint {
     def setCard_id(value: Double): Self = this.set("card_id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setArchived(value: Boolean): Self = this.set("archived", value.asInstanceOf[js.Any])

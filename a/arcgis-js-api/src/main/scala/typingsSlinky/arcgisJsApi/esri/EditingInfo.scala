@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EditingInfo extends Object {
   
   /**
-    * Indicates the last time the layer was edited. This value gets updated every time the layer's data is edited or when any of its properties change.
+    * Indicates the last time the layer was edited.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#EditingInfo)
     */

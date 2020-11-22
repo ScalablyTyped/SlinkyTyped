@@ -7,21 +7,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DBusService extends js.Object {
   
+  var bus: DBusConnection = js.native
+  
   def createObject(path: String): DBusServiceObject = js.native
   
   def disconnect(): Unit = js.native
   
   def removeObject(service: DBusServiceObject): Unit = js.native
+  
+  var serviceName: String = js.native
 }
 object DBusService {
   
   @scala.inline
   def apply(
+    bus: DBusConnection,
     createObject: String => DBusServiceObject,
     disconnect: () => Unit,
-    removeObject: DBusServiceObject => Unit
+    removeObject: DBusServiceObject => Unit,
+    serviceName: String
   ): DBusService = {
-    val __obj = js.Dynamic.literal(createObject = js.Any.fromFunction1(createObject), disconnect = js.Any.fromFunction0(disconnect), removeObject = js.Any.fromFunction1(removeObject))
+    val __obj = js.Dynamic.literal(bus = bus.asInstanceOf[js.Any], createObject = js.Any.fromFunction1(createObject), disconnect = js.Any.fromFunction0(disconnect), removeObject = js.Any.fromFunction1(removeObject), serviceName = serviceName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBusService]
   }
   
@@ -41,6 +47,9 @@ object DBusService {
     }
     
     @scala.inline
+    def setBus(value: DBusConnection): Self = this.set("bus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setCreateObject(value: String => DBusServiceObject): Self = this.set("createObject", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -48,5 +57,8 @@ object DBusService {
     
     @scala.inline
     def setRemoveObject(value: DBusServiceObject => Unit): Self = this.set("removeObject", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setServiceName(value: String): Self = this.set("serviceName", value.asInstanceOf[js.Any])
   }
 }

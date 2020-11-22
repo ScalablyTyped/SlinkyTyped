@@ -12,6 +12,8 @@ trait SafeFrameConfig extends js.Object {
   var allowPushExpansion: js.UndefOr[Boolean] = js.native
   
   var sandbox: js.UndefOr[Boolean] = js.native
+  
+  var useUniqueDomain: js.UndefOr[Boolean | Null] = js.native
 }
 object SafeFrameConfig {
   
@@ -53,5 +55,14 @@ object SafeFrameConfig {
     
     @scala.inline
     def deleteSandbox: Self = this.set("sandbox", js.undefined)
+    
+    @scala.inline
+    def setUseUniqueDomain(value: Boolean): Self = this.set("useUniqueDomain", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUseUniqueDomain: Self = this.set("useUniqueDomain", js.undefined)
+    
+    @scala.inline
+    def setUseUniqueDomainNull: Self = this.set("useUniqueDomain", null)
   }
 }

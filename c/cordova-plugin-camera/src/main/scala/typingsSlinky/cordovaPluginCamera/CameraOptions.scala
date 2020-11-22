@@ -26,8 +26,6 @@ trait CameraOptions extends js.Object {
     * Defined in navigator.camera.DestinationType. Default is FILE_URI.
     *      DATA_URL : 0,   Return image as base64-encoded string
     *      FILE_URI : 1,   Return image file URI
-    *      NATIVE_URI : 2  Return image native URI
-    *          (e.g., assets-library:// on iOS or content:// on Android)
     */
   var destinationType: js.UndefOr[Double] = js.native
   

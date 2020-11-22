@@ -2,7 +2,7 @@ package typingsSlinky.reduxDevtoolsLogMonitor.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.base16.mod.ColorScheme
+import typingsSlinky.base16.mod.Base16Theme
 import typingsSlinky.reduxDevtoolsLogMonitor.mod.ILogMonitorProps
 import typingsSlinky.reduxDevtoolsLogMonitor.mod.default
 import scala.scalajs.js
@@ -33,7 +33,7 @@ object ReduxDevtoolsLogMonitor {
     def select(value: /* state */ js.Any => _): this.type = set("select", js.Any.fromFunction1(value))
     
     @scala.inline
-    def theme(value: String | ColorScheme): this.type = set("theme", value.asInstanceOf[js.Any])
+    def theme(value: String | Base16Theme): this.type = set("theme", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: ILogMonitorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

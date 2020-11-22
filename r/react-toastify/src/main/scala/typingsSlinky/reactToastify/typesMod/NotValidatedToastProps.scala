@@ -5,6 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactToastify.anon.Position
 import typingsSlinky.reactToastify.reactToastifyBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,13 +17,13 @@ trait NotValidatedToastProps extends js.Object {
   
   var autoClose: js.UndefOr[Double | `false`] = js.native
   
-  var bodyClassName: js.UndefOr[ClassName] = js.native
+  var bodyClassName: js.UndefOr[ToastClassName] = js.native
   
   var bodyStyle: js.UndefOr[CSSProperties] = js.native
   
   var children: js.UndefOr[ToastContent] = js.native
   
-  var className: js.UndefOr[ClassName] = js.native
+  var className: js.UndefOr[ToastClassName] = js.native
   
   var closeButton: js.UndefOr[ReactElement | (js.Function1[/* props */ js.Any, ReactElement]) | Boolean] = js.native
   
@@ -60,7 +61,7 @@ trait NotValidatedToastProps extends js.Object {
   
   var progress: js.UndefOr[Double | String] = js.native
   
-  var progressClassName: js.UndefOr[ClassName] = js.native
+  var progressClassName: js.UndefOr[ToastClassName] = js.native
   
   var progressStyle: js.UndefOr[CSSProperties] = js.native
   
@@ -113,13 +114,13 @@ object NotValidatedToastProps {
     def deleteAutoClose: Self = this.set("autoClose", js.undefined)
     
     @scala.inline
-    def setBodyClassName(value: ClassName): Self = this.set("bodyClassName", value.asInstanceOf[js.Any])
+    def setBodyClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("bodyClassName", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setBodyClassName(value: ToastClassName): Self = this.set("bodyClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBodyClassName: Self = this.set("bodyClassName", js.undefined)
-    
-    @scala.inline
-    def setBodyClassNameNull: Self = this.set("bodyClassName", null)
     
     @scala.inline
     def setBodyStyle(value: CSSProperties): Self = this.set("bodyStyle", value.asInstanceOf[js.Any])
@@ -140,13 +141,13 @@ object NotValidatedToastProps {
     def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
-    def setClassName(value: ClassName): Self = this.set("className", value.asInstanceOf[js.Any])
+    def setClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("className", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setClassName(value: ToastClassName): Self = this.set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
-    
-    @scala.inline
-    def setClassNameNull: Self = this.set("className", null)
     
     @scala.inline
     def setCloseButtonReactElement(value: ReactElement): Self = this.set("closeButton", value.asInstanceOf[js.Any])
@@ -263,13 +264,13 @@ object NotValidatedToastProps {
     def deleteProgress: Self = this.set("progress", js.undefined)
     
     @scala.inline
-    def setProgressClassName(value: ClassName): Self = this.set("progressClassName", value.asInstanceOf[js.Any])
+    def setProgressClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("progressClassName", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setProgressClassName(value: ToastClassName): Self = this.set("progressClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProgressClassName: Self = this.set("progressClassName", js.undefined)
-    
-    @scala.inline
-    def setProgressClassNameNull: Self = this.set("progressClassName", null)
     
     @scala.inline
     def setProgressStyle(value: CSSProperties): Self = this.set("progressStyle", value.asInstanceOf[js.Any])

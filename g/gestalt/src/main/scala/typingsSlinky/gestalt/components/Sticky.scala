@@ -2,7 +2,7 @@ package typingsSlinky.gestalt.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.gestalt.anon.ZIndex
+import typingsSlinky.gestalt.mod.Indexable
 import typingsSlinky.gestalt.mod.StickyProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ object Sticky {
     def bottom(value: Double | String): this.type = set("bottom", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dangerouslySetZIndex(value: ZIndex): this.type = set("dangerouslySetZIndex", value.asInstanceOf[js.Any])
+    def height(value: Double): this.type = set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
     def left(value: Double | String): this.type = set("left", value.asInstanceOf[js.Any])
@@ -33,6 +33,9 @@ object Sticky {
     
     @scala.inline
     def top(value: Double | String): this.type = set("top", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def zIndex(value: Indexable): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: StickyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

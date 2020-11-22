@@ -5,7 +5,7 @@ import typingsSlinky.electron.electronStrings.fixed
 import typingsSlinky.electron.electronStrings.free
 import typingsSlinky.electron.electronStrings.none
 import typingsSlinky.electron.electronStrings.outline
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

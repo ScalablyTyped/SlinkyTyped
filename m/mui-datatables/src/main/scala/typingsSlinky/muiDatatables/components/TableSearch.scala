@@ -2,6 +2,7 @@ package typingsSlinky.muiDatatables.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.muiDatatables.mod.MUIDataTableOptions
 import typingsSlinky.muiDatatables.mod.MUIDataTableSearch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +29,7 @@ object TableSearch {
     def onSearch(value: /* args */ js.Any => _): this.type = set("onSearch", js.Any.fromFunction1(value))
     
     @scala.inline
-    def options(value: js.Object): this.type = set("options", value.asInstanceOf[js.Any])
+    def options(value: MUIDataTableOptions): this.type = set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def searchText(value: String): this.type = set("searchText", value.asInstanceOf[js.Any])

@@ -17,5 +17,9 @@ object JsxEmit extends js.Object {
   
   /* 2 */ val React: typingsSlinky.typescript.mod.JsxEmit.React with Double = js.native
   
+  /* 4 */ val ReactJSX: typingsSlinky.typescript.mod.JsxEmit.ReactJSX with Double = js.native
+  
+  /* 5 */ val ReactJSXDev: typingsSlinky.typescript.mod.JsxEmit.ReactJSXDev with Double = js.native
+  
   /* 3 */ val ReactNative: typingsSlinky.typescript.mod.JsxEmit.ReactNative with Double = js.native
 }

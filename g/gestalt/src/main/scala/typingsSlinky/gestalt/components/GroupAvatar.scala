@@ -3,9 +3,12 @@ package typingsSlinky.gestalt.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.anon.Name
+import typingsSlinky.gestalt.gestaltStrings.fit
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.sm
+import typingsSlinky.gestalt.gestaltStrings.xl
+import typingsSlinky.gestalt.gestaltStrings.xs
 import typingsSlinky.gestalt.mod.GroupAvatarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +29,7 @@ object GroupAvatar {
     def outline(value: Boolean): this.type = set("outline", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def size(value: sm | md | lg): this.type = set("size", value.asInstanceOf[js.Any])
+    def size(value: xs | sm | md | lg | xl | fit): this.type = set("size", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: GroupAvatarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

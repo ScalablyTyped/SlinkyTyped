@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class TouchBarScrubber protected ()
   extends typingsSlinky.electron.Electron.TouchBarScrubber {
-  // Docs: http://electronjs.org/docs/api/touch-bar-scrubber
+  // Docs: https://electronjs.org/docs/api/touch-bar-scrubber
   /**
     * TouchBarScrubber
     */

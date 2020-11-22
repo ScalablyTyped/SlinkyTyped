@@ -25,11 +25,11 @@ trait PrefixUnaryExpressionoper extends js.Object {
   
   var _updateExpressionBrand: js.Any = js.native
   
-  var decorators: js.UndefOr[NodeArray[Decorator]] = js.native
+  val decorators: js.UndefOr[NodeArray[Decorator]] = js.native
   
-  var end: Double = js.native
+  val end: Double = js.native
   
-  var flags: NodeFlags = js.native
+  val flags: NodeFlags = js.native
   
   def forEachChild[T](cbNode: js.Function1[/* node */ this.type, js.UndefOr[T]]): js.UndefOr[T] = js.native
   def forEachChild[T](
@@ -77,15 +77,15 @@ trait PrefixUnaryExpressionoper extends js.Object {
   def getWidth(): Double = js.native
   def getWidth(sourceFile: SourceFileLike): Double = js.native
   
-  var kind: PrefixUnaryExpression = js.native
+  val kind: PrefixUnaryExpression = js.native
   
-  var modifiers: js.UndefOr[ModifiersArray] = js.native
+  val modifiers: js.UndefOr[ModifiersArray] = js.native
   
-  var operand: UnaryExpression with NumericLiteral = js.native
+  val operand: UnaryExpression with NumericLiteral = js.native
   
-  var operator: PrefixUnaryOperator = js.native
+  val operator: PrefixUnaryOperator = js.native
   
-  var parent: Node = js.native
+  val parent: Node = js.native
   
-  var pos: Double = js.native
+  val pos: Double = js.native
 }

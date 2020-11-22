@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
-import typingsSlinky.devextreme.anon.`9`
+import typingsSlinky.devextreme.anon.`11`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,22 +8,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxScrollViewOptions extends dxScrollableOptions[dxScrollView] {
   
-  /** @name dxScrollView.Options.onPullDown */
-  var onPullDown: js.UndefOr[js.Function1[/* e */ `9`, _]] = js.native
+  /**
+    * [descr:dxScrollView.Options.onPullDown]
+    */
+  var onPullDown: js.UndefOr[js.Function1[/* e */ `11`, _]] = js.native
   
-  /** @name dxScrollView.Options.onReachBottom */
-  var onReachBottom: js.UndefOr[js.Function1[/* e */ `9`, _]] = js.native
+  /**
+    * [descr:dxScrollView.Options.onReachBottom]
+    */
+  var onReachBottom: js.UndefOr[js.Function1[/* e */ `11`, _]] = js.native
   
-  /** @name dxScrollView.Options.pulledDownText */
+  /**
+    * [descr:dxScrollView.Options.pulledDownText]
+    */
   var pulledDownText: js.UndefOr[String] = js.native
   
-  /** @name dxScrollView.Options.pullingDownText */
+  /**
+    * [descr:dxScrollView.Options.pullingDownText]
+    */
   var pullingDownText: js.UndefOr[String] = js.native
   
-  /** @name dxScrollView.Options.reachBottomText */
+  /**
+    * [descr:dxScrollView.Options.reachBottomText]
+    */
   var reachBottomText: js.UndefOr[String] = js.native
   
-  /** @name dxScrollView.Options.refreshingText */
+  /**
+    * [descr:dxScrollView.Options.refreshingText]
+    */
   var refreshingText: js.UndefOr[String] = js.native
 }
 object dxScrollViewOptions {
@@ -50,13 +62,13 @@ object dxScrollViewOptions {
     }
     
     @scala.inline
-    def setOnPullDown(value: /* e */ `9` => _): Self = this.set("onPullDown", js.Any.fromFunction1(value))
+    def setOnPullDown(value: /* e */ `11` => _): Self = this.set("onPullDown", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnPullDown: Self = this.set("onPullDown", js.undefined)
     
     @scala.inline
-    def setOnReachBottom(value: /* e */ `9` => _): Self = this.set("onReachBottom", js.Any.fromFunction1(value))
+    def setOnReachBottom(value: /* e */ `11` => _): Self = this.set("onReachBottom", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnReachBottom: Self = this.set("onReachBottom", js.undefined)

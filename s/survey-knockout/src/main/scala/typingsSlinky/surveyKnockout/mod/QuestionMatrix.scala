@@ -9,8 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class QuestionMatrix protected () extends QuestionMatrixModel {
   def this(name: String) = this()
   
-  def getItemCss(row: js.Any, column: js.Any): String = js.native
-  
   var koVisibleColumns: js.Any = js.native
   
   var koVisibleRows: js.Any = js.native

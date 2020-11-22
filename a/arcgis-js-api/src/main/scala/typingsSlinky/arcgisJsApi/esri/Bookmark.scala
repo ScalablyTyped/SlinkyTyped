@@ -15,7 +15,7 @@ trait Bookmark extends Accessor {
   var extent: Extent = js.native
   
   /**
-    * The name of the bookmark item. Used as a label in the [Bookmarks](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html) widget.
+    * The name of the bookmark item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#name)
     */
@@ -27,4 +27,11 @@ trait Bookmark extends Accessor {
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#thumbnail)
     */
   var thumbnail: BookmarkThumbnail = js.native
+  
+  /**
+    * The viewpoint of the bookmark item.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webmap-Bookmark.html#viewpoint)
+    */
+  var viewpoint: Viewpoint = js.native
 }

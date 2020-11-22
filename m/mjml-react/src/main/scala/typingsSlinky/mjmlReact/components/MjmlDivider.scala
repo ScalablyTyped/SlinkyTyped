@@ -2,9 +2,9 @@ package typingsSlinky.mjmlReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.BorderColor
-import typingsSlinky.csstype.mod.Property.BorderStyle
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.BorderColorProperty
+import typingsSlinky.csstype.mod.BorderStyleProperty
 import typingsSlinky.mjmlReact.mod.ClassNameProps
 import typingsSlinky.mjmlReact.mod.MjmlDividerProps
 import typingsSlinky.mjmlReact.mod.PaddingProps
@@ -24,16 +24,16 @@ object MjmlDivider {
        with StBuildingComponent[tag.type, typingsSlinky.mjmlReact.mod.MjmlDivider] {
     
     @scala.inline
-    def borderColor(value: BorderColor): this.type = set("borderColor", value.asInstanceOf[js.Any])
+    def borderColor(value: BorderColorProperty): this.type = set("borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def borderStyle(value: BorderStyle): this.type = set("borderStyle", value.asInstanceOf[js.Any])
+    def borderStyle(value: BorderStyleProperty): this.type = set("borderStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def borderWidth(value: String | Double): this.type = set("borderWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def containerBackgroundColor(value: BackgroundColor): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
+    def containerBackgroundColor(value: BackgroundColorProperty): this.type = set("containerBackgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def cssClass(value: String): this.type = set("cssClass", value.asInstanceOf[js.Any])

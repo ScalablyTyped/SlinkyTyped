@@ -16,10 +16,11 @@ import typingsSlinky.astTypes.kindsMod.TSTypeParameterDeclarationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
 /* Inlined parent ast-types.ast-types/gen/namedTypes.namedTypes.TSHasOptionalTypeParameters */
+@js.native
 trait TSDeclareFunction
   extends ASTNode
      with DeclarationKind
@@ -27,19 +28,27 @@ trait TSDeclareFunction
      with PrintableKind
      with StatementKind
      with TSHasOptionalTypeParametersKind {
-  var async: js.UndefOr[Boolean] = js.undefined
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var declare: js.UndefOr[Boolean] = js.undefined
-  var generator: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[IdentifierKind | Null] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var params: js.Array[PatternKind]
-  var returnType: js.UndefOr[TSTypeAnnotationKind | NoopKind | Null] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSDeclareFunction
-  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.undefined
+  
+  var async: js.UndefOr[Boolean] = js.native
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var declare: js.UndefOr[Boolean] = js.native
+  
+  var generator: js.UndefOr[Boolean] = js.native
+  
+  var id: js.UndefOr[IdentifierKind | Null] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var params: js.Array[PatternKind] = js.native
+  
+  var returnType: js.UndefOr[TSTypeAnnotationKind | NoopKind | Null] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSDeclareFunction = js.native
+  
+  var typeParameters: js.UndefOr[TSTypeParameterDeclarationKind | Null] = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSDeclareFunction")
 @js.native
 object TSDeclareFunction extends TopLevel[Type[TSDeclareFunction]]
-

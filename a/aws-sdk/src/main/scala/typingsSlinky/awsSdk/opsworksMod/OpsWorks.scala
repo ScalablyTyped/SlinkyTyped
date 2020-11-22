@@ -9,7 +9,7 @@ import typingsSlinky.awsSdk.awsSdkStrings.instanceOnline
 import typingsSlinky.awsSdk.awsSdkStrings.instanceRegistered
 import typingsSlinky.awsSdk.awsSdkStrings.instanceStopped
 import typingsSlinky.awsSdk.awsSdkStrings.instanceTerminated
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service

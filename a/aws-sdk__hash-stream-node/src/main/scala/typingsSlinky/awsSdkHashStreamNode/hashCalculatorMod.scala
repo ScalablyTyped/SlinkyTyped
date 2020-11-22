@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/hash-stream-node/build/hash-calculator", JSImport.Namespace)
+@JSImport("@aws-sdk/hash-stream-node/dist/cjs/hash-calculator", JSImport.Namespace)
 @js.native
 object hashCalculatorMod extends js.Object {
   

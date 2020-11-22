@@ -27,7 +27,7 @@ trait WithFormikConfig[Props, Values /* <: FormikValues */, DeprecatedPayload] e
   var mapPropsToErrors: js.UndefOr[js.Function1[/* props */ Props, FormikErrors[Values]]] = js.native
   
   /**
-    * Map props to the form values
+    * Map props to the form status
     */
   var mapPropsToStatus: js.UndefOr[js.Function1[/* props */ Props, _]] = js.native
   

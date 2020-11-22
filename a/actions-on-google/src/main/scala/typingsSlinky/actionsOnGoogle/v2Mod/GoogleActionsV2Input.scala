@@ -1,5 +1,6 @@
 package typingsSlinky.actionsOnGoogle.v2Mod
 
+import typingsSlinky.actionsOnGoogle.commonMod.ApiClientObjectMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +12,12 @@ trait GoogleActionsV2Input extends js.Object {
     * A list of provided argument values for the input requested by the Action.
     */
   var arguments: js.UndefOr[js.Array[GoogleActionsV2Argument]] = js.native
+  
+  /**
+    * Opaque context set in the interactive canvas web app for all subsequent
+    * intents
+    */
+  var canvasState: js.UndefOr[ApiClientObjectMap[_]] = js.native
   
   /**
     * Indicates the user's intent. For the first conversation turn, the intent
@@ -63,6 +70,12 @@ object GoogleActionsV2Input {
     
     @scala.inline
     def deleteArguments: Self = this.set("arguments", js.undefined)
+    
+    @scala.inline
+    def setCanvasState(value: ApiClientObjectMap[_]): Self = this.set("canvasState", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCanvasState: Self = this.set("canvasState", js.undefined)
     
     @scala.inline
     def setIntent(value: String): Self = this.set("intent", value.asInstanceOf[js.Any])

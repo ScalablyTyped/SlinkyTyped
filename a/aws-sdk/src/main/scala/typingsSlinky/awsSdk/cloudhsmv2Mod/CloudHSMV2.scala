@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.cloudhsmv2Mod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -153,6 +153,34 @@ trait CloudHSMV2 extends Service {
     params: ListTagsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ListTagsResponse, Unit]
   ): Request[ListTagsResponse, AWSError] = js.native
+  
+  /**
+    * Modifies attributes for AWS CloudHSM backup.
+    */
+  def modifyBackupAttributes(): Request[ModifyBackupAttributesResponse, AWSError] = js.native
+  def modifyBackupAttributes(callback: js.Function2[/* err */ AWSError, /* data */ ModifyBackupAttributesResponse, Unit]): Request[ModifyBackupAttributesResponse, AWSError] = js.native
+  /**
+    * Modifies attributes for AWS CloudHSM backup.
+    */
+  def modifyBackupAttributes(params: ModifyBackupAttributesRequest): Request[ModifyBackupAttributesResponse, AWSError] = js.native
+  def modifyBackupAttributes(
+    params: ModifyBackupAttributesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ModifyBackupAttributesResponse, Unit]
+  ): Request[ModifyBackupAttributesResponse, AWSError] = js.native
+  
+  /**
+    * Modifies AWS CloudHSM cluster.
+    */
+  def modifyCluster(): Request[ModifyClusterResponse, AWSError] = js.native
+  def modifyCluster(callback: js.Function2[/* err */ AWSError, /* data */ ModifyClusterResponse, Unit]): Request[ModifyClusterResponse, AWSError] = js.native
+  /**
+    * Modifies AWS CloudHSM cluster.
+    */
+  def modifyCluster(params: ModifyClusterRequest): Request[ModifyClusterResponse, AWSError] = js.native
+  def modifyCluster(
+    params: ModifyClusterRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ModifyClusterResponse, Unit]
+  ): Request[ModifyClusterResponse, AWSError] = js.native
   
   /**
     * Restores a specified AWS CloudHSM backup that is in the PENDING_DELETION state. For mor information on deleting a backup, see DeleteBackup.

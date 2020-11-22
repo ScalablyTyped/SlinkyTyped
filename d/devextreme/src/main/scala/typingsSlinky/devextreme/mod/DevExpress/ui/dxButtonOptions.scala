@@ -6,7 +6,7 @@ import typingsSlinky.devextreme.anon.ValidationGroup
 import typingsSlinky.devextreme.devextremeStrings.back
 import typingsSlinky.devextreme.devextremeStrings.contained
 import typingsSlinky.devextreme.devextremeStrings.danger
-import typingsSlinky.devextreme.devextremeStrings.default_
+import typingsSlinky.devextreme.devextremeStrings.default
 import typingsSlinky.devextreme.devextremeStrings.normal
 import typingsSlinky.devextreme.devextremeStrings.outlined
 import typingsSlinky.devextreme.devextremeStrings.success
@@ -20,30 +20,46 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxButtonOptions extends WidgetOptions[dxButton] {
   
-  /** @name dxButton.Options.icon */
+  /**
+    * [descr:dxButton.Options.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxButton.Options.onClick */
+  /**
+    * [descr:dxButton.Options.onClick]
+    */
   var onClick: js.UndefOr[js.Function1[/* e */ ValidationGroup, _]] = js.native
   
-  /** @name dxButton.Options.stylingMode */
+  /**
+    * [descr:dxButton.Options.stylingMode]
+    */
   var stylingMode: js.UndefOr[text | outlined | contained] = js.native
   
-  /** @name dxButton.Options.template */
+  /**
+    * [descr:dxButton.Options.template]
+    */
   var template: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* buttonData */ Icon, /* contentElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxButton.Options.text */
+  /**
+    * [descr:dxButton.Options.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name dxButton.Options.type */
-  var `type`: js.UndefOr[back | danger | default_ | normal | success] = js.native
+  /**
+    * [descr:dxButton.Options.type]
+    */
+  var `type`: js.UndefOr[back | danger | default | normal | success] = js.native
   
-  /** @name dxButton.Options.useSubmitBehavior */
+  /**
+    * [descr:dxButton.Options.useSubmitBehavior]
+    */
   var useSubmitBehavior: js.UndefOr[Boolean] = js.native
   
-  /** @name dxButton.Options.validationGroup */
+  /**
+    * [descr:dxButton.Options.validationGroup]
+    */
   var validationGroup: js.UndefOr[String] = js.native
 }
 object dxButtonOptions {
@@ -108,7 +124,7 @@ object dxButtonOptions {
     def deleteText: Self = this.set("text", js.undefined)
     
     @scala.inline
-    def setType(value: back | danger | default_ | normal | success): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: back | danger | default | normal | success): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)

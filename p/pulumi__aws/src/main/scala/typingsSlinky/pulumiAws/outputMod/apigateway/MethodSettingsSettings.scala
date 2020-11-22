@@ -43,14 +43,14 @@ trait MethodSettingsSettings extends js.Object {
   var requireAuthorizationForCacheControl: Boolean = js.native
   
   /**
-    * Specifies the throttling burst limit.
+    * Specifies the throttling burst limit. Default: `-1` (throttling disabled).
     */
-  var throttlingBurstLimit: Double = js.native
+  var throttlingBurstLimit: js.UndefOr[Double] = js.native
   
   /**
-    * Specifies the throttling rate limit.
+    * Specifies the throttling rate limit. Default: `-1` (throttling disabled).
     */
-  var throttlingRateLimit: Double = js.native
+  var throttlingRateLimit: js.UndefOr[Double] = js.native
   
   /**
     * Specifies how to handle unauthorized requests for cache invalidation. The available values are `FAIL_WITH_403`, `SUCCEED_WITH_RESPONSE_HEADER`, `SUCCEED_WITHOUT_RESPONSE_HEADER`.
@@ -68,11 +68,9 @@ object MethodSettingsSettings {
     loggingLevel: String,
     metricsEnabled: Boolean,
     requireAuthorizationForCacheControl: Boolean,
-    throttlingBurstLimit: Double,
-    throttlingRateLimit: Double,
     unauthorizedCacheControlHeaderStrategy: String
   ): MethodSettingsSettings = {
-    val __obj = js.Dynamic.literal(cacheDataEncrypted = cacheDataEncrypted.asInstanceOf[js.Any], cacheTtlInSeconds = cacheTtlInSeconds.asInstanceOf[js.Any], cachingEnabled = cachingEnabled.asInstanceOf[js.Any], dataTraceEnabled = dataTraceEnabled.asInstanceOf[js.Any], loggingLevel = loggingLevel.asInstanceOf[js.Any], metricsEnabled = metricsEnabled.asInstanceOf[js.Any], requireAuthorizationForCacheControl = requireAuthorizationForCacheControl.asInstanceOf[js.Any], throttlingBurstLimit = throttlingBurstLimit.asInstanceOf[js.Any], throttlingRateLimit = throttlingRateLimit.asInstanceOf[js.Any], unauthorizedCacheControlHeaderStrategy = unauthorizedCacheControlHeaderStrategy.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(cacheDataEncrypted = cacheDataEncrypted.asInstanceOf[js.Any], cacheTtlInSeconds = cacheTtlInSeconds.asInstanceOf[js.Any], cachingEnabled = cachingEnabled.asInstanceOf[js.Any], dataTraceEnabled = dataTraceEnabled.asInstanceOf[js.Any], loggingLevel = loggingLevel.asInstanceOf[js.Any], metricsEnabled = metricsEnabled.asInstanceOf[js.Any], requireAuthorizationForCacheControl = requireAuthorizationForCacheControl.asInstanceOf[js.Any], unauthorizedCacheControlHeaderStrategy = unauthorizedCacheControlHeaderStrategy.asInstanceOf[js.Any])
     __obj.asInstanceOf[MethodSettingsSettings]
   }
   
@@ -113,12 +111,18 @@ object MethodSettingsSettings {
     def setRequireAuthorizationForCacheControl(value: Boolean): Self = this.set("requireAuthorizationForCacheControl", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setUnauthorizedCacheControlHeaderStrategy(value: String): Self = this.set("unauthorizedCacheControlHeaderStrategy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setThrottlingBurstLimit(value: Double): Self = this.set("throttlingBurstLimit", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThrottlingBurstLimit: Self = this.set("throttlingBurstLimit", js.undefined)
     
     @scala.inline
     def setThrottlingRateLimit(value: Double): Self = this.set("throttlingRateLimit", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUnauthorizedCacheControlHeaderStrategy(value: String): Self = this.set("unauthorizedCacheControlHeaderStrategy", value.asInstanceOf[js.Any])
+    def deleteThrottlingRateLimit: Self = this.set("throttlingRateLimit", js.undefined)
   }
 }

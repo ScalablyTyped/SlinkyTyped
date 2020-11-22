@@ -1478,7 +1478,7 @@ trait Window
   
   def resizeBy(x: Double, y: Double): Unit = js.native
   
-  def resizeTo(x: Double, y: Double): Unit = js.native
+  def resizeTo(width: Double, height: Double): Unit = js.native
   
   val screen: org.scalajs.dom.raw.Screen = js.native
   
@@ -1523,6 +1523,8 @@ trait Window
   val toolbar: BarProp = js.native
   
   val top: org.scalajs.dom.raw.Window = js.native
+  
+  val visualViewport: VisualViewport = js.native
   
   def webkitCancelAnimationFrame(handle: Double): Unit = js.native
   

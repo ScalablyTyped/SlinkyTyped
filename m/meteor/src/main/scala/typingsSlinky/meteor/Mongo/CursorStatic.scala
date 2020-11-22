@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait CursorStatic
-  extends Instantiable0[Cursor[js.Object]]
+  extends Instantiable0[Cursor[js.Object, js.Object]]

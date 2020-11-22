@@ -24,7 +24,7 @@ class Refund () extends js.Object {
   var amount_money: Money = js.native
   
   /**
-    * The time when the refund was created, in RFC 3339 format.
+    * The timestamp for when the refund was created, in RFC 3339 format.
     */
   var created_at: js.UndefOr[String] = js.native
   

@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetNodeStackTracesEnabledRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOM.SetAttributeValueRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `55` extends js.Object {
   
-  var paramsType: js.Array[SetNodeStackTracesEnabledRequest] = js.native
+  var paramsType: js.Array[SetAttributeValueRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `55` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetNodeStackTracesEnabledRequest], returnType: Unit): `55` = {
+  def apply(paramsType: js.Array[SetAttributeValueRequest], returnType: Unit): `55` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`55`]
   }
@@ -36,10 +36,10 @@ object `55` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetNodeStackTracesEnabledRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetAttributeValueRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetNodeStackTracesEnabledRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetAttributeValueRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

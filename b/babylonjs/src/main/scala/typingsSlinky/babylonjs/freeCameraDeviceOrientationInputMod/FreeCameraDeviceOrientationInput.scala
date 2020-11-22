@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 /**
   * Instantiates a new input
-  * @see http://doc.babylonjs.com/how_to/customizing_camera_inputs
+  * @see https://doc.babylonjs.com/how_to/customizing_camera_inputs
   */
 class FreeCameraDeviceOrientationInput () extends ICameraInput[FreeCamera] {
   

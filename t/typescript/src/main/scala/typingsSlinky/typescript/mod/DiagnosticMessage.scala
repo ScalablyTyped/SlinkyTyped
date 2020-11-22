@@ -15,6 +15,8 @@ trait DiagnosticMessage extends js.Object {
   
   var message: java.lang.String = js.native
   
+  var reportsDeprecated: js.UndefOr[js.Object] = js.native
+  
   var reportsUnnecessary: js.UndefOr[js.Object] = js.native
 }
 object DiagnosticMessage {
@@ -51,6 +53,12 @@ object DiagnosticMessage {
     
     @scala.inline
     def setMessage(value: java.lang.String): Self = this.set("message", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setReportsDeprecated(value: js.Object): Self = this.set("reportsDeprecated", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReportsDeprecated: Self = this.set("reportsDeprecated", js.undefined)
     
     @scala.inline
     def setReportsUnnecessary(value: js.Object): Self = this.set("reportsUnnecessary", value.asInstanceOf[js.Any])

@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RampTitle extends Object {
   
   /**
-    * The field name used in a visual variable of a renderer. This is used in the generated title of the corresponding ramp in the legend.
+    * The field name used in a visual variable of a renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#RampTitle)
     */
   var field: String = js.native
   
   /**
-    * If provided, the normalization field name used in a visual variable of a renderer. This is used in the generated title of the corresponding ramp in the legend.
+    * If provided, the normalization field name used in a visual variable of a renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#RampTitle)
     */

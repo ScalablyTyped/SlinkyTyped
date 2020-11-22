@@ -6,13 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.reactMarkdown.reactMarkdownStrings.left
-    - typingsSlinky.reactMarkdown.reactMarkdownStrings.right
-    - typingsSlinky.reactMarkdown.reactMarkdownStrings.center
-    - scala.Null
-  */
-  type AlignType = typingsSlinky.reactMarkdown.mod._AlignType | scala.Null
+  type AlignType = typingsSlinky.mdast.mod.AlignType
   
   type LinkTargetResolver = js.Function3[
     /* uri */ java.lang.String, 
@@ -21,13 +15,31 @@ package object mod {
     java.lang.String
   ]
   
-  type MdastPlugin = js.Function2[
-    /* node */ typingsSlinky.reactMarkdown.mod.MarkdownAbstractSyntaxTree, 
-    /* renderProps */ js.UndefOr[typingsSlinky.reactMarkdown.mod.RenderProps], 
-    typingsSlinky.reactMarkdown.mod.MarkdownAbstractSyntaxTree
-  ]
+  type MutuallyExclusive[T, U] = (T with typingsSlinky.reactMarkdown.mod.Not[U]) | (U with typingsSlinky.reactMarkdown.mod.Not[T])
   
-  type ReactMarkdown = slinky.core.ReactComponentClass[typingsSlinky.reactMarkdown.mod.ReactMarkdownProps]
+  type Not[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ key in keyof T ]:? never}
+    */ typingsSlinky.reactMarkdown.reactMarkdownStrings.Not with org.scalablytyped.runtime.TopLevel[js.Any]
+  
+  type Point = typingsSlinky.unist.mod.Point
+  
+  type Position = typingsSlinky.unist.mod.Position
+  
+  type ReactMarkdownProps = typingsSlinky.reactMarkdown.mod.ReactMarkdownPropsBase with (typingsSlinky.reactMarkdown.mod.MutuallyExclusive[
+    typingsSlinky.reactMarkdown.mod.ChildrenProp, 
+    typingsSlinky.reactMarkdown.mod.SourceProp
+  ]) with (typingsSlinky.reactMarkdown.mod.MutuallyExclusive[
+    typingsSlinky.reactMarkdown.mod.AllowedTypesProp, 
+    typingsSlinky.reactMarkdown.mod.DisallowedTypesProp
+  ]) with (typingsSlinky.reactMarkdown.mod.MutuallyExclusive[
+    typingsSlinky.reactMarkdown.mod.EscapeHtmlProp, 
+    typingsSlinky.reactMarkdown.mod.MutuallyExclusive[
+      typingsSlinky.reactMarkdown.mod.SkipHtmlProp, 
+      typingsSlinky.reactMarkdown.mod.AllowDangerousHtmlProp
+    ]
+  ])
+  
+  type ReferenceType = typingsSlinky.mdast.mod.ReferenceType
   
   type Renderer[T] = js.Function1[/* props */ T, slinky.core.facade.ReactElement]
   

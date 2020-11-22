@@ -14,11 +14,18 @@ trait Spec extends js.Object {
   
   var checks: js.UndefOr[js.Array[Check]] = js.native
   
+  var disableOtherRules: js.UndefOr[Boolean] = js.native
+  
   var locale: js.UndefOr[Locale] = js.native
   
   var reporter: js.UndefOr[ReporterVersion] = js.native
   
   var rules: js.UndefOr[js.Array[Rule]] = js.native
+  
+  var standards: js.UndefOr[Standards] = js.native
+  
+  // Deprecated - do not use.
+  var ver: js.UndefOr[String] = js.native
 }
 object Spec {
   
@@ -65,6 +72,12 @@ object Spec {
     def deleteChecks: Self = this.set("checks", js.undefined)
     
     @scala.inline
+    def setDisableOtherRules(value: Boolean): Self = this.set("disableOtherRules", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableOtherRules: Self = this.set("disableOtherRules", js.undefined)
+    
+    @scala.inline
     def setLocale(value: Locale): Self = this.set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -84,5 +97,17 @@ object Spec {
     
     @scala.inline
     def deleteRules: Self = this.set("rules", js.undefined)
+    
+    @scala.inline
+    def setStandards(value: Standards): Self = this.set("standards", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStandards: Self = this.set("standards", js.undefined)
+    
+    @scala.inline
+    def setVer(value: String): Self = this.set("ver", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVer: Self = this.set("ver", js.undefined)
   }
 }

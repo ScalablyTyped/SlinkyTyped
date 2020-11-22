@@ -5,15 +5,17 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticTouchEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.rcTrigger.interfaceMod.AnimationType
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcTrigger.interfaceMod.MobileConfig
 import typingsSlinky.rcTrigger.interfaceMod.Point
 import typingsSlinky.rcTrigger.interfaceMod.StretchType
 import typingsSlinky.rcTrigger.interfaceMod.TransitionNameType
+import typingsSlinky.rcTrigger.popupInnerMod.PopupInnerRef
 import typingsSlinky.rcTrigger.popupMod.PopupProps
-import typingsSlinky.rcTrigger.popupMod.default
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +29,7 @@ object Popup {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, PopupInnerRef] {
     
     @scala.inline
     def align(value: AlignType): this.type = set("align", value.asInstanceOf[js.Any])
@@ -46,6 +48,9 @@ object Popup {
     
     @scala.inline
     def mask(value: Boolean): this.type = set("mask", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def mobile(value: MobileConfig): this.type = set("mobile", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAlign(value: (/* element */ HTMLElement, /* align */ AlignType) => Unit): this.type = set("onAlign", js.Any.fromFunction2(value))
@@ -78,19 +83,19 @@ object Popup {
     def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PopupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: PopupProps with RefAttributes[PopupInnerRef]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
   def apply(
     animation: AnimationType,
     maskAnimation: AnimationType,
-    maskMotion: MotionType,
+    maskMotion: CSSMotionProps,
     maskTransitionName: TransitionNameType,
-    motion: MotionType,
+    motion: CSSMotionProps,
     prefixCls: String,
     transitionName: TransitionNameType
   ): Builder = {
     val __props = js.Dynamic.literal(animation = animation.asInstanceOf[js.Any], maskAnimation = maskAnimation.asInstanceOf[js.Any], maskMotion = maskMotion.asInstanceOf[js.Any], maskTransitionName = maskTransitionName.asInstanceOf[js.Any], motion = motion.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], transitionName = transitionName.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[PopupProps]))
+    new Builder(js.Array(this.component, __props.asInstanceOf[PopupProps with RefAttributes[PopupInnerRef]]))
   }
 }

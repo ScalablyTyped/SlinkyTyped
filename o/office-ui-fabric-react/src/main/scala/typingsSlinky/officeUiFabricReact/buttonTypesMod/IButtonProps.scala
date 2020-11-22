@@ -10,6 +10,7 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.baseButtonClassNamesMod.IButtonClassNames
 import typingsSlinky.officeUiFabricReact.baseButtonMod.BaseButton
 import typingsSlinky.officeUiFabricReact.buttonButtonMod.Button
@@ -20,8 +21,8 @@ import typingsSlinky.officeUiFabricReact.splitButtonClassNamesMod.ISplitButtonCl
 import typingsSlinky.react.mod.AllHTMLAttributes
 import typingsSlinky.react.mod.AnchorHTMLAttributes
 import typingsSlinky.react.mod.ButtonHTMLAttributes
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.uifabricMergeStyles.istyleMod.IStyle
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps
@@ -88,6 +89,12 @@ trait IButtonProps extends AllHTMLAttributes[
     * @deprecated Use `secondaryText` instead.
     */
   var description: js.UndefOr[IStyle] = js.native
+  
+  /**
+    * Optional callback to access the root DOM element.
+    * @deprecated Temporary solution which will be replaced with ref in the V8 release.
+    */
+  var elementRef: js.UndefOr[Ref[HTMLElement]] = js.native
   
   /**
     * Method to provide the classnames to style a button.
@@ -163,7 +170,7 @@ trait IButtonProps extends AllHTMLAttributes[
   var menuTriggerKeyCode: js.UndefOr[KeyCodes | Null] = js.native
   
   /**
-    * Callback that runs after Button's contextualmenu was closed (removed from the DOM)
+    * Callback that runs after Button's contextual menu was closed (removed from the DOM)
     */
   var onAfterMenuDismiss: js.UndefOr[js.Function0[Unit]] = js.native
   
@@ -410,6 +417,21 @@ object IButtonProps {
     
     @scala.inline
     def setDescriptionNull: Self = this.set("description", null)
+    
+    @scala.inline
+    def setElementRefRefObject(value: ReactRef[HTMLElement]): Self = this.set("elementRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setElementRefFunction1(value: /* instance */ HTMLElement | Null => Unit): Self = this.set("elementRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setElementRef(value: Ref[HTMLElement]): Self = this.set("elementRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteElementRef: Self = this.set("elementRef", js.undefined)
+    
+    @scala.inline
+    def setElementRefNull: Self = this.set("elementRef", null)
     
     @scala.inline
     def setGetClassNames(

@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsCore
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TypedArray
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsCore.tensorTypesMod.NamedTensorMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object nonMaxSuppressionImplMod extends js.Object {
   
-  def nonMaxSuppressionV3(
+  def nonMaxSuppressionV3Impl(
     boxes: TypedArray,
     scores: TypedArray,
     maxOutputSize: Double,
@@ -19,7 +19,16 @@ object nonMaxSuppressionImplMod extends js.Object {
     scoreThreshold: Double
   ): Tensor1D = js.native
   
-  def nonMaxSuppressionV5(
+  def nonMaxSuppressionV4Impl(
+    boxes: TypedArray,
+    scores: TypedArray,
+    maxOutputSize: Double,
+    iouThreshold: Double,
+    scoreThreshold: Double,
+    padToMaxOutputSize: Boolean
+  ): NamedTensorMap = js.native
+  
+  def nonMaxSuppressionV5Impl(
     boxes: TypedArray,
     scores: TypedArray,
     maxOutputSize: Double,

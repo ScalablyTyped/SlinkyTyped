@@ -12,6 +12,7 @@ trait BluetoothError extends js.Object {
     * | 错误码 | 错误信息 | 说明 |
     * | - | - | - |
     * | 0 | ok | 正常 |
+    * | -1 | already connet | 已连接 |
     * | 10000 | not init | 未初始化蓝牙适配器 |
     * | 10001 | not available | 当前蓝牙适配器不可用 |
     * | 10002 | no device | 没有找到指定设备 |
@@ -30,6 +31,7 @@ trait BluetoothError extends js.Object {
     * | 错误码 | 错误信息 | 说明 |
     * | - | - | - |
     * | 0 | ok | 正常 |
+    * | -1 | already connet | 已连接 |
     * | 10000 | not init | 未初始化蓝牙适配器 |
     * | 10001 | not available | 当前蓝牙适配器不可用 |
     * | 10002 | no device | 没有找到指定设备 |

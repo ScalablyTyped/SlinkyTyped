@@ -24,8 +24,8 @@ import typingsSlinky.babelPluginTester.babelPluginTesterStrings.root
 import typingsSlinky.babelPluginTester.babelPluginTesterStrings.script
 import typingsSlinky.babelPluginTester.babelPluginTesterStrings.unambiguous
 import typingsSlinky.babelPluginTester.babelPluginTesterStrings.upward
-import typingsSlinky.babelTraverse.mod.Node
 import typingsSlinky.babelTraverse.mod.NodePath
+import typingsSlinky.babelTypes.mod.Node
 import typingsSlinky.std.NonNullable
 import typingsSlinky.std.Record
 import scala.scalajs.js

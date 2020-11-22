@@ -15,6 +15,16 @@ trait CachesIscsiVolumeArgs extends js.Object {
   val gatewayArn: Input[String] = js.native
   
   /**
+    * Set to `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3.
+    */
+  val kmsEncrypted: js.UndefOr[Input[Boolean]] = js.native
+  
+  /**
+    * The Amazon Resource Name (ARN) of the AWS KMS key used for Amazon S3 server side encryption. Is required when `kmsEncrypted` is set.
+    */
+  val kmsKey: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * The network interface of the gateway on which to expose the iSCSI target. Only IPv4 addresses are accepted.
     */
   val networkInterfaceId: Input[String] = js.native
@@ -83,6 +93,18 @@ object CachesIscsiVolumeArgs {
     
     @scala.inline
     def setVolumeSizeInBytes(value: Input[Double]): Self = this.set("volumeSizeInBytes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKmsEncrypted(value: Input[Boolean]): Self = this.set("kmsEncrypted", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKmsEncrypted: Self = this.set("kmsEncrypted", js.undefined)
+    
+    @scala.inline
+    def setKmsKey(value: Input[String]): Self = this.set("kmsKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKmsKey: Self = this.set("kmsKey", js.undefined)
     
     @scala.inline
     def setSnapshotId(value: Input[String]): Self = this.set("snapshotId", value.asInstanceOf[js.Any])

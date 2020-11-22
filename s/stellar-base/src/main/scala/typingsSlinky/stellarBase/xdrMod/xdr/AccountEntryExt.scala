@@ -21,8 +21,8 @@ trait AccountEntryExt extends js.Object {
   @JSName("toXDR")
   def toXDR_raw(format: raw): Buffer = js.native
   
-  def v1(): AccountEntryV1 = js.native
-  def v1(value: AccountEntryV1): AccountEntryV1 = js.native
+  def v1(): AccountEntryExtensionV1 = js.native
+  def v1(value: AccountEntryExtensionV1): AccountEntryExtensionV1 = js.native
   
-  def value(): AccountEntryV1 | Unit = js.native
+  def value(): AccountEntryExtensionV1 | Unit = js.native
 }

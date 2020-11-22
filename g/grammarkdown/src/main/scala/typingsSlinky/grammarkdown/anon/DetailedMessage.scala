@@ -10,6 +10,8 @@ trait DetailedMessage extends js.Object {
   var detailedMessage: js.UndefOr[Boolean] = js.native
   
   var formatMessage: js.UndefOr[Boolean] = js.native
+  
+  var raw: js.UndefOr[Boolean] = js.native
 }
 object DetailedMessage {
   
@@ -45,5 +47,11 @@ object DetailedMessage {
     
     @scala.inline
     def deleteFormatMessage: Self = this.set("formatMessage", js.undefined)
+    
+    @scala.inline
+    def setRaw(value: Boolean): Self = this.set("raw", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRaw: Self = this.set("raw", js.undefined)
   }
 }

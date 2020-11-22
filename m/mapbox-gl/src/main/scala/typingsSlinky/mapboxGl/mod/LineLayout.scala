@@ -22,7 +22,7 @@ trait LineLayout
   
   var `line-round-limit`: js.UndefOr[Double | Expression] = js.native
   
-  var `line-sort-key`: js.UndefOr[Double] = js.native
+  var `line-sort-key`: js.UndefOr[Double | Expression] = js.native
 }
 object LineLayout {
   
@@ -72,7 +72,7 @@ object LineLayout {
     def `deleteLine-round-limit`: Self = this.set("line-round-limit", js.undefined)
     
     @scala.inline
-    def `setLine-sort-key`(value: Double): Self = this.set("line-sort-key", value.asInstanceOf[js.Any])
+    def `setLine-sort-key`(value: Double | Expression): Self = this.set("line-sort-key", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteLine-sort-key`: Self = this.set("line-sort-key", js.undefined)

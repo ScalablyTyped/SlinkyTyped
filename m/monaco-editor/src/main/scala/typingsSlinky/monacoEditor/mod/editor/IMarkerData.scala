@@ -1,6 +1,6 @@
 package typingsSlinky.monacoEditor.mod.editor
 
-import typingsSlinky.monacoEditor.anon.Link
+import typingsSlinky.monacoEditor.anon.Target
 import typingsSlinky.monacoEditor.mod.MarkerSeverity
 import typingsSlinky.monacoEditor.mod.MarkerTag
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IMarkerData extends js.Object {
   
-  var code: js.UndefOr[String | Link] = js.native
+  var code: js.UndefOr[String | Target] = js.native
   
   var endColumn: Double = js.native
   
@@ -79,7 +79,7 @@ object IMarkerData {
     def setStartLineNumber(value: Double): Self = this.set("startLineNumber", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCode(value: String | Link): Self = this.set("code", value.asInstanceOf[js.Any])
+    def setCode(value: String | Target): Self = this.set("code", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCode: Self = this.set("code", js.undefined)

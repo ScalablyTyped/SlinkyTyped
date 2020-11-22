@@ -1,6 +1,5 @@
 package typingsSlinky.multibase.mod
 
-import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,13 +8,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object decode extends js.Object {
   
-  def apply(bufOrString: String): Buffer = js.native
+  def apply(data: String): js.typedarray.Uint8Array = js.native
   /**
-    * Takes a buffer or string encoded with multibase header, decodes it and
+    * Takes a Uint8Array or string encoded with multibase header, decodes it and
     * returns the decoded buffer
     *
-    * @param bufOrString The data to be decoded.
+    * @param {Uint8Array|string} data
+    * @returns {Uint8Array}
+    * @throws {Error} Will throw if the encoding is not supported
     *
     */
-  def apply(bufOrString: Buffer): Buffer = js.native
+  def apply(data: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
 }

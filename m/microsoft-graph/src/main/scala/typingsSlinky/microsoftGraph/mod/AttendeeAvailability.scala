@@ -11,13 +11,13 @@ trait AttendeeAvailability extends js.Object {
     * The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's
     * a person.
     */
-  var attendee: js.UndefOr[AttendeeBase] = js.native
+  var attendee: js.UndefOr[NullableOption[AttendeeBase]] = js.native
   
   /**
     * The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere,
     * unknown.
     */
-  var availability: js.UndefOr[FreeBusyStatus] = js.native
+  var availability: js.UndefOr[NullableOption[FreeBusyStatus]] = js.native
 }
 object AttendeeAvailability {
   
@@ -43,15 +43,21 @@ object AttendeeAvailability {
     }
     
     @scala.inline
-    def setAttendee(value: AttendeeBase): Self = this.set("attendee", value.asInstanceOf[js.Any])
+    def setAttendee(value: NullableOption[AttendeeBase]): Self = this.set("attendee", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAttendee: Self = this.set("attendee", js.undefined)
     
     @scala.inline
-    def setAvailability(value: FreeBusyStatus): Self = this.set("availability", value.asInstanceOf[js.Any])
+    def setAttendeeNull: Self = this.set("attendee", null)
+    
+    @scala.inline
+    def setAvailability(value: NullableOption[FreeBusyStatus]): Self = this.set("availability", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAvailability: Self = this.set("availability", js.undefined)
+    
+    @scala.inline
+    def setAvailabilityNull: Self = this.set("availability", null)
   }
 }

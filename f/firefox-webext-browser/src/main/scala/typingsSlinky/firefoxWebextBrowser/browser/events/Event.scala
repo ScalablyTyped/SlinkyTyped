@@ -17,8 +17,7 @@ trait Event extends js.Object {
   /**
     * Registers rules to handle events.
     * @param eventName Name of the event this function affects.
-    * @param webViewInstanceId If provided, this is an integer that uniquely identfies the <webview> associated
-    *     with this function call.
+    * @param webViewInstanceId If provided, this is an integer that uniquely identfies the <webview> associated with this function call.
     * @param rules Rules to be registered. These do not replace previously registered rules.
     * @deprecated Unsupported on Firefox at this time.
     */
@@ -34,10 +33,8 @@ trait Event extends js.Object {
   /**
     * Returns currently registered rules.
     * @param eventName Name of the event this function affects.
-    * @param webViewInstanceId If provided, this is an integer that uniquely identfies the <webview> associated
-    *     with this function call.
-    * @param [ruleIdentifiers] If an array is passed, only rules with identifiers contained in this array are
-    *     returned.
+    * @param webViewInstanceId If provided, this is an integer that uniquely identfies the <webview> associated with this function call.
+    * @param [ruleIdentifiers] If an array is passed, only rules with identifiers contained in this array are returned.
     * @deprecated Unsupported on Firefox at this time.
     */
   var getRules: js.UndefOr[
@@ -67,10 +64,8 @@ trait Event extends js.Object {
   /**
     * Unregisters currently registered rules.
     * @param eventName Name of the event this function affects.
-    * @param webViewInstanceId If provided, this is an integer that uniquely identfies the <webview> associated
-    *     with this function call.
-    * @param [ruleIdentifiers] If an array is passed, only rules with identifiers contained in this array are
-    *     unregistered.
+    * @param webViewInstanceId If provided, this is an integer that uniquely identfies the <webview> associated with this function call.
+    * @param [ruleIdentifiers] If an array is passed, only rules with identifiers contained in this array are unregistered.
     * @deprecated Unsupported on Firefox at this time.
     */
   var removeRules: js.UndefOr[

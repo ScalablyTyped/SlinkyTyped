@@ -1,6 +1,6 @@
 package typingsSlinky.storybookVue
 
-import typingsSlinky.storybookVue.typesMod.RenderMainArgs
+import typingsSlinky.storybookClientApi.typesMod.RenderContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,5 +13,5 @@ object renderMod extends js.Object {
   
   val VALUES: /* "STORYBOOK_VALUES" */ String = js.native
   
-  def default(hasStoryFnSelectedKindSelectedStoryShowMainShowErrorShowExceptionForceRender: RenderMainArgs): Unit = js.native
+  def default(hasStoryFnKindNameArgsShowMainShowErrorShowExceptionForceRender: RenderContext): Unit = js.native
 }

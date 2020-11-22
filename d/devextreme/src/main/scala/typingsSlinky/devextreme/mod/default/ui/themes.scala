@@ -13,11 +13,22 @@ class themes ()
 @js.native
 object themes extends js.Object {
   
-  /** @name ui.themes.current() */
+  /**
+    * [descr:ui.themes.current()]
+    */
   def current(): String = js.native
-  /** @name ui.themes.current(themeName) */
+  /**
+    * [descr:ui.themes.current(themeName)]
+    */
   def current(themeName: String): Unit = js.native
   
-  /** @name ui.themes.ready(callback) */
+  /**
+    * [descr:ui.themes.initialized(callback)]
+    */
+  def initialized(callback: js.Function): Unit = js.native
+  
+  /**
+    * [descr:ui.themes.ready(callback)]
+    */
   def ready(callback: js.Function): Unit = js.native
 }

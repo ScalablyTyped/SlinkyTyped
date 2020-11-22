@@ -8,19 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration {
   
   // Not yet documented
-  var androidRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.native
+  var androidRestriction: js.UndefOr[NullableOption[DeviceEnrollmentPlatformRestriction]] = js.native
   
   // Not yet documented
-  var iosRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.native
+  var iosRestriction: js.UndefOr[NullableOption[DeviceEnrollmentPlatformRestriction]] = js.native
   
   // Not yet documented
-  var macOSRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.native
+  var macOSRestriction: js.UndefOr[NullableOption[DeviceEnrollmentPlatformRestriction]] = js.native
   
   // Not yet documented
-  var windowsMobileRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.native
+  var windowsMobileRestriction: js.UndefOr[NullableOption[DeviceEnrollmentPlatformRestriction]] = js.native
   
   // Not yet documented
-  var windowsRestriction: js.UndefOr[DeviceEnrollmentPlatformRestriction] = js.native
+  var windowsRestriction: js.UndefOr[NullableOption[DeviceEnrollmentPlatformRestriction]] = js.native
 }
 object DeviceEnrollmentPlatformRestrictionsConfiguration {
   
@@ -46,33 +46,48 @@ object DeviceEnrollmentPlatformRestrictionsConfiguration {
     }
     
     @scala.inline
-    def setAndroidRestriction(value: DeviceEnrollmentPlatformRestriction): Self = this.set("androidRestriction", value.asInstanceOf[js.Any])
+    def setAndroidRestriction(value: NullableOption[DeviceEnrollmentPlatformRestriction]): Self = this.set("androidRestriction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAndroidRestriction: Self = this.set("androidRestriction", js.undefined)
     
     @scala.inline
-    def setIosRestriction(value: DeviceEnrollmentPlatformRestriction): Self = this.set("iosRestriction", value.asInstanceOf[js.Any])
+    def setAndroidRestrictionNull: Self = this.set("androidRestriction", null)
+    
+    @scala.inline
+    def setIosRestriction(value: NullableOption[DeviceEnrollmentPlatformRestriction]): Self = this.set("iosRestriction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIosRestriction: Self = this.set("iosRestriction", js.undefined)
     
     @scala.inline
-    def setMacOSRestriction(value: DeviceEnrollmentPlatformRestriction): Self = this.set("macOSRestriction", value.asInstanceOf[js.Any])
+    def setIosRestrictionNull: Self = this.set("iosRestriction", null)
+    
+    @scala.inline
+    def setMacOSRestriction(value: NullableOption[DeviceEnrollmentPlatformRestriction]): Self = this.set("macOSRestriction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMacOSRestriction: Self = this.set("macOSRestriction", js.undefined)
     
     @scala.inline
-    def setWindowsMobileRestriction(value: DeviceEnrollmentPlatformRestriction): Self = this.set("windowsMobileRestriction", value.asInstanceOf[js.Any])
+    def setMacOSRestrictionNull: Self = this.set("macOSRestriction", null)
+    
+    @scala.inline
+    def setWindowsMobileRestriction(value: NullableOption[DeviceEnrollmentPlatformRestriction]): Self = this.set("windowsMobileRestriction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWindowsMobileRestriction: Self = this.set("windowsMobileRestriction", js.undefined)
     
     @scala.inline
-    def setWindowsRestriction(value: DeviceEnrollmentPlatformRestriction): Self = this.set("windowsRestriction", value.asInstanceOf[js.Any])
+    def setWindowsMobileRestrictionNull: Self = this.set("windowsMobileRestriction", null)
+    
+    @scala.inline
+    def setWindowsRestriction(value: NullableOption[DeviceEnrollmentPlatformRestriction]): Self = this.set("windowsRestriction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWindowsRestriction: Self = this.set("windowsRestriction", js.undefined)
+    
+    @scala.inline
+    def setWindowsRestrictionNull: Self = this.set("windowsRestriction", null)
   }
 }

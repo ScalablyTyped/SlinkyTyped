@@ -1,6 +1,8 @@
 package typingsSlinky.reactNativePermissions
 
 import typingsSlinky.reactNative.mod.Rationale
+import typingsSlinky.reactNativePermissions.typesMod.LocationAccuracy
+import typingsSlinky.reactNativePermissions.typesMod.LocationAccuracyOptions
 import typingsSlinky.reactNativePermissions.typesMod.NotificationOption
 import typingsSlinky.reactNativePermissions.typesMod.NotificationsResponse
 import typingsSlinky.reactNativePermissions.typesMod.Permission
@@ -10,7 +12,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-native-permissions/lib/typescript/contract", JSImport.Namespace)
+@JSImport("react-native-permissions/dist/typescript/contract", JSImport.Namespace)
 @js.native
 object contractMod extends js.Object {
   
@@ -18,6 +20,8 @@ object contractMod extends js.Object {
   trait Contract extends js.Object {
     
     def check(permission: Permission): js.Promise[PermissionStatus] = js.native
+    
+    def checkLocationAccuracy(): js.Promise[LocationAccuracy] = js.native
     
     def checkMultiple[P /* <: js.Array[Permission] */](permissions: P): js.Promise[
         Record[
@@ -28,10 +32,14 @@ object contractMod extends js.Object {
     
     def checkNotifications(): js.Promise[NotificationsResponse] = js.native
     
+    def openLimitedPhotoLibraryPicker(): js.Promise[Unit] = js.native
+    
     def openSettings(): js.Promise[Unit] = js.native
     
     def request(permission: Permission): js.Promise[PermissionStatus] = js.native
     def request(permission: Permission, rationale: Rationale): js.Promise[PermissionStatus] = js.native
+    
+    def requestLocationAccuracy(options: LocationAccuracyOptions): js.Promise[LocationAccuracy] = js.native
     
     def requestMultiple[P /* <: js.Array[Permission] */](permissions: P): js.Promise[
         Record[

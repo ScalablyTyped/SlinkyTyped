@@ -11,6 +11,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Texture protected ()
   extends typingsSlinky.three.textureMod.Texture {
+  /**
+  	 * @param [image]
+  	 * @param [mapping=THREE.Texture.DEFAULT_MAPPING]
+  	 * @param [wrapS=THREE.ClampToEdgeWrapping]
+  	 * @param [wrapT=THREE.ClampToEdgeWrapping]
+  	 * @param [magFilter=THREE.LinearFilter]
+  	 * @param [minFilter=THREE.LinearMipmapLinearFilter]
+  	 * @param [format=THREE.RGBAFormat]
+  	 * @param [type=THREE.UnsignedByteType]
+  	 * @param [anisotropy=1]
+  	 * @param [encoding=THREE.LinearEncoding]
+  	 */
   def this(
     image: js.UndefOr[HTMLImageElement | HTMLCanvasElement | HTMLVideoElement],
     mapping: js.UndefOr[typingsSlinky.three.constantsMod.Mapping],

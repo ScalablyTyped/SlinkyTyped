@@ -15,10 +15,10 @@ trait FileManager_ extends js.Object {
   /**
     * _Adds a tag to a file._
     *
-    * A tag can only be added to a file once. It is not possible to specify a color for the tag. You can create the tags using the Files app to specify the color and the add them to
+    * A tag can only be added to a file once. It is not possible to specify a color for the tag. You can create the tags using the Files app to specify the color and then add them to
     * files afterwards using the FileManager API.
     *
-    * The function will error if the file does not exist or if it exists in iCloud but have not been download. Use `fileExists(filePath)` to check if a file exists and
+    * The function will error if the file does not exist or if it exists in iCloud but has not been download. Use `fileExists(filePath)` to check if a file exists and
     * `downloadFileFromiCloud(filePath)` to download the file. Note that it is always safe to call `downloadFileFromiCloud(filePath)`, even if the file is stored locally on the device.
     * @param filePath - Path of file to add the tag to.
     * @param tag - Tag to add. This can be an existing tag or a new tag.
@@ -38,7 +38,7 @@ trait FileManager_ extends js.Object {
   /**
     * _Reads all file bookmarks created in settings._
     *
-    * File bookmarks are used to bookmark a file or a folder and read or write to it later. File bookmarks are created from Scriptables settings.
+    * File bookmarks are used to bookmark a file or a folder and read or written to it later. File bookmarks are created from Scriptables settings.
     *
     * This function returns all file bookmarks as an array of objects that take the following form.
     *
@@ -55,9 +55,9 @@ trait FileManager_ extends js.Object {
   /**
     * _Reads all tags from a file._
     *
-    * The tags are written from the file at the specified path. Tags can either be read added and removed using the Files app or using the APIs provided by a FileManager.
+    * The tags are read from the file at the specified path. Tags can either be read, added and removed using the Files app by using the APIs provided by a FileManager.
     *
-    * The function will error if the file does not exist or if it exists in iCloud but have not been download. Use `fileExists(filePath)` to check if a file exists and
+    * The function will error if the file does not exist or if it exists in iCloud but has not been download. Use `fileExists(filePath)` to check if a file exists and
     * `downloadFileFromiCloud(filePath)` to download the file. Note that it is always safe to call `downloadFileFromiCloud(filePath)`, even if the file is stored locally on the device.
     * @param filePath - Path of file to read tags from.
     * @see https://docs.scriptable.app/filemanager/#-alltags
@@ -93,6 +93,19 @@ trait FileManager_ extends js.Object {
     * @see https://docs.scriptable.app/filemanager/#-bookmarkedpath
     */
   def bookmarkedPath(name: String): String = js.native
+  
+  /**
+    * _Path of cache directory._
+    *
+    * Used to retrieve the path of a cache directory on disk. The operating system may at any time delete files stored in this directory and therefore you should not rely on it for long
+    * time storage.
+    *
+    * Data persisted in the cache directory will generally live longer than data persisted in a temporary directory.
+    *
+    * If you need long time storage, see documentsDirectory() or libraryDirectory(). This directory is not shared between the app, the action extension and Siri.
+    * @see https://docs.scriptable.app/filemanager/#-cachedirectory
+    */
+  def cacheDirectory(): String = js.native
   
   /**
     * _Copies a file._
@@ -137,7 +150,7 @@ trait FileManager_ extends js.Object {
   /**
     * _Download file from iCloud if necessary._
     *
-    * Downloads the file from iCloud if it have not already been downloaded. If you pass in a path to a file that is not stored in iCloud, the returned will be resolved immediately
+    * Downloads the file from iCloud if it has not already been downloaded. If you pass in a path to a file that is not stored in iCloud, the returned promise will be resolved immediately
     * making it safe to pass in any file path.
     * @param filePath - Path of file to download from iCloud.
     * @see https://docs.scriptable.app/filemanager/#-downloadfilefromicloud
@@ -145,7 +158,7 @@ trait FileManager_ extends js.Object {
   def downloadFileFromiCloud(filePath: String): js.Promise[Unit] = js.native
   
   /**
-    * _Checks if a file exists._
+    * _Checks if the file exists._
     *
     * Checks if the file exists at the specified file path. Checking this before moving or copying to a destination can be a good idea as those operations will replace any existing file
     * at the destination file path.
@@ -177,7 +190,7 @@ trait FileManager_ extends js.Object {
   /**
     * _Size of the file in kilobytes._
     *
-    * The returned value will be null if the file size cannot b read.
+    * The returned value will be null if the file size cannot be read.
     * @param filePath - Path of file.
     * @see https://docs.scriptable.app/filemanager/#-filesize
     */
@@ -200,9 +213,9 @@ trait FileManager_ extends js.Object {
   def isDirectory(path: String): Boolean = js.native
   
   /**
-    * _Checks if a file have been downloaded._
+    * _Checks if a file has been downloaded._
     *
-    * If a file is stored in iCloud and have not been downloaded, this function returns false. In that case, the file can be downloaded using `downloadFileFromiCloud(filePath`. If the
+    * If a file is stored in iCloud and it has not been downloaded, this function returns false. In that case, the file can be downloaded using `downloadFileFromiCloud(filePath`. If the
     * file is not stored in iCloud but rather locally on the device, this function returns true.
     *
     * The function returns false if the file does not exist. Check if a file exists using `fileExists(filePath)`
@@ -234,7 +247,7 @@ trait FileManager_ extends js.Object {
   /**
     * _Path of library directory._
     *
-    * Used to retrieve the path to the documents directory. The directory can be used for long time storage. Documents stored in this directory cannot be accessed using the Files app.
+    * Used to retrieve the path to the library directory. The directory can be used for long time storage. Documents stored in this directory cannot be accessed using the Files app.
     * @see https://docs.scriptable.app/filemanager/#-librarydirectory
     */
   def libraryDirectory(): String = js.native
@@ -272,7 +285,7 @@ trait FileManager_ extends js.Object {
     *
     * Reads the contents of the file specified by the file path as raw data. To read the file as a string see `readString(filePath)` and to read it as an image see `readImage(filePath)`.
     *
-    * The function will error if the file does not exist or if it exists in iCloud but have not been download. Use `fileExists(filePath)` to check if a file exists and
+    * The function will error if the file does not exist or if it exists in iCloud but has not been download. Use `fileExists(filePath)` to check if a file exists and
     * `downloadFileFromiCloud(filePath)` to download the file. Note that it is always safe to call `downloadFileFromiCloud(filePath)`, even if the file is stored locally on the device.
     * @param filePath - Path of the file to read.
     * @see https://docs.scriptable.app/filemanager/#-read
@@ -286,7 +299,7 @@ trait FileManager_ extends js.Object {
     *
     * The function will return `null` if the attribute does not exist.
     *
-    * The function will error if the file does not exist or if it exists in iCloud but have not been download. Use `fileExists(filePath)` to check if a file exists and
+    * The function will error if the file does not exist or if it exists in iCloud but has not been download. Use `fileExists(filePath)` to check if a file exists and
     * `downloadFileFromiCloud(filePath)` to download the file. Note that it is always safe to call `downloadFileFromiCloud(filePath)`, even if the file is stored locally on the device.
     * @param filePath - Path of file to read extended attribute from.
     * @param name - Name of the extended attribute to read.
@@ -297,9 +310,9 @@ trait FileManager_ extends js.Object {
   /**
     * _Read contents of a file as an image._
     *
-    * Reads the contents of the file specified by the file path and convert it to an image.
+    * Reads the contents of the file specified by the file path and converts it to an image.
     *
-    * The function will error if the file does not exist or if it exists in iCloud but have not been download. Use `fileExists(filePath)` to check if a file exists and
+    * The function will error if the file does not exist or if it exists in iCloud but has not been download. Use `fileExists(filePath)` to check if a file exists and
     * `downloadFileFromiCloud(filePath)` to download the file. Note that it is always safe to call `downloadFileFromiCloud(filePath)`, even if the file is stored locally on the device.
     * @param filePath - Path of the file to read.
     * @see https://docs.scriptable.app/filemanager/#-readimage
@@ -309,7 +322,7 @@ trait FileManager_ extends js.Object {
   /**
     * _Read contents of a file as string._
     *
-    * The function will error if the file does not exist or if it exists in iCloud but have not been download. Use `fileExists(filePath)` to check if a file exists and
+    * The function will error if the file does not exist or if it exists in iCloud but has not been download. Use `fileExists(filePath)` to check if a file exists and
     * `downloadFileFromiCloud(filePath)` to download the file. Note that it is always safe to call `downloadFileFromiCloud(filePath)`, even if the file is stored locally on the device.
     * @param filePath - Path of the file to read.
     * @see https://docs.scriptable.app/filemanager/#-readstring
@@ -330,7 +343,7 @@ trait FileManager_ extends js.Object {
     *
     * Extended attributes are metadata that can be stored on a file. Note that extended attributes are not synced with iCloud.
     *
-    * The function will error if the file does not exist or if it exists in iCloud but have not been download. Use `fileExists(filePath)` to check if a file exists and
+    * The function will error if the file does not exist or if it exists in iCloud but has not been download. Use `fileExists(filePath)` to check if a file exists and
     * `downloadFileFromiCloud(filePath)` to download the file. Note that it is always safe to call `downloadFileFromiCloud(filePath)`, even if the file is stored locally on the device.
     * @param filePath - Path of file to add an extended attribute to.
     * @param name - Name of the extended attribute to remove.
@@ -341,7 +354,7 @@ trait FileManager_ extends js.Object {
   /**
     * _Removes a tag from a file._
     *
-    * The function will error if the file does not exist or if it exists in iCloud but have not been download. Use `fileExists(filePath)` to check if a file exists and
+    * The function will error if the file does not exist or if it exists in iCloud but has not been download. Use `fileExists(filePath)` to check if a file exists and
     * `downloadFileFromiCloud(filePath)` to download the file. Note that it is always safe to call `downloadFileFromiCloud(filePath)`, even if the file is stored locally on the device.
     * @param filePath - Path of file to remove the tag from.
     * @param tag - Tag to remove.
@@ -352,8 +365,10 @@ trait FileManager_ extends js.Object {
   /**
     * _Path of temporary directory._
     *
-    * Used to retrieve the path of a temporary directory on disk. The operating system may at anytime delete files stored in this directory and therefore you should not rely on it for
-    * long time storage. If you need long time storage, see documentsDirectory() or libraryDirectory(). This directory is not shared between the app, the action extension and Siri.
+    * Used to retrieve the path of a temporary directory on disk. Data persisted in a temporary directory will generally live shorter than data persisted in the cache directory.
+    *
+    * The operating system may at any time delete files stored in this directory and therefore you should not rely on it for long time storage. If you need long time storage, see
+    * documentsDirectory() or libraryDirectory(). This directory is not shared between the app, the action extension and Siri.
     * @see https://docs.scriptable.app/filemanager/#-temporarydirectory
     */
   def temporaryDirectory(): String = js.native
@@ -371,7 +386,7 @@ trait FileManager_ extends js.Object {
     *
     * Extended attributes are metadata that can be stored on a file. Note that extended attributes are not synced with iCloud.
     *
-    * The function will error if the file does not exist or if it exists in iCloud but have not been download. Use `fileExists(filePath)` to check if a file exists and
+    * The function will error if the file does not exist or if it exists in iCloud but has not been download. Use `fileExists(filePath)` to check if a file exists and
     * `downloadFileFromiCloud(filePath)` to download the file. Note that it is always safe to call `downloadFileFromiCloud(filePath)`, even if the file is stored locally on the device.
     * @param filePath - Path of file to add an extended attribute to.
     * @param value - Value of the extended attribute.

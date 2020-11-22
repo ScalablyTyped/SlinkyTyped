@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "UncontrolledCarousel")
+@JSImport("reactstrap/es", "UncontrolledCarousel")
 @js.native
-class UncontrolledCarousel[T] ()
+class UncontrolledCarousel ()
   extends Component[UncontrolledCarouselProps, js.Object, js.Any]

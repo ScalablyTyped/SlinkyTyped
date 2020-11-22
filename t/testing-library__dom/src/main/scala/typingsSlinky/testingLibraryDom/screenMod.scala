@@ -122,6 +122,14 @@ object screenMod extends js.Object {
     
     var getByTitle: BoundFunction[GetByBoundAttribute] = js.native
     
+    /**
+      * Convenience function for `Testing Playground` which logs URL that
+      * can be opened in a browser
+      */
+    def logTestingPlaygroundURL(): Unit = js.native
+    def logTestingPlaygroundURL(element: Element): Unit = js.native
+    def logTestingPlaygroundURL(element: HTMLDocument): Unit = js.native
+    
     var queryAllByAltText: BoundFunction[AllByBoundAttribute] = js.native
     
     var queryAllByDisplayValue: BoundFunction[AllByBoundAttribute] = js.native

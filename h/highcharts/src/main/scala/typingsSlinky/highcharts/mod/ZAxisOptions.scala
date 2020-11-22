@@ -88,7 +88,9 @@ trait ZAxisOptions extends AxisOptions {
     * default string representations used for each unit. For intermediate
     * values, different units may be used, for example the `day` unit can be
     * used on midnight and `hour` unit be used for intermediate values on the
-    * same axis. For an overview of the replacement codes, see dateFormat.
+    * same axis.
+    *
+    * For an overview of the replacement codes, see dateFormat.
     *
     * Defaults to: (see online documentation for example)
     */

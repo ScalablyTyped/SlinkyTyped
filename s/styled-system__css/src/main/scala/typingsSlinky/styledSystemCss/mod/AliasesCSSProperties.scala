@@ -1,16 +1,16 @@
 package typingsSlinky.styledSystemCss.mod
 
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.Margin
-import typingsSlinky.csstype.mod.Property.MarginBottom
-import typingsSlinky.csstype.mod.Property.MarginLeft
-import typingsSlinky.csstype.mod.Property.MarginRight
-import typingsSlinky.csstype.mod.Property.MarginTop
-import typingsSlinky.csstype.mod.Property.Padding
-import typingsSlinky.csstype.mod.Property.PaddingBottom
-import typingsSlinky.csstype.mod.Property.PaddingLeft
-import typingsSlinky.csstype.mod.Property.PaddingRight
-import typingsSlinky.csstype.mod.Property.PaddingTop
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.MarginBottomProperty
+import typingsSlinky.csstype.mod.MarginLeftProperty
+import typingsSlinky.csstype.mod.MarginProperty
+import typingsSlinky.csstype.mod.MarginRightProperty
+import typingsSlinky.csstype.mod.MarginTopProperty
+import typingsSlinky.csstype.mod.PaddingBottomProperty
+import typingsSlinky.csstype.mod.PaddingLeftProperty
+import typingsSlinky.csstype.mod.PaddingProperty
+import typingsSlinky.csstype.mod.PaddingRightProperty
+import typingsSlinky.csstype.mod.PaddingTopProperty
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,7 +29,7 @@ trait AliasesCSSProperties extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/background-color
     */
-  var bg: js.UndefOr[BackgroundColor | js.Array[js.UndefOr[BackgroundColor]]] = js.native
+  var bg: js.UndefOr[BackgroundColorProperty | js.Array[BackgroundColorProperty]] = js.native
   
   /**
     * The **`margin`** CSS property sets the margin area on all four sides of an element. It is a shorthand for `margin-top`, `margin-right`, `margin-bottom`, and `margin-left`.
@@ -40,7 +40,7 @@ trait AliasesCSSProperties extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/margin
     */
-  var m: js.UndefOr[(Margin[Double | String]) | (js.Array[js.UndefOr[Margin[Double | String]]])] = js.native
+  var m: js.UndefOr[(MarginProperty[Double | String]) | (js.Array[MarginProperty[Double | String]])] = js.native
   
   /**
     * The **`marginX`** is shorthand for using both **`margin-left`** and **`margin-right`** CSS properties. They set the margin area on the left and right side of an element. A positive value
@@ -57,7 +57,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
     */
   var marginX: js.UndefOr[
-    (MarginLeft[Double | String]) | (js.Array[js.UndefOr[MarginLeft[Double | String]]])
+    (MarginLeftProperty[Double | String]) | (js.Array[MarginLeftProperty[Double | String]])
   ] = js.native
   
   /**
@@ -75,7 +75,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
     */
   var marginY: js.UndefOr[
-    (MarginTop[Double | String]) | (js.Array[js.UndefOr[MarginTop[Double | String]]])
+    (MarginTopProperty[Double | String]) | (js.Array[MarginTopProperty[Double | String]])
   ] = js.native
   
   /**
@@ -90,7 +90,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
     */
   var mb: js.UndefOr[
-    (MarginBottom[Double | String]) | (js.Array[js.UndefOr[MarginBottom[Double | String]]])
+    (MarginBottomProperty[Double | String]) | (js.Array[MarginBottomProperty[Double | String]])
   ] = js.native
   
   /**
@@ -105,7 +105,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-left
     */
   var ml: js.UndefOr[
-    (MarginLeft[Double | String]) | (js.Array[js.UndefOr[MarginLeft[Double | String]]])
+    (MarginLeftProperty[Double | String]) | (js.Array[MarginLeftProperty[Double | String]])
   ] = js.native
   
   /**
@@ -120,7 +120,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
     */
   var mr: js.UndefOr[
-    (MarginRight[Double | String]) | (js.Array[js.UndefOr[MarginRight[Double | String]]])
+    (MarginRightProperty[Double | String]) | (js.Array[MarginRightProperty[Double | String]])
   ] = js.native
   
   /**
@@ -135,7 +135,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-top
     */
   var mt: js.UndefOr[
-    (MarginTop[Double | String]) | (js.Array[js.UndefOr[MarginTop[Double | String]]])
+    (MarginTopProperty[Double | String]) | (js.Array[MarginTopProperty[Double | String]])
   ] = js.native
   
   /**
@@ -153,7 +153,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
     */
   var mx: js.UndefOr[
-    (MarginLeft[Double | String]) | (js.Array[js.UndefOr[MarginLeft[Double | String]]])
+    (MarginLeftProperty[Double | String]) | (js.Array[MarginLeftProperty[Double | String]])
   ] = js.native
   
   /**
@@ -171,7 +171,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
     */
   var my: js.UndefOr[
-    (MarginTop[Double | String]) | (js.Array[js.UndefOr[MarginTop[Double | String]]])
+    (MarginTopProperty[Double | String]) | (js.Array[MarginTopProperty[Double | String]])
   ] = js.native
   
   /**
@@ -183,7 +183,9 @@ trait AliasesCSSProperties extends js.Object {
     *
     * @see https://developer.mozilla.org/docs/Web/CSS/padding
     */
-  var p: js.UndefOr[(Padding[Double | String]) | (js.Array[js.UndefOr[Padding[Double | String]]])] = js.native
+  var p: js.UndefOr[
+    (PaddingProperty[Double | String]) | (js.Array[PaddingProperty[Double | String]])
+  ] = js.native
   
   /**
     * The **`paddingX`** is shorthand property for CSS properties **`padding-left`** and **`padding-right`**. They set the width of the padding area on the left and right side of an element.
@@ -199,7 +201,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-right
     */
   var paddingX: js.UndefOr[
-    (PaddingLeft[Double | String]) | (js.Array[js.UndefOr[PaddingLeft[Double | String]]])
+    (PaddingLeftProperty[Double | String]) | (js.Array[PaddingLeftProperty[Double | String]])
   ] = js.native
   
   /**
@@ -216,7 +218,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-bottom
     */
   var paddingY: js.UndefOr[
-    (PaddingTop[Double | String]) | (js.Array[js.UndefOr[PaddingTop[Double | String]]])
+    (PaddingTopProperty[Double | String]) | (js.Array[PaddingTopProperty[Double | String]])
   ] = js.native
   
   /**
@@ -231,7 +233,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-bottom
     */
   var pb: js.UndefOr[
-    (PaddingBottom[Double | String]) | (js.Array[js.UndefOr[PaddingBottom[Double | String]]])
+    (PaddingBottomProperty[Double | String]) | (js.Array[PaddingBottomProperty[Double | String]])
   ] = js.native
   
   /**
@@ -246,7 +248,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-left
     */
   var pl: js.UndefOr[
-    (PaddingLeft[Double | String]) | (js.Array[js.UndefOr[PaddingLeft[Double | String]]])
+    (PaddingLeftProperty[Double | String]) | (js.Array[PaddingLeftProperty[Double | String]])
   ] = js.native
   
   /**
@@ -261,7 +263,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-right
     */
   var pr: js.UndefOr[
-    (PaddingRight[Double | String]) | (js.Array[js.UndefOr[PaddingRight[Double | String]]])
+    (PaddingRightProperty[Double | String]) | (js.Array[PaddingRightProperty[Double | String]])
   ] = js.native
   
   /**
@@ -276,7 +278,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-top
     */
   var pt: js.UndefOr[
-    (PaddingTop[Double | String]) | (js.Array[js.UndefOr[PaddingTop[Double | String]]])
+    (PaddingTopProperty[Double | String]) | (js.Array[PaddingTopProperty[Double | String]])
   ] = js.native
   
   /**
@@ -293,7 +295,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-right
     */
   var px: js.UndefOr[
-    (PaddingLeft[Double | String]) | (js.Array[js.UndefOr[PaddingLeft[Double | String]]])
+    (PaddingLeftProperty[Double | String]) | (js.Array[PaddingLeftProperty[Double | String]])
   ] = js.native
   
   /**
@@ -310,7 +312,7 @@ trait AliasesCSSProperties extends js.Object {
     * @see https://developer.mozilla.org/docs/Web/CSS/padding-bottom
     */
   var py: js.UndefOr[
-    (PaddingTop[Double | String]) | (js.Array[js.UndefOr[PaddingTop[Double | String]]])
+    (PaddingTopProperty[Double | String]) | (js.Array[PaddingTopProperty[Double | String]])
   ] = js.native
 }
 object AliasesCSSProperties {
@@ -337,172 +339,174 @@ object AliasesCSSProperties {
     }
     
     @scala.inline
-    def setBgVarargs(value: js.UndefOr[BackgroundColor]*): Self = this.set("bg", js.Array(value :_*))
+    def setBgVarargs(value: BackgroundColorProperty*): Self = this.set("bg", js.Array(value :_*))
     
     @scala.inline
-    def setBg(value: BackgroundColor | js.Array[js.UndefOr[BackgroundColor]]): Self = this.set("bg", value.asInstanceOf[js.Any])
+    def setBg(value: BackgroundColorProperty | js.Array[BackgroundColorProperty]): Self = this.set("bg", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBg: Self = this.set("bg", js.undefined)
     
     @scala.inline
-    def setMVarargs(value: (js.UndefOr[Margin[Double | String]])*): Self = this.set("m", js.Array(value :_*))
+    def setMVarargs(value: (MarginProperty[Double | String])*): Self = this.set("m", js.Array(value :_*))
     
     @scala.inline
-    def setM(value: (Margin[Double | String]) | (js.Array[js.UndefOr[Margin[Double | String]]])): Self = this.set("m", value.asInstanceOf[js.Any])
+    def setM(value: (MarginProperty[Double | String]) | (js.Array[MarginProperty[Double | String]])): Self = this.set("m", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteM: Self = this.set("m", js.undefined)
     
     @scala.inline
-    def setMarginXVarargs(value: (js.UndefOr[MarginLeft[Double | String]])*): Self = this.set("marginX", js.Array(value :_*))
+    def setMarginXVarargs(value: (MarginLeftProperty[Double | String])*): Self = this.set("marginX", js.Array(value :_*))
     
     @scala.inline
-    def setMarginX(value: (MarginLeft[Double | String]) | (js.Array[js.UndefOr[MarginLeft[Double | String]]])): Self = this.set("marginX", value.asInstanceOf[js.Any])
+    def setMarginX(value: (MarginLeftProperty[Double | String]) | (js.Array[MarginLeftProperty[Double | String]])): Self = this.set("marginX", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMarginX: Self = this.set("marginX", js.undefined)
     
     @scala.inline
-    def setMarginYVarargs(value: (js.UndefOr[MarginTop[Double | String]])*): Self = this.set("marginY", js.Array(value :_*))
+    def setMarginYVarargs(value: (MarginTopProperty[Double | String])*): Self = this.set("marginY", js.Array(value :_*))
     
     @scala.inline
-    def setMarginY(value: (MarginTop[Double | String]) | (js.Array[js.UndefOr[MarginTop[Double | String]]])): Self = this.set("marginY", value.asInstanceOf[js.Any])
+    def setMarginY(value: (MarginTopProperty[Double | String]) | (js.Array[MarginTopProperty[Double | String]])): Self = this.set("marginY", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMarginY: Self = this.set("marginY", js.undefined)
     
     @scala.inline
-    def setMbVarargs(value: (js.UndefOr[MarginBottom[Double | String]])*): Self = this.set("mb", js.Array(value :_*))
+    def setMbVarargs(value: (MarginBottomProperty[Double | String])*): Self = this.set("mb", js.Array(value :_*))
     
     @scala.inline
-    def setMb(value: (MarginBottom[Double | String]) | (js.Array[js.UndefOr[MarginBottom[Double | String]]])): Self = this.set("mb", value.asInstanceOf[js.Any])
+    def setMb(value: (MarginBottomProperty[Double | String]) | (js.Array[MarginBottomProperty[Double | String]])): Self = this.set("mb", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMb: Self = this.set("mb", js.undefined)
     
     @scala.inline
-    def setMlVarargs(value: (js.UndefOr[MarginLeft[Double | String]])*): Self = this.set("ml", js.Array(value :_*))
+    def setMlVarargs(value: (MarginLeftProperty[Double | String])*): Self = this.set("ml", js.Array(value :_*))
     
     @scala.inline
-    def setMl(value: (MarginLeft[Double | String]) | (js.Array[js.UndefOr[MarginLeft[Double | String]]])): Self = this.set("ml", value.asInstanceOf[js.Any])
+    def setMl(value: (MarginLeftProperty[Double | String]) | (js.Array[MarginLeftProperty[Double | String]])): Self = this.set("ml", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMl: Self = this.set("ml", js.undefined)
     
     @scala.inline
-    def setMrVarargs(value: (js.UndefOr[MarginRight[Double | String]])*): Self = this.set("mr", js.Array(value :_*))
+    def setMrVarargs(value: (MarginRightProperty[Double | String])*): Self = this.set("mr", js.Array(value :_*))
     
     @scala.inline
-    def setMr(value: (MarginRight[Double | String]) | (js.Array[js.UndefOr[MarginRight[Double | String]]])): Self = this.set("mr", value.asInstanceOf[js.Any])
+    def setMr(value: (MarginRightProperty[Double | String]) | (js.Array[MarginRightProperty[Double | String]])): Self = this.set("mr", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMr: Self = this.set("mr", js.undefined)
     
     @scala.inline
-    def setMtVarargs(value: (js.UndefOr[MarginTop[Double | String]])*): Self = this.set("mt", js.Array(value :_*))
+    def setMtVarargs(value: (MarginTopProperty[Double | String])*): Self = this.set("mt", js.Array(value :_*))
     
     @scala.inline
-    def setMt(value: (MarginTop[Double | String]) | (js.Array[js.UndefOr[MarginTop[Double | String]]])): Self = this.set("mt", value.asInstanceOf[js.Any])
+    def setMt(value: (MarginTopProperty[Double | String]) | (js.Array[MarginTopProperty[Double | String]])): Self = this.set("mt", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMt: Self = this.set("mt", js.undefined)
     
     @scala.inline
-    def setMxVarargs(value: (js.UndefOr[MarginLeft[Double | String]])*): Self = this.set("mx", js.Array(value :_*))
+    def setMxVarargs(value: (MarginLeftProperty[Double | String])*): Self = this.set("mx", js.Array(value :_*))
     
     @scala.inline
-    def setMx(value: (MarginLeft[Double | String]) | (js.Array[js.UndefOr[MarginLeft[Double | String]]])): Self = this.set("mx", value.asInstanceOf[js.Any])
+    def setMx(value: (MarginLeftProperty[Double | String]) | (js.Array[MarginLeftProperty[Double | String]])): Self = this.set("mx", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMx: Self = this.set("mx", js.undefined)
     
     @scala.inline
-    def setMyVarargs(value: (js.UndefOr[MarginTop[Double | String]])*): Self = this.set("my", js.Array(value :_*))
+    def setMyVarargs(value: (MarginTopProperty[Double | String])*): Self = this.set("my", js.Array(value :_*))
     
     @scala.inline
-    def setMy(value: (MarginTop[Double | String]) | (js.Array[js.UndefOr[MarginTop[Double | String]]])): Self = this.set("my", value.asInstanceOf[js.Any])
+    def setMy(value: (MarginTopProperty[Double | String]) | (js.Array[MarginTopProperty[Double | String]])): Self = this.set("my", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMy: Self = this.set("my", js.undefined)
     
     @scala.inline
-    def setPVarargs(value: (js.UndefOr[Padding[Double | String]])*): Self = this.set("p", js.Array(value :_*))
+    def setPVarargs(value: (PaddingProperty[Double | String])*): Self = this.set("p", js.Array(value :_*))
     
     @scala.inline
-    def setP(value: (Padding[Double | String]) | (js.Array[js.UndefOr[Padding[Double | String]]])): Self = this.set("p", value.asInstanceOf[js.Any])
+    def setP(value: (PaddingProperty[Double | String]) | (js.Array[PaddingProperty[Double | String]])): Self = this.set("p", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteP: Self = this.set("p", js.undefined)
     
     @scala.inline
-    def setPaddingXVarargs(value: (js.UndefOr[PaddingLeft[Double | String]])*): Self = this.set("paddingX", js.Array(value :_*))
+    def setPaddingXVarargs(value: (PaddingLeftProperty[Double | String])*): Self = this.set("paddingX", js.Array(value :_*))
     
     @scala.inline
-    def setPaddingX(value: (PaddingLeft[Double | String]) | (js.Array[js.UndefOr[PaddingLeft[Double | String]]])): Self = this.set("paddingX", value.asInstanceOf[js.Any])
+    def setPaddingX(value: (PaddingLeftProperty[Double | String]) | (js.Array[PaddingLeftProperty[Double | String]])): Self = this.set("paddingX", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePaddingX: Self = this.set("paddingX", js.undefined)
     
     @scala.inline
-    def setPaddingYVarargs(value: (js.UndefOr[PaddingTop[Double | String]])*): Self = this.set("paddingY", js.Array(value :_*))
+    def setPaddingYVarargs(value: (PaddingTopProperty[Double | String])*): Self = this.set("paddingY", js.Array(value :_*))
     
     @scala.inline
-    def setPaddingY(value: (PaddingTop[Double | String]) | (js.Array[js.UndefOr[PaddingTop[Double | String]]])): Self = this.set("paddingY", value.asInstanceOf[js.Any])
+    def setPaddingY(value: (PaddingTopProperty[Double | String]) | (js.Array[PaddingTopProperty[Double | String]])): Self = this.set("paddingY", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePaddingY: Self = this.set("paddingY", js.undefined)
     
     @scala.inline
-    def setPbVarargs(value: (js.UndefOr[PaddingBottom[Double | String]])*): Self = this.set("pb", js.Array(value :_*))
+    def setPbVarargs(value: (PaddingBottomProperty[Double | String])*): Self = this.set("pb", js.Array(value :_*))
     
     @scala.inline
-    def setPb(value: (PaddingBottom[Double | String]) | (js.Array[js.UndefOr[PaddingBottom[Double | String]]])): Self = this.set("pb", value.asInstanceOf[js.Any])
+    def setPb(
+      value: (PaddingBottomProperty[Double | String]) | (js.Array[PaddingBottomProperty[Double | String]])
+    ): Self = this.set("pb", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePb: Self = this.set("pb", js.undefined)
     
     @scala.inline
-    def setPlVarargs(value: (js.UndefOr[PaddingLeft[Double | String]])*): Self = this.set("pl", js.Array(value :_*))
+    def setPlVarargs(value: (PaddingLeftProperty[Double | String])*): Self = this.set("pl", js.Array(value :_*))
     
     @scala.inline
-    def setPl(value: (PaddingLeft[Double | String]) | (js.Array[js.UndefOr[PaddingLeft[Double | String]]])): Self = this.set("pl", value.asInstanceOf[js.Any])
+    def setPl(value: (PaddingLeftProperty[Double | String]) | (js.Array[PaddingLeftProperty[Double | String]])): Self = this.set("pl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePl: Self = this.set("pl", js.undefined)
     
     @scala.inline
-    def setPrVarargs(value: (js.UndefOr[PaddingRight[Double | String]])*): Self = this.set("pr", js.Array(value :_*))
+    def setPrVarargs(value: (PaddingRightProperty[Double | String])*): Self = this.set("pr", js.Array(value :_*))
     
     @scala.inline
-    def setPr(value: (PaddingRight[Double | String]) | (js.Array[js.UndefOr[PaddingRight[Double | String]]])): Self = this.set("pr", value.asInstanceOf[js.Any])
+    def setPr(value: (PaddingRightProperty[Double | String]) | (js.Array[PaddingRightProperty[Double | String]])): Self = this.set("pr", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePr: Self = this.set("pr", js.undefined)
     
     @scala.inline
-    def setPtVarargs(value: (js.UndefOr[PaddingTop[Double | String]])*): Self = this.set("pt", js.Array(value :_*))
+    def setPtVarargs(value: (PaddingTopProperty[Double | String])*): Self = this.set("pt", js.Array(value :_*))
     
     @scala.inline
-    def setPt(value: (PaddingTop[Double | String]) | (js.Array[js.UndefOr[PaddingTop[Double | String]]])): Self = this.set("pt", value.asInstanceOf[js.Any])
+    def setPt(value: (PaddingTopProperty[Double | String]) | (js.Array[PaddingTopProperty[Double | String]])): Self = this.set("pt", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePt: Self = this.set("pt", js.undefined)
     
     @scala.inline
-    def setPxVarargs(value: (js.UndefOr[PaddingLeft[Double | String]])*): Self = this.set("px", js.Array(value :_*))
+    def setPxVarargs(value: (PaddingLeftProperty[Double | String])*): Self = this.set("px", js.Array(value :_*))
     
     @scala.inline
-    def setPx(value: (PaddingLeft[Double | String]) | (js.Array[js.UndefOr[PaddingLeft[Double | String]]])): Self = this.set("px", value.asInstanceOf[js.Any])
+    def setPx(value: (PaddingLeftProperty[Double | String]) | (js.Array[PaddingLeftProperty[Double | String]])): Self = this.set("px", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePx: Self = this.set("px", js.undefined)
     
     @scala.inline
-    def setPyVarargs(value: (js.UndefOr[PaddingTop[Double | String]])*): Self = this.set("py", js.Array(value :_*))
+    def setPyVarargs(value: (PaddingTopProperty[Double | String])*): Self = this.set("py", js.Array(value :_*))
     
     @scala.inline
-    def setPy(value: (PaddingTop[Double | String]) | (js.Array[js.UndefOr[PaddingTop[Double | String]]])): Self = this.set("py", value.asInstanceOf[js.Any])
+    def setPy(value: (PaddingTopProperty[Double | String]) | (js.Array[PaddingTopProperty[Double | String]])): Self = this.set("py", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePy: Self = this.set("py", js.undefined)

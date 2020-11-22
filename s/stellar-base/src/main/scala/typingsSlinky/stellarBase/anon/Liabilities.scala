@@ -1,6 +1,6 @@
 package typingsSlinky.stellarBase.anon
 
-import typingsSlinky.stellarBase.xdrMod.xdr.AccountEntryV1Ext
+import typingsSlinky.stellarBase.xdrMod.xdr.AccountEntryExtensionV1Ext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Liabilities extends js.Object {
   
-  var ext: AccountEntryV1Ext = js.native
+  var ext: AccountEntryExtensionV1Ext = js.native
   
   var liabilities: typingsSlinky.stellarBase.xdrMod.xdr.Liabilities = js.native
 }
 object Liabilities {
   
   @scala.inline
-  def apply(ext: AccountEntryV1Ext, liabilities: typingsSlinky.stellarBase.xdrMod.xdr.Liabilities): Liabilities = {
+  def apply(ext: AccountEntryExtensionV1Ext, liabilities: typingsSlinky.stellarBase.xdrMod.xdr.Liabilities): Liabilities = {
     val __obj = js.Dynamic.literal(ext = ext.asInstanceOf[js.Any], liabilities = liabilities.asInstanceOf[js.Any])
     __obj.asInstanceOf[Liabilities]
   }
@@ -36,7 +36,7 @@ object Liabilities {
     }
     
     @scala.inline
-    def setExt(value: AccountEntryV1Ext): Self = this.set("ext", value.asInstanceOf[js.Any])
+    def setExt(value: AccountEntryExtensionV1Ext): Self = this.set("ext", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLiabilities(value: typingsSlinky.stellarBase.xdrMod.xdr.Liabilities): Self = this.set("liabilities", value.asInstanceOf[js.Any])

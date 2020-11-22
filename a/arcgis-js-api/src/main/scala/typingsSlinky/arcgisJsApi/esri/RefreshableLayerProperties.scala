@@ -8,11 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RefreshableLayerProperties extends js.Object {
   
   /**
-    * Refresh interval of the layer in minutes. Value of `0` indicates no refresh.
+    * Refresh interval of the layer in minutes.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-RefreshableLayer.html#refreshInterval)
-    *
-    * @default 0
     */
   var refreshInterval: js.UndefOr[Double] = js.native
 }

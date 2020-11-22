@@ -37,7 +37,7 @@ class Secret protected () extends CustomResource {
   val description: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * Specifies the ARN or alias of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
+    * Specifies the ARN or Id of the AWS KMS customer master key (CMK) to be used to encrypt the secret values in the versions stored in this secret. If you don't specify this value, then Secrets Manager defaults to using the AWS account's default CMK (the one named `aws/secretsmanager`). If the default KMS CMK with that name doesn't yet exist, then AWS Secrets Manager creates it for you automatically the first time.
     */
   val kmsKeyId: Output_[js.UndefOr[String]] = js.native
   
@@ -54,7 +54,7 @@ class Secret protected () extends CustomResource {
   /**
     * A valid JSON document representing a [resource policy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html).
     */
-  val policy: Output_[js.UndefOr[String]] = js.native
+  val policy: Output_[String] = js.native
   
   /**
     * Specifies the number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.

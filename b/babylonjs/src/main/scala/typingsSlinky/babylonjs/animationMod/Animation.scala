@@ -311,6 +311,9 @@ class Animation protected () extends js.Object {
     */
   def sizeInterpolateFunction(startValue: Size, endValue: Size, gradient: Double): Size = js.native
   
+  /** Snippet ID if the animation was created from the snippet server */
+  var snippetId: String = js.native
+  
   /**Property to animate */
   var targetProperty: String = js.native
   
@@ -667,6 +670,13 @@ object Animation extends js.Object {
   def CreateAnimation(property: String, animationType: Double, framePerSecond: Double, easingFunction: EasingFunction): Animation = js.native
   
   /**
+    * Creates an animation or an array of animations from a snippet saved by the Inspector
+    * @param snippetId defines the snippet to load
+    * @returns a promise that will resolve to the new animation or a new array of animations
+    */
+  def CreateFromSnippetAsync(snippetId: String): js.Promise[Animation | js.Array[Animation]] = js.native
+  
+  /**
     * Creates a new animation, merges it with the existing animations and starts it
     * @param name Name of the animation
     * @param node Node which contains the scene that begins the animations
@@ -771,11 +781,111 @@ object Animation extends js.Object {
   ): Nullable[Animatable] = js.native
   
   /**
+    * Convert the keyframes for all animations belonging to the group to be relative to a given reference frame.
+    * @param sourceAnimation defines the Animation containing keyframes to convert
+    * @param referenceFrame defines the frame that keyframes in the range will be relative to
+    * @param range defines the name of the AnimationRange belonging to the Animation to convert
+    * @param cloneOriginal defines whether or not to clone the animation and convert the clone or convert the original animation (default is false)
+    * @param clonedName defines the name of the resulting cloned Animation if cloneOriginal is true
+    * @returns a new Animation if cloneOriginal is true or the original Animation if cloneOriginal is false
+    */
+  def MakeAnimationAdditive(sourceAnimation: Animation): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: js.UndefOr[scala.Nothing],
+    clonedName: String
+  ): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: Boolean
+  ): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: Boolean,
+    clonedName: String
+  ): Animation = js.native
+  def MakeAnimationAdditive(sourceAnimation: Animation, referenceFrame: js.UndefOr[scala.Nothing], range: String): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: String,
+    cloneOriginal: js.UndefOr[scala.Nothing],
+    clonedName: String
+  ): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: String,
+    cloneOriginal: Boolean
+  ): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: String,
+    cloneOriginal: Boolean,
+    clonedName: String
+  ): Animation = js.native
+  def MakeAnimationAdditive(sourceAnimation: Animation, referenceFrame: Double): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: Double,
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: js.UndefOr[scala.Nothing],
+    clonedName: String
+  ): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: Double,
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: Boolean
+  ): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: Double,
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: Boolean,
+    clonedName: String
+  ): Animation = js.native
+  def MakeAnimationAdditive(sourceAnimation: Animation, referenceFrame: Double, range: String): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: Double,
+    range: String,
+    cloneOriginal: js.UndefOr[scala.Nothing],
+    clonedName: String
+  ): Animation = js.native
+  def MakeAnimationAdditive(sourceAnimation: Animation, referenceFrame: Double, range: String, cloneOriginal: Boolean): Animation = js.native
+  def MakeAnimationAdditive(
+    sourceAnimation: Animation,
+    referenceFrame: Double,
+    range: String,
+    cloneOriginal: Boolean,
+    clonedName: String
+  ): Animation = js.native
+  
+  /**
     * Parses an animation object and creates an animation
     * @param parsedAnimation Parsed animation object
     * @returns Animation object
     */
   def Parse(parsedAnimation: js.Any): Animation = js.native
+  
+  /**
+    * Creates a new animation or an array of animations from a snippet saved in a remote file
+    * @param name defines the name of the animation to create (can be null or empty to use the one from the json data)
+    * @param url defines the url to load from
+    * @returns a promise that will resolve to the new animation or an array of animations
+    */
+  def ParseFromFileAsync(name: Nullable[String], url: String): js.Promise[Animation | js.Array[Animation]] = js.native
+  
+  /** Define the Url to load snippets */
+  var SnippetUrl: String = js.native
   
   /**
     * Transition property of an host to the target Value

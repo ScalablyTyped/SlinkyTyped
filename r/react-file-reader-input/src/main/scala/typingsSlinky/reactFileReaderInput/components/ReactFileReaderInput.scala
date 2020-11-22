@@ -26,8 +26,13 @@ import typingsSlinky.reactFileReaderInput.mod.Format
 import typingsSlinky.reactFileReaderInput.mod.Props
 import typingsSlinky.reactFileReaderInput.mod.Result
 import typingsSlinky.reactFileReaderInput.mod.^
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`additions removals`
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`additions text`
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`inline`
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`removals additions`
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`removals text`
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`text additions`
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.`text removals`
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.additions
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.all
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.ascending
@@ -38,8 +43,11 @@ import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.date
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.decimal
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.descending
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.dialog
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.done
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.email
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.enter
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.execute
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.go
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.grammar
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.grid
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.horizontal
@@ -51,6 +59,7 @@ import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.location
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.menu
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.mixed
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.move
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.next
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.no
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.none
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.numeric
@@ -60,8 +69,10 @@ import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.other
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.page
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.polite
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.popup
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.previous
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.removals
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.search
+import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.send
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.spelling
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.step
 import typingsSlinky.reactFileReaderInput.reactFileReaderInputStrings.tel
@@ -204,7 +215,9 @@ object ReactFileReaderInput {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -304,6 +317,9 @@ object ReactFileReaderInput {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])

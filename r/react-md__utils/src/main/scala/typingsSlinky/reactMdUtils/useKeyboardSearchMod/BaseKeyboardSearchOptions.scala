@@ -3,7 +3,7 @@ package typingsSlinky.reactMdUtils.useKeyboardSearchMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.SyntheticKeyboardEvent
 import typingsSlinky.react.mod.KeyboardEventHandler
-import typingsSlinky.reactMdUtils.findMatchIndexMod.FindMatchIndex
+import typingsSlinky.reactMdUtils.findMatchIndexMod.FindMatchIndex_
 import typingsSlinky.reactMdUtils.utilsMod.BaseSearchOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +16,7 @@ trait BaseKeyboardSearchOptions[D, E /* <: HTMLElement */] extends BaseSearchOpt
     * The function used to find a match index within the `items` list. You most
     * likely won't want to change this.
     */
-  var findMatchIndex: js.UndefOr[FindMatchIndex] = js.native
+  var findMatchIndex: js.UndefOr[FindMatchIndex_] = js.native
   
   /**
     * The list of items that should be searched whenever the user types a letter.

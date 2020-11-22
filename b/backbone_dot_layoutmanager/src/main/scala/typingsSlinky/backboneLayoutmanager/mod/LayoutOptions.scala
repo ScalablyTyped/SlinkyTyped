@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LayoutOptions[TModel /* <: Model[_, ModelSetOptions] */] extends ViewOptions[TModel] {
+trait LayoutOptions[TModel /* <: Model[_, ModelSetOptions, js.Object] */] extends ViewOptions[TModel] {
   
   var template: js.UndefOr[String] = js.native
   
@@ -19,13 +19,13 @@ trait LayoutOptions[TModel /* <: Model[_, ModelSetOptions] */] extends ViewOptio
 object LayoutOptions {
   
   @scala.inline
-  def apply[TModel /* <: Model[_, ModelSetOptions] */](): LayoutOptions[TModel] = {
+  def apply[TModel /* <: Model[_, ModelSetOptions, js.Object] */](): LayoutOptions[TModel] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[LayoutOptions[TModel]]
   }
   
   @scala.inline
-  implicit class LayoutOptionsOps[Self <: LayoutOptions[_], TModel /* <: Model[_, ModelSetOptions] */] (val x: Self with LayoutOptions[TModel]) extends AnyVal {
+  implicit class LayoutOptionsOps[Self <: LayoutOptions[_], TModel /* <: Model[_, ModelSetOptions, js.Object] */] (val x: Self with LayoutOptions[TModel]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

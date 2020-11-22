@@ -9,6 +9,7 @@ import typingsSlinky.c3.anon.Done
 import typingsSlinky.c3.anon.Enable
 import typingsSlinky.c3.anon.Height
 import typingsSlinky.c3.anon.Hide
+import typingsSlinky.c3.anon.IsShown
 import typingsSlinky.c3.anon.Labels
 import typingsSlinky.c3.anon.Names
 import scala.scalajs.js
@@ -173,6 +174,8 @@ trait ChartAPI extends js.Object {
   def show(targetIds: js.UndefOr[ArrayOrString], options: ShowHideOptions): Unit = js.native
   def show(targetIds: ArrayOrString): Unit = js.native
   
+  var subchart: IsShown = js.native
+  
   /**
     * This API toggles (shows or hides) specified targets.
     * @param targetIds You can specify multiple data sets by giving an array of ID strings. If no argument is given, all of data will be toggled.
@@ -225,6 +228,7 @@ trait ChartAPI extends js.Object {
     */
   def x(): StringDictionary[PrimitiveArray] = js.native
   def x(x: StringDictionary[PrimitiveArray]): StringDictionary[PrimitiveArray] = js.native
+  def x(x: PrimitiveArray): StringDictionary[PrimitiveArray] = js.native
   
   /**
     * Update the grid lines.

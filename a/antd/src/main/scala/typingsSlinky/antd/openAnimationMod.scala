@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("antd/lib/_util/openAnimation", JSImport.Namespace)
+@JSImport("antd/lib/collapse/openAnimation", JSImport.Namespace)
 @js.native
 object openAnimationMod extends js.Object {
   

@@ -13,6 +13,7 @@ import typingsSlinky.astTypes.kindsMod.CommentKind
 import typingsSlinky.astTypes.kindsMod.DeclarationKind
 import typingsSlinky.astTypes.kindsMod.DecoratorKind
 import typingsSlinky.astTypes.kindsMod.ExpressionKind
+import typingsSlinky.astTypes.kindsMod.FlowPredicateKind
 import typingsSlinky.astTypes.kindsMod.FunctionKind
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.kindsMod.LiteralKind
@@ -28,10 +29,11 @@ import typingsSlinky.astTypes.kindsMod.TypeParameterDeclarationKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Declaration, 'type'> */
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Function, 'type' | 'body'> */
+@js.native
 trait ClassMethod
   extends ASTNode
      with DeclarationKind
@@ -39,31 +41,53 @@ trait ClassMethod
      with NodeKind
      with PrintableKind
      with StatementKind {
-  var `abstract`: js.UndefOr[Boolean | Null] = js.undefined
-  var access: js.UndefOr[public | `private` | `protected` | Null] = js.undefined
-  var accessibility: js.UndefOr[public | `private` | `protected` | Null] = js.undefined
-  var async: js.UndefOr[Boolean] = js.undefined
-  var body: BlockStatementKind
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var computed: js.UndefOr[Boolean] = js.undefined
-  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.undefined
-  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.undefined
-  var expression: js.UndefOr[Boolean] = js.undefined
-  var generator: js.UndefOr[Boolean] = js.undefined
-  var id: js.UndefOr[IdentifierKind] = js.undefined
-  var key: LiteralKind | IdentifierKind | ExpressionKind
-  var kind: js.UndefOr[get | set | method | constructor] = js.undefined
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var optional: js.UndefOr[Boolean | Null] = js.undefined
-  var params: js.Array[PatternKind]
-  var rest: js.UndefOr[IdentifierKind] = js.undefined
-  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind] = js.undefined
-  var static: js.UndefOr[Boolean | Null] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassMethod
-  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind] = js.undefined
+  
+  var `abstract`: js.UndefOr[Boolean | Null] = js.native
+  
+  var access: js.UndefOr[public | `private` | `protected` | Null] = js.native
+  
+  var accessibility: js.UndefOr[public | `private` | `protected` | Null] = js.native
+  
+  var async: js.UndefOr[Boolean] = js.native
+  
+  var body: BlockStatementKind = js.native
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var computed: js.UndefOr[Boolean] = js.native
+  
+  var decorators: js.UndefOr[js.Array[DecoratorKind] | Null] = js.native
+  
+  var defaults: js.UndefOr[js.Array[ExpressionKind | Null]] = js.native
+  
+  var expression: js.UndefOr[Boolean] = js.native
+  
+  var generator: js.UndefOr[Boolean] = js.native
+  
+  var id: js.UndefOr[IdentifierKind | Null] = js.native
+  
+  var key: LiteralKind | IdentifierKind | ExpressionKind = js.native
+  
+  var kind: js.UndefOr[get | set | method | constructor] = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var optional: js.UndefOr[Boolean | Null] = js.native
+  
+  var params: js.Array[PatternKind] = js.native
+  
+  var predicate: js.UndefOr[FlowPredicateKind | Null] = js.native
+  
+  var rest: js.UndefOr[IdentifierKind | Null] = js.native
+  
+  var returnType: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind | Null] = js.native
+  
+  var static: js.UndefOr[Boolean | Null] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassMethod = js.native
+  
+  var typeParameters: js.UndefOr[TypeParameterDeclarationKind | TSTypeParameterDeclarationKind | Null] = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.ClassMethod")
 @js.native
 object ClassMethod extends TopLevel[Type[ClassMethod]]
-

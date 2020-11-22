@@ -2,7 +2,7 @@ package typingsSlinky.blueprintjsCore.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.blueprintjsCore.resizeSensorMod.IResizeEntry
+import typingsSlinky.blueprintjsCore.resizeObserverTypesMod.IResizeEntry
 import typingsSlinky.blueprintjsCore.resizeSensorMod.IResizeSensorProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -14,8 +14,10 @@ import org.scalajs.dom.raw.HTMLSpanElement
 import org.scalajs.dom.raw.HTMLTableElement
 import org.scalajs.dom.raw.HTMLTitleElement
 import org.scalajs.dom.raw.HTMLUListElement
+import slinky.core.facade.ReactElement
 import typingsSlinky.emotionStyledBase.mod.StyledComponent
 import typingsSlinky.react.mod.BlockquoteHTMLAttributes
+import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.ImgHTMLAttributes
@@ -39,7 +41,11 @@ object documentFormattingMod extends js.Object {
     Theme
   ] = js.native
   
-  val Code: StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement], js.Object, Theme] = js.native
+  def Code(
+    hasClassNameProps: ComponentProps[
+      StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement], js.Object, Theme]
+    ]
+  ): ReactElement = js.native
   
   val DL: StyledComponent[
     DetailedHTMLProps[HTMLAttributes[HTMLDListElement], HTMLDListElement], 
@@ -146,7 +152,11 @@ object documentFormattingMod extends js.Object {
         Theme
       ] = js.native
     
-    var code: StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement], js.Object, Theme] = js.native
+    def code(
+      hasClassNameProps: ComponentProps[
+          StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLElement], HTMLElement], js.Object, Theme]
+        ]
+    ): ReactElement = js.native
     
     var div: StyledComponent[DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement], js.Object, Theme] = js.native
     

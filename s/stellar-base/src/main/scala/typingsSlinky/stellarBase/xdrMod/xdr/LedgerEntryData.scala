@@ -14,6 +14,9 @@ trait LedgerEntryData extends js.Object {
   def account(): AccountEntry = js.native
   def account(value: AccountEntry): AccountEntry = js.native
   
+  def claimableBalance(): ClaimableBalanceEntry = js.native
+  def claimableBalance(value: ClaimableBalanceEntry): ClaimableBalanceEntry = js.native
+  
   def data(): DataEntry = js.native
   def data(value: DataEntry): DataEntry = js.native
   
@@ -33,5 +36,5 @@ trait LedgerEntryData extends js.Object {
   def trustLine(): TrustLineEntry = js.native
   def trustLine(value: TrustLineEntry): TrustLineEntry = js.native
   
-  def value(): AccountEntry | TrustLineEntry | OfferEntry | DataEntry = js.native
+  def value(): AccountEntry | TrustLineEntry | OfferEntry | DataEntry | ClaimableBalanceEntry = js.native
 }

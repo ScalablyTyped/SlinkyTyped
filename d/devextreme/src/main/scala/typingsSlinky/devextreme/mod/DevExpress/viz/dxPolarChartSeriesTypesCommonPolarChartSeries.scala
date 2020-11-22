@@ -21,80 +21,128 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartSeriesTypesCommonPolarChartSeries extends js.Object {
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.argumentField */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.argumentField]
+    */
   var argumentField: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.barPadding */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.barPadding]
+    */
   var barPadding: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.barWidth */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.barWidth]
+    */
   var barWidth: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.border */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.border]
+    */
   var border: js.UndefOr[ColorDashStyle] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.closed */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.closed]
+    */
   var closed: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.color */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.dashStyle */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.dashStyle]
+    */
   var dashStyle: js.UndefOr[dash | dot | longDash | solid] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.hoverMode */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.hoverMode]
+    */
   var hoverMode: js.UndefOr[
     allArgumentPoints | allSeriesPoints | excludePoints | includePoints | nearestPoint | none | onlyPoint
   ] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.hoverStyle */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.hoverStyle]
+    */
   var hoverStyle: js.UndefOr[BorderColor] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.ignoreEmptyPoints */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.ignoreEmptyPoints]
+    */
   var ignoreEmptyPoints: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.label */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.label]
+    */
   var label: js.UndefOr[dxPolarChartSeriesTypesCommonPolarChartSeriesLabel] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.maxLabelCount */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.maxLabelCount]
+    */
   var maxLabelCount: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.minBarSize */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.minBarSize]
+    */
   var minBarSize: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.opacity */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.opacity]
+    */
   var opacity: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.point */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.point]
+    */
   var point: js.UndefOr[dxPolarChartSeriesTypesCommonPolarChartSeriesPoint] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.selectionMode */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.selectionMode]
+    */
   var selectionMode: js.UndefOr[
     allArgumentPoints | allSeriesPoints | excludePoints | includePoints | none | onlyPoint
   ] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.selectionStyle */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.selectionStyle]
+    */
   var selectionStyle: js.UndefOr[BorderColor] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.showInLegend */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.showInLegend]
+    */
   var showInLegend: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.stack */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.stack]
+    */
   var stack: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.tagField */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.tagField]
+    */
   var tagField: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.valueErrorBar */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.valueErrorBar]
+    */
   var valueErrorBar: js.UndefOr[EdgeLength] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.valueField */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.valueField]
+    */
   var valueField: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.visible */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChartSeriesTypes.CommonPolarChartSeries.width */
+  /**
+    * [descr:dxPolarChartSeriesTypes.CommonPolarChartSeries.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxPolarChartSeriesTypesCommonPolarChartSeries {

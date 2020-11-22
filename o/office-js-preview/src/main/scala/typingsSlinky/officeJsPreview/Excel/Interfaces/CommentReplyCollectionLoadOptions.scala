@@ -47,8 +47,7 @@ trait CommentReplyCollectionLoadOptions extends js.Object {
     *
     * For EACH ITEM in the collection: The content type of the reply.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var contentType: js.UndefOr[Boolean] = js.native
   

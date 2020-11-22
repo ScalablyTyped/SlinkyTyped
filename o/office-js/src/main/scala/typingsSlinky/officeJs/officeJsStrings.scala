@@ -124,6 +124,9 @@ object officeJsStrings {
   def After: After = "After".asInstanceOf[After]
   
   @scala.inline
+  def AfterOrEqualTo: AfterOrEqualTo = "AfterOrEqualTo".asInstanceOf[AfterOrEqualTo]
+  
+  @scala.inline
   def Aiueo: Aiueo = "Aiueo".asInstanceOf[Aiueo]
   
   @scala.inline
@@ -140,6 +143,9 @@ object officeJsStrings {
   
   @scala.inline
   def AllDatesInPeriodDecember: AllDatesInPeriodDecember = "AllDatesInPeriodDecember".asInstanceOf[AllDatesInPeriodDecember]
+  
+  @scala.inline
+  def AllDatesInPeriodFebruary: AllDatesInPeriodFebruary = "AllDatesInPeriodFebruary".asInstanceOf[AllDatesInPeriodFebruary]
   
   @scala.inline
   def AllDatesInPeriodFebruray: AllDatesInPeriodFebruray = "AllDatesInPeriodFebruray".asInstanceOf[AllDatesInPeriodFebruray]
@@ -280,6 +286,9 @@ object officeJsStrings {
   def Before: Before = "Before".asInstanceOf[Before]
   
   @scala.inline
+  def BeforeOrEqualTo: BeforeOrEqualTo = "BeforeOrEqualTo".asInstanceOf[BeforeOrEqualTo]
+  
+  @scala.inline
   def Beginning: Beginning = "Beginning".asInstanceOf[Beginning]
   
   @scala.inline
@@ -349,6 +358,9 @@ object officeJsStrings {
   def BottomItems: BottomItems = "BottomItems".asInstanceOf[BottomItems]
   
   @scala.inline
+  def BottomN: BottomN = "BottomN".asInstanceOf[BottomN]
+  
+  @scala.inline
   def BottomPercent: BottomPercent = "BottomPercent".asInstanceOf[BottomPercent]
   
   @scala.inline
@@ -374,6 +386,9 @@ object officeJsStrings {
   
   @scala.inline
   def Bubble3DEffect: Bubble3DEffect = "Bubble3DEffect".asInstanceOf[Bubble3DEffect]
+  
+  @scala.inline
+  def BubbleSizes: BubbleSizes = "BubbleSizes".asInstanceOf[BubbleSizes]
   
   @scala.inline
   def BuildingBlockGallery: BuildingBlockGallery = "BuildingBlockGallery".asInstanceOf[BuildingBlockGallery]
@@ -410,6 +425,9 @@ object officeJsStrings {
   
   @scala.inline
   def Cardtext: Cardtext = "Cardtext".asInstanceOf[Cardtext]
+  
+  @scala.inline
+  def Categories: Categories = "Categories".asInstanceOf[Categories]
   
   @scala.inline
   def Category: Category = "Category".asInstanceOf[Category]
@@ -557,6 +575,24 @@ object officeJsStrings {
   
   @scala.inline
   def CommandBar: CommandBar = "CommandBar".asInstanceOf[CommandBar]
+  
+  @scala.inline
+  def CommentAdded: CommentAdded = "CommentAdded".asInstanceOf[CommentAdded]
+  
+  @scala.inline
+  def CommentChanged: CommentChanged = "CommentChanged".asInstanceOf[CommentChanged]
+  
+  @scala.inline
+  def CommentDeleted: CommentDeleted = "CommentDeleted".asInstanceOf[CommentDeleted]
+  
+  @scala.inline
+  def CommentEdited: CommentEdited = "CommentEdited".asInstanceOf[CommentEdited]
+  
+  @scala.inline
+  def CommentReopened: CommentReopened = "CommentReopened".asInstanceOf[CommentReopened]
+  
+  @scala.inline
+  def CommentResolved: CommentResolved = "CommentResolved".asInstanceOf[CommentResolved]
   
   @scala.inline
   def Compact: Compact = "Compact".asInstanceOf[Compact]
@@ -1013,6 +1049,9 @@ object officeJsStrings {
   
   @scala.inline
   def EqualTo: EqualTo = "EqualTo".asInstanceOf[EqualTo]
+  
+  @scala.inline
+  def Equals: Equals = "Equals".asInstanceOf[Equals]
   
   @scala.inline
   def Error: Error = "Error".asInstanceOf[Error]
@@ -1693,6 +1732,9 @@ object officeJsStrings {
   def IrregularSeal2: IrregularSeal2 = "IrregularSeal2".asInstanceOf[IrregularSeal2]
   
   @scala.inline
+  def Items: Items = "Items".asInstanceOf[Items]
+  
+  @scala.inline
   def JPEG: JPEG = "JPEG".asInstanceOf[JPEG]
   
   @scala.inline
@@ -1727,6 +1769,9 @@ object officeJsStrings {
   
   @scala.inline
   def LCRus: LCRus = "LCRus".asInstanceOf[LCRus]
+  
+  @scala.inline
+  def Label: Label = "Label".asInstanceOf[Label]
   
   @scala.inline
   def Landscape: Landscape = "Landscape".asInstanceOf[Landscape]
@@ -2545,6 +2590,15 @@ object officeJsStrings {
   def Replace: Replace = "Replace".asInstanceOf[Replace]
   
   @scala.inline
+  def ReplyAdded: ReplyAdded = "ReplyAdded".asInstanceOf[ReplyAdded]
+  
+  @scala.inline
+  def ReplyDeleted: ReplyDeleted = "ReplyDeleted".asInstanceOf[ReplyDeleted]
+  
+  @scala.inline
+  def ReplyEdited: ReplyEdited = "ReplyEdited".asInstanceOf[ReplyEdited]
+  
+  @scala.inline
   def Ribbon: Ribbon = "Ribbon".asInstanceOf[Ribbon]
   
   @scala.inline
@@ -3118,6 +3172,9 @@ object officeJsStrings {
   def TopItems: TopItems = "TopItems".asInstanceOf[TopItems]
   
   @scala.inline
+  def TopN: TopN = "TopN".asInstanceOf[TopN]
+  
+  @scala.inline
   def TopPercent: TopPercent = "TopPercent".asInstanceOf[TopPercent]
   
   @scala.inline
@@ -3355,6 +3412,9 @@ object officeJsStrings {
   def X: X = "X".asInstanceOf[X]
   
   @scala.inline
+  def XValues: XValues = "XValues".asInstanceOf[XValues]
+  
+  @scala.inline
   def XYScatter: XYScatter = "XYScatter".asInstanceOf[XYScatter]
   
   @scala.inline
@@ -3368,6 +3428,9 @@ object officeJsStrings {
   
   @scala.inline
   def XYScatterSmoothNoMarkers: XYScatterSmoothNoMarkers = "XYScatterSmoothNoMarkers".asInstanceOf[XYScatterSmoothNoMarkers]
+  
+  @scala.inline
+  def YValues: YValues = "YValues".asInstanceOf[YValues]
   
   @scala.inline
   def Year: Year = "Year".asInstanceOf[Year]
@@ -3535,6 +3598,9 @@ object officeJsStrings {
   sealed trait After extends js.Object
   
   @js.native
+  sealed trait AfterOrEqualTo extends js.Object
+  
+  @js.native
   sealed trait Aiueo extends js.Object
   
   @js.native
@@ -3551,6 +3617,9 @@ object officeJsStrings {
   
   @js.native
   sealed trait AllDatesInPeriodDecember extends js.Object
+  
+  @js.native
+  sealed trait AllDatesInPeriodFebruary extends js.Object
   
   @js.native
   sealed trait AllDatesInPeriodFebruray extends js.Object
@@ -3691,6 +3760,9 @@ object officeJsStrings {
   sealed trait Before extends js.Object
   
   @js.native
+  sealed trait BeforeOrEqualTo extends js.Object
+  
+  @js.native
   sealed trait Beginning extends js.Object
   
   @js.native
@@ -3760,6 +3832,9 @@ object officeJsStrings {
   sealed trait BottomItems extends js.Object
   
   @js.native
+  sealed trait BottomN extends js.Object
+  
+  @js.native
   sealed trait BottomPercent extends js.Object
   
   @js.native
@@ -3785,6 +3860,9 @@ object officeJsStrings {
   
   @js.native
   sealed trait Bubble3DEffect extends js.Object
+  
+  @js.native
+  sealed trait BubbleSizes extends js.Object
   
   @js.native
   sealed trait BuildingBlockGallery extends js.Object
@@ -3821,6 +3899,9 @@ object officeJsStrings {
   
   @js.native
   sealed trait Cardtext extends js.Object
+  
+  @js.native
+  sealed trait Categories extends js.Object
   
   @js.native
   sealed trait Category extends js.Object
@@ -3968,6 +4049,24 @@ object officeJsStrings {
   
   @js.native
   sealed trait CommandBar extends js.Object
+  
+  @js.native
+  sealed trait CommentAdded extends js.Object
+  
+  @js.native
+  sealed trait CommentChanged extends js.Object
+  
+  @js.native
+  sealed trait CommentDeleted extends js.Object
+  
+  @js.native
+  sealed trait CommentEdited extends js.Object
+  
+  @js.native
+  sealed trait CommentReopened extends js.Object
+  
+  @js.native
+  sealed trait CommentResolved extends js.Object
   
   @js.native
   sealed trait Compact extends js.Object
@@ -4424,6 +4523,9 @@ object officeJsStrings {
   
   @js.native
   sealed trait EqualTo extends js.Object
+  
+  @js.native
+  sealed trait Equals extends js.Object
   
   @js.native
   sealed trait Error extends js.Object
@@ -5104,6 +5206,9 @@ object officeJsStrings {
   sealed trait IrregularSeal2 extends js.Object
   
   @js.native
+  sealed trait Items extends js.Object
+  
+  @js.native
   sealed trait JPEG extends js.Object
   
   @js.native
@@ -5138,6 +5243,9 @@ object officeJsStrings {
   
   @js.native
   sealed trait LCRus extends js.Object
+  
+  @js.native
+  sealed trait Label extends js.Object
   
   @js.native
   sealed trait Landscape extends js.Object
@@ -5956,6 +6064,15 @@ object officeJsStrings {
   sealed trait Replace extends js.Object
   
   @js.native
+  sealed trait ReplyAdded extends js.Object
+  
+  @js.native
+  sealed trait ReplyDeleted extends js.Object
+  
+  @js.native
+  sealed trait ReplyEdited extends js.Object
+  
+  @js.native
   sealed trait Ribbon extends js.Object
   
   @js.native
@@ -6529,6 +6646,9 @@ object officeJsStrings {
   sealed trait TopItems extends js.Object
   
   @js.native
+  sealed trait TopN extends js.Object
+  
+  @js.native
   sealed trait TopPercent extends js.Object
   
   @js.native
@@ -6766,6 +6886,9 @@ object officeJsStrings {
   sealed trait X extends js.Object
   
   @js.native
+  sealed trait XValues extends js.Object
+  
+  @js.native
   sealed trait XYScatter extends js.Object
   
   @js.native
@@ -6779,6 +6902,9 @@ object officeJsStrings {
   
   @js.native
   sealed trait XYScatterSmoothNoMarkers extends js.Object
+  
+  @js.native
+  sealed trait YValues extends js.Object
   
   @js.native
   sealed trait Year extends js.Object

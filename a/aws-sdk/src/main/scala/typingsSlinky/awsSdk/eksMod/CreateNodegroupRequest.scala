@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateNodegroupRequest extends js.Object {
   
   /**
-    * The AMI type for your node group. GPU instance types should use the AL2_x86_64_GPU AMI type, which uses the Amazon EKS-optimized Linux AMI with GPU support. Non-GPU instances should use the AL2_x86_64 AMI type, which uses the Amazon EKS-optimized Linux AMI.
+    * The AMI type for your node group. GPU instance types should use the AL2_x86_64_GPU AMI type. Non-GPU instances should use the AL2_x86_64 AMI type. Arm instances should use the AL2_ARM_64 AMI type. All types use the Amazon EKS-optimized Amazon Linux 2 AMI. If you specify launchTemplate, and your launch template uses a custom AMI, then don't specify amiType, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
     */
   var amiType: js.UndefOr[AMITypes] = js.native
   
@@ -23,12 +23,12 @@ trait CreateNodegroupRequest extends js.Object {
   var clusterName: String = js.native
   
   /**
-    * The root device disk size (in GiB) for your node group instances. The default disk size is 20 GiB.
+    * The root device disk size (in GiB) for your node group instances. The default disk size is 20 GiB. If you specify launchTemplate, then don't specify diskSize, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
     */
   var diskSize: js.UndefOr[BoxedInteger] = js.native
   
   /**
-    * The instance type to use for your node group. Currently, you can specify a single instance type for a node group. The default value for this parameter is t3.medium. If you choose a GPU instance type, be sure to specify the AL2_x86_64_GPU with the amiType parameter.
+    * The instance type to use for your node group. You can specify a single instance type for a node group. The default value for instanceTypes is t3.medium. If you choose a GPU instance type, be sure to specify AL2_x86_64_GPU with the amiType parameter. If you specify launchTemplate, then don't specify instanceTypes, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
     */
   var instanceTypes: js.UndefOr[StringList] = js.native
   
@@ -38,7 +38,12 @@ trait CreateNodegroupRequest extends js.Object {
   var labels: js.UndefOr[labelsMap] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) of the IAM role to associate with your node group. The Amazon EKS worker node kubelet daemon makes calls to AWS APIs on your behalf. Worker nodes receive permissions for these API calls through an IAM instance profile and associated policies. Before you can launch worker nodes and register them into a cluster, you must create an IAM role for those worker nodes to use when they are launched. For more information, see Amazon EKS Worker Node IAM Role in the  Amazon EKS User Guide .
+    * An object representing a node group's launch template specification. If specified, then do not specify instanceTypes, diskSize, or remoteAccess and make sure that the launch template meets the requirements in launchTemplateSpecification.
+    */
+  var launchTemplate: js.UndefOr[LaunchTemplateSpecification] = js.native
+  
+  /**
+    * The Amazon Resource Name (ARN) of the IAM role to associate with your node group. The Amazon EKS worker node kubelet daemon makes calls to AWS APIs on your behalf. Worker nodes receive permissions for these API calls through an IAM instance profile and associated policies. Before you can launch worker nodes and register them into a cluster, you must create an IAM role for those worker nodes to use when they are launched. For more information, see Amazon EKS Worker Node IAM Role in the  Amazon EKS User Guide . If you specify launchTemplate, then don't specify  IamInstanceProfile  in your launch template, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
     */
   var nodeRole: String = js.native
   
@@ -48,12 +53,12 @@ trait CreateNodegroupRequest extends js.Object {
   var nodegroupName: String = js.native
   
   /**
-    * The AMI version of the Amazon EKS-optimized AMI to use with your node group. By default, the latest available AMI version for the node group's current Kubernetes version is used. For more information, see Amazon EKS-Optimized Linux AMI Versions in the Amazon EKS User Guide.
+    * The AMI version of the Amazon EKS-optimized AMI to use with your node group. By default, the latest available AMI version for the node group's current Kubernetes version is used. For more information, see Amazon EKS-Optimized Linux AMI Versions in the Amazon EKS User Guide. If you specify launchTemplate, and your launch template uses a custom AMI, then don't specify releaseVersion, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
     */
   var releaseVersion: js.UndefOr[String] = js.native
   
   /**
-    * The remote access (SSH) configuration to use with your node group.
+    * The remote access (SSH) configuration to use with your node group. If you specify launchTemplate, then don't specify remoteAccess, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
     */
   var remoteAccess: js.UndefOr[RemoteAccessConfig] = js.native
   
@@ -63,7 +68,7 @@ trait CreateNodegroupRequest extends js.Object {
   var scalingConfig: js.UndefOr[NodegroupScalingConfig] = js.native
   
   /**
-    * The subnets to use for the Auto Scaling group that is created for your node group. These subnets must have the tag key kubernetes.io/cluster/CLUSTER_NAME with a value of shared, where CLUSTER_NAME is replaced with the name of your cluster.
+    * The subnets to use for the Auto Scaling group that is created for your node group. These subnets must have the tag key kubernetes.io/cluster/CLUSTER_NAME with a value of shared, where CLUSTER_NAME is replaced with the name of your cluster. If you specify launchTemplate, then don't specify  SubnetId  in your launch template, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
     */
   var subnets: StringList = js.native
   
@@ -73,7 +78,7 @@ trait CreateNodegroupRequest extends js.Object {
   var tags: js.UndefOr[TagMap] = js.native
   
   /**
-    * The Kubernetes version to use for your managed nodes. By default, the Kubernetes version of the cluster is used, and this is the only accepted specified value.
+    * The Kubernetes version to use for your managed nodes. By default, the Kubernetes version of the cluster is used, and this is the only accepted specified value. If you specify launchTemplate, and your launch template uses a custom AMI, then don't specify version, or the node group deployment will fail. For more information about using launch templates with Amazon EKS, see Launch template support in the Amazon EKS User Guide.
     */
   var version: js.UndefOr[String] = js.native
 }
@@ -147,6 +152,12 @@ object CreateNodegroupRequest {
     
     @scala.inline
     def deleteLabels: Self = this.set("labels", js.undefined)
+    
+    @scala.inline
+    def setLaunchTemplate(value: LaunchTemplateSpecification): Self = this.set("launchTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLaunchTemplate: Self = this.set("launchTemplate", js.undefined)
     
     @scala.inline
     def setReleaseVersion(value: String): Self = this.set("releaseVersion", value.asInstanceOf[js.Any])

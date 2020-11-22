@@ -10,8 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait VectorSource
   extends Source
-     with AnySourceData
-     with AnySourceImpl {
+     with AnySourceData {
   
   var attribution: js.UndefOr[String] = js.native
   

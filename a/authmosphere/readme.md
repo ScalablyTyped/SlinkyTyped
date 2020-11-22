@@ -1,7 +1,7 @@
 
 # Scala.js typings for authmosphere
 
-Typings are for version 2.3.2
+Typings are for version 3.0.0
 
 ## Library description:
 authmosphere is a library to support OAuth2 workflows in JavaScript projects.

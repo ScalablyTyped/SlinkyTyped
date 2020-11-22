@@ -1,11 +1,12 @@
 package typingsSlinky.devexpressWeb
 
+import typingsSlinky.devexpressWeb.anon.ModifyPdfDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * A client-side equivalent of the ASPxRichEdit object.
+  * A client-side equivalent of the ASPxRichEdit control.
   */
 @js.native
 trait ASPxClientRichEdit extends ASPxClientControl {
@@ -56,7 +57,7 @@ trait ASPxClientRichEdit extends ASPxClientControl {
   var CustomCommandExecuted: ASPxClientEvent[ASPxClientRichEditCustomCommandExecutedEventHandler] = js.native
   
   /**
-    * Fires if any change is made to the RichEdit's document on the client.
+    * Fires if an end user makes any change in the RichEdit's document on the client.
     */
   var DocumentChanged: ASPxClientEvent[ASPxClientEventHandler[ASPxClientRichEdit]] = js.native
   
@@ -71,6 +72,18 @@ trait ASPxClientRichEdit extends ASPxClientControl {
   var DocumentLoaded: ASPxClientEvent[ASPxClientEventHandler[ASPxClientRichEdit]] = js.native
   
   /**
+    * Downloads the current document as a PDF file.
+    * @param fileName The name of the downloaded document.
+    * @param options A function that allows you to modify the PDF document before it is downloaded; or an object that contains modifyPdfDocument and modifyPdfPage functions.
+    */
+  def DownloadPdf(): Unit = js.native
+  def DownloadPdf(fileName: js.UndefOr[scala.Nothing], options: js.Function1[/* pdfDocument */ js.Any, Unit]): Unit = js.native
+  def DownloadPdf(fileName: js.UndefOr[scala.Nothing], options: ModifyPdfDocument): Unit = js.native
+  def DownloadPdf(fileName: String): Unit = js.native
+  def DownloadPdf(fileName: String, options: js.Function1[/* pdfDocument */ js.Any, Unit]): Unit = js.native
+  def DownloadPdf(fileName: String, options: ModifyPdfDocument): Unit = js.native
+  
+  /**
     * Occurs on the client side after a callback's server-side processing has been completed.
     */
   var EndCallback: ASPxClientEvent[ASPxClientEndCallbackEventHandler[ASPxClientRichEdit]] = js.native
@@ -79,6 +92,19 @@ trait ASPxClientRichEdit extends ASPxClientControl {
     * Fires after a document change has been applied to the server and server and client document models have been synchronized.
     */
   var EndSynchronization: ASPxClientEvent[ASPxClientEventHandler[ASPxClientRichEdit]] = js.native
+  
+  /**
+    * Exports the current document to PDF and invokes the PdfExported event.
+    * @param options A function that allows you to modify the PDF document before it is downloaded; or an object that contains modifyPdfDocument and modifyPdfPage functions.
+    */
+  def ExportToPdf(): Unit = js.native
+  def ExportToPdf(options: js.Function1[/* pdfDocument */ js.Any, Unit]): Unit = js.native
+  def ExportToPdf(options: ModifyPdfDocument): Unit = js.native
+  
+  /**
+    * Fires after a floating object has been moved and allows you to change the object's new position.
+    */
+  var FloatingObjectMoved: ASPxClientEvent[ASPxClientRichEditFloatingObjectMovedEventHandler] = js.native
   
   /**
     * Sets input focus to the RichEdit.
@@ -175,6 +201,26 @@ trait ASPxClientRichEdit extends ASPxClientControl {
   var document: RichEditDocument = js.native
   
   /**
+    * Specifies the format in which the editor prepares the document for saving or export.
+    */
+  var documentFormat: DocumentFormat = js.native
+  
+  /**
+    * Specifies the name of the current document.
+    */
+  var documentName: String = js.native
+  
+  /**
+    * Specifies the format in which the editor prepares the document for saving.
+    */
+  var documentSaveFormat: DocumentFormat = js.native
+  
+  /**
+    * Specifies the name of the saved/downloaded file.
+    */
+  var fileName: String = js.native
+  
+  /**
     * Provides access to a document's layout functionality.
     */
   var layout: RichEditLayout = js.native
@@ -188,6 +234,11 @@ trait ASPxClientRichEdit extends ASPxClientControl {
     * Provides access to request settings.
     */
   var requestSettings: RequestSettings = js.native
+  
+  /**
+    * Provides access to a document's scroll functionality.
+    */
+  var scroll: RichEditScroll = js.native
   
   /**
     * Provides access to the client methods that change the selection.

@@ -1,14 +1,15 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxLookup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `6`[T] extends js.Object {
+trait `6` extends js.Object {
   
-  var component: js.UndefOr[T] = js.native
+  var component: js.UndefOr[dxLookup] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -17,13 +18,13 @@ trait `6`[T] extends js.Object {
 object `6` {
   
   @scala.inline
-  def apply[T](): `6`[T] = {
+  def apply(): `6` = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[`6`[T]]
+    __obj.asInstanceOf[`6`]
   }
   
   @scala.inline
-  implicit class `6Ops`[Self <: `6`[_], T] (val x: Self with `6`[T]) extends AnyVal {
+  implicit class `6Ops`[Self <: `6`] (val x: Self) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -38,7 +39,7 @@ object `6` {
     }
     
     @scala.inline
-    def setComponent(value: T): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxLookup): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)

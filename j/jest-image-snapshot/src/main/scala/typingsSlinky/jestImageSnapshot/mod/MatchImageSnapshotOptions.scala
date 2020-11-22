@@ -1,10 +1,14 @@
 package typingsSlinky.jestImageSnapshot.mod
 
 import typingsSlinky.jestImageSnapshot.anon.Counter
+import typingsSlinky.jestImageSnapshot.anon.PartialOptions
 import typingsSlinky.jestImageSnapshot.jestImageSnapshotStrings.horizontal
 import typingsSlinky.jestImageSnapshot.jestImageSnapshotStrings.percent
 import typingsSlinky.jestImageSnapshot.jestImageSnapshotStrings.pixel
+import typingsSlinky.jestImageSnapshot.jestImageSnapshotStrings.pixelmatch
+import typingsSlinky.jestImageSnapshot.jestImageSnapshotStrings.ssim
 import typingsSlinky.jestImageSnapshot.jestImageSnapshotStrings.vertical
+import typingsSlinky.pixelmatch.mod.PixelmatchOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,9 +31,16 @@ trait MatchImageSnapshotOptions extends js.Object {
   var blur: js.UndefOr[Double] = js.native
   
   /**
-    * Custom config passed to 'pixelmatch'
+    * The method by which images are compared.
+    * `pixelmatch` does a pixel by pixel comparison, whereas `ssim` does a structural similarity comparison.
+    * @default 'pixelmatch'
     */
-  var customDiffConfig: js.UndefOr[PixelmatchOptions] = js.native
+  var comparisonMethod: js.UndefOr[pixelmatch | ssim] = js.native
+  
+  /**
+    * Custom config passed to 'pixelmatch' or 'ssim'
+    */
+  var customDiffConfig: js.UndefOr[PixelmatchOptions | PartialOptions] = js.native
   
   /**
     * A custom absolute path of a directory to keep this diff in
@@ -130,7 +141,13 @@ object MatchImageSnapshotOptions {
     def deleteBlur: Self = this.set("blur", js.undefined)
     
     @scala.inline
-    def setCustomDiffConfig(value: PixelmatchOptions): Self = this.set("customDiffConfig", value.asInstanceOf[js.Any])
+    def setComparisonMethod(value: pixelmatch | ssim): Self = this.set("comparisonMethod", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteComparisonMethod: Self = this.set("comparisonMethod", js.undefined)
+    
+    @scala.inline
+    def setCustomDiffConfig(value: PixelmatchOptions | PartialOptions): Self = this.set("customDiffConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCustomDiffConfig: Self = this.set("customDiffConfig", js.undefined)

@@ -16,6 +16,8 @@ trait Resolver extends js.Object {
   
   var _getVirtualMockPath: js.Any = js.native
   
+  var _isAliasModule: js.Any = js.native
+  
   var _isModuleResolved: js.Any = js.native
   
   val _moduleIDCache: js.Any = js.native
@@ -37,7 +39,7 @@ trait Resolver extends js.Object {
   def getModuleID(virtualMocks: BooleanObject, from: Path): String = js.native
   def getModuleID(virtualMocks: BooleanObject, from: Path, _moduleName: String): String = js.native
   
-  def getModulePath(from: Path, moduleName: String): String = js.native
+  def getModulePath(from: Path, moduleName: String): Path = js.native
   
   def getModulePaths(from: Path): js.Array[Path] = js.native
   

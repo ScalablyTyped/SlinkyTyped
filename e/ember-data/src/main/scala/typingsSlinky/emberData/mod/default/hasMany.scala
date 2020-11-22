@@ -7,11 +7,12 @@ import typingsSlinky.emberData.mod.DS.RelationshipOptions
 import typingsSlinky.emberData.mod.DS.Sync
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("ember-data", "hasMany")
 @js.native
 object hasMany extends js.Object {
+  
   def apply[K /* <: /* keyof ember-data.ember-data/types/registries/model.ModelRegistry */ String */](`type`: K): ComputedProperty[
     typingsSlinky.emberData.mod.DS.PromiseManyArray[
       /* import warning: importer.ImportType#apply Failed type conversion: ember-data.ember-data/types/registries/model.ModelRegistry[K] */ js.Any
@@ -38,4 +39,3 @@ object hasMany extends js.Object {
     ]
   ] = js.native
 }
-

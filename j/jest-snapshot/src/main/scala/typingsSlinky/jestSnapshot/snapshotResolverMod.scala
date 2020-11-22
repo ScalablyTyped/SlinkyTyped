@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("jest-snapshot/build/snapshot_resolver", JSImport.Namespace)
+@JSImport("jest-snapshot/build/SnapshotResolver", JSImport.Namespace)
 @js.native
 object snapshotResolverMod extends js.Object {
   

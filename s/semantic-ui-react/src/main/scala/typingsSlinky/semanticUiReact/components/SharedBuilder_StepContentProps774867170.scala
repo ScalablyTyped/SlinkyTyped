@@ -4,7 +4,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.stepDescriptionMod.StepDescriptionProps
@@ -35,7 +34,7 @@ class SharedBuilder_StepContentProps774867170 (val args: js.Array[js.Any])
   
   @scala.inline
   def descriptionFunction3(
-    value: (/* component */ ReactType[StepDescriptionProps], StepDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, StepDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("description", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -46,7 +45,7 @@ class SharedBuilder_StepContentProps774867170 (val args: js.Array[js.Any])
   
   @scala.inline
   def titleFunction3(
-    value: (/* component */ ReactType[StepTitleProps], StepTitleProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, StepTitleProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("title", js.Any.fromFunction3(value))
   
   @scala.inline

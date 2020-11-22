@@ -24,7 +24,7 @@ trait ThematicStops extends Object {
   var normalizationField: js.UndefOr[String] = js.native
   
   /**
-    * An array of objects defining the thematic size ramp in a sequence of data or expression stops. At least two stops are required. The stops must be listed in ascending order based on the value of the `value` property in each stop.
+    * An array of objects defining the thematic size ramp in a sequence of data or expression stops.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-SizeVariable.html#ThematicStops)
     */

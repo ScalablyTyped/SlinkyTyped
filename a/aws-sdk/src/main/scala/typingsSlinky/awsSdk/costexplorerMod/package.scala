@@ -17,6 +17,28 @@ package object costexplorerMod {
   
   type AmortizedUpfrontFee = java.lang.String
   
+  type Anomalies = js.Array[typingsSlinky.awsSdk.costexplorerMod.Anomaly]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.YES
+    - typingsSlinky.awsSdk.awsSdkStrings.NO
+    - typingsSlinky.awsSdk.awsSdkStrings.PLANNED_ACTIVITY
+    - java.lang.String
+  */
+  type AnomalyFeedbackType = typingsSlinky.awsSdk.costexplorerMod._AnomalyFeedbackType | java.lang.String
+  
+  type AnomalyMonitors = js.Array[typingsSlinky.awsSdk.costexplorerMod.AnomalyMonitor]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DAILY
+    - typingsSlinky.awsSdk.awsSdkStrings.IMMEDIATE
+    - typingsSlinky.awsSdk.awsSdkStrings.WEEKLY
+    - java.lang.String
+  */
+  type AnomalySubscriptionFrequency = typingsSlinky.awsSdk.costexplorerMod._AnomalySubscriptionFrequency | java.lang.String
+  
+  type AnomalySubscriptions = js.Array[typingsSlinky.awsSdk.costexplorerMod.AnomalySubscription]
+  
   type Arn = java.lang.String
   
   type AttributeType = java.lang.String
@@ -39,13 +61,26 @@ package object costexplorerMod {
   
   type CostCategoryName = java.lang.String
   
+  type CostCategoryProcessingStatusList = js.Array[typingsSlinky.awsSdk.costexplorerMod.CostCategoryProcessingStatus]
+  
   type CostCategoryReferencesList = js.Array[typingsSlinky.awsSdk.costexplorerMod.CostCategoryReference]
   
   type CostCategoryRuleVersion = typingsSlinky.awsSdk.awsSdkStrings.CostCategoryExpressionDotv1 | java.lang.String
   
   type CostCategoryRulesList = js.Array[typingsSlinky.awsSdk.costexplorerMod.CostCategoryRule]
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PROCESSING
+    - typingsSlinky.awsSdk.awsSdkStrings.APPLIED
+    - java.lang.String
+  */
+  type CostCategoryStatus = typingsSlinky.awsSdk.costexplorerMod._CostCategoryStatus | java.lang.String
+  
+  type CostCategoryStatusComponent = typingsSlinky.awsSdk.awsSdkStrings.COST_EXPLORER | java.lang.String
+  
   type CostCategoryValue = java.lang.String
+  
+  type CostCategoryValuesList = js.Array[typingsSlinky.awsSdk.costexplorerMod.CostCategoryValue]
   
   type CoverageHoursPercentage = java.lang.String
   
@@ -98,6 +133,8 @@ package object costexplorerMod {
   type ForecastResultsByTime = js.Array[typingsSlinky.awsSdk.costexplorerMod.ForecastResult]
   
   type GenericBoolean = scala.Boolean
+  
+  type GenericDouble = scala.Double
   
   type GenericString = java.lang.String
   
@@ -172,11 +209,33 @@ package object costexplorerMod {
   
   type Metrics = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.costexplorerMod.MetricValue]
   
+  type MonitorDimension = typingsSlinky.awsSdk.awsSdkStrings.SERVICE | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DIMENSIONAL
+    - typingsSlinky.awsSdk.awsSdkStrings.CUSTOM
+    - java.lang.String
+  */
+  type MonitorType = typingsSlinky.awsSdk.costexplorerMod._MonitorType | java.lang.String
+  
   type NetRISavings = java.lang.String
   
   type NextPageToken = java.lang.String
   
   type NonNegativeInteger = scala.Double
+  
+  type NullableNonNegativeDouble = scala.Double
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.EQUAL
+    - typingsSlinky.awsSdk.awsSdkStrings.GREATER_THAN_OR_EQUAL
+    - typingsSlinky.awsSdk.awsSdkStrings.LESS_THAN_OR_EQUAL
+    - typingsSlinky.awsSdk.awsSdkStrings.GREATER_THAN
+    - typingsSlinky.awsSdk.awsSdkStrings.LESS_THAN
+    - typingsSlinky.awsSdk.awsSdkStrings.BETWEEN
+    - java.lang.String
+  */
+  type NumericOperator = typingsSlinky.awsSdk.costexplorerMod._NumericOperator | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.STANDARD
@@ -246,6 +305,8 @@ package object costexplorerMod {
   */
   type RightsizingType = typingsSlinky.awsSdk.costexplorerMod._RightsizingType | java.lang.String
   
+  type RootCauses = js.Array[typingsSlinky.awsSdk.costexplorerMod.RootCause]
+  
   type SavingsPlanArn = java.lang.String
   
   type SavingsPlansCoverages = js.Array[typingsSlinky.awsSdk.costexplorerMod.SavingsPlansCoverage]
@@ -257,6 +318,24 @@ package object costexplorerMod {
   type SavingsPlansUtilizationsByTime = js.Array[typingsSlinky.awsSdk.costexplorerMod.SavingsPlansUtilizationByTime]
   
   type SearchString = java.lang.String
+  
+  type SubscriberAddress = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CONFIRMED
+    - typingsSlinky.awsSdk.awsSdkStrings.DECLINED
+    - java.lang.String
+  */
+  type SubscriberStatus = typingsSlinky.awsSdk.costexplorerMod._SubscriberStatus | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.EMAIL
+    - typingsSlinky.awsSdk.awsSdkStrings.SNS
+    - java.lang.String
+  */
+  type SubscriberType = typingsSlinky.awsSdk.costexplorerMod._SubscriberType | java.lang.String
+  
+  type Subscribers = js.Array[typingsSlinky.awsSdk.costexplorerMod.Subscriber]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.COMPUTE_SP

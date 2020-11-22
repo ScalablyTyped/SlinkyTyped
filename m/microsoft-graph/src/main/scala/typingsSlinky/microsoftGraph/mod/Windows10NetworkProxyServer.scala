@@ -14,7 +14,7 @@ trait Windows10NetworkProxyServer extends js.Object {
     * Addresses that should not use the proxy server. The system will not use the proxy server for addresses beginning with
     * what is specified in this node.
     */
-  var exceptions: js.UndefOr[js.Array[String]] = js.native
+  var exceptions: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // Specifies whether the proxy server should be used for local (intranet) addresses.
   var useForLocalAddresses: js.UndefOr[Boolean] = js.native
@@ -52,10 +52,13 @@ object Windows10NetworkProxyServer {
     def setExceptionsVarargs(value: String*): Self = this.set("exceptions", js.Array(value :_*))
     
     @scala.inline
-    def setExceptions(value: js.Array[String]): Self = this.set("exceptions", value.asInstanceOf[js.Any])
+    def setExceptions(value: NullableOption[js.Array[String]]): Self = this.set("exceptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExceptions: Self = this.set("exceptions", js.undefined)
+    
+    @scala.inline
+    def setExceptionsNull: Self = this.set("exceptions", null)
     
     @scala.inline
     def setUseForLocalAddresses(value: Boolean): Self = this.set("useForLocalAddresses", value.asInstanceOf[js.Any])

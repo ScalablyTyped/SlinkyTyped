@@ -62,9 +62,6 @@ trait TileInfo
     * Utility method used to convert a scale value to its corresponding zoom value.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TileInfo.html#scaleToZoom)
-    *
-    * @param scale The scale value to convert.
-    *
     */
   def scaleToZoom(scale: Double): Double = js.native
   
@@ -86,9 +83,6 @@ trait TileInfo
     * Utility method used to convert a zoom value to its corresponding scale value.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-TileInfo.html#zoomToScale)
-    *
-    * @param zoom The zoom value to convert.
-    *
     */
   def zoomToScale(zoom: Double): Double = js.native
 }

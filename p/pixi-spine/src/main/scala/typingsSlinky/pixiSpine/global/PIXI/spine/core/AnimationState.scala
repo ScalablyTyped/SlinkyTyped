@@ -15,13 +15,17 @@ class AnimationState protected ()
 @js.native
 object AnimationState extends js.Object {
   
+  var CURRENT: Double = js.native
+  
   var FIRST: Double = js.native
   
-  var HOLD: Double = js.native
+  var HOLD_FIRST: Double = js.native
   
   var HOLD_MIX: Double = js.native
   
-  var NOT_LAST: Double = js.native
+  var HOLD_SUBSEQUENT: Double = js.native
+  
+  var SETUP: Double = js.native
   
   var SUBSEQUENT: Double = js.native
   

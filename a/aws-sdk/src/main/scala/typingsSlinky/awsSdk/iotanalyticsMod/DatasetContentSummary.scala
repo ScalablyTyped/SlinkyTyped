@@ -13,12 +13,12 @@ trait DatasetContentSummary extends js.Object {
   var completionTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The actual time the creation of the data set contents was started.
+    * The actual time the creation of the dataset contents was started.
     */
   var creationTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The time the creation of the data set contents was scheduled to start.
+    * The time the creation of the dataset contents was scheduled to start.
     */
   var scheduleTime: js.UndefOr[js.Date] = js.native
   
@@ -28,7 +28,7 @@ trait DatasetContentSummary extends js.Object {
   var status: js.UndefOr[DatasetContentStatus] = js.native
   
   /**
-    * The version of the data set contents.
+    * The version of the dataset contents.
     */
   var version: js.UndefOr[DatasetContentVersion] = js.native
 }

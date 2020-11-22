@@ -10,7 +10,7 @@ trait DescribeInventoryDeletionsRequest extends js.Object {
   /**
     * Specify the delete inventory ID for which you want information. This ID was returned by the DeleteInventory action.
     */
-  var DeletionId: js.UndefOr[InventoryDeletionId] = js.native
+  var DeletionId: js.UndefOr[UUID] = js.native
   
   /**
     * The maximum number of items to return for this call. The call also returns a token that you can specify in a subsequent call to get the next set of results.
@@ -46,7 +46,7 @@ object DescribeInventoryDeletionsRequest {
     }
     
     @scala.inline
-    def setDeletionId(value: InventoryDeletionId): Self = this.set("DeletionId", value.asInstanceOf[js.Any])
+    def setDeletionId(value: UUID): Self = this.set("DeletionId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeletionId: Self = this.set("DeletionId", js.undefined)

@@ -21,6 +21,9 @@ trait RasterSource
   @JSName("once")
   def once_beforeoperations(`type`: beforeoperations, listener: js.Function1[/* evt */ RasterSourceEvent, Unit]): EventsKey = js.native
   
+  /**
+    * Set the operation.
+    */
   def setOperation(operation: Operation): Unit = js.native
   def setOperation(operation: Operation, opt_lib: js.Any): Unit = js.native
   

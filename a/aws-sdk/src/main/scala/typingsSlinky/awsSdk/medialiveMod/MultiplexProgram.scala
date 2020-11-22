@@ -23,6 +23,11 @@ trait MultiplexProgram extends js.Object {
   var PacketIdentifiersMap: js.UndefOr[MultiplexProgramPacketIdentifiersMap] = js.native
   
   /**
+    * Contains information about the current sources for the specified program in the specified multiplex. Keep in mind that each multiplex pipeline connects to both pipelines in a given source channel (the channel identified by the program). But only one of those channel pipelines is ever active at one time.
+    */
+  var PipelineDetails: js.UndefOr[listOfMultiplexProgramPipelineDetail] = js.native
+  
+  /**
     * The name of the multiplex program.
     */
   var ProgramName: js.UndefOr[string] = js.native
@@ -67,6 +72,15 @@ object MultiplexProgram {
     
     @scala.inline
     def deletePacketIdentifiersMap: Self = this.set("PacketIdentifiersMap", js.undefined)
+    
+    @scala.inline
+    def setPipelineDetailsVarargs(value: MultiplexProgramPipelineDetail*): Self = this.set("PipelineDetails", js.Array(value :_*))
+    
+    @scala.inline
+    def setPipelineDetails(value: listOfMultiplexProgramPipelineDetail): Self = this.set("PipelineDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePipelineDetails: Self = this.set("PipelineDetails", js.undefined)
     
     @scala.inline
     def setProgramName(value: string): Self = this.set("ProgramName", value.asInstanceOf[js.Any])

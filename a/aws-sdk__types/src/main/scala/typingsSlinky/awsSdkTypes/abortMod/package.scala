@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object abortMod {
   
-  type AbortHandler = js.Function0[scala.Unit]
+  type AbortHandler = js.ThisFunction1[/* this */ typingsSlinky.awsSdkTypes.abortMod.AbortSignal, /* ev */ js.Any, js.Any]
 }

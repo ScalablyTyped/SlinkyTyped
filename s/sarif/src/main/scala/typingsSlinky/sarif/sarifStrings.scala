@@ -5,7 +5,7 @@ import typingsSlinky.sarif.mod.ReportingConfiguration.level
 import typingsSlinky.sarif.mod.Result.baselineState
 import typingsSlinky.sarif.mod.Run.columnKind
 import typingsSlinky.sarif.mod.Suppression.kind
-import typingsSlinky.sarif.mod.Suppression.state
+import typingsSlinky.sarif.mod.Suppression.status
 import typingsSlinky.sarif.mod.ThreadFlowLocation.importance
 import typingsSlinky.sarif.mod.ToolComponent.contents
 import scala.scalajs.js
@@ -171,7 +171,7 @@ object sarifStrings {
   sealed trait absent extends baselineState
   
   @js.native
-  sealed trait accepted extends state
+  sealed trait accepted extends status
   
   @js.native
   sealed trait added extends roles
@@ -269,7 +269,7 @@ object sarifStrings {
   sealed trait referencedOnCommandLine extends roles
   
   @js.native
-  sealed trait rejected extends state
+  sealed trait rejected extends status
   
   @js.native
   sealed trait renamed extends roles
@@ -306,7 +306,7 @@ object sarifStrings {
   sealed trait uncontrolled extends roles
   
   @js.native
-  sealed trait underReview extends state
+  sealed trait underReview extends status
   
   @js.native
   sealed trait unicodeCodePoints extends columnKind

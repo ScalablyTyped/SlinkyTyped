@@ -1,6 +1,5 @@
 package typingsSlinky.blueprintjsCore.anon
 
-import typingsSlinky.react.mod.ReactText
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SelectedTabId extends js.Object {
   
-  var selectedTabId: ReactText = js.native
+  var selectedTabId: String | Double = js.native
 }
 object SelectedTabId {
   
   @scala.inline
-  def apply(selectedTabId: ReactText): SelectedTabId = {
+  def apply(selectedTabId: String | Double): SelectedTabId = {
     val __obj = js.Dynamic.literal(selectedTabId = selectedTabId.asInstanceOf[js.Any])
     __obj.asInstanceOf[SelectedTabId]
   }
@@ -34,6 +33,6 @@ object SelectedTabId {
     }
     
     @scala.inline
-    def setSelectedTabId(value: ReactText): Self = this.set("selectedTabId", value.asInstanceOf[js.Any])
+    def setSelectedTabId(value: String | Double): Self = this.set("selectedTabId", value.asInstanceOf[js.Any])
   }
 }

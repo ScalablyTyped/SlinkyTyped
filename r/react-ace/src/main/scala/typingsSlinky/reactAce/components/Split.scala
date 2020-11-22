@@ -158,6 +158,9 @@ object Split {
     def showPrintMargin(value: Boolean): this.type = set("showPrintMargin", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def tabSize(value: Double): this.type = set("tabSize", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -179,8 +182,8 @@ object Split {
   def withProps(p: ISplitEditorProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply(splits: Double, style: js.Any): Builder = {
-    val __props = js.Dynamic.literal(splits = splits.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any])
+  def apply(splits: Double): Builder = {
+    val __props = js.Dynamic.literal(splits = splits.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ISplitEditorProps]))
   }
 }

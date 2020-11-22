@@ -1,10 +1,6 @@
 package typingsSlinky.awsSdkProtocolQuery
 
-import typingsSlinky.awsSdkTypes.httpMod.HttpEndpoint
-import typingsSlinky.awsSdkTypes.marshallerMod.BodySerializer
-import typingsSlinky.awsSdkTypes.unmarshallerMod.BodyParser
-import typingsSlinky.awsSdkTypes.unmarshallerMod.ServiceExceptionParser
-import typingsSlinky.awsSdkTypes.unmarshallerMod.StreamCollector
+import typingsSlinky.awsSdkTypes.serdeMod.StreamCollector
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,9 +14,9 @@ object mod extends js.Object {
   class QueryParser[StreamType] protected ()
     extends typingsSlinky.awsSdkProtocolQuery.queryParserMod.QueryParser[StreamType] {
     def this(
-      bodyParser: BodyParser[String],
-      parseServiceException: ServiceExceptionParser,
-      streamCollector: StreamCollector[StreamType],
+      bodyParser: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodyParser */ js.Any,
+      parseServiceException: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceExceptionParser */ js.Any,
+      streamCollector: StreamCollector,
       utf8Encoder: Encoder
     ) = this()
   }
@@ -28,6 +24,9 @@ object mod extends js.Object {
   @js.native
   class QuerySerializer[StreamType] protected ()
     extends typingsSlinky.awsSdkProtocolQuery.querySerializerMod.QuerySerializer[StreamType] {
-    def this(endpoint: HttpEndpoint, bodySerializer: BodySerializer[String]) = this()
+    def this(
+      endpoint: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpEndpoint */ js.Any,
+      bodySerializer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodySerializer<string> */ js.Any
+    ) = this()
   }
 }

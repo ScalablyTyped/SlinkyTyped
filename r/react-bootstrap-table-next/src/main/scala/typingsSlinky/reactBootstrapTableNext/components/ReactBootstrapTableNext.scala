@@ -31,9 +31,9 @@ object ReactBootstrapTableNext {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T /* <: js.Object */] (val args: js.Array[js.Any])
+  class Builder[T /* <: js.Object */, K] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[T]] {
+       with StBuildingComponent[tag.type, default[T, K]] {
     
     @scala.inline
     def bodyClasses(value: String): this.type = set("bodyClasses", value.asInstanceOf[js.Any])
@@ -69,7 +69,7 @@ object ReactBootstrapTableNext {
     def defaultSorted(value: js.Array[Order]): this.type = set("defaultSorted", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def expandRow(value: ExpandRowProps[T]): this.type = set("expandRow", value.asInstanceOf[js.Any])
+    def expandRow(value: ExpandRowProps[T, K]): this.type = set("expandRow", value.asInstanceOf[js.Any])
     
     @scala.inline
     def filter(value: js.Any): this.type = set("filter", value.asInstanceOf[js.Any])
@@ -96,7 +96,13 @@ object ReactBootstrapTableNext {
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def noDataIndication(value: () => ReactElement | String): this.type = set("noDataIndication", js.Any.fromFunction0(value))
+    def noDataIndicationReactElement(value: ReactElement): this.type = set("noDataIndication", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def noDataIndicationFunction0(value: () => ReactElement | String): this.type = set("noDataIndication", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def noDataIndication(value: (js.Function0[ReactElement | String]) | ReactElement | String): this.type = set("noDataIndication", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onDataSizeChange(value: /* props */ DataSize => Unit): this.type = set("onDataSizeChange", js.Any.fromFunction1(value))
@@ -162,11 +168,11 @@ object ReactBootstrapTableNext {
     def wrapperClasses(value: String): this.type = set("wrapperClasses", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T /* <: js.Object */](p: BootstrapTableProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[T /* <: js.Object */, K](p: BootstrapTableProps[T, K]): Builder[T, K] = new Builder[T, K](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply[T /* <: js.Object */](columns: js.Array[ColumnDescription[_, _]], data: js.Array[_], keyField: String): Builder[T] = {
+  def apply[T /* <: js.Object */, K](columns: js.Array[ColumnDescription[_, _]], data: js.Array[_], keyField: String): Builder[T, K] = {
     val __props = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], keyField = keyField.asInstanceOf[js.Any])
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[BootstrapTableProps[T]]))
+    new Builder[T, K](js.Array(this.component, __props.asInstanceOf[BootstrapTableProps[T, K]]))
   }
 }

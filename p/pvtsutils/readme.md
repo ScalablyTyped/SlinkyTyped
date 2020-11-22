@@ -1,7 +1,7 @@
 
 # Scala.js typings for pvtsutils
 
-Typings are for version 1.0.11
+Typings are for version 1.1.1
 
 ## Library description:
 pvtsutils is a set of common utility functions used in various Peculiar Ventures TypeScript based projects.

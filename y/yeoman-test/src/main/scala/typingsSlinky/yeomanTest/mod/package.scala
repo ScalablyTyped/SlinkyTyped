@@ -6,7 +6,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type Dependency = java.lang.String | (js.Tuple2[typingsSlinky.yeomanGenerator.mod.^, java.lang.String])
+  type Dependency = java.lang.String | (js.Tuple2[
+    typingsSlinky.yeomanGenerator.mod.^[typingsSlinky.yeomanGenerator.mod.GeneratorOptions], 
+    java.lang.String
+  ])
   
   type Dictionary[T] = org.scalablytyped.runtime.StringDictionary[T]
 }

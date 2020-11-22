@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait `10` extends js.Object {
   
   /**
-    * @see https://echarts.apache.org/en/option.html#series-line.data.emphasis.itemStyle
+    * @see https://echarts.apache.org/en/option.html#series-lines.emphasis.label
     */
-  var itemStyle: js.UndefOr[BarBorderWidth] = js.native
+  var label: js.UndefOr[FontSize] = js.native
   
   /**
-    * @see https://echarts.apache.org/en/option.html#series-line.data.emphasis.label
+    * @see https://echarts.apache.org/en/option.html#series-lines.emphasis.lineStyle
     */
-  var label: js.UndefOr[Distance] = js.native
+  var lineStyle: js.UndefOr[ShadowBlur] = js.native
 }
 object `10` {
   
@@ -41,15 +41,15 @@ object `10` {
     }
     
     @scala.inline
-    def setItemStyle(value: BarBorderWidth): Self = this.set("itemStyle", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteItemStyle: Self = this.set("itemStyle", js.undefined)
-    
-    @scala.inline
-    def setLabel(value: Distance): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: FontSize): Self = this.set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
+    
+    @scala.inline
+    def setLineStyle(value: ShadowBlur): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLineStyle: Self = this.set("lineStyle", js.undefined)
   }
 }

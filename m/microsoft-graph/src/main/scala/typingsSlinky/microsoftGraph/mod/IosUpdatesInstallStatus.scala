@@ -10,20 +10,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.available
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.idle
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.unknown_
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloading
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloadFailed
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloadRequiresComputer
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloadInsufficientSpace
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloadInsufficientPower
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloadInsufficientNetwork
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.installing
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.installInsufficientSpace
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.installInsufficientPower
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.installPhoneCallInProgress
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.installFailed
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.notSupportedOperation
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.sharedDeviceUserLoggedInError
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.deviceOsHigherThanDesiredOsVersion
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.sharedDeviceUserLoggedInError
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.notSupportedOperation
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.installFailed
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.installPhoneCallInProgress
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.installInsufficientPower
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.installInsufficientSpace
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.installing
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloadInsufficientNetwork
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloadInsufficientPower
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloadInsufficientSpace
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloadRequiresComputer
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloadFailed
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.downloading
 */
 trait IosUpdatesInstallStatus extends js.Object
 object IosUpdatesInstallStatus {

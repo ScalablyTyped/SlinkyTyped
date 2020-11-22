@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait XRPose extends js.Object {
   
-  var emulatedPosition: Boolean = js.native
+  val emulatedPosition: Boolean = js.native
   
-  var transform: XRRigidTransform = js.native
+  val transform: XRRigidTransform = js.native
 }
 object XRPose {
   

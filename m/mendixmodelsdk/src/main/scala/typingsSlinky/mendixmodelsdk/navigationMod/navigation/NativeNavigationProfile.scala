@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.navigationMod.navigation
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -8,6 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.BottomBarItem
 import typingsSlinky.mendixmodelsdk.navigationMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.IPage
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,12 +32,14 @@ class NativeNavigationProfile protected () extends NavigationProfileBase {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     *
     * In version 8.0.0: introduced
     */
@@ -49,9 +53,6 @@ class NativeNavigationProfile protected () extends NavigationProfileBase {
   def homePageQualifiedName: String | Null = js.native
   
   def homePage_=(newValue: IPage | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FNativeNavigationProfile: IModel = js.native
   
   /**
     * In version 8.0.0: introduced

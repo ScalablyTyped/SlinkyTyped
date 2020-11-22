@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs
 
+import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.sceneMod.IDisposable
@@ -27,8 +28,6 @@ object webXREnterExitUIMod extends js.Object {
     
     var _buttons: js.Any = js.native
     
-    var _overlay: js.Any = js.native
-    
     var _updateButtons: js.Any = js.native
     
     /**
@@ -42,6 +41,11 @@ object webXREnterExitUIMod extends js.Object {
     
     /** version of the options passed to this UI */
     var options: WebXREnterExitUIOptions = js.native
+    
+    /**
+      * The HTML Div Element to which buttons are added.
+      */
+    val overlay: HTMLDivElement = js.native
     
     var scene: js.Any = js.native
   }
@@ -101,6 +105,16 @@ object webXREnterExitUIMod extends js.Object {
     var customButtons: js.UndefOr[js.Array[WebXREnterExitUIButton]] = js.native
     
     /**
+      * If defined, this function will be executed if the UI encounters an error when entering XR
+      */
+    var onError: js.UndefOr[js.Function1[/* error */ js.Any, Unit]] = js.native
+    
+    /**
+      * A list of optional features to init the session with
+      */
+    var optionalFeatures: js.UndefOr[js.Array[String]] = js.native
+    
+    /**
       * A reference space type to use when creating the default button.
       * Default is local-floor
       */
@@ -110,6 +124,11 @@ object webXREnterExitUIMod extends js.Object {
       * Context to enter xr with
       */
     var renderTarget: js.UndefOr[Nullable[WebXRRenderTarget]] = js.native
+    
+    /**
+      * A list of optional features to init the session with
+      */
+    var requiredFeatures: js.UndefOr[js.Array[String]] = js.native
     
     /**
       * A session mode to use when creating the default button.

@@ -18,9 +18,19 @@ trait DescribeBackupJobOutput extends js.Object {
   var BackupJobId: js.UndefOr[String] = js.native
   
   /**
+    * Represents the options specified as part of backup plan or on-demand backup job.
+    */
+  var BackupOptions: js.UndefOr[typingsSlinky.awsSdk.backupMod.BackupOptions] = js.native
+  
+  /**
     * The size, in bytes, of a backup.
     */
   var BackupSizeInBytes: js.UndefOr[Long_] = js.native
+  
+  /**
+    * Represents the actual backup type selected for a backup job. For example, if a successful WindowsVSS backup was taken, BackupType returns "WindowsVSS". If BackupType is empty, then the backup type that was is a regular backup.
+    */
+  var BackupType: js.UndefOr[String] = js.native
   
   /**
     * An Amazon Resource Name (ARN) that uniquely identifies a backup vault; for example, arn:aws:backup:us-east-1:123456789012:vault:aBackupVault.
@@ -133,10 +143,22 @@ object DescribeBackupJobOutput {
     def deleteBackupJobId: Self = this.set("BackupJobId", js.undefined)
     
     @scala.inline
+    def setBackupOptions(value: BackupOptions): Self = this.set("BackupOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBackupOptions: Self = this.set("BackupOptions", js.undefined)
+    
+    @scala.inline
     def setBackupSizeInBytes(value: Long_): Self = this.set("BackupSizeInBytes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackupSizeInBytes: Self = this.set("BackupSizeInBytes", js.undefined)
+    
+    @scala.inline
+    def setBackupType(value: String): Self = this.set("BackupType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBackupType: Self = this.set("BackupType", js.undefined)
     
     @scala.inline
     def setBackupVaultArn(value: ARN): Self = this.set("BackupVaultArn", value.asInstanceOf[js.Any])

@@ -19,7 +19,7 @@ trait IWorkingCopyMetaData extends js.Object {
   
   var teamServerBaseBranch: js.UndefOr[String] = js.native
   
-  var teamServerBaseCommitHash: js.UndefOr[String] = js.native
+  var teamServerBaseCommitId: js.UndefOr[String] = js.native
   
   var teamServerBaseRevision: js.UndefOr[Double] = js.native
 }
@@ -68,10 +68,10 @@ object IWorkingCopyMetaData {
     def deleteTeamServerBaseBranch: Self = this.set("teamServerBaseBranch", js.undefined)
     
     @scala.inline
-    def setTeamServerBaseCommitHash(value: String): Self = this.set("teamServerBaseCommitHash", value.asInstanceOf[js.Any])
+    def setTeamServerBaseCommitId(value: String): Self = this.set("teamServerBaseCommitId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteTeamServerBaseCommitHash: Self = this.set("teamServerBaseCommitHash", js.undefined)
+    def deleteTeamServerBaseCommitId: Self = this.set("teamServerBaseCommitId", js.undefined)
     
     @scala.inline
     def setTeamServerBaseRevision(value: Double): Self = this.set("teamServerBaseRevision", value.asInstanceOf[js.Any])

@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "Form")
+@JSImport("reactstrap/es", "Form")
 @js.native
-class Form[T] ()
+class Form ()
   extends Component[FormProps, js.Object, js.Any]

@@ -13,6 +13,11 @@ trait RecordDetail extends js.Object {
   var CreatedTime: js.UndefOr[js.Date] = js.native
   
   /**
+    * The ARN of the launch role associated with the provisioned product.
+    */
+  var LaunchRoleArn: js.UndefOr[RoleArn] = js.native
+  
+  /**
     * The path identifier.
     */
   var PathId: js.UndefOr[Id] = js.native
@@ -100,6 +105,12 @@ object RecordDetail {
     
     @scala.inline
     def deleteCreatedTime: Self = this.set("CreatedTime", js.undefined)
+    
+    @scala.inline
+    def setLaunchRoleArn(value: RoleArn): Self = this.set("LaunchRoleArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLaunchRoleArn: Self = this.set("LaunchRoleArn", js.undefined)
     
     @scala.inline
     def setPathId(value: Id): Self = this.set("PathId", value.asInstanceOf[js.Any])

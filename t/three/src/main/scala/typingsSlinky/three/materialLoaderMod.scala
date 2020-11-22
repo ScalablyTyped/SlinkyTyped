@@ -42,6 +42,9 @@ object materialLoaderMod extends js.Object {
     
     def setTextures(textures: StringDictionary[Texture]): this.type = js.native
     
+    /**
+    	 * @default {}
+    	 */
     var textures: StringDictionary[Texture] = js.native
   }
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ExportNamespaceSpecifier
+import typingsSlinky.babelTraverse.babelTraverseStrings.UnaryExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `172` extends js.Object {
   
-  var `type`: ExportNamespaceSpecifier = js.native
+  var `type`: UnaryExpression = js.native
 }
 object `172` {
   
   @scala.inline
-  def apply(`type`: ExportNamespaceSpecifier): `172` = {
+  def apply(`type`: UnaryExpression): `172` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`172`]
@@ -35,6 +35,6 @@ object `172` {
     }
     
     @scala.inline
-    def setType(value: ExportNamespaceSpecifier): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: UnaryExpression): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

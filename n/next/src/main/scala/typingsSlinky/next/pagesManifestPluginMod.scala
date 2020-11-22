@@ -18,6 +18,8 @@ object pagesManifestPluginMod extends js.Object {
       compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Compiler */ js.Any
     ): Unit = js.native
     
+    def createAssets(compilation: js.Any, assets: js.Any): Unit = js.native
+    
     var serverless: Boolean = js.native
   }
   

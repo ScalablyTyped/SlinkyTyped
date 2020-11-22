@@ -60,6 +60,8 @@ object mod extends js.Object {
   def array[T](v: T): js.Array[T] = js.native
   def array[T](v: js.Array[T]): js.Array[T] = js.native
   
+  def ascending(a: js.Any, b: js.Any): Double = js.native
+  
   def changeset(): Changeset_ = js.native
   
   def clampRange(range: js.Array[Double], min: Double, max: Double): js.Array[Double] = js.native
@@ -119,6 +121,7 @@ object mod extends js.Object {
   def ingest(datum: js.Any): js.Any = js.native
   
   def inherits[C /* <: js.Object */, P /* <: js.Object */](child: C, parent: P): C with P = js.native
+  def inherits[C /* <: js.Object */, P /* <: js.Object */](child: C, parent: P, members: js.Object): C with P = js.native
   
   def inrange(value: Double, range: js.Array[Double], left: Boolean, right: Boolean): Boolean = js.native
   
@@ -130,6 +133,8 @@ object mod extends js.Object {
   def isDate(a: js.Any): /* is std.Date */ Boolean = js.native
   
   def isFunction(a: js.Any): /* is std.Function */ Boolean = js.native
+  
+  def isIterable(a: js.Any): Boolean = js.native
   
   def isNumber(a: js.Any): /* is number */ Boolean = js.native
   

@@ -17,5 +17,7 @@ object ^ extends js.Object {
   
   var defaultOptions: Options = js.native
   
+  var theme: Options = js.native
+  
   var time: typingsSlinky.highcharts.mod.Time_ = js.native
 }

@@ -14,6 +14,8 @@ trait ReaderRefetchMetadataconn extends js.Object {
   
   val fragmentPathInResult: js.Array[String] = js.native
   
+  val identifierField: js.UndefOr[String | Null] = js.native
+  
   val operation: String | ConcreteRequest = js.native
 }
 object ReaderRefetchMetadataconn {
@@ -54,5 +56,14 @@ object ReaderRefetchMetadataconn {
     
     @scala.inline
     def setOperation(value: String | ConcreteRequest): Self = this.set("operation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIdentifierField(value: String): Self = this.set("identifierField", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIdentifierField: Self = this.set("identifierField", js.undefined)
+    
+    @scala.inline
+    def setIdentifierFieldNull: Self = this.set("identifierField", null)
   }
 }

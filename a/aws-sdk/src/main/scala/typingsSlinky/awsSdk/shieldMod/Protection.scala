@@ -18,7 +18,7 @@ trait Protection extends js.Object {
   var Id: js.UndefOr[ProtectionId] = js.native
   
   /**
-    * The friendly name of the protection. For example, My CloudFront distributions.
+    * The name of the protection. For example, My CloudFront distributions.
     */
   var Name: js.UndefOr[ProtectionName] = js.native
   

@@ -4,6 +4,7 @@ import typingsSlinky.expoWebBrowser.anon.Message
 import typingsSlinky.expoWebBrowser.anon.SkipRedirectCheck
 import typingsSlinky.expoWebBrowser.expoWebBrowserStrings.cancel
 import typingsSlinky.expoWebBrowser.expoWebBrowserStrings.dismiss
+import typingsSlinky.expoWebBrowser.expoWebBrowserStrings.locked
 import typingsSlinky.expoWebBrowser.expoWebBrowserStrings.opened
 import typingsSlinky.expoWebBrowser.webBrowserTypesMod.WebBrowserAuthSessionResult
 import typingsSlinky.expoWebBrowser.webBrowserTypesMod.WebBrowserCoolDownResult
@@ -56,6 +57,8 @@ object mod extends js.Object {
       * iOS only
       */
     val DISMISS: dismiss = js.native
+    
+    val LOCKED: locked = js.native
     
     /**
       * Android only

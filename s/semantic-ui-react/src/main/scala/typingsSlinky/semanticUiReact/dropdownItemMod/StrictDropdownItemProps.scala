@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.flagFlagMod.FlagProps
 import typingsSlinky.semanticUiReact.genericMod.HtmlSpanProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -138,7 +137,7 @@ object StrictDropdownItemProps {
     
     @scala.inline
     def setDescriptionFunction3(
-      value: (/* component */ ReactType[HtmlSpanProps], HtmlSpanProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, HtmlSpanProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("description", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -158,7 +157,7 @@ object StrictDropdownItemProps {
     
     @scala.inline
     def setFlagFunction3(
-      value: (/* component */ ReactType[FlagProps], FlagProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, FlagProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("flag", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -172,7 +171,7 @@ object StrictDropdownItemProps {
     
     @scala.inline
     def setIconFunction3(
-      value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("icon", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -186,7 +185,7 @@ object StrictDropdownItemProps {
     
     @scala.inline
     def setImageFunction3(
-      value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("image", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -200,7 +199,7 @@ object StrictDropdownItemProps {
     
     @scala.inline
     def setLabelFunction3(
-      value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): Self = this.set("label", js.Any.fromFunction3(value))
     
     @scala.inline

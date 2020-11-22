@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "queue-microtask"
-version := "1.1.4-9417b9"
+version := "1.2.1-f8276c"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

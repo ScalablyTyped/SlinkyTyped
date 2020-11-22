@@ -2,6 +2,7 @@ package typingsSlinky.officeUiFabricReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.auto
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.baseline
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.center
@@ -17,7 +18,6 @@ import typingsSlinky.officeUiFabricReact.stackItemTypesMod.IStackItemTokens
 import typingsSlinky.uifabricFoundation.ihtmlslotsMod.IHTMLSlot
 import typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunctionOrObject
 import typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

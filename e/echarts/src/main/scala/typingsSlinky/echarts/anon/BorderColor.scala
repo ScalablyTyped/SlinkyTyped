@@ -10,19 +10,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BorderColor extends js.Object {
   
-  var borderColor: js.UndefOr[String] = js.native
+  var borderColor: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
   var borderType: js.UndefOr[solid | dashed | dotted] = js.native
   
   var borderWidth: js.UndefOr[Double] = js.native
   
-  var color: js.UndefOr[String] = js.native
+  var color: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
   var opacity: js.UndefOr[Double] = js.native
   
   var shadowBlur: js.UndefOr[Double] = js.native
   
-  var shadowColor: js.UndefOr[String] = js.native
+  var shadowColor: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
   
   var shadowOffsetX: js.UndefOr[Double] = js.native
   
@@ -52,7 +52,7 @@ object BorderColor {
     }
     
     @scala.inline
-    def setBorderColor(value: String): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    def setBorderColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBorderColor: Self = this.set("borderColor", js.undefined)
@@ -70,7 +70,7 @@ object BorderColor {
     def deleteBorderWidth: Self = this.set("borderWidth", js.undefined)
     
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
@@ -88,7 +88,7 @@ object BorderColor {
     def deleteShadowBlur: Self = this.set("shadowBlur", js.undefined)
     
     @scala.inline
-    def setShadowColor(value: String): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
+    def setShadowColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShadowColor: Self = this.set("shadowColor", js.undefined)

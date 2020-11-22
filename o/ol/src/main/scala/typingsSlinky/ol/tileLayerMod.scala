@@ -30,12 +30,27 @@ object tileLayerMod extends js.Object {
       opacity: Double
     ): Unit = js.native
     
+    def getImage(): HTMLCanvasElement = js.native
+    
     def getTile(z: Double, x: Double, y: Double, frameState: FrameState): typingsSlinky.ol.olTileMod.default = js.native
     
+    /**
+      * Get the image from a tile.
+      */
     /* protected */ def getTileImage(tile: typingsSlinky.ol.imageTileMod.default): HTMLCanvasElement | HTMLImageElement | HTMLVideoElement = js.native
     
     /* protected */ def isDrawableTile(tile: typingsSlinky.ol.olTileMod.default): Boolean = js.native
     
+    /**
+      * Manage tile pyramid.
+      * This function performs a number of functions related to the tiles at the
+      * current zoom and lower zoom levels:
+      *
+      * registers idle tiles in frameState.wantedTiles so that they are not
+      * discarded by the tile queue
+      * enqueues missing tiles
+      *
+      */
     /* protected */ def manageTilePyramid(
       frameState: FrameState,
       tileSource: typingsSlinky.ol.sourceTileMod.default,

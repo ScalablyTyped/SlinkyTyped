@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.UpdateExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.Identifier
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `97` extends js.Object {
   
-  var `type`: UpdateExpression = js.native
+  var `type`: Identifier = js.native
 }
 object `97` {
   
   @scala.inline
-  def apply(`type`: UpdateExpression): `97` = {
+  def apply(`type`: Identifier): `97` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`97`]
@@ -35,6 +35,6 @@ object `97` {
     }
     
     @scala.inline
-    def setType(value: UpdateExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: Identifier): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

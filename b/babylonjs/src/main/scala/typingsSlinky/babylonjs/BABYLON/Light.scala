@@ -114,9 +114,11 @@ trait Light extends Node {
   /**
     * Returns a new Light object, named "name", from the current one.
     * @param name The name of the cloned light
+    * @param newParent The parent of this light, if it has one
     * @returns the new created light
     */
   def clone(name: String): Nullable[Light] = js.native
+  def clone(name: String, newParent: Nullable[Node]): Nullable[Light] = js.native
   
   /**
     * Diffuse gives the basic color to an object.

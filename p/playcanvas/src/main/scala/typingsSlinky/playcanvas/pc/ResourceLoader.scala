@@ -18,7 +18,7 @@ trait ResourceLoader extends js.Object {
     * @example
     * var loader = new ResourceLoader();
     * loader.addHandler("json", new pc.JsonHandler());
-    * @param type - The name of the resource type that the handler will be registerd with. Can be:
+    * @param type - The name of the resource type that the handler will be registered with. Can be:
     *
     * * {@link pc.ASSET_ANIMATION}
     * * {@link pc.ASSET_AUDIO}
@@ -60,8 +60,8 @@ trait ResourceLoader extends js.Object {
   
   /**
     * Get a {@link pc.ResourceHandler} for a resource type.
-    * @param type - The name of the resource type that the handler is registerd with.
-    * @returns The registerd handler.
+    * @param type - The name of the resource type that the handler is registered with.
+    * @returns The registered handler.
     */
   def getHandler(`type`: String): ResourceHandler = js.native
   

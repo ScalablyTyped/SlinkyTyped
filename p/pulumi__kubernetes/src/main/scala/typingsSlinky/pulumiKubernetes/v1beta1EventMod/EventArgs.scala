@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EventArgs extends js.Object {
   
   /**
-    * What action was taken/failed regarding to the regarding object.
+    * action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field can have at most 128 characters.
     */
   val action: js.UndefOr[Input[String]] = js.native
   
@@ -24,27 +24,27 @@ trait EventArgs extends js.Object {
   val apiVersion: js.UndefOr[Input[eventsDotk8sDotioSlashv1beta1]] = js.native
   
   /**
-    * Deprecated field assuring backward compatibility with core.v1 Event type
+    * deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
     */
   val deprecatedCount: js.UndefOr[Input[Double]] = js.native
   
   /**
-    * Deprecated field assuring backward compatibility with core.v1 Event type
+    * deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
     */
   val deprecatedFirstTimestamp: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Deprecated field assuring backward compatibility with core.v1 Event type
+    * deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
     */
   val deprecatedLastTimestamp: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Deprecated field assuring backward compatibility with core.v1 Event type
+    * deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
     */
   val deprecatedSource: js.UndefOr[Input[EventSource]] = js.native
   
   /**
-    * Required. Time when this Event was first observed.
+    * eventTime is the time when this Event was first observed. It is required.
     */
   val eventTime: Input[String] = js.native
   
@@ -56,42 +56,42 @@ trait EventArgs extends js.Object {
   val metadata: js.UndefOr[Input[ObjectMeta]] = js.native
   
   /**
-    * Optional. A human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
+    * note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
     */
   val note: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Why the action was taken.
+    * reason is why the action was taken. It is human-readable. This field can have at most 128 characters.
     */
   val reason: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The object this Event is about. In most cases it's an Object reporting controller implements. E.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
+    * regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
     */
   val regarding: js.UndefOr[Input[ObjectReference]] = js.native
   
   /**
-    * Optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
+    * related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
     */
   val related: js.UndefOr[Input[ObjectReference]] = js.native
   
   /**
-    * Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.
+    * reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
     */
   val reportingController: js.UndefOr[Input[String]] = js.native
   
   /**
-    * ID of the controller instance, e.g. `kubelet-xyzf`.
+    * reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
     */
   val reportingInstance: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Data about the Event series this event represents or nil if it's a singleton Event.
+    * series is data about the Event series this event represents or nil if it's a singleton Event.
     */
   val series: js.UndefOr[Input[EventSeries]] = js.native
   
   /**
-    * Type of this event (Normal, Warning), new types could be added in the future.
+    * type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable.
     */
   val `type`: js.UndefOr[Input[String]] = js.native
 }

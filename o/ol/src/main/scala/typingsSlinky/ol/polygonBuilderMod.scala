@@ -10,10 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object polygonBuilderMod extends js.Object {
   
   @js.native
-  class default protected ()
-    extends typingsSlinky.ol.builderMod.default {
+  trait CanvasPolygonBuilder
+    extends typingsSlinky.ol.builderMod.default
+  
+  @js.native
+  class default protected () extends CanvasPolygonBuilder {
     def this(tolerance: Double, maxExtent: Extent, resolution: Double, pixelRatio: Double) = this()
   }
-  
-  type CanvasPolygonBuilder = typingsSlinky.ol.builderMod.default
 }

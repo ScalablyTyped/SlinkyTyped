@@ -1,11 +1,12 @@
 package typingsSlinky.babelTraverse.mod
 
+import typingsSlinky.babelTypes.mod.Node
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait VisitNodeObject[S, P] extends js.Object {
+trait VisitNodeObject[S, P /* <: Node */] extends js.Object {
   
   var enter: js.UndefOr[VisitNodeFunction[S, P]] = js.native
   
@@ -14,13 +15,13 @@ trait VisitNodeObject[S, P] extends js.Object {
 object VisitNodeObject {
   
   @scala.inline
-  def apply[S, P](): VisitNodeObject[S, P] = {
+  def apply[S, P /* <: Node */](): VisitNodeObject[S, P] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[VisitNodeObject[S, P]]
   }
   
   @scala.inline
-  implicit class VisitNodeObjectOps[Self <: VisitNodeObject[_, _], S, P] (val x: Self with (VisitNodeObject[S, P])) extends AnyVal {
+  implicit class VisitNodeObjectOps[Self <: VisitNodeObject[_, _], S, P /* <: Node */] (val x: Self with (VisitNodeObject[S, P])) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

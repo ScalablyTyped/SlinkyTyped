@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IdToken extends js.Object {
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: id = js.native
   
@@ -17,8 +17,8 @@ trait IdToken extends js.Object {
 object IdToken {
   
   @scala.inline
-  def apply(name: id, value: String): IdToken = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(location: LocationRange, name: id, value: String): IdToken = {
+    val __obj = js.Dynamic.literal(location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IdToken]
   }
   
@@ -38,15 +38,12 @@ object IdToken {
     }
     
     @scala.inline
+    def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setName(value: id): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
   }
 }

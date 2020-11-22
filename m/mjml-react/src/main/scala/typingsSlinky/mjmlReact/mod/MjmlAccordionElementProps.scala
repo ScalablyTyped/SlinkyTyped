@@ -1,6 +1,6 @@
 package typingsSlinky.mjmlReact.mod
 
-import typingsSlinky.csstype.mod.Property.BackgroundColor
+import typingsSlinky.csstype.mod.BackgroundColorProperty
 import typingsSlinky.mjmlReact.mjmlReactStrings.left
 import typingsSlinky.mjmlReact.mjmlReactStrings.right
 import scala.scalajs.js
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MjmlAccordionElementProps extends js.Object {
   
-  var backgroundColor: js.UndefOr[BackgroundColor] = js.native
+  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
   
   var fontFamily: js.UndefOr[String] = js.native
   
@@ -54,7 +54,7 @@ object MjmlAccordionElementProps {
     }
     
     @scala.inline
-    def setBackgroundColor(value: BackgroundColor): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColor(value: BackgroundColorProperty): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)

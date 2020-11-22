@@ -10,8 +10,8 @@ trait UnparsedPrologue
      with UnparsedNode {
   
   @JSName("data")
-  var data_UnparsedPrologue: java.lang.String = js.native
+  val data_UnparsedPrologue: java.lang.String = js.native
   
   @JSName("kind")
-  var kind_UnparsedPrologue: typingsSlinky.typescript.mod.SyntaxKind.UnparsedPrologue = js.native
+  val kind_UnparsedPrologue: typingsSlinky.typescript.mod.SyntaxKind.UnparsedPrologue = js.native
 }

@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Uint8ClampedArrayConstructor
   extends Instantiable0[js.typedarray.Uint8ClampedArray]
      with Instantiable1[
-      (/* arrayOrArrayBuffer */ ArrayBufferLike) | (/* arrayOrArrayBuffer */ ArrayLike[Double]) | (/* length */ Double) | (/* elements */ js.Iterable[Double]), 
+      (/* buffer */ ArrayBufferLike) | (/* array */ ArrayLike[Double]) | (/* length */ Double) | (/* elements */ js.Iterable[Double]), 
       js.typedarray.Uint8ClampedArray
     ]
      with Instantiable2[
@@ -22,7 +22,7 @@ trait Uint8ClampedArrayConstructor
     ]
      with Instantiable3[
       /* buffer */ ArrayBufferLike, 
-      /* byteOffset */ Double, 
+      js.UndefOr[/* byteOffset */ Double], 
       /* length */ Double, 
       js.typedarray.Uint8ClampedArray
     ] {

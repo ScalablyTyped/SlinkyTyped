@@ -18,7 +18,7 @@ trait CreateVpcEndpointRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * A policy to attach to the endpoint that controls access to the service. The policy must be in valid JSON format. If this parameter is not specified, we attach a default policy that allows full access to the service.
+    * (Interface and gateway endpoints) A policy to attach to the endpoint that controls access to the service. The policy must be in valid JSON format. If this parameter is not specified, we attach a default policy that allows full access to the service.
     */
   var PolicyDocument: js.UndefOr[String] = js.native
   
@@ -43,7 +43,7 @@ trait CreateVpcEndpointRequest extends js.Object {
   var ServiceName: String = js.native
   
   /**
-    * (Interface endpoint) The ID of one or more subnets in which to create an endpoint network interface.
+    * (Interface and Gateway Load Balancer endpoints) The ID of one or more subnets in which to create an endpoint network interface. For a Gateway Load Balancer endpoint, you can specify one subnet only.
     */
   var SubnetIds: js.UndefOr[VpcEndpointSubnetIdList] = js.native
   

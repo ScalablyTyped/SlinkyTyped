@@ -3,15 +3,27 @@ package typingsSlinky.baseui.tagMod
 import org.scalajs.dom.raw.Event
 import slinky.core.facade.ReactElement
 import typingsSlinky.baseui.baseuiStrings.accent
+import typingsSlinky.baseui.baseuiStrings.black
+import typingsSlinky.baseui.baseuiStrings.blue
+import typingsSlinky.baseui.baseuiStrings.brown
 import typingsSlinky.baseui.baseuiStrings.custom_
+import typingsSlinky.baseui.baseuiStrings.green
+import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.light
+import typingsSlinky.baseui.baseuiStrings.medium_
 import typingsSlinky.baseui.baseuiStrings.negative
 import typingsSlinky.baseui.baseuiStrings.neutral
+import typingsSlinky.baseui.baseuiStrings.orange
 import typingsSlinky.baseui.baseuiStrings.outlined
 import typingsSlinky.baseui.baseuiStrings.positive
 import typingsSlinky.baseui.baseuiStrings.primary
+import typingsSlinky.baseui.baseuiStrings.purple
+import typingsSlinky.baseui.baseuiStrings.red
+import typingsSlinky.baseui.baseuiStrings.small_
 import typingsSlinky.baseui.baseuiStrings.solid
 import typingsSlinky.baseui.baseuiStrings.warning
+import typingsSlinky.baseui.baseuiStrings.white
+import typingsSlinky.baseui.baseuiStrings.yellow
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -31,7 +43,9 @@ trait TagProps extends js.Object {
   
   var isHovered: js.UndefOr[Boolean] = js.native
   
-  var kind: js.UndefOr[custom_ | accent | primary | neutral | positive | warning | negative] = js.native
+  var kind: js.UndefOr[
+    orange | custom_ | brown | purple | yellow | red | accent | white | primary | blue | neutral | positive | black | green | warning | negative
+  ] = js.native
   
   var onActionClick: js.UndefOr[js.Function2[/* e */ Event, /* children */ js.UndefOr[ReactElement], _]] = js.native
   
@@ -42,6 +56,8 @@ trait TagProps extends js.Object {
   var onKeyDown: js.UndefOr[js.Function1[/* event */ Event, _]] = js.native
   
   var overrides: js.UndefOr[TagOverrides] = js.native
+  
+  var size: js.UndefOr[small_ | medium_ | large_] = js.native
   
   var title: js.UndefOr[String] = js.native
   
@@ -110,7 +126,9 @@ object TagProps {
     def deleteIsHovered: Self = this.set("isHovered", js.undefined)
     
     @scala.inline
-    def setKind(value: custom_ | accent | primary | neutral | positive | warning | negative): Self = this.set("kind", value.asInstanceOf[js.Any])
+    def setKind(
+      value: orange | custom_ | brown | purple | yellow | red | accent | white | primary | blue | neutral | positive | black | green | warning | negative
+    ): Self = this.set("kind", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKind: Self = this.set("kind", js.undefined)
@@ -144,6 +162,12 @@ object TagProps {
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)
+    
+    @scala.inline
+    def setSize(value: small_ | medium_ | large_): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
     
     @scala.inline
     def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])

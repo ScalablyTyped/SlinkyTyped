@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProviderData extends js.Object {
   
-  var provider: typingsSlinky.storybookApi.initProviderApiMod.Provider = js.native
+  var provider: typingsSlinky.storybookApi.providerMod.Provider = js.native
 }
 object ProviderData {
   
   @scala.inline
-  def apply(provider: typingsSlinky.storybookApi.initProviderApiMod.Provider): ProviderData = {
+  def apply(provider: typingsSlinky.storybookApi.providerMod.Provider): ProviderData = {
     val __obj = js.Dynamic.literal(provider = provider.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProviderData]
   }
@@ -33,6 +33,6 @@ object ProviderData {
     }
     
     @scala.inline
-    def setProvider(value: typingsSlinky.storybookApi.initProviderApiMod.Provider): Self = this.set("provider", value.asInstanceOf[js.Any])
+    def setProvider(value: typingsSlinky.storybookApi.providerMod.Provider): Self = this.set("provider", value.asInstanceOf[js.Any])
   }
 }

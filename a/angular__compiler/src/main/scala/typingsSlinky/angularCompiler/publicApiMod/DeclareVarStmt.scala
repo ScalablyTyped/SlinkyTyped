@@ -12,7 +12,8 @@ class DeclareVarStmt protected ()
     name: String,
     value: js.UndefOr[typingsSlinky.angularCompiler.outputAstMod.Expression],
     `type`: js.UndefOr[typingsSlinky.angularCompiler.outputAstMod.Type | Null],
-    modifiers: js.UndefOr[js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier] | Null],
-    sourceSpan: js.UndefOr[typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan | Null]
+    modifiers: js.UndefOr[js.Array[typingsSlinky.angularCompiler.outputAstMod.StmtModifier]],
+    sourceSpan: js.UndefOr[typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan | Null],
+    leadingComments: js.UndefOr[js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]]
   ) = this()
 }

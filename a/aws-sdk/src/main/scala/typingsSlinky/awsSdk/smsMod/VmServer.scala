@@ -28,7 +28,7 @@ trait VmServer extends js.Object {
   var vmPath: js.UndefOr[VmPath] = js.native
   
   /**
-    * Information about the VM server location.
+    * The VM server location.
     */
   var vmServerAddress: js.UndefOr[VmServerAddress] = js.native
 }

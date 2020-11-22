@@ -29,6 +29,8 @@ package object mediatailorMod {
   */
   type apiVersion = typingsSlinky.awsSdk.mediatailorMod._apiVersion | java.lang.String
   
+  type boolean = scala.Boolean
+  
   type integer = scala.Double
   
   type integerMin1 = scala.Double

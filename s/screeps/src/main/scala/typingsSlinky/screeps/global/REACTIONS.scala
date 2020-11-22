@@ -13,7 +13,6 @@ import typingsSlinky.screeps.anon.OH
 import typingsSlinky.screeps.anon.UL
 import typingsSlinky.screeps.anon.Z
 import typingsSlinky.screeps.anon.ZK
-import typingsSlinky.screeps.anon.`15`
 import typingsSlinky.screeps.anon.`16`
 import typingsSlinky.screeps.anon.`17`
 import typingsSlinky.screeps.anon.`18`
@@ -32,6 +31,7 @@ import typingsSlinky.screeps.anon.`30`
 import typingsSlinky.screeps.anon.`31`
 import typingsSlinky.screeps.anon.`32`
 import typingsSlinky.screeps.anon.`33`
+import typingsSlinky.screeps.anon.`34`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -42,35 +42,35 @@ object REACTIONS extends /* resource */ StringDictionary[StringDictionary[String
   
   var G: HO = js.native
   
-  var GH: `16` = js.native
+  var GH: `17` = js.native
   
-  var GH2O: `28` = js.native
+  var GH2O: `29` = js.native
   
-  var GHO2: `33` = js.native
+  var GHO2: `34` = js.native
   
-  var GO: `23` = js.native
+  var GO: `24` = js.native
   
   var H: G = js.native
   
   var K: Z = js.native
   
-  var KH: `17` = js.native
+  var KH: `18` = js.native
   
-  var KH2O: `25` = js.native
+  var KH2O: `26` = js.native
   
-  var KHO2: `31` = js.native
+  var KHO2: `32` = js.native
   
-  var KO: `21` = js.native
+  var KO: `22` = js.native
   
   var L: O = js.native
   
   var LH: OH = js.native
   
-  var LH2O: `24` = js.native
+  var LH2O: `25` = js.native
   
-  var LHO2: `29` = js.native
+  var LHO2: `30` = js.native
   
-  var LO: `19` = js.native
+  var LO: `20` = js.native
   
   var O: H = js.native
   
@@ -78,27 +78,27 @@ object REACTIONS extends /* resource */ StringDictionary[StringDictionary[String
   
   var U: L = js.native
   
-  var UH: `18` = js.native
+  var UH: `19` = js.native
   
-  var UH2O: `27` = js.native
+  var UH2O: `28` = js.native
   
-  var UHO2: `30` = js.native
+  var UHO2: `31` = js.native
   
   var UL: ZK = js.native
   
-  var UO: `22` = js.native
+  var UO: `23` = js.native
   
   var X: GH2O = js.native
   
   var Z: K = js.native
   
-  var ZH: `15` = js.native
+  var ZH: `16` = js.native
   
-  var ZH2O: `26` = js.native
+  var ZH2O: `27` = js.native
   
-  var ZHO2: `32` = js.native
+  var ZHO2: `33` = js.native
   
   var ZK: UL = js.native
   
-  var ZO: `20` = js.native
+  var ZO: `21` = js.native
 }

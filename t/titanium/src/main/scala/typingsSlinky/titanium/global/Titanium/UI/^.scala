@@ -4,6 +4,8 @@ import typingsSlinky.titanium.Dictionary
 import typingsSlinky.titanium.Matrix2DCreationDict
 import typingsSlinky.titanium.Matrix3DCreationDict
 import typingsSlinky.titanium.Titanium.Event
+import typingsSlinky.titanium.Titanium.UIUserinterfacestyleEvent
+import typingsSlinky.titanium.titaniumStrings.userinterfacestyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,6 +18,14 @@ object ^ extends js.Object {
     * Adds the specified callback as an event listener for the named event.
     */
   def addEventListener(name: String, callback: js.Function1[/* param0 */ Event, Unit]): Unit = js.native
+  /**
+    * Adds the specified callback as an event listener for the named event.
+    */
+  @JSName("addEventListener")
+  def addEventListener_userinterfacestyle(
+    name: userinterfacestyle,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ UIUserinterfacestyleEvent, Unit]
+  ): Unit = js.native
   
   /**
     * The name of the API that this proxy corresponds to.
@@ -31,7 +41,7 @@ object ^ extends js.Object {
     * Sets the background color of the master view (when there are no windows or other top-level
     * controls displayed).
     */
-  var backgroundColor: String = js.native
+  var backgroundColor: String | typingsSlinky.titanium.Titanium.UI.Color = js.native
   
   /**
     * Local path or URL to an image file for setting a background for the master view (when there
@@ -98,6 +108,12 @@ object ^ extends js.Object {
     */
   def createButtonBar(): typingsSlinky.titanium.Titanium.UI.ButtonBar = js.native
   def createButtonBar(parameters: Dictionary[typingsSlinky.titanium.Titanium.UI.ButtonBar]): typingsSlinky.titanium.Titanium.UI.ButtonBar = js.native
+  
+  /**
+    * Creates and returns an instance of <Titanium.UI.Color>.
+    */
+  def createColor(): typingsSlinky.titanium.Titanium.UI.Color = js.native
+  def createColor(parameters: Dictionary[typingsSlinky.titanium.Titanium.UI.Color]): typingsSlinky.titanium.Titanium.UI.Color = js.native
   
   /**
     * Creates and returns an instance of <Titanium.UI.DashboardItem>.
@@ -226,6 +242,12 @@ object ^ extends js.Object {
   def createSearchBar(parameters: Dictionary[typingsSlinky.titanium.Titanium.UI.SearchBar]): typingsSlinky.titanium.Titanium.UI.SearchBar = js.native
   
   /**
+    * Creates and returns an instance of <Titanium.UI.Shortcut>.
+    */
+  def createShortcut(): typingsSlinky.titanium.Titanium.UI.Shortcut = js.native
+  def createShortcut(parameters: Dictionary[typingsSlinky.titanium.Titanium.UI.Shortcut]): typingsSlinky.titanium.Titanium.UI.Shortcut = js.native
+  
+  /**
     * Creates and returns an instance of <Titanium.UI.ShortcutItem>.
     */
   def createShortcutItem(): typingsSlinky.titanium.Titanium.UI.ShortcutItem = js.native
@@ -317,14 +339,22 @@ object ^ extends js.Object {
   
   /**
     * Fetches the correct color to be used with a UI element dependent on the users current dark mode setting on iOS 13 and above, or the [Titanium.UI.semanticColorType](Titanium.UI.semanticColorType) setting in other instances.
+    * Will return a valid string value to be used for color properties on Android. This may be a hex string or an `rgba()` function.
     */
-  def fetchSemanticColor(colorName: String): String = js.native
+  def fetchSemanticColor(colorName: String): typingsSlinky.titanium.Titanium.UI.Color | String = js.native
   
   /**
     * Fires a synthesized event to any registered listeners.
     */
   def fireEvent(name: String): Unit = js.native
   def fireEvent(name: String, event: js.Any): Unit = js.native
+  /**
+    * Fires a synthesized event to any registered listeners.
+    */
+  @JSName("fireEvent")
+  def fireEvent_userinterfacestyle(name: userinterfacestyle): Unit = js.native
+  @JSName("fireEvent")
+  def fireEvent_userinterfacestyle(name: userinterfacestyle, event: UIUserinterfacestyleEvent): Unit = js.native
   
   /**
     * Gets the value of the <Titanium.UI.apiName> property.
@@ -336,7 +366,7 @@ object ^ extends js.Object {
     * Gets the value of the <Titanium.UI.backgroundColor> property.
     * @deprecated Access <Titanium.UI.backgroundColor> instead.
     */
-  def getBackgroundColor(): String = js.native
+  def getBackgroundColor(): String | typingsSlinky.titanium.Titanium.UI.Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.backgroundImage> property.
@@ -358,7 +388,7 @@ object ^ extends js.Object {
   
   /**
     * Gets the value of the <Titanium.UI.semanticColorType> property.
-    * @deprecated Access <Titanium.UI.semanticColorType> instead.
+    * @deprecated Use [userInterfaceStyle](Titanium.UI.userInterfaceStyle) instead.
     */
   def getSemanticColorType(): String = js.native
   
@@ -366,7 +396,13 @@ object ^ extends js.Object {
     * Gets the value of the <Titanium.UI.tintColor> property.
     * @deprecated Access <Titanium.UI.tintColor> instead.
     */
-  def getTintColor(): String = js.native
+  def getTintColor(): String | typingsSlinky.titanium.Titanium.UI.Color = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.userInterfaceStyle> property.
+    * @deprecated Access <Titanium.UI.userInterfaceStyle> instead.
+    */
+  def getUserInterfaceStyle(): Double = js.native
   
   /**
     * The Window or TabGroup whose Activity lifecycle should be triggered on the proxy.
@@ -377,9 +413,18 @@ object ^ extends js.Object {
     * Removes the specified callback as an event listener for the named event.
     */
   def removeEventListener(name: String, callback: js.Function1[/* param0 */ Event, Unit]): Unit = js.native
+  /**
+    * Removes the specified callback as an event listener for the named event.
+    */
+  @JSName("removeEventListener")
+  def removeEventListener_userinterfacestyle(
+    name: userinterfacestyle,
+    callback: js.ThisFunction1[/* this */ this.type, /* event */ UIUserinterfacestyleEvent, Unit]
+  ): Unit = js.native
   
   /**
-    * When running on Android, iOS 10 or lower, or Windows the value to return form the applications colorset.
+    * The current mode for the device (corresponding to night/dark or light/normal)
+    * @deprecated Use [userInterfaceStyle](Titanium.UI.userInterfaceStyle) instead.
     */
   var semanticColorType: String = js.native
   
@@ -388,6 +433,7 @@ object ^ extends js.Object {
     * @deprecated Set the value using <Titanium.UI.backgroundColor> instead.
     */
   def setBackgroundColor(backgroundColor: String): Unit = js.native
+  def setBackgroundColor(backgroundColor: typingsSlinky.titanium.Titanium.UI.Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.backgroundImage> property.
@@ -410,7 +456,7 @@ object ^ extends js.Object {
   
   /**
     * Sets the value of the <Titanium.UI.semanticColorType> property.
-    * @deprecated Set the value using <Titanium.UI.semanticColorType> instead.
+    * @deprecated Use [userInterfaceStyle](Titanium.UI.userInterfaceStyle) instead.
     */
   def setSemanticColorType(semanticColorType: String): Unit = js.native
   
@@ -419,10 +465,16 @@ object ^ extends js.Object {
     * @deprecated Set the value using <Titanium.UI.tintColor> instead.
     */
   def setTintColor(tintColor: String): Unit = js.native
+  def setTintColor(tintColor: typingsSlinky.titanium.Titanium.UI.Color): Unit = js.native
   
   /**
     * Sets the global tint color of the application. It is inherited by the child views and can be
     * overwritten by them using the `tintColor` property.
     */
-  var tintColor: String = js.native
+  var tintColor: String | typingsSlinky.titanium.Titanium.UI.Color = js.native
+  
+  /**
+    * The style associated with the user interface.
+    */
+  val userInterfaceStyle: Double = js.native
 }

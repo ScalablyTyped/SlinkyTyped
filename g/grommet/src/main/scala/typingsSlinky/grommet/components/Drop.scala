@@ -21,6 +21,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.grommet.anon.Bottom
 import typingsSlinky.grommet.anon.Horizontal
 import typingsSlinky.grommet.dropMod.DropProps
+import typingsSlinky.grommet.grommetStrings.align
 import typingsSlinky.grommet.grommetStrings.auto
 import typingsSlinky.grommet.grommetStrings.hidden
 import typingsSlinky.grommet.grommetStrings.scroll
@@ -32,8 +33,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -207,7 +213,9 @@ object Drop {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -609,7 +617,7 @@ object Drop {
     def spellCheck(value: Booleanish): this.type = set("spellCheck", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def stretch(value: Boolean): this.type = set("stretch", value.asInstanceOf[js.Any])
+    def stretch(value: Boolean | align): this.type = set("stretch", value.asInstanceOf[js.Any])
     
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
@@ -631,6 +639,9 @@ object Drop {
     
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def trapFocus(value: Boolean): this.type = set("trapFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
     def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])

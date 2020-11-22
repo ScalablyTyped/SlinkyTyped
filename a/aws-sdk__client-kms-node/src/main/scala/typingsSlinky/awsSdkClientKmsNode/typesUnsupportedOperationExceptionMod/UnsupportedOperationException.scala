@@ -8,16 +8,14 @@ import typingsSlinky.awsSdkClientKmsNode.getKeyRotationStatusExceptionsUnionMod.
 import typingsSlinky.awsSdkClientKmsNode.getParametersForImportExceptionsUnionMod.GetParametersForImportExceptionsUnion
 import typingsSlinky.awsSdkClientKmsNode.importKeyMaterialExceptionsUnionMod.ImportKeyMaterialExceptionsUnion
 import typingsSlinky.awsSdkClientKmsNode.putKeyPolicyExceptionsUnionMod.PutKeyPolicyExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_UnsupportedOperationExceptionDetails> * / any */ @js.native
 trait UnsupportedOperationException
-  extends ServiceException[UnsupportedOperationExceptionDetails]
-     with CreateKeyExceptionsUnion
+  extends CreateKeyExceptionsUnion
      with DeleteImportedKeyMaterialExceptionsUnion
      with DisableKeyRotationExceptionsUnion
      with EnableKeyRotationExceptionsUnion
@@ -26,19 +24,13 @@ trait UnsupportedOperationException
      with ImportKeyMaterialExceptionsUnion
      with PutKeyPolicyExceptionsUnion {
   
-  @JSName("name")
-  var name_UnsupportedOperationException: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.UnsupportedOperationException = js.native
+  var name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.UnsupportedOperationException = js.native
 }
 object UnsupportedOperationException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: UnsupportedOperationExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.UnsupportedOperationException
-  ): UnsupportedOperationException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.UnsupportedOperationException): UnsupportedOperationException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[UnsupportedOperationException]
   }
   

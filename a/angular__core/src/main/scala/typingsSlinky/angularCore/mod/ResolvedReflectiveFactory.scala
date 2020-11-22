@@ -15,13 +15,13 @@ class ResolvedReflectiveFactory protected () extends js.Object {
     /**
     * Arguments (dependencies) to the `factory` function.
     */
-  dependencies: js.Array[ɵangularPackagesCoreCoreE]
+  dependencies: js.Array[ɵangularPackagesCoreCoreD]
   ) = this()
   
   /**
     * Arguments (dependencies) to the `factory` function.
     */
-  var dependencies: js.Array[ɵangularPackagesCoreCoreE] = js.native
+  var dependencies: js.Array[ɵangularPackagesCoreCoreD] = js.native
   
   /**
     * Factory function which can return an instance of an object represented by a key.

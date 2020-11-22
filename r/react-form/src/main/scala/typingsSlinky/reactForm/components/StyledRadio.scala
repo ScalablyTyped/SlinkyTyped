@@ -25,8 +25,13 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.ReactText
 import typingsSlinky.reactForm.anon.StyledPropsInputHTMLAttriAbout
 import typingsSlinky.reactForm.mod.FieldApi
+import typingsSlinky.reactForm.reactFormStrings.`additions removals`
 import typingsSlinky.reactForm.reactFormStrings.`additions text`
 import typingsSlinky.reactForm.reactFormStrings.`inline`
+import typingsSlinky.reactForm.reactFormStrings.`removals additions`
+import typingsSlinky.reactForm.reactFormStrings.`removals text`
+import typingsSlinky.reactForm.reactFormStrings.`text additions`
+import typingsSlinky.reactForm.reactFormStrings.`text removals`
 import typingsSlinky.reactForm.reactFormStrings.additions
 import typingsSlinky.reactForm.reactFormStrings.all
 import typingsSlinky.reactForm.reactFormStrings.ascending
@@ -37,8 +42,11 @@ import typingsSlinky.reactForm.reactFormStrings.date
 import typingsSlinky.reactForm.reactFormStrings.decimal
 import typingsSlinky.reactForm.reactFormStrings.descending
 import typingsSlinky.reactForm.reactFormStrings.dialog
+import typingsSlinky.reactForm.reactFormStrings.done
 import typingsSlinky.reactForm.reactFormStrings.email
+import typingsSlinky.reactForm.reactFormStrings.enter
 import typingsSlinky.reactForm.reactFormStrings.execute
+import typingsSlinky.reactForm.reactFormStrings.go
 import typingsSlinky.reactForm.reactFormStrings.grammar
 import typingsSlinky.reactForm.reactFormStrings.grid
 import typingsSlinky.reactForm.reactFormStrings.horizontal
@@ -50,6 +58,7 @@ import typingsSlinky.reactForm.reactFormStrings.location
 import typingsSlinky.reactForm.reactFormStrings.menu
 import typingsSlinky.reactForm.reactFormStrings.mixed
 import typingsSlinky.reactForm.reactFormStrings.move
+import typingsSlinky.reactForm.reactFormStrings.next
 import typingsSlinky.reactForm.reactFormStrings.no
 import typingsSlinky.reactForm.reactFormStrings.none
 import typingsSlinky.reactForm.reactFormStrings.numeric
@@ -59,8 +68,10 @@ import typingsSlinky.reactForm.reactFormStrings.other
 import typingsSlinky.reactForm.reactFormStrings.page
 import typingsSlinky.reactForm.reactFormStrings.polite
 import typingsSlinky.reactForm.reactFormStrings.popup
+import typingsSlinky.reactForm.reactFormStrings.previous
 import typingsSlinky.reactForm.reactFormStrings.removals
 import typingsSlinky.reactForm.reactFormStrings.search
+import typingsSlinky.reactForm.reactFormStrings.send
 import typingsSlinky.reactForm.reactFormStrings.spelling
 import typingsSlinky.reactForm.reactFormStrings.step
 import typingsSlinky.reactForm.reactFormStrings.tel
@@ -203,7 +214,9 @@ object StyledRadio {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -300,6 +313,9 @@ object StyledRadio {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def errorBefore(value: Boolean): this.type = set("errorBefore", value.asInstanceOf[js.Any])

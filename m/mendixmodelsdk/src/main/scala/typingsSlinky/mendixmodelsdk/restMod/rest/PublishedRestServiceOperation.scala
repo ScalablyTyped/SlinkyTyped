@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.restMod.rest
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.exportmappingsMod.exportmappings.IExportMapping
 import typingsSlinky.mendixmodelsdk.importmappingsMod.importmappings.IImportMapping
@@ -13,26 +14,27 @@ import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.CommitEnum
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.servicesMod.services.HttpMethod
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/published-rest-operation relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/published-rest-operation relevant section in reference guide}
   *
   * In version 7.11.0: removed experimental
   * In version 7.7.0: introduced
   */
 @JSImport("mendixmodelsdk/dist/gen/rest", "rest.PublishedRestServiceOperation")
 @js.native
-class PublishedRestServiceOperation protected () extends Element {
+class PublishedRestServiceOperation protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -78,9 +80,6 @@ class PublishedRestServiceOperation protected () extends Element {
   def microflowQualifiedName: String | Null = js.native
   
   def microflow_=(newValue: IMicroflow | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FPublishedRestServiceOperation: IModel = js.native
   
   /**
     * In version 7.17.0: introduced

@@ -23,7 +23,7 @@ trait VpcLink extends js.Object {
   var name: js.UndefOr[String] = js.native
   
   /**
-    * The status of the VPC link. The valid values are AVAILABLE, PENDING, DELETING, or FAILED. Deploying an API will wait if the status is PENDING and will fail if the status is DELETING. 
+    * The status of the VPC link. The valid values are AVAILABLE, PENDING, DELETING, or FAILED. Deploying an API will wait if the status is PENDING and will fail if the status is DELETING.
     */
   var status: js.UndefOr[VpcLinkStatus] = js.native
   

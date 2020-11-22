@@ -3,14 +3,22 @@ package typingsSlinky.reactMdUtils
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.Context
+import typingsSlinky.reactMdUtils.anon.AppSizeinitializedboolean
 import typingsSlinky.reactMdUtils.appSizeListenerMod.AppSizeListenerProps
 import typingsSlinky.reactMdUtils.mediaOnlyMod.MediaOnlyProps
+import typingsSlinky.reactMdUtils.reactMdUtilsStrings.max
+import typingsSlinky.reactMdUtils.reactMdUtilsStrings.min
 import typingsSlinky.reactMdUtils.resizeListenerMod.ResizeListenerProps
 import typingsSlinky.reactMdUtils.resizeObserverMod.ResizeObserverProps
 import typingsSlinky.reactMdUtils.sizingConstantsMod.QuerySize
 import typingsSlinky.reactMdUtils.useAppSizeMediaMod.AppSize
+import typingsSlinky.reactMdUtils.useAppSizeMediaMod.AppSizeOptions
+import typingsSlinky.reactMdUtils.useEnsuredRefMod.EnsuredRefs
 import typingsSlinky.reactMdUtils.useResizeListenerMod.ResizeListenerOptions
-import typingsSlinky.reactMdUtils.useResizeObserverMod.ResizeObserverOptions
+import typingsSlinky.reactMdUtils.useResizeObserverMod.OnResizeObserverChange
+import typingsSlinky.reactMdUtils.useResizeObserverMod.UseResizeObserverOptions
+import typingsSlinky.reactMdUtils.useResizeObserverV1Mod.UseResizeObserverV1Options
 import typingsSlinky.reactMdUtils.useWidthMediaQueryMod.WidthMediaQuery
 import typingsSlinky.reactMdUtils.useWidthMediaQueryMod.WidthMediaQuerys
 import typingsSlinky.std.OrientationType
@@ -21,6 +29,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@react-md/utils/types/sizing", JSImport.Namespace)
 @js.native
 object sizingMod extends js.Object {
+  
+  val AppSizeContext: Context[AppSizeinitializedboolean] = js.native
   
   val DEFAULT_APP_SIZE: AppSize = js.native
   
@@ -42,7 +52,19 @@ object sizingMod extends js.Object {
   
   val TabletOnly: ReactComponentClass[MediaOnlyProps] = js.native
   
+  def getOrientationType(): OrientationType = js.native
+  
+  @JSName("toWidthPart")
+  def toWidthPart_max(v: js.UndefOr[QuerySize], prefix: max): String = js.native
+  @JSName("toWidthPart")
+  def toWidthPart_min(v: js.UndefOr[QuerySize], prefix: min): String = js.native
+  
   def useAppSize(): AppSize = js.native
+  
+  def useAppSizeMedia(): AppSize = js.native
+  def useAppSizeMedia(
+    hasPhoneMaxWidthTabletMinWidthTabletMaxWidthDesktopMinWidthDesktopLargeMinWidthDefaultSize: AppSizeOptions
+  ): AppSize = js.native
   
   def useMediaQuery(query: String): Boolean = js.native
   def useMediaQuery(
@@ -73,17 +95,15 @@ object sizingMod extends js.Object {
   
   def useResizeListener(hasOnResizeOptionsImmediateEnabled: ResizeListenerOptions): Unit = js.native
   
-  def useResizeObserver[E /* <: HTMLElement */](hasDisableHeightDisableWidthOnResizeTarget: ResizeObserverOptions[E]): Unit = js.native
+  def useResizeObserver[E /* <: HTMLElement */](onResize: OnResizeObserverChange[E]): EnsuredRefs[E] = js.native
+  def useResizeObserver[E /* <: HTMLElement */](onResize: OnResizeObserverChange[E], options: UseResizeObserverOptions[E]): EnsuredRefs[E] = js.native
+  def useResizeObserver[E /* <: HTMLElement */](options: UseResizeObserverV1Options[E]): Unit = js.native
   
   def useWidthMediaQuery(hasMinMax: WidthMediaQuery with WidthMediaQuerys): Boolean = js.native
   
   @js.native
   object AppSizeListener extends js.Object {
     
-    /**
-      * This component should be mounted near the top of your app as it will keep
-      * track of the current app size based on the provided breakpoint widths.
-      */
     def apply(
       hasChildrenOnChangePhoneMaxWidthTabletMinWidthTabletMaxWidthDesktopMinWidthDesktopLargeMinWidthDefaultSize: AppSizeListenerProps
     ): ReactElement = js.native
@@ -112,14 +132,6 @@ object sizingMod extends js.Object {
   @js.native
   object ResizeListener extends js.Object {
     
-    /**
-      * This is a simple component that will attach a throttled resize event listener
-      * when mounted, and detach when it unmounts.
-      *
-      * This component only works for entire app resize events. If you are looking
-      * for specific element resize events, check out the `ResizeObserver` component
-      * instead.
-      */
     def apply(hasOnResizeOptionsImmediate: ResizeListenerProps): Null = js.native
     
     @js.native
@@ -136,11 +148,6 @@ object sizingMod extends js.Object {
   @js.native
   object ResizeObserver extends js.Object {
     
-    /**
-      * The resize observer is used to track the size changes for a single element in
-      * a page.  This is a bit different than a normal `ResizeListener` since it does
-      * not rely on entire page size changes.
-      */
     def apply(hasDisableHeightDisableWidthClassNameComponentTargetOnResize: ResizeObserverProps): ReactElement | Null = js.native
     
     @js.native

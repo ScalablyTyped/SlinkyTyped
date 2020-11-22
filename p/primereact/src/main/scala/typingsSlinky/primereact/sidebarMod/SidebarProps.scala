@@ -1,6 +1,5 @@
 package typingsSlinky.primereact.sidebarMod
 
-import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,7 +21,7 @@ trait SidebarProps extends js.Object {
   
   var fullScreen: js.UndefOr[Boolean] = js.native
   
-  var iconsTemplate: js.UndefOr[js.Function0[js.UndefOr[ReactElement]]] = js.native
+  var icons: js.UndefOr[js.Function1[/* props */ js.Object, _]] = js.native
   
   var id: js.UndefOr[String] = js.native
   
@@ -109,10 +108,10 @@ object SidebarProps {
     def deleteFullScreen: Self = this.set("fullScreen", js.undefined)
     
     @scala.inline
-    def setIconsTemplate(value: () => js.UndefOr[ReactElement]): Self = this.set("iconsTemplate", js.Any.fromFunction0(value))
+    def setIcons(value: /* props */ js.Object => _): Self = this.set("icons", js.Any.fromFunction1(value))
     
     @scala.inline
-    def deleteIconsTemplate: Self = this.set("iconsTemplate", js.undefined)
+    def deleteIcons: Self = this.set("icons", js.undefined)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])

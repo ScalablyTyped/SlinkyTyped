@@ -1,7 +1,7 @@
 
 # Scala.js typings for yt-player
 
-Typings are for version 3.4
+Typings are for version 3.5
 
 ## Library description:
 Simple, robust YouTube Iframe Player API

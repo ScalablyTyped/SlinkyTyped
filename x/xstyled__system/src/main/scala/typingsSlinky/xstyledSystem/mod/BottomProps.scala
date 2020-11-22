@@ -9,7 +9,7 @@ trait BottomProps[TLength] extends js.Object {
   
   val bottom: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BottomProps {
     }
     
     @scala.inline
+    def setBottomVarargs(value: js.Any*): Self = this.set("bottom", js.Array(value :_*))
+    
+    @scala.inline
     def setBottom(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLength> */ _
         ]
     ): Self = this.set("bottom", value.asInstanceOf[js.Any])
     

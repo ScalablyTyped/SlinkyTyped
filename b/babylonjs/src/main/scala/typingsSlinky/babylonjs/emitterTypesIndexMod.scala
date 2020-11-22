@@ -2,6 +2,7 @@ package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -696,8 +697,7 @@ object emitterTypesIndexMod extends js.Object {
     */
   class MeshParticleEmitter ()
     extends typingsSlinky.babylonjs.meshParticleEmitterMod.MeshParticleEmitter {
-    def this(/** Defines the mesh to use as source */
-    mesh: AbstractMesh) = this()
+    def this(mesh: Nullable[AbstractMesh]) = this()
   }
   
   @js.native

@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TimeConstraint extends js.Object {
   
   // The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
-  var activityDomain: js.UndefOr[ActivityDomain] = js.native
+  var activityDomain: js.UndefOr[NullableOption[ActivityDomain]] = js.native
   
-  var timeSlots: js.UndefOr[js.Array[TimeSlot]] = js.native
+  var timeSlots: js.UndefOr[NullableOption[js.Array[TimeSlot]]] = js.native
 }
 object TimeConstraint {
   
@@ -36,18 +36,24 @@ object TimeConstraint {
     }
     
     @scala.inline
-    def setActivityDomain(value: ActivityDomain): Self = this.set("activityDomain", value.asInstanceOf[js.Any])
+    def setActivityDomain(value: NullableOption[ActivityDomain]): Self = this.set("activityDomain", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteActivityDomain: Self = this.set("activityDomain", js.undefined)
     
     @scala.inline
+    def setActivityDomainNull: Self = this.set("activityDomain", null)
+    
+    @scala.inline
     def setTimeSlotsVarargs(value: TimeSlot*): Self = this.set("timeSlots", js.Array(value :_*))
     
     @scala.inline
-    def setTimeSlots(value: js.Array[TimeSlot]): Self = this.set("timeSlots", value.asInstanceOf[js.Any])
+    def setTimeSlots(value: NullableOption[js.Array[TimeSlot]]): Self = this.set("timeSlots", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTimeSlots: Self = this.set("timeSlots", js.undefined)
+    
+    @scala.inline
+    def setTimeSlotsNull: Self = this.set("timeSlots", null)
   }
 }

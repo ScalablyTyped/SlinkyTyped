@@ -9,7 +9,7 @@ trait PositionProps extends js.Object {
   
   val position: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object PositionProps {
     }
     
     @scala.inline
+    def setPositionVarargs(value: js.Any*): Self = this.set("position", js.Array(value :_*))
+    
+    @scala.inline
     def setPosition(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _
         ]
     ): Self = this.set("position", value.asInstanceOf[js.Any])
     

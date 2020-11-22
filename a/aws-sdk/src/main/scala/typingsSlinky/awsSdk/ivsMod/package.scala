@@ -8,6 +8,8 @@ package object ivsMod {
   
   type BatchErrors = js.Array[typingsSlinky.awsSdk.ivsMod.BatchError]
   
+  type Boolean = scala.Boolean
+  
   type ChannelArn = java.lang.String
   
   type ChannelArnList = js.Array[typingsSlinky.awsSdk.ivsMod.ChannelArn]
@@ -36,7 +38,11 @@ package object ivsMod {
   
   type IngestEndpoint = java.lang.String
   
+  type IsAuthorized = scala.Boolean
+  
   type MaxChannelResults = scala.Double
+  
+  type MaxPlaybackKeyPairResults = scala.Double
   
   type MaxStreamKeyResults = scala.Double
   
@@ -45,6 +51,16 @@ package object ivsMod {
   type MaxTagResults = scala.Double
   
   type PaginationToken = java.lang.String
+  
+  type PlaybackKeyPairArn = java.lang.String
+  
+  type PlaybackKeyPairFingerprint = java.lang.String
+  
+  type PlaybackKeyPairList = js.Array[typingsSlinky.awsSdk.ivsMod.PlaybackKeyPairSummary]
+  
+  type PlaybackKeyPairName = java.lang.String
+  
+  type PlaybackPublicKeyMaterial = java.lang.String
   
   type PlaybackURL = java.lang.String
   

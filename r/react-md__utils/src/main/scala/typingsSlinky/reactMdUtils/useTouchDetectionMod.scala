@@ -10,6 +10,6 @@ object useTouchDetectionMod extends js.Object {
   
   val DEFAULT_TOUCH_TIMEOUT: /* 1200 */ Double = js.native
   
-  def default(): Boolean = js.native
-  def default(touchTimeout: Double): Boolean = js.native
+  def useTouchDetection(): Boolean = js.native
+  def useTouchDetection(touchTimeout: Double): Boolean = js.native
 }

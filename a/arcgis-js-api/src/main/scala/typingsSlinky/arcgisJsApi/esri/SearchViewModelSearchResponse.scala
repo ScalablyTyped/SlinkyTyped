@@ -31,14 +31,14 @@ trait SearchViewModelSearchResponse extends Object {
   var numResults: Double = js.native
   
   /**
-    * An array of objects representing the results of search. See object specification table below for more information about the result object.
+    * An array of objects representing the results of search.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search-SearchViewModel.html#SearchResponse)
     */
   var results: js.Array[SearchViewModelSearchResponseResults] = js.native
   
   /**
-    * The searched expression
+    * The searched expression.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search-SearchViewModel.html#SearchResponse)
     */

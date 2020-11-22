@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ActiveLayerInfoProperties extends js.Object {
   
   /**
-    * A collection of child activeLayerInfos. This only applies to renderers of [Sublayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html) or the children of [GroupLayers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GroupLayer.html).
+    * A collection of child activeLayerInfos.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#children)
     */
   var children: js.UndefOr[CollectionProperties[ActiveLayerInfoProperties]] = js.native
   
   /**
-    * Indicates if the legend's display of the layer's renderer is driven by the scale of the view. This is true of [Sublayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-Sublayer.html) renderers, any renderer that uses a `valueExpression` (Arcade expression), [DotDensityRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html), and layers that have [clustering](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#featureReduction) enabled.
+    * Indicates if the legend's display of the layer's renderer is driven by the scale of the view.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#isScaleDriven)
     */
@@ -36,7 +36,7 @@ trait ActiveLayerInfoProperties extends js.Object {
   var layerView: js.UndefOr[LayerViewProperties] = js.native
   
   /**
-    * The legendElements is constructed using the layer [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html). It reflects the actual structure of the legend.
+    * The legendElements is constructed using the layer [Renderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#legendElements)
     */
@@ -50,7 +50,7 @@ trait ActiveLayerInfoProperties extends js.Object {
   var parent: js.UndefOr[ActiveLayerInfoProperties] = js.native
   
   /**
-    * Indicates if the activeLayerInfo is ready. It is set to `true` when all its [legendElements](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#legendElements) are computed. It is set to `false` when the layer renderer changes so that the legendElements can recomputed.
+    * Indicates if the activeLayerInfo is ready.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#ready)
     */
@@ -64,14 +64,14 @@ trait ActiveLayerInfoProperties extends js.Object {
   var scale: js.UndefOr[Double] = js.native
   
   /**
-    * The text string that represents the legend's title. This value is read from the `layerInfo` of the corresponding layer in the legend. If not provided, this value comes from the [title](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#title) of the layer.
+    * The text string that represents the legend's title.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#title)
     */
   var title: js.UndefOr[String] = js.native
   
   /**
-    * The version of the ActiveLayerInfo. It increases by `1` whenever [ready](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#ready) property of ActiveLayerInfo changes. This property should watched in the view for ActiveLayerInfo changes and update the DOM accordingly.
+    * The version of the ActiveLayerInfo.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#version)
     */

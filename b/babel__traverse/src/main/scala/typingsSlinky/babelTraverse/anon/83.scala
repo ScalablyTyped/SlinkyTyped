@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ArrayTypeAnnotation
+import typingsSlinky.babelTraverse.babelTraverseStrings.IfStatement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `83` extends js.Object {
   
-  var `type`: ArrayTypeAnnotation = js.native
+  var `type`: IfStatement = js.native
 }
 object `83` {
   
   @scala.inline
-  def apply(`type`: ArrayTypeAnnotation): `83` = {
+  def apply(`type`: IfStatement): `83` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`83`]
@@ -35,6 +35,6 @@ object `83` {
     }
     
     @scala.inline
-    def setType(value: ArrayTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: IfStatement): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

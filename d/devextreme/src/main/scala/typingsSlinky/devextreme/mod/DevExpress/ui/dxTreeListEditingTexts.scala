@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeListEditingTexts extends GridBaseEditingTexts {
   
-  /** @name dxTreeList.Options.editing.texts.addRowToNode */
+  /**
+    * [descr:dxTreeList.Options.editing.texts.addRowToNode]
+    */
   var addRowToNode: js.UndefOr[String] = js.native
 }
 object dxTreeListEditingTexts {

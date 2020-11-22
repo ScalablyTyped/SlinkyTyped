@@ -15,6 +15,8 @@ trait ParserOptions extends js.Object {
   var factory: js.UndefOr[DataFactory[Quad, Quad]] = js.native
   
   var prefixes: js.UndefOr[StringDictionary[String]] = js.native
+  
+  var sparqlStar: js.UndefOr[Boolean] = js.native
 }
 object ParserOptions {
   
@@ -56,5 +58,11 @@ object ParserOptions {
     
     @scala.inline
     def deletePrefixes: Self = this.set("prefixes", js.undefined)
+    
+    @scala.inline
+    def setSparqlStar(value: Boolean): Self = this.set("sparqlStar", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSparqlStar: Self = this.set("sparqlStar", js.undefined)
   }
 }

@@ -15,6 +15,7 @@ object promiseMod extends js.Object {
     
     /**
       * Attaches a callback for only the rejection of the PricingPromise.
+      * @param onrejected The callback to execute when the PricingPromise is rejected.
       * @returns A PricingPromise for the completion of the callback.
       */
     def `catch`[TResult](): (PricingPromise[T | TResult, PricingMethods]) with PricingMethods = js.native
@@ -23,6 +24,8 @@ object promiseMod extends js.Object {
     // Extensions specific to then/promise
     /**
       * Attaches callbacks for the resolution and/or rejection of the PricingPromise, without returning a new promise.
+      * @param onfulfilled The callback to execute when the PricingPromise is resolved.
+      * @param onrejected The callback to execute when the PricingPromise is rejected.
       */
     def done(): T = js.native
     def done(onfulfilled: js.UndefOr[scala.Nothing], onrejected: js.Function1[/* reason */ js.Any, _]): T = js.native
@@ -31,6 +34,8 @@ object promiseMod extends js.Object {
     
     /**
       * Attaches callbacks for the resolution and/or rejection of the PricingPromise.
+      * @param onfulfilled The callback to execute when the PricingPromise is resolved.
+      * @param onrejected The callback to execute when the PricingPromise is rejected.
       * @returns A PricingPromise for the completion of which ever callback is executed.
       */
     def `then`[TResult1, TResult2](): (PricingPromise[TResult1 | TResult2, PricingMethods]) with PricingMethods = js.native

@@ -37,10 +37,15 @@ import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.reactSimpleMaps.anon.Default
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings._empty
+import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`additions removals`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`additions text`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`after-edge`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`before-edge`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`inline`
+import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`removals additions`
+import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`removals text`
+import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`text additions`
+import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`text removals`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`text-after-edge`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`text-before-edge`
 import typingsSlinky.reactSimpleMaps.reactSimpleMapsStrings.`use-credentials`
@@ -200,7 +205,9 @@ trait MarkerProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -420,7 +427,7 @@ trait MarkerProps extends js.Object {
   
   var kerning: js.UndefOr[Double | String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyPoints: js.UndefOr[Double | String] = js.native
   
@@ -1178,7 +1185,9 @@ object MarkerProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1845,6 +1854,9 @@ object MarkerProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyPoints(value: Double | String): Self = this.set("keyPoints", value.asInstanceOf[js.Any])

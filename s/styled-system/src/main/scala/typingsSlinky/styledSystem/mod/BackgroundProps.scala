@@ -9,11 +9,11 @@ trait BackgroundProps[ThemeType /* <: Theme[TLengthStyledSystem] */, TVal]
   extends BackgroundImageProps[ThemeType]
      with BackgroundSizeProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundSizeProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundSize<TLengthStyledSystem> */ js.Any
     ]
      with BackgroundPositionProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundPositionProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundPosition<TLengthStyledSystem> */ js.Any
     ]
      with BackgroundRepeatProps[ThemeType] {
   

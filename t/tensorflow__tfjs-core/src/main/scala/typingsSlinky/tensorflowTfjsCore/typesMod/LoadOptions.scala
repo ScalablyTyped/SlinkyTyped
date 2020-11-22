@@ -63,6 +63,18 @@ trait LoadOptions extends js.Object {
     * from the path `http://localhost/foo/alt-weights/group1-shard1of2` instead.
     */
   var weightPathPrefix: js.UndefOr[String] = js.native
+  
+  /**
+    * An async function to convert weight file name to URL. The weight file
+    * names are stored in model.json's weightsManifest.paths field. By default we
+    * consider weight files are colocated with the model.json file. For example:
+    *     model.json URL: https://www.google.com/models/1/model.json
+    *     group1-shard1of1.bin url:
+    *        https://www.google.com/models/1/group1-shard1of1.bin
+    *
+    * With this func you can convert the weight file name to any URL.
+    */
+  var weightUrlConverter: js.UndefOr[js.Function1[/* weightFileName */ String, js.Promise[String]]] = js.native
 }
 object LoadOptions {
   
@@ -122,5 +134,11 @@ object LoadOptions {
     
     @scala.inline
     def deleteWeightPathPrefix: Self = this.set("weightPathPrefix", js.undefined)
+    
+    @scala.inline
+    def setWeightUrlConverter(value: /* weightFileName */ String => js.Promise[String]): Self = this.set("weightUrlConverter", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteWeightUrlConverter: Self = this.set("weightUrlConverter", js.undefined)
   }
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.octokitPluginPaginateRest.anon
 
-import typingsSlinky.octokitTypes.anon.Createdat
+import typingsSlinky.octokitTypes.anon.Busy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `0` extends js.Object {
   
-  var data: js.Array[Createdat] = js.native
+  var data: js.Array[Busy] = js.native
 }
 object `0` {
   
   @scala.inline
-  def apply(data: js.Array[Createdat]): `0` = {
+  def apply(data: js.Array[Busy]): `0` = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[`0`]
   }
@@ -34,9 +34,9 @@ object `0` {
     }
     
     @scala.inline
-    def setDataVarargs(value: Createdat*): Self = this.set("data", js.Array(value :_*))
+    def setDataVarargs(value: Busy*): Self = this.set("data", js.Array(value :_*))
     
     @scala.inline
-    def setData(value: js.Array[Createdat]): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: js.Array[Busy]): Self = this.set("data", value.asInstanceOf[js.Any])
   }
 }

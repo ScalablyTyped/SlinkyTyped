@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SlideUpdateFromOptions extends Object {
   
   /**
-    * Screenshot options to use. See properties below for object specifications.
+    * Screenshot options to use.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Slide.html#updateFrom)
     */

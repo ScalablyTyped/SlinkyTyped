@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PutQueryDefinitionResponse extends js.Object {
   
+  /**
+    * The ID of the query definition.
+    */
   var queryDefinitionId: js.UndefOr[QueryId] = js.native
 }
 object PutQueryDefinitionResponse {

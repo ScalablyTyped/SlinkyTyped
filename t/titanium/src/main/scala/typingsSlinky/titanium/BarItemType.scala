@@ -15,7 +15,7 @@ trait BarItemType extends js.Object {
   /**
     * A succint label associated with the bar item for the device's accessibility service.
     */
-  var accessibilityLabel: js.UndefOr[java.lang.String] = js.native
+  var accessibilityLabel: js.UndefOr[String] = js.native
   
   /**
     * Whether the button is enabled initially.
@@ -25,12 +25,12 @@ trait BarItemType extends js.Object {
   /**
     * Button icon. If specified, takes precedence over `title`.
     */
-  var image: js.UndefOr[java.lang.String | Blob | File] = js.native
+  var image: js.UndefOr[String | Blob | File] = js.native
   
   /**
     * Button title, used if no `image` is specified.
     */
-  var title: js.UndefOr[java.lang.String] = js.native
+  var title: js.UndefOr[String] = js.native
   
   /**
     * Width for this button.
@@ -55,13 +55,13 @@ object BarItemType {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setAccessibilityLabel(value: java.lang.String): Self = this.set("accessibilityLabel", value.asInstanceOf[js.Any])
+    def setAccessibilityLabel(value: String): Self = this.set("accessibilityLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAccessibilityLabel: Self = this.set("accessibilityLabel", js.undefined)
@@ -73,13 +73,13 @@ object BarItemType {
     def deleteEnabled: Self = this.set("enabled", js.undefined)
     
     @scala.inline
-    def setImage(value: java.lang.String | Blob | File): Self = this.set("image", value.asInstanceOf[js.Any])
+    def setImage(value: String | Blob | File): Self = this.set("image", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteImage: Self = this.set("image", js.undefined)
     
     @scala.inline
-    def setTitle(value: java.lang.String): Self = this.set("title", value.asInstanceOf[js.Any])
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)

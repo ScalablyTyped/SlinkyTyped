@@ -1,7 +1,6 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxFileManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +17,7 @@ trait ErrorCode extends js.Object {
   
   var errorText: js.UndefOr[String] = js.native
   
-  var fileSystemItem: js.UndefOr[FileSystemItem] = js.native
+  var fileSystemItem: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
 }
@@ -70,7 +69,7 @@ object ErrorCode {
     def deleteErrorText: Self = this.set("errorText", js.undefined)
     
     @scala.inline
-    def setFileSystemItem(value: FileSystemItem): Self = this.set("fileSystemItem", value.asInstanceOf[js.Any])
+    def setFileSystemItem(value: typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem): Self = this.set("fileSystemItem", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFileSystemItem: Self = this.set("fileSystemItem", js.undefined)

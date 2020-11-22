@@ -1,7 +1,11 @@
 package typingsSlinky.reactBootstrap.dropdownMod
 
+import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import slinky.core.ReactComponentClass
+import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.ReactType
+import typingsSlinky.reactBootstrap.anon.Source
 import typingsSlinky.reactBootstrap.mod.SelectCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +28,14 @@ trait DropdownBaseProps extends js.Object {
   
   var onSelect: js.UndefOr[SelectCallback] = js.native
   
-  var onToggle: js.UndefOr[js.Function1[/* isOpen */ Boolean, Unit]] = js.native
+  var onToggle: js.UndefOr[
+    js.Function3[
+      /* isOpen */ Boolean, 
+      /* event */ SyntheticEvent[Event, Element], 
+      /* metadata */ Source, 
+      Unit
+    ]
+  ] = js.native
   
   var open: js.UndefOr[Boolean] = js.native
   
@@ -101,7 +112,9 @@ object DropdownBaseProps {
     def deleteOnSelect: Self = this.set("onSelect", js.undefined)
     
     @scala.inline
-    def setOnToggle(value: /* isOpen */ Boolean => Unit): Self = this.set("onToggle", js.Any.fromFunction1(value))
+    def setOnToggle(
+      value: (/* isOpen */ Boolean, /* event */ SyntheticEvent[Event, Element], /* metadata */ Source) => Unit
+    ): Self = this.set("onToggle", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteOnToggle: Self = this.set("onToggle", js.undefined)

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "xml-formatter"
-version := "2.1.3-8a5453"
+version := "2.4.0-d63ce1"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class WebAuth () extends js.Object {
   
-  def authorize(parameters: AuthorizeParams): js.Promise[_] = js.native
-  def authorize(parameters: AuthorizeParams, options: AuthorizeOptions): js.Promise[_] = js.native
+  def authorize(parameters: AuthorizeParams): js.Promise[Credentials] = js.native
+  def authorize(parameters: AuthorizeParams, options: AuthorizeOptions): js.Promise[Credentials] = js.native
   
   def clearSession(): js.Promise[_] = js.native
   def clearSession(parameters: ClearSessionParams): js.Promise[_] = js.native

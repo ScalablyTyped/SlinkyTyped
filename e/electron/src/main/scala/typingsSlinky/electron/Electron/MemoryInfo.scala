@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MemoryInfo extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/memory-info
+  // Docs: https://electronjs.org/docs/api/structures/memory-info
   /**
     * The maximum amount of memory that has ever been pinned to actual physical RAM.
     */

@@ -73,6 +73,8 @@ trait ColumnProps extends js.Object {
   
   var onEditorCancel: js.UndefOr[js.Function1[/* props */ js.Any, Unit]] = js.native
   
+  var onEditorInit: js.UndefOr[js.Function1[/* props */ js.Any, Unit]] = js.native
+  
   var onEditorSubmit: js.UndefOr[js.Function1[/* props */ js.Any, Unit]] = js.native
   
   var reorderable: js.UndefOr[Boolean] = js.native
@@ -309,6 +311,12 @@ object ColumnProps {
     
     @scala.inline
     def deleteOnEditorCancel: Self = this.set("onEditorCancel", js.undefined)
+    
+    @scala.inline
+    def setOnEditorInit(value: /* props */ js.Any => Unit): Self = this.set("onEditorInit", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnEditorInit: Self = this.set("onEditorInit", js.undefined)
     
     @scala.inline
     def setOnEditorSubmit(value: /* props */ js.Any => Unit): Self = this.set("onEditorSubmit", js.Any.fromFunction1(value))

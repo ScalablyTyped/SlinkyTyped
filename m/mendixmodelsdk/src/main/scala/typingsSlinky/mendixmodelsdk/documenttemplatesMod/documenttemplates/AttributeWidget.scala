@@ -1,11 +1,12 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AttributeRef
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,8 +19,8 @@ abstract class AttributeWidget protected () extends Widget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -35,9 +36,6 @@ abstract class AttributeWidget protected () extends Widget {
     */
   def attributeRef: AttributeRef | Null = js.native
   def attributeRef_=(newValue: AttributeRef | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FAttributeWidget: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.AttributeWidget")

@@ -12,14 +12,12 @@ trait ZoomSettings extends js.Object {
   var defaultZoomFactor: js.UndefOr[Double] = js.native
   
   /**
-    * Defines how zoom changes are handled, i.e. which entity is responsible for the actual scaling of the page;
-    * defaults to `automatic`.
+    * Defines how zoom changes are handled, i.e. which entity is responsible for the actual scaling of the page; defaults to `automatic`.
     */
   var mode: js.UndefOr[ZoomSettingsMode] = js.native
   
   /**
-    * Defines whether zoom changes will persist for the page's origin, or only take effect in this tab; defaults
-    * to `per-origin` when in `automatic` mode, and `per-tab` otherwise.
+    * Defines whether zoom changes will persist for the page's origin, or only take effect in this tab; defaults to `per-origin` when in `automatic` mode, and `per-tab` otherwise.
     */
   var scope: js.UndefOr[ZoomSettingsScope] = js.native
 }

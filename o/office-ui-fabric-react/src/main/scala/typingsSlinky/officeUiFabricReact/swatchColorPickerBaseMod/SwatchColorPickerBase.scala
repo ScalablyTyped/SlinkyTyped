@@ -66,6 +66,8 @@ class SwatchColorPickerBase protected ()
     */
   var _onMouseMove: js.Any = js.native
   
+  var _onRenderItem: js.Any = js.native
+  
   /**
     * When the whole swatchColorPicker is blurred,
     * make sure to clear the pending focused stated

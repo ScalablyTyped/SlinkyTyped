@@ -15,27 +15,41 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxMenuBaseOptions[T] extends HierarchicalCollectionWidgetOptions[T] {
   
-  /** @name dxMenuBase.Options.animation */
+  /**
+    * [descr:dxMenuBase.Options.animation]
+    */
   var animation: js.UndefOr[Hide] = js.native
   
-  /** @name dxMenuBase.Options.cssClass */
+  /**
+    * [descr:dxMenuBase.Options.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name dxMenuBase.Options.dataSource */
+  /**
+    * [descr:dxMenuBase.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxMenuBaseOptions: js.UndefOr[String | js.Array[dxMenuBaseItem] | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxMenuBase.Options.items */
+  /**
+    * [descr:dxMenuBase.Options.items]
+    */
   @JSName("items")
   var items_dxMenuBaseOptions: js.UndefOr[js.Array[dxMenuBaseItem]] = js.native
   
-  /** @name dxMenuBase.Options.selectByClick */
+  /**
+    * [descr:dxMenuBase.Options.selectByClick]
+    */
   var selectByClick: js.UndefOr[Boolean] = js.native
   
-  /** @name dxMenuBase.Options.selectionMode */
+  /**
+    * [descr:dxMenuBase.Options.selectionMode]
+    */
   var selectionMode: js.UndefOr[none | single_] = js.native
   
-  /** @name dxMenuBase.Options.showSubmenuMode */
+  /**
+    * [descr:dxMenuBase.Options.showSubmenuMode]
+    */
   var showSubmenuMode: js.UndefOr[DelayName | onClick | onHover] = js.native
 }
 object dxMenuBaseOptions {

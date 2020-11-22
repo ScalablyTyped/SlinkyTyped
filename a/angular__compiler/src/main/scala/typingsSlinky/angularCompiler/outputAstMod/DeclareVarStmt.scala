@@ -12,8 +12,9 @@ class DeclareVarStmt protected () extends Statement {
     name: String,
     value: js.UndefOr[Expression],
     `type`: js.UndefOr[Type | Null],
-    modifiers: js.UndefOr[js.Array[StmtModifier] | Null],
-    sourceSpan: js.UndefOr[ParseSourceSpan | Null]
+    modifiers: js.UndefOr[js.Array[StmtModifier]],
+    sourceSpan: js.UndefOr[ParseSourceSpan | Null],
+    leadingComments: js.UndefOr[js.Array[LeadingComment_]]
   ) = this()
   
   var name: String = js.native

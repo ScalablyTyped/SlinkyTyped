@@ -17,31 +17,64 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GridBaseEditing extends js.Object {
   
-  /** @name GridBase.Options.editing.confirmDelete */
+  /**
+    * [descr:GridBase.Options.editing.changes]
+    */
+  var changes: js.UndefOr[js.Array[_]] = js.native
+  
+  /**
+    * [descr:GridBase.Options.editing.confirmDelete]
+    */
   var confirmDelete: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.editing.form */
+  /**
+    * [descr:GridBase.Options.editing.editColumnName]
+    */
+  var editColumnName: js.UndefOr[String] = js.native
+  
+  /**
+    * [descr:GridBase.Options.editing.editRowKey]
+    */
+  var editRowKey: js.UndefOr[js.Any] = js.native
+  
+  /**
+    * [descr:GridBase.Options.editing.form]
+    */
   var form: js.UndefOr[dxFormOptions] = js.native
   
-  /** @name GridBase.Options.editing.mode */
+  /**
+    * [descr:GridBase.Options.editing.mode]
+    */
   var mode: js.UndefOr[batch | cell | row | form | popup] = js.native
   
-  /** @name GridBase.Options.editing.popup */
+  /**
+    * [descr:GridBase.Options.editing.popup]
+    */
   var popup: js.UndefOr[dxPopupOptions[dxPopup]] = js.native
   
-  /** @name GridBase.Options.editing.refreshMode */
+  /**
+    * [descr:GridBase.Options.editing.refreshMode]
+    */
   var refreshMode: js.UndefOr[full | reshape | repaint] = js.native
   
-  /** @name GridBase.Options.editing.selectTextOnEditStart */
+  /**
+    * [descr:GridBase.Options.editing.selectTextOnEditStart]
+    */
   var selectTextOnEditStart: js.UndefOr[Boolean] = js.native
   
-  /** @name GridBase.Options.editing.startEditAction */
+  /**
+    * [descr:GridBase.Options.editing.startEditAction]
+    */
   var startEditAction: js.UndefOr[click | dblClick] = js.native
   
-  /** @name GridBase.Options.editing.texts */
+  /**
+    * [descr:GridBase.Options.editing.texts]
+    */
   var texts: js.UndefOr[GridBaseEditingTexts] = js.native
   
-  /** @name GridBase.Options.editing.useIcons */
+  /**
+    * [descr:GridBase.Options.editing.useIcons]
+    */
   var useIcons: js.UndefOr[Boolean] = js.native
 }
 object GridBaseEditing {
@@ -68,10 +101,31 @@ object GridBaseEditing {
     }
     
     @scala.inline
+    def setChangesVarargs(value: js.Any*): Self = this.set("changes", js.Array(value :_*))
+    
+    @scala.inline
+    def setChanges(value: js.Array[_]): Self = this.set("changes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteChanges: Self = this.set("changes", js.undefined)
+    
+    @scala.inline
     def setConfirmDelete(value: Boolean): Self = this.set("confirmDelete", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteConfirmDelete: Self = this.set("confirmDelete", js.undefined)
+    
+    @scala.inline
+    def setEditColumnName(value: String): Self = this.set("editColumnName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEditColumnName: Self = this.set("editColumnName", js.undefined)
+    
+    @scala.inline
+    def setEditRowKey(value: js.Any): Self = this.set("editRowKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEditRowKey: Self = this.set("editRowKey", js.undefined)
     
     @scala.inline
     def setForm(value: dxFormOptions): Self = this.set("form", value.asInstanceOf[js.Any])

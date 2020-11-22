@@ -47,6 +47,8 @@ package object mod {
   
   type Theme[T] = typingsSlinky.reactNativeElements.anon.PartialFullTheme with T
   
+  type TouchableComponent = typingsSlinky.reactNative.mod.TouchableHighlightProps
+  
   type UpdateTheme = js.Function1[
     /* updates */ typingsSlinky.reactNativeElements.anon.RecursivePartialFullTheme, 
     scala.Unit

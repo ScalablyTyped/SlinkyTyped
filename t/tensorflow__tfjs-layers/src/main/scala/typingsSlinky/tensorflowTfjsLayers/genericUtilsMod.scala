@@ -2,7 +2,7 @@ package typingsSlinky.tensorflowTfjsLayers
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
-import typingsSlinky.tensorflowTfjsCore.fusedUtilMod.Activation
+import typingsSlinky.tensorflowTfjsCore.fusedTypesMod.Activation
 import typingsSlinky.tensorflowTfjsCore.mod.serialization.Serializable
 import typingsSlinky.tensorflowTfjsCore.serializationMod.ConfigDict
 import typingsSlinky.tensorflowTfjsCore.serializationMod.ConfigDictValue
@@ -221,6 +221,10 @@ object genericUtilsMod extends js.Object {
   
   def formatAsFriendlyString(value: js.Any): String = js.native
   
+  def getCartesianProductOfValues(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param arrayOfValues because its type PossibleValues is not an array type */ arrayOfValues: PossibleValues
+  ): PossibleValues = js.native
+  
   def isObjectEmpty(obj: js.Object): Boolean = js.native
   
   def mapActivationToFusedKernel(activationName: String): Activation = js.native
@@ -249,4 +253,6 @@ object genericUtilsMod extends js.Object {
   def toSnakeCase(name: String): String = js.native
   
   def unique[T](xs: js.Array[T]): js.Array[T] = js.native
+  
+  type PossibleValues = js.Array[js.Array[Boolean | String | Double]]
 }

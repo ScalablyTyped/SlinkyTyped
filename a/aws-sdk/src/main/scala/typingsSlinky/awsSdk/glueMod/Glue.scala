@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.glueMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -180,6 +180,20 @@ trait Glue extends Service {
   ): Request[BatchStopJobRunResponse, AWSError] = js.native
   
   /**
+    * Updates one or more partitions in a batch operation.
+    */
+  def batchUpdatePartition(): Request[BatchUpdatePartitionResponse, AWSError] = js.native
+  def batchUpdatePartition(callback: js.Function2[/* err */ AWSError, /* data */ BatchUpdatePartitionResponse, Unit]): Request[BatchUpdatePartitionResponse, AWSError] = js.native
+  /**
+    * Updates one or more partitions in a batch operation.
+    */
+  def batchUpdatePartition(params: BatchUpdatePartitionRequest): Request[BatchUpdatePartitionResponse, AWSError] = js.native
+  def batchUpdatePartition(
+    params: BatchUpdatePartitionRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ BatchUpdatePartitionResponse, Unit]
+  ): Request[BatchUpdatePartitionResponse, AWSError] = js.native
+  
+  /**
     * Cancels (stops) a task run. Machine learning task runs are asynchronous tasks that AWS Glue runs on your behalf as part of various machine learning workflows. You can cancel a machine learning task run at any time by calling CancelMLTaskRun with a task run's parent transform's TransformID and the task run's TaskRunId. 
     */
   def cancelMLTaskRun(): Request[CancelMLTaskRunResponse, AWSError] = js.native
@@ -192,6 +206,20 @@ trait Glue extends Service {
     params: CancelMLTaskRunRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CancelMLTaskRunResponse, Unit]
   ): Request[CancelMLTaskRunResponse, AWSError] = js.native
+  
+  /**
+    * Validates the supplied schema. This call has no side effects, it simply validates using the supplied schema using DataFormat as the format. Since it does not take a schema set name, no compatibility checks are performed.
+    */
+  def checkSchemaVersionValidity(): Request[CheckSchemaVersionValidityResponse, AWSError] = js.native
+  def checkSchemaVersionValidity(callback: js.Function2[/* err */ AWSError, /* data */ CheckSchemaVersionValidityResponse, Unit]): Request[CheckSchemaVersionValidityResponse, AWSError] = js.native
+  /**
+    * Validates the supplied schema. This call has no side effects, it simply validates using the supplied schema using DataFormat as the format. Since it does not take a schema set name, no compatibility checks are performed.
+    */
+  def checkSchemaVersionValidity(params: CheckSchemaVersionValidityInput): Request[CheckSchemaVersionValidityResponse, AWSError] = js.native
+  def checkSchemaVersionValidity(
+    params: CheckSchemaVersionValidityInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ CheckSchemaVersionValidityResponse, Unit]
+  ): Request[CheckSchemaVersionValidityResponse, AWSError] = js.native
   
   @JSName("config")
   var config_Glue: ConfigBase with ClientConfiguration = js.native
@@ -309,6 +337,34 @@ trait Glue extends Service {
   ): Request[CreatePartitionResponse, AWSError] = js.native
   
   /**
+    * Creates a new registry which may be used to hold a collection of schemas.
+    */
+  def createRegistry(): Request[CreateRegistryResponse, AWSError] = js.native
+  def createRegistry(callback: js.Function2[/* err */ AWSError, /* data */ CreateRegistryResponse, Unit]): Request[CreateRegistryResponse, AWSError] = js.native
+  /**
+    * Creates a new registry which may be used to hold a collection of schemas.
+    */
+  def createRegistry(params: CreateRegistryInput): Request[CreateRegistryResponse, AWSError] = js.native
+  def createRegistry(
+    params: CreateRegistryInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateRegistryResponse, Unit]
+  ): Request[CreateRegistryResponse, AWSError] = js.native
+  
+  /**
+    * Creates a new schema set and registers the schema definition. Returns an error if the schema set already exists without actually registering the version. When the schema set is created, a version checkpoint will be set to the first version. Compatibility mode "DISABLED" restricts any additional schema versions from being added after the first schema version. For all other compatibility modes, validation of compatibility settings will be applied only from the second version onwards when the RegisterSchemaVersion API is used. When this API is called without a RegistryId, this will create an entry for a "default-registry" in the registry database tables, if it is not already present.
+    */
+  def createSchema(): Request[CreateSchemaResponse, AWSError] = js.native
+  def createSchema(callback: js.Function2[/* err */ AWSError, /* data */ CreateSchemaResponse, Unit]): Request[CreateSchemaResponse, AWSError] = js.native
+  /**
+    * Creates a new schema set and registers the schema definition. Returns an error if the schema set already exists without actually registering the version. When the schema set is created, a version checkpoint will be set to the first version. Compatibility mode "DISABLED" restricts any additional schema versions from being added after the first schema version. For all other compatibility modes, validation of compatibility settings will be applied only from the second version onwards when the RegisterSchemaVersion API is used. When this API is called without a RegistryId, this will create an entry for a "default-registry" in the registry database tables, if it is not already present.
+    */
+  def createSchema(params: CreateSchemaInput): Request[CreateSchemaResponse, AWSError] = js.native
+  def createSchema(
+    params: CreateSchemaInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateSchemaResponse, Unit]
+  ): Request[CreateSchemaResponse, AWSError] = js.native
+  
+  /**
     * Transforms a directed acyclic graph (DAG) into code.
     */
   def createScript(): Request[CreateScriptResponse, AWSError] = js.native
@@ -407,14 +463,14 @@ trait Glue extends Service {
   ): Request[DeleteClassifierResponse, AWSError] = js.native
   
   /**
-    * Delete the partition column statistics of a column.
+    * Delete the partition column statistics of a column. The Identity and Access Management (IAM) permission required for this operation is DeletePartition.
     */
   def deleteColumnStatisticsForPartition(): Request[DeleteColumnStatisticsForPartitionResponse, AWSError] = js.native
   def deleteColumnStatisticsForPartition(
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteColumnStatisticsForPartitionResponse, Unit]
   ): Request[DeleteColumnStatisticsForPartitionResponse, AWSError] = js.native
   /**
-    * Delete the partition column statistics of a column.
+    * Delete the partition column statistics of a column. The Identity and Access Management (IAM) permission required for this operation is DeletePartition.
     */
   def deleteColumnStatisticsForPartition(params: DeleteColumnStatisticsForPartitionRequest): Request[DeleteColumnStatisticsForPartitionResponse, AWSError] = js.native
   def deleteColumnStatisticsForPartition(
@@ -423,14 +479,14 @@ trait Glue extends Service {
   ): Request[DeleteColumnStatisticsForPartitionResponse, AWSError] = js.native
   
   /**
-    * Retrieves table statistics of columns.
+    * Retrieves table statistics of columns. The Identity and Access Management (IAM) permission required for this operation is DeleteTable.
     */
   def deleteColumnStatisticsForTable(): Request[DeleteColumnStatisticsForTableResponse, AWSError] = js.native
   def deleteColumnStatisticsForTable(
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteColumnStatisticsForTableResponse, Unit]
   ): Request[DeleteColumnStatisticsForTableResponse, AWSError] = js.native
   /**
-    * Retrieves table statistics of columns.
+    * Retrieves table statistics of columns. The Identity and Access Management (IAM) permission required for this operation is DeleteTable.
     */
   def deleteColumnStatisticsForTable(params: DeleteColumnStatisticsForTableRequest): Request[DeleteColumnStatisticsForTableResponse, AWSError] = js.native
   def deleteColumnStatisticsForTable(
@@ -537,6 +593,20 @@ trait Glue extends Service {
   ): Request[DeletePartitionResponse, AWSError] = js.native
   
   /**
+    * Delete the entire registry including schema and all of its versions. To get the status of the delete operation, you can call the GetRegistry API after the asynchronous call. Deleting a registry will disable all online operations for the registry such as the UpdateRegistry, CreateSchema, UpdateSchema, and RegisterSchemaVersion APIs. 
+    */
+  def deleteRegistry(): Request[DeleteRegistryResponse, AWSError] = js.native
+  def deleteRegistry(callback: js.Function2[/* err */ AWSError, /* data */ DeleteRegistryResponse, Unit]): Request[DeleteRegistryResponse, AWSError] = js.native
+  /**
+    * Delete the entire registry including schema and all of its versions. To get the status of the delete operation, you can call the GetRegistry API after the asynchronous call. Deleting a registry will disable all online operations for the registry such as the UpdateRegistry, CreateSchema, UpdateSchema, and RegisterSchemaVersion APIs. 
+    */
+  def deleteRegistry(params: DeleteRegistryInput): Request[DeleteRegistryResponse, AWSError] = js.native
+  def deleteRegistry(
+    params: DeleteRegistryInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteRegistryResponse, Unit]
+  ): Request[DeleteRegistryResponse, AWSError] = js.native
+  
+  /**
     * Deletes a specified policy.
     */
   def deleteResourcePolicy(): Request[DeleteResourcePolicyResponse, AWSError] = js.native
@@ -549,6 +619,34 @@ trait Glue extends Service {
     params: DeleteResourcePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteResourcePolicyResponse, Unit]
   ): Request[DeleteResourcePolicyResponse, AWSError] = js.native
+  
+  /**
+    * Deletes the entire schema set, including the schema set and all of its versions. To get the status of the delete operation, you can call GetSchema API after the asynchronous call. Deleting a registry will disable all online operations for the schema, such as the GetSchemaByDefinition, and RegisterSchemaVersion APIs.
+    */
+  def deleteSchema(): Request[DeleteSchemaResponse, AWSError] = js.native
+  def deleteSchema(callback: js.Function2[/* err */ AWSError, /* data */ DeleteSchemaResponse, Unit]): Request[DeleteSchemaResponse, AWSError] = js.native
+  /**
+    * Deletes the entire schema set, including the schema set and all of its versions. To get the status of the delete operation, you can call GetSchema API after the asynchronous call. Deleting a registry will disable all online operations for the schema, such as the GetSchemaByDefinition, and RegisterSchemaVersion APIs.
+    */
+  def deleteSchema(params: DeleteSchemaInput): Request[DeleteSchemaResponse, AWSError] = js.native
+  def deleteSchema(
+    params: DeleteSchemaInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteSchemaResponse, Unit]
+  ): Request[DeleteSchemaResponse, AWSError] = js.native
+  
+  /**
+    * Remove versions from the specified schema. A version number or range may be supplied. If the compatibility mode forbids deleting of a version that is necessary, such as BACKWARDS_FULL, an error is returned. Calling the GetSchemaVersions API after this call will list the status of the deleted versions. When the range of version numbers contain check pointed version, the API will return a 409 conflict and will not proceed with the deletion. You have to remove the checkpoint first using the DeleteSchemaCheckpoint API before using this API. You cannot use the DeleteSchemaVersions API to delete the first schema version in the schema set. The first schema version can only be deleted by the DeleteSchema API. This operation will also delete the attached SchemaVersionMetadata under the schema versions. Hard deletes will be enforced on the database. If the compatibility mode forbids deleting of a version that is necessary, such as BACKWARDS_FULL, an error is returned.
+    */
+  def deleteSchemaVersions(): Request[DeleteSchemaVersionsResponse, AWSError] = js.native
+  def deleteSchemaVersions(callback: js.Function2[/* err */ AWSError, /* data */ DeleteSchemaVersionsResponse, Unit]): Request[DeleteSchemaVersionsResponse, AWSError] = js.native
+  /**
+    * Remove versions from the specified schema. A version number or range may be supplied. If the compatibility mode forbids deleting of a version that is necessary, such as BACKWARDS_FULL, an error is returned. Calling the GetSchemaVersions API after this call will list the status of the deleted versions. When the range of version numbers contain check pointed version, the API will return a 409 conflict and will not proceed with the deletion. You have to remove the checkpoint first using the DeleteSchemaCheckpoint API before using this API. You cannot use the DeleteSchemaVersions API to delete the first schema version in the schema set. The first schema version can only be deleted by the DeleteSchema API. This operation will also delete the attached SchemaVersionMetadata under the schema versions. Hard deletes will be enforced on the database. If the compatibility mode forbids deleting of a version that is necessary, such as BACKWARDS_FULL, an error is returned.
+    */
+  def deleteSchemaVersions(params: DeleteSchemaVersionsInput): Request[DeleteSchemaVersionsResponse, AWSError] = js.native
+  def deleteSchemaVersions(
+    params: DeleteSchemaVersionsInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteSchemaVersionsResponse, Unit]
+  ): Request[DeleteSchemaVersionsResponse, AWSError] = js.native
   
   /**
     * Deletes a specified security configuration.
@@ -677,14 +775,14 @@ trait Glue extends Service {
   ): Request[GetClassifiersResponse, AWSError] = js.native
   
   /**
-    * Retrieves partition statistics of columns.
+    * Retrieves partition statistics of columns. The Identity and Access Management (IAM) permission required for this operation is GetPartition.
     */
   def getColumnStatisticsForPartition(): Request[GetColumnStatisticsForPartitionResponse, AWSError] = js.native
   def getColumnStatisticsForPartition(
     callback: js.Function2[/* err */ AWSError, /* data */ GetColumnStatisticsForPartitionResponse, Unit]
   ): Request[GetColumnStatisticsForPartitionResponse, AWSError] = js.native
   /**
-    * Retrieves partition statistics of columns.
+    * Retrieves partition statistics of columns. The Identity and Access Management (IAM) permission required for this operation is GetPartition.
     */
   def getColumnStatisticsForPartition(params: GetColumnStatisticsForPartitionRequest): Request[GetColumnStatisticsForPartitionResponse, AWSError] = js.native
   def getColumnStatisticsForPartition(
@@ -693,12 +791,12 @@ trait Glue extends Service {
   ): Request[GetColumnStatisticsForPartitionResponse, AWSError] = js.native
   
   /**
-    * Retrieves table statistics of columns.
+    * Retrieves table statistics of columns. The Identity and Access Management (IAM) permission required for this operation is GetTable.
     */
   def getColumnStatisticsForTable(): Request[GetColumnStatisticsForTableResponse, AWSError] = js.native
   def getColumnStatisticsForTable(callback: js.Function2[/* err */ AWSError, /* data */ GetColumnStatisticsForTableResponse, Unit]): Request[GetColumnStatisticsForTableResponse, AWSError] = js.native
   /**
-    * Retrieves table statistics of columns.
+    * Retrieves table statistics of columns. The Identity and Access Management (IAM) permission required for this operation is GetTable.
     */
   def getColumnStatisticsForTable(params: GetColumnStatisticsForTableRequest): Request[GetColumnStatisticsForTableResponse, AWSError] = js.native
   def getColumnStatisticsForTable(
@@ -1014,6 +1112,20 @@ trait Glue extends Service {
   ): Request[GetPartitionResponse, AWSError] = js.native
   
   /**
+    * Retrieves the partition indexes associated with a table.
+    */
+  def getPartitionIndexes(): Request[GetPartitionIndexesResponse, AWSError] = js.native
+  def getPartitionIndexes(callback: js.Function2[/* err */ AWSError, /* data */ GetPartitionIndexesResponse, Unit]): Request[GetPartitionIndexesResponse, AWSError] = js.native
+  /**
+    * Retrieves the partition indexes associated with a table.
+    */
+  def getPartitionIndexes(params: GetPartitionIndexesRequest): Request[GetPartitionIndexesResponse, AWSError] = js.native
+  def getPartitionIndexes(
+    params: GetPartitionIndexesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetPartitionIndexesResponse, Unit]
+  ): Request[GetPartitionIndexesResponse, AWSError] = js.native
+  
+  /**
     * Retrieves information about the partitions in a table.
     */
   def getPartitions(): Request[GetPartitionsResponse, AWSError] = js.native
@@ -1042,6 +1154,20 @@ trait Glue extends Service {
   ): Request[GetPlanResponse, AWSError] = js.native
   
   /**
+    * Describes the specified registry in detail.
+    */
+  def getRegistry(): Request[GetRegistryResponse, AWSError] = js.native
+  def getRegistry(callback: js.Function2[/* err */ AWSError, /* data */ GetRegistryResponse, Unit]): Request[GetRegistryResponse, AWSError] = js.native
+  /**
+    * Describes the specified registry in detail.
+    */
+  def getRegistry(params: GetRegistryInput): Request[GetRegistryResponse, AWSError] = js.native
+  def getRegistry(
+    params: GetRegistryInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetRegistryResponse, Unit]
+  ): Request[GetRegistryResponse, AWSError] = js.native
+  
+  /**
     * Retrieves the security configurations for the resource policies set on individual resources, and also the account-level policy. This operation also returns the Data Catalog resource policy. However, if you enabled metadata encryption in Data Catalog settings, and you do not have permission on the AWS KMS key, the operation can't return the Data Catalog resource policy.
     */
   def getResourcePolicies(): Request[GetResourcePoliciesResponse, AWSError] = js.native
@@ -1068,6 +1194,62 @@ trait Glue extends Service {
     params: GetResourcePolicyRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetResourcePolicyResponse, Unit]
   ): Request[GetResourcePolicyResponse, AWSError] = js.native
+  
+  /**
+    * Describes the specified schema in detail.
+    */
+  def getSchema(): Request[GetSchemaResponse, AWSError] = js.native
+  def getSchema(callback: js.Function2[/* err */ AWSError, /* data */ GetSchemaResponse, Unit]): Request[GetSchemaResponse, AWSError] = js.native
+  /**
+    * Describes the specified schema in detail.
+    */
+  def getSchema(params: GetSchemaInput): Request[GetSchemaResponse, AWSError] = js.native
+  def getSchema(
+    params: GetSchemaInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetSchemaResponse, Unit]
+  ): Request[GetSchemaResponse, AWSError] = js.native
+  
+  /**
+    * Retrieves a schema by the SchemaDefinition. The schema definition is sent to the Schema Registry, canonicalized, and hashed. If the hash is matched within the scope of the SchemaName or ARN (or the default registry, if none is supplied), that schema’s metadata is returned. Otherwise, a 404 or NotFound error is returned. Schema versions in Deleted statuses will not be included in the results.
+    */
+  def getSchemaByDefinition(): Request[GetSchemaByDefinitionResponse, AWSError] = js.native
+  def getSchemaByDefinition(callback: js.Function2[/* err */ AWSError, /* data */ GetSchemaByDefinitionResponse, Unit]): Request[GetSchemaByDefinitionResponse, AWSError] = js.native
+  /**
+    * Retrieves a schema by the SchemaDefinition. The schema definition is sent to the Schema Registry, canonicalized, and hashed. If the hash is matched within the scope of the SchemaName or ARN (or the default registry, if none is supplied), that schema’s metadata is returned. Otherwise, a 404 or NotFound error is returned. Schema versions in Deleted statuses will not be included in the results.
+    */
+  def getSchemaByDefinition(params: GetSchemaByDefinitionInput): Request[GetSchemaByDefinitionResponse, AWSError] = js.native
+  def getSchemaByDefinition(
+    params: GetSchemaByDefinitionInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetSchemaByDefinitionResponse, Unit]
+  ): Request[GetSchemaByDefinitionResponse, AWSError] = js.native
+  
+  /**
+    * Get the specified schema by its unique ID assigned when a version of the schema is created or registered. Schema versions in Deleted status will not be included in the results.
+    */
+  def getSchemaVersion(): Request[GetSchemaVersionResponse, AWSError] = js.native
+  def getSchemaVersion(callback: js.Function2[/* err */ AWSError, /* data */ GetSchemaVersionResponse, Unit]): Request[GetSchemaVersionResponse, AWSError] = js.native
+  /**
+    * Get the specified schema by its unique ID assigned when a version of the schema is created or registered. Schema versions in Deleted status will not be included in the results.
+    */
+  def getSchemaVersion(params: GetSchemaVersionInput): Request[GetSchemaVersionResponse, AWSError] = js.native
+  def getSchemaVersion(
+    params: GetSchemaVersionInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetSchemaVersionResponse, Unit]
+  ): Request[GetSchemaVersionResponse, AWSError] = js.native
+  
+  /**
+    * Fetches the schema version difference in the specified difference type between two stored schema versions in the Schema Registry. This API allows you to compare two schema versions between two schema definitions under the same schema.
+    */
+  def getSchemaVersionsDiff(): Request[GetSchemaVersionsDiffResponse, AWSError] = js.native
+  def getSchemaVersionsDiff(callback: js.Function2[/* err */ AWSError, /* data */ GetSchemaVersionsDiffResponse, Unit]): Request[GetSchemaVersionsDiffResponse, AWSError] = js.native
+  /**
+    * Fetches the schema version difference in the specified difference type between two stored schema versions in the Schema Registry. This API allows you to compare two schema versions between two schema definitions under the same schema.
+    */
+  def getSchemaVersionsDiff(params: GetSchemaVersionsDiffInput): Request[GetSchemaVersionsDiffResponse, AWSError] = js.native
+  def getSchemaVersionsDiff(
+    params: GetSchemaVersionsDiffInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetSchemaVersionsDiffResponse, Unit]
+  ): Request[GetSchemaVersionsDiffResponse, AWSError] = js.native
   
   /**
     * Retrieves a specified security configuration.
@@ -1350,6 +1532,48 @@ trait Glue extends Service {
   ): Request[ListMLTransformsResponse, AWSError] = js.native
   
   /**
+    * Returns a list of registries that you have created, with minimal registry information. Registries in the Deleting status will not be included in the results. Empty results will be returned if there are no registries available.
+    */
+  def listRegistries(): Request[ListRegistriesResponse, AWSError] = js.native
+  def listRegistries(callback: js.Function2[/* err */ AWSError, /* data */ ListRegistriesResponse, Unit]): Request[ListRegistriesResponse, AWSError] = js.native
+  /**
+    * Returns a list of registries that you have created, with minimal registry information. Registries in the Deleting status will not be included in the results. Empty results will be returned if there are no registries available.
+    */
+  def listRegistries(params: ListRegistriesInput): Request[ListRegistriesResponse, AWSError] = js.native
+  def listRegistries(
+    params: ListRegistriesInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListRegistriesResponse, Unit]
+  ): Request[ListRegistriesResponse, AWSError] = js.native
+  
+  /**
+    * Returns a list of schema versions that you have created, with minimal information. Schema versions in Deleted status will not be included in the results. Empty results will be returned if there are no schema versions available.
+    */
+  def listSchemaVersions(): Request[ListSchemaVersionsResponse, AWSError] = js.native
+  def listSchemaVersions(callback: js.Function2[/* err */ AWSError, /* data */ ListSchemaVersionsResponse, Unit]): Request[ListSchemaVersionsResponse, AWSError] = js.native
+  /**
+    * Returns a list of schema versions that you have created, with minimal information. Schema versions in Deleted status will not be included in the results. Empty results will be returned if there are no schema versions available.
+    */
+  def listSchemaVersions(params: ListSchemaVersionsInput): Request[ListSchemaVersionsResponse, AWSError] = js.native
+  def listSchemaVersions(
+    params: ListSchemaVersionsInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListSchemaVersionsResponse, Unit]
+  ): Request[ListSchemaVersionsResponse, AWSError] = js.native
+  
+  /**
+    * Returns a list of schemas with minimal details. Schemas in Deleting status will not be included in the results. Empty results will be returned if there are no schemas available. When the RegistryId is not provided, all the schemas across registries will be part of the API response.
+    */
+  def listSchemas(): Request[ListSchemasResponse, AWSError] = js.native
+  def listSchemas(callback: js.Function2[/* err */ AWSError, /* data */ ListSchemasResponse, Unit]): Request[ListSchemasResponse, AWSError] = js.native
+  /**
+    * Returns a list of schemas with minimal details. Schemas in Deleting status will not be included in the results. Empty results will be returned if there are no schemas available. When the RegistryId is not provided, all the schemas across registries will be part of the API response.
+    */
+  def listSchemas(params: ListSchemasInput): Request[ListSchemasResponse, AWSError] = js.native
+  def listSchemas(
+    params: ListSchemasInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListSchemasResponse, Unit]
+  ): Request[ListSchemasResponse, AWSError] = js.native
+  
+  /**
     * Retrieves the names of all trigger resources in this AWS account, or the resources with the specified tag. This operation allows you to see which resources are available in your account, and their names. This operation takes the optional Tags field, which you can use as a filter on the response so that tagged resources can be retrieved as a group. If you choose to use tags filtering, only resources with the tag are retrieved.
     */
   def listTriggers(): Request[ListTriggersResponse, AWSError] = js.native
@@ -1408,6 +1632,20 @@ trait Glue extends Service {
   ): Request[PutResourcePolicyResponse, AWSError] = js.native
   
   /**
+    * Puts the metadata key value pair for a specified schema version ID. A maximum of 10 key value pairs will be allowed per schema version. They can be added over one or more calls.
+    */
+  def putSchemaVersionMetadata(): Request[PutSchemaVersionMetadataResponse, AWSError] = js.native
+  def putSchemaVersionMetadata(callback: js.Function2[/* err */ AWSError, /* data */ PutSchemaVersionMetadataResponse, Unit]): Request[PutSchemaVersionMetadataResponse, AWSError] = js.native
+  /**
+    * Puts the metadata key value pair for a specified schema version ID. A maximum of 10 key value pairs will be allowed per schema version. They can be added over one or more calls.
+    */
+  def putSchemaVersionMetadata(params: PutSchemaVersionMetadataInput): Request[PutSchemaVersionMetadataResponse, AWSError] = js.native
+  def putSchemaVersionMetadata(
+    params: PutSchemaVersionMetadataInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ PutSchemaVersionMetadataResponse, Unit]
+  ): Request[PutSchemaVersionMetadataResponse, AWSError] = js.native
+  
+  /**
     * Puts the specified workflow run properties for the given workflow run. If a property already exists for the specified run, then it overrides the value otherwise adds the property to existing properties.
     */
   def putWorkflowRunProperties(): Request[PutWorkflowRunPropertiesResponse, AWSError] = js.native
@@ -1420,6 +1658,48 @@ trait Glue extends Service {
     params: PutWorkflowRunPropertiesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutWorkflowRunPropertiesResponse, Unit]
   ): Request[PutWorkflowRunPropertiesResponse, AWSError] = js.native
+  
+  /**
+    * Queries for the schema version metadata information. 
+    */
+  def querySchemaVersionMetadata(): Request[QuerySchemaVersionMetadataResponse, AWSError] = js.native
+  def querySchemaVersionMetadata(callback: js.Function2[/* err */ AWSError, /* data */ QuerySchemaVersionMetadataResponse, Unit]): Request[QuerySchemaVersionMetadataResponse, AWSError] = js.native
+  /**
+    * Queries for the schema version metadata information. 
+    */
+  def querySchemaVersionMetadata(params: QuerySchemaVersionMetadataInput): Request[QuerySchemaVersionMetadataResponse, AWSError] = js.native
+  def querySchemaVersionMetadata(
+    params: QuerySchemaVersionMetadataInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ QuerySchemaVersionMetadataResponse, Unit]
+  ): Request[QuerySchemaVersionMetadataResponse, AWSError] = js.native
+  
+  /**
+    * Adds a new version to the existing schema. Returns an error if new version of schema does not meet the compatibility requirements of the schema set. This API will not create a new schema set and will return a 404 error if the schema set is not already present in the Schema Registry. If this is the first schema definition to be registered in the Schema Registry, this API will store the schema version and return immediately. Otherwise, this call has the potential to run longer than other operations due to compatibility modes. You can call the GetSchemaVersion API with the SchemaVersionId to check compatibility modes. If the same schema definition is already stored in Schema Registry as a version, the schema ID of the existing schema is returned to the caller.
+    */
+  def registerSchemaVersion(): Request[RegisterSchemaVersionResponse, AWSError] = js.native
+  def registerSchemaVersion(callback: js.Function2[/* err */ AWSError, /* data */ RegisterSchemaVersionResponse, Unit]): Request[RegisterSchemaVersionResponse, AWSError] = js.native
+  /**
+    * Adds a new version to the existing schema. Returns an error if new version of schema does not meet the compatibility requirements of the schema set. This API will not create a new schema set and will return a 404 error if the schema set is not already present in the Schema Registry. If this is the first schema definition to be registered in the Schema Registry, this API will store the schema version and return immediately. Otherwise, this call has the potential to run longer than other operations due to compatibility modes. You can call the GetSchemaVersion API with the SchemaVersionId to check compatibility modes. If the same schema definition is already stored in Schema Registry as a version, the schema ID of the existing schema is returned to the caller.
+    */
+  def registerSchemaVersion(params: RegisterSchemaVersionInput): Request[RegisterSchemaVersionResponse, AWSError] = js.native
+  def registerSchemaVersion(
+    params: RegisterSchemaVersionInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ RegisterSchemaVersionResponse, Unit]
+  ): Request[RegisterSchemaVersionResponse, AWSError] = js.native
+  
+  /**
+    * Removes a key value pair from the schema version metadata for the specified schema version ID.
+    */
+  def removeSchemaVersionMetadata(): Request[RemoveSchemaVersionMetadataResponse, AWSError] = js.native
+  def removeSchemaVersionMetadata(callback: js.Function2[/* err */ AWSError, /* data */ RemoveSchemaVersionMetadataResponse, Unit]): Request[RemoveSchemaVersionMetadataResponse, AWSError] = js.native
+  /**
+    * Removes a key value pair from the schema version metadata for the specified schema version ID.
+    */
+  def removeSchemaVersionMetadata(params: RemoveSchemaVersionMetadataInput): Request[RemoveSchemaVersionMetadataResponse, AWSError] = js.native
+  def removeSchemaVersionMetadata(
+    params: RemoveSchemaVersionMetadataInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ RemoveSchemaVersionMetadataResponse, Unit]
+  ): Request[RemoveSchemaVersionMetadataResponse, AWSError] = js.native
   
   /**
     * Resets a bookmark entry.
@@ -1436,12 +1716,12 @@ trait Glue extends Service {
   ): Request[ResetJobBookmarkResponse, AWSError] = js.native
   
   /**
-    * Restarts any completed nodes in a workflow run and resumes the run execution.
+    * Restarts selected nodes of a previous partially completed workflow run and resumes the workflow run. The selected nodes and all nodes that are downstream from the selected nodes are run.
     */
   def resumeWorkflowRun(): Request[ResumeWorkflowRunResponse, AWSError] = js.native
   def resumeWorkflowRun(callback: js.Function2[/* err */ AWSError, /* data */ ResumeWorkflowRunResponse, Unit]): Request[ResumeWorkflowRunResponse, AWSError] = js.native
   /**
-    * Restarts any completed nodes in a workflow run and resumes the run execution.
+    * Restarts selected nodes of a previous partially completed workflow run and resumes the workflow run. The selected nodes and all nodes that are downstream from the selected nodes are run.
     */
   def resumeWorkflowRun(params: ResumeWorkflowRunRequest): Request[ResumeWorkflowRunResponse, AWSError] = js.native
   def resumeWorkflowRun(
@@ -1690,14 +1970,14 @@ trait Glue extends Service {
   ): Request[UpdateClassifierResponse, AWSError] = js.native
   
   /**
-    * Creates or updates partition statistics of columns.
+    * Creates or updates partition statistics of columns. The Identity and Access Management (IAM) permission required for this operation is UpdatePartition.
     */
   def updateColumnStatisticsForPartition(): Request[UpdateColumnStatisticsForPartitionResponse, AWSError] = js.native
   def updateColumnStatisticsForPartition(
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateColumnStatisticsForPartitionResponse, Unit]
   ): Request[UpdateColumnStatisticsForPartitionResponse, AWSError] = js.native
   /**
-    * Creates or updates partition statistics of columns.
+    * Creates or updates partition statistics of columns. The Identity and Access Management (IAM) permission required for this operation is UpdatePartition.
     */
   def updateColumnStatisticsForPartition(params: UpdateColumnStatisticsForPartitionRequest): Request[UpdateColumnStatisticsForPartitionResponse, AWSError] = js.native
   def updateColumnStatisticsForPartition(
@@ -1706,14 +1986,14 @@ trait Glue extends Service {
   ): Request[UpdateColumnStatisticsForPartitionResponse, AWSError] = js.native
   
   /**
-    * Creates or updates table statistics of columns.
+    * Creates or updates table statistics of columns. The Identity and Access Management (IAM) permission required for this operation is UpdateTable.
     */
   def updateColumnStatisticsForTable(): Request[UpdateColumnStatisticsForTableResponse, AWSError] = js.native
   def updateColumnStatisticsForTable(
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateColumnStatisticsForTableResponse, Unit]
   ): Request[UpdateColumnStatisticsForTableResponse, AWSError] = js.native
   /**
-    * Creates or updates table statistics of columns.
+    * Creates or updates table statistics of columns. The Identity and Access Management (IAM) permission required for this operation is UpdateTable.
     */
   def updateColumnStatisticsForTable(params: UpdateColumnStatisticsForTableRequest): Request[UpdateColumnStatisticsForTableResponse, AWSError] = js.native
   def updateColumnStatisticsForTable(
@@ -1832,6 +2112,34 @@ trait Glue extends Service {
     params: UpdatePartitionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdatePartitionResponse, Unit]
   ): Request[UpdatePartitionResponse, AWSError] = js.native
+  
+  /**
+    * Updates an existing registry which is used to hold a collection of schemas. The updated properties relate to the registry, and do not modify any of the schemas within the registry. 
+    */
+  def updateRegistry(): Request[UpdateRegistryResponse, AWSError] = js.native
+  def updateRegistry(callback: js.Function2[/* err */ AWSError, /* data */ UpdateRegistryResponse, Unit]): Request[UpdateRegistryResponse, AWSError] = js.native
+  /**
+    * Updates an existing registry which is used to hold a collection of schemas. The updated properties relate to the registry, and do not modify any of the schemas within the registry. 
+    */
+  def updateRegistry(params: UpdateRegistryInput): Request[UpdateRegistryResponse, AWSError] = js.native
+  def updateRegistry(
+    params: UpdateRegistryInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateRegistryResponse, Unit]
+  ): Request[UpdateRegistryResponse, AWSError] = js.native
+  
+  /**
+    * Updates the description, compatibility setting, or version checkpoint for a schema set. For updating the compatibility setting, the call will not validate compatibility for the entire set of schema versions with the new compatibility setting. If the value for Compatibility is provided, the VersionNumber (a checkpoint) is also required. The API will validate the checkpoint version number for consistency. If the value for the VersionNumber (checkpoint) is provided, Compatibility is optional and this can be used to set/reset a checkpoint for the schema. This update will happen only if the schema is in the AVAILABLE state.
+    */
+  def updateSchema(): Request[UpdateSchemaResponse, AWSError] = js.native
+  def updateSchema(callback: js.Function2[/* err */ AWSError, /* data */ UpdateSchemaResponse, Unit]): Request[UpdateSchemaResponse, AWSError] = js.native
+  /**
+    * Updates the description, compatibility setting, or version checkpoint for a schema set. For updating the compatibility setting, the call will not validate compatibility for the entire set of schema versions with the new compatibility setting. If the value for Compatibility is provided, the VersionNumber (a checkpoint) is also required. The API will validate the checkpoint version number for consistency. If the value for the VersionNumber (checkpoint) is provided, Compatibility is optional and this can be used to set/reset a checkpoint for the schema. This update will happen only if the schema is in the AVAILABLE state.
+    */
+  def updateSchema(params: UpdateSchemaInput): Request[UpdateSchemaResponse, AWSError] = js.native
+  def updateSchema(
+    params: UpdateSchemaInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateSchemaResponse, Unit]
+  ): Request[UpdateSchemaResponse, AWSError] = js.native
   
   /**
     * Updates a metadata table in the Data Catalog.

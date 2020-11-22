@@ -54,6 +54,8 @@ object mod extends js.Object {
   def getBoundedDateRange(dateRange: js.Array[js.Date], minDate: js.Date): js.Array[js.Date] = js.native
   def getBoundedDateRange(dateRange: js.Array[js.Date], minDate: js.Date, maxDate: js.Date): js.Array[js.Date] = js.native
   
+  def getDatePartHashValue(date: js.Date): Double = js.native
+  
   def getDateRangeArray(date: js.Date, dateRangeType: DateRangeType, firstDayOfWeek: DayOfWeek): js.Array[js.Date] = js.native
   def getDateRangeArray(
     date: js.Date,
@@ -80,6 +82,8 @@ object mod extends js.Object {
   def getDateRangeTypeToUse(dateRangeType: DateRangeType, workWeekDays: js.Array[DayOfWeek], firstDayOfWeek: DayOfWeek): DateRangeType = js.native
   
   def getDayGrid(options: IDayGridOptions): js.Array[js.Array[IDay]] = js.native
+  
+  def getEndDateOfWeek(date: js.Date, firstDayOfWeek: DayOfWeek): js.Date = js.native
   
   def getMonthEnd(date: js.Date): js.Date = js.native
   

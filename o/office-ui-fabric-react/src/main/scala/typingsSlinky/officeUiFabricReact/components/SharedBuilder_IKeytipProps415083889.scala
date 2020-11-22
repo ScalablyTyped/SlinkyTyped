@@ -3,12 +3,12 @@ package typingsSlinky.officeUiFabricReact.components
 import org.scalajs.dom.raw.HTMLElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipStyleProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.pointMod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`

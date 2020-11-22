@@ -30,7 +30,7 @@ trait GetAllTemplates extends js.Object {
     * List all templates available to pass as an option when [creating a repository](https://developer.github.com/v3/repos/#create-a-repository-for-the-authenticated-user).
     */
   @JSName("getAllTemplates")
-  var getAllTemplates_Original: `154` = js.native
+  var getAllTemplates_Original: `157` = js.native
   
   /**
     * The API also allows fetching the source of a single template.
@@ -54,5 +54,5 @@ trait GetAllTemplates extends js.Object {
     * Use the raw [media type](https://developer.github.com/v3/media/) to get the raw contents.
     */
   @JSName("getTemplate")
-  var getTemplate_Original: `155` = js.native
+  var getTemplate_Original: `158` = js.native
 }

@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def applyBodyChecksumMiddleware[StreamType](headerName: String, hashCtor: Instantiable, encoder: Encoder): BuildMiddleware[_, _, StreamType] = js.native
+  def applyBodyChecksumMiddleware[StreamType](headerName: String, hashCtor: Instantiable, encoder: Encoder): BuildMiddleware[_, _] = js.native
   def applyBodyChecksumMiddleware[StreamType](
     headerName: String,
     hashCtor: Instantiable,
     encoder: Encoder,
     streamHasher: StreamHasher[StreamType]
-  ): BuildMiddleware[_, _, StreamType] = js.native
+  ): BuildMiddleware[_, _] = js.native
 }

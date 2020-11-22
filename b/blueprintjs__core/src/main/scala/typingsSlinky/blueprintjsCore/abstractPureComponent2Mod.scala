@@ -10,10 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object abstractPureComponent2Mod extends js.Object {
   
   @js.native
-  abstract class AbstractPureComponent2[P, S, SS] () extends Component[P, S, SS] {
+  abstract class AbstractPureComponent2[P, S, SS] protected () extends Component[P, S, SS] {
     def this(props: P) = this()
     def this(props: P, context: js.Any) = this()
-    def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
+    
+    /**
+      * Clear all known animation frame requests.
+      */
+    def cancelAnimationFrames(): Unit = js.native
     
     /**
       * Clear all known timeouts.
@@ -29,8 +33,17 @@ object abstractPureComponent2Mod extends js.Object {
     def componentWillUnmount_MAbstractPureComponent2(): Unit = js.native
     
     /**
+      * Request an animation frame and remember its ID.
+      * All pending requests will be canceled when component unmounts.
+      * @returns a "cancel" function that will cancel the request when invoked.
+      */
+    def requestAnimationFrame(callback: js.Function0[Unit]): js.Function0[Unit] = js.native
+    
+    var requestIds: js.Any = js.native
+    
+    /**
       * Set a timeout and remember its ID.
-      * All stored timeouts will be cleared when component unmounts.
+      * All pending timeouts will be cleared when component unmounts.
       * @returns a "cancel" function that will clear timeout when invoked.
       */
     def setTimeout(callback: js.Function0[Unit]): js.Function0[Unit] = js.native

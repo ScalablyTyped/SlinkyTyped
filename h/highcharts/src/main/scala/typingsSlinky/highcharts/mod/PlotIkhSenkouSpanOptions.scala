@@ -19,8 +19,6 @@ trait PlotIkhSenkouSpanOptions extends js.Object {
     * Span A is under Senkou Span B.
     */
   var negativeColor: js.UndefOr[ColorString | GradientColorObject | PatternObject] = js.native
-  
-  var styles: js.UndefOr[js.Any] = js.native
 }
 object PlotIkhSenkouSpanOptions {
   
@@ -56,11 +54,5 @@ object PlotIkhSenkouSpanOptions {
     
     @scala.inline
     def deleteNegativeColor: Self = this.set("negativeColor", js.undefined)
-    
-    @scala.inline
-    def setStyles(value: js.Any): Self = this.set("styles", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteStyles: Self = this.set("styles", js.undefined)
   }
 }

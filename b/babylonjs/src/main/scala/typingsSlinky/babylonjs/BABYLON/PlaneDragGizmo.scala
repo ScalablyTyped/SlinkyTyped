@@ -10,13 +10,17 @@ trait PlaneDragGizmo extends Gizmo {
   
   var _coloredMaterial: js.Any = js.native
   
+  var _disableMaterial: js.Any = js.native
+  
+  var _dragging: js.Any = js.native
+  
+  var _gizmoMesh: js.Any = js.native
+  
   var _hoverMaterial: js.Any = js.native
   
   var _isEnabled: js.Any = js.native
   
   var _parent: js.Any = js.native
-  
-  var _plane: js.Any = js.native
   
   var _pointerObserver: js.Any = js.native
   

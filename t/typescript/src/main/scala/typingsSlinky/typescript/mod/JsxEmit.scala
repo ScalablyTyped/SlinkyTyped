@@ -30,6 +30,16 @@ object JsxEmit extends js.Object {
   object React extends TopLevel[React with Double]
   
   @js.native
+  sealed trait ReactJSX extends JsxEmit
+  /* 4 */ @js.native
+  object ReactJSX extends TopLevel[ReactJSX with Double]
+  
+  @js.native
+  sealed trait ReactJSXDev extends JsxEmit
+  /* 5 */ @js.native
+  object ReactJSXDev extends TopLevel[ReactJSXDev with Double]
+  
+  @js.native
   sealed trait ReactNative extends JsxEmit
   /* 3 */ @js.native
   object ReactNative extends TopLevel[ReactNative with Double]

@@ -9,7 +9,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.buttonButtonMod.ButtonProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
@@ -17,6 +16,7 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.modalActionsMod.ModalActionsProps
 import typingsSlinky.semanticUiReact.modalContentMod.ModalContentProps
 import typingsSlinky.semanticUiReact.modalDescriptionMod.ModalDescriptionProps
+import typingsSlinky.semanticUiReact.modalDimmerMod.ModalDimmerProps
 import typingsSlinky.semanticUiReact.modalHeaderMod.ModalHeaderProps
 import typingsSlinky.semanticUiReact.modalModalMod.ModalProps
 import typingsSlinky.semanticUiReact.semanticUiReactBooleans.`true`
@@ -47,7 +47,7 @@ object Modal {
     
     @scala.inline
     def actionsFunction3(
-      value: (/* component */ ReactType[ModalActionsProps], ModalActionsProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ModalActionsProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("actions", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -94,7 +94,7 @@ object Modal {
     
     @scala.inline
     def contentFunction3(
-      value: (/* component */ ReactType[ModalContentProps], ModalContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ModalContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("content", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -104,7 +104,15 @@ object Modal {
     def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def dimmer(value: `true` | blurring | inverted): this.type = set("dimmer", value.asInstanceOf[js.Any])
+    def dimmerReactElement(value: ReactElement): this.type = set("dimmer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dimmerFunction3(
+      value: (/* component */ ReactElement, ModalDimmerProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    ): this.type = set("dimmer", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def dimmer(value: `true` | blurring | inverted | SemanticShorthandItem[ModalDimmerProps]): this.type = set("dimmer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def eventPool(value: String): this.type = set("eventPool", value.asInstanceOf[js.Any])
@@ -114,7 +122,7 @@ object Modal {
     
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactType[ModalHeaderProps], ModalHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ModalHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -243,6 +251,17 @@ object Modal {
     def withProps(p: ModalDescriptionProps): SharedBuilder_ModalDescriptionProps155144246 = new SharedBuilder_ModalDescriptionProps155144246(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     implicit def make(companion: Description.type): SharedBuilder_ModalDescriptionProps155144246 = new SharedBuilder_ModalDescriptionProps155144246(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Dimmer {
+    
+    @JSImport("semantic-ui-react", "Modal.Dimmer")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: ModalDimmerProps): SharedBuilder_ModalDimmerProps329564763 = new SharedBuilder_ModalDimmerProps329564763(js.Array(this.component, p.asInstanceOf[js.Any]))
+    
+    implicit def make(companion: Dimmer.type): SharedBuilder_ModalDimmerProps329564763 = new SharedBuilder_ModalDimmerProps329564763(js.Array(this.component, js.Dictionary.empty))()
   }
   
   object Header {

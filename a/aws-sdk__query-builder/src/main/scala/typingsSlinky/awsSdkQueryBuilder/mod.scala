@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkQueryBuilder
 
-import typingsSlinky.awsSdkTypes.marshallerMod.BodySerializer
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
@@ -11,12 +10,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  @js.native
-  class QueryBuilder protected () extends BodySerializer[String] {
+  /* import warning: RemoveDifficultInheritance.summarizeChanges 
+  - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodySerializer * / any */ @js.native
+  class QueryBuilder protected () extends js.Object {
     def this(base64Encoder: Encoder, utf8Decoder: Decoder) = this()
     def this(base64Encoder: Encoder, utf8Decoder: Decoder, protocol: String) = this()
     
     val base64Encoder: js.Any = js.native
+    
+    def build(
+      hasOperationInput: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodySerializerBuildOptions */ js.Any
+    ): String = js.native
     
     var capitalizeFirstChar: js.Any = js.native
     

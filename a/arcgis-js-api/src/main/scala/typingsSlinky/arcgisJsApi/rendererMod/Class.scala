@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("esri/renderers/Renderer", JSImport.Namespace)
 @js.native
 /**
-  * Renderers define how to visually represent each feature in one of the following layer types:
+  * Renderers define how to visually represent each feature in one of the following layer types:.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-Renderer.html)
   */

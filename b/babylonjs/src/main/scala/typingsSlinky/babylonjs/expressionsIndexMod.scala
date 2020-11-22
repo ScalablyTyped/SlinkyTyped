@@ -21,6 +21,18 @@ object expressionsIndexMod extends js.Object {
   @js.native
   class ShaderDefineExpression ()
     extends typingsSlinky.babylonjs.shaderDefineExpressionMod.ShaderDefineExpression
+  /* static members */
+  @js.native
+  object ShaderDefineExpression extends js.Object {
+    
+    var _OperatorPriority: js.Any = js.native
+    
+    var _Stack: js.Any = js.native
+    
+    def infixToPostfix(infix: String): js.Array[String] = js.native
+    
+    def postfixToInfix(postfix: js.Array[String]): String = js.native
+  }
   
   @js.native
   class ShaderDefineIsDefinedOperator protected ()

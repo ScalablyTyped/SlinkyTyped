@@ -19,14 +19,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait relationshipGetSchemeByNameParams extends Object {
   
   /**
-    * The basemap to pair with the visualization. This value indicates the best symbol colors for visualizing features with the given basemap.
+    * The basemap to pair with the visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-relationship.html#getSchemeByName)
     */
   var basemap: js.UndefOr[String | Basemap] = js.native
   
   /**
-    * If you have a non-Esri basemap (e.g. a VectorTileLayer basemap with a custom style) or no basemap at all, use this parameter to indicate whether the background of the visualization is `light` or `dark`.
+    * If you have a non-Esri basemap (e.g.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-relationship.html#getSchemeByName)
     */
@@ -50,20 +50,18 @@ trait relationshipGetSchemeByNameParams extends Object {
     * Determines which set of primary and secondary color schemes to return.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-relationship.html#getSchemeByName)
-    *
-    * @default default
     */
   var theme: js.UndefOr[default] = js.native
   
   /**
-    * The SceneView instance in which the scheme will be used. This property is only applicable when the scheme will be used in conjunction with 3D symbols.
+    * The SceneView instance in which the scheme will be used.
     *
     * [Read more...](global.html)
     */
   var view: js.UndefOr[SceneView] = js.native
   
   /**
-    * Indicates if the size units of the scheme will be in meters. This should be `true` when the scheme is intended for 3D volumetric symbology. A `view` must be provided if this property is set to `true`.
+    * Indicates if the size units of the scheme will be in meters.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-relationship.html#getSchemeByName)
     */

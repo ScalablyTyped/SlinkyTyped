@@ -1,7 +1,5 @@
 package typingsSlinky.firefoxWebextBrowser.browser.experiments
 
-import typingsSlinky.firefoxWebextBrowser.anon.Events
-import typingsSlinky.firefoxWebextBrowser.anon.Paths
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ExperimentAPI extends js.Object {
   
-  var child: js.UndefOr[Paths] = js.native
+  var child: js.UndefOr[ExperimentAPIChild] = js.native
   
-  var parent: js.UndefOr[Events] = js.native
+  var parent: js.UndefOr[ExperimentAPIParent] = js.native
   
   var schema: ExperimentURL = js.native
 }
@@ -43,13 +41,13 @@ object ExperimentAPI {
     def setSchema(value: ExperimentURL): Self = this.set("schema", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChild(value: Paths): Self = this.set("child", value.asInstanceOf[js.Any])
+    def setChild(value: ExperimentAPIChild): Self = this.set("child", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteChild: Self = this.set("child", js.undefined)
     
     @scala.inline
-    def setParent(value: Events): Self = this.set("parent", value.asInstanceOf[js.Any])
+    def setParent(value: ExperimentAPIParent): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteParent: Self = this.set("parent", js.undefined)

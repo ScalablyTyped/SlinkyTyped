@@ -73,7 +73,7 @@ trait InstanceInformation extends js.Object {
   var Name: js.UndefOr[String] = js.native
   
   /**
-    * Connection status of SSM Agent. 
+    * Connection status of SSM Agent.   The status Inactive has been deprecated and is no longer in use. 
     */
   var PingStatus: js.UndefOr[typingsSlinky.awsSdk.ssmMod.PingStatus] = js.native
   

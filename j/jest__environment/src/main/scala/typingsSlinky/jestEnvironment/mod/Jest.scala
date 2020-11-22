@@ -130,7 +130,7 @@ trait Jest extends js.Object {
   /**
     * Determines if the given function is a mocked function.
     */
-  def isMockFunction(fn: js.Function): /* is std.ReturnType<@jest/environment.@jest/environment.JestMockFn> */ Boolean = js.native
+  def isMockFunction(fn: js.Function1[/* repeated */ js.Any, _]): /* is std.ReturnType<@jest/environment.@jest/environment.JestMockFn> */ Boolean = js.native
   
   /**
     * `jest.isolateModules(fn)` goes a step further than `jest.resetModules()`

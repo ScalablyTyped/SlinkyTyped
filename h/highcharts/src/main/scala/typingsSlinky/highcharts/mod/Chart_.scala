@@ -2,6 +2,7 @@ package typingsSlinky.highcharts.mod
 
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import typingsSlinky.highcharts.boostMod.highchartsAugmentingMod.Chart
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -85,7 +86,7 @@ class Chart_ protected () extends js.Object {
     options: AxisOptions,
     isX: js.UndefOr[scala.Nothing],
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Axis = js.native
   def addAxis(options: AxisOptions, isX: js.UndefOr[scala.Nothing], redraw: Boolean): Axis = js.native
   def addAxis(options: AxisOptions, isX: js.UndefOr[scala.Nothing], redraw: Boolean, animation: Boolean): Axis = js.native
@@ -93,7 +94,7 @@ class Chart_ protected () extends js.Object {
     options: AxisOptions,
     isX: js.UndefOr[scala.Nothing],
     redraw: Boolean,
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Axis = js.native
   def addAxis(options: AxisOptions, isX: Boolean): Axis = js.native
   def addAxis(options: AxisOptions, isX: Boolean, redraw: js.UndefOr[scala.Nothing], animation: Boolean): Axis = js.native
@@ -101,11 +102,11 @@ class Chart_ protected () extends js.Object {
     options: AxisOptions,
     isX: Boolean,
     redraw: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Axis = js.native
   def addAxis(options: AxisOptions, isX: Boolean, redraw: Boolean): Axis = js.native
   def addAxis(options: AxisOptions, isX: Boolean, redraw: Boolean, animation: Boolean): Axis = js.native
-  def addAxis(options: AxisOptions, isX: Boolean, redraw: Boolean, animation: AnimationOptionsObject): Axis = js.native
+  def addAxis(options: AxisOptions, isX: Boolean, redraw: Boolean, animation: PartialAnimationOptionsOb): Axis = js.native
   
   /**
     * Add a color axis to the chart after render time. Note that this method
@@ -127,10 +128,10 @@ class Chart_ protected () extends js.Object {
     */
   def addColorAxis(options: ColorAxisOptions): ColorAxis = js.native
   def addColorAxis(options: ColorAxisOptions, redraw: js.UndefOr[scala.Nothing], animation: Boolean): ColorAxis = js.native
-  def addColorAxis(options: ColorAxisOptions, redraw: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject): ColorAxis = js.native
+  def addColorAxis(options: ColorAxisOptions, redraw: js.UndefOr[scala.Nothing], animation: PartialAnimationOptionsOb): ColorAxis = js.native
   def addColorAxis(options: ColorAxisOptions, redraw: Boolean): ColorAxis = js.native
   def addColorAxis(options: ColorAxisOptions, redraw: Boolean, animation: Boolean): ColorAxis = js.native
-  def addColorAxis(options: ColorAxisOptions, redraw: Boolean, animation: AnimationOptionsObject): ColorAxis = js.native
+  def addColorAxis(options: ColorAxisOptions, redraw: Boolean, animation: PartialAnimationOptionsOb): ColorAxis = js.native
   
   /**
     * Set a new credits label for the chart.
@@ -165,10 +166,14 @@ class Chart_ protected () extends js.Object {
     */
   def addSeries(options: SeriesOptionsType): Series = js.native
   def addSeries(options: SeriesOptionsType, redraw: js.UndefOr[scala.Nothing], animation: Boolean): Series = js.native
-  def addSeries(options: SeriesOptionsType, redraw: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject): Series = js.native
+  def addSeries(
+    options: SeriesOptionsType,
+    redraw: js.UndefOr[scala.Nothing],
+    animation: PartialAnimationOptionsOb
+  ): Series = js.native
   def addSeries(options: SeriesOptionsType, redraw: Boolean): Series = js.native
   def addSeries(options: SeriesOptionsType, redraw: Boolean, animation: Boolean): Series = js.native
-  def addSeries(options: SeriesOptionsType, redraw: Boolean, animation: AnimationOptionsObject): Series = js.native
+  def addSeries(options: SeriesOptionsType, redraw: Boolean, animation: PartialAnimationOptionsOb): Series = js.native
   
   /**
     * Add a series to the chart as drilldown from a specific point in the
@@ -451,6 +456,11 @@ class Chart_ protected () extends js.Object {
     * ||-coords (parallel coords).
     */
   var hasParallelCoordinates: Boolean = js.native
+  
+  /**
+    * Export-data module required. Hide the data table when visible.
+    */
+  def hideData(): Unit = js.native
   
   /**
     * Hide the loading layer.
@@ -817,7 +827,7 @@ class Chart_ protected () extends js.Object {
     */
   def redraw(): Unit = js.native
   def redraw(animation: Boolean): Unit = js.native
-  def redraw(animation: AnimationOptionsObject): Unit = js.native
+  def redraw(animation: PartialAnimationOptionsOb): Unit = js.native
   
   /**
     * Reflows the chart to its container. By default, the chart reflows
@@ -930,28 +940,28 @@ class Chart_ protected () extends js.Object {
   def setSize(
     width: js.UndefOr[scala.Nothing],
     height: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def setSize(width: js.UndefOr[scala.Nothing], height: Double): Unit = js.native
   def setSize(width: js.UndefOr[scala.Nothing], height: Double, animation: Boolean): Unit = js.native
-  def setSize(width: js.UndefOr[scala.Nothing], height: Double, animation: AnimationOptionsObject): Unit = js.native
+  def setSize(width: js.UndefOr[scala.Nothing], height: Double, animation: PartialAnimationOptionsOb): Unit = js.native
   def setSize(width: js.UndefOr[scala.Nothing], height: Null, animation: Boolean): Unit = js.native
-  def setSize(width: js.UndefOr[scala.Nothing], height: Null, animation: AnimationOptionsObject): Unit = js.native
+  def setSize(width: js.UndefOr[scala.Nothing], height: Null, animation: PartialAnimationOptionsOb): Unit = js.native
   def setSize(width: Double): Unit = js.native
   def setSize(width: Double, height: js.UndefOr[scala.Nothing], animation: Boolean): Unit = js.native
-  def setSize(width: Double, height: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject): Unit = js.native
+  def setSize(width: Double, height: js.UndefOr[scala.Nothing], animation: PartialAnimationOptionsOb): Unit = js.native
   def setSize(width: Double, height: Double): Unit = js.native
   def setSize(width: Double, height: Double, animation: Boolean): Unit = js.native
-  def setSize(width: Double, height: Double, animation: AnimationOptionsObject): Unit = js.native
+  def setSize(width: Double, height: Double, animation: PartialAnimationOptionsOb): Unit = js.native
   def setSize(width: Double, height: Null, animation: Boolean): Unit = js.native
-  def setSize(width: Double, height: Null, animation: AnimationOptionsObject): Unit = js.native
+  def setSize(width: Double, height: Null, animation: PartialAnimationOptionsOb): Unit = js.native
   def setSize(width: Null, height: js.UndefOr[scala.Nothing], animation: Boolean): Unit = js.native
-  def setSize(width: Null, height: js.UndefOr[scala.Nothing], animation: AnimationOptionsObject): Unit = js.native
+  def setSize(width: Null, height: js.UndefOr[scala.Nothing], animation: PartialAnimationOptionsOb): Unit = js.native
   def setSize(width: Null, height: Double): Unit = js.native
   def setSize(width: Null, height: Double, animation: Boolean): Unit = js.native
-  def setSize(width: Null, height: Double, animation: AnimationOptionsObject): Unit = js.native
+  def setSize(width: Null, height: Double, animation: PartialAnimationOptionsOb): Unit = js.native
   def setSize(width: Null, height: Null, animation: Boolean): Unit = js.native
-  def setSize(width: Null, height: Null, animation: AnimationOptionsObject): Unit = js.native
+  def setSize(width: Null, height: Null, animation: PartialAnimationOptionsOb): Unit = js.native
   
   def setSonifyCursor(points: js.Array[typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.Point]): Unit = js.native
   /**
@@ -1026,8 +1036,10 @@ class Chart_ protected () extends js.Object {
     * Sonify a chart.
     *
     * @param options
-    *        The options for sonifying this chart.
+    *        The options for sonifying this chart. If not provided, uses
+    *        options set on chart and series.
     */
+  def sonify(): Unit = js.native
   def sonify(options: typingsSlinky.highcharts.sonificationMod.highchartsAugmentingMod.SonificationOptions): Unit = js.native
   
   /**
@@ -1152,7 +1164,7 @@ class Chart_ protected () extends js.Object {
     options: Options,
     redraw: js.UndefOr[scala.Nothing],
     oneToOne: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def update(options: Options, redraw: js.UndefOr[scala.Nothing], oneToOne: Boolean): Unit = js.native
   def update(options: Options, redraw: js.UndefOr[scala.Nothing], oneToOne: Boolean, animation: Boolean): Unit = js.native
@@ -1160,7 +1172,7 @@ class Chart_ protected () extends js.Object {
     options: Options,
     redraw: js.UndefOr[scala.Nothing],
     oneToOne: Boolean,
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def update(options: Options, redraw: Boolean): Unit = js.native
   def update(options: Options, redraw: Boolean, oneToOne: js.UndefOr[scala.Nothing], animation: Boolean): Unit = js.native
@@ -1168,11 +1180,11 @@ class Chart_ protected () extends js.Object {
     options: Options,
     redraw: Boolean,
     oneToOne: js.UndefOr[scala.Nothing],
-    animation: AnimationOptionsObject
+    animation: PartialAnimationOptionsOb
   ): Unit = js.native
   def update(options: Options, redraw: Boolean, oneToOne: Boolean): Unit = js.native
   def update(options: Options, redraw: Boolean, oneToOne: Boolean, animation: Boolean): Unit = js.native
-  def update(options: Options, redraw: Boolean, oneToOne: Boolean, animation: AnimationOptionsObject): Unit = js.native
+  def update(options: Options, redraw: Boolean, oneToOne: Boolean, animation: PartialAnimationOptionsOb): Unit = js.native
   
   /**
     * The original options given to the constructor or a chart factory like

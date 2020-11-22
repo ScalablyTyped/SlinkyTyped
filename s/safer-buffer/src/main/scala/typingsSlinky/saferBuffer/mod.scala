@@ -1,12 +1,5 @@
 package typingsSlinky.saferBuffer
 
-import org.scalablytyped.runtime.Instantiable1
-import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.node.BufferEncoding
-import typingsSlinky.node.NodeJS.ArrayBufferView
-import typingsSlinky.node.SharedArrayBuffer
-import typingsSlinky.node.anon.ToPrimitive
-import typingsSlinky.node.anon.ValueOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,21 +10,51 @@ object mod extends js.Object {
   
   @js.native
   class Buffer protected ()
-    extends typingsSlinky.node.bufferMod.Buffer {
+    extends typingsSlinky.buffer.mod.Buffer {
+    /**
+      * Produces a Buffer backed by the same allocated memory as
+      * the given {ArrayBuffer}.
+      *
+      *
+      * @param arrayBuffer The ArrayBuffer with which to share memory.
+      */
+    def this(arrayBuffer: js.typedarray.ArrayBuffer) = this()
+    /**
+      * Allocates a new buffer containing the given {array} of octets.
+      *
+      * @param array The octets to store.
+      */
+    def this(array: js.Array[_]) = this()
+    /**
+      * Allocates a new buffer containing the given {array} of octets.
+      *
+      * @param array The octets to store.
+      */
+    def this(array: js.typedarray.Uint8Array) = this()
+    /**
+      * Copies the passed {buffer} data onto a new {Buffer} instance.
+      *
+      * @param buffer The buffer to copy.
+      */
+    def this(buffer: typingsSlinky.buffer.mod.Buffer) = this()
+    /**
+      * Allocates a new buffer of {size} octets.
+      *
+      * @param size count of octets to allocate.
+      */
+    def this(size: Double) = this()
     /**
       * Allocates a new buffer containing the given {str}.
       *
       * @param str String to store in buffer.
       * @param encoding encoding to use, optional.  Default is 'utf8'
-      * @deprecated since v10.0.0 - Use `Buffer.from(string[, encoding])` instead.
       */
     def this(str: String) = this()
-    def this(str: String, encoding: BufferEncoding) = this()
+    def this(str: String, encoding: String) = this()
   }
+  /* static members */
   @js.native
-  object Buffer
-    extends Instantiable1[/* str */ String, typingsSlinky.node.Buffer]
-       with Instantiable2[/* str */ String, /* encoding */ BufferEncoding, typingsSlinky.node.Buffer] {
+  object Buffer extends js.Object {
     
     /**
       * Allocates a new buffer of {size} octets.
@@ -39,16 +62,16 @@ object mod extends js.Object {
       * @param size count of octets to allocate.
       * @param fill if specified, buffer will be initialized by calling buf.fill(fill).
       *    If parameter is omitted, buffer will be filled with zeros.
-      * @param encoding encoding used for call to buf.fill while initalizing
+      * @param encoding encoding used for call to buf.fill while initializing
       */
-    def alloc(size: Double): typingsSlinky.node.Buffer = js.native
-    def alloc(size: Double, fill: js.UndefOr[scala.Nothing], encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
-    def alloc(size: Double, fill: String): typingsSlinky.node.Buffer = js.native
-    def alloc(size: Double, fill: String, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
-    def alloc(size: Double, fill: Double): typingsSlinky.node.Buffer = js.native
-    def alloc(size: Double, fill: Double, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
-    def alloc(size: Double, fill: typingsSlinky.node.Buffer): typingsSlinky.node.Buffer = js.native
-    def alloc(size: Double, fill: typingsSlinky.node.Buffer, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
+    def alloc(size: Double): typingsSlinky.buffer.mod.Buffer = js.native
+    def alloc(size: Double, fill: js.UndefOr[scala.Nothing], encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
+    def alloc(size: Double, fill: String): typingsSlinky.buffer.mod.Buffer = js.native
+    def alloc(size: Double, fill: String, encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
+    def alloc(size: Double, fill: Double): typingsSlinky.buffer.mod.Buffer = js.native
+    def alloc(size: Double, fill: Double, encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
+    def alloc(size: Double, fill: typingsSlinky.buffer.mod.Buffer): typingsSlinky.buffer.mod.Buffer = js.native
+    def alloc(size: Double, fill: typingsSlinky.buffer.mod.Buffer, encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
     
     /**
       * Allocates a new buffer of {size} octets, leaving memory not initialized, so the contents
@@ -56,7 +79,7 @@ object mod extends js.Object {
       *
       * @param size count of octets to allocate
       */
-    def allocUnsafe(size: Double): typingsSlinky.node.Buffer = js.native
+    def allocUnsafe(size: Double): typingsSlinky.buffer.mod.Buffer = js.native
     
     /**
       * Allocates a new non-pooled buffer of {size} octets, leaving memory not initialized, so the contents
@@ -64,7 +87,7 @@ object mod extends js.Object {
       *
       * @param size count of octets to allocate
       */
-    def allocUnsafeSlow(size: Double): typingsSlinky.node.Buffer = js.native
+    def allocUnsafeSlow(size: Double): typingsSlinky.buffer.mod.Buffer = js.native
     
     /**
       * Gives the actual byte length of a string. encoding defaults to 'utf8'.
@@ -74,18 +97,12 @@ object mod extends js.Object {
       * @param encoding encoding used to evaluate (defaults to 'utf8')
       */
     def byteLength(string: String): Double = js.native
-    def byteLength(string: String, encoding: BufferEncoding): Double = js.native
-    def byteLength(string: ArrayBufferView): Double = js.native
-    def byteLength(string: ArrayBufferView, encoding: BufferEncoding): Double = js.native
-    def byteLength(string: SharedArrayBuffer): Double = js.native
-    def byteLength(string: SharedArrayBuffer, encoding: BufferEncoding): Double = js.native
-    def byteLength(string: js.typedarray.ArrayBuffer): Double = js.native
-    def byteLength(string: js.typedarray.ArrayBuffer, encoding: BufferEncoding): Double = js.native
+    def byteLength(string: String, encoding: String): Double = js.native
     
     /**
       * The same as buf1.compare(buf2).
       */
-    def compare(buf1: js.typedarray.Uint8Array, buf2: js.typedarray.Uint8Array): Double = js.native
+    def compare(buf1: typingsSlinky.buffer.mod.Buffer, buf2: typingsSlinky.buffer.mod.Buffer): Double = js.native
     
     /**
       * Returns a buffer which is the result of concatenating all the buffers in the list together.
@@ -98,58 +115,52 @@ object mod extends js.Object {
       * @param totalLength Total length of the buffers when concatenated.
       *   If totalLength is not provided, it is read from the buffers in the list. However, this adds an additional loop to the function, so it is faster to provide the length explicitly.
       */
-    def concat(list: js.Array[js.typedarray.Uint8Array]): typingsSlinky.node.Buffer = js.native
-    def concat(list: js.Array[js.typedarray.Uint8Array], totalLength: Double): typingsSlinky.node.Buffer = js.native
+    def concat(list: js.Array[typingsSlinky.buffer.mod.Buffer]): typingsSlinky.buffer.mod.Buffer = js.native
+    def concat(list: js.Array[typingsSlinky.buffer.mod.Buffer], totalLength: Double): typingsSlinky.buffer.mod.Buffer = js.native
     
-    def from(arrayBuffer: SharedArrayBuffer): typingsSlinky.node.Buffer = js.native
-    def from(arrayBuffer: SharedArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
-    def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
-    def from(arrayBuffer: SharedArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
     /**
       * When passed a reference to the .buffer property of a TypedArray instance,
       * the newly created Buffer will share the same allocated memory as the TypedArray.
       * The optional {byteOffset} and {length} arguments specify a memory range
       * within the {arrayBuffer} that will be shared by the Buffer.
       *
-      * @param arrayBuffer The .buffer property of any TypedArray or a new ArrayBuffer()
+      * @param arrayBuffer The .buffer property of a TypedArray or a new ArrayBuffer()
+      * @param byteOffset
+      * @param length
       */
-    def from(arrayBuffer: js.typedarray.ArrayBuffer): typingsSlinky.node.Buffer = js.native
-    def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
-    def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): typingsSlinky.node.Buffer = js.native
-    def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
+    def from(arrayBuffer: js.typedarray.ArrayBuffer): typingsSlinky.buffer.mod.Buffer = js.native
+    def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.buffer.mod.Buffer = js.native
+    def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double): typingsSlinky.buffer.mod.Buffer = js.native
+    def from(arrayBuffer: js.typedarray.ArrayBuffer, byteOffset: Double, length: Double): typingsSlinky.buffer.mod.Buffer = js.native
     /**
-      * Creates a new Buffer using the passed {data}
-      * @param data data to create a new Buffer
+      * Allocates a new Buffer using an {array} of octets.
+      *
+      * @param array
       */
-    def from(data: js.Array[Double]): typingsSlinky.node.Buffer = js.native
-    def from(data: js.typedarray.Uint8Array): typingsSlinky.node.Buffer = js.native
-    def from(obj: ToPrimitive): typingsSlinky.node.Buffer = js.native
-    def from(obj: ToPrimitive, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
-    def from(obj: ToPrimitive, byteOffset: Double): typingsSlinky.node.Buffer = js.native
-    def from(obj: ToPrimitive, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
+    def from(array: js.Array[_]): typingsSlinky.buffer.mod.Buffer = js.native
     /**
-      * Creates a new buffer containing the coerced value of an object
-      * A `TypeError` will be thrown if {obj} has not mentioned methods or is not of other type appropriate for `Buffer.from()` variants.
-      * @param obj An object supporting `Symbol.toPrimitive` or `valueOf()`.
+      * Copies the passed {buffer} data onto a new Buffer instance.
+      *
+      * @param buffer
       */
-    def from(obj: ValueOf): typingsSlinky.node.Buffer = js.native
-    def from(obj: ValueOf, byteOffset: js.UndefOr[scala.Nothing], length: Double): typingsSlinky.node.Buffer = js.native
-    def from(obj: ValueOf, byteOffset: Double): typingsSlinky.node.Buffer = js.native
-    def from(obj: ValueOf, byteOffset: Double, length: Double): typingsSlinky.node.Buffer = js.native
+    def from(buffer: typingsSlinky.buffer.mod.Buffer): typingsSlinky.buffer.mod.Buffer = js.native
+    def from(buffer: js.typedarray.Uint8Array): typingsSlinky.buffer.mod.Buffer = js.native
     /**
       * Creates a new Buffer containing the given JavaScript string {str}.
       * If provided, the {encoding} parameter identifies the character encoding.
       * If not provided, {encoding} defaults to 'utf8'.
+      *
+      * @param str
       */
-    def from(str: String): typingsSlinky.node.Buffer = js.native
-    def from(str: String, encoding: BufferEncoding): typingsSlinky.node.Buffer = js.native
+    def from(str: String): typingsSlinky.buffer.mod.Buffer = js.native
+    def from(str: String, encoding: String): typingsSlinky.buffer.mod.Buffer = js.native
     
     /**
       * Returns true if {obj} is a Buffer
       *
       * @param obj object to test.
       */
-    def isBuffer(obj: js.Any): /* is node.Buffer */ Boolean = js.native
+    def isBuffer(obj: js.Any): /* is buffer.buffer.Buffer */ Boolean = js.native
     
     /**
       * Returns true if {encoding} is a valid encoding argument.
@@ -157,17 +168,6 @@ object mod extends js.Object {
       *
       * @param encoding string to test.
       */
-    def isEncoding(encoding: String): /* is node.BufferEncoding */ Boolean = js.native
-    
-    /**
-      * Creates a new Buffer using the passed {data}
-      * @param values to create a new Buffer
-      */
-    def of(items: Double*): typingsSlinky.node.Buffer = js.native
-    
-    /**
-      * This is the number of bytes used to determine the size of pre-allocated, internal Buffer instances used for pooling. This value may be modified.
-      */
-    var poolSize: Double = js.native
+    def isEncoding(encoding: String): Boolean = js.native
   }
 }

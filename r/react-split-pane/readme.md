@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-split-pane
 
-Typings are for version 0.1.91
+Typings are for version 0.1.92
 
 ## Library description:
 React split-pane component

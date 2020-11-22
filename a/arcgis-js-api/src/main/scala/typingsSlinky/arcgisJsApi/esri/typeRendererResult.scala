@@ -24,14 +24,14 @@ trait typeRendererResult extends Object {
   var basemapTheme: String = js.native
   
   /**
-    * An array of objects describing the values or categories excluded from consideration in visualizing data from the given field. The specification of each object matches that of the objects specified in the `uniqueValueInfos` property.
+    * An array of objects describing the values or categories excluded from consideration in visualizing data from the given field.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-type.html#RendererResult)
     */
   var excludedUniqueValueInfos: js.Array[_] = js.native
   
   /**
-    * The renderer object configured to best match the given basemap. Set this on a layer's `renderer` property to update its visualization.
+    * The renderer object configured to best match the given basemap.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-type.html#RendererResult)
     */
@@ -45,7 +45,7 @@ trait typeRendererResult extends Object {
   var typeScheme: TypeScheme = js.native
   
   /**
-    * An array of objects describing the value, symbol, and count of each unique type or category represented in the renderer. See the table below describing each property.
+    * An array of objects describing the value, symbol, and count of each unique type or category represented in the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-type.html#RendererResult)
     */

@@ -4,15 +4,21 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.ScatterSeries */
+/**
+  * [descr:dxChartSeriesTypes.ScatterSeries]
+  */
 @js.native
 trait dxChartSeriesTypesScatterSeries extends dxChartSeriesTypesCommonSeries {
   
-  /** @name dxChartSeriesTypes.ScatterSeries.aggregation */
+  /**
+    * [descr:dxChartSeriesTypes.ScatterSeries.aggregation]
+    */
   @JSName("aggregation")
   var aggregation_dxChartSeriesTypesScatterSeries: js.UndefOr[dxChartSeriesTypesScatterSeriesAggregation] = js.native
   
-  /** @name dxChartSeriesTypes.ScatterSeries.label */
+  /**
+    * [descr:dxChartSeriesTypes.ScatterSeries.label]
+    */
   @JSName("label")
   var label_dxChartSeriesTypesScatterSeries: js.UndefOr[dxChartSeriesTypesScatterSeriesLabel] = js.native
 }

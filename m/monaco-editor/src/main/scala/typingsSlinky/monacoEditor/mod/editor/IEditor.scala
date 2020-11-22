@@ -109,6 +109,13 @@ trait IEditor extends js.Object {
   def revealLineInCenterIfOutsideViewport(lineNumber: Double, scrollType: ScrollType): Unit = js.native
   
   /**
+    * Scroll vertically as necessary and reveal a line close to the top of the viewport,
+    * optimized for viewing a code definition.
+    */
+  def revealLineNearTop(lineNumber: Double): Unit = js.native
+  def revealLineNearTop(lineNumber: Double, scrollType: ScrollType): Unit = js.native
+  
+  /**
     * Scroll vertically as necessary and reveal lines.
     */
   def revealLines(startLineNumber: Double, endLineNumber: Double): Unit = js.native
@@ -127,6 +134,13 @@ trait IEditor extends js.Object {
   def revealLinesInCenterIfOutsideViewport(lineNumber: Double, endLineNumber: Double, scrollType: ScrollType): Unit = js.native
   
   /**
+    * Scroll vertically as necessary and reveal lines close to the top of the viewport,
+    * optimized for viewing a code definition.
+    */
+  def revealLinesNearTop(lineNumber: Double, endLineNumber: Double): Unit = js.native
+  def revealLinesNearTop(lineNumber: Double, endLineNumber: Double, scrollType: ScrollType): Unit = js.native
+  
+  /**
     * Scroll vertically or horizontally as necessary and reveal a position.
     */
   def revealPosition(position: IPosition): Unit = js.native
@@ -143,6 +157,13 @@ trait IEditor extends js.Object {
     */
   def revealPositionInCenterIfOutsideViewport(position: IPosition): Unit = js.native
   def revealPositionInCenterIfOutsideViewport(position: IPosition, scrollType: ScrollType): Unit = js.native
+  
+  /**
+    * Scroll vertically or horizontally as necessary and reveal a position close to the top of the viewport,
+    * optimized for viewing a code definition.
+    */
+  def revealPositionNearTop(position: IPosition): Unit = js.native
+  def revealPositionNearTop(position: IPosition, scrollType: ScrollType): Unit = js.native
   
   /**
     * Scroll vertically or horizontally as necessary and reveal a range.
@@ -167,6 +188,20 @@ trait IEditor extends js.Object {
     */
   def revealRangeInCenterIfOutsideViewport(range: IRange): Unit = js.native
   def revealRangeInCenterIfOutsideViewport(range: IRange, scrollType: ScrollType): Unit = js.native
+  
+  /**
+    * Scroll vertically or horizontally as necessary and reveal a range close to the top of the viewport,
+    * optimized for viewing a code definition.
+    */
+  def revealRangeNearTop(range: IRange): Unit = js.native
+  def revealRangeNearTop(range: IRange, scrollType: ScrollType): Unit = js.native
+  
+  /**
+    * Scroll vertically or horizontally as necessary and reveal a range close to the top of the viewport,
+    * optimized for viewing a code definition. Only if it lies outside the viewport.
+    */
+  def revealRangeNearTopIfOutsideViewport(range: IRange): Unit = js.native
+  def revealRangeNearTopIfOutsideViewport(range: IRange, scrollType: ScrollType): Unit = js.native
   
   /**
     * Saves current view state of the editor in a serializable object.
@@ -217,6 +252,7 @@ trait IEditor extends js.Object {
     */
   def setSelections(selections: js.Array[ISelection]): Unit = js.native
   
+  def trigger(source: js.UndefOr[scala.Nothing], handlerId: String, payload: js.Any): Unit = js.native
   /**
     * Directly trigger a handler or an editor action.
     * @param source The source of the call.
@@ -224,6 +260,7 @@ trait IEditor extends js.Object {
     * @param payload Extra data to be sent to the handler.
     */
   def trigger(source: String, handlerId: String, payload: js.Any): Unit = js.native
+  def trigger(source: Null, handlerId: String, payload: js.Any): Unit = js.native
   
   /**
     * Update the editor's options after the editor has been created.

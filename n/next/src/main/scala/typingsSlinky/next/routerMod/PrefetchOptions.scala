@@ -1,11 +1,14 @@
 package typingsSlinky.next.routerMod
 
+import typingsSlinky.next.nextBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait PrefetchOptions extends js.Object {
+  
+  var locale: js.UndefOr[String | `false`] = js.native
   
   var priority: js.UndefOr[Boolean] = js.native
 }
@@ -31,6 +34,12 @@ object PrefetchOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setLocale(value: String | `false`): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
     
     @scala.inline
     def setPriority(value: Boolean): Self = this.set("priority", value.asInstanceOf[js.Any])

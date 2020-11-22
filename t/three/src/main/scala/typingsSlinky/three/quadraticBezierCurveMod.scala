@@ -14,10 +14,19 @@ object quadraticBezierCurveMod extends js.Object {
   class QuadraticBezierCurve protected () extends Curve[Vector2] {
     def this(v0: Vector2, v1: Vector2, v2: Vector2) = this()
     
+    /**
+    	 * @default new THREE.Vector2()
+    	 */
     var v0: Vector2 = js.native
     
+    /**
+    	 * @default new THREE.Vector2()
+    	 */
     var v1: Vector2 = js.native
     
+    /**
+    	 * @default new THREE.Vector2()
+    	 */
     var v2: Vector2 = js.native
   }
 }

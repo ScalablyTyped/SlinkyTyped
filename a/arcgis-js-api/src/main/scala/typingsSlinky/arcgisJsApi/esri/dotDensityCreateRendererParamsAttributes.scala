@@ -17,14 +17,14 @@ trait dotDensityCreateRendererParamsAttributes extends Object {
   var field: js.UndefOr[String] = js.native
   
   /**
-    * The label describing the field name (or category) in the legend. This is should be used if the given field doesn't have an intuitive field name or alias. For example, for a field named `dem` representing the total vote count for the Democratic party, you can set the label to `Democrat` to clarify the name of the category in the final visualization.
+    * The label describing the field name (or category) in the legend.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer)
     */
   var label: js.UndefOr[String] = js.native
   
   /**
-    * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that returns a number. This expression can reference field values using the `$feature` global variable. This property overrides the `field` property and therefore is used instead of an input `field` value.
+    * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that returns a number.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer)
     */

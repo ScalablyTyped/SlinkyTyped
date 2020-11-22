@@ -22,7 +22,7 @@ trait LegendLayerProperties extends js.Object {
   var subLayerIds: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * The title of the feature layer. Use this property to modify feature layer name in the legend for the printout.
+    * The title of the feature layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-LegendLayer.html#title)
     */

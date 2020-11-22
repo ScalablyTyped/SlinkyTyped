@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined parent std.Required<@jest/transform.@jest/transform.CallerTransformOptions> */
 @js.native
 trait InternalModuleOptions extends js.Object {
   
@@ -11,13 +12,23 @@ trait InternalModuleOptions extends js.Object {
   
   var supportsDynamicImport: Boolean = js.native
   
+  var supportsExportNamespaceFrom: Boolean = js.native
+  
   var supportsStaticESM: Boolean = js.native
+  
+  var supportsTopLevelAwait: Boolean = js.native
 }
 object InternalModuleOptions {
   
   @scala.inline
-  def apply(isInternalModule: Boolean, supportsDynamicImport: Boolean, supportsStaticESM: Boolean): InternalModuleOptions = {
-    val __obj = js.Dynamic.literal(isInternalModule = isInternalModule.asInstanceOf[js.Any], supportsDynamicImport = supportsDynamicImport.asInstanceOf[js.Any], supportsStaticESM = supportsStaticESM.asInstanceOf[js.Any])
+  def apply(
+    isInternalModule: Boolean,
+    supportsDynamicImport: Boolean,
+    supportsExportNamespaceFrom: Boolean,
+    supportsStaticESM: Boolean,
+    supportsTopLevelAwait: Boolean
+  ): InternalModuleOptions = {
+    val __obj = js.Dynamic.literal(isInternalModule = isInternalModule.asInstanceOf[js.Any], supportsDynamicImport = supportsDynamicImport.asInstanceOf[js.Any], supportsExportNamespaceFrom = supportsExportNamespaceFrom.asInstanceOf[js.Any], supportsStaticESM = supportsStaticESM.asInstanceOf[js.Any], supportsTopLevelAwait = supportsTopLevelAwait.asInstanceOf[js.Any])
     __obj.asInstanceOf[InternalModuleOptions]
   }
   
@@ -43,6 +54,12 @@ object InternalModuleOptions {
     def setSupportsDynamicImport(value: Boolean): Self = this.set("supportsDynamicImport", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setSupportsExportNamespaceFrom(value: Boolean): Self = this.set("supportsExportNamespaceFrom", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setSupportsStaticESM(value: Boolean): Self = this.set("supportsStaticESM", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSupportsTopLevelAwait(value: Boolean): Self = this.set("supportsTopLevelAwait", value.asInstanceOf[js.Any])
   }
 }

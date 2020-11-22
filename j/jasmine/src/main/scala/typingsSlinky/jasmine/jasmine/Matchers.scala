@@ -30,7 +30,7 @@ trait Matchers[T]
   /**
     * Expect the actual value to be `===` to the expected value.
     *
-    * @param expected - The expected value to compare against.
+    * @param expected The expected value to compare against.
     * @param expectationFailOutput
     * @example
     * expect(thing).toBe(realThing);
@@ -89,7 +89,7 @@ trait Matchers[T]
   
   /**
     * Expect the actual value to be equal to the expected, using deep equality comparison.
-    * @param expected - Expected value.
+    * @param expected Expected value.
     * @param expectationFailOutput
     * @example
     * expect(bigObject).toEqual({ "foo": ['bar', 'baz'] });
@@ -99,7 +99,9 @@ trait Matchers[T]
   
   def toHaveBeenCalled(): Boolean = js.native
   
-  def toHaveBeenCalledBefore(expected: Spy): Boolean = js.native
+  def toHaveBeenCalledBefore(expected: Func): Boolean = js.native
+  
+  def toHaveBeenCalledOnceWith(params: js.Any*): Boolean = js.native
   
   def toHaveBeenCalledTimes(expected: Double): Boolean = js.native
   
@@ -108,7 +110,7 @@ trait Matchers[T]
   /**
     * Expect the actual value to be a DOM element that has the expected class.
     * @since 3.0.0
-    * @param expected - The class name to test for.
+    * @param expected The class name to test for.
     * @example
     * var el = document.createElement('div');
     * el.className = 'foo bar baz';
@@ -118,8 +120,19 @@ trait Matchers[T]
   def toHaveClass(expected: String, expectationFailOutput: js.Any): Boolean = js.native
   
   /**
+    * Expect the actual size to be equal to the expected, using array-like
+    * length or object keys size.
+    * @since 3.6.0
+    * @param expected The expected size
+    * @example
+    * array = [1,2];
+    * expect(array).toHaveSize(2);
+    */
+  def toHaveSize(expected: Double): Boolean = js.native
+  
+  /**
     * Expect the actual value to match a regular expression.
-    * @param expected - Value to look for in the string.
+    * @param expected Value to look for in the string.
     * @example
     * expect("my string").toMatch(/string$/);
     * expect("other string").toMatch("her");
@@ -145,7 +158,7 @@ trait Matchers[T]
   
   /**
     * Add some context for an expect.
-    * @param message - Additional context to show when the matcher fails
+    * @param message Additional context to show when the matcher fails
     */
   def withContext(message: String): Matchers[T] = js.native
 }

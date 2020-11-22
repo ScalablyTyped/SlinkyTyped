@@ -1,13 +1,14 @@
 package typingsSlinky.grommet.rangeInputMod
 
-import org.scalajs.dom.raw.Element
-import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.grommet.utilsMod.A11yTitleType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait RangeInputProps extends js.Object {
+  
+  var a11yTitle: js.UndefOr[A11yTitleType] = js.native
   
   var id: js.UndefOr[String] = js.native
   
@@ -16,8 +17,6 @@ trait RangeInputProps extends js.Object {
   var min: js.UndefOr[Double | String] = js.native
   
   var name: js.UndefOr[String] = js.native
-  
-  var onChange: js.UndefOr[js.Function1[/* event */ ChangeEvent[Element], Unit]] = js.native
   
   var step: js.UndefOr[Double] = js.native
   
@@ -47,6 +46,12 @@ object RangeInputProps {
     }
     
     @scala.inline
+    def setA11yTitle(value: A11yTitleType): Self = this.set("a11yTitle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteA11yTitle: Self = this.set("a11yTitle", js.undefined)
+    
+    @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -69,12 +74,6 @@ object RangeInputProps {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
-    
-    @scala.inline
-    def setOnChange(value: /* event */ ChangeEvent[Element] => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteOnChange: Self = this.set("onChange", js.undefined)
     
     @scala.inline
     def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])

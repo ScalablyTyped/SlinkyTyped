@@ -27,11 +27,11 @@ class Action protected ()
 @js.native
 object Action extends js.Object {
   
+  def _GetTargetProperty(target: typingsSlinky.babylonjs.nodeMod.Node): Name = js.native
   /**
     * Internal only
     * @hidden
     */
-  def _GetTargetProperty(target: typingsSlinky.babylonjs.nodeMod.Node): Name = js.native
   def _GetTargetProperty(target: typingsSlinky.babylonjs.sceneMod.Scene): Name = js.native
   
   /**

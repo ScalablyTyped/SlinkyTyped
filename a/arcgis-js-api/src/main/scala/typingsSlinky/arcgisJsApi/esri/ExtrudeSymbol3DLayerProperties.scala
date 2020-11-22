@@ -8,11 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ExtrudeSymbol3DLayerProperties extends Symbol3DLayerProperties {
   
   /**
-    * Indicates whether the symbol layer geometry casts shadows in the scene. Setting this property to `false` will disable shadows for the symbol layer even if direct shadows are enabled in [SceneView.environment](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#environment).
+    * Indicates whether the symbol layer geometry casts shadows in the scene.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ExtrudeSymbol3DLayer.html#castShadows)
-    *
-    * @default true
     */
   var castShadows: js.UndefOr[Boolean] = js.native
   
@@ -24,18 +22,16 @@ trait ExtrudeSymbol3DLayerProperties extends Symbol3DLayerProperties {
   var edges: js.UndefOr[Edges3DProperties] = js.native
   
   /**
-    * The material used to shade the extrusion. This property defines the extrusion's color.
+    * The material used to shade the extrusion.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ExtrudeSymbol3DLayer.html#material)
     */
   var material: js.UndefOr[ExtrudeSymbol3DLayerMaterialProperties] = js.native
   
   /**
-    * The height of the extrusion in meters. Negative values will extrude the polygon surface downward towards or below the ground.
+    * The height of the extrusion in meters.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-ExtrudeSymbol3DLayer.html#size)
-    *
-    * @default 1
     */
   var size: js.UndefOr[Double] = js.native
 }

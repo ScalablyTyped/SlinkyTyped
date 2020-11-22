@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EC2ResourceUtilization extends js.Object {
   
   /**
+    *  The EBS field that contains a list of EBS metrics associated with the current instance. 
+    */
+  var EBSResourceUtilization: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.EBSResourceUtilization] = js.native
+  
+  /**
     *  Maximum observed or expected CPU utilization of the instance.
     */
   var MaxCpuUtilizationPercentage: js.UndefOr[GenericString] = js.native
@@ -44,6 +49,12 @@ object EC2ResourceUtilization {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setEBSResourceUtilization(value: EBSResourceUtilization): Self = this.set("EBSResourceUtilization", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEBSResourceUtilization: Self = this.set("EBSResourceUtilization", js.undefined)
     
     @scala.inline
     def setMaxCpuUtilizationPercentage(value: GenericString): Self = this.set("MaxCpuUtilizationPercentage", value.asInstanceOf[js.Any])

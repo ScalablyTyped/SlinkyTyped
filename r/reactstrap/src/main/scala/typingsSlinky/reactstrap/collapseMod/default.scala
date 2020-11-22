@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/Collapse", JSImport.Default)
+@JSImport("reactstrap/es/Collapse", JSImport.Default)
 @js.native
-class default[T] ()
+class default ()
   extends Component[CollapseProps, js.Object, js.Any]

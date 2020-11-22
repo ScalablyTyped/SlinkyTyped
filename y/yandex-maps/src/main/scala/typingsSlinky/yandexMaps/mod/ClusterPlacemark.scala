@@ -33,7 +33,7 @@ class ClusterPlacemark protected () extends Item {
   
   def getBounds(): js.Array[js.Array[Double]] | Null = js.native
   
-  def getGeoObjects(): js.Array[IGeoObject] = js.native
+  def getGeoObjects(): js.Array[IGeoObject[IGeometry]] = js.native
   
   def getOverlay(): js.Promise[IOverlay | Null] = js.native
   

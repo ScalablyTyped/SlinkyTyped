@@ -60,12 +60,22 @@ class Stats () extends js.Object {
   var length: Double = js.native
   
   /**
+    * Maximum value of all data points
+    */
+  var max: Double | Null = js.native
+  
+  /**
     * Median
     * The median is the middle point of the dataset when sorted in ascending order. This is useful if your dataset has a lot of outliers and noise that would not normally be found in a complete population. Use the median() method to get at it:
     * If your data set contains an odd number of points, the median will be the middle point. If it contains an even number of points, then the median will be the arithmetic mean of the two middle points.
     * If your Stats object is configured to use buckets and has store_data set to false, then the median will be an approximation of the actual median.
     */
   def median(): Double = js.native
+  
+  /**
+    * Minimun value of all data points
+    */
+  var min: Double | Null = js.native
   
   /**
     * 95% Confidence Margin of Error
@@ -91,8 +101,8 @@ class Stats () extends js.Object {
   /**
     * Add elements to back
     */
-  def push(args: Double*): Unit = js.native
-  def push(args: js.Array[Double]): Unit = js.native
+  def push(args: Double*): Stats = js.native
+  def push(args: js.Array[Double]): Stats = js.native
   
   /**
     * Range
@@ -118,7 +128,32 @@ class Stats () extends js.Object {
   def stddev(): Double = js.native
   
   /**
+    * Sum of all data points
+    */
+  var sum: Double = js.native
+  
+  /**
+    * Sum of the log values of all data points
+    */
+  var sum_of_logs: Double = js.native
+  
+  /**
+    * Sum of the squares of the log values of all data points
+    */
+  var sum_of_square_of_logs: Double = js.native
+  
+  /**
+    * Sum of the squares of all data points
+    */
+  var sum_of_squares: Double = js.native
+  
+  /**
     * Add elements to front
     */
-  def unshift(args: Double*): Unit = js.native
+  def unshift(args: Double*): Stats = js.native
+  
+  /**
+    * Count of all data points equal to zero
+    */
+  var zeroes: Double = js.native
 }

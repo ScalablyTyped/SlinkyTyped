@@ -15,6 +15,10 @@ trait EditorFindOptions extends js.Object {
   
   val autoFindInSelection: never | always | multiline = js.native
   
+  val cursorMoveOnType: Boolean = js.native
+  
+  val loop: Boolean = js.native
+  
   val seedSearchStringFromSelection: Boolean = js.native
 }
 object EditorFindOptions {
@@ -23,9 +27,11 @@ object EditorFindOptions {
   def apply(
     addExtraSpaceOnTop: Boolean,
     autoFindInSelection: never | always | multiline,
+    cursorMoveOnType: Boolean,
+    loop: Boolean,
     seedSearchStringFromSelection: Boolean
   ): EditorFindOptions = {
-    val __obj = js.Dynamic.literal(addExtraSpaceOnTop = addExtraSpaceOnTop.asInstanceOf[js.Any], autoFindInSelection = autoFindInSelection.asInstanceOf[js.Any], seedSearchStringFromSelection = seedSearchStringFromSelection.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(addExtraSpaceOnTop = addExtraSpaceOnTop.asInstanceOf[js.Any], autoFindInSelection = autoFindInSelection.asInstanceOf[js.Any], cursorMoveOnType = cursorMoveOnType.asInstanceOf[js.Any], loop = loop.asInstanceOf[js.Any], seedSearchStringFromSelection = seedSearchStringFromSelection.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorFindOptions]
   }
   
@@ -49,6 +55,12 @@ object EditorFindOptions {
     
     @scala.inline
     def setAutoFindInSelection(value: never | always | multiline): Self = this.set("autoFindInSelection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCursorMoveOnType(value: Boolean): Self = this.set("cursorMoveOnType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLoop(value: Boolean): Self = this.set("loop", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSeedSearchStringFromSelection(value: Boolean): Self = this.set("seedSearchStringFromSelection", value.asInstanceOf[js.Any])

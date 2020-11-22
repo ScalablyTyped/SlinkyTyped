@@ -2,7 +2,7 @@ package typingsSlinky.octokitTypes.endpointsMod
 
 import typingsSlinky.octokitTypes.anon.Avatarurl
 import typingsSlinky.octokitTypes.anon.ShaUrl
-import typingsSlinky.octokitTypes.anon.Tree
+import typingsSlinky.octokitTypes.anon.Verification
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +14,7 @@ trait ReposMergeResponseData extends js.Object {
   
   var comments_url: String = js.native
   
-  var commit: Tree = js.native
+  var commit: Verification = js.native
   
   var committer: Avatarurl = js.native
   
@@ -34,7 +34,7 @@ object ReposMergeResponseData {
   def apply(
     author: Avatarurl,
     comments_url: String,
-    commit: Tree,
+    commit: Verification,
     committer: Avatarurl,
     html_url: String,
     node_id: String,
@@ -68,7 +68,7 @@ object ReposMergeResponseData {
     def setComments_url(value: String): Self = this.set("comments_url", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCommit(value: Tree): Self = this.set("commit", value.asInstanceOf[js.Any])
+    def setCommit(value: Verification): Self = this.set("commit", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCommitter(value: Avatarurl): Self = this.set("committer", value.asInstanceOf[js.Any])

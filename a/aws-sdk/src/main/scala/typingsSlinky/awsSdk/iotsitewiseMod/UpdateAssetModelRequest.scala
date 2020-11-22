@@ -13,7 +13,7 @@ trait UpdateAssetModelRequest extends js.Object {
   var assetModelDescription: js.UndefOr[Description] = js.native
   
   /**
-    * The updated hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. For more information, see Asset Hierarchies in the AWS IoT SiteWise User Guide. You can specify up to 10 hierarchies per asset model. For more information, see Quotas in the AWS IoT SiteWise User Guide.
+    * The updated hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. For more information, see Asset hierarchies in the AWS IoT SiteWise User Guide. You can specify up to 10 hierarchies per asset model. For more information, see Quotas in the AWS IoT SiteWise User Guide.
     */
   var assetModelHierarchies: js.UndefOr[AssetModelHierarchies] = js.native
   
@@ -28,7 +28,7 @@ trait UpdateAssetModelRequest extends js.Object {
   var assetModelName: Name = js.native
   
   /**
-    * The updated property definitions of the asset model. For more information, see Asset Properties in the AWS IoT SiteWise User Guide. You can specify up to 200 properties per asset model. For more information, see Quotas in the AWS IoT SiteWise User Guide.
+    * The updated property definitions of the asset model. For more information, see Asset properties in the AWS IoT SiteWise User Guide. You can specify up to 200 properties per asset model. For more information, see Quotas in the AWS IoT SiteWise User Guide.
     */
   var assetModelProperties: js.UndefOr[AssetModelProperties] = js.native
   

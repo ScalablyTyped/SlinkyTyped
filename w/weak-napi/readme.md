@@ -1,7 +1,7 @@
 
 # Scala.js typings for weak-napi
 
-Typings are for version 1.0
+Typings are for version 2.0
 
 ## Library description:
 Make weak references to JavaScript Objects.

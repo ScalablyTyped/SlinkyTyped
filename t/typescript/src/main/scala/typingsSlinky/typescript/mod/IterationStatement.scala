@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IterationStatement extends Statement {
   
-  var statement: Statement = js.native
+  val statement: Statement = js.native
 }

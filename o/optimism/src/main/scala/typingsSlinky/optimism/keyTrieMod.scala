@@ -1,5 +1,6 @@
 package typingsSlinky.optimism
 
+import typingsSlinky.std.IArguments
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,7 +22,7 @@ object keyTrieMod extends js.Object {
       /* import warning: parser.TsParser#functionParam Dropping repeated marker of param array because its type T is not an array type */ array: T
     ): K = js.native
     
-    def lookupArray[T /* <: js.Array[_] */](array: T): K = js.native
+    def lookupArray[T /* <: IArguments | js.Array[_] */](array: T): K = js.native
     
     var makeData: js.Any = js.native
     

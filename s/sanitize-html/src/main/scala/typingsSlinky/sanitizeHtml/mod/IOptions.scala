@@ -1,11 +1,12 @@
 package typingsSlinky.sanitizeHtml.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.htmlparser2.parserMod.ParserOptions
+import typingsSlinky.htmlparser2.mod.ParserOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// tslint:disable-next-line:interface-name
 @js.native
 trait IOptions extends js.Object {
   
@@ -13,9 +14,13 @@ trait IOptions extends js.Object {
   
   var allowProtocolRelative: js.UndefOr[Boolean] = js.native
   
+  var allowVulnerableTags: js.UndefOr[Boolean] = js.native
+  
   var allowedAttributes: js.UndefOr[StringDictionary[js.Array[AllowedAttribute]] | Boolean] = js.native
   
   var allowedClasses: js.UndefOr[StringDictionary[js.Array[String] | Boolean]] = js.native
+  
+  var allowedIframeDomains: js.UndefOr[js.Array[String]] = js.native
   
   var allowedIframeHostnames: js.UndefOr[js.Array[String]] = js.native
   
@@ -87,6 +92,12 @@ object IOptions {
     def deleteAllowProtocolRelative: Self = this.set("allowProtocolRelative", js.undefined)
     
     @scala.inline
+    def setAllowVulnerableTags(value: Boolean): Self = this.set("allowVulnerableTags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowVulnerableTags: Self = this.set("allowVulnerableTags", js.undefined)
+    
+    @scala.inline
     def setAllowedAttributes(value: StringDictionary[js.Array[AllowedAttribute]] | Boolean): Self = this.set("allowedAttributes", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -97,6 +108,15 @@ object IOptions {
     
     @scala.inline
     def deleteAllowedClasses: Self = this.set("allowedClasses", js.undefined)
+    
+    @scala.inline
+    def setAllowedIframeDomainsVarargs(value: String*): Self = this.set("allowedIframeDomains", js.Array(value :_*))
+    
+    @scala.inline
+    def setAllowedIframeDomains(value: js.Array[String]): Self = this.set("allowedIframeDomains", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowedIframeDomains: Self = this.set("allowedIframeDomains", js.undefined)
     
     @scala.inline
     def setAllowedIframeHostnamesVarargs(value: String*): Self = this.set("allowedIframeHostnames", js.Array(value :_*))

@@ -18,8 +18,13 @@ import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.antd.antdBooleans.`false`
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -57,15 +62,15 @@ import typingsSlinky.antd.antdStrings.search
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.tel
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
-import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.antd.useFormMod.FormInstance
 import typingsSlinky.rcFieldForm.formMod.RenderProps
 import typingsSlinky.rcFieldForm.interfaceMod.FieldData
@@ -94,9 +99,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined parent std.Omit<rc-field-form.rc-field-form/es/Form.FormProps, 'form'> */
+/* Inlined parent std.Omit<rc-field-form.rc-field-form/es/Form.FormProps<Values>, 'form'> */
 @js.native
-trait FormProps extends js.Object {
+trait FormProps[Values] extends js.Object {
   
   var about: js.UndefOr[String] = js.native
   
@@ -176,7 +181,9 @@ trait FormProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -240,10 +247,11 @@ trait FormProps extends js.Object {
   
   var fields: js.UndefOr[js.Array[FieldData]] = js.native
   
-  var form: js.UndefOr[FormInstance] = js.native
+  var form: js.UndefOr[FormInstance[Values]] = js.native
   
   var hidden: js.UndefOr[Boolean] = js.native
   
+  /** @deprecated Will warning in future branch. Pls use `requiredMark` instead. */
   var hideRequiredMark: js.UndefOr[Boolean] = js.native
   
   var id: js.UndefOr[String] = js.native
@@ -252,7 +260,7 @@ trait FormProps extends js.Object {
   
   var inlist: js.UndefOr[js.Any] = js.native
   
-  var inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
+  var inputMode: js.UndefOr[none | text_ | tel | url | email | numeric | decimal | search] = js.native
   
   var is: js.UndefOr[String] = js.native
   
@@ -346,9 +354,9 @@ trait FormProps extends js.Object {
     js.Function2[/* changedFields */ js.Array[FieldData], /* allFields */ js.Array[FieldData], Unit]
   ] = js.native
   
-  var onFinish: js.UndefOr[js.Function1[/* values */ Store, Unit]] = js.native
+  var onFinish: js.UndefOr[js.Function1[/* values */ Values, Unit]] = js.native
   
-  var onFinishFailed: js.UndefOr[js.Function1[/* errorInfo */ ValidateErrorEntity, Unit]] = js.native
+  var onFinishFailed: js.UndefOr[js.Function1[/* errorInfo */ ValidateErrorEntity[Values], Unit]] = js.native
   
   var onFocus: js.UndefOr[FocusEventHandler[HTMLFormElement]] = js.native
   
@@ -438,7 +446,7 @@ trait FormProps extends js.Object {
   
   var onTransitionEnd: js.UndefOr[TransitionEventHandler[HTMLFormElement]] = js.native
   
-  var onValuesChange: js.UndefOr[js.Function2[/* changedValues */ Store, /* values */ Store, Unit]] = js.native
+  var onValuesChange: js.UndefOr[js.Function2[/* changedValues */ js.Any, /* values */ Values, Unit]] = js.native
   
   var onVolumeChange: js.UndefOr[ReactEventHandler[HTMLFormElement]] = js.native
   
@@ -457,6 +465,8 @@ trait FormProps extends js.Object {
   var property: js.UndefOr[String] = js.native
   
   var radioGroup: js.UndefOr[String] = js.native
+  
+  var requiredMark: js.UndefOr[RequiredMark] = js.native
   
   var resource: js.UndefOr[String] = js.native
   
@@ -503,13 +513,13 @@ trait FormProps extends js.Object {
 object FormProps {
   
   @scala.inline
-  def apply(): FormProps = {
+  def apply[Values](): FormProps[Values] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[FormProps]
+    __obj.asInstanceOf[FormProps[Values]]
   }
   
   @scala.inline
-  implicit class FormPropsOps[Self <: FormProps] (val x: Self) extends AnyVal {
+  implicit class FormPropsOps[Self <: FormProps[_], Values] (val x: Self with FormProps[Values]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -758,7 +768,9 @@ object FormProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -864,7 +876,7 @@ object FormProps {
     
     @scala.inline
     def setChildrenFunction2(
-      value: (/* values */ Store, /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance) => ReactElement
+      value: (/* values */ Store, /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance[js.Any]) => ReactElement
     ): Self = this.set("children", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -970,7 +982,7 @@ object FormProps {
     def deleteFields: Self = this.set("fields", js.undefined)
     
     @scala.inline
-    def setForm(value: FormInstance): Self = this.set("form", value.asInstanceOf[js.Any])
+    def setForm(value: FormInstance[Values]): Self = this.set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteForm: Self = this.set("form", js.undefined)
@@ -1006,7 +1018,7 @@ object FormProps {
     def deleteInlist: Self = this.set("inlist", js.undefined)
     
     @scala.inline
-    def setInputMode(value: none | text | tel | url | email | numeric | decimal | search): Self = this.set("inputMode", value.asInstanceOf[js.Any])
+    def setInputMode(value: none | text_ | tel | url | email | numeric | decimal | search): Self = this.set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInputMode: Self = this.set("inputMode", js.undefined)
@@ -1282,13 +1294,13 @@ object FormProps {
     def deleteOnFieldsChange: Self = this.set("onFieldsChange", js.undefined)
     
     @scala.inline
-    def setOnFinish(value: /* values */ Store => Unit): Self = this.set("onFinish", js.Any.fromFunction1(value))
+    def setOnFinish(value: /* values */ Values => Unit): Self = this.set("onFinish", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnFinish: Self = this.set("onFinish", js.undefined)
     
     @scala.inline
-    def setOnFinishFailed(value: /* errorInfo */ ValidateErrorEntity => Unit): Self = this.set("onFinishFailed", js.Any.fromFunction1(value))
+    def setOnFinishFailed(value: /* errorInfo */ ValidateErrorEntity[Values] => Unit): Self = this.set("onFinishFailed", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnFinishFailed: Self = this.set("onFinishFailed", js.undefined)
@@ -1558,7 +1570,7 @@ object FormProps {
     def deleteOnTransitionEnd: Self = this.set("onTransitionEnd", js.undefined)
     
     @scala.inline
-    def setOnValuesChange(value: (/* changedValues */ Store, /* values */ Store) => Unit): Self = this.set("onValuesChange", js.Any.fromFunction2(value))
+    def setOnValuesChange(value: (/* changedValues */ js.Any, /* values */ Values) => Unit): Self = this.set("onValuesChange", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnValuesChange: Self = this.set("onValuesChange", js.undefined)
@@ -1616,6 +1628,12 @@ object FormProps {
     
     @scala.inline
     def deleteRadioGroup: Self = this.set("radioGroup", js.undefined)
+    
+    @scala.inline
+    def setRequiredMark(value: RequiredMark): Self = this.set("requiredMark", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequiredMark: Self = this.set("requiredMark", js.undefined)
     
     @scala.inline
     def setResource(value: String): Self = this.set("resource", value.asInstanceOf[js.Any])

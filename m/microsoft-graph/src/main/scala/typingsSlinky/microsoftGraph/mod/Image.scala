@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Image extends js.Object {
   
   // Optional. Height of the image, in pixels. Read-only.
-  var height: js.UndefOr[Double] = js.native
+  var height: js.UndefOr[NullableOption[Double]] = js.native
   
   // Optional. Width of the image, in pixels. Read-only.
-  var width: js.UndefOr[Double] = js.native
+  var width: js.UndefOr[NullableOption[Double]] = js.native
 }
 object Image {
   
@@ -37,15 +37,21 @@ object Image {
     }
     
     @scala.inline
-    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
+    def setHeight(value: NullableOption[Double]): Self = this.set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
-    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
+    def setHeightNull: Self = this.set("height", null)
+    
+    @scala.inline
+    def setWidth(value: NullableOption[Double]): Self = this.set("width", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWidth: Self = this.set("width", js.undefined)
+    
+    @scala.inline
+    def setWidthNull: Self = this.set("width", null)
   }
 }

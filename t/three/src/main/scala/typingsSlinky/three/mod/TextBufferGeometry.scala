@@ -1,6 +1,6 @@
 package typingsSlinky.three.mod
 
-import typingsSlinky.three.textGeometryMod.TextGeometryParameters
+import typingsSlinky.three.textBufferGeometryMod.TextGeometryParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

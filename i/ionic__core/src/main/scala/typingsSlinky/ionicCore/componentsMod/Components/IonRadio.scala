@@ -30,6 +30,10 @@ trait IonRadio extends js.Object {
     */
   var name: String = js.native
   
+  def setButtonTabindex(value: Double): js.Promise[Unit] = js.native
+  
+  def setFocus(): js.Promise[Unit] = js.native
+  
   /**
     * the value of the radio.
     */
@@ -38,8 +42,13 @@ trait IonRadio extends js.Object {
 object IonRadio {
   
   @scala.inline
-  def apply(disabled: Boolean, name: String): IonRadio = {
-    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(
+    disabled: Boolean,
+    name: String,
+    setButtonTabindex: Double => js.Promise[Unit],
+    setFocus: () => js.Promise[Unit]
+  ): IonRadio = {
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], setButtonTabindex = js.Any.fromFunction1(setButtonTabindex), setFocus = js.Any.fromFunction0(setFocus))
     __obj.asInstanceOf[IonRadio]
   }
   
@@ -63,6 +72,12 @@ object IonRadio {
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSetButtonTabindex(value: Double => js.Promise[Unit]): Self = this.set("setButtonTabindex", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setSetFocus(value: () => js.Promise[Unit]): Self = this.set("setFocus", js.Any.fromFunction0(value))
     
     @scala.inline
     def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])

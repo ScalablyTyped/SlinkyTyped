@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CellRange extends js.Object {
   
-  /** @name CellRange.from */
+  /**
+    * [descr:CellRange.from]
+    */
   var from: js.UndefOr[CellAddress] = js.native
   
-  /** @name CellRange.to */
+  /**
+    * [descr:CellRange.to]
+    */
   var to: js.UndefOr[CellAddress] = js.native
 }
 object CellRange {

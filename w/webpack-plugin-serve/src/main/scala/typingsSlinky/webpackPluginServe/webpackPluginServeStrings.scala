@@ -19,6 +19,9 @@ object webpackPluginServeStrings {
   def minimal: minimal = "minimal".asInstanceOf[minimal]
   
   @scala.inline
+  def `refresh-on-failure`: `refresh-on-failure` = "refresh-on-failure".asInstanceOf[`refresh-on-failure`]
+  
+  @scala.inline
   def trace: trace = "trace".asInstanceOf[trace]
   
   @scala.inline
@@ -35,6 +38,9 @@ object webpackPluginServeStrings {
   
   @js.native
   sealed trait minimal extends js.Object
+  
+  @js.native
+  sealed trait `refresh-on-failure` extends js.Object
   
   @js.native
   sealed trait trace extends js.Object

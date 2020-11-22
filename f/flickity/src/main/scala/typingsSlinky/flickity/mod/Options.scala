@@ -158,6 +158,11 @@ trait Options extends js.Object {
   var pageDots: js.UndefOr[Boolean] = js.native
   
   /**
+    * Auto-playing will pause when the user hovers over the carousel. Set pauseAutoPlayOnHover: false to disable this behavior.
+    */
+  var pauseAutoPlayOnHover: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Sets positioning in percent values, rather than pixel values. If your cells do not have percent widths, we recommended percentPosition: false.
     *
     * default: false
@@ -365,6 +370,12 @@ object Options {
     
     @scala.inline
     def deletePageDots: Self = this.set("pageDots", js.undefined)
+    
+    @scala.inline
+    def setPauseAutoPlayOnHover(value: Boolean): Self = this.set("pauseAutoPlayOnHover", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePauseAutoPlayOnHover: Self = this.set("pauseAutoPlayOnHover", js.undefined)
     
     @scala.inline
     def setPercentPosition(value: Boolean): Self = this.set("percentPosition", value.asInstanceOf[js.Any])

@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("react-native", "Animated.Value")
 @js.native
 class Value protected ()
-  extends typingsSlinky.reactNative.mod.Animated.Animated {
+  extends typingsSlinky.reactNative.mod.Animated.Animated
+     with _WithAnimatedValue[js.Any] {
   def this(value: Double) = this()
   
   /**

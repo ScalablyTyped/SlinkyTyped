@@ -19,6 +19,8 @@ trait HDRCubeTexture extends BaseTexture {
   
   var _onLoad: js.Any = js.native
   
+  var _prefilterOnLoad: js.Any = js.native
+  
   var _rotationY: Double = js.native
   
   var _size: js.Any = js.native
@@ -39,12 +41,6 @@ trait HDRCubeTexture extends BaseTexture {
     * @example https://www.babylonjs-playground.com/#RNASML
     */
   def boundingBoxSize_=(value: Vector3): Unit = js.native
-  
-  /**
-    * The texture coordinates mode. As this texture is stored in a cube format, please modify carefully.
-    */
-  @JSName("coordinatesMode")
-  var coordinatesMode_FHDRCubeTexture: Double = js.native
   
   /**
     * Sets wether or not the texture is blocking during loading.

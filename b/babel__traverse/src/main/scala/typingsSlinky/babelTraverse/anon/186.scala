@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.FunctionExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.EnumDefaultedMember
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `186` extends js.Object {
   
-  var `type`: FunctionExpression = js.native
+  var `type`: EnumDefaultedMember = js.native
 }
 object `186` {
   
   @scala.inline
-  def apply(`type`: FunctionExpression): `186` = {
+  def apply(`type`: EnumDefaultedMember): `186` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`186`]
@@ -35,6 +35,6 @@ object `186` {
     }
     
     @scala.inline
-    def setType(value: FunctionExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: EnumDefaultedMember): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

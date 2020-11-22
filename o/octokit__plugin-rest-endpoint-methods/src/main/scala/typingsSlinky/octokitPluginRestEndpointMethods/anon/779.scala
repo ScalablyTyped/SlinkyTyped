@@ -3,7 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.OrgsBlockUserEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.MigrationsStartForAuthenticatedUserEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.MigrationsStartForAuthenticatedUserResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -14,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `779` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[OrgsBlockUserEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[MigrationsStartForAuthenticatedUserEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[_] = js.native
+  var response: OctokitResponse[MigrationsStartForAuthenticatedUserResponseData] = js.native
 }
 object `779` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[OrgsBlockUserEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[_]
+    parameters: RequestParameters with (Omit[MigrationsStartForAuthenticatedUserEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[MigrationsStartForAuthenticatedUserResponseData]
   ): `779` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`779`]
@@ -45,9 +46,11 @@ object `779` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[OrgsBlockUserEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(
+      value: RequestParameters with (Omit[MigrationsStartForAuthenticatedUserEndpoint, baseUrl | headers | mediaType])
+    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[MigrationsStartForAuthenticatedUserResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

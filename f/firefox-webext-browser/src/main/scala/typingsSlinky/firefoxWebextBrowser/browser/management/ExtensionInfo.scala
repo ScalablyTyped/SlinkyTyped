@@ -24,10 +24,7 @@ trait ExtensionInfo extends js.Object {
   var hostPermissions: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * A list of icon information. Note that this just reflects what was declared in the manifest, and the actual
-    * image at that url may be larger or smaller than what was declared, so you might consider using explicit
-    * width and height attributes on img tags referencing these images. See the manifest documentation on icons
-    * for more details.
+    * A list of icon information. Note that this just reflects what was declared in the manifest, and the actual image at that url may be larger or smaller than what was declared, so you might consider using explicit width and height attributes on img tags referencing these images. See the manifest documentation on icons for more details.
     */
   var icons: js.UndefOr[js.Array[IconInfo]] = js.native
   

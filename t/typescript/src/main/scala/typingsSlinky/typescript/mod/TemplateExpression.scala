@@ -9,10 +9,10 @@ trait TemplateExpression
   extends PrimaryExpression
      with TemplateLiteral {
   
-  var head: TemplateHead = js.native
+  val head: TemplateHead = js.native
   
   @JSName("kind")
-  var kind_TemplateExpression: typingsSlinky.typescript.mod.SyntaxKind.TemplateExpression = js.native
+  val kind_TemplateExpression: typingsSlinky.typescript.mod.SyntaxKind.TemplateExpression = js.native
   
-  var templateSpans: NodeArray[TemplateSpan] = js.native
+  val templateSpans: NodeArray[TemplateSpan] = js.native
 }

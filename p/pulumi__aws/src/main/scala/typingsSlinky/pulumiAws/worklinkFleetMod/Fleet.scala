@@ -32,7 +32,7 @@ class Fleet protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
-    * The ARN of the Amazon Kinesis data stream that receives the audit events.
+    * The ARN of the Amazon Kinesis data stream that receives the audit events. Kinesis data stream name must begin with `"AmazonWorkLink-"`.
     */
   val auditStreamArn: Output_[js.UndefOr[String]] = js.native
   

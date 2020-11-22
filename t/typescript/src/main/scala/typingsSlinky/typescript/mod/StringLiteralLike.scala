@@ -8,4 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.typescript.mod.StringLiteral
   - typingsSlinky.typescript.mod.NoSubstitutionTemplateLiteral
 */
-trait StringLiteralLike extends DeclarationName
+trait StringLiteralLike
+  extends DeclarationName
+     with PropertyNameLiteral

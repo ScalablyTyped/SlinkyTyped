@@ -10,6 +10,27 @@ package object cloudwatcheventsMod {
   
   type Action = java.lang.String
   
+  type ArchiveArn = java.lang.String
+  
+  type ArchiveDescription = java.lang.String
+  
+  type ArchiveName = java.lang.String
+  
+  type ArchiveResponseList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.Archive]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ENABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
+    - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATE_FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.UPDATE_FAILED
+    - java.lang.String
+  */
+  type ArchiveState = typingsSlinky.awsSdk.cloudwatcheventsMod._ArchiveState | java.lang.String
+  
+  type ArchiveStateReason = java.lang.String
+  
   type Arn = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
@@ -23,6 +44,12 @@ package object cloudwatcheventsMod {
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.cloudwatcheventsMod.ClientApiVersions
   
+  type CreatedBy = java.lang.String
+  
+  type Database = java.lang.String
+  
+  type DbUser = java.lang.String
+  
   type ErrorCode = java.lang.String
   
   type ErrorMessage = java.lang.String
@@ -30,6 +57,8 @@ package object cloudwatcheventsMod {
   type EventBusList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.EventBus]
   
   type EventBusName = java.lang.String
+  
+  type EventBusNameOrArn = java.lang.String
   
   type EventId = java.lang.String
   
@@ -76,13 +105,21 @@ package object cloudwatcheventsMod {
   
   type LimitMin1 = scala.Double
   
+  type Long = scala.Double
+  
   type ManagedBy = java.lang.String
+  
+  type MaximumEventAgeInSeconds = scala.Double
+  
+  type MaximumRetryAttempts = scala.Double
   
   type MessageGroupId = java.lang.String
   
   type NextToken = java.lang.String
   
   type NonPartnerEventBusName = java.lang.String
+  
+  type NonPartnerEventBusNameOrArn = java.lang.String
   
   type PartnerEventSourceAccountList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.PartnerEventSourceAccount]
   
@@ -112,7 +149,36 @@ package object cloudwatcheventsMod {
   
   type QueryStringValue = java.lang.String
   
+  type RedshiftSecretManagerArn = java.lang.String
+  
   type RemoveTargetsResultEntryList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.RemoveTargetsResultEntry]
+  
+  type ReplayArn = java.lang.String
+  
+  type ReplayDescription = java.lang.String
+  
+  type ReplayDestinationFilters = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.Arn]
+  
+  type ReplayList = js.Array[typingsSlinky.awsSdk.cloudwatcheventsMod.Replay]
+  
+  type ReplayName = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.STARTING
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.CANCELLING
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED
+    - typingsSlinky.awsSdk.awsSdkStrings.CANCELLED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - java.lang.String
+  */
+  type ReplayState = typingsSlinky.awsSdk.cloudwatcheventsMod._ReplayState | java.lang.String
+  
+  type ReplayStateReason = java.lang.String
+  
+  type ResourceArn = java.lang.String
+  
+  type RetentionDays = scala.Double
   
   type RoleArn = java.lang.String
   
@@ -143,7 +209,11 @@ package object cloudwatcheventsMod {
   
   type ScheduleExpression = java.lang.String
   
+  type Sql = java.lang.String
+  
   type StatementId = java.lang.String
+  
+  type StatementName = java.lang.String
   
   type String = java.lang.String
   

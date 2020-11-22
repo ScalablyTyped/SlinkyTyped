@@ -20,9 +20,6 @@ object forkTsCheckerWebpackPluginStrings {
   def Dottsx: Dottsx = ".tsx".asInstanceOf[Dottsx]
   
   @scala.inline
-  def all: all = "all".asInstanceOf[all]
-  
-  @scala.inline
   def basic: basic = "basic".asInstanceOf[basic]
   
   @scala.inline
@@ -35,16 +32,25 @@ object forkTsCheckerWebpackPluginStrings {
   def console: console = "console".asInstanceOf[console]
   
   @scala.inline
+  def dts: dts = "dts".asInstanceOf[dts]
+  
+  @scala.inline
   def error: error = "error".asInstanceOf[error]
   
   @scala.inline
   def info: info = "info".asInstanceOf[info]
   
   @scala.inline
+  def js_ : js_ = "js".asInstanceOf[js_]
+  
+  @scala.inline
   def line: line = "line".asInstanceOf[line]
   
   @scala.inline
   def log: log = "log".asInstanceOf[log]
+  
+  @scala.inline
+  def quit: quit = "quit".asInstanceOf[quit]
   
   @scala.inline
   def readonly: readonly = "readonly".asInstanceOf[readonly]
@@ -65,9 +71,6 @@ object forkTsCheckerWebpackPluginStrings {
   def warning: warning = "warning".asInstanceOf[warning]
   
   @scala.inline
-  def webpack: webpack = "webpack".asInstanceOf[webpack]
-  
-  @scala.inline
   def `webpack-infrastructure`: `webpack-infrastructure` = "webpack-infrastructure".asInstanceOf[`webpack-infrastructure`]
   
   @scala.inline
@@ -86,9 +89,6 @@ object forkTsCheckerWebpackPluginStrings {
   sealed trait Dottsx extends js.Object
   
   @js.native
-  sealed trait all extends js.Object
-  
-  @js.native
   sealed trait basic extends js.Object
   
   @js.native
@@ -101,6 +101,9 @@ object forkTsCheckerWebpackPluginStrings {
   sealed trait console extends LoggerType
   
   @js.native
+  sealed trait dts extends js.Object
+  
+  @js.native
   sealed trait error
     extends IssueSeverity
        with LoggerMethods
@@ -109,10 +112,16 @@ object forkTsCheckerWebpackPluginStrings {
   sealed trait info extends LoggerMethods
   
   @js.native
+  sealed trait js_ extends js.Object
+  
+  @js.native
   sealed trait line extends js.Object
   
   @js.native
   sealed trait log extends LoggerMethods
+  
+  @js.native
+  sealed trait quit extends js.Object
   
   @js.native
   sealed trait readonly extends FileSystemMode
@@ -131,9 +140,6 @@ object forkTsCheckerWebpackPluginStrings {
   
   @js.native
   sealed trait warning extends IssueSeverity
-  
-  @js.native
-  sealed trait webpack extends js.Object
   
   @js.native
   sealed trait `webpack-infrastructure` extends LoggerType

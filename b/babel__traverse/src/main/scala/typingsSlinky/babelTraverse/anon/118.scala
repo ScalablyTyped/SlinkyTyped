@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ImportAttribute
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSExternalModuleReference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `118` extends js.Object {
   
-  var `type`: ImportAttribute = js.native
+  var `type`: TSExternalModuleReference = js.native
 }
 object `118` {
   
   @scala.inline
-  def apply(`type`: ImportAttribute): `118` = {
+  def apply(`type`: TSExternalModuleReference): `118` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`118`]
@@ -35,6 +35,6 @@ object `118` {
     }
     
     @scala.inline
-    def setType(value: ImportAttribute): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSExternalModuleReference): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

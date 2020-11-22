@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxGalleryItem extends CollectionWidgetItem {
   
-  /** @name dxGalleryItem.imageAlt */
+  /**
+    * [descr:dxGalleryItem.imageAlt]
+    */
   var imageAlt: js.UndefOr[String] = js.native
   
-  /** @name dxGalleryItem.imageSrc */
+  /**
+    * [descr:dxGalleryItem.imageSrc]
+    */
   var imageSrc: js.UndefOr[String] = js.native
 }
 object dxGalleryItem {

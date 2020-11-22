@@ -1,5 +1,6 @@
 package typingsSlinky.screeps.anon
 
+import typingsSlinky.screeps.FindClosestByPathAlgorithm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Algorithm extends js.Object {
   
-  var algorithm: js.UndefOr[String] = js.native
+  var algorithm: js.UndefOr[FindClosestByPathAlgorithm] = js.native
 }
 object Algorithm {
   
@@ -33,7 +34,7 @@ object Algorithm {
     }
     
     @scala.inline
-    def setAlgorithm(value: String): Self = this.set("algorithm", value.asInstanceOf[js.Any])
+    def setAlgorithm(value: FindClosestByPathAlgorithm): Self = this.set("algorithm", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAlgorithm: Self = this.set("algorithm", js.undefined)

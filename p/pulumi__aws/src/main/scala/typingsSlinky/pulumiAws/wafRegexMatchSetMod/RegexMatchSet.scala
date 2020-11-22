@@ -36,8 +36,7 @@ class RegexMatchSet protected () extends CustomResource {
   val name: Output_[String] = js.native
   
   /**
-    * The regular expression pattern that you want AWS WAF to search for in web requests,
-    * the location in requests that you want AWS WAF to search, and other settings. See below.
+    * The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
     */
   val regexMatchTuples: Output_[js.UndefOr[js.Array[RegexMatchSetRegexMatchTuple]]] = js.native
 }

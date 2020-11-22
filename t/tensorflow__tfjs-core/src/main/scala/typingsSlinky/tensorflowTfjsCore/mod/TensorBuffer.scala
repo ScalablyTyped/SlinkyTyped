@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@tensorflow/tfjs-core", "TensorBuffer")
 @js.native
 class TensorBuffer[R /* <: typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank */, D /* <: DataType */] protected ()
-  extends typingsSlinky.tensorflowTfjsCore.tensorMod.TensorBuffer[R, D] {
+  extends typingsSlinky.tensorflowTfjsCore.baseMod.TensorBuffer[R, D] {
   def this(
     shape: /* import warning: importer.ImportType#apply Failed type conversion: @tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/types.ShapeMap[R] */ js.Any,
     dtype: D

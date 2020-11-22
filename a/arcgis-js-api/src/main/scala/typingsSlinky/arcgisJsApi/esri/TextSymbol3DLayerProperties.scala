@@ -29,16 +29,14 @@ trait TextSymbol3DLayerProperties extends Symbol3DLayerProperties {
   var material: js.UndefOr[TextSymbol3DLayerMaterialProperties] = js.native
   
   /**
-    * Size of the text label in points. This value may be autocast with a string expressing size in points or pixels (e.g. `12px`). When set, this property overrides the [font.size](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-Font.html#size) property.
+    * Size of the text label in points.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-TextSymbol3DLayer.html#size)
-    *
-    * @default 9
     */
   var size: js.UndefOr[Double | String] = js.native
   
   /**
-    * The text to be displayed. To manually create a new line, use the `\n` escape character.
+    * The text to be displayed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-TextSymbol3DLayer.html#text)
     */

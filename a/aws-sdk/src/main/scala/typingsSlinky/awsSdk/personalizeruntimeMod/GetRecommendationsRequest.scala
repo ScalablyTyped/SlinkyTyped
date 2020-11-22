@@ -18,9 +18,14 @@ trait GetRecommendationsRequest extends js.Object {
   var context: js.UndefOr[Context] = js.native
   
   /**
-    * The ARN of the filter to apply to the returned recommendations. For more information, see Using Filters with Amazon Personalize. When using this parameter, be sure the filter resource is ACTIVE.
+    * The ARN of the filter to apply to the returned recommendations. For more information, see Filtering Recommendations. When using this parameter, be sure the filter resource is ACTIVE.
     */
   var filterArn: js.UndefOr[Arn] = js.native
+  
+  /**
+    * The values to use when filtering recommendations. For each placeholder parameter in your filter expression, provide the parameter name (in matching case) as a key and the filter value(s) as the corresponding value. Separate multiple values for one parameter with a comma.  For filter expressions that use an INCLUDE element to include items, you must provide values for all parameters that are defined in the expression. For filters with expressions that use an EXCLUDE element to exclude items, you can omit the filter-values.In this case, Amazon Personalize doesn't use that portion of the expression to filter recommendations. For more information, see Filtering Recommendations.
+    */
+  var filterValues: js.UndefOr[FilterValues] = js.native
   
   /**
     * The item ID to provide recommendations for. Required for RELATED_ITEMS recipe type.
@@ -74,6 +79,12 @@ object GetRecommendationsRequest {
     
     @scala.inline
     def deleteFilterArn: Self = this.set("filterArn", js.undefined)
+    
+    @scala.inline
+    def setFilterValues(value: FilterValues): Self = this.set("filterValues", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFilterValues: Self = this.set("filterValues", js.undefined)
     
     @scala.inline
     def setItemId(value: ItemID): Self = this.set("itemId", value.asInstanceOf[js.Any])

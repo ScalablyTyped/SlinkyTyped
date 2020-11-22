@@ -1,7 +1,7 @@
 package typingsSlinky.expressXmlBodyparser
 
 import typingsSlinky.express.mod.Handler
-import typingsSlinky.xml2js.mod.Options
+import typingsSlinky.xml2js.mod.ParserOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object mod extends js.Object {
   
   def apply(): Handler = js.native
-  def apply(options: Options): Handler = js.native
+  def apply(options: ParserOptions): Handler = js.native
   
   // @deprecated Will be removed in future versions
   var regexp: js.RegExp = js.native

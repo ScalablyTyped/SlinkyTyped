@@ -1,7 +1,7 @@
 
 # Scala.js typings for d3-array
 
-Typings are for version 2.0
+Typings are for version 2.8
 
 ## Library description:
 Array manipulation, ordering, searching, summarizing, etc.

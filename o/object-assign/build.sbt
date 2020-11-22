@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "object-assign"
-version := "4.0.1-dt-20200515Z-9d85f4"
+version := "4.0.1-dt-20201002Z-9d85f4"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

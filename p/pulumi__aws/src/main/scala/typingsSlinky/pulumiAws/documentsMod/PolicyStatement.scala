@@ -11,7 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PolicyStatement extends js.Object {
   
   /**
-    * Include a list of actions that the policy allows or denies.
+    * Include a list of actions that the policy allows or denies. Required (either Action or NotAction)
+    * Reference: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_action.html
     */
   var Action: js.UndefOr[Input[js.Array[Input[String]] | String]] = js.native
   
@@ -26,7 +27,8 @@ trait PolicyStatement extends js.Object {
   var Effect: Input[Allow | Deny] = js.native
   
   /**
-    * Include a list of actions that are not covered by this policy.
+    * Include a list of actions that are not covered by this policy. Required (either Action or NotAction)
+    * Reference: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_notaction.html
     */
   var NotAction: js.UndefOr[Input[js.Array[Input[String]] | String]] = js.native
   

@@ -2,7 +2,7 @@ package typingsSlinky.tsNode.mod
 
 import typingsSlinky.tsNode.anon.FnCall
 import typingsSlinky.tsNode.anon.FnCallDiagNewLineIndent
-import typingsSlinky.tsNode.anon.FnCallHostDocumentRegistrySyntaxOnly
+import typingsSlinky.tsNode.anon.FnCallHostDocumentRegistrySyntaxOnlyOrLanguageServiceMode
 import typingsSlinky.tsNode.anon.FnCallProgramSourceFileCancellationToken
 import typingsSlinky.tsNode.anon.FnCallSearchPathFileExistsConfigName
 import typingsSlinky.tsNode.anon.TypeofScriptSnapshot
@@ -17,6 +17,7 @@ import typingsSlinky.typescript.mod.FileExtensionInfo
 import typingsSlinky.typescript.mod.FormatDiagnosticsHost
 import typingsSlinky.typescript.mod.LanguageService
 import typingsSlinky.typescript.mod.LanguageServiceHost
+import typingsSlinky.typescript.mod.LanguageServiceMode
 import typingsSlinky.typescript.mod.Map
 import typingsSlinky.typescript.mod.ParseConfigHost
 import typingsSlinky.typescript.mod.ParsedCommandLine
@@ -42,11 +43,29 @@ trait TSCommon extends js.Object {
   var ScriptTarget: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof _ts.ScriptTarget */ js.Any = js.native
   
   def createLanguageService(host: LanguageServiceHost): LanguageService = js.native
-  def createLanguageService(host: LanguageServiceHost, documentRegistry: js.UndefOr[scala.Nothing], syntaxOnly: Boolean): LanguageService = js.native
+  def createLanguageService(
+    host: LanguageServiceHost,
+    documentRegistry: js.UndefOr[scala.Nothing],
+    syntaxOnlyOrLanguageServiceMode: Boolean
+  ): LanguageService = js.native
+  def createLanguageService(
+    host: LanguageServiceHost,
+    documentRegistry: js.UndefOr[scala.Nothing],
+    syntaxOnlyOrLanguageServiceMode: LanguageServiceMode
+  ): LanguageService = js.native
   def createLanguageService(host: LanguageServiceHost, documentRegistry: DocumentRegistry): LanguageService = js.native
-  def createLanguageService(host: LanguageServiceHost, documentRegistry: DocumentRegistry, syntaxOnly: Boolean): LanguageService = js.native
+  def createLanguageService(
+    host: LanguageServiceHost,
+    documentRegistry: DocumentRegistry,
+    syntaxOnlyOrLanguageServiceMode: Boolean
+  ): LanguageService = js.native
+  def createLanguageService(
+    host: LanguageServiceHost,
+    documentRegistry: DocumentRegistry,
+    syntaxOnlyOrLanguageServiceMode: LanguageServiceMode
+  ): LanguageService = js.native
   @JSName("createLanguageService")
-  var createLanguageService_Original: FnCallHostDocumentRegistrySyntaxOnly = js.native
+  var createLanguageService_Original: FnCallHostDocumentRegistrySyntaxOnlyOrLanguageServiceMode = js.native
   
   def displayPartsToString(): String = js.native
   def displayPartsToString(displayParts: js.Array[SymbolDisplayPart]): String = js.native

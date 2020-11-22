@@ -18,7 +18,7 @@ trait OperationFunction
   /* InferMemberOverrides */
   override def apply(
     T0: /* req */ Request[ParamsDictionary, js.Any, js.Any, Query],
-    T1: /* res */ Response[js.Any],
+    T1: /* res */ Response[js.Any, Double],
     T2: /* next */ NextFunction
   ): js.Any = js.native
   

@@ -1,5 +1,6 @@
 package typingsSlinky.node.vmMod
 
+import typingsSlinky.node.nodeStrings.afterEvaluate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,6 +21,11 @@ trait RunningScriptOptions extends BaseOptions {
     * Default: `true`.
     */
   var displayErrors: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * If set to `afterEvaluate`, microtasks will be run immediately after the script has run.
+    */
+  var microtaskMode: js.UndefOr[afterEvaluate] = js.native
   
   /**
     * Specifies the number of milliseconds to execute code before terminating execution.
@@ -61,6 +67,12 @@ object RunningScriptOptions {
     
     @scala.inline
     def deleteDisplayErrors: Self = this.set("displayErrors", js.undefined)
+    
+    @scala.inline
+    def setMicrotaskMode(value: afterEvaluate): Self = this.set("microtaskMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMicrotaskMode: Self = this.set("microtaskMode", js.undefined)
     
     @scala.inline
     def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])

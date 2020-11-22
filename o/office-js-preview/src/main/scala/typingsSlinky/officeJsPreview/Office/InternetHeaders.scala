@@ -56,7 +56,6 @@ trait InternetHeaders extends js.Object {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def getAsync(names: js.Array[String]): Unit = js.native
-  def getAsync(names: js.Array[String], callback: js.Function1[/* asyncResult */ AsyncResult[this.type], Unit]): Unit = js.native
   def getAsync(
     names: js.Array[String],
     options: js.UndefOr[scala.Nothing],
@@ -89,7 +88,6 @@ trait InternetHeaders extends js.Object {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def removeAsync(names: js.Array[String]): Unit = js.native
-  def removeAsync(names: js.Array[String], callback: js.Function1[/* asyncResult */ AsyncResult[this.type], Unit]): Unit = js.native
   def removeAsync(
     names: js.Array[String],
     options: js.UndefOr[scala.Nothing],
@@ -126,7 +124,6 @@ trait InternetHeaders extends js.Object {
     *                             of type Office.AsyncResult. Any errors encountered will be provided in the `asyncResult.error` property.
     */
   def setAsync(headers: js.Object): Unit = js.native
-  def setAsync(headers: js.Object, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def setAsync(
     headers: js.Object,
     options: js.UndefOr[scala.Nothing],

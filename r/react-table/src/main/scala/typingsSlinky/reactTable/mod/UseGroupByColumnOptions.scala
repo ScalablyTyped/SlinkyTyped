@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<{  aggregate :react-table.react-table.Aggregator<D>,   Aggregated :react-table.react-table.Renderer<react-table.react-table.CellProps<D, any>>,   disableGroupBy :boolean,   defaultCanGroupBy :boolean,   groupByBoundary :boolean}> */
+/* Inlined std.Partial<{  aggregate :react-table.react-table.Aggregator<D>,   Aggregated :react-table.react-table.Renderer<react-table.react-table.CellProps<D, any>>,   disableGroupBy :boolean,   defaultCanGroupBy :boolean}> */
 @js.native
 trait UseGroupByColumnOptions[D /* <: js.Object */] extends js.Object {
   
@@ -17,8 +17,6 @@ trait UseGroupByColumnOptions[D /* <: js.Object */] extends js.Object {
   var defaultCanGroupBy: js.UndefOr[Boolean] = js.native
   
   var disableGroupBy: js.UndefOr[Boolean] = js.native
-  
-  var groupByBoundary: js.UndefOr[Boolean] = js.native
 }
 object UseGroupByColumnOptions {
   
@@ -80,11 +78,5 @@ object UseGroupByColumnOptions {
     
     @scala.inline
     def deleteDisableGroupBy: Self = this.set("disableGroupBy", js.undefined)
-    
-    @scala.inline
-    def setGroupByBoundary(value: Boolean): Self = this.set("groupByBoundary", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteGroupByBoundary: Self = this.set("groupByBoundary", js.undefined)
   }
 }

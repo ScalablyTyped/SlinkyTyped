@@ -1,6 +1,7 @@
 
 # Scala.js typings for set-cookie-parser
 
+Typings are for version 2.4
 
 ## Library description:
 Parses set-cookie headers into objects

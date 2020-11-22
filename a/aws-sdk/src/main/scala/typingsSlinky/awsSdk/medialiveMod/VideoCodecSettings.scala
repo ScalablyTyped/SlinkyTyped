@@ -12,6 +12,8 @@ trait VideoCodecSettings extends js.Object {
   var H264Settings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.H264Settings] = js.native
   
   var H265Settings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.H265Settings] = js.native
+  
+  var Mpeg2Settings: js.UndefOr[typingsSlinky.awsSdk.medialiveMod.Mpeg2Settings] = js.native
 }
 object VideoCodecSettings {
   
@@ -53,5 +55,11 @@ object VideoCodecSettings {
     
     @scala.inline
     def deleteH265Settings: Self = this.set("H265Settings", js.undefined)
+    
+    @scala.inline
+    def setMpeg2Settings(value: Mpeg2Settings): Self = this.set("Mpeg2Settings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMpeg2Settings: Self = this.set("Mpeg2Settings", js.undefined)
   }
 }

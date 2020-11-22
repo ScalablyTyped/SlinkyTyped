@@ -1,5 +1,6 @@
 package typingsSlinky.next.loadCustomRoutesMod
 
+import typingsSlinky.next.anon.Permanent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getRedirectStatus extends js.Object {
   
-  def apply(route: Redirect): Double = js.native
+  def apply(route: Permanent): Double = js.native
 }

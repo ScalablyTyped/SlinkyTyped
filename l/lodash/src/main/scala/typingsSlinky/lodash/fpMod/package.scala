@@ -10,7 +10,7 @@ package object fpMod {
   
   type LodashAdd1x2 = js.Function1[/* augend */ scala.Double, scala.Double]
   
-  type LodashAfter1x1[TFunc] = js.Function1[/* n */ scala.Double, TFunc]
+  type LodashAfter1x1[TFunc /* <: js.Function1[/* repeated */ js.Any, _] */] = js.Function1[/* n */ scala.Double, TFunc]
   
   type LodashAfter1x2 = js.Function1[
     /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
@@ -59,7 +59,7 @@ package object fpMod {
   
   type LodashAt1x1 = js.Function1[
     /* object */ js.UndefOr[
-      typingsSlinky.lodash.mod.List[js.Any] | typingsSlinky.lodash.mod.Dictionary[js.Any] | typingsSlinky.lodash.mod.NumericDictionary[js.Any] | scala.Null
+      typingsSlinky.lodash.mod.Dictionary[js.Any] | typingsSlinky.lodash.mod.NumericDictionary[js.Any] | scala.Null
     ], 
     js.Array[js.Any]
   ]
@@ -82,7 +82,7 @@ package object fpMod {
   
   type LodashAttempt = js.Function1[/* func */ js.Function1[/* repeated */ js.Any, js.Any], js.Any | js.Error]
   
-  type LodashBefore1x1[TFunc] = js.Function1[/* n */ scala.Double, TFunc]
+  type LodashBefore1x1[TFunc /* <: js.Function1[/* repeated */ js.Any, _] */] = js.Function1[/* n */ scala.Double, TFunc]
   
   type LodashBefore1x2 = js.Function1[
     /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
@@ -165,7 +165,7 @@ package object fpMod {
   
   type LodashContains1x1[T] = js.Function1[
     /* collection */ js.UndefOr[
-      typingsSlinky.lodash.mod.List[T] | typingsSlinky.lodash.mod.Dictionary[T] | typingsSlinky.lodash.mod.NumericDictionary[T] | scala.Null
+      typingsSlinky.lodash.mod.Dictionary[T] | typingsSlinky.lodash.mod.NumericDictionary[T] | scala.Null
     ], 
     scala.Boolean
   ]
@@ -234,11 +234,11 @@ package object fpMod {
   type LodashCurryRightN6x2 = js.Function1[/* arity */ scala.Double, js.Function1[/* repeated */ js.Any, js.Any]]
   
   type LodashDebounce1x1 = js.Function1[
-    /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
-    (js.Function1[/* repeated */ js.Any, _]) with typingsSlinky.lodash.mod.Cancelable
+    /* func */ js.Function1[/* args */ js.Any, js.Any], 
+    typingsSlinky.lodash.mod.DebouncedFunc[js.Function1[/* args */ js.Any, js.Any]]
   ]
   
-  type LodashDebounce1x2[T] = js.Function1[/* wait */ scala.Double, T with typingsSlinky.lodash.mod.Cancelable]
+  type LodashDebounce1x2[T /* <: js.Function1[/* args */ js.Any, _] */] = js.Function1[/* wait */ scala.Double, typingsSlinky.lodash.mod.DebouncedFunc[T]]
   
   type LodashDeburr = js.Function1[/* string */ java.lang.String, java.lang.String]
   
@@ -246,9 +246,9 @@ package object fpMod {
   
   type LodashDefaultTo2x1[TDefault] = js.Function1[/* value */ js.UndefOr[js.Any | scala.Null], js.Any | TDefault]
   
-  type LodashDefaults1x1[TSource] = js.Function1[/* object */ js.Any, typingsSlinky.std.NonNullable[TSource with js.Any]]
+  type LodashDefaults1x1[TSource] = js.Function1[/* object */ js.Any, TSource with js.Any]
   
-  type LodashDefaults1x2[TObject] = js.Function1[/* source */ js.Any, typingsSlinky.std.NonNullable[js.Any with TObject]]
+  type LodashDefaults1x2[TObject] = js.Function1[/* source */ js.Any, js.Any with TObject]
   
   type LodashDefaultsDeep1x1 = js.Function1[/* object */ js.Any, js.Any]
   
@@ -614,8 +614,8 @@ package object fpMod {
   type LodashFlattenDepth1x2[T] = js.Function1[/* depth */ scala.Double, js.Array[T]]
   
   type LodashFlip = js.Function1[
-    /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
-    js.Function1[/* repeated */ js.Any, js.Any]
+    /* func */ js.Function1[/* args */ js.Any, js.Any], 
+    js.Function1[/* args */ js.Any, js.Any]
   ]
   
   type LodashFloor = js.Function1[/* n */ scala.Double, scala.Double]
@@ -742,39 +742,13 @@ package object fpMod {
   
   type LodashFunctionsIn = js.Function1[/* object */ js.Any, js.Array[java.lang.String]]
   
-  type LodashGet1x2[TObject] = js.Function1[
-    /* path */ (/* keyof TObject */ java.lang.String) | (js.Array[/* keyof TObject */ java.lang.String]), 
-    /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ js.Any
-  ]
+  type LodashGet10x2[T] = js.Function1[/* path */ scala.Double, js.UndefOr[T]]
   
-  type LodashGet3x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2] */ js.Any
-    ]
-  ]
+  type LodashGet11x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.UndefOr[scala.Nothing]]
   
-  type LodashGet4x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3] */ js.Any
-    ]
-  ]
+  type LodashGet12x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.Any]
   
-  type LodashGet5x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */, TKey4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2][TKey3] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3][TKey4] */ js.Any
-    ]
-  ]
-  
-  type LodashGet6x2[T] = js.Function1[/* path */ scala.Double, T]
-  
-  type LodashGet7x2[T] = js.Function1[/* path */ scala.Double, js.UndefOr[T]]
-  
-  type LodashGet8x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.UndefOr[scala.Nothing]]
-  
-  type LodashGet9x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.Any]
+  type LodashGet9x2[T] = js.Function1[/* path */ scala.Double, T]
   
   type LodashGetOr1x3[TObject, TKey /* <: /* keyof TObject */ java.lang.String */, TDefault] = js.Function1[
     /* object */ js.UndefOr[TObject | scala.Null], 
@@ -911,7 +885,7 @@ package object fpMod {
   
   type LodashIncludes1x1[T] = js.Function1[
     /* collection */ js.UndefOr[
-      typingsSlinky.lodash.mod.List[T] | typingsSlinky.lodash.mod.Dictionary[T] | typingsSlinky.lodash.mod.NumericDictionary[T] | scala.Null
+      typingsSlinky.lodash.mod.Dictionary[T] | typingsSlinky.lodash.mod.NumericDictionary[T] | scala.Null
     ], 
     scala.Boolean
   ]
@@ -920,7 +894,7 @@ package object fpMod {
   
   type LodashIncludesFrom1x3[T] = js.Function1[
     /* collection */ js.UndefOr[
-      typingsSlinky.lodash.mod.List[T] | typingsSlinky.lodash.mod.Dictionary[T] | typingsSlinky.lodash.mod.NumericDictionary[T] | scala.Null
+      typingsSlinky.lodash.mod.Dictionary[T] | typingsSlinky.lodash.mod.NumericDictionary[T] | scala.Null
     ], 
     scala.Boolean
   ]
@@ -950,9 +924,15 @@ package object fpMod {
     js.Array[js.Any]
   ]
   
-  type LodashIntersection1x1[T] = js.Function1[/* arrays */ typingsSlinky.lodash.mod.List[T], js.Array[T]]
+  type LodashIntersection1x1[T] = js.Function1[
+    /* arrays */ js.UndefOr[typingsSlinky.lodash.mod.List[T] | scala.Null], 
+    js.Array[T]
+  ]
   
-  type LodashIntersection1x2[T] = js.Function1[/* arrays2 */ typingsSlinky.lodash.mod.List[T], js.Array[T]]
+  type LodashIntersection1x2[T] = js.Function1[
+    /* arrays2 */ js.UndefOr[typingsSlinky.lodash.mod.List[T] | scala.Null], 
+    js.Array[T]
+  ]
   
   type LodashIntersectionBy1x3[T1, T2] = js.Function1[/* values */ typingsSlinky.lodash.mod.List[T2], js.Array[T1]]
   
@@ -973,7 +953,7 @@ package object fpMod {
   
   type LodashInvertBy1x1[T] = js.Function1[
     /* object */ js.UndefOr[
-      typingsSlinky.lodash.mod.List[T] | typingsSlinky.lodash.mod.Dictionary[T] | typingsSlinky.lodash.mod.NumericDictionary[T] | js.Object | scala.Null
+      typingsSlinky.lodash.mod.Dictionary[T] | typingsSlinky.lodash.mod.NumericDictionary[T] | js.Object | scala.Null
     ], 
     typingsSlinky.lodash.mod.Dictionary[js.Array[java.lang.String]]
   ]
@@ -1084,7 +1064,7 @@ package object fpMod {
   
   type LodashIsString = js.Function1[/* value */ js.Any, /* is string */ scala.Boolean]
   
-  type LodashIsSymbol = js.Function1[/* value */ js.Any, scala.Boolean]
+  type LodashIsSymbol = js.Function1[/* value */ js.Any, /* is symbol */ scala.Boolean]
   
   type LodashIsTypedArray = js.Function1[/* value */ js.Any, scala.Boolean]
   
@@ -1184,7 +1164,7 @@ package object fpMod {
   
   type LodashMap4x1[T, K /* <: /* keyof T */ java.lang.String */] = js.Function1[
     /* collection */ js.UndefOr[
-      typingsSlinky.lodash.mod.List[T] | typingsSlinky.lodash.mod.Dictionary[T] | typingsSlinky.lodash.mod.NumericDictionary[T] | scala.Null
+      typingsSlinky.lodash.mod.Dictionary[T] | typingsSlinky.lodash.mod.NumericDictionary[T] | scala.Null
     ], 
     js.Array[
       /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
@@ -1193,14 +1173,14 @@ package object fpMod {
   
   type LodashMap5x1 = js.Function1[
     /* collection */ js.UndefOr[
-      typingsSlinky.lodash.mod.List[js.Any] | typingsSlinky.lodash.mod.Dictionary[js.Any] | typingsSlinky.lodash.mod.NumericDictionary[js.Any] | scala.Null
+      typingsSlinky.lodash.mod.Dictionary[js.Any] | typingsSlinky.lodash.mod.NumericDictionary[js.Any] | scala.Null
     ], 
     js.Array[js.Any]
   ]
   
   type LodashMap6x1 = js.Function1[
     /* collection */ js.UndefOr[
-      typingsSlinky.lodash.mod.List[js.Any] | typingsSlinky.lodash.mod.Dictionary[js.Any] | typingsSlinky.lodash.mod.NumericDictionary[js.Any] | scala.Null
+      typingsSlinky.lodash.mod.Dictionary[js.Any] | typingsSlinky.lodash.mod.NumericDictionary[js.Any] | scala.Null
     ], 
     js.Array[scala.Boolean]
   ]
@@ -1284,8 +1264,8 @@ package object fpMod {
   type LodashMeanBy1x2[T] = js.Function1[/* iteratee */ typingsSlinky.lodash.mod.ValueIteratee[T], scala.Double]
   
   type LodashMemoize = js.Function1[
-    /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
-    (js.Function1[/* repeated */ js.Any, _]) with typingsSlinky.lodash.mod.MemoizedFunction
+    /* func */ js.Function1[/* args */ js.Any, js.Any], 
+    (js.Function1[/* args */ js.Any, _]) with typingsSlinky.lodash.mod.MemoizedFunction
   ]
   
   type LodashMerge1x1[TObject] = js.Function1[/* source */ js.Any, TObject with js.Any]
@@ -1331,6 +1311,11 @@ package object fpMod {
   
   type LodashMultiply1x2 = js.Function1[/* multiplier */ scala.Double, scala.Double]
   
+  type LodashNegate = js.Function1[
+    /* predicate */ js.Function1[/* args */ js.Array[js.Any], js.Any], 
+    js.Function1[/* args */ js.Array[js.Any], scala.Boolean]
+  ]
+  
   type LodashNoConflict = js.Function0[typingsSlinky.lodash.anon.Typeoflodash]
   
   type LodashNoop = js.Function1[/* repeated */ js.Any, scala.Unit]
@@ -1346,12 +1331,12 @@ package object fpMod {
   
   type LodashNthArg = js.Function1[/* n */ scala.Double, js.Function1[/* repeated */ js.Any, js.Any]]
   
-  type LodashOmit1x2[T] = js.Function1[
-    /* paths */ typingsSlinky.lodash.mod.Many[typingsSlinky.lodash.mod.PropertyName], 
-    T
-  ]
+  type LodashOmit1x1[T, K /* <: /* keyof T */ java.lang.String */] = js.Function1[/* object */ js.UndefOr[T | scala.Null], typingsSlinky.lodash.mod.Omit[T, K]]
   
-  type LodashOmit2x1[T, K /* <: /* keyof T */ java.lang.String */] = js.Function1[/* object */ js.UndefOr[T | scala.Null], typingsSlinky.lodash.mod.Omit[T, K]]
+  type LodashOmit2x1 = js.Function1[
+    /* object */ js.UndefOr[js.Object | scala.Null], 
+    typingsSlinky.lodash.mod.PartialObject[js.Object]
+  ]
   
   type LodashOmitBy1x2[T] = js.Function1[
     /* predicate */ typingsSlinky.lodash.mod.ValueKeyIteratee[T], 
@@ -1371,8 +1356,8 @@ package object fpMod {
   ]
   
   type LodashOnce = js.Function1[
-    /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
-    js.Function1[/* repeated */ js.Any, js.Any]
+    /* func */ js.Function1[/* args */ js.Any, js.Any], 
+    js.Function1[/* args */ js.Any, js.Any]
   ]
   
   type LodashOrderBy1x5[T] = js.Function1[
@@ -1487,53 +1472,67 @@ package object fpMod {
   
   type LodashParseInt1x2 = js.Function1[/* radix */ scala.Double, scala.Double]
   
-  type LodashPartial19x2[T4] = js.Function1[
+  type LodashPartial11x2[T4] = js.Function1[
     /* func */ typingsSlinky.lodash.mod.Function4[js.Any, js.Any, js.Any, T4, js.Any], 
     typingsSlinky.lodash.mod.Function3[js.Any, js.Any, js.Any, js.Any]
   ]
   
-  type LodashPartial1x1[T1, R] = js.Function1[/* arg1 */ js.Array[T1], typingsSlinky.lodash.mod.Function0[R]]
-  
-  type LodashPartial20x2[T1, T4] = js.Function1[
+  type LodashPartial12x2[T1, T4] = js.Function1[
     /* func */ typingsSlinky.lodash.mod.Function4[T1, js.Any, js.Any, T4, js.Any], 
     typingsSlinky.lodash.mod.Function2[js.Any, js.Any, js.Any]
   ]
   
-  type LodashPartial21x2[T2, T4] = js.Function1[
+  type LodashPartial13x2[T2, T4] = js.Function1[
     /* func */ typingsSlinky.lodash.mod.Function4[js.Any, T2, js.Any, T4, js.Any], 
     typingsSlinky.lodash.mod.Function2[js.Any, js.Any, js.Any]
   ]
   
-  type LodashPartial22x2[T1, T2, T4] = js.Function1[
+  type LodashPartial14x2[T1, T2, T4] = js.Function1[
     /* func */ typingsSlinky.lodash.mod.Function4[T1, T2, js.Any, T4, js.Any], 
     typingsSlinky.lodash.mod.Function1[js.Any, js.Any]
   ]
   
-  type LodashPartial23x2[T3, T4] = js.Function1[
+  type LodashPartial15x2[T3, T4] = js.Function1[
     /* func */ typingsSlinky.lodash.mod.Function4[js.Any, js.Any, T3, T4, js.Any], 
     typingsSlinky.lodash.mod.Function2[js.Any, js.Any, js.Any]
   ]
   
-  type LodashPartial24x2[T1, T3, T4] = js.Function1[
+  type LodashPartial16x2[T1, T3, T4] = js.Function1[
     /* func */ typingsSlinky.lodash.mod.Function4[T1, js.Any, T3, T4, js.Any], 
     typingsSlinky.lodash.mod.Function1[js.Any, js.Any]
   ]
   
-  type LodashPartial25x2[T2, T3, T4] = js.Function1[
+  type LodashPartial17x2[T2, T3, T4] = js.Function1[
     /* func */ typingsSlinky.lodash.mod.Function4[js.Any, T2, T3, T4, js.Any], 
     typingsSlinky.lodash.mod.Function1[js.Any, js.Any]
   ]
   
-  type LodashPartial26x2[T1, T2, T3, T4] = js.Function1[
-    /* func */ typingsSlinky.lodash.mod.Function4[T1, T2, T3, T4, js.Any], 
-    typingsSlinky.lodash.mod.Function0[js.Any]
+  type LodashPartial18x1[TS /* <: js.Array[_] */, T1, R] = js.Function1[/* arg1 */ js.Array[T1], js.Function1[/* ts */ TS, R]]
+  
+  type LodashPartial18x2[T1] = js.Function1[
+    /* func */ js.Function2[/* t1 */ T1, /* ts */ js.Array[js.Any], js.Any], 
+    js.Function1[/* ts */ js.Array[js.Any], js.Any]
   ]
   
-  type LodashPartial27x1 = js.Function1[/* args */ js.Array[js.Any], js.Function1[/* repeated */ js.Any, js.Any]]
+  type LodashPartial19x1[TS /* <: js.Array[_] */, T1, T2, R] = js.Function1[/* t1 */ js.Tuple2[T1, T2], js.Function1[/* ts */ TS, R]]
   
-  type LodashPartial27x2 = js.Function1[
-    /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
-    js.Function1[/* repeated */ js.Any, js.Any]
+  type LodashPartial19x2[T1, T2] = js.Function1[
+    /* func */ js.Function3[/* t1 */ T1, /* t2 */ T2, /* ts */ js.Array[js.Any], js.Any], 
+    js.Function1[/* ts */ js.Array[js.Any], js.Any]
+  ]
+  
+  type LodashPartial1x1[T1, T2, R] = js.Function1[
+    /* plc1 */ js.Tuple2[typingsSlinky.lodash.mod.__, T2], 
+    typingsSlinky.lodash.mod.Function1[T1, R]
+  ]
+  
+  type LodashPartial20x1[TS /* <: js.Array[_] */, T1, T2, T3, R] = js.Function1[/* t1 */ js.Tuple3[T1, T2, T3], js.Function1[/* ts */ TS, R]]
+  
+  type LodashPartial21x1[TS /* <: js.Array[_] */, T1, T2, T3, T4, R] = js.Function1[/* t1 */ js.Tuple4[T1, T2, T3, T4], js.Function1[/* ts */ TS, R]]
+  
+  type LodashPartial21x2[T1, T2, T3, T4] = js.Function1[
+    /* func */ js.Function5[/* t1 */ T1, /* t2 */ T2, /* t3 */ T3, /* t4 */ T4, /* ts */ js.Array[js.Any], js.Any], 
+    js.Function1[/* ts */ js.Array[js.Any], js.Any]
   ]
   
   type LodashPartialRight10x2[T2, T3] = js.Function1[
@@ -1699,39 +1698,13 @@ package object fpMod {
     ]
   ]
   
-  type LodashPath1x2[TObject] = js.Function1[
-    /* path */ (/* keyof TObject */ java.lang.String) | (js.Array[/* keyof TObject */ java.lang.String]), 
-    /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ js.Any
-  ]
+  type LodashPath10x2[T] = js.Function1[/* path */ scala.Double, js.UndefOr[T]]
   
-  type LodashPath3x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2] */ js.Any
-    ]
-  ]
+  type LodashPath11x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.UndefOr[scala.Nothing]]
   
-  type LodashPath4x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3] */ js.Any
-    ]
-  ]
+  type LodashPath12x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.Any]
   
-  type LodashPath5x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */, TKey4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2][TKey3] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3][TKey4] */ js.Any
-    ]
-  ]
-  
-  type LodashPath6x2[T] = js.Function1[/* path */ scala.Double, T]
-  
-  type LodashPath7x2[T] = js.Function1[/* path */ scala.Double, js.UndefOr[T]]
-  
-  type LodashPath8x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.UndefOr[scala.Nothing]]
-  
-  type LodashPath9x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.Any]
+  type LodashPath9x2[T] = js.Function1[/* path */ scala.Double, T]
   
   type LodashPathOr1x3[TObject, TKey /* <: /* keyof TObject */ java.lang.String */, TDefault] = js.Function1[
     /* object */ js.UndefOr[TObject | scala.Null], 
@@ -1827,12 +1800,12 @@ package object fpMod {
   
   type LodashPick2x1 = js.Function1[
     /* object */ js.UndefOr[js.Any | scala.Null], 
-    typingsSlinky.lodash.mod.PartialDeep[js.Any]
+    typingsSlinky.lodash.mod.PartialObject[js.Any]
   ]
   
   type LodashPick2x2[T] = js.Function1[
     /* props */ typingsSlinky.lodash.mod.PropertyPath, 
-    typingsSlinky.lodash.mod.PartialDeep[T]
+    typingsSlinky.lodash.mod.PartialObject[T]
   ]
   
   type LodashPickBy5x2[T] = js.Function1[
@@ -1842,39 +1815,13 @@ package object fpMod {
     typingsSlinky.lodash.mod.PartialObject[T]
   ]
   
-  type LodashProp1x2[TObject] = js.Function1[
-    /* path */ (/* keyof TObject */ java.lang.String) | (js.Array[/* keyof TObject */ java.lang.String]), 
-    /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ js.Any
-  ]
+  type LodashProp10x2[T] = js.Function1[/* path */ scala.Double, js.UndefOr[T]]
   
-  type LodashProp3x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2] */ js.Any
-    ]
-  ]
+  type LodashProp11x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.UndefOr[scala.Nothing]]
   
-  type LodashProp4x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3] */ js.Any
-    ]
-  ]
+  type LodashProp12x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.Any]
   
-  type LodashProp5x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */, TKey4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2][TKey3] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3][TKey4] */ js.Any
-    ]
-  ]
-  
-  type LodashProp6x2[T] = js.Function1[/* path */ scala.Double, T]
-  
-  type LodashProp7x2[T] = js.Function1[/* path */ scala.Double, js.UndefOr[T]]
-  
-  type LodashProp8x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.UndefOr[scala.Nothing]]
-  
-  type LodashProp9x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.Any]
+  type LodashProp9x2[T] = js.Function1[/* path */ scala.Double, T]
   
   type LodashPropOr1x3[TObject, TKey /* <: /* keyof TObject */ java.lang.String */, TDefault] = js.Function1[
     /* object */ js.UndefOr[TObject | scala.Null], 
@@ -1961,73 +1908,21 @@ package object fpMod {
   
   type LodashPropOr7x6 = js.Function1[/* defaultValue */ js.Any, js.Any]
   
-  type LodashProperty1x2[TObject] = js.Function1[
-    /* path */ (/* keyof TObject */ java.lang.String) | (js.Array[/* keyof TObject */ java.lang.String]), 
-    /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ js.Any
-  ]
+  type LodashProperty10x2[T] = js.Function1[/* path */ scala.Double, js.UndefOr[T]]
   
-  type LodashProperty3x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2] */ js.Any
-    ]
-  ]
+  type LodashProperty11x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.UndefOr[scala.Nothing]]
   
-  type LodashProperty4x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3] */ js.Any
-    ]
-  ]
+  type LodashProperty12x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.Any]
   
-  type LodashProperty5x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */, TKey4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2][TKey3] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3][TKey4] */ js.Any
-    ]
-  ]
+  type LodashProperty9x2[T] = js.Function1[/* path */ scala.Double, T]
   
-  type LodashProperty6x2[T] = js.Function1[/* path */ scala.Double, T]
+  type LodashPropertyOf10x2[T] = js.Function1[/* path */ scala.Double, js.UndefOr[T]]
   
-  type LodashProperty7x2[T] = js.Function1[/* path */ scala.Double, js.UndefOr[T]]
+  type LodashPropertyOf11x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.UndefOr[scala.Nothing]]
   
-  type LodashProperty8x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.UndefOr[scala.Nothing]]
+  type LodashPropertyOf12x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.Any]
   
-  type LodashProperty9x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.Any]
-  
-  type LodashPropertyOf1x2[TObject] = js.Function1[
-    /* path */ (/* keyof TObject */ java.lang.String) | (js.Array[/* keyof TObject */ java.lang.String]), 
-    /* import warning: importer.ImportType#apply Failed type conversion: TObject[keyof TObject] */ js.Any
-  ]
-  
-  type LodashPropertyOf3x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2] */ js.Any
-    ]
-  ]
-  
-  type LodashPropertyOf4x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3] */ js.Any
-    ]
-  ]
-  
-  type LodashPropertyOf5x1[TObject, TKey1 /* <: /* keyof TObject */ java.lang.String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */, TKey4 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2][TKey3] */ js.Any */] = js.Function1[
-    /* object */ js.UndefOr[TObject | scala.Null], 
-    js.UndefOr[
-      /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3][TKey4] */ js.Any
-    ]
-  ]
-  
-  type LodashPropertyOf6x2[T] = js.Function1[/* path */ scala.Double, T]
-  
-  type LodashPropertyOf7x2[T] = js.Function1[/* path */ scala.Double, js.UndefOr[T]]
-  
-  type LodashPropertyOf8x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.UndefOr[scala.Nothing]]
-  
-  type LodashPropertyOf9x2 = js.Function1[/* path */ typingsSlinky.lodash.mod.PropertyPath, js.Any]
+  type LodashPropertyOf9x2[T] = js.Function1[/* path */ scala.Double, T]
   
   type LodashPull1x2[T] = js.Function1[/* values */ T, js.Array[T]]
   
@@ -2462,11 +2357,11 @@ package object fpMod {
   type LodashTemplate = js.Function1[/* string */ java.lang.String, typingsSlinky.lodash.mod.TemplateExecutor]
   
   type LodashThrottle1x1 = js.Function1[
-    /* func */ js.Function1[/* repeated */ js.Any, js.Any], 
-    (js.Function1[/* repeated */ js.Any, _]) with typingsSlinky.lodash.mod.Cancelable
+    /* func */ js.Function1[/* args */ js.Any, js.Any], 
+    typingsSlinky.lodash.mod.DebouncedFunc[js.Function1[/* args */ js.Any, js.Any]]
   ]
   
-  type LodashThrottle1x2[T] = js.Function1[/* wait */ scala.Double, T with typingsSlinky.lodash.mod.Cancelable]
+  type LodashThrottle1x2[T /* <: js.Function1[/* args */ js.Any, _] */] = js.Function1[/* wait */ scala.Double, typingsSlinky.lodash.mod.DebouncedFunc[T]]
   
   type LodashThru1x1[T, TResult] = js.Function1[/* value */ T, TResult]
   
@@ -2496,48 +2391,20 @@ package object fpMod {
   
   type LodashToUpper = js.Function1[/* string */ java.lang.String, java.lang.String]
   
-  type LodashTransform1x3[T, TResult] = js.Function1[
-    /* object */ js.Array[T] | typingsSlinky.lodash.mod.Dictionary[T], 
-    js.Array[TResult]
-  ]
+  type LodashTransform1x3[T, TResult] = js.Function1[/* object */ js.Array[T] | typingsSlinky.lodash.mod.Dictionary[T], TResult]
   
-  type LodashTransform1x5[TResult] = js.Function1[/* accumulator */ js.Array[TResult], js.Array[TResult]]
+  type LodashTransform1x5[TResult] = js.Function1[/* accumulator */ TResult, TResult]
   
   type LodashTransform1x6[T, TResult] = js.Function1[
-    /* iteratee */ typingsSlinky.lodash.mod.MemoVoidIteratorCapped[T, js.Array[TResult]], 
-    js.Array[TResult]
+    /* iteratee */ typingsSlinky.lodash.mod.MemoVoidIteratorCapped[T, TResult], 
+    TResult
   ]
   
-  type LodashTransform2x3[T, TResult] = js.Function1[
-    /* object */ js.Array[T] | typingsSlinky.lodash.mod.Dictionary[T], 
-    typingsSlinky.lodash.mod.Dictionary[TResult]
-  ]
-  
-  type LodashTransform2x5[TResult] = js.Function1[
-    /* accumulator */ typingsSlinky.lodash.mod.Dictionary[TResult], 
-    typingsSlinky.lodash.mod.Dictionary[TResult]
-  ]
+  type LodashTransform2x5[TResult] = js.Function1[/* accumulator */ TResult, TResult]
   
   type LodashTransform2x6[T, TResult] = js.Function1[
-    /* iteratee */ typingsSlinky.lodash.mod.MemoVoidIteratorCapped[T, typingsSlinky.lodash.mod.Dictionary[TResult]], 
-    typingsSlinky.lodash.mod.Dictionary[TResult]
-  ]
-  
-  type LodashTransform3x5[TResult] = js.Function1[
-    /* accumulator */ typingsSlinky.lodash.mod.Dictionary[TResult], 
-    typingsSlinky.lodash.mod.Dictionary[TResult]
-  ]
-  
-  type LodashTransform3x6[T, TResult] = js.Function1[
-    /* iteratee */ typingsSlinky.lodash.mod.MemoVoidIteratorCapped[T, typingsSlinky.lodash.mod.Dictionary[TResult]], 
-    typingsSlinky.lodash.mod.Dictionary[TResult]
-  ]
-  
-  type LodashTransform4x5[TResult] = js.Function1[/* accumulator */ js.Array[TResult], js.Array[TResult]]
-  
-  type LodashTransform4x6[T, TResult] = js.Function1[
-    /* iteratee */ typingsSlinky.lodash.mod.MemoVoidIteratorCapped[T, js.Array[TResult]], 
-    js.Array[TResult]
+    /* iteratee */ typingsSlinky.lodash.mod.MemoVoidIteratorCapped[T, TResult], 
+    TResult
   ]
   
   type LodashTrim = js.Function1[/* string */ java.lang.String, java.lang.String]
@@ -2667,7 +2534,10 @@ package object fpMod {
   
   type LodashWrap1x1[T, TArgs, TResult] = js.Function1[/* value */ T, js.Function1[/* repeated */ TArgs, TResult]]
   
-  type LodashWrap2x1[T, TResult] = js.Function1[/* value */ T, js.Function1[/* repeated */ js.Any, TResult]]
+  type LodashWrap1x2[T] = js.Function1[
+    /* wrapper */ js.Function2[/* value */ T, /* repeated */ js.Any, js.Any], 
+    js.Function1[/* repeated */ js.Any, js.Any]
+  ]
   
   type LodashXor1x1[T] = js.Function1[
     /* arrays */ js.UndefOr[typingsSlinky.lodash.mod.List[T] | scala.Null], 

@@ -246,5 +246,8 @@ object ASPxClientGridViewCallbackCommand extends js.Object {
     */
   val UpdateEdit: String = js.native
   
+  /**
+    * Default value: "UPDATESUMMARIES"
+    */
   val UpdateSummaries: String = js.native
 }

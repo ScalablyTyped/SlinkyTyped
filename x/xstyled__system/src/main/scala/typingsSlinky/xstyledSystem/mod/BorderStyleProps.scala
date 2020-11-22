@@ -9,7 +9,7 @@ trait BorderStyleProps extends js.Object {
   
   val borderStyle: js.UndefOr[
     ResponsiveValue[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderStyleProperty */ _) | Double
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderStyle */ _) | Double
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object BorderStyleProps {
     }
     
     @scala.inline
+    def setBorderStyleVarargs(value: (js.Any | Double)*): Self = this.set("borderStyle", js.Array(value :_*))
+    
+    @scala.inline
     def setBorderStyle(
       value: ResponsiveValue[
-          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderStyleProperty */ _) | Double
+          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderStyle */ _) | Double
         ]
     ): Self = this.set("borderStyle", value.asInstanceOf[js.Any])
     

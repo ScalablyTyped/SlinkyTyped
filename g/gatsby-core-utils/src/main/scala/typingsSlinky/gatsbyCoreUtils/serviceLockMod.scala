@@ -11,7 +11,8 @@ object serviceLockMod extends js.Object {
   
   def createServiceLock(programPath: String, serviceName: String, content: Record[String, _]): js.Promise[UnlockFn | Null] = js.native
   
-  def getService(programPath: String, serviceName: String): js.Promise[String | Null] = js.native
+  def getService[T](programPath: String, serviceName: String): js.Promise[T | Null] = js.native
+  def getService[T](programPath: String, serviceName: String, ignoreLockfile: Boolean): js.Promise[T | Null] = js.native
   
   def getServices(programPath: String): js.Promise[_] = js.native
   

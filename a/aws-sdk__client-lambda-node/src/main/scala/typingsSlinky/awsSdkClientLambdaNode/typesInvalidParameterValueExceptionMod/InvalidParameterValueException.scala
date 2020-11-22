@@ -28,16 +28,14 @@ import typingsSlinky.awsSdkClientLambdaNode.updateAliasExceptionsUnionMod.Update
 import typingsSlinky.awsSdkClientLambdaNode.updateEventSourceMappingExceptionsUnionMod.UpdateEventSourceMappingExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateFunctionCodeExceptionsUnionMod.UpdateFunctionCodeExceptionsUnion
 import typingsSlinky.awsSdkClientLambdaNode.updateFunctionConfigurationExceptionsUnionMod.UpdateFunctionConfigurationExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidParameterValueExceptionDetails> * / any */ @js.native
 trait InvalidParameterValueException
-  extends ServiceException[InvalidParameterValueExceptionDetails]
-     with AddPermissionExceptionsUnion
+  extends AddPermissionExceptionsUnion
      with CreateAliasExceptionsUnion
      with CreateEventSourceMappingExceptionsUnion
      with CreateFunctionExceptionsUnion
@@ -66,19 +64,15 @@ trait InvalidParameterValueException
      with UpdateFunctionCodeExceptionsUnion
      with UpdateFunctionConfigurationExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidParameterValueException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.InvalidParameterValueException = js.native
+  var name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.InvalidParameterValueException = js.native
 }
 object InvalidParameterValueException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidParameterValueExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.InvalidParameterValueException
   ): InvalidParameterValueException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidParameterValueException]
   }
   

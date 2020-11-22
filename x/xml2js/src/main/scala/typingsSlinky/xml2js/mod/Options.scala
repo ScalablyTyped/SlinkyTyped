@@ -4,6 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined std.Omit<xml2js.xml2js.ParserOptions, 'preserveChildrenOrder' | 'chunkSize'> */
 @js.native
 trait Options extends js.Object {
   

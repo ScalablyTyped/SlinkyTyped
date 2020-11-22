@@ -1,6 +1,6 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliStrings.`Prevent tests from printing messages through the consoleDot`
+import typingsSlinky.jestCli.jestCliStrings.`Print your jest config and then exitsDot`
 import typingsSlinky.jestCli.jestCliStrings.boolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,14 +11,14 @@ trait `13` extends js.Object {
   
   val default: js.UndefOr[scala.Nothing] = js.native
   
-  val description: `Prevent tests from printing messages through the consoleDot` = js.native
+  val description: `Print your jest config and then exitsDot` = js.native
   
   val `type`: boolean = js.native
 }
 object `13` {
   
   @scala.inline
-  def apply(description: `Prevent tests from printing messages through the consoleDot`, `type`: boolean): `13` = {
+  def apply(description: `Print your jest config and then exitsDot`, `type`: boolean): `13` = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`13`]
@@ -40,7 +40,7 @@ object `13` {
     }
     
     @scala.inline
-    def setDescription(value: `Prevent tests from printing messages through the consoleDot`): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: `Print your jest config and then exitsDot`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setType(value: boolean): Self = this.set("type", value.asInstanceOf[js.Any])

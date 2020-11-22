@@ -8,16 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListenerRuleCondition extends js.Object {
   
   /**
-    * The type of condition. Valid values are `host-header` or `path-pattern`. Must also set `values`.
-    *
-    * @deprecated use 'host_header' or 'path_pattern' attribute instead
-    */
-  var field: String = js.native
-  
-  /**
     * Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
     */
-  var hostHeader: ListenerRuleConditionHostHeader = js.native
+  var hostHeader: js.UndefOr[ListenerRuleConditionHostHeader] = js.native
   
   /**
     * HTTP headers to match. HTTP Header block fields documented below.
@@ -32,7 +25,7 @@ trait ListenerRuleCondition extends js.Object {
   /**
     * Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `queryString` condition.
     */
-  var pathPattern: ListenerRuleConditionPathPattern = js.native
+  var pathPattern: js.UndefOr[ListenerRuleConditionPathPattern] = js.native
   
   /**
     * Query strings to match. Query String block fields documented below.
@@ -43,24 +36,12 @@ trait ListenerRuleCondition extends js.Object {
     * Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `httpHeader` condition instead.
     */
   var sourceIp: js.UndefOr[ListenerRuleConditionSourceIp] = js.native
-  
-  /**
-    * List of exactly one pattern to match. Required when `field` is set.
-    *
-    * @deprecated use 'host_header' or 'path_pattern' attribute instead
-    */
-  var values: String = js.native
 }
 object ListenerRuleCondition {
   
   @scala.inline
-  def apply(
-    field: String,
-    hostHeader: ListenerRuleConditionHostHeader,
-    pathPattern: ListenerRuleConditionPathPattern,
-    values: String
-  ): ListenerRuleCondition = {
-    val __obj = js.Dynamic.literal(field = field.asInstanceOf[js.Any], hostHeader = hostHeader.asInstanceOf[js.Any], pathPattern = pathPattern.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+  def apply(): ListenerRuleCondition = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ListenerRuleCondition]
   }
   
@@ -80,16 +61,10 @@ object ListenerRuleCondition {
     }
     
     @scala.inline
-    def setField(value: String): Self = this.set("field", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setHostHeader(value: ListenerRuleConditionHostHeader): Self = this.set("hostHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPathPattern(value: ListenerRuleConditionPathPattern): Self = this.set("pathPattern", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setValues(value: String): Self = this.set("values", value.asInstanceOf[js.Any])
+    def deleteHostHeader: Self = this.set("hostHeader", js.undefined)
     
     @scala.inline
     def setHttpHeader(value: ListenerRuleConditionHttpHeader): Self = this.set("httpHeader", value.asInstanceOf[js.Any])
@@ -102,6 +77,12 @@ object ListenerRuleCondition {
     
     @scala.inline
     def deleteHttpRequestMethod: Self = this.set("httpRequestMethod", js.undefined)
+    
+    @scala.inline
+    def setPathPattern(value: ListenerRuleConditionPathPattern): Self = this.set("pathPattern", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePathPattern: Self = this.set("pathPattern", js.undefined)
     
     @scala.inline
     def setQueryStringsVarargs(value: ListenerRuleConditionQueryString*): Self = this.set("queryStrings", js.Array(value :_*))

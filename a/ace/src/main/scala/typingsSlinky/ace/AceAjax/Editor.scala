@@ -136,7 +136,7 @@ trait Editor extends OptionProvider {
   /**
     * Returns `true` if current lines are always highlighted.
     **/
-  def getHighlightActiveLine(): Unit = js.native
+  def getHighlightActiveLine(): Boolean = js.native
   
   /**
     * Returns `true` if currently highlighted words are to be highlighted.

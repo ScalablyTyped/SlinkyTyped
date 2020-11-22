@@ -23,8 +23,13 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactTabs.mod.TabProps
+import typingsSlinky.reactTabs.reactTabsStrings.`additions removals`
 import typingsSlinky.reactTabs.reactTabsStrings.`additions text`
 import typingsSlinky.reactTabs.reactTabsStrings.`inline`
+import typingsSlinky.reactTabs.reactTabsStrings.`removals additions`
+import typingsSlinky.reactTabs.reactTabsStrings.`removals text`
+import typingsSlinky.reactTabs.reactTabsStrings.`text additions`
+import typingsSlinky.reactTabs.reactTabsStrings.`text removals`
 import typingsSlinky.reactTabs.reactTabsStrings.additions
 import typingsSlinky.reactTabs.reactTabsStrings.all
 import typingsSlinky.reactTabs.reactTabsStrings.ascending
@@ -213,7 +218,9 @@ object Tab {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

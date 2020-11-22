@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait S3JobDefinition extends js.Object {
   
   /**
-    * An array of objects, one for each bucket that contains objects to analyze.
+    * An array of objects, one for each AWS account that owns buckets to analyze. Each object specifies the account ID for an account and one or more buckets to analyze for the account.
     */
   var bucketDefinitions: js.UndefOr[listOfS3BucketDefinitionForJob] = js.native
   

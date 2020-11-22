@@ -16,7 +16,9 @@ package object mod {
     * @throws {Error} If format parameter counts do not match
     */
   type Codegen = js.Function2[
-    /* formatStringOrScope */ js.UndefOr[java.lang.String | org.scalablytyped.runtime.StringDictionary[js.Any]], 
+    /* formatStringOrScope */ js.UndefOr[
+      java.lang.String | org.scalablytyped.runtime.StringDictionary[js.UndefOr[js.Any]]
+    ], 
     /* repeated */ js.Any, 
     (/* import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias @apollo/protobufjs.@apollo/protobufjs.Codegen */ js.Object) | js.Function
   ]
@@ -174,7 +176,7 @@ package object mod {
     */
   type WrapperFromObjectConverter = js.ThisFunction1[
     /* this */ typingsSlinky.apolloProtobufjs.mod.Type, 
-    /* object */ org.scalablytyped.runtime.StringDictionary[js.Any], 
+    /* object */ org.scalablytyped.runtime.StringDictionary[js.UndefOr[js.Any]], 
     typingsSlinky.apolloProtobufjs.mod.Message[js.Object]
   ]
   
@@ -188,7 +190,7 @@ package object mod {
     /* this */ typingsSlinky.apolloProtobufjs.mod.Type, 
     /* message */ typingsSlinky.apolloProtobufjs.mod.Message[js.Object], 
     /* options */ js.UndefOr[typingsSlinky.apolloProtobufjs.mod.IConversionOptions], 
-    org.scalablytyped.runtime.StringDictionary[js.Any]
+    org.scalablytyped.runtime.StringDictionary[js.UndefOr[js.Any]]
   ]
   
   /**

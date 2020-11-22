@@ -1,6 +1,6 @@
 package typingsSlinky.octokitPluginPaginateRest.anon
 
-import typingsSlinky.octokitTypes.anon.Badgeurl
+import typingsSlinky.octokitTypes.anon.Archivedownloadurl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `8` extends js.Object {
   
-  var data: js.Array[Badgeurl] = js.native
+  var data: js.Array[Archivedownloadurl] = js.native
 }
 object `8` {
   
   @scala.inline
-  def apply(data: js.Array[Badgeurl]): `8` = {
+  def apply(data: js.Array[Archivedownloadurl]): `8` = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[`8`]
   }
@@ -34,9 +34,9 @@ object `8` {
     }
     
     @scala.inline
-    def setDataVarargs(value: Badgeurl*): Self = this.set("data", js.Array(value :_*))
+    def setDataVarargs(value: Archivedownloadurl*): Self = this.set("data", js.Array(value :_*))
     
     @scala.inline
-    def setData(value: js.Array[Badgeurl]): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: js.Array[Archivedownloadurl]): Self = this.set("data", value.asInstanceOf[js.Any])
   }
 }

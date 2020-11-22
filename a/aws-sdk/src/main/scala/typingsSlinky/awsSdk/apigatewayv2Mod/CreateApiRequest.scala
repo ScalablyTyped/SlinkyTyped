@@ -28,6 +28,11 @@ trait CreateApiRequest extends js.Object {
   var Description: js.UndefOr[StringWithLengthBetween0And1024] = js.native
   
   /**
+    * Specifies whether clients can invoke your API by using the default execute-api endpoint. By default, clients can invoke your API with the default https://{api_id}.execute-api.{region}.amazonaws.com endpoint. To require that clients use a custom domain name to invoke your API, disable the default endpoint.
+    */
+  var DisableExecuteApiEndpoint: js.UndefOr[boolean] = js.native
+  
+  /**
     * Avoid validating models when creating a deployment. Supported only for WebSocket APIs.
     */
   var DisableSchemaValidation: js.UndefOr[boolean] = js.native
@@ -119,6 +124,12 @@ object CreateApiRequest {
     
     @scala.inline
     def deleteDescription: Self = this.set("Description", js.undefined)
+    
+    @scala.inline
+    def setDisableExecuteApiEndpoint(value: boolean): Self = this.set("DisableExecuteApiEndpoint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableExecuteApiEndpoint: Self = this.set("DisableExecuteApiEndpoint", js.undefined)
     
     @scala.inline
     def setDisableSchemaValidation(value: boolean): Self = this.set("DisableSchemaValidation", value.asInstanceOf[js.Any])

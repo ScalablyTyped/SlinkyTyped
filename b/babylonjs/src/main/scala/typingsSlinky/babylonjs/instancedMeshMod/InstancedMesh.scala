@@ -33,10 +33,12 @@ class InstancedMesh protected () extends AbstractMesh {
   def clone(name: String): InstancedMesh = js.native
   
   /**
-    * Rendering ground id of the source mesh
+    * Creates a new InstancedMesh object from the mesh model.
+    * @see https://doc.babylonjs.com/how_to/how_to_use_instances
+    * @param name defines the name of the new instance
+    * @returns a new InstancedMesh
     */
-  @JSName("renderingGroupId")
-  def renderingGroupId_MInstancedMesh: Double = js.native
+  def createInstance(name: String): InstancedMesh = js.native
   
   /**
     * Sets the mesh indices.

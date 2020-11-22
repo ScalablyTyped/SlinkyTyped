@@ -12,38 +12,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxValidatorResult extends js.Object {
   
-  /** @name dxValidatorResult.brokenRule */
+  /**
+    * [descr:dxValidatorResult.brokenRule]
+    */
   var brokenRule: js.UndefOr[
     RequiredRule | NumericRule | RangeRule | StringLengthRule | CustomRule | CompareRule | PatternRule | EmailRule | AsyncRule
   ] = js.native
   
-  /** @name dxValidatorResult.brokenRules */
+  /**
+    * [descr:dxValidatorResult.brokenRules]
+    */
   var brokenRules: js.UndefOr[
     js.Array[
       RequiredRule | NumericRule | RangeRule | StringLengthRule | CustomRule | CompareRule | PatternRule | EmailRule | AsyncRule
     ]
   ] = js.native
   
-  /** @name dxValidatorResult.complete */
+  /**
+    * [descr:dxValidatorResult.complete]
+    */
   var complete: js.UndefOr[Promise[dxValidatorResult] | JQueryPromise[dxValidatorResult]] = js.native
   
-  /** @name dxValidatorResult.isValid */
+  /**
+    * [descr:dxValidatorResult.isValid]
+    */
   var isValid: js.UndefOr[Boolean] = js.native
   
-  /** @name dxValidatorResult.pendingRules */
+  /**
+    * [descr:dxValidatorResult.pendingRules]
+    */
   var pendingRules: js.UndefOr[js.Array[AsyncRule]] = js.native
   
-  /** @name dxValidatorResult.status */
+  /**
+    * [descr:dxValidatorResult.status]
+    */
   var status: js.UndefOr[valid | invalid | pending] = js.native
   
-  /** @name dxValidatorResult.validationRules */
+  /**
+    * [descr:dxValidatorResult.validationRules]
+    */
   var validationRules: js.UndefOr[
     js.Array[
       RequiredRule | NumericRule | RangeRule | StringLengthRule | CustomRule | CompareRule | PatternRule | EmailRule | AsyncRule
     ]
   ] = js.native
   
-  /** @name dxValidatorResult.value */
+  /**
+    * [descr:dxValidatorResult.value]
+    */
   var value: js.UndefOr[js.Any] = js.native
 }
 object dxValidatorResult {

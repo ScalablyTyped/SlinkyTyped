@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object extensionTypes {
   
-  type Date = java.lang.String | scala.Double | js.Object
+  type Date = java.lang.String | scala.Double | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify globalThis.Date */ js.Any)
   
   /** A plain JSON value */
   /* Rewritten from type alias, can be one of: 

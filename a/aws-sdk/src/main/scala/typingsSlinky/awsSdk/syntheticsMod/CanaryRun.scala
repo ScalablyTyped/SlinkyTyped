@@ -13,6 +13,11 @@ trait CanaryRun extends js.Object {
   var ArtifactS3Location: js.UndefOr[String] = js.native
   
   /**
+    * A unique ID that identifies this canary run.
+    */
+  var Id: js.UndefOr[UUID] = js.native
+  
+  /**
     * The name of the canary.
     */
   var Name: js.UndefOr[CanaryName] = js.native
@@ -55,6 +60,12 @@ object CanaryRun {
     
     @scala.inline
     def deleteArtifactS3Location: Self = this.set("ArtifactS3Location", js.undefined)
+    
+    @scala.inline
+    def setId(value: UUID): Self = this.set("Id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteId: Self = this.set("Id", js.undefined)
     
     @scala.inline
     def setName(value: CanaryName): Self = this.set("Name", value.asInstanceOf[js.Any])

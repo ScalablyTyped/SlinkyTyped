@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "jest-plugin-context"
-version := "2.9-dt-20200403Z-801047"
+version := "2.9-dt-20201020Z-801047"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

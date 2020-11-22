@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FilePathWithHeaders extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/file-path-with-headers
+  // Docs: https://electronjs.org/docs/api/structures/file-path-with-headers
   /**
     * Additional headers to be sent.
     */

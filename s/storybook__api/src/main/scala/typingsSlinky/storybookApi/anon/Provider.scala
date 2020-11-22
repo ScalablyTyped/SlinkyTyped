@@ -1,7 +1,5 @@
 package typingsSlinky.storybookApi.anon
 
-import typingsSlinky.storybookApi.mod.API
-import typingsSlinky.storybookApi.storeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,17 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Provider extends js.Object {
   
-  var api: API = js.native
-  
-  var provider: typingsSlinky.storybookApi.initProviderApiMod.Provider = js.native
-  
-  var store: default = js.native
+  var provider: typingsSlinky.storybookApi.providerMod.Provider = js.native
 }
 object Provider {
   
   @scala.inline
-  def apply(api: API, provider: typingsSlinky.storybookApi.initProviderApiMod.Provider, store: default): Provider = {
-    val __obj = js.Dynamic.literal(api = api.asInstanceOf[js.Any], provider = provider.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any])
+  def apply(provider: typingsSlinky.storybookApi.providerMod.Provider): Provider = {
+    val __obj = js.Dynamic.literal(provider = provider.asInstanceOf[js.Any])
     __obj.asInstanceOf[Provider]
   }
   
@@ -39,12 +33,6 @@ object Provider {
     }
     
     @scala.inline
-    def setApi(value: API): Self = this.set("api", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setProvider(value: typingsSlinky.storybookApi.initProviderApiMod.Provider): Self = this.set("provider", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStore(value: default): Self = this.set("store", value.asInstanceOf[js.Any])
+    def setProvider(value: typingsSlinky.storybookApi.providerMod.Provider): Self = this.set("provider", value.asInstanceOf[js.Any])
   }
 }

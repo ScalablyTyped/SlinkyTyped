@@ -18,9 +18,9 @@ class TextArea ()
   
   var handleChange: js.Any = js.native
   
-  var handleInternalRef: js.Any = js.native
+  var refHandlers: js.Any = js.native
   
-  var internalTextAreaRef: js.Any = js.native
+  var textareaRef: js.Any = js.native
 }
 /* static members */
 @JSImport("@blueprintjs/core/lib/esm/components/forms/textArea", "TextArea")

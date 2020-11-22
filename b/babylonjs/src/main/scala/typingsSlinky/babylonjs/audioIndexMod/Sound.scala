@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.audioIndexMod
 
+import typingsSlinky.babylonjs.isoundoptionsMod.ISoundOptions
 import typingsSlinky.babylonjs.sceneMod.Scene
-import typingsSlinky.babylonjs.soundMod.ISoundOptions
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -15,7 +15,7 @@ trait FontStyleProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.O
     */
   var fontStyle: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontStyleProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontStyle */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object FontStyleProps {
     @scala.inline
     def setFontStyle(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontStyleProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontStyle */ _, 
           ThemeType
         ]
     ): Self = this.set("fontStyle", value.asInstanceOf[js.Any])

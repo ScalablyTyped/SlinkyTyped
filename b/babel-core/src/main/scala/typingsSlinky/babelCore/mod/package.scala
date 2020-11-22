@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type Node = typingsSlinky.babelTypes.mod.Node
+  type Node = typingsSlinky.babelTypes.ts36Mod.Node
 }

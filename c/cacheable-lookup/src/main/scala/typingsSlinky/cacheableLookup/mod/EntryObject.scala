@@ -15,7 +15,7 @@ trait EntryObject extends js.Object {
   /**
   	 * The expiration timestamp.
   	 */
-  val expires: Double = js.native
+  val expires: js.UndefOr[Double] = js.native
   
   /**
   	 * The IP family.
@@ -25,13 +25,13 @@ trait EntryObject extends js.Object {
   /**
   	 * The original TTL.
   	 */
-  val ttl: Double = js.native
+  val ttl: js.UndefOr[Double] = js.native
 }
 object EntryObject {
   
   @scala.inline
-  def apply(address: String, expires: Double, family: IPFamily, ttl: Double): EntryObject = {
-    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], expires = expires.asInstanceOf[js.Any], family = family.asInstanceOf[js.Any], ttl = ttl.asInstanceOf[js.Any])
+  def apply(address: String, family: IPFamily): EntryObject = {
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], family = family.asInstanceOf[js.Any])
     __obj.asInstanceOf[EntryObject]
   }
   
@@ -54,12 +54,18 @@ object EntryObject {
     def setAddress(value: String): Self = this.set("address", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setExpires(value: Double): Self = this.set("expires", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setFamily(value: IPFamily): Self = this.set("family", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setExpires(value: Double): Self = this.set("expires", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpires: Self = this.set("expires", js.undefined)
+    
+    @scala.inline
     def setTtl(value: Double): Self = this.set("ttl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTtl: Self = this.set("ttl", js.undefined)
   }
 }

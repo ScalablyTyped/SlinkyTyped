@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.V8IntrinsicIdentifier
+import typingsSlinky.babelTraverse.babelTraverseStrings.InterfaceExtends
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `136` extends js.Object {
   
-  var `type`: V8IntrinsicIdentifier = js.native
+  var `type`: InterfaceExtends = js.native
 }
 object `136` {
   
   @scala.inline
-  def apply(`type`: V8IntrinsicIdentifier): `136` = {
+  def apply(`type`: InterfaceExtends): `136` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`136`]
@@ -35,6 +35,6 @@ object `136` {
     }
     
     @scala.inline
-    def setType(value: V8IntrinsicIdentifier): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: InterfaceExtends): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

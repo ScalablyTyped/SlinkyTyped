@@ -1,7 +1,6 @@
 package typingsSlinky.awsSdkStreamCollectorNode
 
-import typingsSlinky.awsSdkTypes.unmarshallerMod.StreamCollector
-import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.awsSdkTypes.serdeMod.StreamCollector
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  val streamCollector: StreamCollector[Readable] = js.native
+  val streamCollector: StreamCollector = js.native
 }

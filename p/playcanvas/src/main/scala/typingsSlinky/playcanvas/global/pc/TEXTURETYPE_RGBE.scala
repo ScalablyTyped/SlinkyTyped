@@ -10,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("pc.TEXTURETYPE_RGBE")
 @js.native
-object TEXTURETYPE_RGBE extends TopLevel[Double]
+object TEXTURETYPE_RGBE extends TopLevel[String]

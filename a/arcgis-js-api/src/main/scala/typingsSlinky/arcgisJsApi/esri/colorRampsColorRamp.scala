@@ -17,7 +17,7 @@ trait colorRampsColorRamp extends Object {
   var colors: js.Array[Color_] = js.native
   
   /**
-    * Contains an array of ramps ranging in size from 1 color to 10 colors. All ramps are part of the same color scheme, but provide a different number of colors depending on the requirements of the ramp needed for the visualization.
+    * Contains an array of ramps ranging in size from 1 color to 10 colors.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-support-colorRamps.html#ColorRamp)
     */

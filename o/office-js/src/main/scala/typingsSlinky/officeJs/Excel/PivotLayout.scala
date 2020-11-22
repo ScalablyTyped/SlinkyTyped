@@ -4,7 +4,6 @@ import typingsSlinky.officeJs.Excel.Interfaces.PivotLayoutData
 import typingsSlinky.officeJs.Excel.Interfaces.PivotLayoutLoadOptions
 import typingsSlinky.officeJs.Excel.Interfaces.PivotLayoutUpdateData
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
-import typingsSlinky.officeJs.OfficeExtension.ClientResult
 import typingsSlinky.officeJs.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJs.anon.Expand
 import typingsSlinky.officeJs.officeJsStrings.Ascending
@@ -84,7 +83,7 @@ trait PivotLayout extends ClientObject {
     */
   def getFilterAxisRange(): Range = js.native
   
-  def getPivotItems(axis: PivotAxis, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems(axis: PivotAxis, cell: String): PivotItemCollection = js.native
   /**
     * Gets the PivotItems from an axis that make up the value in a specified range within the PivotTable.
     *
@@ -92,27 +91,27 @@ trait PivotLayout extends ClientObject {
     *
     * @param axis The axis from which to get the PivotItems. Must be either "row" or "column."
     * @param cell A single cell within the PivotTable's data body.
-    * @returns A collection of PivotItems that are used to calculate the values in the specified row.
+    * @returns A PivotItemCollection of the PivotItems that are used to calculate the values in the specified row.
     */
-  def getPivotItems(axis: PivotAxis, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems(axis: PivotAxis, cell: Range): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Column(axis: Column, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Column(axis: Column, cell: String): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Column(axis: Column, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Column(axis: Column, cell: Range): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Data(axis: Data, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Data(axis: Data, cell: String): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Data(axis: Data, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Data(axis: Data, cell: Range): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Filter(axis: typingsSlinky.officeJs.officeJsStrings.Filter, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Filter(axis: typingsSlinky.officeJs.officeJsStrings.Filter, cell: String): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Filter(axis: typingsSlinky.officeJs.officeJsStrings.Filter, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Filter(axis: typingsSlinky.officeJs.officeJsStrings.Filter, cell: Range): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Row(axis: Row, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Row(axis: Row, cell: String): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Row(axis: Row, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Row(axis: Row, cell: Range): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Unknown(axis: Unknown_, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Unknown(axis: Unknown_, cell: String): PivotItemCollection = js.native
   /**
     * Gets the PivotItems from an axis that make up the value in a specified range within the PivotTable.
     *
@@ -120,10 +119,10 @@ trait PivotLayout extends ClientObject {
     *
     * @param axis The axis from which to get the PivotItems. Must be either "row" or "column."
     * @param cell A single cell within the PivotTable's data body.
-    * @returns A collection of PivotItems that are used to calculate the values in the specified row.
+    * @returns A PivotItemCollection of the PivotItems that are used to calculate the values in the specified row.
     */
   @JSName("getPivotItems")
-  def getPivotItems_Unknown(axis: Unknown_, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Unknown(axis: Unknown_, cell: Range): PivotItemCollection = js.native
   
   /**
     * Returns the range the PivotTable exists on, excluding the filter area.

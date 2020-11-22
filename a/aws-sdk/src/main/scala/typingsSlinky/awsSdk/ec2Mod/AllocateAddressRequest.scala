@@ -28,14 +28,14 @@ trait AllocateAddressRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * The location from which the IP address is advertised. Use this parameter to limit the address to this location. A network border group is a unique set of Availability Zones or Local Zones from where AWS advertises IP addresses and limits the addresses to the group. IP addresses cannot move between network border groups. Use DescribeAvailabilityZones to view the network border groups.  You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you will receive an InvalidParameterCombination error. For more information, see Error Codes. 
+    *  A unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises IP addresses. Use this parameter to limit the IP address to this location. IP addresses cannot move between network border groups. Use DescribeAvailabilityZones to view the network border groups.  You cannot use a network border group with EC2 Classic. If you attempt this operation on EC2 classic, you will receive an InvalidParameterCombination error. For more information, see Error Codes. 
     */
   var NetworkBorderGroup: js.UndefOr[String] = js.native
   
   /**
     * The ID of an address pool that you own. Use this parameter to let Amazon EC2 select an address from the address pool. To specify a specific address from the address pool, use the Address parameter instead.
     */
-  var PublicIpv4Pool: js.UndefOr[String] = js.native
+  var PublicIpv4Pool: js.UndefOr[Ipv4PoolEc2Id] = js.native
 }
 object AllocateAddressRequest {
   
@@ -91,7 +91,7 @@ object AllocateAddressRequest {
     def deleteNetworkBorderGroup: Self = this.set("NetworkBorderGroup", js.undefined)
     
     @scala.inline
-    def setPublicIpv4Pool(value: String): Self = this.set("PublicIpv4Pool", value.asInstanceOf[js.Any])
+    def setPublicIpv4Pool(value: Ipv4PoolEc2Id): Self = this.set("PublicIpv4Pool", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePublicIpv4Pool: Self = this.set("PublicIpv4Pool", js.undefined)

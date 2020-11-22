@@ -15,7 +15,7 @@ object module extends js.Object {
   /**
     * _Exported functions and modules._
     *
-    * Values assigned to the `exports` are returned by the global `importModule` function when the module is imported.
+    * Values assigned to `exports` are returned by the global `importModule` function when the module is imported.
     *
     * `exports` can be of any type but by default it is an empty object. Consider the following example which exports the `area` and `circumference` functions.
     *

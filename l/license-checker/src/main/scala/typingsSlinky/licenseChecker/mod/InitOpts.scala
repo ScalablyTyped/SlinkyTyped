@@ -1,11 +1,17 @@
 package typingsSlinky.licenseChecker.mod
 
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait InitOpts extends js.Object {
+  
+  /**
+    * Colorize output
+    */
+  var color: js.UndefOr[Boolean] = js.native
   
   /**
     * Output in csv format
@@ -16,6 +22,12 @@ trait InitOpts extends js.Object {
     * Prefix column for component in csv format.
     */
   var csvComponentPrefix: js.UndefOr[String] = js.native
+  
+  /**
+    * Specify the columns for CSV format
+    * or add the specified items for JSON format
+    */
+  var customFormat: js.UndefOr[Record[String, _]] = js.native
   
   /**
     * To add a custom Format file in JSON
@@ -129,6 +141,12 @@ object InitOpts {
     def setStart(value: String): Self = this.set("start", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setColor(value: Boolean): Self = this.set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
+    
+    @scala.inline
     def setCsv(value: Boolean): Self = this.set("csv", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -139,6 +157,12 @@ object InitOpts {
     
     @scala.inline
     def deleteCsvComponentPrefix: Self = this.set("csvComponentPrefix", js.undefined)
+    
+    @scala.inline
+    def setCustomFormat(value: Record[String, _]): Self = this.set("customFormat", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomFormat: Self = this.set("customFormat", js.undefined)
     
     @scala.inline
     def setCustomPath(value: String | ModuleInfo): Self = this.set("customPath", value.asInstanceOf[js.Any])

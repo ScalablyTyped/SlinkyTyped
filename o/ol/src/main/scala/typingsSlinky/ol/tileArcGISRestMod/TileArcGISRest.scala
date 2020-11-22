@@ -8,7 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TileArcGISRest
   extends typingsSlinky.ol.tileImageMod.default {
   
+  /**
+    * Get the user-provided params, i.e. those passed to the constructor through
+    * the "params" option, and possibly updated using the updateParams method.
+    */
   def getParams(): js.Any = js.native
   
+  /**
+    * Update the user-provided params.
+    */
   def updateParams(params: js.Any): Unit = js.native
 }

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ThumbarButton extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/thumbar-button
+  // Docs: https://electronjs.org/docs/api/structures/thumbar-button
   var click: js.Function = js.native
   
   /**

@@ -21,7 +21,7 @@ object EJSON extends js.Object {
   
   def isBinary(x: js.Object): Boolean = js.native
   
-  var newBinary: js.Any = js.native
+  def newBinary(size: Double): js.typedarray.Uint8Array = js.native
   
   def parse(str: String): EJSON = js.native
   

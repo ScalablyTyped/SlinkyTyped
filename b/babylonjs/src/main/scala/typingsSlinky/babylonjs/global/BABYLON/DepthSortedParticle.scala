@@ -12,5 +12,5 @@ class DepthSortedParticle protected ()
     * Creates a new sorted particle
     * @param materialIndex
     */
-  def this(ind: Double, indLength: Double, materialIndex: Double) = this()
+  def this(idx: Double, ind: Double, indLength: Double, materialIndex: Double) = this()
 }

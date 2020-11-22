@@ -14,7 +14,6 @@ trait PlaylistSearchResult extends js.Object {
   
   var listId: String = js.native
   
-  /** @deprecated */
   var thumbnail: String = js.native
   
   var title: String = js.native
@@ -24,8 +23,6 @@ trait PlaylistSearchResult extends js.Object {
   var url: String = js.native
   
   var videoCount: Double = js.native
-  
-  var videoCountLabel: String = js.native
 }
 object PlaylistSearchResult {
   
@@ -38,10 +35,9 @@ object PlaylistSearchResult {
     title: String,
     `type`: list,
     url: String,
-    videoCount: Double,
-    videoCountLabel: String
+    videoCount: Double
   ): PlaylistSearchResult = {
-    val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], listId = listId.asInstanceOf[js.Any], thumbnail = thumbnail.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], videoCount = videoCount.asInstanceOf[js.Any], videoCountLabel = videoCountLabel.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], listId = listId.asInstanceOf[js.Any], thumbnail = thumbnail.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], videoCount = videoCount.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaylistSearchResult]
   }
@@ -84,8 +80,5 @@ object PlaylistSearchResult {
     
     @scala.inline
     def setVideoCount(value: Double): Self = this.set("videoCount", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVideoCountLabel(value: String): Self = this.set("videoCountLabel", value.asInstanceOf[js.Any])
   }
 }

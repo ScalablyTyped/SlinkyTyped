@@ -4,7 +4,6 @@ import typingsSlinky.officeJsPreview.Excel.Interfaces.PivotLayoutData
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PivotLayoutLoadOptions
 import typingsSlinky.officeJsPreview.Excel.Interfaces.PivotLayoutUpdateData
 import typingsSlinky.officeJsPreview.OfficeExtension.ClientObject
-import typingsSlinky.officeJsPreview.OfficeExtension.ClientResult
 import typingsSlinky.officeJsPreview.OfficeExtension.UpdateOptions
 import typingsSlinky.officeJsPreview.anon.Expand
 import typingsSlinky.officeJsPreview.officeJsPreviewStrings.Ascending
@@ -34,6 +33,32 @@ trait PivotLayout extends ClientObject {
   
   /**
     *
+    * The alt text description of the PivotTable.
+    
+    Alt text provides alternative, text-based representations of the information contained in the PivotTable.
+    This information is useful for people with vision or cognitive impairments who may not be able to see or understand the table.
+    A title can be read to a person with a disability and is used to determine whether they wish to hear the description of the content.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var altTextDescription: String = js.native
+  
+  /**
+    *
+    * The alt text title of the PivotTable.
+    
+    Alt text provides alternative, text-based representations of the information contained in the PivotTable.
+    This information is useful for people with vision or cognitive impairments who may not be able to see or understand the table.
+    A title can be read to a person with a disability and is used to determine whether they wish to hear the description of the content.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var altTextTitle: String = js.native
+  
+  /**
+    *
     * Specifies if formatting will be automatically formatted when it’s refreshed or when fields are moved.
     *
     * [Api set: ExcelApi 1.9]
@@ -45,12 +70,44 @@ trait PivotLayout extends ClientObject {
   var context_PivotLayout: RequestContext = js.native
   
   /**
+    * Sets whether or not to display a blank line after each item. This is set at the global level for the PivotTable and applied to individual PivotFields.
+    This function overwrites the setting for all fields in the PivotTable to the value of `display` parameter.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    *
+    * @param display True turns on the blank-line display setting. False turns it off.
+    */
+  def displayBlankLineAfterEachItem(display: Boolean): Unit = js.native
+  
+  /**
+    *
+    * The text that is automatically filled into any empty cell in the PivotTable if `fillEmptyCells == true`.
+    Note that this value persists if `fillEmptyCells` is set to false, and that setting this value does not set that property to true.
+    By default, this is an empty string.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var emptyCellText: String = js.native
+  
+  /**
     *
     * Specifies if the field list can be shown in the UI.
     *
     * [Api set: ExcelApi 1.10]
     */
   var enableFieldList: Boolean = js.native
+  
+  /**
+    *
+    * Specifies whether empty cells in the PivotTable should be populated with the `emptyCellText`. False by default.
+    Note that the value of `emptyCellText` persists when this property is set to false.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var fillEmptyCells: Boolean = js.native
   
   def getCell(
     dataHierarchy: String,
@@ -106,7 +163,7 @@ trait PivotLayout extends ClientObject {
     */
   def getFilterAxisRange(): Range = js.native
   
-  def getPivotItems(axis: PivotAxis, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems(axis: PivotAxis, cell: String): PivotItemCollection = js.native
   /**
     * Gets the PivotItems from an axis that make up the value in a specified range within the PivotTable.
     *
@@ -114,27 +171,27 @@ trait PivotLayout extends ClientObject {
     *
     * @param axis The axis from which to get the PivotItems. Must be either "row" or "column."
     * @param cell A single cell within the PivotTable's data body.
-    * @returns A collection of PivotItems that are used to calculate the values in the specified row.
+    * @returns A PivotItemCollection of the PivotItems that are used to calculate the values in the specified row.
     */
-  def getPivotItems(axis: PivotAxis, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems(axis: PivotAxis, cell: Range): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Column(axis: Column, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Column(axis: Column, cell: String): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Column(axis: Column, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Column(axis: Column, cell: Range): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Data(axis: Data, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Data(axis: Data, cell: String): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Data(axis: Data, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Data(axis: Data, cell: Range): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Filter(axis: typingsSlinky.officeJsPreview.officeJsPreviewStrings.Filter, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Filter(axis: typingsSlinky.officeJsPreview.officeJsPreviewStrings.Filter, cell: String): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Filter(axis: typingsSlinky.officeJsPreview.officeJsPreviewStrings.Filter, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Filter(axis: typingsSlinky.officeJsPreview.officeJsPreviewStrings.Filter, cell: Range): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Row(axis: Row, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Row(axis: Row, cell: String): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Row(axis: Row, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Row(axis: Row, cell: Range): PivotItemCollection = js.native
   @JSName("getPivotItems")
-  def getPivotItems_Unknown(axis: Unknown_, cell: String): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Unknown(axis: Unknown_, cell: String): PivotItemCollection = js.native
   /**
     * Gets the PivotItems from an axis that make up the value in a specified range within the PivotTable.
     *
@@ -142,10 +199,10 @@ trait PivotLayout extends ClientObject {
     *
     * @param axis The axis from which to get the PivotItems. Must be either "row" or "column."
     * @param cell A single cell within the PivotTable's data body.
-    * @returns A collection of PivotItems that are used to calculate the values in the specified row.
+    * @returns A PivotItemCollection of the PivotItems that are used to calculate the values in the specified row.
     */
   @JSName("getPivotItems")
-  def getPivotItems_Unknown(axis: Unknown_, cell: Range): ClientResult[js.Array[PivotItem]] = js.native
+  def getPivotItems_Unknown(axis: Unknown_, cell: Range): PivotItemCollection = js.native
   
   /**
     * Returns the range the PivotTable exists on, excluding the filter area.
@@ -196,6 +253,16 @@ trait PivotLayout extends ClientObject {
     * [Api set: ExcelApi 1.9]
     */
   var preserveFormatting: Boolean = js.native
+  
+  /**
+    * Sets the "repeat all item labels" setting across all fields in the PivotTable.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    *
+    * @param repeatLabels True turns on the label-repetition display setting. False turns it off.
+    */
+  def repeatAllItemLabels(repeatLabels: Boolean): Unit = js.native
   
   /** Sets multiple properties of an object at the same time. You can pass either a plain object with the appropriate properties, or another API object of the same type.
     *
@@ -259,6 +326,15 @@ trait PivotLayout extends ClientObject {
     * [Api set: ExcelApi 1.8]
     */
   var showColumnGrandTotals: Boolean = js.native
+  
+  /**
+    *
+    * Specifies whether the PivotTable displays field headers (field captions and filter drop-downs).
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  var showFieldHeaders: Boolean = js.native
   
   /**
     *

@@ -1,5 +1,6 @@
 package typingsSlinky.yeomanTest.mod
 
+import typingsSlinky.yeomanGenerator.mod.GeneratorOptions
 import typingsSlinky.yeomanGenerator.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createDummyGenerator extends js.Object {
   
-  def apply(): ^ = js.native
+  def apply(): ^[GeneratorOptions] = js.native
 }

@@ -9,10 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 /**
   * The representation of a parsed Device.
-  * @param family The name of the device
-  * @param major Major version of the device
-  * @param minor Minor version of the device
-  * @param patch Patch version of the device
+  * @param [family='Other'] The name of the device
+  * @param [major='0'] Major version of the device
+  * @param [minor='0'] Minor version of the device
+  * @param [patch='0'] Patch version of the device
   */
 class Device () extends js.Object {
   def this(family: String) = this()

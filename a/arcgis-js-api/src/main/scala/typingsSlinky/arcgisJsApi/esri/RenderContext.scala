@@ -14,8 +14,6 @@ trait RenderContext extends Object {
     * Binds the color and depth buffers an external renderer is supposed to render into.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderContext)
-    *
-    *
     */
   def bindRenderTarget(): Unit = js.native
   
@@ -37,8 +35,6 @@ trait RenderContext extends Object {
     * A convenience function provided to completely reset the WebGL state after using it.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-externalRenderers.html#RenderContext)
-    *
-    *
     */
   def resetWebGLState(): Unit = js.native
   

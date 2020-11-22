@@ -68,7 +68,7 @@ trait ResizeProgressMessage extends js.Object {
   var TargetClusterType: js.UndefOr[String] = js.native
   
   /**
-    * The type of encryption for the cluster after the resize is complete. Possible values are KMS and None. In the China region possible values are: Legacy and None.
+    * The type of encryption for the cluster after the resize is complete. Possible values are KMS and None. 
     */
   var TargetEncryptionType: js.UndefOr[String] = js.native
   

@@ -1,5 +1,8 @@
 package typingsSlinky.electron.Electron
 
+import typingsSlinky.electron.electronStrings.left
+import typingsSlinky.electron.electronStrings.overlay
+import typingsSlinky.electron.electronStrings.right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,6 +18,8 @@ trait TouchBarButton extends js.Object {
   
   var icon: NativeImage_ = js.native
   
+  var iconPosition: left | right | overlay = js.native
+  
   var label: String = js.native
 }
 object TouchBarButton {
@@ -25,9 +30,10 @@ object TouchBarButton {
     backgroundColor: String,
     enabled: Boolean,
     icon: NativeImage_,
+    iconPosition: left | right | overlay,
     label: String
   ): TouchBarButton = {
-    val __obj = js.Dynamic.literal(accessibilityLabel = accessibilityLabel.asInstanceOf[js.Any], backgroundColor = backgroundColor.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(accessibilityLabel = accessibilityLabel.asInstanceOf[js.Any], backgroundColor = backgroundColor.asInstanceOf[js.Any], enabled = enabled.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any], iconPosition = iconPosition.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
     __obj.asInstanceOf[TouchBarButton]
   }
   
@@ -57,6 +63,9 @@ object TouchBarButton {
     
     @scala.inline
     def setIcon(value: NativeImage_): Self = this.set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIconPosition(value: left | right | overlay): Self = this.set("iconPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])

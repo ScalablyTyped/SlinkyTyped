@@ -1,11 +1,12 @@
 package typingsSlinky.mendixmodelsdk.messagedefinitionsMod.messagedefinitions
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.Element
 import typingsSlinky.mendixmodelsdk.messagedefinitionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,8 +22,8 @@ abstract class ExposedMember protected () extends Element {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -36,9 +37,6 @@ abstract class ExposedMember protected () extends Element {
     */
   def example: String = js.native
   def example_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FExposedMember: IModel = js.native
   
   def originalName: String = js.native
   def originalName_=(newValue: String): Unit = js.native

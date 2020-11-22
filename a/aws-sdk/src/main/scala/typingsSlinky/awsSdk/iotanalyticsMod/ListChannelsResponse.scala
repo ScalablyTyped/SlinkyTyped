@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListChannelsResponse extends js.Object {
   
   /**
-    * A list of "ChannelSummary" objects.
+    * A list of ChannelSummary objects.
     */
   var channelSummaries: js.UndefOr[ChannelSummaries] = js.native
   

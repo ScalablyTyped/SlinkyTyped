@@ -10,17 +10,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MasonryProps extends js.Object {
+trait MasonryProps[T] extends js.Object {
   
   var columnWidth: js.UndefOr[Double] = js.native
   
-  var comp: ReactComponentClass[Data] = js.native
+  var comp: ReactComponentClass[Data[T]] = js.native
   
   var flexible: js.UndefOr[Boolean] = js.native
   
   var gutterWidth: js.UndefOr[Double] = js.native
   
-  var items: js.Array[_] = js.native
+  var items: js.Array[T] = js.native
   
   var layout: js.UndefOr[MasonryDefaultLayout | MasonryUniformRowLayout] = js.native
   
@@ -41,13 +41,13 @@ trait MasonryProps extends js.Object {
 object MasonryProps {
   
   @scala.inline
-  def apply(comp: ReactComponentClass[Data], items: js.Array[_]): MasonryProps = {
+  def apply[T](comp: ReactComponentClass[Data[T]], items: js.Array[T]): MasonryProps[T] = {
     val __obj = js.Dynamic.literal(comp = comp.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
-    __obj.asInstanceOf[MasonryProps]
+    __obj.asInstanceOf[MasonryProps[T]]
   }
   
   @scala.inline
-  implicit class MasonryPropsOps[Self <: MasonryProps] (val x: Self) extends AnyVal {
+  implicit class MasonryPropsOps[Self <: MasonryProps[_], T] (val x: Self with MasonryProps[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -62,13 +62,13 @@ object MasonryProps {
     }
     
     @scala.inline
-    def setComp(value: ReactComponentClass[Data]): Self = this.set("comp", value.asInstanceOf[js.Any])
+    def setComp(value: ReactComponentClass[Data[T]]): Self = this.set("comp", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setItemsVarargs(value: js.Any*): Self = this.set("items", js.Array(value :_*))
+    def setItemsVarargs(value: T*): Self = this.set("items", js.Array(value :_*))
     
     @scala.inline
-    def setItems(value: js.Array[_]): Self = this.set("items", value.asInstanceOf[js.Any])
+    def setItems(value: js.Array[T]): Self = this.set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setColumnWidth(value: Double): Self = this.set("columnWidth", value.asInstanceOf[js.Any])

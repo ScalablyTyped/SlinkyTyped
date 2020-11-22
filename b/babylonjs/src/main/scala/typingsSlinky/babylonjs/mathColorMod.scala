@@ -171,6 +171,15 @@ object mathColorMod extends js.Object {
     def equalsFloats(r: Double, g: Double, b: Double): Boolean = js.native
     
     /**
+      * Update the current color with values stored in an array from the starting index of the given array
+      * @param array defines the source array
+      * @param offset defines an offset in the source array
+      * @returns the current Color3 object
+      */
+    def fromArray(array: DeepImmutable[ArrayLike[Double]]): Color3 = js.native
+    def fromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): Color3 = js.native
+    
+    /**
       * Defines the green component (between 0 and 1, default is 0)
       */
     var g: Double = js.native
@@ -350,6 +359,15 @@ object mathColorMod extends js.Object {
       */
     def FromArray(array: DeepImmutable[ArrayLike[Double]]): Color3 = js.native
     def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): Color3 = js.native
+    
+    def FromArrayToRef(array: DeepImmutable[ArrayLike[Double]], offset: js.UndefOr[scala.Nothing], result: Color3): Unit = js.native
+    /**
+      * Creates a new Color3 from the starting index element of the given array
+      * @param array defines the source array to read from
+      * @param offset defines the offset in the source array
+      * @param result defines the target Color3 object
+      */
+    def FromArrayToRef(array: DeepImmutable[ArrayLike[Double]], offset: Double, result: Color3): Unit = js.native
     
     /**
       * Creates a new Color3 from the string containing valid hexadecimal values
@@ -752,6 +770,15 @@ object mathColorMod extends js.Object {
     def equals(otherColor: DeepImmutable[Color4]): Boolean = js.native
     
     /**
+      * Update the current color with values stored in an array from the starting index of the given array
+      * @param array defines the source array
+      * @param offset defines an offset in the source array
+      * @returns the current Color4 object
+      */
+    def fromArray(array: DeepImmutable[ArrayLike[Double]]): Color4 = js.native
+    def fromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): Color4 = js.native
+    
+    /**
       * Defines the green component (between 0 and 1, default is 0)
       */
     var g: Double = js.native
@@ -860,9 +887,11 @@ object mathColorMod extends js.Object {
     
     /**
       * Compute the Color4 hexadecimal code as a string
+      * @param returnAsColor3 defines if the string should only contains RGB values (off by default)
       * @returns a string containing the hexadecimal representation of the Color4 object
       */
     def toHexString(): String = js.native
+    def toHexString(returnAsColor3: Boolean): String = js.native
     
     /**
       * Computes a new Color4 converted from the current one to linear space
@@ -898,6 +927,15 @@ object mathColorMod extends js.Object {
       */
     def FromArray(array: DeepImmutable[ArrayLike[Double]]): Color4 = js.native
     def FromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): Color4 = js.native
+    
+    def FromArrayToRef(array: DeepImmutable[ArrayLike[Double]], offset: js.UndefOr[scala.Nothing], result: Color4): Unit = js.native
+    /**
+      * Creates a new Color4 from the starting index element of the given array
+      * @param array defines the source array to read from
+      * @param offset defines the offset in the source array
+      * @param result defines the target Color4 object
+      */
+    def FromArrayToRef(array: DeepImmutable[ArrayLike[Double]], offset: Double, result: Color4): Unit = js.native
     
     /**
       * Creates a new Color4 from a Color3 and an alpha value

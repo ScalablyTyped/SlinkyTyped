@@ -1,15 +1,15 @@
 package typingsSlinky.jupyterlabOutputarea.widgetMod
 
-import typingsSlinky.phosphorWidgets.mod.Widget
+import typingsSlinky.luminoWidgets.mod.Widget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IStdin extends Widget {
+  
   /**
     * The stdin value.
     */
   val value: js.Promise[String] = js.native
 }
-

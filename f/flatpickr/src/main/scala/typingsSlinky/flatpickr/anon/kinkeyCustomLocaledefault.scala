@@ -24,6 +24,8 @@ trait kinkeyCustomLocaledefault extends js.Object {
   
   var bs: js.UndefOr[CustomLocale] = js.native
   
+  var ca: js.UndefOr[CustomLocale] = js.native
+  
   var cat: js.UndefOr[CustomLocale] = js.native
   
   var cs: js.UndefOr[CustomLocale] = js.native
@@ -122,6 +124,10 @@ trait kinkeyCustomLocaledefault extends js.Object {
   
   var uk: js.UndefOr[CustomLocale] = js.native
   
+  var uz: js.UndefOr[CustomLocale] = js.native
+  
+  var uz_latn: js.UndefOr[CustomLocale] = js.native
+  
   var vn: js.UndefOr[CustomLocale] = js.native
   
   var zh: js.UndefOr[CustomLocale] = js.native
@@ -195,6 +201,12 @@ object kinkeyCustomLocaledefault {
     
     @scala.inline
     def deleteBs: Self = this.set("bs", js.undefined)
+    
+    @scala.inline
+    def setCa(value: CustomLocale): Self = this.set("ca", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCa: Self = this.set("ca", js.undefined)
     
     @scala.inline
     def setCat(value: CustomLocale): Self = this.set("cat", value.asInstanceOf[js.Any])
@@ -483,6 +495,18 @@ object kinkeyCustomLocaledefault {
     
     @scala.inline
     def deleteUk: Self = this.set("uk", js.undefined)
+    
+    @scala.inline
+    def setUz(value: CustomLocale): Self = this.set("uz", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUz: Self = this.set("uz", js.undefined)
+    
+    @scala.inline
+    def setUz_latn(value: CustomLocale): Self = this.set("uz_latn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUz_latn: Self = this.set("uz_latn", js.undefined)
     
     @scala.inline
     def setVn(value: CustomLocale): Self = this.set("vn", value.asInstanceOf[js.Any])

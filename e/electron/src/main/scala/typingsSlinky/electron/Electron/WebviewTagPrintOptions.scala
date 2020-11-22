@@ -61,7 +61,7 @@ trait WebviewTagPrintOptions extends js.Object {
   /**
     * The page range to print.
     */
-  var pageRanges: js.UndefOr[Record[String, Double]] = js.native
+  var pageRanges: js.UndefOr[js.Array[PageRanges]] = js.native
   
   /**
     * Specify page size of the printed document. Can be `A3`, `A4`, `A5`, `Legal`,
@@ -173,7 +173,10 @@ object WebviewTagPrintOptions {
     def deleteMargins: Self = this.set("margins", js.undefined)
     
     @scala.inline
-    def setPageRanges(value: Record[String, Double]): Self = this.set("pageRanges", value.asInstanceOf[js.Any])
+    def setPageRangesVarargs(value: PageRanges*): Self = this.set("pageRanges", js.Array(value :_*))
+    
+    @scala.inline
+    def setPageRanges(value: js.Array[PageRanges]): Self = this.set("pageRanges", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePageRanges: Self = this.set("pageRanges", js.undefined)

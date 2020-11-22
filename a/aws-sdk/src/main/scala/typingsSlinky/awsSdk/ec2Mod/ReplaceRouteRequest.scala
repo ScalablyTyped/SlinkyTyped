@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ReplaceRouteRequest extends js.Object {
   
   /**
+    * [IPv4 traffic only] The ID of a carrier gateway.
+    */
+  var CarrierGatewayId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.CarrierGatewayId] = js.native
+  
+  /**
     * The IPv4 CIDR address block used for the destination match. The value that you provide must match the CIDR of an existing route in the table.
     */
   var DestinationCidrBlock: js.UndefOr[String] = js.native
@@ -73,6 +78,11 @@ trait ReplaceRouteRequest extends js.Object {
   var TransitGatewayId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.TransitGatewayId] = js.native
   
   /**
+    * The ID of a VPC endpoint. Supported for Gateway Load Balancer endpoints only.
+    */
+  var VpcEndpointId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.VpcEndpointId] = js.native
+  
+  /**
     * The ID of a VPC peering connection.
     */
   var VpcPeeringConnectionId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.VpcPeeringConnectionId] = js.native
@@ -102,6 +112,12 @@ object ReplaceRouteRequest {
     
     @scala.inline
     def setRouteTableId(value: RouteTableId): Self = this.set("RouteTableId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCarrierGatewayId(value: CarrierGatewayId): Self = this.set("CarrierGatewayId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCarrierGatewayId: Self = this.set("CarrierGatewayId", js.undefined)
     
     @scala.inline
     def setDestinationCidrBlock(value: String): Self = this.set("DestinationCidrBlock", value.asInstanceOf[js.Any])
@@ -174,6 +190,12 @@ object ReplaceRouteRequest {
     
     @scala.inline
     def deleteTransitGatewayId: Self = this.set("TransitGatewayId", js.undefined)
+    
+    @scala.inline
+    def setVpcEndpointId(value: VpcEndpointId): Self = this.set("VpcEndpointId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVpcEndpointId: Self = this.set("VpcEndpointId", js.undefined)
     
     @scala.inline
     def setVpcPeeringConnectionId(value: VpcPeeringConnectionId): Self = this.set("VpcPeeringConnectionId", value.asInstanceOf[js.Any])

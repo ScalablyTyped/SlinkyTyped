@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
@@ -10,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/rules relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/rules relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -36,9 +35,6 @@ class Rule protected () extends ServerSideMicroflow {
   
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MRule: FolderBase = js.native
-  
-  @JSName("model")
-  var model_FRule: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.Rule")

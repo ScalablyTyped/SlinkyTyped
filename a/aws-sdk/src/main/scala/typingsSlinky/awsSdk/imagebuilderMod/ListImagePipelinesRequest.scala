@@ -20,7 +20,7 @@ trait ListImagePipelinesRequest extends js.Object {
   /**
     * A token to specify where to start paginating. This is the NextToken from a previously truncated response. 
     */
-  var nextToken: js.UndefOr[NonEmptyString] = js.native
+  var nextToken: js.UndefOr[PaginationToken] = js.native
 }
 object ListImagePipelinesRequest {
   
@@ -61,7 +61,7 @@ object ListImagePipelinesRequest {
     def deleteMaxResults: Self = this.set("maxResults", js.undefined)
     
     @scala.inline
-    def setNextToken(value: NonEmptyString): Self = this.set("nextToken", value.asInstanceOf[js.Any])
+    def setNextToken(value: PaginationToken): Self = this.set("nextToken", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNextToken: Self = this.set("nextToken", js.undefined)

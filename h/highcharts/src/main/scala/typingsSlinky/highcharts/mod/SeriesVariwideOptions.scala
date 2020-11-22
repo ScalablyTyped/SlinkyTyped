@@ -33,26 +33,6 @@ trait SeriesVariwideOptions extends PlotVariwideOptions {
   ] = js.native
   
   /**
-    * Not available
-    */
-  var depth: js.UndefOr[scala.Nothing] = js.native
-  
-  /**
-    * Not available
-    */
-  var edgeColor: js.UndefOr[scala.Nothing] = js.native
-  
-  /**
-    * Not available
-    */
-  var edgeWidth: js.UndefOr[scala.Nothing] = js.native
-  
-  /**
-    * Not available
-    */
-  var groupZPadding: js.UndefOr[scala.Nothing] = js.native
-  
-  /**
     * (Highcharts, Highstock, Highmaps, Gantt) An id for the series. This can
     * be used after render time to get a pointer to the series object through
     * `chart.get()`.

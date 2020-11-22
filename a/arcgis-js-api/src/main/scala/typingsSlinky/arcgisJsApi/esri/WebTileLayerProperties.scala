@@ -9,7 +9,8 @@ trait WebTileLayerProperties
   extends LayerProperties
      with ScaleRangeLayerProperties
      with RefreshableLayerProperties
-     with PortalLayerProperties {
+     with PortalLayerProperties
+     with BlendLayerProperties {
   
   /**
     * The attribution information for the layer.
@@ -19,7 +20,7 @@ trait WebTileLayerProperties
   var copyright: js.UndefOr[String] = js.native
   
   /**
-    * A string of subDomain names where tiles are served to speed up tile retrieval. If subDomains are specified, the [urlTemplate](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WebTileLayer.html#urlTemplate) should include a `{subDomain}` place holder.
+    * A string of subDomain names where tiles are served to speed up tile retrieval.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WebTileLayer.html#subDomains)
     */
@@ -33,7 +34,7 @@ trait WebTileLayerProperties
   var tileInfo: js.UndefOr[TileInfoProperties] = js.native
   
   /**
-    * URL template for the hosted tiles. The `urlTemplate` should contain a `{subDomain}` place holder if [subDomains](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WebTileLayer.html#subDomains) are specified.
+    * The url template is a string that specifies the URL of the hosted tile images to load.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-WebTileLayer.html#urlTemplate)
     */

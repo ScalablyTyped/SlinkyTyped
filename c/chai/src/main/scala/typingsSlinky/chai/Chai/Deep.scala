@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Deep extends js.Object {
+trait Deep extends KeyFilter {
   
   def contain(value: js.Any): Assertion = js.native
   def contain(value: js.Any, message: String): Assertion = js.native
@@ -41,11 +41,6 @@ trait Deep extends js.Object {
   def includes(value: js.Any, message: String): Assertion = js.native
   @JSName("includes")
   var includes_Original: Include = js.native
-  
-  def members(set: js.Array[_]): Assertion = js.native
-  def members(set: js.Array[_], message: String): Assertion = js.native
-  @JSName("members")
-  var members_Original: Members = js.native
   
   var nested: Nested = js.native
   

@@ -16,16 +16,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PatternRule extends js.Object {
   
-  /** @name PatternRule.ignoreEmptyValue */
+  /**
+    * [descr:PatternRule.ignoreEmptyValue]
+    */
   var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
   
-  /** @name PatternRule.message */
+  /**
+    * [descr:PatternRule.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name PatternRule.pattern */
+  /**
+    * [descr:PatternRule.pattern]
+    */
   var pattern: js.UndefOr[js.RegExp | String] = js.native
   
-  /** @name PatternRule.type */
+  /**
+    * [descr:PatternRule.type]
+    */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native

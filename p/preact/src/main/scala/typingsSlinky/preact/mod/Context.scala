@@ -18,4 +18,6 @@ trait Context[T] extends js.Object {
   def Provider(props: RenderableProps[Value[T], _], context: js.Any): VNode[_] | Null = js.native
   @JSName("Provider")
   var Provider_Original: Provider[T] = js.native
+  
+  var displayName: js.UndefOr[String] = js.native
 }

@@ -44,7 +44,7 @@ class Question protected ()
   
   val ariaTitleId: String = js.native
   
-  def beforeDestoyQuestionElement(el: js.Any): Unit = js.native
+  def beforeDestroyQuestionElement(el: js.Any): Unit = js.native
   
   /* protected */ def canRunValidators(isOnValueChanged: Boolean): Boolean = js.native
   
@@ -83,6 +83,8 @@ class Question protected ()
   @JSName("clearValue")
   def clearValue_Unit(): Unit = js.native
   
+  val clickTitleFunction: js.Any = js.native
+  
   /**
     * The question comment value.
     */
@@ -94,6 +96,8 @@ class Question protected ()
     * Use it to get or set the comment value.
     */
   var commentText: String = js.native
+  
+  /* protected */ def convertDefaultValue(`val`: js.Any): js.Any = js.native
   
   /**
     * The correct answer on the question. Set this value if you are doing a quiz.
@@ -140,6 +144,8 @@ class Question protected ()
     * Please note, this property is hidden for question without input, for example html question.
     */
   var defaultValue: js.Any = js.native
+  
+  var defaultValueExpression: js.Any = js.native
   
   /**
     * Question description. It renders under question title by using smaller font. Unlike the title, description can be empty.
@@ -194,6 +200,8 @@ class Question protected ()
   
   def getAllValues(): js.Any = js.native
   
+  def getComponentName(): String = js.native
+  
   def getConditionJson(): js.Any = js.native
   def getConditionJson(operator: js.UndefOr[scala.Nothing], path: String): js.Any = js.native
   def getConditionJson(operator: String): js.Any = js.native
@@ -224,6 +232,8 @@ class Question protected ()
   def getDisplayValue(keysAsText: Boolean, value: js.Any): js.Any = js.native
   
   /* protected */ def getDisplayValueCore(keyAsText: Boolean, value: js.Any): js.Any = js.native
+  
+  def getErrorByType(errorType: String): SurveyError = js.native
   
   /* protected */ def getFirstErrorInputElementId(): String = js.native
   
@@ -271,6 +281,10 @@ class Question protected ()
   
   /* InferMemberOverrides */
   override def getType(): String = js.native
+  
+  /* protected */ def getUnbindValue(value: js.Any): js.Any = js.native
+  
+  /* protected */ def getValueAndRunExpression(`val`: js.Any, expression: String): js.Any = js.native
   
   /* protected */ def getValueCore(): js.Any = js.native
   
@@ -360,6 +374,8 @@ class Question protected ()
   
   val isCompositeQuestion: Boolean = js.native
   
+  def isDefaultRendering(): Boolean = js.native
+  
   /* protected */ def isDefaultValueEmpty(): Boolean = js.native
   
   /**
@@ -397,9 +413,9 @@ class Question protected ()
   
   /* protected */ def isTextValue(): Boolean = js.native
   
-  val locCommentText: LocalizableString = js.native
+  /* protected */ def isValueExpression(`val`: js.Any): Boolean = js.native
   
-  val locDescription: LocalizableString = js.native
+  val locCommentText: LocalizableString = js.native
   
   var locNotificationInData: Boolean = js.native
   
@@ -505,6 +521,8 @@ class Question protected ()
     */
   def removeError(error: SurveyError): Unit = js.native
   
+  var renderAs: String = js.native
+  
   /**
     * The rendered width of the question.
     */
@@ -537,6 +555,8 @@ class Question protected ()
     * Set it different from 0 to increase the right padding.
     */
   var rightIndent: Double = js.native
+  
+  /* protected */ def runExpression(expression: String): js.Any = js.native
   
   /* protected */ def runValidators(): js.Array[SurveyError] = js.native
   
@@ -594,6 +614,8 @@ class Question protected ()
   var titleLocation: String = js.native
   
   val titlePattern: String = js.native
+  
+  def unbindValue(): Unit = js.native
   
   def updateCommentFromSurvey(newValue: js.Any): js.Any = js.native
   

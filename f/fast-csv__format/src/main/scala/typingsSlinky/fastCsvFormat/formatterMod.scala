@@ -29,6 +29,8 @@ object formatterMod extends js.Object {
     
     var gatherHeaders: js.Any = js.native
     
-    var isHashArray: js.Any = js.native
+    var isRowArray: js.Any = js.native
+    
+    var isRowHashArray: js.Any = js.native
   }
 }

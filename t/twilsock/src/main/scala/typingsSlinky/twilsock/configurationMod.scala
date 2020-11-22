@@ -1,6 +1,7 @@
 package typingsSlinky.twilsock
 
 import typingsSlinky.loglevel.mod.LogLevelDesc
+import typingsSlinky.std.Set
 import typingsSlinky.twilsock.initregistrationMod.InitRegistration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,6 +30,8 @@ object configurationMod extends js.Object {
     val activeGrant: String = js.native
     
     val clientMetadata: js.Any = js.native
+    
+    var confirmedCapabilities: Set[String] = js.native
     
     def continuationToken: String = js.native
     

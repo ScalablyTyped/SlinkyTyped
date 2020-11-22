@@ -33,7 +33,7 @@ trait CreateTableInput extends js.Object {
   var LocalSecondaryIndexes: js.UndefOr[LocalSecondaryIndexList] = js.native
   
   /**
-    * Represents the provisioned throughput settings for a specified table or index. The settings can be modified using the UpdateTable operation.  If you set BillingMode as PROVISIONED, you must specify this property. If you set BillingMode as PAY_PER_REQUEST, you cannot specify this property.  For current minimum and maximum provisioned throughput values, see Limits in the Amazon DynamoDB Developer Guide.
+    * Represents the provisioned throughput settings for a specified table or index. The settings can be modified using the UpdateTable operation.  If you set BillingMode as PROVISIONED, you must specify this property. If you set BillingMode as PAY_PER_REQUEST, you cannot specify this property. For current minimum and maximum provisioned throughput values, see Service, Account, and Table Quotas in the Amazon DynamoDB Developer Guide.
     */
   var ProvisionedThroughput: js.UndefOr[typingsSlinky.awsSdk.documentClientMod.DocumentClient.ProvisionedThroughput] = js.native
   

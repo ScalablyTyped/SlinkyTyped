@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * This object contains a helper method for generating default labels to be set on a layer's [cluster configuration](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#labelingInfo). The default label is based on the layer's renderer. In most cases the default label configuration will be the total number of features in the cluster. This value will be rounded and formatted (e.g. instead of `2385`, the cluster label will display `2.4k`). In some cases, such as renderers with a [SizeVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-SizeVariable.html), the default label will display the average value of the attribute represented by the size variable.
+  * This object contains a helper method for generating default labels to be set on a layer's [cluster configuration](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#labelingInfo).
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-labels-clusters.html)
   */
@@ -13,15 +13,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait clusters extends js.Object {
   
   /**
-    * Generates default [labelingInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#labelingInfo) schemes to be set on a FeatureLayer's [featureReduction](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#featureReduction) configuration. Returns one or more suggested LabelClasses for a given layer based on its renderer. It also returns a suggested [clusterMinSize](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#clusterMinSize) to ensure labels fit inside clusters.  If a renderer has a non-scale dependent [SizeVariable](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-visualVariables-SizeVariable.html), then the average value of the field or expression used to determine the cluster size will be suggested as the default label value. In all other scenarios, the suggested label will display the cluster count in the center of the label.
+    * Generates default [labelingInfo](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-FeatureReductionCluster.html#labelingInfo) schemes to be set on a FeatureLayer's [featureReduction](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#featureReduction) configuration.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-labels-clusters.html#getLabelSchemes)
-    *
-    * @param params See the table below for details of each parameter that may be passed to this function.
-    * @param params.layer The point layer that has or will have clustering enabled.
-    * @param params.renderer The renderer to set on the input layer when clustering is enabled. Specify this parameter if the layer's renderer does not match the renderer that will be used when clustering is enabled. This cannot be a [HeatmapRenderer](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-HeatmapRenderer.html).
-    * @param params.view The view where the input layer will be rendered.
-    *
     */
   def getLabelSchemes(params: clustersGetLabelSchemesParams): js.Promise[Schemes] = js.native
 }

@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ViewOptions[TModel /* <: Model[_, ModelSetOptions] */]
+trait ViewOptions[TModel /* <: Model[_, ModelSetOptions, js.Object] */]
   extends typingsSlinky.backbone.mod.ViewOptions[TModel]
      with ViewMixinOptions {
   
@@ -36,13 +36,13 @@ trait ViewOptions[TModel /* <: Model[_, ModelSetOptions] */]
 object ViewOptions {
   
   @scala.inline
-  def apply[TModel /* <: Model[_, ModelSetOptions] */](): ViewOptions[TModel] = {
+  def apply[TModel /* <: Model[_, ModelSetOptions, js.Object] */](): ViewOptions[TModel] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[ViewOptions[TModel]]
   }
   
   @scala.inline
-  implicit class ViewOptionsOps[Self <: ViewOptions[_], TModel /* <: Model[_, ModelSetOptions] */] (val x: Self with ViewOptions[TModel]) extends AnyVal {
+  implicit class ViewOptionsOps[Self <: ViewOptions[_], TModel /* <: Model[_, ModelSetOptions, js.Object] */] (val x: Self with ViewOptions[TModel]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]

@@ -2,13 +2,13 @@ package typingsSlinky.reactSignatureCanvas.mod
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.react.mod.CanvasHTMLAttributes
-import typingsSlinky.signaturePad.mod.SignaturePadOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait ReactSignatureCanvasProps extends SignaturePadOptions {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SignaturePad.SignaturePadOptions * / any */ @js.native
+trait ReactSignatureCanvasProps extends js.Object {
   
   var canvasProps: js.UndefOr[CanvasHTMLAttributes[HTMLCanvasElement]] = js.native
   

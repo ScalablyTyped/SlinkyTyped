@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.webservicesMod.webservices
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.MsdEnumerationContainer
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.imagesMod.images.IImage
@@ -11,24 +12,25 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.ObjectHandlingBackupEnum
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.StructureVersionInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/published-web-services relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/published-web-services relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/webservices", "webservices.VersionedService")
 @js.native
-class VersionedService protected () extends Element {
+class VersionedService protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def appServiceState: AppServiceState = js.native
@@ -71,9 +73,6 @@ class VersionedService protected () extends Element {
   
   def isLockedByContract: Boolean = js.native
   def isLockedByContract_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FVersionedService: IModel = js.native
   
   /**
     * In version 7.17.0: introduced

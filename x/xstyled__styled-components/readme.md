@@ -1,7 +1,7 @@
 
 # Scala.js typings for xstyled__styled-components
 
-Typings are for version 1.17
+Typings are for version 1.19
 
 ## Library description:
 Xstyled bindings for styled-components.

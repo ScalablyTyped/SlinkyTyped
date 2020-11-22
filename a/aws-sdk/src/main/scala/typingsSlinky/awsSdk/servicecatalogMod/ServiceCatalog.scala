@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.servicecatalogMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -199,12 +199,12 @@ trait ServiceCatalog extends Service {
   ): Request[CreatePortfolioOutput, AWSError] = js.native
   
   /**
-    * Shares the specified portfolio with the specified account or organization node. Shares to an organization node can only be created by the master account of an organization or by a delegated administrator. You can share portfolios to an organization, an organizational unit, or a specific account. Note that if a delegated admin is de-registered, they can no longer create portfolio shares.  AWSOrganizationsAccess must be enabled in order to create a portfolio share to an organization node. You can't share a shared resource. This includes portfolios that contain a shared product.
+    * Shares the specified portfolio with the specified account or organization node. Shares to an organization node can only be created by the management account of an organization or by a delegated administrator. You can share portfolios to an organization, an organizational unit, or a specific account. Note that if a delegated admin is de-registered, they can no longer create portfolio shares.  AWSOrganizationsAccess must be enabled in order to create a portfolio share to an organization node. You can't share a shared resource. This includes portfolios that contain a shared product.
     */
   def createPortfolioShare(): Request[CreatePortfolioShareOutput, AWSError] = js.native
   def createPortfolioShare(callback: js.Function2[/* err */ AWSError, /* data */ CreatePortfolioShareOutput, Unit]): Request[CreatePortfolioShareOutput, AWSError] = js.native
   /**
-    * Shares the specified portfolio with the specified account or organization node. Shares to an organization node can only be created by the master account of an organization or by a delegated administrator. You can share portfolios to an organization, an organizational unit, or a specific account. Note that if a delegated admin is de-registered, they can no longer create portfolio shares.  AWSOrganizationsAccess must be enabled in order to create a portfolio share to an organization node. You can't share a shared resource. This includes portfolios that contain a shared product.
+    * Shares the specified portfolio with the specified account or organization node. Shares to an organization node can only be created by the management account of an organization or by a delegated administrator. You can share portfolios to an organization, an organizational unit, or a specific account. Note that if a delegated admin is de-registered, they can no longer create portfolio shares.  AWSOrganizationsAccess must be enabled in order to create a portfolio share to an organization node. You can't share a shared resource. This includes portfolios that contain a shared product.
     */
   def createPortfolioShare(params: CreatePortfolioShareInput): Request[CreatePortfolioShareOutput, AWSError] = js.native
   def createPortfolioShare(
@@ -311,12 +311,12 @@ trait ServiceCatalog extends Service {
   ): Request[DeletePortfolioOutput, AWSError] = js.native
   
   /**
-    * Stops sharing the specified portfolio with the specified account or organization node. Shares to an organization node can only be deleted by the master account of an organization or by a delegated administrator. Note that if a delegated admin is de-registered, portfolio shares created from that account are removed.
+    * Stops sharing the specified portfolio with the specified account or organization node. Shares to an organization node can only be deleted by the management account of an organization or by a delegated administrator. Note that if a delegated admin is de-registered, portfolio shares created from that account are removed.
     */
   def deletePortfolioShare(): Request[DeletePortfolioShareOutput, AWSError] = js.native
   def deletePortfolioShare(callback: js.Function2[/* err */ AWSError, /* data */ DeletePortfolioShareOutput, Unit]): Request[DeletePortfolioShareOutput, AWSError] = js.native
   /**
-    * Stops sharing the specified portfolio with the specified account or organization node. Shares to an organization node can only be deleted by the master account of an organization or by a delegated administrator. Note that if a delegated admin is de-registered, portfolio shares created from that account are removed.
+    * Stops sharing the specified portfolio with the specified account or organization node. Shares to an organization node can only be deleted by the management account of an organization or by a delegated administrator. Note that if a delegated admin is de-registered, portfolio shares created from that account are removed.
     */
   def deletePortfolioShare(params: DeletePortfolioShareInput): Request[DeletePortfolioShareOutput, AWSError] = js.native
   def deletePortfolioShare(
@@ -437,12 +437,12 @@ trait ServiceCatalog extends Service {
   ): Request[DescribePortfolioOutput, AWSError] = js.native
   
   /**
-    * Gets the status of the specified portfolio share operation. This API can only be called by the master account in the organization or by a delegated admin.
+    * Gets the status of the specified portfolio share operation. This API can only be called by the management account in the organization or by a delegated admin.
     */
   def describePortfolioShareStatus(): Request[DescribePortfolioShareStatusOutput, AWSError] = js.native
   def describePortfolioShareStatus(callback: js.Function2[/* err */ AWSError, /* data */ DescribePortfolioShareStatusOutput, Unit]): Request[DescribePortfolioShareStatusOutput, AWSError] = js.native
   /**
-    * Gets the status of the specified portfolio share operation. This API can only be called by the master account in the organization or by a delegated admin.
+    * Gets the status of the specified portfolio share operation. This API can only be called by the management account in the organization or by a delegated admin.
     */
   def describePortfolioShareStatus(params: DescribePortfolioShareStatusInput): Request[DescribePortfolioShareStatusOutput, AWSError] = js.native
   def describePortfolioShareStatus(
@@ -607,12 +607,12 @@ trait ServiceCatalog extends Service {
   ): Request[DescribeTagOptionOutput, AWSError] = js.native
   
   /**
-    * Disable portfolio sharing through AWS Organizations feature. This feature will not delete your current shares but it will prevent you from creating new shares throughout your organization. Current shares will not be in sync with your organization structure if it changes after calling this API. This API can only be called by the master account in the organization. This API can't be invoked if there are active delegated administrators in the organization. Note that a delegated administrator is not authorized to invoke DisableAWSOrganizationsAccess.
+    * Disable portfolio sharing through AWS Organizations feature. This feature will not delete your current shares but it will prevent you from creating new shares throughout your organization. Current shares will not be in sync with your organization structure if it changes after calling this API. This API can only be called by the management account in the organization. This API can't be invoked if there are active delegated administrators in the organization. Note that a delegated administrator is not authorized to invoke DisableAWSOrganizationsAccess.
     */
   def disableAWSOrganizationsAccess(): Request[DisableAWSOrganizationsAccessOutput, AWSError] = js.native
   def disableAWSOrganizationsAccess(callback: js.Function2[/* err */ AWSError, /* data */ DisableAWSOrganizationsAccessOutput, Unit]): Request[DisableAWSOrganizationsAccessOutput, AWSError] = js.native
   /**
-    * Disable portfolio sharing through AWS Organizations feature. This feature will not delete your current shares but it will prevent you from creating new shares throughout your organization. Current shares will not be in sync with your organization structure if it changes after calling this API. This API can only be called by the master account in the organization. This API can't be invoked if there are active delegated administrators in the organization. Note that a delegated administrator is not authorized to invoke DisableAWSOrganizationsAccess.
+    * Disable portfolio sharing through AWS Organizations feature. This feature will not delete your current shares but it will prevent you from creating new shares throughout your organization. Current shares will not be in sync with your organization structure if it changes after calling this API. This API can only be called by the management account in the organization. This API can't be invoked if there are active delegated administrators in the organization. Note that a delegated administrator is not authorized to invoke DisableAWSOrganizationsAccess.
     */
   def disableAWSOrganizationsAccess(params: DisableAWSOrganizationsAccessInput): Request[DisableAWSOrganizationsAccessOutput, AWSError] = js.native
   def disableAWSOrganizationsAccess(
@@ -707,12 +707,12 @@ trait ServiceCatalog extends Service {
   ): Request[DisassociateTagOptionFromResourceOutput, AWSError] = js.native
   
   /**
-    * Enable portfolio sharing feature through AWS Organizations. This API will allow Service Catalog to receive updates on your organization in order to sync your shares with the current structure. This API can only be called by the master account in the organization. By calling this API Service Catalog will make a call to organizations:EnableAWSServiceAccess on your behalf so that your shares can be in sync with any changes in your AWS Organizations structure. Note that a delegated administrator is not authorized to invoke EnableAWSOrganizationsAccess.
+    * Enable portfolio sharing feature through AWS Organizations. This API will allow Service Catalog to receive updates on your organization in order to sync your shares with the current structure. This API can only be called by the management account in the organization. By calling this API Service Catalog will make a call to organizations:EnableAWSServiceAccess on your behalf so that your shares can be in sync with any changes in your AWS Organizations structure. Note that a delegated administrator is not authorized to invoke EnableAWSOrganizationsAccess.
     */
   def enableAWSOrganizationsAccess(): Request[EnableAWSOrganizationsAccessOutput, AWSError] = js.native
   def enableAWSOrganizationsAccess(callback: js.Function2[/* err */ AWSError, /* data */ EnableAWSOrganizationsAccessOutput, Unit]): Request[EnableAWSOrganizationsAccessOutput, AWSError] = js.native
   /**
-    * Enable portfolio sharing feature through AWS Organizations. This API will allow Service Catalog to receive updates on your organization in order to sync your shares with the current structure. This API can only be called by the master account in the organization. By calling this API Service Catalog will make a call to organizations:EnableAWSServiceAccess on your behalf so that your shares can be in sync with any changes in your AWS Organizations structure. Note that a delegated administrator is not authorized to invoke EnableAWSOrganizationsAccess.
+    * Enable portfolio sharing feature through AWS Organizations. This API will allow Service Catalog to receive updates on your organization in order to sync your shares with the current structure. This API can only be called by the management account in the organization. By calling this API Service Catalog will make a call to organizations:EnableAWSServiceAccess on your behalf so that your shares can be in sync with any changes in your AWS Organizations structure. Note that a delegated administrator is not authorized to invoke EnableAWSOrganizationsAccess.
     */
   def enableAWSOrganizationsAccess(params: EnableAWSOrganizationsAccessInput): Request[EnableAWSOrganizationsAccessOutput, AWSError] = js.native
   def enableAWSOrganizationsAccess(
@@ -751,18 +751,46 @@ trait ServiceCatalog extends Service {
   ): Request[ExecuteProvisionedProductServiceActionOutput, AWSError] = js.native
   
   /**
-    * Get the Access Status for AWS Organization portfolio share feature. This API can only be called by the master account in the organization or by a delegated admin.
+    * Get the Access Status for AWS Organization portfolio share feature. This API can only be called by the management account in the organization or by a delegated admin.
     */
   def getAWSOrganizationsAccessStatus(): Request[GetAWSOrganizationsAccessStatusOutput, AWSError] = js.native
   def getAWSOrganizationsAccessStatus(callback: js.Function2[/* err */ AWSError, /* data */ GetAWSOrganizationsAccessStatusOutput, Unit]): Request[GetAWSOrganizationsAccessStatusOutput, AWSError] = js.native
   /**
-    * Get the Access Status for AWS Organization portfolio share feature. This API can only be called by the master account in the organization or by a delegated admin.
+    * Get the Access Status for AWS Organization portfolio share feature. This API can only be called by the management account in the organization or by a delegated admin.
     */
   def getAWSOrganizationsAccessStatus(params: GetAWSOrganizationsAccessStatusInput): Request[GetAWSOrganizationsAccessStatusOutput, AWSError] = js.native
   def getAWSOrganizationsAccessStatus(
     params: GetAWSOrganizationsAccessStatusInput,
     callback: js.Function2[/* err */ AWSError, /* data */ GetAWSOrganizationsAccessStatusOutput, Unit]
   ): Request[GetAWSOrganizationsAccessStatusOutput, AWSError] = js.native
+  
+  /**
+    * This API takes either a ProvisonedProductId or a ProvisionedProductName, along with a list of one or more output keys, and responds with the key/value pairs of those outputs.
+    */
+  def getProvisionedProductOutputs(): Request[GetProvisionedProductOutputsOutput, AWSError] = js.native
+  def getProvisionedProductOutputs(callback: js.Function2[/* err */ AWSError, /* data */ GetProvisionedProductOutputsOutput, Unit]): Request[GetProvisionedProductOutputsOutput, AWSError] = js.native
+  /**
+    * This API takes either a ProvisonedProductId or a ProvisionedProductName, along with a list of one or more output keys, and responds with the key/value pairs of those outputs.
+    */
+  def getProvisionedProductOutputs(params: GetProvisionedProductOutputsInput): Request[GetProvisionedProductOutputsOutput, AWSError] = js.native
+  def getProvisionedProductOutputs(
+    params: GetProvisionedProductOutputsInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetProvisionedProductOutputsOutput, Unit]
+  ): Request[GetProvisionedProductOutputsOutput, AWSError] = js.native
+  
+  /**
+    * Requests the import of a resource as a Service Catalog provisioned product that is associated to a Service Catalog product and provisioning artifact. Once imported all supported Service Catalog governance actions are supported on the provisioned product. Resource import only supports CloudFormation stack ARNs. CloudFormation StackSets and non-root nested stacks are not supported. The CloudFormation stack must have one of the following statuses to be imported: CREATE_COMPLETE, UPDATE_COMPLETE, UPDATE_ROLLBACK_COMPLETE, IMPORT_COMPLETE, IMPORT_ROLLBACK_COMPLETE. Import of the resource requires that the CloudFormation stack template matches the associated Service Catalog product provisioning artifact. 
+    */
+  def importAsProvisionedProduct(): Request[ImportAsProvisionedProductOutput, AWSError] = js.native
+  def importAsProvisionedProduct(callback: js.Function2[/* err */ AWSError, /* data */ ImportAsProvisionedProductOutput, Unit]): Request[ImportAsProvisionedProductOutput, AWSError] = js.native
+  /**
+    * Requests the import of a resource as a Service Catalog provisioned product that is associated to a Service Catalog product and provisioning artifact. Once imported all supported Service Catalog governance actions are supported on the provisioned product. Resource import only supports CloudFormation stack ARNs. CloudFormation StackSets and non-root nested stacks are not supported. The CloudFormation stack must have one of the following statuses to be imported: CREATE_COMPLETE, UPDATE_COMPLETE, UPDATE_ROLLBACK_COMPLETE, IMPORT_COMPLETE, IMPORT_ROLLBACK_COMPLETE. Import of the resource requires that the CloudFormation stack template matches the associated Service Catalog product provisioning artifact. 
+    */
+  def importAsProvisionedProduct(params: ImportAsProvisionedProductInput): Request[ImportAsProvisionedProductOutput, AWSError] = js.native
+  def importAsProvisionedProduct(
+    params: ImportAsProvisionedProductInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ ImportAsProvisionedProductOutput, Unit]
+  ): Request[ImportAsProvisionedProductOutput, AWSError] = js.native
   
   /**
     * Lists all portfolios for which sharing was accepted by this account.
@@ -821,12 +849,12 @@ trait ServiceCatalog extends Service {
   ): Request[ListLaunchPathsOutput, AWSError] = js.native
   
   /**
-    * Lists the organization nodes that have access to the specified portfolio. This API can only be called by the master account in the organization or by a delegated admin. If a delegated admin is de-registered, they can no longer perform this operation.
+    * Lists the organization nodes that have access to the specified portfolio. This API can only be called by the management account in the organization or by a delegated admin. If a delegated admin is de-registered, they can no longer perform this operation.
     */
   def listOrganizationPortfolioAccess(): Request[ListOrganizationPortfolioAccessOutput, AWSError] = js.native
   def listOrganizationPortfolioAccess(callback: js.Function2[/* err */ AWSError, /* data */ ListOrganizationPortfolioAccessOutput, Unit]): Request[ListOrganizationPortfolioAccessOutput, AWSError] = js.native
   /**
-    * Lists the organization nodes that have access to the specified portfolio. This API can only be called by the master account in the organization or by a delegated admin. If a delegated admin is de-registered, they can no longer perform this operation.
+    * Lists the organization nodes that have access to the specified portfolio. This API can only be called by the management account in the organization or by a delegated admin. If a delegated admin is de-registered, they can no longer perform this operation.
     */
   def listOrganizationPortfolioAccess(params: ListOrganizationPortfolioAccessInput): Request[ListOrganizationPortfolioAccessOutput, AWSError] = js.native
   def listOrganizationPortfolioAccess(

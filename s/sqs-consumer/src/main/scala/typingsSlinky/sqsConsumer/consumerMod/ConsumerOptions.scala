@@ -20,6 +20,8 @@ trait ConsumerOptions extends js.Object {
   
   var handleMessageTimeout: js.UndefOr[Double] = js.native
   
+  var heartbeatInterval: js.UndefOr[Double] = js.native
+  
   var messageAttributeNames: js.UndefOr[js.Array[String]] = js.native
   
   var pollingWaitTimeMs: js.UndefOr[Double] = js.native
@@ -99,6 +101,12 @@ object ConsumerOptions {
     
     @scala.inline
     def deleteHandleMessageTimeout: Self = this.set("handleMessageTimeout", js.undefined)
+    
+    @scala.inline
+    def setHeartbeatInterval(value: Double): Self = this.set("heartbeatInterval", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeartbeatInterval: Self = this.set("heartbeatInterval", js.undefined)
     
     @scala.inline
     def setMessageAttributeNamesVarargs(value: String*): Self = this.set("messageAttributeNames", js.Array(value :_*))

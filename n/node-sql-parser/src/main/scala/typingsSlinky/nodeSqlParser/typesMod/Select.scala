@@ -20,7 +20,7 @@ trait Select extends AST {
   
   var having: js.Array[_] | Null = js.native
   
-  var limit: js.Array[Limit] | Null = js.native
+  var limit: Limit | Null = js.native
   
   var options: js.Array[_] | Null = js.native
   
@@ -102,10 +102,7 @@ object Select {
     def setHavingNull: Self = this.set("having", null)
     
     @scala.inline
-    def setLimitVarargs(value: Limit*): Self = this.set("limit", js.Array(value :_*))
-    
-    @scala.inline
-    def setLimit(value: js.Array[Limit]): Self = this.set("limit", value.asInstanceOf[js.Any])
+    def setLimit(value: Limit): Self = this.set("limit", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLimitNull: Self = this.set("limit", null)

@@ -3,6 +3,7 @@ package typingsSlinky.yandexMaps.mod.multiRouter
 import typingsSlinky.yandexMaps.anon.Dictindex
 import typingsSlinky.yandexMaps.mod.GeoObjectCollection
 import typingsSlinky.yandexMaps.mod.IGeoObject
+import typingsSlinky.yandexMaps.mod.IGeometry
 import typingsSlinky.yandexMaps.mod.IMultiRouteModelJson
 import typingsSlinky.yandexMaps.mod.multiRouter.driving.Route
 import scala.scalajs.js
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("yandex-maps", "multiRouter.MultiRoute")
 @js.native
-class MultiRoute protected () extends IGeoObject {
+class MultiRoute protected () extends IGeoObject[IGeometry] {
   def this(model: IMultiRouteModelJson) = this()
   def this(model: MultiRouteModel) = this()
   def this(model: IMultiRouteModelJson, options: Dictindex) = this()

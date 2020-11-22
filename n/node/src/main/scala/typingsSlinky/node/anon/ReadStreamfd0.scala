@@ -120,7 +120,7 @@ trait ReadStreamfd0 extends js.Object {
   @JSName("addListener")
   def addListener_unpipe(event: unpipe, listener: js.Function1[/* src */ Readable, Unit]): this.type = js.native
   
-  def address(): AddressInfo | String = js.native
+  def address(): AddressInfo | js.Object = js.native
   
   val bufferSize: Double = js.native
   
@@ -214,8 +214,8 @@ trait ReadStreamfd0 extends js.Object {
   
   var isTTY: Boolean = js.native
   
-  def listenerCount(`type`: String): Double = js.native
-  def listenerCount(`type`: js.Symbol): Double = js.native
+  def listenerCount(event: String): Double = js.native
+  def listenerCount(event: js.Symbol): Double = js.native
   
   def listeners(event: String): js.Array[js.Function] = js.native
   def listeners(event: js.Symbol): js.Array[js.Function] = js.native

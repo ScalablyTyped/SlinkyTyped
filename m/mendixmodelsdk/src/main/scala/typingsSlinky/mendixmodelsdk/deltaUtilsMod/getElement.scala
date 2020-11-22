@@ -1,7 +1,9 @@
 package typingsSlinky.mendixmodelsdk.deltaUtilsMod
 
 import typingsSlinky.mendixmodelsdk.abstractModelMod.AbstractModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.unitsMod.ModelUnit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,5 +13,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getElement extends js.Object {
   
-  def apply(model: AbstractModel, unit: ModelUnit, elementId: String): AbstractElement = js.native
+  def apply(model: AbstractModel, unit: ModelUnit[IAbstractModel], elementId: String): AbstractElement[IAbstractModel, Container] = js.native
 }

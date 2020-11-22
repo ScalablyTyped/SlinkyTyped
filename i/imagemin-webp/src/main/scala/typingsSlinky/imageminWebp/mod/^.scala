@@ -9,6 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
+  /**
+    * WebP imagemin plugin
+    */
   def apply(): Plugin = js.native
   def apply(options: Options): Plugin = js.native
 }

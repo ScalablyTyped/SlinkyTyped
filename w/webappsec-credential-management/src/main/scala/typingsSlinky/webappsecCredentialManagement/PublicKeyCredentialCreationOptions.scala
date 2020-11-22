@@ -1,9 +1,7 @@
 package typingsSlinky.webappsecCredentialManagement
 
+import typingsSlinky.std.AttestationConveyancePreference
 import typingsSlinky.std.BufferSource
-import typingsSlinky.webappsecCredentialManagement.webappsecCredentialManagementStrings.direct
-import typingsSlinky.webappsecCredentialManagement.webappsecCredentialManagementStrings.indirect
-import typingsSlinky.webappsecCredentialManagement.webappsecCredentialManagementStrings.none
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PublicKeyCredentialCreationOptions extends js.Object {
   
-  var attestation: js.UndefOr[none | indirect | direct] = js.native
+  var attestation: js.UndefOr[AttestationConveyancePreference] = js.native
   
   var authenticatorSelection: js.UndefOr[AuthenticatorSelectionCriteria] = js.native
   
@@ -82,7 +80,7 @@ object PublicKeyCredentialCreationOptions {
     def setUser(value: PublicKeyCredentialUserEntity): Self = this.set("user", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setAttestation(value: none | indirect | direct): Self = this.set("attestation", value.asInstanceOf[js.Any])
+    def setAttestation(value: AttestationConveyancePreference): Self = this.set("attestation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAttestation: Self = this.set("attestation", js.undefined)

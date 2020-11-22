@@ -15,6 +15,11 @@ trait Expand extends js.Object {
   var expand: js.UndefOr[ExpandOptions] = js.native
   
   var label: js.UndefOr[LabelOptionsWithThreshold] = js.native
+  
+  /**
+    * Sets the angular separation between each adjacent arc.
+    */
+  var padAngle: js.UndefOr[Double] = js.native
 }
 object Expand {
   
@@ -50,5 +55,11 @@ object Expand {
     
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
+    
+    @scala.inline
+    def setPadAngle(value: Double): Self = this.set("padAngle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePadAngle: Self = this.set("padAngle", js.undefined)
   }
 }

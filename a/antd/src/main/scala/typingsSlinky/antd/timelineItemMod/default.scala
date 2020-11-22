@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("antd/lib/timeline/TimelineItem", JSImport.Default)
 @js.native
-object default extends TopLevel[ReactComponentClass[TimeLineItemProps]]
+object default extends TopLevel[ReactComponentClass[TimelineItemProps]]

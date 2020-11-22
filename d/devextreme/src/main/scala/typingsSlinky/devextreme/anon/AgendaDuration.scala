@@ -15,6 +15,7 @@ import typingsSlinky.devextreme.devextremeStrings.week
 import typingsSlinky.devextreme.devextremeStrings.workWeek
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.core.template
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxSchedulerScrolling
 import typingsSlinky.devextreme.mod.global.JQuery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -106,6 +107,8 @@ trait AgendaDuration extends js.Object {
       String | org.scalajs.dom.raw.Element | JQuery
     ])
   ] = js.native
+  
+  var scrolling: js.UndefOr[dxSchedulerScrolling] = js.native
   
   var startDate: js.UndefOr[js.Date | Double | String] = js.native
   
@@ -357,6 +360,12 @@ object AgendaDuration {
     
     @scala.inline
     def deleteResourceCellTemplate: Self = this.set("resourceCellTemplate", js.undefined)
+    
+    @scala.inline
+    def setScrolling(value: dxSchedulerScrolling): Self = this.set("scrolling", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScrolling: Self = this.set("scrolling", js.undefined)
     
     @scala.inline
     def setStartDateDate(value: js.Date): Self = this.set("startDate", value.asInstanceOf[js.Any])

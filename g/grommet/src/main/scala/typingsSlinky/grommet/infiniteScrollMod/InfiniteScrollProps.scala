@@ -2,6 +2,7 @@ package typingsSlinky.grommet.infiniteScrollMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.grommet.grommetStrings.window
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,13 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait InfiniteScrollProps extends js.Object {
   
-  var children: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var items: js.UndefOr[js.Array[String | Double | ReactElement | (Record[String, _])]] = js.native
   
-  var items: js.UndefOr[js.Array[_]] = js.native
+  var onMore: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var onMore: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
-  
-  var renderMarker: js.UndefOr[js.Function1[/* repeated */ js.Any, _]] = js.native
+  var renderMarker: js.UndefOr[js.Function1[/* marker */ ReactElement, ReactElement]] = js.native
   
   var replace: js.UndefOr[Boolean] = js.native
   
@@ -49,28 +48,22 @@ object InfiniteScrollProps {
     }
     
     @scala.inline
-    def setChildren(value: /* repeated */ js.Any => _): Self = this.set("children", js.Any.fromFunction1(value))
+    def setItemsVarargs(value: (String | Double | ReactElement | (Record[String, js.Any]))*): Self = this.set("items", js.Array(value :_*))
     
     @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
-    
-    @scala.inline
-    def setItemsVarargs(value: js.Any*): Self = this.set("items", js.Array(value :_*))
-    
-    @scala.inline
-    def setItems(value: js.Array[_]): Self = this.set("items", value.asInstanceOf[js.Any])
+    def setItems(value: js.Array[String | Double | ReactElement | (Record[String, _])]): Self = this.set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteItems: Self = this.set("items", js.undefined)
     
     @scala.inline
-    def setOnMore(value: /* repeated */ js.Any => _): Self = this.set("onMore", js.Any.fromFunction1(value))
+    def setOnMore(value: () => Unit): Self = this.set("onMore", js.Any.fromFunction0(value))
     
     @scala.inline
     def deleteOnMore: Self = this.set("onMore", js.undefined)
     
     @scala.inline
-    def setRenderMarker(value: /* repeated */ js.Any => _): Self = this.set("renderMarker", js.Any.fromFunction1(value))
+    def setRenderMarker(value: /* marker */ ReactElement => ReactElement): Self = this.set("renderMarker", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteRenderMarker: Self = this.set("renderMarker", js.undefined)

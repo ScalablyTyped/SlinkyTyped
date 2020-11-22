@@ -20,5 +20,5 @@ object default extends js.Object {
   var propTypes: KnobValidator = js.native
   
   def serialize(): String = js.native
-  def serialize(value: Double): String = js.native
+  def serialize(value: NumberTypeKnobValue): String = js.native
 }

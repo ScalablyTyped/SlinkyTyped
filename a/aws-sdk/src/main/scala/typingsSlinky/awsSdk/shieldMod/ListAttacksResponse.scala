@@ -13,7 +13,7 @@ trait ListAttacksResponse extends js.Object {
   var AttackSummaries: js.UndefOr[typingsSlinky.awsSdk.shieldMod.AttackSummaries] = js.native
   
   /**
-    * The token returned by a previous call to indicate that there is more data available. If not null, more results are available. Pass this value for the NextMarker parameter in a subsequent call to ListAttacks to retrieve the next set of items. AWS WAF might return the list of AttackSummary objects in batches smaller than the number specified by MaxResults. If there are more AttackSummary objects to return, AWS WAF will always also return a NextToken.
+    * The token returned by a previous call to indicate that there is more data available. If not null, more results are available. Pass this value for the NextMarker parameter in a subsequent call to ListAttacks to retrieve the next set of items. Shield Advanced might return the list of AttackSummary objects in batches smaller than the number specified by MaxResults. If there are more attack summary objects to return, Shield Advanced will always also return a NextToken.
     */
   var NextToken: js.UndefOr[Token] = js.native
 }

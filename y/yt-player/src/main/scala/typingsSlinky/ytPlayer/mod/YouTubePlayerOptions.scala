@@ -43,6 +43,13 @@ trait YouTubePlayerOptions extends js.Object {
   var height: js.UndefOr[Double] = js.native
   
   /**
+    * This parameter controls the hostname that videos are loaded from.
+    * Set to `https://www.youtube-nocookie.com` for enhanced privacy.
+    * The default value is `https://www.youtube.com`.
+    */
+  var host: js.UndefOr[String] = js.native
+  
+  /**
     * This parameter indicates whether the player will respond to keyboard
     * shortcuts. The default value is true.
     */
@@ -58,7 +65,7 @@ trait YouTubePlayerOptions extends js.Object {
   
   /**
     * This parameter controls whether videos play inline or fullscreen in an
-    * HTML5 player on iOS. The default value is true.
+    * HTML5 player on iOS. The default is true.
     */
   var playsInline: js.UndefOr[Boolean] = js.native
   
@@ -67,6 +74,15 @@ trait YouTubePlayerOptions extends js.Object {
     * from other channels
     */
   var related: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * This parameter causes the player to begin playing the video at the given number
+    * of seconds from the start of the video. The parameter value is a positive integer.
+    * Note that the player will look for the closest keyframe to the time you specify.
+    * This means that sometimes the play head may seek to just before the requested time,
+    * usually no more than around two seconds. Default is 0.
+    */
+  var start: js.UndefOr[Double] = js.native
   
   /**
     * The time between onTimeupdate callbacks, in milliseconds. Default is
@@ -137,6 +153,12 @@ object YouTubePlayerOptions {
     def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
+    def setHost(value: String): Self = this.set("host", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHost: Self = this.set("host", js.undefined)
+    
+    @scala.inline
     def setKeyboard(value: Boolean): Self = this.set("keyboard", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -159,6 +181,12 @@ object YouTubePlayerOptions {
     
     @scala.inline
     def deleteRelated: Self = this.set("related", js.undefined)
+    
+    @scala.inline
+    def setStart(value: Double): Self = this.set("start", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStart: Self = this.set("start", js.undefined)
     
     @scala.inline
     def setTimeupdateFrequency(value: Double): Self = this.set("timeupdateFrequency", value.asInstanceOf[js.Any])

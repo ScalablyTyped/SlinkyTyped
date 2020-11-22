@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /**
   * _Group of contacts._
   *
-  * In order to add the group to your address book, you must queue it for insertion using `Contact.add()`. When you're done making changes to the address book you should call
+  * In order to add the group to your address book, you must queue it for insertion using `ContactsGroup.add()`. When you're done making changes to the address book you should call
   * `Contact.persistChanges()` to persist the changes.
   * @see https://docs.scriptable.app/contactsgroup/#-new-contactsgroup
   */

@@ -1,6 +1,10 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import org.scalajs.dom.raw.Blob
+import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.WebGLBuffer
+import typingsSlinky.babylonjs.HTMLCanvasElement
+import typingsSlinky.babylonjs.ImageBitmap
 import typingsSlinky.babylonjs.WebGLProgram
 import typingsSlinky.babylonjs.WebGLRenderingContext
 import typingsSlinky.babylonjs.WebGLUniformLocation
@@ -153,6 +157,45 @@ trait NullEngine extends Engine {
   ): WebGLProgram = js.native
   
   /**
+    * Usually called from Texture.ts.
+    * Passed information to create a WebGLTexture
+    * @param urlArg defines a value which contains one of the following:
+    * * A conventional http URL, e.g. 'http://...' or 'file://...'
+    * * A base64 string of in-line texture data, e.g. 'data:image/jpg;base64,/...'
+    * * An indicator that data being passed using the buffer parameter, e.g. 'data:mytexture.jpg'
+    * @param noMipmap defines a boolean indicating that no mipmaps shall be generated.  Ignored for compressed textures.  They must be in the file
+    * @param invertY when true, image is flipped when loaded.  You probably want true. Certain compressed textures may invert this if their default is inverted (eg. ktx)
+    * @param scene needed for loading to the correct scene
+    * @param samplingMode mode with should be used sample / access the texture (Default: Texture.TRILINEAR_SAMPLINGMODE)
+    * @param onLoad optional callback to be called upon successful completion
+    * @param onError optional callback to be called upon failure
+    * @param buffer a source of a file previously fetched as either a base64 string, an ArrayBuffer (compressed or image format), HTMLImageElement (image format), or a Blob
+    * @param fallback an internal argument in case the function must be called again, due to etc1 not having alpha capabilities
+    * @param format internal format.  Default: RGB when extension is '.jpg' else RGBA.  Ignored for compressed textures
+    * @param forcedExtension defines the extension to use to pick the right loader
+    * @param mimeType defines an optional mime type
+    * @returns a InternalTexture for assignment back into BABYLON.Texture
+    */
+  def createTexture(
+    urlArg: Nullable[String],
+    noMipmap: Boolean,
+    invertY: Boolean,
+    scene: Nullable[ISceneLike],
+    samplingMode: js.UndefOr[Double],
+    onLoad: js.UndefOr[Nullable[js.Function0[Unit]]],
+    onError: js.UndefOr[Nullable[js.Function2[/* message */ String, /* exception */ _, Unit]]],
+    buffer: js.UndefOr[
+      Nullable[
+        String | js.typedarray.ArrayBuffer | js.typedarray.ArrayBufferView | HTMLImageElement | Blob | ImageBitmap
+      ]
+    ],
+    fallback: js.UndefOr[Nullable[InternalTexture]],
+    format: js.UndefOr[Nullable[Double]],
+    forcedExtension: js.UndefOr[Nullable[String]],
+    mimeType: js.UndefOr[String]
+  ): InternalTexture = js.native
+  
+  /**
     * Activates an effect, mkaing it the current one (ie. the one used for rendering)
     * @param effect defines the effect to activate
     */
@@ -162,51 +205,58 @@ trait NullEngine extends Engine {
     * Set the value of an uniform to an array of number
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of number to store
+    * @returns true if value was set
     */
-  def setArray(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
+  def setArray(uniform: WebGLUniformLocation, array: js.Array[Double]): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of number (stored as vec2)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of number to store
+    * @returns true if value was set
     */
-  def setArray2(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
+  def setArray2(uniform: WebGLUniformLocation, array: js.Array[Double]): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of number (stored as vec3)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of number to store
+    * @returns true if value was set
     */
-  def setArray3(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
+  def setArray3(uniform: WebGLUniformLocation, array: js.Array[Double]): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of number (stored as vec4)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of number to store
+    * @returns true if value was set
     */
-  def setArray4(uniform: WebGLUniformLocation, array: js.Array[Double]): Unit = js.native
+  def setArray4(uniform: WebGLUniformLocation, array: js.Array[Double]): Boolean = js.native
   
   /**
     * Set the value of an uniform to a boolean
     * @param uniform defines the webGL uniform location where to store the value
     * @param bool defines the boolean to store
+    * @returns true if value was set
     */
-  def setBool(uniform: WebGLUniformLocation, bool: Double): Unit = js.native
+  def setBool(uniform: WebGLUniformLocation, bool: Double): Boolean = js.native
   
   /**
     * Set the value of an uniform to a number (float)
     * @param uniform defines the webGL uniform location where to store the value
     * @param value defines the float number to store
+    * @returns true if value was set
     */
-  def setFloat(uniform: WebGLUniformLocation, value: Double): Unit = js.native
+  def setFloat(uniform: WebGLUniformLocation, value: Double): Boolean = js.native
   
   /**
     * Set the value of an uniform to a vec2
     * @param uniform defines the webGL uniform location where to store the value
     * @param x defines the 1st component of the value
     * @param y defines the 2nd component of the value
+    * @returns true if value was set
     */
-  def setFloat2(uniform: WebGLUniformLocation, x: Double, y: Double): Unit = js.native
+  def setFloat2(uniform: WebGLUniformLocation, x: Double, y: Double): Boolean = js.native
   
   /**
     * Set the value of an uniform to a vec3
@@ -214,8 +264,9 @@ trait NullEngine extends Engine {
     * @param x defines the 1st component of the value
     * @param y defines the 2nd component of the value
     * @param z defines the 3rd component of the value
+    * @returns true if value was set
     */
-  def setFloat3(uniform: WebGLUniformLocation, x: Double, y: Double, z: Double): Unit = js.native
+  def setFloat3(uniform: WebGLUniformLocation, x: Double, y: Double, z: Double): Boolean = js.native
   
   /**
     * Set the value of an uniform to a vec4
@@ -224,85 +275,97 @@ trait NullEngine extends Engine {
     * @param y defines the 2nd component of the value
     * @param z defines the 3rd component of the value
     * @param w defines the 4th component of the value
+    * @returns true if value was set
     */
-  def setFloat4(uniform: WebGLUniformLocation, x: Double, y: Double, z: Double, w: Double): Unit = js.native
+  def setFloat4(uniform: WebGLUniformLocation, x: Double, y: Double, z: Double, w: Double): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of float32
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of float32 to store
+    * @returns true if value was set
     */
-  def setFloatArray(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Unit = js.native
+  def setFloatArray(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of float32 (stored as vec2)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of float32 to store
+    * @returns true if value was set
     */
-  def setFloatArray2(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Unit = js.native
+  def setFloatArray2(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of float32 (stored as vec3)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of float32 to store
+    * @returns true if value was set
     */
-  def setFloatArray3(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Unit = js.native
+  def setFloatArray3(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of float32 (stored as vec4)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of float32 to store
+    * @returns true if value was set
     */
-  def setFloatArray4(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Unit = js.native
+  def setFloatArray4(uniform: WebGLUniformLocation, array: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of int32
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of int32 to store
+    * @returns true if value was set
     */
-  def setIntArray(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Unit = js.native
+  def setIntArray(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of int32 (stored as vec2)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of int32 to store
+    * @returns true if value was set
     */
-  def setIntArray2(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Unit = js.native
+  def setIntArray2(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of int32 (stored as vec3)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of int32 to store
+    * @returns true if value was set
     */
-  def setIntArray3(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Unit = js.native
+  def setIntArray3(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of int32 (stored as vec4)
     * @param uniform defines the webGL uniform location where to store the value
     * @param array defines the array of int32 to store
+    * @returns true if value was set
     */
-  def setIntArray4(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Unit = js.native
+  def setIntArray4(uniform: WebGLUniformLocation, array: js.typedarray.Int32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to an array of float32 (stored as matrices)
     * @param uniform defines the webGL uniform location where to store the value
     * @param matrices defines the array of float32 to store
+    * @returns true if value was set
     */
-  def setMatrices(uniform: WebGLUniformLocation, matrices: js.typedarray.Float32Array): Unit = js.native
+  def setMatrices(uniform: WebGLUniformLocation, matrices: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to a matrix (2x2)
     * @param uniform defines the webGL uniform location where to store the value
     * @param matrix defines the Float32Array representing the 2x2 matrix to store
+    * @returns true if value was set
     */
-  def setMatrix2x2(uniform: WebGLUniformLocation, matrix: js.typedarray.Float32Array): Unit = js.native
+  def setMatrix2x2(uniform: WebGLUniformLocation, matrix: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Set the value of an uniform to a matrix (3x3)
     * @param uniform defines the webGL uniform location where to store the value
     * @param matrix defines the Float32Array representing the 3x3 matrix to store
+    * @returns true if value was set
     */
-  def setMatrix3x3(uniform: WebGLUniformLocation, matrix: js.typedarray.Float32Array): Unit = js.native
+  def setMatrix3x3(uniform: WebGLUniformLocation, matrix: js.typedarray.Float32Array): Boolean = js.native
   
   /**
     * Update a dynamic index buffer
@@ -312,6 +375,37 @@ trait NullEngine extends Engine {
     */
   def updateDynamicIndexBuffer(indexBuffer: WebGLBuffer, indices: IndicesArray): Unit = js.native
   def updateDynamicIndexBuffer(indexBuffer: WebGLBuffer, indices: IndicesArray, offset: Double): Unit = js.native
+  
+  /**
+    * Update the content of a dynamic texture
+    * @param texture defines the texture to update
+    * @param canvas defines the canvas containing the source
+    * @param invertY defines if data must be stored with Y axis inverted
+    * @param premulAlpha defines if alpha is stored as premultiplied
+    * @param format defines the format of the data
+    * @param forceBindTexture if the texture should be forced to be bound eg. after a graphics context loss (Default: false)
+    */
+  def updateDynamicTexture(texture: Nullable[InternalTexture], canvas: HTMLCanvasElement, invertY: Boolean): Unit = js.native
+  def updateDynamicTexture(
+    texture: Nullable[InternalTexture],
+    canvas: HTMLCanvasElement,
+    invertY: Boolean,
+    premulAlpha: js.UndefOr[scala.Nothing],
+    format: Double
+  ): Unit = js.native
+  def updateDynamicTexture(
+    texture: Nullable[InternalTexture],
+    canvas: HTMLCanvasElement,
+    invertY: Boolean,
+    premulAlpha: Boolean
+  ): Unit = js.native
+  def updateDynamicTexture(
+    texture: Nullable[InternalTexture],
+    canvas: HTMLCanvasElement,
+    invertY: Boolean,
+    premulAlpha: Boolean,
+    format: Double
+  ): Unit = js.native
   
   /**
     * Updates a dynamic vertex buffer.

@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DesktopCapturerSource extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/desktop-capturer-source
+  // Docs: https://electronjs.org/docs/api/structures/desktop-capturer-source
   /**
     * An icon image of the application that owns the window or null if the source has
     * a type screen. The size of the icon is not known in advance and depends on what
-    * the the application provides.
+    * the application provides.
     */
   var appIcon: NativeImage_ = js.native
   

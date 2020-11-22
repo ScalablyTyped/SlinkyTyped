@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FileTextMode extends File {
   
   def read(): String | Null = js.native
-  def read(size: String): String | Null = js.native
+  def read(size: Double): String | Null = js.native
   
   def readline(): String = js.native
   

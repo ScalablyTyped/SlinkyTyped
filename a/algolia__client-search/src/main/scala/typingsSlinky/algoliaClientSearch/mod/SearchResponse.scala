@@ -65,7 +65,7 @@ trait SearchResponse[TObject] extends js.Object {
     *
     * Hits are ordered according to the ranking or sorting of the index being queried.
     */
-  var hits: js.Array[TObject with ObjectWithObjectID] = js.native
+  var hits: js.Array[Hit[TObject]] = js.native
   
   /**
     * Maximum number of hits returned per page.
@@ -166,7 +166,7 @@ object SearchResponse {
   @scala.inline
   def apply[TObject](
     exhaustiveNbHits: Boolean,
-    hits: js.Array[TObject with ObjectWithObjectID],
+    hits: js.Array[Hit[TObject]],
     hitsPerPage: Double,
     nbHits: Double,
     nbPages: Double,
@@ -198,10 +198,10 @@ object SearchResponse {
     def setExhaustiveNbHits(value: Boolean): Self = this.set("exhaustiveNbHits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHitsVarargs(value: (TObject with ObjectWithObjectID)*): Self = this.set("hits", js.Array(value :_*))
+    def setHitsVarargs(value: Hit[TObject]*): Self = this.set("hits", js.Array(value :_*))
     
     @scala.inline
-    def setHits(value: js.Array[TObject with ObjectWithObjectID]): Self = this.set("hits", value.asInstanceOf[js.Any])
+    def setHits(value: js.Array[Hit[TObject]]): Self = this.set("hits", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHitsPerPage(value: Double): Self = this.set("hitsPerPage", value.asInstanceOf[js.Any])

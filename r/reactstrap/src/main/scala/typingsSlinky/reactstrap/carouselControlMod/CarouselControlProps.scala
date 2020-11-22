@@ -2,8 +2,7 @@ package typingsSlinky.reactstrap.carouselControlMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactstrap.mod.CSSModule
 import typingsSlinky.reactstrap.reactstrapStrings.next
 import typingsSlinky.reactstrap.reactstrapStrings.prev
@@ -13,23 +12,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait CarouselControlProps
-  extends AllHTMLAttributes[HTMLElement]
-     with ClassAttributes[HTMLElement]
+  extends HTMLAttributes[HTMLElement]
      with /* key */ StringDictionary[js.Any] {
   
   var cssModule: js.UndefOr[CSSModule] = js.native
   
   var direction: prev | next = js.native
   
-  var directionText: String = js.native
+  var directionText: js.UndefOr[String] = js.native
   
   def onClickHandler(): Unit = js.native
 }
 object CarouselControlProps {
   
   @scala.inline
-  def apply(direction: prev | next, directionText: String, onClickHandler: () => Unit): CarouselControlProps = {
-    val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], directionText = directionText.asInstanceOf[js.Any], onClickHandler = js.Any.fromFunction0(onClickHandler))
+  def apply(direction: prev | next, onClickHandler: () => Unit): CarouselControlProps = {
+    val __obj = js.Dynamic.literal(direction = direction.asInstanceOf[js.Any], onClickHandler = js.Any.fromFunction0(onClickHandler))
     __obj.asInstanceOf[CarouselControlProps]
   }
   
@@ -52,9 +50,6 @@ object CarouselControlProps {
     def setDirection(value: prev | next): Self = this.set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDirectionText(value: String): Self = this.set("directionText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setOnClickHandler(value: () => Unit): Self = this.set("onClickHandler", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -62,5 +57,11 @@ object CarouselControlProps {
     
     @scala.inline
     def deleteCssModule: Self = this.set("cssModule", js.undefined)
+    
+    @scala.inline
+    def setDirectionText(value: String): Self = this.set("directionText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDirectionText: Self = this.set("directionText", js.undefined)
   }
 }

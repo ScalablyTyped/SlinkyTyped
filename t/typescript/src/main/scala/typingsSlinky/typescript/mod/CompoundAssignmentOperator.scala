@@ -17,5 +17,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.typescript.mod.SyntaxKind.LessThanLessThanEqualsToken
   - typingsSlinky.typescript.mod.SyntaxKind.GreaterThanGreaterThanGreaterThanEqualsToken
   - typingsSlinky.typescript.mod.SyntaxKind.GreaterThanGreaterThanEqualsToken
+  - typingsSlinky.typescript.mod.SyntaxKind.BarBarEqualsToken
+  - typingsSlinky.typescript.mod.SyntaxKind.AmpersandAmpersandEqualsToken
+  - typingsSlinky.typescript.mod.SyntaxKind.QuestionQuestionEqualsToken
 */
 trait CompoundAssignmentOperator extends AssignmentOperator

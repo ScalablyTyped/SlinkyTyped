@@ -55,9 +55,6 @@ object handsontableStrings {
   def CopyPasteDotpaste: CopyPasteDotpaste = "CopyPaste.paste".asInstanceOf[CopyPasteDotpaste]
   
   @scala.inline
-  def GantChartDotloadData: GantChartDotloadData = "GantChart.loadData".asInstanceOf[GantChartDotloadData]
-  
-  @scala.inline
   def ObserveChangesDotchange: ObserveChangesDotchange = "ObserveChanges.change".asInstanceOf[ObserveChangesDotchange]
   
   @scala.inline
@@ -91,6 +88,9 @@ object handsontableStrings {
   def afterAddChild: afterAddChild = "afterAddChild".asInstanceOf[afterAddChild]
   
   @scala.inline
+  def afterAutofill: afterAutofill = "afterAutofill".asInstanceOf[afterAutofill]
+  
+  @scala.inline
   def afterBeginEditing: afterBeginEditing = "afterBeginEditing".asInstanceOf[afterBeginEditing]
   
   @scala.inline
@@ -101,6 +101,12 @@ object handsontableStrings {
   
   @scala.inline
   def afterChangesObserved: afterChangesObserved = "afterChangesObserved".asInstanceOf[afterChangesObserved]
+  
+  @scala.inline
+  def afterColumnCollapse: afterColumnCollapse = "afterColumnCollapse".asInstanceOf[afterColumnCollapse]
+  
+  @scala.inline
+  def afterColumnExpand: afterColumnExpand = "afterColumnExpand".asInstanceOf[afterColumnExpand]
   
   @scala.inline
   def afterColumnMove: afterColumnMove = "afterColumnMove".asInstanceOf[afterColumnMove]
@@ -289,6 +295,9 @@ object handsontableStrings {
   def afterSetDataAtRowProp: afterSetDataAtRowProp = "afterSetDataAtRowProp".asInstanceOf[afterSetDataAtRowProp]
   
   @scala.inline
+  def afterSetSourceDataAtCell: afterSetSourceDataAtCell = "afterSetSourceDataAtCell".asInstanceOf[afterSetSourceDataAtCell]
+  
+  @scala.inline
   def afterTrimRow: afterTrimRow = "afterTrimRow".asInstanceOf[afterTrimRow]
   
   @scala.inline
@@ -376,6 +385,12 @@ object handsontableStrings {
   def beforeChangeRender: beforeChangeRender = "beforeChangeRender".asInstanceOf[beforeChangeRender]
   
   @scala.inline
+  def beforeColumnCollapse: beforeColumnCollapse = "beforeColumnCollapse".asInstanceOf[beforeColumnCollapse]
+  
+  @scala.inline
+  def beforeColumnExpand: beforeColumnExpand = "beforeColumnExpand".asInstanceOf[beforeColumnExpand]
+  
+  @scala.inline
   def beforeColumnMove: beforeColumnMove = "beforeColumnMove".asInstanceOf[beforeColumnMove]
   
   @scala.inline
@@ -439,6 +454,9 @@ object handsontableStrings {
   def beforeLanguageChange: beforeLanguageChange = "beforeLanguageChange".asInstanceOf[beforeLanguageChange]
   
   @scala.inline
+  def beforeLoadData: beforeLoadData = "beforeLoadData".asInstanceOf[beforeLoadData]
+  
+  @scala.inline
   def beforeMergeCells: beforeMergeCells = "beforeMergeCells".asInstanceOf[beforeMergeCells]
   
   @scala.inline
@@ -488,6 +506,9 @@ object handsontableStrings {
   
   @scala.inline
   def beforeRowResize: beforeRowResize = "beforeRowResize".asInstanceOf[beforeRowResize]
+  
+  @scala.inline
+  def beforeSetCellMeta: beforeSetCellMeta = "beforeSetCellMeta".asInstanceOf[beforeSetCellMeta]
   
   @scala.inline
   def beforeSetRangeEnd: beforeSetRangeEnd = "beforeSetRangeEnd".asInstanceOf[beforeSetRangeEnd]
@@ -622,6 +643,9 @@ object handsontableStrings {
   def custom: custom = "custom".asInstanceOf[custom]
   
   @scala.inline
+  def customBorders: customBorders = "customBorders".asInstanceOf[customBorders]
+  
+  @scala.inline
   def cut: cut = "cut".asInstanceOf[cut]
   
   @scala.inline
@@ -632,9 +656,6 @@ object handsontableStrings {
   
   @scala.inline
   def dateValidate: dateValidate = "dateValidate".asInstanceOf[dateValidate]
-  
-  @scala.inline
-  def debug: debug = "debug".asInstanceOf[debug]
   
   @scala.inline
   def desc: desc = "desc".asInstanceOf[desc]
@@ -700,9 +721,6 @@ object handsontableStrings {
   def freeze_column: freeze_column = "freeze_column".asInstanceOf[freeze_column]
   
   @scala.inline
-  def ganttChart: ganttChart = "ganttChart".asInstanceOf[ganttChart]
-  
-  @scala.inline
   def get: get = "get".asInstanceOf[get]
   
   @scala.inline
@@ -724,13 +742,7 @@ object handsontableStrings {
   def hidden: hidden = "hidden".asInstanceOf[hidden]
   
   @scala.inline
-  def hiddenColumn: hiddenColumn = "hiddenColumn".asInstanceOf[hiddenColumn]
-  
-  @scala.inline
   def hiddenColumns: hiddenColumns = "hiddenColumns".asInstanceOf[hiddenColumns]
-  
-  @scala.inline
-  def hiddenRow: hiddenRow = "hiddenRow".asInstanceOf[hiddenRow]
   
   @scala.inline
   def hiddenRows: hiddenRows = "hiddenRows".asInstanceOf[hiddenRows]
@@ -844,9 +856,6 @@ object handsontableStrings {
   def modifyAutofillRange: modifyAutofillRange = "modifyAutofillRange".asInstanceOf[modifyAutofillRange]
   
   @scala.inline
-  def modifyCol: modifyCol = "modifyCol".asInstanceOf[modifyCol]
-  
-  @scala.inline
   def modifyColHeader: modifyColHeader = "modifyColHeader".asInstanceOf[modifyColHeader]
   
   @scala.inline
@@ -865,9 +874,6 @@ object handsontableStrings {
   def modifyGetCellCoords: modifyGetCellCoords = "modifyGetCellCoords".asInstanceOf[modifyGetCellCoords]
   
   @scala.inline
-  def modifyRow: modifyRow = "modifyRow".asInstanceOf[modifyRow]
-  
-  @scala.inline
   def modifyRowData: modifyRowData = "modifyRowData".asInstanceOf[modifyRowData]
   
   @scala.inline
@@ -883,13 +889,13 @@ object handsontableStrings {
   def modifyRowSourceData: modifyRowSourceData = "modifyRowSourceData".asInstanceOf[modifyRowSourceData]
   
   @scala.inline
+  def modifySourceData: modifySourceData = "modifySourceData".asInstanceOf[modifySourceData]
+  
+  @scala.inline
   def modifyTransformEnd: modifyTransformEnd = "modifyTransformEnd".asInstanceOf[modifyTransformEnd]
   
   @scala.inline
   def modifyTransformStart: modifyTransformStart = "modifyTransformStart".asInstanceOf[modifyTransformStart]
-  
-  @scala.inline
-  def monday: monday = "monday".asInstanceOf[monday]
   
   @scala.inline
   def multiColumnSorting: multiColumnSorting = "multiColumnSorting".asInstanceOf[multiColumnSorting]
@@ -991,9 +997,6 @@ object handsontableStrings {
   def single: single = "single".asInstanceOf[single]
   
   @scala.inline
-  def skipLengthCache: skipLengthCache = "skipLengthCache".asInstanceOf[skipLengthCache]
-  
-  @scala.inline
   def skipRowOnPaste: skipRowOnPaste = "skipRowOnPaste".asInstanceOf[skipRowOnPaste]
   
   @scala.inline
@@ -1007,9 +1010,6 @@ object handsontableStrings {
   
   @scala.inline
   def sum: sum = "sum".asInstanceOf[sum]
-  
-  @scala.inline
-  def sunday: sunday = "sunday".asInstanceOf[sunday]
   
   @scala.inline
   def text: text = "text".asInstanceOf[text]
@@ -1040,12 +1040,6 @@ object handsontableStrings {
   
   @scala.inline
   def unfreeze_column: unfreeze_column = "unfreeze_column".asInstanceOf[unfreeze_column]
-  
-  @scala.inline
-  def unmodifyCol: unmodifyCol = "unmodifyCol".asInstanceOf[unmodifyCol]
-  
-  @scala.inline
-  def unmodifyRow: unmodifyRow = "unmodifyRow".asInstanceOf[unmodifyRow]
   
   @scala.inline
   def up: up = "up".asInstanceOf[up]
@@ -1096,9 +1090,6 @@ object handsontableStrings {
   sealed trait CopyPasteDotpaste extends ChangeSource
   
   @js.native
-  sealed trait GantChartDotloadData extends ChangeSource
-  
-  @js.native
   sealed trait ObserveChangesDotchange extends ChangeSource
   
   @js.native
@@ -1132,6 +1123,9 @@ object handsontableStrings {
   sealed trait afterAddChild extends js.Object
   
   @js.native
+  sealed trait afterAutofill extends js.Object
+  
+  @js.native
   sealed trait afterBeginEditing extends js.Object
   
   @js.native
@@ -1142,6 +1136,12 @@ object handsontableStrings {
   
   @js.native
   sealed trait afterChangesObserved extends js.Object
+  
+  @js.native
+  sealed trait afterColumnCollapse extends js.Object
+  
+  @js.native
+  sealed trait afterColumnExpand extends js.Object
   
   @js.native
   sealed trait afterColumnMove extends js.Object
@@ -1330,6 +1330,9 @@ object handsontableStrings {
   sealed trait afterSetDataAtRowProp extends js.Object
   
   @js.native
+  sealed trait afterSetSourceDataAtCell extends js.Object
+  
+  @js.native
   sealed trait afterTrimRow extends js.Object
   
   @js.native
@@ -1421,6 +1424,12 @@ object handsontableStrings {
   sealed trait beforeChangeRender extends js.Object
   
   @js.native
+  sealed trait beforeColumnCollapse extends js.Object
+  
+  @js.native
+  sealed trait beforeColumnExpand extends js.Object
+  
+  @js.native
   sealed trait beforeColumnMove extends js.Object
   
   @js.native
@@ -1484,6 +1493,9 @@ object handsontableStrings {
   sealed trait beforeLanguageChange extends js.Object
   
   @js.native
+  sealed trait beforeLoadData extends js.Object
+  
+  @js.native
   sealed trait beforeMergeCells extends js.Object
   
   @js.native
@@ -1533,6 +1545,9 @@ object handsontableStrings {
   
   @js.native
   sealed trait beforeRowResize extends js.Object
+  
+  @js.native
+  sealed trait beforeSetCellMeta extends js.Object
   
   @js.native
   sealed trait beforeSetRangeEnd extends js.Object
@@ -1670,6 +1685,9 @@ object handsontableStrings {
   sealed trait custom extends js.Object
   
   @js.native
+  sealed trait customBorders extends js.Object
+  
+  @js.native
   sealed trait cut extends PredefinedMenuItemKey
   
   @js.native
@@ -1683,9 +1701,6 @@ object handsontableStrings {
   
   @js.native
   sealed trait dateValidate extends ChangeSource
-  
-  @js.native
-  sealed trait debug extends OverlayType
   
   @js.native
   sealed trait desc extends SortOrderType
@@ -1753,9 +1768,6 @@ object handsontableStrings {
   sealed trait freeze_column extends PredefinedMenuItemKey
   
   @js.native
-  sealed trait ganttChart extends js.Object
-  
-  @js.native
   sealed trait get extends js.Object
   
   @js.native
@@ -1779,13 +1791,7 @@ object handsontableStrings {
   sealed trait hidden extends js.Object
   
   @js.native
-  sealed trait hiddenColumn extends js.Object
-  
-  @js.native
   sealed trait hiddenColumns extends js.Object
-  
-  @js.native
-  sealed trait hiddenRow extends js.Object
   
   @js.native
   sealed trait hiddenRows extends js.Object
@@ -1899,9 +1905,6 @@ object handsontableStrings {
   sealed trait modifyAutofillRange extends js.Object
   
   @js.native
-  sealed trait modifyCol extends js.Object
-  
-  @js.native
   sealed trait modifyColHeader extends js.Object
   
   @js.native
@@ -1920,9 +1923,6 @@ object handsontableStrings {
   sealed trait modifyGetCellCoords extends js.Object
   
   @js.native
-  sealed trait modifyRow extends js.Object
-  
-  @js.native
   sealed trait modifyRowData extends js.Object
   
   @js.native
@@ -1938,13 +1938,13 @@ object handsontableStrings {
   sealed trait modifyRowSourceData extends js.Object
   
   @js.native
+  sealed trait modifySourceData extends js.Object
+  
+  @js.native
   sealed trait modifyTransformEnd extends js.Object
   
   @js.native
   sealed trait modifyTransformStart extends js.Object
-  
-  @js.native
-  sealed trait monday extends js.Object
   
   @js.native
   sealed trait multiColumnSorting extends js.Object
@@ -2052,9 +2052,6 @@ object handsontableStrings {
   sealed trait single extends js.Object
   
   @js.native
-  sealed trait skipLengthCache extends js.Object
-  
-  @js.native
   sealed trait skipRowOnPaste extends js.Object
   
   @js.native
@@ -2068,9 +2065,6 @@ object handsontableStrings {
   
   @js.native
   sealed trait sum extends js.Object
-  
-  @js.native
-  sealed trait sunday extends js.Object
   
   @js.native
   sealed trait text
@@ -2106,12 +2100,6 @@ object handsontableStrings {
   
   @js.native
   sealed trait unfreeze_column extends PredefinedMenuItemKey
-  
-  @js.native
-  sealed trait unmodifyCol extends js.Object
-  
-  @js.native
-  sealed trait unmodifyRow extends js.Object
   
   @js.native
   sealed trait up extends js.Object

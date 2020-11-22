@@ -46,6 +46,7 @@ trait Application extends EventHandler {
     *         fog_start: 1,
     *         global_ambient: [0, 0, 0],
     *         skyboxIntensity: 1,
+    *         skyboxRotation: [0, 0, 0, 1],
     *         fog_color: [0, 0, 0],
     *         lightmapMode: 1,
     *         fog: 'none',
@@ -85,6 +86,7 @@ trait Application extends EventHandler {
     * @param [settings.render.skybox] - The asset ID of the cube map texture to be used as the scene's skybox. Defaults to null.
     * @param settings.render.skyboxIntensity - Multiplier for skybox intensity.
     * @param settings.render.skyboxMip - The mip level of the skybox to be displayed. Only valid for prefiltered cubemap skyboxes.
+    * @param settings.render.skyboxRotation - Rotation of skybox.
     * @param settings.render.lightmapSizeMultiplier - The lightmap resolution multiplier.
     * @param settings.render.lightmapMaxResolution - The maximum lightmap resolution.
     * @param settings.render.lightmapMode - The lightmap baking mode. Can be:
@@ -178,6 +180,11 @@ trait Application extends EventHandler {
     * The keyboard device.
     */
   var keyboard: Keyboard = js.native
+  
+  /**
+    * The run-time lightmapper.
+    */
+  var lightmapper: Lightmapper = js.native
   
   /**
     * The resource loader.
@@ -419,9 +426,9 @@ trait Application extends EventHandler {
   /**
     * Start the application. This function does the following:
     * 1. Fires an event on the application named 'start'
-    * 2. Calls initialize for all components on entities in the hierachy
+    * 2. Calls initialize for all components on entities in the hierarchy
     * 3. Fires an event on the application named 'initialize'
-    * 4. Calls postInitialize for all components on entities in the hierachy
+    * 4. Calls postInitialize for all components on entities in the hierarchy
     * 5. Fires an event on the application named 'postinitialize'
     * 6. Starts executing the main loop of the application
     * This function is called internally by PlayCanvas applications made in the Editor

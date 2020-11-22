@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RendererTitle extends Object {
   
   /**
-    * The field name used in the renderer. This is used in the generated title of the renderer in the legend.
+    * The field name used in the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#RendererTitle)
     */
   var field: String = js.native
   
   /**
-    * Indicates if a percentage is used in the normalization of the renderer. This is used to create a more readable legend for that scenario.
+    * Indicates if a percentage is used in the normalization of the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#RendererTitle)
     */

@@ -4,17 +4,12 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined parent std.Pick<std.AddEventListenerOptions, 'capture' | 'passive'> */
 @js.native
 trait EventOptions extends js.Object {
   
-  /**
-    * @default false
-    */
   var capture: js.UndefOr[Boolean] = js.native
   
-  /**
-    * @default false
-    */
   var passive: js.UndefOr[Boolean] = js.native
 }
 object EventOptions {

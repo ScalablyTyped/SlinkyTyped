@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.ObjectTypeSpreadProperty
+import typingsSlinky.babelTraverse.babelTraverseStrings.ExportDefaultDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `78` extends js.Object {
   
-  var `type`: ObjectTypeSpreadProperty = js.native
+  var `type`: ExportDefaultDeclaration = js.native
 }
 object `78` {
   
   @scala.inline
-  def apply(`type`: ObjectTypeSpreadProperty): `78` = {
+  def apply(`type`: ExportDefaultDeclaration): `78` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`78`]
@@ -35,6 +35,6 @@ object `78` {
     }
     
     @scala.inline
-    def setType(value: ObjectTypeSpreadProperty): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ExportDefaultDeclaration): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

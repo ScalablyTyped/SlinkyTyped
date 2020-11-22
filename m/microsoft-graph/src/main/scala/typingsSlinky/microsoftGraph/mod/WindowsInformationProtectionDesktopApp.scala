@@ -11,10 +11,10 @@ trait WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
   var binaryName: js.UndefOr[String] = js.native
   
   // The high binary version.
-  var binaryVersionHigh: js.UndefOr[String] = js.native
+  var binaryVersionHigh: js.UndefOr[NullableOption[String]] = js.native
   
   // The lower binary version.
-  var binaryVersionLow: js.UndefOr[String] = js.native
+  var binaryVersionLow: js.UndefOr[NullableOption[String]] = js.native
 }
 object WindowsInformationProtectionDesktopApp {
   
@@ -46,15 +46,21 @@ object WindowsInformationProtectionDesktopApp {
     def deleteBinaryName: Self = this.set("binaryName", js.undefined)
     
     @scala.inline
-    def setBinaryVersionHigh(value: String): Self = this.set("binaryVersionHigh", value.asInstanceOf[js.Any])
+    def setBinaryVersionHigh(value: NullableOption[String]): Self = this.set("binaryVersionHigh", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBinaryVersionHigh: Self = this.set("binaryVersionHigh", js.undefined)
     
     @scala.inline
-    def setBinaryVersionLow(value: String): Self = this.set("binaryVersionLow", value.asInstanceOf[js.Any])
+    def setBinaryVersionHighNull: Self = this.set("binaryVersionHigh", null)
+    
+    @scala.inline
+    def setBinaryVersionLow(value: NullableOption[String]): Self = this.set("binaryVersionLow", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBinaryVersionLow: Self = this.set("binaryVersionLow", js.undefined)
+    
+    @scala.inline
+    def setBinaryVersionLowNull: Self = this.set("binaryVersionLow", null)
   }
 }

@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "UncontrolledCollapse")
+@JSImport("reactstrap/es", "UncontrolledCollapse")
 @js.native
-class UncontrolledCollapse[T] ()
+class UncontrolledCollapse ()
   extends Component[UncontrolledCollapseProps, js.Object, js.Any]

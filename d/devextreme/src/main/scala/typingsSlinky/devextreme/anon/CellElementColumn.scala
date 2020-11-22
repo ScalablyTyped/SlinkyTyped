@@ -4,7 +4,6 @@ import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeList
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeListRowObject
-import typingsSlinky.devextreme.mod.global.JQueryEventObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,8 +26,6 @@ trait CellElementColumn extends js.Object {
   var element: js.UndefOr[dxElement] = js.native
   
   var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
-  
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
   
   var key: js.UndefOr[js.Any] = js.native
   
@@ -114,12 +111,6 @@ object CellElementColumn {
     
     @scala.inline
     def deleteEvent: Self = this.set("event", js.undefined)
-    
-    @scala.inline
-    def setJQueryEvent(value: JQueryEventObject): Self = this.set("jQueryEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteJQueryEvent: Self = this.set("jQueryEvent", js.undefined)
     
     @scala.inline
     def setKey(value: js.Any): Self = this.set("key", value.asInstanceOf[js.Any])

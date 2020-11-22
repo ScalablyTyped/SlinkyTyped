@@ -372,7 +372,11 @@ object Expression {
   }
   
   @scala.inline
-  def TemplateLiteral_(expressions: js.Array[Expression], quasis: js.Array[TemplateElement_], `type`: TemplateLiteral): Expression = {
+  def TemplateLiteral_(
+    expressions: js.Array[Expression | TSType],
+    quasis: js.Array[TemplateElement_],
+    `type`: TemplateLiteral
+  ): Expression = {
     val __obj = js.Dynamic.literal(expressions = expressions.asInstanceOf[js.Any], quasis = quasis.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Expression]

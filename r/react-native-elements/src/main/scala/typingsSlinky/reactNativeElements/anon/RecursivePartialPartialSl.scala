@@ -17,6 +17,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RecursivePartialPartialSl extends js.Object {
   
+  var allowTouchTrack: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  
   var animateTransitions: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
   
   var animationConfig: js.UndefOr[RecursivePartial[js.UndefOr[TimingAnimationConfig | SpringAnimationConfig]]] = js.native
@@ -46,6 +48,8 @@ trait RecursivePartialPartialSl extends js.Object {
   var step: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
   
   var style: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.native
+  
+  var thumbProps: js.UndefOr[RecursivePartial[js.UndefOr[_]]] = js.native
   
   var thumbStyle: js.UndefOr[RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]] = js.native
   
@@ -79,6 +83,12 @@ object RecursivePartialPartialSl {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAllowTouchTrack(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("allowTouchTrack", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowTouchTrack: Self = this.set("allowTouchTrack", js.undefined)
     
     @scala.inline
     def setAnimateTransitions(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("animateTransitions", value.asInstanceOf[js.Any])
@@ -169,6 +179,12 @@ object RecursivePartialPartialSl {
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
+    
+    @scala.inline
+    def setThumbProps(value: RecursivePartial[js.UndefOr[_]]): Self = this.set("thumbProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteThumbProps: Self = this.set("thumbProps", js.undefined)
     
     @scala.inline
     def setThumbStyle(value: RecursivePartial[js.UndefOr[StyleProp[ViewStyle]]]): Self = this.set("thumbStyle", value.asInstanceOf[js.Any])

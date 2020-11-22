@@ -1,8 +1,5 @@
 package typingsSlinky.firefoxWebextBrowser.browser.manifest
 
-import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.firefoxWebextBrowser.anon.Edge
-import typingsSlinky.firefoxWebextBrowser.anon.Gecko
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,15 +8,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WebExtensionDictionaryManifest extends js.Object {
   
-  var applications: js.UndefOr[Gecko] = js.native
+  var applications: js.UndefOr[WebExtensionDictionaryManifestApplications] = js.native
   
   var author: js.UndefOr[String] = js.native
   
-  var browser_specific_settings: js.UndefOr[Edge] = js.native
+  var browser_specific_settings: js.UndefOr[WebExtensionDictionaryManifestBrowserSpecificSettings] = js.native
   
   var description: js.UndefOr[String] = js.native
   
-  var dictionaries: StringDictionary[String] = js.native
+  var dictionaries: WebExtensionDictionaryManifestDictionaries = js.native
   
   var homepage_url: js.UndefOr[String] = js.native
   
@@ -34,7 +31,12 @@ trait WebExtensionDictionaryManifest extends js.Object {
 object WebExtensionDictionaryManifest {
   
   @scala.inline
-  def apply(dictionaries: StringDictionary[String], manifest_version: Double, name: String, version: String): WebExtensionDictionaryManifest = {
+  def apply(
+    dictionaries: WebExtensionDictionaryManifestDictionaries,
+    manifest_version: Double,
+    name: String,
+    version: String
+  ): WebExtensionDictionaryManifest = {
     val __obj = js.Dynamic.literal(dictionaries = dictionaries.asInstanceOf[js.Any], manifest_version = manifest_version.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], version = version.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebExtensionDictionaryManifest]
   }
@@ -55,7 +57,7 @@ object WebExtensionDictionaryManifest {
     }
     
     @scala.inline
-    def setDictionaries(value: StringDictionary[String]): Self = this.set("dictionaries", value.asInstanceOf[js.Any])
+    def setDictionaries(value: WebExtensionDictionaryManifestDictionaries): Self = this.set("dictionaries", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setManifest_version(value: Double): Self = this.set("manifest_version", value.asInstanceOf[js.Any])
@@ -67,7 +69,7 @@ object WebExtensionDictionaryManifest {
     def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setApplications(value: Gecko): Self = this.set("applications", value.asInstanceOf[js.Any])
+    def setApplications(value: WebExtensionDictionaryManifestApplications): Self = this.set("applications", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteApplications: Self = this.set("applications", js.undefined)
@@ -79,7 +81,7 @@ object WebExtensionDictionaryManifest {
     def deleteAuthor: Self = this.set("author", js.undefined)
     
     @scala.inline
-    def setBrowser_specific_settings(value: Edge): Self = this.set("browser_specific_settings", value.asInstanceOf[js.Any])
+    def setBrowser_specific_settings(value: WebExtensionDictionaryManifestBrowserSpecificSettings): Self = this.set("browser_specific_settings", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBrowser_specific_settings: Self = this.set("browser_specific_settings", js.undefined)

@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`7`
+import typingsSlinky.octokitTypes.anon.`6`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MigrationsListForAuthenticatedUserEndpoint extends js.Object {
   
-  var mediaType: `7` = js.native
+  var mediaType: `6` = js.native
   
   /**
     * Page number of the results to fetch.
@@ -24,7 +24,7 @@ trait MigrationsListForAuthenticatedUserEndpoint extends js.Object {
 object MigrationsListForAuthenticatedUserEndpoint {
   
   @scala.inline
-  def apply(mediaType: `7`): MigrationsListForAuthenticatedUserEndpoint = {
+  def apply(mediaType: `6`): MigrationsListForAuthenticatedUserEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any])
     __obj.asInstanceOf[MigrationsListForAuthenticatedUserEndpoint]
   }
@@ -45,7 +45,7 @@ object MigrationsListForAuthenticatedUserEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `6`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPage(value: Double): Self = this.set("page", value.asInstanceOf[js.Any])

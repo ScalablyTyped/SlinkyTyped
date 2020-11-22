@@ -11,32 +11,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ASPxClientDropDownEditBase extends ASPxClientButtonEditBase {
   
   /**
-    * Modifies the size of the <strong>drop down window</strong> in accordance with its content.
+    * Modifies the size of the drop down window in accordance with its content.
     */
   def AdjustDropDownWindow(): Unit = js.native
   
   /**
-    * Occurs on the client side when the <strong>drop down window</strong> is closed.
+    * Occurs on the client side when the drop down window is closed.
     */
   var CloseUp: ASPxClientEvent[ASPxClientEventHandler[ASPxClientDropDownEditBase]] = js.native
   
   /**
-    * Occurs on the client-side when the <strong>drop down window</strong> is opened by the dropdown button click.
+    * Occurs on the client-side when the drop down window is opened by the dropdown button click.
     */
   var DropDown: ASPxClientEvent[ASPxClientEventHandler[ASPxClientDropDownEditBase]] = js.native
   
   /**
-    * Closes the opened <strong>drop down window</strong> of the editor.
+    * Closes the opened drop down window of the editor.
     */
   def HideDropDown(): Unit = js.native
   
   /**
-    * Occurs on the client side before the <strong>drop down window</strong> is closed and allows you to cancel the operation.
+    * Occurs on the client side before the drop down window is closed and allows you to cancel the operation.
     */
   var QueryCloseUp: ASPxClientEvent[ASPxClientCancelEventHandler[ASPxClientDropDownEditBase]] = js.native
   
   /**
-    * Invokes the editor's <strong>drop down window</strong>.
+    * Invokes the editor's drop down window.
     */
   def ShowDropDown(): Unit = js.native
 }

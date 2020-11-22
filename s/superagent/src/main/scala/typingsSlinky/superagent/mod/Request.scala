@@ -56,6 +56,9 @@ trait Request
   
   def get(field: String): String = js.native
   
+  def http2(): this.type = js.native
+  def http2(enable: Boolean): this.type = js.native
+  
   def key(cert: String): this.type = js.native
   def key(cert: js.Array[Buffer | String]): this.type = js.native
   def key(cert: Buffer): this.type = js.native

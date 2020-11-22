@@ -5,7 +5,7 @@ import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNativeVideoPlayer.anon.ControlButton
-import typingsSlinky.reactNativeVideoPlayer.anon.Uri
+import typingsSlinky.reactNativeVideoPlayer.anon.MainVer
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.contain
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.cover
 import typingsSlinky.reactNativeVideoPlayer.reactNativeVideoPlayerStrings.none
@@ -71,7 +71,7 @@ trait VideoPlayerProps extends js.Object {
   
   var thumbnail: js.UndefOr[ImageSourcePropType] = js.native
   
-  var video: js.UndefOr[Uri | Double] = js.native
+  var video: js.UndefOr[MainVer | Double] = js.native
   
   var videoHeight: js.UndefOr[Double] = js.native
   
@@ -272,7 +272,7 @@ object VideoPlayerProps {
     def deleteThumbnail: Self = this.set("thumbnail", js.undefined)
     
     @scala.inline
-    def setVideo(value: Uri | Double): Self = this.set("video", value.asInstanceOf[js.Any])
+    def setVideo(value: MainVer | Double): Self = this.set("video", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVideo: Self = this.set("video", js.undefined)

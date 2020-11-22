@@ -7,7 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("grammarkdown", "HostBase")
 @js.native
+/**
+  * @param options The options used to configure the host.
+  */
 abstract class HostBase ()
   extends typingsSlinky.grammarkdown.hostMod.HostBase {
-  def this(hasIgnoreCaseKnownGrammarsUseBuiltinGrammars: HostBaseOptions) = this()
+  def this(options: HostBaseOptions) = this()
 }

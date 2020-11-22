@@ -36,4 +36,10 @@ trait WebXRAbstractFeature extends IWebXRFeature {
     */
   @JSName("attached")
   def attached_MWebXRAbstractFeature: Boolean = js.native
+  
+  /**
+    * The name of the native xr feature name (like anchor, hit-test, or hand-tracking)
+    */
+  @JSName("xrNativeFeatureName")
+  var xrNativeFeatureName_WebXRAbstractFeature: String = js.native
 }

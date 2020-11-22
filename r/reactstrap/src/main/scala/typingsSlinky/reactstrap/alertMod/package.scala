@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object alertMod {
   
-  type Alert[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.alertMod.AlertProps]
+  type Alert = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.alertMod.AlertProps]
 }

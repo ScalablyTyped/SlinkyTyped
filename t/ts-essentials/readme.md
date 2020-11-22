@@ -1,7 +1,7 @@
 
 # Scala.js typings for ts-essentials
 
-Typings are for version 1.0.4
+Typings are for version 2.0.12
 
 ## Library description:
 All essential TypeScript types in one place

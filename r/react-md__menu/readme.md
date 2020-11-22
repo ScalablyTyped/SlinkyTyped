@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__menu
 
-Typings are for version 2.1.2
+Typings are for version 2.4.3
 
 ## Library description:
 Create menus that auto-position themselves within the viewport and adhere to the accessibility guidelines

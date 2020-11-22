@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class TouchBarButton protected ()
   extends typingsSlinky.electron.Electron.TouchBarButton {
-  // Docs: http://electronjs.org/docs/api/touch-bar-button
+  // Docs: https://electronjs.org/docs/api/touch-bar-button
   /**
     * TouchBarButton
     */

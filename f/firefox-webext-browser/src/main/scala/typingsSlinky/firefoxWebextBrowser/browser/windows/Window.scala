@@ -15,15 +15,12 @@ trait Window extends js.Object {
   var focused: Boolean = js.native
   
   /**
-    * The height of the window, including the frame, in pixels. Under some circumstances a Window may not be
-    * assigned height property, for example when querying closed windows from the `sessions` API.
+    * The height of the window, including the frame, in pixels. Under some circumstances a Window may not be assigned height property, for example when querying closed windows from the `sessions` API.
     */
   var height: js.UndefOr[Double] = js.native
   
   /**
-    * The ID of the window. Window IDs are unique within a browser session. Under some circumstances a Window may
-    * not be assigned an ID, for example when querying windows using the `sessions` API, in which case a session
-    * ID may be present.
+    * The ID of the window. Window IDs are unique within a browser session. Under some circumstances a Window may not be assigned an ID, for example when querying windows using the `sessions` API, in which case a session ID may be present.
     */
   var id: js.UndefOr[Double] = js.native
   
@@ -31,8 +28,7 @@ trait Window extends js.Object {
   var incognito: Boolean = js.native
   
   /**
-    * The offset of the window from the left edge of the screen in pixels. Under some circumstances a Window may
-    * not be assigned left property, for example when querying closed windows from the `sessions` API.
+    * The offset of the window from the left edge of the screen in pixels. Under some circumstances a Window may not be assigned left property, for example when querying closed windows from the `sessions` API.
     */
   var left: js.UndefOr[Double] = js.native
   
@@ -49,8 +45,7 @@ trait Window extends js.Object {
   var title: js.UndefOr[String] = js.native
   
   /**
-    * The offset of the window from the top edge of the screen in pixels. Under some circumstances a Window may
-    * not be assigned top property, for example when querying closed windows from the `sessions` API.
+    * The offset of the window from the top edge of the screen in pixels. Under some circumstances a Window may not be assigned top property, for example when querying closed windows from the `sessions` API.
     */
   var top: js.UndefOr[Double] = js.native
   
@@ -58,8 +53,7 @@ trait Window extends js.Object {
   var `type`: js.UndefOr[WindowType] = js.native
   
   /**
-    * The width of the window, including the frame, in pixels. Under some circumstances a Window may not be
-    * assigned width property, for example when querying closed windows from the `sessions` API.
+    * The width of the window, including the frame, in pixels. Under some circumstances a Window may not be assigned width property, for example when querying closed windows from the `sessions` API.
     */
   var width: js.UndefOr[Double] = js.native
 }

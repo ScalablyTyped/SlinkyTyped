@@ -20,9 +20,19 @@ trait WorkflowArgs extends js.Object {
   val description: js.UndefOr[Input[String]] = js.native
   
   /**
+    * Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
+    */
+  val maxConcurrentRuns: js.UndefOr[Input[Double]] = js.native
+  
+  /**
     * The name you assign to this workflow.
     */
   val name: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Key-value map of resource tags
+    */
+  val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
 }
 object WorkflowArgs {
   
@@ -60,9 +70,21 @@ object WorkflowArgs {
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
+    def setMaxConcurrentRuns(value: Input[Double]): Self = this.set("maxConcurrentRuns", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxConcurrentRuns: Self = this.set("maxConcurrentRuns", js.undefined)
+    
+    @scala.inline
     def setName(value: Input[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setTags(value: Input[StringDictionary[Input[String]]]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
   }
 }

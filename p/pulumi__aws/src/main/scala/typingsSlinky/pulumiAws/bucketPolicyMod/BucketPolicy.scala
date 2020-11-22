@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@pulumi/aws/s3/bucketPolicy", "BucketPolicy")
+@JSImport("@pulumi/aws/s3control/bucketPolicy", "BucketPolicy")
 @js.native
 class BucketPolicy protected () extends CustomResource {
   /**
@@ -23,17 +23,14 @@ class BucketPolicy protected () extends CustomResource {
   def this(name: String, args: BucketPolicyArgs, opts: CustomResourceOptions) = this()
   
   /**
-    * The name of the bucket to which to apply the policy.
+    * Amazon Resource Name (ARN) of the bucket.
     */
   val bucket: Output_[String] = js.native
   
-  /**
-    * The text of the policy.
-    */
   val policy: Output_[String] = js.native
 }
 /* static members */
-@JSImport("@pulumi/aws/s3/bucketPolicy", "BucketPolicy")
+@JSImport("@pulumi/aws/s3control/bucketPolicy", "BucketPolicy")
 @js.native
 object BucketPolicy extends js.Object {
   
@@ -55,5 +52,5 @@ object BucketPolicy extends js.Object {
     * Returns true if the given object is an instance of BucketPolicy.  This is designed to work even
     * when multiple copies of the Pulumi SDK have been loaded into the same process.
     */
-  def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/s3/bucketPolicy.BucketPolicy */ Boolean = js.native
+  def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/s3control/bucketPolicy.BucketPolicy */ Boolean = js.native
 }

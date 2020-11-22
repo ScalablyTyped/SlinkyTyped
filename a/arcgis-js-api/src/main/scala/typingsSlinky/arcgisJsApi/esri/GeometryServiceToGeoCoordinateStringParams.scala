@@ -18,14 +18,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GeometryServiceToGeoCoordinateStringParams extends Object {
   
   /**
-    * If `true`, then spaces are added between components of the string. The `addSpaces` parameter applies only to conversion types `mgrs`, `usng` and `utm`. The default value for `mgrs` is `false` , while the default value for both `usng` and `utm` is `true`.
+    * If `true`, then spaces are added between components of the string.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-GeometryService.html#toGeoCoordinateString)
     */
   var addSpaces: js.UndefOr[Boolean] = js.native
   
   /**
-    * Conversion options for mgrs and utm conversion types. See the [ArcGIS REST API documentation](https://developers.arcgis.com/rest/services-reference/to-geocoordinatestring.htm) for valid conversion modes and their descriptions.
+    * Conversion options for mgrs and utm conversion types.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-GeometryService.html#toGeoCoordinateString)
     */
@@ -46,18 +46,16 @@ trait GeometryServiceToGeoCoordinateStringParams extends Object {
   var coordinates: js.Array[js.Array[Double]] = js.native
   
   /**
-    * The number of digits to output for each of the numerical portions in the string. The default value depends of `conversionType`. See the [ArcGIS REST API documentation](https://developers.arcgis.com/rest/services-reference/from-geocoordinatestring.htm) for default values.
+    * The number of digits to output for each of the numerical portions in the string.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-GeometryService.html#toGeoCoordinateString)
     */
   var numOfDigits: js.UndefOr[Double] = js.native
   
   /**
-    * If `true`, then numeric portions of the string are rounded to the nearest whole magnitude as specified by `numOfDigits`. Otherwise, numeric portions of the string are truncated. The rounding parameter applies only to conversion types `mgrs`, `usng` and `geo-ref`.
+    * If `true`, then numeric portions of the string are rounded to the nearest whole magnitude as specified by `numOfDigits`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-GeometryService.html#toGeoCoordinateString)
-    *
-    * @default true
     */
   var rounding: js.UndefOr[Boolean] = js.native
   

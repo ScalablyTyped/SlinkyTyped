@@ -12,8 +12,14 @@ class PBRSubSurfaceConfiguration protected ()
   /**
     * Instantiate a new istance of sub surface configuration.
     * @param markAllSubMeshesAsTexturesDirty Callback to flag the material to dirty
+    * @param markScenePrePassDirty Callback to flag the scene as prepass dirty
+    * @param scene The scene
     */
-  def this(markAllSubMeshesAsTexturesDirty: js.Function0[Unit]) = this()
+  def this(
+    markAllSubMeshesAsTexturesDirty: js.Function0[Unit],
+    markScenePrePassDirty: js.Function0[Unit],
+    scene: typingsSlinky.babylonjs.BABYLON.Scene
+  ) = this()
 }
 /* static members */
 @JSGlobal("BABYLON.PBRSubSurfaceConfiguration")

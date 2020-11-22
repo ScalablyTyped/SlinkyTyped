@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
+  type MessageRef = java.lang.String
+  
   type PresenceOnJoinCallback = js.Function3[
     /* key */ js.UndefOr[java.lang.String], 
     /* currentPresence */ js.UndefOr[js.Any], 

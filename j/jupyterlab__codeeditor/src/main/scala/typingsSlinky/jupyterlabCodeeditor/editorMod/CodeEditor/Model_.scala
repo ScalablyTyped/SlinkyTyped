@@ -1,13 +1,12 @@
 package typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor
 
 import typingsSlinky.jupyterlabCoreutils.interfacesMod.IChangedArgs
-import typingsSlinky.jupyterlabObservables.modeldbMod.IModelDB
 import typingsSlinky.jupyterlabObservables.observablemapMod.IObservableMap
 import typingsSlinky.jupyterlabObservables.observablestringMod.IObservableString
-import typingsSlinky.phosphorSignaling.mod.ISignal
+import typingsSlinky.luminoSignaling.mod.ISignal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The default implementation of the editor model.
@@ -19,63 +18,40 @@ import scala.scalajs.js.annotation._
   */
 class Model_ () extends IModel {
   def this(options: typingsSlinky.jupyterlabCodeeditor.editorMod.CodeEditor.Model.IOptions) = this()
+  
   var _isDisposed: js.Any = js.native
+  
   var _mimeTypeChanged: js.Any = js.native
+  
   var _onMimeTypeChanged: js.Any = js.native
+  
   /**
-    * Test whether the object has been disposed.
-    *
-    * #### Notes
-    * This property is always safe to access.
+    * Whether the model is disposed.
     */
-  /* CompleteClass */
-  override val isDisposed: Boolean = js.native
-  /**
-    * A mime type of the model.
-    *
-    * #### Notes
-    * It is never `null`, the default mime type is `text/plain`.
-    */
-  /* CompleteClass */
-  override var mimeType: String = js.native
-  /**
-    * A signal emitted when a property changes.
-    */
-  /* CompleteClass */
-  override var mimeTypeChanged: ISignal[IModel, IChangedArgs[String, String]] = js.native
+  @JSName("isDisposed")
+  def isDisposed_MModel_ : Boolean = js.native
+  
   /**
     * A signal emitted when a mimetype changes.
     */
   @JSName("mimeTypeChanged")
-  val mimeTypeChanged_Model_ : ISignal[this.type, IChangedArgs[String, String]] = js.native
+  def mimeTypeChanged_MModel_ : ISignal[this.type, IChangedArgs[String, String, String]] = js.native
+  
   /**
-    * The underlying `IModelDB` instance in which model
-    * data is stored.
+    * A mime type of the model.
     */
-  /* CompleteClass */
-  override val modelDB: IModelDB = js.native
+  @JSName("mimeType")
+  def mimeType_MModel_ : String = js.native
+  
   /**
-    * The currently selected code.
+    * Get the selections for the model.
     */
-  /* CompleteClass */
-  override val selections: IObservableMap[js.Array[ITextSelection]] = js.native
+  @JSName("selections")
+  def selections_MModel_ : IObservableMap[js.Array[ITextSelection]] = js.native
+  
   /**
-    * The text stored in the model.
+    * Get the value of the model.
     */
-  /* CompleteClass */
-  override val value: IObservableString = js.native
-  /**
-    * Dispose of the resources held by the object.
-    *
-    * #### Notes
-    * If the object's `dispose` method is called more than once, all
-    * calls made after the first will be a no-op.
-    *
-    * #### Undefined Behavior
-    * It is undefined behavior to use any functionality of the object
-    * after it has been disposed unless otherwise explicitly noted.
-    */
-  /* CompleteClass */
-  override def dispose(): Unit = js.native
+  @JSName("value")
+  def value_MModel_ : IObservableString = js.native
 }
-

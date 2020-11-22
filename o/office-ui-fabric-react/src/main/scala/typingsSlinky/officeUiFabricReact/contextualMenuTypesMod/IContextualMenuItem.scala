@@ -6,15 +6,16 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.PartialIContextualMenuIte
 import typingsSlinky.officeUiFabricReact.contextualMenuClassNamesMod.IMenuItemClassNames
 import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuItemProps
+import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuItemRenderFunctions
 import typingsSlinky.officeUiFabricReact.contextualMenuItemTypesMod.IContextualMenuRenderItem
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.officeUiFabricReact.keytipTypesMod.IKeytipProps
 import typingsSlinky.officeUiFabricReact.verticalDividerTypesMod.IVerticalDividerClassNames
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
@@ -180,6 +181,20 @@ trait IContextualMenuItem
     js.Function2[
       /* item */ js.Any, 
       /* dismissMenu */ js.Function2[/* ev */ js.UndefOr[js.Any], /* dismissAll */ js.UndefOr[Boolean], Unit], 
+      ReactElement
+    ]
+  ] = js.native
+  
+  /**
+    * Method to customize sub-components rendering of this menu item.
+    *
+    * @param props - Props used to pass into render functions
+    * @param defaultRenders - Default render functions that renders default sub-components
+    */
+  var onRenderContent: js.UndefOr[
+    js.Function2[
+      /* props */ IContextualMenuItemProps, 
+      /* defaultRenders */ IContextualMenuItemRenderFunctions, 
       ReactElement
     ]
   ] = js.native
@@ -422,6 +437,14 @@ object IContextualMenuItem {
     
     @scala.inline
     def deleteOnRender: Self = this.set("onRender", js.undefined)
+    
+    @scala.inline
+    def setOnRenderContent(
+      value: (/* props */ IContextualMenuItemProps, /* defaultRenders */ IContextualMenuItemRenderFunctions) => ReactElement
+    ): Self = this.set("onRenderContent", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteOnRenderContent: Self = this.set("onRenderContent", js.undefined)
     
     @scala.inline
     def setOnRenderIcon(

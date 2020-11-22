@@ -9,9 +9,10 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.anon.Default
+import typingsSlinky.react.experimentalMod.reactAugmentingMod.OpaqueIdentifier
 import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseConfig
 import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListProps
-import typingsSlinky.react.experimentalMod.reactAugmentingMod.TimeoutConfig
+import typingsSlinky.react.experimentalMod.reactAugmentingMod.TransitionFunction
 import typingsSlinky.react.experimentalMod.reactAugmentingMod.TransitionStartFunction
 import typingsSlinky.react.mod.Attributes
 import typingsSlinky.react.mod.CElement
@@ -68,7 +69,6 @@ trait TypeofReact extends js.Object {
   val Children: ReactChildren = js.native
   
   // Base component for plain JS classes
-  // tslint:disable-next-line:no-empty-interface
   var Component: TypeofComponent = js.native
   
   val Fragment: ReactComponentClass[typingsSlinky.react.anon.Children] = js.native
@@ -243,8 +243,11 @@ trait TypeofReact extends js.Object {
   
   val unstable_SuspenseList: ReactComponentClass[SuspenseListProps] = js.native
   
+  def unstable_startTransition(scope: TransitionFunction): Unit = js.native
+  
   def unstable_useDeferredValue[T](value: T): T = js.native
-  def unstable_useDeferredValue[T](value: T, config: TimeoutConfig): T = js.native
+  
+  def unstable_useOpaqueIdentifier(): OpaqueIdentifier = js.native
   
   def unstable_useTransition(): js.Tuple2[TransitionStartFunction, Boolean] = js.native
   def unstable_useTransition(config: SuspenseConfig): js.Tuple2[TransitionStartFunction, Boolean] = js.native
@@ -409,7 +412,7 @@ trait TypeofReact extends js.Object {
     * @see https://reactjs.org/docs/hooks-reference.html#usereducer
     */
   // overload where "I" may be a subset of ReducerState<R>; used to provide autocompletion.
-  // If "I" matches ReducerState<R> exactly then the last overload will allow initializer to be ommitted.
+  // If "I" matches ReducerState<R> exactly then the last overload will allow initializer to be omitted.
   // the last overload effectively behaves as if the identity function (x => x) is the initializer.
   // overload for free "I"; all goes as long as initializer converts it into "ReducerState<R>".
   @JSName("useReducer")
@@ -465,7 +468,7 @@ trait TypeofReact extends js.Object {
   @JSName("useRef")
   def useRef_T_RefObject[T](initialValue: T): ReactRef[T] = js.native
   
-  // convenience overload when first argument is ommitted
+  // convenience overload when first argument is omitted
   /**
     * Returns a stateful value, and a function to update it.
     *

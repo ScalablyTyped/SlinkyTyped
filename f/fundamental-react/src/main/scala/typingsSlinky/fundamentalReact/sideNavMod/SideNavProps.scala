@@ -16,8 +16,14 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.fundamentalReact.anon.Href
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals text`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.all
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.ascending
@@ -83,7 +89,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  className :string | undefined,   compact :boolean | undefined,   condensed :boolean | undefined,   disableStyles :boolean | undefined,   selectedId :string | undefined,   onItemSelect :(e : any, id : any): void | undefined} & react.react.HTMLAttributes<std.Element> */
+/* Inlined {  className :string | undefined,   compact :boolean | undefined,   condensed :boolean | undefined,   disableStyles :boolean | undefined,   selectedId :string | undefined,   skipLink :{  href :string,   label :string} | undefined,   onItemSelect :(e : any, id : any): void | undefined} & react.react.HTMLAttributes<std.Element> */
 @js.native
 trait SideNavProps extends js.Object {
   
@@ -269,7 +275,9 @@ trait SideNavProps extends js.Object {
     * Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
     * @see aria-atomic.
     */
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   /** Indicates that user input is required on the element before a form may be submitted. */
   var `aria-required`: js.UndefOr[Boolean] = js.native
@@ -589,6 +597,8 @@ trait SideNavProps extends js.Object {
   
   var selectedId: js.UndefOr[String] = js.native
   
+  var skipLink: js.UndefOr[Href] = js.native
+  
   var slot: js.UndefOr[String] = js.native
   
   var spellCheck: js.UndefOr[Booleanish] = js.native
@@ -857,7 +867,9 @@ object SideNavProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1641,6 +1653,12 @@ object SideNavProps {
     
     @scala.inline
     def deleteSelectedId: Self = this.set("selectedId", js.undefined)
+    
+    @scala.inline
+    def setSkipLink(value: Href): Self = this.set("skipLink", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSkipLink: Self = this.set("skipLink", js.undefined)
     
     @scala.inline
     def setSlot(value: String): Self = this.set("slot", value.asInstanceOf[js.Any])

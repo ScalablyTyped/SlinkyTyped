@@ -10,12 +10,18 @@ sealed trait ChartSeriesDimension extends js.Object
   *
   * Represents the dimensions when getting values from chart series.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @JSGlobal("Excel.ChartSeriesDimension")
 @js.native
 object ChartSeriesDimension extends js.Object {
+  
+  /**
+    * The chart series axis for the bubble sizes in bubble charts.
+    *
+    */
+  @js.native
+  sealed trait bubbleSizes extends ChartSeriesDimension
   
   /**
     * The chart series axis for the categories.

@@ -1,8 +1,5 @@
 package typingsSlinky.reactMdMenu.defaultMenuRendererMod
 
-import slinky.core.facade.ReactElement
-import typingsSlinky.reactMdMenu.reactMdMenuStrings.first
-import typingsSlinky.reactMdMenu.reactMdMenuStrings.last
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,29 +8,30 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RequiredMenuProps extends js.Object {
   
-  var children: ReactElement = js.native
+  var children: js.Any = js.native
   
-  var controlId: String = js.native
+  var controlId: js.Any = js.native
   
-  var defaultFocus: first | last | String = js.native
+  var defaultFocus: js.Any = js.native
   
-  var id: String = js.native
+  var id: js.Any = js.native
   
-  var onRequestClose: js.Function0[Unit] = js.native
+  var onRequestClose: js.Any = js.native
   
-  var visible: Boolean = js.native
+  var visible: js.Any = js.native
 }
 object RequiredMenuProps {
   
   @scala.inline
   def apply(
-    controlId: String,
-    defaultFocus: first | last | String,
-    id: String,
-    onRequestClose: () => Unit,
-    visible: Boolean
+    children: js.Any,
+    controlId: js.Any,
+    defaultFocus: js.Any,
+    id: js.Any,
+    onRequestClose: js.Any,
+    visible: js.Any
   ): RequiredMenuProps = {
-    val __obj = js.Dynamic.literal(controlId = controlId.asInstanceOf[js.Any], defaultFocus = defaultFocus.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onRequestClose = js.Any.fromFunction0(onRequestClose), visible = visible.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], controlId = controlId.asInstanceOf[js.Any], defaultFocus = defaultFocus.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], onRequestClose = onRequestClose.asInstanceOf[js.Any], visible = visible.asInstanceOf[js.Any])
     __obj.asInstanceOf[RequiredMenuProps]
   }
   
@@ -53,24 +51,21 @@ object RequiredMenuProps {
     }
     
     @scala.inline
-    def setControlId(value: String): Self = this.set("controlId", value.asInstanceOf[js.Any])
+    def setChildren(value: js.Any): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDefaultFocus(value: first | last | String): Self = this.set("defaultFocus", value.asInstanceOf[js.Any])
+    def setControlId(value: js.Any): Self = this.set("controlId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    def setDefaultFocus(value: js.Any): Self = this.set("defaultFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnRequestClose(value: () => Unit): Self = this.set("onRequestClose", js.Any.fromFunction0(value))
+    def setId(value: js.Any): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])
+    def setOnRequestClose(value: js.Any): Self = this.set("onRequestClose", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
+    def setVisible(value: js.Any): Self = this.set("visible", value.asInstanceOf[js.Any])
   }
 }

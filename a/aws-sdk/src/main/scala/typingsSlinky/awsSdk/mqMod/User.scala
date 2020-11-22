@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait User extends js.Object {
   
   /**
-    * Enables access to the the ActiveMQ Web Console for the ActiveMQ user.
+    * Enables access to the ActiveMQ Web Console for the ActiveMQ user (Does not apply to RabbitMQ brokers).
     */
   var ConsoleAccess: js.UndefOr[boolean] = js.native
   
@@ -18,12 +18,12 @@ trait User extends js.Object {
   var Groups: js.UndefOr[listOfString] = js.native
   
   /**
-    * Required. The password of the ActiveMQ user. This value must be at least 12 characters long, must contain at least 4 unique characters, and must not contain commas.
+    * Required. The password of the broker user. This value must be at least 12 characters long, must contain at least 4 unique characters, and must not contain commas.
     */
   var Password: js.UndefOr[string] = js.native
   
   /**
-    * Required. The username of the ActiveMQ user. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 2-100 characters long.
+    * Required. The username of the broker user. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes (- . _ ~). This value must be 2-100 characters long.
     */
   var Username: js.UndefOr[string] = js.native
 }

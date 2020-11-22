@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WebFrame extends EventEmitter {
   
-  // Docs: http://electronjs.org/docs/api/web-frame
+  // Docs: https://electronjs.org/docs/api/web-frame
   /**
     * Attempts to free memory that is no longer being used (like images from a
     * previous navigation).

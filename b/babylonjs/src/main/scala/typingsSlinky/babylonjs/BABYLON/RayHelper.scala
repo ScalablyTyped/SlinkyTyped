@@ -13,6 +13,10 @@ trait RayHelper extends js.Object {
   
   var _meshSpaceOrigin: js.Any = js.native
   
+  var _onAfterRenderObserver: js.Any = js.native
+  
+  var _onAfterStepObserver: js.Any = js.native
+  
   var _render: js.Any = js.native
   
   var _renderFunction: js.Any = js.native
@@ -24,8 +28,6 @@ trait RayHelper extends js.Object {
   var _scene: js.Any = js.native
   
   var _updateToMesh: js.Any = js.native
-  
-  var _updateToMeshFunction: js.Any = js.native
   
   /**
     * Attach a ray helper to a mesh so that we can easily see its orientation for instance or information like its normals.

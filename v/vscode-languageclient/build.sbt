@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "vscode-languageclient"
-version := "6.1.3-a8667f"
+version := "6.1.3-d27f23"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf",
-  "org.scalablytyped.slinky" %%% "vscode" % "1.47-dt-20200710Z-1ebb3e",
-  "org.scalablytyped.slinky" %%% "vscode-jsonrpc" % "5.0.1-b54fb8",
-  "org.scalablytyped.slinky" %%% "vscode-languageserver-protocol" % "3.15.3-c53a6b",
-  "org.scalablytyped.slinky" %%% "vscode-languageserver-types" % "3.15.1-602c6f")
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533",
+  "org.scalablytyped.slinky" %%% "vscode" % "1.51-dt-20201106Z-bcc95f",
+  "org.scalablytyped.slinky" %%% "vscode-jsonrpc" % "5.0.1-665fc6",
+  "org.scalablytyped.slinky" %%% "vscode-languageserver-protocol" % "3.15.3-10541d",
+  "org.scalablytyped.slinky" %%% "vscode-languageserver-types" % "3.15.1-15dcaa")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -4,33 +4,25 @@ import typingsSlinky.awsSdkClientKmsBrowser.encryptExceptionsUnionMod.EncryptExc
 import typingsSlinky.awsSdkClientKmsBrowser.generateDataKeyExceptionsUnionMod.GenerateDataKeyExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.generateDataKeyWithoutPlaintextExceptionsUnionMod.GenerateDataKeyWithoutPlaintextExceptionsUnion
 import typingsSlinky.awsSdkClientKmsBrowser.reEncryptExceptionsUnionMod.ReEncryptExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidKeyUsageExceptionDetails> * / any */ @js.native
 trait InvalidKeyUsageException
-  extends ServiceException[InvalidKeyUsageExceptionDetails]
-     with EncryptExceptionsUnion
+  extends EncryptExceptionsUnion
      with GenerateDataKeyExceptionsUnion
      with GenerateDataKeyWithoutPlaintextExceptionsUnion
      with ReEncryptExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidKeyUsageException: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidKeyUsageException = js.native
+  var name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidKeyUsageException = js.native
 }
 object InvalidKeyUsageException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidKeyUsageExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidKeyUsageException
-  ): InvalidKeyUsageException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.InvalidKeyUsageException): InvalidKeyUsageException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidKeyUsageException]
   }
   

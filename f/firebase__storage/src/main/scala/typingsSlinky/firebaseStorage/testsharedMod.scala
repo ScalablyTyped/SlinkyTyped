@@ -4,6 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.firebaseAppTypes.mod.FirebaseApp
 import typingsSlinky.firebaseAuthInteropTypes.mod.FirebaseAuthInternalName
 import typingsSlinky.firebaseComponent.mod.Provider
+import typingsSlinky.firebaseStorage.anon.AccessToken
 import typingsSlinky.firebaseStorage.errorMod.Code
 import typingsSlinky.firebaseStorage.errorMod.FirebaseStorageError
 import typingsSlinky.firebaseStorage.firebaseStorageStrings.`auth-internal`
@@ -43,8 +44,7 @@ object testsharedMod extends js.Object {
   def makeFakeApp(): FirebaseApp = js.native
   def makeFakeApp(bucketArg: String): FirebaseApp = js.native
   
-  def makeFakeAuthProvider(): Provider[FirebaseAuthInternalName] = js.native
-  def makeFakeAuthProvider(token: js.Object): Provider[FirebaseAuthInternalName] = js.native
+  def makeFakeAuthProvider(token: AccessToken): Provider[FirebaseAuthInternalName] = js.native
   
   def makePool(): XhrIoPool = js.native
   def makePool(sendHook: SendHook): XhrIoPool = js.native

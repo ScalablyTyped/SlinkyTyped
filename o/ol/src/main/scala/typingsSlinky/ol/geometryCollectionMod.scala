@@ -12,6 +12,9 @@ object geometryCollectionMod extends js.Object {
   trait GeometryCollection
     extends typingsSlinky.ol.geometryMod.default {
     
+    /**
+      * Return the geometries that make up this geometry collection.
+      */
     def getGeometries(): js.Array[typingsSlinky.ol.geometryMod.default] = js.native
     
     def getGeometriesArray(): js.Array[typingsSlinky.ol.geometryMod.default] = js.native
@@ -20,6 +23,9 @@ object geometryCollectionMod extends js.Object {
     
     def isEmpty(): Boolean = js.native
     
+    /**
+      * Set the geometries that make up this geometry collection.
+      */
     def setGeometries(geometries: js.Array[typingsSlinky.ol.geometryMod.default]): Unit = js.native
     
     def setGeometriesArray(geometries: js.Array[typingsSlinky.ol.geometryMod.default]): Unit = js.native

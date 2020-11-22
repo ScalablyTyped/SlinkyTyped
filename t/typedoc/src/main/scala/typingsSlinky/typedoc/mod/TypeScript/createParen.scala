@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createParen extends js.Object {
   
+  /** @deprecated Use `factory.createParen` or the factory supplied by your transformation context instead. */
   def apply(expression: Expression): ParenthesizedExpression = js.native
 }

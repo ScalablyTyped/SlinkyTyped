@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.unitsMod.IModelUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IModuleDocument because var conflicts: id, isLoadable, isLoaded, isReadOnly, model, structureTypeName, unit. Inlined containerAsFolderBase, containerAsModule */ @JSImport("mendixmodelsdk/dist/gen/projects", "projects.ModuleDocument")
 @js.native
-abstract class ModuleDocument protected () extends ModelUnit {
+abstract class ModuleDocument protected () extends ModelUnit[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
@@ -39,9 +39,6 @@ abstract class ModuleDocument protected () extends ModelUnit {
   def containerAsModule: Module = js.native
   @JSName("containerAsModule")
   val containerAsModule_FModuleDocument: IModule = js.native
-  
-  @JSName("model")
-  var model_FModuleDocument: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/projects", "projects.ModuleDocument")

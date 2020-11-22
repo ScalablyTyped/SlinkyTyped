@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeListSelection extends GridBaseSelection {
   
-  /** @name dxTreeList.Options.selection.recursive */
+  /**
+    * [descr:dxTreeList.Options.selection.recursive]
+    */
   var recursive: js.UndefOr[Boolean] = js.native
 }
 object dxTreeListSelection {

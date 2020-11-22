@@ -3,15 +3,17 @@ package typingsSlinky.grammarkdown
 import typingsSlinky.esfxCancelable.distMod.Cancelable
 import typingsSlinky.grammarkdown.binderMod.BindingTable
 import typingsSlinky.grammarkdown.diagnosticsMod.DiagnosticMessages
+import typingsSlinky.grammarkdown.lineOffsetMapMod.LineOffsetMap
 import typingsSlinky.grammarkdown.navigatorMod.NodeNavigator
+import typingsSlinky.grammarkdown.nodesMod.Declaration
 import typingsSlinky.grammarkdown.nodesMod.Identifier
 import typingsSlinky.grammarkdown.nodesMod.Node
-import typingsSlinky.grammarkdown.nodesMod.Parameter
-import typingsSlinky.grammarkdown.nodesMod.Production
 import typingsSlinky.grammarkdown.nodesMod.RightHandSide
 import typingsSlinky.grammarkdown.nodesMod.SourceFile
 import typingsSlinky.grammarkdown.optionsMod.CompilerOptions
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind
+import typingsSlinky.grammarkdown.typesMod.Position
+import typingsSlinky.grammarkdown.typesMod.Range
 import typingsSlinky.prex.mod.CancellationToken
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,6 +26,8 @@ object checkerMod extends js.Object {
   @js.native
   class Checker () extends js.Object {
     def this(options: CompilerOptions) = this()
+    def this(options: js.UndefOr[scala.Nothing], lineOffsetMap: LineOffsetMap) = this()
+    def this(options: CompilerOptions, lineOffsetMap: LineOffsetMap) = this()
     
     var bindings: js.Any = js.native
     
@@ -63,11 +67,15 @@ object checkerMod extends js.Object {
     
     var checkGrammarLexicalGoalAssertion: js.Any = js.native
     
+    var checkGrammarLine: js.Any = js.native
+    
     var checkGrammarLinkReference: js.Any = js.native
     
     var checkGrammarLookaheadAssertion: js.Any = js.native
     
     var checkGrammarNoSymbolHereAssertion: js.Any = js.native
+    
+    var checkGrammarNonTerminal: js.Any = js.native
     
     var checkGrammarOneOfList: js.Any = js.native
     
@@ -181,7 +189,13 @@ object checkerMod extends js.Object {
     
     var checkedFileSet: js.Any = js.native
     
+    var defineOverrideMap: js.Any = js.native
+    
+    var defines: js.Any = js.native
+    
     var diagnostics: js.Any = js.native
+    
+    var getDefine: js.Any = js.native
     
     var getNodeLinks: js.Any = js.native
     
@@ -189,19 +203,19 @@ object checkerMod extends js.Object {
     
     var getSymbolLinks: js.Any = js.native
     
+    var lineOffsetMap: js.Any = js.native
+    
     var markSymbolAsReferenced: js.Any = js.native
     
     var noChecks: js.Any = js.native
-    
-    var noStrictParametricProductions: js.Any = js.native
-    
-    var noUnusedParameters: js.Any = js.native
     
     var nodeLinks: js.Any = js.native
     
     var options: js.Any = js.native
     
     var preprocessDefine: js.Any = js.native
+    
+    var preprocessLine: js.Any = js.native
     
     var preprocessSourceElement: js.Any = js.native
     
@@ -216,6 +230,8 @@ object checkerMod extends js.Object {
     var reportGrammarErrorForNodeOrPos: js.Any = js.native
     
     var reportInvalidAssertion: js.Any = js.native
+    
+    var reportInvalidHtmlTrivia: js.Any = js.native
     
     var reportInvalidSymbol: js.Any = js.native
     
@@ -233,21 +249,54 @@ object checkerMod extends js.Object {
   @js.native
   class Resolver protected () extends js.Object {
     def this(bindings: BindingTable) = this()
+    def this(bindings: BindingTable, lineOffsetMap: LineOffsetMap) = this()
     
-    var bindings: js.Any = js.native
+    val bindings: BindingTable = js.native
     
     def createNavigator(node: Node[SyntaxKind]): js.UndefOr[NodeNavigator] = js.native
     
-    def getDeclarations(node: Identifier): js.Array[SourceFile | Production | Parameter] = js.native
+    def getDeclarations(node: Identifier): js.Array[Declaration] = js.native
+    
+    /**
+      * Gets the effective filename of a raw position within a source file, taking into account `@line` directives.
+      */
+    def getEffectiveFilenameAtPosition(sourceFile: SourceFile, position: Position): String = js.native
+    
+    /**
+      * Gets the effective position of a raw position within a source file, taking into account `@line` directives.
+      */
+    def getEffectivePosition(sourceFile: SourceFile, position: Position): Position = js.native
+    
+    /**
+      * Gets the effective range of a raw range within a source file, taking into account `@line` directives.
+      */
+    def getEffectiveRange(sourceFile: SourceFile, range: Range): Range = js.native
     
     def getParent(node: Node[SyntaxKind]): js.UndefOr[Node[SyntaxKind]] = js.native
     
     def getProductionLinkId(node: Identifier): js.UndefOr[String] = js.native
+    
+    /**
+      * Gets the filename of a parsed grammarkdown file for the provided effective filename and position, taking into account `@line` directives.
+      */
+    def getRawFilenameAtEffectivePosition(filename: String, position: Position): js.UndefOr[String] = js.native
+    
+    /**
+      * Gets the position in a parsed grammarkdown file for the provided effective filename and position, taking into account `@line` directives.
+      */
+    def getRawPositionFromEffectivePosition(filename: String, position: Position): js.UndefOr[Position] = js.native
+    
+    /**
+      * Gets the range in a parsed grammarkdown file for the provided effective filename and position, taking into account `@line` directives.
+      */
+    def getRawRangeFromEffectiveRange(filename: String, range: Range): js.UndefOr[Range] = js.native
     
     def getReferences(node: Identifier): js.Array[Node[SyntaxKind]] = js.native
     
     def getRightHandSideLinkId(node: RightHandSide, includePrefix: Boolean): String = js.native
     
     def getSourceFileOfNode(node: Node[SyntaxKind]): SourceFile = js.native
+    
+    var lineOffsetMap: js.Any = js.native
   }
 }

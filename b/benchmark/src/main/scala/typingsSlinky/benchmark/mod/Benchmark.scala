@@ -30,7 +30,11 @@ trait Benchmark extends js.Object {
   
   var hz: Double = js.native
   
+  var id: Double = js.native
+  
   def listeners(`type`: String): js.Array[js.Function] = js.native
+  
+  var name: String = js.native
   
   def off(): Benchmark = js.native
   def off(`type`: js.UndefOr[scala.Nothing], listener: js.Function): Benchmark = js.native

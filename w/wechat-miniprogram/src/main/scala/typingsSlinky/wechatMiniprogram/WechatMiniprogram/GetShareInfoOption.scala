@@ -63,7 +63,7 @@ object GetShareInfoOption {
     def deleteFail: Self = this.set("fail", js.undefined)
     
     @scala.inline
-    def setSuccess(value: /* result */ GetShareInfoSuccessCallbackResult => Unit): Self = this.set("success", js.Any.fromFunction1(value))
+    def setSuccess(value: /* result */ GetGroupEnterInfoSuccessCallbackResult => Unit): Self = this.set("success", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteSuccess: Self = this.set("success", js.undefined)

@@ -24,6 +24,13 @@ trait Window extends EventEmitter {
   def get(window_object: js.Object): win = js.native
   
   /**
+    * Get all windows.
+    *
+    * @param callback {(windows: NWJS_Helpers.win[]) => void} A callback function whose parameter is an array of nw.Window objects
+    */
+  def getAll(callback: js.Function1[/* windows */ js.Array[win], Unit]): Unit = js.native
+  
+  /**
     * Open a new window and load url in it.
     *
     * @param url {string} URL to be loaded in the opened window

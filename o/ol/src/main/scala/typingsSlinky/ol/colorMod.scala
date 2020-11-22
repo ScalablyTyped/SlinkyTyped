@@ -14,6 +14,8 @@ object colorMod extends js.Object {
   def asString(color: String): String = js.native
   def asString(color: Color): String = js.native
   
+  def fromString(s: String): Color = js.native
+  
   def isStringColor(s: String): Boolean = js.native
   
   def normalize(color: Color): Color = js.native

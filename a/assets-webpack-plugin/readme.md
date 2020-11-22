@@ -1,7 +1,7 @@
 
 # Scala.js typings for assets-webpack-plugin
 
-Typings are for version 3.9
+Typings are for version 6.0
 
 ## Library description:
 Emits a json file with assets paths

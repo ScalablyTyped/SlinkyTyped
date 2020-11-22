@@ -33,6 +33,11 @@ trait AuditCheckDetails extends js.Object {
   var nonCompliantResourcesCount: js.UndefOr[NonCompliantResourcesCount] = js.native
   
   /**
+    *  Describes how many of the non-compliant resources created during the evaluation of an audit check were marked as suppressed. 
+    */
+  var suppressedNonCompliantResourcesCount: js.UndefOr[SuppressedNonCompliantResourcesCount] = js.native
+  
+  /**
     * The number of resources on which the check was performed.
     */
   var totalResourcesCount: js.UndefOr[TotalResourcesCount] = js.native
@@ -89,6 +94,12 @@ object AuditCheckDetails {
     
     @scala.inline
     def deleteNonCompliantResourcesCount: Self = this.set("nonCompliantResourcesCount", js.undefined)
+    
+    @scala.inline
+    def setSuppressedNonCompliantResourcesCount(value: SuppressedNonCompliantResourcesCount): Self = this.set("suppressedNonCompliantResourcesCount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSuppressedNonCompliantResourcesCount: Self = this.set("suppressedNonCompliantResourcesCount", js.undefined)
     
     @scala.inline
     def setTotalResourcesCount(value: TotalResourcesCount): Self = this.set("totalResourcesCount", value.asInstanceOf[js.Any])

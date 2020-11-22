@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 /**
   * The representation of a parsed user agent.
-  * @param family The name of the browser
-  * @param major Major version of the browser
-  * @param minor Minor version of the browser
-  * @param patch Patch version of the browser
-  * @param source The actual user agent string
+  * @param [family=`Other`] The name of the browser
+  * @param [major='0'] Major version of the browser
+  * @param [minor='0'] Minor version of the browser
+  * @param [patch='0'] Patch version of the browser
+  * @param [source] The actual user agent string
   */
 class Agent () extends js.Object {
   def this(family: String) = this()

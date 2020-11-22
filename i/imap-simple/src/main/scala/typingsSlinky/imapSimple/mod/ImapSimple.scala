@@ -18,15 +18,15 @@ class ImapSimple protected () extends EventEmitter {
   /** Create a mailbox, calling the provided callback with signature (err, boxName), or resolves the returned promise with boxName. */
   def addBox(boxName: String, callback: js.Function2[/* err */ js.Error, /* boxName */ String, Unit]): Unit = js.native
   
-  def addFlags(source: String, flag: String): js.Promise[Unit] = js.native
+  def addFlags(source: js.Array[Double], flag: String): js.Promise[Unit] = js.native
+  def addFlags(source: js.Array[Double], flag: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def addFlags(source: js.Array[Double], flag: js.Array[String]): js.Promise[Unit] = js.native
+  def addFlags(source: js.Array[Double], flag: js.Array[String], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def addFlags(source: Double, flag: String): js.Promise[Unit] = js.native
   /** Adds the provided flag(s) to the specified message(s). uid is the uid of the message you want to add the flag to or an array of uids. flag is either a string or array of strings indicating the flags to add. */
-  def addFlags(source: String, flag: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def addFlags(source: String, flag: js.Array[String]): js.Promise[Unit] = js.native
-  def addFlags(source: String, flag: js.Array[String], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def addFlags(source: js.Array[String], flag: String): js.Promise[Unit] = js.native
-  def addFlags(source: js.Array[String], flag: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def addFlags(source: js.Array[String], flag: js.Array[String]): js.Promise[Unit] = js.native
-  def addFlags(source: js.Array[String], flag: js.Array[String], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def addFlags(source: Double, flag: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def addFlags(source: Double, flag: js.Array[String]): js.Promise[Unit] = js.native
+  def addFlags(source: Double, flag: js.Array[String], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   
   def addMessageLabel(source: String, label: String): js.Promise[Unit] = js.native
   /** Adds the provided label(s) to the specified message(s). source corresponds to a node-imap MessageSource which specifies the messages to be moved. label is either a string or array of strings indicating the labels to add. When completed, either calls the provided callback with signature (err), or resolves the returned promise. */
@@ -46,19 +46,29 @@ class ImapSimple protected () extends EventEmitter {
   /** Appends the argument message to the currently open mailbox or another mailbox. Message is a RFC-822 compatible MIME message. Valid options are mailbox, flags and date. When completed, either calls the provided callback with signature (err), or resolves the returned promise. */
   def append(message: js.Any, options: AppendOptions, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   
+  def closeBox(autoExpunge: Boolean): js.Promise[Unit] = js.native
+  /** Close a mailbox, calling the provided callback with signature (err), or resolves the returned promise. If autoExpunge is true, any messages marked as Deleted in the currently open mailbox will be removed. */
+  def closeBox(autoExpunge: Boolean, callBack: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
   def delBox(boxName: String): js.Promise[String] = js.native
   /** Delete a mailbox, calling the provided callback with signature (err, boxName), or resolves the returned promise with boxName. */
   def delBox(boxName: String, callback: js.Function2[/* err */ js.Error, /* boxName */ String, Unit]): Unit = js.native
   
-  def delFlags(uid: String, flag: String): js.Promise[Unit] = js.native
+  def delFlags(uid: js.Array[Double], flag: String): js.Promise[Unit] = js.native
+  def delFlags(uid: js.Array[Double], flag: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def delFlags(uid: js.Array[Double], flag: js.Array[String]): js.Promise[Unit] = js.native
+  def delFlags(uid: js.Array[Double], flag: js.Array[String], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def delFlags(uid: Double, flag: String): js.Promise[Unit] = js.native
   /** Removes the provided flag(s) from the specified message(s). uid is the uid of the message you want to remove the flag from or an array of uids. flag is either a string or array of strings indicating the flags to remove. */
-  def delFlags(uid: String, flag: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def delFlags(uid: String, flag: js.Array[String]): js.Promise[Unit] = js.native
-  def delFlags(uid: String, flag: js.Array[String], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def delFlags(uid: js.Array[String], flag: String): js.Promise[Unit] = js.native
-  def delFlags(uid: js.Array[String], flag: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
-  def delFlags(uid: js.Array[String], flag: js.Array[String]): js.Promise[Unit] = js.native
-  def delFlags(uid: js.Array[String], flag: js.Array[String], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def delFlags(uid: Double, flag: String, callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def delFlags(uid: Double, flag: js.Array[String]): js.Promise[Unit] = js.native
+  def delFlags(uid: Double, flag: js.Array[String], callback: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  
+  def deleteMessage(uid: js.Array[Double]): js.Promise[Unit] = js.native
+  def deleteMessage(uid: js.Array[Double], callBack: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
+  def deleteMessage(uid: Double): js.Promise[Unit] = js.native
+  /** Deletes the specified message(s). uid is the uid of the message you want to add the flag to or an array of uids. */
+  def deleteMessage(uid: Double, callBack: js.Function1[/* err */ js.Error, Unit]): Unit = js.native
   
   /** Close the connection to the imap server. */
   def end(): Unit = js.native

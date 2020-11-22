@@ -6,18 +6,15 @@ import typingsSlinky.devextreme.anon.Argument
 import typingsSlinky.devextreme.anon.Axis
 import typingsSlinky.devextreme.anon.CheckTypeForAllData
 import typingsSlinky.devextreme.anon.CustomizeSeries
+import typingsSlinky.devextreme.anon.EventModelTarget
 import typingsSlinky.devextreme.anon.HorizontalLine
-import typingsSlinky.devextreme.anon.JQueryEventModelTarget
 import typingsSlinky.devextreme.anon.Offset
-import typingsSlinky.devextreme.anon.`19`
-import typingsSlinky.devextreme.devextremeStrings.all
+import typingsSlinky.devextreme.anon.`22`
 import typingsSlinky.devextreme.devextremeStrings.hide
-import typingsSlinky.devextreme.devextremeStrings.mouse
 import typingsSlinky.devextreme.devextremeStrings.multiple
 import typingsSlinky.devextreme.devextremeStrings.none
 import typingsSlinky.devextreme.devextremeStrings.single_
 import typingsSlinky.devextreme.devextremeStrings.stack
-import typingsSlinky.devextreme.devextremeStrings.touch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,147 +22,205 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartOptions extends BaseChartOptions[dxChart] {
   
-  /** @name dxChart.Options.adjustOnZoom */
+  /**
+    * [descr:dxChart.Options.adjustOnZoom]
+    */
   var adjustOnZoom: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.annotations */
+  /**
+    * [descr:dxChart.Options.annotations]
+    */
   var annotations: js.UndefOr[js.Array[dxChartAnnotationConfig | _]] = js.native
   
-  /** @name dxChart.Options.argumentAxis */
+  /**
+    * [descr:dxChart.Options.argumentAxis]
+    */
   var argumentAxis: js.UndefOr[dxChartArgumentAxis] = js.native
   
-  /** @name dxChart.Options.autoHidePointMarkers */
+  /**
+    * [descr:dxChart.Options.autoHidePointMarkers]
+    */
   var autoHidePointMarkers: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.barGroupPadding */
+  /**
+    * [descr:dxChart.Options.barGroupPadding]
+    */
   var barGroupPadding: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.barGroupWidth */
+  /**
+    * [descr:dxChart.Options.barGroupWidth]
+    */
   var barGroupWidth: js.UndefOr[Double] = js.native
   
-  /** @deprecated */
-  /** @name dxChart.Options.barWidth */
-  var barWidth: js.UndefOr[Double] = js.native
-  
-  /** @name dxChart.Options.commonAnnotationSettings */
+  /**
+    * [descr:dxChart.Options.commonAnnotationSettings]
+    */
   var commonAnnotationSettings: js.UndefOr[dxChartCommonAnnotationConfig] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings]
+    */
   var commonAxisSettings: js.UndefOr[dxChartCommonAxisSettings] = js.native
   
-  /** @name dxChart.Options.commonPaneSettings */
+  /**
+    * [descr:dxChart.Options.commonPaneSettings]
+    */
   var commonPaneSettings: js.UndefOr[dxChartCommonPaneSettings] = js.native
   
-  /** @name dxChart.Options.commonSeriesSettings */
+  /**
+    * [descr:dxChart.Options.commonSeriesSettings]
+    */
   var commonSeriesSettings: js.UndefOr[dxChartCommonSeriesSettings] = js.native
   
-  /** @name dxChart.Options.containerBackgroundColor */
+  /**
+    * [descr:dxChart.Options.containerBackgroundColor]
+    */
   var containerBackgroundColor: js.UndefOr[String] = js.native
   
-  /** @name dxChart.Options.crosshair */
+  /**
+    * [descr:dxChart.Options.crosshair]
+    */
   var crosshair: js.UndefOr[HorizontalLine] = js.native
   
-  /** @name dxChart.Options.customizeAnnotation */
+  /**
+    * [descr:dxChart.Options.customizeAnnotation]
+    */
   var customizeAnnotation: js.UndefOr[
     js.Function1[/* annotation */ dxChartAnnotationConfig | js.Any, dxChartAnnotationConfig]
   ] = js.native
   
-  /** @name dxChart.Options.dataPrepareSettings */
+  /**
+    * [descr:dxChart.Options.dataPrepareSettings]
+    */
   var dataPrepareSettings: js.UndefOr[CheckTypeForAllData] = js.native
   
-  /** @name dxChart.Options.defaultPane */
+  /**
+    * [descr:dxChart.Options.defaultPane]
+    */
   var defaultPane: js.UndefOr[String] = js.native
   
-  /** @deprecated */
-  /** @name dxChart.Options.equalBarWidth */
-  var equalBarWidth: js.UndefOr[Boolean] = js.native
-  
-  /** @name dxChart.Options.legend */
+  /**
+    * [descr:dxChart.Options.legend]
+    */
   @JSName("legend")
   var legend_dxChartOptions: js.UndefOr[dxChartLegend] = js.native
   
-  /** @name dxChart.Options.maxBubbleSize */
+  /**
+    * [descr:dxChart.Options.maxBubbleSize]
+    */
   var maxBubbleSize: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.minBubbleSize */
+  /**
+    * [descr:dxChart.Options.minBubbleSize]
+    */
   var minBubbleSize: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.negativesAsZeroes */
+  /**
+    * [descr:dxChart.Options.negativesAsZeroes]
+    */
   var negativesAsZeroes: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.onArgumentAxisClick */
+  /**
+    * [descr:dxChart.Options.onArgumentAxisClick]
+    */
   var onArgumentAxisClick: js.UndefOr[(js.Function1[/* e */ Argument, _]) | String] = js.native
   
-  /** @name dxChart.Options.onLegendClick */
-  var onLegendClick: js.UndefOr[(js.Function1[/* e */ JQueryEventModelTarget, _]) | String] = js.native
+  /**
+    * [descr:dxChart.Options.onLegendClick]
+    */
+  var onLegendClick: js.UndefOr[(js.Function1[/* e */ EventModelTarget, _]) | String] = js.native
   
-  /** @name dxChart.Options.onSeriesClick */
-  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ JQueryEventModelTarget, _]) | String] = js.native
+  /**
+    * [descr:dxChart.Options.onSeriesClick]
+    */
+  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ EventModelTarget, _]) | String] = js.native
   
-  /** @name dxChart.Options.onSeriesHoverChanged */
-  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ `19`, _]] = js.native
+  /**
+    * [descr:dxChart.Options.onSeriesHoverChanged]
+    */
+  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ `22`, _]] = js.native
   
-  /** @name dxChart.Options.onSeriesSelectionChanged */
-  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ `19`, _]] = js.native
+  /**
+    * [descr:dxChart.Options.onSeriesSelectionChanged]
+    */
+  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ `22`, _]] = js.native
   
-  /** @name dxChart.Options.onZoomEnd */
+  /**
+    * [descr:dxChart.Options.onZoomEnd]
+    */
   var onZoomEnd: js.UndefOr[js.Function1[/* e */ ActionType, _]] = js.native
   
-  /** @name dxChart.Options.onZoomStart */
+  /**
+    * [descr:dxChart.Options.onZoomStart]
+    */
   var onZoomStart: js.UndefOr[js.Function1[/* e */ Axis, _]] = js.native
   
-  /** @name dxChart.Options.panes */
+  /**
+    * [descr:dxChart.Options.panes]
+    */
   var panes: js.UndefOr[dxChartPanes | js.Array[dxChartPanes]] = js.native
   
-  /** @name dxChart.Options.resizePanesOnZoom */
+  /**
+    * [descr:dxChart.Options.resizePanesOnZoom]
+    */
   var resizePanesOnZoom: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.resolveLabelOverlapping */
+  /**
+    * [descr:dxChart.Options.resolveLabelOverlapping]
+    */
   var resolveLabelOverlapping: js.UndefOr[hide | none | stack] = js.native
   
-  /** @name dxChart.Options.rotated */
+  /**
+    * [descr:dxChart.Options.rotated]
+    */
   var rotated: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.scrollBar */
+  /**
+    * [descr:dxChart.Options.scrollBar]
+    */
   var scrollBar: js.UndefOr[Offset] = js.native
   
-  /** @deprecated */
-  /** @name dxChart.Options.scrollingMode */
-  var scrollingMode: js.UndefOr[all | mouse | none | touch] = js.native
-  
-  /** @name dxChart.Options.seriesSelectionMode */
+  /**
+    * [descr:dxChart.Options.seriesSelectionMode]
+    */
   var seriesSelectionMode: js.UndefOr[multiple | single_] = js.native
   
-  /** @name dxChart.Options.seriesTemplate */
+  /**
+    * [descr:dxChart.Options.seriesTemplate]
+    */
   var seriesTemplate: js.UndefOr[CustomizeSeries] = js.native
   
-  /** @name dxChart.Options.series */
+  /**
+    * [descr:dxChart.Options.series]
+    */
   @JSName("series")
   var series_dxChartOptions: js.UndefOr[ChartSeries | js.Array[ChartSeries]] = js.native
   
-  /** @name dxChart.Options.stickyHovering */
+  /**
+    * [descr:dxChart.Options.stickyHovering]
+    */
   var stickyHovering: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.synchronizeMultiAxes */
+  /**
+    * [descr:dxChart.Options.synchronizeMultiAxes]
+    */
   var synchronizeMultiAxes: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChart.Options.tooltip */
+  /**
+    * [descr:dxChart.Options.tooltip]
+    */
   @JSName("tooltip")
   var tooltip_dxChartOptions: js.UndefOr[dxChartTooltip] = js.native
   
-  /** @deprecated */
-  /** @name dxChart.Options.useAggregation */
-  var useAggregation: js.UndefOr[Boolean] = js.native
-  
-  /** @name dxChart.Options.valueAxis */
+  /**
+    * [descr:dxChart.Options.valueAxis]
+    */
   var valueAxis: js.UndefOr[dxChartValueAxis | js.Array[dxChartValueAxis]] = js.native
   
-  /** @name dxChart.Options.zoomAndPan */
+  /**
+    * [descr:dxChart.Options.zoomAndPan]
+    */
   var zoomAndPan: js.UndefOr[AllowMouseWheel] = js.native
-  
-  /** @deprecated */
-  /** @name dxChart.Options.zoomingMode */
-  var zoomingMode: js.UndefOr[all | mouse | none | touch] = js.native
 }
 object dxChartOptions {
   
@@ -230,12 +285,6 @@ object dxChartOptions {
     def deleteBarGroupWidth: Self = this.set("barGroupWidth", js.undefined)
     
     @scala.inline
-    def setBarWidth(value: Double): Self = this.set("barWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBarWidth: Self = this.set("barWidth", js.undefined)
-    
-    @scala.inline
     def setCommonAnnotationSettings(value: dxChartCommonAnnotationConfig): Self = this.set("commonAnnotationSettings", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -290,12 +339,6 @@ object dxChartOptions {
     def deleteDefaultPane: Self = this.set("defaultPane", js.undefined)
     
     @scala.inline
-    def setEqualBarWidth(value: Boolean): Self = this.set("equalBarWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteEqualBarWidth: Self = this.set("equalBarWidth", js.undefined)
-    
-    @scala.inline
     def setLegend(value: dxChartLegend): Self = this.set("legend", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -329,31 +372,31 @@ object dxChartOptions {
     def deleteOnArgumentAxisClick: Self = this.set("onArgumentAxisClick", js.undefined)
     
     @scala.inline
-    def setOnLegendClickFunction1(value: /* e */ JQueryEventModelTarget => _): Self = this.set("onLegendClick", js.Any.fromFunction1(value))
+    def setOnLegendClickFunction1(value: /* e */ EventModelTarget => _): Self = this.set("onLegendClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnLegendClick(value: (js.Function1[/* e */ JQueryEventModelTarget, _]) | String): Self = this.set("onLegendClick", value.asInstanceOf[js.Any])
+    def setOnLegendClick(value: (js.Function1[/* e */ EventModelTarget, _]) | String): Self = this.set("onLegendClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnLegendClick: Self = this.set("onLegendClick", js.undefined)
     
     @scala.inline
-    def setOnSeriesClickFunction1(value: /* e */ JQueryEventModelTarget => _): Self = this.set("onSeriesClick", js.Any.fromFunction1(value))
+    def setOnSeriesClickFunction1(value: /* e */ EventModelTarget => _): Self = this.set("onSeriesClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnSeriesClick(value: (js.Function1[/* e */ JQueryEventModelTarget, _]) | String): Self = this.set("onSeriesClick", value.asInstanceOf[js.Any])
+    def setOnSeriesClick(value: (js.Function1[/* e */ EventModelTarget, _]) | String): Self = this.set("onSeriesClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnSeriesClick: Self = this.set("onSeriesClick", js.undefined)
     
     @scala.inline
-    def setOnSeriesHoverChanged(value: /* e */ `19` => _): Self = this.set("onSeriesHoverChanged", js.Any.fromFunction1(value))
+    def setOnSeriesHoverChanged(value: /* e */ `22` => _): Self = this.set("onSeriesHoverChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSeriesHoverChanged: Self = this.set("onSeriesHoverChanged", js.undefined)
     
     @scala.inline
-    def setOnSeriesSelectionChanged(value: /* e */ `19` => _): Self = this.set("onSeriesSelectionChanged", js.Any.fromFunction1(value))
+    def setOnSeriesSelectionChanged(value: /* e */ `22` => _): Self = this.set("onSeriesSelectionChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSeriesSelectionChanged: Self = this.set("onSeriesSelectionChanged", js.undefined)
@@ -404,12 +447,6 @@ object dxChartOptions {
     def deleteScrollBar: Self = this.set("scrollBar", js.undefined)
     
     @scala.inline
-    def setScrollingMode(value: all | mouse | none | touch): Self = this.set("scrollingMode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteScrollingMode: Self = this.set("scrollingMode", js.undefined)
-    
-    @scala.inline
     def setSeriesVarargs(value: ChartSeries*): Self = this.set("series", js.Array(value :_*))
     
     @scala.inline
@@ -449,12 +486,6 @@ object dxChartOptions {
     def deleteTooltip: Self = this.set("tooltip", js.undefined)
     
     @scala.inline
-    def setUseAggregation(value: Boolean): Self = this.set("useAggregation", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUseAggregation: Self = this.set("useAggregation", js.undefined)
-    
-    @scala.inline
     def setValueAxisVarargs(value: dxChartValueAxis*): Self = this.set("valueAxis", js.Array(value :_*))
     
     @scala.inline
@@ -468,11 +499,5 @@ object dxChartOptions {
     
     @scala.inline
     def deleteZoomAndPan: Self = this.set("zoomAndPan", js.undefined)
-    
-    @scala.inline
-    def setZoomingMode(value: all | mouse | none | touch): Self = this.set("zoomingMode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteZoomingMode: Self = this.set("zoomingMode", js.undefined)
   }
 }

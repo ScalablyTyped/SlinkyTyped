@@ -16,7 +16,7 @@ trait ɵComponentDef[T] extends ɵDirectiveDef[T] {
   val _underscore: js.UndefOr[scala.Nothing] = js.native
   
   /** Constants associated with the component's view. */
-  val consts: TConstants | Null = js.native
+  val consts: TConstantsOrFactory | Null = js.native
   
   /**
     * Defines arbitrary developer-defined data to be stored on a renderer instance.

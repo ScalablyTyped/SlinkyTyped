@@ -1,6 +1,9 @@
 package typingsSlinky.bootstrapSelect
 
+import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.Node
 import typingsSlinky.bootstrapSelect.bootstrapSelectStrings.auto
+import typingsSlinky.std.ChildNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -45,6 +48,12 @@ trait BootstrapSelectOptions extends js.Object {
   var noneResultsText: js.UndefOr[String] = js.native
   
   var noneSelectedText: js.UndefOr[String] = js.native
+  
+  var sanitize: js.UndefOr[Boolean] = js.native
+  
+  var sanitizeFn: js.UndefOr[
+    js.Function1[/* unsafeElements */ js.Array[HTMLElement | ChildNode | Node], Unit]
+  ] = js.native
   
   var selectAllText: js.UndefOr[String] = js.native
   
@@ -215,6 +224,18 @@ object BootstrapSelectOptions {
     
     @scala.inline
     def deleteNoneSelectedText: Self = this.set("noneSelectedText", js.undefined)
+    
+    @scala.inline
+    def setSanitize(value: Boolean): Self = this.set("sanitize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSanitize: Self = this.set("sanitize", js.undefined)
+    
+    @scala.inline
+    def setSanitizeFn(value: /* unsafeElements */ js.Array[HTMLElement | ChildNode | Node] => Unit): Self = this.set("sanitizeFn", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteSanitizeFn: Self = this.set("sanitizeFn", js.undefined)
     
     @scala.inline
     def setSelectAllText(value: String): Self = this.set("selectAllText", value.asInstanceOf[js.Any])

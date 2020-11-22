@@ -17,6 +17,8 @@ trait Texture extends BaseTexture {
   
   var _cachedCoordinatesMode: js.Any = js.native
   
+  var _cachedHomogeneousRotationInUVTransform: js.Any = js.native
+  
   var _cachedProjectionMatrixId: js.Any = js.native
   
   var _cachedTextureMatrix: js.Any = js.native
@@ -25,15 +27,21 @@ trait Texture extends BaseTexture {
   
   var _cachedUOffset: js.Any = js.native
   
+  var _cachedURotationCenter: js.Any = js.native
+  
   var _cachedUScale: js.Any = js.native
   
   var _cachedVAng: js.Any = js.native
   
   var _cachedVOffset: js.Any = js.native
   
+  var _cachedVRotationCenter: js.Any = js.native
+  
   var _cachedVScale: js.Any = js.native
   
   var _cachedWAng: js.Any = js.native
+  
+  var _cachedWRotationCenter: js.Any = js.native
   
   var _delayedOnError: js.Any = js.native
   
@@ -50,6 +58,8 @@ trait Texture extends BaseTexture {
   var _invertY: Boolean = js.native
   
   var _isBlocking: Boolean = js.native
+  
+  var _loaderOptions: js.Any = js.native
   
   var _mimeType: js.Any = js.native
   
@@ -70,6 +80,11 @@ trait Texture extends BaseTexture {
   def getTextureMatrix(uBase: Double): Matrix = js.native
   
   /**
+    * Sets this property to true to avoid deformations when rotating the texture with non-uniform scaling
+    */
+  var homogeneousRotationInUVTransform: Boolean = js.native
+  
+  /**
     * List of inspectable custom properties (used by the Inspector)
     * @see https://doc.babylonjs.com/how_to/debug_layer#extensibility
     */
@@ -86,6 +101,9 @@ trait Texture extends BaseTexture {
     */
   def isBlocking_=(value: Boolean): Unit = js.native
   
+  /** Returns the texture mime type if it was defined by a loader (undefined else) */
+  def mimeType: js.UndefOr[String] = js.native
+  
   /**
     * Observable triggered once the texture has been loaded.
     */
@@ -98,13 +116,13 @@ trait Texture extends BaseTexture {
   
   /**
     * Define an offset on the texture to rotate around the u coordinates of the UVs
-    * @see http://doc.babylonjs.com/how_to/more_materials
+    * @see https://doc.babylonjs.com/how_to/more_materials
     */
   var uAng: Double = js.native
   
   /**
     * Define an offset on the texture to offset the u coordinates of the UVs
-    * @see http://doc.babylonjs.com/how_to/more_materials#offsetting
+    * @see https://doc.babylonjs.com/how_to/more_materials#offsetting
     */
   var uOffset: Double = js.native
   
@@ -115,7 +133,7 @@ trait Texture extends BaseTexture {
   
   /**
     * Define an offset on the texture to scale the u coordinates of the UVs
-    * @see http://doc.babylonjs.com/how_to/more_materials#tiling
+    * @see https://doc.babylonjs.com/how_to/more_materials#tiling
     */
   var uScale: Double = js.native
   
@@ -149,13 +167,13 @@ trait Texture extends BaseTexture {
   
   /**
     * Define an offset on the texture to rotate around the v coordinates of the UVs
-    * @see http://doc.babylonjs.com/how_to/more_materials
+    * @see https://doc.babylonjs.com/how_to/more_materials
     */
   var vAng: Double = js.native
   
   /**
     * Define an offset on the texture to offset the v coordinates of the UVs
-    * @see http://doc.babylonjs.com/how_to/more_materials#offsetting
+    * @see https://doc.babylonjs.com/how_to/more_materials#offsetting
     */
   var vOffset: Double = js.native
   
@@ -166,13 +184,13 @@ trait Texture extends BaseTexture {
   
   /**
     * Define an offset on the texture to scale the v coordinates of the UVs
-    * @see http://doc.babylonjs.com/how_to/more_materials#tiling
+    * @see https://doc.babylonjs.com/how_to/more_materials#tiling
     */
   var vScale: Double = js.native
   
   /**
     * Define an offset on the texture to rotate around the w coordinates of the UVs (in case of 3d texture)
-    * @see http://doc.babylonjs.com/how_to/more_materials
+    * @see https://doc.babylonjs.com/how_to/more_materials
     */
   var wAng: Double = js.native
   

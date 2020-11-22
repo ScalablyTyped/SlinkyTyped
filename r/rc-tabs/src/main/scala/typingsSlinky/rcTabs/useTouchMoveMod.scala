@@ -14,6 +14,4 @@ object useTouchMoveMod extends js.Object {
     ref: ReactRef[HTMLDivElement],
     onOffset: js.Function2[/* offsetX */ Double, /* offsetY */ Double, Boolean]
   ): Unit = js.native
-  
-  def isMobile(): Boolean = js.native
 }

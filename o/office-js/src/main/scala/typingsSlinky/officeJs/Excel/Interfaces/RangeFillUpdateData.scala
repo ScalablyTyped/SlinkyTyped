@@ -68,7 +68,7 @@ trait RangeFillUpdateData extends js.Object {
   
   /**
     *
-    * Specifies a double that lightens or darkens a color for Range Fill, the value is between -1 (darkest) and 1 (brightest), with 0 for the original color.
+    * Specifies a double that lightens or darkens a color for Range Fill. The value is between -1 (darkest) and 1 (brightest), with 0 for the original color.
     If the tintAndShades are not uniform, null will be returned.
     *
     * [Api set: ExcelApi 1.9]

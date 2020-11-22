@@ -25,6 +25,16 @@ trait TriggerAction extends js.Object {
   var jobName: js.UndefOr[Input[String]] = js.native
   
   /**
+    * Specifies configuration properties of a job run notification. see Notification Property details below.
+    */
+  var notificationProperty: js.UndefOr[Input[TriggerActionNotificationProperty]] = js.native
+  
+  /**
+    * The name of the Security Configuration structure to be used with this action.
+    */
+  var securityConfiguration: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * The job run timeout in minutes. It overrides the timeout value of the job.
     */
   var timeout: js.UndefOr[Input[Double]] = js.native
@@ -69,6 +79,18 @@ object TriggerAction {
     
     @scala.inline
     def deleteJobName: Self = this.set("jobName", js.undefined)
+    
+    @scala.inline
+    def setNotificationProperty(value: Input[TriggerActionNotificationProperty]): Self = this.set("notificationProperty", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNotificationProperty: Self = this.set("notificationProperty", js.undefined)
+    
+    @scala.inline
+    def setSecurityConfiguration(value: Input[String]): Self = this.set("securityConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSecurityConfiguration: Self = this.set("securityConfiguration", js.undefined)
     
     @scala.inline
     def setTimeout(value: Input[Double]): Self = this.set("timeout", value.asInstanceOf[js.Any])

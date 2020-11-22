@@ -13,6 +13,8 @@ trait MigrationOptions extends js.Object {
   @JSName("literal")
   var literal_Original: Literal = js.native
   
+  var logger: Logger = js.native
+  
   def schemalize(v: Name): String = js.native
   @JSName("schemalize")
   var schemalize_Original: Literal = js.native

@@ -69,7 +69,7 @@ trait DbcloseMongoClientclose extends js.Object {
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#command */
   def command(command: js.Object, callback: MongoCallback[_]): Unit = js.native
   def command(command: js.Object, options: ReadPreference): js.Promise[_] = js.native
-  def command(command: js.Object, options: ReadPreference, callback: MongoCallback[_]): Unit = js.native
+  def command(command: js.Object, options: Session, callback: MongoCallback[_]): Unit = js.native
   
   def createCollection[TSchema](name: String): js.Promise[Collection[TSchema]] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#createCollection */
@@ -105,8 +105,8 @@ trait DbcloseMongoClientclose extends js.Object {
   def executeDbAdminCommand(command: js.Object): js.Promise[_] = js.native
   /** http://mongodb.github.io/node-mongodb-native/3.1/api/Db.html#executeDbAdminCommand */
   def executeDbAdminCommand(command: js.Object, callback: MongoCallback[_]): Unit = js.native
-  def executeDbAdminCommand(command: js.Object, options: Session): js.Promise[_] = js.native
-  def executeDbAdminCommand(command: js.Object, options: Session, callback: MongoCallback[_]): Unit = js.native
+  def executeDbAdminCommand(command: js.Object, options: ReadPreference): js.Promise[_] = js.native
+  def executeDbAdminCommand(command: js.Object, options: ReadPreference, callback: MongoCallback[_]): Unit = js.native
   
   def getMaxListeners(): Double = js.native
   
@@ -122,8 +122,8 @@ trait DbcloseMongoClientclose extends js.Object {
   def listCollections(filter: js.Object): CommandCursor = js.native
   def listCollections(filter: js.Object, options: BatchSize): CommandCursor = js.native
   
-  def listenerCount(`type`: String): Double = js.native
-  def listenerCount(`type`: js.Symbol): Double = js.native
+  def listenerCount(event: String): Double = js.native
+  def listenerCount(event: js.Symbol): Double = js.native
   
   def listeners(event: String): js.Array[js.Function] = js.native
   def listeners(event: js.Symbol): js.Array[js.Function] = js.native

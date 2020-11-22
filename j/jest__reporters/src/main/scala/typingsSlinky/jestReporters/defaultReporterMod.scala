@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/reporters/build/default_reporter", JSImport.Namespace)
+@JSImport("@jest/reporters/build/DefaultReporter", JSImport.Namespace)
 @js.native
 object defaultReporterMod extends js.Object {
   

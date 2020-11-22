@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CriterionAdditionalProperties extends js.Object {
   
   /**
+    * A condition that requires an array field to exactly match the specified property values. You can use this operator with the following properties: customDataIdentifiers.detections.arn, customDataIdentifiers.detections.name, resourcesAffected.s3Bucket.tags.key, resourcesAffected.s3Bucket.tags.value, resourcesAffected.s3Object.tags.key, resourcesAffected.s3Object.tags.value, sensitiveData.category, and sensitiveData.detections.type.
+    */
+  var eqExactMatch: js.UndefOr[listOfString] = js.native
+  
+  /**
     * An equal to condition to apply to a specified property value for findings.
     */
   @JSName("eq")
@@ -69,6 +74,15 @@ object CriterionAdditionalProperties {
     
     @scala.inline
     def deleteEq: Self = this.set("eq", js.undefined)
+    
+    @scala.inline
+    def setEqExactMatchVarargs(value: string*): Self = this.set("eqExactMatch", js.Array(value :_*))
+    
+    @scala.inline
+    def setEqExactMatch(value: listOfString): Self = this.set("eqExactMatch", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEqExactMatch: Self = this.set("eqExactMatch", js.undefined)
     
     @scala.inline
     def setGt(value: long): Self = this.set("gt", value.asInstanceOf[js.Any])

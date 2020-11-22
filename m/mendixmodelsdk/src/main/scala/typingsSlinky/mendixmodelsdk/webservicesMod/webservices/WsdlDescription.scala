@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.webservicesMod.webservices
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.appservicesMod.appservices.Msd
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.xmlschemasMod.xmlschemas.XmlSchemaEntry
 import scala.scalajs.js
@@ -15,14 +17,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("mendixmodelsdk/dist/gen/webservices", "webservices.WsdlDescription")
 @js.native
-class WsdlDescription protected () extends Element {
+class WsdlDescription protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsImportedWebService: ImportedWebService = js.native
@@ -31,9 +33,6 @@ class WsdlDescription protected () extends Element {
   
   def importsHaveLocations: Boolean = js.native
   def importsHaveLocations_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FWsdlDescription: IModel = js.native
   
   def schemaEntries: IList[XmlSchemaEntry] = js.native
   

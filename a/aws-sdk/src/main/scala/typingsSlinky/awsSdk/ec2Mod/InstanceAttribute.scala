@@ -28,6 +28,11 @@ trait InstanceAttribute extends js.Object {
   var EnaSupport: js.UndefOr[AttributeBooleanValue] = js.native
   
   /**
+    * To enable the instance for AWS Nitro Enclaves, set this parameter to true; otherwise, set it to false.
+    */
+  var EnclaveOptions: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.EnclaveOptions] = js.native
+  
+  /**
     * The security groups associated with the instance.
     */
   var Groups: js.UndefOr[GroupIdentifierList] = js.native
@@ -131,6 +136,12 @@ object InstanceAttribute {
     
     @scala.inline
     def deleteEnaSupport: Self = this.set("EnaSupport", js.undefined)
+    
+    @scala.inline
+    def setEnclaveOptions(value: EnclaveOptions): Self = this.set("EnclaveOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnclaveOptions: Self = this.set("EnclaveOptions", js.undefined)
     
     @scala.inline
     def setGroupsVarargs(value: GroupIdentifier*): Self = this.set("Groups", js.Array(value :_*))

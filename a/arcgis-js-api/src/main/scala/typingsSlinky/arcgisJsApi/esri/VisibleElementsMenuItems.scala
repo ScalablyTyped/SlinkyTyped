@@ -10,21 +10,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VisibleElementsMenuItems extends Object {
   
   /**
-    * Indicates whether to display the `Clear selection` menu item. Default value is `true`.
+    * Indicates whether to display the `Clear selection` menu item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable.html#VisibleElements)
     */
   var clearSelection: js.UndefOr[Boolean] = js.native
   
   /**
-    * Indicates whether to display the `Refresh data` menu item. Default value is `true`.
+    * Indicates whether to display the `Refresh data` menu item.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable.html#VisibleElements)
     */
   var refreshData: js.UndefOr[Boolean] = js.native
   
   /**
-    * Indicates whether to enable toggling column visibility within the menu. Default value is `true`.
+    * Indicates whether to enable toggling column visibility within the menu.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureTable.html#VisibleElements)
     */

@@ -123,4 +123,6 @@ class Container protected () extends js.Object {
   def update(options: js.Object, callback: Callback[_]): Unit = js.native
   
   def wait(callback: Callback[_]): Unit = js.native
+  def wait(options: ContainerWaitOptions): js.Promise[_] = js.native
+  def wait(options: ContainerWaitOptions, callback: Callback[_]): Unit = js.native
 }

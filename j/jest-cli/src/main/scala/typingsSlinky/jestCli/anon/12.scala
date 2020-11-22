@@ -1,7 +1,7 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliStrings.`Print your jest config and then exitsDot`
-import typingsSlinky.jestCli.jestCliStrings.boolean
+import typingsSlinky.jestCli.jestCliStrings.`Allows to use a custom runner instead of JestApostrophes default test runnerDot`
+import typingsSlinky.jestCli.jestCliStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,16 +9,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `12` extends js.Object {
   
-  val default: js.UndefOr[scala.Nothing] = js.native
+  val description: `Allows to use a custom runner instead of JestApostrophes default test runnerDot` = js.native
   
-  val description: `Print your jest config and then exitsDot` = js.native
-  
-  val `type`: boolean = js.native
+  val `type`: string = js.native
 }
 object `12` {
   
   @scala.inline
-  def apply(description: `Print your jest config and then exitsDot`, `type`: boolean): `12` = {
+  def apply(
+    description: `Allows to use a custom runner instead of JestApostrophes default test runnerDot`,
+    `type`: string
+  ): `12` = {
     val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`12`]
@@ -40,9 +41,9 @@ object `12` {
     }
     
     @scala.inline
-    def setDescription(value: `Print your jest config and then exitsDot`): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: `Allows to use a custom runner instead of JestApostrophes default test runnerDot`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: boolean): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: string): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

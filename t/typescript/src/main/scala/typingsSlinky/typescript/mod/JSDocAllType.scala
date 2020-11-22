@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait JSDocAllType extends JSDocType {
   
   @JSName("kind")
-  var kind_JSDocAllType: typingsSlinky.typescript.mod.SyntaxKind.JSDocAllType = js.native
+  val kind_JSDocAllType: typingsSlinky.typescript.mod.SyntaxKind.JSDocAllType = js.native
 }

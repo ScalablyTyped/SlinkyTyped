@@ -1,5 +1,6 @@
 package typingsSlinky.twitchExt
 
+import typingsSlinky.twitchExt.Twitch.ext.features.ChangedKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -217,10 +218,10 @@ object twitchExtStrings {
   sealed trait in_review extends js.Object
   
   @js.native
-  sealed trait isBitsEnabled extends js.Object
+  sealed trait isBitsEnabled extends ChangedKey
   
   @js.native
-  sealed trait isChatEnabled extends js.Object
+  sealed trait isChatEnabled extends ChangedKey
   
   @js.native
   sealed trait isFullScreen extends js.Object
@@ -232,7 +233,7 @@ object twitchExtStrings {
   sealed trait isPaused extends js.Object
   
   @js.native
-  sealed trait isSubscriptionStatusAvailable extends js.Object
+  sealed trait isSubscriptionStatusAvailable extends ChangedKey
   
   @js.native
   sealed trait isTheatreMode extends js.Object

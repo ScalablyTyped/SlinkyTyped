@@ -12,13 +12,15 @@ trait Config extends js.Object {
   
   def asyncWrapper(cb: js.Function1[/* repeated */ js.Any, _]): js.Promise[_] = js.native
   
+  var computedStyleSupportsPseudoElements: Boolean = js.native
+  
   var defaultHidden: Boolean = js.native
   
   def eventWrapper(cb: js.Function1[/* repeated */ js.Any, _]): Unit = js.native
   
   def getElementError(message: String, container: HTMLElement): js.Error = js.native
   
-  var showOriginalStrackTrace: Boolean = js.native
+  var showOriginalStackTrace: Boolean = js.native
   
   var testIdAttribute: String = js.native
   
@@ -30,14 +32,15 @@ object Config {
   def apply(
     asyncUtilTimeout: Double,
     asyncWrapper: js.Function1[/* repeated */ js.Any, _] => js.Promise[_],
+    computedStyleSupportsPseudoElements: Boolean,
     defaultHidden: Boolean,
     eventWrapper: js.Function1[/* repeated */ js.Any, _] => Unit,
     getElementError: (String, HTMLElement) => js.Error,
-    showOriginalStrackTrace: Boolean,
+    showOriginalStackTrace: Boolean,
     testIdAttribute: String,
     throwSuggestions: Boolean
   ): Config = {
-    val __obj = js.Dynamic.literal(asyncUtilTimeout = asyncUtilTimeout.asInstanceOf[js.Any], asyncWrapper = js.Any.fromFunction1(asyncWrapper), defaultHidden = defaultHidden.asInstanceOf[js.Any], eventWrapper = js.Any.fromFunction1(eventWrapper), getElementError = js.Any.fromFunction2(getElementError), showOriginalStrackTrace = showOriginalStrackTrace.asInstanceOf[js.Any], testIdAttribute = testIdAttribute.asInstanceOf[js.Any], throwSuggestions = throwSuggestions.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(asyncUtilTimeout = asyncUtilTimeout.asInstanceOf[js.Any], asyncWrapper = js.Any.fromFunction1(asyncWrapper), computedStyleSupportsPseudoElements = computedStyleSupportsPseudoElements.asInstanceOf[js.Any], defaultHidden = defaultHidden.asInstanceOf[js.Any], eventWrapper = js.Any.fromFunction1(eventWrapper), getElementError = js.Any.fromFunction2(getElementError), showOriginalStackTrace = showOriginalStackTrace.asInstanceOf[js.Any], testIdAttribute = testIdAttribute.asInstanceOf[js.Any], throwSuggestions = throwSuggestions.asInstanceOf[js.Any])
     __obj.asInstanceOf[Config]
   }
   
@@ -63,6 +66,9 @@ object Config {
     def setAsyncWrapper(value: js.Function1[/* repeated */ js.Any, _] => js.Promise[_]): Self = this.set("asyncWrapper", js.Any.fromFunction1(value))
     
     @scala.inline
+    def setComputedStyleSupportsPseudoElements(value: Boolean): Self = this.set("computedStyleSupportsPseudoElements", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setDefaultHidden(value: Boolean): Self = this.set("defaultHidden", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -72,7 +78,7 @@ object Config {
     def setGetElementError(value: (String, HTMLElement) => js.Error): Self = this.set("getElementError", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setShowOriginalStrackTrace(value: Boolean): Self = this.set("showOriginalStrackTrace", value.asInstanceOf[js.Any])
+    def setShowOriginalStackTrace(value: Boolean): Self = this.set("showOriginalStackTrace", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTestIdAttribute(value: String): Self = this.set("testIdAttribute", value.asInstanceOf[js.Any])

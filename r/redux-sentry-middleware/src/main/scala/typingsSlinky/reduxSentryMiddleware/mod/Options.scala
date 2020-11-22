@@ -1,6 +1,8 @@
 package typingsSlinky.reduxSentryMiddleware.mod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.redux.mod.Action
+import typingsSlinky.sentryTypes.userMod.User
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,19 +20,9 @@ trait Options[T] extends js.Object {
   
   var filterBreadcrumbActions: js.UndefOr[js.Function1[/* action */ Action[_], Boolean]] = js.native
   
-  var getTags: js.UndefOr[
-    js.Function1[
-      /* state */ T, 
-      /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Sentry.Event * / any['tags'] */ js.Any
-    ]
-  ] = js.native
+  var getTags: js.UndefOr[js.Function1[/* state */ T, js.UndefOr[StringDictionary[String]]]] = js.native
   
-  var getUserContext: js.UndefOr[
-    js.Function1[
-      /* state */ T, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Sentry.User */ _
-    ]
-  ] = js.native
+  var getUserContext: js.UndefOr[js.Function1[/* state */ T, User]] = js.native
   
   var stateTransformer: js.UndefOr[js.Function1[/* state */ T, _]] = js.native
 }
@@ -88,17 +80,13 @@ object Options {
     def deleteFilterBreadcrumbActions: Self = this.set("filterBreadcrumbActions", js.undefined)
     
     @scala.inline
-    def setGetTags(
-      value: /* state */ T => /* import warning: importer.ImportType#apply Failed type conversion: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Sentry.Event * / any['tags'] */ js.Any
-    ): Self = this.set("getTags", js.Any.fromFunction1(value))
+    def setGetTags(value: /* state */ T => js.UndefOr[StringDictionary[String]]): Self = this.set("getTags", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteGetTags: Self = this.set("getTags", js.undefined)
     
     @scala.inline
-    def setGetUserContext(
-      value: /* state */ T => /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Sentry.User */ _
-    ): Self = this.set("getUserContext", js.Any.fromFunction1(value))
+    def setGetUserContext(value: /* state */ T => User): Self = this.set("getUserContext", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteGetUserContext: Self = this.set("getUserContext", js.undefined)

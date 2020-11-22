@@ -8,15 +8,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFunnel extends BaseWidget {
   
-  /** @name dxFunnel.clearSelection() */
+  /**
+    * [descr:dxFunnel.clearSelection()]
+    */
   def clearSelection(): Unit = js.native
   
-  /** @name dxFunnel.getAllItems() */
+  /**
+    * [descr:dxFunnel.getAllItems()]
+    */
   def getAllItems(): js.Array[dxFunnelItem] = js.native
   
-  /** @name DataHelperMixin.getDataSource() */
+  /**
+    * [descr:DataHelperMixin.getDataSource()]
+    */
   def getDataSource(): DataSource = js.native
   
-  /** @name dxFunnel.hideTooltip() */
+  /**
+    * [descr:dxFunnel.hideTooltip()]
+    */
   def hideTooltip(): Unit = js.native
 }

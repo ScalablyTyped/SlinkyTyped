@@ -59,7 +59,7 @@ trait ClientRequestheadersRecor extends js.Object {
   
   def abort(): Unit = js.native
   
-  var aborted: Double = js.native
+  var aborted: Boolean = js.native
   
   def addListener(event: String, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
   def addListener(event: js.Symbol, listener: js.Function1[/* repeated */ js.Any, Unit]): this.type = js.native
@@ -103,7 +103,10 @@ trait ClientRequestheadersRecor extends js.Object {
   
   var chunkedEncoding: Boolean = js.native
   
-  var connection: Socket = js.native
+  /**
+    * @deprecate Use `socket` instead.
+    */
+  var connection: Socket | Null = js.native
   
   def cork(): Unit = js.native
   
@@ -164,8 +167,10 @@ trait ClientRequestheadersRecor extends js.Object {
   
   var headersSent: Boolean = js.native
   
-  def listenerCount(`type`: String): Double = js.native
-  def listenerCount(`type`: js.Symbol): Double = js.native
+  var host: String = js.native
+  
+  def listenerCount(event: String): Double = js.native
+  def listenerCount(event: js.Symbol): Double = js.native
   
   def listeners(event: String): js.Array[js.Function] = js.native
   def listeners(event: js.Symbol): js.Array[js.Function] = js.native
@@ -331,6 +336,8 @@ trait ClientRequestheadersRecor extends js.Object {
     listener: js.Function3[/* response */ IncomingMessage, /* socket */ Socket, /* head */ Buffer, Unit]
   ): this.type = js.native
   
+  var protocol: String = js.native
+  
   def rawListeners(event: String): js.Array[js.Function] = js.native
   def rawListeners(event: js.Symbol): js.Array[js.Function] = js.native
   
@@ -378,7 +385,7 @@ trait ClientRequestheadersRecor extends js.Object {
   
   var shouldKeepAlive: Boolean = js.native
   
-  var socket: Socket = js.native
+  var socket: Socket | Null = js.native
   
   def uncork(): Unit = js.native
   

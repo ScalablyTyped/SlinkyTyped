@@ -1,6 +1,5 @@
 package typingsSlinky.preact.internalMod
 
-import org.scalajs.dom.raw.Text
 import typingsSlinky.preact.anon.Children
 import typingsSlinky.preact.mod.ComponentType
 import typingsSlinky.preact.mod.Key
@@ -21,12 +20,14 @@ trait VNode[P]
   /**
   	 * The [first (for Fragments)] DOM child of a VNode
   	 */
-  var _dom: PreactElement | Text | Null = js.native
+  var _dom: PreactElement | Null = js.native
+  
+  var _hydrating: Boolean | Null = js.native
   
   /**
   	 * The last dom child of a Fragment, or components that return a Fragment
   	 */
-  var _nextDom: PreactElement | Text | Null = js.native
+  var _nextDom: PreactElement | Null = js.native
   
   var _original: js.UndefOr[VNode[js.Object] | Null] = js.native
   
@@ -80,19 +81,19 @@ object VNode {
     def set_depthNull: Self = this.set("_depth", null)
     
     @scala.inline
-    def set_domText(value: Text): Self = this.set("_dom", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def set_dom(value: PreactElement | Text): Self = this.set("_dom", value.asInstanceOf[js.Any])
+    def set_dom(value: PreactElement): Self = this.set("_dom", value.asInstanceOf[js.Any])
     
     @scala.inline
     def set_domNull: Self = this.set("_dom", null)
     
     @scala.inline
-    def set_nextDomText(value: Text): Self = this.set("_nextDom", value.asInstanceOf[js.Any])
+    def set_hydrating(value: Boolean): Self = this.set("_hydrating", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def set_nextDom(value: PreactElement | Text): Self = this.set("_nextDom", value.asInstanceOf[js.Any])
+    def set_hydratingNull: Self = this.set("_hydrating", null)
+    
+    @scala.inline
+    def set_nextDom(value: PreactElement): Self = this.set("_nextDom", value.asInstanceOf[js.Any])
     
     @scala.inline
     def set_nextDomNull: Self = this.set("_nextDom", null)

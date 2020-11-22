@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object gracefulify extends js.Object {
   
-  def apply[T](fsModule: T): T with Lutimes = js.native
+  def apply[T](fsModule: T): T = js.native
 }

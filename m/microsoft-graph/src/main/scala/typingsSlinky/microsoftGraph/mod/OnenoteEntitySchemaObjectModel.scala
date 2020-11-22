@@ -12,7 +12,7 @@ trait OnenoteEntitySchemaObjectModel extends OnenoteEntityBaseModel {
     * and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     * Read-only.
     */
-  var createdDateTime: js.UndefOr[String] = js.native
+  var createdDateTime: js.UndefOr[NullableOption[String]] = js.native
 }
 object OnenoteEntitySchemaObjectModel {
   
@@ -38,9 +38,12 @@ object OnenoteEntitySchemaObjectModel {
     }
     
     @scala.inline
-    def setCreatedDateTime(value: String): Self = this.set("createdDateTime", value.asInstanceOf[js.Any])
+    def setCreatedDateTime(value: NullableOption[String]): Self = this.set("createdDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCreatedDateTime: Self = this.set("createdDateTime", js.undefined)
+    
+    @scala.inline
+    def setCreatedDateTimeNull: Self = this.set("createdDateTime", null)
   }
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateSecurityProfileRequest extends js.Object {
   
   /**
-    * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.  Note: This API field is deprecated. Please use UpdateSecurityProfileRequest$additionalMetricsToRetainV2 instead.
+    *  Please use UpdateSecurityProfileRequest$additionalMetricsToRetainV2 instead.  A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
     */
   var additionalMetricsToRetain: js.UndefOr[AdditionalMetricsToRetainList] = js.native
   

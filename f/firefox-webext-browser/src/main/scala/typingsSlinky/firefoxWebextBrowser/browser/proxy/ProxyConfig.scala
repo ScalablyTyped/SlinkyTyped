@@ -34,9 +34,7 @@ trait ProxyConfig extends js.Object {
   var proxyType: js.UndefOr[ProxyConfigProxyType] = js.native
   
   /**
-    * If true (the default value), do not use newer TLS protocol features that might have interoperability
-    * problems on the Internet. This is intended only for use with critical infrastructure like the updates, and
-    * is only available to privileged addons.
+    * If true (the default value), do not use newer TLS protocol features that might have interoperability problems on the Internet. This is intended only for use with critical infrastructure like the updates, and is only available to privileged addons.
     */
   var respectBeConservative: js.UndefOr[Boolean] = js.native
   

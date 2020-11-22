@@ -164,6 +164,8 @@ object mod extends js.Object {
     var onCalendarOpen: js.UndefOr[js.Function0[Unit]] = js.native
     
     def onChange(): Unit = js.native
+    def onChange(date: js.Tuple2[js.Date, js.Date]): Unit = js.native
+    def onChange(date: js.Tuple2[js.Date, js.Date], event: SyntheticEvent[Event, _]): Unit = js.native
     def onChange(date: Null, event: SyntheticEvent[Event, _]): Unit = js.native
     def onChange(date: js.Date): Unit = js.native
     def onChange(date: js.Date, event: SyntheticEvent[Event, _]): Unit = js.native

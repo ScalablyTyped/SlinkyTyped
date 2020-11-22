@@ -8,9 +8,9 @@ package object fieldMod {
   
   type ChildProps = org.scalablytyped.runtime.StringDictionary[js.Any]
   
-  type ShouldUpdate = scala.Boolean | (js.Function3[
-    /* prevValues */ typingsSlinky.rcFieldForm.interfaceMod.Store, 
-    /* nextValues */ typingsSlinky.rcFieldForm.interfaceMod.Store, 
+  type ShouldUpdate[Values] = scala.Boolean | (js.Function3[
+    /* prevValues */ Values, 
+    /* nextValues */ Values, 
     /* info */ typingsSlinky.rcFieldForm.anon.Source, 
     scala.Boolean
   ])

@@ -1,13 +1,11 @@
 package typingsSlinky.death
 
+import typingsSlinky.death.mod.Signal
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object deathStrings {
-  
-  @scala.inline
-  def SIGHUP: SIGHUP = "SIGHUP".asInstanceOf[SIGHUP]
   
   @scala.inline
   def SIGINT: SIGINT = "SIGINT".asInstanceOf[SIGINT]
@@ -18,21 +16,12 @@ object deathStrings {
   @scala.inline
   def SIGTERM: SIGTERM = "SIGTERM".asInstanceOf[SIGTERM]
   
-  @scala.inline
-  def uncaughtException: uncaughtException = "uncaughtException".asInstanceOf[uncaughtException]
+  @js.native
+  sealed trait SIGINT extends Signal
   
   @js.native
-  sealed trait SIGHUP extends js.Object
+  sealed trait SIGQUIT extends Signal
   
   @js.native
-  sealed trait SIGINT extends js.Object
-  
-  @js.native
-  sealed trait SIGQUIT extends js.Object
-  
-  @js.native
-  sealed trait SIGTERM extends js.Object
-  
-  @js.native
-  sealed trait uncaughtException extends js.Object
+  sealed trait SIGTERM extends Signal
 }

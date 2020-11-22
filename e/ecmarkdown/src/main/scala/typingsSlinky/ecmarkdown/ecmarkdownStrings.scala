@@ -26,6 +26,9 @@ object ecmarkdownStrings {
   def linebreak: linebreak = "linebreak".asInstanceOf[linebreak]
   
   @scala.inline
+  def location: location = "location".asInstanceOf[location]
+  
+  @scala.inline
   def ol: ol = "ol".asInstanceOf[ol]
   
   @scala.inline
@@ -84,6 +87,9 @@ object ecmarkdownStrings {
   
   @js.native
   sealed trait linebreak extends js.Object
+  
+  @js.native
+  sealed trait location extends js.Object
   
   @js.native
   sealed trait ol extends js.Object

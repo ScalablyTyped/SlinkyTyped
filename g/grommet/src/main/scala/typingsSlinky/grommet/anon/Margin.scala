@@ -1,8 +1,7 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.utilsMod.BackgroundType
-import typingsSlinky.grommet.utilsMod.ColorType
 import typingsSlinky.grommet.utilsMod.MarginType
+import typingsSlinky.grommet.utilsMod.PadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,11 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Margin extends js.Object {
   
-  var background: js.UndefOr[BackgroundType] = js.native
-  
-  var color: js.UndefOr[ColorType] = js.native
-  
   var margin: js.UndefOr[MarginType] = js.native
+  
+  var pad: js.UndefOr[PadType] = js.native
 }
 object Margin {
   
@@ -40,21 +37,15 @@ object Margin {
     }
     
     @scala.inline
-    def setBackground(value: BackgroundType): Self = this.set("background", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBackground: Self = this.set("background", js.undefined)
-    
-    @scala.inline
-    def setColor(value: ColorType): Self = this.set("color", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteColor: Self = this.set("color", js.undefined)
-    
-    @scala.inline
     def setMargin(value: MarginType): Self = this.set("margin", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMargin: Self = this.set("margin", js.undefined)
+    
+    @scala.inline
+    def setPad(value: PadType): Self = this.set("pad", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePad: Self = this.set("pad", js.undefined)
   }
 }

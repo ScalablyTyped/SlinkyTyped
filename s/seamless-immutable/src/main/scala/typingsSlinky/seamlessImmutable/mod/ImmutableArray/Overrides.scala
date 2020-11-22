@@ -11,7 +11,7 @@ trait Overrides[T] extends js.Object {
   
   def concat(arr: (T | (js.Array[(Immutable[T, js.Object]) | T]) | (Immutable[js.Array[T] | T, js.Object]))*): Immutable[js.Array[T], js.Object] = js.native
   
-  def filter(filterFunction: js.Function1[/* item */ Immutable[T, js.Object], Boolean]): Immutable[js.Array[T], js.Object] = js.native
+  def filter(filterFunction: js.Function2[/* item */ Immutable[T, js.Object], /* index */ Double, Boolean]): Immutable[js.Array[T], js.Object] = js.native
   
   def forEach(
     callbackfn: js.Function3[

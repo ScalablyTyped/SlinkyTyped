@@ -22,6 +22,11 @@ trait ITextProps extends IProps {
   var tagName: js.UndefOr[
     /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any
   ] = js.native
+  
+  /**
+    * HTML title of the element
+    */
+  var title: js.UndefOr[String] = js.native
 }
 object ITextProps {
   
@@ -57,5 +62,11 @@ object ITextProps {
     
     @scala.inline
     def deleteTagName: Self = this.set("tagName", js.undefined)
+    
+    @scala.inline
+    def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
   }
 }

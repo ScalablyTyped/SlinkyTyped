@@ -36,7 +36,7 @@ object ListItem {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def href(value: String | js.Object): this.type = set("href", value.asInstanceOf[js.Any])
+    def href(value: String): this.type = set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftReactElement(value: ReactElement): this.type = set("left", value.asInstanceOf[js.Any])
@@ -46,9 +46,6 @@ object ListItem {
     
     @scala.inline
     def loading(value: Boolean): this.type = set("loading", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def onClick(value: () => Unit): this.type = set("onClick", js.Any.fromFunction0(value))
     
     @scala.inline
     def rightReactElement(value: ReactElement): this.type = set("right", value.asInstanceOf[js.Any])

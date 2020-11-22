@@ -1,17 +1,42 @@
 package typingsSlinky.lowdb.mod
 
-import typingsSlinky.lodash.mod.LoDashImplicitWrapper
+import typingsSlinky.lodash.mod.Collection
+import typingsSlinky.lodash.mod.Function
+import typingsSlinky.lodash.mod.List
 import typingsSlinky.lodash.mod.LoDashStatic
-import typingsSlinky.lowdb.mod.lodashAugmentingMod.ObjectChain
+import typingsSlinky.lodash.mod.Object
+import typingsSlinky.lodash.mod.ObjectChain
+import typingsSlinky.lodash.mod.Primitive
+import typingsSlinky.lodash.mod.String
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait LowdbSync[SchemaT]
-  extends LowdbBase[SchemaT]
-     with ObjectChain[SchemaT] {
+  extends ObjectChain[SchemaT]
+     with LowdbBase[SchemaT] {
   
+  @JSName("_")
+  def _underscore(): String = js.native
+  @JSName("_")
+  def _underscore(value: java.lang.String): String = js.native
+  @JSName("_")
+  def _underscore[T /* <: js.Object */](value: T): Object[T] = js.native
+  @JSName("_")
+  def _underscore[T](value: List[T]): Collection[T] = js.native
+  @JSName("_")
+  var _underscore_Original: LoDashStatic = js.native
+  @JSName("_")
+  def _underscore_T_Collection[T](): Collection[T] = js.native
+  @JSName("_")
+  def _underscore_T_Function1AnyWildcard_Function[T /* <: js.Function1[/* args */ js.Any, _] */](value: T): Function[T] = js.native
+  @JSName("_")
+  def _underscore_T_Object_Object[T /* <: js.Object */](): Object[T] = js.native
+  @JSName("_")
+  def _underscore_T_Primitive[T](value: T): Primitive[T] = js.native
+  @JSName("_")
+  def `_underscore_T_UnionNull<undefined>_Primitive`[T /* <: js.UndefOr[Null] */](value: T): Primitive[T] = js.native
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -81,11 +106,13 @@ trait LowdbSync[SchemaT]
     * upperFirst, value, and words.
     **/
   @JSName("_")
-  def _underscore[T](value: T): LoDashImplicitWrapper[T] = js.native
-  @JSName("_")
-  var _underscore_Original: LoDashStatic = js.native
+  def _underscore_TrapAny_TrapAny_Intersection[TrapAny /* <: typingsSlinky.lodash.anon.TrapAny */](value: TrapAny): Collection[_] with Function[_] with Object[_] with Primitive[_] with String = js.native
   
   def read(): this.type = js.native
   
+  /**
+    * @description Be careful: This function overwrites the whole database.
+    */
+  def write[T](): T with js.Promise[T] = js.native
   def write[T](returnValue: T): T with js.Promise[T] = js.native
 }

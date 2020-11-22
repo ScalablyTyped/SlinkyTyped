@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object parse extends js.Object {
   
-  def apply(str: String): StringDictionary[PoorMansUnknown] = js.native
+  def apply(str: String): StringDictionary[js.Any] = js.native
   def apply(str: String, options: IParseOptionsdecodernever): ParsedQs = js.native
-  def apply(str: String, options: IParseOptions): StringDictionary[PoorMansUnknown] = js.native
+  def apply(str: String, options: IParseOptions): StringDictionary[js.Any] = js.native
 }

@@ -12,5 +12,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object typeOperatorMod extends js.Object {
   
   @js.native
-  class TypeOperatorConverter () extends TypeNodeConverter[Type, TypeOperatorNode]
+  class TypeOperatorConverter () extends TypeNodeConverter[Type, TypeOperatorNode] {
+    
+    val supportedOperatorNames: js.Any = js.native
+  }
 }

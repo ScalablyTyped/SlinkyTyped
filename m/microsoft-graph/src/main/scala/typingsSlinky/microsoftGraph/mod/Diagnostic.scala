@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Diagnostic extends js.Object {
   
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[NullableOption[String]] = js.native
   
-  var url: js.UndefOr[String] = js.native
+  var url: js.UndefOr[NullableOption[String]] = js.native
 }
 object Diagnostic {
   
@@ -35,15 +35,21 @@ object Diagnostic {
     }
     
     @scala.inline
-    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setMessage(value: NullableOption[String]): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
     
     @scala.inline
-    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setMessageNull: Self = this.set("message", null)
+    
+    @scala.inline
+    def setUrl(value: NullableOption[String]): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUrl: Self = this.set("url", js.undefined)
+    
+    @scala.inline
+    def setUrlNull: Self = this.set("url", null)
   }
 }

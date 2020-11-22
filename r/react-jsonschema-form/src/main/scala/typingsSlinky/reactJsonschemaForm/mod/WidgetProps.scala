@@ -20,8 +20,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.`additions removals`
 import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.`additions text`
 import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.`inline`
+import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.`removals additions`
+import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.`removals text`
+import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.`text additions`
+import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.`text removals`
 import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.additions
 import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.all
 import typingsSlinky.reactJsonschemaForm.reactJsonschemaFormStrings.ascending
@@ -147,7 +152,9 @@ trait WidgetProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   

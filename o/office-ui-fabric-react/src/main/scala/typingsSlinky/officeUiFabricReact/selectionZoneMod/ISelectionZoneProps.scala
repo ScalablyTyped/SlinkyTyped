@@ -13,6 +13,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ISelectionZoneProps extends ClassAttributes[SelectionZone] {
   
   /**
+    * Additional CSS class(es) to apply to the SelectionZone.
+    */
+  var className: js.UndefOr[String] = js.native
+  
+  /**
     * Reference to the component interface.
     */
   var componentRef: js.UndefOr[js.Function0[Unit]] = js.native
@@ -116,6 +121,12 @@ object ISelectionZoneProps {
     
     @scala.inline
     def setSelection(value: ISelection[IObjectWithKey]): Self = this.set("selection", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
     def setComponentRef(value: () => Unit): Self = this.set("componentRef", js.Any.fromFunction0(value))

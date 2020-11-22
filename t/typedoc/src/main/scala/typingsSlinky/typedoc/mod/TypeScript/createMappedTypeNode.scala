@@ -4,7 +4,7 @@ import typingsSlinky.typescript.mod.MappedTypeNode
 import typingsSlinky.typescript.mod.MinusToken
 import typingsSlinky.typescript.mod.PlusToken
 import typingsSlinky.typescript.mod.QuestionToken
-import typingsSlinky.typescript.mod.ReadonlyToken
+import typingsSlinky.typescript.mod.ReadonlyKeyword
 import typingsSlinky.typescript.mod.TypeNode
 import typingsSlinky.typescript.mod.TypeParameterDeclaration
 import scala.scalajs.js
@@ -15,19 +15,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createMappedTypeNode extends js.Object {
   
+  /** @deprecated Use `factory.createMappedTypeNode` or the factory supplied by your transformation context instead. */
   def apply(
-    readonlyToken: js.UndefOr[MinusToken | PlusToken | ReadonlyToken],
-    typeParameter: TypeParameterDeclaration
-  ): MappedTypeNode = js.native
-  def apply(
-    readonlyToken: js.UndefOr[MinusToken | PlusToken | ReadonlyToken],
+    readonlyToken: js.UndefOr[ReadonlyKeyword | PlusToken | MinusToken],
     typeParameter: TypeParameterDeclaration,
-    questionToken: MinusToken | PlusToken | QuestionToken
-  ): MappedTypeNode = js.native
-  def apply(
-    readonlyToken: js.UndefOr[MinusToken | PlusToken | ReadonlyToken],
-    typeParameter: TypeParameterDeclaration,
-    questionToken: js.UndefOr[MinusToken | PlusToken | QuestionToken],
-    `type`: TypeNode
+    nameType: js.UndefOr[TypeNode],
+    questionToken: js.UndefOr[QuestionToken | PlusToken | MinusToken],
+    `type`: js.UndefOr[TypeNode]
   ): MappedTypeNode = js.native
 }

@@ -11,6 +11,8 @@ trait SnapshotMatchOptions extends js.Object {
   
   var inlineSnapshot: js.UndefOr[String] = js.native
   
+  var isInline: Boolean = js.native
+  
   var key: js.UndefOr[String] = js.native
   
   var received: js.Any = js.native
@@ -20,8 +22,8 @@ trait SnapshotMatchOptions extends js.Object {
 object SnapshotMatchOptions {
   
   @scala.inline
-  def apply(received: js.Any, testName: String): SnapshotMatchOptions = {
-    val __obj = js.Dynamic.literal(received = received.asInstanceOf[js.Any], testName = testName.asInstanceOf[js.Any])
+  def apply(isInline: Boolean, received: js.Any, testName: String): SnapshotMatchOptions = {
+    val __obj = js.Dynamic.literal(isInline = isInline.asInstanceOf[js.Any], received = received.asInstanceOf[js.Any], testName = testName.asInstanceOf[js.Any])
     __obj.asInstanceOf[SnapshotMatchOptions]
   }
   
@@ -39,6 +41,9 @@ object SnapshotMatchOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setIsInline(value: Boolean): Self = this.set("isInline", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReceived(value: js.Any): Self = this.set("received", value.asInstanceOf[js.Any])

@@ -1,8 +1,8 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliBooleans.`false`
-import typingsSlinky.jestCli.jestCliStrings.`Will not fail if no tests are found Leftparenthesisfor example while using Graveaccent--testPathPatternGraveaccentDotRightparenthesis`
-import typingsSlinky.jestCli.jestCliStrings.boolean
+import typingsSlinky.jestCli.jestCliStrings.`Specifies when notifications will appear for test resultsDot`
+import typingsSlinky.jestCli.jestCliStrings.`failure-change`
+import typingsSlinky.jestCli.jestCliStrings.string
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,19 +10,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `7` extends js.Object {
   
-  val default: `false` = js.native
+  val default: `failure-change` = js.native
   
-  val description: `Will not fail if no tests are found Leftparenthesisfor example while using Graveaccent--testPathPatternGraveaccentDotRightparenthesis` = js.native
+  val description: `Specifies when notifications will appear for test resultsDot` = js.native
   
-  val `type`: boolean = js.native
+  val `type`: string = js.native
 }
 object `7` {
   
   @scala.inline
   def apply(
-    default: `false`,
-    description: `Will not fail if no tests are found Leftparenthesisfor example while using Graveaccent--testPathPatternGraveaccentDotRightparenthesis`,
-    `type`: boolean
+    default: `failure-change`,
+    description: `Specifies when notifications will appear for test resultsDot`,
+    `type`: string
   ): `7` = {
     val __obj = js.Dynamic.literal(default = default.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
@@ -45,14 +45,12 @@ object `7` {
     }
     
     @scala.inline
-    def setDefault(value: `false`): Self = this.set("default", value.asInstanceOf[js.Any])
+    def setDefault(value: `failure-change`): Self = this.set("default", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDescription(
-      value: `Will not fail if no tests are found Leftparenthesisfor example while using Graveaccent--testPathPatternGraveaccentDotRightparenthesis`
-    ): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDescription(value: `Specifies when notifications will appear for test resultsDot`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: boolean): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: string): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

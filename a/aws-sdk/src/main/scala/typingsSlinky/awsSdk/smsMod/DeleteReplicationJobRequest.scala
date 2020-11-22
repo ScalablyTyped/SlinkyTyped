@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteReplicationJobRequest extends js.Object {
   
   /**
-    * The identifier of the replication job.
+    * The ID of the replication job.
     */
   var replicationJobId: ReplicationJobId = js.native
 }

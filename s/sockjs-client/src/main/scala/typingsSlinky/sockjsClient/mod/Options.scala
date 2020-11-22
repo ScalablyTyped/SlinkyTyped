@@ -11,6 +11,8 @@ trait Options extends js.Object {
   
   var sessionId: js.UndefOr[Double | SessionGenerator] = js.native
   
+  var timeout: js.UndefOr[Double] = js.native
+  
   var transports: js.UndefOr[String | js.Array[String]] = js.native
 }
 object Options {
@@ -50,6 +52,12 @@ object Options {
     
     @scala.inline
     def deleteSessionId: Self = this.set("sessionId", js.undefined)
+    
+    @scala.inline
+    def setTimeout(value: Double): Self = this.set("timeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimeout: Self = this.set("timeout", js.undefined)
     
     @scala.inline
     def setTransportsVarargs(value: String*): Self = this.set("transports", js.Array(value :_*))

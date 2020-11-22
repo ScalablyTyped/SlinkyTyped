@@ -13,7 +13,7 @@ trait InstanceTypeInfo extends js.Object {
   var AutoRecoverySupported: js.UndefOr[AutoRecoveryFlag] = js.native
   
   /**
-    * Indicates whether the instance is bare metal.
+    * Indicates whether the instance is a bare metal instance type.
     */
   var BareMetal: js.UndefOr[BareMetalFlag] = js.native
   
@@ -23,7 +23,7 @@ trait InstanceTypeInfo extends js.Object {
   var BurstablePerformanceSupported: js.UndefOr[BurstablePerformanceFlag] = js.native
   
   /**
-    * Indicates whether the instance type is a current generation.
+    * Indicates whether the instance type is current generation.
     */
   var CurrentGeneration: js.UndefOr[CurrentGenerationFlag] = js.native
   
@@ -58,7 +58,7 @@ trait InstanceTypeInfo extends js.Object {
   var HibernationSupported: js.UndefOr[HibernationFlag] = js.native
   
   /**
-    * Indicates the hypervisor used for the instance type.
+    * The hypervisor for the instance type.
     */
   var Hypervisor: js.UndefOr[InstanceTypeHypervisor] = js.native
   
@@ -68,7 +68,7 @@ trait InstanceTypeInfo extends js.Object {
   var InferenceAcceleratorInfo: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.InferenceAcceleratorInfo] = js.native
   
   /**
-    * Describes the disks for the instance type.
+    * Describes the instance storage for the instance type.
     */
   var InstanceStorageInfo: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.InstanceStorageInfo] = js.native
   
@@ -103,7 +103,7 @@ trait InstanceTypeInfo extends js.Object {
   var ProcessorInfo: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.ProcessorInfo] = js.native
   
   /**
-    * Indicates the supported root device types.
+    * The supported root device types.
     */
   var SupportedRootDeviceTypes: js.UndefOr[RootDeviceTypeList] = js.native
   

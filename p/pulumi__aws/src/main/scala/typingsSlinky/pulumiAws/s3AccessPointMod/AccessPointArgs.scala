@@ -16,7 +16,7 @@ trait AccessPointArgs extends js.Object {
   val accountId: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The name of the bucket that you want to associate this access point with.
+    * The name of an AWS Partition S3 Bucket or the Amazon Resource Name (ARN) of S3 on Outposts Bucket that you want to associate this access point with.
     */
   val bucket: Input[String] = js.native
   
@@ -36,7 +36,7 @@ trait AccessPointArgs extends js.Object {
   val publicAccessBlockConfiguration: js.UndefOr[Input[AccessPointPublicAccessBlockConfiguration]] = js.native
   
   /**
-    * Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.
+    * Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.
     */
   val vpcConfiguration: js.UndefOr[Input[AccessPointVpcConfiguration]] = js.native
 }

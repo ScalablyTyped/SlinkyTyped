@@ -13,7 +13,7 @@ trait AmiDistributionConfiguration extends js.Object {
   var amiTags: js.UndefOr[TagMap] = js.native
   
   /**
-    * The description of the distribution configuration. 
+    * The description of the distribution configuration. Minimum and maximum length are in characters.
     */
   var description: js.UndefOr[NonEmptyString] = js.native
   
@@ -31,6 +31,11 @@ trait AmiDistributionConfiguration extends js.Object {
     * The name of the distribution configuration. 
     */
   var name: js.UndefOr[AmiNameString] = js.native
+  
+  /**
+    *  The ID of an account to which you want to distribute an image. 
+    */
+  var targetAccountIds: js.UndefOr[AccountList] = js.native
 }
 object AmiDistributionConfiguration {
   
@@ -84,5 +89,14 @@ object AmiDistributionConfiguration {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setTargetAccountIdsVarargs(value: AccountId*): Self = this.set("targetAccountIds", js.Array(value :_*))
+    
+    @scala.inline
+    def setTargetAccountIds(value: AccountList): Self = this.set("targetAccountIds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTargetAccountIds: Self = this.set("targetAccountIds", js.undefined)
   }
 }

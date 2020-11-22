@@ -14,8 +14,7 @@ trait Tab extends js.Object {
   var attention: js.UndefOr[Boolean] = js.native
   
   /**
-    * Whether the tab has produced sound over the past couple of seconds (but it might not be heard if also
-    * muted). Equivalent to whether the speaker audio indicator is showing.
+    * Whether the tab has produced sound over the past couple of seconds (but it might not be heard if also muted). Equivalent to whether the speaker audio indicator is showing.
     */
   var audible: js.UndefOr[Boolean] = js.native
   
@@ -26,8 +25,7 @@ trait Tab extends js.Object {
   var discarded: js.UndefOr[Boolean] = js.native
   
   /**
-    * The URL of the tab's favicon. This property is only present if the extension's manifest includes the
-    * `"tabs"` permission. It may also be an empty string if the tab is loading.
+    * The URL of the tab's favicon. This property is only present if the extension's manifest includes the `"tabs"` permission. It may also be an empty string if the tab is loading.
     */
   var favIconUrl: js.UndefOr[String] = js.native
   
@@ -41,9 +39,7 @@ trait Tab extends js.Object {
   var highlighted: Boolean = js.native
   
   /**
-    * The ID of the tab. Tab IDs are unique within a browser session. Under some circumstances a Tab may not be
-    * assigned an ID, for example when querying foreign tabs using the `sessions` API, in which case a session ID
-    * may be present. Tab ID can also be set to `tabs.TAB_ID_NONE` for apps and devtools windows.
+    * The ID of the tab. Tab IDs are unique within a browser session. Under some circumstances a Tab may not be assigned an ID, for example when querying foreign tabs using the `sessions` API, in which case a session ID may be present. Tab ID can also be set to `tabs.TAB_ID_NONE` for apps and devtools windows.
     */
   var id: js.UndefOr[Double] = js.native
   
@@ -92,14 +88,12 @@ trait Tab extends js.Object {
   var successorTabId: js.UndefOr[Double] = js.native
   
   /**
-    * The title of the tab. This property is only present if the extension's manifest includes the `"tabs"`
-    * permission.
+    * The title of the tab. This property is only present if the extension's manifest includes the `"tabs"` permission.
     */
   var title: js.UndefOr[String] = js.native
   
   /**
-    * The URL the tab is displaying. This property is only present if the extension's manifest includes the
-    * `"tabs"` permission.
+    * The URL the tab is displaying. This property is only present if the extension's manifest includes the `"tabs"` permission.
     */
   var url: js.UndefOr[String] = js.native
   

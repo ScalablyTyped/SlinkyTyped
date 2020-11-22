@@ -2,8 +2,12 @@ package typingsSlinky.yog2Kernel.mod
 
 import typingsSlinky.express.mod.Express
 import typingsSlinky.expressServeStaticCore.mod.ParamsDictionary
-import typingsSlinky.lodash.mod.LoDashImplicitWrapper
+import typingsSlinky.lodash.mod.Collection
+import typingsSlinky.lodash.mod.Function
+import typingsSlinky.lodash.mod.List
 import typingsSlinky.lodash.mod.LoDashStatic
+import typingsSlinky.lodash.mod.Object
+import typingsSlinky.lodash.mod.Primitive
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.qs.mod.ParsedQs
@@ -29,6 +33,26 @@ trait Yog extends js.Object {
   
   var ROOT_PATH: String = js.native
   
+  @JSName("_")
+  def _underscore(): typingsSlinky.lodash.mod.String = js.native
+  @JSName("_")
+  def _underscore(value: String): typingsSlinky.lodash.mod.String = js.native
+  @JSName("_")
+  def _underscore[T /* <: js.Object */](value: T): Object[T] = js.native
+  @JSName("_")
+  def _underscore[T](value: List[T]): Collection[T] = js.native
+  @JSName("_")
+  var _underscore_Original: LoDashStatic = js.native
+  @JSName("_")
+  def _underscore_T_Collection[T](): Collection[T] = js.native
+  @JSName("_")
+  def _underscore_T_Function1AnyWildcard_Function[T /* <: js.Function1[/* args */ js.Any, _] */](value: T): Function[T] = js.native
+  @JSName("_")
+  def _underscore_T_Object_Object[T /* <: js.Object */](): Object[T] = js.native
+  @JSName("_")
+  def _underscore_T_Primitive[T](value: T): Primitive[T] = js.native
+  @JSName("_")
+  def `_underscore_T_UnionNull<undefined>_Primitive`[T /* <: js.UndefOr[Null] */](value: T): Primitive[T] = js.native
   /**
     * Creates a lodash object which wraps value to enable implicit method chain sequences.
     * Methods that operate on and return arrays, collections, and functions can be chained together.
@@ -98,9 +122,7 @@ trait Yog extends js.Object {
     * upperFirst, value, and words.
     **/
   @JSName("_")
-  def _underscore[T](value: T): LoDashImplicitWrapper[T] = js.native
-  @JSName("_")
-  var _underscore_Original: LoDashStatic = js.native
+  def _underscore_TrapAny_TrapAny_Intersection[TrapAny /* <: typingsSlinky.lodash.anon.TrapAny */](value: TrapAny): Collection[_] with Function[_] with Object[_] with Primitive[_] with typingsSlinky.lodash.mod.String = js.native
   
   /**
     * Express instance itself is a request handler, which could be invoked without
@@ -108,13 +130,13 @@ trait Yog extends js.Object {
     */
   def app(
     req: typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, ParsedQs],
-    res: typingsSlinky.expressServeStaticCore.mod.Response[_]
+    res: typingsSlinky.expressServeStaticCore.mod.Response[_, Double]
   ): js.Any = js.native
   def app(
     req: typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, ParsedQs],
     res: ServerResponse
   ): js.Any = js.native
-  def app(req: IncomingMessage, res: typingsSlinky.expressServeStaticCore.mod.Response[_]): js.Any = js.native
+  def app(req: IncomingMessage, res: typingsSlinky.expressServeStaticCore.mod.Response[_, Double]): js.Any = js.native
   def app(req: IncomingMessage, res: ServerResponse): js.Any = js.native
   @JSName("app")
   var app_Original: Express = js.native

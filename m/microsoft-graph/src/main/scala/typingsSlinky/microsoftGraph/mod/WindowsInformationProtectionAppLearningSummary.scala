@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WindowsInformationProtectionAppLearningSummary extends Entity {
   
   // Application Name
-  var applicationName: js.UndefOr[String] = js.native
+  var applicationName: js.UndefOr[NullableOption[String]] = js.native
   
   // Application Type. Possible values are: universal, desktop.
   var applicationType: js.UndefOr[ApplicationType] = js.native
@@ -40,10 +40,13 @@ object WindowsInformationProtectionAppLearningSummary {
     }
     
     @scala.inline
-    def setApplicationName(value: String): Self = this.set("applicationName", value.asInstanceOf[js.Any])
+    def setApplicationName(value: NullableOption[String]): Self = this.set("applicationName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteApplicationName: Self = this.set("applicationName", js.undefined)
+    
+    @scala.inline
+    def setApplicationNameNull: Self = this.set("applicationName", null)
     
     @scala.inline
     def setApplicationType(value: ApplicationType): Self = this.set("applicationType", value.asInstanceOf[js.Any])

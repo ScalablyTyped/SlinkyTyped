@@ -14,15 +14,13 @@ class default protected () extends Router {
     pathname: String,
     query: ParsedUrlQuery,
     as: String,
-    hasInitialPropsPageLoaderAppWrapAppComponentErrSubscriptionIsFallback: App
+    hasInitialPropsPageLoaderAppWrapAppComponentErrSubscriptionIsFallbackLocaleLocalesDefaultLocale: App
   ) = this()
 }
 /* static members */
 @JSImport("next/dist/next-server/lib/router/router", JSImport.Default)
 @js.native
 object default extends js.Object {
-  
-  def _rewriteUrlForNextExport(url: String): String = js.native
   
   var events: MittEmitter = js.native
 }

@@ -7,25 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PlaylistMetadataResult extends js.Object {
   
-  var author: PlaylistAuthor = js.native
+  var author: Author = js.native
   
   var date: String = js.native
   
   var image: String = js.native
   
-  var items: js.Array[PlaylistItem] = js.native
-  
   var listId: String = js.native
   
-  /** @deprecated */
   var thumbnail: String = js.native
   
   var title: String = js.native
   
   var url: String = js.native
-  
-  /** @deprecated */
-  var videoCount: Double = js.native
   
   var videos: js.Array[PlaylistItem] = js.native
   
@@ -35,19 +29,17 @@ object PlaylistMetadataResult {
   
   @scala.inline
   def apply(
-    author: PlaylistAuthor,
+    author: Author,
     date: String,
     image: String,
-    items: js.Array[PlaylistItem],
     listId: String,
     thumbnail: String,
     title: String,
     url: String,
-    videoCount: Double,
     videos: js.Array[PlaylistItem],
     views: Double
   ): PlaylistMetadataResult = {
-    val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any], listId = listId.asInstanceOf[js.Any], thumbnail = thumbnail.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], videoCount = videoCount.asInstanceOf[js.Any], videos = videos.asInstanceOf[js.Any], views = views.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(author = author.asInstanceOf[js.Any], date = date.asInstanceOf[js.Any], image = image.asInstanceOf[js.Any], listId = listId.asInstanceOf[js.Any], thumbnail = thumbnail.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any], videos = videos.asInstanceOf[js.Any], views = views.asInstanceOf[js.Any])
     __obj.asInstanceOf[PlaylistMetadataResult]
   }
   
@@ -67,19 +59,13 @@ object PlaylistMetadataResult {
     }
     
     @scala.inline
-    def setAuthor(value: PlaylistAuthor): Self = this.set("author", value.asInstanceOf[js.Any])
+    def setAuthor(value: Author): Self = this.set("author", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDate(value: String): Self = this.set("date", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setImage(value: String): Self = this.set("image", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setItemsVarargs(value: PlaylistItem*): Self = this.set("items", js.Array(value :_*))
-    
-    @scala.inline
-    def setItems(value: js.Array[PlaylistItem]): Self = this.set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setListId(value: String): Self = this.set("listId", value.asInstanceOf[js.Any])
@@ -92,9 +78,6 @@ object PlaylistMetadataResult {
     
     @scala.inline
     def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setVideoCount(value: Double): Self = this.set("videoCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVideosVarargs(value: PlaylistItem*): Self = this.set("videos", js.Array(value :_*))

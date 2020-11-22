@@ -7,9 +7,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IColumnOptions extends js.Object {
   
+  var identity: js.UndefOr[Boolean] = js.native
+  
+  var length: js.UndefOr[Double] = js.native
+  
   var nullable: js.UndefOr[Boolean] = js.native
   
   var primary: js.UndefOr[Boolean] = js.native
+  
+  var readOnly: js.UndefOr[Boolean] = js.native
 }
 object IColumnOptions {
   
@@ -35,6 +41,18 @@ object IColumnOptions {
     }
     
     @scala.inline
+    def setIdentity(value: Boolean): Self = this.set("identity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIdentity: Self = this.set("identity", js.undefined)
+    
+    @scala.inline
+    def setLength(value: Double): Self = this.set("length", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLength: Self = this.set("length", js.undefined)
+    
+    @scala.inline
     def setNullable(value: Boolean): Self = this.set("nullable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -45,5 +63,11 @@ object IColumnOptions {
     
     @scala.inline
     def deletePrimary: Self = this.set("primary", js.undefined)
+    
+    @scala.inline
+    def setReadOnly(value: Boolean): Self = this.set("readOnly", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReadOnly: Self = this.set("readOnly", js.undefined)
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.assetsManagerMod
 
+import org.scalajs.dom.raw.File
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.animationGroupMod.AnimationGroup
 import typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem
@@ -16,7 +17,7 @@ class MeshAssetTask protected () extends AbstractAssetTask {
     * @param name defines the name of the task
     * @param meshesNames defines the list of mesh's names you want to load
     * @param rootUrl defines the root url to use as a base to load your meshes and associated resources
-    * @param sceneFilename defines the filename of the scene to load from
+    * @param sceneFilename defines the filename or File of the scene to load from
     */
   def this(
     /**
@@ -32,9 +33,27 @@ class MeshAssetTask protected () extends AbstractAssetTask {
     */
   rootUrl: String,
     /**
-    * Defines the filename of the scene to load from
+    * Defines the filename or File of the scene to load from
     */
   sceneFilename: String
+  ) = this()
+  def this(
+    /**
+    * Defines the name of the task
+    */
+  name: String,
+    /**
+    * Defines the list of mesh's names you want to load
+    */
+  meshesNames: js.Any,
+    /**
+    * Defines the root url to use as a base to load your meshes and associated resources
+    */
+  rootUrl: String,
+    /**
+    * Defines the filename or File of the scene to load from
+    */
+  sceneFilename: File
   ) = this()
   
   /**
@@ -81,7 +100,7 @@ class MeshAssetTask protected () extends AbstractAssetTask {
   var rootUrl: String = js.native
   
   /**
-    * Defines the filename of the scene to load from
+    * Defines the filename or File of the scene to load from
     */
-  var sceneFilename: String = js.native
+  var sceneFilename: String | File = js.native
 }

@@ -1,10 +1,12 @@
 package typingsSlinky.reactNavigationStack.vendorTypesMod
 
+import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.reactNative.mod.Animated.WithAnimatedValue
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
+import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigationStack.anon.TintColorString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -58,7 +60,9 @@ trait StackHeaderLeftButtonProps extends js.Object {
   /**
     * Callback to trigger when the size of the label changes.
     */
-  var onLabelLayout: js.UndefOr[js.Function1[/* e */ LayoutChangeEvent, Unit]] = js.native
+  var onLabelLayout: js.UndefOr[
+    js.Function1[SyntheticEvent[NodeHandle, typingsSlinky.reactNative.anon.Layout], Unit]
+  ] = js.native
   
   /**
     * Callback to call when the button is pressed.
@@ -75,6 +79,11 @@ trait StackHeaderLeftButtonProps extends js.Object {
     * Layout of the screen.
     */
   var screenLayout: js.UndefOr[Layout] = js.native
+  
+  /**
+    * Style object for the button.
+    */
+  var style: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
   /**
     * Tint color for the header.
@@ -157,13 +166,16 @@ object StackHeaderLeftButtonProps {
     def deleteLabelStyle: Self = this.set("labelStyle", js.undefined)
     
     @scala.inline
+    def setLabelStyleNull: Self = this.set("labelStyle", null)
+    
+    @scala.inline
     def setLabelVisible(value: Boolean): Self = this.set("labelVisible", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLabelVisible: Self = this.set("labelVisible", js.undefined)
     
     @scala.inline
-    def setOnLabelLayout(value: /* e */ LayoutChangeEvent => Unit): Self = this.set("onLabelLayout", js.Any.fromFunction1(value))
+    def setOnLabelLayout(value: SyntheticEvent[NodeHandle, typingsSlinky.reactNative.anon.Layout] => Unit): Self = this.set("onLabelLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLabelLayout: Self = this.set("onLabelLayout", js.undefined)
@@ -185,6 +197,15 @@ object StackHeaderLeftButtonProps {
     
     @scala.inline
     def deleteScreenLayout: Self = this.set("screenLayout", js.undefined)
+    
+    @scala.inline
+    def setStyle(value: StyleProp[ViewStyle]): Self = this.set("style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    
+    @scala.inline
+    def setStyleNull: Self = this.set("style", null)
     
     @scala.inline
     def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])

@@ -28,11 +28,9 @@ trait AttachmentsViewModel extends Accessor {
   val attachmentInfos: js.Array[AttachmentInfo] = js.native
   
   /**
-    * Queries for the attachments on a feature. Attachments for multiple features can be queried if the layer's [capabilities.operations.supportsQueryAttachments](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#capabilities) is `true`.
+    * Queries for the attachments on a feature.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attachments-AttachmentsViewModel.html#getAttachments)
-    *
-    *
     */
   def getAttachments(): js.Promise[js.Array[AttachmentInfo]] = js.native
   
@@ -47,8 +45,6 @@ trait AttachmentsViewModel extends Accessor {
     * The current mode performed by the user.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attachments-AttachmentsViewModel.html#mode)
-    *
-    * @default "view"
     */
   var mode: view | add | edit = js.native
   
@@ -56,13 +52,11 @@ trait AttachmentsViewModel extends Accessor {
     * The current state of the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attachments-AttachmentsViewModel.html#state)
-    *
-    * @default "ready"
     */
   val state: ready | disabled | loading = js.native
   
   /**
-    * Defines whether or not the feature supports resizing attachments. This depends on whether the feature layer's [capabilities.operations.supportsResizeAttachments](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#capabilities) is set to `true`.
+    * Defines whether or not the feature supports resizing attachments.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attachments-AttachmentsViewModel.html#supportsResizeAttachments)
     */

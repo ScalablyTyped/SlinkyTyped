@@ -4,8 +4,12 @@ import typingsSlinky.bnJs.mod.Endianness
 import typingsSlinky.bnJs.mod.IPrimeName
 import typingsSlinky.bnJs.mod.ReductionContext
 import typingsSlinky.bnJs.mod.^
+import typingsSlinky.ethereumjsUtil.accountMod.AccountData
 import typingsSlinky.ethereumjsUtil.ethereumjsUtilStrings.hex
 import typingsSlinky.ethereumjsUtil.signatureMod.ECDSASignature
+import typingsSlinky.ethereumjsUtil.typesMod.PrefixedHexString
+import typingsSlinky.ethereumjsUtil.typesMod.TransformableToArray
+import typingsSlinky.ethereumjsUtil.typesMod.TransformableToBuffer
 import typingsSlinky.node.Buffer
 import typingsSlinky.rlp.typesMod.Decoded
 import typingsSlinky.rlp.typesMod.Input
@@ -45,6 +49,10 @@ object mod extends js.Object {
   def arrayContainsArray(superset: js.Array[_], subset: js.Array[_], some: Boolean): Boolean = js.native
   
   def baToJSON(ba: js.Any): js.Any = js.native
+  
+  def bnToHex(value: ^): PrefixedHexString = js.native
+  
+  def bnToRlp(value: ^): Buffer = js.native
   
   def bufferToHex(buf: Buffer): String = js.native
   
@@ -187,7 +195,15 @@ object mod extends js.Object {
     */
   def toAscii(hex: String): String = js.native
   
-  def toBuffer(v: js.Any): Buffer = js.native
+  def toBuffer(): Buffer = js.native
+  def toBuffer(v: String): Buffer = js.native
+  def toBuffer(v: js.Array[Double]): Buffer = js.native
+  def toBuffer(v: Double): Buffer = js.native
+  def toBuffer(v: ^): Buffer = js.native
+  def toBuffer(v: TransformableToArray): Buffer = js.native
+  def toBuffer(v: TransformableToBuffer): Buffer = js.native
+  def toBuffer(v: Buffer): Buffer = js.native
+  def toBuffer(v: js.typedarray.Uint8Array): Buffer = js.native
   
   def toChecksumAddress(hexAddress: String): String = js.native
   def toChecksumAddress(hexAddress: String, eip1191ChainId: Double): String = js.native
@@ -211,6 +227,108 @@ object mod extends js.Object {
   def zeroAddress(): String = js.native
   
   def zeros(bytes: Double): Buffer = js.native
+  
+  @js.native
+  /**
+    * This constructor assigns and validates the values.
+    * Use the static factory methods to assist in creating an Account from varying data types.
+    */
+  class Account ()
+    extends typingsSlinky.ethereumjsUtil.accountMod.Account {
+    def this(nonce: ^) = this()
+    def this(nonce: js.UndefOr[scala.Nothing], balance: ^) = this()
+    def this(nonce: ^, balance: ^) = this()
+    def this(nonce: js.UndefOr[scala.Nothing], balance: js.UndefOr[scala.Nothing], stateRoot: Buffer) = this()
+    def this(nonce: js.UndefOr[scala.Nothing], balance: ^, stateRoot: Buffer) = this()
+    def this(nonce: ^, balance: js.UndefOr[scala.Nothing], stateRoot: Buffer) = this()
+    def this(nonce: ^, balance: ^, stateRoot: Buffer) = this()
+    def this(
+      nonce: js.UndefOr[scala.Nothing],
+      balance: js.UndefOr[scala.Nothing],
+      stateRoot: js.UndefOr[scala.Nothing],
+      codeHash: Buffer
+    ) = this()
+    def this(
+      nonce: js.UndefOr[scala.Nothing],
+      balance: js.UndefOr[scala.Nothing],
+      stateRoot: Buffer,
+      codeHash: Buffer
+    ) = this()
+    def this(
+      nonce: js.UndefOr[scala.Nothing],
+      balance: ^,
+      stateRoot: js.UndefOr[scala.Nothing],
+      codeHash: Buffer
+    ) = this()
+    def this(nonce: js.UndefOr[scala.Nothing], balance: ^, stateRoot: Buffer, codeHash: Buffer) = this()
+    def this(
+      nonce: ^,
+      balance: js.UndefOr[scala.Nothing],
+      stateRoot: js.UndefOr[scala.Nothing],
+      codeHash: Buffer
+    ) = this()
+    def this(nonce: ^, balance: js.UndefOr[scala.Nothing], stateRoot: Buffer, codeHash: Buffer) = this()
+    def this(nonce: ^, balance: ^, stateRoot: js.UndefOr[scala.Nothing], codeHash: Buffer) = this()
+    def this(nonce: ^, balance: ^, stateRoot: Buffer, codeHash: Buffer) = this()
+  }
+  /* static members */
+  @js.native
+  object Account extends js.Object {
+    
+    def fromAccountData(accountData: AccountData): typingsSlinky.ethereumjsUtil.accountMod.Account = js.native
+    
+    def fromRlpSerializedAccount(serialized: Buffer): typingsSlinky.ethereumjsUtil.accountMod.Account = js.native
+    
+    def fromValuesArray(values: js.Array[Buffer]): typingsSlinky.ethereumjsUtil.accountMod.Account = js.native
+  }
+  
+  @js.native
+  class Address protected ()
+    extends typingsSlinky.ethereumjsUtil.addressMod.Address {
+    def this(buf: Buffer) = this()
+  }
+  /* static members */
+  @js.native
+  object Address extends js.Object {
+    
+    /**
+      * Returns an address for a given private key.
+      * @param privateKey A private key must be 256 bits wide
+      */
+    def fromPrivateKey(privateKey: Buffer): typingsSlinky.ethereumjsUtil.addressMod.Address = js.native
+    
+    /**
+      * Returns an address for a given public key.
+      * @param pubKey The two points of an uncompressed key
+      */
+    def fromPublicKey(pubKey: Buffer): typingsSlinky.ethereumjsUtil.addressMod.Address = js.native
+    
+    /**
+      * Returns an Address object from a hex-encoded string.
+      * @param str - Hex-encoded address
+      */
+    def fromString(str: String): typingsSlinky.ethereumjsUtil.addressMod.Address = js.native
+    
+    /**
+      * Generates an address for a newly created contract.
+      * @param from The address which is creating this new address
+      * @param nonce The nonce of the from account
+      */
+    def generate(from: typingsSlinky.ethereumjsUtil.addressMod.Address, nonce: ^): typingsSlinky.ethereumjsUtil.addressMod.Address = js.native
+    
+    /**
+      * Generates an address for a contract created using CREATE2.
+      * @param from The address which is creating this new address
+      * @param salt A salt
+      * @param initCode The init code of the contract being created
+      */
+    def generate2(from: typingsSlinky.ethereumjsUtil.addressMod.Address, salt: Buffer, initCode: Buffer): typingsSlinky.ethereumjsUtil.addressMod.Address = js.native
+    
+    /**
+      * Returns the zero address.
+      */
+    def zero(): typingsSlinky.ethereumjsUtil.addressMod.Address = js.native
+  }
   
   @js.native
   class BN protected ()

@@ -57,7 +57,7 @@ class Route protected () extends CustomResource {
   val modelSelectionExpression: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * The operation name for the route.
+    * The operation name for the route. Must be between 1 and 64 characters in length.
     */
   val operationName: Output_[js.UndefOr[String]] = js.native
   
@@ -67,7 +67,7 @@ class Route protected () extends CustomResource {
   val requestModels: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
   /**
-    * The route key for the route.
+    * The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
     */
   val routeKey: Output_[String] = js.native
   
@@ -77,7 +77,7 @@ class Route protected () extends CustomResource {
   val routeResponseSelectionExpression: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * The target for the route.
+    * The target for the route. Must be between 1 and 128 characters in length.
     */
   val target: Output_[js.UndefOr[String]] = js.native
 }

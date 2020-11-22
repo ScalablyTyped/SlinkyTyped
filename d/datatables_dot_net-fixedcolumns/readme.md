@@ -1,7 +1,7 @@
 
 # Scala.js typings for datatables_dot_net-fixedcolumns
 
-Typings are for version 3.2
+Typings are for version 3.3
 
 ## Library description:
 FixedColumns for DataTables

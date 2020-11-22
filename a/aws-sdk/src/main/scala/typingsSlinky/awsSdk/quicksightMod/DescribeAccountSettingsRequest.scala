@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeAccountSettingsRequest extends js.Object {
   
   /**
-    * The ID for the AWS account that contains the QuickSight namespaces that you want to list.
+    * The ID for the AWS account that contains the settings that you want to list.
     */
   var AwsAccountId: typingsSlinky.awsSdk.quicksightMod.AwsAccountId = js.native
 }

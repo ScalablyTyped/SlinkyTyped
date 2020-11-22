@@ -1,7 +1,7 @@
 package typingsSlinky.rcTrigger.legacyUtilMod
 
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.rcTrigger.interfaceMod.AnimationType
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
 import typingsSlinky.rcTrigger.interfaceMod.TransitionNameType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ trait GetMotionProps extends js.Object {
   
   var animation: AnimationType = js.native
   
-  var motion: MotionType = js.native
+  var motion: CSSMotionProps = js.native
   
   var prefixCls: String = js.native
   
@@ -23,7 +23,7 @@ object GetMotionProps {
   @scala.inline
   def apply(
     animation: AnimationType,
-    motion: MotionType,
+    motion: CSSMotionProps,
     prefixCls: String,
     transitionName: TransitionNameType
   ): GetMotionProps = {
@@ -50,7 +50,7 @@ object GetMotionProps {
     def setAnimation(value: AnimationType): Self = this.set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMotion(value: MotionType): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: CSSMotionProps): Self = this.set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])

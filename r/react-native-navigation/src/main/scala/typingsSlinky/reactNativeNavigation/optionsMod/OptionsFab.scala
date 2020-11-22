@@ -1,6 +1,5 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
-import typingsSlinky.reactNative.mod.ImageRequireSource
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.left
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.mini
 import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.regular
@@ -20,15 +19,11 @@ trait OptionsFab extends js.Object {
   
   var hideOnScroll: js.UndefOr[Boolean] = js.native
   
-  var icon: js.UndefOr[ImageRequireSource] = js.native
+  var icon: js.UndefOr[ImageResource] = js.native
   
   var iconColor: js.UndefOr[Color] = js.native
   
-  /**
-    * ID is required when first instantiating the Fab button,
-    * however when updating the existing Fab button, ID is not required.
-    */
-  var id: js.UndefOr[String] = js.native
+  var id: String = js.native
   
   var rippleColor: js.UndefOr[Color] = js.native
   
@@ -39,8 +34,8 @@ trait OptionsFab extends js.Object {
 object OptionsFab {
   
   @scala.inline
-  def apply(): OptionsFab = {
-    val __obj = js.Dynamic.literal()
+  def apply(id: String): OptionsFab = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
     __obj.asInstanceOf[OptionsFab]
   }
   
@@ -58,6 +53,9 @@ object OptionsFab {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAlignHorizontally(value: left | right): Self = this.set("alignHorizontally", value.asInstanceOf[js.Any])
@@ -84,7 +82,7 @@ object OptionsFab {
     def deleteHideOnScroll: Self = this.set("hideOnScroll", js.undefined)
     
     @scala.inline
-    def setIcon(value: ImageRequireSource): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: ImageResource): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
@@ -94,12 +92,6 @@ object OptionsFab {
     
     @scala.inline
     def deleteIconColor: Self = this.set("iconColor", js.undefined)
-    
-    @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteId: Self = this.set("id", js.undefined)
     
     @scala.inline
     def setRippleColor(value: Color): Self = this.set("rippleColor", value.asInstanceOf[js.Any])

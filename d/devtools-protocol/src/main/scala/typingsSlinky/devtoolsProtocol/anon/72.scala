@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetCPUThrottlingRateRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.DOMStorage.SetDOMStorageItemRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `72` extends js.Object {
   
-  var paramsType: js.Array[SetCPUThrottlingRateRequest] = js.native
+  var paramsType: js.Array[SetDOMStorageItemRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `72` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetCPUThrottlingRateRequest], returnType: Unit): `72` = {
+  def apply(paramsType: js.Array[SetDOMStorageItemRequest], returnType: Unit): `72` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`72`]
   }
@@ -36,10 +36,10 @@ object `72` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetCPUThrottlingRateRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetDOMStorageItemRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetCPUThrottlingRateRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetDOMStorageItemRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

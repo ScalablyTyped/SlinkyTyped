@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/project relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/project relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.unitsMod.IModelUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IProjectDocument because var conflicts: id, isLoadable, isLoaded, isReadOnly, model, structureTypeName, unit. Inlined containerAsProject */ @JSImport("mendixmodelsdk/dist/gen/projects", "projects.ProjectDocument")
 @js.native
-abstract class ProjectDocument protected () extends ModelUnit {
+abstract class ProjectDocument protected () extends ModelUnit[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
@@ -31,9 +31,6 @@ abstract class ProjectDocument protected () extends ModelUnit {
   def containerAsProject: Project = js.native
   @JSName("containerAsProject")
   val containerAsProject_FProjectDocument: IProject = js.native
-  
-  @JSName("model")
-  var model_FProjectDocument: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/projects", "projects.ProjectDocument")

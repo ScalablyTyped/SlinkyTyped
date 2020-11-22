@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GlobalShortcut extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/global-shortcut
+  // Docs: https://electronjs.org/docs/api/global-shortcut
   /**
     * Whether this application has registered `accelerator`.
     *

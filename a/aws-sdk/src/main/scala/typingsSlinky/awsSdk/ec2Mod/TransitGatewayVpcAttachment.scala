@@ -18,7 +18,7 @@ trait TransitGatewayVpcAttachment extends js.Object {
   var Options: js.UndefOr[TransitGatewayVpcAttachmentOptions] = js.native
   
   /**
-    * The state of the VPC attachment.
+    * The state of the VPC attachment. Note that the initiating state has been deprecated.
     */
   var State: js.UndefOr[TransitGatewayAttachmentState] = js.native
   

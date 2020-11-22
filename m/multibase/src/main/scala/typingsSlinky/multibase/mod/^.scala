@@ -1,6 +1,5 @@
 package typingsSlinky.multibase.mod
 
-import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,12 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
-  def apply(nameOrCode: code, buf: Buffer): Buffer = js.native
+  /** @typedef {import('./base')} Base */
+  /** @typedef {import("./types").BaseNameOrCode} BaseNameOrCode */
+  /** @typedef {import("./types").BaseCode} BaseCode */
   /**
-    * Create a new buffer with the multibase varint+code.
+    * Create a new Uint8Array with the multibase varint+code.
     *
-    * @param nameOrCode The multibase name or code number.
-    * @param buf The data to be prefixed with multibase.
+    * @param {BaseNameOrCode} nameOrCode - The multibase name or code number.
+    * @param {Uint8Array} buf - The data to be prefixed with multibase.
+    * @returns {Uint8Array}
+    * @throws {Error} Will throw if the encoding is not supported
     */
-  def apply(nameOrCode: name, buf: Buffer): Buffer = js.native
+  def apply(nameOrCode: BaseNameOrCode, buf: js.typedarray.Uint8Array): js.typedarray.Uint8Array = js.native
 }

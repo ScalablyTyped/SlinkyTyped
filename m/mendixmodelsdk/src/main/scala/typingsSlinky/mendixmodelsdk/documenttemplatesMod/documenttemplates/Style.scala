@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.documenttemplatesMod.documenttemplates
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.commonMod.common.IColor
 import typingsSlinky.mendixmodelsdk.documenttemplatesMod.StructureVersionInfo
@@ -7,23 +8,24 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/style relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/style relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/documenttemplates", "documenttemplates.Style")
 @js.native
-class Style protected () extends Element {
+class Style protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def backgroundColor: IColor = js.native
@@ -100,9 +102,6 @@ class Style protected () extends Element {
   
   def italic: Boolean = js.native
   def italic_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FStyle: IModel = js.native
   
   def overrideBackgroundColor: Boolean = js.native
   def overrideBackgroundColor_=(newValue: Boolean): Unit = js.native

@@ -38,8 +38,6 @@ object actionSheetMod extends js.Object {
     @JSName("componentDidLoad")
     def componentDidLoad_MActionSheet(): Unit = js.native
     
-    def componentDidUnload(): Unit = js.native
-    
     @JSName("connectedCallback")
     def connectedCallback_MActionSheet(): Unit = js.native
     
@@ -48,6 +46,9 @@ object actionSheetMod extends js.Object {
       * provided they should be separated by spaces.
       */
     var cssClass: js.UndefOr[String | js.Array[String]] = js.native
+    
+    @JSName("disconnectedCallback")
+    def disconnectedCallback_MActionSheet(): Unit = js.native
     
     var dispatchCancelHandler: js.Any = js.native
     

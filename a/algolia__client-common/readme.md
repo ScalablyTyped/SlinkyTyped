@@ -1,7 +1,7 @@
 
 # Scala.js typings for algolia__client-common
 
-Typings are for version 4.3.1
+Typings are for version 4.8.0
 
 
 

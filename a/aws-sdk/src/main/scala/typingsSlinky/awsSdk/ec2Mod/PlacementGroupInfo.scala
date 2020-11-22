@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PlacementGroupInfo extends js.Object {
   
   /**
-    * A list of supported placement groups types.
+    * The supported placement group types.
     */
   var SupportedStrategies: js.UndefOr[PlacementGroupStrategyList] = js.native
 }

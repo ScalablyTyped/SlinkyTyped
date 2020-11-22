@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.expressionsMod.expressions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.expressionsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -34,12 +35,15 @@ import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.WebServiceOperation
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.ConditionalSettings
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.WidgetValidation
 import typingsSlinky.mendixmodelsdk.restMod.rest.ConsumedODataService
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
+  *
+  * @ignore
   *
   * In version 7.9.0: introduced
   */
@@ -51,24 +55,25 @@ class BinaryExpression protected () extends Expression {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
   def left: Expression = js.native
   def left_=(newValue: Expression): Unit = js.native
-  
-  @JSName("model")
-  var model_FBinaryExpression: IModel = js.native
   
   def operator: BinaryOperator = js.native
   def operator_=(newValue: BinaryOperator): Unit = js.native
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     */
   def right: Expression = js.native
   def right_=(newValue: Expression): Unit = js.native

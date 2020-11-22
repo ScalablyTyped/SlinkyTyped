@@ -59,6 +59,9 @@ object Input {
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def clearOnEscape(value: Boolean): this.type = set("clearOnEscape", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def clearable(value: Boolean): this.type = set("clearable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -99,6 +102,9 @@ object Input {
     
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
@@ -153,6 +159,9 @@ object Input {
     
     @scala.inline
     def startEnhancer(value: (js.Function1[/* args */ SharedProps, ReactElement]) | ReactElement): this.type = set("startEnhancer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])

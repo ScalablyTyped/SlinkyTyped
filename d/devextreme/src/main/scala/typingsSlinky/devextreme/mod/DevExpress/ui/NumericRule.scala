@@ -16,13 +16,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait NumericRule extends js.Object {
   
-  /** @name NumericRule.ignoreEmptyValue */
+  /**
+    * [descr:NumericRule.ignoreEmptyValue]
+    */
   var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
   
-  /** @name NumericRule.message */
+  /**
+    * [descr:NumericRule.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name NumericRule.type */
+  /**
+    * [descr:NumericRule.type]
+    */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native

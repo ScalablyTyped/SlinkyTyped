@@ -22,6 +22,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Comment extends ClientObject {
   
   /**
+    * Assigns the task attached to the comment to the given user as the sole assignee. If there is no task, one will be created.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    *
+    * @param email The email address of the user to assign the task to.
+    */
+  def assignTask(email: String): Task = js.native
+  
+  /**
     *
     * Gets the email of the comment's author.
     *
@@ -49,8 +59,7 @@ trait Comment extends ClientObject {
     *
     * Gets the content type of the comment.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   val contentType: ContentType | Plain | Mention = js.native
   
@@ -79,6 +88,22 @@ trait Comment extends ClientObject {
     * [Api set: ExcelApi 1.10]
     */
   def getLocation(): Range = js.native
+  
+  /**
+    * Gets the task associated with this comment. If there is no task for the comment thread, an ItemNotFound exception is thrown.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  def getTask(): Task = js.native
+  
+  /**
+    * Gets the task associated with this comment. If there is no task for the comment thread, a null object is returned.
+    *
+    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * @beta
+    */
+  def getTaskOrNullObject(): Task = js.native
   
   /**
     *

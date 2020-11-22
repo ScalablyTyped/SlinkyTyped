@@ -6,4 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait TileDebug
-  extends typingsSlinky.ol.xyzMod.default
+  extends typingsSlinky.ol.xyzMod.default {
+  
+  def getTile(z: Double, x: Double, y: Double): LabeledTile = js.native
+}

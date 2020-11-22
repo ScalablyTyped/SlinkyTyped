@@ -208,8 +208,11 @@ package object elasticbeanstalkMod {
   type EnvironmentNamesList = js.Array[typingsSlinky.awsSdk.elasticbeanstalkMod.EnvironmentName]
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Aborting_
     - typingsSlinky.awsSdk.awsSdkStrings.Launching_
     - typingsSlinky.awsSdk.awsSdkStrings.Updating_
+    - typingsSlinky.awsSdk.awsSdkStrings.LinkingFrom
+    - typingsSlinky.awsSdk.awsSdkStrings.LinkingTo
     - typingsSlinky.awsSdk.awsSdkStrings.Ready_
     - typingsSlinky.awsSdk.awsSdkStrings.Terminating_
     - typingsSlinky.awsSdk.awsSdkStrings.Terminated_

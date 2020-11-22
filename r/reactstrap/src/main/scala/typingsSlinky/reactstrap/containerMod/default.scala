@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/Container", JSImport.Default)
+@JSImport("reactstrap/es/Container", JSImport.Default)
 @js.native
-class default[T] ()
+class default ()
   extends Component[ContainerProps, js.Object, js.Any]

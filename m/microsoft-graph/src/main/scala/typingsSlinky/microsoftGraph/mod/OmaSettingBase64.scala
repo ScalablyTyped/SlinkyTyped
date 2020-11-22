@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait OmaSettingBase64 extends OmaSetting {
   
   // File name associated with the Value property (.cer
-  var fileName: js.UndefOr[String] = js.native
+  var fileName: js.UndefOr[NullableOption[String]] = js.native
   
   // Value. (Base64 encoded string)
   var value: js.UndefOr[String] = js.native
@@ -37,10 +37,13 @@ object OmaSettingBase64 {
     }
     
     @scala.inline
-    def setFileName(value: String): Self = this.set("fileName", value.asInstanceOf[js.Any])
+    def setFileName(value: NullableOption[String]): Self = this.set("fileName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFileName: Self = this.set("fileName", js.undefined)
+    
+    @scala.inline
+    def setFileNameNull: Self = this.set("fileName", null)
     
     @scala.inline
     def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])

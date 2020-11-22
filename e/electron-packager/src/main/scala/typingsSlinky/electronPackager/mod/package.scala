@@ -68,10 +68,7 @@ package object mod {
     * See the documentation for [`electron-notarize`](https://npm.im/electron-notarize#method-notarizeopts-promisevoid)
     * for details.
     */
-  type OsxNotarizeOptions = typingsSlinky.std.Omit[
-    typingsSlinky.electronNotarize.mod.NotarizeOptions, 
-    typingsSlinky.electronPackager.electronPackagerStrings.appBundleId | typingsSlinky.electronPackager.electronPackagerStrings.appPath
-  ]
+  type OsxNotarizeOptions = typingsSlinky.electronNotarize.mod.NotarizeCredentials with typingsSlinky.electronNotarize.mod.TransporterOptions
   
   type PlatformOption = typingsSlinky.electronPackager.mod.TargetPlatform | typingsSlinky.electronPackager.electronPackagerStrings.all
   

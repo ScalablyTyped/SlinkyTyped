@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("yup", "mixed")
 @js.native
 // tslint:disable-next-line:no-unnecessary-generics
-class mixed[T] () extends MixedSchema[T] {
+class mixed[T, C] () extends MixedSchema[T, C] {
   def this(options: Dictkey) = this()
 }
 @JSImport("yup", "mixed")

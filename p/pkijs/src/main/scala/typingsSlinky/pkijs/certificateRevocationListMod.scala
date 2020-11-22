@@ -16,7 +16,7 @@ object certificateRevocationListMod extends js.Object {
   @js.native
   trait CertificateRevocationList extends js.Object {
     
-    var crlExtension: js.UndefOr[js.Array[typingsSlinky.pkijs.extensionMod.default]] = js.native
+    var crlExtensions: js.UndefOr[typingsSlinky.pkijs.extensionsMod.default] = js.native
     
     def encodeTBS(): Sequence = js.native
     

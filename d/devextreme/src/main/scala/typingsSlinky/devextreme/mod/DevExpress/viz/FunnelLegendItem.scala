@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FunnelLegendItem extends BaseLegendItem {
   
-  /** @name FunnelLegendItem.item */
+  /**
+    * [descr:FunnelLegendItem.item]
+    */
   var item: js.UndefOr[dxFunnelItem] = js.native
 }
 object FunnelLegendItem {

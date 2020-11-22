@@ -104,6 +104,9 @@ object algoliasearchHelperStrings {
   def numericRefinements: numericRefinements = "numericRefinements".asInstanceOf[numericRefinements]
   
   @scala.inline
+  def optionalFilters: optionalFilters = "optionalFilters".asInstanceOf[optionalFilters]
+  
+  @scala.inline
   def prefixAll: prefixAll = "prefixAll".asInstanceOf[prefixAll]
   
   @scala.inline
@@ -113,7 +116,13 @@ object algoliasearchHelperStrings {
   def prefixNone: prefixNone = "prefixNone".asInstanceOf[prefixNone]
   
   @scala.inline
+  def queryLanguages: queryLanguages = "queryLanguages".asInstanceOf[queryLanguages]
+  
+  @scala.inline
   def result: result = "result".asInstanceOf[result]
+  
+  @scala.inline
+  def ruleContexts: ruleContexts = "ruleContexts".asInstanceOf[ruleContexts]
   
   @scala.inline
   def search: search = "search".asInstanceOf[search]
@@ -233,6 +242,9 @@ object algoliasearchHelperStrings {
   sealed trait numericRefinements extends js.Object
   
   @js.native
+  sealed trait optionalFilters extends js.Object
+  
+  @js.native
   sealed trait prefixAll extends js.Object
   
   @js.native
@@ -242,7 +254,13 @@ object algoliasearchHelperStrings {
   sealed trait prefixNone extends js.Object
   
   @js.native
+  sealed trait queryLanguages extends js.Object
+  
+  @js.native
   sealed trait result extends js.Object
+  
+  @js.native
+  sealed trait ruleContexts extends js.Object
   
   @js.native
   sealed trait search extends js.Object

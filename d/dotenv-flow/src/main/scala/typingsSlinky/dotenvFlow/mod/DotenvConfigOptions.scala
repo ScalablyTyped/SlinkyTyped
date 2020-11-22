@@ -36,6 +36,11 @@ trait DotenvConfigOptions extends js.Object {
     * Setting the `purge_dotenv` option to `true` can gracefully fix this issue.
     */
   var purge_dotenv: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Suppress all console outputs except errors and deprecation warnings.
+    */
+  var silent: js.UndefOr[Boolean] = js.native
 }
 object DotenvConfigOptions {
   
@@ -89,5 +94,11 @@ object DotenvConfigOptions {
     
     @scala.inline
     def deletePurge_dotenv: Self = this.set("purge_dotenv", js.undefined)
+    
+    @scala.inline
+    def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSilent: Self = this.set("silent", js.undefined)
   }
 }

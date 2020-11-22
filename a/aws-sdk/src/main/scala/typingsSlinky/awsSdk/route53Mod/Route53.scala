@@ -2,7 +2,7 @@ package typingsSlinky.awsSdk.route53Mod
 
 import typingsSlinky.awsSdk.anon.GetChangeRequestwaiterWai
 import typingsSlinky.awsSdk.awsSdkStrings.resourceRecordSetsChanged
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -14,12 +14,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Route53 extends Service {
   
   /**
-    * Associates an Amazon VPC with a private hosted zone.   To perform the association, the VPC and the private hosted zone must already exist. Also, you can't convert a public hosted zone into a private hosted zone.  If you want to associate a VPC that was created by one AWS account with a private hosted zone that was created by a different account, do one of the following:   Use the AWS account that created the private hosted zone to submit a CreateVPCAssociationAuthorization request. Then use the account that created the VPC to submit an AssociateVPCWithHostedZone request.   If a subnet in the VPC was shared with another account, you can use the account that the subnet was shared with to submit an AssociateVPCWithHostedZone request. For more information about sharing subnets, see Working with Shared VPCs.  
+    * Associates an Amazon VPC with a private hosted zone.   To perform the association, the VPC and the private hosted zone must already exist. You can't convert a public hosted zone into a private hosted zone.   If you want to associate a VPC that was created by using one AWS account with a private hosted zone that was created by using a different account, the AWS account that created the private hosted zone must first submit a CreateVPCAssociationAuthorization request. Then the account that created the VPC must submit an AssociateVPCWithHostedZone request. 
     */
   def associateVPCWithHostedZone(): Request[AssociateVPCWithHostedZoneResponse, AWSError] = js.native
   def associateVPCWithHostedZone(callback: js.Function2[/* err */ AWSError, /* data */ AssociateVPCWithHostedZoneResponse, Unit]): Request[AssociateVPCWithHostedZoneResponse, AWSError] = js.native
   /**
-    * Associates an Amazon VPC with a private hosted zone.   To perform the association, the VPC and the private hosted zone must already exist. Also, you can't convert a public hosted zone into a private hosted zone.  If you want to associate a VPC that was created by one AWS account with a private hosted zone that was created by a different account, do one of the following:   Use the AWS account that created the private hosted zone to submit a CreateVPCAssociationAuthorization request. Then use the account that created the VPC to submit an AssociateVPCWithHostedZone request.   If a subnet in the VPC was shared with another account, you can use the account that the subnet was shared with to submit an AssociateVPCWithHostedZone request. For more information about sharing subnets, see Working with Shared VPCs.  
+    * Associates an Amazon VPC with a private hosted zone.   To perform the association, the VPC and the private hosted zone must already exist. You can't convert a public hosted zone into a private hosted zone.   If you want to associate a VPC that was created by using one AWS account with a private hosted zone that was created by using a different account, the AWS account that created the private hosted zone must first submit a CreateVPCAssociationAuthorization request. Then the account that created the VPC must submit an AssociateVPCWithHostedZone request. 
     */
   def associateVPCWithHostedZone(params: AssociateVPCWithHostedZoneRequest): Request[AssociateVPCWithHostedZoneResponse, AWSError] = js.native
   def associateVPCWithHostedZone(
@@ -229,12 +229,12 @@ trait Route53 extends Service {
   ): Request[DeleteReusableDelegationSetResponse, AWSError] = js.native
   
   /**
-    * Deletes a traffic policy.
+    * Deletes a traffic policy. When you delete a traffic policy, Route 53 sets a flag on the policy to indicate that it has been deleted. However, Route 53 never fully deletes the traffic policy. Note the following:   Deleted traffic policies aren't listed if you run ListTrafficPolicies.    There's no way to get a list of deleted policies.   If you retain the ID of the policy, you can get information about the policy, including the traffic policy document, by running GetTrafficPolicy.  
     */
   def deleteTrafficPolicy(): Request[DeleteTrafficPolicyResponse, AWSError] = js.native
   def deleteTrafficPolicy(callback: js.Function2[/* err */ AWSError, /* data */ DeleteTrafficPolicyResponse, Unit]): Request[DeleteTrafficPolicyResponse, AWSError] = js.native
   /**
-    * Deletes a traffic policy.
+    * Deletes a traffic policy. When you delete a traffic policy, Route 53 sets a flag on the policy to indicate that it has been deleted. However, Route 53 never fully deletes the traffic policy. Note the following:   Deleted traffic policies aren't listed if you run ListTrafficPolicies.    There's no way to get a list of deleted policies.   If you retain the ID of the policy, you can get information about the policy, including the traffic policy document, by running GetTrafficPolicy.  
     */
   def deleteTrafficPolicy(params: DeleteTrafficPolicyRequest): Request[DeleteTrafficPolicyResponse, AWSError] = js.native
   def deleteTrafficPolicy(
@@ -485,12 +485,12 @@ trait Route53 extends Service {
   ): Request[GetReusableDelegationSetLimitResponse, AWSError] = js.native
   
   /**
-    * Gets information about a specific traffic policy version.
+    * Gets information about a specific traffic policy version. For information about how of deleting a traffic policy affects the response from GetTrafficPolicy, see DeleteTrafficPolicy. 
     */
   def getTrafficPolicy(): Request[GetTrafficPolicyResponse, AWSError] = js.native
   def getTrafficPolicy(callback: js.Function2[/* err */ AWSError, /* data */ GetTrafficPolicyResponse, Unit]): Request[GetTrafficPolicyResponse, AWSError] = js.native
   /**
-    * Gets information about a specific traffic policy version.
+    * Gets information about a specific traffic policy version. For information about how of deleting a traffic policy affects the response from GetTrafficPolicy, see DeleteTrafficPolicy. 
     */
   def getTrafficPolicy(params: GetTrafficPolicyRequest): Request[GetTrafficPolicyResponse, AWSError] = js.native
   def getTrafficPolicy(
@@ -667,12 +667,12 @@ trait Route53 extends Service {
   ): Request[ListTagsForResourcesResponse, AWSError] = js.native
   
   /**
-    * Gets information about the latest version for every traffic policy that is associated with the current AWS account. Policies are listed in the order that they were created in. 
+    * Gets information about the latest version for every traffic policy that is associated with the current AWS account. Policies are listed in the order that they were created in.  For information about how of deleting a traffic policy affects the response from ListTrafficPolicies, see DeleteTrafficPolicy. 
     */
   def listTrafficPolicies(): Request[ListTrafficPoliciesResponse, AWSError] = js.native
   def listTrafficPolicies(callback: js.Function2[/* err */ AWSError, /* data */ ListTrafficPoliciesResponse, Unit]): Request[ListTrafficPoliciesResponse, AWSError] = js.native
   /**
-    * Gets information about the latest version for every traffic policy that is associated with the current AWS account. Policies are listed in the order that they were created in. 
+    * Gets information about the latest version for every traffic policy that is associated with the current AWS account. Policies are listed in the order that they were created in.  For information about how of deleting a traffic policy affects the response from ListTrafficPolicies, see DeleteTrafficPolicy. 
     */
   def listTrafficPolicies(params: ListTrafficPoliciesRequest): Request[ListTrafficPoliciesResponse, AWSError] = js.native
   def listTrafficPolicies(

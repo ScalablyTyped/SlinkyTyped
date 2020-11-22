@@ -19,6 +19,14 @@ trait IInputGroupProps
      with IProps {
   
   /**
+    * Set this to `true` if you will be controlling the `value` of this input with asynchronous updates.
+    * These may occur if you do not immediately call setState in a parent component with the value from
+    * the `onChange` handler, or if working with certain libraries like __redux-form__.
+    * @default false
+    */
+  var asyncControl: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Whether the input is non-interactive.
     * Note that `rightElement` must be disabled separately; this prop will not affect it.
     * @default false
@@ -92,6 +100,12 @@ object IInputGroupProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAsyncControl(value: Boolean): Self = this.set("asyncControl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAsyncControl: Self = this.set("asyncControl", js.undefined)
     
     @scala.inline
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])

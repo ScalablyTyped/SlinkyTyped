@@ -20,10 +20,15 @@ object radioGroupMod extends js.Object {
       */
     var allowEmptySelection: Boolean = js.native
     
+    @JSName("componentDidLoad")
+    def componentDidLoad_MRadioGroup(): Unit = js.native
+    
     @JSName("connectedCallback")
     def connectedCallback_MRadioGroup(): js.Promise[Unit] = js.native
     
     var el: HTMLElement = js.native
+    
+    var getRadios: js.Any = js.native
     
     var inputId: js.Any = js.native
     
@@ -41,8 +46,12 @@ object radioGroupMod extends js.Object {
     
     var onClick: js.Any = js.native
     
+    def onKeydown(ev: js.Any): Unit = js.native
+    
     @JSName("render")
     def render_MRadioGroup(): js.Any = js.native
+    
+    var setRadioTabindex: js.Any = js.native
     
     /**
       * the value of the radio group.

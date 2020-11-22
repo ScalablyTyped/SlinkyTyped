@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object equal extends js.Object {
   
+  /** @deprecated Use `strictEqual` instead */
   def apply(actual: js.Any, expected: js.Any): Unit = js.native
   def apply(actual: js.Any, expected: js.Any, message: String): Unit = js.native
 }

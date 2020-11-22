@@ -1,7 +1,8 @@
 package typingsSlinky.ecmarkup
 
-import typingsSlinky.ecmarkup.algorithmErrorReporterTypeMod.LintingError
 import typingsSlinky.ecmarkup.anon.Element
+import typingsSlinky.ecmarkup.specMod.Spec
+import typingsSlinky.ecmarkup.specMod.Warning
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +11,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object collectAlgorithmDiagnosticsMod extends js.Object {
   
-  def collectAlgorithmDiagnostics(dom: js.Any, sourceText: String, algorithms: js.Array[Element]): js.Array[LintingError] = js.native
+  def collectAlgorithmDiagnostics(
+    report: js.Function1[/* e */ Warning, Unit],
+    spec: Spec,
+    mainSource: String,
+    algorithms: js.Array[Element]
+  ): Unit = js.native
 }

@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IonIcon extends js.Object {
   
   /**
+    * Set the icon to hidden, respectively `true`, to remove it from the accessibility tree.
+    */
+  var ariaHidden: js.UndefOr[String] = js.native
+  
+  /**
     * Specifies the label to use for accessibility. Defaults to the icon name.
     */
   var ariaLabel: js.UndefOr[String] = js.native
@@ -53,6 +58,12 @@ trait IonIcon extends js.Object {
   var name: js.UndefOr[String] = js.native
   
   /**
+    * When set to `false`, SVG content that is HTTP fetched will not be checked if the response SVG content has any `<script>` elements, or any attributes that start with `on`, such as `onclick`.
+    * @default true
+    */
+  var sanitize: js.UndefOr[Boolean] = js.native
+  
+  /**
     * The size of the icon. Available options are: `"small"` and `"large"`.
     */
   var size: js.UndefOr[String] = js.native
@@ -84,6 +95,12 @@ object IonIcon {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAriaHidden(value: String): Self = this.set("ariaHidden", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAriaHidden: Self = this.set("ariaHidden", js.undefined)
     
     @scala.inline
     def setAriaLabel(value: String): Self = this.set("ariaLabel", value.asInstanceOf[js.Any])
@@ -138,6 +155,12 @@ object IonIcon {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setSanitize(value: Boolean): Self = this.set("sanitize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSanitize: Self = this.set("sanitize", js.undefined)
     
     @scala.inline
     def setSize(value: String): Self = this.set("size", value.asInstanceOf[js.Any])

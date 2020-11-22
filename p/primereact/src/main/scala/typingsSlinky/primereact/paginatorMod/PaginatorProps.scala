@@ -14,6 +14,8 @@ trait PaginatorProps extends js.Object {
   
   var currentPageReportTemplate: js.UndefOr[String] = js.native
   
+  var dropdownAppendTo: js.UndefOr[js.Any] = js.native
+  
   var first: js.UndefOr[Double] = js.native
   
   var leftContent: js.UndefOr[ReactElement] = js.native
@@ -74,6 +76,12 @@ object PaginatorProps {
     
     @scala.inline
     def deleteCurrentPageReportTemplate: Self = this.set("currentPageReportTemplate", js.undefined)
+    
+    @scala.inline
+    def setDropdownAppendTo(value: js.Any): Self = this.set("dropdownAppendTo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDropdownAppendTo: Self = this.set("dropdownAppendTo", js.undefined)
     
     @scala.inline
     def setFirst(value: Double): Self = this.set("first", value.asInstanceOf[js.Any])

@@ -14,7 +14,7 @@ class UpsertCatalogObjectResponse () extends js.Object {
   var catalog_object: js.UndefOr[CatalogObject] = js.native
   
   /**
-    * Information on any errors encountered.
+    * Any errors that occurred during the request.
     */
   var errors: js.UndefOr[js.Array[js.Error]] = js.native
   

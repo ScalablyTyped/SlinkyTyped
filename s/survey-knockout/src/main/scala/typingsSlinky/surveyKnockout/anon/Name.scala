@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Name extends js.Object {
   
   var name: String = js.native
+  
+  var onGetTextCallback: js.UndefOr[js.Function1[/* str */ String, String]] = js.native
 }
 object Name {
   
@@ -34,5 +36,11 @@ object Name {
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOnGetTextCallback(value: /* str */ String => String): Self = this.set("onGetTextCallback", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnGetTextCallback: Self = this.set("onGetTextCallback", js.undefined)
   }
 }

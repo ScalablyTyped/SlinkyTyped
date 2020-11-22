@@ -5,7 +5,7 @@ import typingsSlinky.awsSdk.cognitoIdentityCredentialsMod.CognitoIdentityCredent
 import typingsSlinky.awsSdk.cognitoidentityMod.GetCredentialsForIdentityResponse
 import typingsSlinky.awsSdk.cognitoidentityMod.GetIdInput
 import typingsSlinky.awsSdk.cognitoidentityMod.GetOpenIdTokenInput
-import typingsSlinky.awsSdk.configMod.ConfigurationOptions
+import typingsSlinky.awsSdk.configBaseMod.ConfigurationOptions
 import typingsSlinky.awsSdk.credentialsMod.Credentials
 import typingsSlinky.awsSdk.stsMod.AssumeRoleWithWebIdentityRequest
 import typingsSlinky.awsSdk.stsMod.AssumeRoleWithWebIdentityResponse

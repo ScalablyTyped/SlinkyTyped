@@ -1,8 +1,8 @@
 package typingsSlinky.rollup.mod
 
+import typingsSlinky.rollup.anon.Custom
 import typingsSlinky.rollup.anon.Line
 import typingsSlinky.rollup.anon.Name
-import typingsSlinky.rollup.anon.SkipSelf
 import typingsSlinky.std.IterableIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -51,9 +51,11 @@ trait PluginContext extends MinimalPluginContext {
   
   def getModuleIds(): IterableIterator[String] = js.native
   
-  def getModuleInfo(moduleId: String): ModuleInfo = js.native
+  def getModuleInfo(moduleId: String): ModuleInfo | Null = js.native
   @JSName("getModuleInfo")
   var getModuleInfo_Original: GetModuleInfo = js.native
+  
+  def getWatchFiles(): js.Array[String] = js.native
   
   def isExternal(source: String, importer: js.UndefOr[scala.Nothing], isResolved: Boolean): Boolean = js.native
   /** @deprecated Use `this.resolve` instead */
@@ -65,12 +67,13 @@ trait PluginContext extends MinimalPluginContext {
   /** @deprecated Use `this.getModuleIds` instead */
   var moduleIds: IterableIterator[String] = js.native
   
+  def parse(input: String): AcornNode = js.native
   def parse(input: String, options: js.Any): AcornNode = js.native
   
   def resolve(source: String): js.Promise[ResolvedId | Null] = js.native
-  def resolve(source: String, importer: js.UndefOr[scala.Nothing], options: SkipSelf): js.Promise[ResolvedId | Null] = js.native
+  def resolve(source: String, importer: js.UndefOr[scala.Nothing], options: Custom): js.Promise[ResolvedId | Null] = js.native
   def resolve(source: String, importer: String): js.Promise[ResolvedId | Null] = js.native
-  def resolve(source: String, importer: String, options: SkipSelf): js.Promise[ResolvedId | Null] = js.native
+  def resolve(source: String, importer: String, options: Custom): js.Promise[ResolvedId | Null] = js.native
   
   /** @deprecated Use `this.resolve` instead */
   def resolveId(source: String): js.Promise[String | Null] = js.native

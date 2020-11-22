@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.StringLiteral
+  - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.NumberLiteral
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.Terminal
   - typingsSlinky.grammarkdown.tokensMod.SyntaxKind.UnicodeCharacterLiteral
   - typingsSlinky.grammarkdown.tokensMod.ProseFragmentLiteralKind

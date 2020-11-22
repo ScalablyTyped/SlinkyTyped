@@ -23,5 +23,7 @@ object offerCallBuilderMod extends js.Object {
     def offer(offerId: String): CallBuilder[OfferRecord] = js.native
     
     def selling(asset: Asset): this.type = js.native
+    
+    def sponsor(id: String): this.type = js.native
   }
 }

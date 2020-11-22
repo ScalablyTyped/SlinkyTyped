@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object containerMod {
   
-  type Container[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.containerMod.ContainerProps]
+  type Container = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.containerMod.ContainerProps]
 }

@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Shift extends ChangeTrackedEntity {
   
   // The draft version of this shift that is viewable by managers. Required.
-  var draftShift: js.UndefOr[ShiftItem] = js.native
+  var draftShift: js.UndefOr[NullableOption[ShiftItem]] = js.native
   
   // ID of the scheduling group the shift is part of. Required.
-  var schedulingGroupId: js.UndefOr[String] = js.native
+  var schedulingGroupId: js.UndefOr[NullableOption[String]] = js.native
   
   // The shared version of this shift that is viewable by both employees and managers. Required.
-  var sharedShift: js.UndefOr[ShiftItem] = js.native
+  var sharedShift: js.UndefOr[NullableOption[ShiftItem]] = js.native
   
   // ID of the user assigned to the shift. Required.
-  var userId: js.UndefOr[String] = js.native
+  var userId: js.UndefOr[NullableOption[String]] = js.native
 }
 object Shift {
   
@@ -43,27 +43,39 @@ object Shift {
     }
     
     @scala.inline
-    def setDraftShift(value: ShiftItem): Self = this.set("draftShift", value.asInstanceOf[js.Any])
+    def setDraftShift(value: NullableOption[ShiftItem]): Self = this.set("draftShift", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDraftShift: Self = this.set("draftShift", js.undefined)
     
     @scala.inline
-    def setSchedulingGroupId(value: String): Self = this.set("schedulingGroupId", value.asInstanceOf[js.Any])
+    def setDraftShiftNull: Self = this.set("draftShift", null)
+    
+    @scala.inline
+    def setSchedulingGroupId(value: NullableOption[String]): Self = this.set("schedulingGroupId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSchedulingGroupId: Self = this.set("schedulingGroupId", js.undefined)
     
     @scala.inline
-    def setSharedShift(value: ShiftItem): Self = this.set("sharedShift", value.asInstanceOf[js.Any])
+    def setSchedulingGroupIdNull: Self = this.set("schedulingGroupId", null)
+    
+    @scala.inline
+    def setSharedShift(value: NullableOption[ShiftItem]): Self = this.set("sharedShift", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSharedShift: Self = this.set("sharedShift", js.undefined)
     
     @scala.inline
-    def setUserId(value: String): Self = this.set("userId", value.asInstanceOf[js.Any])
+    def setSharedShiftNull: Self = this.set("sharedShift", null)
+    
+    @scala.inline
+    def setUserId(value: NullableOption[String]): Self = this.set("userId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserId: Self = this.set("userId", js.undefined)
+    
+    @scala.inline
+    def setUserIdNull: Self = this.set("userId", null)
   }
 }

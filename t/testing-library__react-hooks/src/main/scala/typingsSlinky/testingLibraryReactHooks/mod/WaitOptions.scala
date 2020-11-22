@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WaitOptions extends js.Object {
   
+  var interval: js.UndefOr[Double] = js.native
+  
   var suppressErrors: js.UndefOr[Boolean] = js.native
   
   var timeout: js.UndefOr[Double] = js.native
@@ -33,6 +35,12 @@ object WaitOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setInterval(value: Double): Self = this.set("interval", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInterval: Self = this.set("interval", js.undefined)
     
     @scala.inline
     def setSuppressErrors(value: Boolean): Self = this.set("suppressErrors", value.asInstanceOf[js.Any])

@@ -1,16 +1,22 @@
 package typingsSlinky.reactIntl.components
 
-import typingsSlinky.reactIntl.anon.DateTimeFormatOptionsCustChildren
+import slinky.web.html.`*`.tag
+import typingsSlinky.StBuildingComponent.Default
+import typingsSlinky.reactIntl.anon.Children
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for (/ * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FormatDateOptions * / js.Any) with typingsSlinky.reactIntl.anon.Children because: IArray(Could't extract props from / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FormatDateOptions * / js.Any because couldn't resolve ClassTree.) */
 object FormattedTimeParts {
+  
   @JSImport("react-intl", "FormattedTimeParts")
   @js.native
   object component extends js.Object
   
-  def withProps(p: DateTimeFormatOptionsCustChildren): SharedBuilder_DateTimeFormatOptionsCustChildren_958508767 = new SharedBuilder_DateTimeFormatOptionsCustChildren_958508767(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: FormattedTimeParts.type): SharedBuilder_DateTimeFormatOptionsCustChildren_958508767 = new SharedBuilder_DateTimeFormatOptionsCustChildren_958508767(js.Array(this.component, js.Dictionary.empty))()
+  def apply(
+    p: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FormatDateOptions */ js.Any) with Children
+  ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
+  implicit def make(companion: FormattedTimeParts.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
-

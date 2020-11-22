@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`10`
+import typingsSlinky.octokitTypes.anon.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +13,7 @@ trait ReactionsDeleteForTeamDiscussionCommentEndpoint extends js.Object {
   
   var discussion_number: Double = js.native
   
-  var mediaType: `10` = js.native
+  var mediaType: `9` = js.native
   
   @JSName("org")
   var org_ : String = js.native
@@ -28,7 +28,7 @@ object ReactionsDeleteForTeamDiscussionCommentEndpoint {
   def apply(
     comment_number: Double,
     discussion_number: Double,
-    mediaType: `10`,
+    mediaType: `9`,
     org_ : String,
     reaction_id: Double,
     team_slug: String
@@ -60,7 +60,7 @@ object ReactionsDeleteForTeamDiscussionCommentEndpoint {
     def setDiscussion_number(value: Double): Self = this.set("discussion_number", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `10`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `9`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOrg_(value: String): Self = this.set("org", value.asInstanceOf[js.Any])

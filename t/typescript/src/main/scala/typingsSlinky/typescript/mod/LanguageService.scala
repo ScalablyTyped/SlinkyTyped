@@ -20,6 +20,8 @@ trait LanguageService extends js.Object {
   /** This is used as a part of restarting the language service. */
   def cleanupSemanticCache(): Unit = js.native
   
+  def commentSelection(fileName: java.lang.String, textRange: TextRange): js.Array[TextChange] = js.native
+  
   def dispose(): Unit = js.native
   
   def findReferences(fileName: java.lang.String, position: Double): js.UndefOr[js.Array[ReferencedSymbol]] = js.native
@@ -34,9 +36,33 @@ trait LanguageService extends js.Object {
   ): js.UndefOr[js.Array[RenameLocation]] = js.native
   
   def getApplicableRefactors(fileName: java.lang.String, positionOrRange: Double): js.Array[ApplicableRefactorInfo] = js.native
+  def getApplicableRefactors(
+    fileName: java.lang.String,
+    positionOrRange: Double,
+    preferences: js.UndefOr[scala.Nothing],
+    triggerReason: RefactorTriggerReason
+  ): js.Array[ApplicableRefactorInfo] = js.native
   def getApplicableRefactors(fileName: java.lang.String, positionOrRange: Double, preferences: UserPreferences): js.Array[ApplicableRefactorInfo] = js.native
+  def getApplicableRefactors(
+    fileName: java.lang.String,
+    positionOrRange: Double,
+    preferences: UserPreferences,
+    triggerReason: RefactorTriggerReason
+  ): js.Array[ApplicableRefactorInfo] = js.native
   def getApplicableRefactors(fileName: java.lang.String, positionOrRange: TextRange): js.Array[ApplicableRefactorInfo] = js.native
+  def getApplicableRefactors(
+    fileName: java.lang.String,
+    positionOrRange: TextRange,
+    preferences: js.UndefOr[scala.Nothing],
+    triggerReason: RefactorTriggerReason
+  ): js.Array[ApplicableRefactorInfo] = js.native
   def getApplicableRefactors(fileName: java.lang.String, positionOrRange: TextRange, preferences: UserPreferences): js.Array[ApplicableRefactorInfo] = js.native
+  def getApplicableRefactors(
+    fileName: java.lang.String,
+    positionOrRange: TextRange,
+    preferences: UserPreferences,
+    triggerReason: RefactorTriggerReason
+  ): js.Array[ApplicableRefactorInfo] = js.native
   
   def getBraceMatchingAtPosition(fileName: java.lang.String, position: Double): js.Array[TextSpan] = js.native
   
@@ -222,8 +248,19 @@ trait LanguageService extends js.Object {
   def getEmitOutput(fileName: java.lang.String, emitOnlyDtsFiles: Boolean): EmitOutput = js.native
   def getEmitOutput(fileName: java.lang.String, emitOnlyDtsFiles: Boolean, forceDtsEmit: Boolean): EmitOutput = js.native
   
+  /**
+    * Gets semantic highlights information for a particular file. Has two formats, an older
+    * version used by VS and a format used by VS Code.
+    *
+    * @param fileName The path to the file
+    * @param position A text span to return results within
+    * @param format Which format to use, defaults to "original"
+    * @returns a number array encoded as triples of [start, length, ClassificationType, ...].
+    */
   def getEncodedSemanticClassifications(fileName: java.lang.String, span: TextSpan): Classifications = js.native
+  def getEncodedSemanticClassifications(fileName: java.lang.String, span: TextSpan, format: SemanticClassificationFormat): Classifications = js.native
   
+  /** Encoded as triples of [start, length, ClassificationType]. */
   def getEncodedSyntacticClassifications(fileName: java.lang.String, span: TextSpan): Classifications = js.native
   
   def getFormattingEditsAfterKeystroke(fileName: java.lang.String, position: Double, key: java.lang.String, options: FormatCodeOptions): js.Array[TextChange] = js.native
@@ -308,6 +345,7 @@ trait LanguageService extends js.Object {
   
   /** @deprecated Use getEncodedSemanticClassifications instead. */
   def getSemanticClassifications(fileName: java.lang.String, span: TextSpan): js.Array[ClassifiedSpan] = js.native
+  def getSemanticClassifications(fileName: java.lang.String, span: TextSpan, format: SemanticClassificationFormat): js.Array[ClassifiedSpan | ClassifiedSpan2020] = js.native
   
   /**
     * Gets warnings or errors indicating type system issues in a given file.
@@ -344,6 +382,7 @@ trait LanguageService extends js.Object {
   
   /** @deprecated Use getEncodedSyntacticClassifications instead. */
   def getSyntacticClassifications(fileName: java.lang.String, span: TextSpan): js.Array[ClassifiedSpan] = js.native
+  def getSyntacticClassifications(fileName: java.lang.String, span: TextSpan, format: SemanticClassificationFormat): js.Array[ClassifiedSpan | ClassifiedSpan2020] = js.native
   
   /**
     * Gets errors indicating invalid syntax in a file.
@@ -382,4 +421,10 @@ trait LanguageService extends js.Object {
   var toLineColumnOffset: js.UndefOr[
     js.Function2[/* fileName */ java.lang.String, /* position */ Double, LineAndCharacter]
   ] = js.native
+  
+  def toggleLineComment(fileName: java.lang.String, textRange: TextRange): js.Array[TextChange] = js.native
+  
+  def toggleMultilineComment(fileName: java.lang.String, textRange: TextRange): js.Array[TextChange] = js.native
+  
+  def uncommentSelection(fileName: java.lang.String, textRange: TextRange): js.Array[TextChange] = js.native
 }

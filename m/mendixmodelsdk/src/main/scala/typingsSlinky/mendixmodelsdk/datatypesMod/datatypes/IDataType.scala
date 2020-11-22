@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   * Interfaces and instance classes for types from the Mendix sub meta model `DataTypes`.
   */
 /**
-  * See: {@link https://docs.mendix.com/refguide7/data-types relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/data-types relevant section in reference guide}
   *
   * In version 7.9.0: introduced
   */

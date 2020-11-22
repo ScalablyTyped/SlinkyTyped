@@ -22,8 +22,14 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antDesignProLayout.anon.DefaultOpenAll
 import typingsSlinky.antDesignProLayout.anon.MenuDataItemisUrlboolean
 import typingsSlinky.antDesignProLayout.anon.Pathname
+import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`additions removals`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`additions text`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`inline`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`removals additions`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`removals text`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`text additions`
+import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.`text removals`
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.additions
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.all
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.ascending
@@ -75,6 +81,7 @@ import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.vertical
 import typingsSlinky.antDesignProLayout.antDesignProLayoutStrings.yes
 import typingsSlinky.antDesignProLayout.baseMenuMod.BaseMenuProps
 import typingsSlinky.antDesignProLayout.defaultSettingsMod.ContentWidth
+import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.PrivateSiderMenuProps
 import typingsSlinky.antDesignProLayout.typingsMod.MenuDataItem
 import typingsSlinky.antDesignProLayout.typingsMod.MessageDescriptor
 import typingsSlinky.antDesignProLayout.typingsMod.Route
@@ -92,7 +99,7 @@ import typingsSlinky.rcMenu.interfaceMod.OpenAnimation
 import typingsSlinky.rcMenu.interfaceMod.RenderIconType
 import typingsSlinky.rcMenu.interfaceMod.SelectInfo
 import typingsSlinky.rcMenu.interfaceMod.TriggerSubMenuAction
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -230,7 +237,9 @@ object BaseMenu {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -320,6 +329,9 @@ object BaseMenu {
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def defaultCollapsed(value: Boolean): this.type = set("defaultCollapsed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def defaultMotions(value: PartialkeyinMenuModeother): this.type = set("defaultMotions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -381,6 +393,9 @@ object BaseMenu {
     
     @scala.inline
     def headerHeight(value: Double): this.type = set("headerHeight", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def headerTheme(value: MenuTheme): this.type = set("headerTheme", value.asInstanceOf[js.Any])
     
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -477,7 +492,7 @@ object BaseMenu {
     def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def motion(value: MotionType): this.type = set("motion", value.asInstanceOf[js.Any])
+    def motion(value: CSSMotionProps): this.type = set("motion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
@@ -841,7 +856,7 @@ object BaseMenu {
     def theme(value: MenuTheme): this.type = set("theme", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
+    def title(value: String | `false`): this.type = set("title", value.asInstanceOf[js.Any])
     
     @scala.inline
     def translate(value: yes | no): this.type = set("translate", value.asInstanceOf[js.Any])
@@ -859,7 +874,11 @@ object BaseMenu {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: BaseMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: BaseMenuProps with PrivateSiderMenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make(companion: BaseMenu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  def apply(matchMenuKeys: js.Array[String]): Builder = {
+    val __props = js.Dynamic.literal(matchMenuKeys = matchMenuKeys.asInstanceOf[js.Any])
+    new Builder(js.Array(this.component, __props.asInstanceOf[BaseMenuProps with PrivateSiderMenuProps]))
+  }
 }

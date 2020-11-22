@@ -8,6 +8,21 @@ package object mod {
   
   type ConfigType = java.lang.String | scala.Double | js.Date | typingsSlinky.dayjs.mod.Dayjs
   
+  type MonthNames = js.Tuple12[
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String
+  ]
+  
   type OptionType = typingsSlinky.dayjs.anon.Format | java.lang.String | js.Array[java.lang.String]
   
   type PluginFunc[T] = js.Function3[
@@ -18,5 +33,15 @@ package object mod {
     ], 
     /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof dayjs */ /* d */ js.Any, 
     scala.Unit
+  ]
+  
+  type WeekdayNames = js.Tuple7[
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String, 
+    java.lang.String
   ]
 }

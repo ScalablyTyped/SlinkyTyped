@@ -14,9 +14,9 @@ class ExtensionRangeOptions_ () extends Message {
   def addUninterpretedOption(value: UninterpretedOption): UninterpretedOption = js.native
   def addUninterpretedOption(value: UninterpretedOption, index: Double): UninterpretedOption = js.native
   
-  def clearUninterpretedOptionList(): Unit = js.native
+  def clearUninterpretedOptionList(): ExtensionRangeOptions = js.native
   
   def getUninterpretedOptionList(): js.Array[UninterpretedOption] = js.native
   
-  def setUninterpretedOptionList(value: js.Array[UninterpretedOption]): Unit = js.native
+  def setUninterpretedOptionList(value: js.Array[UninterpretedOption]): ExtensionRangeOptions = js.native
 }

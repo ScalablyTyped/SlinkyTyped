@@ -36,9 +36,15 @@ trait ISliderBaseProps
   
   /**
     * Increment between successive labels. Must be greater than zero.
-    * @default 1
+    * @default inferred (if labelStepSize is undefined)
     */
   var labelStepSize: js.UndefOr[Double] = js.native
+  
+  /**
+    * Array of specific values for the label placement. This prop is mutually exclusive with
+    * `labelStepSize`.
+    */
+  var labelValues: js.UndefOr[js.Array[Double]] = js.native
   
   /**
     * Maximum value of the slider.
@@ -120,6 +126,15 @@ object ISliderBaseProps {
     
     @scala.inline
     def deleteLabelStepSize: Self = this.set("labelStepSize", js.undefined)
+    
+    @scala.inline
+    def setLabelValuesVarargs(value: Double*): Self = this.set("labelValues", js.Array(value :_*))
+    
+    @scala.inline
+    def setLabelValues(value: js.Array[Double]): Self = this.set("labelValues", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLabelValues: Self = this.set("labelValues", js.undefined)
     
     @scala.inline
     def setMax(value: Double): Self = this.set("max", value.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.importmappingsMod.importmappings.IImportMapping
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -8,20 +9,21 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.ObjectHandlingBackupEnum
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.ImportMappingCall")
 @js.native
-class ImportMappingCall protected () extends Element {
+class ImportMappingCall protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -52,9 +54,6 @@ class ImportMappingCall protected () extends Element {
   def mappingQualifiedName: String | Null = js.native
   
   def mapping_=(newValue: IImportMapping | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FImportMappingCall: IModel = js.native
   
   /**
     * In version 7.17.0: introduced

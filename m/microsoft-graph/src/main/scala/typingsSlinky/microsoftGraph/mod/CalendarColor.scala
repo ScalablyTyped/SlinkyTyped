@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.lightBlue
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.lightGreen
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.auto
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.lightOrange
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.lightGray
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.lightYellow
@@ -15,7 +16,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.lightBrown
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.lightRed
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.maxColor
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.auto
 */
 trait CalendarColor extends js.Object
 object CalendarColor {

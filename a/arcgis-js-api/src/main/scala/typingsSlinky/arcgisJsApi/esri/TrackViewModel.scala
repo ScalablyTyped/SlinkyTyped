@@ -26,8 +26,6 @@ trait TrackViewModel
     * When executed, [tracking](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Track-TrackViewModel.html#tracking) starts at the user's location.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Track-TrackViewModel.html#start)
-    *
-    *
     */
   def start(): Unit = js.native
   
@@ -35,8 +33,6 @@ trait TrackViewModel
     * The current state of the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Track-TrackViewModel.html#state)
-    *
-    * @default disabled
     */
   val state: disabled | ready | typingsSlinky.arcgisJsApi.arcgisJsApiStrings.tracking | waiting = js.native
   
@@ -44,8 +40,6 @@ trait TrackViewModel
     * Stops tracking the user's location when executed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Track-TrackViewModel.html#stop)
-    *
-    *
     */
   def stop(): Unit = js.native
   
@@ -53,8 +47,6 @@ trait TrackViewModel
     * Indicates whether new positions are being watched.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Track-TrackViewModel.html#tracking)
-    *
-    * @default false
     */
   val tracking: Boolean = js.native
 }

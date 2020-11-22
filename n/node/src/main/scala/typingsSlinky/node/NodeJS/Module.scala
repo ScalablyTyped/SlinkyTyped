@@ -17,7 +17,8 @@ trait Module extends js.Object {
   
   var loaded: Boolean = js.native
   
-  var parent: Module | Null = js.native
+  /** @deprecated since 14.6.0 Please use `require.main` and `module.children` instead. */
+  var parent: js.UndefOr[Module | Null] = js.native
   
   /**
     * @since 11.14.0
@@ -28,7 +29,6 @@ trait Module extends js.Object {
   
   var paths: js.Array[String] = js.native
   
-  /* tslint:disable-next-line:callable-types */
   def require(id: String): js.Any = js.native
   @JSName("require")
   var require_Original: Require = js.native

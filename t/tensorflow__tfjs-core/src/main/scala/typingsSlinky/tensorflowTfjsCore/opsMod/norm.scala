@@ -1,9 +1,9 @@
 package typingsSlinky.tensorflowTfjsCore.opsMod
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.euclidean
 import typingsSlinky.tensorflowTfjsCore.tensorflowTfjsCoreStrings.fro
 import scala.scalajs.js

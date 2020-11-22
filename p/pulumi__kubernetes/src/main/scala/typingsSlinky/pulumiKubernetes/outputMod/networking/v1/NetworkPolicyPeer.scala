@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * NetworkPolicyPeer describes a peer to allow traffic from. Only certain combinations of fields are allowed
+  * NetworkPolicyPeer describes a peer to allow traffic to/from. Only certain combinations of fields are allowed
   */
 @js.native
 trait NetworkPolicyPeer extends js.Object {

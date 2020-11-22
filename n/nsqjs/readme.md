@@ -1,7 +1,7 @@
 
 # Scala.js typings for nsqjs
 
-Typings are for version 0.9
+Typings are for version 0.12
 
 ## Library description:
 NodeJS client for NSQ

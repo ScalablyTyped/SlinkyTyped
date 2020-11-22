@@ -28,7 +28,7 @@ trait GetUsageForecastRequest extends js.Object {
   var PredictionIntervalLevel: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.PredictionIntervalLevel] = js.native
   
   /**
-    * The start and end dates of the period that you want to retrieve usage forecast for. The start date is inclusive, but the end date is exclusive. For example, if start is 2017-01-01 and end is 2017-05-01, then the cost and usage data is retrieved from 2017-01-01 up to and including 2017-04-30 but not including 2017-05-01.
+    * The start and end dates of the period that you want to retrieve usage forecast for. The start date is inclusive, but the end date is exclusive. For example, if start is 2017-01-01 and end is 2017-05-01, then the cost and usage data is retrieved from 2017-01-01 up to and including 2017-04-30 but not including 2017-05-01. The start date must be equal to or later than the current date to avoid a validation error.
     */
   var TimePeriod: DateInterval = js.native
 }

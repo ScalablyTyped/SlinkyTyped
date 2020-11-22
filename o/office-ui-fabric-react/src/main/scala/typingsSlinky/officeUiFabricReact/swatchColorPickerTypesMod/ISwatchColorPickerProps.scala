@@ -1,5 +1,7 @@
 package typingsSlinky.officeUiFabricReact.swatchColorPickerTypesMod
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorCellProps
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorPickerGridCellStyleProps
 import typingsSlinky.officeUiFabricReact.colorPickerGridCellTypesMod.IColorPickerGridCellStyles
@@ -7,7 +9,7 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.circle
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.square
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.uifabricUtilities.irenderfunctionMod.IRenderFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -138,6 +140,11 @@ trait ISwatchColorPickerProps extends js.Object {
     * (e.g. the user executed the currently selected cell to unselect it)
     */
   var onColorChanged: js.UndefOr[js.Function2[/* id */ js.UndefOr[String], /* color */ js.UndefOr[String], Unit]] = js.native
+  
+  /**
+    * Custom render function for the color cell
+    */
+  var onRenderColorCell: js.UndefOr[IRenderFunction[IColorCellProps]] = js.native
   
   /**
     * @deprecated Use `ariaPosInSet`
@@ -313,6 +320,14 @@ object ISwatchColorPickerProps {
     
     @scala.inline
     def deleteOnColorChanged: Self = this.set("onColorChanged", js.undefined)
+    
+    @scala.inline
+    def setOnRenderColorCell(
+      value: (/* props */ js.UndefOr[IColorCellProps], /* defaultRender */ js.UndefOr[js.Function1[/* props */ js.UndefOr[IColorCellProps], ReactElement | Null]]) => ReactElement | Null
+    ): Self = this.set("onRenderColorCell", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteOnRenderColorCell: Self = this.set("onRenderColorCell", js.undefined)
     
     @scala.inline
     def setPositionInSet(value: Double): Self = this.set("positionInSet", value.asInstanceOf[js.Any])

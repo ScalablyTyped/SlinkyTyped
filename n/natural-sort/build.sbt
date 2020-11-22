@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "natural-sort"
-version := "0.0-unknown-dt-20200515Z-13d878"
+version := "0.0-unknown-dt-20201002Z-13d878"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

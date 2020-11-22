@@ -49,17 +49,11 @@ trait AddressData extends js.Object {
   
   var noSelected: Y | N = js.native
   
-  var postcode: String = js.native
-  
-  var postcode1: String = js.native
-  
-  var postcode2: String = js.native
-  
-  var postcodeSeq: String = js.native
-  
   var query: String = js.native
   
   var roadAddress: String = js.native
+  
+  var roadAddressEnglish: String = js.native
   
   var roadname: String = js.native
   
@@ -99,12 +93,9 @@ object AddressData {
     jibunAddress: String,
     jibunAddressEnglish: String,
     noSelected: Y | N,
-    postcode: String,
-    postcode1: String,
-    postcode2: String,
-    postcodeSeq: String,
     query: String,
     roadAddress: String,
+    roadAddressEnglish: String,
     roadname: String,
     roadnameCode: String,
     sido: String,
@@ -114,7 +105,7 @@ object AddressData {
     userSelectedType: R | J,
     zonecode: String
   ): AddressData = {
-    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], addressEnglish = addressEnglish.asInstanceOf[js.Any], addressType = addressType.asInstanceOf[js.Any], apartment = apartment.asInstanceOf[js.Any], autoJibunAddress = autoJibunAddress.asInstanceOf[js.Any], autoJibunAddressEnglish = autoJibunAddressEnglish.asInstanceOf[js.Any], autoRoadAddress = autoRoadAddress.asInstanceOf[js.Any], autoRoadAddressEnglish = autoRoadAddressEnglish.asInstanceOf[js.Any], bcode = bcode.asInstanceOf[js.Any], bname = bname.asInstanceOf[js.Any], bname1 = bname1.asInstanceOf[js.Any], bname2 = bname2.asInstanceOf[js.Any], buildingCode = buildingCode.asInstanceOf[js.Any], buildingName = buildingName.asInstanceOf[js.Any], hname = hname.asInstanceOf[js.Any], jibunAddress = jibunAddress.asInstanceOf[js.Any], jibunAddressEnglish = jibunAddressEnglish.asInstanceOf[js.Any], noSelected = noSelected.asInstanceOf[js.Any], postcode = postcode.asInstanceOf[js.Any], postcode1 = postcode1.asInstanceOf[js.Any], postcode2 = postcode2.asInstanceOf[js.Any], postcodeSeq = postcodeSeq.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any], roadAddress = roadAddress.asInstanceOf[js.Any], roadname = roadname.asInstanceOf[js.Any], roadnameCode = roadnameCode.asInstanceOf[js.Any], sido = sido.asInstanceOf[js.Any], sigungu = sigungu.asInstanceOf[js.Any], sigunguCode = sigunguCode.asInstanceOf[js.Any], userLanguageType = userLanguageType.asInstanceOf[js.Any], userSelectedType = userSelectedType.asInstanceOf[js.Any], zonecode = zonecode.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(address = address.asInstanceOf[js.Any], addressEnglish = addressEnglish.asInstanceOf[js.Any], addressType = addressType.asInstanceOf[js.Any], apartment = apartment.asInstanceOf[js.Any], autoJibunAddress = autoJibunAddress.asInstanceOf[js.Any], autoJibunAddressEnglish = autoJibunAddressEnglish.asInstanceOf[js.Any], autoRoadAddress = autoRoadAddress.asInstanceOf[js.Any], autoRoadAddressEnglish = autoRoadAddressEnglish.asInstanceOf[js.Any], bcode = bcode.asInstanceOf[js.Any], bname = bname.asInstanceOf[js.Any], bname1 = bname1.asInstanceOf[js.Any], bname2 = bname2.asInstanceOf[js.Any], buildingCode = buildingCode.asInstanceOf[js.Any], buildingName = buildingName.asInstanceOf[js.Any], hname = hname.asInstanceOf[js.Any], jibunAddress = jibunAddress.asInstanceOf[js.Any], jibunAddressEnglish = jibunAddressEnglish.asInstanceOf[js.Any], noSelected = noSelected.asInstanceOf[js.Any], query = query.asInstanceOf[js.Any], roadAddress = roadAddress.asInstanceOf[js.Any], roadAddressEnglish = roadAddressEnglish.asInstanceOf[js.Any], roadname = roadname.asInstanceOf[js.Any], roadnameCode = roadnameCode.asInstanceOf[js.Any], sido = sido.asInstanceOf[js.Any], sigungu = sigungu.asInstanceOf[js.Any], sigunguCode = sigunguCode.asInstanceOf[js.Any], userLanguageType = userLanguageType.asInstanceOf[js.Any], userSelectedType = userSelectedType.asInstanceOf[js.Any], zonecode = zonecode.asInstanceOf[js.Any])
     __obj.asInstanceOf[AddressData]
   }
   
@@ -188,22 +179,13 @@ object AddressData {
     def setNoSelected(value: Y | N): Self = this.set("noSelected", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPostcode(value: String): Self = this.set("postcode", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPostcode1(value: String): Self = this.set("postcode1", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPostcode2(value: String): Self = this.set("postcode2", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setPostcodeSeq(value: String): Self = this.set("postcodeSeq", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setQuery(value: String): Self = this.set("query", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRoadAddress(value: String): Self = this.set("roadAddress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRoadAddressEnglish(value: String): Self = this.set("roadAddressEnglish", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRoadname(value: String): Self = this.set("roadname", value.asInstanceOf[js.Any])

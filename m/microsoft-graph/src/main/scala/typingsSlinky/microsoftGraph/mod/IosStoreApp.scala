@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IosStoreApp extends MobileApp {
   
   // The Apple App Store URL
-  var appStoreUrl: js.UndefOr[String] = js.native
+  var appStoreUrl: js.UndefOr[NullableOption[String]] = js.native
   
   // The iOS architecture for which this app can run on.
   var applicableDeviceType: js.UndefOr[IosDeviceType] = js.native
   
   // The Identity Name.
-  var bundleId: js.UndefOr[String] = js.native
+  var bundleId: js.UndefOr[NullableOption[String]] = js.native
   
   // The value for the minimum applicable operating system.
-  var minimumSupportedOperatingSystem: js.UndefOr[IosMinimumOperatingSystem] = js.native
+  var minimumSupportedOperatingSystem: js.UndefOr[NullableOption[IosMinimumOperatingSystem]] = js.native
 }
 object IosStoreApp {
   
@@ -43,10 +43,13 @@ object IosStoreApp {
     }
     
     @scala.inline
-    def setAppStoreUrl(value: String): Self = this.set("appStoreUrl", value.asInstanceOf[js.Any])
+    def setAppStoreUrl(value: NullableOption[String]): Self = this.set("appStoreUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAppStoreUrl: Self = this.set("appStoreUrl", js.undefined)
+    
+    @scala.inline
+    def setAppStoreUrlNull: Self = this.set("appStoreUrl", null)
     
     @scala.inline
     def setApplicableDeviceType(value: IosDeviceType): Self = this.set("applicableDeviceType", value.asInstanceOf[js.Any])
@@ -55,15 +58,21 @@ object IosStoreApp {
     def deleteApplicableDeviceType: Self = this.set("applicableDeviceType", js.undefined)
     
     @scala.inline
-    def setBundleId(value: String): Self = this.set("bundleId", value.asInstanceOf[js.Any])
+    def setBundleId(value: NullableOption[String]): Self = this.set("bundleId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBundleId: Self = this.set("bundleId", js.undefined)
     
     @scala.inline
-    def setMinimumSupportedOperatingSystem(value: IosMinimumOperatingSystem): Self = this.set("minimumSupportedOperatingSystem", value.asInstanceOf[js.Any])
+    def setBundleIdNull: Self = this.set("bundleId", null)
+    
+    @scala.inline
+    def setMinimumSupportedOperatingSystem(value: NullableOption[IosMinimumOperatingSystem]): Self = this.set("minimumSupportedOperatingSystem", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumSupportedOperatingSystem: Self = this.set("minimumSupportedOperatingSystem", js.undefined)
+    
+    @scala.inline
+    def setMinimumSupportedOperatingSystemNull: Self = this.set("minimumSupportedOperatingSystem", null)
   }
 }

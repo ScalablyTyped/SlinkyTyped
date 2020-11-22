@@ -21,9 +21,15 @@ trait PBRClearCoatConfiguration extends js.Object {
   /** @hidden */
   def _markAllSubMeshesAsTexturesDirty(): Unit = js.native
   
+  var _remapF0OnInterfaceChange: js.Any = js.native
+  
   var _texture: js.Any = js.native
   
+  var _textureRoughness: js.Any = js.native
+  
   var _tintTexture: js.Any = js.native
+  
+  var _useRoughnessFromMainTexture: js.Any = js.native
   
   /**
     * Binds the material data.
@@ -34,6 +40,7 @@ trait PBRClearCoatConfiguration extends js.Object {
     * @param isFrozen defines wether the material is frozen or not.
     * @param invertNormalMapX If sets to true, x component of normal map value will be inverted (x = 1.0 - x).
     * @param invertNormalMapY If sets to true, y component of normal map value will be inverted (y = 1.0 - y).
+    * @param subMesh the submesh to bind data for
     */
   def bindForSubMesh(
     uniformBuffer: UniformBuffer,
@@ -43,6 +50,16 @@ trait PBRClearCoatConfiguration extends js.Object {
     isFrozen: Boolean,
     invertNormalMapX: Boolean,
     invertNormalMapY: Boolean
+  ): Unit = js.native
+  def bindForSubMesh(
+    uniformBuffer: UniformBuffer,
+    scene: Scene,
+    engine: Engine,
+    disableBumpMap: Boolean,
+    isFrozen: Boolean,
+    invertNormalMapX: Boolean,
+    invertNormalMapY: Boolean,
+    subMesh: SubMesh
   ): Unit = js.native
   
   /**
@@ -137,6 +154,11 @@ trait PBRClearCoatConfiguration extends js.Object {
   def prepareDefines(defines: IMaterialClearCoatDefines, scene: Scene): Unit = js.native
   
   /**
+    * Defines if the F0 value should be remapped to account for the interface change in the material.
+    */
+  var remapF0OnInterfaceChange: Boolean = js.native
+  
+  /**
     * Defines the clear coat layer roughness.
     */
   var roughness: Double = js.native
@@ -148,9 +170,17 @@ trait PBRClearCoatConfiguration extends js.Object {
   def serialize(): js.Any = js.native
   
   /**
-    * Stores the clear coat values in a texture.
+    * Stores the clear coat values in a texture (red channel is intensity and green channel is roughness)
+    * If useRoughnessFromMainTexture is false, the green channel of texture is not used and the green channel of textureRoughness is used instead
+    * if textureRoughness is not empty, else no texture roughness is used
     */
   var texture: Nullable[BaseTexture] = js.native
+  
+  /**
+    * Stores the clear coat roughness in a texture (green channel)
+    * Not used if useRoughnessFromMainTexture is true
+    */
+  var textureRoughness: Nullable[BaseTexture] = js.native
   
   /**
     * Defines the clear coat tint of the material.
@@ -177,4 +207,10 @@ trait PBRClearCoatConfiguration extends js.Object {
     * This is only use if tint is enabled
     */
   var tintThickness: Double = js.native
+  
+  /**
+    * Indicates that the green channel of the texture property will be used for roughness (default: true)
+    * If false, the green channel from textureRoughness is used for roughness
+    */
+  var useRoughnessFromMainTexture: Boolean = js.native
 }

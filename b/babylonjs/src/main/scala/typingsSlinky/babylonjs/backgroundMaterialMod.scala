@@ -1,6 +1,5 @@
 package typingsSlinky.babylonjs
 
-import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.colorCurvesMod.ColorCurves
 import typingsSlinky.babylonjs.imageProcessingConfigurationMod.ImageProcessingConfiguration
@@ -9,7 +8,6 @@ import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.pushMaterialMod.PushMaterial
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.shadowLightMod.IShadowLight
-import typingsSlinky.babylonjs.subMeshMod.SubMesh
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.typesMod.float
 import typingsSlinky.babylonjs.typesMod.int
@@ -114,6 +112,8 @@ object backgroundMaterialMod extends js.Object {
     var _shadowLevel: float = js.native
     
     var _shadowLights: Nullable[js.Array[IShadowLight]] = js.native
+    
+    var _shadowOnly: js.Any = js.native
     
     var _useRGBColor: Boolean = js.native
     
@@ -229,16 +229,6 @@ object backgroundMaterialMod extends js.Object {
     def imageProcessingConfiguration_=(value: Nullable[ImageProcessingConfiguration]): Unit = js.native
     
     /**
-      * Checks wether the material is ready to be rendered for a given mesh.
-      * @param mesh The mesh to render
-      * @param subMesh The submesh to check against
-      * @param useInstances Specify wether or not the material is used with instances
-      * @returns true if all the dependencies are ready (Textures, Effects...)
-      */
-    def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh): Boolean = js.native
-    def isReadyForSubMesh(mesh: AbstractMesh, subMesh: SubMesh, useInstances: Boolean): Boolean = js.native
-    
-    /**
       * Number of Simultaneous lights allowed on the material.
       */
     var maxSimultaneousLights: int = js.native
@@ -332,6 +322,11 @@ object backgroundMaterialMod extends js.Object {
       * All scene shadow lights will be included if null.
       */
     var shadowLights: Nullable[js.Array[IShadowLight]] = js.native
+    
+    /**
+      * Make the material only render shadows
+      */
+    var shadowOnly: Boolean = js.native
     
     /**
       * Due to a bug in iOS10, video tags (which are using the background material) are in BGR and not RGB.

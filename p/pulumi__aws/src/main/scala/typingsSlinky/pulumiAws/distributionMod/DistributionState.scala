@@ -8,6 +8,7 @@ import typingsSlinky.pulumiAws.inputMod.cloudfront.DistributionOrderedCacheBehav
 import typingsSlinky.pulumiAws.inputMod.cloudfront.DistributionOrigin
 import typingsSlinky.pulumiAws.inputMod.cloudfront.DistributionOriginGroup
 import typingsSlinky.pulumiAws.inputMod.cloudfront.DistributionRestrictions
+import typingsSlinky.pulumiAws.inputMod.cloudfront.DistributionTrustedSigner
 import typingsSlinky.pulumiAws.inputMod.cloudfront.DistributionViewerCertificate
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -16,13 +17,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait DistributionState extends js.Object {
-  
-  /**
-    * The key pair IDs that CloudFront is aware of for
-    * each trusted signer, if the distribution is set up to serve private content
-    * with signed URLs.
-    */
-  val activeTrustedSigners: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
     * Extra CNAMEs (alternate domain names), if any, for
@@ -170,6 +164,12 @@ trait DistributionState extends js.Object {
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
+    * List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
+    * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
+    */
+  val trustedSigners: js.UndefOr[Input[js.Array[Input[DistributionTrustedSigner]]]] = js.native
+  
+  /**
     * The SSL
     * configuration for this distribution (maximum
     * one).
@@ -184,11 +184,13 @@ trait DistributionState extends js.Object {
   val waitForDeployment: js.UndefOr[Input[Boolean]] = js.native
   
   /**
-    * If you're using AWS WAF to filter CloudFront
-    * requests, the Id of the AWS WAF web ACL that is associated with the
-    * distribution. The WAF Web ACL must exist in the WAF Global (CloudFront)
-    * region and the credentials configuring this argument must have
-    * `waf:GetWebACL` permissions assigned. If using WAFv2, provide the ARN of the web ACL.
+    * A unique identifier that specifies the AWS WAF web ACL,
+    * if any, to associate with this distribution.
+    * To specify a web ACL created using the latest version of AWS WAF (WAFv2), use the ACL ARN,
+    * for example `aws_wafv2_web_acl.example.arn`. To specify a web
+    * ACL created using AWS WAF Classic, use the ACL ID, for example `aws_waf_web_acl.example.id`.
+    * The WAF Web ACL must exist in the WAF Global (CloudFront) region and the
+    * credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
     */
   val webAclId: js.UndefOr[Input[String]] = js.native
 }
@@ -214,12 +216,6 @@ object DistributionState {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setActiveTrustedSigners(value: Input[StringDictionary[Input[String]]]): Self = this.set("activeTrustedSigners", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteActiveTrustedSigners: Self = this.set("activeTrustedSigners", js.undefined)
     
     @scala.inline
     def setAliasesVarargs(value: Input[String]*): Self = this.set("aliases", js.Array(value :_*))
@@ -379,6 +375,15 @@ object DistributionState {
     
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)
+    
+    @scala.inline
+    def setTrustedSignersVarargs(value: Input[DistributionTrustedSigner]*): Self = this.set("trustedSigners", js.Array(value :_*))
+    
+    @scala.inline
+    def setTrustedSigners(value: Input[js.Array[Input[DistributionTrustedSigner]]]): Self = this.set("trustedSigners", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTrustedSigners: Self = this.set("trustedSigners", js.undefined)
     
     @scala.inline
     def setViewerCertificate(value: Input[DistributionViewerCertificate]): Self = this.set("viewerCertificate", value.asInstanceOf[js.Any])

@@ -10,4 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object getInitialStateMod extends js.Object {
   
   def getInitialState(): IsSwiping = js.native
+  def getInitialState(options: js.Object): IsSwiping = js.native
 }

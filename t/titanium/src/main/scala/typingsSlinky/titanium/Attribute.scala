@@ -23,12 +23,12 @@ trait Attribute extends js.Object {
   /**
     * Attribute value.
     */
-  var value: Double = js.native
+  var value: js.Any = js.native
 }
 object Attribute {
   
   @scala.inline
-  def apply(range: js.Array[Double], `type`: Double, value: Double): Attribute = {
+  def apply(range: js.Array[Double], `type`: Double, value: js.Any): Attribute = {
     val __obj = js.Dynamic.literal(range = range.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[Attribute]
@@ -44,7 +44,7 @@ object Attribute {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -59,6 +59,6 @@ object Attribute {
     def setType(value: Double): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
   }
 }

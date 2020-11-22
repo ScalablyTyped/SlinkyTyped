@@ -12,13 +12,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartValueAxisConstantLinesLabel extends dxChartCommonAxisSettingsConstantLineStyleLabel {
   
-  /** @name dxChart.Options.valueAxis.constantLines.label.horizontalAlignment */
+  /**
+    * [descr:dxChart.Options.valueAxis.constantLines.label.horizontalAlignment]
+    */
   var horizontalAlignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name dxChart.Options.valueAxis.constantLines.label.text */
+  /**
+    * [descr:dxChart.Options.valueAxis.constantLines.label.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name dxChart.Options.valueAxis.constantLines.label.verticalAlignment */
+  /**
+    * [descr:dxChart.Options.valueAxis.constantLines.label.verticalAlignment]
+    */
   var verticalAlignment: js.UndefOr[bottom | center | top] = js.native
 }
 object dxChartValueAxisConstantLinesLabel {

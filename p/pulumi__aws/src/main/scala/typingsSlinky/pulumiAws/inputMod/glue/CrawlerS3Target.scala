@@ -9,6 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CrawlerS3Target extends js.Object {
   
   /**
+    * The name of the connection to use to connect to the JDBC target.
+    */
+  var connectionName: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * A list of glob patterns used to exclude from the crawl.
     */
   var exclusions: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
@@ -43,6 +48,12 @@ object CrawlerS3Target {
     
     @scala.inline
     def setPath(value: Input[String]): Self = this.set("path", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setConnectionName(value: Input[String]): Self = this.set("connectionName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConnectionName: Self = this.set("connectionName", js.undefined)
     
     @scala.inline
     def setExclusionsVarargs(value: Input[String]*): Self = this.set("exclusions", js.Array(value :_*))

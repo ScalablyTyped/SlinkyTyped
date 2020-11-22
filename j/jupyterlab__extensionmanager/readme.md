@@ -1,7 +1,7 @@
 
 # Scala.js typings for jupyterlab__extensionmanager
 
-Typings are for version 1.2.9
+Typings are for version 2.2.6
 
 ## Library description:
 JupyterLab - Extension Manager

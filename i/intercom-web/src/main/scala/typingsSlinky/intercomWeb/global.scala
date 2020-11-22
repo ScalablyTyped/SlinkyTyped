@@ -12,5 +12,5 @@ object global extends js.Object {
   
   var Intercom: IntercomStatic = js.native
   
-  var intercomSettings: IntercomSettings = js.native
+  var intercomSettings: js.UndefOr[IntercomSettings] = js.native
 }

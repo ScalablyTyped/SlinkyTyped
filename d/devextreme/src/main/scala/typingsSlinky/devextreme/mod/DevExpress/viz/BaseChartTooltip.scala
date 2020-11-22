@@ -9,25 +9,37 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseChart.Options.tooltip */
+/**
+  * [descr:BaseChart.Options.tooltip]
+  */
 @js.native
 trait BaseChartTooltip extends BaseWidgetTooltip {
   
-  /** @name BaseChart.Options.tooltip.argumentFormat */
+  /**
+    * [descr:BaseChart.Options.tooltip.argumentFormat]
+    */
   var argumentFormat: js.UndefOr[format] = js.native
   
-  /** @name BaseChart.Options.tooltip.contentTemplate */
+  /**
+    * [descr:BaseChart.Options.tooltip.contentTemplate]
+    */
   var contentTemplate: js.UndefOr[
     template | (js.Function2[/* pointInfo */ js.Any, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name BaseChart.Options.tooltip.customizeTooltip */
+  /**
+    * [descr:BaseChart.Options.tooltip.customizeTooltip]
+    */
   var customizeTooltip: js.UndefOr[js.Function1[/* pointInfo */ js.Any, _]] = js.native
   
-  /** @name BaseChart.Options.tooltip.interactive */
+  /**
+    * [descr:BaseChart.Options.tooltip.interactive]
+    */
   var interactive: js.UndefOr[Boolean] = js.native
   
-  /** @name BaseChart.Options.tooltip.shared */
+  /**
+    * [descr:BaseChart.Options.tooltip.shared]
+    */
   var shared: js.UndefOr[Boolean] = js.native
 }
 object BaseChartTooltip {

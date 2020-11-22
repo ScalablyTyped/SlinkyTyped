@@ -43,7 +43,7 @@ object mathPlaneMod extends js.Object {
     var d: Double = js.native
     
     /**
-      * Calcualtte the dot product between the point and the plane normal
+      * Compute the dot product between the point and the plane normal
       * @param point point to calculate the dot product with
       * @returns the dot product (float) of the point coordinates and the plane normal.
       */
@@ -60,10 +60,13 @@ object mathPlaneMod extends js.Object {
     def getHashCode(): Double = js.native
     
     /**
-      * Checks if the plane is facing a given direction
+      * Checks if the plane is facing a given direction (meaning if the plane's normal is pointing in the opposite direction of the given vector).
+      * Note that for this function to work as expected you should make sure that:
+      *   - direction and the plane normal are normalized
+      *   - epsilon is a number just bigger than -1, something like -0.99 for eg
       * @param direction the direction to check if the plane is facing
       * @param epsilon value the dot product is compared against (returns true if dot <= epsilon)
-      * @returns True is the vector "direction"  is the same side than the plane normal.
+      * @returns True if the plane is facing the given direction
       */
     def isFrontFacingTo(direction: DeepImmutable[Vector3], epsilon: Double): Boolean = js.native
     
@@ -119,7 +122,7 @@ object mathPlaneMod extends js.Object {
       * @returns a new Plane the normal vector to this plane at the given origin point.
       * Note : the vector "normal" is updated because normalized.
       */
-    def FromPositionAndNormal(origin: DeepImmutable[Vector3], normal: DeepImmutable[Vector3]): Plane = js.native
+    def FromPositionAndNormal(origin: DeepImmutable[Vector3], normal: Vector3): Plane = js.native
     
     /**
       * Calculates the distance from a plane and a point

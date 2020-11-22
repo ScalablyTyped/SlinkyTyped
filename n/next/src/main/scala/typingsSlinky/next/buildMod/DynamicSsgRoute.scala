@@ -12,15 +12,15 @@ trait DynamicSsgRoute extends js.Object {
   
   var dataRouteRegex: String = js.native
   
-  var fallback: String | `false` = js.native
+  var fallback: String | Null | `false` = js.native
   
   var routeRegex: String = js.native
 }
 object DynamicSsgRoute {
   
   @scala.inline
-  def apply(dataRoute: String, dataRouteRegex: String, fallback: String | `false`, routeRegex: String): DynamicSsgRoute = {
-    val __obj = js.Dynamic.literal(dataRoute = dataRoute.asInstanceOf[js.Any], dataRouteRegex = dataRouteRegex.asInstanceOf[js.Any], fallback = fallback.asInstanceOf[js.Any], routeRegex = routeRegex.asInstanceOf[js.Any])
+  def apply(dataRoute: String, dataRouteRegex: String, routeRegex: String): DynamicSsgRoute = {
+    val __obj = js.Dynamic.literal(dataRoute = dataRoute.asInstanceOf[js.Any], dataRouteRegex = dataRouteRegex.asInstanceOf[js.Any], routeRegex = routeRegex.asInstanceOf[js.Any])
     __obj.asInstanceOf[DynamicSsgRoute]
   }
   
@@ -46,9 +46,12 @@ object DynamicSsgRoute {
     def setDataRouteRegex(value: String): Self = this.set("dataRouteRegex", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setRouteRegex(value: String): Self = this.set("routeRegex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setFallback(value: String | `false`): Self = this.set("fallback", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRouteRegex(value: String): Self = this.set("routeRegex", value.asInstanceOf[js.Any])
+    def setFallbackNull: Self = this.set("fallback", null)
   }
 }

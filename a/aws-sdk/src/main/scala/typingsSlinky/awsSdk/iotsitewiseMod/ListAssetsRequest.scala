@@ -13,12 +13,12 @@ trait ListAssetsRequest extends js.Object {
   var assetModelId: js.UndefOr[ID] = js.native
   
   /**
-    * The filter for the requested list of assets. Choose one of the following options. Defaults to ALL.    ALL – The list includes all assets for a given asset model ID. The assetModelId parameter is required if you filter by ALL.    TOP_LEVEL – The list includes only top-level assets in the asset hierarchy tree.  
+    * The filter for the requested list of assets. Choose one of the following options:    ALL – The list includes all assets for a given asset model ID. The assetModelId parameter is required if you filter by ALL.    TOP_LEVEL – The list includes only top-level assets in the asset hierarchy tree.   Default: ALL 
     */
   var filter: js.UndefOr[ListAssetsFilter] = js.native
   
   /**
-    * The maximum number of results to be returned per paginated request.
+    * The maximum number of results to be returned per paginated request. Default: 50
     */
   var maxResults: js.UndefOr[MaxResults] = js.native
   

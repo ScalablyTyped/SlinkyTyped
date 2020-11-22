@@ -43,6 +43,11 @@ trait Cluster extends js.Object {
   var identity: js.UndefOr[Identity] = js.native
   
   /**
+    * Network configuration settings for your cluster.
+    */
+  var kubernetesNetworkConfig: js.UndefOr[KubernetesNetworkConfigResponse] = js.native
+  
+  /**
     * The logging configuration for your cluster.
     */
   var logging: js.UndefOr[Logging] = js.native
@@ -149,6 +154,12 @@ object Cluster {
     
     @scala.inline
     def deleteIdentity: Self = this.set("identity", js.undefined)
+    
+    @scala.inline
+    def setKubernetesNetworkConfig(value: KubernetesNetworkConfigResponse): Self = this.set("kubernetesNetworkConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKubernetesNetworkConfig: Self = this.set("kubernetesNetworkConfig", js.undefined)
     
     @scala.inline
     def setLogging(value: Logging): Self = this.set("logging", value.asInstanceOf[js.Any])

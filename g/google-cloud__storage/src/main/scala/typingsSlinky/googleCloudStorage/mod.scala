@@ -202,6 +202,8 @@ object mod extends js.Object {
     *     attempted before returning the error.
     * @property {Constructor} [promise] Custom promise module to use instead of
     *     native Promises.
+    * @property {string} [userAgent] The value to be prepended to the User-Agent
+    *     header in API requests.
     */
   /**
     * Constructs the Storage client.

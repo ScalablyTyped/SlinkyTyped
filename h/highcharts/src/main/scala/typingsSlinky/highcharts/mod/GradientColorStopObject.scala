@@ -10,6 +10,8 @@ trait GradientColorStopObject extends js.Object {
   var `0`: Double = js.native
   
   var `1`: ColorString = js.native
+  
+  var color: js.UndefOr[Color_] = js.native
 }
 object GradientColorStopObject {
   
@@ -41,5 +43,11 @@ object GradientColorStopObject {
     
     @scala.inline
     def set1(value: ColorString): Self = this.set("1", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setColor(value: Color_): Self = this.set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
   }
 }

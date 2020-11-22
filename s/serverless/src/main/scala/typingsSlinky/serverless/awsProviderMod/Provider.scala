@@ -27,7 +27,7 @@ trait Provider extends js.Object {
   
   var endpointType: js.UndefOr[regional | edge | `private`] = js.native
   
-  var environment: js.UndefOr[Environment] = js.native
+  var environment: js.UndefOr[Environment | String] = js.native
   
   var httpApi: js.UndefOr[HttpApi] = js.native
   
@@ -59,7 +59,7 @@ trait Provider extends js.Object {
   
   var rollbackConfiguration: js.UndefOr[RollbackConfiguration] = js.native
   
-  var runtime: String = js.native
+  var runtime: js.UndefOr[String] = js.native
   
   var stackName: js.UndefOr[String] = js.native
   
@@ -90,8 +90,8 @@ trait Provider extends js.Object {
 object Provider {
   
   @scala.inline
-  def apply(name: aws, runtime: String): Provider = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], runtime = runtime.asInstanceOf[js.Any])
+  def apply(name: aws): Provider = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Provider]
   }
   
@@ -112,9 +112,6 @@ object Provider {
     
     @scala.inline
     def setName(value: aws): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRuntime(value: String): Self = this.set("runtime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAlb(value: Alb): Self = this.set("alb", value.asInstanceOf[js.Any])
@@ -168,7 +165,7 @@ object Provider {
     def deleteEndpointType: Self = this.set("endpointType", js.undefined)
     
     @scala.inline
-    def setEnvironment(value: Environment): Self = this.set("environment", value.asInstanceOf[js.Any])
+    def setEnvironment(value: Environment | String): Self = this.set("environment", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEnvironment: Self = this.set("environment", js.undefined)
@@ -268,6 +265,12 @@ object Provider {
     
     @scala.inline
     def deleteRollbackConfiguration: Self = this.set("rollbackConfiguration", js.undefined)
+    
+    @scala.inline
+    def setRuntime(value: String): Self = this.set("runtime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRuntime: Self = this.set("runtime", js.undefined)
     
     @scala.inline
     def setStackName(value: String): Self = this.set("stackName", value.asInstanceOf[js.Any])

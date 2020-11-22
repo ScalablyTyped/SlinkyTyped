@@ -1,6 +1,6 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
-import typingsSlinky.devextreme.anon.`21`
+import typingsSlinky.devextreme.anon.`24`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,21 +8,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxLinearGaugeOptions extends BaseGaugeOptions[dxLinearGauge] {
   
-  /** @name dxLinearGauge.Options.geometry */
-  var geometry: js.UndefOr[`21`] = js.native
+  /**
+    * [descr:dxLinearGauge.Options.geometry]
+    */
+  var geometry: js.UndefOr[`24`] = js.native
   
-  /** @name dxLinearGauge.Options.rangeContainer */
+  /**
+    * [descr:dxLinearGauge.Options.rangeContainer]
+    */
   @JSName("rangeContainer")
   var rangeContainer_dxLinearGaugeOptions: js.UndefOr[dxLinearGaugeRangeContainer] = js.native
   
-  /** @name dxLinearGauge.Options.scale */
+  /**
+    * [descr:dxLinearGauge.Options.scale]
+    */
   @JSName("scale")
   var scale_dxLinearGaugeOptions: js.UndefOr[dxLinearGaugeScale] = js.native
   
-  /** @name dxLinearGauge.Options.subvalueIndicator */
+  /**
+    * [descr:dxLinearGauge.Options.subvalueIndicator]
+    */
   var subvalueIndicator: js.UndefOr[GaugeIndicator] = js.native
   
-  /** @name dxLinearGauge.Options.valueIndicator */
+  /**
+    * [descr:dxLinearGauge.Options.valueIndicator]
+    */
   var valueIndicator: js.UndefOr[GaugeIndicator] = js.native
 }
 object dxLinearGaugeOptions {
@@ -49,7 +59,7 @@ object dxLinearGaugeOptions {
     }
     
     @scala.inline
-    def setGeometry(value: `21`): Self = this.set("geometry", value.asInstanceOf[js.Any])
+    def setGeometry(value: `24`): Self = this.set("geometry", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGeometry: Self = this.set("geometry", js.undefined)

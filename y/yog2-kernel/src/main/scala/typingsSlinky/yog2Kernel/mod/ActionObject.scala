@@ -70,7 +70,7 @@ object ActionObject {
     
     @scala.inline
     def setCopy(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("copy", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -78,7 +78,7 @@ object ActionObject {
     
     @scala.inline
     def setDel(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("del", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -86,7 +86,7 @@ object ActionObject {
     
     @scala.inline
     def setDelete(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("delete", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -94,7 +94,7 @@ object ActionObject {
     
     @scala.inline
     def setGet(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("get", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -102,7 +102,7 @@ object ActionObject {
     
     @scala.inline
     def setHead(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("head", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -110,7 +110,7 @@ object ActionObject {
     
     @scala.inline
     def setLink(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("link", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -118,7 +118,7 @@ object ActionObject {
     
     @scala.inline
     def setLock(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("lock", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -126,7 +126,7 @@ object ActionObject {
     
     @scala.inline
     def setOptions(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("options", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -134,7 +134,7 @@ object ActionObject {
     
     @scala.inline
     def setPatch(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("patch", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -142,7 +142,7 @@ object ActionObject {
     
     @scala.inline
     def setPost(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("post", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -150,7 +150,7 @@ object ActionObject {
     
     @scala.inline
     def setPropfind(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("propfind", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -158,7 +158,7 @@ object ActionObject {
     
     @scala.inline
     def setPurge(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("purge", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -166,7 +166,7 @@ object ActionObject {
     
     @scala.inline
     def setPut(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("put", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -174,7 +174,7 @@ object ActionObject {
     
     @scala.inline
     def setUnlick(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("unlick", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -182,7 +182,7 @@ object ActionObject {
     
     @scala.inline
     def setUnlock(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("unlock", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -190,7 +190,7 @@ object ActionObject {
     
     @scala.inline
     def setView(
-      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ typingsSlinky.expressServeStaticCore.mod.Request[ParamsDictionary, _, _, Query], /* res */ typingsSlinky.expressServeStaticCore.mod.Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("view", js.Any.fromFunction3(value))
     
     @scala.inline

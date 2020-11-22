@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BuildingExplorerViewModel extends Accessor {
   
   /**
-    * A collection of layers of type [BuildingSceneLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html) that are added to the widget for exploration. The widget is only displayed when this property is set. In case of multiple layers, the widget will display and apply the filters on all layers.
+    * A collection of layers of type [BuildingSceneLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BuildingSceneLayer.html) that are added to the widget for exploration.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BuildingExplorer-BuildingExplorerViewModel.html#layers)
     */
@@ -35,17 +35,7 @@ trait BuildingExplorerViewModel extends Accessor {
   /**
     * The current state of the view model that can be used for rendering the UI of the widget.
     *
-    * Value | Description
-    * ------------|-------------
-    * disabled | widget is being created
-    * loading | layers and statistics are loading
-    * ready | widget is ready
-    * failed | widget failed to load data
-    *
-    *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-BuildingExplorer-BuildingExplorerViewModel.html#state)
-    *
-    * @default disabled
     */
   val state: disabled | loading | ready | failed = js.native
   

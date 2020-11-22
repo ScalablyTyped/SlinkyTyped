@@ -43,7 +43,7 @@ trait AffectedEntity extends js.Object {
   var statusCode: js.UndefOr[entityStatusCode] = js.native
   
   /**
-    * A map of entity tags attached to the affected entity.
+    * A map of entity tags attached to the affected entity.  Currently, the tags property isn't supported. 
     */
   var tags: js.UndefOr[tagSet] = js.native
 }

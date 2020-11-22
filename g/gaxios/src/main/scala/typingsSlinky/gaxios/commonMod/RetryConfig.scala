@@ -34,8 +34,7 @@ trait RetryConfig extends js.Object {
   var retry: js.UndefOr[Double] = js.native
   
   /**
-    * The amount of time to initially delay the retry.  Defaults to 100.
-    * @deprecated
+    * The amount of time to initially delay the retry, in ms.  Defaults to 100ms.
     */
   var retryDelay: js.UndefOr[Double] = js.native
   

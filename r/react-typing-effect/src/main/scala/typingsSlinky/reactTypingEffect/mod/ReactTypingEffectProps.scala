@@ -15,6 +15,8 @@ trait ReactTypingEffectProps extends js.Object {
   
   var eraseDelay: js.UndefOr[Double] = js.native
   
+  var eraseSpeed: js.UndefOr[Double] = js.native
+  
   var speed: js.UndefOr[Double] = js.native
   
   var staticText: js.UndefOr[String] = js.native
@@ -75,6 +77,12 @@ object ReactTypingEffectProps {
     
     @scala.inline
     def deleteEraseDelay: Self = this.set("eraseDelay", js.undefined)
+    
+    @scala.inline
+    def setEraseSpeed(value: Double): Self = this.set("eraseSpeed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEraseSpeed: Self = this.set("eraseSpeed", js.undefined)
     
     @scala.inline
     def setSpeed(value: Double): Self = this.set("speed", value.asInstanceOf[js.Any])

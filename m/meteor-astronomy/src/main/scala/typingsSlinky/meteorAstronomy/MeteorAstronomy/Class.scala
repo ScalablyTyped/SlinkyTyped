@@ -14,9 +14,9 @@ trait Class[T]
   extends Instantiable0[Model[T]]
      with Instantiable1[/* data */ Partial[T], Model[T]] {
   
-  def find(): Cursor[Model[T]] = js.native
-  def find(selector: js.UndefOr[MongoQuery[T]], options: FindOptions): Cursor[Model[T]] = js.native
-  def find(selector: MongoQuery[T]): Cursor[Model[T]] = js.native
+  def find(): Cursor[Model[T], Model[T]] = js.native
+  def find(selector: js.UndefOr[MongoQuery[T]], options: FindOptions): Cursor[Model[T], Model[T]] = js.native
+  def find(selector: MongoQuery[T]): Cursor[Model[T], Model[T]] = js.native
   
   def findOne(): Model[T] = js.native
   def findOne(selector: js.UndefOr[MongoQuery[T]], options: FindOneOptions): Model[T] = js.native

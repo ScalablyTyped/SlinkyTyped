@@ -75,10 +75,9 @@ trait ChromaStatic extends js.Object {
     * channel.
     */
   def average(colors: js.Array[String | Color]): Color = js.native
-  def average(
-    colors: js.Array[String | Color],
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def average(colors: js.Array[String | Color], colorSpace: js.UndefOr[scala.Nothing], weights: js.Array[Double]): Color = js.native
+  def average(colors: js.Array[String | Color], colorSpace: InterpolationMode): Color = js.native
+  def average(colors: js.Array[String | Color], colorSpace: InterpolationMode, weights: js.Array[Double]): Color = js.native
   
   /**
     * Returns a function that
@@ -247,61 +246,21 @@ trait ChromaStatic extends js.Object {
     * Alias for {@see mix}.
     */
   def interpolate(color1: String, color2: String): Color = js.native
-  def interpolate(
-    color1: String,
-    color2: String,
-    f: js.UndefOr[scala.Nothing],
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def interpolate(color1: String, color2: String, f: js.UndefOr[scala.Nothing], colorSpace: InterpolationMode): Color = js.native
   def interpolate(color1: String, color2: String, f: Double): Color = js.native
-  def interpolate(
-    color1: String,
-    color2: String,
-    f: Double,
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def interpolate(color1: String, color2: String, f: Double, colorSpace: InterpolationMode): Color = js.native
   def interpolate(color1: String, color2: Color): Color = js.native
-  def interpolate(
-    color1: String,
-    color2: Color,
-    f: js.UndefOr[scala.Nothing],
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def interpolate(color1: String, color2: Color, f: js.UndefOr[scala.Nothing], colorSpace: InterpolationMode): Color = js.native
   def interpolate(color1: String, color2: Color, f: Double): Color = js.native
-  def interpolate(
-    color1: String,
-    color2: Color,
-    f: Double,
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def interpolate(color1: String, color2: Color, f: Double, colorSpace: InterpolationMode): Color = js.native
   def interpolate(color1: Color, color2: String): Color = js.native
-  def interpolate(
-    color1: Color,
-    color2: String,
-    f: js.UndefOr[scala.Nothing],
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def interpolate(color1: Color, color2: String, f: js.UndefOr[scala.Nothing], colorSpace: InterpolationMode): Color = js.native
   def interpolate(color1: Color, color2: String, f: Double): Color = js.native
-  def interpolate(
-    color1: Color,
-    color2: String,
-    f: Double,
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def interpolate(color1: Color, color2: String, f: Double, colorSpace: InterpolationMode): Color = js.native
   def interpolate(color1: Color, color2: Color): Color = js.native
-  def interpolate(
-    color1: Color,
-    color2: Color,
-    f: js.UndefOr[scala.Nothing],
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def interpolate(color1: Color, color2: Color, f: js.UndefOr[scala.Nothing], colorSpace: InterpolationMode): Color = js.native
   def interpolate(color1: Color, color2: Color, f: Double): Color = js.native
-  def interpolate(
-    color1: Color,
-    color2: Color,
-    f: Double,
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def interpolate(color1: Color, color2: Color, f: Double, colorSpace: InterpolationMode): Color = js.native
   
   def lab(lightness: Double, a: Double, b: Double): Color = js.native
   def lab(lightness: Double, a: Double, b: Double, alpha: Double): Color = js.native
@@ -330,66 +289,26 @@ trait ChromaStatic extends js.Object {
   
   /**
     * Mixes two colors. The mix ratio is a value between 0 and 1.
-    * The color mixing produces different results based the color space used for interpolation.
+    * The color mixing produces different results based the color space used for interpolation. Defaults to LRGB.
     * @example chroma.mix('red', 'blue', 0.25) // => #bf0040
     * @example chroma.mix('red', 'blue', 0.5, 'hsl') // => #ff00ff
     */
   def mix(color1: String, color2: String): Color = js.native
-  def mix(
-    color1: String,
-    color2: String,
-    f: js.UndefOr[scala.Nothing],
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def mix(color1: String, color2: String, f: js.UndefOr[scala.Nothing], colorSpace: InterpolationMode): Color = js.native
   def mix(color1: String, color2: String, f: Double): Color = js.native
-  def mix(
-    color1: String,
-    color2: String,
-    f: Double,
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def mix(color1: String, color2: String, f: Double, colorSpace: InterpolationMode): Color = js.native
   def mix(color1: String, color2: Color): Color = js.native
-  def mix(
-    color1: String,
-    color2: Color,
-    f: js.UndefOr[scala.Nothing],
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def mix(color1: String, color2: Color, f: js.UndefOr[scala.Nothing], colorSpace: InterpolationMode): Color = js.native
   def mix(color1: String, color2: Color, f: Double): Color = js.native
-  def mix(
-    color1: String,
-    color2: Color,
-    f: Double,
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def mix(color1: String, color2: Color, f: Double, colorSpace: InterpolationMode): Color = js.native
   def mix(color1: Color, color2: String): Color = js.native
-  def mix(
-    color1: Color,
-    color2: String,
-    f: js.UndefOr[scala.Nothing],
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def mix(color1: Color, color2: String, f: js.UndefOr[scala.Nothing], colorSpace: InterpolationMode): Color = js.native
   def mix(color1: Color, color2: String, f: Double): Color = js.native
-  def mix(
-    color1: Color,
-    color2: String,
-    f: Double,
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def mix(color1: Color, color2: String, f: Double, colorSpace: InterpolationMode): Color = js.native
   def mix(color1: Color, color2: Color): Color = js.native
-  def mix(
-    color1: Color,
-    color2: Color,
-    f: js.UndefOr[scala.Nothing],
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def mix(color1: Color, color2: Color, f: js.UndefOr[scala.Nothing], colorSpace: InterpolationMode): Color = js.native
   def mix(color1: Color, color2: Color, f: Double): Color = js.native
-  def mix(
-    color1: Color,
-    color2: Color,
-    f: Double,
-    colorSpace: rgb | rgba | hsl | hsv | hsi | lab | lch | hcl | cmyk | gl
-  ): Color = js.native
+  def mix(color1: Color, color2: Color, f: Double, colorSpace: InterpolationMode): Color = js.native
   
   /**
     * Returns a random color.

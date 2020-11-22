@@ -1,6 +1,6 @@
 package typingsSlinky.firebase.anon
 
-import typingsSlinky.firebase.mod.auth.MultiFactorInfo
+import typingsSlinky.firebase.mod.firebase.auth.MultiFactorInfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

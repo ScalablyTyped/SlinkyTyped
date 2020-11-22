@@ -22,6 +22,14 @@ trait CultureInfo extends ClientObject {
   var context_CultureInfo: RequestContext = js.native
   
   /**
+    *
+    * Defines the culturally appropriate format of displaying date and time. This is based on current system culture settings.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  val datetimeFormat: DatetimeFormatInfo = js.native
+  
+  /**
     * Queues up a command to load the specified properties of the object. You must call `context.sync()` before reading the properties.
     *
     * @param options Provides options for which properties of the object to load.

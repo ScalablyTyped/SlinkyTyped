@@ -47,6 +47,8 @@ object NodeBuilderFlags extends js.Object {
   
   /* 536870912 */ val NoTypeReduction: typingsSlinky.typescript.mod.NodeBuilderFlags.NoTypeReduction with Double = js.native
   
+  /* 1073741824 */ val NoUndefinedOptionalParameterType: typingsSlinky.typescript.mod.NodeBuilderFlags.NoUndefinedOptionalParameterType with Double = js.native
+  
   /* 0 */ val None: typingsSlinky.typescript.mod.NodeBuilderFlags.None with Double = js.native
   
   /* 8192 */ val OmitParameterModifiers: typingsSlinky.typescript.mod.NodeBuilderFlags.OmitParameterModifiers with Double = js.native

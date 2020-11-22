@@ -17,9 +17,6 @@ object ^ extends js.Object {
     */
   var Epsilon: Double = js.native
   
-  @JSName("_IDoNeedToBeInTheBuild")
-  var IDoNeedToBeInTheBuild: Double = js.native
-  
   @JSName("_forceSceneHelpersToBundle")
   var forceSceneHelpersToBundle: Boolean = js.native
   

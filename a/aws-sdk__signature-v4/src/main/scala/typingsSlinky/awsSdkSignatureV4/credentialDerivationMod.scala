@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/signature-v4/build/credentialDerivation", JSImport.Namespace)
+@JSImport("@aws-sdk/signature-v4/dist/cjs/credentialDerivation", JSImport.Namespace)
 @js.native
 object credentialDerivationMod extends js.Object {
   

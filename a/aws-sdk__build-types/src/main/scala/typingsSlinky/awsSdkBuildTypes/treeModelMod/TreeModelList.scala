@@ -1,26 +1,22 @@
 package typingsSlinky.awsSdkBuildTypes.treeModelMod
 
-import typingsSlinky.awsSdkTypes.awsSdkTypesStrings.list
-import typingsSlinky.awsSdkTypes.protocolMod.List
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify List * / any */ @js.native
 trait TreeModelList
-  extends List
-     with Documented
+  extends Documented
      with Named {
   
-  @JSName("member")
-  var member_TreeModelList: TreeModelMember = js.native
+  var member: TreeModelMember = js.native
 }
 object TreeModelList {
   
   @scala.inline
-  def apply(documentation: String, member: TreeModelMember, name: String, `type`: list): TreeModelList = {
+  def apply(documentation: String, member: TreeModelMember, name: String): TreeModelList = {
     val __obj = js.Dynamic.literal(documentation = documentation.asInstanceOf[js.Any], member = member.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TreeModelList]
   }
   

@@ -30,7 +30,7 @@ class Policy protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
-    * The name of the policy.
+    * The name of the policy. Must be between 1 and 255 characters in length.
     */
   val name: Output_[String] = js.native
   

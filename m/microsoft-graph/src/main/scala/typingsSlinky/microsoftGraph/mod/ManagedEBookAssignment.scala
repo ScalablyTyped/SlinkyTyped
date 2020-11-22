@@ -11,7 +11,7 @@ trait ManagedEBookAssignment extends Entity {
   var installIntent: js.UndefOr[InstallIntent] = js.native
   
   // The assignment target for eBook.
-  var target: js.UndefOr[DeviceAndAppManagementAssignmentTarget] = js.native
+  var target: js.UndefOr[NullableOption[DeviceAndAppManagementAssignmentTarget]] = js.native
 }
 object ManagedEBookAssignment {
   
@@ -43,9 +43,12 @@ object ManagedEBookAssignment {
     def deleteInstallIntent: Self = this.set("installIntent", js.undefined)
     
     @scala.inline
-    def setTarget(value: DeviceAndAppManagementAssignmentTarget): Self = this.set("target", value.asInstanceOf[js.Any])
+    def setTarget(value: NullableOption[DeviceAndAppManagementAssignmentTarget]): Self = this.set("target", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTarget: Self = this.set("target", js.undefined)
+    
+    @scala.inline
+    def setTargetNull: Self = this.set("target", null)
   }
 }

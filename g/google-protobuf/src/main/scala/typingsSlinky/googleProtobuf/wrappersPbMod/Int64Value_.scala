@@ -11,5 +11,5 @@ class Int64Value_ () extends Message {
   
   def getValue(): Double = js.native
   
-  def setValue(value: Double): Unit = js.native
+  def setValue(value: Double): Int64Value = js.native
 }

@@ -23,12 +23,12 @@ trait VCpuInfo extends js.Object {
   var DefaultVCpus: js.UndefOr[VCpuCount] = js.native
   
   /**
-    * List of the valid number of cores that can be configured for the instance type.
+    * The valid number of cores that can be configured for the instance type.
     */
   var ValidCores: js.UndefOr[CoreCountList] = js.native
   
   /**
-    * List of the valid number of threads per core that can be configured for the instance type. 
+    * The valid number of threads per core that can be configured for the instance type. 
     */
   var ValidThreadsPerCore: js.UndefOr[ThreadsPerCoreList] = js.native
 }

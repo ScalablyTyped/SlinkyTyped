@@ -15,13 +15,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.devextreme.mod.DevExpress.ui.DataExpressionMixinOptions because var conflicts: value. Inlined dataSource, displayExpr, itemTemplate, items, valueExpr */ @js.native
 trait dxRadioGroupOptions extends EditorOptions[dxRadioGroup] {
   
-  /** @name DataExpressionMixin.Options.dataSource */
+  /**
+    * [descr:DataExpressionMixin.Options.dataSource]
+    */
   var dataSource: js.UndefOr[String | (js.Array[CollectionWidgetItem | _]) | DataSource | DataSourceOptions] = js.native
   
-  /** @name DataExpressionMixin.Options.displayExpr */
+  /**
+    * [descr:DataExpressionMixin.Options.displayExpr]
+    */
   var displayExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String])] = js.native
   
-  /** @name DataExpressionMixin.Options.itemTemplate */
+  /**
+    * [descr:DataExpressionMixin.Options.itemTemplate]
+    */
   var itemTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* itemData */ js.Any, 
@@ -31,16 +37,24 @@ trait dxRadioGroupOptions extends EditorOptions[dxRadioGroup] {
     ])
   ] = js.native
   
-  /** @name DataExpressionMixin.Options.items */
+  /**
+    * [descr:DataExpressionMixin.Options.items]
+    */
   var items: js.UndefOr[js.Array[CollectionWidgetItem | _]] = js.native
   
-  /** @name dxRadioGroup.Options.layout */
+  /**
+    * [descr:dxRadioGroup.Options.layout]
+    */
   var layout: js.UndefOr[horizontal | vertical] = js.native
   
-  /** @name dxRadioGroup.Options.name */
+  /**
+    * [descr:dxRadioGroup.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name DataExpressionMixin.Options.valueExpr */
+  /**
+    * [descr:DataExpressionMixin.Options.valueExpr]
+    */
   var valueExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String | Double | Boolean])] = js.native
 }
 object dxRadioGroupOptions {

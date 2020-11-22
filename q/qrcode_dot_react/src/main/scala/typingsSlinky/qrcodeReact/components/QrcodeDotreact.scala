@@ -25,10 +25,15 @@ import typingsSlinky.qrcodeReact.qrcodeReactStrings.L
 import typingsSlinky.qrcodeReact.qrcodeReactStrings.M
 import typingsSlinky.qrcodeReact.qrcodeReactStrings.Q
 import typingsSlinky.qrcodeReact.qrcodeReactStrings._empty
+import typingsSlinky.qrcodeReact.qrcodeReactStrings.`additions removals`
 import typingsSlinky.qrcodeReact.qrcodeReactStrings.`additions text`
 import typingsSlinky.qrcodeReact.qrcodeReactStrings.`after-edge`
 import typingsSlinky.qrcodeReact.qrcodeReactStrings.`before-edge`
 import typingsSlinky.qrcodeReact.qrcodeReactStrings.`inline`
+import typingsSlinky.qrcodeReact.qrcodeReactStrings.`removals additions`
+import typingsSlinky.qrcodeReact.qrcodeReactStrings.`removals text`
+import typingsSlinky.qrcodeReact.qrcodeReactStrings.`text additions`
+import typingsSlinky.qrcodeReact.qrcodeReactStrings.`text removals`
 import typingsSlinky.qrcodeReact.qrcodeReactStrings.`text-after-edge`
 import typingsSlinky.qrcodeReact.qrcodeReactStrings.`text-before-edge`
 import typingsSlinky.qrcodeReact.qrcodeReactStrings.`use-credentials`
@@ -234,7 +239,9 @@ object QrcodeDotreact {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -821,7 +828,9 @@ object QrcodeDotreact {
       def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
       
       @scala.inline
-      def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+      def `aria-relevant`(
+        value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+      ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
       
       @scala.inline
       def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

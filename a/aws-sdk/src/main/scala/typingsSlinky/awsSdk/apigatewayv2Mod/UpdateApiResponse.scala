@@ -13,6 +13,11 @@ trait UpdateApiResponse extends js.Object {
   var ApiEndpoint: js.UndefOr[string] = js.native
   
   /**
+    * Specifies whether an API is managed by API Gateway. You can't update or delete a managed API by using API Gateway. A managed API can be deleted only through the tooling or service that created it.
+    */
+  var ApiGatewayManaged: js.UndefOr[boolean] = js.native
+  
+  /**
     * The API ID.
     */
   var ApiId: js.UndefOr[Id] = js.native
@@ -36,6 +41,11 @@ trait UpdateApiResponse extends js.Object {
     * The description of the API.
     */
   var Description: js.UndefOr[StringWithLengthBetween0And1024] = js.native
+  
+  /**
+    * Specifies whether clients can invoke your API by using the default execute-api endpoint. By default, clients can invoke your API with the default https://{api_id}.execute-api.{region}.amazonaws.com endpoint. To require that clients use a custom domain name to invoke your API, disable the default endpoint.
+    */
+  var DisableExecuteApiEndpoint: js.UndefOr[boolean] = js.native
   
   /**
     * Avoid validating models when creating a deployment. Supported only for WebSocket APIs.
@@ -107,6 +117,12 @@ object UpdateApiResponse {
     def deleteApiEndpoint: Self = this.set("ApiEndpoint", js.undefined)
     
     @scala.inline
+    def setApiGatewayManaged(value: boolean): Self = this.set("ApiGatewayManaged", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteApiGatewayManaged: Self = this.set("ApiGatewayManaged", js.undefined)
+    
+    @scala.inline
     def setApiId(value: Id): Self = this.set("ApiId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -135,6 +151,12 @@ object UpdateApiResponse {
     
     @scala.inline
     def deleteDescription: Self = this.set("Description", js.undefined)
+    
+    @scala.inline
+    def setDisableExecuteApiEndpoint(value: boolean): Self = this.set("DisableExecuteApiEndpoint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableExecuteApiEndpoint: Self = this.set("DisableExecuteApiEndpoint", js.undefined)
     
     @scala.inline
     def setDisableSchemaValidation(value: boolean): Self = this.set("DisableSchemaValidation", value.asInstanceOf[js.Any])

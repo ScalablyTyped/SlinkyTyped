@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DisassociateResolverRuleRequest extends js.Object {
   
   /**
-    * The ID of the resolver rule that you want to disassociate from the specified VPC.
+    * The ID of the Resolver rule that you want to disassociate from the specified VPC.
     */
   var ResolverRuleId: ResourceId = js.native
   
   /**
-    * The ID of the VPC that you want to disassociate the resolver rule from.
+    * The ID of the VPC that you want to disassociate the Resolver rule from.
     */
   var VPCId: ResourceId = js.native
 }

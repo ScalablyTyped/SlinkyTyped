@@ -1,5 +1,6 @@
 package typingsSlinky.reactMdUtils
 
+import typingsSlinky.reactMdUtils.dirMod.WritingDirection
 import typingsSlinky.reactMdUtils.focusElementWithinMod._Focus
 import typingsSlinky.reactMdUtils.isContrastCompliantMod.ContrastRatioCompliance
 import typingsSlinky.reactMdUtils.movementTypesMod.FocusType
@@ -86,6 +87,9 @@ object reactMdUtilsStrings {
   def left: left = "left".asInstanceOf[left]
   
   @scala.inline
+  def ltr: ltr = "ltr".asInstanceOf[ltr]
+  
+  @scala.inline
   def max: max = "max".asInstanceOf[max]
   
   @scala.inline
@@ -108,6 +112,9 @@ object reactMdUtilsStrings {
   
   @scala.inline
   def right: right = "right".asInstanceOf[right]
+  
+  @scala.inline
+  def rtl: rtl = "rtl".asInstanceOf[rtl]
   
   @scala.inline
   def start: start = "start".asInstanceOf[start]
@@ -203,6 +210,9 @@ object reactMdUtilsStrings {
        with SimplePosition
   
   @js.native
+  sealed trait ltr extends WritingDirection
+  
+  @js.native
   sealed trait max extends js.Object
   
   @js.native
@@ -227,6 +237,9 @@ object reactMdUtilsStrings {
   sealed trait right
     extends HorizontalPosition
        with SimplePosition
+  
+  @js.native
+  sealed trait rtl extends WritingDirection
   
   @js.native
   sealed trait start extends TouchTypes

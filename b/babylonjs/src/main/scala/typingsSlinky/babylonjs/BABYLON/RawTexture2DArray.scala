@@ -7,8 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RawTexture2DArray extends Texture {
   
-  var _engine: js.Any = js.native
-  
   /** Gets or sets the texture format to use */
   var format: Double = js.native
   

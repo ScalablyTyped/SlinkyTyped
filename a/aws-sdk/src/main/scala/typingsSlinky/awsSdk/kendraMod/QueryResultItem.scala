@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait QueryResultItem extends js.Object {
   
   /**
-    * One or more additional attribues associated with the query result.
+    * One or more additional attributes associated with the query result.
     */
   var AdditionalAttributes: js.UndefOr[AdditionalResultAttributeList] = js.native
   
@@ -41,6 +41,11 @@ trait QueryResultItem extends js.Object {
     * The unique identifier for the query result.
     */
   var Id: js.UndefOr[ResultId] = js.native
+  
+  /**
+    * Indicates the confidence that Amazon Kendra has that a result matches the query that you provided. Each result is placed into a bin that indicates the confidence, VERY_HIGH, HIGH, MEDIUM and LOW. You can use the score to determine if a response meets the confidence needed for your application. The field is only set to LOW when the Type field is set to DOCUMENT and Amazon Kendra is not confident that the result matches the query.
+    */
+  var ScoreAttributes: js.UndefOr[typingsSlinky.awsSdk.kendraMod.ScoreAttributes] = js.native
   
   /**
     * The type of document. 
@@ -117,6 +122,12 @@ object QueryResultItem {
     
     @scala.inline
     def deleteId: Self = this.set("Id", js.undefined)
+    
+    @scala.inline
+    def setScoreAttributes(value: ScoreAttributes): Self = this.set("ScoreAttributes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScoreAttributes: Self = this.set("ScoreAttributes", js.undefined)
     
     @scala.inline
     def setType(value: QueryResultType): Self = this.set("Type", value.asInstanceOf[js.Any])

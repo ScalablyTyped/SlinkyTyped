@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mediaMod {
   
-  type Media[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.mediaMod.MediaProps]
+  type Media = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.mediaMod.MediaProps]
 }

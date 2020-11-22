@@ -23,7 +23,7 @@ trait DescribeDBEngineVersionsMessage extends js.Object {
   var Engine: js.UndefOr[String] = js.native
   
   /**
-    * The database engine version to return. Example: 5.1.49 
+    * The database engine version to return. Example: 3.6.0 
     */
   var EngineVersion: js.UndefOr[String] = js.native
   

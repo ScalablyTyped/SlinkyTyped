@@ -31,7 +31,7 @@ trait locationRendererResult extends Object {
   var locationScheme: LocationScheme = js.native
   
   /**
-    * A simple renderer configured with a single color best suited to match the given basemap. Set this to a layer's `renderer` property to update its visualization.
+    * A simple renderer configured with a single color best suited to match the given basemap.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-location.html#RendererResult)
     */

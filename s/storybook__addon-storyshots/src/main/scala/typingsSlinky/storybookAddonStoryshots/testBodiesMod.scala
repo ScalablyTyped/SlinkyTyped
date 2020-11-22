@@ -1,10 +1,8 @@
 package typingsSlinky.storybookAddonStoryshots
 
-import typingsSlinky.storybookAddonStoryshots.anon.Context
-import typingsSlinky.storybookAddonStoryshots.anon.Options
-import typingsSlinky.storybookAddonStoryshots.anon.RenderTree
+import typingsSlinky.storybookAddonStoryshots.anon.PickTestMethodOptionsstor
 import typingsSlinky.storybookAddonStoryshots.anon.Renderer
-import typingsSlinky.storybookAddonStoryshots.anon.Story
+import typingsSlinky.storybookAddonStoryshots.storyshotsOptionsMod.StoryshotsTestMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,25 +11,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object testBodiesMod extends js.Object {
   
-  def multiSnapshotWithOptions(): js.Function1[
-    /* hasStoryContextRenderTreeStories2snapsConverter */ RenderTree, 
-    Unit | js.Promise[Unit]
-  ] = js.native
-  def multiSnapshotWithOptions(options: js.Object): js.Function1[
-    /* hasStoryContextRenderTreeStories2snapsConverter */ RenderTree, 
-    Unit | js.Promise[Unit]
-  ] = js.native
+  def multiSnapshotWithOptions(): StoryshotsTestMethod = js.native
+  def multiSnapshotWithOptions(options: js.Object): StoryshotsTestMethod = js.native
   
-  def renderOnly(hasStoryContextRenderTree: Story): js.Any = js.native
+  val renderOnly: StoryshotsTestMethod = js.native
   
-  def renderWithOptions(): js.Function1[/* hasStoryContextRenderTree */ Story, _] = js.native
-  def renderWithOptions(options: js.Object): js.Function1[/* hasStoryContextRenderTree */ Story, _] = js.native
+  def renderWithOptions(): StoryshotsTestMethod = js.native
+  def renderWithOptions(options: js.Object): StoryshotsTestMethod = js.native
   
-  def shallowSnapshot(hasStoryContextRenderShallowTreeOptions: Options): Unit = js.native
+  val shallowSnapshot: StoryshotsTestMethod = js.native
   
-  def snapshot(hasStoryContextRenderTreeSnapshotFileName: Context): Unit | js.Promise[Unit] = js.native
+  val snapshot: SnapshotsWithOptionsReturnType = js.native
   
-  def snapshotWithOptions(): js.Function1[/* hasStoryContextRenderTreeSnapshotFileName */ Context, Unit | js.Promise[Unit]] = js.native
-  def snapshotWithOptions(options: js.Function): js.Function1[/* hasStoryContextRenderTreeSnapshotFileName */ Context, Unit | js.Promise[Unit]] = js.native
-  def snapshotWithOptions(options: Renderer): js.Function1[/* hasStoryContextRenderTreeSnapshotFileName */ Context, Unit | js.Promise[Unit]] = js.native
+  def snapshotWithOptions(): SnapshotsWithOptionsReturnType = js.native
+  def snapshotWithOptions(options: js.Function): SnapshotsWithOptionsReturnType = js.native
+  def snapshotWithOptions(options: Renderer): SnapshotsWithOptionsReturnType = js.native
+  
+  type SnapshotsWithOptionsReturnType = js.Function1[/* options */ PickTestMethodOptionsstor, js.Any]
 }

@@ -13,6 +13,11 @@ trait LocalGatewayRoute extends js.Object {
   var DestinationCidrBlock: js.UndefOr[String] = js.native
   
   /**
+    * The Amazon Resource Name (ARN) of the local gateway route table.
+    */
+  var LocalGatewayRouteTableArn: js.UndefOr[ResourceArn] = js.native
+  
+  /**
     * The ID of the local gateway route table.
     */
   var LocalGatewayRouteTableId: js.UndefOr[LocalGatewayRoutetableId] = js.native
@@ -21,6 +26,11 @@ trait LocalGatewayRoute extends js.Object {
     * The ID of the virtual interface group.
     */
   var LocalGatewayVirtualInterfaceGroupId: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.LocalGatewayVirtualInterfaceGroupId] = js.native
+  
+  /**
+    * The AWS account ID that owns the local gateway route.
+    */
+  var OwnerId: js.UndefOr[String] = js.native
   
   /**
     * The state of the route.
@@ -62,6 +72,12 @@ object LocalGatewayRoute {
     def deleteDestinationCidrBlock: Self = this.set("DestinationCidrBlock", js.undefined)
     
     @scala.inline
+    def setLocalGatewayRouteTableArn(value: ResourceArn): Self = this.set("LocalGatewayRouteTableArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocalGatewayRouteTableArn: Self = this.set("LocalGatewayRouteTableArn", js.undefined)
+    
+    @scala.inline
     def setLocalGatewayRouteTableId(value: LocalGatewayRoutetableId): Self = this.set("LocalGatewayRouteTableId", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -72,6 +88,12 @@ object LocalGatewayRoute {
     
     @scala.inline
     def deleteLocalGatewayVirtualInterfaceGroupId: Self = this.set("LocalGatewayVirtualInterfaceGroupId", js.undefined)
+    
+    @scala.inline
+    def setOwnerId(value: String): Self = this.set("OwnerId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOwnerId: Self = this.set("OwnerId", js.undefined)
     
     @scala.inline
     def setState(value: LocalGatewayRouteState): Self = this.set("State", value.asInstanceOf[js.Any])

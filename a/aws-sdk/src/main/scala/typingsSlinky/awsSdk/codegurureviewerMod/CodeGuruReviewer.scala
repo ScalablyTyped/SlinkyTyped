@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.codegurureviewerMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -12,12 +12,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CodeGuruReviewer extends Service {
   
   /**
-    *  Use to associate an AWS CodeCommit repository or a repostory managed by AWS CodeStar Connections with Amazon CodeGuru Reviewer. When you associate a repository, CodeGuru Reviewer reviews source code changes in the repository's pull requests and provides automatic recommendations. You can view recommendations using the CodeGuru Reviewer console. For more information, see Recommendations in Amazon CodeGuru Reviewer in the Amazon CodeGuru Reviewer User Guide.  If you associate a CodeCommit repository, it must be in the same AWS Region and AWS account where its CodeGuru Reviewer code reviews are configured.  Bitbucket and GitHub Enterprise Server repositories are managed by AWS CodeStar Connections to connect to CodeGuru Reviewer. For more information, see Connect to a repository source provider in the Amazon CodeGuru Reviewer User Guide.    You cannot use the CodeGuru Reviewer SDK or the AWS CLI to associate a GitHub repository with Amazon CodeGuru Reviewer. To associate a GitHub repository, use the console. For more information, see Getting started with CodeGuru Reviewer in the CodeGuru Reviewer User Guide.  
+    *  Use to associate an AWS CodeCommit repository or a repostory managed by AWS CodeStar Connections with Amazon CodeGuru Reviewer. When you associate a repository, CodeGuru Reviewer reviews source code changes in the repository's pull requests and provides automatic recommendations. You can view recommendations using the CodeGuru Reviewer console. For more information, see Recommendations in Amazon CodeGuru Reviewer in the Amazon CodeGuru Reviewer User Guide.  If you associate a CodeCommit repository, it must be in the same AWS Region and AWS account where its CodeGuru Reviewer code reviews are configured. Bitbucket and GitHub Enterprise Server repositories are managed by AWS CodeStar Connections to connect to CodeGuru Reviewer. For more information, see Connect to a repository source provider in the Amazon CodeGuru Reviewer User Guide.    You cannot use the CodeGuru Reviewer SDK or the AWS CLI to associate a GitHub repository with Amazon CodeGuru Reviewer. To associate a GitHub repository, use the console. For more information, see Getting started with CodeGuru Reviewer in the CodeGuru Reviewer User Guide.  
     */
   def associateRepository(): Request[AssociateRepositoryResponse, AWSError] = js.native
   def associateRepository(callback: js.Function2[/* err */ AWSError, /* data */ AssociateRepositoryResponse, Unit]): Request[AssociateRepositoryResponse, AWSError] = js.native
   /**
-    *  Use to associate an AWS CodeCommit repository or a repostory managed by AWS CodeStar Connections with Amazon CodeGuru Reviewer. When you associate a repository, CodeGuru Reviewer reviews source code changes in the repository's pull requests and provides automatic recommendations. You can view recommendations using the CodeGuru Reviewer console. For more information, see Recommendations in Amazon CodeGuru Reviewer in the Amazon CodeGuru Reviewer User Guide.  If you associate a CodeCommit repository, it must be in the same AWS Region and AWS account where its CodeGuru Reviewer code reviews are configured.  Bitbucket and GitHub Enterprise Server repositories are managed by AWS CodeStar Connections to connect to CodeGuru Reviewer. For more information, see Connect to a repository source provider in the Amazon CodeGuru Reviewer User Guide.    You cannot use the CodeGuru Reviewer SDK or the AWS CLI to associate a GitHub repository with Amazon CodeGuru Reviewer. To associate a GitHub repository, use the console. For more information, see Getting started with CodeGuru Reviewer in the CodeGuru Reviewer User Guide.  
+    *  Use to associate an AWS CodeCommit repository or a repostory managed by AWS CodeStar Connections with Amazon CodeGuru Reviewer. When you associate a repository, CodeGuru Reviewer reviews source code changes in the repository's pull requests and provides automatic recommendations. You can view recommendations using the CodeGuru Reviewer console. For more information, see Recommendations in Amazon CodeGuru Reviewer in the Amazon CodeGuru Reviewer User Guide.  If you associate a CodeCommit repository, it must be in the same AWS Region and AWS account where its CodeGuru Reviewer code reviews are configured. Bitbucket and GitHub Enterprise Server repositories are managed by AWS CodeStar Connections to connect to CodeGuru Reviewer. For more information, see Connect to a repository source provider in the Amazon CodeGuru Reviewer User Guide.    You cannot use the CodeGuru Reviewer SDK or the AWS CLI to associate a GitHub repository with Amazon CodeGuru Reviewer. To associate a GitHub repository, use the console. For more information, see Getting started with CodeGuru Reviewer in the CodeGuru Reviewer User Guide.  
     */
   def associateRepository(params: AssociateRepositoryRequest): Request[AssociateRepositoryResponse, AWSError] = js.native
   def associateRepository(
@@ -27,6 +27,20 @@ trait CodeGuruReviewer extends Service {
   
   @JSName("config")
   var config_CodeGuruReviewer: ConfigBase with ClientConfiguration = js.native
+  
+  /**
+    *  Use to create a code review with a  CodeReviewType  of RepositoryAnalysis. This type of code review analyzes all code under a specified branch in an associated repository. PullRequest code reviews are automatically triggered by a pull request so cannot be created using this method. 
+    */
+  def createCodeReview(): Request[CreateCodeReviewResponse, AWSError] = js.native
+  def createCodeReview(callback: js.Function2[/* err */ AWSError, /* data */ CreateCodeReviewResponse, Unit]): Request[CreateCodeReviewResponse, AWSError] = js.native
+  /**
+    *  Use to create a code review with a  CodeReviewType  of RepositoryAnalysis. This type of code review analyzes all code under a specified branch in an associated repository. PullRequest code reviews are automatically triggered by a pull request so cannot be created using this method. 
+    */
+  def createCodeReview(params: CreateCodeReviewRequest): Request[CreateCodeReviewResponse, AWSError] = js.native
+  def createCodeReview(
+    params: CreateCodeReviewRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateCodeReviewResponse, Unit]
+  ): Request[CreateCodeReviewResponse, AWSError] = js.native
   
   /**
     *  Returns the metadata associated with the code review along with its status.
@@ -143,6 +157,20 @@ trait CodeGuruReviewer extends Service {
   ): Request[ListRepositoryAssociationsResponse, AWSError] = js.native
   
   /**
+    * Returns the list of tags associated with an associated repository resource.
+    */
+  def listTagsForResource(): Request[ListTagsForResourceResponse, AWSError] = js.native
+  def listTagsForResource(callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]): Request[ListTagsForResourceResponse, AWSError] = js.native
+  /**
+    * Returns the list of tags associated with an associated repository resource.
+    */
+  def listTagsForResource(params: ListTagsForResourceRequest): Request[ListTagsForResourceResponse, AWSError] = js.native
+  def listTagsForResource(
+    params: ListTagsForResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListTagsForResourceResponse, Unit]
+  ): Request[ListTagsForResourceResponse, AWSError] = js.native
+  
+  /**
     *  Stores customer feedback for a CodeGuru Reviewer recommendation. When this API is called again with different reactions the previous feedback is overwritten. 
     */
   def putRecommendationFeedback(): Request[PutRecommendationFeedbackResponse, AWSError] = js.native
@@ -155,4 +183,32 @@ trait CodeGuruReviewer extends Service {
     params: PutRecommendationFeedbackRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ PutRecommendationFeedbackResponse, Unit]
   ): Request[PutRecommendationFeedbackResponse, AWSError] = js.native
+  
+  /**
+    * Adds one or more tags to an associated repository.
+    */
+  def tagResource(): Request[TagResourceResponse, AWSError] = js.native
+  def tagResource(callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]): Request[TagResourceResponse, AWSError] = js.native
+  /**
+    * Adds one or more tags to an associated repository.
+    */
+  def tagResource(params: TagResourceRequest): Request[TagResourceResponse, AWSError] = js.native
+  def tagResource(
+    params: TagResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ TagResourceResponse, Unit]
+  ): Request[TagResourceResponse, AWSError] = js.native
+  
+  /**
+    * Removes a tag from an associated repository.
+    */
+  def untagResource(): Request[UntagResourceResponse, AWSError] = js.native
+  def untagResource(callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]): Request[UntagResourceResponse, AWSError] = js.native
+  /**
+    * Removes a tag from an associated repository.
+    */
+  def untagResource(params: UntagResourceRequest): Request[UntagResourceResponse, AWSError] = js.native
+  def untagResource(
+    params: UntagResourceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UntagResourceResponse, Unit]
+  ): Request[UntagResourceResponse, AWSError] = js.native
 }

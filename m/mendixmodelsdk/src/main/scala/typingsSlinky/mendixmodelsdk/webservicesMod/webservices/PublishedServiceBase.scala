@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.webservicesMod.webservices
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.Document
@@ -33,9 +32,6 @@ abstract class PublishedServiceBase protected () extends Document {
   
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MPublishedServiceBase: FolderBase = js.native
-  
-  @JSName("model")
-  var model_FPublishedServiceBase: IModel = js.native
   
   def versionedServices: IList[VersionedService] = js.native
 }

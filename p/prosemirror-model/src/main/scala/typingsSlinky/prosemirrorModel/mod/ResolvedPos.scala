@@ -138,6 +138,13 @@ class ResolvedPos[S /* <: Schema[_, _] */] () extends js.Object {
   var pos: Double = js.native
   
   /**
+    * Get the position at the given index in the parent node at the
+    * given depth (which defaults to this.depth).
+    */
+  def posAtIndex(index: Double): Double = js.native
+  def posAtIndex(index: Double, depth: Double): Double = js.native
+  
+  /**
     * Query whether the given position shares the same parent node.
     */
   def sameParent(other: ResolvedPos[S]): Boolean = js.native

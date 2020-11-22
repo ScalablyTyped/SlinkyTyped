@@ -8,5 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object withLinks extends js.Object {
   
-  def apply(storyFn: js.Function0[Unit]): Unit = js.native
+  def apply(
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type any is not an array type */ args: js.Any
+  ): js.Any = js.native
 }

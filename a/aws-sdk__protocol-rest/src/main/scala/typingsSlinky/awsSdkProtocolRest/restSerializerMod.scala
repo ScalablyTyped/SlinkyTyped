@@ -1,9 +1,8 @@
 package typingsSlinky.awsSdkProtocolRest
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.awsSdkTypes.httpMod.HttpEndpoint
-import typingsSlinky.awsSdkTypes.marshallerMod.BodySerializer
-import typingsSlinky.awsSdkTypes.marshallerMod.RequestSerializer
+import typingsSlinky.awsSdkTypes.httpMod.HttpRequest
+import typingsSlinky.awsSdkTypes.serdeMod.RequestSerializer
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
@@ -15,13 +14,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object restSerializerMod extends js.Object {
   
   @js.native
-  class RestSerializer[StreamType] protected () extends RequestSerializer[StreamType] {
+  class RestSerializer[StreamType] protected ()
+    extends RequestSerializer[StreamType, js.Any] {
     def this(
-      endpoint: HttpEndpoint,
-      bodySerializer: BodySerializer[String],
+      endpoint: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify HttpEndpoint */ js.Any,
+      bodySerializer: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodySerializer<string> */ js.Any,
       base64Encoder: Encoder,
       utf8Decoder: Decoder
     ) = this()
+    
+    /* CompleteClass */
+    override def apply(T0: /* input */ js.Any, T1: js.Any): js.Promise[StreamType] = js.native
     
     val base64Encoder: js.Any = js.native
     
@@ -41,6 +44,11 @@ object restSerializerMod extends js.Object {
     var populateQuery: js.Any = js.native
     
     var populateUri: js.Any = js.native
+    
+    def serialize(
+      operation: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OperationModel */ js.Any,
+      input: js.Any
+    ): HttpRequest = js.native
     
     var serializeBody: js.Any = js.native
     

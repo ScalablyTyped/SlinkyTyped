@@ -18,6 +18,7 @@ import typingsSlinky.babylonjs.iofflineproviderMod.IOfflineProvider
 import typingsSlinky.babylonjs.screenshotSizeMod.IScreenshotSize
 import typingsSlinky.babylonjs.typesMod.Nullable
 import typingsSlinky.babylonjs.webRequestMod.WebRequest
+import typingsSlinky.std.IArguments
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -34,6 +35,15 @@ object Tools extends js.Object {
     * All logs
     */
   val AllLogLevel: Double = js.native
+  
+  /**
+    * Will return the right value of the noPreventDefault variable
+    * Needed to keep backwards compatibility to the old API.
+    *
+    * @param args arguments passed to the attachControl function
+    * @returns the correct value for noPreventDefault
+    */
+  def BackCompatCameraNoPreventDefault(args: IArguments): Boolean = js.native
   
   /**
     * Gets or sets the base URL to use to load assets
@@ -58,7 +68,8 @@ object Tools extends js.Object {
     * It can be a string if the expected behavior is identical in the entire app.
     * Or a callback to be able to set it per url or on a group of them (in case of Video source for instance)
     */
-  var CorsBehavior: String | (js.Function1[/* url */ String | js.Array[String], String]) = js.native
+  def CorsBehavior: String | (js.Function1[/* url */ String | js.Array[String], String]) = js.native
+  def CorsBehavior_=(value: String | (js.Function1[/* url */ String | js.Array[String], String])): Unit = js.native
   
   def CreateScreenshot(engine: Engine, camera: Camera, size: Double): Unit = js.native
   def CreateScreenshot(
@@ -83,7 +94,7 @@ object Tools extends js.Object {
   ): Unit = js.native
   /**
     * Captures a screenshot of the current rendering
-    * @see http://doc.babylonjs.com/how_to/render_scene_on_a_png
+    * @see https://doc.babylonjs.com/how_to/render_scene_on_a_png
     * @param engine defines the rendering engine
     * @param camera defines the source camera
     * @param size This parameter can be set to a single number or to an object with the
@@ -123,7 +134,7 @@ object Tools extends js.Object {
   def CreateScreenshotAsync(engine: Engine, camera: Camera, size: Double, mimeType: String): js.Promise[String] = js.native
   /**
     * Captures a screenshot of the current rendering
-    * @see http://doc.babylonjs.com/how_to/render_scene_on_a_png
+    * @see https://doc.babylonjs.com/how_to/render_scene_on_a_png
     * @param engine defines the rendering engine
     * @param camera defines the source camera
     * @param size This parameter can be set to a single number or to an object with the
@@ -141,7 +152,7 @@ object Tools extends js.Object {
   
   /**
     * Generates an image screenshot from the specified camera.
-    * @see http://doc.babylonjs.com/how_to/render_scene_on_a_png
+    * @see https://doc.babylonjs.com/how_to/render_scene_on_a_png
     * @param engine The engine to use for rendering
     * @param camera The camera to use for rendering
     * @param size This parameter can be set to a single number or to an object with the
@@ -279,7 +290,7 @@ object Tools extends js.Object {
   ): js.Promise[String] = js.native
   /**
     * Generates an image screenshot from the specified camera.
-    * @see http://doc.babylonjs.com/how_to/render_scene_on_a_png
+    * @see https://doc.babylonjs.com/how_to/render_scene_on_a_png
     * @param engine The engine to use for rendering
     * @param camera The camera to use for rendering
     * @param size This parameter can be set to a single number or to an object with the
@@ -657,9 +668,10 @@ object Tools extends js.Object {
   
   /**
     * Gets the pointer prefix to use
+    * @param engine defines the engine we are finding the prefix for
     * @returns "pointer" if touch is enabled. Else returns "mouse"
     */
-  def GetPointerPrefix(): String = js.native
+  def GetPointerPrefix(engine: Engine): String = js.native
   
   /**
     * Tries to instantiate a new object from a given class name
@@ -1180,6 +1192,19 @@ object Tools extends js.Object {
   def Slice[T](data: T, start: js.UndefOr[scala.Nothing], end: Double): T = js.native
   def Slice[T](data: T, start: Double): T = js.native
   def Slice[T](data: T, start: Double, end: Double): T = js.native
+  
+  /**
+    * Provides a slice function that will work even on IE
+    * The difference between this and Slice is that this will force-convert to array
+    * @param data defines the array to slice
+    * @param start defines the start of the data (optional)
+    * @param end defines the end of the data (optional)
+    * @returns the new sliced array
+    */
+  def SliceToArray[T, P](data: T): js.Array[P] = js.native
+  def SliceToArray[T, P](data: T, start: js.UndefOr[scala.Nothing], end: Double): js.Array[P] = js.native
+  def SliceToArray[T, P](data: T, start: Double): js.Array[P] = js.native
+  def SliceToArray[T, P](data: T, start: Double, end: Double): js.Array[P] = js.native
   
   /**
     * Starts a performance counter

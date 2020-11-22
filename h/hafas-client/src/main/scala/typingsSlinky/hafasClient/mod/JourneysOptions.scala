@@ -128,6 +128,11 @@ trait JourneysOptions extends js.Object {
     * @default slow
     */
   var walkingSpeed: js.UndefOr[String] = js.native
+  
+  /**
+    * @deprecated
+    */
+  var when: js.UndefOr[js.Date] = js.native
 }
 object JourneysOptions {
   
@@ -277,5 +282,11 @@ object JourneysOptions {
     
     @scala.inline
     def deleteWalkingSpeed: Self = this.set("walkingSpeed", js.undefined)
+    
+    @scala.inline
+    def setWhen(value: js.Date): Self = this.set("when", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWhen: Self = this.set("when", js.undefined)
   }
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for use-it__event-listener
 
-Typings are for version 0.1.5
+Typings are for version 0.1.6
 
 ## Library description:
 A custom React Hook that provides a useEventListener.

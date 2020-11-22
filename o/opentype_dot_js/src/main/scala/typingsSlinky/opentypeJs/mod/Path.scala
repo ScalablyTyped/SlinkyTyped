@@ -26,7 +26,7 @@ class Path () extends js.Object {
   def extend(pathOrCommands: BoundingBox): Unit = js.native
   def extend(pathOrCommands: Path): Unit = js.native
   
-  var fill: js.Any = js.native
+  var fill: String | Null = js.native
   
   def getBoundingBox(): BoundingBox = js.native
   
@@ -38,9 +38,9 @@ class Path () extends js.Object {
   
   def quadraticCurveTo(x1: Double, y1: Double, x: Double, y: Double): Unit = js.native
   
-  var stroke: js.Any = js.native
+  var stroke: String | Null = js.native
   
-  var strokeWidth: js.Any = js.native
+  var strokeWidth: Double = js.native
   
   def toDOMElement(decimalPlaces: Double): SVGPathElement = js.native
   

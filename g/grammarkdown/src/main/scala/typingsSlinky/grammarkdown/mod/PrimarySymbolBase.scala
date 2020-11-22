@@ -1,6 +1,6 @@
 package typingsSlinky.grammarkdown.mod
 
-import typingsSlinky.grammarkdown.nodesMod.PrimarySymbolKind
+import typingsSlinky.grammarkdown.tokensMod.PrimarySymbolKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

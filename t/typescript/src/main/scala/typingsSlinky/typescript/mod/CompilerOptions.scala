@@ -37,6 +37,8 @@ trait CompilerOptions
   
   var declarationMap: js.UndefOr[Boolean] = js.native
   
+  var disableReferencedProjectLoad: js.UndefOr[Boolean] = js.native
+  
   var disableSizeLimit: js.UndefOr[Boolean] = js.native
   
   var disableSolutionSearching: js.UndefOr[Boolean] = js.native
@@ -72,6 +74,10 @@ trait CompilerOptions
   var jsx: js.UndefOr[JsxEmit] = js.native
   
   var jsxFactory: js.UndefOr[java.lang.String] = js.native
+  
+  var jsxFragmentFactory: js.UndefOr[java.lang.String] = js.native
+  
+  var jsxImportSource: js.UndefOr[java.lang.String] = js.native
   
   var keyofStringsOnly: js.UndefOr[Boolean] = js.native
   
@@ -112,6 +118,8 @@ trait CompilerOptions
   var noResolve: js.UndefOr[Boolean] = js.native
   
   var noStrictGenericChecks: js.UndefOr[Boolean] = js.native
+  
+  var noUncheckedIndexedAccess: js.UndefOr[Boolean] = js.native
   
   var noUnusedLocals: js.UndefOr[Boolean] = js.native
   
@@ -286,6 +294,12 @@ object CompilerOptions {
     def deleteDeclarationMap: Self = this.set("declarationMap", js.undefined)
     
     @scala.inline
+    def setDisableReferencedProjectLoad(value: Boolean): Self = this.set("disableReferencedProjectLoad", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableReferencedProjectLoad: Self = this.set("disableReferencedProjectLoad", js.undefined)
+    
+    @scala.inline
     def setDisableSizeLimit(value: Boolean): Self = this.set("disableSizeLimit", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -392,6 +406,18 @@ object CompilerOptions {
     
     @scala.inline
     def deleteJsxFactory: Self = this.set("jsxFactory", js.undefined)
+    
+    @scala.inline
+    def setJsxFragmentFactory(value: java.lang.String): Self = this.set("jsxFragmentFactory", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJsxFragmentFactory: Self = this.set("jsxFragmentFactory", js.undefined)
+    
+    @scala.inline
+    def setJsxImportSource(value: java.lang.String): Self = this.set("jsxImportSource", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJsxImportSource: Self = this.set("jsxImportSource", js.undefined)
     
     @scala.inline
     def setKeyofStringsOnly(value: Boolean): Self = this.set("keyofStringsOnly", value.asInstanceOf[js.Any])
@@ -515,6 +541,12 @@ object CompilerOptions {
     
     @scala.inline
     def deleteNoStrictGenericChecks: Self = this.set("noStrictGenericChecks", js.undefined)
+    
+    @scala.inline
+    def setNoUncheckedIndexedAccess(value: Boolean): Self = this.set("noUncheckedIndexedAccess", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNoUncheckedIndexedAccess: Self = this.set("noUncheckedIndexedAccess", js.undefined)
     
     @scala.inline
     def setNoUnusedLocals(value: Boolean): Self = this.set("noUnusedLocals", value.asInstanceOf[js.Any])

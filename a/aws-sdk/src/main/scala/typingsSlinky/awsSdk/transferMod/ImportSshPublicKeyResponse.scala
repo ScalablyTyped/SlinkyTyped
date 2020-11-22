@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ImportSshPublicKeyResponse extends js.Object {
   
   /**
-    * A system-assigned unique identifier for a file transfer protocol-enabled server.
+    * A system-assigned unique identifier for a server.
     */
   var ServerId: typingsSlinky.awsSdk.transferMod.ServerId = js.native
   

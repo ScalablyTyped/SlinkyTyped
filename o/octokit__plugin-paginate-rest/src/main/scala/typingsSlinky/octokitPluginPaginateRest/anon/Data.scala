@@ -1,6 +1,6 @@
 package typingsSlinky.octokitPluginPaginateRest.anon
 
-import typingsSlinky.octokitTypes.anon.Allowrebasemerge
+import typingsSlinky.octokitTypes.anon.Runnersurl
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Data extends js.Object {
   
-  var data: js.Array[Allowrebasemerge] = js.native
+  var data: js.Array[Runnersurl] = js.native
 }
 object Data {
   
   @scala.inline
-  def apply(data: js.Array[Allowrebasemerge]): Data = {
+  def apply(data: js.Array[Runnersurl]): Data = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[Data]
   }
@@ -34,9 +34,9 @@ object Data {
     }
     
     @scala.inline
-    def setDataVarargs(value: Allowrebasemerge*): Self = this.set("data", js.Array(value :_*))
+    def setDataVarargs(value: Runnersurl*): Self = this.set("data", js.Array(value :_*))
     
     @scala.inline
-    def setData(value: js.Array[Allowrebasemerge]): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: js.Array[Runnersurl]): Self = this.set("data", value.asInstanceOf[js.Any])
   }
 }

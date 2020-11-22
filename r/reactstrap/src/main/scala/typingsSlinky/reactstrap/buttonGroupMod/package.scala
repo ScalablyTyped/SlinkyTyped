@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object buttonGroupMod {
   
-  type ButtonGroup[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.buttonGroupMod.ButtonGroupProps]
+  type ButtonGroup = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.buttonGroupMod.ButtonGroupProps]
 }

@@ -10,4 +10,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("backgrid", "Header")
 @js.native
 class Header ()
-  extends View[Model[js.Any, ModelSetOptions]]
+  extends View[Model[js.Any, ModelSetOptions, js.Object]]

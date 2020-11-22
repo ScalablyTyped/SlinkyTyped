@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * * "box": A box-shaped collision volume.
   * * "capsule": A capsule-shaped collision volume.
-  * * "compound": A compound shape. Any descendent entities with a collision component
+  * * "compound": A compound shape. Any descendant entities with a collision component
   * of type box, capsule, cone, cylinder or sphere will be combined into a single, rigid
   * shape.
   * * "cone": A cone-shaped collision volume.

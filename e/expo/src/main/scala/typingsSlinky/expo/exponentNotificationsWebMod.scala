@@ -1,7 +1,7 @@
 package typingsSlinky.expo
 
+import typingsSlinky.expo.anon.Data
 import typingsSlinky.expo.anon.IntervalMs
-import typingsSlinky.expo.anon.Type
 import typingsSlinky.expo.notificationsTypesMod.LocalNotification
 import typingsSlinky.expo.notificationsTypesMod.LocalNotificationId
 import scala.scalajs.js
@@ -26,7 +26,7 @@ object exponentNotificationsWebMod extends js.Object {
     
     def getBadgeNumberAsync(): js.Promise[Double] = js.native
     
-    def getDevicePushTokenAsync(): js.Promise[Type] = js.native
+    def getDevicePushTokenAsync(): js.Promise[Data] = js.native
     
     def getExponentPushTokenAsync(): js.Promise[String] = js.native
     

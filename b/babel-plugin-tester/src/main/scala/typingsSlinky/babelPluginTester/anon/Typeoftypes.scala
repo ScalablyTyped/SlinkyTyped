@@ -59,15 +59,15 @@ import typingsSlinky.babelPluginTester.babelPluginTesterStrings.symbol
 import typingsSlinky.babelPluginTester.babelPluginTesterStrings.typeof
 import typingsSlinky.babelPluginTester.babelPluginTesterStrings.undefined
 import typingsSlinky.babelPluginTester.babelPluginTesterStrings.void
-import typingsSlinky.babelTypes.anon.Body
-import typingsSlinky.babelTypes.anon.BuildUndefinedNode
-import typingsSlinky.babelTypes.anon.Children
+import typingsSlinky.babelTypes.anon.ChildrenReadonlyArray
 import typingsSlinky.babelTypes.anon.Computed
 import typingsSlinky.babelTypes.anon.Cooked
-import typingsSlinky.babelTypes.anon.PickMemberExpressionobjec
+import typingsSlinky.babelTypes.anon.PickMemberExpressionobjecObject
 import typingsSlinky.babelTypes.anon.PreserveComments
+import typingsSlinky.babelTypes.anon.Push
 import typingsSlinky.babelTypes.anon.ToString
 import typingsSlinky.babelTypes.anon.Type
+import typingsSlinky.babelTypes.anon.`0`
 import typingsSlinky.babelTypes.mod.AnyTypeAnnotation_
 import typingsSlinky.babelTypes.mod.ArgumentPlaceholder_
 import typingsSlinky.babelTypes.mod.ArrayExpression_
@@ -230,6 +230,7 @@ import typingsSlinky.babelTypes.mod.ReturnStatement_
 import typingsSlinky.babelTypes.mod.SequenceExpression_
 import typingsSlinky.babelTypes.mod.SpreadElement_
 import typingsSlinky.babelTypes.mod.Statement
+import typingsSlinky.babelTypes.mod.StaticBlock_
 import typingsSlinky.babelTypes.mod.StringLiteralTypeAnnotation_
 import typingsSlinky.babelTypes.mod.StringLiteral_
 import typingsSlinky.babelTypes.mod.StringTypeAnnotation_
@@ -263,6 +264,7 @@ import typingsSlinky.babelTypes.mod.TSInferType_
 import typingsSlinky.babelTypes.mod.TSInterfaceBody_
 import typingsSlinky.babelTypes.mod.TSInterfaceDeclaration_
 import typingsSlinky.babelTypes.mod.TSIntersectionType_
+import typingsSlinky.babelTypes.mod.TSIntrinsicKeyword_
 import typingsSlinky.babelTypes.mod.TSLiteralType_
 import typingsSlinky.babelTypes.mod.TSMappedType_
 import typingsSlinky.babelTypes.mod.TSMethodSignature_
@@ -348,12 +350,12 @@ trait Typeoftypes extends js.Object {
   
   def anyTypeAnnotation(): AnyTypeAnnotation_ = js.native
   
-  def appendToMemberExpression[T /* <: PickMemberExpressionobjec */](member: T, append: Expression): T = js.native
-  def appendToMemberExpression[T /* <: PickMemberExpressionobjec */](member: T, append: Expression, computed: Boolean): T = js.native
-  def appendToMemberExpression[T /* <: PickMemberExpressionobjec */](member: T, append: Identifier_): T = js.native
-  def appendToMemberExpression[T /* <: PickMemberExpressionobjec */](member: T, append: Identifier_, computed: Boolean): T = js.native
-  def appendToMemberExpression[T /* <: PickMemberExpressionobjec */](member: T, append: PrivateName_): T = js.native
-  def appendToMemberExpression[T /* <: PickMemberExpressionobjec */](member: T, append: PrivateName_, computed: Boolean): T = js.native
+  def appendToMemberExpression[T /* <: PickMemberExpressionobjecObject */](member: T, append: Expression): T = js.native
+  def appendToMemberExpression[T /* <: PickMemberExpressionobjecObject */](member: T, append: Expression, computed: Boolean): T = js.native
+  def appendToMemberExpression[T /* <: PickMemberExpressionobjecObject */](member: T, append: Identifier_): T = js.native
+  def appendToMemberExpression[T /* <: PickMemberExpressionobjecObject */](member: T, append: Identifier_, computed: Boolean): T = js.native
+  def appendToMemberExpression[T /* <: PickMemberExpressionobjecObject */](member: T, append: PrivateName_): T = js.native
+  def appendToMemberExpression[T /* <: PickMemberExpressionobjecObject */](member: T, append: PrivateName_, computed: Boolean): T = js.native
   
   def argumentPlaceholder(): ArgumentPlaceholder_ = js.native
   
@@ -379,6 +381,1754 @@ trait Typeoftypes extends js.Object {
     body: Expression,
     async: Boolean
   ): ArrowFunctionExpression_ = js.native
+  
+  def assertAnyTypeAnnotation(): Unit = js.native
+  def assertAnyTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertAnyTypeAnnotation(node: js.Object): Unit = js.native
+  def assertAnyTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertAnyTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertArgumentPlaceholder(): Unit = js.native
+  def assertArgumentPlaceholder(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertArgumentPlaceholder(node: js.Object): Unit = js.native
+  def assertArgumentPlaceholder(node: js.Object, opts: js.Object): Unit = js.native
+  def assertArgumentPlaceholder(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertArrayExpression(): Unit = js.native
+  def assertArrayExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertArrayExpression(node: js.Object): Unit = js.native
+  def assertArrayExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertArrayExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertArrayPattern(): Unit = js.native
+  def assertArrayPattern(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertArrayPattern(node: js.Object): Unit = js.native
+  def assertArrayPattern(node: js.Object, opts: js.Object): Unit = js.native
+  def assertArrayPattern(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertArrayTypeAnnotation(): Unit = js.native
+  def assertArrayTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertArrayTypeAnnotation(node: js.Object): Unit = js.native
+  def assertArrayTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertArrayTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertArrowFunctionExpression(): Unit = js.native
+  def assertArrowFunctionExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertArrowFunctionExpression(node: js.Object): Unit = js.native
+  def assertArrowFunctionExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertArrowFunctionExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertAssignmentExpression(): Unit = js.native
+  def assertAssignmentExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertAssignmentExpression(node: js.Object): Unit = js.native
+  def assertAssignmentExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertAssignmentExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertAssignmentPattern(): Unit = js.native
+  def assertAssignmentPattern(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertAssignmentPattern(node: js.Object): Unit = js.native
+  def assertAssignmentPattern(node: js.Object, opts: js.Object): Unit = js.native
+  def assertAssignmentPattern(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertAwaitExpression(): Unit = js.native
+  def assertAwaitExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertAwaitExpression(node: js.Object): Unit = js.native
+  def assertAwaitExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertAwaitExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBigIntLiteral(): Unit = js.native
+  def assertBigIntLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBigIntLiteral(node: js.Object): Unit = js.native
+  def assertBigIntLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBigIntLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBinary(): Unit = js.native
+  def assertBinary(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBinary(node: js.Object): Unit = js.native
+  def assertBinary(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBinary(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBinaryExpression(): Unit = js.native
+  def assertBinaryExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBinaryExpression(node: js.Object): Unit = js.native
+  def assertBinaryExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBinaryExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBindExpression(): Unit = js.native
+  def assertBindExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBindExpression(node: js.Object): Unit = js.native
+  def assertBindExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBindExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBlock(): Unit = js.native
+  def assertBlock(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBlock(node: js.Object): Unit = js.native
+  def assertBlock(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBlock(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBlockParent(): Unit = js.native
+  def assertBlockParent(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBlockParent(node: js.Object): Unit = js.native
+  def assertBlockParent(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBlockParent(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBlockStatement(): Unit = js.native
+  def assertBlockStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBlockStatement(node: js.Object): Unit = js.native
+  def assertBlockStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBlockStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBooleanLiteral(): Unit = js.native
+  def assertBooleanLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBooleanLiteral(node: js.Object): Unit = js.native
+  def assertBooleanLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBooleanLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBooleanLiteralTypeAnnotation(): Unit = js.native
+  def assertBooleanLiteralTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBooleanLiteralTypeAnnotation(node: js.Object): Unit = js.native
+  def assertBooleanLiteralTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBooleanLiteralTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBooleanTypeAnnotation(): Unit = js.native
+  def assertBooleanTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBooleanTypeAnnotation(node: js.Object): Unit = js.native
+  def assertBooleanTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBooleanTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertBreakStatement(): Unit = js.native
+  def assertBreakStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertBreakStatement(node: js.Object): Unit = js.native
+  def assertBreakStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertBreakStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertCallExpression(): Unit = js.native
+  def assertCallExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertCallExpression(node: js.Object): Unit = js.native
+  def assertCallExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertCallExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertCatchClause(): Unit = js.native
+  def assertCatchClause(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertCatchClause(node: js.Object): Unit = js.native
+  def assertCatchClause(node: js.Object, opts: js.Object): Unit = js.native
+  def assertCatchClause(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertClass(): Unit = js.native
+  def assertClass(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertClass(node: js.Object): Unit = js.native
+  def assertClass(node: js.Object, opts: js.Object): Unit = js.native
+  def assertClass(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertClassBody(): Unit = js.native
+  def assertClassBody(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertClassBody(node: js.Object): Unit = js.native
+  def assertClassBody(node: js.Object, opts: js.Object): Unit = js.native
+  def assertClassBody(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertClassDeclaration(): Unit = js.native
+  def assertClassDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertClassDeclaration(node: js.Object): Unit = js.native
+  def assertClassDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertClassDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertClassExpression(): Unit = js.native
+  def assertClassExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertClassExpression(node: js.Object): Unit = js.native
+  def assertClassExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertClassExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertClassImplements(): Unit = js.native
+  def assertClassImplements(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertClassImplements(node: js.Object): Unit = js.native
+  def assertClassImplements(node: js.Object, opts: js.Object): Unit = js.native
+  def assertClassImplements(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertClassMethod(): Unit = js.native
+  def assertClassMethod(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertClassMethod(node: js.Object): Unit = js.native
+  def assertClassMethod(node: js.Object, opts: js.Object): Unit = js.native
+  def assertClassMethod(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertClassPrivateMethod(): Unit = js.native
+  def assertClassPrivateMethod(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertClassPrivateMethod(node: js.Object): Unit = js.native
+  def assertClassPrivateMethod(node: js.Object, opts: js.Object): Unit = js.native
+  def assertClassPrivateMethod(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertClassPrivateProperty(): Unit = js.native
+  def assertClassPrivateProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertClassPrivateProperty(node: js.Object): Unit = js.native
+  def assertClassPrivateProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertClassPrivateProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertClassProperty(): Unit = js.native
+  def assertClassProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertClassProperty(node: js.Object): Unit = js.native
+  def assertClassProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertClassProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertCompletionStatement(): Unit = js.native
+  def assertCompletionStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertCompletionStatement(node: js.Object): Unit = js.native
+  def assertCompletionStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertCompletionStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertConditional(): Unit = js.native
+  def assertConditional(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertConditional(node: js.Object): Unit = js.native
+  def assertConditional(node: js.Object, opts: js.Object): Unit = js.native
+  def assertConditional(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertConditionalExpression(): Unit = js.native
+  def assertConditionalExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertConditionalExpression(node: js.Object): Unit = js.native
+  def assertConditionalExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertConditionalExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertContinueStatement(): Unit = js.native
+  def assertContinueStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertContinueStatement(node: js.Object): Unit = js.native
+  def assertContinueStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertContinueStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDebuggerStatement(): Unit = js.native
+  def assertDebuggerStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDebuggerStatement(node: js.Object): Unit = js.native
+  def assertDebuggerStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDebuggerStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDecimalLiteral(): Unit = js.native
+  def assertDecimalLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDecimalLiteral(node: js.Object): Unit = js.native
+  def assertDecimalLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDecimalLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclaration(): Unit = js.native
+  def assertDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclaration(node: js.Object): Unit = js.native
+  def assertDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclareClass(): Unit = js.native
+  def assertDeclareClass(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclareClass(node: js.Object): Unit = js.native
+  def assertDeclareClass(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclareClass(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclareExportAllDeclaration(): Unit = js.native
+  def assertDeclareExportAllDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclareExportAllDeclaration(node: js.Object): Unit = js.native
+  def assertDeclareExportAllDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclareExportAllDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclareExportDeclaration(): Unit = js.native
+  def assertDeclareExportDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclareExportDeclaration(node: js.Object): Unit = js.native
+  def assertDeclareExportDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclareExportDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclareFunction(): Unit = js.native
+  def assertDeclareFunction(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclareFunction(node: js.Object): Unit = js.native
+  def assertDeclareFunction(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclareFunction(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclareInterface(): Unit = js.native
+  def assertDeclareInterface(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclareInterface(node: js.Object): Unit = js.native
+  def assertDeclareInterface(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclareInterface(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclareModule(): Unit = js.native
+  def assertDeclareModule(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclareModule(node: js.Object): Unit = js.native
+  def assertDeclareModule(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclareModule(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclareModuleExports(): Unit = js.native
+  def assertDeclareModuleExports(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclareModuleExports(node: js.Object): Unit = js.native
+  def assertDeclareModuleExports(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclareModuleExports(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclareOpaqueType(): Unit = js.native
+  def assertDeclareOpaqueType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclareOpaqueType(node: js.Object): Unit = js.native
+  def assertDeclareOpaqueType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclareOpaqueType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclareTypeAlias(): Unit = js.native
+  def assertDeclareTypeAlias(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclareTypeAlias(node: js.Object): Unit = js.native
+  def assertDeclareTypeAlias(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclareTypeAlias(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclareVariable(): Unit = js.native
+  def assertDeclareVariable(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclareVariable(node: js.Object): Unit = js.native
+  def assertDeclareVariable(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclareVariable(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDeclaredPredicate(): Unit = js.native
+  def assertDeclaredPredicate(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDeclaredPredicate(node: js.Object): Unit = js.native
+  def assertDeclaredPredicate(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDeclaredPredicate(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDecorator(): Unit = js.native
+  def assertDecorator(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDecorator(node: js.Object): Unit = js.native
+  def assertDecorator(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDecorator(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDirective(): Unit = js.native
+  def assertDirective(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDirective(node: js.Object): Unit = js.native
+  def assertDirective(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDirective(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDirectiveLiteral(): Unit = js.native
+  def assertDirectiveLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDirectiveLiteral(node: js.Object): Unit = js.native
+  def assertDirectiveLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDirectiveLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDoExpression(): Unit = js.native
+  def assertDoExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDoExpression(node: js.Object): Unit = js.native
+  def assertDoExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDoExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertDoWhileStatement(): Unit = js.native
+  def assertDoWhileStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertDoWhileStatement(node: js.Object): Unit = js.native
+  def assertDoWhileStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertDoWhileStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEmptyStatement(): Unit = js.native
+  def assertEmptyStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEmptyStatement(node: js.Object): Unit = js.native
+  def assertEmptyStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEmptyStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEmptyTypeAnnotation(): Unit = js.native
+  def assertEmptyTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEmptyTypeAnnotation(node: js.Object): Unit = js.native
+  def assertEmptyTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEmptyTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumBody(): Unit = js.native
+  def assertEnumBody(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumBody(node: js.Object): Unit = js.native
+  def assertEnumBody(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumBody(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumBooleanBody(): Unit = js.native
+  def assertEnumBooleanBody(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumBooleanBody(node: js.Object): Unit = js.native
+  def assertEnumBooleanBody(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumBooleanBody(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumBooleanMember(): Unit = js.native
+  def assertEnumBooleanMember(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumBooleanMember(node: js.Object): Unit = js.native
+  def assertEnumBooleanMember(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumBooleanMember(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumDeclaration(): Unit = js.native
+  def assertEnumDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumDeclaration(node: js.Object): Unit = js.native
+  def assertEnumDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumDefaultedMember(): Unit = js.native
+  def assertEnumDefaultedMember(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumDefaultedMember(node: js.Object): Unit = js.native
+  def assertEnumDefaultedMember(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumDefaultedMember(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumMember(): Unit = js.native
+  def assertEnumMember(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumMember(node: js.Object): Unit = js.native
+  def assertEnumMember(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumMember(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumNumberBody(): Unit = js.native
+  def assertEnumNumberBody(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumNumberBody(node: js.Object): Unit = js.native
+  def assertEnumNumberBody(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumNumberBody(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumNumberMember(): Unit = js.native
+  def assertEnumNumberMember(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumNumberMember(node: js.Object): Unit = js.native
+  def assertEnumNumberMember(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumNumberMember(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumStringBody(): Unit = js.native
+  def assertEnumStringBody(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumStringBody(node: js.Object): Unit = js.native
+  def assertEnumStringBody(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumStringBody(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumStringMember(): Unit = js.native
+  def assertEnumStringMember(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumStringMember(node: js.Object): Unit = js.native
+  def assertEnumStringMember(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumStringMember(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertEnumSymbolBody(): Unit = js.native
+  def assertEnumSymbolBody(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertEnumSymbolBody(node: js.Object): Unit = js.native
+  def assertEnumSymbolBody(node: js.Object, opts: js.Object): Unit = js.native
+  def assertEnumSymbolBody(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExistsTypeAnnotation(): Unit = js.native
+  def assertExistsTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExistsTypeAnnotation(node: js.Object): Unit = js.native
+  def assertExistsTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExistsTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExportAllDeclaration(): Unit = js.native
+  def assertExportAllDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExportAllDeclaration(node: js.Object): Unit = js.native
+  def assertExportAllDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExportAllDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExportDeclaration(): Unit = js.native
+  def assertExportDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExportDeclaration(node: js.Object): Unit = js.native
+  def assertExportDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExportDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExportDefaultDeclaration(): Unit = js.native
+  def assertExportDefaultDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExportDefaultDeclaration(node: js.Object): Unit = js.native
+  def assertExportDefaultDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExportDefaultDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExportDefaultSpecifier(): Unit = js.native
+  def assertExportDefaultSpecifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExportDefaultSpecifier(node: js.Object): Unit = js.native
+  def assertExportDefaultSpecifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExportDefaultSpecifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExportNamedDeclaration(): Unit = js.native
+  def assertExportNamedDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExportNamedDeclaration(node: js.Object): Unit = js.native
+  def assertExportNamedDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExportNamedDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExportNamespaceSpecifier(): Unit = js.native
+  def assertExportNamespaceSpecifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExportNamespaceSpecifier(node: js.Object): Unit = js.native
+  def assertExportNamespaceSpecifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExportNamespaceSpecifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExportSpecifier(): Unit = js.native
+  def assertExportSpecifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExportSpecifier(node: js.Object): Unit = js.native
+  def assertExportSpecifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExportSpecifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExpression(): Unit = js.native
+  def assertExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExpression(node: js.Object): Unit = js.native
+  def assertExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExpressionStatement(): Unit = js.native
+  def assertExpressionStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExpressionStatement(node: js.Object): Unit = js.native
+  def assertExpressionStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExpressionStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertExpressionWrapper(): Unit = js.native
+  def assertExpressionWrapper(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertExpressionWrapper(node: js.Object): Unit = js.native
+  def assertExpressionWrapper(node: js.Object, opts: js.Object): Unit = js.native
+  def assertExpressionWrapper(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFile(): Unit = js.native
+  def assertFile(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFile(node: js.Object): Unit = js.native
+  def assertFile(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFile(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFlow(): Unit = js.native
+  def assertFlow(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFlow(node: js.Object): Unit = js.native
+  def assertFlow(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFlow(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFlowBaseAnnotation(): Unit = js.native
+  def assertFlowBaseAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFlowBaseAnnotation(node: js.Object): Unit = js.native
+  def assertFlowBaseAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFlowBaseAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFlowDeclaration(): Unit = js.native
+  def assertFlowDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFlowDeclaration(node: js.Object): Unit = js.native
+  def assertFlowDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFlowDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFlowPredicate(): Unit = js.native
+  def assertFlowPredicate(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFlowPredicate(node: js.Object): Unit = js.native
+  def assertFlowPredicate(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFlowPredicate(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFlowType(): Unit = js.native
+  def assertFlowType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFlowType(node: js.Object): Unit = js.native
+  def assertFlowType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFlowType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFor(): Unit = js.native
+  def assertFor(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFor(node: js.Object): Unit = js.native
+  def assertFor(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFor(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertForInStatement(): Unit = js.native
+  def assertForInStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertForInStatement(node: js.Object): Unit = js.native
+  def assertForInStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertForInStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertForOfStatement(): Unit = js.native
+  def assertForOfStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertForOfStatement(node: js.Object): Unit = js.native
+  def assertForOfStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertForOfStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertForStatement(): Unit = js.native
+  def assertForStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertForStatement(node: js.Object): Unit = js.native
+  def assertForStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertForStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertForXStatement(): Unit = js.native
+  def assertForXStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertForXStatement(node: js.Object): Unit = js.native
+  def assertForXStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertForXStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFunction(): Unit = js.native
+  def assertFunction(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFunction(node: js.Object): Unit = js.native
+  def assertFunction(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFunction(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFunctionDeclaration(): Unit = js.native
+  def assertFunctionDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFunctionDeclaration(node: js.Object): Unit = js.native
+  def assertFunctionDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFunctionDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFunctionExpression(): Unit = js.native
+  def assertFunctionExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFunctionExpression(node: js.Object): Unit = js.native
+  def assertFunctionExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFunctionExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFunctionParent(): Unit = js.native
+  def assertFunctionParent(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFunctionParent(node: js.Object): Unit = js.native
+  def assertFunctionParent(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFunctionParent(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFunctionTypeAnnotation(): Unit = js.native
+  def assertFunctionTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFunctionTypeAnnotation(node: js.Object): Unit = js.native
+  def assertFunctionTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFunctionTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertFunctionTypeParam(): Unit = js.native
+  def assertFunctionTypeParam(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertFunctionTypeParam(node: js.Object): Unit = js.native
+  def assertFunctionTypeParam(node: js.Object, opts: js.Object): Unit = js.native
+  def assertFunctionTypeParam(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertGenericTypeAnnotation(): Unit = js.native
+  def assertGenericTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertGenericTypeAnnotation(node: js.Object): Unit = js.native
+  def assertGenericTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertGenericTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertIdentifier(): Unit = js.native
+  def assertIdentifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertIdentifier(node: js.Object): Unit = js.native
+  def assertIdentifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertIdentifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertIfStatement(): Unit = js.native
+  def assertIfStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertIfStatement(node: js.Object): Unit = js.native
+  def assertIfStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertIfStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertImmutable(): Unit = js.native
+  def assertImmutable(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertImmutable(node: js.Object): Unit = js.native
+  def assertImmutable(node: js.Object, opts: js.Object): Unit = js.native
+  def assertImmutable(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertImport(): Unit = js.native
+  def assertImport(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertImport(node: js.Object): Unit = js.native
+  def assertImport(node: js.Object, opts: js.Object): Unit = js.native
+  def assertImport(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertImportAttribute(): Unit = js.native
+  def assertImportAttribute(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertImportAttribute(node: js.Object): Unit = js.native
+  def assertImportAttribute(node: js.Object, opts: js.Object): Unit = js.native
+  def assertImportAttribute(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertImportDeclaration(): Unit = js.native
+  def assertImportDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertImportDeclaration(node: js.Object): Unit = js.native
+  def assertImportDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertImportDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertImportDefaultSpecifier(): Unit = js.native
+  def assertImportDefaultSpecifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertImportDefaultSpecifier(node: js.Object): Unit = js.native
+  def assertImportDefaultSpecifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertImportDefaultSpecifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertImportNamespaceSpecifier(): Unit = js.native
+  def assertImportNamespaceSpecifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertImportNamespaceSpecifier(node: js.Object): Unit = js.native
+  def assertImportNamespaceSpecifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertImportNamespaceSpecifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertImportSpecifier(): Unit = js.native
+  def assertImportSpecifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertImportSpecifier(node: js.Object): Unit = js.native
+  def assertImportSpecifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertImportSpecifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertInferredPredicate(): Unit = js.native
+  def assertInferredPredicate(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertInferredPredicate(node: js.Object): Unit = js.native
+  def assertInferredPredicate(node: js.Object, opts: js.Object): Unit = js.native
+  def assertInferredPredicate(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertInterfaceDeclaration(): Unit = js.native
+  def assertInterfaceDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertInterfaceDeclaration(node: js.Object): Unit = js.native
+  def assertInterfaceDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertInterfaceDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertInterfaceExtends(): Unit = js.native
+  def assertInterfaceExtends(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertInterfaceExtends(node: js.Object): Unit = js.native
+  def assertInterfaceExtends(node: js.Object, opts: js.Object): Unit = js.native
+  def assertInterfaceExtends(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertInterfaceTypeAnnotation(): Unit = js.native
+  def assertInterfaceTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertInterfaceTypeAnnotation(node: js.Object): Unit = js.native
+  def assertInterfaceTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertInterfaceTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertInterpreterDirective(): Unit = js.native
+  def assertInterpreterDirective(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertInterpreterDirective(node: js.Object): Unit = js.native
+  def assertInterpreterDirective(node: js.Object, opts: js.Object): Unit = js.native
+  def assertInterpreterDirective(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertIntersectionTypeAnnotation(): Unit = js.native
+  def assertIntersectionTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertIntersectionTypeAnnotation(node: js.Object): Unit = js.native
+  def assertIntersectionTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertIntersectionTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSX(): Unit = js.native
+  def assertJSX(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSX(node: js.Object): Unit = js.native
+  def assertJSX(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSX(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXAttribute(): Unit = js.native
+  def assertJSXAttribute(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXAttribute(node: js.Object): Unit = js.native
+  def assertJSXAttribute(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXAttribute(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXClosingElement(): Unit = js.native
+  def assertJSXClosingElement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXClosingElement(node: js.Object): Unit = js.native
+  def assertJSXClosingElement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXClosingElement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXClosingFragment(): Unit = js.native
+  def assertJSXClosingFragment(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXClosingFragment(node: js.Object): Unit = js.native
+  def assertJSXClosingFragment(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXClosingFragment(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXElement(): Unit = js.native
+  def assertJSXElement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXElement(node: js.Object): Unit = js.native
+  def assertJSXElement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXElement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXEmptyExpression(): Unit = js.native
+  def assertJSXEmptyExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXEmptyExpression(node: js.Object): Unit = js.native
+  def assertJSXEmptyExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXEmptyExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXExpressionContainer(): Unit = js.native
+  def assertJSXExpressionContainer(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXExpressionContainer(node: js.Object): Unit = js.native
+  def assertJSXExpressionContainer(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXExpressionContainer(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXFragment(): Unit = js.native
+  def assertJSXFragment(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXFragment(node: js.Object): Unit = js.native
+  def assertJSXFragment(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXFragment(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXIdentifier(): Unit = js.native
+  def assertJSXIdentifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXIdentifier(node: js.Object): Unit = js.native
+  def assertJSXIdentifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXIdentifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXMemberExpression(): Unit = js.native
+  def assertJSXMemberExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXMemberExpression(node: js.Object): Unit = js.native
+  def assertJSXMemberExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXMemberExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXNamespacedName(): Unit = js.native
+  def assertJSXNamespacedName(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXNamespacedName(node: js.Object): Unit = js.native
+  def assertJSXNamespacedName(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXNamespacedName(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXOpeningElement(): Unit = js.native
+  def assertJSXOpeningElement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXOpeningElement(node: js.Object): Unit = js.native
+  def assertJSXOpeningElement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXOpeningElement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXOpeningFragment(): Unit = js.native
+  def assertJSXOpeningFragment(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXOpeningFragment(node: js.Object): Unit = js.native
+  def assertJSXOpeningFragment(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXOpeningFragment(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXSpreadAttribute(): Unit = js.native
+  def assertJSXSpreadAttribute(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXSpreadAttribute(node: js.Object): Unit = js.native
+  def assertJSXSpreadAttribute(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXSpreadAttribute(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXSpreadChild(): Unit = js.native
+  def assertJSXSpreadChild(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXSpreadChild(node: js.Object): Unit = js.native
+  def assertJSXSpreadChild(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXSpreadChild(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertJSXText(): Unit = js.native
+  def assertJSXText(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertJSXText(node: js.Object): Unit = js.native
+  def assertJSXText(node: js.Object, opts: js.Object): Unit = js.native
+  def assertJSXText(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertLVal(): Unit = js.native
+  def assertLVal(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertLVal(node: js.Object): Unit = js.native
+  def assertLVal(node: js.Object, opts: js.Object): Unit = js.native
+  def assertLVal(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertLabeledStatement(): Unit = js.native
+  def assertLabeledStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertLabeledStatement(node: js.Object): Unit = js.native
+  def assertLabeledStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertLabeledStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertLiteral(): Unit = js.native
+  def assertLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertLiteral(node: js.Object): Unit = js.native
+  def assertLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertLogicalExpression(): Unit = js.native
+  def assertLogicalExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertLogicalExpression(node: js.Object): Unit = js.native
+  def assertLogicalExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertLogicalExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertLoop(): Unit = js.native
+  def assertLoop(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertLoop(node: js.Object): Unit = js.native
+  def assertLoop(node: js.Object, opts: js.Object): Unit = js.native
+  def assertLoop(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertMemberExpression(): Unit = js.native
+  def assertMemberExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertMemberExpression(node: js.Object): Unit = js.native
+  def assertMemberExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertMemberExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertMetaProperty(): Unit = js.native
+  def assertMetaProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertMetaProperty(node: js.Object): Unit = js.native
+  def assertMetaProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertMetaProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertMethod(): Unit = js.native
+  def assertMethod(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertMethod(node: js.Object): Unit = js.native
+  def assertMethod(node: js.Object, opts: js.Object): Unit = js.native
+  def assertMethod(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertMixedTypeAnnotation(): Unit = js.native
+  def assertMixedTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertMixedTypeAnnotation(node: js.Object): Unit = js.native
+  def assertMixedTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertMixedTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertModuleDeclaration(): Unit = js.native
+  def assertModuleDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertModuleDeclaration(node: js.Object): Unit = js.native
+  def assertModuleDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertModuleDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertModuleSpecifier(): Unit = js.native
+  def assertModuleSpecifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertModuleSpecifier(node: js.Object): Unit = js.native
+  def assertModuleSpecifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertModuleSpecifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertNewExpression(): Unit = js.native
+  def assertNewExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertNewExpression(node: js.Object): Unit = js.native
+  def assertNewExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertNewExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertNode(obj: js.Any): Unit = js.native
+  
+  def assertNoop(): Unit = js.native
+  def assertNoop(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertNoop(node: js.Object): Unit = js.native
+  def assertNoop(node: js.Object, opts: js.Object): Unit = js.native
+  def assertNoop(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertNullLiteral(): Unit = js.native
+  def assertNullLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertNullLiteral(node: js.Object): Unit = js.native
+  def assertNullLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertNullLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertNullLiteralTypeAnnotation(): Unit = js.native
+  def assertNullLiteralTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertNullLiteralTypeAnnotation(node: js.Object): Unit = js.native
+  def assertNullLiteralTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertNullLiteralTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertNullableTypeAnnotation(): Unit = js.native
+  def assertNullableTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertNullableTypeAnnotation(node: js.Object): Unit = js.native
+  def assertNullableTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertNullableTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertNumberLiteral(): Unit = js.native
+  def assertNumberLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertNumberLiteral(node: js.Object): Unit = js.native
+  def assertNumberLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertNumberLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertNumberLiteralTypeAnnotation(): Unit = js.native
+  def assertNumberLiteralTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertNumberLiteralTypeAnnotation(node: js.Object): Unit = js.native
+  def assertNumberLiteralTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertNumberLiteralTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertNumberTypeAnnotation(): Unit = js.native
+  def assertNumberTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertNumberTypeAnnotation(node: js.Object): Unit = js.native
+  def assertNumberTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertNumberTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertNumericLiteral(): Unit = js.native
+  def assertNumericLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertNumericLiteral(node: js.Object): Unit = js.native
+  def assertNumericLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertNumericLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectExpression(): Unit = js.native
+  def assertObjectExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectExpression(node: js.Object): Unit = js.native
+  def assertObjectExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectMember(): Unit = js.native
+  def assertObjectMember(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectMember(node: js.Object): Unit = js.native
+  def assertObjectMember(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectMember(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectMethod(): Unit = js.native
+  def assertObjectMethod(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectMethod(node: js.Object): Unit = js.native
+  def assertObjectMethod(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectMethod(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectPattern(): Unit = js.native
+  def assertObjectPattern(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectPattern(node: js.Object): Unit = js.native
+  def assertObjectPattern(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectPattern(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectProperty(): Unit = js.native
+  def assertObjectProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectProperty(node: js.Object): Unit = js.native
+  def assertObjectProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectTypeAnnotation(): Unit = js.native
+  def assertObjectTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectTypeAnnotation(node: js.Object): Unit = js.native
+  def assertObjectTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectTypeCallProperty(): Unit = js.native
+  def assertObjectTypeCallProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectTypeCallProperty(node: js.Object): Unit = js.native
+  def assertObjectTypeCallProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectTypeCallProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectTypeIndexer(): Unit = js.native
+  def assertObjectTypeIndexer(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectTypeIndexer(node: js.Object): Unit = js.native
+  def assertObjectTypeIndexer(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectTypeIndexer(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectTypeInternalSlot(): Unit = js.native
+  def assertObjectTypeInternalSlot(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectTypeInternalSlot(node: js.Object): Unit = js.native
+  def assertObjectTypeInternalSlot(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectTypeInternalSlot(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectTypeProperty(): Unit = js.native
+  def assertObjectTypeProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectTypeProperty(node: js.Object): Unit = js.native
+  def assertObjectTypeProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectTypeProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertObjectTypeSpreadProperty(): Unit = js.native
+  def assertObjectTypeSpreadProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertObjectTypeSpreadProperty(node: js.Object): Unit = js.native
+  def assertObjectTypeSpreadProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertObjectTypeSpreadProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertOpaqueType(): Unit = js.native
+  def assertOpaqueType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertOpaqueType(node: js.Object): Unit = js.native
+  def assertOpaqueType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertOpaqueType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertOptionalCallExpression(): Unit = js.native
+  def assertOptionalCallExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertOptionalCallExpression(node: js.Object): Unit = js.native
+  def assertOptionalCallExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertOptionalCallExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertOptionalMemberExpression(): Unit = js.native
+  def assertOptionalMemberExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertOptionalMemberExpression(node: js.Object): Unit = js.native
+  def assertOptionalMemberExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertOptionalMemberExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertParenthesizedExpression(): Unit = js.native
+  def assertParenthesizedExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertParenthesizedExpression(node: js.Object): Unit = js.native
+  def assertParenthesizedExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertParenthesizedExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertPattern(): Unit = js.native
+  def assertPattern(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertPattern(node: js.Object): Unit = js.native
+  def assertPattern(node: js.Object, opts: js.Object): Unit = js.native
+  def assertPattern(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertPatternLike(): Unit = js.native
+  def assertPatternLike(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertPatternLike(node: js.Object): Unit = js.native
+  def assertPatternLike(node: js.Object, opts: js.Object): Unit = js.native
+  def assertPatternLike(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertPipelineBareFunction(): Unit = js.native
+  def assertPipelineBareFunction(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertPipelineBareFunction(node: js.Object): Unit = js.native
+  def assertPipelineBareFunction(node: js.Object, opts: js.Object): Unit = js.native
+  def assertPipelineBareFunction(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertPipelinePrimaryTopicReference(): Unit = js.native
+  def assertPipelinePrimaryTopicReference(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertPipelinePrimaryTopicReference(node: js.Object): Unit = js.native
+  def assertPipelinePrimaryTopicReference(node: js.Object, opts: js.Object): Unit = js.native
+  def assertPipelinePrimaryTopicReference(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertPipelineTopicExpression(): Unit = js.native
+  def assertPipelineTopicExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertPipelineTopicExpression(node: js.Object): Unit = js.native
+  def assertPipelineTopicExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertPipelineTopicExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertPlaceholder(): Unit = js.native
+  def assertPlaceholder(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertPlaceholder(node: js.Object): Unit = js.native
+  def assertPlaceholder(node: js.Object, opts: js.Object): Unit = js.native
+  def assertPlaceholder(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertPrivate(): Unit = js.native
+  def assertPrivate(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertPrivate(node: js.Object): Unit = js.native
+  def assertPrivate(node: js.Object, opts: js.Object): Unit = js.native
+  def assertPrivate(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertPrivateName(): Unit = js.native
+  def assertPrivateName(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertPrivateName(node: js.Object): Unit = js.native
+  def assertPrivateName(node: js.Object, opts: js.Object): Unit = js.native
+  def assertPrivateName(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertProgram(): Unit = js.native
+  def assertProgram(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertProgram(node: js.Object): Unit = js.native
+  def assertProgram(node: js.Object, opts: js.Object): Unit = js.native
+  def assertProgram(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertProperty(): Unit = js.native
+  def assertProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertProperty(node: js.Object): Unit = js.native
+  def assertProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertPureish(): Unit = js.native
+  def assertPureish(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertPureish(node: js.Object): Unit = js.native
+  def assertPureish(node: js.Object, opts: js.Object): Unit = js.native
+  def assertPureish(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertQualifiedTypeIdentifier(): Unit = js.native
+  def assertQualifiedTypeIdentifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertQualifiedTypeIdentifier(node: js.Object): Unit = js.native
+  def assertQualifiedTypeIdentifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertQualifiedTypeIdentifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertRecordExpression(): Unit = js.native
+  def assertRecordExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertRecordExpression(node: js.Object): Unit = js.native
+  def assertRecordExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertRecordExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertRegExpLiteral(): Unit = js.native
+  def assertRegExpLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertRegExpLiteral(node: js.Object): Unit = js.native
+  def assertRegExpLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertRegExpLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertRegexLiteral(): Unit = js.native
+  def assertRegexLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertRegexLiteral(node: js.Object): Unit = js.native
+  def assertRegexLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertRegexLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertRestElement(): Unit = js.native
+  def assertRestElement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertRestElement(node: js.Object): Unit = js.native
+  def assertRestElement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertRestElement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertRestProperty(): Unit = js.native
+  def assertRestProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertRestProperty(node: js.Object): Unit = js.native
+  def assertRestProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertRestProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertReturnStatement(): Unit = js.native
+  def assertReturnStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertReturnStatement(node: js.Object): Unit = js.native
+  def assertReturnStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertReturnStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertScopable(): Unit = js.native
+  def assertScopable(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertScopable(node: js.Object): Unit = js.native
+  def assertScopable(node: js.Object, opts: js.Object): Unit = js.native
+  def assertScopable(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertSequenceExpression(): Unit = js.native
+  def assertSequenceExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertSequenceExpression(node: js.Object): Unit = js.native
+  def assertSequenceExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertSequenceExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertSpreadElement(): Unit = js.native
+  def assertSpreadElement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertSpreadElement(node: js.Object): Unit = js.native
+  def assertSpreadElement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertSpreadElement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertSpreadProperty(): Unit = js.native
+  def assertSpreadProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertSpreadProperty(node: js.Object): Unit = js.native
+  def assertSpreadProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertSpreadProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertStatement(): Unit = js.native
+  def assertStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertStatement(node: js.Object): Unit = js.native
+  def assertStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertStaticBlock(): Unit = js.native
+  def assertStaticBlock(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertStaticBlock(node: js.Object): Unit = js.native
+  def assertStaticBlock(node: js.Object, opts: js.Object): Unit = js.native
+  def assertStaticBlock(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertStringLiteral(): Unit = js.native
+  def assertStringLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertStringLiteral(node: js.Object): Unit = js.native
+  def assertStringLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertStringLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertStringLiteralTypeAnnotation(): Unit = js.native
+  def assertStringLiteralTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertStringLiteralTypeAnnotation(node: js.Object): Unit = js.native
+  def assertStringLiteralTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertStringLiteralTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertStringTypeAnnotation(): Unit = js.native
+  def assertStringTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertStringTypeAnnotation(node: js.Object): Unit = js.native
+  def assertStringTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertStringTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertSuper(): Unit = js.native
+  def assertSuper(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertSuper(node: js.Object): Unit = js.native
+  def assertSuper(node: js.Object, opts: js.Object): Unit = js.native
+  def assertSuper(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertSwitchCase(): Unit = js.native
+  def assertSwitchCase(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertSwitchCase(node: js.Object): Unit = js.native
+  def assertSwitchCase(node: js.Object, opts: js.Object): Unit = js.native
+  def assertSwitchCase(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertSwitchStatement(): Unit = js.native
+  def assertSwitchStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertSwitchStatement(node: js.Object): Unit = js.native
+  def assertSwitchStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertSwitchStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertSymbolTypeAnnotation(): Unit = js.native
+  def assertSymbolTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertSymbolTypeAnnotation(node: js.Object): Unit = js.native
+  def assertSymbolTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertSymbolTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSAnyKeyword(): Unit = js.native
+  def assertTSAnyKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSAnyKeyword(node: js.Object): Unit = js.native
+  def assertTSAnyKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSAnyKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSArrayType(): Unit = js.native
+  def assertTSArrayType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSArrayType(node: js.Object): Unit = js.native
+  def assertTSArrayType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSArrayType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSAsExpression(): Unit = js.native
+  def assertTSAsExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSAsExpression(node: js.Object): Unit = js.native
+  def assertTSAsExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSAsExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSBaseType(): Unit = js.native
+  def assertTSBaseType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSBaseType(node: js.Object): Unit = js.native
+  def assertTSBaseType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSBaseType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSBigIntKeyword(): Unit = js.native
+  def assertTSBigIntKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSBigIntKeyword(node: js.Object): Unit = js.native
+  def assertTSBigIntKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSBigIntKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSBooleanKeyword(): Unit = js.native
+  def assertTSBooleanKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSBooleanKeyword(node: js.Object): Unit = js.native
+  def assertTSBooleanKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSBooleanKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSCallSignatureDeclaration(): Unit = js.native
+  def assertTSCallSignatureDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSCallSignatureDeclaration(node: js.Object): Unit = js.native
+  def assertTSCallSignatureDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSCallSignatureDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSConditionalType(): Unit = js.native
+  def assertTSConditionalType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSConditionalType(node: js.Object): Unit = js.native
+  def assertTSConditionalType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSConditionalType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSConstructSignatureDeclaration(): Unit = js.native
+  def assertTSConstructSignatureDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSConstructSignatureDeclaration(node: js.Object): Unit = js.native
+  def assertTSConstructSignatureDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSConstructSignatureDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSConstructorType(): Unit = js.native
+  def assertTSConstructorType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSConstructorType(node: js.Object): Unit = js.native
+  def assertTSConstructorType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSConstructorType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSDeclareFunction(): Unit = js.native
+  def assertTSDeclareFunction(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSDeclareFunction(node: js.Object): Unit = js.native
+  def assertTSDeclareFunction(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSDeclareFunction(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSDeclareMethod(): Unit = js.native
+  def assertTSDeclareMethod(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSDeclareMethod(node: js.Object): Unit = js.native
+  def assertTSDeclareMethod(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSDeclareMethod(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSEntityName(): Unit = js.native
+  def assertTSEntityName(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSEntityName(node: js.Object): Unit = js.native
+  def assertTSEntityName(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSEntityName(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSEnumDeclaration(): Unit = js.native
+  def assertTSEnumDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSEnumDeclaration(node: js.Object): Unit = js.native
+  def assertTSEnumDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSEnumDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSEnumMember(): Unit = js.native
+  def assertTSEnumMember(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSEnumMember(node: js.Object): Unit = js.native
+  def assertTSEnumMember(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSEnumMember(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSExportAssignment(): Unit = js.native
+  def assertTSExportAssignment(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSExportAssignment(node: js.Object): Unit = js.native
+  def assertTSExportAssignment(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSExportAssignment(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSExpressionWithTypeArguments(): Unit = js.native
+  def assertTSExpressionWithTypeArguments(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSExpressionWithTypeArguments(node: js.Object): Unit = js.native
+  def assertTSExpressionWithTypeArguments(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSExpressionWithTypeArguments(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSExternalModuleReference(): Unit = js.native
+  def assertTSExternalModuleReference(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSExternalModuleReference(node: js.Object): Unit = js.native
+  def assertTSExternalModuleReference(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSExternalModuleReference(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSFunctionType(): Unit = js.native
+  def assertTSFunctionType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSFunctionType(node: js.Object): Unit = js.native
+  def assertTSFunctionType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSFunctionType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSImportEqualsDeclaration(): Unit = js.native
+  def assertTSImportEqualsDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSImportEqualsDeclaration(node: js.Object): Unit = js.native
+  def assertTSImportEqualsDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSImportEqualsDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSImportType(): Unit = js.native
+  def assertTSImportType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSImportType(node: js.Object): Unit = js.native
+  def assertTSImportType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSImportType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSIndexSignature(): Unit = js.native
+  def assertTSIndexSignature(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSIndexSignature(node: js.Object): Unit = js.native
+  def assertTSIndexSignature(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSIndexSignature(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSIndexedAccessType(): Unit = js.native
+  def assertTSIndexedAccessType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSIndexedAccessType(node: js.Object): Unit = js.native
+  def assertTSIndexedAccessType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSIndexedAccessType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSInferType(): Unit = js.native
+  def assertTSInferType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSInferType(node: js.Object): Unit = js.native
+  def assertTSInferType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSInferType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSInterfaceBody(): Unit = js.native
+  def assertTSInterfaceBody(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSInterfaceBody(node: js.Object): Unit = js.native
+  def assertTSInterfaceBody(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSInterfaceBody(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSInterfaceDeclaration(): Unit = js.native
+  def assertTSInterfaceDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSInterfaceDeclaration(node: js.Object): Unit = js.native
+  def assertTSInterfaceDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSInterfaceDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSIntersectionType(): Unit = js.native
+  def assertTSIntersectionType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSIntersectionType(node: js.Object): Unit = js.native
+  def assertTSIntersectionType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSIntersectionType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSIntrinsicKeyword(): Unit = js.native
+  def assertTSIntrinsicKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSIntrinsicKeyword(node: js.Object): Unit = js.native
+  def assertTSIntrinsicKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSIntrinsicKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSLiteralType(): Unit = js.native
+  def assertTSLiteralType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSLiteralType(node: js.Object): Unit = js.native
+  def assertTSLiteralType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSLiteralType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSMappedType(): Unit = js.native
+  def assertTSMappedType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSMappedType(node: js.Object): Unit = js.native
+  def assertTSMappedType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSMappedType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSMethodSignature(): Unit = js.native
+  def assertTSMethodSignature(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSMethodSignature(node: js.Object): Unit = js.native
+  def assertTSMethodSignature(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSMethodSignature(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSModuleBlock(): Unit = js.native
+  def assertTSModuleBlock(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSModuleBlock(node: js.Object): Unit = js.native
+  def assertTSModuleBlock(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSModuleBlock(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSModuleDeclaration(): Unit = js.native
+  def assertTSModuleDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSModuleDeclaration(node: js.Object): Unit = js.native
+  def assertTSModuleDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSModuleDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSNamedTupleMember(): Unit = js.native
+  def assertTSNamedTupleMember(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSNamedTupleMember(node: js.Object): Unit = js.native
+  def assertTSNamedTupleMember(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSNamedTupleMember(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSNamespaceExportDeclaration(): Unit = js.native
+  def assertTSNamespaceExportDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSNamespaceExportDeclaration(node: js.Object): Unit = js.native
+  def assertTSNamespaceExportDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSNamespaceExportDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSNeverKeyword(): Unit = js.native
+  def assertTSNeverKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSNeverKeyword(node: js.Object): Unit = js.native
+  def assertTSNeverKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSNeverKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSNonNullExpression(): Unit = js.native
+  def assertTSNonNullExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSNonNullExpression(node: js.Object): Unit = js.native
+  def assertTSNonNullExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSNonNullExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSNullKeyword(): Unit = js.native
+  def assertTSNullKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSNullKeyword(node: js.Object): Unit = js.native
+  def assertTSNullKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSNullKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSNumberKeyword(): Unit = js.native
+  def assertTSNumberKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSNumberKeyword(node: js.Object): Unit = js.native
+  def assertTSNumberKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSNumberKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSObjectKeyword(): Unit = js.native
+  def assertTSObjectKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSObjectKeyword(node: js.Object): Unit = js.native
+  def assertTSObjectKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSObjectKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSOptionalType(): Unit = js.native
+  def assertTSOptionalType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSOptionalType(node: js.Object): Unit = js.native
+  def assertTSOptionalType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSOptionalType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSParameterProperty(): Unit = js.native
+  def assertTSParameterProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSParameterProperty(node: js.Object): Unit = js.native
+  def assertTSParameterProperty(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSParameterProperty(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSParenthesizedType(): Unit = js.native
+  def assertTSParenthesizedType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSParenthesizedType(node: js.Object): Unit = js.native
+  def assertTSParenthesizedType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSParenthesizedType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSPropertySignature(): Unit = js.native
+  def assertTSPropertySignature(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSPropertySignature(node: js.Object): Unit = js.native
+  def assertTSPropertySignature(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSPropertySignature(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSQualifiedName(): Unit = js.native
+  def assertTSQualifiedName(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSQualifiedName(node: js.Object): Unit = js.native
+  def assertTSQualifiedName(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSQualifiedName(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSRestType(): Unit = js.native
+  def assertTSRestType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSRestType(node: js.Object): Unit = js.native
+  def assertTSRestType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSRestType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSStringKeyword(): Unit = js.native
+  def assertTSStringKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSStringKeyword(node: js.Object): Unit = js.native
+  def assertTSStringKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSStringKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSSymbolKeyword(): Unit = js.native
+  def assertTSSymbolKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSSymbolKeyword(node: js.Object): Unit = js.native
+  def assertTSSymbolKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSSymbolKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSThisType(): Unit = js.native
+  def assertTSThisType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSThisType(node: js.Object): Unit = js.native
+  def assertTSThisType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSThisType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTupleType(): Unit = js.native
+  def assertTSTupleType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTupleType(node: js.Object): Unit = js.native
+  def assertTSTupleType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTupleType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSType(): Unit = js.native
+  def assertTSType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSType(node: js.Object): Unit = js.native
+  def assertTSType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeAliasDeclaration(): Unit = js.native
+  def assertTSTypeAliasDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeAliasDeclaration(node: js.Object): Unit = js.native
+  def assertTSTypeAliasDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeAliasDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeAnnotation(): Unit = js.native
+  def assertTSTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeAnnotation(node: js.Object): Unit = js.native
+  def assertTSTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeAssertion(): Unit = js.native
+  def assertTSTypeAssertion(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeAssertion(node: js.Object): Unit = js.native
+  def assertTSTypeAssertion(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeAssertion(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeElement(): Unit = js.native
+  def assertTSTypeElement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeElement(node: js.Object): Unit = js.native
+  def assertTSTypeElement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeElement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeLiteral(): Unit = js.native
+  def assertTSTypeLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeLiteral(node: js.Object): Unit = js.native
+  def assertTSTypeLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeOperator(): Unit = js.native
+  def assertTSTypeOperator(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeOperator(node: js.Object): Unit = js.native
+  def assertTSTypeOperator(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeOperator(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeParameter(): Unit = js.native
+  def assertTSTypeParameter(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeParameter(node: js.Object): Unit = js.native
+  def assertTSTypeParameter(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeParameter(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeParameterDeclaration(): Unit = js.native
+  def assertTSTypeParameterDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeParameterDeclaration(node: js.Object): Unit = js.native
+  def assertTSTypeParameterDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeParameterDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeParameterInstantiation(): Unit = js.native
+  def assertTSTypeParameterInstantiation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeParameterInstantiation(node: js.Object): Unit = js.native
+  def assertTSTypeParameterInstantiation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeParameterInstantiation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypePredicate(): Unit = js.native
+  def assertTSTypePredicate(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypePredicate(node: js.Object): Unit = js.native
+  def assertTSTypePredicate(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypePredicate(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeQuery(): Unit = js.native
+  def assertTSTypeQuery(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeQuery(node: js.Object): Unit = js.native
+  def assertTSTypeQuery(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeQuery(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSTypeReference(): Unit = js.native
+  def assertTSTypeReference(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSTypeReference(node: js.Object): Unit = js.native
+  def assertTSTypeReference(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSTypeReference(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSUndefinedKeyword(): Unit = js.native
+  def assertTSUndefinedKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSUndefinedKeyword(node: js.Object): Unit = js.native
+  def assertTSUndefinedKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSUndefinedKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSUnionType(): Unit = js.native
+  def assertTSUnionType(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSUnionType(node: js.Object): Unit = js.native
+  def assertTSUnionType(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSUnionType(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSUnknownKeyword(): Unit = js.native
+  def assertTSUnknownKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSUnknownKeyword(node: js.Object): Unit = js.native
+  def assertTSUnknownKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSUnknownKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTSVoidKeyword(): Unit = js.native
+  def assertTSVoidKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTSVoidKeyword(node: js.Object): Unit = js.native
+  def assertTSVoidKeyword(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTSVoidKeyword(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTaggedTemplateExpression(): Unit = js.native
+  def assertTaggedTemplateExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTaggedTemplateExpression(node: js.Object): Unit = js.native
+  def assertTaggedTemplateExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTaggedTemplateExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTemplateElement(): Unit = js.native
+  def assertTemplateElement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTemplateElement(node: js.Object): Unit = js.native
+  def assertTemplateElement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTemplateElement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTemplateLiteral(): Unit = js.native
+  def assertTemplateLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTemplateLiteral(node: js.Object): Unit = js.native
+  def assertTemplateLiteral(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTemplateLiteral(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTerminatorless(): Unit = js.native
+  def assertTerminatorless(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTerminatorless(node: js.Object): Unit = js.native
+  def assertTerminatorless(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTerminatorless(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertThisExpression(): Unit = js.native
+  def assertThisExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertThisExpression(node: js.Object): Unit = js.native
+  def assertThisExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertThisExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertThisTypeAnnotation(): Unit = js.native
+  def assertThisTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertThisTypeAnnotation(node: js.Object): Unit = js.native
+  def assertThisTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertThisTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertThrowStatement(): Unit = js.native
+  def assertThrowStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertThrowStatement(node: js.Object): Unit = js.native
+  def assertThrowStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertThrowStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTryStatement(): Unit = js.native
+  def assertTryStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTryStatement(node: js.Object): Unit = js.native
+  def assertTryStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTryStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTupleExpression(): Unit = js.native
+  def assertTupleExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTupleExpression(node: js.Object): Unit = js.native
+  def assertTupleExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTupleExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTupleTypeAnnotation(): Unit = js.native
+  def assertTupleTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTupleTypeAnnotation(node: js.Object): Unit = js.native
+  def assertTupleTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTupleTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTypeAlias(): Unit = js.native
+  def assertTypeAlias(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTypeAlias(node: js.Object): Unit = js.native
+  def assertTypeAlias(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTypeAlias(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTypeAnnotation(): Unit = js.native
+  def assertTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTypeAnnotation(node: js.Object): Unit = js.native
+  def assertTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTypeCastExpression(): Unit = js.native
+  def assertTypeCastExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTypeCastExpression(node: js.Object): Unit = js.native
+  def assertTypeCastExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTypeCastExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTypeParameter(): Unit = js.native
+  def assertTypeParameter(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTypeParameter(node: js.Object): Unit = js.native
+  def assertTypeParameter(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTypeParameter(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTypeParameterDeclaration(): Unit = js.native
+  def assertTypeParameterDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTypeParameterDeclaration(node: js.Object): Unit = js.native
+  def assertTypeParameterDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTypeParameterDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTypeParameterInstantiation(): Unit = js.native
+  def assertTypeParameterInstantiation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTypeParameterInstantiation(node: js.Object): Unit = js.native
+  def assertTypeParameterInstantiation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTypeParameterInstantiation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertTypeofTypeAnnotation(): Unit = js.native
+  def assertTypeofTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertTypeofTypeAnnotation(node: js.Object): Unit = js.native
+  def assertTypeofTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertTypeofTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertUnaryExpression(): Unit = js.native
+  def assertUnaryExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertUnaryExpression(node: js.Object): Unit = js.native
+  def assertUnaryExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertUnaryExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertUnaryLike(): Unit = js.native
+  def assertUnaryLike(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertUnaryLike(node: js.Object): Unit = js.native
+  def assertUnaryLike(node: js.Object, opts: js.Object): Unit = js.native
+  def assertUnaryLike(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertUnionTypeAnnotation(): Unit = js.native
+  def assertUnionTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertUnionTypeAnnotation(node: js.Object): Unit = js.native
+  def assertUnionTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertUnionTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertUpdateExpression(): Unit = js.native
+  def assertUpdateExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertUpdateExpression(node: js.Object): Unit = js.native
+  def assertUpdateExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertUpdateExpression(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertUserWhitespacable(): Unit = js.native
+  def assertUserWhitespacable(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertUserWhitespacable(node: js.Object): Unit = js.native
+  def assertUserWhitespacable(node: js.Object, opts: js.Object): Unit = js.native
+  def assertUserWhitespacable(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertV8IntrinsicIdentifier(): Unit = js.native
+  def assertV8IntrinsicIdentifier(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertV8IntrinsicIdentifier(node: js.Object): Unit = js.native
+  def assertV8IntrinsicIdentifier(node: js.Object, opts: js.Object): Unit = js.native
+  def assertV8IntrinsicIdentifier(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertVariableDeclaration(): Unit = js.native
+  def assertVariableDeclaration(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertVariableDeclaration(node: js.Object): Unit = js.native
+  def assertVariableDeclaration(node: js.Object, opts: js.Object): Unit = js.native
+  def assertVariableDeclaration(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertVariableDeclarator(): Unit = js.native
+  def assertVariableDeclarator(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertVariableDeclarator(node: js.Object): Unit = js.native
+  def assertVariableDeclarator(node: js.Object, opts: js.Object): Unit = js.native
+  def assertVariableDeclarator(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertVariance(): Unit = js.native
+  def assertVariance(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertVariance(node: js.Object): Unit = js.native
+  def assertVariance(node: js.Object, opts: js.Object): Unit = js.native
+  def assertVariance(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertVoidTypeAnnotation(): Unit = js.native
+  def assertVoidTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertVoidTypeAnnotation(node: js.Object): Unit = js.native
+  def assertVoidTypeAnnotation(node: js.Object, opts: js.Object): Unit = js.native
+  def assertVoidTypeAnnotation(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertWhile(): Unit = js.native
+  def assertWhile(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertWhile(node: js.Object): Unit = js.native
+  def assertWhile(node: js.Object, opts: js.Object): Unit = js.native
+  def assertWhile(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertWhileStatement(): Unit = js.native
+  def assertWhileStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertWhileStatement(node: js.Object): Unit = js.native
+  def assertWhileStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertWhileStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertWithStatement(): Unit = js.native
+  def assertWithStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertWithStatement(node: js.Object): Unit = js.native
+  def assertWithStatement(node: js.Object, opts: js.Object): Unit = js.native
+  def assertWithStatement(node: Null, opts: js.Object): Unit = js.native
+  
+  def assertYieldExpression(): Unit = js.native
+  def assertYieldExpression(node: js.UndefOr[scala.Nothing], opts: js.Object): Unit = js.native
+  def assertYieldExpression(node: js.Object): Unit = js.native
+  def assertYieldExpression(node: js.Object, opts: js.Object): Unit = js.native
+  def assertYieldExpression(node: Null, opts: js.Object): Unit = js.native
   
   def assignmentExpression(operator: String, left: LVal, right: Expression): AssignmentExpression_ = js.native
   
@@ -454,7 +2204,7 @@ trait Typeoftypes extends js.Object {
   def breakStatement(): BreakStatement_ = js.native
   def breakStatement(label: Identifier_): BreakStatement_ = js.native
   
-  def buildChildren(node: Children): js.Array[
+  def buildChildren(node: ChildrenReadonlyArray): js.Array[
     JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | JSXFragment_
   ] = js.native
   
@@ -632,11 +2382,25 @@ trait Typeoftypes extends js.Object {
     _static: Boolean
   ): ClassPrivateMethod_ = js.native
   
-  def classPrivateProperty(key: PrivateName_): ClassPrivateProperty_ = js.native
-  def classPrivateProperty(key: PrivateName_, value: js.UndefOr[scala.Nothing], decorators: js.Array[Decorator_]): ClassPrivateProperty_ = js.native
-  def classPrivateProperty(key: PrivateName_, value: Null, decorators: js.Array[Decorator_]): ClassPrivateProperty_ = js.native
-  def classPrivateProperty(key: PrivateName_, value: Expression): ClassPrivateProperty_ = js.native
-  def classPrivateProperty(key: PrivateName_, value: Expression, decorators: js.Array[Decorator_]): ClassPrivateProperty_ = js.native
+  def classPrivateProperty(
+    key: PrivateName_,
+    value: js.UndefOr[scala.Nothing],
+    decorators: js.UndefOr[scala.Nothing],
+    _static: js.Any
+  ): ClassPrivateProperty_ = js.native
+  def classPrivateProperty(
+    key: PrivateName_,
+    value: js.UndefOr[scala.Nothing],
+    decorators: js.Array[Decorator_],
+    _static: js.Any
+  ): ClassPrivateProperty_ = js.native
+  def classPrivateProperty(key: PrivateName_, value: js.UndefOr[scala.Nothing], decorators: Null, _static: js.Any): ClassPrivateProperty_ = js.native
+  def classPrivateProperty(key: PrivateName_, value: Null, decorators: js.UndefOr[scala.Nothing], _static: js.Any): ClassPrivateProperty_ = js.native
+  def classPrivateProperty(key: PrivateName_, value: Null, decorators: js.Array[Decorator_], _static: js.Any): ClassPrivateProperty_ = js.native
+  def classPrivateProperty(key: PrivateName_, value: Null, decorators: Null, _static: js.Any): ClassPrivateProperty_ = js.native
+  def classPrivateProperty(key: PrivateName_, value: Expression, decorators: js.UndefOr[scala.Nothing], _static: js.Any): ClassPrivateProperty_ = js.native
+  def classPrivateProperty(key: PrivateName_, value: Expression, decorators: js.Array[Decorator_], _static: js.Any): ClassPrivateProperty_ = js.native
+  def classPrivateProperty(key: PrivateName_, value: Expression, decorators: Null, _static: js.Any): ClassPrivateProperty_ = js.native
   
   def classProperty(
     key: Identifier_ | StringLiteral_ | NumericLiteral_ | Expression,
@@ -872,8 +2636,8 @@ trait Typeoftypes extends js.Object {
   
   def emptyTypeAnnotation(): EmptyTypeAnnotation_ = js.native
   
-  def ensureBlock(node: Extract[Node, Body]): BlockStatement_ = js.native
-  def ensureBlock[K /* <: /* keyof std.Extract<@babel/types.@babel/types.Node, @babel/types.anon.Body> */ String */](node: Extract[Node, Record[K, BlockStatement_ | Statement | Expression]], key: K): BlockStatement_ = js.native
+  def ensureBlock(node: Extract[Node, `0`]): BlockStatement_ = js.native
+  def ensureBlock[K /* <: /* keyof std.Extract<@babel/types.@babel/types.Node, @babel/types.anon.0> */ String */](node: Extract[Node, Record[K, BlockStatement_ | Statement | Expression]], key: K): BlockStatement_ = js.native
   
   def enumBooleanBody(members: js.Array[EnumBooleanMember_]): EnumBooleanBody_ = js.native
   
@@ -947,6 +2711,7 @@ trait Typeoftypes extends js.Object {
   def exportNamespaceSpecifier(exported: Identifier_): ExportNamespaceSpecifier_ = js.native
   
   def exportSpecifier(local: Identifier_, exported: Identifier_): ExportSpecifier_ = js.native
+  def exportSpecifier(local: Identifier_, exported: StringLiteral_): ExportSpecifier_ = js.native
   
   def expressionStatement(expression: Expression): ExpressionStatement_ = js.native
   
@@ -1265,6 +3030,7 @@ trait Typeoftypes extends js.Object {
   def `import`(): Import_ = js.native
   
   def importAttribute(key: Identifier_, value: StringLiteral_): ImportAttribute_ = js.native
+  def importAttribute(key: StringLiteral_, value: StringLiteral_): ImportAttribute_ = js.native
   
   def importDeclaration(
     specifiers: js.Array[ImportSpecifier_ | ImportDefaultSpecifier_ | ImportNamespaceSpecifier_],
@@ -1276,6 +3042,7 @@ trait Typeoftypes extends js.Object {
   def importNamespaceSpecifier(local: Identifier_): ImportNamespaceSpecifier_ = js.native
   
   def importSpecifier(local: Identifier_, imported: Identifier_): ImportSpecifier_ = js.native
+  def importSpecifier(local: Identifier_, imported: StringLiteral_): ImportSpecifier_ = js.native
   
   def inferredPredicate(): InferredPredicate_ = js.native
   
@@ -1357,10 +3124,10 @@ trait Typeoftypes extends js.Object {
   def is(`type`: String, n: js.UndefOr[Node], required: Partial[Node]): /* is @babel/types.@babel/types.Node */ Boolean = js.native
   def is(`type`: String, n: Null, required: Partial[Node]): /* is @babel/types.@babel/types.Node */ Boolean = js.native
   def is(`type`: String, n: Node): /* is @babel/types.@babel/types.Node */ Boolean = js.native
-  def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 240 */ js.Any */](`type`: T): /* is std.Extract<@babel/types.@babel/types.Node, @babel/types.anon.Type<T>> */ Boolean = js.native
-  def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 240 */ js.Any */](`type`: T, n: Node): /* is std.Extract<@babel/types.@babel/types.Node, @babel/types.anon.Type<T>> */ Boolean = js.native
-  def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 240 */ js.Any */, P /* <: Extract[Node, Type[T]] */](`type`: T, n: js.UndefOr[Node], required: Partial[P]): /* is P */ Boolean = js.native
-  def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 240 */ js.Any */, P /* <: Extract[Node, Type[T]] */](`type`: T, n: Null, required: Partial[P]): /* is P */ Boolean = js.native
+  def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 242 */ js.Any */](`type`: T): /* is std.Extract<@babel/types.@babel/types.Node, @babel/types.anon.Type<T>> */ Boolean = js.native
+  def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 242 */ js.Any */](`type`: T, n: Node): /* is std.Extract<@babel/types.@babel/types.Node, @babel/types.anon.Type<T>> */ Boolean = js.native
+  def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 242 */ js.Any */, P /* <: Extract[Node, Type[T]] */](`type`: T, n: js.UndefOr[Node], required: Partial[P]): /* is P */ Boolean = js.native
+  def is[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 242 */ js.Any */, P /* <: Extract[Node, Type[T]] */](`type`: T, n: Null, required: Partial[P]): /* is P */ Boolean = js.native
   
   def isAnyTypeAnnotation(): /* is @babel/types.@babel/types.AnyTypeAnnotation */ Boolean = js.native
   def isAnyTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.AnyTypeAnnotation */ Boolean = js.native
@@ -2234,11 +4001,11 @@ trait Typeoftypes extends js.Object {
   def isNullableTypeAnnotation(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.NullableTypeAnnotation */ Boolean = js.native
   def isNullableTypeAnnotation(node: Null, opts: js.Object): /* is @babel/types.@babel/types.NullableTypeAnnotation */ Boolean = js.native
   
-  def isNumberLiteral(): Boolean = js.native
-  def isNumberLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Boolean = js.native
-  def isNumberLiteral(node: js.Object): Boolean = js.native
-  def isNumberLiteral(node: js.Object, opts: js.Object): Boolean = js.native
-  def isNumberLiteral(node: Null, opts: js.Object): Boolean = js.native
+  def isNumberLiteral(): /* is @babel/types.@babel/types.NumericLiteral */ Boolean = js.native
+  def isNumberLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.NumericLiteral */ Boolean = js.native
+  def isNumberLiteral(node: js.Object): /* is @babel/types.@babel/types.NumericLiteral */ Boolean = js.native
+  def isNumberLiteral(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.NumericLiteral */ Boolean = js.native
+  def isNumberLiteral(node: Null, opts: js.Object): /* is @babel/types.@babel/types.NumericLiteral */ Boolean = js.native
   
   def isNumberLiteralTypeAnnotation(): /* is @babel/types.@babel/types.NumberLiteralTypeAnnotation */ Boolean = js.native
   def isNumberLiteralTypeAnnotation(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.NumberLiteralTypeAnnotation */ Boolean = js.native
@@ -2385,8 +4152,8 @@ trait Typeoftypes extends js.Object {
   def isPlaceholder(node: Null, opts: js.Object): /* is @babel/types.@babel/types.Placeholder */ Boolean = js.native
   
   def isPlaceholderType(
-    placeholderType: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 240 */ js.Any,
-    targetType: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 240 */ js.Any
+    placeholderType: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 242 */ js.Any,
+    targetType: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 242 */ js.Any
   ): Boolean = js.native
   
   def isPrivate(): /* is @babel/types.@babel/types.Private */ Boolean = js.native
@@ -2440,11 +4207,11 @@ trait Typeoftypes extends js.Object {
   def isRegExpLiteral(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.RegExpLiteral */ Boolean = js.native
   def isRegExpLiteral(node: Null, opts: js.Object): /* is @babel/types.@babel/types.RegExpLiteral */ Boolean = js.native
   
-  def isRegexLiteral(): Boolean = js.native
-  def isRegexLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): Boolean = js.native
-  def isRegexLiteral(node: js.Object): Boolean = js.native
-  def isRegexLiteral(node: js.Object, opts: js.Object): Boolean = js.native
-  def isRegexLiteral(node: Null, opts: js.Object): Boolean = js.native
+  def isRegexLiteral(): /* is @babel/types.@babel/types.RegExpLiteral */ Boolean = js.native
+  def isRegexLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.RegExpLiteral */ Boolean = js.native
+  def isRegexLiteral(node: js.Object): /* is @babel/types.@babel/types.RegExpLiteral */ Boolean = js.native
+  def isRegexLiteral(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.RegExpLiteral */ Boolean = js.native
+  def isRegexLiteral(node: Null, opts: js.Object): /* is @babel/types.@babel/types.RegExpLiteral */ Boolean = js.native
   
   def isRestElement(): /* is @babel/types.@babel/types.RestElement */ Boolean = js.native
   def isRestElement(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.RestElement */ Boolean = js.native
@@ -2452,11 +4219,11 @@ trait Typeoftypes extends js.Object {
   def isRestElement(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.RestElement */ Boolean = js.native
   def isRestElement(node: Null, opts: js.Object): /* is @babel/types.@babel/types.RestElement */ Boolean = js.native
   
-  def isRestProperty(): Boolean = js.native
-  def isRestProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Boolean = js.native
-  def isRestProperty(node: js.Object): Boolean = js.native
-  def isRestProperty(node: js.Object, opts: js.Object): Boolean = js.native
-  def isRestProperty(node: Null, opts: js.Object): Boolean = js.native
+  def isRestProperty(): /* is @babel/types.@babel/types.RestElement */ Boolean = js.native
+  def isRestProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.RestElement */ Boolean = js.native
+  def isRestProperty(node: js.Object): /* is @babel/types.@babel/types.RestElement */ Boolean = js.native
+  def isRestProperty(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.RestElement */ Boolean = js.native
+  def isRestProperty(node: Null, opts: js.Object): /* is @babel/types.@babel/types.RestElement */ Boolean = js.native
   
   def isReturnStatement(): /* is @babel/types.@babel/types.ReturnStatement */ Boolean = js.native
   def isReturnStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.ReturnStatement */ Boolean = js.native
@@ -2486,17 +4253,23 @@ trait Typeoftypes extends js.Object {
   def isSpreadElement(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.SpreadElement */ Boolean = js.native
   def isSpreadElement(node: Null, opts: js.Object): /* is @babel/types.@babel/types.SpreadElement */ Boolean = js.native
   
-  def isSpreadProperty(): Boolean = js.native
-  def isSpreadProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): Boolean = js.native
-  def isSpreadProperty(node: js.Object): Boolean = js.native
-  def isSpreadProperty(node: js.Object, opts: js.Object): Boolean = js.native
-  def isSpreadProperty(node: Null, opts: js.Object): Boolean = js.native
+  def isSpreadProperty(): /* is @babel/types.@babel/types.SpreadElement */ Boolean = js.native
+  def isSpreadProperty(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.SpreadElement */ Boolean = js.native
+  def isSpreadProperty(node: js.Object): /* is @babel/types.@babel/types.SpreadElement */ Boolean = js.native
+  def isSpreadProperty(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.SpreadElement */ Boolean = js.native
+  def isSpreadProperty(node: Null, opts: js.Object): /* is @babel/types.@babel/types.SpreadElement */ Boolean = js.native
   
   def isStatement(): /* is @babel/types.@babel/types.Statement */ Boolean = js.native
   def isStatement(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.Statement */ Boolean = js.native
   def isStatement(node: js.Object): /* is @babel/types.@babel/types.Statement */ Boolean = js.native
   def isStatement(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.Statement */ Boolean = js.native
   def isStatement(node: Null, opts: js.Object): /* is @babel/types.@babel/types.Statement */ Boolean = js.native
+  
+  def isStaticBlock(): /* is @babel/types.@babel/types.StaticBlock */ Boolean = js.native
+  def isStaticBlock(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.StaticBlock */ Boolean = js.native
+  def isStaticBlock(node: js.Object): /* is @babel/types.@babel/types.StaticBlock */ Boolean = js.native
+  def isStaticBlock(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.StaticBlock */ Boolean = js.native
+  def isStaticBlock(node: Null, opts: js.Object): /* is @babel/types.@babel/types.StaticBlock */ Boolean = js.native
   
   def isStringLiteral(): /* is @babel/types.@babel/types.StringLiteral */ Boolean = js.native
   def isStringLiteral(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.StringLiteral */ Boolean = js.native
@@ -2701,6 +4474,12 @@ trait Typeoftypes extends js.Object {
   def isTSIntersectionType(node: js.Object): /* is @babel/types.@babel/types.TSIntersectionType */ Boolean = js.native
   def isTSIntersectionType(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.TSIntersectionType */ Boolean = js.native
   def isTSIntersectionType(node: Null, opts: js.Object): /* is @babel/types.@babel/types.TSIntersectionType */ Boolean = js.native
+  
+  def isTSIntrinsicKeyword(): /* is @babel/types.@babel/types.TSIntrinsicKeyword */ Boolean = js.native
+  def isTSIntrinsicKeyword(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.TSIntrinsicKeyword */ Boolean = js.native
+  def isTSIntrinsicKeyword(node: js.Object): /* is @babel/types.@babel/types.TSIntrinsicKeyword */ Boolean = js.native
+  def isTSIntrinsicKeyword(node: js.Object, opts: js.Object): /* is @babel/types.@babel/types.TSIntrinsicKeyword */ Boolean = js.native
+  def isTSIntrinsicKeyword(node: Null, opts: js.Object): /* is @babel/types.@babel/types.TSIntrinsicKeyword */ Boolean = js.native
   
   def isTSLiteralType(): /* is @babel/types.@babel/types.TSLiteralType */ Boolean = js.native
   def isTSLiteralType(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.TSLiteralType */ Boolean = js.native
@@ -2999,7 +4778,7 @@ trait Typeoftypes extends js.Object {
   def isType(nodetype: js.UndefOr[scala.Nothing], targetType: String): Boolean = js.native
   def isType(nodetype: String, targetType: String): Boolean = js.native
   def isType(nodetype: Null, targetType: String): Boolean = js.native
-  def isType[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 240 */ js.Any */](nodetype: String, targetType: T): /* is T */ Boolean = js.native
+  def isType[T /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 242 */ js.Any */](nodetype: String, targetType: T): /* is T */ Boolean = js.native
   
   def isTypeAlias(): /* is @babel/types.@babel/types.TypeAlias */ Boolean = js.native
   def isTypeAlias(node: js.UndefOr[scala.Nothing], opts: js.Object): /* is @babel/types.@babel/types.TypeAlias */ Boolean = js.native
@@ -3464,7 +5243,7 @@ trait Typeoftypes extends js.Object {
   @JSName("placeholder")
   def placeholder_StringLiteral(expectedNode: StringLiteral, name: Identifier_): Placeholder_ = js.native
   
-  def prependToMemberExpression[T /* <: PickMemberExpressionobjec */](member: T, prepend: Expression): T = js.native
+  def prependToMemberExpression[T /* <: PickMemberExpressionobjecObject */](member: T, prepend: Expression): T = js.native
   
   def privateName(id: Identifier_): PrivateName_ = js.native
   
@@ -3549,6 +5328,8 @@ trait Typeoftypes extends js.Object {
   
   def spreadElement(argument: Expression): SpreadElement_ = js.native
   
+  def staticBlock(body: js.Array[Statement]): StaticBlock_ = js.native
+  
   def stringLiteral(value: String): StringLiteral_ = js.native
   
   def stringLiteralTypeAnnotation(value: String): StringLiteralTypeAnnotation_ = js.native
@@ -3570,7 +5351,7 @@ trait Typeoftypes extends js.Object {
   def templateElement(value: Cooked): TemplateElement_ = js.native
   def templateElement(value: Cooked, tail: Boolean): TemplateElement_ = js.native
   
-  def templateLiteral(quasis: js.Array[TemplateElement_], expressions: js.Array[Expression]): TemplateLiteral_ = js.native
+  def templateLiteral(quasis: js.Array[TemplateElement_], expressions: js.Array[Expression | TSType]): TemplateLiteral_ = js.native
   
   def thisExpression(): ThisExpression_ = js.native
   
@@ -3607,7 +5388,7 @@ trait Typeoftypes extends js.Object {
   def toKeyAlias(node: Property): String = js.native
   def toKeyAlias(node: Property, key: Node): String = js.native
   
-  def toSequenceExpression(nodes: js.Array[Node], scope: BuildUndefinedNode): js.UndefOr[SequenceExpression_] = js.native
+  def toSequenceExpression(nodes: js.Array[Node], scope: Push): js.UndefOr[SequenceExpression_] = js.native
   
   def toStatement(node: AssignmentExpression_): ExpressionStatement_ = js.native
   def toStatement(node: AssignmentExpression_, ignore: Boolean): ExpressionStatement_ = js.native
@@ -4031,13 +5812,18 @@ trait Typeoftypes extends js.Object {
   
   def tsIntersectionType(types: js.Array[TSType]): TSIntersectionType_ = js.native
   
+  def tsIntrinsicKeyword(): TSIntrinsicKeyword_ = js.native
+  
   def tsLiteralType(literal: BigIntLiteral_): TSLiteralType_ = js.native
   def tsLiteralType(literal: BooleanLiteral_): TSLiteralType_ = js.native
   def tsLiteralType(literal: NumericLiteral_): TSLiteralType_ = js.native
   def tsLiteralType(literal: StringLiteral_): TSLiteralType_ = js.native
   
   def tsMappedType(typeParameter: TSTypeParameter_): TSMappedType_ = js.native
+  def tsMappedType(typeParameter: TSTypeParameter_, typeAnnotation: js.UndefOr[scala.Nothing], nameType: TSType): TSMappedType_ = js.native
+  def tsMappedType(typeParameter: TSTypeParameter_, typeAnnotation: Null, nameType: TSType): TSMappedType_ = js.native
   def tsMappedType(typeParameter: TSTypeParameter_, typeAnnotation: TSType): TSMappedType_ = js.native
+  def tsMappedType(typeParameter: TSTypeParameter_, typeAnnotation: TSType, nameType: TSType): TSMappedType_ = js.native
   
   def tsMethodSignature(
     key: Expression,

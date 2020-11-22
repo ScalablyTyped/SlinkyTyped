@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object interfaceMod {
   
+  type CustomFormat[DateType] = js.Function1[/* value */ DateType, java.lang.String]
+  
   type DisabledTime[DateType] = js.Function1[
     /* date */ DateType | scala.Null, 
     typingsSlinky.rcPicker.interfaceMod.DisabledTimes

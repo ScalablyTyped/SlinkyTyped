@@ -19,6 +19,9 @@ object wampyStrings {
   def last: last = "last".asInstanceOf[last]
   
   @scala.inline
+  def loose: loose = "loose".asInstanceOf[loose]
+  
+  @scala.inline
   def prefix: prefix = "prefix".asInstanceOf[prefix]
   
   @scala.inline
@@ -32,6 +35,9 @@ object wampyStrings {
   
   @scala.inline
   def skip: skip = "skip".asInstanceOf[skip]
+  
+  @scala.inline
+  def strict: strict = "strict".asInstanceOf[strict]
   
   @scala.inline
   def wildcard: wildcard = "wildcard".asInstanceOf[wildcard]
@@ -49,6 +55,9 @@ object wampyStrings {
   sealed trait last extends js.Object
   
   @js.native
+  sealed trait loose extends js.Object
+  
+  @js.native
   sealed trait prefix extends js.Object
   
   @js.native
@@ -62,6 +71,9 @@ object wampyStrings {
   
   @js.native
   sealed trait skip extends js.Object
+  
+  @js.native
+  sealed trait strict extends js.Object
   
   @js.native
   sealed trait wildcard extends js.Object

@@ -10,9 +10,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NotebookInstanceState extends js.Object {
   
   /**
+    * An array of up to three Git repositories to associate with the notebook instance.
+    * These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance.
+    */
+  val additionalCodeRepositories: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  
+  /**
     * The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
     */
   val arn: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The Git repository associated with the notebook instance as its default code repository. This can be either the name of a Git repository stored as a resource in your account, or the URL of a Git repository in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository.
+    */
+  val defaultCodeRepository: js.UndefOr[Input[String]] = js.native
   
   /**
     * Set to `Disabled` to disable internet access to notebook. Requires `securityGroups` and `subnetId` to be set. Supported values: `Enabled` (Default) or `Disabled`. If set to `Disabled`, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC.
@@ -40,9 +51,19 @@ trait NotebookInstanceState extends js.Object {
   val name: js.UndefOr[Input[String]] = js.native
   
   /**
+    * The network interface ID that Amazon SageMaker created at the time of creating the instance. Only available when setting `subnetId`.
+    */
+  val networkInterfaceId: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.
     */
   val roleArn: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Whether root access is `Enabled` or `Disabled` for users of the notebook instance. The default value is `Enabled`.
+    */
+  val rootAccess: js.UndefOr[Input[String]] = js.native
   
   /**
     * The associated security groups.
@@ -58,6 +79,16 @@ trait NotebookInstanceState extends js.Object {
     * A map of tags to assign to the resource.
     */
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
+  
+  /**
+    * The URL that you use to connect to the Jupyter notebook that is running in your notebook instance.
+    */
+  val url: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
+    */
+  val volumeSize: js.UndefOr[Input[Double]] = js.native
 }
 object NotebookInstanceState {
   
@@ -83,10 +114,25 @@ object NotebookInstanceState {
     }
     
     @scala.inline
+    def setAdditionalCodeRepositoriesVarargs(value: Input[String]*): Self = this.set("additionalCodeRepositories", js.Array(value :_*))
+    
+    @scala.inline
+    def setAdditionalCodeRepositories(value: Input[js.Array[Input[String]]]): Self = this.set("additionalCodeRepositories", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdditionalCodeRepositories: Self = this.set("additionalCodeRepositories", js.undefined)
+    
+    @scala.inline
     def setArn(value: Input[String]): Self = this.set("arn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteArn: Self = this.set("arn", js.undefined)
+    
+    @scala.inline
+    def setDefaultCodeRepository(value: Input[String]): Self = this.set("defaultCodeRepository", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultCodeRepository: Self = this.set("defaultCodeRepository", js.undefined)
     
     @scala.inline
     def setDirectInternetAccess(value: Input[String]): Self = this.set("directInternetAccess", value.asInstanceOf[js.Any])
@@ -119,10 +165,22 @@ object NotebookInstanceState {
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
+    def setNetworkInterfaceId(value: Input[String]): Self = this.set("networkInterfaceId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkInterfaceId: Self = this.set("networkInterfaceId", js.undefined)
+    
+    @scala.inline
     def setRoleArn(value: Input[String]): Self = this.set("roleArn", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRoleArn: Self = this.set("roleArn", js.undefined)
+    
+    @scala.inline
+    def setRootAccess(value: Input[String]): Self = this.set("rootAccess", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRootAccess: Self = this.set("rootAccess", js.undefined)
     
     @scala.inline
     def setSecurityGroupsVarargs(value: Input[String]*): Self = this.set("securityGroups", js.Array(value :_*))
@@ -144,5 +202,17 @@ object NotebookInstanceState {
     
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)
+    
+    @scala.inline
+    def setUrl(value: Input[String]): Self = this.set("url", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUrl: Self = this.set("url", js.undefined)
+    
+    @scala.inline
+    def setVolumeSize(value: Input[Double]): Self = this.set("volumeSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVolumeSize: Self = this.set("volumeSize", js.undefined)
   }
 }

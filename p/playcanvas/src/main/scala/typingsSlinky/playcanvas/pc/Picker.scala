@@ -48,7 +48,8 @@ trait Picker extends js.Object {
     in any way, pc.Picker#prepare does not need to be called again.
     * @param camera - The camera component used to render the scene.
     * @param scene - The scene containing the pickable mesh instances.
-    * @param [arg] - Layer or RenderTarget from which objects will be picked. If not supplied, all layers rendering to backbuffer before this layer will be used.
+    * @param [arg] - Layer or RenderTarget from which objects will be picked.
+    If not supplied, all layers rendering to backbuffer before this layer will be used.
     */
   def prepare(camera: CameraComponent, scene: Scene): Unit = js.native
   def prepare(camera: CameraComponent, scene: Scene, arg: Layer): Unit = js.native

@@ -5,7 +5,6 @@ import typingsSlinky.d3Delaunay.mod.Delaunay.Bounds
 import typingsSlinky.d3Delaunay.mod.Delaunay.ClosableContext
 import typingsSlinky.d3Delaunay.mod.Delaunay.LineContext
 import typingsSlinky.d3Delaunay.mod.Delaunay.MoveContext
-import typingsSlinky.d3Delaunay.mod.Delaunay.Node
 import typingsSlinky.d3Delaunay.mod.Delaunay.Polygon
 import typingsSlinky.d3Delaunay.mod.Delaunay.Triangle
 import typingsSlinky.std.ArrayLike
@@ -36,10 +35,10 @@ class Delaunay_[P] protected () extends js.Object {
   var halfedges: js.typedarray.Int32Array = js.native
   
   /**
-    * An arbitrary node on the convex hull.
-    * The convex hull is represented as a circular doubly-linked list of nodes.
+    * An Int32Array of point indexes that form the convex hull in counterclockwise order.
+    * If the points are collinear, returns them ordered.
     */
-  var hull: Node = js.native
+  var hull: js.typedarray.Uint32Array = js.native
   
   /**
     * Returns the closed polygon [[x0, y0], [x1, y1], ..., [x0, y0]] representing the convex hull.
@@ -58,12 +57,6 @@ class Delaunay_[P] protected () extends js.Object {
     * The iterable is empty if i is a coincident point.
     */
   def neighbors(i: Double): IterableIterator[Double] = js.native
-  
-  /**
-    * The outgoing halfedge indexes as a Int32Array [e0, e1, e2, ...].
-    * For each point i on the convex hull, outedges[i] is the halfedge index e of the corresponding outgoing halfedge; for other points, the halfedge index is -1.
-    */
-  var outedges: js.typedarray.Int32Array = js.native
   
   /**
     * The coordinates of the points as an array [x0, y0, x1, y1, ...].
@@ -133,6 +126,11 @@ class Delaunay_[P] protected () extends js.Object {
     * The coordinates of the triangle's points can be found by going through 'points'.
     */
   var triangles: js.typedarray.Uint32Array = js.native
+  
+  /**
+    * Updates the triangulation after the points have been modified in-place.
+    */
+  def update(): this.type = js.native
   
   /**
     * Returns the Voronoi diagram for the associated points.

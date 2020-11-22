@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -9,24 +10,25 @@ import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.ShowPageAction
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.TextTemplate
 import typingsSlinky.mendixmodelsdk.navigationMod.navigation.NavigationProfile
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/on-click-event relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/on-click-event relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.PageSettings")
 @js.native
-class PageSettings protected () extends Element {
+class PageSettings protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsAssociationWidget: AssociationWidget = js.native
@@ -62,9 +64,6 @@ class PageSettings protected () extends Element {
     */
   def location: FormLocation = js.native
   def location_=(newValue: FormLocation): Unit = js.native
-  
-  @JSName("model")
-  var model_FPageSettings: IModel = js.native
   
   def page: IPage | Null = js.native
   

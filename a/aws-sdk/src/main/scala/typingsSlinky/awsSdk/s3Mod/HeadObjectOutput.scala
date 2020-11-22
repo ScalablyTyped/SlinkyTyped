@@ -13,6 +13,11 @@ trait HeadObjectOutput extends js.Object {
   var AcceptRanges: js.UndefOr[typingsSlinky.awsSdk.s3Mod.AcceptRanges] = js.native
   
   /**
+    * The archive state of the head object.
+    */
+  var ArchiveStatus: js.UndefOr[typingsSlinky.awsSdk.s3Mod.ArchiveStatus] = js.native
+  
+  /**
     * Specifies caching behavior along the request/reply chain.
     */
   var CacheControl: js.UndefOr[typingsSlinky.awsSdk.s3Mod.CacheControl] = js.native
@@ -172,6 +177,12 @@ object HeadObjectOutput {
     
     @scala.inline
     def deleteAcceptRanges: Self = this.set("AcceptRanges", js.undefined)
+    
+    @scala.inline
+    def setArchiveStatus(value: ArchiveStatus): Self = this.set("ArchiveStatus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteArchiveStatus: Self = this.set("ArchiveStatus", js.undefined)
     
     @scala.inline
     def setCacheControl(value: CacheControl): Self = this.set("CacheControl", value.asInstanceOf[js.Any])

@@ -7,14 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GetTemplate extends js.Object {
   
-  var getAllTemplates: `704` = js.native
+  var getAllTemplates: `710` = js.native
   
-  var getTemplate: `705` = js.native
+  var getTemplate: `711` = js.native
 }
 object GetTemplate {
   
   @scala.inline
-  def apply(getAllTemplates: `704`, getTemplate: `705`): GetTemplate = {
+  def apply(getAllTemplates: `710`, getTemplate: `711`): GetTemplate = {
     val __obj = js.Dynamic.literal(getAllTemplates = getAllTemplates.asInstanceOf[js.Any], getTemplate = getTemplate.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetTemplate]
   }
@@ -35,9 +35,9 @@ object GetTemplate {
     }
     
     @scala.inline
-    def setGetAllTemplates(value: `704`): Self = this.set("getAllTemplates", value.asInstanceOf[js.Any])
+    def setGetAllTemplates(value: `710`): Self = this.set("getAllTemplates", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetTemplate(value: `705`): Self = this.set("getTemplate", value.asInstanceOf[js.Any])
+    def setGetTemplate(value: `711`): Self = this.set("getTemplate", value.asInstanceOf[js.Any])
   }
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.awsSdk.signerMod
 
 import typingsSlinky.awsSdk.awsSdkStrings.successfulSigningJob
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service

@@ -23,10 +23,16 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcTabs.anon.Direction
 import typingsSlinky.rcTabs.interfaceMod.AnimatedConfig
 import typingsSlinky.rcTabs.interfaceMod.EditableConfig
+import typingsSlinky.rcTabs.interfaceMod.TabBarExtraContent
 import typingsSlinky.rcTabs.interfaceMod.TabPosition
 import typingsSlinky.rcTabs.interfaceMod.TabsLocale
+import typingsSlinky.rcTabs.rcTabsStrings.`additions removals`
 import typingsSlinky.rcTabs.rcTabsStrings.`additions text`
 import typingsSlinky.rcTabs.rcTabsStrings.`inline`
+import typingsSlinky.rcTabs.rcTabsStrings.`removals additions`
+import typingsSlinky.rcTabs.rcTabsStrings.`removals text`
+import typingsSlinky.rcTabs.rcTabsStrings.`text additions`
+import typingsSlinky.rcTabs.rcTabsStrings.`text removals`
 import typingsSlinky.rcTabs.rcTabsStrings.additions
 import typingsSlinky.rcTabs.rcTabsStrings.all
 import typingsSlinky.rcTabs.rcTabsStrings.ascending
@@ -203,7 +209,9 @@ class SharedBuilder_TabsPropsRefAttributes723977252[R <: js.Object] (val args: j
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -634,7 +642,7 @@ class SharedBuilder_TabsPropsRefAttributes723977252[R <: js.Object] (val args: j
   def tabBarExtraContentReactElement(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def tabBarExtraContent(value: ReactElement): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
+  def tabBarExtraContent(value: TabBarExtraContent): this.type = set("tabBarExtraContent", value.asInstanceOf[js.Any])
   
   @scala.inline
   def tabBarGutter(value: Double): this.type = set("tabBarGutter", value.asInstanceOf[js.Any])

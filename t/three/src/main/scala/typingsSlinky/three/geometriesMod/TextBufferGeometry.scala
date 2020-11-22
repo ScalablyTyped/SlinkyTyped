@@ -1,6 +1,6 @@
 package typingsSlinky.three.geometriesMod
 
-import typingsSlinky.three.textGeometryMod.TextGeometryParameters
+import typingsSlinky.three.textBufferGeometryMod.TextGeometryParameters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("three/src/geometries/Geometries", "TextBufferGeometry")
 @js.native
 class TextBufferGeometry protected ()
-  extends typingsSlinky.three.textGeometryMod.TextBufferGeometry {
+  extends typingsSlinky.three.textBufferGeometryMod.TextBufferGeometry {
   def this(text: String, parameters: TextGeometryParameters) = this()
 }

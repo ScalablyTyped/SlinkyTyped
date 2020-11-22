@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ^ extends js.Object {
   
-  def apply(name: String, json: StringDictionary[js.Any]): Unit = js.native
+  def apply(name: String, json: StringDictionary[js.UndefOr[js.Any]]): Unit = js.native
 }

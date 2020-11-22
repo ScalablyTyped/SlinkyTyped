@@ -1,7 +1,7 @@
 
 # Scala.js typings for lumino__application
 
-Typings are for version 1.10.4
+Typings are for version 1.11.1
 
 ## Library description:
 Lumino Pluggable Application

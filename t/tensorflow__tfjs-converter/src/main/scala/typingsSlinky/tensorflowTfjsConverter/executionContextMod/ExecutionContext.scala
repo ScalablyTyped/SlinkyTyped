@@ -1,29 +1,91 @@
 package typingsSlinky.tensorflowTfjsConverter.executionContextMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.std.Set
 import typingsSlinky.tensorflowTfjsConverter.executorTypesMod.FunctionExecutor
 import typingsSlinky.tensorflowTfjsConverter.tensorArrayMod.TensorArray
+import typingsSlinky.tensorflowTfjsConverter.tensorListMod.TensorList
 import typingsSlinky.tensorflowTfjsConverter.typesMod.NamedTensorsMap
 import typingsSlinky.tensorflowTfjsConverter.typesMod.TensorArrayMap
+import typingsSlinky.tensorflowTfjsConverter.typesMod.TensorListMap
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@tensorflow/tfjs-converter/dist/executor/execution_context", "ExecutionContext")
 @js.native
-class ExecutionContext protected () extends js.Object {
+class ExecutionContext () extends js.Object {
+  def this(weightMap: NamedTensorsMap) = this()
+  def this(weightMap: js.UndefOr[scala.Nothing], tensorArrayMap: TensorArrayMap) = this()
   def this(weightMap: NamedTensorsMap, tensorArrayMap: TensorArrayMap) = this()
+  def this(
+    weightMap: js.UndefOr[scala.Nothing],
+    tensorArrayMap: js.UndefOr[scala.Nothing],
+    tensorListMap: TensorListMap
+  ) = this()
+  def this(weightMap: js.UndefOr[scala.Nothing], tensorArrayMap: TensorArrayMap, tensorListMap: TensorListMap) = this()
+  def this(
+    weightMap: NamedTensorsMap,
+    tensorArrayMap: js.UndefOr[scala.Nothing],
+    tensorListMap: TensorListMap
+  ) = this()
+  def this(weightMap: NamedTensorsMap, tensorArrayMap: TensorArrayMap, tensorListMap: TensorListMap) = this()
+  def this(
+    weightMap: js.UndefOr[scala.Nothing],
+    tensorArrayMap: js.UndefOr[scala.Nothing],
+    tensorListMap: js.UndefOr[scala.Nothing],
+    functionMap: StringDictionary[FunctionExecutor]
+  ) = this()
+  def this(
+    weightMap: js.UndefOr[scala.Nothing],
+    tensorArrayMap: js.UndefOr[scala.Nothing],
+    tensorListMap: TensorListMap,
+    functionMap: StringDictionary[FunctionExecutor]
+  ) = this()
+  def this(
+    weightMap: js.UndefOr[scala.Nothing],
+    tensorArrayMap: TensorArrayMap,
+    tensorListMap: js.UndefOr[scala.Nothing],
+    functionMap: StringDictionary[FunctionExecutor]
+  ) = this()
+  def this(
+    weightMap: js.UndefOr[scala.Nothing],
+    tensorArrayMap: TensorArrayMap,
+    tensorListMap: TensorListMap,
+    functionMap: StringDictionary[FunctionExecutor]
+  ) = this()
+  def this(
+    weightMap: NamedTensorsMap,
+    tensorArrayMap: js.UndefOr[scala.Nothing],
+    tensorListMap: js.UndefOr[scala.Nothing],
+    functionMap: StringDictionary[FunctionExecutor]
+  ) = this()
+  def this(
+    weightMap: NamedTensorsMap,
+    tensorArrayMap: js.UndefOr[scala.Nothing],
+    tensorListMap: TensorListMap,
+    functionMap: StringDictionary[FunctionExecutor]
+  ) = this()
   def this(
     weightMap: NamedTensorsMap,
     tensorArrayMap: TensorArrayMap,
+    tensorListMap: js.UndefOr[scala.Nothing],
+    functionMap: StringDictionary[FunctionExecutor]
+  ) = this()
+  def this(
+    weightMap: NamedTensorsMap,
+    tensorArrayMap: TensorArrayMap,
+    tensorListMap: TensorListMap,
     functionMap: StringDictionary[FunctionExecutor]
   ) = this()
   
   var _currentContextIds: js.Any = js.native
   
   def addTensorArray(tensorArray: TensorArray): Unit = js.native
+  
+  def addTensorList(tensorList: TensorList): Unit = js.native
   
   var contextIdforContexts: js.Any = js.native
   
@@ -47,6 +109,8 @@ class ExecutionContext protected () extends js.Object {
     */
   val currentContextIds: js.Array[String] = js.native
   
+  def dispose(keepIds: Set[Double]): Unit = js.native
+  
   /**
     * Enter a new frame, a new context is pushed on the current context list.
     * @param frameId new frame id
@@ -65,6 +129,8 @@ class ExecutionContext protected () extends js.Object {
   
   def getTensorArray(id: Double): TensorArray = js.native
   
+  def getTensorList(id: Double): TensorList = js.native
+  
   def getWeight(name: String): js.Array[Tensor[Rank]] = js.native
   
   var lastId: js.Any = js.native
@@ -80,6 +146,8 @@ class ExecutionContext protected () extends js.Object {
   var rootContext: js.Any = js.native
   
   val tensorArrayMap: TensorArrayMap = js.native
+  
+  val tensorListMap: TensorListMap = js.native
   
   val weightMap: NamedTensorsMap = js.native
 }

@@ -11,11 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BingMapsLayerProperties extends BaseTileLayerProperties {
   
   /**
-    * Provides culture specific map labels. For more information visit: https://msdn.microsoft.com/en-us/library/ff701709.aspx  For a list of supported culture codes please visit: https://msdn.microsoft.com/en-us/library/hh441729.aspx
+    * Provides culture specific map labels.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BingMapsLayer.html#culture)
-    *
-    * @default "en-US"
     */
   var culture: js.UndefOr[String] = js.native
   
@@ -23,26 +21,20 @@ trait BingMapsLayerProperties extends BaseTileLayerProperties {
     * Bing Maps Key.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BingMapsLayer.html#key)
-    *
-    * @default null
     */
   var key: js.UndefOr[String] = js.native
   
   /**
-    * This will alter Geopolitical disputed borders and labels to align with the specified user region.  For more information on Bing's region setting please visit: https://msdn.microsoft.com/en-us/library/ff701704.aspx  For a list of supported country codes please visit: see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+    * This will alter Geopolitical disputed borders and labels to align with the specified user region.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BingMapsLayer.html#region)
-    *
-    * @default null
     */
   var region: js.UndefOr[String] = js.native
   
   /**
-    * For more information on Bing map styles please visit: https://msdn.microsoft.com/en-us/library/ff701716.aspx
+    * For more information on Bing map styles please visit: https://docs.microsoft.com/en-us/bingmaps/rest-services/imagery/get-imagery-metadata.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-BingMapsLayer.html#style)
-    *
-    * @default "road"
     */
   var style: js.UndefOr[road | aerial | hybrid] = js.native
 }

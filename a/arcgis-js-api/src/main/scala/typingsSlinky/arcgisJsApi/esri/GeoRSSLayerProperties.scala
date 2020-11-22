@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GeoRSSLayerProperties
   extends LayerProperties
-     with ScaleRangeLayerProperties {
+     with ScaleRangeLayerProperties
+     with BlendLayerProperties {
   
   /**
     * Symbol used to represent line features from the GeoRSS feed.
@@ -31,7 +32,7 @@ trait GeoRSSLayerProperties
   var polygonSymbol: js.UndefOr[SimpleFillSymbolProperties] = js.native
   
   /**
-    * The URL pointing to a GeoRSS file. This must be publicly available.
+    * The URL pointing to a GeoRSS file.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GeoRSSLayer.html#url)
     */

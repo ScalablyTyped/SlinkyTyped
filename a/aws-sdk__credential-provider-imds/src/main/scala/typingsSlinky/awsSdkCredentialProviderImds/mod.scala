@@ -27,5 +27,5 @@ object mod extends js.Object {
   def fromInstanceMetadata(): CredentialProvider = js.native
   def fromInstanceMetadata(init: RemoteProviderInit): CredentialProvider = js.native
   
-  def providerConfigFromInit(init: RemoteProviderInit): RemoteProviderConfig = js.native
+  def providerConfigFromInit(hasMaxRetriesTimeout: RemoteProviderInit): RemoteProviderConfig = js.native
 }

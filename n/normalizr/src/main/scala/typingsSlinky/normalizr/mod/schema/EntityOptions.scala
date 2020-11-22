@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EntityOptions[T] extends js.Object {
   
+  var fallbackStrategy: js.UndefOr[FallbackFunction[T]] = js.native
+  
   var idAttribute: js.UndefOr[String | SchemaFunction] = js.native
   
   var mergeStrategy: js.UndefOr[MergeFunction] = js.native
@@ -35,6 +37,12 @@ object EntityOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setFallbackStrategy(value: (/* key */ String, /* schema */ Entity[T]) => T): Self = this.set("fallbackStrategy", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteFallbackStrategy: Self = this.set("fallbackStrategy", js.undefined)
     
     @scala.inline
     def setIdAttributeFunction3(value: (/* value */ js.Any, /* parent */ js.Any, /* key */ String) => String): Self = this.set("idAttribute", js.Any.fromFunction3(value))

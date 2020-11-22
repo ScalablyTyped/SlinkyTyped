@@ -1,6 +1,5 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.baseMod.ExtendType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,9 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `18` extends js.Object {
   
-  var disabled: js.UndefOr[`17`] = js.native
-  
-  var extend: js.UndefOr[ExtendType] = js.native
+  var weight: js.UndefOr[String] = js.native
 }
 object `18` {
   
@@ -36,18 +33,9 @@ object `18` {
     }
     
     @scala.inline
-    def setDisabled(value: `17`): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    def setWeight(value: String): Self = this.set("weight", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDisabled: Self = this.set("disabled", js.undefined)
-    
-    @scala.inline
-    def setExtendFunction1(value: /* args */ js.Any => Unit): Self = this.set("extend", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setExtend(value: ExtendType): Self = this.set("extend", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteExtend: Self = this.set("extend", js.undefined)
+    def deleteWeight: Self = this.set("weight", js.undefined)
   }
 }

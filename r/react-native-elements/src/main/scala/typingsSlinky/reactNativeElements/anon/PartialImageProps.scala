@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeElements.anon
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -17,7 +18,6 @@ import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -40,6 +40,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Inlined std.Partial<react-native-elements.react-native-elements.ImageProps> */
 @js.native
 trait PartialImageProps extends js.Object {
+  
+  var Component: js.UndefOr[ReactComponentClass[js.Object]] = js.native
   
   var ImageComponent: js.UndefOr[ReactComponentClass[_]] = js.native
   
@@ -105,7 +107,7 @@ trait PartialImageProps extends js.Object {
   
   var onError: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ImageErrorEventData], Unit]] = js.native
   
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   var onLoad: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ImageLoadEventData], Unit]] = js.native
   
@@ -113,9 +115,13 @@ trait PartialImageProps extends js.Object {
   
   var onLoadStart: js.UndefOr[js.Function0[Unit]] = js.native
   
+  var onLongPress: js.UndefOr[js.Function0[Unit]] = js.native
+  
   var onMagicTap: js.UndefOr[js.Function0[Unit]] = js.native
   
   var onPartialLoad: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
   
   var onProgress: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ImageProgressEventDataIOS], Unit]] = js.native
   
@@ -134,6 +140,8 @@ trait PartialImageProps extends js.Object {
   var testID: js.UndefOr[String] = js.native
   
   var transition: js.UndefOr[Boolean] = js.native
+  
+  var transitionDuration: js.UndefOr[Double] = js.native
   
   var width: js.UndefOr[Double] = js.native
 }
@@ -159,6 +167,12 @@ object PartialImageProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setComponent(value: ReactComponentClass[js.Object]): Self = this.set("Component", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteComponent: Self = this.set("Component", js.undefined)
     
     @scala.inline
     def setImageComponentFunctionComponent(value: ReactComponentClass[_]): Self = this.set("ImageComponent", value.asInstanceOf[js.Any])
@@ -368,7 +382,7 @@ object PartialImageProps {
     def deleteOnError: Self = this.set("onError", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -392,6 +406,12 @@ object PartialImageProps {
     def deleteOnLoadStart: Self = this.set("onLoadStart", js.undefined)
     
     @scala.inline
+    def setOnLongPress(value: () => Unit): Self = this.set("onLongPress", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteOnLongPress: Self = this.set("onLongPress", js.undefined)
+    
+    @scala.inline
     def setOnMagicTap(value: () => Unit): Self = this.set("onMagicTap", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -402,6 +422,12 @@ object PartialImageProps {
     
     @scala.inline
     def deleteOnPartialLoad: Self = this.set("onPartialLoad", js.undefined)
+    
+    @scala.inline
+    def setOnPress(value: () => Unit): Self = this.set("onPress", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteOnPress: Self = this.set("onPress", js.undefined)
     
     @scala.inline
     def setOnProgress(value: SyntheticEvent[NodeHandle, ImageProgressEventDataIOS] => Unit): Self = this.set("onProgress", js.Any.fromFunction1(value))
@@ -465,6 +491,12 @@ object PartialImageProps {
     
     @scala.inline
     def deleteTransition: Self = this.set("transition", js.undefined)
+    
+    @scala.inline
+    def setTransitionDuration(value: Double): Self = this.set("transitionDuration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTransitionDuration: Self = this.set("transitionDuration", js.undefined)
     
     @scala.inline
     def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])

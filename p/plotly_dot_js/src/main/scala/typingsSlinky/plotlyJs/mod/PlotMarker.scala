@@ -1,7 +1,7 @@
 package typingsSlinky.plotlyJs.mod
 
 import typingsSlinky.plotlyJs.anon.Colorsrc
-import typingsSlinky.plotlyJs.anon.PartialColorBar
+import typingsSlinky.plotlyJs.anon.PartialColorBarBgcolor
 import typingsSlinky.plotlyJs.anon.PartialPadding
 import typingsSlinky.plotlyJs.anon.PartialScatterMarkerLine
 import typingsSlinky.plotlyJs.plotlyJsStrings.area
@@ -23,7 +23,7 @@ trait PlotMarker extends js.Object {
   
   var color: Color | js.Array[Color] = js.native
   
-  var colorbar: PartialColorBar = js.native
+  var colorbar: PartialColorBarBgcolor = js.native
   
   var colors: js.Array[Color] = js.native
   
@@ -66,7 +66,7 @@ object PlotMarker {
     cmax: Double,
     cmin: Double,
     color: Color | js.Array[Color],
-    colorbar: PartialColorBar,
+    colorbar: PartialColorBarBgcolor,
     colors: js.Array[Color],
     colorscale: ColorScale,
     gradient: Colorsrc,
@@ -124,7 +124,7 @@ object PlotMarker {
     def setColor(value: Color | js.Array[Color]): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColorbar(value: PartialColorBar): Self = this.set("colorbar", value.asInstanceOf[js.Any])
+    def setColorbar(value: PartialColorBarBgcolor): Self = this.set("colorbar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setColorsVarargs(value: Color*): Self = this.set("colors", js.Array(value :_*))

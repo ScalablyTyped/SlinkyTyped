@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NumberColumn extends js.Object {
   
   // How many decimal places to display. See below for information about the possible values.
-  var decimalPlaces: js.UndefOr[String] = js.native
+  var decimalPlaces: js.UndefOr[NullableOption[String]] = js.native
   
   // How the value should be presented in the UX. Must be one of number or percentage. If unspecified, treated as number.
-  var displayAs: js.UndefOr[String] = js.native
+  var displayAs: js.UndefOr[NullableOption[String]] = js.native
   
   // The maximum permitted value.
-  var maximum: js.UndefOr[Double] = js.native
+  var maximum: js.UndefOr[NullableOption[Double]] = js.native
   
   // The minimum permitted value.
-  var minimum: js.UndefOr[Double] = js.native
+  var minimum: js.UndefOr[NullableOption[Double]] = js.native
 }
 object NumberColumn {
   
@@ -43,27 +43,39 @@ object NumberColumn {
     }
     
     @scala.inline
-    def setDecimalPlaces(value: String): Self = this.set("decimalPlaces", value.asInstanceOf[js.Any])
+    def setDecimalPlaces(value: NullableOption[String]): Self = this.set("decimalPlaces", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDecimalPlaces: Self = this.set("decimalPlaces", js.undefined)
     
     @scala.inline
-    def setDisplayAs(value: String): Self = this.set("displayAs", value.asInstanceOf[js.Any])
+    def setDecimalPlacesNull: Self = this.set("decimalPlaces", null)
+    
+    @scala.inline
+    def setDisplayAs(value: NullableOption[String]): Self = this.set("displayAs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayAs: Self = this.set("displayAs", js.undefined)
     
     @scala.inline
-    def setMaximum(value: Double): Self = this.set("maximum", value.asInstanceOf[js.Any])
+    def setDisplayAsNull: Self = this.set("displayAs", null)
+    
+    @scala.inline
+    def setMaximum(value: NullableOption[Double]): Self = this.set("maximum", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaximum: Self = this.set("maximum", js.undefined)
     
     @scala.inline
-    def setMinimum(value: Double): Self = this.set("minimum", value.asInstanceOf[js.Any])
+    def setMaximumNull: Self = this.set("maximum", null)
+    
+    @scala.inline
+    def setMinimum(value: NullableOption[Double]): Self = this.set("minimum", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimum: Self = this.set("minimum", js.undefined)
+    
+    @scala.inline
+    def setMinimumNull: Self = this.set("minimum", null)
   }
 }

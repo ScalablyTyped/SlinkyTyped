@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StartTextTranslationJobRequest extends js.Object {
   
   /**
-    * The client token of the EC2 instance calling the request. This token is auto-generated when using the Amazon Translate SDK. Otherwise, use the DescribeInstances EC2 operation to retreive an instance's client token. For more information, see Client Tokens in the EC2 User Guide.
+    * A unique identifier for the request. This token is auto-generated when using the Amazon Translate SDK.
     */
   var ClientToken: ClientTokenString = js.native
   

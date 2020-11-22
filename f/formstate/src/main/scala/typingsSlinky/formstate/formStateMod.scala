@@ -46,34 +46,46 @@ object formStateMod extends js.Object {
     def enableAutoValidationAndValidate(): js.Promise[HasError | HasErrorValue[TValue]] = js.native
     
     /**
+      * The first error from any sub (if any) or form error
+      */
+    @JSName("error")
+    def error_MFormState: js.UndefOr[String | Null] = js.native
+    
+    /**
       * Error from some sub field if any
       */
-    val fieldError: js.UndefOr[String | Null] = js.native
+    def fieldError: js.UndefOr[String | Null] = js.native
     
     /**
       * Error from form if any
       */
-    val formError: js.UndefOr[String | Null] = js.native
+    def formError: js.UndefOr[String | Null] = js.native
     
     /** Get validatable objects from $ */
     /* protected */ def getValues(): js.Array[ComposibleValidatable[_]] = js.native
     
     /**
+      * Does any field or form have an error
+      */
+    @JSName("hasError")
+    def hasError_MFormState: Boolean = js.native
+    
+    /**
       * Does any field have an error
       */
-    val hasFieldError: Boolean = js.native
+    def hasFieldError: Boolean = js.native
     
     /**
       * Does form level validation have an error
       */
-    val hasFormError: Boolean = js.native
+    def hasFormError: Boolean = js.native
     
     var mode: `object` | array | map = js.native
     
     /**
       * You should only show the form error if there are no field errors
       */
-    val showFormError: Boolean = js.native
+    def showFormError: Boolean = js.native
     
     /**
       * Composible field validation tracking

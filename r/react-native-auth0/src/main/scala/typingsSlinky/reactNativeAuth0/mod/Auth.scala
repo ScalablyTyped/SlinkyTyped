@@ -13,7 +13,7 @@ class Auth () extends js.Object {
   /* tslint:disable-next-line no-unnecessary-generics */
   def createUser[T](user: CreateUserParams[T]): js.Promise[CreateUserResponse] = js.native
   
-  def exchange(params: ExchangeParams): js.Promise[String] = js.native
+  def exchange(params: ExchangeParams): js.Promise[ExchangeResponse] = js.native
   
   def loginWithEmail(params: LoginWithEmailParams): js.Promise[_] = js.native
   
@@ -27,7 +27,7 @@ class Auth () extends js.Object {
   
   def passwordlessWithSMS(params: PasswordlessWithSMSParams): js.Promise[_] = js.native
   
-  def refreshToken(params: RefreshTokenParams): js.Promise[_] = js.native
+  def refreshToken(params: RefreshTokenParams): js.Promise[RefreshTokenResponse] = js.native
   
   def resetPassword(params: ResetPasswordParams): js.Promise[_] = js.native
   

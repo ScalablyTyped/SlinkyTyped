@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.vscode.mod.DebugAdapterExecutable
   - typingsSlinky.vscode.mod.DebugAdapterServer
+  - typingsSlinky.vscode.mod.DebugAdapterNamedPipeServer
   - typingsSlinky.vscode.mod.DebugAdapterInlineImplementation
 */
 trait DebugAdapterDescriptor extends js.Object

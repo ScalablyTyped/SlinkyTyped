@@ -430,6 +430,9 @@ object vegaTypingsStrings {
   def circle: circle = "circle".asInstanceOf[circle]
   
   @scala.inline
+  def cividis: cividis = "cividis".asInstanceOf[cividis]
+  
+  @scala.inline
   def click: click = "click".asInstanceOf[click]
   
   @scala.inline
@@ -2416,6 +2419,9 @@ object vegaTypingsStrings {
   def tsv: tsv = "tsv".asInstanceOf[tsv]
   
   @scala.inline
+  def turbo: turbo = "turbo".asInstanceOf[turbo]
+  
+  @scala.inline
   def turquoise: turquoise = "turquoise".asInstanceOf[turquoise]
   
   @scala.inline
@@ -3071,6 +3077,11 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait circle extends _SymbolShape
+  
+  @js.native
+  sealed trait cividis
+    extends ColorScheme
+       with SequentialMultiHue
   
   @js.native
   sealed trait click extends EventType
@@ -5681,6 +5692,11 @@ object vegaTypingsStrings {
   
   @js.native
   sealed trait tsv extends js.Object
+  
+  @js.native
+  sealed trait turbo
+    extends ColorScheme
+       with SequentialMultiHue
   
   @js.native
   sealed trait turquoise extends ColorName

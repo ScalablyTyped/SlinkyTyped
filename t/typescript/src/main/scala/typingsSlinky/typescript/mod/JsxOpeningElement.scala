@@ -10,15 +10,15 @@ trait JsxOpeningElement
      with HasTypeArguments
      with JsxOpeningLikeElement {
   
-  var attributes: JsxAttributes = js.native
+  val attributes: JsxAttributes = js.native
   
   @JSName("kind")
-  var kind_JsxOpeningElement: typingsSlinky.typescript.mod.SyntaxKind.JsxOpeningElement = js.native
+  val kind_JsxOpeningElement: typingsSlinky.typescript.mod.SyntaxKind.JsxOpeningElement = js.native
   
   @JSName("parent")
-  var parent_JsxOpeningElement: JsxElement = js.native
+  val parent_JsxOpeningElement: JsxElement = js.native
   
-  var tagName: JsxTagNameExpression = js.native
+  val tagName: JsxTagNameExpression = js.native
   
-  var typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
+  val typeArguments: js.UndefOr[NodeArray[TypeNode]] = js.native
 }

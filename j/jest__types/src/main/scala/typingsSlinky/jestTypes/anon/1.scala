@@ -1,23 +1,23 @@
 package typingsSlinky.jestTypes.anon
 
-import typingsSlinky.jestTypes.circusMod.Event
+import typingsSlinky.jestTypes.circusMod.AsyncEvent
 import typingsSlinky.jestTypes.circusMod.TestEntry
-import typingsSlinky.jestTypes.jestTypesStrings.test_todo
+import typingsSlinky.jestTypes.jestTypesStrings.test_start
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `1` extends Event {
+trait `1` extends AsyncEvent {
   
-  var name: test_todo = js.native
+  var name: test_start = js.native
   
   var test: TestEntry = js.native
 }
 object `1` {
   
   @scala.inline
-  def apply(name: test_todo, test: TestEntry): `1` = {
+  def apply(name: test_start, test: TestEntry): `1` = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], test = test.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1`]
   }
@@ -38,7 +38,7 @@ object `1` {
     }
     
     @scala.inline
-    def setName(value: test_todo): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: test_start): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTest(value: TestEntry): Self = this.set("test", value.asInstanceOf[js.Any])

@@ -19,7 +19,7 @@ object util extends js.Object {
   @js.native
   object base64url extends js.Object {
     
-    def decode(base64url: String): String = js.native
+    def decode(base64url: String): Buffer = js.native
     
     def encode(buffer: String): String = js.native
     def encode(buffer: String, encoding: String): String = js.native

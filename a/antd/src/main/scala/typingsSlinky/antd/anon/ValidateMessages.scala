@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ValidateMessages extends js.Object {
   
+  var requiredMark: js.UndefOr[typingsSlinky.antd.formFormMod.RequiredMark] = js.native
+  
   var validateMessages: js.UndefOr[typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages] = js.native
 }
 object ValidateMessages {
@@ -31,6 +33,12 @@ object ValidateMessages {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setRequiredMark(value: typingsSlinky.antd.formFormMod.RequiredMark): Self = this.set("requiredMark", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequiredMark: Self = this.set("requiredMark", js.undefined)
     
     @scala.inline
     def setValidateMessages(value: typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages): Self = this.set("validateMessages", value.asInstanceOf[js.Any])

@@ -1,5 +1,7 @@
 package typingsSlinky.jestSnapshot.stateMod
 
+import typingsSlinky.jestSnapshot.typesMod.BabelTraverse
+import typingsSlinky.jestSnapshot.typesMod.Prettier
 import typingsSlinky.jestTypes.configMod.SnapshotUpdateState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,9 +12,9 @@ trait SnapshotStateOptions extends js.Object {
   
   var expand: js.UndefOr[Boolean] = js.native
   
-  def getBabelTraverse(): js.Function = js.native
+  def getBabelTraverse(): BabelTraverse = js.native
   
-  def getPrettier(): Null | js.Any = js.native
+  def getPrettier(): Null | Prettier = js.native
   
   var updateSnapshot: SnapshotUpdateState = js.native
 }
@@ -20,8 +22,8 @@ object SnapshotStateOptions {
   
   @scala.inline
   def apply(
-    getBabelTraverse: () => js.Function,
-    getPrettier: () => Null | js.Any,
+    getBabelTraverse: () => BabelTraverse,
+    getPrettier: () => Null | Prettier,
     updateSnapshot: SnapshotUpdateState
   ): SnapshotStateOptions = {
     val __obj = js.Dynamic.literal(getBabelTraverse = js.Any.fromFunction0(getBabelTraverse), getPrettier = js.Any.fromFunction0(getPrettier), updateSnapshot = updateSnapshot.asInstanceOf[js.Any])
@@ -44,10 +46,10 @@ object SnapshotStateOptions {
     }
     
     @scala.inline
-    def setGetBabelTraverse(value: () => js.Function): Self = this.set("getBabelTraverse", js.Any.fromFunction0(value))
+    def setGetBabelTraverse(value: () => BabelTraverse): Self = this.set("getBabelTraverse", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGetPrettier(value: () => Null | js.Any): Self = this.set("getPrettier", js.Any.fromFunction0(value))
+    def setGetPrettier(value: () => Null | Prettier): Self = this.set("getPrettier", js.Any.fromFunction0(value))
     
     @scala.inline
     def setUpdateSnapshot(value: SnapshotUpdateState): Self = this.set("updateSnapshot", value.asInstanceOf[js.Any])

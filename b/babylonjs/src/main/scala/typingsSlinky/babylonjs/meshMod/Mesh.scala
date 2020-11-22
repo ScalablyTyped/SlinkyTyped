@@ -1,16 +1,19 @@
 package typingsSlinky.babylonjs.meshMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.animatableInterfaceMod.IAnimatable
+import typingsSlinky.babylonjs.anon.Custom
 import typingsSlinky.babylonjs.anon.Data
-import typingsSlinky.babylonjs.anon.FaceColors
+import typingsSlinky.babylonjs.anon.DeepImmutableObjectMatrix
+import typingsSlinky.babylonjs.anon.Flat
 import typingsSlinky.babylonjs.anon.H
 import typingsSlinky.babylonjs.anon.Max
 import typingsSlinky.babylonjs.anon.Report
-import typingsSlinky.babylonjs.anon.Updatable
 import typingsSlinky.babylonjs.boundingSphereMod.BoundingSphere
 import typingsSlinky.babylonjs.bufferMod.VertexBuffer
 import typingsSlinky.babylonjs.cameraMod.Camera
+import typingsSlinky.babylonjs.capsuleBuilderMod.ICreateCapsuleOptions
 import typingsSlinky.babylonjs.effectMod.Effect
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.geometryMod.Geometry
@@ -112,6 +115,9 @@ class Mesh protected () extends AbstractMesh {
   def _disposeInstanceSpecificData(): Unit = js.native
   
   /** @hidden */
+  def _disposeThinInstanceSpecificData(): Unit = js.native
+  
+  /** @hidden */
   def _draw(subMesh: SubMesh, fillMode: Double): Mesh = js.native
   def _draw(subMesh: SubMesh, fillMode: Double, instancesCount: Double): Mesh = js.native
   
@@ -144,6 +150,7 @@ class Mesh protected () extends AbstractMesh {
   
   /** @hidden */
   def _processRendering(
+    renderingMesh: AbstractMesh,
     subMesh: SubMesh,
     effect: Effect,
     fillMode: Double,
@@ -157,6 +164,7 @@ class Mesh protected () extends AbstractMesh {
     ]
   ): Mesh = js.native
   def _processRendering(
+    renderingMesh: AbstractMesh,
     subMesh: SubMesh,
     effect: Effect,
     fillMode: Double,
@@ -180,6 +188,9 @@ class Mesh protected () extends AbstractMesh {
   def _renderWithInstances(subMesh: SubMesh, fillMode: Double, batch: InstancesBatch, effect: Effect, engine: Engine): Mesh = js.native
   
   /** @hidden */
+  def _renderWithThinInstances(subMesh: SubMesh, fillMode: Double, effect: Effect, engine: Engine): Unit = js.native
+  
+  /** @hidden */
   def _resetPointsArrayCache(): Mesh = js.native
   
   /** @hidden */
@@ -191,7 +202,19 @@ class Mesh protected () extends AbstractMesh {
   def _syncGeometryWithMorphTargetManager(): Unit = js.native
   
   /** @hidden */
+  var _thinInstanceDataStorage: ThinInstanceDataStorage = js.native
+  
+  /** @hidden */
+  def _thinInstanceInitializeUserStorage(): Unit = js.native
+  
+  /** @hidden */
+  def _thinInstanceUpdateBufferSize(kind: String, numInstances: Double): Unit = js.native
+  
+  /** @hidden */
   var _userInstancedBuffersStorage: Data = js.native
+  
+  /** @hidden */
+  var _userThinInstanceBuffersStorage: Data = js.native
   
   /** @hidden */
   def addInstance(instance: InstancedMesh): Unit = js.native
@@ -450,7 +473,7 @@ class Mesh protected () extends AbstractMesh {
     * The mesh World Matrix is then reset.
     * This method returns nothing but really modifies the mesh even if it's originally not set as updatable.
     * Note that, under the hood, this method sets a new VertexBuffer each call.
-    * @see http://doc.babylonjs.com/resources/baking_transformations
+    * @see https://doc.babylonjs.com/resources/baking_transformations
     * @param bakeIndependenlyOfChildren indicates whether to preserve all child nodes' World Matrix during baking
     * @returns the current mesh
     */
@@ -463,7 +486,7 @@ class Mesh protected () extends AbstractMesh {
     * The mesh normals are modified using the same transformation.
     * Note that, under the hood, this method sets a new VertexBuffer each call.
     * @param transform defines the transform matrix to use
-    * @see http://doc.babylonjs.com/resources/baking_transformations
+    * @see https://doc.babylonjs.com/resources/baking_transformations
     * @returns the current mesh
     */
   def bakeTransformIntoVertices(transform: Matrix): Mesh = js.native
@@ -509,6 +532,13 @@ class Mesh protected () extends AbstractMesh {
   ): Mesh = js.native
   
   /**
+    * Gets the list of clones of this mesh
+    * The scene must have been constructed with useClonedMeshMap=true for this to work!
+    * Note that useClonedMeshMap=true is the default setting
+    */
+  def cloneMeshMap: Nullable[StringDictionary[js.UndefOr[Mesh]]] = js.native
+  
+  /**
     * Modify the mesh to get a flat shading rendering.
     * This means each mesh facet will then have its own normals. Usually new vertices are added in the mesh geometry to get this result.
     * Warning : the mesh is really modified even if not set originally as updatable and, under the hood, a new VertexBuffer is allocated.
@@ -526,7 +556,7 @@ class Mesh protected () extends AbstractMesh {
   
   /**
     * Creates a new InstancedMesh object from the mesh model.
-    * @see http://doc.babylonjs.com/how_to/how_to_use_instances
+    * @see https://doc.babylonjs.com/how_to/how_to_use_instances
     * @param name defines the name of the new instance
     * @returns a new InstancedMesh
     */
@@ -534,7 +564,7 @@ class Mesh protected () extends AbstractMesh {
   
   /**
     * Gets the delay loading state of the mesh (when delay loading is turned on)
-    * @see http://doc.babylonjs.com/how_to/using_the_incremental_loading_system
+    * @see https://doc.babylonjs.com/how_to/using_the_incremental_loading_system
     */
   var delayLoadState: Double = js.native
   
@@ -542,6 +572,11 @@ class Mesh protected () extends AbstractMesh {
     * Gets the file containing delay loading data for this mesh
     */
   var delayLoadingFile: String = js.native
+  
+  /**
+    * true to use the edge renderer for all instances of this mesh
+    */
+  var edgesShareWithInstances: Boolean = js.native
   
   /**
     * Inverses facet orientations.
@@ -661,7 +696,7 @@ class Mesh protected () extends AbstractMesh {
     * Gets the list of instances created from this mesh
     * it is not supposed to be modified manually.
     * Note also that the order of the InstancedMesh wihin the array is not significant and might change.
-    * @see http://doc.babylonjs.com/how_to/how_to_use_instances
+    * @see https://doc.babylonjs.com/how_to/how_to_use_instances
     */
   var instances: js.Array[InstancedMesh] = js.native
   
@@ -725,7 +760,7 @@ class Mesh protected () extends AbstractMesh {
   
   /**
     * Gets or sets the morph target manager
-    * @see http://doc.babylonjs.com/how_to/how_to_use_morphtargets
+    * @see https://doc.babylonjs.com/how_to/how_to_use_morphtargets
     */
   def morphTargetManager: Nullable[MorphTargetManager] = js.native
   def morphTargetManager_=(value: Nullable[MorphTargetManager]): Unit = js.native
@@ -761,7 +796,7 @@ class Mesh protected () extends AbstractMesh {
   
   /**
     * User defined function used to change how LOD level selection is done
-    * @see http://doc.babylonjs.com/how_to/how_to_use_lod
+    * @see https://doc.babylonjs.com/how_to/how_to_use_lod
     */
   def onLODLevelSelection(distance: Double, mesh: Mesh, selectedLevel: Nullable[Mesh]): Unit = js.native
   
@@ -945,6 +980,92 @@ class Mesh protected () extends AbstractMesh {
     */
   def synchronizeInstances(): Mesh = js.native
   
+  def thinInstanceAdd(matrix: js.Array[DeepImmutableObjectMatrix], refresh: Boolean): Double = js.native
+  /**
+    * Creates a new thin instance
+    * @param matrix the matrix or array of matrices (position, rotation, scale) of the thin instance(s) to create
+    * @param refresh true to refresh the underlying gpu buffer (default: true). If you do multiple calls to this method in a row, set refresh to true only for the last call to save performance
+    * @returns the thin instance index number. If you pass an array of matrices, other instance indexes are index+1, index+2, etc
+    */
+  def thinInstanceAdd(matrix: DeepImmutableObjectMatrix, refresh: Boolean): Double = js.native
+  
+  /**
+    * Adds the transformation (matrix) of the current mesh as a thin instance
+    * @param refresh true to refresh the underlying gpu buffer (default: true). If you do multiple calls to this method in a row, set refresh to true only for the last call to save performance
+    * @returns the thin instance index number
+    */
+  def thinInstanceAddSelf(refresh: Boolean): Double = js.native
+  
+  /**
+    * Synchronize the gpu buffers with a thin instance buffer. Call this method if you update later on the buffers passed to thinInstanceSetBuffer
+    * @param kind name of the attribute to update. Use "matrix" to update the buffer of matrices
+    */
+  def thinInstanceBufferUpdated(kind: String): Unit = js.native
+  
+  /**
+    * Gets / sets the number of thin instances to display. Note that you can't set a number higher than what the underlying buffer can handle.
+    */
+  var thinInstanceCount: Double = js.native
+  
+  /**
+    * Gets or sets a boolean defining if we want picking to pick thin instances as well
+    */
+  var thinInstanceEnablePicking: Boolean = js.native
+  
+  /**
+    * Gets the list of world matrices
+    * @return an array containing all the world matrices from the thin instances
+    */
+  def thinInstanceGetWorldMatrices(): js.Array[Matrix] = js.native
+  
+  /**
+    * Applies a partial update to a buffer directly on the GPU
+    * Note that the buffer located on the CPU is NOT updated! It's up to you to update it (or not) with the same data you pass to this method
+    * @param kind name of the attribute to update. Use "matrix" to update the buffer of matrices
+    * @param data the data to set in the GPU buffer
+    * @param offset the offset in the GPU buffer where to update the data
+    */
+  def thinInstancePartialBufferUpdate(kind: String, data: js.typedarray.Float32Array, offset: Double): Unit = js.native
+  
+  /**
+    * Refreshes the bounding info, taking into account all the thin instances defined
+    * @param forceRefreshParentInfo true to force recomputing the mesh bounding info and use it to compute the aggregated bounding info
+    */
+  def thinInstanceRefreshBoundingInfo(forceRefreshParentInfo: Boolean): Unit = js.native
+  
+  /**
+    * Registers a custom attribute to be used with thin instances
+    * @param kind name of the attribute
+    * @param stride size in floats of the attribute
+    */
+  def thinInstanceRegisterAttribute(kind: String, stride: Double): Unit = js.native
+  
+  /**
+    * Sets the value of a custom attribute for a thin instance
+    * @param kind name of the attribute
+    * @param index index of the thin instance
+    * @param value value to set
+    * @param refresh true to refresh the underlying gpu buffer (default: true). If you do multiple calls to this method in a row, set refresh to true only for the last call to save performance
+    */
+  def thinInstanceSetAttributeAt(kind: String, index: Double, value: js.Array[Double], refresh: Boolean): Unit = js.native
+  
+  /**
+    * Sets a buffer to be used with thin instances. This method is a faster way to setup multiple instances than calling thinInstanceAdd repeatedly
+    * @param kind name of the attribute. Use "matrix" to setup the buffer of matrices
+    * @param buffer buffer to set
+    * @param stride size in floats of each value of the buffer
+    * @param staticBuffer indicates that the buffer is static, so that you won't change it after it is set (better performances - false by default)
+    */
+  def thinInstanceSetBuffer(kind: String, buffer: Nullable[js.typedarray.Float32Array], stride: Double, staticBuffer: Boolean): Unit = js.native
+  
+  /**
+    * Sets the matrix of a thin instance
+    * @param index index of the thin instance
+    * @param matrix matrix to set
+    * @param refresh true to refresh the underlying gpu buffer (default: true). If you do multiple calls to this method in a row, set refresh to true only for the last call to save performance
+    */
+  def thinInstanceSetMatrixAt(index: Double, matrix: DeepImmutableObjectMatrix, refresh: Boolean): Unit = js.native
+  
   /**
     * Invert the geometry to move from a right handed system to a left handed one.
     * @returns the current mesh
@@ -973,7 +1094,7 @@ class Mesh protected () extends AbstractMesh {
   
   /**
     * This method updates the vertex positions of an updatable mesh according to the `positionFunction` returned values.
-    * @see http://doc.babylonjs.com/how_to/how_to_dynamically_morph_a_mesh#other-shapes-updatemeshpositions
+    * @see https://doc.babylonjs.com/how_to/how_to_dynamically_morph_a_mesh#other-shapes-updatemeshpositions
     * @param positionFunction is a simple JS function what is passed the mesh `positions` array. It doesn't need to return anything
     * @param computeNormals is a boolean (default true) to enable/disable the mesh normal recomputation after the vertex position update
     * @returns the current mesh
@@ -1041,7 +1162,7 @@ object Mesh extends js.Object {
     * @param size sets the size (float) of each box side (default 1)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateBox(name: String, size: Double): Mesh = js.native
@@ -1062,6 +1183,15 @@ object Mesh extends js.Object {
   ): Mesh = js.native
   def CreateBox(name: String, size: Double, scene: Nullable[Scene]): Mesh = js.native
   
+  /** Creates a Capsule Mesh
+    * @param name defines the name of the mesh.
+    * @param options the constructors options used to shape the mesh.
+    * @param scene defines the scene the mesh is scoped to.
+    * @returns the capsule mesh
+    * @see https://doc.babylonjs.com/how_to/capsule_shape
+    */
+  def CreateCapsule(name: String, options: ICreateCapsuleOptions, scene: Scene): Mesh = js.native
+  
   /**
     * Creates a cylinder or a cone mesh. Please consider using the same method from the MeshBuilder class instead
     * @param name defines the name of the mesh to create
@@ -1072,7 +1202,7 @@ object Mesh extends js.Object {
     * @param subdivisions sets the number of rings along the cylinder height (positive integer, default 1)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateCylinder(
@@ -1166,7 +1296,7 @@ object Mesh extends js.Object {
     * @param dashNb is the intended total number of dashes (positive integer, default 200)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param instance is an instance of an existing LineMesh object to be updated with the passed `points` parameter (http://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#lines-and-dashedlines)
+    * @param instance is an instance of an existing LineMesh object to be updated with the passed `points` parameter (https://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#lines-and-dashedlines)
     * @returns a new Mesh
     */
   def CreateDashedLines(name: String, points: js.Array[Vector3], dashSize: Double, gapSize: Double, dashNb: Double): LinesMesh = js.native
@@ -1236,7 +1366,7 @@ object Mesh extends js.Object {
     * @param tessellation sets the number of polygon sides (positive integer, default 64). So a tessellation valued to 3 will build a triangle, to 4 a square, etc
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateDisc(name: String, radius: Double, tessellation: Double): Mesh = js.native
@@ -1298,7 +1428,7 @@ object Mesh extends js.Object {
   /**
     * Creates a ground mesh from a height map.
     * Please consider using the same method from the MeshBuilder class instead
-    * @see http://doc.babylonjs.com/babylon101/height_map
+    * @see https://doc.babylonjs.com/babylon101/height_map
     * @param name defines the name of the mesh to create
     * @param url sets the URL of the height map image resource
     * @param width set the ground width size
@@ -1428,15 +1558,15 @@ object Mesh extends js.Object {
     * * The parameter `subdivisions` sets the number of subdivisions (postive integer, default 4). The more subdivisions, the more faces on the icosphere whatever its size
     * * The parameter `flat` (boolean, default true) gives each side its own normals. Set it to false to get a smooth continuous light reflection on the surface
     * * You can also set the mesh side orientation with the values : Mesh.FRONTSIDE (default), Mesh.BACKSIDE or Mesh.DOUBLESIDE
-    * * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation
+    * * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation
     * * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created
     * @param name defines the name of the mesh
     * @param options defines the options used to create the mesh
     * @param scene defines the hosting scene
     * @returns a new Mesh
-    * @see http://doc.babylonjs.com/how_to/polyhedra_shapes#icosphere
+    * @see https://doc.babylonjs.com/how_to/polyhedra_shapes#icosphere
     */
-  def CreateIcoSphere(name: String, options: Updatable, scene: Scene): Mesh = js.native
+  def CreateIcoSphere(name: String, options: Flat, scene: Scene): Mesh = js.native
   
   /**
     * Creates lathe mesh.
@@ -1448,7 +1578,7 @@ object Mesh extends js.Object {
     * @param tessellation is the side number of the lathe.
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateLathe(name: String, shape: js.Array[Vector3], radius: Double, tessellation: Double, scene: Scene): Mesh = js.native
@@ -1485,7 +1615,7 @@ object Mesh extends js.Object {
     * @param points is an array successive Vector3
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param instance is an instance of an existing LineMesh object to be updated with the passed `points` parameter (http://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#lines-and-dashedlines).
+    * @param instance is an instance of an existing LineMesh object to be updated with the passed `points` parameter (https://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#lines-and-dashedlines).
     * @returns a new Mesh
     */
   def CreateLines(name: String, points: js.Array[Vector3]): LinesMesh = js.native
@@ -1512,7 +1642,7 @@ object Mesh extends js.Object {
     * @param size sets the size (float) of both sides of the plane at once (default 1)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreatePlane(name: String, size: Double, scene: Scene): Mesh = js.native
@@ -1533,13 +1663,13 @@ object Mesh extends js.Object {
     * You can set the mesh side orientation with the values : Mesh.FRONTSIDE (default), Mesh.BACKSIDE or Mesh.DOUBLESIDE
     * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created.
     * Remember you can only change the shape positions, not their number when updating a polygon.
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes#non-regular-polygon
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes#non-regular-polygon
     * @param name defines the name of the mesh to create
     * @param shape is a required array of successive Vector3 representing the corners of the polygon in th XoZ plane, that is y = 0 for all vectors
     * @param scene defines the hosting scene
     * @param holes is a required array of arrays of successive Vector3 used to defines holes in the polygon
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns a new Mesh
     */
@@ -1676,18 +1806,18 @@ object Mesh extends js.Object {
     * * To understand how to set `faceUV` or `faceColors`, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : https://doc.babylonjs.com/how_to/createbox_per_face_textures_and_colors
     * * The parameter `flat` (boolean, default true). If set to false, it gives the polyhedron a single global face, so less vertices and shared normals. In this case, `faceColors` and `faceUV` are ignored
     * * You can also set the mesh side orientation with the values : Mesh.FRONTSIDE (default), Mesh.BACKSIDE or Mesh.DOUBLESIDE
-    * * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation
+    * * If you create a double-sided mesh, you can choose what parts of the texture image to crop and stick respectively on the front and the back sides with the parameters `frontUVs` and `backUVs` (Vector4). Detail here : https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation
     * * The mesh can be set to updatable with the boolean parameter `updatable` (default false) if its internal geometry is supposed to change once created
     * @param name defines the name of the mesh to create
     * @param options defines the options used to create the mesh
     * @param scene defines the hosting scene
     * @returns a new Mesh
     */
-  def CreatePolyhedron(name: String, options: FaceColors, scene: Scene): Mesh = js.native
+  def CreatePolyhedron(name: String, options: Custom, scene: Scene): Mesh = js.native
   
   /**
     * Creates a ribbon mesh. Please consider using the same method from the MeshBuilder class instead
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes
     * @param name defines the name of the mesh to create
     * @param pathArray is a required array of paths, what are each an array of successive Vector3. The pathArray parameter depicts the ribbon geometry.
     * @param closeArray creates a seam between the first and the last paths of the path array (default is false)
@@ -1695,8 +1825,8 @@ object Mesh extends js.Object {
     * @param offset is taken in account only if the `pathArray` is containing a single path
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
-    * @param instance defines an instance of an existing Ribbon object to be updated with the passed `pathArray` parameter (http://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#ribbon)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param instance defines an instance of an existing Ribbon object to be updated with the passed `pathArray` parameter (https://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#ribbon)
     * @returns a new Mesh
     */
   def CreateRibbon(
@@ -1868,7 +1998,7 @@ object Mesh extends js.Object {
     * @param diameter sets the diameter size (float) of the sphere (default 1)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateSphere(name: String, segments: Double, diameter: Double): Mesh = js.native
@@ -1958,7 +2088,7 @@ object Mesh extends js.Object {
     * @param tessellation sets the number of torus sides (postive integer, default 16)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateTorus(name: String, diameter: Double, thickness: Double, tessellation: Double): Mesh = js.native
@@ -2027,7 +2157,7 @@ object Mesh extends js.Object {
     * @param q the number of windings on Y axis (positive integers, default 3)
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @returns a new Mesh
     */
   def CreateTorusKnot(
@@ -2125,7 +2255,7 @@ object Mesh extends js.Object {
     * The tube is a parametric shape.
     * It has no predefined shape. Its final shape will depend on the input parameters.
     * Please consider using the same method from the MeshBuilder class instead
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes
     * @param name defines the name of the mesh to create
     * @param path is a required array of successive Vector3. It is the curve used as the axis of the tube
     * @param radius sets the tube radius size
@@ -2134,8 +2264,8 @@ object Mesh extends js.Object {
     * @param cap sets the way the extruded shape is capped. Possible values : Mesh.NO_CAP (default), Mesh.CAP_START, Mesh.CAP_END, Mesh.CAP_ALL
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
-    * @param instance is an instance of an existing Tube object to be updated with the passed `pathArray` parameter (http://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#tube)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param instance is an instance of an existing Tube object to be updated with the passed `pathArray` parameter (https://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#tube)
     * @returns a new Mesh
     */
   def CreateTube(
@@ -2240,14 +2370,14 @@ object Mesh extends js.Object {
   
   /**
     * Creates an extruded polygon mesh, with depth in the Y direction. Please consider using the same method from the MeshBuilder class instead.
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes#extruded-non-regular-polygon
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes#extruded-non-regular-polygon
     * @param name defines the name of the mesh to create
     * @param shape is a required array of successive Vector3 representing the corners of the polygon in th XoZ plane, that is y = 0 for all vectors
     * @param depth defines the height of extrusion
     * @param scene defines the hosting scene
     * @param holes is a required array of arrays of successive Vector3 used to defines holes in the polygon
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
     * @param earcutInjection can be used to inject your own earcut reference
     * @returns a new Mesh
     */
@@ -2395,8 +2525,8 @@ object Mesh extends js.Object {
   /**
     * Creates an extruded shape mesh.
     * The extrusion is a parametric shape. It has no predefined shape. Its final shape will depend on the input parameters. Please consider using the same method from the MeshBuilder class instead
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
     * @param name defines the name of the mesh to create
     * @param shape is a required array of successive Vector3. This array depicts the shape to be extruded in its local space : the shape must be designed in the xOy plane and will be extruded along the Z axis
     * @param path is a required array of successive Vector3. This is the axis curve the shape is extruded along
@@ -2405,8 +2535,8 @@ object Mesh extends js.Object {
     * @param cap sets the way the extruded shape is capped. Possible values : Mesh.NO_CAP (default), Mesh.CAP_START, Mesh.CAP_END, Mesh.CAP_ALL
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
-    * @param instance is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters (http://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#extruded-shape)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param instance is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters (https://doc.babylonjs.com/how_to/How_to_dynamically_morph_a_mesh#extruded-shape)
     * @returns a new Mesh
     */
   def ExtrudeShape(
@@ -2512,7 +2642,7 @@ object Mesh extends js.Object {
     * The custom extrusion is a parametric shape.
     * It has no predefined shape. Its final shape will depend on the input parameters.
     * Please consider using the same method from the MeshBuilder class instead
-    * @see http://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
+    * @see https://doc.babylonjs.com/how_to/parametric_shapes#extruded-shapes
     * @param name defines the name of the mesh to create
     * @param shape is a required array of successive Vector3. This array depicts the shape to be extruded in its local space : the shape must be designed in the xOy plane and will be extruded along the Z axis
     * @param path is a required array of successive Vector3. This is the axis curve the shape is extruded along
@@ -2523,8 +2653,8 @@ object Mesh extends js.Object {
     * @param cap sets the way the extruded shape is capped. Possible values : Mesh.NO_CAP (default), Mesh.CAP_START, Mesh.CAP_END, Mesh.CAP_ALL
     * @param scene defines the hosting scene
     * @param updatable defines if the mesh must be flagged as updatable
-    * @param sideOrientation defines the mesh side orientation (http://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
-    * @param instance is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters (http://doc.babylonjs.com/how_to/how_to_dynamically_morph_a_mesh#extruded-shape)
+    * @param sideOrientation defines the mesh side orientation (https://doc.babylonjs.com/babylon101/discover_basic_elements#side-orientation)
+    * @param instance is an instance of an existing ExtrudedShape object to be updated with the passed `shape`, `path`, `scale` or `rotation` parameters (https://doc.babylonjs.com/how_to/how_to_dynamically_morph_a_mesh#extruded-shape)
     * @returns a new Mesh
     */
   def ExtrudeShapeCustom(

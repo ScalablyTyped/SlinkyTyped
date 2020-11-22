@@ -3,7 +3,7 @@ package typingsSlinky.devextreme.mod.DevExpress.viz
 import typingsSlinky.devextreme.anon.AggregateByCategory
 import typingsSlinky.devextreme.anon.AllowSlidersSwap
 import typingsSlinky.devextreme.anon.BarGroupPadding
-import typingsSlinky.devextreme.anon.ElementEventModel
+import typingsSlinky.devextreme.anon.EventModelPreviousValue
 import typingsSlinky.devextreme.anon.Image
 import typingsSlinky.devextreme.anon.InvalidRangeColor
 import typingsSlinky.devextreme.anon.Opacity
@@ -22,49 +22,79 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxRangeSelectorOptions extends BaseWidgetOptions[dxRangeSelector] {
   
-  /** @name dxRangeSelector.Options.background */
+  /**
+    * [descr:dxRangeSelector.Options.background]
+    */
   var background: js.UndefOr[Image] = js.native
   
-  /** @name dxRangeSelector.Options.behavior */
+  /**
+    * [descr:dxRangeSelector.Options.behavior]
+    */
   var behavior: js.UndefOr[AllowSlidersSwap] = js.native
   
-  /** @name dxRangeSelector.Options.chart */
+  /**
+    * [descr:dxRangeSelector.Options.chart]
+    */
   var chart: js.UndefOr[BarGroupPadding] = js.native
   
-  /** @name dxRangeSelector.Options.containerBackgroundColor */
+  /**
+    * [descr:dxRangeSelector.Options.containerBackgroundColor]
+    */
   var containerBackgroundColor: js.UndefOr[String] = js.native
   
-  /** @name dxRangeSelector.Options.dataSource */
+  /**
+    * [descr:dxRangeSelector.Options.dataSource]
+    */
   var dataSource: js.UndefOr[js.Array[_] | DataSource | DataSourceOptions | String] = js.native
   
-  /** @name dxRangeSelector.Options.dataSourceField */
+  /**
+    * [descr:dxRangeSelector.Options.dataSourceField]
+    */
   var dataSourceField: js.UndefOr[String] = js.native
   
-  /** @name dxRangeSelector.Options.indent */
+  /**
+    * [descr:dxRangeSelector.Options.indent]
+    */
   var indent: js.UndefOr[Right] = js.native
   
-  /** @name dxRangeSelector.Options.onValueChanged */
-  var onValueChanged: js.UndefOr[js.Function1[/* e */ ElementEventModel, _]] = js.native
+  /**
+    * [descr:dxRangeSelector.Options.onValueChanged]
+    */
+  var onValueChanged: js.UndefOr[js.Function1[/* e */ EventModelPreviousValue, _]] = js.native
   
-  /** @name dxRangeSelector.Options.scale */
+  /**
+    * [descr:dxRangeSelector.Options.scale]
+    */
   var scale: js.UndefOr[AggregateByCategory] = js.native
   
-  /** @name dxRangeSelector.Options.selectedRangeColor */
+  /**
+    * [descr:dxRangeSelector.Options.selectedRangeColor]
+    */
   var selectedRangeColor: js.UndefOr[String] = js.native
   
-  /** @name dxRangeSelector.Options.selectedRangeUpdateMode */
+  /**
+    * [descr:dxRangeSelector.Options.selectedRangeUpdateMode]
+    */
   var selectedRangeUpdateMode: js.UndefOr[auto | keep | reset | shift] = js.native
   
-  /** @name dxRangeSelector.Options.shutter */
+  /**
+    * [descr:dxRangeSelector.Options.shutter]
+    */
   var shutter: js.UndefOr[Opacity] = js.native
   
-  /** @name dxRangeSelector.Options.sliderHandle */
+  /**
+    * [descr:dxRangeSelector.Options.sliderHandle]
+    */
   var sliderHandle: js.UndefOr[OpacityWidth] = js.native
   
-  /** @name dxRangeSelector.Options.sliderMarker */
+  /**
+    * [descr:dxRangeSelector.Options.sliderMarker]
+    */
   var sliderMarker: js.UndefOr[InvalidRangeColor] = js.native
   
-  /** @name dxRangeSelector.Options.value */
+  /**
+    * [descr:dxRangeSelector.Options.value]
+    */
   var value: js.UndefOr[(js.Array[Double | String | js.Date]) | VizRange] = js.native
 }
 object dxRangeSelectorOptions {
@@ -136,7 +166,7 @@ object dxRangeSelectorOptions {
     def deleteIndent: Self = this.set("indent", js.undefined)
     
     @scala.inline
-    def setOnValueChanged(value: /* e */ ElementEventModel => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
+    def setOnValueChanged(value: /* e */ EventModelPreviousValue => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnValueChanged: Self = this.set("onValueChanged", js.undefined)

@@ -12,11 +12,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TextureData extends js.Object {
   
-  var complexTensors: js.UndefOr[Imag] = js.native
+  var complexParentRefCount: Double = js.native
+  
+  var complexTensorInfos: js.UndefOr[Imag] = js.native
   
   var dtype: DataType = js.native
   
   var isPacked: js.UndefOr[Boolean] = js.native
+  
+  var refCount: Double = js.native
   
   var shape: js.Array[Double] = js.native
   
@@ -34,8 +38,8 @@ trait TextureData extends js.Object {
 object TextureData {
   
   @scala.inline
-  def apply(dtype: DataType, shape: js.Array[Double]): TextureData = {
-    val __obj = js.Dynamic.literal(dtype = dtype.asInstanceOf[js.Any], shape = shape.asInstanceOf[js.Any])
+  def apply(complexParentRefCount: Double, dtype: DataType, refCount: Double, shape: js.Array[Double]): TextureData = {
+    val __obj = js.Dynamic.literal(complexParentRefCount = complexParentRefCount.asInstanceOf[js.Any], dtype = dtype.asInstanceOf[js.Any], refCount = refCount.asInstanceOf[js.Any], shape = shape.asInstanceOf[js.Any])
     __obj.asInstanceOf[TextureData]
   }
   
@@ -55,7 +59,13 @@ object TextureData {
     }
     
     @scala.inline
+    def setComplexParentRefCount(value: Double): Self = this.set("complexParentRefCount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setDtype(value: DataType): Self = this.set("dtype", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRefCount(value: Double): Self = this.set("refCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setShapeVarargs(value: Double*): Self = this.set("shape", js.Array(value :_*))
@@ -64,10 +74,10 @@ object TextureData {
     def setShape(value: js.Array[Double]): Self = this.set("shape", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setComplexTensors(value: Imag): Self = this.set("complexTensors", value.asInstanceOf[js.Any])
+    def setComplexTensorInfos(value: Imag): Self = this.set("complexTensorInfos", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteComplexTensors: Self = this.set("complexTensors", js.undefined)
+    def deleteComplexTensorInfos: Self = this.set("complexTensorInfos", js.undefined)
     
     @scala.inline
     def setIsPacked(value: Boolean): Self = this.set("isPacked", value.asInstanceOf[js.Any])

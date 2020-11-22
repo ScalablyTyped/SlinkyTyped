@@ -57,4 +57,14 @@ object mod extends js.Object {
       */
     def parseUDPFrame(data: Buffer): SocksUDPFrameDetails = js.native
   }
+  
+  /**
+    * Error wrapper for SocksClient
+    */
+  @js.native
+  class SocksClientError protected ()
+    extends typingsSlinky.socks.socksclientMod.SocksClientError {
+    def this(message: String, options: SocksClientChainOptions) = this()
+    def this(message: String, options: SocksClientOptions) = this()
+  }
 }

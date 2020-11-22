@@ -159,7 +159,7 @@ object axesViewerMod extends js.Object {
     /**
       * Gets the hosting scene
       */
-    var scene: Scene = js.native
+    var scene: Nullable[Scene] = js.native
     
     /**
       * Force the viewer to update

@@ -13,14 +13,14 @@ trait MUIDataTableBodyRow extends js.Object {
   
   var onClick: js.UndefOr[js.Function1[/* args */ js.Any, _]] = js.native
   
-  var options: js.Object = js.native
+  var options: MUIDataTableOptions = js.native
   
   var rowSelected: js.UndefOr[Boolean] = js.native
 }
 object MUIDataTableBodyRow {
   
   @scala.inline
-  def apply(options: js.Object): MUIDataTableBodyRow = {
+  def apply(options: MUIDataTableOptions): MUIDataTableBodyRow = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[MUIDataTableBodyRow]
   }
@@ -41,7 +41,7 @@ object MUIDataTableBodyRow {
     }
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: MUIDataTableOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "bootstrap_dot_paginator"
-version := "0.0-unknown-dt-20200515Z-77cb2d"
+version := "0.0-unknown-dt-20200923Z-77cb2d"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

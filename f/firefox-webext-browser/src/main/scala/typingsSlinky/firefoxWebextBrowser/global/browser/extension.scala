@@ -1,26 +1,23 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
+import org.scalajs.dom.raw.Window
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.Window
-import typingsSlinky.firefoxWebextBrowser.anon.Message
-import typingsSlinky.firefoxWebextBrowser.anon.Type
+import typingsSlinky.firefoxWebextBrowser.browser.extension.GetViewsFetchProperties
+import typingsSlinky.firefoxWebextBrowser.browser.extension.LastError
 import typingsSlinky.firefoxWebextBrowser.browser.runtime.MessageSender
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * The `browser.extension` API has utilities that can be used by any extension page. It includes support for exchanging
-  * messages between an extension and its content scripts or between extensions, as described in detail in Message
-  * Passing.
+  * The `browser.extension` API has utilities that can be used by any extension page. It includes support for exchanging messages between an extension and its content scripts or between extensions, as described in detail in Message Passing.
   */
 @JSGlobal("browser.extension")
 @js.native
 object extension extends js.Object {
   
   /**
-    * Returns the JavaScript 'window' object for the background page running inside the current extension. Returns
-    * null if the extension has no background page.
+    * Returns the JavaScript 'window' object for the background page running inside the current extension. Returns null if the extension has no background page.
     */
   def getBackgroundPage(): Window | Unit = js.native
   
@@ -37,40 +34,34 @@ object extension extends js.Object {
     * @returns Array of global objects
     */
   def getViews(): js.Array[Window] = js.native
-  def getViews(fetchProperties: Type): js.Array[Window] = js.native
+  def getViews(fetchProperties: GetViewsFetchProperties): js.Array[Window] = js.native
   
   /**
-    * True for content scripts running inside incognito tabs, and for extension pages running inside an incognito
-    * process. The latter only applies to extensions with 'split' incognito_behavior.
+    * True for content scripts running inside incognito tabs, and for extension pages running inside an incognito process. The latter only applies to extensions with 'split' incognito_behavior.
     */
   val inIncognitoContext: js.UndefOr[Boolean] = js.native
   
   /**
-    * Retrieves the state of the extension's access to the 'file://' scheme (as determined by the user-controlled
-    * 'Allow access to File URLs' checkbox.
+    * Retrieves the state of the extension's access to the 'file://' scheme (as determined by the user-controlled 'Allow access to File URLs' checkbox.
     */
   def isAllowedFileSchemeAccess(): js.Promise[Boolean] = js.native
   
   /**
-    * Retrieves the state of the extension's access to Incognito-mode (as determined by the user-controlled 'Allowed
-    * in Incognito' checkbox.
+    * Retrieves the state of the extension's access to Incognito-mode (as determined by the user-controlled 'Allowed in Incognito' checkbox.
     */
   def isAllowedIncognitoAccess(): js.Promise[Boolean] = js.native
   
   /* extension properties */
   /**
-    * Set for the lifetime of a callback if an ansychronous extension api has resulted in an error. If no error has
-    * occured lastError will be `undefined`.
+    * Set for the lifetime of a callback if an ansychronous extension api has resulted in an error. If no error has occured lastError will be `undefined`.
     */
-  val lastError: js.UndefOr[Message] = js.native
+  val lastError: js.UndefOr[LastError] = js.native
   
   /* extension events */
   /**
     * Fired when a request is sent from either an extension process or a content script.
     * @param request The request sent by the calling script.
-    * @param sendResponse Function to call (at most once) when you have a response. The argument should be any
-    *     JSON-ifiable object, or undefined if there is no response. If you have more than one `onRequest` listener in
-    *     the same document, then only one may send a response.
+    * @param sendResponse Function to call (at most once) when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response. If you have more than one `onRequest` listener in the same document, then only one may send a response.
     * @deprecated Please use `runtime.onMessage`.
     */
   val onRequest: js.UndefOr[
@@ -87,8 +78,7 @@ object extension extends js.Object {
   /**
     * Fired when a request is sent from another extension.
     * @param request The request sent by the calling script.
-    * @param sendResponse Function to call when you have a response. The argument should be any JSON-ifiable object,
-    *     or undefined if there is no response.
+    * @param sendResponse Function to call when you have a response. The argument should be any JSON-ifiable object, or undefined if there is no response.
     * @deprecated Please use `runtime.onMessageExternal`.
     */
   val onRequestExternal: js.UndefOr[
@@ -103,8 +93,7 @@ object extension extends js.Object {
   ] = js.native
   
   /**
-    * Sets the value of the ap CGI parameter used in the extension's update URL. This value is ignored for extensions
-    * that are hosted in the browser vendor's store.
+    * Sets the value of the ap CGI parameter used in the extension's update URL. This value is ignored for extensions that are hosted in the browser vendor's store.
     * @deprecated Unsupported on Firefox at this time.
     */
   def setUpdateUrlData(data: String): Unit = js.native

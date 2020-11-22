@@ -48,6 +48,8 @@ trait PartialOptionsentrystring extends js.Object {
   
   var minify: js.UndefOr[auto | Boolean | MinifyOptions] = js.native
   
+  var publicPath: js.UndefOr[String | auto] = js.native
+  
   var scriptLoading: js.UndefOr[blocking | defer] = js.native
   
   var showErrors: js.UndefOr[Boolean] = js.native
@@ -160,6 +162,12 @@ object PartialOptionsentrystring {
     
     @scala.inline
     def deleteMinify: Self = this.set("minify", js.undefined)
+    
+    @scala.inline
+    def setPublicPath(value: String | auto): Self = this.set("publicPath", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePublicPath: Self = this.set("publicPath", js.undefined)
     
     @scala.inline
     def setScriptLoading(value: blocking | defer): Self = this.set("scriptLoading", value.asInstanceOf[js.Any])

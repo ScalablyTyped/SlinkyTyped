@@ -1,5 +1,7 @@
 package typingsSlinky.reactNativeCalendars.mod
 
+import typingsSlinky.reactNative.mod.TextStyle
+import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,6 +11,8 @@ trait CalendarTheme extends js.Object {
   
   var arrowColor: js.UndefOr[String] = js.native
   
+  var arrowStyle: js.UndefOr[ViewStyle] = js.native
+  
   var backgroundColor: js.UndefOr[String] = js.native
   
   var calendarBackground: js.UndefOr[String] = js.native
@@ -16,6 +20,8 @@ trait CalendarTheme extends js.Object {
   var dayTextColor: js.UndefOr[String] = js.native
   
   var dotColor: js.UndefOr[String] = js.native
+  
+  var dotStyle: js.UndefOr[ViewStyle] = js.native
   
   var indicatorColor: js.UndefOr[String] = js.native
   
@@ -55,6 +61,9 @@ trait CalendarTheme extends js.Object {
   @JSName("stylesheet.day.single")
   var stylesheetDotdayDotsingle: js.UndefOr[CalendarThemeIdStyle] = js.native
   
+  @JSName("stylesheet.dot")
+  var stylesheetDotdot: js.UndefOr[CalendarThemeIdStyle] = js.native
+  
   var textDayFontFamily: js.UndefOr[String] = js.native
   
   var textDayFontSize: js.UndefOr[Double] = js.native
@@ -66,6 +75,8 @@ trait CalendarTheme extends js.Object {
   var textDayHeaderFontSize: js.UndefOr[Double] = js.native
   
   var textDayHeaderFontWeight: js.UndefOr[String] = js.native
+  
+  var textDayStyle: js.UndefOr[TextStyle] = js.native
   
   var textDisabledColor: js.UndefOr[String] = js.native
   
@@ -109,6 +120,12 @@ object CalendarTheme {
     def deleteArrowColor: Self = this.set("arrowColor", js.undefined)
     
     @scala.inline
+    def setArrowStyle(value: ViewStyle): Self = this.set("arrowStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteArrowStyle: Self = this.set("arrowStyle", js.undefined)
+    
+    @scala.inline
     def setBackgroundColor(value: String): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -131,6 +148,12 @@ object CalendarTheme {
     
     @scala.inline
     def deleteDotColor: Self = this.set("dotColor", js.undefined)
+    
+    @scala.inline
+    def setDotStyle(value: ViewStyle): Self = this.set("dotStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDotStyle: Self = this.set("dotStyle", js.undefined)
     
     @scala.inline
     def setIndicatorColor(value: String): Self = this.set("indicatorColor", value.asInstanceOf[js.Any])
@@ -217,6 +240,12 @@ object CalendarTheme {
     def deleteStylesheetDotdayDotsingle: Self = this.set("stylesheet.day.single", js.undefined)
     
     @scala.inline
+    def setStylesheetDotdot(value: CalendarThemeIdStyle): Self = this.set("stylesheet.dot", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStylesheetDotdot: Self = this.set("stylesheet.dot", js.undefined)
+    
+    @scala.inline
     def setTextDayFontFamily(value: String): Self = this.set("textDayFontFamily", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -251,6 +280,12 @@ object CalendarTheme {
     
     @scala.inline
     def deleteTextDayHeaderFontWeight: Self = this.set("textDayHeaderFontWeight", js.undefined)
+    
+    @scala.inline
+    def setTextDayStyle(value: TextStyle): Self = this.set("textDayStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTextDayStyle: Self = this.set("textDayStyle", js.undefined)
     
     @scala.inline
     def setTextDisabledColor(value: String): Self = this.set("textDisabledColor", value.asInstanceOf[js.Any])

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookFilter extends Entity {
   
   // The currently applied filter on the given column. Read-only.
-  var criteria: js.UndefOr[WorkbookFilterCriteria] = js.native
+  var criteria: js.UndefOr[NullableOption[WorkbookFilterCriteria]] = js.native
 }
 object WorkbookFilter {
   
@@ -34,9 +34,12 @@ object WorkbookFilter {
     }
     
     @scala.inline
-    def setCriteria(value: WorkbookFilterCriteria): Self = this.set("criteria", value.asInstanceOf[js.Any])
+    def setCriteria(value: NullableOption[WorkbookFilterCriteria]): Self = this.set("criteria", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCriteria: Self = this.set("criteria", js.undefined)
+    
+    @scala.inline
+    def setCriteriaNull: Self = this.set("criteria", null)
   }
 }

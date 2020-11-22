@@ -1,7 +1,7 @@
 
 # Scala.js typings for simonwep__selection-js
 
-Typings are for version 1.7.0
+Typings are for version 1.7.1
 
 ## Library description:
 Simple, lightweight and modern library library for making visual DOM Selections.

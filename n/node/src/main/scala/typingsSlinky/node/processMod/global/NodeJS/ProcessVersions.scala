@@ -1,11 +1,12 @@
 package typingsSlinky.node.processMod.global.NodeJS
 
+import typingsSlinky.node.NodeJS.Dict
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ProcessVersions extends js.Object {
+trait ProcessVersions extends Dict[String] {
   
   var ares: String = js.native
   

@@ -34,8 +34,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactMdProgress.reactMdProgressStrings.`additions removals`
 import typingsSlinky.reactMdProgress.reactMdProgressStrings.`additions text`
 import typingsSlinky.reactMdProgress.reactMdProgressStrings.`inline`
+import typingsSlinky.reactMdProgress.reactMdProgressStrings.`removals additions`
+import typingsSlinky.reactMdProgress.reactMdProgressStrings.`removals text`
+import typingsSlinky.reactMdProgress.reactMdProgressStrings.`text additions`
+import typingsSlinky.reactMdProgress.reactMdProgressStrings.`text removals`
 import typingsSlinky.reactMdProgress.reactMdProgressStrings.additions
 import typingsSlinky.reactMdProgress.reactMdProgressStrings.all
 import typingsSlinky.reactMdProgress.reactMdProgressStrings.ascending
@@ -169,7 +174,9 @@ trait LinearProgressProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -760,7 +767,9 @@ object LinearProgressProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

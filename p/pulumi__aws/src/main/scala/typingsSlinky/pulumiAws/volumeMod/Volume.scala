@@ -39,7 +39,7 @@ class Volume protected () extends CustomResource {
   val encrypted: Output_[Boolean] = js.native
   
   /**
-    * The amount of IOPS to provision for the disk.
+    * The amount of IOPS to provision for the disk. Only valid for `type` of `io1` or `io2`.
     */
   val iops: Output_[Double] = js.native
   
@@ -74,7 +74,7 @@ class Volume protected () extends CustomResource {
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
   /**
-    * The type of EBS volume. Can be "standard", "gp2", "io1", "sc1" or "st1" (Default: "gp2").
+    * The type of EBS volume. Can be "standard", "gp2", "io1", "io2", "sc1" or "st1" (Default: "gp2").
     */
   val `type`: Output_[String] = js.native
 }

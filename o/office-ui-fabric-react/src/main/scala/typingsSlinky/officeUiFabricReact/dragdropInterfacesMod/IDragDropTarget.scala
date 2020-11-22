@@ -1,8 +1,6 @@
 package typingsSlinky.officeUiFabricReact.dragdropInterfacesMod
 
-import org.scalajs.dom.raw.Element
-import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.ReactInstance
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,12 +12,12 @@ trait IDragDropTarget extends js.Object {
   
   var options: IDragDropOptions = js.native
   
-  var root: ReactInstance = js.native
+  var root: HTMLElement = js.native
 }
 object IDragDropTarget {
   
   @scala.inline
-  def apply(key: String, options: IDragDropOptions, root: ReactInstance): IDragDropTarget = {
+  def apply(key: String, options: IDragDropOptions, root: HTMLElement): IDragDropTarget = {
     val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[IDragDropTarget]
   }
@@ -46,12 +44,6 @@ object IDragDropTarget {
     def setOptions(value: IDragDropOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRootElement(value: Element): Self = this.set("root", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRootComponent(value: ReactComponentClass[js.Any]): Self = this.set("root", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setRoot(value: ReactInstance): Self = this.set("root", value.asInstanceOf[js.Any])
+    def setRoot(value: HTMLElement): Self = this.set("root", value.asInstanceOf[js.Any])
   }
 }

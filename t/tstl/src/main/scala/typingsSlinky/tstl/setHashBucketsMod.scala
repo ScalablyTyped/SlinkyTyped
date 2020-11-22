@@ -14,18 +14,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object setHashBucketsMod extends js.Object {
   
   @js.native
-  class SetHashBuckets[Key, Unique /* <: Boolean */, Source /* <: IHashSet[Key, Unique, Source] */] protected () extends HashBuckets[Iterator[Key, Unique, Source]] {
-    def this(source: IHashSet[Key, Unique, Source], hash: Hasher[Key], pred: Comparator[Key, Key]) = this()
+  class SetHashBuckets[Key, Unique /* <: Boolean */, Source /* <: IHashSet[Key, Unique, Source] */] protected () extends HashBuckets[Key, Iterator[Key, Unique, Source]] {
+    /**
+      * Initializer Constructor
+      *
+      * @param source Source set container
+      * @param hasher Hash function
+      * @param pred Equality function
+      */
+    def this(source: IHashSet[Key, Unique, Source], hasher: Hasher[Key], pred: Comparator[Key, Key]) = this()
     
     def find(`val`: Key): Iterator[Key, Unique, Source] = js.native
     
-    def hash_function(): Hasher[Key] = js.native
-    
-    var hash_function_ : js.Any = js.native
-    
     def key_eq(): Comparator[Key, Key] = js.native
     
-    var key_eq_ : js.Any = js.native
+    val key_eq_ : js.Any = js.native
     
     var source_ : js.Any = js.native
   }

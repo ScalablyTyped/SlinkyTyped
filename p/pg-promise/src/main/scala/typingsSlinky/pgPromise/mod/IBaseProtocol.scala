@@ -160,7 +160,7 @@ trait IBaseProtocol[Ext] extends js.Object {
   def result[T](query: QueryParam, values: js.Any, cb: js.Function1[/* value */ IResultExt, T], thisArg: js.Any): XPromise[T] = js.native
   
   // API: http://vitaly-t.github.io/pg-promise/Database.html#stream
-  def stream(qs: js.Object, init: js.Function1[/* stream */ ReadableStream, Unit]): XPromise[Duration] = js.native
+  def stream(qs: ReadableStream, init: js.Function1[/* stream */ ReadableStream, Unit]): XPromise[Duration] = js.native
   
   // Tasks;
   // API: http://vitaly-t.github.io/pg-promise/Database.html#task

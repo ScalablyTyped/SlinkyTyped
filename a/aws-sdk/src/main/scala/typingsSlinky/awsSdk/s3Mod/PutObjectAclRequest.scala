@@ -18,27 +18,32 @@ trait PutObjectAclRequest extends js.Object {
   var AccessControlPolicy: js.UndefOr[typingsSlinky.awsSdk.s3Mod.AccessControlPolicy] = js.native
   
   /**
-    * The bucket name that contains the object to which you want to attach the ACL.  When using this API with an access point, you must direct requests to the access point hostname. The access point hostname takes the form AccessPointName-AccountId.s3-accesspoint.Region.amazonaws.com. When using this operation using an access point through the AWS SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see Using Access Points in the Amazon Simple Storage Service Developer Guide.
+    * The bucket name that contains the object to which you want to attach the ACL.  When using this API with an access point, you must direct requests to the access point hostname. The access point hostname takes the form AccessPointName-AccountId.s3-accesspoint.Region.amazonaws.com. When using this operation with an access point through the AWS SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see Using Access Points in the Amazon Simple Storage Service Developer Guide.
     */
   var Bucket: BucketName = js.native
   
   /**
-    * The base64-encoded 128-bit MD5 digest of the data. This header must be used as a message integrity check to verify that the request body was not corrupted in transit. For more information, go to RFC 1864.&gt; 
+    * The base64-encoded 128-bit MD5 digest of the data. This header must be used as a message integrity check to verify that the request body was not corrupted in transit. For more information, go to RFC 1864.&gt;  For requests made using the AWS Command Line Interface (CLI) or AWS SDKs, this field is calculated automatically.
     */
   var ContentMD5: js.UndefOr[typingsSlinky.awsSdk.s3Mod.ContentMD5] = js.native
   
   /**
-    * Allows grantee the read, write, read ACP, and write ACP permissions on the bucket.
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
+  
+  /**
+    * Allows grantee the read, write, read ACP, and write ACP permissions on the bucket. This action is not supported by Amazon S3 on Outposts.
     */
   var GrantFullControl: js.UndefOr[typingsSlinky.awsSdk.s3Mod.GrantFullControl] = js.native
   
   /**
-    * Allows grantee to list the objects in the bucket.
+    * Allows grantee to list the objects in the bucket. This action is not supported by Amazon S3 on Outposts.
     */
   var GrantRead: js.UndefOr[typingsSlinky.awsSdk.s3Mod.GrantRead] = js.native
   
   /**
-    * Allows grantee to read the bucket ACL.
+    * Allows grantee to read the bucket ACL. This action is not supported by Amazon S3 on Outposts.
     */
   var GrantReadACP: js.UndefOr[typingsSlinky.awsSdk.s3Mod.GrantReadACP] = js.native
   
@@ -48,12 +53,12 @@ trait PutObjectAclRequest extends js.Object {
   var GrantWrite: js.UndefOr[typingsSlinky.awsSdk.s3Mod.GrantWrite] = js.native
   
   /**
-    * Allows grantee to write the ACL for the applicable bucket.
+    * Allows grantee to write the ACL for the applicable bucket. This action is not supported by Amazon S3 on Outposts.
     */
   var GrantWriteACP: js.UndefOr[typingsSlinky.awsSdk.s3Mod.GrantWriteACP] = js.native
   
   /**
-    * Key for which the PUT operation was initiated.
+    * Key for which the PUT operation was initiated. When using this API with an access point, you must direct requests to the access point hostname. The access point hostname takes the form AccessPointName-AccountId.s3-accesspoint.Region.amazonaws.com. When using this operation with an access point through the AWS SDKs, you provide the access point ARN in place of the bucket name. For more information about access point ARNs, see Using Access Points in the Amazon Simple Storage Service Developer Guide. When using this API with Amazon S3 on Outposts, you must direct requests to the S3 on Outposts hostname. The S3 on Outposts hostname takes the form AccessPointName-AccountId.outpostID.s3-outposts.Region.amazonaws.com. When using this operation using S3 on Outposts through the AWS SDKs, you provide the Outposts bucket ARN in place of the bucket name. For more information about S3 on Outposts ARNs, see Using S3 on Outposts in the Amazon Simple Storage Service Developer Guide.
     */
   var Key: ObjectKey = js.native
   
@@ -110,6 +115,12 @@ object PutObjectAclRequest {
     
     @scala.inline
     def deleteContentMD5: Self = this.set("ContentMD5", js.undefined)
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
     
     @scala.inline
     def setGrantFullControl(value: GrantFullControl): Self = this.set("GrantFullControl", value.asInstanceOf[js.Any])

@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.BillingGetSharedStorageBillingOrgEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.BillingGetSharedStorageBillingOrgResponseData
+import typingsSlinky.octokitTypes.endpointsMod.BillingGetGithubActionsBillingUserEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.BillingGetGithubActionsBillingUserResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `652` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[BillingGetSharedStorageBillingOrgEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[BillingGetGithubActionsBillingUserEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[BillingGetSharedStorageBillingOrgResponseData] = js.native
+  var response: OctokitResponse[BillingGetGithubActionsBillingUserResponseData] = js.native
 }
 object `652` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[BillingGetSharedStorageBillingOrgEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[BillingGetSharedStorageBillingOrgResponseData]
+    parameters: RequestParameters with (Omit[BillingGetGithubActionsBillingUserEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[BillingGetGithubActionsBillingUserResponseData]
   ): `652` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`652`]
@@ -47,10 +47,10 @@ object `652` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[BillingGetSharedStorageBillingOrgEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[BillingGetGithubActionsBillingUserEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[BillingGetSharedStorageBillingOrgResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[BillingGetGithubActionsBillingUserResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

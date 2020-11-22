@@ -60,9 +60,6 @@ trait GetVpcEndpointServiceResult extends js.Object {
   
   val serviceName: String = js.native
   
-  /**
-    * The service type, `Gateway` or `Interface`.
-    */
   val serviceType: String = js.native
   
   /**

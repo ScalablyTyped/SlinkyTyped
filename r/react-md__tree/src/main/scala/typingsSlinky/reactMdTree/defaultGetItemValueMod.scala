@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object defaultGetItemValueMod extends js.Object {
   
-  def default(item: UnknownTreeItem, valueKey: String): String = js.native
+  def defaultGetItemValue(item: UnknownTreeItem, valueKey: String): String = js.native
 }

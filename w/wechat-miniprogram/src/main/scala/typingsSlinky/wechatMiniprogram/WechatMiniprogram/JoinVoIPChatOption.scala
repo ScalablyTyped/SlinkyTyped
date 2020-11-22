@@ -1,5 +1,7 @@
 package typingsSlinky.wechatMiniprogram.WechatMiniprogram
 
+import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.video
+import typingsSlinky.wechatMiniprogram.wechatMiniprogramStrings.voice
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,16 +18,18 @@ trait JoinVoIPChatOption extends js.Object {
   /** 小游戏内此房间/群聊的 ID。同一时刻传入相同 groupId 的用户会进入到同个实时语音房间。 */
   var groupId: String = js.native
   
-  /** 语音通话是否免提
-    *
-    * 最低基础库： `2.10.4` */
-  var handsFree: js.UndefOr[Boolean] = js.native
-  
   /** 静音设置 */
   var muteConfig: js.UndefOr[MuteConfig] = js.native
   
   /** 验证所需的随机字符串 */
   var nonceStr: String = js.native
+  
+  /** 房间类型
+    *
+    * 可选值：
+    * - 'voice': 音频房间，用于语音通话;
+    * - 'video': 视频房间，结合 [voip-room](https://developers.weixin.qq.com/miniprogram/dev/component/voip-room.html) 组件可显示成员画面; */
+  var roomType: js.UndefOr[voice | video] = js.native
   
   /** 签名，用于验证小游戏的身份 */
   var signature: String = js.native
@@ -84,16 +88,16 @@ object JoinVoIPChatOption {
     def deleteFail: Self = this.set("fail", js.undefined)
     
     @scala.inline
-    def setHandsFree(value: Boolean): Self = this.set("handsFree", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHandsFree: Self = this.set("handsFree", js.undefined)
-    
-    @scala.inline
     def setMuteConfig(value: MuteConfig): Self = this.set("muteConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMuteConfig: Self = this.set("muteConfig", js.undefined)
+    
+    @scala.inline
+    def setRoomType(value: voice | video): Self = this.set("roomType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRoomType: Self = this.set("roomType", js.undefined)
     
     @scala.inline
     def setSuccess(value: /* result */ JoinVoIPChatSuccessCallbackResult => Unit): Self = this.set("success", js.Any.fromFunction1(value))

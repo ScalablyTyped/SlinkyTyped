@@ -1,6 +1,6 @@
 package typingsSlinky.xstate.typesMod
 
-import typingsSlinky.xstate.anon.Context
+import typingsSlinky.xstate.anon.ContextTContext
 import typingsSlinky.xstate.stateMod.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,14 +11,14 @@ trait StateMeta[TContext, TEvent /* <: EventObject */] extends js.Object {
   
   var _event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent] = js.native
   
-  var state: State[TContext, TEvent, _, Context[TContext]] = js.native
+  var state: State[TContext, TEvent, _, ContextTContext[TContext]] = js.native
 }
 object StateMeta {
   
   @scala.inline
   def apply[TContext, TEvent /* <: EventObject */](
     _event: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent],
-    state: State[TContext, TEvent, _, Context[TContext]]
+    state: State[TContext, TEvent, _, ContextTContext[TContext]]
   ): StateMeta[TContext, TEvent] = {
     val __obj = js.Dynamic.literal(_event = _event.asInstanceOf[js.Any], state = state.asInstanceOf[js.Any])
     __obj.asInstanceOf[StateMeta[TContext, TEvent]]
@@ -43,6 +43,6 @@ object StateMeta {
     def set_event(value: typingsSlinky.xstate.typesMod.SCXML.Event[TEvent]): Self = this.set("_event", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setState(value: State[TContext, TEvent, _, Context[TContext]]): Self = this.set("state", value.asInstanceOf[js.Any])
+    def setState(value: State[TContext, TEvent, _, ContextTContext[TContext]]): Self = this.set("state", value.asInstanceOf[js.Any])
   }
 }

@@ -41,7 +41,7 @@ trait VpcEndpointArgs extends js.Object {
   val serviceName: Input[String] = js.native
   
   /**
-    * The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `Interface`.
+    * The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
     */
   val subnetIds: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
@@ -51,7 +51,7 @@ trait VpcEndpointArgs extends js.Object {
   val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
   
   /**
-    * The VPC endpoint type, `Gateway` or `Interface`. Defaults to `Gateway`.
+    * The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
     */
   val vpcEndpointType: js.UndefOr[Input[String]] = js.native
   

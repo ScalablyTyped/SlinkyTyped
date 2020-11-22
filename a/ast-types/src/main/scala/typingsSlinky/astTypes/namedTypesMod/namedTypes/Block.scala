@@ -6,17 +6,17 @@ import typingsSlinky.astTypes.kindsMod.PrintableKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@js.native
 trait Block
   extends Comment
      with ASTNode
      with CommentKind
      with PrintableKind {
-  var `type`: typingsSlinky.astTypes.astTypesStrings.Block
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.Block = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.Block")
 @js.native
 object Block extends TopLevel[Type[Block]]
-

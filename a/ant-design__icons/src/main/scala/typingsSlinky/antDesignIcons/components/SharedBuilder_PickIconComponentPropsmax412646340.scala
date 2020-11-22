@@ -19,8 +19,13 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antDesignIcons.antDesignIconsStrings.`additions removals`
 import typingsSlinky.antDesignIcons.antDesignIconsStrings.`additions text`
 import typingsSlinky.antDesignIcons.antDesignIconsStrings.`inline`
+import typingsSlinky.antDesignIcons.antDesignIconsStrings.`removals additions`
+import typingsSlinky.antDesignIcons.antDesignIconsStrings.`removals text`
+import typingsSlinky.antDesignIcons.antDesignIconsStrings.`text additions`
+import typingsSlinky.antDesignIcons.antDesignIconsStrings.`text removals`
 import typingsSlinky.antDesignIcons.antDesignIconsStrings.additions
 import typingsSlinky.antDesignIcons.antDesignIconsStrings.all
 import typingsSlinky.antDesignIcons.antDesignIconsStrings.ascending
@@ -209,7 +214,9 @@ class SharedBuilder_PickIconComponentPropsmax412646340[R <: js.Object] (val args
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

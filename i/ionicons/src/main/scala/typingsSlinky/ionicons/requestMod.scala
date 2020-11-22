@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object requestMod extends js.Object {
   
-  def getSvgContent(url: String): js.Promise[_] = js.native
+  def getSvgContent(url: String, sanitize: Boolean): js.Promise[_] = js.native
   
   val ioniconContent: Map[String, String] = js.native
 }

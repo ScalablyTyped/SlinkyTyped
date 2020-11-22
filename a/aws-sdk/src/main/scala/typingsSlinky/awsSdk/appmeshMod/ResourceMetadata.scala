@@ -23,14 +23,12 @@ trait ResourceMetadata extends js.Object {
   var lastUpdatedAt: js.Date = js.native
   
   /**
-    * The AWS IAM account ID of the service mesh owner. If the account ID is not your own, then it's
-    the ID of the account that shared the mesh with your account. For more information about mesh sharing, see Working with shared meshes.
+    * The AWS IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see Working with shared meshes.
     */
   var meshOwner: AccountId = js.native
   
   /**
-    * The AWS IAM account ID of the resource owner. If the account ID is not your own, then it's
-    the ID of the mesh owner or of another account that the mesh is shared with. For more information about mesh sharing, see Working with shared meshes.
+    * The AWS IAM account ID of the resource owner. If the account ID is not your own, then it's the ID of the mesh owner or of another account that the mesh is shared with. For more information about mesh sharing, see Working with shared meshes.
     */
   var resourceOwner: AccountId = js.native
   

@@ -59,6 +59,9 @@ object tsutilsStrings {
   def declarationMap: declarationMap = "declarationMap".asInstanceOf[declarationMap]
   
   @scala.inline
+  def disableReferencedProjectLoad: disableReferencedProjectLoad = "disableReferencedProjectLoad".asInstanceOf[disableReferencedProjectLoad]
+  
+  @scala.inline
   def disableSizeLimit: disableSizeLimit = "disableSizeLimit".asInstanceOf[disableSizeLimit]
   
   @scala.inline
@@ -111,6 +114,12 @@ object tsutilsStrings {
   
   @scala.inline
   def jsxFactory: jsxFactory = "jsxFactory".asInstanceOf[jsxFactory]
+  
+  @scala.inline
+  def jsxFragmentFactory: jsxFragmentFactory = "jsxFragmentFactory".asInstanceOf[jsxFragmentFactory]
+  
+  @scala.inline
+  def jsxImportSource: jsxImportSource = "jsxImportSource".asInstanceOf[jsxImportSource]
   
   @scala.inline
   def keyofStringsOnly: keyofStringsOnly = "keyofStringsOnly".asInstanceOf[keyofStringsOnly]
@@ -171,6 +180,9 @@ object tsutilsStrings {
   
   @scala.inline
   def noStrictGenericChecks: noStrictGenericChecks = "noStrictGenericChecks".asInstanceOf[noStrictGenericChecks]
+  
+  @scala.inline
+  def noUncheckedIndexedAccess: noUncheckedIndexedAccess = "noUncheckedIndexedAccess".asInstanceOf[noUncheckedIndexedAccess]
   
   @scala.inline
   def noUnusedLocals: noUnusedLocals = "noUnusedLocals".asInstanceOf[noUnusedLocals]
@@ -326,6 +338,9 @@ object tsutilsStrings {
   sealed trait declarationMap extends js.Object
   
   @js.native
+  sealed trait disableReferencedProjectLoad extends js.Object
+  
+  @js.native
   sealed trait disableSizeLimit extends js.Object
   
   @js.native
@@ -378,6 +393,12 @@ object tsutilsStrings {
   
   @js.native
   sealed trait jsxFactory extends js.Object
+  
+  @js.native
+  sealed trait jsxFragmentFactory extends js.Object
+  
+  @js.native
+  sealed trait jsxImportSource extends js.Object
   
   @js.native
   sealed trait keyofStringsOnly extends js.Object
@@ -438,6 +459,9 @@ object tsutilsStrings {
   
   @js.native
   sealed trait noStrictGenericChecks extends js.Object
+  
+  @js.native
+  sealed trait noUncheckedIndexedAccess extends js.Object
   
   @js.native
   sealed trait noUnusedLocals extends js.Object

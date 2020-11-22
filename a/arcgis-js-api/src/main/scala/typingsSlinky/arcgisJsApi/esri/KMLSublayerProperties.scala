@@ -29,7 +29,7 @@ trait KMLSublayerProperties extends js.Object {
   var layer: js.UndefOr[KMLLayerProperties] = js.native
   
   /**
-    * Network link info for the current layer. A link info object with properties that describe the network link.
+    * Network link info for the current layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-KMLSublayer.html#networkLink)
     */

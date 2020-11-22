@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EmptyStatement extends Statement {
   
   @JSName("kind")
-  var kind_EmptyStatement: typingsSlinky.typescript.mod.SyntaxKind.EmptyStatement = js.native
+  val kind_EmptyStatement: typingsSlinky.typescript.mod.SyntaxKind.EmptyStatement = js.native
 }

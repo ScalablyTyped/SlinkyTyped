@@ -55,6 +55,9 @@ object PolarAngleAxis {
     def alignmentBaseline(value: String): this.type = set("alignmentBaseline", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def allowDuplicatedCategory(value: Boolean): this.type = set("allowDuplicatedCategory", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def angle(value: Double): this.type = set("angle", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -18,7 +18,7 @@ trait Image extends js.Object {
   var imageManifest: js.UndefOr[ImageManifest] = js.native
   
   /**
-    * The media type associated with the image manifest.
+    * The manifest media type of the image.
     */
   var imageManifestMediaType: js.UndefOr[MediaType] = js.native
   

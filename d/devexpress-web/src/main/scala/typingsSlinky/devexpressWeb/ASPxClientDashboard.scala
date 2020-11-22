@@ -60,6 +60,9 @@ trait ASPxClientDashboard extends ASPxClientControl {
     */
   var CustomDataCallback: ASPxClientEvent[ASPxClientCustomDataCallbackEventHandler[ASPxClientDashboard]] = js.native
   
+  /**
+    * Allows you to customize the Dashboard Data Source Wizard.
+    */
   var CustomizeDataSourceWizard: ASPxClientEvent[ASPxClientCustomizeDataSourceWizardEventHandler[ASPxClientDashboard]] = js.native
   
   /**
@@ -292,6 +295,11 @@ trait ASPxClientDashboard extends ASPxClientControl {
   def GetWorkingMode(): String = js.native
   
   /**
+    * Hides the invoked Data Inspector dialog.
+    */
+  def HideDataInspector(): Unit = js.native
+  
+  /**
     * Hides the dialog that allows end-users to export the dashboard/dashboard item.
     */
   def HideExportDialog(): Unit = js.native
@@ -301,6 +309,9 @@ trait ASPxClientDashboard extends ASPxClientControl {
     */
   def HideParametersDialog(): Unit = js.native
   
+  /**
+    * Gets a value that indicates whether the Web Dashboard works in the Designer mode.
+    */
   def IsDesignMode(): Boolean = js.native
   
   /**
@@ -510,6 +521,13 @@ trait ASPxClientDashboard extends ASPxClientControl {
   def SetSelectedTabPageIndex(tabContainerName: String, index: Double): Unit = js.native
   
   /**
+    * Invokes the Data Inspector dialog with a defined data type for the specified dashboard item.
+    * @param itemName A string that specifies a component name of the dashboard item for which the Data Inspector displays data.
+    * @param inspectedType A InspectedType object that defines the displayed underlying data.
+    */
+  def ShowDataInspector(itemName: String, inspectedType: String): Unit = js.native
+  
+  /**
     * Invokes the dialog that allows end-users to export the entire dashboard to the specified format.
     * @param format A string value that specifies the format. For instance, you can use 'PDF', 'Image', or 'Excel'.
     */
@@ -528,7 +546,7 @@ trait ASPxClientDashboard extends ASPxClientControl {
   def ShowParametersDialog(): Unit = js.native
   
   /**
-    * Switches the ASPxClientDashboard to the designer mode.
+    * Switches the ASPxClientDashboard to Designer mode.
     */
   def SwitchToDesigner(): Unit = js.native
   

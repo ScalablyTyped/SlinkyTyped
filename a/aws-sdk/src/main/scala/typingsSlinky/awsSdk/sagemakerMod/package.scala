@@ -41,6 +41,20 @@ package object sagemakerMod {
   
   type AppArn = java.lang.String
   
+  type AppImageConfigArn = java.lang.String
+  
+  type AppImageConfigList = js.Array[typingsSlinky.awsSdk.sagemakerMod.AppImageConfigDetails]
+  
+  type AppImageConfigName = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CreationTime
+    - typingsSlinky.awsSdk.awsSdkStrings.LastModifiedTime
+    - typingsSlinky.awsSdk.awsSdkStrings.Name_
+    - java.lang.String
+  */
+  type AppImageConfigSortKey = typingsSlinky.awsSdk.sagemakerMod._AppImageConfigSortKey | java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.system__
     - typingsSlinky.awsSdk.awsSdkStrings.mlDott3Dotmicro
@@ -81,6 +95,13 @@ package object sagemakerMod {
   type AppList = js.Array[typingsSlinky.awsSdk.sagemakerMod.AppDetails]
   
   type AppName = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PublicInternetOnly
+    - typingsSlinky.awsSdk.awsSdkStrings.VpcOnly
+    - java.lang.String
+  */
+  type AppNetworkAccessType = typingsSlinky.awsSdk.sagemakerMod._AppNetworkAccessType | java.lang.String
   
   type AppSortKey = typingsSlinky.awsSdk.awsSdkStrings.CreationTime | java.lang.String
   
@@ -175,6 +196,7 @@ package object sagemakerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.MSE
     - typingsSlinky.awsSdk.awsSdkStrings.F1
     - typingsSlinky.awsSdk.awsSdkStrings.F1macro
+    - typingsSlinky.awsSdk.awsSdkStrings.AUC
     - java.lang.String
   */
   type AutoMLMetricEnum = typingsSlinky.awsSdk.sagemakerMod._AutoMLMetricEnum | java.lang.String
@@ -302,6 +324,8 @@ package object sagemakerMod {
   
   type ClientSecret = java.lang.String
   
+  type ClientToken = java.lang.String
+  
   type CodeRepositoryArn = java.lang.String
   
   type CodeRepositoryContains = java.lang.String
@@ -409,6 +433,8 @@ package object sagemakerMod {
   
   type CsvContentTypes = js.Array[typingsSlinky.awsSdk.sagemakerMod.CsvContentType]
   
+  type CustomImages = js.Array[typingsSlinky.awsSdk.sagemakerMod.CustomImage]
+  
   type DataExplorationNotebookLocation = java.lang.String
   
   type DataInputConfig = java.lang.String
@@ -416,6 +442,10 @@ package object sagemakerMod {
   type DebugRuleConfigurations = js.Array[typingsSlinky.awsSdk.sagemakerMod.DebugRuleConfiguration]
   
   type DebugRuleEvaluationStatuses = js.Array[typingsSlinky.awsSdk.sagemakerMod.DebugRuleEvaluationStatus]
+  
+  type DefaultGid = scala.Double
+  
+  type DefaultUid = scala.Double
   
   type DeployedImages = js.Array[typingsSlinky.awsSdk.sagemakerMod.DeployedImage]
   
@@ -473,6 +503,9 @@ package object sagemakerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.Failed_
     - typingsSlinky.awsSdk.awsSdkStrings.InService
     - typingsSlinky.awsSdk.awsSdkStrings.Pending_
+    - typingsSlinky.awsSdk.awsSdkStrings.Updating_
+    - typingsSlinky.awsSdk.awsSdkStrings.Update_Failed_
+    - typingsSlinky.awsSdk.awsSdkStrings.Delete_Failed_
     - java.lang.String
   */
   type DomainStatus = typingsSlinky.awsSdk.sagemakerMod._DomainStatus | java.lang.String
@@ -624,6 +657,7 @@ package object sagemakerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.PYTORCH
     - typingsSlinky.awsSdk.awsSdkStrings.XGBOOST
     - typingsSlinky.awsSdk.awsSdkStrings.TFLITE
+    - typingsSlinky.awsSdk.awsSdkStrings.DARKNET
     - java.lang.String
   */
   type Framework = typingsSlinky.awsSdk.sagemakerMod._Framework | java.lang.String
@@ -652,6 +686,8 @@ package object sagemakerMod {
   type HumanTaskUiStatus = typingsSlinky.awsSdk.sagemakerMod._HumanTaskUiStatus | java.lang.String
   
   type HumanTaskUiSummaries = js.Array[typingsSlinky.awsSdk.sagemakerMod.HumanTaskUiSummary]
+  
+  type HyperParameterKey = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Auto_
@@ -703,7 +739,7 @@ package object sagemakerMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Bayesian
-    - typingsSlinky.awsSdk.awsSdkStrings.Random
+    - typingsSlinky.awsSdk.awsSdkStrings.Random_
     - java.lang.String
   */
   type HyperParameterTuningJobStrategyType = typingsSlinky.awsSdk.sagemakerMod._HyperParameterTuningJobStrategyType | java.lang.String
@@ -717,13 +753,91 @@ package object sagemakerMod {
   */
   type HyperParameterTuningJobWarmStartType = typingsSlinky.awsSdk.sagemakerMod._HyperParameterTuningJobWarmStartType | java.lang.String
   
-  type HyperParameters = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.sagemakerMod.ParameterValue]
+  type HyperParameterValue = java.lang.String
+  
+  type HyperParameters = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.sagemakerMod.HyperParameterValue]
   
   type ImageArn = java.lang.String
   
+  type ImageBaseImage = java.lang.String
+  
+  type ImageContainerImage = java.lang.String
+  
+  type ImageDeleteProperty = java.lang.String
+  
+  type ImageDeletePropertyList = js.Array[typingsSlinky.awsSdk.sagemakerMod.ImageDeleteProperty]
+  
+  type ImageDescription = java.lang.String
+  
   type ImageDigest = java.lang.String
   
+  type ImageDisplayName = java.lang.String
+  
+  type ImageName = java.lang.String
+  
+  type ImageNameContains = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATION_TIME
+    - typingsSlinky.awsSdk.awsSdkStrings.LAST_MODIFIED_TIME
+    - typingsSlinky.awsSdk.awsSdkStrings.IMAGE_NAME
+    - java.lang.String
+  */
+  type ImageSortBy = typingsSlinky.awsSdk.sagemakerMod._ImageSortBy | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ASCENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.DESCENDING
+    - java.lang.String
+  */
+  type ImageSortOrder = typingsSlinky.awsSdk.sagemakerMod._ImageSortOrder | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATED
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATE_FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
+    - typingsSlinky.awsSdk.awsSdkStrings.UPDATE_FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_FAILED
+    - java.lang.String
+  */
+  type ImageStatus = typingsSlinky.awsSdk.sagemakerMod._ImageStatus | java.lang.String
+  
   type ImageUri = java.lang.String
+  
+  type ImageVersionArn = java.lang.String
+  
+  type ImageVersionNumber = scala.Double
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATION_TIME
+    - typingsSlinky.awsSdk.awsSdkStrings.LAST_MODIFIED_TIME
+    - typingsSlinky.awsSdk.awsSdkStrings.VERSION
+    - java.lang.String
+  */
+  type ImageVersionSortBy = typingsSlinky.awsSdk.sagemakerMod._ImageVersionSortBy | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ASCENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.DESCENDING
+    - java.lang.String
+  */
+  type ImageVersionSortOrder = typingsSlinky.awsSdk.sagemakerMod._ImageVersionSortOrder | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATED
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATE_FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_FAILED
+    - java.lang.String
+  */
+  type ImageVersionStatus = typingsSlinky.awsSdk.sagemakerMod._ImageVersionStatus | java.lang.String
+  
+  type ImageVersions = js.Array[typingsSlinky.awsSdk.sagemakerMod.ImageVersion]
+  
+  type Images = js.Array[typingsSlinky.awsSdk.sagemakerMod.Image]
   
   type InputDataConfig = js.Array[typingsSlinky.awsSdk.sagemakerMod.Channel]
   
@@ -794,6 +908,12 @@ package object sagemakerMod {
   type JsonContentTypes = js.Array[typingsSlinky.awsSdk.sagemakerMod.JsonContentType]
   
   type JsonPath = java.lang.String
+  
+  type KernelDisplayName = java.lang.String
+  
+  type KernelName = java.lang.String
+  
+  type KernelSpecs = js.Array[typingsSlinky.awsSdk.sagemakerMod.KernelSpec]
   
   type KmsKeyId = java.lang.String
   
@@ -969,6 +1089,8 @@ package object sagemakerMod {
   type MonitoringScheduleSortKey = typingsSlinky.awsSdk.sagemakerMod._MonitoringScheduleSortKey | java.lang.String
   
   type MonitoringScheduleSummaryList = js.Array[typingsSlinky.awsSdk.sagemakerMod.MonitoringScheduleSummary]
+  
+  type MountPath = java.lang.String
   
   type NameContains = java.lang.String
   
@@ -1358,6 +1480,13 @@ package object sagemakerMod {
   
   type RenderingErrorList = js.Array[typingsSlinky.awsSdk.sagemakerMod.RenderingError]
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Platform_
+    - typingsSlinky.awsSdk.awsSdkStrings.Vpc_
+    - java.lang.String
+  */
+  type RepositoryAccessMode = typingsSlinky.awsSdk.sagemakerMod._RepositoryAccessMode | java.lang.String
+  
   type ResourceArn = java.lang.String
   
   type ResourceId = java.lang.String
@@ -1482,6 +1611,8 @@ package object sagemakerMod {
   
   type SingleSignOnUserIdentifier = java.lang.String
   
+  type SnsTopicArn = java.lang.String
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Name_
     - typingsSlinky.awsSdk.awsSdkStrings.CreationTime
@@ -1590,6 +1721,7 @@ package object sagemakerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.amba_cv22
     - typingsSlinky.awsSdk.awsSdkStrings.x86_win32
     - typingsSlinky.awsSdk.awsSdkStrings.x86_win64
+    - typingsSlinky.awsSdk.awsSdkStrings.coreml
     - java.lang.String
   */
   type TargetDevice = typingsSlinky.awsSdk.sagemakerMod._TargetDevice | java.lang.String
@@ -1685,6 +1817,7 @@ package object sagemakerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.mlDotp3Dot8xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.mlDotp3Dot16xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.mlDotp3dnDot24xlarge
+    - typingsSlinky.awsSdk.awsSdkStrings.mlDotp4dDot24xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.mlDotc5Dotxlarge
     - typingsSlinky.awsSdk.awsSdkStrings.mlDotc5Dot2xlarge
     - typingsSlinky.awsSdk.awsSdkStrings.mlDotc5Dot4xlarge
@@ -1852,6 +1985,9 @@ package object sagemakerMod {
     - typingsSlinky.awsSdk.awsSdkStrings.Failed_
     - typingsSlinky.awsSdk.awsSdkStrings.InService
     - typingsSlinky.awsSdk.awsSdkStrings.Pending_
+    - typingsSlinky.awsSdk.awsSdkStrings.Updating_
+    - typingsSlinky.awsSdk.awsSdkStrings.Update_Failed_
+    - typingsSlinky.awsSdk.awsSdkStrings.Delete_Failed_
     - java.lang.String
   */
   type UserProfileStatus = typingsSlinky.awsSdk.sagemakerMod._UserProfileStatus | java.lang.String
@@ -1869,6 +2005,8 @@ package object sagemakerMod {
   type VariantPropertyType = typingsSlinky.awsSdk.sagemakerMod._VariantPropertyType | java.lang.String
   
   type VariantWeight = scala.Double
+  
+  type VersionedArnOrName = java.lang.String
   
   type VolumeSizeInGB = scala.Double
   

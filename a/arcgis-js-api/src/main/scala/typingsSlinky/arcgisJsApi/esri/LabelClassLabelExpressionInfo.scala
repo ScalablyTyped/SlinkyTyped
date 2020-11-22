@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LabelClassLabelExpressionInfo extends Object {
   
   /**
-    * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that evaluates to a string used to label features in the layer. The most simple expressions return field values. For example, to label a layer of cities with their names, simply reference the field value with the global variable: `$feature.CITY_NAME`. Expressions can be more sophisticated and use logical functions. This may be useful if you want to use classed labels. For example, the following expression appends `city` to the end of the label if the feature's population field contains a number greater than 10,000. Otherwise, `town` is appended to the end of the label. Additionally, you can use `TextFormatting.NewLine` to add a new line to the label.  `IIF($feature.POPULATION > 10000, $feature.NAME + ' city', $feature.NAME + ' town')`
+    * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that evaluates to a string used to label features in the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-LabelClass.html#labelExpressionInfo)
     */

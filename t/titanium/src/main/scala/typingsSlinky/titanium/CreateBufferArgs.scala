@@ -23,12 +23,12 @@ trait CreateBufferArgs extends js.Object {
   /**
     * The type of data encoding to use with `value`.
     */
-  var `type`: js.UndefOr[java.lang.String] = js.native
+  var `type`: js.UndefOr[String] = js.native
   
   /**
     * An initial value which will be encoded and placed in the buffer. If value is a Number, type must also be set. (this is simply a convenient way of calling <Titanium.Codec.encodeString> or <Titanium.Codec.encodeNumber> and placing the encoded value in the returned buffer.)
     */
-  var value: js.UndefOr[java.lang.String | Double] = js.native
+  var value: js.UndefOr[String | Double] = js.native
 }
 object CreateBufferArgs {
   
@@ -48,7 +48,7 @@ object CreateBufferArgs {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -66,13 +66,13 @@ object CreateBufferArgs {
     def deleteLength: Self = this.set("length", js.undefined)
     
     @scala.inline
-    def setType(value: java.lang.String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
     
     @scala.inline
-    def setValue(value: java.lang.String | Double): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: String | Double): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)

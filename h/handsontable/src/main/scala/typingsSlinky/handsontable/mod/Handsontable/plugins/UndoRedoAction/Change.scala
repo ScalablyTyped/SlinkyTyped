@@ -12,12 +12,14 @@ trait Change extends js.Object {
   var actionType: change = js.native
   
   var changes: js.Array[CellChange] = js.native
+  
+  var selected: js.Array[js.Tuple2[Double, Double]] = js.native
 }
 object Change {
   
   @scala.inline
-  def apply(actionType: change, changes: js.Array[CellChange]): Change = {
-    val __obj = js.Dynamic.literal(actionType = actionType.asInstanceOf[js.Any], changes = changes.asInstanceOf[js.Any])
+  def apply(actionType: change, changes: js.Array[CellChange], selected: js.Array[js.Tuple2[Double, Double]]): Change = {
+    val __obj = js.Dynamic.literal(actionType = actionType.asInstanceOf[js.Any], changes = changes.asInstanceOf[js.Any], selected = selected.asInstanceOf[js.Any])
     __obj.asInstanceOf[Change]
   }
   
@@ -44,5 +46,11 @@ object Change {
     
     @scala.inline
     def setChanges(value: js.Array[CellChange]): Self = this.set("changes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSelectedVarargs(value: (js.Tuple2[Double, Double])*): Self = this.set("selected", js.Array(value :_*))
+    
+    @scala.inline
+    def setSelected(value: js.Array[js.Tuple2[Double, Double]]): Self = this.set("selected", value.asInstanceOf[js.Any])
   }
 }

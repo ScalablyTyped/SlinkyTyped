@@ -1818,11 +1818,6 @@ trait Document
   def open(url: java.lang.String, name: java.lang.String, features: java.lang.String): org.scalajs.dom.raw.Document = js.native
   def open(url: java.lang.String, name: java.lang.String, features: java.lang.String, replace: scala.Boolean): org.scalajs.dom.raw.Document = js.native
   
-  /**
-    * Returns document's origin.
-    */
-  val origin: java.lang.String = js.native
-  
   @JSName("ownerDocument")
   val ownerDocument_Document: Null = js.native
   

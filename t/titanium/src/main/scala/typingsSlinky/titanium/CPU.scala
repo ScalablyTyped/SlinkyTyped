@@ -13,7 +13,7 @@ trait CPU extends js.Object {
   /**
     * General description of the CPU
     */
-  var model: js.UndefOr[java.lang.String] = js.native
+  var model: js.UndefOr[String] = js.native
   
   /**
     * Speed of the CPU in MHz
@@ -43,13 +43,13 @@ object CPU {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
     
     @scala.inline
-    def setModel(value: java.lang.String): Self = this.set("model", value.asInstanceOf[js.Any])
+    def setModel(value: String): Self = this.set("model", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)

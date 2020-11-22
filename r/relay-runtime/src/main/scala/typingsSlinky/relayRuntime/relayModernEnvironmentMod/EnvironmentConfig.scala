@@ -1,5 +1,7 @@
 package typingsSlinky.relayRuntime.relayModernEnvironmentMod
 
+import typingsSlinky.relayRuntime.anon.Readonlykindmissingfieldl
+import typingsSlinky.relayRuntime.anon.Readonlykindmissingfieldt
 import typingsSlinky.relayRuntime.relayDefaultHandlerProviderMod.HandlerProvider
 import typingsSlinky.relayRuntime.relayModernQueryExecutorMod.TaskScheduler
 import typingsSlinky.relayRuntime.relayNetworkTypesMod.Network
@@ -8,6 +10,7 @@ import typingsSlinky.relayRuntime.relayStoreTypesMod.LogFunction
 import typingsSlinky.relayRuntime.relayStoreTypesMod.MissingFieldHandler
 import typingsSlinky.relayRuntime.relayStoreTypesMod.OperationLoader
 import typingsSlinky.relayRuntime.relayStoreTypesMod.OperationTracker
+import typingsSlinky.relayRuntime.relayStoreTypesMod.RequiredFieldLogger
 import typingsSlinky.relayRuntime.relayStoreTypesMod.Store
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,6 +36,8 @@ trait EnvironmentConfig extends js.Object {
   val operationTracker: js.UndefOr[OperationTracker | Null] = js.native
   
   val options: js.UndefOr[js.Any] = js.native
+  
+  val requiredFieldLogger: js.UndefOr[RequiredFieldLogger | Null] = js.native
   
   val scheduler: js.UndefOr[TaskScheduler | Null] = js.native
   
@@ -134,6 +139,15 @@ object EnvironmentConfig {
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)
+    
+    @scala.inline
+    def setRequiredFieldLogger(value: /* arg */ Readonlykindmissingfieldl | Readonlykindmissingfieldt => Unit): Self = this.set("requiredFieldLogger", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteRequiredFieldLogger: Self = this.set("requiredFieldLogger", js.undefined)
+    
+    @scala.inline
+    def setRequiredFieldLoggerNull: Self = this.set("requiredFieldLogger", null)
     
     @scala.inline
     def setScheduler(value: TaskScheduler): Self = this.set("scheduler", value.asInstanceOf[js.Any])

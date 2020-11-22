@@ -2,7 +2,6 @@ package typingsSlinky.jose
 
 import typingsSlinky.jose.mod.Curves
 import typingsSlinky.jose.mod.ECCurve
-import typingsSlinky.jose.mod.JWTProfiles
 import typingsSlinky.jose.mod.OKPCurve
 import typingsSlinky.jose.mod.asymmetricKeyObjectTypes
 import typingsSlinky.jose.mod.keyObjectTypes
@@ -91,9 +90,6 @@ object joseStrings {
   def X448: X448 = "X448".asInstanceOf[X448]
   
   @scala.inline
-  def atPlussignJWT: atPlussignJWT = "at+JWT".asInstanceOf[atPlussignJWT]
-  
-  @scala.inline
   def check_failed: check_failed = "check_failed".asInstanceOf[check_failed]
   
   @scala.inline
@@ -121,13 +117,7 @@ object joseStrings {
   def general: general = "general".asInstanceOf[general]
   
   @scala.inline
-  def id_token: id_token = "id_token".asInstanceOf[id_token]
-  
-  @scala.inline
   def invalid: invalid = "invalid".asInstanceOf[invalid]
-  
-  @scala.inline
-  def logout_token: logout_token = "logout_token".asInstanceOf[logout_token]
   
   @scala.inline
   def missing: missing = "missing".asInstanceOf[missing]
@@ -264,9 +254,6 @@ object joseStrings {
        with OKPCurve
   
   @js.native
-  sealed trait atPlussignJWT extends JWTProfiles
-  
-  @js.native
   sealed trait check_failed extends js.Object
   
   @js.native
@@ -294,13 +281,7 @@ object joseStrings {
   sealed trait general extends js.Object
   
   @js.native
-  sealed trait id_token extends JWTProfiles
-  
-  @js.native
   sealed trait invalid extends js.Object
-  
-  @js.native
-  sealed trait logout_token extends JWTProfiles
   
   @js.native
   sealed trait missing extends js.Object

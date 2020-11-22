@@ -1,14 +1,10 @@
 package typingsSlinky.nodelibFsScandir.anon
 
-import typingsSlinky.node.Buffer
-import typingsSlinky.node.BufferEncoding
-import typingsSlinky.node.anon.BaseEncodingOptionswithFi
-import typingsSlinky.node.anon.BaseEncodingOptionswithFiEncoding
-import typingsSlinky.node.anon.Encoding
-import typingsSlinky.node.anon.WithFileTypes
-import typingsSlinky.node.fsMod.Dirent
+import typingsSlinky.node.fsMod.BigIntOptions
+import typingsSlinky.node.fsMod.BigIntStats
 import typingsSlinky.node.fsMod.PathLike
-import typingsSlinky.nodelibFsScandir.nodelibFsScandirStrings.buffer
+import typingsSlinky.node.fsMod.StatOptions
+import typingsSlinky.node.fsMod.Stats
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,11 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FnCall extends js.Object {
   
-  def apply(path: PathLike): js.Array[Buffer | String] = js.native
-  def apply(path: PathLike, options: BufferEncoding): js.Array[Buffer | String] = js.native
-  def apply(path: PathLike, options: BaseEncodingOptionswithFi): js.Array[Buffer | String] = js.native
-  def apply(path: PathLike, options: BaseEncodingOptionswithFiEncoding): js.Array[Dirent] = js.native
-  def apply(path: PathLike, options: Encoding): js.Array[Buffer] = js.native
-  def apply(path: PathLike, options: WithFileTypes): js.Array[String] = js.native
-  def apply(path: PathLike, options: buffer): js.Array[Buffer] = js.native
+  def apply(path: PathLike): Stats = js.native
+  def apply(path: PathLike, options: BigIntOptions): BigIntStats = js.native
+  def apply(path: PathLike, options: StatOptions): Stats | BigIntStats = js.native
 }

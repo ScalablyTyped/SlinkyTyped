@@ -19,8 +19,13 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.button.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcSwitch.mod.SwitchProps
+import typingsSlinky.rcSwitch.rcSwitchStrings.`additions removals`
 import typingsSlinky.rcSwitch.rcSwitchStrings.`additions text`
 import typingsSlinky.rcSwitch.rcSwitchStrings.`inline`
+import typingsSlinky.rcSwitch.rcSwitchStrings.`removals additions`
+import typingsSlinky.rcSwitch.rcSwitchStrings.`removals text`
+import typingsSlinky.rcSwitch.rcSwitchStrings.`text additions`
+import typingsSlinky.rcSwitch.rcSwitchStrings.`text removals`
 import typingsSlinky.rcSwitch.rcSwitchStrings.additions
 import typingsSlinky.rcSwitch.rcSwitchStrings.all
 import typingsSlinky.rcSwitch.rcSwitchStrings.ascending
@@ -196,7 +201,9 @@ object RcSwitch {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -320,6 +327,9 @@ object RcSwitch {
     
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def loadingIconReactElement(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def loadingIcon(value: ReactElement): this.type = set("loadingIcon", value.asInstanceOf[js.Any])

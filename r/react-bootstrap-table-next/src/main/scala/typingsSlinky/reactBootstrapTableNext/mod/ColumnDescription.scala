@@ -102,7 +102,13 @@ trait ColumnDescription[T /* <: js.Object */, E] extends js.Object {
   
   var headerAlign: js.UndefOr[CellAlignment] = js.native
   
+  var headerClasses: js.UndefOr[
+    String | (js.Function2[/* column */ ColumnDescription[T, E], /* colIndex */ Double, String])
+  ] = js.native
+  
   var headerFormatter: js.UndefOr[HeaderFormatter[T]] = js.native
+  
+  var headerSortingClasses: js.UndefOr[HeaderSortingClasses[T, E]] = js.native
   
   var headerStyle: js.UndefOr[CSSProperties | js.Function0[CSSProperties]] = js.native
   
@@ -116,6 +122,8 @@ trait ColumnDescription[T /* <: js.Object */, E] extends js.Object {
   var searchable: js.UndefOr[Boolean] = js.native
   
   var sort: js.UndefOr[Boolean] = js.native
+  
+  var sortCaret: js.UndefOr[ColumnSortCaret[T, E]] = js.native
   
   var sortFunc: js.UndefOr[ColumnSortFunc[T, _]] = js.native
   
@@ -330,12 +338,34 @@ object ColumnDescription {
     def deleteHeaderAlign: Self = this.set("headerAlign", js.undefined)
     
     @scala.inline
+    def setHeaderClassesFunction2(value: (/* column */ ColumnDescription[T, E], /* colIndex */ Double) => String): Self = this.set("headerClasses", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setHeaderClasses(
+      value: String | (js.Function2[/* column */ ColumnDescription[T, E], /* colIndex */ Double, String])
+    ): Self = this.set("headerClasses", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderClasses: Self = this.set("headerClasses", js.undefined)
+    
+    @scala.inline
     def setHeaderFormatter(
       value: (/* column */ ColumnDescription[T, js.Any], /* colIndex */ Double, /* components */ FilterElement) => ReactElement | String | Double | ReactText
     ): Self = this.set("headerFormatter", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteHeaderFormatter: Self = this.set("headerFormatter", js.undefined)
+    
+    @scala.inline
+    def setHeaderSortingClassesFunction4(
+      value: (/* column */ ColumnDescription[T, E], /* sortOrder */ asc | desc, /* isLastSorting */ Boolean, /* colIndex */ Double) => String
+    ): Self = this.set("headerSortingClasses", js.Any.fromFunction4(value))
+    
+    @scala.inline
+    def setHeaderSortingClasses(value: HeaderSortingClasses[T, E]): Self = this.set("headerSortingClasses", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeaderSortingClasses: Self = this.set("headerSortingClasses", js.undefined)
     
     @scala.inline
     def setHeaderStyleFunction0(value: () => CSSProperties): Self = this.set("headerStyle", js.Any.fromFunction0(value))
@@ -369,6 +399,14 @@ object ColumnDescription {
     
     @scala.inline
     def deleteSort: Self = this.set("sort", js.undefined)
+    
+    @scala.inline
+    def setSortCaret(
+      value: (/* order */ js.UndefOr[asc | desc], /* column */ ColumnDescription[T, E]) => ReactElement | String | Null
+    ): Self = this.set("sortCaret", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteSortCaret: Self = this.set("sortCaret", js.undefined)
     
     @scala.inline
     def setSortFunc(

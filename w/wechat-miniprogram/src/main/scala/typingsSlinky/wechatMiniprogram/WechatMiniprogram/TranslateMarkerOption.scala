@@ -28,6 +28,11 @@ trait TranslateMarkerOption extends js.Object {
   /** 指定 marker */
   var markerId: Double = js.native
   
+  /** 平移和旋转同时进行
+    *
+    * 最低基础库： `2.13.0` */
+  var moveWithRotate: js.UndefOr[Boolean] = js.native
+  
   /** marker 的旋转角度 */
   var rotate: Double = js.native
   
@@ -92,6 +97,12 @@ object TranslateMarkerOption {
     
     @scala.inline
     def deleteFail: Self = this.set("fail", js.undefined)
+    
+    @scala.inline
+    def setMoveWithRotate(value: Boolean): Self = this.set("moveWithRotate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMoveWithRotate: Self = this.set("moveWithRotate", js.undefined)
     
     @scala.inline
     def setSuccess(value: /* res */ GeneralCallbackResult => Unit): Self = this.set("success", js.Any.fromFunction1(value))

@@ -10,8 +10,8 @@ trait JSDocNamespaceDeclaration
      with JSDocNamespaceBody {
   
   @JSName("body")
-  var body_JSDocNamespaceDeclaration: js.UndefOr[JSDocNamespaceBody] = js.native
+  val body_JSDocNamespaceDeclaration: js.UndefOr[JSDocNamespaceBody] = js.native
   
   @JSName("name")
-  var name_JSDocNamespaceDeclaration: Identifier = js.native
+  val name_JSDocNamespaceDeclaration: Identifier = js.native
 }

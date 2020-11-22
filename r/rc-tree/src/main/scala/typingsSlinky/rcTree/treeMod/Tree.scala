@@ -1,10 +1,13 @@
 package typingsSlinky.rcTree.treeMod
 
 import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcTree.anon.CheckedKeys
 import typingsSlinky.rcTree.anon.PartialTreeState
+import typingsSlinky.rcTree.contextTypesMod.NodeDragEventHandler
+import typingsSlinky.rcTree.contextTypesMod.NodeMouseEventHandler
 import typingsSlinky.rcTree.interfaceMod.EventDataNode
 import typingsSlinky.rcTree.interfaceMod.FlattenNode
 import typingsSlinky.rcTree.interfaceMod.Key
@@ -25,7 +28,12 @@ trait Tree
   
   def cleanDragState(): Unit = js.native
   
+  @JSName("componentWillUnmount")
+  def componentWillUnmount_MTree(): Unit = js.native
+  
   var delayedDragEnterLogic: Record[Key, Double] = js.native
+  
+  var destroyed: Boolean = js.native
   
   var dragNode: NodeInstance = js.native
   
@@ -49,15 +57,15 @@ trait Tree
   
   def onListChangeStart(): Unit = js.native
   
-  def onNodeCheck(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode, checked: Boolean): Unit = js.native
+  def onNodeCheck(e: SyntheticMouseEvent[HTMLSpanElement], treeNode: EventDataNode, checked: Boolean): Unit = js.native
   
-  def onNodeClick(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode): Unit = js.native
+  var onNodeClick: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
-  def onNodeContextMenu(event: SyntheticMouseEvent[HTMLDivElement], node: EventDataNode): Unit = js.native
+  var onNodeContextMenu: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
-  def onNodeDoubleClick(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode): Unit = js.native
+  var onNodeDoubleClick: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
-  def onNodeDragEnd(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  var onNodeDragEnd: NodeDragEventHandler[HTMLDivElement] = js.native
   
   /**
     * [Legacy] Select handler is less small than node,
@@ -66,25 +74,25 @@ trait Tree
     * Better for use mouse move event to refresh drag state.
     * But let's just keep it to avoid event trigger logic change.
     */
-  def onNodeDragEnter(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  var onNodeDragEnter: NodeDragEventHandler[HTMLDivElement] = js.native
   
-  def onNodeDragLeave(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  var onNodeDragLeave: NodeDragEventHandler[HTMLDivElement] = js.native
   
-  def onNodeDragOver(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  var onNodeDragOver: NodeDragEventHandler[HTMLDivElement] = js.native
   
-  def onNodeDragStart(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  var onNodeDragStart: NodeDragEventHandler[HTMLDivElement] = js.native
   
-  def onNodeDrop(event: SyntheticMouseEvent[HTMLDivElement], node: NodeInstance): Unit = js.native
+  var onNodeDrop: NodeDragEventHandler[HTMLDivElement] = js.native
   
   def onNodeExpand(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode): Unit = js.native
   
   def onNodeLoad(treeNode: EventDataNode): js.Promise[_] = js.native
   
-  def onNodeMouseEnter(event: SyntheticMouseEvent[HTMLDivElement], node: EventDataNode): Unit = js.native
+  var onNodeMouseEnter: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
-  def onNodeMouseLeave(event: SyntheticMouseEvent[HTMLDivElement], node: EventDataNode): Unit = js.native
+  var onNodeMouseLeave: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
-  def onNodeSelect(e: SyntheticMouseEvent[HTMLDivElement], treeNode: EventDataNode): Unit = js.native
+  var onNodeSelect: NodeMouseEventHandler[HTMLSpanElement] = js.native
   
   var scrollTo: ScrollTo = js.native
   

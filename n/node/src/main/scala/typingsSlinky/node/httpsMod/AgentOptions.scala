@@ -1,12 +1,14 @@
 package typingsSlinky.node.httpsMod
 
+import typingsSlinky.node.nodeStrings.fifo
+import typingsSlinky.node.nodeStrings.lifo
 import typingsSlinky.node.tlsMod.ConnectionOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.node.httpMod.AgentOptions because var conflicts: timeout. Inlined keepAlive, keepAliveMsecs, maxSockets, maxFreeSockets */ @js.native
+- typingsSlinky.node.httpMod.AgentOptions because var conflicts: timeout. Inlined keepAlive, keepAliveMsecs, maxSockets, maxTotalSockets, maxFreeSockets, scheduling */ @js.native
 trait AgentOptions extends ConnectionOptions {
   
   /**
@@ -31,6 +33,16 @@ trait AgentOptions extends ConnectionOptions {
     * Maximum number of sockets to allow per host. Default for Node 0.10 is 5, default for Node 0.12 is Infinity
     */
   var maxSockets: js.UndefOr[Double] = js.native
+  
+  /**
+    * Maximum number of sockets allowed for all hosts in total. Each request will use a new socket until the maximum is reached. Default: Infinity.
+    */
+  var maxTotalSockets: js.UndefOr[Double] = js.native
+  
+  /**
+    * Scheduling strategy to apply when picking the next free socket to use. Default: 'fifo'.
+    */
+  var scheduling: js.UndefOr[fifo | lifo] = js.native
 }
 object AgentOptions {
   
@@ -84,5 +96,17 @@ object AgentOptions {
     
     @scala.inline
     def deleteMaxSockets: Self = this.set("maxSockets", js.undefined)
+    
+    @scala.inline
+    def setMaxTotalSockets(value: Double): Self = this.set("maxTotalSockets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxTotalSockets: Self = this.set("maxTotalSockets", js.undefined)
+    
+    @scala.inline
+    def setScheduling(value: fifo | lifo): Self = this.set("scheduling", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScheduling: Self = this.set("scheduling", js.undefined)
   }
 }

@@ -13,8 +13,6 @@ trait `17`[T] extends js.Object {
   var element: js.UndefOr[dxElement] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
-  
-  var target: js.UndefOr[js.Any] = js.native
 }
 object `17` {
   
@@ -56,11 +54,5 @@ object `17` {
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)
-    
-    @scala.inline
-    def setTarget(value: js.Any): Self = this.set("target", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTarget: Self = this.set("target", js.undefined)
   }
 }

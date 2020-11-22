@@ -1,8 +1,6 @@
 package typingsSlinky.typedoc.mod.TypeScript
 
 import typingsSlinky.typescript.mod.NullLiteral
-import typingsSlinky.typescript.mod.SyntaxKind.NullKeyword
-import typingsSlinky.typescript.mod.Token
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,5 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createNull extends js.Object {
   
-  def apply(): NullLiteral with Token[NullKeyword] = js.native
+  /** @deprecated Use `factory.createNull` or the factory supplied by your transformation context instead. */
+  def apply(): NullLiteral = js.native
 }

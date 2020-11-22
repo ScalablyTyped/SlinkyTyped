@@ -25,17 +25,17 @@ trait Permission extends js.Object {
   /**
     * The name of the policy that is associated with the permission.
     */
-  var Policy: js.UndefOr[String] = js.native
+  var Policy: js.UndefOr[AWSPolicy] = js.native
   
   /**
     * The AWS service or entity that holds the permission. At this time, the only valid principal is acm.amazonaws.com.
     */
-  var Principal: js.UndefOr[String] = js.native
+  var Principal: js.UndefOr[typingsSlinky.awsSdk.acmpcaMod.Principal] = js.native
   
   /**
     * The ID of the account that assigned the permission.
     */
-  var SourceAccount: js.UndefOr[String] = js.native
+  var SourceAccount: js.UndefOr[AccountId] = js.native
 }
 object Permission {
   
@@ -82,19 +82,19 @@ object Permission {
     def deleteCreatedAt: Self = this.set("CreatedAt", js.undefined)
     
     @scala.inline
-    def setPolicy(value: String): Self = this.set("Policy", value.asInstanceOf[js.Any])
+    def setPolicy(value: AWSPolicy): Self = this.set("Policy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePolicy: Self = this.set("Policy", js.undefined)
     
     @scala.inline
-    def setPrincipal(value: String): Self = this.set("Principal", value.asInstanceOf[js.Any])
+    def setPrincipal(value: Principal): Self = this.set("Principal", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePrincipal: Self = this.set("Principal", js.undefined)
     
     @scala.inline
-    def setSourceAccount(value: String): Self = this.set("SourceAccount", value.asInstanceOf[js.Any])
+    def setSourceAccount(value: AccountId): Self = this.set("SourceAccount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSourceAccount: Self = this.set("SourceAccount", js.undefined)

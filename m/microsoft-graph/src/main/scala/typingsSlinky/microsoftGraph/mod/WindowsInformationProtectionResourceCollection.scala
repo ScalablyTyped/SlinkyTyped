@@ -11,7 +11,7 @@ trait WindowsInformationProtectionResourceCollection extends js.Object {
   var displayName: js.UndefOr[String] = js.native
   
   // Collection of resources
-  var resources: js.UndefOr[js.Array[String]] = js.native
+  var resources: js.UndefOr[NullableOption[js.Array[String]]] = js.native
 }
 object WindowsInformationProtectionResourceCollection {
   
@@ -46,9 +46,12 @@ object WindowsInformationProtectionResourceCollection {
     def setResourcesVarargs(value: String*): Self = this.set("resources", js.Array(value :_*))
     
     @scala.inline
-    def setResources(value: js.Array[String]): Self = this.set("resources", value.asInstanceOf[js.Any])
+    def setResources(value: NullableOption[js.Array[String]]): Self = this.set("resources", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResources: Self = this.set("resources", js.undefined)
+    
+    @scala.inline
+    def setResourcesNull: Self = this.set("resources", null)
   }
 }

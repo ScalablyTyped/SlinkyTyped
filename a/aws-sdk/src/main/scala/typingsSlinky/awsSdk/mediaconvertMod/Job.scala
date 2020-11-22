@@ -83,7 +83,7 @@ trait Job extends js.Object {
   var Priority: js.UndefOr[integerMinNegative50Max50] = js.native
   
   /**
-    * When you create a job, you can specify a queue to send it to. If you don't specify, the job will go to the default queue. For more about queues, see the User Guide topic at http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+    * When you create a job, you can specify a queue to send it to. If you don't specify, the job will go to the default queue. For more about queues, see the User Guide topic at https://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
     */
   var Queue: js.UndefOr[string] = js.native
   
@@ -98,7 +98,7 @@ trait Job extends js.Object {
   var RetryCount: js.UndefOr[integer] = js.native
   
   /**
-    * The IAM role you use for creating this job. For details about permissions, see the User Guide topic at the User Guide at http://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html
+    * The IAM role you use for creating this job. For details about permissions, see the User Guide topic at the User Guide at https://docs.aws.amazon.com/mediaconvert/latest/ug/iam-role.html
     */
   var Role: string = js.native
   

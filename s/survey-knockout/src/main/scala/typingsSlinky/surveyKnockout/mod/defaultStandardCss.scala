@@ -6,6 +6,7 @@ import typingsSlinky.surveyKnockout.anon.Button
 import typingsSlinky.surveyKnockout.anon.ButtonAdd
 import typingsSlinky.surveyKnockout.anon.Cell
 import typingsSlinky.surveyKnockout.anon.CellLabel
+import typingsSlinky.surveyKnockout.anon.CheckedPath
 import typingsSlinky.surveyKnockout.anon.ChooseFile
 import typingsSlinky.surveyKnockout.anon.ClearButton
 import typingsSlinky.surveyKnockout.anon.Column
@@ -20,7 +21,6 @@ import typingsSlinky.surveyKnockout.anon.Icon
 import typingsSlinky.surveyKnockout.anon.Image
 import typingsSlinky.surveyKnockout.anon.Item
 import typingsSlinky.surveyKnockout.anon.ItemTitle
-import typingsSlinky.surveyKnockout.anon.Other
 import typingsSlinky.surveyKnockout.anon.Root
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -34,7 +34,7 @@ object defaultStandardCss extends js.Object {
   
   var bodyEmpty: String = js.native
   
-  var boolean: Control = js.native
+  var boolean: CheckedPath = js.native
   
   var checkbox: Column = js.native
   
@@ -46,7 +46,7 @@ object defaultStandardCss extends js.Object {
   
   var description: String = js.native
   
-  var dropdown: Other = js.native
+  var dropdown: Control = js.native
   
   var error: Icon = js.native
   

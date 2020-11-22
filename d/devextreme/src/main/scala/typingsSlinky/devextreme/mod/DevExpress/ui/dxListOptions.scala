@@ -4,13 +4,13 @@ import org.scalajs.dom.raw.Element
 import typingsSlinky.devextreme.anon.Action
 import typingsSlinky.devextreme.anon.ComponentElementItemData
 import typingsSlinky.devextreme.anon.Direction
+import typingsSlinky.devextreme.anon.ElementEventItemData
 import typingsSlinky.devextreme.anon.ElementItemData
 import typingsSlinky.devextreme.anon.GroupData
-import typingsSlinky.devextreme.anon.ItemIndexJQueryEvent
 import typingsSlinky.devextreme.anon.ModelValue
 import typingsSlinky.devextreme.anon.ReachedBottom
 import typingsSlinky.devextreme.anon.ToIndex
-import typingsSlinky.devextreme.anon.`4`
+import typingsSlinky.devextreme.anon.`5`
 import typingsSlinky.devextreme.devextremeStrings.all
 import typingsSlinky.devextreme.devextremeStrings.allPages
 import typingsSlinky.devextreme.devextremeStrings.always
@@ -43,27 +43,35 @@ trait dxListOptions
   extends CollectionWidgetOptions[dxList]
      with SearchBoxMixinOptions[dxList] {
   
-  /** @name dxList.Options.allowItemDeleting */
+  /**
+    * [descr:dxList.Options.allowItemDeleting]
+    */
   var allowItemDeleting: js.UndefOr[Boolean] = js.native
   
-  /** @deprecated */
-  /** @name dxList.Options.allowItemReordering */
-  var allowItemReordering: js.UndefOr[Boolean] = js.native
-  
-  /** @name dxList.Options.bounceEnabled */
+  /**
+    * [descr:dxList.Options.bounceEnabled]
+    */
   var bounceEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxList.Options.collapsibleGroups */
+  /**
+    * [descr:dxList.Options.collapsibleGroups]
+    */
   var collapsibleGroups: js.UndefOr[Boolean] = js.native
   
-  /** @name dxList.Options.dataSource */
+  /**
+    * [descr:dxList.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxListOptions: js.UndefOr[String | (js.Array[String | dxListItem | _]) | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxList.Options.displayExpr */
+  /**
+    * [descr:dxList.Options.displayExpr]
+    */
   var displayExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String])] = js.native
   
-  /** @name dxList.Options.groupTemplate */
+  /**
+    * [descr:dxList.Options.groupTemplate]
+    */
   var groupTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function3[
       /* groupData */ js.Any, 
@@ -73,113 +81,183 @@ trait dxListOptions
     ])
   ] = js.native
   
-  /** @name dxList.Options.grouped */
+  /**
+    * [descr:dxList.Options.grouped]
+    */
   var grouped: js.UndefOr[Boolean] = js.native
   
-  /** @name dxList.Options.indicateLoading */
+  /**
+    * [descr:dxList.Options.indicateLoading]
+    */
   var indicateLoading: js.UndefOr[Boolean] = js.native
   
-  /** @name dxList.Options.itemDeleteMode */
+  /**
+    * [descr:dxList.Options.itemDeleteMode]
+    */
   var itemDeleteMode: js.UndefOr[context | slideButton | slideItem | static | swipe | toggle] = js.native
   
-  /** @name dxList.Options.itemDragging */
+  /**
+    * [descr:dxList.Options.itemDragging]
+    */
   var itemDragging: js.UndefOr[dxSortableOptions] = js.native
   
-  /** @name dxList.Options.items */
+  /**
+    * [descr:dxList.Options.items]
+    */
   @JSName("items")
   var items_dxListOptions: js.UndefOr[js.Array[String | dxListItem | _]] = js.native
   
-  /** @name dxList.Options.menuItems */
+  /**
+    * [descr:dxList.Options.menuItems]
+    */
   var menuItems: js.UndefOr[js.Array[Action]] = js.native
   
-  /** @name dxList.Options.menuMode */
+  /**
+    * [descr:dxList.Options.menuMode]
+    */
   var menuMode: js.UndefOr[context | slide] = js.native
   
-  /** @name dxList.Options.nextButtonText */
+  /**
+    * [descr:dxList.Options.nextButtonText]
+    */
   var nextButtonText: js.UndefOr[String] = js.native
   
-  /** @name dxList.Options.onGroupRendered */
+  /**
+    * [descr:dxList.Options.onGroupRendered]
+    */
   var onGroupRendered: js.UndefOr[js.Function1[/* e */ GroupData, _]] = js.native
   
-  /** @name dxList.Options.onItemClick */
+  /**
+    * [descr:dxList.Options.onItemClick]
+    */
   @JSName("onItemClick")
-  var onItemClick_dxListOptions: js.UndefOr[(js.Function1[/* e */ ItemIndexJQueryEvent, _]) | String] = js.native
+  var onItemClick_dxListOptions: js.UndefOr[(js.Function1[/* e */ ElementEventItemData, _]) | String] = js.native
   
-  /** @name dxList.Options.onItemContextMenu */
+  /**
+    * [descr:dxList.Options.onItemContextMenu]
+    */
   @JSName("onItemContextMenu")
-  var onItemContextMenu_dxListOptions: js.UndefOr[js.Function1[/* e */ ItemIndexJQueryEvent, _]] = js.native
+  var onItemContextMenu_dxListOptions: js.UndefOr[js.Function1[/* e */ ElementEventItemData, _]] = js.native
   
-  /** @name dxList.Options.onItemDeleted */
+  /**
+    * [descr:dxList.Options.onItemDeleted]
+    */
   var onItemDeleted: js.UndefOr[js.Function1[/* e */ ElementItemData, _]] = js.native
   
-  /** @name dxList.Options.onItemDeleting */
+  /**
+    * [descr:dxList.Options.onItemDeleting]
+    */
   var onItemDeleting: js.UndefOr[js.Function1[/* e */ ComponentElementItemData, _]] = js.native
   
-  /** @name dxList.Options.onItemHold */
+  /**
+    * [descr:dxList.Options.onItemHold]
+    */
   @JSName("onItemHold")
-  var onItemHold_dxListOptions: js.UndefOr[js.Function1[/* e */ ItemIndexJQueryEvent, _]] = js.native
+  var onItemHold_dxListOptions: js.UndefOr[js.Function1[/* e */ ElementEventItemData, _]] = js.native
   
-  /** @name dxList.Options.onItemReordered */
+  /**
+    * [descr:dxList.Options.onItemReordered]
+    */
   var onItemReordered: js.UndefOr[js.Function1[/* e */ ToIndex, _]] = js.native
   
-  /** @name dxList.Options.onItemSwipe */
+  /**
+    * [descr:dxList.Options.onItemSwipe]
+    */
   var onItemSwipe: js.UndefOr[js.Function1[/* e */ Direction, _]] = js.native
   
-  /** @name dxList.Options.onPageLoading */
-  var onPageLoading: js.UndefOr[js.Function1[/* e */ `4`, _]] = js.native
+  /**
+    * [descr:dxList.Options.onPageLoading]
+    */
+  var onPageLoading: js.UndefOr[js.Function1[/* e */ `5`, _]] = js.native
   
-  /** @name dxList.Options.onPullRefresh */
-  var onPullRefresh: js.UndefOr[js.Function1[/* e */ `4`, _]] = js.native
+  /**
+    * [descr:dxList.Options.onPullRefresh]
+    */
+  var onPullRefresh: js.UndefOr[js.Function1[/* e */ `5`, _]] = js.native
   
-  /** @name dxList.Options.onScroll */
+  /**
+    * [descr:dxList.Options.onScroll]
+    */
   var onScroll: js.UndefOr[js.Function1[/* e */ ReachedBottom, _]] = js.native
   
-  /** @name dxList.Options.onSelectAllValueChanged */
+  /**
+    * [descr:dxList.Options.onSelectAllValueChanged]
+    */
   var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ ModelValue, _]] = js.native
   
-  /** @name dxList.Options.pageLoadMode */
+  /**
+    * [descr:dxList.Options.pageLoadMode]
+    */
   var pageLoadMode: js.UndefOr[nextButton | scrollBottom] = js.native
   
-  /** @name dxList.Options.pageLoadingText */
+  /**
+    * [descr:dxList.Options.pageLoadingText]
+    */
   var pageLoadingText: js.UndefOr[String] = js.native
   
-  /** @name dxList.Options.pullRefreshEnabled */
+  /**
+    * [descr:dxList.Options.pullRefreshEnabled]
+    */
   var pullRefreshEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxList.Options.pulledDownText */
+  /**
+    * [descr:dxList.Options.pulledDownText]
+    */
   var pulledDownText: js.UndefOr[String] = js.native
   
-  /** @name dxList.Options.pullingDownText */
+  /**
+    * [descr:dxList.Options.pullingDownText]
+    */
   var pullingDownText: js.UndefOr[String] = js.native
   
-  /** @name dxList.Options.refreshingText */
+  /**
+    * [descr:dxList.Options.refreshingText]
+    */
   var refreshingText: js.UndefOr[String] = js.native
   
-  /** @name dxList.Options.repaintChangesOnly */
+  /**
+    * [descr:dxList.Options.repaintChangesOnly]
+    */
   var repaintChangesOnly: js.UndefOr[Boolean] = js.native
   
-  /** @name dxList.Options.scrollByContent */
+  /**
+    * [descr:dxList.Options.scrollByContent]
+    */
   var scrollByContent: js.UndefOr[Boolean] = js.native
   
-  /** @name dxList.Options.scrollByThumb */
+  /**
+    * [descr:dxList.Options.scrollByThumb]
+    */
   var scrollByThumb: js.UndefOr[Boolean] = js.native
   
-  /** @name dxList.Options.scrollingEnabled */
+  /**
+    * [descr:dxList.Options.scrollingEnabled]
+    */
   var scrollingEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxList.Options.selectAllMode */
+  /**
+    * [descr:dxList.Options.selectAllMode]
+    */
   var selectAllMode: js.UndefOr[allPages | page] = js.native
   
-  /** @name dxList.Options.selectionMode */
+  /**
+    * [descr:dxList.Options.selectionMode]
+    */
   var selectionMode: js.UndefOr[all | multiple | none | single_] = js.native
   
-  /** @name dxList.Options.showScrollbar */
+  /**
+    * [descr:dxList.Options.showScrollbar]
+    */
   var showScrollbar: js.UndefOr[always | never | onHover | onScroll] = js.native
   
-  /** @name dxList.Options.showSelectionControls */
+  /**
+    * [descr:dxList.Options.showSelectionControls]
+    */
   var showSelectionControls: js.UndefOr[Boolean] = js.native
   
-  /** @name dxList.Options.useNativeScrolling */
+  /**
+    * [descr:dxList.Options.useNativeScrolling]
+    */
   var useNativeScrolling: js.UndefOr[Boolean] = js.native
 }
 object dxListOptions {
@@ -210,12 +288,6 @@ object dxListOptions {
     
     @scala.inline
     def deleteAllowItemDeleting: Self = this.set("allowItemDeleting", js.undefined)
-    
-    @scala.inline
-    def setAllowItemReordering(value: Boolean): Self = this.set("allowItemReordering", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAllowItemReordering: Self = this.set("allowItemReordering", js.undefined)
     
     @scala.inline
     def setBounceEnabled(value: Boolean): Self = this.set("bounceEnabled", value.asInstanceOf[js.Any])
@@ -329,16 +401,16 @@ object dxListOptions {
     def deleteOnGroupRendered: Self = this.set("onGroupRendered", js.undefined)
     
     @scala.inline
-    def setOnItemClickFunction1(value: /* e */ ItemIndexJQueryEvent => _): Self = this.set("onItemClick", js.Any.fromFunction1(value))
+    def setOnItemClickFunction1(value: /* e */ ElementEventItemData => _): Self = this.set("onItemClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnItemClick(value: (js.Function1[/* e */ ItemIndexJQueryEvent, _]) | String): Self = this.set("onItemClick", value.asInstanceOf[js.Any])
+    def setOnItemClick(value: (js.Function1[/* e */ ElementEventItemData, _]) | String): Self = this.set("onItemClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnItemClick: Self = this.set("onItemClick", js.undefined)
     
     @scala.inline
-    def setOnItemContextMenu(value: /* e */ ItemIndexJQueryEvent => _): Self = this.set("onItemContextMenu", js.Any.fromFunction1(value))
+    def setOnItemContextMenu(value: /* e */ ElementEventItemData => _): Self = this.set("onItemContextMenu", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnItemContextMenu: Self = this.set("onItemContextMenu", js.undefined)
@@ -356,7 +428,7 @@ object dxListOptions {
     def deleteOnItemDeleting: Self = this.set("onItemDeleting", js.undefined)
     
     @scala.inline
-    def setOnItemHold(value: /* e */ ItemIndexJQueryEvent => _): Self = this.set("onItemHold", js.Any.fromFunction1(value))
+    def setOnItemHold(value: /* e */ ElementEventItemData => _): Self = this.set("onItemHold", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnItemHold: Self = this.set("onItemHold", js.undefined)
@@ -374,13 +446,13 @@ object dxListOptions {
     def deleteOnItemSwipe: Self = this.set("onItemSwipe", js.undefined)
     
     @scala.inline
-    def setOnPageLoading(value: /* e */ `4` => _): Self = this.set("onPageLoading", js.Any.fromFunction1(value))
+    def setOnPageLoading(value: /* e */ `5` => _): Self = this.set("onPageLoading", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnPageLoading: Self = this.set("onPageLoading", js.undefined)
     
     @scala.inline
-    def setOnPullRefresh(value: /* e */ `4` => _): Self = this.set("onPullRefresh", js.Any.fromFunction1(value))
+    def setOnPullRefresh(value: /* e */ `5` => _): Self = this.set("onPullRefresh", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnPullRefresh: Self = this.set("onPullRefresh", js.undefined)

@@ -10,6 +10,11 @@ import typingsSlinky.pulumiAws.docdbClusterMod.ClusterArgs
 import typingsSlinky.pulumiAws.docdbClusterMod.ClusterState
 import typingsSlinky.pulumiAws.docdbSubnetGroupMod.SubnetGroupArgs
 import typingsSlinky.pulumiAws.docdbSubnetGroupMod.SubnetGroupState
+import typingsSlinky.pulumiAws.getEngineVersionMod.GetEngineVersionArgs
+import typingsSlinky.pulumiAws.getEngineVersionMod.GetEngineVersionResult
+import typingsSlinky.pulumiAws.getOrderableDbInstanceMod.GetOrderableDbInstanceArgs
+import typingsSlinky.pulumiAws.getOrderableDbInstanceMod.GetOrderableDbInstanceResult
+import typingsSlinky.pulumiPulumi.invokeMod.InvokeOptions
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.resourceMod.CustomResourceOptions
 import typingsSlinky.pulumiPulumi.resourceMod.ID
@@ -20,6 +25,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@pulumi/aws/docdb", JSImport.Namespace)
 @js.native
 object docdbMod extends js.Object {
+  
+  def getEngineVersion(): js.Promise[GetEngineVersionResult] = js.native
+  def getEngineVersion(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetEngineVersionResult] = js.native
+  def getEngineVersion(args: GetEngineVersionArgs): js.Promise[GetEngineVersionResult] = js.native
+  def getEngineVersion(args: GetEngineVersionArgs, opts: InvokeOptions): js.Promise[GetEngineVersionResult] = js.native
+  
+  def getOrderableDbInstance(): js.Promise[GetOrderableDbInstanceResult] = js.native
+  def getOrderableDbInstance(args: js.UndefOr[scala.Nothing], opts: InvokeOptions): js.Promise[GetOrderableDbInstanceResult] = js.native
+  def getOrderableDbInstance(args: GetOrderableDbInstanceArgs): js.Promise[GetOrderableDbInstanceResult] = js.native
+  def getOrderableDbInstance(args: GetOrderableDbInstanceArgs, opts: InvokeOptions): js.Promise[GetOrderableDbInstanceResult] = js.native
   
   @js.native
   class Cluster protected ()

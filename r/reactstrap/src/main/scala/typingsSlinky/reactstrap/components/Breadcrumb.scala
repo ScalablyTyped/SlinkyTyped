@@ -3,7 +3,9 @@ package typingsSlinky.reactstrap.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
+import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -20,8 +22,13 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -73,14 +80,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object Breadcrumb {
   
-  @JSImport("reactstrap", "Breadcrumb")
+  @JSImport("reactstrap/es", "Breadcrumb")
   @js.native
   object component extends js.Object
   
   @scala.inline
-  class Builder[T] (val args: js.Array[js.Any])
+  class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactstrap.mod.Breadcrumb[T]] {
+       with StBuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactstrap.mod.Breadcrumb] {
     
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
@@ -194,7 +201,9 @@ object Breadcrumb {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -314,7 +323,13 @@ object Breadcrumb {
     def listClassName(value: String): this.type = set("listClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def listTag(value: String): this.type = set("listTag", value.asInstanceOf[js.Any])
+    def listTagFunctionComponent(value: ReactComponentClass[_]): this.type = set("listTag", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def listTagComponentClass(value: ReactComponentClass[_]): this.type = set("listTag", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def listTag(value: ReactElement): this.type = set("listTag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def onAbort(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onAbort", js.Any.fromFunction1(value))
@@ -596,7 +611,13 @@ object Breadcrumb {
     def tabIndex(value: Double): this.type = set("tabIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def tag(value: String): this.type = set("tag", value.asInstanceOf[js.Any])
+    def tagFunctionComponent(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def tagComponentClass(value: ReactComponentClass[_]): this.type = set("tag", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def tag(value: ReactElement): this.type = set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
@@ -614,13 +635,7 @@ object Breadcrumb {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps[T](p: BreadcrumbProps): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: BreadcrumbProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  @scala.inline
-  def apply[T](): Builder[T] = {
-    val __props = js.Dynamic.literal()
-    new Builder[T](js.Array(this.component, __props.asInstanceOf[BreadcrumbProps]))
-  }
-  
-  implicit def make[T](companion: Breadcrumb.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: Breadcrumb.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

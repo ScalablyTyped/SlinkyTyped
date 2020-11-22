@@ -1,7 +1,7 @@
 
 # Scala.js typings for ndjson
 
-Typings are for version 1.5
+Typings are for version 2.0
 
 ## Library description:
 streaming newline delimited json parser + serializer

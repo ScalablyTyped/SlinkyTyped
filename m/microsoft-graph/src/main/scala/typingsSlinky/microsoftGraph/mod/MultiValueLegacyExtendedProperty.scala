@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MultiValueLegacyExtendedProperty extends Entity {
   
   // A collection of property values.
-  var value: js.UndefOr[js.Array[String]] = js.native
+  var value: js.UndefOr[NullableOption[js.Array[String]]] = js.native
 }
 object MultiValueLegacyExtendedProperty {
   
@@ -37,9 +37,12 @@ object MultiValueLegacyExtendedProperty {
     def setValueVarargs(value: String*): Self = this.set("value", js.Array(value :_*))
     
     @scala.inline
-    def setValue(value: js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: NullableOption[js.Array[String]]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

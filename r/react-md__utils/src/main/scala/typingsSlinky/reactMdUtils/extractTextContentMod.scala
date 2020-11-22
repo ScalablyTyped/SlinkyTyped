@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object extractTextContentMod extends js.Object {
   
-  def default(stringOrElement: String): String = js.native
-  def default(stringOrElement: String, fontIconQuerySelector: String): String = js.native
-  def default(stringOrElement: HTMLElement): String = js.native
-  def default(stringOrElement: HTMLElement, fontIconQuerySelector: String): String = js.native
+  def extractTextContent(stringOrElement: String): String = js.native
+  def extractTextContent(stringOrElement: String, fontIconQuerySelector: String): String = js.native
+  def extractTextContent(stringOrElement: HTMLElement): String = js.native
+  def extractTextContent(stringOrElement: HTMLElement, fontIconQuerySelector: String): String = js.native
 }

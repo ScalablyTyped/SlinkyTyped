@@ -19,14 +19,19 @@ trait ReadonlyArrayPath extends js.Object {
   val entries: js.Function0[IterableIterator[js.Tuple2[Double, Path]]] = js.native
   
   val every: js.Function1[
-    /* callbackfn */ js.Function3[/* value */ Path, /* index */ Double, /* array */ js.Array[Path], _], 
-    Boolean
+    /* predicate */ js.Function3[
+      /* value */ Path, 
+      /* index */ Double, 
+      /* array */ js.Array[Path], 
+      /* is wouter.wouter/preact/use-location.Path */ Boolean
+    ], 
+    /* is std.Array<wouter.wouter/preact/use-location.Path> */ Boolean
   ] = js.native
   
   val fill: js.Function1[/* value */ Path, this.type] = js.native
   
   val filter: js.Function1[
-    /* callbackfn */ js.Function3[
+    /* predicate */ js.Function3[
       /* value */ Path, 
       /* index */ Double, 
       /* array */ js.Array[Path], 
@@ -119,7 +124,7 @@ trait ReadonlyArrayPath extends js.Object {
   val slice: js.Function0[js.Array[Path]] = js.native
   
   val some: js.Function1[
-    /* callbackfn */ js.Function3[/* value */ Path, /* index */ Double, /* array */ js.Array[Path], _], 
+    /* predicate */ js.Function3[/* value */ Path, /* index */ Double, /* array */ js.Array[Path], _], 
     Boolean
   ] = js.native
   
@@ -144,9 +149,14 @@ object ReadonlyArrayPath {
     concat: /* repeated */ js.Array[Path] => js.Array[Path],
     copyWithin: (/* target */ Double, /* start */ Double) => ReadonlyArrayPath,
     entries: () => IterableIterator[js.Tuple2[Double, Path]],
-    every: /* callbackfn */ js.Function3[/* value */ Path, /* index */ Double, /* array */ js.Array[Path], _] => Boolean,
+    every: /* predicate */ js.Function3[
+      /* value */ Path, 
+      /* index */ Double, 
+      /* array */ js.Array[Path], 
+      /* is wouter.wouter/preact/use-location.Path */ Boolean
+    ] => /* is std.Array<wouter.wouter/preact/use-location.Path> */ Boolean,
     fill: /* value */ Path => ReadonlyArrayPath,
-    filter: /* callbackfn */ js.Function3[
+    filter: /* predicate */ js.Function3[
       /* value */ Path, 
       /* index */ Double, 
       /* array */ js.Array[Path], 
@@ -195,7 +205,7 @@ object ReadonlyArrayPath {
     reverse: () => js.Array[Path],
     shift: () => js.UndefOr[Path],
     slice: () => js.Array[Path],
-    some: /* callbackfn */ js.Function3[/* value */ Path, /* index */ Double, /* array */ js.Array[Path], _] => Boolean,
+    some: /* predicate */ js.Function3[/* value */ Path, /* index */ Double, /* array */ js.Array[Path], _] => Boolean,
     sort: () => ReadonlyArrayPath,
     splice: /* start */ Double => js.Array[Path],
     toLocaleString: () => String,
@@ -233,7 +243,12 @@ object ReadonlyArrayPath {
     
     @scala.inline
     def setEvery(
-      value: /* callbackfn */ js.Function3[/* value */ Path, /* index */ Double, /* array */ js.Array[Path], _] => Boolean
+      value: /* predicate */ js.Function3[
+          /* value */ Path, 
+          /* index */ Double, 
+          /* array */ js.Array[Path], 
+          /* is wouter.wouter/preact/use-location.Path */ Boolean
+        ] => /* is std.Array<wouter.wouter/preact/use-location.Path> */ Boolean
     ): Self = this.set("every", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -241,7 +256,7 @@ object ReadonlyArrayPath {
     
     @scala.inline
     def setFilter(
-      value: /* callbackfn */ js.Function3[
+      value: /* predicate */ js.Function3[
           /* value */ Path, 
           /* index */ Double, 
           /* array */ js.Array[Path], 
@@ -346,7 +361,7 @@ object ReadonlyArrayPath {
     
     @scala.inline
     def setSome(
-      value: /* callbackfn */ js.Function3[/* value */ Path, /* index */ Double, /* array */ js.Array[Path], _] => Boolean
+      value: /* predicate */ js.Function3[/* value */ Path, /* index */ Double, /* array */ js.Array[Path], _] => Boolean
     ): Self = this.set("some", js.Any.fromFunction1(value))
     
     @scala.inline

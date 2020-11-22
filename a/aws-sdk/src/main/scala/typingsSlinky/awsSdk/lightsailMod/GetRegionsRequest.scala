@@ -13,7 +13,7 @@ trait GetRegionsRequest extends js.Object {
   var includeAvailabilityZones: js.UndefOr[Boolean] = js.native
   
   /**
-    * &gt;A Boolean value indicating whether to also include Availability Zones for databases in your get regions request. Availability Zones are indicated with a letter (e.g., us-east-2a).
+    * A Boolean value indicating whether to also include Availability Zones for databases in your get regions request. Availability Zones are indicated with a letter (e.g., us-east-2a).
     */
   var includeRelationalDatabaseAvailabilityZones: js.UndefOr[Boolean] = js.native
 }

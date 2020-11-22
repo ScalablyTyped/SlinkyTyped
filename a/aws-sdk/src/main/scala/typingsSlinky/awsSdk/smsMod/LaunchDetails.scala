@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LaunchDetails extends js.Object {
   
   /**
-    * Latest time this application was launched successfully.
+    * The latest time that this application was launched successfully.
     */
   var latestLaunchTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * Identifier of the latest stack launched for this application.
+    * The ID of the latest stack launched for this application.
     */
   var stackId: js.UndefOr[StackId] = js.native
   
   /**
-    * Name of the latest stack launched for this application.
+    * The name of the latest stack launched for this application.
     */
   var stackName: js.UndefOr[StackName] = js.native
 }

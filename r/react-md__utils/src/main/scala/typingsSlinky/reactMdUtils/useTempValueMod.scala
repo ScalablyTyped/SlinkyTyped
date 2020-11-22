@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useTempValueMod extends js.Object {
   
-  def default[T](defaultValue: T): ReturnValue[T] = js.native
-  def default[T](defaultValue: T, resetTime: Double): ReturnValue[T] = js.native
+  def useTempValue[T](defaultValue: T): ReturnValue[T] = js.native
+  def useTempValue[T](defaultValue: T, resetTime: Double): ReturnValue[T] = js.native
   
   type CurrentValueRef[T] = MutableRefObject[T]
   

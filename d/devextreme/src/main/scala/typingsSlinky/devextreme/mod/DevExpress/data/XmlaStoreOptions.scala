@@ -8,16 +8,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait XmlaStoreOptions extends js.Object {
   
-  /** @name XmlaStore.Options.beforeSend */
+  /**
+    * [descr:XmlaStore.Options.beforeSend]
+    */
   var beforeSend: js.UndefOr[js.Function1[/* options */ Data, _]] = js.native
   
-  /** @name XmlaStore.Options.catalog */
+  /**
+    * [descr:XmlaStore.Options.catalog]
+    */
   var catalog: js.UndefOr[String] = js.native
   
-  /** @name XmlaStore.Options.cube */
+  /**
+    * [descr:XmlaStore.Options.cube]
+    */
   var cube: js.UndefOr[String] = js.native
   
-  /** @name XmlaStore.Options.url */
+  /**
+    * [descr:XmlaStore.Options.url]
+    */
   var url: js.UndefOr[String] = js.native
 }
 object XmlaStoreOptions {

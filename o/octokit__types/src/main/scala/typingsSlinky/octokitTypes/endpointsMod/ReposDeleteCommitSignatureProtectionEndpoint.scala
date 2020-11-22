@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`12`
+import typingsSlinky.octokitTypes.anon.`11`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ trait ReposDeleteCommitSignatureProtectionEndpoint extends js.Object {
   
   var branch: String = js.native
   
-  var mediaType: `12` = js.native
+  var mediaType: `11` = js.native
   
   var owner: String = js.native
   
@@ -20,7 +20,7 @@ trait ReposDeleteCommitSignatureProtectionEndpoint extends js.Object {
 object ReposDeleteCommitSignatureProtectionEndpoint {
   
   @scala.inline
-  def apply(branch: String, mediaType: `12`, owner: String, repo: String): ReposDeleteCommitSignatureProtectionEndpoint = {
+  def apply(branch: String, mediaType: `11`, owner: String, repo: String): ReposDeleteCommitSignatureProtectionEndpoint = {
     val __obj = js.Dynamic.literal(branch = branch.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposDeleteCommitSignatureProtectionEndpoint]
   }
@@ -44,7 +44,7 @@ object ReposDeleteCommitSignatureProtectionEndpoint {
     def setBranch(value: String): Self = this.set("branch", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `12`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `11`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

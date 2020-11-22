@@ -31,7 +31,9 @@ class QuestionMatrixDropdownRenderedTable protected () extends Base {
   
   def onAddedRow(): Unit = js.native
   
-  def onRemovedRow(index: Double): Unit = js.native
+  def onDetailPanelChangeVisibility(row: MatrixDropdownRowModelBase, isShowing: Boolean): Unit = js.native
+  
+  def onRemovedRow(row: MatrixDropdownRowModelBase): Unit = js.native
   
   val rows: js.Array[QuestionMatrixDropdownRenderedRow] = js.native
   

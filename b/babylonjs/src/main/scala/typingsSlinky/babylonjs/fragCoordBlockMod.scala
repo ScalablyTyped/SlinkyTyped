@@ -1,0 +1,59 @@
+package typingsSlinky.babylonjs
+
+import typingsSlinky.babylonjs.nodeMaterialBlockConnectionPointMod.NodeMaterialConnectionPoint
+import typingsSlinky.babylonjs.nodeMaterialBlockMod.NodeMaterialBlock
+import typingsSlinky.babylonjs.nodeMaterialBuildStateMod.NodeMaterialBuildState
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+@JSImport("babylonjs/Materials/Node/Blocks/Fragment/fragCoordBlock", JSImport.Namespace)
+@js.native
+object fragCoordBlockMod extends js.Object {
+  
+  @js.native
+  class FragCoordBlock protected () extends NodeMaterialBlock {
+    /**
+      * Creates a new FragCoordBlock
+      * @param name defines the block name
+      */
+    def this(name: String) = this()
+    
+    /**
+      * Gets the w component
+      */
+    def output: NodeMaterialConnectionPoint = js.native
+    
+    /* protected */ def writeOutputs(state: NodeMaterialBuildState): String = js.native
+    
+    /**
+      * Gets the x component
+      */
+    def x: NodeMaterialConnectionPoint = js.native
+    
+    /**
+      * Gets the xy component
+      */
+    def xy: NodeMaterialConnectionPoint = js.native
+    
+    /**
+      * Gets the xyz component
+      */
+    def xyz: NodeMaterialConnectionPoint = js.native
+    
+    /**
+      * Gets the xyzw component
+      */
+    def xyzw: NodeMaterialConnectionPoint = js.native
+    
+    /**
+      * Gets the y component
+      */
+    def y: NodeMaterialConnectionPoint = js.native
+    
+    /**
+      * Gets the z component
+      */
+    def z: NodeMaterialConnectionPoint = js.native
+  }
+}

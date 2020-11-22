@@ -1,7 +1,7 @@
 
 # Scala.js typings for papaparse
 
-Typings are for version v5.0
+Typings are for version 5.2
 
 ## Library description:
 Fast and powerful CSV parser for the browser that supports web workers and streaming large files. Converts CSV to JSON and JSON to CSV.

@@ -1,17 +1,19 @@
 package typingsSlinky.mendixmodelsdk.restMod.rest
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.webservicesMod.webservices.PublishedResource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/published-odata-resource relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/published-odata-resource relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/rest", "rest.PublishedRestResource")
 @js.native
@@ -21,8 +23,8 @@ class PublishedRestResource protected () extends PublishedResource {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -36,9 +38,6 @@ class PublishedRestResource protected () extends PublishedResource {
     */
   def exposedName: String = js.native
   def exposedName_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FPublishedRestResource: IModel = js.native
   
   def pageSize: Double = js.native
   def pageSize_=(newValue: Double): Unit = js.native

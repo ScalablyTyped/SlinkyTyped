@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IpcMain extends EventEmitter {
   
-  // Docs: http://electronjs.org/docs/api/ipc-main
+  // Docs: https://electronjs.org/docs/api/ipc-main
   /**
     * Adds a handler for an `invoke`able IPC. This handler will be called whenever a
     * renderer calls `ipcRenderer.invoke(channel, ...args)`.

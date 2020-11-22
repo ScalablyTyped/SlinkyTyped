@@ -1,18 +1,24 @@
 package typingsSlinky.iobroker.anon
 
+import typingsSlinky.iobroker.iobrokerBooleans.`true`
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.StringOrTranslated
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Partial<iobroker.iobroker.<global>.ioBroker.OtherCommon> */
+/* Inlined std.Partial<iobroker.iobroker/objects.<global>.ioBroker.OtherCommon> */
 @js.native
 trait PartialOtherCommon extends js.Object {
   
   var custom: js.UndefOr[scala.Nothing] = js.native
   
+  var dontDelete: js.UndefOr[`true`] = js.native
+  
+  var expert: js.UndefOr[`true`] = js.native
+  
   var icon: js.UndefOr[String] = js.native
   
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[StringOrTranslated] = js.native
   
   var role: js.UndefOr[String] = js.native
 }
@@ -40,13 +46,25 @@ object PartialOtherCommon {
     }
     
     @scala.inline
+    def setDontDelete(value: `true`): Self = this.set("dontDelete", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDontDelete: Self = this.set("dontDelete", js.undefined)
+    
+    @scala.inline
+    def setExpert(value: `true`): Self = this.set("expert", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpert: Self = this.set("expert", js.undefined)
+    
+    @scala.inline
     def setIcon(value: String): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: StringOrTranslated): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)

@@ -1,7 +1,7 @@
 package typingsSlinky.dayjs.mod
 
-import typingsSlinky.dayjs.durationMod.Duration
-import typingsSlinky.dayjs.durationMod.DurationInputType
+import typingsSlinky.dayjs.pluginDurationMod.Duration
+import typingsSlinky.dayjs.pluginDurationMod.DurationInputType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

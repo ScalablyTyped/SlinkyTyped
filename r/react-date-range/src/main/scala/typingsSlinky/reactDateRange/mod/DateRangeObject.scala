@@ -1,6 +1,5 @@
 package typingsSlinky.reactDateRange.mod
 
-import typingsSlinky.moment.mod.Moment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DateRangeObject extends js.Object {
   
-  def endDate(now: Moment): Moment = js.native
+  def endDate(now: js.Date): js.Date = js.native
   
-  def startDate(now: Moment): Moment = js.native
+  def startDate(now: js.Date): js.Date = js.native
 }
 object DateRangeObject {
   
   @scala.inline
-  def apply(endDate: Moment => Moment, startDate: Moment => Moment): DateRangeObject = {
+  def apply(endDate: js.Date => js.Date, startDate: js.Date => js.Date): DateRangeObject = {
     val __obj = js.Dynamic.literal(endDate = js.Any.fromFunction1(endDate), startDate = js.Any.fromFunction1(startDate))
     __obj.asInstanceOf[DateRangeObject]
   }
@@ -36,9 +35,9 @@ object DateRangeObject {
     }
     
     @scala.inline
-    def setEndDate(value: Moment => Moment): Self = this.set("endDate", js.Any.fromFunction1(value))
+    def setEndDate(value: js.Date => js.Date): Self = this.set("endDate", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setStartDate(value: Moment => Moment): Self = this.set("startDate", js.Any.fromFunction1(value))
+    def setStartDate(value: js.Date => js.Date): Self = this.set("startDate", js.Any.fromFunction1(value))
   }
 }

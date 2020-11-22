@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteUserFromSharedAppleDeviceActionResult extends DeviceActionResult {
   
   // User principal name of the user to be deleted
-  var userPrincipalName: js.UndefOr[String] = js.native
+  var userPrincipalName: js.UndefOr[NullableOption[String]] = js.native
 }
 object DeleteUserFromSharedAppleDeviceActionResult {
   
@@ -34,9 +34,12 @@ object DeleteUserFromSharedAppleDeviceActionResult {
     }
     
     @scala.inline
-    def setUserPrincipalName(value: String): Self = this.set("userPrincipalName", value.asInstanceOf[js.Any])
+    def setUserPrincipalName(value: NullableOption[String]): Self = this.set("userPrincipalName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserPrincipalName: Self = this.set("userPrincipalName", js.undefined)
+    
+    @scala.inline
+    def setUserPrincipalNameNull: Self = this.set("userPrincipalName", null)
   }
 }

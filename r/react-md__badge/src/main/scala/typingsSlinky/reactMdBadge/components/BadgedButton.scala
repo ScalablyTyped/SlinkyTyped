@@ -28,8 +28,13 @@ import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.reactMdBadge.badgeMod.BadgeTheme
 import typingsSlinky.reactMdBadge.badgedButtonMod.BadgedButtonProps
+import typingsSlinky.reactMdBadge.reactMdBadgeStrings.`additions removals`
 import typingsSlinky.reactMdBadge.reactMdBadgeStrings.`additions text`
 import typingsSlinky.reactMdBadge.reactMdBadgeStrings.`inline`
+import typingsSlinky.reactMdBadge.reactMdBadgeStrings.`removals additions`
+import typingsSlinky.reactMdBadge.reactMdBadgeStrings.`removals text`
+import typingsSlinky.reactMdBadge.reactMdBadgeStrings.`text additions`
+import typingsSlinky.reactMdBadge.reactMdBadgeStrings.`text removals`
 import typingsSlinky.reactMdBadge.reactMdBadgeStrings.additions
 import typingsSlinky.reactMdBadge.reactMdBadgeStrings.all
 import typingsSlinky.reactMdBadge.reactMdBadgeStrings.ascending
@@ -212,7 +217,9 @@ object BadgedButton {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

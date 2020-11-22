@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.endpointConfigurationMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.inputMod.sagemaker.EndpointConfigurationDataCaptureConfig
 import typingsSlinky.pulumiAws.inputMod.sagemaker.EndpointConfigurationProductionVariant
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -9,6 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait EndpointConfigurationArgs extends js.Object {
+  
+  /**
+    * Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
+    */
+  val dataCaptureConfig: js.UndefOr[Input[EndpointConfigurationDataCaptureConfig]] = js.native
   
   /**
     * Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
@@ -58,6 +64,12 @@ object EndpointConfigurationArgs {
     
     @scala.inline
     def setProductionVariants(value: Input[js.Array[Input[EndpointConfigurationProductionVariant]]]): Self = this.set("productionVariants", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDataCaptureConfig(value: Input[EndpointConfigurationDataCaptureConfig]): Self = this.set("dataCaptureConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataCaptureConfig: Self = this.set("dataCaptureConfig", js.undefined)
     
     @scala.inline
     def setKmsKeyArn(value: Input[String]): Self = this.set("kmsKeyArn", value.asInstanceOf[js.Any])

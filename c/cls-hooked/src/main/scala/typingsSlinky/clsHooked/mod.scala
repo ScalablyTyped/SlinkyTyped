@@ -13,7 +13,7 @@ object mod extends js.Object {
   
   def destroyNamespace(name: String): Unit = js.native
   
-  def getNamespace(name: String): Namespace = js.native
+  def getNamespace(name: String): js.UndefOr[Namespace] = js.native
   
   def reset(): Unit = js.native
   

@@ -13,7 +13,7 @@ trait OptionsTopBarLargeTitle extends js.Object {
   var color: js.UndefOr[Color] = js.native
   
   /**
-    * Set the font family of large title's text
+    * Set the font family of the large title text
     */
   var fontFamily: js.UndefOr[FontFamily] = js.native
   
@@ -23,8 +23,14 @@ trait OptionsTopBarLargeTitle extends js.Object {
   var fontSize: js.UndefOr[Double] = js.native
   
   /**
-    * Set the font weight, ignore fontFamily and use the iOS system fonts instead
-    * #### (iOS specific)
+    * Set the font style of the large title text
+    */
+  var fontStyle: js.UndefOr[FontStyle] = js.native
+  
+  /**
+    * Specifies font weight. The values 'normal' and 'bold' are supported
+    * for most fonts. Not all fonts have a variant for each of the numeric
+    * values, in that case the closest one is chosen.
     */
   var fontWeight: js.UndefOr[FontWeight] = js.native
   
@@ -73,6 +79,12 @@ object OptionsTopBarLargeTitle {
     
     @scala.inline
     def deleteFontSize: Self = this.set("fontSize", js.undefined)
+    
+    @scala.inline
+    def setFontStyle(value: FontStyle): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
     
     @scala.inline
     def setFontWeight(value: FontWeight): Self = this.set("fontWeight", value.asInstanceOf[js.Any])

@@ -2235,6 +2235,18 @@ object baseuiStrings {
   def Zimbabwe: Zimbabwe = "Zimbabwe".asInstanceOf[Zimbabwe]
   
   @scala.inline
+  def _blank: _blank = "_blank".asInstanceOf[_blank]
+  
+  @scala.inline
+  def _parent: _parent = "_parent".asInstanceOf[_parent]
+  
+  @scala.inline
+  def _self: _self = "_self".asInstanceOf[_self]
+  
+  @scala.inline
+  def _top: _top = "_top".asInstanceOf[_top]
+  
+  @scala.inline
   def a: a = "a".asInstanceOf[a]
   
   @scala.inline
@@ -2301,6 +2313,9 @@ object baseuiStrings {
   def big: big = "big".asInstanceOf[big]
   
   @scala.inline
+  def black: black = "black".asInstanceOf[black]
+  
+  @scala.inline
   def block: block = "block".asInstanceOf[block]
   
   @scala.inline
@@ -2308,6 +2323,9 @@ object baseuiStrings {
   
   @scala.inline
   def blockquote: blockquote = "blockquote".asInstanceOf[blockquote]
+  
+  @scala.inline
+  def blue: blue = "blue".asInstanceOf[blue]
   
   @scala.inline
   def body: body = "body".asInstanceOf[body]
@@ -2328,6 +2346,9 @@ object baseuiStrings {
   def br_ : br_ = "br".asInstanceOf[br_]
   
   @scala.inline
+  def brown: brown = "brown".asInstanceOf[brown]
+  
+  @scala.inline
   def button: button = "button".asInstanceOf[button]
   
   @scala.inline
@@ -2341,6 +2362,9 @@ object baseuiStrings {
   
   @scala.inline
   def change_ : change_ = "change".asInstanceOf[change_]
+  
+  @scala.inline
+  def character: character = "character".asInstanceOf[character]
   
   @scala.inline
   def checkbox: checkbox = "checkbox".asInstanceOf[checkbox]
@@ -2449,6 +2473,9 @@ object baseuiStrings {
   
   @scala.inline
   def end: end = "end".asInstanceOf[end]
+  
+  @scala.inline
+  def enter_ : enter_ = "enter".asInstanceOf[enter_]
   
   @scala.inline
   def escape_ : escape_ = "escape".asInstanceOf[escape_]
@@ -2587,6 +2614,9 @@ object baseuiStrings {
   
   @scala.inline
   def g: g = "g".asInstanceOf[g]
+  
+  @scala.inline
+  def green: green = "green".asInstanceOf[green]
   
   @scala.inline
   def grid: grid = "grid".asInstanceOf[grid]
@@ -2766,6 +2796,9 @@ object baseuiStrings {
   def mask: mask = "mask".asInstanceOf[mask]
   
   @scala.inline
+  def medium_ : medium_ = "medium".asInstanceOf[medium_]
+  
+  @scala.inline
   def menu: menu = "menu".asInstanceOf[menu]
   
   @scala.inline
@@ -2847,6 +2880,9 @@ object baseuiStrings {
   def option: option = "option".asInstanceOf[option]
   
   @scala.inline
+  def orange: orange = "orange".asInstanceOf[orange]
+  
+  @scala.inline
   def outlined: outlined = "outlined".asInstanceOf[outlined]
   
   @scala.inline
@@ -2889,6 +2925,9 @@ object baseuiStrings {
   def progress: progress = "progress".asInstanceOf[progress]
   
   @scala.inline
+  def purple: purple = "purple".asInstanceOf[purple]
+  
+  @scala.inline
   def q: q = "q".asInstanceOf[q]
   
   @scala.inline
@@ -2899,6 +2938,9 @@ object baseuiStrings {
   
   @scala.inline
   def rect: rect = "rect".asInstanceOf[rect]
+  
+  @scala.inline
+  def red: red = "red".asInstanceOf[red]
   
   @scala.inline
   def relative: relative = "relative".asInstanceOf[relative]
@@ -3199,6 +3241,12 @@ object baseuiStrings {
   
   @scala.inline
   def webview: webview = "webview".asInstanceOf[webview]
+  
+  @scala.inline
+  def white: white = "white".asInstanceOf[white]
+  
+  @scala.inline
+  def yellow: yellow = "yellow".asInstanceOf[yellow]
   
   @scala.inline
   def `Åland Islands`: `Åland Islands` = ("\u00C5land Islands").asInstanceOf[`Åland Islands`]
@@ -5418,6 +5466,18 @@ object baseuiStrings {
   sealed trait Zimbabwe extends js.Object
   
   @js.native
+  sealed trait _blank extends js.Object
+  
+  @js.native
+  sealed trait _parent extends js.Object
+  
+  @js.native
+  sealed trait _self extends js.Object
+  
+  @js.native
+  sealed trait _top extends js.Object
+  
+  @js.native
   sealed trait a extends js.Object
   
   @js.native
@@ -5493,6 +5553,9 @@ object baseuiStrings {
   sealed trait big extends js.Object
   
   @js.native
+  sealed trait black extends js.Object
+  
+  @js.native
   sealed trait block extends Display
   
   @js.native
@@ -5500,6 +5563,9 @@ object baseuiStrings {
   
   @js.native
   sealed trait blockquote extends js.Object
+  
+  @js.native
+  sealed trait blue extends js.Object
   
   @js.native
   sealed trait body extends js.Object
@@ -5518,6 +5584,9 @@ object baseuiStrings {
   
   @js.native
   sealed trait br_ extends js.Object
+  
+  @js.native
+  sealed trait brown extends js.Object
   
   @js.native
   sealed trait button extends js.Object
@@ -5539,6 +5608,9 @@ object baseuiStrings {
   
   @js.native
   sealed trait change_ extends js.Object
+  
+  @js.native
+  sealed trait character extends js.Object
   
   @js.native
   sealed trait checkbox extends js.Object
@@ -5655,6 +5727,9 @@ object baseuiStrings {
        with JustifyContent
        with JustifyItems
        with JustifySelf
+  
+  @js.native
+  sealed trait enter_ extends js.Object
   
   @js.native
   sealed trait escape_ extends js.Object
@@ -5810,6 +5885,9 @@ object baseuiStrings {
   
   @js.native
   sealed trait g extends js.Object
+  
+  @js.native
+  sealed trait green extends js.Object
   
   @js.native
   sealed trait grid extends Display
@@ -6017,6 +6095,9 @@ object baseuiStrings {
   sealed trait mask extends js.Object
   
   @js.native
+  sealed trait medium_ extends js.Object
+  
+  @js.native
   sealed trait menu extends js.Object
   
   @js.native
@@ -6103,6 +6184,9 @@ object baseuiStrings {
   sealed trait option extends js.Object
   
   @js.native
+  sealed trait orange extends js.Object
+  
+  @js.native
   sealed trait outlined extends js.Object
   
   @js.native
@@ -6145,6 +6229,9 @@ object baseuiStrings {
   sealed trait progress extends js.Object
   
   @js.native
+  sealed trait purple extends js.Object
+  
+  @js.native
   sealed trait q extends js.Object
   
   @js.native
@@ -6155,6 +6242,9 @@ object baseuiStrings {
   
   @js.native
   sealed trait rect extends js.Object
+  
+  @js.native
+  sealed trait red extends js.Object
   
   @js.native
   sealed trait relative extends Position
@@ -6508,6 +6598,12 @@ object baseuiStrings {
   
   @js.native
   sealed trait webview extends js.Object
+  
+  @js.native
+  sealed trait white extends js.Object
+  
+  @js.native
+  sealed trait yellow extends js.Object
   
   @js.native
   sealed trait `Åland Islands` extends js.Object

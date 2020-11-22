@@ -8,12 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.rollup.rollupBooleans.`false`
   - typingsSlinky.rollup.rollupStrings.strict
   - typingsSlinky.rollup.rollupStrings.`allow-extension`
+  - typingsSlinky.rollup.rollupStrings.`exports-only`
 */
 trait PreserveEntrySignaturesOption extends js.Object
 object PreserveEntrySignaturesOption {
   
   @scala.inline
   def `allow-extension`: typingsSlinky.rollup.rollupStrings.`allow-extension` = "allow-extension".asInstanceOf[typingsSlinky.rollup.rollupStrings.`allow-extension`]
+  
+  @scala.inline
+  def `exports-only`: typingsSlinky.rollup.rollupStrings.`exports-only` = "exports-only".asInstanceOf[typingsSlinky.rollup.rollupStrings.`exports-only`]
   
   @scala.inline
   def `false`: typingsSlinky.rollup.rollupBooleans.`false` = false.asInstanceOf[typingsSlinky.rollup.rollupBooleans.`false`]

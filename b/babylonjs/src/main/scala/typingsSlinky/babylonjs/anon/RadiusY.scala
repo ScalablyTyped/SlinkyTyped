@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.anon
 
-import typingsSlinky.babylonjs.BABYLON.Vector4
+import typingsSlinky.babylonjs.mathVectorMod.Vector4
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -25,6 +25,8 @@ trait RadiusY extends js.Object {
   var sideOrientation: js.UndefOr[Double] = js.native
   
   var subdivisions: js.UndefOr[Double] = js.native
+  
+  var updatable: js.UndefOr[Boolean] = js.native
 }
 object RadiusY {
   
@@ -102,5 +104,11 @@ object RadiusY {
     
     @scala.inline
     def deleteSubdivisions: Self = this.set("subdivisions", js.undefined)
+    
+    @scala.inline
+    def setUpdatable(value: Boolean): Self = this.set("updatable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUpdatable: Self = this.set("updatable", js.undefined)
   }
 }

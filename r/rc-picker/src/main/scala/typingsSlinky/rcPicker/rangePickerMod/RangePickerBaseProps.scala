@@ -8,6 +8,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.Components
+import typingsSlinky.rcPicker.interfaceMod.CustomFormat
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.EventValue
 import typingsSlinky.rcPicker.interfaceMod.Locale
@@ -18,8 +19,13 @@ import typingsSlinky.rcPicker.monthBodyMod.MonthCellRender
 import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
 import typingsSlinky.rcPicker.rcPickerNumbers.`0`
 import typingsSlinky.rcPicker.rcPickerNumbers.`1`
+import typingsSlinky.rcPicker.rcPickerStrings.`additions removals`
 import typingsSlinky.rcPicker.rcPickerStrings.`additions text`
 import typingsSlinky.rcPicker.rcPickerStrings.`inline`
+import typingsSlinky.rcPicker.rcPickerStrings.`removals additions`
+import typingsSlinky.rcPicker.rcPickerStrings.`removals text`
+import typingsSlinky.rcPicker.rcPickerStrings.`text additions`
+import typingsSlinky.rcPicker.rcPickerStrings.`text removals`
 import typingsSlinky.rcPicker.rcPickerStrings.additions
 import typingsSlinky.rcPicker.rcPickerStrings.all
 import typingsSlinky.rcPicker.rcPickerStrings.ascending
@@ -148,7 +154,9 @@ trait RangePickerBaseProps[DateType] extends RangePickerProps[DateType] {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -206,7 +214,7 @@ trait RangePickerBaseProps[DateType] extends RangePickerProps[DateType] {
   
   var dropdownClassName: js.UndefOr[String] = js.native
   
-  var format: js.UndefOr[String | js.Array[String]] = js.native
+  var format: js.UndefOr[String | CustomFormat[DateType] | (js.Array[String | CustomFormat[DateType]])] = js.native
   
   var generateConfig: GenerateConfig[DateType] = js.native
   
@@ -571,7 +579,9 @@ object RangePickerBaseProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -745,10 +755,13 @@ object RangePickerBaseProps {
     def deleteDropdownClassName: Self = this.set("dropdownClassName", js.undefined)
     
     @scala.inline
-    def setFormatVarargs(value: String*): Self = this.set("format", js.Array(value :_*))
+    def setFormatVarargs(value: (String | CustomFormat[DateType])*): Self = this.set("format", js.Array(value :_*))
     
     @scala.inline
-    def setFormat(value: String | js.Array[String]): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setFormatFunction1(value: DateType => String): Self = this.set("format", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setFormat(value: String | CustomFormat[DateType] | (js.Array[String | CustomFormat[DateType]])): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)

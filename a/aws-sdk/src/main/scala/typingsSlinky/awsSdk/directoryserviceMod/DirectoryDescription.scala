@@ -73,6 +73,11 @@ trait DirectoryDescription extends js.Object {
   var RadiusStatus: js.UndefOr[typingsSlinky.awsSdk.directoryserviceMod.RadiusStatus] = js.native
   
   /**
+    * Lists the Regions where the directory has replicated.
+    */
+  var RegionsInfo: js.UndefOr[typingsSlinky.awsSdk.directoryserviceMod.RegionsInfo] = js.native
+  
+  /**
     * The method used when sharing a directory to determine whether the directory should be shared within your AWS organization (ORGANIZATIONS) or with any AWS account by sending a shared directory request (HANDSHAKE).
     */
   var ShareMethod: js.UndefOr[typingsSlinky.awsSdk.directoryserviceMod.ShareMethod] = js.native
@@ -230,6 +235,12 @@ object DirectoryDescription {
     
     @scala.inline
     def deleteRadiusStatus: Self = this.set("RadiusStatus", js.undefined)
+    
+    @scala.inline
+    def setRegionsInfo(value: RegionsInfo): Self = this.set("RegionsInfo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRegionsInfo: Self = this.set("RegionsInfo", js.undefined)
     
     @scala.inline
     def setShareMethod(value: ShareMethod): Self = this.set("ShareMethod", value.asInstanceOf[js.Any])

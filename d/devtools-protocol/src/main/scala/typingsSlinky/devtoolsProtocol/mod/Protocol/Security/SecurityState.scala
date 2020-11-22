@@ -1,5 +1,6 @@
 package typingsSlinky.devtoolsProtocol.mod.Protocol.Security
 
+import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.secure_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.unknown
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.neutral
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.insecure
-  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.secure
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.secure_
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.info
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.`insecure-broken`
 */
@@ -28,7 +29,7 @@ object SecurityState {
   def neutral: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.neutral = "neutral".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.neutral]
   
   @scala.inline
-  def secure: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.secure = "secure".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.secure]
+  def secure: secure_ = "secure".asInstanceOf[secure_]
   
   @scala.inline
   def unknown: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.unknown = "unknown".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.unknown]

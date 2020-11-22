@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeGameServerInput extends js.Object {
   
   /**
-    * An identifier for the game server group where the game server is running. Use either the GameServerGroup name or ARN value.
+    * A unique identifier for the game server group where the game server is running. Use either the GameServerGroup name or ARN value.
     */
   var GameServerGroupName: GameServerGroupNameOrArn = js.native
   
   /**
-    * The identifier for the game server to be retrieved.
+    * A custom string that uniquely identifies the game server information to be retrieved.
     */
   var GameServerId: typingsSlinky.awsSdk.gameliftMod.GameServerId = js.native
 }

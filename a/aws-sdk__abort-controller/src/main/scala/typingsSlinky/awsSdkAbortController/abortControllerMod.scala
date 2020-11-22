@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/abort-controller/build/AbortController", JSImport.Namespace)
+@JSImport("@aws-sdk/abort-controller/dist/cjs/AbortController", JSImport.Namespace)
 @js.native
 object abortControllerMod extends js.Object {
   

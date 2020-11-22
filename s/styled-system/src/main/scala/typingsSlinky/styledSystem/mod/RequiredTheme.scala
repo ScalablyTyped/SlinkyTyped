@@ -12,91 +12,82 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RequiredTheme extends js.Object {
   
   var borderStyles: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<{}> */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<{}> */ _, 
     /* keyof any */ String
   ] = js.native
   
   var borderWidths: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderWidthProperty<TLength> */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderWidth<TLength> */ _, 
     /* keyof any */ String
   ] = js.native
   
   var borders: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<{}> */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<{}> */ _, 
     /* keyof any */ String
   ] = js.native
   
   var breakpoints: ObjectOrArray[Double | String | js.Symbol, /* keyof any */ String] = js.native
   
-  var buttons: ObjectOrArray[
-    StandardProperties[(String with js.Object) | `0`, String with js.Object], 
-    /* keyof any */ String
-  ] = js.native
+  var buttons: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String] = js.native
   
-  var colorStyles: ObjectOrArray[
-    StandardProperties[(String with js.Object) | `0`, String with js.Object], 
-    /* keyof any */ String
-  ] = js.native
+  var colorStyles: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String] = js.native
   
   var colors: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ _, 
     /* keyof any */ String
   ] = js.native
   
   var fontSizes: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontSizeProperty<number> */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontSize<number> */ _, 
     /* keyof any */ String
   ] = js.native
   
   var fontWeights: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontWeightProperty */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontWeight */ _, 
     /* keyof any */ String
   ] = js.native
   
   var fonts: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _, 
     /* keyof any */ String
   ] = js.native
   
   var letterSpacings: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LetterSpacingProperty<TLength> */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LetterSpacing<TLength> */ _, 
     /* keyof any */ String
   ] = js.native
   
   var lineHeights: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LineHeightProperty<TLength> */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LineHeight<TLength> */ _, 
     /* keyof any */ String
   ] = js.native
   
   var mediaQueries: StringDictionary[String] = js.native
   
   var radii: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRadiusProperty<TLength> */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRadius<TLength> */ _, 
     /* keyof any */ String
   ] = js.native
   
   var shadows: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ _, 
     /* keyof any */ String
   ] = js.native
   
   var sizes: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<{}> */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<{}> */ _, 
     /* keyof any */ String
   ] = js.native
   
   var space: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginProperty<number | string> */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Margin<number | string> */ _, 
     /* keyof any */ String
   ] = js.native
   
-  var textStyles: ObjectOrArray[
-    StandardProperties[(String with js.Object) | `0`, String with js.Object], 
-    /* keyof any */ String
-  ] = js.native
+  var textStyles: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String] = js.native
   
   var zIndices: ObjectOrArray[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
     /* keyof any */ String
   ] = js.native
 }
@@ -105,73 +96,64 @@ object RequiredTheme {
   @scala.inline
   def apply(
     borderStyles: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<{}> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<{}> */ _, 
       /* keyof any */ String
     ],
     borderWidths: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderWidthProperty<TLength> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderWidth<TLength> */ _, 
       /* keyof any */ String
     ],
     borders: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<{}> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<{}> */ _, 
       /* keyof any */ String
     ],
     breakpoints: ObjectOrArray[Double | String | js.Symbol, /* keyof any */ String],
-    buttons: ObjectOrArray[
-      StandardProperties[(String with js.Object) | `0`, String with js.Object], 
-      /* keyof any */ String
-    ],
-    colorStyles: ObjectOrArray[
-      StandardProperties[(String with js.Object) | `0`, String with js.Object], 
-      /* keyof any */ String
-    ],
+    buttons: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String],
+    colorStyles: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String],
     colors: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ _, 
       /* keyof any */ String
     ],
     fontSizes: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontSizeProperty<number> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontSize<number> */ _, 
       /* keyof any */ String
     ],
     fontWeights: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontWeightProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontWeight */ _, 
       /* keyof any */ String
     ],
     fonts: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _, 
       /* keyof any */ String
     ],
     letterSpacings: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LetterSpacingProperty<TLength> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LetterSpacing<TLength> */ _, 
       /* keyof any */ String
     ],
     lineHeights: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LineHeightProperty<TLength> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LineHeight<TLength> */ _, 
       /* keyof any */ String
     ],
     mediaQueries: StringDictionary[String],
     radii: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRadiusProperty<TLength> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRadius<TLength> */ _, 
       /* keyof any */ String
     ],
     shadows: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ _, 
       /* keyof any */ String
     ],
     sizes: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<{}> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<{}> */ _, 
       /* keyof any */ String
     ],
     space: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginProperty<number | string> */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Margin<number | string> */ _, 
       /* keyof any */ String
     ],
-    textStyles: ObjectOrArray[
-      StandardProperties[(String with js.Object) | `0`, String with js.Object], 
-      /* keyof any */ String
-    ],
+    textStyles: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String],
     zIndices: ObjectOrArray[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
       /* keyof any */ String
     ]
   ): RequiredTheme = {
@@ -200,7 +182,7 @@ object RequiredTheme {
     @scala.inline
     def setBorderStyles(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<{}> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<{}> */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("borderStyles", value.asInstanceOf[js.Any])
@@ -211,7 +193,7 @@ object RequiredTheme {
     @scala.inline
     def setBorderWidths(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderWidthProperty<TLength> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderWidth<TLength> */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("borderWidths", value.asInstanceOf[js.Any])
@@ -222,7 +204,7 @@ object RequiredTheme {
     @scala.inline
     def setBorders(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<{}> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<{}> */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("borders", value.asInstanceOf[js.Any])
@@ -234,26 +216,16 @@ object RequiredTheme {
     def setBreakpoints(value: ObjectOrArray[Double | String | js.Symbol, /* keyof any */ String]): Self = this.set("breakpoints", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setButtonsVarargs(value: (StandardProperties[(String with js.Object) | `0`, String with js.Object])*): Self = this.set("buttons", js.Array(value :_*))
+    def setButtonsVarargs(value: (StandardProperties[String | `0`])*): Self = this.set("buttons", js.Array(value :_*))
     
     @scala.inline
-    def setButtons(
-      value: ObjectOrArray[
-          StandardProperties[(String with js.Object) | `0`, String with js.Object], 
-          /* keyof any */ String
-        ]
-    ): Self = this.set("buttons", value.asInstanceOf[js.Any])
+    def setButtons(value: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String]): Self = this.set("buttons", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setColorStylesVarargs(value: (StandardProperties[(String with js.Object) | `0`, String with js.Object])*): Self = this.set("colorStyles", js.Array(value :_*))
+    def setColorStylesVarargs(value: (StandardProperties[String | `0`])*): Self = this.set("colorStyles", js.Array(value :_*))
     
     @scala.inline
-    def setColorStyles(
-      value: ObjectOrArray[
-          StandardProperties[(String with js.Object) | `0`, String with js.Object], 
-          /* keyof any */ String
-        ]
-    ): Self = this.set("colorStyles", value.asInstanceOf[js.Any])
+    def setColorStyles(value: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String]): Self = this.set("colorStyles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setColorsVarargs(value: js.Any*): Self = this.set("colors", js.Array(value :_*))
@@ -261,7 +233,7 @@ object RequiredTheme {
     @scala.inline
     def setColors(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ColorProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Color */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("colors", value.asInstanceOf[js.Any])
@@ -272,7 +244,7 @@ object RequiredTheme {
     @scala.inline
     def setFontSizes(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontSizeProperty<number> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontSize<number> */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("fontSizes", value.asInstanceOf[js.Any])
@@ -283,7 +255,7 @@ object RequiredTheme {
     @scala.inline
     def setFontWeights(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontWeightProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontWeight */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("fontWeights", value.asInstanceOf[js.Any])
@@ -294,7 +266,7 @@ object RequiredTheme {
     @scala.inline
     def setFonts(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FontFamilyProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FontFamily */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("fonts", value.asInstanceOf[js.Any])
@@ -305,7 +277,7 @@ object RequiredTheme {
     @scala.inline
     def setLetterSpacings(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LetterSpacingProperty<TLength> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LetterSpacing<TLength> */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("letterSpacings", value.asInstanceOf[js.Any])
@@ -316,7 +288,7 @@ object RequiredTheme {
     @scala.inline
     def setLineHeights(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LineHeightProperty<TLength> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.LineHeight<TLength> */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("lineHeights", value.asInstanceOf[js.Any])
@@ -330,7 +302,7 @@ object RequiredTheme {
     @scala.inline
     def setRadii(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderRadiusProperty<TLength> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BorderRadius<TLength> */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("radii", value.asInstanceOf[js.Any])
@@ -341,7 +313,7 @@ object RequiredTheme {
     @scala.inline
     def setShadows(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BoxShadowProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BoxShadow */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("shadows", value.asInstanceOf[js.Any])
@@ -352,7 +324,7 @@ object RequiredTheme {
     @scala.inline
     def setSizes(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<{}> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<{}> */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("sizes", value.asInstanceOf[js.Any])
@@ -363,21 +335,16 @@ object RequiredTheme {
     @scala.inline
     def setSpace(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginProperty<number | string> */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Margin<number | string> */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("space", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTextStylesVarargs(value: (StandardProperties[(String with js.Object) | `0`, String with js.Object])*): Self = this.set("textStyles", js.Array(value :_*))
+    def setTextStylesVarargs(value: (StandardProperties[String | `0`])*): Self = this.set("textStyles", js.Array(value :_*))
     
     @scala.inline
-    def setTextStyles(
-      value: ObjectOrArray[
-          StandardProperties[(String with js.Object) | `0`, String with js.Object], 
-          /* keyof any */ String
-        ]
-    ): Self = this.set("textStyles", value.asInstanceOf[js.Any])
+    def setTextStyles(value: ObjectOrArray[StandardProperties[String | `0`], /* keyof any */ String]): Self = this.set("textStyles", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setZIndicesVarargs(value: js.Any*): Self = this.set("zIndices", js.Array(value :_*))
@@ -385,7 +352,7 @@ object RequiredTheme {
     @scala.inline
     def setZIndices(
       value: ObjectOrArray[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
           /* keyof any */ String
         ]
     ): Self = this.set("zIndices", value.asInstanceOf[js.Any])

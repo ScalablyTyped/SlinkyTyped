@@ -12,6 +12,8 @@ trait Context
   var key: js.UndefOr[String] = js.native
   
   var label: js.UndefOr[String] = js.native
+  
+  var value: js.UndefOr[js.Any] = js.native
 }
 object Context {
   
@@ -47,5 +49,11 @@ object Context {
     
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
+    
+    @scala.inline
+    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValue: Self = this.set("value", js.undefined)
   }
 }

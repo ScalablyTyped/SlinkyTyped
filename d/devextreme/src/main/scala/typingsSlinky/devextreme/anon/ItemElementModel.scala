@@ -2,7 +2,8 @@ package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxDropDownButton
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxDraggable
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxSortable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,17 +11,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ItemElementModel extends js.Object {
   
-  var component: js.UndefOr[dxDropDownButton] = js.native
+  var component: js.UndefOr[dxSortable] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
   var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
+  
+  var fromComponent: js.UndefOr[dxSortable | dxDraggable] = js.native
+  
+  var fromData: js.UndefOr[js.Any] = js.native
+  
+  var fromIndex: js.UndefOr[Double] = js.native
   
   var itemData: js.UndefOr[js.Any] = js.native
   
   var itemElement: js.UndefOr[dxElement] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
+  
+  var toComponent: js.UndefOr[dxSortable | dxDraggable] = js.native
+  
+  var toData: js.UndefOr[js.Any] = js.native
+  
+  var toIndex: js.UndefOr[Double] = js.native
 }
 object ItemElementModel {
   
@@ -46,7 +59,7 @@ object ItemElementModel {
     }
     
     @scala.inline
-    def setComponent(value: dxDropDownButton): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxSortable): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -62,6 +75,24 @@ object ItemElementModel {
     
     @scala.inline
     def deleteEvent: Self = this.set("event", js.undefined)
+    
+    @scala.inline
+    def setFromComponent(value: dxSortable | dxDraggable): Self = this.set("fromComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFromComponent: Self = this.set("fromComponent", js.undefined)
+    
+    @scala.inline
+    def setFromData(value: js.Any): Self = this.set("fromData", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFromData: Self = this.set("fromData", js.undefined)
+    
+    @scala.inline
+    def setFromIndex(value: Double): Self = this.set("fromIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFromIndex: Self = this.set("fromIndex", js.undefined)
     
     @scala.inline
     def setItemData(value: js.Any): Self = this.set("itemData", value.asInstanceOf[js.Any])
@@ -80,5 +111,23 @@ object ItemElementModel {
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)
+    
+    @scala.inline
+    def setToComponent(value: dxSortable | dxDraggable): Self = this.set("toComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteToComponent: Self = this.set("toComponent", js.undefined)
+    
+    @scala.inline
+    def setToData(value: js.Any): Self = this.set("toData", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteToData: Self = this.set("toData", js.undefined)
+    
+    @scala.inline
+    def setToIndex(value: Double): Self = this.set("toIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteToIndex: Self = this.set("toIndex", js.undefined)
   }
 }

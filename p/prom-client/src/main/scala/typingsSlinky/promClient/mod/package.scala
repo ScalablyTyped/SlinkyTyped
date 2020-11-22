@@ -6,19 +6,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type Histogram = typingsSlinky.promClient.mod.Histogram_
+  type Histogram[T /* <: java.lang.String */] = typingsSlinky.promClient.mod.Histogram_[T]
+  
+  type LabelValues[T /* <: java.lang.String */] = typingsSlinky.std.Partial[typingsSlinky.std.Record[T, java.lang.String | scala.Double]]
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.promClient.mod.Counter
-    - typingsSlinky.promClient.mod.Gauge
-    - typingsSlinky.promClient.mod.Summary
-    - typingsSlinky.promClient.mod.Histogram
+    - typingsSlinky.promClient.mod.Counter[T]
+    - typingsSlinky.promClient.mod.Gauge[T]
+    - typingsSlinky.promClient.mod.Summary[T]
+    - typingsSlinky.promClient.mod.Histogram[T]
   */
-  type Metric_ = typingsSlinky.promClient.mod._Metric_ | typingsSlinky.promClient.mod.Summary | typingsSlinky.promClient.mod.Histogram
+  type Metric_[T /* <: java.lang.String */] = typingsSlinky.promClient.mod._Metric_[T] | typingsSlinky.promClient.mod.Summary[T] | typingsSlinky.promClient.mod.Histogram[T]
   
   type Pushgateway = typingsSlinky.promClient.mod.Pushgateway_
   
-  type Summary = typingsSlinky.promClient.mod.Summary_
-  
-  type labelValues = org.scalablytyped.runtime.StringDictionary[java.lang.String | scala.Double]
+  type Summary[T /* <: java.lang.String */] = typingsSlinky.promClient.mod.Summary_[T]
 }

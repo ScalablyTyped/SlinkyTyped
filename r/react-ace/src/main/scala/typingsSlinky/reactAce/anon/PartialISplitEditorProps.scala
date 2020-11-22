@@ -90,7 +90,7 @@ trait PartialISplitEditorProps extends js.Object {
   
   var splits: js.UndefOr[Double] = js.native
   
-  var style: js.UndefOr[js.Any] = js.native
+  var style: js.UndefOr[js.Object] = js.native
   
   var tabSize: js.UndefOr[Double] = js.native
   
@@ -375,7 +375,7 @@ object PartialISplitEditorProps {
     def deleteSplits: Self = this.set("splits", js.undefined)
     
     @scala.inline
-    def setStyle(value: js.Any): Self = this.set("style", value.asInstanceOf[js.Any])
+    def setStyle(value: js.Object): Self = this.set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)

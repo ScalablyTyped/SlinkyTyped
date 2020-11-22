@@ -44,10 +44,15 @@ import typingsSlinky.styledSystem.mod.RequiredTheme
 import typingsSlinky.styledSystem.mod.ResponsiveValue
 import typingsSlinky.styledSystem.mod.ThemeValue
 import typingsSlinky.themeUiComponents.themeUiComponentsStrings._empty
+import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`additions removals`
 import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`additions text`
 import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`after-edge`
 import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`before-edge`
 import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`inline`
+import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`removals additions`
+import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`removals text`
+import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`text additions`
+import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`text removals`
 import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`text-after-edge`
 import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`text-before-edge`
 import typingsSlinky.themeUiComponents.themeUiComponentsStrings.`use-credentials`
@@ -210,7 +215,9 @@ trait SpinnerProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -454,7 +461,7 @@ trait SpinnerProps extends js.Object {
   
   var kerning: js.UndefOr[Double | String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyPoints: js.UndefOr[Double | String] = js.native
   
@@ -718,7 +725,7 @@ trait SpinnerProps extends js.Object {
     */
   var opacity: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
       RequiredTheme
     ]
   ] = js.native
@@ -1315,7 +1322,9 @@ object SpinnerProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -2030,6 +2039,9 @@ object SpinnerProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyPoints(value: Double | String): Self = this.set("keyPoints", value.asInstanceOf[js.Any])
@@ -2841,7 +2853,7 @@ object SpinnerProps {
     @scala.inline
     def setOpacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           RequiredTheme
         ]
     ): Self = this.set("opacity", value.asInstanceOf[js.Any])

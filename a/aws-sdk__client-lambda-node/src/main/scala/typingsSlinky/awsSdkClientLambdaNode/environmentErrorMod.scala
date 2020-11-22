@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkClientLambdaNode
 
-import typingsSlinky.awsSdkTypes.protocolMod.Structure
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object environmentErrorMod extends js.Object {
   
   @JSName("_EnvironmentError")
-  val EnvironmentError: Structure = js.native
+  val EnvironmentError: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify _Structure_ */ js.Any = js.native
 }

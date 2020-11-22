@@ -6,6 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object personalizeeventsMod {
   
+  type Arn = java.lang.String
+  
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.personalizeeventsMod.ClientApiVersions
   
   type Date = js.Date
@@ -14,9 +16,25 @@ package object personalizeeventsMod {
   
   type EventPropertiesJSON = java.lang.String
   
+  type FloatType = scala.Double
+  
+  type Impression = js.Array[typingsSlinky.awsSdk.personalizeeventsMod.ItemId]
+  
+  type ItemId = java.lang.String
+  
+  type ItemList = js.Array[typingsSlinky.awsSdk.personalizeeventsMod.Item]
+  
+  type ItemProperties = java.lang.String
+  
+  type RecommendationId = java.lang.String
+  
   type StringType = java.lang.String
   
   type UserId = java.lang.String
+  
+  type UserList = js.Array[typingsSlinky.awsSdk.personalizeeventsMod.User]
+  
+  type UserProperties = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.`2018-03-22`

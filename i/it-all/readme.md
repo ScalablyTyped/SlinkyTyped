@@ -1,7 +1,7 @@
 
 # Scala.js typings for it-all
 
-Typings are for version 1.0
+Typings are for version 1.0.4
 
 ## Library description:
 Collects all values from an async iterator and returns them as an array
@@ -24,7 +24,7 @@ Collects all values from an async iterator and returns them as an array
 
 
 ## Note
-This library has been generated from typescript code from [DefinitelyTyped](https://definitelytyped.org).
+This library has been generated from typescript code from first party type definitions.
 
 Provided with :purple_heart: from [ScalablyTyped](https://github.com/oyvindberg/ScalablyTyped)
 

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-onsenui.react-onsenui.HTMLAttributes<'id' | 'className' | 'style'> & {  contentStyle :any | undefined,   modifier :string | undefined,   renderModal :(): void | undefined,   renderToolbar :(): void | undefined,   renderBottomToolbar :(): void | undefined,   renderFixed :(): void | undefined,   onInit :(): void | undefined,   onShow :(): void | undefined,   onHide :(): void | undefined} */
+/* Inlined react-onsenui.react-onsenui.HTMLAttributes<'id' | 'className' | 'style'> & {  contentStyle :any | undefined,   modifier :string | undefined,   renderModal :(): void | undefined,   renderToolbar :(): void | undefined,   renderBottomToolbar :(): void | undefined,   renderFixed :(): void | undefined,   onInit :(): void | undefined,   onShow :(): void | undefined,   onHide :(): void | undefined,   onInfiniteScroll :(doneCallback : (): void): void | undefined} */
 @js.native
 trait HTMLAttributesidclassNameContentStyle extends js.Object {
   
@@ -18,6 +18,8 @@ trait HTMLAttributesidclassNameContentStyle extends js.Object {
   var modifier: js.UndefOr[String] = js.native
   
   var onHide: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  var onInfiniteScroll: js.UndefOr[js.Function1[/* doneCallback */ js.Function0[Unit], Unit]] = js.native
   
   var onInit: js.UndefOr[js.Function0[Unit]] = js.native
   
@@ -85,6 +87,12 @@ object HTMLAttributesidclassNameContentStyle {
     
     @scala.inline
     def deleteOnHide: Self = this.set("onHide", js.undefined)
+    
+    @scala.inline
+    def setOnInfiniteScroll(value: /* doneCallback */ js.Function0[Unit] => Unit): Self = this.set("onInfiniteScroll", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnInfiniteScroll: Self = this.set("onInfiniteScroll", js.undefined)
     
     @scala.inline
     def setOnInit(value: () => Unit): Self = this.set("onInit", js.Any.fromFunction0(value))

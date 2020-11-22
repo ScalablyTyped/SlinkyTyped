@@ -10,49 +10,79 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartCommonAxisSettings extends js.Object {
   
-  /** @name dxPolarChart.Options.commonAxisSettings.allowDecimals */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.allowDecimals]
+    */
   var allowDecimals: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.color */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.constantLineStyle */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.constantLineStyle]
+    */
   var constantLineStyle: js.UndefOr[dxPolarChartCommonAxisSettingsConstantLineStyle] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.discreteAxisDivisionMode */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.discreteAxisDivisionMode]
+    */
   var discreteAxisDivisionMode: js.UndefOr[betweenLabels | crossLabels] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.endOnTick */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.endOnTick]
+    */
   var endOnTick: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.grid */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.grid]
+    */
   var grid: js.UndefOr[ColorOpacity] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.inverted */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.inverted]
+    */
   var inverted: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.label */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.label]
+    */
   var label: js.UndefOr[dxPolarChartCommonAxisSettingsLabel] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.minorGrid */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.minorGrid]
+    */
   var minorGrid: js.UndefOr[ColorOpacity] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.minorTick */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.minorTick]
+    */
   var minorTick: js.UndefOr[dxPolarChartCommonAxisSettingsMinorTick] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.opacity */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.opacity]
+    */
   var opacity: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.stripStyle */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.stripStyle]
+    */
   var stripStyle: js.UndefOr[dxPolarChartCommonAxisSettingsStripStyle] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.tick */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.tick]
+    */
   var tick: js.UndefOr[dxPolarChartCommonAxisSettingsTick] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.visible */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.width */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxPolarChartCommonAxisSettings {

@@ -9,8 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RasterPaint extends AnyPaint {
   
-  var `circle-sort-key`: js.UndefOr[Double] = js.native
-  
   var `raster-brightness-max`: js.UndefOr[Double | Expression] = js.native
   
   var `raster-brightness-max-transition`: js.UndefOr[Transition] = js.native
@@ -61,12 +59,6 @@ object RasterPaint {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def `setCircle-sort-key`(value: Double): Self = this.set("circle-sort-key", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def `deleteCircle-sort-key`: Self = this.set("circle-sort-key", js.undefined)
     
     @scala.inline
     def `setRaster-brightness-max`(value: Double | Expression): Self = this.set("raster-brightness-max", value.asInstanceOf[js.Any])

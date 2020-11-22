@@ -1,7 +1,7 @@
 
 # Scala.js typings for hasha
 
-Typings are for version 5.2.0
+Typings are for version 5.2.2
 
 ## Library description:
 Hashing made simple. Get the hash of a buffer/string/stream/file.

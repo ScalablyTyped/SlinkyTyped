@@ -1,5 +1,6 @@
 package typingsSlinky.monacoEditor.mod.editor
 
+import typingsSlinky.monacoEditor.anon.Visible
 import typingsSlinky.monacoEditor.monacoEditorStrings.insert
 import typingsSlinky.monacoEditor.monacoEditorStrings.replace
 import scala.scalajs.js
@@ -13,16 +14,6 @@ trait ISuggestOptions extends js.Object {
     * Enable graceful matching. Defaults to true.
     */
   var filterGraceful: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * Controls the visibility of the status bar at the bottom of the suggest widget.
-    */
-  var hideStatusBar: js.UndefOr[Boolean] = js.native
-  
-  /**
-    * Show a highlight when suggestion replaces or keep text after the cursor. Defaults to false.
-    */
-  var insertHighlight: js.UndefOr[Boolean] = js.native
   
   /**
     * Overwrite word ends on accept. Default to false.
@@ -110,6 +101,11 @@ trait ISuggestOptions extends js.Object {
   var showInterfaces: js.UndefOr[Boolean] = js.native
   
   /**
+    * Show issue-suggestions.
+    */
+  var showIssues: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Show keyword-suggestions.
     */
   var showKeywords: js.UndefOr[Boolean] = js.native
@@ -160,6 +156,11 @@ trait ISuggestOptions extends js.Object {
   var showUnits: js.UndefOr[Boolean] = js.native
   
   /**
+    * Show user-suggestions.
+    */
+  var showUsers: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Show value-suggestions.
     */
   var showValues: js.UndefOr[Boolean] = js.native
@@ -178,6 +179,11 @@ trait ISuggestOptions extends js.Object {
     * Prevent quick suggestions when a snippet is active. Defaults to true.
     */
   var snippetsPreventQuickSuggestions: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Status bar related settings.
+    */
+  var statusBar: js.UndefOr[Visible] = js.native
 }
 object ISuggestOptions {
   
@@ -207,18 +213,6 @@ object ISuggestOptions {
     
     @scala.inline
     def deleteFilterGraceful: Self = this.set("filterGraceful", js.undefined)
-    
-    @scala.inline
-    def setHideStatusBar(value: Boolean): Self = this.set("hideStatusBar", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteHideStatusBar: Self = this.set("hideStatusBar", js.undefined)
-    
-    @scala.inline
-    def setInsertHighlight(value: Boolean): Self = this.set("insertHighlight", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteInsertHighlight: Self = this.set("insertHighlight", js.undefined)
     
     @scala.inline
     def setInsertMode(value: insert | replace): Self = this.set("insertMode", value.asInstanceOf[js.Any])
@@ -323,6 +317,12 @@ object ISuggestOptions {
     def deleteShowInterfaces: Self = this.set("showInterfaces", js.undefined)
     
     @scala.inline
+    def setShowIssues(value: Boolean): Self = this.set("showIssues", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShowIssues: Self = this.set("showIssues", js.undefined)
+    
+    @scala.inline
     def setShowKeywords(value: Boolean): Self = this.set("showKeywords", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -383,6 +383,12 @@ object ISuggestOptions {
     def deleteShowUnits: Self = this.set("showUnits", js.undefined)
     
     @scala.inline
+    def setShowUsers(value: Boolean): Self = this.set("showUsers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShowUsers: Self = this.set("showUsers", js.undefined)
+    
+    @scala.inline
     def setShowValues(value: Boolean): Self = this.set("showValues", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -405,5 +411,11 @@ object ISuggestOptions {
     
     @scala.inline
     def deleteSnippetsPreventQuickSuggestions: Self = this.set("snippetsPreventQuickSuggestions", js.undefined)
+    
+    @scala.inline
+    def setStatusBar(value: Visible): Self = this.set("statusBar", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStatusBar: Self = this.set("statusBar", js.undefined)
   }
 }

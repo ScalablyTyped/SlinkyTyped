@@ -107,6 +107,8 @@ import org.scalajs.dom.raw.SVGUseElement
 import org.scalajs.dom.raw.SVGViewElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.emotionStyledBase.anon.`0`
+import typingsSlinky.emotionStyledBase.helperMod.Omit
 import typingsSlinky.emotionStyledBase.helperMod.PropsOf
 import typingsSlinky.emotionStyledBase.mod.StyledComponent
 import typingsSlinky.react.mod.AnchorHTMLAttributes
@@ -147,6 +149,7 @@ import typingsSlinky.react.mod.OptionHTMLAttributes
 import typingsSlinky.react.mod.OutputHTMLAttributes
 import typingsSlinky.react.mod.ParamHTMLAttributes
 import typingsSlinky.react.mod.ProgressHTMLAttributes
+import typingsSlinky.react.mod.PropsWithChildren
 import typingsSlinky.react.mod.QuoteHTMLAttributes
 import typingsSlinky.react.mod.SVGProps
 import typingsSlinky.react.mod.ScriptHTMLAttributes
@@ -162,6 +165,7 @@ import typingsSlinky.react.mod.TimeHTMLAttributes
 import typingsSlinky.react.mod.TrackHTMLAttributes
 import typingsSlinky.react.mod.ValidationMap
 import typingsSlinky.react.mod.VideoHTMLAttributes
+import typingsSlinky.react.mod.WeakValidationMap
 import typingsSlinky.react.mod.WebViewHTMLAttributes
 import typingsSlinky.std.HTMLDataElement
 import typingsSlinky.std.HTMLDialogElement
@@ -169,11 +173,10 @@ import typingsSlinky.std.HTMLSlotElement
 import typingsSlinky.std.HTMLTableDataCellElement
 import typingsSlinky.std.HTMLTableHeaderCellElement
 import typingsSlinky.std.HTMLTemplateElement
+import typingsSlinky.std.Partial
 import typingsSlinky.std.SVGFEDropShadowElement
 import typingsSlinky.std.SVGForeignObjectElement
-import typingsSlinky.storybookComponents.anon.PartialPickTextareaPropsc
-import typingsSlinky.storybookComponents.anon.PropsWithChildrenPickText
-import typingsSlinky.storybookComponents.anon.WeakValidationMapPickText
+import typingsSlinky.storybookComponents.anon.PickanycolortranslatehiddAbout
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`object`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.`var`
 import typingsSlinky.storybookComponents.storybookComponentsStrings.a
@@ -337,6 +340,7 @@ import typingsSlinky.storybookComponents.storybookComponentsStrings.textarea
 import typingsSlinky.storybookComponents.storybookComponentsStrings.tfoot
 import typingsSlinky.storybookComponents.storybookComponentsStrings.th
 import typingsSlinky.storybookComponents.storybookComponentsStrings.thead
+import typingsSlinky.storybookComponents.storybookComponentsStrings.theme
 import typingsSlinky.storybookComponents.storybookComponentsStrings.time
 import typingsSlinky.storybookComponents.storybookComponentsStrings.title
 import typingsSlinky.storybookComponents.storybookComponentsStrings.tr
@@ -358,18 +362,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object Textarea extends js.Object {
   
-  def apply(props: PropsWithChildrenPickText): ReactElement | Null = js.native
-  def apply(props: PropsWithChildrenPickText, context: js.Any): ReactElement | Null = js.native
+  def apply(
+    props: PropsWithChildren[PickanycolortranslatehiddAbout with (Omit[TextareaProps, theme]) with `0`[Theme]]
+  ): ReactElement | Null = js.native
+  def apply(
+    props: PropsWithChildren[PickanycolortranslatehiddAbout with (Omit[TextareaProps, theme]) with `0`[Theme]],
+    context: js.Any
+  ): ReactElement | Null = js.native
   
   var __emotion_styles: js.Any = js.native
   
   var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
   
-  var defaultProps: js.UndefOr[PartialPickTextareaPropsc] = js.native
+  var defaultProps: js.UndefOr[
+    Partial[PickanycolortranslatehiddAbout with (Omit[TextareaProps, theme]) with `0`[Theme]]
+  ] = js.native
   
   var displayName: js.UndefOr[String] = js.native
   
-  var propTypes: js.UndefOr[WeakValidationMapPickText] = js.native
+  var propTypes: js.UndefOr[
+    WeakValidationMap[PickanycolortranslatehiddAbout with (Omit[TextareaProps, theme]) with `0`[Theme]]
+  ] = js.native
   
   def withComponent[Tag /* <: ReactComponentClass[_] */](tag: Tag): StyledComponent[PropsOf[Tag], TextareaProps, Theme] = js.native
   /**

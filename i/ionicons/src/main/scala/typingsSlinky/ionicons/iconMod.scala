@@ -13,6 +13,11 @@ object iconMod extends js.Object {
   class Icon () extends js.Object {
     
     /**
+      * Set the icon to hidden, respectively `true`, to remove it from the accessibility tree.
+      */
+    var ariaHidden: js.UndefOr[String] = js.native
+    
+    /**
       * Specifies the label to use for accessibility. Defaults to the icon name.
       */
     var ariaLabel: js.UndefOr[String] = js.native
@@ -73,6 +78,14 @@ object iconMod extends js.Object {
     var name: js.UndefOr[String] = js.native
     
     def render(): js.Any = js.native
+    
+    /**
+      * When set to `false`, SVG content that is HTTP fetched will not be checked
+      * if the response SVG content has any `<script>` elements, or any attributes
+      * that start with `on`, such as `onclick`.
+      * @default true
+      */
+    var sanitize: Boolean = js.native
     
     /**
       * The size of the icon.

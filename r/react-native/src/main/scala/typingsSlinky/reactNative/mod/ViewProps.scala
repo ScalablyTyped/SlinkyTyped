@@ -1,5 +1,7 @@
 package typingsSlinky.reactNative.mod
 
+import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.reactNativeStrings.`box-none`
 import typingsSlinky.reactNative.reactNativeStrings.`box-only`
 import typingsSlinky.reactNative.reactNativeStrings.auto
@@ -38,7 +40,7 @@ trait ViewProps
     *
     * {nativeEvent: { layout: {x, y, width, height}}}.
     */
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   /**
     *
@@ -116,7 +118,7 @@ object ViewProps {
     def deleteNativeID: Self = this.set("nativeID", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)

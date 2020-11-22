@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AttachmentInfoProperties extends js.Object {
   
   /**
-    * The content type of the attachment. For example, `'image/jpeg'`. See the [ArcGIS REST API documentation](https://developers.arcgis.com/rest/services-reference/query-attachments-feature-service-layer-.htm) for more information on supported attachment types.
+    * The content type of the attachment.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-AttachmentInfo.html#contentType)
     */
@@ -64,7 +64,7 @@ trait AttachmentInfoProperties extends js.Object {
   var parentObjectId: js.UndefOr[Double] = js.native
   
   /**
-    * The file size of the attachment. This is specified in bytes.
+    * The file size of the attachment.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-AttachmentInfo.html#size)
     */

@@ -36,3 +36,18 @@ class ChromaticAberrationPostProcess protected ()
     blockCompilation: js.UndefOr[Boolean]
   ) = this()
 }
+/* static members */
+@JSImport("babylonjs", "ChromaticAberrationPostProcess")
+@js.native
+object ChromaticAberrationPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(
+    parsedPostProcess: js.Any,
+    targetCamera: typingsSlinky.babylonjs.cameraMod.Camera,
+    scene: typingsSlinky.babylonjs.sceneMod.Scene,
+    rootUrl: String
+  ): Nullable[
+    typingsSlinky.babylonjs.chromaticAberrationPostProcessMod.ChromaticAberrationPostProcess
+  ] = js.native
+}

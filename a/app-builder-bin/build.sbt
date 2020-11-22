@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "app-builder-bin"
-version := "3.5.9-e86b6c"
+version := "3.5.10-f5e319"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -3,196 +3,141 @@ package typingsSlinky.waterline.mod
 import typingsSlinky.waterline.waterlineStrings.array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined waterline.waterline.BaseAttribute<any> & {  type  :'array'} */
+/* Inlined waterline.waterline.BaseAttribute<any> & {  type :'array'} */
+@js.native
 trait ArrayAttribute extends _Attribute {
-  var after: js.UndefOr[AttributeValidation[String]] = js.undefined
-  var alpha: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var alphanumeric: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var array: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var before: js.UndefOr[AttributeValidation[String]] = js.undefined
-  var boolean: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var columnName: js.UndefOr[String] = js.undefined
-  var contains: js.UndefOr[AttributeValidation[String]] = js.undefined
-  var creditcard: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var date: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var decimal: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var defaultsTo: js.UndefOr[js.Any | DefaultsToFn[_]] = js.undefined
-  var email: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var empty: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var enum: js.UndefOr[js.Array[_]] = js.undefined
-  @JSName("equals")
-  var equals_FArrayAttribute: js.UndefOr[AttributeValidation[_]] = js.undefined
-  var falsey: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var finite: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var float: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var hexColor: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var hexadecimal: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var in: js.UndefOr[AttributeValidation[js.Array[String]]] = js.undefined
-  var index: js.UndefOr[Boolean] = js.undefined
-  var int: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var integer: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var ip: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var ipv4: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var ipv6: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var is: js.UndefOr[AttributeValidation[js.RegExp]] = js.undefined
-  var len: js.UndefOr[AttributeValidation[Double]] = js.undefined
-  var lowercase: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var max: js.UndefOr[AttributeValidation[Double]] = js.undefined
-  var maxLength: js.UndefOr[AttributeValidation[Double]] = js.undefined
-  var min: js.UndefOr[AttributeValidation[Double]] = js.undefined
-  var minLength: js.UndefOr[AttributeValidation[Double]] = js.undefined
-  var not: js.UndefOr[AttributeValidation[js.RegExp]] = js.undefined
-  var notContains: js.UndefOr[AttributeValidation[String]] = js.undefined
-  var notEmpty: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var notIn: js.UndefOr[AttributeValidation[js.Array[String]]] = js.undefined
-  var notNull: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var notRegex: js.UndefOr[AttributeValidation[js.RegExp]] = js.undefined
-  var `null`: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var number: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var numeric: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var primaryKey: js.UndefOr[Boolean] = js.undefined
-  var regex: js.UndefOr[AttributeValidation[js.RegExp]] = js.undefined
-  var required: js.UndefOr[AttributeValidation[Boolean] with Boolean] = js.undefined
-  var size: js.UndefOr[Double] = js.undefined
-  var string: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var truthy: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var `type`: js.UndefOr[String with array] = js.undefined
-  var undefined: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var unique: js.UndefOr[Boolean] = js.undefined
-  var uppercase: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var url: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var urlish: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var uuid: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var uuidv3: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
-  var uuidv4: js.UndefOr[AttributeValidation[Boolean]] = js.undefined
+  
+  var allowNull: js.UndefOr[Boolean] = js.native
+  
+  var autoCreatedAt: js.UndefOr[Boolean] = js.native
+  
+  var autoUpdatedAt: js.UndefOr[Boolean] = js.native
+  
+  var columnName: js.UndefOr[String] = js.native
+  
+  var defaultsTo: js.UndefOr[js.Any | DefaultsToFn[_]] = js.native
+  
+  var enum: js.UndefOr[js.Array[_]] = js.native
+  
+  var index: js.UndefOr[Boolean] = js.native
+  
+  var primaryKey: js.UndefOr[Boolean] = js.native
+  
+  var required: js.UndefOr[Boolean] = js.native
+  
+  var size: js.UndefOr[Double] = js.native
+  
+  var `type`: js.UndefOr[String] with array = js.native
+  
+  var unique: js.UndefOr[Boolean] = js.native
+  
+  var validations: js.UndefOr[AttributeValidations] = js.native
 }
-
 object ArrayAttribute {
+  
   @scala.inline
-  def apply(
-    after: AttributeValidation[String] = null,
-    alpha: AttributeValidation[Boolean] = null,
-    alphanumeric: AttributeValidation[Boolean] = null,
-    array: AttributeValidation[Boolean] = null,
-    before: AttributeValidation[String] = null,
-    boolean: AttributeValidation[Boolean] = null,
-    columnName: String = null,
-    contains: AttributeValidation[String] = null,
-    creditcard: AttributeValidation[Boolean] = null,
-    date: AttributeValidation[Boolean] = null,
-    decimal: AttributeValidation[Boolean] = null,
-    defaultsTo: js.Any | DefaultsToFn[_] = null,
-    email: AttributeValidation[Boolean] = null,
-    empty: AttributeValidation[Boolean] = null,
-    enum: js.Array[_] = null,
-    equals: AttributeValidation[_] = null,
-    falsey: AttributeValidation[Boolean] = null,
-    finite: AttributeValidation[Boolean] = null,
-    float: AttributeValidation[Boolean] = null,
-    hexColor: AttributeValidation[Boolean] = null,
-    hexadecimal: AttributeValidation[Boolean] = null,
-    in: AttributeValidation[js.Array[String]] = null,
-    index: js.UndefOr[Boolean] = js.undefined,
-    int: AttributeValidation[Boolean] = null,
-    integer: AttributeValidation[Boolean] = null,
-    ip: AttributeValidation[Boolean] = null,
-    ipv4: AttributeValidation[Boolean] = null,
-    ipv6: AttributeValidation[Boolean] = null,
-    is: AttributeValidation[js.RegExp] = null,
-    len: AttributeValidation[Double] = null,
-    lowercase: AttributeValidation[Boolean] = null,
-    max: AttributeValidation[Double] = null,
-    maxLength: AttributeValidation[Double] = null,
-    min: AttributeValidation[Double] = null,
-    minLength: AttributeValidation[Double] = null,
-    not: AttributeValidation[js.RegExp] = null,
-    notContains: AttributeValidation[String] = null,
-    notEmpty: AttributeValidation[Boolean] = null,
-    notIn: AttributeValidation[js.Array[String]] = null,
-    notNull: AttributeValidation[Boolean] = null,
-    notRegex: AttributeValidation[js.RegExp] = null,
-    `null`: AttributeValidation[Boolean] = null,
-    number: AttributeValidation[Boolean] = null,
-    numeric: AttributeValidation[Boolean] = null,
-    primaryKey: js.UndefOr[Boolean] = js.undefined,
-    regex: AttributeValidation[js.RegExp] = null,
-    required: js.UndefOr[AttributeValidation[Boolean] with Boolean] = js.undefined,
-    size: js.UndefOr[Double] = js.undefined,
-    string: AttributeValidation[Boolean] = null,
-    truthy: AttributeValidation[Boolean] = null,
-    `type`: String with array = null,
-    undefined: AttributeValidation[Boolean] = null,
-    unique: js.UndefOr[Boolean] = js.undefined,
-    uppercase: AttributeValidation[Boolean] = null,
-    url: AttributeValidation[Boolean] = null,
-    urlish: AttributeValidation[Boolean] = null,
-    uuid: AttributeValidation[Boolean] = null,
-    uuidv3: AttributeValidation[Boolean] = null,
-    uuidv4: AttributeValidation[Boolean] = null
-  ): ArrayAttribute = {
+  def apply(`type`: js.UndefOr[String] with array): ArrayAttribute = {
     val __obj = js.Dynamic.literal()
-    if (after != null) __obj.updateDynamic("after")(after.asInstanceOf[js.Any])
-    if (alpha != null) __obj.updateDynamic("alpha")(alpha.asInstanceOf[js.Any])
-    if (alphanumeric != null) __obj.updateDynamic("alphanumeric")(alphanumeric.asInstanceOf[js.Any])
-    if (array != null) __obj.updateDynamic("array")(array.asInstanceOf[js.Any])
-    if (before != null) __obj.updateDynamic("before")(before.asInstanceOf[js.Any])
-    if (boolean != null) __obj.updateDynamic("boolean")(boolean.asInstanceOf[js.Any])
-    if (columnName != null) __obj.updateDynamic("columnName")(columnName.asInstanceOf[js.Any])
-    if (contains != null) __obj.updateDynamic("contains")(contains.asInstanceOf[js.Any])
-    if (creditcard != null) __obj.updateDynamic("creditcard")(creditcard.asInstanceOf[js.Any])
-    if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
-    if (decimal != null) __obj.updateDynamic("decimal")(decimal.asInstanceOf[js.Any])
-    if (defaultsTo != null) __obj.updateDynamic("defaultsTo")(defaultsTo.asInstanceOf[js.Any])
-    if (email != null) __obj.updateDynamic("email")(email.asInstanceOf[js.Any])
-    if (empty != null) __obj.updateDynamic("empty")(empty.asInstanceOf[js.Any])
-    if (enum != null) __obj.updateDynamic("enum")(enum.asInstanceOf[js.Any])
-    if (equals != null) __obj.updateDynamic("equals")(equals.asInstanceOf[js.Any])
-    if (falsey != null) __obj.updateDynamic("falsey")(falsey.asInstanceOf[js.Any])
-    if (finite != null) __obj.updateDynamic("finite")(finite.asInstanceOf[js.Any])
-    if (float != null) __obj.updateDynamic("float")(float.asInstanceOf[js.Any])
-    if (hexColor != null) __obj.updateDynamic("hexColor")(hexColor.asInstanceOf[js.Any])
-    if (hexadecimal != null) __obj.updateDynamic("hexadecimal")(hexadecimal.asInstanceOf[js.Any])
-    if (in != null) __obj.updateDynamic("in")(in.asInstanceOf[js.Any])
-    if (!js.isUndefined(index)) __obj.updateDynamic("index")(index.get.asInstanceOf[js.Any])
-    if (int != null) __obj.updateDynamic("int")(int.asInstanceOf[js.Any])
-    if (integer != null) __obj.updateDynamic("integer")(integer.asInstanceOf[js.Any])
-    if (ip != null) __obj.updateDynamic("ip")(ip.asInstanceOf[js.Any])
-    if (ipv4 != null) __obj.updateDynamic("ipv4")(ipv4.asInstanceOf[js.Any])
-    if (ipv6 != null) __obj.updateDynamic("ipv6")(ipv6.asInstanceOf[js.Any])
-    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
-    if (len != null) __obj.updateDynamic("len")(len.asInstanceOf[js.Any])
-    if (lowercase != null) __obj.updateDynamic("lowercase")(lowercase.asInstanceOf[js.Any])
-    if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
-    if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
-    if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
-    if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
-    if (not != null) __obj.updateDynamic("not")(not.asInstanceOf[js.Any])
-    if (notContains != null) __obj.updateDynamic("notContains")(notContains.asInstanceOf[js.Any])
-    if (notEmpty != null) __obj.updateDynamic("notEmpty")(notEmpty.asInstanceOf[js.Any])
-    if (notIn != null) __obj.updateDynamic("notIn")(notIn.asInstanceOf[js.Any])
-    if (notNull != null) __obj.updateDynamic("notNull")(notNull.asInstanceOf[js.Any])
-    if (notRegex != null) __obj.updateDynamic("notRegex")(notRegex.asInstanceOf[js.Any])
-    if (`null` != null) __obj.updateDynamic("null")(`null`.asInstanceOf[js.Any])
-    if (number != null) __obj.updateDynamic("number")(number.asInstanceOf[js.Any])
-    if (numeric != null) __obj.updateDynamic("numeric")(numeric.asInstanceOf[js.Any])
-    if (!js.isUndefined(primaryKey)) __obj.updateDynamic("primaryKey")(primaryKey.get.asInstanceOf[js.Any])
-    if (regex != null) __obj.updateDynamic("regex")(regex.asInstanceOf[js.Any])
-    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.get.asInstanceOf[js.Any])
-    if (!js.isUndefined(size)) __obj.updateDynamic("size")(size.get.asInstanceOf[js.Any])
-    if (string != null) __obj.updateDynamic("string")(string.asInstanceOf[js.Any])
-    if (truthy != null) __obj.updateDynamic("truthy")(truthy.asInstanceOf[js.Any])
-    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    if (undefined != null) __obj.updateDynamic("undefined")(undefined.asInstanceOf[js.Any])
-    if (!js.isUndefined(unique)) __obj.updateDynamic("unique")(unique.get.asInstanceOf[js.Any])
-    if (uppercase != null) __obj.updateDynamic("uppercase")(uppercase.asInstanceOf[js.Any])
-    if (url != null) __obj.updateDynamic("url")(url.asInstanceOf[js.Any])
-    if (urlish != null) __obj.updateDynamic("urlish")(urlish.asInstanceOf[js.Any])
-    if (uuid != null) __obj.updateDynamic("uuid")(uuid.asInstanceOf[js.Any])
-    if (uuidv3 != null) __obj.updateDynamic("uuidv3")(uuidv3.asInstanceOf[js.Any])
-    if (uuidv4 != null) __obj.updateDynamic("uuidv4")(uuidv4.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ArrayAttribute]
   }
+  
+  @scala.inline
+  implicit class ArrayAttributeOps[Self <: ArrayAttribute] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
+    }
+    
+    @scala.inline
+    def setType(value: js.UndefOr[String] with array): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAllowNull(value: Boolean): Self = this.set("allowNull", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowNull: Self = this.set("allowNull", js.undefined)
+    
+    @scala.inline
+    def setAutoCreatedAt(value: Boolean): Self = this.set("autoCreatedAt", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoCreatedAt: Self = this.set("autoCreatedAt", js.undefined)
+    
+    @scala.inline
+    def setAutoUpdatedAt(value: Boolean): Self = this.set("autoUpdatedAt", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoUpdatedAt: Self = this.set("autoUpdatedAt", js.undefined)
+    
+    @scala.inline
+    def setColumnName(value: String): Self = this.set("columnName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnName: Self = this.set("columnName", js.undefined)
+    
+    @scala.inline
+    def setDefaultsToFunction0(value: () => _): Self = this.set("defaultsTo", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setDefaultsTo(value: js.Any | DefaultsToFn[_]): Self = this.set("defaultsTo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultsTo: Self = this.set("defaultsTo", js.undefined)
+    
+    @scala.inline
+    def setEnumVarargs(value: js.Any*): Self = this.set("enum", js.Array(value :_*))
+    
+    @scala.inline
+    def setEnum(value: js.Array[_]): Self = this.set("enum", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnum: Self = this.set("enum", js.undefined)
+    
+    @scala.inline
+    def setIndex(value: Boolean): Self = this.set("index", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIndex: Self = this.set("index", js.undefined)
+    
+    @scala.inline
+    def setPrimaryKey(value: Boolean): Self = this.set("primaryKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePrimaryKey: Self = this.set("primaryKey", js.undefined)
+    
+    @scala.inline
+    def setRequired(value: Boolean): Self = this.set("required", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRequired: Self = this.set("required", js.undefined)
+    
+    @scala.inline
+    def setSize(value: Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSize: Self = this.set("size", js.undefined)
+    
+    @scala.inline
+    def setUnique(value: Boolean): Self = this.set("unique", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnique: Self = this.set("unique", js.undefined)
+    
+    @scala.inline
+    def setValidations(value: AttributeValidations): Self = this.set("validations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteValidations: Self = this.set("validations", js.undefined)
+  }
 }
-

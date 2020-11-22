@@ -71,6 +71,7 @@ package object applicationautoscalingMod {
     - typingsSlinky.awsSdk.awsSdkStrings.LambdaProvisionedConcurrencyUtilization
     - typingsSlinky.awsSdk.awsSdkStrings.CassandraReadCapacityUtilization
     - typingsSlinky.awsSdk.awsSdkStrings.CassandraWriteCapacityUtilization
+    - typingsSlinky.awsSdk.awsSdkStrings.KafkaBrokerStorageUtilization
     - java.lang.String
   */
   type MetricType = typingsSlinky.awsSdk.applicationautoscalingMod._MetricType | java.lang.String
@@ -111,9 +112,11 @@ package object applicationautoscalingMod {
     - typingsSlinky.awsSdk.awsSdkStrings.sagemakerColonvariantColonDesiredInstanceCount
     - typingsSlinky.awsSdk.awsSdkStrings.`custom-resourceColonResourceTypeColonProperty`
     - typingsSlinky.awsSdk.awsSdkStrings.`comprehendColondocument-classifier-endpointColonDesiredInferenceUnits`
+    - typingsSlinky.awsSdk.awsSdkStrings.`comprehendColonentity-recognizer-endpointColonDesiredInferenceUnits`
     - typingsSlinky.awsSdk.awsSdkStrings.lambdaColonfunctionColonProvisionedConcurrency
     - typingsSlinky.awsSdk.awsSdkStrings.cassandraColontableColonReadCapacityUnits
     - typingsSlinky.awsSdk.awsSdkStrings.cassandraColontableColonWriteCapacityUnits
+    - typingsSlinky.awsSdk.awsSdkStrings.`kafkaColonbroker-storageColonVolumeSize`
     - java.lang.String
   */
   type ScalableDimension = typingsSlinky.awsSdk.applicationautoscalingMod._ScalableDimension | java.lang.String
@@ -155,6 +158,7 @@ package object applicationautoscalingMod {
     - typingsSlinky.awsSdk.awsSdkStrings.comprehend
     - typingsSlinky.awsSdk.awsSdkStrings.lambda__
     - typingsSlinky.awsSdk.awsSdkStrings.cassandra
+    - typingsSlinky.awsSdk.awsSdkStrings.kafka_
     - java.lang.String
   */
   type ServiceNamespace = typingsSlinky.awsSdk.applicationautoscalingMod._ServiceNamespace | java.lang.String

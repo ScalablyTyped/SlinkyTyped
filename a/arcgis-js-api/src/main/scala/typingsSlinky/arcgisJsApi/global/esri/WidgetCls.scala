@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSGlobal("__esri.Widget")
 @js.native
 /**
-  * The base class for widgets. Each widget's presentation is separate from its properties, methods, and data.
+  * The base class for widgets.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Widget.html)
   */

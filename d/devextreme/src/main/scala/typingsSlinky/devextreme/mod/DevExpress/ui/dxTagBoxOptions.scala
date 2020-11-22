@@ -15,40 +15,62 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTagBoxOptions extends dxSelectBoxOptions[dxTagBox] {
   
-  /** @name dxTagBox.Options.hideSelectedItems */
+  /**
+    * [descr:dxTagBox.Options.hideSelectedItems]
+    */
   var hideSelectedItems: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTagBox.Options.maxDisplayedTags */
+  /**
+    * [descr:dxTagBox.Options.maxDisplayedTags]
+    */
   var maxDisplayedTags: js.UndefOr[Double] = js.native
   
-  /** @name dxTagBox.Options.multiline */
+  /**
+    * [descr:dxTagBox.Options.multiline]
+    */
   var multiline: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTagBox.Options.onMultiTagPreparing */
+  /**
+    * [descr:dxTagBox.Options.onMultiTagPreparing]
+    */
   var onMultiTagPreparing: js.UndefOr[js.Function1[/* e */ MultiTagElement, _]] = js.native
   
-  /** @name dxTagBox.Options.onSelectAllValueChanged */
+  /**
+    * [descr:dxTagBox.Options.onSelectAllValueChanged]
+    */
   var onSelectAllValueChanged: js.UndefOr[js.Function1[/* e */ ElementModelValue, _]] = js.native
   
-  /** @name dxTagBox.Options.onSelectionChanged */
+  /**
+    * [descr:dxTagBox.Options.onSelectionChanged]
+    */
   @JSName("onSelectionChanged")
   var onSelectionChanged_dxTagBoxOptions: js.UndefOr[js.Function1[/* e */ AddedItemsComponent, _]] = js.native
   
-  /** @name dxTagBox.Options.selectAllMode */
+  /**
+    * [descr:dxTagBox.Options.selectAllMode]
+    */
   var selectAllMode: js.UndefOr[allPages | page] = js.native
   
-  /** @name dxTagBox.Options.selectedItems */
+  /**
+    * [descr:dxTagBox.Options.selectedItems]
+    */
   var selectedItems: js.UndefOr[js.Array[String | Double | _]] = js.native
   
-  /** @name dxTagBox.Options.showMultiTagOnly */
+  /**
+    * [descr:dxTagBox.Options.showMultiTagOnly]
+    */
   var showMultiTagOnly: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTagBox.Options.tagTemplate */
+  /**
+    * [descr:dxTagBox.Options.tagTemplate]
+    */
   var tagTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* itemData */ js.Any, /* itemElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxTagBox.Options.value */
+  /**
+    * [descr:dxTagBox.Options.value]
+    */
   @JSName("value")
   var value_dxTagBoxOptions: js.UndefOr[js.Array[String | Double | _]] = js.native
 }

@@ -1,7 +1,6 @@
 package typingsSlinky.awsSdk.mod
 
 import typingsSlinky.awsSdk.cognitoIdentityCredentialsMod.CognitoIdentityCredentials.CognitoIdentityOptions
-import typingsSlinky.awsSdk.configMod.ConfigurationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,7 +16,10 @@ class CognitoIdentityCredentials ()
     * Creates a new credentials object with optional configuration.
     */
   def this(options: CognitoIdentityOptions) = this()
-  def this(options: CognitoIdentityOptions, clientConfig: ConfigurationOptions) = this()
+  def this(
+    options: CognitoIdentityOptions,
+    clientConfig: typingsSlinky.awsSdk.configBaseMod.ConfigurationOptions
+  ) = this()
 }
 // Needed to expose interfaces on the class
 @JSImport("aws-sdk", "CognitoIdentityCredentials")

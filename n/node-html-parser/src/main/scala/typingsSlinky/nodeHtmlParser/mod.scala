@@ -1,11 +1,11 @@
 package typingsSlinky.nodeHtmlParser
 
 import typingsSlinky.nodeHtmlParser.anon.HTMLElementvalidboolean
-import typingsSlinky.nodeHtmlParser.anon.OptionsnoFixfalse
-import typingsSlinky.nodeHtmlParser.anon.OptionsnoFixtrue
+import typingsSlinky.nodeHtmlParser.anon.PartialOptions
+import typingsSlinky.nodeHtmlParser.anon.PartialOptionsnoFixfalse
+import typingsSlinky.nodeHtmlParser.anon.PartialOptionsnoFixtrue
 import typingsSlinky.nodeHtmlParser.anon.Valid
 import typingsSlinky.nodeHtmlParser.htmlMod.KeyAttributes
-import typingsSlinky.nodeHtmlParser.htmlMod.Options
 import typingsSlinky.nodeHtmlParser.textMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,23 +16,23 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object mod extends js.Object {
   
   def default(data: String): HTMLElementvalidboolean = js.native
-  def default(data: String, options: OptionsnoFixfalse): HTMLElementvalidboolean = js.native
-  def default(data: String, options: OptionsnoFixtrue): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | typingsSlinky.nodeHtmlParser.textMod.default) with Valid = js.native
-  def default(data: String, options: Options): HTMLElementvalidboolean = js.native
+  def default(data: String, options: PartialOptions): HTMLElementvalidboolean = js.native
+  def default(data: String, options: PartialOptionsnoFixfalse): HTMLElementvalidboolean = js.native
+  def default(data: String, options: PartialOptionsnoFixtrue): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | typingsSlinky.nodeHtmlParser.textMod.default) with Valid = js.native
   @JSName("default")
   def default_Intersection(data: String): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | default) with Valid = js.native
   
   def parse(data: String): HTMLElementvalidboolean = js.native
-  def parse(data: String, options: OptionsnoFixfalse): HTMLElementvalidboolean = js.native
-  def parse(data: String, options: OptionsnoFixtrue): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | default) with Valid = js.native
-  def parse(data: String, options: Options): HTMLElementvalidboolean = js.native
+  def parse(data: String, options: PartialOptions): HTMLElementvalidboolean = js.native
+  def parse(data: String, options: PartialOptionsnoFixfalse): HTMLElementvalidboolean = js.native
+  def parse(data: String, options: PartialOptionsnoFixtrue): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | default) with Valid = js.native
   @JSName("parse")
   def parse_Intersection(data: String): (typingsSlinky.nodeHtmlParser.htmlMod.HTMLElement | default) with Valid = js.native
   
   @js.native
   class CommentNode protected ()
     extends typingsSlinky.nodeHtmlParser.commentMod.default {
-    def this(value: String) = this()
+    def this(rawText: String) = this()
   }
   
   @js.native
@@ -80,6 +80,6 @@ object mod extends js.Object {
   
   @js.native
   class TextNode protected () extends default {
-    def this(value: String) = this()
+    def this(rawText: String) = this()
   }
 }

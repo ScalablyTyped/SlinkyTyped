@@ -21,10 +21,9 @@ trait CubeTexture extends BaseTexture {
   
   var _format: js.Any = js.native
   
-  var _noMipmap: js.Any = js.native
+  var _loaderOptions: js.Any = js.native
   
-  /** @hidden */
-  var _prefiltered: Boolean = js.native
+  var _noMipmap: js.Any = js.native
   
   var _rotationY: Double = js.native
   
@@ -33,13 +32,13 @@ trait CubeTexture extends BaseTexture {
   /**
     * Gets or sets the center of the bounding box associated with the cube texture.
     * It must define where the camera used to render the texture was set
-    * @see http://doc.babylonjs.com/how_to/reflect#using-local-cubemap-mode
+    * @see https://doc.babylonjs.com/how_to/reflect#using-local-cubemap-mode
     */
   var boundingBoxPosition: Vector3 = js.native
   
   /**
     * Returns the bounding box size
-    * @see http://doc.babylonjs.com/how_to/reflect#using-local-cubemap-mode
+    * @see https://doc.babylonjs.com/how_to/reflect#using-local-cubemap-mode
     */
   def boundingBoxSize: Vector3 = js.native
   /**
@@ -51,11 +50,6 @@ trait CubeTexture extends BaseTexture {
   def boundingBoxSize_=(value: Vector3): Unit = js.native
   
   def delayLoad(forcedExtension: String): Unit = js.native
-  
-  /**
-    * Gets a boolean indicating if the cube texture contains prefiltered mips (used to simulate roughness with PBR)
-    */
-  def isPrefiltered: Boolean = js.native
   
   /**
     * Observable triggered once the texture has been loaded.

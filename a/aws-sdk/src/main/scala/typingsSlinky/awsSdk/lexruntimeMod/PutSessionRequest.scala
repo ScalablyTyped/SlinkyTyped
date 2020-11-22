@@ -13,6 +13,11 @@ trait PutSessionRequest extends js.Object {
   var accept: js.UndefOr[Accept] = js.native
   
   /**
+    * A list of contexts active for the request. A context can be activated when a previous intent is fulfilled, or by including the context in the request, If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the session. If you specify an empty list, all contexts for the session are cleared.
+    */
+  var activeContexts: js.UndefOr[ActiveContextsList] = js.native
+  
+  /**
     * The alias in use for the bot that contains the session data.
     */
   var botAlias: BotAlias = js.native
@@ -79,6 +84,15 @@ object PutSessionRequest {
     
     @scala.inline
     def deleteAccept: Self = this.set("accept", js.undefined)
+    
+    @scala.inline
+    def setActiveContextsVarargs(value: ActiveContext*): Self = this.set("activeContexts", js.Array(value :_*))
+    
+    @scala.inline
+    def setActiveContexts(value: ActiveContextsList): Self = this.set("activeContexts", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteActiveContexts: Self = this.set("activeContexts", js.undefined)
     
     @scala.inline
     def setDialogAction(value: DialogAction): Self = this.set("dialogAction", value.asInstanceOf[js.Any])

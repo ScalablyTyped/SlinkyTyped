@@ -1,10 +1,10 @@
 package typingsSlinky.officeUiFabricReact.keytipTypesMod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.calloutTypesMod.ICalloutProps
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.pointMod.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`

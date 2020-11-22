@@ -15,16 +15,40 @@ trait Color_ extends js.Object {
   
    // Note: While this method is used in prototyping for colors of specific colorspaces, it should not be called directly, as 'this.rgb' would not be implemented on Color
   /**
-    * Returns a hexadecimal string representing this color.
-    * If this color is not displayable, a suitable displayable color is returned instead. For example, RGB channel values greater than 255 are clamped to 255.
+    * Returns a hexadecimal string representing this color in RGB space, such as #f7eaba.
+    * If this color is not displayable, a suitable displayable color is returned instead.
+    * For example, RGB channel values greater than 255 are clamped to 255.
+    */
+  def formatHex(): String = js.native
+  
+  /**
+    * Returns a string representing this color according to the CSS Color Module Level 3 specification, such as hsl(257, 50%, 80%) or hsla(257, 50%, 80%, 0.2).
+    * If this color is not displayable, a suitable displayable color is returned instead by clamping S and L channel values to the interval [0, 100].
+    */
+  def formatHsl(): String = js.native
+  
+  /**
+    * Returns a string representing this color according to the CSS Object Model specification, such as rgb(247, 234, 186) or rgba(247, 234, 186, 0.2).
+    * If this color is not displayable, a suitable displayable color is returned instead by clamping RGB channel values to the interval [0, 255].
+    */
+  def formatRgb(): String = js.native
+  
+  /**
+    * @deprecated Use color.formatHex.
     */
   def hex(): String = js.native
 }
 object Color_ {
   
   @scala.inline
-  def apply(displayable: () => Boolean, hex: () => String): Color_ = {
-    val __obj = js.Dynamic.literal(displayable = js.Any.fromFunction0(displayable), hex = js.Any.fromFunction0(hex))
+  def apply(
+    displayable: () => Boolean,
+    formatHex: () => String,
+    formatHsl: () => String,
+    formatRgb: () => String,
+    hex: () => String
+  ): Color_ = {
+    val __obj = js.Dynamic.literal(displayable = js.Any.fromFunction0(displayable), formatHex = js.Any.fromFunction0(formatHex), formatHsl = js.Any.fromFunction0(formatHsl), formatRgb = js.Any.fromFunction0(formatRgb), hex = js.Any.fromFunction0(hex))
     __obj.asInstanceOf[Color_]
   }
   
@@ -45,6 +69,15 @@ object Color_ {
     
     @scala.inline
     def setDisplayable(value: () => Boolean): Self = this.set("displayable", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setFormatHex(value: () => String): Self = this.set("formatHex", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setFormatHsl(value: () => String): Self = this.set("formatHsl", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setFormatRgb(value: () => String): Self = this.set("formatRgb", js.Any.fromFunction0(value))
     
     @scala.inline
     def setHex(value: () => String): Self = this.set("hex", js.Any.fromFunction0(value))

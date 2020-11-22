@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "ModalHeader")
+@JSImport("reactstrap/es", "ModalHeader")
 @js.native
-class ModalHeader[T] ()
+class ModalHeader ()
   extends Component[ModalHeaderProps, js.Object, js.Any]

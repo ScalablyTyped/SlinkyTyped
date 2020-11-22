@@ -11,7 +11,11 @@ trait AutoPlay extends js.Object {
   
   var clickToPlay: js.UndefOr[Boolean] = js.native
   
+  var crossEyeMode: js.UndefOr[Boolean] = js.native
+  
   var faceForward: js.UndefOr[Boolean] = js.native
+  
+  var generateMipMaps: js.UndefOr[Boolean] = js.native
   
   var halfDomeMode: js.UndefOr[Boolean] = js.native
   
@@ -61,10 +65,22 @@ object AutoPlay {
     def deleteClickToPlay: Self = this.set("clickToPlay", js.undefined)
     
     @scala.inline
+    def setCrossEyeMode(value: Boolean): Self = this.set("crossEyeMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCrossEyeMode: Self = this.set("crossEyeMode", js.undefined)
+    
+    @scala.inline
     def setFaceForward(value: Boolean): Self = this.set("faceForward", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFaceForward: Self = this.set("faceForward", js.undefined)
+    
+    @scala.inline
+    def setGenerateMipMaps(value: Boolean): Self = this.set("generateMipMaps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGenerateMipMaps: Self = this.set("generateMipMaps", js.undefined)
     
     @scala.inline
     def setHalfDomeMode(value: Boolean): Self = this.set("halfDomeMode", value.asInstanceOf[js.Any])

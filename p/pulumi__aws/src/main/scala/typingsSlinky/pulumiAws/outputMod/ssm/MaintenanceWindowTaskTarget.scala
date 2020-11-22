@@ -9,6 +9,9 @@ trait MaintenanceWindowTaskTarget extends js.Object {
   
   var key: String = js.native
   
+  /**
+    * The array of strings.
+    */
   var values: js.Array[String] = js.native
 }
 object MaintenanceWindowTaskTarget {

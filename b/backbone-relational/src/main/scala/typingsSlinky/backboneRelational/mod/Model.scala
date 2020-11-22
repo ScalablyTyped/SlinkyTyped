@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("backbone-relational", "Model")
 @js.native
 class Model ()
-  extends typingsSlinky.backbone.mod.Model[js.Any, ModelSetOptions] {
+  extends typingsSlinky.backbone.mod.Model[js.Any, ModelSetOptions, js.Object] {
   
   def fetchRelated(key: String): js.Any = js.native
   def fetchRelated(key: String, options: js.UndefOr[scala.Nothing], update: Boolean): js.Any = js.native

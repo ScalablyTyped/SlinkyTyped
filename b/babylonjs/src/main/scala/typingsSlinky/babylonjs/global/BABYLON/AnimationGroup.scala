@@ -12,7 +12,7 @@ class AnimationGroup protected ()
   /**
     * Instantiates a new Animation Group.
     * This helps managing several animations at once.
-    * @see http://doc.babylonjs.com/how_to/group
+    * @see https://doc.babylonjs.com/how_to/group
     * @param name Defines the name of the group
     * @param scene Defines the scene the group belongs to
     */
@@ -28,6 +28,108 @@ class AnimationGroup protected ()
 @JSGlobal("BABYLON.AnimationGroup")
 @js.native
 object AnimationGroup extends js.Object {
+  
+  /**
+    * Convert the keyframes for all animations belonging to the group to be relative to a given reference frame.
+    * @param sourceAnimationGroup defines the AnimationGroup containing animations to convert
+    * @param referenceFrame defines the frame that keyframes in the range will be relative to
+    * @param range defines the name of the AnimationRange belonging to the animations in the group to convert
+    * @param cloneOriginal defines whether or not to clone the group and convert the clone or convert the original group (default is false)
+    * @param clonedName defines the name of the resulting cloned AnimationGroup if cloneOriginal is true
+    * @returns a new AnimationGroup if cloneOriginal is true or the original AnimationGroup if cloneOriginal is false
+    */
+  def MakeAnimationAdditive(sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: js.UndefOr[scala.Nothing],
+    clonedName: String
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: Boolean,
+    clonedName: String
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: String
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: String,
+    cloneOriginal: js.UndefOr[scala.Nothing],
+    clonedName: String
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: String,
+    cloneOriginal: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: js.UndefOr[scala.Nothing],
+    range: String,
+    cloneOriginal: Boolean,
+    clonedName: String
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup, referenceFrame: Double): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: Double,
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: js.UndefOr[scala.Nothing],
+    clonedName: String
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: Double,
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: Double,
+    range: js.UndefOr[scala.Nothing],
+    cloneOriginal: Boolean,
+    clonedName: String
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: Double,
+    range: String
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: Double,
+    range: String,
+    cloneOriginal: js.UndefOr[scala.Nothing],
+    clonedName: String
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: Double,
+    range: String,
+    cloneOriginal: Boolean
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
+  def MakeAnimationAdditive(
+    sourceAnimationGroup: typingsSlinky.babylonjs.BABYLON.AnimationGroup,
+    referenceFrame: Double,
+    range: String,
+    cloneOriginal: Boolean,
+    clonedName: String
+  ): typingsSlinky.babylonjs.BABYLON.AnimationGroup = js.native
   
   /**
     * Returns a new AnimationGroup object parsed from the source provided.

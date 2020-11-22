@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object default extends js.Object {
   
-  def apply(hasClassNameIndexChildrenColSpanRowSpan: SummaryCellProps): ReactElement = js.native
+  def apply(hasClassNameIndexChildrenColSpanRowSpanAlign: SummaryCellProps): ReactElement = js.native
 }

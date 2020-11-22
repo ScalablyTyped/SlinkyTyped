@@ -9,19 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Compare[RecordType] extends js.Object {
   
-  var compare: CompareFn[RecordType] = js.native
+  var compare: js.UndefOr[CompareFn[RecordType]] = js.native
   
   /** Config multiple sorter order priority */
-  var multiple: Double = js.native
+  var multiple: js.UndefOr[Double] = js.native
 }
 object Compare {
   
   @scala.inline
-  def apply[RecordType](
-    compare: (RecordType, RecordType, /* sortOrder */ js.UndefOr[SortOrder]) => Double,
-    multiple: Double
-  ): Compare[RecordType] = {
-    val __obj = js.Dynamic.literal(compare = js.Any.fromFunction3(compare), multiple = multiple.asInstanceOf[js.Any])
+  def apply[RecordType](): Compare[RecordType] = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Compare[RecordType]]
   }
   
@@ -44,6 +41,12 @@ object Compare {
     def setCompare(value: (RecordType, RecordType, /* sortOrder */ js.UndefOr[SortOrder]) => Double): Self = this.set("compare", js.Any.fromFunction3(value))
     
     @scala.inline
+    def deleteCompare: Self = this.set("compare", js.undefined)
+    
+    @scala.inline
     def setMultiple(value: Double): Self = this.set("multiple", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMultiple: Self = this.set("multiple", js.undefined)
   }
 }

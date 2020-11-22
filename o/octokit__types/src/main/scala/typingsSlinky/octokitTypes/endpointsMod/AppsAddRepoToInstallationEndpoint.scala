@@ -1,25 +1,21 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined {  installation_id :number,   repository_id :number} & @octokit/types.@octokit/types/dist-types/generated/Endpoints.RequiredPreview<'machine-man'> */
 @js.native
 trait AppsAddRepoToInstallationEndpoint extends js.Object {
   
   var installation_id: Double = js.native
-  
-  var mediaType: `1` = js.native
   
   var repository_id: Double = js.native
 }
 object AppsAddRepoToInstallationEndpoint {
   
   @scala.inline
-  def apply(installation_id: Double, mediaType: `1`, repository_id: Double): AppsAddRepoToInstallationEndpoint = {
-    val __obj = js.Dynamic.literal(installation_id = installation_id.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], repository_id = repository_id.asInstanceOf[js.Any])
+  def apply(installation_id: Double, repository_id: Double): AppsAddRepoToInstallationEndpoint = {
+    val __obj = js.Dynamic.literal(installation_id = installation_id.asInstanceOf[js.Any], repository_id = repository_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[AppsAddRepoToInstallationEndpoint]
   }
   
@@ -40,9 +36,6 @@ object AppsAddRepoToInstallationEndpoint {
     
     @scala.inline
     def setInstallation_id(value: Double): Self = this.set("installation_id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setMediaType(value: `1`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRepository_id(value: Double): Self = this.set("repository_id", value.asInstanceOf[js.Any])

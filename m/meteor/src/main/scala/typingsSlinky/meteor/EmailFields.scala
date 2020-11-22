@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EmailFields extends js.Object {
   
-  var from: js.UndefOr[js.Function0[String]] = js.native
+  var from: js.UndefOr[js.Function1[/* user */ User, String]] = js.native
   
   var html: js.UndefOr[js.Function2[/* user */ User, /* url */ String, String]] = js.native
   
@@ -40,7 +40,7 @@ object EmailFields {
     }
     
     @scala.inline
-    def setFrom(value: () => String): Self = this.set("from", js.Any.fromFunction0(value))
+    def setFrom(value: /* user */ User => String): Self = this.set("from", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteFrom: Self = this.set("from", js.undefined)

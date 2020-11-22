@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "animation-frame"
-version := "0.1.7-dt-20200515Z-05d11a"
+version := "0.1.7-dt-20200923Z-05d11a"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

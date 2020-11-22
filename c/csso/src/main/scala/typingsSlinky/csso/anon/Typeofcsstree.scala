@@ -3,6 +3,7 @@ package typingsSlinky.csso.anon
 import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.cssTree.mod.CssNode
 import typingsSlinky.cssTree.mod.CssNodePlain
+import typingsSlinky.cssTree.mod.DefinitionSyntax_
 import typingsSlinky.cssTree.mod.EnterOrLeaveFn
 import typingsSlinky.cssTree.mod.FindFn
 import typingsSlinky.cssTree.mod.GenerateOptions
@@ -20,6 +21,8 @@ trait Typeofcsstree extends js.Object {
   var List: Instantiable0[typingsSlinky.cssTree.mod.List[js.Object]] = js.native
   
   def clone(node: CssNode): CssNode = js.native
+  
+  val definitionSyntax: DefinitionSyntax_ = js.native
   
   def find(ast: CssNode, fn: FindFn): CssNode = js.native
   

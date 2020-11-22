@@ -2,9 +2,9 @@ package typingsSlinky.baseui.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.anon.HeadCell
 import typingsSlinky.baseui.baseuiStrings.ASC
 import typingsSlinky.baseui.baseuiStrings.DESC
+import typingsSlinky.baseui.tableMod.SortableHeadCellOverrides
 import typingsSlinky.baseui.tableMod.SortableHeadCellProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,7 +37,7 @@ object SortableHeadCell {
     def onSort(value: () => _): this.type = set("onSort", js.Any.fromFunction0(value))
     
     @scala.inline
-    def overrides(value: HeadCell): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: SortableHeadCellOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SortableHeadCellProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

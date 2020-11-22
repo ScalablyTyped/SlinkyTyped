@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.endpointGroupMod
 
 import typingsSlinky.pulumiAws.outputMod.globalaccelerator.EndpointGroupEndpointConfiguration
+import typingsSlinky.pulumiAws.outputMod.globalaccelerator.EndpointGroupPortOverride
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -24,6 +25,11 @@ class EndpointGroup protected () extends CustomResource {
   def this(name: String, args: EndpointGroupArgs, opts: CustomResourceOptions) = this()
   
   /**
+    * The Amazon Resource Name (ARN) of the endpoint group.
+    */
+  val arn: Output_[String] = js.native
+  
+  /**
     * The list of endpoint objects. Fields documented below.
     */
   val endpointConfigurations: Output_[js.UndefOr[js.Array[EndpointGroupEndpointConfiguration]]] = js.native
@@ -38,15 +44,9 @@ class EndpointGroup protected () extends CustomResource {
     */
   val healthCheckIntervalSeconds: Output_[js.UndefOr[Double]] = js.native
   
-  /**
-    * If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
-    */
-  val healthCheckPath: Output_[js.UndefOr[String]] = js.native
+  val healthCheckPath: Output_[String] = js.native
   
-  /**
-    * The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
-    */
-  val healthCheckPort: Output_[js.UndefOr[Double]] = js.native
+  val healthCheckPort: Output_[Double] = js.native
   
   /**
     * The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
@@ -57,6 +57,11 @@ class EndpointGroup protected () extends CustomResource {
     * The Amazon Resource Name (ARN) of the listener.
     */
   val listenerArn: Output_[String] = js.native
+  
+  /**
+    * Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
+    */
+  val portOverrides: Output_[js.UndefOr[js.Array[EndpointGroupPortOverride]]] = js.native
   
   /**
     * The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.

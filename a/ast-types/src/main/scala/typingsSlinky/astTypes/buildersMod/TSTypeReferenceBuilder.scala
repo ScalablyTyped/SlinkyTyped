@@ -7,14 +7,15 @@ import typingsSlinky.astTypes.kindsMod.TSTypeParameterInstantiationKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSTypeReference
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TSTypeReferenceBuilder extends js.Object {
+  
   def apply(typeName: IdentifierKind): TSTypeReference = js.native
   def apply(typeName: IdentifierKind, typeParameters: TSTypeParameterInstantiationKind): TSTypeReference = js.native
   def apply(typeName: TSQualifiedNameKind): TSTypeReference = js.native
   def apply(typeName: TSQualifiedNameKind, typeParameters: TSTypeParameterInstantiationKind): TSTypeReference = js.native
+  
   def from(params: TypeName): TSTypeReference = js.native
 }
-

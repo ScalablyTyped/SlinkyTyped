@@ -5,8 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.xstate.typesMod._Action because Already inherited */ @js.native
+@js.native
 trait ChooseAction[TContext, TEvent /* <: EventObject */] extends ActionObject[TContext, TEvent] {
   
   var conds: js.Array[ChooseConditon[TContext, TEvent]] = js.native

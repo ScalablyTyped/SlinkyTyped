@@ -1,6 +1,6 @@
 package typingsSlinky.octokitPluginPaginateRest.anon
 
-import typingsSlinky.octokitTypes.anon.Name
+import typingsSlinky.octokitTypes.anon.Groupdescription
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `7` extends js.Object {
   
-  var data: js.Array[Name] = js.native
+  var data: js.Array[Groupdescription] = js.native
 }
 object `7` {
   
   @scala.inline
-  def apply(data: js.Array[Name]): `7` = {
+  def apply(data: js.Array[Groupdescription]): `7` = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[`7`]
   }
@@ -34,9 +34,9 @@ object `7` {
     }
     
     @scala.inline
-    def setDataVarargs(value: Name*): Self = this.set("data", js.Array(value :_*))
+    def setDataVarargs(value: Groupdescription*): Self = this.set("data", js.Array(value :_*))
     
     @scala.inline
-    def setData(value: js.Array[Name]): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: js.Array[Groupdescription]): Self = this.set("data", value.asInstanceOf[js.Any])
   }
 }

@@ -45,6 +45,14 @@ trait CommentCollectionLoadOptions extends js.Object {
   
   /**
     *
+    * For EACH ITEM in the collection: Gets the content type of the comment.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var contentType: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
     * For EACH ITEM in the collection: Gets the creation time of the comment. Returns null if the comment was converted from a note, since the comment does not have a creation date.
     *
     * [Api set: ExcelApi 1.10]
@@ -129,6 +137,12 @@ object CommentCollectionLoadOptions {
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
+    
+    @scala.inline
+    def setContentType(value: Boolean): Self = this.set("contentType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContentType: Self = this.set("contentType", js.undefined)
     
     @scala.inline
     def setCreationDate(value: Boolean): Self = this.set("creationDate", value.asInstanceOf[js.Any])

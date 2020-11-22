@@ -22,10 +22,10 @@ class Any_ () extends Message {
   def pack(serialized: js.typedarray.Uint8Array, name: String): Unit = js.native
   def pack(serialized: js.typedarray.Uint8Array, name: String, typeUrlPrefix: String): Unit = js.native
   
-  def setTypeUrl(value: String): Unit = js.native
+  def setTypeUrl(value: String): Any = js.native
   
-  def setValue(value: String): Unit = js.native
-  def setValue(value: js.typedarray.Uint8Array): Unit = js.native
+  def setValue(value: String): Any = js.native
+  def setValue(value: js.typedarray.Uint8Array): Any = js.native
   
   def unpack[T /* <: Message */](deserialize: js.Function1[/* packed */ js.typedarray.Uint8Array, T], name: String): T | Null = js.native
 }

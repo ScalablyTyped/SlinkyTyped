@@ -8,6 +8,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AwsCloudFrontDistributionDetails extends js.Object {
   
   /**
+    * Provides information about the cache configuration for the distribution.
+    */
+  var CacheBehaviors: js.UndefOr[AwsCloudFrontDistributionCacheBehaviors] = js.native
+  
+  /**
+    * The default cache behavior for the configuration.
+    */
+  var DefaultCacheBehavior: js.UndefOr[AwsCloudFrontDistributionDefaultCacheBehavior] = js.native
+  
+  /**
+    * The object that CloudFront sends in response to requests from the origin (for example, index.html) when a viewer requests the root URL for the distribution (http://www.example.com) instead of an object in your distribution (http://www.example.com/product-description.html). 
+    */
+  var DefaultRootObject: js.UndefOr[NonEmptyString] = js.native
+  
+  /**
     * The domain name corresponding to the distribution.
     */
   var DomainName: js.UndefOr[NonEmptyString] = js.native
@@ -18,7 +33,7 @@ trait AwsCloudFrontDistributionDetails extends js.Object {
   var ETag: js.UndefOr[NonEmptyString] = js.native
   
   /**
-    * The date and time that the distribution was last modified.
+    * Indicates when that the distribution was last modified. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var LastModifiedTime: js.UndefOr[NonEmptyString] = js.native
   
@@ -26,6 +41,11 @@ trait AwsCloudFrontDistributionDetails extends js.Object {
     * A complex type that controls whether access logs are written for the distribution.
     */
   var Logging: js.UndefOr[AwsCloudFrontDistributionLogging] = js.native
+  
+  /**
+    * Provides information about the origin groups in the distribution.
+    */
+  var OriginGroups: js.UndefOr[AwsCloudFrontDistributionOriginGroups] = js.native
   
   /**
     * A complex type that contains information about origins for this distribution.
@@ -66,6 +86,24 @@ object AwsCloudFrontDistributionDetails {
     }
     
     @scala.inline
+    def setCacheBehaviors(value: AwsCloudFrontDistributionCacheBehaviors): Self = this.set("CacheBehaviors", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCacheBehaviors: Self = this.set("CacheBehaviors", js.undefined)
+    
+    @scala.inline
+    def setDefaultCacheBehavior(value: AwsCloudFrontDistributionDefaultCacheBehavior): Self = this.set("DefaultCacheBehavior", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultCacheBehavior: Self = this.set("DefaultCacheBehavior", js.undefined)
+    
+    @scala.inline
+    def setDefaultRootObject(value: NonEmptyString): Self = this.set("DefaultRootObject", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultRootObject: Self = this.set("DefaultRootObject", js.undefined)
+    
+    @scala.inline
     def setDomainName(value: NonEmptyString): Self = this.set("DomainName", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -88,6 +126,12 @@ object AwsCloudFrontDistributionDetails {
     
     @scala.inline
     def deleteLogging: Self = this.set("Logging", js.undefined)
+    
+    @scala.inline
+    def setOriginGroups(value: AwsCloudFrontDistributionOriginGroups): Self = this.set("OriginGroups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOriginGroups: Self = this.set("OriginGroups", js.undefined)
     
     @scala.inline
     def setOrigins(value: AwsCloudFrontDistributionOrigins): Self = this.set("Origins", value.asInstanceOf[js.Any])

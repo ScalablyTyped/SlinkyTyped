@@ -5,9 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait MlStopDatafeed extends Generic {
+trait MlStopDatafeed[T] extends Generic {
   
   var allow_no_datafeeds: js.UndefOr[Boolean] = js.native
+  
+  var allow_no_match: js.UndefOr[Boolean] = js.native
+  
+  var body: js.UndefOr[T] = js.native
   
   var datafeed_id: String = js.native
   
@@ -18,13 +22,13 @@ trait MlStopDatafeed extends Generic {
 object MlStopDatafeed {
   
   @scala.inline
-  def apply(datafeed_id: String): MlStopDatafeed = {
+  def apply[T](datafeed_id: String): MlStopDatafeed[T] = {
     val __obj = js.Dynamic.literal(datafeed_id = datafeed_id.asInstanceOf[js.Any])
-    __obj.asInstanceOf[MlStopDatafeed]
+    __obj.asInstanceOf[MlStopDatafeed[T]]
   }
   
   @scala.inline
-  implicit class MlStopDatafeedOps[Self <: MlStopDatafeed] (val x: Self) extends AnyVal {
+  implicit class MlStopDatafeedOps[Self <: MlStopDatafeed[_], T] (val x: Self with MlStopDatafeed[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -46,6 +50,18 @@ object MlStopDatafeed {
     
     @scala.inline
     def deleteAllow_no_datafeeds: Self = this.set("allow_no_datafeeds", js.undefined)
+    
+    @scala.inline
+    def setAllow_no_match(value: Boolean): Self = this.set("allow_no_match", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllow_no_match: Self = this.set("allow_no_match", js.undefined)
+    
+    @scala.inline
+    def setBody(value: T): Self = this.set("body", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBody: Self = this.set("body", js.undefined)
     
     @scala.inline
     def setForce(value: Boolean): Self = this.set("force", value.asInstanceOf[js.Any])

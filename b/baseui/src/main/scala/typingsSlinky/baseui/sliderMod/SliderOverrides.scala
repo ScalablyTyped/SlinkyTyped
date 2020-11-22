@@ -15,6 +15,10 @@ trait SliderOverrides extends js.Object {
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
   ] = js.native
   
+  var Mark: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
+  ] = js.native
+  
   var Root: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
   ] = js.native
@@ -77,6 +81,14 @@ object SliderOverrides {
     
     @scala.inline
     def deleteInnerTrack: Self = this.set("InnerTrack", js.undefined)
+    
+    @scala.inline
+    def setMark(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Override<SharedProps> */ js.Any
+    ): Self = this.set("Mark", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMark: Self = this.set("Mark", js.undefined)
     
     @scala.inline
     def setRoot(

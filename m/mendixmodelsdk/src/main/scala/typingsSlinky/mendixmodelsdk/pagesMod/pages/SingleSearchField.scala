@@ -1,11 +1,12 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AttributeRef
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -18,8 +19,8 @@ abstract class SingleSearchField protected () extends SearchField {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -35,9 +36,6 @@ abstract class SingleSearchField protected () extends SearchField {
     */
   def attributeRef: AttributeRef | Null = js.native
   def attributeRef_=(newValue: AttributeRef | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FSingleSearchField: IModel = js.native
   
   def operator: SearchFieldOperator = js.native
   def operator_=(newValue: SearchFieldOperator): Unit = js.native

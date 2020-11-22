@@ -28,7 +28,7 @@ trait openWindowParams extends js.Object {
   /**
     * Window's bottom position, in platform-specific units.
     */
-  var bottom: js.UndefOr[Double | java.lang.String] = js.native
+  var bottom: js.UndefOr[Double | String] = js.native
   
   /**
     * Indicates whether the window enforces modal behaviour.
@@ -43,12 +43,12 @@ trait openWindowParams extends js.Object {
   /**
     * Window's height, in platform-specific units.
     */
-  var height: js.UndefOr[Double | java.lang.String] = js.native
+  var height: js.UndefOr[Double | String] = js.native
   
   /**
     * Window's left position, in platform-specific units.
     */
-  var left: js.UndefOr[Double | java.lang.String] = js.native
+  var left: js.UndefOr[Double | String] = js.native
   
   /**
     * Determines whether to open the window modal in front of other windows.
@@ -73,12 +73,12 @@ trait openWindowParams extends js.Object {
   /**
     * Window's right position, in platform-specific units.
     */
-  var right: js.UndefOr[Double | java.lang.String] = js.native
+  var right: js.UndefOr[Double | String] = js.native
   
   /**
     * Window's top position, in platform-specific units.
     */
-  var top: js.UndefOr[Double | java.lang.String] = js.native
+  var top: js.UndefOr[Double | String] = js.native
   
   /**
     * Transition style of this non-modal window.
@@ -88,7 +88,7 @@ trait openWindowParams extends js.Object {
   /**
     * Window's width, in platform-specific units.
     */
-  var width: js.UndefOr[Double | java.lang.String] = js.native
+  var width: js.UndefOr[Double | String] = js.native
 }
 object openWindowParams {
   
@@ -108,7 +108,7 @@ object openWindowParams {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -132,7 +132,7 @@ object openWindowParams {
     def deleteAnimated: Self = this.set("animated", js.undefined)
     
     @scala.inline
-    def setBottom(value: Double | java.lang.String): Self = this.set("bottom", value.asInstanceOf[js.Any])
+    def setBottom(value: Double | String): Self = this.set("bottom", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBottom: Self = this.set("bottom", js.undefined)
@@ -150,13 +150,13 @@ object openWindowParams {
     def deleteFullscreen: Self = this.set("fullscreen", js.undefined)
     
     @scala.inline
-    def setHeight(value: Double | java.lang.String): Self = this.set("height", value.asInstanceOf[js.Any])
+    def setHeight(value: Double | String): Self = this.set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
-    def setLeft(value: Double | java.lang.String): Self = this.set("left", value.asInstanceOf[js.Any])
+    def setLeft(value: Double | String): Self = this.set("left", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLeft: Self = this.set("left", js.undefined)
@@ -186,13 +186,13 @@ object openWindowParams {
     def deleteNavBarHidden: Self = this.set("navBarHidden", js.undefined)
     
     @scala.inline
-    def setRight(value: Double | java.lang.String): Self = this.set("right", value.asInstanceOf[js.Any])
+    def setRight(value: Double | String): Self = this.set("right", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRight: Self = this.set("right", js.undefined)
     
     @scala.inline
-    def setTop(value: Double | java.lang.String): Self = this.set("top", value.asInstanceOf[js.Any])
+    def setTop(value: Double | String): Self = this.set("top", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTop: Self = this.set("top", js.undefined)
@@ -204,7 +204,7 @@ object openWindowParams {
     def deleteTransition: Self = this.set("transition", js.undefined)
     
     @scala.inline
-    def setWidth(value: Double | java.lang.String): Self = this.set("width", value.asInstanceOf[js.Any])
+    def setWidth(value: Double | String): Self = this.set("width", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteWidth: Self = this.set("width", js.undefined)

@@ -15,6 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.csstype.csstypeStrings.`@media`
   - typingsSlinky.csstype.csstypeStrings.`@namespace`
   - typingsSlinky.csstype.csstypeStrings.`@page`
+  - typingsSlinky.csstype.csstypeStrings.`@property`
   - typingsSlinky.csstype.csstypeStrings.`@supports`
   - typingsSlinky.csstype.csstypeStrings.`@viewport`
 */
@@ -50,6 +51,9 @@ object AtRules {
   
   @scala.inline
   def `@page`: typingsSlinky.csstype.csstypeStrings.`@page` = "@page".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`@page`]
+  
+  @scala.inline
+  def `@property`: typingsSlinky.csstype.csstypeStrings.`@property` = "@property".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`@property`]
   
   @scala.inline
   def `@supports`: typingsSlinky.csstype.csstypeStrings.`@supports` = "@supports".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`@supports`]

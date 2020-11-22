@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Props extends js.Object {
   
+  val internal_exitOnCtrlC: Boolean = js.native
+  
   /**
     * A boolean flag determining if the current `stdin` supports `setRawMode`. A component using `setRawMode` might want to use `isRawModeSupported` to nicely fall back in environments where raw mode is not supported.
     */
@@ -27,8 +29,8 @@ trait Props extends js.Object {
 object Props {
   
   @scala.inline
-  def apply(isRawModeSupported: Boolean, setRawMode: Boolean => Unit): Props = {
-    val __obj = js.Dynamic.literal(isRawModeSupported = isRawModeSupported.asInstanceOf[js.Any], setRawMode = js.Any.fromFunction1(setRawMode))
+  def apply(internal_exitOnCtrlC: Boolean, isRawModeSupported: Boolean, setRawMode: Boolean => Unit): Props = {
+    val __obj = js.Dynamic.literal(internal_exitOnCtrlC = internal_exitOnCtrlC.asInstanceOf[js.Any], isRawModeSupported = isRawModeSupported.asInstanceOf[js.Any], setRawMode = js.Any.fromFunction1(setRawMode))
     __obj.asInstanceOf[Props]
   }
   
@@ -46,6 +48,9 @@ object Props {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setInternal_exitOnCtrlC(value: Boolean): Self = this.set("internal_exitOnCtrlC", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIsRawModeSupported(value: Boolean): Self = this.set("isRawModeSupported", value.asInstanceOf[js.Any])

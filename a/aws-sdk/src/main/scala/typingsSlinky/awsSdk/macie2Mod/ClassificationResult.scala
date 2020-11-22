@@ -8,17 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ClassificationResult extends js.Object {
   
   /**
-    * The number of occurrences of the data that produced the finding, and the custom data identifiers that detected the data.
+    * Specifies whether Amazon Macie detected additional occurrences of sensitive data in the S3 object. A finding includes location data for a maximum of 15 occurrences of sensitive data. This value can help you determine whether to investigate additional occurrences of sensitive data in an object. You can do this by referring to the corresponding sensitive data discovery result for the finding (ClassificationDetails.detailedResultsLocation).
+    */
+  var additionalOccurrences: js.UndefOr[boolean] = js.native
+  
+  /**
+    * The custom data identifiers that detected the sensitive data and the number of occurrences of the data that they detected.
     */
   var customDataIdentifiers: js.UndefOr[CustomDataIdentifiers] = js.native
   
   /**
-    * The type of content, expressed as a MIME type, that the finding applies to. For example, application/gzip, for a GNU Gzip compressed archive file, or application/pdf, for an Adobe PDF file.
+    * The type of content, as a MIME type, that the finding applies to. For example, application/gzip, for a GNU Gzip compressed archive file, or application/pdf, for an Adobe Portable Document Format file.
     */
   var mimeType: js.UndefOr[string] = js.native
   
   /**
-    * The category and number of occurrences of the sensitive data that produced the finding.
+    * The category, types, and number of occurrences of the sensitive data that produced the finding.
     */
   var sensitiveData: js.UndefOr[SensitiveData] = js.native
   
@@ -54,6 +59,12 @@ object ClassificationResult {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAdditionalOccurrences(value: boolean): Self = this.set("additionalOccurrences", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdditionalOccurrences: Self = this.set("additionalOccurrences", js.undefined)
     
     @scala.inline
     def setCustomDataIdentifiers(value: CustomDataIdentifiers): Self = this.set("customDataIdentifiers", value.asInstanceOf[js.Any])

@@ -1,5 +1,6 @@
 package typingsSlinky.electron.Electron
 
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProtocolRequest extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/protocol-request
+  // Docs: https://electronjs.org/docs/api/structures/protocol-request
+  var headers: Record[String, String] = js.native
+  
   var method: String = js.native
   
   var referrer: String = js.native
@@ -19,8 +22,8 @@ trait ProtocolRequest extends js.Object {
 object ProtocolRequest {
   
   @scala.inline
-  def apply(method: String, referrer: String, url: String): ProtocolRequest = {
-    val __obj = js.Dynamic.literal(method = method.asInstanceOf[js.Any], referrer = referrer.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
+  def apply(headers: Record[String, String], method: String, referrer: String, url: String): ProtocolRequest = {
+    val __obj = js.Dynamic.literal(headers = headers.asInstanceOf[js.Any], method = method.asInstanceOf[js.Any], referrer = referrer.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProtocolRequest]
   }
   
@@ -38,6 +41,9 @@ object ProtocolRequest {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setHeaders(value: Record[String, String]): Self = this.set("headers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMethod(value: String): Self = this.set("method", value.asInstanceOf[js.Any])

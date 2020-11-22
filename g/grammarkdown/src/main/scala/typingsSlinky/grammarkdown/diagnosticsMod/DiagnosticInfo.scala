@@ -1,9 +1,9 @@
 package typingsSlinky.grammarkdown.diagnosticsMod
 
-import typingsSlinky.grammarkdown.coreMod.Range
 import typingsSlinky.grammarkdown.nodesMod.Node
 import typingsSlinky.grammarkdown.nodesMod.SourceFile
 import typingsSlinky.grammarkdown.tokensMod.SyntaxKind
+import typingsSlinky.grammarkdown.typesMod.Range
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,6 +14,8 @@ trait DiagnosticInfo extends js.Object {
   var code: Double = js.native
   
   var diagnosticIndex: Double = js.native
+  
+  var filename: js.UndefOr[String] = js.native
   
   var formattedMessage: js.UndefOr[String] = js.native
   
@@ -68,6 +70,12 @@ object DiagnosticInfo {
     
     @scala.inline
     def setWarning(value: Boolean): Self = this.set("warning", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setFilename(value: String): Self = this.set("filename", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFilename: Self = this.set("filename", js.undefined)
     
     @scala.inline
     def setFormattedMessage(value: String): Self = this.set("formattedMessage", value.asInstanceOf[js.Any])

@@ -40,5 +40,7 @@ class FirebaseFirestore protected () extends js.Object {
   
   def terminate(): js.Promise[Unit] = js.native
   
+  def useEmulator(host: String, port: Double): Unit = js.native
+  
   def waitForPendingWrites(): js.Promise[Unit] = js.native
 }

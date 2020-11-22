@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.twilsock.twilsockStrings.ping
   - typingsSlinky.twilsock.twilsockStrings.close
   - typingsSlinky.twilsock.twilsockStrings.init
+  - typingsSlinky.twilsock.twilsockStrings.telemetryDotv1
 */
 trait MessageType extends js.Object
 object MessageType {
@@ -32,4 +33,7 @@ object MessageType {
   
   @scala.inline
   def reply: typingsSlinky.twilsock.twilsockStrings.reply = "reply".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.reply]
+  
+  @scala.inline
+  def telemetryDotv1: typingsSlinky.twilsock.twilsockStrings.telemetryDotv1 = "telemetry.v1".asInstanceOf[typingsSlinky.twilsock.twilsockStrings.telemetryDotv1]
 }

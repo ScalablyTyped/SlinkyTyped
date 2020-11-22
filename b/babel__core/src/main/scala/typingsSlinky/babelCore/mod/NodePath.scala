@@ -1,5 +1,6 @@
 package typingsSlinky.babelCore.mod
 
+import typingsSlinky.babelTraverse.anon.Container
 import typingsSlinky.babelTraverse.mod.Hub
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,5 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class NodePath[T] protected ()
   extends typingsSlinky.babelTraverse.mod.NodePath[T] {
-  def this(hub: Hub, parent: typingsSlinky.babelTraverse.mod.Node) = this()
+  def this(hub: Hub, parent: typingsSlinky.babelTypes.mod.Node) = this()
+}
+/* static members */
+@JSImport("@babel/core", "NodePath")
+@js.native
+object NodePath extends js.Object {
+  
+  def get[C /* <: typingsSlinky.babelTypes.mod.Node */, K /* <: /* keyof C */ String */](opts: Container[C, K]): typingsSlinky.babelTraverse.mod.NodePath[
+    /* import warning: importer.ImportType#apply Failed type conversion: C[K] */ js.Any
+  ] = js.native
 }

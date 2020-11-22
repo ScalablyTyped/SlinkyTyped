@@ -9,7 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MapNotesLayer
   extends Layer
      with PortalLayer
-     with ScaleRangeLayer {
+     with ScaleRangeLayer
+     with BlendLayer {
   
   @JSName("type")
   val type_MapNotesLayer: `map-notes` = js.native

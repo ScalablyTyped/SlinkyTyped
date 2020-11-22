@@ -1,8 +1,9 @@
 package typingsSlinky.pulumiAws.rdsClusterMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.engineModeMod.EngineMode
-import typingsSlinky.pulumiAws.engineTypeMod.EngineType
+import typingsSlinky.pulumiAws.enumsRdsMod.EngineMode
+import typingsSlinky.pulumiAws.enumsRdsMod.EngineType
+import typingsSlinky.pulumiAws.outputMod.rds.ClusterRestoreToPointInTime
 import typingsSlinky.pulumiAws.outputMod.rds.ClusterS3Import
 import typingsSlinky.pulumiAws.outputMod.rds.ClusterScalingConfiguration
 import typingsSlinky.pulumiPulumi.mod.CustomResource
@@ -28,6 +29,11 @@ class Cluster protected () extends CustomResource {
   def this(name: String, args: ClusterArgs) = this()
   def this(name: String, args: js.UndefOr[scala.Nothing], opts: CustomResourceOptions) = this()
   def this(name: String, args: ClusterArgs, opts: CustomResourceOptions) = this()
+  
+  /**
+    * Enable to allow major engine version upgrades when changing engine versions. Defaults to `false`.
+    */
+  val allowMajorVersionUpgrade: Output_[js.UndefOr[Boolean]] = js.native
   
   /**
     * Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
@@ -105,7 +111,7 @@ class Cluster protected () extends CustomResource {
   val enableHttpEndpoint: Output_[js.UndefOr[Boolean]] = js.native
   
   /**
-    * List of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+    * Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
     */
   val enabledCloudwatchLogsExports: Output_[js.UndefOr[js.Array[String]]] = js.native
   
@@ -120,7 +126,7 @@ class Cluster protected () extends CustomResource {
   val engine: Output_[js.UndefOr[EngineType]] = js.native
   
   /**
-    * The database engine mode. Valid values: `global`, `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
+    * The database engine mode. Valid values: `global` (only valid for Aurora MySQL 1.21 and earlier), `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
     */
   val engineMode: Output_[js.UndefOr[EngineMode]] = js.native
   
@@ -191,9 +197,14 @@ class Cluster protected () extends CustomResource {
   val readerEndpoint: Output_[String] = js.native
   
   /**
-    * ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
+    * ARN of the source DB cluster or DB instance if this DB cluster is created as a Read Replica.
     */
   val replicationSourceIdentifier: Output_[js.UndefOr[String]] = js.native
+  
+  /**
+    * Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
+    */
+  val restoreToPointInTime: Output_[js.UndefOr[ClusterRestoreToPointInTime]] = js.native
   
   val s3Import: Output_[js.UndefOr[ClusterS3Import]] = js.native
   
@@ -218,9 +229,9 @@ class Cluster protected () extends CustomResource {
   val sourceRegion: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engineMode` and `true` for `serverless` `engineMode`.
+    * Specifies whether the DB cluster is encrypted
     */
-  val storageEncrypted: Output_[js.UndefOr[Boolean]] = js.native
+  val storageEncrypted: Output_[Boolean] = js.native
   
   /**
     * A map of tags to assign to the DB cluster.

@@ -1,6 +1,5 @@
 package typingsSlinky.firefoxWebextBrowser.browser.browsingData
 
-import typingsSlinky.firefoxWebextBrowser.anon.Extension
 import typingsSlinky.firefoxWebextBrowser.browser.extensionTypes.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,16 +14,12 @@ trait RemovalOptions extends js.Object {
   var hostnames: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * An object whose properties specify which origin types ought to be cleared. If this object isn't specified,
-    * it defaults to clearing only "unprotected" origins. Please ensure that you _really_ want to remove
-    * application data before adding 'protectedWeb' or 'extensions'.
+    * An object whose properties specify which origin types ought to be cleared. If this object isn't specified, it defaults to clearing only "unprotected" origins. Please ensure that you _really_ want to remove application data before adding 'protectedWeb' or 'extensions'.
     */
-  var originTypes: js.UndefOr[Extension] = js.native
+  var originTypes: js.UndefOr[RemovalOptionsOriginTypes] = js.native
   
   /**
-    * Remove data accumulated on or after this date, represented in milliseconds since the epoch (accessible via
-    * the `getTime` method of the JavaScript `Date` object). If absent, defaults to 0 (which would remove all
-    * browsing data).
+    * Remove data accumulated on or after this date, represented in milliseconds since the epoch (accessible via the `getTime` method of the JavaScript `Date` object). If absent, defaults to 0 (which would remove all browsing data).
     */
   var since: js.UndefOr[Date] = js.native
 }
@@ -61,7 +56,7 @@ object RemovalOptions {
     def deleteHostnames: Self = this.set("hostnames", js.undefined)
     
     @scala.inline
-    def setOriginTypes(value: Extension): Self = this.set("originTypes", value.asInstanceOf[js.Any])
+    def setOriginTypes(value: RemovalOptionsOriginTypes): Self = this.set("originTypes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOriginTypes: Self = this.set("originTypes", js.undefined)

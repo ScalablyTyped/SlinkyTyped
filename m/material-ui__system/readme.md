@@ -1,7 +1,7 @@
 
 # Scala.js typings for material-ui__system
 
-Typings are for version 4.7.1
+Typings are for version 4.9.14
 
 ## Library description:
 Material-UI System - Design system for Material-UI.
@@ -10,9 +10,9 @@ Material-UI System - Design system for Material-UI.
 | ------------------ | :-------------: |
 | Full name          | @material-ui/system |
 | Keywords           | react, react-component, material design, material-ui, system |
-| # releases         | 25 |
-| # dependents       | 26 |
-| # downloads        | 21241183 |
+| # releases         | 32 |
+| # dependents       | 37 |
+| # downloads        | 47940797 |
 | # stars            | 0 |
 
 ## Links

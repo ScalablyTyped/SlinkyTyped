@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesMap
 
 import typingsSlinky.echarts.anon.Rotate
+import typingsSlinky.echarts.anon.`14`
 import typingsSlinky.echarts.anon.`15`
-import typingsSlinky.echarts.anon.`16`
 import typingsSlinky.echarts.echarts.EChartOption.BaseTooltip
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-map.data.emphasis
     */
-  var emphasis: js.UndefOr[`16`] = js.native
+  var emphasis: js.UndefOr[`15`] = js.native
   
   /**
     * Style of item polygon
@@ -22,7 +22,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.data.itemStyle
     */
-  var itemStyle: js.UndefOr[`15`] = js.native
+  var itemStyle: js.UndefOr[`14`] = js.native
   
   /**
     * Text label of , to explain some data information about graphic
@@ -94,13 +94,13 @@ object DataObject {
     }
     
     @scala.inline
-    def setEmphasis(value: `16`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
+    def setEmphasis(value: `15`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEmphasis: Self = this.set("emphasis", js.undefined)
     
     @scala.inline
-    def setItemStyle(value: `15`): Self = this.set("itemStyle", value.asInstanceOf[js.Any])
+    def setItemStyle(value: `14`): Self = this.set("itemStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteItemStyle: Self = this.set("itemStyle", js.undefined)

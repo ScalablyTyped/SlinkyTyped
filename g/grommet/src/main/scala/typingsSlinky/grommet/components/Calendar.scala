@@ -34,8 +34,13 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DetailedHTMLProps
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
 import typingsSlinky.react.reactStrings.ascending
@@ -215,7 +220,9 @@ object Calendar {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -269,6 +276,9 @@ object Calendar {
     def bounds(value: js.Array[String]): this.type = set("bounds", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def children(value: /* repeated */ js.Any => _): this.type = set("children", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -318,6 +328,9 @@ object Calendar {
     
     @scala.inline
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def fill(value: Boolean): this.type = set("fill", value.asInstanceOf[js.Any])
     
     @scala.inline
     def firstDayOfWeek(value: `0` | `1`): this.type = set("firstDayOfWeek", value.asInstanceOf[js.Any])
@@ -569,7 +582,7 @@ object Calendar {
     def onSeeking(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onSeeking", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSelect(value: /* select */ js.Array[String] => _): this.type = set("onSelect", js.Any.fromFunction1(value))
+    def onSelect(value: /* select */ String | js.Array[String] => _): this.type = set("onSelect", js.Any.fromFunction1(value))
     
     @scala.inline
     def onStalled(value: SyntheticEvent[Event, HTMLDivElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))

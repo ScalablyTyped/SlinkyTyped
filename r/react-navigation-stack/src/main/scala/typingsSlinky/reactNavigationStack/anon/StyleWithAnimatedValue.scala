@@ -15,8 +15,8 @@ trait StyleWithAnimatedValue extends js.Object {
 object StyleWithAnimatedValue {
   
   @scala.inline
-  def apply(style: WithAnimatedValue[StyleProp[ViewStyle]]): StyleWithAnimatedValue = {
-    val __obj = js.Dynamic.literal(style = style.asInstanceOf[js.Any])
+  def apply(): StyleWithAnimatedValue = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[StyleWithAnimatedValue]
   }
   
@@ -37,5 +37,11 @@ object StyleWithAnimatedValue {
     
     @scala.inline
     def setStyle(value: WithAnimatedValue[StyleProp[ViewStyle]]): Self = this.set("style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
+    
+    @scala.inline
+    def setStyleNull: Self = this.set("style", null)
   }
 }

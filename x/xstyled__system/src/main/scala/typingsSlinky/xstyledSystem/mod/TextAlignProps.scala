@@ -9,7 +9,7 @@ trait TextAlignProps extends js.Object {
   
   val textAlign: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextAlignProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextAlign */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object TextAlignProps {
     }
     
     @scala.inline
+    def setTextAlignVarargs(value: js.Any*): Self = this.set("textAlign", js.Array(value :_*))
+    
+    @scala.inline
     def setTextAlign(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TextAlignProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.TextAlign */ _
         ]
     ): Self = this.set("textAlign", value.asInstanceOf[js.Any])
     

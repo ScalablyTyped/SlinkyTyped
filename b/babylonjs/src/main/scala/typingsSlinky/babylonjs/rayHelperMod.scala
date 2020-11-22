@@ -20,7 +20,7 @@ object rayHelperMod extends js.Object {
       * Instantiate a new ray helper.
       * As raycast might be hard to debug, the RayHelper can help rendering the different rays
       * in order to better appreciate the issue one might have.
-      * @see http://doc.babylonjs.com/babylon101/raycasts#debugging
+      * @see https://doc.babylonjs.com/babylon101/raycasts#debugging
       * @param ray Defines the ray we are currently tryin to visualize
       */
     def this(ray: Ray) = this()
@@ -30,6 +30,10 @@ object rayHelperMod extends js.Object {
     var _meshSpaceDirection: js.Any = js.native
     
     var _meshSpaceOrigin: js.Any = js.native
+    
+    var _onAfterRenderObserver: js.Any = js.native
+    
+    var _onAfterStepObserver: js.Any = js.native
     
     var _render: js.Any = js.native
     
@@ -42,8 +46,6 @@ object rayHelperMod extends js.Object {
     var _scene: js.Any = js.native
     
     var _updateToMesh: js.Any = js.native
-    
-    var _updateToMeshFunction: js.Any = js.native
     
     /**
       * Attach a ray helper to a mesh so that we can easily see its orientation for instance or information like its normals.

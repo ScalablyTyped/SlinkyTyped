@@ -10,19 +10,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxValidatorOptions extends DOMComponentOptions[dxValidator] {
   
-  /** @name dxValidator.Options.adapter */
+  /**
+    * [descr:dxValidator.Options.adapter]
+    */
   var adapter: js.UndefOr[ApplyValidationResults] = js.native
   
-  /** @name dxValidator.Options.name */
+  /**
+    * [descr:dxValidator.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @name dxValidator.Options.onValidated */
+  /**
+    * [descr:dxValidator.Options.onValidated]
+    */
   var onValidated: js.UndefOr[js.Function1[/* validatedInfo */ BrokenRule, _]] = js.native
   
-  /** @name dxValidator.Options.validationGroup */
+  /**
+    * [descr:dxValidator.Options.validationGroup]
+    */
   var validationGroup: js.UndefOr[String] = js.native
   
-  /** @name dxValidator.Options.validationRules */
+  /**
+    * [descr:dxValidator.Options.validationRules]
+    */
   var validationRules: js.UndefOr[
     js.Array[
       RequiredRule | NumericRule | RangeRule | StringLengthRule | CustomRule | CompareRule | PatternRule | EmailRule | AsyncRule

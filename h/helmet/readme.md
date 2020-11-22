@@ -1,6 +1,7 @@
 
 # Scala.js typings for helmet
 
+Typings are for version 4.2.0
 
 ## Library description:
 help secure Express/Connect apps with various HTTP headers
@@ -23,7 +24,7 @@ help secure Express/Connect apps with various HTTP headers
 
 
 ## Note
-This library has been generated from typescript code from [DefinitelyTyped](https://definitelytyped.org).
+This library has been generated from typescript code from first party type definitions.
 
 Provided with :purple_heart: from [ScalablyTyped](https://github.com/oyvindberg/ScalablyTyped)
 

@@ -3,7 +3,7 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ActivityDeleteThreadSubscriptionEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ActionsSetSelectedReposForOrgSecretEndpoint
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `588` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ActivityDeleteThreadSubscriptionEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ActionsSetSelectedReposForOrgSecretEndpoint, baseUrl | headers | mediaType]) = js.native
   
   var response: OctokitResponse[_] = js.native
 }
@@ -22,7 +22,7 @@ object `588` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ActivityDeleteThreadSubscriptionEndpoint, baseUrl | headers | mediaType]),
+    parameters: RequestParameters with (Omit[ActionsSetSelectedReposForOrgSecretEndpoint, baseUrl | headers | mediaType]),
     response: OctokitResponse[_]
   ): `588` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
@@ -46,7 +46,7 @@ object `588` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[ActivityDeleteThreadSubscriptionEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ActionsSetSelectedReposForOrgSecretEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline

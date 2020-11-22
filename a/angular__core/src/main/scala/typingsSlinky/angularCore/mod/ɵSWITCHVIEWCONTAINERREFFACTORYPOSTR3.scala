@@ -8,10 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@angular/core", "\u0275SWITCH_VIEW_CONTAINER_REF_FACTORY__POST_R3__")
 @js.native
 object ɵSWITCHVIEWCONTAINERREFFACTORYPOSTR3
-  extends TopLevel[
-      js.Function2[
-        /* import warning: importer.ImportType#apply Failed type conversion: typeof ViewContainerRef */ /* ViewContainerRefToken */ js.Any, 
-        /* import warning: importer.ImportType#apply Failed type conversion: typeof ElementRef */ /* ElementRefToken */ js.Any, 
-        ViewContainerRef
-      ]
-    ]
+  extends TopLevel[js.Function0[ViewContainerRef]]

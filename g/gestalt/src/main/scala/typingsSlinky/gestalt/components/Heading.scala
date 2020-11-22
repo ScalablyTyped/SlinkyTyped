@@ -10,10 +10,13 @@ import typingsSlinky.gestalt.gestaltNumbers.`5`
 import typingsSlinky.gestalt.gestaltNumbers.`6`
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.breakWord
+import typingsSlinky.gestalt.gestaltStrings.center
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.eggplant
 import typingsSlinky.gestalt.gestaltStrings.gray
 import typingsSlinky.gestalt.gestaltStrings.green
+import typingsSlinky.gestalt.gestaltStrings.justify
+import typingsSlinky.gestalt.gestaltStrings.left
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.lightGray
 import typingsSlinky.gestalt.gestaltStrings.maroon
@@ -27,6 +30,7 @@ import typingsSlinky.gestalt.gestaltStrings.orchid
 import typingsSlinky.gestalt.gestaltStrings.pine
 import typingsSlinky.gestalt.gestaltStrings.purple
 import typingsSlinky.gestalt.gestaltStrings.red
+import typingsSlinky.gestalt.gestaltStrings.right
 import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
@@ -48,6 +52,9 @@ object Heading {
     
     @scala.inline
     def accessibilityLevel(value: `1` | `2` | `3` | `4` | `5` | `6`): this.type = set("accessibilityLevel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def align(value: left | right | center | justify): this.type = set("align", value.asInstanceOf[js.Any])
     
     @scala.inline
     def color(

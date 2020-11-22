@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.rcFieldForm.anon.Source
 import typingsSlinky.rcFieldForm.interfaceMod.EventArgs
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
+import typingsSlinky.rcFieldForm.interfaceMod.InternalFormInstance
 import typingsSlinky.rcFieldForm.interfaceMod.InternalNamePath
 import typingsSlinky.rcFieldForm.interfaceMod.Meta
 import typingsSlinky.rcFieldForm.interfaceMod.NamePath
@@ -18,10 +19,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait InternalFieldProps extends js.Object {
+trait InternalFieldProps[Values] extends js.Object {
   
   var children: js.UndefOr[
-    ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, ReactElement])
+    ReactElement | (js.Function3[
+      /* control */ ChildProps, 
+      /* meta */ Meta, 
+      /* form */ FormInstance[Values], 
+      ReactElement
+    ])
   ] = js.native
   
   /**
@@ -31,11 +37,21 @@ trait InternalFieldProps extends js.Object {
     */
   var dependencies: js.UndefOr[js.Array[NamePath]] = js.native
   
+  /** @private Pass context as prop instead of context api
+    *  since class component can not get context in constructor */
+  var fieldContext: InternalFormInstance = js.native
+  
   var getValueFromEvent: js.UndefOr[js.Function1[/* args */ EventArgs, StoreValue]] = js.native
   
   var getValueProps: js.UndefOr[js.Function1[/* value */ StoreValue, js.Object]] = js.native
   
   var initialValue: js.UndefOr[js.Any] = js.native
+  
+  /** @private Passed by Form.List props. Do not use since it will break by path check. */
+  var isList: js.UndefOr[Boolean] = js.native
+  
+  /** @private Passed by Form.List props. Do not use since it will break by path check. */
+  var isListField: js.UndefOr[Boolean] = js.native
   
   var messageVariables: js.UndefOr[Record[String, String]] = js.native
   
@@ -51,7 +67,7 @@ trait InternalFieldProps extends js.Object {
   
   var rules: js.UndefOr[js.Array[Rule]] = js.native
   
-  var shouldUpdate: js.UndefOr[ShouldUpdate] = js.native
+  var shouldUpdate: js.UndefOr[ShouldUpdate[Values]] = js.native
   
   var trigger: js.UndefOr[String] = js.native
   
@@ -64,13 +80,13 @@ trait InternalFieldProps extends js.Object {
 object InternalFieldProps {
   
   @scala.inline
-  def apply(): InternalFieldProps = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[InternalFieldProps]
+  def apply[Values](fieldContext: InternalFormInstance): InternalFieldProps[Values] = {
+    val __obj = js.Dynamic.literal(fieldContext = fieldContext.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InternalFieldProps[Values]]
   }
   
   @scala.inline
-  implicit class InternalFieldPropsOps[Self <: InternalFieldProps] (val x: Self) extends AnyVal {
+  implicit class InternalFieldPropsOps[Self <: InternalFieldProps[_], Values] (val x: Self with InternalFieldProps[Values]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -85,14 +101,24 @@ object InternalFieldProps {
     }
     
     @scala.inline
+    def setFieldContext(value: InternalFormInstance): Self = this.set("fieldContext", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenFunction3(value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance) => ReactElement): Self = this.set("children", js.Any.fromFunction3(value))
+    def setChildrenFunction3(
+      value: (/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance[Values]) => ReactElement
+    ): Self = this.set("children", js.Any.fromFunction3(value))
     
     @scala.inline
     def setChildren(
-      value: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, ReactElement])
+      value: ReactElement | (js.Function3[
+          /* control */ ChildProps, 
+          /* meta */ Meta, 
+          /* form */ FormInstance[Values], 
+          ReactElement
+        ])
     ): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -124,6 +150,18 @@ object InternalFieldProps {
     
     @scala.inline
     def deleteInitialValue: Self = this.set("initialValue", js.undefined)
+    
+    @scala.inline
+    def setIsList(value: Boolean): Self = this.set("isList", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsList: Self = this.set("isList", js.undefined)
+    
+    @scala.inline
+    def setIsListField(value: Boolean): Self = this.set("isListField", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIsListField: Self = this.set("isListField", js.undefined)
     
     @scala.inline
     def setMessageVariables(value: Record[String, String]): Self = this.set("messageVariables", value.asInstanceOf[js.Any])
@@ -168,10 +206,10 @@ object InternalFieldProps {
     def deleteRules: Self = this.set("rules", js.undefined)
     
     @scala.inline
-    def setShouldUpdateFunction3(value: (/* prevValues */ Store, /* nextValues */ Store, /* info */ Source) => Boolean): Self = this.set("shouldUpdate", js.Any.fromFunction3(value))
+    def setShouldUpdateFunction3(value: (Values, Values, /* info */ Source) => Boolean): Self = this.set("shouldUpdate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setShouldUpdate(value: ShouldUpdate): Self = this.set("shouldUpdate", value.asInstanceOf[js.Any])
+    def setShouldUpdate(value: ShouldUpdate[Values]): Self = this.set("shouldUpdate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteShouldUpdate: Self = this.set("shouldUpdate", js.undefined)

@@ -11,7 +11,9 @@ package object mod {
     typingsSlinky.openidClient.mod.HttpOptions
   ]
   
-  type HttpOptions = typingsSlinky.got.mod.GotOptions[java.lang.String | scala.Null]
+  type DPoPInput = typingsSlinky.node.cryptoMod.KeyObject | typingsSlinky.node.cryptoMod.PrivateKeyInput | typingsSlinky.jose.mod.JWKRSAKey | typingsSlinky.jose.mod.JWKECKey | typingsSlinky.jose.mod.JWKOKPKey
+  
+  type HttpOptions = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify GotOptions */ js.Any
   
   type RetryFunction = js.Function2[/* retry */ scala.Double, /* error */ js.Error, scala.Double]
   

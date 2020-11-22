@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Object extends js.Object {
   
+  def _objectId(): String = js.native
+  
   /**
     * @returns void
     */
@@ -41,8 +43,6 @@ trait Object extends js.Object {
     */
   def linkingObjectsCount(): Double = js.native
   
-  def objectId(): String = js.native
-  
   /**
     * @returns ObjectSchema
     */
@@ -61,19 +61,19 @@ object Object {
   
   @scala.inline
   def apply(
+    _objectId: () => String,
     addListener: ObjectChangeCallback => Unit,
     entries: () => js.Array[js.Tuple2[String, _]],
     isValid: () => Boolean,
     keys: () => js.Array[String],
     linkingObjects: (String, String) => Results[js.Any with Object],
     linkingObjectsCount: () => Double,
-    objectId: () => String,
     objectSchema: () => ObjectSchema,
     removeAllListeners: () => Unit,
     removeListener: ObjectChangeCallback => Unit,
     toJSON: () => js.Any
   ): Object = {
-    val __obj = js.Dynamic.literal(addListener = js.Any.fromFunction1(addListener), entries = js.Any.fromFunction0(entries), isValid = js.Any.fromFunction0(isValid), keys = js.Any.fromFunction0(keys), linkingObjects = js.Any.fromFunction2(linkingObjects), linkingObjectsCount = js.Any.fromFunction0(linkingObjectsCount), objectId = js.Any.fromFunction0(objectId), objectSchema = js.Any.fromFunction0(objectSchema), removeAllListeners = js.Any.fromFunction0(removeAllListeners), removeListener = js.Any.fromFunction1(removeListener), toJSON = js.Any.fromFunction0(toJSON))
+    val __obj = js.Dynamic.literal(_objectId = js.Any.fromFunction0(_objectId), addListener = js.Any.fromFunction1(addListener), entries = js.Any.fromFunction0(entries), isValid = js.Any.fromFunction0(isValid), keys = js.Any.fromFunction0(keys), linkingObjects = js.Any.fromFunction2(linkingObjects), linkingObjectsCount = js.Any.fromFunction0(linkingObjectsCount), objectSchema = js.Any.fromFunction0(objectSchema), removeAllListeners = js.Any.fromFunction0(removeAllListeners), removeListener = js.Any.fromFunction1(removeListener), toJSON = js.Any.fromFunction0(toJSON))
     __obj.asInstanceOf[Object]
   }
   
@@ -93,6 +93,9 @@ object Object {
     }
     
     @scala.inline
+    def set_objectId(value: () => String): Self = this.set("_objectId", js.Any.fromFunction0(value))
+    
+    @scala.inline
     def setAddListener(value: ObjectChangeCallback => Unit): Self = this.set("addListener", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -109,9 +112,6 @@ object Object {
     
     @scala.inline
     def setLinkingObjectsCount(value: () => Double): Self = this.set("linkingObjectsCount", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setObjectId(value: () => String): Self = this.set("objectId", js.Any.fromFunction0(value))
     
     @scala.inline
     def setObjectSchema(value: () => ObjectSchema): Self = this.set("objectSchema", js.Any.fromFunction0(value))

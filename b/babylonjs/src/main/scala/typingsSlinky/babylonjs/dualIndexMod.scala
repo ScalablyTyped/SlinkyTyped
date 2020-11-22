@@ -9,6 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object dualIndexMod extends js.Object {
   
   @js.native
+  class CurrentScreenBlock protected ()
+    extends typingsSlinky.babylonjs.currentScreenBlockMod.CurrentScreenBlock {
+    /**
+      * Create a new CurrentScreenBlock
+      * @param name defines the block name
+      */
+    def this(name: String) = this()
+  }
+  
+  @js.native
   class FogBlock protected ()
     extends typingsSlinky.babylonjs.fogBlockMod.FogBlock {
     /**
@@ -32,7 +42,7 @@ object dualIndexMod extends js.Object {
   class ReflectionTextureBlock protected ()
     extends typingsSlinky.babylonjs.reflectionTextureBlockMod.ReflectionTextureBlock {
     /**
-      * Create a new TextureBlock
+      * Create a new ReflectionTextureBlock
       * @param name defines the block name
       */
     def this(name: String) = this()
@@ -46,5 +56,6 @@ object dualIndexMod extends js.Object {
       * @param name defines the block name
       */
     def this(name: String) = this()
+    def this(name: String, fragmentOnly: Boolean) = this()
   }
 }

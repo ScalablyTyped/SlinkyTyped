@@ -20,7 +20,8 @@ package object mod {
   
   type EggLoader = typingsSlinky.eggCore.mod.EggLoader[
     typingsSlinky.eggCore.mod.EggCore[typingsSlinky.eggCore.mod.PlainObject[js.Any]], 
-    js.Any
+    js.Any, 
+    typingsSlinky.eggCore.mod.EggLoaderOptions
   ]
   
   type EggLoaderOptions = typingsSlinky.eggCore.mod.EggLoaderOptions

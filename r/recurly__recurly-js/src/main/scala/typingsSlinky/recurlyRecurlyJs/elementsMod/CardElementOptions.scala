@@ -8,12 +8,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CardElementOptions extends js.Object {
   
+  /**
+    * If false, the card brand icon will be hidden
+    */
   var displayIcon: js.UndefOr[Boolean] = js.native
   
+  /**
+    * Modifies the input type of the card field:
+    *
+    * 'text' - text input for all fields.
+    *
+    * 'mobileSelect' - if the user is using amobile device, a native expiry select interface will appear when entering the
+    * expiration date.
+    *
+    * 'select' - Expiration date will be input using a select field on all devices. Mobile devices will display an
+    * optimized interface.
+    */
   var inputType: js.UndefOr[String] = js.native
   
+  /**
+    * Style to apply to input elements
+    *
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#styling-the-individual-card-elements|Styling the invididual card elements}
+    */
   var style: js.UndefOr[CommonElementStyleinvalid] = js.native
   
+  /**
+    * `tabindex` property to be applied to the outer iframe.
+    */
   var tabIndex: js.UndefOr[String] = js.native
 }
 object CardElementOptions {

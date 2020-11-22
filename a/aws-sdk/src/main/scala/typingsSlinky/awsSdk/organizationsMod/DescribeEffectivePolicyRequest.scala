@@ -13,7 +13,7 @@ trait DescribeEffectivePolicyRequest extends js.Object {
   var PolicyType: EffectivePolicyType = js.native
   
   /**
-    * When you're signed in as the master account, specify the ID of the account that you want details about. Specifying an organization root or organizational unit (OU) as the target is not supported. 
+    * When you're signed in as the management account, specify the ID of the account that you want details about. Specifying an organization root or organizational unit (OU) as the target is not supported.
     */
   var TargetId: js.UndefOr[PolicyTargetId] = js.native
 }

@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "Input")
+@JSImport("reactstrap/es", "Input")
 @js.native
-class Input[T] ()
+class Input ()
   extends Component[InputProps, js.Object, js.Any]

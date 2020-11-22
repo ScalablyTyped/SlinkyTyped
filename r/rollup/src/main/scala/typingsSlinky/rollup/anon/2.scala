@@ -1,7 +1,7 @@
 package typingsSlinky.rollup.anon
 
 import typingsSlinky.rollup.mod.RollupWatcherEvent
-import typingsSlinky.rollup.rollupStrings.END
+import typingsSlinky.rollup.rollupStrings.START
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `2` extends RollupWatcherEvent {
   
-  var code: END = js.native
+  var code: START = js.native
 }
 object `2` {
   
   @scala.inline
-  def apply(code: END): `2` = {
+  def apply(code: START): `2` = {
     val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any])
     __obj.asInstanceOf[`2`]
   }
@@ -35,6 +35,6 @@ object `2` {
     }
     
     @scala.inline
-    def setCode(value: END): Self = this.set("code", value.asInstanceOf[js.Any])
+    def setCode(value: START): Self = this.set("code", value.asInstanceOf[js.Any])
   }
 }

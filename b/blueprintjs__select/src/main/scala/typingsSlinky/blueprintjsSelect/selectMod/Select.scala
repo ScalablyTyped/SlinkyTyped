@@ -1,7 +1,7 @@
 package typingsSlinky.blueprintjsSelect.selectMod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.react.mod.Component
+import typingsSlinky.blueprintjsCore.mod.AbstractPureComponent2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@blueprintjs/select/lib/esm/components/select/select", "Select")
 @js.native
 class Select[T] ()
-  extends Component[ISelectProps[T], ISelectState, js.Any] {
+  extends AbstractPureComponent2[ISelectProps[T], ISelectState, js.Object] {
   
   var TypedQueryList: js.Any = js.native
   
@@ -49,5 +49,5 @@ object Select extends js.Object {
   
   var displayName: String = js.native
   
-  def ofType[T](): Instantiable1[/* props */ ISelectProps[T], Select[T]] = js.native
+  def ofType[U](): Instantiable1[/* props */ ISelectProps[U], Select[U]] = js.native
 }

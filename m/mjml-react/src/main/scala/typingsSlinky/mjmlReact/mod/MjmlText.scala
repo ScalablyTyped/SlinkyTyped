@@ -8,8 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("mjml-react", "MjmlText")
 @js.native
 class MjmlText ()
-  extends Component[
-      MjmlTextProps with RequiredChildrenProps with PaddingProps with ClassNameProps, 
-      js.Object, 
-      js.Any
-    ]
+  extends Component[MjmlTextProps with PaddingProps with ClassNameProps, js.Object, js.Any]

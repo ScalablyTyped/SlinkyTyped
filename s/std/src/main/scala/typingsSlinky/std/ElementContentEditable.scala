@@ -9,6 +9,8 @@ trait ElementContentEditable extends js.Object {
   
   var contentEditable: java.lang.String = js.native
   
+  var enterKeyHint: java.lang.String = js.native
+  
   var inputMode: java.lang.String = js.native
   
   val isContentEditable: scala.Boolean = js.native
@@ -16,8 +18,13 @@ trait ElementContentEditable extends js.Object {
 object ElementContentEditable {
   
   @scala.inline
-  def apply(contentEditable: java.lang.String, inputMode: java.lang.String, isContentEditable: scala.Boolean): ElementContentEditable = {
-    val __obj = js.Dynamic.literal(contentEditable = contentEditable.asInstanceOf[js.Any], inputMode = inputMode.asInstanceOf[js.Any], isContentEditable = isContentEditable.asInstanceOf[js.Any])
+  def apply(
+    contentEditable: java.lang.String,
+    enterKeyHint: java.lang.String,
+    inputMode: java.lang.String,
+    isContentEditable: scala.Boolean
+  ): ElementContentEditable = {
+    val __obj = js.Dynamic.literal(contentEditable = contentEditable.asInstanceOf[js.Any], enterKeyHint = enterKeyHint.asInstanceOf[js.Any], inputMode = inputMode.asInstanceOf[js.Any], isContentEditable = isContentEditable.asInstanceOf[js.Any])
     __obj.asInstanceOf[ElementContentEditable]
   }
   
@@ -38,6 +45,9 @@ object ElementContentEditable {
     
     @scala.inline
     def setContentEditable(value: java.lang.String): Self = this.set("contentEditable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setEnterKeyHint(value: java.lang.String): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setInputMode(value: java.lang.String): Self = this.set("inputMode", value.asInstanceOf[js.Any])

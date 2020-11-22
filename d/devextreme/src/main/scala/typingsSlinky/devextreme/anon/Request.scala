@@ -2,9 +2,8 @@ package typingsSlinky.devextreme.anon
 
 import org.scalajs.dom.raw.XMLHttpRequest
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.events.event
+import typingsSlinky.devextreme.mod.DevExpress.fileManagement.UploadInfo
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxFileUploader
-import typingsSlinky.devextreme.mod.global.JQueryEventObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,15 +15,13 @@ trait Request extends js.Object {
   
   var element: js.UndefOr[dxElement] = js.native
   
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
-  
   var file: js.UndefOr[org.scalajs.dom.raw.File] = js.native
-  
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
   
   var model: js.UndefOr[js.Any] = js.native
   
   var request: js.UndefOr[XMLHttpRequest] = js.native
+  
+  var uploadInfo: js.UndefOr[UploadInfo] = js.native
 }
 object Request {
   
@@ -62,22 +59,10 @@ object Request {
     def deleteElement: Self = this.set("element", js.undefined)
     
     @scala.inline
-    def setEvent(value: event): Self = this.set("event", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteEvent: Self = this.set("event", js.undefined)
-    
-    @scala.inline
     def setFile(value: org.scalajs.dom.raw.File): Self = this.set("file", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFile: Self = this.set("file", js.undefined)
-    
-    @scala.inline
-    def setJQueryEvent(value: JQueryEventObject): Self = this.set("jQueryEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteJQueryEvent: Self = this.set("jQueryEvent", js.undefined)
     
     @scala.inline
     def setModel(value: js.Any): Self = this.set("model", value.asInstanceOf[js.Any])
@@ -90,5 +75,11 @@ object Request {
     
     @scala.inline
     def deleteRequest: Self = this.set("request", js.undefined)
+    
+    @scala.inline
+    def setUploadInfo(value: UploadInfo): Self = this.set("uploadInfo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUploadInfo: Self = this.set("uploadInfo", js.undefined)
   }
 }

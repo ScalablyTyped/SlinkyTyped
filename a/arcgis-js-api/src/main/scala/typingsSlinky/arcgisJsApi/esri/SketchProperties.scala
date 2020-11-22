@@ -16,24 +16,13 @@ trait SketchProperties extends WidgetProperties {
     * Property controlling the visibility and order of create tool buttons.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#availableCreateTools)
-    *
-    * @default ["point", "polyline", "polygon", "rectangle", "circle"]
     */
   var availableCreateTools: js.UndefOr[js.Array[String]] = js.native
   
   /**
-    * Defines the default behavior once the [create](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#create) operation is completed. By default, the user will be able to continuously create graphics with same geometry types.  **Possible Values**
-    *
-    * Value | Description |
-    * ----- | ----------- |
-    * continuous | This is the default. Users can continue creating graphics with same geometry types.
-    * single | User can create a single graphic with the specified geometry type. User must choose an operation once the graphic is created.
-    * update | The graphic will be selected for an [update](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#update) operation once the `create` operation is completed.
-    *
+    * Defines the default behavior once the [create](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#create) operation is completed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#creationMode)
-    *
-    * @default continuous
     */
   var creationMode: js.UndefOr[single | continuous | update] = js.native
   
@@ -45,7 +34,7 @@ trait SketchProperties extends WidgetProperties {
   var defaultCreateOptions: js.UndefOr[SketchDefaultCreateOptions] = js.native
   
   /**
-    * Default update options set for the Sketch widget. Update options set on this property will be overwritten if the update options are changed when [update()](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#update) method is called.
+    * Default update options set for the Sketch widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#defaultUpdateOptions)
     */
@@ -59,7 +48,7 @@ trait SketchProperties extends WidgetProperties {
   var iconClass: js.UndefOr[String] = js.native
   
   /**
-    * The [GraphicsLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GraphicsLayer.html) associated with the Sketch widget. The Sketch widget adds new [graphics](https://developers.arcgis.com/javascript/latest/api-reference/esri-Graphic.html) to this layer or can only update graphics stored in this layer.
+    * The [GraphicsLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-GraphicsLayer.html) associated with the Sketch widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#layer)
     */
@@ -69,20 +58,18 @@ trait SketchProperties extends WidgetProperties {
     * Determines the layout/orientation of the Sketch widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#layout)
-    *
-    * @default horizontal
     */
   var layout: js.UndefOr[vertical | horizontal] = js.native
   
   /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the Sketch widget to a specific view.
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#view)
     */
   var view: js.UndefOr[MapViewProperties | SceneViewProperties] = js.native
   
   /**
-    * The view model for the Sketch widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [SketchViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch-SketchViewModel.html) class to access all properties and methods on the Sketch widget.
+    * The view model for the Sketch widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html#viewModel)
     */

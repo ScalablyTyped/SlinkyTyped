@@ -1,6 +1,7 @@
 package typingsSlinky.highcharts.mod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -885,7 +886,7 @@ class SVGRenderer protected () extends js.Object {
     */
   def setSize(width: Double, height: Double): Unit = js.native
   def setSize(width: Double, height: Double, animate: Boolean): Unit = js.native
-  def setSize(width: Double, height: Double, animate: AnimationOptionsObject): Unit = js.native
+  def setSize(width: Double, height: Double, animate: PartialAnimationOptionsOb): Unit = js.native
   
   /**
     * Apply the global style on the renderer, mixed with the default styles.

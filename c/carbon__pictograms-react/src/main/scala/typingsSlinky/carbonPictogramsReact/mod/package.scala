@@ -6,8 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type CarbonPictogramType = js.Function1[
-    /* props */ typingsSlinky.carbonPictogramsReact.mod.CarbonPictogramProps, 
-    typingsSlinky.react.mod.FunctionComponentElement[typingsSlinky.carbonPictogramsReact.mod.CarbonPictogramProps]
+  type CarbonPictogramType = typingsSlinky.react.mod.ForwardRefExoticComponent[
+    typingsSlinky.carbonPictogramsReact.mod.CarbonPictogramProps with typingsSlinky.react.mod.RefAttributes[org.scalajs.dom.raw.SVGSVGElement]
   ]
 }

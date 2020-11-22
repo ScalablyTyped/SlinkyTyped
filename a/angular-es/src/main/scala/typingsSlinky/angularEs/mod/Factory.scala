@@ -11,9 +11,9 @@ object Factory extends js.Object {
   /**
     * Register factory
     *
-    * @param {string} name - factory name
+    * @param name - factory name
     *
-    * @returns {ngESDecorator} - decorated class
+    * @returns decorated class
     */
   def apply(name: String): ngESDecorator = js.native
 }

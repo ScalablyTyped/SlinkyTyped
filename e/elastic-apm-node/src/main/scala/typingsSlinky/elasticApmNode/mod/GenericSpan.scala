@@ -9,6 +9,8 @@ trait GenericSpan extends Taggable {
   
   var action: String | Null = js.native
   
+  var outcome: Outcome = js.native
+  
   def setType(): Unit = js.native
   def setType(`type`: js.UndefOr[scala.Nothing], subtype: js.UndefOr[scala.Nothing], action: String): Unit = js.native
   def setType(`type`: js.UndefOr[scala.Nothing], subtype: String): Unit = js.native

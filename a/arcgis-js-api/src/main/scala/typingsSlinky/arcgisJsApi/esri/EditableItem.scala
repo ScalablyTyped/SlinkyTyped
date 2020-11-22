@@ -17,7 +17,7 @@ trait EditableItem extends Object {
   var layer: FeatureLayer = js.native
   
   /**
-    * *Read-only* The workflow type that this item supports. Can be either, `update` or `create`.
+    * *Read-only* The workflow type that this item supports.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-EditorViewModel.html#EditableItem)
     */

@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IntegerParameter extends js.Object {
   
   /**
-    * A display name for the dataset.
+    * The name of the integer parameter.
     */
   var Name: NonEmptyString = js.native
   
   /**
-    * Values.
+    * The values for the integer parameter.
     */
   var Values: LongList = js.native
 }

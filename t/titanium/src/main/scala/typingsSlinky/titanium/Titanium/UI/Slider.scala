@@ -248,7 +248,7 @@ trait Slider extends View {
     * Gets the value of the <Titanium.UI.Slider.trackTintColor> property.
     * @deprecated Access <Titanium.UI.Slider.trackTintColor> instead.
     */
-  def getTrackTintColor(): String = js.native
+  def getTrackTintColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Slider.value> property.
@@ -487,6 +487,7 @@ trait Slider extends View {
     * @deprecated Set the value using <Titanium.UI.Slider.trackTintColor> instead.
     */
   def setTrackTintColor(trackTintColor: String): Unit = js.native
+  def setTrackTintColor(trackTintColor: Color): Unit = js.native
   
   /**
     * Sets the [value](Titanium.UI.Slider.value) property.
@@ -507,7 +508,7 @@ trait Slider extends View {
   /**
     * The color shown for the portion of the progress bar that is not filled.
     */
-  var trackTintColor: String = js.native
+  var trackTintColor: String | Color = js.native
   
   /**
     * Current value of the slider.

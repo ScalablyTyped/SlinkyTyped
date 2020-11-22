@@ -21,16 +21,24 @@ object sceneMod extends js.Object {
   @js.native
   class Scene () extends Object3D {
     
+    /**
+    	 * @default true
+    	 */
     var autoUpdate: Boolean = js.native
     
+    /**
+    	 * @default null
+    	 */
     var background: Null | Color | Texture | WebGLCubeRenderTarget = js.native
     
-    def dispose(): Unit = js.native
-    
+    /**
+    	 * @default null
+    	 */
     var environment: Null | Texture = js.native
     
     /**
     	 * A fog instance defining the type of fog that affects everything rendered in the scene. Default is null.
+    	 * @default null
     	 */
     var fog: IFog | Null = js.native
     
@@ -49,6 +57,7 @@ object sceneMod extends js.Object {
     
     /**
     	 * If not null, it will force everything in the scene to be rendered with that material. Default is null.
+    	 * @default null
     	 */
     var overrideMaterial: Material | Null = js.native
     

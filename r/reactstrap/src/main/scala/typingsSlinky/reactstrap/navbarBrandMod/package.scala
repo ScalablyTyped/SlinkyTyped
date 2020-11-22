@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object navbarBrandMod {
   
-  type NavbarBrand[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.navbarBrandMod.NavbarBrandProps]
+  type NavbarBrand = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.navbarBrandMod.NavbarBrandProps]
 }

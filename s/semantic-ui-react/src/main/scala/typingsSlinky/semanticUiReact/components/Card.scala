@@ -6,7 +6,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.cardCardMod.CardProps
 import typingsSlinky.semanticUiReact.cardContentMod.CardContentProps
 import typingsSlinky.semanticUiReact.cardDescriptionMod.CardDescriptionProps
@@ -55,7 +54,7 @@ object Card {
     
     @scala.inline
     def descriptionFunction3(
-      value: (/* component */ ReactType[CardDescriptionProps], CardDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, CardDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("description", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -75,7 +74,7 @@ object Card {
     
     @scala.inline
     def headerFunction3(
-      value: (/* component */ ReactType[CardHeaderProps], CardHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, CardHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("header", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -89,7 +88,7 @@ object Card {
     
     @scala.inline
     def imageFunction3(
-      value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("image", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -103,7 +102,7 @@ object Card {
     
     @scala.inline
     def metaFunction3(
-      value: (/* component */ ReactType[CardMetaProps], CardMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+      value: (/* component */ ReactElement, CardMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
     ): this.type = set("meta", js.Any.fromFunction3(value))
     
     @scala.inline

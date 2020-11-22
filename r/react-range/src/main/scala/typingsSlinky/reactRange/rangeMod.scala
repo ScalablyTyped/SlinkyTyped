@@ -30,6 +30,8 @@ object rangeMod extends js.Object {
     
     def addTouchEvents(e: TouchEvent): Unit = js.native
     
+    def calculateMarkOffsets(): Unit = js.native
+    
     @JSName("componentDidMount")
     def componentDidMount_MRange(): Unit = js.native
     
@@ -47,9 +49,13 @@ object rangeMod extends js.Object {
     
     def getThumbs(): js.Array[Element] = js.native
     
+    var markRefs: js.Array[ReactRef[HTMLElement]] = js.native
+    
     def normalizeValue(value: Double, index: Double): Double = js.native
     
-    def onEnd(e: Event): Unit = js.native
+    var numOfMarks: Double = js.native
+    
+    def onEnd(e: Event): js.UndefOr[Null] = js.native
     
     def onKeyDown(e: SyntheticKeyboardEvent[Element]): Unit = js.native
     

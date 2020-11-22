@@ -103,7 +103,7 @@ trait DBSnapshot extends js.Object {
   var ProcessorFeatures: js.UndefOr[ProcessorFeatureList] = js.native
   
   /**
-    * Specifies when the snapshot was taken in Coodinated Universal Time (UTC).
+    * Specifies when the snapshot was taken in Coordinated Universal Time (UTC).
     */
   var SnapshotCreateTime: js.UndefOr[js.Date] = js.native
   
@@ -131,6 +131,8 @@ trait DBSnapshot extends js.Object {
     * Specifies the storage type associated with DB snapshot.
     */
   var StorageType: js.UndefOr[String] = js.native
+  
+  var TagList: js.UndefOr[typingsSlinky.awsSdk.rdsMod.TagList] = js.native
   
   /**
     * The ARN from the key store with which to associate the instance for TDE encryption.
@@ -322,6 +324,15 @@ object DBSnapshot {
     
     @scala.inline
     def deleteStorageType: Self = this.set("StorageType", js.undefined)
+    
+    @scala.inline
+    def setTagListVarargs(value: Tag*): Self = this.set("TagList", js.Array(value :_*))
+    
+    @scala.inline
+    def setTagList(value: TagList): Self = this.set("TagList", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTagList: Self = this.set("TagList", js.undefined)
     
     @scala.inline
     def setTdeCredentialArn(value: String): Self = this.set("TdeCredentialArn", value.asInstanceOf[js.Any])

@@ -32,6 +32,35 @@ class BoundElementProperty protected () extends js.Object {
     value: ASTWithSource,
     unit: String,
     sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: ASTWithSource,
+    unit: Null,
+    sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: ASTWithSource,
+    unit: String,
+    sourceSpan: ParseSourceSpan,
+    keySpan: js.UndefOr[scala.Nothing],
+    valueSpan: ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: ASTWithSource,
+    unit: String,
+    sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan,
     valueSpan: ParseSourceSpan
   ) = this()
   def this(
@@ -41,8 +70,21 @@ class BoundElementProperty protected () extends js.Object {
     value: ASTWithSource,
     unit: Null,
     sourceSpan: ParseSourceSpan,
+    keySpan: js.UndefOr[scala.Nothing],
     valueSpan: ParseSourceSpan
   ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: ASTWithSource,
+    unit: Null,
+    sourceSpan: ParseSourceSpan,
+    keySpan: ParseSourceSpan,
+    valueSpan: ParseSourceSpan
+  ) = this()
+  
+  val keySpan: js.UndefOr[ParseSourceSpan] = js.native
   
   var name: String = js.native
   

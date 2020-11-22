@@ -4,8 +4,10 @@ import typingsSlinky.stellarBase.stellarBaseNumbers.`0`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`1`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`2`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`3`
+import typingsSlinky.stellarBase.stellarBaseNumbers.`4`
 import typingsSlinky.stellarBase.stellarBaseStrings.account
-import typingsSlinky.stellarBase.stellarBaseStrings.datum
+import typingsSlinky.stellarBase.stellarBaseStrings.claimableBalance
+import typingsSlinky.stellarBase.stellarBaseStrings.data
 import typingsSlinky.stellarBase.stellarBaseStrings.offer
 import typingsSlinky.stellarBase.stellarBaseStrings.trustline
 import scala.scalajs.js
@@ -15,14 +17,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LedgerEntryType extends js.Object {
   
-  val name: account | trustline | offer | datum = js.native
+  val name: account | trustline | offer | data | claimableBalance = js.native
   
-  val value: `0` | `1` | `2` | `3` = js.native
+  val value: `0` | `1` | `2` | `3` | `4` = js.native
 }
 object LedgerEntryType {
   
   @scala.inline
-  def apply(name: account | trustline | offer | datum, value: `0` | `1` | `2` | `3`): LedgerEntryType = {
+  def apply(name: account | trustline | offer | data | claimableBalance, value: `0` | `1` | `2` | `3` | `4`): LedgerEntryType = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[LedgerEntryType]
   }
@@ -43,9 +45,9 @@ object LedgerEntryType {
     }
     
     @scala.inline
-    def setName(value: account | trustline | offer | datum): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: account | trustline | offer | data | claimableBalance): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: `0` | `1` | `2` | `3`): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: `0` | `1` | `2` | `3` | `4`): Self = this.set("value", value.asInstanceOf[js.Any])
   }
 }

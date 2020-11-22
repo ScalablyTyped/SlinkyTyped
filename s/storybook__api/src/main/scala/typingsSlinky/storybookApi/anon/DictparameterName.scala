@@ -9,15 +9,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DictparameterName
   extends /* key */ StringDictionary[js.Any] {
   
-  var filename: String = js.native
+  var docsOnly: js.UndefOr[Boolean] = js.native
   
-  var options: Dictkey = js.native
+  var fileName: String = js.native
+  
+  var options: StringDictionary[js.Any] = js.native
+  
+  var viewMode: js.UndefOr[typingsSlinky.storybookApi.addonsMod.ViewMode] = js.native
 }
 object DictparameterName {
   
   @scala.inline
-  def apply(filename: String, options: Dictkey): DictparameterName = {
-    val __obj = js.Dynamic.literal(filename = filename.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
+  def apply(fileName: String, options: StringDictionary[js.Any]): DictparameterName = {
+    val __obj = js.Dynamic.literal(fileName = fileName.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any])
     __obj.asInstanceOf[DictparameterName]
   }
   
@@ -37,9 +41,21 @@ object DictparameterName {
     }
     
     @scala.inline
-    def setFilename(value: String): Self = this.set("filename", value.asInstanceOf[js.Any])
+    def setFileName(value: String): Self = this.set("fileName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: Dictkey): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: StringDictionary[js.Any]): Self = this.set("options", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDocsOnly(value: Boolean): Self = this.set("docsOnly", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDocsOnly: Self = this.set("docsOnly", js.undefined)
+    
+    @scala.inline
+    def setViewMode(value: typingsSlinky.storybookApi.addonsMod.ViewMode): Self = this.set("viewMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteViewMode: Self = this.set("viewMode", js.undefined)
   }
 }

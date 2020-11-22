@@ -27,6 +27,10 @@ trait DBusServiceInterface extends js.Object {
   
   def emitSignal(name: String, values: js.Any*): Unit = js.native
   
+  var name: String = js.native
+  
+  var `object`: DBusServiceObject = js.native
+  
   def update(): Unit = js.native
 }
 object DBusServiceInterface {
@@ -42,9 +46,12 @@ object DBusServiceInterface {
     addProperty: (String, Getter) => Unit,
     addSignal: (String, Types) => Unit,
     emitSignal: (String, /* repeated */ js.Any) => Unit,
+    name: String,
+    `object`: DBusServiceObject,
     update: () => Unit
   ): DBusServiceInterface = {
-    val __obj = js.Dynamic.literal(addMethod = js.Any.fromFunction3(addMethod), addProperty = js.Any.fromFunction2(addProperty), addSignal = js.Any.fromFunction2(addSignal), emitSignal = js.Any.fromFunction2(emitSignal), update = js.Any.fromFunction0(update))
+    val __obj = js.Dynamic.literal(addMethod = js.Any.fromFunction3(addMethod), addProperty = js.Any.fromFunction2(addProperty), addSignal = js.Any.fromFunction2(addSignal), emitSignal = js.Any.fromFunction2(emitSignal), name = name.asInstanceOf[js.Any], update = js.Any.fromFunction0(update))
+    __obj.updateDynamic("object")(`object`.asInstanceOf[js.Any])
     __obj.asInstanceOf[DBusServiceInterface]
   }
   
@@ -81,6 +88,12 @@ object DBusServiceInterface {
     
     @scala.inline
     def setEmitSignal(value: (String, /* repeated */ js.Any) => Unit): Self = this.set("emitSignal", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setObject(value: DBusServiceObject): Self = this.set("object", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUpdate(value: () => Unit): Self = this.set("update", js.Any.fromFunction0(value))

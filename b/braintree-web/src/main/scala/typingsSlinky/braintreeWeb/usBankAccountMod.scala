@@ -16,13 +16,13 @@ object usBankAccountMod extends js.Object {
     
     var VERSION: String = js.native
     
-    def create(options: Client, callback: callback): Unit = js.native
+    def create(options: Client, callback: callback[_]): Unit = js.native
     
     /**
       * Cleanly tear down anything set up by {@link module:braintree-web/us-bank-account.create|create}.
       */
     def teardown(): Unit = js.native
-    def teardown(callback: callback): Unit = js.native
+    def teardown(callback: callback[_]): Unit = js.native
     
     /**
       * Tokenizes bank information to return a payment method nonce. You can tokenize bank details by providing
@@ -86,6 +86,6 @@ object usBankAccountMod extends js.Object {
       *   });
       * });
       */
-    def tokenize(options: BankDetails, callback: callback): Unit = js.native
+    def tokenize(options: BankDetails, callback: callback[_]): Unit = js.native
   }
 }

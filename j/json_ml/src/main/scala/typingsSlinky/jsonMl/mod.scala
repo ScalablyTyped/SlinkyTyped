@@ -1,6 +1,6 @@
 package typingsSlinky.jsonMl
 
-import typingsSlinky.cheerio.Cheerio
+import typingsSlinky.cheerio.cheerio.Cheerio
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

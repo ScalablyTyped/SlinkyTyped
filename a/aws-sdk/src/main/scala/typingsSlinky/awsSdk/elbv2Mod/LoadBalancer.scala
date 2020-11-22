@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LoadBalancer extends js.Object {
   
   /**
-    * The Availability Zones for the load balancer.
+    * The subnets for the load balancer.
     */
   var AvailabilityZones: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.AvailabilityZones] = js.native
   
@@ -21,6 +21,11 @@ trait LoadBalancer extends js.Object {
     * The date and time the load balancer was created.
     */
   var CreatedTime: js.UndefOr[js.Date] = js.native
+  
+  /**
+    * [Application Load Balancers on Outposts] The ID of the customer-owned address pool.
+    */
+  var CustomerOwnedIpv4Pool: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.CustomerOwnedIpv4Pool] = js.native
   
   /**
     * The public DNS name of the load balancer.
@@ -110,6 +115,12 @@ object LoadBalancer {
     
     @scala.inline
     def deleteCreatedTime: Self = this.set("CreatedTime", js.undefined)
+    
+    @scala.inline
+    def setCustomerOwnedIpv4Pool(value: CustomerOwnedIpv4Pool): Self = this.set("CustomerOwnedIpv4Pool", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomerOwnedIpv4Pool: Self = this.set("CustomerOwnedIpv4Pool", js.undefined)
     
     @scala.inline
     def setDNSName(value: DNSName): Self = this.set("DNSName", value.asInstanceOf[js.Any])

@@ -33,7 +33,7 @@ trait CodeReviewSummary extends js.Object {
   var Name: js.UndefOr[typingsSlinky.awsSdk.codegurureviewerMod.Name] = js.native
   
   /**
-    * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that owns the repository. For a GitHub or Bitbucket repository, this is the username for the account that owns the repository.
+    * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for the account that owns the repository.
     */
   var Owner: js.UndefOr[typingsSlinky.awsSdk.codegurureviewerMod.Owner] = js.native
   

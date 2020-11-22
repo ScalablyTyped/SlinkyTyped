@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object default extends js.Object {
   
-  def apply[RecordType](hasChildren: FooterProps[RecordType]): ReactElement = js.native
+  def apply(hasChildren: FooterProps): ReactElement = js.native
 }

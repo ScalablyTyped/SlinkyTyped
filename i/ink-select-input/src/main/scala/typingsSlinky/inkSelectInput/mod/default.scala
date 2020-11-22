@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("ink-select-input", JSImport.Default)
 @js.native
 class default ()
-  extends Component[InkSelectInputProps, js.Object, js.Any]
+  extends Component[SelectInputProps[ItemOfSelectInput], js.Object, js.Any]

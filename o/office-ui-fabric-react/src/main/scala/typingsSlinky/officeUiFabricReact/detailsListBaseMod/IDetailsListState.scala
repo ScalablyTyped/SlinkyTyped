@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact.detailsListBaseMod
 
 import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IColumn
+import typingsSlinky.officeUiFabricReact.detailsListTypesMod.IDetailsListProps
 import typingsSlinky.uifabricUtilities.selectionTypesMod.SelectionMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,6 +13,8 @@ trait IDetailsListState extends js.Object {
   var adjustedColumns: js.Array[IColumn] = js.native
   
   var focusedItemIndex: Double = js.native
+  
+  def getDerivedStateFromProps(nextProps: IDetailsListProps, previousState: IDetailsListState): IDetailsListState = js.native
   
   var isCollapsed: js.UndefOr[Boolean] = js.native
   
@@ -26,8 +29,12 @@ trait IDetailsListState extends js.Object {
 object IDetailsListState {
   
   @scala.inline
-  def apply(adjustedColumns: js.Array[IColumn], focusedItemIndex: Double): IDetailsListState = {
-    val __obj = js.Dynamic.literal(adjustedColumns = adjustedColumns.asInstanceOf[js.Any], focusedItemIndex = focusedItemIndex.asInstanceOf[js.Any])
+  def apply(
+    adjustedColumns: js.Array[IColumn],
+    focusedItemIndex: Double,
+    getDerivedStateFromProps: (IDetailsListProps, IDetailsListState) => IDetailsListState
+  ): IDetailsListState = {
+    val __obj = js.Dynamic.literal(adjustedColumns = adjustedColumns.asInstanceOf[js.Any], focusedItemIndex = focusedItemIndex.asInstanceOf[js.Any], getDerivedStateFromProps = js.Any.fromFunction2(getDerivedStateFromProps))
     __obj.asInstanceOf[IDetailsListState]
   }
   
@@ -54,6 +61,9 @@ object IDetailsListState {
     
     @scala.inline
     def setFocusedItemIndex(value: Double): Self = this.set("focusedItemIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setGetDerivedStateFromProps(value: (IDetailsListProps, IDetailsListState) => IDetailsListState): Self = this.set("getDerivedStateFromProps", js.Any.fromFunction2(value))
     
     @scala.inline
     def setIsCollapsed(value: Boolean): Self = this.set("isCollapsed", value.asInstanceOf[js.Any])

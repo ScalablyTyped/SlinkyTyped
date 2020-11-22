@@ -11,43 +11,37 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait dotDensityCreateRendererParams extends Object {
   
   /**
-    * A set of complementary numeric fields/expressions used as the basis of the dot density visualization. For example, if creating an election map, you would indicate the names of each field representing the candidate or political party where total votes are stored.
+    * A set of complementary numeric fields/expressions used as the basis of the dot density visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer)
     */
   var attributes: js.Array[dotDensityCreateRendererParamsAttributes] = js.native
   
   /**
-    * The [named string](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap) or basemap object of the Esri basemap that will be paired with the output visualization. Determines optimal colors for the output renderer.
+    * The [named string](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html#basemap) or basemap object of the Esri basemap that will be paired with the output visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer)
-    *
-    * @default gray
     */
   var basemap: js.UndefOr[String | Basemap] = js.native
   
   /**
-    * Indicates whether to enable color blending of different colored dots rendered at the same pixel. This is only visible in highly dense and highly diverse features.
+    * Indicates whether to enable color blending of different colored dots rendered at the same pixel.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer)
-    *
-    * @default true
     */
   var dotBlendingEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * In authoring apps, the user may select a pre-defined dot density scheme. Pass the scheme object to this property to avoid getting one based on the `basemap`.
+    * In authoring apps, the user may select a pre-defined dot density scheme.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer)
     */
   var dotDensityScheme: js.UndefOr[DotDensityScheme] = js.native
   
   /**
-    * Indicates whether to vary the value of each dot by the view's scale. This will set the [referenceScale](https://developers.arcgis.com/javascript/latest/api-reference/esri-renderers-DotDensityRenderer.html#referenceScale) of the output renderer.
+    * Indicates whether to vary the value of each dot by the view's scale.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer)
-    *
-    * @default true
     */
   var dotValueOptimizationEnabled: js.UndefOr[Boolean] = js.native
   
@@ -66,16 +60,14 @@ trait dotDensityCreateRendererParams extends Object {
   var legendOptions: js.UndefOr[dotDensityCreateRendererParamsLegendOptions] = js.native
   
   /**
-    * Indicates whether the polygon outline width should vary based on view scale. When false, no outline will be used in the output renderer.
+    * Indicates whether the polygon outline width should vary based on view scale.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer)
-    *
-    * @default false
     */
   var outlineOptimizationEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+    * Allows for cancelable requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-renderers-dotDensity.html#createRenderer)
     */

@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.poolingMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.DataFormat
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.PaddingMode
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer

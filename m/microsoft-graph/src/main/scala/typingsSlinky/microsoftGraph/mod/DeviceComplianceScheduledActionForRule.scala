@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeviceComplianceScheduledActionForRule extends Entity {
   
   // Name of the rule which this scheduled action applies to.
-  var ruleName: js.UndefOr[String] = js.native
+  var ruleName: js.UndefOr[NullableOption[String]] = js.native
   
   // The list of scheduled action configurations for this compliance policy.
-  var scheduledActionConfigurations: js.UndefOr[js.Array[DeviceComplianceActionItem]] = js.native
+  var scheduledActionConfigurations: js.UndefOr[NullableOption[js.Array[DeviceComplianceActionItem]]] = js.native
 }
 object DeviceComplianceScheduledActionForRule {
   
@@ -37,18 +37,24 @@ object DeviceComplianceScheduledActionForRule {
     }
     
     @scala.inline
-    def setRuleName(value: String): Self = this.set("ruleName", value.asInstanceOf[js.Any])
+    def setRuleName(value: NullableOption[String]): Self = this.set("ruleName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRuleName: Self = this.set("ruleName", js.undefined)
     
     @scala.inline
+    def setRuleNameNull: Self = this.set("ruleName", null)
+    
+    @scala.inline
     def setScheduledActionConfigurationsVarargs(value: DeviceComplianceActionItem*): Self = this.set("scheduledActionConfigurations", js.Array(value :_*))
     
     @scala.inline
-    def setScheduledActionConfigurations(value: js.Array[DeviceComplianceActionItem]): Self = this.set("scheduledActionConfigurations", value.asInstanceOf[js.Any])
+    def setScheduledActionConfigurations(value: NullableOption[js.Array[DeviceComplianceActionItem]]): Self = this.set("scheduledActionConfigurations", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteScheduledActionConfigurations: Self = this.set("scheduledActionConfigurations", js.undefined)
+    
+    @scala.inline
+    def setScheduledActionConfigurationsNull: Self = this.set("scheduledActionConfigurations", null)
   }
 }

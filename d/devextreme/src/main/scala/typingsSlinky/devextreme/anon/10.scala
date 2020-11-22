@@ -1,15 +1,14 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxSlideOut
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait `10` extends js.Object {
+trait `10`[T] extends js.Object {
   
-  var component: js.UndefOr[dxSlideOut] = js.native
+  var component: js.UndefOr[T] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -18,13 +17,13 @@ trait `10` extends js.Object {
 object `10` {
   
   @scala.inline
-  def apply(): `10` = {
+  def apply[T](): `10`[T] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[`10`]
+    __obj.asInstanceOf[`10`[T]]
   }
   
   @scala.inline
-  implicit class `10Ops`[Self <: `10`] (val x: Self) extends AnyVal {
+  implicit class `10Ops`[Self <: `10`[_], T] (val x: Self with `10`[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -39,7 +38,7 @@ object `10` {
     }
     
     @scala.inline
-    def setComponent(value: dxSlideOut): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: T): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)

@@ -20,9 +20,6 @@ trait ScaleRangeSliderViewModel extends Accessor {
     * Utility method for converting scale-to-slider values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#mapScaleToSlider)
-    *
-    * @param scale The map scale to be converted.
-    *
     */
   def mapScaleToSlider(scale: Double): Double = js.native
   
@@ -30,14 +27,11 @@ trait ScaleRangeSliderViewModel extends Accessor {
     * Utility method for converting slider-to-scale values.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#mapSliderToScale)
-    *
-    * @param value The value of the slider.
-    *
     */
   def mapSliderToScale(value: Double): Double = js.native
   
   /**
-    * The maximum scale of the active scale range. When the maxScale reaches the [maxScaleLimit](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#maxScaleLimit), the maxScale value becomes 0 and there is no maximum scale set.
+    * The maximum scale of the active scale range.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#maxScale)
     */
@@ -51,7 +45,7 @@ trait ScaleRangeSliderViewModel extends Accessor {
   var maxScaleLimit: Double = js.native
   
   /**
-    * The minimum scale of the active scale range. When the minScale reaches the [minScaleLimit](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#minScaleLimit), the minScale value becomes 0 and there is no minimum scale set.
+    * The minimum scale of the active scale range.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#minScale)
     */
@@ -82,13 +76,11 @@ trait ScaleRangeSliderViewModel extends Accessor {
     * The current state of the widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#state)
-    *
-    * @default disabled
     */
   val state: disabled | ready = js.native
   
   /**
-    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html). Set this to link the widget to a specific view.
+    * A reference to the [MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) or [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider-ScaleRangeSliderViewModel.html#view)
     */

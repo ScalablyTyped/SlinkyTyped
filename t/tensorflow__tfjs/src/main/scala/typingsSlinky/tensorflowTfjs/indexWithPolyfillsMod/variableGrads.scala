@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 
 import typingsSlinky.tensorflowTfjsCore.anon.Value
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Variable
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Variable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -38,8 +38,9 @@ object variableGrads extends js.Object {
     *     If the `varList` argument is provided explicitly and contains a subset of
     *     non-trainable variables, this map in the return value will contain keys
     *     that map the names of the non-trainable variables to `null`.
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def apply(f: js.Function0[Scalar]): Value = js.native
   def apply(
     f: js.Function0[Scalar],

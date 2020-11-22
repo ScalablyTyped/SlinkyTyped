@@ -1,7 +1,7 @@
 
 # Scala.js typings for is-online
 
-Typings are for version 8.4.0
+Typings are for version 9.0.0
 
 ## Library description:
 Check if the internet connection is up

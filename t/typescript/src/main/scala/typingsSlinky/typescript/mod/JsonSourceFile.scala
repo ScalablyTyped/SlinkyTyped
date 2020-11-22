@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait JsonSourceFile extends SourceFile {
   
   @JSName("statements")
-  var statements_JsonSourceFile: NodeArray[JsonObjectExpressionStatement] = js.native
+  val statements_JsonSourceFile: NodeArray[JsonObjectExpressionStatement] = js.native
 }

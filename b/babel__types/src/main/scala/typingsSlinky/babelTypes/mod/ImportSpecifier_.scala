@@ -15,7 +15,7 @@ trait ImportSpecifier_
   
   var importKind: `type` | typeof | Null = js.native
   
-  var imported: Identifier_ = js.native
+  var imported: Identifier_ | StringLiteral_ = js.native
   
   var local: Identifier_ = js.native
   
@@ -25,7 +25,7 @@ trait ImportSpecifier_
 object ImportSpecifier_ {
   
   @scala.inline
-  def apply(imported: Identifier_, local: Identifier_, `type`: ImportSpecifier): ImportSpecifier_ = {
+  def apply(imported: Identifier_ | StringLiteral_, local: Identifier_, `type`: ImportSpecifier): ImportSpecifier_ = {
     val __obj = js.Dynamic.literal(imported = imported.asInstanceOf[js.Any], local = local.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ImportSpecifier_]
@@ -47,7 +47,7 @@ object ImportSpecifier_ {
     }
     
     @scala.inline
-    def setImported(value: Identifier_): Self = this.set("imported", value.asInstanceOf[js.Any])
+    def setImported(value: Identifier_ | StringLiteral_): Self = this.set("imported", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLocal(value: Identifier_): Self = this.set("local", value.asInstanceOf[js.Any])

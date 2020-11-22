@@ -26,6 +26,7 @@ object IndicatorSeparator {
     getValue: () => ValueType[js.Any],
     hasValue: Boolean,
     innerProps: js.Any,
+    isDisabled: Boolean,
     isFocused: Boolean,
     isMulti: Boolean,
     isRtl: Boolean,
@@ -34,7 +35,7 @@ object IndicatorSeparator {
     selectProps: Props[js.Any],
     setValue: (ValueType[js.Any], ActionTypes) => Unit
   ): SharedBuilder_IndicatorProps_1609693056 = {
-    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], isRtl = isRtl.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
+    val __props = js.Dynamic.literal(clearValue = js.Any.fromFunction0(clearValue), cx = js.Any.fromFunction2(cx), getStyles = js.Any.fromFunction2(getStyles), getValue = js.Any.fromFunction0(getValue), hasValue = hasValue.asInstanceOf[js.Any], innerProps = innerProps.asInstanceOf[js.Any], isDisabled = isDisabled.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], isMulti = isMulti.asInstanceOf[js.Any], isRtl = isRtl.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], selectOption = js.Any.fromFunction1(selectOption), selectProps = selectProps.asInstanceOf[js.Any], setValue = js.Any.fromFunction2(setValue))
     new SharedBuilder_IndicatorProps_1609693056(js.Array(this.component, __props.asInstanceOf[IndicatorProps[js.Any]]))
   }
 }

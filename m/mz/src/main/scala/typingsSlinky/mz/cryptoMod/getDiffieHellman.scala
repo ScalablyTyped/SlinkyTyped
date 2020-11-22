@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getDiffieHellman extends js.Object {
   
-  def apply(group_name: String): typingsSlinky.node.cryptoMod.DiffieHellman = js.native
+  def apply(group_name: String): typingsSlinky.node.cryptoMod.DiffieHellman_ = js.native
 }

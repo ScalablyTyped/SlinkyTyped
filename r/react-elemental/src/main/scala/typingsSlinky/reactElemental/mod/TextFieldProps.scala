@@ -21,8 +21,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactElemental.reactElementalStrings.`additions removals`
 import typingsSlinky.reactElemental.reactElementalStrings.`additions text`
 import typingsSlinky.reactElemental.reactElementalStrings.`inline`
+import typingsSlinky.reactElemental.reactElementalStrings.`removals additions`
+import typingsSlinky.reactElemental.reactElementalStrings.`removals text`
+import typingsSlinky.reactElemental.reactElementalStrings.`text additions`
+import typingsSlinky.reactElemental.reactElementalStrings.`text removals`
 import typingsSlinky.reactElemental.reactElementalStrings.additions
 import typingsSlinky.reactElemental.reactElementalStrings.all
 import typingsSlinky.reactElemental.reactElementalStrings.ascending
@@ -33,8 +38,11 @@ import typingsSlinky.reactElemental.reactElementalStrings.date
 import typingsSlinky.reactElemental.reactElementalStrings.decimal
 import typingsSlinky.reactElemental.reactElementalStrings.descending
 import typingsSlinky.reactElemental.reactElementalStrings.dialog
+import typingsSlinky.reactElemental.reactElementalStrings.done
 import typingsSlinky.reactElemental.reactElementalStrings.email
+import typingsSlinky.reactElemental.reactElementalStrings.enter
 import typingsSlinky.reactElemental.reactElementalStrings.execute
+import typingsSlinky.reactElemental.reactElementalStrings.go
 import typingsSlinky.reactElemental.reactElementalStrings.grammar
 import typingsSlinky.reactElemental.reactElementalStrings.grid
 import typingsSlinky.reactElemental.reactElementalStrings.horizontal
@@ -46,6 +54,7 @@ import typingsSlinky.reactElemental.reactElementalStrings.location
 import typingsSlinky.reactElemental.reactElementalStrings.menu
 import typingsSlinky.reactElemental.reactElementalStrings.mixed
 import typingsSlinky.reactElemental.reactElementalStrings.move
+import typingsSlinky.reactElemental.reactElementalStrings.next
 import typingsSlinky.reactElemental.reactElementalStrings.no
 import typingsSlinky.reactElemental.reactElementalStrings.none
 import typingsSlinky.reactElemental.reactElementalStrings.numeric
@@ -55,8 +64,10 @@ import typingsSlinky.reactElemental.reactElementalStrings.other
 import typingsSlinky.reactElemental.reactElementalStrings.page
 import typingsSlinky.reactElemental.reactElementalStrings.polite
 import typingsSlinky.reactElemental.reactElementalStrings.popup
+import typingsSlinky.reactElemental.reactElementalStrings.previous
 import typingsSlinky.reactElemental.reactElementalStrings.removals
 import typingsSlinky.reactElemental.reactElementalStrings.search
+import typingsSlinky.reactElemental.reactElementalStrings.send
 import typingsSlinky.reactElemental.reactElementalStrings.spelling
 import typingsSlinky.reactElemental.reactElementalStrings.step
 import typingsSlinky.reactElemental.reactElementalStrings.tel
@@ -260,7 +271,9 @@ trait TextFieldProps extends js.Object {
     * Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
     * @see aria-atomic.
     */
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   /** Indicates that user input is required on the element before a form may be submitted. */
   var `aria-required`: js.UndefOr[Boolean] = js.native
@@ -362,6 +375,8 @@ trait TextFieldProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.native
   
   var draggable: js.UndefOr[Booleanish] = js.native
+  
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
   
   val error: js.UndefOr[String] = js.native
   
@@ -1397,7 +1412,9 @@ object TextFieldProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1611,6 +1628,12 @@ object TextFieldProps {
     
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    
+    @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
     
     @scala.inline
     def setError(value: String): Self = this.set("error", value.asInstanceOf[js.Any])

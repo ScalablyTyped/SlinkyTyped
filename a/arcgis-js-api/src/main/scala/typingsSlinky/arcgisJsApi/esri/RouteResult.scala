@@ -31,7 +31,7 @@ trait RouteResult
   var routeName: String = js.native
   
   /**
-    * Array of stops. Returned only if `RouteParameters.returnStops = true`.
+    * Array of stops.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RouteResult.html#stops)
     */

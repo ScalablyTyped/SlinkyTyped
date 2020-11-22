@@ -42,6 +42,8 @@ trait DomainPackageDetails extends js.Object {
     */
   var PackageType: js.UndefOr[typingsSlinky.awsSdk.esMod.PackageType] = js.native
   
+  var PackageVersion: js.UndefOr[typingsSlinky.awsSdk.esMod.PackageVersion] = js.native
+  
   /**
     * The relative path on Amazon ES nodes, which can be used as synonym_path when the package is synonym file.
     */
@@ -111,6 +113,12 @@ object DomainPackageDetails {
     
     @scala.inline
     def deletePackageType: Self = this.set("PackageType", js.undefined)
+    
+    @scala.inline
+    def setPackageVersion(value: PackageVersion): Self = this.set("PackageVersion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePackageVersion: Self = this.set("PackageVersion", js.undefined)
     
     @scala.inline
     def setReferencePath(value: ReferencePath): Self = this.set("ReferencePath", value.asInstanceOf[js.Any])

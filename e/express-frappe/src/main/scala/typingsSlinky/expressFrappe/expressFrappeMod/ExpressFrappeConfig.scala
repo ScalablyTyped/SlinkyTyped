@@ -72,7 +72,7 @@ object ExpressFrappeConfig {
     
     @scala.inline
     def setErrorHandler(
-      value: (/* err */ js.Any, /* req */ Request[ParamsDictionary, _, _, Query], /* res */ Response[_], /* next */ NextFunction) => js.Any
+      value: (/* err */ js.Any, /* req */ Request[ParamsDictionary, _, _, Query], /* res */ Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("errorHandler", js.Any.fromFunction4(value))
     
     @scala.inline

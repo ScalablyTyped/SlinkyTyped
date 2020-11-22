@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.planMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.inputMod.backup.PlanAdvancedBackupSetting
 import typingsSlinky.pulumiAws.inputMod.backup.PlanRule
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
@@ -9,6 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait PlanState extends js.Object {
+  
+  /**
+    * An object that specifies backup options for each resource type.
+    */
+  val advancedBackupSettings: js.UndefOr[Input[js.Array[Input[PlanAdvancedBackupSetting]]]] = js.native
   
   /**
     * The ARN of the backup plan.
@@ -57,6 +63,15 @@ object PlanState {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAdvancedBackupSettingsVarargs(value: Input[PlanAdvancedBackupSetting]*): Self = this.set("advancedBackupSettings", js.Array(value :_*))
+    
+    @scala.inline
+    def setAdvancedBackupSettings(value: Input[js.Array[Input[PlanAdvancedBackupSetting]]]): Self = this.set("advancedBackupSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdvancedBackupSettings: Self = this.set("advancedBackupSettings", js.undefined)
     
     @scala.inline
     def setArn(value: Input[String]): Self = this.set("arn", value.asInstanceOf[js.Any])

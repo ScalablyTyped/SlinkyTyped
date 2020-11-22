@@ -8,13 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ProvisionedPlan extends js.Object {
   
   // For example, 'Enabled'.
-  var capabilityStatus: js.UndefOr[String] = js.native
+  var capabilityStatus: js.UndefOr[NullableOption[String]] = js.native
   
   // For example, 'Success'.
-  var provisioningStatus: js.UndefOr[String] = js.native
+  var provisioningStatus: js.UndefOr[NullableOption[String]] = js.native
   
   // The name of the service; for example, 'AccessControlS2S'
-  var service: js.UndefOr[String] = js.native
+  var service: js.UndefOr[NullableOption[String]] = js.native
 }
 object ProvisionedPlan {
   
@@ -40,21 +40,30 @@ object ProvisionedPlan {
     }
     
     @scala.inline
-    def setCapabilityStatus(value: String): Self = this.set("capabilityStatus", value.asInstanceOf[js.Any])
+    def setCapabilityStatus(value: NullableOption[String]): Self = this.set("capabilityStatus", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCapabilityStatus: Self = this.set("capabilityStatus", js.undefined)
     
     @scala.inline
-    def setProvisioningStatus(value: String): Self = this.set("provisioningStatus", value.asInstanceOf[js.Any])
+    def setCapabilityStatusNull: Self = this.set("capabilityStatus", null)
+    
+    @scala.inline
+    def setProvisioningStatus(value: NullableOption[String]): Self = this.set("provisioningStatus", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProvisioningStatus: Self = this.set("provisioningStatus", js.undefined)
     
     @scala.inline
-    def setService(value: String): Self = this.set("service", value.asInstanceOf[js.Any])
+    def setProvisioningStatusNull: Self = this.set("provisioningStatus", null)
+    
+    @scala.inline
+    def setService(value: NullableOption[String]): Self = this.set("service", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteService: Self = this.set("service", js.undefined)
+    
+    @scala.inline
+    def setServiceNull: Self = this.set("service", null)
   }
 }

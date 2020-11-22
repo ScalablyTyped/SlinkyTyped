@@ -26,7 +26,7 @@ trait ColorSchemeForPolyline
   var colorsForClassBreaks: js.Array[ColorSchemeForPolylineColorsForClassBreaks] = js.native
   
   /**
-    * The unique id of the color scheme to usee in the visualization. The id is assigned based on the following template: `<themeName>/<basemapName>/<schemeName>`.
+    * The unique id of the color scheme to usee in the visualization.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-color.html#ColorSchemeForPolyline)
     */
@@ -61,15 +61,7 @@ trait ColorSchemeForPolyline
   var tags: js.Array[String] = js.native
   
   /**
-    * Indicates which values will be emphasized in the continuous ramp and the map. Possible values are listed below.
-    *
-    * | Value | Description | Example |
-    * | ----- | ----------- | ------- |
-    * | high-to-low | High values are emphasized with strong colors. | ![high-to-low](https://developers.arcgis.com/javascript/assets/img/apiref/renderers/sm-high-to-low.png) |
-    * | above-and-below | Values centered around a given point (e.g. the average) are visualized with weak colors while other values are emphasized with strong colors. | ![above-and-below](https://developers.arcgis.com/javascript/assets/img/apiref/renderers/sm-above-and-below.png) |
-    * | centered-on | Values centered around a given point (e.g. the average) are emphasized with strong colors while other values are visualized with weak colors. | ![centered-on](https://developers.arcgis.com/javascript/assets/img/apiref/renderers/sm-centered-on.png) |
-    * | extremes | High and low values are emphasized with strong colors. All others are visualized with weak colors. | ![extremes](https://developers.arcgis.com/javascript/assets/img/apiref/renderers/sm-extremes.png) |
-    *
+    * Indicates which values will be emphasized in the continuous ramp and the map.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-symbology-color.html#ColorSchemeForPolyline)
     */

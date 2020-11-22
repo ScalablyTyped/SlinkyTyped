@@ -19,7 +19,7 @@ trait RelationshipRampElement
   var colors: js.Array[js.Array[Color_]] = js.native
   
   /**
-    * Determines the orientation of the Legend. Values can be `HH`, `HL`, `LH`, `LL`.
+    * Determines the orientation of the Legend.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#RelationshipRampElement)
     */
@@ -40,14 +40,14 @@ trait RelationshipRampElement
   var labels: RelationshipLabels = js.native
   
   /**
-    * The number of classes for each field comprising the renderer. Can either be 2, 3, or 4.
+    * The number of classes for each field comprising the renderer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#RelationshipRampElement)
     */
   var numClasses: Double = js.native
   
   /**
-    * The rotation of the legend in degrees (0-360). `0` degrees displays the legend as a square with the `LL` cell in the bottom left corner of the legend and the `HH` cell in the top right corner.
+    * The rotation of the legend in degrees (0-360).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Legend-support-ActiveLayerInfo.html#RelationshipRampElement)
     */

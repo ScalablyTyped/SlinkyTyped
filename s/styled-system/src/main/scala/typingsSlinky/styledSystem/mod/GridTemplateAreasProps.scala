@@ -14,7 +14,7 @@ trait GridTemplateAreasProps[ThemeType /* <: Theme[TLengthStyledSystem] */] exte
     */
   var gridTemplateAreas: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateAreasProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateAreas */ _, 
       ThemeType
     ]
   ] = js.native
@@ -48,7 +48,7 @@ object GridTemplateAreasProps {
     @scala.inline
     def setGridTemplateAreas(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GridTemplateAreasProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.GridTemplateAreas */ _, 
           ThemeType
         ]
     ): Self = this.set("gridTemplateAreas", value.asInstanceOf[js.Any])

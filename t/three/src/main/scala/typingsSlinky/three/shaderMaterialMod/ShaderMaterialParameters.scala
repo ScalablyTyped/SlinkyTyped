@@ -2,6 +2,7 @@ package typingsSlinky.three.shaderMaterialMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.three.anon.Derivatives
+import typingsSlinky.three.constantsMod.GLSLVersion
 import typingsSlinky.three.materialMod.MaterialParameters
 import typingsSlinky.three.uniformsLibMod.IUniform
 import scala.scalajs.js
@@ -16,6 +17,8 @@ trait ShaderMaterialParameters extends MaterialParameters {
   var extensions: js.UndefOr[Derivatives] = js.native
   
   var fragmentShader: js.UndefOr[String] = js.native
+  
+  var glslVersion: js.UndefOr[GLSLVersion] = js.native
   
   var lights: js.UndefOr[Boolean] = js.native
   
@@ -75,6 +78,12 @@ object ShaderMaterialParameters {
     
     @scala.inline
     def deleteFragmentShader: Self = this.set("fragmentShader", js.undefined)
+    
+    @scala.inline
+    def setGlslVersion(value: GLSLVersion): Self = this.set("glslVersion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGlslVersion: Self = this.set("glslVersion", js.undefined)
     
     @scala.inline
     def setLights(value: Boolean): Self = this.set("lights", value.asInstanceOf[js.Any])

@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EducationTeacher extends js.Object {
   
   // ID of the teacher in the source system.
-  var externalId: js.UndefOr[String] = js.native
+  var externalId: js.UndefOr[NullableOption[String]] = js.native
   
   // Teacher number.
-  var teacherNumber: js.UndefOr[String] = js.native
+  var teacherNumber: js.UndefOr[NullableOption[String]] = js.native
 }
 object EducationTeacher {
   
@@ -37,15 +37,21 @@ object EducationTeacher {
     }
     
     @scala.inline
-    def setExternalId(value: String): Self = this.set("externalId", value.asInstanceOf[js.Any])
+    def setExternalId(value: NullableOption[String]): Self = this.set("externalId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExternalId: Self = this.set("externalId", js.undefined)
     
     @scala.inline
-    def setTeacherNumber(value: String): Self = this.set("teacherNumber", value.asInstanceOf[js.Any])
+    def setExternalIdNull: Self = this.set("externalId", null)
+    
+    @scala.inline
+    def setTeacherNumber(value: NullableOption[String]): Self = this.set("teacherNumber", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTeacherNumber: Self = this.set("teacherNumber", js.undefined)
+    
+    @scala.inline
+    def setTeacherNumberNull: Self = this.set("teacherNumber", null)
   }
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -76,6 +77,15 @@ trait Color3 extends js.Object {
     * @returns true if the rgb values are equal to the given ones
     */
   def equalsFloats(r: Double, g: Double, b: Double): Boolean = js.native
+  
+  /**
+    * Update the current color with values stored in an array from the starting index of the given array
+    * @param array defines the source array
+    * @param offset defines an offset in the source array
+    * @returns the current Color3 object
+    */
+  def fromArray(array: DeepImmutable[ArrayLike[Double]]): Color3 = js.native
+  def fromArray(array: DeepImmutable[ArrayLike[Double]], offset: Double): Color3 = js.native
   
   /**
     * Defines the green component (between 0 and 1, default is 0)

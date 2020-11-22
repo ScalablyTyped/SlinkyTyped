@@ -33,6 +33,11 @@ trait IconProps extends IconButtonProps {
     */
   var disabledStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
+  /*
+    * Extra props supplied to Icon Component from react-native-vector-icons.
+    */
+  var iconProps: js.UndefOr[typingsSlinky.reactNativeVectorIcons.iconMod.IconProps] = js.native
+  
   /**
     * Adds box shadow to button
     *
@@ -119,6 +124,12 @@ object IconProps {
     
     @scala.inline
     def setDisabledStyleNull: Self = this.set("disabledStyle", null)
+    
+    @scala.inline
+    def setIconProps(value: typingsSlinky.reactNativeVectorIcons.iconMod.IconProps): Self = this.set("iconProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIconProps: Self = this.set("iconProps", js.undefined)
     
     @scala.inline
     def setRaised(value: Boolean): Self = this.set("raised", value.asInstanceOf[js.Any])

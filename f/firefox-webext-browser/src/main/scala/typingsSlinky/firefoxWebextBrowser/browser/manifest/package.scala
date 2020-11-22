@@ -24,14 +24,13 @@ package object manifest {
   
   type KeyName = java.lang.String
   
-  type MatchPattern = typingsSlinky.firefoxWebextBrowser.browser.manifest.MatchPatternRestricted | typingsSlinky.firefoxWebextBrowser.browser.manifest.MatchPatternUnestricted | typingsSlinky.firefoxWebextBrowser.browser.manifest._MatchPattern
+  type MatchPattern = typingsSlinky.firefoxWebextBrowser.browser.manifest.MatchPatternRestricted | typingsSlinky.firefoxWebextBrowser.browser.manifest.MatchPatternUnestricted | typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.Lessthansignall_urlsGreaterthansign
   
   /** Same as MatchPattern above, but excludes<all_urls></all_urls> */
   type MatchPatternRestricted = java.lang.String
   
   /**
-    * Mostly unrestricted match patterns for privileged add-ons. This should technically be rejected for unprivileged
-    * add-ons, but, reasons. The MatchPattern class will still refuse privileged schemes for those extensions.
+    * Mostly unrestricted match patterns for privileged add-ons. This should technically be rejected for unprivileged add-ons, but, reasons. The MatchPattern class will still refuse privileged schemes for those extensions.
     */
   type MatchPatternUnestricted = java.lang.String
   
@@ -41,7 +40,7 @@ package object manifest {
   
   type OptionalPermissionOrOrigin = typingsSlinky.firefoxWebextBrowser.browser.manifest.OptionalPermission | typingsSlinky.firefoxWebextBrowser.browser.manifest.MatchPattern
   
-  type Permission = java.lang.String | typingsSlinky.firefoxWebextBrowser.browser.manifest.PermissionNoPrompt | typingsSlinky.firefoxWebextBrowser.browser.manifest.OptionalPermission | typingsSlinky.firefoxWebextBrowser.browser.manifest._Permission
+  type Permission = java.lang.String | typingsSlinky.firefoxWebextBrowser.browser.manifest.PermissionNoPrompt | typingsSlinky.firefoxWebextBrowser.browser.manifest.OptionalPermission | typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.nativeMessaging
   
   /* _manifest types */
   type PermissionNoPrompt = typingsSlinky.firefoxWebextBrowser.browser.manifest.OptionalPermission | typingsSlinky.firefoxWebextBrowser.browser.manifest._PermissionNoPrompt
@@ -53,10 +52,20 @@ package object manifest {
   
   type ThemeColor = java.lang.String | (js.Tuple3[scala.Double, scala.Double, scala.Double]) | (js.Tuple4[scala.Double, scala.Double, scala.Double, scala.Double])
   
+  type ThemeManifestIcons = org.scalablytyped.runtime.NumberDictionary[java.lang.String]
+  
+  type UndefinedChromeResources = org.scalablytyped.runtime.StringDictionary[
+    typingsSlinky.firefoxWebextBrowser.browser.manifest.ExtensionURL | org.scalablytyped.runtime.StringDictionary[typingsSlinky.firefoxWebextBrowser.browser.manifest.ExtensionURL]
+  ]
+  
   /** @deprecated An unexpected property was found in the WebExtension manifest. */
   type UnrecognizedProperty = js.Any
   
-  type _MatchPattern = typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.Lessthansignall_urlsGreaterthansign
+  type WebExtensionDictionaryManifestDictionaries = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   
-  type _Permission = typingsSlinky.firefoxWebextBrowser.firefoxWebextBrowserStrings.nativeMessaging
+  type WebExtensionLangpackManifestLanguages = org.scalablytyped.runtime.StringDictionary[typingsSlinky.firefoxWebextBrowser.anon.Chromeresources]
+  
+  type WebExtensionLangpackManifestSources = org.scalablytyped.runtime.StringDictionary[typingsSlinky.firefoxWebextBrowser.anon.Basepath]
+  
+  type WebExtensionManifestIcons = org.scalablytyped.runtime.NumberDictionary[typingsSlinky.firefoxWebextBrowser.browser.manifest.ExtensionFileUrl]
 }

@@ -8,7 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("egg", "AppWorkerLoader")
 @js.native
 class AppWorkerLoader ()
-  extends typingsSlinky.eggCore.mod.EggLoader[EggCore[typingsSlinky.eggCore.mod.PlainObject[js.Any]], js.Any] {
+  extends typingsSlinky.eggCore.mod.EggLoader[
+      EggCore[typingsSlinky.eggCore.mod.PlainObject[js.Any]], 
+      js.Any, 
+      typingsSlinky.eggCore.mod.EggLoaderOptions
+    ] {
   
   def load(): Unit = js.native
 }

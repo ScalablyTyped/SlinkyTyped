@@ -21,7 +21,7 @@ trait ASPxClientUploadControlFileUploadCompleteEventArgs extends ASPxClientEvent
   var errorText: String = js.native
   
   /**
-    * Gets the index of a <strong>file input element</strong> within the ASPxUploadControl.
+    * Gets the index of a file input element within the ASPxUploadControl.
     */
   var inputIndex: Double = js.native
   

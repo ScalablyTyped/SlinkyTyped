@@ -41,6 +41,7 @@ object utilMod extends js.Object {
   def mixins[T /* <: js.Array[VueClass[Vue]] */](
     /* import warning: parser.TsParser#functionParam Dropping repeated marker of param Ctors because its type T is not an array type */ Ctors: T
   ): MixedVueClass[T] = js.native
+  def mixins[T](Ctors: VueClass[Vue]*): VueClass[T] = js.native
   def mixins[A, B](CtorA: VueClass[A], CtorB: VueClass[B]): VueClass[A with B] = js.native
   def mixins[A, B, C](CtorA: VueClass[A], CtorB: VueClass[B], CtorC: VueClass[C]): VueClass[A with B with C] = js.native
   def mixins[A, B, C, D](CtorA: VueClass[A], CtorB: VueClass[B], CtorC: VueClass[C], CtorD: VueClass[D]): VueClass[A with B with C with D] = js.native

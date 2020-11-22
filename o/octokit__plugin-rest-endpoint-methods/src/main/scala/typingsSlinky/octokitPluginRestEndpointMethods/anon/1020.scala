@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ReposUpdateReleaseEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ReposUpdateReleaseResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ReposUpdateEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ReposUpdateResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `1020` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ReposUpdateReleaseEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ReposUpdateEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ReposUpdateReleaseResponseData] = js.native
+  var response: OctokitResponse[ReposUpdateResponseData] = js.native
 }
 object `1020` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ReposUpdateReleaseEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ReposUpdateReleaseResponseData]
+    parameters: RequestParameters with (Omit[ReposUpdateEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ReposUpdateResponseData]
   ): `1020` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1020`]
@@ -46,9 +46,9 @@ object `1020` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[ReposUpdateReleaseEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ReposUpdateEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ReposUpdateReleaseResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ReposUpdateResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

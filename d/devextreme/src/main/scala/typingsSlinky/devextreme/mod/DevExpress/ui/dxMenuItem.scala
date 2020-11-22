@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxMenuItem extends dxMenuBaseItem {
   
-  /** @name dxMenuItem.items */
+  /**
+    * [descr:dxMenuItem.items]
+    */
   @JSName("items")
   var items_dxMenuItem: js.UndefOr[js.Array[dxMenuItem]] = js.native
 }

@@ -17,19 +17,19 @@ trait ReadonlyArraystringnumber extends js.Object {
   val entries: js.Function0[IterableIterator[js.Tuple2[Double, String | Double]]] = js.native
   
   val every: js.Function1[
-    /* callbackfn */ js.Function3[
+    /* predicate */ js.Function3[
       /* value */ String | Double, 
       /* index */ Double, 
       /* array */ js.Array[String | Double], 
-      _
+      Boolean
     ], 
-    Boolean
+    /* is std.Array<string | number> */ Boolean
   ] = js.native
   
   val fill: js.Function1[/* value */ String | Double, this.type] = js.native
   
   val filter: js.Function1[
-    /* callbackfn */ js.Function3[
+    /* predicate */ js.Function3[
       /* value */ String | Double, 
       /* index */ Double, 
       /* array */ js.Array[String | Double], 
@@ -137,7 +137,7 @@ trait ReadonlyArraystringnumber extends js.Object {
   val slice: js.Function0[js.Array[String | Double]] = js.native
   
   val some: js.Function1[
-    /* callbackfn */ js.Function3[
+    /* predicate */ js.Function3[
       /* value */ String | Double, 
       /* index */ Double, 
       /* array */ js.Array[String | Double], 
@@ -167,14 +167,14 @@ object ReadonlyArraystringnumber {
     concat: /* repeated */ js.Array[String | Double] => js.Array[String | Double],
     copyWithin: (/* target */ Double, /* start */ Double) => ReadonlyArraystringnumber,
     entries: () => IterableIterator[js.Tuple2[Double, String | Double]],
-    every: /* callbackfn */ js.Function3[
+    every: /* predicate */ js.Function3[
       /* value */ String | Double, 
       /* index */ Double, 
       /* array */ js.Array[String | Double], 
-      _
-    ] => Boolean,
+      Boolean
+    ] => /* is std.Array<string | number> */ Boolean,
     fill: /* value */ String | Double => ReadonlyArraystringnumber,
-    filter: /* callbackfn */ js.Function3[
+    filter: /* predicate */ js.Function3[
       /* value */ String | Double, 
       /* index */ Double, 
       /* array */ js.Array[String | Double], 
@@ -238,7 +238,7 @@ object ReadonlyArraystringnumber {
     reverse: () => js.Array[String | Double],
     shift: () => js.UndefOr[String | Double],
     slice: () => js.Array[String | Double],
-    some: /* callbackfn */ js.Function3[
+    some: /* predicate */ js.Function3[
       /* value */ String | Double, 
       /* index */ Double, 
       /* array */ js.Array[String | Double], 
@@ -281,12 +281,12 @@ object ReadonlyArraystringnumber {
     
     @scala.inline
     def setEvery(
-      value: /* callbackfn */ js.Function3[
+      value: /* predicate */ js.Function3[
           /* value */ String | Double, 
           /* index */ Double, 
           /* array */ js.Array[String | Double], 
-          _
-        ] => Boolean
+          Boolean
+        ] => /* is std.Array<string | number> */ Boolean
     ): Self = this.set("every", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -294,7 +294,7 @@ object ReadonlyArraystringnumber {
     
     @scala.inline
     def setFilter(
-      value: /* callbackfn */ js.Function3[
+      value: /* predicate */ js.Function3[
           /* value */ String | Double, 
           /* index */ Double, 
           /* array */ js.Array[String | Double], 
@@ -416,7 +416,7 @@ object ReadonlyArraystringnumber {
     
     @scala.inline
     def setSome(
-      value: /* callbackfn */ js.Function3[
+      value: /* predicate */ js.Function3[
           /* value */ String | Double, 
           /* index */ Double, 
           /* array */ js.Array[String | Double], 

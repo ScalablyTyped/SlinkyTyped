@@ -20,6 +20,11 @@ trait EventPermissionState extends js.Object {
   val condition: js.UndefOr[Input[EventPermissionCondition]] = js.native
   
   /**
+    * The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
+    */
+  val eventBusName: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify `*` to permit any account to put events to your default event bus, optionally limited by `condition`.
     */
   val principal: js.UndefOr[Input[String]] = js.native
@@ -63,6 +68,12 @@ object EventPermissionState {
     
     @scala.inline
     def deleteCondition: Self = this.set("condition", js.undefined)
+    
+    @scala.inline
+    def setEventBusName(value: Input[String]): Self = this.set("eventBusName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEventBusName: Self = this.set("eventBusName", js.undefined)
     
     @scala.inline
     def setPrincipal(value: Input[String]): Self = this.set("principal", value.asInstanceOf[js.Any])

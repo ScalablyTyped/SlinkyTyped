@@ -9,7 +9,7 @@ trait HeightProps[TLength] extends js.Object {
   
   val height: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object HeightProps {
     }
     
     @scala.inline
+    def setHeightVarargs(value: js.Any*): Self = this.set("height", js.Array(value :_*))
+    
+    @scala.inline
     def setHeight(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLength> */ _
         ]
     ): Self = this.set("height", value.asInstanceOf[js.Any])
     

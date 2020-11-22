@@ -17,6 +17,18 @@ package object mod {
     scala.Unit
   ]
   
+  type VerifyFunctionWithContext = js.Function3[
+    /* req */ typingsSlinky.passportHttpBearer.mod.KoaPassportExpressRequestMock, 
+    /* token */ java.lang.String, 
+    /* done */ js.Function3[
+      /* error */ js.Any, 
+      /* user */ js.UndefOr[js.Any], 
+      /* options */ js.UndefOr[typingsSlinky.passportHttpBearer.mod.IVerifyOptions | java.lang.String], 
+      scala.Unit
+    ], 
+    scala.Unit
+  ]
+  
   type VerifyFunctionWithRequest = js.Function3[
     /* req */ typingsSlinky.express.mod.Request_[
       typingsSlinky.expressServeStaticCore.mod.ParamsDictionary, 
@@ -33,4 +45,6 @@ package object mod {
     ], 
     scala.Unit
   ]
+  
+  type VerifyFunctions = typingsSlinky.passportHttpBearer.mod.VerifyFunction | typingsSlinky.passportHttpBearer.mod.VerifyFunctionWithRequest | typingsSlinky.passportHttpBearer.mod.VerifyFunctionWithContext
 }

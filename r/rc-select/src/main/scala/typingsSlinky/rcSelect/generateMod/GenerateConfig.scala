@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.rcSelect.anon.FilterOption
 import typingsSlinky.rcSelect.anon.LabelInValue
 import typingsSlinky.rcSelect.anon.OptionList
+import typingsSlinky.rcSelect.anon.PrevValueOptions
 import typingsSlinky.rcSelect.generatorMod.DefaultValueType
 import typingsSlinky.rcSelect.generatorMod.FilterOptions
 import typingsSlinky.rcSelect.generatorMod.FlattenOptionsType
@@ -34,7 +35,16 @@ trait GenerateConfig[OptionsType /* <: js.Array[js.Object] */] extends js.Object
   
   var filterOptions: FilterOptions[OptionsType] = js.native
   
-  def findValueOption(values: js.Array[RawValueType], options: FlattenOptionsType[OptionsType]): OptionsType = js.native
+  var findValueOption: (js.Function2[
+    /* values */ js.Array[RawValueType], 
+    /* options */ FlattenOptionsType[OptionsType], 
+    OptionsType
+  ]) | (js.Function3[
+    /* values */ js.Array[RawValueType], 
+    /* options */ FlattenOptionsType[OptionsType], 
+    /* info */ js.UndefOr[PrevValueOptions[OptionsType]], 
+    OptionsType
+  ]) = js.native
   
   /** Flatten nest options into raw option list */
   def flattenOptions(options: OptionsType, props: js.Any): FlattenOptionsType[OptionsType] = js.native
@@ -58,13 +68,22 @@ object GenerateConfig {
     components: OptionList[OptionsType],
     convertChildrenToData: ReactElement => OptionsType,
     filterOptions: (/* searchValue */ String, OptionsType, /* config */ FilterOption[OptionsType]) => OptionsType,
-    findValueOption: (js.Array[RawValueType], FlattenOptionsType[OptionsType]) => OptionsType,
+    findValueOption: (js.Function2[
+      /* values */ js.Array[RawValueType], 
+      /* options */ FlattenOptionsType[OptionsType], 
+      OptionsType
+    ]) | (js.Function3[
+      /* values */ js.Array[RawValueType], 
+      /* options */ FlattenOptionsType[OptionsType], 
+      /* info */ js.UndefOr[PrevValueOptions[OptionsType]], 
+      OptionsType
+    ]),
     flattenOptions: (OptionsType, js.Any) => FlattenOptionsType[OptionsType],
     getLabeledValue: (/* value */ RawValueType, /* config */ LabelInValue[FlattenOptionsType[OptionsType]]) => LabelValueType,
     isValueDisabled: (RawValueType, FlattenOptionsType[OptionsType]) => Boolean,
     prefixCls: String
   ): GenerateConfig[OptionsType] = {
-    val __obj = js.Dynamic.literal(components = components.asInstanceOf[js.Any], convertChildrenToData = js.Any.fromFunction1(convertChildrenToData), filterOptions = js.Any.fromFunction3(filterOptions), findValueOption = js.Any.fromFunction2(findValueOption), flattenOptions = js.Any.fromFunction2(flattenOptions), getLabeledValue = js.Any.fromFunction2(getLabeledValue), isValueDisabled = js.Any.fromFunction2(isValueDisabled), prefixCls = prefixCls.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(components = components.asInstanceOf[js.Any], convertChildrenToData = js.Any.fromFunction1(convertChildrenToData), filterOptions = js.Any.fromFunction3(filterOptions), findValueOption = findValueOption.asInstanceOf[js.Any], flattenOptions = js.Any.fromFunction2(flattenOptions), getLabeledValue = js.Any.fromFunction2(getLabeledValue), isValueDisabled = js.Any.fromFunction2(isValueDisabled), prefixCls = prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[GenerateConfig[OptionsType]]
   }
   
@@ -95,7 +114,28 @@ object GenerateConfig {
     ): Self = this.set("filterOptions", js.Any.fromFunction3(value))
     
     @scala.inline
-    def setFindValueOption(value: (js.Array[RawValueType], FlattenOptionsType[OptionsType]) => OptionsType): Self = this.set("findValueOption", js.Any.fromFunction2(value))
+    def setFindValueOptionFunction2(
+      value: (/* values */ js.Array[RawValueType], /* options */ FlattenOptionsType[OptionsType]) => OptionsType
+    ): Self = this.set("findValueOption", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setFindValueOptionFunction3(
+      value: (/* values */ js.Array[RawValueType], /* options */ FlattenOptionsType[OptionsType], /* info */ js.UndefOr[PrevValueOptions[OptionsType]]) => OptionsType
+    ): Self = this.set("findValueOption", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setFindValueOption(
+      value: (js.Function2[
+          /* values */ js.Array[RawValueType], 
+          /* options */ FlattenOptionsType[OptionsType], 
+          OptionsType
+        ]) | (js.Function3[
+          /* values */ js.Array[RawValueType], 
+          /* options */ FlattenOptionsType[OptionsType], 
+          /* info */ js.UndefOr[PrevValueOptions[OptionsType]], 
+          OptionsType
+        ])
+    ): Self = this.set("findValueOption", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFlattenOptions(value: (OptionsType, js.Any) => FlattenOptionsType[OptionsType]): Self = this.set("flattenOptions", js.Any.fromFunction2(value))

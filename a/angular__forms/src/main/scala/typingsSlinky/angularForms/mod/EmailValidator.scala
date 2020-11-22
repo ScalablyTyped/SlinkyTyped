@@ -19,10 +19,8 @@ class EmailValidator () extends Validator {
   def email_=(value: Boolean | String): Unit = js.native
   
   /**
-    * @description
     * Registers a callback function to call when the validator inputs change.
-    *
-    * @param fn The callback function
+    * @nodoc
     */
   @JSName("registerOnValidatorChange")
   def registerOnValidatorChange_MEmailValidator(fn: js.Function0[Unit]): Unit = js.native

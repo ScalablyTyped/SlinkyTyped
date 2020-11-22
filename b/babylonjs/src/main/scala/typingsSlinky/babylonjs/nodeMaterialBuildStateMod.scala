@@ -35,6 +35,7 @@ object nodeMaterialBuildStateMod extends js.Object {
     
     /** @hidden */
     def _emitExtension(name: String, extension: String): Unit = js.native
+    def _emitExtension(name: String, extension: String, define: String): Unit = js.native
     
     /** @hidden */
     def _emitFloat(value: Double): String = js.native
@@ -71,6 +72,9 @@ object nodeMaterialBuildStateMod extends js.Object {
     
     /** @hidden */
     def _getGLType(`type`: NodeMaterialBlockConnectionPointTypes): String = js.native
+    
+    /** @hidden */
+    var _injectAtEnd: String = js.native
     
     /** @hidden */
     def _registerTempVariable(name: String): Boolean = js.native

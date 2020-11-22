@@ -23,13 +23,13 @@ class Type_ () extends Message {
   def addOptions(value: Option): Option = js.native
   def addOptions(value: Option, index: Double): Option = js.native
   
-  def clearFieldsList(): Unit = js.native
+  def clearFieldsList(): Type = js.native
   
-  def clearOneofsList(): Unit = js.native
+  def clearOneofsList(): Type = js.native
   
-  def clearOptionsList(): Unit = js.native
+  def clearOptionsList(): Type = js.native
   
-  def clearSourceContext(): Unit = js.native
+  def clearSourceContext(): Type = js.native
   
   def getFieldsList(): js.Array[Field] = js.native
   
@@ -45,16 +45,16 @@ class Type_ () extends Message {
   
   def hasSourceContext(): Boolean = js.native
   
-  def setFieldsList(value: js.Array[Field]): Unit = js.native
+  def setFieldsList(value: js.Array[Field]): Type = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): Type = js.native
   
-  def setOneofsList(value: js.Array[String]): Unit = js.native
+  def setOneofsList(value: js.Array[String]): Type = js.native
   
-  def setOptionsList(value: js.Array[Option]): Unit = js.native
+  def setOptionsList(value: js.Array[Option]): Type = js.native
   
-  def setSourceContext(): Unit = js.native
-  def setSourceContext(value: SourceContext): Unit = js.native
+  def setSourceContext(): Type = js.native
+  def setSourceContext(value: SourceContext): Type = js.native
   
-  def setSyntax(value: Syntax): Unit = js.native
+  def setSyntax(value: Syntax): Type = js.native
 }

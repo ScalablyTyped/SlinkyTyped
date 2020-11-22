@@ -11,6 +11,8 @@ trait SynthesizedComment extends CommentRange {
   @JSName("end")
   var end_SynthesizedComment: `-1` = js.native
   
+  var hasLeadingNewline: js.UndefOr[Boolean] = js.native
+  
   @JSName("pos")
   var pos_SynthesizedComment: `-1` = js.native
   
@@ -47,5 +49,11 @@ object SynthesizedComment {
     
     @scala.inline
     def setText(value: java.lang.String): Self = this.set("text", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHasLeadingNewline(value: Boolean): Self = this.set("hasLeadingNewline", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHasLeadingNewline: Self = this.set("hasLeadingNewline", js.undefined)
   }
 }

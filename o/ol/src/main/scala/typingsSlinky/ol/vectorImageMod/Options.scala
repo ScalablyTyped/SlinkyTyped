@@ -40,10 +40,6 @@ trait Options extends js.Object {
   
   var style: js.UndefOr[StyleLike] = js.native
   
-  var updateWhileAnimating: js.UndefOr[Boolean] = js.native
-  
-  var updateWhileInteracting: js.UndefOr[Boolean] = js.native
-  
   var visible: js.UndefOr[Boolean] = js.native
   
   var zIndex: js.UndefOr[Double] = js.native
@@ -150,7 +146,7 @@ object Options {
     def deleteSource: Self = this.set("source", js.undefined)
     
     @scala.inline
-    def setStyleFunction2(value: (/* p0 */ FeatureLike, /* p1 */ Double) => Style | js.Array[Style] | Unit): Self = this.set("style", js.Any.fromFunction2(value))
+    def setStyleFunction2(value: (/* p0 */ FeatureLike, /* p1 */ Double) => Style | js.Array[Style]): Self = this.set("style", js.Any.fromFunction2(value))
     
     @scala.inline
     def setStyleVarargs(value: Style*): Self = this.set("style", js.Array(value :_*))
@@ -160,18 +156,6 @@ object Options {
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
-    
-    @scala.inline
-    def setUpdateWhileAnimating(value: Boolean): Self = this.set("updateWhileAnimating", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUpdateWhileAnimating: Self = this.set("updateWhileAnimating", js.undefined)
-    
-    @scala.inline
-    def setUpdateWhileInteracting(value: Boolean): Self = this.set("updateWhileInteracting", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUpdateWhileInteracting: Self = this.set("updateWhileInteracting", js.undefined)
     
     @scala.inline
     def setVisible(value: Boolean): Self = this.set("visible", value.asInstanceOf[js.Any])

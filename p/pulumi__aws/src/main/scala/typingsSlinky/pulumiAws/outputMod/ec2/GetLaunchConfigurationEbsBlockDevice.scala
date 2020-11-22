@@ -28,6 +28,11 @@ trait GetLaunchConfigurationEbsBlockDevice extends js.Object {
   var iops: Double = js.native
   
   /**
+    * Whether the device in the block device mapping of the AMI is suppressed.
+    */
+  var noDevice: Boolean = js.native
+  
+  /**
     * The Snapshot ID of the mount.
     */
   var snapshotId: String = js.native
@@ -50,11 +55,12 @@ object GetLaunchConfigurationEbsBlockDevice {
     deviceName: String,
     encrypted: Boolean,
     iops: Double,
+    noDevice: Boolean,
     snapshotId: String,
     volumeSize: Double,
     volumeType: String
   ): GetLaunchConfigurationEbsBlockDevice = {
-    val __obj = js.Dynamic.literal(deleteOnTermination = deleteOnTermination.asInstanceOf[js.Any], deviceName = deviceName.asInstanceOf[js.Any], encrypted = encrypted.asInstanceOf[js.Any], iops = iops.asInstanceOf[js.Any], snapshotId = snapshotId.asInstanceOf[js.Any], volumeSize = volumeSize.asInstanceOf[js.Any], volumeType = volumeType.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(deleteOnTermination = deleteOnTermination.asInstanceOf[js.Any], deviceName = deviceName.asInstanceOf[js.Any], encrypted = encrypted.asInstanceOf[js.Any], iops = iops.asInstanceOf[js.Any], noDevice = noDevice.asInstanceOf[js.Any], snapshotId = snapshotId.asInstanceOf[js.Any], volumeSize = volumeSize.asInstanceOf[js.Any], volumeType = volumeType.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetLaunchConfigurationEbsBlockDevice]
   }
   
@@ -84,6 +90,9 @@ object GetLaunchConfigurationEbsBlockDevice {
     
     @scala.inline
     def setIops(value: Double): Self = this.set("iops", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNoDevice(value: Boolean): Self = this.set("noDevice", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSnapshotId(value: String): Self = this.set("snapshotId", value.asInstanceOf[js.Any])

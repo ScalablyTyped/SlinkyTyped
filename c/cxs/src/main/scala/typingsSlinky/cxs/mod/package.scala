@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type CSSProperties = typingsSlinky.csstype.mod.Properties[java.lang.String | scala.Double, java.lang.String with js.Object]
+  type CSSProperties = typingsSlinky.csstype.mod.Properties[java.lang.String | scala.Double]
 }

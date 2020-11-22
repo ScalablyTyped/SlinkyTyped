@@ -10,7 +10,19 @@ object d3BrushStrings {
   def brush: brush = "brush".asInstanceOf[brush]
   
   @scala.inline
+  def center: center = "center".asInstanceOf[center]
+  
+  @scala.inline
+  def drag: drag = "drag".asInstanceOf[drag]
+  
+  @scala.inline
   def end: end = "end".asInstanceOf[end]
+  
+  @scala.inline
+  def handle: handle = "handle".asInstanceOf[handle]
+  
+  @scala.inline
+  def space: space = "space".asInstanceOf[space]
   
   @scala.inline
   def start: start = "start".asInstanceOf[start]
@@ -19,7 +31,19 @@ object d3BrushStrings {
   sealed trait brush extends js.Object
   
   @js.native
+  sealed trait center extends js.Object
+  
+  @js.native
+  sealed trait drag extends js.Object
+  
+  @js.native
   sealed trait end extends js.Object
+  
+  @js.native
+  sealed trait handle extends js.Object
+  
+  @js.native
+  sealed trait space extends js.Object
   
   @js.native
   sealed trait start extends js.Object

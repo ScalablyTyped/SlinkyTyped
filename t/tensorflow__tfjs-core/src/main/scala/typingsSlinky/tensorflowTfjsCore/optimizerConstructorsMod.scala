@@ -30,8 +30,7 @@ object optimizerConstructorsMod extends js.Object {
       * @param rho The learning rate decay over each update.
       * @param epsilon A constant epsilon used to better condition the grad
       * update.
-      */
-    /**
+      *
       * @doc {heading: 'Training', subheading: 'Optimizers', namespace: 'train'}
       */
     def adadelta(): AdadeltaOptimizer = js.native
@@ -56,8 +55,7 @@ object optimizerConstructorsMod extends js.Object {
       * descent algorithm.
       * @param initialAccumulatorValue Starting value for the accumulators, must be
       * positive.
-      */
-    /**
+      *
       * @doc {heading: 'Training', subheading: 'Optimizers', namespace: 'train'}
       */
     def adagrad(learningRate: Double): AdagradOptimizer = js.native
@@ -72,8 +70,7 @@ object optimizerConstructorsMod extends js.Object {
       * @param beta1 The exponential decay rate for the 1st moment estimates.
       * @param beta2 The exponential decay rate for the 2nd moment estimates.
       * @param epsilon A small constant for numerical stability.
-      */
-    /**
+      *
       * @doc {heading: 'Training', subheading: 'Optimizers', namespace: 'train'}
       */
     def adam(): AdamOptimizer = js.native
@@ -123,8 +120,7 @@ object optimizerConstructorsMod extends js.Object {
       * @param beta2 The exponential decay rate for the 2nd moment estimates.
       * @param epsilon A small constant for numerical stability.
       * @param decay The learning rate decay over each update.
-      */
-    /**
+      *
       * @doc {heading: 'Training', subheading: 'Optimizers', namespace: 'train'}
       */
     def adamax(): AdamaxOptimizer = js.native
@@ -282,8 +278,7 @@ object optimizerConstructorsMod extends js.Object {
       * descent algorithm.
       * @param momentum The momentum to use for the momentum gradient descent
       * algorithm.
-      */
-    /**
+      *
       * @doc {heading: 'Training', subheading: 'Optimizers', namespace: 'train'}
       */
     def momentum(learningRate: Double, momentum: Double): MomentumOptimizer = js.native
@@ -306,8 +301,7 @@ object optimizerConstructorsMod extends js.Object {
       * @param epsilon Small value to avoid zero denominator.
       * @param centered If true, gradients are normalized by the estimated
       * variance of the gradient.
-      */
-    /**
+      *
       * @doc {heading: 'Training', subheading: 'Optimizers', namespace: 'train'}
       */
     def rmsprop(learningRate: Double): RMSPropOptimizer = js.native
@@ -408,8 +402,7 @@ object optimizerConstructorsMod extends js.Object {
       * ```
       *
       * @param learningRate The learning rate to use for the SGD algorithm.
-      */
-    /**
+      *
       * @doc {heading: 'Training', subheading: 'Optimizers', namespace: 'train'}
       */
     def sgd(learningRate: Double): SGDOptimizer = js.native

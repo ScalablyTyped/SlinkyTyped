@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`3`
+import typingsSlinky.octokitTypes.anon.`2`
 import typingsSlinky.octokitTypes.octokitTypesStrings.all
 import typingsSlinky.octokitTypes.octokitTypesStrings.completed
 import typingsSlinky.octokitTypes.octokitTypesStrings.in_progress
@@ -26,7 +26,7 @@ trait ChecksListForSuiteEndpoint extends js.Object {
     */
   var filter: js.UndefOr[latest | all] = js.native
   
-  var mediaType: `3` = js.native
+  var mediaType: `2` = js.native
   
   var owner: String = js.native
   
@@ -50,7 +50,7 @@ trait ChecksListForSuiteEndpoint extends js.Object {
 object ChecksListForSuiteEndpoint {
   
   @scala.inline
-  def apply(check_suite_id: Double, mediaType: `3`, owner: String, repo: String): ChecksListForSuiteEndpoint = {
+  def apply(check_suite_id: Double, mediaType: `2`, owner: String, repo: String): ChecksListForSuiteEndpoint = {
     val __obj = js.Dynamic.literal(check_suite_id = check_suite_id.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChecksListForSuiteEndpoint]
   }
@@ -74,7 +74,7 @@ object ChecksListForSuiteEndpoint {
     def setCheck_suite_id(value: Double): Self = this.set("check_suite_id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `3`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `2`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

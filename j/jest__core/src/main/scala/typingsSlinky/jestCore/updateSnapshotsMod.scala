@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/core/build/plugins/update_snapshots", JSImport.Namespace)
+@JSImport("@jest/core/build/plugins/UpdateSnapshots", JSImport.Namespace)
 @js.native
 object updateSnapshotsMod extends js.Object {
   

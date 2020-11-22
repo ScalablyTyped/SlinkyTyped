@@ -25,6 +25,9 @@ object SplitButton {
     def appendTo(value: HTMLElement): this.type = set("appendTo", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def buttonTemplate(value: js.Any): this.type = set("buttonTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline

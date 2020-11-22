@@ -1,5 +1,6 @@
 package typingsSlinky.highcharts.mod
 
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,6 +21,20 @@ trait SeriesSunburstDataLabelsOptionsObject extends js.Object {
   var alignTo: js.UndefOr[String] = js.native
   
   var allowOverlap: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * (Highcharts, Highstock, Highmaps, Gantt) Enable or disable the initial
+    * animation when a series is displayed for the `dataLabels`. The animation
+    * can also be set as a configuration object. Please note that this option
+    * only applies to the initial animation. For other animations, see
+    * chart.animation and the animation parameter under the API methods. The
+    * following properties are supported:
+    *
+    * - `defer`: The animation delay time in milliseconds.
+    */
+  var animation: js.UndefOr[
+    Boolean | PlotSunburstDataLabelsAnimationOptions | PlotSunburstLevelsDataLabelsAnimationOptions | PartialAnimationOptionsOb
+  ] = js.native
   
   /**
     * (Highcharts, Highstock, Highmaps, Gantt) The background color or gradient
@@ -133,7 +148,9 @@ trait SeriesSunburstDataLabelsOptionsObject extends js.Object {
   
   /**
     * (Highcharts, Highstock, Gantt) Whether to defer displaying the data
-    * labels until the initial series animation has finished.
+    * labels until the initial series animation has finished. Setting to
+    * `false` renders the data label immediately. If set to `true` inherits the
+    * defer time set in plotOptions.series.animation.
     */
   var defer: js.UndefOr[Boolean] = js.native
   
@@ -352,6 +369,14 @@ object SeriesSunburstDataLabelsOptionsObject {
     
     @scala.inline
     def deleteAllowOverlap: Self = this.set("allowOverlap", js.undefined)
+    
+    @scala.inline
+    def setAnimation(
+      value: Boolean | PlotSunburstDataLabelsAnimationOptions | PlotSunburstLevelsDataLabelsAnimationOptions | PartialAnimationOptionsOb
+    ): Self = this.set("animation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAnimation: Self = this.set("animation", js.undefined)
     
     @scala.inline
     def setBackgroundColor(value: ColorString | GradientColorObject | PatternObject): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])

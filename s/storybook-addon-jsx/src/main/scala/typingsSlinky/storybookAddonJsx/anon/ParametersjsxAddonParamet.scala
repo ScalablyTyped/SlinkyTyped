@@ -2,6 +2,10 @@ package typingsSlinky.storybookAddonJsx.anon
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.storybookAddonJsx.mod.AddonParameters
+import typingsSlinky.storybookAddonJsx.storybookAddonJsxStrings.centered
+import typingsSlinky.storybookAddonJsx.storybookAddonJsxStrings.fullscreen
+import typingsSlinky.storybookAddonJsx.storybookAddonJsxStrings.none
+import typingsSlinky.storybookAddonJsx.storybookAddonJsxStrings.padded
 import typingsSlinky.storybookAddons.typesMod.OptionsParameter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,9 +16,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ParametersjsxAddonParamet
   extends /* key */ StringDictionary[js.Any] {
   
+  var docsOnly: js.UndefOr[Boolean] = js.native
+  
   var fileName: js.UndefOr[String] = js.native
   
   var jsx: AddonParameters = js.native
+  
+  /** The layout property defines basic styles added to the preview body where the story is rendered. If you pass 'none', no styles are applied. */
+  var layout: js.UndefOr[centered | fullscreen | padded | none] = js.native
   
   var options: js.UndefOr[OptionsParameter] = js.native
 }
@@ -45,10 +54,22 @@ object ParametersjsxAddonParamet {
     def setJsx(value: AddonParameters): Self = this.set("jsx", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setDocsOnly(value: Boolean): Self = this.set("docsOnly", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDocsOnly: Self = this.set("docsOnly", js.undefined)
+    
+    @scala.inline
     def setFileName(value: String): Self = this.set("fileName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFileName: Self = this.set("fileName", js.undefined)
+    
+    @scala.inline
+    def setLayout(value: centered | fullscreen | padded | none): Self = this.set("layout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLayout: Self = this.set("layout", js.undefined)
     
     @scala.inline
     def setOptions(value: OptionsParameter): Self = this.set("options", value.asInstanceOf[js.Any])

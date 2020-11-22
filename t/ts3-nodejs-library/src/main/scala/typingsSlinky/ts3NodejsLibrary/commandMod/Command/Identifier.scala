@@ -112,6 +112,8 @@ object Identifier extends js.Object {
   
   var clientDescription: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Command.parseString */ js.Any = js.native
   
+  var clientEstimatedLocation: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Command.parseString */ js.Any = js.native
+  
   var clientFlagAvatar: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Command.parseString */ js.Any = js.native
   
   var clientFlagTalking: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Command.parseBoolean */ js.Any = js.native

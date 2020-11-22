@@ -13,7 +13,7 @@ trait SetInstanceProtectionQuery extends js.Object {
   var AutoScalingGroupName: ResourceName = js.native
   
   /**
-    * One or more instance IDs.
+    * One or more instance IDs. You can specify up to 50 instances.
     */
   var InstanceIds: typingsSlinky.awsSdk.autoscalingMod.InstanceIds = js.native
   

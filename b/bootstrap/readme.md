@@ -1,7 +1,7 @@
 
 # Scala.js typings for bootstrap
 
-Typings are for version 4.5
+Typings are for version 5.0
 
 ## Library description:
 The most popular front-end framework for developing responsive, mobile first projects on the web.

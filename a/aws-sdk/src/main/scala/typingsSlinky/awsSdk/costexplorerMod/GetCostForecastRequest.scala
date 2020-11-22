@@ -28,7 +28,7 @@ trait GetCostForecastRequest extends js.Object {
   var PredictionIntervalLevel: js.UndefOr[typingsSlinky.awsSdk.costexplorerMod.PredictionIntervalLevel] = js.native
   
   /**
-    * The period of time that you want the forecast to cover.
+    * The period of time that you want the forecast to cover. The start date must be equal to or no later than the current date to avoid a validation error.
     */
   var TimePeriod: DateInterval = js.native
 }

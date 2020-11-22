@@ -13,7 +13,7 @@ trait GetMetricDataRequest extends js.Object {
   var EndTime: js.Date = js.native
   
   /**
-    * The queues, up to 100, or channels, to use to filter the metrics returned. Metric data is retrieved only for the resources associated with the queues or channels included in the filter. You can include both queue IDs and queue ARNs in the same request. The only supported channel is VOICE.
+    * The queues, up to 100, or channels, to use to filter the metrics returned. Metric data is retrieved only for the resources associated with the queues or channels included in the filter. You can include both queue IDs and queue ARNs in the same request. Both VOICE and CHAT channels are supported.
     */
   var Filters: typingsSlinky.awsSdk.connectMod.Filters = js.native
   
@@ -71,7 +71,7 @@ object GetMetricDataRequest {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: String, value: js.Any): Self = {
+    def set(key: java.lang.String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }

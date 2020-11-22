@@ -9,8 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Fill extends js.Object {
   
+  /**
+    * Get the fill color.
+    */
   def getColor(): Color | ColorLike = js.native
   
+  /**
+    * Set the color.
+    */
   def setColor(color: Color): Unit = js.native
   def setColor(color: ColorLike): Unit = js.native
 }

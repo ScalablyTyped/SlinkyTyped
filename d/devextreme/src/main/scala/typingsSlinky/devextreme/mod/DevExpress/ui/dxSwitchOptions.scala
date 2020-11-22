@@ -7,24 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSwitchOptions extends EditorOptions[dxSwitch] {
   
-  /** @name dxSwitch.Options.name */
+  /**
+    * [descr:dxSwitch.Options.name]
+    */
   var name: js.UndefOr[String] = js.native
   
-  /** @deprecated */
-  /** @name dxSwitch.Options.offText */
-  var offText: js.UndefOr[String] = js.native
-  
-  /** @deprecated */
-  /** @name dxSwitch.Options.onText */
-  var onText: js.UndefOr[String] = js.native
-  
-  /** @name dxSwitch.Options.switchedOffText */
+  /**
+    * [descr:dxSwitch.Options.switchedOffText]
+    */
   var switchedOffText: js.UndefOr[String] = js.native
   
-  /** @name dxSwitch.Options.switchedOnText */
+  /**
+    * [descr:dxSwitch.Options.switchedOnText]
+    */
   var switchedOnText: js.UndefOr[String] = js.native
   
-  /** @name dxSwitch.Options.value */
+  /**
+    * [descr:dxSwitch.Options.value]
+    */
   @JSName("value")
   var value_dxSwitchOptions: js.UndefOr[Boolean] = js.native
 }
@@ -56,18 +56,6 @@ object dxSwitchOptions {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
-    
-    @scala.inline
-    def setOffText(value: String): Self = this.set("offText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOffText: Self = this.set("offText", js.undefined)
-    
-    @scala.inline
-    def setOnText(value: String): Self = this.set("onText", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOnText: Self = this.set("onText", js.undefined)
     
     @scala.inline
     def setSwitchedOffText(value: String): Self = this.set("switchedOffText", value.asInstanceOf[js.Any])

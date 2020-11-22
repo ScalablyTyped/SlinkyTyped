@@ -5,8 +5,10 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.baseui.anon.EventItem
+import typingsSlinky.baseui.anon.Item
+import typingsSlinky.baseui.baseuiStrings.character
 import typingsSlinky.baseui.baseuiStrings.click
+import typingsSlinky.baseui.baseuiStrings.enter_
 import typingsSlinky.baseui.baseuiStrings.focus
 import typingsSlinky.baseui.baseuiStrings.mouseEnter
 import typingsSlinky.baseui.baseuiStrings.moveDown
@@ -52,10 +54,22 @@ object StatefulContainer {
     def initialState(value: StatefulContainerState): this.type = set("initialState", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def keyboardControlNodeRefObject(value: ReactRef[_]): this.type = set("keyboardControlNode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def keyboardControlNodeFunction1(value: /* instance */ _ | Null => Unit): this.type = set("keyboardControlNode", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def keyboardControlNode(value: Ref[_]): this.type = set("keyboardControlNode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def keyboardControlNodeNull: this.type = set("keyboardControlNode", null)
+    
+    @scala.inline
     def onActiveDescendantChange(value: /* id */ js.UndefOr[String] => Unit): this.type = set("onActiveDescendantChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onItemSelect(value: /* args */ EventItem => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
+    def onItemSelect(value: /* args */ Item => js.Any): this.type = set("onItemSelect", js.Any.fromFunction1(value))
     
     @scala.inline
     def removeMenuFromNesting(value: /* ref */ Ref[HTMLElement] => Unit): this.type = set("removeMenuFromNesting", js.Any.fromFunction1(value))
@@ -74,8 +88,11 @@ object StatefulContainer {
     
     @scala.inline
     def stateReducer(
-      value: (/* changeType */ moveDown | moveUp | reset | click | focus | mouseEnter, /* changes */ StatefulContainerState, /* currentState */ StatefulContainerState) => StatefulContainerState
+      value: (/* changeType */ moveDown | moveUp | reset | enter_ | click | character | focus | mouseEnter, /* changes */ StatefulContainerState, /* currentState */ StatefulContainerState) => StatefulContainerState
     ): this.type = set("stateReducer", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def typeAhead(value: Boolean): this.type = set("typeAhead", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: StatefulContainerProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

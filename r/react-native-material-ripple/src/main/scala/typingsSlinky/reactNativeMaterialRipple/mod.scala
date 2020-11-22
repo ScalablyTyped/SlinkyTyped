@@ -3,9 +3,8 @@ package typingsSlinky.reactNativeMaterialRipple
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.anon.Children
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.mod.Animated.AnimatedProps
 import typingsSlinky.reactNative.mod.TouchableWithoutFeedbackProps
-import typingsSlinky.reactNative.mod.ViewProps
+import typingsSlinky.reactNativeMaterialRipple.anon.AnimatedPropsViewProps
 import typingsSlinky.reactNativeMaterialRipple.anon.Disabled
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,5 +20,5 @@ object mod extends js.Object {
   
   type Ripple = ReactComponentClass[RippleProps]
   
-  type RippleProps = TouchableWithoutFeedbackProps with Children with AnimatedProps[ViewProps] with Disabled
+  type RippleProps = TouchableWithoutFeedbackProps with Children with AnimatedPropsViewProps with Disabled
 }

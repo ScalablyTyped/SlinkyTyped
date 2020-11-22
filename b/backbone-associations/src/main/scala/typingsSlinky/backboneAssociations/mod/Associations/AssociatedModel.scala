@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("backbone", "Associations.AssociatedModel")
 @js.native
 class AssociatedModel ()
-  extends Model[js.Any, ModelSetOptions] {
+  extends Model[js.Any, ModelSetOptions, js.Object] {
   
   var _proxyCalls: js.Any = js.native
   

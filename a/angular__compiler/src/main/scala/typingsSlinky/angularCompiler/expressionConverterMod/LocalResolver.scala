@@ -1,6 +1,7 @@
 package typingsSlinky.angularCompiler.expressionConverterMod
 
 import typingsSlinky.angularCompiler.outputAstMod.Expression
+import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,6 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LocalResolver extends js.Object {
   
   def getLocal(name: String): Expression | Null = js.native
+  
+  var globals: js.UndefOr[Set[String]] = js.native
   
   def notifyImplicitReceiverUse(): Unit = js.native
 }
@@ -40,5 +43,11 @@ object LocalResolver {
     
     @scala.inline
     def setNotifyImplicitReceiverUse(value: () => Unit): Self = this.set("notifyImplicitReceiverUse", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setGlobals(value: Set[String]): Self = this.set("globals", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGlobals: Self = this.set("globals", js.undefined)
   }
 }

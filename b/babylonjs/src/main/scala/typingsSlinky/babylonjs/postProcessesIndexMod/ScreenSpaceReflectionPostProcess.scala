@@ -23,7 +23,8 @@ class ScreenSpaceReflectionPostProcess protected ()
     * @param engine The engine which the post process will be applied. (default: current engine)
     * @param reusable If the post process can be reused on the same frame. (default: false)
     * @param textureType Type of textures used when performing the post process. (default: 0)
-    * @param blockCompilation If compilation of the shader should not be done in the constructor. The updateEffect method can be used to compile the shader at a later time. (default: false)
+    * @param blockCompilation If compilation of the shader should not be done in the constructor. The updateEffect method can be used to compile the shader at a later time. (default: true)
+    * @param forceGeometryBuffer If this post process should use geometry buffer instead of prepass (default: false)
     */
   def this(
     name: String,
@@ -34,6 +35,15 @@ class ScreenSpaceReflectionPostProcess protected ()
     engine: js.UndefOr[Engine],
     reusable: js.UndefOr[Boolean],
     textureType: js.UndefOr[Double],
-    blockCompilation: js.UndefOr[Boolean]
+    blockCompilation: js.UndefOr[Boolean],
+    forceGeometryBuffer: js.UndefOr[Boolean]
   ) = this()
+}
+/* static members */
+@JSImport("babylonjs/PostProcesses/index", "ScreenSpaceReflectionPostProcess")
+@js.native
+object ScreenSpaceReflectionPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.screenSpaceReflectionPostProcessMod.ScreenSpaceReflectionPostProcess = js.native
 }

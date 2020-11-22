@@ -23,7 +23,7 @@ trait GetViolationDetailsRequest extends js.Object {
   var ResourceId: typingsSlinky.awsSdk.fmsMod.ResourceId = js.native
   
   /**
-    * The resource type. This is in the format shown in the AWS Resource Types Reference. Supported resource types are: AWS::EC2::Instance, AWS::EC2::NetworkInterface, or AWS::EC2::SecurityGroup. 
+    * The resource type. This is in the format shown in the AWS Resource Types Reference. Supported resource types are: AWS::EC2::Instance, AWS::EC2::NetworkInterface, AWS::EC2::SecurityGroup, AWS::NetworkFirewall::FirewallPolicy, and AWS::EC2::Subnet. 
     */
   var ResourceType: typingsSlinky.awsSdk.fmsMod.ResourceType = js.native
 }

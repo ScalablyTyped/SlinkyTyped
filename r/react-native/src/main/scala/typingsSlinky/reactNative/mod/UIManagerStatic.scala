@@ -11,6 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UIManagerStatic extends js.Object {
   
+  def dispatchViewManagerCommand(reactTag: Double, commandID: String): Unit = js.native
+  def dispatchViewManagerCommand(reactTag: Double, commandID: String, commandArgs: js.Array[_]): Unit = js.native
   /**
     * Used to call a native view method from JavaScript
     *
@@ -20,6 +22,8 @@ trait UIManagerStatic extends js.Object {
     */
   def dispatchViewManagerCommand(reactTag: Double, commandID: Double): Unit = js.native
   def dispatchViewManagerCommand(reactTag: Double, commandID: Double, commandArgs: js.Array[_]): Unit = js.native
+  def dispatchViewManagerCommand(reactTag: Null, commandID: String): Unit = js.native
+  def dispatchViewManagerCommand(reactTag: Null, commandID: String, commandArgs: js.Array[_]): Unit = js.native
   def dispatchViewManagerCommand(reactTag: Null, commandID: Double): Unit = js.native
   def dispatchViewManagerCommand(reactTag: Null, commandID: Double, commandArgs: js.Array[_]): Unit = js.native
   

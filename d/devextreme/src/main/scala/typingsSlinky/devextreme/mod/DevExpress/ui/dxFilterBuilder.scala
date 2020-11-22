@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFilterBuilder extends Widget {
   
-  /** @name dxFilterBuilder.getFilterExpression() */
+  /**
+    * [descr:dxFilterBuilder.getFilterExpression()]
+    */
   def getFilterExpression(): String | js.Array[_] | js.Function = js.native
 }

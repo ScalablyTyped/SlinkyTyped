@@ -88,6 +88,9 @@ object jestCliStrings {
   def `Select between Babel and V8 to collect coverage`: `Select between Babel and V8 to collect coverage` = ("Select between Babel and V8 to collect coverage").asInstanceOf[`Select between Babel and V8 to collect coverage`]
   
   @scala.inline
+  def `Should Jest inject global variables or not`: `Should Jest inject global variables or not` = ("Should Jest inject global variables or not").asInstanceOf[`Should Jest inject global variables or not`]
+  
+  @scala.inline
   def `Specifies when notifications will appear for test resultsDot`: `Specifies when notifications will appear for test resultsDot` = ("Specifies when notifications will appear for test results.").asInstanceOf[`Specifies when notifications will appear for test resultsDot`]
   
   @scala.inline
@@ -145,9 +148,6 @@ object jestCliStrings {
   def `failure-change`: `failure-change` = "failure-change".asInstanceOf[`failure-change`]
   
   @scala.inline
-  def fake: fake = "fake".asInstanceOf[fake]
-  
-  @scala.inline
   def i: i = "i".asInstanceOf[i]
   
   @scala.inline
@@ -158,9 +158,6 @@ object jestCliStrings {
   
   @scala.inline
   def o: o = "o".asInstanceOf[o]
-  
-  @scala.inline
-  def real: real = "real".asInstanceOf[real]
   
   @scala.inline
   def string: string = "string".asInstanceOf[string]
@@ -262,6 +259,9 @@ object jestCliStrings {
   sealed trait `Select between Babel and V8 to collect coverage` extends js.Object
   
   @js.native
+  sealed trait `Should Jest inject global variables or not` extends js.Object
+  
+  @js.native
   sealed trait `Specifies when notifications will appear for test resultsDot` extends js.Object
   
   @js.native
@@ -319,9 +319,6 @@ object jestCliStrings {
   sealed trait `failure-change` extends js.Object
   
   @js.native
-  sealed trait fake extends js.Object
-  
-  @js.native
   sealed trait i extends js.Object
   
   @js.native
@@ -332,9 +329,6 @@ object jestCliStrings {
   
   @js.native
   sealed trait o extends js.Object
-  
-  @js.native
-  sealed trait real extends js.Object
   
   @js.native
   sealed trait string extends js.Object

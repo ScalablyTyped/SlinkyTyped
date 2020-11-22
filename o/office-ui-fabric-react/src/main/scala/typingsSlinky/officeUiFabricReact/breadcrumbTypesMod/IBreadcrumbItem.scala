@@ -53,6 +53,11 @@ trait IBreadcrumbItem extends js.Object {
   ] = js.native
   
   /**
+    * Optional role for the breadcrumb item (which renders as a button by default)
+    */
+  var role: js.UndefOr[String] = js.native
+  
+  /**
     * Text to display to the user for the breadcrumb item.
     */
   var text: String = js.native
@@ -111,5 +116,11 @@ object IBreadcrumbItem {
     
     @scala.inline
     def deleteOnClick: Self = this.set("onClick", js.undefined)
+    
+    @scala.inline
+    def setRole(value: String): Self = this.set("role", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRole: Self = this.set("role", js.undefined)
   }
 }

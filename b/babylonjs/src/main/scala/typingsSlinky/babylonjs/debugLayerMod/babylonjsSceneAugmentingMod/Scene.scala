@@ -16,7 +16,7 @@ trait Scene extends js.Object {
   
   /**
     * Gets the debug layer (aka Inspector) associated with the scene
-    * @see http://doc.babylonjs.com/features/playground_debuglayer
+    * @see https://doc.babylonjs.com/features/playground_debuglayer
     */
   var debugLayer: DebugLayer = js.native
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.phin.anon
 
+import org.scalajs.dom.experimental.URL
 import typingsSlinky.node.httpMod.ClientRequestArgs
 import typingsSlinky.phin.phinStrings.json
 import scala.scalajs.js
@@ -34,12 +35,12 @@ trait IWithDataIJSONResponseOpt extends js.Object {
   
   var timeout: js.UndefOr[Double] = js.native
   
-  var url: String = js.native
+  var url: String | URL = js.native
 }
 object IWithDataIJSONResponseOpt {
   
   @scala.inline
-  def apply(data: ToString, parse: json, url: String): IWithDataIJSONResponseOpt = {
+  def apply(data: ToString, parse: json, url: String | URL): IWithDataIJSONResponseOpt = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], parse = parse.asInstanceOf[js.Any], url = url.asInstanceOf[js.Any])
     __obj.asInstanceOf[IWithDataIJSONResponseOpt]
   }
@@ -66,7 +67,10 @@ object IWithDataIJSONResponseOpt {
     def setParse(value: json): Self = this.set("parse", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])
+    def setUrlURL(value: URL): Self = this.set("url", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUrl(value: String | URL): Self = this.set("url", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCompression(value: Boolean): Self = this.set("compression", value.asInstanceOf[js.Any])

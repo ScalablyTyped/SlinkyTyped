@@ -71,6 +71,7 @@ object transformNodeMod extends js.Object {
     
     var _position: js.Any = js.native
     
+    /** @hidden */
     var _postMultiplyPivotMatrix: Boolean = js.native
     
     var _preserveParentRotationForBillboard: js.Any = js.native
@@ -697,6 +698,12 @@ object transformNodeMod extends js.Object {
       * @returns a new TransformNode object parsed from the source provided.
       */
     def Parse(parsedTransformNode: js.Any, scene: Scene, rootUrl: String): TransformNode = js.native
+    
+    var _TmpRotation: js.Any = js.native
+    
+    var _TmpScaling: js.Any = js.native
+    
+    var _TmpTranslation: js.Any = js.native
     
     var _lookAtVectorCache: js.Any = js.native
     

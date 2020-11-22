@@ -38,6 +38,11 @@ trait Cluster extends js.Object {
   var ClusterIdentifier: js.UndefOr[String] = js.native
   
   /**
+    * The namespace Amazon Resource Name (ARN) of the cluster.
+    */
+  var ClusterNamespaceArn: js.UndefOr[String] = js.native
+  
+  /**
     * The nodes in the cluster.
     */
   var ClusterNodes: js.UndefOr[ClusterNodesList] = js.native
@@ -295,6 +300,12 @@ object Cluster {
     
     @scala.inline
     def deleteClusterIdentifier: Self = this.set("ClusterIdentifier", js.undefined)
+    
+    @scala.inline
+    def setClusterNamespaceArn(value: String): Self = this.set("ClusterNamespaceArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClusterNamespaceArn: Self = this.set("ClusterNamespaceArn", js.undefined)
     
     @scala.inline
     def setClusterNodesVarargs(value: ClusterNode*): Self = this.set("ClusterNodes", js.Array(value :_*))

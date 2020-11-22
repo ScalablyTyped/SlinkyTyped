@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LayerProps extends js.Object {
   
   var children: ReactElement = js.native
+  
+  var zIndex: js.UndefOr[Indexable] = js.native
 }
 object LayerProps {
   
@@ -38,5 +40,11 @@ object LayerProps {
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
+    
+    @scala.inline
+    def setZIndex(value: Indexable): Self = this.set("zIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteZIndex: Self = this.set("zIndex", js.undefined)
   }
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreatePublicKeyRequest extends js.Object {
   
   /**
-    * The request to add a public key to CloudFront.
+    * A CloudFront public key configuration.
     */
   var PublicKeyConfig: typingsSlinky.awsSdk.cloudfrontMod.PublicKeyConfig = js.native
 }

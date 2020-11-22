@@ -1,9 +1,9 @@
 package typingsSlinky.intoStream
 
-import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.TypedArray
 import typingsSlinky.node.streamMod.Readable
+import typingsSlinky.std.AsyncIterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,9 +26,6 @@ object mod extends js.Object {
   	*/
   def apply(input: Input): Readable = js.native
   
-  // TODO: Remove this for the next major release
-  var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof intoStream */ js.Any = js.native
-  
   def `object`(input: js.Promise[InputObject]): Readable = js.native
   /**
   	Convert object `input` into a stream.
@@ -37,7 +34,8 @@ object mod extends js.Object {
   	*/
   def `object`(input: InputObject): Readable = js.native
   
-  type Input = Buffer | TypedArray | js.typedarray.ArrayBuffer | String | (js.Iterable[Buffer | String])
+  type Input = Buffer | TypedArray | js.typedarray.ArrayBuffer | String | (js.Iterable[Buffer | String]) | (AsyncIterable[Buffer | String])
   
-  type InputObject = StringDictionary[js.Any] | js.Iterable[StringDictionary[js.Any]]
+  /* eslint-disable @typescript-eslint/ban-types */
+  type InputObject = js.Object | js.Iterable[js.Object] | AsyncIterable[js.Object]
 }

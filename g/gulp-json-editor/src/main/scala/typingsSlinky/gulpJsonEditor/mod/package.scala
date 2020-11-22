@@ -8,7 +8,7 @@ package object mod {
   
   type JEditor = js.Function2[
     /* mergeWith */ js.Any | (js.Function1[/* json */ js.Any, js.Any]), 
-    /* jsBeautifyOptions */ js.UndefOr[typingsSlinky.jsBeautify.JSBeautifyOptions], 
+    /* jsBeautifyOptions */ js.UndefOr[typingsSlinky.jsBeautify.mod.JSBeautifyOptions], 
     typingsSlinky.node.NodeJS.ReadWriteStream
   ]
 }

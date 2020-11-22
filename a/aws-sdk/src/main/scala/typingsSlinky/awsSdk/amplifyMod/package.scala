@@ -74,6 +74,8 @@ package object amplifyMod {
   
   type CustomDomains = js.Array[typingsSlinky.awsSdk.amplifyMod.CustomDomain]
   
+  type CustomHeaders = java.lang.String
+  
   type CustomRules = js.Array[typingsSlinky.awsSdk.amplifyMod.CustomRule]
   
   type DNSRecord = java.lang.String
@@ -120,6 +122,8 @@ package object amplifyMod {
   type EnableBranchAutoDeletion = scala.Boolean
   
   type EnableNotification = scala.Boolean
+  
+  type EnablePerformanceMode = scala.Boolean
   
   type EnablePullRequestPreview = scala.Boolean
   

@@ -26,7 +26,7 @@ class Transaction () extends js.Object {
   var client_id: js.UndefOr[String] = js.native
   
   /**
-    * The time when the transaction was created, in RFC 3339 format.
+    * The timestamp for when the transaction was created, in RFC 3339 format.
     */
   var created_at: js.UndefOr[String] = js.native
   

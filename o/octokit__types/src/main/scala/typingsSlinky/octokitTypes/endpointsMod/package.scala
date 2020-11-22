@@ -18,9 +18,9 @@ package object endpointsMod {
   
   type ActivityGetFeedsEndpoint = js.Object
   
-  type ActivityListNotificationsForAuthenticatedUserResponseData = js.Array[typingsSlinky.octokitTypes.anon.Id]
+  type ActivityListNotificationsForAuthenticatedUserResponseData = js.Array[typingsSlinky.octokitTypes.anon.Lastreadat]
   
-  type ActivityListRepoNotificationsForAuthenticatedUserResponseData = js.Array[typingsSlinky.octokitTypes.anon.Id]
+  type ActivityListRepoNotificationsForAuthenticatedUserResponseData = js.Array[typingsSlinky.octokitTypes.anon.Lastreadat]
   
   type ActivityListReposStarredByAuthenticatedUserResponse200Data = js.Array[typingsSlinky.octokitTypes.anon.Repo]
   
@@ -46,6 +46,8 @@ package object endpointsMod {
   
   type AppsCreateInstallationAccessTokenParamsPermissionsKeyString = js.Object
   
+  type AppsGetAuthenticatedEndpoint = js.Object
+  
   type AppsListAccountsForPlanResponseData = js.Array[typingsSlinky.octokitTypes.anon.Login]
   
   type AppsListAccountsForPlanStubbedResponseData = js.Array[typingsSlinky.octokitTypes.anon.Login]
@@ -64,11 +66,15 @@ package object endpointsMod {
   
   type ChecksListAnnotationsResponseData = js.Array[typingsSlinky.octokitTypes.anon.Annotationlevel]
   
-  type CodeScanningListAlertsForRepoResponseData = js.Array[typingsSlinky.octokitTypes.anon.Closedat]
+  type CodeScanningListAlertsForRepoResponseData = js.Array[typingsSlinky.octokitTypes.anon.Dismissedat]
+  
+  type CodeScanningListRecentAnalysesResponseData = js.Array[typingsSlinky.octokitTypes.anon.Analysiskey]
   
   type CodesOfConductGetAllCodesOfConductResponseData = js.Array[typingsSlinky.octokitTypes.anon.KeyName]
   
   type EmojisGetEndpoint = js.Object
+  
+  type EnterpriseAdminListRunnerApplicationsForEnterpriseResponseData = js.Array[typingsSlinky.octokitTypes.anon.Architecture]
   
   type EnterpriseAdminUpdateAttributeForEnterpriseGroupParamsOperations = js.Object
   
@@ -124,7 +130,7 @@ package object endpointsMod {
   
   type IssuesListLabelsOnIssueResponseData = js.Array[typingsSlinky.octokitTypes.anon.Color]
   
-  type IssuesListMilestonesResponseData = js.Array[typingsSlinky.octokitTypes.anon.Closedissues]
+  type IssuesListMilestonesResponseData = js.Array[typingsSlinky.octokitTypes.anon.Closedat]
   
   type IssuesListResponseData = js.Array[typingsSlinky.octokitTypes.anon.Assignee]
   
@@ -206,21 +212,21 @@ package object endpointsMod {
   
   type RateLimitGetEndpoint = js.Object
   
-  type ReactionsListForCommitCommentResponseData = js.Array[typingsSlinky.octokitTypes.anon.Content]
+  type ReactionsListForCommitCommentResponseData = js.Array[typingsSlinky.octokitTypes.anon.User]
   
-  type ReactionsListForIssueCommentResponseData = js.Array[typingsSlinky.octokitTypes.anon.Content]
+  type ReactionsListForIssueCommentResponseData = js.Array[typingsSlinky.octokitTypes.anon.User]
   
-  type ReactionsListForIssueResponseData = js.Array[typingsSlinky.octokitTypes.anon.Content]
+  type ReactionsListForIssueResponseData = js.Array[typingsSlinky.octokitTypes.anon.User]
   
-  type ReactionsListForPullRequestReviewCommentResponseData = js.Array[typingsSlinky.octokitTypes.anon.Content]
+  type ReactionsListForPullRequestReviewCommentResponseData = js.Array[typingsSlinky.octokitTypes.anon.User]
   
-  type ReactionsListForTeamDiscussionCommentInOrgResponseData = js.Array[typingsSlinky.octokitTypes.anon.Content]
+  type ReactionsListForTeamDiscussionCommentInOrgResponseData = js.Array[typingsSlinky.octokitTypes.anon.User]
   
-  type ReactionsListForTeamDiscussionCommentLegacyResponseData = js.Array[typingsSlinky.octokitTypes.anon.Content]
+  type ReactionsListForTeamDiscussionCommentLegacyResponseData = js.Array[typingsSlinky.octokitTypes.anon.User]
   
-  type ReactionsListForTeamDiscussionInOrgResponseData = js.Array[typingsSlinky.octokitTypes.anon.Content]
+  type ReactionsListForTeamDiscussionInOrgResponseData = js.Array[typingsSlinky.octokitTypes.anon.User]
   
-  type ReactionsListForTeamDiscussionLegacyResponseData = js.Array[typingsSlinky.octokitTypes.anon.Content]
+  type ReactionsListForTeamDiscussionLegacyResponseData = js.Array[typingsSlinky.octokitTypes.anon.User]
   
   type ReposAddAppAccessRestrictionsResponseData = js.Array[typingsSlinky.octokitTypes.anon.Events]
   

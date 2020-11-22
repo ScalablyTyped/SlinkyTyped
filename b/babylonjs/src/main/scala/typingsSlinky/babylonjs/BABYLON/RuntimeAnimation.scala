@@ -181,6 +181,11 @@ trait RuntimeAnimation extends js.Object {
   def goToFrame(frame: Double): Unit = js.native
   
   /**
+    * Gets the additive state of the runtime animation
+    */
+  def isAdditive: Boolean = js.native
+  
+  /**
     * Specifies if the runtime animation is stopped
     * @returns Boolean specifying if the runtime animation is stopped
     */

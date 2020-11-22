@@ -15,19 +15,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartCommonAxisSettingsTitle extends js.Object {
   
-  /** @name dxChart.Options.commonAxisSettings.title.alignment */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.title.alignment]
+    */
   var alignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.title.font */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.title.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.title.margin */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.title.margin]
+    */
   var margin: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.title.textOverflow */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.title.textOverflow]
+    */
   var textOverflow: js.UndefOr[ellipsis | hide | none] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.title.wordWrap */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.title.wordWrap]
+    */
   var wordWrap: js.UndefOr[normal | breakWord | none] = js.native
 }
 object dxChartCommonAxisSettingsTitle {

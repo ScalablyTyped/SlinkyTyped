@@ -27,7 +27,7 @@ trait GitHost extends js.Object {
   
   var committish: js.UndefOr[String] = js.native
   
-  var default: String = js.native
+  var default: js.UndefOr[String] = js.native
   
   def docs(): String = js.native
   def docs(opts: FillOptions): String = js.native
@@ -41,7 +41,7 @@ trait GitHost extends js.Object {
   
   var filetemplate: String = js.native
   
-  def getDefaultRepresentation(): String = js.native
+  def getDefaultRepresentation(): js.UndefOr[Representation] = js.native
   
   def git(): String = js.native
   def git(opts: FillOptions): String = js.native

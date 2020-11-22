@@ -30,5 +30,5 @@ trait Get extends js.Object {
     * Lists all the emojis available to use on GitHub.
     */
   @JSName("get")
-  var get_Original: `120` = js.native
+  var get_Original: `123` = js.native
 }

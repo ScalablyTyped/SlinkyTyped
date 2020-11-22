@@ -70,8 +70,6 @@ trait Instance extends js.Object {
   
   def _setHoursFromDate(date: Date): Unit = js.native
   
-  var _showTimeInput: Boolean = js.native
-  
   var altInput: js.UndefOr[HTMLInputElement] = js.native
   
   var amPM: js.UndefOr[HTMLSpanElement] = js.native
@@ -200,9 +198,9 @@ trait Instance extends js.Object {
   
   var selectedDates: js.Array[Date] = js.native
   
-  def set(option: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 60 */ js.Any): Unit = js.native
+  def set(option: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 62 */ js.Any): Unit = js.native
   def set(
-    option: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 60 */ js.Any,
+    option: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 62 */ js.Any,
     value: js.Any
   ): Unit = js.native
   def set(option: kinkeyofOptionsOptionsk): Unit = js.native
@@ -216,8 +214,6 @@ trait Instance extends js.Object {
   def setDate(date: DateOption, triggerChange: js.UndefOr[scala.Nothing], format: String): Unit = js.native
   def setDate(date: DateOption, triggerChange: Boolean): Unit = js.native
   def setDate(date: DateOption, triggerChange: Boolean, format: String): Unit = js.native
-  
-  var showTimeInput: Boolean = js.native
   
   var timeContainer: js.UndefOr[HTMLDivElement] = js.native
   

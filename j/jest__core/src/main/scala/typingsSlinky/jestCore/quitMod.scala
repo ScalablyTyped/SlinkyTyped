@@ -8,7 +8,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/core/build/plugins/quit", JSImport.Namespace)
+@JSImport("@jest/core/build/plugins/Quit", JSImport.Namespace)
 @js.native
 object quitMod extends js.Object {
   

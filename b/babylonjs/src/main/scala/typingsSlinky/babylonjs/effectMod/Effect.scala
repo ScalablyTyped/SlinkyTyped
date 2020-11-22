@@ -2,7 +2,6 @@ package typingsSlinky.babylonjs.effectMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.babylonjs.WebGLUniformLocation
-import typingsSlinky.babylonjs.baseTextureMod.BaseTexture
 import typingsSlinky.babylonjs.dataBufferMod.DataBuffer
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.iEffectFallbacksMod.IEffectFallbacks
@@ -19,6 +18,7 @@ import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.renderTargetTextureMod.RenderTargetTexture
 import typingsSlinky.babylonjs.sceneMod.IDisposable
 import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
+import typingsSlinky.babylonjs.thinTextureMod.ThinTexture
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -97,6 +97,8 @@ class Effect protected () extends IDisposable {
   
   var _fragmentSourceCodeOverride: js.Any = js.native
   
+  var _getShaderCodeAndErrorLine: js.Any = js.native
+  
   var _indexParameters: js.Any = js.native
   
   var _isReady: js.Any = js.native
@@ -110,6 +112,9 @@ class Effect protected () extends IDisposable {
   var _key: String = js.native
   
   var _loadShader: js.Any = js.native
+  
+  /** @hidden */
+  var _multiTarget: Boolean = js.native
   
   /** @hidden */
   var _onBindObservable: Nullable[Observable[Effect]] = js.native
@@ -127,6 +132,10 @@ class Effect protected () extends IDisposable {
   def _prepareEffect(): Unit = js.native
   
   var _processCompilationErrors: js.Any = js.native
+  
+  var _rawFragmentSourceCode: js.Any = js.native
+  
+  var _rawVertexSourceCode: js.Any = js.native
   
   /**
     * Recompiles the webGL program
@@ -150,6 +159,8 @@ class Effect protected () extends IDisposable {
   var _transformFeedbackVaryings: js.Any = js.native
   
   var _uniformBuffersNames: js.Any = js.native
+  
+  var _uniformBuffersNamesList: js.Any = js.native
   
   var _uniforms: js.Any = js.native
   
@@ -201,6 +212,11 @@ class Effect protected () extends IDisposable {
   def executeWhenCompiled(func: js.Function1[/* effect */ this.type, Unit]): Unit = js.native
   
   /**
+    * Gets the fragment shader source code of this effect
+    */
+  def fragmentSourceCode: String = js.native
+  
+  /**
     * Returns the attribute at the given index.
     * @param index The index of the attribute.
     * @returns The location of the attribute.
@@ -239,6 +255,12 @@ class Effect protected () extends IDisposable {
   def getEngine(): Engine = js.native
   
   /**
+    * Returns the index parameters used to create the effect
+    * @returns The index parameters object
+    */
+  def getIndexParameters(): js.Any = js.native
+  
+  /**
     * The pipeline context for this effect
     * @returns the associated pipeline context
     */
@@ -246,7 +268,7 @@ class Effect protected () extends IDisposable {
   
   /**
     * Returns an array of sampler variable names
-    * @returns The array of sampler variable neames.
+    * @returns The array of sampler variable names.
     */
   def getSamplers(): js.Array[String] = js.native
   
@@ -258,11 +280,23 @@ class Effect protected () extends IDisposable {
   def getUniform(uniformName: String): Nullable[WebGLUniformLocation] = js.native
   
   /**
+    * Returns an array of uniform buffer variable names
+    * @returns The array of uniform buffer variable names.
+    */
+  def getUniformBuffersNames(): js.Array[String] = js.native
+  
+  /**
     * Gets the index of a uniform variable.
     * @param uniformName of the uniform to look up.
     * @returns the index.
     */
   def getUniformIndex(uniformName: String): Double = js.native
+  
+  /**
+    * Returns an array of uniform variable names
+    * @returns The array of uniform variable names.
+    */
+  def getUniformNames(): js.Array[String] = js.native
   
   /**
     * If the effect has been compiled and prepared.
@@ -315,6 +349,16 @@ class Effect protected () extends IDisposable {
     * Observable that will be called if an error occurs during shader compilation.
     */
   var onErrorObservable: Observable[Effect] = js.native
+  
+  /**
+    * Gets the fragment shader source code before it has been processed by the preprocessor
+    */
+  def rawFragmentSourceCode: String = js.native
+  
+  /**
+    * Gets the vertex shader source code before it has been processed by the preprocessor
+    */
+  def rawVertexSourceCode: String = js.native
   
   /**
     * Sets an array on a uniform variable.
@@ -498,6 +542,7 @@ class Effect protected () extends IDisposable {
     */
   def setIntArray4(uniformName: String, array: js.typedarray.Int32Array): Effect = js.native
   
+  def setMatrices(uniformName: String, matrices: js.Array[Double]): Effect = js.native
   /**
     * Sets matrices on a uniform variable.
     * @param uniformName Name of the variable.
@@ -514,6 +559,7 @@ class Effect protected () extends IDisposable {
     */
   def setMatrix(uniformName: String, matrix: IMatrixLike): Effect = js.native
   
+  def setMatrix2x2(uniformName: String, matrix: js.Array[Double]): Effect = js.native
   /**
     * Sets a 2x2 matrix on a uniform variable. (Speicified as [1,2,3,4] will result in [1,2][3,4] matrix)
     * @param uniformName Name of the variable.
@@ -522,6 +568,7 @@ class Effect protected () extends IDisposable {
     */
   def setMatrix2x2(uniformName: String, matrix: js.typedarray.Float32Array): Effect = js.native
   
+  def setMatrix3x3(uniformName: String, matrix: js.Array[Double]): Effect = js.native
   /**
     * Sets a 3x3 matrix on a uniform variable. (Speicified as [1,2,3,4,5,6,7,8,9] will result in [1,2,3][4,5,6][7,8,9] matrix)
     * @param uniformName Name of the variable.
@@ -535,14 +582,14 @@ class Effect protected () extends IDisposable {
     * @param channel Name of the sampler variable.
     * @param texture Texture to set.
     */
-  def setTexture(channel: String, texture: Nullable[BaseTexture]): Unit = js.native
+  def setTexture(channel: String, texture: Nullable[ThinTexture]): Unit = js.native
   
   /**
     * Sets an array of textures on the engine to be used in the shader.
     * @param channel Name of the variable.
     * @param textures Textures to set.
     */
-  def setTextureArray(channel: String, textures: js.Array[BaseTexture]): Unit = js.native
+  def setTextureArray(channel: String, textures: js.Array[ThinTexture]): Unit = js.native
   
   /**
     * Sets a texture to be the input of the specified post process. (To use the output, pass in the next post process in the pipeline)
@@ -587,6 +634,11 @@ class Effect protected () extends IDisposable {
     * Unique ID of the effect.
     */
   var uniqueId: Double = js.native
+  
+  /**
+    * Gets the vertex shader source code of this effect
+    */
+  def vertexSourceCode: String = js.native
 }
 /* static members */
 @JSImport("babylonjs/Materials/effect", "Effect")
@@ -597,6 +649,11 @@ object Effect extends js.Object {
     * Store of each included file for a shader (The can be looked up using effect.key)
     */
   var IncludesShadersStore: StringDictionary[String] = js.native
+  
+  /**
+    * Enable logging of the shader code when a compilation error occurs
+    */
+  var LogShaderCodeOnCompilationError: Boolean = js.native
   
   /**
     * This function will add a new shader to the shader store

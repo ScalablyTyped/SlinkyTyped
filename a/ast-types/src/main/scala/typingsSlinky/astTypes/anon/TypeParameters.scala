@@ -7,31 +7,84 @@ import typingsSlinky.astTypes.kindsMod.SourceLocationKind
 import typingsSlinky.astTypes.kindsMod.TypeParameterInstantiationKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+@js.native
 trait TypeParameters extends js.Object {
-  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.undefined
-  var id: IdentifierKind
-  var loc: js.UndefOr[SourceLocationKind | Null] = js.undefined
-  var superClass: js.UndefOr[ExpressionKind | Null] = js.undefined
-  var typeParameters: js.UndefOr[TypeParameterInstantiationKind | Null] = js.undefined
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var id: IdentifierKind = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var superClass: js.UndefOr[ExpressionKind | Null] = js.native
+  
+  var typeParameters: js.UndefOr[TypeParameterInstantiationKind | Null] = js.native
 }
-
 object TypeParameters {
+  
   @scala.inline
-  def apply(
-    id: IdentifierKind,
-    comments: js.UndefOr[Null | js.Array[CommentKind]] = js.undefined,
-    loc: js.UndefOr[Null | SourceLocationKind] = js.undefined,
-    superClass: js.UndefOr[Null | ExpressionKind] = js.undefined,
-    typeParameters: js.UndefOr[Null | TypeParameterInstantiationKind] = js.undefined
-  ): TypeParameters = {
+  def apply(id: IdentifierKind): TypeParameters = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
-    if (!js.isUndefined(comments)) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
-    if (!js.isUndefined(loc)) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
-    if (!js.isUndefined(superClass)) __obj.updateDynamic("superClass")(superClass.asInstanceOf[js.Any])
-    if (!js.isUndefined(typeParameters)) __obj.updateDynamic("typeParameters")(typeParameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[TypeParameters]
   }
+  
+  @scala.inline
+  implicit class TypeParametersOps[Self <: TypeParameters] (val x: Self) extends AnyVal {
+    
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+      x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+      x
+    }
+    
+    @scala.inline
+    def setId(value: IdentifierKind): Self = this.set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCommentsVarargs(value: CommentKind*): Self = this.set("comments", js.Array(value :_*))
+    
+    @scala.inline
+    def setComments(value: js.Array[CommentKind]): Self = this.set("comments", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteComments: Self = this.set("comments", js.undefined)
+    
+    @scala.inline
+    def setCommentsNull: Self = this.set("comments", null)
+    
+    @scala.inline
+    def setLoc(value: SourceLocationKind): Self = this.set("loc", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoc: Self = this.set("loc", js.undefined)
+    
+    @scala.inline
+    def setLocNull: Self = this.set("loc", null)
+    
+    @scala.inline
+    def setSuperClass(value: ExpressionKind): Self = this.set("superClass", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSuperClass: Self = this.set("superClass", js.undefined)
+    
+    @scala.inline
+    def setSuperClassNull: Self = this.set("superClass", null)
+    
+    @scala.inline
+    def setTypeParameters(value: TypeParameterInstantiationKind): Self = this.set("typeParameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTypeParameters: Self = this.set("typeParameters", js.undefined)
+    
+    @scala.inline
+    def setTypeParametersNull: Self = this.set("typeParameters", null)
+  }
 }
-

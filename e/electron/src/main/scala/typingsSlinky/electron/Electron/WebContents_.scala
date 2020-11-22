@@ -79,7 +79,7 @@ import typingsSlinky.electron.electronStrings.unresponsive
 import typingsSlinky.electron.electronStrings.webview
 import typingsSlinky.electron.electronStrings.window
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -90,14 +90,15 @@ trait WebContents_ extends EventEmitter {
   
   def addListener(
     event: `new-window`,
-    listener: js.Function7[
-      /* event */ NewWindowEvent, 
+    listener: js.Function8[
+      /* event */ NewWindowWebContentsEvent, 
       /* url */ String, 
       /* frameName */ String, 
       /* disposition */ default | `foreground-tab` | `background-tab` | `new-window` | `save-to-disk` | other, 
       /* options */ BrowserWindowConstructorOptions, 
       /* additionalFeatures */ js.Array[String], 
       /* referrer */ Referrer, 
+      /* postBody */ PostBody, 
       Unit
     ]
   ): this.type = js.native
@@ -361,7 +362,7 @@ trait WebContents_ extends EventEmitter {
   @JSName("addListener")
   def addListener_renderprocessgone(
     event: `render-process-gone`,
-    listener: js.Function2[/* event */ Event, /* details */ Details, Unit]
+    listener: js.Function2[/* event */ Event, /* details */ RenderProcessGoneDetails, Unit]
   ): this.type = js.native
   @JSName("addListener")
   def addListener_responsive(event: responsive, listener: js.Function): this.type = js.native
@@ -425,6 +426,8 @@ trait WebContents_ extends EventEmitter {
   def addWorkSpace(path: String): Unit = js.native
   
   var audioMuted: Boolean = js.native
+  
+  var backgroundThrottling: Boolean = js.native
   
   /**
     * Begin subscribing for presentation events and captured frames, the `callback`
@@ -579,12 +582,31 @@ trait WebContents_ extends EventEmitter {
     */
   def focus(): Unit = js.native
   
+  /**
+    * Forcefully terminates the renderer process that is currently hosting this
+    * `webContents`. This will cause the `render-process-gone` event to be emitted
+    * with the `reason=killed || reason=crashed`. Please note that some webContents
+    * share renderer processes and therefore calling this method may also crash the
+    * host process for other webContents as well.
+    *
+    * Calling `reload()` immediately after calling this method will force the reload
+    * to occur in a new process. This should be used when this process is unstable or
+    * unusable, for instance in order to recover from the `unresponsive` event.
+    */
+  def forcefullyCrashRenderer(): Unit = js.native
+  
   var frameRate: Double = js.native
   
   /**
     * Information about all Shared Workers.
     */
   def getAllSharedWorkers(): js.Array[SharedWorkerInfo] = js.native
+  
+  /**
+    * whether or not this WebContents will throttle animations and timers when the
+    * page becomes backgrounded. This also affects the Page Visibility API.
+    */
+  def getBackgroundThrottling(): Boolean = js.native
   
   /**
     * If *offscreen rendering* is enabled returns the current frame rate.
@@ -830,14 +852,15 @@ trait WebContents_ extends EventEmitter {
     */
   def on(
     event: `new-window`,
-    listener: js.Function7[
-      /* event */ NewWindowEvent, 
+    listener: js.Function8[
+      /* event */ NewWindowWebContentsEvent, 
       /* url */ String, 
       /* frameName */ String, 
       /* disposition */ default | `foreground-tab` | `background-tab` | `new-window` | `save-to-disk` | other, 
       /* options */ BrowserWindowConstructorOptions, 
       /* additionalFeatures */ js.Array[String], 
       /* referrer */ Referrer, 
+      /* postBody */ PostBody, 
       Unit
     ]
   ): this.type = js.native
@@ -902,7 +925,7 @@ trait WebContents_ extends EventEmitter {
     * Emitted when the renderer process crashes or is killed.
     *
     * **Deprecated:** This event is superceded by the `render-process-gone` event
-    * which contains more information about why the render process dissapeared. It
+    * which contains more information about why the render process disappeared. It
     * isn't always because it crashed.  The `killed` boolean can be replaced by
     * checking `reason === 'killed'` when you switch to that event.
     *
@@ -1103,7 +1126,7 @@ trait WebContents_ extends EventEmitter {
     * Emitted after a server side redirect occurs during navigation.  For example a
     * 302 redirect.
     *
-    * This event can not be prevented, if you want to prevent redirects you should
+    * This event cannot be prevented, if you want to prevent redirects you should
     * checkout out the `will-redirect` event above.
     */
   @JSName("on")
@@ -1298,13 +1321,13 @@ trait WebContents_ extends EventEmitter {
     listener: js.Function2[/* event */ IpcMainEvent, /* moduleName */ String, Unit]
   ): this.type = js.native
   /**
-    * Emitted when the renderer process unexpectedly dissapears.  This is normally
+    * Emitted when the renderer process unexpectedly disappears.  This is normally
     * because it was crashed or killed.
     */
   @JSName("on")
   def on_renderprocessgone(
     event: `render-process-gone`,
-    listener: js.Function2[/* event */ Event, /* details */ Details, Unit]
+    listener: js.Function2[/* event */ Event, /* details */ RenderProcessGoneDetails, Unit]
   ): this.type = js.native
   /**
     * Emitted when the unresponsive web page becomes responsive again.
@@ -1362,8 +1385,8 @@ trait WebContents_ extends EventEmitter {
     * `<webview>` before it's loaded, and provides the ability to set settings that
     * can't be set via `<webview>` attributes.
     *
-    * **Note:** The specified `preload` script option will be appear as `preloadURL`
-    * (not `preload`) in the `webPreferences` object emitted with this event.
+    * **Note:** The specified `preload` script option will appear as `preloadURL` (not
+    * `preload`) in the `webPreferences` object emitted with this event.
     */
   @JSName("on")
   def on_willattachwebview(
@@ -1424,14 +1447,15 @@ trait WebContents_ extends EventEmitter {
   
   def once(
     event: `new-window`,
-    listener: js.Function7[
-      /* event */ NewWindowEvent, 
+    listener: js.Function8[
+      /* event */ NewWindowWebContentsEvent, 
       /* url */ String, 
       /* frameName */ String, 
       /* disposition */ default | `foreground-tab` | `background-tab` | `new-window` | `save-to-disk` | other, 
       /* options */ BrowserWindowConstructorOptions, 
       /* additionalFeatures */ js.Array[String], 
       /* referrer */ Referrer, 
+      /* postBody */ PostBody, 
       Unit
     ]
   ): this.type = js.native
@@ -1695,7 +1719,7 @@ trait WebContents_ extends EventEmitter {
   @JSName("once")
   def once_renderprocessgone(
     event: `render-process-gone`,
-    listener: js.Function2[/* event */ Event, /* details */ Details, Unit]
+    listener: js.Function2[/* event */ Event, /* details */ RenderProcessGoneDetails, Unit]
   ): this.type = js.native
   @JSName("once")
   def once_responsive(event: responsive, listener: js.Function): this.type = js.native
@@ -1785,7 +1809,7 @@ trait WebContents_ extends EventEmitter {
   
   /**
     * When a custom `pageSize` is passed, Chromium attempts to validate platform
-    * specific minumum values for `width_microns` and `height_microns`. Width and
+    * specific minimum values for `width_microns` and `height_microns`. Width and
     * height must both be minimum 353 microns but may be higher on some operating
     * systems.
     *
@@ -1818,7 +1842,7 @@ trait WebContents_ extends EventEmitter {
     *
     * By default, an empty `options` will be regarded as:
     *
-    * Use `page-break-before: always;` CSS style to force to print to a new page.
+    * Use `page-break-before: always; ` CSS style to force to print to a new page.
     * 
   An example of `webContents.printToPDF`:
     */
@@ -1849,14 +1873,15 @@ trait WebContents_ extends EventEmitter {
   
   def removeListener(
     event: `new-window`,
-    listener: js.Function7[
-      /* event */ NewWindowEvent, 
+    listener: js.Function8[
+      /* event */ NewWindowWebContentsEvent, 
       /* url */ String, 
       /* frameName */ String, 
       /* disposition */ default | `foreground-tab` | `background-tab` | `new-window` | `save-to-disk` | other, 
       /* options */ BrowserWindowConstructorOptions, 
       /* additionalFeatures */ js.Array[String], 
       /* referrer */ Referrer, 
+      /* postBody */ PostBody, 
       Unit
     ]
   ): this.type = js.native
@@ -2120,7 +2145,7 @@ trait WebContents_ extends EventEmitter {
   @JSName("removeListener")
   def removeListener_renderprocessgone(
     event: `render-process-gone`,
-    listener: js.Function2[/* event */ Event, /* details */ Details, Unit]
+    listener: js.Function2[/* event */ Event, /* details */ RenderProcessGoneDetails, Unit]
   ): this.type = js.native
   @JSName("removeListener")
   def removeListener_responsive(event: responsive, listener: js.Function): this.type = js.native
@@ -2295,8 +2320,6 @@ trait WebContents_ extends EventEmitter {
   
   /**
     * Ignore application menu shortcuts while this web contents is focused.
-    *
-    * @experimental
     */
   def setIgnoreMenuShortcuts(ignore: Boolean): Unit = js.native
   

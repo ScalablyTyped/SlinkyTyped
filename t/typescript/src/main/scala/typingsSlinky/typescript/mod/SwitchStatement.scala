@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SwitchStatement extends Statement {
   
-  var caseBlock: CaseBlock = js.native
+  val caseBlock: CaseBlock = js.native
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_SwitchStatement: typingsSlinky.typescript.mod.SyntaxKind.SwitchStatement = js.native
+  val kind_SwitchStatement: typingsSlinky.typescript.mod.SyntaxKind.SwitchStatement = js.native
   
   var possiblyExhaustive: js.UndefOr[Boolean] = js.native
 }

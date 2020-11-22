@@ -14,7 +14,7 @@ trait WxSaveFileOption extends js.Object {
   var fail: js.UndefOr[WxSaveFileFailCallback] = js.native
   
   /** 接口调用成功的回调函数 */
-  var success: js.UndefOr[WxSaveFileSuccessCallback] = js.native
+  var success: js.UndefOr[SaveFileSuccessCallback] = js.native
   
   /** 需要保存的文件的临时路径 (本地路径) */
   var tempFilePath: String = js.native
@@ -58,7 +58,7 @@ object WxSaveFileOption {
     def deleteFail: Self = this.set("fail", js.undefined)
     
     @scala.inline
-    def setSuccess(value: /* result */ WxSaveFileSuccessCallbackResult => Unit): Self = this.set("success", js.Any.fromFunction1(value))
+    def setSuccess(value: /* result */ SaveFileSuccessCallbackResult => Unit): Self = this.set("success", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteSuccess: Self = this.set("success", js.undefined)

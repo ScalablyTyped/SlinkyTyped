@@ -17,7 +17,7 @@ trait ArcGISImageServiceCapabilities extends Object {
   var operations: ArcGISImageServiceCapabilitiesOperations = js.native
   
   /**
-    * Describes [query](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html) operations supported by the layer. Use the [QueryTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-QueryTask.html) to query an imagery layer.
+    * Describes [query](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-Query.html) operations supported by the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISImageService.html#capabilities)
     */

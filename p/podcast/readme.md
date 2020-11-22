@@ -1,7 +1,7 @@
 
 # Scala.js typings for podcast
 
-Typings are for version 1.1
+Typings are for version 1.3
 
 ## Library description:
 Podcast RSS feed generator. A really simple API to add Podcast-RSS feeds to any project.

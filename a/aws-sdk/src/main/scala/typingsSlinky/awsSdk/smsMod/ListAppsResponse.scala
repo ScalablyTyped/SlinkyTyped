@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListAppsResponse extends js.Object {
   
   /**
-    * A list of application summaries.
+    * The application summaries.
     */
   var apps: js.UndefOr[Apps] = js.native
   

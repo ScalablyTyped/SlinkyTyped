@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "storybook__core-events"
-version := "5.3.19-69356f"
+version := "6.1.2-fc86d5"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

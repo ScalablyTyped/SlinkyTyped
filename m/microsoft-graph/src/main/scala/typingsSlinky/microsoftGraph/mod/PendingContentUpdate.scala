@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PendingContentUpdate extends js.Object {
   
   // Date and time the pending binary operation was queued in UTC time. Read-only.
-  var queuedDateTime: js.UndefOr[String] = js.native
+  var queuedDateTime: js.UndefOr[NullableOption[String]] = js.native
 }
 object PendingContentUpdate {
   
@@ -34,9 +34,12 @@ object PendingContentUpdate {
     }
     
     @scala.inline
-    def setQueuedDateTime(value: String): Self = this.set("queuedDateTime", value.asInstanceOf[js.Any])
+    def setQueuedDateTime(value: NullableOption[String]): Self = this.set("queuedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteQueuedDateTime: Self = this.set("queuedDateTime", js.undefined)
+    
+    @scala.inline
+    def setQueuedDateTimeNull: Self = this.set("queuedDateTime", null)
   }
 }

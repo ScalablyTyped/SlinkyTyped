@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AppCatalogs extends Entity {
   
-  var teamsApps: js.UndefOr[js.Array[TeamsApp]] = js.native
+  var teamsApps: js.UndefOr[NullableOption[js.Array[TeamsApp]]] = js.native
 }
 object AppCatalogs {
   
@@ -36,9 +36,12 @@ object AppCatalogs {
     def setTeamsAppsVarargs(value: TeamsApp*): Self = this.set("teamsApps", js.Array(value :_*))
     
     @scala.inline
-    def setTeamsApps(value: js.Array[TeamsApp]): Self = this.set("teamsApps", value.asInstanceOf[js.Any])
+    def setTeamsApps(value: NullableOption[js.Array[TeamsApp]]): Self = this.set("teamsApps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTeamsApps: Self = this.set("teamsApps", js.undefined)
+    
+    @scala.inline
+    def setTeamsAppsNull: Self = this.set("teamsApps", null)
   }
 }

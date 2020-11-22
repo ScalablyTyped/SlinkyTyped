@@ -38,6 +38,11 @@ trait NetworkInterfaceAttachment extends js.Object {
   var InstanceOwnerId: js.UndefOr[String] = js.native
   
   /**
+    * The index of the network card.
+    */
+  var NetworkCardIndex: js.UndefOr[Integer] = js.native
+  
+  /**
     * The attachment state.
     */
   var Status: js.UndefOr[AttachmentStatus] = js.native
@@ -100,6 +105,12 @@ object NetworkInterfaceAttachment {
     
     @scala.inline
     def deleteInstanceOwnerId: Self = this.set("InstanceOwnerId", js.undefined)
+    
+    @scala.inline
+    def setNetworkCardIndex(value: Integer): Self = this.set("NetworkCardIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkCardIndex: Self = this.set("NetworkCardIndex", js.undefined)
     
     @scala.inline
     def setStatus(value: AttachmentStatus): Self = this.set("Status", value.asInstanceOf[js.Any])

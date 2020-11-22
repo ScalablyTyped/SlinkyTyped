@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined parent @jest/transform.@jest/transform/build/types.Omit<source-map.source-map.RawSourceMap, 'version'> */
+/* Inlined parent std.Omit<source-map.source-map.RawSourceMap, 'version'> */
 @js.native
 trait FixedRawSourceMap extends js.Object {
   

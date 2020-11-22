@@ -8,9 +8,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ServerEndpointDetails extends js.Object {
   
   /**
-    * The ID of the VPC endpoint.
+    * A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when `endpointType` is set to `VPC`.
+    */
+  var addressAllocationIds: js.UndefOr[js.Array[String]] = js.native
+  
+  /**
+    * A list of subnet IDs that are required to host your SFTP server endpoint in your VPC. This property can only be used when `endpointType` is set to `VPC`.
+    */
+  var subnetIds: js.UndefOr[js.Array[String]] = js.native
+  
+  /**
+    * The ID of the VPC endpoint. This property can only be used when `endpointType` is set to `VPC_ENDPOINT`
     */
   var vpcEndpointId: String = js.native
+  
+  /**
+    * The VPC ID of the virtual private cloud in which the SFTP server's endpoint will be hosted. This property can only be used when `endpointType` is set to `VPC`.
+    */
+  var vpcId: js.UndefOr[String] = js.native
 }
 object ServerEndpointDetails {
   
@@ -37,5 +52,29 @@ object ServerEndpointDetails {
     
     @scala.inline
     def setVpcEndpointId(value: String): Self = this.set("vpcEndpointId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAddressAllocationIdsVarargs(value: String*): Self = this.set("addressAllocationIds", js.Array(value :_*))
+    
+    @scala.inline
+    def setAddressAllocationIds(value: js.Array[String]): Self = this.set("addressAllocationIds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAddressAllocationIds: Self = this.set("addressAllocationIds", js.undefined)
+    
+    @scala.inline
+    def setSubnetIdsVarargs(value: String*): Self = this.set("subnetIds", js.Array(value :_*))
+    
+    @scala.inline
+    def setSubnetIds(value: js.Array[String]): Self = this.set("subnetIds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSubnetIds: Self = this.set("subnetIds", js.undefined)
+    
+    @scala.inline
+    def setVpcId(value: String): Self = this.set("vpcId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVpcId: Self = this.set("vpcId", js.undefined)
   }
 }

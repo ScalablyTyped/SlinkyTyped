@@ -21,10 +21,10 @@ trait Animation extends js.Object {
   def bottom(/** 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值 */
   value: Double): Animation = js.native
   
-  /** [Array.&lt;Object&gt; Animation.export()](https://developers.weixin.qq.com/miniprogram/dev/api/ui/animation/Animation.export.html)
+  /** [Object Animation.export()](https://developers.weixin.qq.com/miniprogram/dev/api/ui/animation/Animation.export.html)
     *
     * 导出动画队列。**export 方法每次调用后会清掉之前的动画操作。** */
-  def export(): js.Array[IAnyObject] = js.native
+  def export(): AnimationExportResult = js.native
   
   def height(/** 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值 */
   value: String): Animation = js.native

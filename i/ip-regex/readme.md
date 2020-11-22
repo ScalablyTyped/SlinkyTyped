@@ -1,7 +1,7 @@
 
 # Scala.js typings for ip-regex
 
-Typings are for version 4.1.0
+Typings are for version 4.2.0
 
 ## Library description:
 Regular expression for matching IP addresses (IPv4 & IPv6)

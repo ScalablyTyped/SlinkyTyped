@@ -1,7 +1,7 @@
 
 # Scala.js typings for stack-utils
 
-Typings are for version 1.0
+Typings are for version 2.0
 
 ## Library description:
 Captures and cleans stack traces

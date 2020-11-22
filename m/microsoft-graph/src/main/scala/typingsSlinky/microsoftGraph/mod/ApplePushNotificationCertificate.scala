@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ApplePushNotificationCertificate extends Entity {
   
   // Apple Id of the account used to create the MDM push certificate.
-  var appleIdentifier: js.UndefOr[String] = js.native
+  var appleIdentifier: js.UndefOr[NullableOption[String]] = js.native
   
   // Not yet documented
-  var certificate: js.UndefOr[String] = js.native
+  var certificate: js.UndefOr[NullableOption[String]] = js.native
   
   // The expiration date and time for Apple push notification certificate.
   var expirationDateTime: js.UndefOr[String] = js.native
@@ -20,7 +20,7 @@ trait ApplePushNotificationCertificate extends Entity {
   var lastModifiedDateTime: js.UndefOr[String] = js.native
   
   // Topic Id.
-  var topicIdentifier: js.UndefOr[String] = js.native
+  var topicIdentifier: js.UndefOr[NullableOption[String]] = js.native
 }
 object ApplePushNotificationCertificate {
   
@@ -46,16 +46,22 @@ object ApplePushNotificationCertificate {
     }
     
     @scala.inline
-    def setAppleIdentifier(value: String): Self = this.set("appleIdentifier", value.asInstanceOf[js.Any])
+    def setAppleIdentifier(value: NullableOption[String]): Self = this.set("appleIdentifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAppleIdentifier: Self = this.set("appleIdentifier", js.undefined)
     
     @scala.inline
-    def setCertificate(value: String): Self = this.set("certificate", value.asInstanceOf[js.Any])
+    def setAppleIdentifierNull: Self = this.set("appleIdentifier", null)
+    
+    @scala.inline
+    def setCertificate(value: NullableOption[String]): Self = this.set("certificate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCertificate: Self = this.set("certificate", js.undefined)
+    
+    @scala.inline
+    def setCertificateNull: Self = this.set("certificate", null)
     
     @scala.inline
     def setExpirationDateTime(value: String): Self = this.set("expirationDateTime", value.asInstanceOf[js.Any])
@@ -70,9 +76,12 @@ object ApplePushNotificationCertificate {
     def deleteLastModifiedDateTime: Self = this.set("lastModifiedDateTime", js.undefined)
     
     @scala.inline
-    def setTopicIdentifier(value: String): Self = this.set("topicIdentifier", value.asInstanceOf[js.Any])
+    def setTopicIdentifier(value: NullableOption[String]): Self = this.set("topicIdentifier", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTopicIdentifier: Self = this.set("topicIdentifier", js.undefined)
+    
+    @scala.inline
+    def setTopicIdentifierNull: Self = this.set("topicIdentifier", null)
   }
 }

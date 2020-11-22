@@ -13,7 +13,7 @@ trait ReplicationJob extends js.Object {
   var description: js.UndefOr[Description] = js.native
   
   /**
-    * Whether the replication job should produce encrypted AMIs or not. See also KmsKeyId below.
+    * Indicates whether the replication job should produce encrypted AMIs.
     */
   var encrypted: js.UndefOr[Encrypted] = js.native
   
@@ -23,7 +23,7 @@ trait ReplicationJob extends js.Object {
   var frequency: js.UndefOr[Frequency] = js.native
   
   /**
-    * KMS key ID for replication jobs that produce encrypted AMIs. Can be any of the following:    KMS key ID   KMS key alias   ARN referring to KMS key ID   ARN referring to KMS key alias    If encrypted is true but a KMS key id is not specified, the customer's default KMS key for EBS is used. 
+    * The ID of the KMS key for replication jobs that produce encrypted AMIs. This value can be any of the following:    KMS key ID   KMS key alias   ARN referring to the KMS key ID   ARN referring to the KMS key alias   If encrypted is enabled but a KMS key ID is not specified, the customer's default KMS key for Amazon EBS is used.
     */
   var kmsKeyId: js.UndefOr[KmsKeyId] = js.native
   
@@ -43,12 +43,12 @@ trait ReplicationJob extends js.Object {
   var nextReplicationRunStartTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * Number of recent AMIs to keep in the customer's account for a replication job. By default the value is set to zero, meaning that all AMIs are kept.
+    * The number of recent AMIs to keep in the customer's account for a replication job. By default, the value is set to zero, meaning that all AMIs are kept.
     */
   var numberOfRecentAmisToKeep: js.UndefOr[NumberOfRecentAmisToKeep] = js.native
   
   /**
-    * The identifier of the replication job.
+    * The ID of the replication job.
     */
   var replicationJobId: js.UndefOr[ReplicationJobId] = js.native
   
@@ -58,12 +58,12 @@ trait ReplicationJob extends js.Object {
   var replicationRunList: js.UndefOr[ReplicationRunList] = js.native
   
   /**
-    * The name of the IAM role to be used by the Server Migration Service.
+    * The name of the IAM role to be used by AWS SMS.
     */
   var roleName: js.UndefOr[RoleName] = js.native
   
   /**
-    * 
+    * Indicates whether to run the replication job one time.
     */
   var runOnce: js.UndefOr[RunOnce] = js.native
   
@@ -73,7 +73,7 @@ trait ReplicationJob extends js.Object {
   var seedReplicationTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The identifier of the server.
+    * The ID of the server.
     */
   var serverId: js.UndefOr[ServerId] = js.native
   

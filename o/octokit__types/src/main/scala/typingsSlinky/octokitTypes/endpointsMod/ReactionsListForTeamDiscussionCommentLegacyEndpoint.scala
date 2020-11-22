@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`10`
+import typingsSlinky.octokitTypes.anon.`9`
 import typingsSlinky.octokitTypes.octokitTypesStrings.Plussign1
 import typingsSlinky.octokitTypes.octokitTypesStrings.`-1`
 import typingsSlinky.octokitTypes.octokitTypesStrings.confused
@@ -26,7 +26,7 @@ trait ReactionsListForTeamDiscussionCommentLegacyEndpoint extends js.Object {
   
   var discussion_number: Double = js.native
   
-  var mediaType: `10` = js.native
+  var mediaType: `9` = js.native
   
   /**
     * Page number of the results to fetch.
@@ -43,7 +43,7 @@ trait ReactionsListForTeamDiscussionCommentLegacyEndpoint extends js.Object {
 object ReactionsListForTeamDiscussionCommentLegacyEndpoint {
   
   @scala.inline
-  def apply(comment_number: Double, discussion_number: Double, mediaType: `10`, team_id: Double): ReactionsListForTeamDiscussionCommentLegacyEndpoint = {
+  def apply(comment_number: Double, discussion_number: Double, mediaType: `9`, team_id: Double): ReactionsListForTeamDiscussionCommentLegacyEndpoint = {
     val __obj = js.Dynamic.literal(comment_number = comment_number.asInstanceOf[js.Any], discussion_number = discussion_number.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], team_id = team_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactionsListForTeamDiscussionCommentLegacyEndpoint]
   }
@@ -70,7 +70,7 @@ object ReactionsListForTeamDiscussionCommentLegacyEndpoint {
     def setDiscussion_number(value: Double): Self = this.set("discussion_number", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `10`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `9`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTeam_id(value: Double): Self = this.set("team_id", value.asInstanceOf[js.Any])

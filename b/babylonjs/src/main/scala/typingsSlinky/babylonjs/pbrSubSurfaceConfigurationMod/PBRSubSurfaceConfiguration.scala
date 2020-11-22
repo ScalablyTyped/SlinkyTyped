@@ -21,8 +21,14 @@ class PBRSubSurfaceConfiguration protected () extends js.Object {
   /**
     * Instantiate a new istance of sub surface configuration.
     * @param markAllSubMeshesAsTexturesDirty Callback to flag the material to dirty
+    * @param markScenePrePassDirty Callback to flag the scene as prepass dirty
+    * @param scene The scene
     */
-  def this(markAllSubMeshesAsTexturesDirty: js.Function0[Unit]) = this()
+  def this(
+    markAllSubMeshesAsTexturesDirty: js.Function0[Unit],
+    markScenePrePassDirty: js.Function0[Unit],
+    scene: Scene
+  ) = this()
   
   /**
     * Returns the texture used for refraction or null if none is used.
@@ -37,6 +43,8 @@ class PBRSubSurfaceConfiguration protected () extends js.Object {
   /** @hidden */
   var _internalMarkAllSubMeshesAsTexturesDirty: js.Any = js.native
   
+  var _internalMarkScenePrePassDirty: js.Any = js.native
+  
   var _invertRefractionY: js.Any = js.native
   
   var _isRefractionEnabled: js.Any = js.native
@@ -50,26 +58,39 @@ class PBRSubSurfaceConfiguration protected () extends js.Object {
   /** @hidden */
   def _markAllSubMeshesAsTexturesDirty(): Unit = js.native
   
+  /** @hidden */
+  def _markScenePrePassDirty(): Unit = js.native
+  
   var _refractionTexture: js.Any = js.native
+  
+  var _scatteringDiffusionProfileIndex: js.Any = js.native
+  
+  var _scene: js.Any = js.native
   
   var _thicknessTexture: js.Any = js.native
   
   var _useMaskFromThicknessTexture: js.Any = js.native
+  
+  var _useMaskFromThicknessTextureGltf: js.Any = js.native
+  
+  var _volumeIndexOfRefraction: js.Any = js.native
   
   /**
     * Binds the material data.
     * @param uniformBuffer defines the Uniform buffer to fill in.
     * @param scene defines the scene the material belongs to.
     * @param engine defines the engine the material belongs to.
-    * @param isFrozen defines wether the material is frozen or not.
-    * @param lodBasedMicrosurface defines wether the material relies on lod based microsurface or not.
+    * @param isFrozen defines whether the material is frozen or not.
+    * @param lodBasedMicrosurface defines whether the material relies on lod based microsurface or not.
+    * @param realTimeFiltering defines whether the textures should be filtered on the fly.
     */
   def bindForSubMesh(
     uniformBuffer: UniformBuffer,
     scene: Scene,
     engine: Engine,
     isFrozen: Boolean,
-    lodBasedMicrosurface: Boolean
+    lodBasedMicrosurface: Boolean,
+    realTimeFiltering: Boolean
   ): Unit = js.native
   
   /**
@@ -134,8 +155,12 @@ class PBRSubSurfaceConfiguration protected () extends js.Object {
   def hasTexture(texture: BaseTexture): Boolean = js.native
   
   /**
-    * Defines the index of refraction used in the material.
+    * Index of refraction of the material base layer.
     * https://en.wikipedia.org/wiki/List_of_refractive_indices
+    *
+    * This does not only impact refraction but also the Base F0 of Dielectric Materials.
+    *
+    * From dielectric fresnel rules: F0 = square((iorT - iorI) / (iorT + iorI))
     */
   var indexOfRefraction: Double = js.native
   
@@ -156,6 +181,11 @@ class PBRSubSurfaceConfiguration protected () extends js.Object {
     * Defines if the refraction is enabled in the material.
     */
   var isRefractionEnabled: Boolean = js.native
+  
+  /**
+    * Defines if the sub surface scattering is enabled in the material.
+    */
+  var isScatteringEnabled: Boolean = js.native
   
   /**
     * Defines if the translucency is enabled in the material.
@@ -207,11 +237,11 @@ class PBRSubSurfaceConfiguration protected () extends js.Object {
   var refractionTexture: Nullable[BaseTexture] = js.native
   
   /**
-    * Defines the scattering intensity of the material.
-    * When scattering has been enabled, this defines how much of the "scattered light"
-    * is addded to the diffuse part of the material.
+    * Diffusion profile for subsurface scattering.
+    * Useful for better scattering in the skins or foliages.
     */
-  var scatteringIntensity: Double = js.native
+  def scatteringDiffusionProfile: Nullable[Color3] = js.native
+  def scatteringDiffusionProfile_=(c: Nullable[Color3]): Unit = js.native
   
   /**
     * Serializes this Sub Surface configuration.
@@ -255,12 +285,35 @@ class PBRSubSurfaceConfiguration protected () extends js.Object {
   def unbind(activeEffect: Effect): Boolean = js.native
   
   /**
+    * When enabled, transparent surfaces will be tinted with the albedo colour (independent of thickness)
+    */
+  var useAlbedoToTintRefraction: Boolean = js.native
+  
+  /**
     * Stores the intensity of the different subsurface effects in the thickness texture.
     * * the green channel is the translucency intensity.
     * * the blue channel is the scattering intensity.
     * * the alpha channel is the refraction intensity.
     */
   var useMaskFromThicknessTexture: Boolean = js.native
+  
+  /**
+    * Stores the intensity of the different subsurface effects in the thickness texture. This variation
+    * matches the channel-packing that is used by glTF.
+    * * the red channel is the transmission/translucency intensity.
+    * * the green channel is the thickness.
+    */
+  var useMaskFromThicknessTextureGltf: Boolean = js.native
+  
+  /**
+    * Index of refraction of the material's volume.
+    * https://en.wikipedia.org/wiki/List_of_refractive_indices
+    *
+    * This ONLY impacts refraction. If not provided or given a non-valid value,
+    * the volume will use the same IOR as the surface.
+    */
+  def volumeIndexOfRefraction: Double = js.native
+  def volumeIndexOfRefraction_=(value: Double): Unit = js.native
 }
 /* static members */
 @JSImport("babylonjs/Materials/PBR/pbrSubSurfaceConfiguration", "PBRSubSurfaceConfiguration")

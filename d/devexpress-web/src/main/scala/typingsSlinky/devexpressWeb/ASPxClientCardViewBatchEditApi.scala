@@ -72,6 +72,11 @@ trait ASPxClientCardViewBatchEditApi extends js.Object {
   def GetEditCellInfo(): ASPxClientCardViewCellInfo = js.native
   
   def GetGroupSummaryValue(groupRowVisibleIndex: Double, summaryItemIndex: String): Double = js.native
+  /**
+    * Returns the group summery value. The group summary value.
+    * @param groupRowVisibleIndex The group row's visible index.
+    * @param summaryItemIndex The summary's index or field name.
+    */
   def GetGroupSummaryValue(groupRowVisibleIndex: Double, summaryItemIndex: Double): Double = js.native
   
   /**

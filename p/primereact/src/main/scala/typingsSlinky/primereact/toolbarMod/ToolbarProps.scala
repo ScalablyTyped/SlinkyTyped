@@ -11,6 +11,10 @@ trait ToolbarProps extends js.Object {
   
   var id: js.UndefOr[String] = js.native
   
+  var left: js.UndefOr[js.Function1[/* props */ js.Object, _]] = js.native
+  
+  var right: js.UndefOr[js.Function1[/* props */ js.Object, _]] = js.native
+  
   var style: js.UndefOr[js.Object] = js.native
 }
 object ToolbarProps {
@@ -47,6 +51,18 @@ object ToolbarProps {
     
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
+    
+    @scala.inline
+    def setLeft(value: /* props */ js.Object => _): Self = this.set("left", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteLeft: Self = this.set("left", js.undefined)
+    
+    @scala.inline
+    def setRight(value: /* props */ js.Object => _): Self = this.set("right", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteRight: Self = this.set("right", js.undefined)
     
     @scala.inline
     def setStyle(value: js.Object): Self = this.set("style", value.asInstanceOf[js.Any])

@@ -3,6 +3,7 @@ package typingsSlinky.reactMonacoEditor.anon
 import org.scalablytyped.runtime.Instantiable4
 import typingsSlinky.monacoEditor.mod.IPosition
 import typingsSlinky.monacoEditor.mod.IRange
+import typingsSlinky.monacoEditor.mod.Position
 import typingsSlinky.monacoEditor.mod.Range
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -68,6 +69,16 @@ trait TypeofRange extends Instantiable4[
   
   def fromPositions(start: IPosition): Range = js.native
   def fromPositions(start: IPosition, end: IPosition): Range = js.native
+  
+  /**
+    * Return the end position (which will be after or equal to the start position)
+    */
+  def getEndPosition(range: IRange): Position = js.native
+  
+  /**
+    * Return the start position (which will be before or equal to the end position)
+    */
+  def getStartPosition(range: IRange): Position = js.native
   
   /**
     * A intersection of the two ranges.

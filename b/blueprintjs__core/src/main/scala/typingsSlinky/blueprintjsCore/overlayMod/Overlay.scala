@@ -11,9 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class Overlay ()
   extends AbstractPureComponent2[IOverlayProps, IOverlayState, js.Object] {
-  def this(props: IOverlayProps) = this()
-  def this(props: js.UndefOr[scala.Nothing], context: js.Any) = this()
-  def this(props: IOverlayProps, context: js.Any) = this()
   
   @JSName("componentDidMount")
   def componentDidMount_MOverlay(): Unit = js.native
@@ -24,7 +21,7 @@ class Overlay ()
   @JSName("componentWillUnmount")
   def componentWillUnmount_MOverlay(): Unit = js.native
   
-  var containerElement: HTMLElement = js.native
+  var containerElement: HTMLElement | Null = js.native
   
   var handleBackdropMouseDown: js.Any = js.native
   
@@ -33,6 +30,8 @@ class Overlay ()
   var handleDocumentFocus: js.Any = js.native
   
   var handleKeyDown: js.Any = js.native
+  
+  var handleTransitionAddEnd: js.Any = js.native
   
   var maybeRenderBackdrop: js.Any = js.native
   
@@ -53,7 +52,7 @@ object Overlay extends js.Object {
   
   var displayName: String = js.native
   
-  def getDerivedStateFromProps(hasIsOpen: IOverlayProps): HasEverOpened = js.native
+  def getDerivedStateFromProps(hasIsOpen: IOverlayProps): HasEverOpened | Null = js.native
   
   var getLastOpened: js.Any = js.native
   

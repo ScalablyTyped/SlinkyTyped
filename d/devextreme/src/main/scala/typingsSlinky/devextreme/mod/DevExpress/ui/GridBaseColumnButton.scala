@@ -7,16 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GridBaseColumnButton extends js.Object {
   
-  /** @name GridBaseColumnButton.cssClass */
+  /**
+    * [descr:GridBaseColumnButton.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name GridBaseColumnButton.hint */
+  /**
+    * [descr:GridBaseColumnButton.hint]
+    */
   var hint: js.UndefOr[String] = js.native
   
-  /** @name GridBaseColumnButton.icon */
+  /**
+    * [descr:GridBaseColumnButton.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name GridBaseColumnButton.text */
+  /**
+    * [descr:GridBaseColumnButton.text]
+    */
   var text: js.UndefOr[String] = js.native
 }
 object GridBaseColumnButton {

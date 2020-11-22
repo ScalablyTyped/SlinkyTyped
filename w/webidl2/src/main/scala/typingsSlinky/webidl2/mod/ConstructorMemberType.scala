@@ -6,18 +6,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ConstructorMemberType extends IDLInterfaceMemberType {
+trait ConstructorMemberType
+  extends AbstractBase
+     with IDLInterfaceMemberType {
   
   /** An array of arguments for the constructor operation. */
   var arguments: js.Array[Argument] = js.native
   
-  /** A list of extended attributes. */
-  var extAttrs: js.Array[ExtendedAttribute] = js.native
+  @JSName("parent")
+  var parent_ConstructorMemberType: InterfaceType = js.native
   
-  /** The container of this type. */
-  var parent: InterfaceType = js.native
-  
-  var `type`: constructor = js.native
+  @JSName("type")
+  var type_ConstructorMemberType: constructor = js.native
 }
 object ConstructorMemberType {
   
@@ -53,12 +53,6 @@ object ConstructorMemberType {
     
     @scala.inline
     def setArguments(value: js.Array[Argument]): Self = this.set("arguments", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setExtAttrsVarargs(value: ExtendedAttribute*): Self = this.set("extAttrs", js.Array(value :_*))
-    
-    @scala.inline
-    def setExtAttrs(value: js.Array[ExtendedAttribute]): Self = this.set("extAttrs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParent(value: InterfaceType): Self = this.set("parent", value.asInstanceOf[js.Any])

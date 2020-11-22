@@ -1,5 +1,6 @@
 package typingsSlinky.parse.nodeMod
 
+import typingsSlinky.parse.mod.global.Parse.Attributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,8 +22,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("parse/node", "Schema")
 @js.native
-class Schema protected ()
-  extends typingsSlinky.parse.mod.Schema {
+class Schema[T /* <: typingsSlinky.parse.mod.global.Parse.Object[Attributes] */] protected ()
+  extends typingsSlinky.parse.mod.Schema[T] {
   def this(className: String) = this()
 }
 /* static members */
@@ -36,5 +37,5 @@ object Schema extends js.Object {
     * @return A promise that is resolved with the result when
     * the query completes.
     */
-  def all(): js.Promise[js.Array[typingsSlinky.parse.mod.global.Parse.Schema]] = js.native
+  def all(): js.Promise[js.Array[typingsSlinky.parse.mod.global.Parse.Schema[_]]] = js.native
 }

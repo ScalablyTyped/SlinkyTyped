@@ -23,6 +23,14 @@ trait OptionsXAdES extends OptionsSign {
   var signingCertificate: js.UndefOr[String] = js.native
   
   /**
+    * Sets a certificate of signer for signature. Optional
+    *
+    * @type {string} base64 string of X509 certificate
+    * @memberOf OptionsXAdES
+    */
+  var signingCertificateV2: js.UndefOr[String] = js.native
+  
+  /**
     * Sets signing time options
     */
   var signingTime: js.UndefOr[OptionsSigningTime] = js.native
@@ -73,6 +81,12 @@ object OptionsXAdES {
     
     @scala.inline
     def deleteSigningCertificate: Self = this.set("signingCertificate", js.undefined)
+    
+    @scala.inline
+    def setSigningCertificateV2(value: String): Self = this.set("signingCertificateV2", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSigningCertificateV2: Self = this.set("signingCertificateV2", js.undefined)
     
     @scala.inline
     def setSigningTime(value: OptionsSigningTime): Self = this.set("signingTime", value.asInstanceOf[js.Any])

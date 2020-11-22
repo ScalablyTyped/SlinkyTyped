@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object nonreactive extends js.Object {
   
-  def apply(func: js.Function): Unit = js.native
+  def apply[T](func: js.Function0[T]): T = js.native
 }

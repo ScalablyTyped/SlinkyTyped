@@ -8,25 +8,25 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ShorthandPropertyAssignment
   extends ObjectLiteralElement
      with JSDocContainer
+     with ObjectBindingOrAssignmentElement
      with ObjectLiteralElementLike
      with VariableLikeDeclaration
-     with _BindingOrAssignmentElement
      with _HasJSDoc {
   
-  var equalsToken: js.UndefOr[Token[typingsSlinky.typescript.mod.SyntaxKind.EqualsToken]] = js.native
+  val equalsToken: js.UndefOr[EqualsToken] = js.native
   
-  var exclamationToken: js.UndefOr[ExclamationToken] = js.native
+  val exclamationToken: js.UndefOr[ExclamationToken] = js.native
   
   @JSName("kind")
-  var kind_ShorthandPropertyAssignment: typingsSlinky.typescript.mod.SyntaxKind.ShorthandPropertyAssignment = js.native
+  val kind_ShorthandPropertyAssignment: typingsSlinky.typescript.mod.SyntaxKind.ShorthandPropertyAssignment = js.native
   
   @JSName("name")
-  var name_ShorthandPropertyAssignment: Identifier = js.native
+  val name_ShorthandPropertyAssignment: Identifier = js.native
   
-  var objectAssignmentInitializer: js.UndefOr[Expression] = js.native
+  val objectAssignmentInitializer: js.UndefOr[Expression] = js.native
   
   @JSName("parent")
-  var parent_ShorthandPropertyAssignment: ObjectLiteralExpression = js.native
+  val parent_ShorthandPropertyAssignment: ObjectLiteralExpression = js.native
   
-  var questionToken: js.UndefOr[QuestionToken] = js.native
+  val questionToken: js.UndefOr[QuestionToken] = js.native
 }

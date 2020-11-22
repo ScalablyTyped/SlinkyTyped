@@ -34,17 +34,17 @@ trait IdentifiertextSymbolescap extends js.Object {
   
   var _updateExpressionBrand: js.Any = js.native
   
-  var decorators: js.UndefOr[NodeArray[Decorator]] = js.native
+  val decorators: js.UndefOr[NodeArray[Decorator]] = js.native
   
-  var end: Double = js.native
+  val end: Double = js.native
   
   /**
     * Prefer to use `id.unescapedText`. (Note: This is available only in services, not internally to the TypeScript compiler.)
     * Text of identifier, but if the identifier begins with two underscores, this will begin with three.
     */
-  var escapedText: String with symbol_ = js.native
+  val escapedText: String with symbol_ = js.native
   
-  var flags: NodeFlags = js.native
+  val flags: NodeFlags = js.native
   
   def forEachChild[T](cbNode: js.Function1[/* node */ this.type, js.UndefOr[T]]): js.UndefOr[T] = js.native
   def forEachChild[T](
@@ -94,15 +94,15 @@ trait IdentifiertextSymbolescap extends js.Object {
   
   var isInJSDocNamespace: js.UndefOr[Boolean] = js.native
   
-  var kind: Identifier = js.native
+  val kind: Identifier = js.native
   
-  var modifiers: js.UndefOr[ModifiersArray] = js.native
+  val modifiers: js.UndefOr[ModifiersArray] = js.native
   
-  var originalKeywordKind: js.UndefOr[SyntaxKind] = js.native
+  val originalKeywordKind: js.UndefOr[SyntaxKind] = js.native
   
-  var parent: Node = js.native
+  val parent: Node = js.native
   
-  var pos: Double = js.native
+  val pos: Double = js.native
   
   val text: java.lang.String with Symbol = js.native
 }

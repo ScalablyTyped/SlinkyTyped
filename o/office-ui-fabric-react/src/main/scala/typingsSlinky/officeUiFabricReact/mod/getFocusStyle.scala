@@ -1,10 +1,10 @@
 package typingsSlinky.officeUiFabricReact.mod
 
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.absolute
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.relative
-import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
+import typingsSlinky.uifabricMergeStyles.irawstyleMod.IRawStyle
 import typingsSlinky.uifabricStyling.igetfocusstylesMod.IGetFocusStylesOptions
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

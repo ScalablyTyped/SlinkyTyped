@@ -16,31 +16,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPivotGridFieldChooserOptions extends WidgetOptions[dxPivotGridFieldChooser] {
   
-  /** @name dxPivotGridFieldChooser.Options.allowSearch */
+  /**
+    * [descr:dxPivotGridFieldChooser.Options.allowSearch]
+    */
   var allowSearch: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPivotGridFieldChooser.Options.applyChangesMode */
+  /**
+    * [descr:dxPivotGridFieldChooser.Options.applyChangesMode]
+    */
   var applyChangesMode: js.UndefOr[instantly | onDemand] = js.native
   
-  /** @name dxPivotGridFieldChooser.Options.dataSource */
+  /**
+    * [descr:dxPivotGridFieldChooser.Options.dataSource]
+    */
   var dataSource: js.UndefOr[PivotGridDataSource] = js.native
   
-  /** @name dxPivotGridFieldChooser.Options.headerFilter */
+  /**
+    * [descr:dxPivotGridFieldChooser.Options.headerFilter]
+    */
   var headerFilter: js.UndefOr[SearchTimeout] = js.native
   
-  /** @name dxPivotGridFieldChooser.Options.layout */
+  /**
+    * [descr:dxPivotGridFieldChooser.Options.layout]
+    */
   var layout: js.UndefOr[`0` | `1` | `2`] = js.native
   
-  /** @name dxPivotGridFieldChooser.Options.onContextMenuPreparing */
+  /**
+    * [descr:dxPivotGridFieldChooser.Options.onContextMenuPreparing]
+    */
   var onContextMenuPreparing: js.UndefOr[js.Function1[/* e */ AreaComponent, _]] = js.native
   
-  /** @name dxPivotGridFieldChooser.Options.searchTimeout */
+  /**
+    * [descr:dxPivotGridFieldChooser.Options.searchTimeout]
+    */
   var searchTimeout: js.UndefOr[Double] = js.native
   
-  /** @name dxPivotGridFieldChooser.Options.state */
+  /**
+    * [descr:dxPivotGridFieldChooser.Options.state]
+    */
   var state: js.UndefOr[js.Any] = js.native
   
-  /** @name dxPivotGridFieldChooser.Options.texts */
+  /**
+    * [descr:dxPivotGridFieldChooser.Options.texts]
+    */
   var texts: js.UndefOr[AllFields] = js.native
 }
 object dxPivotGridFieldChooserOptions {

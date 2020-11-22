@@ -3,8 +3,10 @@ package typingsSlinky.baseui.menuMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.baseui.anon.EventItem
+import typingsSlinky.baseui.anon.Item
+import typingsSlinky.baseui.baseuiStrings.character
 import typingsSlinky.baseui.baseuiStrings.click
+import typingsSlinky.baseui.baseuiStrings.enter_
 import typingsSlinky.baseui.baseuiStrings.focus
 import typingsSlinky.baseui.baseuiStrings.mouseEnter
 import typingsSlinky.baseui.baseuiStrings.moveDown
@@ -32,6 +34,8 @@ trait StatefulContainerProps extends js.Object {
   
   var items: ItemsT = js.native
   
+  var keyboardControlNode: js.UndefOr[Ref[_]] = js.native
+  
   var onActiveDescendantChange: js.UndefOr[js.Function1[/* id */ js.UndefOr[String], Unit]] = js.native
   
   var onItemSelect: js.UndefOr[OnItemSelect] = js.native
@@ -41,6 +45,8 @@ trait StatefulContainerProps extends js.Object {
   var rootRef: js.UndefOr[Ref[_]] = js.native
   
   var stateReducer: js.UndefOr[StateReducer] = js.native
+  
+  var typeAhead: js.UndefOr[Boolean] = js.native
 }
 object StatefulContainerProps {
   
@@ -108,13 +114,28 @@ object StatefulContainerProps {
     def deleteInitialState: Self = this.set("initialState", js.undefined)
     
     @scala.inline
+    def setKeyboardControlNodeRefObject(value: ReactRef[_]): Self = this.set("keyboardControlNode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setKeyboardControlNodeFunction1(value: /* instance */ _ | Null => Unit): Self = this.set("keyboardControlNode", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setKeyboardControlNode(value: Ref[_]): Self = this.set("keyboardControlNode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKeyboardControlNode: Self = this.set("keyboardControlNode", js.undefined)
+    
+    @scala.inline
+    def setKeyboardControlNodeNull: Self = this.set("keyboardControlNode", null)
+    
+    @scala.inline
     def setOnActiveDescendantChange(value: /* id */ js.UndefOr[String] => Unit): Self = this.set("onActiveDescendantChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnActiveDescendantChange: Self = this.set("onActiveDescendantChange", js.undefined)
     
     @scala.inline
-    def setOnItemSelect(value: /* args */ EventItem => js.Any): Self = this.set("onItemSelect", js.Any.fromFunction1(value))
+    def setOnItemSelect(value: /* args */ Item => js.Any): Self = this.set("onItemSelect", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnItemSelect: Self = this.set("onItemSelect", js.undefined)
@@ -142,10 +163,16 @@ object StatefulContainerProps {
     
     @scala.inline
     def setStateReducer(
-      value: (/* changeType */ moveDown | moveUp | reset | click | focus | mouseEnter, /* changes */ StatefulContainerState, /* currentState */ StatefulContainerState) => StatefulContainerState
+      value: (/* changeType */ moveDown | moveUp | reset | enter_ | click | character | focus | mouseEnter, /* changes */ StatefulContainerState, /* currentState */ StatefulContainerState) => StatefulContainerState
     ): Self = this.set("stateReducer", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteStateReducer: Self = this.set("stateReducer", js.undefined)
+    
+    @scala.inline
+    def setTypeAhead(value: Boolean): Self = this.set("typeAhead", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTypeAhead: Self = this.set("typeAhead", js.undefined)
   }
 }

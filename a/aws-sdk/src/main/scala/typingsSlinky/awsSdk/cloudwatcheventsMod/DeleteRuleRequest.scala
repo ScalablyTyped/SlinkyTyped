@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteRuleRequest extends js.Object {
   
   /**
-    * The event bus associated with the rule. If you omit this, the default event bus is used.
+    * The name or ARN of the event bus associated with the rule. If you omit this, the default event bus is used.
     */
-  var EventBusName: js.UndefOr[typingsSlinky.awsSdk.cloudwatcheventsMod.EventBusName] = js.native
+  var EventBusName: js.UndefOr[EventBusNameOrArn] = js.native
   
   /**
     * If this is a managed rule, created by an AWS service on your behalf, you must specify Force as True to delete the rule. This parameter is ignored for rules that are not managed rules. You can check whether a rule is a managed rule by using DescribeRule or ListRules and checking the ManagedBy field of the response.
@@ -49,7 +49,7 @@ object DeleteRuleRequest {
     def setName(value: RuleName): Self = this.set("Name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEventBusName(value: EventBusName): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
+    def setEventBusName(value: EventBusNameOrArn): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEventBusName: Self = this.set("EventBusName", js.undefined)

@@ -5,9 +5,9 @@ import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.pdfjsDist.mod.PDFPageProxy
 import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactPdf.pageMod.LoadingProcessData
+import typingsSlinky.reactPdf.pageMod.PDFPageProxy
 import typingsSlinky.reactPdf.pageMod.Props
 import typingsSlinky.reactPdf.pageMod.RenderFunction
 import typingsSlinky.reactPdf.pageMod.TextItem

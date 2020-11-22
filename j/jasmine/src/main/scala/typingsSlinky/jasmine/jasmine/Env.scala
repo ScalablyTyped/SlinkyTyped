@@ -70,6 +70,20 @@ trait Env extends js.Object {
   def seed(seed: String): String | Double = js.native
   def seed(seed: Double): String | Double = js.native
   
+  /**
+    * Sets a user-defined property that will be provided to reporters as
+    * part of the properties field of SpecResult.
+    * @since 3.6.0
+    */
+  def setSpecProperty(key: String, value: js.Any): Unit = js.native
+  
+  /**
+    * Sets a user-defined property that will be provided to reporters as
+    * part of the properties field of SuiteResult.
+    * @since 3.6.0
+    */
+  def setSuiteProperty(key: String, value: js.Any): Unit = js.native
+  
   def specFilter(spec: Spec): Boolean = js.native
   
   /**

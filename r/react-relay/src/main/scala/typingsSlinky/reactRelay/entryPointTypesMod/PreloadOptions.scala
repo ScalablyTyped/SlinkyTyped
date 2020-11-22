@@ -1,15 +1,19 @@
 package typingsSlinky.reactRelay.entryPointTypesMod
 
+import typingsSlinky.relayRuntime.relayRuntimeTypesMod.CacheConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined std.Readonly<{  fetchKey :string | number | undefined,   fetchPolicy :react-relay.react-relay/lib/relay-experimental/EntryPointTypes.PreloadFetchPolicy | null | undefined,   networkCacheConfig :relay-runtime.relay-runtime.CacheConfig | null | undefined}> */
 @js.native
 trait PreloadOptions extends js.Object {
   
   val fetchKey: js.UndefOr[String | Double] = js.native
   
-  val fetchPolicy: js.UndefOr[PreloadFetchPolicy] = js.native
+  val fetchPolicy: js.UndefOr[PreloadFetchPolicy | Null] = js.native
+  
+  val networkCacheConfig: js.UndefOr[CacheConfig | Null] = js.native
 }
 object PreloadOptions {
   
@@ -45,5 +49,17 @@ object PreloadOptions {
     
     @scala.inline
     def deleteFetchPolicy: Self = this.set("fetchPolicy", js.undefined)
+    
+    @scala.inline
+    def setFetchPolicyNull: Self = this.set("fetchPolicy", null)
+    
+    @scala.inline
+    def setNetworkCacheConfig(value: CacheConfig): Self = this.set("networkCacheConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkCacheConfig: Self = this.set("networkCacheConfig", js.undefined)
+    
+    @scala.inline
+    def setNetworkCacheConfigNull: Self = this.set("networkCacheConfig", null)
   }
 }

@@ -22,6 +22,8 @@ package object kendraMod {
   
   type ChangeDetectingColumns = js.Array[typingsSlinky.awsSdk.kendraMod.ColumnName]
   
+  type ClaimRegex = java.lang.String
+  
   type ClickFeedbackList = js.Array[typingsSlinky.awsSdk.kendraMod.ClickFeedback]
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.kendraMod.ClientApiVersions
@@ -29,6 +31,81 @@ package object kendraMod {
   type ClientTokenName = java.lang.String
   
   type ColumnName = java.lang.String
+  
+  type ConfluenceAttachmentFieldMappingsList = js.Array[typingsSlinky.awsSdk.kendraMod.ConfluenceAttachmentToIndexFieldMapping]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AUTHOR
+    - typingsSlinky.awsSdk.awsSdkStrings.CONTENT_TYPE
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATED_DATE
+    - typingsSlinky.awsSdk.awsSdkStrings.DISPLAY_URL
+    - typingsSlinky.awsSdk.awsSdkStrings.FILE_SIZE
+    - typingsSlinky.awsSdk.awsSdkStrings.ITEM_TYPE
+    - typingsSlinky.awsSdk.awsSdkStrings.PARENT_ID
+    - typingsSlinky.awsSdk.awsSdkStrings.SPACE_KEY
+    - typingsSlinky.awsSdk.awsSdkStrings.SPACE_NAME
+    - typingsSlinky.awsSdk.awsSdkStrings.URL
+    - typingsSlinky.awsSdk.awsSdkStrings.VERSION
+    - java.lang.String
+  */
+  type ConfluenceAttachmentFieldName = typingsSlinky.awsSdk.kendraMod._ConfluenceAttachmentFieldName | java.lang.String
+  
+  type ConfluenceBlogFieldMappingsList = js.Array[typingsSlinky.awsSdk.kendraMod.ConfluenceBlogToIndexFieldMapping]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AUTHOR
+    - typingsSlinky.awsSdk.awsSdkStrings.DISPLAY_URL
+    - typingsSlinky.awsSdk.awsSdkStrings.ITEM_TYPE
+    - typingsSlinky.awsSdk.awsSdkStrings.LABELS
+    - typingsSlinky.awsSdk.awsSdkStrings.PUBLISH_DATE
+    - typingsSlinky.awsSdk.awsSdkStrings.SPACE_KEY
+    - typingsSlinky.awsSdk.awsSdkStrings.SPACE_NAME
+    - typingsSlinky.awsSdk.awsSdkStrings.URL
+    - typingsSlinky.awsSdk.awsSdkStrings.VERSION
+    - java.lang.String
+  */
+  type ConfluenceBlogFieldName = typingsSlinky.awsSdk.kendraMod._ConfluenceBlogFieldName | java.lang.String
+  
+  type ConfluencePageFieldMappingsList = js.Array[typingsSlinky.awsSdk.kendraMod.ConfluencePageToIndexFieldMapping]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AUTHOR
+    - typingsSlinky.awsSdk.awsSdkStrings.CONTENT_STATUS
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATED_DATE
+    - typingsSlinky.awsSdk.awsSdkStrings.DISPLAY_URL
+    - typingsSlinky.awsSdk.awsSdkStrings.ITEM_TYPE
+    - typingsSlinky.awsSdk.awsSdkStrings.LABELS
+    - typingsSlinky.awsSdk.awsSdkStrings.MODIFIED_DATE
+    - typingsSlinky.awsSdk.awsSdkStrings.PARENT_ID
+    - typingsSlinky.awsSdk.awsSdkStrings.SPACE_KEY
+    - typingsSlinky.awsSdk.awsSdkStrings.SPACE_NAME
+    - typingsSlinky.awsSdk.awsSdkStrings.URL
+    - typingsSlinky.awsSdk.awsSdkStrings.VERSION
+    - java.lang.String
+  */
+  type ConfluencePageFieldName = typingsSlinky.awsSdk.kendraMod._ConfluencePageFieldName | java.lang.String
+  
+  type ConfluenceSpaceFieldMappingsList = js.Array[typingsSlinky.awsSdk.kendraMod.ConfluenceSpaceToIndexFieldMapping]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISPLAY_URL
+    - typingsSlinky.awsSdk.awsSdkStrings.ITEM_TYPE
+    - typingsSlinky.awsSdk.awsSdkStrings.SPACE_KEY
+    - typingsSlinky.awsSdk.awsSdkStrings.URL
+    - java.lang.String
+  */
+  type ConfluenceSpaceFieldName = typingsSlinky.awsSdk.kendraMod._ConfluenceSpaceFieldName | java.lang.String
+  
+  type ConfluenceSpaceIdentifier = java.lang.String
+  
+  type ConfluenceSpaceList = js.Array[typingsSlinky.awsSdk.kendraMod.ConfluenceSpaceIdentifier]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CLOUD
+    - typingsSlinky.awsSdk.awsSdkStrings.SERVER
+    - java.lang.String
+  */
+  type ConfluenceVersion = typingsSlinky.awsSdk.kendraMod._ConfluenceVersion | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PDF
@@ -89,6 +166,8 @@ package object kendraMod {
     - typingsSlinky.awsSdk.awsSdkStrings.SALESFORCE
     - typingsSlinky.awsSdk.awsSdkStrings.ONEDRIVE
     - typingsSlinky.awsSdk.awsSdkStrings.SERVICENOW
+    - typingsSlinky.awsSdk.awsSdkStrings.CUSTOM
+    - typingsSlinky.awsSdk.awsSdkStrings.CONFLUENCE
     - java.lang.String
   */
   type DataSourceType = typingsSlinky.awsSdk.kendraMod._DataSourceType | java.lang.String
@@ -158,6 +237,14 @@ package object kendraMod {
   
   type FacetResultList = js.Array[typingsSlinky.awsSdk.kendraMod.FacetResult]
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CSV
+    - typingsSlinky.awsSdk.awsSdkStrings.CSV_WITH_HEADER
+    - typingsSlinky.awsSdk.awsSdkStrings.JSON
+    - java.lang.String
+  */
+  type FaqFileFormat = typingsSlinky.awsSdk.kendraMod._FaqFileFormat | java.lang.String
+  
   type FaqId = java.lang.String
   
   type FaqName = java.lang.String
@@ -173,6 +260,8 @@ package object kendraMod {
   type FaqStatus = typingsSlinky.awsSdk.kendraMod._FaqStatus | java.lang.String
   
   type FaqSummaryItems = js.Array[typingsSlinky.awsSdk.kendraMod.FaqSummary]
+  
+  type GroupAttributeField = java.lang.String
   
   type HighlightList = js.Array[typingsSlinky.awsSdk.kendraMod.Highlight]
   
@@ -211,6 +300,15 @@ package object kendraMod {
   type IndexedTextDocumentsCount = scala.Double
   
   type Integer = scala.Double
+  
+  type Issuer = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.URL
+    - typingsSlinky.awsSdk.awsSdkStrings.SECRET_MANAGER
+    - java.lang.String
+  */
+  type KeyLocation = typingsSlinky.awsSdk.kendraMod._KeyLocation | java.lang.String
   
   type KmsKeyId = java.lang.String
   
@@ -346,6 +444,15 @@ package object kendraMod {
   
   type ScanSchedule = java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.VERY_HIGH
+    - typingsSlinky.awsSdk.awsSdkStrings.HIGH
+    - typingsSlinky.awsSdk.awsSdkStrings.MEDIUM
+    - typingsSlinky.awsSdk.awsSdkStrings.LOW
+    - java.lang.String
+  */
+  type ScoreConfidence = typingsSlinky.awsSdk.kendraMod._ScoreConfidence | java.lang.String
+  
   type SecretArn = java.lang.String
   
   type SecurityGroupIdList = js.Array[typingsSlinky.awsSdk.kendraMod.VpcSecurityGroupId]
@@ -394,7 +501,20 @@ package object kendraMod {
   
   type Title = java.lang.String
   
+  type Token = java.lang.String
+  
   type Url = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ATTRIBUTE_FILTER
+    - typingsSlinky.awsSdk.awsSdkStrings.USER_TOKEN
+    - java.lang.String
+  */
+  type UserContextPolicy = typingsSlinky.awsSdk.kendraMod._UserContextPolicy | java.lang.String
+  
+  type UserNameAttributeField = java.lang.String
+  
+  type UserTokenConfigurationList = js.Array[typingsSlinky.awsSdk.kendraMod.UserTokenConfiguration]
   
   type ValueImportanceMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.kendraMod.Importance]
   

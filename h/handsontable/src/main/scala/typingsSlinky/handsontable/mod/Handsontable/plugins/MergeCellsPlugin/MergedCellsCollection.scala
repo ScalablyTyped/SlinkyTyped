@@ -24,7 +24,7 @@ trait MergedCellsCollection extends js.Object {
   
   var hot: Core = js.native
   
-  def isMergedParent(row: Double, column: Double): Boolean = js.native
+  def isFirstRenderableMergedCell(row: Double, column: Double): Boolean = js.native
   
   def isOverlapping(mergedCell: MergedCellCoords): Boolean = js.native
   

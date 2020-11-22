@@ -1,7 +1,10 @@
 package typingsSlinky.babylonjs
 
 import typingsSlinky.babylonjs.axisDragGizmoMod.AxisDragGizmo
+import typingsSlinky.babylonjs.gizmoManagerMod.GizmoManager
 import typingsSlinky.babylonjs.gizmoMod.Gizmo
+import typingsSlinky.babylonjs.gizmoMod.GizmoAxisCache
+import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.planeDragGizmoMod.PlaneDragGizmo
 import typingsSlinky.babylonjs.utilityLayerRendererMod.UtilityLayerRenderer
@@ -17,25 +20,46 @@ object positionGizmoMod extends js.Object {
   /**
     * Creates a PositionGizmo
     * @param gizmoLayer The utility layer the gizmo will be added to
+    @param thickness display gizmo axis thickness
     */
   class PositionGizmo () extends Gizmo {
     def this(gizmoLayer: UtilityLayerRenderer) = this()
+    def this(gizmoLayer: js.UndefOr[scala.Nothing], thickness: Double) = this()
+    def this(gizmoLayer: UtilityLayerRenderer, thickness: Double) = this()
+    def this(
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      thickness: js.UndefOr[scala.Nothing],
+      gizmoManager: GizmoManager
+    ) = this()
+    def this(gizmoLayer: js.UndefOr[scala.Nothing], thickness: Double, gizmoManager: GizmoManager) = this()
+    def this(gizmoLayer: UtilityLayerRenderer, thickness: js.UndefOr[scala.Nothing], gizmoManager: GizmoManager) = this()
+    def this(gizmoLayer: UtilityLayerRenderer, thickness: Double, gizmoManager: GizmoManager) = this()
+    
+    /** Node Caching for quick lookup */
+    var _gizmoAxisCache: js.Any = js.native
     
     /**
       * private variables
       */
     var _meshAttached: js.Any = js.native
     
+    var _nodeAttached: js.Any = js.native
+    
+    var _observables: js.Any = js.native
+    
     /**
       * If set to true, planar drag is enabled
       */
     var _planarGizmoEnabled: js.Any = js.native
     
-    var _scaleRatio: js.Any = js.native
-    
     var _snapDistance: js.Any = js.native
     
-    var _updateGizmoRotationToMatchAttachedMesh: js.Any = js.native
+    /**
+      * Builds Gizmo Axis Cache to enable features such as hover state preservation and graying out other axis during manipulation
+      * @param mesh Axis gizmo mesh
+      * @param cache Gizmo axis definition used for reactive gizmo UI
+      */
+    def addToAxisCache(mesh: Mesh, cache: GizmoAxisCache): Unit = js.native
     
     /** Fires an event when any of it's sub gizmos are released from dragging */
     var onDragEndObservable: Observable[_] = js.native
@@ -50,17 +74,11 @@ object positionGizmoMod extends js.Object {
       */
     def planarGizmoEnabled_=(value: Boolean): Unit = js.native
     
-    @JSName("scaleRatio")
-    def scaleRatio_MPositionGizmo: Double = js.native
-    
     def snapDistance: Double = js.native
     /**
       * Drag distance in babylon units that the gizmo will snap to when dragged (Default: 0)
       */
     def snapDistance_=(value: Double): Unit = js.native
-    
-    @JSName("updateGizmoRotationToMatchAttachedMesh")
-    def updateGizmoRotationToMatchAttachedMesh_MPositionGizmo: Boolean = js.native
     
     /**
       * Internal gizmo used for interactions on the x axis

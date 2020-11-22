@@ -13,6 +13,8 @@ object mod extends js.Object {
   
   def getBlobByURL(url: String): js.UndefOr[File] = js.native
   
+  def getBlobTypeByURL(url: String): js.UndefOr[String] = js.native
+  
   def isBlobURL(url: String): Boolean = js.native
   
   def revokeBlobURL(url: String): Unit = js.native

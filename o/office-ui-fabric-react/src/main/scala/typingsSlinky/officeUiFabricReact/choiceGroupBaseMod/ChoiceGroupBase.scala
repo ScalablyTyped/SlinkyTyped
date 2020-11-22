@@ -25,6 +25,8 @@ class ChoiceGroupBase protected ()
   
   var _getOptionId: js.Any = js.native
   
+  var _getOptionLabelId: js.Any = js.native
+  
   var _id: js.Any = js.native
   
   var _labelId: js.Any = js.native

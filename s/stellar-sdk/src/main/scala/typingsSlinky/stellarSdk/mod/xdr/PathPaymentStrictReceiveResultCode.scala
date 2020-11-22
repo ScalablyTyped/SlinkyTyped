@@ -35,7 +35,7 @@ object PathPaymentStrictReceiveResultCode extends js.Object {
   
   def pathPaymentStrictReceiveSuccess(): typingsSlinky.stellarBase.xdrMod.xdr.PathPaymentStrictReceiveResultCode = js.native
   
-  def pathPaymentStrictReceiveTooFewOffer(): typingsSlinky.stellarBase.xdrMod.xdr.PathPaymentStrictReceiveResultCode = js.native
+  def pathPaymentStrictReceiveTooFewOffers(): typingsSlinky.stellarBase.xdrMod.xdr.PathPaymentStrictReceiveResultCode = js.native
   
   def pathPaymentStrictReceiveUnderfunded(): typingsSlinky.stellarBase.xdrMod.xdr.PathPaymentStrictReceiveResultCode = js.native
 }

@@ -13,6 +13,11 @@ trait SelectObjectContentRequest extends js.Object {
   var Bucket: BucketName = js.native
   
   /**
+    * The account id of the expected bucket owner. If the bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
+    */
+  var ExpectedBucketOwner: js.UndefOr[AccountId] = js.native
+  
+  /**
     * The expression that is used to query the object.
     */
   var Expression: typingsSlinky.awsSdk.s3Mod.Expression = js.native
@@ -109,6 +114,12 @@ object SelectObjectContentRequest {
     
     @scala.inline
     def setOutputSerialization(value: OutputSerialization): Self = this.set("OutputSerialization", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setExpectedBucketOwner(value: AccountId): Self = this.set("ExpectedBucketOwner", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExpectedBucketOwner: Self = this.set("ExpectedBucketOwner", js.undefined)
     
     @scala.inline
     def setRequestProgress(value: RequestProgress): Self = this.set("RequestProgress", value.asInstanceOf[js.Any])

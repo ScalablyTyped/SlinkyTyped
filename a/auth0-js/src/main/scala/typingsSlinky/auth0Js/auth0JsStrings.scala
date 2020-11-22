@@ -12,6 +12,9 @@ object auth0JsStrings {
   def account_selection_required: account_selection_required = "account_selection_required".asInstanceOf[account_selection_required]
   
   @scala.inline
+  def auth0: auth0 = "auth0".asInstanceOf[auth0]
+  
+  @scala.inline
   def code: code = "code".asInstanceOf[code]
   
   @scala.inline
@@ -48,6 +51,9 @@ object auth0JsStrings {
   def query: query = "query".asInstanceOf[query]
   
   @scala.inline
+  def recaptcha_v2: recaptcha_v2 = "recaptcha_v2".asInstanceOf[recaptcha_v2]
+  
+  @scala.inline
   def registration_not_supported: registration_not_supported = "registration_not_supported".asInstanceOf[registration_not_supported]
   
   @scala.inline
@@ -76,6 +82,9 @@ object auth0JsStrings {
   
   @js.native
   sealed trait account_selection_required extends _SpecErrorCodes
+  
+  @js.native
+  sealed trait auth0 extends js.Object
   
   @js.native
   sealed trait code extends js.Object
@@ -112,6 +121,9 @@ object auth0JsStrings {
   
   @js.native
   sealed trait query extends js.Object
+  
+  @js.native
+  sealed trait recaptcha_v2 extends js.Object
   
   @js.native
   sealed trait registration_not_supported extends _SpecErrorCodes

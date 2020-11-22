@@ -7,22 +7,40 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TransformsStyle extends js.Object {
   
+  /**
+    * @deprecated Use rotate in transform prop instead.
+    */
   var rotation: js.UndefOr[Double] = js.native
   
+  /**
+    * @deprecated Use scaleX in transform prop instead.
+    */
   var scaleX: js.UndefOr[Double] = js.native
   
+  /**
+    * @deprecated Use scaleY in transform prop instead.
+    */
   var scaleY: js.UndefOr[Double] = js.native
   
   var transform: js.UndefOr[
     js.Array[
-      PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform
+      PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform | MatrixTransform
     ]
   ] = js.native
   
+  /**
+    * @deprecated Use matrix in transform prop instead.
+    */
   var transformMatrix: js.UndefOr[js.Array[Double]] = js.native
   
+  /**
+    * @deprecated Use translateX in transform prop instead.
+    */
   var translateX: js.UndefOr[Double] = js.native
   
+  /**
+    * @deprecated Use translateY in transform prop instead.
+    */
   var translateY: js.UndefOr[Double] = js.native
 }
 object TransformsStyle {
@@ -68,13 +86,13 @@ object TransformsStyle {
     
     @scala.inline
     def setTransformVarargs(
-      value: (PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform)*
+      value: (PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform | MatrixTransform)*
     ): Self = this.set("transform", js.Array(value :_*))
     
     @scala.inline
     def setTransform(
       value: js.Array[
-          PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform
+          PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform | MatrixTransform
         ]
     ): Self = this.set("transform", value.asInstanceOf[js.Any])
     

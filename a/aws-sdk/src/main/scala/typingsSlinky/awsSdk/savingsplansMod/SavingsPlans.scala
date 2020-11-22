@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.savingsplansMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -27,6 +27,20 @@ trait SavingsPlans extends Service {
     params: CreateSavingsPlanRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateSavingsPlanResponse, Unit]
   ): Request[CreateSavingsPlanResponse, AWSError] = js.native
+  
+  /**
+    * Deletes the queued purchase for the specified Savings Plan.
+    */
+  def deleteQueuedSavingsPlan(): Request[DeleteQueuedSavingsPlanResponse, AWSError] = js.native
+  def deleteQueuedSavingsPlan(callback: js.Function2[/* err */ AWSError, /* data */ DeleteQueuedSavingsPlanResponse, Unit]): Request[DeleteQueuedSavingsPlanResponse, AWSError] = js.native
+  /**
+    * Deletes the queued purchase for the specified Savings Plan.
+    */
+  def deleteQueuedSavingsPlan(params: DeleteQueuedSavingsPlanRequest): Request[DeleteQueuedSavingsPlanResponse, AWSError] = js.native
+  def deleteQueuedSavingsPlan(
+    params: DeleteQueuedSavingsPlanRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteQueuedSavingsPlanResponse, Unit]
+  ): Request[DeleteQueuedSavingsPlanResponse, AWSError] = js.native
   
   /**
     * Describes the specified Savings Plans rates.

@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ActionsGetSelfHostedRunnerForOrgEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ActionsGetSelfHostedRunnerForOrgResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ActionsGetOrgSecretEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ActionsGetOrgSecretResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `564` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ActionsGetSelfHostedRunnerForOrgEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ActionsGetOrgSecretEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[ActionsGetSelfHostedRunnerForOrgResponseData] = js.native
+  var response: OctokitResponse[ActionsGetOrgSecretResponseData] = js.native
 }
 object `564` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ActionsGetSelfHostedRunnerForOrgEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[ActionsGetSelfHostedRunnerForOrgResponseData]
+    parameters: RequestParameters with (Omit[ActionsGetOrgSecretEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ActionsGetOrgSecretResponseData]
   ): `564` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`564`]
@@ -46,11 +46,9 @@ object `564` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[ActionsGetSelfHostedRunnerForOrgEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[ActionsGetOrgSecretEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ActionsGetSelfHostedRunnerForOrgResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ActionsGetOrgSecretResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

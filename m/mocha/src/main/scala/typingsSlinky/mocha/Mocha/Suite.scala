@@ -212,6 +212,13 @@ trait Suite extends EventEmitter {
   var delayed: Boolean = js.native
   
   /**
+    * Cleans all references from this suite and all child suites.
+    *
+    * https://mochajs.org/api/suite#dispose
+    */
+  def dispose(): Unit = js.native
+  
+  /**
     * Iterates through each suite recursively to find all tests. Applies a
     * function in the format `fn(test)`.
     *

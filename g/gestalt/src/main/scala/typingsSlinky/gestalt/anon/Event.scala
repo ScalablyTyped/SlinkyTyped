@@ -1,26 +1,25 @@
 package typingsSlinky.gestalt.anon
 
-import org.scalajs.dom.raw.Element
-import slinky.web.SyntheticMouseEvent
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Event extends js.Object {
+trait Event[T /* <: (slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) | org.scalajs.dom.raw.Event */] extends js.Object {
   
-  var event: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, SyntheticMouseEvent[Element]] = js.native
+  val event: T = js.native
 }
 object Event {
   
   @scala.inline
-  def apply(event: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, SyntheticMouseEvent[Element]]): Event = {
+  def apply[T /* <: (slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) | org.scalajs.dom.raw.Event */](event: T): Event[T] = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Event]
+    __obj.asInstanceOf[Event[T]]
   }
   
   @scala.inline
-  implicit class EventOps[Self <: Event] (val x: Self) extends AnyVal {
+  implicit class EventOps[Self <: Event[_], T /* <: (slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) | org.scalajs.dom.raw.Event */] (val x: Self with Event[T]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -35,6 +34,6 @@ object Event {
     }
     
     @scala.inline
-    def setEvent(value: slinky.core.SyntheticEvent[org.scalajs.dom.raw.Event, SyntheticMouseEvent[Element]]): Self = this.set("event", value.asInstanceOf[js.Any])
+    def setEvent(value: T): Self = this.set("event", value.asInstanceOf[js.Any])
   }
 }

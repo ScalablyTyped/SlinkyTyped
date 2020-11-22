@@ -13,15 +13,20 @@ trait DescribeProvisionedProductInput extends js.Object {
   var AcceptLanguage: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.AcceptLanguage] = js.native
   
   /**
-    * The provisioned product identifier.
+    * The provisioned product identifier. You must provide the name or ID, but not both. If you do not provide a name or ID, or you provide both name and ID, an InvalidParametersException will occur.
     */
-  var Id: typingsSlinky.awsSdk.servicecatalogMod.Id = js.native
+  var Id: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.Id] = js.native
+  
+  /**
+    * The name of the provisioned product. You must provide the name or ID, but not both. If you do not provide a name or ID, or you provide both name and ID, an InvalidParametersException will occur.
+    */
+  var Name: js.UndefOr[ProvisionedProductName] = js.native
 }
 object DescribeProvisionedProductInput {
   
   @scala.inline
-  def apply(Id: Id): DescribeProvisionedProductInput = {
-    val __obj = js.Dynamic.literal(Id = Id.asInstanceOf[js.Any])
+  def apply(): DescribeProvisionedProductInput = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[DescribeProvisionedProductInput]
   }
   
@@ -41,12 +46,21 @@ object DescribeProvisionedProductInput {
     }
     
     @scala.inline
-    def setId(value: Id): Self = this.set("Id", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setAcceptLanguage(value: AcceptLanguage): Self = this.set("AcceptLanguage", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAcceptLanguage: Self = this.set("AcceptLanguage", js.undefined)
+    
+    @scala.inline
+    def setId(value: Id): Self = this.set("Id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteId: Self = this.set("Id", js.undefined)
+    
+    @scala.inline
+    def setName(value: ProvisionedProductName): Self = this.set("Name", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteName: Self = this.set("Name", js.undefined)
   }
 }

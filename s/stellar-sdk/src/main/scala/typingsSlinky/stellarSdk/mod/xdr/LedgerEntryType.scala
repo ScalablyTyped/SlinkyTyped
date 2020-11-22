@@ -15,7 +15,9 @@ object LedgerEntryType extends js.Object {
   
   def account(): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryType = js.native
   
-  def datum(): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryType = js.native
+  def claimableBalance(): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryType = js.native
+  
+  def data(): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryType = js.native
   
   def offer(): typingsSlinky.stellarBase.xdrMod.xdr.LedgerEntryType = js.native
   

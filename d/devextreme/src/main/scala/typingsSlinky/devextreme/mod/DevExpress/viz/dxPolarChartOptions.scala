@@ -1,12 +1,12 @@
 package typingsSlinky.devextreme.mod.DevExpress.viz
 
 import typingsSlinky.devextreme.anon.ArgumentComponent
-import typingsSlinky.devextreme.anon.ComponentElementEventJQueryEvent
 import typingsSlinky.devextreme.anon.ConvertToAxisDataType
 import typingsSlinky.devextreme.anon.CustomizeSeriesNameField
+import typingsSlinky.devextreme.anon.ElementEventModelTarget
 import typingsSlinky.devextreme.anon.PreviousRange
 import typingsSlinky.devextreme.anon.Range
-import typingsSlinky.devextreme.anon.`22`
+import typingsSlinky.devextreme.anon.`25`
 import typingsSlinky.devextreme.devextremeStrings.hide
 import typingsSlinky.devextreme.devextremeStrings.multiple
 import typingsSlinky.devextreme.devextremeStrings.none
@@ -18,39 +18,55 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartOptions extends BaseChartOptions[dxPolarChart] {
   
-  /** @name dxPolarChart.Options.adaptiveLayout */
+  /**
+    * [descr:dxPolarChart.Options.adaptiveLayout]
+    */
   @JSName("adaptiveLayout")
   var adaptiveLayout_dxPolarChartOptions: js.UndefOr[dxPolarChartAdaptiveLayout] = js.native
   
-  /** @name dxPolarChart.Options.annotations */
+  /**
+    * [descr:dxPolarChart.Options.annotations]
+    */
   var annotations: js.UndefOr[js.Array[dxPolarChartAnnotationConfig | _]] = js.native
   
-  /** @name dxPolarChart.Options.argumentAxis */
+  /**
+    * [descr:dxPolarChart.Options.argumentAxis]
+    */
   var argumentAxis: js.UndefOr[dxPolarChartArgumentAxis] = js.native
   
-  /** @name dxPolarChart.Options.barGroupPadding */
+  /**
+    * [descr:dxPolarChart.Options.barGroupPadding]
+    */
   var barGroupPadding: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.barGroupWidth */
+  /**
+    * [descr:dxPolarChart.Options.barGroupWidth]
+    */
   var barGroupWidth: js.UndefOr[Double] = js.native
   
-  /** @deprecated */
-  /** @name dxPolarChart.Options.barWidth */
-  var barWidth: js.UndefOr[Double] = js.native
-  
-  /** @name dxPolarChart.Options.commonAnnotationSettings */
+  /**
+    * [descr:dxPolarChart.Options.commonAnnotationSettings]
+    */
   var commonAnnotationSettings: js.UndefOr[dxPolarChartCommonAnnotationConfig] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings]
+    */
   var commonAxisSettings: js.UndefOr[dxPolarChartCommonAxisSettings] = js.native
   
-  /** @name dxPolarChart.Options.commonSeriesSettings */
+  /**
+    * [descr:dxPolarChart.Options.commonSeriesSettings]
+    */
   var commonSeriesSettings: js.UndefOr[dxPolarChartCommonSeriesSettings] = js.native
   
-  /** @name dxPolarChart.Options.containerBackgroundColor */
+  /**
+    * [descr:dxPolarChart.Options.containerBackgroundColor]
+    */
   var containerBackgroundColor: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChart.Options.customizeAnnotation */
+  /**
+    * [descr:dxPolarChart.Options.customizeAnnotation]
+    */
   var customizeAnnotation: js.UndefOr[
     js.Function1[
       /* annotation */ dxPolarChartAnnotationConfig | js.Any, 
@@ -58,62 +74,92 @@ trait dxPolarChartOptions extends BaseChartOptions[dxPolarChart] {
     ]
   ] = js.native
   
-  /** @name dxPolarChart.Options.dataPrepareSettings */
+  /**
+    * [descr:dxPolarChart.Options.dataPrepareSettings]
+    */
   var dataPrepareSettings: js.UndefOr[ConvertToAxisDataType] = js.native
   
-  /** @deprecated */
-  /** @name dxPolarChart.Options.equalBarWidth */
-  var equalBarWidth: js.UndefOr[Boolean] = js.native
-  
-  /** @name dxPolarChart.Options.legend */
+  /**
+    * [descr:dxPolarChart.Options.legend]
+    */
   @JSName("legend")
   var legend_dxPolarChartOptions: js.UndefOr[dxPolarChartLegend] = js.native
   
-  /** @name dxPolarChart.Options.negativesAsZeroes */
+  /**
+    * [descr:dxPolarChart.Options.negativesAsZeroes]
+    */
   var negativesAsZeroes: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.onArgumentAxisClick */
+  /**
+    * [descr:dxPolarChart.Options.onArgumentAxisClick]
+    */
   var onArgumentAxisClick: js.UndefOr[(js.Function1[/* e */ ArgumentComponent, _]) | String] = js.native
   
-  /** @name dxPolarChart.Options.onLegendClick */
-  var onLegendClick: js.UndefOr[(js.Function1[/* e */ ComponentElementEventJQueryEvent, _]) | String] = js.native
+  /**
+    * [descr:dxPolarChart.Options.onLegendClick]
+    */
+  var onLegendClick: js.UndefOr[(js.Function1[/* e */ ElementEventModelTarget, _]) | String] = js.native
   
-  /** @name dxPolarChart.Options.onSeriesClick */
-  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ ComponentElementEventJQueryEvent, _]) | String] = js.native
+  /**
+    * [descr:dxPolarChart.Options.onSeriesClick]
+    */
+  var onSeriesClick: js.UndefOr[(js.Function1[/* e */ ElementEventModelTarget, _]) | String] = js.native
   
-  /** @name dxPolarChart.Options.onSeriesHoverChanged */
-  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ `22`, _]] = js.native
+  /**
+    * [descr:dxPolarChart.Options.onSeriesHoverChanged]
+    */
+  var onSeriesHoverChanged: js.UndefOr[js.Function1[/* e */ `25`, _]] = js.native
   
-  /** @name dxPolarChart.Options.onSeriesSelectionChanged */
-  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ `22`, _]] = js.native
+  /**
+    * [descr:dxPolarChart.Options.onSeriesSelectionChanged]
+    */
+  var onSeriesSelectionChanged: js.UndefOr[js.Function1[/* e */ `25`, _]] = js.native
   
-  /** @name dxPolarChart.Options.onZoomEnd */
+  /**
+    * [descr:dxPolarChart.Options.onZoomEnd]
+    */
   var onZoomEnd: js.UndefOr[js.Function1[/* e */ PreviousRange, _]] = js.native
   
-  /** @name dxPolarChart.Options.onZoomStart */
+  /**
+    * [descr:dxPolarChart.Options.onZoomStart]
+    */
   var onZoomStart: js.UndefOr[js.Function1[/* e */ Range, _]] = js.native
   
-  /** @name dxPolarChart.Options.resolveLabelOverlapping */
+  /**
+    * [descr:dxPolarChart.Options.resolveLabelOverlapping]
+    */
   var resolveLabelOverlapping: js.UndefOr[hide | none] = js.native
   
-  /** @name dxPolarChart.Options.seriesSelectionMode */
+  /**
+    * [descr:dxPolarChart.Options.seriesSelectionMode]
+    */
   var seriesSelectionMode: js.UndefOr[multiple | single_] = js.native
   
-  /** @name dxPolarChart.Options.seriesTemplate */
+  /**
+    * [descr:dxPolarChart.Options.seriesTemplate]
+    */
   var seriesTemplate: js.UndefOr[CustomizeSeriesNameField] = js.native
   
-  /** @name dxPolarChart.Options.series */
+  /**
+    * [descr:dxPolarChart.Options.series]
+    */
   @JSName("series")
   var series_dxPolarChartOptions: js.UndefOr[PolarChartSeries | js.Array[PolarChartSeries]] = js.native
   
-  /** @name dxPolarChart.Options.tooltip */
+  /**
+    * [descr:dxPolarChart.Options.tooltip]
+    */
   @JSName("tooltip")
   var tooltip_dxPolarChartOptions: js.UndefOr[dxPolarChartTooltip] = js.native
   
-  /** @name dxPolarChart.Options.useSpiderWeb */
+  /**
+    * [descr:dxPolarChart.Options.useSpiderWeb]
+    */
   var useSpiderWeb: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.valueAxis */
+  /**
+    * [descr:dxPolarChart.Options.valueAxis]
+    */
   var valueAxis: js.UndefOr[dxPolarChartValueAxis] = js.native
 }
 object dxPolarChartOptions {
@@ -173,12 +219,6 @@ object dxPolarChartOptions {
     def deleteBarGroupWidth: Self = this.set("barGroupWidth", js.undefined)
     
     @scala.inline
-    def setBarWidth(value: Double): Self = this.set("barWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteBarWidth: Self = this.set("barWidth", js.undefined)
-    
-    @scala.inline
     def setCommonAnnotationSettings(value: dxPolarChartCommonAnnotationConfig): Self = this.set("commonAnnotationSettings", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -215,12 +255,6 @@ object dxPolarChartOptions {
     def deleteDataPrepareSettings: Self = this.set("dataPrepareSettings", js.undefined)
     
     @scala.inline
-    def setEqualBarWidth(value: Boolean): Self = this.set("equalBarWidth", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteEqualBarWidth: Self = this.set("equalBarWidth", js.undefined)
-    
-    @scala.inline
     def setLegend(value: dxPolarChartLegend): Self = this.set("legend", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -242,31 +276,31 @@ object dxPolarChartOptions {
     def deleteOnArgumentAxisClick: Self = this.set("onArgumentAxisClick", js.undefined)
     
     @scala.inline
-    def setOnLegendClickFunction1(value: /* e */ ComponentElementEventJQueryEvent => _): Self = this.set("onLegendClick", js.Any.fromFunction1(value))
+    def setOnLegendClickFunction1(value: /* e */ ElementEventModelTarget => _): Self = this.set("onLegendClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnLegendClick(value: (js.Function1[/* e */ ComponentElementEventJQueryEvent, _]) | String): Self = this.set("onLegendClick", value.asInstanceOf[js.Any])
+    def setOnLegendClick(value: (js.Function1[/* e */ ElementEventModelTarget, _]) | String): Self = this.set("onLegendClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnLegendClick: Self = this.set("onLegendClick", js.undefined)
     
     @scala.inline
-    def setOnSeriesClickFunction1(value: /* e */ ComponentElementEventJQueryEvent => _): Self = this.set("onSeriesClick", js.Any.fromFunction1(value))
+    def setOnSeriesClickFunction1(value: /* e */ ElementEventModelTarget => _): Self = this.set("onSeriesClick", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnSeriesClick(value: (js.Function1[/* e */ ComponentElementEventJQueryEvent, _]) | String): Self = this.set("onSeriesClick", value.asInstanceOf[js.Any])
+    def setOnSeriesClick(value: (js.Function1[/* e */ ElementEventModelTarget, _]) | String): Self = this.set("onSeriesClick", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnSeriesClick: Self = this.set("onSeriesClick", js.undefined)
     
     @scala.inline
-    def setOnSeriesHoverChanged(value: /* e */ `22` => _): Self = this.set("onSeriesHoverChanged", js.Any.fromFunction1(value))
+    def setOnSeriesHoverChanged(value: /* e */ `25` => _): Self = this.set("onSeriesHoverChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSeriesHoverChanged: Self = this.set("onSeriesHoverChanged", js.undefined)
     
     @scala.inline
-    def setOnSeriesSelectionChanged(value: /* e */ `22` => _): Self = this.set("onSeriesSelectionChanged", js.Any.fromFunction1(value))
+    def setOnSeriesSelectionChanged(value: /* e */ `25` => _): Self = this.set("onSeriesSelectionChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnSeriesSelectionChanged: Self = this.set("onSeriesSelectionChanged", js.undefined)

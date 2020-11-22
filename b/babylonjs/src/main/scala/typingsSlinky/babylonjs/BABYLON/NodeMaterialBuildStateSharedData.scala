@@ -10,6 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait NodeMaterialBuildStateSharedData extends js.Object {
   
   /**
+    * Is vertex program allowed to be empty?
+    */
+  var allowEmptyVertexProgram: Boolean = js.native
+  
+  /**
     * Gets the list of animated inputs
     */
   var animatedInputs: js.Array[InputBlock] = js.native
@@ -86,7 +91,9 @@ trait NodeMaterialBuildStateSharedData extends js.Object {
   /**
     * Input blocks
     */
-  var textureBlocks: js.Array[ReflectionTextureBlock | TextureBlock] = js.native
+  var textureBlocks: js.Array[
+    TextureBlock | ReflectionTextureBaseBlock | RefractionBlock | CurrentScreenBlock | ParticleTextureBlock
+  ] = js.native
   
   /** List of emitted variables */
   var variableNames: org.scalablytyped.runtime.StringDictionary[Double] = js.native
@@ -108,6 +115,7 @@ object NodeMaterialBuildStateSharedData {
   
   @scala.inline
   def apply(
+    allowEmptyVertexProgram: Boolean,
     animatedInputs: js.Array[InputBlock],
     bindableBlocks: js.Array[NodeMaterialBlock],
     blockingBlocks: js.Array[NodeMaterialBlock],
@@ -124,13 +132,15 @@ object NodeMaterialBuildStateSharedData {
     repeatableContentBlocks: js.Array[NodeMaterialBlock],
     scene: Scene,
     temps: js.Array[String],
-    textureBlocks: js.Array[ReflectionTextureBlock | TextureBlock],
+    textureBlocks: js.Array[
+      TextureBlock | ReflectionTextureBaseBlock | RefractionBlock | CurrentScreenBlock | ParticleTextureBlock
+    ],
     variableNames: org.scalablytyped.runtime.StringDictionary[Double],
     varyingDeclaration: String,
     varyings: js.Array[String],
     verbose: Boolean
   ): NodeMaterialBuildStateSharedData = {
-    val __obj = js.Dynamic.literal(animatedInputs = animatedInputs.asInstanceOf[js.Any], bindableBlocks = bindableBlocks.asInstanceOf[js.Any], blockingBlocks = blockingBlocks.asInstanceOf[js.Any], blocksWithDefines = blocksWithDefines.asInstanceOf[js.Any], blocksWithFallbacks = blocksWithFallbacks.asInstanceOf[js.Any], buildId = buildId.asInstanceOf[js.Any], checks = checks.asInstanceOf[js.Any], defineNames = defineNames.asInstanceOf[js.Any], dynamicUniformBlocks = dynamicUniformBlocks.asInstanceOf[js.Any], emitComments = emitComments.asInstanceOf[js.Any], emitErrors = js.Any.fromFunction0(emitErrors), hints = hints.asInstanceOf[js.Any], inputBlocks = inputBlocks.asInstanceOf[js.Any], repeatableContentBlocks = repeatableContentBlocks.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any], temps = temps.asInstanceOf[js.Any], textureBlocks = textureBlocks.asInstanceOf[js.Any], variableNames = variableNames.asInstanceOf[js.Any], varyingDeclaration = varyingDeclaration.asInstanceOf[js.Any], varyings = varyings.asInstanceOf[js.Any], verbose = verbose.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(allowEmptyVertexProgram = allowEmptyVertexProgram.asInstanceOf[js.Any], animatedInputs = animatedInputs.asInstanceOf[js.Any], bindableBlocks = bindableBlocks.asInstanceOf[js.Any], blockingBlocks = blockingBlocks.asInstanceOf[js.Any], blocksWithDefines = blocksWithDefines.asInstanceOf[js.Any], blocksWithFallbacks = blocksWithFallbacks.asInstanceOf[js.Any], buildId = buildId.asInstanceOf[js.Any], checks = checks.asInstanceOf[js.Any], defineNames = defineNames.asInstanceOf[js.Any], dynamicUniformBlocks = dynamicUniformBlocks.asInstanceOf[js.Any], emitComments = emitComments.asInstanceOf[js.Any], emitErrors = js.Any.fromFunction0(emitErrors), hints = hints.asInstanceOf[js.Any], inputBlocks = inputBlocks.asInstanceOf[js.Any], repeatableContentBlocks = repeatableContentBlocks.asInstanceOf[js.Any], scene = scene.asInstanceOf[js.Any], temps = temps.asInstanceOf[js.Any], textureBlocks = textureBlocks.asInstanceOf[js.Any], variableNames = variableNames.asInstanceOf[js.Any], varyingDeclaration = varyingDeclaration.asInstanceOf[js.Any], varyings = varyings.asInstanceOf[js.Any], verbose = verbose.asInstanceOf[js.Any])
     __obj.asInstanceOf[NodeMaterialBuildStateSharedData]
   }
   
@@ -148,6 +158,9 @@ object NodeMaterialBuildStateSharedData {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAllowEmptyVertexProgram(value: Boolean): Self = this.set("allowEmptyVertexProgram", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAnimatedInputsVarargs(value: InputBlock*): Self = this.set("animatedInputs", js.Array(value :_*))
@@ -225,10 +238,16 @@ object NodeMaterialBuildStateSharedData {
     def setTemps(value: js.Array[String]): Self = this.set("temps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTextureBlocksVarargs(value: (ReflectionTextureBlock | TextureBlock)*): Self = this.set("textureBlocks", js.Array(value :_*))
+    def setTextureBlocksVarargs(
+      value: (TextureBlock | ReflectionTextureBaseBlock | RefractionBlock | CurrentScreenBlock | ParticleTextureBlock)*
+    ): Self = this.set("textureBlocks", js.Array(value :_*))
     
     @scala.inline
-    def setTextureBlocks(value: js.Array[ReflectionTextureBlock | TextureBlock]): Self = this.set("textureBlocks", value.asInstanceOf[js.Any])
+    def setTextureBlocks(
+      value: js.Array[
+          TextureBlock | ReflectionTextureBaseBlock | RefractionBlock | CurrentScreenBlock | ParticleTextureBlock
+        ]
+    ): Self = this.set("textureBlocks", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setVariableNames(value: org.scalablytyped.runtime.StringDictionary[Double]): Self = this.set("variableNames", value.asInstanceOf[js.Any])

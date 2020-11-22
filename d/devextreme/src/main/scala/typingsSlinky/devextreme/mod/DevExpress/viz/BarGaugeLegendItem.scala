@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BarGaugeLegendItem extends BaseLegendItem {
   
-  /** @name BarGaugeLegendItem.item */
+  /**
+    * [descr:BarGaugeLegendItem.item]
+    */
   var item: js.UndefOr[BarGaugeBarInfo] = js.native
 }
 object BarGaugeLegendItem {

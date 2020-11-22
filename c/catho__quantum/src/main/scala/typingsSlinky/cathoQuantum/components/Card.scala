@@ -1,5 +1,7 @@
 package typingsSlinky.cathoQuantum.components
 
+import org.scalajs.dom.raw.Element
+import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.StBuildingComponent.Default
@@ -29,6 +31,9 @@ object Card {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    
+    @scala.inline
+    def onClick(value: /* e */ SyntheticMouseEvent[Element] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
     
     @scala.inline
     def theme(value: `7`): this.type = set("theme", value.asInstanceOf[js.Any])

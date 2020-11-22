@@ -26,6 +26,18 @@ trait EdgeLength extends js.Object {
   var edgeLength: js.UndefOr[js.Array[_] | Double] = js.native
   
   /**
+    * It will slow down the nodes' movement. The value range is from 0 to 1.
+    * But it is still an experimental option, see [#11024](https://github.com/apache/incubator-echarts/issues/11024).
+    *
+    * Since v4.5.0
+    *
+    * @default
+    * 0.6
+    * @see https://echarts.apache.org/en/option.html#series-graph.force.friction
+    */
+  var friction: js.UndefOr[Double] = js.native
+  
+  /**
     * The gravity factor enforcing nodes approach to the center.
     * The nodes will be closer to the center as the value becomes
     * larger.
@@ -119,6 +131,12 @@ object EdgeLength {
     
     @scala.inline
     def deleteEdgeLength: Self = this.set("edgeLength", js.undefined)
+    
+    @scala.inline
+    def setFriction(value: Double): Self = this.set("friction", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFriction: Self = this.set("friction", js.undefined)
     
     @scala.inline
     def setGravity(value: Double): Self = this.set("gravity", value.asInstanceOf[js.Any])

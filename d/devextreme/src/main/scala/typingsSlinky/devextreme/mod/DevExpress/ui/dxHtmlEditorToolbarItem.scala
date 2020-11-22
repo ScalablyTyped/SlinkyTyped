@@ -12,10 +12,18 @@ import typingsSlinky.devextreme.devextremeStrings.clear
 import typingsSlinky.devextreme.devextremeStrings.codeBlock
 import typingsSlinky.devextreme.devextremeStrings.color
 import typingsSlinky.devextreme.devextremeStrings.decreaseIndent
+import typingsSlinky.devextreme.devextremeStrings.deleteColumn
+import typingsSlinky.devextreme.devextremeStrings.deleteRow
+import typingsSlinky.devextreme.devextremeStrings.deleteTable
 import typingsSlinky.devextreme.devextremeStrings.font
 import typingsSlinky.devextreme.devextremeStrings.header
 import typingsSlinky.devextreme.devextremeStrings.image
 import typingsSlinky.devextreme.devextremeStrings.increaseIndent
+import typingsSlinky.devextreme.devextremeStrings.insertColumnLeft
+import typingsSlinky.devextreme.devextremeStrings.insertColumnRight
+import typingsSlinky.devextreme.devextremeStrings.insertRowAbove
+import typingsSlinky.devextreme.devextremeStrings.insertRowBelow
+import typingsSlinky.devextreme.devextremeStrings.insertTable
 import typingsSlinky.devextreme.devextremeStrings.italic
 import typingsSlinky.devextreme.devextremeStrings.link
 import typingsSlinky.devextreme.devextremeStrings.orderedList
@@ -35,12 +43,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxHtmlEditorToolbarItem extends dxToolbarItem {
   
-  /** @name dxHtmlEditorToolbarItem.formatName */
+  /**
+    * [descr:dxHtmlEditorToolbarItem.formatName]
+    */
   var formatName: js.UndefOr[
-    background | bold | color | font | italic | link | image | size | strike | subscript | superscript | underline | blockquote | header | increaseIndent | decreaseIndent | orderedList | bulletList | alignLeft | alignCenter | alignRight | alignJustify | codeBlock | variable | separator | undo | redo | clear | String
+    background | bold | color | font | italic | link | image | size | strike | subscript | superscript | underline | blockquote | header | increaseIndent | decreaseIndent | orderedList | bulletList | alignLeft | alignCenter | alignRight | alignJustify | codeBlock | variable | separator | undo | redo | clear | insertTable | insertRowAbove | insertRowBelow | insertColumnLeft | insertColumnRight | deleteColumn | deleteRow | deleteTable | String
   ] = js.native
   
-  /** @name dxHtmlEditorToolbarItem.formatValues */
+  /**
+    * [descr:dxHtmlEditorToolbarItem.formatValues]
+    */
   var formatValues: js.UndefOr[js.Array[String | Double | Boolean]] = js.native
 }
 object dxHtmlEditorToolbarItem {
@@ -68,7 +80,7 @@ object dxHtmlEditorToolbarItem {
     
     @scala.inline
     def setFormatName(
-      value: background | bold | color | font | italic | link | image | size | strike | subscript | superscript | underline | blockquote | header | increaseIndent | decreaseIndent | orderedList | bulletList | alignLeft | alignCenter | alignRight | alignJustify | codeBlock | variable | separator | undo | redo | clear | String
+      value: background | bold | color | font | italic | link | image | size | strike | subscript | superscript | underline | blockquote | header | increaseIndent | decreaseIndent | orderedList | bulletList | alignLeft | alignCenter | alignRight | alignJustify | codeBlock | variable | separator | undo | redo | clear | insertTable | insertRowAbove | insertRowBelow | insertColumnLeft | insertColumnRight | deleteColumn | deleteRow | deleteTable | String
     ): Self = this.set("formatName", value.asInstanceOf[js.Any])
     
     @scala.inline

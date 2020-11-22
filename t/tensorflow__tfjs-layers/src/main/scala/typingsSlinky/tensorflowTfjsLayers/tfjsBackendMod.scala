@@ -1,10 +1,10 @@
 package typingsSlinky.tensorflowTfjsLayers
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.fusedUtilMod.Activation
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
+import typingsSlinky.tensorflowTfjsCore.fusedTypesMod.Activation
 import typingsSlinky.tensorflowTfjsLayers.distTypesMod.HasShape
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.DataFormat
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape

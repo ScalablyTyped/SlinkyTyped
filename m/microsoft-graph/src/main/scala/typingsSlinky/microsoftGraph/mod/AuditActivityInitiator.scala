@@ -11,13 +11,13 @@ trait AuditActivityInitiator extends js.Object {
     * If the resource initiating the activity is an app, this property indicates all the app related information like appId,
     * Name, servicePrincipalId, Name.
     */
-  var app: js.UndefOr[AppIdentity] = js.native
+  var app: js.UndefOr[NullableOption[AppIdentity]] = js.native
   
   /**
     * If the resource initiating the activity is a user, this property Indicates all the user related information like
     * userId, Name, UserPrinicpalName.
     */
-  var user: js.UndefOr[UserIdentity] = js.native
+  var user: js.UndefOr[NullableOption[UserIdentity]] = js.native
 }
 object AuditActivityInitiator {
   
@@ -43,15 +43,21 @@ object AuditActivityInitiator {
     }
     
     @scala.inline
-    def setApp(value: AppIdentity): Self = this.set("app", value.asInstanceOf[js.Any])
+    def setApp(value: NullableOption[AppIdentity]): Self = this.set("app", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteApp: Self = this.set("app", js.undefined)
     
     @scala.inline
-    def setUser(value: UserIdentity): Self = this.set("user", value.asInstanceOf[js.Any])
+    def setAppNull: Self = this.set("app", null)
+    
+    @scala.inline
+    def setUser(value: NullableOption[UserIdentity]): Self = this.set("user", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUser: Self = this.set("user", js.undefined)
+    
+    @scala.inline
+    def setUserNull: Self = this.set("user", null)
   }
 }

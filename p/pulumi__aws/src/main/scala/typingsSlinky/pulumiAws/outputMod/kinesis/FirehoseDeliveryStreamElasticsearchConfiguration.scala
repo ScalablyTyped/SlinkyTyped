@@ -23,9 +23,14 @@ trait FirehoseDeliveryStreamElasticsearchConfiguration extends js.Object {
   var cloudwatchLoggingOptions: FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions = js.native
   
   /**
-    * The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`.
+    * The endpoint to use when communicating with the cluster. Conflicts with `domainArn`.
     */
-  var domainArn: String = js.native
+  var clusterEndpoint: js.UndefOr[String] = js.native
+  
+  /**
+    * The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`. Conflicts with `clusterEndpoint`.
+    */
+  var domainArn: js.UndefOr[String] = js.native
   
   /**
     * The Elasticsearch index name.
@@ -61,17 +66,21 @@ trait FirehoseDeliveryStreamElasticsearchConfiguration extends js.Object {
     * The Elasticsearch type name with maximum length of 100 characters.
     */
   var typeName: js.UndefOr[String] = js.native
+  
+  /**
+    * The VPC configuration for the delivery stream to connect to Elastic Search associated with the VPC. More details are given below
+    */
+  var vpcConfig: js.UndefOr[FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig] = js.native
 }
 object FirehoseDeliveryStreamElasticsearchConfiguration {
   
   @scala.inline
   def apply(
     cloudwatchLoggingOptions: FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions,
-    domainArn: String,
     indexName: String,
     roleArn: String
   ): FirehoseDeliveryStreamElasticsearchConfiguration = {
-    val __obj = js.Dynamic.literal(cloudwatchLoggingOptions = cloudwatchLoggingOptions.asInstanceOf[js.Any], domainArn = domainArn.asInstanceOf[js.Any], indexName = indexName.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(cloudwatchLoggingOptions = cloudwatchLoggingOptions.asInstanceOf[js.Any], indexName = indexName.asInstanceOf[js.Any], roleArn = roleArn.asInstanceOf[js.Any])
     __obj.asInstanceOf[FirehoseDeliveryStreamElasticsearchConfiguration]
   }
   
@@ -94,9 +103,6 @@ object FirehoseDeliveryStreamElasticsearchConfiguration {
     def setCloudwatchLoggingOptions(value: FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions): Self = this.set("cloudwatchLoggingOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDomainArn(value: String): Self = this.set("domainArn", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setIndexName(value: String): Self = this.set("indexName", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -113,6 +119,18 @@ object FirehoseDeliveryStreamElasticsearchConfiguration {
     
     @scala.inline
     def deleteBufferingSize: Self = this.set("bufferingSize", js.undefined)
+    
+    @scala.inline
+    def setClusterEndpoint(value: String): Self = this.set("clusterEndpoint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClusterEndpoint: Self = this.set("clusterEndpoint", js.undefined)
+    
+    @scala.inline
+    def setDomainArn(value: String): Self = this.set("domainArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDomainArn: Self = this.set("domainArn", js.undefined)
     
     @scala.inline
     def setIndexRotationPeriod(value: String): Self = this.set("indexRotationPeriod", value.asInstanceOf[js.Any])
@@ -143,5 +161,11 @@ object FirehoseDeliveryStreamElasticsearchConfiguration {
     
     @scala.inline
     def deleteTypeName: Self = this.set("typeName", js.undefined)
+    
+    @scala.inline
+    def setVpcConfig(value: FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig): Self = this.set("vpcConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVpcConfig: Self = this.set("vpcConfig", js.undefined)
   }
 }

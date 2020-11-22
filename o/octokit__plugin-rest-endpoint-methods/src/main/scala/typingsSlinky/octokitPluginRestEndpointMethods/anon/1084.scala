@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.UsersListFollowingForUserEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.UsersListFollowingForUserResponseData
+import typingsSlinky.octokitTypes.endpointsMod.UsersListEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.UsersListResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `1084` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[UsersListFollowingForUserEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[UsersListEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[UsersListFollowingForUserResponseData] = js.native
+  var response: OctokitResponse[UsersListResponseData] = js.native
 }
 object `1084` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[UsersListFollowingForUserEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[UsersListFollowingForUserResponseData]
+    parameters: RequestParameters with (Omit[UsersListEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[UsersListResponseData]
   ): `1084` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`1084`]
@@ -46,11 +46,9 @@ object `1084` {
     }
     
     @scala.inline
-    def setParameters(
-      value: RequestParameters with (Omit[UsersListFollowingForUserEndpoint, baseUrl | headers | mediaType])
-    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(value: RequestParameters with (Omit[UsersListEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[UsersListFollowingForUserResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[UsersListResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

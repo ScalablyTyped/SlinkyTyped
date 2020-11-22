@@ -92,8 +92,6 @@ object EventType extends js.Object {
   
   /**
     * Triggers when a host page sends a message to a child dialog box with `messageChild`.
-    *
-    * @beta
     */
   @js.native
   sealed trait DialogParentMessageReceived extends EventType

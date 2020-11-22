@@ -24,13 +24,10 @@ class ClassField protected () extends AbstractClassPart {
     modifiers: js.Array[StmtModifier],
     initializer: Expression
   ) = this()
-  def this(name: String, `type`: js.UndefOr[scala.Nothing], modifiers: Null, initializer: Expression) = this()
   def this(name: String, `type`: Null, modifiers: js.UndefOr[scala.Nothing], initializer: Expression) = this()
   def this(name: String, `type`: Null, modifiers: js.Array[StmtModifier], initializer: Expression) = this()
-  def this(name: String, `type`: Null, modifiers: Null, initializer: Expression) = this()
   def this(name: String, `type`: Type, modifiers: js.UndefOr[scala.Nothing], initializer: Expression) = this()
   def this(name: String, `type`: Type, modifiers: js.Array[StmtModifier], initializer: Expression) = this()
-  def this(name: String, `type`: Type, modifiers: Null, initializer: Expression) = this()
   
   var initializer: js.UndefOr[Expression] = js.native
   

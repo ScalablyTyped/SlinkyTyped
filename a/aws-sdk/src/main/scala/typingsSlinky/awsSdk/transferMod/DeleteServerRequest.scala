@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DeleteServerRequest extends js.Object {
   
   /**
-    * A unique system-assigned identifier for a file transfer protocol-enabled server instance.
+    * A unique system-assigned identifier for a server instance.
     */
   var ServerId: typingsSlinky.awsSdk.transferMod.ServerId = js.native
 }

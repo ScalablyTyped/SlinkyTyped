@@ -7,8 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Directory extends Entity {
   
+  var administrativeUnits: js.UndefOr[NullableOption[js.Array[AdministrativeUnit]]] = js.native
+  
   // Recently deleted items. Read-only. Nullable.
-  var deletedItems: js.UndefOr[js.Array[DirectoryObject]] = js.native
+  var deletedItems: js.UndefOr[NullableOption[js.Array[DirectoryObject]]] = js.native
 }
 object Directory {
   
@@ -34,12 +36,27 @@ object Directory {
     }
     
     @scala.inline
+    def setAdministrativeUnitsVarargs(value: AdministrativeUnit*): Self = this.set("administrativeUnits", js.Array(value :_*))
+    
+    @scala.inline
+    def setAdministrativeUnits(value: NullableOption[js.Array[AdministrativeUnit]]): Self = this.set("administrativeUnits", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAdministrativeUnits: Self = this.set("administrativeUnits", js.undefined)
+    
+    @scala.inline
+    def setAdministrativeUnitsNull: Self = this.set("administrativeUnits", null)
+    
+    @scala.inline
     def setDeletedItemsVarargs(value: DirectoryObject*): Self = this.set("deletedItems", js.Array(value :_*))
     
     @scala.inline
-    def setDeletedItems(value: js.Array[DirectoryObject]): Self = this.set("deletedItems", value.asInstanceOf[js.Any])
+    def setDeletedItems(value: NullableOption[js.Array[DirectoryObject]]): Self = this.set("deletedItems", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeletedItems: Self = this.set("deletedItems", js.undefined)
+    
+    @scala.inline
+    def setDeletedItemsNull: Self = this.set("deletedItems", null)
   }
 }

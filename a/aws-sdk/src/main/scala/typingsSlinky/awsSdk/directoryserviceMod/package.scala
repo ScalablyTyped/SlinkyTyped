@@ -10,6 +10,8 @@ package object directoryserviceMod {
   
   type AddedDateTime = js.Date
   
+  type AdditionalRegions = js.Array[typingsSlinky.awsSdk.directoryserviceMod.RegionName]
+  
   type AliasName = java.lang.String
   
   type AttributeName = java.lang.String
@@ -240,6 +242,17 @@ package object directoryserviceMod {
   type RadiusStatus = typingsSlinky.awsSdk.directoryserviceMod._RadiusStatus | java.lang.String
   
   type RadiusTimeout = scala.Double
+  
+  type RegionName = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Primary_
+    - typingsSlinky.awsSdk.awsSdkStrings.Additional
+    - java.lang.String
+  */
+  type RegionType = typingsSlinky.awsSdk.directoryserviceMod._RegionType | java.lang.String
+  
+  type RegionsDescription = js.Array[typingsSlinky.awsSdk.directoryserviceMod.RegionDescription]
   
   type RemoteDomainName = java.lang.String
   

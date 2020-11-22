@@ -14,6 +14,12 @@ class Base () extends js.Object {
   
   def addUsedLocales(locales: js.Array[String]): Unit = js.native
   
+  val bindings: Bindings = js.native
+  
+  def checkBindings(valueName: String, value: js.Any): Unit = js.native
+  
+  /* protected */ def clearPropertyValue(name: String): Unit = js.native
+  
   /* protected */ def copyCssClasses(dest: js.Any, source: js.Any): Unit = js.native
   
   def createArrayCoreHandler(propertiesHash: js.Any, name: String): js.Array[_] = js.native
@@ -51,6 +57,8 @@ class Base () extends js.Object {
   
   def getLocalizableStringText(name: String): String = js.native
   def getLocalizableStringText(name: String, defaultStr: String): String = js.native
+  
+  def getProgressInfo(): IProgressInfo = js.native
   
   /**
     * Returns the property value by name
@@ -191,6 +199,10 @@ class Base () extends js.Object {
     */
   def unRegisterFunctionOnPropertyValueChanged(name: String): Unit = js.native
   def unRegisterFunctionOnPropertyValueChanged(name: String, key: String): Unit = js.native
+  
+  /* protected */ def updateBindingValue(valueName: String, value: js.Any): Unit = js.native
+  
+  /* protected */ def updateBindings(propertyName: String, value: js.Any): Unit = js.native
 }
 /* static members */
 @JSImport("survey-knockout", "Base")
@@ -201,6 +213,8 @@ object Base extends js.Object {
   
   def createItemValue(item: js.Any): js.Any = js.native
   def createItemValue(item: js.Any, `type`: String): js.Any = js.native
+  
+  def isSurveyElement(`val`: js.Any): Boolean = js.native
   
   def itemValueLocStrChanged(arr: js.Array[_]): Unit = js.native
 }

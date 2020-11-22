@@ -1,7 +1,7 @@
 
 # Scala.js typings for relay-runtime
 
-Typings are for version 10.0
+Typings are for version 10.1
 
 ## Library description:
 A core runtime for building GraphQL-driven applications.

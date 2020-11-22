@@ -13,6 +13,7 @@ import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadLabelKey
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadMenuProps
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadModel
 import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadResult
+import typingsSlinky.reactBootstrapTypeahead.mod.TypeaheadState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -189,7 +190,9 @@ object AsyncTypeahead {
     def promptText(value: ReactElement): this.type = set("promptText", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def renderMenu(value: (/* results */ js.Array[TypeaheadResult[T]], /* menuProps */ js.Any) => ReactElement): this.type = set("renderMenu", js.Any.fromFunction2(value))
+    def renderMenu(
+      value: (/* results */ js.Array[TypeaheadResult[T]], /* menuProps */ TypeaheadMenuProps[T], /* state */ TypeaheadState[T]) => ReactElement
+    ): this.type = set("renderMenu", js.Any.fromFunction3(value))
     
     @scala.inline
     def renderMenuItemChildren(

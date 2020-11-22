@@ -5,6 +5,7 @@ import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.mathVectorMod.Vector2
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -61,5 +62,18 @@ object chromaticAberrationPostProcessMod extends js.Object {
       * The amount the effect will increase for pixels closer to the edge of the screen. (default: 0)
       */
     var radialIntensity: Double = js.native
+    
+    /** The height of the screen to apply the effect on */
+    var screenHeight: Double = js.native
+    
+    /** The width of the screen to apply the effect on */
+    var screenWidth: Double = js.native
+  }
+  /* static members */
+  @js.native
+  object ChromaticAberrationPostProcess extends js.Object {
+    
+    /** @hidden */
+    def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): Nullable[ChromaticAberrationPostProcess] = js.native
   }
 }

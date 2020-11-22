@@ -17,7 +17,7 @@ trait DomainDnsRecord extends Entity {
   var label: js.UndefOr[String] = js.native
   
   // Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, TxtKey
-  var recordType: js.UndefOr[String] = js.native
+  var recordType: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null,
@@ -65,10 +65,13 @@ object DomainDnsRecord {
     def deleteLabel: Self = this.set("label", js.undefined)
     
     @scala.inline
-    def setRecordType(value: String): Self = this.set("recordType", value.asInstanceOf[js.Any])
+    def setRecordType(value: NullableOption[String]): Self = this.set("recordType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRecordType: Self = this.set("recordType", js.undefined)
+    
+    @scala.inline
+    def setRecordTypeNull: Self = this.set("recordType", null)
     
     @scala.inline
     def setSupportedService(value: String): Self = this.set("supportedService", value.asInstanceOf[js.Any])

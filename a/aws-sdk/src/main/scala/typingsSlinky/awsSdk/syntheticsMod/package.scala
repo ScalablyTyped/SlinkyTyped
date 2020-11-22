@@ -6,11 +6,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object syntheticsMod {
   
-  type Arn = java.lang.String
-  
   type Canaries = js.Array[typingsSlinky.awsSdk.syntheticsMod.Canary]
   
   type CanariesLastRun = js.Array[typingsSlinky.awsSdk.syntheticsMod.CanaryLastRun]
+  
+  type CanaryArn = java.lang.String
   
   type CanaryName = java.lang.String
   
@@ -49,6 +49,14 @@ package object syntheticsMod {
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.syntheticsMod.ClientApiVersions
   
+  type EnvironmentVariableName = java.lang.String
+  
+  type EnvironmentVariableValue = java.lang.String
+  
+  type EnvironmentVariablesMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.syntheticsMod.EnvironmentVariableValue]
+  
+  type FunctionArn = java.lang.String
+  
   type MaxCanaryResults = scala.Double
   
   type MaxFifteenMinutesInSeconds = scala.Double
@@ -60,6 +68,10 @@ package object syntheticsMod {
   type MaxSize1024 = scala.Double
   
   type MaxSize3008 = scala.Double
+  
+  type NullableBoolean = scala.Boolean
+  
+  type RoleArn = java.lang.String
   
   type RuntimeVersionList = js.Array[typingsSlinky.awsSdk.syntheticsMod.RuntimeVersion]
   

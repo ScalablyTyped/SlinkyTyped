@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "ButtonGroup")
+@JSImport("reactstrap/es", "ButtonGroup")
 @js.native
-class ButtonGroup[T] ()
+class ButtonGroup ()
   extends Component[ButtonGroupProps, js.Object, js.Any]

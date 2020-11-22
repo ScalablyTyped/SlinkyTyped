@@ -3,10 +3,8 @@ package typingsSlinky.ethers.ethersMod
 import org.scalablytyped.runtime.TopLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ethers/dist/types/ethers", "version")
+@JSImport("ethers/lib/ethers", "version")
 @js.native
-object version
-  extends TopLevel[/* "4.0.0-beta.3" */ String]
-
+object version extends TopLevel[/* "m/44'/60'/0'/0/0" */ String]

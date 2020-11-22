@@ -13,16 +13,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PortalItemResourceUpdateOptions extends Object {
   
   /**
-    * Indicates the level of access to the resource. The default is "inherit" which causes the resource to have the same access level as the owning item.
+    * Indicates the level of access to the resource.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#update)
-    *
-    * @default "inherit"
     */
   var access: js.UndefOr[inherit | `private`] = js.native
   
   /**
-    * Signal object that can be used to abort the asynchronous task. The returned promise will be rejected with an [Error](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-Error.html) named `AbortError` when an abort is signaled. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController) for more information on how to construct a controller that can be used to deliver abort signals.
+    * Signal object that can be used to abort the asynchronous task.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-portal-PortalItemResource.html#update)
     */

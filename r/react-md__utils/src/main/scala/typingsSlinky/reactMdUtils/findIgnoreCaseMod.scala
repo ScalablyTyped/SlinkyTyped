@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object findIgnoreCaseMod extends js.Object {
   
-  def default[T](query: String, searchable: js.Array[T]): T | Null = js.native
-  def default[T](query: String, searchable: js.Array[T], options: SearchOptions[T]): T | Null = js.native
+  def findIgnoreCase[T](query: String, searchable: js.Array[T]): T | Null = js.native
+  def findIgnoreCase[T](query: String, searchable: js.Array[T], options: SearchOptions[T]): T | Null = js.native
 }

@@ -1,5 +1,7 @@
 package typingsSlinky.storybookAddonA11y
 
+import typingsSlinky.storybookAddonA11y.anon.BoxShadow
+import typingsSlinky.storybookAddons.typesMod.DecoratorFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def checkA11y(args: js.Any*): js.Any = js.native
+  val PARAM_KEY: /* "a11y" */ String = js.native
   
-  def configureA11y(config: js.Any): Unit = js.native
+  def highlightObject(color: String): BoxShadow = js.native
   
-  @JSName("withA11Y")
-  def withA11Y_(args: js.Any*): js.Any = js.native
+  def highlightStyle(color: String): String = js.native
   
-  def withA11y(
-    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type any is not an array type */ args: js.Any
-  ): js.Any = js.native
+  val withA11y: DecoratorFunction[js.Any] = js.native
 }

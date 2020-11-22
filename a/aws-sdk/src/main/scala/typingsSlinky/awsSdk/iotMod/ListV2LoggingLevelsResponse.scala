@@ -13,7 +13,7 @@ trait ListV2LoggingLevelsResponse extends js.Object {
   var logTargetConfigurations: js.UndefOr[LogTargetConfigurations] = js.native
   
   /**
-    * The token used to get the next set of results, or null if there are no additional results.
+    * The token to use to get the next set of results, or null if there are no additional results.
     */
   var nextToken: js.UndefOr[NextToken] = js.native
 }

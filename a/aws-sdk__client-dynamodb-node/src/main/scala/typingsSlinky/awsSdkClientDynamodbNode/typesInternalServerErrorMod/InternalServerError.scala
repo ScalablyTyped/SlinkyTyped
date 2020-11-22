@@ -29,16 +29,14 @@ import typingsSlinky.awsSdkClientDynamodbNode.updateGlobalTableSettingsException
 import typingsSlinky.awsSdkClientDynamodbNode.updateItemExceptionsUnionMod.UpdateItemExceptionsUnion
 import typingsSlinky.awsSdkClientDynamodbNode.updateTableExceptionsUnionMod.UpdateTableExceptionsUnion
 import typingsSlinky.awsSdkClientDynamodbNode.updateTimeToLiveExceptionsUnionMod.UpdateTimeToLiveExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InternalServerErrorDetails> * / any */ @js.native
 trait InternalServerError
-  extends ServiceException[InternalServerErrorDetails]
-     with BatchGetItemExceptionsUnion
+  extends BatchGetItemExceptionsUnion
      with BatchWriteItemExceptionsUnion
      with CreateBackupExceptionsUnion
      with CreateGlobalTableExceptionsUnion
@@ -68,19 +66,13 @@ trait InternalServerError
      with UpdateTableExceptionsUnion
      with UpdateTimeToLiveExceptionsUnion {
   
-  @JSName("name")
-  var name_InternalServerError: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.InternalServerError = js.native
+  var name: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.InternalServerError = js.native
 }
 object InternalServerError {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: InternalServerErrorDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.InternalServerError
-  ): InternalServerError = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.InternalServerError): InternalServerError = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InternalServerError]
   }
   

@@ -4,6 +4,8 @@ import org.scalablytyped.runtime.Instantiable0
 import typingsSlinky.officeUiFabricReact.anon.PartialIBaseButtonProps
 import typingsSlinky.officeUiFabricReact.baseButtonMod.IBaseButtonProps
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
+import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonStyles
+import typingsSlinky.officeUiFabricReact.splitButtonClassNamesMod.ISplitButtonClassNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,6 +15,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object libButtonMod extends js.Object {
   
   val CommandButton: Instantiable0[typingsSlinky.officeUiFabricReact.actionButtonMod.ActionButton] = js.native
+  
+  def getSplitButtonClassNames(styles: IButtonStyles, disabled: Boolean, expanded: Boolean, checked: Boolean): ISplitButtonClassNames = js.native
+  def getSplitButtonClassNames(
+    styles: IButtonStyles,
+    disabled: Boolean,
+    expanded: Boolean,
+    checked: Boolean,
+    primaryDisabled: Boolean
+  ): ISplitButtonClassNames = js.native
   
   @js.native
   class ActionButton ()

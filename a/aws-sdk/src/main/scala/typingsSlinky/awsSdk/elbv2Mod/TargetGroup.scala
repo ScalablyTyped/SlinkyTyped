@@ -18,7 +18,7 @@ trait TargetGroup extends js.Object {
   var HealthCheckIntervalSeconds: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.HealthCheckIntervalSeconds] = js.native
   
   /**
-    * The destination for the health check request.
+    * The destination for health checks on the targets.
     */
   var HealthCheckPath: js.UndefOr[Path] = js.native
   
@@ -28,7 +28,7 @@ trait TargetGroup extends js.Object {
   var HealthCheckPort: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.HealthCheckPort] = js.native
   
   /**
-    * The protocol to use to connect with the target.
+    * The protocol to use to connect with the target. The GENEVE, TLS, UDP, and TCP_UDP protocols are not supported for health checks.
     */
   var HealthCheckProtocol: js.UndefOr[ProtocolEnum] = js.native
   
@@ -48,7 +48,7 @@ trait TargetGroup extends js.Object {
   var LoadBalancerArns: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.LoadBalancerArns] = js.native
   
   /**
-    * The HTTP codes to use when checking for a successful response from a target.
+    * The HTTP or gRPC codes to use when checking for a successful response from a target.
     */
   var Matcher: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.Matcher] = js.native
   
@@ -63,6 +63,11 @@ trait TargetGroup extends js.Object {
   var Protocol: js.UndefOr[ProtocolEnum] = js.native
   
   /**
+    * [HTTP/HTTPS protocol] The protocol version. The possible values are GRPC, HTTP1, and HTTP2.
+    */
+  var ProtocolVersion: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.ProtocolVersion] = js.native
+  
+  /**
     * The Amazon Resource Name (ARN) of the target group.
     */
   var TargetGroupArn: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.TargetGroupArn] = js.native
@@ -73,7 +78,7 @@ trait TargetGroup extends js.Object {
   var TargetGroupName: js.UndefOr[typingsSlinky.awsSdk.elbv2Mod.TargetGroupName] = js.native
   
   /**
-    * The type of target that you must specify when registering targets with this target group. The possible values are instance (targets are specified by instance ID) or ip (targets are specified by IP address).
+    * The type of target that you must specify when registering targets with this target group. The possible values are instance (register targets by instance ID), ip (register targets by IP address), or lambda (register a single Lambda function as a target).
     */
   var TargetType: js.UndefOr[TargetTypeEnum] = js.native
   
@@ -178,6 +183,12 @@ object TargetGroup {
     
     @scala.inline
     def deleteProtocol: Self = this.set("Protocol", js.undefined)
+    
+    @scala.inline
+    def setProtocolVersion(value: ProtocolVersion): Self = this.set("ProtocolVersion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteProtocolVersion: Self = this.set("ProtocolVersion", js.undefined)
     
     @scala.inline
     def setTargetGroupArn(value: TargetGroupArn): Self = this.set("TargetGroupArn", value.asInstanceOf[js.Any])

@@ -12,6 +12,6 @@ object useHoverValueMod extends js.Object {
   def default[DateType](valueText: String, hasFormatListGenerateConfigLocale: ValueTextConfig[DateType]): js.Tuple3[
     String, 
     js.Function1[/* date */ DateType, Unit], 
-    js.Function1[/* date */ DateType, Unit]
+    js.Function1[/* immediately */ js.UndefOr[Boolean], Unit]
   ] = js.native
 }

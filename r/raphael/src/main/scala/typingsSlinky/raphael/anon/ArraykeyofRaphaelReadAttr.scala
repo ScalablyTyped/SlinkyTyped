@@ -40,21 +40,28 @@ trait ArraykeyofRaphaelReadAttr extends /* n */ NumberDictionary[transform] {
     */
   def entries(): IterableIterator[js.Tuple2[Double, transform]] = js.native
   
+  def every(predicate: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], Boolean]): /* is std.Array<'arrow-end'> */ Boolean = js.native
+  def every(
+    predicate: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], Boolean],
+    thisArg: js.Any
+  ): /* is std.Array<'arrow-end'> */ Boolean = js.native
   /**
     * Determines whether all the members of an array satisfy the specified test.
-    * @param callbackfn A function that accepts up to three arguments. The every method calls
-    * the callbackfn function for each element in the array until the callbackfn returns a value
+    * @param predicate A function that accepts up to three arguments. The every method calls
+    * the predicate function for each element in the array until the predicate returns a value
     * which is coercible to the Boolean value false, or until the end of the array.
-    * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+    * @param thisArg An object to which the this keyword can refer in the predicate function.
     * If thisArg is omitted, undefined is used as the this value.
     */
   @JSName("every")
-  def every_transform(callbackfn: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _]): Boolean = js.native
+  def every_transform(
+    predicate: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _ | Boolean]
+  ): /* is std.Array<'transform'> */ Boolean = js.native
   @JSName("every")
   def every_transform(
-    callbackfn: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _],
+    predicate: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _ | Boolean],
     thisArg: js.Any
-  ): Boolean = js.native
+  ): /* is std.Array<'transform'> */ Boolean = js.native
   
   /**
     * Returns the this object after filling the section identified by start and end with value
@@ -73,23 +80,23 @@ trait ArraykeyofRaphaelReadAttr extends /* n */ NumberDictionary[transform] {
   @JSName("fill")
   def fill_transform(value: transform, start: Double, end: Double): this.type = js.native
   
-  def filter(callbackfn: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], Boolean]): js.Array[`arrow-end`] = js.native
+  def filter(predicate: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], Boolean]): js.Array[`arrow-end`] = js.native
   def filter(
-    callbackfn: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], Boolean],
+    predicate: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], Boolean],
     thisArg: js.Any
   ): js.Array[`arrow-end`] = js.native
   /**
     * Returns the elements of an array that meet the condition specified in a callback function.
-    * @param callbackfn A function that accepts up to three arguments. The filter method calls the callbackfn function one time for each element in the array.
-    * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+    * @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+    * @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
     */
   @JSName("filter")
   def filter_transform(
-    callbackfn: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _ | Boolean]
+    predicate: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _ | Boolean]
   ): js.Array[transform] = js.native
   @JSName("filter")
   def filter_transform(
-    callbackfn: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _ | Boolean],
+    predicate: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _ | Boolean],
     thisArg: js.Any
   ): js.Array[transform] = js.native
   
@@ -382,17 +389,17 @@ trait ArraykeyofRaphaelReadAttr extends /* n */ NumberDictionary[transform] {
   
   /**
     * Determines whether the specified callback function returns true for any element of an array.
-    * @param callbackfn A function that accepts up to three arguments. The some method calls
-    * the callbackfn function for each element in the array until the callbackfn returns a value
+    * @param predicate A function that accepts up to three arguments. The some method calls
+    * the predicate function for each element in the array until the predicate returns a value
     * which is coercible to the Boolean value true, or until the end of the array.
-    * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+    * @param thisArg An object to which the this keyword can refer in the predicate function.
     * If thisArg is omitted, undefined is used as the this value.
     */
   @JSName("some")
-  def some_transform(callbackfn: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _]): Boolean = js.native
+  def some_transform(predicate: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _]): Boolean = js.native
   @JSName("some")
   def some_transform(
-    callbackfn: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _],
+    predicate: js.Function3[transform, /* index */ Double, /* array */ js.Array[transform], _],
     thisArg: js.Any
   ): Boolean = js.native
   

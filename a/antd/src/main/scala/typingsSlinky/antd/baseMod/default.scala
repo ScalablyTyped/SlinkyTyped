@@ -1,6 +1,6 @@
 package typingsSlinky.antd.baseMod
 
-import typingsSlinky.antd.anon.Children
+import typingsSlinky.antd.anon.ChildrenString
 import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
 import typingsSlinky.react.mod.Context
 import scala.scalajs.js
@@ -17,7 +17,7 @@ object default extends js.Object {
   
   var contextType: Context[ConfigConsumerProps] = js.native
   
-  var defaultProps: Children = js.native
+  var defaultProps: ChildrenString = js.native
   
   def getDerivedStateFromProps(nextProps: BlockProps): js.Object = js.native
 }

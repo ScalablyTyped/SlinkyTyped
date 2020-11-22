@@ -1,5 +1,6 @@
 package typingsSlinky.reactMapGl.mod
 
+import typingsSlinky.reactMapGl.anon.X
 import typingsSlinky.std.MouseEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,6 +13,8 @@ trait PointerEvent extends MouseEvent {
   var features: js.Array[_] = js.native
   
   var lngLat: js.Tuple2[Double, Double] = js.native
+  
+  var offsetCenter: X = js.native
   
   var point: js.Tuple2[Double, Double] = js.native
   

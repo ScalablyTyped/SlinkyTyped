@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SMBFileShareInfo extends js.Object {
   
   /**
+    * Indicates whether AccessBasedEnumeration is enabled.
+    */
+  var AccessBasedEnumeration: js.UndefOr[Boolean] = js.native
+  
+  /**
     * A list of users or groups in the Active Directory that have administrator rights to the file share. A group must be prefixed with the @ character. Acceptable formats include: DOMAIN\User1, user1, @group1, and @DOMAIN\group1. Can only be set if Authentication is set to ActiveDirectory.
     */
   var AdminUserList: js.UndefOr[FileShareUserList] = js.native
@@ -66,6 +71,11 @@ trait SMBFileShareInfo extends js.Object {
   
   var LocationARN: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.LocationARN] = js.native
   
+  /**
+    * The notification policy of the file share.
+    */
+  var NotificationPolicy: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.NotificationPolicy] = js.native
+  
   var ObjectACL: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.ObjectACL] = js.native
   
   /**
@@ -122,6 +132,12 @@ object SMBFileShareInfo {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAccessBasedEnumeration(value: Boolean): Self = this.set("AccessBasedEnumeration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccessBasedEnumeration: Self = this.set("AccessBasedEnumeration", js.undefined)
     
     @scala.inline
     def setAdminUserListVarargs(value: FileShareUser*): Self = this.set("AdminUserList", js.Array(value :_*))
@@ -224,6 +240,12 @@ object SMBFileShareInfo {
     
     @scala.inline
     def deleteLocationARN: Self = this.set("LocationARN", js.undefined)
+    
+    @scala.inline
+    def setNotificationPolicy(value: NotificationPolicy): Self = this.set("NotificationPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNotificationPolicy: Self = this.set("NotificationPolicy", js.undefined)
     
     @scala.inline
     def setObjectACL(value: ObjectACL): Self = this.set("ObjectACL", value.asInstanceOf[js.Any])

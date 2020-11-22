@@ -30,6 +30,12 @@ object twitStrings {
   def popular: popular = "popular".asInstanceOf[popular]
   
   @scala.inline
+  def `private`: `private` = "private".asInstanceOf[`private`]
+  
+  @scala.inline
+  def public: public = "public".asInstanceOf[public]
+  
+  @scala.inline
   def recent: recent = "recent".asInstanceOf[recent]
   
   @scala.inline
@@ -67,6 +73,12 @@ object twitStrings {
   
   @js.native
   sealed trait popular extends ResultType
+  
+  @js.native
+  sealed trait `private` extends js.Object
+  
+  @js.native
+  sealed trait public extends js.Object
   
   @js.native
   sealed trait recent extends ResultType

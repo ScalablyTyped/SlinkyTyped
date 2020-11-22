@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.iotsecuretunnelingMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.std.String
@@ -70,12 +70,12 @@ trait IoTSecureTunneling extends String {
   ): Request[ListTunnelsResponse, AWSError] = js.native
   
   /**
-    * Creates a new tunnel, and returns two client access tokens for clients to use to connect to the AWS IoT Secure Tunneling proxy server. .
+    * Creates a new tunnel, and returns two client access tokens for clients to use to connect to the AWS IoT Secure Tunneling proxy server.
     */
   def openTunnel(): Request[OpenTunnelResponse, AWSError] = js.native
   def openTunnel(callback: js.Function2[/* err */ AWSError, /* data */ OpenTunnelResponse, Unit]): Request[OpenTunnelResponse, AWSError] = js.native
   /**
-    * Creates a new tunnel, and returns two client access tokens for clients to use to connect to the AWS IoT Secure Tunneling proxy server. .
+    * Creates a new tunnel, and returns two client access tokens for clients to use to connect to the AWS IoT Secure Tunneling proxy server.
     */
   def openTunnel(params: OpenTunnelRequest): Request[OpenTunnelResponse, AWSError] = js.native
   def openTunnel(

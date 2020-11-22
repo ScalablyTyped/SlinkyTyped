@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AudioTrackSelection extends js.Object {
   
   /**
-    * Selects one or more unique audio tracks from within an mp4 source.
+    * Selects one or more unique audio tracks from within a source.
     */
   var Tracks: listOfAudioTrack = js.native
 }

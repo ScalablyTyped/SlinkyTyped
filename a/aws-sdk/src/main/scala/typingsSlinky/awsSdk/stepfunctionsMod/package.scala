@@ -16,6 +16,8 @@ package object stepfunctionsMod {
   
   type Definition = java.lang.String
   
+  type Enabled = scala.Boolean
+  
   type EventId = scala.Double
   
   type ExecutionList = js.Array[typingsSlinky.awsSdk.stepfunctionsMod.ExecutionListItem]
@@ -96,6 +98,8 @@ package object stepfunctionsMod {
   
   type IncludeExecutionData = scala.Boolean
   
+  type IncludeExecutionDataGetExecutionHistory = scala.Boolean
+  
   type ListExecutionsPageToken = java.lang.String
   
   type LogDestinationList = js.Array[typingsSlinky.awsSdk.stepfunctionsMod.LogDestination]
@@ -155,6 +159,8 @@ package object stepfunctionsMod {
   
   type Timestamp = js.Date
   
+  type TraceHeader = java.lang.String
+  
   type UnsignedInteger = scala.Double
   
   /* Rewritten from type alias, can be one of: 
@@ -163,4 +169,8 @@ package object stepfunctionsMod {
     - java.lang.String
   */
   type apiVersion = typingsSlinky.awsSdk.stepfunctionsMod._apiVersion | java.lang.String
+  
+  type included = scala.Boolean
+  
+  type truncated = scala.Boolean
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ElasticsearchSettings extends js.Object {
   
   /**
-    * The endpoint for the Elasticsearch cluster.
+    * The endpoint for the Elasticsearch cluster. AWS DMS uses HTTPS if a transport protocol (http/https) is not specified.
     */
   var EndpointUri: String = js.native
   
@@ -18,7 +18,7 @@ trait ElasticsearchSettings extends js.Object {
   var ErrorRetryDuration: js.UndefOr[IntegerOptional] = js.native
   
   /**
-    * The maximum percentage of records that can fail to be written before a full load operation stops. 
+    * The maximum percentage of records that can fail to be written before a full load operation stops. To avoid early failure, this counter is only effective after 1000 records are transferred. Elasticsearch also has the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer of all records fail in the last 10 minutes, the full load operation stops. 
     */
   var FullLoadErrorPercentage: js.UndefOr[IntegerOptional] = js.native
   

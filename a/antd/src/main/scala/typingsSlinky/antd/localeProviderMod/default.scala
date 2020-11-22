@@ -1,6 +1,6 @@
 package typingsSlinky.antd.localeProviderMod
 
-import typingsSlinky.antd.anon.`1`
+import typingsSlinky.antd.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,5 +15,5 @@ class default protected () extends LocaleProvider {
 @js.native
 object default extends js.Object {
   
-  var defaultProps: `1` = js.native
+  var defaultProps: `0` = js.native
 }

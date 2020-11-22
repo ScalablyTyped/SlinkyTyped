@@ -25,7 +25,7 @@ package object mod {
   type InsertionPoint = java.lang.String | org.scalajs.dom.raw.HTMLElement | org.scalajs.dom.raw.Comment
   
   type JssStyle = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof jss.jss.NormalCssProperties | string ]: jss.jss.NormalCssValues<K> | / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias jss.jss.JssStyle * / object | jss.jss.Func<jss.jss.NormalCssValues<K> | / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias jss.jss.JssStyle * / object | undefined>}
+  {[ K in keyof jss.jss.NormalCssProperties | string ]: jss.jss.NormalCssValues<K> | / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias jss.jss.JssStyle * / object | jss.jss.Func<jss.jss.NormalCssValues<K> | / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias jss.jss.JssStyle * / object | undefined> | indefinite-observable.indefinite-observable/dist/types.Observable<jss.jss.NormalCssValues<K> | / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias jss.jss.JssStyle * / object | undefined>}
     */ typingsSlinky.jss.jssStrings.JssStyle with org.scalablytyped.runtime.TopLevel[js.Any]
   
   type JssValue = java.lang.String | scala.Double | (js.Array[
@@ -34,12 +34,12 @@ package object mod {
   
   type Keyframes[Name /* <: java.lang.String */] = typingsSlinky.std.Record[Name, java.lang.String]
   
-  type NormalCssProperties = typingsSlinky.csstype.mod.Properties[java.lang.String | scala.Double, java.lang.String with js.Object]
+  type NormalCssProperties = typingsSlinky.csstype.mod.Properties[java.lang.String | scala.Double]
   
   type NormalCssValues[K] = typingsSlinky.jss.mod.JssValue | (/* import warning: importer.ImportType#apply Failed type conversion: jss.jss.NormalCssProperties[K] */ js.Any)
   
   type Styles[Name /* <: java.lang.String | scala.Double | js.Symbol */] = typingsSlinky.std.Record[
     Name, 
-    typingsSlinky.jss.mod.JssStyle | java.lang.String | (typingsSlinky.jss.mod.Func[js.UndefOr[typingsSlinky.jss.mod.JssStyle | java.lang.String | scala.Null]])
+    typingsSlinky.jss.mod.JssStyle | java.lang.String | (typingsSlinky.jss.mod.Func[js.UndefOr[typingsSlinky.jss.mod.JssStyle | java.lang.String | scala.Null]]) | (typingsSlinky.indefiniteObservable.typesMod.Observable[js.UndefOr[typingsSlinky.jss.mod.JssStyle | java.lang.String | scala.Null]])
   ]
 }

@@ -3,6 +3,7 @@ package typingsSlinky.ts3NodejsLibrary.propertyTypesMod
 import typingsSlinky.ts3NodejsLibrary.enumMod.CodecEncryptionMode
 import typingsSlinky.ts3NodejsLibrary.enumMod.HostBannerMode
 import typingsSlinky.ts3NodejsLibrary.enumMod.HostMessageMode
+import typingsSlinky.ts3NodejsLibrary.enumMod.VirtualServerStatus
 import typingsSlinky.ts3NodejsLibrary.teamSpeakQueryMod.TeamSpeakQuery.ResponseEntry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -99,7 +100,7 @@ trait ServerEdit extends ResponseEntry {
   
   var virtualserverReservedSlots: js.UndefOr[Double] = js.native
   
-  var virtualserverStatus: js.UndefOr[String] = js.native
+  var virtualserverStatus: js.UndefOr[VirtualServerStatus] = js.native
   
   var virtualserverUploadQuota: js.UndefOr[Double] = js.native
   
@@ -395,7 +396,7 @@ object ServerEdit {
     def deleteVirtualserverReservedSlots: Self = this.set("virtualserverReservedSlots", js.undefined)
     
     @scala.inline
-    def setVirtualserverStatus(value: String): Self = this.set("virtualserverStatus", value.asInstanceOf[js.Any])
+    def setVirtualserverStatus(value: VirtualServerStatus): Self = this.set("virtualserverStatus", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVirtualserverStatus: Self = this.set("virtualserverStatus", js.undefined)

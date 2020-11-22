@@ -7,19 +7,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartCommonAxisSettingsMinorTick extends js.Object {
   
-  /** @name dxPolarChart.Options.commonAxisSettings.minorTick.color */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.minorTick.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.minorTick.length */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.minorTick.length]
+    */
   var length: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.minorTick.opacity */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.minorTick.opacity]
+    */
   var opacity: js.UndefOr[Double] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.minorTick.visible */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.minorTick.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPolarChart.Options.commonAxisSettings.minorTick.width */
+  /**
+    * [descr:dxPolarChart.Options.commonAxisSettings.minorTick.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxPolarChartCommonAxisSettingsMinorTick {

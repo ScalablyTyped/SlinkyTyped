@@ -18,7 +18,7 @@ trait SubparserOptions extends js.Object {
   
   var metavar: js.UndefOr[String] = js.native
   
-  var parserClass: js.UndefOr[Instantiable] = js.native
+  var parser_class: js.UndefOr[Instantiable] = js.native
   
   var prog: js.UndefOr[String] = js.native
   
@@ -78,10 +78,10 @@ object SubparserOptions {
     def deleteMetavar: Self = this.set("metavar", js.undefined)
     
     @scala.inline
-    def setParserClass(value: Instantiable): Self = this.set("parserClass", value.asInstanceOf[js.Any])
+    def setParser_class(value: Instantiable): Self = this.set("parser_class", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteParserClass: Self = this.set("parserClass", js.undefined)
+    def deleteParser_class: Self = this.set("parser_class", js.undefined)
     
     @scala.inline
     def setProg(value: String): Self = this.set("prog", value.asInstanceOf[js.Any])

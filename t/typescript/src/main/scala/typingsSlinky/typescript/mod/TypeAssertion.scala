@@ -10,10 +10,10 @@ trait TypeAssertion
   extends UnaryExpression
      with AssertionExpression {
   
-  var expression: UnaryExpression = js.native
+  val expression: UnaryExpression = js.native
   
   @JSName("kind")
-  var kind_TypeAssertion: TypeAssertionExpression = js.native
+  val kind_TypeAssertion: TypeAssertionExpression = js.native
   
-  var `type`: TypeNode = js.native
+  val `type`: TypeNode = js.native
 }

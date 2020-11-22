@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DomainNameArgs extends js.Object {
   
   /**
-    * The domain name.
+    * The domain name. Must be between 1 and 512 characters in length.
     */
   val domainName: Input[String] = js.native
   

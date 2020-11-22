@@ -6,7 +6,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// tslint:disable-next-line interface-over-type-literal
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.oracleOraclejet.anon.EndIndexEndKey[K]
   - typingsSlinky.oracleOraclejet.anon.EndKey25[K]

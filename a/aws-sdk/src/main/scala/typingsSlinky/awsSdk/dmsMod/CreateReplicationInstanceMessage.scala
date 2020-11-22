@@ -28,7 +28,7 @@ trait CreateReplicationInstanceMessage extends js.Object {
   var DnsNameServers: js.UndefOr[String] = js.native
   
   /**
-    * The engine version number of the replication instance.
+    * The engine version number of the replication instance. If an engine version number is not specified when a replication instance is created, the default is the latest engine version available.
     */
   var EngineVersion: js.UndefOr[String] = js.native
   
@@ -66,6 +66,11 @@ trait CreateReplicationInstanceMessage extends js.Object {
     * A subnet group to associate with the replication instance.
     */
   var ReplicationSubnetGroupIdentifier: js.UndefOr[String] = js.native
+  
+  /**
+    * A friendly name for the resource identifier at the end of the EndpointArn response parameter that is returned in the created Endpoint object. The value for this parameter can have up to 31 characters. It can contain only ASCII letters, digits, and hyphen ('-'). Also, it can't end with a hyphen or contain two consecutive hyphens, and can only begin with a letter, such as Example-App-ARN1. For example, this value might result in the EndpointArn value arn:aws:dms:eu-west-1:012345678901:rep:Example-App-ARN1. If you don't specify a ResourceIdentifier value, AWS DMS generates a default identifier value for the end of EndpointArn.
+    */
+  var ResourceIdentifier: js.UndefOr[String] = js.native
   
   /**
     * One or more tags to be assigned to the replication instance.
@@ -165,6 +170,12 @@ object CreateReplicationInstanceMessage {
     
     @scala.inline
     def deleteReplicationSubnetGroupIdentifier: Self = this.set("ReplicationSubnetGroupIdentifier", js.undefined)
+    
+    @scala.inline
+    def setResourceIdentifier(value: String): Self = this.set("ResourceIdentifier", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResourceIdentifier: Self = this.set("ResourceIdentifier", js.undefined)
     
     @scala.inline
     def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))

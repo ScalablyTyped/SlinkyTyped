@@ -40,8 +40,6 @@ class QuestionBooleanModel protected () extends Question {
   
   val locDisplayLabel: LocalizableString = js.native
   
-  val locLabel: LocalizableString = js.native
-  
   val locLabelFalse: LocalizableString = js.native
   
   val locLabelTrue: LocalizableString = js.native

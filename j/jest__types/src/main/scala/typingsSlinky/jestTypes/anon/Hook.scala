@@ -1,13 +1,13 @@
 package typingsSlinky.jestTypes.anon
 
-import typingsSlinky.jestTypes.circusMod.Event
+import typingsSlinky.jestTypes.circusMod.AsyncEvent
 import typingsSlinky.jestTypes.jestTypesStrings.hook_start
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Hook extends Event {
+trait Hook extends AsyncEvent {
   
   var hook: typingsSlinky.jestTypes.circusMod.Hook = js.native
   

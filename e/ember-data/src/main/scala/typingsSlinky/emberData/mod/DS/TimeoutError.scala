@@ -3,7 +3,7 @@ package typingsSlinky.emberData.mod.DS
 import typingsSlinky.emberObject.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * A `DS.TimeoutError` is used by an adapter to signal that a request
@@ -13,4 +13,3 @@ import scala.scalajs.js.annotation._
 @JSImport("ember-data", "DS.TimeoutError")
 @js.native
 class TimeoutError () extends default
-

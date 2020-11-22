@@ -7,8 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("yup", "array")
 @js.native
-class array ()
-  extends NotRequiredArraySchema[js.Object]
+// tslint:disable-next-line:no-unnecessary-generics
+class array[C] ()
+  extends NotRequiredArraySchema[js.Object, C]
 @JSImport("yup", "array")
 @js.native
 object array extends TopLevel[ArraySchemaConstructor]

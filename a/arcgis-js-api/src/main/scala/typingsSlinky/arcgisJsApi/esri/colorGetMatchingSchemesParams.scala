@@ -35,7 +35,7 @@ trait colorGetMatchingSchemesParams extends Object {
   var theme: `high-to-low` | `above-and-below` | `centered-on` | extremes = js.native
   
   /**
-    * The [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) instance used to calculate the suggested sizes of the symbols.  This is required for 3D visualizations.
+    * The [SceneView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html) instance used to calculate the suggested sizes of the symbols.
     *
     * [Read more...](global.html)
     */

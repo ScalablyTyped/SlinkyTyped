@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SiderContextProps extends js.Object {
   
-  var collapsedWidth: js.UndefOr[String | Double] = js.native
+  var collapsedWidth: js.UndefOr[Double | String] = js.native
   
   var siderCollapsed: js.UndefOr[Boolean] = js.native
 }
@@ -35,7 +35,7 @@ object SiderContextProps {
     }
     
     @scala.inline
-    def setCollapsedWidth(value: String | Double): Self = this.set("collapsedWidth", value.asInstanceOf[js.Any])
+    def setCollapsedWidth(value: Double | String): Self = this.set("collapsedWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCollapsedWidth: Self = this.set("collapsedWidth", js.undefined)

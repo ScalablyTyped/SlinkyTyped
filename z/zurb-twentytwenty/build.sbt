@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "zurb-twentytwenty"
-version := "0.1-dt-20200407Z-0abe02"
+version := "0.1-dt-20201002Z-0abe02"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

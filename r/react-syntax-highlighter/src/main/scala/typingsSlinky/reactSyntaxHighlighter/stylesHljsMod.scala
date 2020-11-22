@@ -8,7 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object stylesHljsMod extends js.Object {
   
+  val a11yDark: js.Any = js.native
+  
+  val a11yLight: js.Any = js.native
+  
   val agate: js.Any = js.native
+  
+  val anOldHope: js.Any = js.native
   
   val androidstudio: js.Any = js.native
   
@@ -60,6 +66,8 @@ object stylesHljsMod extends js.Object {
   
   val atomOneDark: js.Any = js.native
   
+  val atomOneDarkReasonable: js.Any = js.native
+  
   val atomOneLight: js.Any = js.native
   
   val brownPaper: js.Any = js.native
@@ -71,8 +79,6 @@ object stylesHljsMod extends js.Object {
   val darcula: js.Any = js.native
   
   val dark: js.Any = js.native
-  
-  val darkula: js.Any = js.native
   
   val defaultStyle: js.Any = js.native
   
@@ -88,7 +94,11 @@ object stylesHljsMod extends js.Object {
   
   val githubGist: js.Any = js.native
   
+  val gml: js.Any = js.native
+  
   val googlecode: js.Any = js.native
+  
+  val gradientDark: js.Any = js.native
   
   val grayscale: js.Any = js.native
   
@@ -104,9 +114,17 @@ object stylesHljsMod extends js.Object {
   
   val irBlack: js.Any = js.native
   
+  val isblEditorDark: js.Any = js.native
+  
+  val isblEditorLight: js.Any = js.native
+  
   val kimbieDark: js.Any = js.native
   
   val kimbieLight: js.Any = js.native
+  
+  val lightfair: js.Any = js.native
+  
+  val lioshi: js.Any = js.native
   
   val magula: js.Any = js.native
   
@@ -115,6 +133,14 @@ object stylesHljsMod extends js.Object {
   val monokai: js.Any = js.native
   
   val monokaiSublime: js.Any = js.native
+  
+  val nightOwl: js.Any = js.native
+  
+  val nnfx: js.Any = js.native
+  
+  val nnfxDark: js.Any = js.native
+  
+  val nord: js.Any = js.native
   
   val obsidian: js.Any = js.native
   
@@ -140,9 +166,13 @@ object stylesHljsMod extends js.Object {
   
   val schoolBook: js.Any = js.native
   
+  val shadesOfPurple: js.Any = js.native
+  
   val solarizedDark: js.Any = js.native
   
   val solarizedLight: js.Any = js.native
+  
+  val srcery: js.Any = js.native
   
   val sunburst: js.Any = js.native
   

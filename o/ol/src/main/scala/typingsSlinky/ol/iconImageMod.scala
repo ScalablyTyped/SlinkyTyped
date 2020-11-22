@@ -34,16 +34,24 @@ object iconImageMod extends js.Object {
   trait IconImage
     extends typingsSlinky.ol.targetMod.default {
     
-    def getHitDetectionImage(pixelRatio: Double): HTMLImageElement | HTMLCanvasElement = js.native
+    def getHitDetectionImage(): HTMLImageElement | HTMLCanvasElement = js.native
     
     def getImage(pixelRatio: Double): HTMLImageElement | HTMLCanvasElement = js.native
     
     def getImageState(): ImageState = js.native
     
+    def getPixelRatio(pixelRatio: Double): Double = js.native
+    
+    /**
+      * Get the size of the icon (in pixels).
+      */
     def getSize(): Size = js.native
     
-    def getSrc(): String = js.native
+    def getSrc(): js.UndefOr[String] = js.native
     
+    /**
+      * Load not yet loaded URI.
+      */
     def load(): Unit = js.native
   }
   

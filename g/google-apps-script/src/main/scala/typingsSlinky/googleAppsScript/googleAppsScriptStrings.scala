@@ -2,6 +2,10 @@ package typingsSlinky.googleAppsScript
 
 import typingsSlinky.googleAppsScript.GoogleAppsScript.DataStudio.NumericOperator
 import typingsSlinky.googleAppsScript.GoogleAppsScript.DataStudio.RegexpOperator
+import typingsSlinky.googleAppsScript.GoogleAppsScript.Events.SheetsOnChangeChangeType
+import typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.FontLine
+import typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.FontStyle
+import typingsSlinky.googleAppsScript.GoogleAppsScript.Spreadsheet.FontWeight
 import typingsSlinky.googleAppsScript.GoogleAppsScript.URLFetch.HttpMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,13 +20,28 @@ object googleAppsScriptStrings {
   def CONTAINS: CONTAINS = "CONTAINS".asInstanceOf[CONTAINS]
   
   @scala.inline
+  def EDIT: EDIT = "EDIT".asInstanceOf[EDIT]
+  
+  @scala.inline
   def EQUALS: EQUALS = "EQUALS".asInstanceOf[EQUALS]
   
   @scala.inline
   def EXCLUDE: EXCLUDE = "EXCLUDE".asInstanceOf[EXCLUDE]
   
   @scala.inline
+  def FORMAT: FORMAT = "FORMAT".asInstanceOf[FORMAT]
+  
+  @scala.inline
   def INCLUDE: INCLUDE = "INCLUDE".asInstanceOf[INCLUDE]
+  
+  @scala.inline
+  def INSERT_COLUMN: INSERT_COLUMN = "INSERT_COLUMN".asInstanceOf[INSERT_COLUMN]
+  
+  @scala.inline
+  def INSERT_GRID: INSERT_GRID = "INSERT_GRID".asInstanceOf[INSERT_GRID]
+  
+  @scala.inline
+  def INSERT_ROW: INSERT_ROW = "INSERT_ROW".asInstanceOf[INSERT_ROW]
   
   @scala.inline
   def IN_LIST: IN_LIST = "IN_LIST".asInstanceOf[IN_LIST]
@@ -43,10 +62,22 @@ object googleAppsScriptStrings {
   def NUMERIC_LESS_THAN_OR_EQUAL: NUMERIC_LESS_THAN_OR_EQUAL = "NUMERIC_LESS_THAN_OR_EQUAL".asInstanceOf[NUMERIC_LESS_THAN_OR_EQUAL]
   
   @scala.inline
+  def OTHER: OTHER = "OTHER".asInstanceOf[OTHER]
+  
+  @scala.inline
   def REGEXP_EXACT_MATCH: REGEXP_EXACT_MATCH = "REGEXP_EXACT_MATCH".asInstanceOf[REGEXP_EXACT_MATCH]
   
   @scala.inline
   def REGEXP_PARTIAL_MATCH: REGEXP_PARTIAL_MATCH = "REGEXP_PARTIAL_MATCH".asInstanceOf[REGEXP_PARTIAL_MATCH]
+  
+  @scala.inline
+  def REMOVE_COLUMN: REMOVE_COLUMN = "REMOVE_COLUMN".asInstanceOf[REMOVE_COLUMN]
+  
+  @scala.inline
+  def REMOVE_GRID: REMOVE_GRID = "REMOVE_GRID".asInstanceOf[REMOVE_GRID]
+  
+  @scala.inline
+  def REMOVE_ROW: REMOVE_ROW = "REMOVE_ROW".asInstanceOf[REMOVE_ROW]
   
   @scala.inline
   def bold: bold = "bold".asInstanceOf[bold]
@@ -109,13 +140,28 @@ object googleAppsScriptStrings {
   sealed trait CONTAINS extends js.Object
   
   @js.native
+  sealed trait EDIT extends SheetsOnChangeChangeType
+  
+  @js.native
   sealed trait EQUALS extends js.Object
   
   @js.native
   sealed trait EXCLUDE extends js.Object
   
   @js.native
+  sealed trait FORMAT extends SheetsOnChangeChangeType
+  
+  @js.native
   sealed trait INCLUDE extends js.Object
+  
+  @js.native
+  sealed trait INSERT_COLUMN extends SheetsOnChangeChangeType
+  
+  @js.native
+  sealed trait INSERT_GRID extends SheetsOnChangeChangeType
+  
+  @js.native
+  sealed trait INSERT_ROW extends SheetsOnChangeChangeType
   
   @js.native
   sealed trait IN_LIST extends js.Object
@@ -136,13 +182,25 @@ object googleAppsScriptStrings {
   sealed trait NUMERIC_LESS_THAN_OR_EQUAL extends NumericOperator
   
   @js.native
+  sealed trait OTHER extends SheetsOnChangeChangeType
+  
+  @js.native
   sealed trait REGEXP_EXACT_MATCH extends RegexpOperator
   
   @js.native
   sealed trait REGEXP_PARTIAL_MATCH extends RegexpOperator
   
   @js.native
-  sealed trait bold extends js.Object
+  sealed trait REMOVE_COLUMN extends SheetsOnChangeChangeType
+  
+  @js.native
+  sealed trait REMOVE_GRID extends SheetsOnChangeChangeType
+  
+  @js.native
+  sealed trait REMOVE_ROW extends SheetsOnChangeChangeType
+  
+  @js.native
+  sealed trait bold extends FontWeight
   
   @js.native
   sealed trait bottom extends js.Object
@@ -160,22 +218,24 @@ object googleAppsScriptStrings {
   sealed trait html extends js.Object
   
   @js.native
-  sealed trait italic extends js.Object
+  sealed trait italic extends FontStyle
   
   @js.native
   sealed trait left extends js.Object
   
   @js.native
-  sealed trait `line-through` extends js.Object
+  sealed trait `line-through` extends FontLine
   
   @js.native
   sealed trait middle extends js.Object
   
   @js.native
-  sealed trait none extends js.Object
+  sealed trait none extends FontLine
   
   @js.native
-  sealed trait normal extends js.Object
+  sealed trait normal
+    extends FontStyle
+       with FontWeight
   
   @js.native
   sealed trait patch extends HttpMethod
@@ -193,5 +253,5 @@ object googleAppsScriptStrings {
   sealed trait top extends js.Object
   
   @js.native
-  sealed trait underline extends js.Object
+  sealed trait underline extends FontLine
 }

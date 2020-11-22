@@ -17,7 +17,6 @@ trait Component
   
   var _lastTopUpdate: Double = js.native
   
-  /* tslint:disable:variable-name */
   var _lastWidthUpdate: Double = js.native
   
   def addChild(child: Component): scala.Unit = js.native

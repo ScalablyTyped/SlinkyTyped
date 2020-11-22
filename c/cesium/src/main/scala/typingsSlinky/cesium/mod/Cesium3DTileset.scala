@@ -5,7 +5,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// tslint:disable-next-line:no-unnecessary-class
 @JSImport("cesium", "Cesium3DTileset")
 @js.native
 class Cesium3DTileset protected () extends js.Object {

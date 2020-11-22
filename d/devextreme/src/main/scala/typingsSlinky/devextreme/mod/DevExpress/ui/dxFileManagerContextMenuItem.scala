@@ -15,11 +15,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFileManagerContextMenuItem extends dxContextMenuItem {
   
-  /** @name dxFileManagerContextMenuItem.items */
+  /**
+    * [descr:dxFileManagerContextMenuItem.items]
+    */
   @JSName("items")
   var items_dxFileManagerContextMenuItem: js.UndefOr[js.Array[dxFileManagerContextMenuItem]] = js.native
   
-  /** @name dxFileManagerContextMenuItem.name */
+  /**
+    * [descr:dxFileManagerContextMenuItem.name]
+    */
   var name: js.UndefOr[create | upload | refresh | download | move | copy | rename | delete | String] = js.native
 }
 object dxFileManagerContextMenuItem {

@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object breadcrumbMod {
   
-  type Breadcrumb[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.breadcrumbMod.BreadcrumbProps]
+  type Breadcrumb = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.breadcrumbMod.BreadcrumbProps]
 }

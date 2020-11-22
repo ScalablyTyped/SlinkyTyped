@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AssetProperty extends js.Object {
   
   /**
-    * The property alias that identifies the property, such as an OPC-UA server data stream path (for example, /company/windfarm/3/turbine/7/temperature). For more information, see Mapping Industrial Data Streams to Asset Properties in the AWS IoT SiteWise User Guide.
+    * The property alias that identifies the property, such as an OPC-UA server data stream path (for example, /company/windfarm/3/turbine/7/temperature). For more information, see Mapping industrial data streams to asset properties in the AWS IoT SiteWise User Guide.
     */
   var alias: js.UndefOr[PropertyAlias] = js.native
   
@@ -28,7 +28,7 @@ trait AssetProperty extends js.Object {
   var name: Name = js.native
   
   /**
-    * The asset property's notification topic and state. For more information, see UpdateAssetProperty 
+    * The asset property's notification topic and state. For more information, see UpdateAssetProperty.
     */
   var notification: js.UndefOr[PropertyNotification] = js.native
   

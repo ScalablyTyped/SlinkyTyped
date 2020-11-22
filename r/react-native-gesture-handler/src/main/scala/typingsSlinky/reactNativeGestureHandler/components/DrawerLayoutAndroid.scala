@@ -6,6 +6,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.Ref
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -14,7 +15,6 @@ import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.DrawerLayoutAndroidProperties
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -32,11 +32,13 @@ import typingsSlinky.reactNative.reactNativeStrings.`on-drag`
 import typingsSlinky.reactNative.reactNativeStrings.assertive
 import typingsSlinky.reactNative.reactNativeStrings.auto
 import typingsSlinky.reactNative.reactNativeStrings.button
+import typingsSlinky.reactNative.reactNativeStrings.left
 import typingsSlinky.reactNative.reactNativeStrings.no
 import typingsSlinky.reactNative.reactNativeStrings.none
 import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
+import typingsSlinky.reactNative.reactNativeStrings.right
 import typingsSlinky.reactNative.reactNativeStrings.unlocked
 import typingsSlinky.reactNative.reactNativeStrings.yes
 import typingsSlinky.reactNativeGestureHandler.anon.Bottom
@@ -120,7 +122,7 @@ object DrawerLayoutAndroid {
     def drawerLockMode(value: unlocked | `locked-closed` | `locked-open`): this.type = set("drawerLockMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def drawerPosition(value: Double): this.type = set("drawerPosition", value.asInstanceOf[js.Any])
+    def drawerPosition(value: left | right): this.type = set("drawerPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def drawerWidth(value: Double): this.type = set("drawerWidth", value.asInstanceOf[js.Any])
@@ -183,7 +185,7 @@ object DrawerLayoutAndroid {
     def onHandlerStateChange(value: /* event */ NativeViewGestureHandlerStateChangeEvent => Unit): this.type = set("onHandlerStateChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))

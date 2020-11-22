@@ -13,9 +13,9 @@ trait PutRuleRequest extends js.Object {
   var Description: js.UndefOr[RuleDescription] = js.native
   
   /**
-    * The event bus to associate with this rule. If you omit this, the default event bus is used.
+    * The name or ARN of the event bus to associate with this rule. If you omit this, the default event bus is used.
     */
-  var EventBusName: js.UndefOr[typingsSlinky.awsSdk.cloudwatcheventsMod.EventBusName] = js.native
+  var EventBusName: js.UndefOr[EventBusNameOrArn] = js.native
   
   /**
     * The event pattern. For more information, see Events and Event Patterns in the Amazon EventBridge User Guide.
@@ -80,7 +80,7 @@ object PutRuleRequest {
     def deleteDescription: Self = this.set("Description", js.undefined)
     
     @scala.inline
-    def setEventBusName(value: EventBusName): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
+    def setEventBusName(value: EventBusNameOrArn): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEventBusName: Self = this.set("EventBusName", js.undefined)

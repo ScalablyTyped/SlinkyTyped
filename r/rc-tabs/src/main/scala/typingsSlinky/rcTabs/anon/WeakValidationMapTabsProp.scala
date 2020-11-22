@@ -9,10 +9,16 @@ import typingsSlinky.rcTabs.interfaceMod.AnimatedConfig
 import typingsSlinky.rcTabs.interfaceMod.EditableConfig
 import typingsSlinky.rcTabs.interfaceMod.OnTabScroll
 import typingsSlinky.rcTabs.interfaceMod.RenderTabBar
+import typingsSlinky.rcTabs.interfaceMod.TabBarExtraContent
 import typingsSlinky.rcTabs.interfaceMod.TabPosition
 import typingsSlinky.rcTabs.interfaceMod.TabsLocale
+import typingsSlinky.rcTabs.rcTabsStrings.`additions removals`
 import typingsSlinky.rcTabs.rcTabsStrings.`additions text`
 import typingsSlinky.rcTabs.rcTabsStrings.`inline`
+import typingsSlinky.rcTabs.rcTabsStrings.`removals additions`
+import typingsSlinky.rcTabs.rcTabsStrings.`removals text`
+import typingsSlinky.rcTabs.rcTabsStrings.`text additions`
+import typingsSlinky.rcTabs.rcTabsStrings.`text removals`
 import typingsSlinky.rcTabs.rcTabsStrings.additions
 import typingsSlinky.rcTabs.rcTabsStrings.all
 import typingsSlinky.rcTabs.rcTabsStrings.ascending
@@ -165,7 +171,11 @@ trait WeakValidationMapTabsProp extends js.Object {
   var `aria-readonly`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
   var `aria-relevant`: js.UndefOr[
-    Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]
+    Validator[
+      js.UndefOr[
+        additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`) | Null
+      ]
+    ]
   ] = js.native
   
   var `aria-required`: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
@@ -464,7 +474,7 @@ trait WeakValidationMapTabsProp extends js.Object {
   
   var suppressHydrationWarning: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.native
   
-  var tabBarExtraContent: js.UndefOr[Validator[js.UndefOr[Null | ReactElement]]] = js.native
+  var tabBarExtraContent: js.UndefOr[Validator[js.UndefOr[Null | TabBarExtraContent]]] = js.native
   
   var tabBarGutter: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.native
   
@@ -742,7 +752,13 @@ object WeakValidationMapTabsProp {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: Validator[js.UndefOr[additions | (`additions text`) | all | removals | text | Null]]): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: Validator[
+          js.UndefOr[
+            additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`) | Null
+          ]
+        ]
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1610,7 +1626,7 @@ object WeakValidationMapTabsProp {
     def deleteSuppressHydrationWarning: Self = this.set("suppressHydrationWarning", js.undefined)
     
     @scala.inline
-    def setTabBarExtraContent(value: Validator[js.UndefOr[Null | ReactElement]]): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
+    def setTabBarExtraContent(value: Validator[js.UndefOr[Null | TabBarExtraContent]]): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTabBarExtraContent: Self = this.set("tabBarExtraContent", js.undefined)

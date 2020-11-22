@@ -1,6 +1,6 @@
 package typingsSlinky.officeUiFabricReact.indexBundleMod
 
-import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.uifabricMergeStyles.ikeyframesMod.IKeyframes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object keyframes extends js.Object {
   
-  def apply(timeline: StringDictionary[js.Object]): String = js.native
+  def apply(timeline: IKeyframes): String = js.native
 }

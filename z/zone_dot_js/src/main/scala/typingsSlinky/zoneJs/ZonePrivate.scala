@@ -83,8 +83,6 @@ trait ZonePrivate extends js.Object {
   def scheduleMicroTask(): Unit = js.native
   def scheduleMicroTask(task: MicroTask): Unit = js.native
   
-  def setNativePromise(nativePromise: js.Any): Unit = js.native
-  
   def showUncaughtError(): Boolean = js.native
   
   def symbol(name: String): String = js.native

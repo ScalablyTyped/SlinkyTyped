@@ -37,7 +37,7 @@ object global extends js.Object {
   
   /**
     * Console polyfill
-    * @see https://facebook.github.io/react-native/docs/javascript-environment.html#polyfills
+    * @see https://reactnative.dev/docs/javascript-environment#polyfills
     */
   @js.native
   trait Console_ extends js.Object {

@@ -1,7 +1,6 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem
 import typingsSlinky.devextreme.mod.DevExpress.ui.dxFileManager
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +21,7 @@ trait CurrentDeselectedItemKeys extends js.Object {
   
   var selectedItemKeys: js.UndefOr[js.Array[String]] = js.native
   
-  var selectedItems: js.UndefOr[js.Array[FileSystemItem]] = js.native
+  var selectedItems: js.UndefOr[js.Array[typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem]] = js.native
 }
 object CurrentDeselectedItemKeys {
   
@@ -93,10 +92,10 @@ object CurrentDeselectedItemKeys {
     def deleteSelectedItemKeys: Self = this.set("selectedItemKeys", js.undefined)
     
     @scala.inline
-    def setSelectedItemsVarargs(value: FileSystemItem*): Self = this.set("selectedItems", js.Array(value :_*))
+    def setSelectedItemsVarargs(value: typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem*): Self = this.set("selectedItems", js.Array(value :_*))
     
     @scala.inline
-    def setSelectedItems(value: js.Array[FileSystemItem]): Self = this.set("selectedItems", value.asInstanceOf[js.Any])
+    def setSelectedItems(value: js.Array[typingsSlinky.devextreme.mod.DevExpress.fileManagement.FileSystemItem]): Self = this.set("selectedItems", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSelectedItems: Self = this.set("selectedItems", js.undefined)

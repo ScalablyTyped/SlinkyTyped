@@ -13,12 +13,12 @@ trait DescribeAccountCustomizationRequest extends js.Object {
   var AwsAccountId: typingsSlinky.awsSdk.quicksightMod.AwsAccountId = js.native
   
   /**
-    * The namespace associated with the customization that you're describing.
+    * The QuickSight namespace that you want to describe QuickSight customizations for.
     */
   var Namespace: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.Namespace] = js.native
   
   /**
-    * The status of the creation of the customization. This is an asynchronous process. A status of CREATED means that your customization is ready to use.
+    * The Resolved flag works with the other parameters to determine which view of QuickSight customizations is returned. You can add this flag to your command to use the same view that QuickSight uses to identify which customizations to apply to the console. Omit this flag, or set it to no-resolved, to reveal customizations that are configured at different levels. 
     */
   var Resolved: js.UndefOr[scala.Boolean] = js.native
 }

@@ -57,6 +57,9 @@ object imageBitmapLoaderMod extends js.Object {
       onError: js.Function1[/* event */ ErrorEvent, Unit]
     ): js.Any = js.native
     
+    /**
+    	 * @default { premultiplyAlpha: 'none' }
+    	 */
     var options: js.UndefOr[js.Object] = js.native
     
     def setOptions(options: js.Object): ImageBitmapLoader = js.native

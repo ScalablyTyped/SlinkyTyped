@@ -13,6 +13,8 @@ trait Profile extends js.Object {
   
   var endpoint: String = js.native
   
+  var journeysWalkingSpeed: js.UndefOr[Boolean] = js.native
+  
   var locale: String = js.native
   
   var products: js.Array[ProductType] = js.native
@@ -64,6 +66,12 @@ object Profile {
     
     @scala.inline
     def setTimezone(value: String): Self = this.set("timezone", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setJourneysWalkingSpeed(value: Boolean): Self = this.set("journeysWalkingSpeed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJourneysWalkingSpeed: Self = this.set("journeysWalkingSpeed", js.undefined)
     
     @scala.inline
     def setRadar(value: Boolean): Self = this.set("radar", value.asInstanceOf[js.Any])

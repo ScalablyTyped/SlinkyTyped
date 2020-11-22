@@ -7,7 +7,7 @@ import typingsSlinky.stellarBase.stellarBaseNumbers.`3`
 import typingsSlinky.stellarBase.stellarBaseNumbers.`4`
 import typingsSlinky.stellarBase.stellarBaseStrings.errAuth
 import typingsSlinky.stellarBase.stellarBaseStrings.errConf
-import typingsSlinky.stellarBase.stellarBaseStrings.errDatum
+import typingsSlinky.stellarBase.stellarBaseStrings.errData
 import typingsSlinky.stellarBase.stellarBaseStrings.errLoad
 import typingsSlinky.stellarBase.stellarBaseStrings.errMisc
 import scala.scalajs.js
@@ -17,14 +17,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ErrorCode extends js.Object {
   
-  val name: errMisc | errDatum | errConf | errAuth | errLoad = js.native
+  val name: errMisc | errData | errConf | errAuth | errLoad = js.native
   
   val value: `0` | `1` | `2` | `3` | `4` = js.native
 }
 object ErrorCode {
   
   @scala.inline
-  def apply(name: errMisc | errDatum | errConf | errAuth | errLoad, value: `0` | `1` | `2` | `3` | `4`): ErrorCode = {
+  def apply(name: errMisc | errData | errConf | errAuth | errLoad, value: `0` | `1` | `2` | `3` | `4`): ErrorCode = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ErrorCode]
   }
@@ -45,7 +45,7 @@ object ErrorCode {
     }
     
     @scala.inline
-    def setName(value: errMisc | errDatum | errConf | errAuth | errLoad): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: errMisc | errData | errConf | errAuth | errLoad): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setValue(value: `0` | `1` | `2` | `3` | `4`): Self = this.set("value", value.asInstanceOf[js.Any])

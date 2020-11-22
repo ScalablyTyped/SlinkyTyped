@@ -58,6 +58,11 @@ trait Crawler extends js.Object {
   var Name: js.UndefOr[NameString] = js.native
   
   /**
+    * A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.
+    */
+  var RecrawlPolicy: js.UndefOr[typingsSlinky.awsSdk.glueMod.RecrawlPolicy] = js.native
+  
+  /**
     * The Amazon Resource Name (ARN) of an IAM role that's used to access customer resources, such as Amazon Simple Storage Service (Amazon S3) data.
     */
   var Role: js.UndefOr[typingsSlinky.awsSdk.glueMod.Role] = js.native
@@ -177,6 +182,12 @@ object Crawler {
     
     @scala.inline
     def deleteName: Self = this.set("Name", js.undefined)
+    
+    @scala.inline
+    def setRecrawlPolicy(value: RecrawlPolicy): Self = this.set("RecrawlPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRecrawlPolicy: Self = this.set("RecrawlPolicy", js.undefined)
     
     @scala.inline
     def setRole(value: Role): Self = this.set("Role", value.asInstanceOf[js.Any])

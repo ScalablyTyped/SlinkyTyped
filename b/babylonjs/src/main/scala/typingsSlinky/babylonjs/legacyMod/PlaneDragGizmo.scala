@@ -61,12 +61,6 @@ class PlaneDragGizmo protected ()
 object PlaneDragGizmo extends js.Object {
   
   /** @hidden */
-  def _CreateArrowInstance(
-    scene: typingsSlinky.babylonjs.sceneMod.Scene,
-    arrow: typingsSlinky.babylonjs.transformNodeMod.TransformNode
-  ): typingsSlinky.babylonjs.transformNodeMod.TransformNode = js.native
-  
-  /** @hidden */
   def _CreatePlane(
     scene: typingsSlinky.babylonjs.sceneMod.Scene,
     material: typingsSlinky.babylonjs.standardMaterialMod.StandardMaterial

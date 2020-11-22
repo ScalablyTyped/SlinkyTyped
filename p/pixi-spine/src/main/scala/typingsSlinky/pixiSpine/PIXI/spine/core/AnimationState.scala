@@ -24,6 +24,14 @@ trait AnimationState extends js.Object {
   @JSName("apply")
   def apply(skeleton: Skeleton): Boolean = js.native
   
+  def applyAttachmentTimeline(
+    timeline: AttachmentTimeline,
+    skeleton: Skeleton,
+    time: Double,
+    blend: MixBlend,
+    attachments: Boolean
+  ): Unit = js.native
+  
   def applyMixingFrom(to: TrackEntry, skeleton: Skeleton, blend: MixBlend): Double = js.native
   
   def applyRotateTimeline(
@@ -46,8 +54,6 @@ trait AnimationState extends js.Object {
   def clearTracks(): Unit = js.native
   
   def computeHold(entry: TrackEntry): Unit = js.native
-  
-  def computeNotLast(entry: TrackEntry): Unit = js.native
   
   var data: AnimationStateData = js.native
   
@@ -87,6 +93,8 @@ trait AnimationState extends js.Object {
   
   def setAnimationWith(trackIndex: Double, animation: Animation, loop: Boolean): TrackEntry = js.native
   
+  def setAttachment(skeleton: Skeleton, slot: Slot, attachmentName: String, attachments: Boolean): Unit = js.native
+  
   def setCurrent(index: Double, current: TrackEntry, interrupt: Boolean): Unit = js.native
   
   def setEmptyAnimation(trackIndex: Double, mixDuration: Double): TrackEntry = js.native
@@ -100,6 +108,8 @@ trait AnimationState extends js.Object {
   var trackEntryPool: Pool[TrackEntry] = js.native
   
   var tracks: js.Array[TrackEntry] = js.native
+  
+  var unkeyedState: Double = js.native
   
   def update(delta: Double): Unit = js.native
   
@@ -117,6 +127,7 @@ object AnimationState {
     addListener: AnimationStateListener => Unit,
     animationsChanged: Boolean,
     apply: Skeleton => Boolean,
+    applyAttachmentTimeline: (AttachmentTimeline, Skeleton, Double, MixBlend, Boolean) => Unit,
     applyMixingFrom: (TrackEntry, Skeleton, MixBlend) => Double,
     applyRotateTimeline: (Timeline, Skeleton, Double, Double, MixBlend, js.Array[Double], Double, Boolean) => Unit,
     clearListenerNotifications: () => Unit,
@@ -124,7 +135,6 @@ object AnimationState {
     clearTrack: Double => Unit,
     clearTracks: () => Unit,
     computeHold: TrackEntry => Unit,
-    computeNotLast: TrackEntry => Unit,
     data: AnimationStateData,
     disposeNext: TrackEntry => Unit,
     events: js.Array[Event],
@@ -144,6 +154,7 @@ object AnimationState {
     setAnimation: (Double, String, Boolean) => TrackEntry,
     setAnimationByName: (Double, String, Boolean) => Unit,
     setAnimationWith: (Double, Animation, Boolean) => TrackEntry,
+    setAttachment: (Skeleton, Slot, String, Boolean) => Unit,
     setCurrent: (Double, TrackEntry, Boolean) => Unit,
     setEmptyAnimation: (Double, Double) => TrackEntry,
     setEmptyAnimations: Double => Unit,
@@ -151,10 +162,11 @@ object AnimationState {
     trackEntry: (Double, Animation, Boolean, TrackEntry) => TrackEntry,
     trackEntryPool: Pool[TrackEntry],
     tracks: js.Array[TrackEntry],
+    unkeyedState: Double,
     update: Double => Unit,
     updateMixingFrom: (TrackEntry, Double) => Boolean
   ): AnimationState = {
-    val __obj = js.Dynamic.literal(_animationsChanged = js.Any.fromFunction0(_animationsChanged), addAnimation = js.Any.fromFunction4(addAnimation), addAnimationByName = js.Any.fromFunction4(addAnimationByName), addAnimationWith = js.Any.fromFunction4(addAnimationWith), addEmptyAnimation = js.Any.fromFunction3(addEmptyAnimation), addListener = js.Any.fromFunction1(addListener), animationsChanged = animationsChanged.asInstanceOf[js.Any], apply = js.Any.fromFunction1(apply), applyMixingFrom = js.Any.fromFunction3(applyMixingFrom), applyRotateTimeline = js.Any.fromFunction8(applyRotateTimeline), clearListenerNotifications = js.Any.fromFunction0(clearListenerNotifications), clearListeners = js.Any.fromFunction0(clearListeners), clearTrack = js.Any.fromFunction1(clearTrack), clearTracks = js.Any.fromFunction0(clearTracks), computeHold = js.Any.fromFunction1(computeHold), computeNotLast = js.Any.fromFunction1(computeNotLast), data = data.asInstanceOf[js.Any], disposeNext = js.Any.fromFunction1(disposeNext), events = events.asInstanceOf[js.Any], expandToIndex = js.Any.fromFunction1(expandToIndex), getCurrent = js.Any.fromFunction1(getCurrent), hasAnimation = js.Any.fromFunction1(hasAnimation), hasAnimationByName = js.Any.fromFunction1(hasAnimationByName), listeners = listeners.asInstanceOf[js.Any], onComplete = js.Any.fromFunction2(onComplete), onEnd = js.Any.fromFunction1(onEnd), onEvent = js.Any.fromFunction2(onEvent), onStart = js.Any.fromFunction1(onStart), propertyIDs = propertyIDs.asInstanceOf[js.Any], queue = queue.asInstanceOf[js.Any], queueEvents = js.Any.fromFunction2(queueEvents), removeListener = js.Any.fromFunction1(removeListener), setAnimation = js.Any.fromFunction3(setAnimation), setAnimationByName = js.Any.fromFunction3(setAnimationByName), setAnimationWith = js.Any.fromFunction3(setAnimationWith), setCurrent = js.Any.fromFunction3(setCurrent), setEmptyAnimation = js.Any.fromFunction2(setEmptyAnimation), setEmptyAnimations = js.Any.fromFunction1(setEmptyAnimations), timeScale = timeScale.asInstanceOf[js.Any], trackEntry = js.Any.fromFunction4(trackEntry), trackEntryPool = trackEntryPool.asInstanceOf[js.Any], tracks = tracks.asInstanceOf[js.Any], update = js.Any.fromFunction1(update), updateMixingFrom = js.Any.fromFunction2(updateMixingFrom))
+    val __obj = js.Dynamic.literal(_animationsChanged = js.Any.fromFunction0(_animationsChanged), addAnimation = js.Any.fromFunction4(addAnimation), addAnimationByName = js.Any.fromFunction4(addAnimationByName), addAnimationWith = js.Any.fromFunction4(addAnimationWith), addEmptyAnimation = js.Any.fromFunction3(addEmptyAnimation), addListener = js.Any.fromFunction1(addListener), animationsChanged = animationsChanged.asInstanceOf[js.Any], apply = js.Any.fromFunction1(apply), applyAttachmentTimeline = js.Any.fromFunction5(applyAttachmentTimeline), applyMixingFrom = js.Any.fromFunction3(applyMixingFrom), applyRotateTimeline = js.Any.fromFunction8(applyRotateTimeline), clearListenerNotifications = js.Any.fromFunction0(clearListenerNotifications), clearListeners = js.Any.fromFunction0(clearListeners), clearTrack = js.Any.fromFunction1(clearTrack), clearTracks = js.Any.fromFunction0(clearTracks), computeHold = js.Any.fromFunction1(computeHold), data = data.asInstanceOf[js.Any], disposeNext = js.Any.fromFunction1(disposeNext), events = events.asInstanceOf[js.Any], expandToIndex = js.Any.fromFunction1(expandToIndex), getCurrent = js.Any.fromFunction1(getCurrent), hasAnimation = js.Any.fromFunction1(hasAnimation), hasAnimationByName = js.Any.fromFunction1(hasAnimationByName), listeners = listeners.asInstanceOf[js.Any], onComplete = js.Any.fromFunction2(onComplete), onEnd = js.Any.fromFunction1(onEnd), onEvent = js.Any.fromFunction2(onEvent), onStart = js.Any.fromFunction1(onStart), propertyIDs = propertyIDs.asInstanceOf[js.Any], queue = queue.asInstanceOf[js.Any], queueEvents = js.Any.fromFunction2(queueEvents), removeListener = js.Any.fromFunction1(removeListener), setAnimation = js.Any.fromFunction3(setAnimation), setAnimationByName = js.Any.fromFunction3(setAnimationByName), setAnimationWith = js.Any.fromFunction3(setAnimationWith), setAttachment = js.Any.fromFunction4(setAttachment), setCurrent = js.Any.fromFunction3(setCurrent), setEmptyAnimation = js.Any.fromFunction2(setEmptyAnimation), setEmptyAnimations = js.Any.fromFunction1(setEmptyAnimations), timeScale = timeScale.asInstanceOf[js.Any], trackEntry = js.Any.fromFunction4(trackEntry), trackEntryPool = trackEntryPool.asInstanceOf[js.Any], tracks = tracks.asInstanceOf[js.Any], unkeyedState = unkeyedState.asInstanceOf[js.Any], update = js.Any.fromFunction1(update), updateMixingFrom = js.Any.fromFunction2(updateMixingFrom))
     __obj.asInstanceOf[AnimationState]
   }
   
@@ -198,6 +210,9 @@ object AnimationState {
     def setApply(value: Skeleton => Boolean): Self = this.set("apply", js.Any.fromFunction1(value))
     
     @scala.inline
+    def setApplyAttachmentTimeline(value: (AttachmentTimeline, Skeleton, Double, MixBlend, Boolean) => Unit): Self = this.set("applyAttachmentTimeline", js.Any.fromFunction5(value))
+    
+    @scala.inline
     def setApplyMixingFrom(value: (TrackEntry, Skeleton, MixBlend) => Double): Self = this.set("applyMixingFrom", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -217,9 +232,6 @@ object AnimationState {
     
     @scala.inline
     def setComputeHold(value: TrackEntry => Unit): Self = this.set("computeHold", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def setComputeNotLast(value: TrackEntry => Unit): Self = this.set("computeNotLast", js.Any.fromFunction1(value))
     
     @scala.inline
     def setData(value: AnimationStateData): Self = this.set("data", value.asInstanceOf[js.Any])
@@ -285,6 +297,9 @@ object AnimationState {
     def setSetAnimationWith(value: (Double, Animation, Boolean) => TrackEntry): Self = this.set("setAnimationWith", js.Any.fromFunction3(value))
     
     @scala.inline
+    def setSetAttachment(value: (Skeleton, Slot, String, Boolean) => Unit): Self = this.set("setAttachment", js.Any.fromFunction4(value))
+    
+    @scala.inline
     def setSetCurrent(value: (Double, TrackEntry, Boolean) => Unit): Self = this.set("setCurrent", js.Any.fromFunction3(value))
     
     @scala.inline
@@ -307,6 +322,9 @@ object AnimationState {
     
     @scala.inline
     def setTracks(value: js.Array[TrackEntry]): Self = this.set("tracks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUnkeyedState(value: Double): Self = this.set("unkeyedState", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUpdate(value: Double => Unit): Self = this.set("update", js.Any.fromFunction1(value))

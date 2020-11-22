@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "webpack-blocks__extract-text"
-version := "2.0-dt-20200515Z-612d79"
+version := "2.0-dt-20200925Z-612d79"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

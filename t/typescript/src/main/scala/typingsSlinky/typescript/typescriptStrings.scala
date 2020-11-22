@@ -1,8 +1,10 @@
 package typingsSlinky.typescript
 
 import typingsSlinky.typescript.mod.CompletionsTriggerCharacter
+import typingsSlinky.typescript.mod.RefactorTriggerReason
 import typingsSlinky.typescript.mod.SignatureHelpRetriggerCharacter
 import typingsSlinky.typescript.mod.SignatureHelpTriggerCharacter
+import typingsSlinky.typescript.mod.TypeOfTag
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,6 +19,9 @@ object typescriptStrings {
   
   @scala.inline
   def Comma: Comma = ",".asInstanceOf[Comma]
+  
+  @scala.inline
+  def CreatePackageJsonAutoImportProvider: CreatePackageJsonAutoImportProvider = "CreatePackageJsonAutoImportProvider".asInstanceOf[CreatePackageJsonAutoImportProvider]
   
   @scala.inline
   def Dot: Dot = ".".asInstanceOf[Dot]
@@ -43,6 +48,9 @@ object typescriptStrings {
   def Slash: Slash = "/".asInstanceOf[Slash]
   
   @scala.inline
+  def UpdateGraph: UpdateGraph = "UpdateGraph".asInstanceOf[UpdateGraph]
+  
+  @scala.inline
   def actionColonColoninvalidate: actionColonColoninvalidate = "action::invalidate".asInstanceOf[actionColonColoninvalidate]
   
   @scala.inline
@@ -53,6 +61,12 @@ object typescriptStrings {
   
   @scala.inline
   def auto: auto = "auto".asInstanceOf[auto]
+  
+  @scala.inline
+  def bigint: bigint = "bigint".asInstanceOf[bigint]
+  
+  @scala.inline
+  def boolean: boolean = "boolean".asInstanceOf[boolean]
   
   @scala.inline
   def camelCase: camelCase = "camelCase".asInstanceOf[camelCase]
@@ -91,6 +105,12 @@ object typescriptStrings {
   def file: file = "file".asInstanceOf[file]
   
   @scala.inline
+  def function: function = "function".asInstanceOf[function]
+  
+  @scala.inline
+  def `implicit`: `implicit` = "implicit".asInstanceOf[`implicit`]
+  
+  @scala.inline
   def index: index = "index".asInstanceOf[index]
   
   @scala.inline
@@ -109,7 +129,22 @@ object typescriptStrings {
   def `non-relative`: `non-relative` = "non-relative".asInstanceOf[`non-relative`]
   
   @scala.inline
+  def number: number = "number".asInstanceOf[number]
+  
+  @scala.inline
+  def `object`: `object` = "object".asInstanceOf[`object`]
+  
+  @scala.inline
+  def off: off = "off".asInstanceOf[off]
+  
+  @scala.inline
+  def on: on = "on".asInstanceOf[on]
+  
+  @scala.inline
   def prefix: prefix = "prefix".asInstanceOf[prefix]
+  
+  @scala.inline
+  def quit: quit = "quit".asInstanceOf[quit]
   
   @scala.inline
   def relative: relative = "relative".asInstanceOf[relative]
@@ -121,10 +156,19 @@ object typescriptStrings {
   def single: single = "single".asInstanceOf[single]
   
   @scala.inline
+  def string: string = "string".asInstanceOf[string]
+  
+  @scala.inline
   def substring: substring = "substring".asInstanceOf[substring]
   
   @scala.inline
+  def symbol: symbol = "symbol".asInstanceOf[symbol]
+  
+  @scala.inline
   def typesRegistry: typesRegistry = "typesRegistry".asInstanceOf[typesRegistry]
+  
+  @scala.inline
+  def undefined: undefined = "undefined".asInstanceOf[undefined]
   
   @js.native
   sealed trait `@` extends CompletionsTriggerCharacter
@@ -136,6 +180,9 @@ object typescriptStrings {
   sealed trait Comma
     extends SignatureHelpRetriggerCharacter
        with SignatureHelpTriggerCharacter
+  
+  @js.native
+  sealed trait CreatePackageJsonAutoImportProvider extends js.Object
   
   @js.native
   sealed trait Dot extends CompletionsTriggerCharacter
@@ -167,6 +214,9 @@ object typescriptStrings {
   sealed trait Slash extends CompletionsTriggerCharacter
   
   @js.native
+  sealed trait UpdateGraph extends js.Object
+  
+  @js.native
   sealed trait actionColonColoninvalidate extends js.Object
   
   @js.native
@@ -177,6 +227,12 @@ object typescriptStrings {
   
   @js.native
   sealed trait auto extends js.Object
+  
+  @js.native
+  sealed trait bigint extends TypeOfTag
+  
+  @js.native
+  sealed trait boolean extends TypeOfTag
   
   @js.native
   sealed trait camelCase extends js.Object
@@ -215,13 +271,19 @@ object typescriptStrings {
   sealed trait file extends js.Object
   
   @js.native
+  sealed trait function extends TypeOfTag
+  
+  @js.native
+  sealed trait `implicit` extends RefactorTriggerReason
+  
+  @js.native
   sealed trait index extends js.Object
   
   @js.native
   sealed trait installPackage extends js.Object
   
   @js.native
-  sealed trait invoked extends js.Object
+  sealed trait invoked extends RefactorTriggerReason
   
   @js.native
   sealed trait js_ extends js.Object
@@ -233,7 +295,22 @@ object typescriptStrings {
   sealed trait `non-relative` extends js.Object
   
   @js.native
+  sealed trait number extends TypeOfTag
+  
+  @js.native
+  sealed trait `object` extends TypeOfTag
+  
+  @js.native
+  sealed trait off extends js.Object
+  
+  @js.native
+  sealed trait on extends js.Object
+  
+  @js.native
   sealed trait prefix extends js.Object
+  
+  @js.native
+  sealed trait quit extends js.Object
   
   @js.native
   sealed trait relative extends js.Object
@@ -245,8 +322,17 @@ object typescriptStrings {
   sealed trait single extends js.Object
   
   @js.native
+  sealed trait string extends TypeOfTag
+  
+  @js.native
   sealed trait substring extends js.Object
   
   @js.native
+  sealed trait symbol extends TypeOfTag
+  
+  @js.native
   sealed trait typesRegistry extends js.Object
+  
+  @js.native
+  sealed trait undefined extends TypeOfTag
 }

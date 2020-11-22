@@ -14,8 +14,6 @@ object tabsMod extends js.Object {
   trait Tab
     extends typingsSlinky.carbonComponents.contentSwitcherMod.default {
     
-    def _changeState(detail: js.Any, callback: js.Any): Unit = js.native
-    
     def _handleDocumentClick(event: js.Any): Unit = js.native
     
     def _handleKeyDown(event: js.Any): Unit = js.native

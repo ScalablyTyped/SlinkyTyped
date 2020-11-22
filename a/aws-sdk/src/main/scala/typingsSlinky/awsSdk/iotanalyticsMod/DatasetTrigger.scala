@@ -13,7 +13,7 @@ trait DatasetTrigger extends js.Object {
   var dataset: js.UndefOr[TriggeringDataset] = js.native
   
   /**
-    * The "Schedule" when the trigger is initiated.
+    * The Schedule when the trigger is initiated.
     */
   var schedule: js.UndefOr[Schedule] = js.native
 }

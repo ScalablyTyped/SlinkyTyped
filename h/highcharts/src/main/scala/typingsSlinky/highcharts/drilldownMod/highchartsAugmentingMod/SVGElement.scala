@@ -1,6 +1,6 @@
 package typingsSlinky.highcharts.drilldownMod.highchartsAugmentingMod
 
-import typingsSlinky.highcharts.mod.AnimationOptionsObject
+import typingsSlinky.highcharts.anon.PartialAnimationOptionsOb
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,5 +16,5 @@ trait SVGElement extends js.Object {
     */
   def fadeIn(): Unit = js.native
   def fadeIn(animation: Boolean): Unit = js.native
-  def fadeIn(animation: AnimationOptionsObject): Unit = js.native
+  def fadeIn(animation: PartialAnimationOptionsOb): Unit = js.native
 }

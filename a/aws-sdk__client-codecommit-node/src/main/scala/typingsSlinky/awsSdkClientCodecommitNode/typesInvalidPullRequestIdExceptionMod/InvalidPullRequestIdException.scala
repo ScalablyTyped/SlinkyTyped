@@ -8,16 +8,14 @@ import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExcepti
 import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestDescriptionExceptionsUnionMod.UpdatePullRequestDescriptionExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestStatusExceptionsUnionMod.UpdatePullRequestStatusExceptionsUnion
 import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestTitleExceptionsUnionMod.UpdatePullRequestTitleExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidPullRequestIdExceptionDetails> * / any */ @js.native
 trait InvalidPullRequestIdException
-  extends ServiceException[InvalidPullRequestIdExceptionDetails]
-     with DescribePullRequestEventsExceptionsUnion
+  extends DescribePullRequestEventsExceptionsUnion
      with GetCommentsForPullRequestExceptionsUnion
      with GetPullRequestExceptionsUnion
      with MergePullRequestByFastForwardExceptionsUnion
@@ -26,19 +24,15 @@ trait InvalidPullRequestIdException
      with UpdatePullRequestStatusExceptionsUnion
      with UpdatePullRequestTitleExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidPullRequestIdException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidPullRequestIdException = js.native
+  var name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidPullRequestIdException = js.native
 }
 object InvalidPullRequestIdException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidPullRequestIdExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidPullRequestIdException
   ): InvalidPullRequestIdException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidPullRequestIdException]
   }
   

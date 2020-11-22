@@ -6,7 +6,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.accordionContentMod.AccordionContentProps
 import typingsSlinky.semanticUiReact.accordionTitleMod.AccordionTitleProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -27,7 +26,7 @@ class SharedBuilder_AccordionPanelProps1195011765[R <: js.Object] (val args: js.
   
   @scala.inline
   def contentFunction3(
-    value: (/* component */ ReactType[AccordionContentProps], AccordionContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, AccordionContentProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("content", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -44,7 +43,7 @@ class SharedBuilder_AccordionPanelProps1195011765[R <: js.Object] (val args: js.
   
   @scala.inline
   def titleFunction3(
-    value: (/* component */ ReactType[AccordionTitleProps], AccordionTitleProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, AccordionTitleProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("title", js.Any.fromFunction3(value))
   
   @scala.inline

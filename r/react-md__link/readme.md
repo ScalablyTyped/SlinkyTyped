@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__link
 
-Typings are for version 2.1.2
+Typings are for version 2.4.2
 
 ## Library description:
 The base package for including a theme for react-md. This is required by most other packages.

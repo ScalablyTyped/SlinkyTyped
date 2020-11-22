@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -8,6 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.rest.IODataKeyPart
 import typingsSlinky.mendixmodelsdk.restMod.rest.ODataKeyPart
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,14 +21,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.elementsMod.IElement because Already inherited
 - typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IAttributeType because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined containerAsAttribute, containerAsEntityKeyPart, containerAsODataKeyPart */ @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.AttributeType")
 @js.native
-abstract class AttributeType protected () extends Element {
+abstract class AttributeType protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsAttribute: Attribute = js.native
@@ -40,9 +42,6 @@ abstract class AttributeType protected () extends Element {
   def containerAsODataKeyPart: ODataKeyPart = js.native
   @JSName("containerAsODataKeyPart")
   val containerAsODataKeyPart_FAttributeType: IODataKeyPart = js.native
-  
-  @JSName("model")
-  var model_FAttributeType: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/domainmodels", "domainmodels.AttributeType")

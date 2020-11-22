@@ -1,9 +1,11 @@
 package typingsSlinky.mendixmodelsdk.mod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.MappingDocument
 import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.ObjectMappingElement
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,7 +15,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object importmappings extends js.Object {
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/import-mappings relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/import-mappings relevant section in reference guide}
     */
   @js.native
   class ImportMapping protected ()
@@ -42,7 +44,7 @@ object importmappings extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/import-mappings relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/import-mappings relevant section in reference guide}
     */
   @js.native
   class ImportObjectMappingElement protected ()
@@ -52,8 +54,8 @@ object importmappings extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -87,7 +89,7 @@ object importmappings extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/import-mappings relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/import-mappings relevant section in reference guide}
     */
   @js.native
   class ImportValueMappingElement protected ()
@@ -97,8 +99,8 @@ object importmappings extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */

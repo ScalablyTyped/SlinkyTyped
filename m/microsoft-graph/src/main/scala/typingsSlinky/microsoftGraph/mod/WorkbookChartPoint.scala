@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WorkbookChartPoint extends Entity {
   
   // Encapsulates the format properties chart point. Read-only.
-  var format: js.UndefOr[WorkbookChartPointFormat] = js.native
+  var format: js.UndefOr[NullableOption[WorkbookChartPointFormat]] = js.native
   
   // Returns the value of a chart point. Read-only.
-  var value: js.UndefOr[js.Any] = js.native
+  var value: js.UndefOr[NullableOption[_]] = js.native
 }
 object WorkbookChartPoint {
   
@@ -37,15 +37,21 @@ object WorkbookChartPoint {
     }
     
     @scala.inline
-    def setFormat(value: WorkbookChartPointFormat): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setFormat(value: NullableOption[WorkbookChartPointFormat]): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
     
     @scala.inline
-    def setValue(value: js.Any): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setFormatNull: Self = this.set("format", null)
+    
+    @scala.inline
+    def setValue(value: NullableOption[_]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

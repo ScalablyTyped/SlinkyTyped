@@ -84,4 +84,11 @@ trait LanguageServiceDefaults extends js.Object {
     * No-op.
     */
   def setMaximumWorkerIdleTime(value: Double): Unit = js.native
+  
+  /**
+    * Configure webworker options
+    */
+  def setWorkerOptions(options: WorkerOptions): Unit = js.native
+  
+  val workerOptions: WorkerOptions = js.native
 }

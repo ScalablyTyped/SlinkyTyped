@@ -54,7 +54,7 @@ class Certificate protected () extends CustomResource {
   val domainName: Output_[String] = js.native
   
   /**
-    * A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
+    * Set of domain validation objects which can be used to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
     */
   val domainValidationOptions: Output_[js.Array[CertificateDomainValidationOption]] = js.native
   
@@ -75,7 +75,7 @@ class Certificate protected () extends CustomResource {
   val status: Output_[String] = js.native
   
   /**
-    * A list of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`) to trigger recreation.
+    * Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`) to trigger recreation.
     */
   val subjectAlternativeNames: Output_[js.Array[String]] = js.native
   

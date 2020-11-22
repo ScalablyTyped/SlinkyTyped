@@ -14,5 +14,7 @@ object ^ extends js.Object {
   
   var defaultOptions: Options = js.native
   
+  var theme: Options = js.native
+  
   var time: Time_ = js.native
 }

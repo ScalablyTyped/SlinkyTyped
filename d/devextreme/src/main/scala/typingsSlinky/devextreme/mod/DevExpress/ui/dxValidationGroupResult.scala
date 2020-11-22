@@ -12,23 +12,33 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxValidationGroupResult extends js.Object {
   
-  /** @name dxValidationGroupResult.brokenRules */
+  /**
+    * [descr:dxValidationGroupResult.brokenRules]
+    */
   var brokenRules: js.UndefOr[
     js.Array[
       RequiredRule | NumericRule | RangeRule | StringLengthRule | CustomRule | CompareRule | PatternRule | EmailRule | AsyncRule
     ]
   ] = js.native
   
-  /** @name dxValidationGroupResult.complete */
+  /**
+    * [descr:dxValidationGroupResult.complete]
+    */
   var complete: js.UndefOr[Promise[dxValidationGroupResult] | JQueryPromise[dxValidationGroupResult]] = js.native
   
-  /** @name dxValidationGroupResult.isValid */
+  /**
+    * [descr:dxValidationGroupResult.isValid]
+    */
   var isValid: js.UndefOr[Boolean] = js.native
   
-  /** @name dxValidationGroupResult.status */
+  /**
+    * [descr:dxValidationGroupResult.status]
+    */
   var status: js.UndefOr[valid | invalid | pending] = js.native
   
-  /** @name dxValidationGroupResult.validators */
+  /**
+    * [descr:dxValidationGroupResult.validators]
+    */
   var validators: js.UndefOr[js.Array[_]] = js.native
 }
 object dxValidationGroupResult {

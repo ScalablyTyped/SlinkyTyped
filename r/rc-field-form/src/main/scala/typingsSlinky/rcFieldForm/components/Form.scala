@@ -27,8 +27,13 @@ import typingsSlinky.rcFieldForm.interfaceMod.Store
 import typingsSlinky.rcFieldForm.interfaceMod.ValidateErrorEntity
 import typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages
 import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`false`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`additions removals`
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.`additions text`
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.`inline`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`removals additions`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`removals text`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`text additions`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`text removals`
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.additions
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.all
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.ascending
@@ -210,7 +215,9 @@ object Form {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -264,7 +271,7 @@ object Form {
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def childrenFunction2(value: (/* values */ Store, /* form */ FormInstance) => ReactElement): this.type = set("children", js.Any.fromFunction2(value))
+    def childrenFunction2(value: (/* values */ Store, /* form */ FormInstance[js.Any]) => ReactElement): this.type = set("children", js.Any.fromFunction2(value))
     
     @scala.inline
     def children(value: RenderProps | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
@@ -321,7 +328,7 @@ object Form {
     def fields(value: js.Array[FieldData]): this.type = set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def form(value: FormInstance): this.type = set("form", value.asInstanceOf[js.Any])
+    def form(value: FormInstance[js.Any]): this.type = set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
@@ -465,10 +472,10 @@ object Form {
     def onFieldsChange(value: (/* changedFields */ js.Array[FieldData], /* allFields */ js.Array[FieldData]) => Unit): this.type = set("onFieldsChange", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onFinish(value: /* values */ Store => Unit): this.type = set("onFinish", js.Any.fromFunction1(value))
+    def onFinish(value: js.Any => Unit): this.type = set("onFinish", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onFinishFailed(value: /* errorInfo */ ValidateErrorEntity => Unit): this.type = set("onFinishFailed", js.Any.fromFunction1(value))
+    def onFinishFailed(value: /* errorInfo */ ValidateErrorEntity[js.Any] => Unit): this.type = set("onFinishFailed", js.Any.fromFunction1(value))
     
     @scala.inline
     def onFocus(value: SyntheticFocusEvent[HTMLFormElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
@@ -603,7 +610,7 @@ object Form {
     def onTransitionEnd(value: SyntheticTransitionEvent[HTMLFormElement] => Unit): this.type = set("onTransitionEnd", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onValuesChange(value: (/* changedValues */ Store, /* values */ Store) => Unit): this.type = set("onValuesChange", js.Any.fromFunction2(value))
+    def onValuesChange(value: (/* changedValues */ js.Any, js.Any) => Unit): this.type = set("onValuesChange", js.Any.fromFunction2(value))
     
     @scala.inline
     def onVolumeChange(value: SyntheticEvent[Event, HTMLFormElement] => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
@@ -687,7 +694,7 @@ object Form {
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: PropsWithChildren[FormProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: PropsWithChildren[FormProps[js.Any]]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

@@ -8,23 +8,37 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait animationPresets extends js.Object {
   
-  /** @name animationPresets.applyChanges() */
+  /**
+    * [descr:animationPresets.applyChanges()]
+    */
   def applyChanges(): Unit = js.native
   
-  /** @name animationPresets.clear() */
+  /**
+    * [descr:animationPresets.clear()]
+    */
   def clear(): Unit = js.native
-  /** @name animationPresets.clear(name) */
+  /**
+    * [descr:animationPresets.clear(name)]
+    */
   def clear(name: String): Unit = js.native
   
-  /** @name animationPresets.getPreset(name) */
+  /**
+    * [descr:animationPresets.getPreset(name)]
+    */
   def getPreset(name: String): js.Any = js.native
   
-  /** @name animationPresets.registerDefaultPresets() */
+  /**
+    * [descr:animationPresets.registerDefaultPresets()]
+    */
   def registerDefaultPresets(): Unit = js.native
   
-  /** @name animationPresets.registerPreset(name, config) */
+  /**
+    * [descr:animationPresets.registerPreset(name, config)]
+    */
   def registerPreset(name: String, config: Animation): Unit = js.native
   
-  /** @name animationPresets.resetToDefaults() */
+  /**
+    * [descr:animationPresets.resetToDefaults()]
+    */
   def resetToDefaults(): Unit = js.native
 }

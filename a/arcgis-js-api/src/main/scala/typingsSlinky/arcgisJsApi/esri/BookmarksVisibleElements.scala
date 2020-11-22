@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BookmarksVisibleElements extends Object {
   
   /**
-    * Indicates whether to button to add a new bookmark displays. Default is `true`.
+    * Indicates whether to button to add a new bookmark displays.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#VisibleElements)
     */
   var addBookmark: js.UndefOr[Boolean] = js.native
   
   /**
-    * Indicates whether the thumbnail associated with the bookmark displays. Default value is `true`.
+    * Indicates whether the thumbnail associated with the bookmark displays.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Bookmarks.html#VisibleElements)
     */

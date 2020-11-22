@@ -1,6 +1,5 @@
 package typingsSlinky.storybookClientApi.anon
 
-import typingsSlinky.storybookChannels.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,23 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Channel extends js.Object {
   
-  var channel: default | Null = js.native
-  
-  def clearDecorators(): Unit = js.native
-  
-  var clientApi: typingsSlinky.storybookClientApi.clientApiMod.default = js.native
-  
-  var storyStore: typingsSlinky.storybookClientApi.storyStoreMod.default = js.native
+  var channel: typingsSlinky.storybookChannels.mod.Channel = js.native
 }
 object Channel {
   
   @scala.inline
-  def apply(
-    clearDecorators: () => Unit,
-    clientApi: typingsSlinky.storybookClientApi.clientApiMod.default,
-    storyStore: typingsSlinky.storybookClientApi.storyStoreMod.default
-  ): Channel = {
-    val __obj = js.Dynamic.literal(clearDecorators = js.Any.fromFunction0(clearDecorators), clientApi = clientApi.asInstanceOf[js.Any], storyStore = storyStore.asInstanceOf[js.Any])
+  def apply(channel: typingsSlinky.storybookChannels.mod.Channel): Channel = {
+    val __obj = js.Dynamic.literal(channel = channel.asInstanceOf[js.Any])
     __obj.asInstanceOf[Channel]
   }
   
@@ -44,18 +33,6 @@ object Channel {
     }
     
     @scala.inline
-    def setClearDecorators(value: () => Unit): Self = this.set("clearDecorators", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def setClientApi(value: typingsSlinky.storybookClientApi.clientApiMod.default): Self = this.set("clientApi", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStoryStore(value: typingsSlinky.storybookClientApi.storyStoreMod.default): Self = this.set("storyStore", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setChannel(value: default): Self = this.set("channel", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setChannelNull: Self = this.set("channel", null)
+    def setChannel(value: typingsSlinky.storybookChannels.mod.Channel): Self = this.set("channel", value.asInstanceOf[js.Any])
   }
 }

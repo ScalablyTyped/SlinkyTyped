@@ -1,7 +1,7 @@
 package typingsSlinky.electron.Electron
 
 import typingsSlinky.electron.electronStrings.changed
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +27,7 @@ trait Cookies extends EventEmitter {
     */
   def get(filter: CookiesGetFilter): js.Promise[js.Array[Cookie]] = js.native
   
-  // Docs: http://electronjs.org/docs/api/cookies
+  // Docs: https://electronjs.org/docs/api/cookies
   /**
     * Emitted when a cookie is changed because it was added, edited, removed, or
     * expired.

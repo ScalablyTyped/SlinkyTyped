@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetOutpostArgs extends js.Object {
   
   /**
+    * Amazon Resource Name (ARN).
+    */
+  val arn: js.UndefOr[String] = js.native
+  
+  /**
     * Identifier of the Outpost.
     */
   val id: js.UndefOr[String] = js.native
@@ -39,6 +44,12 @@ object GetOutpostArgs {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setArn(value: String): Self = this.set("arn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteArn: Self = this.set("arn", js.undefined)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])

@@ -8,31 +8,45 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CandleStickSeries */
+/**
+  * [descr:dxChartSeriesTypes.CandleStickSeries]
+  */
 @js.native
 trait dxChartSeriesTypesCandleStickSeries extends dxChartSeriesTypesCommonSeries {
   
-  /** @name dxChartSeriesTypes.CandleStickSeries.aggregation */
+  /**
+    * [descr:dxChartSeriesTypes.CandleStickSeries.aggregation]
+    */
   @JSName("aggregation")
   var aggregation_dxChartSeriesTypesCandleStickSeries: js.UndefOr[dxChartSeriesTypesCandleStickSeriesAggregation] = js.native
   
-  /** @name dxChartSeriesTypes.CandleStickSeries.hoverMode */
+  /**
+    * [descr:dxChartSeriesTypes.CandleStickSeries.hoverMode]
+    */
   @JSName("hoverMode")
   var hoverMode_dxChartSeriesTypesCandleStickSeries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.native
   
-  /** @name dxChartSeriesTypes.CandleStickSeries.hoverStyle */
+  /**
+    * [descr:dxChartSeriesTypes.CandleStickSeries.hoverStyle]
+    */
   @JSName("hoverStyle")
   var hoverStyle_dxChartSeriesTypesCandleStickSeries: js.UndefOr[dxChartSeriesTypesCandleStickSeriesHoverStyle] = js.native
   
-  /** @name dxChartSeriesTypes.CandleStickSeries.label */
+  /**
+    * [descr:dxChartSeriesTypes.CandleStickSeries.label]
+    */
   @JSName("label")
   var label_dxChartSeriesTypesCandleStickSeries: js.UndefOr[dxChartSeriesTypesCandleStickSeriesLabel] = js.native
   
-  /** @name dxChartSeriesTypes.CandleStickSeries.selectionMode */
+  /**
+    * [descr:dxChartSeriesTypes.CandleStickSeries.selectionMode]
+    */
   @JSName("selectionMode")
   var selectionMode_dxChartSeriesTypesCandleStickSeries: js.UndefOr[onlyPoint | allSeriesPoints | allArgumentPoints | none] = js.native
   
-  /** @name dxChartSeriesTypes.CandleStickSeries.selectionStyle */
+  /**
+    * [descr:dxChartSeriesTypes.CandleStickSeries.selectionStyle]
+    */
   @JSName("selectionStyle")
   var selectionStyle_dxChartSeriesTypesCandleStickSeries: js.UndefOr[dxChartSeriesTypesCandleStickSeriesSelectionStyle] = js.native
 }

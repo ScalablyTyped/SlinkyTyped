@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait S3Retention extends js.Object {
   
   /**
-    * The Retention mode to be applied to all objects in the Batch Operations job.
+    * The Object Lock retention mode to be applied to all objects in the Batch Operations job.
     */
   var Mode: js.UndefOr[S3ObjectLockRetentionMode] = js.native
   
   /**
-    * The date when the applied Object Retention will expire on all objects in the Batch Operations job.
+    * The date when the applied Object Lock retention will expire on all objects set by the Batch Operations job.
     */
   var RetainUntilDate: js.UndefOr[js.Date] = js.native
 }

@@ -22,6 +22,16 @@ trait ConnectConfig extends js.Object {
   /** Explicit overrides for the default transport layer algorithms used for the connection. */
   var algorithms: js.UndefOr[Algorithms] = js.native
   
+  /** Function with parameters (methodsLeft, partialSuccess, callback) where methodsLeft and partialSuccess are null on the first authentication attempt, otherwise are an array and boolean respectively. Return or call callback() with the name of the authentication method to try next (pass false to signal no more methods to try). Valid method names are: 'none', 'password', 'publickey', 'agent', 'keyboard-interactive', 'hostbased'. Default: function that follows a set method order: None -> Password -> Private Key -> Agent (-> keyboard-interactive if tryKeyboard is true) -> Hostbased. */
+  var authHandler: js.UndefOr[
+    js.Function3[
+      /* methodsLeft */ js.Array[String] | Null, 
+      /* partialSuccess */ Boolean | Null, 
+      /* callback */ js.Function, 
+      _
+    ]
+  ] = js.native
+  
   /** Compression settings: true (prefer), false (never), 'force' (require) */
   var compress: js.UndefOr[Boolean | force] = js.native
   
@@ -122,6 +132,14 @@ object ConnectConfig {
     
     @scala.inline
     def deleteAlgorithms: Self = this.set("algorithms", js.undefined)
+    
+    @scala.inline
+    def setAuthHandler(
+      value: (/* methodsLeft */ js.Array[String] | Null, /* partialSuccess */ Boolean | Null, /* callback */ js.Function) => _
+    ): Self = this.set("authHandler", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def deleteAuthHandler: Self = this.set("authHandler", js.undefined)
     
     @scala.inline
     def setCompress(value: Boolean | force): Self = this.set("compress", value.asInstanceOf[js.Any])

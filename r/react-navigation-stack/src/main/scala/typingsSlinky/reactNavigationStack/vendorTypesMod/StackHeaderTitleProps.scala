@@ -1,6 +1,10 @@
 package typingsSlinky.reactNavigationStack.vendorTypesMod
 
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import slinky.core.SyntheticEvent
+import typingsSlinky.reactNative.mod.Animated.WithAnimatedValue
+import typingsSlinky.reactNative.mod.NodeHandle
+import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TextStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,14 +25,12 @@ trait StackHeaderTitleProps extends js.Object {
   /**
     * Callback to trigger when the size of the title element changes.
     */
-  def onLayout(e: LayoutChangeEvent): Unit = js.native
+  def onLayout(e: SyntheticEvent[NodeHandle, typingsSlinky.reactNative.anon.Layout]): Unit = js.native
   
   /**
     * Style object for the title element.
     */
-  var style: js.UndefOr[
-    /* import warning: importer.ImportType#apply Failed type conversion: react.react.ComponentProps<react-native.react-native.Animated.AnimatedComponent<new (): react-native.react-native.Text>>['style'] */ js.Any
-  ] = js.native
+  var style: js.UndefOr[WithAnimatedValue[StyleProp[TextStyle]]] = js.native
   
   /**
     * Tint color for the header.
@@ -38,7 +40,7 @@ trait StackHeaderTitleProps extends js.Object {
 object StackHeaderTitleProps {
   
   @scala.inline
-  def apply(onLayout: LayoutChangeEvent => Unit): StackHeaderTitleProps = {
+  def apply(onLayout: SyntheticEvent[NodeHandle, typingsSlinky.reactNative.anon.Layout] => Unit): StackHeaderTitleProps = {
     val __obj = js.Dynamic.literal(onLayout = js.Any.fromFunction1(onLayout))
     __obj.asInstanceOf[StackHeaderTitleProps]
   }
@@ -59,7 +61,7 @@ object StackHeaderTitleProps {
     }
     
     @scala.inline
-    def setOnLayout(value: LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, typingsSlinky.reactNative.anon.Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def setAllowFontScaling(value: Boolean): Self = this.set("allowFontScaling", value.asInstanceOf[js.Any])
@@ -74,12 +76,13 @@ object StackHeaderTitleProps {
     def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
-    def setStyle(
-      value: /* import warning: importer.ImportType#apply Failed type conversion: react.react.ComponentProps<react-native.react-native.Animated.AnimatedComponent<new (): react-native.react-native.Text>>['style'] */ js.Any
-    ): Self = this.set("style", value.asInstanceOf[js.Any])
+    def setStyle(value: WithAnimatedValue[StyleProp[TextStyle]]): Self = this.set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
+    
+    @scala.inline
+    def setStyleNull: Self = this.set("style", null)
     
     @scala.inline
     def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])

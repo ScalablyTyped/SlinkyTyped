@@ -1,10 +1,10 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.DialogMessage
-import typingsSlinky.firefoxWebextBrowser.anon.Hash
-import typingsSlinky.firefoxWebextBrowser.anon.Id
 import typingsSlinky.firefoxWebextBrowser.browser.management.ExtensionInfo
+import typingsSlinky.firefoxWebextBrowser.browser.management.InstallOptions
+import typingsSlinky.firefoxWebextBrowser.browser.management.InstallReturnResult
+import typingsSlinky.firefoxWebextBrowser.browser.management.UninstallSelfOptions
 import typingsSlinky.firefoxWebextBrowser.browser.manifest.ExtensionID
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -30,13 +30,12 @@ object management extends js.Object {
   def getAll(): js.Promise[js.Array[ExtensionInfo]] = js.native
   
   /**
-    * Returns information about the calling extension. Note: This function can be used without requesting the
-    * 'management' permission in the manifest.
+    * Returns information about the calling extension. Note: This function can be used without requesting the 'management' permission in the manifest.
     */
   def getSelf(): js.Promise[ExtensionInfo] = js.native
   
   /** Installs and enables a theme extension from the given url. */
-  def install(options: Hash): js.Promise[Id] = js.native
+  def install(options: InstallOptions): js.Promise[InstallReturnResult] = js.native
   
   /* management events */
   /** Fired when an addon has been disabled. */
@@ -59,9 +58,8 @@ object management extends js.Object {
   def setEnabled(id: String, enabled: Boolean): js.Promise[Unit] = js.native
   
   /**
-    * Uninstalls the calling extension. Note: This function can be used without requesting the 'management' permission
-    * in the manifest.
+    * Uninstalls the calling extension. Note: This function can be used without requesting the 'management' permission in the manifest.
     */
   def uninstallSelf(): js.Promise[Unit] = js.native
-  def uninstallSelf(options: DialogMessage): js.Promise[Unit] = js.native
+  def uninstallSelf(options: UninstallSelfOptions): js.Promise[Unit] = js.native
 }

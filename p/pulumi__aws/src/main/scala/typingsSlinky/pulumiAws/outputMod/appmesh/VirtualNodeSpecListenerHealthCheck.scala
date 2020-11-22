@@ -18,7 +18,7 @@ trait VirtualNodeSpecListenerHealthCheck extends js.Object {
   var intervalMillis: Double = js.native
   
   /**
-    * The destination path for the health check request. This is only required if the specified protocol is `http`.
+    * The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
     */
   var path: js.UndefOr[String] = js.native
   
@@ -28,7 +28,7 @@ trait VirtualNodeSpecListenerHealthCheck extends js.Object {
   var port: Double = js.native
   
   /**
-    * The protocol for the health check request. Valid values are `http` and `tcp`.
+    * The protocol for the health check request. Valid values are `http`, `http2`, `tcp` and `grpc`.
     */
   var protocol: String = js.native
   

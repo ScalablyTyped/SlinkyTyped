@@ -73,7 +73,7 @@ trait DescribeTaskResponse extends js.Object {
   var SourceNetworkInterfaceArns: js.UndefOr[typingsSlinky.awsSdk.datasyncMod.SourceNetworkInterfaceArns] = js.native
   
   /**
-    * The status of the task that was described. For detailed information about task execution statuses, see Understanding Task Statuses in the AWS DataSync User Guide. 
+    * The status of the task that was described. For detailed information about task execution statuses, see Understanding Task Statuses in the AWS DataSync User Guide.
     */
   var Status: js.UndefOr[TaskStatus] = js.native
   

@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.processCredentialsMod
 
-import typingsSlinky.awsSdk.configMod.HTTPOptions
+import typingsSlinky.awsSdk.configBaseMod.HTTPOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

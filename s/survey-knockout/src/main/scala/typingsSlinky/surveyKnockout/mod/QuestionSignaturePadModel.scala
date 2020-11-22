@@ -20,6 +20,12 @@ class QuestionSignaturePadModel protected () extends Question {
     */
   val clearButtonCaption: String = js.native
   
+  /**
+    * Use it to set the specific dataFormat for the signature pad image data.
+    * formats: "" (default) - png, "image/jpeg" - jpeg, "image/svg+xml" - svg
+    */
+  var dataFormat: String = js.native
+  
   def destroySignaturePad(el: HTMLElement): Unit = js.native
   
   /**
@@ -33,4 +39,6 @@ class QuestionSignaturePadModel protected () extends Question {
     * Use it to set pen color for the signature pad.
     */
   var penColor: String = js.native
+  
+  /* protected */ def updateValue(): Unit = js.native
 }

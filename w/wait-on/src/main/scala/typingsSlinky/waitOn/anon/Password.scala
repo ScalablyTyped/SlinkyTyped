@@ -1,12 +1,11 @@
 package typingsSlinky.waitOn.anon
 
-import typingsSlinky.waitOn.mod.WaitOnAuth
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Password extends WaitOnAuth {
+trait Password extends js.Object {
   
   var password: String = js.native
   

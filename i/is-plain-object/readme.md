@@ -1,7 +1,7 @@
 
 # Scala.js typings for is-plain-object
 
-Typings are for version 4.1.1
+Typings are for version 5.0.0
 
 ## Library description:
 Returns true if an object was created by the `Object` constructor.

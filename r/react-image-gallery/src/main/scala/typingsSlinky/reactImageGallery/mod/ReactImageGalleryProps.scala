@@ -24,7 +24,7 @@ trait ReactImageGalleryProps extends js.Object {
   
   var autoPlay: js.UndefOr[Boolean] = js.native
   
-  var disableArrowKeys: js.UndefOr[Boolean] = js.native
+  var disableKeyDown: js.UndefOr[Boolean] = js.native
   
   var disableSwipe: js.UndefOr[Boolean] = js.native
   
@@ -41,6 +41,8 @@ trait ReactImageGalleryProps extends js.Object {
   var items: js.Array[ReactImageGalleryItem] = js.native
   
   var lazyLoad: js.UndefOr[Boolean] = js.native
+  
+  var onBeforeSlide: js.UndefOr[js.Function1[/* currentIndex */ Double, Unit]] = js.native
   
   var onClick: js.UndefOr[js.Function1[/* event */ MouseEventHandler[HTMLDivElement], Unit]] = js.native
   
@@ -89,7 +91,7 @@ trait ReactImageGalleryProps extends js.Object {
   var renderItem: js.UndefOr[js.Function1[/* item */ ReactImageGalleryItem, ReactElement]] = js.native
   
   var renderLeftNav: js.UndefOr[
-    js.Function2[/* onClick */ MouseEventHandler[HTMLElement], /* isDisabled */ Boolean, ReactElement]
+    js.Function2[/* onClick */ MouseEventHandler[HTMLElement], /* disabled */ Boolean, ReactElement]
   ] = js.native
   
   var renderPlayPauseButton: js.UndefOr[
@@ -97,7 +99,7 @@ trait ReactImageGalleryProps extends js.Object {
   ] = js.native
   
   var renderRightNav: js.UndefOr[
-    js.Function2[/* onClick */ MouseEventHandler[HTMLElement], /* isDisabled */ Boolean, ReactElement]
+    js.Function2[/* onClick */ MouseEventHandler[HTMLElement], /* disabled */ Boolean, ReactElement]
   ] = js.native
   
   var renderThumbInner: js.UndefOr[js.Function1[/* item */ ReactImageGalleryItem, ReactElement]] = js.native
@@ -176,10 +178,10 @@ object ReactImageGalleryProps {
     def deleteAutoPlay: Self = this.set("autoPlay", js.undefined)
     
     @scala.inline
-    def setDisableArrowKeys(value: Boolean): Self = this.set("disableArrowKeys", value.asInstanceOf[js.Any])
+    def setDisableKeyDown(value: Boolean): Self = this.set("disableKeyDown", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDisableArrowKeys: Self = this.set("disableArrowKeys", js.undefined)
+    def deleteDisableKeyDown: Self = this.set("disableKeyDown", js.undefined)
     
     @scala.inline
     def setDisableSwipe(value: Boolean): Self = this.set("disableSwipe", value.asInstanceOf[js.Any])
@@ -222,6 +224,12 @@ object ReactImageGalleryProps {
     
     @scala.inline
     def deleteLazyLoad: Self = this.set("lazyLoad", js.undefined)
+    
+    @scala.inline
+    def setOnBeforeSlide(value: /* currentIndex */ Double => Unit): Self = this.set("onBeforeSlide", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnBeforeSlide: Self = this.set("onBeforeSlide", js.undefined)
     
     @scala.inline
     def setOnClick(value: /* event */ MouseEventHandler[HTMLDivElement] => Unit): Self = this.set("onClick", js.Any.fromFunction1(value))
@@ -338,7 +346,7 @@ object ReactImageGalleryProps {
     def deleteRenderItem: Self = this.set("renderItem", js.undefined)
     
     @scala.inline
-    def setRenderLeftNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isDisabled */ Boolean) => ReactElement): Self = this.set("renderLeftNav", js.Any.fromFunction2(value))
+    def setRenderLeftNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* disabled */ Boolean) => ReactElement): Self = this.set("renderLeftNav", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteRenderLeftNav: Self = this.set("renderLeftNav", js.undefined)
@@ -350,7 +358,7 @@ object ReactImageGalleryProps {
     def deleteRenderPlayPauseButton: Self = this.set("renderPlayPauseButton", js.undefined)
     
     @scala.inline
-    def setRenderRightNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* isDisabled */ Boolean) => ReactElement): Self = this.set("renderRightNav", js.Any.fromFunction2(value))
+    def setRenderRightNav(value: (/* onClick */ MouseEventHandler[HTMLElement], /* disabled */ Boolean) => ReactElement): Self = this.set("renderRightNav", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteRenderRightNav: Self = this.set("renderRightNav", js.undefined)

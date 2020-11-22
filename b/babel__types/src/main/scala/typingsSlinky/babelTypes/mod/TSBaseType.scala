@@ -3,6 +3,7 @@ package typingsSlinky.babelTypes.mod
 import typingsSlinky.babelTypes.babelTypesStrings.TSAnyKeyword
 import typingsSlinky.babelTypes.babelTypesStrings.TSBigIntKeyword
 import typingsSlinky.babelTypes.babelTypesStrings.TSBooleanKeyword
+import typingsSlinky.babelTypes.babelTypesStrings.TSIntrinsicKeyword
 import typingsSlinky.babelTypes.babelTypesStrings.TSLiteralType
 import typingsSlinky.babelTypes.babelTypesStrings.TSNeverKeyword
 import typingsSlinky.babelTypes.babelTypesStrings.TSNullKeyword
@@ -22,6 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.babelTypes.mod.TSAnyKeyword_
   - typingsSlinky.babelTypes.mod.TSBooleanKeyword_
   - typingsSlinky.babelTypes.mod.TSBigIntKeyword_
+  - typingsSlinky.babelTypes.mod.TSIntrinsicKeyword_
   - typingsSlinky.babelTypes.mod.TSNeverKeyword_
   - typingsSlinky.babelTypes.mod.TSNullKeyword_
   - typingsSlinky.babelTypes.mod.TSNumberKeyword_
@@ -39,6 +41,13 @@ object TSBaseType {
   
   @scala.inline
   def TSUndefinedKeyword_(`type`: TSUndefinedKeyword): TSBaseType = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TSBaseType]
+  }
+  
+  @scala.inline
+  def TSIntrinsicKeyword_(`type`: TSIntrinsicKeyword): TSBaseType = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[TSBaseType]

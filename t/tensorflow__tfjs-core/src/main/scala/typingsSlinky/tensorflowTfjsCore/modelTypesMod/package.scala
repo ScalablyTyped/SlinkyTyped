@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object modelTypesMod {
   
-  type SignatureDef = org.scalablytyped.runtime.StringDictionary[typingsSlinky.tensorflowTfjsCore.anon.Outputs]
+  type SignatureDef = org.scalablytyped.runtime.StringDictionary[typingsSlinky.tensorflowTfjsCore.modelTypesMod.SignatureDefEntry]
   
   type SignatureDefInfo = org.scalablytyped.runtime.StringDictionary[typingsSlinky.tensorflowTfjsCore.anon.Inputs]
 }

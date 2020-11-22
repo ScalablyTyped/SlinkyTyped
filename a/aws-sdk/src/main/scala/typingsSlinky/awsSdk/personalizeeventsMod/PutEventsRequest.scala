@@ -13,7 +13,7 @@ trait PutEventsRequest extends js.Object {
   var eventList: EventList = js.native
   
   /**
-    * The session ID associated with the user's visit.
+    * The session ID associated with the user's visit. Your application generates the sessionId when a user first visits your website or uses your application. Amazon Personalize uses the sessionId to associate events with the user before they log in. For more information see event-record-api.
     */
   var sessionId: StringType = js.native
   

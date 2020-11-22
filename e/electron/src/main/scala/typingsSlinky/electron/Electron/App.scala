@@ -7,9 +7,11 @@ import typingsSlinky.electron.electronStrings.`browser-window-blur`
 import typingsSlinky.electron.electronStrings.`browser-window-created`
 import typingsSlinky.electron.electronStrings.`browser-window-focus`
 import typingsSlinky.electron.electronStrings.`certificate-error`
+import typingsSlinky.electron.electronStrings.`child-process-gone`
 import typingsSlinky.electron.electronStrings.`continue-activity-error`
 import typingsSlinky.electron.electronStrings.`continue-activity`
 import typingsSlinky.electron.electronStrings.`desktop-capturer-get-sources`
+import typingsSlinky.electron.electronStrings.`did-become-active`
 import typingsSlinky.electron.electronStrings.`gpu-info-update`
 import typingsSlinky.electron.electronStrings.`gpu-process-crashed`
 import typingsSlinky.electron.electronStrings.`new-window-for-tab`
@@ -52,11 +54,13 @@ import typingsSlinky.electron.electronStrings.pictures
 import typingsSlinky.electron.electronStrings.prohibited
 import typingsSlinky.electron.electronStrings.quit
 import typingsSlinky.electron.electronStrings.ready
+import typingsSlinky.electron.electronStrings.recent
 import typingsSlinky.electron.electronStrings.regular
 import typingsSlinky.electron.electronStrings.temp
 import typingsSlinky.electron.electronStrings.userData
 import typingsSlinky.electron.electronStrings.videos
 import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -125,6 +129,11 @@ trait App extends EventEmitter {
     ]
   ): this.type = js.native
   @JSName("addListener")
+  def addListener_childprocessgone(
+    event: `child-process-gone`,
+    listener: js.Function2[/* event */ Event, /* details */ Details, Unit]
+  ): this.type = js.native
+  @JSName("addListener")
   def addListener_continueactivity(
     event: `continue-activity`,
     listener: js.Function3[/* event */ Event, /* type */ String, /* userInfo */ js.Any, Unit]
@@ -139,6 +148,8 @@ trait App extends EventEmitter {
     event: `desktop-capturer-get-sources`,
     listener: js.Function2[/* event */ Event, /* webContents */ WebContents_, Unit]
   ): this.type = js.native
+  @JSName("addListener")
+  def addListener_didbecomeactive(event: `did-become-active`, listener: js.Function1[/* event */ Event, Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_gpuinfoupdate(event: `gpu-info-update`, listener: js.Function): this.type = js.native
   @JSName("addListener")
@@ -167,7 +178,7 @@ trait App extends EventEmitter {
   @JSName("addListener")
   def addListener_quit(event: quit, listener: js.Function2[/* event */ Event, /* exitCode */ Double, Unit]): this.type = js.native
   @JSName("addListener")
-  def addListener_ready(event: ready, listener: js.Function1[/* launchInfo */ js.Any, Unit]): this.type = js.native
+  def addListener_ready(event: ready, listener: js.Function2[/* event */ Event, /* launchInfo */ Record[String, _], Unit]): this.type = js.native
   @JSName("addListener")
   def addListener_remotegetbuiltin(
     event: `remote-get-builtin`,
@@ -201,7 +212,12 @@ trait App extends EventEmitter {
   @JSName("addListener")
   def addListener_renderprocessgone(
     event: `render-process-gone`,
-    listener: js.Function3[/* event */ Event, /* webContents */ WebContents_, /* details */ Details, Unit]
+    listener: js.Function3[
+      /* event */ Event, 
+      /* webContents */ WebContents_, 
+      /* details */ RenderProcessGoneDetails, 
+      Unit
+    ]
   ): this.type = js.native
   @JSName("addListener")
   def addListener_secondinstance(
@@ -283,6 +299,9 @@ trait App extends EventEmitter {
     * **Note:** Unity launcher requires the existence of a `.desktop` file to work,
     * for more information please read Desktop Environment Integration.
     *
+    * **Note:** On macOS, you need to ensure that your application has the permission
+    * to display notifications for this property to take effect.
+    *
     * @platform linux,darwin
     */
   var badgeCount: Double = js.native
@@ -325,11 +344,10 @@ trait App extends EventEmitter {
   val dock: Dock = js.native
   
   /**
-    * Enables full sandbox mode on the app.
-    * 
+    * Enables full sandbox mode on the app. This means that all renderers will be
+    * launched sandboxed, regardless of the value of the `sandbox` flag in
+    * WebPreferences.
   This method can only be called before app is ready.
-    *
-    * @experimental
     */
   def enableSandbox(): Unit = js.native
   
@@ -361,6 +379,20 @@ trait App extends EventEmitter {
     * The current application directory.
     */
   def getAppPath(): String = js.native
+  
+  /**
+    * Resolve with an object containing the following:
+    *
+    * * `icon` NativeImage - the display icon of the app handling the protocol.
+    * * `path` String  - installation path of the app handling the protocol.
+    * * `name` String - display name of the app handling the protocol.
+    *
+    * This method returns a promise that contains the application name, icon and path
+    * of the default handler for the protocol (aka URI scheme) of a URL.
+    *
+    * @platform darwin,win32
+    */
+  def getApplicationInfoForProtocol(url: String): js.Promise[ApplicationInfoForProtocolReturnValue] = js.native
   
   /**
     * Name of the application handling the protocol, or an empty string if there is no
@@ -480,6 +512,20 @@ trait App extends EventEmitter {
     * that should restore the state from the previous session. This indicates that the
     * app should restore the windows that were open the last time the app was closed.
     * This setting is not available on MAS builds.
+    * * `executableWillLaunchAtLogin` Boolean _Windows_ - `true` if app is set to open
+    * at login and its run key is not deactivated. This differs from `openAtLogin` as
+    * it ignores the `args` option, this property will be true if the given executable
+    * would be launched at login with **any** arguments.
+    * * `launchItems` Object[] _Windows_
+    *   * `name` String _Windows_ - name value of a registry entry.
+    *   * `path` String _Windows_ - The executable to an app that corresponds to a
+    * registry entry.
+    *   * `args` String[] _Windows_ - the command-line arguments to pass to the
+    * executable.
+    *   * `scope` String _Windows_ - one of `user` or `machine`. Indicates whether the
+    * registry entry is under `HKEY_CURRENT USER` or `HKEY_LOCAL_MACHINE`.
+    *   * `enabled` Boolean _Windows_ - `true` if the app registry key is startup
+    * approved and therefore shows as `enabled` in Task Manager and Windows settings.
     *
     * @platform darwin,win32
     */
@@ -531,6 +577,8 @@ trait App extends EventEmitter {
   def getPath_pepperFlashSystemPlugin(name: pepperFlashSystemPlugin): String = js.native
   @JSName("getPath")
   def getPath_pictures(name: pictures): String = js.native
+  @JSName("getPath")
+  def getPath_recent(name: recent): String = js.native
   @JSName("getPath")
   def getPath_temp(name: temp): String = js.native
   @JSName("getPath")
@@ -633,6 +681,15 @@ trait App extends EventEmitter {
   def isReady(): Boolean = js.native
   
   /**
+    * whether `Secure Keyboard Entry` is enabled.
+    * 
+  By default this API will return `false`.
+    *
+    * @platform darwin
+    */
+  def isSecureKeyboardEntryEnabled(): Boolean = js.native
+  
+  /**
     * Whether the current desktop environment is Unity launcher.
     *
     * @platform linux
@@ -655,11 +712,11 @@ trait App extends EventEmitter {
     * By default, if an app of the same name as the one being moved exists in the
     * Applications directory and is _not_ running, the existing app will be trashed
     * and the active app moved into its place. If it _is_ running, the pre-existing
-    * running app will assume focus and the the previously active app will quit
-    * itself. This behavior can be changed by providing the optional conflict handler,
-    * where the boolean returned by the handler determines whether or not the move
-    * conflict is resolved with default behavior.  i.e. returning `false` will ensure
-    * no further action is taken, returning `true` will result in the default behavior
+    * running app will assume focus and the previously active app will quit itself.
+    * This behavior can be changed by providing the optional conflict handler, where
+    * the boolean returned by the handler determines whether or not the move conflict
+    * is resolved with default behavior.  i.e. returning `false` will ensure no
+    * further action is taken, returning `true` will result in the default behavior
     * and the method continuing.
     *
     * For example:
@@ -685,7 +742,7 @@ trait App extends EventEmitter {
     */
   var name: String = js.native
   
-  // Docs: http://electronjs.org/docs/api/app
+  // Docs: https://electronjs.org/docs/api/app
   /**
     * Emitted when Chrome's accessibility support changes. This event fires when
     * assistive technologies, such as screen readers, are enabled or disabled. See
@@ -777,6 +834,15 @@ trait App extends EventEmitter {
     ]
   ): this.type = js.native
   /**
+    * Emitted when the child process unexpectedly disappears. This is normally because
+    * it was crashed or killed. It does not include renderer processes.
+    */
+  @JSName("on")
+  def on_childprocessgone(
+    event: `child-process-gone`,
+    listener: js.Function2[/* event */ Event, /* details */ Details, Unit]
+  ): this.type = js.native
+  /**
     * Emitted during Handoff when an activity from a different device wants to be
     * resumed. You should call `event.preventDefault()` if you want to handle this
     * event.
@@ -815,12 +881,28 @@ trait App extends EventEmitter {
     listener: js.Function2[/* event */ Event, /* webContents */ WebContents_, Unit]
   ): this.type = js.native
   /**
+    * Emitted when mac application become active. Difference from `activate` event is
+    * that `did-become-active` is emitted every time the app becomes active, not only
+    * when Dock icon is clicked or application is re-launched.
+    *
+    * @platform darwin
+    */
+  @JSName("on")
+  def on_didbecomeactive(event: `did-become-active`, listener: js.Function1[/* event */ Event, Unit]): this.type = js.native
+  /**
     * Emitted whenever there is a GPU info update.
     */
   @JSName("on")
   def on_gpuinfoupdate(event: `gpu-info-update`, listener: js.Function): this.type = js.native
   /**
     * Emitted when the GPU process crashes or is killed.
+    *
+    * **Deprecated:** This event is superceded by the `child-process-gone` event which
+    * contains more information about why the child process disappeared. It isn't
+    * always because it crashed. The `killed` boolean can be replaced by checking
+    * `reason === 'killed'` when you switch to that event.
+    *
+    * @deprecated
     */
   @JSName("on")
   def on_gpuprocesscrashed(
@@ -902,7 +984,7 @@ trait App extends EventEmitter {
     * to get a Promise that is fulfilled when Electron is initialized.
     */
   @JSName("on")
-  def on_ready(event: ready, listener: js.Function1[/* launchInfo */ js.Any, Unit]): this.type = js.native
+  def on_ready(event: ready, listener: js.Function2[/* event */ Event, /* launchInfo */ Record[String, _], Unit]): this.type = js.native
   /**
     * Emitted when `remote.getBuiltin()` is called in the renderer process of
     * `webContents`. Calling `event.preventDefault()` will prevent the module from
@@ -959,13 +1041,18 @@ trait App extends EventEmitter {
     listener: js.Function3[/* event */ Event, /* webContents */ WebContents_, /* killed */ Boolean, Unit]
   ): this.type = js.native
   /**
-    * Emitted when the renderer process unexpectedly dissapears.  This is normally
+    * Emitted when the renderer process unexpectedly disappears.  This is normally
     * because it was crashed or killed.
     */
   @JSName("on")
   def on_renderprocessgone(
     event: `render-process-gone`,
-    listener: js.Function3[/* event */ Event, /* webContents */ WebContents_, /* details */ Details, Unit]
+    listener: js.Function3[
+      /* event */ Event, 
+      /* webContents */ WebContents_, 
+      /* details */ RenderProcessGoneDetails, 
+      Unit
+    ]
   ): this.type = js.native
   /**
     * This event will be emitted inside the primary instance of your application when
@@ -974,6 +1061,9 @@ trait App extends EventEmitter {
     * `argv` is an Array of the second instance's command line arguments, and
     * `workingDirectory` is its current working directory. Usually applications
     * respond to this by making their primary window focused and non-minimized.
+    *
+    * **Note:** If the second instance is started by a different user than the first,
+    * the `argv` array will not include the arguments.
     *
     * This event is guaranteed to be emitted after the `ready` event of `app` gets
     * emitted.
@@ -1125,6 +1215,11 @@ trait App extends EventEmitter {
     ]
   ): this.type = js.native
   @JSName("once")
+  def once_childprocessgone(
+    event: `child-process-gone`,
+    listener: js.Function2[/* event */ Event, /* details */ Details, Unit]
+  ): this.type = js.native
+  @JSName("once")
   def once_continueactivity(
     event: `continue-activity`,
     listener: js.Function3[/* event */ Event, /* type */ String, /* userInfo */ js.Any, Unit]
@@ -1139,6 +1234,8 @@ trait App extends EventEmitter {
     event: `desktop-capturer-get-sources`,
     listener: js.Function2[/* event */ Event, /* webContents */ WebContents_, Unit]
   ): this.type = js.native
+  @JSName("once")
+  def once_didbecomeactive(event: `did-become-active`, listener: js.Function1[/* event */ Event, Unit]): this.type = js.native
   @JSName("once")
   def once_gpuinfoupdate(event: `gpu-info-update`, listener: js.Function): this.type = js.native
   @JSName("once")
@@ -1167,7 +1264,7 @@ trait App extends EventEmitter {
   @JSName("once")
   def once_quit(event: quit, listener: js.Function2[/* event */ Event, /* exitCode */ Double, Unit]): this.type = js.native
   @JSName("once")
-  def once_ready(event: ready, listener: js.Function1[/* launchInfo */ js.Any, Unit]): this.type = js.native
+  def once_ready(event: ready, listener: js.Function2[/* event */ Event, /* launchInfo */ Record[String, _], Unit]): this.type = js.native
   @JSName("once")
   def once_remotegetbuiltin(
     event: `remote-get-builtin`,
@@ -1201,7 +1298,12 @@ trait App extends EventEmitter {
   @JSName("once")
   def once_renderprocessgone(
     event: `render-process-gone`,
-    listener: js.Function3[/* event */ Event, /* webContents */ WebContents_, /* details */ Details, Unit]
+    listener: js.Function3[
+      /* event */ Event, 
+      /* webContents */ WebContents_, 
+      /* details */ RenderProcessGoneDetails, 
+      Unit
+    ]
   ): this.type = js.native
   @JSName("once")
   def once_secondinstance(
@@ -1337,6 +1439,11 @@ trait App extends EventEmitter {
     ]
   ): this.type = js.native
   @JSName("removeListener")
+  def removeListener_childprocessgone(
+    event: `child-process-gone`,
+    listener: js.Function2[/* event */ Event, /* details */ Details, Unit]
+  ): this.type = js.native
+  @JSName("removeListener")
   def removeListener_continueactivity(
     event: `continue-activity`,
     listener: js.Function3[/* event */ Event, /* type */ String, /* userInfo */ js.Any, Unit]
@@ -1351,6 +1458,8 @@ trait App extends EventEmitter {
     event: `desktop-capturer-get-sources`,
     listener: js.Function2[/* event */ Event, /* webContents */ WebContents_, Unit]
   ): this.type = js.native
+  @JSName("removeListener")
+  def removeListener_didbecomeactive(event: `did-become-active`, listener: js.Function1[/* event */ Event, Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_gpuinfoupdate(event: `gpu-info-update`, listener: js.Function): this.type = js.native
   @JSName("removeListener")
@@ -1379,7 +1488,7 @@ trait App extends EventEmitter {
   @JSName("removeListener")
   def removeListener_quit(event: quit, listener: js.Function2[/* event */ Event, /* exitCode */ Double, Unit]): this.type = js.native
   @JSName("removeListener")
-  def removeListener_ready(event: ready, listener: js.Function1[/* launchInfo */ js.Any, Unit]): this.type = js.native
+  def removeListener_ready(event: ready, listener: js.Function2[/* event */ Event, /* launchInfo */ Record[String, _], Unit]): this.type = js.native
   @JSName("removeListener")
   def removeListener_remotegetbuiltin(
     event: `remote-get-builtin`,
@@ -1413,7 +1522,12 @@ trait App extends EventEmitter {
   @JSName("removeListener")
   def removeListener_renderprocessgone(
     event: `render-process-gone`,
-    listener: js.Function3[/* event */ Event, /* webContents */ WebContents_, /* details */ Details, Unit]
+    listener: js.Function3[
+      /* event */ Event, 
+      /* webContents */ WebContents_, 
+      /* details */ RenderProcessGoneDetails, 
+      Unit
+    ]
   ): this.type = js.native
   @JSName("removeListener")
   def removeListener_secondinstance(
@@ -1484,6 +1598,17 @@ trait App extends EventEmitter {
     * @platform darwin
     */
   def resignCurrentActivity(): Unit = js.native
+  
+  /**
+    * A `Boolean` which when `true` indicates that the app is currently running under
+    * the Rosetta Translator Environment.
+    *
+    * You can use this property to prompt users to download the arm64 version of your
+    * application when they are running the x64 version under Rosetta incorrectly.
+    *
+    * @platform darwin
+    */
+  val runningUnderRosettaTranslation: Boolean = js.native
   
   /**
     * Set the about panel options. This will override the values defined in the app's
@@ -1634,8 +1759,6 @@ trait App extends EventEmitter {
   def setJumpList(categories: js.Array[JumpListCategory]): Unit = js.native
   
   /**
-    * Set the app's login item settings.
-    *
     * To work with Electron's `autoUpdater` on Windows, which uses Squirrel, you'll
     * want to set the launch path to Update.exe, and pass arguments that specify your
     * application name. For example:
@@ -1664,6 +1787,21 @@ trait App extends EventEmitter {
     * `userData` path before the `ready` event of the `app` module is emitted.
     */
   def setPath(name: String, path: String): Unit = js.native
+  
+  /**
+    * Set the `Secure Keyboard Entry` is enabled in your application.
+    *
+    * By using this API, important information such as password and other sensitive
+    * information can be prevented from being intercepted by other processes.
+    *
+    * See Apple's documentation for more details.
+    *
+    * **Note:** Enable `Secure Keyboard Entry` only when it is needed and disable it
+    * when it is no longer needed.
+    *
+    * @platform darwin
+    */
+  def setSecureKeyboardEntryEnabled(enabled: Boolean): Unit = js.native
   
   /**
     * Creates an `NSUserActivity` and sets it as the current activity. The activity is

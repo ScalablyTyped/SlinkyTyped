@@ -13,8 +13,6 @@ trait Directions
     * Calculate the route to the input locations and display the list of directions.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#getDirections)
-    *
-    *
     */
   def getDirections(): js.Promise[RouteResult] = js.native
   
@@ -26,11 +24,9 @@ trait Directions
   var iconClass: String = js.native
   
   /**
-    * The most recent route result. Returns an object containing properties for any barriers used when generating the route, messages that may arise when solving the route, and finally an array of returned [RouteResults](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RouteResult.html).
+    * The most recent route result.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#lastRoute)
-    *
-    * @default null
     */
   val lastRoute: DirectionsLastRoute = js.native
   
@@ -38,8 +34,6 @@ trait Directions
     * The maximum number of stops allowed for routing.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#maxStops)
-    *
-    * @default 50
     */
   var maxStops: Double = js.native
   
@@ -47,8 +41,6 @@ trait Directions
     * The URL of the REST endpoint of the Route service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#routeServiceUrl)
-    *
-    * @default "https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World"
     */
   var routeServiceUrl: String = js.native
   
@@ -60,11 +52,9 @@ trait Directions
   var routeSymbol: SimpleLineSymbol = js.native
   
   /**
-    * Controls the default properties used when [searching](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search.html). Note that the default `searchProperties` differ slightly from the [Search widget](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search.html).
+    * Controls the default properties used when [searching](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Search.html).
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#searchProperties)
-    *
-    * @default null
     */
   var searchProperties: DirectionsSearchProperties = js.native
   
@@ -83,7 +73,7 @@ trait Directions
   var view: MapView | SceneView = js.native
   
   /**
-    * The view model for this widget. This is a class that contains all the logic (properties and methods) that controls this widget's behavior. See the [DirectionsViewModel](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html) class to access all properties and methods on the widget.
+    * The view model for this widget.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#viewModel)
     */
@@ -93,8 +83,6 @@ trait Directions
     * Zoom so that the full route is displayed within the current map extent.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#zoomToRoute)
-    *
-    *
     */
   def zoomToRoute(): Unit = js.native
 }

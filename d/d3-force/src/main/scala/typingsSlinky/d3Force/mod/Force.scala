@@ -16,10 +16,12 @@ trait Force[NodeDatum /* <: SimulationNodeDatum */, LinkDatum /* <: js.UndefOr[S
   def apply(alpha: Double): Unit = js.native
   
   /**
-    * Assign the array of nodes to this force. This method is called when a force is bound to a simulation via simulation.force
+    * Supplies the array of nodes and random source to this force. This method is called when a force is bound to a simulation via simulation.force
     * and when the simulation’s nodes change via simulation.nodes.
     *
     * A force may perform necessary work during initialization, such as evaluating per-node parameters, to avoid repeatedly performing work during each application of the force.
     */
-  var initialize: js.UndefOr[js.Function1[/* nodes */ js.Array[NodeDatum], Unit]] = js.native
+  var initialize: js.UndefOr[
+    js.Function2[/* nodes */ js.Array[NodeDatum], /* random */ js.Function0[Double], Unit]
+  ] = js.native
 }

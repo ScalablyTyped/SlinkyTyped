@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateDefaultClause extends js.Object {
   
+  /** @deprecated Use `factory.updateDefaultClause` or the factory supplied by your transformation context instead. */
   def apply(node: DefaultClause, statements: js.Array[Statement]): DefaultClause = js.native
 }

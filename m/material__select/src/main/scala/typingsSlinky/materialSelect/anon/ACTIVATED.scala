@@ -23,8 +23,6 @@ trait ACTIVATED extends js.Object {
   
   var ROOT: String = js.native
   
-  var SELECTED_ITEM_CLASS: String = js.native
-  
   var WITH_LEADING_ICON: String = js.native
 }
 object ACTIVATED {
@@ -39,10 +37,9 @@ object ACTIVATED {
     OUTLINED: String,
     REQUIRED: String,
     ROOT: String,
-    SELECTED_ITEM_CLASS: String,
     WITH_LEADING_ICON: String
   ): ACTIVATED = {
-    val __obj = js.Dynamic.literal(ACTIVATED = ACTIVATED.asInstanceOf[js.Any], DISABLED = DISABLED.asInstanceOf[js.Any], FOCUSED = FOCUSED.asInstanceOf[js.Any], INVALID = INVALID.asInstanceOf[js.Any], MENU_INVALID = MENU_INVALID.asInstanceOf[js.Any], OUTLINED = OUTLINED.asInstanceOf[js.Any], REQUIRED = REQUIRED.asInstanceOf[js.Any], ROOT = ROOT.asInstanceOf[js.Any], SELECTED_ITEM_CLASS = SELECTED_ITEM_CLASS.asInstanceOf[js.Any], WITH_LEADING_ICON = WITH_LEADING_ICON.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(ACTIVATED = ACTIVATED.asInstanceOf[js.Any], DISABLED = DISABLED.asInstanceOf[js.Any], FOCUSED = FOCUSED.asInstanceOf[js.Any], INVALID = INVALID.asInstanceOf[js.Any], MENU_INVALID = MENU_INVALID.asInstanceOf[js.Any], OUTLINED = OUTLINED.asInstanceOf[js.Any], REQUIRED = REQUIRED.asInstanceOf[js.Any], ROOT = ROOT.asInstanceOf[js.Any], WITH_LEADING_ICON = WITH_LEADING_ICON.asInstanceOf[js.Any])
     __obj.asInstanceOf[ACTIVATED]
   }
   
@@ -84,9 +81,6 @@ object ACTIVATED {
     
     @scala.inline
     def setROOT(value: String): Self = this.set("ROOT", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSELECTED_ITEM_CLASS(value: String): Self = this.set("SELECTED_ITEM_CLASS", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWITH_LEADING_ICON(value: String): Self = this.set("WITH_LEADING_ICON", value.asInstanceOf[js.Any])

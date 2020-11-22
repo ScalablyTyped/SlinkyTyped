@@ -10,5 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateMetaProperty extends js.Object {
   
+  /** @deprecated Use `factory.updateMetaProperty` or the factory supplied by your transformation context instead. */
   def apply(node: MetaProperty, name: Identifier): MetaProperty = js.native
 }

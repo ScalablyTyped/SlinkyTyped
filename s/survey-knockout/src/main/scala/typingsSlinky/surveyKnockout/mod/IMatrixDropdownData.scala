@@ -11,6 +11,10 @@ trait IMatrixDropdownData extends js.Object {
   
   def createQuestion(row: MatrixDropdownRowModelBase, column: MatrixDropdownColumn): Question = js.native
   
+  def createRowDetailPanel(row: MatrixDropdownRowModelBase): PanelModel = js.native
+  
+  def getIsDetailPanelShowing(row: MatrixDropdownRowModelBase): Boolean = js.native
+  
   def getLocale(): String = js.native
   
   def getMarkdownHtml(text: String): String = js.native
@@ -19,15 +23,21 @@ trait IMatrixDropdownData extends js.Object {
   
   def getRowIndex(row: MatrixDropdownRowModelBase): Double = js.native
   
+  def getRowValue(rowIndex: Double): js.Any = js.native
+  
   def getSharedQuestionByName(columnName: String, row: MatrixDropdownRowModelBase): Question = js.native
   
   def getSurvey(): ISurvey = js.native
+  
+  def hasDetailPanel(row: MatrixDropdownRowModelBase): Boolean = js.native
   
   def onRowChanged(row: MatrixDropdownRowModelBase, columnName: String, newRowValue: js.Any, isDeletingValue: Boolean): Unit = js.native
   
   def onRowChanging(row: MatrixDropdownRowModelBase, columnName: String, rowValue: js.Any): js.Any = js.native
   
   def onTotalValueChanged(): js.Any = js.native
+  
+  def setIsDetailPanelShowing(row: MatrixDropdownRowModelBase, `val`: Boolean): Unit = js.native
   
   def validateCell(row: MatrixDropdownRowModelBase, columnName: String, rowValue: js.Any): SurveyError = js.native
   
@@ -39,19 +49,24 @@ object IMatrixDropdownData {
   def apply(
     columns: js.Array[MatrixDropdownColumn],
     createQuestion: (MatrixDropdownRowModelBase, MatrixDropdownColumn) => Question,
+    createRowDetailPanel: MatrixDropdownRowModelBase => PanelModel,
+    getIsDetailPanelShowing: MatrixDropdownRowModelBase => Boolean,
     getLocale: () => String,
     getMarkdownHtml: String => String,
     getProcessedText: String => String,
     getRowIndex: MatrixDropdownRowModelBase => Double,
+    getRowValue: Double => js.Any,
     getSharedQuestionByName: (String, MatrixDropdownRowModelBase) => Question,
     getSurvey: () => ISurvey,
+    hasDetailPanel: MatrixDropdownRowModelBase => Boolean,
     onRowChanged: (MatrixDropdownRowModelBase, String, js.Any, Boolean) => Unit,
     onRowChanging: (MatrixDropdownRowModelBase, String, js.Any) => js.Any,
     onTotalValueChanged: () => js.Any,
+    setIsDetailPanelShowing: (MatrixDropdownRowModelBase, Boolean) => Unit,
     validateCell: (MatrixDropdownRowModelBase, String, js.Any) => SurveyError,
     value: js.Any
   ): IMatrixDropdownData = {
-    val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], createQuestion = js.Any.fromFunction2(createQuestion), getLocale = js.Any.fromFunction0(getLocale), getMarkdownHtml = js.Any.fromFunction1(getMarkdownHtml), getProcessedText = js.Any.fromFunction1(getProcessedText), getRowIndex = js.Any.fromFunction1(getRowIndex), getSharedQuestionByName = js.Any.fromFunction2(getSharedQuestionByName), getSurvey = js.Any.fromFunction0(getSurvey), onRowChanged = js.Any.fromFunction4(onRowChanged), onRowChanging = js.Any.fromFunction3(onRowChanging), onTotalValueChanged = js.Any.fromFunction0(onTotalValueChanged), validateCell = js.Any.fromFunction3(validateCell), value = value.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(columns = columns.asInstanceOf[js.Any], createQuestion = js.Any.fromFunction2(createQuestion), createRowDetailPanel = js.Any.fromFunction1(createRowDetailPanel), getIsDetailPanelShowing = js.Any.fromFunction1(getIsDetailPanelShowing), getLocale = js.Any.fromFunction0(getLocale), getMarkdownHtml = js.Any.fromFunction1(getMarkdownHtml), getProcessedText = js.Any.fromFunction1(getProcessedText), getRowIndex = js.Any.fromFunction1(getRowIndex), getRowValue = js.Any.fromFunction1(getRowValue), getSharedQuestionByName = js.Any.fromFunction2(getSharedQuestionByName), getSurvey = js.Any.fromFunction0(getSurvey), hasDetailPanel = js.Any.fromFunction1(hasDetailPanel), onRowChanged = js.Any.fromFunction4(onRowChanged), onRowChanging = js.Any.fromFunction3(onRowChanging), onTotalValueChanged = js.Any.fromFunction0(onTotalValueChanged), setIsDetailPanelShowing = js.Any.fromFunction2(setIsDetailPanelShowing), validateCell = js.Any.fromFunction3(validateCell), value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[IMatrixDropdownData]
   }
   
@@ -80,6 +95,12 @@ object IMatrixDropdownData {
     def setCreateQuestion(value: (MatrixDropdownRowModelBase, MatrixDropdownColumn) => Question): Self = this.set("createQuestion", js.Any.fromFunction2(value))
     
     @scala.inline
+    def setCreateRowDetailPanel(value: MatrixDropdownRowModelBase => PanelModel): Self = this.set("createRowDetailPanel", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setGetIsDetailPanelShowing(value: MatrixDropdownRowModelBase => Boolean): Self = this.set("getIsDetailPanelShowing", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def setGetLocale(value: () => String): Self = this.set("getLocale", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -92,10 +113,16 @@ object IMatrixDropdownData {
     def setGetRowIndex(value: MatrixDropdownRowModelBase => Double): Self = this.set("getRowIndex", js.Any.fromFunction1(value))
     
     @scala.inline
+    def setGetRowValue(value: Double => js.Any): Self = this.set("getRowValue", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def setGetSharedQuestionByName(value: (String, MatrixDropdownRowModelBase) => Question): Self = this.set("getSharedQuestionByName", js.Any.fromFunction2(value))
     
     @scala.inline
     def setGetSurvey(value: () => ISurvey): Self = this.set("getSurvey", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setHasDetailPanel(value: MatrixDropdownRowModelBase => Boolean): Self = this.set("hasDetailPanel", js.Any.fromFunction1(value))
     
     @scala.inline
     def setOnRowChanged(value: (MatrixDropdownRowModelBase, String, js.Any, Boolean) => Unit): Self = this.set("onRowChanged", js.Any.fromFunction4(value))
@@ -105,6 +132,9 @@ object IMatrixDropdownData {
     
     @scala.inline
     def setOnTotalValueChanged(value: () => js.Any): Self = this.set("onTotalValueChanged", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setSetIsDetailPanelShowing(value: (MatrixDropdownRowModelBase, Boolean) => Unit): Self = this.set("setIsDetailPanelShowing", js.Any.fromFunction2(value))
     
     @scala.inline
     def setValidateCell(value: (MatrixDropdownRowModelBase, String, js.Any) => SurveyError): Self = this.set("validateCell", js.Any.fromFunction3(value))

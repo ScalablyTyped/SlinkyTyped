@@ -23,7 +23,7 @@ trait ILineStringGeometryAccess extends IFreezable {
   
   def set(index: Double, coordinates: js.Array[Double]): ILineStringGeometryAccess = js.native
   
-  def setCoordinates(coordinates: js.Array[Double]): ILineStringGeometryAccess = js.native
+  def setCoordinates(coordinates: js.Array[js.Array[Double]]): ILineStringGeometryAccess = js.native
   
   def splice(index: Double, length: Double): js.Array[js.Array[Double]] = js.native
 }
@@ -31,7 +31,7 @@ object ILineStringGeometryAccess {
   
   @scala.inline
   def apply(
-    events: IEventManager,
+    events: IEventManager[js.Object],
     freeze: () => IFreezable,
     get: Double => js.Array[Double],
     getChildGeometry: Double => IPointGeometryAccess,
@@ -42,7 +42,7 @@ object ILineStringGeometryAccess {
     isFrozen: () => Boolean,
     remove: Double => js.Array[Double],
     set: (Double, js.Array[Double]) => ILineStringGeometryAccess,
-    setCoordinates: js.Array[Double] => ILineStringGeometryAccess,
+    setCoordinates: js.Array[js.Array[Double]] => ILineStringGeometryAccess,
     splice: (Double, Double) => js.Array[js.Array[Double]],
     unfreeze: () => IFreezable
   ): ILineStringGeometryAccess = {
@@ -90,7 +90,7 @@ object ILineStringGeometryAccess {
     def setSet(value: (Double, js.Array[Double]) => ILineStringGeometryAccess): Self = this.set("set", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setSetCoordinates(value: js.Array[Double] => ILineStringGeometryAccess): Self = this.set("setCoordinates", js.Any.fromFunction1(value))
+    def setSetCoordinates(value: js.Array[js.Array[Double]] => ILineStringGeometryAccess): Self = this.set("setCoordinates", js.Any.fromFunction1(value))
     
     @scala.inline
     def setSplice(value: (Double, Double) => js.Array[js.Array[Double]]): Self = this.set("splice", js.Any.fromFunction2(value))

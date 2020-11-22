@@ -15,7 +15,7 @@ trait AccessibilityPropsIOS extends js.Object {
   var accessibilityElementsHidden: js.UndefOr[Boolean] = js.native
   
   /**
-    * https://facebook.github.io/react-native/docs/accessibility#accessibilityignoresinvertcolorsios
+    * https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
     * @platform ios
     */
   var accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.native

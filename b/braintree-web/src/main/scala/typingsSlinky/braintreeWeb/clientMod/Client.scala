@@ -31,7 +31,7 @@ trait Client extends js.Object {
     * });
     */
   def create(options: Authorization): js.Promise[Client] = js.native
-  def create(options: Authorization, callback: callback): Unit = js.native
+  def create(options: Authorization, callback: callback[_]): Unit = js.native
   
   /**
     * Returns a copy of the configuration values.
@@ -80,5 +80,5 @@ trait Client extends js.Object {
     *   });
     * });
     */
-  def request(options: Data, callback: callback): Unit = js.native
+  def request(options: Data, callback: callback[_]): Unit = js.native
 }

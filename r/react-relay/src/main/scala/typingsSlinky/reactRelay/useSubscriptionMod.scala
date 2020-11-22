@@ -12,13 +12,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object useSubscriptionMod extends js.Object {
   
   def useSubscription[TSubscriptionPayload /* <: OperationType */](
-    // The actual subtype of OperationType is required to allow for type inferrence inside GraphQLSubscriptionConfig.
-  // tslint:disable-next-line:no-unnecessary-generics
+    // The actual subtype of OperationType is required to allow for type inference inside GraphQLSubscriptionConfig.s
+  // tslint:disable-next-line no-unnecessary-generics
   config: GraphQLSubscriptionConfig[TSubscriptionPayload]
   ): Unit = js.native
   def useSubscription[TSubscriptionPayload /* <: OperationType */](
-    // The actual subtype of OperationType is required to allow for type inferrence inside GraphQLSubscriptionConfig.
-  // tslint:disable-next-line:no-unnecessary-generics
+    // The actual subtype of OperationType is required to allow for type inference inside GraphQLSubscriptionConfig.s
+  // tslint:disable-next-line no-unnecessary-generics
   config: GraphQLSubscriptionConfig[TSubscriptionPayload],
     requestSubscriptionFn: FnCall
   ): Unit = js.native

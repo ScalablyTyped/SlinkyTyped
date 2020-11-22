@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientCodecommitNode.inputTypesUnionMod.InputTypesUni
 import typingsSlinky.awsSdkClientCodecommitNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientCodecommitNode.typesGetRepositoryTriggersInputMod.GetRepositoryTriggersInput
 import typingsSlinky.awsSdkClientCodecommitNode.typesGetRepositoryTriggersOutputMod.GetRepositoryTriggersOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object getRepositoryTriggersCommandMod extends js.Object {
           GetRepositoryTriggersInput, 
           OutputTypesUnion, 
           GetRepositoryTriggersOutput, 
-          CodeCommitResolvedConfiguration, 
-          Readable
+          CodeCommitResolvedConfiguration
         ] {
     def this(input: GetRepositoryTriggersInput) = this()
     
-    val middlewareStack: MiddlewareStack[GetRepositoryTriggersInput, GetRepositoryTriggersOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: CodeCommitResolvedConfiguration
     ): Handler[GetRepositoryTriggersInput, GetRepositoryTriggersOutput] = js.native
   }

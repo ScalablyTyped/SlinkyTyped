@@ -6,9 +6,6 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.popperJs.mod.Boundary
-import typingsSlinky.popperJs.mod.Modifiers
-import typingsSlinky.popperJs.mod.Placement
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.MouseEventHandler
 import typingsSlinky.reactstrap.anon.Hide
@@ -22,7 +19,9 @@ trait PopoverProps
   extends HTMLAttributes[HTMLElement]
      with /* key */ StringDictionary[js.Any] {
   
-  var boundariesElement: js.UndefOr[Boundary | Element] = js.native
+  var boundariesElement: js.UndefOr[
+    (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Boundary */ js.Any) | Element
+  ] = js.native
   
   @JSName("children")
   var children_PopoverProps: js.UndefOr[PopoverChildren] = js.native
@@ -45,9 +44,13 @@ trait PopoverProps
   
   var isOpen: js.UndefOr[Boolean] = js.native
   
-  var modifiers: js.UndefOr[Modifiers] = js.native
+  var modifiers: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Modifiers */ js.Any
+  ] = js.native
   
-  var placement: js.UndefOr[Placement] = js.native
+  var placement: js.UndefOr[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Placement */ js.Any
+  ] = js.native
   
   var placementPrefix: js.UndefOr[String] = js.native
   
@@ -93,7 +96,9 @@ object PopoverProps {
     def setBoundariesElementElement(value: Element): Self = this.set("boundariesElement", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setBoundariesElement(value: Boundary | Element): Self = this.set("boundariesElement", value.asInstanceOf[js.Any])
+    def setBoundariesElement(
+      value: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Boundary */ js.Any) | Element
+    ): Self = this.set("boundariesElement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBoundariesElement: Self = this.set("boundariesElement", js.undefined)
@@ -171,13 +176,17 @@ object PopoverProps {
     def deleteIsOpen: Self = this.set("isOpen", js.undefined)
     
     @scala.inline
-    def setModifiers(value: Modifiers): Self = this.set("modifiers", value.asInstanceOf[js.Any])
+    def setModifiers(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Modifiers */ js.Any
+    ): Self = this.set("modifiers", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModifiers: Self = this.set("modifiers", js.undefined)
     
     @scala.inline
-    def setPlacement(value: Placement): Self = this.set("placement", value.asInstanceOf[js.Any])
+    def setPlacement(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Popper.Placement */ js.Any
+    ): Self = this.set("placement", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePlacement: Self = this.set("placement", js.undefined)

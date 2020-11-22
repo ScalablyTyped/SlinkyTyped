@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.preset0
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.preset1
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.none_
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.preset2
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.preset3
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.preset4
@@ -31,7 +32,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.preset22
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.preset23
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.preset24
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.none_
 */
 trait CategoryColor extends js.Object
 object CategoryColor {

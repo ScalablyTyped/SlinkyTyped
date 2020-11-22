@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListGameServersInput extends js.Object {
   
   /**
-    * An identifier for the game server group for the game server you want to list. Use either the GameServerGroup name or ARN value.
+    * An identifier for the game server group to retrieve a list of game servers from. Use either the GameServerGroup name or ARN value.
     */
   var GameServerGroupName: GameServerGroupNameOrArn = js.native
   
   /**
-    * The maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential pages.
+    * The maximum number of results to return. Use this parameter with NextToken to get results as a set of sequential segments.
     */
   var Limit: js.UndefOr[PositiveInteger] = js.native
   
   /**
-    * A token that indicates the start of the next sequential page of results. Use the token that is returned with a previous call to this action. To start at the beginning of the result set, do not specify a value.
+    * A token that indicates the start of the next sequential segment of results. Use the token returned with the previous call to this operation. To start at the beginning of the result set, do not specify a value.
     */
   var NextToken: js.UndefOr[NonZeroAndMaxString] = js.native
   
   /**
-    * Indicates how to sort the returned data based on the game servers' custom key sort value. If this parameter is left empty, the list of game servers is returned in no particular order.
+    * Indicates how to sort the returned data based on game server registration timestamp. Use ASCENDING to retrieve oldest game servers first, or use DESCENDING to retrieve newest game servers first. If this parameter is left empty, game servers are returned in no particular order.
     */
   var SortOrder: js.UndefOr[typingsSlinky.awsSdk.gameliftMod.SortOrder] = js.native
 }

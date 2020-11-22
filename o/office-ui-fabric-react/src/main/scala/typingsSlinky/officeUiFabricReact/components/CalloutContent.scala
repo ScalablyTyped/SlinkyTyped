@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object CalloutContent {
   
-  @JSImport("office-ui-fabric-react/lib/components/Callout/CalloutContent", "CalloutContent")
+  @JSImport("office-ui-fabric-react", "CalloutContent")
   @js.native
   object component extends js.Object
   

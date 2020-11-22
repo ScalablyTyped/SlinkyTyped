@@ -12,6 +12,8 @@ trait WebViewEventMap extends ProxyEventMap {
   
   var blacklisturl: WebViewBlacklisturlEvent = js.native
   
+  var blockedurl: WebViewBlockedurlEvent = js.native
+  
   var click: WebViewClickEvent = js.native
   
   var dblclick: WebViewDblclickEvent = js.native
@@ -66,6 +68,7 @@ object WebViewEventMap {
   def apply(
     beforeload: WebViewBeforeloadEvent,
     blacklisturl: WebViewBlacklisturlEvent,
+    blockedurl: WebViewBlockedurlEvent,
     click: WebViewClickEvent,
     dblclick: WebViewDblclickEvent,
     doubletap: WebViewDoubletapEvent,
@@ -91,7 +94,7 @@ object WebViewEventMap {
     touchstart: WebViewTouchstartEvent,
     twofingertap: WebViewTwofingertapEvent
   ): WebViewEventMap = {
-    val __obj = js.Dynamic.literal(beforeload = beforeload.asInstanceOf[js.Any], blacklisturl = blacklisturl.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], doubletap = doubletap.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], handleurl = handleurl.asInstanceOf[js.Any], keypressed = keypressed.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], longclick = longclick.asInstanceOf[js.Any], longpress = longpress.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], onLoadResource = onLoadResource.asInstanceOf[js.Any], pinch = pinch.asInstanceOf[js.Any], postlayout = postlayout.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], redirect = redirect.asInstanceOf[js.Any], singletap = singletap.asInstanceOf[js.Any], sslerror = sslerror.asInstanceOf[js.Any], swipe = swipe.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], twofingertap = twofingertap.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(beforeload = beforeload.asInstanceOf[js.Any], blacklisturl = blacklisturl.asInstanceOf[js.Any], blockedurl = blockedurl.asInstanceOf[js.Any], click = click.asInstanceOf[js.Any], dblclick = dblclick.asInstanceOf[js.Any], doubletap = doubletap.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], focus = focus.asInstanceOf[js.Any], handleurl = handleurl.asInstanceOf[js.Any], keypressed = keypressed.asInstanceOf[js.Any], load = load.asInstanceOf[js.Any], longclick = longclick.asInstanceOf[js.Any], longpress = longpress.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], onLoadResource = onLoadResource.asInstanceOf[js.Any], pinch = pinch.asInstanceOf[js.Any], postlayout = postlayout.asInstanceOf[js.Any], progress = progress.asInstanceOf[js.Any], redirect = redirect.asInstanceOf[js.Any], singletap = singletap.asInstanceOf[js.Any], sslerror = sslerror.asInstanceOf[js.Any], swipe = swipe.asInstanceOf[js.Any], touchcancel = touchcancel.asInstanceOf[js.Any], touchend = touchend.asInstanceOf[js.Any], touchmove = touchmove.asInstanceOf[js.Any], touchstart = touchstart.asInstanceOf[js.Any], twofingertap = twofingertap.asInstanceOf[js.Any])
     __obj.asInstanceOf[WebViewEventMap]
   }
   
@@ -115,6 +118,9 @@ object WebViewEventMap {
     
     @scala.inline
     def setBlacklisturl(value: WebViewBlacklisturlEvent): Self = this.set("blacklisturl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setBlockedurl(value: WebViewBlockedurlEvent): Self = this.set("blockedurl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setClick(value: WebViewClickEvent): Self = this.set("click", value.asInstanceOf[js.Any])

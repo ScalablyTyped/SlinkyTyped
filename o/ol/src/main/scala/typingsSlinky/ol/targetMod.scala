@@ -16,10 +16,19 @@ object targetMod extends js.Object {
     
     def addEventListener(`type`: String, listener: Listener): Unit = js.native
     
-    def dispatchEvent(event: String): Boolean = js.native
-    def dispatchEvent(event: typingsSlinky.ol.eventMod.default): Boolean = js.native
+    def dispatchEvent(event: String): js.UndefOr[Boolean] = js.native
+    /**
+      * Dispatches an event and calls all listeners listening for events
+      * of this type. The event parameter can either be a string or an
+      * Object with a type property.
+      */
+    def dispatchEvent(event: typingsSlinky.ol.eventMod.default): js.UndefOr[Boolean] = js.native
     
-    def getListeners(`type`: String): js.Array[Listener] = js.native
+    /**
+      * Get the listeners for a specified event type. Listeners are returned in the
+      * order that they will be called in.
+      */
+    def getListeners(`type`: String): js.UndefOr[js.Array[Listener]] = js.native
     
     def hasListener(): Boolean = js.native
     def hasListener(opt_type: String): Boolean = js.native

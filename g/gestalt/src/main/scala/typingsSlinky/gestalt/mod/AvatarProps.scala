@@ -1,10 +1,11 @@
 package typingsSlinky.gestalt.mod
 
-import typingsSlinky.gestalt.gestaltStrings.`check-circle`
+import typingsSlinky.gestalt.gestaltStrings.fit
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
-import typingsSlinky.gestalt.gestaltStrings.pintrest
 import typingsSlinky.gestalt.gestaltStrings.sm
+import typingsSlinky.gestalt.gestaltStrings.xl
+import typingsSlinky.gestalt.gestaltStrings.xs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,13 +13,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AvatarProps extends js.Object {
   
-  var icon: js.UndefOr[`check-circle` | pintrest] = js.native
+  var accessibilityLabel: js.UndefOr[String] = js.native
   
   var name: String = js.native
   
   var outline: js.UndefOr[Boolean] = js.native
   
-  var size: js.UndefOr[sm | md | lg] = js.native
+  var size: js.UndefOr[xs | sm | md | lg | xl | fit] = js.native
   
   var src: js.UndefOr[String] = js.native
   
@@ -51,10 +52,10 @@ object AvatarProps {
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setIcon(value: `check-circle` | pintrest): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setAccessibilityLabel(value: String): Self = this.set("accessibilityLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteIcon: Self = this.set("icon", js.undefined)
+    def deleteAccessibilityLabel: Self = this.set("accessibilityLabel", js.undefined)
     
     @scala.inline
     def setOutline(value: Boolean): Self = this.set("outline", value.asInstanceOf[js.Any])
@@ -63,7 +64,7 @@ object AvatarProps {
     def deleteOutline: Self = this.set("outline", js.undefined)
     
     @scala.inline
-    def setSize(value: sm | md | lg): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setSize(value: xs | sm | md | lg | xl | fit): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)

@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DeleteQueryDefinitionRequest extends js.Object {
   
+  /**
+    * The ID of the query definition that you want to delete. You can use DescribeQueryDefinitions to retrieve the IDs of your saved query definitions.
+    */
   var queryDefinitionId: QueryId = js.native
 }
 object DeleteQueryDefinitionRequest {

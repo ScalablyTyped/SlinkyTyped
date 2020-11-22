@@ -7,4 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object mod {
   
   type ChannelHandler = js.Function1[/* event */ typingsSlinky.storybookChannels.mod.ChannelEvent, scala.Unit]
+  
+  type Listener = js.Function1[/* repeated */ js.Any, scala.Unit]
 }

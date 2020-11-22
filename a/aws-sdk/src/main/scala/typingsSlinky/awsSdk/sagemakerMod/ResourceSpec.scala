@@ -8,14 +8,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ResourceSpec extends js.Object {
   
   /**
-    * The instance type.
+    * The instance type that the image version runs on.
     */
   var InstanceType: js.UndefOr[AppInstanceType] = js.native
   
   /**
-    * The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    * The ARN of the SageMaker image that the image version belongs to.
     */
   var SageMakerImageArn: js.UndefOr[ImageArn] = js.native
+  
+  /**
+    * The ARN of the image version created on the instance.
+    */
+  var SageMakerImageVersionArn: js.UndefOr[ImageVersionArn] = js.native
 }
 object ResourceSpec {
   
@@ -51,5 +56,11 @@ object ResourceSpec {
     
     @scala.inline
     def deleteSageMakerImageArn: Self = this.set("SageMakerImageArn", js.undefined)
+    
+    @scala.inline
+    def setSageMakerImageVersionArn(value: ImageVersionArn): Self = this.set("SageMakerImageVersionArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSageMakerImageVersionArn: Self = this.set("SageMakerImageVersionArn", js.undefined)
   }
 }

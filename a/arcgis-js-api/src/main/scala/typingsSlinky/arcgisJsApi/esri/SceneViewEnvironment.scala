@@ -24,7 +24,7 @@ trait SceneViewEnvironment extends AnonymousAccessor {
   var atmosphereEnabled: js.UndefOr[Boolean] = js.native
   
   /**
-    * Specifies how the background of the scene (which lies behind sky, stars and atmosphere) should be displayed. By default this is simply a single, fully opaque, black color. Currently [ColorBackground](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-background-ColorBackground.html) is the only type of background supported.
+    * Specifies how the background of the scene (which lies behind sky, stars and atmosphere) should be displayed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#environment)
     */
@@ -41,8 +41,6 @@ trait SceneViewEnvironment extends AnonymousAccessor {
     * Indicates whether stars visualization is enabled.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-SceneView.html#environment)
-    *
-    * @default true
     */
   var starsEnabled: js.UndefOr[Boolean] = js.native
 }

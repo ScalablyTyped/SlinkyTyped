@@ -6,7 +6,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object transcribeserviceMod {
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NarrowBand
+    - typingsSlinky.awsSdk.awsSdkStrings.WideBand
+    - java.lang.String
+  */
+  type BaseModelName = typingsSlinky.awsSdk.transcribeserviceMod._BaseModelName | java.lang.String
+  
   type Boolean = scala.Boolean
+  
+  type CLMLanguageCode = typingsSlinky.awsSdk.awsSdkStrings.`en-US` | java.lang.String
   
   type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.transcribeserviceMod.ClientApiVersions
   
@@ -16,43 +25,52 @@ package object transcribeserviceMod {
   
   type FailureReason = java.lang.String
   
+  type IdentifiedLanguageScore = scala.Double
+  
   type KMSKeyId = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
-    - typingsSlinky.awsSdk.awsSdkStrings.`en-US`
-    - typingsSlinky.awsSdk.awsSdkStrings.`es-US`
-    - typingsSlinky.awsSdk.awsSdkStrings.`en-AU`
-    - typingsSlinky.awsSdk.awsSdkStrings.`fr-CA`
-    - typingsSlinky.awsSdk.awsSdkStrings.`en-GB`
-    - typingsSlinky.awsSdk.awsSdkStrings.`de-DE`
-    - typingsSlinky.awsSdk.awsSdkStrings.`pt-BR`
-    - typingsSlinky.awsSdk.awsSdkStrings.`fr-FR`
-    - typingsSlinky.awsSdk.awsSdkStrings.`it-IT`
-    - typingsSlinky.awsSdk.awsSdkStrings.`ko-KR`
-    - typingsSlinky.awsSdk.awsSdkStrings.`es-ES`
-    - typingsSlinky.awsSdk.awsSdkStrings.`en-IN`
-    - typingsSlinky.awsSdk.awsSdkStrings.`hi-IN`
+    - typingsSlinky.awsSdk.awsSdkStrings.`af-ZA`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ar-AE`
     - typingsSlinky.awsSdk.awsSdkStrings.`ar-SA`
-    - typingsSlinky.awsSdk.awsSdkStrings.`ru-RU`
-    - typingsSlinky.awsSdk.awsSdkStrings.`zh-CN`
-    - typingsSlinky.awsSdk.awsSdkStrings.`nl-NL`
-    - typingsSlinky.awsSdk.awsSdkStrings.`id-ID`
-    - typingsSlinky.awsSdk.awsSdkStrings.`ta-IN`
-    - typingsSlinky.awsSdk.awsSdkStrings.`fa-IR`
-    - typingsSlinky.awsSdk.awsSdkStrings.`en-IE`
+    - typingsSlinky.awsSdk.awsSdkStrings.`cy-GB`
+    - typingsSlinky.awsSdk.awsSdkStrings.`da-DK`
+    - typingsSlinky.awsSdk.awsSdkStrings.`de-CH`
+    - typingsSlinky.awsSdk.awsSdkStrings.`de-DE`
     - typingsSlinky.awsSdk.awsSdkStrings.`en-AB`
+    - typingsSlinky.awsSdk.awsSdkStrings.`en-AU`
+    - typingsSlinky.awsSdk.awsSdkStrings.`en-GB`
+    - typingsSlinky.awsSdk.awsSdkStrings.`en-IE`
+    - typingsSlinky.awsSdk.awsSdkStrings.`en-IN`
+    - typingsSlinky.awsSdk.awsSdkStrings.`en-US`
     - typingsSlinky.awsSdk.awsSdkStrings.`en-WL`
+    - typingsSlinky.awsSdk.awsSdkStrings.`es-ES`
+    - typingsSlinky.awsSdk.awsSdkStrings.`es-US`
+    - typingsSlinky.awsSdk.awsSdkStrings.`fa-IR`
+    - typingsSlinky.awsSdk.awsSdkStrings.`fr-CA`
+    - typingsSlinky.awsSdk.awsSdkStrings.`fr-FR`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ga-IE`
+    - typingsSlinky.awsSdk.awsSdkStrings.`gd-GB`
+    - typingsSlinky.awsSdk.awsSdkStrings.`he-IL`
+    - typingsSlinky.awsSdk.awsSdkStrings.`hi-IN`
+    - typingsSlinky.awsSdk.awsSdkStrings.`id-ID`
+    - typingsSlinky.awsSdk.awsSdkStrings.`it-IT`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ja-JP`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ko-KR`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ms-MY`
+    - typingsSlinky.awsSdk.awsSdkStrings.`nl-NL`
+    - typingsSlinky.awsSdk.awsSdkStrings.`pt-BR`
     - typingsSlinky.awsSdk.awsSdkStrings.`pt-PT`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ru-RU`
+    - typingsSlinky.awsSdk.awsSdkStrings.`ta-IN`
     - typingsSlinky.awsSdk.awsSdkStrings.`te-IN`
     - typingsSlinky.awsSdk.awsSdkStrings.`tr-TR`
-    - typingsSlinky.awsSdk.awsSdkStrings.`de-CH`
-    - typingsSlinky.awsSdk.awsSdkStrings.`he-IL`
-    - typingsSlinky.awsSdk.awsSdkStrings.`ms-MY`
-    - typingsSlinky.awsSdk.awsSdkStrings.`ja-JP`
-    - typingsSlinky.awsSdk.awsSdkStrings.`ar-AE`
+    - typingsSlinky.awsSdk.awsSdkStrings.`zh-CN`
     - java.lang.String
   */
   type LanguageCode = typingsSlinky.awsSdk.transcribeserviceMod._LanguageCode | java.lang.String
+  
+  type LanguageOptions = js.Array[typingsSlinky.awsSdk.transcribeserviceMod.LanguageCode]
   
   type MaxAlternatives = scala.Double
   
@@ -65,6 +83,9 @@ package object transcribeserviceMod {
     - typingsSlinky.awsSdk.awsSdkStrings.mp4_
     - typingsSlinky.awsSdk.awsSdkStrings.wav_
     - typingsSlinky.awsSdk.awsSdkStrings.flac
+    - typingsSlinky.awsSdk.awsSdkStrings.ogg
+    - typingsSlinky.awsSdk.awsSdkStrings.amr
+    - typingsSlinky.awsSdk.awsSdkStrings.webm_
     - java.lang.String
   */
   type MediaFormat = typingsSlinky.awsSdk.transcribeserviceMod._MediaFormat | java.lang.String
@@ -73,9 +94,23 @@ package object transcribeserviceMod {
   
   type MedicalTranscriptionJobSummaries = js.Array[typingsSlinky.awsSdk.transcribeserviceMod.MedicalTranscriptionJobSummary]
   
+  type ModelName = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED
+    - java.lang.String
+  */
+  type ModelStatus = typingsSlinky.awsSdk.transcribeserviceMod._ModelStatus | java.lang.String
+  
+  type Models = js.Array[typingsSlinky.awsSdk.transcribeserviceMod.LanguageModel]
+  
   type NextToken = java.lang.String
   
   type OutputBucketName = java.lang.String
+  
+  type OutputKey = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.CUSTOMER_BUCKET
@@ -125,7 +160,7 @@ package object transcribeserviceMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.remove__
-    - typingsSlinky.awsSdk.awsSdkStrings.mask
+    - typingsSlinky.awsSdk.awsSdkStrings.mask__
     - java.lang.String
   */
   type VocabularyFilterMethod = typingsSlinky.awsSdk.transcribeserviceMod._VocabularyFilterMethod | java.lang.String

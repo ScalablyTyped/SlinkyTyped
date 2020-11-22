@@ -7,6 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object SpotifyApi {
   
   /**
+    * Add an item to the end of the user’s current playback queue.
+    *
+    * POST /v1/me/player/queue
+    * https://developer.spotify.com/documentation/web-api/reference/player/add-to-queue/
+    */
+  type AddToQueueResponse = typingsSlinky.spotifyApi.SpotifyApi.VoidResponse
+  
+  /**
     * Add Tracks to a Playlist
     * 
     * POST /v1/users/{user_id}/playlists/{playlist_id}/tracks

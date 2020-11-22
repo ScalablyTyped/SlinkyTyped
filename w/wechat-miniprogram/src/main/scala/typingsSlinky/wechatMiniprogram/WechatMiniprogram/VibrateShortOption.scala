@@ -15,12 +15,18 @@ trait VibrateShortOption extends js.Object {
   
   /** 接口调用成功的回调函数 */
   var success: js.UndefOr[VibrateShortSuccessCallback] = js.native
+  
+  /** 震动强度类型，有效值为：heavy、medium、light
+    *
+    * 最低基础库： `2.13.0` */
+  var `type`: String = js.native
 }
 object VibrateShortOption {
   
   @scala.inline
-  def apply(): VibrateShortOption = {
+  def apply(`type`: String): VibrateShortOption = {
     val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[VibrateShortOption]
   }
   
@@ -38,6 +44,9 @@ object VibrateShortOption {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setComplete(value: /* res */ GeneralCallbackResult => Unit): Self = this.set("complete", js.Any.fromFunction1(value))

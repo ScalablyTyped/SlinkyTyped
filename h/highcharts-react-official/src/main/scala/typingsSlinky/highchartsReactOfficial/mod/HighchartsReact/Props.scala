@@ -43,7 +43,7 @@ trait Props
     * Reference to the chart factory (Default: chart)
     */
   var constructorType: js.UndefOr[
-    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 79 */ js.Any
+    /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 81 */ js.Any
   ] = js.native
   
   /**
@@ -110,7 +110,7 @@ object Props {
     def deleteCallback: Self = this.set("callback", js.undefined)
     
     @scala.inline
-    def setConstructorType(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 79 */ js.Any): Self = this.set("constructorType", value.asInstanceOf[js.Any])
+    def setConstructorType(value: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 81 */ js.Any): Self = this.set("constructorType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteConstructorType: Self = this.set("constructorType", js.undefined)

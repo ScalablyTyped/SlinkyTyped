@@ -3,6 +3,7 @@ package typingsSlinky.babylonjs.postProcessesIndexMod
 import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,4 +22,12 @@ class FxaaPostProcess protected ()
     reusable: js.UndefOr[Boolean],
     textureType: js.UndefOr[Double]
   ) = this()
+}
+/* static members */
+@JSImport("babylonjs/PostProcesses/index", "FxaaPostProcess")
+@js.native
+object FxaaPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): typingsSlinky.babylonjs.fxaaPostProcessMod.FxaaPostProcess = js.native
 }

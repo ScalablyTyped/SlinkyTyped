@@ -11,7 +11,7 @@ trait MediaInfo extends js.Object {
     * Optional. Used to uniquely identity the resource. If passed in, the prompt uri will be cached against this resourceId
     * as a key.
     */
-  var resourceId: js.UndefOr[String] = js.native
+  var resourceId: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Path to the prompt that will be played. Currently supports only Wave file (.wav) format, single-channel, 16-bit samples
@@ -43,10 +43,13 @@ object MediaInfo {
     }
     
     @scala.inline
-    def setResourceId(value: String): Self = this.set("resourceId", value.asInstanceOf[js.Any])
+    def setResourceId(value: NullableOption[String]): Self = this.set("resourceId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResourceId: Self = this.set("resourceId", js.undefined)
+    
+    @scala.inline
+    def setResourceIdNull: Self = this.set("resourceId", null)
     
     @scala.inline
     def setUri(value: String): Self = this.set("uri", value.asInstanceOf[js.Any])

@@ -57,6 +57,8 @@ trait HTMLImageElement extends HTMLElement {
     */
   var isMap: scala.Boolean = js.native
   
+  var loading: java.lang.String = js.native
+  
   /**
     * Sets or retrieves a Uniform Resource Identifier (URI) to a long description of the object.
     */

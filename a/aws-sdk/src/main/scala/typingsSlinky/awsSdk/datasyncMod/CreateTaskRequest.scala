@@ -18,7 +18,7 @@ trait CreateTaskRequest extends js.Object {
   var DestinationLocationArn: LocationArn = js.native
   
   /**
-    * A list of filter rules that determines which files to exclude from a task. The list should contain a single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for example, "/folder1|/folder2"   
+    * A list of filter rules that determines which files to exclude from a task. The list should contain a single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for example, "/folder1|/folder2".   
     */
   var Excludes: js.UndefOr[FilterList] = js.native
   

@@ -1,7 +1,9 @@
 package typingsSlinky.antdMobileRn.modalNativeMod
 
+import slinky.core.SyntheticEvent
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
+import typingsSlinky.reactNative.anon.Layout
+import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.View
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AntmModal
   extends Component[IModalNativeProps, js.Any, js.Any] {
   
-  def onFooterLayout(e: LayoutChangeEvent): Unit = js.native
+  def onFooterLayout(e: SyntheticEvent[NodeHandle, Layout]): Unit = js.native
   
   var root: View | Null = js.native
   

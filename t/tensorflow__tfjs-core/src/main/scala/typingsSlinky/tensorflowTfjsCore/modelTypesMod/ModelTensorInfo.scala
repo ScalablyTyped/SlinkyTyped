@@ -13,6 +13,8 @@ trait ModelTensorInfo extends js.Object {
   var name: String = js.native
   
   var shape: js.UndefOr[js.Array[Double]] = js.native
+  
+  var tfDtype: js.UndefOr[String] = js.native
 }
 object ModelTensorInfo {
   
@@ -51,5 +53,11 @@ object ModelTensorInfo {
     
     @scala.inline
     def deleteShape: Self = this.set("shape", js.undefined)
+    
+    @scala.inline
+    def setTfDtype(value: String): Self = this.set("tfDtype", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTfDtype: Self = this.set("tfDtype", js.undefined)
   }
 }

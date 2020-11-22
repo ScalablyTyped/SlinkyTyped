@@ -10,7 +10,6 @@ package object mod {
   
   type AppearEventHandler[T] = typingsSlinky.rax.mod.EventHandler[typingsSlinky.rax.mod.AppearEvent[T]]
   
-  // tslint:disable-next-line:no-empty-interface
   type AudioHTMLAttributes[T] = typingsSlinky.rax.mod.MediaHTMLAttributes[T]
   
   type CElement[P, T /* <: typingsSlinky.rax.mod.Component[P, typingsSlinky.rax.mod.ComponentState, _] */] = typingsSlinky.rax.mod.ComponentElement[P, T]
@@ -128,7 +127,6 @@ package object mod {
   
   type FocusEventHandler[T] = typingsSlinky.rax.mod.EventHandler[typingsSlinky.rax.mod.FocusEvent[T]]
   
-  // tslint:disable-next-line:no-empty-interface
   type FormEvent[T] = typingsSlinky.rax.mod.SyntheticEvent[T, org.scalajs.dom.raw.Event]
   
   type FormEventHandler[T] = typingsSlinky.rax.mod.EventHandler[typingsSlinky.rax.mod.FormEvent[T]]
@@ -182,7 +180,6 @@ package object mod {
   
   type HTMLEmbedElement = org.scalajs.dom.raw.HTMLElement
   
-  // tslint:disable-next-line:no-empty-interface
   type HTMLFactory[T /* <: org.scalajs.dom.raw.Element */] = typingsSlinky.rax.mod.DetailedHTMLFactory[typingsSlinky.rax.mod.AllHTMLAttributes[T], T]
   
   type HTMLFieldSetElement = org.scalajs.dom.raw.HTMLElement

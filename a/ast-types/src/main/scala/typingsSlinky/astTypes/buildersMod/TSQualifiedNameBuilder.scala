@@ -6,14 +6,15 @@ import typingsSlinky.astTypes.kindsMod.TSQualifiedNameKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSQualifiedName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TSQualifiedNameBuilder extends js.Object {
+  
   def apply(left: IdentifierKind, right: IdentifierKind): TSQualifiedName = js.native
   def apply(left: IdentifierKind, right: TSQualifiedNameKind): TSQualifiedName = js.native
   def apply(left: TSQualifiedNameKind, right: IdentifierKind): TSQualifiedName = js.native
   def apply(left: TSQualifiedNameKind, right: TSQualifiedNameKind): TSQualifiedName = js.native
+  
   def from(params: CommentsLeftLoc): TSQualifiedName = js.native
 }
-

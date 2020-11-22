@@ -11,9 +11,9 @@ object Component extends js.Object {
   /**
     * Register component
     *
-    * @param {Object<iComponent>} component - component config
+    * @param component - component config
     *
-    * @returns {ngESDecorator} - decorated class
+    * @returns decorated class
     */
   def apply(component: iComponent): ngESDecorator = js.native
 }

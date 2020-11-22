@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createSuper extends js.Object {
   
+  /** @deprecated Use `factory.createSuper` or the factory supplied by your transformation context instead. */
   def apply(): SuperExpression = js.native
 }

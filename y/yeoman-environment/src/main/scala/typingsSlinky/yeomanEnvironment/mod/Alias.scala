@@ -4,11 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Represents an alias.
+  */
 @js.native
 trait Alias extends js.Object {
   
+  /**
+    * The pattern to match.
+    */
   var `match`: js.RegExp = js.native
   
+  /**
+    * The replacement of the `match`.
+    */
   var value: String = js.native
 }
 object Alias {

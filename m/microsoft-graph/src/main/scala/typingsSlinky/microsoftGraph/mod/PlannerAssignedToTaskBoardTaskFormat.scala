@@ -11,14 +11,14 @@ trait PlannerAssignedToTaskBoardTaskFormat extends Entity {
     * Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the
     * users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
     */
-  var orderHintsByAssignee: js.UndefOr[PlannerOrderHintsByAssignee] = js.native
+  var orderHintsByAssignee: js.UndefOr[NullableOption[PlannerOrderHintsByAssignee]] = js.native
   
   /**
     * Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or
     * if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format
     * is defined as outlined here.
     */
-  var unassignedOrderHint: js.UndefOr[String] = js.native
+  var unassignedOrderHint: js.UndefOr[NullableOption[String]] = js.native
 }
 object PlannerAssignedToTaskBoardTaskFormat {
   
@@ -44,15 +44,21 @@ object PlannerAssignedToTaskBoardTaskFormat {
     }
     
     @scala.inline
-    def setOrderHintsByAssignee(value: PlannerOrderHintsByAssignee): Self = this.set("orderHintsByAssignee", value.asInstanceOf[js.Any])
+    def setOrderHintsByAssignee(value: NullableOption[PlannerOrderHintsByAssignee]): Self = this.set("orderHintsByAssignee", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrderHintsByAssignee: Self = this.set("orderHintsByAssignee", js.undefined)
     
     @scala.inline
-    def setUnassignedOrderHint(value: String): Self = this.set("unassignedOrderHint", value.asInstanceOf[js.Any])
+    def setOrderHintsByAssigneeNull: Self = this.set("orderHintsByAssignee", null)
+    
+    @scala.inline
+    def setUnassignedOrderHint(value: NullableOption[String]): Self = this.set("unassignedOrderHint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUnassignedOrderHint: Self = this.set("unassignedOrderHint", js.undefined)
+    
+    @scala.inline
+    def setUnassignedOrderHintNull: Self = this.set("unassignedOrderHint", null)
   }
 }

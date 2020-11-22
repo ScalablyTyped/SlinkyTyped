@@ -9,13 +9,13 @@ trait DefinedNamesRanges extends js.Object {
   
   var name: String = js.native
   
-  var range: js.Array[String] = js.native
+  var ranges: js.Array[String] = js.native
 }
 object DefinedNamesRanges {
   
   @scala.inline
-  def apply(name: String, range: js.Array[String]): DefinedNamesRanges = {
-    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], range = range.asInstanceOf[js.Any])
+  def apply(name: String, ranges: js.Array[String]): DefinedNamesRanges = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], ranges = ranges.asInstanceOf[js.Any])
     __obj.asInstanceOf[DefinedNamesRanges]
   }
   
@@ -38,9 +38,9 @@ object DefinedNamesRanges {
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRangeVarargs(value: String*): Self = this.set("range", js.Array(value :_*))
+    def setRangesVarargs(value: String*): Self = this.set("ranges", js.Array(value :_*))
     
     @scala.inline
-    def setRange(value: js.Array[String]): Self = this.set("range", value.asInstanceOf[js.Any])
+    def setRanges(value: js.Array[String]): Self = this.set("ranges", value.asInstanceOf[js.Any])
   }
 }

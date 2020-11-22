@@ -46,6 +46,9 @@ object SelectButton {
     def onChange(value: /* e */ Target => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     
     @scala.inline
+    def optionDisabled(value: String): this.type = set("optionDisabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def optionLabel(value: String): this.type = set("optionLabel", value.asInstanceOf[js.Any])
     
     @scala.inline

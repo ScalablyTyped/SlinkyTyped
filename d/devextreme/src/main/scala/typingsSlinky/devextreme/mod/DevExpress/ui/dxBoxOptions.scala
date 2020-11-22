@@ -17,20 +17,30 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxBoxOptions extends CollectionWidgetOptions[dxBox] {
   
-  /** @name dxBox.Options.align */
+  /**
+    * [descr:dxBox.Options.align]
+    */
   var align: js.UndefOr[center | end | `space-around` | `space-between` | start] = js.native
   
-  /** @name dxBox.Options.crossAlign */
+  /**
+    * [descr:dxBox.Options.crossAlign]
+    */
   var crossAlign: js.UndefOr[center | end | start | stretch] = js.native
   
-  /** @name dxBox.Options.dataSource */
+  /**
+    * [descr:dxBox.Options.dataSource]
+    */
   @JSName("dataSource")
   var dataSource_dxBoxOptions: js.UndefOr[String | (js.Array[String | dxBoxItem | _]) | DataSource | DataSourceOptions] = js.native
   
-  /** @name dxBox.Options.direction */
+  /**
+    * [descr:dxBox.Options.direction]
+    */
   var direction: js.UndefOr[col | row] = js.native
   
-  /** @name dxBox.Options.items */
+  /**
+    * [descr:dxBox.Options.items]
+    */
   @JSName("items")
   var items_dxBoxOptions: js.UndefOr[js.Array[String | dxBoxItem | _]] = js.native
 }

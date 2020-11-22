@@ -24,7 +24,7 @@ trait GetAllCodesOfConduct extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /codes_of_conduct']['response'] */ js.Any
   ] = js.native
   @JSName("getAllCodesOfConduct")
-  var getAllCodesOfConduct_Original: `117` = js.native
+  var getAllCodesOfConduct_Original: `120` = js.native
   
   def getConductCode(): js.Promise[
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /codes_of_conduct/:key']['response'] */ js.Any
@@ -38,7 +38,7 @@ trait GetAllCodesOfConduct extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: @octokit/types.@octokit/types/dist-types/generated/Endpoints.Endpoints['GET /codes_of_conduct/:key']['response'] */ js.Any
   ] = js.native
   @JSName("getConductCode")
-  var getConductCode_Original: `118` = js.native
+  var getConductCode_Original: `121` = js.native
   
   /**
     * This method returns the contents of the repository's code of conduct file, if one is detected.
@@ -58,5 +58,5 @@ trait GetAllCodesOfConduct extends js.Object {
     * This method returns the contents of the repository's code of conduct file, if one is detected.
     */
   @JSName("getForRepo")
-  var getForRepo_Original: `119` = js.native
+  var getForRepo_Original: `122` = js.native
 }

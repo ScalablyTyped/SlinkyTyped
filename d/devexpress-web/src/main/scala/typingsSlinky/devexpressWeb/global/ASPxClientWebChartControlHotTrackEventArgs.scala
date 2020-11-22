@@ -11,6 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ASPxClientWebChartControlHotTrackEventArgs protected ()
   extends typingsSlinky.devexpressWeb.ASPxClientWebChartControlHotTrackEventArgs {
+  /**
+    * Initializes a new instance of the ASPxClientWebChartControlHotTrackEventArgs class with specified settings.
+    */
   def this(
     processOnServer: Boolean,
     hitObject: typingsSlinky.devexpressWeb.ASPxClientWebChartElement,

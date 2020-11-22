@@ -12,7 +12,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/module-security relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/module-security relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.unitsMod.IModelUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.securityMod.security.IModuleSecurity because var conflicts: id, isLoadable, isLoaded, isReadOnly, model, structureTypeName, unit. Inlined containerAsModule, moduleRoles */ @JSImport("mendixmodelsdk/dist/gen/security", "security.ModuleSecurity")
 @js.native
-class ModuleSecurity protected () extends ModelUnit {
+class ModuleSecurity protected () extends ModelUnit[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
@@ -34,9 +34,6 @@ class ModuleSecurity protected () extends ModelUnit {
   def containerAsModule: Module = js.native
   @JSName("containerAsModule")
   val containerAsModule_FModuleSecurity: IModule = js.native
-  
-  @JSName("model")
-  var model_FModuleSecurity: IModel = js.native
   
   def moduleRoles: IList[ModuleRole] = js.native
   @JSName("moduleRoles")

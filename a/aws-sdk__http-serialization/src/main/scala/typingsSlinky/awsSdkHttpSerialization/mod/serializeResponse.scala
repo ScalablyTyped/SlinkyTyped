@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object serializeResponse extends js.Object {
   
-  def apply(response: HttpResponse[_]): String = js.native
+  def apply(response: HttpResponse): String = js.native
 }

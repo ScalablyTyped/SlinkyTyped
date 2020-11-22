@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object listGroupItemTextMod {
   
-  type ListGroupItemText[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.listGroupItemTextMod.ListGroupItemTextProps]
+  type ListGroupItemText = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.listGroupItemTextMod.ListGroupItemTextProps]
 }

@@ -1,5 +1,6 @@
 package typingsSlinky.node.processMod.global.NodeJS
 
+import typingsSlinky.node.NodeJS.Module
 import typingsSlinky.node.anon.Debug
 import typingsSlinky.node.anon.ReadStreamfd0
 import typingsSlinky.node.anon.SwallowErrors
@@ -29,7 +30,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Process extends EventEmitter {
   
-  def abort(): Unit = js.native
+  def abort(): scala.Nothing = js.native
   
   def addListener(event: Signals, listener: SignalsListener): this.type = js.native
   /* EventEmitter */
@@ -185,6 +186,9 @@ trait Process extends EventEmitter {
   def listeners_unhandledRejection(event: unhandledRejection): js.Array[UnhandledRejectionListener] = js.native
   @JSName("listeners")
   def listeners_warning(event: warning): js.Array[WarningListener] = js.native
+  
+  /** @deprecated since v14.0.0 - use `require.main` instead. */
+  var mainModule: js.UndefOr[Module] = js.native
   
   def memoryUsage(): MemoryUsage = js.native
   
@@ -353,9 +357,18 @@ trait Process extends EventEmitter {
   
   var title: String = js.native
   
+  var traceDeprecation: Boolean = js.native
+  
+  /**
+    * @deprecated since v14.0.0 - Calling process.umask() with no argument causes
+    * the process-wide umask to be written twice. This introduces a race condition between threads,
+    * and is a potential security vulnerability. There is no safe, cross-platform alternative API.
+    */
+  def umask(): Double = js.native
   /**
     * Can only be set if not in worker thread.
     */
+  def umask(mask: String): Double = js.native
   def umask(mask: Double): Double = js.native
   
   def uptime(): Double = js.native

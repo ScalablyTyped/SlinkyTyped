@@ -2,11 +2,13 @@ package typingsSlinky.babylonjs
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.babylonjs.effectMod.Effect
+import typingsSlinky.babylonjs.engineRenderTargetMod.RenderTargetTextureSize
 import typingsSlinky.babylonjs.mathColorMod.Color3
 import typingsSlinky.babylonjs.mathColorMod.Color4
 import typingsSlinky.babylonjs.mathVectorMod.Matrix
 import typingsSlinky.babylonjs.mathVectorMod.Vector2
 import typingsSlinky.babylonjs.mathVectorMod.Vector3
+import typingsSlinky.babylonjs.nodeMaterialMod.NodeMaterial
 import typingsSlinky.babylonjs.observableMod.Observable
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.textureMod.Texture
@@ -25,7 +27,7 @@ object proceduralTextureMod extends js.Object {
       * Instantiates a new procedural texture.
       * Procedural texturing is a way to programmatically create a texture. There are 2 types of procedural textures: code-only, and code that references some classic 2D images, sometimes called 'refMaps' or 'sampler' images.
       * This is the base class of any Procedural texture and contains most of the shareable code.
-      * @see http://doc.babylonjs.com/how_to/how_to_use_procedural_textures
+      * @see https://doc.babylonjs.com/how_to/how_to_use_procedural_textures
       * @param name  Define the name of the texture
       * @param size Define the size of the texture to create
       * @param fragment Define the fragment shader to use to generate the texture or null if it is defined later
@@ -33,18 +35,19 @@ object proceduralTextureMod extends js.Object {
       * @param fallbackTexture Define a fallback texture in case there were issues to create the custom texture
       * @param generateMipMaps Define if the texture should creates mip maps or not
       * @param isCube Define if the texture is a cube texture or not (this will render each faces of the cube)
+      * @param textureType The FBO internal texture type
       */
-    def this(name: String, size: js.Any, fragment: js.Any, scene: Nullable[Scene]) = this()
+    def this(name: String, size: RenderTargetTextureSize, fragment: js.Any, scene: Nullable[Scene]) = this()
     def this(
       name: String,
-      size: js.Any,
+      size: RenderTargetTextureSize,
       fragment: js.Any,
       scene: Nullable[Scene],
       fallbackTexture: Nullable[Texture]
     ) = this()
     def this(
       name: String,
-      size: js.Any,
+      size: RenderTargetTextureSize,
       fragment: js.Any,
       scene: Nullable[Scene],
       fallbackTexture: js.UndefOr[Nullable[Texture]],
@@ -52,7 +55,7 @@ object proceduralTextureMod extends js.Object {
     ) = this()
     def this(
       name: String,
-      size: js.Any,
+      size: RenderTargetTextureSize,
       fragment: js.Any,
       scene: Nullable[Scene],
       fallbackTexture: js.UndefOr[Nullable[Texture]],
@@ -61,12 +64,52 @@ object proceduralTextureMod extends js.Object {
     ) = this()
     def this(
       name: String,
-      size: js.Any,
+      size: RenderTargetTextureSize,
       fragment: js.Any,
       scene: Nullable[Scene],
       fallbackTexture: js.UndefOr[Nullable[Texture]],
       generateMipMaps: Boolean,
       isCube: Boolean
+    ) = this()
+    def this(
+      name: String,
+      size: RenderTargetTextureSize,
+      fragment: js.Any,
+      scene: Nullable[Scene],
+      fallbackTexture: js.UndefOr[Nullable[Texture]],
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      isCube: js.UndefOr[scala.Nothing],
+      textureType: Double
+    ) = this()
+    def this(
+      name: String,
+      size: RenderTargetTextureSize,
+      fragment: js.Any,
+      scene: Nullable[Scene],
+      fallbackTexture: js.UndefOr[Nullable[Texture]],
+      generateMipMaps: js.UndefOr[scala.Nothing],
+      isCube: Boolean,
+      textureType: Double
+    ) = this()
+    def this(
+      name: String,
+      size: RenderTargetTextureSize,
+      fragment: js.Any,
+      scene: Nullable[Scene],
+      fallbackTexture: js.UndefOr[Nullable[Texture]],
+      generateMipMaps: Boolean,
+      isCube: js.UndefOr[scala.Nothing],
+      textureType: Double
+    ) = this()
+    def this(
+      name: String,
+      size: RenderTargetTextureSize,
+      fragment: js.Any,
+      scene: Nullable[Scene],
+      fallbackTexture: js.UndefOr[Nullable[Texture]],
+      generateMipMaps: Boolean,
+      isCube: Boolean,
+      textureType: Double
     ) = this()
     
     var _cachedDefines: js.Any = js.native
@@ -88,9 +131,8 @@ object proceduralTextureMod extends js.Object {
     /** @hidden **/
     var _effect: Effect = js.native
     
-    var _engine: js.Any = js.native
-    
-    var _fallbackTexture: js.Any = js.native
+    /** @hidden */
+    var _fallbackTexture: Nullable[Texture] = js.native
     
     var _fallbackTextureUsed: js.Any = js.native
     
@@ -101,6 +143,8 @@ object proceduralTextureMod extends js.Object {
     var _fragment: js.Any = js.native
     
     var _frameId: js.Any = js.native
+    
+    var _fullEngine: js.Any = js.native
     
     /** @hidden */
     var _generateMipMaps: Boolean = js.native
@@ -152,17 +196,24 @@ object proceduralTextureMod extends js.Object {
     
     /**
       * Get the size the texture is rendering at.
-      * @returns the size (texture is always squared)
+      * @returns the size (on cube texture it is always squared)
       */
-    def getRenderSize(): Double = js.native
-    
-    @JSName("isCube")
-    var isCube_FProceduralTexture: Boolean = js.native
+    def getRenderSize(): RenderTargetTextureSize = js.native
     
     /**
       * Define if the texture is enabled or not (disabled texture will not render)
       */
     var isEnabled: Boolean = js.native
+    
+    /**
+      * Gets or sets the node material used to create this texture (null if the texture was manually created)
+      */
+    var nodeMaterialSource: Nullable[NodeMaterial] = js.native
+    
+    /**
+      * Event raised before the texture is generated
+      */
+    var onBeforeGenerationObservable: Observable[ProceduralTexture] = js.native
     
     /**
       * Callback called when the texture is generated

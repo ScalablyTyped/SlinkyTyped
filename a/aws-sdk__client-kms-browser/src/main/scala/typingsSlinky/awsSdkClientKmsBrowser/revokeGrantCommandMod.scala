@@ -1,12 +1,10 @@
 package typingsSlinky.awsSdkClientKmsBrowser
 
-import org.scalajs.dom.raw.Blob
 import typingsSlinky.awsSdkClientKmsBrowser.inputTypesUnionMod.InputTypesUnion
 import typingsSlinky.awsSdkClientKmsBrowser.kmsconfigurationMod.KMSResolvedConfiguration
 import typingsSlinky.awsSdkClientKmsBrowser.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientKmsBrowser.typesRevokeGrantInputMod.RevokeGrantInput
 import typingsSlinky.awsSdkClientKmsBrowser.typesRevokeGrantOutputMod.RevokeGrantOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
 import scala.scalajs.js
@@ -23,15 +21,12 @@ object revokeGrantCommandMod extends js.Object {
           RevokeGrantInput, 
           OutputTypesUnion, 
           RevokeGrantOutput, 
-          KMSResolvedConfiguration, 
-          Blob
+          KMSResolvedConfiguration
         ] {
     def this(input: RevokeGrantInput) = this()
     
-    val middlewareStack: MiddlewareStack[RevokeGrantInput, RevokeGrantOutput, Blob] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, Blob> */ js.Any,
       configuration: KMSResolvedConfiguration
     ): Handler[RevokeGrantInput, RevokeGrantOutput] = js.native
   }

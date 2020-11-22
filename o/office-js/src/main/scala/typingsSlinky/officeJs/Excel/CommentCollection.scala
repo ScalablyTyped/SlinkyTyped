@@ -5,6 +5,7 @@ import typingsSlinky.officeJs.Excel.Interfaces.CommentCollectionData
 import typingsSlinky.officeJs.Excel.Interfaces.CommentCollectionLoadOptions
 import typingsSlinky.officeJs.OfficeExtension.ClientObject
 import typingsSlinky.officeJs.OfficeExtension.ClientResult
+import typingsSlinky.officeJs.OfficeExtension.EventHandlers
 import typingsSlinky.officeJs.OfficeExtension.LoadOption
 import typingsSlinky.officeJs.officeJsStrings.Mention
 import typingsSlinky.officeJs.officeJsStrings.Plain
@@ -116,6 +117,36 @@ trait CommentCollection extends ClientObject {
   def load(propertyNamesAndPaths: LoadOption): CommentCollection = js.native
   def load(propertyNames: String): CommentCollection = js.native
   def load(propertyNames: js.Array[String]): CommentCollection = js.native
+  
+  /**
+    *
+    * Occurs when the comments are added.
+    *
+    * [Api set: ExcelApi 1.12]
+    *
+    * @eventproperty
+    */
+  val onAdded: EventHandlers[CommentAddedEventArgs] = js.native
+  
+  /**
+    *
+    * Occurs when comments or replies in a comment collection are changed, including when replies are deleted.
+    *
+    * [Api set: ExcelApi 1.12]
+    *
+    * @eventproperty
+    */
+  val onChanged: EventHandlers[CommentChangedEventArgs] = js.native
+  
+  /**
+    *
+    * Occurs when comments are deleted in the comment collection.
+    *
+    * [Api set: ExcelApi 1.12]
+    *
+    * @eventproperty
+    */
+  val onDeleted: EventHandlers[CommentDeletedEventArgs] = js.native
   
   /**
     * Overrides the JavaScript `toJSON()` method in order to provide more useful output when an API object is passed to `JSON.stringify()`. (`JSON.stringify`, in turn, calls the `toJSON` method of the object that is passed to it.)

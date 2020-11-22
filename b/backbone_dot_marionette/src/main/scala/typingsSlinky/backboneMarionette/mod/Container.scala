@@ -85,7 +85,7 @@ class Container[TView] () extends js.Object {
   /**
     * Find a view by model.
     */
-  def findByModel(model: Model[_, ModelSetOptions]): TView = js.native
+  def findByModel(model: Model[_, ModelSetOptions, js.Object]): TView = js.native
   
   /**
     * Find a view by model cid.

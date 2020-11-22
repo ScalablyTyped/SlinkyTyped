@@ -1,7 +1,5 @@
 package typingsSlinky.realm.Realm
 
-import typingsSlinky.realm.Realm.Sync.Subscription
-import typingsSlinky.realm.Realm.Sync.SubscriptionOptions
 import typingsSlinky.std.ReadonlyArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -72,15 +70,13 @@ trait Collection[T] extends ReadonlyArray[T] {
   def sorted(descriptor: js.Array[SortDescriptor]): Results[T] = js.native
   def sorted(reverse: Boolean): Results[T] = js.native
   
-  /**
-    * @returns Results<T>
-    */
-  def subscribe(): Subscription = js.native
-  def subscribe(options: SubscriptionOptions): Subscription = js.native
-  def subscribe(subscriptionName: String): Subscription = js.native
-  
   def sum(): Double | Null = js.native
   def sum(property: String): Double | Null = js.native
+  
+  /**
+    * @returns An object for JSON serialization.
+    */
+  def toJSON(): js.Array[_] = js.native
   
   val `type`: PropertyType = js.native
 }

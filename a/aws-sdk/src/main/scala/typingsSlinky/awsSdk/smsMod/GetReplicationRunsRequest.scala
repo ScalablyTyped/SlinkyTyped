@@ -18,7 +18,7 @@ trait GetReplicationRunsRequest extends js.Object {
   var nextToken: js.UndefOr[NextToken] = js.native
   
   /**
-    * The identifier of the replication job.
+    * The ID of the replication job.
     */
   var replicationJobId: ReplicationJobId = js.native
 }

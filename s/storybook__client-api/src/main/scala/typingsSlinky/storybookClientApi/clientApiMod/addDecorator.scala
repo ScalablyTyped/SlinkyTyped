@@ -9,5 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object addDecorator extends js.Object {
   
-  def apply(decoratorFn: DecoratorFunction[_]): Unit = js.native
+  def apply(decorator: DecoratorFunction[_]): Unit = js.native
+  def apply(decorator: DecoratorFunction[_], deprecationWarning: Boolean): Unit = js.native
 }

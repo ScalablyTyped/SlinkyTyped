@@ -164,6 +164,12 @@ trait CompressOptions extends js.Object {
   var loops: js.UndefOr[Boolean] = js.native
   
   /**
+    * combine and reuse variables.
+    * @default true
+    */
+  var merge_vars: js.UndefOr[Boolean] = js.native
+  
+  /**
     * negate `Immediately-Called Function Expressions` where the return value is discarded,
     * to avoid the parens that the code generator would insert.
     * @default true
@@ -327,6 +333,13 @@ trait CompressOptions extends js.Object {
     * @default true
     */
   var unused: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * convert block-scoped declaractions into `var`
+    * whenever safe to do so
+    * @default true
+    */
+  var varify: js.UndefOr[Boolean] = js.native
 }
 object CompressOptions {
   
@@ -496,6 +509,12 @@ object CompressOptions {
     def deleteLoops: Self = this.set("loops", js.undefined)
     
     @scala.inline
+    def setMerge_vars(value: Boolean): Self = this.set("merge_vars", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMerge_vars: Self = this.set("merge_vars", js.undefined)
+    
+    @scala.inline
     def setNegate_iife(value: Boolean): Self = this.set("negate_iife", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -641,5 +660,11 @@ object CompressOptions {
     
     @scala.inline
     def deleteUnused: Self = this.set("unused", js.undefined)
+    
+    @scala.inline
+    def setVarify(value: Boolean): Self = this.set("varify", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVarify: Self = this.set("varify", js.undefined)
   }
 }

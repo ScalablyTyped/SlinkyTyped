@@ -11,6 +11,10 @@ trait State extends js.Object {
   
   var start: Double = js.native
   
+  var traceX: Trace = js.native
+  
+  var traceY: Trace = js.native
+  
   var x: Double = js.native
   
   var y: Double = js.native
@@ -18,8 +22,8 @@ trait State extends js.Object {
 object State {
   
   @scala.inline
-  def apply(isSwiping: Boolean, start: Double, x: Double, y: Double): State = {
-    val __obj = js.Dynamic.literal(isSwiping = isSwiping.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
+  def apply(isSwiping: Boolean, start: Double, traceX: Trace, traceY: Trace, x: Double, y: Double): State = {
+    val __obj = js.Dynamic.literal(isSwiping = isSwiping.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], traceX = traceX.asInstanceOf[js.Any], traceY = traceY.asInstanceOf[js.Any], x = x.asInstanceOf[js.Any], y = y.asInstanceOf[js.Any])
     __obj.asInstanceOf[State]
   }
   
@@ -43,6 +47,18 @@ object State {
     
     @scala.inline
     def setStart(value: Double): Self = this.set("start", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTraceXVarargs(value: Double*): Self = this.set("traceX", js.Array(value :_*))
+    
+    @scala.inline
+    def setTraceX(value: Trace): Self = this.set("traceX", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTraceYVarargs(value: Double*): Self = this.set("traceY", js.Array(value :_*))
+    
+    @scala.inline
+    def setTraceY(value: Trace): Self = this.set("traceY", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setX(value: Double): Self = this.set("x", value.asInstanceOf[js.Any])

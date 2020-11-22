@@ -6,8 +6,8 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.li.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.baseui.listMod.ArtworkSizesT
+import typingsSlinky.baseui.listMod.ListOverrides
 import typingsSlinky.baseui.listMod.MenuAdapterPropsT
-import typingsSlinky.baseui.listMod.OverridesT
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -39,7 +39,7 @@ object MenuAdapter {
     def endEnhancer(value: ReactElement): this.type = set("endEnhancer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def overrides(value: OverridesT): this.type = set("overrides", value.asInstanceOf[js.Any])
+    def overrides(value: ListOverrides): this.type = set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def sublist(value: Boolean): this.type = set("sublist", value.asInstanceOf[js.Any])

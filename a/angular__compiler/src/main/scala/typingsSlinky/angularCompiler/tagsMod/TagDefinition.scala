@@ -20,6 +20,8 @@ trait TagDefinition extends js.Object {
   def isClosedByChild(name: String): Boolean = js.native
   
   var isVoid: Boolean = js.native
+  
+  var preventNamespaceInheritance: Boolean = js.native
 }
 object TagDefinition {
   
@@ -30,9 +32,10 @@ object TagDefinition {
     contentType: TagContentType,
     ignoreFirstLf: Boolean,
     isClosedByChild: String => Boolean,
-    isVoid: Boolean
+    isVoid: Boolean,
+    preventNamespaceInheritance: Boolean
   ): TagDefinition = {
-    val __obj = js.Dynamic.literal(canSelfClose = canSelfClose.asInstanceOf[js.Any], closedByParent = closedByParent.asInstanceOf[js.Any], contentType = contentType.asInstanceOf[js.Any], ignoreFirstLf = ignoreFirstLf.asInstanceOf[js.Any], isClosedByChild = js.Any.fromFunction1(isClosedByChild), isVoid = isVoid.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(canSelfClose = canSelfClose.asInstanceOf[js.Any], closedByParent = closedByParent.asInstanceOf[js.Any], contentType = contentType.asInstanceOf[js.Any], ignoreFirstLf = ignoreFirstLf.asInstanceOf[js.Any], isClosedByChild = js.Any.fromFunction1(isClosedByChild), isVoid = isVoid.asInstanceOf[js.Any], preventNamespaceInheritance = preventNamespaceInheritance.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagDefinition]
   }
   
@@ -68,6 +71,9 @@ object TagDefinition {
     
     @scala.inline
     def setIsVoid(value: Boolean): Self = this.set("isVoid", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setPreventNamespaceInheritance(value: Boolean): Self = this.set("preventNamespaceInheritance", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setImplicitNamespacePrefix(value: String): Self = this.set("implicitNamespacePrefix", value.asInstanceOf[js.Any])

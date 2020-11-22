@@ -19,21 +19,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AsyncRule extends js.Object {
   
-  /** @name AsyncRule.ignoreEmptyValue */
+  /**
+    * [descr:AsyncRule.ignoreEmptyValue]
+    */
   var ignoreEmptyValue: js.UndefOr[Boolean] = js.native
   
-  /** @name AsyncRule.message */
+  /**
+    * [descr:AsyncRule.message]
+    */
   var message: js.UndefOr[String] = js.native
   
-  /** @name AsyncRule.reevaluate */
+  /**
+    * [descr:AsyncRule.reevaluate]
+    */
   var reevaluate: js.UndefOr[Boolean] = js.native
   
-  /** @name AsyncRule.type */
+  /**
+    * [descr:AsyncRule.type]
+    */
   var `type`: js.UndefOr[
     required | numeric | range | stringLength | custom | compare | pattern | email | async
   ] = js.native
   
-  /** @name AsyncRule.validationCallback */
+  /**
+    * [descr:AsyncRule.validationCallback]
+    */
   var validationCallback: js.UndefOr[js.Function1[/* options */ Column, Promise[_] | JQueryPromise[_]]] = js.native
 }
 object AsyncRule {

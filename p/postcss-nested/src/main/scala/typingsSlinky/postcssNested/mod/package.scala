@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type Nested = typingsSlinky.postcss.mod.Plugin_[typingsSlinky.postcssNested.mod.Options]
+  type Nested = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PluginCreator<Options> */ js.Any
 }

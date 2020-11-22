@@ -29,5 +29,5 @@ object mod extends js.Object {
   // export = filenamifyUrl;
   var default: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof filenamifyUrl */ js.Any = js.native
   
-  type Options = typingsSlinky.filenamify.mod.Options
+  type Options = /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify FilenamifyOptions */ js.Any
 }

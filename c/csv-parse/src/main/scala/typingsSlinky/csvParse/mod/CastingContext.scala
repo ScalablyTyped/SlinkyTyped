@@ -11,6 +11,8 @@ trait CastingContext extends js.Object {
   
   val empty_lines: Double = js.native
   
+  val error: CsvError = js.native
+  
   val header: Boolean = js.native
   
   val index: Double = js.native
@@ -29,6 +31,7 @@ object CastingContext {
   def apply(
     column: Double | String,
     empty_lines: Double,
+    error: CsvError,
     header: Boolean,
     index: Double,
     invalid_field_length: Double,
@@ -36,7 +39,7 @@ object CastingContext {
     quoting: Boolean,
     records: Double
   ): CastingContext = {
-    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], empty_lines = empty_lines.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], invalid_field_length = invalid_field_length.asInstanceOf[js.Any], lines = lines.asInstanceOf[js.Any], quoting = quoting.asInstanceOf[js.Any], records = records.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any], empty_lines = empty_lines.asInstanceOf[js.Any], error = error.asInstanceOf[js.Any], header = header.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], invalid_field_length = invalid_field_length.asInstanceOf[js.Any], lines = lines.asInstanceOf[js.Any], quoting = quoting.asInstanceOf[js.Any], records = records.asInstanceOf[js.Any])
     __obj.asInstanceOf[CastingContext]
   }
   
@@ -60,6 +63,9 @@ object CastingContext {
     
     @scala.inline
     def setEmpty_lines(value: Double): Self = this.set("empty_lines", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setError(value: CsvError): Self = this.set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHeader(value: Boolean): Self = this.set("header", value.asInstanceOf[js.Any])

@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Rectangle extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/rectangle
+  // Docs: https://electronjs.org/docs/api/structures/rectangle
   /**
     * The height of the rectangle (must be an integer).
     */

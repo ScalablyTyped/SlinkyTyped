@@ -17,6 +17,8 @@ trait GraphicsDisplayData extends js.Object {
   
   var currentResY: Double = js.native
   
+  var deviceName: String = js.native
+  
   var main: Boolean = js.native
   
   var model: String = js.native
@@ -46,6 +48,7 @@ object GraphicsDisplayData {
     currentRefreshRate: Double,
     currentResX: Double,
     currentResY: Double,
+    deviceName: String,
     main: Boolean,
     model: String,
     pixeldepth: Double,
@@ -57,7 +60,7 @@ object GraphicsDisplayData {
     sizey: Double,
     vendor: String
   ): GraphicsDisplayData = {
-    val __obj = js.Dynamic.literal(builtin = builtin.asInstanceOf[js.Any], connection = connection.asInstanceOf[js.Any], currentRefreshRate = currentRefreshRate.asInstanceOf[js.Any], currentResX = currentResX.asInstanceOf[js.Any], currentResY = currentResY.asInstanceOf[js.Any], main = main.asInstanceOf[js.Any], model = model.asInstanceOf[js.Any], pixeldepth = pixeldepth.asInstanceOf[js.Any], positionX = positionX.asInstanceOf[js.Any], positionY = positionY.asInstanceOf[js.Any], resolutionx = resolutionx.asInstanceOf[js.Any], resolutiony = resolutiony.asInstanceOf[js.Any], sizex = sizex.asInstanceOf[js.Any], sizey = sizey.asInstanceOf[js.Any], vendor = vendor.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(builtin = builtin.asInstanceOf[js.Any], connection = connection.asInstanceOf[js.Any], currentRefreshRate = currentRefreshRate.asInstanceOf[js.Any], currentResX = currentResX.asInstanceOf[js.Any], currentResY = currentResY.asInstanceOf[js.Any], deviceName = deviceName.asInstanceOf[js.Any], main = main.asInstanceOf[js.Any], model = model.asInstanceOf[js.Any], pixeldepth = pixeldepth.asInstanceOf[js.Any], positionX = positionX.asInstanceOf[js.Any], positionY = positionY.asInstanceOf[js.Any], resolutionx = resolutionx.asInstanceOf[js.Any], resolutiony = resolutiony.asInstanceOf[js.Any], sizex = sizex.asInstanceOf[js.Any], sizey = sizey.asInstanceOf[js.Any], vendor = vendor.asInstanceOf[js.Any])
     __obj.asInstanceOf[GraphicsDisplayData]
   }
   
@@ -90,6 +93,9 @@ object GraphicsDisplayData {
     
     @scala.inline
     def setCurrentResY(value: Double): Self = this.set("currentResY", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDeviceName(value: String): Self = this.set("deviceName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setMain(value: Boolean): Self = this.set("main", value.asInstanceOf[js.Any])

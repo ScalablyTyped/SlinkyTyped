@@ -4,7 +4,7 @@ import typingsSlinky.jupyterlabRendermime.registryMod.RenderMimeRegistry.IOption
 import typingsSlinky.jupyterlabRendermime.registryMod.RenderMimeRegistry.IUrlResolverOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/rendermime", "RenderMimeRegistry")
 @js.native
@@ -17,21 +17,19 @@ class RenderMimeRegistry ()
   extends typingsSlinky.jupyterlabRendermime.registryMod.RenderMimeRegistry {
   def this(options: IOptions) = this()
 }
-
 @JSImport("@jupyterlab/rendermime", "RenderMimeRegistry")
 @js.native
 object RenderMimeRegistry extends js.Object {
+  
   /**
-    * A default resolver that uses a session and a contents manager.
+    * A default resolver that uses a given reference path and a contents manager.
     */
   @js.native
   class UrlResolver protected ()
     extends typingsSlinky.jupyterlabRendermime.registryMod.RenderMimeRegistry.UrlResolver {
     /**
-      * Create a new url resolver for a console.
+      * Create a new url resolver.
       */
     def this(options: IUrlResolverOptions) = this()
   }
-  
 }
-

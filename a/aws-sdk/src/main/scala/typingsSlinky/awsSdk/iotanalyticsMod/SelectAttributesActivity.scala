@@ -13,7 +13,7 @@ trait SelectAttributesActivity extends js.Object {
   var attributes: AttributeNames = js.native
   
   /**
-    * The name of the 'selectAttributes' activity.
+    * The name of the selectAttributes activity.
     */
   var name: ActivityName = js.native
   

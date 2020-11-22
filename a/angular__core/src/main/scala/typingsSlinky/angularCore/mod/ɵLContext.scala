@@ -21,7 +21,7 @@ trait ɵLContext extends js.Object {
   /**
     * The component's parent view data.
     */
-  var lView: ɵangularPackagesCoreCoreBp = js.native
+  var lView: ɵangularPackagesCoreCoreBv = js.native
   
   /**
     * The map of local references (local reference name => element or directive instance) that exist
@@ -42,7 +42,7 @@ trait ɵLContext extends js.Object {
 object ɵLContext {
   
   @scala.inline
-  def apply(lView: ɵangularPackagesCoreCoreBp, native: RNode, nodeIndex: Double): ɵLContext = {
+  def apply(lView: ɵangularPackagesCoreCoreBv, native: RNode, nodeIndex: Double): ɵLContext = {
     val __obj = js.Dynamic.literal(lView = lView.asInstanceOf[js.Any], native = native.asInstanceOf[js.Any], nodeIndex = nodeIndex.asInstanceOf[js.Any])
     __obj.asInstanceOf[ɵLContext]
   }
@@ -63,7 +63,7 @@ object ɵLContext {
     }
     
     @scala.inline
-    def setLView(value: ɵangularPackagesCoreCoreBp): Self = this.set("lView", value.asInstanceOf[js.Any])
+    def setLView(value: ɵangularPackagesCoreCoreBv): Self = this.set("lView", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNative(value: RNode): Self = this.set("native", value.asInstanceOf[js.Any])

@@ -17,6 +17,8 @@ trait Rule extends js.Object {
   
   var id: String = js.native
   
+  var impact: js.UndefOr[ImpactValue] = js.native
+  
   var matches: js.UndefOr[String] = js.native
   
   var none: js.UndefOr[js.Array[String]] = js.native
@@ -82,6 +84,15 @@ object Rule {
     
     @scala.inline
     def deleteExcludeHidden: Self = this.set("excludeHidden", js.undefined)
+    
+    @scala.inline
+    def setImpact(value: ImpactValue): Self = this.set("impact", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImpact: Self = this.set("impact", js.undefined)
+    
+    @scala.inline
+    def setImpactNull: Self = this.set("impact", null)
     
     @scala.inline
     def setMatches(value: String): Self = this.set("matches", value.asInstanceOf[js.Any])

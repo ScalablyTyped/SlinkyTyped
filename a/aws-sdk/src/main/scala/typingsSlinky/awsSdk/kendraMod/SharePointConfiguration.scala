@@ -13,6 +13,11 @@ trait SharePointConfiguration extends js.Object {
   var CrawlAttachments: js.UndefOr[Boolean] = js.native
   
   /**
+    * A Boolean value that specifies whether local groups are disabled (True) or enabled (False). 
+    */
+  var DisableLocalGroups: js.UndefOr[Boolean] = js.native
+  
+  /**
     * The Microsoft SharePoint attribute field that contains the title of the document.
     */
   var DocumentTitleFieldName: js.UndefOr[DataSourceFieldName] = js.native
@@ -94,6 +99,12 @@ object SharePointConfiguration {
     
     @scala.inline
     def deleteCrawlAttachments: Self = this.set("CrawlAttachments", js.undefined)
+    
+    @scala.inline
+    def setDisableLocalGroups(value: Boolean): Self = this.set("DisableLocalGroups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableLocalGroups: Self = this.set("DisableLocalGroups", js.undefined)
     
     @scala.inline
     def setDocumentTitleFieldName(value: DataSourceFieldName): Self = this.set("DocumentTitleFieldName", value.asInstanceOf[js.Any])

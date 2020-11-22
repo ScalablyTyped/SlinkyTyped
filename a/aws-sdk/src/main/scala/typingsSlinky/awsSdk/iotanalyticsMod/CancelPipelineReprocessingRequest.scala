@@ -13,7 +13,7 @@ trait CancelPipelineReprocessingRequest extends js.Object {
   var pipelineName: PipelineName = js.native
   
   /**
-    * The ID of the reprocessing task (returned by "StartPipelineReprocessing").
+    * The ID of the reprocessing task (returned by StartPipelineReprocessing).
     */
   var reprocessingId: ReprocessingId = js.native
 }

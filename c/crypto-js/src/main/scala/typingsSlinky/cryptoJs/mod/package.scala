@@ -6,9 +6,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type BlockCipher = typingsSlinky.cryptoJs.mod.Cipher
+  type CipherParams = typingsSlinky.cryptoJs.mod.global.CryptoJS.lib.CipherParams
   
-  type BufferedBlockAlgorithm = typingsSlinky.cryptoJs.mod.Base
+  type HasherHelper = js.Function2[
+    /* message */ typingsSlinky.cryptoJs.mod.WordArray | java.lang.String, 
+    /* cfg */ js.UndefOr[js.Object], 
+    typingsSlinky.cryptoJs.mod.WordArray
+  ]
   
-  type StreamCipher = typingsSlinky.cryptoJs.mod.Cipher
+  type HmacHasherHelper = js.Function2[
+    /* message */ typingsSlinky.cryptoJs.mod.WordArray | java.lang.String, 
+    /* key */ typingsSlinky.cryptoJs.mod.WordArray | java.lang.String, 
+    typingsSlinky.cryptoJs.mod.WordArray
+  ]
+  
+  type WordArray = typingsSlinky.cryptoJs.mod.global.CryptoJS.lib.WordArray
+  
+  type X64Word = typingsSlinky.cryptoJs.mod.global.CryptoJS.x64.Word
 }

@@ -23,6 +23,12 @@ class GeometryBufferRenderer protected ()
 object GeometryBufferRenderer extends js.Object {
   
   /**
+    * Constant used to retrieve the depth + normal texture index in the G-Buffer textures array
+    * using getIndex(GeometryBufferRenderer.DEPTHNORMAL_TEXTURE_INDEX)
+    */
+  val DEPTHNORMAL_TEXTURE_TYPE: Double = js.native
+  
+  /**
     * Constant used to retrieve the position texture index in the G-Buffer textures array
     * using getIndex(GeometryBufferRenderer.POSITION_TEXTURE_INDEX)
     */

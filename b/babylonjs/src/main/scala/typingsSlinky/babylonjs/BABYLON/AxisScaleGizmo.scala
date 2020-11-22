@@ -8,9 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait AxisScaleGizmo extends Gizmo {
   
-  var _arrow: js.Any = js.native
-  
   var _coloredMaterial: js.Any = js.native
+  
+  /** Create Geometry for Gizmo */
+  var _createGizmoMesh: js.Any = js.native
+  
+  var _disableMaterial: js.Any = js.native
+  
+  var _dragging: js.Any = js.native
+  
+  var _gizmoMesh: js.Any = js.native
   
   var _hoverMaterial: js.Any = js.native
   
@@ -19,6 +26,12 @@ trait AxisScaleGizmo extends Gizmo {
   var _parent: js.Any = js.native
   
   var _pointerObserver: js.Any = js.native
+  
+  var _tmpMatrix: js.Any = js.native
+  
+  var _tmpMatrix2: js.Any = js.native
+  
+  var _tmpVector: js.Any = js.native
   
   /**
     * Drag behavior responsible for the gizmos dragging interactions

@@ -7,10 +7,11 @@ import typingsSlinky.astTypes.kindsMod.TypeParameterDeclarationKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.FunctionTypeAnnotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait FunctionTypeAnnotationBuilder extends js.Object {
+  
   def apply(params: js.Array[FunctionTypeParamKind], returnType: FlowTypeKind): FunctionTypeAnnotation = js.native
   def apply(
     params: js.Array[FunctionTypeParamKind],
@@ -25,6 +26,6 @@ trait FunctionTypeAnnotationBuilder extends js.Object {
     rest: FunctionTypeParamKind,
     typeParameters: TypeParameterDeclarationKind
   ): FunctionTypeAnnotation = js.native
+  
   def from(params: Rest): FunctionTypeAnnotation = js.native
 }
-

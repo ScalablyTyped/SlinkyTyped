@@ -15,7 +15,7 @@ trait AlignContentProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends j
     */
   var alignContent: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignContentProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignContent */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object AlignContentProps {
     @scala.inline
     def setAlignContent(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignContentProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignContent */ _, 
           ThemeType
         ]
     ): Self = this.set("alignContent", value.asInstanceOf[js.Any])

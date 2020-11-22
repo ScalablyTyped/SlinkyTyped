@@ -85,9 +85,9 @@ object ASPxClientEdit extends js.Object {
   def DetachEditorModificationListener(handler: js.Any, predicate: ASPxClientControlPredicate): Unit = js.native
   
   /**
-    * Performs validation of all editors in a specified visibility state, which are located within a specified container and belong to a specific validation group. true if the specified editors pass validation; otherwise, false.
-    * @param container An HTML element specifying the container of editors to be validated.
-    * @param validationGroup A string value that specifies the validation group's name.
+    * Validates all editors in a specified visibility state, which are located within a specified container and belong to a specific validation group. true if the specified editors pass validation; otherwise, false.
+    * @param container An HTML element that contains editors.
+    * @param validationGroup The validation group's name.
     * @param validateInvisibleEditors true to validate both visible and invisible editors that belong to the specified container and group; false to validate only visible editors.
     */
   def ValidateEditorsInContainer(container: js.Any): Boolean = js.native

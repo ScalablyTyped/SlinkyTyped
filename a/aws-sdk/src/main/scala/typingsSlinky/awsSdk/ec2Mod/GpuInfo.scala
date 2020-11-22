@@ -13,7 +13,7 @@ trait GpuInfo extends js.Object {
   var Gpus: js.UndefOr[GpuDeviceInfoList] = js.native
   
   /**
-    * The total size of the memory for the GPU accelerators for the instance type.
+    * The total size of the memory for the GPU accelerators for the instance type, in MiB.
     */
   var TotalGpuMemoryInMiB: js.UndefOr[totalGpuMemory] = js.native
 }

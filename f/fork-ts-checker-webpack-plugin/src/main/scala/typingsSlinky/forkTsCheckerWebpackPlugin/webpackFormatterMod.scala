@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object webpackFormatterMod extends js.Object {
   
-  def createWebpackFormatter(formatter: Formatter, context: String): Formatter = js.native
+  def createWebpackFormatter(formatter: Formatter): Formatter = js.native
 }

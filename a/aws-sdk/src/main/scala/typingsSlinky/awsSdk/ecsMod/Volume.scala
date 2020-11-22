@@ -18,6 +18,11 @@ trait Volume extends js.Object {
   var efsVolumeConfiguration: js.UndefOr[EFSVolumeConfiguration] = js.native
   
   /**
+    * This parameter is specified when you are using Amazon FSx for Windows File Server file system for task storage.
+    */
+  var fsxWindowsFileServerVolumeConfiguration: js.UndefOr[FSxWindowsFileServerVolumeConfiguration] = js.native
+  
+  /**
     * This parameter is specified when you are using bind mount host volumes. The contents of the host parameter determine whether your bind mount host volume persists on the host container instance and where it is stored. If the host parameter is empty, then the Docker daemon assigns a host path for your data volume. However, the data is not guaranteed to persist after the containers associated with it stop running. Windows containers can mount whole directories on the same drive as $env:ProgramData. Windows containers cannot mount directories on a different drive, and mount point cannot be across drives. For example, you can mount C:\my\path:C:\my\path and D:\:D:\, but not D:\my\path:C:\my\path or D:\:C:\my\path.
     */
   var host: js.UndefOr[HostVolumeProperties] = js.native
@@ -61,6 +66,12 @@ object Volume {
     
     @scala.inline
     def deleteEfsVolumeConfiguration: Self = this.set("efsVolumeConfiguration", js.undefined)
+    
+    @scala.inline
+    def setFsxWindowsFileServerVolumeConfiguration(value: FSxWindowsFileServerVolumeConfiguration): Self = this.set("fsxWindowsFileServerVolumeConfiguration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFsxWindowsFileServerVolumeConfiguration: Self = this.set("fsxWindowsFileServerVolumeConfiguration", js.undefined)
     
     @scala.inline
     def setHost(value: HostVolumeProperties): Self = this.set("host", value.asInstanceOf[js.Any])

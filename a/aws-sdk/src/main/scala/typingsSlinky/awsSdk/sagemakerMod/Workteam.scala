@@ -23,7 +23,7 @@ trait Workteam extends js.Object {
   var LastUpdatedDate: js.UndefOr[js.Date] = js.native
   
   /**
-    * The Amazon Cognito user groups that make up the work team.
+    * A list of MemberDefinition objects that contains objects that identify the workers that make up the work team.  Workforces can be created using Amazon Cognito or your own OIDC Identity Provider (IdP). For private workforces created using Amazon Cognito use CognitoMemberDefinition. For workforces created using your own OIDC identity provider (IdP) use OidcMemberDefinition.
     */
   var MemberDefinitions: typingsSlinky.awsSdk.sagemakerMod.MemberDefinitions = js.native
   

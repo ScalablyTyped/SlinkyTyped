@@ -1,5 +1,6 @@
 package typingsSlinky.storybookAddonKnobs.arrayMod
 
+import typingsSlinky.std.Record
 import typingsSlinky.storybookAddonKnobs.anon.Knob
 import typingsSlinky.storybookAddonKnobs.anon.PartialArrayTypeProps
 import scala.scalajs.js
@@ -17,6 +18,7 @@ object default extends js.Object {
   var defaultProps: PartialArrayTypeProps = js.native
   
   def deserialize(value: js.Array[String]): js.Array[String] = js.native
+  def deserialize(value: Record[String, String]): js.Array[String] = js.native
   
   var propTypes: Knob = js.native
   

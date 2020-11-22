@@ -38,7 +38,15 @@ trait IUtils[TDate] extends js.Object {
   
   def addDays(value: TDate, count: Double): TDate = js.native
   
+  def addHours(value: TDate, count: Double): TDate = js.native
+  
+  def addMinutes(value: TDate, count: Double): TDate = js.native
+  
   def addMonths(value: TDate, count: Double): TDate = js.native
+  
+  def addSeconds(value: TDate, count: Double): TDate = js.native
+  
+  def addWeeks(value: TDate, count: Double): TDate = js.native
   
   // constructor (options?: { formats?: DateIOFormats, locale?: any, instance?: any });
   def date(): TDate | Null = js.native
@@ -65,8 +73,12 @@ trait IUtils[TDate] extends js.Object {
   
   def getCurrentLocaleCode(): String = js.native
   
+  def getDaysInMonth(value: TDate): Double = js.native
+  
   def getDiff(value: TDate, comparing: TDate): Double = js.native
+  def getDiff(value: TDate, comparing: TDate, unit: Unit): Double = js.native
   def getDiff(value: TDate, comparing: String): Double = js.native
+  def getDiff(value: TDate, comparing: String, unit: Unit): Double = js.native
   
   /** Returns user readable format (taking into account localized format tokens), useful to render helper text for input (e.g. placeholder). For luxon always returns empty string. */
   def getFormatHelperText(format: String): String = js.native

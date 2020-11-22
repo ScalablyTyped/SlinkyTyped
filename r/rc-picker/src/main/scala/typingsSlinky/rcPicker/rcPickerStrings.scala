@@ -14,6 +14,9 @@ object rcPickerStrings {
   def additions: additions = "additions".asInstanceOf[additions]
   
   @scala.inline
+  def `additions removals`: `additions removals` = ("additions removals").asInstanceOf[`additions removals`]
+  
+  @scala.inline
   def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
   
   @scala.inline
@@ -170,6 +173,12 @@ object rcPickerStrings {
   def removals: removals = "removals".asInstanceOf[removals]
   
   @scala.inline
+  def `removals additions`: `removals additions` = ("removals additions").asInstanceOf[`removals additions`]
+  
+  @scala.inline
+  def `removals text`: `removals text` = ("removals text").asInstanceOf[`removals text`]
+  
+  @scala.inline
   def right: right = "right".asInstanceOf[right]
   
   @scala.inline
@@ -197,6 +206,12 @@ object rcPickerStrings {
   def text: text = "text".asInstanceOf[text]
   
   @scala.inline
+  def `text additions`: `text additions` = ("text additions").asInstanceOf[`text additions`]
+  
+  @scala.inline
+  def `text removals`: `text removals` = ("text removals").asInstanceOf[`text removals`]
+  
+  @scala.inline
   def time: time = "time".asInstanceOf[time]
   
   @scala.inline
@@ -222,6 +237,9 @@ object rcPickerStrings {
   
   @js.native
   sealed trait additions extends js.Object
+  
+  @js.native
+  sealed trait `additions removals` extends js.Object
   
   @js.native
   sealed trait `additions text` extends js.Object
@@ -386,6 +404,12 @@ object rcPickerStrings {
   sealed trait removals extends js.Object
   
   @js.native
+  sealed trait `removals additions` extends js.Object
+  
+  @js.native
+  sealed trait `removals text` extends js.Object
+  
+  @js.native
   sealed trait right extends js.Object
   
   @js.native
@@ -411,6 +435,12 @@ object rcPickerStrings {
   
   @js.native
   sealed trait text extends js.Object
+  
+  @js.native
+  sealed trait `text additions` extends js.Object
+  
+  @js.native
+  sealed trait `text removals` extends js.Object
   
   @js.native
   sealed trait time

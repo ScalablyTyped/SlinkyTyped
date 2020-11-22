@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.global.BABYLON
 
-import typingsSlinky.babylonjs.BABYLON.IWebXRHitTestOptions
+import typingsSlinky.babylonjs.BABYLON.IWebXRLegacyHitTestOptions
 import typingsSlinky.babylonjs.XRHitResult
 import typingsSlinky.babylonjs.XRInputSourceEvent
 import typingsSlinky.babylonjs.XRRay
@@ -25,7 +25,7 @@ class WebXRHitTestLegacy protected ()
     /**
     * options to use when constructing this feature
     */
-  options: IWebXRHitTestOptions
+  options: IWebXRLegacyHitTestOptions
   ) = this()
 }
 /* static members */

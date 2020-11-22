@@ -62,11 +62,15 @@ trait Category extends js.Object {
   
   var enabled: js.UndefOr[Boolean] = js.native
   
+  var shapeIconsPerRow: js.UndefOr[Double] = js.native
+  
   var shapes: js.UndefOr[
     js.Array[
       text | rectangle | ellipse | cross | triangle | diamond | heart | pentagon | octagon | star | arrowLeft | arrowTop | arrowRight | arrowBottom | arrowNorthSouth | arrowEastWest | process | decision | terminator | predefinedProcess | document | multipleDocuments | manualInput | preparation | data | database | hardDisk | internalStorage | paperTape | manualOperation | delay | storedData | display | merge | connector | or | summingJunction | verticalContainer | horizontalContainer | cardWithImageOnLeft | cardWithImageOnTop | cardWithImageOnRight | String
     ]
   ] = js.native
+  
+  var width: js.UndefOr[Double] = js.native
 }
 object Category {
   
@@ -110,6 +114,12 @@ object Category {
     def deleteEnabled: Self = this.set("enabled", js.undefined)
     
     @scala.inline
+    def setShapeIconsPerRow(value: Double): Self = this.set("shapeIconsPerRow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShapeIconsPerRow: Self = this.set("shapeIconsPerRow", js.undefined)
+    
+    @scala.inline
     def setShapesVarargs(
       value: (text | rectangle | ellipse | cross | triangle | diamond | heart | pentagon | octagon | star | arrowLeft | arrowTop | arrowRight | arrowBottom | arrowNorthSouth | arrowEastWest | process | decision | terminator | predefinedProcess | document | multipleDocuments | manualInput | preparation | data | database | hardDisk | internalStorage | paperTape | manualOperation | delay | storedData | display | merge | connector | or | summingJunction | verticalContainer | horizontalContainer | cardWithImageOnLeft | cardWithImageOnTop | cardWithImageOnRight | String)*
     ): Self = this.set("shapes", js.Array(value :_*))
@@ -123,5 +133,11 @@ object Category {
     
     @scala.inline
     def deleteShapes: Self = this.set("shapes", js.undefined)
+    
+    @scala.inline
+    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWidth: Self = this.set("width", js.undefined)
   }
 }

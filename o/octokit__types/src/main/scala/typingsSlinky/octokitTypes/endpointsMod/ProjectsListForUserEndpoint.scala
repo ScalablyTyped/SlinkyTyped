@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`8`
+import typingsSlinky.octokitTypes.anon.`7`
 import typingsSlinky.octokitTypes.octokitTypesStrings.all
 import typingsSlinky.octokitTypes.octokitTypesStrings.closed
 import typingsSlinky.octokitTypes.octokitTypesStrings.open
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ProjectsListForUserEndpoint extends js.Object {
   
-  var mediaType: `8` = js.native
+  var mediaType: `7` = js.native
   
   /**
     * Page number of the results to fetch.
@@ -34,7 +34,7 @@ trait ProjectsListForUserEndpoint extends js.Object {
 object ProjectsListForUserEndpoint {
   
   @scala.inline
-  def apply(mediaType: `8`, username: String): ProjectsListForUserEndpoint = {
+  def apply(mediaType: `7`, username: String): ProjectsListForUserEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], username = username.asInstanceOf[js.Any])
     __obj.asInstanceOf[ProjectsListForUserEndpoint]
   }
@@ -55,7 +55,7 @@ object ProjectsListForUserEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `7`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUsername(value: String): Self = this.set("username", value.asInstanceOf[js.Any])

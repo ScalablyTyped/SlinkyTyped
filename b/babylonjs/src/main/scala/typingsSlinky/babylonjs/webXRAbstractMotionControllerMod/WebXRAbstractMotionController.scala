@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.webXRAbstractMotionControllerMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.babylonjs.XREye
 import typingsSlinky.babylonjs.XRFrame
 import typingsSlinky.babylonjs.abstractMeshMod.AbstractMesh
 import typingsSlinky.babylonjs.anon.Filename
@@ -21,7 +22,7 @@ abstract class WebXRAbstractMotionController protected () extends IDisposable {
     * @param scene the scene to which the model of the controller will be added
     * @param layout The profile layout to load
     * @param gamepadObject The gamepad object correlating to this controller
-    * @param handness handness (left/right/none) of this controller
+    * @param handedness handedness (left/right/none) of this controller
     * @param _doNotLoadControllerMesh set this flag to ignore the mesh loading
     */
   def this(
@@ -32,9 +33,9 @@ abstract class WebXRAbstractMotionController protected () extends IDisposable {
     */
   gamepadObject: IMinimalMotionControllerObject,
     /**
-    * handness (left/right/none) of this controller
+    * handedness (left/right/none) of this controller
     */
-  handness: MotionControllerHandness
+  handedness: MotionControllerHandedness
   ) = this()
   def this(
     scene: Scene,
@@ -44,13 +45,13 @@ abstract class WebXRAbstractMotionController protected () extends IDisposable {
     */
   gamepadObject: IMinimalMotionControllerObject,
     /**
-    * handness (left/right/none) of this controller
+    * handedness (left/right/none) of this controller
     */
-  handness: MotionControllerHandness,
+  handedness: MotionControllerHandedness,
     _doNotLoadControllerMesh: Boolean
   ) = this()
   
-  /* protected */ def _getChildByName(node: AbstractMesh, name: String): AbstractMesh = js.native
+  /* protected */ def _getChildByName(node: AbstractMesh, name: String): js.UndefOr[AbstractMesh] = js.native
   
   /**
     * Get the filename and path for this controller's model
@@ -62,7 +63,7 @@ abstract class WebXRAbstractMotionController protected () extends IDisposable {
   
   var _getGenericParentMesh: js.Any = js.native
   
-  /* protected */ def _getImmediateChildByName(node: AbstractMesh, name: String): AbstractMesh = js.native
+  /* protected */ def _getImmediateChildByName(node: AbstractMesh, name: String): js.UndefOr[AbstractMesh] = js.native
   
   /**
     * This function is called before the mesh is loaded. It checks for loading constraints.
@@ -154,9 +155,14 @@ abstract class WebXRAbstractMotionController protected () extends IDisposable {
   def getMainComponent(): WebXRControllerComponent = js.native
   
   /**
-    * handness (left/right/none) of this controller
+    * handedness (left/right/none) of this controller
     */
-  var handness: MotionControllerHandness = js.native
+  var handedness: MotionControllerHandedness = js.native
+  
+  /**
+    * Backwards compatibility due to a deeply-integrated typo
+    */
+  def handness: XREye = js.native
   
   var layout: IMotionControllerLayout = js.native
   
@@ -176,6 +182,19 @@ abstract class WebXRAbstractMotionController protected () extends IDisposable {
     * The profile id of this motion controller
     */
   var profileId: String = js.native
+  
+  /**
+    * Pulse (vibrate) this controller
+    * If the controller does not support pulses, this function will fail silently and return Promise<false> directly after called
+    * Consecutive calls to this function will cancel the last pulse call
+    *
+    * @param value the strength of the pulse in 0.0...1.0 range
+    * @param duration Duration of the pulse in milliseconds
+    * @param hapticActuatorIndex optional index of actuator (will usually be 0)
+    * @returns a promise that will send true when the pulse has ended and false if the device doesn't support pulse or an error accrued
+    */
+  def pulse(value: Double, duration: Double): js.Promise[Boolean] = js.native
+  def pulse(value: Double, duration: Double, hapticActuatorIndex: Double): js.Promise[Boolean] = js.native
   
   /**
     * The root mesh of the model. It is null if the model was not yet initialized

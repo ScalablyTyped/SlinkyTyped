@@ -3,8 +3,6 @@ package typingsSlinky.reactNativeNavigation
 import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNativeNavigation.componentEventsMod.ComponentDidAppearEvent
 import typingsSlinky.reactNativeNavigation.componentEventsMod.ComponentDidDisappearEvent
-import typingsSlinky.reactNativeNavigation.componentEventsMod.ModalAttemptedToDismissEvent
-import typingsSlinky.reactNativeNavigation.componentEventsMod.ModalDismissedEvent
 import typingsSlinky.reactNativeNavigation.componentEventsMod.NavigationButtonPressedEvent
 import typingsSlinky.reactNativeNavigation.componentEventsMod.PreviewCompletedEvent
 import typingsSlinky.reactNativeNavigation.componentEventsMod.ScreenPoppedEvent
@@ -26,10 +24,6 @@ object navigationComponentMod extends js.Object {
     def componentDidAppear(_event: ComponentDidAppearEvent): Unit = js.native
     
     def componentDidDisappear(_event: ComponentDidDisappearEvent): Unit = js.native
-    
-    def modalAttemptedToDismiss(_event: ModalAttemptedToDismissEvent): Unit = js.native
-    
-    def modalDismissed(_event: ModalDismissedEvent): Unit = js.native
     
     def navigationButtonPressed(_event: NavigationButtonPressedEvent): Unit = js.native
     

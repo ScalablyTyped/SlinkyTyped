@@ -8,12 +8,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SaveSynonymsOptions extends js.Object {
   
   /**
+    * If the existing synonyms should be removed.
+    */
+  val clearExistingSynonyms: js.UndefOr[Boolean] = js.native
+  
+  /**
     * If the saved synonyms should be forward to replicas.
     */
   val forwardToReplicas: js.UndefOr[Boolean] = js.native
   
   /**
     * If the existing synonyms should be removed.
+    * @deprecated use clearExistingSynonyms
     */
   val replaceExistingSynonyms: js.UndefOr[Boolean] = js.native
 }
@@ -39,6 +45,12 @@ object SaveSynonymsOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setClearExistingSynonyms(value: Boolean): Self = this.set("clearExistingSynonyms", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClearExistingSynonyms: Self = this.set("clearExistingSynonyms", js.undefined)
     
     @scala.inline
     def setForwardToReplicas(value: Boolean): Self = this.set("forwardToReplicas", value.asInstanceOf[js.Any])

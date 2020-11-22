@@ -41,6 +41,9 @@ object ablyStrings {
   def absent: absent = "absent".asInstanceOf[absent]
   
   @scala.inline
+  def aes: aes = "aes".asInstanceOf[aes]
+  
+  @scala.inline
   def android: android = "android".asInstanceOf[android]
   
   @scala.inline
@@ -54,6 +57,9 @@ object ablyStrings {
   
   @scala.inline
   def car: car = "car".asInstanceOf[car]
+  
+  @scala.inline
+  def cbc: cbc = "cbc".asInstanceOf[cbc]
   
   @scala.inline
   def `channel-metadata`: `channel-metadata` = "channel-metadata".asInstanceOf[`channel-metadata`]
@@ -203,6 +209,9 @@ object ablyStrings {
   sealed trait absent extends js.Object
   
   @js.native
+  sealed trait aes extends js.Object
+  
+  @js.native
   sealed trait android extends js.Object
   
   @js.native
@@ -216,6 +225,9 @@ object ablyStrings {
   
   @js.native
   sealed trait car extends js.Object
+  
+  @js.native
+  sealed trait cbc extends js.Object
   
   @js.native
   sealed trait `channel-metadata` extends capabilityOp

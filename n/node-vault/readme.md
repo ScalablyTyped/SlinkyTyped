@@ -1,7 +1,7 @@
 
 # Scala.js typings for node-vault
 
-Typings are for version 0.9.18
+Typings are for version 0.9.20
 
 ## Library description:
 Javascript client for HashiCorp's Vault

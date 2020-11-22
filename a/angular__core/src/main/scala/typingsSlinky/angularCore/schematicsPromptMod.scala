@@ -7,6 +7,7 @@ import typingsSlinky.inquirer.mod.PromptModule
 import typingsSlinky.inquirer.mod.QuestionCollection
 import typingsSlinky.inquirer.mod.StreamOptions
 import typingsSlinky.inquirer.mod.prompts.PromptConstructor
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -47,6 +48,7 @@ object schematicsPromptMod extends js.Object {
       * The default prompt-module.
       */
     def prompt[T](questions: QuestionCollection[T]): js.Promise[T] with Ui = js.native
+    def prompt[T](questions: QuestionCollection[T], initialAnswers: Partial[T]): js.Promise[T] with Ui = js.native
     /**
       * The default prompt-module.
       */

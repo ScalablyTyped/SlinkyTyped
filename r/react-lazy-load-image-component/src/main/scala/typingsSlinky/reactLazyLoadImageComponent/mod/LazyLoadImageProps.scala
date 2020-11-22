@@ -27,6 +27,7 @@ import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.react.mod.DragEventHandler
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.FormEventHandler
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.KeyboardEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
@@ -37,11 +38,14 @@ import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings._empty
+import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`additions removals`
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`additions text`
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`inline`
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`lazy`
-import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`no-referrer`
-import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`unsafe-url`
+import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`removals additions`
+import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`removals text`
+import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`text additions`
+import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`text removals`
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.`use-credentials`
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.additions
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.all
@@ -75,7 +79,6 @@ import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStri
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.numeric
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.off
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.on
-import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.origin
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.other
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.page
 import typingsSlinky.reactLazyLoadImageComponent.reactLazyLoadImageComponentStrings.polite
@@ -180,7 +183,9 @@ trait LazyLoadImageProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -446,7 +451,7 @@ trait LazyLoadImageProps extends js.Object {
   
   var radioGroup: js.UndefOr[String] = js.native
   
-  var referrerPolicy: js.UndefOr[`no-referrer` | origin | `unsafe-url`] = js.native
+  var referrerPolicy: js.UndefOr[HTMLAttributeReferrerPolicy] = js.native
   
   var resource: js.UndefOr[String] = js.native
   
@@ -764,7 +769,9 @@ object LazyLoadImageProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1553,7 +1560,7 @@ object LazyLoadImageProps {
     def deleteRadioGroup: Self = this.set("radioGroup", js.undefined)
     
     @scala.inline
-    def setReferrerPolicy(value: `no-referrer` | origin | `unsafe-url`): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
+    def setReferrerPolicy(value: HTMLAttributeReferrerPolicy): Self = this.set("referrerPolicy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReferrerPolicy: Self = this.set("referrerPolicy", js.undefined)

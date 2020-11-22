@@ -19,7 +19,7 @@ trait PromiseConstructor
   */
 Instantiable1[
       /* executor */ js.Function2[
-        /* resolve */ js.Function1[/* value */ js.UndefOr[js.Object | js.Thenable[js.Object]], Unit], 
+        /* resolve */ js.Function1[/* value */ js.Object | js.Thenable[js.Object], Unit], 
         /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
         Unit
       ], 
@@ -224,7 +224,7 @@ Instantiable1[
   def reject[T](reason: js.Any): js.Promise[T] = js.native
   
   /**
-    * Creates a new resolved promise .
+    * Creates a new resolved promise.
     * @returns A resolved promise.
     */
   def resolve(): js.Promise[Unit] = js.native

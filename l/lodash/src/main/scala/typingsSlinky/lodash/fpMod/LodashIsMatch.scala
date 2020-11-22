@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashIsMatch extends LodashConvertible {
+trait LodashIsMatch extends js.Object {
   
   def apply(source: js.Object): LodashIsMatch1x1 = js.native
   def apply(source: js.Object, `object`: js.Object): Boolean = js.native

@@ -25,8 +25,6 @@ trait ArcGISMapServiceProperties extends js.Object {
     * Indicates whether the layer will be included in the legend.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-mixins-ArcGISMapService.html#legendEnabled)
-    *
-    * @default true
     */
   var legendEnabled: js.UndefOr[Boolean] = js.native
 }

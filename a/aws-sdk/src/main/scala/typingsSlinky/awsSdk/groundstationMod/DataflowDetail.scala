@@ -9,6 +9,11 @@ trait DataflowDetail extends js.Object {
   
   var destination: js.UndefOr[Destination] = js.native
   
+  /**
+    * Error message for a dataflow.
+    */
+  var errorMessage: js.UndefOr[String] = js.native
+  
   var source: js.UndefOr[Source] = js.native
 }
 object DataflowDetail {
@@ -39,6 +44,12 @@ object DataflowDetail {
     
     @scala.inline
     def deleteDestination: Self = this.set("destination", js.undefined)
+    
+    @scala.inline
+    def setErrorMessage(value: String): Self = this.set("errorMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteErrorMessage: Self = this.set("errorMessage", js.undefined)
     
     @scala.inline
     def setSource(value: Source): Self = this.set("source", value.asInstanceOf[js.Any])

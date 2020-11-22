@@ -7,16 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PieChartLegendItem extends BaseLegendItem {
   
-  /** @name PieChartLegendItem.argument */
+  /**
+    * [descr:PieChartLegendItem.argument]
+    */
   var argument: js.UndefOr[String | js.Date | Double] = js.native
   
-  /** @name PieChartLegendItem.argumentIndex */
+  /**
+    * [descr:PieChartLegendItem.argumentIndex]
+    */
   var argumentIndex: js.UndefOr[Double] = js.native
   
-  /** @name PieChartLegendItem.points */
+  /**
+    * [descr:PieChartLegendItem.points]
+    */
   var points: js.UndefOr[js.Array[piePointObject]] = js.native
   
-  /** @name PieChartLegendItem.text */
+  /**
+    * [descr:PieChartLegendItem.text]
+    */
   @JSName("text")
   var text_PieChartLegendItem: js.UndefOr[js.Any] = js.native
 }

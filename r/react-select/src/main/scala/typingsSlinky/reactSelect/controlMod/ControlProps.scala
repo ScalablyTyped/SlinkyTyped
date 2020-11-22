@@ -8,6 +8,7 @@ import typingsSlinky.reactSelect.typesMod.ActionTypes
 import typingsSlinky.reactSelect.typesMod.ClassNamesState
 import typingsSlinky.reactSelect.typesMod.OptionTypeBase
 import typingsSlinky.reactSelect.typesMod.OptionsType
+import typingsSlinky.reactSelect.typesMod.Theme
 import typingsSlinky.reactSelect.typesMod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -52,6 +53,9 @@ trait ControlProps[OptionType /* <: OptionTypeBase */] extends js.Object {
   
   var isMulti: Boolean = js.native
   
+  /** Whether the select is expanded. */
+  var menuIsOpen: Boolean = js.native
+  
   var options: OptionsType[OptionType] = js.native
   
   def selectOption(option: OptionType): Unit = js.native
@@ -59,4 +63,6 @@ trait ControlProps[OptionType /* <: OptionTypeBase */] extends js.Object {
   var selectProps: Props[OptionType] = js.native
   
   def setValue(value: ValueType[OptionType], action: ActionTypes): Unit = js.native
+  
+  var theme: Theme = js.native
 }

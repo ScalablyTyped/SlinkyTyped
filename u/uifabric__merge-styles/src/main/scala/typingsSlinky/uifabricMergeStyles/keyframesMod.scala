@@ -1,6 +1,6 @@
 package typingsSlinky.uifabricMergeStyles
 
-import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.uifabricMergeStyles.ikeyframesMod.IKeyframes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object keyframesMod extends js.Object {
   
-  def keyframes(timeline: StringDictionary[js.Object]): String = js.native
+  def keyframes(timeline: IKeyframes): String = js.native
 }

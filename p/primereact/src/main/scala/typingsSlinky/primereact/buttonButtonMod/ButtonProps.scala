@@ -17,8 +17,13 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.primereact.primereactStrings.`additions removals`
 import typingsSlinky.primereact.primereactStrings.`additions text`
 import typingsSlinky.primereact.primereactStrings.`inline`
+import typingsSlinky.primereact.primereactStrings.`removals additions`
+import typingsSlinky.primereact.primereactStrings.`removals text`
+import typingsSlinky.primereact.primereactStrings.`text additions`
+import typingsSlinky.primereact.primereactStrings.`text removals`
 import typingsSlinky.primereact.primereactStrings.additions
 import typingsSlinky.primereact.primereactStrings.all
 import typingsSlinky.primereact.primereactStrings.ascending
@@ -177,7 +182,9 @@ trait ButtonProps
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -218,6 +225,10 @@ trait ButtonProps
   var autoPlay: js.UndefOr[Boolean] = js.native
   
   var autoSave: js.UndefOr[String] = js.native
+  
+  var badge: js.UndefOr[String] = js.native
+  
+  var badgeClassName: js.UndefOr[String] = js.native
   
   var capture: js.UndefOr[Boolean | String] = js.native
   
@@ -337,7 +348,7 @@ trait ButtonProps
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var keyParams: js.UndefOr[String] = js.native
   
@@ -939,7 +950,9 @@ object ButtonProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1063,6 +1076,18 @@ object ButtonProps {
     
     @scala.inline
     def deleteAutoSave: Self = this.set("autoSave", js.undefined)
+    
+    @scala.inline
+    def setBadge(value: String): Self = this.set("badge", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBadge: Self = this.set("badge", js.undefined)
+    
+    @scala.inline
+    def setBadgeClassName(value: String): Self = this.set("badgeClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBadgeClassName: Self = this.set("badgeClassName", js.undefined)
     
     @scala.inline
     def setCapture(value: Boolean | String): Self = this.set("capture", value.asInstanceOf[js.Any])
@@ -1429,6 +1454,9 @@ object ButtonProps {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setKeyParams(value: String): Self = this.set("keyParams", value.asInstanceOf[js.Any])

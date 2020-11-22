@@ -82,7 +82,7 @@ trait RangeCollectionLoadOptions extends js.Object {
   
   /**
     *
-    * For EACH ITEM in the collection: Represents the formula in A1-style notation.
+    * For EACH ITEM in the collection: Represents the formula in A1-style notation. If a cell has no formula, its value is returned instead.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -90,7 +90,7 @@ trait RangeCollectionLoadOptions extends js.Object {
   
   /**
     *
-    * For EACH ITEM in the collection: Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German.
+    * For EACH ITEM in the collection: Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German. If a cell has no formula, its value is returned instead.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -98,11 +98,21 @@ trait RangeCollectionLoadOptions extends js.Object {
   
   /**
     *
-    * For EACH ITEM in the collection: Represents the formula in R1C1-style notation.
+    * For EACH ITEM in the collection: Represents the formula in R1C1-style notation. If a cell has no formula, its value is returned instead.
     *
     * [Api set: ExcelApi 1.2]
     */
   var formulasR1C1: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
+    * For EACH ITEM in the collection: Represents if all cells have a spill border.
+    Returns true if all cells have a spill border, or false if all cells do not have a spill border.
+    Returns null if there are cells both with and without spill borders within the range.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var hasSpill: js.UndefOr[Boolean] = js.native
   
   /**
     *
@@ -170,6 +180,14 @@ trait RangeCollectionLoadOptions extends js.Object {
   
   /**
     *
+    * For EACH ITEM in the collection: Represents the category of number format of each cell.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var numberFormatCategories: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
     * For EACH ITEM in the collection: Represents Excel's number format code for the given range, based on the language settings of the user.​
     Excel does not perform any language or format coercion when getting or setting the `numberFormatLocal` property.
     Any returned text uses the locally-formatted strings based on the language specified in the system settings.
@@ -201,6 +219,16 @@ trait RangeCollectionLoadOptions extends js.Object {
     * [Api set: ExcelApi 1.1]
     */
   var rowIndex: js.UndefOr[Boolean] = js.native
+  
+  /**
+    *
+    * For EACH ITEM in the collection: Represents if ALL the cells would be saved as an array formula.
+    Returns true if ALL cells would be saved as an array formula, or false if ALL cells would NOT be saved as an array formula.
+    Returns null if some cells would be saved as an array formula and some would not be.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var savedAsArray: js.UndefOr[Boolean] = js.native
   
   /**
     *
@@ -356,6 +384,12 @@ object RangeCollectionLoadOptions {
     def deleteFormulasR1C1: Self = this.set("formulasR1C1", js.undefined)
     
     @scala.inline
+    def setHasSpill(value: Boolean): Self = this.set("hasSpill", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHasSpill: Self = this.set("hasSpill", js.undefined)
+    
+    @scala.inline
     def setHeight(value: Boolean): Self = this.set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -404,6 +438,12 @@ object RangeCollectionLoadOptions {
     def deleteNumberFormat: Self = this.set("numberFormat", js.undefined)
     
     @scala.inline
+    def setNumberFormatCategories(value: Boolean): Self = this.set("numberFormatCategories", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNumberFormatCategories: Self = this.set("numberFormatCategories", js.undefined)
+    
+    @scala.inline
     def setNumberFormatLocal(value: Boolean): Self = this.set("numberFormatLocal", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -426,6 +466,12 @@ object RangeCollectionLoadOptions {
     
     @scala.inline
     def deleteRowIndex: Self = this.set("rowIndex", js.undefined)
+    
+    @scala.inline
+    def setSavedAsArray(value: Boolean): Self = this.set("savedAsArray", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSavedAsArray: Self = this.set("savedAsArray", js.undefined)
     
     @scala.inline
     def setStyle(value: Boolean): Self = this.set("style", value.asInstanceOf[js.Any])

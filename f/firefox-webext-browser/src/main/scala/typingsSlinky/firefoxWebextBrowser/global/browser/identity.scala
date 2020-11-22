@@ -1,11 +1,12 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.Account
-import typingsSlinky.firefoxWebextBrowser.anon.Email
-import typingsSlinky.firefoxWebextBrowser.anon.Interactive
-import typingsSlinky.firefoxWebextBrowser.anon.Token
 import typingsSlinky.firefoxWebextBrowser.browser.identity.AccountInfo
+import typingsSlinky.firefoxWebextBrowser.browser.identity.GetAuthTokenDetails
+import typingsSlinky.firefoxWebextBrowser.browser.identity.GetProfileUserInfoReturnUserinfo
+import typingsSlinky.firefoxWebextBrowser.browser.identity.LaunchWebAuthFlowDetails
+import typingsSlinky.firefoxWebextBrowser.browser.identity.RemoveCachedAuthTokenDetails
+import typingsSlinky.firefoxWebextBrowser.browser.identity.RemoveCachedAuthTokenReturnUserinfo
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -33,13 +34,13 @@ object identity extends js.Object {
     * @deprecated Unsupported on Firefox at this time.
     */
   def getAuthToken(): js.Promise[js.Array[AccountInfo]] = js.native
-  def getAuthToken(details: Account): js.Promise[js.Array[AccountInfo]] = js.native
+  def getAuthToken(details: GetAuthTokenDetails): js.Promise[js.Array[AccountInfo]] = js.native
   
   /**
     * Retrieves email address and obfuscated gaia id of the user signed into a profile.
     * @deprecated Unsupported on Firefox at this time.
     */
-  def getProfileUserInfo(): js.Promise[Email] = js.native
+  def getProfileUserInfo(): js.Promise[GetProfileUserInfoReturnUserinfo] = js.native
   
   /**
     * Generates a redirect URL to be used in |launchWebAuthFlow|.
@@ -49,7 +50,7 @@ object identity extends js.Object {
   def getRedirectURL(path: String): String = js.native
   
   /** Starts an auth flow at the specified URL. */
-  def launchWebAuthFlow(details: Interactive): js.Promise[String] = js.native
+  def launchWebAuthFlow(details: LaunchWebAuthFlowDetails): js.Promise[String] = js.native
   
   /* identity events */
   /**
@@ -64,5 +65,5 @@ object identity extends js.Object {
     * Removes an OAuth2 access token from the Identity API's token cache.
     * @deprecated Unsupported on Firefox at this time.
     */
-  def removeCachedAuthToken(details: Token): js.Promise[Email] = js.native
+  def removeCachedAuthToken(details: RemoveCachedAuthTokenDetails): js.Promise[RemoveCachedAuthTokenReturnUserinfo] = js.native
 }

@@ -56,13 +56,13 @@ trait IosGeneralDeviceConfiguration extends DeviceConfiguration {
     * Gets or sets the list of iOS apps allowed to autonomously enter Single App Mode. Supervised only. iOS 7.0 and later.
     * This collection can contain a maximum of 500 elements.
     */
-  var appsSingleAppModeList: js.UndefOr[js.Array[AppListItem]] = js.native
+  var appsSingleAppModeList: js.UndefOr[NullableOption[js.Array[AppListItem]]] = js.native
   
   /**
     * List of apps in the visibility list (either visible/launchable apps list or hidden/unlaunchable apps list, controlled
     * by AppsVisibilityListType) (iOS 9.3 and later). This collection can contain a maximum of 10000 elements.
     */
-  var appsVisibilityList: js.UndefOr[js.Array[AppListItem]] = js.native
+  var appsVisibilityList: js.UndefOr[NullableOption[js.Array[AppListItem]]] = js.native
   
   // Type of list that is in the AppsVisibilityList. Possible values are: none, appsInListCompliant, appsNotInListCompliant.
   var appsVisibilityListType: js.UndefOr[AppListType] = js.native
@@ -113,7 +113,7 @@ trait IosGeneralDeviceConfiguration extends DeviceConfiguration {
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection
     * can contain a maximum of 10000 elements.
     */
-  var compliantAppsList: js.UndefOr[js.Array[AppListItem]] = js.native
+  var compliantAppsList: js.UndefOr[NullableOption[js.Array[AppListItem]]] = js.native
   
   /**
     * Indicates whether or not to block the user from installing configuration profiles and certificates interactively when
@@ -155,7 +155,7 @@ trait IosGeneralDeviceConfiguration extends DeviceConfiguration {
   var documentsBlockUnmanagedDocumentsInManagedApps: js.UndefOr[Boolean] = js.native
   
   // An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
-  var emailInDomainSuffixes: js.UndefOr[js.Array[String]] = js.native
+  var emailInDomainSuffixes: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // Indicates whether or not to block the user from trusting an enterprise app.
   var enterpriseAppBlockTrust: js.UndefOr[Boolean] = js.native
@@ -281,16 +281,16 @@ trait IosGeneralDeviceConfiguration extends DeviceConfiguration {
   var kioskModeAllowZoomSettings: js.UndefOr[Boolean] = js.native
   
   // URL in the app store to the app to use for kiosk mode. Use if KioskModeManagedAppId is not known.
-  var kioskModeAppStoreUrl: js.UndefOr[String] = js.native
+  var kioskModeAppStoreUrl: js.UndefOr[NullableOption[String]] = js.native
   
   // ID for built-in apps to use for kiosk mode. Used when KioskModeManagedAppId and KioskModeAppStoreUrl are not set.
-  var kioskModeBuiltInAppId: js.UndefOr[String] = js.native
+  var kioskModeBuiltInAppId: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Managed app id of the app to use for kiosk mode. If KioskModeManagedAppId is specified then KioskModeAppStoreUrl will
     * be ignored.
     */
-  var kioskModeManagedAppId: js.UndefOr[String] = js.native
+  var kioskModeManagedAppId: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates whether or not to require assistive touch while in kiosk mode.
   var kioskModeRequireAssistiveTouch: js.UndefOr[Boolean] = js.native
@@ -326,31 +326,31 @@ trait IosGeneralDeviceConfiguration extends DeviceConfiguration {
   var mediaContentRatingApps: js.UndefOr[RatingAppsType] = js.native
   
   // Media content rating settings for Australia
-  var mediaContentRatingAustralia: js.UndefOr[MediaContentRatingAustralia] = js.native
+  var mediaContentRatingAustralia: js.UndefOr[NullableOption[MediaContentRatingAustralia]] = js.native
   
   // Media content rating settings for Canada
-  var mediaContentRatingCanada: js.UndefOr[MediaContentRatingCanada] = js.native
+  var mediaContentRatingCanada: js.UndefOr[NullableOption[MediaContentRatingCanada]] = js.native
   
   // Media content rating settings for France
-  var mediaContentRatingFrance: js.UndefOr[MediaContentRatingFrance] = js.native
+  var mediaContentRatingFrance: js.UndefOr[NullableOption[MediaContentRatingFrance]] = js.native
   
   // Media content rating settings for Germany
-  var mediaContentRatingGermany: js.UndefOr[MediaContentRatingGermany] = js.native
+  var mediaContentRatingGermany: js.UndefOr[NullableOption[MediaContentRatingGermany]] = js.native
   
   // Media content rating settings for Ireland
-  var mediaContentRatingIreland: js.UndefOr[MediaContentRatingIreland] = js.native
+  var mediaContentRatingIreland: js.UndefOr[NullableOption[MediaContentRatingIreland]] = js.native
   
   // Media content rating settings for Japan
-  var mediaContentRatingJapan: js.UndefOr[MediaContentRatingJapan] = js.native
+  var mediaContentRatingJapan: js.UndefOr[NullableOption[MediaContentRatingJapan]] = js.native
   
   // Media content rating settings for New Zealand
-  var mediaContentRatingNewZealand: js.UndefOr[MediaContentRatingNewZealand] = js.native
+  var mediaContentRatingNewZealand: js.UndefOr[NullableOption[MediaContentRatingNewZealand]] = js.native
   
   // Media content rating settings for United Kingdom
-  var mediaContentRatingUnitedKingdom: js.UndefOr[MediaContentRatingUnitedKingdom] = js.native
+  var mediaContentRatingUnitedKingdom: js.UndefOr[NullableOption[MediaContentRatingUnitedKingdom]] = js.native
   
   // Media content rating settings for United States
-  var mediaContentRatingUnitedStates: js.UndefOr[MediaContentRatingUnitedStates] = js.native
+  var mediaContentRatingUnitedStates: js.UndefOr[NullableOption[MediaContentRatingUnitedStates]] = js.native
   
   // Indicates whether or not to block the user from using the Messages app on the supervised device.
   var messagesBlocked: js.UndefOr[Boolean] = js.native
@@ -359,7 +359,7 @@ trait IosGeneralDeviceConfiguration extends DeviceConfiguration {
     * List of managed apps and the network rules that applies to them. This collection can contain a maximum of 1000
     * elements.
     */
-  var networkUsageRules: js.UndefOr[js.Array[IosNetworkUsageRule]] = js.native
+  var networkUsageRules: js.UndefOr[NullableOption[js.Array[IosNetworkUsageRule]]] = js.native
   
   // Indicates whether or not to allow notifications settings modification (iOS 9.3 and later).
   var notificationsBlockSettingsModification: js.UndefOr[Boolean] = js.native
@@ -377,22 +377,22 @@ trait IosGeneralDeviceConfiguration extends DeviceConfiguration {
   var passcodeBlockSimple: js.UndefOr[Boolean] = js.native
   
   // Number of days before the passcode expires. Valid values 1 to 65535
-  var passcodeExpirationDays: js.UndefOr[Double] = js.native
+  var passcodeExpirationDays: js.UndefOr[NullableOption[Double]] = js.native
   
   // Number of character sets a passcode must contain. Valid values 0 to 4
-  var passcodeMinimumCharacterSetCount: js.UndefOr[Double] = js.native
+  var passcodeMinimumCharacterSetCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum length of passcode. Valid values 4 to 14
-  var passcodeMinimumLength: js.UndefOr[Double] = js.native
+  var passcodeMinimumLength: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minutes of inactivity before a passcode is required.
-  var passcodeMinutesOfInactivityBeforeLock: js.UndefOr[Double] = js.native
+  var passcodeMinutesOfInactivityBeforeLock: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minutes of inactivity before the screen times out.
-  var passcodeMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.native
+  var passcodeMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[NullableOption[Double]] = js.native
   
   // Number of previous passcodes to block. Valid values 1 to 24
-  var passcodePreviousPasscodeBlockCount: js.UndefOr[Double] = js.native
+  var passcodePreviousPasscodeBlockCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // Indicates whether or not to require a passcode.
   var passcodeRequired: js.UndefOr[Boolean] = js.native
@@ -401,7 +401,7 @@ trait IosGeneralDeviceConfiguration extends DeviceConfiguration {
   var passcodeRequiredType: js.UndefOr[RequiredPasswordType] = js.native
   
   // Number of sign in failures allowed before wiping the device. Valid values 4 to 11
-  var passcodeSignInFailureCountBeforeWipe: js.UndefOr[Double] = js.native
+  var passcodeSignInFailureCountBeforeWipe: js.UndefOr[NullableOption[Double]] = js.native
   
   // Indicates whether or not to block the user from using podcasts on the supervised device (iOS 8.0 and later).
   var podcastsBlocked: js.UndefOr[Boolean] = js.native
@@ -425,13 +425,13 @@ trait IosGeneralDeviceConfiguration extends DeviceConfiguration {
   var safariCookieSettings: js.UndefOr[WebBrowserCookieSettings] = js.native
   
   // URLs matching the patterns listed here will be considered managed.
-  var safariManagedDomains: js.UndefOr[js.Array[String]] = js.native
+  var safariManagedDomains: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   /**
     * Users can save passwords in Safari only from URLs matching the patterns listed here. Applies to devices in supervised
     * mode (iOS 9.3 and later).
     */
-  var safariPasswordAutoFillDomains: js.UndefOr[js.Array[String]] = js.native
+  var safariPasswordAutoFillDomains: js.UndefOr[NullableOption[js.Array[String]]] = js.native
   
   // Indicates whether or not to require fraud warning in Safari.
   var safariRequireFraudWarning: js.UndefOr[Boolean] = js.native
@@ -571,19 +571,25 @@ object IosGeneralDeviceConfiguration {
     def setAppsSingleAppModeListVarargs(value: AppListItem*): Self = this.set("appsSingleAppModeList", js.Array(value :_*))
     
     @scala.inline
-    def setAppsSingleAppModeList(value: js.Array[AppListItem]): Self = this.set("appsSingleAppModeList", value.asInstanceOf[js.Any])
+    def setAppsSingleAppModeList(value: NullableOption[js.Array[AppListItem]]): Self = this.set("appsSingleAppModeList", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAppsSingleAppModeList: Self = this.set("appsSingleAppModeList", js.undefined)
     
     @scala.inline
+    def setAppsSingleAppModeListNull: Self = this.set("appsSingleAppModeList", null)
+    
+    @scala.inline
     def setAppsVisibilityListVarargs(value: AppListItem*): Self = this.set("appsVisibilityList", js.Array(value :_*))
     
     @scala.inline
-    def setAppsVisibilityList(value: js.Array[AppListItem]): Self = this.set("appsVisibilityList", value.asInstanceOf[js.Any])
+    def setAppsVisibilityList(value: NullableOption[js.Array[AppListItem]]): Self = this.set("appsVisibilityList", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAppsVisibilityList: Self = this.set("appsVisibilityList", js.undefined)
+    
+    @scala.inline
+    def setAppsVisibilityListNull: Self = this.set("appsVisibilityList", null)
     
     @scala.inline
     def setAppsVisibilityListType(value: AppListType): Self = this.set("appsVisibilityListType", value.asInstanceOf[js.Any])
@@ -661,10 +667,13 @@ object IosGeneralDeviceConfiguration {
     def setCompliantAppsListVarargs(value: AppListItem*): Self = this.set("compliantAppsList", js.Array(value :_*))
     
     @scala.inline
-    def setCompliantAppsList(value: js.Array[AppListItem]): Self = this.set("compliantAppsList", value.asInstanceOf[js.Any])
+    def setCompliantAppsList(value: NullableOption[js.Array[AppListItem]]): Self = this.set("compliantAppsList", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCompliantAppsList: Self = this.set("compliantAppsList", js.undefined)
+    
+    @scala.inline
+    def setCompliantAppsListNull: Self = this.set("compliantAppsList", null)
     
     @scala.inline
     def setConfigurationProfileBlockChanges(value: Boolean): Self = this.set("configurationProfileBlockChanges", value.asInstanceOf[js.Any])
@@ -724,10 +733,13 @@ object IosGeneralDeviceConfiguration {
     def setEmailInDomainSuffixesVarargs(value: String*): Self = this.set("emailInDomainSuffixes", js.Array(value :_*))
     
     @scala.inline
-    def setEmailInDomainSuffixes(value: js.Array[String]): Self = this.set("emailInDomainSuffixes", value.asInstanceOf[js.Any])
+    def setEmailInDomainSuffixes(value: NullableOption[js.Array[String]]): Self = this.set("emailInDomainSuffixes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEmailInDomainSuffixes: Self = this.set("emailInDomainSuffixes", js.undefined)
+    
+    @scala.inline
+    def setEmailInDomainSuffixesNull: Self = this.set("emailInDomainSuffixes", null)
     
     @scala.inline
     def setEnterpriseAppBlockTrust(value: Boolean): Self = this.set("enterpriseAppBlockTrust", value.asInstanceOf[js.Any])
@@ -952,22 +964,31 @@ object IosGeneralDeviceConfiguration {
     def deleteKioskModeAllowZoomSettings: Self = this.set("kioskModeAllowZoomSettings", js.undefined)
     
     @scala.inline
-    def setKioskModeAppStoreUrl(value: String): Self = this.set("kioskModeAppStoreUrl", value.asInstanceOf[js.Any])
+    def setKioskModeAppStoreUrl(value: NullableOption[String]): Self = this.set("kioskModeAppStoreUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKioskModeAppStoreUrl: Self = this.set("kioskModeAppStoreUrl", js.undefined)
     
     @scala.inline
-    def setKioskModeBuiltInAppId(value: String): Self = this.set("kioskModeBuiltInAppId", value.asInstanceOf[js.Any])
+    def setKioskModeAppStoreUrlNull: Self = this.set("kioskModeAppStoreUrl", null)
+    
+    @scala.inline
+    def setKioskModeBuiltInAppId(value: NullableOption[String]): Self = this.set("kioskModeBuiltInAppId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKioskModeBuiltInAppId: Self = this.set("kioskModeBuiltInAppId", js.undefined)
     
     @scala.inline
-    def setKioskModeManagedAppId(value: String): Self = this.set("kioskModeManagedAppId", value.asInstanceOf[js.Any])
+    def setKioskModeBuiltInAppIdNull: Self = this.set("kioskModeBuiltInAppId", null)
+    
+    @scala.inline
+    def setKioskModeManagedAppId(value: NullableOption[String]): Self = this.set("kioskModeManagedAppId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteKioskModeManagedAppId: Self = this.set("kioskModeManagedAppId", js.undefined)
+    
+    @scala.inline
+    def setKioskModeManagedAppIdNull: Self = this.set("kioskModeManagedAppId", null)
     
     @scala.inline
     def setKioskModeRequireAssistiveTouch(value: Boolean): Self = this.set("kioskModeRequireAssistiveTouch", value.asInstanceOf[js.Any])
@@ -1030,58 +1051,85 @@ object IosGeneralDeviceConfiguration {
     def deleteMediaContentRatingApps: Self = this.set("mediaContentRatingApps", js.undefined)
     
     @scala.inline
-    def setMediaContentRatingAustralia(value: MediaContentRatingAustralia): Self = this.set("mediaContentRatingAustralia", value.asInstanceOf[js.Any])
+    def setMediaContentRatingAustralia(value: NullableOption[MediaContentRatingAustralia]): Self = this.set("mediaContentRatingAustralia", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaContentRatingAustralia: Self = this.set("mediaContentRatingAustralia", js.undefined)
     
     @scala.inline
-    def setMediaContentRatingCanada(value: MediaContentRatingCanada): Self = this.set("mediaContentRatingCanada", value.asInstanceOf[js.Any])
+    def setMediaContentRatingAustraliaNull: Self = this.set("mediaContentRatingAustralia", null)
+    
+    @scala.inline
+    def setMediaContentRatingCanada(value: NullableOption[MediaContentRatingCanada]): Self = this.set("mediaContentRatingCanada", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaContentRatingCanada: Self = this.set("mediaContentRatingCanada", js.undefined)
     
     @scala.inline
-    def setMediaContentRatingFrance(value: MediaContentRatingFrance): Self = this.set("mediaContentRatingFrance", value.asInstanceOf[js.Any])
+    def setMediaContentRatingCanadaNull: Self = this.set("mediaContentRatingCanada", null)
+    
+    @scala.inline
+    def setMediaContentRatingFrance(value: NullableOption[MediaContentRatingFrance]): Self = this.set("mediaContentRatingFrance", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaContentRatingFrance: Self = this.set("mediaContentRatingFrance", js.undefined)
     
     @scala.inline
-    def setMediaContentRatingGermany(value: MediaContentRatingGermany): Self = this.set("mediaContentRatingGermany", value.asInstanceOf[js.Any])
+    def setMediaContentRatingFranceNull: Self = this.set("mediaContentRatingFrance", null)
+    
+    @scala.inline
+    def setMediaContentRatingGermany(value: NullableOption[MediaContentRatingGermany]): Self = this.set("mediaContentRatingGermany", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaContentRatingGermany: Self = this.set("mediaContentRatingGermany", js.undefined)
     
     @scala.inline
-    def setMediaContentRatingIreland(value: MediaContentRatingIreland): Self = this.set("mediaContentRatingIreland", value.asInstanceOf[js.Any])
+    def setMediaContentRatingGermanyNull: Self = this.set("mediaContentRatingGermany", null)
+    
+    @scala.inline
+    def setMediaContentRatingIreland(value: NullableOption[MediaContentRatingIreland]): Self = this.set("mediaContentRatingIreland", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaContentRatingIreland: Self = this.set("mediaContentRatingIreland", js.undefined)
     
     @scala.inline
-    def setMediaContentRatingJapan(value: MediaContentRatingJapan): Self = this.set("mediaContentRatingJapan", value.asInstanceOf[js.Any])
+    def setMediaContentRatingIrelandNull: Self = this.set("mediaContentRatingIreland", null)
+    
+    @scala.inline
+    def setMediaContentRatingJapan(value: NullableOption[MediaContentRatingJapan]): Self = this.set("mediaContentRatingJapan", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaContentRatingJapan: Self = this.set("mediaContentRatingJapan", js.undefined)
     
     @scala.inline
-    def setMediaContentRatingNewZealand(value: MediaContentRatingNewZealand): Self = this.set("mediaContentRatingNewZealand", value.asInstanceOf[js.Any])
+    def setMediaContentRatingJapanNull: Self = this.set("mediaContentRatingJapan", null)
+    
+    @scala.inline
+    def setMediaContentRatingNewZealand(value: NullableOption[MediaContentRatingNewZealand]): Self = this.set("mediaContentRatingNewZealand", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaContentRatingNewZealand: Self = this.set("mediaContentRatingNewZealand", js.undefined)
     
     @scala.inline
-    def setMediaContentRatingUnitedKingdom(value: MediaContentRatingUnitedKingdom): Self = this.set("mediaContentRatingUnitedKingdom", value.asInstanceOf[js.Any])
+    def setMediaContentRatingNewZealandNull: Self = this.set("mediaContentRatingNewZealand", null)
+    
+    @scala.inline
+    def setMediaContentRatingUnitedKingdom(value: NullableOption[MediaContentRatingUnitedKingdom]): Self = this.set("mediaContentRatingUnitedKingdom", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaContentRatingUnitedKingdom: Self = this.set("mediaContentRatingUnitedKingdom", js.undefined)
     
     @scala.inline
-    def setMediaContentRatingUnitedStates(value: MediaContentRatingUnitedStates): Self = this.set("mediaContentRatingUnitedStates", value.asInstanceOf[js.Any])
+    def setMediaContentRatingUnitedKingdomNull: Self = this.set("mediaContentRatingUnitedKingdom", null)
+    
+    @scala.inline
+    def setMediaContentRatingUnitedStates(value: NullableOption[MediaContentRatingUnitedStates]): Self = this.set("mediaContentRatingUnitedStates", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaContentRatingUnitedStates: Self = this.set("mediaContentRatingUnitedStates", js.undefined)
+    
+    @scala.inline
+    def setMediaContentRatingUnitedStatesNull: Self = this.set("mediaContentRatingUnitedStates", null)
     
     @scala.inline
     def setMessagesBlocked(value: Boolean): Self = this.set("messagesBlocked", value.asInstanceOf[js.Any])
@@ -1093,10 +1141,13 @@ object IosGeneralDeviceConfiguration {
     def setNetworkUsageRulesVarargs(value: IosNetworkUsageRule*): Self = this.set("networkUsageRules", js.Array(value :_*))
     
     @scala.inline
-    def setNetworkUsageRules(value: js.Array[IosNetworkUsageRule]): Self = this.set("networkUsageRules", value.asInstanceOf[js.Any])
+    def setNetworkUsageRules(value: NullableOption[js.Array[IosNetworkUsageRule]]): Self = this.set("networkUsageRules", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNetworkUsageRules: Self = this.set("networkUsageRules", js.undefined)
+    
+    @scala.inline
+    def setNetworkUsageRulesNull: Self = this.set("networkUsageRules", null)
     
     @scala.inline
     def setNotificationsBlockSettingsModification(value: Boolean): Self = this.set("notificationsBlockSettingsModification", value.asInstanceOf[js.Any])
@@ -1129,40 +1180,58 @@ object IosGeneralDeviceConfiguration {
     def deletePasscodeBlockSimple: Self = this.set("passcodeBlockSimple", js.undefined)
     
     @scala.inline
-    def setPasscodeExpirationDays(value: Double): Self = this.set("passcodeExpirationDays", value.asInstanceOf[js.Any])
+    def setPasscodeExpirationDays(value: NullableOption[Double]): Self = this.set("passcodeExpirationDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasscodeExpirationDays: Self = this.set("passcodeExpirationDays", js.undefined)
     
     @scala.inline
-    def setPasscodeMinimumCharacterSetCount(value: Double): Self = this.set("passcodeMinimumCharacterSetCount", value.asInstanceOf[js.Any])
+    def setPasscodeExpirationDaysNull: Self = this.set("passcodeExpirationDays", null)
+    
+    @scala.inline
+    def setPasscodeMinimumCharacterSetCount(value: NullableOption[Double]): Self = this.set("passcodeMinimumCharacterSetCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasscodeMinimumCharacterSetCount: Self = this.set("passcodeMinimumCharacterSetCount", js.undefined)
     
     @scala.inline
-    def setPasscodeMinimumLength(value: Double): Self = this.set("passcodeMinimumLength", value.asInstanceOf[js.Any])
+    def setPasscodeMinimumCharacterSetCountNull: Self = this.set("passcodeMinimumCharacterSetCount", null)
+    
+    @scala.inline
+    def setPasscodeMinimumLength(value: NullableOption[Double]): Self = this.set("passcodeMinimumLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasscodeMinimumLength: Self = this.set("passcodeMinimumLength", js.undefined)
     
     @scala.inline
-    def setPasscodeMinutesOfInactivityBeforeLock(value: Double): Self = this.set("passcodeMinutesOfInactivityBeforeLock", value.asInstanceOf[js.Any])
+    def setPasscodeMinimumLengthNull: Self = this.set("passcodeMinimumLength", null)
+    
+    @scala.inline
+    def setPasscodeMinutesOfInactivityBeforeLock(value: NullableOption[Double]): Self = this.set("passcodeMinutesOfInactivityBeforeLock", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasscodeMinutesOfInactivityBeforeLock: Self = this.set("passcodeMinutesOfInactivityBeforeLock", js.undefined)
     
     @scala.inline
-    def setPasscodeMinutesOfInactivityBeforeScreenTimeout(value: Double): Self = this.set("passcodeMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
+    def setPasscodeMinutesOfInactivityBeforeLockNull: Self = this.set("passcodeMinutesOfInactivityBeforeLock", null)
+    
+    @scala.inline
+    def setPasscodeMinutesOfInactivityBeforeScreenTimeout(value: NullableOption[Double]): Self = this.set("passcodeMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasscodeMinutesOfInactivityBeforeScreenTimeout: Self = this.set("passcodeMinutesOfInactivityBeforeScreenTimeout", js.undefined)
     
     @scala.inline
-    def setPasscodePreviousPasscodeBlockCount(value: Double): Self = this.set("passcodePreviousPasscodeBlockCount", value.asInstanceOf[js.Any])
+    def setPasscodeMinutesOfInactivityBeforeScreenTimeoutNull: Self = this.set("passcodeMinutesOfInactivityBeforeScreenTimeout", null)
+    
+    @scala.inline
+    def setPasscodePreviousPasscodeBlockCount(value: NullableOption[Double]): Self = this.set("passcodePreviousPasscodeBlockCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasscodePreviousPasscodeBlockCount: Self = this.set("passcodePreviousPasscodeBlockCount", js.undefined)
+    
+    @scala.inline
+    def setPasscodePreviousPasscodeBlockCountNull: Self = this.set("passcodePreviousPasscodeBlockCount", null)
     
     @scala.inline
     def setPasscodeRequired(value: Boolean): Self = this.set("passcodeRequired", value.asInstanceOf[js.Any])
@@ -1177,10 +1246,13 @@ object IosGeneralDeviceConfiguration {
     def deletePasscodeRequiredType: Self = this.set("passcodeRequiredType", js.undefined)
     
     @scala.inline
-    def setPasscodeSignInFailureCountBeforeWipe(value: Double): Self = this.set("passcodeSignInFailureCountBeforeWipe", value.asInstanceOf[js.Any])
+    def setPasscodeSignInFailureCountBeforeWipe(value: NullableOption[Double]): Self = this.set("passcodeSignInFailureCountBeforeWipe", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasscodeSignInFailureCountBeforeWipe: Self = this.set("passcodeSignInFailureCountBeforeWipe", js.undefined)
+    
+    @scala.inline
+    def setPasscodeSignInFailureCountBeforeWipeNull: Self = this.set("passcodeSignInFailureCountBeforeWipe", null)
     
     @scala.inline
     def setPodcastsBlocked(value: Boolean): Self = this.set("podcastsBlocked", value.asInstanceOf[js.Any])
@@ -1222,19 +1294,25 @@ object IosGeneralDeviceConfiguration {
     def setSafariManagedDomainsVarargs(value: String*): Self = this.set("safariManagedDomains", js.Array(value :_*))
     
     @scala.inline
-    def setSafariManagedDomains(value: js.Array[String]): Self = this.set("safariManagedDomains", value.asInstanceOf[js.Any])
+    def setSafariManagedDomains(value: NullableOption[js.Array[String]]): Self = this.set("safariManagedDomains", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSafariManagedDomains: Self = this.set("safariManagedDomains", js.undefined)
     
     @scala.inline
+    def setSafariManagedDomainsNull: Self = this.set("safariManagedDomains", null)
+    
+    @scala.inline
     def setSafariPasswordAutoFillDomainsVarargs(value: String*): Self = this.set("safariPasswordAutoFillDomains", js.Array(value :_*))
     
     @scala.inline
-    def setSafariPasswordAutoFillDomains(value: js.Array[String]): Self = this.set("safariPasswordAutoFillDomains", value.asInstanceOf[js.Any])
+    def setSafariPasswordAutoFillDomains(value: NullableOption[js.Array[String]]): Self = this.set("safariPasswordAutoFillDomains", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSafariPasswordAutoFillDomains: Self = this.set("safariPasswordAutoFillDomains", js.undefined)
+    
+    @scala.inline
+    def setSafariPasswordAutoFillDomainsNull: Self = this.set("safariPasswordAutoFillDomains", null)
     
     @scala.inline
     def setSafariRequireFraudWarning(value: Boolean): Self = this.set("safariRequireFraudWarning", value.asInstanceOf[js.Any])

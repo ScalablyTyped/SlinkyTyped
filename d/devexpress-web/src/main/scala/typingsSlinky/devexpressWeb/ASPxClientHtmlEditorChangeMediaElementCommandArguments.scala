@@ -21,7 +21,7 @@ trait ASPxClientHtmlEditorChangeMediaElementCommandArguments extends ASPxClientH
   var align: String = js.native
   
   /**
-    * Defines the <a href="http://www.w3schools.com/tags/att_global_id.asp">HTML &quot;id&quot;</a> attribute of the target media element.
+    * Defines the <a href="http://www.w3schools.com/tags/att_global_id.asp">HTML "id"</a> attribute of the target media element.
     */
   var id: String = js.native
   

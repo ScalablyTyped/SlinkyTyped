@@ -9,11 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class File_ () extends Message {
   
-  def clearContent(): Unit = js.native
+  def clearContent(): File = js.native
   
-  def clearInsertionPoint(): Unit = js.native
+  def clearInsertionPoint(): File = js.native
   
-  def clearName(): Unit = js.native
+  def clearName(): File = js.native
   
   def getContent(): js.UndefOr[String] = js.native
   
@@ -27,9 +27,9 @@ class File_ () extends Message {
   
   def hasName(): Boolean = js.native
   
-  def setContent(value: String): Unit = js.native
+  def setContent(value: String): File = js.native
   
-  def setInsertionPoint(value: String): Unit = js.native
+  def setInsertionPoint(value: String): File = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): File = js.native
 }

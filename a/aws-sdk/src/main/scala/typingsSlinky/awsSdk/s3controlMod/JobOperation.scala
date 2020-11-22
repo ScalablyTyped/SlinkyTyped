@@ -13,17 +13,17 @@ trait JobOperation extends js.Object {
   var LambdaInvoke: js.UndefOr[LambdaInvokeOperation] = js.native
   
   /**
-    * Directs the specified job to execute an Initiate Glacier Restore call on each object in the manifest.
+    * Directs the specified job to run an Initiate Glacier Restore call on each object in the manifest.
     */
   var S3InitiateRestoreObject: js.UndefOr[S3InitiateRestoreObjectOperation] = js.native
   
   /**
-    * Directs the specified job to execute a PUT Object acl call on each object in the manifest.
+    * Directs the specified job to run a PUT Object acl call on each object in the manifest.
     */
   var S3PutObjectAcl: js.UndefOr[S3SetObjectAclOperation] = js.native
   
   /**
-    * Directs the specified job to execute a PUT Copy object call on each object in the manifest.
+    * Directs the specified job to run a PUT Copy object call on each object in the manifest.
     */
   var S3PutObjectCopy: js.UndefOr[S3CopyObjectOperation] = js.native
   
@@ -32,7 +32,7 @@ trait JobOperation extends js.Object {
   var S3PutObjectRetention: js.UndefOr[S3SetObjectRetentionOperation] = js.native
   
   /**
-    * Directs the specified job to execute a PUT Object tagging call on each object in the manifest.
+    * Directs the specified job to run a PUT Object tagging call on each object in the manifest.
     */
   var S3PutObjectTagging: js.UndefOr[S3SetObjectTaggingOperation] = js.native
 }

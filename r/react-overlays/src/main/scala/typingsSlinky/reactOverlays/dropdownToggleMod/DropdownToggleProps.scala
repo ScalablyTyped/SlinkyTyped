@@ -1,6 +1,7 @@
 package typingsSlinky.reactOverlays.dropdownToggleMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactOverlays.anon.UseDropdownToggleHelpersp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,17 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DropdownToggleProps extends js.Object {
   
-  /**
-    * A render prop that returns a Toggle element. The `props`
-    * argument should spread through to **a component that can accept a ref**. Use
-    * the `onToggle` argument to toggle the menu open or closed
-    */
-  def children(renderProps: DropdownToggleRenderProps): ReactElement = js.native
+  def children(args: UseDropdownToggleHelpersp): ReactElement = js.native
 }
 object DropdownToggleProps {
   
   @scala.inline
-  def apply(children: DropdownToggleRenderProps => ReactElement): DropdownToggleProps = {
+  def apply(children: UseDropdownToggleHelpersp => ReactElement): DropdownToggleProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction1(children))
     __obj.asInstanceOf[DropdownToggleProps]
   }
@@ -39,6 +35,6 @@ object DropdownToggleProps {
     }
     
     @scala.inline
-    def setChildren(value: DropdownToggleRenderProps => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildren(value: UseDropdownToggleHelpersp => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
   }
 }

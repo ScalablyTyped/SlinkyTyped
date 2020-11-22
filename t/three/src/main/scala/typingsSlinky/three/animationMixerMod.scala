@@ -36,8 +36,14 @@ object animationMixerMod extends js.Object {
     
     def stopAllAction(): AnimationMixer = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var time: Double = js.native
     
+    /**
+    	 * @default 1.0
+    	 */
     var timeScale: Double = js.native
     
     def uncacheAction(clip: AnimationClip): Unit = js.native

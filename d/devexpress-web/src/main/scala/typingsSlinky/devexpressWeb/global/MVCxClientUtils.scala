@@ -28,4 +28,20 @@ object MVCxClientUtils extends js.Object {
     */
   def GetSerializedEditorValuesInContainer(containerOrId: js.Any): js.Any = js.native
   def GetSerializedEditorValuesInContainer(containerOrId: js.Any, processInvisibleEditors: Boolean): js.Any = js.native
+  
+  /**
+    * Performs unobtrusive validation for editors in the specified container. true, if editors in the container pass the validation' otherwise, false.
+    * @param container An HTML element that contains editors.
+    * @param validateInvisibleEditors true, to validate visible and invisible DevExpress editors in the container; otherwise, to validate only visible editors.
+    */
+  def PerformValidationInContainer(container: js.Any): Boolean = js.native
+  def PerformValidationInContainer(container: js.Any, validateInvisibleEditors: Boolean): Boolean = js.native
+  
+  /**
+    * Performs unobtrusive validation for editors in the specified container. true, if editors in the container pass the validation' otherwise, false.
+    * @param containerId The ID of an HTML element that contains editors.
+    * @param validateInvisibleEditors true, to validate visible and invisible DevExpress editors in the container; otherwise, to validate only visible editors.
+    */
+  def PerformValidationInContainerById(containerId: String): Boolean = js.native
+  def PerformValidationInContainerById(containerId: String, validateInvisibleEditors: Boolean): Boolean = js.native
 }

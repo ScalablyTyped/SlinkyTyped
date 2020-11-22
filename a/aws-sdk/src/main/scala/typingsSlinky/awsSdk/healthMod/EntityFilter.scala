@@ -33,7 +33,7 @@ trait EntityFilter extends js.Object {
   var statusCodes: js.UndefOr[entityStatusCodeList] = js.native
   
   /**
-    * A map of entity tags attached to the affected entity.
+    * A map of entity tags attached to the affected entity.  Currently, the tags property isn't supported. 
     */
   var tags: js.UndefOr[tagFilter] = js.native
 }

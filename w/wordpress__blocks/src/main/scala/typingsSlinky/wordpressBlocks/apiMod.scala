@@ -10,6 +10,7 @@ import typingsSlinky.std.Partial
 import typingsSlinky.std.Record
 import typingsSlinky.wordpressBlocks.anon.Attributetypeboolean
 import typingsSlinky.wordpressBlocks.anon.BlockName
+import typingsSlinky.wordpressBlocks.anon.Icon
 import typingsSlinky.wordpressBlocks.anon.Mode
 import typingsSlinky.wordpressBlocks.anon.PartialCategory
 import typingsSlinky.wordpressBlocks.categoriesMod.Category
@@ -321,6 +322,8 @@ object apiMod extends js.Object {
     */ typingsSlinky.wordpressBlocks.wordpressBlocksStrings.parseWithAttributeSchema with TopLevel[T] = js.native
   
   def rawHandler(options: typingsSlinky.wordpressBlocks.anon.HTML): js.Array[BlockInstance[StringDictionary[_]]] = js.native
+  
+  def registerBlockCollection(namespace: String, settings: Icon): Unit = js.native
   
   def registerBlockStyle(blockName: String, styleVariation: BlockStyle): Unit = js.native
   

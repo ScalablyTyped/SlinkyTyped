@@ -31,6 +31,8 @@ trait BaseProps
   
   var src: String = js.native
   
+  var useRequestCache: js.UndefOr[Boolean] = js.native
+  
   var wrapper: js.UndefOr[div | span] = js.native
 }
 object BaseProps {
@@ -106,6 +108,12 @@ object BaseProps {
     
     @scala.inline
     def deleteRenumerateIRIElements: Self = this.set("renumerateIRIElements", js.undefined)
+    
+    @scala.inline
+    def setUseRequestCache(value: Boolean): Self = this.set("useRequestCache", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUseRequestCache: Self = this.set("useRequestCache", js.undefined)
     
     @scala.inline
     def setWrapper(value: div | span): Self = this.set("wrapper", value.asInstanceOf[js.Any])

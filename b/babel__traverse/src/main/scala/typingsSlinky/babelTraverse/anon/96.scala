@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.Identifier
+import typingsSlinky.babelTraverse.babelTraverseStrings.NullableTypeAnnotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `96` extends js.Object {
   
-  var `type`: Identifier = js.native
+  var `type`: NullableTypeAnnotation = js.native
 }
 object `96` {
   
   @scala.inline
-  def apply(`type`: Identifier): `96` = {
+  def apply(`type`: NullableTypeAnnotation): `96` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`96`]
@@ -35,6 +35,6 @@ object `96` {
     }
     
     @scala.inline
-    def setType(value: Identifier): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: NullableTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

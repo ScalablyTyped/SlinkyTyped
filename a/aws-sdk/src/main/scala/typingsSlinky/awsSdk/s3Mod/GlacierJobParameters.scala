@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GlacierJobParameters extends js.Object {
   
   /**
-    * S3 Glacier retrieval tier at which the restore will be processed.
+    * Retrieval tier at which the restore will be processed.
     */
   var Tier: typingsSlinky.awsSdk.s3Mod.Tier = js.native
 }

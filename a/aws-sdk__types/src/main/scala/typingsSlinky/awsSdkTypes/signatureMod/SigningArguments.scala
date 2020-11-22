@@ -14,6 +14,18 @@ trait SigningArguments extends js.Object {
     * value returned by `new Date()` will be used.
     */
   var signingDate: js.UndefOr[DateInput] = js.native
+  
+  /**
+    * The region name to sign the request. It will override the signing region of the
+    * signer in current invocation
+    */
+  var signingRegion: js.UndefOr[String] = js.native
+  
+  /**
+    * The service signing name. It will override the service name of the signer
+    * in current invocation
+    */
+  var signingService: js.UndefOr[String] = js.native
 }
 object SigningArguments {
   
@@ -46,5 +58,17 @@ object SigningArguments {
     
     @scala.inline
     def deleteSigningDate: Self = this.set("signingDate", js.undefined)
+    
+    @scala.inline
+    def setSigningRegion(value: String): Self = this.set("signingRegion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSigningRegion: Self = this.set("signingRegion", js.undefined)
+    
+    @scala.inline
+    def setSigningService(value: String): Self = this.set("signingService", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSigningService: Self = this.set("signingService", js.undefined)
   }
 }

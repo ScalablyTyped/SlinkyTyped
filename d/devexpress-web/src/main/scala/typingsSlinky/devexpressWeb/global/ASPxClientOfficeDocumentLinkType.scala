@@ -9,5 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSGlobal("ASPxClientOfficeDocumentLinkType")
 @js.native
-class ASPxClientOfficeDocumentLinkType ()
-  extends typingsSlinky.devexpressWeb.ASPxClientOfficeDocumentLinkType
+object ASPxClientOfficeDocumentLinkType extends js.Object {
+  
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[typingsSlinky.devexpressWeb.ASPxClientOfficeDocumentLinkType with Double] = js.native
+  
+  /* 1 */ val Bookmark: typingsSlinky.devexpressWeb.ASPxClientOfficeDocumentLinkType.Bookmark with Double = js.native
+  
+  /* 3 */ val Document: typingsSlinky.devexpressWeb.ASPxClientOfficeDocumentLinkType.Document with Double = js.native
+  
+  /* 2 */ val EmailAddress: typingsSlinky.devexpressWeb.ASPxClientOfficeDocumentLinkType.EmailAddress with Double = js.native
+  
+  /* 0 */ val Hyperlink: typingsSlinky.devexpressWeb.ASPxClientOfficeDocumentLinkType.Hyperlink with Double = js.native
+}

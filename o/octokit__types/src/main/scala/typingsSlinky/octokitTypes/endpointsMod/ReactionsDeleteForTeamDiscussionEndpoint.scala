@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`10`
+import typingsSlinky.octokitTypes.anon.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ trait ReactionsDeleteForTeamDiscussionEndpoint extends js.Object {
   
   var discussion_number: Double = js.native
   
-  var mediaType: `10` = js.native
+  var mediaType: `9` = js.native
   
   @JSName("org")
   var org_ : String = js.native
@@ -23,7 +23,7 @@ trait ReactionsDeleteForTeamDiscussionEndpoint extends js.Object {
 object ReactionsDeleteForTeamDiscussionEndpoint {
   
   @scala.inline
-  def apply(discussion_number: Double, mediaType: `10`, org_ : String, reaction_id: Double, team_slug: String): ReactionsDeleteForTeamDiscussionEndpoint = {
+  def apply(discussion_number: Double, mediaType: `9`, org_ : String, reaction_id: Double, team_slug: String): ReactionsDeleteForTeamDiscussionEndpoint = {
     val __obj = js.Dynamic.literal(discussion_number = discussion_number.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], reaction_id = reaction_id.asInstanceOf[js.Any], team_slug = team_slug.asInstanceOf[js.Any])
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactionsDeleteForTeamDiscussionEndpoint]
@@ -48,7 +48,7 @@ object ReactionsDeleteForTeamDiscussionEndpoint {
     def setDiscussion_number(value: Double): Self = this.set("discussion_number", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `10`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `9`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOrg_(value: String): Self = this.set("org", value.asInstanceOf[js.Any])

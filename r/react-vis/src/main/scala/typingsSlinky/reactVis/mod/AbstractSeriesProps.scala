@@ -94,7 +94,7 @@ trait AbstractSeriesProps[T /* <: AbstractSeriesPoint */] extends js.Object {
   
   var onNearestX: js.UndefOr[RVNearestXEventHandler[T]] = js.native
   
-  var onNearestXY: js.UndefOr[RVNearestXEventHandler[T]] = js.native
+  var onNearestXY: js.UndefOr[RVNearestXYEventHandler[T]] = js.native
   
   var onSeriesClick: js.UndefOr[RVMouseEventHandler] = js.native
   
@@ -413,7 +413,7 @@ object AbstractSeriesProps {
     def deleteOnNearestX: Self = this.set("onNearestX", js.undefined)
     
     @scala.inline
-    def setOnNearestXY(value: (T, /* data */ RVNearestXData[T]) => Unit): Self = this.set("onNearestXY", js.Any.fromFunction2(value))
+    def setOnNearestXY(value: (T, /* data */ RVNearestXYData[T]) => Unit): Self = this.set("onNearestXY", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnNearestXY: Self = this.set("onNearestXY", js.undefined)

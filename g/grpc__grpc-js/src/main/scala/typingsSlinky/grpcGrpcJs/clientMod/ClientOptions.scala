@@ -31,6 +31,12 @@ trait ClientOptions extends js.Object {
   @JSName("grpc.enable_http_proxy")
   var grpcDotenable_http_proxy: js.UndefOr[Double] = js.native
   
+  @JSName("grpc.http_connect_creds")
+  var grpcDothttp_connect_creds: js.UndefOr[String] = js.native
+  
+  @JSName("grpc.http_connect_target")
+  var grpcDothttp_connect_target: js.UndefOr[String] = js.native
+  
   @JSName("grpc.initial_reconnect_backoff_ms")
   var grpcDotinitial_reconnect_backoff_ms: js.UndefOr[Double] = js.native
   
@@ -123,6 +129,18 @@ object ClientOptions {
     
     @scala.inline
     def deleteGrpcDotenable_http_proxy: Self = this.set("grpc.enable_http_proxy", js.undefined)
+    
+    @scala.inline
+    def setGrpcDothttp_connect_creds(value: String): Self = this.set("grpc.http_connect_creds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGrpcDothttp_connect_creds: Self = this.set("grpc.http_connect_creds", js.undefined)
+    
+    @scala.inline
+    def setGrpcDothttp_connect_target(value: String): Self = this.set("grpc.http_connect_target", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteGrpcDothttp_connect_target: Self = this.set("grpc.http_connect_target", js.undefined)
     
     @scala.inline
     def setGrpcDotinitial_reconnect_backoff_ms(value: Double): Self = this.set("grpc.initial_reconnect_backoff_ms", value.asInstanceOf[js.Any])

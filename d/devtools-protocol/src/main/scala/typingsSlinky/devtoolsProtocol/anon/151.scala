@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetLifecycleEventsEnabledRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetDeviceMetricsOverrideRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `151` extends js.Object {
   
-  var paramsType: js.Array[SetLifecycleEventsEnabledRequest] = js.native
+  var paramsType: js.Array[SetDeviceMetricsOverrideRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `151` {
   
   @scala.inline
-  def apply(paramsType: js.Array[SetLifecycleEventsEnabledRequest], returnType: Unit): `151` = {
+  def apply(paramsType: js.Array[SetDeviceMetricsOverrideRequest], returnType: Unit): `151` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`151`]
   }
@@ -36,10 +36,10 @@ object `151` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: SetLifecycleEventsEnabledRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetDeviceMetricsOverrideRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[SetLifecycleEventsEnabledRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetDeviceMetricsOverrideRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

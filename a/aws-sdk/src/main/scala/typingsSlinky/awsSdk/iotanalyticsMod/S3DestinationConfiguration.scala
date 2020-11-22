@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait S3DestinationConfiguration extends js.Object {
   
   /**
-    * The name of the Amazon S3 bucket to which data set contents are delivered.
+    * The name of the S3 bucket to which dataset contents are delivered.
     */
   var bucket: BucketName = js.native
   
   /**
-    * Configuration information for coordination with the AWS Glue ETL (extract, transform and load) service.
+    * Configuration information for coordination with AWS Glue, a fully managed extract, transform and load (ETL) service.
     */
   var glueConfiguration: js.UndefOr[GlueConfiguration] = js.native
   
   /**
-    * The key of the data set contents object. Each object in an Amazon S3 bucket has a key that is its unique identifier within the bucket (each object in a bucket has exactly one key). To produce a unique key, you can use "!{iotanalytics:scheduledTime}" to insert the time of the scheduled SQL query run, or "!{iotanalytics:versioned} to insert a unique hash identifying the data set, for example: "/DataSet/!{iotanalytics:scheduledTime}/!{iotanalytics:versioned}.csv".
+    * The key of the dataset contents object in an S3 bucket. Each object has a key that is a unique identifier. Each object has exactly one key. You can create a unique key with the following options:   Use !{iotanalytics:scheduleTime} to insert the time of a scheduled SQL query run.   Use !{iotanalytics:versionId} to insert a unique hash that identifies a dataset content.   Use !{iotanalytics:creationTime} to insert the creation time of a dataset content.   The following example creates a unique key for a CSV file: dataset/mydataset/!{iotanalytics:scheduleTime}/!{iotanalytics:versionId}.csv   If you don't use !{iotanalytics:versionId} to specify the key, you might get duplicate keys. For example, you might have two dataset contents with the same scheduleTime but different versionIds. This means that one dataset content overwrites the other.  
     */
   var key: BucketKeyExpression = js.native
   
   /**
-    * The ARN of the role which grants AWS IoT Analytics permission to interact with your Amazon S3 and AWS Glue resources.
+    * The ARN of the role that grants AWS IoT Analytics permission to interact with your Amazon S3 and AWS Glue resources.
     */
   var roleArn: RoleArn = js.native
 }

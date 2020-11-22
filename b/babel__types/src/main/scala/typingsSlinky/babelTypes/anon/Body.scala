@@ -1,8 +1,8 @@
 package typingsSlinky.babelTypes.anon
 
-import typingsSlinky.babelTypes.mod.BlockStatement_
-import typingsSlinky.babelTypes.mod.Expression
-import typingsSlinky.babelTypes.mod.Statement
+import typingsSlinky.babelTypes.indexTs37Mod.BlockStatement_
+import typingsSlinky.babelTypes.indexTs37Mod.Expression
+import typingsSlinky.babelTypes.indexTs37Mod.Statement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

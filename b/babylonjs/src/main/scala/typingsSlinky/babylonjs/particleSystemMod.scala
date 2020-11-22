@@ -14,6 +14,7 @@ import typingsSlinky.babylonjs.particleMod.Particle
 import typingsSlinky.babylonjs.sceneMod.IDisposable
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.subEmitterMod.SubEmitter
+import typingsSlinky.babylonjs.thinEngineMod.ThinEngine
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +25,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object particleSystemMod extends js.Object {
   
   /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-  - typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem because var conflicts: animations, beginAnimationFrom, beginAnimationLoop, beginAnimationOnStart, beginAnimationTo, billboardMode, blendMode, color1, color2, colorDead, disposeOnStop, emitRate, emitter, endSpriteCellID, gravity, id, isAnimationSheetEnabled, isBillboardBased, layerMask, limitVelocityDamping, maxAngularSpeed, maxEmitPower, maxInitialRotation, maxLifeTime, maxScaleX, maxScaleY, maxSize, minAngularSpeed, minEmitPower, minInitialRotation, minLifeTime, minScaleX, minScaleY, minSize, name, noiseStrength, noiseTexture, particleEmitterType, particleTexture, preWarmCycles, preWarmStepOffset, renderingGroupId, spriteCellChangeSpeed, spriteCellHeight, spriteCellWidth, spriteRandomStartCell, startDelay, startSpriteCellID, targetStopDuration, translationPivot, updateSpeed. Inlined isLocal, getCapacity, isStarted, animate, render, clone, serialize, rebuild, start, start, stop, reset, isReady, addColorGradient, addColorGradient, removeColorGradient, addSizeGradient, addSizeGradient, removeSizeGradient, addAngularSpeedGradient, addAngularSpeedGradient, removeAngularSpeedGradient, addVelocityGradient, addVelocityGradient, removeVelocityGradient, addLimitVelocityGradient, addLimitVelocityGradient, removeLimitVelocityGradient, addDragGradient, addDragGradient, removeDragGradient, addEmitRateGradient, addEmitRateGradient, removeEmitRateGradient, addStartSizeGradient, addStartSizeGradient, removeStartSizeGradient, addLifeTimeGradient, addLifeTimeGradient, removeLifeTimeGradient, addRampGradient, getRampGradients, useRampGradients, addColorRemapGradient, addAlphaRemapGradient
+  - typingsSlinky.babylonjs.iparticlesystemMod.IParticleSystem because var conflicts: animations, beginAnimationFrom, beginAnimationLoop, beginAnimationOnStart, beginAnimationTo, billboardMode, blendMode, color1, color2, colorDead, disposeOnStop, emitRate, emitter, endSpriteCellID, gravity, id, isAnimationSheetEnabled, isBillboardBased, layerMask, limitVelocityDamping, maxAngularSpeed, maxEmitPower, maxInitialRotation, maxLifeTime, maxScaleX, maxScaleY, maxSize, minAngularSpeed, minEmitPower, minInitialRotation, minLifeTime, minScaleX, minScaleY, minSize, name, noiseStrength, noiseTexture, particleEmitterType, particleTexture, preWarmCycles, preWarmStepOffset, renderingGroupId, snippetId, spriteCellChangeSpeed, spriteCellHeight, spriteCellWidth, spriteRandomStartCell, startDelay, startSpriteCellID, targetStopDuration, translationPivot, updateSpeed. Inlined isLocal, defaultProjectionMatrix, getCapacity, getActiveCount, isStarted, animate, render, onDisposeObservable, onStoppedObservable, clone, serialize, rebuild, forceRefreshGradients, start, start, stop, reset, isStopping, isReady, getClassName, getCustomEffect, setCustomEffect, fillDefines, fillUniformsAttributesAndSamplerNames, onBeforeDrawParticlesObservable, vertexShaderName, addColorGradient, addColorGradient, removeColorGradient, addSizeGradient, addSizeGradient, removeSizeGradient, addAngularSpeedGradient, addAngularSpeedGradient, removeAngularSpeedGradient, addVelocityGradient, addVelocityGradient, removeVelocityGradient, addLimitVelocityGradient, addLimitVelocityGradient, removeLimitVelocityGradient, addDragGradient, addDragGradient, removeDragGradient, addEmitRateGradient, addEmitRateGradient, removeEmitRateGradient, addStartSizeGradient, addStartSizeGradient, removeStartSizeGradient, addLifeTimeGradient, addLifeTimeGradient, removeLifeTimeGradient, addRampGradient, getRampGradients, useRampGradients, addColorRemapGradient, addAlphaRemapGradient
   - typingsSlinky.babylonjs.animatableInterfaceMod.IAnimatable because var conflicts: animations. Inlined  */ @js.native
   class ParticleSystem protected ()
     extends BaseParticleSystem
@@ -34,24 +35,33 @@ object particleSystemMod extends js.Object {
       * Particles are often small sprites used to simulate hard-to-reproduce phenomena like fire, smoke, water, or abstract visual effects like magic glitter and faery dust.
       * @param name The name of the particle system
       * @param capacity The max number of particles alive at the same time
-      * @param scene The scene the particle system belongs to
+      * @param sceneOrEngine The scene the particle system belongs to or the engine to use if no scene
       * @param customEffect a custom effect used to change the way particles are rendered by default
       * @param isAnimationSheetEnabled Must be true if using a spritesheet to animate the particles texture
       * @param epsilon Offset used to render the particles
       */
-    def this(name: String, capacity: Double, scene: Scene) = this()
-    def this(name: String, capacity: Double, scene: Scene, customEffect: Nullable[Effect]) = this()
+    def this(name: String, capacity: Double, sceneOrEngine: Scene) = this()
+    def this(name: String, capacity: Double, sceneOrEngine: ThinEngine) = this()
+    def this(name: String, capacity: Double, sceneOrEngine: Scene, customEffect: Nullable[Effect]) = this()
+    def this(name: String, capacity: Double, sceneOrEngine: ThinEngine, customEffect: Nullable[Effect]) = this()
     def this(
       name: String,
       capacity: Double,
-      scene: Scene,
+      sceneOrEngine: Scene,
       customEffect: js.UndefOr[Nullable[Effect]],
       isAnimationSheetEnabled: Boolean
     ) = this()
     def this(
       name: String,
       capacity: Double,
-      scene: Scene,
+      sceneOrEngine: ThinEngine,
+      customEffect: js.UndefOr[Nullable[Effect]],
+      isAnimationSheetEnabled: Boolean
+    ) = this()
+    def this(
+      name: String,
+      capacity: Double,
+      sceneOrEngine: Scene,
       customEffect: js.UndefOr[Nullable[Effect]],
       isAnimationSheetEnabled: js.UndefOr[scala.Nothing],
       epsilon: Double
@@ -59,7 +69,23 @@ object particleSystemMod extends js.Object {
     def this(
       name: String,
       capacity: Double,
-      scene: Scene,
+      sceneOrEngine: Scene,
+      customEffect: js.UndefOr[Nullable[Effect]],
+      isAnimationSheetEnabled: Boolean,
+      epsilon: Double
+    ) = this()
+    def this(
+      name: String,
+      capacity: Double,
+      sceneOrEngine: ThinEngine,
+      customEffect: js.UndefOr[Nullable[Effect]],
+      isAnimationSheetEnabled: js.UndefOr[scala.Nothing],
+      epsilon: Double
+    ) = this()
+    def this(
+      name: String,
+      capacity: Double,
+      sceneOrEngine: ThinEngine,
       customEffect: js.UndefOr[Nullable[Effect]],
       isAnimationSheetEnabled: Boolean,
       epsilon: Double
@@ -142,6 +168,9 @@ object particleSystemMod extends js.Object {
     
     var _newPartsExcess: js.Any = js.native
     
+    /** @hidden */
+    var _onBeforeDrawParticlesObservable: js.Any = js.native
+    
     var _onDisposeObserver: js.Any = js.native
     
     var _particles: js.Any = js.native
@@ -182,11 +211,15 @@ object particleSystemMod extends js.Object {
     
     var _subEmitters: js.Any = js.native
     
+    var _syncRampGradientTexture: js.Any = js.native
+    
     var _update: js.Any = js.native
     
     var _useInstancing: js.Any = js.native
     
     var _useRampGradients: js.Any = js.native
+    
+    var _vertexArrayObject: js.Any = js.native
     
     var _vertexBuffer: js.Any = js.native
     
@@ -393,7 +426,37 @@ object particleSystemMod extends js.Object {
     @JSName("clone")
     def clone_ParticleSystem(name: String, newEmitter: js.Any): ParticleSystem = js.native
     
+    /** Gets or sets a matrix to use to compute projection */
+    var defaultProjectionMatrix: Matrix = js.native
+    
+    /** Gets or sets a matrix to use to compute view */
+    var defaultViewMatrix: Matrix = js.native
+    
     def dispose(disposeTexture: Boolean): Unit = js.native
+    
+    /**
+      * Fill the defines array according to the current settings of the particle system
+      * @param defines Array to be updated
+      * @param blendMode blend mode to take into account when updating the array
+      */
+    def fillDefines(defines: js.Array[String], blendMode: Double): Unit = js.native
+    
+    /**
+      * Fill the uniforms, attributes and samplers arrays according to the current settings of the particle system
+      * @param uniforms Uniforms array to fill
+      * @param attributes Attributes array to fill
+      * @param samplers Samplers array to fill
+      */
+    def fillUniformsAttributesAndSamplerNames(uniforms: js.Array[String], attributes: js.Array[String], samplers: js.Array[String]): Unit = js.native
+    
+    /** Force the system to rebuild all gradients that need to be resync */
+    def forceRefreshGradients(): Unit = js.native
+    
+    /**
+      * Gets the number of particles active at the same time.
+      * @returns The number of active particles.
+      */
+    def getActiveCount(): Double = js.native
     
     /**
       * Gets the maximum number of particles active at the same time.
@@ -406,6 +469,19 @@ object particleSystemMod extends js.Object {
       * @returns a string containing the class name
       */
     def getClassName(): String = js.native
+    
+    /**
+      * Gets the custom effect used to render the particles
+      * @param blendMode Blend mode for which the effect should be retrieved
+      * @returns The effect
+      */
+    def getCustomEffect(): Nullable[Effect] = js.native
+    /**
+      * Gets the custom effect used to render the particles
+      * @param blendMode Blend mode for which the effect should be retrieved
+      * @returns The effect
+      */
+    def getCustomEffect(blendMode: Double): Nullable[Effect] = js.native
     
     /**
       * Gets the current list of ramp gradients.
@@ -438,14 +514,35 @@ object particleSystemMod extends js.Object {
     def isStarted(): Boolean = js.native
     
     /**
+      * Gets a boolean indicating that the system is stopping
+      * @returns true if the system is currently stopping
+      */
+    def isStopping(): Boolean = js.native
+    
+    /**
+      * Observable that will be called just before the particles are drawn
+      */
+    def onBeforeDrawParticlesObservable: Observable[Nullable[Effect]] = js.native
+    /**
+      * Observable that will be called just before the particles are drawn
+      */
+    @JSName("onBeforeDrawParticlesObservable")
+    var onBeforeDrawParticlesObservable_FParticleSystem: Observable[Nullable[Effect]] = js.native
+    
+    /**
       * An event triggered when the system is disposed
       */
-    var onDisposeObservable: Observable[ParticleSystem] = js.native
+    var onDisposeObservable: Observable[IParticleSystem] = js.native
     
     /**
       * Sets a callback that will be triggered when the system is disposed
       */
     def onDispose_=(callback: js.Function0[Unit]): Unit = js.native
+    
+    /**
+      * An event triggered when the system is stopped
+      */
+    var onStoppedObservable: Observable[IParticleSystem] = js.native
     
     /**
       * Gets the current list of active particles
@@ -567,10 +664,30 @@ object particleSystemMod extends js.Object {
     def reset(): Unit = js.native
     
     /**
-      * Serializes the particle system to a JSON object.
+      * Serializes the particle system to a JSON object
+      * @param serializeTexture defines if the texture must be serialized as well
       * @returns the JSON object
       */
     def serialize(): js.Any = js.native
+    /**
+      * Serializes the particle system to a JSON object
+      * @param serializeTexture defines if the texture must be serialized as well
+      * @returns the JSON object
+      */
+    def serialize(serializeTexture: Boolean): js.Any = js.native
+    
+    /**
+      * Sets the custom effect used to render the particles
+      * @param effect The effect to set
+      * @param blendMode Blend mode for which the effect should be set
+      */
+    def setCustomEffect(effect: Nullable[Effect]): Unit = js.native
+    /**
+      * Sets the custom effect used to render the particles
+      * @param effect The effect to set
+      * @param blendMode Blend mode for which the effect should be set
+      */
+    def setCustomEffect(effect: Nullable[Effect], blendMode: Double): Unit = js.native
     
     /**
       * Starts the particle system and begins to emit
@@ -619,15 +736,25 @@ object particleSystemMod extends js.Object {
     def updateFunction(particles: js.Array[Particle]): Unit = js.native
     
     /** Gets or sets a boolean indicating that ramp gradients must be used
-      * @see http://doc.babylonjs.com/babylon101/particles#ramp-gradients
+      * @see https://doc.babylonjs.com/babylon101/particles#ramp-gradients
       */
     def useRampGradients: Boolean = js.native
     def useRampGradients_=(value: Boolean): Unit = js.native
     /** Gets or sets a boolean indicating that ramp gradients must be used
-      * @see http://doc.babylonjs.com/babylon101/particles#ramp-gradients
+      * @see https://doc.babylonjs.com/babylon101/particles#ramp-gradients
       */
     @JSName("useRampGradients")
     var useRampGradients_FParticleSystem: Boolean = js.native
+    
+    /**
+      * Gets the name of the particle vertex shader
+      */
+    def vertexShaderName: String = js.native
+    /**
+      * Gets the name of the particle vertex shader
+      */
+    @JSName("vertexShaderName")
+    var vertexShaderName_FParticleSystem: String = js.native
   }
   /* static members */
   @js.native
@@ -651,13 +778,15 @@ object particleSystemMod extends js.Object {
     /**
       * Parses a JSON object to create a particle system.
       * @param parsedParticleSystem The JSON object to parse
-      * @param scene The scene to create the particle system in
+      * @param sceneOrEngine The scene or the engine to create the particle system in
       * @param rootUrl The root url to use to load external dependencies like texture
       * @param doNotStart Ignore the preventAutoStart attribute and does not start
       * @returns the Parsed particle system
       */
-    def Parse(parsedParticleSystem: js.Any, scene: Scene, rootUrl: String): ParticleSystem = js.native
-    def Parse(parsedParticleSystem: js.Any, scene: Scene, rootUrl: String, doNotStart: Boolean): ParticleSystem = js.native
+    def Parse(parsedParticleSystem: js.Any, sceneOrEngine: Scene, rootUrl: String): ParticleSystem = js.native
+    def Parse(parsedParticleSystem: js.Any, sceneOrEngine: Scene, rootUrl: String, doNotStart: Boolean): ParticleSystem = js.native
+    def Parse(parsedParticleSystem: js.Any, sceneOrEngine: ThinEngine, rootUrl: String): ParticleSystem = js.native
+    def Parse(parsedParticleSystem: js.Any, sceneOrEngine: ThinEngine, rootUrl: String, doNotStart: Boolean): ParticleSystem = js.native
     
     /** @hidden */
     def _GetAttributeNamesOrOptions(): js.Array[String] = js.native
@@ -686,9 +815,20 @@ object particleSystemMod extends js.Object {
     def _GetEffectCreationOptions(isAnimationSheetEnabled: Boolean): js.Array[String] = js.native
     
     /** @hidden */
-    def _Parse(parsedParticleSystem: js.Any, particleSystem: IParticleSystem, scene: Scene, rootUrl: String): Unit = js.native
+    def _Parse(
+      parsedParticleSystem: js.Any,
+      particleSystem: IParticleSystem,
+      sceneOrEngine: Scene,
+      rootUrl: String
+    ): Unit = js.native
+    def _Parse(
+      parsedParticleSystem: js.Any,
+      particleSystem: IParticleSystem,
+      sceneOrEngine: ThinEngine,
+      rootUrl: String
+    ): Unit = js.native
     
     /** @hidden */
-    def _Serialize(serializationObject: js.Any, particleSystem: IParticleSystem): Unit = js.native
+    def _Serialize(serializationObject: js.Any, particleSystem: IParticleSystem, serializeTexture: Boolean): Unit = js.native
   }
 }

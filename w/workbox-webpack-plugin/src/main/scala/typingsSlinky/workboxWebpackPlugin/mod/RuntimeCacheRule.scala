@@ -11,7 +11,7 @@ trait RuntimeCacheRule extends js.Object {
     * The `handler` values are strings, corresponding to names of the strategies supported by
     * [`workbox.strategies`](https://developers.google.com/web/tools/workbox/reference-docs/latest/workbox.strategies#methods).
     */
-  var handler: js.UndefOr[CacheStrategy] = js.native
+  var handler: CacheStrategy = js.native
   
   /**
     * The `options` properties can be used to configure instances of the cache expiration, cacheable response, and broadcast cache update plugins to apply to a given route.
@@ -21,13 +21,13 @@ trait RuntimeCacheRule extends js.Object {
   /**
     * Cache any same-origin request that matches the pattern.
     */
-  var urlPattern: js.UndefOr[String | js.RegExp] = js.native
+  var urlPattern: String | js.RegExp = js.native
 }
 object RuntimeCacheRule {
   
   @scala.inline
-  def apply(): RuntimeCacheRule = {
-    val __obj = js.Dynamic.literal()
+  def apply(handler: CacheStrategy, urlPattern: String | js.RegExp): RuntimeCacheRule = {
+    val __obj = js.Dynamic.literal(handler = handler.asInstanceOf[js.Any], urlPattern = urlPattern.asInstanceOf[js.Any])
     __obj.asInstanceOf[RuntimeCacheRule]
   }
   
@@ -50,21 +50,15 @@ object RuntimeCacheRule {
     def setHandler(value: CacheStrategy): Self = this.set("handler", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteHandler: Self = this.set("handler", js.undefined)
-    
-    @scala.inline
-    def setOptions(value: RuntimeCacheOptions): Self = this.set("options", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteOptions: Self = this.set("options", js.undefined)
-    
-    @scala.inline
     def setUrlPatternRegExp(value: js.RegExp): Self = this.set("urlPattern", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setUrlPattern(value: String | js.RegExp): Self = this.set("urlPattern", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteUrlPattern: Self = this.set("urlPattern", js.undefined)
+    def setOptions(value: RuntimeCacheOptions): Self = this.set("options", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOptions: Self = this.set("options", js.undefined)
   }
 }

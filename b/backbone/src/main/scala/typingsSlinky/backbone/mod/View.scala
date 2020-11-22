@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("backbone", "View")
 @js.native
-class View[TModel /* <: Model[_, ModelSetOptions] */] () extends js.Object {
+class View[TModel /* <: Model[_, ModelSetOptions, js.Object] */] () extends js.Object {
   def this(options: ViewOptions[TModel]) = this()
   
   @JSName("$")

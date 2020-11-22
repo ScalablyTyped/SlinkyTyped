@@ -10,6 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GetVpcAttachmentResult extends js.Object {
   
   /**
+    * Whether Appliance Mode support is enabled.
+    */
+  val applianceModeSupport: String = js.native
+  
+  /**
     * Whether DNS support is enabled.
     */
   val dnsSupport: String = js.native
@@ -55,6 +60,7 @@ object GetVpcAttachmentResult {
   
   @scala.inline
   def apply(
+    applianceModeSupport: String,
     dnsSupport: String,
     ipv6Support: String,
     subnetIds: js.Array[String],
@@ -63,7 +69,7 @@ object GetVpcAttachmentResult {
     vpcId: String,
     vpcOwnerId: String
   ): GetVpcAttachmentResult = {
-    val __obj = js.Dynamic.literal(dnsSupport = dnsSupport.asInstanceOf[js.Any], ipv6Support = ipv6Support.asInstanceOf[js.Any], subnetIds = subnetIds.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], transitGatewayId = transitGatewayId.asInstanceOf[js.Any], vpcId = vpcId.asInstanceOf[js.Any], vpcOwnerId = vpcOwnerId.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(applianceModeSupport = applianceModeSupport.asInstanceOf[js.Any], dnsSupport = dnsSupport.asInstanceOf[js.Any], ipv6Support = ipv6Support.asInstanceOf[js.Any], subnetIds = subnetIds.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], transitGatewayId = transitGatewayId.asInstanceOf[js.Any], vpcId = vpcId.asInstanceOf[js.Any], vpcOwnerId = vpcOwnerId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetVpcAttachmentResult]
   }
   
@@ -81,6 +87,9 @@ object GetVpcAttachmentResult {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setApplianceModeSupport(value: String): Self = this.set("applianceModeSupport", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setDnsSupport(value: String): Self = this.set("dnsSupport", value.asInstanceOf[js.Any])

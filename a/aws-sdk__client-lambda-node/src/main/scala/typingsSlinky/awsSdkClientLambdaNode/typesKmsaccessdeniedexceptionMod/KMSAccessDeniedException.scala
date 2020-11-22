@@ -1,30 +1,21 @@
 package typingsSlinky.awsSdkClientLambdaNode.typesKmsaccessdeniedexceptionMod
 
 import typingsSlinky.awsSdkClientLambdaNode.invokeExceptionsUnionMod.InvokeExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
-trait KMSAccessDeniedException
-  extends ServiceException[KMSAccessDeniedExceptionDetails]
-     with InvokeExceptionsUnion {
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_KMSAccessDeniedExceptionDetails> * / any */ @js.native
+trait KMSAccessDeniedException extends InvokeExceptionsUnion {
   
-  @JSName("name")
-  var name_KMSAccessDeniedException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.KMSAccessDeniedException = js.native
+  var name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.KMSAccessDeniedException = js.native
 }
 object KMSAccessDeniedException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: KMSAccessDeniedExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.KMSAccessDeniedException
-  ): KMSAccessDeniedException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.KMSAccessDeniedException): KMSAccessDeniedException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[KMSAccessDeniedException]
   }
   

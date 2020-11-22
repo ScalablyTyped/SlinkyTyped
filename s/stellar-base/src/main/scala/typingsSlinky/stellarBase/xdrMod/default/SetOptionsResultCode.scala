@@ -13,7 +13,7 @@ class SetOptionsResultCode ()
 @js.native
 object SetOptionsResultCode extends js.Object {
   
-  def setOptionsBadFlag(): typingsSlinky.stellarBase.xdrMod.xdr.SetOptionsResultCode = js.native
+  def setOptionsBadFlags(): typingsSlinky.stellarBase.xdrMod.xdr.SetOptionsResultCode = js.native
   
   def setOptionsBadSigner(): typingsSlinky.stellarBase.xdrMod.xdr.SetOptionsResultCode = js.native
   
@@ -29,7 +29,7 @@ object SetOptionsResultCode extends js.Object {
   
   def setOptionsThresholdOutOfRange(): typingsSlinky.stellarBase.xdrMod.xdr.SetOptionsResultCode = js.native
   
-  def setOptionsTooManySigner(): typingsSlinky.stellarBase.xdrMod.xdr.SetOptionsResultCode = js.native
+  def setOptionsTooManySigners(): typingsSlinky.stellarBase.xdrMod.xdr.SetOptionsResultCode = js.native
   
   def setOptionsUnknownFlag(): typingsSlinky.stellarBase.xdrMod.xdr.SetOptionsResultCode = js.native
 }

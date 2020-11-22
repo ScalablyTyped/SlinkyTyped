@@ -3,9 +3,9 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.ActivityListStargazersForRepoEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.ActivityListStargazersForRepoResponse200Data
-import typingsSlinky.octokitTypes.endpointsMod.ActivityListStargazersForRepoResponseData
+import typingsSlinky.octokitTypes.endpointsMod.ActivityListReposStarredByAuthenticatedUserEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ActivityListReposStarredByAuthenticatedUserResponse200Data
+import typingsSlinky.octokitTypes.endpointsMod.ActivityListReposStarredByAuthenticatedUserResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -16,19 +16,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `607` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[ActivityListStargazersForRepoEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ActivityListReposStarredByAuthenticatedUserEndpoint, baseUrl | headers | mediaType]) = js.native
   
   var response: OctokitResponse[
-    ActivityListStargazersForRepoResponseData | ActivityListStargazersForRepoResponse200Data
+    ActivityListReposStarredByAuthenticatedUserResponseData | ActivityListReposStarredByAuthenticatedUserResponse200Data
   ] = js.native
 }
 object `607` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[ActivityListStargazersForRepoEndpoint, baseUrl | headers | mediaType]),
+    parameters: RequestParameters with (Omit[ActivityListReposStarredByAuthenticatedUserEndpoint, baseUrl | headers | mediaType]),
     response: OctokitResponse[
-      ActivityListStargazersForRepoResponseData | ActivityListStargazersForRepoResponse200Data
+      ActivityListReposStarredByAuthenticatedUserResponseData | ActivityListReposStarredByAuthenticatedUserResponse200Data
     ]
   ): `607` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
@@ -52,13 +52,13 @@ object `607` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[ActivityListStargazersForRepoEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ActivityListReposStarredByAuthenticatedUserEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setResponse(
       value: OctokitResponse[
-          ActivityListStargazersForRepoResponseData | ActivityListStargazersForRepoResponse200Data
+          ActivityListReposStarredByAuthenticatedUserResponseData | ActivityListReposStarredByAuthenticatedUserResponse200Data
         ]
     ): Self = this.set("response", value.asInstanceOf[js.Any])
   }

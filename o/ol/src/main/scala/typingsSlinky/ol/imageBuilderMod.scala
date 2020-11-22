@@ -10,10 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object imageBuilderMod extends js.Object {
   
   @js.native
-  class default protected ()
-    extends typingsSlinky.ol.builderMod.default {
+  trait CanvasImageBuilder
+    extends typingsSlinky.ol.builderMod.default
+  
+  @js.native
+  class default protected () extends CanvasImageBuilder {
     def this(tolerance: Double, maxExtent: Extent, resolution: Double, pixelRatio: Double) = this()
   }
-  
-  type CanvasImageBuilder = typingsSlinky.ol.builderMod.default
 }

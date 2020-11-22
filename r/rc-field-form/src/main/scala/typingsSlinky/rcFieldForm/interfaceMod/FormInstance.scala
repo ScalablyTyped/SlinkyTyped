@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait FormInstance extends js.Object {
+trait FormInstance[Values] extends js.Object {
   
   def getFieldError(name: NamePath): js.Array[String] = js.native
   
@@ -15,14 +15,13 @@ trait FormInstance extends js.Object {
   def getFieldsError(): js.Array[FieldError] = js.native
   def getFieldsError(nameList: js.Array[NamePath]): js.Array[FieldError] = js.native
   
-  def getFieldsValue(): Store = js.native
-  def getFieldsValue(nameList: js.UndefOr[scala.Nothing], filterFunc: js.Function1[/* meta */ Meta, Boolean]): Store = js.native
-  def getFieldsValue(nameList: js.Array[NamePath]): Store = js.native
-  def getFieldsValue(nameList: js.Array[NamePath], filterFunc: js.Function1[/* meta */ Meta, Boolean]): Store = js.native
+  def getFieldsValue(): Values = js.native
+  def getFieldsValue(nameList: js.Array[NamePath]): js.Any = js.native
+  def getFieldsValue(nameList: js.Array[NamePath], filterFunc: js.Function1[/* meta */ Meta, Boolean]): js.Any = js.native
   @JSName("getFieldsValue")
-  def getFieldsValue_true(nameList: `true`): Store = js.native
+  def getFieldsValue_true(nameList: `true`): js.Any = js.native
   @JSName("getFieldsValue")
-  def getFieldsValue_true(nameList: `true`, filterFunc: js.Function1[/* meta */ Meta, Boolean]): Store = js.native
+  def getFieldsValue_true(nameList: `true`, filterFunc: js.Function1[/* meta */ Meta, Boolean]): js.Any = js.native
   
   def isFieldTouched(name: NamePath): Boolean = js.native
   
@@ -41,7 +40,7 @@ trait FormInstance extends js.Object {
   
   def setFields(fields: js.Array[FieldData]): Unit = js.native
   
-  def setFieldsValue(value: Store): Unit = js.native
+  def setFieldsValue(value: RecursivePartial[Values]): Unit = js.native
   
   def submit(): Unit = js.native
   

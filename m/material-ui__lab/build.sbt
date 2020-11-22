@@ -1,22 +1,23 @@
 organization := "org.scalablytyped.slinky"
 name := "material-ui__lab"
-version := "4.0.0-alpha.56-ade1ca"
+version := "4.0.0-alpha.56-10769c"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "cheerio" % "v0.22.0-dt-20200708Z-510163",
-  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-fce754",
-  "org.scalablytyped.slinky" %%% "enzyme" % "3.10-dt-20200515Z-d1a3fc",
-  "org.scalablytyped.slinky" %%% "jss" % "10.3.0-e0cd5b",
-  "org.scalablytyped.slinky" %%% "material-ui__core" % "3.9.3-456555",
-  "org.scalablytyped.slinky" %%% "material-ui__types" % "5.1.0-b98e13",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-8c2fed",
-  "org.scalablytyped.slinky" %%% "popper_dot_js" % "1.16.1-a800bc",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ce652f",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a9854",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "cheerio" % "v0.22.0-dt-20201002Z-b32389",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.14-23cf0c",
+  "org.scalablytyped.slinky" %%% "enzyme" % "3.10-dt-20201028Z-8973e8",
+  "org.scalablytyped.slinky" %%% "indefinite-observable" % "2.0.1-2a0a4b",
+  "org.scalablytyped.slinky" %%% "jss" % "10.5.0-3d1862",
+  "org.scalablytyped.slinky" %%% "material-ui__core" % "3.9.3-5b7614",
+  "org.scalablytyped.slinky" %%% "material-ui__types" % "5.1.0-18b41f",
+  "org.scalablytyped.slinky" %%% "node" % "14.14-dt-20201119Z-b1b1c0",
+  "org.scalablytyped.slinky" %%% "popper_dot_js" % "1.16.1-12b8cb",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ed7fbd",
+  "org.scalablytyped.slinky" %%% "react" % "17.0-dt-20201121Z-8f0b52",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

@@ -29,6 +29,7 @@ object updateEnumDeclaration extends js.Object {
     name: Identifier,
     members: js.Array[EnumMember]
   ): EnumDeclaration = js.native
+  /** @deprecated Use `factory.updateEnumDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     node: EnumDeclaration,
     decorators: js.Array[Decorator],

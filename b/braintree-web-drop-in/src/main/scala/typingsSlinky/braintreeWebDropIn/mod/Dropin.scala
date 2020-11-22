@@ -41,9 +41,8 @@ trait Dropin extends js.Object {
   ): Unit = js.native
   
   def requestPaymentMethod(): js.Promise[PaymentMethodPayload] = js.native
-  def requestPaymentMethod(
-    callback: js.Function2[/* error */ js.Object | Null, /* payload */ js.UndefOr[PaymentMethodPayload], Unit]
-  ): Unit = js.native
+  def requestPaymentMethod(callback: RequestPaymentMethodCallback): Unit = js.native
+  def requestPaymentMethod(options: js.Object, callback: RequestPaymentMethodCallback): Unit = js.native
   
   def teardown(): js.Promise[Unit] = js.native
   def teardown(callback: js.Function1[/* error */ js.UndefOr[js.Object | Null], Unit]): Unit = js.native

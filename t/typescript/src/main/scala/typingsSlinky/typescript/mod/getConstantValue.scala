@@ -8,9 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getConstantValue extends js.Object {
   
-  def apply(node: ElementAccessExpression): js.UndefOr[java.lang.String | Double] = js.native
   /**
-    * Gets the constant value to emit for an expression.
+    * Gets the constant value to emit for an expression representing an enum.
     */
-  def apply(node: PropertyAccessExpression): js.UndefOr[java.lang.String | Double] = js.native
+  def apply(node: AccessExpression): js.UndefOr[java.lang.String | Double] = js.native
 }

@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LayerListVisibleElements extends Object {
   
   /**
-    * Indicates whether to the status indicators will be displayed. Default is `true`.
+    * Indicates whether to the status indicators will be displayed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html#VisibleElements)
     */

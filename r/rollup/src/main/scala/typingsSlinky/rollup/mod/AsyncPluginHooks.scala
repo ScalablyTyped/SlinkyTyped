@@ -5,10 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
+  - typingsSlinky.rollup.rollupStrings.options
   - typingsSlinky.rollup.rollupStrings.buildEnd
   - typingsSlinky.rollup.rollupStrings.buildStart
   - typingsSlinky.rollup.rollupStrings.generateBundle
   - typingsSlinky.rollup.rollupStrings.load
+  - typingsSlinky.rollup.rollupStrings.moduleParsed
   - typingsSlinky.rollup.rollupStrings.renderChunk
   - typingsSlinky.rollup.rollupStrings.renderError
   - typingsSlinky.rollup.rollupStrings.renderStart
@@ -31,6 +33,12 @@ object AsyncPluginHooks {
   
   @scala.inline
   def load: typingsSlinky.rollup.rollupStrings.load = "load".asInstanceOf[typingsSlinky.rollup.rollupStrings.load]
+  
+  @scala.inline
+  def moduleParsed: typingsSlinky.rollup.rollupStrings.moduleParsed = "moduleParsed".asInstanceOf[typingsSlinky.rollup.rollupStrings.moduleParsed]
+  
+  @scala.inline
+  def options: typingsSlinky.rollup.rollupStrings.options = "options".asInstanceOf[typingsSlinky.rollup.rollupStrings.options]
   
   @scala.inline
   def renderChunk: typingsSlinky.rollup.rollupStrings.renderChunk = "renderChunk".asInstanceOf[typingsSlinky.rollup.rollupStrings.renderChunk]

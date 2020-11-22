@@ -24,6 +24,8 @@ trait Router extends js.Object {
   
   var headers: js.Array[Route_] = js.native
   
+  var locales: js.Array[String] = js.native
+  
   var pageChecker: PageChecker = js.native
   
   var redirects: js.Array[Route_] = js.native

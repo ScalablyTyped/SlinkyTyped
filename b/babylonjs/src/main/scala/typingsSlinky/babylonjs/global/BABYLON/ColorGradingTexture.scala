@@ -13,9 +13,21 @@ class ColorGradingTexture protected ()
     * Instantiates a ColorGradingTexture from the following parameters.
     *
     * @param url The location of the color gradind data (currently only supporting 3dl)
-    * @param scene The scene the texture will be used in
+    * @param sceneOrEngine The scene or engine the texture will be used in
+    * @param onLoad defines a callback triggered when the texture has been loaded
     */
-  def this(url: String, scene: typingsSlinky.babylonjs.BABYLON.Scene) = this()
+  def this(url: String, sceneOrEngine: typingsSlinky.babylonjs.BABYLON.Scene) = this()
+  def this(url: String, sceneOrEngine: typingsSlinky.babylonjs.BABYLON.ThinEngine) = this()
+  def this(
+    url: String,
+    sceneOrEngine: typingsSlinky.babylonjs.BABYLON.Scene,
+    onLoad: Nullable[js.Function0[Unit]]
+  ) = this()
+  def this(
+    url: String,
+    sceneOrEngine: typingsSlinky.babylonjs.BABYLON.ThinEngine,
+    onLoad: Nullable[js.Function0[Unit]]
+  ) = this()
 }
 /* static members */
 @JSGlobal("BABYLON.ColorGradingTexture")

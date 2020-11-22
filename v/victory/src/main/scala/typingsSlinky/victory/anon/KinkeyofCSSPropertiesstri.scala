@@ -148,6 +148,8 @@ trait KinkeyofCSSPropertiesstri extends js.Object {
   
   var MozOrient: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
+  var MozOsxFontSmoothing: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
   var MozOutline: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var MozOutlineColor: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
@@ -384,6 +386,8 @@ trait KinkeyofCSSPropertiesstri extends js.Object {
   
   var WebkitFontKerning: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
+  var WebkitFontSmoothing: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
   var WebkitFontVariantLigatures: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var WebkitHyphens: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
@@ -439,6 +443,8 @@ trait KinkeyofCSSPropertiesstri extends js.Object {
   var WebkitPerspectiveOrigin: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var WebkitPrintColorAdjust: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
+  var WebkitRubyPosition: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var WebkitScrollSnapPointsX: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
@@ -512,6 +518,8 @@ trait KinkeyofCSSPropertiesstri extends js.Object {
   
   var alignSelf: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
+  var alignTracks: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
   var alignmentBaseline: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var all: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
@@ -537,6 +545,8 @@ trait KinkeyofCSSPropertiesstri extends js.Object {
   var appearance: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var aspectRatio: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
+  var azimuth: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var backdropFilter: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
@@ -828,6 +838,8 @@ trait KinkeyofCSSPropertiesstri extends js.Object {
   
   var fontSizeAdjust: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
+  var fontSmooth: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
   var fontStretch: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var fontStyle: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
@@ -932,6 +944,8 @@ trait KinkeyofCSSPropertiesstri extends js.Object {
   
   var justifySelf: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
+  var justifyTracks: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
   var left: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var letterSpacing: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
@@ -1018,6 +1032,10 @@ trait KinkeyofCSSPropertiesstri extends js.Object {
   
   var maskType: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
+  var masonryAutoFlow: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
+  var mathStyle: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
   var maxBlockSize: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var maxHeight: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
@@ -1097,6 +1115,8 @@ trait KinkeyofCSSPropertiesstri extends js.Object {
   var msImeAlign: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var msImeMode: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
+  var msJustifySelf: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var msLineBreak: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
@@ -1393,6 +1413,8 @@ trait KinkeyofCSSPropertiesstri extends js.Object {
   var scrollSnapTypeY: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var scrollbarColor: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
+  
+  var scrollbarGutter: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
   var scrollbarTrackColor: js.UndefOr[String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])] = js.native
   
@@ -2190,6 +2212,15 @@ object KinkeyofCSSPropertiesstri {
     
     @scala.inline
     def deleteMozOrient: Self = this.set("MozOrient", js.undefined)
+    
+    @scala.inline
+    def setMozOsxFontSmoothingFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("MozOsxFontSmoothing", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setMozOsxFontSmoothing(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("MozOsxFontSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMozOsxFontSmoothing: Self = this.set("MozOsxFontSmoothing", js.undefined)
     
     @scala.inline
     def setMozOutlineFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("MozOutline", js.Any.fromFunction1(value))
@@ -3254,6 +3285,15 @@ object KinkeyofCSSPropertiesstri {
     def deleteWebkitFontKerning: Self = this.set("WebkitFontKerning", js.undefined)
     
     @scala.inline
+    def setWebkitFontSmoothingFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("WebkitFontSmoothing", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setWebkitFontSmoothing(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("WebkitFontSmoothing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWebkitFontSmoothing: Self = this.set("WebkitFontSmoothing", js.undefined)
+    
+    @scala.inline
     def setWebkitFontVariantLigaturesFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("WebkitFontVariantLigatures", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -3504,6 +3544,15 @@ object KinkeyofCSSPropertiesstri {
     
     @scala.inline
     def deleteWebkitPrintColorAdjust: Self = this.set("WebkitPrintColorAdjust", js.undefined)
+    
+    @scala.inline
+    def setWebkitRubyPositionFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("WebkitRubyPosition", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setWebkitRubyPosition(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("WebkitRubyPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWebkitRubyPosition: Self = this.set("WebkitRubyPosition", js.undefined)
     
     @scala.inline
     def setWebkitScrollSnapPointsXFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("WebkitScrollSnapPointsX", js.Any.fromFunction1(value))
@@ -3830,6 +3879,15 @@ object KinkeyofCSSPropertiesstri {
     def deleteAlignSelf: Self = this.set("alignSelf", js.undefined)
     
     @scala.inline
+    def setAlignTracksFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("alignTracks", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setAlignTracks(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("alignTracks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAlignTracks: Self = this.set("alignTracks", js.undefined)
+    
+    @scala.inline
     def setAlignmentBaselineFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("alignmentBaseline", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -3945,6 +4003,15 @@ object KinkeyofCSSPropertiesstri {
     
     @scala.inline
     def deleteAspectRatio: Self = this.set("aspectRatio", js.undefined)
+    
+    @scala.inline
+    def setAzimuthFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("azimuth", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setAzimuth(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("azimuth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAzimuth: Self = this.set("azimuth", js.undefined)
     
     @scala.inline
     def setBackdropFilterFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("backdropFilter", js.Any.fromFunction1(value))
@@ -5252,6 +5319,15 @@ object KinkeyofCSSPropertiesstri {
     def deleteFontSizeAdjust: Self = this.set("fontSizeAdjust", js.undefined)
     
     @scala.inline
+    def setFontSmoothFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("fontSmooth", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setFontSmooth(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("fontSmooth", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFontSmooth: Self = this.set("fontSmooth", js.undefined)
+    
+    @scala.inline
     def setFontStretchFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("fontStretch", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -5720,6 +5796,15 @@ object KinkeyofCSSPropertiesstri {
     def deleteJustifySelf: Self = this.set("justifySelf", js.undefined)
     
     @scala.inline
+    def setJustifyTracksFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("justifyTracks", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setJustifyTracks(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("justifyTracks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJustifyTracks: Self = this.set("justifyTracks", js.undefined)
+    
+    @scala.inline
     def setLeftFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("left", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -6107,6 +6192,24 @@ object KinkeyofCSSPropertiesstri {
     def deleteMaskType: Self = this.set("maskType", js.undefined)
     
     @scala.inline
+    def setMasonryAutoFlowFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("masonryAutoFlow", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setMasonryAutoFlow(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("masonryAutoFlow", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMasonryAutoFlow: Self = this.set("masonryAutoFlow", js.undefined)
+    
+    @scala.inline
+    def setMathStyleFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("mathStyle", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setMathStyle(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("mathStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMathStyle: Self = this.set("mathStyle", js.undefined)
+    
+    @scala.inline
     def setMaxBlockSizeFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("maxBlockSize", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -6465,6 +6568,15 @@ object KinkeyofCSSPropertiesstri {
     
     @scala.inline
     def deleteMsImeMode: Self = this.set("msImeMode", js.undefined)
+    
+    @scala.inline
+    def setMsJustifySelfFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("msJustifySelf", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setMsJustifySelf(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("msJustifySelf", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMsJustifySelf: Self = this.set("msJustifySelf", js.undefined)
     
     @scala.inline
     def setMsLineBreakFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("msLineBreak", js.Any.fromFunction1(value))
@@ -7797,6 +7909,15 @@ object KinkeyofCSSPropertiesstri {
     
     @scala.inline
     def deleteScrollbarColor: Self = this.set("scrollbarColor", js.undefined)
+    
+    @scala.inline
+    def setScrollbarGutterFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("scrollbarGutter", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setScrollbarGutter(value: String | Double | (js.Function1[/* tick */ js.UndefOr[js.Any], String | Double])): Self = this.set("scrollbarGutter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScrollbarGutter: Self = this.set("scrollbarGutter", js.undefined)
     
     @scala.inline
     def setScrollbarTrackColorFunction1(value: /* tick */ js.UndefOr[js.Any] => String | Double): Self = this.set("scrollbarTrackColor", js.Any.fromFunction1(value))

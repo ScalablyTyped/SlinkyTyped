@@ -40,6 +40,8 @@ object errorsMod extends js.Object {
   
   val MULTISLIDER_INVALID_CHILD: String = js.native
   
+  val MULTISLIDER_WARN_LABEL_STEP_SIZE_LABEL_VALUES_MUTEX: String = js.native
+  
   val NUMERIC_INPUT_CONTROLLED_VALUE_INVALID: String = js.native
   
   val NUMERIC_INPUT_MAJOR_STEP_SIZE_BOUND: String = js.native
@@ -53,8 +55,6 @@ object errorsMod extends js.Object {
   val NUMERIC_INPUT_MIN_MAX: String = js.native
   
   val NUMERIC_INPUT_STEP_SIZE_NON_POSITIVE: String = js.native
-  
-  val NUMERIC_INPUT_STEP_SIZE_NULL: String = js.native
   
   val OVERFLOW_LIST_OBSERVE_PARENTS_CHANGED: String = js.native
   

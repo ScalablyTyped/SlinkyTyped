@@ -15,7 +15,7 @@ trait FlexGrowProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Ob
     */
   var flexGrow: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexGrow */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object FlexGrowProps {
     @scala.inline
     def setFlexGrow(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexGrow */ _, 
           ThemeType
         ]
     ): Self = this.set("flexGrow", value.asInstanceOf[js.Any])

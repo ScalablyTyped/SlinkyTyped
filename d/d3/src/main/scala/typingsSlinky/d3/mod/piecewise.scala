@@ -14,4 +14,5 @@ object piecewise extends js.Object {
     interpolate: js.Function2[/* a */ ZoomView, /* b */ ZoomView, ZoomInterpolator],
     values: js.Array[ZoomView]
   ): ZoomInterpolator = js.native
+  def apply(values: js.Array[ZoomView]): ZoomInterpolator = js.native
 }

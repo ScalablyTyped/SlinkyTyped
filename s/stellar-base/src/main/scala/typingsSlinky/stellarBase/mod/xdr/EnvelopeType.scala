@@ -15,6 +15,8 @@ object EnvelopeType extends js.Object {
   
   def envelopeTypeAuth(): typingsSlinky.stellarBase.xdrMod.xdr.EnvelopeType = js.native
   
+  def envelopeTypeOpId(): typingsSlinky.stellarBase.xdrMod.xdr.EnvelopeType = js.native
+  
   def envelopeTypeScp(): typingsSlinky.stellarBase.xdrMod.xdr.EnvelopeType = js.native
   
   def envelopeTypeScpvalue(): typingsSlinky.stellarBase.xdrMod.xdr.EnvelopeType = js.native

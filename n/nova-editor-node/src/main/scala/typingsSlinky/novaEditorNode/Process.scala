@@ -24,15 +24,15 @@ trait Process extends js.Object {
   def notify(methodName: String): Unit = js.native
   def notify(methodName: String, params: js.Any): Unit = js.native
   
-  def onDidExit(callback: js.Function1[/* status */ Double, Unit]): Unit = js.native
+  def onDidExit(callback: js.Function1[/* status */ Double, Unit]): Disposable = js.native
   
-  def onNotify(methodName: String, callback: js.Function1[/* message */ ProcessMessage[_, _, _], Unit]): Unit = js.native
+  def onNotify(methodName: String, callback: js.Function1[/* message */ ProcessMessage[_, _, _], Unit]): Disposable = js.native
   
-  def onRequest(methodName: String, callback: js.Function1[/* message */ ProcessMessage[_, _, _], _]): Unit = js.native
+  def onRequest(methodName: String, callback: js.Function1[/* message */ ProcessMessage[_, _, _], _]): Disposable = js.native
   
-  def onStderr(callback: js.Function1[/* line */ String, Unit]): Unit = js.native
+  def onStderr(callback: js.Function1[/* line */ String, Unit]): Disposable = js.native
   
-  def onStdout(callback: js.Function1[/* line */ String, Unit]): Unit = js.native
+  def onStdout(callback: js.Function1[/* line */ String, Unit]): Disposable = js.native
   
   val pid: Double = js.native
   
@@ -44,19 +44,19 @@ trait Process extends js.Object {
   
   def start(): Unit = js.native
   
-  val stderr: js.UndefOr[ReadableStream | WritableStream | Null] = js.native
+  val stderr: js.UndefOr[ReadableStream[_] | WritableStream[_] | Null] = js.native
   
-  val stdin: js.UndefOr[ReadableStream | WritableStream | Null] = js.native
+  val stdin: js.UndefOr[ReadableStream[_] | WritableStream[_] | Null] = js.native
   
   val stdio: js.UndefOr[
     js.Tuple3[
-      ReadableStream | WritableStream | Null, 
-      ReadableStream | WritableStream | Null, 
-      ReadableStream | WritableStream | Null
+      ReadableStream[_] | WritableStream[_] | Null, 
+      ReadableStream[_] | WritableStream[_] | Null, 
+      ReadableStream[_] | WritableStream[_] | Null
     ]
   ] = js.native
   
-  val stdout: js.UndefOr[ReadableStream | WritableStream | Null] = js.native
+  val stdout: js.UndefOr[ReadableStream[_] | WritableStream[_] | Null] = js.native
   
   def terminate(): Unit = js.native
 }

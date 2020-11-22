@@ -1,31 +1,24 @@
 package typingsSlinky.jestTypes.anon
 
-import typingsSlinky.jestTypes.circusMod.Event
 import typingsSlinky.jestTypes.circusMod.Exception
-import typingsSlinky.jestTypes.circusMod.TestEntry
-import typingsSlinky.jestTypes.jestTypesStrings.hook_failure
+import typingsSlinky.jestTypes.circusMod.SyncEvent
+import typingsSlinky.jestTypes.jestTypesStrings.error_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Error extends Event {
+trait Error extends SyncEvent {
   
-  var describeBlock: js.UndefOr[typingsSlinky.jestTypes.circusMod.DescribeBlock] = js.native
+  var error: Exception = js.native
   
-  var error: String | Exception = js.native
-  
-  var hook: typingsSlinky.jestTypes.circusMod.Hook = js.native
-  
-  var name: hook_failure = js.native
-  
-  var test: js.UndefOr[TestEntry] = js.native
+  var name: error_ = js.native
 }
 object Error {
   
   @scala.inline
-  def apply(error: String | Exception, hook: typingsSlinky.jestTypes.circusMod.Hook, name: hook_failure): Error = {
-    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], hook = hook.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(error: Exception, name: error_): Error = {
+    val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[Error]
   }
   
@@ -45,24 +38,9 @@ object Error {
     }
     
     @scala.inline
-    def setError(value: String | Exception): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setError(value: Exception): Self = this.set("error", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setHook(value: typingsSlinky.jestTypes.circusMod.Hook): Self = this.set("hook", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setName(value: hook_failure): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setDescribeBlock(value: typingsSlinky.jestTypes.circusMod.DescribeBlock): Self = this.set("describeBlock", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDescribeBlock: Self = this.set("describeBlock", js.undefined)
-    
-    @scala.inline
-    def setTest(value: TestEntry): Self = this.set("test", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTest: Self = this.set("test", js.undefined)
+    def setName(value: error_): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

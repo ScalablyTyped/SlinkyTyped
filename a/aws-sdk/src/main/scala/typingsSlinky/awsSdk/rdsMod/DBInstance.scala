@@ -123,7 +123,7 @@ trait DBInstance extends js.Object {
   var Endpoint: js.UndefOr[typingsSlinky.awsSdk.rdsMod.Endpoint] = js.native
   
   /**
-    * Provides the name of the database engine to be used for this DB instance.
+    * The name of the database engine to be used for this DB instance.
     */
   var Engine: js.UndefOr[String] = js.native
   
@@ -198,6 +198,11 @@ trait DBInstance extends js.Object {
   var MultiAZ: js.UndefOr[Boolean] = js.native
   
   /**
+    * The name of the NCHAR character set for the Oracle DB instance. This character set specifies the Unicode encoding for data stored in table columns of type NCHAR, NCLOB, or NVARCHAR2. 
+    */
+  var NcharCharacterSetName: js.UndefOr[String] = js.native
+  
+  /**
     * Provides the list of option group memberships for this DB instance.
     */
   var OptionGroupMemberships: js.UndefOr[OptionGroupMembershipList] = js.native
@@ -263,6 +268,11 @@ trait DBInstance extends js.Object {
   var ReadReplicaSourceDBInstanceIdentifier: js.UndefOr[String] = js.native
   
   /**
+    * The open mode of an Oracle read replica. The default is open-read-only. For more information, see Working with Oracle Read Replicas for Amazon RDS in the Amazon RDS User Guide.  This attribute is only supported in RDS for Oracle. 
+    */
+  var ReplicaMode: js.UndefOr[typingsSlinky.awsSdk.rdsMod.ReplicaMode] = js.native
+  
+  /**
     * If present, specifies the name of the secondary Availability Zone for a DB instance with multi-AZ support.
     */
   var SecondaryAvailabilityZone: js.UndefOr[String] = js.native
@@ -281,6 +291,8 @@ trait DBInstance extends js.Object {
     * Specifies the storage type associated with DB instance.
     */
   var StorageType: js.UndefOr[String] = js.native
+  
+  var TagList: js.UndefOr[typingsSlinky.awsSdk.rdsMod.TagList] = js.native
   
   /**
     * The ARN from the key store with which the instance is associated for TDE encryption.
@@ -564,6 +576,12 @@ object DBInstance {
     def deleteMultiAZ: Self = this.set("MultiAZ", js.undefined)
     
     @scala.inline
+    def setNcharCharacterSetName(value: String): Self = this.set("NcharCharacterSetName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNcharCharacterSetName: Self = this.set("NcharCharacterSetName", js.undefined)
+    
+    @scala.inline
     def setOptionGroupMembershipsVarargs(value: OptionGroupMembership*): Self = this.set("OptionGroupMemberships", js.Array(value :_*))
     
     @scala.inline
@@ -654,6 +672,12 @@ object DBInstance {
     def deleteReadReplicaSourceDBInstanceIdentifier: Self = this.set("ReadReplicaSourceDBInstanceIdentifier", js.undefined)
     
     @scala.inline
+    def setReplicaMode(value: ReplicaMode): Self = this.set("ReplicaMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteReplicaMode: Self = this.set("ReplicaMode", js.undefined)
+    
+    @scala.inline
     def setSecondaryAvailabilityZone(value: String): Self = this.set("SecondaryAvailabilityZone", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -679,6 +703,15 @@ object DBInstance {
     
     @scala.inline
     def deleteStorageType: Self = this.set("StorageType", js.undefined)
+    
+    @scala.inline
+    def setTagListVarargs(value: Tag*): Self = this.set("TagList", js.Array(value :_*))
+    
+    @scala.inline
+    def setTagList(value: TagList): Self = this.set("TagList", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTagList: Self = this.set("TagList", js.undefined)
     
     @scala.inline
     def setTdeCredentialArn(value: String): Self = this.set("TdeCredentialArn", value.asInstanceOf[js.Any])

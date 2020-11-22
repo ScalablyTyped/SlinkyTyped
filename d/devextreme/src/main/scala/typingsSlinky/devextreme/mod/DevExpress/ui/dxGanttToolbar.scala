@@ -16,7 +16,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxGanttToolbar extends js.Object {
   
-  /** @name dxGanttToolbar.items */
+  /**
+    * [descr:dxGanttToolbar.items]
+    */
   var items: js.UndefOr[
     js.Array[
       dxGanttToolbarItem | separator | undo | redo | expandAll | collapseAll | addTask | deleteTask | zoomIn | zoomOut

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ClassedColorSliderViewModel extends SmartMappingSliderViewModel {
   
   /**
-    * An array of class breaks with associated colors. The colors mapped to each break can be used to update the renderer of a layer. A minimum of two breaks must be provided to the slider.
+    * An array of class breaks with associated colors.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-ClassedColorSlider-ClassedColorSliderViewModel.html#breaks)
     */
@@ -18,8 +18,6 @@ trait ClassedColorSliderViewModel extends SmartMappingSliderViewModel {
     * Generates the color ramp rendered on the slider.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-ClassedColorSlider-ClassedColorSliderViewModel.html#getStopInfo)
-    *
-    *
     */
   def getStopInfo(): js.Array[StopInfo] = js.native
 }

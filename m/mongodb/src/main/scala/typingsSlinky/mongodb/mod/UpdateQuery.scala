@@ -29,7 +29,7 @@ trait UpdateQuery[TSchema] extends js.Object {
   var $currentDate: js.UndefOr[OnlyFieldsOfType[TSchema, js.Date, `true` | Type]] = js.native
   
   @JSName("$inc")
-  var $inc: js.UndefOr[OnlyFieldsOfType[TSchema, js.UndefOr[scala.Double], js.UndefOr[scala.Double]]] = js.native
+  var $inc: js.UndefOr[OnlyFieldsOfType[TSchema, js.UndefOr[NumericTypes], js.UndefOr[NumericTypes]]] = js.native
   
   @JSName("$max")
   var $max: js.UndefOr[MatchKeysAndValues[TSchema]] = js.native
@@ -38,7 +38,7 @@ trait UpdateQuery[TSchema] extends js.Object {
   var $min: js.UndefOr[MatchKeysAndValues[TSchema]] = js.native
   
   @JSName("$mul")
-  var $mul: js.UndefOr[OnlyFieldsOfType[TSchema, js.UndefOr[scala.Double], js.UndefOr[scala.Double]]] = js.native
+  var $mul: js.UndefOr[OnlyFieldsOfType[TSchema, js.UndefOr[NumericTypes], js.UndefOr[NumericTypes]]] = js.native
   
   @JSName("$pop")
   var $pop: js.UndefOr[OnlyFieldsOfType[TSchema, js.Array[_], `1` | `-1`]] = js.native
@@ -106,7 +106,7 @@ object UpdateQuery {
     def delete$currentDate: Self = this.set("$currentDate", js.undefined)
     
     @scala.inline
-    def set$inc(value: OnlyFieldsOfType[TSchema, js.UndefOr[scala.Double], js.UndefOr[scala.Double]]): Self = this.set("$inc", value.asInstanceOf[js.Any])
+    def set$inc(value: OnlyFieldsOfType[TSchema, js.UndefOr[NumericTypes], js.UndefOr[NumericTypes]]): Self = this.set("$inc", value.asInstanceOf[js.Any])
     
     @scala.inline
     def delete$inc: Self = this.set("$inc", js.undefined)
@@ -124,7 +124,7 @@ object UpdateQuery {
     def delete$min: Self = this.set("$min", js.undefined)
     
     @scala.inline
-    def set$mul(value: OnlyFieldsOfType[TSchema, js.UndefOr[scala.Double], js.UndefOr[scala.Double]]): Self = this.set("$mul", value.asInstanceOf[js.Any])
+    def set$mul(value: OnlyFieldsOfType[TSchema, js.UndefOr[NumericTypes], js.UndefOr[NumericTypes]]): Self = this.set("$mul", value.asInstanceOf[js.Any])
     
     @scala.inline
     def delete$mul: Self = this.set("$mul", js.undefined)

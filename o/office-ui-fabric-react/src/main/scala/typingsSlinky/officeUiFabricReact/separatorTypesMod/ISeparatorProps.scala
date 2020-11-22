@@ -1,13 +1,13 @@
 package typingsSlinky.officeUiFabricReact.separatorTypesMod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.center
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.end
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.start
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

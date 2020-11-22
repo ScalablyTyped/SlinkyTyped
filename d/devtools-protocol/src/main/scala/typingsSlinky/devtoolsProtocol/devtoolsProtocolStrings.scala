@@ -6,6 +6,7 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Accessibility.AXValueSourceTy
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Accessibility.AXValueType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Animation.AnimationType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Audits.BlockedByResponseReason
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Audits.ContentSecurityPolicyViolationType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Audits.GetEncodedResponseRequestEncoding
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Audits.HeavyAdReason
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Audits.HeavyAdResolutionStatus
@@ -35,6 +36,7 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger.ScopeType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger.ScriptLanguage
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger.SetInstrumentationBreakpointRequestInstrumentation
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Debugger.SetPauseOnExceptionsRequestState
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.DisplayFeatureOrientation
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.ScreenOrientationType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetEmitTouchEventsForMouseRequestConfiguration
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Emulation.SetEmulatedVisionDeficiencyRequestType
@@ -65,6 +67,8 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.ConnectionType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.CookieBlockedReason
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.CookiePriority
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.CookieSameSite
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.CrossOriginEmbedderPolicyValue
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.CrossOriginOpenerPolicyValue
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.ErrorReason
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.InitiatorType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.InterceptionStage
@@ -74,16 +78,21 @@ import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.ResourceType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.ServiceWorkerResponseSource
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SetCookieBlockedReason
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.SignedExchangeErrorField
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.TrustTokenOperationType
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Network.TrustTokenParamsRefreshPolicy
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.ColorFormat
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Overlay.InspectMode
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.AdFrameType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.CaptureScreenshotRequestFormat
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.ClientNavigationDisposition
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.ClientNavigationReason
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.CrossOriginIsolatedContextType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.DialogType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.DownloadProgressEventState
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.FileChooserOpenedEventMode
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.PrintToPDFRequestTransferMode
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.ReferrerPolicy
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SecureContextType
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetDownloadBehaviorRequestBehavior
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetTouchEmulationEnabledRequestConfiguration
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetWebLifecycleStateRequestState
@@ -182,6 +191,9 @@ object devtoolsProtocolStrings {
   def ConnectionReset: ConnectionReset = "ConnectionReset".asInstanceOf[ConnectionReset]
   
   @scala.inline
+  def ContentSecurityPolicyIssue: ContentSecurityPolicyIssue = "ContentSecurityPolicyIssue".asInstanceOf[ContentSecurityPolicyIssue]
+  
+  @scala.inline
   def CoopSandboxedIFrameCannotNavigateToCoopPage: CoopSandboxedIFrameCannotNavigateToCoopPage = "CoopSandboxedIFrameCannotNavigateToCoopPage".asInstanceOf[CoopSandboxedIFrameCannotNavigateToCoopPage]
   
   @scala.inline
@@ -224,7 +236,13 @@ object devtoolsProtocolStrings {
   def EventSource: EventSource = "EventSource".asInstanceOf[EventSource]
   
   @scala.inline
+  def ExcludeSameSiteLax: ExcludeSameSiteLax = "ExcludeSameSiteLax".asInstanceOf[ExcludeSameSiteLax]
+  
+  @scala.inline
   def ExcludeSameSiteNoneInsecure: ExcludeSameSiteNoneInsecure = "ExcludeSameSiteNoneInsecure".asInstanceOf[ExcludeSameSiteNoneInsecure]
+  
+  @scala.inline
+  def ExcludeSameSiteStrict: ExcludeSameSiteStrict = "ExcludeSameSiteStrict".asInstanceOf[ExcludeSameSiteStrict]
   
   @scala.inline
   def ExcludeSameSiteUnspecifiedTreatedAsLax: ExcludeSameSiteUnspecifiedTreatedAsLax = "ExcludeSameSiteUnspecifiedTreatedAsLax".asInstanceOf[ExcludeSameSiteUnspecifiedTreatedAsLax]
@@ -272,6 +290,12 @@ object devtoolsProtocolStrings {
   def Import: Import = "Import".asInstanceOf[Import]
   
   @scala.inline
+  def InsecureAncestor: InsecureAncestor = "InsecureAncestor".asInstanceOf[InsecureAncestor]
+  
+  @scala.inline
+  def InsecureScheme: InsecureScheme = "InsecureScheme".asInstanceOf[InsecureScheme]
+  
+  @scala.inline
   def InternetDisconnected: InternetDisconnected = "InternetDisconnected".asInstanceOf[InternetDisconnected]
   
   @scala.inline
@@ -279,6 +303,12 @@ object devtoolsProtocolStrings {
   
   @scala.inline
   def InvalidPrefix: InvalidPrefix = "InvalidPrefix".asInstanceOf[InvalidPrefix]
+  
+  @scala.inline
+  def Isolated: Isolated = "Isolated".asInstanceOf[Isolated]
+  
+  @scala.inline
+  def Issuance: Issuance = "Issuance".asInstanceOf[Issuance]
   
   @scala.inline
   def JavaScript: JavaScript = "JavaScript".asInstanceOf[JavaScript]
@@ -320,6 +350,12 @@ object devtoolsProtocolStrings {
   def None: None = "None".asInstanceOf[None]
   
   @scala.inline
+  def NotIsolated: NotIsolated = "NotIsolated".asInstanceOf[NotIsolated]
+  
+  @scala.inline
+  def NotIsolatedFeatureDisabled: NotIsolatedFeatureDisabled = "NotIsolatedFeatureDisabled".asInstanceOf[NotIsolatedFeatureDisabled]
+  
+  @scala.inline
   def NotOnPath: NotOnPath = "NotOnPath".asInstanceOf[NotOnPath]
   
   @scala.inline
@@ -353,6 +389,12 @@ object devtoolsProtocolStrings {
   def ReadCookie: ReadCookie = "ReadCookie".asInstanceOf[ReadCookie]
   
   @scala.inline
+  def Redemption: Redemption = "Redemption".asInstanceOf[Redemption]
+  
+  @scala.inline
+  def Refresh: Refresh = "Refresh".asInstanceOf[Refresh]
+  
+  @scala.inline
   def RepaintsOnScroll: RepaintsOnScroll = "RepaintsOnScroll".asInstanceOf[RepaintsOnScroll]
   
   @scala.inline
@@ -360,6 +402,9 @@ object devtoolsProtocolStrings {
   
   @scala.inline
   def Request: Request = "Request".asInstanceOf[Request]
+  
+  @scala.inline
+  def RequireCorp: RequireCorp = "RequireCorp".asInstanceOf[RequireCorp]
   
   @scala.inline
   def Resource: Resource = "Resource".asInstanceOf[Resource]
@@ -372,6 +417,15 @@ object devtoolsProtocolStrings {
   
   @scala.inline
   def ReturnAsStream: ReturnAsStream = "ReturnAsStream".asInstanceOf[ReturnAsStream]
+  
+  @scala.inline
+  def SameOrigin: SameOrigin = "SameOrigin".asInstanceOf[SameOrigin]
+  
+  @scala.inline
+  def SameOriginAllowPopups: SameOriginAllowPopups = "SameOriginAllowPopups".asInstanceOf[SameOriginAllowPopups]
+  
+  @scala.inline
+  def SameOriginPlusCoep: SameOriginPlusCoep = "SameOriginPlusCoep".asInstanceOf[SameOriginPlusCoep]
   
   @scala.inline
   def SameSiteCookieIssue: SameSiteCookieIssue = "SameSiteCookieIssue".asInstanceOf[SameSiteCookieIssue]
@@ -392,7 +446,22 @@ object devtoolsProtocolStrings {
   def SchemeNotSupported: SchemeNotSupported = "SchemeNotSupported".asInstanceOf[SchemeNotSupported]
   
   @scala.inline
+  def SchemefulSameSiteLax: SchemefulSameSiteLax = "SchemefulSameSiteLax".asInstanceOf[SchemefulSameSiteLax]
+  
+  @scala.inline
+  def SchemefulSameSiteStrict: SchemefulSameSiteStrict = "SchemefulSameSiteStrict".asInstanceOf[SchemefulSameSiteStrict]
+  
+  @scala.inline
+  def SchemefulSameSiteUnspecifiedTreatedAsLax: SchemefulSameSiteUnspecifiedTreatedAsLax = "SchemefulSameSiteUnspecifiedTreatedAsLax".asInstanceOf[SchemefulSameSiteUnspecifiedTreatedAsLax]
+  
+  @scala.inline
   def Script: Script = "Script".asInstanceOf[Script]
+  
+  @scala.inline
+  def Secure: Secure = "Secure".asInstanceOf[Secure]
+  
+  @scala.inline
+  def SecureLocalhost: SecureLocalhost = "SecureLocalhost".asInstanceOf[SecureLocalhost]
   
   @scala.inline
   def SecureOnly: SecureOnly = "SecureOnly".asInstanceOf[SecureOnly]
@@ -411,6 +480,9 @@ object devtoolsProtocolStrings {
   
   @scala.inline
   def SignedExchange: SignedExchange = "SignedExchange".asInstanceOf[SignedExchange]
+  
+  @scala.inline
+  def Signing: Signing = "Signing".asInstanceOf[Signing]
   
   @scala.inline
   def SourceMap: SourceMap = "SourceMap".asInstanceOf[SourceMap]
@@ -438,6 +510,12 @@ object devtoolsProtocolStrings {
   
   @scala.inline
   def UnknownError: UnknownError = "UnknownError".asInstanceOf[UnknownError]
+  
+  @scala.inline
+  def UnsafeNone: UnsafeNone = "UnsafeNone".asInstanceOf[UnsafeNone]
+  
+  @scala.inline
+  def UseCached: UseCached = "UseCached".asInstanceOf[UseCached]
   
   @scala.inline
   def UserPreferences: UserPreferences = "UserPreferences".asInstanceOf[UserPreferences]
@@ -765,6 +843,9 @@ object devtoolsProtocolStrings {
   
   @scala.inline
   def checked: checked = "checked".asInstanceOf[checked]
+  
+  @scala.inline
+  def child: child = "child".asInstanceOf[child]
   
   @scala.inline
   def childNodeCountUpdated: childNodeCountUpdated = "childNodeCountUpdated".asInstanceOf[childNodeCountUpdated]
@@ -1166,6 +1247,9 @@ object devtoolsProtocolStrings {
   def hiddenRoot: hiddenRoot = "hiddenRoot".asInstanceOf[hiddenRoot]
   
   @scala.inline
+  def horizontal: horizontal = "horizontal".asInstanceOf[horizontal]
+  
+  @scala.inline
   def hsl: hsl = "hsl".asInstanceOf[hsl]
   
   @scala.inline
@@ -1296,6 +1380,21 @@ object devtoolsProtocolStrings {
   
   @scala.inline
   def `k-rate`: `k-rate` = "k-rate".asInstanceOf[`k-rate`]
+  
+  @scala.inline
+  def kEvalViolation: kEvalViolation = "kEvalViolation".asInstanceOf[kEvalViolation]
+  
+  @scala.inline
+  def kInlineViolation: kInlineViolation = "kInlineViolation".asInstanceOf[kInlineViolation]
+  
+  @scala.inline
+  def kTrustedTypesPolicyViolation: kTrustedTypesPolicyViolation = "kTrustedTypesPolicyViolation".asInstanceOf[kTrustedTypesPolicyViolation]
+  
+  @scala.inline
+  def kTrustedTypesSinkViolation: kTrustedTypesSinkViolation = "kTrustedTypesSinkViolation".asInstanceOf[kTrustedTypesSinkViolation]
+  
+  @scala.inline
+  def kURLViolation: kURLViolation = "kURLViolation".asInstanceOf[kURLViolation]
   
   @scala.inline
   def keyDown: keyDown = "keyDown".asInstanceOf[keyDown]
@@ -1802,7 +1901,7 @@ object devtoolsProtocolStrings {
   def `same-origin`: `same-origin` = "same-origin".asInstanceOf[`same-origin`]
   
   @scala.inline
-  def sameOrigin: sameOrigin = "sameOrigin".asInstanceOf[sameOrigin]
+  def sameOrigin_ : sameOrigin_ = "sameOrigin".asInstanceOf[sameOrigin_]
   
   @scala.inline
   def screencastFrame: screencastFrame = "screencastFrame".asInstanceOf[screencastFrame]
@@ -1850,7 +1949,7 @@ object devtoolsProtocolStrings {
   def searchForUAShadowDOM: searchForUAShadowDOM = "searchForUAShadowDOM".asInstanceOf[searchForUAShadowDOM]
   
   @scala.inline
-  def secure: secure = "secure".asInstanceOf[secure]
+  def secure_ : secure_ = "secure".asInstanceOf[secure_]
   
   @scala.inline
   def security: security = "security".asInstanceOf[security]
@@ -2096,7 +2195,13 @@ object devtoolsProtocolStrings {
   def verbose: verbose = "verbose".asInstanceOf[verbose]
   
   @scala.inline
+  def vertical: vertical = "vertical".asInstanceOf[vertical]
+  
+  @scala.inline
   def videoCapture: videoCapture = "videoCapture".asInstanceOf[videoCapture]
+  
+  @scala.inline
+  def videoCapturePanTiltZoom: videoCapturePanTiltZoom = "videoCapturePanTiltZoom".asInstanceOf[videoCapturePanTiltZoom]
   
   @scala.inline
   def violation: violation = "violation".asInstanceOf[violation]
@@ -2251,6 +2356,9 @@ object devtoolsProtocolStrings {
   sealed trait ConnectionReset extends ErrorReason
   
   @js.native
+  sealed trait ContentSecurityPolicyIssue extends InspectorIssueCode
+  
+  @js.native
   sealed trait CoopSandboxedIFrameCannotNavigateToCoopPage extends BlockedByResponseReason
   
   @js.native
@@ -2297,7 +2405,13 @@ object devtoolsProtocolStrings {
        with ResourceType
   
   @js.native
+  sealed trait ExcludeSameSiteLax extends SameSiteCookieExclusionReason
+  
+  @js.native
   sealed trait ExcludeSameSiteNoneInsecure extends SameSiteCookieExclusionReason
+  
+  @js.native
+  sealed trait ExcludeSameSiteStrict extends SameSiteCookieExclusionReason
   
   @js.native
   sealed trait ExcludeSameSiteUnspecifiedTreatedAsLax extends SameSiteCookieExclusionReason
@@ -2351,6 +2465,12 @@ object devtoolsProtocolStrings {
   sealed trait Import extends MixedContentResourceType
   
   @js.native
+  sealed trait InsecureAncestor extends SecureContextType
+  
+  @js.native
+  sealed trait InsecureScheme extends SecureContextType
+  
+  @js.native
   sealed trait InternetDisconnected extends ErrorReason
   
   @js.native
@@ -2358,6 +2478,12 @@ object devtoolsProtocolStrings {
   
   @js.native
   sealed trait InvalidPrefix extends SetCookieBlockedReason
+  
+  @js.native
+  sealed trait Isolated extends CrossOriginIsolatedContextType
+  
+  @js.native
+  sealed trait Issuance extends TrustTokenOperationType
   
   @js.native
   sealed trait JavaScript extends ScriptLanguage
@@ -2404,7 +2530,14 @@ object devtoolsProtocolStrings {
   @js.native
   sealed trait None
     extends CookieSameSite
+       with CrossOriginEmbedderPolicyValue
        with DebugSymbolsType
+  
+  @js.native
+  sealed trait NotIsolated extends CrossOriginIsolatedContextType
+  
+  @js.native
+  sealed trait NotIsolatedFeatureDisabled extends CrossOriginIsolatedContextType
   
   @js.native
   sealed trait NotOnPath extends CookieBlockedReason
@@ -2446,6 +2579,12 @@ object devtoolsProtocolStrings {
   sealed trait ReadCookie extends SameSiteCookieOperation
   
   @js.native
+  sealed trait Redemption extends TrustTokenOperationType
+  
+  @js.native
+  sealed trait Refresh extends TrustTokenParamsRefreshPolicy
+  
+  @js.native
   sealed trait RepaintsOnScroll extends ScrollRectType
   
   @js.native
@@ -2455,6 +2594,9 @@ object devtoolsProtocolStrings {
   sealed trait Request
     extends InterceptionStage
        with RequestStage
+  
+  @js.native
+  sealed trait RequireCorp extends CrossOriginEmbedderPolicyValue
   
   @js.native
   sealed trait Resource extends MixedContentResourceType
@@ -2469,6 +2611,15 @@ object devtoolsProtocolStrings {
   sealed trait ReturnAsStream
     extends PrintToPDFRequestTransferMode
        with StartRequestTransferMode
+  
+  @js.native
+  sealed trait SameOrigin extends CrossOriginOpenerPolicyValue
+  
+  @js.native
+  sealed trait SameOriginAllowPopups extends CrossOriginOpenerPolicyValue
+  
+  @js.native
+  sealed trait SameOriginPlusCoep extends CrossOriginOpenerPolicyValue
   
   @js.native
   sealed trait SameSiteCookieIssue extends InspectorIssueCode
@@ -2497,9 +2648,30 @@ object devtoolsProtocolStrings {
   sealed trait SchemeNotSupported extends SetCookieBlockedReason
   
   @js.native
+  sealed trait SchemefulSameSiteLax
+    extends CookieBlockedReason
+       with SetCookieBlockedReason
+  
+  @js.native
+  sealed trait SchemefulSameSiteStrict
+    extends CookieBlockedReason
+       with SetCookieBlockedReason
+  
+  @js.native
+  sealed trait SchemefulSameSiteUnspecifiedTreatedAsLax
+    extends CookieBlockedReason
+       with SetCookieBlockedReason
+  
+  @js.native
   sealed trait Script
     extends MixedContentResourceType
        with ResourceType
+  
+  @js.native
+  sealed trait Secure extends SecureContextType
+  
+  @js.native
+  sealed trait SecureLocalhost extends SecureContextType
   
   @js.native
   sealed trait SecureOnly
@@ -2524,6 +2696,9 @@ object devtoolsProtocolStrings {
   sealed trait SignedExchange
     extends InitiatorType
        with ResourceType
+  
+  @js.native
+  sealed trait Signing extends TrustTokenOperationType
   
   @js.native
   sealed trait SourceMap extends DebugSymbolsType
@@ -2555,6 +2730,12 @@ object devtoolsProtocolStrings {
   sealed trait UnknownError
     extends CookieBlockedReason
        with SetCookieBlockedReason
+  
+  @js.native
+  sealed trait UnsafeNone extends CrossOriginOpenerPolicyValue
+  
+  @js.native
+  sealed trait UseCached extends TrustTokenParamsRefreshPolicy
   
   @js.native
   sealed trait UserPreferences
@@ -2912,6 +3093,9 @@ object devtoolsProtocolStrings {
   
   @js.native
   sealed trait checked extends AXPropertyName
+  
+  @js.native
+  sealed trait child extends AdFrameType
   
   @js.native
   sealed trait childNodeCountUpdated extends js.Object
@@ -3346,6 +3530,9 @@ object devtoolsProtocolStrings {
   sealed trait hiddenRoot extends AXPropertyName
   
   @js.native
+  sealed trait horizontal extends DisplayFeatureOrientation
+  
+  @js.native
   sealed trait hsl extends ColorFormat
   
   @js.native
@@ -3493,6 +3680,21 @@ object devtoolsProtocolStrings {
   
   @js.native
   sealed trait `k-rate` extends AutomationRate
+  
+  @js.native
+  sealed trait kEvalViolation extends ContentSecurityPolicyViolationType
+  
+  @js.native
+  sealed trait kInlineViolation extends ContentSecurityPolicyViolationType
+  
+  @js.native
+  sealed trait kTrustedTypesPolicyViolation extends ContentSecurityPolicyViolationType
+  
+  @js.native
+  sealed trait kTrustedTypesSinkViolation extends ContentSecurityPolicyViolationType
+  
+  @js.native
+  sealed trait kURLViolation extends ContentSecurityPolicyViolationType
   
   @js.native
   sealed trait keyDown extends DispatchKeyEventRequestType
@@ -3759,7 +3961,8 @@ object devtoolsProtocolStrings {
   
   @js.native
   sealed trait none_
-    extends ConnectionType
+    extends AdFrameType
+       with ConnectionType
        with InspectMode
        with MixedContentType
        with MouseButton
@@ -4066,7 +4269,9 @@ object devtoolsProtocolStrings {
   sealed trait roledescription extends AXPropertyName
   
   @js.native
-  sealed trait root extends AXPropertyName
+  sealed trait root
+    extends AXPropertyName
+       with AdFrameType
   
   @js.native
   sealed trait running
@@ -4077,7 +4282,7 @@ object devtoolsProtocolStrings {
   sealed trait `same-origin` extends RequestReferrerPolicy
   
   @js.native
-  sealed trait sameOrigin extends ReferrerPolicy
+  sealed trait sameOrigin_ extends ReferrerPolicy
   
   @js.native
   sealed trait screencastFrame extends js.Object
@@ -4127,7 +4332,7 @@ object devtoolsProtocolStrings {
   sealed trait searchForUAShadowDOM extends InspectMode
   
   @js.native
-  sealed trait secure extends SecurityState
+  sealed trait secure_ extends SecurityState
   
   @js.native
   sealed trait security
@@ -4401,7 +4606,13 @@ object devtoolsProtocolStrings {
   sealed trait verbose extends LogEntryLevel
   
   @js.native
+  sealed trait vertical extends DisplayFeatureOrientation
+  
+  @js.native
   sealed trait videoCapture extends PermissionType
+  
+  @js.native
+  sealed trait videoCapturePanTiltZoom extends PermissionType
   
   @js.native
   sealed trait violation extends LogEntrySource

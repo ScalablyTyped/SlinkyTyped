@@ -10,6 +10,10 @@ object unitsMod extends js.Object {
   
   @js.native
   sealed trait Units extends js.Object
+  /**
+    * Projection units: 'degrees', 'ft', 'm', 'pixels', 'tile-pixels' or
+    * 'us-ft'.
+    */
   @js.native
   object Units extends js.Object {
     
@@ -32,6 +36,10 @@ object unitsMod extends js.Object {
     sealed trait USFEET extends Units
   }
   
+  /**
+    * Projection units: 'degrees', 'ft', 'm', 'pixels', 'tile-pixels' or
+    * 'us-ft'.
+    */
   @js.native
   object default extends js.Object {
     

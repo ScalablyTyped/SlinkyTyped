@@ -11,6 +11,8 @@ trait BlockEditProps[T /* <: Record[String, _] */] extends BlockSaveProps[T] {
   
   val className: String = js.native
   
+  val clientId: String = js.native
+  
   val isSelected: Boolean = js.native
   
   def setAttributes(attrs: Partial[T]): Unit = js.native
@@ -18,8 +20,14 @@ trait BlockEditProps[T /* <: Record[String, _] */] extends BlockSaveProps[T] {
 object BlockEditProps {
   
   @scala.inline
-  def apply[T /* <: Record[String, _] */](attributes: T, className: String, isSelected: Boolean, setAttributes: Partial[T] => Unit): BlockEditProps[T] = {
-    val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], isSelected = isSelected.asInstanceOf[js.Any], setAttributes = js.Any.fromFunction1(setAttributes))
+  def apply[T /* <: Record[String, _] */](
+    attributes: T,
+    className: String,
+    clientId: String,
+    isSelected: Boolean,
+    setAttributes: Partial[T] => Unit
+  ): BlockEditProps[T] = {
+    val __obj = js.Dynamic.literal(attributes = attributes.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], clientId = clientId.asInstanceOf[js.Any], isSelected = isSelected.asInstanceOf[js.Any], setAttributes = js.Any.fromFunction1(setAttributes))
     __obj.asInstanceOf[BlockEditProps[T]]
   }
   
@@ -40,6 +48,9 @@ object BlockEditProps {
     
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setClientId(value: String): Self = this.set("clientId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIsSelected(value: Boolean): Self = this.set("isSelected", value.asInstanceOf[js.Any])

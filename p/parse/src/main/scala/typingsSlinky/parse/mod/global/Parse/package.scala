@@ -14,5 +14,5 @@ package object Parse {
   
   type Query[T /* <: typingsSlinky.parse.mod.global.Parse.Object[typingsSlinky.parse.mod.global.Parse.Attributes] */] = typingsSlinky.parse.mod.global.Parse.Query_[T]
   
-  type Schema = typingsSlinky.parse.mod.global.Parse.Schema_
+  type Schema[T /* <: typingsSlinky.parse.mod.global.Parse.Object[typingsSlinky.parse.mod.global.Parse.Attributes] */] = typingsSlinky.parse.mod.global.Parse.Schema_[T]
 }

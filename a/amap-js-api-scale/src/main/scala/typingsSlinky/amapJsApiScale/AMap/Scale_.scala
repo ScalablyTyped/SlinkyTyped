@@ -1,8 +1,8 @@
 package typingsSlinky.amapJsApiScale.AMap
 
-import org.scalajs.dom.raw.Position
 import typingsSlinky.amapJsApi.AMap.EventEmitter
 import typingsSlinky.amapJsApi.AMap.Pixel
+import typingsSlinky.amapJsApiScale.AMap.Scale.Position
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

@@ -36,13 +36,13 @@ trait Opts extends js.Object {
   var stopEarly: js.UndefOr[Boolean] = js.native
   
   /**
-    * A string or array of strings argument names to always treat as strings         
-    */ 
+    * A string or array of strings argument names to always treat as strings
+    */
   var string: js.UndefOr[String | js.Array[String]] = js.native
   
   /**
-    * A function which is invoked with a command line parameter not defined in the opts 
-    * configuration object. If the function returns false, the unknown option is not added to argv         
+    * A function which is invoked with a command line parameter not defined in the opts
+    * configuration object. If the function returns false, the unknown option is not added to argv
     */
   var unknown: js.UndefOr[js.Function1[/* arg */ String, Boolean]] = js.native
 }

@@ -473,6 +473,32 @@ class File protected () extends ServiceObject[File] {
   @JSName("parent")
   var parent_File: Bucket = js.native
   
+  /**
+    * The public URL of this File
+    * Use {@link File#makePublic} to enable anonymous access via the returned URL.
+    *
+    * @returns {string}
+    *
+    * @example
+    * const {Storage} = require('@google-cloud/storage');
+    * const storage = new Storage();
+    * const bucket = storage.bucket('albums');
+    * const file = bucket.file('my-file');
+    *
+    * // publicUrl will be "https://storage.googleapis.com/albums/my-file"
+    * const publicUrl = file.publicUrl();
+    */
+  def publicUrl(): String = js.native
+  
+  def rename(destinationFile: String): js.Promise[RenameResponse] = js.native
+  def rename(destinationFile: String, callback: RenameCallback): Unit = js.native
+  def rename(destinationFile: String, options: RenameOptions): js.Promise[RenameResponse] = js.native
+  def rename(destinationFile: String, options: RenameOptions, callback: RenameCallback): Unit = js.native
+  def rename(destinationFile: File): js.Promise[RenameResponse] = js.native
+  def rename(destinationFile: File, callback: RenameCallback): Unit = js.native
+  def rename(destinationFile: File, options: RenameOptions): js.Promise[RenameResponse] = js.native
+  def rename(destinationFile: File, options: RenameOptions, callback: RenameCallback): Unit = js.native
+  
   def rotateEncryptionKey(): js.Promise[RotateEncryptionKeyResponse] = js.native
   def rotateEncryptionKey(callback: RotateEncryptionKeyCallback): Unit = js.native
   def rotateEncryptionKey(options: RotateEncryptionKeyOptions): js.Promise[RotateEncryptionKeyResponse] = js.native

@@ -1,7 +1,7 @@
 
 # Scala.js typings for bwip-js
 
-Typings are for version 1.7.3
+Typings are for version 2.0.10
 
 ## Library description:
 JavaScript barcode generator supporting over 100 types and standards.

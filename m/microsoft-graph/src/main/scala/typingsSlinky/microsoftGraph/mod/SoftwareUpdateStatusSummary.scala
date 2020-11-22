@@ -20,7 +20,7 @@ trait SoftwareUpdateStatusSummary extends Entity {
   var conflictUserCount: js.UndefOr[Double] = js.native
   
   // The name of the policy.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // Number of devices had error.
   var errorDeviceCount: js.UndefOr[Double] = js.native
@@ -100,10 +100,13 @@ object SoftwareUpdateStatusSummary {
     def deleteConflictUserCount: Self = this.set("conflictUserCount", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
     
     @scala.inline
     def setErrorDeviceCount(value: Double): Self = this.set("errorDeviceCount", value.asInstanceOf[js.Any])

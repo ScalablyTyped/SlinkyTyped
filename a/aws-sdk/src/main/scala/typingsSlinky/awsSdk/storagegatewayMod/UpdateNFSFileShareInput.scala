@@ -53,6 +53,11 @@ trait UpdateNFSFileShareInput extends js.Object {
   var NFSFileShareDefaults: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.NFSFileShareDefaults] = js.native
   
   /**
+    * The notification policy of the file share.
+    */
+  var NotificationPolicy: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.NotificationPolicy] = js.native
+  
+  /**
     * A value that sets the access control list (ACL) permission for objects in the S3 bucket that a file gateway puts objects into. The default value is private.
     */
   var ObjectACL: js.UndefOr[typingsSlinky.awsSdk.storagegatewayMod.ObjectACL] = js.native
@@ -148,6 +153,12 @@ object UpdateNFSFileShareInput {
     
     @scala.inline
     def deleteNFSFileShareDefaults: Self = this.set("NFSFileShareDefaults", js.undefined)
+    
+    @scala.inline
+    def setNotificationPolicy(value: NotificationPolicy): Self = this.set("NotificationPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNotificationPolicy: Self = this.set("NotificationPolicy", js.undefined)
     
     @scala.inline
     def setObjectACL(value: ObjectACL): Self = this.set("ObjectACL", value.asInstanceOf[js.Any])

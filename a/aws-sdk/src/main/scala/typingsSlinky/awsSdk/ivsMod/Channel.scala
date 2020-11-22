@@ -13,6 +13,11 @@ trait Channel extends js.Object {
   var arn: js.UndefOr[ChannelArn] = js.native
   
   /**
+    * Whether the channel is authorized.
+    */
+  var authorized: js.UndefOr[IsAuthorized] = js.native
+  
+  /**
     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
     */
   var ingestEndpoint: js.UndefOr[IngestEndpoint] = js.native
@@ -70,6 +75,12 @@ object Channel {
     
     @scala.inline
     def deleteArn: Self = this.set("arn", js.undefined)
+    
+    @scala.inline
+    def setAuthorized(value: IsAuthorized): Self = this.set("authorized", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAuthorized: Self = this.set("authorized", js.undefined)
     
     @scala.inline
     def setIngestEndpoint(value: IngestEndpoint): Self = this.set("ingestEndpoint", value.asInstanceOf[js.Any])

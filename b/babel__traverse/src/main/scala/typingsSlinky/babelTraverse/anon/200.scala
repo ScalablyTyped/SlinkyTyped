@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSIndexSignature
+import typingsSlinky.babelTraverse.babelTraverseStrings.EnumNumberMember
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `200` extends js.Object {
   
-  var `type`: TSIndexSignature = js.native
+  var `type`: EnumNumberMember = js.native
 }
 object `200` {
   
   @scala.inline
-  def apply(`type`: TSIndexSignature): `200` = {
+  def apply(`type`: EnumNumberMember): `200` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`200`]
@@ -35,6 +35,6 @@ object `200` {
     }
     
     @scala.inline
-    def setType(value: TSIndexSignature): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: EnumNumberMember): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

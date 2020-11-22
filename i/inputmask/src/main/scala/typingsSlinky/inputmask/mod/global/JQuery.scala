@@ -39,7 +39,6 @@ trait JQuery extends js.Object {
     */
   @JSName("inputmask")
   def inputmask_getemptymask(method: getemptymask): String = js.native
-   // tslint:disable-line:unified-signatures
   /**
     * The metadata of the actual mask provided in the mask definitions can be obtained by calling getmetadata. If
     * only a mask is provided the mask definition will be returned by the getmetadata.
@@ -52,7 +51,6 @@ trait JQuery extends js.Object {
     */
   @JSName("inputmask")
   def inputmask_hasMaskedValue(method: hasMaskedValue): Boolean = js.native
-   // tslint:disable-line:unified-signatures
   /**
     * Verify whether the current value is complete or not.
     */

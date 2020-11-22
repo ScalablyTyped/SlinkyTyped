@@ -3,7 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.AppsAddRepoToInstallationEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ActivitySetThreadSubscriptionEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.ActivitySetThreadSubscriptionResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -14,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `617` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[AppsAddRepoToInstallationEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[ActivitySetThreadSubscriptionEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[_] = js.native
+  var response: OctokitResponse[ActivitySetThreadSubscriptionResponseData] = js.native
 }
 object `617` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[AppsAddRepoToInstallationEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[_]
+    parameters: RequestParameters with (Omit[ActivitySetThreadSubscriptionEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[ActivitySetThreadSubscriptionResponseData]
   ): `617` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`617`]
@@ -46,10 +47,10 @@ object `617` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[AppsAddRepoToInstallationEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[ActivitySetThreadSubscriptionEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[_]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ActivitySetThreadSubscriptionResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

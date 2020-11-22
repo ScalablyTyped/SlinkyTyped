@@ -18,7 +18,7 @@ object global extends js.Object {
   @js.native
   object Meteor extends js.Object {
     
-    var roles: Collection[Role] = js.native
+    var roles: Collection[Role, Role] = js.native
   }
   
   /**
@@ -116,7 +116,7 @@ object global extends js.Object {
       * @method getAllRoles
       * @return {Cursor} cursor of existing roles
       */
-    def getAllRoles(): Cursor[Role] = js.native
+    def getAllRoles(): Cursor[Role, Role] = js.native
     
     /**
       * Retrieve users groups, if any
@@ -164,14 +164,14 @@ object global extends js.Object {
       *                           through to `Meteor.users.find(query, options)`
       * @return {Cursor} cursor of users in role
       */
-    def getUsersInRole(role: String): Cursor[User] = js.native
-    def getUsersInRole(role: String, group: js.UndefOr[scala.Nothing], options: Fields): Cursor[User] = js.native
-    def getUsersInRole(role: String, group: String): Cursor[User] = js.native
-    def getUsersInRole(role: String, group: String, options: Fields): Cursor[User] = js.native
-    def getUsersInRole(role: js.Array[String]): Cursor[User] = js.native
-    def getUsersInRole(role: js.Array[String], group: js.UndefOr[scala.Nothing], options: Fields): Cursor[User] = js.native
-    def getUsersInRole(role: js.Array[String], group: String): Cursor[User] = js.native
-    def getUsersInRole(role: js.Array[String], group: String, options: Fields): Cursor[User] = js.native
+    def getUsersInRole(role: String): Cursor[User, User] = js.native
+    def getUsersInRole(role: String, group: js.UndefOr[scala.Nothing], options: Fields): Cursor[User, User] = js.native
+    def getUsersInRole(role: String, group: String): Cursor[User, User] = js.native
+    def getUsersInRole(role: String, group: String, options: Fields): Cursor[User, User] = js.native
+    def getUsersInRole(role: js.Array[String]): Cursor[User, User] = js.native
+    def getUsersInRole(role: js.Array[String], group: js.UndefOr[scala.Nothing], options: Fields): Cursor[User, User] = js.native
+    def getUsersInRole(role: js.Array[String], group: String): Cursor[User, User] = js.native
+    def getUsersInRole(role: js.Array[String], group: String, options: Fields): Cursor[User, User] = js.native
     
     /**
       * Remove users from roles

@@ -8,5 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class DirectionalLightHelper protected ()
   extends typingsSlinky.three.mod.DirectionalLightHelper {
+  /**
+  	 * @param light
+  	 * @param [size=1]
+  	 * @param color
+  	 */
   def this(light: typingsSlinky.three.directionalLightMod.DirectionalLight) = this()
 }

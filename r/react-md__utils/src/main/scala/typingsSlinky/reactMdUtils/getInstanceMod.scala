@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getInstanceMod extends js.Object {
   
-  def default(refOrInstance: RefOrInstance): HTMLElement | Null = js.native
+  def getInstance(refOrInstance: RefOrInstance): HTMLElement | Null = js.native
   
   type RefOrInstance = HTMLElement | Null | (MutableRefObject[HTMLElement | Null])
 }

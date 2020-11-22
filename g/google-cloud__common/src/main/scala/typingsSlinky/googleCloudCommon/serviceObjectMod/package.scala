@@ -21,7 +21,7 @@ package object serviceObjectMod {
     scala.Unit
   ]
   
-  type DeleteOptions = js.Object
+  type DeleteOptions = typingsSlinky.googleCloudCommon.anon.IgnoreNotFound with js.Object
   
   type ExistsCallback = js.Function2[/* err */ js.Error | scala.Null, /* exists */ js.UndefOr[scala.Boolean], scala.Unit]
   

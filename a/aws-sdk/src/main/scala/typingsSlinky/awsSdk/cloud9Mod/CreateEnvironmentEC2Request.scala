@@ -18,6 +18,11 @@ trait CreateEnvironmentEC2Request extends js.Object {
   var clientRequestToken: js.UndefOr[ClientRequestToken] = js.native
   
   /**
+    * The connection type used for connecting to an Amazon EC2 environment.
+    */
+  var connectionType: js.UndefOr[ConnectionType] = js.native
+  
+  /**
     * The description of the environment to create.
     */
   var description: js.UndefOr[EnvironmentDescription] = js.native
@@ -87,6 +92,12 @@ object CreateEnvironmentEC2Request {
     
     @scala.inline
     def deleteClientRequestToken: Self = this.set("clientRequestToken", js.undefined)
+    
+    @scala.inline
+    def setConnectionType(value: ConnectionType): Self = this.set("connectionType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteConnectionType: Self = this.set("connectionType", js.undefined)
     
     @scala.inline
     def setDescription(value: EnvironmentDescription): Self = this.set("description", value.asInstanceOf[js.Any])

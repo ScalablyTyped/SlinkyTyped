@@ -1,9 +1,9 @@
 package typingsSlinky.tensorflowTfjsLayers.trainingMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.mod.Optimizer
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.distTypesMod.LossOrMetricFn
 import scala.scalajs.js
 import scala.scalajs.js.`|`

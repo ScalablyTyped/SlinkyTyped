@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useIntervalMod extends js.Object {
   
-  def default(callback: js.Function1[/* stop */ js.Function0[Unit], Unit], delay: Double): ReturnValue = js.native
-  def default(
+  def useInterval(callback: js.Function1[/* stop */ js.Function0[Unit], Unit], delay: Double): ReturnValue = js.native
+  def useInterval(
     callback: js.Function1[/* stop */ js.Function0[Unit], Unit],
     delay: Double,
     defaultRunning: Boolean

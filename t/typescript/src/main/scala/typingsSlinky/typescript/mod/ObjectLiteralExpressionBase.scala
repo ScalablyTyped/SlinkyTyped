@@ -4,13 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.typescript.mod.TextRange because Already inherited
-- typingsSlinky.typescript.mod.Node because Already inherited
-- typingsSlinky.typescript.mod.Declaration because var conflicts: decorators, end, flags, kind, modifiers, parent, pos. Inlined _declarationBrand */ @js.native
-trait ObjectLiteralExpressionBase[T /* <: ObjectLiteralElement */] extends PrimaryExpression {
+@js.native
+trait ObjectLiteralExpressionBase[T /* <: ObjectLiteralElement */]
+  extends PrimaryExpression
+     with Declaration {
   
-  var _declarationBrand: js.Any = js.native
-  
-  var properties: NodeArray[T] = js.native
+  val properties: NodeArray[T] = js.native
 }

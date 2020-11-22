@@ -1,18 +1,20 @@
 package typingsSlinky.tensorflowTfjsNode
 
 import typingsSlinky.tensorflowTfjsCore.backendMod.KernelBackend
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Scalar
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor1D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor2D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor3D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.DataType
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R1
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R2
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank.R4
+import typingsSlinky.tensorflowTfjsCore.distTypesMod.ScalarLike
 import typingsSlinky.tensorflowTfjsCore.kernelRegistryMod.TensorInfo
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Scalar
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
+import typingsSlinky.tensorflowTfjsCore.modelTypesMod.ModelTensorInfo
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings._empty
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.bilinear
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.cm
@@ -30,9 +32,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object nodejsKernelBackendMod extends js.Object {
   
+  def createOpAttr(attrName: String, tensorsOrDtype: js.Array[Tensor[Rank]], value: ScalarLike): TFEOpAttr = js.native
+  def createOpAttr(attrName: String, tensorsOrDtype: Tensor[Rank], value: ScalarLike): TFEOpAttr = js.native
+  def createOpAttr(attrName: String, tensorsOrDtype: DataType, value: ScalarLike): TFEOpAttr = js.native
+  
   def createTensorsTypeOpAttr(attrName: String, tensorsOrDtype: js.Array[Tensor[Rank]]): TFEOpAttr = js.native
-  def createTensorsTypeOpAttr(attrName: String, tensorsOrDtype: DataType): TFEOpAttr = js.native
   def createTensorsTypeOpAttr(attrName: String, tensorsOrDtype: Tensor[Rank]): TFEOpAttr = js.native
+  def createTensorsTypeOpAttr(attrName: String, tensorsOrDtype: DataType): TFEOpAttr = js.native
   
   def ensureTensorflowBackend(): Unit = js.native
   
@@ -50,7 +56,8 @@ object nodejsKernelBackendMod extends js.Object {
     
     var createOutputTensor: js.Any = js.native
     
-    var createReductionOpAttrs: js.Any = js.native
+    def createReductionOpAttrs(tensor: TensorInfo): js.Array[TFEOpAttr] = js.native
+    def createReductionOpAttrs(tensor: TensorInfo, keepDims: Boolean): js.Array[TFEOpAttr] = js.native
     
     def createSummaryFileWriter(resourceHandle: Tensor[Rank], logdir: String): Unit = js.native
     def createSummaryFileWriter(
@@ -229,9 +236,16 @@ object nodejsKernelBackendMod extends js.Object {
       * @param numOutputs The number of output Tensors for Op execution.
       * @return A resulting Tensor array from Op execution.
       */
-    def executeMultipleOutputs(name: String, opAttrs: js.Array[TFEOpAttr], inputs: js.Array[Tensor[Rank]], numOutputs: Double): js.Array[Tensor[Rank]] = js.native
+    def executeMultipleOutputs(name: String, opAttrs: js.Array[TFEOpAttr], inputs: js.Array[TensorInfo], numOutputs: Double): js.Array[Tensor[Rank]] = js.native
     
-    var executeSingleInput: js.Any = js.native
+    /**
+      * Executes an op that has a single input and output.
+      *
+      * Helper function to wrap executeSingleOutput in a particular case.
+      * @param name The name of the Op to execute.
+      * @param input The input Tensor for the Op.
+      */
+    def executeSingleInput(name: String, input: TensorInfo): Tensor[Rank] = js.native
     
     /**
       * Executes a TensorFlow Eager Op that provides one output Tensor.
@@ -247,6 +261,8 @@ object nodejsKernelBackendMod extends js.Object {
     var getDTypeInteger: js.Any = js.native
     
     var getInputTensorIds: js.Any = js.native
+    
+    var getMappedInputTensorIds: js.Any = js.native
     
     def getNumOfSavedModels(): Double = js.native
     
@@ -268,7 +284,7 @@ object nodejsKernelBackendMod extends js.Object {
     def runSavedModel(
       id: Double,
       inputs: js.Array[Tensor[Rank]],
-      inputOpNames: js.Array[String],
+      inputTensorInfos: js.Array[ModelTensorInfo],
       outputOpNames: js.Array[String]
     ): js.Array[Tensor[Rank]] = js.native
     

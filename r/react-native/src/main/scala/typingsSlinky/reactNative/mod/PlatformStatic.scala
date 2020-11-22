@@ -19,7 +19,7 @@ trait PlatformStatic extends js.Object {
     */ typingsSlinky.reactNative.reactNativeStrings.PlatformStatic with TopLevel[js.Any]
   ): js.UndefOr[T] = js.native
   /**
-    * @see https://facebook.github.io/react-native/docs/platform-specific-code.html#content
+    * @see https://reactnative.dev/docs/platform-specific-code#content
     */
   @JSName("select")
   def select_T_T[T](

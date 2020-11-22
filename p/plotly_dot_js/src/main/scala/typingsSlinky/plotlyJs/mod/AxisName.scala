@@ -14,6 +14,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.plotlyJs.plotlyJsStrings.x7
   - typingsSlinky.plotlyJs.plotlyJsStrings.x8
   - typingsSlinky.plotlyJs.plotlyJsStrings.x9
+  - typingsSlinky.plotlyJs.plotlyJsStrings.x10
+  - typingsSlinky.plotlyJs.plotlyJsStrings.x11
   - typingsSlinky.plotlyJs.plotlyJsStrings.y
   - typingsSlinky.plotlyJs.plotlyJsStrings.y2
   - typingsSlinky.plotlyJs.plotlyJsStrings.y3
@@ -23,12 +25,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.plotlyJs.plotlyJsStrings.y7
   - typingsSlinky.plotlyJs.plotlyJsStrings.y8
   - typingsSlinky.plotlyJs.plotlyJsStrings.y9
+  - typingsSlinky.plotlyJs.plotlyJsStrings.y10
+  - typingsSlinky.plotlyJs.plotlyJsStrings.y11
 */
 trait AxisName extends js.Object
 object AxisName {
   
   @scala.inline
   def x: typingsSlinky.plotlyJs.plotlyJsStrings.x = "x".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.x]
+  
+  @scala.inline
+  def x10: typingsSlinky.plotlyJs.plotlyJsStrings.x10 = "x10".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.x10]
+  
+  @scala.inline
+  def x11: typingsSlinky.plotlyJs.plotlyJsStrings.x11 = "x11".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.x11]
   
   @scala.inline
   def x2: typingsSlinky.plotlyJs.plotlyJsStrings.x2 = "x2".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.x2]
@@ -56,6 +66,12 @@ object AxisName {
   
   @scala.inline
   def y: typingsSlinky.plotlyJs.plotlyJsStrings.y = "y".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.y]
+  
+  @scala.inline
+  def y10: typingsSlinky.plotlyJs.plotlyJsStrings.y10 = "y10".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.y10]
+  
+  @scala.inline
+  def y11: typingsSlinky.plotlyJs.plotlyJsStrings.y11 = "y11".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.y11]
   
   @scala.inline
   def y2: typingsSlinky.plotlyJs.plotlyJsStrings.y2 = "y2".asInstanceOf[typingsSlinky.plotlyJs.plotlyJsStrings.y2]

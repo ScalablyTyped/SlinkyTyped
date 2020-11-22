@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BucketMetadata extends js.Object {
   
   /**
-    * The unique identifier for the AWS account that's associated with the bucket.
+    * The unique identifier for the AWS account that owns the bucket.
     */
   var accountId: js.UndefOr[string] = js.native
   
@@ -28,12 +28,22 @@ trait BucketMetadata extends js.Object {
   var bucketName: js.UndefOr[string] = js.native
   
   /**
-    * The total number of objects that Amazon Macie can analyze in the bucket. These objects use a file format, file extension, or content type that Amazon Macie supports.
+    * The total number of objects that Amazon Macie can analyze in the bucket. These objects use a supported storage class and have a file name extension for a supported file or storage format.
     */
   var classifiableObjectCount: js.UndefOr[long] = js.native
   
   /**
-    * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie last analyzed the bucket.
+    * The total storage size, in bytes, of the objects that Amazon Macie can analyze in the bucket. These objects use a supported storage class and have a file name extension for a supported file or storage format.
+    */
+  var classifiableSizeInBytes: js.UndefOr[long] = js.native
+  
+  /**
+    * Specifies whether any one-time or recurring classification jobs are configured to analyze data in the bucket, and, if so, the details of the job that ran most recently.
+    */
+  var jobDetails: js.UndefOr[JobDetails] = js.native
+  
+  /**
+    * The date and time, in UTC and extended ISO 8601 format, when Amazon Macie most recently retrieved data about the bucket from Amazon S3.
     */
   var lastUpdated: js.UndefOr[js.Date] = js.native
   
@@ -63,7 +73,7 @@ trait BucketMetadata extends js.Object {
   var replicationDetails: js.UndefOr[ReplicationDetails] = js.native
   
   /**
-    * Specifies whether the bucket is shared with another AWS account. Valid values are: EXTERNAL - The bucket is shared with an AWS account that isn’t part of the same Amazon Macie organization. INTERNAL - The bucket is shared with an AWS account that's part of the same Amazon Macie organization. NOT_SHARED - The bucket isn't shared with other AWS accounts.
+    *  Specifies whether the bucket is shared with another AWS account. Possible values are: EXTERNAL - The bucket is shared with an AWS account that isn't part of the same Amazon Macie organization. INTERNAL - The bucket is shared with an AWS account that's part of the same Amazon Macie organization. NOT_SHARED - The bucket isn't shared with other AWS accounts. UNKNOWN - Amazon Macie wasn't able to evaluate the shared access settings for the bucket.
     */
   var sharedAccess: js.UndefOr[SharedAccess] = js.native
   
@@ -81,6 +91,16 @@ trait BucketMetadata extends js.Object {
     * An array that specifies the tags (keys and values) that are associated with the bucket.
     */
   var tags: js.UndefOr[listOfKeyValuePair] = js.native
+  
+  /**
+    * The total number of objects that Amazon Macie can't analyze in the bucket. These objects don't use a supported storage class or don't have a file name extension for a supported file or storage format.
+    */
+  var unclassifiableObjectCount: js.UndefOr[ObjectLevelStatistics] = js.native
+  
+  /**
+    * The total storage size, in bytes, of the objects that Amazon Macie can't analyze in the bucket. These objects don't use a supported storage class or don't have a file name extension for a supported file or storage format.
+    */
+  var unclassifiableObjectSizeInBytes: js.UndefOr[ObjectLevelStatistics] = js.native
   
   /**
     * Specifies whether versioning is enabled for the bucket.
@@ -139,6 +159,18 @@ object BucketMetadata {
     
     @scala.inline
     def deleteClassifiableObjectCount: Self = this.set("classifiableObjectCount", js.undefined)
+    
+    @scala.inline
+    def setClassifiableSizeInBytes(value: long): Self = this.set("classifiableSizeInBytes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassifiableSizeInBytes: Self = this.set("classifiableSizeInBytes", js.undefined)
+    
+    @scala.inline
+    def setJobDetails(value: JobDetails): Self = this.set("jobDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJobDetails: Self = this.set("jobDetails", js.undefined)
     
     @scala.inline
     def setLastUpdated(value: js.Date): Self = this.set("lastUpdated", value.asInstanceOf[js.Any])
@@ -202,6 +234,18 @@ object BucketMetadata {
     
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)
+    
+    @scala.inline
+    def setUnclassifiableObjectCount(value: ObjectLevelStatistics): Self = this.set("unclassifiableObjectCount", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnclassifiableObjectCount: Self = this.set("unclassifiableObjectCount", js.undefined)
+    
+    @scala.inline
+    def setUnclassifiableObjectSizeInBytes(value: ObjectLevelStatistics): Self = this.set("unclassifiableObjectSizeInBytes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnclassifiableObjectSizeInBytes: Self = this.set("unclassifiableObjectSizeInBytes", js.undefined)
     
     @scala.inline
     def setVersioning(value: boolean): Self = this.set("versioning", value.asInstanceOf[js.Any])

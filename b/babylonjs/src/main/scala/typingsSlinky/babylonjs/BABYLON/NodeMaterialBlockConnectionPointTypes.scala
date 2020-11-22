@@ -38,6 +38,10 @@ object NodeMaterialBlockConnectionPointTypes extends js.Object {
   @js.native
   sealed trait Matrix extends NodeMaterialBlockConnectionPointTypes
   
+  /** Custom object */
+  @js.native
+  sealed trait Object extends NodeMaterialBlockConnectionPointTypes
+  
   /** Vector2 */
   @js.native
   sealed trait Vector2 extends NodeMaterialBlockConnectionPointTypes

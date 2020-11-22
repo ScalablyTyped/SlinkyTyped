@@ -21,6 +21,11 @@ trait FreeCameraInputsManager extends CameraInputsManager[FreeCamera] {
   var _mouseInput: Nullable[FreeCameraMouseInput] = js.native
   
   /**
+    * @hidden
+    */
+  var _mouseWheelInput: Nullable[FreeCameraMouseWheelInput] = js.native
+  
+  /**
     * Add orientation input support to the input manager.
     * @returns the current input manager
     */
@@ -47,6 +52,12 @@ trait FreeCameraInputsManager extends CameraInputsManager[FreeCamera] {
   def addMouse(touchEnabled: Boolean): FreeCameraInputsManager = js.native
   
   /**
+    * Add mouse wheel input support to the input manager.
+    * @returns the current input manager
+    */
+  def addMouseWheel(): FreeCameraInputsManager = js.native
+  
+  /**
     * Add touch input support to the input manager.
     * @returns the current input manager
     */
@@ -63,4 +74,10 @@ trait FreeCameraInputsManager extends CameraInputsManager[FreeCamera] {
     * @returns the current input manager
     */
   def removeMouse(): FreeCameraInputsManager = js.native
+  
+  /**
+    * Removes the mouse wheel input support from the manager
+    * @returns the current input manager
+    */
+  def removeMouseWheel(): FreeCameraInputsManager = js.native
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ReplicationRun extends js.Object {
   
   /**
-    * The identifier of the Amazon Machine Image (AMI) from the replication run.
+    * The ID of the Amazon Machine Image (AMI) from the replication run.
     */
   var amiId: js.UndefOr[AmiId] = js.native
   
@@ -23,17 +23,17 @@ trait ReplicationRun extends js.Object {
   var description: js.UndefOr[Description] = js.native
   
   /**
-    * Whether the replication run should produce encrypted AMI or not. See also KmsKeyId below.
+    * Indicates whether the replication run should produce an encrypted AMI.
     */
   var encrypted: js.UndefOr[Encrypted] = js.native
   
   /**
-    * KMS key ID for replication jobs that produce encrypted AMIs. Can be any of the following:    KMS key ID   KMS key alias   ARN referring to KMS key ID   ARN referring to KMS key alias    If encrypted is true but a KMS key id is not specified, the customer's default KMS key for EBS is used. 
+    * The ID of the KMS key for replication jobs that produce encrypted AMIs. This value can be any of the following:   KMS key ID   KMS key alias   ARN referring to the KMS key ID   ARN referring to the KMS key alias    If encrypted is true but a KMS key ID is not specified, the customer's default KMS key for Amazon EBS is used. 
     */
   var kmsKeyId: js.UndefOr[KmsKeyId] = js.native
   
   /**
-    * The identifier of the replication run.
+    * The ID of the replication run.
     */
   var replicationRunId: js.UndefOr[ReplicationRunId] = js.native
   
@@ -43,7 +43,7 @@ trait ReplicationRun extends js.Object {
   var scheduledStartTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * Details of the current stage of the replication run.
+    * Details about the current stage of the replication run.
     */
   var stageDetails: js.UndefOr[ReplicationRunStageDetails] = js.native
   

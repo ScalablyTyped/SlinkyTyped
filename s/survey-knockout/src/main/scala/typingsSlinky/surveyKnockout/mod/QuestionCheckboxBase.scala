@@ -15,4 +15,6 @@ class QuestionCheckboxBase protected () extends QuestionSelectBase {
   var colCount: Double = js.native
   
   def colCountChangedCallback(): Unit = js.native
+  
+  def getItemIndex(item: js.Any): Double = js.native
 }

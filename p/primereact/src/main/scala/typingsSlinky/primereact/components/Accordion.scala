@@ -26,6 +26,12 @@ object Accordion {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def collapseIcon(value: String): this.type = set("collapseIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def expandIcon(value: String): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline

@@ -12,8 +12,7 @@ trait WorkbookRangeAreasData extends js.Object {
     *
     * Returns an array of address in A1-style. Address value will contain the worksheet name for each rectangular block of cells (e.g., "Sheet1!A1:B4, Sheet1!D1:D4"). Read-only.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var addresses: js.UndefOr[js.Array[String]] = js.native
   
@@ -21,17 +20,15 @@ trait WorkbookRangeAreasData extends js.Object {
     *
     * Returns the RangeAreasCollection object, each RangeAreas in the collection represent one or more rectangle ranges in one worksheet.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var areas: js.UndefOr[js.Array[RangeAreasData]] = js.native
   
   /**
     *
-    * Returns a collection of ranges that comprises this object.
+    * Returns ranges that comprise this object in a RangeCollection object.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var ranges: js.UndefOr[js.Array[RangeData]] = js.native
 }

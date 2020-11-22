@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object generate extends js.Object {
   
-  def apply(schema: Schema): js.Array[_] = js.native
-  def apply(schema: Schema, refs: String): js.Array[_] = js.native
-  def apply(schema: Schema, refs: js.Array[Schema]): js.Array[_] = js.native
+  def apply(schema: Schema): js.Any = js.native
+  def apply(schema: Schema, refs: String): js.Any = js.native
+  def apply(schema: Schema, refs: js.Array[Schema]): js.Any = js.native
 }

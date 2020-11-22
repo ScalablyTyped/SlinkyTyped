@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateAppResponse extends js.Object {
   
   /**
-    * Summary description of the application.
+    * A summary description of the application.
     */
   var appSummary: js.UndefOr[AppSummary] = js.native
   
   /**
-    * List of updated server groups in the application.
+    * The updated server groups in the application.
     */
   var serverGroups: js.UndefOr[ServerGroups] = js.native
   
   /**
-    * List of tags associated with the application.
+    * The tags associated with the application.
     */
   var tags: js.UndefOr[Tags] = js.native
 }

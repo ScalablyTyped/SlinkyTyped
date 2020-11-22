@@ -28,13 +28,11 @@ trait AttachmentsViewModelProperties extends js.Object {
     * The current mode performed by the user.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attachments-AttachmentsViewModel.html#mode)
-    *
-    * @default "view"
     */
   var mode: js.UndefOr[view | add | edit] = js.native
   
   /**
-    * Defines whether or not the feature supports resizing attachments. This depends on whether the feature layer's [capabilities.operations.supportsResizeAttachments](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-FeatureLayer.html#capabilities) is set to `true`.
+    * Defines whether or not the feature supports resizing attachments.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Attachments-AttachmentsViewModel.html#supportsResizeAttachments)
     */

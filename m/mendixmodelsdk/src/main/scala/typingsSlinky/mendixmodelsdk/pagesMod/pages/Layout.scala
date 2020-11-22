@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
@@ -11,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/layout relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/layout relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -137,9 +136,6 @@ class Layout protected () extends FormBase {
   def mainPlaceholderQualifiedName: String | Null = js.native
   
   def mainPlaceholder_=(newValue: ILayoutParameter | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FLayout: IModel = js.native
   
   /**
     * In version 8.0.0: deleted

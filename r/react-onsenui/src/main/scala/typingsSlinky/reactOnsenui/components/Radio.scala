@@ -4,7 +4,7 @@ import org.scalajs.dom.raw.Event
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameDefaultChecked
+import typingsSlinky.reactOnsenui.anon.HTMLAttributesidclassNameChecked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -54,7 +54,7 @@ object Radio {
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: HTMLAttributesidclassNameDefaultChecked): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: HTMLAttributesidclassNameChecked): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   
   implicit def make(companion: Radio.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }

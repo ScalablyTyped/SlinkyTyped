@@ -1,5 +1,6 @@
 package typingsSlinky.yandexMaps.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,6 +13,10 @@ class Layer protected ()
      with IPositioningContext {
   def this(tileUrlTemplate: String) = this()
   def this(tileUrlTemplate: js.Function2[/* tileNumber */ js.Array[Double], /* tileZoom */ Double, String]) = this()
+  
+  def getAlias(): String = js.native
+  
+  def getElement(): HTMLElement = js.native
   
   def setParent(parent: IControlParent): this.type = js.native
 }

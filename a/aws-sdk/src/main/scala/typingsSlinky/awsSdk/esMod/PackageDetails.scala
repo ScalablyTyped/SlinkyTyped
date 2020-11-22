@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PackageDetails extends js.Object {
   
+  var AvailablePackageVersion: js.UndefOr[PackageVersion] = js.native
+  
   /**
     * Timestamp which tells creation date of the package.
     */
@@ -16,6 +18,8 @@ trait PackageDetails extends js.Object {
     * Additional information if the package is in an error state. Null otherwise.
     */
   var ErrorDetails: js.UndefOr[typingsSlinky.awsSdk.esMod.ErrorDetails] = js.native
+  
+  var LastUpdatedAt: js.UndefOr[js.Date] = js.native
   
   /**
     * User-specified description of the package.
@@ -66,6 +70,12 @@ object PackageDetails {
     }
     
     @scala.inline
+    def setAvailablePackageVersion(value: PackageVersion): Self = this.set("AvailablePackageVersion", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAvailablePackageVersion: Self = this.set("AvailablePackageVersion", js.undefined)
+    
+    @scala.inline
     def setCreatedAt(value: js.Date): Self = this.set("CreatedAt", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -76,6 +86,12 @@ object PackageDetails {
     
     @scala.inline
     def deleteErrorDetails: Self = this.set("ErrorDetails", js.undefined)
+    
+    @scala.inline
+    def setLastUpdatedAt(value: js.Date): Self = this.set("LastUpdatedAt", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLastUpdatedAt: Self = this.set("LastUpdatedAt", js.undefined)
     
     @scala.inline
     def setPackageDescription(value: PackageDescription): Self = this.set("PackageDescription", value.asInstanceOf[js.Any])

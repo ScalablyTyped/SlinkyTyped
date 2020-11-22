@@ -1,7 +1,7 @@
 
 # Scala.js typings for xstream
 
-Typings are for version 11.12.0
+Typings are for version 11.14.0
 
 ## Library description:
 An extremely intuitive, small, and fast functional reactive stream library for JavaScript

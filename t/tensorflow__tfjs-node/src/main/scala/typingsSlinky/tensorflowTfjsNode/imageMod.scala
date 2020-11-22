@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsNode
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor3D
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor4D
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings._empty
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.cm
 import typingsSlinky.tensorflowTfjsNode.tensorflowTfjsNodeStrings.grayscale

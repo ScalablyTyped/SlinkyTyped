@@ -75,6 +75,12 @@ object platform extends js.Object {
   def isIPad(): Boolean = js.native
   
   /**
+    * @description Returns whether the OS is iPadOS
+    * @return {Boolean}
+    */
+  def isIPadOS(): Boolean = js.native
+  
+  /**
     * @description Returns whether the device is iPhone
     * @return {Boolean}
     */
@@ -97,12 +103,6 @@ object platform extends js.Object {
     * @return {Boolean}
     */
   def isSafari(): Boolean = js.native
-  
-  /**
-    * @description Returns whether app is running in UIWebView.
-    * @return {Boolean}
-    */
-  def isUIWebView(): Boolean = js.native
   
   /**
     * @description Returns whether app is running in WKWebView.

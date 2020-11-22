@@ -1,7 +1,8 @@
 package typingsSlinky.multibase
 
-import typingsSlinky.multibase.mod.code
-import typingsSlinky.multibase.mod.name
+import typingsSlinky.multibase.baseMod.BaseName
+import typingsSlinky.multibase.mod.BaseCode
+import typingsSlinky.multibase.mod.BaseNameOrCode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,34 +13,52 @@ object multibaseStrings {
   def `0`: `0` = "0".asInstanceOf[`0`]
   
   @scala.inline
-  def `1`: `1` = "1".asInstanceOf[`1`]
-  
-  @scala.inline
   def `7`: `7` = "7".asInstanceOf[`7`]
   
   @scala.inline
   def `9`: `9` = "9".asInstanceOf[`9`]
   
   @scala.inline
+  def B: B = "B".asInstanceOf[B]
+  
+  @scala.inline
+  def C: C = "C".asInstanceOf[C]
+  
+  @scala.inline
+  def F: F = "F".asInstanceOf[F]
+  
+  @scala.inline
+  def K: K = "K".asInstanceOf[K]
+  
+  @scala.inline
   def M: M = "M".asInstanceOf[M]
+  
+  @scala.inline
+  def Null: Null = "\u0000".asInstanceOf[Null]
+  
+  @scala.inline
+  def T: T = "T".asInstanceOf[T]
   
   @scala.inline
   def U: U = "U".asInstanceOf[U]
   
   @scala.inline
+  def V: V = "V".asInstanceOf[V]
+  
+  @scala.inline
   def Z: Z = "Z".asInstanceOf[Z]
   
   @scala.inline
-  def b: b = "b".asInstanceOf[b]
-  
-  @scala.inline
-  def base1: base1 = "base1".asInstanceOf[base1]
+  def b_ : b_ = "b".asInstanceOf[b_]
   
   @scala.inline
   def base10: base10 = "base10".asInstanceOf[base10]
   
   @scala.inline
   def base16: base16 = "base16".asInstanceOf[base16]
+  
+  @scala.inline
+  def base16upper: base16upper = "base16upper".asInstanceOf[base16upper]
   
   @scala.inline
   def base2: base2 = "base2".asInstanceOf[base2]
@@ -54,10 +73,28 @@ object multibaseStrings {
   def base32hexpad: base32hexpad = "base32hexpad".asInstanceOf[base32hexpad]
   
   @scala.inline
+  def base32hexpadupper: base32hexpadupper = "base32hexpadupper".asInstanceOf[base32hexpadupper]
+  
+  @scala.inline
+  def base32hexupper: base32hexupper = "base32hexupper".asInstanceOf[base32hexupper]
+  
+  @scala.inline
   def base32pad: base32pad = "base32pad".asInstanceOf[base32pad]
   
   @scala.inline
+  def base32padupper: base32padupper = "base32padupper".asInstanceOf[base32padupper]
+  
+  @scala.inline
+  def base32upper: base32upper = "base32upper".asInstanceOf[base32upper]
+  
+  @scala.inline
   def base32z: base32z = "base32z".asInstanceOf[base32z]
+  
+  @scala.inline
+  def base36: base36 = "base36".asInstanceOf[base36]
+  
+  @scala.inline
+  def base36upper: base36upper = "base36upper".asInstanceOf[base36upper]
   
   @scala.inline
   def base58btc: base58btc = "base58btc".asInstanceOf[base58btc]
@@ -81,122 +118,423 @@ object multibaseStrings {
   def base8: base8 = "base8".asInstanceOf[base8]
   
   @scala.inline
-  def c: c = "c".asInstanceOf[c]
+  def c_ : c_ = "c".asInstanceOf[c_]
   
   @scala.inline
-  def f: f = "f".asInstanceOf[f]
+  def f_ : f_ = "f".asInstanceOf[f_]
   
   @scala.inline
   def h: h = "h".asInstanceOf[h]
   
   @scala.inline
+  def identity: identity = "identity".asInstanceOf[identity]
+  
+  @scala.inline
+  def k_ : k_ = "k".asInstanceOf[k_]
+  
+  @scala.inline
   def m_ : m_ = "m".asInstanceOf[m_]
   
   @scala.inline
-  def t: t = "t".asInstanceOf[t]
+  def t_ : t_ = "t".asInstanceOf[t_]
   
   @scala.inline
   def u_ : u_ = "u".asInstanceOf[u_]
   
   @scala.inline
-  def v: v = "v".asInstanceOf[v]
+  def v_ : v_ = "v".asInstanceOf[v_]
   
   @scala.inline
   def z_ : z_ = "z".asInstanceOf[z_]
   
   @js.native
-  sealed trait `0` extends code
+  sealed trait `0`
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait `1` extends code
+  sealed trait `7`
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait `7` extends code
+  sealed trait `9`
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait `9` extends code
+  sealed trait B
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait M extends code
+  sealed trait C
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait U extends code
+  sealed trait F
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait Z extends code
+  sealed trait K
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait b extends code
+  sealed trait M
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base1 extends name
+  sealed trait Null
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base10 extends name
+  sealed trait T
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base16 extends name
+  sealed trait U
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base2 extends name
+  sealed trait V
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base32 extends name
+  sealed trait Z
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base32hex extends name
+  sealed trait b_
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base32hexpad extends name
+  sealed trait base10
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base32pad extends name
+  sealed trait base16
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base32z extends name
+  sealed trait base16upper
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base58btc extends name
+  sealed trait base2
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base58flickr extends name
+  sealed trait base32
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base64 extends name
+  sealed trait base32hex
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base64pad extends name
+  sealed trait base32hexpad
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base64url extends name
+  sealed trait base32hexpadupper
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base64urlpad extends name
+  sealed trait base32hexupper
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait base8 extends name
+  sealed trait base32pad
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait c extends code
+  sealed trait base32padupper
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait f extends code
+  sealed trait base32upper
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait h extends code
+  sealed trait base32z
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait m_ extends code
+  sealed trait base36
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait t extends code
+  sealed trait base36upper
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait u_ extends code
+  sealed trait base58btc
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait v extends code
+  sealed trait base58flickr
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
   
   @js.native
-  sealed trait z_ extends code
+  sealed trait base64
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait base64pad
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait base64url
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait base64urlpad
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait base8
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait c_
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait f_
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait h
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait identity
+    extends BaseName
+       with typingsSlinky.multibase.typesMod.BaseName
+       with typingsSlinky.multibase.constantsMod.BaseName
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait k_
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait m_
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait t_
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait u_
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait v_
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
+  
+  @js.native
+  sealed trait z_
+    extends BaseCode
+       with typingsSlinky.multibase.baseMod.BaseCode
+       with typingsSlinky.multibase.typesMod.BaseCode
+       with typingsSlinky.multibase.constantsMod.BaseCode
+       with BaseNameOrCode
+       with typingsSlinky.multibase.typesMod.BaseNameOrCode
 }

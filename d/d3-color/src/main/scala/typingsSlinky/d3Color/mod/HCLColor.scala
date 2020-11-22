@@ -1,5 +1,6 @@
 package typingsSlinky.d3Color.mod
 
+import typingsSlinky.d3Color.anon.C
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -22,6 +23,14 @@ trait HCLColor
     * Chroma channel value typically in [0, 230].
     */
   var c: Double = js.native
+  
+  /**
+    * Returns a copy of this color.
+    *
+    * @param values If values is specified, any enumerable own properties of values are assigned to the new returned color.
+    */
+  def copy(): this.type = js.native
+  def copy(values: C): this.type = js.native
   
   /**
     * Returns a darker copy of this color. If k is specified, it controls how much darker the returned color should be.

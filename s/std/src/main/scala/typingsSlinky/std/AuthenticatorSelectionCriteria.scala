@@ -11,6 +11,8 @@ trait AuthenticatorSelectionCriteria extends js.Object {
   
   var requireResidentKey: js.UndefOr[scala.Boolean] = js.native
   
+  var residentKey: js.UndefOr[ResidentKeyRequirement] = js.native
+  
   var userVerification: js.UndefOr[UserVerificationRequirement] = js.native
 }
 object AuthenticatorSelectionCriteria {
@@ -47,6 +49,12 @@ object AuthenticatorSelectionCriteria {
     
     @scala.inline
     def deleteRequireResidentKey: Self = this.set("requireResidentKey", js.undefined)
+    
+    @scala.inline
+    def setResidentKey(value: ResidentKeyRequirement): Self = this.set("residentKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResidentKey: Self = this.set("residentKey", js.undefined)
     
     @scala.inline
     def setUserVerification(value: UserVerificationRequirement): Self = this.set("userVerification", value.asInstanceOf[js.Any])

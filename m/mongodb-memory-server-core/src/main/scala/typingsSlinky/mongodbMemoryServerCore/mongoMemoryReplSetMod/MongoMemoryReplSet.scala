@@ -20,13 +20,26 @@ trait MongoMemoryReplSet extends EventEmitter {
     */
   def _initReplSet(): js.Promise[Unit] = js.native
   
+  /**
+    * Create the one Instance (without starting them)
+    * @param instanceOpts Instance Options to use for this instance
+    */
   def _initServer(instanceOpts: MongoMemoryInstancePropT): typingsSlinky.mongodbMemoryServerCore.mongoMemoryServerMod.default = js.native
   
   var _state: init | running | stopped = js.native
   
+  /**
+    * Wait until the replSet has elected an Primary
+    * @param timeout Timeout to not run infinitly
+    */
   def _waitForPrimary(): js.Promise[Unit] = js.native
   def _waitForPrimary(timeout: Double): js.Promise[Unit] = js.native
   
+  /**
+    * Get the Connection String for mongodb to connect
+    * @param otherDb use a different database than what was set on creation?
+    * @deprecated
+    */
   def getConnectionString(): js.Promise[String] = js.native
   def getConnectionString(otherDb: String): js.Promise[String] = js.native
   def getConnectionString(otherDb: Boolean): js.Promise[String] = js.native
@@ -38,13 +51,14 @@ trait MongoMemoryReplSet extends EventEmitter {
   
   /**
     * Returns instance options suitable for a MongoMemoryServer.
-    * @param {MongoMemoryInstancePropBaseT} baseOpts
+    * @param baseOpts Options to merge with
     */
   def getInstanceOpts(): MongoMemoryInstancePropT = js.native
   def getInstanceOpts(baseOpts: MongoMemoryInstancePropBaseT): MongoMemoryInstancePropT = js.native
   
   /**
     * Returns a mongodb: URI to connect to a given database.
+    * @param otherDb use a different database than what was set on creation?
     */
   def getUri(): js.Promise[String] = js.native
   def getUri(otherDb: String): js.Promise[String] = js.native
@@ -64,5 +78,8 @@ trait MongoMemoryReplSet extends EventEmitter {
     */
   def stop(): js.Promise[Boolean] = js.native
   
+  /**
+    * Wait until all instances are running
+    */
   def waitUntilRunning(): js.Promise[Unit] = js.native
 }

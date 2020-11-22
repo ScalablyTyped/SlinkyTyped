@@ -3,6 +3,8 @@ package typingsSlinky.devtoolsProtocol.protocolProxyApiMod.ProtocolProxyApi
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Accessibility.GetFullAXTreeResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Accessibility.GetPartialAXTreeRequest
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Accessibility.GetPartialAXTreeResponse
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Accessibility.QueryAXTreeRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Accessibility.QueryAXTreeResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -30,6 +32,15 @@ trait AccessibilityApi extends js.Object {
     * Fetches the accessibility node and partial accessibility tree for this DOM node, if it exists.
     */
   def getPartialAXTree(params: GetPartialAXTreeRequest): js.Promise[GetPartialAXTreeResponse] = js.native
+  
+  /**
+    * Query a DOM node's accessibility subtree for accessible name and role.
+    * This command computes the name and role for all nodes in the subtree, including those that are
+    * ignored for accessibility, and returns those that mactch the specified name and role. If no DOM
+    * node is specified, or the DOM node does not exist, the command returns an error. If neither
+    * `accessibleName` or `role` is specified, it returns all the accessibility nodes in the subtree.
+    */
+  def queryAXTree(params: QueryAXTreeRequest): js.Promise[QueryAXTreeResponse] = js.native
 }
 object AccessibilityApi {
   
@@ -38,9 +49,10 @@ object AccessibilityApi {
     disable: () => js.Promise[Unit],
     enable: () => js.Promise[Unit],
     getFullAXTree: () => js.Promise[GetFullAXTreeResponse],
-    getPartialAXTree: GetPartialAXTreeRequest => js.Promise[GetPartialAXTreeResponse]
+    getPartialAXTree: GetPartialAXTreeRequest => js.Promise[GetPartialAXTreeResponse],
+    queryAXTree: QueryAXTreeRequest => js.Promise[QueryAXTreeResponse]
   ): AccessibilityApi = {
-    val __obj = js.Dynamic.literal(disable = js.Any.fromFunction0(disable), enable = js.Any.fromFunction0(enable), getFullAXTree = js.Any.fromFunction0(getFullAXTree), getPartialAXTree = js.Any.fromFunction1(getPartialAXTree))
+    val __obj = js.Dynamic.literal(disable = js.Any.fromFunction0(disable), enable = js.Any.fromFunction0(enable), getFullAXTree = js.Any.fromFunction0(getFullAXTree), getPartialAXTree = js.Any.fromFunction1(getPartialAXTree), queryAXTree = js.Any.fromFunction1(queryAXTree))
     __obj.asInstanceOf[AccessibilityApi]
   }
   
@@ -70,5 +82,8 @@ object AccessibilityApi {
     
     @scala.inline
     def setGetPartialAXTree(value: GetPartialAXTreeRequest => js.Promise[GetPartialAXTreeResponse]): Self = this.set("getPartialAXTree", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setQueryAXTree(value: QueryAXTreeRequest => js.Promise[QueryAXTreeResponse]): Self = this.set("queryAXTree", js.Any.fromFunction1(value))
   }
 }

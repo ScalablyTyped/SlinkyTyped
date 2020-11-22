@@ -27,6 +27,8 @@ trait Holes extends js.Object {
   var sideOrientation: js.UndefOr[Double] = js.native
   
   var updatable: js.UndefOr[Boolean] = js.native
+  
+  var wrap: js.UndefOr[Boolean] = js.native
 }
 object Holes {
   
@@ -113,5 +115,11 @@ object Holes {
     
     @scala.inline
     def deleteUpdatable: Self = this.set("updatable", js.undefined)
+    
+    @scala.inline
+    def setWrap(value: Boolean): Self = this.set("wrap", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWrap: Self = this.set("wrap", js.undefined)
   }
 }

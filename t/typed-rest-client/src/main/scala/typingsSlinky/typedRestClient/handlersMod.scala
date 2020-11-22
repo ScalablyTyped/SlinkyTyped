@@ -12,12 +12,14 @@ object handlersMod extends js.Object {
   class BasicCredentialHandler protected ()
     extends typingsSlinky.typedRestClient.mod.BasicCredentialHandler {
     def this(username: String, password: String) = this()
+    def this(username: String, password: String, allowCrossOriginAuthentication: Boolean) = this()
   }
   
   @js.native
   class BearerCredentialHandler protected ()
     extends typingsSlinky.typedRestClient.bearertokenMod.BearerCredentialHandler {
     def this(token: String) = this()
+    def this(token: String, allowCrossOriginAuthentication: Boolean) = this()
   }
   
   @js.native
@@ -33,5 +35,6 @@ object handlersMod extends js.Object {
   class PersonalAccessTokenCredentialHandler protected ()
     extends typingsSlinky.typedRestClient.personalaccesstokenMod.PersonalAccessTokenCredentialHandler {
     def this(token: String) = this()
+    def this(token: String, allowCrossOriginAuthentication: Boolean) = this()
   }
 }

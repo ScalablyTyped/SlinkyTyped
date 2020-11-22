@@ -18,13 +18,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CallExpressionDecorator extends js.Object {
   
-  var decorators: js.UndefOr[NodeArray[Decorator]] = js.native
+  val decorators: js.UndefOr[NodeArray[Decorator]] = js.native
   
-  var end: Double = js.native
+  val end: Double = js.native
   
-  var expression: LeftHandSideExpression with CallExpression = js.native
+  val expression: LeftHandSideExpression with CallExpression = js.native
   
-  var flags: NodeFlags = js.native
+  val flags: NodeFlags = js.native
   
   def forEachChild[T](cbNode: js.Function1[/* node */ this.type, js.UndefOr[T]]): js.UndefOr[T] = js.native
   def forEachChild[T](
@@ -72,11 +72,11 @@ trait CallExpressionDecorator extends js.Object {
   def getWidth(): Double = js.native
   def getWidth(sourceFile: SourceFileLike): Double = js.native
   
-  var kind: typingsSlinky.typescript.mod.SyntaxKind.Decorator = js.native
+  val kind: typingsSlinky.typescript.mod.SyntaxKind.Decorator = js.native
   
-  var modifiers: js.UndefOr[ModifiersArray] = js.native
+  val modifiers: js.UndefOr[ModifiersArray] = js.native
   
-  var parent: NamedDeclaration = js.native
+  val parent: NamedDeclaration = js.native
   
-  var pos: Double = js.native
+  val pos: Double = js.native
 }

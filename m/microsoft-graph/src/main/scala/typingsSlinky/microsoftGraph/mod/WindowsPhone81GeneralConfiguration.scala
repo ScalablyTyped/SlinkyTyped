@@ -29,7 +29,7 @@ trait WindowsPhone81GeneralConfiguration extends DeviceConfiguration {
     * List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection
     * can contain a maximum of 10000 elements.
     */
-  var compliantAppsList: js.UndefOr[js.Array[AppListItem]] = js.native
+  var compliantAppsList: js.UndefOr[NullableOption[js.Array[AppListItem]]] = js.native
   
   // Indicates whether or not to block diagnostic data submission.
   var diagnosticDataBlockSubmission: js.UndefOr[Boolean] = js.native
@@ -50,19 +50,19 @@ trait WindowsPhone81GeneralConfiguration extends DeviceConfiguration {
   var passwordBlockSimple: js.UndefOr[Boolean] = js.native
   
   // Number of days before the password expires.
-  var passwordExpirationDays: js.UndefOr[Double] = js.native
+  var passwordExpirationDays: js.UndefOr[NullableOption[Double]] = js.native
   
   // Number of character sets a password must contain.
-  var passwordMinimumCharacterSetCount: js.UndefOr[Double] = js.native
+  var passwordMinimumCharacterSetCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minimum length of passwords.
-  var passwordMinimumLength: js.UndefOr[Double] = js.native
+  var passwordMinimumLength: js.UndefOr[NullableOption[Double]] = js.native
   
   // Minutes of inactivity before screen timeout.
-  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[Double] = js.native
+  var passwordMinutesOfInactivityBeforeScreenTimeout: js.UndefOr[NullableOption[Double]] = js.native
   
   // Number of previous passwords to block. Valid values 0 to 24
-  var passwordPreviousPasswordBlockCount: js.UndefOr[Double] = js.native
+  var passwordPreviousPasswordBlockCount: js.UndefOr[NullableOption[Double]] = js.native
   
   // Indicates whether or not to require a password.
   var passwordRequired: js.UndefOr[Boolean] = js.native
@@ -71,7 +71,7 @@ trait WindowsPhone81GeneralConfiguration extends DeviceConfiguration {
   var passwordRequiredType: js.UndefOr[RequiredPasswordType] = js.native
   
   // Number of sign in failures allowed before factory reset.
-  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[Double] = js.native
+  var passwordSignInFailureCountBeforeFactoryReset: js.UndefOr[NullableOption[Double]] = js.native
   
   // Indicates whether or not to block screenshots.
   var screenCaptureBlocked: js.UndefOr[Boolean] = js.native
@@ -160,10 +160,13 @@ object WindowsPhone81GeneralConfiguration {
     def setCompliantAppsListVarargs(value: AppListItem*): Self = this.set("compliantAppsList", js.Array(value :_*))
     
     @scala.inline
-    def setCompliantAppsList(value: js.Array[AppListItem]): Self = this.set("compliantAppsList", value.asInstanceOf[js.Any])
+    def setCompliantAppsList(value: NullableOption[js.Array[AppListItem]]): Self = this.set("compliantAppsList", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCompliantAppsList: Self = this.set("compliantAppsList", js.undefined)
+    
+    @scala.inline
+    def setCompliantAppsListNull: Self = this.set("compliantAppsList", null)
     
     @scala.inline
     def setDiagnosticDataBlockSubmission(value: Boolean): Self = this.set("diagnosticDataBlockSubmission", value.asInstanceOf[js.Any])
@@ -202,34 +205,49 @@ object WindowsPhone81GeneralConfiguration {
     def deletePasswordBlockSimple: Self = this.set("passwordBlockSimple", js.undefined)
     
     @scala.inline
-    def setPasswordExpirationDays(value: Double): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDays(value: NullableOption[Double]): Self = this.set("passwordExpirationDays", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordExpirationDays: Self = this.set("passwordExpirationDays", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumCharacterSetCount(value: Double): Self = this.set("passwordMinimumCharacterSetCount", value.asInstanceOf[js.Any])
+    def setPasswordExpirationDaysNull: Self = this.set("passwordExpirationDays", null)
+    
+    @scala.inline
+    def setPasswordMinimumCharacterSetCount(value: NullableOption[Double]): Self = this.set("passwordMinimumCharacterSetCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumCharacterSetCount: Self = this.set("passwordMinimumCharacterSetCount", js.undefined)
     
     @scala.inline
-    def setPasswordMinimumLength(value: Double): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
+    def setPasswordMinimumCharacterSetCountNull: Self = this.set("passwordMinimumCharacterSetCount", null)
+    
+    @scala.inline
+    def setPasswordMinimumLength(value: NullableOption[Double]): Self = this.set("passwordMinimumLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinimumLength: Self = this.set("passwordMinimumLength", js.undefined)
     
     @scala.inline
-    def setPasswordMinutesOfInactivityBeforeScreenTimeout(value: Double): Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
+    def setPasswordMinimumLengthNull: Self = this.set("passwordMinimumLength", null)
+    
+    @scala.inline
+    def setPasswordMinutesOfInactivityBeforeScreenTimeout(value: NullableOption[Double]): Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordMinutesOfInactivityBeforeScreenTimeout: Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", js.undefined)
     
     @scala.inline
-    def setPasswordPreviousPasswordBlockCount(value: Double): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
+    def setPasswordMinutesOfInactivityBeforeScreenTimeoutNull: Self = this.set("passwordMinutesOfInactivityBeforeScreenTimeout", null)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCount(value: NullableOption[Double]): Self = this.set("passwordPreviousPasswordBlockCount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordPreviousPasswordBlockCount: Self = this.set("passwordPreviousPasswordBlockCount", js.undefined)
+    
+    @scala.inline
+    def setPasswordPreviousPasswordBlockCountNull: Self = this.set("passwordPreviousPasswordBlockCount", null)
     
     @scala.inline
     def setPasswordRequired(value: Boolean): Self = this.set("passwordRequired", value.asInstanceOf[js.Any])
@@ -244,10 +262,13 @@ object WindowsPhone81GeneralConfiguration {
     def deletePasswordRequiredType: Self = this.set("passwordRequiredType", js.undefined)
     
     @scala.inline
-    def setPasswordSignInFailureCountBeforeFactoryReset(value: Double): Self = this.set("passwordSignInFailureCountBeforeFactoryReset", value.asInstanceOf[js.Any])
+    def setPasswordSignInFailureCountBeforeFactoryReset(value: NullableOption[Double]): Self = this.set("passwordSignInFailureCountBeforeFactoryReset", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordSignInFailureCountBeforeFactoryReset: Self = this.set("passwordSignInFailureCountBeforeFactoryReset", js.undefined)
+    
+    @scala.inline
+    def setPasswordSignInFailureCountBeforeFactoryResetNull: Self = this.set("passwordSignInFailureCountBeforeFactoryReset", null)
     
     @scala.inline
     def setScreenCaptureBlocked(value: Boolean): Self = this.set("screenCaptureBlocked", value.asInstanceOf[js.Any])

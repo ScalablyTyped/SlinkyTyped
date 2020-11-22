@@ -27,6 +27,9 @@ object rayMod extends js.Object {
     
     def copy(ray: Ray): this.type = js.native
     
+    /**
+    	 * @default new THREE.Vector3( 0, 0, - 1 )
+    	 */
     var direction: Vector3 = js.native
     
     def distanceSqToPoint(point: Vector3): Double = js.native
@@ -78,6 +81,9 @@ object rayMod extends js.Object {
     
     def lookAt(v: Vector3): Ray = js.native
     
+    /**
+    	 * @default new THREE.Vector3()
+    	 */
     var origin: Vector3 = js.native
     
     def recast(t: Double): Ray = js.native

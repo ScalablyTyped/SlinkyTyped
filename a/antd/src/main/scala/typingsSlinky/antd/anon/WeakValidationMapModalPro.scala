@@ -53,6 +53,10 @@ trait WeakValidationMapModalPro extends js.Object {
   
   var maskTransitionName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.native
   
+  var modalRender: js.UndefOr[
+    Validator[js.UndefOr[(js.Function1[/* node */ ReactElement, ReactElement]) | Null]]
+  ] = js.native
+  
   var okButtonProps: js.UndefOr[Validator[js.UndefOr[ButtonProps | Null]]] = js.native
   
   var okText: js.UndefOr[Validator[js.UndefOr[Null | ReactElement]]] = js.native
@@ -219,6 +223,12 @@ object WeakValidationMapModalPro {
     
     @scala.inline
     def deleteMaskTransitionName: Self = this.set("maskTransitionName", js.undefined)
+    
+    @scala.inline
+    def setModalRender(value: Validator[js.UndefOr[(js.Function1[/* node */ ReactElement, ReactElement]) | Null]]): Self = this.set("modalRender", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModalRender: Self = this.set("modalRender", js.undefined)
     
     @scala.inline
     def setOkButtonProps(value: Validator[js.UndefOr[ButtonProps | Null]]): Self = this.set("okButtonProps", value.asInstanceOf[js.Any])

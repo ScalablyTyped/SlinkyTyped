@@ -11,22 +11,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartCommonAxisSettingsConstantLineStyle extends js.Object {
   
-  /** @name dxChart.Options.commonAxisSettings.constantLineStyle.color */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.constantLineStyle.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.constantLineStyle.dashStyle */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.constantLineStyle.dashStyle]
+    */
   var dashStyle: js.UndefOr[dash | dot | longDash | solid] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.constantLineStyle.label */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.constantLineStyle.label]
+    */
   var label: js.UndefOr[dxChartCommonAxisSettingsConstantLineStyleLabel] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.constantLineStyle.paddingLeftRight */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.constantLineStyle.paddingLeftRight]
+    */
   var paddingLeftRight: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.constantLineStyle.paddingTopBottom */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.constantLineStyle.paddingTopBottom]
+    */
   var paddingTopBottom: js.UndefOr[Double] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.constantLineStyle.width */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.constantLineStyle.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object dxChartCommonAxisSettingsConstantLineStyle {

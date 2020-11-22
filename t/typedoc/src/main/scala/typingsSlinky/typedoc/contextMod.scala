@@ -48,7 +48,7 @@ object contextMod extends js.Object {
     def getTypeAtLocation(node: Node): js.UndefOr[Type] = js.native
     
     def inherit(baseNode: Node): Reflection = js.native
-    def inherit(baseNode: Node, typeArguments: NodeArray[TypeNode]): Reflection = js.native
+    def inherit(baseNode: Node, typeArguments: js.Array[TypeNode]): Reflection = js.native
     
     var inheritParent: js.UndefOr[Node] = js.native
     

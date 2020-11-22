@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/credential-provider-imds/build/fromInstanceMetadata", JSImport.Namespace)
+@JSImport("@aws-sdk/credential-provider-imds/dist/cjs/fromInstanceMetadata", JSImport.Namespace)
 @js.native
 object fromInstanceMetadataMod extends js.Object {
   

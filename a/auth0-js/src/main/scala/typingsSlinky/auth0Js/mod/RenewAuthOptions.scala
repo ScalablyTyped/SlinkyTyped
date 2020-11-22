@@ -57,7 +57,7 @@ trait RenewAuthOptions extends js.Object {
   /**
     * type of the response used by OAuth 2.0 flow. It can be any space separated
     * list of the values `code`, `token`, `id_token`.
-    * {@link https://openid.net/specs/oauth-v2-multiple-response-types-1_0}
+    * {@link https://openid.net/specs/oauth-v2-multiple-response-types-1_0.html}
     */
   var responseType: js.UndefOr[String] = js.native
   
@@ -79,7 +79,7 @@ trait RenewAuthOptions extends js.Object {
   var timeout: js.UndefOr[Double] = js.native
   
   /**
-    * use postMessage to comunicate between the silent callback and the SPA.
+    * use postMessage to communicate between the silent callback and the SPA.
     * When false the SDK will attempt to parse the url hash should ignore the url hash
     * and no extra behaviour is needed
     * @default false

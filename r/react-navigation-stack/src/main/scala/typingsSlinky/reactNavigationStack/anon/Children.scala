@@ -1,5 +1,6 @@
 package typingsSlinky.reactNavigationStack.anon
 
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,15 +8,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Children extends js.Object {
   
-  var children: js.UndefOr[String] = js.native
-  
-  var tintColor: js.UndefOr[String] = js.native
+  var children: ReactElement = js.native
 }
 object Children {
   
   @scala.inline
-  def apply(): Children = {
-    val __obj = js.Dynamic.literal()
+  def apply(children: ReactElement): Children = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
     __obj.asInstanceOf[Children]
   }
   
@@ -35,15 +34,6 @@ object Children {
     }
     
     @scala.inline
-    def setChildren(value: String): Self = this.set("children", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteChildren: Self = this.set("children", js.undefined)
-    
-    @scala.inline
-    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteTintColor: Self = this.set("tintColor", js.undefined)
+    def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
   }
 }

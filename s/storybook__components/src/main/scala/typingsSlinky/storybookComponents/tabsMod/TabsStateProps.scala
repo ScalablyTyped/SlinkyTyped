@@ -14,7 +14,7 @@ trait TabsStateProps extends js.Object {
   
   var bordered: Boolean = js.native
   
-  var children: js.Array[ReactElement | FuncChilden] = js.native
+  var children: js.Array[ReactElement | FuncChildren] = js.native
   
   var initial: String = js.native
 }
@@ -25,7 +25,7 @@ object TabsStateProps {
     absolute: Boolean,
     backgroundColor: String,
     bordered: Boolean,
-    children: js.Array[ReactElement | FuncChilden],
+    children: js.Array[ReactElement | FuncChildren],
     initial: String
   ): TabsStateProps = {
     val __obj = js.Dynamic.literal(absolute = absolute.asInstanceOf[js.Any], backgroundColor = backgroundColor.asInstanceOf[js.Any], bordered = bordered.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], initial = initial.asInstanceOf[js.Any])
@@ -57,10 +57,10 @@ object TabsStateProps {
     def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenVarargs(value: (ReactElement | FuncChilden)*): Self = this.set("children", js.Array(value :_*))
+    def setChildrenVarargs(value: (ReactElement | FuncChildren)*): Self = this.set("children", js.Array(value :_*))
     
     @scala.inline
-    def setChildren(value: js.Array[ReactElement | FuncChilden]): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: js.Array[ReactElement | FuncChildren]): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setInitial(value: String): Self = this.set("initial", value.asInstanceOf[js.Any])

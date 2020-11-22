@@ -301,9 +301,19 @@ trait WebTwainAcquire extends WebTwainEdit {
   def CloseSource(): Boolean = js.native
   
   /**
+    * Close the data source (a TWAIN/ICA/SANE device which in most cases is a scanner) to free it to be used by other applications.
+    */
+  def CloseSourceAsync(): js.Promise[Boolean] = js.native
+  
+  /**
     * Closes and unloads Data Source Manager.
     */
   def CloseSourceManager(): Boolean = js.native
+  
+  /**
+    * Closes and unloads Data Source Manager.
+    */
+  def CloseSourceManagerAsync(): js.Promise[Boolean] = js.native
   
   /**
     * Closes the scanning process to release resources on the machine.
@@ -400,12 +410,14 @@ trait WebTwainAcquire extends WebTwainEdit {
     */
   def GetSourceNameItems(index: Double): String = js.native
   
+  def GetSourceNames(): js.Array[SourceDetails | String] = js.native
+  def GetSourceNames(bIncludeDetails: Boolean): js.Array[SourceDetails | String] = js.native
+  
   /**
     * Return all available data sources (scanners, etc.) and optionally all detailed information about them.
     * @param bIncludeDetails Whether to return more details about the data sources or just their names.
     */
-  def GetSourceNames(): js.Array[SourceDetails | String] = js.native
-  def GetSourceNames(bIncludeDetails: Boolean): js.Array[SourceDetails | String] = js.native
+  def GetSourceNamesAsync(bIncludeDetails: Boolean): js.Promise[js.Array[SourceDetails | String]] = js.native
   
   /**
     * Return or set whether to enable the data source's auto-brightness feature.
@@ -563,9 +575,23 @@ trait WebTwainAcquire extends WebTwainEdit {
   def OpenSource(): Boolean = js.native
   
   /**
+    * Return all available data sources (scanners, etc.) and optionally all detailed information about them.
+    * @param bIncludeDetails Whether to return more details about the data sources or just their names.
+    */
+  /**
+    * Load a data source to get it ready to acquire images.
+    */
+  def OpenSourceAsync(): js.Promise[Boolean] = js.native
+  
+  /**
     * Load and open data source manager.
     */
   def OpenSourceManager(): Boolean = js.native
+  
+  /**
+    * Load and open data source manager.
+    */
+  def OpenSourceManagerAsync(): js.Promise[Boolean] = js.native
   
   /**
     * Return or set the page size the data source uses to acquire images.
@@ -621,10 +647,34 @@ trait WebTwainAcquire extends WebTwainEdit {
   ): Boolean | Unit = js.native
   
   /**
+    * Bring up the Source Selection User Interface (UI) for the user to choose a data source.
+    * @param successCallback A callback function that is executed if the request succeeds.
+    * @param failureCallback A callback function that is executed if the request fails.
+    * @argument errorCode The error code.
+    * @argument errorString The error string.
+    */
+  def SelectSourceAsync(): js.Promise[Boolean] = js.native
+  def SelectSourceAsync(
+    successCallBack: js.UndefOr[scala.Nothing],
+    failureCallBack: js.Function2[/* errorCode */ Double, /* errorString */ String, Unit]
+  ): js.Promise[Boolean] = js.native
+  def SelectSourceAsync(successCallBack: js.Function0[Unit]): js.Promise[Boolean] = js.native
+  def SelectSourceAsync(
+    successCallBack: js.Function0[Unit],
+    failureCallBack: js.Function2[/* errorCode */ Double, /* errorString */ String, Unit]
+  ): js.Promise[Boolean] = js.native
+  
+  /**
     * Select a data source by its index.
     * @param index The index of the data source.
     */
   def SelectSourceByIndex(index: Double): Boolean = js.native
+  
+  /**
+    * Select a data source by its index.
+    * @param index The index of the data source.
+    */
+  def SelectSourceByIndexAsync(index: Double): js.Promise[Boolean] = js.native
   
   /**
     * [Deprecation] Set the value of the specified cap item.

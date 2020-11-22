@@ -1,7 +1,7 @@
 
 # Scala.js typings for emoji-regex
 
-Typings are for version 7.0.3
+Typings are for version 8.0.0
 
 ## Library description:
 A regular expression to match all Emoji-only symbols as per the Unicode Standard.

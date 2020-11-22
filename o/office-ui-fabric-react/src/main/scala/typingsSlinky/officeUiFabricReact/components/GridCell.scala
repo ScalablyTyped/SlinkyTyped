@@ -2,7 +2,7 @@ package typingsSlinky.officeUiFabricReact.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.officeUiFabricReact.gridCellTypesMod.IGridCellProps
+import typingsSlinky.officeUiFabricReact.buttonGridCellTypesMod.IButtonGridCellProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -15,11 +15,11 @@ object GridCell {
   object component extends js.Object
   
   @scala.inline
-  class Builder[T, P /* <: IGridCellProps[T] */] (val args: js.Array[js.Any])
+  class Builder[T, P /* <: IButtonGridCellProps[js.Any] */] (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.officeUiFabricReact.mod.GridCell[T, P]]
   
-  def apply[T, P /* <: IGridCellProps[T] */](p: P): Builder[T, P] = new Builder[T, P](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def apply[T, P /* <: IButtonGridCellProps[js.Any] */](p: P): Builder[T, P] = new Builder[T, P](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make[T, P /* <: IGridCellProps[T] */](companion: GridCell.type): Builder[T, P] = new Builder[T, P](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[T, P /* <: IButtonGridCellProps[js.Any] */](companion: GridCell.type): Builder[T, P] = new Builder[T, P](js.Array(this.component, js.Dictionary.empty))()
 }

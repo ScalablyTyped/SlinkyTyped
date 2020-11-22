@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.NullLiteral
+import typingsSlinky.babelTraverse.babelTraverseStrings.ImportDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `236` extends js.Object {
   
-  var `type`: NullLiteral = js.native
+  var `type`: ImportDeclaration = js.native
 }
 object `236` {
   
   @scala.inline
-  def apply(`type`: NullLiteral): `236` = {
+  def apply(`type`: ImportDeclaration): `236` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`236`]
@@ -35,6 +35,6 @@ object `236` {
     }
     
     @scala.inline
-    def setType(value: NullLiteral): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ImportDeclaration): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -2,7 +2,7 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import typingsSlinky.devextreme.devextremeStrings.back
 import typingsSlinky.devextreme.devextremeStrings.danger
-import typingsSlinky.devextreme.devextremeStrings.default_
+import typingsSlinky.devextreme.devextremeStrings.default
 import typingsSlinky.devextreme.devextremeStrings.normal
 import typingsSlinky.devextreme.devextremeStrings.success
 import scala.scalajs.js
@@ -12,14 +12,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxButtonGroupItem extends CollectionWidgetItem {
   
-  /** @name dxButtonGroupItem.hint */
+  /**
+    * [descr:dxButtonGroupItem.hint]
+    */
   var hint: js.UndefOr[String] = js.native
   
-  /** @name dxButtonGroupItem.icon */
+  /**
+    * [descr:dxButtonGroupItem.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxButtonGroupItem.type */
-  var `type`: js.UndefOr[back | danger | default_ | normal | success] = js.native
+  /**
+    * [descr:dxButtonGroupItem.type]
+    */
+  var `type`: js.UndefOr[back | danger | default | normal | success] = js.native
 }
 object dxButtonGroupItem {
   
@@ -57,7 +63,7 @@ object dxButtonGroupItem {
     def deleteIcon: Self = this.set("icon", js.undefined)
     
     @scala.inline
-    def setType(value: back | danger | default_ | normal | success): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: back | danger | default | normal | success): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)

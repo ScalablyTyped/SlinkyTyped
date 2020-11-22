@@ -1,5 +1,6 @@
 package typingsSlinky.nukaCarousel.components
 
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
@@ -113,10 +114,13 @@ object NukaCarousel {
     def keyCodeConfig(value: slideActioninCarouselSlid): this.type = set("keyCodeConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onDragStart(value: () => Unit): this.type = set("onDragStart", js.Any.fromFunction0(value))
+    def onDragStart(value: /* e */ js.UndefOr[Event] => Unit): this.type = set("onDragStart", js.Any.fromFunction1(value))
     
     @scala.inline
     def onResize(value: () => Unit): this.type = set("onResize", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def opacityScale(value: Double): this.type = set("opacityScale", value.asInstanceOf[js.Any])
     
     @scala.inline
     def pauseOnHover(value: Boolean): this.type = set("pauseOnHover", value.asInstanceOf[js.Any])
@@ -185,6 +189,9 @@ object NukaCarousel {
     def slideIndex(value: Double): this.type = set("slideIndex", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def slideOffset(value: Double): this.type = set("slideOffset", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def slideWidth(value: CarouselSlideWidthProp): this.type = set("slideWidth", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -216,6 +223,9 @@ object NukaCarousel {
     
     @scala.inline
     def wrapAround(value: Boolean): this.type = set("wrapAround", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def zoomScale(value: Double): this.type = set("zoomScale", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: CarouselProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

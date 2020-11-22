@@ -3,6 +3,9 @@ package typingsSlinky.baseui.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.baseui.baseuiStrings.large_
+import typingsSlinky.baseui.baseuiStrings.medium_
+import typingsSlinky.baseui.baseuiStrings.small_
 import typingsSlinky.baseui.progressBarMod.ProgressBarOverrides
 import typingsSlinky.baseui.progressBarMod.ProgressBarProps
 import scala.scalajs.js
@@ -31,6 +34,12 @@ object ProgressBar {
     
     @scala.inline
     def showLabel(value: Boolean): this.type = set("showLabel", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def size(value: small_ | medium_ | large_): this.type = set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def steps(value: Double): this.type = set("steps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def successValue(value: Double): this.type = set("successValue", value.asInstanceOf[js.Any])

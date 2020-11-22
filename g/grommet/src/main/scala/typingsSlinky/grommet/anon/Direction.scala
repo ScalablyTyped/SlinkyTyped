@@ -11,6 +11,8 @@ trait Direction extends js.Object {
   
   var direction: asc | desc = js.native
   
+  var external: js.UndefOr[Boolean] = js.native
+  
   var property: String = js.native
 }
 object Direction {
@@ -41,5 +43,11 @@ object Direction {
     
     @scala.inline
     def setProperty(value: String): Self = this.set("property", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setExternal(value: Boolean): Self = this.set("external", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteExternal: Self = this.set("external", js.undefined)
   }
 }

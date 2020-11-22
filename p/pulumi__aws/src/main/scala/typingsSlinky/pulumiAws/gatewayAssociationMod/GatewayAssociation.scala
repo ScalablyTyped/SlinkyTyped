@@ -64,14 +64,6 @@ class GatewayAssociation protected () extends CustomResource {
     * Used for cross-account Direct Connect gateway associations.
     */
   val proposalId: Output_[js.UndefOr[String]] = js.native
-  
-  /**
-    * *Deprecated:* Use `associatedGatewayId` instead. The ID of the VGW with which to associate the gateway.
-    * Used for single account Direct Connect gateway associations.
-    *
-    * @deprecated use 'associated_gateway_id' argument instead
-    */
-  val vpnGatewayId: Output_[js.UndefOr[String]] = js.native
 }
 /* static members */
 @JSImport("@pulumi/aws/directconnect/gatewayAssociation", "GatewayAssociation")

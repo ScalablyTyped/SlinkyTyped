@@ -48,6 +48,11 @@ trait ComputeEnvironmentDetail extends js.Object {
   var statusReason: js.UndefOr[String] = js.native
   
   /**
+    * The tags applied to the compute environment.
+    */
+  var tags: js.UndefOr[TagrisTagsMap] = js.native
+  
+  /**
     * The type of the compute environment.
     */
   var `type`: js.UndefOr[CEType] = js.native
@@ -113,6 +118,12 @@ object ComputeEnvironmentDetail {
     
     @scala.inline
     def deleteStatusReason: Self = this.set("statusReason", js.undefined)
+    
+    @scala.inline
+    def setTags(value: TagrisTagsMap): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
     
     @scala.inline
     def setType(value: CEType): Self = this.set("type", value.asInstanceOf[js.Any])

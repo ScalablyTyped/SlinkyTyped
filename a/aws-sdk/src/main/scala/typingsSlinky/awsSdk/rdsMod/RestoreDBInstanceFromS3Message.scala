@@ -73,7 +73,7 @@ trait RestoreDBInstanceFromS3Message extends js.Object {
   var EnableCloudwatchLogsExports: js.UndefOr[LogTypeList] = js.native
   
   /**
-    * A value that indicates whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts. By default, mapping is disabled. For information about the supported DB engines, see CreateDBInstance. For more information about IAM database authentication, see  IAM Database Authentication for MySQL and PostgreSQL in the Amazon RDS User Guide. 
+    * A value that indicates whether to enable mapping of AWS Identity and Access Management (IAM) accounts to database accounts. By default, mapping is disabled. For more information about IAM database authentication, see  IAM Database Authentication for MySQL and PostgreSQL in the Amazon RDS User Guide. 
     */
   var EnableIAMDatabaseAuthentication: js.UndefOr[BooleanOptional] = js.native
   
@@ -116,6 +116,11 @@ trait RestoreDBInstanceFromS3Message extends js.Object {
     * The name for the master user.  Constraints:    Must be 1 to 16 letters or numbers.   First character must be a letter.   Can't be a reserved word for the chosen database engine.  
     */
   var MasterUsername: js.UndefOr[String] = js.native
+  
+  /**
+    * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+    */
+  var MaxAllocatedStorage: js.UndefOr[IntegerOptional] = js.native
   
   /**
     * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0.  If MonitoringRoleArn is specified, then you must also set MonitoringInterval to a value other than 0.  Valid Values: 0, 1, 5, 10, 15, 30, 60  Default: 0 
@@ -393,6 +398,12 @@ object RestoreDBInstanceFromS3Message {
     
     @scala.inline
     def deleteMasterUsername: Self = this.set("MasterUsername", js.undefined)
+    
+    @scala.inline
+    def setMaxAllocatedStorage(value: IntegerOptional): Self = this.set("MaxAllocatedStorage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxAllocatedStorage: Self = this.set("MaxAllocatedStorage", js.undefined)
     
     @scala.inline
     def setMonitoringInterval(value: IntegerOptional): Self = this.set("MonitoringInterval", value.asInstanceOf[js.Any])

@@ -4,6 +4,7 @@ import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.iInspectableMod.IInspectable
 import typingsSlinky.babylonjs.postProcessRenderEffectMod.PostProcessRenderEffect
+import typingsSlinky.babylonjs.prePassRendererMod.PrePassRenderer
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -100,5 +101,12 @@ object postProcessRenderPipelineMod extends js.Object {
       * Gets pipeline name
       */
     def name: String = js.native
+    
+    /**
+      * Sets the required values to the prepass renderer.
+      * @param prePassRenderer defines the prepass renderer to setup.
+      * @returns true if the pre pass is needed.
+      */
+    def setPrePassRenderer(prePassRenderer: PrePassRenderer): Boolean = js.native
   }
 }

@@ -6,17 +6,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ValueDescriptionSequence extends ValueDescription {
+trait ValueDescriptionSequence
+  extends AbstractValueDescription
+     with ValueDescription {
   
-  var `type`: sequence = js.native
+  @JSName("type")
+  var type_ValueDescriptionSequence: sequence = js.native
   
   var value: js.Array[js.Any] = js.native
 }
 object ValueDescriptionSequence {
   
   @scala.inline
-  def apply(`type`: sequence, value: js.Array[js.Any]): ValueDescriptionSequence = {
-    val __obj = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
+  def apply(
+    extAttrs: js.Array[ExtendedAttribute],
+    parent: Argument | ConstantMemberType | FieldType,
+    `type`: sequence,
+    value: js.Array[js.Any]
+  ): ValueDescriptionSequence = {
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueDescriptionSequence]
   }

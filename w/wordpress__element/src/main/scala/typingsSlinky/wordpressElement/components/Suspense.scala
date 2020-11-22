@@ -28,6 +28,9 @@ object Suspense {
     
     @scala.inline
     def fallbackNull: this.type = set("fallback", null)
+    
+    @scala.inline
+    def unstable_expectedLoadTime(value: Double): this.type = set("unstable_expectedLoadTime", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SuspenseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

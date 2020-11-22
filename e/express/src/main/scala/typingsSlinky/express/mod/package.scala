@@ -12,7 +12,7 @@ package object mod {
   
   type Errback = typingsSlinky.expressServeStaticCore.mod.Errback
   
-  type ErrorRequestHandler[P /* <: typingsSlinky.expressServeStaticCore.mod.Params */, ResBody, ReqBody, ReqQuery] = typingsSlinky.expressServeStaticCore.mod.ErrorRequestHandler[P, ResBody, ReqBody, ReqQuery]
+  type ErrorRequestHandler[P, ResBody, ReqBody, ReqQuery] = typingsSlinky.expressServeStaticCore.mod.ErrorRequestHandler[P, ResBody, ReqBody, ReqQuery]
   
   type Express = typingsSlinky.expressServeStaticCore.mod.Express
   
@@ -30,15 +30,15 @@ package object mod {
   
   type NextFunction = typingsSlinky.expressServeStaticCore.mod.NextFunction
   
-  type RequestHandler[P /* <: typingsSlinky.expressServeStaticCore.mod.Params */, ResBody, ReqBody, ReqQuery] = typingsSlinky.expressServeStaticCore.mod.RequestHandler[P, ResBody, ReqBody, ReqQuery]
+  type RequestHandler[P, ResBody, ReqBody, ReqQuery] = typingsSlinky.expressServeStaticCore.mod.RequestHandler[P, ResBody, ReqBody, ReqQuery]
   
   type RequestParamHandler = typingsSlinky.expressServeStaticCore.mod.RequestParamHandler
   
-  type Request_[P /* <: typingsSlinky.expressServeStaticCore.mod.Params */, ResBody, ReqBody, ReqQuery] = typingsSlinky.expressServeStaticCore.mod.Request[P, ResBody, ReqBody, ReqQuery]
+  type Request_[P, ResBody, ReqBody, ReqQuery] = typingsSlinky.expressServeStaticCore.mod.Request[P, ResBody, ReqBody, ReqQuery]
   
-  type Response_[ResBody] = typingsSlinky.expressServeStaticCore.mod.Response[ResBody]
+  type Response_[ResBody] = typingsSlinky.expressServeStaticCore.mod.Response[ResBody, scala.Double]
   
   type Router = typingsSlinky.expressServeStaticCore.mod.Router
   
-  type Send = typingsSlinky.expressServeStaticCore.mod.Send[js.Any, typingsSlinky.expressServeStaticCore.mod.Response[js.Any]]
+  type Send = typingsSlinky.expressServeStaticCore.mod.Send[js.Any, typingsSlinky.expressServeStaticCore.mod.Response[js.Any, scala.Double]]
 }

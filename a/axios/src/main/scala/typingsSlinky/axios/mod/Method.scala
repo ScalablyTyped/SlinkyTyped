@@ -7,6 +7,7 @@ import typingsSlinky.axios.axiosStrings.link_
 import typingsSlinky.axios.axiosStrings.options_
 import typingsSlinky.axios.axiosStrings.patch_
 import typingsSlinky.axios.axiosStrings.post_
+import typingsSlinky.axios.axiosStrings.purge_
 import typingsSlinky.axios.axiosStrings.put_
 import typingsSlinky.axios.axiosStrings.unlink_
 import scala.scalajs.js
@@ -28,6 +29,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.axios.axiosStrings.PUT
   - typingsSlinky.axios.axiosStrings.patch_
   - typingsSlinky.axios.axiosStrings.PATCH
+  - typingsSlinky.axios.axiosStrings.purge_
+  - typingsSlinky.axios.axiosStrings.PURGE
   - typingsSlinky.axios.axiosStrings.link_
   - typingsSlinky.axios.axiosStrings.LINK
   - typingsSlinky.axios.axiosStrings.unlink_
@@ -58,6 +61,9 @@ object Method {
   def POST: typingsSlinky.axios.axiosStrings.POST = "POST".asInstanceOf[typingsSlinky.axios.axiosStrings.POST]
   
   @scala.inline
+  def PURGE: typingsSlinky.axios.axiosStrings.PURGE = "PURGE".asInstanceOf[typingsSlinky.axios.axiosStrings.PURGE]
+  
+  @scala.inline
   def PUT: typingsSlinky.axios.axiosStrings.PUT = "PUT".asInstanceOf[typingsSlinky.axios.axiosStrings.PUT]
   
   @scala.inline
@@ -83,6 +89,9 @@ object Method {
   
   @scala.inline
   def post: post_ = "post".asInstanceOf[post_]
+  
+  @scala.inline
+  def purge: purge_ = "purge".asInstanceOf[purge_]
   
   @scala.inline
   def put: put_ = "put".asInstanceOf[put_]

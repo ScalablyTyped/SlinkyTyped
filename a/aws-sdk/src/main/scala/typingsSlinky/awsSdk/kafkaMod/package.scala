@@ -29,9 +29,18 @@ package object kafkaMod {
   type ClusterState = typingsSlinky.awsSdk.kafkaMod._ClusterState | java.lang.String
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_FAILED
+    - java.lang.String
+  */
+  type ConfigurationState = typingsSlinky.awsSdk.kafkaMod._ConfigurationState | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.DEFAULT
     - typingsSlinky.awsSdk.awsSdkStrings.PER_BROKER
     - typingsSlinky.awsSdk.awsSdkStrings.PER_TOPIC_PER_BROKER
+    - typingsSlinky.awsSdk.awsSdkStrings.PER_TOPIC_PER_PARTITION
     - java.lang.String
   */
   type EnhancedMonitoring = typingsSlinky.awsSdk.kafkaMod._EnhancedMonitoring | java.lang.String
@@ -85,6 +94,8 @@ package object kafkaMod {
   type listOfNodeInfo = js.Array[typingsSlinky.awsSdk.kafkaMod.NodeInfo]
   
   type listOfString = js.Array[typingsSlinky.awsSdk.kafkaMod.string]
+  
+  type listOfUnprocessedScramSecret = js.Array[typingsSlinky.awsSdk.kafkaMod.UnprocessedScramSecret]
   
   type long = scala.Double
   

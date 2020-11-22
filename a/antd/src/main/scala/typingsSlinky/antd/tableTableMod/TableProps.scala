@@ -6,7 +6,7 @@ import typingsSlinky.antd.anon.ScrollToFirstRowOnChange
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.spinMod.SpinProps
 import typingsSlinky.antd.tableInterfaceMod.ColumnGroupType
 import typingsSlinky.antd.tableInterfaceMod.ColumnsType
@@ -30,6 +30,7 @@ import typingsSlinky.rcTable.interfaceMod.RenderExpandIconProps
 import typingsSlinky.rcTable.interfaceMod.RowClassName
 import typingsSlinky.rcTable.interfaceMod.TableComponents
 import typingsSlinky.rcTable.interfaceMod.TableLayout
+import typingsSlinky.rcTable.interfaceMod.TableSticky
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.std.Record
@@ -126,6 +127,8 @@ trait TableProps[RecordType] extends js.Object {
   var size: js.UndefOr[SizeType] = js.native
   
   var sortDirections: js.UndefOr[js.Array[SortOrder]] = js.native
+  
+  var sticky: js.UndefOr[Boolean | TableSticky] = js.native
   
   var style: js.UndefOr[CSSProperties] = js.native
   
@@ -423,6 +426,12 @@ object TableProps {
     
     @scala.inline
     def deleteSortDirections: Self = this.set("sortDirections", js.undefined)
+    
+    @scala.inline
+    def setSticky(value: Boolean | TableSticky): Self = this.set("sticky", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSticky: Self = this.set("sticky", js.undefined)
     
     @scala.inline
     def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])

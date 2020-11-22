@@ -23,10 +23,33 @@ class Strategy protected () extends OAuth2Strategy {
       ]
   ) = this()
   def this(
+    options: StrategyOptionsWithRequest,
+    verify: js.Function6[
+        /* req */ Request_[ParamsDictionary, _, _, Query], 
+        /* accessToken */ String, 
+        /* refreshToken */ String, 
+        /* params */ js.Any, 
+        /* profile */ Profile, 
+        /* done */ VerifyCallback, 
+        Unit
+      ]
+  ) = this()
+  def this(
     options: StrategyOptions,
     verify: js.Function4[
         /* accessToken */ String, 
         /* refreshToken */ String, 
+        /* profile */ Profile, 
+        /* done */ VerifyCallback, 
+        Unit
+      ]
+  ) = this()
+  def this(
+    options: StrategyOptions,
+    verify: js.Function5[
+        /* accessToken */ String, 
+        /* refreshToken */ String, 
+        /* params */ js.Any, 
         /* profile */ Profile, 
         /* done */ VerifyCallback, 
         Unit

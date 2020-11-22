@@ -14,7 +14,7 @@ trait DeviceCompliancePolicySettingStateSummary extends Entity {
   var conflictDeviceCount: js.UndefOr[Double] = js.native
   
   // Not yet documented
-  var deviceComplianceSettingStates: js.UndefOr[js.Array[DeviceComplianceSettingState]] = js.native
+  var deviceComplianceSettingStates: js.UndefOr[NullableOption[js.Array[DeviceComplianceSettingState]]] = js.native
   
   // Number of error devices
   var errorDeviceCount: js.UndefOr[Double] = js.native
@@ -35,10 +35,10 @@ trait DeviceCompliancePolicySettingStateSummary extends Entity {
   var remediatedDeviceCount: js.UndefOr[Double] = js.native
   
   // The setting class name and property name.
-  var setting: js.UndefOr[String] = js.native
+  var setting: js.UndefOr[NullableOption[String]] = js.native
   
   // Name of the setting.
-  var settingName: js.UndefOr[String] = js.native
+  var settingName: js.UndefOr[NullableOption[String]] = js.native
   
   // Number of unknown devices
   var unknownDeviceCount: js.UndefOr[Double] = js.native
@@ -82,10 +82,13 @@ object DeviceCompliancePolicySettingStateSummary {
     def setDeviceComplianceSettingStatesVarargs(value: DeviceComplianceSettingState*): Self = this.set("deviceComplianceSettingStates", js.Array(value :_*))
     
     @scala.inline
-    def setDeviceComplianceSettingStates(value: js.Array[DeviceComplianceSettingState]): Self = this.set("deviceComplianceSettingStates", value.asInstanceOf[js.Any])
+    def setDeviceComplianceSettingStates(value: NullableOption[js.Array[DeviceComplianceSettingState]]): Self = this.set("deviceComplianceSettingStates", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceComplianceSettingStates: Self = this.set("deviceComplianceSettingStates", js.undefined)
+    
+    @scala.inline
+    def setDeviceComplianceSettingStatesNull: Self = this.set("deviceComplianceSettingStates", null)
     
     @scala.inline
     def setErrorDeviceCount(value: Double): Self = this.set("errorDeviceCount", value.asInstanceOf[js.Any])
@@ -118,16 +121,22 @@ object DeviceCompliancePolicySettingStateSummary {
     def deleteRemediatedDeviceCount: Self = this.set("remediatedDeviceCount", js.undefined)
     
     @scala.inline
-    def setSetting(value: String): Self = this.set("setting", value.asInstanceOf[js.Any])
+    def setSetting(value: NullableOption[String]): Self = this.set("setting", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSetting: Self = this.set("setting", js.undefined)
     
     @scala.inline
-    def setSettingName(value: String): Self = this.set("settingName", value.asInstanceOf[js.Any])
+    def setSettingNull: Self = this.set("setting", null)
+    
+    @scala.inline
+    def setSettingName(value: NullableOption[String]): Self = this.set("settingName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSettingName: Self = this.set("settingName", js.undefined)
+    
+    @scala.inline
+    def setSettingNameNull: Self = this.set("settingName", null)
     
     @scala.inline
     def setUnknownDeviceCount(value: Double): Self = this.set("unknownDeviceCount", value.asInstanceOf[js.Any])

@@ -117,6 +117,9 @@ object Column {
     def onEditorCancel(value: /* props */ js.Any => Unit): this.type = set("onEditorCancel", js.Any.fromFunction1(value))
     
     @scala.inline
+    def onEditorInit(value: /* props */ js.Any => Unit): this.type = set("onEditorInit", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def onEditorSubmit(value: /* props */ js.Any => Unit): this.type = set("onEditorSubmit", js.Any.fromFunction1(value))
     
     @scala.inline

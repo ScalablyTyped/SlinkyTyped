@@ -13,31 +13,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPopupToolbarItem extends js.Object {
   
-  /** @name dxPopup.Options.toolbarItems.disabled */
+  /**
+    * [descr:dxPopup.Options.toolbarItems.disabled]
+    */
   var disabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPopup.Options.toolbarItems.html */
+  /**
+    * [descr:dxPopup.Options.toolbarItems.html]
+    */
   var html: js.UndefOr[String] = js.native
   
-  /** @name dxPopup.Options.toolbarItems.location */
+  /**
+    * [descr:dxPopup.Options.toolbarItems.location]
+    */
   var location: js.UndefOr[after | before | center] = js.native
   
-  /** @name dxPopup.Options.toolbarItems.options */
+  /**
+    * [descr:dxPopup.Options.toolbarItems.options]
+    */
   var options: js.UndefOr[js.Any] = js.native
   
-  /** @name dxPopup.Options.toolbarItems.template */
+  /**
+    * [descr:dxPopup.Options.toolbarItems.template]
+    */
   var template: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.core.template] = js.native
   
-  /** @name dxPopup.Options.toolbarItems.text */
+  /**
+    * [descr:dxPopup.Options.toolbarItems.text]
+    */
   var text: js.UndefOr[String] = js.native
   
-  /** @name dxPopup.Options.toolbarItems.toolbar */
+  /**
+    * [descr:dxPopup.Options.toolbarItems.toolbar]
+    */
   var toolbar: js.UndefOr[bottom | top] = js.native
   
-  /** @name dxPopup.Options.toolbarItems.visible */
+  /**
+    * [descr:dxPopup.Options.toolbarItems.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
   
-  /** @name dxPopup.Options.toolbarItems.widget */
+  /**
+    * [descr:dxPopup.Options.toolbarItems.widget]
+    */
   var widget: js.UndefOr[
     typingsSlinky.devextreme.devextremeStrings.dxAutocomplete | typingsSlinky.devextreme.devextremeStrings.dxButton | typingsSlinky.devextreme.devextremeStrings.dxCheckBox | typingsSlinky.devextreme.devextremeStrings.dxDateBox | typingsSlinky.devextreme.devextremeStrings.dxMenu | typingsSlinky.devextreme.devextremeStrings.dxSelectBox | typingsSlinky.devextreme.devextremeStrings.dxTabs | typingsSlinky.devextreme.devextremeStrings.dxTextBox | typingsSlinky.devextreme.devextremeStrings.dxButtonGroup | typingsSlinky.devextreme.devextremeStrings.dxDropDownButton
   ] = js.native

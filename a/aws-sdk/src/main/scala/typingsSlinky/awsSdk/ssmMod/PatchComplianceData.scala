@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PatchComplianceData extends js.Object {
   
   /**
+    * The IDs of one or more Common Vulnerabilities and Exposure (CVE) issues that are resolved by the patch.
+    */
+  var CVEIds: js.UndefOr[PatchCVEIds] = js.native
+  
+  /**
     * The classification of the patch (for example, SecurityUpdates, Updates, CriticalUpdates).
     */
   var Classification: PatchClassification = js.native
@@ -84,5 +89,11 @@ object PatchComplianceData {
     
     @scala.inline
     def setTitle(value: PatchTitle): Self = this.set("Title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCVEIds(value: PatchCVEIds): Self = this.set("CVEIds", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCVEIds: Self = this.set("CVEIds", js.undefined)
   }
 }

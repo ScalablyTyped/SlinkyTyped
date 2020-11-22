@@ -12,9 +12,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TraceConfig extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/trace-config
+  // Docs: https://electronjs.org/docs/api/structures/trace-config
   /**
-    * if true, filter event data according to a whitelist of events that have been
+    * if true, filter event data according to a specific list of events that have been
     * manually vetted to not include any PII. See the implementation in Chromium for
     * specifics.
     */

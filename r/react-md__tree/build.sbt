@@ -1,22 +1,22 @@
 organization := "org.scalablytyped.slinky"
 name := "react-md__tree"
-version := "2.1.2-22fab0"
+version := "2.4.3-3dec58"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-fce754",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ce652f",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a9854",
-  "org.scalablytyped.slinky" %%% "react-md__icon" % "2.1.2-f08acb",
-  "org.scalablytyped.slinky" %%% "react-md__list" % "2.1.2-8cbbc7",
-  "org.scalablytyped.slinky" %%% "react-md__portal" % "2.0.2-32b7af",
-  "org.scalablytyped.slinky" %%% "react-md__states" % "2.1.2-171a9a",
-  "org.scalablytyped.slinky" %%% "react-md__transition" % "2.1.2-30f207",
-  "org.scalablytyped.slinky" %%% "react-md__utils" % "2.1.0-a8afb8",
-  "org.scalablytyped.slinky" %%% "react-transition-group" % "4.4-dt-20200521Z-775259",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.14-23cf0c",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ed7fbd",
+  "org.scalablytyped.slinky" %%% "react" % "17.0-dt-20201121Z-8f0b52",
+  "org.scalablytyped.slinky" %%% "react-md__icon" % "2.4.2-064e3c",
+  "org.scalablytyped.slinky" %%% "react-md__list" % "2.4.3-1dfdfa",
+  "org.scalablytyped.slinky" %%% "react-md__portal" % "2.4.2-bfd793",
+  "org.scalablytyped.slinky" %%% "react-md__states" % "2.4.2-857f1f",
+  "org.scalablytyped.slinky" %%% "react-md__transition" % "2.4.2-425ac5",
+  "org.scalablytyped.slinky" %%% "react-md__utils" % "2.4.2-010418",
+  "org.scalablytyped.slinky" %%% "react-transition-group" % "4.4-dt-20200521Z-504f30",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

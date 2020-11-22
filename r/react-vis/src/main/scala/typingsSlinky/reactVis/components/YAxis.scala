@@ -2,7 +2,7 @@ package typingsSlinky.reactVis.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactVis.anon.CSSPropertieslineCSSPrope
 import typingsSlinky.reactVis.mod.YAxisProps
 import typingsSlinky.reactVis.reactVisStrings.left
 import typingsSlinky.reactVis.reactVisStrings.right
@@ -67,7 +67,7 @@ object YAxis {
     def orientation(value: left | right): this.type = set("orientation", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    def style(value: CSSPropertieslineCSSPrope): this.type = set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def tickFormat(value: /* tick */ js.Any => String): this.type = set("tickFormat", js.Any.fromFunction1(value))

@@ -6,13 +6,12 @@ import typingsSlinky.linq.anon.DictxNumberTInner
 import typingsSlinky.linq.anon.DictxNumberTResult
 import typingsSlinky.linq.anon.DictxNumberU
 import typingsSlinky.linq.anon.Length
-import typingsSlinky.std.Iterable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait IEnumerable[T] extends Iterable[T] {
+trait IEnumerable[T] extends js.Object {
   
   def aggregate(func: js.Function2[/* prev */ T, /* current */ T, T]): T = js.native
   def aggregate[TAccumulate](seed: TAccumulate, func: js.Function2[/* prev */ TAccumulate, /* current */ T, TAccumulate]): TAccumulate = js.native
@@ -68,8 +67,8 @@ trait IEnumerable[T] extends Iterable[T] {
   
   def elementAt(index: Double): T = js.native
   
-  def elementAtOrDefault(index: Double): T = js.native
-  def elementAtOrDefault(index: Double, defaultValue: T): T = js.native
+  def elementAtOrDefault(index: Double): js.UndefOr[T] = js.native
+  def elementAtOrDefault(index: Double, defaultValue: T): js.UndefOr[T] = js.native
   
   def except(second: js.Array[T]): IEnumerable[T] = js.native
   def except(second: Dictx[T]): IEnumerable[T] = js.native
@@ -83,11 +82,11 @@ trait IEnumerable[T] extends Iterable[T] {
   def first(): T = js.native
   def first(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean]): T = js.native
   
-  def firstOrDefault(): T = js.native
-  def firstOrDefault(defaultValue: T): T = js.native
-  def firstOrDefault(predicate: js.UndefOr[scala.Nothing], defaultValue: T): T = js.native
-  def firstOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean]): T = js.native
-  def firstOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean], defaultValue: T): T = js.native
+  def firstOrDefault(): js.UndefOr[T] = js.native
+  def firstOrDefault(defaultValue: T): js.UndefOr[T] = js.native
+  def firstOrDefault(predicate: js.UndefOr[scala.Nothing], defaultValue: T): js.UndefOr[T] = js.native
+  def firstOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean]): js.UndefOr[T] = js.native
+  def firstOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean], defaultValue: T): js.UndefOr[T] = js.native
   
   def flatten(): IEnumerable[_] = js.native
   
@@ -215,11 +214,11 @@ trait IEnumerable[T] extends Iterable[T] {
   def lastIndexOf(item: T): Double = js.native
   def lastIndexOf(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean]): Double = js.native
   
-  def lastOrDefault(): T = js.native
-  def lastOrDefault(defaultValue: T): T = js.native
-  def lastOrDefault(predicate: js.UndefOr[scala.Nothing], defaultValue: T): T = js.native
-  def lastOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean]): T = js.native
-  def lastOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean], defaultValue: T): T = js.native
+  def lastOrDefault(): js.UndefOr[T] = js.native
+  def lastOrDefault(defaultValue: T): js.UndefOr[T] = js.native
+  def lastOrDefault(predicate: js.UndefOr[scala.Nothing], defaultValue: T): js.UndefOr[T] = js.native
+  def lastOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean]): js.UndefOr[T] = js.native
+  def lastOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean], defaultValue: T): js.UndefOr[T] = js.native
   
   def letBind[TResult](
     func: js.Function1[
@@ -318,10 +317,10 @@ trait IEnumerable[T] extends Iterable[T] {
   def single(): T = js.native
   def single(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean]): T = js.native
   
-  def singleOrDefault(): T = js.native
-  def singleOrDefault(predicate: js.UndefOr[scala.Nothing], defaultValue: T): T = js.native
-  def singleOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean]): T = js.native
-  def singleOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean], defaultValue: T): T = js.native
+  def singleOrDefault(): js.UndefOr[T] = js.native
+  def singleOrDefault(predicate: js.UndefOr[scala.Nothing], defaultValue: T): js.UndefOr[T] = js.native
+  def singleOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean]): js.UndefOr[T] = js.native
+  def singleOrDefault(predicate: js.Function2[/* element */ T, /* index */ Double, Boolean], defaultValue: T): js.UndefOr[T] = js.native
   
   def skip(count: Double): IEnumerable[T] = js.native
   

@@ -11,7 +11,6 @@ import typingsSlinky.socks.constantsMod.SocksUDPFrameDetails
 import typingsSlinky.socks.socksStrings.bound
 import typingsSlinky.socks.socksStrings.error
 import typingsSlinky.socks.socksStrings.established
-import typingsSlinky.socks.utilMod.SocksClientError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,37 +28,19 @@ object socksclientMod extends js.Object {
       * Closes and destroys the underlying Socket. Emits an error event.
       * @param err { String } An error string to include in error event.
       */
-    var _closeSocket: js.Any = js.native
-    
-    var _nextRequiredPacketBufferSize: js.Any = js.native
-    
-    var _onClose: js.Any = js.native
-    
-    var _onConnect: js.Any = js.native
-    
-    var _onDataReceived: js.Any = js.native
-    
-    var _onError: js.Any = js.native
-    
-    var _options: js.Any = js.native
-    
-    var _receiveBuffer: js.Any = js.native
-    
-    var _socket: js.Any = js.native
-    
-    var _state: js.Any = js.native
+    var closeSocket: js.Any = js.native
     
     /**
       * Starts the connection establishment to the proxy and destination.
-      * @param existing_socket Connected socket to use instead of creating a new one (internal use).
+      * @param existingSocket Connected socket to use instead of creating a new one (internal use).
       */
     def connect(): Unit = js.native
-    def connect(existing_socket: Duplex): Unit = js.native
+    def connect(existingSocket: Duplex): Unit = js.native
     
     @JSName("emit")
     def emit_bound(event: bound, info: SocksClientBoundEvent): Boolean = js.native
     @JSName("emit")
-    def emit_error(event: error, err: SocksClientError): Boolean = js.native
+    def emit_error(event: error, err: typingsSlinky.socks.utilMod.SocksClientError): Boolean = js.native
     @JSName("emit")
     def emit_established(event: established, info: SocksClientEstablishedEvent): Boolean = js.native
     
@@ -100,28 +81,38 @@ object socksclientMod extends js.Object {
       */
     var handleSocks5IncomingConnectionResponse: js.Any = js.native
     
+    var nextRequiredPacketBufferSize: js.Any = js.native
+    
+    var onClose: js.Any = js.native
+    
     /**
       * Handles Socket close event.
       * @param had_error
       */
-    var onClose: js.Any = js.native
+    var onCloseHandler: js.Any = js.native
+    
+    var onConnect: js.Any = js.native
     
     /**
       * Handles Socket connect event.
       */
-    var onConnect: js.Any = js.native
+    var onConnectHandler: js.Any = js.native
+    
+    var onDataReceived: js.Any = js.native
     
     /**
       * Handles Socket data event.
       * @param data
       */
-    var onDataReceived: js.Any = js.native
+    var onDataReceivedHandler: js.Any = js.native
+    
+    var onError: js.Any = js.native
     
     /**
       * Handles Socket error event.
       * @param err
       */
-    var onError: js.Any = js.native
+    var onErrorHandler: js.Any = js.native
     
     /**
       * Handles internal Socks timeout callback.
@@ -132,21 +123,25 @@ object socksclientMod extends js.Object {
     @JSName("on")
     def on_bound(event: bound, listener: js.Function1[/* info */ SocksClientBoundEvent, Unit]): this.type = js.native
     @JSName("on")
-    def on_error(event: error, listener: js.Function1[/* err */ SocksClientError, Unit]): this.type = js.native
+    def on_error(event: error, listener: js.Function1[/* err */ typingsSlinky.socks.utilMod.SocksClientError, Unit]): this.type = js.native
     @JSName("on")
     def on_established(event: established, listener: js.Function1[/* info */ SocksClientEstablishedEvent, Unit]): this.type = js.native
     
     @JSName("once")
     def once_bound(event: bound, listener: js.Function1[/* info */ SocksClientBoundEvent, Unit]): this.type = js.native
     @JSName("once")
-    def once_error(event: error, listener: js.Function1[/* err */ SocksClientError, Unit]): this.type = js.native
+    def once_error(event: error, listener: js.Function1[/* err */ typingsSlinky.socks.utilMod.SocksClientError, Unit]): this.type = js.native
     @JSName("once")
     def once_established(event: established, listener: js.Function1[/* info */ SocksClientEstablishedEvent, Unit]): this.type = js.native
+    
+    var options: js.Any = js.native
     
     /**
       * Handles processing of the data we have received.
       */
     var processData: js.Any = js.native
+    
+    var receiveBuffer: js.Any = js.native
     
     /**
       * Removes internal event listeners on the underlying Socket.
@@ -175,16 +170,16 @@ object socksclientMod extends js.Object {
       */
     var sendSocks5UserPassAuthentication: js.Any = js.native
     
-    def socksClientOptions: SocksClientOptions = js.native
-    
-    /**
-      * Gets the SocksClient internal state.
-      */
-    /* private */ def state: js.Any = js.native
     /**
       * Internal state setter. If the SocksClient is in an error state, it cannot be changed to a non error state.
       */
-    /* private */ def state_=(value: js.Any): Unit = js.native
+    var setState: js.Any = js.native
+    
+    var socket: js.Any = js.native
+    
+    def socksClientOptions: SocksClientOptions = js.native
+    
+    var state: js.Any = js.native
   }
   /* static members */
   @js.native
@@ -224,5 +219,15 @@ object socksclientMod extends js.Object {
       * @param data
       */
     def parseUDPFrame(data: Buffer): SocksUDPFrameDetails = js.native
+  }
+  
+  /**
+    * Error wrapper for SocksClient
+    */
+  @js.native
+  class SocksClientError protected ()
+    extends typingsSlinky.socks.utilMod.SocksClientError {
+    def this(message: String, options: SocksClientChainOptions) = this()
+    def this(message: String, options: SocksClientOptions) = this()
   }
 }

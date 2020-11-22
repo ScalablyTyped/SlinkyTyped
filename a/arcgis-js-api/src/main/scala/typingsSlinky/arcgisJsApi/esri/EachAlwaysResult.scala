@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait EachAlwaysResult extends Object {
   
   /**
-    * The error with which the promise rejected. Defined only if the promise rejected.
+    * The error with which the promise rejected.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-promiseUtils.html#EachAlwaysResult)
     */
@@ -24,7 +24,7 @@ trait EachAlwaysResult extends Object {
   var promise: js.Promise[_] = js.native
   
   /**
-    * The value with which the promise resolved. Defined only if the promise resolved.
+    * The value with which the promise resolved.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-promiseUtils.html#EachAlwaysResult)
     */

@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk
 
 import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.instancesMod.AbstractEnum
 import typingsSlinky.mendixmodelsdk.primitiveListPropertyMod.PrimitiveListProperty
 import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
 import typingsSlinky.mendixmodelsdk.structuresMod.Structure
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer
 import typingsSlinky.mendixmodelsdk.versionChecksMod.ILifeCycle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -18,7 +20,7 @@ object enumListPropertyMod extends js.Object {
   class EnumListProperty[T /* <: AbstractEnum */] protected () extends PrimitiveListProperty[T] {
     def this(
       declaredOn: IStructureClass,
-      parent: Structure,
+      parent: Structure[IAbstractModel, IContainer | Null],
       name: String,
       initialValue: js.Array[T],
       enumType: Instantiable2[/* key */ String, /* lifeCycle */ ILifeCycle, AbstractEnum]

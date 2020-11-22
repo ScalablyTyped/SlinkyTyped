@@ -9,15 +9,15 @@ trait ClassLikeDeclarationBase
   extends NamedDeclaration
      with JSDocContainer {
   
-  var heritageClauses: js.UndefOr[NodeArray[HeritageClause]] = js.native
+  val heritageClauses: js.UndefOr[NodeArray[HeritageClause]] = js.native
   
   @JSName("kind")
-  var kind_ClassLikeDeclarationBase: typingsSlinky.typescript.mod.SyntaxKind.ClassDeclaration | typingsSlinky.typescript.mod.SyntaxKind.ClassExpression = js.native
+  val kind_ClassLikeDeclarationBase: typingsSlinky.typescript.mod.SyntaxKind.ClassDeclaration | typingsSlinky.typescript.mod.SyntaxKind.ClassExpression = js.native
   
-  var members: NodeArray[ClassElement] = js.native
+  val members: NodeArray[ClassElement] = js.native
   
   @JSName("name")
-  var name_ClassLikeDeclarationBase: js.UndefOr[Identifier] = js.native
+  val name_ClassLikeDeclarationBase: js.UndefOr[Identifier] = js.native
   
-  var typeParameters: js.UndefOr[NodeArray[TypeParameterDeclaration]] = js.native
+  val typeParameters: js.UndefOr[NodeArray[TypeParameterDeclaration]] = js.native
 }

@@ -7,14 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Actual extends js.Object {
   
+  /** The `actual` property on the error instance. */
   var actual: js.UndefOr[js.Any] = js.native
   
+  /** The `expected` property on the error instance. */
   var expected: js.UndefOr[js.Any] = js.native
   
+  /** If provided, the error message is set to this value. */
   var message: js.UndefOr[String] = js.native
   
+  /** The `operator` property on the error instance. */
   var operator: js.UndefOr[String] = js.native
   
+  /** If provided, the generated stack trace omits frames before this function. */
   var stackStartFn: js.UndefOr[js.Function] = js.native
 }
 object Actual {

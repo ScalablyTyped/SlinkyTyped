@@ -13,7 +13,7 @@ trait ChannelActivity extends js.Object {
   var channelName: ChannelName = js.native
   
   /**
-    * The name of the 'channel' activity.
+    * The name of the channel activity.
     */
   var name: ActivityName = js.native
   

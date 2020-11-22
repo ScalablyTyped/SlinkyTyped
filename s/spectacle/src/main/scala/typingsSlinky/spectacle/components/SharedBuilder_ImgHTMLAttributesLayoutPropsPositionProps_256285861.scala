@@ -20,12 +20,16 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.reactStrings._empty
+import typingsSlinky.react.reactStrings.`additions removals`
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.`lazy`
-import typingsSlinky.react.reactStrings.`no-referrer`
-import typingsSlinky.react.reactStrings.`unsafe-url`
+import typingsSlinky.react.reactStrings.`removals additions`
+import typingsSlinky.react.reactStrings.`removals text`
+import typingsSlinky.react.reactStrings.`text additions`
+import typingsSlinky.react.reactStrings.`text removals`
 import typingsSlinky.react.reactStrings.`use-credentials`
 import typingsSlinky.react.reactStrings.additions
 import typingsSlinky.react.reactStrings.all
@@ -59,7 +63,6 @@ import typingsSlinky.react.reactStrings.none
 import typingsSlinky.react.reactStrings.numeric
 import typingsSlinky.react.reactStrings.off
 import typingsSlinky.react.reactStrings.on
-import typingsSlinky.react.reactStrings.origin
 import typingsSlinky.react.reactStrings.other
 import typingsSlinky.react.reactStrings.page
 import typingsSlinky.react.reactStrings.polite
@@ -202,7 +205,9 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -251,13 +256,13 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   
   @scala.inline
   def bottomVarargs(
-    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLengthStyledSystem> */ js.Any) | Null)*
+    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLengthStyledSystem> */ js.Any) | Null)*
   ): this.type = set("bottom", js.Array(value :_*))
   
   @scala.inline
   def bottom(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BottomProperty<TLengthStyledSystem> */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Bottom<TLengthStyledSystem> */ js.Any, 
       RequiredTheme
     ]
   ): this.type = set("bottom", value.asInstanceOf[js.Any])
@@ -307,7 +312,7 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   @scala.inline
   def display(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.DisplayProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Display */ _, 
       RequiredTheme
     ]
   ): this.type = set("display", value.asInstanceOf[js.Any])
@@ -356,13 +361,13 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   
   @scala.inline
   def leftVarargs(
-    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLengthStyledSystem> */ js.Any) | Null)*
+    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLengthStyledSystem> */ js.Any) | Null)*
   ): this.type = set("left", js.Array(value :_*))
   
   @scala.inline
   def left(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.LeftProperty<TLengthStyledSystem> */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Left<TLengthStyledSystem> */ js.Any, 
       RequiredTheme
     ]
   ): this.type = set("left", value.asInstanceOf[js.Any])
@@ -375,13 +380,13 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   
   @scala.inline
   def maxHeightVarargs(
-    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ js.Any) | Null)*
+    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ js.Any) | Null)*
   ): this.type = set("maxHeight", js.Array(value :_*))
   
   @scala.inline
   def maxHeight(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxHeightProperty<TLengthStyledSystem> */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxHeight<TLengthStyledSystem> */ js.Any, 
       RequiredTheme
     ]
   ): this.type = set("maxHeight", value.asInstanceOf[js.Any])
@@ -391,13 +396,13 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   
   @scala.inline
   def maxWidthVarargs(
-    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ js.Any) | Null)*
+    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ js.Any) | Null)*
   ): this.type = set("maxWidth", js.Array(value :_*))
   
   @scala.inline
   def maxWidth(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MaxWidthProperty<TLengthStyledSystem> */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MaxWidth<TLengthStyledSystem> */ js.Any, 
       RequiredTheme
     ]
   ): this.type = set("maxWidth", value.asInstanceOf[js.Any])
@@ -407,13 +412,13 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   
   @scala.inline
   def minHeightVarargs(
-    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ js.Any) | Null)*
+    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ js.Any) | Null)*
   ): this.type = set("minHeight", js.Array(value :_*))
   
   @scala.inline
   def minHeight(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinHeightProperty<TLengthStyledSystem> */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinHeight<TLengthStyledSystem> */ js.Any, 
       RequiredTheme
     ]
   ): this.type = set("minHeight", value.asInstanceOf[js.Any])
@@ -423,13 +428,13 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   
   @scala.inline
   def minWidthVarargs(
-    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ js.Any) | Null)*
+    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ js.Any) | Null)*
   ): this.type = set("minWidth", js.Array(value :_*))
   
   @scala.inline
   def minWidth(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MinWidthProperty<TLengthStyledSystem> */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MinWidth<TLengthStyledSystem> */ js.Any, 
       RequiredTheme
     ]
   ): this.type = set("minWidth", value.asInstanceOf[js.Any])
@@ -680,7 +685,7 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   @scala.inline
   def overflow(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Overflow */ _, 
       RequiredTheme
     ]
   ): this.type = set("overflow", value.asInstanceOf[js.Any])
@@ -694,7 +699,7 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   @scala.inline
   def overflowX(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowXProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowX */ _, 
       RequiredTheme
     ]
   ): this.type = set("overflowX", value.asInstanceOf[js.Any])
@@ -708,7 +713,7 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   @scala.inline
   def overflowY(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.OverflowYProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.OverflowY */ _, 
       RequiredTheme
     ]
   ): this.type = set("overflowY", value.asInstanceOf[js.Any])
@@ -725,7 +730,7 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   @scala.inline
   def position(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.PositionProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Position */ _, 
       RequiredTheme
     ]
   ): this.type = set("position", value.asInstanceOf[js.Any])
@@ -743,7 +748,7 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def referrerPolicy(value: `no-referrer` | origin | `unsafe-url`): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
+  def referrerPolicy(value: HTMLAttributeReferrerPolicy): this.type = set("referrerPolicy", value.asInstanceOf[js.Any])
   
   @scala.inline
   def resource(value: String): this.type = set("resource", value.asInstanceOf[js.Any])
@@ -753,13 +758,13 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   
   @scala.inline
   def rightVarargs(
-    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLengthStyledSystem> */ js.Any) | Null)*
+    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLengthStyledSystem> */ js.Any) | Null)*
   ): this.type = set("right", js.Array(value :_*))
   
   @scala.inline
   def right(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.RightProperty<TLengthStyledSystem> */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Right<TLengthStyledSystem> */ js.Any, 
       RequiredTheme
     ]
   ): this.type = set("right", value.asInstanceOf[js.Any])
@@ -775,13 +780,13 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   
   @scala.inline
   def sizeVarargs(
-    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any) | Null)*
+    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ js.Any) | Null)*
   ): this.type = set("size", js.Array(value :_*))
   
   @scala.inline
   def size(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLengthStyledSystem> */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLengthStyledSystem> */ js.Any, 
       RequiredTheme
     ]
   ): this.type = set("size", value.asInstanceOf[js.Any])
@@ -821,13 +826,13 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   
   @scala.inline
   def topVarargs(
-    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLengthStyledSystem> */ js.Any) | Null)*
+    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLengthStyledSystem> */ js.Any) | Null)*
   ): this.type = set("top", js.Array(value :_*))
   
   @scala.inline
   def top(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.TopProperty<TLengthStyledSystem> */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Top<TLengthStyledSystem> */ js.Any, 
       RequiredTheme
     ]
   ): this.type = set("top", value.asInstanceOf[js.Any])
@@ -849,13 +854,13 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   
   @scala.inline
   def verticalAlignVarargs(
-    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ js.Any) | Null)*
+    value: ((/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ js.Any) | Null)*
   ): this.type = set("verticalAlign", js.Array(value :_*))
   
   @scala.inline
   def verticalAlign(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.VerticalAlignProperty<TLengthStyledSystem> */ js.Any, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.VerticalAlign<TLengthStyledSystem> */ js.Any, 
       RequiredTheme
     ]
   ): this.type = set("verticalAlign", value.asInstanceOf[js.Any])
@@ -875,7 +880,7 @@ class SharedBuilder_ImgHTMLAttributesLayoutPropsPositionProps_256285861 (val arg
   @scala.inline
   def zIndex(
     value: ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _, 
       RequiredTheme
     ]
   ): this.type = set("zIndex", value.asInstanceOf[js.Any])

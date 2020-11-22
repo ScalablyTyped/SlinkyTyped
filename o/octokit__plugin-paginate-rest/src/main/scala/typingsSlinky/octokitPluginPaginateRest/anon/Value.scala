@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Value extends js.Object {
   
+  var done: js.UndefOr[scala.Nothing] = js.native
+  
   var value: OctokitResponse[_] = js.native
 }
 object Value {

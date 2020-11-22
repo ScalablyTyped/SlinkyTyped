@@ -68,11 +68,41 @@ object particleHelperMod extends js.Object {
     def CreateDefault(emitter: Nullable[AbstractMesh | Vector3], capacity: Double, scene: Scene, useGPU: Boolean): IParticleSystem = js.native
     
     /**
+      * Creates a particle system from a snippet saved by the particle system editor
+      * @param snippetId defines the snippet to load (can be set to _BLANK to create a default one)
+      * @param scene defines the hosting scene
+      * @param gpu If the system will use gpu
+      * @param rootUrl defines the root URL to use to load textures and relative dependencies
+      * @returns a promise that will resolve to the new particle system
+      */
+    def CreateFromSnippetAsync(snippetId: String, scene: Scene): js.Promise[IParticleSystem] = js.native
+    def CreateFromSnippetAsync(snippetId: String, scene: Scene, gpu: js.UndefOr[scala.Nothing], rootUrl: String): js.Promise[IParticleSystem] = js.native
+    def CreateFromSnippetAsync(snippetId: String, scene: Scene, gpu: Boolean): js.Promise[IParticleSystem] = js.native
+    def CreateFromSnippetAsync(snippetId: String, scene: Scene, gpu: Boolean, rootUrl: String): js.Promise[IParticleSystem] = js.native
+    
+    /**
       * Static function used to export a particle system to a ParticleSystemSet variable.
       * Please note that the emitter shape is not exported
       * @param systems defines the particle systems to export
       * @returns the created particle system set
       */
     def ExportSet(systems: js.Array[IParticleSystem]): ParticleSystemSet = js.native
+    
+    /**
+      * Creates a particle system from a snippet saved in a remote file
+      * @param name defines the name of the particle system to create (can be null or empty to use the one from the json data)
+      * @param url defines the url to load from
+      * @param scene defines the hosting scene
+      * @param gpu If the system will use gpu
+      * @param rootUrl defines the root URL to use to load textures and relative dependencies
+      * @returns a promise that will resolve to the new particle system
+      */
+    def ParseFromFileAsync(name: Nullable[String], url: String, scene: Scene): js.Promise[IParticleSystem] = js.native
+    def ParseFromFileAsync(name: Nullable[String], url: String, scene: Scene, gpu: js.UndefOr[scala.Nothing], rootUrl: String): js.Promise[IParticleSystem] = js.native
+    def ParseFromFileAsync(name: Nullable[String], url: String, scene: Scene, gpu: Boolean): js.Promise[IParticleSystem] = js.native
+    def ParseFromFileAsync(name: Nullable[String], url: String, scene: Scene, gpu: Boolean, rootUrl: String): js.Promise[IParticleSystem] = js.native
+    
+    /** Define the Url to load snippets */
+    var SnippetUrl: String = js.native
   }
 }

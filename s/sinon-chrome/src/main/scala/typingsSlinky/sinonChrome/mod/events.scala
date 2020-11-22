@@ -14,9 +14,11 @@ object events extends js.Object {
     extends typingsSlinky.chrome.chrome.events.Event[js.Function] {
     
     // Methods
-    def addListener(args: js.Any*): js.Any = js.native
+    def addListener(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("addListener")
-    var addListener_Original: SinonSpy = js.native
+    var addListener_Original: SinonSpy[js.Array[_], _] = js.native
     
     def applyTrigger(args: js.Array[_]): Unit = js.native
     
@@ -25,19 +27,25 @@ object events extends js.Object {
     def dispatch(args: js.Any*): Unit = js.native
     
     // Methods
-    def hasListener(args: js.Any*): js.Any = js.native
+    def hasListener(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("hasListener")
-    var hasListener_Original: SinonSpy = js.native
+    var hasListener_Original: SinonSpy[js.Array[_], _] = js.native
     
     // Methods
-    def removeListener(args: js.Any*): js.Any = js.native
+    def removeListener(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("removeListener")
-    var removeListener_Original: SinonSpy = js.native
+    var removeListener_Original: SinonSpy[js.Array[_], _] = js.native
     
     // Methods
-    def removeListeners(args: js.Any*): js.Any = js.native
+    def removeListeners(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("removeListeners")
-    var removeListeners_Original: SinonSpy = js.native
+    var removeListeners_Original: SinonSpy[js.Array[_], _] = js.native
     
     def trigger(args: js.Any*): Unit = js.native
     

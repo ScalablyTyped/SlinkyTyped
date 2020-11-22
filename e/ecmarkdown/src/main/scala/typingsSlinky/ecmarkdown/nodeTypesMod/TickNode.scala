@@ -12,15 +12,15 @@ trait TickNode
   
   var contents: js.Array[FragmentNode] = js.native
   
-  var location: js.UndefOr[LocationRange] = js.native
+  var location: LocationRange = js.native
   
   var name: tick = js.native
 }
 object TickNode {
   
   @scala.inline
-  def apply(contents: js.Array[FragmentNode], name: tick): TickNode = {
-    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(contents: js.Array[FragmentNode], location: LocationRange, name: tick): TickNode = {
+    val __obj = js.Dynamic.literal(contents = contents.asInstanceOf[js.Any], location = location.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[TickNode]
   }
   
@@ -46,12 +46,9 @@ object TickNode {
     def setContents(value: js.Array[FragmentNode]): Self = this.set("contents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setName(value: tick): Self = this.set("name", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setLocation(value: LocationRange): Self = this.set("location", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteLocation: Self = this.set("location", js.undefined)
+    def setName(value: tick): Self = this.set("name", value.asInstanceOf[js.Any])
   }
 }

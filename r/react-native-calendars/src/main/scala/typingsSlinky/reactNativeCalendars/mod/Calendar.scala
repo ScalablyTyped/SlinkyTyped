@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("react-native-calendars", "Calendar")
 @js.native
 class Calendar ()
-  extends Component[CalendarMarkingProps with CalendarBaseProps, js.Object, js.Any]
+  extends Component[CalendarProps, js.Object, js.Any]

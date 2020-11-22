@@ -1,5 +1,7 @@
 package typingsSlinky.azdata.mod
 
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.azdata.anon.Token
 import typingsSlinky.vscode.Thenable
 import typingsSlinky.vscode.mod.Disposable
 import typingsSlinky.vscode.mod.Event
@@ -17,10 +19,12 @@ object accounts extends js.Object {
   
   def endAutoOAuthDeviceCode(): Unit = js.native
   
+  def getAccountSecurityToken(account: Account, tenant: String, resource: AzureResource): Thenable[js.UndefOr[Token]] = js.native
+  
   def getAllAccounts(): Thenable[js.Array[Account]] = js.native
   
-  def getSecurityToken(account: Account): Thenable[js.Object] = js.native
-  def getSecurityToken(account: Account, resource: AzureResource): Thenable[js.Object] = js.native
+  def getSecurityToken(account: Account): Thenable[StringDictionary[_]] = js.native
+  def getSecurityToken(account: Account, resource: AzureResource): Thenable[StringDictionary[_]] = js.native
   
   val onDidChangeAccounts: Event[DidChangeAccountsParams] = js.native
   

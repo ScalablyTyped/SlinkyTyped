@@ -1,5 +1,6 @@
 package typingsSlinky.jose.mod.JWT
 
+import typingsSlinky.jose.anon.DecodeOptionscompletetrue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,4 +10,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object decode extends js.Object {
   
   def apply(jwt: String): js.Object = js.native
+  /**
+    * Decodes the JWT **without verifying the token**. For JWT verification/validation use
+    * `jose.JWT.verify`.
+    */
+  def apply(jwt: String, options: DecodeOptionscompletetrue): completeResult[js.UndefOr[scala.Nothing]] = js.native
+  def apply(jwt: String, options: DecodeOptions): js.Object = js.native
 }

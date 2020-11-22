@@ -8,9 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MaxAge extends js.Object {
   
   /**
-    * The cache-control max-age directive in ms, defaulting to 1 day. This can also be a string accepted by the ms module.
+    * The cache-control max-age directive in ms, defaulting to 1 day.
+    * This can also be a string accepted by the `ms` module.
     */
-  var maxAge: js.UndefOr[Double] = js.native
+  var maxAge: js.UndefOr[Double | String] = js.native
 }
 object MaxAge {
   
@@ -36,7 +37,7 @@ object MaxAge {
     }
     
     @scala.inline
-    def setMaxAge(value: Double): Self = this.set("maxAge", value.asInstanceOf[js.Any])
+    def setMaxAge(value: Double | String): Self = this.set("maxAge", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaxAge: Self = this.set("maxAge", js.undefined)

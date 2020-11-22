@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ClusterArgs extends js.Object {
   
   /**
-    * The type of HSM module in the cluster. Currently, only hsm1.medium is supported.
+    * The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
     */
   val hsmType: Input[String] = js.native
   

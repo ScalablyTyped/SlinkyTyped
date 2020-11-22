@@ -189,5 +189,5 @@ trait Job[T] extends js.Object {
   /**
     * Update a specific job's data. Promise resolves when the job has been updated.
     */
-  def update(data: js.Any): js.Promise[Unit] = js.native
+  def update(data: T): js.Promise[Unit] = js.native
 }

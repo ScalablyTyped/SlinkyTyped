@@ -51,7 +51,7 @@ import typingsSlinky.awsSdk.awsSdkStrings.vpcPeeringConnectionDeleted
 import typingsSlinky.awsSdk.awsSdkStrings.vpcPeeringConnectionExists
 import typingsSlinky.awsSdk.awsSdkStrings.vpnConnectionAvailable
 import typingsSlinky.awsSdk.awsSdkStrings.vpnConnectionDeleted
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -153,12 +153,12 @@ trait EC2 extends Service {
   ): Request[AdvertiseByoipCidrResult, AWSError] = js.native
   
   /**
-    * Allocates an Elastic IP address to your AWS account. After you allocate the Elastic IP address you can associate it with an instance or network interface. After you release an Elastic IP address, it is released to the IP address pool and can be allocated to a different AWS account. You can allocate an Elastic IP address from an address pool owned by AWS or from an address pool created from a public IPv4 address range that you have brought to AWS for use with your AWS resources using bring your own IP addresses (BYOIP). For more information, see Bring Your Own IP Addresses (BYOIP) in the Amazon Elastic Compute Cloud User Guide. [EC2-VPC] If you release an Elastic IP address, you might be able to recover it. You cannot recover an Elastic IP address that you released after it is allocated to another AWS account. You cannot recover an Elastic IP address for EC2-Classic. To attempt to recover an Elastic IP address that you released, specify it in this operation. An Elastic IP address is for use either in the EC2-Classic platform or in a VPC. By default, you can allocate 5 Elastic IP addresses for EC2-Classic per Region and 5 Elastic IP addresses for EC2-VPC per Region. For more information, see Elastic IP Addresses in the Amazon Elastic Compute Cloud User Guide.
+    * Allocates an Elastic IP address to your AWS account. After you allocate the Elastic IP address you can associate it with an instance or network interface. After you release an Elastic IP address, it is released to the IP address pool and can be allocated to a different AWS account. You can allocate an Elastic IP address from an address pool owned by AWS or from an address pool created from a public IPv4 address range that you have brought to AWS for use with your AWS resources using bring your own IP addresses (BYOIP). For more information, see Bring Your Own IP Addresses (BYOIP) in the Amazon Elastic Compute Cloud User Guide. [EC2-VPC] If you release an Elastic IP address, you might be able to recover it. You cannot recover an Elastic IP address that you released after it is allocated to another AWS account. You cannot recover an Elastic IP address for EC2-Classic. To attempt to recover an Elastic IP address that you released, specify it in this operation. An Elastic IP address is for use either in the EC2-Classic platform or in a VPC. By default, you can allocate 5 Elastic IP addresses for EC2-Classic per Region and 5 Elastic IP addresses for EC2-VPC per Region. For more information, see Elastic IP Addresses in the Amazon Elastic Compute Cloud User Guide. You can allocate a carrier IP address which is a public IP address from a telecommunication carrier, to a network interface which resides in a subnet in a Wavelength Zone (for example an EC2 instance). 
     */
   def allocateAddress(): Request[AllocateAddressResult, AWSError] = js.native
   def allocateAddress(callback: js.Function2[/* err */ AWSError, /* data */ AllocateAddressResult, Unit]): Request[AllocateAddressResult, AWSError] = js.native
   /**
-    * Allocates an Elastic IP address to your AWS account. After you allocate the Elastic IP address you can associate it with an instance or network interface. After you release an Elastic IP address, it is released to the IP address pool and can be allocated to a different AWS account. You can allocate an Elastic IP address from an address pool owned by AWS or from an address pool created from a public IPv4 address range that you have brought to AWS for use with your AWS resources using bring your own IP addresses (BYOIP). For more information, see Bring Your Own IP Addresses (BYOIP) in the Amazon Elastic Compute Cloud User Guide. [EC2-VPC] If you release an Elastic IP address, you might be able to recover it. You cannot recover an Elastic IP address that you released after it is allocated to another AWS account. You cannot recover an Elastic IP address for EC2-Classic. To attempt to recover an Elastic IP address that you released, specify it in this operation. An Elastic IP address is for use either in the EC2-Classic platform or in a VPC. By default, you can allocate 5 Elastic IP addresses for EC2-Classic per Region and 5 Elastic IP addresses for EC2-VPC per Region. For more information, see Elastic IP Addresses in the Amazon Elastic Compute Cloud User Guide.
+    * Allocates an Elastic IP address to your AWS account. After you allocate the Elastic IP address you can associate it with an instance or network interface. After you release an Elastic IP address, it is released to the IP address pool and can be allocated to a different AWS account. You can allocate an Elastic IP address from an address pool owned by AWS or from an address pool created from a public IPv4 address range that you have brought to AWS for use with your AWS resources using bring your own IP addresses (BYOIP). For more information, see Bring Your Own IP Addresses (BYOIP) in the Amazon Elastic Compute Cloud User Guide. [EC2-VPC] If you release an Elastic IP address, you might be able to recover it. You cannot recover an Elastic IP address that you released after it is allocated to another AWS account. You cannot recover an Elastic IP address for EC2-Classic. To attempt to recover an Elastic IP address that you released, specify it in this operation. An Elastic IP address is for use either in the EC2-Classic platform or in a VPC. By default, you can allocate 5 Elastic IP addresses for EC2-Classic per Region and 5 Elastic IP addresses for EC2-VPC per Region. For more information, see Elastic IP Addresses in the Amazon Elastic Compute Cloud User Guide. You can allocate a carrier IP address which is a public IP address from a telecommunication carrier, to a network interface which resides in a subnet in a Wavelength Zone (for example an EC2 instance). 
     */
   def allocateAddress(params: AllocateAddressRequest): Request[AllocateAddressResult, AWSError] = js.native
   def allocateAddress(
@@ -233,12 +233,12 @@ trait EC2 extends Service {
   ): Request[AssignPrivateIpAddressesResult, AWSError] = js.native
   
   /**
-    * Associates an Elastic IP address with an instance or a network interface. Before you can use an Elastic IP address, you must allocate it to your account. An Elastic IP address is for use in either the EC2-Classic platform or in a VPC. For more information, see Elastic IP Addresses in the Amazon Elastic Compute Cloud User Guide. [EC2-Classic, VPC in an EC2-VPC-only account] If the Elastic IP address is already associated with a different instance, it is disassociated from that instance and associated with the specified instance. If you associate an Elastic IP address with an instance that has an existing Elastic IP address, the existing address is disassociated from the instance, but remains allocated to your account. [VPC in an EC2-Classic account] If you don't specify a private IP address, the Elastic IP address is associated with the primary IP address. If the Elastic IP address is already associated with a different instance or a network interface, you get an error unless you allow reassociation. You cannot associate an Elastic IP address with an instance or network interface that has an existing Elastic IP address. You cannot associate an Elastic IP address with an interface in a different network border group.  This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error, and you may be charged for each time the Elastic IP address is remapped to the same instance. For more information, see the Elastic IP Addresses section of Amazon EC2 Pricing. 
+    * Associates an Elastic IP address, or carrier IP address (for instances that are in subnets in Wavelength Zones) with an instance or a network interface. Before you can use an Elastic IP address, you must allocate it to your account. An Elastic IP address is for use in either the EC2-Classic platform or in a VPC. For more information, see Elastic IP Addresses in the Amazon Elastic Compute Cloud User Guide. [EC2-Classic, VPC in an EC2-VPC-only account] If the Elastic IP address is already associated with a different instance, it is disassociated from that instance and associated with the specified instance. If you associate an Elastic IP address with an instance that has an existing Elastic IP address, the existing address is disassociated from the instance, but remains allocated to your account. [VPC in an EC2-Classic account] If you don't specify a private IP address, the Elastic IP address is associated with the primary IP address. If the Elastic IP address is already associated with a different instance or a network interface, you get an error unless you allow reassociation. You cannot associate an Elastic IP address with an instance or network interface that has an existing Elastic IP address. [Subnets in Wavelength Zones] You can associate an IP address from the telecommunication carrier to the instance or network interface.  You cannot associate an Elastic IP address with an interface in a different network border group.  This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error, and you may be charged for each time the Elastic IP address is remapped to the same instance. For more information, see the Elastic IP Addresses section of Amazon EC2 Pricing. 
     */
   def associateAddress(): Request[AssociateAddressResult, AWSError] = js.native
   def associateAddress(callback: js.Function2[/* err */ AWSError, /* data */ AssociateAddressResult, Unit]): Request[AssociateAddressResult, AWSError] = js.native
   /**
-    * Associates an Elastic IP address with an instance or a network interface. Before you can use an Elastic IP address, you must allocate it to your account. An Elastic IP address is for use in either the EC2-Classic platform or in a VPC. For more information, see Elastic IP Addresses in the Amazon Elastic Compute Cloud User Guide. [EC2-Classic, VPC in an EC2-VPC-only account] If the Elastic IP address is already associated with a different instance, it is disassociated from that instance and associated with the specified instance. If you associate an Elastic IP address with an instance that has an existing Elastic IP address, the existing address is disassociated from the instance, but remains allocated to your account. [VPC in an EC2-Classic account] If you don't specify a private IP address, the Elastic IP address is associated with the primary IP address. If the Elastic IP address is already associated with a different instance or a network interface, you get an error unless you allow reassociation. You cannot associate an Elastic IP address with an instance or network interface that has an existing Elastic IP address. You cannot associate an Elastic IP address with an interface in a different network border group.  This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error, and you may be charged for each time the Elastic IP address is remapped to the same instance. For more information, see the Elastic IP Addresses section of Amazon EC2 Pricing. 
+    * Associates an Elastic IP address, or carrier IP address (for instances that are in subnets in Wavelength Zones) with an instance or a network interface. Before you can use an Elastic IP address, you must allocate it to your account. An Elastic IP address is for use in either the EC2-Classic platform or in a VPC. For more information, see Elastic IP Addresses in the Amazon Elastic Compute Cloud User Guide. [EC2-Classic, VPC in an EC2-VPC-only account] If the Elastic IP address is already associated with a different instance, it is disassociated from that instance and associated with the specified instance. If you associate an Elastic IP address with an instance that has an existing Elastic IP address, the existing address is disassociated from the instance, but remains allocated to your account. [VPC in an EC2-Classic account] If you don't specify a private IP address, the Elastic IP address is associated with the primary IP address. If the Elastic IP address is already associated with a different instance or a network interface, you get an error unless you allow reassociation. You cannot associate an Elastic IP address with an instance or network interface that has an existing Elastic IP address. [Subnets in Wavelength Zones] You can associate an IP address from the telecommunication carrier to the instance or network interface.  You cannot associate an Elastic IP address with an interface in a different network border group.  This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error, and you may be charged for each time the Elastic IP address is remapped to the same instance. For more information, see the Elastic IP Addresses section of Amazon EC2 Pricing. 
     */
   def associateAddress(params: AssociateAddressRequest): Request[AssociateAddressResult, AWSError] = js.native
   def associateAddress(
@@ -273,6 +273,22 @@ trait EC2 extends Service {
     params: AssociateDhcpOptionsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
   ): Request[js.Object, AWSError] = js.native
+  
+  /**
+    * Associates an AWS Identity and Access Management (IAM) role with an AWS Certificate Manager (ACM) certificate. This enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave. For more information, see AWS Certificate Manager for Nitro Enclaves in the AWS Nitro Enclaves User Guide. When the IAM role is associated with the ACM certificate, places the certificate, certificate chain, and encrypted private key in an Amazon S3 bucket that only the associated IAM role can access. The private key of the certificate is encrypted with an AWS-managed KMS customer master (CMK) that has an attached attestation-based CMK policy. To enable the IAM role to access the Amazon S3 object, you must grant it permission to call s3:GetObject on the Amazon S3 bucket returned by the command. To enable the IAM role to access the AWS KMS CMK, you must grant it permission to call kms:Decrypt on AWS KMS CMK returned by the command. For more information, see  Grant the role permission to access the certificate and encryption key in the AWS Nitro Enclaves User Guide.
+    */
+  def associateEnclaveCertificateIamRole(): Request[AssociateEnclaveCertificateIamRoleResult, AWSError] = js.native
+  def associateEnclaveCertificateIamRole(
+    callback: js.Function2[/* err */ AWSError, /* data */ AssociateEnclaveCertificateIamRoleResult, Unit]
+  ): Request[AssociateEnclaveCertificateIamRoleResult, AWSError] = js.native
+  /**
+    * Associates an AWS Identity and Access Management (IAM) role with an AWS Certificate Manager (ACM) certificate. This enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave. For more information, see AWS Certificate Manager for Nitro Enclaves in the AWS Nitro Enclaves User Guide. When the IAM role is associated with the ACM certificate, places the certificate, certificate chain, and encrypted private key in an Amazon S3 bucket that only the associated IAM role can access. The private key of the certificate is encrypted with an AWS-managed KMS customer master (CMK) that has an attached attestation-based CMK policy. To enable the IAM role to access the Amazon S3 object, you must grant it permission to call s3:GetObject on the Amazon S3 bucket returned by the command. To enable the IAM role to access the AWS KMS CMK, you must grant it permission to call kms:Decrypt on AWS KMS CMK returned by the command. For more information, see  Grant the role permission to access the certificate and encryption key in the AWS Nitro Enclaves User Guide.
+    */
+  def associateEnclaveCertificateIamRole(params: AssociateEnclaveCertificateIamRoleRequest): Request[AssociateEnclaveCertificateIamRoleResult, AWSError] = js.native
+  def associateEnclaveCertificateIamRole(
+    params: AssociateEnclaveCertificateIamRoleRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ AssociateEnclaveCertificateIamRoleResult, Unit]
+  ): Request[AssociateEnclaveCertificateIamRoleResult, AWSError] = js.native
   
   /**
     * Associates an IAM instance profile with a running or stopped instance. You cannot associate more than one IAM instance profile with an instance.
@@ -405,12 +421,12 @@ trait EC2 extends Service {
   ): Request[AttachNetworkInterfaceResult, AWSError] = js.native
   
   /**
-    * Attaches an EBS volume to a running or stopped instance and exposes it to the instance with the specified device name. Encrypted EBS volumes must be attached to instances that support Amazon EBS encryption. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. After you attach an EBS volume, you must make it available. For more information, see Making an EBS Volume Available For Use. If a volume has an AWS Marketplace product code:   The volume can be attached only to a stopped instance.   AWS Marketplace product codes are copied from the volume to the instance.   You must be subscribed to the product.   The instance type and operating system of the instance must support the product. For example, you can't detach a volume from a Windows instance and attach it to a Linux instance.   For more information, see Attaching Amazon EBS Volumes in the Amazon Elastic Compute Cloud User Guide.
+    * Attaches an EBS volume to a running or stopped instance and exposes it to the instance with the specified device name. Encrypted EBS volumes must be attached to instances that support Amazon EBS encryption. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. After you attach an EBS volume, you must make it available. For more information, see Making an EBS volume available for use. If a volume has an AWS Marketplace product code:   The volume can be attached only to a stopped instance.   AWS Marketplace product codes are copied from the volume to the instance.   You must be subscribed to the product.   The instance type and operating system of the instance must support the product. For example, you can't detach a volume from a Windows instance and attach it to a Linux instance.   For more information, see Attaching Amazon EBS volumes in the Amazon Elastic Compute Cloud User Guide.
     */
   def attachVolume(): Request[VolumeAttachment, AWSError] = js.native
   def attachVolume(callback: js.Function2[/* err */ AWSError, /* data */ VolumeAttachment, Unit]): Request[VolumeAttachment, AWSError] = js.native
   /**
-    * Attaches an EBS volume to a running or stopped instance and exposes it to the instance with the specified device name. Encrypted EBS volumes must be attached to instances that support Amazon EBS encryption. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. After you attach an EBS volume, you must make it available. For more information, see Making an EBS Volume Available For Use. If a volume has an AWS Marketplace product code:   The volume can be attached only to a stopped instance.   AWS Marketplace product codes are copied from the volume to the instance.   You must be subscribed to the product.   The instance type and operating system of the instance must support the product. For example, you can't detach a volume from a Windows instance and attach it to a Linux instance.   For more information, see Attaching Amazon EBS Volumes in the Amazon Elastic Compute Cloud User Guide.
+    * Attaches an EBS volume to a running or stopped instance and exposes it to the instance with the specified device name. Encrypted EBS volumes must be attached to instances that support Amazon EBS encryption. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. After you attach an EBS volume, you must make it available. For more information, see Making an EBS volume available for use. If a volume has an AWS Marketplace product code:   The volume can be attached only to a stopped instance.   AWS Marketplace product codes are copied from the volume to the instance.   You must be subscribed to the product.   The instance type and operating system of the instance must support the product. For example, you can't detach a volume from a Windows instance and attach it to a Linux instance.   For more information, see Attaching Amazon EBS volumes in the Amazon Elastic Compute Cloud User Guide.
     */
   def attachVolume(params: AttachVolumeRequest): Request[VolumeAttachment, AWSError] = js.native
   def attachVolume(
@@ -646,12 +662,12 @@ trait EC2 extends Service {
   ): Request[CopyImageResult, AWSError] = js.native
   
   /**
-    * Copies a point-in-time snapshot of an EBS volume and stores it in Amazon S3. You can copy the snapshot within the same Region or from one Region to another. You can use the snapshot to create EBS volumes or Amazon Machine Images (AMIs). Copies of encrypted EBS snapshots remain encrypted. Copies of unencrypted snapshots remain unencrypted, unless you enable encryption for the snapshot copy operation. By default, encrypted snapshot copies use the default AWS Key Management Service (AWS KMS) customer master key (CMK); however, you can specify a different CMK. To copy an encrypted snapshot that has been shared from another account, you must have permissions for the CMK used to encrypt the snapshot. Snapshots created by copying another snapshot have an arbitrary volume ID that should not be used for any purpose. For more information, see Copying an Amazon EBS Snapshot in the Amazon Elastic Compute Cloud User Guide.
+    * Copies a point-in-time snapshot of an EBS volume and stores it in Amazon S3. You can copy the snapshot within the same Region or from one Region to another. You can use the snapshot to create EBS volumes or Amazon Machine Images (AMIs). Copies of encrypted EBS snapshots remain encrypted. Copies of unencrypted snapshots remain unencrypted, unless you enable encryption for the snapshot copy operation. By default, encrypted snapshot copies use the default AWS Key Management Service (AWS KMS) customer master key (CMK); however, you can specify a different CMK. To copy an encrypted snapshot that has been shared from another account, you must have permissions for the CMK used to encrypt the snapshot. Snapshots created by copying another snapshot have an arbitrary volume ID that should not be used for any purpose. For more information, see Copying an Amazon EBS snapshot in the Amazon Elastic Compute Cloud User Guide.
     */
   def copySnapshot(): Request[CopySnapshotResult, AWSError] = js.native
   def copySnapshot(callback: js.Function2[/* err */ AWSError, /* data */ CopySnapshotResult, Unit]): Request[CopySnapshotResult, AWSError] = js.native
   /**
-    * Copies a point-in-time snapshot of an EBS volume and stores it in Amazon S3. You can copy the snapshot within the same Region or from one Region to another. You can use the snapshot to create EBS volumes or Amazon Machine Images (AMIs). Copies of encrypted EBS snapshots remain encrypted. Copies of unencrypted snapshots remain unencrypted, unless you enable encryption for the snapshot copy operation. By default, encrypted snapshot copies use the default AWS Key Management Service (AWS KMS) customer master key (CMK); however, you can specify a different CMK. To copy an encrypted snapshot that has been shared from another account, you must have permissions for the CMK used to encrypt the snapshot. Snapshots created by copying another snapshot have an arbitrary volume ID that should not be used for any purpose. For more information, see Copying an Amazon EBS Snapshot in the Amazon Elastic Compute Cloud User Guide.
+    * Copies a point-in-time snapshot of an EBS volume and stores it in Amazon S3. You can copy the snapshot within the same Region or from one Region to another. You can use the snapshot to create EBS volumes or Amazon Machine Images (AMIs). Copies of encrypted EBS snapshots remain encrypted. Copies of unencrypted snapshots remain unencrypted, unless you enable encryption for the snapshot copy operation. By default, encrypted snapshot copies use the default AWS Key Management Service (AWS KMS) customer master key (CMK); however, you can specify a different CMK. To copy an encrypted snapshot that has been shared from another account, you must have permissions for the CMK used to encrypt the snapshot. Snapshots created by copying another snapshot have an arbitrary volume ID that should not be used for any purpose. For more information, see Copying an Amazon EBS snapshot in the Amazon Elastic Compute Cloud User Guide.
     */
   def copySnapshot(params: CopySnapshotRequest): Request[CopySnapshotResult, AWSError] = js.native
   def copySnapshot(
@@ -672,6 +688,20 @@ trait EC2 extends Service {
     params: CreateCapacityReservationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateCapacityReservationResult, Unit]
   ): Request[CreateCapacityReservationResult, AWSError] = js.native
+  
+  /**
+    * Creates a carrier gateway. For more information about carrier gateways, see Carrier gateways in the AWS Wavelength Developer Guide.
+    */
+  def createCarrierGateway(): Request[CreateCarrierGatewayResult, AWSError] = js.native
+  def createCarrierGateway(callback: js.Function2[/* err */ AWSError, /* data */ CreateCarrierGatewayResult, Unit]): Request[CreateCarrierGatewayResult, AWSError] = js.native
+  /**
+    * Creates a carrier gateway. For more information about carrier gateways, see Carrier gateways in the AWS Wavelength Developer Guide.
+    */
+  def createCarrierGateway(params: CreateCarrierGatewayRequest): Request[CreateCarrierGatewayResult, AWSError] = js.native
+  def createCarrierGateway(
+    params: CreateCarrierGatewayRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateCarrierGatewayResult, Unit]
+  ): Request[CreateCarrierGatewayResult, AWSError] = js.native
   
   /**
     * Creates a Client VPN endpoint. A Client VPN endpoint is the resource you create and configure to enable and manage client VPN sessions. It is the destination endpoint at which all client VPN sessions are terminated.
@@ -702,12 +732,12 @@ trait EC2 extends Service {
   ): Request[CreateClientVpnRouteResult, AWSError] = js.native
   
   /**
-    * Provides information to AWS about your VPN customer gateway device. The customer gateway is the appliance at your end of the VPN connection. (The device on the AWS side of the VPN connection is the virtual private gateway.) You must provide the Internet-routable IP address of the customer gateway's external interface. The IP address must be static and can be behind a device performing network address translation (NAT). For devices that use Border Gateway Protocol (BGP), you can also provide the device's BGP Autonomous System Number (ASN). You can use an existing ASN assigned to your network. If you don't have an ASN already, you can use a private ASN (in the 64512 - 65534 range).  Amazon EC2 supports all 2-byte ASN numbers in the range of 1 - 65534, with the exception of 7224, which is reserved in the us-east-1 Region, and 9059, which is reserved in the eu-west-1 Region.  For more information, see AWS Site-to-Site VPN in the AWS Site-to-Site VPN User Guide.  To create more than one customer gateway with the same VPN type, IP address, and BGP ASN, specify a unique device name for each customer gateway. Identical requests return information about the existing customer gateway and do not create new customer gateways. 
+    * Provides information to AWS about your VPN customer gateway device. The customer gateway is the appliance at your end of the VPN connection. (The device on the AWS side of the VPN connection is the virtual private gateway.) You must provide the internet-routable IP address of the customer gateway's external interface. The IP address must be static and can be behind a device performing network address translation (NAT). For devices that use Border Gateway Protocol (BGP), you can also provide the device's BGP Autonomous System Number (ASN). You can use an existing ASN assigned to your network. If you don't have an ASN already, you can use a private ASN (in the 64512 - 65534 range).  Amazon EC2 supports all 4-byte ASN numbers in the range of 1 - 2147483647, with the exception of the following:   7224 - reserved in the us-east-1 Region   9059 - reserved in the eu-west-1 Region   17943 - reserved in the ap-southeast-1 Region   10124 - reserved in the ap-northeast-1 Region    For more information, see AWS Site-to-Site VPN in the AWS Site-to-Site VPN User Guide.  To create more than one customer gateway with the same VPN type, IP address, and BGP ASN, specify a unique device name for each customer gateway. Identical requests return information about the existing customer gateway and do not create new customer gateways. 
     */
   def createCustomerGateway(): Request[CreateCustomerGatewayResult, AWSError] = js.native
   def createCustomerGateway(callback: js.Function2[/* err */ AWSError, /* data */ CreateCustomerGatewayResult, Unit]): Request[CreateCustomerGatewayResult, AWSError] = js.native
   /**
-    * Provides information to AWS about your VPN customer gateway device. The customer gateway is the appliance at your end of the VPN connection. (The device on the AWS side of the VPN connection is the virtual private gateway.) You must provide the Internet-routable IP address of the customer gateway's external interface. The IP address must be static and can be behind a device performing network address translation (NAT). For devices that use Border Gateway Protocol (BGP), you can also provide the device's BGP Autonomous System Number (ASN). You can use an existing ASN assigned to your network. If you don't have an ASN already, you can use a private ASN (in the 64512 - 65534 range).  Amazon EC2 supports all 2-byte ASN numbers in the range of 1 - 65534, with the exception of 7224, which is reserved in the us-east-1 Region, and 9059, which is reserved in the eu-west-1 Region.  For more information, see AWS Site-to-Site VPN in the AWS Site-to-Site VPN User Guide.  To create more than one customer gateway with the same VPN type, IP address, and BGP ASN, specify a unique device name for each customer gateway. Identical requests return information about the existing customer gateway and do not create new customer gateways. 
+    * Provides information to AWS about your VPN customer gateway device. The customer gateway is the appliance at your end of the VPN connection. (The device on the AWS side of the VPN connection is the virtual private gateway.) You must provide the internet-routable IP address of the customer gateway's external interface. The IP address must be static and can be behind a device performing network address translation (NAT). For devices that use Border Gateway Protocol (BGP), you can also provide the device's BGP Autonomous System Number (ASN). You can use an existing ASN assigned to your network. If you don't have an ASN already, you can use a private ASN (in the 64512 - 65534 range).  Amazon EC2 supports all 4-byte ASN numbers in the range of 1 - 2147483647, with the exception of the following:   7224 - reserved in the us-east-1 Region   9059 - reserved in the eu-west-1 Region   17943 - reserved in the ap-southeast-1 Region   10124 - reserved in the ap-northeast-1 Region    For more information, see AWS Site-to-Site VPN in the AWS Site-to-Site VPN User Guide.  To create more than one customer gateway with the same VPN type, IP address, and BGP ASN, specify a unique device name for each customer gateway. Identical requests return information about the existing customer gateway and do not create new customer gateways. 
     */
   def createCustomerGateway(params: CreateCustomerGatewayRequest): Request[CreateCustomerGatewayResult, AWSError] = js.native
   def createCustomerGateway(
@@ -1089,12 +1119,12 @@ trait EC2 extends Service {
   ): Request[CreateSecurityGroupResult, AWSError] = js.native
   
   /**
-    * Creates a snapshot of an EBS volume and stores it in Amazon S3. You can use snapshots for backups, to make copies of EBS volumes, and to save data before shutting down an instance. When a snapshot is created, any AWS Marketplace product codes that are associated with the source volume are propagated to the snapshot. You can take a snapshot of an attached volume that is in use. However, snapshots only capture data that has been written to your EBS volume at the time the snapshot command is issued; this may exclude any data that has been cached by any applications or the operating system. If you can pause any file systems on the volume long enough to take a snapshot, your snapshot should be complete. However, if you cannot pause all file writes to the volume, you should unmount the volume from within the instance, issue the snapshot command, and then remount the volume to ensure a consistent and complete snapshot. You may remount and use your volume while the snapshot status is pending. To create a snapshot for EBS volumes that serve as root devices, you should stop the instance before taking the snapshot. Snapshots that are taken from encrypted volumes are automatically encrypted. Volumes that are created from encrypted snapshots are also automatically encrypted. Your encrypted volumes and any associated snapshots always remain protected. You can tag your snapshots during creation. For more information, see Tagging Your Amazon EC2 Resources in the Amazon Elastic Compute Cloud User Guide. For more information, see Amazon Elastic Block Store and Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide.
+    * Creates a snapshot of an EBS volume and stores it in Amazon S3. You can use snapshots for backups, to make copies of EBS volumes, and to save data before shutting down an instance. When a snapshot is created, any AWS Marketplace product codes that are associated with the source volume are propagated to the snapshot. You can take a snapshot of an attached volume that is in use. However, snapshots only capture data that has been written to your EBS volume at the time the snapshot command is issued; this may exclude any data that has been cached by any applications or the operating system. If you can pause any file systems on the volume long enough to take a snapshot, your snapshot should be complete. However, if you cannot pause all file writes to the volume, you should unmount the volume from within the instance, issue the snapshot command, and then remount the volume to ensure a consistent and complete snapshot. You may remount and use your volume while the snapshot status is pending. To create a snapshot for EBS volumes that serve as root devices, you should stop the instance before taking the snapshot. Snapshots that are taken from encrypted volumes are automatically encrypted. Volumes that are created from encrypted snapshots are also automatically encrypted. Your encrypted volumes and any associated snapshots always remain protected. You can tag your snapshots during creation. For more information, see Tagging your Amazon EC2 resources in the Amazon Elastic Compute Cloud User Guide. For more information, see Amazon Elastic Block Store and Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide.
     */
   def createSnapshot(): Request[Snapshot, AWSError] = js.native
   def createSnapshot(callback: js.Function2[/* err */ AWSError, /* data */ Snapshot, Unit]): Request[Snapshot, AWSError] = js.native
   /**
-    * Creates a snapshot of an EBS volume and stores it in Amazon S3. You can use snapshots for backups, to make copies of EBS volumes, and to save data before shutting down an instance. When a snapshot is created, any AWS Marketplace product codes that are associated with the source volume are propagated to the snapshot. You can take a snapshot of an attached volume that is in use. However, snapshots only capture data that has been written to your EBS volume at the time the snapshot command is issued; this may exclude any data that has been cached by any applications or the operating system. If you can pause any file systems on the volume long enough to take a snapshot, your snapshot should be complete. However, if you cannot pause all file writes to the volume, you should unmount the volume from within the instance, issue the snapshot command, and then remount the volume to ensure a consistent and complete snapshot. You may remount and use your volume while the snapshot status is pending. To create a snapshot for EBS volumes that serve as root devices, you should stop the instance before taking the snapshot. Snapshots that are taken from encrypted volumes are automatically encrypted. Volumes that are created from encrypted snapshots are also automatically encrypted. Your encrypted volumes and any associated snapshots always remain protected. You can tag your snapshots during creation. For more information, see Tagging Your Amazon EC2 Resources in the Amazon Elastic Compute Cloud User Guide. For more information, see Amazon Elastic Block Store and Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide.
+    * Creates a snapshot of an EBS volume and stores it in Amazon S3. You can use snapshots for backups, to make copies of EBS volumes, and to save data before shutting down an instance. When a snapshot is created, any AWS Marketplace product codes that are associated with the source volume are propagated to the snapshot. You can take a snapshot of an attached volume that is in use. However, snapshots only capture data that has been written to your EBS volume at the time the snapshot command is issued; this may exclude any data that has been cached by any applications or the operating system. If you can pause any file systems on the volume long enough to take a snapshot, your snapshot should be complete. However, if you cannot pause all file writes to the volume, you should unmount the volume from within the instance, issue the snapshot command, and then remount the volume to ensure a consistent and complete snapshot. You may remount and use your volume while the snapshot status is pending. To create a snapshot for EBS volumes that serve as root devices, you should stop the instance before taking the snapshot. Snapshots that are taken from encrypted volumes are automatically encrypted. Volumes that are created from encrypted snapshots are also automatically encrypted. Your encrypted volumes and any associated snapshots always remain protected. You can tag your snapshots during creation. For more information, see Tagging your Amazon EC2 resources in the Amazon Elastic Compute Cloud User Guide. For more information, see Amazon Elastic Block Store and Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide.
     */
   def createSnapshot(params: CreateSnapshotRequest): Request[Snapshot, AWSError] = js.native
   def createSnapshot(
@@ -1258,6 +1288,22 @@ trait EC2 extends Service {
   ): Request[CreateTransitGatewayPeeringAttachmentResult, AWSError] = js.native
   
   /**
+    * Creates a reference (route) to a prefix list in a specified transit gateway route table.
+    */
+  def createTransitGatewayPrefixListReference(): Request[CreateTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  def createTransitGatewayPrefixListReference(
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateTransitGatewayPrefixListReferenceResult, Unit]
+  ): Request[CreateTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  /**
+    * Creates a reference (route) to a prefix list in a specified transit gateway route table.
+    */
+  def createTransitGatewayPrefixListReference(params: CreateTransitGatewayPrefixListReferenceRequest): Request[CreateTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  def createTransitGatewayPrefixListReference(
+    params: CreateTransitGatewayPrefixListReferenceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateTransitGatewayPrefixListReferenceResult, Unit]
+  ): Request[CreateTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  
+  /**
     * Creates a static route for the specified transit gateway route table.
     */
   def createTransitGatewayRoute(): Request[CreateTransitGatewayRouteResult, AWSError] = js.native
@@ -1302,12 +1348,12 @@ trait EC2 extends Service {
   ): Request[CreateTransitGatewayVpcAttachmentResult, AWSError] = js.native
   
   /**
-    * Creates an EBS volume that can be attached to an instance in the same Availability Zone. The volume is created in the regional endpoint that you send the HTTP request to. For more information see Regions and Endpoints. You can create a new empty volume or restore a volume from an EBS snapshot. Any AWS Marketplace product codes from the snapshot are propagated to the volume. You can create encrypted volumes. Encrypted volumes must be attached to instances that support Amazon EBS encryption. Volumes that are created from encrypted snapshots are also automatically encrypted. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. You can tag your volumes during creation. For more information, see Tagging Your Amazon EC2 Resources in the Amazon Elastic Compute Cloud User Guide. For more information, see Creating an Amazon EBS Volume in the Amazon Elastic Compute Cloud User Guide.
+    * Creates an EBS volume that can be attached to an instance in the same Availability Zone. The volume is created in the regional endpoint that you send the HTTP request to. For more information see Regions and Endpoints. You can create a new empty volume or restore a volume from an EBS snapshot. Any AWS Marketplace product codes from the snapshot are propagated to the volume. You can create encrypted volumes. Encrypted volumes must be attached to instances that support Amazon EBS encryption. Volumes that are created from encrypted snapshots are also automatically encrypted. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. You can tag your volumes during creation. For more information, see Tagging your Amazon EC2 resources in the Amazon Elastic Compute Cloud User Guide. For more information, see Creating an Amazon EBS volume in the Amazon Elastic Compute Cloud User Guide.
     */
   def createVolume(): Request[Volume, AWSError] = js.native
   def createVolume(callback: js.Function2[/* err */ AWSError, /* data */ Volume, Unit]): Request[Volume, AWSError] = js.native
   /**
-    * Creates an EBS volume that can be attached to an instance in the same Availability Zone. The volume is created in the regional endpoint that you send the HTTP request to. For more information see Regions and Endpoints. You can create a new empty volume or restore a volume from an EBS snapshot. Any AWS Marketplace product codes from the snapshot are propagated to the volume. You can create encrypted volumes. Encrypted volumes must be attached to instances that support Amazon EBS encryption. Volumes that are created from encrypted snapshots are also automatically encrypted. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. You can tag your volumes during creation. For more information, see Tagging Your Amazon EC2 Resources in the Amazon Elastic Compute Cloud User Guide. For more information, see Creating an Amazon EBS Volume in the Amazon Elastic Compute Cloud User Guide.
+    * Creates an EBS volume that can be attached to an instance in the same Availability Zone. The volume is created in the regional endpoint that you send the HTTP request to. For more information see Regions and Endpoints. You can create a new empty volume or restore a volume from an EBS snapshot. Any AWS Marketplace product codes from the snapshot are propagated to the volume. You can create encrypted volumes. Encrypted volumes must be attached to instances that support Amazon EBS encryption. Volumes that are created from encrypted snapshots are also automatically encrypted. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. You can tag your volumes during creation. For more information, see Tagging your Amazon EC2 resources in the Amazon Elastic Compute Cloud User Guide. For more information, see Creating an Amazon EBS volume in the Amazon Elastic Compute Cloud User Guide.
     */
   def createVolume(params: CreateVolumeRequest): Request[Volume, AWSError] = js.native
   def createVolume(params: CreateVolumeRequest, callback: js.Function2[/* err */ AWSError, /* data */ Volume, Unit]): Request[Volume, AWSError] = js.native
@@ -1327,12 +1373,12 @@ trait EC2 extends Service {
   ): Request[CreateVpcResult, AWSError] = js.native
   
   /**
-    * Creates a VPC endpoint for a specified service. An endpoint enables you to create a private connection between your VPC and the service. The service may be provided by AWS, an AWS Marketplace Partner, or another AWS account. For more information, see VPC Endpoints in the Amazon Virtual Private Cloud User Guide. A gateway endpoint serves as a target for a route in your route table for traffic destined for the AWS service. You can specify an endpoint policy to attach to the endpoint, which will control access to the service from your VPC. You can also specify the VPC route tables that use the endpoint. An interface endpoint is a network interface in your subnet that serves as an endpoint for communicating with the specified service. You can specify the subnets in which to create an endpoint, and the security groups to associate with the endpoint network interface. Use DescribeVpcEndpointServices to get a list of supported services.
+    * Creates a VPC endpoint for a specified service. An endpoint enables you to create a private connection between your VPC and the service. The service may be provided by AWS, an AWS Marketplace Partner, or another AWS account. For more information, see VPC Endpoints in the Amazon Virtual Private Cloud User Guide. A gateway endpoint serves as a target for a route in your route table for traffic destined for the AWS service. You can specify an endpoint policy to attach to the endpoint, which will control access to the service from your VPC. You can also specify the VPC route tables that use the endpoint. An interface endpoint is a network interface in your subnet that serves as an endpoint for communicating with the specified service. You can specify the subnets in which to create an endpoint, and the security groups to associate with the endpoint network interface. A GatewayLoadBalancer endpoint is a network interface in your subnet that serves an endpoint for communicating with a Gateway Load Balancer that you've configured as a VPC endpoint service. Use DescribeVpcEndpointServices to get a list of supported services.
     */
   def createVpcEndpoint(): Request[CreateVpcEndpointResult, AWSError] = js.native
   def createVpcEndpoint(callback: js.Function2[/* err */ AWSError, /* data */ CreateVpcEndpointResult, Unit]): Request[CreateVpcEndpointResult, AWSError] = js.native
   /**
-    * Creates a VPC endpoint for a specified service. An endpoint enables you to create a private connection between your VPC and the service. The service may be provided by AWS, an AWS Marketplace Partner, or another AWS account. For more information, see VPC Endpoints in the Amazon Virtual Private Cloud User Guide. A gateway endpoint serves as a target for a route in your route table for traffic destined for the AWS service. You can specify an endpoint policy to attach to the endpoint, which will control access to the service from your VPC. You can also specify the VPC route tables that use the endpoint. An interface endpoint is a network interface in your subnet that serves as an endpoint for communicating with the specified service. You can specify the subnets in which to create an endpoint, and the security groups to associate with the endpoint network interface. Use DescribeVpcEndpointServices to get a list of supported services.
+    * Creates a VPC endpoint for a specified service. An endpoint enables you to create a private connection between your VPC and the service. The service may be provided by AWS, an AWS Marketplace Partner, or another AWS account. For more information, see VPC Endpoints in the Amazon Virtual Private Cloud User Guide. A gateway endpoint serves as a target for a route in your route table for traffic destined for the AWS service. You can specify an endpoint policy to attach to the endpoint, which will control access to the service from your VPC. You can also specify the VPC route tables that use the endpoint. An interface endpoint is a network interface in your subnet that serves as an endpoint for communicating with the specified service. You can specify the subnets in which to create an endpoint, and the security groups to associate with the endpoint network interface. A GatewayLoadBalancer endpoint is a network interface in your subnet that serves an endpoint for communicating with a Gateway Load Balancer that you've configured as a VPC endpoint service. Use DescribeVpcEndpointServices to get a list of supported services.
     */
   def createVpcEndpoint(params: CreateVpcEndpointRequest): Request[CreateVpcEndpointResult, AWSError] = js.native
   def createVpcEndpoint(
@@ -1357,14 +1403,14 @@ trait EC2 extends Service {
   ): Request[CreateVpcEndpointConnectionNotificationResult, AWSError] = js.native
   
   /**
-    * Creates a VPC endpoint service configuration to which service consumers (AWS accounts, IAM users, and IAM roles) can connect. Service consumers can create an interface VPC endpoint to connect to your service. To create an endpoint service configuration, you must first create a Network Load Balancer for your service. For more information, see VPC Endpoint Services in the Amazon Virtual Private Cloud User Guide.  If you set the private DNS name, you must prove that you own the private DNS domain name. For more information, see VPC Endpoint Service Private DNS Name Verification in the Amazon Virtual Private Cloud User Guide.
+    * Creates a VPC endpoint service configuration to which service consumers (AWS accounts, IAM users, and IAM roles) can connect. To create an endpoint service configuration, you must first create one of the following for your service:   A Network Load Balancer. Service consumers connect to your service using an interface endpoint.   A Gateway Load Balancer. Service consumers connect to your service using a Gateway Load Balancer endpoint.   For more information, see VPC Endpoint Services in the Amazon Virtual Private Cloud User Guide.  If you set the private DNS name, you must prove that you own the private DNS domain name. For more information, see VPC Endpoint Service Private DNS Name Verification in the Amazon Virtual Private Cloud User Guide.
     */
   def createVpcEndpointServiceConfiguration(): Request[CreateVpcEndpointServiceConfigurationResult, AWSError] = js.native
   def createVpcEndpointServiceConfiguration(
     callback: js.Function2[/* err */ AWSError, /* data */ CreateVpcEndpointServiceConfigurationResult, Unit]
   ): Request[CreateVpcEndpointServiceConfigurationResult, AWSError] = js.native
   /**
-    * Creates a VPC endpoint service configuration to which service consumers (AWS accounts, IAM users, and IAM roles) can connect. Service consumers can create an interface VPC endpoint to connect to your service. To create an endpoint service configuration, you must first create a Network Load Balancer for your service. For more information, see VPC Endpoint Services in the Amazon Virtual Private Cloud User Guide.  If you set the private DNS name, you must prove that you own the private DNS domain name. For more information, see VPC Endpoint Service Private DNS Name Verification in the Amazon Virtual Private Cloud User Guide.
+    * Creates a VPC endpoint service configuration to which service consumers (AWS accounts, IAM users, and IAM roles) can connect. To create an endpoint service configuration, you must first create one of the following for your service:   A Network Load Balancer. Service consumers connect to your service using an interface endpoint.   A Gateway Load Balancer. Service consumers connect to your service using a Gateway Load Balancer endpoint.   For more information, see VPC Endpoint Services in the Amazon Virtual Private Cloud User Guide.  If you set the private DNS name, you must prove that you own the private DNS domain name. For more information, see VPC Endpoint Service Private DNS Name Verification in the Amazon Virtual Private Cloud User Guide.
     */
   def createVpcEndpointServiceConfiguration(params: CreateVpcEndpointServiceConfigurationRequest): Request[CreateVpcEndpointServiceConfigurationResult, AWSError] = js.native
   def createVpcEndpointServiceConfiguration(
@@ -1387,12 +1433,12 @@ trait EC2 extends Service {
   ): Request[CreateVpcPeeringConnectionResult, AWSError] = js.native
   
   /**
-    * Creates a VPN connection between an existing virtual private gateway and a VPN customer gateway. The supported connection type is ipsec.1. The response includes information that you need to give to your network administrator to configure your customer gateway.  We strongly recommend that you use HTTPS when calling this operation because the response contains sensitive cryptographic information for configuring your customer gateway.  If you decide to shut down your VPN connection for any reason and later create a new VPN connection, you must reconfigure your customer gateway with the new information returned from this call. This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error. For more information, see AWS Site-to-Site VPN in the AWS Site-to-Site VPN User Guide.
+    * Creates a VPN connection between an existing virtual private gateway or transit gateway and a customer gateway. The supported connection type is ipsec.1. The response includes information that you need to give to your network administrator to configure your customer gateway.  We strongly recommend that you use HTTPS when calling this operation because the response contains sensitive cryptographic information for configuring your customer gateway device.  If you decide to shut down your VPN connection for any reason and later create a new VPN connection, you must reconfigure your customer gateway with the new information returned from this call. This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error. For more information, see AWS Site-to-Site VPN in the AWS Site-to-Site VPN User Guide.
     */
   def createVpnConnection(): Request[CreateVpnConnectionResult, AWSError] = js.native
   def createVpnConnection(callback: js.Function2[/* err */ AWSError, /* data */ CreateVpnConnectionResult, Unit]): Request[CreateVpnConnectionResult, AWSError] = js.native
   /**
-    * Creates a VPN connection between an existing virtual private gateway and a VPN customer gateway. The supported connection type is ipsec.1. The response includes information that you need to give to your network administrator to configure your customer gateway.  We strongly recommend that you use HTTPS when calling this operation because the response contains sensitive cryptographic information for configuring your customer gateway.  If you decide to shut down your VPN connection for any reason and later create a new VPN connection, you must reconfigure your customer gateway with the new information returned from this call. This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error. For more information, see AWS Site-to-Site VPN in the AWS Site-to-Site VPN User Guide.
+    * Creates a VPN connection between an existing virtual private gateway or transit gateway and a customer gateway. The supported connection type is ipsec.1. The response includes information that you need to give to your network administrator to configure your customer gateway.  We strongly recommend that you use HTTPS when calling this operation because the response contains sensitive cryptographic information for configuring your customer gateway device.  If you decide to shut down your VPN connection for any reason and later create a new VPN connection, you must reconfigure your customer gateway with the new information returned from this call. This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error. For more information, see AWS Site-to-Site VPN in the AWS Site-to-Site VPN User Guide.
     */
   def createVpnConnection(params: CreateVpnConnectionRequest): Request[CreateVpnConnectionResult, AWSError] = js.native
   def createVpnConnection(
@@ -1427,6 +1473,20 @@ trait EC2 extends Service {
     params: CreateVpnGatewayRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateVpnGatewayResult, Unit]
   ): Request[CreateVpnGatewayResult, AWSError] = js.native
+  
+  /**
+    * Deletes a carrier gateway.  If you do not delete the route that contains the carrier gateway as the Target, the route is a blackhole route. For information about how to delete a route, see DeleteRoute. 
+    */
+  def deleteCarrierGateway(): Request[DeleteCarrierGatewayResult, AWSError] = js.native
+  def deleteCarrierGateway(callback: js.Function2[/* err */ AWSError, /* data */ DeleteCarrierGatewayResult, Unit]): Request[DeleteCarrierGatewayResult, AWSError] = js.native
+  /**
+    * Deletes a carrier gateway.  If you do not delete the route that contains the carrier gateway as the Target, the route is a blackhole route. For information about how to delete a route, see DeleteRoute. 
+    */
+  def deleteCarrierGateway(params: DeleteCarrierGatewayRequest): Request[DeleteCarrierGatewayResult, AWSError] = js.native
+  def deleteCarrierGateway(
+    params: DeleteCarrierGatewayRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteCarrierGatewayResult, Unit]
+  ): Request[DeleteCarrierGatewayResult, AWSError] = js.native
   
   /**
     * Deletes the specified Client VPN endpoint. You must disassociate all target networks before you can delete a Client VPN endpoint.
@@ -1499,12 +1559,12 @@ trait EC2 extends Service {
   ): Request[DeleteEgressOnlyInternetGatewayResult, AWSError] = js.native
   
   /**
-    * Deletes the specified EC2 Fleet. After you delete an EC2 Fleet, it launches no new instances. You must specify whether an EC2 Fleet should also terminate its instances. If you terminate the instances, the EC2 Fleet enters the deleted_terminating state. Otherwise, the EC2 Fleet enters the deleted_running state, and the instances continue to run until they are interrupted or you terminate them manually. 
+    * Deletes the specified EC2 Fleet. After you delete an EC2 Fleet, it launches no new instances. You must specify whether a deleted EC2 Fleet should also terminate its instances. If you choose to terminate the instances, the EC2 Fleet enters the deleted_terminating state. Otherwise, the EC2 Fleet enters the deleted_running state, and the instances continue to run until they are interrupted or you terminate them manually. For instant fleets, EC2 Fleet must terminate the instances when the fleet is deleted. A deleted instant fleet with running instances is not supported.  Restrictions    You can delete up to 25 instant fleets in a single request. If you exceed this number, no instant fleets are deleted and an error is returned. There is no restriction on the number of fleets of type maintain or request that can be deleted in a single request.   Up to 1000 instances can be terminated in a single request to delete instant fleets.   For more information, see Deleting an EC2 Fleet in the Amazon Elastic Compute Cloud User Guide.
     */
   def deleteFleets(): Request[DeleteFleetsResult, AWSError] = js.native
   def deleteFleets(callback: js.Function2[/* err */ AWSError, /* data */ DeleteFleetsResult, Unit]): Request[DeleteFleetsResult, AWSError] = js.native
   /**
-    * Deletes the specified EC2 Fleet. After you delete an EC2 Fleet, it launches no new instances. You must specify whether an EC2 Fleet should also terminate its instances. If you terminate the instances, the EC2 Fleet enters the deleted_terminating state. Otherwise, the EC2 Fleet enters the deleted_running state, and the instances continue to run until they are interrupted or you terminate them manually. 
+    * Deletes the specified EC2 Fleet. After you delete an EC2 Fleet, it launches no new instances. You must specify whether a deleted EC2 Fleet should also terminate its instances. If you choose to terminate the instances, the EC2 Fleet enters the deleted_terminating state. Otherwise, the EC2 Fleet enters the deleted_running state, and the instances continue to run until they are interrupted or you terminate them manually. For instant fleets, EC2 Fleet must terminate the instances when the fleet is deleted. A deleted instant fleet with running instances is not supported.  Restrictions    You can delete up to 25 instant fleets in a single request. If you exceed this number, no instant fleets are deleted and an error is returned. There is no restriction on the number of fleets of type maintain or request that can be deleted in a single request.   Up to 1000 instances can be terminated in a single request to delete instant fleets.   For more information, see Deleting an EC2 Fleet in the Amazon Elastic Compute Cloud User Guide.
     */
   def deleteFleets(params: DeleteFleetsRequest): Request[DeleteFleetsResult, AWSError] = js.native
   def deleteFleets(
@@ -1788,12 +1848,12 @@ trait EC2 extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
-    * Deletes the specified snapshot. When you make periodic snapshots of a volume, the snapshots are incremental, and only the blocks on the device that have changed since your last snapshot are saved in the new snapshot. When you delete a snapshot, only the data not needed for any other snapshot is removed. So regardless of which prior snapshots have been deleted, all active snapshots will have access to all the information needed to restore the volume. You cannot delete a snapshot of the root device of an EBS volume used by a registered AMI. You must first de-register the AMI before you can delete the snapshot. For more information, see Deleting an Amazon EBS Snapshot in the Amazon Elastic Compute Cloud User Guide.
+    * Deletes the specified snapshot. When you make periodic snapshots of a volume, the snapshots are incremental, and only the blocks on the device that have changed since your last snapshot are saved in the new snapshot. When you delete a snapshot, only the data not needed for any other snapshot is removed. So regardless of which prior snapshots have been deleted, all active snapshots will have access to all the information needed to restore the volume. You cannot delete a snapshot of the root device of an EBS volume used by a registered AMI. You must first de-register the AMI before you can delete the snapshot. For more information, see Deleting an Amazon EBS snapshot in the Amazon Elastic Compute Cloud User Guide.
     */
   def deleteSnapshot(): Request[js.Object, AWSError] = js.native
   def deleteSnapshot(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Deletes the specified snapshot. When you make periodic snapshots of a volume, the snapshots are incremental, and only the blocks on the device that have changed since your last snapshot are saved in the new snapshot. When you delete a snapshot, only the data not needed for any other snapshot is removed. So regardless of which prior snapshots have been deleted, all active snapshots will have access to all the information needed to restore the volume. You cannot delete a snapshot of the root device of an EBS volume used by a registered AMI. You must first de-register the AMI before you can delete the snapshot. For more information, see Deleting an Amazon EBS Snapshot in the Amazon Elastic Compute Cloud User Guide.
+    * Deletes the specified snapshot. When you make periodic snapshots of a volume, the snapshots are incremental, and only the blocks on the device that have changed since your last snapshot are saved in the new snapshot. When you delete a snapshot, only the data not needed for any other snapshot is removed. So regardless of which prior snapshots have been deleted, all active snapshots will have access to all the information needed to restore the volume. You cannot delete a snapshot of the root device of an EBS volume used by a registered AMI. You must first de-register the AMI before you can delete the snapshot. For more information, see Deleting an Amazon EBS snapshot in the Amazon Elastic Compute Cloud User Guide.
     */
   def deleteSnapshot(params: DeleteSnapshotRequest): Request[js.Object, AWSError] = js.native
   def deleteSnapshot(
@@ -1943,6 +2003,22 @@ trait EC2 extends Service {
   ): Request[DeleteTransitGatewayPeeringAttachmentResult, AWSError] = js.native
   
   /**
+    * Deletes a reference (route) to a prefix list in a specified transit gateway route table.
+    */
+  def deleteTransitGatewayPrefixListReference(): Request[DeleteTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  def deleteTransitGatewayPrefixListReference(
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteTransitGatewayPrefixListReferenceResult, Unit]
+  ): Request[DeleteTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  /**
+    * Deletes a reference (route) to a prefix list in a specified transit gateway route table.
+    */
+  def deleteTransitGatewayPrefixListReference(params: DeleteTransitGatewayPrefixListReferenceRequest): Request[DeleteTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  def deleteTransitGatewayPrefixListReference(
+    params: DeleteTransitGatewayPrefixListReferenceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteTransitGatewayPrefixListReferenceResult, Unit]
+  ): Request[DeleteTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  
+  /**
     * Deletes the specified route from the specified transit gateway route table.
     */
   def deleteTransitGatewayRoute(): Request[DeleteTransitGatewayRouteResult, AWSError] = js.native
@@ -1987,12 +2063,12 @@ trait EC2 extends Service {
   ): Request[DeleteTransitGatewayVpcAttachmentResult, AWSError] = js.native
   
   /**
-    * Deletes the specified EBS volume. The volume must be in the available state (not attached to an instance). The volume can remain in the deleting state for several minutes. For more information, see Deleting an Amazon EBS Volume in the Amazon Elastic Compute Cloud User Guide.
+    * Deletes the specified EBS volume. The volume must be in the available state (not attached to an instance). The volume can remain in the deleting state for several minutes. For more information, see Deleting an Amazon EBS volume in the Amazon Elastic Compute Cloud User Guide.
     */
   def deleteVolume(): Request[js.Object, AWSError] = js.native
   def deleteVolume(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Deletes the specified EBS volume. The volume must be in the available state (not attached to an instance). The volume can remain in the deleting state for several minutes. For more information, see Deleting an Amazon EBS Volume in the Amazon Elastic Compute Cloud User Guide.
+    * Deletes the specified EBS volume. The volume must be in the available state (not attached to an instance). The volume can remain in the deleting state for several minutes. For more information, see Deleting an Amazon EBS volume in the Amazon Elastic Compute Cloud User Guide.
     */
   def deleteVolume(params: DeleteVolumeRequest): Request[js.Object, AWSError] = js.native
   def deleteVolume(
@@ -2044,12 +2120,12 @@ trait EC2 extends Service {
   ): Request[DeleteVpcEndpointServiceConfigurationsResult, AWSError] = js.native
   
   /**
-    * Deletes one or more specified VPC endpoints. Deleting a gateway endpoint also deletes the endpoint routes in the route tables that were associated with the endpoint. Deleting an interface endpoint deletes the endpoint network interfaces.
+    * Deletes one or more specified VPC endpoints. Deleting a gateway endpoint also deletes the endpoint routes in the route tables that were associated with the endpoint. Deleting an interface endpoint or a Gateway Load Balancer endpoint deletes the endpoint network interfaces. Gateway Load Balancer endpoints can only be deleted if the routes that are associated with the endpoint are deleted.
     */
   def deleteVpcEndpoints(): Request[DeleteVpcEndpointsResult, AWSError] = js.native
   def deleteVpcEndpoints(callback: js.Function2[/* err */ AWSError, /* data */ DeleteVpcEndpointsResult, Unit]): Request[DeleteVpcEndpointsResult, AWSError] = js.native
   /**
-    * Deletes one or more specified VPC endpoints. Deleting a gateway endpoint also deletes the endpoint routes in the route tables that were associated with the endpoint. Deleting an interface endpoint deletes the endpoint network interfaces.
+    * Deletes one or more specified VPC endpoints. Deleting a gateway endpoint also deletes the endpoint routes in the route tables that were associated with the endpoint. Deleting an interface endpoint or a Gateway Load Balancer endpoint deletes the endpoint network interfaces. Gateway Load Balancer endpoints can only be deleted if the routes that are associated with the endpoint are deleted.
     */
   def deleteVpcEndpoints(params: DeleteVpcEndpointsRequest): Request[DeleteVpcEndpointsResult, AWSError] = js.native
   def deleteVpcEndpoints(
@@ -2256,12 +2332,12 @@ trait EC2 extends Service {
   ): Request[DescribeAggregateIdFormatResult, AWSError] = js.native
   
   /**
-    * Describes the Availability Zones and Local Zones that are available to you. If there is an event impacting an Availability Zone or Local Zone, you can use this request to view the state and any provided messages for that Availability Zone or Local Zone. For more information about Availability Zones and Local Zones, see Regions and Availability Zones in the Amazon Elastic Compute Cloud User Guide.
+    * Describes the Availability Zones, Local Zones, and Wavelength Zones that are available to you. If there is an event impacting a zone, you can use this request to view the state and any provided messages for that zone. For more information about Availability Zones, Local Zones, and Wavelength Zones, see Regions, Zones and Outposts in the Amazon Elastic Compute Cloud User Guide.
     */
   def describeAvailabilityZones(): Request[DescribeAvailabilityZonesResult, AWSError] = js.native
   def describeAvailabilityZones(callback: js.Function2[/* err */ AWSError, /* data */ DescribeAvailabilityZonesResult, Unit]): Request[DescribeAvailabilityZonesResult, AWSError] = js.native
   /**
-    * Describes the Availability Zones and Local Zones that are available to you. If there is an event impacting an Availability Zone or Local Zone, you can use this request to view the state and any provided messages for that Availability Zone or Local Zone. For more information about Availability Zones and Local Zones, see Regions and Availability Zones in the Amazon Elastic Compute Cloud User Guide.
+    * Describes the Availability Zones, Local Zones, and Wavelength Zones that are available to you. If there is an event impacting a zone, you can use this request to view the state and any provided messages for that zone. For more information about Availability Zones, Local Zones, and Wavelength Zones, see Regions, Zones and Outposts in the Amazon Elastic Compute Cloud User Guide.
     */
   def describeAvailabilityZones(params: DescribeAvailabilityZonesRequest): Request[DescribeAvailabilityZonesResult, AWSError] = js.native
   def describeAvailabilityZones(
@@ -2310,6 +2386,20 @@ trait EC2 extends Service {
     params: DescribeCapacityReservationsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeCapacityReservationsResult, Unit]
   ): Request[DescribeCapacityReservationsResult, AWSError] = js.native
+  
+  /**
+    * Describes one or more of your carrier gateways.
+    */
+  def describeCarrierGateways(): Request[DescribeCarrierGatewaysResult, AWSError] = js.native
+  def describeCarrierGateways(callback: js.Function2[/* err */ AWSError, /* data */ DescribeCarrierGatewaysResult, Unit]): Request[DescribeCarrierGatewaysResult, AWSError] = js.native
+  /**
+    * Describes one or more of your carrier gateways.
+    */
+  def describeCarrierGateways(params: DescribeCarrierGatewaysRequest): Request[DescribeCarrierGatewaysResult, AWSError] = js.native
+  def describeCarrierGateways(
+    params: DescribeCarrierGatewaysRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeCarrierGatewaysResult, Unit]
+  ): Request[DescribeCarrierGatewaysResult, AWSError] = js.native
   
   /**
     * Describes one or more of your linked EC2-Classic instances. This request only returns information about EC2-Classic instances linked to a VPC through ClassicLink. You cannot use this request to return information about other instances.
@@ -3664,12 +3754,12 @@ trait EC2 extends Service {
   ): Request[DescribeVolumeAttributeResult, AWSError] = js.native
   
   /**
-    * Describes the status of the specified volumes. Volume status provides the result of the checks performed on your volumes to determine events that can impair the performance of your volumes. The performance of a volume can be affected if an issue occurs on the volume's underlying host. If the volume's underlying host experiences a power outage or system issue, after the system is restored, there could be data inconsistencies on the volume. Volume events notify you if this occurs. Volume actions notify you if any action needs to be taken in response to the event. The DescribeVolumeStatus operation provides the following information about the specified volumes:  Status: Reflects the current status of the volume. The possible values are ok, impaired , warning, or insufficient-data. If all checks pass, the overall status of the volume is ok. If the check fails, the overall status is impaired. If the status is insufficient-data, then the checks may still be taking place on your volume at the time. We recommend that you retry the request. For more information about volume status, see Monitoring the Status of Your Volumes in the Amazon Elastic Compute Cloud User Guide.  Events: Reflect the cause of a volume status and may require you to take action. For example, if your volume returns an impaired status, then the volume event might be potential-data-inconsistency. This means that your volume has been affected by an issue with the underlying host, has all I/O operations disabled, and may have inconsistent data.  Actions: Reflect the actions you may have to take in response to an event. For example, if the status of the volume is impaired and the volume event shows potential-data-inconsistency, then the action shows enable-volume-io. This means that you may want to enable the I/O operations for the volume by calling the EnableVolumeIO action and then check the volume for data consistency. Volume status is based on the volume status checks, and does not reflect the volume state. Therefore, volume status does not indicate volumes in the error state (for example, when a volume is incapable of accepting I/O.)
+    * Describes the status of the specified volumes. Volume status provides the result of the checks performed on your volumes to determine events that can impair the performance of your volumes. The performance of a volume can be affected if an issue occurs on the volume's underlying host. If the volume's underlying host experiences a power outage or system issue, after the system is restored, there could be data inconsistencies on the volume. Volume events notify you if this occurs. Volume actions notify you if any action needs to be taken in response to the event. The DescribeVolumeStatus operation provides the following information about the specified volumes:  Status: Reflects the current status of the volume. The possible values are ok, impaired , warning, or insufficient-data. If all checks pass, the overall status of the volume is ok. If the check fails, the overall status is impaired. If the status is insufficient-data, then the checks may still be taking place on your volume at the time. We recommend that you retry the request. For more information about volume status, see Monitoring the status of your volumes in the Amazon Elastic Compute Cloud User Guide.  Events: Reflect the cause of a volume status and may require you to take action. For example, if your volume returns an impaired status, then the volume event might be potential-data-inconsistency. This means that your volume has been affected by an issue with the underlying host, has all I/O operations disabled, and may have inconsistent data.  Actions: Reflect the actions you may have to take in response to an event. For example, if the status of the volume is impaired and the volume event shows potential-data-inconsistency, then the action shows enable-volume-io. This means that you may want to enable the I/O operations for the volume by calling the EnableVolumeIO action and then check the volume for data consistency. Volume status is based on the volume status checks, and does not reflect the volume state. Therefore, volume status does not indicate volumes in the error state (for example, when a volume is incapable of accepting I/O.)
     */
   def describeVolumeStatus(): Request[DescribeVolumeStatusResult, AWSError] = js.native
   def describeVolumeStatus(callback: js.Function2[/* err */ AWSError, /* data */ DescribeVolumeStatusResult, Unit]): Request[DescribeVolumeStatusResult, AWSError] = js.native
   /**
-    * Describes the status of the specified volumes. Volume status provides the result of the checks performed on your volumes to determine events that can impair the performance of your volumes. The performance of a volume can be affected if an issue occurs on the volume's underlying host. If the volume's underlying host experiences a power outage or system issue, after the system is restored, there could be data inconsistencies on the volume. Volume events notify you if this occurs. Volume actions notify you if any action needs to be taken in response to the event. The DescribeVolumeStatus operation provides the following information about the specified volumes:  Status: Reflects the current status of the volume. The possible values are ok, impaired , warning, or insufficient-data. If all checks pass, the overall status of the volume is ok. If the check fails, the overall status is impaired. If the status is insufficient-data, then the checks may still be taking place on your volume at the time. We recommend that you retry the request. For more information about volume status, see Monitoring the Status of Your Volumes in the Amazon Elastic Compute Cloud User Guide.  Events: Reflect the cause of a volume status and may require you to take action. For example, if your volume returns an impaired status, then the volume event might be potential-data-inconsistency. This means that your volume has been affected by an issue with the underlying host, has all I/O operations disabled, and may have inconsistent data.  Actions: Reflect the actions you may have to take in response to an event. For example, if the status of the volume is impaired and the volume event shows potential-data-inconsistency, then the action shows enable-volume-io. This means that you may want to enable the I/O operations for the volume by calling the EnableVolumeIO action and then check the volume for data consistency. Volume status is based on the volume status checks, and does not reflect the volume state. Therefore, volume status does not indicate volumes in the error state (for example, when a volume is incapable of accepting I/O.)
+    * Describes the status of the specified volumes. Volume status provides the result of the checks performed on your volumes to determine events that can impair the performance of your volumes. The performance of a volume can be affected if an issue occurs on the volume's underlying host. If the volume's underlying host experiences a power outage or system issue, after the system is restored, there could be data inconsistencies on the volume. Volume events notify you if this occurs. Volume actions notify you if any action needs to be taken in response to the event. The DescribeVolumeStatus operation provides the following information about the specified volumes:  Status: Reflects the current status of the volume. The possible values are ok, impaired , warning, or insufficient-data. If all checks pass, the overall status of the volume is ok. If the check fails, the overall status is impaired. If the status is insufficient-data, then the checks may still be taking place on your volume at the time. We recommend that you retry the request. For more information about volume status, see Monitoring the status of your volumes in the Amazon Elastic Compute Cloud User Guide.  Events: Reflect the cause of a volume status and may require you to take action. For example, if your volume returns an impaired status, then the volume event might be potential-data-inconsistency. This means that your volume has been affected by an issue with the underlying host, has all I/O operations disabled, and may have inconsistent data.  Actions: Reflect the actions you may have to take in response to an event. For example, if the status of the volume is impaired and the volume event shows potential-data-inconsistency, then the action shows enable-volume-io. This means that you may want to enable the I/O operations for the volume by calling the EnableVolumeIO action and then check the volume for data consistency. Volume status is based on the volume status checks, and does not reflect the volume state. Therefore, volume status does not indicate volumes in the error state (for example, when a volume is incapable of accepting I/O.)
     */
   def describeVolumeStatus(params: DescribeVolumeStatusRequest): Request[DescribeVolumeStatusResult, AWSError] = js.native
   def describeVolumeStatus(
@@ -3692,12 +3782,12 @@ trait EC2 extends Service {
   ): Request[DescribeVolumesResult, AWSError] = js.native
   
   /**
-    * Describes the most recent volume modification request for the specified EBS volumes. If a volume has never been modified, some information in the output will be null. If a volume has been modified more than once, the output includes only the most recent modification request. You can also use CloudWatch Events to check the status of a modification to an EBS volume. For information about CloudWatch Events, see the Amazon CloudWatch Events User Guide. For more information, see Monitoring Volume Modifications in the Amazon Elastic Compute Cloud User Guide.
+    * Describes the most recent volume modification request for the specified EBS volumes. If a volume has never been modified, some information in the output will be null. If a volume has been modified more than once, the output includes only the most recent modification request. You can also use CloudWatch Events to check the status of a modification to an EBS volume. For information about CloudWatch Events, see the Amazon CloudWatch Events User Guide. For more information, see Monitoring volume modifications in the Amazon Elastic Compute Cloud User Guide.
     */
   def describeVolumesModifications(): Request[DescribeVolumesModificationsResult, AWSError] = js.native
   def describeVolumesModifications(callback: js.Function2[/* err */ AWSError, /* data */ DescribeVolumesModificationsResult, Unit]): Request[DescribeVolumesModificationsResult, AWSError] = js.native
   /**
-    * Describes the most recent volume modification request for the specified EBS volumes. If a volume has never been modified, some information in the output will be null. If a volume has been modified more than once, the output includes only the most recent modification request. You can also use CloudWatch Events to check the status of a modification to an EBS volume. For information about CloudWatch Events, see the Amazon CloudWatch Events User Guide. For more information, see Monitoring Volume Modifications in the Amazon Elastic Compute Cloud User Guide.
+    * Describes the most recent volume modification request for the specified EBS volumes. If a volume has never been modified, some information in the output will be null. If a volume has been modified more than once, the output includes only the most recent modification request. You can also use CloudWatch Events to check the status of a modification to an EBS volume. For information about CloudWatch Events, see the Amazon CloudWatch Events User Guide. For more information, see Monitoring volume modifications in the Amazon Elastic Compute Cloud User Guide.
     */
   def describeVolumesModifications(params: DescribeVolumesModificationsRequest): Request[DescribeVolumesModificationsResult, AWSError] = js.native
   def describeVolumesModifications(
@@ -3820,12 +3910,12 @@ trait EC2 extends Service {
   ): Request[DescribeVpcEndpointServicePermissionsResult, AWSError] = js.native
   
   /**
-    * Describes available services to which you can create a VPC endpoint.
+    * Describes available services to which you can create a VPC endpoint. When the service provider and the consumer have different accounts multiple Availability Zones, and the consumer views the VPC endpoint service information, the response only includes the common Availability Zones. For example, when the service provider account uses us-east-1a and us-east-1c and the consumer uses us-east-1a and us-east-1a and us-east-1b, the response includes the VPC endpoint services in the common Availability Zone, us-east-1a.
     */
   def describeVpcEndpointServices(): Request[DescribeVpcEndpointServicesResult, AWSError] = js.native
   def describeVpcEndpointServices(callback: js.Function2[/* err */ AWSError, /* data */ DescribeVpcEndpointServicesResult, Unit]): Request[DescribeVpcEndpointServicesResult, AWSError] = js.native
   /**
-    * Describes available services to which you can create a VPC endpoint.
+    * Describes available services to which you can create a VPC endpoint. When the service provider and the consumer have different accounts multiple Availability Zones, and the consumer views the VPC endpoint service information, the response only includes the common Availability Zones. For example, when the service provider account uses us-east-1a and us-east-1c and the consumer uses us-east-1a and us-east-1a and us-east-1b, the response includes the VPC endpoint services in the common Availability Zone, us-east-1a.
     */
   def describeVpcEndpointServices(params: DescribeVpcEndpointServicesRequest): Request[DescribeVpcEndpointServicesResult, AWSError] = js.native
   def describeVpcEndpointServices(
@@ -3946,12 +4036,12 @@ trait EC2 extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
-    * Detaches an EBS volume from an instance. Make sure to unmount any file systems on the device within your operating system before detaching the volume. Failure to do so can result in the volume becoming stuck in the busy state while detaching. If this happens, detachment can be delayed indefinitely until you unmount the volume, force detachment, reboot the instance, or all three. If an EBS volume is the root device of an instance, it can't be detached while the instance is running. To detach the root volume, stop the instance first. When a volume with an AWS Marketplace product code is detached from an instance, the product code is no longer associated with the instance. For more information, see Detaching an Amazon EBS Volume in the Amazon Elastic Compute Cloud User Guide.
+    * Detaches an EBS volume from an instance. Make sure to unmount any file systems on the device within your operating system before detaching the volume. Failure to do so can result in the volume becoming stuck in the busy state while detaching. If this happens, detachment can be delayed indefinitely until you unmount the volume, force detachment, reboot the instance, or all three. If an EBS volume is the root device of an instance, it can't be detached while the instance is running. To detach the root volume, stop the instance first. When a volume with an AWS Marketplace product code is detached from an instance, the product code is no longer associated with the instance. For more information, see Detaching an Amazon EBS volume in the Amazon Elastic Compute Cloud User Guide.
     */
   def detachVolume(): Request[VolumeAttachment, AWSError] = js.native
   def detachVolume(callback: js.Function2[/* err */ AWSError, /* data */ VolumeAttachment, Unit]): Request[VolumeAttachment, AWSError] = js.native
   /**
-    * Detaches an EBS volume from an instance. Make sure to unmount any file systems on the device within your operating system before detaching the volume. Failure to do so can result in the volume becoming stuck in the busy state while detaching. If this happens, detachment can be delayed indefinitely until you unmount the volume, force detachment, reboot the instance, or all three. If an EBS volume is the root device of an instance, it can't be detached while the instance is running. To detach the root volume, stop the instance first. When a volume with an AWS Marketplace product code is detached from an instance, the product code is no longer associated with the instance. For more information, see Detaching an Amazon EBS Volume in the Amazon Elastic Compute Cloud User Guide.
+    * Detaches an EBS volume from an instance. Make sure to unmount any file systems on the device within your operating system before detaching the volume. Failure to do so can result in the volume becoming stuck in the busy state while detaching. If this happens, detachment can be delayed indefinitely until you unmount the volume, force detachment, reboot the instance, or all three. If an EBS volume is the root device of an instance, it can't be detached while the instance is running. To detach the root volume, stop the instance first. When a volume with an AWS Marketplace product code is detached from an instance, the product code is no longer associated with the instance. For more information, see Detaching an Amazon EBS volume in the Amazon Elastic Compute Cloud User Guide.
     */
   def detachVolume(params: DetachVolumeRequest): Request[VolumeAttachment, AWSError] = js.native
   def detachVolume(
@@ -4098,6 +4188,22 @@ trait EC2 extends Service {
   ): Request[DisassociateClientVpnTargetNetworkResult, AWSError] = js.native
   
   /**
+    * Disassociates an IAM role from an AWS Certificate Manager (ACM) certificate. Disassociating an IAM role from an ACM certificate removes the Amazon S3 object that contains the certificate, certificate chain, and encrypted private key from the Amazon S3 bucket. It also revokes the IAM role's permission to use the AWS Key Management Service (KMS) customer master key (CMK) used to encrypt the private key. This effectively revokes the role's permission to use the certificate. 
+    */
+  def disassociateEnclaveCertificateIamRole(): Request[DisassociateEnclaveCertificateIamRoleResult, AWSError] = js.native
+  def disassociateEnclaveCertificateIamRole(
+    callback: js.Function2[/* err */ AWSError, /* data */ DisassociateEnclaveCertificateIamRoleResult, Unit]
+  ): Request[DisassociateEnclaveCertificateIamRoleResult, AWSError] = js.native
+  /**
+    * Disassociates an IAM role from an AWS Certificate Manager (ACM) certificate. Disassociating an IAM role from an ACM certificate removes the Amazon S3 object that contains the certificate, certificate chain, and encrypted private key from the Amazon S3 bucket. It also revokes the IAM role's permission to use the AWS Key Management Service (KMS) customer master key (CMK) used to encrypt the private key. This effectively revokes the role's permission to use the certificate. 
+    */
+  def disassociateEnclaveCertificateIamRole(params: DisassociateEnclaveCertificateIamRoleRequest): Request[DisassociateEnclaveCertificateIamRoleResult, AWSError] = js.native
+  def disassociateEnclaveCertificateIamRole(
+    params: DisassociateEnclaveCertificateIamRoleRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DisassociateEnclaveCertificateIamRoleResult, Unit]
+  ): Request[DisassociateEnclaveCertificateIamRoleResult, AWSError] = js.native
+  
+  /**
     * Disassociates an IAM instance profile from a running or stopped instance. Use DescribeIamInstanceProfileAssociations to get the association ID.
     */
   def disassociateIamInstanceProfile(): Request[DisassociateIamInstanceProfileResult, AWSError] = js.native
@@ -4186,12 +4292,12 @@ trait EC2 extends Service {
   ): Request[DisassociateVpcCidrBlockResult, AWSError] = js.native
   
   /**
-    * Enables EBS encryption by default for your account in the current Region. After you enable encryption by default, the EBS volumes that you create are are always encrypted, either using the default CMK or the CMK that you specified when you created each volume. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. You can specify the default CMK for encryption by default using ModifyEbsDefaultKmsKeyId or ResetEbsDefaultKmsKeyId. Enabling encryption by default has no effect on the encryption status of your existing volumes. After you enable encryption by default, you can no longer launch instances using instance types that do not support encryption. For more information, see Supported Instance Types.
+    * Enables EBS encryption by default for your account in the current Region. After you enable encryption by default, the EBS volumes that you create are are always encrypted, either using the default CMK or the CMK that you specified when you created each volume. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. You can specify the default CMK for encryption by default using ModifyEbsDefaultKmsKeyId or ResetEbsDefaultKmsKeyId. Enabling encryption by default has no effect on the encryption status of your existing volumes. After you enable encryption by default, you can no longer launch instances using instance types that do not support encryption. For more information, see Supported instance types.
     */
   def enableEbsEncryptionByDefault(): Request[EnableEbsEncryptionByDefaultResult, AWSError] = js.native
   def enableEbsEncryptionByDefault(callback: js.Function2[/* err */ AWSError, /* data */ EnableEbsEncryptionByDefaultResult, Unit]): Request[EnableEbsEncryptionByDefaultResult, AWSError] = js.native
   /**
-    * Enables EBS encryption by default for your account in the current Region. After you enable encryption by default, the EBS volumes that you create are are always encrypted, either using the default CMK or the CMK that you specified when you created each volume. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. You can specify the default CMK for encryption by default using ModifyEbsDefaultKmsKeyId or ResetEbsDefaultKmsKeyId. Enabling encryption by default has no effect on the encryption status of your existing volumes. After you enable encryption by default, you can no longer launch instances using instance types that do not support encryption. For more information, see Supported Instance Types.
+    * Enables EBS encryption by default for your account in the current Region. After you enable encryption by default, the EBS volumes that you create are are always encrypted, either using the default CMK or the CMK that you specified when you created each volume. For more information, see Amazon EBS Encryption in the Amazon Elastic Compute Cloud User Guide. You can specify the default CMK for encryption by default using ModifyEbsDefaultKmsKeyId or ResetEbsDefaultKmsKeyId. Enabling encryption by default has no effect on the encryption status of your existing volumes. After you enable encryption by default, you can no longer launch instances using instance types that do not support encryption. For more information, see Supported instance types.
     */
   def enableEbsEncryptionByDefault(params: EnableEbsEncryptionByDefaultRequest): Request[EnableEbsEncryptionByDefaultResult, AWSError] = js.native
   def enableEbsEncryptionByDefault(
@@ -4200,12 +4306,12 @@ trait EC2 extends Service {
   ): Request[EnableEbsEncryptionByDefaultResult, AWSError] = js.native
   
   /**
-    * Enables fast snapshot restores for the specified snapshots in the specified Availability Zones. You get the full benefit of fast snapshot restores after they enter the enabled state. To get the current state of fast snapshot restores, use DescribeFastSnapshotRestores. To disable fast snapshot restores, use DisableFastSnapshotRestores. For more information, see Amazon EBS Fast Snapshot Restore in the Amazon Elastic Compute Cloud User Guide.
+    * Enables fast snapshot restores for the specified snapshots in the specified Availability Zones. You get the full benefit of fast snapshot restores after they enter the enabled state. To get the current state of fast snapshot restores, use DescribeFastSnapshotRestores. To disable fast snapshot restores, use DisableFastSnapshotRestores. For more information, see Amazon EBS fast snapshot restore in the Amazon Elastic Compute Cloud User Guide.
     */
   def enableFastSnapshotRestores(): Request[EnableFastSnapshotRestoresResult, AWSError] = js.native
   def enableFastSnapshotRestores(callback: js.Function2[/* err */ AWSError, /* data */ EnableFastSnapshotRestoresResult, Unit]): Request[EnableFastSnapshotRestoresResult, AWSError] = js.native
   /**
-    * Enables fast snapshot restores for the specified snapshots in the specified Availability Zones. You get the full benefit of fast snapshot restores after they enter the enabled state. To get the current state of fast snapshot restores, use DescribeFastSnapshotRestores. To disable fast snapshot restores, use DisableFastSnapshotRestores. For more information, see Amazon EBS Fast Snapshot Restore in the Amazon Elastic Compute Cloud User Guide.
+    * Enables fast snapshot restores for the specified snapshots in the specified Availability Zones. You get the full benefit of fast snapshot restores after they enter the enabled state. To get the current state of fast snapshot restores, use DescribeFastSnapshotRestores. To disable fast snapshot restores, use DisableFastSnapshotRestores. For more information, see Amazon EBS fast snapshot restore in the Amazon Elastic Compute Cloud User Guide.
     */
   def enableFastSnapshotRestores(params: EnableFastSnapshotRestoresRequest): Request[EnableFastSnapshotRestoresResult, AWSError] = js.native
   def enableFastSnapshotRestores(
@@ -4352,6 +4458,22 @@ trait EC2 extends Service {
     params: ExportTransitGatewayRoutesRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ExportTransitGatewayRoutesResult, Unit]
   ): Request[ExportTransitGatewayRoutesResult, AWSError] = js.native
+  
+  /**
+    * Returns the IAM roles that are associated with the specified AWS Certificate Manager (ACM) certificate. It also returns the name of the Amazon S3 bucket and the Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored, and the ARN of the AWS Key Management Service (KMS) customer master key (CMK) that's used to encrypt the private key.
+    */
+  def getAssociatedEnclaveCertificateIamRoles(): Request[GetAssociatedEnclaveCertificateIamRolesResult, AWSError] = js.native
+  def getAssociatedEnclaveCertificateIamRoles(
+    callback: js.Function2[/* err */ AWSError, /* data */ GetAssociatedEnclaveCertificateIamRolesResult, Unit]
+  ): Request[GetAssociatedEnclaveCertificateIamRolesResult, AWSError] = js.native
+  /**
+    * Returns the IAM roles that are associated with the specified AWS Certificate Manager (ACM) certificate. It also returns the name of the Amazon S3 bucket and the Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored, and the ARN of the AWS Key Management Service (KMS) customer master key (CMK) that's used to encrypt the private key.
+    */
+  def getAssociatedEnclaveCertificateIamRoles(params: GetAssociatedEnclaveCertificateIamRolesRequest): Request[GetAssociatedEnclaveCertificateIamRolesResult, AWSError] = js.native
+  def getAssociatedEnclaveCertificateIamRoles(
+    params: GetAssociatedEnclaveCertificateIamRolesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetAssociatedEnclaveCertificateIamRolesResult, Unit]
+  ): Request[GetAssociatedEnclaveCertificateIamRolesResult, AWSError] = js.native
   
   /**
     * Gets information about the IPv6 CIDR block associations for a specified IPv6 address pool.
@@ -4610,6 +4732,22 @@ trait EC2 extends Service {
   ): Request[GetTransitGatewayMulticastDomainAssociationsResult, AWSError] = js.native
   
   /**
+    * Gets information about the prefix list references in a specified transit gateway route table.
+    */
+  def getTransitGatewayPrefixListReferences(): Request[GetTransitGatewayPrefixListReferencesResult, AWSError] = js.native
+  def getTransitGatewayPrefixListReferences(
+    callback: js.Function2[/* err */ AWSError, /* data */ GetTransitGatewayPrefixListReferencesResult, Unit]
+  ): Request[GetTransitGatewayPrefixListReferencesResult, AWSError] = js.native
+  /**
+    * Gets information about the prefix list references in a specified transit gateway route table.
+    */
+  def getTransitGatewayPrefixListReferences(params: GetTransitGatewayPrefixListReferencesRequest): Request[GetTransitGatewayPrefixListReferencesResult, AWSError] = js.native
+  def getTransitGatewayPrefixListReferences(
+    params: GetTransitGatewayPrefixListReferencesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ GetTransitGatewayPrefixListReferencesResult, Unit]
+  ): Request[GetTransitGatewayPrefixListReferencesResult, AWSError] = js.native
+  
+  /**
     * Gets information about the associations for the specified transit gateway route table.
     */
   def getTransitGatewayRouteTableAssociations(): Request[GetTransitGatewayRouteTableAssociationsResult, AWSError] = js.native
@@ -4736,12 +4874,12 @@ trait EC2 extends Service {
   ): Request[ImportVolumeResult, AWSError] = js.native
   
   /**
-    * Enables or disables an Availability Zone group for your account. Use  DescribeAvailabilityZones to view the value for GroupName.
+    * Changes the opt-in status of the Local Zone and Wavelength Zone group for your account. Use  DescribeAvailabilityZones to view the value for GroupName.
     */
   def modifyAvailabilityZoneGroup(): Request[ModifyAvailabilityZoneGroupResult, AWSError] = js.native
   def modifyAvailabilityZoneGroup(callback: js.Function2[/* err */ AWSError, /* data */ ModifyAvailabilityZoneGroupResult, Unit]): Request[ModifyAvailabilityZoneGroupResult, AWSError] = js.native
   /**
-    * Enables or disables an Availability Zone group for your account. Use  DescribeAvailabilityZones to view the value for GroupName.
+    * Changes the opt-in status of the Local Zone and Wavelength Zone group for your account. Use  DescribeAvailabilityZones to view the value for GroupName.
     */
   def modifyAvailabilityZoneGroup(params: ModifyAvailabilityZoneGroupRequest): Request[ModifyAvailabilityZoneGroupResult, AWSError] = js.native
   def modifyAvailabilityZoneGroup(
@@ -5044,12 +5182,12 @@ trait EC2 extends Service {
   ): Request[ModifyReservedInstancesResult, AWSError] = js.native
   
   /**
-    * Adds or removes permission settings for the specified snapshot. You may add or remove specified AWS account IDs from a snapshot's list of create volume permissions, but you cannot do both in a single operation. If you need to both add and remove account IDs for a snapshot, you must use multiple operations. You can make up to 500 modifications to a snapshot in a single operation. Encrypted snapshots and snapshots with AWS Marketplace product codes cannot be made public. Snapshots encrypted with your default CMK cannot be shared with other accounts. For more information about modifying snapshot permissions, see Sharing Snapshots in the Amazon Elastic Compute Cloud User Guide.
+    * Adds or removes permission settings for the specified snapshot. You may add or remove specified AWS account IDs from a snapshot's list of create volume permissions, but you cannot do both in a single operation. If you need to both add and remove account IDs for a snapshot, you must use multiple operations. You can make up to 500 modifications to a snapshot in a single operation. Encrypted snapshots and snapshots with AWS Marketplace product codes cannot be made public. Snapshots encrypted with your default CMK cannot be shared with other accounts. For more information about modifying snapshot permissions, see Sharing snapshots in the Amazon Elastic Compute Cloud User Guide.
     */
   def modifySnapshotAttribute(): Request[js.Object, AWSError] = js.native
   def modifySnapshotAttribute(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Adds or removes permission settings for the specified snapshot. You may add or remove specified AWS account IDs from a snapshot's list of create volume permissions, but you cannot do both in a single operation. If you need to both add and remove account IDs for a snapshot, you must use multiple operations. You can make up to 500 modifications to a snapshot in a single operation. Encrypted snapshots and snapshots with AWS Marketplace product codes cannot be made public. Snapshots encrypted with your default CMK cannot be shared with other accounts. For more information about modifying snapshot permissions, see Sharing Snapshots in the Amazon Elastic Compute Cloud User Guide.
+    * Adds or removes permission settings for the specified snapshot. You may add or remove specified AWS account IDs from a snapshot's list of create volume permissions, but you cannot do both in a single operation. If you need to both add and remove account IDs for a snapshot, you must use multiple operations. You can make up to 500 modifications to a snapshot in a single operation. Encrypted snapshots and snapshots with AWS Marketplace product codes cannot be made public. Snapshots encrypted with your default CMK cannot be shared with other accounts. For more information about modifying snapshot permissions, see Sharing snapshots in the Amazon Elastic Compute Cloud User Guide.
     */
   def modifySnapshotAttribute(params: ModifySnapshotAttributeRequest): Request[js.Object, AWSError] = js.native
   def modifySnapshotAttribute(
@@ -5130,6 +5268,36 @@ trait EC2 extends Service {
   ): Request[ModifyTrafficMirrorSessionResult, AWSError] = js.native
   
   /**
+    * Modifies the specified transit gateway. When you modify a transit gateway, the modified options are applied to new transit gateway attachments only. Your existing transit gateway attachments are not modified.
+    */
+  def modifyTransitGateway(): Request[ModifyTransitGatewayResult, AWSError] = js.native
+  def modifyTransitGateway(callback: js.Function2[/* err */ AWSError, /* data */ ModifyTransitGatewayResult, Unit]): Request[ModifyTransitGatewayResult, AWSError] = js.native
+  /**
+    * Modifies the specified transit gateway. When you modify a transit gateway, the modified options are applied to new transit gateway attachments only. Your existing transit gateway attachments are not modified.
+    */
+  def modifyTransitGateway(params: ModifyTransitGatewayRequest): Request[ModifyTransitGatewayResult, AWSError] = js.native
+  def modifyTransitGateway(
+    params: ModifyTransitGatewayRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ModifyTransitGatewayResult, Unit]
+  ): Request[ModifyTransitGatewayResult, AWSError] = js.native
+  
+  /**
+    * Modifies a reference (route) to a prefix list in a specified transit gateway route table.
+    */
+  def modifyTransitGatewayPrefixListReference(): Request[ModifyTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  def modifyTransitGatewayPrefixListReference(
+    callback: js.Function2[/* err */ AWSError, /* data */ ModifyTransitGatewayPrefixListReferenceResult, Unit]
+  ): Request[ModifyTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  /**
+    * Modifies a reference (route) to a prefix list in a specified transit gateway route table.
+    */
+  def modifyTransitGatewayPrefixListReference(params: ModifyTransitGatewayPrefixListReferenceRequest): Request[ModifyTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  def modifyTransitGatewayPrefixListReference(
+    params: ModifyTransitGatewayPrefixListReferenceRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ModifyTransitGatewayPrefixListReferenceResult, Unit]
+  ): Request[ModifyTransitGatewayPrefixListReferenceResult, AWSError] = js.native
+  
+  /**
     * Modifies the specified VPC attachment.
     */
   def modifyTransitGatewayVpcAttachment(): Request[ModifyTransitGatewayVpcAttachmentResult, AWSError] = js.native
@@ -5146,12 +5314,12 @@ trait EC2 extends Service {
   ): Request[ModifyTransitGatewayVpcAttachmentResult, AWSError] = js.native
   
   /**
-    * You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS capacity. If your EBS volume is attached to a current-generation EC2 instance type, you may be able to apply these changes without stopping the instance or detaching the volume from it. For more information about modifying an EBS volume running Linux, see Modifying the Size, IOPS, or Type of an EBS Volume on Linux. For more information about modifying an EBS volume running Windows, see Modifying the Size, IOPS, or Type of an EBS Volume on Windows.   When you complete a resize operation on your volume, you need to extend the volume's file-system size to take advantage of the new storage capacity. For information about extending a Linux file system, see Extending a Linux File System. For information about extending a Windows file system, see Extending a Windows File System.   You can use CloudWatch Events to check the status of a modification to an EBS volume. For information about CloudWatch Events, see the Amazon CloudWatch Events User Guide. You can also track the status of a modification using DescribeVolumesModifications. For information about tracking status changes using either method, see Monitoring Volume Modifications.  With previous-generation instance types, resizing an EBS volume may require detaching and reattaching the volume or stopping and restarting the instance. For more information, see Modifying the Size, IOPS, or Type of an EBS Volume on Linux and Modifying the Size, IOPS, or Type of an EBS Volume on Windows. If you reach the maximum volume modification rate per volume limit, you will need to wait at least six hours before applying further modifications to the affected EBS volume.
+    * You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS capacity. If your EBS volume is attached to a current-generation EC2 instance type, you may be able to apply these changes without stopping the instance or detaching the volume from it. For more information about modifying an EBS volume running Linux, see Modifying the size, IOPS, or type of an EBS volume on Linux. For more information about modifying an EBS volume running Windows, see Modifying the size, IOPS, or type of an EBS volume on Windows.   When you complete a resize operation on your volume, you need to extend the volume's file-system size to take advantage of the new storage capacity. For information about extending a Linux file system, see Extending a Linux file system. For information about extending a Windows file system, see Extending a Windows file system.   You can use CloudWatch Events to check the status of a modification to an EBS volume. For information about CloudWatch Events, see the Amazon CloudWatch Events User Guide. You can also track the status of a modification using DescribeVolumesModifications. For information about tracking status changes using either method, see Monitoring volume modifications.  With previous-generation instance types, resizing an EBS volume may require detaching and reattaching the volume or stopping and restarting the instance. For more information, see Modifying the size, IOPS, or type of an EBS volume on Linux and Modifying the size, IOPS, or type of an EBS volume on Windows. If you reach the maximum volume modification rate per volume limit, you will need to wait at least six hours before applying further modifications to the affected EBS volume.
     */
   def modifyVolume(): Request[ModifyVolumeResult, AWSError] = js.native
   def modifyVolume(callback: js.Function2[/* err */ AWSError, /* data */ ModifyVolumeResult, Unit]): Request[ModifyVolumeResult, AWSError] = js.native
   /**
-    * You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS capacity. If your EBS volume is attached to a current-generation EC2 instance type, you may be able to apply these changes without stopping the instance or detaching the volume from it. For more information about modifying an EBS volume running Linux, see Modifying the Size, IOPS, or Type of an EBS Volume on Linux. For more information about modifying an EBS volume running Windows, see Modifying the Size, IOPS, or Type of an EBS Volume on Windows.   When you complete a resize operation on your volume, you need to extend the volume's file-system size to take advantage of the new storage capacity. For information about extending a Linux file system, see Extending a Linux File System. For information about extending a Windows file system, see Extending a Windows File System.   You can use CloudWatch Events to check the status of a modification to an EBS volume. For information about CloudWatch Events, see the Amazon CloudWatch Events User Guide. You can also track the status of a modification using DescribeVolumesModifications. For information about tracking status changes using either method, see Monitoring Volume Modifications.  With previous-generation instance types, resizing an EBS volume may require detaching and reattaching the volume or stopping and restarting the instance. For more information, see Modifying the Size, IOPS, or Type of an EBS Volume on Linux and Modifying the Size, IOPS, or Type of an EBS Volume on Windows. If you reach the maximum volume modification rate per volume limit, you will need to wait at least six hours before applying further modifications to the affected EBS volume.
+    * You can modify several parameters of an existing EBS volume, including volume size, volume type, and IOPS capacity. If your EBS volume is attached to a current-generation EC2 instance type, you may be able to apply these changes without stopping the instance or detaching the volume from it. For more information about modifying an EBS volume running Linux, see Modifying the size, IOPS, or type of an EBS volume on Linux. For more information about modifying an EBS volume running Windows, see Modifying the size, IOPS, or type of an EBS volume on Windows.   When you complete a resize operation on your volume, you need to extend the volume's file-system size to take advantage of the new storage capacity. For information about extending a Linux file system, see Extending a Linux file system. For information about extending a Windows file system, see Extending a Windows file system.   You can use CloudWatch Events to check the status of a modification to an EBS volume. For information about CloudWatch Events, see the Amazon CloudWatch Events User Guide. You can also track the status of a modification using DescribeVolumesModifications. For information about tracking status changes using either method, see Monitoring volume modifications.  With previous-generation instance types, resizing an EBS volume may require detaching and reattaching the volume or stopping and restarting the instance. For more information, see Modifying the size, IOPS, or type of an EBS volume on Linux and Modifying the size, IOPS, or type of an EBS volume on Windows. If you reach the maximum volume modification rate per volume limit, you will need to wait at least six hours before applying further modifications to the affected EBS volume.
     */
   def modifyVolume(params: ModifyVolumeRequest): Request[ModifyVolumeResult, AWSError] = js.native
   def modifyVolume(
@@ -5188,12 +5356,12 @@ trait EC2 extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
-    * Modifies attributes of a specified VPC endpoint. The attributes that you can modify depend on the type of VPC endpoint (interface or gateway). For more information, see VPC Endpoints in the Amazon Virtual Private Cloud User Guide.
+    * Modifies attributes of a specified VPC endpoint. The attributes that you can modify depend on the type of VPC endpoint (interface, gateway, or Gateway Load Balancer). For more information, see VPC Endpoints in the Amazon Virtual Private Cloud User Guide.
     */
   def modifyVpcEndpoint(): Request[ModifyVpcEndpointResult, AWSError] = js.native
   def modifyVpcEndpoint(callback: js.Function2[/* err */ AWSError, /* data */ ModifyVpcEndpointResult, Unit]): Request[ModifyVpcEndpointResult, AWSError] = js.native
   /**
-    * Modifies attributes of a specified VPC endpoint. The attributes that you can modify depend on the type of VPC endpoint (interface or gateway). For more information, see VPC Endpoints in the Amazon Virtual Private Cloud User Guide.
+    * Modifies attributes of a specified VPC endpoint. The attributes that you can modify depend on the type of VPC endpoint (interface, gateway, or Gateway Load Balancer). For more information, see VPC Endpoints in the Amazon Virtual Private Cloud User Guide.
     */
   def modifyVpcEndpoint(params: ModifyVpcEndpointRequest): Request[ModifyVpcEndpointResult, AWSError] = js.native
   def modifyVpcEndpoint(
@@ -5218,14 +5386,14 @@ trait EC2 extends Service {
   ): Request[ModifyVpcEndpointConnectionNotificationResult, AWSError] = js.native
   
   /**
-    * Modifies the attributes of your VPC endpoint service configuration. You can change the Network Load Balancers for your service, and you can specify whether acceptance is required for requests to connect to your endpoint service through an interface VPC endpoint. If you set or modify the private DNS name, you must prove that you own the private DNS domain name. For more information, see VPC Endpoint Service Private DNS Name Verification in the Amazon Virtual Private Cloud User Guide.
+    * Modifies the attributes of your VPC endpoint service configuration. You can change the Network Load Balancers or Gateway Load Balancers for your service, and you can specify whether acceptance is required for requests to connect to your endpoint service through an interface VPC endpoint. If you set or modify the private DNS name, you must prove that you own the private DNS domain name. For more information, see VPC Endpoint Service Private DNS Name Verification in the Amazon Virtual Private Cloud User Guide.
     */
   def modifyVpcEndpointServiceConfiguration(): Request[ModifyVpcEndpointServiceConfigurationResult, AWSError] = js.native
   def modifyVpcEndpointServiceConfiguration(
     callback: js.Function2[/* err */ AWSError, /* data */ ModifyVpcEndpointServiceConfigurationResult, Unit]
   ): Request[ModifyVpcEndpointServiceConfigurationResult, AWSError] = js.native
   /**
-    * Modifies the attributes of your VPC endpoint service configuration. You can change the Network Load Balancers for your service, and you can specify whether acceptance is required for requests to connect to your endpoint service through an interface VPC endpoint. If you set or modify the private DNS name, you must prove that you own the private DNS domain name. For more information, see VPC Endpoint Service Private DNS Name Verification in the Amazon Virtual Private Cloud User Guide.
+    * Modifies the attributes of your VPC endpoint service configuration. You can change the Network Load Balancers or Gateway Load Balancers for your service, and you can specify whether acceptance is required for requests to connect to your endpoint service through an interface VPC endpoint. If you set or modify the private DNS name, you must prove that you own the private DNS domain name. For more information, see VPC Endpoint Service Private DNS Name Verification in the Amazon Virtual Private Cloud User Guide.
     */
   def modifyVpcEndpointServiceConfiguration(params: ModifyVpcEndpointServiceConfigurationRequest): Request[ModifyVpcEndpointServiceConfigurationResult, AWSError] = js.native
   def modifyVpcEndpointServiceConfiguration(
@@ -5292,6 +5460,20 @@ trait EC2 extends Service {
     params: ModifyVpnConnectionRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ModifyVpnConnectionResult, Unit]
   ): Request[ModifyVpnConnectionResult, AWSError] = js.native
+  
+  /**
+    * Modifies the connection options for your Site-to-Site VPN connection. When you modify the VPN connection options, the VPN endpoint IP addresses on the AWS side do not change, and the tunnel options do not change. Your VPN connection will be temporarily unavailable for a brief period while the VPN connection is updated.
+    */
+  def modifyVpnConnectionOptions(): Request[ModifyVpnConnectionOptionsResult, AWSError] = js.native
+  def modifyVpnConnectionOptions(callback: js.Function2[/* err */ AWSError, /* data */ ModifyVpnConnectionOptionsResult, Unit]): Request[ModifyVpnConnectionOptionsResult, AWSError] = js.native
+  /**
+    * Modifies the connection options for your Site-to-Site VPN connection. When you modify the VPN connection options, the VPN endpoint IP addresses on the AWS side do not change, and the tunnel options do not change. Your VPN connection will be temporarily unavailable for a brief period while the VPN connection is updated.
+    */
+  def modifyVpnConnectionOptions(params: ModifyVpnConnectionOptionsRequest): Request[ModifyVpnConnectionOptionsResult, AWSError] = js.native
+  def modifyVpnConnectionOptions(
+    params: ModifyVpnConnectionOptionsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ModifyVpnConnectionOptionsResult, Unit]
+  ): Request[ModifyVpnConnectionOptionsResult, AWSError] = js.native
   
   /**
     * Modifies the VPN tunnel endpoint certificate.
@@ -5408,12 +5590,12 @@ trait EC2 extends Service {
   ): Request[PurchaseScheduledInstancesResult, AWSError] = js.native
   
   /**
-    * Requests a reboot of the specified instances. This operation is asynchronous; it only queues a request to reboot the specified instances. The operation succeeds if the instances are valid and belong to you. Requests to reboot terminated instances are ignored. If an instance does not cleanly shut down within four minutes, Amazon EC2 performs a hard reboot. For more information about troubleshooting, see Getting console output and rebooting instances in the Amazon Elastic Compute Cloud User Guide.
+    * Requests a reboot of the specified instances. This operation is asynchronous; it only queues a request to reboot the specified instances. The operation succeeds if the instances are valid and belong to you. Requests to reboot terminated instances are ignored. If an instance does not cleanly shut down within a few minutes, Amazon EC2 performs a hard reboot. For more information about troubleshooting, see Getting console output and rebooting instances in the Amazon Elastic Compute Cloud User Guide.
     */
   def rebootInstances(): Request[js.Object, AWSError] = js.native
   def rebootInstances(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Requests a reboot of the specified instances. This operation is asynchronous; it only queues a request to reboot the specified instances. The operation succeeds if the instances are valid and belong to you. Requests to reboot terminated instances are ignored. If an instance does not cleanly shut down within four minutes, Amazon EC2 performs a hard reboot. For more information about troubleshooting, see Getting console output and rebooting instances in the Amazon Elastic Compute Cloud User Guide.
+    * Requests a reboot of the specified instances. This operation is asynchronous; it only queues a request to reboot the specified instances. The operation succeeds if the instances are valid and belong to you. Requests to reboot terminated instances are ignored. If an instance does not cleanly shut down within a few minutes, Amazon EC2 performs a hard reboot. For more information about troubleshooting, see Getting console output and rebooting instances in the Amazon Elastic Compute Cloud User Guide.
     */
   def rebootInstances(params: RebootInstancesRequest): Request[js.Object, AWSError] = js.native
   def rebootInstances(
@@ -5794,12 +5976,12 @@ trait EC2 extends Service {
   ): Request[js.Object, AWSError] = js.native
   
   /**
-    * Resets permission settings for the specified snapshot. For more information about modifying snapshot permissions, see Sharing Snapshots in the Amazon Elastic Compute Cloud User Guide.
+    * Resets permission settings for the specified snapshot. For more information about modifying snapshot permissions, see Sharing snapshots in the Amazon Elastic Compute Cloud User Guide.
     */
   def resetSnapshotAttribute(): Request[js.Object, AWSError] = js.native
   def resetSnapshotAttribute(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
   /**
-    * Resets permission settings for the specified snapshot. For more information about modifying snapshot permissions, see Sharing Snapshots in the Amazon Elastic Compute Cloud User Guide.
+    * Resets permission settings for the specified snapshot. For more information about modifying snapshot permissions, see Sharing snapshots in the Amazon Elastic Compute Cloud User Guide.
     */
   def resetSnapshotAttribute(params: ResetSnapshotAttributeRequest): Request[js.Object, AWSError] = js.native
   def resetSnapshotAttribute(
@@ -5850,32 +6032,32 @@ trait EC2 extends Service {
   ): Request[RevokeClientVpnIngressResult, AWSError] = js.native
   
   /**
-    * [VPC only] Removes the specified egress rules from a security group for EC2-VPC. This action doesn't apply to security groups for use in EC2-Classic. To remove a rule, the values that you specify (for example, ports) must match the existing rule's values exactly. Each rule consists of the protocol and the IPv4 or IPv6 CIDR range or source security group. For the TCP and UDP protocols, you must also specify the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and code. If the security group rule has a description, you do not have to specify the description to revoke the rule. Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might occur.
+    * [VPC only] Removes the specified egress rules from a security group for EC2-VPC. This action does not apply to security groups for use in EC2-Classic. To remove a rule, the values that you specify (for example, ports) must match the existing rule's values exactly.  [Default VPC] If the values you specify do not match the existing rule's values, no error is returned, and the output describes the security group rules that were not revoked.  AWS recommends that you use DescribeSecurityGroups to verify that the rule has been removed.  Each rule consists of the protocol and the IPv4 or IPv6 CIDR range or source security group. For the TCP and UDP protocols, you must also specify the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and code. If the security group rule has a description, you do not have to specify the description to revoke the rule. Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might occur.
     */
-  def revokeSecurityGroupEgress(): Request[js.Object, AWSError] = js.native
-  def revokeSecurityGroupEgress(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  def revokeSecurityGroupEgress(): Request[RevokeSecurityGroupEgressResult, AWSError] = js.native
+  def revokeSecurityGroupEgress(callback: js.Function2[/* err */ AWSError, /* data */ RevokeSecurityGroupEgressResult, Unit]): Request[RevokeSecurityGroupEgressResult, AWSError] = js.native
   /**
-    * [VPC only] Removes the specified egress rules from a security group for EC2-VPC. This action doesn't apply to security groups for use in EC2-Classic. To remove a rule, the values that you specify (for example, ports) must match the existing rule's values exactly. Each rule consists of the protocol and the IPv4 or IPv6 CIDR range or source security group. For the TCP and UDP protocols, you must also specify the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and code. If the security group rule has a description, you do not have to specify the description to revoke the rule. Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might occur.
+    * [VPC only] Removes the specified egress rules from a security group for EC2-VPC. This action does not apply to security groups for use in EC2-Classic. To remove a rule, the values that you specify (for example, ports) must match the existing rule's values exactly.  [Default VPC] If the values you specify do not match the existing rule's values, no error is returned, and the output describes the security group rules that were not revoked.  AWS recommends that you use DescribeSecurityGroups to verify that the rule has been removed.  Each rule consists of the protocol and the IPv4 or IPv6 CIDR range or source security group. For the TCP and UDP protocols, you must also specify the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and code. If the security group rule has a description, you do not have to specify the description to revoke the rule. Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might occur.
     */
-  def revokeSecurityGroupEgress(params: RevokeSecurityGroupEgressRequest): Request[js.Object, AWSError] = js.native
+  def revokeSecurityGroupEgress(params: RevokeSecurityGroupEgressRequest): Request[RevokeSecurityGroupEgressResult, AWSError] = js.native
   def revokeSecurityGroupEgress(
     params: RevokeSecurityGroupEgressRequest,
-    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
-  ): Request[js.Object, AWSError] = js.native
+    callback: js.Function2[/* err */ AWSError, /* data */ RevokeSecurityGroupEgressResult, Unit]
+  ): Request[RevokeSecurityGroupEgressResult, AWSError] = js.native
   
   /**
-    * Removes the specified ingress rules from a security group. To remove a rule, the values that you specify (for example, ports) must match the existing rule's values exactly.  [EC2-Classic only] If the values you specify do not match the existing rule's values, no error is returned. Use DescribeSecurityGroups to verify that the rule has been removed.  Each rule consists of the protocol and the CIDR range or source security group. For the TCP and UDP protocols, you must also specify the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and code. If the security group rule has a description, you do not have to specify the description to revoke the rule. Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might occur.
+    * Removes the specified ingress rules from a security group. To remove a rule, the values that you specify (for example, ports) must match the existing rule's values exactly.  [EC2-Classic , default VPC] If the values you specify do not match the existing rule's values, no error is returned, and the output describes the security group rules that were not revoked.  AWS recommends that you use DescribeSecurityGroups to verify that the rule has been removed.  Each rule consists of the protocol and the CIDR range or source security group. For the TCP and UDP protocols, you must also specify the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and code. If the security group rule has a description, you do not have to specify the description to revoke the rule. Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might occur.
     */
-  def revokeSecurityGroupIngress(): Request[js.Object, AWSError] = js.native
-  def revokeSecurityGroupIngress(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]): Request[js.Object, AWSError] = js.native
+  def revokeSecurityGroupIngress(): Request[RevokeSecurityGroupIngressResult, AWSError] = js.native
+  def revokeSecurityGroupIngress(callback: js.Function2[/* err */ AWSError, /* data */ RevokeSecurityGroupIngressResult, Unit]): Request[RevokeSecurityGroupIngressResult, AWSError] = js.native
   /**
-    * Removes the specified ingress rules from a security group. To remove a rule, the values that you specify (for example, ports) must match the existing rule's values exactly.  [EC2-Classic only] If the values you specify do not match the existing rule's values, no error is returned. Use DescribeSecurityGroups to verify that the rule has been removed.  Each rule consists of the protocol and the CIDR range or source security group. For the TCP and UDP protocols, you must also specify the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and code. If the security group rule has a description, you do not have to specify the description to revoke the rule. Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might occur.
+    * Removes the specified ingress rules from a security group. To remove a rule, the values that you specify (for example, ports) must match the existing rule's values exactly.  [EC2-Classic , default VPC] If the values you specify do not match the existing rule's values, no error is returned, and the output describes the security group rules that were not revoked.  AWS recommends that you use DescribeSecurityGroups to verify that the rule has been removed.  Each rule consists of the protocol and the CIDR range or source security group. For the TCP and UDP protocols, you must also specify the destination port or range of ports. For the ICMP protocol, you must also specify the ICMP type and code. If the security group rule has a description, you do not have to specify the description to revoke the rule. Rule changes are propagated to instances within the security group as quickly as possible. However, a small delay might occur.
     */
-  def revokeSecurityGroupIngress(params: RevokeSecurityGroupIngressRequest): Request[js.Object, AWSError] = js.native
+  def revokeSecurityGroupIngress(params: RevokeSecurityGroupIngressRequest): Request[RevokeSecurityGroupIngressResult, AWSError] = js.native
   def revokeSecurityGroupIngress(
     params: RevokeSecurityGroupIngressRequest,
-    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, Unit]
-  ): Request[js.Object, AWSError] = js.native
+    callback: js.Function2[/* err */ AWSError, /* data */ RevokeSecurityGroupIngressResult, Unit]
+  ): Request[RevokeSecurityGroupIngressResult, AWSError] = js.native
   
   /**
     * Launches the specified number of instances using an AMI for which you have permissions. You can specify a number of options, or leave the default options. The following rules apply:   [EC2-VPC] If you don't specify a subnet ID, we choose a default subnet from your default VPC for you. If you don't have a default VPC, you must specify a subnet ID in the request.   [EC2-Classic] If don't specify an Availability Zone, we choose one for you.   Some instance types must be launched into a VPC. If you do not have a default VPC, or if you do not specify a subnet ID, the request fails. For more information, see Instance types available only in a VPC.   [EC2-VPC] All instances have a network interface with a primary private IPv4 address. If you don't specify this address, we choose one from the IPv4 range of your subnet.   Not all instance types support IPv6 addresses. For more information, see Instance types.   If you don't specify a security group ID, we use the default security group. For more information, see Security groups.   If any of the AMIs have a product code attached for which the user has not subscribed, the request fails.   You can create a launch template, which is a resource that contains the parameters to launch an instance. When you launch an instance using RunInstances, you can specify the launch template instead of specifying the launch parameters. To ensure faster instance launches, break up large requests into smaller batches. For example, create five separate launch requests for 100 instances each instead of one launch request for 500 instances. An instance is ready for you to use when it's in the running state. You can check the state of your instance using DescribeInstances. You can tag instances and EBS volumes during launch, after launch, or both. For more information, see CreateTags and Tagging your Amazon EC2 resources. Linux instances have access to the public key of the key pair at boot. You can use this key to provide secure access to the instance. Amazon EC2 public images use this feature to provide secure access without passwords. For more information, see Key pairs in the Amazon Elastic Compute Cloud User Guide. For troubleshooting, see What to do if an instance immediately terminates, and Troubleshooting connecting to your instance in the Amazon Elastic Compute Cloud User Guide.

@@ -1,7 +1,5 @@
 package typingsSlinky.elasticElasticsearch.requestParamsMod
 
-import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.`false`
-import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.`true`
 import typingsSlinky.elasticElasticsearch.elasticElasticsearchStrings.wait_for
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +10,7 @@ trait SecurityCreateApiKey[T] extends Generic {
   
   var body: T = js.native
   
-  var refresh: js.UndefOr[`true` | `false` | wait_for] = js.native
+  var refresh: js.UndefOr[wait_for | Boolean] = js.native
 }
 object SecurityCreateApiKey {
   
@@ -41,7 +39,7 @@ object SecurityCreateApiKey {
     def setBody(value: T): Self = this.set("body", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRefresh(value: `true` | `false` | wait_for): Self = this.set("refresh", value.asInstanceOf[js.Any])
+    def setRefresh(value: wait_for | Boolean): Self = this.set("refresh", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRefresh: Self = this.set("refresh", js.undefined)

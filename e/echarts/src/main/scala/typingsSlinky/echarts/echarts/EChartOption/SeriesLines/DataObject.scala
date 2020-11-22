@@ -2,7 +2,7 @@ package typingsSlinky.echarts.echarts.EChartOption.SeriesLines
 
 import typingsSlinky.echarts.anon.FontSize
 import typingsSlinky.echarts.anon.ShadowColor
-import typingsSlinky.echarts.anon.`12`
+import typingsSlinky.echarts.anon.`11`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,7 +26,7 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-lines.data.emphasis
     */
-  var emphasis: js.UndefOr[`12`] = js.native
+  var emphasis: js.UndefOr[`11`] = js.native
   
   /**
     * @see https://echarts.apache.org/en/option.html#series-lines.data.label
@@ -82,7 +82,7 @@ object DataObject {
     def deleteCoords: Self = this.set("coords", js.undefined)
     
     @scala.inline
-    def setEmphasis(value: `12`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
+    def setEmphasis(value: `11`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEmphasis: Self = this.set("emphasis", js.undefined)

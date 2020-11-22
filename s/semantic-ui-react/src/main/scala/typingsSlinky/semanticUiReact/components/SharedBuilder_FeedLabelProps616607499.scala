@@ -4,7 +4,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.HtmlImageProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
@@ -35,7 +34,7 @@ class SharedBuilder_FeedLabelProps616607499 (val args: js.Array[js.Any])
   
   @scala.inline
   def iconFunction3(
-    value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("icon", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -46,7 +45,7 @@ class SharedBuilder_FeedLabelProps616607499 (val args: js.Array[js.Any])
   
   @scala.inline
   def imageFunction3(
-    value: (/* component */ ReactType[HtmlImageProps], HtmlImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, HtmlImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("image", js.Any.fromFunction3(value))
   
   @scala.inline

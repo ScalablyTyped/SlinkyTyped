@@ -9,12 +9,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.MixedContentIssue
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.BlockedByResponseIssue
   - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.HeavyAdIssue
+  - typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.ContentSecurityPolicyIssue
 */
 trait InspectorIssueCode extends js.Object
 object InspectorIssueCode {
   
   @scala.inline
   def BlockedByResponseIssue: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.BlockedByResponseIssue = "BlockedByResponseIssue".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.BlockedByResponseIssue]
+  
+  @scala.inline
+  def ContentSecurityPolicyIssue: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.ContentSecurityPolicyIssue = "ContentSecurityPolicyIssue".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.ContentSecurityPolicyIssue]
   
   @scala.inline
   def HeavyAdIssue: typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.HeavyAdIssue = "HeavyAdIssue".asInstanceOf[typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.HeavyAdIssue]

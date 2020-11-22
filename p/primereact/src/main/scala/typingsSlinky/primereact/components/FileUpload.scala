@@ -46,6 +46,9 @@ object FileUpload {
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def emptyTemplate(value: /* props */ js.Object => _): this.type = set("emptyTemplate", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline

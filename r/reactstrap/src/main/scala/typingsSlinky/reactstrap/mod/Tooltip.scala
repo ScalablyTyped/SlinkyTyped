@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "Tooltip")
+@JSImport("reactstrap/es", "Tooltip")
 @js.native
-class Tooltip[T] ()
+class Tooltip ()
   extends Component[TooltipProps, js.Object, js.Any]

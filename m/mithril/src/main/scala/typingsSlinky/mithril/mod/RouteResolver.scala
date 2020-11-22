@@ -9,10 +9,11 @@ trait RouteResolver[Attrs, State] extends js.Object {
   
   /** The onmatch hook is called when the router needs to find a component to render. */
   var onmatch: js.UndefOr[
-    js.ThisFunction2[
+    js.ThisFunction3[
       /* this */ this.type, 
       /* args */ Attrs, 
       /* requestedPath */ String, 
+      /* route */ String, 
       (ComponentTypes[_, _]) | js.Promise[_] | Unit
     ]
   ] = js.native
@@ -47,10 +48,11 @@ object RouteResolver {
     
     @scala.inline
     def setOnmatch(
-      value: js.ThisFunction2[
+      value: js.ThisFunction3[
           RouteResolver[Attrs, State], 
           /* args */ Attrs, 
           /* requestedPath */ String, 
+          /* route */ String, 
           (ComponentTypes[_, _]) | js.Promise[_] | Unit
         ]
     ): Self = this.set("onmatch", value.asInstanceOf[js.Any])

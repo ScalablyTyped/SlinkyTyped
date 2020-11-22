@@ -8,9 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def byteLength(encoded: String): Double = js.native
+  def byteLength(b64: String): Double = js.native
   
-  def fromByteArray(bytes: js.typedarray.Uint8Array): String = js.native
+  def fromByteArray(uint8: js.typedarray.Uint8Array): String = js.native
   
-  def toByteArray(encoded: String): js.typedarray.Uint8Array = js.native
+  def toByteArray(b64: String): js.typedarray.Uint8Array = js.native
 }

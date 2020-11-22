@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "angular-storage"
-version := "v0.0.11-dt-20200515Z-402412"
+version := "v0.0.11-dt-20200923Z-402412"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

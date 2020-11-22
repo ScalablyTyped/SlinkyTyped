@@ -60,6 +60,11 @@ trait SamplingRuleArgs extends js.Object {
   val serviceType: Input[String] = js.native
   
   /**
+    * Key-value mapping of resource tags
+    */
+  val tags: js.UndefOr[Input[StringDictionary[Input[String]]]] = js.native
+  
+  /**
     * Matches the path from a request URL.
     */
   val urlPath: Input[String] = js.native
@@ -144,5 +149,11 @@ object SamplingRuleArgs {
     
     @scala.inline
     def deleteRuleName: Self = this.set("ruleName", js.undefined)
+    
+    @scala.inline
+    def setTags(value: Input[StringDictionary[Input[String]]]): Self = this.set("tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("tags", js.undefined)
   }
 }

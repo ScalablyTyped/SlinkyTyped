@@ -14,7 +14,8 @@ class LookaheadAssertion protected ()
   extends AssertionBase[
       typingsSlinky.grammarkdown.tokensMod.SyntaxKind.LookaheadAssertion, 
       OpenBracketToken
-    ] {
+    ]
+     with Assertion {
   def this(openBracketToken: Token[OpenBracketToken], lookaheadKeyword: Token[LookaheadKeyword]) = this()
   def this(
     openBracketToken: Token[OpenBracketToken],

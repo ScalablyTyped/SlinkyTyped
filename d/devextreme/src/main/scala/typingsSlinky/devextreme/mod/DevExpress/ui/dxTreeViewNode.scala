@@ -7,28 +7,44 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeViewNode extends js.Object {
   
-  /** @name dxTreeViewNode.children */
+  /**
+    * [descr:dxTreeViewNode.children]
+    */
   var children: js.UndefOr[js.Array[dxTreeViewNode]] = js.native
   
-  /** @name dxTreeViewNode.disabled */
+  /**
+    * [descr:dxTreeViewNode.disabled]
+    */
   var disabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeViewNode.expanded */
+  /**
+    * [descr:dxTreeViewNode.expanded]
+    */
   var expanded: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeViewNode.itemData */
+  /**
+    * [descr:dxTreeViewNode.itemData]
+    */
   var itemData: js.UndefOr[js.Any] = js.native
   
-  /** @name dxTreeViewNode.key */
+  /**
+    * [descr:dxTreeViewNode.key]
+    */
   var key: js.UndefOr[js.Any] = js.native
   
-  /** @name dxTreeViewNode.parent */
+  /**
+    * [descr:dxTreeViewNode.parent]
+    */
   var parent: js.UndefOr[dxTreeViewNode] = js.native
   
-  /** @name dxTreeViewNode.selected */
+  /**
+    * [descr:dxTreeViewNode.selected]
+    */
   var selected: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeViewNode.text */
+  /**
+    * [descr:dxTreeViewNode.text]
+    */
   var text: js.UndefOr[String] = js.native
 }
 object dxTreeViewNode {

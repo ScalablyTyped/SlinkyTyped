@@ -11,11 +11,11 @@ trait SelectionStyle extends js.Object {
   
   var color: js.UndefOr[String] = js.native
   
-  var hoverStyle: js.UndefOr[`26`] = js.native
+  var hoverStyle: js.UndefOr[`30`] = js.native
   
   var label: js.UndefOr[WordWrap] = js.native
   
-  var selectionStyle: js.UndefOr[`26`] = js.native
+  var selectionStyle: js.UndefOr[`30`] = js.native
 }
 object SelectionStyle {
   
@@ -53,7 +53,7 @@ object SelectionStyle {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setHoverStyle(value: `26`): Self = this.set("hoverStyle", value.asInstanceOf[js.Any])
+    def setHoverStyle(value: `30`): Self = this.set("hoverStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHoverStyle: Self = this.set("hoverStyle", js.undefined)
@@ -65,7 +65,7 @@ object SelectionStyle {
     def deleteLabel: Self = this.set("label", js.undefined)
     
     @scala.inline
-    def setSelectionStyle(value: `26`): Self = this.set("selectionStyle", value.asInstanceOf[js.Any])
+    def setSelectionStyle(value: `30`): Self = this.set("selectionStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSelectionStyle: Self = this.set("selectionStyle", js.undefined)

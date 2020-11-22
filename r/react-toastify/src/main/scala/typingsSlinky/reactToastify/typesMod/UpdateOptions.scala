@@ -5,6 +5,7 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.reactToastify.anon.Position
 import typingsSlinky.reactToastify.reactToastifyBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,11 +17,11 @@ trait UpdateOptions extends js.Object {
   
   var autoClose: js.UndefOr[Double | `false` | Null] = js.native
   
-  var bodyClassName: js.UndefOr[ClassName | Null] = js.native
+  var bodyClassName: js.UndefOr[ToastClassName | Null] = js.native
   
   var bodyStyle: js.UndefOr[CSSProperties | Null] = js.native
   
-  var className: js.UndefOr[ClassName | Null] = js.native
+  var className: js.UndefOr[ToastClassName | Null] = js.native
   
   var closeButton: js.UndefOr[ReactElement | (js.Function1[/* props */ js.Any, ReactElement]) | Boolean | Null] = js.native
   
@@ -50,7 +51,7 @@ trait UpdateOptions extends js.Object {
   
   var progress: js.UndefOr[Double | String | Null] = js.native
   
-  var progressClassName: js.UndefOr[ClassName | Null] = js.native
+  var progressClassName: js.UndefOr[ToastClassName | Null] = js.native
   
   var progressStyle: js.UndefOr[CSSProperties | Null] = js.native
   
@@ -107,7 +108,10 @@ object UpdateOptions {
     def setAutoCloseNull: Self = this.set("autoClose", null)
     
     @scala.inline
-    def setBodyClassName(value: ClassName): Self = this.set("bodyClassName", value.asInstanceOf[js.Any])
+    def setBodyClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("bodyClassName", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setBodyClassName(value: ToastClassName): Self = this.set("bodyClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBodyClassName: Self = this.set("bodyClassName", js.undefined)
@@ -125,7 +129,10 @@ object UpdateOptions {
     def setBodyStyleNull: Self = this.set("bodyStyle", null)
     
     @scala.inline
-    def setClassName(value: ClassName): Self = this.set("className", value.asInstanceOf[js.Any])
+    def setClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("className", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setClassName(value: ToastClassName): Self = this.set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
@@ -266,7 +273,10 @@ object UpdateOptions {
     def setProgressNull: Self = this.set("progress", null)
     
     @scala.inline
-    def setProgressClassName(value: ClassName): Self = this.set("progressClassName", value.asInstanceOf[js.Any])
+    def setProgressClassNameFunction1(value: /* context */ js.UndefOr[Position] => String): Self = this.set("progressClassName", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setProgressClassName(value: ToastClassName): Self = this.set("progressClassName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteProgressClassName: Self = this.set("progressClassName", js.undefined)

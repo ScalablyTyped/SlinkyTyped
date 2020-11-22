@@ -85,10 +85,23 @@ trait MeshInstance extends js.Object {
   var cull: Boolean = js.native
   
   /**
+    * Deletes a shader parameter on a mesh instance.
+    * @param name - The name of the parameter to delete.
+    */
+  def deleteParameter(name: String): Unit = js.native
+  
+  /**
     * Use this value to affect rendering order of mesh instances.
     Only used when mesh instances are added to a {@link pc.Layer} with {@link pc.Layer#opaqueSortMode} or {@link pc.Layer#transparentSortMode} (depending on the material) set to {@link pc.SORTMODE_MANUAL}.
     */
   var drawOrder: Double = js.native
+  
+  /**
+    * Retrieves the specified shader parameter from a mesh instance.
+    * @param name - The name of the parameter to query.
+    * @returns The named parameter.
+    */
+  def getParameter(name: String): js.Any = js.native
   
   /**
     * Number of instances when using hardware instancing to render the mesh.
@@ -134,6 +147,20 @@ trait MeshInstance extends js.Object {
     */
   def setInstancing(): Unit = js.native
   def setInstancing(vertexBuffer: VertexBuffer): Unit = js.native
+  
+  def setParameter(name: String, data: js.Array[Double]): Unit = js.native
+  def setParameter(name: String, data: js.Array[Double], passFlags: Double): Unit = js.native
+  /**
+    * Sets a shader parameter on a mesh instance. Note that this parameter will take precedence over parameter of the same name
+    * if set on Material this mesh instance uses for rendering.
+    * @param name - The name of the parameter to set.
+    * @param data - The value for the specified parameter.
+    * @param [passFlags] - Mask describing which passes the material should be included in.
+    */
+  def setParameter(name: String, data: Double): Unit = js.native
+  def setParameter(name: String, data: Double, passFlags: Double): Unit = js.native
+  def setParameter(name: String, data: Texture): Unit = js.native
+  def setParameter(name: String, data: Texture, passFlags: Double): Unit = js.native
   
   /**
     * Enable rendering for this mesh instance. Use visible property to enable/disable rendering without overhead of removing from scene.

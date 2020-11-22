@@ -6,4 +6,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("meteor/mongo", "Mongo.Cursor")
 @js.native
-class CursorCls[T] () extends Cursor[T]
+class CursorCls[T, U] () extends Cursor[T, U]

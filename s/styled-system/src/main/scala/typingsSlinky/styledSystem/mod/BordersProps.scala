@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BordersProps[ThemeType /* <: Theme[TLengthStyledSystem] */]
   extends BorderProps[
       ThemeType, 
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BorderProperty<TLengthStyledSystem> */ js.Any
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Border<TLengthStyledSystem> */ js.Any
     ]
 object BordersProps {
   

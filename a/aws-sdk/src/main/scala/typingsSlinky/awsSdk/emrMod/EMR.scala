@@ -5,7 +5,7 @@ import typingsSlinky.awsSdk.anon.DescribeStepInputwaiterWa
 import typingsSlinky.awsSdk.awsSdkStrings.clusterRunning
 import typingsSlinky.awsSdk.awsSdkStrings.clusterTerminated
 import typingsSlinky.awsSdk.awsSdkStrings.stepComplete
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -150,6 +150,20 @@ trait EMR extends Service {
   ): Request[DescribeJobFlowsOutput, AWSError] = js.native
   
   /**
+    * Provides details of a notebook execution.
+    */
+  def describeNotebookExecution(): Request[DescribeNotebookExecutionOutput, AWSError] = js.native
+  def describeNotebookExecution(callback: js.Function2[/* err */ AWSError, /* data */ DescribeNotebookExecutionOutput, scala.Unit]): Request[DescribeNotebookExecutionOutput, AWSError] = js.native
+  /**
+    * Provides details of a notebook execution.
+    */
+  def describeNotebookExecution(params: DescribeNotebookExecutionInput): Request[DescribeNotebookExecutionOutput, AWSError] = js.native
+  def describeNotebookExecution(
+    params: DescribeNotebookExecutionInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeNotebookExecutionOutput, scala.Unit]
+  ): Request[DescribeNotebookExecutionOutput, AWSError] = js.native
+  
+  /**
     * Provides the details of a security configuration by returning the configuration JSON.
     */
   def describeSecurityConfiguration(): Request[DescribeSecurityConfigurationOutput, AWSError] = js.native
@@ -278,6 +292,20 @@ trait EMR extends Service {
     params: ListInstancesInput,
     callback: js.Function2[/* err */ AWSError, /* data */ ListInstancesOutput, scala.Unit]
   ): Request[ListInstancesOutput, AWSError] = js.native
+  
+  /**
+    * Provides summaries of all notebook executions. You can filter the list based on multiple criteria such as status, time range, and editor id. Returns a maximum of 50 notebook executions and a marker to track the paging of a longer notebook execution list across multiple ListNotebookExecution calls.
+    */
+  def listNotebookExecutions(): Request[ListNotebookExecutionsOutput, AWSError] = js.native
+  def listNotebookExecutions(callback: js.Function2[/* err */ AWSError, /* data */ ListNotebookExecutionsOutput, scala.Unit]): Request[ListNotebookExecutionsOutput, AWSError] = js.native
+  /**
+    * Provides summaries of all notebook executions. You can filter the list based on multiple criteria such as status, time range, and editor id. Returns a maximum of 50 notebook executions and a marker to track the paging of a longer notebook execution list across multiple ListNotebookExecution calls.
+    */
+  def listNotebookExecutions(params: ListNotebookExecutionsInput): Request[ListNotebookExecutionsOutput, AWSError] = js.native
+  def listNotebookExecutions(
+    params: ListNotebookExecutionsInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListNotebookExecutionsOutput, scala.Unit]
+  ): Request[ListNotebookExecutionsOutput, AWSError] = js.native
   
   /**
     * Lists all the security configurations visible to this account, providing their creation dates and times, and their names. This call returns a maximum of 50 clusters per call, but returns a marker to track the paging of the cluster list across multiple ListSecurityConfigurations calls.
@@ -478,6 +506,34 @@ trait EMR extends Service {
   def setVisibleToAllUsers(params: SetVisibleToAllUsersInput): Request[js.Object, AWSError] = js.native
   def setVisibleToAllUsers(
     params: SetVisibleToAllUsersInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]
+  ): Request[js.Object, AWSError] = js.native
+  
+  /**
+    * Starts a notebook execution.
+    */
+  def startNotebookExecution(): Request[StartNotebookExecutionOutput, AWSError] = js.native
+  def startNotebookExecution(callback: js.Function2[/* err */ AWSError, /* data */ StartNotebookExecutionOutput, scala.Unit]): Request[StartNotebookExecutionOutput, AWSError] = js.native
+  /**
+    * Starts a notebook execution.
+    */
+  def startNotebookExecution(params: StartNotebookExecutionInput): Request[StartNotebookExecutionOutput, AWSError] = js.native
+  def startNotebookExecution(
+    params: StartNotebookExecutionInput,
+    callback: js.Function2[/* err */ AWSError, /* data */ StartNotebookExecutionOutput, scala.Unit]
+  ): Request[StartNotebookExecutionOutput, AWSError] = js.native
+  
+  /**
+    * Stops a notebook execution.
+    */
+  def stopNotebookExecution(): Request[js.Object, AWSError] = js.native
+  def stopNotebookExecution(callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]): Request[js.Object, AWSError] = js.native
+  /**
+    * Stops a notebook execution.
+    */
+  def stopNotebookExecution(params: StopNotebookExecutionInput): Request[js.Object, AWSError] = js.native
+  def stopNotebookExecution(
+    params: StopNotebookExecutionInput,
     callback: js.Function2[/* err */ AWSError, /* data */ js.Object, scala.Unit]
   ): Request[js.Object, AWSError] = js.native
   

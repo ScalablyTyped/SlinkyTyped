@@ -34,6 +34,13 @@ trait CreateConfigurationResponse extends js.Object {
     
     */
   var Name: js.UndefOr[string] = js.native
+  
+  /**
+    * 
+    The state of the configuration. The possible states are ACTIVE, DELETING, and DELETE_FAILED. 
+    
+    */
+  var State: js.UndefOr[ConfigurationState] = js.native
 }
 object CreateConfigurationResponse {
   
@@ -81,5 +88,11 @@ object CreateConfigurationResponse {
     
     @scala.inline
     def deleteName: Self = this.set("Name", js.undefined)
+    
+    @scala.inline
+    def setState(value: ConfigurationState): Self = this.set("State", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteState: Self = this.set("State", js.undefined)
   }
 }

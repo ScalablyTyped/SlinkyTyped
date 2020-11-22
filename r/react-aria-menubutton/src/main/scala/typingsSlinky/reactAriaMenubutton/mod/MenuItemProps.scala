@@ -13,7 +13,7 @@ trait MenuItemProps[T /* <: HTMLElement */]
      with ClassAttributes[T] {
   
   /**
-    * The HTML tag for this element. Default: 'span'.
+    * The HTML tag for this element. Default: 'div'.
     */
   var tag: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: T['tagName'] */ js.Any

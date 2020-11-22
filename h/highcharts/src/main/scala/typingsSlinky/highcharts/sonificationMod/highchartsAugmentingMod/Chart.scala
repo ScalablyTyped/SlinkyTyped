@@ -77,7 +77,9 @@ trait Chart extends js.Object {
     * Sonify a chart.
     *
     * @param options
-    *        The options for sonifying this chart.
+    *        The options for sonifying this chart. If not provided, uses
+    *        options set on chart and series.
     */
+  def sonify(): Unit = js.native
   def sonify(options: SonificationOptions): Unit = js.native
 }

@@ -6,6 +6,7 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.colorSliderTypesMod.IColorSlider
 import typingsSlinky.officeUiFabricReact.colorSliderTypesMod.IColorSliderProps
 import typingsSlinky.officeUiFabricReact.colorSliderTypesMod.IColorSliderStyleProps
@@ -16,7 +17,6 @@ import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.transparency
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

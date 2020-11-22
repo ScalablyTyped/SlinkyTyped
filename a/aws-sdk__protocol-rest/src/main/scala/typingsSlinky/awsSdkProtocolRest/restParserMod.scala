@@ -1,9 +1,8 @@
 package typingsSlinky.awsSdkProtocolRest
 
-import typingsSlinky.awsSdkTypes.unmarshallerMod.BodyParser
-import typingsSlinky.awsSdkTypes.unmarshallerMod.ResponseParser
-import typingsSlinky.awsSdkTypes.unmarshallerMod.ServiceExceptionParser
-import typingsSlinky.awsSdkTypes.unmarshallerMod.StreamCollector
+import typingsSlinky.awsSdkTypes.httpMod.HttpResponse
+import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
+import typingsSlinky.awsSdkTypes.serdeMod.StreamCollector
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
@@ -14,12 +13,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object restParserMod extends js.Object {
   
-  @js.native
-  class RestParser[StreamType] protected () extends ResponseParser[StreamType] {
+  /* import warning: RemoveDifficultInheritance.summarizeChanges 
+  - Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ResponseParser<StreamType> * / any */ @js.native
+  class RestParser[StreamType] protected () extends js.Object {
     def this(
-      bodyParser: BodyParser[String],
-      bodyCollector: StreamCollector[StreamType],
-      parseServiceException: ServiceExceptionParser,
+      bodyParser: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BodyParser */ js.Any,
+      bodyCollector: StreamCollector,
+      parseServiceException: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceExceptionParser */ js.Any,
       utf8Encoder: Encoder,
       base64Decoder: Decoder
     ) = this()
@@ -29,6 +29,11 @@ object restParserMod extends js.Object {
     val bodyCollector: js.Any = js.native
     
     val bodyParser: js.Any = js.native
+    
+    def parse[OutputType /* <: MetadataBearer */](
+      operation: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OperationModel */ js.Any,
+      input: HttpResponse
+    ): js.Promise[OutputType] = js.native
     
     var parseBody: js.Any = js.native
     

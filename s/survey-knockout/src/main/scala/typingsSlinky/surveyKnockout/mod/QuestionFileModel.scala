@@ -2,7 +2,7 @@ package typingsSlinky.surveyKnockout.mod
 
 import org.scalajs.dom.raw.File
 import typingsSlinky.surveyKnockout.anon.Calculations
-import typingsSlinky.surveyKnockout.anon.Name
+import typingsSlinky.surveyKnockout.anon.NameString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -107,7 +107,7 @@ class QuestionFileModel protected () extends Question {
   /**
     * Remove file item programmatically.
     */
-  def removeFile(content: Name): Unit = js.native
+  def removeFile(content: NameString): Unit = js.native
   
   /**
     * The remove file button caption.

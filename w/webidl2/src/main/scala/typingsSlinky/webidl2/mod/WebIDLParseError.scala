@@ -27,5 +27,5 @@ class WebIDLParseError protected () extends Error {
   var sourceName: js.UndefOr[String] = js.native
   
   /** the five tokens at the point of error, as understood by the tokeniser */
-  var tokens: js.Array[ValueDescription] = js.native
+  var tokens: js.Array[Token] = js.native
 }

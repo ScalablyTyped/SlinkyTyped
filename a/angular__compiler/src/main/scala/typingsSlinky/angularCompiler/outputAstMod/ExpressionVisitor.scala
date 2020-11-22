@@ -45,6 +45,8 @@ trait ExpressionVisitor extends js.Object {
   
   def visitTypeofExpr(ast: TypeofExpr_, context: js.Any): js.Any = js.native
   
+  def visitUnaryOperatorExpr(ast: UnaryOperatorExpr, context: js.Any): js.Any = js.native
+  
   def visitWrappedNodeExpr(ast: WrappedNodeExpr[_], context: js.Any): js.Any = js.native
   
   def visitWriteKeyExpr(expr: WriteKeyExpr, context: js.Any): js.Any = js.native
@@ -76,12 +78,13 @@ object ExpressionVisitor {
     visitReadPropExpr: (ReadPropExpr, js.Any) => js.Any,
     visitReadVarExpr: (ReadVarExpr, js.Any) => js.Any,
     visitTypeofExpr: (TypeofExpr_, js.Any) => js.Any,
+    visitUnaryOperatorExpr: (UnaryOperatorExpr, js.Any) => js.Any,
     visitWrappedNodeExpr: (WrappedNodeExpr[_], js.Any) => js.Any,
     visitWriteKeyExpr: (WriteKeyExpr, js.Any) => js.Any,
     visitWritePropExpr: (WritePropExpr, js.Any) => js.Any,
     visitWriteVarExpr: (WriteVarExpr, js.Any) => js.Any
   ): ExpressionVisitor = {
-    val __obj = js.Dynamic.literal(visitAssertNotNullExpr = js.Any.fromFunction2(visitAssertNotNullExpr), visitBinaryOperatorExpr = js.Any.fromFunction2(visitBinaryOperatorExpr), visitCastExpr = js.Any.fromFunction2(visitCastExpr), visitCommaExpr = js.Any.fromFunction2(visitCommaExpr), visitConditionalExpr = js.Any.fromFunction2(visitConditionalExpr), visitExternalExpr = js.Any.fromFunction2(visitExternalExpr), visitFunctionExpr = js.Any.fromFunction2(visitFunctionExpr), visitInstantiateExpr = js.Any.fromFunction2(visitInstantiateExpr), visitInvokeFunctionExpr = js.Any.fromFunction2(visitInvokeFunctionExpr), visitInvokeMethodExpr = js.Any.fromFunction2(visitInvokeMethodExpr), visitLiteralArrayExpr = js.Any.fromFunction2(visitLiteralArrayExpr), visitLiteralExpr = js.Any.fromFunction2(visitLiteralExpr), visitLiteralMapExpr = js.Any.fromFunction2(visitLiteralMapExpr), visitLocalizedString = js.Any.fromFunction2(visitLocalizedString), visitNotExpr = js.Any.fromFunction2(visitNotExpr), visitReadKeyExpr = js.Any.fromFunction2(visitReadKeyExpr), visitReadPropExpr = js.Any.fromFunction2(visitReadPropExpr), visitReadVarExpr = js.Any.fromFunction2(visitReadVarExpr), visitTypeofExpr = js.Any.fromFunction2(visitTypeofExpr), visitWrappedNodeExpr = js.Any.fromFunction2(visitWrappedNodeExpr), visitWriteKeyExpr = js.Any.fromFunction2(visitWriteKeyExpr), visitWritePropExpr = js.Any.fromFunction2(visitWritePropExpr), visitWriteVarExpr = js.Any.fromFunction2(visitWriteVarExpr))
+    val __obj = js.Dynamic.literal(visitAssertNotNullExpr = js.Any.fromFunction2(visitAssertNotNullExpr), visitBinaryOperatorExpr = js.Any.fromFunction2(visitBinaryOperatorExpr), visitCastExpr = js.Any.fromFunction2(visitCastExpr), visitCommaExpr = js.Any.fromFunction2(visitCommaExpr), visitConditionalExpr = js.Any.fromFunction2(visitConditionalExpr), visitExternalExpr = js.Any.fromFunction2(visitExternalExpr), visitFunctionExpr = js.Any.fromFunction2(visitFunctionExpr), visitInstantiateExpr = js.Any.fromFunction2(visitInstantiateExpr), visitInvokeFunctionExpr = js.Any.fromFunction2(visitInvokeFunctionExpr), visitInvokeMethodExpr = js.Any.fromFunction2(visitInvokeMethodExpr), visitLiteralArrayExpr = js.Any.fromFunction2(visitLiteralArrayExpr), visitLiteralExpr = js.Any.fromFunction2(visitLiteralExpr), visitLiteralMapExpr = js.Any.fromFunction2(visitLiteralMapExpr), visitLocalizedString = js.Any.fromFunction2(visitLocalizedString), visitNotExpr = js.Any.fromFunction2(visitNotExpr), visitReadKeyExpr = js.Any.fromFunction2(visitReadKeyExpr), visitReadPropExpr = js.Any.fromFunction2(visitReadPropExpr), visitReadVarExpr = js.Any.fromFunction2(visitReadVarExpr), visitTypeofExpr = js.Any.fromFunction2(visitTypeofExpr), visitUnaryOperatorExpr = js.Any.fromFunction2(visitUnaryOperatorExpr), visitWrappedNodeExpr = js.Any.fromFunction2(visitWrappedNodeExpr), visitWriteKeyExpr = js.Any.fromFunction2(visitWriteKeyExpr), visitWritePropExpr = js.Any.fromFunction2(visitWritePropExpr), visitWriteVarExpr = js.Any.fromFunction2(visitWriteVarExpr))
     __obj.asInstanceOf[ExpressionVisitor]
   }
   
@@ -156,6 +159,9 @@ object ExpressionVisitor {
     
     @scala.inline
     def setVisitTypeofExpr(value: (TypeofExpr_, js.Any) => js.Any): Self = this.set("visitTypeofExpr", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setVisitUnaryOperatorExpr(value: (UnaryOperatorExpr, js.Any) => js.Any): Self = this.set("visitUnaryOperatorExpr", js.Any.fromFunction2(value))
     
     @scala.inline
     def setVisitWrappedNodeExpr(value: (WrappedNodeExpr[_], js.Any) => js.Any): Self = this.set("visitWrappedNodeExpr", js.Any.fromFunction2(value))

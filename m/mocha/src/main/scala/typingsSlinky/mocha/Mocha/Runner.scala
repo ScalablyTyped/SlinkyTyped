@@ -102,7 +102,18 @@ trait Runner extends EventEmitter {
     */
   /* protected */ def checkGlobals(test: Test): Unit = js.native
   
+  var checkLeaks: js.UndefOr[Boolean] = js.native
+  
   var currentRunnable: js.UndefOr[Runnable] = js.native
+  
+   // added by reporters
+  /**
+    * Removes all event handlers set during a run on this instance.
+    * Remark: this does *not* clean/dispose the tests or suites themselves.
+    *
+    * @see https://mochajs.org/api/runner#dispose
+    */
+  def dispose(): Unit = js.native
   
   def emit(name: String, args: js.Any*): Boolean = js.native
   @JSName("emit")
@@ -185,7 +196,6 @@ trait Runner extends EventEmitter {
     */
   def globals(arr: js.Array[String]): this.type = js.native
   
-   // added by reporters
   /**
     * Run tests with full titles matching `re`. Updates runner.total
     * with number of tests matched.
@@ -242,8 +252,6 @@ trait Runner extends EventEmitter {
     suites: js.Array[Suite],
     fn: js.Function2[/* err */ js.UndefOr[js.Any], /* errSuite */ js.UndefOr[Suite], Unit]
   ): Unit = js.native
-  
-  var ignoreLeaks: js.UndefOr[Boolean] = js.native
   
   var next: js.Any = js.native
   

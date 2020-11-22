@@ -1,7 +1,12 @@
 package typingsSlinky.reactNative.mod
 
+import typingsSlinky.reactNative.reactNativeStrings.all_
 import typingsSlinky.reactNative.reactNativeStrings.balanced
+import typingsSlinky.reactNative.reactNativeStrings.email
 import typingsSlinky.reactNative.reactNativeStrings.highQuality
+import typingsSlinky.reactNative.reactNativeStrings.link
+import typingsSlinky.reactNative.reactNativeStrings.none
+import typingsSlinky.reactNative.reactNativeStrings.phoneNumber
 import typingsSlinky.reactNative.reactNativeStrings.simple
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,6 +14,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait TextPropsAndroid extends js.Object {
+  
+  /**
+    * Determines the types of data converted to clickable URLs in the text element.
+    * By default no data types are detected.
+    */
+  var dataDetectorType: js.UndefOr[Null | phoneNumber | link | email | none | all_] = js.native
   
   /**
     * Lets the user select text, to use the native copy and paste functionality.
@@ -48,6 +59,15 @@ object TextPropsAndroid {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDataDetectorType(value: phoneNumber | link | email | none | all_): Self = this.set("dataDetectorType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDataDetectorType: Self = this.set("dataDetectorType", js.undefined)
+    
+    @scala.inline
+    def setDataDetectorTypeNull: Self = this.set("dataDetectorType", null)
     
     @scala.inline
     def setSelectable(value: Boolean): Self = this.set("selectable", value.asInstanceOf[js.Any])

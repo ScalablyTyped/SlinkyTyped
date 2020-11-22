@@ -30,6 +30,9 @@ object Paginator {
     def currentPageReportTemplate(value: String): this.type = set("currentPageReportTemplate", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def dropdownAppendTo(value: js.Any): this.type = set("dropdownAppendTo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def first(value: Double): this.type = set("first", value.asInstanceOf[js.Any])
     
     @scala.inline

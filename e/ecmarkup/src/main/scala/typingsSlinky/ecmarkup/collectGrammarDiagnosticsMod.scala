@@ -2,8 +2,10 @@ package typingsSlinky.ecmarkup
 
 import typingsSlinky.ecmarkup.anon.Alg
 import typingsSlinky.ecmarkup.anon.Grammar
-import typingsSlinky.ecmarkup.anon.LintingErrors
+import typingsSlinky.ecmarkup.anon.OneOffGrammars
 import typingsSlinky.ecmarkup.anon.Source
+import typingsSlinky.ecmarkup.specMod.Spec
+import typingsSlinky.ecmarkup.specMod.Warning
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,10 +15,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object collectGrammarDiagnosticsMod extends js.Object {
   
   def collectGrammarDiagnostics(
-    dom: js.Any,
-    sourceText: String,
+    report: js.Function1[/* e */ Warning, Unit],
+    spec: Spec,
+    mainSource: String,
     mainGrammar: js.Array[Source],
     sdos: js.Array[Alg],
     earlyErrors: js.Array[Grammar]
-  ): LintingErrors = js.native
+  ): OneOffGrammars = js.native
 }

@@ -22,6 +22,8 @@ trait GetRouteResult extends js.Object {
   
   val instanceId: String = js.native
   
+  val localGatewayId: String = js.native
+  
   val natGatewayId: String = js.native
   
   val networkInterfaceId: String = js.native
@@ -42,13 +44,14 @@ object GetRouteResult {
     gatewayId: String,
     id: String,
     instanceId: String,
+    localGatewayId: String,
     natGatewayId: String,
     networkInterfaceId: String,
     routeTableId: String,
     transitGatewayId: String,
     vpcPeeringConnectionId: String
   ): GetRouteResult = {
-    val __obj = js.Dynamic.literal(destinationCidrBlock = destinationCidrBlock.asInstanceOf[js.Any], destinationIpv6CidrBlock = destinationIpv6CidrBlock.asInstanceOf[js.Any], egressOnlyGatewayId = egressOnlyGatewayId.asInstanceOf[js.Any], gatewayId = gatewayId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], instanceId = instanceId.asInstanceOf[js.Any], natGatewayId = natGatewayId.asInstanceOf[js.Any], networkInterfaceId = networkInterfaceId.asInstanceOf[js.Any], routeTableId = routeTableId.asInstanceOf[js.Any], transitGatewayId = transitGatewayId.asInstanceOf[js.Any], vpcPeeringConnectionId = vpcPeeringConnectionId.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(destinationCidrBlock = destinationCidrBlock.asInstanceOf[js.Any], destinationIpv6CidrBlock = destinationIpv6CidrBlock.asInstanceOf[js.Any], egressOnlyGatewayId = egressOnlyGatewayId.asInstanceOf[js.Any], gatewayId = gatewayId.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], instanceId = instanceId.asInstanceOf[js.Any], localGatewayId = localGatewayId.asInstanceOf[js.Any], natGatewayId = natGatewayId.asInstanceOf[js.Any], networkInterfaceId = networkInterfaceId.asInstanceOf[js.Any], routeTableId = routeTableId.asInstanceOf[js.Any], transitGatewayId = transitGatewayId.asInstanceOf[js.Any], vpcPeeringConnectionId = vpcPeeringConnectionId.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetRouteResult]
   }
   
@@ -84,6 +87,9 @@ object GetRouteResult {
     
     @scala.inline
     def setInstanceId(value: String): Self = this.set("instanceId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLocalGatewayId(value: String): Self = this.set("localGatewayId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNatGatewayId(value: String): Self = this.set("natGatewayId", value.asInstanceOf[js.Any])

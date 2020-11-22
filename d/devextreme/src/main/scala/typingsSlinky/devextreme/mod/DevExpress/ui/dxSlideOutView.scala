@@ -10,18 +10,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSlideOutView extends Widget {
   
-  /** @name dxSlideOutView.content() */
+  /**
+    * [descr:dxSlideOutView.content()]
+    */
   def content(): dxElement = js.native
   
-  /** @name dxSlideOutView.hideMenu() */
+  /**
+    * [descr:dxSlideOutView.hideMenu()]
+    */
   def hideMenu(): Promise[Unit] with JQueryPromise[Unit] = js.native
   
-  /** @name dxSlideOutView.menuContent() */
+  /**
+    * [descr:dxSlideOutView.menuContent()]
+    */
   def menuContent(): dxElement = js.native
   
-  /** @name dxSlideOutView.showMenu() */
+  /**
+    * [descr:dxSlideOutView.showMenu()]
+    */
   def showMenu(): Promise[Unit] with JQueryPromise[Unit] = js.native
   
-  /** @name dxSlideOutView.toggleMenuVisibility() */
+  /**
+    * [descr:dxSlideOutView.toggleMenuVisibility()]
+    */
   def toggleMenuVisibility(): Promise[Unit] with JQueryPromise[Unit] = js.native
 }

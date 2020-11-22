@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Fields extends js.Object {
   
-  var fields: js.UndefOr[js.Object] = js.native
+  var fields: js.UndefOr[Cvv] = js.native
   
   var styles: js.UndefOr[js.Object] = js.native
 }
@@ -35,7 +35,7 @@ object Fields {
     }
     
     @scala.inline
-    def setFields(value: js.Object): Self = this.set("fields", value.asInstanceOf[js.Any])
+    def setFields(value: Cvv): Self = this.set("fields", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFields: Self = this.set("fields", js.undefined)

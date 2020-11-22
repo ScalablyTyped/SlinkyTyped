@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "Media")
+@JSImport("reactstrap/es", "Media")
 @js.native
-class Media[T] ()
+class Media ()
   extends Component[MediaProps, js.Object, js.Any]

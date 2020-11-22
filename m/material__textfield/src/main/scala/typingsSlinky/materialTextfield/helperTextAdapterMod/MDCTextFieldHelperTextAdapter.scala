@@ -13,6 +13,11 @@ trait MDCTextFieldHelperTextAdapter extends js.Object {
   def addClass(className: String): Unit = js.native
   
   /**
+    * @return the specified attribute's value on the helper text element.
+    */
+  def getAttr(attr: String): String | Null = js.native
+  
+  /**
     * Returns whether or not the helper text element contains the given class.
     */
   def hasClass(className: String): Boolean = js.native
@@ -42,13 +47,14 @@ object MDCTextFieldHelperTextAdapter {
   @scala.inline
   def apply(
     addClass: String => Unit,
+    getAttr: String => String | Null,
     hasClass: String => Boolean,
     removeAttr: String => Unit,
     removeClass: String => Unit,
     setAttr: (String, String) => Unit,
     setContent: String => Unit
   ): MDCTextFieldHelperTextAdapter = {
-    val __obj = js.Dynamic.literal(addClass = js.Any.fromFunction1(addClass), hasClass = js.Any.fromFunction1(hasClass), removeAttr = js.Any.fromFunction1(removeAttr), removeClass = js.Any.fromFunction1(removeClass), setAttr = js.Any.fromFunction2(setAttr), setContent = js.Any.fromFunction1(setContent))
+    val __obj = js.Dynamic.literal(addClass = js.Any.fromFunction1(addClass), getAttr = js.Any.fromFunction1(getAttr), hasClass = js.Any.fromFunction1(hasClass), removeAttr = js.Any.fromFunction1(removeAttr), removeClass = js.Any.fromFunction1(removeClass), setAttr = js.Any.fromFunction2(setAttr), setContent = js.Any.fromFunction1(setContent))
     __obj.asInstanceOf[MDCTextFieldHelperTextAdapter]
   }
   
@@ -69,6 +75,9 @@ object MDCTextFieldHelperTextAdapter {
     
     @scala.inline
     def setAddClass(value: String => Unit): Self = this.set("addClass", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setGetAttr(value: String => String | Null): Self = this.set("getAttr", js.Any.fromFunction1(value))
     
     @scala.inline
     def setHasClass(value: String => Boolean): Self = this.set("hasClass", js.Any.fromFunction1(value))

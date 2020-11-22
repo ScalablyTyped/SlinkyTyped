@@ -1,5 +1,9 @@
 package typingsSlinky.materialTabs
 
+import typingsSlinky.materialBase.foundationMod.MDCFoundation
+import typingsSlinky.materialTabs.anon.ACTIVE
+import typingsSlinky.materialTabs.anon.PartialMDCTabAdapter
+import typingsSlinky.materialTabs.anon.SELECTEDEVENT
 import typingsSlinky.materialTabs.tabAdapterMod.MDCTabAdapter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,8 +14,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object tabFoundationMod extends js.Object {
   
   @js.native
-  trait MDCTabFoundation
-    extends typingsSlinky.materialBase.foundationMod.default[MDCTabAdapter] {
+  class MDCTabFoundation () extends MDCFoundation[MDCTabAdapter] {
+    def this(adapter: PartialMDCTabAdapter) = this()
     
     def getComputedLeft(): Double = js.native
     
@@ -27,17 +31,29 @@ object tabFoundationMod extends js.Object {
     
     def setPreventDefaultOnClick(preventDefaultOnClick: Boolean): Unit = js.native
   }
+  /* static members */
+  @js.native
+  object MDCTabFoundation extends js.Object {
+    
+    val cssClasses: ACTIVE = js.native
+    
+    val defaultAdapter: MDCTabAdapter = js.native
+    
+    val strings: SELECTEDEVENT = js.native
+  }
   
   @js.native
-  class default () extends MDCTabFoundation
+  class default () extends MDCTabFoundation {
+    def this(adapter: PartialMDCTabAdapter) = this()
+  }
   /* static members */
   @js.native
   object default extends js.Object {
     
-    val cssClasses: typingsSlinky.materialTabs.tabConstantsMod.cssClasses = js.native
+    val cssClasses: ACTIVE = js.native
     
     val defaultAdapter: MDCTabAdapter = js.native
     
-    val strings: typingsSlinky.materialTabs.tabConstantsMod.strings = js.native
+    val strings: SELECTEDEVENT = js.native
   }
 }

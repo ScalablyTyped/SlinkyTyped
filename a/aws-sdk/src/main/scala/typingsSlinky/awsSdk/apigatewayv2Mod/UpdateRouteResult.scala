@@ -23,7 +23,7 @@ trait UpdateRouteResult extends js.Object {
   var AuthorizationScopes: js.UndefOr[typingsSlinky.awsSdk.apigatewayv2Mod.AuthorizationScopes] = js.native
   
   /**
-    * The authorization type for the route. For WebSocket APIs, valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer For HTTP APIs, valid values are NONE for open access, or JWT for using JSON Web Tokens.
+    * The authorization type for the route. For WebSocket APIs, valid values are NONE for open access, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer For HTTP APIs, valid values are NONE for open access, JWT for using JSON Web Tokens, AWS_IAM for using AWS IAM permissions, and CUSTOM for using a Lambda authorizer.
     */
   var AuthorizationType: js.UndefOr[typingsSlinky.awsSdk.apigatewayv2Mod.AuthorizationType] = js.native
   

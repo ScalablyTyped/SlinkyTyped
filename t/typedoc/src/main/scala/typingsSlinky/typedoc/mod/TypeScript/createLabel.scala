@@ -11,6 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createLabel extends js.Object {
   
+  /** @deprecated Use `factory.createLabel` or the factory supplied by your transformation context instead. */
   def apply(label: String, statement: Statement): LabeledStatement = js.native
   def apply(label: Identifier, statement: Statement): LabeledStatement = js.native
 }

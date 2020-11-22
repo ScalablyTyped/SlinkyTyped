@@ -28,9 +28,24 @@ trait ProvisionedProductDetail extends js.Object {
   var IdempotencyToken: js.UndefOr[typingsSlinky.awsSdk.servicecatalogMod.IdempotencyToken] = js.native
   
   /**
+    * The record identifier of the last request performed on this provisioned product of the following types:    ProvisionedProduct     UpdateProvisionedProduct     ExecuteProvisionedProductPlan     TerminateProvisionedProduct   
+    */
+  var LastProvisioningRecordId: js.UndefOr[Id] = js.native
+  
+  /**
     * The record identifier of the last request performed on this provisioned product.
     */
   var LastRecordId: js.UndefOr[LastRequestId] = js.native
+  
+  /**
+    * The record identifier of the last successful request performed on this provisioned product of the following types:    ProvisionedProduct     UpdateProvisionedProduct     ExecuteProvisionedProductPlan     TerminateProvisionedProduct   
+    */
+  var LastSuccessfulProvisioningRecordId: js.UndefOr[Id] = js.native
+  
+  /**
+    * The ARN of the launch role associated with the provisioned product.
+    */
+  var LaunchRoleArn: js.UndefOr[RoleArn] = js.native
   
   /**
     * The user-friendly name of the provisioned product.
@@ -110,10 +125,28 @@ object ProvisionedProductDetail {
     def deleteIdempotencyToken: Self = this.set("IdempotencyToken", js.undefined)
     
     @scala.inline
+    def setLastProvisioningRecordId(value: Id): Self = this.set("LastProvisioningRecordId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLastProvisioningRecordId: Self = this.set("LastProvisioningRecordId", js.undefined)
+    
+    @scala.inline
     def setLastRecordId(value: LastRequestId): Self = this.set("LastRecordId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLastRecordId: Self = this.set("LastRecordId", js.undefined)
+    
+    @scala.inline
+    def setLastSuccessfulProvisioningRecordId(value: Id): Self = this.set("LastSuccessfulProvisioningRecordId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLastSuccessfulProvisioningRecordId: Self = this.set("LastSuccessfulProvisioningRecordId", js.undefined)
+    
+    @scala.inline
+    def setLaunchRoleArn(value: RoleArn): Self = this.set("LaunchRoleArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLaunchRoleArn: Self = this.set("LaunchRoleArn", js.undefined)
     
     @scala.inline
     def setName(value: ProvisionedProductNameOrArn): Self = this.set("Name", value.asInstanceOf[js.Any])

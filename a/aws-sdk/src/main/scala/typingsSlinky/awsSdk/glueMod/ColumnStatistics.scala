@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ColumnStatistics extends js.Object {
   
   /**
-    * The analyzed time of the column statistics.
+    * The timestamp of when column statistics were generated.
     */
   var AnalyzedTime: js.Date = js.native
   
   /**
-    * The name of the column.
+    * Name of column which statistics belong to.
     */
   var ColumnName: NameString = js.native
   
   /**
-    * The type of the column.
+    * The data type of the column.
     */
   var ColumnType: TypeString = js.native
   
   /**
-    * The statistics of the column.
+    * A ColumnStatisticData object that contains the statistics data values.
     */
   var StatisticsData: ColumnStatisticsData = js.native
 }

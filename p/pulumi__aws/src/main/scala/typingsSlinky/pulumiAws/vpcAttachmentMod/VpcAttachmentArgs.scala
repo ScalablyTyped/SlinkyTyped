@@ -10,6 +10,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VpcAttachmentArgs extends js.Object {
   
   /**
+    * Whether Appliance Mode support is enabled. If enabled, a traffic flow between a source and destination uses the same Availability Zone for the VPC attachment for the lifetime of that flow. Valid values: `disable`, `enable`. Default value: `disable`.
+    */
+  val applianceModeSupport: js.UndefOr[Input[String]] = js.native
+  
+  /**
     * Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
     */
   val dnsSupport: js.UndefOr[Input[String]] = js.native
@@ -83,6 +88,12 @@ object VpcAttachmentArgs {
     
     @scala.inline
     def setVpcId(value: Input[String]): Self = this.set("vpcId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setApplianceModeSupport(value: Input[String]): Self = this.set("applianceModeSupport", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteApplianceModeSupport: Self = this.set("applianceModeSupport", js.undefined)
     
     @scala.inline
     def setDnsSupport(value: Input[String]): Self = this.set("dnsSupport", value.asInstanceOf[js.Any])

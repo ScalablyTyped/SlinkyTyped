@@ -18,9 +18,14 @@ trait ContainerDefinition extends js.Object {
   var Environment: js.UndefOr[EnvironmentMap] = js.native
   
   /**
-    * The Amazon EC2 Container Registry (Amazon ECR) path where inference code is stored. If you are using your own custom algorithm instead of an algorithm provided by Amazon SageMaker, the inference code must meet Amazon SageMaker requirements. Amazon SageMaker supports both registry/repository[:tag] and registry/repository[@digest] image path formats. For more information, see Using Your Own Algorithms with Amazon SageMaker 
+    * The path where inference code is stored. This can be either in Amazon EC2 Container Registry or in a Docker registry that is accessible from the same VPC that you configure for your endpoint. If you are using your own custom algorithm instead of an algorithm provided by Amazon SageMaker, the inference code must meet Amazon SageMaker requirements. Amazon SageMaker supports both registry/repository[:tag] and registry/repository[@digest] image path formats. For more information, see Using Your Own Algorithms with Amazon SageMaker 
     */
   var Image: js.UndefOr[ContainerImage] = js.native
+  
+  /**
+    * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For information about storing containers in a private Docker registry, see Use a Private Docker Registry for Real-Time Inference Containers 
+    */
+  var ImageConfig: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.ImageConfig] = js.native
   
   /**
     * Whether the container hosts a single model or multiple models.
@@ -28,14 +33,14 @@ trait ContainerDefinition extends js.Object {
   var Mode: js.UndefOr[ContainerMode] = js.native
   
   /**
-    * The S3 path where the model artifacts, which result from model training, are stored. This path must point to a single gzip compressed tar archive (.tar.gz suffix). The S3 path is required for Amazon SageMaker built-in algorithms, but not if you use your own algorithms. For more information on built-in algorithms, see Common Parameters.  If you provide a value for this parameter, Amazon SageMaker uses AWS Security Token Service to download model artifacts from the S3 path you provide. AWS STS is activated in your IAM user account by default. If you previously deactivated AWS STS for a region, you need to reactivate AWS STS for that region. For more information, see Activating and Deactivating AWS STS in an AWS Region in the AWS Identity and Access Management User Guide.  If you use a built-in algorithm to create a model, Amazon SageMaker requires that you provide a S3 path to the model artifacts in ModelDataUrl. 
+    * The S3 path where the model artifacts, which result from model training, are stored. This path must point to a single gzip compressed tar archive (.tar.gz suffix). The S3 path is required for Amazon SageMaker built-in algorithms, but not if you use your own algorithms. For more information on built-in algorithms, see Common Parameters.   The model artifacts must be in an S3 bucket that is in the same region as the model or endpoint you are creating.  If you provide a value for this parameter, Amazon SageMaker uses AWS Security Token Service to download model artifacts from the S3 path you provide. AWS STS is activated in your IAM user account by default. If you previously deactivated AWS STS for a region, you need to reactivate AWS STS for that region. For more information, see Activating and Deactivating AWS STS in an AWS Region in the AWS Identity and Access Management User Guide.  If you use a built-in algorithm to create a model, Amazon SageMaker requires that you provide a S3 path to the model artifacts in ModelDataUrl. 
     */
   var ModelDataUrl: js.UndefOr[Url] = js.native
   
   /**
     * The name or Amazon Resource Name (ARN) of the model package to use to create the model.
     */
-  var ModelPackageName: js.UndefOr[ArnOrName] = js.native
+  var ModelPackageName: js.UndefOr[VersionedArnOrName] = js.native
 }
 object ContainerDefinition {
   
@@ -79,6 +84,12 @@ object ContainerDefinition {
     def deleteImage: Self = this.set("Image", js.undefined)
     
     @scala.inline
+    def setImageConfig(value: ImageConfig): Self = this.set("ImageConfig", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteImageConfig: Self = this.set("ImageConfig", js.undefined)
+    
+    @scala.inline
     def setMode(value: ContainerMode): Self = this.set("Mode", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -91,7 +102,7 @@ object ContainerDefinition {
     def deleteModelDataUrl: Self = this.set("ModelDataUrl", js.undefined)
     
     @scala.inline
-    def setModelPackageName(value: ArnOrName): Self = this.set("ModelPackageName", value.asInstanceOf[js.Any])
+    def setModelPackageName(value: VersionedArnOrName): Self = this.set("ModelPackageName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModelPackageName: Self = this.set("ModelPackageName", js.undefined)

@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VirtualServiceSpec extends js.Object {
   
   /**
-    * The App Mesh object that is acting as the provider for a virtual service. You can specify
-    a single virtual node or virtual router.
+    * The App Mesh object that is acting as the provider for a virtual service. You can specify a single virtual node or virtual router.
     */
   var provider: js.UndefOr[VirtualServiceProvider] = js.native
 }

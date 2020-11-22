@@ -1,9 +1,9 @@
 package typingsSlinky.reactNativeTextInputMask.components
 
 import slinky.core.SyntheticEvent
-import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -15,13 +15,11 @@ import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.DocumentSelectionState
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.KeyboardTypeOptions
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ReturnKeyTypeOptions
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TVParallaxProperties
-import typingsSlinky.reactNative.mod.TextInput
 import typingsSlinky.reactNative.mod.TextInputFocusEventData
 import typingsSlinky.reactNative.mod.TextInputKeyPressEventData
 import typingsSlinky.reactNative.mod.TextInputScrollEventData
@@ -293,7 +291,7 @@ object ReactNativeTextInputMask {
     def onKeyPress(value: SyntheticEvent[NodeHandle, TextInputKeyPressEventData] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))
@@ -374,7 +372,7 @@ object ReactNativeTextInputMask {
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def refInput(value: ReactRef[TextInput]): this.type = set("refInput", value.asInstanceOf[js.Any])
+    def refInput(value: /* ref */ js.Any => Unit): this.type = set("refInput", js.Any.fromFunction1(value))
     
     @scala.inline
     def rejectResponderTermination(value: Boolean): this.type = set("rejectResponderTermination", value.asInstanceOf[js.Any])

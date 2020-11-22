@@ -3,13 +3,13 @@ package typingsSlinky.officeUiFabricReact.components
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCardStatus
 import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCardStatusProps
 import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCardStatusStyleProps
 import typingsSlinky.officeUiFabricReact.documentCardStatusTypesMod.IDocumentCardStatusStyles
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`

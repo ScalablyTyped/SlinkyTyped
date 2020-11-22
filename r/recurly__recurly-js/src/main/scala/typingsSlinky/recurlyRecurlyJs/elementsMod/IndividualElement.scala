@@ -1,6 +1,5 @@
 package typingsSlinky.recurlyRecurlyJs.elementsMod
 
-import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.recurlyRecurlyJs.emitterMod.Emitter
 import scala.scalajs.js
@@ -10,12 +9,26 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IndividualElement extends Emitter[ElementEvent] {
   
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-elementattach|Element.attach}
+    */
   def attach(el: String): IndividualElement = js.native
   def attach(el: HTMLElement): IndividualElement = js.native
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-elementattach|Element.attach}
+    */
   @JSName("attach")
   var attach_Original: Attach[IndividualElement] = js.native
   
-  def configure(options: IndividualElementOptions): Element = js.native
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-elementconfigure|Element.configure}
+    */
+  def configure(options: IndividualElementOptions): IndividualElement = js.native
   
-  def remove(): Element = js.native
+  def focus(): IndividualElement = js.native
+  
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#fn-elementremove|Element.remove}
+    */
+  def remove(): IndividualElement = js.native
 }

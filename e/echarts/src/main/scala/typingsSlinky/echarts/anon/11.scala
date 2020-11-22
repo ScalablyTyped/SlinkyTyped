@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait `11` extends js.Object {
   
   /**
-    * @see https://echarts.apache.org/en/option.html#series-lines.emphasis.label
+    * @see https://echarts.apache.org/en/option.html#series-lines.data.emphasis.label
     */
   var label: js.UndefOr[FontSize] = js.native
   
   /**
-    * @see https://echarts.apache.org/en/option.html#series-lines.emphasis.lineStyle
+    * @see https://echarts.apache.org/en/option.html#series-lines.data.emphasis.lineStyle
     */
-  var lineStyle: js.UndefOr[ShadowBlur] = js.native
+  var lineStyle: js.UndefOr[ShadowColor] = js.native
 }
 object `11` {
   
@@ -47,7 +47,7 @@ object `11` {
     def deleteLabel: Self = this.set("label", js.undefined)
     
     @scala.inline
-    def setLineStyle(value: ShadowBlur): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
+    def setLineStyle(value: ShadowColor): Self = this.set("lineStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLineStyle: Self = this.set("lineStyle", js.undefined)

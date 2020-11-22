@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("@blueprintjs/core/lib/esm/components", "Tabs")
 @js.native
-class Tabs ()
+class Tabs protected ()
   extends typingsSlinky.blueprintjsCore.tabsMod.Tabs {
   def this(props: ITabsProps) = this()
 }
@@ -29,5 +29,5 @@ object Tabs extends js.Object {
   
   var displayName: String = js.native
   
-  def getDerivedStateFromProps(hasSelectedTabId: ITabsProps): SelectedTabId = js.native
+  def getDerivedStateFromProps(hasSelectedTabId: ITabsProps): SelectedTabId | Null = js.native
 }

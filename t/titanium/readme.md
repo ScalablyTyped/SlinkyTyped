@@ -1,7 +1,7 @@
 
 # Scala.js typings for titanium
 
-Typings are for version 9.0
+Typings are for version 9.2
 
 ## Library description:
 Appcelerator Titanium Command line

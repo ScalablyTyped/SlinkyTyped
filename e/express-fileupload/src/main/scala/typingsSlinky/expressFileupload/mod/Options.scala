@@ -25,7 +25,10 @@ trait Options
     */
   var abortOnLimit: js.UndefOr[Boolean] = js.native
   
-  /** Automatically creates the directory path specified in `.mv(filePathName)` */
+  /**
+    * Automatically creates the directory path specified in `.mv(filePathName)`
+    * @default false
+    */
   var createParentPath: js.UndefOr[Boolean] = js.native
   
   /**
@@ -37,6 +40,7 @@ trait Options
   
   /**
     * User defined limit handler which will be invoked if the file is bigger than configured limits.
+    * @default false
     */
   var limitHandler: js.UndefOr[Boolean | (RequestHandler[ParamsDictionary, _, _, Query])] = js.native
   
@@ -46,18 +50,22 @@ trait Options
     *
     * When this option is enabled they are parsed in order to be nested like this:
     * `{'name': 'John', 'hobbies': ['Cinema', 'Bike']}`
+    * @default false
     */
   var parseNested: js.UndefOr[Boolean] = js.native
   
   /**
     * Preserves filename extension when using safeFileNames option.
     * If set to `true`, will default to an extension length of 3.
-    * If set to `Number`, this will be the max allowable extension length. If an extension is smaller than the extension length, it remains untouched. If the extension is longer, it is shifted.
+    * If set to `Number`, this will be the max allowable extension length.
+    * If an extension is smaller than the extension length, it remains untouched. If the extension is longer, it is shifted.
+    * @default false
     */
   var preserveExtension: js.UndefOr[Boolean | Double] = js.native
   
   /**
     * Response which will be send to client if file size limit exceeded when `abortOnLimit` set to `true`.
+    * @default 'File size limit has been reached'
     */
   var responseOnLimit: js.UndefOr[String] = js.native
   
@@ -66,6 +74,7 @@ trait Options
     * You can use custom regex to determine what to strip.
     * If set to true, non-alphanumeric characters except dashes and underscores will be stripped.
     * This option is off by default.
+    * @default false
     */
   var safeFileNames: js.UndefOr[Boolean | js.RegExp] = js.native
   
@@ -74,6 +83,7 @@ trait Options
     * Used along with the `useTempFiles` option.
     * By default this module uses 'tmp' folder in the current working directory.
     * You can use trailing slash, but it is not necessary.
+    * @default '/tmp'
     */
   var tempFileDir: js.UndefOr[String] = js.native
   
@@ -92,6 +102,7 @@ trait Options
     * By default this module uploads files into RAM.
     * Setting this option to True turns on using temporary files instead of utilising RAM. This avoids memory overflow issues when uploading large files
     * or in case of uploading lots of files at same time.
+    * @default false
     */
   var useTempFiles: js.UndefOr[Boolean] = js.native
 }
@@ -138,7 +149,7 @@ object Options {
     
     @scala.inline
     def setLimitHandlerFunction3(
-      value: (/* req */ Request[ParamsDictionary, _, _, Query], /* res */ Response[_], /* next */ NextFunction) => js.Any
+      value: (/* req */ Request[ParamsDictionary, _, _, Query], /* res */ Response[_, Double], /* next */ NextFunction) => js.Any
     ): Self = this.set("limitHandler", js.Any.fromFunction3(value))
     
     @scala.inline

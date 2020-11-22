@@ -13,7 +13,7 @@ trait UpdateAccessPolicyRequest extends js.Object {
   var accessPolicyId: ID = js.native
   
   /**
-    * The identity for this access policy. Choose either a user or a group but not both.
+    * The identity for this access policy. Choose an AWS SSO user, an AWS SSO group, or an IAM user.
     */
   var accessPolicyIdentity: Identity = js.native
   
@@ -23,7 +23,7 @@ trait UpdateAccessPolicyRequest extends js.Object {
   var accessPolicyPermission: Permission = js.native
   
   /**
-    * The AWS IoT SiteWise Monitor resource for this access policy. Choose either portal or project but not both.
+    * The AWS IoT SiteWise Monitor resource for this access policy. Choose either a portal or a project.
     */
   var accessPolicyResource: Resource = js.native
   

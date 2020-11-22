@@ -4,14 +4,21 @@ import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.anon.Ref
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -45,13 +52,14 @@ import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.tags
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
+import typingsSlinky.antd.selectMod.RefSelectProps
 import typingsSlinky.antd.selectMod.SelectProps
 import typingsSlinky.antd.selectMod.SelectValue
-import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.rcSelect.anon.Mark
 import typingsSlinky.rcSelect.generatorMod.CustomTagProps
 import typingsSlinky.rcSelect.generatorMod.FilterFunc
@@ -76,9 +84,9 @@ object Select {
   object component extends js.Object
   
   @scala.inline
-  class Builder[ValueType /* <: SelectValue */] (val args: js.Array[js.Any])
+  class Builder[VT /* <: SelectValue */] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Select[ValueType]] {
+       with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
@@ -192,7 +200,9 @@ object Select {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -258,7 +268,7 @@ object Select {
     def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def defaultValue(value: ValueType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
+    def defaultValue(value: VT): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def direction(value: String): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -357,7 +367,7 @@ object Select {
     
     @scala.inline
     def onChange(
-      value: (ValueType, /* option */ (/* import warning: importer.ImportType#apply Failed type conversion: rc-select.rc-select/lib/interface.OptionsType[number] */ js.Any) | OptionsType) => Unit
+      value: (VT, /* option */ (/* import warning: importer.ImportType#apply Failed type conversion: rc-select.rc-select/lib/interface.OptionsType[number] */ js.Any) | OptionsType) => Unit
     ): this.type = set("onChange", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -368,7 +378,7 @@ object Select {
     
     @scala.inline
     def onDeselect(
-      value: (/* value */ SingleType[ValueType], /* import warning: importer.ImportType#apply Failed type conversion: rc-select.rc-select/lib/interface.OptionsType[number] */ /* option */ js.Any) => Unit
+      value: (/* value */ SingleType[VT], /* import warning: importer.ImportType#apply Failed type conversion: rc-select.rc-select/lib/interface.OptionsType[number] */ /* option */ js.Any) => Unit
     ): this.type = set("onDeselect", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -403,7 +413,7 @@ object Select {
     
     @scala.inline
     def onSelect(
-      value: (/* value */ SingleType[ValueType], /* import warning: importer.ImportType#apply Failed type conversion: rc-select.rc-select/lib/interface.OptionsType[number] */ /* option */ js.Any) => Unit
+      value: (/* value */ SingleType[VT], /* import warning: importer.ImportType#apply Failed type conversion: rc-select.rc-select/lib/interface.OptionsType[number] */ /* option */ js.Any) => Unit
     ): this.type = set("onSelect", js.Any.fromFunction2(value))
     
     @scala.inline
@@ -429,6 +439,18 @@ object Select {
     
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def refRefObject(value: ReactRef[RefSelectProps]): this.type = set("ref", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def refFunction1(value: /* instance */ RefSelectProps | Null => Unit): this.type = set("ref", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def ref(value: (js.Function1[/* instance */ RefSelectProps | Null, Unit]) | ReactRef[RefSelectProps]): this.type = set("ref", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def refNull: this.type = set("ref", null)
     
     @scala.inline
     def removeIconReactElement(value: ReactElement): this.type = set("removeIcon", value.asInstanceOf[js.Any])
@@ -479,21 +501,21 @@ object Select {
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def value(value: ValueType): this.type = set("value", value.asInstanceOf[js.Any])
+    def value(value: VT): this.type = set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def virtual(value: Boolean): this.type = set("virtual", value.asInstanceOf[js.Any])
   }
   
-  def withProps[ValueType /* <: SelectValue */](p: SelectProps[ValueType]): Builder[ValueType] = new Builder[ValueType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps[VT /* <: SelectValue */](p: SelectProps[VT] with Ref): Builder[VT] = new Builder[VT](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply[ValueType /* <: SelectValue */](): Builder[ValueType] = {
+  def apply[VT /* <: SelectValue */](): Builder[VT] = {
     val __props = js.Dynamic.literal()
-    new Builder[ValueType](js.Array(this.component, __props.asInstanceOf[SelectProps[ValueType]]))
+    new Builder[VT](js.Array(this.component, __props.asInstanceOf[SelectProps[VT] with Ref]))
   }
   
-  implicit def make[ValueType /* <: SelectValue */](companion: Select.type): Builder[ValueType] = new Builder[ValueType](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make[VT /* <: SelectValue */](companion: Select.type): Builder[VT] = new Builder[VT](js.Array(this.component, js.Dictionary.empty))()
   
   object OptGroup {
     

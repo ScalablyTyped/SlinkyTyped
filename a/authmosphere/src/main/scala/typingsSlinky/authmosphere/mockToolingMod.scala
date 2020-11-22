@@ -1,8 +1,9 @@
 package typingsSlinky.authmosphere
 
-import typingsSlinky.authmosphere.anon.Accesstoken
 import typingsSlinky.authmosphere.mockOptionsMod.MockOptions
+import typingsSlinky.authmosphere.tokenMod.Token
 import typingsSlinky.nock.mod.Scope
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,7 +28,7 @@ object mockToolingMod extends js.Object {
   def mockAccessTokenEndpoint(options: MockOptions): Scope = js.native
   
   def mockAccessTokenEndpointWithErrorResponse(options: MockOptions, httpStatus: Double): Scope = js.native
-  def mockAccessTokenEndpointWithErrorResponse(options: MockOptions, httpStatus: Double, responseBody: js.Object): Scope = js.native
+  def mockAccessTokenEndpointWithErrorResponse(options: MockOptions, httpStatus: Double, responseBody: Record[String, _]): Scope = js.native
   
   /**
     * Creates a __very basic__ mock of a token validation endpoint.
@@ -38,8 +39,8 @@ object mockToolingMod extends js.Object {
     * @throws on parse error of options.url
     */
   def mockTokeninfoEndpoint(options: MockOptions): Scope = js.native
-  def mockTokeninfoEndpoint(options: MockOptions, tokens: js.Array[Accesstoken]): Scope = js.native
+  def mockTokeninfoEndpoint(options: MockOptions, tokens: js.Array[Token[Record[String, _]]]): Scope = js.native
   
   def mockTokeninfoEndpointWithErrorResponse(options: MockOptions, httpStatus: Double): Scope = js.native
-  def mockTokeninfoEndpointWithErrorResponse(options: MockOptions, httpStatus: Double, responseBody: js.Object): Scope = js.native
+  def mockTokeninfoEndpointWithErrorResponse(options: MockOptions, httpStatus: Double, responseBody: Record[String, _]): Scope = js.native
 }

@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Constructor[T /* <: Model[_, ModelSetOptions] */]
+trait Constructor[T /* <: Model[_, ModelSetOptions, js.Object] */]
   extends Instantiable0[T]
      with Instantiable1[/* opt */ Id, T] {
   

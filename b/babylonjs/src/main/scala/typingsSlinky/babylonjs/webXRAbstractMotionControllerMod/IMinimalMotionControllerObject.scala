@@ -1,6 +1,7 @@
 package typingsSlinky.babylonjs.webXRAbstractMotionControllerMod
 
 import typingsSlinky.babylonjs.anon.Pressed
+import typingsSlinky.babylonjs.anon.Pulse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,6 +18,11 @@ trait IMinimalMotionControllerObject extends js.Object {
     * An array of available buttons
     */
   var buttons: js.Array[Pressed] = js.native
+  
+  /**
+    * EXPERIMENTAL haptic support.
+    */
+  var hapticActuators: js.UndefOr[js.Array[Pulse]] = js.native
 }
 object IMinimalMotionControllerObject {
   
@@ -52,5 +58,14 @@ object IMinimalMotionControllerObject {
     
     @scala.inline
     def setButtons(value: js.Array[Pressed]): Self = this.set("buttons", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setHapticActuatorsVarargs(value: Pulse*): Self = this.set("hapticActuators", js.Array(value :_*))
+    
+    @scala.inline
+    def setHapticActuators(value: js.Array[Pulse]): Self = this.set("hapticActuators", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHapticActuators: Self = this.set("hapticActuators", js.undefined)
   }
 }

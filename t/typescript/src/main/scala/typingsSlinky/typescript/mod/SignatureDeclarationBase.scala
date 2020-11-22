@@ -18,14 +18,14 @@ trait SignatureDeclarationBase
      with JSDocContainer {
   
   @JSName("kind")
-  var kind_SignatureDeclarationBase: CallSignature | ConstructSignature | typingsSlinky.typescript.mod.SyntaxKind.MethodSignature | IndexSignature | FunctionType | ConstructorType | typingsSlinky.typescript.mod.SyntaxKind.JSDocFunctionType | typingsSlinky.typescript.mod.SyntaxKind.FunctionDeclaration | typingsSlinky.typescript.mod.SyntaxKind.MethodDeclaration | Constructor | GetAccessor | SetAccessor | typingsSlinky.typescript.mod.SyntaxKind.FunctionExpression | typingsSlinky.typescript.mod.SyntaxKind.ArrowFunction = js.native
+  val kind_SignatureDeclarationBase: CallSignature | ConstructSignature | typingsSlinky.typescript.mod.SyntaxKind.MethodSignature | IndexSignature | FunctionType | ConstructorType | typingsSlinky.typescript.mod.SyntaxKind.JSDocFunctionType | typingsSlinky.typescript.mod.SyntaxKind.FunctionDeclaration | typingsSlinky.typescript.mod.SyntaxKind.MethodDeclaration | Constructor | GetAccessor | SetAccessor | typingsSlinky.typescript.mod.SyntaxKind.FunctionExpression | typingsSlinky.typescript.mod.SyntaxKind.ArrowFunction = js.native
   
   @JSName("name")
-  var name_SignatureDeclarationBase: js.UndefOr[PropertyName] = js.native
+  val name_SignatureDeclarationBase: js.UndefOr[PropertyName] = js.native
   
-  var parameters: NodeArray[ParameterDeclaration] = js.native
+  val parameters: NodeArray[ParameterDeclaration] = js.native
   
-  var `type`: js.UndefOr[TypeNode] = js.native
+  val `type`: js.UndefOr[TypeNode] = js.native
   
-  var typeParameters: js.UndefOr[NodeArray[TypeParameterDeclaration]] = js.native
+  val typeParameters: js.UndefOr[NodeArray[TypeParameterDeclaration]] = js.native
 }

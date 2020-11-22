@@ -12,7 +12,7 @@ trait WebRequest extends js.Object {
     * redirect is about to occur.
     */
   def onBeforeRedirect(): Unit = js.native
-  // Docs: http://electronjs.org/docs/api/web-request
+  // Docs: https://electronjs.org/docs/api/web-request
   /**
     * The `listener` will be called with `listener(details)` when a server initiated
     * redirect is about to occur.

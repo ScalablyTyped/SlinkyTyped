@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/property-provider/build/ProviderError", JSImport.Namespace)
+@JSImport("@aws-sdk/property-provider/dist/cjs/ProviderError", JSImport.Namespace)
 @js.native
 object providerErrorMod extends js.Object {
   

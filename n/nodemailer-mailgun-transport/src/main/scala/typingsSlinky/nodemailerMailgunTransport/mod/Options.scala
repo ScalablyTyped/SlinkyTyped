@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Options extends js.Object {
   
-  var auth: AuthOptions = js.native
+  var auth: AuthOptions | AliasAuthOptions = js.native
   
   var host: js.UndefOr[String] = js.native
   
@@ -20,7 +20,7 @@ trait Options extends js.Object {
 object Options {
   
   @scala.inline
-  def apply(auth: AuthOptions): Options = {
+  def apply(auth: AuthOptions | AliasAuthOptions): Options = {
     val __obj = js.Dynamic.literal(auth = auth.asInstanceOf[js.Any])
     __obj.asInstanceOf[Options]
   }
@@ -41,7 +41,7 @@ object Options {
     }
     
     @scala.inline
-    def setAuth(value: AuthOptions): Self = this.set("auth", value.asInstanceOf[js.Any])
+    def setAuth(value: AuthOptions | AliasAuthOptions): Self = this.set("auth", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHost(value: String): Self = this.set("host", value.asInstanceOf[js.Any])

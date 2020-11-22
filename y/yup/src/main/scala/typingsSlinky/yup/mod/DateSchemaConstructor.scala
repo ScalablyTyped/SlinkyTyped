@@ -8,7 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DateSchemaConstructor
   extends AnySchemaConstructor
-     with Instantiable0[DateSchema[js.UndefOr[js.Date]]] {
+     with // tslint:disable-next-line:no-unnecessary-generics
+Instantiable0[DateSchema[js.UndefOr[js.Date | String | Null], js.Object]] {
   
-  def apply(): DateSchema[js.UndefOr[js.Date]] = js.native
+  // tslint:disable-next-line:no-unnecessary-generics
+  def apply[T /* <: js.UndefOr[js.Date | String | Null] */, C](): DateSchema[T, C] = js.native
 }

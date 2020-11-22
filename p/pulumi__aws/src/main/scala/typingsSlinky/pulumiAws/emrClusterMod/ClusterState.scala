@@ -2,10 +2,11 @@ package typingsSlinky.pulumiAws.emrClusterMod
 
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.inputMod.emr.ClusterBootstrapAction
+import typingsSlinky.pulumiAws.inputMod.emr.ClusterCoreInstanceFleet
 import typingsSlinky.pulumiAws.inputMod.emr.ClusterCoreInstanceGroup
 import typingsSlinky.pulumiAws.inputMod.emr.ClusterEc2Attributes
-import typingsSlinky.pulumiAws.inputMod.emr.ClusterInstanceGroup
 import typingsSlinky.pulumiAws.inputMod.emr.ClusterKerberosAttributes
+import typingsSlinky.pulumiAws.inputMod.emr.ClusterMasterInstanceFleet
 import typingsSlinky.pulumiAws.inputMod.emr.ClusterMasterInstanceGroup
 import typingsSlinky.pulumiAws.inputMod.emr.ClusterStep
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -41,7 +42,7 @@ trait ClusterState extends js.Object {
   val clusterState: js.UndefOr[Input[String]] = js.native
   
   /**
-    * List of configurations supplied for the EMR cluster you are creating
+    * A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster. List of `configuration` blocks.
     */
   val configurations: js.UndefOr[Input[String]] = js.native
   
@@ -51,23 +52,14 @@ trait ClusterState extends js.Object {
   val configurationsJson: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Use the `coreInstanceGroup` configuration block `instanceCount` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`coreInstanceCount`-1) as core nodes. Cannot be specified if `coreInstanceGroup` or `instanceGroup` configuration blocks are set. Default `1`
-    *
-    * @deprecated use `core_instance_group` configuration block `instance_count` argument instead
+    * Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the core node type. Cannot be specified if any `coreInstanceGroup` configuration blocks are set. Detailed below.
     */
-  val coreInstanceCount: js.UndefOr[Input[Double]] = js.native
+  val coreInstanceFleet: js.UndefOr[Input[ClusterCoreInstanceFleet]] = js.native
   
   /**
-    * Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `coreInstanceCount` argument, `coreInstanceType` argument, or `instanceGroup` configuration blocks are set. Detailed below.
+    * Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core).
     */
   val coreInstanceGroup: js.UndefOr[Input[ClusterCoreInstanceGroup]] = js.native
-  
-  /**
-    * Use the `coreInstanceGroup` configuration block `instanceType` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `coreInstanceGroup` or `instanceGroup` configuration blocks are set.
-    *
-    * @deprecated use `core_instance_group` configuration block `instance_type` argument instead
-    */
-  val coreInstanceType: js.UndefOr[Input[String]] = js.native
   
   /**
     * A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
@@ -85,13 +77,6 @@ trait ClusterState extends js.Object {
   val ec2Attributes: js.UndefOr[Input[ClusterEc2Attributes]] = js.native
   
   /**
-    * Use the `masterInstanceGroup` configuration block, `coreInstanceGroup` configuration block and `aws.emr.InstanceGroup` resource(s) instead. A list of `instanceGroup` objects for each instance group in the cluster. Exactly one of `masterInstanceType` and `instanceGroup` must be specified. If `instanceGroup` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `masterInstanceGroup` or `coreInstanceGroup` configuration blocks are set. Defined below
-    *
-    * @deprecated use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead
-    */
-  val instanceGroups: js.UndefOr[Input[js.Array[Input[ClusterInstanceGroup]]]] = js.native
-  
-  /**
     * Switch on/off run cluster with no steps or when all steps are complete (default is on)
     */
   val keepJobFlowAliveWhenNoSteps: js.UndefOr[Input[Boolean]] = js.native
@@ -107,16 +92,14 @@ trait ClusterState extends js.Object {
   val logUri: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `masterInstanceType` argument or `instanceGroup` configuration blocks are set. Detailed below.
+    * Configuration block to use an [Instance Fleet](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-fleet.html) for the master node type. Cannot be specified if any `masterInstanceGroup` configuration blocks are set. Detailed below.
     */
-  val masterInstanceGroup: js.UndefOr[Input[ClusterMasterInstanceGroup]] = js.native
+  val masterInstanceFleet: js.UndefOr[Input[ClusterMasterInstanceFleet]] = js.native
   
   /**
-    * Use the `masterInstanceGroup` configuration block `instanceType` argument instead. The EC2 instance type of the master node. Cannot be specified if `masterInstanceGroup` or `instanceGroup` configuration blocks are set.
-    *
-    * @deprecated use `master_instance_group` configuration block `instance_type` argument instead
+    * Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master).
     */
-  val masterInstanceType: js.UndefOr[Input[String]] = js.native
+  val masterInstanceGroup: js.UndefOr[Input[ClusterMasterInstanceGroup]] = js.native
   
   /**
     * The public DNS name of the master EC2 instance.
@@ -125,7 +108,7 @@ trait ClusterState extends js.Object {
   val masterPublicDns: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The name of the step.
+    * Friendly name given to the instance fleet.
     */
   val name: js.UndefOr[Input[String]] = js.native
   
@@ -252,22 +235,16 @@ object ClusterState {
     def deleteConfigurationsJson: Self = this.set("configurationsJson", js.undefined)
     
     @scala.inline
-    def setCoreInstanceCount(value: Input[Double]): Self = this.set("coreInstanceCount", value.asInstanceOf[js.Any])
+    def setCoreInstanceFleet(value: Input[ClusterCoreInstanceFleet]): Self = this.set("coreInstanceFleet", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteCoreInstanceCount: Self = this.set("coreInstanceCount", js.undefined)
+    def deleteCoreInstanceFleet: Self = this.set("coreInstanceFleet", js.undefined)
     
     @scala.inline
     def setCoreInstanceGroup(value: Input[ClusterCoreInstanceGroup]): Self = this.set("coreInstanceGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCoreInstanceGroup: Self = this.set("coreInstanceGroup", js.undefined)
-    
-    @scala.inline
-    def setCoreInstanceType(value: Input[String]): Self = this.set("coreInstanceType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteCoreInstanceType: Self = this.set("coreInstanceType", js.undefined)
     
     @scala.inline
     def setCustomAmiId(value: Input[String]): Self = this.set("customAmiId", value.asInstanceOf[js.Any])
@@ -288,15 +265,6 @@ object ClusterState {
     def deleteEc2Attributes: Self = this.set("ec2Attributes", js.undefined)
     
     @scala.inline
-    def setInstanceGroupsVarargs(value: Input[ClusterInstanceGroup]*): Self = this.set("instanceGroups", js.Array(value :_*))
-    
-    @scala.inline
-    def setInstanceGroups(value: Input[js.Array[Input[ClusterInstanceGroup]]]): Self = this.set("instanceGroups", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteInstanceGroups: Self = this.set("instanceGroups", js.undefined)
-    
-    @scala.inline
     def setKeepJobFlowAliveWhenNoSteps(value: Input[Boolean]): Self = this.set("keepJobFlowAliveWhenNoSteps", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -315,16 +283,16 @@ object ClusterState {
     def deleteLogUri: Self = this.set("logUri", js.undefined)
     
     @scala.inline
+    def setMasterInstanceFleet(value: Input[ClusterMasterInstanceFleet]): Self = this.set("masterInstanceFleet", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMasterInstanceFleet: Self = this.set("masterInstanceFleet", js.undefined)
+    
+    @scala.inline
     def setMasterInstanceGroup(value: Input[ClusterMasterInstanceGroup]): Self = this.set("masterInstanceGroup", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMasterInstanceGroup: Self = this.set("masterInstanceGroup", js.undefined)
-    
-    @scala.inline
-    def setMasterInstanceType(value: Input[String]): Self = this.set("masterInstanceType", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteMasterInstanceType: Self = this.set("masterInstanceType", js.undefined)
     
     @scala.inline
     def setMasterPublicDns(value: Input[String]): Self = this.set("masterPublicDns", value.asInstanceOf[js.Any])

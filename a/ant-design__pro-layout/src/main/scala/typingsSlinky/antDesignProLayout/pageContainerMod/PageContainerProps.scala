@@ -3,11 +3,15 @@ package typingsSlinky.antDesignProLayout.pageContainerMod
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.antDesignProLayout.anon.PageHeaderPropschildrenRe
 import typingsSlinky.antDesignProLayout.anon.TabPanePropskeyReactTextu
 import typingsSlinky.antDesignProLayout.antDesignProLayoutBooleans.`false`
+import typingsSlinky.antDesignProLayout.typingsMod.WithFalse
+import typingsSlinky.antd.affixMod.AffixProps
 import typingsSlinky.antd.avatarAvatarMod.AvatarProps
 import typingsSlinky.antd.breadcrumbBreadcrumbMod.BreadcrumbProps
 import typingsSlinky.antd.tabsMod.TabsProps
+import typingsSlinky.rcTabs.interfaceMod.TabBarExtraContent
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,6 +21,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Inlined parent std.Omit<antd.antd/lib/page-header.PageHeaderProps, 'title'> */
 @js.native
 trait PageContainerProps extends js.Object {
+  
+  /**
+    * @name 固钉的配置
+    * @description 与 antd 完全相同
+    */
+  var affixProps: js.UndefOr[AffixProps] = js.native
   
   var avatar: js.UndefOr[AvatarProps] = js.native
   
@@ -32,15 +42,47 @@ trait PageContainerProps extends js.Object {
   
   var extraContent: js.UndefOr[ReactElement] = js.native
   
+  /**
+    * @name 固定 PageHeader 到页面顶部
+    * @deprecated 请使用 fixedHeader
+    */
+  var fixHeader: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * @name 固定 PageHeader 到页面顶部
+    */
+  var fixedHeader: js.UndefOr[Boolean] = js.native
+  
   var footer: js.UndefOr[js.Array[ReactElement]] = js.native
   
+  /**
+    * @name 是否显示背景色
+    */
   var ghost: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * @name PageHeader 的配置
+    * @description 与 antd 完全相同
+    */
+  var header: js.UndefOr[PageHeaderPropschildrenRe] = js.native
+  
+  /**
+    * @name 是否加载
+    * @description 只加载内容区域
+    */
+  var loading: js.UndefOr[Boolean] = js.native
   
   var onBack: js.UndefOr[js.Function1[/* e */ SyntheticMouseEvent[HTMLDivElement], Unit]] = js.native
   
+  /**
+    * @name tab 修改时触发
+    */
   var onTabChange: js.UndefOr[js.Function1[/* activeKey */ String, Unit]] = js.native
   
-  var pageHeaderRender: js.UndefOr[js.Function1[/* props */ this.type, ReactElement]] = js.native
+  /**
+    * @name 自定义 pageHeader
+    */
+  var pageHeaderRender: js.UndefOr[WithFalse[js.Function1[/* props */ this.type, ReactElement]]] = js.native
   
   var prefixCls: js.UndefOr[String] = js.native
   
@@ -48,12 +90,24 @@ trait PageContainerProps extends js.Object {
   
   var subTitle: js.UndefOr[ReactElement] = js.native
   
+  /**
+    * @name 当前选中 tab 的 key
+    */
   var tabActiveKey: js.UndefOr[String] = js.native
   
-  var tabBarExtraContent: js.UndefOr[ReactElement] = js.native
+  /**
+    * @name tab 上多余的区域
+    */
+  var tabBarExtraContent: js.UndefOr[TabBarExtraContent] = js.native
   
+  /**
+    * @name tabs 的列表
+    */
   var tabList: js.UndefOr[js.Array[TabPanePropskeyReactTextu]] = js.native
   
+  /**
+    * @name tabs 的其他配置
+    */
   var tabProps: js.UndefOr[TabsProps] = js.native
   
   var tags: js.UndefOr[ReactElement | js.Array[ReactElement]] = js.native
@@ -82,6 +136,12 @@ object PageContainerProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAffixProps(value: AffixProps): Self = this.set("affixProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAffixProps: Self = this.set("affixProps", js.undefined)
     
     @scala.inline
     def setAvatar(value: AvatarProps): Self = this.set("avatar", value.asInstanceOf[js.Any])
@@ -138,6 +198,18 @@ object PageContainerProps {
     def deleteExtraContent: Self = this.set("extraContent", js.undefined)
     
     @scala.inline
+    def setFixHeader(value: Boolean): Self = this.set("fixHeader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFixHeader: Self = this.set("fixHeader", js.undefined)
+    
+    @scala.inline
+    def setFixedHeader(value: Boolean): Self = this.set("fixedHeader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFixedHeader: Self = this.set("fixedHeader", js.undefined)
+    
+    @scala.inline
     def setFooterVarargs(value: ReactElement*): Self = this.set("footer", js.Array(value :_*))
     
     @scala.inline
@@ -153,6 +225,18 @@ object PageContainerProps {
     def deleteGhost: Self = this.set("ghost", js.undefined)
     
     @scala.inline
+    def setHeader(value: PageHeaderPropschildrenRe): Self = this.set("header", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHeader: Self = this.set("header", js.undefined)
+    
+    @scala.inline
+    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
+    
+    @scala.inline
     def setOnBack(value: /* e */ SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onBack", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -165,7 +249,10 @@ object PageContainerProps {
     def deleteOnTabChange: Self = this.set("onTabChange", js.undefined)
     
     @scala.inline
-    def setPageHeaderRender(value: PageContainerProps => ReactElement): Self = this.set("pageHeaderRender", js.Any.fromFunction1(value))
+    def setPageHeaderRenderFunction1(value: PageContainerProps => ReactElement): Self = this.set("pageHeaderRender", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setPageHeaderRender(value: WithFalse[js.Function1[PageContainerProps, ReactElement]]): Self = this.set("pageHeaderRender", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePageHeaderRender: Self = this.set("pageHeaderRender", js.undefined)
@@ -201,7 +288,7 @@ object PageContainerProps {
     def setTabBarExtraContentReactElement(value: ReactElement): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTabBarExtraContent(value: ReactElement): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
+    def setTabBarExtraContent(value: TabBarExtraContent): Self = this.set("tabBarExtraContent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTabBarExtraContent: Self = this.set("tabBarExtraContent", js.undefined)

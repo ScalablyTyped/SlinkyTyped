@@ -28,10 +28,14 @@ class DOMComponent protected ()
 @js.native
 object DOMComponent extends js.Object {
   
-  /** @name DOMComponent.defaultOptions(rule) */
+  /**
+    * [descr:DOMComponent.defaultOptions(rule)]
+    */
   def defaultOptions(rule: Device): Unit = js.native
   
   def getInstance(element: JQuery): typingsSlinky.devextreme.mod.DevExpress.DOMComponent = js.native
-  /** @name DOMComponent.getInstance(element) */
+  /**
+    * [descr:DOMComponent.getInstance(element)]
+    */
   def getInstance(element: Element): typingsSlinky.devextreme.mod.DevExpress.DOMComponent = js.native
 }

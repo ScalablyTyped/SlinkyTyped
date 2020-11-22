@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("base16", "codeschool")
 @js.native
-object codeschool extends TopLevel[ColorScheme]
+object codeschool extends TopLevel[Base16Theme]

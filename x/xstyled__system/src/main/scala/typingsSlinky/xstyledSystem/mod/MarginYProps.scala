@@ -9,7 +9,7 @@ trait MarginYProps[TLength] extends js.Object {
   
   val my: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginTopProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginTop<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object MarginYProps {
     }
     
     @scala.inline
+    def setMyVarargs(value: js.Any*): Self = this.set("my", js.Array(value :_*))
+    
+    @scala.inline
     def setMy(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.MarginTopProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.MarginTop<TLength> */ _
         ]
     ): Self = this.set("my", value.asInstanceOf[js.Any])
     

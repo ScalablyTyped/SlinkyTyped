@@ -7,24 +7,54 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Address extends js.Object {
   
+  /**
+    * First line of a street address
+    */
   var address1: js.UndefOr[String] = js.native
   
+  /**
+    * Second line of a street address
+    */
   var address2: js.UndefOr[String] = js.native
   
+  /**
+    * Town or locality
+    */
   var city: js.UndefOr[String] = js.native
   
+  /**
+    * {@link http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2| [ISO 3166-1 alpha-2]} country code
+    */
   var country: js.UndefOr[String] = js.native
   
+  /**
+    * Cardholder first name
+    */
   var first_name: String = js.native
   
+  /**
+    * Cardholder last name
+    */
   var last_name: String = js.native
   
+  /**
+    * Phone number
+    */
   var phone: js.UndefOr[String] = js.native
   
+  /**
+    * Postal code
+    */
   var postal_code: js.UndefOr[String] = js.native
   
+  /**
+    * Province or region
+    */
   var state: js.UndefOr[String] = js.native
   
+  /**
+    * Customer VAT number. Used for VAT exclusion
+    */
   var vat_number: js.UndefOr[String] = js.native
 }
 object Address {

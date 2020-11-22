@@ -12,14 +12,14 @@ trait ParametersAppsListInstallationsForAuthenticatedUserEndpoint extends js.Obj
   
   var parameters: AppsListInstallationsForAuthenticatedUserEndpoint = js.native
   
-  var response: OctokitResponse[AppsListInstallationsForAuthenticatedUserResponseData] with `20` = js.native
+  var response: OctokitResponse[AppsListInstallationsForAuthenticatedUserResponseData] with `24` = js.native
 }
 object ParametersAppsListInstallationsForAuthenticatedUserEndpoint {
   
   @scala.inline
   def apply(
     parameters: AppsListInstallationsForAuthenticatedUserEndpoint,
-    response: OctokitResponse[AppsListInstallationsForAuthenticatedUserResponseData] with `20`
+    response: OctokitResponse[AppsListInstallationsForAuthenticatedUserResponseData] with `24`
   ): ParametersAppsListInstallationsForAuthenticatedUserEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersAppsListInstallationsForAuthenticatedUserEndpoint]
@@ -44,6 +44,6 @@ object ParametersAppsListInstallationsForAuthenticatedUserEndpoint {
     def setParameters(value: AppsListInstallationsForAuthenticatedUserEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[AppsListInstallationsForAuthenticatedUserResponseData] with `20`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[AppsListInstallationsForAuthenticatedUserResponseData] with `24`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

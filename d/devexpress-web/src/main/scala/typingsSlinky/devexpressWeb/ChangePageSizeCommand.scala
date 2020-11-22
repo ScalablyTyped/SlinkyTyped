@@ -12,7 +12,6 @@ trait ChangePageSizeCommand extends CommandBase {
   
   /**
     * Executes the ChangePageSizeCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
-    * @param size The page size.
     * @param width The page size object or the page width.
     * @param height The page height.
     */

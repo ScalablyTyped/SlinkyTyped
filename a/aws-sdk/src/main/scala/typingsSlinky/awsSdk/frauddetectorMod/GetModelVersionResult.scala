@@ -33,7 +33,7 @@ trait GetModelVersionResult extends js.Object {
   var modelVersionNumber: js.UndefOr[floatVersionString] = js.native
   
   /**
-    * The model version status.
+    * The model version status. Possible values are:    TRAINING_IN_PROGRESS     TRAINING_COMPLETE     ACTIVATE_REQUESTED     ACTIVATE_IN_PROGRESS     ACTIVE     INACTIVATE_REQUESTED     INACTIVATE_IN_PROGRESS     INACTIVE     ERROR   
     */
   var status: js.UndefOr[String] = js.native
   

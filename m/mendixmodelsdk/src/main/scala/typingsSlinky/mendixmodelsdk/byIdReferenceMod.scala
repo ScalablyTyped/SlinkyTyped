@@ -1,7 +1,9 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.commonMod.common.IVoidCallback
 import typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mobx.observablevalueMod.IObservableValue
 import typingsSlinky.mobx.observablevalueMod.IValueWillChange
 import scala.scalajs.js
@@ -13,11 +15,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object byIdReferenceMod extends js.Object {
   
   @js.native
-  class ByIdReference[T /* <: AbstractElement */] protected () extends js.Object {
+  class ByIdReference[T /* <: AbstractElement[IAbstractModel, Container] */] protected () extends js.Object {
     /**
       * Constructs and returns a new reference instance, that is owned (by a property of) an abstract element.
       */
-    def this(owner: AbstractElement) = this()
+    def this(owner: AbstractElement[IAbstractModel, Container]) = this()
     
     def assertValueHasSameUnit(): Unit = js.native
     def assertValueHasSameUnit(valueToCheck: T): Unit = js.native
@@ -40,7 +42,7 @@ object byIdReferenceMod extends js.Object {
     
     var isResolving: Boolean = js.native
     
-    var owner: AbstractElement = js.native
+    var owner: AbstractElement[IAbstractModel, Container] = js.native
     
     var referenceId: String | Null = js.native
     

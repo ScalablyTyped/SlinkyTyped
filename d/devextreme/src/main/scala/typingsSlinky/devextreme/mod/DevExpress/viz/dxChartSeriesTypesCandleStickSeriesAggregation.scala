@@ -6,11 +6,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CandleStickSeries.aggregation */
+/**
+  * [descr:dxChartSeriesTypes.CandleStickSeries.aggregation]
+  */
 @js.native
 trait dxChartSeriesTypesCandleStickSeriesAggregation extends dxChartSeriesTypesCommonSeriesAggregation {
   
-  /** @name dxChartSeriesTypes.CandleStickSeries.aggregation.method */
+  /**
+    * [descr:dxChartSeriesTypes.CandleStickSeries.aggregation.method]
+    */
   @JSName("method")
   var method_dxChartSeriesTypesCandleStickSeriesAggregation: js.UndefOr[ohlc | custom] = js.native
 }

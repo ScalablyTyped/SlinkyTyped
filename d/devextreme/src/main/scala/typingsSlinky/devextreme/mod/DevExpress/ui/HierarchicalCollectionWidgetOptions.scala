@@ -7,16 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait HierarchicalCollectionWidgetOptions[T] extends CollectionWidgetOptions[T] {
   
-  /** @name HierarchicalCollectionWidget.Options.disabledExpr */
+  /**
+    * [descr:HierarchicalCollectionWidget.Options.disabledExpr]
+    */
   var disabledExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name HierarchicalCollectionWidget.Options.displayExpr */
+  /**
+    * [descr:HierarchicalCollectionWidget.Options.displayExpr]
+    */
   var displayExpr: js.UndefOr[String | (js.Function1[/* item */ js.Any, String])] = js.native
   
-  /** @name HierarchicalCollectionWidget.Options.itemsExpr */
+  /**
+    * [descr:HierarchicalCollectionWidget.Options.itemsExpr]
+    */
   var itemsExpr: js.UndefOr[String | js.Function] = js.native
   
-  /** @name HierarchicalCollectionWidget.Options.selectedExpr */
+  /**
+    * [descr:HierarchicalCollectionWidget.Options.selectedExpr]
+    */
   var selectedExpr: js.UndefOr[String | js.Function] = js.native
 }
 object HierarchicalCollectionWidgetOptions {

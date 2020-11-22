@@ -37,6 +37,9 @@ object TableBuilderColumn {
     
     @scala.inline
     def sortable(value: Boolean): this.type = set("sortable", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def tableHeadAriaLabel(value: String): this.type = set("tableHeadAriaLabel", value.asInstanceOf[js.Any])
   }
   
   def withProps[RowT](p: TableBuilderColumnProps[RowT]): Builder[RowT] = new Builder[RowT](js.Array(this.component, p.asInstanceOf[js.Any]))

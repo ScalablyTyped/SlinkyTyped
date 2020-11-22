@@ -1,13 +1,15 @@
 package typingsSlinky.ionicAngular.navControllerMod
 
-import typingsSlinky.angularRouter.mod.NavigationExtras
+import typingsSlinky.angularRouter.mod.NavigationBehaviorOptions
+import typingsSlinky.angularRouter.mod.UrlCreationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait NavigationOptions
-  extends NavigationExtras
+  extends UrlCreationOptions
+     with NavigationBehaviorOptions
      with AnimationOptions
 object NavigationOptions {
   

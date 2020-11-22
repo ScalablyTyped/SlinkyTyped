@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashMinBy extends LodashConvertible {
+trait LodashMinBy extends js.Object {
   
   def apply[T](iteratee: ValueIteratee[T]): js.UndefOr[T] = js.native
   def apply[T](iteratee: ValueIteratee[T], collection: List[T]): js.UndefOr[T] = js.native

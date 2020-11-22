@@ -1,7 +1,7 @@
 package typingsSlinky.rxDom.mod.rxAugmentingMod.DOM
 
-import org.scalajs.dom.raw.Position
 import typingsSlinky.rx.Rx.Observable
+import typingsSlinky.std.GeolocationPosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,9 +11,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object geolocation extends js.Object {
   
-  def getCurrentPosition(): Observable[Position] = js.native
-  def getCurrentPosition(geolocationOptions: GeolocationOptions): Observable[Position] = js.native
+  def getCurrentPosition(): Observable[GeolocationPosition] = js.native
+  def getCurrentPosition(geolocationOptions: GeolocationOptions): Observable[GeolocationPosition] = js.native
   
-  def watchPosition(): Observable[Position] = js.native
-  def watchPosition(geolocationOptions: GeolocationOptions): Observable[Position] = js.native
+  def watchPosition(): Observable[GeolocationPosition] = js.native
+  def watchPosition(geolocationOptions: GeolocationOptions): Observable[GeolocationPosition] = js.native
 }

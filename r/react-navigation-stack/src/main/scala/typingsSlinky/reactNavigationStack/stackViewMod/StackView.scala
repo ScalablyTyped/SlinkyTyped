@@ -15,6 +15,12 @@ trait StackView
   
   var handleCloseRoute: js.Any = js.native
   
+  var handleGestureCancel: js.Any = js.native
+  
+  var handleGestureEnd: js.Any = js.native
+  
+  var handleGestureStart: js.Any = js.native
+  
   var handleOpenRoute: js.Any = js.native
   
   var handleTransitionComplete: js.Any = js.native

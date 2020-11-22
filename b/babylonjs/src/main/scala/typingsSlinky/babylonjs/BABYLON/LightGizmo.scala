@@ -19,6 +19,8 @@ trait LightGizmo extends Gizmo {
   
   var _material: js.Any = js.native
   
+  var _pointerObserver: js.Any = js.native
+  
   def light: Nullable[Light] = js.native
   /**
     * The light that the gizmo is attached to
@@ -29,4 +31,9 @@ trait LightGizmo extends Gizmo {
     * Gets the material used to render the light gizmo
     */
   def material: StandardMaterial = js.native
+  
+  /**
+    * Event that fires each time the gizmo is clicked
+    */
+  var onClickedObservable: Observable[Light] = js.native
 }

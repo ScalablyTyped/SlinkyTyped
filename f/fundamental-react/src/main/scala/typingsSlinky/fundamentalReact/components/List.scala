@@ -3,7 +3,9 @@ package typingsSlinky.fundamentalReact.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLAnchorElement
+import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
 import slinky.web.SyntheticClipboardEvent
 import slinky.web.SyntheticCompositionEvent
@@ -17,8 +19,18 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.a.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`2`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`3`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`4`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`5`
+import typingsSlinky.fundamentalReact.fundamentalReactNumbers.`6`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`additions text`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.`inline`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`removals text`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text additions`
+import typingsSlinky.fundamentalReact.fundamentalReactStrings.`text removals`
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.additions
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.all
 import typingsSlinky.fundamentalReact.fundamentalReactStrings.ascending
@@ -68,6 +80,7 @@ import typingsSlinky.fundamentalReact.listMod.ListHeaderProps
 import typingsSlinky.fundamentalReact.listMod.ListIconProps
 import typingsSlinky.fundamentalReact.listMod.ListItemProps
 import typingsSlinky.fundamentalReact.listMod.ListProps
+import typingsSlinky.fundamentalReact.listMod.ListSelectionProps
 import typingsSlinky.fundamentalReact.listMod.ListTextProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -201,7 +214,9 @@ object List {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -288,6 +303,18 @@ object List {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def footerReactElement(value: ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def footer(value: String | ReactElement): this.type = set("footer", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def headerReactElement(value: ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def header(value: String | ReactElement): this.type = set("header", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -319,6 +346,12 @@ object List {
     
     @scala.inline
     def lang(value: String): this.type = set("lang", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def level(value: `2` | `3` | `4` | `5` | `6`): this.type = set("level", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def navigation(value: Boolean): this.type = set("navigation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def noBorder(value: Boolean): this.type = set("noBorder", value.asInstanceOf[js.Any])
@@ -561,6 +594,9 @@ object List {
     def onWheel(value: SyntheticWheelEvent[HTMLAnchorElement] => Unit): this.type = set("onWheel", js.Any.fromFunction1(value))
     
     @scala.inline
+    def partialNavigation(value: Boolean): this.type = set("partialNavigation", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -583,6 +619,9 @@ object List {
     
     @scala.inline
     def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
@@ -686,6 +725,36 @@ object List {
     def withProps(p: PropsWithChildren[ListItemProps]): typingsSlinky.fundamentalReact.components.List.Item.Builder = new typingsSlinky.fundamentalReact.components.List.Item.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     
     implicit def make(companion: Item.type): typingsSlinky.fundamentalReact.components.List.Item.Builder = new typingsSlinky.fundamentalReact.components.List.Item.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Selection {
+    
+    @JSImport("fundamental-react", "List.Selection")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[slinky.web.html.input.tag.type, js.Object] {
+      
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      
+      @scala.inline
+      def onChange(value: (/* event */ SyntheticEvent[Event, HTMLInputElement], /* checkedState */ Boolean) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
+      
+      @scala.inline
+      def selected(value: Boolean): this.type = set("selected", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: PropsWithChildren[ListSelectionProps]): typingsSlinky.fundamentalReact.components.List.Selection.Builder = new typingsSlinky.fundamentalReact.components.List.Selection.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    
+    @scala.inline
+    def apply(checkBoxAriaLabel: String): typingsSlinky.fundamentalReact.components.List.Selection.Builder = {
+      val __props = js.Dynamic.literal(checkBoxAriaLabel = checkBoxAriaLabel.asInstanceOf[js.Any])
+      new typingsSlinky.fundamentalReact.components.List.Selection.Builder(js.Array(this.component, __props.asInstanceOf[PropsWithChildren[ListSelectionProps]]))
+    }
   }
   
   object Icon {

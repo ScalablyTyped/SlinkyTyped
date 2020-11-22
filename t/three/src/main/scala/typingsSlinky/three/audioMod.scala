@@ -21,6 +21,9 @@ object audioMod extends js.Object {
   class Audio[NodeType /* <: AudioNode */] protected () extends Object3D {
     def this(listener: AudioListener) = this()
     
+    /**
+    	 * @default false
+    	 */
     var autoplay: Boolean = js.native
     
     var buffer: Null | AudioBuffer = js.native
@@ -29,12 +32,21 @@ object audioMod extends js.Object {
     
     var context: AudioContext = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var detune: Double = js.native
     
     def disconnect(): this.type = js.native
     
+    /**
+    	 * @default undefined
+    	 */
     var duration: js.UndefOr[Double] = js.native
     
+    /**
+    	 * @default []
+    	 */
     var filters: js.Array[_] = js.native
     
     var gain: GainNode = js.native
@@ -53,8 +65,14 @@ object audioMod extends js.Object {
     
     def getVolume(): Double = js.native
     
+    /**
+    	 * @default true
+    	 */
     var hasPlaybackControl: Boolean = js.native
     
+    /**
+    	 * @default false
+    	 */
     var isPlaying: Boolean = js.native
     
     var listener: AudioListener = js.native
@@ -64,12 +82,24 @@ object audioMod extends js.Object {
     	 */
     def load(file: String): Audio[GainNode] = js.native
     
+    /**
+    	 * @default false
+    	 */
     var loop: Boolean = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var loopEnd: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var loopStart: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var offset: Double = js.native
     
     def onEnded(): Unit = js.native
@@ -79,6 +109,9 @@ object audioMod extends js.Object {
     def play(): this.type = js.native
     def play(delay: Double): this.type = js.native
     
+    /**
+    	 * @default 1
+    	 */
     var playbackRate: Double = js.native
     
     def setBuffer(audioBuffer: AudioBuffer): this.type = js.native
@@ -105,8 +138,11 @@ object audioMod extends js.Object {
     
     def setVolume(value: Double): this.type = js.native
     
-    var source: AudioBufferSourceNode = js.native
+    var source: Null | AudioBufferSourceNode = js.native
     
+    /**
+    	 * @default 'empty'
+    	 */
     var sourceType: String = js.native
     
     def stop(): this.type = js.native

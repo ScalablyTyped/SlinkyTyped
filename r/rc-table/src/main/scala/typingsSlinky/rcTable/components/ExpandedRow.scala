@@ -1,7 +1,7 @@
 package typingsSlinky.rcTable.components
 
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.rcTable.expandedRowMod.ExpandedRowProps
 import typingsSlinky.rcTable.interfaceMod.CustomizeComponent
 import scala.scalajs.js
@@ -14,15 +14,10 @@ object ExpandedRow {
   @js.native
   object component extends js.Object
   
-  @scala.inline
-  class Builder[RecordType] (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object]
-  
-  def withProps[RecordType](p: ExpandedRowProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ExpandedRowProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   
   @scala.inline
-  def apply[RecordType](
+  def apply(
     cellComponent: CustomizeComponent,
     className: String,
     colSpan: Double,
@@ -33,8 +28,8 @@ object ExpandedRow {
     fixHeader: Boolean,
     horizonScroll: Boolean,
     prefixCls: String
-  ): Builder[RecordType] = {
+  ): Default[tag.type, js.Object] = {
     val __props = js.Dynamic.literal(cellComponent = cellComponent.asInstanceOf[js.Any], className = className.asInstanceOf[js.Any], colSpan = colSpan.asInstanceOf[js.Any], component = component.asInstanceOf[js.Any], componentWidth = componentWidth.asInstanceOf[js.Any], expanded = expanded.asInstanceOf[js.Any], fixColumn = fixColumn.asInstanceOf[js.Any], fixHeader = fixHeader.asInstanceOf[js.Any], horizonScroll = horizonScroll.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
-    new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[ExpandedRowProps[RecordType]]))
+    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ExpandedRowProps]))
   }
 }

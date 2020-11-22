@@ -11,9 +11,9 @@ object Provider extends js.Object {
   /**
     * Register provider
     *
-    * @param {string} name - provider name
+    * @param name - provider name
     *
-    * @returns {ngESDecorator} - decorated class
+    * @returns decorated class
     */
   def apply(name: String): ngESDecorator = js.native
 }

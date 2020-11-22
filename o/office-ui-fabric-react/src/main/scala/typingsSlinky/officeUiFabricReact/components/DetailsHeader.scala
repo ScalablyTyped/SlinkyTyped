@@ -6,6 +6,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.detailsColumnTypesMod.IDetailsColumnRenderTooltipProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IColumnReorderHeaderProps
 import typingsSlinky.officeUiFabricReact.detailsHeaderTypesMod.IDetailsHeader
@@ -23,7 +24,6 @@ import typingsSlinky.officeUiFabricReact.groupedListTypesMod.CollapseAllVisibili
 import typingsSlinky.officeUiFabricReact.withViewportMod.IViewport
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.selectionTypesMod.IObjectWithKey
 import typingsSlinky.uifabricUtilities.selectionTypesMod.ISelection

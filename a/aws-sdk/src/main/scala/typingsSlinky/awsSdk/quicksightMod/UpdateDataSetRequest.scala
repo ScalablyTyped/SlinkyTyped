@@ -18,6 +18,11 @@ trait UpdateDataSetRequest extends js.Object {
   var ColumnGroups: js.UndefOr[ColumnGroupList] = js.native
   
   /**
+    * A set of one or more definitions of a  ColumnLevelPermissionRule .
+    */
+  var ColumnLevelPermissionRules: js.UndefOr[ColumnLevelPermissionRuleList] = js.native
+  
+  /**
     * The ID for the dataset that you want to update. This ID is unique per AWS Region for each AWS account.
     */
   var DataSetId: ResourceId = js.native
@@ -99,6 +104,15 @@ object UpdateDataSetRequest {
     
     @scala.inline
     def deleteColumnGroups: Self = this.set("ColumnGroups", js.undefined)
+    
+    @scala.inline
+    def setColumnLevelPermissionRulesVarargs(value: ColumnLevelPermissionRule*): Self = this.set("ColumnLevelPermissionRules", js.Array(value :_*))
+    
+    @scala.inline
+    def setColumnLevelPermissionRules(value: ColumnLevelPermissionRuleList): Self = this.set("ColumnLevelPermissionRules", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnLevelPermissionRules: Self = this.set("ColumnLevelPermissionRules", js.undefined)
     
     @scala.inline
     def setLogicalTableMap(value: LogicalTableMap): Self = this.set("LogicalTableMap", value.asInstanceOf[js.Any])

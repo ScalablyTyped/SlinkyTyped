@@ -12,15 +12,15 @@ trait InterfaceDeclaration
      with ObjectTypeDeclaration
      with _HasJSDoc {
   
-  var heritageClauses: js.UndefOr[NodeArray[HeritageClause]] = js.native
+  val heritageClauses: js.UndefOr[NodeArray[HeritageClause]] = js.native
   
   @JSName("kind")
-  var kind_InterfaceDeclaration: typingsSlinky.typescript.mod.SyntaxKind.InterfaceDeclaration = js.native
+  val kind_InterfaceDeclaration: typingsSlinky.typescript.mod.SyntaxKind.InterfaceDeclaration = js.native
   
-  var members: NodeArray[TypeElement] = js.native
+  val members: NodeArray[TypeElement] = js.native
   
   @JSName("name")
-  var name_InterfaceDeclaration: Identifier = js.native
+  val name_InterfaceDeclaration: Identifier = js.native
   
-  var typeParameters: js.UndefOr[NodeArray[TypeParameterDeclaration]] = js.native
+  val typeParameters: js.UndefOr[NodeArray[TypeParameterDeclaration]] = js.native
 }

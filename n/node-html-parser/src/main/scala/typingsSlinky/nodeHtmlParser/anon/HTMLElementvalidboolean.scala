@@ -62,6 +62,8 @@ trait HTMLElementvalidboolean extends js.Object {
   
   def innerHTML: String = js.native
   
+  def innerText: String = js.native
+  
   def insertAdjacentHTML(where: InsertPosition, html: String): Unit = js.native
   
   /**
@@ -69,6 +71,10 @@ trait HTMLElementvalidboolean extends js.Object {
     * @return {Node} last child node
     */
   def lastChild: default = js.native
+  
+  def nextElementSibling: HTMLElement = js.native
+  
+  def nextSibling: default = js.native
   
   /**
     * Node Type declaration.
@@ -105,6 +111,8 @@ trait HTMLElementvalidboolean extends js.Object {
   
   var rawAttrs: js.Any = js.native
   
+  var rawTagName: String = js.native
+  
   /**
     * Get escpaed (as-it) text value of current node and its children.
     * @return {string} text content
@@ -112,6 +120,11 @@ trait HTMLElementvalidboolean extends js.Object {
   def rawText: String = js.native
   @JSName("rawText")
   var rawText_FHTMLElementvalidboolean: String = js.native
+  
+  /**
+    * Remove current element
+    */
+  def remove(): Unit = js.native
   
   def removeAttribute(key: String): Unit = js.native
   
@@ -159,7 +172,7 @@ trait HTMLElementvalidboolean extends js.Object {
     */
   def structuredText: String = js.native
   
-  var tagName: String = js.native
+  def tagName: String = js.native
   
   /**
     * Get unescaped text value of current node and its children.

@@ -51,7 +51,6 @@ trait LdapClient extends js.Object {
     *
     * Note that the defaults for options are a 'base' search.
     */
-  // tslint:disable-next-line: no-unnecessary-generics
   def search(base: String, options: SearchOptions): js.Promise[js.Array[_]] = js.native
   
   /**

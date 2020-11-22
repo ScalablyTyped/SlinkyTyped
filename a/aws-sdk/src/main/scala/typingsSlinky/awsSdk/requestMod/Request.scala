@@ -16,7 +16,7 @@ import typingsSlinky.awsSdk.awsSdkStrings.retry_
 import typingsSlinky.awsSdk.awsSdkStrings.send_
 import typingsSlinky.awsSdk.awsSdkStrings.sign__
 import typingsSlinky.awsSdk.awsSdkStrings.success__
-import typingsSlinky.awsSdk.awsSdkStrings.validate
+import typingsSlinky.awsSdk.awsSdkStrings.validate_
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.httpRequestMod.HttpRequest
 import typingsSlinky.awsSdk.responseMod.Response
@@ -313,9 +313,9 @@ class Request[D, E] protected () extends js.Object {
     * @param {boolean} prepend - If set, prepends listener instead of appending.
     */
   @JSName("onAsync")
-  def onAsync_validate(event: validate, listener: js.Function1[/* request */ Request[D, E], Unit]): Request[D, E] = js.native
+  def onAsync_validate(event: validate_, listener: js.Function1[/* request */ Request[D, E], Unit]): Request[D, E] = js.native
   @JSName("onAsync")
-  def onAsync_validate(event: validate, listener: js.Function1[/* request */ Request[D, E], Unit], prepend: Boolean): Request[D, E] = js.native
+  def onAsync_validate(event: validate_, listener: js.Function1[/* request */ Request[D, E], Unit], prepend: Boolean): Request[D, E] = js.native
   
   /**
     * Adds a listener that is triggered when the request payload is being built.
@@ -538,9 +538,9 @@ class Request[D, E] protected () extends js.Object {
     * @param {boolean} prepend - If set, prepends listener instead of appending.
     */
   @JSName("on")
-  def on_validate(event: validate, listener: js.Function1[/* request */ Request[D, E], Unit]): Request[D, E] = js.native
+  def on_validate(event: validate_, listener: js.Function1[/* request */ Request[D, E], Unit]): Request[D, E] = js.native
   @JSName("on")
-  def on_validate(event: validate, listener: js.Function1[/* request */ Request[D, E], Unit], prepend: Boolean): Request[D, E] = js.native
+  def on_validate(event: validate_, listener: js.Function1[/* request */ Request[D, E], Unit], prepend: Boolean): Request[D, E] = js.native
   
   /**
     * Returns a 'thenable' promise.

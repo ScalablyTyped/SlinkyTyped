@@ -1,7 +1,6 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.events.event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,8 +11,6 @@ trait ItemData[T] extends js.Object {
   var component: js.UndefOr[T] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
-  
-  var event: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.events.event] = js.native
   
   var itemData: js.UndefOr[js.Any] = js.native
   
@@ -57,12 +54,6 @@ object ItemData {
     
     @scala.inline
     def deleteElement: Self = this.set("element", js.undefined)
-    
-    @scala.inline
-    def setEvent(value: event): Self = this.set("event", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteEvent: Self = this.set("event", js.undefined)
     
     @scala.inline
     def setItemData(value: js.Any): Self = this.set("itemData", value.asInstanceOf[js.Any])

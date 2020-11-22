@@ -1,7 +1,6 @@
 package typingsSlinky.baseui.timezonepickerMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.anon.Select
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -24,7 +23,7 @@ trait TimezonePickerProps extends js.Object {
   
   var onChange: js.UndefOr[js.Function1[/* value */ Timezone, _]] = js.native
   
-  var overrides: js.UndefOr[Select] = js.native
+  var overrides: js.UndefOr[TimezoneOverrides] = js.native
   
   var positive: js.UndefOr[Boolean] = js.native
   
@@ -86,7 +85,7 @@ object TimezonePickerProps {
     def deleteOnChange: Self = this.set("onChange", js.undefined)
     
     @scala.inline
-    def setOverrides(value: Select): Self = this.set("overrides", value.asInstanceOf[js.Any])
+    def setOverrides(value: TimezoneOverrides): Self = this.set("overrides", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOverrides: Self = this.set("overrides", js.undefined)

@@ -23,6 +23,11 @@ trait ModifyEndpointMessage extends js.Object {
   var DmsTransferSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.DmsTransferSettings] = js.native
   
   /**
+    * Settings in JSON format for the source DocumentDB endpoint. For more information about the available settings, see the configuration properties section in  Using DocumentDB as a Target for AWS Database Migration Service in the AWS Database Migration Service User Guide. 
+    */
+  var DocDbSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.DocDbSettings] = js.native
+  
+  /**
     * Settings in JSON format for the target Amazon DynamoDB endpoint. For information about other available settings, see Using Object Mapping to Migrate Data to DynamoDB in the AWS Database Migration Service User Guide. 
     */
   var DynamoDbSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.DynamoDbSettings] = js.native
@@ -192,6 +197,12 @@ object ModifyEndpointMessage {
     
     @scala.inline
     def deleteDmsTransferSettings: Self = this.set("DmsTransferSettings", js.undefined)
+    
+    @scala.inline
+    def setDocDbSettings(value: DocDbSettings): Self = this.set("DocDbSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDocDbSettings: Self = this.set("DocDbSettings", js.undefined)
     
     @scala.inline
     def setDynamoDbSettings(value: DynamoDbSettings): Self = this.set("DynamoDbSettings", value.asInstanceOf[js.Any])

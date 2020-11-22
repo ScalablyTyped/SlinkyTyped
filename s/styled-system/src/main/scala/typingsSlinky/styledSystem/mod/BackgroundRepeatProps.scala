@@ -15,7 +15,7 @@ trait BackgroundRepeatProps[ThemeType /* <: Theme[TLengthStyledSystem] */] exten
     */
   var backgroundRepeat: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundRepeatProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundRepeat */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object BackgroundRepeatProps {
     @scala.inline
     def setBackgroundRepeat(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.BackgroundRepeatProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.BackgroundRepeat */ _, 
           ThemeType
         ]
     ): Self = this.set("backgroundRepeat", value.asInstanceOf[js.Any])

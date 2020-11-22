@@ -10,13 +10,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PermissionDetailsLocationAndroid extends js.Object {
   
-  var scope: fine | coarse | none = js.native
+  var accuracy: fine | coarse | none = js.native
 }
 object PermissionDetailsLocationAndroid {
   
   @scala.inline
-  def apply(scope: fine | coarse | none): PermissionDetailsLocationAndroid = {
-    val __obj = js.Dynamic.literal(scope = scope.asInstanceOf[js.Any])
+  def apply(accuracy: fine | coarse | none): PermissionDetailsLocationAndroid = {
+    val __obj = js.Dynamic.literal(accuracy = accuracy.asInstanceOf[js.Any])
     __obj.asInstanceOf[PermissionDetailsLocationAndroid]
   }
   
@@ -36,6 +36,6 @@ object PermissionDetailsLocationAndroid {
     }
     
     @scala.inline
-    def setScope(value: fine | coarse | none): Self = this.set("scope", value.asInstanceOf[js.Any])
+    def setAccuracy(value: fine | coarse | none): Self = this.set("accuracy", value.asInstanceOf[js.Any])
   }
 }

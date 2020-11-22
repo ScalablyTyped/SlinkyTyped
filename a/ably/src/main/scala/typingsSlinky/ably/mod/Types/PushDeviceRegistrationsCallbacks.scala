@@ -7,14 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PushDeviceRegistrationsCallbacks extends js.Object {
   
-  def get(
-    deviceIdOrDetails: String,
-    callback: js.Function2[/* error */ ErrorInfo, /* deviceDetails */ DeviceDetails, Unit]
-  ): Unit = js.native
-  def get(
-    deviceIdOrDetails: DeviceDetails,
-    callback: js.Function2[/* error */ ErrorInfo, /* deviceDetails */ DeviceDetails, Unit]
-  ): Unit = js.native
+  def get(deviceIdOrDetails: String, callback: StandardCallback[DeviceDetails]): Unit = js.native
+  def get(deviceIdOrDetails: DeviceDetails, callback: StandardCallback[DeviceDetails]): Unit = js.native
   
   def list(params: DeviceRegistrationParams, callback: paginatedResultCallback[DeviceDetails]): Unit = js.native
   
@@ -27,8 +21,5 @@ trait PushDeviceRegistrationsCallbacks extends js.Object {
   def removeWhere(params: DeviceRegistrationParams, callback: errorCallback): Unit = js.native
   
   def save(deviceDetails: DeviceDetails): Unit = js.native
-  def save(
-    deviceDetails: DeviceDetails,
-    callback: js.Function2[/* error */ ErrorInfo, /* deviceDetails */ DeviceDetails, Unit]
-  ): Unit = js.native
+  def save(deviceDetails: DeviceDetails, callback: StandardCallback[DeviceDetails]): Unit = js.native
 }

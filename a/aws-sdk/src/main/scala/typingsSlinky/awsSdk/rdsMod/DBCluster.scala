@@ -163,12 +163,12 @@ trait DBCluster extends js.Object {
   var Endpoint: js.UndefOr[String] = js.native
   
   /**
-    * Provides the name of the database engine to be used for this DB cluster.
+    * The name of the database engine to be used for this DB cluster.
     */
   var Engine: js.UndefOr[String] = js.native
   
   /**
-    * The DB engine mode of the DB cluster, either provisioned, serverless, parallelquery, global, or multimaster.   global engine mode only applies for global database clusters created with Aurora MySQL version 5.6.10a. For higher Aurora MySQL versions, the clusters in a global database use provisioned engine mode. To check if a DB cluster is part of a global database, use DescribeGlobalClusters instead of checking the EngineMode return value from DescribeDBClusters.  
+    * The DB engine mode of the DB cluster, either provisioned, serverless, parallelquery, global, or multimaster. For more information, see  CreateDBCluster.
     */
   var EngineMode: js.UndefOr[String] = js.native
   
@@ -268,6 +268,8 @@ trait DBCluster extends js.Object {
     * Specifies whether the DB cluster is encrypted.
     */
   var StorageEncrypted: js.UndefOr[Boolean] = js.native
+  
+  var TagList: js.UndefOr[typingsSlinky.awsSdk.rdsMod.TagList] = js.native
   
   /**
     * Provides a list of VPC security groups that the DB cluster belongs to.
@@ -638,6 +640,15 @@ object DBCluster {
     
     @scala.inline
     def deleteStorageEncrypted: Self = this.set("StorageEncrypted", js.undefined)
+    
+    @scala.inline
+    def setTagListVarargs(value: Tag*): Self = this.set("TagList", js.Array(value :_*))
+    
+    @scala.inline
+    def setTagList(value: TagList): Self = this.set("TagList", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTagList: Self = this.set("TagList", js.undefined)
     
     @scala.inline
     def setVpcSecurityGroupsVarargs(value: VpcSecurityGroupMembership*): Self = this.set("VpcSecurityGroups", js.Array(value :_*))

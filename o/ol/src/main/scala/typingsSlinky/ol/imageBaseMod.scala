@@ -31,6 +31,9 @@ object imageBaseMod extends js.Object {
     
     def getState(): ImageState = js.native
     
+    /**
+      * Load not yet loaded URI.
+      */
     def load(): Unit = js.native
     
     var resolution: Double = js.native

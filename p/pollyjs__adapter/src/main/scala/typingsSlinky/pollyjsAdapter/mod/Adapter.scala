@@ -1,8 +1,8 @@
 package typingsSlinky.pollyjsAdapter.mod
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.experimental.Request
 import typingsSlinky.pollyjsAdapter.anon.Body
+import typingsSlinky.pollyjsCore.mod.Request
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

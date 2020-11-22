@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IEdgesRenderer extends IDisposable {
   
   /**
+    * List of instances to render in case the source mesh has instances
+    */
+  var customInstances: SmartArray[Matrix] = js.native
+  
+  /**
     * Gets or sets a boolean indicating if the edgesRenderer is active
     */
   var isEnabled: Boolean = js.native
@@ -26,8 +31,14 @@ trait IEdgesRenderer extends IDisposable {
 object IEdgesRenderer {
   
   @scala.inline
-  def apply(dispose: () => Unit, isEnabled: Boolean, isReady: () => Boolean, render: () => Unit): IEdgesRenderer = {
-    val __obj = js.Dynamic.literal(dispose = js.Any.fromFunction0(dispose), isEnabled = isEnabled.asInstanceOf[js.Any], isReady = js.Any.fromFunction0(isReady), render = js.Any.fromFunction0(render))
+  def apply(
+    customInstances: SmartArray[Matrix],
+    dispose: () => Unit,
+    isEnabled: Boolean,
+    isReady: () => Boolean,
+    render: () => Unit
+  ): IEdgesRenderer = {
+    val __obj = js.Dynamic.literal(customInstances = customInstances.asInstanceOf[js.Any], dispose = js.Any.fromFunction0(dispose), isEnabled = isEnabled.asInstanceOf[js.Any], isReady = js.Any.fromFunction0(isReady), render = js.Any.fromFunction0(render))
     __obj.asInstanceOf[IEdgesRenderer]
   }
   
@@ -45,6 +56,9 @@ object IEdgesRenderer {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setCustomInstances(value: SmartArray[Matrix]): Self = this.set("customInstances", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIsEnabled(value: Boolean): Self = this.set("isEnabled", value.asInstanceOf[js.Any])

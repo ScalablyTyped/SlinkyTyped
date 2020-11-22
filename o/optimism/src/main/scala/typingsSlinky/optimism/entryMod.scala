@@ -13,9 +13,7 @@ object entryMod extends js.Object {
   
   @js.native
   class Entry[TArgs /* <: js.Array[_] */, TValue] protected () extends js.Object {
-    def this(fn: js.Function1[/* args */ TArgs, TValue], args: TArgs) = this()
-    
-    var args: TArgs = js.native
+    def this(fn: js.Function1[/* args */ TArgs, TValue]) = this()
     
     val childValues: Map[AnyEntry, Value[_]] = js.native
     
@@ -39,7 +37,7 @@ object entryMod extends js.Object {
     
     def peek(): js.UndefOr[TValue] = js.native
     
-    def recompute(): TValue = js.native
+    def recompute(args: TArgs): TValue = js.native
     
     var recomputing: Boolean = js.native
     

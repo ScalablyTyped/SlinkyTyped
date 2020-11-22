@@ -17,14 +17,14 @@ trait ClassedColorSliderBreaks extends Object {
   var color: Color_ = js.native
   
   /**
-    * The max value of the break. The `max` of each break should match the `min` value of the break directly above it.
+    * The max value of the break.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-ClassedColorSlider.html#breaks)
     */
   var max: Double = js.native
   
   /**
-    * The min value of the break. The `min` of each break should match the `max` value of the break directly below it.
+    * The min value of the break.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-ClassedColorSlider.html#breaks)
     */

@@ -11,11 +11,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxPolarChartSeriesTypesLinepolarseries extends dxPolarChartSeriesTypesCommonPolarChartSeries {
   
-  /** @name dxPolarChartSeriesTypes.linepolarseries.hoverMode */
+  /**
+    * [descr:dxPolarChartSeriesTypes.linepolarseries.hoverMode]
+    */
   @JSName("hoverMode")
   var hoverMode_dxPolarChartSeriesTypesLinepolarseries: js.UndefOr[nearestPoint | includePoints | excludePoints | none] = js.native
   
-  /** @name dxPolarChartSeriesTypes.linepolarseries.selectionMode */
+  /**
+    * [descr:dxPolarChartSeriesTypes.linepolarseries.selectionMode]
+    */
   @JSName("selectionMode")
   var selectionMode_dxPolarChartSeriesTypesLinepolarseries: js.UndefOr[includePoints | excludePoints | none] = js.native
 }

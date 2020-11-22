@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ScaleRangeSliderVisibleElements extends Object {
   
   /**
-    * Indicates whether the preview thumbnail of the region is visible. Default value is `true`.
+    * Indicates whether the preview thumbnail of the region is visible.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-ScaleRangeSlider.html#VisibleElements)
     */

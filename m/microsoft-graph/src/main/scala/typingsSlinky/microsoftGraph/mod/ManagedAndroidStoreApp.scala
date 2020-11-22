@@ -14,7 +14,7 @@ trait ManagedAndroidStoreApp extends ManagedApp {
   var minimumSupportedOperatingSystem: js.UndefOr[AndroidMinimumOperatingSystem] = js.native
   
   // The app's package ID.
-  var packageId: js.UndefOr[String] = js.native
+  var packageId: js.UndefOr[NullableOption[String]] = js.native
 }
 object ManagedAndroidStoreApp {
   
@@ -52,9 +52,12 @@ object ManagedAndroidStoreApp {
     def deleteMinimumSupportedOperatingSystem: Self = this.set("minimumSupportedOperatingSystem", js.undefined)
     
     @scala.inline
-    def setPackageId(value: String): Self = this.set("packageId", value.asInstanceOf[js.Any])
+    def setPackageId(value: NullableOption[String]): Self = this.set("packageId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePackageId: Self = this.set("packageId", js.undefined)
+    
+    @scala.inline
+    def setPackageIdNull: Self = this.set("packageId", null)
   }
 }

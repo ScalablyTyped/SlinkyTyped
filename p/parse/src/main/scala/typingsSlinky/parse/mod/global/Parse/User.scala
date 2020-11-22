@@ -19,11 +19,6 @@ trait User[T /* <: Attributes */] extends Object[T] {
   def _isLinked(provider: String): Boolean = js.native
   def _isLinked(provider: AuthProvider): Boolean = js.native
   
-  def _linkWith(provider: String, options: typingsSlinky.parse.anon.AuthData): js.Promise[this.type] = js.native
-  def _linkWith(provider: String, options: typingsSlinky.parse.anon.AuthData, saveOpts: FullOptions): js.Promise[this.type] = js.native
-  def _linkWith(provider: AuthProvider, options: typingsSlinky.parse.anon.AuthData): js.Promise[this.type] = js.native
-  def _linkWith(provider: AuthProvider, options: typingsSlinky.parse.anon.AuthData, saveOpts: FullOptions): js.Promise[this.type] = js.native
-  
   def _unlinkFrom(provider: String): js.Promise[this.type] = js.native
   def _unlinkFrom(provider: String, options: FullOptions): js.Promise[this.type] = js.native
   def _unlinkFrom(provider: AuthProvider): js.Promise[this.type] = js.native

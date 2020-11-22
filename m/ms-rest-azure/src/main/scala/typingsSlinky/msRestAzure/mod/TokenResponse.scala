@@ -1,14 +1,12 @@
 package typingsSlinky.msRestAzure.mod
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify adal.TokenResponse * / any */ @js.native
+@js.native
 trait TokenResponse
-  extends /* x */ StringDictionary[js.Any] {
+  extends typingsSlinky.adalNode.mod.TokenResponse {
   
   /**
     * @property {number} [notBefore] The time from which the access token becomes usable.
@@ -19,8 +17,14 @@ trait TokenResponse
 object TokenResponse {
   
   @scala.inline
-  def apply(): TokenResponse = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    accessToken: String,
+    expiresIn: Double,
+    expiresOn: js.Date | String,
+    resource: String,
+    tokenType: String
+  ): TokenResponse = {
+    val __obj = js.Dynamic.literal(accessToken = accessToken.asInstanceOf[js.Any], expiresIn = expiresIn.asInstanceOf[js.Any], expiresOn = expiresOn.asInstanceOf[js.Any], resource = resource.asInstanceOf[js.Any], tokenType = tokenType.asInstanceOf[js.Any])
     __obj.asInstanceOf[TokenResponse]
   }
   

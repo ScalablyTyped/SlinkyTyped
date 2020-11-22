@@ -5,11 +5,12 @@ import typingsSlinky.astTypes.kindsMod.TSTypeKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSOptionalType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TSOptionalTypeBuilder extends js.Object {
+  
   def apply(typeAnnotation: TSTypeKind): TSOptionalType = js.native
+  
   def from(params: TypeAnnotationTSTypeKind): TSOptionalType = js.native
 }
-

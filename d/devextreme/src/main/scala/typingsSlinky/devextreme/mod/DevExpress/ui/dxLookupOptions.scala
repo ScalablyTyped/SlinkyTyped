@@ -1,11 +1,11 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.devextreme.anon.ElementEventModel
 import typingsSlinky.devextreme.anon.Hide
-import typingsSlinky.devextreme.anon.PreviousValueValue
 import typingsSlinky.devextreme.anon.ReachedLeft
 import typingsSlinky.devextreme.anon.TitleElement
-import typingsSlinky.devextreme.anon.`5`
+import typingsSlinky.devextreme.anon.`6`
 import typingsSlinky.devextreme.devextremeStrings.nextButton
 import typingsSlinky.devextreme.devextremeStrings.scrollBottom
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
@@ -18,120 +18,186 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxLookupOptions extends dxDropDownListOptions[dxLookup] {
   
-  /** @deprecated */
-  /** @name dxLookup.Options.animation */
+  /**
+    * [descr:dxLookup.Options.animation]
+    * @deprecated [depNote:dxLookup.Options.animation]
+    */
   var animation: js.UndefOr[Hide] = js.native
   
-  /** @name dxLookup.Options.applyButtonText */
+  /**
+    * [descr:dxLookup.Options.applyButtonText]
+    */
   var applyButtonText: js.UndefOr[String] = js.native
   
-  /** @name dxLookup.Options.cancelButtonText */
+  /**
+    * [descr:dxLookup.Options.cancelButtonText]
+    */
   var cancelButtonText: js.UndefOr[String] = js.native
   
-  /** @name dxLookup.Options.cleanSearchOnOpening */
+  /**
+    * [descr:dxLookup.Options.cleanSearchOnOpening]
+    */
   var cleanSearchOnOpening: js.UndefOr[Boolean] = js.native
   
-  /** @name dxLookup.Options.clearButtonText */
+  /**
+    * [descr:dxLookup.Options.clearButtonText]
+    */
   var clearButtonText: js.UndefOr[String] = js.native
   
-  /** @deprecated */
-  /** @name dxLookup.Options.closeOnOutsideClick */
+  /**
+    * [descr:dxLookup.Options.closeOnOutsideClick]
+    * @deprecated [depNote:dxLookup.Options.closeOnOutsideClick]
+    */
   var closeOnOutsideClick: js.UndefOr[Boolean | js.Function0[Boolean]] = js.native
   
-  /** @name dxLookup.Options.dropDownOptions */
+  /**
+    * [descr:dxLookup.Options.dropDownCentered]
+    */
+  var dropDownCentered: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * [descr:dxLookup.Options.dropDownOptions]
+    */
   @JSName("dropDownOptions")
   var dropDownOptions_dxLookupOptions: js.UndefOr[dxPopoverOptions[dxPopover]] = js.native
   
-  /** @name dxLookup.Options.fieldTemplate */
+  /**
+    * [descr:dxLookup.Options.fieldTemplate]
+    */
   var fieldTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* selectedItem */ js.Any, /* fieldElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @deprecated */
-  /** @name dxLookup.Options.fullScreen */
+  /**
+    * [descr:dxLookup.Options.fullScreen]
+    * @deprecated [depNote:dxLookup.Options.fullScreen]
+    */
   var fullScreen: js.UndefOr[Boolean] = js.native
   
-  /** @name dxLookup.Options.itemCenteringEnabled */
-  var itemCenteringEnabled: js.UndefOr[Boolean] = js.native
-  
-  /** @name dxLookup.Options.nextButtonText */
+  /**
+    * [descr:dxLookup.Options.nextButtonText]
+    */
   var nextButtonText: js.UndefOr[String] = js.native
   
-  /** @name dxLookup.Options.onPageLoading */
-  var onPageLoading: js.UndefOr[js.Function1[/* e */ `5`, _]] = js.native
+  /**
+    * [descr:dxLookup.Options.onPageLoading]
+    */
+  var onPageLoading: js.UndefOr[js.Function1[/* e */ `6`, _]] = js.native
   
-  /** @name dxLookup.Options.onPullRefresh */
-  var onPullRefresh: js.UndefOr[js.Function1[/* e */ `5`, _]] = js.native
+  /**
+    * [descr:dxLookup.Options.onPullRefresh]
+    */
+  var onPullRefresh: js.UndefOr[js.Function1[/* e */ `6`, _]] = js.native
   
-  /** @name dxLookup.Options.onScroll */
+  /**
+    * [descr:dxLookup.Options.onScroll]
+    */
   var onScroll: js.UndefOr[js.Function1[/* e */ ReachedLeft, _]] = js.native
   
-  /** @deprecated */
-  /** @name dxLookup.Options.onTitleRendered */
+  /**
+    * [descr:dxLookup.Options.onTitleRendered]
+    * @deprecated [depNote:dxLookup.Options.onTitleRendered]
+    */
   var onTitleRendered: js.UndefOr[js.Function1[/* e */ TitleElement, _]] = js.native
   
-  /** @name dxLookup.Options.onValueChanged */
+  /**
+    * [descr:dxLookup.Options.onValueChanged]
+    */
   @JSName("onValueChanged")
-  var onValueChanged_dxLookupOptions: js.UndefOr[js.Function1[/* e */ PreviousValueValue, _]] = js.native
+  var onValueChanged_dxLookupOptions: js.UndefOr[js.Function1[/* e */ ElementEventModel, _]] = js.native
   
-  /** @name dxLookup.Options.pageLoadMode */
+  /**
+    * [descr:dxLookup.Options.pageLoadMode]
+    */
   var pageLoadMode: js.UndefOr[nextButton | scrollBottom] = js.native
   
-  /** @name dxLookup.Options.pageLoadingText */
+  /**
+    * [descr:dxLookup.Options.pageLoadingText]
+    */
   var pageLoadingText: js.UndefOr[String] = js.native
   
-  /** @deprecated */
-  /** @name dxLookup.Options.popupHeight */
+  /**
+    * [descr:dxLookup.Options.popupHeight]
+    * @deprecated [depNote:dxLookup.Options.popupHeight]
+    */
   var popupHeight: js.UndefOr[Double | String | (js.Function0[Double | String])] = js.native
   
-  /** @deprecated */
-  /** @name dxLookup.Options.popupWidth */
+  /**
+    * [descr:dxLookup.Options.popupWidth]
+    * @deprecated [depNote:dxLookup.Options.popupWidth]
+    */
   var popupWidth: js.UndefOr[Double | String | (js.Function0[Double | String])] = js.native
   
-  /** @deprecated */
-  /** @name dxLookup.Options.position */
+  /**
+    * [descr:dxLookup.Options.position]
+    * @deprecated [depNote:dxLookup.Options.position]
+    */
   var position: js.UndefOr[positionConfig] = js.native
   
-  /** @name dxLookup.Options.pullRefreshEnabled */
+  /**
+    * [descr:dxLookup.Options.pullRefreshEnabled]
+    */
   var pullRefreshEnabled: js.UndefOr[Boolean] = js.native
   
-  /** @name dxLookup.Options.pulledDownText */
+  /**
+    * [descr:dxLookup.Options.pulledDownText]
+    */
   var pulledDownText: js.UndefOr[String] = js.native
   
-  /** @name dxLookup.Options.pullingDownText */
+  /**
+    * [descr:dxLookup.Options.pullingDownText]
+    */
   var pullingDownText: js.UndefOr[String] = js.native
   
-  /** @name dxLookup.Options.refreshingText */
+  /**
+    * [descr:dxLookup.Options.refreshingText]
+    */
   var refreshingText: js.UndefOr[String] = js.native
   
-  /** @name dxLookup.Options.searchPlaceholder */
+  /**
+    * [descr:dxLookup.Options.searchPlaceholder]
+    */
   var searchPlaceholder: js.UndefOr[String] = js.native
   
-  /** @deprecated */
-  /** @name dxLookup.Options.shading */
+  /**
+    * [descr:dxLookup.Options.shading]
+    * @deprecated [depNote:dxLookup.Options.shading]
+    */
   var shading: js.UndefOr[Boolean] = js.native
   
-  /** @name dxLookup.Options.showCancelButton */
+  /**
+    * [descr:dxLookup.Options.showCancelButton]
+    */
   var showCancelButton: js.UndefOr[Boolean] = js.native
   
-  /** @deprecated */
-  /** @name dxLookup.Options.showPopupTitle */
+  /**
+    * [descr:dxLookup.Options.showPopupTitle]
+    * @deprecated [depNote:dxLookup.Options.showPopupTitle]
+    */
   var showPopupTitle: js.UndefOr[Boolean] = js.native
   
-  /** @deprecated */
-  /** @name dxLookup.Options.title */
+  /**
+    * [descr:dxLookup.Options.title]
+    * @deprecated [depNote:dxLookup.Options.title]
+    */
   var title: js.UndefOr[String] = js.native
   
-  /** @deprecated */
-  /** @name dxLookup.Options.titleTemplate */
+  /**
+    * [descr:dxLookup.Options.titleTemplate]
+    * @deprecated [depNote:dxLookup.Options.titleTemplate]
+    */
   var titleTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function1[/* titleElement */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxLookup.Options.useNativeScrolling */
+  /**
+    * [descr:dxLookup.Options.useNativeScrolling]
+    */
   var useNativeScrolling: js.UndefOr[Boolean] = js.native
   
-  /** @name dxLookup.Options.usePopover */
+  /**
+    * [descr:dxLookup.Options.usePopover]
+    */
   var usePopover: js.UndefOr[Boolean] = js.native
 }
 object dxLookupOptions {
@@ -197,6 +263,12 @@ object dxLookupOptions {
     def deleteCloseOnOutsideClick: Self = this.set("closeOnOutsideClick", js.undefined)
     
     @scala.inline
+    def setDropDownCentered(value: Boolean): Self = this.set("dropDownCentered", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDropDownCentered: Self = this.set("dropDownCentered", js.undefined)
+    
+    @scala.inline
     def setDropDownOptions(value: dxPopoverOptions[dxPopover]): Self = this.set("dropDownOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -223,25 +295,19 @@ object dxLookupOptions {
     def deleteFullScreen: Self = this.set("fullScreen", js.undefined)
     
     @scala.inline
-    def setItemCenteringEnabled(value: Boolean): Self = this.set("itemCenteringEnabled", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteItemCenteringEnabled: Self = this.set("itemCenteringEnabled", js.undefined)
-    
-    @scala.inline
     def setNextButtonText(value: String): Self = this.set("nextButtonText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteNextButtonText: Self = this.set("nextButtonText", js.undefined)
     
     @scala.inline
-    def setOnPageLoading(value: /* e */ `5` => _): Self = this.set("onPageLoading", js.Any.fromFunction1(value))
+    def setOnPageLoading(value: /* e */ `6` => _): Self = this.set("onPageLoading", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnPageLoading: Self = this.set("onPageLoading", js.undefined)
     
     @scala.inline
-    def setOnPullRefresh(value: /* e */ `5` => _): Self = this.set("onPullRefresh", js.Any.fromFunction1(value))
+    def setOnPullRefresh(value: /* e */ `6` => _): Self = this.set("onPullRefresh", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnPullRefresh: Self = this.set("onPullRefresh", js.undefined)
@@ -259,7 +325,7 @@ object dxLookupOptions {
     def deleteOnTitleRendered: Self = this.set("onTitleRendered", js.undefined)
     
     @scala.inline
-    def setOnValueChanged(value: /* e */ PreviousValueValue => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
+    def setOnValueChanged(value: /* e */ ElementEventModel => _): Self = this.set("onValueChanged", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnValueChanged: Self = this.set("onValueChanged", js.undefined)

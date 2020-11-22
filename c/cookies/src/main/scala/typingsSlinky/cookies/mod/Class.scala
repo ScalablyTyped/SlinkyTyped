@@ -14,7 +14,6 @@ class Class protected () extends Cookies {
   /**
     * "options" array of key strings is deprecated, provide using options {"keys": keygrip}
     */
-  // tslint:disable-next-line:unified-signatures
   def this(request: IncomingMessage, response: ServerResponse, options: js.Array[String]) = this()
   def this(request: IncomingMessage, response: ServerResponse, options: Option) = this()
   /**

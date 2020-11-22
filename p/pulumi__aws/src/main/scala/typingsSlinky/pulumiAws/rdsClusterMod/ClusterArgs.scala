@@ -1,8 +1,9 @@
 package typingsSlinky.pulumiAws.rdsClusterMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.pulumiAws.engineModeMod.EngineMode
-import typingsSlinky.pulumiAws.engineTypeMod.EngineType
+import typingsSlinky.pulumiAws.enumsRdsMod.EngineMode
+import typingsSlinky.pulumiAws.enumsRdsMod.EngineType
+import typingsSlinky.pulumiAws.inputMod.rds.ClusterRestoreToPointInTime
 import typingsSlinky.pulumiAws.inputMod.rds.ClusterS3Import
 import typingsSlinky.pulumiAws.inputMod.rds.ClusterScalingConfiguration
 import typingsSlinky.pulumiPulumi.outputMod.Input
@@ -12,6 +13,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait ClusterArgs extends js.Object {
+  
+  /**
+    * Enable to allow major engine version upgrades when changing engine versions. Defaults to `false`.
+    */
+  val allowMajorVersionUpgrade: js.UndefOr[Input[Boolean]] = js.native
   
   /**
     * Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
@@ -79,7 +85,7 @@ trait ClusterArgs extends js.Object {
   val enableHttpEndpoint: js.UndefOr[Input[Boolean]] = js.native
   
   /**
-    * List of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
+    * Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
     */
   val enabledCloudwatchLogsExports: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
   
@@ -89,7 +95,7 @@ trait ClusterArgs extends js.Object {
   val engine: js.UndefOr[Input[EngineType]] = js.native
   
   /**
-    * The database engine mode. Valid values: `global`, `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
+    * The database engine mode. Valid values: `global` (only valid for Aurora MySQL 1.21 and earlier), `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
     */
   val engineMode: js.UndefOr[Input[EngineMode]] = js.native
   
@@ -149,9 +155,14 @@ trait ClusterArgs extends js.Object {
   val preferredMaintenanceWindow: js.UndefOr[Input[String]] = js.native
   
   /**
-    * ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.
+    * ARN of the source DB cluster or DB instance if this DB cluster is created as a Read Replica.
     */
   val replicationSourceIdentifier: js.UndefOr[Input[String]] = js.native
+  
+  /**
+    * Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
+    */
+  val restoreToPointInTime: js.UndefOr[Input[ClusterRestoreToPointInTime]] = js.native
   
   val s3Import: js.UndefOr[Input[ClusterS3Import]] = js.native
   
@@ -176,7 +187,7 @@ trait ClusterArgs extends js.Object {
   val sourceRegion: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engineMode` and `true` for `serverless` `engineMode`.
+    * Specifies whether the DB cluster is encrypted
     */
   val storageEncrypted: js.UndefOr[Input[Boolean]] = js.native
   
@@ -212,6 +223,12 @@ object ClusterArgs {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAllowMajorVersionUpgrade(value: Input[Boolean]): Self = this.set("allowMajorVersionUpgrade", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowMajorVersionUpgrade: Self = this.set("allowMajorVersionUpgrade", js.undefined)
     
     @scala.inline
     def setApplyImmediately(value: Input[Boolean]): Self = this.set("applyImmediately", value.asInstanceOf[js.Any])
@@ -392,6 +409,12 @@ object ClusterArgs {
     
     @scala.inline
     def deleteReplicationSourceIdentifier: Self = this.set("replicationSourceIdentifier", js.undefined)
+    
+    @scala.inline
+    def setRestoreToPointInTime(value: Input[ClusterRestoreToPointInTime]): Self = this.set("restoreToPointInTime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRestoreToPointInTime: Self = this.set("restoreToPointInTime", js.undefined)
     
     @scala.inline
     def setS3Import(value: Input[ClusterS3Import]): Self = this.set("s3Import", value.asInstanceOf[js.Any])

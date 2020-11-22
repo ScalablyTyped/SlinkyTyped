@@ -19,14 +19,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxFileManagerToolbar extends js.Object {
   
-  /** @name dxFileManagerToolbar.fileSelectionItems */
+  /**
+    * [descr:dxFileManagerToolbar.fileSelectionItems]
+    */
   var fileSelectionItems: js.UndefOr[
     js.Array[
       dxFileManagerToolbarItem | showNavPane | create | upload | refresh | switchView | download | move | copy | rename | delete | clearSelection | separator
     ]
   ] = js.native
   
-  /** @name dxFileManagerToolbar.items */
+  /**
+    * [descr:dxFileManagerToolbar.items]
+    */
   var items: js.UndefOr[
     js.Array[
       dxFileManagerToolbarItem | showNavPane | create | upload | refresh | switchView | download | move | copy | rename | delete | clearSelection | separator

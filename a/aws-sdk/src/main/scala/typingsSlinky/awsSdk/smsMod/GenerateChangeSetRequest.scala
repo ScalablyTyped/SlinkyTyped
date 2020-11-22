@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait GenerateChangeSetRequest extends js.Object {
   
   /**
-    * ID of the application associated with the change set.
+    * The ID of the application associated with the change set.
     */
   var appId: js.UndefOr[AppId] = js.native
   
   /**
-    * Format for the change set.
+    * The format for the change set.
     */
   var changesetFormat: js.UndefOr[OutputFormat] = js.native
 }

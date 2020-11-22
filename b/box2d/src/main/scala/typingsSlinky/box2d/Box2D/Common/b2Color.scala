@@ -22,7 +22,6 @@ trait b2Color extends js.Object {
   
   /**
     * RGB color as hex.
-    * @type uint
     **/
   var color: Double = js.native
   

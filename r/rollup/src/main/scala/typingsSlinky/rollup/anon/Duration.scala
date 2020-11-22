@@ -15,7 +15,7 @@ trait Duration extends RollupWatcherEvent {
   
   var duration: Double = js.native
   
-  var input: InputOption = js.native
+  var input: js.UndefOr[InputOption] = js.native
   
   var output: js.Array[String] = js.native
   
@@ -24,14 +24,8 @@ trait Duration extends RollupWatcherEvent {
 object Duration {
   
   @scala.inline
-  def apply(
-    code: BUNDLE_END,
-    duration: Double,
-    input: InputOption,
-    output: js.Array[String],
-    result: RollupBuild
-  ): Duration = {
-    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], input = input.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
+  def apply(code: BUNDLE_END, duration: Double, output: js.Array[String], result: RollupBuild): Duration = {
+    val __obj = js.Dynamic.literal(code = code.asInstanceOf[js.Any], duration = duration.asInstanceOf[js.Any], output = output.asInstanceOf[js.Any], result = result.asInstanceOf[js.Any])
     __obj.asInstanceOf[Duration]
   }
   
@@ -57,12 +51,6 @@ object Duration {
     def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setInputVarargs(value: String*): Self = this.set("input", js.Array(value :_*))
-    
-    @scala.inline
-    def setInput(value: InputOption): Self = this.set("input", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setOutputVarargs(value: String*): Self = this.set("output", js.Array(value :_*))
     
     @scala.inline
@@ -70,5 +58,14 @@ object Duration {
     
     @scala.inline
     def setResult(value: RollupBuild): Self = this.set("result", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInputVarargs(value: String*): Self = this.set("input", js.Array(value :_*))
+    
+    @scala.inline
+    def setInput(value: InputOption): Self = this.set("input", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInput: Self = this.set("input", js.undefined)
   }
 }

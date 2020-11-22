@@ -17,6 +17,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object loadBalancing extends js.Object {
   
   @js.native
+  class AllowListPolicy protected () extends LoadBalancingPolicy {
+    def this(childPolicy: LoadBalancingPolicy, allowList: js.Array[String]) = this()
+  }
+  
+  @js.native
   class DCAwareRoundRobinPolicy protected () extends LoadBalancingPolicy {
     def this(localDc: String) = this()
   }
@@ -51,7 +56,5 @@ object loadBalancing extends js.Object {
   }
   
   @js.native
-  class WhiteListPolicy protected () extends LoadBalancingPolicy {
-    def this(childPolicy: LoadBalancingPolicy, whiteList: js.Array[String]) = this()
-  }
+  class WhiteListPolicy () extends AllowListPolicy
 }

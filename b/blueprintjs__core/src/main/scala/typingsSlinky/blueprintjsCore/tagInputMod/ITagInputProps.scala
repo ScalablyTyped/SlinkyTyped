@@ -95,14 +95,6 @@ trait ITagInputProps
     *
     * This callback essentially implements basic `onAdd` and `onRemove` functionality and merges
     * the two handlers into one to simplify controlled usage.
-    *
-    * **Note about typed usage:** Your handler can declare a subset type of `React.ReactNode[]`,
-    * such as `string[]` or `Array<string | JSX.Element>`, to match the type of your `values` array:
-    * ```tsx
-    * <TagInput
-    *     onChange={(values: string[]) => this.setState({ values })}
-    *     values={["apple", "banana", "cherry"]}
-    * />
     * ```
     */
   var onChange: js.UndefOr[js.Function1[/* values */ js.Array[ReactElement], Boolean | Unit]] = js.native
@@ -143,7 +135,7 @@ trait ITagInputProps
     * Callback invoked when the user clicks the X button on a tag.
     * Receives value and index of removed tag.
     */
-  var onRemove: js.UndefOr[js.Function2[/* value */ String, /* index */ Double, Unit]] = js.native
+  var onRemove: js.UndefOr[js.Function2[/* value */ ReactElement, /* index */ Double, Unit]] = js.native
   
   /**
     * Input placeholder text which will not appear if `values` contains any items
@@ -311,7 +303,7 @@ object ITagInputProps {
     def deleteOnKeyUp: Self = this.set("onKeyUp", js.undefined)
     
     @scala.inline
-    def setOnRemove(value: (/* value */ String, /* index */ Double) => Unit): Self = this.set("onRemove", js.Any.fromFunction2(value))
+    def setOnRemove(value: (/* value */ ReactElement, /* index */ Double) => Unit): Self = this.set("onRemove", js.Any.fromFunction2(value))
     
     @scala.inline
     def deleteOnRemove: Self = this.set("onRemove", js.undefined)

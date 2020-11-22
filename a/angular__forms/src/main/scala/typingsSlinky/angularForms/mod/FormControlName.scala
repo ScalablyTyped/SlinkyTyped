@@ -50,7 +50,7 @@ class FormControlName protected ()
   
   /**
     * @description
-    * Triggers a warning that this input should not be used with reactive forms.
+    * Triggers a warning in dev mode that this input should not be used with reactive forms.
     */
   def isDisabled_=(isDisabled: Boolean): Unit = js.native
   

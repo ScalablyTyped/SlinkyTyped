@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SpreadAssignment
   extends ObjectLiteralElement
      with JSDocContainer
+     with ObjectBindingOrAssignmentElement
      with ObjectLiteralElementLike
-     with _BindingOrAssignmentElement
      with _BindingOrAssignmentElementRestIndicator
      with _HasJSDoc {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_SpreadAssignment: typingsSlinky.typescript.mod.SyntaxKind.SpreadAssignment = js.native
+  val kind_SpreadAssignment: typingsSlinky.typescript.mod.SyntaxKind.SpreadAssignment = js.native
   
   @JSName("parent")
-  var parent_SpreadAssignment: ObjectLiteralExpression = js.native
+  val parent_SpreadAssignment: ObjectLiteralExpression = js.native
 }

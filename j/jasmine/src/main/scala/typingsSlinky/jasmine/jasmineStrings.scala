@@ -13,6 +13,12 @@ object jasmineStrings {
   def ExpectedRecursive: ExpectedRecursive = "ExpectedRecursive".asInstanceOf[ExpectedRecursive]
   
   @scala.inline
+  def MatchableArgs: MatchableArgs = "MatchableArgs".asInstanceOf[MatchableArgs]
+  
+  @scala.inline
+  def NonTypedSpyObj: NonTypedSpyObj = "NonTypedSpyObj".asInstanceOf[NonTypedSpyObj]
+  
+  @scala.inline
   def ObjectContaining: ObjectContaining = "ObjectContaining".asInstanceOf[ObjectContaining]
   
   @scala.inline
@@ -38,6 +44,12 @@ object jasmineStrings {
   
   @js.native
   sealed trait ExpectedRecursive extends js.Object
+  
+  @js.native
+  sealed trait MatchableArgs extends js.Object
+  
+  @js.native
+  sealed trait NonTypedSpyObj extends js.Object
   
   @js.native
   sealed trait ObjectContaining extends js.Object

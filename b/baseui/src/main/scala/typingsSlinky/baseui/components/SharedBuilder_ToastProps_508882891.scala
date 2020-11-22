@@ -22,6 +22,9 @@ class SharedBuilder_ToastProps_508882891[R <: js.Object] (val args: js.Array[js.
      with StBuildingComponent[tag.type, R] {
   
   @scala.inline
+  def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def autoHideDuration(value: Double): this.type = set("autoHideDuration", value.asInstanceOf[js.Any])
   
   @scala.inline

@@ -1,8 +1,5 @@
 package typingsSlinky.firefoxWebextBrowser.browser.webRequest
 
-import typingsSlinky.firefoxWebextBrowser.anon.End
-import typingsSlinky.firefoxWebextBrowser.anon.Sha1
-import typingsSlinky.firefoxWebextBrowser.anon.Sha256
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CertificateInfo extends js.Object {
   
-  var fingerprint: Sha1 = js.native
+  var fingerprint: CertificateInfoFingerprint = js.native
   
   var isBuiltInRoot: Boolean = js.native
   
@@ -23,22 +20,22 @@ trait CertificateInfo extends js.Object {
   
   var subject: String = js.native
   
-  var subjectPublicKeyInfoDigest: Sha256 = js.native
+  var subjectPublicKeyInfoDigest: CertificateInfoSubjectPublicKeyInfoDigest = js.native
   
   /** Contains start and end timestamps. */
-  var validity: End = js.native
+  var validity: CertificateInfoValidity = js.native
 }
 object CertificateInfo {
   
   @scala.inline
   def apply(
-    fingerprint: Sha1,
+    fingerprint: CertificateInfoFingerprint,
     isBuiltInRoot: Boolean,
     issuer: String,
     serialNumber: String,
     subject: String,
-    subjectPublicKeyInfoDigest: Sha256,
-    validity: End
+    subjectPublicKeyInfoDigest: CertificateInfoSubjectPublicKeyInfoDigest,
+    validity: CertificateInfoValidity
   ): CertificateInfo = {
     val __obj = js.Dynamic.literal(fingerprint = fingerprint.asInstanceOf[js.Any], isBuiltInRoot = isBuiltInRoot.asInstanceOf[js.Any], issuer = issuer.asInstanceOf[js.Any], serialNumber = serialNumber.asInstanceOf[js.Any], subject = subject.asInstanceOf[js.Any], subjectPublicKeyInfoDigest = subjectPublicKeyInfoDigest.asInstanceOf[js.Any], validity = validity.asInstanceOf[js.Any])
     __obj.asInstanceOf[CertificateInfo]
@@ -60,7 +57,7 @@ object CertificateInfo {
     }
     
     @scala.inline
-    def setFingerprint(value: Sha1): Self = this.set("fingerprint", value.asInstanceOf[js.Any])
+    def setFingerprint(value: CertificateInfoFingerprint): Self = this.set("fingerprint", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIsBuiltInRoot(value: Boolean): Self = this.set("isBuiltInRoot", value.asInstanceOf[js.Any])
@@ -75,10 +72,10 @@ object CertificateInfo {
     def setSubject(value: String): Self = this.set("subject", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setSubjectPublicKeyInfoDigest(value: Sha256): Self = this.set("subjectPublicKeyInfoDigest", value.asInstanceOf[js.Any])
+    def setSubjectPublicKeyInfoDigest(value: CertificateInfoSubjectPublicKeyInfoDigest): Self = this.set("subjectPublicKeyInfoDigest", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValidity(value: End): Self = this.set("validity", value.asInstanceOf[js.Any])
+    def setValidity(value: CertificateInfoValidity): Self = this.set("validity", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setRawDERVarargs(value: Double*): Self = this.set("rawDER", js.Array(value :_*))

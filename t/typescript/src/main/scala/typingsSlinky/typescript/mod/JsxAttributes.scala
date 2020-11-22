@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait JsxAttributes extends ObjectLiteralExpressionBase[JsxAttributeLike] {
   
   @JSName("kind")
-  var kind_JsxAttributes: typingsSlinky.typescript.mod.SyntaxKind.JsxAttributes = js.native
+  val kind_JsxAttributes: typingsSlinky.typescript.mod.SyntaxKind.JsxAttributes = js.native
   
   @JSName("parent")
-  var parent_JsxAttributes: JsxOpeningLikeElement = js.native
+  val parent_JsxAttributes: JsxOpeningLikeElement = js.native
 }

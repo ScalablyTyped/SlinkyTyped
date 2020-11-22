@@ -1,9 +1,9 @@
 package typingsSlinky.reactCytoscapejs.mod
 
-import org.scalajs.dom.raw.Position
 import typingsSlinky.cytoscape.mod.Core
 import typingsSlinky.cytoscape.mod.ElementDefinition
 import typingsSlinky.cytoscape.mod.LayoutOptions
+import typingsSlinky.cytoscape.mod.Position
 import typingsSlinky.cytoscape.mod.Stylesheet
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -40,6 +40,8 @@ trait CytoscapeComponentProps extends js.Object {
   var stylesheet: js.UndefOr[Stylesheet | js.Array[Stylesheet] | String] = js.native
   
   var userZoomingEnabled: js.UndefOr[Boolean] = js.native
+  
+  var wheelSensitivity: js.UndefOr[Double] = js.native
   
   var zoom: js.UndefOr[Double] = js.native
   
@@ -154,6 +156,12 @@ object CytoscapeComponentProps {
     
     @scala.inline
     def deleteUserZoomingEnabled: Self = this.set("userZoomingEnabled", js.undefined)
+    
+    @scala.inline
+    def setWheelSensitivity(value: Double): Self = this.set("wheelSensitivity", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteWheelSensitivity: Self = this.set("wheelSensitivity", js.undefined)
     
     @scala.inline
     def setZoom(value: Double): Self = this.set("zoom", value.asInstanceOf[js.Any])

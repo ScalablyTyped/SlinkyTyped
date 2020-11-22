@@ -8,6 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait UseRowSelectInstanceProps[D /* <: js.Object */] extends js.Object {
   
+  def getToggleAllPageRowsSelectedProps(): TableToggleAllRowsSelectedProps = js.native
+  def getToggleAllPageRowsSelectedProps(props: PartialTableToggleAllRows): TableToggleAllRowsSelectedProps = js.native
+  
   def getToggleAllRowsSelectedProps(): TableToggleAllRowsSelectedProps = js.native
   def getToggleAllRowsSelectedProps(props: PartialTableToggleAllRows): TableToggleAllRowsSelectedProps = js.native
   

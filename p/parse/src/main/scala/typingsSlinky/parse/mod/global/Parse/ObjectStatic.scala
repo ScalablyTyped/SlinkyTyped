@@ -31,15 +31,59 @@ trait ObjectStatic extends js.Object {
   def fetchAllIfNeeded[T /* <: Object[Attributes] */](list: js.Array[T]): js.Promise[js.Array[T]] = js.native
   def fetchAllIfNeeded[T /* <: Object[Attributes] */](list: js.Array[T], options: FetchAllOptions): js.Promise[js.Array[T]] = js.native
   
-  def fetchAllIfNeededWithInclude[T /* <: Object[Attributes] */](list: js.Array[T], keys: String): js.Promise[js.Array[T]] = js.native
-  def fetchAllIfNeededWithInclude[T /* <: Object[Attributes] */](list: js.Array[T], keys: String, options: RequestOptions): js.Promise[js.Array[T]] = js.native
-  def fetchAllIfNeededWithInclude[T /* <: Object[Attributes] */](list: js.Array[T], keys: js.Array[String | js.Array[String]]): js.Promise[js.Array[T]] = js.native
-  def fetchAllIfNeededWithInclude[T /* <: Object[Attributes] */](list: js.Array[T], keys: js.Array[String | js.Array[String]], options: RequestOptions): js.Promise[js.Array[T]] = js.native
+  @JSName("fetchAllIfNeededWithInclude")
+  def fetchAllIfNeededWithInclude_attributes[T /* <: Object[Attributes] */](
+    list: js.Array[T],
+    keys: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any
+  ): js.Promise[js.Array[T]] = js.native
+  @JSName("fetchAllIfNeededWithInclude")
+  def fetchAllIfNeededWithInclude_attributes[T /* <: Object[Attributes] */](
+    list: js.Array[T],
+    keys: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any,
+    options: RequestOptions
+  ): js.Promise[js.Array[T]] = js.native
+  @JSName("fetchAllIfNeededWithInclude")
+  def fetchAllIfNeededWithInclude_attributes[T /* <: Object[Attributes] */](
+    list: js.Array[T],
+    keys: js.Array[
+      /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any
+    ]
+  ): js.Promise[js.Array[T]] = js.native
+  @JSName("fetchAllIfNeededWithInclude")
+  def fetchAllIfNeededWithInclude_attributes[T /* <: Object[Attributes] */](
+    list: js.Array[T],
+    keys: js.Array[
+      /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any
+    ],
+    options: RequestOptions
+  ): js.Promise[js.Array[T]] = js.native
   
-  def fetchAllWithInclude[T /* <: Object[Attributes] */](list: js.Array[T], keys: String): js.Promise[js.Array[T]] = js.native
-  def fetchAllWithInclude[T /* <: Object[Attributes] */](list: js.Array[T], keys: String, options: RequestOptions): js.Promise[js.Array[T]] = js.native
-  def fetchAllWithInclude[T /* <: Object[Attributes] */](list: js.Array[T], keys: js.Array[String | js.Array[String]]): js.Promise[js.Array[T]] = js.native
-  def fetchAllWithInclude[T /* <: Object[Attributes] */](list: js.Array[T], keys: js.Array[String | js.Array[String]], options: RequestOptions): js.Promise[js.Array[T]] = js.native
+  @JSName("fetchAllWithInclude")
+  def fetchAllWithInclude_attributes[T /* <: Object[Attributes] */](
+    list: js.Array[T],
+    keys: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any
+  ): js.Promise[js.Array[T]] = js.native
+  @JSName("fetchAllWithInclude")
+  def fetchAllWithInclude_attributes[T /* <: Object[Attributes] */](
+    list: js.Array[T],
+    keys: /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any,
+    options: RequestOptions
+  ): js.Promise[js.Array[T]] = js.native
+  @JSName("fetchAllWithInclude")
+  def fetchAllWithInclude_attributes[T /* <: Object[Attributes] */](
+    list: js.Array[T],
+    keys: js.Array[
+      /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any
+    ]
+  ): js.Promise[js.Array[T]] = js.native
+  @JSName("fetchAllWithInclude")
+  def fetchAllWithInclude_attributes[T /* <: Object[Attributes] */](
+    list: js.Array[T],
+    keys: js.Array[
+      /* import warning: importer.ImportType#apply Failed type conversion: keyof T['attributes'] */ js.Any
+    ],
+    options: RequestOptions
+  ): js.Promise[js.Array[T]] = js.native
   
   def fromJSON[T /* <: Object[Attributes] */](json: js.Any): T = js.native
   def fromJSON[T /* <: Object[Attributes] */](json: js.Any, `override`: Boolean): T = js.native

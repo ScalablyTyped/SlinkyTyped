@@ -7,7 +7,7 @@ import typingsSlinky.awsSdk.awsSdkStrings.instanceProfileExists
 import typingsSlinky.awsSdk.awsSdkStrings.policyExists
 import typingsSlinky.awsSdk.awsSdkStrings.roleExists
 import typingsSlinky.awsSdk.awsSdkStrings.userExists
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service

@@ -7,22 +7,34 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTreeViewItem extends CollectionWidgetItem {
   
-  /** @name dxTreeViewItem.expanded */
+  /**
+    * [descr:dxTreeViewItem.expanded]
+    */
   var expanded: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeViewItem.hasItems */
+  /**
+    * [descr:dxTreeViewItem.hasItems]
+    */
   var hasItems: js.UndefOr[Boolean] = js.native
   
-  /** @name dxTreeViewItem.icon */
+  /**
+    * [descr:dxTreeViewItem.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxTreeViewItem.items */
+  /**
+    * [descr:dxTreeViewItem.items]
+    */
   var items: js.UndefOr[js.Array[dxTreeViewItem]] = js.native
   
-  /** @name dxTreeViewItem.parentId */
+  /**
+    * [descr:dxTreeViewItem.parentId]
+    */
   var parentId: js.UndefOr[Double | String] = js.native
   
-  /** @name dxTreeViewItem.selected */
+  /**
+    * [descr:dxTreeViewItem.selected]
+    */
   var selected: js.UndefOr[Boolean] = js.native
 }
 object dxTreeViewItem {

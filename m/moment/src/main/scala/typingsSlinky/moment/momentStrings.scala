@@ -231,6 +231,9 @@ object momentStrings {
   def weeks: weeks = "weeks".asInstanceOf[weeks]
   
   @scala.inline
+  def ww: ww = "ww".asInstanceOf[ww]
+  
+  @scala.inline
   def y: y = "y".asInstanceOf[y]
   
   @scala.inline
@@ -812,6 +815,11 @@ object momentStrings {
        with typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
        with MomentConstructor
        with typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
+  
+  @js.native
+  sealed trait ww
+    extends RelativeTimeKey
+       with typingsSlinky.moment.momentMod.RelativeTimeKey
   
   @js.native
   sealed trait y

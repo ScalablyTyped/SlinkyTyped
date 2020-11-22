@@ -16,8 +16,14 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
+import typingsSlinky.antd.anon.Offset
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -28,8 +34,11 @@ import typingsSlinky.antd.antdStrings.date
 import typingsSlinky.antd.antdStrings.decimal
 import typingsSlinky.antd.antdStrings.descending
 import typingsSlinky.antd.antdStrings.dialog
+import typingsSlinky.antd.antdStrings.done
 import typingsSlinky.antd.antdStrings.email
+import typingsSlinky.antd.antdStrings.enter
 import typingsSlinky.antd.antdStrings.execute
+import typingsSlinky.antd.antdStrings.go
 import typingsSlinky.antd.antdStrings.grammar
 import typingsSlinky.antd.antdStrings.grid
 import typingsSlinky.antd.antdStrings.horizontal
@@ -41,6 +50,7 @@ import typingsSlinky.antd.antdStrings.location
 import typingsSlinky.antd.antdStrings.menu
 import typingsSlinky.antd.antdStrings.mixed
 import typingsSlinky.antd.antdStrings.move
+import typingsSlinky.antd.antdStrings.next
 import typingsSlinky.antd.antdStrings.no
 import typingsSlinky.antd.antdStrings.none
 import typingsSlinky.antd.antdStrings.numeric
@@ -50,18 +60,20 @@ import typingsSlinky.antd.antdStrings.other
 import typingsSlinky.antd.antdStrings.page
 import typingsSlinky.antd.antdStrings.polite
 import typingsSlinky.antd.antdStrings.popup
+import typingsSlinky.antd.antdStrings.previous
 import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.search
+import typingsSlinky.antd.antdStrings.send
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.tel
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
@@ -166,7 +178,9 @@ trait InputNumberProps extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -234,6 +248,8 @@ trait InputNumberProps extends js.Object {
   
   var draggable: js.UndefOr[Booleanish] = js.native
   
+  var enterKeyHint: js.UndefOr[enter | done | go | next | previous | search | send] = js.native
+  
   var form: js.UndefOr[String] = js.native
   
   var formAction: js.UndefOr[String] = js.native
@@ -256,7 +272,7 @@ trait InputNumberProps extends js.Object {
   
   var inlist: js.UndefOr[js.Any] = js.native
   
-  var inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.native
+  var inputMode: js.UndefOr[none | text_ | tel | url | email | numeric | decimal | search] = js.native
   
   var is: js.UndefOr[String] = js.native
   
@@ -423,6 +439,8 @@ trait InputNumberProps extends js.Object {
   var onSelect: js.UndefOr[ReactEventHandler[HTMLInputElement]] = js.native
   
   var onStalled: js.UndefOr[ReactEventHandler[HTMLInputElement]] = js.native
+  
+  var onStep: js.UndefOr[js.Function2[/* value */ Double, /* info */ Offset, Unit]] = js.native
   
   var onSubmit: js.UndefOr[FormEventHandler[HTMLInputElement]] = js.native
   
@@ -766,7 +784,9 @@ object InputNumberProps {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -973,6 +993,12 @@ object InputNumberProps {
     def deleteDraggable: Self = this.set("draggable", js.undefined)
     
     @scala.inline
+    def setEnterKeyHint(value: enter | done | go | next | previous | search | send): Self = this.set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEnterKeyHint: Self = this.set("enterKeyHint", js.undefined)
+    
+    @scala.inline
     def setForm(value: String): Self = this.set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -1039,7 +1065,7 @@ object InputNumberProps {
     def deleteInlist: Self = this.set("inlist", js.undefined)
     
     @scala.inline
-    def setInputMode(value: none | text | tel | url | email | numeric | decimal | search): Self = this.set("inputMode", value.asInstanceOf[js.Any])
+    def setInputMode(value: none | text_ | tel | url | email | numeric | decimal | search): Self = this.set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInputMode: Self = this.set("inputMode", js.undefined)
@@ -1541,6 +1567,12 @@ object InputNumberProps {
     
     @scala.inline
     def deleteOnStalled: Self = this.set("onStalled", js.undefined)
+    
+    @scala.inline
+    def setOnStep(value: (/* value */ Double, /* info */ Offset) => Unit): Self = this.set("onStep", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteOnStep: Self = this.set("onStep", js.undefined)
     
     @scala.inline
     def setOnSubmit(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): Self = this.set("onSubmit", js.Any.fromFunction1(value))

@@ -113,4 +113,8 @@ object geomMod extends js.Object {
       opt_ends: js.Array[Double]
     ) = this()
   }
+  
+  @js.native
+  abstract class SimpleGeometry ()
+    extends typingsSlinky.ol.simpleGeometryMod.default
 }

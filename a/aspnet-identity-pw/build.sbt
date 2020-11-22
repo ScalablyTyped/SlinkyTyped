@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "aspnet-identity-pw"
-version := "1.0.0-dt-20200515Z-d36741"
+version := "1.0.0-dt-20200923Z-d36741"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

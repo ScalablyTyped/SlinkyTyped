@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait StartExecutionInput extends js.Object {
   
   /**
-    * The string that contains the JSON input data for the execution, for example:  "input": "{\"first_name\" : \"test\"}"   If you don't include any JSON input data, you still must include the two braces, for example: "input": "{}"  
+    * The string that contains the JSON input data for the execution, for example:  "input": "{\"first_name\" : \"test\"}"   If you don't include any JSON input data, you still must include the two braces, for example: "input": "{}"   Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
     */
   var input: js.UndefOr[SensitiveData] = js.native
   
@@ -21,6 +21,11 @@ trait StartExecutionInput extends js.Object {
     * The Amazon Resource Name (ARN) of the state machine to execute.
     */
   var stateMachineArn: Arn = js.native
+  
+  /**
+    * Passes the AWS X-Ray trace header. The trace header can also be passed in the request payload.
+    */
+  var traceHeader: js.UndefOr[TraceHeader] = js.native
 }
 object StartExecutionInput {
   
@@ -59,5 +64,11 @@ object StartExecutionInput {
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    
+    @scala.inline
+    def setTraceHeader(value: TraceHeader): Self = this.set("traceHeader", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTraceHeader: Self = this.set("traceHeader", js.undefined)
   }
 }

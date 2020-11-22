@@ -7,19 +7,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait HandleGeneratorInfo extends js.Object {
   
-  var dragging: Boolean = js.native
+  var dragging: js.UndefOr[Boolean] = js.native
   
   var index: Double = js.native
-  
-  var rest: js.Array[_] = js.native
   
   var value: js.UndefOr[Double] = js.native
 }
 object HandleGeneratorInfo {
   
   @scala.inline
-  def apply(dragging: Boolean, index: Double, rest: js.Array[_]): HandleGeneratorInfo = {
-    val __obj = js.Dynamic.literal(dragging = dragging.asInstanceOf[js.Any], index = index.asInstanceOf[js.Any], rest = rest.asInstanceOf[js.Any])
+  def apply(index: Double): HandleGeneratorInfo = {
+    val __obj = js.Dynamic.literal(index = index.asInstanceOf[js.Any])
     __obj.asInstanceOf[HandleGeneratorInfo]
   }
   
@@ -39,16 +37,13 @@ object HandleGeneratorInfo {
     }
     
     @scala.inline
-    def setDragging(value: Boolean): Self = this.set("dragging", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRestVarargs(value: js.Any*): Self = this.set("rest", js.Array(value :_*))
+    def setDragging(value: Boolean): Self = this.set("dragging", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRest(value: js.Array[_]): Self = this.set("rest", value.asInstanceOf[js.Any])
+    def deleteDragging: Self = this.set("dragging", js.undefined)
     
     @scala.inline
     def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])

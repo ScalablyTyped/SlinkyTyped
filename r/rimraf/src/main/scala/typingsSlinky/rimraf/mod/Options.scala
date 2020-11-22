@@ -4,6 +4,7 @@ import typingsSlinky.glob.mod.IOptions
 import typingsSlinky.node.fsMod.Mode
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.Stats
+import typingsSlinky.rimraf.anon.Fn0
 import typingsSlinky.rimraf.anon.FnCall
 import typingsSlinky.rimraf.anon.FnCallPathOptions
 import typingsSlinky.rimraf.anon.Typeofchmod
@@ -42,15 +43,15 @@ trait Options extends js.Object {
   
   var readdir: js.UndefOr[Typeofreaddir] = js.native
   
-  var readdirSync: js.UndefOr[FnCallPathOptions] = js.native
+  var readdirSync: js.UndefOr[Fn0] = js.native
   
   var rmdir: js.UndefOr[Typeofrmdir] = js.native
   
-  var rmdirSync: js.UndefOr[FnCall] = js.native
+  var rmdirSync: js.UndefOr[FnCallPathOptions] = js.native
   
   var stat: js.UndefOr[Typeofstat] = js.native
   
-  var statSync: js.UndefOr[js.Function1[/* path */ PathLike, Stats]] = js.native
+  var statSync: js.UndefOr[FnCall] = js.native
   
   var unlink: js.UndefOr[Typeofunlink] = js.native
   
@@ -134,7 +135,7 @@ object Options {
     def deleteReaddir: Self = this.set("readdir", js.undefined)
     
     @scala.inline
-    def setReaddirSync(value: FnCallPathOptions): Self = this.set("readdirSync", value.asInstanceOf[js.Any])
+    def setReaddirSync(value: Fn0): Self = this.set("readdirSync", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteReaddirSync: Self = this.set("readdirSync", js.undefined)
@@ -146,7 +147,7 @@ object Options {
     def deleteRmdir: Self = this.set("rmdir", js.undefined)
     
     @scala.inline
-    def setRmdirSync(value: FnCall): Self = this.set("rmdirSync", value.asInstanceOf[js.Any])
+    def setRmdirSync(value: FnCallPathOptions): Self = this.set("rmdirSync", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRmdirSync: Self = this.set("rmdirSync", js.undefined)
@@ -158,7 +159,7 @@ object Options {
     def deleteStat: Self = this.set("stat", js.undefined)
     
     @scala.inline
-    def setStatSync(value: /* path */ PathLike => Stats): Self = this.set("statSync", js.Any.fromFunction1(value))
+    def setStatSync(value: FnCall): Self = this.set("statSync", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStatSync: Self = this.set("statSync", js.undefined)

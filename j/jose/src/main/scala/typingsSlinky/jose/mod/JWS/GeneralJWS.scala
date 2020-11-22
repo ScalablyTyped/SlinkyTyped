@@ -1,5 +1,6 @@
 package typingsSlinky.jose.mod.JWS
 
+import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +13,7 @@ trait GeneralJWS extends JWSJSON {
 object GeneralJWS {
   
   @scala.inline
-  def apply(payload: String, signatures: js.Array[JWSRecipient]): GeneralJWS = {
+  def apply(payload: String | Buffer, signatures: js.Array[JWSRecipient]): GeneralJWS = {
     val __obj = js.Dynamic.literal(payload = payload.asInstanceOf[js.Any], signatures = signatures.asInstanceOf[js.Any])
     __obj.asInstanceOf[GeneralJWS]
   }

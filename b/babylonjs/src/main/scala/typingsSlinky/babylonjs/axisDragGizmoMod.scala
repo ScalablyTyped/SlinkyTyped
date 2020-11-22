@@ -27,6 +27,7 @@ object axisDragGizmoMod extends js.Object {
       * @param gizmoLayer The utility layer the gizmo will be added to
       * @param dragAxis The axis which the gizmo will be able to drag on
       * @param color The color of the gizmo
+      * @param thickness display gizmo axis thickness
       */
     def this(dragAxis: Vector3) = this()
     def this(dragAxis: Vector3, color: Color3) = this()
@@ -56,10 +57,42 @@ object axisDragGizmoMod extends js.Object {
       gizmoLayer: UtilityLayerRenderer,
       parent: Nullable[PositionGizmo]
     ) = this()
-    
-    var _arrow: js.Any = js.native
+    def this(
+      dragAxis: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      parent: js.UndefOr[Nullable[PositionGizmo]],
+      thickness: Double
+    ) = this()
+    def this(
+      dragAxis: Vector3,
+      color: js.UndefOr[scala.Nothing],
+      gizmoLayer: UtilityLayerRenderer,
+      parent: js.UndefOr[Nullable[PositionGizmo]],
+      thickness: Double
+    ) = this()
+    def this(
+      dragAxis: Vector3,
+      color: Color3,
+      gizmoLayer: js.UndefOr[scala.Nothing],
+      parent: js.UndefOr[Nullable[PositionGizmo]],
+      thickness: Double
+    ) = this()
+    def this(
+      dragAxis: Vector3,
+      color: Color3,
+      gizmoLayer: UtilityLayerRenderer,
+      parent: js.UndefOr[Nullable[PositionGizmo]],
+      thickness: Double
+    ) = this()
     
     var _coloredMaterial: js.Any = js.native
+    
+    var _disableMaterial: js.Any = js.native
+    
+    var _dragging: js.Any = js.native
+    
+    var _gizmoMesh: js.Any = js.native
     
     var _hoverMaterial: js.Any = js.native
     
@@ -97,6 +130,14 @@ object axisDragGizmoMod extends js.Object {
     
     /** @hidden */
     def _CreateArrow(scene: Scene, material: StandardMaterial): TransformNode = js.native
+    def _CreateArrow(
+      scene: Scene,
+      material: StandardMaterial,
+      thickness: js.UndefOr[scala.Nothing],
+      isCollider: Boolean
+    ): TransformNode = js.native
+    def _CreateArrow(scene: Scene, material: StandardMaterial, thickness: Double): TransformNode = js.native
+    def _CreateArrow(scene: Scene, material: StandardMaterial, thickness: Double, isCollider: Boolean): TransformNode = js.native
     
     /** @hidden */
     def _CreateArrowInstance(scene: Scene, arrow: TransformNode): TransformNode = js.native

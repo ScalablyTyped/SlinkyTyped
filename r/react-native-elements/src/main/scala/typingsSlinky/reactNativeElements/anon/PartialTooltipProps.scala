@@ -16,6 +16,8 @@ trait PartialTooltipProps extends js.Object {
   
   var backgroundColor: js.UndefOr[String] = js.native
   
+  var closeOnlyOnBackdropPress: js.UndefOr[Boolean] = js.native
+  
   var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
   var height: js.UndefOr[Double] = js.native
@@ -78,6 +80,12 @@ object PartialTooltipProps {
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
+    
+    @scala.inline
+    def setCloseOnlyOnBackdropPress(value: Boolean): Self = this.set("closeOnlyOnBackdropPress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCloseOnlyOnBackdropPress: Self = this.set("closeOnlyOnBackdropPress", js.undefined)
     
     @scala.inline
     def setContainerStyle(value: StyleProp[ViewStyle]): Self = this.set("containerStyle", value.asInstanceOf[js.Any])

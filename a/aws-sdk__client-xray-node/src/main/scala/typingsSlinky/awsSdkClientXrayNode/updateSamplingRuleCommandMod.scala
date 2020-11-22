@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientXrayNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientXrayNode.typesUpdateSamplingRuleInputMod.UpdateSamplingRuleInput
 import typingsSlinky.awsSdkClientXrayNode.typesUpdateSamplingRuleOutputMod.UpdateSamplingRuleOutput
 import typingsSlinky.awsSdkClientXrayNode.xrayconfigurationMod.XRayResolvedConfiguration
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object updateSamplingRuleCommandMod extends js.Object {
           UpdateSamplingRuleInput, 
           OutputTypesUnion, 
           UpdateSamplingRuleOutput, 
-          XRayResolvedConfiguration, 
-          Readable
+          XRayResolvedConfiguration
         ] {
     def this(input: UpdateSamplingRuleInput) = this()
     
-    val middlewareStack: MiddlewareStack[UpdateSamplingRuleInput, UpdateSamplingRuleOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: XRayResolvedConfiguration
     ): Handler[UpdateSamplingRuleInput, UpdateSamplingRuleOutput] = js.native
   }

@@ -53,6 +53,7 @@ package object cloudformationMod {
     - typingsSlinky.awsSdk.awsSdkStrings.Modify_
     - typingsSlinky.awsSdk.awsSdkStrings.Remove_
     - typingsSlinky.awsSdk.awsSdkStrings.Import_
+    - typingsSlinky.awsSdk.awsSdkStrings.Dynamic_
     - java.lang.String
   */
   type ChangeAction = typingsSlinky.awsSdk.cloudformationMod._ChangeAction | java.lang.String
@@ -67,7 +68,10 @@ package object cloudformationMod {
     - typingsSlinky.awsSdk.awsSdkStrings.CREATE_PENDING
     - typingsSlinky.awsSdk.awsSdkStrings.CREATE_IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.CREATE_COMPLETE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_PENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_IN_PROGRESS
     - typingsSlinky.awsSdk.awsSdkStrings.DELETE_COMPLETE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_FAILED
     - typingsSlinky.awsSdk.awsSdkStrings.FAILED
     - java.lang.String
   */
@@ -190,6 +194,8 @@ package object cloudformationMod {
   type InProgressStackInstancesCount = scala.Double
   
   type InSyncStackInstancesCount = scala.Double
+  
+  type IncludeNestedStacks = scala.Boolean
   
   type IsDefaultVersion = scala.Boolean
   

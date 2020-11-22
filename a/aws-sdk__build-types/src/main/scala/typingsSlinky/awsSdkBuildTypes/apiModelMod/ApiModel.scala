@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkBuildTypes.apiModelMod
 
-import typingsSlinky.awsSdkTypes.protocolMod.ServiceMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,7 +9,7 @@ trait ApiModel extends js.Object {
   
   var documentation: js.UndefOr[java.lang.String] = js.native
   
-  var metadata: ServiceMetadata = js.native
+  var metadata: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceMetadata */ js.Any = js.native
   
   var operations: OperationMap = js.native
   
@@ -19,7 +18,11 @@ trait ApiModel extends js.Object {
 object ApiModel {
   
   @scala.inline
-  def apply(metadata: ServiceMetadata, operations: OperationMap, shapes: ShapeMap): ApiModel = {
+  def apply(
+    metadata: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceMetadata */ js.Any,
+    operations: OperationMap,
+    shapes: ShapeMap
+  ): ApiModel = {
     val __obj = js.Dynamic.literal(metadata = metadata.asInstanceOf[js.Any], operations = operations.asInstanceOf[js.Any], shapes = shapes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApiModel]
   }
@@ -40,7 +43,9 @@ object ApiModel {
     }
     
     @scala.inline
-    def setMetadata(value: ServiceMetadata): Self = this.set("metadata", value.asInstanceOf[js.Any])
+    def setMetadata(
+      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ServiceMetadata */ js.Any
+    ): Self = this.set("metadata", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOperations(value: OperationMap): Self = this.set("operations", value.asInstanceOf[js.Any])

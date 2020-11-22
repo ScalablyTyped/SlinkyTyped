@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.mod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.menusMod.menus.MenuItem
@@ -30,6 +31,7 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.TabPage
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.TableCell
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,6 +46,8 @@ object nativepages extends js.Object {
   /**
     * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 8.0.0: introduced
     */
   @js.native
@@ -54,8 +58,8 @@ object nativepages extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -86,6 +90,8 @@ object nativepages extends js.Object {
   
   /**
     * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     *
     * In version 8.0.0: deleted
     * In version 7.21.0: introduced
@@ -119,6 +125,8 @@ object nativepages extends js.Object {
   /**
     * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 8.0.0: deleted
     * In version 7.23.0: introduced
     */
@@ -130,8 +138,8 @@ object nativepages extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -162,6 +170,8 @@ object nativepages extends js.Object {
   
   /**
     * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     *
     * In version 8.0.0: deleted
     * In version 7.21.0: introduced
@@ -195,6 +205,8 @@ object nativepages extends js.Object {
   /**
     * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 8.0.0: deleted
     * In version 7.23.0: introduced
     */
@@ -206,8 +218,8 @@ object nativepages extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -359,6 +371,8 @@ object nativepages extends js.Object {
   /**
     * NOTE: This class is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 8.0.0: deleted
     * In version 7.23.0: introduced
     */
@@ -370,8 +384,8 @@ object nativepages extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */

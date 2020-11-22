@@ -16,6 +16,8 @@ trait Assertion extends js.Object {
   
   def beforeTime(date: Date): Assertion = js.native
   
+  def closeToTime(date: Date, deltaInSeconds: Double): Assertion = js.native
+  
   def equalDate(date: Date): Assertion = js.native
   
   def equalTime(date: Date): Assertion = js.native
@@ -32,12 +34,13 @@ object Assertion {
     afterTime: Date => Assertion,
     beforeDate: Date => Assertion,
     beforeTime: Date => Assertion,
+    closeToTime: (Date, Double) => Assertion,
     equalDate: Date => Assertion,
     equalTime: Date => Assertion,
     withinDate: (Date, Date) => Assertion,
     withinTime: (Date, Date) => Assertion
   ): Assertion = {
-    val __obj = js.Dynamic.literal(afterDate = js.Any.fromFunction1(afterDate), afterTime = js.Any.fromFunction1(afterTime), beforeDate = js.Any.fromFunction1(beforeDate), beforeTime = js.Any.fromFunction1(beforeTime), equalDate = js.Any.fromFunction1(equalDate), equalTime = js.Any.fromFunction1(equalTime), withinDate = js.Any.fromFunction2(withinDate), withinTime = js.Any.fromFunction2(withinTime))
+    val __obj = js.Dynamic.literal(afterDate = js.Any.fromFunction1(afterDate), afterTime = js.Any.fromFunction1(afterTime), beforeDate = js.Any.fromFunction1(beforeDate), beforeTime = js.Any.fromFunction1(beforeTime), closeToTime = js.Any.fromFunction2(closeToTime), equalDate = js.Any.fromFunction1(equalDate), equalTime = js.Any.fromFunction1(equalTime), withinDate = js.Any.fromFunction2(withinDate), withinTime = js.Any.fromFunction2(withinTime))
     __obj.asInstanceOf[Assertion]
   }
   
@@ -67,6 +70,9 @@ object Assertion {
     
     @scala.inline
     def setBeforeTime(value: Date => Assertion): Self = this.set("beforeTime", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setCloseToTime(value: (Date, Double) => Assertion): Self = this.set("closeToTime", js.Any.fromFunction2(value))
     
     @scala.inline
     def setEqualDate(value: Date => Assertion): Self = this.set("equalDate", js.Any.fromFunction1(value))

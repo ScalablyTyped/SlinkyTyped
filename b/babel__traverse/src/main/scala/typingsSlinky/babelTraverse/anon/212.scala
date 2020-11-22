@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.UnionTypeAnnotation
+import typingsSlinky.babelTraverse.babelTraverseStrings.DoExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `212` extends js.Object {
   
-  var `type`: UnionTypeAnnotation = js.native
+  var `type`: DoExpression = js.native
 }
 object `212` {
   
   @scala.inline
-  def apply(`type`: UnionTypeAnnotation): `212` = {
+  def apply(`type`: DoExpression): `212` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`212`]
@@ -35,6 +35,6 @@ object `212` {
     }
     
     @scala.inline
-    def setType(value: UnionTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: DoExpression): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

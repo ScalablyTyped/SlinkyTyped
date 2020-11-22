@@ -26,6 +26,18 @@ trait IDiffEditorOptions extends IEditorOptions {
   var maxComputationTime: js.UndefOr[Double] = js.native
   
   /**
+    * Modified editor should be have code lens enabled?
+    * Defaults to false.
+    */
+  var modifiedCodeLens: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Original editor should be have code lens enabled?
+    * Defaults to false.
+    */
+  var originalCodeLens: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Original model should be editable?
     * Defaults to false.
     */
@@ -83,6 +95,18 @@ object IDiffEditorOptions {
     
     @scala.inline
     def deleteMaxComputationTime: Self = this.set("maxComputationTime", js.undefined)
+    
+    @scala.inline
+    def setModifiedCodeLens(value: Boolean): Self = this.set("modifiedCodeLens", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModifiedCodeLens: Self = this.set("modifiedCodeLens", js.undefined)
+    
+    @scala.inline
+    def setOriginalCodeLens(value: Boolean): Self = this.set("originalCodeLens", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOriginalCodeLens: Self = this.set("originalCodeLens", js.undefined)
     
     @scala.inline
     def setOriginalEditable(value: Boolean): Self = this.set("originalEditable", value.asInstanceOf[js.Any])

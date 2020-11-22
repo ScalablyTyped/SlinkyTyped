@@ -8,6 +8,7 @@ import typingsSlinky.chrome.chrome.loginState.ProfileType
 import typingsSlinky.chrome.chrome.loginState.SessionState
 import typingsSlinky.chrome.chrome.omnibox.OnInputEnteredDisposition
 import typingsSlinky.chrome.chrome.runtime.RequestUpdateCheckStatus
+import typingsSlinky.chrome.chrome.storage.AreaName
 import typingsSlinky.chrome.chrome.webRequest.ResourceType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -121,10 +122,16 @@ object chromeStrings {
   def loading: loading = "loading".asInstanceOf[loading]
   
   @scala.inline
+  def local: local = "local".asInstanceOf[local]
+  
+  @scala.inline
   def locked: locked = "locked".asInstanceOf[locked]
   
   @scala.inline
   def main_frame: main_frame = "main_frame".asInstanceOf[main_frame]
+  
+  @scala.inline
+  def managed: managed = "managed".asInstanceOf[managed]
   
   @scala.inline
   def media: media = "media".asInstanceOf[media]
@@ -203,6 +210,9 @@ object chromeStrings {
   
   @scala.inline
   def sub_frame: sub_frame = "sub_frame".asInstanceOf[sub_frame]
+  
+  @scala.inline
+  def sync: sync = "sync".asInstanceOf[sync]
   
   @scala.inline
   def system_error: system_error = "system_error".asInstanceOf[system_error]
@@ -340,10 +350,16 @@ object chromeStrings {
   sealed trait loading extends js.Object
   
   @js.native
+  sealed trait local extends AreaName
+  
+  @js.native
   sealed trait locked extends IdleState
   
   @js.native
   sealed trait main_frame extends ResourceType
+  
+  @js.native
+  sealed trait managed extends AreaName
   
   @js.native
   sealed trait media extends ResourceType
@@ -422,6 +438,9 @@ object chromeStrings {
   
   @js.native
   sealed trait sub_frame extends ResourceType
+  
+  @js.native
+  sealed trait sync extends AreaName
   
   @js.native
   sealed trait system_error extends js.Object

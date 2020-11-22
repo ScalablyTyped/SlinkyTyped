@@ -1,33 +1,33 @@
 package typingsSlinky.ethers.ethersMod
 
-import typingsSlinky.ethers.typesMod.MinimalProvider
-import typingsSlinky.ethers.typesMod.ParamType
-import typingsSlinky.ethers.typesMod.Signer
+import typingsSlinky.ethersprojectAbi.mod.Interface
+import typingsSlinky.ethersprojectAbstractProvider.mod.Provider
+import typingsSlinky.ethersprojectContracts.anon.From
+import typingsSlinky.ethersprojectContracts.mod.ContractInterface
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("ethers/dist/types/ethers", "Contract")
+@JSImport("ethers/lib/ethers", "Contract")
 @js.native
 class Contract protected ()
-  extends typingsSlinky.ethers.contractsMod.Contract {
-  def this(addressOrName: String, contractInterface: String, signerOrProvider: MinimalProvider) = this()
-  def this(addressOrName: String, contractInterface: String, signerOrProvider: Signer) = this()
+  extends typingsSlinky.ethersprojectContracts.mod.Contract {
+  def this(addressOrName: String, contractInterface: ContractInterface) = this()
+  def this(addressOrName: String, contractInterface: ContractInterface, signerOrProvider: Provider) = this()
   def this(
     addressOrName: String,
-    contractInterface: js.Array[String | ParamType],
-    signerOrProvider: MinimalProvider
-  ) = this()
-  def this(addressOrName: String, contractInterface: js.Array[String | ParamType], signerOrProvider: Signer) = this()
-  def this(
-    addressOrName: String,
-    contractInterface: typingsSlinky.ethers.interfaceMod.Interface,
-    signerOrProvider: MinimalProvider
-  ) = this()
-  def this(
-    addressOrName: String,
-    contractInterface: typingsSlinky.ethers.interfaceMod.Interface,
-    signerOrProvider: Signer
+    contractInterface: ContractInterface,
+    signerOrProvider: typingsSlinky.ethersprojectAbstractSigner.mod.Signer
   ) = this()
 }
-
+/* static members */
+@JSImport("ethers/lib/ethers", "Contract")
+@js.native
+object Contract extends js.Object {
+  
+  def getContractAddress(transaction: From): String = js.native
+  
+  def getInterface(contractInterface: ContractInterface): Interface = js.native
+  
+  def isIndexed(value: js.Any): /* is @ethersproject/abi.@ethersproject/abi.Indexed */ Boolean = js.native
+}

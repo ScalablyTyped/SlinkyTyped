@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`10`
+import typingsSlinky.octokitTypes.anon.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,14 +9,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ReactionsDeleteLegacyEndpoint extends js.Object {
   
-  var mediaType: `10` = js.native
+  var mediaType: `9` = js.native
   
   var reaction_id: Double = js.native
 }
 object ReactionsDeleteLegacyEndpoint {
   
   @scala.inline
-  def apply(mediaType: `10`, reaction_id: Double): ReactionsDeleteLegacyEndpoint = {
+  def apply(mediaType: `9`, reaction_id: Double): ReactionsDeleteLegacyEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], reaction_id = reaction_id.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactionsDeleteLegacyEndpoint]
   }
@@ -37,7 +37,7 @@ object ReactionsDeleteLegacyEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `10`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `9`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReaction_id(value: Double): Self = this.set("reaction_id", value.asInstanceOf[js.Any])

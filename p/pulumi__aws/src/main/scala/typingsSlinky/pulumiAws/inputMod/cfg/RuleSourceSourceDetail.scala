@@ -9,14 +9,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RuleSourceSourceDetail extends js.Object {
   
   /**
-    * The source of the event, such as an AWS service, that triggers AWS Config
-    * to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+    * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
     */
   var eventSource: js.UndefOr[Input[String]] = js.native
   
   /**
-    * The frequency that you want AWS Config to run evaluations for a rule that
-    * is triggered periodically. If specified, requires `messageType` to be `ScheduledNotification`.
+    * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `messageType` to be `ScheduledNotification`.
     */
   var maximumExecutionFrequency: js.UndefOr[Input[String]] = js.native
   

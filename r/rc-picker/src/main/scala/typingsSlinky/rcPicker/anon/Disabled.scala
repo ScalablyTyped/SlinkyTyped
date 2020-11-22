@@ -1,6 +1,5 @@
 package typingsSlinky.rcPicker.anon
 
-import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.Locale
 import typingsSlinky.rcPicker.interfaceMod.PickerMode
 import typingsSlinky.rcPicker.interfaceMod.RangeValue
@@ -15,7 +14,7 @@ trait Disabled[DateType] extends js.Object {
   
   var disabledDate: js.UndefOr[js.Function1[/* date */ DateType, Boolean]] = js.native
   
-  var generateConfig: GenerateConfig[DateType] = js.native
+  var generateConfig: typingsSlinky.rcPicker.generateMod.GenerateConfig[DateType] = js.native
   
   var locale: Locale = js.native
   
@@ -28,7 +27,7 @@ object Disabled {
   @scala.inline
   def apply[DateType](
     disabled: js.Tuple2[Boolean, Boolean],
-    generateConfig: GenerateConfig[DateType],
+    generateConfig: typingsSlinky.rcPicker.generateMod.GenerateConfig[DateType],
     locale: Locale,
     picker: PickerMode
   ): Disabled[DateType] = {
@@ -55,7 +54,7 @@ object Disabled {
     def setDisabled(value: js.Tuple2[Boolean, Boolean]): Self = this.set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGenerateConfig(value: GenerateConfig[DateType]): Self = this.set("generateConfig", value.asInstanceOf[js.Any])
+    def setGenerateConfig(value: typingsSlinky.rcPicker.generateMod.GenerateConfig[DateType]): Self = this.set("generateConfig", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setLocale(value: Locale): Self = this.set("locale", value.asInstanceOf[js.Any])

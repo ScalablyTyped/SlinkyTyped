@@ -1,13 +1,13 @@
 package typingsSlinky.awsSdkEventstreamMarshaller
 
-import typingsSlinky.awsSdkEventstreamMarshaller.messageMod.MessageHeaders
+import typingsSlinky.awsSdkTypes.eventStreamMod.MessageHeaders
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/eventstream-marshaller/build/HeaderMarshaller", JSImport.Namespace)
+@JSImport("@aws-sdk/eventstream-marshaller/dist/cjs/HeaderMarshaller", JSImport.Namespace)
 @js.native
 object headerMarshallerMod extends js.Object {
   

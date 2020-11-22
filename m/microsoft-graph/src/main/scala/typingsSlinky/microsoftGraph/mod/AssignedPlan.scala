@@ -12,16 +12,16 @@ trait AssignedPlan extends js.Object {
     * and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would
     * look like this: '2014-01-01T00:00:00Z'
     */
-  var assignedDateTime: js.UndefOr[String] = js.native
+  var assignedDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // For example, 'Enabled'.
-  var capabilityStatus: js.UndefOr[String] = js.native
+  var capabilityStatus: js.UndefOr[NullableOption[String]] = js.native
   
   // The name of the service; for example, 'Exchange'.
-  var service: js.UndefOr[String] = js.native
+  var service: js.UndefOr[NullableOption[String]] = js.native
   
   // A GUID that identifies the service plan.
-  var servicePlanId: js.UndefOr[String] = js.native
+  var servicePlanId: js.UndefOr[NullableOption[String]] = js.native
 }
 object AssignedPlan {
   
@@ -47,27 +47,39 @@ object AssignedPlan {
     }
     
     @scala.inline
-    def setAssignedDateTime(value: String): Self = this.set("assignedDateTime", value.asInstanceOf[js.Any])
+    def setAssignedDateTime(value: NullableOption[String]): Self = this.set("assignedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAssignedDateTime: Self = this.set("assignedDateTime", js.undefined)
     
     @scala.inline
-    def setCapabilityStatus(value: String): Self = this.set("capabilityStatus", value.asInstanceOf[js.Any])
+    def setAssignedDateTimeNull: Self = this.set("assignedDateTime", null)
+    
+    @scala.inline
+    def setCapabilityStatus(value: NullableOption[String]): Self = this.set("capabilityStatus", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCapabilityStatus: Self = this.set("capabilityStatus", js.undefined)
     
     @scala.inline
-    def setService(value: String): Self = this.set("service", value.asInstanceOf[js.Any])
+    def setCapabilityStatusNull: Self = this.set("capabilityStatus", null)
+    
+    @scala.inline
+    def setService(value: NullableOption[String]): Self = this.set("service", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteService: Self = this.set("service", js.undefined)
     
     @scala.inline
-    def setServicePlanId(value: String): Self = this.set("servicePlanId", value.asInstanceOf[js.Any])
+    def setServiceNull: Self = this.set("service", null)
+    
+    @scala.inline
+    def setServicePlanId(value: NullableOption[String]): Self = this.set("servicePlanId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteServicePlanId: Self = this.set("servicePlanId", js.undefined)
+    
+    @scala.inline
+    def setServicePlanIdNull: Self = this.set("servicePlanId", null)
   }
 }

@@ -22,6 +22,9 @@ object stellarBaseNumbers {
   def `-13`: `-13` = -13.asInstanceOf[`-13`]
   
   @scala.inline
+  def `-14`: `-14` = -14.asInstanceOf[`-14`]
+  
+  @scala.inline
   def `-2`: `-2` = -2.asInstanceOf[`-2`]
   
   @scala.inline
@@ -73,6 +76,15 @@ object stellarBaseNumbers {
   def `15`: `15` = 15.asInstanceOf[`15`]
   
   @scala.inline
+  def `16`: `16` = 16.asInstanceOf[`16`]
+  
+  @scala.inline
+  def `17`: `17` = 17.asInstanceOf[`17`]
+  
+  @scala.inline
+  def `18`: `18` = 18.asInstanceOf[`18`]
+  
+  @scala.inline
   def `2`: `2` = 2.asInstanceOf[`2`]
   
   @scala.inline
@@ -119,6 +131,9 @@ object stellarBaseNumbers {
   
   @js.native
   sealed trait `-13` extends js.Object
+  
+  @js.native
+  sealed trait `-14` extends js.Object
   
   @js.native
   sealed trait `-2` extends js.Object
@@ -170,6 +185,15 @@ object stellarBaseNumbers {
   
   @js.native
   sealed trait `15` extends js.Object
+  
+  @js.native
+  sealed trait `16` extends js.Object
+  
+  @js.native
+  sealed trait `17` extends js.Object
+  
+  @js.native
+  sealed trait `18` extends js.Object
   
   @js.native
   sealed trait `2` extends js.Object

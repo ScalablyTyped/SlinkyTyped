@@ -1,8 +1,8 @@
 package typingsSlinky.tensorflowTfjsLayers.datasetFakesMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.kerasFormatCommonMod.Shape
 import scala.scalajs.js
 import scala.scalajs.js.`|`

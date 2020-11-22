@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.pulsarClient.pulsarClientStrings.Exclusive
   - typingsSlinky.pulsarClient.pulsarClientStrings.Shared
   - typingsSlinky.pulsarClient.pulsarClientStrings.Failover
+  - typingsSlinky.pulsarClient.pulsarClientStrings.KeyShared
 */
 trait SubscriptionType extends js.Object
 object SubscriptionType {
@@ -17,6 +18,9 @@ object SubscriptionType {
   
   @scala.inline
   def Failover: typingsSlinky.pulsarClient.pulsarClientStrings.Failover = "Failover".asInstanceOf[typingsSlinky.pulsarClient.pulsarClientStrings.Failover]
+  
+  @scala.inline
+  def KeyShared: typingsSlinky.pulsarClient.pulsarClientStrings.KeyShared = "KeyShared".asInstanceOf[typingsSlinky.pulsarClient.pulsarClientStrings.KeyShared]
   
   @scala.inline
   def Shared: typingsSlinky.pulsarClient.pulsarClientStrings.Shared = "Shared".asInstanceOf[typingsSlinky.pulsarClient.pulsarClientStrings.Shared]

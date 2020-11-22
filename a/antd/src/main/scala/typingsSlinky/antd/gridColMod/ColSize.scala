@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ColSize extends js.Object {
   
+  var flex: js.UndefOr[FlexType] = js.native
+  
   var offset: js.UndefOr[ColSpanType] = js.native
   
   var order: js.UndefOr[ColSpanType] = js.native
@@ -39,6 +41,12 @@ object ColSize {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setFlex(value: FlexType): Self = this.set("flex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFlex: Self = this.set("flex", js.undefined)
     
     @scala.inline
     def setOffset(value: ColSpanType): Self = this.set("offset", value.asInstanceOf[js.Any])

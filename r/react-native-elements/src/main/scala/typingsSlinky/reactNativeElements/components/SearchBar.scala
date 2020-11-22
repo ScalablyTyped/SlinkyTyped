@@ -1,9 +1,11 @@
 package typingsSlinky.reactNativeElements.components
 
+import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.anon.Start
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
@@ -17,7 +19,6 @@ import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.DocumentSelectionState
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.KeyboardTypeOptions
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.ReturnKeyTypeOptions
@@ -103,6 +104,7 @@ import typingsSlinky.reactNative.reactNativeStrings.yesExcludeDescendants
 import typingsSlinky.reactNativeElements.anon.PartialTouchableOpacityPr
 import typingsSlinky.reactNativeElements.mod.IconNode
 import typingsSlinky.reactNativeElements.mod.SearchBarProps
+import typingsSlinky.reactNativeElements.mod.TextProps
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.android
 import typingsSlinky.reactNativeElements.reactNativeElementsStrings.ios
 import scala.scalajs.js
@@ -119,6 +121,15 @@ object SearchBar {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.SearchBar] {
+    
+    @scala.inline
+    def InputComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def InputComponentComponentClass(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def InputComponent(value: ReactComponentClass[_]): this.type = set("InputComponent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
@@ -237,10 +248,31 @@ object SearchBar {
     def disableFullscreenUI(value: Boolean): this.type = set("disableFullscreenUI", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def disabledInputStyle(value: StyleProp[TextStyle]): this.type = set("disabledInputStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def disabledInputStyleNull: this.type = set("disabledInputStyle", null)
+    
+    @scala.inline
     def editable(value: Boolean): this.type = set("editable", value.asInstanceOf[js.Any])
     
     @scala.inline
     def enablesReturnKeyAutomatically(value: Boolean): this.type = set("enablesReturnKeyAutomatically", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def errorMessage(value: String): this.type = set("errorMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def errorProps(value: TextProps): this.type = set("errorProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def errorStyle(value: StyleProp[TextStyle]): this.type = set("errorStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def errorStyleNull: this.type = set("errorStyle", null)
     
     @scala.inline
     def focusable(value: Boolean): this.type = set("focusable", value.asInstanceOf[js.Any])
@@ -286,6 +318,27 @@ object SearchBar {
     
     @scala.inline
     def keyboardType(value: KeyboardTypeOptions): this.type = set("keyboardType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelReactElement(value: ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def label(value: String | ReactElement): this.type = set("label", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelProps(value: TextProps): this.type = set("labelProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelStyle(value: StyleProp[TextStyle]): this.type = set("labelStyle", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def labelStyleNull: this.type = set("labelStyle", null)
+    
+    @scala.inline
+    def leftIconReactElement(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def leftIcon(value: IconNode): this.type = set("leftIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def leftIconContainerStyle(value: StyleProp[ViewStyle]): this.type = set("leftIconContainerStyle", value.asInstanceOf[js.Any])
@@ -357,7 +410,7 @@ object SearchBar {
     def onKeyPress(value: SyntheticEvent[NodeHandle, TextInputKeyPressEventData] => Unit): this.type = set("onKeyPress", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onMagicTap(value: () => Unit): this.type = set("onMagicTap", js.Any.fromFunction0(value))
@@ -453,6 +506,9 @@ object SearchBar {
     def removeClippedSubviews(value: Boolean): this.type = set("removeClippedSubviews", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def renderErrorMessage(value: Boolean): this.type = set("renderErrorMessage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def renderToHardwareTextureAndroid(value: Boolean): this.type = set("renderToHardwareTextureAndroid", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -460,6 +516,12 @@ object SearchBar {
     
     @scala.inline
     def returnKeyType(value: ReturnKeyTypeOptions): this.type = set("returnKeyType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def rightIconReactElement(value: ReactElement): this.type = set("rightIcon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def rightIcon(value: IconNode): this.type = set("rightIcon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rightIconContainerStyle(value: StyleProp[ViewStyle]): this.type = set("rightIconContainerStyle", value.asInstanceOf[js.Any])

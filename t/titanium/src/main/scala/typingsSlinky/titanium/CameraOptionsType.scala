@@ -18,6 +18,11 @@ trait CameraOptionsType extends js.Object {
   var allowEditing: js.UndefOr[Boolean] = js.native
   
   /**
+    * Function to call if the user presses the back button.
+    */
+  var androidback: js.UndefOr[js.Function1[/* param0 */ FailureResponse, Unit]] = js.native
+  
+  /**
     * Specifies if the dialog should be animated upon showing and hiding.
     */
   var animated: js.UndefOr[Boolean] = js.native
@@ -57,7 +62,7 @@ trait CameraOptionsType extends js.Object {
     * you to select existing live photos from the gallery, capturing new live photos is not supported by
     * iOS public API, yet.
     */
-  var mediaTypes: js.UndefOr[js.Array[java.lang.String]] = js.native
+  var mediaTypes: js.UndefOr[js.Array[String]] = js.native
   
   /**
     * View to added as an overlay to the camera UI (on top).
@@ -122,7 +127,7 @@ object CameraOptionsType {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -132,6 +137,12 @@ object CameraOptionsType {
     
     @scala.inline
     def deleteAllowEditing: Self = this.set("allowEditing", js.undefined)
+    
+    @scala.inline
+    def setAndroidback(value: /* param0 */ FailureResponse => Unit): Self = this.set("androidback", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteAndroidback: Self = this.set("androidback", js.undefined)
     
     @scala.inline
     def setAnimated(value: Boolean): Self = this.set("animated", value.asInstanceOf[js.Any])
@@ -176,10 +187,10 @@ object CameraOptionsType {
     def deleteInPopOver: Self = this.set("inPopOver", js.undefined)
     
     @scala.inline
-    def setMediaTypesVarargs(value: java.lang.String*): Self = this.set("mediaTypes", js.Array(value :_*))
+    def setMediaTypesVarargs(value: String*): Self = this.set("mediaTypes", js.Array(value :_*))
     
     @scala.inline
-    def setMediaTypes(value: js.Array[java.lang.String]): Self = this.set("mediaTypes", value.asInstanceOf[js.Any])
+    def setMediaTypes(value: js.Array[String]): Self = this.set("mediaTypes", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMediaTypes: Self = this.set("mediaTypes", js.undefined)

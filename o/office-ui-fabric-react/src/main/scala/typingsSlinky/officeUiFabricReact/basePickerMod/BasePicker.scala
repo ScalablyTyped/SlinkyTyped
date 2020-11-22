@@ -10,6 +10,7 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.IFocusZone
+import typingsSlinky.officeUiFabricReact.anon.Items
 import typingsSlinky.officeUiFabricReact.autofillMod.Autofill
 import typingsSlinky.officeUiFabricReact.autofillTypesMod.IAutofill
 import typingsSlinky.officeUiFabricReact.basePickerTypesMod.IBasePicker
@@ -37,12 +38,6 @@ class BasePicker[T, P /* <: IBasePickerProps[T] */] protected ()
     * @deprecated this is no longer necessary as typescript now supports generic elements
     */
   var SuggestionOfProperType: Instantiable1[/* props */ ISuggestionsProps[T], Suggestions[T]] = js.native
-  
-  @JSName("UNSAFE_componentWillReceiveProps")
-  def UNSAFE_componentWillReceiveProps_MBasePicker(newProps: P): Unit = js.native
-  
-  @JSName("UNSAFE_componentWillUpdate")
-  def UNSAFE_componentWillUpdate_MBasePicker(newProps: P, newState: IBasePickerState): Unit = js.native
   
   var _ariaMap: IPickerAriaIds = js.native
   
@@ -97,6 +92,9 @@ class BasePicker[T, P /* <: IBasePickerProps[T] */] protected ()
   
   @JSName("componentDidMount")
   def componentDidMount_MBasePicker(): Unit = js.native
+  
+  @JSName("componentDidUpdate")
+  def componentDidUpdate_MBasePicker(oldProps: P, oldState: IBasePickerState): Unit = js.native
   
   @JSName("componentWillUnmount")
   def componentWillUnmount_MBasePicker(): Unit = js.native
@@ -189,4 +187,11 @@ class BasePicker[T, P /* <: IBasePickerProps[T] */] protected ()
   /* protected */ def updateSuggestionsList(suggestions: js.Thenable[js.Array[T]], updatedValue: String): Unit = js.native
   
   /* protected */ def updateValue(updatedValue: String): Unit = js.native
+}
+/* static members */
+@JSImport("office-ui-fabric-react/lib/components/pickers/BasePicker", "BasePicker")
+@js.native
+object BasePicker extends js.Object {
+  
+  def getDerivedStateFromProps(newProps: IBasePickerProps[_]): Items | Null = js.native
 }

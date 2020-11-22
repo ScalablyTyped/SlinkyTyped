@@ -39,7 +39,7 @@ trait MemberState extends js.Object {
   val invite: js.UndefOr[Input[Boolean]] = js.native
   
   /**
-    * The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
+    * The status of the relationship between the member account and its primary account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
     */
   val relationshipStatus: js.UndefOr[Input[String]] = js.native
 }

@@ -27,14 +27,14 @@ trait SceneViewPerformanceInfo extends js.Object {
   var layerPerformanceInfos: js.Array[LayerPerformanceInfo] = js.native
   
   /**
-    * Quality level as a number between 0 and 1. The quality decreases when layers would need more memory than available, which reduces the level of detail, number of features and tile resolution.
+    * Quality level as a number between 0 and 1.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-support-SceneViewPerformanceInfo.html#quality)
     */
   var quality: Double = js.native
   
   /**
-    * An estimate of the memory currently in use by [ElevationLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html) and [tiled layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html), in bytes.  This property also includes internal memory of the terrain subsystem, e.g., memory used to composite tiles in case multiple [tiled layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html) are added to the scene.
+    * An estimate of the memory currently in use by [ElevationLayer](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-ElevationLayer.html) and [tiled layers](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-TileLayer.html), in bytes.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-3d-support-SceneViewPerformanceInfo.html#terrainMemory)
     */

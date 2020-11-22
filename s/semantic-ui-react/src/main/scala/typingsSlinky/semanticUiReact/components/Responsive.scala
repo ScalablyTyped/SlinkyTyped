@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.semanticUiReact.responsiveMod.default
 import typingsSlinky.semanticUiReact.responsiveResponsiveMod.ResponsiveOnUpdateData
 import typingsSlinky.semanticUiReact.responsiveResponsiveMod.ResponsiveProps
 import scala.scalajs.js
@@ -13,14 +14,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object Responsive {
   
-  @JSImport("semantic-ui-react", "Responsive")
+  @JSImport("semantic-ui-react/dist/commonjs/addons/Responsive", JSImport.Default)
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.semanticUiReact.mod.Responsive] {
+       with StBuildingComponent[tag.type, default] {
     
     @scala.inline
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])

@@ -191,6 +191,10 @@ package object lambdaMod {
   
   type Qualifier = java.lang.String
   
+  type Queue = java.lang.String
+  
+  type Queues = js.Array[typingsSlinky.awsSdk.lambdaMod.Queue]
+  
   type ReservedConcurrentExecutions = scala.Double
   
   type ResourceArn = java.lang.String
@@ -205,6 +209,7 @@ package object lambdaMod {
     - typingsSlinky.awsSdk.awsSdkStrings.nodejs10Dotx
     - typingsSlinky.awsSdk.awsSdkStrings.nodejs12Dotx
     - typingsSlinky.awsSdk.awsSdkStrings.java8
+    - typingsSlinky.awsSdk.awsSdkStrings.java8Dotal2
     - typingsSlinky.awsSdk.awsSdkStrings.java11
     - typingsSlinky.awsSdk.awsSdkStrings.python2Dot7
     - typingsSlinky.awsSdk.awsSdkStrings.python3Dot6
@@ -219,6 +224,7 @@ package object lambdaMod {
     - typingsSlinky.awsSdk.awsSdkStrings.ruby2Dot5
     - typingsSlinky.awsSdk.awsSdkStrings.ruby2Dot7
     - typingsSlinky.awsSdk.awsSdkStrings.provided
+    - typingsSlinky.awsSdk.awsSdkStrings.providedDotal2
     - java.lang.String
   */
   type Runtime = typingsSlinky.awsSdk.lambdaMod._Runtime | java.lang.String
@@ -234,6 +240,10 @@ package object lambdaMod {
   type SecurityGroupIds = js.Array[typingsSlinky.awsSdk.lambdaMod.SecurityGroupId]
   
   type SensitiveString = java.lang.String
+  
+  type SourceAccessConfigurations = js.Array[typingsSlinky.awsSdk.lambdaMod.SourceAccessConfiguration]
+  
+  type SourceAccessType = typingsSlinky.awsSdk.awsSdkStrings.BASIC_AUTH | java.lang.String
   
   type SourceOwner = java.lang.String
   
@@ -282,6 +292,10 @@ package object lambdaMod {
   type Timeout = scala.Double
   
   type Timestamp = java.lang.String
+  
+  type Topic = java.lang.String
+  
+  type Topics = js.Array[typingsSlinky.awsSdk.lambdaMod.Topic]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Active_

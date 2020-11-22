@@ -19,6 +19,9 @@ object vectorContextMod extends js.Object {
       feature: typingsSlinky.ol.olFeatureMod.default[typingsSlinky.ol.geometryMod.default]
     ): Unit = js.native
     
+    /**
+      * Render a geometry with a custom renderer.
+      */
     def drawCustom(
       geometry: typingsSlinky.ol.simpleGeometryMod.default,
       feature: FeatureLike,
@@ -30,6 +33,9 @@ object vectorContextMod extends js.Object {
       style: typingsSlinky.ol.styleStyleMod.default
     ): Unit = js.native
     
+    /**
+      * Render a geometry.
+      */
     def drawGeometry(geometry: typingsSlinky.ol.geometryMod.default): Unit = js.native
     
     def drawGeometryCollection(
@@ -54,14 +60,17 @@ object vectorContextMod extends js.Object {
     def drawPolygon(polygonGeometry: typingsSlinky.ol.polygonMod.default, feature: FeatureLike): Unit = js.native
     def drawPolygon(polygonGeometry: typingsSlinky.ol.renderFeatureMod.default, feature: FeatureLike): Unit = js.native
     
-    def drawText(geometry: typingsSlinky.ol.geometryMod.default, feature: FeatureLike): Unit = js.native
     def drawText(geometry: typingsSlinky.ol.renderFeatureMod.default, feature: FeatureLike): Unit = js.native
+    def drawText(geometry: typingsSlinky.ol.simpleGeometryMod.default, feature: FeatureLike): Unit = js.native
     
     def setFillStrokeStyle(fillStyle: typingsSlinky.ol.fillMod.default, strokeStyle: typingsSlinky.ol.strokeMod.default): Unit = js.native
     
     def setImageStyle(imageStyle: typingsSlinky.ol.styleImageMod.default): Unit = js.native
     def setImageStyle(imageStyle: typingsSlinky.ol.styleImageMod.default, opt_declutterGroup: DeclutterGroup): Unit = js.native
     
+    /**
+      * Set the rendering style.
+      */
     def setStyle(style: typingsSlinky.ol.styleStyleMod.default): Unit = js.native
     
     def setTextStyle(textStyle: typingsSlinky.ol.textMod.default): Unit = js.native

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListQueuesRequest extends js.Object {
   
   /**
-    * Maximum number of results to include in the response.
+    * Maximum number of results to include in the response. Value range is 1 to 1000. You must set MaxResults to receive a value for NextToken in the response.
     */
   var MaxResults: js.UndefOr[BoxedInteger] = js.native
   

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AwsAutoScalingAutoScalingGroupDetails extends js.Object {
   
   /**
-    * The datetime when the auto scaling group was created.
+    * Indicates when the auto scaling group was created. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var CreatedTime: js.UndefOr[NonEmptyString] = js.native
   

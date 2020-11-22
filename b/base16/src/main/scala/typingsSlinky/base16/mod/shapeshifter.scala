@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("base16", "shapeshifter")
 @js.native
-object shapeshifter extends TopLevel[ColorScheme]
+object shapeshifter extends TopLevel[Base16Theme]

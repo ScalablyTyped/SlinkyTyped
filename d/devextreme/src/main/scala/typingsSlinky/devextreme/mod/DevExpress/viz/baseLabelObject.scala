@@ -7,19 +7,31 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait baseLabelObject extends js.Object {
   
-  /** @name baseLabelObject.getBoundingRect() */
+  /**
+    * [descr:baseLabelObject.getBoundingRect()]
+    */
   def getBoundingRect(): js.Any = js.native
   
-  /** @name baseLabelObject.hide() */
+  /**
+    * [descr:baseLabelObject.hide()]
+    */
   def hide(): Unit = js.native
-  /** @name baseLabelObject.hide(holdInvisible) */
+  /**
+    * [descr:baseLabelObject.hide(holdInvisible)]
+    */
   def hide(holdInvisible: Boolean): Unit = js.native
   
-  /** @name baseLabelObject.isVisible() */
+  /**
+    * [descr:baseLabelObject.isVisible()]
+    */
   def isVisible(): Boolean = js.native
   
-  /** @name baseLabelObject.show() */
+  /**
+    * [descr:baseLabelObject.show()]
+    */
   def show(): Unit = js.native
-  /** @name baseLabelObject.show(holdVisible) */
+  /**
+    * [descr:baseLabelObject.show(holdVisible)]
+    */
   def show(holdVisible: Boolean): Unit = js.native
 }

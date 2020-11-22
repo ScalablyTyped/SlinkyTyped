@@ -32,6 +32,9 @@ object ReactTypingEffect {
     def eraseDelay(value: Double): this.type = set("eraseDelay", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def eraseSpeed(value: Double): this.type = set("eraseSpeed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def speed(value: Double): this.type = set("speed", value.asInstanceOf[js.Any])
     
     @scala.inline

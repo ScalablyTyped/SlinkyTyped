@@ -7,6 +7,7 @@ import typingsSlinky.k6.httpMod.AuthMethod
 import typingsSlinky.k6.httpMod.CipherSuite
 import typingsSlinky.k6.httpMod.Protocol
 import typingsSlinky.k6.httpMod.ResponseType
+import typingsSlinky.k6.optionsMod.ExecutorOptions
 import typingsSlinky.k6.wsMod.EventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -123,10 +124,19 @@ object k6Strings {
   def close: close = "close".asInstanceOf[close]
   
   @scala.inline
+  def `constant-arrival-rate`: `constant-arrival-rate` = "constant-arrival-rate".asInstanceOf[`constant-arrival-rate`]
+  
+  @scala.inline
+  def `constant-vus`: `constant-vus` = "constant-vus".asInstanceOf[`constant-vus`]
+  
+  @scala.inline
   def digest: digest = "digest".asInstanceOf[digest]
   
   @scala.inline
   def error: error = "error".asInstanceOf[error]
+  
+  @scala.inline
+  def `externally-controlled`: `externally-controlled` = "externally-controlled".asInstanceOf[`externally-controlled`]
   
   @scala.inline
   def hex: hex = "hex".asInstanceOf[hex]
@@ -150,10 +160,19 @@ object k6Strings {
   def open: open = "open".asInstanceOf[open]
   
   @scala.inline
+  def `per-vu-iterations`: `per-vu-iterations` = "per-vu-iterations".asInstanceOf[`per-vu-iterations`]
+  
+  @scala.inline
   def ping: ping = "ping".asInstanceOf[ping]
   
   @scala.inline
   def pong: pong = "pong".asInstanceOf[pong]
+  
+  @scala.inline
+  def `ramping-arrival-rate`: `ramping-arrival-rate` = "ramping-arrival-rate".asInstanceOf[`ramping-arrival-rate`]
+  
+  @scala.inline
+  def `ramping-vus`: `ramping-vus` = "ramping-vus".asInstanceOf[`ramping-vus`]
   
   @scala.inline
   def rawstd: rawstd = "rawstd".asInstanceOf[rawstd]
@@ -181,6 +200,9 @@ object k6Strings {
   
   @scala.inline
   def sha512_256: sha512_256 = "sha512_256".asInstanceOf[sha512_256]
+  
+  @scala.inline
+  def `shared-iterations`: `shared-iterations` = "shared-iterations".asInstanceOf[`shared-iterations`]
   
   @scala.inline
   def std: std = "std".asInstanceOf[std]
@@ -300,10 +322,19 @@ object k6Strings {
   sealed trait close extends EventType
   
   @js.native
+  sealed trait `constant-arrival-rate` extends ExecutorOptions
+  
+  @js.native
+  sealed trait `constant-vus` extends ExecutorOptions
+  
+  @js.native
   sealed trait digest extends AuthMethod
   
   @js.native
   sealed trait error extends EventType
+  
+  @js.native
+  sealed trait `externally-controlled` extends ExecutorOptions
   
   @js.native
   sealed trait hex extends StringEncoding
@@ -327,10 +358,19 @@ object k6Strings {
   sealed trait open extends EventType
   
   @js.native
+  sealed trait `per-vu-iterations` extends ExecutorOptions
+  
+  @js.native
   sealed trait ping extends EventType
   
   @js.native
   sealed trait pong extends EventType
+  
+  @js.native
+  sealed trait `ramping-arrival-rate` extends ExecutorOptions
+  
+  @js.native
+  sealed trait `ramping-vus` extends ExecutorOptions
   
   @js.native
   sealed trait rawstd extends Base64Variant
@@ -358,6 +398,9 @@ object k6Strings {
   
   @js.native
   sealed trait sha512_256 extends Algorithm
+  
+  @js.native
+  sealed trait `shared-iterations` extends ExecutorOptions
   
   @js.native
   sealed trait std extends Base64Variant

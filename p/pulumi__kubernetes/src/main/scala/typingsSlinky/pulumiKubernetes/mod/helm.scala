@@ -37,9 +37,6 @@ object helm extends js.Object {
   @js.native
   object v3 extends js.Object {
     
-    def fetch(chart: String): Unit = js.native
-    def fetch(chart: String, opts: typingsSlinky.pulumiKubernetes.v3HelmMod.ResolvedFetchOpts): Unit = js.native
-    
     @js.native
     class Chart protected ()
       extends typingsSlinky.pulumiKubernetes.helmMod.v3.Chart {

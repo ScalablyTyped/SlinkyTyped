@@ -13,8 +13,14 @@ object mapEventMod extends js.Object {
   trait MapEvent
     extends typingsSlinky.ol.eventMod.default {
     
+    /**
+      * The frame state at the time of the event.
+      */
     var frameState: FrameState = js.native
     
+    /**
+      * The map where the event occurred.
+      */
     var map: typingsSlinky.ol.pluggableMapMod.default = js.native
   }
   

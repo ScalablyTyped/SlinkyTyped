@@ -12,7 +12,7 @@ package object formMod {
         typingsSlinky.react.mod.FormHTMLAttributes[org.scalajs.dom.raw.HTMLFormElement], 
         org.scalajs.dom.raw.HTMLFormElement
       ], 
-      typingsSlinky.grommet.grommetStrings.onChange
+      typingsSlinky.grommet.grommetStrings.onChange | typingsSlinky.grommet.grommetStrings.onSubmit
     ])
   ]
 }

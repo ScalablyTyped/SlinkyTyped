@@ -38,6 +38,11 @@ trait BrokerSummary extends js.Object {
   var DeploymentMode: js.UndefOr[typingsSlinky.awsSdk.mqMod.DeploymentMode] = js.native
   
   /**
+    * Required. The type of broker engine.
+    */
+  var EngineType: js.UndefOr[typingsSlinky.awsSdk.mqMod.EngineType] = js.native
+  
+  /**
     * The broker's instance type.
     */
   var HostInstanceType: js.UndefOr[string] = js.native
@@ -100,6 +105,12 @@ object BrokerSummary {
     
     @scala.inline
     def deleteDeploymentMode: Self = this.set("DeploymentMode", js.undefined)
+    
+    @scala.inline
+    def setEngineType(value: EngineType): Self = this.set("EngineType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEngineType: Self = this.set("EngineType", js.undefined)
     
     @scala.inline
     def setHostInstanceType(value: string): Self = this.set("HostInstanceType", value.asInstanceOf[js.Any])

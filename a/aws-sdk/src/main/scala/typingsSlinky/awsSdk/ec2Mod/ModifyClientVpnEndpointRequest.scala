@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ModifyClientVpnEndpointRequest extends js.Object {
   
   /**
+    * The options for managing connection authorization for new client connections.
+    */
+  var ClientConnectOptions: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.ClientConnectOptions] = js.native
+  
+  /**
     * The ID of the Client VPN endpoint to modify.
     */
   var ClientVpnEndpointId: typingsSlinky.awsSdk.ec2Mod.ClientVpnEndpointId = js.native
@@ -36,6 +41,11 @@ trait ModifyClientVpnEndpointRequest extends js.Object {
     * The IDs of one or more security groups to apply to the target network.
     */
   var SecurityGroupIds: js.UndefOr[ClientVpnSecurityGroupIdSet] = js.native
+  
+  /**
+    * Specify whether to enable the self-service portal for the Client VPN endpoint.
+    */
+  var SelfServicePortal: js.UndefOr[typingsSlinky.awsSdk.ec2Mod.SelfServicePortal] = js.native
   
   /**
     * The ARN of the server certificate to be used. The server certificate must be provisioned in AWS Certificate Manager (ACM).
@@ -84,6 +94,12 @@ object ModifyClientVpnEndpointRequest {
     def setClientVpnEndpointId(value: ClientVpnEndpointId): Self = this.set("ClientVpnEndpointId", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setClientConnectOptions(value: ClientConnectOptions): Self = this.set("ClientConnectOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClientConnectOptions: Self = this.set("ClientConnectOptions", js.undefined)
+    
+    @scala.inline
     def setConnectionLogOptions(value: ConnectionLogOptions): Self = this.set("ConnectionLogOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -115,6 +131,12 @@ object ModifyClientVpnEndpointRequest {
     
     @scala.inline
     def deleteSecurityGroupIds: Self = this.set("SecurityGroupIds", js.undefined)
+    
+    @scala.inline
+    def setSelfServicePortal(value: SelfServicePortal): Self = this.set("SelfServicePortal", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSelfServicePortal: Self = this.set("SelfServicePortal", js.undefined)
     
     @scala.inline
     def setServerCertificateArn(value: String): Self = this.set("ServerCertificateArn", value.asInstanceOf[js.Any])

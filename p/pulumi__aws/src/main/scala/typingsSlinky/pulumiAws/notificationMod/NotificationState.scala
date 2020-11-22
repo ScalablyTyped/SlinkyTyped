@@ -1,6 +1,6 @@
 package typingsSlinky.pulumiAws.notificationMod
 
-import typingsSlinky.pulumiAws.notificationTypeMod.NotificationType
+import typingsSlinky.pulumiAws.enumsAutoscalingMod.NotificationType
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`

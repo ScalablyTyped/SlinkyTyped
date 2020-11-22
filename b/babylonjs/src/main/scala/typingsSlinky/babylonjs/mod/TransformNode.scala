@@ -57,6 +57,12 @@ object TransformNode extends js.Object {
     */
   def Parse(parsedTransformNode: js.Any, scene: typingsSlinky.babylonjs.sceneMod.Scene, rootUrl: String): typingsSlinky.babylonjs.transformNodeMod.TransformNode = js.native
   
+  var _TmpRotation: js.Any = js.native
+  
+  var _TmpScaling: js.Any = js.native
+  
+  var _TmpTranslation: js.Any = js.native
+  
   var _lookAtVectorCache: js.Any = js.native
   
   var _rotationAxisCache: js.Any = js.native

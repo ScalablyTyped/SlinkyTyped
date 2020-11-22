@@ -13,14 +13,14 @@ object centerconstraintMod extends js.Object {
   
   def createExtent(extent: Extent, onlyCenter: Boolean, smooth: Boolean): Type = js.native
   
-  def none(): Coordinate = js.native
-  def none(center: Coordinate): Coordinate = js.native
+  def none(): js.UndefOr[Coordinate] = js.native
+  def none(center: Coordinate): js.UndefOr[Coordinate] = js.native
   
   type Type = js.Function4[
     /* p0 */ js.UndefOr[Coordinate], 
     /* p1 */ Double, 
     /* p2 */ Size, 
     /* p3 */ js.UndefOr[Boolean], 
-    Coordinate
+    js.UndefOr[Coordinate]
   ]
 }

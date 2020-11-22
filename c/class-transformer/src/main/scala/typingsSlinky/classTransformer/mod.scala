@@ -8,6 +8,7 @@ import typingsSlinky.classTransformer.exposeExcludeOptionsMod.ExposeOptions
 import typingsSlinky.classTransformer.exposeExcludeOptionsMod.TransformOptions
 import typingsSlinky.classTransformer.exposeExcludeOptionsMod.TypeHelpOptions
 import typingsSlinky.classTransformer.exposeExcludeOptionsMod.TypeOptions
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,17 +17,33 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def Exclude(): js.Function2[/* object */ js.Object | js.Function, /* propertyName */ js.UndefOr[String], Unit] = js.native
-  def Exclude(options: ExcludeOptions): js.Function2[/* object */ js.Object | js.Function, /* propertyName */ js.UndefOr[String], Unit] = js.native
+  def Exclude(): js.Function2[
+    /* object */ (Record[String, _]) | js.Function, 
+    /* propertyName */ js.UndefOr[String], 
+    Unit
+  ] = js.native
+  def Exclude(options: ExcludeOptions): js.Function2[
+    /* object */ (Record[String, _]) | js.Function, 
+    /* propertyName */ js.UndefOr[String], 
+    Unit
+  ] = js.native
   
-  def Expose(): js.Function2[/* object */ js.Object | js.Function, /* propertyName */ js.UndefOr[String], Unit] = js.native
-  def Expose(options: ExposeOptions): js.Function2[/* object */ js.Object | js.Function, /* propertyName */ js.UndefOr[String], Unit] = js.native
+  def Expose(): js.Function2[
+    /* object */ (Record[String, _]) | js.Function, 
+    /* propertyName */ js.UndefOr[String], 
+    Unit
+  ] = js.native
+  def Expose(options: ExposeOptions): js.Function2[
+    /* object */ (Record[String, _]) | js.Function, 
+    /* propertyName */ js.UndefOr[String], 
+    Unit
+  ] = js.native
   
   def Transform(
     transformFn: js.Function3[
       /* value */ js.Any, 
       /* obj */ js.Any, 
-      /* transformationType */ typingsSlinky.classTransformer.transformOperationExecutorMod.TransformationType, 
+      /* transformationType */ typingsSlinky.classTransformer.transformationTypeEnumMod.TransformationType, 
       _
     ]
   ): js.Function2[/* target */ js.Any, /* key */ String, Unit] = js.native
@@ -34,7 +51,7 @@ object mod extends js.Object {
     transformFn: js.Function3[
       /* value */ js.Any, 
       /* obj */ js.Any, 
-      /* transformationType */ typingsSlinky.classTransformer.transformOperationExecutorMod.TransformationType, 
+      /* transformationType */ typingsSlinky.classTransformer.transformationTypeEnumMod.TransformationType, 
       _
     ],
     options: TransformOptions
@@ -67,15 +84,15 @@ object mod extends js.Object {
   def classToClassFromExist[T](`object`: T, fromObjects: js.Array[T]): js.Array[T] = js.native
   def classToClassFromExist[T](`object`: T, fromObjects: js.Array[T], options: ClassTransformOptions): js.Array[T] = js.native
   
-  def classToPlain[T](`object`: T): js.Object = js.native
-  def classToPlain[T](`object`: T, options: ClassTransformOptions): js.Object = js.native
-  def classToPlain[T](`object`: js.Array[T]): js.Array[js.Object] = js.native
-  def classToPlain[T](`object`: js.Array[T], options: ClassTransformOptions): js.Array[js.Object] = js.native
+  def classToPlain[T](`object`: T): Record[String, _] = js.native
+  def classToPlain[T](`object`: T, options: ClassTransformOptions): Record[String, _] = js.native
+  def classToPlain[T](`object`: js.Array[T]): js.Array[Record[String, _]] = js.native
+  def classToPlain[T](`object`: js.Array[T], options: ClassTransformOptions): js.Array[Record[String, _]] = js.native
   
-  def classToPlainFromExist[T](`object`: T, plainObject: js.Object): js.Object = js.native
-  def classToPlainFromExist[T](`object`: T, plainObject: js.Object, options: ClassTransformOptions): js.Object = js.native
-  def classToPlainFromExist[T](`object`: T, plainObjects: js.Array[js.Object]): js.Array[js.Object] = js.native
-  def classToPlainFromExist[T](`object`: T, plainObjects: js.Array[js.Object], options: ClassTransformOptions): js.Array[js.Object] = js.native
+  def classToPlainFromExist[T](`object`: T, plainObjects: js.Array[Record[String, _]]): js.Array[Record[String, _]] = js.native
+  def classToPlainFromExist[T](`object`: T, plainObjects: js.Array[Record[String, _]], options: ClassTransformOptions): js.Array[Record[String, _]] = js.native
+  def classToPlainFromExist[T](`object`: T, plainObject: Record[String, _]): Record[String, _] = js.native
+  def classToPlainFromExist[T](`object`: T, plainObject: Record[String, _], options: ClassTransformOptions): Record[String, _] = js.native
   
   def deserialize[T](cls: ClassType[T], json: String): T = js.native
   def deserialize[T](cls: ClassType[T], json: String, options: ClassTransformOptions): T = js.native

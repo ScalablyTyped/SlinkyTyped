@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
-  type MessageProperties = js.Array[js.Any]
+  type MessageProperties = org.scalablytyped.runtime.StringDictionary[java.lang.String]
 }

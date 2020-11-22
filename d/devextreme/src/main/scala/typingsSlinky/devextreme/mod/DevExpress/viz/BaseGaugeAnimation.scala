@@ -6,17 +6,25 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseGauge.Options.animation */
+/**
+  * [descr:BaseGauge.Options.animation]
+  */
 @js.native
 trait BaseGaugeAnimation extends js.Object {
   
-  /** @name BaseGauge.Options.animation.duration */
+  /**
+    * [descr:BaseGauge.Options.animation.duration]
+    */
   var duration: js.UndefOr[Double] = js.native
   
-  /** @name BaseGauge.Options.animation.easing */
+  /**
+    * [descr:BaseGauge.Options.animation.easing]
+    */
   var easing: js.UndefOr[easeOutCubic | linear] = js.native
   
-  /** @name BaseGauge.Options.animation.enabled */
+  /**
+    * [descr:BaseGauge.Options.animation.enabled]
+    */
   var enabled: js.UndefOr[Boolean] = js.native
 }
 object BaseGaugeAnimation {

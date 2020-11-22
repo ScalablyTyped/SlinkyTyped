@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.securityMod.security
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AccessRule
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -8,6 +9,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.securityMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -17,22 +19,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 @JSImport("mendixmodelsdk/dist/gen/security", "security.AccessRuleContainerBase")
 @js.native
-abstract class AccessRuleContainerBase protected () extends Element {
+abstract class AccessRuleContainerBase protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def accessRules: IList[AccessRule] = js.native
   
   def containerAsProjectSecurity: ProjectSecurity = js.native
-  
-  @JSName("model")
-  var model_FAccessRuleContainerBase: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/security", "security.AccessRuleContainerBase")

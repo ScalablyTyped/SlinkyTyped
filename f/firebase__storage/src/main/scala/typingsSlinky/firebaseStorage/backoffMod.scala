@@ -10,7 +10,7 @@ object backoffMod extends js.Object {
   
   def start(
     f: js.Function2[/* p1 */ js.Function1[/* success */ Boolean, Unit], /* canceled */ Boolean, Unit],
-    callback: js.Function,
+    callback: js.Function1[/* repeated */ js.Any, _],
     timeout: Double
   ): id = js.native
   

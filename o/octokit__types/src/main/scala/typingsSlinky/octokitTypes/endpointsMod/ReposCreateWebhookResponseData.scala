@@ -1,7 +1,7 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.Code
 import typingsSlinky.octokitTypes.anon.Insecuressl
+import typingsSlinky.octokitTypes.anon.Message
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +19,7 @@ trait ReposCreateWebhookResponseData extends js.Object {
   
   var id: Double = js.native
   
-  var last_response: Code = js.native
+  var last_response: Message = js.native
   
   var name: String = js.native
   
@@ -42,7 +42,7 @@ object ReposCreateWebhookResponseData {
     created_at: String,
     events: js.Array[String],
     id: Double,
-    last_response: Code,
+    last_response: Message,
     name: String,
     ping_url: String,
     test_url: String,
@@ -89,7 +89,7 @@ object ReposCreateWebhookResponseData {
     def setId(value: Double): Self = this.set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLast_response(value: Code): Self = this.set("last_response", value.asInstanceOf[js.Any])
+    def setLast_response(value: Message): Self = this.set("last_response", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

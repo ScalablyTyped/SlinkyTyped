@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.workmailMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -39,6 +39,20 @@ trait WorkMail extends Service {
     callback: js.Function2[/* err */ AWSError, /* data */ AssociateMemberToGroupResponse, Unit]
   ): Request[AssociateMemberToGroupResponse, AWSError] = js.native
   
+  /**
+    * Cancels a mailbox export job.  If the mailbox export job is near completion, it might not be possible to cancel it. 
+    */
+  def cancelMailboxExportJob(): Request[CancelMailboxExportJobResponse, AWSError] = js.native
+  def cancelMailboxExportJob(callback: js.Function2[/* err */ AWSError, /* data */ CancelMailboxExportJobResponse, Unit]): Request[CancelMailboxExportJobResponse, AWSError] = js.native
+  /**
+    * Cancels a mailbox export job.  If the mailbox export job is near completion, it might not be possible to cancel it. 
+    */
+  def cancelMailboxExportJob(params: CancelMailboxExportJobRequest): Request[CancelMailboxExportJobResponse, AWSError] = js.native
+  def cancelMailboxExportJob(
+    params: CancelMailboxExportJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CancelMailboxExportJobResponse, Unit]
+  ): Request[CancelMailboxExportJobResponse, AWSError] = js.native
+  
   @JSName("config")
   var config_WorkMail: ConfigBase with ClientConfiguration = js.native
   
@@ -69,6 +83,20 @@ trait WorkMail extends Service {
     params: CreateGroupRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ CreateGroupResponse, Unit]
   ): Request[CreateGroupResponse, AWSError] = js.native
+  
+  /**
+    * Creates a new Amazon WorkMail organization. Optionally, you can choose to associate an existing AWS Directory Service directory with your organization. If an AWS Directory Service directory ID is specified, the organization alias must match the directory alias. If you choose not to associate an existing directory with your organization, then we create a new Amazon WorkMail directory for you. For more information, see Adding an organization in the Amazon WorkMail Administrator Guide. You can associate multiple email domains with an organization, then set your default email domain from the Amazon WorkMail console. You can also associate a domain that is managed in an Amazon Route 53 public hosted zone. For more information, see Adding a domain and Choosing the default domain in the Amazon WorkMail Administrator Guide. Optionally, you can use a customer managed master key from AWS Key Management Service (AWS KMS) to encrypt email for your organization. If you don't associate an AWS KMS key, Amazon WorkMail creates a default AWS managed master key for you.
+    */
+  def createOrganization(): Request[CreateOrganizationResponse, AWSError] = js.native
+  def createOrganization(callback: js.Function2[/* err */ AWSError, /* data */ CreateOrganizationResponse, Unit]): Request[CreateOrganizationResponse, AWSError] = js.native
+  /**
+    * Creates a new Amazon WorkMail organization. Optionally, you can choose to associate an existing AWS Directory Service directory with your organization. If an AWS Directory Service directory ID is specified, the organization alias must match the directory alias. If you choose not to associate an existing directory with your organization, then we create a new Amazon WorkMail directory for you. For more information, see Adding an organization in the Amazon WorkMail Administrator Guide. You can associate multiple email domains with an organization, then set your default email domain from the Amazon WorkMail console. You can also associate a domain that is managed in an Amazon Route 53 public hosted zone. For more information, see Adding a domain and Choosing the default domain in the Amazon WorkMail Administrator Guide. Optionally, you can use a customer managed master key from AWS Key Management Service (AWS KMS) to encrypt email for your organization. If you don't associate an AWS KMS key, Amazon WorkMail creates a default AWS managed master key for you.
+    */
+  def createOrganization(params: CreateOrganizationRequest): Request[CreateOrganizationResponse, AWSError] = js.native
+  def createOrganization(
+    params: CreateOrganizationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateOrganizationResponse, Unit]
+  ): Request[CreateOrganizationResponse, AWSError] = js.native
   
   /**
     * Creates a new Amazon WorkMail resource. 
@@ -155,6 +183,20 @@ trait WorkMail extends Service {
   ): Request[DeleteMailboxPermissionsResponse, AWSError] = js.native
   
   /**
+    * Deletes an Amazon WorkMail organization and all underlying AWS resources managed by Amazon WorkMail as part of the organization. You can choose whether to delete the associated directory. For more information, see Removing an organization in the Amazon WorkMail Administrator Guide.
+    */
+  def deleteOrganization(): Request[DeleteOrganizationResponse, AWSError] = js.native
+  def deleteOrganization(callback: js.Function2[/* err */ AWSError, /* data */ DeleteOrganizationResponse, Unit]): Request[DeleteOrganizationResponse, AWSError] = js.native
+  /**
+    * Deletes an Amazon WorkMail organization and all underlying AWS resources managed by Amazon WorkMail as part of the organization. You can choose whether to delete the associated directory. For more information, see Removing an organization in the Amazon WorkMail Administrator Guide.
+    */
+  def deleteOrganization(params: DeleteOrganizationRequest): Request[DeleteOrganizationResponse, AWSError] = js.native
+  def deleteOrganization(
+    params: DeleteOrganizationRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteOrganizationResponse, Unit]
+  ): Request[DeleteOrganizationResponse, AWSError] = js.native
+  
+  /**
     * Deletes the specified resource. 
     */
   def deleteResource(): Request[DeleteResourceResponse, AWSError] = js.native
@@ -223,6 +265,20 @@ trait WorkMail extends Service {
     params: DescribeGroupRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeGroupResponse, Unit]
   ): Request[DescribeGroupResponse, AWSError] = js.native
+  
+  /**
+    * Describes the current status of a mailbox export job.
+    */
+  def describeMailboxExportJob(): Request[DescribeMailboxExportJobResponse, AWSError] = js.native
+  def describeMailboxExportJob(callback: js.Function2[/* err */ AWSError, /* data */ DescribeMailboxExportJobResponse, Unit]): Request[DescribeMailboxExportJobResponse, AWSError] = js.native
+  /**
+    * Describes the current status of a mailbox export job.
+    */
+  def describeMailboxExportJob(params: DescribeMailboxExportJobRequest): Request[DescribeMailboxExportJobResponse, AWSError] = js.native
+  def describeMailboxExportJob(
+    params: DescribeMailboxExportJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeMailboxExportJobResponse, Unit]
+  ): Request[DescribeMailboxExportJobResponse, AWSError] = js.native
   
   /**
     * Provides more information regarding a given organization based on its identifier.
@@ -395,6 +451,20 @@ trait WorkMail extends Service {
   ): Request[ListGroupsResponse, AWSError] = js.native
   
   /**
+    * Lists the mailbox export jobs started for the specified organization within the last seven days.
+    */
+  def listMailboxExportJobs(): Request[ListMailboxExportJobsResponse, AWSError] = js.native
+  def listMailboxExportJobs(callback: js.Function2[/* err */ AWSError, /* data */ ListMailboxExportJobsResponse, Unit]): Request[ListMailboxExportJobsResponse, AWSError] = js.native
+  /**
+    * Lists the mailbox export jobs started for the specified organization within the last seven days.
+    */
+  def listMailboxExportJobs(params: ListMailboxExportJobsRequest): Request[ListMailboxExportJobsResponse, AWSError] = js.native
+  def listMailboxExportJobs(
+    params: ListMailboxExportJobsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListMailboxExportJobsResponse, Unit]
+  ): Request[ListMailboxExportJobsResponse, AWSError] = js.native
+  
+  /**
     * Lists the mailbox permissions associated with a user, group, or resource mailbox.
     */
   def listMailboxPermissions(): Request[ListMailboxPermissionsResponse, AWSError] = js.native
@@ -547,6 +617,20 @@ trait WorkMail extends Service {
     params: ResetPasswordRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ ResetPasswordResponse, Unit]
   ): Request[ResetPasswordResponse, AWSError] = js.native
+  
+  /**
+    * Starts a mailbox export job to export MIME-format email messages and calendar items from the specified mailbox to the specified Amazon Simple Storage Service (Amazon S3) bucket. For more information, see Exporting mailbox content in the Amazon WorkMail Administrator Guide.
+    */
+  def startMailboxExportJob(): Request[StartMailboxExportJobResponse, AWSError] = js.native
+  def startMailboxExportJob(callback: js.Function2[/* err */ AWSError, /* data */ StartMailboxExportJobResponse, Unit]): Request[StartMailboxExportJobResponse, AWSError] = js.native
+  /**
+    * Starts a mailbox export job to export MIME-format email messages and calendar items from the specified mailbox to the specified Amazon Simple Storage Service (Amazon S3) bucket. For more information, see Exporting mailbox content in the Amazon WorkMail Administrator Guide.
+    */
+  def startMailboxExportJob(params: StartMailboxExportJobRequest): Request[StartMailboxExportJobResponse, AWSError] = js.native
+  def startMailboxExportJob(
+    params: StartMailboxExportJobRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ StartMailboxExportJobResponse, Unit]
+  ): Request[StartMailboxExportJobResponse, AWSError] = js.native
   
   /**
     * Applies the specified tags to the specified Amazon WorkMail organization resource.

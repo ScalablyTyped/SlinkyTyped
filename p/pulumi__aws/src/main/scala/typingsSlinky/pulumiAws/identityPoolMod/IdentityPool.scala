@@ -51,7 +51,7 @@ class IdentityPool protected () extends CustomResource {
   val identityPoolName: Output_[String] = js.native
   
   /**
-    * A list of OpendID Connect provider ARNs.
+    * Set of OpendID Connect provider ARNs.
     */
   val openidConnectProviderArns: Output_[js.UndefOr[js.Array[String]]] = js.native
   

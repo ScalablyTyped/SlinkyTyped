@@ -14,8 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   *
   * Contains the collection of worksheet-level custom property.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @js.native
 trait WorksheetCustomPropertyCollection extends ClientObject {
@@ -23,8 +22,7 @@ trait WorksheetCustomPropertyCollection extends ClientObject {
   /**
     * Adds a new custom property that maps to the provided key. This overwrites existing custom properties with that key.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     *
     * @param key The key that identifies the custom property object. It is case-insensitive.The key is limited to 255 characters (larger values will cause an "InvalidArgument" error to be thrown.)
     * @param value The value of this custom property.
@@ -38,16 +36,14 @@ trait WorksheetCustomPropertyCollection extends ClientObject {
   /**
     * Gets the number of custom properties on this worksheet.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   def getCount(): ClientResult[Double] = js.native
   
   /**
     * Gets a custom property object by its key, which is case-insensitive. Throws if the custom property does not exist.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     *
     * @param key The key that identifies the custom property object. It is case-insensitive.
     */
@@ -56,8 +52,7 @@ trait WorksheetCustomPropertyCollection extends ClientObject {
   /**
     * Gets a custom property object by its key, which is case-insensitive. Returns a null object if the custom property does not exist.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     *
     * @param key The key that identifies the custom property object. It is case-insensitive.
     */

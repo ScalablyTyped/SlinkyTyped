@@ -220,6 +220,9 @@ object codemirrorStrings {
   def foldGutter: foldGutter = "foldGutter".asInstanceOf[foldGutter]
   
   @scala.inline
+  def fullScreen: fullScreen = "fullScreen".asInstanceOf[fullScreen]
+  
+  @scala.inline
   def gotpointercapture: gotpointercapture = "gotpointercapture".asInstanceOf[gotpointercapture]
   
   @scala.inline
@@ -800,6 +803,9 @@ object codemirrorStrings {
   
   @js.native
   sealed trait foldGutter extends js.Object
+  
+  @js.native
+  sealed trait fullScreen extends js.Object
   
   @js.native
   sealed trait gotpointercapture extends js.Object

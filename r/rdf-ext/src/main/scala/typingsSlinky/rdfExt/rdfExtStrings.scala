@@ -7,6 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object rdfExtStrings {
   
   @scala.inline
+  def Quad: Quad = "Quad".asInstanceOf[Quad]
+  
+  @scala.inline
+  def _empty: _empty = "".asInstanceOf[_empty]
+  
+  @scala.inline
   def graph: graph = "graph".asInstanceOf[graph]
   
   @scala.inline
@@ -29,6 +35,12 @@ object rdfExtStrings {
   
   @scala.inline
   def value: value = "value".asInstanceOf[value]
+  
+  @js.native
+  sealed trait Quad extends js.Object
+  
+  @js.native
+  sealed trait _empty extends js.Object
   
   @js.native
   sealed trait graph extends js.Object

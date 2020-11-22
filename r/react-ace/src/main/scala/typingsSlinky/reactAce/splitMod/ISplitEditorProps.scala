@@ -92,7 +92,7 @@ trait ISplitEditorProps
   
   var splits: Double = js.native
   
-  var style: js.Any = js.native
+  var style: js.UndefOr[js.Object] = js.native
   
   var tabSize: js.UndefOr[Double] = js.native
   
@@ -108,8 +108,8 @@ trait ISplitEditorProps
 object ISplitEditorProps {
   
   @scala.inline
-  def apply(splits: Double, style: js.Any): ISplitEditorProps = {
-    val __obj = js.Dynamic.literal(splits = splits.asInstanceOf[js.Any], style = style.asInstanceOf[js.Any])
+  def apply(splits: Double): ISplitEditorProps = {
+    val __obj = js.Dynamic.literal(splits = splits.asInstanceOf[js.Any])
     __obj.asInstanceOf[ISplitEditorProps]
   }
   
@@ -130,9 +130,6 @@ object ISplitEditorProps {
     
     @scala.inline
     def setSplits(value: Double): Self = this.set("splits", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setStyle(value: js.Any): Self = this.set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setAnnotationsVarargs(value: js.Array[IAnnotation]*): Self = this.set("annotations", js.Array(value :_*))
@@ -376,6 +373,12 @@ object ISplitEditorProps {
     
     @scala.inline
     def deleteShowPrintMargin: Self = this.set("showPrintMargin", js.undefined)
+    
+    @scala.inline
+    def setStyle(value: js.Object): Self = this.set("style", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
     
     @scala.inline
     def setTabSize(value: Double): Self = this.set("tabSize", value.asInstanceOf[js.Any])

@@ -7,9 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait XRSessionInit extends js.Object {
   
-  var optionalFeatures: js.UndefOr[js.Array[XRReferenceSpaceType]] = js.native
+  var optionalFeatures: js.UndefOr[js.Array[String]] = js.native
   
-  var requiredFeatures: js.UndefOr[js.Array[XRReferenceSpaceType]] = js.native
+  var requiredFeatures: js.UndefOr[js.Array[String]] = js.native
 }
 object XRSessionInit {
   
@@ -35,19 +35,19 @@ object XRSessionInit {
     }
     
     @scala.inline
-    def setOptionalFeaturesVarargs(value: XRReferenceSpaceType*): Self = this.set("optionalFeatures", js.Array(value :_*))
+    def setOptionalFeaturesVarargs(value: String*): Self = this.set("optionalFeatures", js.Array(value :_*))
     
     @scala.inline
-    def setOptionalFeatures(value: js.Array[XRReferenceSpaceType]): Self = this.set("optionalFeatures", value.asInstanceOf[js.Any])
+    def setOptionalFeatures(value: js.Array[String]): Self = this.set("optionalFeatures", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptionalFeatures: Self = this.set("optionalFeatures", js.undefined)
     
     @scala.inline
-    def setRequiredFeaturesVarargs(value: XRReferenceSpaceType*): Self = this.set("requiredFeatures", js.Array(value :_*))
+    def setRequiredFeaturesVarargs(value: String*): Self = this.set("requiredFeatures", js.Array(value :_*))
     
     @scala.inline
-    def setRequiredFeatures(value: js.Array[XRReferenceSpaceType]): Self = this.set("requiredFeatures", value.asInstanceOf[js.Any])
+    def setRequiredFeatures(value: js.Array[String]): Self = this.set("requiredFeatures", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRequiredFeatures: Self = this.set("requiredFeatures", js.undefined)

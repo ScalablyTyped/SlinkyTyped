@@ -95,9 +95,6 @@ object SubscribeOpts {
     def deleteConsumerName: Self = this.set("consumerName", js.undefined)
     
     @scala.inline
-    def setPropertiesVarargs(value: js.Any*): Self = this.set("properties", js.Array(value :_*))
-    
-    @scala.inline
     def setProperties(value: MessageProperties): Self = this.set("properties", value.asInstanceOf[js.Any])
     
     @scala.inline

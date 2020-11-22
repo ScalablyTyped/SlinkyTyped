@@ -276,7 +276,7 @@ trait Options extends js.Object {
     * string[] syntax: eg: `serveStatic: ['./app']`.
     * Please see [serve-static](https://github.com/expressjs/serve-static) for details.
     */
-  var serveStaticOptions: js.UndefOr[ServeStaticOptions] = js.native
+  var serveStaticOptions: js.UndefOr[ServeStaticOptions[ServerResponse]] = js.native
   
   /**
     * Use the built-in static server for basic HTML/JS/CSS websites.
@@ -665,7 +665,7 @@ object Options {
     def deleteServeStatic: Self = this.set("serveStatic", js.undefined)
     
     @scala.inline
-    def setServeStaticOptions(value: ServeStaticOptions): Self = this.set("serveStaticOptions", value.asInstanceOf[js.Any])
+    def setServeStaticOptions(value: ServeStaticOptions[ServerResponse]): Self = this.set("serveStaticOptions", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteServeStaticOptions: Self = this.set("serveStaticOptions", js.undefined)

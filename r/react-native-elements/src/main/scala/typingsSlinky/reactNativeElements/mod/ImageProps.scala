@@ -14,6 +14,13 @@ trait ImageProps
   extends typingsSlinky.reactNative.mod.ImageProps {
   
   /**
+    * Component for enclosing element (eg: TouchableHighlight, View, etc)
+    *
+    * @default View
+    */
+  var Component: js.UndefOr[ReactComponentClass[js.Object]] = js.native
+  
+  /**
     * Specify a different component as the Image component.
     *
     * @default Image
@@ -31,6 +38,16 @@ trait ImageProps
   var containerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
   
   /**
+    * Callback function when long pressing component
+    */
+  var onLongPress: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  /**
+    * Callback function when pressing component
+    */
+  var onPress: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  /**
     * Additional styling for the placeholder container
     */
   var placeholderStyle: js.UndefOr[StyleProp[ViewStyle]] = js.native
@@ -41,6 +58,13 @@ trait ImageProps
     * @default true
     */
   var transition: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * Sets transition's duration
+    *
+    * @default 360
+    */
+  var transitionDuration: js.UndefOr[Double] = js.native
 }
 object ImageProps {
   
@@ -64,6 +88,12 @@ object ImageProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setComponent(value: ReactComponentClass[js.Object]): Self = this.set("Component", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteComponent: Self = this.set("Component", js.undefined)
     
     @scala.inline
     def setImageComponentFunctionComponent(value: ReactComponentClass[_]): Self = this.set("ImageComponent", value.asInstanceOf[js.Any])
@@ -93,6 +123,18 @@ object ImageProps {
     def setContainerStyleNull: Self = this.set("containerStyle", null)
     
     @scala.inline
+    def setOnLongPress(value: () => Unit): Self = this.set("onLongPress", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteOnLongPress: Self = this.set("onLongPress", js.undefined)
+    
+    @scala.inline
+    def setOnPress(value: () => Unit): Self = this.set("onPress", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def deleteOnPress: Self = this.set("onPress", js.undefined)
+    
+    @scala.inline
     def setPlaceholderStyle(value: StyleProp[ViewStyle]): Self = this.set("placeholderStyle", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -106,5 +148,11 @@ object ImageProps {
     
     @scala.inline
     def deleteTransition: Self = this.set("transition", js.undefined)
+    
+    @scala.inline
+    def setTransitionDuration(value: Double): Self = this.set("transitionDuration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTransitionDuration: Self = this.set("transitionDuration", js.undefined)
   }
 }

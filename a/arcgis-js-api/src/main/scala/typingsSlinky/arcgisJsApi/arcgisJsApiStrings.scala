@@ -64,6 +64,189 @@ object arcgisJsApiStrings {
   def CI: CI = "CI".asInstanceOf[CI]
   
   @scala.inline
+  def CIM3DSymbolProperties: CIM3DSymbolProperties = "CIM3DSymbolProperties".asInstanceOf[CIM3DSymbolProperties]
+  
+  @scala.inline
+  def CIMCGAAttribute: CIMCGAAttribute = "CIMCGAAttribute".asInstanceOf[CIMCGAAttribute]
+  
+  @scala.inline
+  def CIMCharacterMarker: CIMCharacterMarker = "CIMCharacterMarker".asInstanceOf[CIMCharacterMarker]
+  
+  @scala.inline
+  def CIMClippingPath: CIMClippingPath = "CIMClippingPath".asInstanceOf[CIMClippingPath]
+  
+  @scala.inline
+  def CIMColorSubstitution: CIMColorSubstitution = "CIMColorSubstitution".asInstanceOf[CIMColorSubstitution]
+  
+  @scala.inline
+  def CIMExpressionInfo: CIMExpressionInfo = "CIMExpressionInfo".asInstanceOf[CIMExpressionInfo]
+  
+  @scala.inline
+  def CIMGeometricEffectAddControlPoints: CIMGeometricEffectAddControlPoints = "CIMGeometricEffectAddControlPoints".asInstanceOf[CIMGeometricEffectAddControlPoints]
+  
+  @scala.inline
+  def CIMGeometricEffectArrow: CIMGeometricEffectArrow = "CIMGeometricEffectArrow".asInstanceOf[CIMGeometricEffectArrow]
+  
+  @scala.inline
+  def CIMGeometricEffectBuffer: CIMGeometricEffectBuffer = "CIMGeometricEffectBuffer".asInstanceOf[CIMGeometricEffectBuffer]
+  
+  @scala.inline
+  def CIMGeometricEffectCut: CIMGeometricEffectCut = "CIMGeometricEffectCut".asInstanceOf[CIMGeometricEffectCut]
+  
+  @scala.inline
+  def CIMGeometricEffectDashes: CIMGeometricEffectDashes = "CIMGeometricEffectDashes".asInstanceOf[CIMGeometricEffectDashes]
+  
+  @scala.inline
+  def CIMGeometricEffectDonut: CIMGeometricEffectDonut = "CIMGeometricEffectDonut".asInstanceOf[CIMGeometricEffectDonut]
+  
+  @scala.inline
+  def CIMGeometricEffectEnclosingPolygon: CIMGeometricEffectEnclosingPolygon = "CIMGeometricEffectEnclosingPolygon".asInstanceOf[CIMGeometricEffectEnclosingPolygon]
+  
+  @scala.inline
+  def CIMGeometricEffectExtension: CIMGeometricEffectExtension = "CIMGeometricEffectExtension".asInstanceOf[CIMGeometricEffectExtension]
+  
+  @scala.inline
+  def CIMGeometricEffectJog: CIMGeometricEffectJog = "CIMGeometricEffectJog".asInstanceOf[CIMGeometricEffectJog]
+  
+  @scala.inline
+  def CIMGeometricEffectLocalizerFeather: CIMGeometricEffectLocalizerFeather = "CIMGeometricEffectLocalizerFeather".asInstanceOf[CIMGeometricEffectLocalizerFeather]
+  
+  @scala.inline
+  def CIMGeometricEffectMove: CIMGeometricEffectMove = "CIMGeometricEffectMove".asInstanceOf[CIMGeometricEffectMove]
+  
+  @scala.inline
+  def CIMGeometricEffectOffset: CIMGeometricEffectOffset = "CIMGeometricEffectOffset".asInstanceOf[CIMGeometricEffectOffset]
+  
+  @scala.inline
+  def CIMGeometricEffectOffsetHatch: CIMGeometricEffectOffsetHatch = "CIMGeometricEffectOffsetHatch".asInstanceOf[CIMGeometricEffectOffsetHatch]
+  
+  @scala.inline
+  def CIMGeometricEffectOffsetTangent: CIMGeometricEffectOffsetTangent = "CIMGeometricEffectOffsetTangent".asInstanceOf[CIMGeometricEffectOffsetTangent]
+  
+  @scala.inline
+  def CIMGeometricEffectRadial: CIMGeometricEffectRadial = "CIMGeometricEffectRadial".asInstanceOf[CIMGeometricEffectRadial]
+  
+  @scala.inline
+  def CIMGeometricEffectRegularPolygon: CIMGeometricEffectRegularPolygon = "CIMGeometricEffectRegularPolygon".asInstanceOf[CIMGeometricEffectRegularPolygon]
+  
+  @scala.inline
+  def CIMGeometricEffectReverse: CIMGeometricEffectReverse = "CIMGeometricEffectReverse".asInstanceOf[CIMGeometricEffectReverse]
+  
+  @scala.inline
+  def CIMGeometricEffectRotate: CIMGeometricEffectRotate = "CIMGeometricEffectRotate".asInstanceOf[CIMGeometricEffectRotate]
+  
+  @scala.inline
+  def CIMGeometricEffectScale: CIMGeometricEffectScale = "CIMGeometricEffectScale".asInstanceOf[CIMGeometricEffectScale]
+  
+  @scala.inline
+  def CIMGeometricEffectSuppress: CIMGeometricEffectSuppress = "CIMGeometricEffectSuppress".asInstanceOf[CIMGeometricEffectSuppress]
+  
+  @scala.inline
+  def CIMGeometricEffectTaperedPolygon: CIMGeometricEffectTaperedPolygon = "CIMGeometricEffectTaperedPolygon".asInstanceOf[CIMGeometricEffectTaperedPolygon]
+  
+  @scala.inline
+  def CIMGeometricEffectWave: CIMGeometricEffectWave = "CIMGeometricEffectWave".asInstanceOf[CIMGeometricEffectWave]
+  
+  @scala.inline
+  def CIMGradientFill: CIMGradientFill = "CIMGradientFill".asInstanceOf[CIMGradientFill]
+  
+  @scala.inline
+  def CIMGradientStroke: CIMGradientStroke = "CIMGradientStroke".asInstanceOf[CIMGradientStroke]
+  
+  @scala.inline
+  def CIMHatchFill: CIMHatchFill = "CIMHatchFill".asInstanceOf[CIMHatchFill]
+  
+  @scala.inline
+  def CIMLineSymbol: CIMLineSymbol = "CIMLineSymbol".asInstanceOf[CIMLineSymbol]
+  
+  @scala.inline
+  def CIMMarkerGraphic: CIMMarkerGraphic = "CIMMarkerGraphic".asInstanceOf[CIMMarkerGraphic]
+  
+  @scala.inline
+  def CIMMarkerPlacementAlongLineRandomSize: CIMMarkerPlacementAlongLineRandomSize = "CIMMarkerPlacementAlongLineRandomSize".asInstanceOf[CIMMarkerPlacementAlongLineRandomSize]
+  
+  @scala.inline
+  def CIMMarkerPlacementAlongLineSameSize: CIMMarkerPlacementAlongLineSameSize = "CIMMarkerPlacementAlongLineSameSize".asInstanceOf[CIMMarkerPlacementAlongLineSameSize]
+  
+  @scala.inline
+  def CIMMarkerPlacementAlongLineVariableSize: CIMMarkerPlacementAlongLineVariableSize = "CIMMarkerPlacementAlongLineVariableSize".asInstanceOf[CIMMarkerPlacementAlongLineVariableSize]
+  
+  @scala.inline
+  def CIMMarkerPlacementAtExtremities: CIMMarkerPlacementAtExtremities = "CIMMarkerPlacementAtExtremities".asInstanceOf[CIMMarkerPlacementAtExtremities]
+  
+  @scala.inline
+  def CIMMarkerPlacementAtMeasuredUnits: CIMMarkerPlacementAtMeasuredUnits = "CIMMarkerPlacementAtMeasuredUnits".asInstanceOf[CIMMarkerPlacementAtMeasuredUnits]
+  
+  @scala.inline
+  def CIMMarkerPlacementAtRatioPositions: CIMMarkerPlacementAtRatioPositions = "CIMMarkerPlacementAtRatioPositions".asInstanceOf[CIMMarkerPlacementAtRatioPositions]
+  
+  @scala.inline
+  def CIMMarkerPlacementInsidePolygon: CIMMarkerPlacementInsidePolygon = "CIMMarkerPlacementInsidePolygon".asInstanceOf[CIMMarkerPlacementInsidePolygon]
+  
+  @scala.inline
+  def CIMMarkerPlacementOnLine: CIMMarkerPlacementOnLine = "CIMMarkerPlacementOnLine".asInstanceOf[CIMMarkerPlacementOnLine]
+  
+  @scala.inline
+  def CIMMarkerPlacementOnVertices: CIMMarkerPlacementOnVertices = "CIMMarkerPlacementOnVertices".asInstanceOf[CIMMarkerPlacementOnVertices]
+  
+  @scala.inline
+  def CIMMarkerPlacementPolygonCenter: CIMMarkerPlacementPolygonCenter = "CIMMarkerPlacementPolygonCenter".asInstanceOf[CIMMarkerPlacementPolygonCenter]
+  
+  @scala.inline
+  def CIMMaterialProperties: CIMMaterialProperties = "CIMMaterialProperties".asInstanceOf[CIMMaterialProperties]
+  
+  @scala.inline
+  def CIMMaterialSymbolLayer: CIMMaterialSymbolLayer = "CIMMaterialSymbolLayer".asInstanceOf[CIMMaterialSymbolLayer]
+  
+  @scala.inline
+  def CIMObjectMarker3D: CIMObjectMarker3D = "CIMObjectMarker3D".asInstanceOf[CIMObjectMarker3D]
+  
+  @scala.inline
+  def CIMObjectMarker3DLOD: CIMObjectMarker3DLOD = "CIMObjectMarker3DLOD".asInstanceOf[CIMObjectMarker3DLOD]
+  
+  @scala.inline
+  def CIMPictureFill: CIMPictureFill = "CIMPictureFill".asInstanceOf[CIMPictureFill]
+  
+  @scala.inline
+  def CIMPictureMarker: CIMPictureMarker = "CIMPictureMarker".asInstanceOf[CIMPictureMarker]
+  
+  @scala.inline
+  def CIMPictureStroke: CIMPictureStroke = "CIMPictureStroke".asInstanceOf[CIMPictureStroke]
+  
+  @scala.inline
+  def CIMPointSymbol: CIMPointSymbol = "CIMPointSymbol".asInstanceOf[CIMPointSymbol]
+  
+  @scala.inline
+  def CIMPolygonSymbol: CIMPolygonSymbol = "CIMPolygonSymbol".asInstanceOf[CIMPolygonSymbol]
+  
+  @scala.inline
+  def CIMPrimitiveOverride: CIMPrimitiveOverride = "CIMPrimitiveOverride".asInstanceOf[CIMPrimitiveOverride]
+  
+  @scala.inline
+  def CIMScaleDependentSizeVariation: CIMScaleDependentSizeVariation = "CIMScaleDependentSizeVariation".asInstanceOf[CIMScaleDependentSizeVariation]
+  
+  @scala.inline
+  def CIMShapeVertices: CIMShapeVertices = "CIMShapeVertices".asInstanceOf[CIMShapeVertices]
+  
+  @scala.inline
+  def CIMSolidFill: CIMSolidFill = "CIMSolidFill".asInstanceOf[CIMSolidFill]
+  
+  @scala.inline
+  def CIMSolidStroke: CIMSolidStroke = "CIMSolidStroke".asInstanceOf[CIMSolidStroke]
+  
+  @scala.inline
+  def CIMSymbolReference: CIMSymbolReference = "CIMSymbolReference".asInstanceOf[CIMSymbolReference]
+  
+  @scala.inline
+  def CIMTextMargin: CIMTextMargin = "CIMTextMargin".asInstanceOf[CIMTextMargin]
+  
+  @scala.inline
+  def CIMTextSymbol: CIMTextSymbol = "CIMTextSymbol".asInstanceOf[CIMTextSymbol]
+  
+  @scala.inline
+  def CIMVectorMarker: CIMVectorMarker = "CIMVectorMarker".asInstanceOf[CIMVectorMarker]
+  
+  @scala.inline
   def CL: CL = "CL".asInstanceOf[CL]
   
   @scala.inline
@@ -188,6 +371,9 @@ object arcgisJsApiStrings {
   
   @scala.inline
   def MY: MY = "MY".asInstanceOf[MY]
+  
+  @scala.inline
+  def Magnitude: Magnitude = "Magnitude".asInstanceOf[Magnitude]
   
   @scala.inline
   def Meters: Meters = "Meters".asInstanceOf[Meters]
@@ -448,6 +634,21 @@ object arcgisJsApiStrings {
   def baseline: baseline = "baseline".asInstanceOf[baseline]
   
   @scala.inline
+  def `beaufort-ft`: `beaufort-ft` = "beaufort-ft".asInstanceOf[`beaufort-ft`]
+  
+  @scala.inline
+  def `beaufort-km`: `beaufort-km` = "beaufort-km".asInstanceOf[`beaufort-km`]
+  
+  @scala.inline
+  def `beaufort-kn`: `beaufort-kn` = "beaufort-kn".asInstanceOf[`beaufort-kn`]
+  
+  @scala.inline
+  def `beaufort-m`: `beaufort-m` = "beaufort-m".asInstanceOf[`beaufort-m`]
+  
+  @scala.inline
+  def `beaufort-mi`: `beaufort-mi` = "beaufort-mi".asInstanceOf[`beaufort-mi`]
+  
+  @scala.inline
   def `before-add`: `before-add` = "before-add".asInstanceOf[`before-add`]
   
   @scala.inline
@@ -529,6 +730,12 @@ object arcgisJsApiStrings {
   def bolder: bolder = "bolder".asInstanceOf[bolder]
   
   @scala.inline
+  def `bookmark-edit`: `bookmark-edit` = "bookmark-edit".asInstanceOf[`bookmark-edit`]
+  
+  @scala.inline
+  def `bookmark-select`: `bookmark-select` = "bookmark-select".asInstanceOf[`bookmark-select`]
+  
+  @scala.inline
   def boolean: boolean = "boolean".asInstanceOf[boolean]
   
   @scala.inline
@@ -560,6 +767,9 @@ object arcgisJsApiStrings {
   
   @scala.inline
   def butt: butt = "butt".asInstanceOf[butt]
+  
+  @scala.inline
+  def button: button = "button".asInstanceOf[button]
   
   @scala.inline
   def c128: c128 = "c128".asInstanceOf[c128]
@@ -659,6 +869,9 @@ object arcgisJsApiStrings {
   
   @scala.inline
   def classic: classic = "classic".asInstanceOf[classic]
+  
+  @scala.inline
+  def `classified-arrow`: `classified-arrow` = "classified-arrow".asInstanceOf[`classified-arrow`]
   
   @scala.inline
   def click: click = "click".asInstanceOf[click]
@@ -776,6 +989,9 @@ object arcgisJsApiStrings {
   
   @scala.inline
   def `date-and-time`: `date-and-time` = "date-and-time".asInstanceOf[`date-and-time`]
+  
+  @scala.inline
+  def `datetime-picker`: `datetime-picker` = "datetime-picker".asInstanceOf[`datetime-picker`]
   
   @scala.inline
   def `day-short-month-year`: `day-short-month-year` = "day-short-month-year".asInstanceOf[`day-short-month-year`]
@@ -1084,6 +1300,12 @@ object arcgisJsApiStrings {
   def floating: floating = "floating".asInstanceOf[floating]
   
   @scala.inline
+  def `flow-from`: `flow-from` = "flow-from".asInstanceOf[`flow-from`]
+  
+  @scala.inline
+  def `flow-to`: `flow-to` = "flow-to".asInstanceOf[`flow-to`]
+  
+  @scala.inline
   def focus: focus = "focus".asInstanceOf[focus]
   
   @scala.inline
@@ -1274,6 +1496,9 @@ object arcgisJsApiStrings {
   
   @scala.inline
   def `indian-yards`: `indian-yards` = "indian-yards".asInstanceOf[`indian-yards`]
+  
+  @scala.inline
+  def info: info = "info".asInstanceOf[info]
   
   @scala.inline
   def informative: informative = "informative".asInstanceOf[informative]
@@ -1804,6 +2029,12 @@ object arcgisJsApiStrings {
   def oblique: oblique = "oblique".asInstanceOf[oblique]
   
   @scala.inline
+  def `ocean-current-kn`: `ocean-current-kn` = "ocean-current-kn".asInstanceOf[`ocean-current-kn`]
+  
+  @scala.inline
+  def `ocean-current-m`: `ocean-current-m` = "ocean-current-m".asInstanceOf[`ocean-current-m`]
+  
+  @scala.inline
   def `ogc-feature`: `ogc-feature` = "ogc-feature".asInstanceOf[`ogc-feature`]
   
   @scala.inline
@@ -2317,10 +2548,16 @@ object arcgisJsApiStrings {
   def `simple-marker`: `simple-marker` = "simple-marker".asInstanceOf[`simple-marker`]
   
   @scala.inline
+  def `simple-scalar`: `simple-scalar` = "simple-scalar".asInstanceOf[`simple-scalar`]
+  
+  @scala.inline
   def simplified: simplified = "simplified".asInstanceOf[simplified]
   
   @scala.inline
   def single: single = "single".asInstanceOf[single]
+  
+  @scala.inline
+  def `single-arrow`: `single-arrow` = "single-arrow".asInstanceOf[`single-arrow`]
   
   @scala.inline
   def singletenant: singletenant = "singletenant".asInstanceOf[singletenant]
@@ -2336,6 +2573,9 @@ object arcgisJsApiStrings {
   
   @scala.inline
   def slicing: slicing = "slicing".asInstanceOf[slicing]
+  
+  @scala.inline
+  def slider: slider = "slider".asInstanceOf[slider]
   
   @scala.inline
   def slight: slight = "slight".asInstanceOf[slight]
@@ -2447,6 +2687,9 @@ object arcgisJsApiStrings {
   
   @scala.inline
   def string: string = "string".asInstanceOf[string]
+  
+  @scala.inline
+  def style: style = "style".asInstanceOf[style]
   
   @scala.inline
   def submit: submit = "submit".asInstanceOf[submit]
@@ -2641,6 +2884,9 @@ object arcgisJsApiStrings {
   def update: update = "update".asInstanceOf[update]
   
   @scala.inline
+  def `update-rate`: `update-rate` = "update-rate".asInstanceOf[`update-rate`]
+  
+  @scala.inline
   def uploaded: uploaded = "uploaded".asInstanceOf[uploaded]
   
   @scala.inline
@@ -2672,6 +2918,9 @@ object arcgisJsApiStrings {
   
   @scala.inline
   def `var`: `var` = "var".asInstanceOf[`var`]
+  
+  @scala.inline
+  def `vector-field`: `vector-field` = "vector-field".asInstanceOf[`vector-field`]
   
   @scala.inline
   def `vector-magdir`: `vector-magdir` = "vector-magdir".asInstanceOf[`vector-magdir`]
@@ -2713,10 +2962,16 @@ object arcgisJsApiStrings {
   def `waiting-for-target`: `waiting-for-target` = "waiting-for-target".asInstanceOf[`waiting-for-target`]
   
   @scala.inline
+  def warn: warn = "warn".asInstanceOf[warn]
+  
+  @scala.inline
   def warning: warning = "warning".asInstanceOf[warning]
   
   @scala.inline
   def water: water = "water".asInstanceOf[water]
+  
+  @scala.inline
+  def wcs: wcs = "wcs".asInstanceOf[wcs]
   
   @scala.inline
   def `web-style`: `web-style` = "web-style".asInstanceOf[`web-style`]
@@ -2738,6 +2993,9 @@ object arcgisJsApiStrings {
   
   @scala.inline
   def `width-and-depth`: `width-and-depth` = "width-and-depth".asInstanceOf[`width-and-depth`]
+  
+  @scala.inline
+  def `wind-speed`: `wind-speed` = "wind-speed".asInstanceOf[`wind-speed`]
   
   @scala.inline
   def winter: winter = "winter".asInstanceOf[winter]
@@ -2837,6 +3095,189 @@ object arcgisJsApiStrings {
   
   @js.native
   sealed trait CI extends SupportedRegion
+  
+  @js.native
+  sealed trait CIM3DSymbolProperties extends js.Object
+  
+  @js.native
+  sealed trait CIMCGAAttribute extends js.Object
+  
+  @js.native
+  sealed trait CIMCharacterMarker extends js.Object
+  
+  @js.native
+  sealed trait CIMClippingPath extends js.Object
+  
+  @js.native
+  sealed trait CIMColorSubstitution extends js.Object
+  
+  @js.native
+  sealed trait CIMExpressionInfo extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectAddControlPoints extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectArrow extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectBuffer extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectCut extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectDashes extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectDonut extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectEnclosingPolygon extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectExtension extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectJog extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectLocalizerFeather extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectMove extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectOffset extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectOffsetHatch extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectOffsetTangent extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectRadial extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectRegularPolygon extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectReverse extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectRotate extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectScale extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectSuppress extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectTaperedPolygon extends js.Object
+  
+  @js.native
+  sealed trait CIMGeometricEffectWave extends js.Object
+  
+  @js.native
+  sealed trait CIMGradientFill extends js.Object
+  
+  @js.native
+  sealed trait CIMGradientStroke extends js.Object
+  
+  @js.native
+  sealed trait CIMHatchFill extends js.Object
+  
+  @js.native
+  sealed trait CIMLineSymbol extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerGraphic extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerPlacementAlongLineRandomSize extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerPlacementAlongLineSameSize extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerPlacementAlongLineVariableSize extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerPlacementAtExtremities extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerPlacementAtMeasuredUnits extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerPlacementAtRatioPositions extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerPlacementInsidePolygon extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerPlacementOnLine extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerPlacementOnVertices extends js.Object
+  
+  @js.native
+  sealed trait CIMMarkerPlacementPolygonCenter extends js.Object
+  
+  @js.native
+  sealed trait CIMMaterialProperties extends js.Object
+  
+  @js.native
+  sealed trait CIMMaterialSymbolLayer extends js.Object
+  
+  @js.native
+  sealed trait CIMObjectMarker3D extends js.Object
+  
+  @js.native
+  sealed trait CIMObjectMarker3DLOD extends js.Object
+  
+  @js.native
+  sealed trait CIMPictureFill extends js.Object
+  
+  @js.native
+  sealed trait CIMPictureMarker extends js.Object
+  
+  @js.native
+  sealed trait CIMPictureStroke extends js.Object
+  
+  @js.native
+  sealed trait CIMPointSymbol extends js.Object
+  
+  @js.native
+  sealed trait CIMPolygonSymbol extends js.Object
+  
+  @js.native
+  sealed trait CIMPrimitiveOverride extends js.Object
+  
+  @js.native
+  sealed trait CIMScaleDependentSizeVariation extends js.Object
+  
+  @js.native
+  sealed trait CIMShapeVertices extends js.Object
+  
+  @js.native
+  sealed trait CIMSolidFill extends js.Object
+  
+  @js.native
+  sealed trait CIMSolidStroke extends js.Object
+  
+  @js.native
+  sealed trait CIMSymbolReference extends js.Object
+  
+  @js.native
+  sealed trait CIMTextMargin extends js.Object
+  
+  @js.native
+  sealed trait CIMTextSymbol extends js.Object
+  
+  @js.native
+  sealed trait CIMVectorMarker extends js.Object
   
   @js.native
   sealed trait CL extends SupportedRegion
@@ -2963,6 +3404,9 @@ object arcgisJsApiStrings {
   
   @js.native
   sealed trait MY extends SupportedRegion
+  
+  @js.native
+  sealed trait Magnitude extends js.Object
   
   @js.native
   sealed trait Meters extends js.Object
@@ -3223,6 +3667,21 @@ object arcgisJsApiStrings {
   sealed trait baseline extends js.Object
   
   @js.native
+  sealed trait `beaufort-ft` extends js.Object
+  
+  @js.native
+  sealed trait `beaufort-km` extends js.Object
+  
+  @js.native
+  sealed trait `beaufort-kn` extends js.Object
+  
+  @js.native
+  sealed trait `beaufort-m` extends js.Object
+  
+  @js.native
+  sealed trait `beaufort-mi` extends js.Object
+  
+  @js.native
   sealed trait `before-add` extends js.Object
   
   @js.native
@@ -3304,6 +3763,12 @@ object arcgisJsApiStrings {
   sealed trait bolder extends js.Object
   
   @js.native
+  sealed trait `bookmark-edit` extends js.Object
+  
+  @js.native
+  sealed trait `bookmark-select` extends js.Object
+  
+  @js.native
   sealed trait boolean extends js.Object
   
   @js.native
@@ -3335,6 +3800,9 @@ object arcgisJsApiStrings {
   
   @js.native
   sealed trait butt extends js.Object
+  
+  @js.native
+  sealed trait button extends js.Object
   
   @js.native
   sealed trait c128 extends js.Object
@@ -3434,6 +3902,9 @@ object arcgisJsApiStrings {
   
   @js.native
   sealed trait classic extends js.Object
+  
+  @js.native
+  sealed trait `classified-arrow` extends js.Object
   
   @js.native
   sealed trait click extends js.Object
@@ -3551,6 +4022,9 @@ object arcgisJsApiStrings {
   
   @js.native
   sealed trait `date-and-time` extends js.Object
+  
+  @js.native
+  sealed trait `datetime-picker` extends js.Object
   
   @js.native
   sealed trait `day-short-month-year` extends js.Object
@@ -3859,6 +4333,12 @@ object arcgisJsApiStrings {
   sealed trait floating extends js.Object
   
   @js.native
+  sealed trait `flow-from` extends js.Object
+  
+  @js.native
+  sealed trait `flow-to` extends js.Object
+  
+  @js.native
   sealed trait focus extends js.Object
   
   @js.native
@@ -4049,6 +4529,9 @@ object arcgisJsApiStrings {
   
   @js.native
   sealed trait `indian-yards` extends js.Object
+  
+  @js.native
+  sealed trait info extends js.Object
   
   @js.native
   sealed trait informative extends js.Object
@@ -4579,6 +5062,12 @@ object arcgisJsApiStrings {
   sealed trait oblique extends js.Object
   
   @js.native
+  sealed trait `ocean-current-kn` extends js.Object
+  
+  @js.native
+  sealed trait `ocean-current-m` extends js.Object
+  
+  @js.native
   sealed trait `ogc-feature` extends js.Object
   
   @js.native
@@ -5092,10 +5581,16 @@ object arcgisJsApiStrings {
   sealed trait `simple-marker` extends js.Object
   
   @js.native
+  sealed trait `simple-scalar` extends js.Object
+  
+  @js.native
   sealed trait simplified extends js.Object
   
   @js.native
   sealed trait single extends js.Object
+  
+  @js.native
+  sealed trait `single-arrow` extends js.Object
   
   @js.native
   sealed trait singletenant extends js.Object
@@ -5111,6 +5606,9 @@ object arcgisJsApiStrings {
   
   @js.native
   sealed trait slicing extends js.Object
+  
+  @js.native
+  sealed trait slider extends js.Object
   
   @js.native
   sealed trait slight extends js.Object
@@ -5222,6 +5720,9 @@ object arcgisJsApiStrings {
   
   @js.native
   sealed trait string extends js.Object
+  
+  @js.native
+  sealed trait style extends js.Object
   
   @js.native
   sealed trait submit extends js.Object
@@ -5416,6 +5917,9 @@ object arcgisJsApiStrings {
   sealed trait update extends js.Object
   
   @js.native
+  sealed trait `update-rate` extends js.Object
+  
+  @js.native
   sealed trait uploaded extends js.Object
   
   @js.native
@@ -5447,6 +5951,9 @@ object arcgisJsApiStrings {
   
   @js.native
   sealed trait `var` extends js.Object
+  
+  @js.native
+  sealed trait `vector-field` extends js.Object
   
   @js.native
   sealed trait `vector-magdir` extends js.Object
@@ -5488,10 +5995,16 @@ object arcgisJsApiStrings {
   sealed trait `waiting-for-target` extends js.Object
   
   @js.native
+  sealed trait warn extends js.Object
+  
+  @js.native
   sealed trait warning extends js.Object
   
   @js.native
   sealed trait water extends js.Object
+  
+  @js.native
+  sealed trait wcs extends js.Object
   
   @js.native
   sealed trait `web-style` extends js.Object
@@ -5513,6 +6026,9 @@ object arcgisJsApiStrings {
   
   @js.native
   sealed trait `width-and-depth` extends js.Object
+  
+  @js.native
+  sealed trait `wind-speed` extends js.Object
   
   @js.native
   sealed trait winter extends js.Object

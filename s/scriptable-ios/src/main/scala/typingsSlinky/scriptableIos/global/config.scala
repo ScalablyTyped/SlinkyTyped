@@ -37,8 +37,22 @@ object config extends js.Object {
   var runsInNotification: Boolean = js.native
   
   /**
+    * Whether the script is running in a widget.
+    * @see https://docs.scriptable.app/config/#runsinwidget
+    */
+  var runsInWidget: Boolean = js.native
+  
+  /**
     * Whether the script is running with Siri.
     * @see https://docs.scriptable.app/config/#runswithsiri
     */
   var runsWithSiri: Boolean = js.native
+  
+  /**
+    * The size of the widget the script is running in.
+    *
+    * Possible values are: `small`, `medium`, `large` and `null`. The value is `null` when the script is not running in a widget.
+    * @see https://docs.scriptable.app/config/#widgetfamily
+    */
+  var widgetFamily: String = js.native
 }

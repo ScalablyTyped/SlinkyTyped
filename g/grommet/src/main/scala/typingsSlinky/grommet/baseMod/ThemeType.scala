@@ -4,37 +4,41 @@ import typingsSlinky.grommet.anon.Analog
 import typingsSlinky.grommet.anon.Animation
 import typingsSlinky.grommet.anon.AnimationDisabled
 import typingsSlinky.grommet.anon.Baseline
-import typingsSlinky.grommet.anon.Body
+import typingsSlinky.grommet.anon.BodyContainer
 import typingsSlinky.grommet.anon.Captions
 import typingsSlinky.grommet.anon.Check
 import typingsSlinky.grommet.anon.ColorExtend
+import typingsSlinky.grommet.anon.Container
 import typingsSlinky.grommet.anon.Content
 import typingsSlinky.grommet.anon.Continent
 import typingsSlinky.grommet.anon.Control
+import typingsSlinky.grommet.anon.Day
 import typingsSlinky.grommet.anon.Default
 import typingsSlinky.grommet.anon.DisabledExtend
 import typingsSlinky.grommet.anon.Edge
 import typingsSlinky.grommet.anon.Extend
-import typingsSlinky.grommet.anon.FontWeight
-import typingsSlinky.grommet.anon.Gap
+import typingsSlinky.grommet.anon.FontWeightHover
+import typingsSlinky.grommet.anon.Footer
 import typingsSlinky.grommet.anon.GroupEnd
-import typingsSlinky.grommet.anon.HeadingIcons
+import typingsSlinky.grommet.anon.Header
 import typingsSlinky.grommet.anon.Hover
-import typingsSlinky.grommet.anon.Icon
 import typingsSlinky.grommet.anon.Icons
 import typingsSlinky.grommet.anon.Item
 import typingsSlinky.grommet.anon.Line
 import typingsSlinky.grommet.anon.MaxHeight
 import typingsSlinky.grommet.anon.Overlay
 import typingsSlinky.grommet.anon.Panel
+import typingsSlinky.grommet.anon.Position
 import typingsSlinky.grommet.anon.ResponsiveBreakpoint
 import typingsSlinky.grommet.anon.SizeText
 import typingsSlinky.grommet.anon.Thumb
+import typingsSlinky.grommet.anon.Toggle
 import typingsSlinky.grommet.anon.Xlarge
 import typingsSlinky.grommet.anon.Xsmall
-import typingsSlinky.grommet.anon.`10`
-import typingsSlinky.grommet.anon.`18`
-import typingsSlinky.grommet.anon.`21`
+import typingsSlinky.grommet.anon.`13`
+import typingsSlinky.grommet.anon.`14`
+import typingsSlinky.grommet.anon.`22`
+import typingsSlinky.grommet.anon.`25`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,7 +48,7 @@ trait ThemeType extends js.Object {
   
   var accordion: js.UndefOr[Panel] = js.native
   
-  var anchor: js.UndefOr[FontWeight] = js.native
+  var anchor: js.UndefOr[FontWeightHover] = js.native
   
   var avatar: js.UndefOr[SizeText] = js.native
   
@@ -52,19 +56,23 @@ trait ThemeType extends js.Object {
   
   var button: js.UndefOr[Default] = js.native
   
-  var calendar: js.UndefOr[HeadingIcons] = js.native
+  var calendar: js.UndefOr[Day] = js.native
+  
+  var card: js.UndefOr[BodyContainer] = js.native
   
   var carousel: js.UndefOr[AnimationDisabled] = js.native
   
   var chart: js.UndefOr[ColorExtend] = js.native
   
-  var checkBox: js.UndefOr[Icon] = js.native
+  var checkBox: js.UndefOr[Toggle] = js.native
   
   var clock: js.UndefOr[Analog] = js.native
   
   var collapsible: js.UndefOr[Baseline] = js.native
   
   var dataTable: js.UndefOr[GroupEnd] = js.native
+  
+  var dateInput: js.UndefOr[`13`] = js.native
   
   var diagram: js.UndefOr[Line] = js.native
   
@@ -74,17 +82,17 @@ trait ThemeType extends js.Object {
   
   var global: js.UndefOr[Animation] = js.native
   
-  var grommet: js.UndefOr[`10`] = js.native
+  var grommet: js.UndefOr[`14`] = js.native
   
   var heading: js.UndefOr[Extend] = js.native
   
-  var icon: js.UndefOr[`21`] = js.native
+  var icon: js.UndefOr[`25`] = js.native
   
   var layer: js.UndefOr[Overlay] = js.native
   
   var list: js.UndefOr[Item] = js.native
   
-  var maskedInput: js.UndefOr[`18`] = js.native
+  var maskedInput: js.UndefOr[`22`] = js.native
   
   var menu: js.UndefOr[Icons] = js.native
   
@@ -94,17 +102,21 @@ trait ThemeType extends js.Object {
   
   var radioButton: js.UndefOr[Check] = js.native
   
+  var radioButtonGroup: js.UndefOr[Container] = js.native
+  
   var rangeInput: js.UndefOr[Thumb] = js.native
   
   var rangeSelector: js.UndefOr[Edge] = js.native
   
   var select: js.UndefOr[Control] = js.native
   
+  var skipLinks: js.UndefOr[Position] = js.native
+  
   var tab: js.UndefOr[Hover] = js.native
   
-  var table: js.UndefOr[Body] = js.native
+  var table: js.UndefOr[Footer] = js.native
   
-  var tabs: js.UndefOr[Gap] = js.native
+  var tabs: js.UndefOr[Header] = js.native
   
   var text: js.UndefOr[Xsmall] = js.native
   
@@ -146,7 +158,7 @@ object ThemeType {
     def deleteAccordion: Self = this.set("accordion", js.undefined)
     
     @scala.inline
-    def setAnchor(value: FontWeight): Self = this.set("anchor", value.asInstanceOf[js.Any])
+    def setAnchor(value: FontWeightHover): Self = this.set("anchor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnchor: Self = this.set("anchor", js.undefined)
@@ -170,10 +182,16 @@ object ThemeType {
     def deleteButton: Self = this.set("button", js.undefined)
     
     @scala.inline
-    def setCalendar(value: HeadingIcons): Self = this.set("calendar", value.asInstanceOf[js.Any])
+    def setCalendar(value: Day): Self = this.set("calendar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCalendar: Self = this.set("calendar", js.undefined)
+    
+    @scala.inline
+    def setCard(value: BodyContainer): Self = this.set("card", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCard: Self = this.set("card", js.undefined)
     
     @scala.inline
     def setCarousel(value: AnimationDisabled): Self = this.set("carousel", value.asInstanceOf[js.Any])
@@ -188,7 +206,7 @@ object ThemeType {
     def deleteChart: Self = this.set("chart", js.undefined)
     
     @scala.inline
-    def setCheckBox(value: Icon): Self = this.set("checkBox", value.asInstanceOf[js.Any])
+    def setCheckBox(value: Toggle): Self = this.set("checkBox", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCheckBox: Self = this.set("checkBox", js.undefined)
@@ -210,6 +228,12 @@ object ThemeType {
     
     @scala.inline
     def deleteDataTable: Self = this.set("dataTable", js.undefined)
+    
+    @scala.inline
+    def setDateInput(value: `13`): Self = this.set("dateInput", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDateInput: Self = this.set("dateInput", js.undefined)
     
     @scala.inline
     def setDiagram(value: Line): Self = this.set("diagram", value.asInstanceOf[js.Any])
@@ -236,7 +260,7 @@ object ThemeType {
     def deleteGlobal: Self = this.set("global", js.undefined)
     
     @scala.inline
-    def setGrommet(value: `10`): Self = this.set("grommet", value.asInstanceOf[js.Any])
+    def setGrommet(value: `14`): Self = this.set("grommet", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGrommet: Self = this.set("grommet", js.undefined)
@@ -248,7 +272,7 @@ object ThemeType {
     def deleteHeading: Self = this.set("heading", js.undefined)
     
     @scala.inline
-    def setIcon(value: `21`): Self = this.set("icon", value.asInstanceOf[js.Any])
+    def setIcon(value: `25`): Self = this.set("icon", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
@@ -266,7 +290,7 @@ object ThemeType {
     def deleteList: Self = this.set("list", js.undefined)
     
     @scala.inline
-    def setMaskedInput(value: `18`): Self = this.set("maskedInput", value.asInstanceOf[js.Any])
+    def setMaskedInput(value: `22`): Self = this.set("maskedInput", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMaskedInput: Self = this.set("maskedInput", js.undefined)
@@ -296,6 +320,12 @@ object ThemeType {
     def deleteRadioButton: Self = this.set("radioButton", js.undefined)
     
     @scala.inline
+    def setRadioButtonGroup(value: Container): Self = this.set("radioButtonGroup", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRadioButtonGroup: Self = this.set("radioButtonGroup", js.undefined)
+    
+    @scala.inline
     def setRangeInput(value: Thumb): Self = this.set("rangeInput", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -314,19 +344,25 @@ object ThemeType {
     def deleteSelect: Self = this.set("select", js.undefined)
     
     @scala.inline
+    def setSkipLinks(value: Position): Self = this.set("skipLinks", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSkipLinks: Self = this.set("skipLinks", js.undefined)
+    
+    @scala.inline
     def setTab(value: Hover): Self = this.set("tab", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTab: Self = this.set("tab", js.undefined)
     
     @scala.inline
-    def setTable(value: Body): Self = this.set("table", value.asInstanceOf[js.Any])
+    def setTable(value: Footer): Self = this.set("table", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTable: Self = this.set("table", js.undefined)
     
     @scala.inline
-    def setTabs(value: Gap): Self = this.set("tabs", value.asInstanceOf[js.Any])
+    def setTabs(value: Header): Self = this.set("tabs", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTabs: Self = this.set("tabs", js.undefined)

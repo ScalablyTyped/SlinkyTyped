@@ -33,16 +33,14 @@ import typingsSlinky.awsSdkClientGlacierNode.setVaultAccessPolicyExceptionsUnion
 import typingsSlinky.awsSdkClientGlacierNode.setVaultNotificationsExceptionsUnionMod.SetVaultNotificationsExceptionsUnion
 import typingsSlinky.awsSdkClientGlacierNode.uploadArchiveExceptionsUnionMod.UploadArchiveExceptionsUnion
 import typingsSlinky.awsSdkClientGlacierNode.uploadMultipartPartExceptionsUnionMod.UploadMultipartPartExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_InvalidParameterValueExceptionDetails> * / any */ @js.native
 trait InvalidParameterValueException
-  extends ServiceException[InvalidParameterValueExceptionDetails]
-     with AbortMultipartUploadExceptionsUnion
+  extends AbortMultipartUploadExceptionsUnion
      with AbortVaultLockExceptionsUnion
      with AddTagsToVaultExceptionsUnion
      with CompleteMultipartUploadExceptionsUnion
@@ -76,19 +74,15 @@ trait InvalidParameterValueException
      with UploadArchiveExceptionsUnion
      with UploadMultipartPartExceptionsUnion {
   
-  @JSName("name")
-  var name_InvalidParameterValueException: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.InvalidParameterValueException = js.native
+  var name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.InvalidParameterValueException = js.native
 }
 object InvalidParameterValueException {
   
   @scala.inline
   def apply(
-    $metadata: ResponseMetadata,
-    details: InvalidParameterValueExceptionDetails,
-    message: String,
     name: typingsSlinky.awsSdkClientGlacierNode.awsSdkClientGlacierNodeStrings.InvalidParameterValueException
   ): InvalidParameterValueException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[InvalidParameterValueException]
   }
   

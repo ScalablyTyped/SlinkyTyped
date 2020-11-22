@@ -1,10 +1,15 @@
 package typingsSlinky.officeUiFabricReact.calloutTypesMod
 
 import org.scalajs.dom.raw.Element
+import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.MouseEvent
 import org.scalajs.dom.raw.Window
 import slinky.core.facade.ReactRef
+import slinky.web.SyntheticFocusEvent
+import slinky.web.SyntheticKeyboardEvent
+import slinky.web.SyntheticMouseEvent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.anon.ContainsFocus
 import typingsSlinky.officeUiFabricReact.directionalHintMod.DirectionalHint
 import typingsSlinky.officeUiFabricReact.layerTypesMod.ILayerProps
@@ -12,7 +17,7 @@ import typingsSlinky.officeUiFabricReact.positioningTypesMod.ICalloutPositionedI
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
+import typingsSlinky.uifabricReactHooks.useTargetMod.Target
 import typingsSlinky.uifabricUtilities.irectangleMod.IRectangle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -112,6 +117,12 @@ trait ICalloutProps extends HTMLAttributes[HTMLDivElement] {
   var directionalHintForRTL: js.UndefOr[DirectionalHint] = js.native
   
   /**
+    * If true then the callout will dismiss when the target element is clicked
+    * @defaultvalue false
+    */
+  var dismissOnTargetClick: js.UndefOr[Boolean] = js.native
+  
+  /**
     * If true do not render on a new layer. If false render on a new layer.
     */
   var doNotLayer: js.UndefOr[Boolean] = js.native
@@ -185,20 +196,36 @@ trait ICalloutProps extends HTMLAttributes[HTMLDivElement] {
   var onScroll_ICalloutProps: js.UndefOr[js.Function0[Unit]] = js.native
   
   /**
+    * If defined, then takes priority over preventDismissOnLostFocus, preventDismissOnResize,
+    * and preventDismissOnScroll.
+    * If it returns true, then callout will not dismiss for this event.
+    * If not defined or returns false, callout can dismiss for this event.
+    */
+  var preventDismissOnEvent: js.UndefOr[
+    js.Function1[
+      /* ev */ Event | SyntheticFocusEvent[Element] | SyntheticKeyboardEvent[Element] | SyntheticMouseEvent[Element], 
+      Boolean
+    ]
+  ] = js.native
+  
+  /**
     * If true then the callout will not dismiss when it loses focus
     * @defaultvalue false
+    * @deprecated use preventDismissOnEvent callback instead
     */
   var preventDismissOnLostFocus: js.UndefOr[Boolean] = js.native
   
   /**
     * If true then the callout will not dismiss on resize
     * @defaultvalue false
+    * @deprecated use preventDismissOnEvent callback instead
     */
   var preventDismissOnResize: js.UndefOr[Boolean] = js.native
   
   /**
     * If true then the callout will not dismiss on scroll
     * @defaultvalue false
+    * @deprecated use preventDismissOnEvent callback instead
     */
   var preventDismissOnScroll: js.UndefOr[Boolean] = js.native
   
@@ -210,6 +237,12 @@ trait ICalloutProps extends HTMLAttributes[HTMLDivElement] {
     * @returns True if focus was set, false if it was not.
     */
   var setInitialFocus: js.UndefOr[Boolean] = js.native
+  
+  /**
+    * If true then the callout will dismiss when the window gets focus
+    * @defaultvalue false
+    */
+  var shouldDismissOnWindowFocus: js.UndefOr[Boolean] = js.native
   
   /**
     * If true, when this component is unmounted, focus will be restored to the element that had focus when the component
@@ -364,6 +397,12 @@ object ICalloutProps {
     def deleteDirectionalHintForRTL: Self = this.set("directionalHintForRTL", js.undefined)
     
     @scala.inline
+    def setDismissOnTargetClick(value: Boolean): Self = this.set("dismissOnTargetClick", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDismissOnTargetClick: Self = this.set("dismissOnTargetClick", js.undefined)
+    
+    @scala.inline
     def setDoNotLayer(value: Boolean): Self = this.set("doNotLayer", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -436,6 +475,14 @@ object ICalloutProps {
     def deleteOnScroll: Self = this.set("onScroll", js.undefined)
     
     @scala.inline
+    def setPreventDismissOnEvent(
+      value: /* ev */ Event | SyntheticFocusEvent[Element] | SyntheticKeyboardEvent[Element] | SyntheticMouseEvent[Element] => Boolean
+    ): Self = this.set("preventDismissOnEvent", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deletePreventDismissOnEvent: Self = this.set("preventDismissOnEvent", js.undefined)
+    
+    @scala.inline
     def setPreventDismissOnLostFocus(value: Boolean): Self = this.set("preventDismissOnLostFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -458,6 +505,12 @@ object ICalloutProps {
     
     @scala.inline
     def deleteSetInitialFocus: Self = this.set("setInitialFocus", js.undefined)
+    
+    @scala.inline
+    def setShouldDismissOnWindowFocus(value: Boolean): Self = this.set("shouldDismissOnWindowFocus", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteShouldDismissOnWindowFocus: Self = this.set("shouldDismissOnWindowFocus", js.undefined)
     
     @scala.inline
     def setShouldRestoreFocus(value: Boolean): Self = this.set("shouldRestoreFocus", value.asInstanceOf[js.Any])

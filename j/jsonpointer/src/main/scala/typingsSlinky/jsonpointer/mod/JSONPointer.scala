@@ -10,18 +10,18 @@ trait JSONPointer extends js.Object {
   /**
     * Looks up a JSON pointer in an object
     */
-  def get(`object`: js.Object): js.Any = js.native
+  def get(`object`: js.Object, pointer: String): js.Any = js.native
   
   /**
     * Set a value for a JSON pointer on object
     */
-  def set(`object`: js.Object, value: js.Any): Unit = js.native
+  def set(`object`: js.Object, pointer: String, value: js.Any): Unit = js.native
 }
 object JSONPointer {
   
   @scala.inline
-  def apply(get: js.Object => js.Any, set: (js.Object, js.Any) => Unit): JSONPointer = {
-    val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), set = js.Any.fromFunction2(set))
+  def apply(get: (js.Object, String) => js.Any, set: (js.Object, String, js.Any) => Unit): JSONPointer = {
+    val __obj = js.Dynamic.literal(get = js.Any.fromFunction2(get), set = js.Any.fromFunction3(set))
     __obj.asInstanceOf[JSONPointer]
   }
   
@@ -41,9 +41,9 @@ object JSONPointer {
     }
     
     @scala.inline
-    def setGet(value: js.Object => js.Any): Self = this.set("get", js.Any.fromFunction1(value))
+    def setGet(value: (js.Object, String) => js.Any): Self = this.set("get", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setSet(value: (js.Object, js.Any) => Unit): Self = this.set("set", js.Any.fromFunction2(value))
+    def setSet(value: (js.Object, String, js.Any) => Unit): Self = this.set("set", js.Any.fromFunction3(value))
   }
 }

@@ -1,6 +1,5 @@
 package typingsSlinky.pulumiAws.bucketPolicyMod
 
-import typingsSlinky.pulumiAws.documentsMod.PolicyDocument
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,14 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BucketPolicyState extends js.Object {
   
   /**
-    * The name of the bucket to which to apply the policy.
+    * Amazon Resource Name (ARN) of the bucket.
     */
   val bucket: js.UndefOr[Input[String]] = js.native
   
-  /**
-    * The text of the policy.
-    */
-  val policy: js.UndefOr[Input[String | PolicyDocument]] = js.native
+  val policy: js.UndefOr[Input[String]] = js.native
 }
 object BucketPolicyState {
   
@@ -49,7 +45,7 @@ object BucketPolicyState {
     def deleteBucket: Self = this.set("bucket", js.undefined)
     
     @scala.inline
-    def setPolicy(value: Input[String | PolicyDocument]): Self = this.set("policy", value.asInstanceOf[js.Any])
+    def setPolicy(value: Input[String]): Self = this.set("policy", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePolicy: Self = this.set("policy", js.undefined)

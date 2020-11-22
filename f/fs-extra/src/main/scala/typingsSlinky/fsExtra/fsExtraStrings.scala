@@ -1,6 +1,5 @@
 package typingsSlinky.fsExtra
 
-import typingsSlinky.fsExtra.mod.FsSymlinkType
 import typingsSlinky.fsExtra.mod.SymlinkType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,15 +23,11 @@ object fsExtraStrings {
   sealed trait buffer extends js.Object
   
   @js.native
-  sealed trait dir
-    extends FsSymlinkType
-       with SymlinkType
+  sealed trait dir extends SymlinkType
   
   @js.native
-  sealed trait file
-    extends FsSymlinkType
-       with SymlinkType
+  sealed trait file extends SymlinkType
   
   @js.native
-  sealed trait junction extends FsSymlinkType
+  sealed trait junction extends SymlinkType
 }

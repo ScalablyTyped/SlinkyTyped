@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Schema[T] extends js.Object {
+trait Schema[T, C] extends js.Object {
   
   def cast(): T = js.native
   def cast(value: js.UndefOr[scala.Nothing], options: js.Any): T = js.native
@@ -48,16 +48,16 @@ trait Schema[T] extends js.Object {
   def typeError(message: TestOptionsMessage[js.Object, _]): this.type = js.native
   
   def validate(value: js.Any): js.Promise[T] = js.native
-  def validate(value: js.Any, options: ValidateOptions): js.Promise[T] = js.native
+  def validate(value: js.Any, options: ValidateOptions[C]): js.Promise[T] = js.native
   
   def validateAt(path: String, value: T): js.Promise[T] = js.native
-  def validateAt(path: String, value: T, options: ValidateOptions): js.Promise[T] = js.native
+  def validateAt(path: String, value: T, options: ValidateOptions[C]): js.Promise[T] = js.native
   
   def validateSync(value: js.Any): T = js.native
-  def validateSync(value: js.Any, options: ValidateOptions): T = js.native
+  def validateSync(value: js.Any, options: ValidateOptions[C]): T = js.native
   
   def validateSyncAt(path: String, value: T): T = js.native
-  def validateSyncAt(path: String, value: T, options: ValidateOptions): T = js.native
+  def validateSyncAt(path: String, value: T, options: ValidateOptions[C]): T = js.native
   
   def when(keys: String, builder: WhenOptions[this.type]): this.type = js.native
   def when(keys: js.Array[_], builder: WhenOptions[this.type]): this.type = js.native

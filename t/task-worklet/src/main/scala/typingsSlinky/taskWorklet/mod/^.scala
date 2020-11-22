@@ -6,6 +6,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("task-worklet", JSImport.Namespace)
 @js.native
-class ^ () extends TaskQueue {
+class ^[T /* <: TaskDescriptor */] () extends TaskQueue[T] {
   def this(options: Options) = this()
 }

@@ -13,15 +13,20 @@ trait RemovePermissionRequest extends js.Object {
   var EventBusName: js.UndefOr[NonPartnerEventBusName] = js.native
   
   /**
+    * Specifies whether to remove all permissions.
+    */
+  var RemoveAllPermissions: js.UndefOr[Boolean] = js.native
+  
+  /**
     * The statement ID corresponding to the account that is no longer allowed to put events to the default event bus.
     */
-  var StatementId: typingsSlinky.awsSdk.eventbridgeMod.StatementId = js.native
+  var StatementId: js.UndefOr[typingsSlinky.awsSdk.eventbridgeMod.StatementId] = js.native
 }
 object RemovePermissionRequest {
   
   @scala.inline
-  def apply(StatementId: StatementId): RemovePermissionRequest = {
-    val __obj = js.Dynamic.literal(StatementId = StatementId.asInstanceOf[js.Any])
+  def apply(): RemovePermissionRequest = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[RemovePermissionRequest]
   }
   
@@ -41,12 +46,21 @@ object RemovePermissionRequest {
     }
     
     @scala.inline
-    def setStatementId(value: StatementId): Self = this.set("StatementId", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setEventBusName(value: NonPartnerEventBusName): Self = this.set("EventBusName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEventBusName: Self = this.set("EventBusName", js.undefined)
+    
+    @scala.inline
+    def setRemoveAllPermissions(value: Boolean): Self = this.set("RemoveAllPermissions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRemoveAllPermissions: Self = this.set("RemoveAllPermissions", js.undefined)
+    
+    @scala.inline
+    def setStatementId(value: StatementId): Self = this.set("StatementId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStatementId: Self = this.set("StatementId", js.undefined)
   }
 }

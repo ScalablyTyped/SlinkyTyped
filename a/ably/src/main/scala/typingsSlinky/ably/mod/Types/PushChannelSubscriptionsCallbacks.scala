@@ -18,8 +18,5 @@ trait PushChannelSubscriptionsCallbacks extends js.Object {
   def removeWhere(params: PushChannelSubscriptionParams, callback: errorCallback): Unit = js.native
   
   def save(subscription: PushChannelSubscription): Unit = js.native
-  def save(
-    subscription: PushChannelSubscription,
-    callback: js.Function2[/* error */ ErrorInfo, /* subscription */ PushChannelSubscription, Unit]
-  ): Unit = js.native
+  def save(subscription: PushChannelSubscription, callback: StandardCallback[PushChannelSubscription]): Unit = js.native
 }

@@ -1,9 +1,10 @@
 package typingsSlinky.semanticUiReact.components
 
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.stardustUiReactComponentRef.typesMod.RefProps
+import typingsSlinky.fluentuiReactComponentRef.utilsMod.RefProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -20,13 +21,13 @@ object Ref {
        with StBuildingComponent[tag.type, js.Object] {
     
     @scala.inline
-    def innerRefRefObject(value: ReactRef[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRefRefObject(value: ReactRef[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def innerRefFunction1(value: /* instance */ _ | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
+    def innerRefFunction1(value: /* instance */ HTMLElement | Null => Unit): this.type = set("innerRef", js.Any.fromFunction1(value))
     
     @scala.inline
-    def innerRef(value: typingsSlinky.react.mod.Ref[_]): this.type = set("innerRef", value.asInstanceOf[js.Any])
+    def innerRef(value: typingsSlinky.react.mod.Ref[HTMLElement]): this.type = set("innerRef", value.asInstanceOf[js.Any])
     
     @scala.inline
     def innerRefNull: this.type = set("innerRef", null)

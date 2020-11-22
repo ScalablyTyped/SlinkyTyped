@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/NavbarText", JSImport.Default)
+@JSImport("reactstrap/es/NavbarText", JSImport.Default)
 @js.native
-class default[T] ()
+class default ()
   extends Component[NavbarTextProps, js.Object, js.Any]

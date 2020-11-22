@@ -1,13 +1,23 @@
 package typingsSlinky.electron.Electron
 
+import typingsSlinky.electron.electronStrings.`clipboard-read`
 import typingsSlinky.electron.electronStrings.`spellcheck-dictionary-download-begin`
 import typingsSlinky.electron.electronStrings.`spellcheck-dictionary-download-failure`
 import typingsSlinky.electron.electronStrings.`spellcheck-dictionary-download-success`
 import typingsSlinky.electron.electronStrings.`spellcheck-dictionary-initialized`
 import typingsSlinky.electron.electronStrings.`will-download`
+import typingsSlinky.electron.electronStrings.fullscreen
+import typingsSlinky.electron.electronStrings.geolocation
+import typingsSlinky.electron.electronStrings.media
+import typingsSlinky.electron.electronStrings.mediaKeySystem
+import typingsSlinky.electron.electronStrings.midi
+import typingsSlinky.electron.electronStrings.midiSysex
+import typingsSlinky.electron.electronStrings.notifications
+import typingsSlinky.electron.electronStrings.openExternal
+import typingsSlinky.electron.electronStrings.pointerLock
 import typingsSlinky.electron.electronStrings.preconnect
 import typingsSlinky.node.Buffer
-import typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter
+import typingsSlinky.node.eventsMod.EventEmitter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -63,11 +73,10 @@ trait Session_ extends EventEmitter {
   
   val availableSpellCheckerLanguages: js.Array[String] = js.native
   
-  def clearAuthCache(options: RemoveClientCertificate): js.Promise[Unit] = js.native
   /**
     * resolves when the session’s HTTP authentication cache has been cleared.
     */
-  def clearAuthCache(options: RemovePassword): js.Promise[Unit] = js.native
+  def clearAuthCache(): js.Promise[Unit] = js.native
   
   /**
     * resolves when the cache clear operation is complete.
@@ -161,7 +170,7 @@ trait Session_ extends EventEmitter {
     * this setting is an empty list Electron will try to populate this setting with
     * the current OS locale.  This setting is persisted across restarts.
     *
-    * **Note:** On macOS the OS spellchecker is used and has it's own list of
+    * **Note:** On macOS the OS spellchecker is used and has its own list of
     * languages.  This API is a no-op on macOS.
     */
   def getSpellCheckerLanguages(): js.Array[String] = js.native
@@ -170,6 +179,14 @@ trait Session_ extends EventEmitter {
     * The user agent for this session.
     */
   def getUserAgent(): String = js.native
+  
+  /**
+    * Whether or not this session is a persistent one. The default `webContents`
+    * session of a `BrowserWindow` is persistent. When creating a session from a
+    * partition, session prefixed with `persist:` will be persistent, while others
+    * will be temporary.
+    */
+  def isPersistent(): Boolean = js.native
   
   /**
     * An array of all words in app's custom dictionary. Resolves when the full
@@ -185,6 +202,7 @@ trait Session_ extends EventEmitter {
     * an API that Electron does not support) then they will be logged to the console.
     *
     * Note that Electron does not support the full range of Chrome extensions APIs.
+    * See Supported Extensions APIs for more details on what is supported.
     *
     * Note that in previous versions of Electron, extensions that were loaded would be
     * remembered for future runs of the application. This is no longer the case:
@@ -195,6 +213,9 @@ trait Session_ extends EventEmitter {
     *
     * **Note:** This API cannot be called before the `ready` event of the `app` module
     * is emitted.
+    *
+    * **Note:** Loading extensions into in-memory (non-persistent) sessions is not
+    * supported and will throw an error.
     */
   def loadExtension(path: String): js.Promise[Extension] = js.native
   
@@ -360,7 +381,7 @@ trait Session_ extends EventEmitter {
   def setCertificateVerifyProc(): Unit = js.native
   def setCertificateVerifyProc(
     proc: js.Function2[
-      /* request */ CertificateVerifyProcProcRequest, 
+      /* request */ Request, 
       /* callback */ js.Function1[/* verificationResult */ Double, Unit], 
       Unit
     ]
@@ -398,7 +419,7 @@ trait Session_ extends EventEmitter {
   def setPermissionRequestHandler(
     handler: js.Function4[
       /* webContents */ WebContents_, 
-      /* permission */ String, 
+      /* permission */ `clipboard-read` | media | mediaKeySystem | geolocation | notifications | midi | midiSysex | pointerLock | fullscreen | openExternal, 
       /* callback */ js.Function1[/* permissionGranted */ Boolean, Unit], 
       /* details */ PermissionRequestHandlerHandlerDetails, 
       Unit

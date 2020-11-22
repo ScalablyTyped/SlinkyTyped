@@ -6,6 +6,7 @@ import typingsSlinky.devtoolsProtocol.devtoolsProtocolStrings.preciseCoverageDel
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Profiler.ConsoleProfileFinishedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Profiler.ConsoleProfileStartedEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Profiler.GetBestEffortCoverageResponse
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Profiler.GetCountersResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Profiler.GetRuntimeCallStatsResponse
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Profiler.PreciseCoverageDeltaUpdateEvent
 import typingsSlinky.devtoolsProtocol.mod.Protocol.Profiler.SetSamplingIntervalRequest
@@ -24,11 +25,21 @@ trait ProfilerApi extends js.Object {
   def disable(): js.Promise[Unit] = js.native
   
   /**
+    * Disable counters collection.
+    */
+  def disableCounters(): js.Promise[Unit] = js.native
+  
+  /**
     * Disable run time call stats collection.
     */
   def disableRuntimeCallStats(): js.Promise[Unit] = js.native
   
   def enable(): js.Promise[Unit] = js.native
+  
+  /**
+    * Enable counters collection.
+    */
+  def enableCounters(): js.Promise[Unit] = js.native
   
   /**
     * Enable run time call stats collection.
@@ -40,6 +51,11 @@ trait ProfilerApi extends js.Object {
     * garbage collection.
     */
   def getBestEffortCoverage(): js.Promise[GetBestEffortCoverageResponse] = js.native
+  
+  /**
+    * Retrieve counters.
+    */
+  def getCounters(): js.Promise[GetCountersResponse] = js.native
   
   /**
     * Retrieve run time call stats.

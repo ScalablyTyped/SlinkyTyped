@@ -10,7 +10,7 @@ import typingsSlinky.antd.cascaderMod.CascaderProps
 import typingsSlinky.antd.cascaderMod.CascaderValueType
 import typingsSlinky.antd.cascaderMod.FieldNamesType
 import typingsSlinky.antd.cascaderMod.ShowSearchType
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -75,10 +75,16 @@ object Cascader {
     def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
     
     @scala.inline
+    def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def inputPrefixCls(value: String): this.type = set("inputPrefixCls", value.asInstanceOf[js.Any])
     
     @scala.inline
     def loadData(value: /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]] => Unit): this.type = set("loadData", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def name(value: String): this.type = set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def notFoundContentReactElement(value: ReactElement): this.type = set("notFoundContent", value.asInstanceOf[js.Any])

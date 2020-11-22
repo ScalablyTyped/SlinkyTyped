@@ -25,40 +25,36 @@ class SelectControlValueAccessor protected () extends ControlValueAccessor {
   def compareWith_=(fn: js.Function2[/* o1 */ js.Any, /* o2 */ js.Any, Boolean]): Unit = js.native
   
   /**
-    * @description
     * The registered callback function called when a change event occurs on the input element.
+    * @nodoc
     */
   def onChange(_underscore: js.Any): Unit = js.native
   
   /**
-    * @description
     * The registered callback function called when a blur event occurs on the input element.
+    * @nodoc
     */
   def onTouched(): Unit = js.native
   
   /**
-    * @description
     * Registers a function called when the control value changes.
-    *
-    * @param fn The callback function
+    * @nodoc
     */
   def registerOnChange(fn: js.Function1[/* value */ js.Any, _]): Unit = js.native
   
   /**
-    * @description
     * Registers a function called when the control is touched.
-    *
-    * @param fn The callback function
+    * @nodoc
     */
   def registerOnTouched(fn: js.Function0[_]): Unit = js.native
   
   /**
     * Sets the "disabled" property on the select input element.
-    *
-    * @param isDisabled The disabled value
+    * @nodoc
     */
   @JSName("setDisabledState")
   def setDisabledState_MSelectControlValueAccessor(isDisabled: Boolean): Unit = js.native
   
+  /** @nodoc */
   var value: js.Any = js.native
 }

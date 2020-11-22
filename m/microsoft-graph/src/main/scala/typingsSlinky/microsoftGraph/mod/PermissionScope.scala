@@ -11,10 +11,10 @@ trait PermissionScope extends js.Object {
     * A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf
     * of all users. This text appears in tenant-wide admin consent experiences.
     */
-  var adminConsentDescription: js.UndefOr[String] = js.native
+  var adminConsentDescription: js.UndefOr[NullableOption[String]] = js.native
   
   // The permission's title, intended to be read by an administrator granting the permission on behalf of all users.
-  var adminConsentDisplayName: js.UndefOr[String] = js.native
+  var adminConsentDisplayName: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Unique delegated permission identifier inside the collection of delegated permissions defined for a resource
@@ -29,7 +29,7 @@ trait PermissionScope extends js.Object {
     */
   var isEnabled: js.UndefOr[Boolean] = js.native
   
-  var origin: js.UndefOr[String] = js.native
+  var origin: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of
@@ -37,26 +37,26 @@ trait PermissionScope extends js.Object {
     * behavior, but each customer can choose to customize the behavior in their organization (by allowing, restricting or
     * limiting user consent to this delegated permission.)
     */
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf.
     * This text appears in consent experiences where the user is consenting only on behalf of themselves.
     */
-  var userConsentDescription: js.UndefOr[String] = js.native
+  var userConsentDescription: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * A title for the permission, intended to be read by a user granting the permission on their own behalf. This text
     * appears in consent experiences where the user is consenting only on behalf of themselves.
     */
-  var userConsentDisplayName: js.UndefOr[String] = js.native
+  var userConsentDisplayName: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length.
     * Allowed characters are : ! # $ % &amp; ' ( ) * + , - . / : ; = ? @ [ ] ^ + _ { } ~, as well as characters in the ranges
     * 0-9, A-Z and a-z. Any other character, including the space character, are not allowed.
     */
-  var value: js.UndefOr[String] = js.native
+  var value: js.UndefOr[NullableOption[String]] = js.native
 }
 object PermissionScope {
   
@@ -82,16 +82,22 @@ object PermissionScope {
     }
     
     @scala.inline
-    def setAdminConsentDescription(value: String): Self = this.set("adminConsentDescription", value.asInstanceOf[js.Any])
+    def setAdminConsentDescription(value: NullableOption[String]): Self = this.set("adminConsentDescription", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAdminConsentDescription: Self = this.set("adminConsentDescription", js.undefined)
     
     @scala.inline
-    def setAdminConsentDisplayName(value: String): Self = this.set("adminConsentDisplayName", value.asInstanceOf[js.Any])
+    def setAdminConsentDescriptionNull: Self = this.set("adminConsentDescription", null)
+    
+    @scala.inline
+    def setAdminConsentDisplayName(value: NullableOption[String]): Self = this.set("adminConsentDisplayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAdminConsentDisplayName: Self = this.set("adminConsentDisplayName", js.undefined)
+    
+    @scala.inline
+    def setAdminConsentDisplayNameNull: Self = this.set("adminConsentDisplayName", null)
     
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
@@ -106,33 +112,48 @@ object PermissionScope {
     def deleteIsEnabled: Self = this.set("isEnabled", js.undefined)
     
     @scala.inline
-    def setOrigin(value: String): Self = this.set("origin", value.asInstanceOf[js.Any])
+    def setOrigin(value: NullableOption[String]): Self = this.set("origin", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOrigin: Self = this.set("origin", js.undefined)
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setOriginNull: Self = this.set("origin", null)
+    
+    @scala.inline
+    def setType(value: NullableOption[String]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
     
     @scala.inline
-    def setUserConsentDescription(value: String): Self = this.set("userConsentDescription", value.asInstanceOf[js.Any])
+    def setTypeNull: Self = this.set("type", null)
+    
+    @scala.inline
+    def setUserConsentDescription(value: NullableOption[String]): Self = this.set("userConsentDescription", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserConsentDescription: Self = this.set("userConsentDescription", js.undefined)
     
     @scala.inline
-    def setUserConsentDisplayName(value: String): Self = this.set("userConsentDisplayName", value.asInstanceOf[js.Any])
+    def setUserConsentDescriptionNull: Self = this.set("userConsentDescription", null)
+    
+    @scala.inline
+    def setUserConsentDisplayName(value: NullableOption[String]): Self = this.set("userConsentDisplayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserConsentDisplayName: Self = this.set("userConsentDisplayName", js.undefined)
     
     @scala.inline
-    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setUserConsentDisplayNameNull: Self = this.set("userConsentDisplayName", null)
+    
+    @scala.inline
+    def setValue(value: NullableOption[String]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

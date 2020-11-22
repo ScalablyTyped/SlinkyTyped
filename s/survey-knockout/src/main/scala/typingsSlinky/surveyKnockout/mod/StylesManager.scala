@@ -38,7 +38,7 @@ object StylesManager extends js.Object {
   
   def createSheet(styleSheetId: String): CSSStyleSheet = js.native
   
-  def findSheet(styleSheetId: String): CSSStyleSheet = js.native
+  def findSheet(styleSheetId: String): js.Any = js.native
   
   var modernThemeCss: StringDictionary[String] = js.native
 }

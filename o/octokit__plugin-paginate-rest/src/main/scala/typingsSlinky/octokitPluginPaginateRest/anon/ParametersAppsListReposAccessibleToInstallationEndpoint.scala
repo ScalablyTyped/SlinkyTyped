@@ -12,14 +12,14 @@ trait ParametersAppsListReposAccessibleToInstallationEndpoint extends js.Object 
   
   var parameters: AppsListReposAccessibleToInstallationEndpoint = js.native
   
-  var response: OctokitResponse[AppsListReposAccessibleToInstallationResponseData] with Data = js.native
+  var response: OctokitResponse[AppsListReposAccessibleToInstallationResponseData] with `1` = js.native
 }
 object ParametersAppsListReposAccessibleToInstallationEndpoint {
   
   @scala.inline
   def apply(
     parameters: AppsListReposAccessibleToInstallationEndpoint,
-    response: OctokitResponse[AppsListReposAccessibleToInstallationResponseData] with Data
+    response: OctokitResponse[AppsListReposAccessibleToInstallationResponseData] with `1`
   ): ParametersAppsListReposAccessibleToInstallationEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersAppsListReposAccessibleToInstallationEndpoint]
@@ -44,6 +44,6 @@ object ParametersAppsListReposAccessibleToInstallationEndpoint {
     def setParameters(value: AppsListReposAccessibleToInstallationEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[AppsListReposAccessibleToInstallationResponseData] with Data): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[AppsListReposAccessibleToInstallationResponseData] with `1`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TagScopeTerm extends js.Object {
   
   /**
-    * The operator to use in the condition.
+    * The operator to use in the condition. Valid operators are EQ (equals) or NE (not equals).
     */
   var comparator: js.UndefOr[JobComparator] = js.native
   
@@ -18,7 +18,7 @@ trait TagScopeTerm extends js.Object {
   var key: js.UndefOr[string] = js.native
   
   /**
-    * The tag key and value pairs to use in the condition.
+    * The tag keys or tag key and value pairs to use in the condition.
     */
   var tagValues: js.UndefOr[listOfTagValuePair] = js.native
   

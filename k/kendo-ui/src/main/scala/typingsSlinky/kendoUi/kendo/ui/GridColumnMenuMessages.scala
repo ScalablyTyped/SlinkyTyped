@@ -15,13 +15,19 @@ trait GridColumnMenuMessages extends js.Object {
   
   var lock: js.UndefOr[String] = js.native
   
+  var setColumnPosition: js.UndefOr[String] = js.native
+  
   var settings: js.UndefOr[String] = js.native
   
   var sortAscending: js.UndefOr[String] = js.native
   
   var sortDescending: js.UndefOr[String] = js.native
   
+  var stick: js.UndefOr[String] = js.native
+  
   var unlock: js.UndefOr[String] = js.native
+  
+  var unstick: js.UndefOr[String] = js.native
 }
 object GridColumnMenuMessages {
   
@@ -71,6 +77,12 @@ object GridColumnMenuMessages {
     def deleteLock: Self = this.set("lock", js.undefined)
     
     @scala.inline
+    def setSetColumnPosition(value: String): Self = this.set("setColumnPosition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSetColumnPosition: Self = this.set("setColumnPosition", js.undefined)
+    
+    @scala.inline
     def setSettings(value: String): Self = this.set("settings", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -89,9 +101,21 @@ object GridColumnMenuMessages {
     def deleteSortDescending: Self = this.set("sortDescending", js.undefined)
     
     @scala.inline
+    def setStick(value: String): Self = this.set("stick", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStick: Self = this.set("stick", js.undefined)
+    
+    @scala.inline
     def setUnlock(value: String): Self = this.set("unlock", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUnlock: Self = this.set("unlock", js.undefined)
+    
+    @scala.inline
+    def setUnstick(value: String): Self = this.set("unstick", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnstick: Self = this.set("unstick", js.undefined)
   }
 }

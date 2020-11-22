@@ -13,12 +13,12 @@ trait TypeAliasDeclaration
      with _HasJSDoc {
   
   @JSName("kind")
-  var kind_TypeAliasDeclaration: typingsSlinky.typescript.mod.SyntaxKind.TypeAliasDeclaration = js.native
+  val kind_TypeAliasDeclaration: typingsSlinky.typescript.mod.SyntaxKind.TypeAliasDeclaration = js.native
   
   @JSName("name")
-  var name_TypeAliasDeclaration: Identifier = js.native
+  val name_TypeAliasDeclaration: Identifier = js.native
   
-  var `type`: TypeNode = js.native
+  val `type`: TypeNode = js.native
   
-  var typeParameters: js.UndefOr[NodeArray[TypeParameterDeclaration]] = js.native
+  val typeParameters: js.UndefOr[NodeArray[TypeParameterDeclaration]] = js.native
 }

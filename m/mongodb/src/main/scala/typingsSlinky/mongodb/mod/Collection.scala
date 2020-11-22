@@ -10,7 +10,6 @@ import typingsSlinky.mongodb.anon.DropTargetSession
 import typingsSlinky.mongodb.anon.FullSession
 import typingsSlinky.mongodb.anon.MaxTimeMSSession
 import typingsSlinky.mongodb.anon.ScaleSession
-import typingsSlinky.mongodb.anon.Session
 import typingsSlinky.mongodb.anon.SessionClientSession
 import typingsSlinky.mongodb.anon.UpdateOneOptionsmultibool
 import typingsSlinky.mongodb.anon.`1`
@@ -192,39 +191,43 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
   def estimatedDocumentCount(query: FilterQuery[TSchema], options: MongoCountPreferences): js.Promise[scala.Double] = js.native
   def estimatedDocumentCount(query: FilterQuery[TSchema], options: MongoCountPreferences, callback: MongoCallback[scala.Double]): Unit = js.native
   
-  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#find */
+  /** http://mongodb.github.io/node-mongodb-native/3.6/api/Collection.html#find */
   def find[T](): Cursor[T] = js.native
   def find[T](query: FilterQuery[TSchema]): Cursor[T] = js.native
-  def find[T](query: FilterQuery[TSchema], options: FindOneOptions): Cursor[T] = js.native
+  def find[T](query: FilterQuery[TSchema], options: FindOneOptions[T | TSchema]): Cursor[T] = js.native
   
   def findOne[T](filter: FilterQuery[TSchema]): js.Promise[T | Null] = js.native
-  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#findOne */
-  def findOne[T](filter: FilterQuery[TSchema], callback: MongoCallback[T | Null]): Unit = js.native
-  def findOne[T](filter: FilterQuery[TSchema], options: FindOneOptions): js.Promise[T | Null] = js.native
-  def findOne[T](filter: FilterQuery[TSchema], options: FindOneOptions, callback: MongoCallback[T | Null]): Unit = js.native
+  /** http://mongodb.github.io/node-mongodb-native/3.6/api/Collection.html#findOne */
+  def findOne[T](filter: FilterQuery[TSchema], callback: MongoCallback[T | Null | TSchema]): Unit = js.native
+  def findOne[T](filter: FilterQuery[TSchema], options: FindOneOptions[T | TSchema]): js.Promise[T | Null] = js.native
+  def findOne[T](
+    filter: FilterQuery[TSchema],
+    options: FindOneOptions[T | TSchema],
+    callback: MongoCallback[T | Null | TSchema]
+  ): Unit = js.native
   
   def findOneAndDelete(filter: FilterQuery[TSchema]): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
-  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#findOneAndDelete */
+  /** http://mongodb.github.io/node-mongodb-native/3.6/api/Collection.html#findOneAndDelete */
   def findOneAndDelete(filter: FilterQuery[TSchema], callback: MongoCallback[FindAndModifyWriteOpResultObject[TSchema]]): Unit = js.native
-  def findOneAndDelete(filter: FilterQuery[TSchema], options: FindOneAndDeleteOption): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
+  def findOneAndDelete(filter: FilterQuery[TSchema], options: FindOneAndDeleteOption[TSchema]): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
   def findOneAndDelete(
     filter: FilterQuery[TSchema],
-    options: FindOneAndDeleteOption,
+    options: FindOneAndDeleteOption[TSchema],
     callback: MongoCallback[FindAndModifyWriteOpResultObject[TSchema]]
   ): Unit = js.native
   
   def findOneAndReplace(filter: FilterQuery[TSchema], replacement: js.Object): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
-  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#findOneAndReplace */
+  /** http://mongodb.github.io/node-mongodb-native/3.6/api/Collection.html#findOneAndReplace */
   def findOneAndReplace(
     filter: FilterQuery[TSchema],
     replacement: js.Object,
     callback: MongoCallback[FindAndModifyWriteOpResultObject[TSchema]]
   ): Unit = js.native
-  def findOneAndReplace(filter: FilterQuery[TSchema], replacement: js.Object, options: FindOneAndReplaceOption): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
+  def findOneAndReplace(filter: FilterQuery[TSchema], replacement: js.Object, options: FindOneAndReplaceOption[TSchema]): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
   def findOneAndReplace(
     filter: FilterQuery[TSchema],
     replacement: js.Object,
-    options: FindOneAndReplaceOption,
+    options: FindOneAndReplaceOption[TSchema],
     callback: MongoCallback[FindAndModifyWriteOpResultObject[TSchema]]
   ): Unit = js.native
   
@@ -234,25 +237,29 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     update: TSchema,
     callback: MongoCallback[FindAndModifyWriteOpResultObject[TSchema]]
   ): Unit = js.native
-  def findOneAndUpdate(filter: FilterQuery[TSchema], update: TSchema, options: FindOneAndUpdateOption): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
+  def findOneAndUpdate(filter: FilterQuery[TSchema], update: TSchema, options: FindOneAndUpdateOption[TSchema]): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
   def findOneAndUpdate(
     filter: FilterQuery[TSchema],
     update: TSchema,
-    options: FindOneAndUpdateOption,
+    options: FindOneAndUpdateOption[TSchema],
     callback: MongoCallback[FindAndModifyWriteOpResultObject[TSchema]]
   ): Unit = js.native
   def findOneAndUpdate(filter: FilterQuery[TSchema], update: UpdateQuery[TSchema]): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
-  /** http://mongodb.github.io/node-mongodb-native/3.1/api/Collection.html#findOneAndUpdate */
+  /** http://mongodb.github.io/node-mongodb-native/3.6/api/Collection.html#findOneAndUpdate */
   def findOneAndUpdate(
     filter: FilterQuery[TSchema],
     update: UpdateQuery[TSchema],
     callback: MongoCallback[FindAndModifyWriteOpResultObject[TSchema]]
   ): Unit = js.native
-  def findOneAndUpdate(filter: FilterQuery[TSchema], update: UpdateQuery[TSchema], options: FindOneAndUpdateOption): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
   def findOneAndUpdate(
     filter: FilterQuery[TSchema],
     update: UpdateQuery[TSchema],
-    options: FindOneAndUpdateOption,
+    options: FindOneAndUpdateOption[TSchema]
+  ): js.Promise[FindAndModifyWriteOpResultObject[TSchema]] = js.native
+  def findOneAndUpdate(
+    filter: FilterQuery[TSchema],
+    update: UpdateQuery[TSchema],
+    options: FindOneAndUpdateOption[TSchema],
     callback: MongoCallback[FindAndModifyWriteOpResultObject[TSchema]]
   ): Unit = js.native
   
@@ -286,7 +293,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: js.Function,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Array[_],
@@ -295,7 +302,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: js.Function,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -322,7 +329,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: Code,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Array[_],
@@ -331,7 +338,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: Code,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -358,7 +365,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: js.Function,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Array[_],
@@ -367,7 +374,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: js.Function,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -394,7 +401,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: Code,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Array[_],
@@ -403,7 +410,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: Code,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -430,7 +437,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: js.Function,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Function,
@@ -439,7 +446,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: js.Function,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -466,7 +473,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: Code,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Function,
@@ -475,7 +482,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: Code,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -502,7 +509,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: js.Function,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Function,
@@ -511,7 +518,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: js.Function,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -538,7 +545,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: Code,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Function,
@@ -547,7 +554,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: Code,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   /** @deprecated MongoDB 3.6 or higher no longer supports the group command. We recommend rewriting using the aggregation framework. */
@@ -577,7 +584,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: js.Function,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   /** @deprecated MongoDB 3.6 or higher no longer supports the group command. We recommend rewriting using the aggregation framework. */
   def group(
@@ -587,7 +594,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: js.Function,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -614,7 +621,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: Code,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Object,
@@ -623,7 +630,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: Code,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -650,7 +657,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: js.Function,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Object,
@@ -659,7 +666,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: js.Function,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -686,7 +693,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: Code,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: js.Object,
@@ -695,7 +702,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: Code,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -722,7 +729,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: js.Function,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: Code,
@@ -731,7 +738,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: js.Function,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -758,7 +765,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: Code,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: Code,
@@ -767,7 +774,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: js.Function,
     finalize: Code,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -794,7 +801,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: js.Function,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: Code,
@@ -803,7 +810,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: js.Function,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   def group(
@@ -830,7 +837,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: Code,
     command: Boolean,
-    options: Session
+    options: typingsSlinky.mongodb.anon.ReadPreference
   ): js.Promise[_] = js.native
   def group(
     keys: Code,
@@ -839,7 +846,7 @@ trait Collection[TSchema /* <: StringDictionary[js.Any] */] extends js.Object {
     reduce: Code,
     finalize: Code,
     command: Boolean,
-    options: Session,
+    options: typingsSlinky.mongodb.anon.ReadPreference,
     callback: MongoCallback[_]
   ): Unit = js.native
   

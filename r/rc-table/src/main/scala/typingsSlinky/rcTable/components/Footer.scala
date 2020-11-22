@@ -1,7 +1,7 @@
 package typingsSlinky.rcTable.components
 
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.rcTable.footerMod.FooterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,18 +13,7 @@ object Footer {
   @js.native
   object component extends js.Object
   
-  @scala.inline
-  class Builder[RecordType] (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object]
+  def withProps(p: FooterProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  def withProps[RecordType](p: FooterProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
-  
-  @scala.inline
-  def apply[RecordType](): Builder[RecordType] = {
-    val __props = js.Dynamic.literal()
-    new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[FooterProps[RecordType]]))
-  }
-  
-  implicit def make[RecordType](companion: Footer.type): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: Footer.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }

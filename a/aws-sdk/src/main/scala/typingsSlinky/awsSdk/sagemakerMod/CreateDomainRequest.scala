@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CreateDomainRequest extends js.Object {
   
   /**
+    * Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.    PublicInternetOnly - Non-EFS traffic is through a VPC managed by Amazon SageMaker, which allows direct internet access    VpcOnly - All Studio traffic is through the specified VPC and subnets  
+    */
+  var AppNetworkAccessType: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.AppNetworkAccessType] = js.native
+  
+  /**
     * The mode of authentication that members use to access the domain.
     */
   var AuthMode: typingsSlinky.awsSdk.sagemakerMod.AuthMode = js.native
@@ -23,12 +28,17 @@ trait CreateDomainRequest extends js.Object {
   var DomainName: typingsSlinky.awsSdk.sagemakerMod.DomainName = js.native
   
   /**
-    * The AWS Key Management Service (KMS) encryption key ID. Encryption with a customer master key (CMK) is not supported.
+    * This member is deprecated and replaced with KmsKeyId.
     */
   var HomeEfsFileSystemKmsKeyId: js.UndefOr[KmsKeyId] = js.native
   
   /**
-    * The VPC subnets to use for communication with the EFS volume.
+    * SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key (CMK) by default. For more control, specify a customer managed CMK.
+    */
+  var KmsKeyId: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.KmsKeyId] = js.native
+  
+  /**
+    * The VPC subnets that Studio uses for communication.
     */
   var SubnetIds: Subnets = js.native
   
@@ -38,7 +48,7 @@ trait CreateDomainRequest extends js.Object {
   var Tags: js.UndefOr[TagList] = js.native
   
   /**
-    * The ID of the Amazon Virtual Private Cloud (VPC) to use for communication with the EFS volume.
+    * The ID of the Amazon Virtual Private Cloud (VPC) that Studio uses for communication.
     */
   var VpcId: typingsSlinky.awsSdk.sagemakerMod.VpcId = js.native
 }
@@ -90,10 +100,22 @@ object CreateDomainRequest {
     def setVpcId(value: VpcId): Self = this.set("VpcId", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setAppNetworkAccessType(value: AppNetworkAccessType): Self = this.set("AppNetworkAccessType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAppNetworkAccessType: Self = this.set("AppNetworkAccessType", js.undefined)
+    
+    @scala.inline
     def setHomeEfsFileSystemKmsKeyId(value: KmsKeyId): Self = this.set("HomeEfsFileSystemKmsKeyId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHomeEfsFileSystemKmsKeyId: Self = this.set("HomeEfsFileSystemKmsKeyId", js.undefined)
+    
+    @scala.inline
+    def setKmsKeyId(value: KmsKeyId): Self = this.set("KmsKeyId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKmsKeyId: Self = this.set("KmsKeyId", js.undefined)
     
     @scala.inline
     def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))

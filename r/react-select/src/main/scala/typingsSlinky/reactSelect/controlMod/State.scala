@@ -12,12 +12,15 @@ trait State extends js.Object {
   
   /** Whether the select is focused. */
   var isFocused: Boolean = js.native
+  
+  /** Whether the select is expanded. */
+  var menuIsOpen: Boolean = js.native
 }
 object State {
   
   @scala.inline
-  def apply(isDisabled: Boolean, isFocused: Boolean): State = {
-    val __obj = js.Dynamic.literal(isDisabled = isDisabled.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any])
+  def apply(isDisabled: Boolean, isFocused: Boolean, menuIsOpen: Boolean): State = {
+    val __obj = js.Dynamic.literal(isDisabled = isDisabled.asInstanceOf[js.Any], isFocused = isFocused.asInstanceOf[js.Any], menuIsOpen = menuIsOpen.asInstanceOf[js.Any])
     __obj.asInstanceOf[State]
   }
   
@@ -41,5 +44,8 @@ object State {
     
     @scala.inline
     def setIsFocused(value: Boolean): Self = this.set("isFocused", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setMenuIsOpen(value: Boolean): Self = this.set("menuIsOpen", value.asInstanceOf[js.Any])
   }
 }

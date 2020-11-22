@@ -11,7 +11,7 @@ trait JsonOptions extends js.Object {
     * Changes the default textNode property from $t to _t when option is set to true.
     * Alternatively a string can be specified which will override $t to what ever the string is.
     */
-  var alternateTextNode: js.UndefOr[Boolean] = js.native
+  var alternateTextNode: js.UndefOr[Boolean | String] = js.native
   
   /**
     * XML child nodes are always treated as arrays.
@@ -83,7 +83,7 @@ object JsonOptions {
     }
     
     @scala.inline
-    def setAlternateTextNode(value: Boolean): Self = this.set("alternateTextNode", value.asInstanceOf[js.Any])
+    def setAlternateTextNode(value: Boolean | String): Self = this.set("alternateTextNode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAlternateTextNode: Self = this.set("alternateTextNode", js.undefined)

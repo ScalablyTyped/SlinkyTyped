@@ -7,13 +7,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Crypto extends js.Object {
   
-  def generateRandomKey(callback: js.Function2[/* error */ ErrorInfo, /* key */ String, Unit]): Unit = js.native
+  def generateRandomKey(callback: StandardCallback[CipherKey]): Unit = js.native
+  
+  def getDefaultParams(params: CipherParamOptions, callback: StandardCallback[CipherParams]): Unit = js.native
 }
 object Crypto {
   
   @scala.inline
-  def apply(generateRandomKey: js.Function2[/* error */ ErrorInfo, /* key */ String, Unit] => Unit): Crypto = {
-    val __obj = js.Dynamic.literal(generateRandomKey = js.Any.fromFunction1(generateRandomKey))
+  def apply(
+    generateRandomKey: StandardCallback[CipherKey] => Unit,
+    getDefaultParams: (CipherParamOptions, StandardCallback[CipherParams]) => Unit
+  ): Crypto = {
+    val __obj = js.Dynamic.literal(generateRandomKey = js.Any.fromFunction1(generateRandomKey), getDefaultParams = js.Any.fromFunction2(getDefaultParams))
     __obj.asInstanceOf[Crypto]
   }
   
@@ -33,6 +38,9 @@ object Crypto {
     }
     
     @scala.inline
-    def setGenerateRandomKey(value: js.Function2[/* error */ ErrorInfo, /* key */ String, Unit] => Unit): Self = this.set("generateRandomKey", js.Any.fromFunction1(value))
+    def setGenerateRandomKey(value: StandardCallback[CipherKey] => Unit): Self = this.set("generateRandomKey", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setGetDefaultParams(value: (CipherParamOptions, StandardCallback[CipherParams]) => Unit): Self = this.set("getDefaultParams", js.Any.fromFunction2(value))
   }
 }

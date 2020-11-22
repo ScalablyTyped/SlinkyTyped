@@ -24,7 +24,11 @@ trait CollapsibleProps
   
   var classParentString: js.UndefOr[String] = js.native
   
+  var containerElementProps: js.UndefOr[js.Object] = js.native
+  
   var contentContainerTagName: js.UndefOr[String] = js.native
+  
+  var contentHiddenWhenClosed: js.UndefOr[Boolean] = js.native
   
   var contentInnerClassName: js.UndefOr[String] = js.native
   
@@ -61,6 +65,8 @@ trait CollapsibleProps
   var triggerClassName: js.UndefOr[String] = js.native
   
   var triggerDisabled: js.UndefOr[Boolean] = js.native
+  
+  var triggerElementProps: js.UndefOr[js.Object] = js.native
   
   var triggerOpenedClassName: js.UndefOr[String] = js.native
   
@@ -114,10 +120,22 @@ object CollapsibleProps {
     def deleteClassParentString: Self = this.set("classParentString", js.undefined)
     
     @scala.inline
+    def setContainerElementProps(value: js.Object): Self = this.set("containerElementProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContainerElementProps: Self = this.set("containerElementProps", js.undefined)
+    
+    @scala.inline
     def setContentContainerTagName(value: String): Self = this.set("contentContainerTagName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContentContainerTagName: Self = this.set("contentContainerTagName", js.undefined)
+    
+    @scala.inline
+    def setContentHiddenWhenClosed(value: Boolean): Self = this.set("contentHiddenWhenClosed", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContentHiddenWhenClosed: Self = this.set("contentHiddenWhenClosed", js.undefined)
     
     @scala.inline
     def setContentInnerClassName(value: String): Self = this.set("contentInnerClassName", value.asInstanceOf[js.Any])
@@ -223,6 +241,12 @@ object CollapsibleProps {
     
     @scala.inline
     def deleteTriggerDisabled: Self = this.set("triggerDisabled", js.undefined)
+    
+    @scala.inline
+    def setTriggerElementProps(value: js.Object): Self = this.set("triggerElementProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTriggerElementProps: Self = this.set("triggerElementProps", js.undefined)
     
     @scala.inline
     def setTriggerOpenedClassName(value: String): Self = this.set("triggerOpenedClassName", value.asInstanceOf[js.Any])

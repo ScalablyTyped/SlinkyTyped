@@ -1,6 +1,5 @@
 package typingsSlinky.carbonComponents.tooltipSimpleMod
 
-import typingsSlinky.carbonComponents.anon.Visible
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - Dropped any */ @js.native
 trait TooltipSimple extends js.Object {
   
-  def allowTooltipVisibility(hasVisible: Visible): Unit = js.native
+  def allowTooltipVisibility(hasVisible: js.Any): Unit = js.native
   
   def getTooltipTriggerButton(): js.Any = js.native
   
@@ -19,7 +18,7 @@ object TooltipSimple {
   
   @scala.inline
   def apply(
-    allowTooltipVisibility: Visible => Unit,
+    allowTooltipVisibility: js.Any => Unit,
     getTooltipTriggerButton: () => js.Any,
     tooltipFadeOut: js.Any
   ): TooltipSimple = {
@@ -43,7 +42,7 @@ object TooltipSimple {
     }
     
     @scala.inline
-    def setAllowTooltipVisibility(value: Visible => Unit): Self = this.set("allowTooltipVisibility", js.Any.fromFunction1(value))
+    def setAllowTooltipVisibility(value: js.Any => Unit): Self = this.set("allowTooltipVisibility", js.Any.fromFunction1(value))
     
     @scala.inline
     def setGetTooltipTriggerButton(value: () => js.Any): Self = this.set("getTooltipTriggerButton", js.Any.fromFunction0(value))

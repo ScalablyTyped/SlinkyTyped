@@ -16,7 +16,7 @@ trait ForwardRefs extends js.Object {
   
   var methodCalls: Set[CallExpression] = js.native
   
-  var typedNodes: Set[ParameterDeclaration | PropertyDeclaration | AsExpression] = js.native
+  var typedNodes: Set[ParameterDeclaration | AsExpression | PropertyDeclaration] = js.native
 }
 object ForwardRefs {
   
@@ -24,7 +24,7 @@ object ForwardRefs {
   def apply(
     forwardRefs: Set[typingsSlinky.typescript.mod.Identifier],
     methodCalls: Set[CallExpression],
-    typedNodes: Set[ParameterDeclaration | PropertyDeclaration | AsExpression]
+    typedNodes: Set[ParameterDeclaration | AsExpression | PropertyDeclaration]
   ): ForwardRefs = {
     val __obj = js.Dynamic.literal(forwardRefs = forwardRefs.asInstanceOf[js.Any], methodCalls = methodCalls.asInstanceOf[js.Any], typedNodes = typedNodes.asInstanceOf[js.Any])
     __obj.asInstanceOf[ForwardRefs]
@@ -52,6 +52,6 @@ object ForwardRefs {
     def setMethodCalls(value: Set[CallExpression]): Self = this.set("methodCalls", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTypedNodes(value: Set[ParameterDeclaration | PropertyDeclaration | AsExpression]): Self = this.set("typedNodes", value.asInstanceOf[js.Any])
+    def setTypedNodes(value: Set[ParameterDeclaration | AsExpression | PropertyDeclaration]): Self = this.set("typedNodes", value.asInstanceOf[js.Any])
   }
 }

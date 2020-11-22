@@ -13,8 +13,10 @@ class Queue protected () extends js.Object {
   
   def ack(ack: String, callback: QueueCallback[String]): Unit = js.native
   
-  def add(payload: String, callback: QueueCallback[String]): Unit = js.native
-  def add(payload: String, opts: QueueOptions, callback: QueueCallback[String]): Unit = js.native
+  def add(payload: ArrayPayload, callback: QueueCallback[js.Array[String]]): Unit = js.native
+  def add(payload: ArrayPayload, opts: QueueOptions, callback: QueueCallback[js.Array[String]]): Unit = js.native
+  def add(payload: Payload, callback: QueueCallback[String]): Unit = js.native
+  def add(payload: Payload, opts: QueueOptions, callback: QueueCallback[String]): Unit = js.native
   
   def clean(callback: QueueCallback[_]): Unit = js.native
   

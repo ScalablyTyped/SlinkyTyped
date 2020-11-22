@@ -4,6 +4,8 @@ import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
+import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -113,5 +115,12 @@ object blackAndWhitePostProcessMod extends js.Object {
       * Linear about to convert he result to black and white (default: 1)
       */
     var degree: Double = js.native
+  }
+  /* static members */
+  @js.native
+  object BlackAndWhitePostProcess extends js.Object {
+    
+    /** @hidden */
+    def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): Nullable[BlackAndWhitePostProcess] = js.native
   }
 }

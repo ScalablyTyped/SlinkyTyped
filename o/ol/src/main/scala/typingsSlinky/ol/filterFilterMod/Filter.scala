@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Filter extends js.Object {
   
+  /**
+    * The XML tag name for a filter.
+    */
   def getTagName(): String = js.native
 }
 object Filter {

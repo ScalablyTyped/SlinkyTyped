@@ -1,7 +1,7 @@
 
 # Scala.js typings for opentype_dot_js
 
-Typings are for version 0.7
+Typings are for version 1.3
 
 ## Library description:
 OpenType font parser

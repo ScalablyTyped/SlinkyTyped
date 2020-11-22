@@ -1,6 +1,6 @@
 package typingsSlinky.expoConfigureSplashScreen
 
-import typingsSlinky.expoConfigureSplashScreen.anon.BackgroundColor
+import typingsSlinky.expoConfigureSplashScreen.anon.DarkMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,8 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object colorsXmlMod extends js.Object {
   
-  def default(
-    androidMainPath: String,
-    hasBackgroundColorDarkModeBackgroundColorStatusBarBackgroundColorDarkModeStatusBarBackgroundColor: BackgroundColor
-  ): js.Promise[Unit] = js.native
+  def default(androidMainPath: String, config: DarkMode): js.Promise[Unit] = js.native
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for git-semver-tags
 
-Typings are for version 3.0
+Typings are for version 4.1
 
 ## Library description:
 Get all git semver tags of your repository in reverse chronological order

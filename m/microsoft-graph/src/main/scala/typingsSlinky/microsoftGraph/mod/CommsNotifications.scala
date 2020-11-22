@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CommsNotifications extends js.Object {
   
   // The notification of a change in the resource.
-  var value: js.UndefOr[js.Array[CommsNotification]] = js.native
+  var value: js.UndefOr[NullableOption[js.Array[CommsNotification]]] = js.native
 }
 object CommsNotifications {
   
@@ -37,9 +37,12 @@ object CommsNotifications {
     def setValueVarargs(value: CommsNotification*): Self = this.set("value", js.Array(value :_*))
     
     @scala.inline
-    def setValue(value: js.Array[CommsNotification]): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: NullableOption[js.Array[CommsNotification]]): Self = this.set("value", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
 }

@@ -1,7 +1,7 @@
 package typingsSlinky.babylonjs.BABYLON
 
-import typingsSlinky.babylonjs.anon.Body
 import typingsSlinky.babylonjs.anon.OtherImpostors
+import typingsSlinky.babylonjs.anon.Point
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -243,7 +243,7 @@ trait PhysicsImpostor extends js.Object {
   /**
     * event and body object due to cannon's event-based architecture.
     */
-  def onCollide(e: Body): Unit = js.native
+  def onCollide(e: Point): Unit = js.native
   
   /**
     * Legacy collision detection event support

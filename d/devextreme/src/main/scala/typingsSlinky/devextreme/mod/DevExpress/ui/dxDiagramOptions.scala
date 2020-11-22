@@ -1,20 +1,23 @@
 package typingsSlinky.devextreme.mod.DevExpress.ui
 
 import org.scalajs.dom.raw.Element
+import typingsSlinky.devextreme.anon.AllowAddShape
 import typingsSlinky.devextreme.anon.AllowEditImage
+import typingsSlinky.devextreme.anon.Allowed
+import typingsSlinky.devextreme.anon.AllowedChanges
 import typingsSlinky.devextreme.anon.AutoLayout
 import typingsSlinky.devextreme.anon.Category
 import typingsSlinky.devextreme.anon.Commands
 import typingsSlinky.devextreme.anon.ConnectorLineEnd
+import typingsSlinky.devextreme.anon.CustomDataExpr
 import typingsSlinky.devextreme.anon.ElementItem
 import typingsSlinky.devextreme.anon.ElementItems
 import typingsSlinky.devextreme.anon.ElementName
-import typingsSlinky.devextreme.anon.FromExpr
 import typingsSlinky.devextreme.anon.Item
 import typingsSlinky.devextreme.anon.ItemsValue
 import typingsSlinky.devextreme.anon.ProxyUrl
+import typingsSlinky.devextreme.anon.ShapeIconsPerRow
 import typingsSlinky.devextreme.anon.Tabs
-import typingsSlinky.devextreme.anon.Visibility
 import typingsSlinky.devextreme.anon.Visible
 import typingsSlinky.devextreme.anon.Width
 import typingsSlinky.devextreme.devextremeStrings.cm
@@ -33,99 +36,183 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDiagramOptions extends WidgetOptions[dxDiagram] {
   
-  /** @name dxDiagram.Options.autoZoomMode */
+  /**
+    * [descr:dxDiagram.Options.autoZoomMode]
+    */
   var autoZoomMode: js.UndefOr[fitContent | fitWidth | disabled] = js.native
   
-  /** @name dxDiagram.Options.contextMenu */
+  /**
+    * [descr:dxDiagram.Options.contextMenu]
+    */
   var contextMenu: js.UndefOr[Commands] = js.native
   
-  /** @name dxDiagram.Options.contextToolbox */
+  /**
+    * [descr:dxDiagram.Options.contextToolbox]
+    */
   var contextToolbox: js.UndefOr[Category] = js.native
   
-  /** @name dxDiagram.Options.customShapeTemplate */
+  /**
+    * [descr:dxDiagram.Options.customShapeTemplate]
+    */
   var customShapeTemplate: js.UndefOr[
     typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* container */ dxSVGElement, /* data */ Item, _])
   ] = js.native
   
-  /** @name dxDiagram.Options.customShapes */
+  /**
+    * [descr:dxDiagram.Options.customShapeToolboxTemplate]
+    */
+  var customShapeToolboxTemplate: js.UndefOr[
+    typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* container */ dxSVGElement, /* data */ Item, _])
+  ] = js.native
+  
+  /**
+    * [descr:dxDiagram.Options.customShapes]
+    */
   var customShapes: js.UndefOr[js.Array[AllowEditImage]] = js.native
   
-  /** @name dxDiagram.Options.defaultItemProperties */
+  /**
+    * [descr:dxDiagram.Options.defaultItemProperties]
+    */
   var defaultItemProperties: js.UndefOr[ConnectorLineEnd] = js.native
   
-  /** @name dxDiagram.Options.edges */
-  var edges: js.UndefOr[FromExpr] = js.native
+  /**
+    * [descr:dxDiagram.Options.edges]
+    */
+  var edges: js.UndefOr[CustomDataExpr] = js.native
   
-  /** @name dxDiagram.Options.export */
+  /**
+    * [descr:dxDiagram.Options.editing]
+    */
+  var editing: js.UndefOr[AllowAddShape] = js.native
+  
+  /**
+    * [descr:dxDiagram.Options.export]
+    */
   var export: js.UndefOr[ProxyUrl] = js.native
   
-  /** @name dxDiagram.Options.fullScreen */
+  /**
+    * [descr:dxDiagram.Options.fullScreen]
+    */
   var fullScreen: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDiagram.Options.gridSize */
+  /**
+    * [descr:dxDiagram.Options.gridSize]
+    */
   var gridSize: js.UndefOr[Double | ItemsValue] = js.native
   
-  /** @name dxDiagram.Options.hasChanges */
+  /**
+    * [descr:dxDiagram.Options.hasChanges]
+    */
   var hasChanges: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDiagram.Options.historyToolbar */
+  /**
+    * [descr:dxDiagram.Options.historyToolbar]
+    */
   var historyToolbar: js.UndefOr[Visible] = js.native
   
-  /** @name dxDiagram.Options.mainToolbar */
+  /**
+    * [descr:dxDiagram.Options.mainToolbar]
+    */
   var mainToolbar: js.UndefOr[Visible] = js.native
   
-  /** @name dxDiagram.Options.nodes */
+  /**
+    * [descr:dxDiagram.Options.nodes]
+    */
   var nodes: js.UndefOr[AutoLayout] = js.native
   
-  /** @name dxDiagram.Options.onCustomCommand */
+  /**
+    * [descr:dxDiagram.Options.onCustomCommand]
+    */
   var onCustomCommand: js.UndefOr[js.Function1[/* e */ ElementName, _]] = js.native
   
-  /** @name dxDiagram.Options.onItemClick */
+  /**
+    * [descr:dxDiagram.Options.onItemClick]
+    */
   var onItemClick: js.UndefOr[js.Function1[/* e */ ElementItem, _]] = js.native
   
-  /** @name dxDiagram.Options.onItemDblClick */
+  /**
+    * [descr:dxDiagram.Options.onItemDblClick]
+    */
   var onItemDblClick: js.UndefOr[js.Function1[/* e */ ElementItem, _]] = js.native
   
-  /** @name dxDiagram.Options.onSelectionChanged */
+  /**
+    * [descr:dxDiagram.Options.onRequestEditOperation]
+    */
+  var onRequestEditOperation: js.UndefOr[js.Function1[/* e */ Allowed, _]] = js.native
+  
+  /**
+    * [descr:dxDiagram.Options.onRequestLayoutUpdate]
+    */
+  var onRequestLayoutUpdate: js.UndefOr[js.Function1[/* e */ AllowedChanges, _]] = js.native
+  
+  /**
+    * [descr:dxDiagram.Options.onSelectionChanged]
+    */
   var onSelectionChanged: js.UndefOr[js.Function1[/* e */ ElementItems, _]] = js.native
   
-  /** @name dxDiagram.Options.pageColor */
+  /**
+    * [descr:dxDiagram.Options.pageColor]
+    */
   var pageColor: js.UndefOr[String] = js.native
   
-  /** @name dxDiagram.Options.pageOrientation */
+  /**
+    * [descr:dxDiagram.Options.pageOrientation]
+    */
   var pageOrientation: js.UndefOr[portrait | landscape] = js.native
   
-  /** @name dxDiagram.Options.pageSize */
+  /**
+    * [descr:dxDiagram.Options.pageSize]
+    */
   var pageSize: js.UndefOr[Width] = js.native
   
-  /** @name dxDiagram.Options.propertiesPanel */
+  /**
+    * [descr:dxDiagram.Options.propertiesPanel]
+    */
   var propertiesPanel: js.UndefOr[Tabs] = js.native
   
-  /** @name dxDiagram.Options.readOnly */
+  /**
+    * [descr:dxDiagram.Options.readOnly]
+    */
   var readOnly: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDiagram.Options.showGrid */
+  /**
+    * [descr:dxDiagram.Options.showGrid]
+    */
   var showGrid: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDiagram.Options.simpleView */
+  /**
+    * [descr:dxDiagram.Options.simpleView]
+    */
   var simpleView: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDiagram.Options.snapToGrid */
+  /**
+    * [descr:dxDiagram.Options.snapToGrid]
+    */
   var snapToGrid: js.UndefOr[Boolean] = js.native
   
-  /** @name dxDiagram.Options.toolbox */
-  var toolbox: js.UndefOr[Visibility] = js.native
+  /**
+    * [descr:dxDiagram.Options.toolbox]
+    */
+  var toolbox: js.UndefOr[ShapeIconsPerRow] = js.native
   
-  /** @name dxDiagram.Options.units */
+  /**
+    * [descr:dxDiagram.Options.units]
+    */
   var units: js.UndefOr[in | cm | px] = js.native
   
-  /** @name dxDiagram.Options.viewToolbar */
+  /**
+    * [descr:dxDiagram.Options.viewToolbar]
+    */
   var viewToolbar: js.UndefOr[Visible] = js.native
   
-  /** @name dxDiagram.Options.viewUnits */
+  /**
+    * [descr:dxDiagram.Options.viewUnits]
+    */
   var viewUnits: js.UndefOr[in | cm | px] = js.native
   
-  /** @name dxDiagram.Options.zoomLevel */
+  /**
+    * [descr:dxDiagram.Options.zoomLevel]
+    */
   var zoomLevel: js.UndefOr[Double | ItemsValue] = js.native
 }
 object dxDiagramOptions {
@@ -184,6 +271,20 @@ object dxDiagramOptions {
     def deleteCustomShapeTemplate: Self = this.set("customShapeTemplate", js.undefined)
     
     @scala.inline
+    def setCustomShapeToolboxTemplateFunction2(value: (/* container */ dxSVGElement, /* data */ Item) => _): Self = this.set("customShapeToolboxTemplate", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def setCustomShapeToolboxTemplateElement(value: Element): Self = this.set("customShapeToolboxTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setCustomShapeToolboxTemplate(
+      value: typingsSlinky.devextreme.mod.DevExpress.core.template | (js.Function2[/* container */ dxSVGElement, /* data */ Item, _])
+    ): Self = this.set("customShapeToolboxTemplate", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomShapeToolboxTemplate: Self = this.set("customShapeToolboxTemplate", js.undefined)
+    
+    @scala.inline
     def setCustomShapesVarargs(value: AllowEditImage*): Self = this.set("customShapes", js.Array(value :_*))
     
     @scala.inline
@@ -199,10 +300,16 @@ object dxDiagramOptions {
     def deleteDefaultItemProperties: Self = this.set("defaultItemProperties", js.undefined)
     
     @scala.inline
-    def setEdges(value: FromExpr): Self = this.set("edges", value.asInstanceOf[js.Any])
+    def setEdges(value: CustomDataExpr): Self = this.set("edges", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEdges: Self = this.set("edges", js.undefined)
+    
+    @scala.inline
+    def setEditing(value: AllowAddShape): Self = this.set("editing", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEditing: Self = this.set("editing", js.undefined)
     
     @scala.inline
     def setExport(value: ProxyUrl): Self = this.set("export", value.asInstanceOf[js.Any])
@@ -265,6 +372,18 @@ object dxDiagramOptions {
     def deleteOnItemDblClick: Self = this.set("onItemDblClick", js.undefined)
     
     @scala.inline
+    def setOnRequestEditOperation(value: /* e */ Allowed => _): Self = this.set("onRequestEditOperation", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnRequestEditOperation: Self = this.set("onRequestEditOperation", js.undefined)
+    
+    @scala.inline
+    def setOnRequestLayoutUpdate(value: /* e */ AllowedChanges => _): Self = this.set("onRequestLayoutUpdate", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnRequestLayoutUpdate: Self = this.set("onRequestLayoutUpdate", js.undefined)
+    
+    @scala.inline
     def setOnSelectionChanged(value: /* e */ ElementItems => _): Self = this.set("onSelectionChanged", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -319,7 +438,7 @@ object dxDiagramOptions {
     def deleteSnapToGrid: Self = this.set("snapToGrid", js.undefined)
     
     @scala.inline
-    def setToolbox(value: Visibility): Self = this.set("toolbox", value.asInstanceOf[js.Any])
+    def setToolbox(value: ShapeIconsPerRow): Self = this.set("toolbox", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteToolbox: Self = this.set("toolbox", js.undefined)

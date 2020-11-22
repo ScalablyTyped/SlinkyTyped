@@ -1,15 +1,14 @@
 package typingsSlinky.firefoxWebextBrowser.global.browser
 
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
-import typingsSlinky.firefoxWebextBrowser.anon.Description
 import typingsSlinky.firefoxWebextBrowser.browser.commands.Command
+import typingsSlinky.firefoxWebextBrowser.browser.commands.UpdateDetail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * Use the commands API to add keyboard shortcuts that trigger actions in your extension, for example, an action to
-  * open the browser action or send a command to the xtension.
+  * Use the commands API to add keyboard shortcuts that trigger actions in your extension, for example, an action to open the browser action or send a command to the xtension.
   *
   * Manifest keys: `commands`
   *
@@ -37,5 +36,5 @@ object commands extends js.Object {
     * Update the details of an already defined command.
     * @param detail The new description for the command.
     */
-  def update(detail: Description): js.Promise[Unit] = js.native
+  def update(detail: UpdateDetail): js.Promise[Unit] = js.native
 }

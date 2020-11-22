@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SamlSingleSignOnSettings extends js.Object {
   
   // The relative URI the service provider would redirect to after completion of the single sign-on flow.
-  var relayState: js.UndefOr[String] = js.native
+  var relayState: js.UndefOr[NullableOption[String]] = js.native
 }
 object SamlSingleSignOnSettings {
   
@@ -34,9 +34,12 @@ object SamlSingleSignOnSettings {
     }
     
     @scala.inline
-    def setRelayState(value: String): Self = this.set("relayState", value.asInstanceOf[js.Any])
+    def setRelayState(value: NullableOption[String]): Self = this.set("relayState", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRelayState: Self = this.set("relayState", js.undefined)
+    
+    @scala.inline
+    def setRelayStateNull: Self = this.set("relayState", null)
   }
 }

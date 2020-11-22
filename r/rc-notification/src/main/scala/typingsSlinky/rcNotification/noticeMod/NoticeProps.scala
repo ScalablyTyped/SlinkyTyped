@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -25,9 +26,12 @@ trait NoticeProps extends js.Object {
   /** @private Only for internal usage. We don't promise that we will refactor this */
   var holder: js.UndefOr[HTMLDivElement] = js.native
   
+  /** Mark as final key since set maxCount may keep the key but user pass key is different */
+  var noticeKey: Key = js.native
+  
   var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
   
-  var onClose: js.UndefOr[js.Function0[Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* key */ Key, Unit]] = js.native
   
   var prefixCls: String = js.native
   
@@ -35,13 +39,13 @@ trait NoticeProps extends js.Object {
   
   var style: js.UndefOr[CSSProperties] = js.native
   
-  var update: js.UndefOr[Boolean] = js.native
+  var updateMark: js.UndefOr[String] = js.native
 }
 object NoticeProps {
   
   @scala.inline
-  def apply(prefixCls: String): NoticeProps = {
-    val __obj = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
+  def apply(noticeKey: Key, prefixCls: String): NoticeProps = {
+    val __obj = js.Dynamic.literal(noticeKey = noticeKey.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[NoticeProps]
   }
   
@@ -59,6 +63,9 @@ object NoticeProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setNoticeKey(value: Key): Self = this.set("noticeKey", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
@@ -115,7 +122,7 @@ object NoticeProps {
     def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
-    def setOnClose(value: () => Unit): Self = this.set("onClose", js.Any.fromFunction0(value))
+    def setOnClose(value: /* key */ Key => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClose: Self = this.set("onClose", js.undefined)
@@ -133,9 +140,9 @@ object NoticeProps {
     def deleteStyle: Self = this.set("style", js.undefined)
     
     @scala.inline
-    def setUpdate(value: Boolean): Self = this.set("update", value.asInstanceOf[js.Any])
+    def setUpdateMark(value: String): Self = this.set("updateMark", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteUpdate: Self = this.set("update", js.undefined)
+    def deleteUpdateMark: Self = this.set("updateMark", js.undefined)
   }
 }

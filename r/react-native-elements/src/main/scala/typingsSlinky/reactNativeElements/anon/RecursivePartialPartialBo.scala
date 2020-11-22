@@ -1,7 +1,6 @@
 package typingsSlinky.reactNativeElements.anon
 
-import typingsSlinky.reactNativeElements.mod.ButtonProps
-import typingsSlinky.reactNativeElements.mod.ListItemProps
+import typingsSlinky.reactNative.mod.ModalProps
 import typingsSlinky.reactNativeElements.mod.RecursivePartial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,11 +10,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait RecursivePartialPartialBo extends js.Object {
   
-  var buttonProps: js.UndefOr[RecursivePartial[js.UndefOr[ButtonProps]]] = js.native
+  var isVisible: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
   
-  var cancelButtonIndex: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
-  
-  var list: js.UndefOr[RecursivePartial[js.UndefOr[js.Array[ListItemProps]]]] = js.native
+  var modalProps: js.UndefOr[RecursivePartial[js.UndefOr[ModalProps]]] = js.native
 }
 object RecursivePartialPartialBo {
   
@@ -41,21 +38,15 @@ object RecursivePartialPartialBo {
     }
     
     @scala.inline
-    def setButtonProps(value: RecursivePartial[js.UndefOr[ButtonProps]]): Self = this.set("buttonProps", value.asInstanceOf[js.Any])
+    def setIsVisible(value: RecursivePartial[js.UndefOr[Boolean]]): Self = this.set("isVisible", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteButtonProps: Self = this.set("buttonProps", js.undefined)
+    def deleteIsVisible: Self = this.set("isVisible", js.undefined)
     
     @scala.inline
-    def setCancelButtonIndex(value: RecursivePartial[js.UndefOr[Double]]): Self = this.set("cancelButtonIndex", value.asInstanceOf[js.Any])
+    def setModalProps(value: RecursivePartial[js.UndefOr[ModalProps]]): Self = this.set("modalProps", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteCancelButtonIndex: Self = this.set("cancelButtonIndex", js.undefined)
-    
-    @scala.inline
-    def setList(value: RecursivePartial[js.UndefOr[js.Array[ListItemProps]]]): Self = this.set("list", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteList: Self = this.set("list", js.undefined)
+    def deleteModalProps: Self = this.set("modalProps", js.undefined)
   }
 }

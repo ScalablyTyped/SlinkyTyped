@@ -12,14 +12,12 @@ trait Other extends js.Object {
   var other: String = js.native
   
   var root: String = js.native
-  
-  var selectWrapper: String = js.native
 }
 object Other {
   
   @scala.inline
-  def apply(control: String, other: String, root: String, selectWrapper: String): Other = {
-    val __obj = js.Dynamic.literal(control = control.asInstanceOf[js.Any], other = other.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any], selectWrapper = selectWrapper.asInstanceOf[js.Any])
+  def apply(control: String, other: String, root: String): Other = {
+    val __obj = js.Dynamic.literal(control = control.asInstanceOf[js.Any], other = other.asInstanceOf[js.Any], root = root.asInstanceOf[js.Any])
     __obj.asInstanceOf[Other]
   }
   
@@ -46,8 +44,5 @@ object Other {
     
     @scala.inline
     def setRoot(value: String): Self = this.set("root", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setSelectWrapper(value: String): Self = this.set("selectWrapper", value.asInstanceOf[js.Any])
   }
 }

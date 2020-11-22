@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object loopMod extends js.Object {
   
-  def default(x: Double, max: Double, increment: Boolean): Double = js.native
-  def default(x: Double, max: Double, increment: Boolean, minmax: Boolean): Double = js.native
+  def loop(x: Double, max: Double, increment: Boolean): Double = js.native
+  def loop(x: Double, max: Double, increment: Boolean, minmax: Boolean): Double = js.native
 }

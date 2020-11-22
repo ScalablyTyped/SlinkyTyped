@@ -2,8 +2,8 @@ package typingsSlinky.iobroker.mod.global.ioBroker
 
 import typingsSlinky.iobroker.anon.Channel
 import typingsSlinky.iobroker.anon.Entries
+import typingsSlinky.iobroker.anon.Id
 import typingsSlinky.iobroker.anon.Mode
-import typingsSlinky.iobroker.anon.Name
 import typingsSlinky.iobroker.anon.PartialChannelCommon
 import typingsSlinky.iobroker.anon.PartialObjectCommon
 import typingsSlinky.iobroker.anon.PartialStateCommon
@@ -14,6 +14,13 @@ import typingsSlinky.iobroker.iobrokerStrings.objectChange
 import typingsSlinky.iobroker.iobrokerStrings.ready
 import typingsSlinky.iobroker.iobrokerStrings.stateChange
 import typingsSlinky.iobroker.iobrokerStrings.unload
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.ChannelObject
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.DeviceObject
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.Object
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.ObjectType
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.PartialObject
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.SettableObject
+import typingsSlinky.iobroker.objectsMod.global.ioBroker.StateObject
 import typingsSlinky.node.Buffer
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -140,6 +147,10 @@ trait Adapter extends js.Object {
   def chmodFileAsync(adapter: String, path: String, options: Record[String, _]): js.Promise[Entries] = js.native
   def chmodFileAsync(adapter: Null, path: String, options: Mode): js.Promise[Entries] = js.native
   def chmodFileAsync(adapter: Null, path: String, options: Record[String, _]): js.Promise[Entries] = js.native
+  
+  def clearInterval(intervalId: Interval): Unit = js.native
+  
+  def clearTimeout(timeoutId: Timeout): Unit = js.native
   
   /** common part of the adapter settings */
   var common: js.Any = js.native
@@ -403,10 +414,10 @@ trait Adapter extends js.Object {
     * @param adapterName - adapter name. If adapter name is null, default will be the name of the current adapter.
     * @param path - path to directory without adapter name. E.g. If you want to delete "/vis.0/main/views.json", here must be "/main/views.json" and _adapter must be equal to "vis.0".
     */
-  def delFile(adapterName: String, path: String, callback: ErrorCallback): Unit = js.native
-  def delFile(adapterName: String, path: String, options: js.Any, callback: ErrorCallback): Unit = js.native
-  def delFile(adapterName: Null, path: String, callback: ErrorCallback): Unit = js.native
-  def delFile(adapterName: Null, path: String, options: js.Any, callback: ErrorCallback): Unit = js.native
+  def delFile(adapterName: String, path: String, callback: ErrnoCallback): Unit = js.native
+  def delFile(adapterName: String, path: String, options: js.Any, callback: ErrnoCallback): Unit = js.native
+  def delFile(adapterName: Null, path: String, callback: ErrnoCallback): Unit = js.native
+  def delFile(adapterName: Null, path: String, options: js.Any, callback: ErrnoCallback): Unit = js.native
   
   /**
     * Deletes a given file
@@ -618,7 +629,7 @@ trait Adapter extends js.Object {
     * Finds an object by its ID or name
     * @param type - common.type of the state
     */
-  def findForeignObjectAsync(idOrName: String, `type`: String): js.Promise[Name] = js.native
+  def findForeignObjectAsync(idOrName: String, `type`: String): js.Promise[Id] = js.native
   
   def formatDate(dateObj: String, format: String): String = js.native
   def formatDate(dateObj: String, isDuration: String, format: String): String = js.native
@@ -666,7 +677,7 @@ trait Adapter extends js.Object {
     privateName: String,
     chainedName: String,
     callback: js.Function3[
-      /* err */ String | Null, 
+      /* err */ js.UndefOr[js.Error | Null], 
       /* certs */ js.UndefOr[Certificates], 
       /* useLetsEncryptCert */ js.UndefOr[Boolean], 
       Unit
@@ -682,6 +693,16 @@ trait Adapter extends js.Object {
   def getChannels(callback: GetObjectsCallback3[ChannelObject]): Unit = js.native
   def getChannels(parentDevice: String, callback: GetObjectsCallback3[ChannelObject]): Unit = js.native
   def getChannels(parentDevice: String, options: js.Any, callback: GetObjectsCallback3[ChannelObject]): Unit = js.native
+  
+  /**
+    * Returns a list of all channels in this adapter instance
+    * @param parentDevice (optional) Name of the parent device to filter the channels by
+    * @param options (optional) Some internal options.
+    */
+  def getChannelsAsync(): js.Promise[js.Array[ChannelObject]] = js.native
+  // tslint:disable-next-line:unified-signatures
+  def getChannelsAsync(parentDevice: String): js.Promise[js.Array[ChannelObject]] = js.native
+  def getChannelsAsync(parentDevice: String, options: js.Any): js.Promise[js.Array[ChannelObject]] = js.native
   
   /**
     * Returns a list of all channels in this adapter instance
@@ -962,10 +983,10 @@ trait Adapter extends js.Object {
   /** access to the logging functions */
   var log: Logger = js.native
   
-  def mkDir(adapterName: String, path: String, callback: ErrorCallback): Unit = js.native
-  def mkDir(adapterName: String, path: String, options: js.Any, callback: ErrorCallback): Unit = js.native
-  def mkDir(adapterName: Null, path: String, callback: ErrorCallback): Unit = js.native
-  def mkDir(adapterName: Null, path: String, options: js.Any, callback: ErrorCallback): Unit = js.native
+  def mkDir(adapterName: String, path: String, callback: ErrnoCallback): Unit = js.native
+  def mkDir(adapterName: String, path: String, options: js.Any, callback: ErrnoCallback): Unit = js.native
+  def mkDir(adapterName: Null, path: String, callback: ErrnoCallback): Unit = js.native
+  def mkDir(adapterName: Null, path: String, options: js.Any, callback: ErrnoCallback): Unit = js.native
   
   def mkDirAsync(adapterName: String, path: String): js.Promise[Unit] = js.native
   def mkDirAsync(adapterName: String, path: String, options: js.Any): js.Promise[Unit] = js.native
@@ -1066,10 +1087,10 @@ trait Adapter extends js.Object {
   @JSName("removeListener")
   def removeListener_unload(event: unload, handler: UnloadHandler): this.type = js.native
   
-  def rename(adapterName: String, oldName: String, newName: String, callback: ErrorCallback): Unit = js.native
-  def rename(adapterName: String, oldName: String, newName: String, options: js.Any, callback: ErrorCallback): Unit = js.native
-  def rename(adapterName: Null, oldName: String, newName: String, callback: ErrorCallback): Unit = js.native
-  def rename(adapterName: Null, oldName: String, newName: String, options: js.Any, callback: ErrorCallback): Unit = js.native
+  def rename(adapterName: String, oldName: String, newName: String, callback: ErrnoCallback): Unit = js.native
+  def rename(adapterName: String, oldName: String, newName: String, options: js.Any, callback: ErrnoCallback): Unit = js.native
+  def rename(adapterName: Null, oldName: String, newName: String, callback: ErrnoCallback): Unit = js.native
+  def rename(adapterName: Null, oldName: String, newName: String, options: js.Any, callback: ErrnoCallback): Unit = js.native
   
   def renameAsync(adapterName: String, oldName: String, newName: String): js.Promise[Unit] = js.native
   def renameAsync(adapterName: String, oldName: String, newName: String, options: js.Any): js.Promise[Unit] = js.native
@@ -1318,6 +1339,13 @@ trait Adapter extends js.Object {
   def setForeignStateChangedAsync(id: String, state: State, ack: Boolean, options: js.Any): SetStateChangedPromise = js.native
   def setForeignStateChangedAsync(id: String, state: State, options: js.Any): SetStateChangedPromise = js.native
   
+  /** Creates an interval that can automatically be cleared when the adapter is terminated */
+  def setInterval[T /* <: js.Array[_] */](
+    callback: js.Function1[/* args */ T, Unit],
+    ms: Double,
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type T is not an array type */ args: T
+  ): Interval = js.native
+  
   /** Creates or overwrites an object in the object db */
   def setObject(id: String, obj: SettableObject): Unit = js.native
   def setObject(id: String, obj: SettableObject, callback: SetObjectCallback): Unit = js.native
@@ -1340,14 +1368,9 @@ trait Adapter extends js.Object {
   
   /** Sets a new password for the given user */
   def setPassword(user: String, password: String): Unit = js.native
-  def setPassword(user: String, password: String, callback: js.Function1[/* err */ js.UndefOr[js.Any], Unit]): Unit = js.native
+  def setPassword(user: String, password: String, callback: ErrorCallback): Unit = js.native
   def setPassword(user: String, password: String, options: js.Any): Unit = js.native
-  def setPassword(
-    user: String,
-    password: String,
-    options: js.Any,
-    callback: js.Function1[/* err */ js.UndefOr[js.Any], Unit]
-  ): Unit = js.native
+  def setPassword(user: String, password: String, options: js.Any, callback: ErrorCallback): Unit = js.native
   
   /** Sets a new password for the given user */
   def setPasswordAsync(user: String, password: String): js.Promise[Unit] = js.native
@@ -1509,6 +1532,16 @@ trait Adapter extends js.Object {
   def setStateChangedAsync(id: String, state: State, ack: Boolean, options: js.Any): SetStateChangedPromise = js.native
   def setStateChangedAsync(id: String, state: State, options: js.Any): SetStateChangedPromise = js.native
   
+  // =============================================
+  // Managed version of builtin setTimeout/setInterval/clear...
+  // =============================================
+  /** Creates a timeout that can automatically be cleared when the adapter is terminated */
+  def setTimeout[T /* <: js.Array[_] */](
+    callback: js.Function1[/* args */ T, Unit],
+    ms: Double,
+    /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type T is not an array type */ args: T
+  ): Timeout = js.native
+  
   /** Stops the adapter. Note: Is not always defined. */
   var stop: js.UndefOr[js.Function0[Unit]] = js.native
   
@@ -1579,10 +1612,10 @@ trait Adapter extends js.Object {
     * @param adapterName - adapter name. If adapter name is null, default will be the name of the current adapter.
     * @param path - path to directory without adapter name. E.g. If you want to delete "/vis.0/main/views.json", here must be "/main/views.json" and _adapter must be equal to "vis.0".
     */
-  def unlink(adapterName: String, path: String, callback: ErrorCallback): Unit = js.native
-  def unlink(adapterName: String, path: String, options: js.Any, callback: ErrorCallback): Unit = js.native
-  def unlink(adapterName: Null, path: String, callback: ErrorCallback): Unit = js.native
-  def unlink(adapterName: Null, path: String, options: js.Any, callback: ErrorCallback): Unit = js.native
+  def unlink(adapterName: String, path: String, callback: ErrnoCallback): Unit = js.native
+  def unlink(adapterName: String, path: String, options: js.Any, callback: ErrnoCallback): Unit = js.native
+  def unlink(adapterName: Null, path: String, callback: ErrnoCallback): Unit = js.native
+  def unlink(adapterName: Null, path: String, options: js.Any, callback: ErrnoCallback): Unit = js.native
   
   /**
     * Deletes a given file
@@ -1660,15 +1693,15 @@ trait Adapter extends js.Object {
   /** adapter version */
   var version: js.Any = js.native
   
-  def writeFile(adapterName: String, path: String, data: String, callback: ErrorCallback): Unit = js.native
-  def writeFile(adapterName: String, path: String, data: String, options: js.Any, callback: ErrorCallback): Unit = js.native
-  def writeFile(adapterName: String, path: String, data: Buffer, callback: ErrorCallback): Unit = js.native
+  def writeFile(adapterName: String, path: String, data: String, callback: ErrnoCallback): Unit = js.native
+  def writeFile(adapterName: String, path: String, data: String, options: js.Any, callback: ErrnoCallback): Unit = js.native
+  def writeFile(adapterName: String, path: String, data: Buffer, callback: ErrnoCallback): Unit = js.native
   // options see https://github.com/ioBroker/ioBroker.js-controller/blob/master/lib/objects/objectsInMemServer.js#L599
-  def writeFile(adapterName: String, path: String, data: Buffer, options: js.Any, callback: ErrorCallback): Unit = js.native
-  def writeFile(adapterName: Null, path: String, data: String, callback: ErrorCallback): Unit = js.native
-  def writeFile(adapterName: Null, path: String, data: String, options: js.Any, callback: ErrorCallback): Unit = js.native
-  def writeFile(adapterName: Null, path: String, data: Buffer, callback: ErrorCallback): Unit = js.native
-  def writeFile(adapterName: Null, path: String, data: Buffer, options: js.Any, callback: ErrorCallback): Unit = js.native
+  def writeFile(adapterName: String, path: String, data: Buffer, options: js.Any, callback: ErrnoCallback): Unit = js.native
+  def writeFile(adapterName: Null, path: String, data: String, callback: ErrnoCallback): Unit = js.native
+  def writeFile(adapterName: Null, path: String, data: String, options: js.Any, callback: ErrnoCallback): Unit = js.native
+  def writeFile(adapterName: Null, path: String, data: Buffer, callback: ErrnoCallback): Unit = js.native
+  def writeFile(adapterName: Null, path: String, data: Buffer, options: js.Any, callback: ErrnoCallback): Unit = js.native
   
   def writeFileAsync(adapterName: String, path: String, data: String): js.Promise[Unit] = js.native
   def writeFileAsync(adapterName: String, path: String, data: String, options: js.Any): js.Promise[Unit] = js.native

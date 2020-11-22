@@ -14,25 +14,25 @@ trait IosManagedAppProtection extends TargetedManagedAppProtection {
   var appDataEncryptionType: js.UndefOr[ManagedAppDataEncryptionType] = js.native
   
   // List of apps to which the policy is deployed.
-  var apps: js.UndefOr[js.Array[ManagedMobileApp]] = js.native
+  var apps: js.UndefOr[NullableOption[js.Array[ManagedMobileApp]]] = js.native
   
   /**
     * A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired
     * should be true.
     */
-  var customBrowserProtocol: js.UndefOr[String] = js.native
+  var customBrowserProtocol: js.UndefOr[NullableOption[String]] = js.native
   
   // Count of apps to which the current policy is deployed.
   var deployedAppCount: js.UndefOr[Double] = js.native
   
   // Navigation property to deployment summary of the configuration.
-  var deploymentSummary: js.UndefOr[ManagedAppPolicyDeploymentSummary] = js.native
+  var deploymentSummary: js.UndefOr[NullableOption[ManagedAppPolicyDeploymentSummary]] = js.native
   
   // Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
   var faceIdBlocked: js.UndefOr[Boolean] = js.native
   
   // Versions less than the specified version will block the managed app from accessing company data.
-  var minimumRequiredSdkVersion: js.UndefOr[String] = js.native
+  var minimumRequiredSdkVersion: js.UndefOr[NullableOption[String]] = js.native
 }
 object IosManagedAppProtection {
   
@@ -67,16 +67,22 @@ object IosManagedAppProtection {
     def setAppsVarargs(value: ManagedMobileApp*): Self = this.set("apps", js.Array(value :_*))
     
     @scala.inline
-    def setApps(value: js.Array[ManagedMobileApp]): Self = this.set("apps", value.asInstanceOf[js.Any])
+    def setApps(value: NullableOption[js.Array[ManagedMobileApp]]): Self = this.set("apps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteApps: Self = this.set("apps", js.undefined)
     
     @scala.inline
-    def setCustomBrowserProtocol(value: String): Self = this.set("customBrowserProtocol", value.asInstanceOf[js.Any])
+    def setAppsNull: Self = this.set("apps", null)
+    
+    @scala.inline
+    def setCustomBrowserProtocol(value: NullableOption[String]): Self = this.set("customBrowserProtocol", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCustomBrowserProtocol: Self = this.set("customBrowserProtocol", js.undefined)
+    
+    @scala.inline
+    def setCustomBrowserProtocolNull: Self = this.set("customBrowserProtocol", null)
     
     @scala.inline
     def setDeployedAppCount(value: Double): Self = this.set("deployedAppCount", value.asInstanceOf[js.Any])
@@ -85,10 +91,13 @@ object IosManagedAppProtection {
     def deleteDeployedAppCount: Self = this.set("deployedAppCount", js.undefined)
     
     @scala.inline
-    def setDeploymentSummary(value: ManagedAppPolicyDeploymentSummary): Self = this.set("deploymentSummary", value.asInstanceOf[js.Any])
+    def setDeploymentSummary(value: NullableOption[ManagedAppPolicyDeploymentSummary]): Self = this.set("deploymentSummary", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeploymentSummary: Self = this.set("deploymentSummary", js.undefined)
+    
+    @scala.inline
+    def setDeploymentSummaryNull: Self = this.set("deploymentSummary", null)
     
     @scala.inline
     def setFaceIdBlocked(value: Boolean): Self = this.set("faceIdBlocked", value.asInstanceOf[js.Any])
@@ -97,9 +106,12 @@ object IosManagedAppProtection {
     def deleteFaceIdBlocked: Self = this.set("faceIdBlocked", js.undefined)
     
     @scala.inline
-    def setMinimumRequiredSdkVersion(value: String): Self = this.set("minimumRequiredSdkVersion", value.asInstanceOf[js.Any])
+    def setMinimumRequiredSdkVersion(value: NullableOption[String]): Self = this.set("minimumRequiredSdkVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumRequiredSdkVersion: Self = this.set("minimumRequiredSdkVersion", js.undefined)
+    
+    @scala.inline
+    def setMinimumRequiredSdkVersionNull: Self = this.set("minimumRequiredSdkVersion", null)
   }
 }

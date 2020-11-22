@@ -14,6 +14,9 @@ object xmlMod extends js.Object {
   trait XML extends js.Object {
     
     def read(source: String): js.Any = js.native
+    /**
+      * Read the source document.
+      */
     def read(source: Document): js.Any = js.native
     def read(source: Element): js.Any = js.native
     

@@ -31,8 +31,7 @@ trait PivotField extends ClientObject {
     * Sets one or more of the field's current PivotFilters and applies them to the field.
     If the provided filters are invalid or cannot be applied, an exception is thrown.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     *
     * @param filter A configured specific PivotFilter or a PivotFilters interface containing multiple configured filters.
     */
@@ -41,16 +40,14 @@ trait PivotField extends ClientObject {
   /**
     * Clears all criteria from all of the field's filters. This removes any active filtering on the field.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   def clearAllFilters(): Unit = js.native
   
   /**
     * Clears all existing criteria from the field's filter of the given type (if one is currently applied).
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     *
     * @param filterType The type of filter on the field of which to clear all criteria.
     */
@@ -64,7 +61,7 @@ trait PivotField extends ClientObject {
   /**
     * Clears all existing criteria from the field's filter of the given type (if one is currently applied).
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
+    * [Api set: ExcelApi 1.12]
     *
     * @param filterType The type of filter on the field of which to clear all criteria.
     */
@@ -80,8 +77,7 @@ trait PivotField extends ClientObject {
   /**
     * Gets all filters currently applied on the field.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     * @returns A PivotFilters interface with all active filters.
     */
   def getFilters(): ClientResult[PivotFilters] = js.native
@@ -97,8 +93,7 @@ trait PivotField extends ClientObject {
   /**
     * Checks if there are any applied filters on the field.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     *
     * @param filterType The filter type to check. If no type is provided, this method will check if any filter is applied.
     * @returns True if the field has a filter of type `filterType` applied. If filterType is not specified, true is returned if the field has any applied filters.

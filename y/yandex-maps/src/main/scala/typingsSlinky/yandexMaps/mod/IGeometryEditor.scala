@@ -19,7 +19,7 @@ object IGeometryEditor {
   
   @scala.inline
   def apply(
-    events: IEventManager,
+    events: IEventManager[js.Object],
     geometry: IGeometry,
     options: IOptionManager,
     startEditing: () => Unit,

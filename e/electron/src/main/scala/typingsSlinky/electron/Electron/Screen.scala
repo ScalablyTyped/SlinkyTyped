@@ -67,7 +67,7 @@ trait Screen extends EventEmitter {
     */
   def getPrimaryDisplay(): Display = js.native
   
-  // Docs: http://electronjs.org/docs/api/screen
+  // Docs: https://electronjs.org/docs/api/screen
   /**
     * Emitted when `newDisplay` has been added.
     */

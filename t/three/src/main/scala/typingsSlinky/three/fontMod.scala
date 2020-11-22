@@ -16,5 +16,10 @@ object fontMod extends js.Object {
     var data: String = js.native
     
     def generateShapes(text: String, size: Double): js.Array[Shape] = js.native
+    
+    /**
+    	 * @default 'Font'
+    	 */
+    var `type`: String = js.native
   }
 }

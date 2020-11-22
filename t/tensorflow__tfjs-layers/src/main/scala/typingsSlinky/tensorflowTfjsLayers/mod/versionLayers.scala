@@ -8,4 +8,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@tensorflow/tfjs-layers", "version_layers")
 @js.native
 object versionLayers
-  extends TopLevel[/* "2.0.1" */ String]
+  extends TopLevel[/* "2.7.0" */ String]

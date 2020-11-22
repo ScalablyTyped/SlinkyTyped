@@ -10,6 +10,8 @@ package object mod {
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.Modifier<Name, Options> */ js.Any
   ]) | typingsSlinky.reactPopper.mod.StrictModifier[Name]
   
+  type RefHandler = js.Function1[/* ref */ org.scalajs.dom.raw.HTMLElement | scala.Null, scala.Unit]
+  
   type StrictModifier[Name /* <: typingsSlinky.reactPopper.mod.StrictModifierNames */] = typingsSlinky.reactPopper.mod.UnionWhere[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify PopperJS.StrictModifiers */ js.Any, 
     typingsSlinky.reactPopper.anon.`0`[Name]

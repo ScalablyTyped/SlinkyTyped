@@ -24,7 +24,7 @@ class Fog protected () extends IFog {
   
   /**
   	 * The maximum distance at which fog stops being calculated and applied. Objects that are more than 'far' units away from the active camera won't be affected by fog.
-  	 * Default is 1000.
+  	 * @default 1000
   	 */
   var far: Double = js.native
   
@@ -32,6 +32,7 @@ class Fog protected () extends IFog {
   
   /**
   	 * The minimum distance to start applying fog. Objects that are less than 'near' units from the active camera won't be affected by fog.
+  	 * @default 1
   	 */
   var near: Double = js.native
 }

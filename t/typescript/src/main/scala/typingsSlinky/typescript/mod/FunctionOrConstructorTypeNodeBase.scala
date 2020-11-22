@@ -6,17 +6,14 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.typescript.mod.TextRange because Already inherited
-- typingsSlinky.typescript.mod.Node because Already inherited
-- typingsSlinky.typescript.mod.TypeNode because var conflicts: decorators, end, flags, kind, modifiers, parent, pos. Inlined _typeNodeBrand */ @js.native
-trait FunctionOrConstructorTypeNodeBase extends SignatureDeclarationBase {
-  
-  var _typeNodeBrand: js.Any = js.native
+@js.native
+trait FunctionOrConstructorTypeNodeBase
+  extends SignatureDeclarationBase
+     with TypeNode {
   
   @JSName("kind")
-  var kind_FunctionOrConstructorTypeNodeBase: FunctionType | ConstructorType = js.native
+  val kind_FunctionOrConstructorTypeNodeBase: FunctionType | ConstructorType = js.native
   
   @JSName("type")
-  var type_FunctionOrConstructorTypeNodeBase: TypeNode = js.native
+  val type_FunctionOrConstructorTypeNodeBase: TypeNode = js.native
 }

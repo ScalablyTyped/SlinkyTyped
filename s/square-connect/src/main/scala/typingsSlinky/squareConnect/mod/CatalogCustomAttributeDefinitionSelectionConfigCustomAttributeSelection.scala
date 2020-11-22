@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection () extends js.Object {
   
   /**
-    * Selection name, unique within `allowed_selections`. Required. Min length of 1, max length of 255.
+    * Selection name, unique within `allowed_selections`.
     */
   var name: String = js.native
   

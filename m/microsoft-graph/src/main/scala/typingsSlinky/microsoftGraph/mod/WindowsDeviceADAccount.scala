@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WindowsDeviceADAccount extends WindowsDeviceAccount {
   
   // Not yet documented
-  var domainName: js.UndefOr[String] = js.native
+  var domainName: js.UndefOr[NullableOption[String]] = js.native
   
   // Not yet documented
-  var userName: js.UndefOr[String] = js.native
+  var userName: js.UndefOr[NullableOption[String]] = js.native
 }
 object WindowsDeviceADAccount {
   
@@ -37,15 +37,21 @@ object WindowsDeviceADAccount {
     }
     
     @scala.inline
-    def setDomainName(value: String): Self = this.set("domainName", value.asInstanceOf[js.Any])
+    def setDomainName(value: NullableOption[String]): Self = this.set("domainName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDomainName: Self = this.set("domainName", js.undefined)
     
     @scala.inline
-    def setUserName(value: String): Self = this.set("userName", value.asInstanceOf[js.Any])
+    def setDomainNameNull: Self = this.set("domainName", null)
+    
+    @scala.inline
+    def setUserName(value: NullableOption[String]): Self = this.set("userName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteUserName: Self = this.set("userName", js.undefined)
+    
+    @scala.inline
+    def setUserNameNull: Self = this.set("userName", null)
   }
 }

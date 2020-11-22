@@ -1,6 +1,7 @@
 package typingsSlinky.rollup
 
 import typingsSlinky.rollup.mod.AsyncPluginHooks
+import typingsSlinky.rollup.mod.ChangeEvent
 import typingsSlinky.rollup.mod.FirstPluginHooks
 import typingsSlinky.rollup.mod.InternalModuleFormat
 import typingsSlinky.rollup.mod.ModuleFormat
@@ -9,6 +10,7 @@ import typingsSlinky.rollup.mod.PluginValueHooks
 import typingsSlinky.rollup.mod.PreserveEntrySignaturesOption
 import typingsSlinky.rollup.mod.SequentialPluginHooks
 import typingsSlinky.rollup.mod.SyncPluginHooks
+import typingsSlinky.rollup.mod._InteropType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -26,6 +28,9 @@ object rollupStrings {
   
   @scala.inline
   def ERROR: ERROR = "ERROR".asInstanceOf[ERROR]
+  
+  @scala.inline
+  def PartialNull: PartialNull = "PartialNull".asInstanceOf[PartialNull]
   
   @scala.inline
   def START: START = "START".asInstanceOf[START]
@@ -64,16 +69,34 @@ object rollupStrings {
   def cjs: cjs = "cjs".asInstanceOf[cjs]
   
   @scala.inline
+  def closeWatcher: closeWatcher = "closeWatcher".asInstanceOf[closeWatcher]
+  
+  @scala.inline
   def commonjs: commonjs = "commonjs".asInstanceOf[commonjs]
+  
+  @scala.inline
+  def create: create = "create".asInstanceOf[create]
   
   @scala.inline
   def default: default = "default".asInstanceOf[default]
   
   @scala.inline
+  def defaultOnly: defaultOnly = "defaultOnly".asInstanceOf[defaultOnly]
+  
+  @scala.inline
+  def delete: delete = "delete".asInstanceOf[delete]
+  
+  @scala.inline
   def es: es = "es".asInstanceOf[es]
   
   @scala.inline
+  def esModule: esModule = "esModule".asInstanceOf[esModule]
+  
+  @scala.inline
   def esm: esm = "esm".asInstanceOf[esm]
+  
+  @scala.inline
+  def `exports-only`: `exports-only` = "exports-only".asInstanceOf[`exports-only`]
   
   @scala.inline
   def footer: footer = "footer".asInstanceOf[footer]
@@ -98,6 +121,9 @@ object rollupStrings {
   
   @scala.inline
   def module: module = "module".asInstanceOf[module]
+  
+  @scala.inline
+  def moduleParsed: moduleParsed = "moduleParsed".asInstanceOf[moduleParsed]
   
   @scala.inline
   def named: named = "named".asInstanceOf[named]
@@ -166,6 +192,9 @@ object rollupStrings {
   def umd: umd = "umd".asInstanceOf[umd]
   
   @scala.inline
+  def update: update = "update".asInstanceOf[update]
+  
+  @scala.inline
   def watchChange: watchChange = "watchChange".asInstanceOf[watchChange]
   
   @scala.inline
@@ -182,6 +211,9 @@ object rollupStrings {
   
   @js.native
   sealed trait ERROR extends js.Object
+  
+  @js.native
+  sealed trait PartialNull extends js.Object
   
   @js.native
   sealed trait START extends js.Object
@@ -206,7 +238,7 @@ object rollupStrings {
        with SyncPluginHooks
   
   @js.native
-  sealed trait auto extends js.Object
+  sealed trait auto extends _InteropType
   
   @js.native
   sealed trait banner
@@ -232,10 +264,24 @@ object rollupStrings {
        with ModuleFormat
   
   @js.native
+  sealed trait closeWatcher
+    extends SequentialPluginHooks
+       with SyncPluginHooks
+  
+  @js.native
   sealed trait commonjs extends ModuleFormat
   
   @js.native
-  sealed trait default extends js.Object
+  sealed trait create extends ChangeEvent
+  
+  @js.native
+  sealed trait default extends _InteropType
+  
+  @js.native
+  sealed trait defaultOnly extends _InteropType
+  
+  @js.native
+  sealed trait delete extends ChangeEvent
   
   @js.native
   sealed trait es
@@ -243,7 +289,13 @@ object rollupStrings {
        with ModuleFormat
   
   @js.native
+  sealed trait esModule extends _InteropType
+  
+  @js.native
   sealed trait esm extends ModuleFormat
+  
+  @js.native
+  sealed trait `exports-only` extends PreserveEntrySignaturesOption
   
   @js.native
   sealed trait footer
@@ -280,6 +332,11 @@ object rollupStrings {
   sealed trait module extends ModuleFormat
   
   @js.native
+  sealed trait moduleParsed
+    extends AsyncPluginHooks
+       with ParallelPluginHooks
+  
+  @js.native
   sealed trait named extends js.Object
   
   @js.native
@@ -293,8 +350,8 @@ object rollupStrings {
   
   @js.native
   sealed trait options
-    extends SequentialPluginHooks
-       with SyncPluginHooks
+    extends AsyncPluginHooks
+       with SequentialPluginHooks
   
   @js.native
   sealed trait outputOptions
@@ -374,6 +431,9 @@ object rollupStrings {
   sealed trait umd
     extends InternalModuleFormat
        with ModuleFormat
+  
+  @js.native
+  sealed trait update extends ChangeEvent
   
   @js.native
   sealed trait watchChange

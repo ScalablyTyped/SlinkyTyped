@@ -17,7 +17,7 @@ trait Scheme extends Object {
   var clusterMinSize: Double = js.native
   
   /**
-    * The name of the aggregate field the labeling scheme is based on. This can be used in the UI of web map authoring apps.
+    * The name of the aggregate field the labeling scheme is based on.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-labels-clusters.html#Scheme)
     */
@@ -31,7 +31,7 @@ trait Scheme extends Object {
   var labelingInfo: js.Array[LabelClass] = js.native
   
   /**
-    * The name of the generated cluster labeling scheme. This can be used in the UI of web map authoring apps.
+    * The name of the generated cluster labeling scheme.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-labels-clusters.html#Scheme)
     */

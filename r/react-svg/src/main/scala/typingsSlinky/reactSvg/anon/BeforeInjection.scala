@@ -23,6 +23,8 @@ trait BeforeInjection extends js.Object {
   
   var src: Validator[String] = js.native
   
+  var useRequestCache: Requireable[Boolean] = js.native
+  
   var wrapper: Requireable[String] = js.native
 }
 object BeforeInjection {
@@ -36,9 +38,10 @@ object BeforeInjection {
     loading: Requireable[String | js.Object],
     renumerateIRIElements: Requireable[Boolean],
     src: Validator[String],
+    useRequestCache: Requireable[Boolean],
     wrapper: Requireable[String]
   ): BeforeInjection = {
-    val __obj = js.Dynamic.literal(afterInjection = afterInjection.asInstanceOf[js.Any], beforeInjection = beforeInjection.asInstanceOf[js.Any], evalScripts = evalScripts.asInstanceOf[js.Any], fallback = fallback.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any], renumerateIRIElements = renumerateIRIElements.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], wrapper = wrapper.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(afterInjection = afterInjection.asInstanceOf[js.Any], beforeInjection = beforeInjection.asInstanceOf[js.Any], evalScripts = evalScripts.asInstanceOf[js.Any], fallback = fallback.asInstanceOf[js.Any], loading = loading.asInstanceOf[js.Any], renumerateIRIElements = renumerateIRIElements.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any], useRequestCache = useRequestCache.asInstanceOf[js.Any], wrapper = wrapper.asInstanceOf[js.Any])
     __obj.asInstanceOf[BeforeInjection]
   }
   
@@ -77,6 +80,9 @@ object BeforeInjection {
     
     @scala.inline
     def setSrc(value: Validator[String]): Self = this.set("src", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setUseRequestCache(value: Requireable[Boolean]): Self = this.set("useRequestCache", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setWrapper(value: Requireable[String]): Self = this.set("wrapper", value.asInstanceOf[js.Any])

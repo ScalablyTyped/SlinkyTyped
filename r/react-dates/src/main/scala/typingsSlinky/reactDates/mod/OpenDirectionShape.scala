@@ -4,7 +4,6 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-// type/OpenDirectionShape.js
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.reactDates.reactDatesStrings.down
   - typingsSlinky.reactDates.reactDatesStrings.up

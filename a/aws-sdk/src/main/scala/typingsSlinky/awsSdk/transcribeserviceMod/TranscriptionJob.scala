@@ -28,6 +28,16 @@ trait TranscriptionJob extends js.Object {
   var FailureReason: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.FailureReason] = js.native
   
   /**
+    * A value between zero and one that Amazon Transcribe assigned to the language that it identified in the source audio. Larger values indicate that Amazon Transcribe has higher confidence in the language it identified.
+    */
+  var IdentifiedLanguageScore: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.IdentifiedLanguageScore] = js.native
+  
+  /**
+    * A value that shows if automatic language identification was enabled for a transcription job.
+    */
+  var IdentifyLanguage: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Provides information about how a transcription job is executed.
     */
   var JobExecutionSettings: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.JobExecutionSettings] = js.native
@@ -36,6 +46,11 @@ trait TranscriptionJob extends js.Object {
     * The language code for the input speech.
     */
   var LanguageCode: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.LanguageCode] = js.native
+  
+  /**
+    * An object that shows the optional array of languages inputted for transcription jobs with automatic language identification enabled.
+    */
+  var LanguageOptions: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.LanguageOptions] = js.native
   
   /**
     * An object that describes the input media for the transcription job.
@@ -51,6 +66,11 @@ trait TranscriptionJob extends js.Object {
     * The sample rate, in Hertz, of the audio track in the input media file. 
     */
   var MediaSampleRateHertz: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.MediaSampleRateHertz] = js.native
+  
+  /**
+    * An object containing the details of your custom language model.
+    */
+  var ModelSettings: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.ModelSettings] = js.native
   
   /**
     * Optional settings for the transcription job. Use these settings to turn on speaker recognition, to set the maximum number of speakers that should be identified and to specify a custom vocabulary to use when processing the transcription job.
@@ -125,6 +145,18 @@ object TranscriptionJob {
     def deleteFailureReason: Self = this.set("FailureReason", js.undefined)
     
     @scala.inline
+    def setIdentifiedLanguageScore(value: IdentifiedLanguageScore): Self = this.set("IdentifiedLanguageScore", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIdentifiedLanguageScore: Self = this.set("IdentifiedLanguageScore", js.undefined)
+    
+    @scala.inline
+    def setIdentifyLanguage(value: Boolean): Self = this.set("IdentifyLanguage", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIdentifyLanguage: Self = this.set("IdentifyLanguage", js.undefined)
+    
+    @scala.inline
     def setJobExecutionSettings(value: JobExecutionSettings): Self = this.set("JobExecutionSettings", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -135,6 +167,15 @@ object TranscriptionJob {
     
     @scala.inline
     def deleteLanguageCode: Self = this.set("LanguageCode", js.undefined)
+    
+    @scala.inline
+    def setLanguageOptionsVarargs(value: LanguageCode*): Self = this.set("LanguageOptions", js.Array(value :_*))
+    
+    @scala.inline
+    def setLanguageOptions(value: LanguageOptions): Self = this.set("LanguageOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLanguageOptions: Self = this.set("LanguageOptions", js.undefined)
     
     @scala.inline
     def setMedia(value: Media): Self = this.set("Media", value.asInstanceOf[js.Any])
@@ -153,6 +194,12 @@ object TranscriptionJob {
     
     @scala.inline
     def deleteMediaSampleRateHertz: Self = this.set("MediaSampleRateHertz", js.undefined)
+    
+    @scala.inline
+    def setModelSettings(value: ModelSettings): Self = this.set("ModelSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModelSettings: Self = this.set("ModelSettings", js.undefined)
     
     @scala.inline
     def setSettings(value: Settings): Self = this.set("Settings", value.asInstanceOf[js.Any])

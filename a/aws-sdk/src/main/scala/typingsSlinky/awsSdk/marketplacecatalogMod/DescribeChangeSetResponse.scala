@@ -33,6 +33,11 @@ trait DescribeChangeSetResponse extends js.Object {
   var EndTime: js.UndefOr[DateTimeISO8601] = js.native
   
   /**
+    * Returned if the change set is in FAILED status. Can be either CLIENT_ERROR, which means that there are issues with the request (see the ErrorDetailList), or SERVER_FAULT, which means that there is a problem in the system, and you should retry your request.
+    */
+  var FailureCode: js.UndefOr[typingsSlinky.awsSdk.marketplacecatalogMod.FailureCode] = js.native
+  
+  /**
     * Returned if there is a failure on the change set, but that failure is not related to any of the changes in the request.
     */
   var FailureDescription: js.UndefOr[StringValue] = js.native
@@ -102,6 +107,12 @@ object DescribeChangeSetResponse {
     
     @scala.inline
     def deleteEndTime: Self = this.set("EndTime", js.undefined)
+    
+    @scala.inline
+    def setFailureCode(value: FailureCode): Self = this.set("FailureCode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFailureCode: Self = this.set("FailureCode", js.undefined)
     
     @scala.inline
     def setFailureDescription(value: StringValue): Self = this.set("FailureDescription", value.asInstanceOf[js.Any])

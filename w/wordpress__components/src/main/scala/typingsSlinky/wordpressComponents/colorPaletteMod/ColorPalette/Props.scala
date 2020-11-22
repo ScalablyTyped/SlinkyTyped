@@ -10,12 +10,19 @@ trait Props extends js.Object {
   var className: js.UndefOr[String] = js.native
   
   /**
+    * Whether the palette should have a clearing button or not.
+    * @defaultValue `true`
+    */
+  var clearable: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Array of `ColorPalette.Color` to use.
     */
   var colors: js.Array[Color] = js.native
   
   /**
     * Should custom color selection be disabled?
+    * @defaultValue false
     */
   var disableCustomColors: js.UndefOr[Boolean] = js.native
   

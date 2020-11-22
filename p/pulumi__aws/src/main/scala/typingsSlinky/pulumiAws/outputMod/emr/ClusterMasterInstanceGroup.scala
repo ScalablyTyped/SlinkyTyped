@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ClusterMasterInstanceGroup extends js.Object {
   
   /**
-    * Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
+    * The bid price for each EC2 Spot instance type as defined by `instanceType`. Expressed in USD. If neither `bidPrice` nor `bidPriceAsPercentageOfOnDemandPrice` is provided, `bidPriceAsPercentageOfOnDemandPrice` defaults to 100%.
     */
   var bidPrice: js.UndefOr[String] = js.native
   
@@ -28,12 +28,12 @@ trait ClusterMasterInstanceGroup extends js.Object {
   var instanceCount: js.UndefOr[Double] = js.native
   
   /**
-    * EC2 instance type for all instances in the instance group.
+    * An EC2 instance type, such as m4.xlarge.
     */
   var instanceType: String = js.native
   
   /**
-    * The name of the step.
+    * Friendly name given to the instance fleet.
     */
   var name: js.UndefOr[String] = js.native
 }

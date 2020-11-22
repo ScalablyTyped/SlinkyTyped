@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Tag extends js.Object {
   
   /**
-    * Tag key.
+    * The tag key.
     */
   var key: js.UndefOr[TagKey] = js.native
   
   /**
-    * Tag value.
+    * The tag value.
     */
   var value: js.UndefOr[TagValue] = js.native
 }

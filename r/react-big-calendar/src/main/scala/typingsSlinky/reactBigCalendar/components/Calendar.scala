@@ -9,8 +9,8 @@ import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactBigCalendar.anon.Accessors
 import typingsSlinky.reactBigCalendar.anon.Action
+import typingsSlinky.reactBigCalendar.anon.End
 import typingsSlinky.reactBigCalendar.anon.Event
-import typingsSlinky.reactBigCalendar.anon.Start
 import typingsSlinky.reactBigCalendar.anon.X
 import typingsSlinky.reactBigCalendar.mod.CalendarProps
 import typingsSlinky.reactBigCalendar.mod.Components_
@@ -49,7 +49,7 @@ object Calendar {
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def components(value: Components_[TEvent]): this.type = set("components", value.asInstanceOf[js.Any])
+    def components(value: Components_[TEvent, TResource]): this.type = set("components", value.asInstanceOf[js.Any])
     
     @scala.inline
     def culture(value: String): this.type = set("culture", value.asInstanceOf[js.Any])
@@ -118,6 +118,9 @@ object Calendar {
     def getNow(value: () => js.Date): this.type = set("getNow", js.Any.fromFunction0(value))
     
     @scala.inline
+    def handleDragStart(value: TEvent => Unit): this.type = set("handleDragStart", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def length(value: Double): this.type = set("length", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -148,7 +151,7 @@ object Calendar {
     def onNavigate(value: (/* newDate */ js.Date, /* view */ View, /* action */ NavigateAction) => Unit): this.type = set("onNavigate", js.Any.fromFunction3(value))
     
     @scala.inline
-    def onRangeChange(value: (/* range */ js.Array[js.Date] | Start, /* view */ js.UndefOr[View]) => Unit): this.type = set("onRangeChange", js.Any.fromFunction2(value))
+    def onRangeChange(value: (/* range */ js.Array[js.Date] | End, /* view */ js.UndefOr[View]) => Unit): this.type = set("onRangeChange", js.Any.fromFunction2(value))
     
     @scala.inline
     def onSelectEvent(value: (TEvent, /* e */ SyntheticEvent[org.scalajs.dom.raw.Event, HTMLElement]) => Unit): this.type = set("onSelectEvent", js.Any.fromFunction2(value))
@@ -157,7 +160,7 @@ object Calendar {
     def onSelectSlot(value: /* slotInfo */ Action => Unit): this.type = set("onSelectSlot", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSelecting(value: /* range */ Start => js.UndefOr[Boolean | Null]): this.type = set("onSelecting", js.Any.fromFunction1(value))
+    def onSelecting(value: /* range */ End => js.UndefOr[Boolean | Null]): this.type = set("onSelecting", js.Any.fromFunction1(value))
     
     @scala.inline
     def onShowMore(value: (/* events */ js.Array[TEvent], /* date */ js.Date) => Unit): this.type = set("onShowMore", js.Any.fromFunction2(value))
@@ -255,7 +258,7 @@ object Calendar {
     def viewsVarargs(value: View*): this.type = set("views", js.Array(value :_*))
     
     @scala.inline
-    def views(value: ViewsProps): this.type = set("views", value.asInstanceOf[js.Any])
+    def views(value: ViewsProps[TEvent, TResource]): this.type = set("views", value.asInstanceOf[js.Any])
   }
   
   def withProps[TEvent /* <: js.Object */, TResource /* <: js.Object */](p: CalendarProps[TEvent, TResource]): Builder[TEvent, TResource] = new Builder[TEvent, TResource](js.Array(this.component, p.asInstanceOf[js.Any]))

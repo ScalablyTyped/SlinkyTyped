@@ -13,6 +13,8 @@ trait IConnectionParameters[C /* <: IClient */] extends js.Object {
   
   var Client: js.UndefOr[Instantiable1[/* config */ String | IConnectionParameters[IClient], C]] = js.native
   
+  var Promise: js.UndefOr[js.Any] = js.native
+  
   var application_name: js.UndefOr[String] = js.native
   
   var binary: js.UndefOr[Boolean] = js.native
@@ -45,6 +47,8 @@ trait IConnectionParameters[C /* <: IClient */] extends js.Object {
   
   var max: js.UndefOr[Double] = js.native
   
+  var maxUses: js.UndefOr[Double] = js.native
+  
   var parseInputDatesAsUTC: js.UndefOr[Boolean] = js.native
   
   var password: js.UndefOr[DynamicPassword] = js.native
@@ -58,6 +62,8 @@ trait IConnectionParameters[C /* <: IClient */] extends js.Object {
   var ssl: js.UndefOr[Boolean | ISSLConfig] = js.native
   
   var statement_timeout: js.UndefOr[Boolean | Double] = js.native
+  
+  var types: js.UndefOr[ITypeOverrides] = js.native
   
   var user: js.UndefOr[String] = js.native
 }
@@ -89,6 +95,12 @@ object IConnectionParameters {
     
     @scala.inline
     def deleteClient: Self = this.set("Client", js.undefined)
+    
+    @scala.inline
+    def setPromise(value: js.Any): Self = this.set("Promise", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePromise: Self = this.set("Promise", js.undefined)
     
     @scala.inline
     def setApplication_name(value: String): Self = this.set("application_name", value.asInstanceOf[js.Any])
@@ -187,6 +199,12 @@ object IConnectionParameters {
     def deleteMax: Self = this.set("max", js.undefined)
     
     @scala.inline
+    def setMaxUses(value: Double): Self = this.set("maxUses", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxUses: Self = this.set("maxUses", js.undefined)
+    
+    @scala.inline
     def setParseInputDatesAsUTC(value: Boolean): Self = this.set("parseInputDatesAsUTC", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -230,6 +248,12 @@ object IConnectionParameters {
     
     @scala.inline
     def deleteStatement_timeout: Self = this.set("statement_timeout", js.undefined)
+    
+    @scala.inline
+    def setTypes(value: ITypeOverrides): Self = this.set("types", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTypes: Self = this.set("types", js.undefined)
     
     @scala.inline
     def setUser(value: String): Self = this.set("user", value.asInstanceOf[js.Any])

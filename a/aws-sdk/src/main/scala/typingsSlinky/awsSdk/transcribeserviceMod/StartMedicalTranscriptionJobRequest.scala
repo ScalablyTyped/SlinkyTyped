@@ -25,7 +25,7 @@ trait StartMedicalTranscriptionJobRequest extends js.Object {
   var MediaSampleRateHertz: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.MediaSampleRateHertz] = js.native
   
   /**
-    * The name of the medical transcription job. You can't use the strings "." or ".." by themselves as the job name. The name must also be unique within an AWS account. If you try to create a medical transcription job with the same name as a previous medical transcription job you will receive a ConflictException error.
+    * The name of the medical transcription job. You can't use the strings "." or ".." by themselves as the job name. The name must also be unique within an AWS account. If you try to create a medical transcription job with the same name as a previous medical transcription job, you get a ConflictException error.
     */
   var MedicalTranscriptionJobName: TranscriptionJobName = js.native
   
@@ -38,6 +38,11 @@ trait StartMedicalTranscriptionJobRequest extends js.Object {
     * The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to encrypt the output of the transcription job. The user calling the StartMedicalTranscriptionJob operation must have permission to use the specified KMS key. You use either of the following to identify a KMS key in the current account:   KMS Key ID: "1234abcd-12ab-34cd-56ef-1234567890ab"   KMS Key Alias: "alias/ExampleAlias"   You can use either of the following to identify a KMS key in the current account or another account:   Amazon Resource Name (ARN) of a KMS key in the current account or another account: "arn:aws:kms:region:account ID:key/1234abcd-12ab-34cd-56ef-1234567890ab"   ARN of a KMS Key Alias: "arn:aws:kms:region:account ID:alias/ExampleAlias"   If you don't specify an encryption key, the output of the medical transcription job is encrypted with the default Amazon S3 key (SSE-S3). If you specify a KMS key to encrypt your output, you must also specify an output location in the OutputBucketName parameter.
     */
   var OutputEncryptionKMSKeyId: js.UndefOr[KMSKeyId] = js.native
+  
+  /**
+    * You can specify a location in an Amazon S3 bucket to store the output of your medical transcription job. If you don't specify an output key, Amazon Transcribe Medical stores the output of your transcription job in the Amazon S3 bucket you specified. By default, the object key is "your-transcription-job-name.json". You can use output keys to specify the Amazon S3 prefix and file name of the transcription output. For example, specifying the Amazon S3 prefix, "folder1/folder2/", as an output key would lead to the output being stored as "folder1/folder2/your-transcription-job-name.json". If you specify "my-other-job-name.json" as the output key, the object key is changed to "my-other-job-name.json". You can use an output key to change both the prefix and the file name, for example "folder/my-other-job-name.json". If you specify an output key, you must also specify an S3 bucket in the OutputBucketName parameter.
+    */
+  var OutputKey: js.UndefOr[typingsSlinky.awsSdk.transcribeserviceMod.OutputKey] = js.native
   
   /**
     * Optional settings for the medical transcription job.
@@ -119,6 +124,12 @@ object StartMedicalTranscriptionJobRequest {
     
     @scala.inline
     def deleteOutputEncryptionKMSKeyId: Self = this.set("OutputEncryptionKMSKeyId", js.undefined)
+    
+    @scala.inline
+    def setOutputKey(value: OutputKey): Self = this.set("OutputKey", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOutputKey: Self = this.set("OutputKey", js.undefined)
     
     @scala.inline
     def setSettings(value: MedicalTranscriptionSetting): Self = this.set("Settings", value.asInstanceOf[js.Any])

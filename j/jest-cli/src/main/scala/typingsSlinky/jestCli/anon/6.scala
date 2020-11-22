@@ -1,8 +1,7 @@
 package typingsSlinky.jestCli.anon
 
-import typingsSlinky.jestCli.jestCliStrings.`Specifies when notifications will appear for test resultsDot`
-import typingsSlinky.jestCli.jestCliStrings.`failure-change`
-import typingsSlinky.jestCli.jestCliStrings.string
+import typingsSlinky.jestCli.jestCliStrings.`Should Jest inject global variables or not`
+import typingsSlinky.jestCli.jestCliStrings.boolean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,21 +9,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `6` extends js.Object {
   
-  val default: `failure-change` = js.native
+  val description: `Should Jest inject global variables or not` = js.native
   
-  val description: `Specifies when notifications will appear for test resultsDot` = js.native
-  
-  val `type`: string = js.native
+  val `type`: boolean = js.native
 }
 object `6` {
   
   @scala.inline
-  def apply(
-    default: `failure-change`,
-    description: `Specifies when notifications will appear for test resultsDot`,
-    `type`: string
-  ): `6` = {
-    val __obj = js.Dynamic.literal(default = default.asInstanceOf[js.Any], description = description.asInstanceOf[js.Any])
+  def apply(description: `Should Jest inject global variables or not`, `type`: boolean): `6` = {
+    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`6`]
   }
@@ -45,12 +38,9 @@ object `6` {
     }
     
     @scala.inline
-    def setDefault(value: `failure-change`): Self = this.set("default", value.asInstanceOf[js.Any])
+    def setDescription(value: `Should Jest inject global variables or not`): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setDescription(value: `Specifies when notifications will appear for test resultsDot`): Self = this.set("description", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setType(value: string): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: boolean): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

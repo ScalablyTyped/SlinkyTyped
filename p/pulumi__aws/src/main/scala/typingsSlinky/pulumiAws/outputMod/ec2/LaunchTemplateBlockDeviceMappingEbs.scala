@@ -21,7 +21,7 @@ trait LaunchTemplateBlockDeviceMappingEbs extends js.Object {
   /**
     * The amount of provisioned
     * [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-    * This must be set with a `volumeType` of `"io1"`.
+    * This must be set with a `volumeType` of `"io1/io2"`.
     */
   var iops: Double = js.native
   
@@ -42,7 +42,7 @@ trait LaunchTemplateBlockDeviceMappingEbs extends js.Object {
   var volumeSize: Double = js.native
   
   /**
-    * The type of volume. Can be `"standard"`, `"gp2"`, or `"io1"`. (Default: `"standard"`).
+    * The type of volume. Can be `"standard"`, `"gp2"`, `"io1"` or `"io2"`. (Default: `"standard"`).
     */
   var volumeType: String = js.native
 }

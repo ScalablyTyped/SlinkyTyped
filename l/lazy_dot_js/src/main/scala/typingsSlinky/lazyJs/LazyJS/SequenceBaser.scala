@@ -12,7 +12,7 @@ trait SequenceBaser[T] extends js.Object {
   // TODO improve define() (needs ugly overload)
   def async(interval: Double): AsyncSequence[T] = js.native
   
-  def chunk(size: Double): Sequence[T] = js.native
+  def chunk[N /* <: Double */](size: N): Sequence[Tuple[T, N, js.Array[js.Any]]] = js.native
   
   def compact(): Sequence[T] = js.native
   

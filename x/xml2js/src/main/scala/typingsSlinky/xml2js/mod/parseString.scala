@@ -11,7 +11,7 @@ object parseString extends js.Object {
   def apply(str: convertableToString, callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]): Unit = js.native
   def apply(
     str: convertableToString,
-    options: OptionsV2,
+    options: ParserOptions,
     callback: js.Function2[/* err */ js.Error, /* result */ js.Any, Unit]
   ): Unit = js.native
 }

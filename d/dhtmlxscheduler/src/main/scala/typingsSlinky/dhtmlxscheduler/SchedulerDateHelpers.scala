@@ -9,6 +9,8 @@ trait SchedulerDateHelpers extends js.Object {
   
   def add(origin: js.Date, count: Double, unit: String): js.Date = js.native
   
+  def add_map(origin: js.Date, count: Double): js.Date = js.native
+  
   def convert_to_utc(origin: js.Date): js.Date = js.native
   
   def copy(origin: js.Date): js.Date = js.native
@@ -40,6 +42,7 @@ object SchedulerDateHelpers {
   @scala.inline
   def apply(
     add: (js.Date, Double, String) => js.Date,
+    add_map: (js.Date, Double) => js.Date,
     convert_to_utc: js.Date => js.Date,
     copy: js.Date => js.Date,
     date_part: js.Date => js.Date,
@@ -54,7 +57,7 @@ object SchedulerDateHelpers {
     week_start: js.Date => js.Date,
     year_start: js.Date => js.Date
   ): SchedulerDateHelpers = {
-    val __obj = js.Dynamic.literal(add = js.Any.fromFunction3(add), convert_to_utc = js.Any.fromFunction1(convert_to_utc), copy = js.Any.fromFunction1(copy), date_part = js.Any.fromFunction1(date_part), date_to_str = js.Any.fromFunction1(date_to_str), day_start = js.Any.fromFunction1(day_start), getISOWeek = js.Any.fromFunction1(getISOWeek), getUTCISOWeek = js.Any.fromFunction1(getUTCISOWeek), month_start = js.Any.fromFunction1(month_start), str_to_date = js.Any.fromFunction1(str_to_date), time_part = js.Any.fromFunction1(time_part), to_fixed = js.Any.fromFunction1(to_fixed), week_start = js.Any.fromFunction1(week_start), year_start = js.Any.fromFunction1(year_start))
+    val __obj = js.Dynamic.literal(add = js.Any.fromFunction3(add), add_map = js.Any.fromFunction2(add_map), convert_to_utc = js.Any.fromFunction1(convert_to_utc), copy = js.Any.fromFunction1(copy), date_part = js.Any.fromFunction1(date_part), date_to_str = js.Any.fromFunction1(date_to_str), day_start = js.Any.fromFunction1(day_start), getISOWeek = js.Any.fromFunction1(getISOWeek), getUTCISOWeek = js.Any.fromFunction1(getUTCISOWeek), month_start = js.Any.fromFunction1(month_start), str_to_date = js.Any.fromFunction1(str_to_date), time_part = js.Any.fromFunction1(time_part), to_fixed = js.Any.fromFunction1(to_fixed), week_start = js.Any.fromFunction1(week_start), year_start = js.Any.fromFunction1(year_start))
     __obj.asInstanceOf[SchedulerDateHelpers]
   }
   
@@ -75,6 +78,9 @@ object SchedulerDateHelpers {
     
     @scala.inline
     def setAdd(value: (js.Date, Double, String) => js.Date): Self = this.set("add", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setAdd_map(value: (js.Date, Double) => js.Date): Self = this.set("add_map", js.Any.fromFunction2(value))
     
     @scala.inline
     def setConvert_to_utc(value: js.Date => js.Date): Self = this.set("convert_to_utc", js.Any.fromFunction1(value))

@@ -24,21 +24,21 @@ trait BaseLayerViewGL2DTile extends Object {
   var col: Double = js.native
   
   /**
-    * The coordinates of the top-left corner of the tile as an array of two numbers. The coordinates are in un-normalized map units.
+    * The coordinates of the top-left corner of the tile as an array of two numbers.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#Tile)
     */
   var coords: js.Array[Double] = js.native
   
   /**
-    * The tile string identifier in the format `level/row/col/world`
+    * The tile string identifier in the format `level/row/col/world`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#Tile)
     */
   var id: String = js.native
   
   /**
-    * The level identifier of the [LOD](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-LOD.html) to which the tile belongs
+    * The level identifier of the [LOD](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-LOD.html) to which the tile belongs.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#Tile)
     */
@@ -66,7 +66,7 @@ trait BaseLayerViewGL2DTile extends Object {
   var scale: Double = js.native
   
   /**
-    * When the projection allows world wrapping (e.g. Web Mercator), identifies the instance of the world this tile's `level`/`row`/`col`.
+    * When the projection allows world wrapping (e.g.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#Tile)
     */

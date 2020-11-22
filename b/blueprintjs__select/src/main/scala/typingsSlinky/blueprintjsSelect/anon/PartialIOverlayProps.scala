@@ -33,7 +33,7 @@ trait PartialIOverlayProps extends js.Object {
   
   var `lazy`: js.UndefOr[Boolean] = js.native
   
-  var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.native
   
   var onClosed: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.native
   
@@ -137,7 +137,7 @@ object PartialIOverlayProps {
     def deleteLazy: Self = this.set("lazy", js.undefined)
     
     @scala.inline
-    def setOnClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
+    def setOnClose(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClose: Self = this.set("onClose", js.undefined)

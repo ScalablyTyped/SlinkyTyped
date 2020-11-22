@@ -1,6 +1,5 @@
 package typingsSlinky.asyncValidator.mod
 
-import typingsSlinky.asyncValidator.anon.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -19,7 +18,7 @@ trait RuleItem extends js.Object {
     ]
   ] = js.native
   
-  var defaultField: js.UndefOr[Type] = js.native
+  var defaultField: js.UndefOr[RuleItem] = js.native
   
    // Length of type 'string' and 'array'
   var enum: js.UndefOr[js.Array[js.UndefOr[String | Double | Boolean | Null]]] = js.native
@@ -32,7 +31,7 @@ trait RuleItem extends js.Object {
    // Range of type 'string' and 'array'
   var max: js.UndefOr[Double] = js.native
   
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[String | js.Function0[String]] = js.native
   
   var min: js.UndefOr[Double] = js.native
   
@@ -95,7 +94,7 @@ object RuleItem {
     def deleteAsyncValidator: Self = this.set("asyncValidator", js.undefined)
     
     @scala.inline
-    def setDefaultField(value: Type): Self = this.set("defaultField", value.asInstanceOf[js.Any])
+    def setDefaultField(value: RuleItem): Self = this.set("defaultField", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefaultField: Self = this.set("defaultField", js.undefined)
@@ -128,7 +127,10 @@ object RuleItem {
     def deleteMax: Self = this.set("max", js.undefined)
     
     @scala.inline
-    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setMessageFunction0(value: () => String): Self = this.set("message", js.Any.fromFunction0(value))
+    
+    @scala.inline
+    def setMessage(value: String | js.Function0[String]): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)

@@ -1,8 +1,7 @@
 package typingsSlinky.devextreme.anon
 
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeList
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeListColumn
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeListRowObject
+import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxSlideOut
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -10,11 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `12` extends js.Object {
   
-  var column: js.UndefOr[dxTreeListColumn] = js.native
+  var component: js.UndefOr[dxSlideOut] = js.native
   
-  var component: js.UndefOr[dxTreeList] = js.native
+  var element: js.UndefOr[dxElement] = js.native
   
-  var row: js.UndefOr[dxTreeListRowObject] = js.native
+  var model: js.UndefOr[js.Any] = js.native
 }
 object `12` {
   
@@ -40,21 +39,21 @@ object `12` {
     }
     
     @scala.inline
-    def setColumn(value: dxTreeListColumn): Self = this.set("column", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteColumn: Self = this.set("column", js.undefined)
-    
-    @scala.inline
-    def setComponent(value: dxTreeList): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxSlideOut): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
     
     @scala.inline
-    def setRow(value: dxTreeListRowObject): Self = this.set("row", value.asInstanceOf[js.Any])
+    def setElement(value: dxElement): Self = this.set("element", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRow: Self = this.set("row", js.undefined)
+    def deleteElement: Self = this.set("element", js.undefined)
+    
+    @scala.inline
+    def setModel(value: js.Any): Self = this.set("model", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteModel: Self = this.set("model", js.undefined)
   }
 }

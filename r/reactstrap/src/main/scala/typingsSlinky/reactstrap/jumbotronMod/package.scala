@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object jumbotronMod {
   
-  type Jumbotron[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.jumbotronMod.JumbotronProps]
+  type Jumbotron = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.jumbotronMod.JumbotronProps]
 }

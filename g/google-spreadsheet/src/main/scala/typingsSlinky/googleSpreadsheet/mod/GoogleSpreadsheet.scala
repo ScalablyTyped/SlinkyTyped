@@ -134,6 +134,13 @@ class GoogleSpreadsheet protected () extends SpreadsheetBasicProperties {
     */
   val sheetsByIndex: js.Array[GoogleSpreadsheetWorksheet] = js.native
   
+  /**
+    * @description
+    * object of child worksheets
+    * - keyed by the worksheet title
+    */
+  val sheetsByTitle: StringDictionary[GoogleSpreadsheetWorksheet] = js.native
+  
   // #endregion
   // #region NON-BASIC PROPERTIES added here
   /**

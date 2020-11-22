@@ -7,55 +7,89 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait LoadOptions extends js.Object {
   
-  /** @name LoadOptions.customQueryParams */
+  /**
+    * [descr:LoadOptions.customQueryParams]
+    */
   var customQueryParams: js.UndefOr[js.Any] = js.native
   
-  /** @name LoadOptions.expand */
+  /**
+    * [descr:LoadOptions.expand]
+    */
   var expand: js.UndefOr[js.Any] = js.native
   
-  /** @name LoadOptions.filter */
+  /**
+    * [descr:LoadOptions.filter]
+    */
   var filter: js.UndefOr[js.Any] = js.native
   
-  /** @name LoadOptions.group */
+  /**
+    * [descr:LoadOptions.group]
+    */
   var group: js.UndefOr[js.Any] = js.native
   
-  /** @name LoadOptions.groupSummary */
+  /**
+    * [descr:LoadOptions.groupSummary]
+    */
   var groupSummary: js.UndefOr[js.Any] = js.native
   
-  /** @name LoadOptions.parentIds */
+  /**
+    * [descr:LoadOptions.parentIds]
+    */
   var parentIds: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name LoadOptions.requireGroupCount */
+  /**
+    * [descr:LoadOptions.requireGroupCount]
+    */
   var requireGroupCount: js.UndefOr[Boolean] = js.native
   
-  /** @name LoadOptions.requireTotalCount */
+  /**
+    * [descr:LoadOptions.requireTotalCount]
+    */
   var requireTotalCount: js.UndefOr[Boolean] = js.native
   
-  /** @name LoadOptions.searchExpr */
+  /**
+    * [descr:LoadOptions.searchExpr]
+    */
   var searchExpr: js.UndefOr[String | js.Function | (js.Array[String | js.Function])] = js.native
   
-  /** @name LoadOptions.searchOperation */
+  /**
+    * [descr:LoadOptions.searchOperation]
+    */
   var searchOperation: js.UndefOr[String] = js.native
   
-  /** @name LoadOptions.searchValue */
+  /**
+    * [descr:LoadOptions.searchValue]
+    */
   var searchValue: js.UndefOr[js.Any] = js.native
   
-  /** @name LoadOptions.select */
+  /**
+    * [descr:LoadOptions.select]
+    */
   var select: js.UndefOr[js.Any] = js.native
   
-  /** @name LoadOptions.skip */
+  /**
+    * [descr:LoadOptions.skip]
+    */
   var skip: js.UndefOr[Double] = js.native
   
-  /** @name LoadOptions.sort */
+  /**
+    * [descr:LoadOptions.sort]
+    */
   var sort: js.UndefOr[js.Any] = js.native
   
-  /** @name LoadOptions.take */
+  /**
+    * [descr:LoadOptions.take]
+    */
   var take: js.UndefOr[Double] = js.native
   
-  /** @name LoadOptions.totalSummary */
+  /**
+    * [descr:LoadOptions.totalSummary]
+    */
   var totalSummary: js.UndefOr[js.Any] = js.native
   
-  /** @name LoadOptions.userData */
+  /**
+    * [descr:LoadOptions.userData]
+    */
   var userData: js.UndefOr[js.Any] = js.native
 }
 object LoadOptions {

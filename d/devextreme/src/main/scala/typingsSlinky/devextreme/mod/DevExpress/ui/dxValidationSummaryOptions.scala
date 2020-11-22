@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxValidationSummaryOptions extends CollectionWidgetOptions[dxValidationSummary] {
   
-  /** @name dxValidationSummary.Options.validationGroup */
+  /**
+    * [descr:dxValidationSummary.Options.validationGroup]
+    */
   var validationGroup: js.UndefOr[String] = js.native
 }
 object dxValidationSummaryOptions {

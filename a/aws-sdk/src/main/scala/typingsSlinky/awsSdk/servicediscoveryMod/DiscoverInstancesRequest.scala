@@ -23,7 +23,12 @@ trait DiscoverInstancesRequest extends js.Object {
   var NamespaceName: typingsSlinky.awsSdk.servicediscoveryMod.NamespaceName = js.native
   
   /**
-    * A string map that contains attributes with values that you can use to filter instances by any custom attribute that you specified when you registered the instance. Only instances that match all the specified key/value pairs will be returned.
+    * Opportunistic filters to scope the results based on custom attributes. If there are instances that match both the filters specified in both the QueryParameters parameter and this parameter, they are returned. Otherwise, these filters are ignored and only instances that match the filters specified in the QueryParameters parameter are returned.
+    */
+  var OptionalParameters: js.UndefOr[Attributes] = js.native
+  
+  /**
+    * Filters to scope the results based on custom attributes for the instance. For example, {version=v1, az=1a}. Only instances that match all the specified key-value pairs will be returned.
     */
   var QueryParameters: js.UndefOr[Attributes] = js.native
   
@@ -72,6 +77,12 @@ object DiscoverInstancesRequest {
     
     @scala.inline
     def deleteMaxResults: Self = this.set("MaxResults", js.undefined)
+    
+    @scala.inline
+    def setOptionalParameters(value: Attributes): Self = this.set("OptionalParameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOptionalParameters: Self = this.set("OptionalParameters", js.undefined)
     
     @scala.inline
     def setQueryParameters(value: Attributes): Self = this.set("QueryParameters", value.asInstanceOf[js.Any])

@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object fromUrl extends js.Object {
   
-  def apply(gitUrl: String): GitHost = js.native
-  def apply(gitUrl: String, opts: Options): GitHost = js.native
+  def apply(gitUrl: String): js.UndefOr[GitHost] = js.native
+  def apply(gitUrl: String, opts: Options): js.UndefOr[GitHost] = js.native
 }

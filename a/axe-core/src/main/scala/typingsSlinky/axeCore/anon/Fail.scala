@@ -8,16 +8,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Fail extends js.Object {
   
-  var fail: String = js.native
+  var fail: String | StringDictionary[String] = js.native
   
   var incomplete: String | StringDictionary[String] = js.native
   
-  var pass: String = js.native
+  var pass: String | StringDictionary[String] = js.native
 }
 object Fail {
   
   @scala.inline
-  def apply(fail: String, incomplete: String | StringDictionary[String], pass: String): Fail = {
+  def apply(
+    fail: String | StringDictionary[String],
+    incomplete: String | StringDictionary[String],
+    pass: String | StringDictionary[String]
+  ): Fail = {
     val __obj = js.Dynamic.literal(fail = fail.asInstanceOf[js.Any], incomplete = incomplete.asInstanceOf[js.Any], pass = pass.asInstanceOf[js.Any])
     __obj.asInstanceOf[Fail]
   }
@@ -38,12 +42,12 @@ object Fail {
     }
     
     @scala.inline
-    def setFail(value: String): Self = this.set("fail", value.asInstanceOf[js.Any])
+    def setFail(value: String | StringDictionary[String]): Self = this.set("fail", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setIncomplete(value: String | StringDictionary[String]): Self = this.set("incomplete", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setPass(value: String): Self = this.set("pass", value.asInstanceOf[js.Any])
+    def setPass(value: String | StringDictionary[String]): Self = this.set("pass", value.asInstanceOf[js.Any])
   }
 }

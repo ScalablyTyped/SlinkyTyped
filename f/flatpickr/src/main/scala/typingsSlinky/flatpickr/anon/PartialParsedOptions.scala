@@ -37,6 +37,8 @@ trait PartialParsedOptions extends js.Object {
   
   var allowInput: js.UndefOr[Boolean] = js.native
   
+  var allowInvalidPreload: js.UndefOr[Boolean] = js.native
+  
   var altFormat: js.UndefOr[String] = js.native
   
   var altInput: js.UndefOr[Boolean] = js.native
@@ -48,6 +50,8 @@ trait PartialParsedOptions extends js.Object {
   var appendTo: js.UndefOr[HTMLElement] = js.native
   
   var ariaDateFormat: js.UndefOr[String] = js.native
+  
+  var autoFillDefaultTime: js.UndefOr[Boolean] = js.native
   
   var clickOpens: js.UndefOr[Boolean] = js.native
   
@@ -227,6 +231,12 @@ object PartialParsedOptions {
     def deleteAllowInput: Self = this.set("allowInput", js.undefined)
     
     @scala.inline
+    def setAllowInvalidPreload(value: Boolean): Self = this.set("allowInvalidPreload", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllowInvalidPreload: Self = this.set("allowInvalidPreload", js.undefined)
+    
+    @scala.inline
     def setAltFormat(value: String): Self = this.set("altFormat", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -261,6 +271,12 @@ object PartialParsedOptions {
     
     @scala.inline
     def deleteAriaDateFormat: Self = this.set("ariaDateFormat", js.undefined)
+    
+    @scala.inline
+    def setAutoFillDefaultTime(value: Boolean): Self = this.set("autoFillDefaultTime", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoFillDefaultTime: Self = this.set("autoFillDefaultTime", js.undefined)
     
     @scala.inline
     def setClickOpens(value: Boolean): Self = this.set("clickOpens", value.asInstanceOf[js.Any])

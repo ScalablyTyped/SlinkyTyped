@@ -4,7 +4,6 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.cardDescriptionMod.CardDescriptionProps
 import typingsSlinky.semanticUiReact.cardHeaderMod.CardHeaderProps
 import typingsSlinky.semanticUiReact.cardMetaMod.CardMetaProps
@@ -39,7 +38,7 @@ class SharedBuilder_CardContentProps516196698 (val args: js.Array[js.Any])
   
   @scala.inline
   def descriptionFunction3(
-    value: (/* component */ ReactType[CardDescriptionProps], CardDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, CardDescriptionProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("description", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -53,7 +52,7 @@ class SharedBuilder_CardContentProps516196698 (val args: js.Array[js.Any])
   
   @scala.inline
   def headerFunction3(
-    value: (/* component */ ReactType[CardHeaderProps], CardHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, CardHeaderProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("header", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -64,7 +63,7 @@ class SharedBuilder_CardContentProps516196698 (val args: js.Array[js.Any])
   
   @scala.inline
   def metaFunction3(
-    value: (/* component */ ReactType[CardMetaProps], CardMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, CardMetaProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("meta", js.Any.fromFunction3(value))
   
   @scala.inline

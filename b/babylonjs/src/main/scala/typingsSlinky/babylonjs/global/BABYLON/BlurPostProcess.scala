@@ -25,8 +25,7 @@ class BlurPostProcess protected ()
     */
   def this(
     name: String,
-    /** The direction in which to blur the image. */
-  direction: typingsSlinky.babylonjs.BABYLON.Vector2,
+    direction: typingsSlinky.babylonjs.BABYLON.Vector2,
     kernel: Double,
     options: Double | PostProcessOptions,
     camera: Nullable[typingsSlinky.babylonjs.BABYLON.Camera],
@@ -37,4 +36,17 @@ class BlurPostProcess protected ()
     defines: js.UndefOr[String],
     blockCompilation: js.UndefOr[Boolean]
   ) = this()
+}
+/* static members */
+@JSGlobal("BABYLON.BlurPostProcess")
+@js.native
+object BlurPostProcess extends js.Object {
+  
+  /** @hidden */
+  def _Parse(
+    parsedPostProcess: js.Any,
+    targetCamera: typingsSlinky.babylonjs.BABYLON.Camera,
+    scene: typingsSlinky.babylonjs.BABYLON.Scene,
+    rootUrl: String
+  ): Nullable[typingsSlinky.babylonjs.BABYLON.BlurPostProcess] = js.native
 }

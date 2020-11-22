@@ -3,9 +3,10 @@ package typingsSlinky.reactstrap.collapseMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
-import typingsSlinky.react.mod.ReactType
+import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
+import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactstrap.anon.Hide
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
@@ -14,15 +15,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait CollapseProps
-  extends AllHTMLAttributes[HTMLElement]
-     with ClassAttributes[HTMLElement]
+  extends HTMLAttributes[HTMLElement]
      with /* key */ StringDictionary[js.Any] {
-  
-  var classNames: js.UndefOr[String] = js.native
   
   var cssModule: js.UndefOr[CSSModule] = js.native
   
   var delay: js.UndefOr[Hide] = js.native
+  
+  var innerRef: js.UndefOr[Ref[HTMLElement]] = js.native
   
   var isOpen: js.UndefOr[Boolean] = js.native
   
@@ -42,7 +42,7 @@ trait CollapseProps
   
   var onOpened: js.UndefOr[js.Function0[Unit]] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
 }
 object CollapseProps {
   
@@ -68,12 +68,6 @@ object CollapseProps {
     }
     
     @scala.inline
-    def setClassNames(value: String): Self = this.set("classNames", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteClassNames: Self = this.set("classNames", js.undefined)
-    
-    @scala.inline
     def setCssModule(value: CSSModule): Self = this.set("cssModule", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -84,6 +78,21 @@ object CollapseProps {
     
     @scala.inline
     def deleteDelay: Self = this.set("delay", js.undefined)
+    
+    @scala.inline
+    def setInnerRefRefObject(value: ReactRef[HTMLElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInnerRefFunction1(value: /* instance */ HTMLElement | Null => Unit): Self = this.set("innerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setInnerRef(value: Ref[HTMLElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInnerRef: Self = this.set("innerRef", js.undefined)
+    
+    @scala.inline
+    def setInnerRefNull: Self = this.set("innerRef", null)
     
     @scala.inline
     def setIsOpen(value: Boolean): Self = this.set("isOpen", value.asInstanceOf[js.Any])
@@ -146,7 +155,7 @@ object CollapseProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

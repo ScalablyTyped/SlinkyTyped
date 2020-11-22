@@ -1,31 +1,74 @@
 package typingsSlinky.reactNativeNavigation.optionsMod
 
+import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.accelerate
+import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.accelerateDecelerate
+import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.decelerate
+import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.decelerateAccelerate
+import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.linear
+import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.overshoot
+import typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.spring
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Rewritten from type alias, can be one of: 
-  - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.linear
-  - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.accelerateDecelerate
-  - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.decelerate
-  - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.accelerate
-  - typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.decelerateAccelerate
+  - typingsSlinky.reactNativeNavigation.anon.Factor
+  - typingsSlinky.reactNativeNavigation.anon.Type
+  - typingsSlinky.reactNativeNavigation.anon.`1`
+  - typingsSlinky.reactNativeNavigation.anon.`2`
+  - typingsSlinky.reactNativeNavigation.anon.`3`
+  - typingsSlinky.reactNativeNavigation.anon.Tension
+  - typingsSlinky.reactNativeNavigation.anon.AllowsOverdamping
 */
 trait Interpolation extends js.Object
 object Interpolation {
   
   @scala.inline
-  def accelerate: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.accelerate = "accelerate".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.accelerate]
+  def AllowsOverdamping(`type`: spring): Interpolation = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Interpolation]
+  }
   
   @scala.inline
-  def accelerateDecelerate: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.accelerateDecelerate = "accelerateDecelerate".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.accelerateDecelerate]
+  def `1`(`type`: decelerateAccelerate): Interpolation = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Interpolation]
+  }
   
   @scala.inline
-  def decelerate: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.decelerate = "decelerate".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.decelerate]
+  def Type(`type`: decelerate): Interpolation = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Interpolation]
+  }
   
   @scala.inline
-  def decelerateAccelerate: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.decelerateAccelerate = "decelerateAccelerate".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.decelerateAccelerate]
+  def Factor(`type`: accelerate): Interpolation = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Interpolation]
+  }
   
   @scala.inline
-  def linear: typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.linear = "linear".asInstanceOf[typingsSlinky.reactNativeNavigation.reactNativeNavigationStrings.linear]
+  def `3`(`type`: linear): Interpolation = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Interpolation]
+  }
+  
+  @scala.inline
+  def Tension(`type`: overshoot): Interpolation = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Interpolation]
+  }
+  
+  @scala.inline
+  def `2`(`type`: accelerateDecelerate): Interpolation = {
+    val __obj = js.Dynamic.literal()
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Interpolation]
+  }
 }

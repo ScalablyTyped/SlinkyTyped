@@ -56,6 +56,12 @@ object mod extends js.Object {
     extends typingsSlinky.fastCsvParse.mod.CsvParserStream[I, O] {
     def this(parserOptions: typingsSlinky.fastCsvParse.parserOptionsMod.ParserOptions) = this()
   }
+  /* static members */
+  @js.native
+  object CsvParserStream extends js.Object {
+    
+    var wrapDoneCallback: js.Any = js.native
+  }
   
   @js.native
   class FormatterOptions[I /* <: Row */, O /* <: Row */] ()

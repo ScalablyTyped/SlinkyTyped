@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/reporters/build/coverage_reporter", JSImport.Namespace)
+@JSImport("@jest/reporters/build/CoverageReporter", JSImport.Namespace)
 @js.native
 object coverageReporterMod extends js.Object {
   

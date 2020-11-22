@@ -61,7 +61,7 @@ class CatalogTable protected () extends CustomResource {
   val parameters: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
   /**
-    * A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
+    * A list of columns by which the table is partitioned. Only primitive types are supported as partition keys. see Partition Keys below.
     */
   val partitionKeys: Output_[js.UndefOr[js.Array[CatalogTablePartitionKey]]] = js.native
   
@@ -76,7 +76,7 @@ class CatalogTable protected () extends CustomResource {
   val storageDescriptor: Output_[js.UndefOr[CatalogTableStorageDescriptor]] = js.native
   
   /**
-    * The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
+    * The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.). While optional, some Athena DDL queries such as `ALTER TABLE` and `SHOW CREATE TABLE` will fail if this argument is empty.
     */
   val tableType: Output_[js.UndefOr[String]] = js.native
   

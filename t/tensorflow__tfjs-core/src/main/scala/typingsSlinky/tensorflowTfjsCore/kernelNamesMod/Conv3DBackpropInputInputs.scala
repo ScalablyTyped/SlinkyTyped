@@ -4,11 +4,13 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Pick<@tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/kernel_registry.NamedTensorInfoMap, 'dy'> */
+/* Inlined std.Pick<@tensorflow/tfjs-core.@tensorflow/tfjs-core/dist/kernel_registry.NamedTensorInfoMap, 'dy' | 'filter'> */
 @js.native
 trait Conv3DBackpropInputInputs extends js.Object {
   
   var dy: js.UndefOr[js.Any] = js.native
+  
+  var filter: js.UndefOr[js.Any] = js.native
 }
 object Conv3DBackpropInputInputs {
   
@@ -38,5 +40,11 @@ object Conv3DBackpropInputInputs {
     
     @scala.inline
     def deleteDy: Self = this.set("dy", js.undefined)
+    
+    @scala.inline
+    def setFilter(value: js.Any): Self = this.set("filter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteFilter: Self = this.set("filter", js.undefined)
   }
 }

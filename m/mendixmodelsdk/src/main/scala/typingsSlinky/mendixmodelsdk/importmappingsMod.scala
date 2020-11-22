@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.datatypesMod.datatypes.DataType
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
@@ -12,6 +13,7 @@ import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.ObjectMappingElement
 import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.ValueMappingElement
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.FolderBase
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.versionChecksMod.IStructureVersionInfo
 import typingsSlinky.mendixmodelsdk.versionChecksMod.StructureType
 import scala.scalajs.js
@@ -35,13 +37,13 @@ object importmappingsMod extends js.Object {
       * Interfaces and instance classes for types from the Mendix sub meta model `ImportMappings`.
       */
     /**
-      * See: {@link https://docs.mendix.com/refguide7/import-mappings relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/import-mappings relevant section in reference guide}
       */
     @js.native
     trait IImportMapping extends IMappingDocument
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/import-mappings relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/import-mappings relevant section in reference guide}
       */
     /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
     - typingsSlinky.mendixmodelsdk.structuresMod.aliases.IContainer because Already inherited
@@ -65,9 +67,6 @@ object importmappingsMod extends js.Object {
       
       @JSName("containerAsFolderBase")
       def containerAsFolderBase_MImportMapping: FolderBase = js.native
-      
-      @JSName("model")
-      var model_FImportMapping: IModel = js.native
       
       /**
         * In version 7.16.0: deleted
@@ -103,7 +102,7 @@ object importmappingsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/import-mappings relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/import-mappings relevant section in reference guide}
       */
     @js.native
     class ImportObjectMappingElement protected () extends ObjectMappingElement {
@@ -112,12 +111,9 @@ object importmappingsMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
-      
-      @JSName("model")
-      var model_FImportObjectMappingElement: IModel = js.native
     }
     /* static members */
     @js.native
@@ -150,7 +146,7 @@ object importmappingsMod extends js.Object {
     }
     
     /**
-      * See: {@link https://docs.mendix.com/refguide7/import-mappings relevant section in reference guide}
+      * See: {@link https://docs.mendix.com/refguide/import-mappings relevant section in reference guide}
       */
     @js.native
     class ImportValueMappingElement protected () extends ValueMappingElement {
@@ -159,12 +155,9 @@ object importmappingsMod extends js.Object {
         structureTypeName: String,
         id: String,
         isPartial: Boolean,
-        unit: ModelUnit,
-        container: AbstractElement
+        unit: ModelUnit[IAbstractModel],
+        container: AbstractElement[IAbstractModel, Container]
       ) = this()
-      
-      @JSName("model")
-      var model_FImportValueMappingElement: IModel = js.native
     }
     /* static members */
     @js.native

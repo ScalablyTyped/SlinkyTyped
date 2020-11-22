@@ -1,17 +1,19 @@
 package typingsSlinky.mendixmodelsdk.microflowsMod.microflows
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.expressionsMod.expressions.Expression
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.microflowsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/change-variable relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/change-variable relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/microflows", "microflows.ChangeVariableAction")
 @js.native
@@ -21,15 +23,12 @@ class ChangeVariableAction protected () extends MicroflowAction {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def changeVariableName: String = js.native
   def changeVariableName_=(newValue: String): Unit = js.native
-  
-  @JSName("model")
-  var model_FChangeVariableAction: IModel = js.native
   
   /**
     * The value of this property is conceptually of type microflowExpressions.MicroflowExpression.
@@ -38,6 +37,8 @@ class ChangeVariableAction protected () extends MicroflowAction {
   
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
+    *
+    * @ignore
     *
     * In version 7.9.0: introduced
     */

@@ -81,6 +81,9 @@ object babelPluginMacrosStrings {
   def BreakStatement: BreakStatement = "BreakStatement".asInstanceOf[BreakStatement]
   
   @scala.inline
+  def Call: Call = "Call".asInstanceOf[Call]
+  
+  @scala.inline
   def CallExpression: CallExpression = "CallExpression".asInstanceOf[CallExpression]
   
   @scala.inline
@@ -546,6 +549,9 @@ object babelPluginMacrosStrings {
   def Statement: Statement = "Statement".asInstanceOf[Statement]
   
   @scala.inline
+  def StaticBlock: StaticBlock = "StaticBlock".asInstanceOf[StaticBlock]
+  
+  @scala.inline
   def StringLiteral: StringLiteral = "StringLiteral".asInstanceOf[StringLiteral]
   
   @scala.inline
@@ -640,6 +646,9 @@ object babelPluginMacrosStrings {
   
   @scala.inline
   def TSIntersectionType: TSIntersectionType = "TSIntersectionType".asInstanceOf[TSIntersectionType]
+  
+  @scala.inline
+  def TSIntrinsicKeyword: TSIntrinsicKeyword = "TSIntrinsicKeyword".asInstanceOf[TSIntrinsicKeyword]
   
   @scala.inline
   def TSLiteralType: TSLiteralType = "TSLiteralType".asInstanceOf[TSLiteralType]
@@ -982,6 +991,9 @@ object babelPluginMacrosStrings {
   
   @js.native
   sealed trait BreakStatement extends js.Object
+  
+  @js.native
+  sealed trait Call extends js.Object
   
   @js.native
   sealed trait CallExpression extends js.Object
@@ -1449,6 +1461,9 @@ object babelPluginMacrosStrings {
   sealed trait Statement extends js.Object
   
   @js.native
+  sealed trait StaticBlock extends js.Object
+  
+  @js.native
   sealed trait StringLiteral extends js.Object
   
   @js.native
@@ -1543,6 +1558,9 @@ object babelPluginMacrosStrings {
   
   @js.native
   sealed trait TSIntersectionType extends js.Object
+  
+  @js.native
+  sealed trait TSIntrinsicKeyword extends js.Object
   
   @js.native
   sealed trait TSLiteralType extends js.Object

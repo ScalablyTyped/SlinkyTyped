@@ -3,7 +3,7 @@ package typingsSlinky.devextreme.mod.DevExpress.ui
 import typingsSlinky.devextreme.anon.ElementEvent
 import typingsSlinky.devextreme.devextremeStrings.back
 import typingsSlinky.devextreme.devextremeStrings.danger
-import typingsSlinky.devextreme.devextremeStrings.default_
+import typingsSlinky.devextreme.devextremeStrings.default
 import typingsSlinky.devextreme.devextremeStrings.normal
 import typingsSlinky.devextreme.devextremeStrings.success
 import scala.scalajs.js
@@ -13,14 +13,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxActionSheetItem extends CollectionWidgetItem {
   
-  /** @name dxActionSheetItem.icon */
+  /**
+    * [descr:dxActionSheetItem.icon]
+    */
   var icon: js.UndefOr[String] = js.native
   
-  /** @name dxActionSheetItem.onClick */
+  /**
+    * [descr:dxActionSheetItem.onClick]
+    */
   var onClick: js.UndefOr[(js.Function1[/* e */ ElementEvent, _]) | String] = js.native
   
-  /** @name dxActionSheetItem.type */
-  var `type`: js.UndefOr[back | danger | default_ | normal | success] = js.native
+  /**
+    * [descr:dxActionSheetItem.type]
+    */
+  var `type`: js.UndefOr[back | danger | default | normal | success] = js.native
 }
 object dxActionSheetItem {
   
@@ -61,7 +67,7 @@ object dxActionSheetItem {
     def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
-    def setType(value: back | danger | default_ | normal | success): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: back | danger | default | normal | success): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)

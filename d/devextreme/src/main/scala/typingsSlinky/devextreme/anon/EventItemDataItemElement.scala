@@ -2,9 +2,7 @@ package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
 import typingsSlinky.devextreme.mod.DevExpress.events.event
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeView
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxTreeViewNode
-import typingsSlinky.devextreme.mod.global.JQueryEventObject
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxTabPanel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EventItemDataItemElement extends js.Object {
   
-  var component: js.UndefOr[dxTreeView] = js.native
+  var component: js.UndefOr[dxTabPanel] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -22,13 +20,7 @@ trait EventItemDataItemElement extends js.Object {
   
   var itemElement: js.UndefOr[dxElement] = js.native
   
-  var itemIndex: js.UndefOr[Double] = js.native
-  
-  var jQueryEvent: js.UndefOr[JQueryEventObject] = js.native
-  
   var model: js.UndefOr[js.Any] = js.native
-  
-  var node: js.UndefOr[dxTreeViewNode] = js.native
 }
 object EventItemDataItemElement {
   
@@ -54,7 +46,7 @@ object EventItemDataItemElement {
     }
     
     @scala.inline
-    def setComponent(value: dxTreeView): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxTabPanel): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
@@ -84,27 +76,9 @@ object EventItemDataItemElement {
     def deleteItemElement: Self = this.set("itemElement", js.undefined)
     
     @scala.inline
-    def setItemIndex(value: Double): Self = this.set("itemIndex", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteItemIndex: Self = this.set("itemIndex", js.undefined)
-    
-    @scala.inline
-    def setJQueryEvent(value: JQueryEventObject): Self = this.set("jQueryEvent", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteJQueryEvent: Self = this.set("jQueryEvent", js.undefined)
-    
-    @scala.inline
     def setModel(value: js.Any): Self = this.set("model", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteModel: Self = this.set("model", js.undefined)
-    
-    @scala.inline
-    def setNode(value: dxTreeViewNode): Self = this.set("node", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteNode: Self = this.set("node", js.undefined)
   }
 }

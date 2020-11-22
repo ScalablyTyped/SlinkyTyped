@@ -14,11 +14,13 @@ class AsYouType () extends js.Object {
   
   var country: js.UndefOr[CountryCode] = js.native
   
+  def getChars(): String = js.native
+  
   def getNationalNumber(): String = js.native
   
   def getNumber(): js.UndefOr[typingsSlinky.libphonenumberJs.typesMod.PhoneNumber] = js.native
   
-  def getTemplate(): js.UndefOr[String] = js.native
+  def getTemplate(): String = js.native
   
   def input(text: String): String = js.native
   

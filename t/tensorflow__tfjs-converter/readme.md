@@ -1,7 +1,7 @@
 
 # Scala.js typings for tensorflow__tfjs-converter
 
-Typings are for version 2.0.1
+Typings are for version 2.7.0
 
 ## Library description:
 Tensorflow model converter for javascript

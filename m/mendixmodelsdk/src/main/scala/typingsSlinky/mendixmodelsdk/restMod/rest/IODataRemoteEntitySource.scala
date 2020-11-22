@@ -14,6 +14,8 @@ trait IODataRemoteEntitySource extends IQueryBasedRemoteEntitySource {
   /**
     * NOTE: This property is experimental and is subject to change in newer Model SDK versions.
     *
+    * @ignore
+    *
     * In version 8.11.0: introduced
     */
   val key: IODataKey | Null = js.native

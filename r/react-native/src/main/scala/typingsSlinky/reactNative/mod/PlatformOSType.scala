@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactNative.reactNativeStrings.macos
   - typingsSlinky.reactNative.reactNativeStrings.windows
   - typingsSlinky.reactNative.reactNativeStrings.web
+  - typingsSlinky.reactNative.reactNativeStrings.native
 */
 trait PlatformOSType extends js.Object
 object PlatformOSType {
@@ -22,6 +23,9 @@ object PlatformOSType {
   
   @scala.inline
   def macos: typingsSlinky.reactNative.reactNativeStrings.macos = "macos".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.macos]
+  
+  @scala.inline
+  def native: typingsSlinky.reactNative.reactNativeStrings.native = "native".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.native]
   
   @scala.inline
   def web: typingsSlinky.reactNative.reactNativeStrings.web = "web".asInstanceOf[typingsSlinky.reactNative.reactNativeStrings.web]

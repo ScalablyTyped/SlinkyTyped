@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait InstanceNetworkInterfaceSpecification extends js.Object {
   
   /**
+    * Indicates whether to assign a carrier IP address to the network interface. You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone. For more information about carrier IP addresses, see Carrier IP addresses in the AWS Wavelength Developer Guide.
+    */
+  var AssociateCarrierIpAddress: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one. You cannot specify more than one network interface in the request. If launching into a default subnet, the default value is true.
     */
   var AssociatePublicIpAddress: js.UndefOr[Boolean] = js.native
@@ -46,6 +51,11 @@ trait InstanceNetworkInterfaceSpecification extends js.Object {
     * One or more IPv6 addresses to assign to the network interface. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request. You cannot specify this option if you've specified a minimum number of instances to launch.
     */
   var Ipv6Addresses: js.UndefOr[InstanceIpv6AddressList] = js.native
+  
+  /**
+    * The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
+    */
+  var NetworkCardIndex: js.UndefOr[Integer] = js.native
   
   /**
     * The ID of the network interface. If you are creating a Spot Fleet, omit this parameter because you can’t specify a network interface ID in a launch specification.
@@ -94,6 +104,12 @@ object InstanceNetworkInterfaceSpecification {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setAssociateCarrierIpAddress(value: Boolean): Self = this.set("AssociateCarrierIpAddress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAssociateCarrierIpAddress: Self = this.set("AssociateCarrierIpAddress", js.undefined)
     
     @scala.inline
     def setAssociatePublicIpAddress(value: Boolean): Self = this.set("AssociatePublicIpAddress", value.asInstanceOf[js.Any])
@@ -148,6 +164,12 @@ object InstanceNetworkInterfaceSpecification {
     
     @scala.inline
     def deleteIpv6Addresses: Self = this.set("Ipv6Addresses", js.undefined)
+    
+    @scala.inline
+    def setNetworkCardIndex(value: Integer): Self = this.set("NetworkCardIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNetworkCardIndex: Self = this.set("NetworkCardIndex", js.undefined)
     
     @scala.inline
     def setNetworkInterfaceId(value: String): Self = this.set("NetworkInterfaceId", value.asInstanceOf[js.Any])

@@ -12,35 +12,55 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxNumberBoxOptions extends dxTextEditorOptions[dxNumberBox] {
   
-  /** @name dxNumberBox.Options.buttons */
+  /**
+    * [descr:dxNumberBox.Options.buttons]
+    */
   @JSName("buttons")
   var buttons_dxNumberBoxOptions: js.UndefOr[js.Array[clear | spins | dxTextEditorButton]] = js.native
   
-  /** @name dxNumberBox.Options.format */
+  /**
+    * [descr:dxNumberBox.Options.format]
+    */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
   
-  /** @name dxNumberBox.Options.invalidValueMessage */
+  /**
+    * [descr:dxNumberBox.Options.invalidValueMessage]
+    */
   var invalidValueMessage: js.UndefOr[String] = js.native
   
-  /** @name dxNumberBox.Options.max */
+  /**
+    * [descr:dxNumberBox.Options.max]
+    */
   var max: js.UndefOr[Double] = js.native
   
-  /** @name dxNumberBox.Options.min */
+  /**
+    * [descr:dxNumberBox.Options.min]
+    */
   var min: js.UndefOr[Double] = js.native
   
-  /** @name dxNumberBox.Options.mode */
+  /**
+    * [descr:dxNumberBox.Options.mode]
+    */
   var mode: js.UndefOr[number | text | tel] = js.native
   
-  /** @name dxNumberBox.Options.showSpinButtons */
+  /**
+    * [descr:dxNumberBox.Options.showSpinButtons]
+    */
   var showSpinButtons: js.UndefOr[Boolean] = js.native
   
-  /** @name dxNumberBox.Options.step */
+  /**
+    * [descr:dxNumberBox.Options.step]
+    */
   var step: js.UndefOr[Double] = js.native
   
-  /** @name dxNumberBox.Options.useLargeSpinButtons */
+  /**
+    * [descr:dxNumberBox.Options.useLargeSpinButtons]
+    */
   var useLargeSpinButtons: js.UndefOr[Boolean] = js.native
   
-  /** @name dxNumberBox.Options.value */
+  /**
+    * [descr:dxNumberBox.Options.value]
+    */
   @JSName("value")
   var value_dxNumberBoxOptions: js.UndefOr[Double] = js.native
 }

@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getTransformOriginMod extends js.Object {
   
-  def default(anchor: PositionAnchor): String = js.native
+  def getTransformOrigin(anchor: PositionAnchor): String = js.native
 }

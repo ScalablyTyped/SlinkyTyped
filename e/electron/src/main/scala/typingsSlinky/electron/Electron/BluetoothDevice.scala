@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BluetoothDevice extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/structures/bluetooth-device
+  // Docs: https://electronjs.org/docs/api/structures/bluetooth-device
   var deviceId: String = js.native
   
   var deviceName: String = js.native

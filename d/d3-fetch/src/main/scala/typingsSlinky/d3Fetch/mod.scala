@@ -75,8 +75,8 @@ object mod extends js.Object {
   def image(url: String): js.Promise[HTMLImageElement] = js.native
   def image(url: String, init: PartialHTMLImageElement): js.Promise[HTMLImageElement] = js.native
   
-  def json[ParsedJSONObject /* <: js.Any */](url: String): js.Promise[ParsedJSONObject] = js.native
-  def json[ParsedJSONObject /* <: js.Any */](url: String, init: RequestInit): js.Promise[ParsedJSONObject] = js.native
+  def json[ParsedJSONObject /* <: js.Any */](url: String): js.Promise[js.UndefOr[ParsedJSONObject]] = js.native
+  def json[ParsedJSONObject /* <: js.Any */](url: String, init: RequestInit): js.Promise[js.UndefOr[ParsedJSONObject]] = js.native
   
   def svg(url: String): js.Promise[Document] = js.native
   def svg(url: String, init: RequestInit): js.Promise[Document] = js.native

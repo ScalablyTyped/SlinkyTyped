@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 package object webXRAbstractMotionControllerMod {
   
   type IMotionControllerLayoutMap = /**
-    * Layouts with handness type as a key
+    * Layouts with handedness type as a key
     */
   org.scalablytyped.runtime.StringDictionary[typingsSlinky.babylonjs.webXRAbstractMotionControllerMod.IMotionControllerLayout]
 }

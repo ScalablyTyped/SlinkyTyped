@@ -15,6 +15,8 @@ trait OptionProps extends js.Object {
   
   var disabled: js.UndefOr[Boolean] = js.native
   
+  var key: js.UndefOr[String] = js.native
+  
   var style: js.UndefOr[CSSProperties] = js.native
   
   var value: js.UndefOr[String] = js.native
@@ -62,6 +64,12 @@ object OptionProps {
     
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    
+    @scala.inline
+    def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteKey: Self = this.set("key", js.undefined)
     
     @scala.inline
     def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])

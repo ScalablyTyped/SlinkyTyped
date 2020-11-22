@@ -14,7 +14,7 @@ trait RenderingGroup extends js.Object {
   var _depthOnlySubMeshes: js.Any = js.native
   
   /** @hidden */
-  var _edgesRenderers: SmartArray[IEdgesRenderer] = js.native
+  var _edgesRenderers: SmartArrayNoDuplicate[IEdgesRenderer] = js.native
   
   var _opaqueSortCompareFn: js.Any = js.native
   

@@ -13,4 +13,19 @@ class ReturnStatement protected ()
     value: typingsSlinky.angularCompiler.outputAstMod.Expression,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
+  def this(
+    value: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    value: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    sourceSpan: Null,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    value: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
 }

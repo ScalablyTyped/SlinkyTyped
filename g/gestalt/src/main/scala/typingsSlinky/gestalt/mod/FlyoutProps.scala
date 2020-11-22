@@ -1,9 +1,11 @@
 package typingsSlinky.gestalt.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.down
+import typingsSlinky.gestalt.gestaltStrings.flexible
 import typingsSlinky.gestalt.gestaltStrings.left
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
@@ -22,7 +24,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FlyoutProps extends js.Object {
   
-  var anchor: js.Any = js.native
+  var anchor: HTMLElement = js.native
   
   var children: js.UndefOr[ReactElement] = js.native
   
@@ -39,12 +41,12 @@ trait FlyoutProps extends js.Object {
   
   var showCaret: js.UndefOr[Boolean] = js.native
   
-  var size: js.UndefOr[xs | sm | md | lg | xl | Double] = js.native
+  var size: js.UndefOr[xs | sm | md | lg | xl | flexible | Double] = js.native
 }
 object FlyoutProps {
   
   @scala.inline
-  def apply(anchor: js.Any, onDismiss: () => Unit): FlyoutProps = {
+  def apply(anchor: HTMLElement, onDismiss: () => Unit): FlyoutProps = {
     val __obj = js.Dynamic.literal(anchor = anchor.asInstanceOf[js.Any], onDismiss = js.Any.fromFunction0(onDismiss))
     __obj.asInstanceOf[FlyoutProps]
   }
@@ -65,7 +67,7 @@ object FlyoutProps {
     }
     
     @scala.inline
-    def setAnchor(value: js.Any): Self = this.set("anchor", value.asInstanceOf[js.Any])
+    def setAnchor(value: HTMLElement): Self = this.set("anchor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOnDismiss(value: () => Unit): Self = this.set("onDismiss", js.Any.fromFunction0(value))
@@ -110,7 +112,7 @@ object FlyoutProps {
     def deleteShowCaret: Self = this.set("showCaret", js.undefined)
     
     @scala.inline
-    def setSize(value: xs | sm | md | lg | xl | Double): Self = this.set("size", value.asInstanceOf[js.Any])
+    def setSize(value: xs | sm | md | lg | xl | flexible | Double): Self = this.set("size", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)

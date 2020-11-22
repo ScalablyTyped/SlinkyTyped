@@ -61,6 +61,7 @@ object updatePropertySignature extends js.Object {
     `type`: TypeNode,
     initializer: Expression
   ): PropertySignature = js.native
+  /** @deprecated Use `factory.updatePropertySignature` or the factory supplied by your transformation context instead. */
   def apply(node: PropertySignature, modifiers: js.Array[Modifier], name: PropertyName): PropertySignature = js.native
   def apply(
     node: PropertySignature,

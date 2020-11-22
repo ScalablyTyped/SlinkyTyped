@@ -23,7 +23,7 @@ trait ConversationThread extends Entity {
   var lastDeliveredDateTime: js.UndefOr[String] = js.native
   
   // Read-only. Nullable.
-  var posts: js.UndefOr[js.Array[Post]] = js.native
+  var posts: js.UndefOr[NullableOption[js.Array[Post]]] = js.native
   
   // A short summary from the body of the latest post in this conversation.
   var preview: js.UndefOr[String] = js.native
@@ -91,10 +91,13 @@ object ConversationThread {
     def setPostsVarargs(value: Post*): Self = this.set("posts", js.Array(value :_*))
     
     @scala.inline
-    def setPosts(value: js.Array[Post]): Self = this.set("posts", value.asInstanceOf[js.Any])
+    def setPosts(value: NullableOption[js.Array[Post]]): Self = this.set("posts", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePosts: Self = this.set("posts", js.undefined)
+    
+    @scala.inline
+    def setPostsNull: Self = this.set("posts", null)
     
     @scala.inline
     def setPreview(value: String): Self = this.set("preview", value.asInstanceOf[js.Any])

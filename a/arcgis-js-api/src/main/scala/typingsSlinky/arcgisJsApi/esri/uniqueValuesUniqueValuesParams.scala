@@ -18,7 +18,7 @@ trait uniqueValuesUniqueValuesParams extends Object {
   var features: js.UndefOr[js.Array[Graphic]] = js.native
   
   /**
-    * The name of the numeric or string field from which the unique values will be obtained. This property is ignored if a `valueExpression` is used.
+    * The name of the numeric or string field from which the unique values will be obtained.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-uniqueValues.html#uniqueValues)
     */
@@ -39,7 +39,7 @@ trait uniqueValuesUniqueValuesParams extends Object {
   var returnAllCodedValues: js.UndefOr[Boolean] = js.native
   
   /**
-    * Allows for cancelable requests. If canceled, the promise will be rejected with an error named `AbortError`. See also [AbortController](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+    * Allows for cancelable requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-uniqueValues.html#uniqueValues)
     */
@@ -53,14 +53,14 @@ trait uniqueValuesUniqueValuesParams extends Object {
   var sqlExpression: js.UndefOr[String] = js.native
   
   /**
-    * A SQL where clause used to filter features for the statistics query. For example, this is useful in situations where you want to avoid dividing by zero as is the case with creating a predominance visualization.
+    * A SQL where clause used to filter features for the statistics query.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-uniqueValues.html#uniqueValues)
     */
   var sqlWhere: js.UndefOr[String] = js.native
   
   /**
-    * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that returns a number or string. This expression can reference field values using the `$feature` global variable. This property overrides the `field` property and therefore is used instead of an input `field` value.
+    * An [Arcade](https://developers.arcgis.com/javascript/latest/guide/arcade/index.html) expression that returns a number or string.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-smartMapping-statistics-uniqueValues.html#uniqueValues)
     */

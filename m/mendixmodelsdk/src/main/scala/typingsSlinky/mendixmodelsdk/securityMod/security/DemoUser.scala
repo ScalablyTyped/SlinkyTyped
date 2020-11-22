@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.securityMod.security
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.IEntity
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -8,23 +9,24 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.Element
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.securityMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/demo-users relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/demo-users relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/security", "security.DemoUser")
 @js.native
-class DemoUser protected () extends Element {
+class DemoUser protected () extends Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsProjectSecurity: ProjectSecurity = js.native
@@ -34,9 +36,6 @@ class DemoUser protected () extends Element {
   def entityQualifiedName: String | Null = js.native
   
   def entity_=(newValue: IEntity | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FDemoUser: IModel = js.native
   
   def password: String = js.native
   def password_=(newValue: String): Unit = js.native

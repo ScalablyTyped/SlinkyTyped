@@ -18,7 +18,7 @@ trait EFSVolumeConfiguration extends js.Object {
   var fileSystemId: String = js.native
   
   /**
-    * The directory within the Amazon EFS file system to mount as the root directory inside the host. If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying / will have the same effect as omitting this parameter.
+    * The directory within the Amazon EFS file system to mount as the root directory inside the host. If this parameter is omitted, the root of the Amazon EFS volume will be used. Specifying / will have the same effect as omitting this parameter.  If an EFS access point is specified in the authorizationConfig, the root directory parameter must either be omitted or set to / which will enforce the path set on the EFS access point. 
     */
   var rootDirectory: js.UndefOr[String] = js.native
   

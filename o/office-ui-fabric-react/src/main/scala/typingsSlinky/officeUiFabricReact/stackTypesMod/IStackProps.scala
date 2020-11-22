@@ -3,6 +3,7 @@ package typingsSlinky.officeUiFabricReact.stackTypesMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.inherit
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.initial
 import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.unset
@@ -10,7 +11,6 @@ import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricFoundation.anon.Slots
 import typingsSlinky.uifabricFoundation.libIcomponentMod.IStylesFunctionOrObject
 import typingsSlinky.uifabricFoundation.libIcomponentMod.ITokenFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

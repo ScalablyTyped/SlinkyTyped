@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createUniqueName extends js.Object {
   
-  /** Create a unique name based on the supplied text. */
+  /** @deprecated Use `factory.createUniqueName` or the factory supplied by your transformation context instead. */
   def apply(text: String): Identifier = js.native
+  def apply(text: String, flags: typingsSlinky.typescript.mod.GeneratedIdentifierFlags): Identifier = js.native
 }

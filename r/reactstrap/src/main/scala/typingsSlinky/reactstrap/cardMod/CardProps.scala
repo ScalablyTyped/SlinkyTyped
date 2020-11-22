@@ -3,8 +3,10 @@ package typingsSlinky.reactstrap.cardMod
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
+import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.HTMLAttributes
-import typingsSlinky.react.mod.ReactType
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,11 +21,13 @@ trait CardProps
   
   var cssModule: js.UndefOr[CSSModule] = js.native
   
+  var innerRef: js.UndefOr[Ref[HTMLElement]] = js.native
+  
   var inverse: js.UndefOr[Boolean] = js.native
   
   var outline: js.UndefOr[Boolean] = js.native
   
-  var tag: js.UndefOr[String | ReactType[_]] = js.native
+  var tag: js.UndefOr[ReactElement] = js.native
 }
 object CardProps {
   
@@ -61,6 +65,21 @@ object CardProps {
     def deleteCssModule: Self = this.set("cssModule", js.undefined)
     
     @scala.inline
+    def setInnerRefRefObject(value: ReactRef[HTMLElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInnerRefFunction1(value: /* instance */ HTMLElement | Null => Unit): Self = this.set("innerRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def setInnerRef(value: Ref[HTMLElement]): Self = this.set("innerRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInnerRef: Self = this.set("innerRef", js.undefined)
+    
+    @scala.inline
+    def setInnerRefNull: Self = this.set("innerRef", null)
+    
+    @scala.inline
     def setInverse(value: Boolean): Self = this.set("inverse", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -79,7 +98,7 @@ object CardProps {
     def setTagComponentClass(value: ReactComponentClass[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTag(value: String | ReactType[_]): Self = this.set("tag", value.asInstanceOf[js.Any])
+    def setTag(value: ReactElement): Self = this.set("tag", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteTag: Self = this.set("tag", js.undefined)

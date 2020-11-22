@@ -13,7 +13,7 @@ trait PolicyDetails extends js.Object {
   var Parameters: js.UndefOr[typingsSlinky.awsSdk.dlmMod.Parameters] = js.native
   
   /**
-    * The valid target resource types and actions a policy can manage. The default is EBS_SNAPSHOT_MANAGEMENT.
+    * The valid target resource types and actions a policy can manage. Specify EBS_SNAPSHOT_MANAGEMENT to create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify IMAGE_MANAGEMENT to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. The default is EBS_SNAPSHOT_MANAGEMENT.
     */
   var PolicyType: js.UndefOr[PolicyTypeValues] = js.native
   
@@ -23,7 +23,7 @@ trait PolicyDetails extends js.Object {
   var ResourceTypes: js.UndefOr[ResourceTypeValuesList] = js.native
   
   /**
-    * The schedule of policy-defined actions.
+    * The schedules of policy-defined actions. A policy can have up to four schedules - one mandatory schedule and up to three optional schedules.
     */
   var Schedules: js.UndefOr[ScheduleList] = js.native
   

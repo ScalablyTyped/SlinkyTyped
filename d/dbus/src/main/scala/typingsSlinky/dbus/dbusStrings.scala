@@ -8,10 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object dbusStrings {
   
   @scala.inline
+  def PickMatching: PickMatching = "PickMatching".asInstanceOf[PickMatching]
+  
+  @scala.inline
   def session: session = "session".asInstanceOf[session]
   
   @scala.inline
   def system: system = "system".asInstanceOf[system]
+  
+  @js.native
+  sealed trait PickMatching extends js.Object
   
   @js.native
   sealed trait session extends busType

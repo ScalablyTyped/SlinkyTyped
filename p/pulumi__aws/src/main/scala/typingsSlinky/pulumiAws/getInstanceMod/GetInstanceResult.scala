@@ -158,6 +158,11 @@ trait GetInstanceResult extends js.Object {
   val rootBlockDevices: js.Array[GetInstanceRootBlockDevice] = js.native
   
   /**
+    * The secondary private IPv4 addresses assigned to the instance's primary network interface (eth0) in a VPC.
+    */
+  val secondaryPrivateIps: js.Array[String] = js.native
+  
+  /**
     * The associated security groups.
     */
   val securityGroups: js.Array[String] = js.native
@@ -228,6 +233,7 @@ object GetInstanceResult {
     publicDns: String,
     publicIp: String,
     rootBlockDevices: js.Array[GetInstanceRootBlockDevice],
+    secondaryPrivateIps: js.Array[String],
     securityGroups: js.Array[String],
     sourceDestCheck: Boolean,
     subnetId: String,
@@ -237,7 +243,7 @@ object GetInstanceResult {
     userDataBase64: String,
     vpcSecurityGroupIds: js.Array[String]
   ): GetInstanceResult = {
-    val __obj = js.Dynamic.literal(ami = ami.asInstanceOf[js.Any], arn = arn.asInstanceOf[js.Any], associatePublicIpAddress = associatePublicIpAddress.asInstanceOf[js.Any], availabilityZone = availabilityZone.asInstanceOf[js.Any], creditSpecifications = creditSpecifications.asInstanceOf[js.Any], disableApiTermination = disableApiTermination.asInstanceOf[js.Any], ebsBlockDevices = ebsBlockDevices.asInstanceOf[js.Any], ebsOptimized = ebsOptimized.asInstanceOf[js.Any], ephemeralBlockDevices = ephemeralBlockDevices.asInstanceOf[js.Any], hostId = hostId.asInstanceOf[js.Any], iamInstanceProfile = iamInstanceProfile.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], instanceState = instanceState.asInstanceOf[js.Any], instanceTags = instanceTags.asInstanceOf[js.Any], instanceType = instanceType.asInstanceOf[js.Any], keyName = keyName.asInstanceOf[js.Any], metadataOptions = metadataOptions.asInstanceOf[js.Any], monitoring = monitoring.asInstanceOf[js.Any], networkInterfaceId = networkInterfaceId.asInstanceOf[js.Any], outpostArn = outpostArn.asInstanceOf[js.Any], passwordData = passwordData.asInstanceOf[js.Any], placementGroup = placementGroup.asInstanceOf[js.Any], privateDns = privateDns.asInstanceOf[js.Any], privateIp = privateIp.asInstanceOf[js.Any], publicDns = publicDns.asInstanceOf[js.Any], publicIp = publicIp.asInstanceOf[js.Any], rootBlockDevices = rootBlockDevices.asInstanceOf[js.Any], securityGroups = securityGroups.asInstanceOf[js.Any], sourceDestCheck = sourceDestCheck.asInstanceOf[js.Any], subnetId = subnetId.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], tenancy = tenancy.asInstanceOf[js.Any], userData = userData.asInstanceOf[js.Any], userDataBase64 = userDataBase64.asInstanceOf[js.Any], vpcSecurityGroupIds = vpcSecurityGroupIds.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(ami = ami.asInstanceOf[js.Any], arn = arn.asInstanceOf[js.Any], associatePublicIpAddress = associatePublicIpAddress.asInstanceOf[js.Any], availabilityZone = availabilityZone.asInstanceOf[js.Any], creditSpecifications = creditSpecifications.asInstanceOf[js.Any], disableApiTermination = disableApiTermination.asInstanceOf[js.Any], ebsBlockDevices = ebsBlockDevices.asInstanceOf[js.Any], ebsOptimized = ebsOptimized.asInstanceOf[js.Any], ephemeralBlockDevices = ephemeralBlockDevices.asInstanceOf[js.Any], hostId = hostId.asInstanceOf[js.Any], iamInstanceProfile = iamInstanceProfile.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], instanceState = instanceState.asInstanceOf[js.Any], instanceTags = instanceTags.asInstanceOf[js.Any], instanceType = instanceType.asInstanceOf[js.Any], keyName = keyName.asInstanceOf[js.Any], metadataOptions = metadataOptions.asInstanceOf[js.Any], monitoring = monitoring.asInstanceOf[js.Any], networkInterfaceId = networkInterfaceId.asInstanceOf[js.Any], outpostArn = outpostArn.asInstanceOf[js.Any], passwordData = passwordData.asInstanceOf[js.Any], placementGroup = placementGroup.asInstanceOf[js.Any], privateDns = privateDns.asInstanceOf[js.Any], privateIp = privateIp.asInstanceOf[js.Any], publicDns = publicDns.asInstanceOf[js.Any], publicIp = publicIp.asInstanceOf[js.Any], rootBlockDevices = rootBlockDevices.asInstanceOf[js.Any], secondaryPrivateIps = secondaryPrivateIps.asInstanceOf[js.Any], securityGroups = securityGroups.asInstanceOf[js.Any], sourceDestCheck = sourceDestCheck.asInstanceOf[js.Any], subnetId = subnetId.asInstanceOf[js.Any], tags = tags.asInstanceOf[js.Any], tenancy = tenancy.asInstanceOf[js.Any], userData = userData.asInstanceOf[js.Any], userDataBase64 = userDataBase64.asInstanceOf[js.Any], vpcSecurityGroupIds = vpcSecurityGroupIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetInstanceResult]
   }
   
@@ -351,6 +357,12 @@ object GetInstanceResult {
     
     @scala.inline
     def setRootBlockDevices(value: js.Array[GetInstanceRootBlockDevice]): Self = this.set("rootBlockDevices", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSecondaryPrivateIpsVarargs(value: String*): Self = this.set("secondaryPrivateIps", js.Array(value :_*))
+    
+    @scala.inline
+    def setSecondaryPrivateIps(value: js.Array[String]): Self = this.set("secondaryPrivateIps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSecurityGroupsVarargs(value: String*): Self = this.set("securityGroups", js.Array(value :_*))
